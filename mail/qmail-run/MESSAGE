@@ -1,7 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/08/02 03:59:21 schmonz Exp $
+$NetBSD: MESSAGE,v 1.2 2004/08/02 17:28:30 schmonz Exp $
 
-To enable qmail for
+Please read ${PREFIX}/share/doc/qmail-run/README.pkgsrc.
+
+To enable qmail for...
 
 Local and outgoing deliveries:
 - Check the configuration files in ${PKG_SYSCONFDIR}.
