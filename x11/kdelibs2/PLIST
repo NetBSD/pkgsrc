@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/13 21:09:07 jlam Exp $
 bin/artsc-config
 bin/artscat
 bin/artsd
@@ -2766,35 +2766,8 @@ share/kde/servicetypes/kurifilterplugin.desktop
 @dirrm share/kde/mimelnk/application
 @dirrm share/kde/mimelnk/all
 @dirrm share/kde/mimelnk
-@dirrm share/kde/icons/hicolor/64x64/mimetypes
-@dirrm share/kde/icons/hicolor/64x64/filesystems
-@dirrm share/kde/icons/hicolor/64x64
-@dirrm share/kde/icons/hicolor/48x48/mimetypes
-@dirrm share/kde/icons/hicolor/48x48/filesystems
-@dirrm share/kde/icons/hicolor/48x48/devices
-@dirrm share/kde/icons/hicolor/48x48/actions
-@dirrm share/kde/icons/hicolor/48x48
-@dirrm share/kde/icons/hicolor/32x32/mimetypes
-@dirrm share/kde/icons/hicolor/32x32/filesystems
-@dirrm share/kde/icons/hicolor/32x32/devices
-@dirrm share/kde/icons/hicolor/32x32/actions/kde
-@dirrm share/kde/icons/hicolor/32x32/actions
-@dirrm share/kde/icons/hicolor/32x32
-@exec /bin/mkdir -p %D/share/kde/icons/hicolor/22x22/mimetypes
-@dirrm share/kde/icons/hicolor/22x22/mimetypes
-@exec /bin/mkdir -p %D/share/kde/icons/hicolor/22x22/filesystems
-@dirrm share/kde/icons/hicolor/22x22/filesystems
-@dirrm share/kde/icons/hicolor/22x22/actions/kde
-@dirrm share/kde/icons/hicolor/22x22/actions
-@dirrm share/kde/icons/hicolor/22x22
-@dirrm share/kde/icons/hicolor/16x16/mimetypes
-@dirrm share/kde/icons/hicolor/16x16/filesystems
-@dirrm share/kde/icons/hicolor/16x16/devices
-@dirrm share/kde/icons/hicolor/16x16/apps
-@dirrm share/kde/icons/hicolor/16x16/actions
-@dirrm share/kde/icons/hicolor/16x16
-@dirrm share/kde/icons/hicolor
-@dirrm share/kde/icons
+@exec ${MKDIR} %D/share/kde/locale
+@dirrm share/kde/locale
 @dirrm share/kde/config/ui
 @dirrm share/kde/config/colors
 @dirrm share/kde/config
@@ -2909,12 +2882,11 @@ share/kde/servicetypes/kurifilterplugin.desktop
 @dirrm share/kde/apps/kdeprint/filters
 @dirrm share/kde/apps/kdeprint
 @dirrm share/kde/apps/kconf_update
-@exec /bin/mkdir -p %D/share/kde/apps/kab/pics
+@exec ${MKDIR} %D/share/kde/apps/kab/pics
 @dirrm share/kde/apps/kab/pics
 @dirrm share/kde/apps/kab
 @dirrm share/kde/apps/LICENSES
 @dirrm share/kde/apps
-@dirrm share/kde
 @dirrm share/doc/kde/HTML/en/common
 @dirrm share/doc/kde/HTML/en
 @dirrm share/doc/kde/HTML
