@@ -1,3 +1,4 @@
+$NetBSD: distinfo,v 1.2 2002/07/02 12:58:45 wiz Exp $
 
 SHA1 (glpk-3.0.7.tar.gz) = 62e2576dd56d40519c0c93920c3b68c3132db36e
 Size (glpk-3.0.7.tar.gz) = 719889 bytes
