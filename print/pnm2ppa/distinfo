@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.3 2003/01/19 08:45:38 salo Exp $
+$NetBSD: distinfo,v 1.4 2003/09/17 18:40:46 jmmv Exp $
 
-SHA1 (pnm2ppa-1.04.tar.gz) = a3cd26788779bc80fa6c8265f3b2aacaaa5acd92
-Size (pnm2ppa-1.04.tar.gz) = 163851 bytes
-SHA1 (patch-aa) = c9b392694659d4c9a2674725d28a9caa81ca208a
+SHA1 (pnm2ppa-1.12.tar.gz) = a4a8915cb9e3d01dd55bd5958b00a9d19b1d747d
+Size (pnm2ppa-1.12.tar.gz) = 191113 bytes
+SHA1 (patch-aa) = d31f9f5a79649568062549264458965d78abe597
+SHA1 (patch-ab) = 2e343bcaaca3e37dd0d393688bbc8cc37b70b4dc
+SHA1 (patch-ac) = 24d15229f9d81839c4b9e145ff554b12748c2153
+SHA1 (patch-ad) = e6bfdcedd053a683c2c91f6a23c1270bc6f6aecb
