@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.31 2004/11/27 16:45:43 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.32 2004/11/27 16:53:45 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -65,3 +65,5 @@ Pullup ticket 150 - requested by Dieter Baron
 security fix for xpdf
 Pullup ticket 158 - requested by Quentin Garnier
 security fix for sudo
+Pullup ticket 160 - requested by Thomas Klausner
+remove apache6 package
