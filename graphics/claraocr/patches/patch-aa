@@ -1,25 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/03/22 15:34:03 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/05/04 23:45:44 wiz Exp $
 
---- Makefile.orig	Sun Oct 21 00:16:38 2001
+--- Makefile.orig	Sat May  4 03:45:07 2002
 +++ Makefile
-@@ -28,13 +28,13 @@
- #
+@@ -29,21 +29,21 @@
  # Configure the destination directories:
  #
--BINDIR=/usr/local/bin
+ #BINDIR=/usr/local/bin
+-BINDIR=/usr/bin
 +BINDIR=${PREFIX}/bin
- #BINDIR=/usr/bin
  
--MANDIR=/usr/local/man/man1
+ #MANDIR=/usr/local/man/man1
+-MANDIR=/usr/man/man1
 +MANDIR=${PREFIX}/man/man1
- #MANDIR=/usr/man/man1
  
--DOCDIR=/usr/local/doc/clara
-+DOCDIR=${PREFIX}/share/doc/clara
+ #DOCDIR=/usr/local/doc/clara
  #DOCDIR=/usr/doc/clara
  #DOCDIR=/usr/doc/clara-$(VERSION)
- #DOCDIR=/usr/share/doc/clara
-@@ -42,8 +42,8 @@
+-DOCDIR=/usr/share/doc/clara
++DOCDIR=${PREFIX}/share/doc/clara
+ 
  #
  # Configure these variables accordingly to your system:
  #
@@ -30,15 +29,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/03/22 15:34:03 wiz Exp $
  CC = gcc
  
  #
-@@ -83,14 +83,14 @@
+@@ -85,7 +85,7 @@
  #
  # Add or remove flags if necessary:
  #
--CFLAGS = $(INCLUDE) -g -O2 -Wall $(COPTS)
-+CFLAGS += $(INCLUDE) -g -O2 -Wall $(COPTS)
+-CFLAGS = $(INCLUDE) -g -Wall $(COPTS)
++CFLAGS += $(INCLUDE) -g -Wall $(COPTS)
+ #CFLAGS = $(INCLUDE) -g -O2 -Wall $(COPTS)
  #CFLAGS = $(INCLUDE) -g -O2 -pedantic $(COPTS)
  #CFLAGS = $(INCLUDE) -g -O2 $(COPTS)
- 
+@@ -93,7 +93,7 @@
  #
  # Add or remove flags if necessary:
  #
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/03/22 15:34:03 wiz Exp $
  
  #
  # If your system requires additional libs, please add them:
-@@ -153,13 +153,11 @@
+@@ -175,13 +175,11 @@
  	./clara -p 2
  
  install: all
@@ -65,4 +65,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/03/22 15:34:03 wiz Exp $
 +	${BSD_INSTALL_DATA} ANNOUNCE CHANGELOG doc/FAQ doc/*.html $(DOCDIR)
  
  clean:
- 	rm -f clara sclara $(OBJS) doc/clara-*.1 doc/clara-*.html doc/FAQ
+ 	rm -f clara sclara $(OBJS) doc/clara*.1 doc/clara*.html doc/FAQ
