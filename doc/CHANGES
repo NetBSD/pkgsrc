@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6285 2004/06/23 13:36:01 grant Exp $
+$NetBSD: CHANGES,v 1.6286 2004/06/23 15:34:46 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3030,3 +3030,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated naim to 0.11.7 [snj 2004-06-23]
 	Updated libusb to 0.1.8nb1 [mycroft 2004-06-23]
 	Updated mozilla-bin to 1.7 [grant 2004-06-23]
+	Updated p5-Mail-Mbox-MessageParser to 1.20 [snj 2004-06-23]
