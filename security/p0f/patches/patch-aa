@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.6 2003/11/03 11:45:28 recht Exp $
+$NetBSD: patch-aa,v 1.7 2004/08/14 10:09:15 adrianp Exp $
 
 --- mk/NetBSD.orig	2003-09-28 23:40:07.000000000 +0200
 +++ mk/NetBSD	2003-11-03 12:27:53.000000000 +0100
 @@ -7,10 +7,8 @@
- # (C) Copyright 2000-2003 by Michal Zalewski <lcamtuf@coredump.cx>
+ # (C) Copyright 2000-2004 by Michal Zalewski <lcamtuf@coredump.cx>
  #
  
 -CC      = gcc
