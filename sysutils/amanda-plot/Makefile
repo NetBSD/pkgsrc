@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/19 10:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/21 15:41:23 tron Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 COMMENT=		Visualizes the behavior of Amanda, a network backup system
 
-DEPENDS+=		gnuplot-3.7:../../graphics/gnuplot
+DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=		amanda-server-2.4.2:../../sysutils/amanda-server
 
 USE_X11=		yes
