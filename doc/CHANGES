@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7366 2004/10/06 15:16:03 minskim Exp $
+$NetBSD: CHANGES,v 1.7367 2004/10/06 15:28:55 erh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4566,3 +4566,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Moved cfg+ to libcfg+ [grant 2004-10-06]
 	Updated gal2 to 2.2.2 [jmmv 2004-10-06]
 	Updated moss to 0.1.9 [minskim 2004-10-06]
+	Updated pkg_tarup to 1.6.3 [erh 2004-10-06]
