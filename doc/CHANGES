@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2599 2003/06/27 10:22:06 jmmv Exp $
+$NetBSD: CHANGES,v 1.2600 2003/06/27 10:50:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2581,3 +2581,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated oss-3.9.7j [jlam 2003-06-27]
 	Added afio-2.4.7 [agc 2003-06-27]
 	Updated gaim to 0.64nb1 [jmmv 2003-06-27]
+	Updated boehm-gc to 6.2 [jmmv 2003-06-27]
