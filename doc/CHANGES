@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7797 2004/11/09 20:12:00 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7798 2004/11/09 21:21:48 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5195,3 +5195,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.97 [seb 2004-11-09]
 	Updated firefox to 1.0 [xtraeme 2004-11-09]
 	Updated firefox-gtk2 to 1.0 [xtraeme 2004-11-09]
+	Updated docbook-xsl to 1.67.0 [jmmv 2004-11-09]
