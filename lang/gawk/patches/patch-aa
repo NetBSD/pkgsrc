@@ -1,24 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2002/11/30 14:55:06 grant Exp $
+$NetBSD: patch-aa,v 1.4 2002/12/12 03:17:14 dmcmahill Exp $
 
---- Makefile.in.orig	Wed May 16 03:09:12 2001
-+++ Makefile.in	Sun Dec  1 01:54:01 2002
-@@ -214,7 +214,7 @@
- 
- DEFS = -DDEFPATH=$(DEFPATH) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR="\"$(datadir)/locale\""
- 
--INCLUDES = -I. -I$(srcdir) -I$(srcdir)/intl
-+INCLUDES = -I. -I$(srcdir)
- 
- # We want hard links for install-exec-hook, below
- LN = ln
-@@ -755,9 +755,7 @@
+--- Makefile.am.orig	Sun Apr 28 10:27:54 2002
++++ Makefile.am
+@@ -137,10 +137,7 @@ install-exec-hook:
  	(fullname=gawk-`./gawk --version | sed 1q | awk '{print $$3}'` ; \
  	cd $(DESTDIR)$(bindir); \
  	$(LN) gawk $$fullname ; \
+-	$(LN) pgawk p$$fullname ; \
 -	if [ ! -f awk ]; \
 -	then	$(LN_S) gawk awk; \
 -	fi; exit 0)
-+	exit 0)
++	$(LN) pgawk p$$fullname; exit 0) 
  
  # Undo the above when uninstalling
  uninstall-links:
