@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/01/05 11:17:10 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/06 04:37:52 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -15,7 +15,7 @@ COMMENT=		Tools for providing messages in different languages, libintl only
 
 CONFLICTS=		gettext<=0.10.35
 
-PKG_INSTALLATION_TYPES=	overview pkgviews
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		# defined
 USE_LIBTOOL=		# defined
