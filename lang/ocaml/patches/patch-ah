@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $
+$NetBSD: patch-ah,v 1.8 2005/02/05 00:04:20 adrianp Exp $
 
---- asmrun/power-bsd.S.orig	2004-10-14 15:48:54.000000000 +0100
-+++ asmrun/power-bsd.S	2004-10-14 15:55:11.000000000 +0100
+--- asmrun/power-bsd.S.orig	2005-02-04 23:36:22.000000000 +0000
++++ asmrun/power-bsd.S	2005-02-04 23:42:19.000000000 +0000
 @@ -13,6 +13,35 @@
  
- /* $Id: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $ */
+ /* $Id: patch-ah,v 1.8 2005/02/05 00:04:20 adrianp Exp $ */
  
 +#if defined(PROFILING)
 +#define PROFILE_CAML \
@@ -42,7 +42,7 @@ $NetBSD: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $
          .globl  caml_call_gc
          .type   caml_call_gc, @function
  caml_call_gc:
-+	PROFILE_CAML
++        PROFILE_CAML
      /* Set up stack frame */
          stwu    1, -0x1A0(1)
      /* 0x1A0 = 4*32 (int regs) + 8*32 (float regs) + 32 (space for C call) */
@@ -50,7 +50,7 @@ $NetBSD: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $
          .globl  caml_c_call
          .type   caml_c_call, @function
  caml_c_call:
-+	PROFILE_CAML
++        PROFILE_CAML
      /* Save return address */
          mflr    25
      /* Get ready to call C function (address in 11) */
@@ -58,7 +58,7 @@ $NetBSD: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $
          .globl  caml_raise_exception
          .type   caml_raise_exception, @function
  caml_raise_exception:
-+	PROFILE_CAML
++        PROFILE_C
      /* Reload Caml global registers */
          Loadglobal(1, caml_exception_pointer, 11)
          Loadglobal(31, caml_young_ptr, 11)
@@ -66,7 +66,7 @@ $NetBSD: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $
          .globl  caml_start_program
          .type   caml_start_program, @function
  caml_start_program:
-+	PROFILE_CAML
++        PROFILE_C
          Addrglobal(12, caml_program)
  
  /* Code shared between caml_start_program and caml_callback */
@@ -74,7 +74,7 @@ $NetBSD: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $
          .globl  caml_callback_exn
          .type   caml_callback_exn, @function
  caml_callback_exn:
-+	PROFILE_CAML
++        PROFILE_C
      /* Initial shuffling of arguments */
          mr      0, 3            /* Closure */
          mr      3, 4            /* Argument */
@@ -82,7 +82,7 @@ $NetBSD: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $
          .globl  caml_callback2_exn
          .type   caml_callback2_exn, @function
  caml_callback2_exn:
-+	PROFILE_CAML
++        PROFILE_C
          mr      0, 3            /* Closure */
          mr      3, 4            /* First argument */
          mr      4, 5            /* Second argument */
@@ -90,7 +90,7 @@ $NetBSD: patch-ah,v 1.7 2005/02/04 21:35:51 adrianp Exp $
          .globl  caml_callback3_exn
          .type   caml_callback3_exn, @function
  caml_callback3_exn:
-+	PROFILE_CAML
++        PROFILE_C
          mr      0, 3            /* Closure */
          mr      3, 4            /* First argument */
          mr      4, 5            /* Second argument */
