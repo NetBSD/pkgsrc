@@ -1,9 +1,0 @@
-$NetBSD: patch-bl,v 1.2 1999/03/05 11:22:36 frueauf Exp $
-
---- routines/system/scicurdir.c.orig    Mon Dec 21 21:58:38 1998
-+++ routines/system/scicurdir.c Mon Dec 21 21:59:00 1998
-@@ -1,3 +1,4 @@
- /* Copyright INRIA */
-+#include <string.h>
- #include "../machine.h"
- #ifdef WIN32 

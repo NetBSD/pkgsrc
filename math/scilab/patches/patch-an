@@ -1,32 +1,11 @@
-$NetBSD: patch-an,v 1.2 1999/03/05 11:22:35 frueauf Exp $
+$NetBSD: patch-an,v 1.3 1999/12/22 13:25:43 dmcmahill Exp $
 
---- geci/scruteur.c.orig	Tue May 27 05:13:53 1997
-+++ geci/scruteur.c	Wed Jan 13 19:34:54 1999
-@@ -11,7 +11,16 @@
- #include <errno.h>
- #include <stdio.h>
-+#include <string.h>
- #include <signal.h>
- #include <netdb.h>
- 
-+#if defined(netbsd)
-+#include <ieeefp.h>
-+#endif
-+
-+#if defined(freebsd)
-+#include <floatingpoint.h>
-+#endif
-+
- #include "listes_chainees.h"
- #include "utilitaires.h"
-@@ -46,5 +55,9 @@
-   sigset_t set,oset;
- #endif  
--  
-+
-+#if (defined(netbsd) && !defined(__alpha__)) || defined(freebsd)
-+  fpsetmask(0);
-+#endif
-+
-   signal(SIGTERM,signal_arret_scruteur);
-   signal(SIGQUIT,signal_arret_scruteur);
+--- ./examples/mex-examples/mex-with-so/mexso.dia.ref.orig	Tue Sep 14 03:08:45 1999
++++ ./examples/mex-examples/mex-with-so/mexso.dia.ref	Tue Dec 21 18:43:29 1999
+@@ -5,5 +5,5 @@
+            ];
+  
+-addinter("./libmylib.so","libmylib_gateway",scilab_functions);
++addinter("./libmylib.so.0.0","libmylib_gateway",scilab_functions);
+  
+  
