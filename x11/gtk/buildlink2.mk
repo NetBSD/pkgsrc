@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/10/30 11:34:40 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2002/11/04 14:40:04 wiz Exp $
 
 .if !defined(GTK_BUILDLINK2_MK)
 GTK_BUILDLINK2_MK=	# defined
@@ -14,6 +14,8 @@ BUILDLINK_FILES.gtk+=	include/gtk/*
 BUILDLINK_FILES.gtk+=	include/gtk-1*/*/*
 BUILDLINK_FILES.gtk+=	lib/libgdk.*
 BUILDLINK_FILES.gtk+=	lib/libgtk.*
+
+USE_X11=		YES
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
