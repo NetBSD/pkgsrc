@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/01/27 14:19:16 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/01/27 14:31:43 jmmv Exp $
 bin/gnomeicu
 bin/gnomeicu-client
 etc/CORBA/servers/GnomeICU.gnorba
@@ -125,6 +125,6 @@ share/sounds/gnomeicu/message.wav
 @dirrm share/gnomeicu/icons
 @dirrm share/gnomeicu
 @dirrm share/sounds/gnomeicu
-@comment in gnome1-dirs: @dirrm share/applets/Network
+@comment in gnome-core: @dirrm share/applets/Network
 @unexec ${RMDIR} %D/etc/sound/events 2> /dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/CORBA/servers 2> /dev/null || ${TRUE}
