@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:15 tv Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/27 00:18:13 epg Exp $
 
 DISTNAME=	grun-0.9.2
 PKGREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	http://www.geocities.com/ResearchTriangle/Facility/1468/sg/
 
-MAINTAINER=	epg@pretzelnet.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	${MASTER_SITES}/grun.html
 COMMENT=	GTK+ based Run dialog
 
