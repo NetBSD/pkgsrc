@@ -1,0 +1,12 @@
+IPC::ShareLite provides a simple interface to shared memory, allowing
+data to be efficiently communicated between processes.
+
+It provides an abstraction of the shared memory and semaphore facilities
+of SysV IPC, allowing the storage of arbitrarily large data; the module
+automatically acquires and removes shared memory segments as needed.
+Storage and retrieval of data is atomic, and locking functions are
+provided for higher-level synchronization.
+
+In many respects, this module is similar to IPC::Shareable. However,
+IPC::ShareLite does not provide a tied interface, does not (automatically)
+allow the storage of variables, and is written in C for additional speed.
