@@ -1,3 +1,5 @@
+# $NetBSD: buildlink.mk,v 1.2 2001/08/09 15:17:53 nra Exp $
+
 .include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.libdes?=	libdes-4.04b
