@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/08/01 13:54:10 rh Exp $
+
+SHA1 (mailserv.tar.gz) = c5fa245c71c5cea73da60f7f340beb81be901e2a
+Size (mailserv.tar.gz) = 25963 bytes
+SHA1 (patch-aa) = dc070d46098100a1947c8e0e477a17103617ffd7
