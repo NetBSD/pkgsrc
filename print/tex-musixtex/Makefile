@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2005/01/18 00:08:17 hubertf Exp $
 #
 
-DISTNAME=	musixtex-109
+DISTNAME=	musixtex-112
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	print
-#MASTER_SITES=	ftp://ftp.tex.ac.uk/tex-archive/macros/musixtex/taupin/
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/musixtex/taupin/}
-DISTFILES=	musixtex-T109.tar.gz
+DISTFILES=	musixtex-T112.tar.gz
 
 MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	http://icking-music-archive.sunsite.dk/
 COMMENT=	TeX macros to typeset music
 
-DEPENDS+=       teTeX-1.0*:../../print/teTeX1
+DEPENDS+=       teTeX-2.0*:../../print/teTeX
 
-WRKSRC=		${WRKDIR}/musixtex-T109
+WRKSRC=		${WRKDIR}/musixtex-T112
 NO_CONFIGURE=	yes
 
 TEXMF=		${LOCALBASE}/share/texmf
@@ -23,31 +21,42 @@ TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
 
 do-build:
 	@${ECHO} "======> Building musixtex.fmt"
+	${CP} -f ${WRKSRC}/system/dos/musixtex.ins \
+		${WRKSRC}/tex
 	cd ${WRKSRC}/tex ; \
 		(TEXFONTS=${WRKSRC}/tfm initex '&tex musixtex.ins \dump')
 	@${ECHO} "======> Building musixflx executable"
-	cd ${WRKSRC}/systems/c-source; ${CC} -o musixflx musixflx.c
+	cd ${WRKSRC}/system/c-source; ${CC} -o musixflx musixflx.c
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/doc/musixtex
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/fonts/tfm/musixtex
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/fonts/source/musixtex
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/tex/latex/musixtex
+
 	${INSTALL_DATA} ${WRKSRC}/doc/* \
 		${PREFIX}/share/texmf/doc/musixtex
+
 	${INSTALL_DATA} ${WRKSRC}/tex/musixtex.fmt \
 		${PREFIX}/share/texmf/web2c
-	${INSTALL_DATA} ${WRKSRC}/mf/*.mf \
-		${PREFIX}/share/texmf/fonts/source/musixtex
-	${INSTALL_DATA} ${WRKSRC}/tfm/*.tfm \
-		${PREFIX}/share/texmf/fonts/tfm/musixtex
+
 	${INSTALL_DATA} ${WRKSRC}/tex/* \
 		${PREFIX}/share/texmf/tex/latex/musixtex
-	${INSTALL_PROGRAM} ${WRKSRC}/systems/c-source/musixflx \
+
+	${INSTALL_DATA} ${WRKSRC}/mf/*.mf \
+		${PREFIX}/share/texmf/fonts/source/musixtex
+
+	${INSTALL_DATA} ${WRKSRC}/tfm/*.tfm \
+		${PREFIX}/share/texmf/fonts/tfm/musixtex
+
+	${INSTALL_PROGRAM} ${WRKSRC}/system/c-source/musixflx \
 		${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/systems/c-source/musixflx.1 \
+
+	${INSTALL_MAN} ${WRKSRC}/system/c-source/musixflx.1 \
 		${PREFIX}/man/man1
+
 	cd ${PREFIX}/bin ; ${LN} -sf virtex musixtex
+
 	${LOCALBASE}/bin/texconfig rehash
 
 post-install:
