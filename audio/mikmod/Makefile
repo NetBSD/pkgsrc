@@ -1,30 +1,22 @@
-# $NetBSD: Makefile,v 1.19 2000/01/15 18:46:23 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2000/04/02 16:32:34 pooka Exp $
 #
 
-DISTNAME=	mikmod-3.0.3
+DISTNAME=	mikmod-3.1.6-a
+PKGNAME=	mikmod-3.1.6a
 CATEGORIES=	audio
-MASTER_SITES=	http://www.freenet.tlh.fl.us/~amstpi/	\
-		${MASTER_SITE_SUNSITE:=apps/sound/players/}
+MASTER_SITES=	http://mikmod.darkorb.net/libmikmod/
 
 MAINTAINER=	mycroft@NetBSD.ORG
-HOMEPAGE=	http://www.freenet.tlh.fl.us/~amstpi/mikmod.html
+HOMEPAGE=	http://mikmod.darkorb.net/
 
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
+DEPENDS+=	libmikmod>=3.1.9:../../audio/libmikmod
 
 USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
 
-post-patch:
-	${CHMOD} a+x ${WRKSRC}/build-mikmod.netbsd.sh
+CPPFLAGS+=	-I${LOCALBASE}/include
 
-do-build:
-	@( cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./build-mikmod.netbsd.sh )
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/usercode/mikmod ${PREFIX}/bin
-	#${INSTALL_MAN} ${WRKSRC}/docs/mikmod.1 ${PREFIX}/man/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mikmod
-.for f in bugs.txt changes.txt future.txt mikmod.doc mikmod.txt tips.txt
-	${INSTALL_DATA} ${WRKSRC}/docs/$f ${PREFIX}/share/doc/mikmod
-.endfor
+CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"
