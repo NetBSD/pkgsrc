@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 13:30:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/16 14:52:43 jlam Exp $
 #
 
 DISTNAME=	easytag-0.11
@@ -12,7 +12,11 @@ COMMENT=	Tool to view, edit and write ID3 v1 TAGs with a GTK+ interface
 DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 
 USE_GMAKE=	yes
-USE_LIBINTL=	yes
+#USE_LIBINTL=	yes
 USE_X11BASE=	yes
+
+.include "../../devel/gettext-lib/buildlink.mk"
+
+MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}
 
 .include "../../mk/bsd.pkg.mk"
