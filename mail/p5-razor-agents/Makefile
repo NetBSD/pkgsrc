@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/05/12 10:16:48 abs Exp $
-#
+# $NetBSD: Makefile,v 1.3 2002/07/05 07:04:29 tron Exp $
 
 DISTNAME=	razor-agents-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +13,7 @@ COMMENT=	collaborative spam filtering network
 
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
-DEPENDS+=	p5-Time-HiRes-[0-9]*:../../devel/p5-Time-HiRes
+DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-MailTools-[0-9]*:../../mail/p5-MailTools
 
