@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/02/14 02:50:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/28 20:31:46 wiz Exp $
 #
 
 DISTNAME=	xhippo-3.3
@@ -15,7 +15,7 @@ USE_BUILDLINK2=	yes
 
 CONFIGURE_ENV+=	--with-gnome=no
 
-CONF_FILES=	${PREFIX}/share/doc/xhippo/xhippo.config.example ${PKG_SYSCONFDIR}/xhippo.config 
+CONF_FILES=	${PREFIX}/share/doc/xhippo/xhippo.config.example ${PKG_SYSCONFDIR}/xhippo.config
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xhippo
