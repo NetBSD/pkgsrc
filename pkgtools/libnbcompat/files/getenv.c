@@ -1,3 +1,5 @@
+/*	$NetBSD: getenv.c,v 1.3 2003/09/06 23:03:02 grant Exp $	*/
+
 /*
  * Copyright (c) 1987 Regents of the University of California.
  * All rights reserved.
@@ -29,7 +31,7 @@
 
 #if defined(LIBC_SCCS) && !defined(lint)
 /*static char *sccsid = "from: @(#)getenv.c	5.8 (Berkeley) 2/23/91";*/
-static char *rcsid = "$Id: getenv.c,v 1.2 2003/08/27 12:25:40 jmmv Exp $";
+static char *rcsid = "$Id: getenv.c,v 1.3 2003/09/06 23:03:02 grant Exp $";
 #endif /* LIBC_SCCS and not lint */
 
 #include <stdlib.h>
