@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/21 01:26:09 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/12/24 06:10:28 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libgtkhtml.
 #
@@ -9,7 +9,7 @@
 LIBGTKHTML_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgtkhtml
-BUILDLINK_DEPENDS.libgtkhtml?=		libgtkhtml>=2.0.2
+BUILDLINK_DEPENDS.libgtkhtml?=		libgtkhtml>=2.0.2nb1
 BUILDLINK_PKGSRCDIR.libgtkhtml?=	../../www/libgtkhtml
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgtkhtml=libgtkhtml
