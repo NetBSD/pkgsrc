@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1 2002/02/28 18:28:16 jlam Exp $
+
+--- configure.orig	Thu Oct 19 04:54:26 2000
++++ configure
+@@ -808,15 +808,6 @@
+         CPPFLAGS="$CPPFLAGS -traditional-cpp"
+ fi
+ 
+-#
+-# Check for /usr/pkg/{lib,include} which is where NetBSD puts binary
+-# and source packages.  This should be harmless on other OSs.
+-#
+-if test -d /usr/pkg/include -a -d /usr/pkg/lib ; then
+-       CFLAGS="$CFLAGS -I/usr/pkg/include"
+-       LDFLAGS="$LDFLAGS -L/usr/pkg/lib"
+-fi
+-
+ echo $ac_n "checking how to run the C preprocessor""... $ac_c" 1>&6
+ echo "configure:822: checking how to run the C preprocessor" >&5
+ # On Suns, sometimes $CPP names a directory.
+@@ -1110,10 +1101,17 @@
+   withval="$with_expat"
+   
+   if test "$withval" != "no" ; then
+-    if test -f "$withval/include/xmlparse.h" ; then
++    if test -f "$withval/include/expat.h" ; then
++        XML_DIR=$withval
++        XML_INCLUDE="$withval/include"
++        XML_LIB="$withval/lib"
++    fi
++    if test "$XML_DIR" = "" ; then
++      if test -f "$withval/include/xmlparse.h" ; then
+         XML_DIR=$withval
+         XML_INCLUDE="$withval/include"
+         XML_LIB="$withval/lib"
++      fi
+     fi
+     if test "$XML_DIR" = "" ; then
+       if test -f "$withval/include/xml/xmlparse.h" ; then
