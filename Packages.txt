@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.175 2001/07/26 15:14:05 jlam Exp $
+# $NetBSD: Packages.txt,v 1.176 2001/07/30 17:17:20 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1543,7 +1543,7 @@ If USE_BUILDLINK_ONLY is defined, then -L${LOCALBASE}/lib is not
 automatically added to LDFLAGS in bsd.pkg.mk.  However, this process
 provides isolated builds only for platforms that use xpkgwedge as we
 can't currently isolate the X11R6 files from package files installed under
-${X11BASE}}
+${X11BASE}.
 
 
  8.2 Writing buildlink.mk files
