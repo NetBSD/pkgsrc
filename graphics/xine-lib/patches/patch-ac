@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2003/10/02 01:16:40 mycroft Exp $
+$NetBSD: patch-ac,v 1.3 2003/10/02 10:11:49 mycroft Exp $
 
 --- src/audio_out/audio_sun_out.c.orig	2003-07-13 19:29:04.000000000 +0000
-+++ src/audio_out/audio_sun_out.c	2003-10-02 01:12:46.000000000 +0000
++++ src/audio_out/audio_sun_out.c	2003-10-02 09:51:34.000000000 +0000
 @@ -41,6 +41,11 @@
  #ifdef	__svr4__
  #include <stropts.h>
@@ -14,37 +14,60 @@ $NetBSD: patch-ac,v 1.2 2003/10/02 01:16:40 mycroft Exp $
  
  #include "xine_internal.h"
  #include "xineutils.h"
-@@ -161,6 +166,9 @@
-   info.play.precision = AUDIO_PRECISION_16;
-   info.play.encoding = AUDIO_ENCODING_LINEAR;
-   info.play.samples = 0;
-+#ifdef __NetBSD__
-+  info.blocksize = 1024;
-+#endif
-   if (ioctl(fd, AUDIO_SETINFO, &info)) {
-     fprintf(stderr, "rtsc: SETINFO failed\n");
-     goto error;
-@@ -175,6 +183,9 @@
-     fprintf(stderr, "rtsc: GETINFO1, %s\n", strerror(errno));
-     goto error;
-   }
-+#ifdef __NetBSD__
-+  info.play.samples /= 4;
+@@ -89,7 +94,9 @@
+   uint32_t       num_channels;
+   int		 bytes_per_frame;
+ 
++#ifndef __NetBSD__
+   uint32_t       frames_in_buffer;     /* number of frames writen to audio hardware   */
 +#endif
  
-   last_samplecnt = info.play.samples;
-   min_increment = ~0;
-@@ -197,6 +208,9 @@
- 	fprintf(stderr, "rtsc: GETINFO2 failed, %s\n", strerror(errno));
- 	goto error;
-     }
-+#ifdef __NetBSD__
-+    info.play.samples /= 4;
+   enum {
+       RTSC_UNKNOWN = 0,
+@@ -113,12 +120,14 @@
+   unsigned	 buf_len;
+ #endif
+ 
++#ifndef __NetBSD__
+ #if	SW_SAMPLE_COUNT
+   struct timeval tv0;
+   uint_t	 sample0;
+ #endif
+ 
+   uint_t	 last_samplecnt;
 +#endif
-     if (info.play.samples < last_samplecnt) {
- 	fprintf(stderr, "rtsc: %u > %u?\n", last_samplecnt, info.play.samples);
- 	goto error;
-@@ -463,6 +477,9 @@
+ } sun_driver_t;
+ 
+ 
+@@ -128,6 +137,7 @@
+  */
+ static int realtime_samplecounter_available(char *dev)
+ {
++#ifndef __NetBSD__
+   int fd = -1;
+   audio_info_t info;
+   int rtsc_ok = RTSC_DISABLED;
+@@ -246,6 +256,9 @@
+   }
+ 
+   return rtsc_ok;
++#else
++  return RTSC_ENABLED;
++#endif
+ }
+ 
+ 
+@@ -431,7 +444,9 @@
+   
+   this->mode			= mode;
+   this->input_sample_rate	= rate;
++#ifndef __NetBSD__
+   this->frames_in_buffer	= 0;
++#endif
+ 
+   /*
+    * open audio device
+@@ -463,6 +478,9 @@
        info.play.sample_rate = this->input_sample_rate;
        info.play.eof = 0;
        info.play.samples = 0;
@@ -54,13 +77,42 @@ $NetBSD: patch-ac,v 1.2 2003/10/02 01:16:40 mycroft Exp $
  
        this->convert_u8_s8 = 0;
  
-@@ -568,6 +585,9 @@
+@@ -524,7 +542,9 @@
+       return 0;
+   }
  
-   if (ioctl(this->audio_fd, AUDIO_GETINFO, &info) == 0 &&
-       (this->frames_in_buffer == 0 || info.play.samples > 0)) {
-+#ifdef __NetBSD__
-+    info.play.samples /= this->bytes_per_frame;
++#ifndef __NetBSD__
+   this->last_samplecnt = 0;
 +#endif
  
-     if (info.play.samples < this->last_samplecnt) {
- 	fprintf(stderr, "audio_sun_out: broken sound driver, sample counter runs backwards, cur %u < prev %u\n",
+   this->output_sample_rate = info.play.sample_rate;
+   this->num_channels = info.play.channels;
+@@ -566,6 +586,7 @@
+   sun_driver_t *this = (sun_driver_t *) this_gen;
+   audio_info_t info;
+ 
++#ifndef __NetBSD__
+   if (ioctl(this->audio_fd, AUDIO_GETINFO, &info) == 0 &&
+       (this->frames_in_buffer == 0 || info.play.samples > 0)) {
+ 
+@@ -611,6 +632,10 @@
+     }
+ #endif
+   }
++#else
++  if (ioctl(this->audio_fd, AUDIO_GETINFO, &info) == 0)
++    return info.play.seek / this->bytes_per_frame;
++#endif
+   return NOT_REAL_TIME;
+ }
+ 
+@@ -719,7 +744,9 @@
+   if (num_written > 0) {
+     int buffered_samples;
+ 
++#ifndef __NetBSD__
+     this->frames_in_buffer += num_written / this->bytes_per_frame;
++#endif
+ 
+     /* 
+      * Avoid storing too much data in the sound driver's buffers.
