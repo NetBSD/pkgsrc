@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2001/09/14 22:24:16 wiz Exp $
+$NetBSD: distinfo,v 1.5 2001/10/21 10:02:03 wiz Exp $
 
-SHA1 (tkcvs-7.0.1.tar.gz) = ff96d95c6bdbd2b6b70ac7394da60457dbd909c6
-Size (tkcvs-7.0.1.tar.gz) = 225320 bytes
+SHA1 (tkcvs-7.0.2.tar.gz) = ce3749e7df8b4ee2ecaf1b4d8a8041f8bd47d1c9
+Size (tkcvs-7.0.2.tar.gz) = 218271 bytes
 SHA1 (patch-aa) = 21daa6567d1c36ce0adf3a50ab9b4b231fee92cb
