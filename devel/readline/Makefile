@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 1998/04/17 09:37:24 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/21 08:36:12 hubertf Exp $
 #
 
-DISTNAME=	readline-2.1
+DISTNAME=	readline-2.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 
@@ -19,6 +19,6 @@ do-build:
 	(cd ${WRKSRC}; make LIB=history)
 
 post-install:
-	@${LDCONFIG} || ${TRUE}
+	${LDCONFIG} || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
