@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.17 2001/06/26 16:44:16 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.18 2001/06/28 22:37:02 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -126,6 +126,10 @@ _BUILDLINK_USE: .USE
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 
+BUILDLINK_CONFIG_WRAPPER_SED=						\
+		-e "s|-I${LOCALBASE}/|-I${BUILDLINK_DIR}/|g"		\
+		-e "s|-L${LOCALBASE}/|-L${BUILDLINK_DIR}/|g"
+
 _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink-config-wrapper//}_buildlink_config_wrapper_done; \
@@ -135,8 +139,8 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 		(${ECHO} '#!/bin/sh';					\
 		${ECHO} '';						\
 		${ECHO} '${ECHO} "`${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} $$*`" | ${SED} \'; \
-		${ECHO} '	-e "s|-I${LOCALBASE}/|-I${BUILDLINK_DIR}/|g" \'; \
-		${ECHO} '	-e "s|-L${LOCALBASE}/|-L${BUILDLINK_DIR}/|g"';	\
+		${ECHO} '	${BUILDLINK_CONFIG_WRAPPER_SED.${.TARGET:S/-buildlink-config-wrapper//}} \'; \
+		${ECHO} '	${BUILDLINK_CONFIG_WRAPPER_SED} \';	\
 		) > ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${CHMOD} +x ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
