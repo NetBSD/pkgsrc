@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2000/07/04 11:08:39 itojun Exp $
+
+--- sshd_config-	Tue Jul  4 19:28:40 2000
++++ sshd_config	Tue Jul  4 19:28:43 2000
+@@ -2,7 +2,7 @@
+ 
+ Port 22
+ #Protocol 2,1
+-ListenAddress 0.0.0.0
++#ListenAddress 0.0.0.0
+ #ListenAddress ::
+ HostKey /etc/ssh_host_key
+ ServerKeyBits 768
