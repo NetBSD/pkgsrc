@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.145 2004/01/27 02:36:59 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.146 2004/02/01 00:32:38 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -463,10 +463,10 @@ WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
 #
 WRKLOG?=		${WRKDIR}/.work.log
 
-.if exists(${.CURDIR}/../../mk/compiler.mk)
-.  include "../../mk/compiler.mk"
-.elif exists(${.CURDIR}/../mk/compiler.mk)
-.  include "../mk/compiler.mk"
+.if exists(${.CURDIR}/../../mk/compiler/bsd.compiler.mk)
+.  include "../../mk/compiler/bsd.compiler.mk"
+.elif exists(${.CURDIR}/../mk/compiler/bsd.compiler.mk)
+.  include "../mk/compiler/bsd.compiler.mk"
 .endif
 
 .endif	# BSD_PKG_MK
