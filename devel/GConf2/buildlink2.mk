@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/01/07 23:45:34 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2003/01/25 16:29:50 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use GConf2.
 #
@@ -32,7 +32,6 @@ BUILDLINK_FILES.GConf2+=	lib/libgconf-2.*
 .include "../../net/ORBit2/buildlink2.mk"
 .include "../../net/linc/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	GConf2-buildlink
 
