@@ -1,0 +1,11 @@
+$NetBSD: patch-ak,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
+
+--- src/tcl/Makefile.am.orig	Wed Jan 21 15:34:14 2004
++++ src/tcl/Makefile.am
+@@ -2,5 +2,5 @@
+ ##
+ 
+-AM_CFLAGS=-Wall -W -Wno-unused-parameter -Wno-unused-function -DDDR_DEBUG
++AM_CFLAGS= -DDDR_DEBUG
+ 
+ noinst_LIBRARIES=libtcl.a
