@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.2 1999/09/03 17:35:20 kim Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/01 03:32:56 jlam Exp $
 #
 
-DISTNAME=	GD-1.21
+DISTNAME=	GD-1.22
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/GD/
+HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/GD/GD.html
 
-DEPENDS+=	freetype-1.1:../../graphics/freetype
-DEPENDS+=	gd-1.6.3:../../graphics/gd
-DEPENDS+=	png-1.0.3:../../graphics/png
+DEPENDS+=	gd-1.7.3:../../graphics/gd
 
 USE_PERL5=	yes
 
 do-configure:
-		@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
