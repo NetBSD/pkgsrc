@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/09/24 14:20:05 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2002/09/24 18:21:29 martti Exp $
 
 .if !defined(LIBXSLT_BUILDLINK2_MK)
 LIBXSLT_BUILDLINK2_MK=	# defined
@@ -12,6 +12,7 @@ BUILDLINK_PREFIX.libxslt_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libxslt=	include/breakpoint/*
 BUILDLINK_FILES.libxslt+=	include/libexslt/*
 BUILDLINK_FILES.libxslt+=	include/libxslt/*
+BUILDLINK_FILES.libxslt+=	lib/libexslt.*
 BUILDLINK_FILES.libxslt+=	lib/libxslt.*
 BUILDLINK_FILES.libxslt+=	lib/libxsltbreakpoint.*
 
