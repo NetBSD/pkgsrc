@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5573 2004/04/14 12:47:39 jmmv Exp $
+$NetBSD: CHANGES,v 1.5574 2004/04/14 14:42:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1948,3 +1948,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lame to 3.96 [adam 2004-04-14]
 	Updated bmp to 0.9.6.1 [jmmv 2004-04-14]
 	Updated bmp-esound to 0.9.6.1 [jmmv 2004-04-14]
+	Updated timidity to 2.13.0 [adam 2004-04-14]
