@@ -1,4 +1,4 @@
-# $NetBSD: STATUS,v 1.4 2003/04/16 11:01:36 grant Exp $
+# $NetBSD: STATUS,v 1.5 2003/04/20 20:43:49 cjep Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.
@@ -39,31 +39,31 @@ blank	-	Unknown
 Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris
 ---------------------------------------------------------------------------
 audio/mpg123                                 Y      Y                  Y
-devel/cvs               Y        Y           Y      Y                  Y
-devel/gettext           Y        Y           Y      Y                  Y
-devel/libtool           Y        Y           Y      Y                  Y
+devel/cvs                  Y        Y        Y      Y        Y         Y
+devel/gettext              Y        Y        Y      Y                  Y
+devel/libtool              Y        Y        Y      Y                  Y
 devel/ncurses                                                          Y
-editors/vim             Y        Y           Y      Y                  Y
+editors/vim                Y        Y        Y      Y                  Y
 editors/xemacs                                      Y
 editors/emacs                                       Y
 graphics/xfig                                       Y
-graphics/xv             Y                           Y
-lang/perl5              N/A      Y           Y      Y                  Y
-lang/perl58             Y                    Y      Y                  Y
-mail/mutt               Y        Y           Y      Y                  Y
-misc/screen             Y        Y           Y      Y                  Y
-net/wget                Y        Y                  Y
-news/slrn               Y        Y           Y      Y
+graphics/xv                Y                        Y
+lang/perl5                N/A       Y        Y      Y                  Y
+lang/perl58                Y                 Y      Y                  Y
+mail/mutt                  Y        Y        Y      Y                  Y
+misc/screen                Y        Y        Y      Y                  Y
+net/wget                   Y        Y               Y
+news/slrn                  Y        Y        Y      Y
 print/gv                                            Y
 print/teTeX                                         Y
 print/xpdf                                         *[19860]
 security/openssh                             Y      Y                  Y
-security/openssl        Y                    Y      Y                  Y
-shells/tcsh             N        Y           Y      Y                  Y
+security/openssl           Y                 Y      Y                  Y
+shells/tcsh                N        Y        Y      Y        Y         Y
 wm/blackbox                                         Y
-www/apache              Y        Y           Y      Y                  Y
-www/links               Y        Y           Y      Y
-www/lynx                Y        Y                  Y                  Y
+www/apache                 Y        Y        Y      Y                  Y
+www/links                  Y        Y        Y      Y
+www/lynx                   Y        Y               Y                  Y
 ---------------------------------------------------------------------------
 notes:
 
