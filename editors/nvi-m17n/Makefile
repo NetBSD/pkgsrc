@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/11/17 15:46:23 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2000/01/19 12:28:44 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -11,6 +11,8 @@ PATCH_SITES=	ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
 PATCHFILES=	nvi-1.79.m17n-19991117.diff.gz
 
 MAINTAINER=	itojun@itojun.org
+
+CONFLICTS=	vigor-*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
 GNU_CONFIGURE=	YES
