@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.7 2003/03/05 16:07:44 seb Exp $
+# $NetBSD: module.mk,v 1.8 2003/03/14 19:37:43 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -54,6 +54,7 @@ do-configure: perl5-configure
 # customizing the LDFLAGS passed to the compiler/linker.
 #
 .if defined(PERL5_LDFLAGS) && !empty(PERL5_LDFLAGS)
+FIX_RPATH+=	PERL5_LDFLAGS
 LDFLAGS+=	${PERL5_LDFLAGS}
 .  include "../../mk/bsd.prefs.mk"
 .  if ${OBJECT_FMT} == "a.out"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/10/12 09:40:00 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/03/14 19:37:33 jlam Exp $
 
 .if !defined(FREETDS_BUILDLINK2_MK)
 FREETDS_BUILDLINK2_MK=	# defined
@@ -14,7 +14,8 @@ BUILDLINK_FILES.freetds+=	freetds/lib/*
 
 BUILDLINK_CPPFLAGS.freetds=	-I${BUILDLINK_PREFIX.freetds}/freetds/include
 BUILDLINK_LDFLAGS.freetds=	-L${BUILDLINK_PREFIX.freetds}/freetds/lib
-BUILDLINK_LDFLAGS.freetds+=	-Wl,-R${BUILDLINK_PREFIX.freetds}/freetds/lib
+BUILDLINK_LDFLAGS.freetds+=	-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.freetds}/freetds/lib
+FIX_RPATH+=			BUILDLINK_LDFLAGS.freetds
 
 BUILDLINK_TARGETS+=	freetds-buildlink
 

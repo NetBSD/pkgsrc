@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2003/03/14 11:27:09 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2003/03/14 19:38:07 jlam Exp $
 
 .if !defined(QT3_LIBS_BUILDLINK2_MK)
 QT3_LIBS_BUILDLINK2_MK=	# defined
@@ -16,7 +16,8 @@ BUILDLINK_FILES.qt3-libs+=	qt3/lib/libqt-mt.*
 QTDIR=		${BUILDLINK_PREFIX.qt3-libs}/qt3
 
 BUILDLINK_CPPFLAGS.qt3-libs=	-I${QTDIR}/include
-BUILDLINK_LDFLAGS.qt3-libs=	-L${QTDIR}/lib -Wl,-R${QTDIR}/lib
+BUILDLINK_LDFLAGS.qt3-libs=	-L${QTDIR}/lib -Wl,${RPATH_FLAG}${QTDIR}/lib
+FIX_RPATH+=			BUILDLINK_LDFLAGS.qt3-libs
 
 PTHREAD_OPTS+=	require
 
@@ -31,7 +32,7 @@ PTHREAD_OPTS+=	require
 
 CONFIGURE_ENV+=		MOC="${QTDIR}/bin/moc"
 MAKE_ENV+=		MOC="${QTDIR}/bin/moc"
-LDFLAGS+=		-Wl,-R${QTDIR}/lib
+LDFLAGS+=		-Wl,${RPATH_FLAG}${QTDIR}/lib
 
 .if !defined(BUILD_QT3)
 CONFIGURE_ENV+=		QTDIR="${QTDIR}"

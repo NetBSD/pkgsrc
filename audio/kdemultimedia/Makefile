@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/03/13 12:13:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/03/14 19:37:30 jlam Exp $
 
 DISTNAME=	kdemultimedia-1.1.2
 PKGREVISION=	1
@@ -22,7 +22,11 @@ CONFIGURE_ARGS=	"--datadir=${KDEBASEDIR}/share/kde" \
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${KDEBASEDIR} \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib"
+		all_libraries="${KDE_LDFLAGS}"
+
+KDE_LDFLAGS=	-L${LOCALBASE}/lib -L${X11BASE}/lib
+KDE_LDFLAGS+=	-Wl,${RPATH_FLAG}${LOCALBASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib
+FIX_RPATH+=	KDE_LDFLAGS
 
 post-install:
 	@${CHMOD} -R go-w ${KDEBASEDIR}/share/kde/apps/kscd/cddb

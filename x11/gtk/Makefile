@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2002/12/19 13:09:37 grant Exp $
+# $NetBSD: Makefile,v 1.79 2003/03/14 19:38:05 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		3
@@ -36,7 +36,7 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 # The following ensures that `gtk-config --libs' includes the correct linker
 # flags for linking the X11 libs.
 #
-X_LDFLAGS=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
+X_LDFLAGS=		${X11_LDFLAGS}
 
 GTK_VERSION=		${DISTNAME:S/gtk+-//}
 GTK_MAJOR_VERSION=	${GTK_VERSION:C/\..*//}

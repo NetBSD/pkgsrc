@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/03/12 21:02:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2003/03/14 19:37:39 jlam Exp $
 
 DISTNAME=	kdetoys-1.1.2
 PKGREVISION=	1
@@ -25,6 +25,9 @@ CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${KDEBASEDIR} \
 		QTDIR=${QT1DIR}/qt1 \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
+		all_libraries="${KDE_LDFLAGS}"
+
+FIX_RPATH+=	KDE_LDFLAGS
+KDE_LDFLAGS=	-L${LOCALBASE}/lib -Wl,${RPATH_FLAG}${LOCALBASE}/lib -L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib
 
 .include "../../mk/bsd.pkg.mk"

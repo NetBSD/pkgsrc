@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/25 12:45:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/14 19:37:44 jlam Exp $
 #
 
 DISTNAME=	Python-2.0.1
@@ -32,7 +32,8 @@ SCRIPTS_ENV+=	'OPT=${CFLAGS}'
 
 SSLFLAGS=	-DUSE_SSL -I${BUILDLINK_PREFIX.openssl}/include/openssl \
 		-L${BUILDLINK_PREFIX.openssl}/lib \
-		-Wl,-R${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto
+FIX_RPATH+=	SSLFLAGS
 
 # Handle the module setup file:
 #   - disable a few broken modules on 64 bit platforms (nothing important)
@@ -41,7 +42,8 @@ SSLFLAGS=	-DUSE_SSL -I${BUILDLINK_PREFIX.openssl}/include/openssl \
 
 .if ${OPSYS} == "SunOS"
 ZOULARIS?=	${PREFIX}/bsd
-MODADD=		-I${ZOULARIS}/include -L${ZOULARIS}/lib -R${ZOULARIS}/lib
+MODADD=		-I${ZOULARIS}/include -L${ZOULARIS}/lib ${RPATH_FLAG}${ZOULARIS}/lib
+FIX_RPATH+=	MODADD
 .endif
 
 pre-configure:

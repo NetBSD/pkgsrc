@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2003/01/28 22:03:24 jlam Exp $
+# $NetBSD: Makefile,v 1.74 2003/03/14 19:37:40 jlam Exp $
 #
 
 DISTNAME=		imlib-1.9.14
@@ -41,7 +41,7 @@ CONF_FILES+=		${EGDIR}/im_palette-tiny.pal \
 # The following ensures that `imlib-config --libs' includes the correct
 # linker flags for linking the X11 libs.
 #
-X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
+X_LDFLAGS=		${X11_LDFLAGS}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/imlib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/22 02:56:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/14 19:37:42 jlam Exp $
 #
 
 DISTNAME=	ocaml-3.06
@@ -16,7 +16,10 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	-prefix ${LOCALBASE}
 CONFIGURE_ARGS+=	-tklibs -L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	-tkdefs "-I${LOCALBASE}/include "
-CONFIGURE_ARGS+=	-libs "-Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib"
+CONFIGURE_ARGS+=	-libs "${OCAML_LDFLAGS}"
+OCAML_LDFLAGS=		-Wl,${RPATH_FLAG}${X11BASE}/lib			\
+			-Wl,${RPATH_FLAG}${LOCALBASE}/lib
+FIX_RPATH+=		OCAML_LDFLAGS
 
 ALL_TARGET=	world
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/12/19 03:46:46 itojun Exp $
+# $NetBSD: Makefile,v 1.41 2003/03/14 19:37:51 jlam Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=--disable-threads	# Until we have real threads
 CONFIGURE_ARGS+=--with-libtool=yes \
 		--sysconfdir=/etc \
 		--localstatedir=/var
-#LDFLAGS+=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
+#LDFLAGS+=	-Wl,${RPATH_FLAG}${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
 # use external OpenSSL.  comment out the following line and the buildlink
 # include at the bottom to use OpenSSL shipped with BIND9.
 CONFIGURE_ARGS+=--with-openssl=${SSLBASE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/30 09:46:42 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/14 19:37:57 jlam Exp $
 #
 
 DISTNAME=	xerces-c-src1_3_0
@@ -26,8 +26,8 @@ FLAGS+=		-O2 -I${ICUROOT}/include \
 
 CFLAGS+=	${FLAGS}
 CXXFLAGS+=	${FLAGS}
-LIBS=		-L${ICUROOT}/lib -Wl,-R${ICUROOT}/lib
-LIBS+=		-L${ICUROOT}/lib/icu/current -Wl,-R${ICUROOT}/lib/icu/current
+LIBS=		-L${ICUROOT}/lib -Wl,${RPATH_FLAG}${ICUROOT}/lib
+LIBS+=		-L${ICUROOT}/lib/icu/current -Wl,${RPATH_FLAG}${ICUROOT}/lib/icu/current
 
 CONFIGURE_ENV+=	XERCESCROOT="${WRKDIR}/xerces-c-src1_3_0" \
 		ICUROOT=${ICUROOT} \

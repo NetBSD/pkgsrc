@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.19 2003/03/07 05:59:48 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.20 2003/03/14 19:37:36 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -88,7 +88,7 @@ _BLNK_LIBINTL=		# empty
 .if ${_NEED_GNU_GETTEXT} == "YES"
 _BLNK_INCINTL+=		-I${BUILDLINK_PREFIX.gettext}/include
 _BLNK_LIBINTL+=		-L${BUILDLINK_PREFIX.gettext}/lib
-_BLNK_LIBINTL+=		-Wl,-R${BUILDLINK_PREFIX.gettext}/lib
+_BLNK_LIBINTL+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.gettext}/lib
 _BLNK_LIBINTL+=		-lintl
 .  if ${_GETTEXT_NEEDS_ICONV} == "YES"
 _BLNK_LIBINTL+=		${BUILDLINK_LIBICONV_LDADD}
@@ -98,6 +98,7 @@ _BLNK_LIBINTL+=		${BUILDLINK_LIBICONV_LDADD}
 _BLNK_LIBINTL+=		-lintl
 .  endif
 .endif
+FIX_RPATH+=		_BLNK_LIBINTL
 
 # The following section is written to avoid using a conditional based on
 # ${GNU_CONFIGURE}.

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/03/12 22:07:30 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/03/14 19:38:07 jlam Exp $
 
 .if !defined(QT2_LIBS_BUILDLINK2_MK)
 QT2_LIBS_BUILDLINK2_MK=	# defined
@@ -15,7 +15,8 @@ BUILDLINK_FILES.qt2-libs+=	qt2/lib/libqt.*
 QTDIR=		${BUILDLINK_PREFIX.qt2-libs}/qt2
 
 BUILDLINK_CPPFLAGS.qt2-libs=	-I${QTDIR}/include
-BUILDLINK_LDFLAGS.qt2-libs=	-L${QTDIR}/lib -Wl,-R${QTDIR}/lib
+BUILDLINK_LDFLAGS.qt2-libs=	-L${QTDIR}/lib -Wl,${RPATH_FLAG}${QTDIR}/lib
+FIX_RPATH+=			BUILDLINK_LDFLAGS.qt2-libs
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
@@ -28,7 +29,7 @@ CONFIGURE_ENV+=		QTDIR="${QTDIR}"
 CONFIGURE_ENV+=		MOC="${QTDIR}/bin/moc"
 MAKE_ENV+=		QTDIR="${QTDIR}"
 MAKE_ENV+=		MOC="${QTDIR}/bin/moc"
-LDFLAGS+=		-Wl,-R${QTDIR}/lib
+LDFLAGS+=		-Wl,${RPATH_FLAG}${QTDIR}/lib
 
 BUILDLINK_TARGETS+=	qt2-libs-buildlink
 

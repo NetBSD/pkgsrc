@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/01/09 15:28:07 mycroft Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/14 19:37:40 jlam Exp $
 #
 
 DISTNAME=	jhead-1.9
@@ -9,7 +9,7 @@ MAINTAINER=	veego@netbsd.org
 HOMEPAGE=	http://www.sentex.net/~mwandel/jhead/
 COMMENT=	Extract EXIF header from JPEG image
 
-LIBS=		-lm -L${BUILDLINK_PREFIX.jpeg}/lib -Wl,-R${BUILDLINK_PREFIX.jpeg}/lib -ljpeg
+LIBS=		-lm -L${BUILDLINK_PREFIX.jpeg}/lib -Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.jpeg}/lib -ljpeg
 
 USE_BUILDLINK2=	yes
 

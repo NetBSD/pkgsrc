@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/10/21 13:48:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/03/14 19:38:06 jlam Exp $
 #
 
 DISTNAME=	khostchooser-0.3
@@ -24,7 +24,10 @@ CONFIGURE_ARGS=	--datadir=${PREFIX}/share/kde \
 		--with-qt-dir=${QTDIR}
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
+		all_libraries="${KDE_LDFLAGS}"
+
+FIX_RPATH+=	KDE_LDFLAGS
+KDE_LDFLAGS=	-L${LOCALBASE}/lib -Wl,${RPATH_FLAG}${LOCALBASE}/lib -L${X11BASE}/lib -Wl,${RPATH_FLAG}${X11BASE}/lib
 
 .include "../../graphics/libungif/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
