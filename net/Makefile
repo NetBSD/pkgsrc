@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.423 2004/01/03 23:24:17 tron Exp $
+# $NetBSD: Makefile,v 1.424 2004/01/06 00:28:47 grant Exp $
 #
 
 COMMENT=	Networking tools
@@ -201,6 +201,7 @@ SUBDIR+=	p5-Net-Z3950
 SUBDIR+=	p5-RADIUS
 SUBDIR+=	p5-SNMP
 SUBDIR+=	p5-SNMP_Session
+SUBDIR+=	p5-SOAP-Lite
 SUBDIR+=	p5-Socket6
 SUBDIR+=	p5-Wais
 SUBDIR+=	p5-ispman
