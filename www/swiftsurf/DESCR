@@ -1,0 +1,3 @@
+SwiftSurf is a web proxy that can handle http (1.0 and 1.1) and
+https. Moreover, it allows page filtering and authentication through a
+password.
