@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/11/23 16:54:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1999/11/29 04:35:47 sakamoto Exp $
 #
 
 DISTNAME=	Rollemup
@@ -21,6 +21,8 @@ NO_CONFIGURE=	yes
 NO_PACKAGE=	${RESTRICTED}
 NO_CDROM=	${RESTRICTED}
 
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
+
 PLIST_SRC=	${WRKDIR}/PLIST.src
 GAMES_DIR=	share/games
 
@@ -37,8 +39,12 @@ IGNORE= requires Linux glibc2 libraries - see compat_linux(8)
 .endif
 
 do-build:
-	@${SED} -e 's|$${PREFIX}|${PREFIX}|g' ${FILESDIR}/rollemup.sh \
-		> ${WRKDIR}/rollemup
+	@${SED} -e 's|$${PREFIX}|${PREFIX}|g' \
+		-e 's|$${GAMES_DIR}|${GAMES_DIR}|g' \
+		${FILESDIR}/rollemup.sh > ${WRKDIR}/rollemup
+	@${SED} -e 's|$${PREFIX}|${PREFIX}|g' \
+		-e 's|$${GAMES_DIR}|${GAMES_DIR}|g' \
+		${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 	@${SED} -e 's|$${PREFIX}|${PREFIX}|g' ${FILESDIR}/README.Rollemup \
 		> ${WRKDIR}/README.Rollemup
 
@@ -55,11 +61,11 @@ do-install:
 	  for DIR in `find ${GAMES_DIR}/Rollemup -type d | sort -r`; do \
 	    ${ECHO} "@dirrm $$DIR" >> ${PLIST_SRC}; \
 	  done)
-	@chown root:games ${PREFIX}/bin/Rollemup
-	@chmod 2755 ${PREFIX}/bin/Rollemup
-	@chown -R root:games ${PREFIX}/${GAMES_DIR}/Rollemup
-	@chmod 775 ${PREFIX}/${GAMES_DIR}/Rollemup/Games
-	@chmod 775 ${PREFIX}/${GAMES_DIR}/Rollemup/Upload
-	@chmod 664 ${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup.ini
+	@${CHOWN} root:games ${PREFIX}/bin/Rollemup
+	@${CHMOD} 2755 ${PREFIX}/bin/Rollemup
+	@${CHOWN} -R root:games ${PREFIX}/${GAMES_DIR}/Rollemup
+	@${CHMOD} 775 ${PREFIX}/${GAMES_DIR}/Rollemup/Games
+	@${CHMOD} 775 ${PREFIX}/${GAMES_DIR}/Rollemup/Upload
+	@${CHMOD} 664 ${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup.ini
 
 .include "../../mk/bsd.pkg.mk"
