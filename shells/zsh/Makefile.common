@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/11/25 16:12:54 taca Exp $
+# $NetBSD: Makefile.common,v 1.19 2005/01/18 12:44:53 uebayasi Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -57,6 +57,10 @@ PLIST_SRC=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/zsh
 PLIST_SRC=	${PKGDIR}/PLIST.shlibs ${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 .  endif
+.endif
+
+.if ${OPSYS} == "Interix"
+CONFIGURE_ARGS+=	--without-tcsetpgrp
 .endif
 
 .undef MANZ
