@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/08/03 01:30:31 hubertf Exp $
+
+SHA1 (apr_20020725223645.tar.gz) = a3843df9ebc72e6630cf58cc8fcd410ab3f8fb81
+Size (apr_20020725223645.tar.gz) = 723293 bytes
+SHA1 (apr-util_20020725223700.tar.gz) = b7d74cad3648a468d287102dd79fca01097d84c0
+Size (apr-util_20020725223700.tar.gz) = 239975 bytes
