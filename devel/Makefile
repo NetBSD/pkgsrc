@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2000/11/30 02:36:38 jtb Exp $
+# $NetBSD: Makefile,v 1.157 2000/12/08 23:44:25 jtb Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -33,6 +33,7 @@
     SUBDIR += electricfence
     SUBDIR += ffcall
     SUBDIR += flex
+    SUBDIR += fortran-utils
     SUBDIR += ftnchek
     SUBDIR += gal
     SUBDIR += gdb
