@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:27 agc Exp $
+
+MD5 (lavaps-1.15.tar.gz) = 36ad2964f9462a6f8194a9ced31680fc
+SHA1 (patch-aa) = 3be933a17396c051d79d8d3695f91f459fb29d3a

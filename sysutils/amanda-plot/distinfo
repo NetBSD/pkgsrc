@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:49:41 agc Exp $
+
+MD5 (amanda-2.4.2.tar.gz) = b10c0ada724694d0bbc46a0d3ebee3c9
+SHA1 (patch-aa) = 12ff93eea6d9f443ce2f236492d9e0362fd2d9ff
+SHA1 (patch-ab) = b60e844b59624d0f3c330654da82b4385add4eef
+SHA1 (patch-ac) = 5c3371bace04f0910aea900c6fe65bc2d9679d4b

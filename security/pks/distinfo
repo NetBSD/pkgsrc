@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:18 agc Exp $
+
+MD5 (pks-0.9.4.tar.gz) = 365d062bbc3f7bfda745474693d0fdec
+MD5 (pks094-patch2) = 33effba52c7a195d02d42ae41ba2795e
+MD5 (pks094-patch3) = a28a4074668654d0aac1a5ab10c211ee
+SHA1 (patch-aa) = e93eb32936f324f980e32d8bf7d38fbbd94447de
+SHA1 (patch-ab) = 2a6918f4e0620090d733147bdd093b370065dce1
+SHA1 (patch-ac) = 9d214cfb14ab7790b768ac4e7a184b3a4a09c6c0
+SHA1 (patch-ad) = 7f82a8277d8c958ec2791e0ad1dcafa67971b4ff

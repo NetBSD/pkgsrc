@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:02 agc Exp $
+
+MD5 (e2fsprogs-1.19.tar.gz) = 670dafc419fca17bfb92c9c467904b19
+SHA1 (patch-aa) = 6cf31cd25801b975474fccd0400fee74f1ba064d

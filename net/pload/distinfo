@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:51 agc Exp $
+
+MD5 (pload-0.9.4.tar.gz) = 8b77983ec7e38da3fb6232731784fe40
+SHA1 (patch-aa) = a5d96eed12a58c9ea6822c7953737b21a4800310

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:20 agc Exp $
+
+MD5 (kapm-0.3.1.tar.gz) = ab3ebdc461641b79d862024ea38db74e
+SHA1 (patch-aa) = 8e65e3aac39c9aebf5a92416d9605f2b7d7a14e0
+SHA1 (patch-ab) = b78aed68c97fa0c34025b06ae3ab1c5b2f03c0ba
+SHA1 (patch-ac) = fe38363be3b1bef59145f9c3a51acb47c86f47a7
+SHA1 (patch-ad) = cdfd6ada3729e0cbe621dc41e1b2c275aac6d0bf

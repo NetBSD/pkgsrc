@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:46:49 agc Exp $
+
+MD5 (ddos_scan.tar) = ae06b752558704a15329fc4d4097aa85
+SHA1 (patch-aa) = 934117d4d3806244137a9a6438d781cd9372487b

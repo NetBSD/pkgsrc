@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:41 agc Exp $
+
+MD5 (tcp_wrappers_7.6-ipv6.1.tar.gz) = 32215e61cc59fffa97b1cf7c426b1fc2
+SHA1 (patch-aa) = fa9764d666fe59baa495e0b8487d2beef0f96a83

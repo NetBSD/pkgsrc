@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:38 agc Exp $
+
+MD5 (stunnel-3.13.tar.gz) = c444b4954713012b3fb00cb6cc32d8f6
+SHA1 (patch-aa) = 9ef36b68a7689e9130da6b11f21a9ff9e6fcda90
+SHA1 (patch-ab) = 149634d07a6eb3245645d77ceb38d70b6fd1a504
+SHA1 (patch-ac) = 9246c0855f0fa12f79d00f7729c54c9b1703bdb9

@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:44:06 agc Exp $
+
+MD5 (psutils-p17.tar.gz) = b161522f3bd1507655326afa7db4a0ad
+SHA1 (patch-aa) = 90961e898a113c4d4fa64e8d44d40469c76f156d
+SHA1 (patch-ab) = 818a4169aaa9765c9629bb2a01eb5fa887b90f7f
+SHA1 (patch-ac) = 5d7c0c0872b9101b29b0a5294f53d3dd1c550971
+SHA1 (patch-ad) = 74bd84ae49127e5e7e69eca4025927e230d4521f
+SHA1 (patch-ae) = d6ed0910d6b2b6f43ffe1fa29c35543bb4b9855c
+SHA1 (patch-af) = 4452ec086be0abe895a48b2684f7e4afe65cf25c
+SHA1 (patch-ag) = a07233adb18ffa01999449935fce96983626e7c9
+SHA1 (patch-ah) = f69ac24e0fba9cdccf0e97db65e957b623c8fa0c

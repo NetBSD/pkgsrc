@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:25 agc Exp $
+
+MD5 (c-archie-1.4.1-FIXED.tar.Z) = 32e66e1fbaae9baf7026251b1bfaf5bc
+SHA1 (patch-aa) = e32fedd0535ea5409ee70430cc0ff12c79a766b9
+SHA1 (patch-ab) = 95b273f6d92d98218dbedef49377923820122ecf

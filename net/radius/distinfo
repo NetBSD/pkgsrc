@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:08 agc Exp $
+
+MD5 (radius/radius.3.6B.basic.tar.gz) = 13dcc8f99cf4fa3cc421c47aaf48172b
+MD5 (radius/radius.3.6B-skey.tar.gz) = c2cf0c555ee59fd64b4a413fc1aab95d
+MD5 (radius/radius.3.6B-ftp.tar) = 7eeed703954f8a19d09a09b96b197075
+MD5 (radius/radius.3.6B-simultd.tar) = 69a99815ea7273d48de6a5f49529fc0a
+SHA1 (patch-aa) = aef9f8b41242b8f2adfcb39d91fc4f9f999f75ce
+SHA1 (patch-ab) = 82e976df74631f6659db6f5fa3b65fa9e5106b35
+SHA1 (patch-ac) = 08b5a576f556b6588bccc436d26c7e4f50c96246
+SHA1 (patch-ad) = 73d349c26f8ddf598b121268d5fa71311e8c3942
+SHA1 (patch-ae) = 04310d12b96bcb52139753f5c734b57591ea45dd
+SHA1 (patch-af) = 736c1751f563fbbb26cab2cecf77922f5de9bdac

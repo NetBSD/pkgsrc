@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:33 agc Exp $
+
+MD5 (x11-ssh-askpass-1.0.tar.gz) = 4485c03811899be7d905960f1ad5b877
+SHA1 (patch-aa) = 950c953e0f20f113d1b3998acebbd07990132968

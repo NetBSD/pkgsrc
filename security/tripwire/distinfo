@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:42 agc Exp $
+
+MD5 (tripwire-1.2.tar.Z) = c82e0327e0caa1821e3e564fa1938d88
+SHA1 (patch-aa) = 37e41b99fbd437cc62b1446545f963d03e91e819
+SHA1 (patch-ab) = a71a44eeecb84e3453dfb3e4e03258ce47ccd999
+SHA1 (patch-ac) = a86765a0299e5f1467a0e512ffebd45110b3a7ca
+SHA1 (patch-ad) = 92fe68b5cb929dfc16b767e28d72852428246a32

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:54 agc Exp $
+
+MD5 (emiclock-2.0.2.tar.gz) = 8815b24b928afe4601b8d6ff4c8fc9af
+SHA1 (patch-aa) = 082873291d05709ecc392a3e6295078065aa1d30
+SHA1 (patch-ab) = 8c83e056bd03b0f493f91afd33ce572ed673511b
+SHA1 (patch-ac) = 4b020ac03c958d1ca44968c17b7d657edda77690
+SHA1 (patch-ad) = 619c24b92346dad1b5bf6e23c3d02153aa972694
+SHA1 (patch-ae) = 75250a553700eeacd5fcc6f71ed4477541cab6c0

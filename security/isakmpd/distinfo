@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:46:54 agc Exp $
+
+SHA1 (isakmpd-20010403.tar.gz) = 136b6fa148d546d43f01f8b5e7e78aa94ca33550
+SHA1 (patch-aa) = d1616a16251ccd770c392e60057b357b7224d38a
+SHA1 (patch-ab) = f30c790f42d72866e95092848e102e4c3728365c
+SHA1 (patch-ac) = 3f36a2bfff793f55c79f67affe142a8807082e70
+SHA1 (patch-ad) = 8c477b99fd3d82ccb52b01374450295cc25244c0
+SHA1 (patch-ae) = f289972d8b22c8253667e655db95ad0952c4a2e1
+SHA1 (patch-ba) = fe9f9eed9955eeb691fb48497cd303203d6ea5d2

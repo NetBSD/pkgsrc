@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:46:46 agc Exp $
+
+MD5 (amavis-0.2.1-pre3.tar.gz) = a0102687ff8ccb53d0753b5ddd429cbc
+SHA1 (patch-aa) = 5242df5c9aa09b862dfe2e025d6fd6c1c35a76d7
+SHA1 (patch-ab) = d67e751a555829673cc4a10e7657ec30511b900f

@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:27 agc Exp $
+
+MD5 (nocol-4.3.1.tar.gz) = e054261e64f7683b5661f42ad37db15e
+SHA1 (patch-aa) = 3d60948ea4f1e4cecc3b4082c47db011f59440bc
+SHA1 (patch-ab) = 5c49ef3bd58b84e0f1ea7ba319c574b86fa2aa3e
+SHA1 (patch-ac) = b09448987e09644e8e2f8e8667331a3c3b24323f
+SHA1 (patch-ad) = a64750ad0bfa40f8c01e3d6af49b40c525f13985
+SHA1 (patch-ae) = 57bfc3941aa765eda2a54da45122a5fde642ee3f
+SHA1 (patch-af) = 1c863a4895b893c98ba5bd7ccf2bc8e33a84615f
+SHA1 (patch-ag) = d977f618285d7bb2f80a468fee0260db8d3b77e3
+SHA1 (patch-ah) = 14091c7a6c8de7dd451e4292f2d0121ab3643158

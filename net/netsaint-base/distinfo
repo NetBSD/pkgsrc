@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:21 agc Exp $
+
+MD5 (netsaint-0.0.6.tar.gz) = 0d85b66c7258fcb8dd3fbf775dd7728d
+SHA1 (patch-aa) = 6195777c4fd906a05770db89f07b1db28470e574
+SHA1 (patch-ab) = 3a77a4b0e9356ab447ceb5524bc18ac3460cc3b3
+SHA1 (patch-ac) = 33d7fbebdfddbf82a3dffc39da8f492023c50051
+SHA1 (patch-ad) = 97a1ab99178b175ab40ae033476c9391d779a6d5
+SHA1 (patch-ae) = 75a3d56be088ca8f4d484481eb8554d67e393bbb
+SHA1 (patch-af) = 1b76193f2aead2ff61aa3a4cf4d1709130d10039
+SHA1 (patch-ag) = b038d842d6f7d8bfe4e84c4e41396aeef7c41a64
+SHA1 (patch-ah) = 23eeafb08ff0a881003b5a76929598c173fbfaea
+SHA1 (patch-ai) = e686c3c666c2cec368752db6722b9eb7820317ea

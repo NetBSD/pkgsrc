@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:53:12 agc Exp $
+
+SHA1 (rp-pppoe-2.8.tar.gz) = a95059cc6e41b11f831f1dbf7f420d63d93ed708
+SHA1 (patch-aa) = 3753fbe6e5a1d62a6adca109391134ead5c037c0
+SHA1 (patch-ab) = 4a16b96d6b2069fab9efb42c856b71af14f672f1
+SHA1 (patch-ac) = 2c76eded4e98fb3564a70dd136f4c66fe41a165f
+SHA1 (patch-ad) = b88680e7dd8a15878d40787ab4e3536e687e8081

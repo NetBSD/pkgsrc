@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:47 agc Exp $
+
+MD5 (netbsd-pcvt-20000611.tar.gz) = f305be80ef5bc36e2e29223c2cf75e60
+SHA1 (patch-aa) = 47dec68f79792803f9b4480c8fde812c97b49c46
+SHA1 (patch-ab) = cc05a87826f9573611bb0e70092b9f4b825584a8
+SHA1 (patch-ac) = 634aaf8fe965ade5c972c852fbb1710bf1028b2e
+SHA1 (patch-ad) = 800a567ca81e3e3078efda5c6c082b61f9ace015
+SHA1 (patch-ae) = d81e7ee5f59bf5d4e23d8f19868e190e2a8b2a53
+SHA1 (patch-af) = d07766a5d93ae97905ff0e9083246c1ad874219a

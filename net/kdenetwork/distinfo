@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:51:48 agc Exp $
+
+MD5 (kdenetwork-1.1.2.tar.bz2) = ce8ce348a7b56769665afe58e36902ff
+SHA1 (patch-aa) = 117cb5681f64390832be06999b90074b3a08d51b
+SHA1 (patch-ab) = c9caa3ae4326628c93bf3821da69e90b346e740f
+SHA1 (patch-ac) = a6695f0e97e0f6f6140c68e7dfc87a1a16d617bf

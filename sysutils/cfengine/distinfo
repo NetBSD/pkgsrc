@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:49:56 agc Exp $
+
+MD5 (cfengine-1.5.3.tar.gz) = 2603cf1cd3225b06e5df725c866dc987
+SHA1 (patch-aa) = 1d8bac1660b4ad5bb8f842e3d47f910aa58e20a2
+SHA1 (patch-ab) = a11e41ece3fd40d199683e7ae2643d6fbd4eba49
+SHA1 (patch-ac) = 24a0e33de1ed2fcd4681ce8e02e6b8ad7e02b567
+SHA1 (patch-ad) = abc7468db030405de93263d75a38295ac3367d73
+SHA1 (patch-ae) = 0a4531e51b358b5f7e57e15822f3cf7f76b31567
+SHA1 (patch-af) = 81994c772fb18edef2125ffb65ff4cb71394f5e7
+SHA1 (patch-ag) = 7332d24653510e702b06e6ab4eb914cfac186875

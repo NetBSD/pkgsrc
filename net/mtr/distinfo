@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:05 agc Exp $
+
+MD5 (mtr-0.42.tar.gz) = cb4da4e6dbc0b527b7fc2a7199c51c3b
+SHA1 (patch-aa) = c098f19f68220fa6c37d3e43edc2d6c49cba8118
+SHA1 (patch-ab) = 9ba3ea130f737864e673e60ce656b96556d3c1cc

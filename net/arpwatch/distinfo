@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:33 agc Exp $
+
+MD5 (arpwatch-2.1a4.tar.Z) = 7f5ed680480e6b0b1bbf27a5634b0bd4
+SHA1 (patch-aa) = c1652ad114d9b53995daec4b31e94a8bc924bbac
+SHA1 (patch-ab) = d156a7dd9b3abc6e05f88125fd5af67fe6b4179f
+SHA1 (patch-ac) = d8a7df61c3eb98389cc9027c13e2fec2b2c76384
+SHA1 (patch-ad) = f32cb7b27f174676506cb3b572109bc0e9f6211b
+SHA1 (patch-ae) = c3ab6c305a0491f2e53d22519c55c7c3283b5d7b

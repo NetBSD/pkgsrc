@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:52:41 agc Exp $
+
+MD5 (asclock-classic-1.0.tar.gz) = fc7f280e77b2646a02fd0dd42ac31ceb
+SHA1 (patch-aa) = 63a4952ba090746582438a291236c3107301f1d9
+SHA1 (patch-ab) = 83d20644751d47bb5a90500075354541e43720be
+SHA1 (patch-ac) = c86fe29211da8d4a884ce94a63eb13a83af7e030

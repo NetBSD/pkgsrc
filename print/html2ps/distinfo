@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:43:46 agc Exp $
+
+MD5 (html2ps-1.0b1.tar.gz) = 00fb5ac8c3769473b53ec4ad20e9b7cb
+SHA1 (patch-aa) = 1b2912d42b41049d07560153f624cd999cc2bad2

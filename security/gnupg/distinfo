@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:46:53 agc Exp $
+
+MD5 (gnupg-1.0.4.tar.gz) = bef2267bfe9b74a00906a78db34437f9
+MD5 (gnupg-1.0.4.security-patch1.diff) = 4d7b547a7b85a877ad165a3a29ae08e5
+MD5 (idea.c) = 7d0557459e0a41da099ddbd837d4bd40
+SHA1 (patch-aa) = 4d721c30ec57e6c10461b76e55cef96ae414f847
+SHA1 (patch-ab) = 1814fb785638525c57067e4bc9dcf1ffa6ad4784

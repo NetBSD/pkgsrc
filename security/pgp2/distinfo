@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:15 agc Exp $
+
+MD5 (pgp263is.tar.gz) = 73bbb87b8c77debcf9de3b9d49902892
+SHA1 (patch-aa) = cc2cc39d7b9ccf6fd1dd0ec69581f70a00ac30b6
+SHA1 (patch-ab) = 68b5c6a491fb665c1044a3208d6f5c4d1f65ce83
+SHA1 (patch-ac) = 70fd2925b2ef03d62f1a993cef6ac7eef90f4a75

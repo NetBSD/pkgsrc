@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:36 agc Exp $
+
+MD5 (batchftp102.tar.gz) = 89b82d1b2fce83417c16f333be35475a
+SHA1 (patch-aa) = c283ff8b714ace51b2723ce12d0077eb2ee5e5aa

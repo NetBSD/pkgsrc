@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:51:23 agc Exp $
+
+MD5 (gated-3-5-11.tar.gz) = 6b192df3bdbda6d4f2222c93ac725e75
+SHA1 (patch-aa) = bd025a19b4a8bff4ed080a4b30524adfd48a7de6
+SHA1 (patch-ab) = 55043a19003b28c3a23d8281733341786a0e1936
+SHA1 (patch-ad) = 0338ffe0160d72daf45c1fb641cae7baee82e13e
+SHA1 (patch-ae) = c02081fa9281cbe5adfab53f24c3c662fcdf9beb
+SHA1 (patch-af) = 3b27a9b1e13533f4dd6dc6c2dc7d23c0a3ae725e

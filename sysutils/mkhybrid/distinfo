@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:39 agc Exp $
+
+MD5 (mkhybrid-1.12b5.2.tar.gz) = 30de5a1cec363936f66bba0ba876fc65
+SHA1 (patch-aa) = a58c1fbfd1c5de48aef5c9b0d9f7b86b8b39a56b
+SHA1 (patch-ab) = 09a6b40b597f9ed9d541403aac248ba25a576b5e
+SHA1 (patch-ac) = 9873a62ca86dc43dbd541ffe19d6aecff77aabcc
+SHA1 (patch-ad) = 59e765804ceca4539e5e80a2d93d36d3d977a6d1
+SHA1 (patch-ae) = 553db2b0896b38625a3919366dc4fc4a145b160d
+SHA1 (patch-af) = a306229ec8f01358b6176dd68520436b24eece56
+SHA1 (patch-ag) = 6f7862bcab4f867421fe352cfb5d660573851ae9

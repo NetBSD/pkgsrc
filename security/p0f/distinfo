@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:09 agc Exp $
+
+SHA1 (p0f-1.7.tgz) = ac2ff4b2fc78c023ffe6a4d135385a0cef4a10c6
+SHA1 (patch-aa) = 067e95fa6074248712fd05047d540708d80b86ac
+SHA1 (patch-ab) = 8be455cbaeddf152604c97c5e136de487838f298

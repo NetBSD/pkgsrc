@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:47:40 agc Exp $
+
+SHA1 (sudo-1.6.3p7.tar.gz) = 270b139cf1e5df6c29c21914d96700031e5fb41c
+SHA1 (patch-aa) = 3298ebd31c6348848c02b98e493a6772369ca840
+SHA1 (patch-ab) = 9ee5fd292495a97ba8acfdddfd60c54955070eac
+SHA1 (patch-af) = 50ee0d2f15672d3d7d5d09a7b8d41068e62699e4

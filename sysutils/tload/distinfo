@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:51:10 agc Exp $
+
+MD5 (procps-2.0.6.tar.gz) = 2e6e156f0791b0e209d05aaf7204a219
+SHA1 (patch-aa) = 4d4c87c08fbedf0fcaafa25b69aea7a757891f24

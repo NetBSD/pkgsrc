@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:09 agc Exp $
+
+SHA1 (gkrellm-1.0.7.tar.gz) = 467d99fc88c6ffa9e380df06effe5755ed048c07
+SHA1 (patch-aa) = 6ca1d28c018804159702038673080111b60f00cb
+SHA1 (patch-ab) = f18ea3c7c456d4c5638a3bf122e7ef0dbb217a93

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:50:47 agc Exp $
+
+MD5 (bing-1.0.4.tar.gz) = 33533c137cbe31931ece57b1e5b9d552
+SHA1 (patch-aa) = fff61b18fba28bbad7ece9c14a190630e44280f0
+SHA1 (patch-ab) = ef75a8cd00011b09cef6668228e7e34899984c4b
