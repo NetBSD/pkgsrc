@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/25 01:54:01 itojun Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/25 13:46:30 itojun Exp $
 #
 
 DISTNAME=		IPv6socket_scrub
@@ -16,6 +16,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 NO_CDROM=		"not redistributable"
 NO_PACKAGE=		"not redistributable"
 RESTRICTED=		"not redistributable, license agreement required"
+MIRROR_DISTFILES=	no
 
 do-fetch:
 	@${ECHO} "===> You need to sign the agreement on ${HOMEPAGE}"
