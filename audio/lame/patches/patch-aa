@@ -1,39 +1,13 @@
-$NetBSD: patch-aa,v 1.8 2001/09/15 06:58:55 simonb Exp $
+$NetBSD: patch-aa,v 1.9 2002/01/07 16:38:32 wiz Exp $
 
---- configure.orig	Mon Jul  2 06:19:07 2001
-+++ configure	Sat Sep 15 16:47:18 2001
-@@ -4327,6 +4327,8 @@
-   echo "$ac_t""no" 1>&6
- fi
- 
-+# we don't want to use ncurses, curses are good enough
-+if false; then
- echo $ac_n "checking for initscr in -lncurses""... $ac_c" 1>&6
- echo "configure:4332: checking for initscr in -lncurses" >&5
- ac_lib_var=`echo ncurses'_'initscr | sed 'y%./+-%__p_%'`
-@@ -4366,6 +4368,7 @@
- else
-   echo "$ac_t""no" 1>&6
- fi
-+fi
- 
-  
- echo $ac_n "checking for cos in -lm""... $ac_c" 1>&6
-@@ -4415,7 +4418,7 @@
+--- configure.orig	Tue Dec 25 18:59:42 2001
++++ configure
+@@ -4440,7 +4441,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lffm  $LIBS"
 +LIBS="-lffm -lm $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 4421 "configure"
+ #line 4446 "configure"
  #include "confdefs.h"
-@@ -4443,7 +4446,7 @@
- fi
- if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  USE_LIBM="-lffm"
-+  USE_LIBM="-lffm -lm"
- else
-   echo "$ac_t""no" 1>&6
- fi
