@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/04/19 00:08:50 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/07/20 10:02:50 grant Exp $
 
 DISTNAME=	dn9b0401
 CATEGORIES=	emulators
@@ -14,6 +14,9 @@ USE_GNU_TOOLS+=	make
 USE_BUILDLINK3=	yes
 PATCHDIR=	${.CURDIR}/../../emulators/darcnes/patches
 DISTINFO_FILE=	${.CURDIR}/../../emulators/darcnes/distinfo
+
+# tool.c causes the sunpro acomp process to spin on the CPU.
+NOT_FOR_COMPILER=	sunpro
 
 .include "../../mk/bsd.prefs.mk"
 
