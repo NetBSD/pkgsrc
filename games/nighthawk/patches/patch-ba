@@ -1,0 +1,27 @@
+--- src_sound/Makefile.BAK	Sun Feb  7 02:23:38 1999
++++ src_sound/Makefile	Sun Feb  7 02:29:38 1999
+@@ -2,8 +2,8 @@
+ # nighthawk sound engine
+ ############################################################################
+ CC	= gcc
+-OPTIONS = -Wall -g -pipe -fomit-frame-pointer
+-LIB	= -lm
++OPTIONS = -Wall -g -pipe -fomit-frame-pointer -DPREFIX=\"${PREFIX}\"
++LIB	= -lm -lossaudio
+ 
+ ifeq ($(OSTYPE),Linux)
+   OPTIONS += -DLinux
+@@ -11,11 +11,11 @@
+   ifeq ($(OSTYPE),FreeBSD)
+     OPTIONS += -DFreeBSD
+   else
+-    OPTIONS += -DLinux
++    OPTIONS += -DNetBSD
+   endif
+ endif
+ 
+-HOST_SAFE = 0
++HOST_SAFE = 1
+ 
+ ifeq ($(HOSTTYPE),i386)
+   HOST_SAFE = 1

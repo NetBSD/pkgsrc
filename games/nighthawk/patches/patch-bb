@@ -1,0 +1,29 @@
+--- src_sound/dsp_mixxer.c.BAK	Sun Feb  7 02:24:23 1999
++++ src_sound/dsp_mixxer.c	Sun Feb  7 02:26:49 1999
+@@ -23,6 +23,8 @@
+  #include <sys/soundcard.h>
+ #elif FreeBSD
+  #include <machine/soundcard.h>
++#elif defined(__NetBSD__)
++ #include <soundcard.h>
+ #endif
+ #include "funktracker_defs.h"
+ #include "funktracker.h"
+@@ -91,7 +93,7 @@
+   register int x;
+ 
+   calc_mix_buffer(funk_info.bpm_rate);
+-  ioctl(dsp_fp,SNDCTL_DSP_RESET);
++  ioctl(dsp_fp,SNDCTL_DSP_RESET, 0);
+   for(x = 0;x < mix_buffer_size;x++)
+   {
+     *(left_mix_buffer + x) = 0;
+@@ -187,7 +189,7 @@
+ {
+   if(dsp_fp != -1)
+   {
+-    ioctl(dsp_fp,SNDCTL_DSP_RESET);
++    ioctl(dsp_fp,SNDCTL_DSP_RESET, 0);
+     close(dsp_fp);
+   }
+ }
