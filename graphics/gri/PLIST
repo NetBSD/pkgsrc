@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/10 08:27:38 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/24 16:06:29 jtb Exp $
 bin/gri
 bin/${PKGNAME}
 bin/gri_merge
@@ -9,6 +9,7 @@ info/gri.info-10
 info/gri.info-11
 info/gri.info-12
 info/gri.info-13
+info/gri.info-14
 info/gri.info-2
 info/gri.info-3
 info/gri.info-4
