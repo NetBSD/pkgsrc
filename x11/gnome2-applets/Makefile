@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/09 18:47:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/11 07:11:28 xtraeme Exp $
 #
 
 DISTNAME=		gnome-applets-2.4.2
@@ -15,7 +15,7 @@ DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
@@ -64,15 +64,15 @@ PLIST_SUBST+=		BATTSTAT="@comment "
 .include "../../devel/GConf2/schemas.mk"
 INSTALL_EXTRA_TMPL+=	${FILESDIR}/install.tmpl
 
-.include "../../devel/gail/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnome/buildlink2.mk"
-.include "../../devel/libgtop2/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
+.include "../../devel/gail/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgtop2/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/gnome-panel/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/gnome-panel/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
