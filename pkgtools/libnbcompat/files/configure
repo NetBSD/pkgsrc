@@ -9660,7 +9660,9 @@ done
 pkg_use_nbcompat_poll=yes
 if test $pkg_cv_have_poll_h = yes; then
 	pkg_use_nbcompat_poll=no
-else
+fi
+
+if test $pkg_cv_have_poll_h = yes -o test $pkg_cv_have_sys_poll_h = yes; then
 	echo "$as_me:$LINENO: checking for poll" >&5
 echo $ECHO_N "checking for poll... $ECHO_C" >&6
 if test "${ac_cv_func_poll+set}" = set; then

@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.50 2004/09/11 19:01:40 jlam Exp $
+dnl $NetBSD: configure.ac,v 1.51 2004/10/24 11:18:33 grant Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -259,7 +259,9 @@ AC_CHECK_HEADERS([poll.h sys/poll.h], [pkg_cv_have_poll_h=yes])
 pkg_use_nbcompat_poll=yes
 if test $pkg_cv_have_poll_h = yes; then
 	pkg_use_nbcompat_poll=no
-else
+fi
+
+if test $pkg_cv_have_poll_h = yes -o test $pkg_cv_have_sys_poll_h = yes; then
 	AC_CHECK_FUNC(poll, [
         	AC_MSG_TRY_COMPILE([if poll() is implemented natively],
                 pkg_cv_native_poll,
