@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2003/04/26 08:33:01 seb Exp $
+$NetBSD: patch-aj,v 1.2 2003/05/29 21:08:27 seb Exp $
 
---- contrib/Makefile.in.orig	2003-04-09 13:11:16.000000000 +0000
+--- contrib/Makefile.in.orig	2003-05-28 16:55:26.000000000 +0000
 +++ contrib/Makefile.in
-@@ -96,9 +96,12 @@ install_sh = @install_sh@
+@@ -145,9 +145,12 @@ target_vendor = @target_vendor@
  s1 = cfdoc
  s2 = cfengine.el
  
@@ -16,16 +16,25 @@ $NetBSD: patch-aj,v 1.1 2003/04/26 08:33:01 seb Exp $
  EXTRA_DIST = README README.vicf $(s1) $(s2)
  
  #
-@@ -128,7 +131,7 @@ subdir = contrib
+@@ -178,8 +181,10 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/src/conf.h
  CONFIG_CLEAN_FILES = vicf
 -SCRIPTS = $(pkgdata_SCRIPTS) $(sbin_SCRIPTS)
 +SCRIPTS = $(example_SCRIPTS) $(pkgdata_SCRIPTS) $(sbin_SCRIPTS)
  
++depcomp =
++am__depfiles_maybe =
  DIST_SOURCES =
  DIST_COMMON = README Makefile.am Makefile.in vicf.in
-@@ -142,6 +145,26 @@ Makefile:  $(srcdir)/Makefile.in  $(top_
+ all: all-am
+@@ -187,11 +192,31 @@ all: all-am
+ .SUFFIXES:
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.ac $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  contrib/Makefile
++	  $(AUTOMAKE) --foreign  --ignore-deps contrib/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
  vicf: $(top_builddir)/config.status vicf.in
  	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
@@ -52,7 +61,7 @@ $NetBSD: patch-aj,v 1.1 2003/04/26 08:33:01 seb Exp $
  pkgdataSCRIPT_INSTALL = $(INSTALL_SCRIPT)
  install-pkgdataSCRIPTS: $(pkgdata_SCRIPTS)
  	@$(NORMAL_INSTALL)
-@@ -217,7 +240,7 @@ check: check-am
+@@ -276,7 +301,7 @@ check: check-am
  all-am: Makefile $(SCRIPTS)
  
  installdirs:
@@ -61,7 +70,7 @@ $NetBSD: patch-aj,v 1.1 2003/04/26 08:33:01 seb Exp $
  
  install: install-am
  install-exec: install-exec-am
-@@ -263,7 +286,7 @@ info: info-am
+@@ -322,7 +347,7 @@ info: info-am
  
  info-am:
  
@@ -70,9 +79,9 @@ $NetBSD: patch-aj,v 1.1 2003/04/26 08:33:01 seb Exp $
  
  install-exec-am: install-sbinSCRIPTS
  
-@@ -281,17 +304,18 @@ mostlyclean: mostlyclean-am
+@@ -348,17 +373,18 @@ ps: ps-am
  
- mostlyclean-am: mostlyclean-generic
+ ps-am:
  
 -uninstall-am: uninstall-info-am uninstall-pkgdataSCRIPTS \
 -	uninstall-sbinSCRIPTS
@@ -85,14 +94,14 @@ $NetBSD: patch-aj,v 1.1 2003/04/26 08:33:01 seb Exp $
 -	install-exec-am install-info install-info-am install-man \
 -	install-pkgdataSCRIPTS install-sbinSCRIPTS install-strip \
 -	installcheck installcheck-am installdirs maintainer-clean \
--	maintainer-clean-generic mostlyclean mostlyclean-generic \
--	uninstall uninstall-am uninstall-info-am \
+-	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
+-	pdf-am ps ps-am uninstall uninstall-am uninstall-info-am \
 +	install-am install-data install-data-am install-exampleSCRIPTS \
 +	install-exec install-exec-am install-info install-info-am \
 +	install-man install-pkgdataSCRIPTS install-sbinSCRIPTS \
 +	install-strip installcheck installcheck-am installdirs \
 +	maintainer-clean maintainer-clean-generic mostlyclean \
-+	mostlyclean-generic uninstall uninstall-am \
++	mostlyclean-generic pdf pdf-am ps ps-am uninstall uninstall-am \
 +	uninstall-exampleSCRIPTS uninstall-info-am \
  	uninstall-pkgdataSCRIPTS uninstall-sbinSCRIPTS
  
