@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2001/07/02 21:10:39 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2001/07/24 16:00:02 nra Exp $
 
---- cda_d/Imakefile.orig	Sat Feb  5 01:26:38 2000
-+++ cda_d/Imakefile	Sun Feb 13 08:20:52 2000
+--- cda_d/Imakefile.orig	Mon Jul 16 12:52:16 2001
++++ cda_d/Imakefile	Mon Jul 23 14:43:24 2001
 @@ -50,7 +50,7 @@
  DEFINES= -DBSDCOMPAT -DUSE_TERMIOS
  #else
@@ -11,12 +11,18 @@ $NetBSD: patch-ab,v 1.7 2001/07/02 21:10:39 jlam Exp $
  #else
  #if defined(__bsdi__)
  .if exists(/usr/include/ncurses.h)
-@@ -109,7 +109,7 @@
+@@ -120,11 +120,12 @@
  .endif
  #else
  #if defined(NetBSDArchitecture)
 -LOCAL_LIBRARIES=
-+LOCAL_LIBRARIES=-lncurses
++LOCAL_LIBRARIES= ${MOTIFLIB} XawClientLibs
++LOCAL_LIBRARIES+=-lncurses
  #else
  #if defined(__bsdi__)
  .if exists(/usr/include/ncurses.h)
+-LOCAL_LIBRARIES=-lncurses
++LOCAL_LIBRARIES=-I/usr/pkg/include -L/usr/pkg/lib -lncurses
+ .else
+ LOCAL_LIBRARIES=
+ .endif

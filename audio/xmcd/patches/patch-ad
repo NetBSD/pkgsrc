@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2000/09/09 17:33:13 wiz Exp $
+$NetBSD: patch-ad,v 1.7 2001/07/24 16:00:02 nra Exp $
 
---- install.sh.orig	Sat Feb  5 01:26:20 2000
-+++ install.sh	Sun Feb 13 08:29:05 2000
-@@ -60,7 +60,7 @@
+--- install.sh.orig	Mon Jul 16 12:51:58 2001
++++ install.sh	Mon Jul 23 14:35:29 2001
+@@ -57,7 +57,7 @@
  XBINGROUP=bin
  ERRFILE=/tmp/xmcd.err
  TMPFILE=/tmp/xmcdinst.$$
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.6 2000/09/09 17:33:13 wiz Exp $
  
  #
  # Utility functions
-@@ -416,7 +416,7 @@
+@@ -493,7 +493,7 @@
  #
  OS_SYS=`(uname -s) 2>/dev/null`
  OS_REL=`(uname -r) 2>/dev/null`
