@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/01/05 21:18:02 jwise Exp $
+# $NetBSD: Makefile,v 1.8 2002/01/22 22:21:41 wiz Exp $
 
 DISTNAME=	modxslt
-PKGNAME=	ap-xslt-1.1nb1
-PKGREVISION=	1
+PKGNAME=	ap-xslt-1.1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://download.sourceforge.net/modxslt/
 
