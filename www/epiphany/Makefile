@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/10/07 16:14:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2004/10/14 18:49:22 jmmv Exp $
 #
 
-DISTNAME=	epiphany-1.4.3
+DISTNAME=	epiphany-1.4.4
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/1.4/}
 EXTRACT_SUFX=	.tar.bz2
