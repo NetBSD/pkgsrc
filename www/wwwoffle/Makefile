@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/11/26 06:09:00 itohy Exp $
+# $NetBSD: Makefile,v 1.11 1999/11/26 06:30:10 itohy Exp $
 
 DISTNAME=	wwwoffle-2.5b
 CATEGORIES=	www
@@ -41,6 +41,7 @@ post-build:
 
 pre-install:
 	${MKDIR} ${PREFIX}/etc/wwwoffle
+	if [ -d /var/wwwoffle ]; then ${MKDIR} /var/wwwoffle/http; fi
 
 post-install:
 	if [ -f ${PREFIX}/etc/wwwoffle/wwwoffle.conf.install ]; then \
