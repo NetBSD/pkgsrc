@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/01/17 12:34:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/17 14:21:01 wiz Exp $
 #
 
 DISTNAME=	dctc-0.83.9
@@ -14,12 +14,11 @@ USE_BUILDLINK2=	YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
 REPLACE_PERL=	GDLjoiner
 USE_PERL5=	YES
+USE_GMAKE=	YES
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
 
 post-configure:
-	@${TOUCH} ${WRKSRC}/stamp-h.in ${WRKSRC}/config.h.in
-	@${TOUCH} ${WRKSRC}/config.status ${WRKSRC}/stamp-h
 	@${ECHO} '#ifndef MSG_NOSIGNAL' >> ${WRKSRC}/config.h
 	@${ECHO} '# define MSG_NOSIGNAL 0' >> ${WRKSRC}/config.h
 	@${ECHO} '#endif' >> ${WRKSRC}/config.h
