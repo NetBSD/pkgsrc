@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2000/09/27 08:34:25 toshii Exp $
+# $NetBSD: Makefile,v 1.16 2000/11/09 03:35:33 hubertf Exp $
 #
 
-DISTNAME=       imap-2000.RELEASE-CANDIDATE.6
-PKGNAME=        imap-uw-4.7c6
+DISTNAME=       imap-2000
+PKGNAME=        imap-uw-2000
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	tv@netbsd.org
+MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.washington.edu/imap/
 
 USE_LIBTOOL=	# defined
@@ -35,7 +35,7 @@ do-configure:
 		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-build:
-	cd ${WRKSRC} && ${MAKE} ${BUILDNAME} PREFIX=${PREFIX} CC="${LIBTOOL} ${CC}"
+	cd ${WRKSRC} && ${MAKE} ${BUILDNAME} PREFIX=${PREFIX} CC="${LIBTOOL} ${CC} -g"
 
 do-install:
 	${INST_LIB} ${WRKSRC}/c-client/libimapuw.la ${PREFIX}/lib
