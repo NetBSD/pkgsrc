@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:41:50 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/05/03 04:50:05 jlam Exp $
 
 SHA1 (ghostscript/ghostscript-6.01.tar.bz2) = 405a8ab16453a8c3f846eae2aa4abbea6a093300
 Size (ghostscript/ghostscript-6.01.tar.bz2) = 2974476 bytes
+SHA1 (ghostscript/jpegsrc.v6b.tar.gz) = 7079f0d6c42fad0cfba382cf6ad322add1ace8f9
+Size (ghostscript/jpegsrc.v6b.tar.gz) = 613261 bytes
 SHA1 (ghostscript/pdf_sec.ps) = e185f12cb8764ce2d7d32931c6dbd5e05df8722f
 Size (ghostscript/pdf_sec.ps) = 11158 bytes
 SHA1 (ghostscript/hpdj-2.6.tar.gz) = 1767295652292ab00b6859cf6699939be44e49e7
@@ -47,3 +49,4 @@ SHA1 (patch-at) = 47fa47098098ca3db32543a94b21c63a19bac0ba
 SHA1 (patch-au) = 07c99b2988c34396901594ab635a209e08766303
 SHA1 (patch-av) = 87f3c9e01a4e2fa63c75c348b1a5ec2be07948a5
 SHA1 (patch-aw) = 9855cacc48db068f87aa37568b198e22e6c391a0
+SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6
