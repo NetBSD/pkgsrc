@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2002/01/13 19:29:02 agc Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/04/01 01:28:04 uebayasi Exp $
 #
 # This Makefile fragment is included by packages that use neon.
 #
@@ -17,7 +17,7 @@ NEON_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.neon?=	neon>=0.18.3
+BUILDLINK_DEPENDS.neon?=	neon>=0.19.3
 DEPENDS+=			${BUILDLINK_DEPENDS.neon}:../../www/neon
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.neon=neon
