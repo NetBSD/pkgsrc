@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/12/24 18:55:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/21 20:04:24 jmmv Exp $
 #
 
 DISTNAME=		troffcvt-1.04
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.primate.wisc.edu/software/troffcvt/
 
@@ -13,7 +14,8 @@ BUILD_DEPENDS+=		libts-1.08:../../devel/libts
 BUILD_DEPENDS+=		libmemmgr-1.04:../../devel/libmemmgr
 BUILD_DEPENDS+=		libportlib-1.01:../../devel/libportlib
 
-#WRKSRC=			${WRKDIR}/rtf
+USE_PERL5=		yes
+
 INSTALL_TARGET=		install install.man
 
 post-patch:
