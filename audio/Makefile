@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2000/01/06 04:05:35 abs Exp $
+# $NetBSD: Makefile,v 1.54 2000/01/19 08:09:15 itohy Exp $
 #
 
     SUBDIR += ac3dec
@@ -7,6 +7,7 @@
     SUBDIR += cam
     SUBDIR += cdd
     SUBDIR += cddbd
+    SUBDIR += cdparanoia
     SUBDIR += dap
     SUBDIR += emixer
     SUBDIR += esound
