@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:15 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:39:31 agc Exp $
 
-MD5 (modeline_vfr.c) = 60c2073216e56ad71a3f671933cf0ded
+SHA1 (modeline_vfr.c) = 8db682f68362679938886a27068d3044ae643011
+Size (modeline_vfr.c) = 2416 bytes
 SHA1 (patch-aa) = 807922d09951c992b2c2e92d0570b2b2dfe9d6de
