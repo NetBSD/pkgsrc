@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/07/05 07:03:56 tron Exp $
+# $NetBSD: Makefile,v 1.9 2002/07/23 02:07:07 wiz Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.31
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 SVR4_PKGNAME=	p5msa
 CATEGORIES=	mail
 #MASTER_SITES=	http://spamassassin.taint.org/released/

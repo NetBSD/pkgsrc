@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.3 2002/07/23 02:07:08 wiz Exp $
+
+--- rules/local.cf.orig	Wed Dec 19 06:20:44 2001
++++ rules/local.cf
+@@ -1,3 +1,3 @@
+-# Add your own customisations to this file.  See 'man Mail::SpamAssassin::Conf'
+-# for details of what can be tweaked.
++# Add your own customisations to this file.  See
++# 'perldoc Mail::SpamAssassin::Conf' for details of what can be tweaked.
+ # 
