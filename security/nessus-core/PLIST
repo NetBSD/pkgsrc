@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/01/11 12:03:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2005/04/04 09:32:12 adam Exp $
 bin/nessus
 bin/nessus-fetch
 bin/nessus-mkcert-client
@@ -12,6 +12,7 @@ include/nessus/nessusraw.h
 include/nessus/nessustcp.h
 include/nessus/nessusudp.h
 include/nessus/ntcompat.h
+man/man1/nessus-fetch.1
 man/man1/nessus-mkcert-client.1
 man/man1/nessus-mkrand.1
 man/man1/nessus.1
