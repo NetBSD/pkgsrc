@@ -1,12 +1,13 @@
-$NetBSD: patch-aj,v 1.1.1.1 1999/10/01 11:23:16 drochner Exp $
---- src/uipp/startup/StartupWindow.C.orig	Mon Sep 27 08:11:37 1999
-+++ src/uipp/startup/StartupWindow.C	Mon Sep 27 08:12:04 1999
-@@ -63,7 +63,7 @@
+$NetBSD: patch-aj,v 1.2 2002/02/05 22:23:33 drochner Exp $
+
+--- src/uipp/startup/StartupWindow.C.orig	Tue May  8 17:01:47 2001
++++ src/uipp/startup/StartupWindow.C	Tue Feb  5 12:28:46 2002
+@@ -64,7 +64,7 @@
  // On these platforms, the pipe doesn't work that way so we'll make a
  // polling loop that runs once every few seconds and checks the child pid.
  //
--#if defined(ibm6000) || defined(hp700) || defined(alphax) || defined(sun4) || defined(linux) || defined(cygwin) || defined(freebsd)
-+#if defined(ibm6000) || defined(hp700) || defined(alphax) || defined(sun4) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(__NetBSD__)
+-#if defined(ibm6000) || defined(hp700) || defined(alphax) || defined(sun4) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(macos)
++#if defined(ibm6000) || defined(hp700) || defined(alphax) || defined(sun4) || defined(linux) || defined(cygwin) || defined(freebsd) || defined(macos) || defined(__NetBSD__)
  #define USE_WAIT3 1
  #endif
  
