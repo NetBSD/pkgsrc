@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:54 tv Exp $
+# $NetBSD: Makefile,v 1.14 2004/10/25 21:43:20 minskim Exp $
 # FreeBSD: ports/graphics/lcms/Makefile,v 1.2 2000/12/19 15:36:26 sobomax Exp
 
-DISTNAME=	lcms-1.12
-PKGREVISION=	2
+DISTNAME=	lcms-1.13
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.littlecms.com/ \
 		http://www.abaforum.es/martim/
@@ -24,6 +23,8 @@ CONFIGURE_ARGS+=	--without-zlib
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
+
+PKGCONFIG_OVERRIDE=	lcms.pc.in
 
 INSTALLATION_DIRS+=	share/doc/lcms
 
