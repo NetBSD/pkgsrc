@@ -1,34 +1,84 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/25 19:20:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/02/15 03:49:05 salo Exp $
 bin/giram
 bin/povfront
 libexec/giram/plug-ins/Box
 libexec/giram/plug-ins/Rotate
 libexec/giram/plug-ins/Spheres
+man/man1/giram.1
 share/doc/giram/Tutorial
-share/examples/Giram/Cone.pov
-share/examples/Giram/Disc.pov
-share/examples/Giram/Giram.gsf
-share/examples/Giram/Giram.pov
-share/examples/Giram/IntSphereBox1.pov
-share/examples/Giram/IntSphereBox2.pov
-share/examples/Giram/IntSphereBox3.pov
-share/examples/Giram/IntSpherePlane1.pov
-share/examples/Giram/IntSpherePlane2.pov
-share/examples/Giram/IntSpherePlane3.pov
-share/examples/Giram/Triangle.pov
-share/examples/Giram/basicvue.pov
-share/examples/Giram/basicvue2.pov
-share/examples/Giram/basicvue3.pov
-share/examples/Giram/basicvue4.pov
-share/examples/Giram/box.pov
-share/examples/Giram/lollipop.pov
-share/examples/Giram/superel1.pov
-share/examples/Giram/superel2.pov
-share/examples/Giram/superel3.pov
-share/examples/Giram/test.pov
-share/examples/Giram/torus.pov
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/Giram.mo
-@dirrm share/examples/Giram
+share/examples/giram/giramrc
+share/examples/giram/giramrc_user
+share/examples/giram/gtkrc
+share/examples/giram/gtkrc_user
+share/examples/giram/ps-menurc
+share/giram/0.3/color/color1.gcf
+share/giram/0.3/finish/finish1
+share/giram/0.3/giram_logo.ppm
+share/giram/0.3/giram_splash.ppm
+share/giram/0.3/modules/librender_flat.a
+share/giram/0.3/modules/librender_flat.la
+share/giram/0.3/modules/librender_flat.so
+share/giram/0.3/modules/librender_gouraud.a
+share/giram/0.3/modules/librender_gouraud.la
+share/giram/0.3/modules/librender_gouraud.so
+share/giram/0.3/modules/librender_hiddenfaces.a
+share/giram/0.3/modules/librender_hiddenfaces.la
+share/giram/0.3/modules/librender_hiddenfaces.so
+share/giram/0.3/modules/librender_povray.a
+share/giram/0.3/modules/librender_povray.la
+share/giram/0.3/modules/librender_povray.so
+share/giram/0.3/modules/librender_raytracing.a
+share/giram/0.3/modules/librender_raytracing.la
+share/giram/0.3/modules/librender_raytracing.so
+share/giram/0.3/modules/librender_wireframe.a
+share/giram/0.3/modules/librender_wireframe.la
+share/giram/0.3/modules/librender_wireframe.so
+share/giram/0.3/normal/normal1
+share/giram/0.3/pigment/pigment1
+share/giram/0.3/shape/shape1
+share/giram/0.3/texture/texture1
+share/giram/0.3/tips/giram_conseils.fr.txt
+share/giram/0.3/tips/giram_tips.txt
+share/giram/0.3/user_install
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/giram.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/giram.mo
+@dirrm share/giram/0.3/tips
+@dirrm share/giram/0.3/texture
+@dirrm share/giram/0.3/shape
+@dirrm share/giram/0.3/pigment
+@dirrm share/giram/0.3/normal
+@dirrm share/giram/0.3/modules
+@dirrm share/giram/0.3/finish
+@dirrm share/giram/0.3/color
+@dirrm share/giram/0.3/color_map
+@dirrm share/giram/0.3
+@dirrm share/giram
 @dirrm share/doc/giram
+@dirrm share/examples/giram
 @dirrm libexec/giram/plug-ins
-@dirrm libexec/giram
