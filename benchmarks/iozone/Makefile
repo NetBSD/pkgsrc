@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/09/23 16:09:05 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/24 09:20:08 agc Exp $
 
 DISTNAME=		iozone
 PKGNAME=		iozone-1.14b
@@ -17,6 +17,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iozone ${PREFIX}/bin
 
 benchmark:
-	@${WRKSRC}/iozone
+	@(cd ${WRKSRC}; ./iozone)
 
 .include "../../mk/bsd.pkg.mk"
