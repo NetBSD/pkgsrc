@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/23 21:34:55 jmc Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/08/18 13:19:37 minoura Exp $
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
 ${EMACS_LISPPREFIX}/w3m/ChangeLog.1
 ${EMACS_LISPPREFIX}/w3m/mew-w3m.el
@@ -19,9 +19,9 @@ ${EMACS_LISPPREFIX}/w3m/w3m-cookie.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-dtree.el
 ${EMACS_LISPPREFIX}/w3m/w3m-dtree.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-e19.el
-${FOR_emacs20}${EMACS_LISPPREFIX}/w3m/w3m-e20.el
-${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-e20.el
-${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-e21.el
+${EMACS_LISPPREFIX}/w3m/w3m-e20.el
+${FOR_emacs20}${EMACS_LISPPREFIX}/w3m/w3m-e20.elc
+${EMACS_LISPPREFIX}/w3m/w3m-e21.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-e21.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-form.el
 ${EMACS_LISPPREFIX}/w3m/w3m-form.elc
@@ -44,7 +44,9 @@ ${EMACS_LISPPREFIX}/w3m/w3m-search.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-tabmenu.el
 ${EMACS_LISPPREFIX}/w3m/w3m-tabmenu.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-ucs.el
-@comment ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
+${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
+${FOR_xemacs214}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
+${FOR_xemacs215}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-util.el
 ${EMACS_LISPPREFIX}/w3m/w3m-util.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-weather.el
