@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.22 2002/09/22 09:10:27 mjl Exp $
+$NetBSD: CHANGES,v 1.23 2002/09/22 10:37:02 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2928,3 +2928,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ns-plugger-common to 3.2nb1 [tron 2002-09-21]
 	Updated ns-plugger-communicator to 3.2nb1 [tron 2002-09-21]
 	Updated ns-plugger-navigator to 3.2nb1 [tron 2002-09-21]
+	Updated leafnode to 1.9.22 [cjep 2002-09-22]
