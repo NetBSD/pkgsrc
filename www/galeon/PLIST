@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.22 2004/09/22 08:09:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.23 2004/10/05 18:32:47 abs Exp $
 bin/galeon
-bin/galeon-bin
 bin/galeon-config-tool
 lib/bonobo/servers/GNOME_Galeon_Automation.server
 lib/bonobo/servers/GNOME_Galeon_NautilusView.server
@@ -13,7 +12,6 @@ share/galeon/about_logo.png
 share/galeon/autoscroll.xpm
 share/galeon/bookmarks-editor-small.glade
 share/galeon/bookmarks-editor.glade
-share/galeon/bookmarks-find.glade
 share/galeon/bookmarks.glade
 share/galeon/bug.png
 share/galeon/certificate-dialogs.glade
@@ -236,4 +234,3 @@ share/sounds/galeon/clicked.wav
 @dirrm lib/galeon/components
 @dirrm lib/galeon
 @comment in libbonobo: @dirrm lib/bonobo/servers
-share/galeon
