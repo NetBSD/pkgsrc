@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2466 2004/11/25 19:55:48 minskim Exp $
+$NetBSD: TODO,v 1.2467 2004/11/25 20:00:39 snj Exp $
 
 Suggested new packages
 ======================
@@ -486,7 +486,6 @@ Suggested package updates
 	o fakeroot-1.1.5
 	o fd-2.06a
 	o fdgw-20040609
-	o feh-1.2.9
 	o festival-1.4.3
 	o fhist-1.14
 	o file-4.12
