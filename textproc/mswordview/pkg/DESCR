@@ -2,4 +2,4 @@ MSWordView is a program that understands the Microsoft Word 8 binary file
 format (Office97) and is able to convert Word documents into HTML, which
 can then be read with a browser.
 
-Superceded by pkgsrc/converters/wv.
+Superseded by pkgsrc/converters/wv.
