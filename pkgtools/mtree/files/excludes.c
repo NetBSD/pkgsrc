@@ -1,4 +1,4 @@
-/*	$NetBSD: excludes.c,v 1.2 2003/09/05 04:38:47 grant Exp $	*/
+/*	$NetBSD: excludes.c,v 1.3 2003/12/20 04:54:56 grant Exp $	*/
 
 /*
  * Copyright 2000 Massachusetts Institute of Technology
@@ -38,7 +38,7 @@
 #endif
 
 #if defined(__RCSID) && !defined(lint)
-__RCSID("$NetBSD: excludes.c,v 1.2 2003/09/05 04:38:47 grant Exp $");
+__RCSID("$NetBSD: excludes.c,v 1.3 2003/12/20 04:54:56 grant Exp $");
 #endif
 
 #if HAVE_SYS_TYPES_H
@@ -62,6 +62,9 @@ __RCSID("$NetBSD: excludes.c,v 1.2 2003/09/05 04:38:47 grant Exp $");
 #endif
 #if HAVE_TIME_H
 #include <time.h>
+#endif
+#if HAVE_UTIL_H
+#include <util.h>
 #endif
 
 #include "extern.h"
