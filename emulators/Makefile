@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/03/17 21:37:13 tv Exp $
+# $NetBSD: Makefile,v 1.6 1998/03/19 14:17:10 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/31 07:23:58 max Exp
 #
 
@@ -23,7 +23,7 @@
 #    SUBDIR += tkhfs
 #    SUBDIR += vgb
 #    SUBDIR += vmsbackup
-#    SUBDIR += wine
+    SUBDIR += wine
 #    SUBDIR += x48
 #    SUBDIR += xgs
    SUBDIR += xmame
