@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.2 2002/07/11 14:23:37 tron Exp $
+$NetBSD: distinfo,v 1.2 2002/12/15 11:59:22 jmmv Exp $
 
-SHA1 (xbindkeys_config-0.1.2.tar.gz) = da6d3a5e5ba00dedad3d5f6dc145989fabacb491
-Size (xbindkeys_config-0.1.2.tar.gz) = 17579 bytes
-SHA1 (patch-aa) = f96cea02e4e630b7f9a2ecedb8219ca2e4bbd683
+SHA1 (xbindkeys-1.5.5.tar.gz) = f568d80c40f7163be21d7e02fb1c50ed1a4d28d5
+Size (xbindkeys-1.5.5.tar.gz) = 85470 bytes
