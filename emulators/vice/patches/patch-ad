@@ -1,17 +1,19 @@
-$NetBSD: patch-ad,v 1.4 2000/08/27 14:08:35 wiz Exp $
-
---- src/arch/unix/c64ui.c.orig	Thu Jul 20 23:49:46 2000
-+++ src/arch/unix/c64ui.c
-@@ -448,6 +448,12 @@
- static ui_menu_entry_t c64_romset_submenu[] = {
+$NetBSD: patch-ad,v 1.5 2001/08/01 22:16:46 kristerw Exp $
+--- src/arch/unix/c64ui.c.orig	Sat Jun 16 16:03:42 2001
++++ src/arch/unix/c64ui.c	Wed Aug  1 23:02:01 2001
+@@ -460,6 +460,15 @@
      { N_("Load default ROMs"),
-       (ui_callback_t) ui_set_romset, (ui_callback_data_t)"default.vrs", NULL },
+       (ui_callback_t)ui_set_romset,
+       (ui_callback_data_t)"default.vrs", NULL },
 +    { N_("C64 Game System (GS)"),
-+      (ui_callback_t) ui_set_romset, (ui_callback_data_t)"64gs.vrs", NULL },
++      (ui_callback_t)ui_set_romset,
++      (ui_callback_data_t)"64gs.vrs", NULL },
 +    { N_("Educator 64 (4064)"),
-+      (ui_callback_t) ui_set_romset, (ui_callback_data_t)"4064.vrs", NULL },
++      (ui_callback_t)ui_set_romset,
++      (ui_callback_data_t)"4064.vrs", NULL },
 +    { N_("SX-64"),
-+      (ui_callback_t) ui_set_romset, (ui_callback_data_t)"sx64.vrs", NULL },
++      (ui_callback_t)ui_set_romset,
++      (ui_callback_data_t)"sx64.vrs", NULL },
      { "--" },
      { N_("Load new kernal ROM"),
-       (ui_callback_t) ui_load_rom_file, (ui_callback_data_t)"KernalName", NULL },
+       (ui_callback_t)ui_load_rom_file,
