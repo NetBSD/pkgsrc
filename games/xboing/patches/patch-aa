@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/09/14 23:38:59 garbled Exp $
+$NetBSD: patch-aa,v 1.3 2000/05/31 14:49:14 dmcmahill Exp $
 --- Imakefile.orig	Thu Nov 21 18:28:46 1996
 +++ Imakefile	Mon Sep 14 16:23:07 1998
 @@ -24,23 +24,23 @@
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.2 1998/09/14 23:38:59 garbled Exp $
  #endif /* SGIArchitecture */
  
 -#if defined(SparcArchitecture) && defined(COMPILE_IN_AUDIO)
-+#if defined(SparcArchitecture) && defined(COMPILE_IN_AUDIO) && !defined(__NetBSD__)
++#if defined(SparcArchitecture) && defined(COMPILE_IN_AUDIO) && !defined(NetBSDArchitecture)
      AUDIO_AVAILABLE	= True
      AUDIO_SRC 		= audio/SUNaudio.c
  
