@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2004/03/10 11:53:37 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.12 2004/03/20 20:08:38 wiz Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.0.4/src/ \
 			http://linux.imp.mx/xfce4/xfce_4.0.4/src/
@@ -19,8 +19,6 @@ USE_GNU_TOOLS+=		make
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD+=		3.0
 .endif
-
-MESSAGE_SRC?=		${.CURDIR}/../../fonts/fontconfig/MESSAGE
 
 PKG_CONFIG_PATH=	${BUILDLINK_DIR}/lib/pkgconfig
 
