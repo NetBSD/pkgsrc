@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/15 08:19:02 he Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/16 14:06:53 seb Exp $
 #
 
 DISTNAME=	tix8.2.0b1
@@ -19,7 +19,7 @@ USE_BUILDLINK_ONLY=	YES
 WRKSRC=			${WRKDIR}/tix8.2.0/unix
 
 test:
-	@(cd ${WRKSRC}; ${MAKE_ENV} ${MAKE} test)
+	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} test)
 
 .include "../../mk/x11.buildlink.mk"
 .include "../../x11/tk/buildlink.mk"
