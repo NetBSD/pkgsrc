@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:01:17 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/03 00:41:32 seb Exp $
 #
 
 DISTNAME=	lookup-1.3
@@ -17,8 +17,8 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20
 GNU_CONFIGURE=	YES
 MAKEFLAGS+=	lispdir=${EMACS_LISPPREFIX}/lookup
 
-INFO_FILES=	lookup.info
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	lookup.info lookup-guide.info
 
 .include "../../mk/emacs.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
