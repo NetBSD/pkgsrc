@@ -1,13 +1,20 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/09/05 09:18:21 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2001/06/07 04:25:34 jlam Exp $
 
---- ext/POSIX/Makefile.PL.orig	Wed Mar 22 11:23:03 2000
-+++ ext/POSIX/Makefile.PL
-@@ -6,7 +6,7 @@
- 	@libs = ('LIBS' => ["-lm -lc -lposix -lcposix"]);
-     }
-     else {
--	@libs = ('LIBS' => ["-lm -lposix -lcposix"]);
-+	@libs = ('LIBS' => ["-lm"]);
-     }
- }
- WriteMakefile(
+--- lib/ExtUtils/Install.pm.orig	Thu Feb 22 21:57:55 2001
++++ lib/ExtUtils/Install.pm	Mon May 21 12:06:01 2001
+@@ -156,7 +156,14 @@
+ 	    } else {
+ 		inc_uninstall($_,$File::Find::dir,$verbose,0); # nonono set to 0
+ 	    }
+-	    $packlist->{$origfile}++;
++	    #
++	    # jlam 2001-05-21 - Fix a bug in the packlists where only the
++	    # filename and not the full pathname is recorded.  The broken
++	    # line is:
++	    #
++	    #	$packlist->{$origfile}++;
++	    #
++	    $packlist->{$targetfile}++;
+ 
+ 	}, ".");
+ 	chdir($cwd) or Carp::croak("Couldn't chdir to $cwd: $!");
