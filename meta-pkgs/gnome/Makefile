@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2004/02/07 00:31:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/07 15:26:01 jmmv Exp $
 
 DISTNAME=	gnome-2.4.2
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,7 +17,7 @@ DEPENDS+=	epiphany>=1.0.7nb1:../../www/epiphany
 DEPENDS+=	file-roller>=2.4.4:../../archivers/file-roller
 DEPENDS+=	gcalctool>=4.2.83:../../math/gcalctool
 DEPENDS+=	gconf-editor>=2.4.0:../../editors/gconf-editor
-DEPENDS+=	gedit>=2.4.1:../../editors/gedit
+DEPENDS+=	gedit>=2.4.1nb4:../../editors/gedit
 DEPENDS+=	ggv>=2.4.1:../../print/ggv2
 DEPENDS+=	glade2>=2.0.0:../../devel/glade2
 DEPENDS+=	gnome-applets>=2.4.2:../../x11/gnome2-applets
