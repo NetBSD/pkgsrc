@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/01/05 22:16:25 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/02 02:27:59 heinz Exp $
 #
 
-DISTNAME=		Digest-SHA1-2.07
+DISTNAME=		Digest-SHA1-2.10
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5sh2
 CATEGORIES=		security perl5
