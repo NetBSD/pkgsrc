@@ -1,0 +1,7 @@
+$NetBSD: patch-aj,v 1.1 1998/08/23 06:08:51 garbled Exp $
+--- support/ftw.c.orig	Mon Jul 13 03:05:49 1998
++++ support/ftw.c	Mon Jul 13 03:06:03 1998
+@@ -32,2 +32,3 @@
+ 
++#include <string.h>
+ #include <sys/param.h>
