@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/26 13:03:59 adam Exp $
+
+--- GNUmakefile.in.orig	2004-11-26 13:52:43.000000000 +0000
++++ GNUmakefile.in
+@@ -26,7 +26,7 @@ all: compile
+ compile: mftrace gf2pbm
+ 
+ gf2pbm: gf2pbm.c
+-	gcc -O2 -Wall -o $@ $<
++	${CC} ${CFLAGS} -Wall -o $@ $<
+ 
+ README.txt: README.texi
+ 	sed 's/@MFTVERSION@/@VERSION@/g' < $< > $<.in
