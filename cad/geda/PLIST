@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:47:59 zuntum Exp $
-@comment this plist intentionally left empty
+@comment $NetBSD: PLIST,v 1.2 2003/07/15 09:23:31 dmcmahill Exp $
+bin/geda

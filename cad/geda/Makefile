@@ -1,30 +1,32 @@
-# $NetBSD: Makefile,v 1.25 2003/07/13 17:47:50 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/15 09:23:31 dmcmahill Exp $
 #
 
-DISTNAME=	gEDA-${PKGVERSION}
-PKGREVISION=	2
+DISTNAME=	geda-${PKGVERSION}
 CATEGORIES=	cad
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
+		ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
+		http://www.geda.seul.org/devel/${PKGVERSION}/ \
+		http://www.geda.coelacanth.com/devel/${PKGVERSION}/
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.geda.seul.org/
 COMMENT=	Toolset for automating electronic design
 
-DEPENDS+=	gschem-${PKGVERSION}nb2:../../cad/gschem
-DEPENDS+=	gnetlist-${PKGVERSION}nb3:../../cad/gnetlist
-DEPENDS+=	gsymcheck-${PKGVERSION}nb2:../../cad/gsymcheck
-DEPENDS+=	geda-utils-${PKGVERSION}nb2:../../cad/geda-utils
+DEPENDS+=	gschem-${PKGVERSION}:../../cad/gschem
+DEPENDS+=	gnetlist-${PKGVERSION}:../../cad/gnetlist
+DEPENDS+=	gsymcheck-${PKGVERSION}:../../cad/gsymcheck
+DEPENDS+=	geda-utils-${PKGVERSION}:../../cad/geda-utils
 DEPENDS+=	geda-docs-${PKGVERSION}:../../cad/geda-docs
 
-USE_X11BASE=	yes
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+PKGVERSION=	20030525
 
-PKGVERSION=	20030223
+GNU_CONFIGURE=		YES
+USE_X11BASE=		YES
+USE_LIBTOOL=		YES
+USE_BUILDLINK2=		YES
 
-do-install:	# empty
+LTCONFIG_OVERRIDE=      ${WRKSRC}/ltconfig
 
+.include "../../cad/libgeda/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
