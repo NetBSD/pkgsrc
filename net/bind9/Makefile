@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2005/03/16 13:56:24 tron Exp $
+# $NetBSD: Makefile,v 1.68 2005/03/18 01:14:32 tron Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	bind-${BIND_VERSION}pl1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -35,8 +35,13 @@ CONFIGURE_ARGS+=--with-libtool=yes \
 # include at the bottom to use OpenSSL shipped with BIND9.
 CONFIGURE_ARGS+=--with-openssl=${SSLBASE}
 
+PKG_USERS=	${BIND_USER}:${BIND_GROUP}::Named\\ pseudo-user:${BIND_DIR}:${NOLOGIN}
+PKG_GROUPS=	${BIND_GROUP}
+
 PTHREAD_OPTS+=	native
 
+FILES_SUBST+=	BIND_GROUP=${BIND_GROUP} BIND_USER=${BIND_USER} PAX=${PAX}
+MESSAGE_SUBST+=	BIND_DIR=${BIND_DIR} BIND_USER=${BIND_USER}
 # include/isc/ipv6.h is installed on non-ipv6 platforms
 .if defined(USE_INET6) && (${USE_INET6} == "YES")
 PLIST_SUBST+=	IPV6H="@comment "
