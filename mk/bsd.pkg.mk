@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1491 2004/08/17 17:48:11 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1492 2004/08/24 00:27:13 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -417,14 +417,6 @@ _DUMP_LIBTOOL_LA_FILES?=${TRUE}
 .if defined(BUILD_USES_MSGFMT) && \
     (!exists(/usr/bin/msgfmt) || ${_USE_GNU_GETTEXT} == "yes")
 BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
-.endif
-
-.if defined(RECOMMENDED)
-.  if !empty(IGNORE_RECOMMENDED:M[nN][oO])
-DEPENDS+=		${RECOMMENDED}
-.  else
-BUILD_DEFS+=		IGNORE_RECOMMENDED
-.  endif
 .endif
 
 EXTRACT_COOKIE=		${WRKDIR}/.extract_done
@@ -1228,6 +1220,14 @@ NO_BUILDLINK=		# defined
 .if !defined(NO_BUILDLINK)
 .  if empty(USE_BUILDLINK3:M[nN][oO])
 .    include "../../mk/buildlink3/bsd.buildlink3.mk"
+.  endif
+.endif
+
+.if defined(RECOMMENDED)
+.  if !empty(IGNORE_RECOMMENDED:M[nN][oO])
+DEPENDS+=		${RECOMMENDED}
+.  else
+BUILD_DEFS+=		IGNORE_RECOMMENDED
 .  endif
 .endif
 
