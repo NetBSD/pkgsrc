@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9274 2005/02/23 12:14:46 darcy Exp $
+$NetBSD: CHANGES,v 1.9275 2005/02/23 14:00:01 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1048,3 +1048,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dinotrace to 9.2a [dmcmahill 2005-02-23]
 	Updated pkglint to 4.07 [wiz 2005-02-23]
 	Updated py-postgresql to 3.6.2 [darcy 2005-02-23]
+	Updated glut to 6.2.1nb1 [grant 2005-02-23]
