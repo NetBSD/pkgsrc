@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.5 2001/07/06 15:27:18 bad Exp $
+$NetBSD: patch-af,v 1.6 2001/07/08 13:59:16 bad Exp $
 
---- configure.orig	Fri Mar 16 01:52:05 2001
-+++ configure	Fri Jul  6 16:37:36 2001
-@@ -5004,7 +5004,10 @@
+--- configure.orig	Tue Jun 12 21:07:37 2001
++++ configure	Sat Jul  7 23:37:20 2001
+@@ -5065,7 +5065,10 @@
  #define HAVE_LIBWRAP 1
  EOF
  
@@ -14,7 +14,15 @@ $NetBSD: patch-af,v 1.5 2001/07/06 15:27:18 bad Exp $
  else
    echo "configure: failed program was:" >&5
    cat conftest.$ac_ext >&5
-@@ -9345,7 +9348,11 @@
+@@ -9554,7 +9557,6 @@
+ else
+   bench_dirs=""
+ fi
+-bench_dirs="$bench_dirs mysql-test"
+ 
+ 
+ # Don't build readline, i have it already
+@@ -9575,7 +9577,11 @@
    # This requires readline to be in a standard place. Mosty for linux
    # there readline may be a shared library.
    readline_dir=""
@@ -27,7 +35,7 @@ $NetBSD: patch-af,v 1.5 2001/07/06 15:27:18 bad Exp $
  fi
  
  
-@@ -10466,15 +10473,15 @@
+@@ -10745,15 +10751,15 @@
  
      MT_INCLUDES="-I\$(top_srcdir)/mit-pthreads/include"
      

@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2001/05/02 08:22:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/07/08 13:59:15 bad Exp $
 bin/msql2mysql
 bin/mysql
+bin/mysqlcheck
 bin/mysql_config
 bin/mysql_convert_table_format
 bin/mysql_find_rows
@@ -62,7 +63,7 @@ share/mysql/my-huge.cnf
 share/mysql/my-large.cnf
 share/mysql/my-medium.cnf
 share/mysql/my-small.cnf
-share/mysql/mysql-3.23.35.spec
+share/mysql/mysql-3.23.39.spec
 share/mysql/mysql-log-rotate
 share/mysql/mysql.server
 @dirrm share/mysql

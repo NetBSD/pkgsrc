@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2001/07/06 15:27:18 bad Exp $
+$NetBSD: patch-ae,v 1.6 2001/07/08 13:59:16 bad Exp $
 
---- configure.in.orig	Fri Mar 16 01:51:51 2001
-+++ configure.in	Fri Jul  6 16:37:36 2001
-@@ -581,7 +581,10 @@
+--- configure.in.orig	Tue Jun 12 21:07:23 2001
++++ configure.in	Sat Jul  7 23:37:11 2001
+@@ -629,7 +629,10 @@
          AC_MSG_RESULT(yes)
          AC_DEFINE(LIBWRAP)
          AC_DEFINE(HAVE_LIBWRAP)
@@ -14,7 +14,15 @@ $NetBSD: patch-ae,v 1.5 2001/07/06 15:27:18 bad Exp $
          AC_MSG_RESULT(no)
          CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags}),
        CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags})
-@@ -1589,7 +1592,11 @@
+@@ -1653,7 +1656,6 @@
+ else
+   bench_dirs=""
+ fi
+-bench_dirs="$bench_dirs mysql-test"
+ AC_SUBST(bench_dirs)
+ 
+ # Don't build readline, i have it already
+@@ -1670,7 +1672,11 @@
    # This requires readline to be in a standard place. Mosty for linux
    # there readline may be a shared library.
    readline_dir=""
@@ -27,7 +35,7 @@ $NetBSD: patch-ae,v 1.5 2001/07/06 15:27:18 bad Exp $
  fi
  AC_SUBST(readline_dir)
  AC_SUBST(readline_link)
-@@ -1951,15 +1958,15 @@
+@@ -2043,15 +2049,15 @@
      AC_DEFINE(HAVE_mit_thread)
      MT_INCLUDES="-I\$(top_srcdir)/mit-pthreads/include"
      AC_SUBST(MT_INCLUDES)
