@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/01/05 10:30:44 markd Exp $
+# $NetBSD: Makefile,v 1.36 2005/01/07 12:29:02 markd Exp $
 
 DISTNAME=	netatalk-2.0.2
 CATEGORIES=	net print
@@ -45,10 +45,12 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 			--with-gssapi --enable-krbV-uam
 CONFIGURE_ENV+=	GSSAPI_LIBS="-lkrb5 -lroken -lasn1 -lcrypto -lcom_err"
 
-post-patch:
-	mv ${WRKSRC}/etc/psf/etc2ps.sh ${WRKSRC}/etc/psf/etc2ps.sh.tmp
-	${SED} -e "s,^\(DVIPS=\)\(/usr/local/tex\)\(/bin\),\1${PREFIX}\3," \
-		< ${WRKSRC}/etc/psf/etc2ps.sh.tmp > ${WRKSRC}/etc/psf/etc2ps.sh
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	etc/psf/etc2ps.sh distrib/initscripts/Makefile.in
+SUBST_SED.paths=	-e "s,^\(DVIPS=\)\(/usr/local/tex\)\(/bin\),\1${PREFIX}\3,"
+SUBST_SED.paths+=	-e "s,\(NETBSD.*\)/etc/rc.d,\1${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR},"
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/psffilters
