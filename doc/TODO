@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.870 2003/09/16 19:19:31 xtraeme Exp $
+$NetBSD: TODO,v 1.871 2003/09/16 21:03:46 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -106,7 +106,6 @@ Suggested package updates
 	o easytag-0.30
 	o echoping-5.0.1
 	o elm-me-2.4pl107
-	o ethereal-0.9.15
 	o ettercap-0.6.b
 	o evolution-1.4.4
 	o festival-1.4.3
