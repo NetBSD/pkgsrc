@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2001/04/14 21:43:42 jtb Exp $
+# $NetBSD: Makefile,v 1.12 2001/04/19 20:51:30 jtb Exp $
 
-DISTNAME=	GMT3.3.6
-PKGNAME=	GMT-3.3.6
+DISTNAME=	GMT3.4
+PKGNAME=	GMT-3.4
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://gmt.soest.hawaii.edu/pub/gmt/ \
 		ftp://falcon.grdl.noaa.gov/pub/gmt/ \
@@ -9,40 +9,35 @@ MASTER_SITES=	ftp://gmt.soest.hawaii.edu/pub/gmt/ \
 		ftp://ftp.geologi.uio.no/pub/gmt/ \
 		ftp://life.csu.edu.au/pub/gmt/ \
 		ftp://ftp.eos.hokudai.ac.jp/pub/gmt/
-DISTFILES=	GMT3.3.6_progs.tar.bz2 GMT3.3.6_doc.tar.bz2 GMT_share.tar.bz2 \
-		GMT3.3.6_suppl.tar.bz2 GMT3.3.6_scripts.tar.bz2		      \
-		GMT3.3.6_web.tar.bz2
+DISTFILES=	GMT3.4_progs.tar.bz2 GMT3.4_suppl.tar.bz2 GMT_share.tar.bz2 \
+		GMT3.4_ps.tar.bz2 GMT3.4_man.tar.bz2 GMT3.4_tut.tar.bz2 \
+		GMT3.4_scripts.tar.bz2 GMT3.4_web.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://imina.soest.hawaii.edu/gmt/
 COMMENT=	Generic Mapping Tools
 
 DEPENDS+=	netcdf>=3.2:../../devel/netcdf
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 EXTRACT_SUFFIX= .tar.bz2
+DIST_SUBDIR=	${DISTNAME}
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_X11=	yes
-USE_XAW=	yes
-DIST_SUBDIR=	GMT
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 EVAL_PREFIX+=	NETCDF=netcdf
 
-CONFIGURE_ARGS+="--includedir=${PREFIX}/include/gmt"
-CONFIGURE_ARGS+="--datadir=${PREFIX}/share/gmt"
-CONFIGURE_ARGS+="--enable-eps"
-CONFIGURE_ARGS+="--enable-www=${PREFIX}/share/doc/html"
-CONFIGURE_ARGS+="--enable-mansect=1"
+CONFIGURE_ARGS+=--includedir=${PREFIX}/include/gmt
+CONFIGURE_ARGS+=--datadir=${PREFIX}/share/gmt
+CONFIGURE_ARGS+=--enable-eps
+CONFIGURE_ARGS+=--enable-www=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=--enable-mansect=1
 
 ALL_TARGET=	all suppl
 INSTALL_TARGET= install-all
 
 post-extract:
 	${MV} -f ${WRKSRC}/www/gmt/doc/ps/ ${WRKSRC}
-
-pre-configure:
-	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf)
 	${RM} -f ${WRKSRC}/examples/*.bat ${WRKSRC}/examples/*/*.bat
 	for f in ${WRKSRC}/examples/do_view.bash			\
 		${WRKSRC}/examples/do_view.csh; do			\
@@ -52,34 +47,18 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gmt
-	for f in GMT_Docs.ps GMT_Tutorial.ps; do			\
-	${INSTALL_DATA} ${WRKSRC}/ps/$$f ${PREFIX}/share/doc/gmt;	\
-	done
+	cd ${WRKSRC}/ps && ${INSTALL_DATA} GMT_Docs.ps GMT_Tutorial.ps 	\
+		${PREFIX}/share/doc/gmt
 	(cd ${PREFIX}/share/doc/html/gmt/doc && ${LN} -sf		\
 	../../../gmt ps)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt/tutorial
-	for f in bermuda.grd quakes.cpt ship.xyz us.grd data quakes.ngdc \
-	topo.cpt; do							 \
-	${INSTALL_DATA} ${WRKSRC}/tutorial/$$f				 \
-	${PREFIX}/share/examples/gmt/tutorial;				 \
-	done;
+	cd ${WRKSRC}/tutorial && ${INSTALL_DATA} bermuda.grd quakes.cpt \
+		ship.xyz us.grd data quakes.ngdc 			\
+		${PREFIX}/share/examples/gmt/tutorial;
 	${INSTALL_DATA} ${WRKSRC}/../share/* ${PREFIX}/share/gmt
-	for i in ${WRKSRC}/examples/*.bash ${WRKSRC}/examples/*.csh	\
-	${WRKSRC}/examples/README.SCRIPTS; do				\
-	${INSTALL_DATA} $$i ${PREFIX}/share/examples/gmt;		\
-	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt
-	for f in README.SCRIPTS do_examples.bash do_examples.csh	\
-	do_view.bash do_view.csh; do					\
-	${INSTALL_DATA} ${WRKSRC}/examples/$$f				\
-	${PREFIX}/share/examples/gmt;					\
-	done
-	for i in 01 02 03 04 05 06 07 08 09 10 				\
-	11 12 13 14 15 16 17 18 19 20; do				\
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt/ex$$i;		\
-	for j in ${WRKSRC}/examples/ex$$i/*; do				\
-	${INSTALL_DATA} $$j ${PREFIX}/share/examples/gmt/ex$$i;		\
-	done;								\
-	done
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/examples/
+	(cd ${WRKSRC}/examples; ${GTAR} cf - . ) |			\
+	(cd ${PREFIX}/share/examples/gmt/; ${GTAR} xvf - )
 
 .include "../../mk/bsd.pkg.mk"

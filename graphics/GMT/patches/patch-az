@@ -1,22 +1,13 @@
-$NetBSD: patch-az,v 1.1 2001/01/27 10:36:54 jtb Exp $
+$NetBSD: patch-az,v 1.2 2001/04/19 20:51:33 jtb Exp $
 
---- src/xgrid/configure.orig	Sat Jan 27 10:15:57 2001
-+++ src/xgrid/configure
-@@ -1190,7 +1190,7 @@
- 
-   # It would also be nice to do this for all -L options, not just this one.
-   if test -n "$x_libraries"; then
--    X_LIBS="$X_LIBS -L$x_libraries"
-+    X_LIBS="$X_LIBS -Wl,-R$x_libraries -L$x_libraries"
-     # For Solaris; some versions of Sun CC require a space after -R and
-     # others require no space.  Words are not sufficient . . . .
-     case "`(uname -sr) 2>/dev/null`" in
-@@ -1725,7 +1725,7 @@
- 
-   # Check for libraries that X11R6 Xt/Xaw programs need.
-   ac_save_LDFLAGS="$LDFLAGS"
--  test -n "$x_libraries" && LDFLAGS="$LDFLAGS -L$x_libraries"
-+  test -n "$x_libraries" && LDFLAGS="$LDFLAGS -Wl,-R$x_libraries -L$x_libraries"
-   # SM needs ICE to (dynamically) link under SunOS 4.x (so we have to
-   # check for ICE first), but we must link in the order -lSM -lICE or
-   # we get undefined symbols.  So assume we have SM if we have ICE.
+--- src/dbase/grdraster.man.orig	Thu Apr 12 00:08:51 2001
++++ src/dbase/grdraster.man
+@@ -8,7 +8,7 @@
+ .SH DESCRIPTION
+ \fBgrdraster\fP reads a file called \fIgrdraster.info\fP from the directory
+ pointed to by the environment parameter $GMT_GRIDDIR (if this parameter is
+-not set it defaults to $GMTHOME/share/dbase). The info file defines binary
++not set it defaults to $GMTHOME/share/gmt/dbase). The info file defines binary
+ arrays of data stored in scan-line format in data files. Each file is given
+ a \fIfilenumber\fP in the info file. \fBgrdraster\fP figures out how to
+ load the raster data into a grd file spanning a region defined by \fB\-R\fP.
