@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/01/11 09:26:19 tron Exp $
+# $NetBSD: Makefile,v 1.14 2001/01/11 10:49:58 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/11/20 08:18:40 tg Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sourceware.cygnus.com/bzip2/index.html
 
 .if exists(/usr/bin/bzip2)
-IGNORE=		"${PKGNAME} is part of your NetBSD distribution"
+IGNORE=		"${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
 do-install:
