@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17 2002/11/29 17:26:42 wiz Exp $
+$NetBSD: TODO,v 1.18 2002/11/29 18:34:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -175,6 +175,7 @@ Suggested package updates
 	o pilot-link-0.11.4 [dillo]
 	o pine-4.50
 	o plib-1.6.0
+	o postgresql-7.3
 	o povray-3.5
 	o psi-0.8.7
 	o pwlib-1.4.2
