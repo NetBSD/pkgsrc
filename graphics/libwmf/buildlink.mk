@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/08/23 14:34:49 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/10/15 15:47:43 kei Exp $
 #
 # This Makefile fragment is included by packages that use libwmf.
 #
@@ -17,25 +17,20 @@ LIBWMF_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libwmf?=	libwmf>=0.1.21
+BUILDLINK_DEPENDS.libwmf?=	libwmf>=0.2.1
 BUILD_DEPENDS+=	${BUILDLINK_DEPENDS.libwmf}:../../graphics/libwmf
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libwmf=libwmf
 BUILDLINK_PREFIX.libwmf_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.libwmf=		include/libwmf/*.h
-BUILDLINK_FILES.libwmf+=	lib/libXwmf.a
-BUILDLINK_FILES.libwmf+=	lib/libdib.a
-BUILDLINK_FILES.libwmf+=	lib/libeps.a
-BUILDLINK_FILES.libwmf+=	lib/libepswmf.a
-BUILDLINK_FILES.libwmf+=	lib/libgdwmf.a
-BUILDLINK_FILES.libwmf+=	lib/libwmf.a
-BUILDLINK_FILES.libwmf+=	lib/libxfig.a
-BUILDLINK_FILES.libwmf+=	lib/libxfwmf.a
-BUILDLINK_FILES.libwmf+=	lib/libxgd.a
+BUILDLINK_FILES.libwmf=		include/libwmf/libwmf/*.h
+BUILDLINK_FILES.libwmf=		include/libwmf/libwmf/gd/*.h
+BUILDLINK_FILES.libwmf+=	lib/libwmf-0.2.so*
+BUILDLINK_FILES.libwmf+=	lib/libwmf.*
 
-.include "../../graphics/freetype-lib/buildlink.mk"
+.include "../../graphics/freetype2/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../textproc/libxml2/buildlink.mk"
 
 BUILDLINK_TARGETS.libwmf=	libwmf-buildlink
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.libwmf}
