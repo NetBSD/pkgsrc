@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/30 07:29:08 skrll Exp $
+bin/jikes
+man/man1/jikes.1
+share/doc/html/jikes/contrib.html
+share/doc/html/jikes/jikes.gif
+share/doc/html/jikes/jikes.html
+share/doc/html/jikes/license.htm
+share/doc/html/jikes/news.html
+@dirrm share/doc/html/jikes
