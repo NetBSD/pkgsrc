@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/08/17 21:14:06 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/10/03 20:56:45 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libusb.
 #
@@ -32,7 +32,9 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libusb}
 BUILDLINK_CONFIG.libusb=	\
 			${BUILDLINK_PREFIX.libusb}/bin/libusb-config
 BUILDLINK_CONFIG_WRAPPER.libusb=	\
-			${BUILDLINK_DIR}/bin/libusb-config
+	 		${BUILDLINK_DIR}/bin/libusb-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.libusb}|${BUILDLINK_CONFIG.libusb}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 LIBUSB_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libusb}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/01 07:34:04 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/03 20:56:51 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gb.
 #
@@ -34,6 +34,8 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gb}
 
 BUILDLINK_CONFIG.gb=		${BUILDLINK_PREFIX.gb}/lib/gbConf.sh
 BUILDLINK_CONFIG_WRAPPER.gb=	${BUILDLINK_DIR}/lib/gbConf.sh
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.gb}|${BUILDLINK_CONFIG.gb}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 GB_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.gb}

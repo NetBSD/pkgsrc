@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/08/17 21:14:02 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/10/03 20:56:42 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libmikmod.
 #
@@ -33,6 +33,8 @@ BUILDLINK_CONFIG.libmikmod=	\
 			${BUILDLINK_PREFIX.libmikmod}/bin/libmikmod-config
 BUILDLINK_CONFIG_WRAPPER.libmikmod=	\
 			${BUILDLINK_DIR}/bin/libmikmod-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.libmikmod}|${BUILDLINK_CONFIG.libmikmod}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 LIBMIKMOD_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.libmikmod}
