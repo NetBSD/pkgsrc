@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2000/11/30 15:48:10 itojun Exp $
+$NetBSD: patch-ae,v 1.2 2000/11/30 16:00:07 itojun Exp $
 
 PATCH_SITES+=	http://apps.v6.linux.or.jp/pub/Linux/IPv6-2/canna/
 PATCHFILES+=	Canna35b2-v6-20000602.diff.gz
@@ -98,11 +98,9 @@ diff -ru server/Imakefile server/Imakefile
  
              IRSRCS = $(SRCS) $(HEADER)
 diff -ru server/connection.c server/connection.c
---- server/connection.c	Wed Nov 27 16:26:10 1996
-+++ server/connection.c	Fri Jun  2 14:22:13 2000
-@@ -131,6 +131,67 @@
- #endif /* use_unix_socket */ 
- 
+--- server/connection.c.orig	Wed Nov 27 16:26:10 1996
++++ server/connection.c	Fri Dec  1 00:55:14 2000
+@@ -133,2 +133,63 @@
  #ifdef USE_INET_SOCKET  /* £…£Œ£≈£‘•…•·•§•Û§Œ∫Ó¿Æ */
 +#ifdef INET6
 +static int open_inet6_socket ()
@@ -166,21 +164,13 @@ diff -ru server/connection.c server/connection.c
 +}
 +#endif
  static int open_inet_socket ()
- {
-   
-@@ -198,6 +259,9 @@
- CreateWellKnownSockets()
- {
+@@ -200,2 +261,5 @@
    int request;
 +#if defined(USE_INET_SOCKET) && defined(INET6)
 +  int inet6_ok = 0;
 +#endif
    
-   CLEARBITS(AllSockets);
-   CLEARBITS(AllClients);
-@@ -220,6 +284,18 @@
- #endif /*  use_unix_socket */
-   
+@@ -222,2 +286,14 @@
  #ifdef USE_INET_SOCKET  /* £…£Œ£≈£‘•…•·•§•Û */    
 +#ifdef INET6
 +  if ((request = open_inet6_socket ()) != -1)
@@ -195,16 +185,13 @@ diff -ru server/connection.c server/connection.c
 +  }
 +#endif
    if ((request = open_inet_socket ()) != -1)
-   {
-     WellKnownConnections |= (1L << request);
-@@ -227,7 +303,9 @@
-   else
-   {
+@@ -229,3 +305,9 @@
      ir_debug( Dmsg(5,"Warning: INET domain not created.\n");)
--    return 0; /* ∫Ó¿Æ§Àº∫«‘ */
++#ifdef INET6
 +    if ( !inet6_ok ){
 +      return 0; /* ∫Ó¿Æ§Àº∫«‘ */
 +    }
++#else
+     return 0; /* ∫Ó¿Æ§Àº∫«‘ */
++#endif
    }
-   
-   ir_debug( Dmsg(3,"£…£Œ£≈£‘•…•·•§•Û§œ§«§≠§ø\n"); )
