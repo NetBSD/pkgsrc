@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2003/04/12 12:14:16 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2003/04/22 19:06:12 jmmv Exp $
 
---- configure.orig	2003-04-01 05:30:19.000000000 +0200
+--- configure.orig	Tue Apr 15 00:53:54 2003
 +++ configure
-@@ -9098,6 +9098,7 @@ CFLAGS="$CFLAGS $X_CFLAGS -Wall"
+@@ -9100,6 +9100,7 @@ CFLAGS="$CFLAGS $X_CFLAGS -Wall"
  M4DATADIR="$datadir/aclocal"
  
  
@@ -10,21 +10,11 @@ $NetBSD: patch-aa,v 1.1 2003/04/12 12:14:16 jmmv Exp $
  
  # Check whether --with-gtk-prefix or --without-gtk-prefix was given.
  if test "${with_gtk_prefix+set}" = set; then
-@@ -9403,6 +9404,7 @@ rm -f conftest.$ac_objext conftest$ac_ex
+@@ -9406,6 +9407,7 @@ echo "$as_me: WARNING: *** GTK+ >= 1.2.2
  
    rm -f conf.gtktest
  
 +fi
  
- echo "$as_me:$LINENO: checking for main in -lX11" >&5
- echo $ECHO_N "checking for main in -lX11... $ECHO_C" >&6
-@@ -10343,6 +10345,9 @@ else
-   HAVE_XINERAMA_FALSE=
- fi
- 
-+else
-+  HAVE_XINERAMA_TRUE='#'
-+  HAVE_XINERAMA_FALSE=
- fi
- 
- 
+ echo "$as_me:$LINENO: checking for XInitThreads in -lX11" >&5
+ echo $ECHO_N "checking for XInitThreads in -lX11... $ECHO_C" >&6
