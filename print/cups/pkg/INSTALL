@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.7 2000/12/15 21:57:38 jlam Exp $
+# $NetBSD: INSTALL,v 1.8 2000/12/28 02:22:18 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -61,11 +61,13 @@ PRE-INSTALL)
 POST-INSTALL)
 	${MKDIR} ${CONFDIR}
 	${MKDIR} ${CONFDIR}/certs
+	${CHMOD} ugo+x,go-rw ${CONFDIR}/certs
 	${MKDIR} ${CONFDIR}/interfaces
 	${MKDIR} ${CONFDIR}/ppd
         ${MKDIR} ${LOGDIR}
         ${MKDIR} ${REQUESTDIR}
-	${CHOWN} ${USER}:${GROUP} ${REQUESTDIR}/tmp
+	${CHMOD} u+rwx,go-rwx ${REQUESTDIR}
+	${CHOWN} ${USER}:${GROUP} ${REQUESTDIR}
 	${MKDIR} ${REQUESTDIR}/tmp
 	${CHMOD} u+rwx,go-rwx,+t ${REQUESTDIR}/tmp
 	${CHOWN} ${USER}:${GROUP} ${REQUESTDIR}/tmp
