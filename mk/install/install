@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.9 2002/06/20 20:15:50 jlam Exp $
+# $NetBSD: install,v 1.10 2002/06/27 20:46:31 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -126,6 +126,9 @@ POST-INSTALL)
 	     -n "${MAKE_DIRS_PERMS}" -o -n "${OWN_DIRS_PERMS}" ]; then
 		eval set -- ${MAKE_DIRS} ${OWN_DIRS}
 		for dir; do
+			if [ -d "${dir}" ]; then
+				continue
+			fi
 			if [ "${_PKG_CONFIG}" = "NO" ]; then
 				if [ ${_print_line} -gt 0 ]; then
 					_print_line=0
