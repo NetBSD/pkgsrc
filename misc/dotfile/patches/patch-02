@@ -1,0 +1,22 @@
+Change for tcl/tk V8.0 - hubertf
+
+--- configure.BAK	Thu Oct 23 20:31:32 1997
++++ configure	Thu Oct 23 20:31:43 1997
+@@ -399,7 +399,7 @@
+ 
+ 
+ 
+-for ac_prog in wish4.2 wish4.1 wish4.0 wish
++for ac_prog in wish8.0 wish4.2 wish4.1 wish4.0 wish
+ do
+ # Extract the first word of "$ac_prog", so it can be a program name with args.
+ set dummy $ac_prog; ac_word=$2
+@@ -439,7 +439,7 @@
+ 	{ echo "configure: error: I couldn't find 'wish' please insert it into your path and try again" 1>&2; exit 1; }
+ fi
+ 
+-for ac_prog in tclsh7.6 tclsh7.5 tclsh7.4 tclsh
++for ac_prog in tclsh8.0 tclsh7.6 tclsh7.5 tclsh7.4 tclsh
+ do
+ # Extract the first word of "$ac_prog", so it can be a program name with args.
+ set dummy $ac_prog; ac_word=$2
