@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:42 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/07/30 10:53:02 jmmv Exp $
 
 SHA1 (zephyr-2.0.4.tar.gz) = df0e3f6da42d54fc218787c4e7eb9934f5bf5548
 Size (zephyr-2.0.4.tar.gz) = 435872 bytes
@@ -11,9 +11,9 @@ SHA1 (patch-af) = 916f07244f23ea0fbe20cb9f39cd86c6e4e80aba
 SHA1 (patch-ag) = abf58efa9da47405f277a80c5b098087ccb3d6dd
 SHA1 (patch-ah) = 1d181663cf85dea3635392886c68dac2f8950e10
 SHA1 (patch-ai) = 2a55884f62c016a592b27342433dc8c624883a4a
-SHA1 (patch-aj) = 9f8e27c4b823e53da7d9bd4b52803cd26127f6e3
+SHA1 (patch-aj) = a458b70331ecc996c71eae07d9e2f64d340cd028
 SHA1 (patch-ak) = 2f22602c2dbca980872c6b7dffafb709c05a7a22
-SHA1 (patch-al) = 140b60bc09ea7e24e5487d2535840821fa807820
+SHA1 (patch-al) = ea69bec71bfac6c0093a4b46840f1eedc89f12b1
 SHA1 (patch-am) = e1158c4f45d8a1d92f91df9c0c102e9c9bc2b523
 SHA1 (patch-an) = 9b3ee33c50072835ff899732c9ba19b9d5784ddd
 SHA1 (patch-ao) = af1d162cf8a0cf7367a9d7717ac8e7045f7113e5
@@ -22,7 +22,7 @@ SHA1 (patch-aq) = ce0283541623070e43558c3cc9460d17deaae663
 SHA1 (patch-ar) = 7bfcadad0ae701051a5784710805e9c18a71581c
 SHA1 (patch-as) = 14858ff528c9e38a947a1215aad388e46a8863c4
 SHA1 (patch-at) = ad95c4d16d6344afe53ddfec16165b8a85562a64
-SHA1 (patch-au) = 57a0e0a36b907ab0fb6d88ad25f91481eb2cc93e
+SHA1 (patch-au) = bf64536800c30f698c7d2264551364dcd07bd616
 SHA1 (patch-av) = 741c1429955d08a56ee05ebeb79ee24aedf396f8
 SHA1 (patch-aw) = 5ba3962c76037364577894596cdde5a051bf2e2d
 SHA1 (patch-ax) = 3b66feaf74e5c97d880d7ea8eb6cf2b3acced06b

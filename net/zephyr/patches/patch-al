@@ -1,9 +1,8 @@
-$NetBSD: patch-al,v 1.1 1999/11/25 01:50:44 hubertf Exp $
+$NetBSD: patch-al,v 1.2 2003/07/30 10:53:03 jmmv Exp $
 
-diff -x *.orig -urN ./configure /usr/pkgsrc/net/zephyr/work.i386.unpatched/zephyr-2.0.4/configure
---- ./configure	Thu Apr  4 01:42:30 1996
-+++ /usr/pkgsrc/net/zephyr/work.i386.unpatched/zephyr-2.0.4/configure	Thu Nov 25 02:52:54 1999
-@@ -502,7 +502,7 @@
+--- configure.orig	1996-04-04 01:42:30.000000000 +0200
++++ configure
+@@ -502,7 +502,7 @@ else
  fi
  
  ac_ext=c
@@ -12,15 +11,23 @@ diff -x *.orig -urN ./configure /usr/pkgsrc/net/zephyr/work.i386.unpatched/zephy
  ac_cpp='echo $CPP $CPPFLAGS 1>&5;
  $CPP $CPPFLAGS'
  ac_compile='echo ${CC-cc} -c $CFLAGS $CPPFLAGS conftest.$ac_ext 1>&5;
-@@ -767,9 +767,9 @@
+@@ -559,6 +559,7 @@ else
+ 	       cp ${srcdir}/lib/et/com_err.h h
+ 	       cp ${srcdir}/lib/ss/*.h h/ss
+ fi
++confdir=${PKG_SYSCONFDIR}
+ 
+ 
+ 
+@@ -767,9 +768,9 @@ fi
  
  echo "$ac_t""$ac_cv_prog_gcc_g" 1>&6
      if test $ac_cv_prog_gcc_g = yes; then
 -      CFLAGS="-g -O"
-+      CFLAGS="-g -O2"
++      CFLAGS="$CFLAGS -g -O2"
      else
 -      CFLAGS="-O"
-+      CFLAGS="-O2"
++      CFLAGS="$CFLAGS -O2"
      fi
    fi
  else
