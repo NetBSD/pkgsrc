@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2003/07/31 16:07:04 seb Exp $
+
+--- mailcrypt.texi.orig	2001-05-22 06:45:04.000000000 +0000
++++ mailcrypt.texi
+@@ -45,6 +45,12 @@ Software Foundation, 675 Mass Ave, Cambr
+ 
+ @end ifinfo
+ 
++@dircategory Emacs
++@direntry
++* Mailcrypt: (mailcrypt).        Emacs Interface to cryptographic functions
++                                 for mail and news.
++@end direntry
++
+ @titlepage
+ @title Mailcrypt: An EMACS Interface to PGP
+ @subtitle Version @value{VERSION}
