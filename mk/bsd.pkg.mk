@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1374 2004/02/06 03:04:50 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1375 2004/02/06 03:10:29 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -3000,12 +3000,12 @@ check-shlibs:
 # Show the shared lib type being built: one of ELF, a.out, dylib, or none
 .PHONY: show-shlib-type
 show-shlib-type:
-.  if exists(/usr/lib/libc.dylib)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "dylib"
+.  if empty(USE_LANGUAGES)
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "none"
+.  elif exists(/usr/lib/libc.dylib)
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "dylib"
 .  elif ${OPSYS} == "AIX"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "aixlib"
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "aixlib"
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKDIR} &&							\
@@ -3025,7 +3025,7 @@ show-shlib-type:
 	fi;								\
 	${ECHO} "$$sotype";						\
 	${RM} -f a.$$$$.c a.$$$$.out
-.  endif # libc.dylib
+.  endif   # USE_LANGUAGES
 .endif
 
 .PHONY: acquire-extract-lock acquire-patch-lock acquire-tools-lock
