@@ -1,0 +1,50 @@
+$NetBSD: patch-ah,v 1.1.1.1 2004/09/21 17:17:43 jmmv Exp $
+
+--- shell/e-setup.c.orig	2003-04-16 16:37:56.000000000 +0200
++++ shell/e-setup.c
+@@ -139,6 +139,16 @@ check_evolution_directory (const char *e
+ 		}
+ 
+ 		g_free (command);
++
++		command = g_strconcat ("chmod -R u+w ",
++					evolution_directory,
++					NULL);
++
++		if (system (command) != 0) {
++			retval = FALSE;
++		}
++
++		g_free (command);
+ 	}
+ 
+ 	if (retval == FALSE)
+@@ -170,19 +180,22 @@ copy_default_stuff (const char *evolutio
+ 		return FALSE;
+ 	}
+ 
++	retval = TRUE;
++
+ 	command = g_strconcat ("cp -r " DEFAULT_USER_PATH "/* ", evolution_directory, NULL);
++	retval &= (system (command) == 0);
++	g_free (command);
++
++	command = g_strconcat ("chmod -R u+w ", evolution_directory, NULL);
++	retval &= (system (command) == 0);
++	g_free (command);
+ 
+-	if (system (command) != 0) {
++	if (!retval) {
+ 		/* FIXME: Give more help.  */
+ 		e_notice (NULL, GTK_MESSAGE_ERROR,
+ 			  _("An error occurred in copying files into\n`%s'."), evolution_directory);
+-		retval = FALSE;
+-	} else {
+-		retval = TRUE;
+ 	}
+ 
+-	g_free (command);
+-
+ 	return retval;
+ }
+ 

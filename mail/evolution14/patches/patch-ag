@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/09/21 17:17:43 jmmv Exp $
+
+--- e-util/e-dbhash.c.orig	2001-10-22 15:54:12.000000000 +0200
++++ e-util/e-dbhash.c
+@@ -16,9 +16,9 @@
+ #include "md5-utils.h"
+ 
+ #if DB_VERSION_MAJOR != 3 || \
+-    DB_VERSION_MINOR != 1 || \
+-    DB_VERSION_PATCH != 17
+-#error Including wrong DB3.  Need libdb 3.1.17.
++    DB_VERSION_MINOR != 3 || \
++    DB_VERSION_PATCH != 11
++#error Including wrong DB3.  Need libdb 3.3.11.
+ #endif
+ 
+ struct _EDbHashPrivate 
+@@ -37,9 +37,9 @@ e_dbhash_new (const char *filename)
+ 
+ 	db_version (&major, &minor, &patch);
+ 
+-	if (major != 3 ||
+-	    minor != 1 ||
+-	    patch != 17) {
++	if (major != DB_VERSION_MAJOR ||
++	    minor != DB_VERSION_MINOR ||
++	    patch != DB_VERSION_PATCH) {
+ 		g_warning ("Wrong version of libdb.");
+ 		return NULL;
+ 	}

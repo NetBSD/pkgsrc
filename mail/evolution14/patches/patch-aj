@@ -1,0 +1,30 @@
+$NetBSD: patch-aj,v 1.1.1.1 2004/09/21 17:17:43 jmmv Exp $
+
+--- addressbook/backend/pas/pas-backend-file.c.orig	2003-04-22 00:55:52.000000000 +1000
++++ addressbook/backend/pas/pas-backend-file.c
+@@ -20,9 +20,9 @@
+ #include <e-util/e-db3-utils.h>
+ 
+ #if DB_VERSION_MAJOR != 3 || \
+-    DB_VERSION_MINOR != 1 || \
+-    DB_VERSION_PATCH != 17
+-#error Including wrong DB3.  Need libdb 3.1.17.
++    DB_VERSION_MINOR != 3 || \
++    DB_VERSION_PATCH != 11
++#error Including wrong DB3.  Need libdb 3.3.11.
+ #endif
+ 
+ #include <gal/util/e-util.h>
+@@ -1382,9 +1382,9 @@ pas_backend_file_load_uri (PASBackend   
+ 
+ 	db_version (&major, &minor, &patch);
+ 
+-	if (major != 3 ||
+-	    minor != 1 ||
+-	    patch != 17) {
++	if (major != DB_VERSION_MAJOR ||
++	    minor != DB_VERSION_MINOR ||
++	    patch != DB_VERSION_PATCH) {
+ 		g_warning ("Wrong version of libdb.");
+ 		return GNOME_Evolution_Addressbook_BookListener_OtherError;
+ 	}
