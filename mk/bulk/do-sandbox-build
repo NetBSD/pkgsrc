@@ -1,5 +1,5 @@
 #!/bin/sh
-#	$NetBSD: do-sandbox-build,v 1.5 2002/03/13 06:30:13 hubertf Exp $
+#	$NetBSD: do-sandbox-build,v 1.6 2002/03/16 10:00:17 hubertf Exp $
 
 #
 # Script to start a sandbox build
@@ -7,4 +7,4 @@
 # See pkgsrc/Packages.txt for documentation!
 #
 
-chroot /usr/sandbox sh -c 'cd /usr/cvs.local/pkgsrc/ ; sh mk/bulk/build'
+chroot /usr/sandbox sh -c "cd /usr/cvs.local/pkgsrc/ ; sh mk/bulk/build $@"
