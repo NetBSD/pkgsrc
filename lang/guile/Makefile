@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/11/15 21:22:51 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/11/15 21:28:08 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/11/22 16:01:32 jseger Exp
 #
 
@@ -17,5 +17,7 @@ CONFIGURE_ENV=	CPPFLAGS="-Dunix" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+
+INFO_FILES=	data-rep.info
 
 .include "../../mk/bsd.pkg.mk"
