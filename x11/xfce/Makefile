@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/12/10 19:06:13 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2003/04/27 12:52:41 cjep Exp $
 
 DISTNAME=		xfce-3.8.18
 CATEGORIES=		x11
@@ -12,6 +12,7 @@ BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined
+USE_PKGLOCALEDIR=	# defined
 
 USE_LIBTOOL=		# defined
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
