@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5802 2004/05/03 12:51:44 adam Exp $
+$NetBSD: CHANGES,v 1.5803 2004/05/03 15:40:53 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2330,3 +2330,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sane-backends to 1.0.14 [adam 2004-05-03]
 	Updated sane-frontends to 1.0.12 [adam 2004-05-03]
 	Updated xsane to 0.93 [adam 2004-05-03]
+	Updated gnome-vfs2 to 2.6.1.1 [jmmv 2004-05-03]
+	Updated gnome-vfs2-cdda to 2.6.1.1 [jmmv 2004-05-03]
+	Updated gnome-vfs2-smb to 2.6.1.1 [jmmv 2004-05-03]
