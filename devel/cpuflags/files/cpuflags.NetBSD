@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.9 2001/08/27 20:58:38 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.10 2001/09/16 16:30:08 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -45,7 +45,16 @@ case $hw_model in
 		fi
 	esac	;;
     #
-    *)			echo "Unknown hw.model '$hw_model'" >&2
+    # vax
+    #
+    *)
+	hw_machine=`$SYSCTL -n hw.machine` # arm32 split post 1.5
+	case $hw_machine in
+	    vax)
+		;;	# No VAX specific gcc flags :(
+	    *)
+		echo "Unknown hw.model '$hw_model'" >&2
+	esac
 esac
 
 if [ -n "$FLAGS" ]; then
