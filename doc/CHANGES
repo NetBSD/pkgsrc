@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6196 2004/06/10 14:05:02 markd Exp $
+$NetBSD: CHANGES,v 1.6197 2004/06/10 16:16:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2852,7 +2852,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sun-jdk13 to 1.0.12 [jschauma 2004-06-08]
 	Updated airportbasestationconfig to 1.5.2nb2 [tron 2004-06-09]
 	Updated cpuflags to 0.71 [cube 2004-06-09]
-	Updated cdraw to 1.175nb1 [xtraeme 2004-06-09]
+	Updated dcraw to 1.175nb1 [xtraeme 2004-06-09]
 	Updated pkg_comp to 1.19 [jmmv 2004-06-10]
 	Updated cvs to 1.11.17 [grant 2004-06-10]
 	Updated python23 to 2.3.4nb1 [recht 2004-06-10]
