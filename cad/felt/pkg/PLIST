@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/27 23:28:25 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/14 02:07:44 jtb Exp $
 bin/burlap
 bin/corduroy
 bin/felt
@@ -28,6 +28,7 @@ share/doc/felt/FAQ.html
 share/doc/felt/README
 share/doc/felt/README.old
 share/doc/felt/TODO
+share/doc/felt/felt.ps
 share/examples/felt/README
 share/examples/felt/axisymm.flt
 share/examples/felt/beam.flt
