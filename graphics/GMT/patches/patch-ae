@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/11/26 22:48:16 jtb Exp $
+
+--- src/gmt_support.c.orig	Tue Oct 24 17:24:38 2000
++++ src/gmt_support.c
+@@ -3456,7 +3456,7 @@
+ 
+ 	/* First check the $GMTHOME/share directory */
+ 	
+-	sprintf (path, "%s%cshare%c%s\0", GMTHOME, DIR_DELIM, DIR_DELIM, name);
++	sprintf (path, "%s%cshare%cgmt%c%s\0", GMTHOME, DIR_DELIM, DIR_DELIM, DIR_DELIM, name);
+ 	if (!access (path, R_OK)) return (TRUE);	/* File exists and is readable, return with name */
+ 	
+ 	/* File was not readable.  Now check if it exists */
+@@ -3470,7 +3470,7 @@
+ 	 * It is not an error if we cannot find the named file, only if it is found
+ 	 * but cannot be read due to permission problems */
+ 	
+-	sprintf (dir, "%s%cshare%ccoastline.conf\0", GMTHOME, DIR_DELIM, DIR_DELIM);
++	sprintf (dir, "%s%cshare%cgmt%ccoastline.conf\0", GMTHOME, DIR_DELIM, DIR_DELIM, DIR_DELIM);
+ 	if (!access (dir, F_OK))  { /* File exists... */
+ 		if (access (dir, R_OK)) {	/* ...but cannot be read */
+ 			fprintf (stderr, "%s: Error: GMT does not have permission to open %s!\n", GMT_program, dir);

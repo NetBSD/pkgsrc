@@ -1,0 +1,31 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/11/26 22:48:17 jtb Exp $
+
+--- src/pslib.c.orig	Tue Oct 24 17:24:39 2000
++++ src/pslib.c
+@@ -786,7 +786,7 @@
+ 	if ((image_no >= 0 && image_no < N_PATTERNS) && ps_pattern_status[image_no][invert]) return (image_no);	/* Already done this */
+ 
+ 	if ((image_no >= 0 && image_no < N_PATTERNS)) {	/* Premade pattern yet not used */
+-		sprintf (file, "%s%cshare%cps_pattern_%2.2d.ras\0", PSHOME, DIR_DELIM, DIR_DELIM, image_no);
++		sprintf (file, "%s%cshare%cgmt%cps_pattern_%2.2d.ras\0", PSHOME, DIR_DELIM, DIR_DELIM, DIR_DELIM, image_no);
+ 		ps_pattern_status[image_no][invert] = 1;
+ 	}
+ 	else {	/* User image, check to see if already used */
+@@ -804,7 +804,7 @@
+ 			if (!access (imagefile, R_OK))
+ 				strcpy (file, imagefile);
+ 			else
+-				sprintf (file, "%s%cshare%c%s\0", PSHOME, DIR_DELIM, DIR_DELIM, imagefile);
++				sprintf (file, "%s%cshare%cgmt%c%s\0", PSHOME, DIR_DELIM, DIR_DELIM, DIR_DELIM, imagefile);
+ 		}
+ 		ps_user_image[ps_n_userimages].name = (char *) ps_memory (VNULL, (size_t)(strlen (imagefile)+1), sizeof (char));
+ 		strcpy (ps_user_image[ps_n_userimages].name, imagefile);
+@@ -3190,7 +3190,7 @@
+ 	/* Load PSL_text procedures from file for now */
+ 
+ 	if (PSL_first) {
+-		sprintf (line, "%s%cshare%cPSL_text.ps\0", PSHOME, DIR_DELIM, DIR_DELIM);
++		sprintf (line, "%s%cshare%cgmt%cPSL_text.ps\0", PSHOME, DIR_DELIM, DIR_DELIM, DIR_DELIM);
+ 
+ 		if ((fp = fopen (line, "r")) == NULL) {
+ 			fprintf (stderr, "pslib: ERROR: Cannot open file %s\n", line);
