@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.91 2002/10/01 13:35:12 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.92 2002/10/03 20:30:21 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1455,6 +1455,13 @@ USE_IDEA?=	NO
 # Used in nn and trn to specify use of "inn" instead of "nntpclnt"
 # package to provide "inews" binary.
 # Possible: not defined, YES
+# Default: not defined
+
+#USE_OSS=
+#
+# Used to enable OSS audio support in preference to or in place of Sun audio
+# support in various packages.
+# Possible: defined, not defined
 # Default: not defined
 
 #USE_PAM=
