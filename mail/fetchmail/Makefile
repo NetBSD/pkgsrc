@@ -3,7 +3,8 @@
 # Date created:		26 Oct 1996
 # Whom:			Ville Eerola <ve@sci.fi>
 #
-# $Id: Makefile,v 1.1.1.1 1998/02/28 11:05:37 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/02/28 11:35:39 tron Exp $
+# $FreeBSD Id: Makefile,v 1.55 1998/01/29 17:13:07 ache Exp
 #
 
 DISTNAME=       fetchmail-4.3.6
@@ -13,7 +14,6 @@ MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/
 MAINTAINER=	ve@sci.fi
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS= --enable-opie
 CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
 MAN1=		fetchmail.1
 
@@ -23,8 +23,8 @@ CONFIGURE_ARGS += --with-kerberos=/usr/include/kerberosIV
 
 FDOC=   ${PREFIX}/share/doc/fetchmail
 
-post-patch:
-	@${CP} -f  /usr/include/md5.h ${WRKSRC}
+post-extract:
+	${RM} -f ${WRKSRC}/md5.h
 
 post-install:
 	${INSTALL} -d -m 555 -o ${DOCOWN} -g ${DOCGRP} ${FDOC}
