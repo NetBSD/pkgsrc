@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 1999/11/01 22:54:36 tron Exp $
+# $NetBSD: Makefile,v 1.45 1999/11/02 21:55:25 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -24,6 +24,7 @@
     SUBDIR += gtop
     SUBDIR += hfsutils
 #    SUBDIR += idled
+    SUBDIR += kapm
     SUBDIR += kdf
     SUBDIR += lavaps
     SUBDIR += logrot
