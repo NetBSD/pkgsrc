@@ -1,9 +1,14 @@
-$NetBSD: patch-ay,v 1.2 2002/03/21 08:47:08 seb Exp $
+$NetBSD: patch-ay,v 1.3 2002/04/19 18:42:35 seb Exp $
 
---- tclpathplan/demo/pathplan_data/Makefile.in.orig	Fri Mar  8 23:12:24 2002
+--- tclpathplan/demo/pathplan_data/Makefile.in.orig	Fri Apr 19 14:31:38 2002
 +++ tclpathplan/demo/pathplan_data/Makefile.in
-@@ -199,7 +199,7 @@
- 	obs.dat other.dat paths.dat rotor.dat u.dat unknown.dat
+@@ -183,11 +183,10 @@
+ 
+ AUTOMAKE_OPTIONS = 1.4
+ 
+-EXAMPLES = boxes.dat dpd.dat funny.dat maze.dat nested.dat northo.dat \
+-	obs.dat other.dat paths.dat rotor.dat u.dat unknown.dat
++EXAMPLES = boxes.dat dpd.dat funny.dat maze.dat nested.dat northo.dat 	obs.dat other.dat paths.dat rotor.dat u.dat unknown.dat
  
  
 -pathplanexampledir = $(libdir)/@PACKAGE@/demo/pathplan_data
@@ -11,20 +16,12 @@ $NetBSD: patch-ay,v 1.2 2002/03/21 08:47:08 seb Exp $
  
  pathplanexample_DATA = $(EXAMPLES)
  EXTRA_DIST = $(EXAMPLES)
-@@ -207,6 +207,7 @@
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/gvconfig.h
- CONFIG_CLEAN_FILES =
-+depcomp =
- DIST_SOURCES =
- DATA = $(pathplanexample_DATA)
+@@ -201,7 +200,7 @@
  
-@@ -225,7 +226,7 @@
- 	-rm -f libtool
- $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
- 	cd $(top_srcdir) && \
--	  $(AUTOMAKE) --gnu  tclpathplan/demo/pathplan_data/Makefile
-+	  $(AUTOMAKE) --gnu  --ignore-deps tclpathplan/demo/pathplan_data/Makefile
- Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
- 	cd $(top_builddir) && \
- 	  CONFIG_HEADERS= CONFIG_LINKS= \
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = gtar
++TAR = tar
+ GZIP_ENV = --best
+ all: all-redirect
+ .SUFFIXES:

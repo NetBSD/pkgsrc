@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.2 2002/03/21 08:47:07 seb Exp $
+$NetBSD: patch-aw,v 1.3 2002/04/19 18:42:35 seb Exp $
 
---- tclpathplan/demo/Makefile.in.orig	Fri Mar  8 23:12:24 2002
+--- tclpathplan/demo/Makefile.in.orig	Fri Apr 19 14:31:38 2002
 +++ tclpathplan/demo/Makefile.in
-@@ -197,7 +197,7 @@
+@@ -185,7 +185,7 @@
  
  SUBDIRS = pathplan_data
  
@@ -11,20 +11,12 @@ $NetBSD: patch-aw,v 1.2 2002/03/21 08:47:07 seb Exp $
  demo_SCRIPTS = pathplan
  demo_DATA = pathplan.README 
  
-@@ -208,6 +208,7 @@
- CONFIG_CLEAN_FILES =
- SCRIPTS = $(demo_SCRIPTS)
+@@ -202,7 +202,7 @@
  
-+depcomp =
- DIST_SOURCES =
- DATA = $(demo_DATA)
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
  
-@@ -232,7 +233,7 @@
- 	-rm -f libtool
- $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
- 	cd $(top_srcdir) && \
--	  $(AUTOMAKE) --gnu  tclpathplan/demo/Makefile
-+	  $(AUTOMAKE) --gnu  --ignore-deps tclpathplan/demo/Makefile
- Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
- 	cd $(top_builddir) && \
- 	  CONFIG_HEADERS= CONFIG_LINKS= \
+-TAR = gtar
++TAR = tar
+ GZIP_ENV = --best
+ all: all-redirect
+ .SUFFIXES:
