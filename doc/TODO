@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1179 2003/12/13 16:40:37 seb Exp $
+$NetBSD: TODO,v 1.1180 2003/12/13 16:50:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -159,6 +159,7 @@ Suggested package updates
 	o elk-3.99.6
 	o elm-me-2.4pl109a
 	o enlightenment-0.16.6
+	o ethereal-0.10.0
 	o ettercap-0.6.b
 	o evolution-1.5
 	o exim-4.24
@@ -183,7 +184,7 @@ Suggested package updates
 	o gkrellm-volume-2.1.9 [pkgsrc-wip]
 	o glade-2.0.1
 	o global-4.6
-	o glpk-4.2
+	o glpk-4.3
 	o gnats-4.0 [pkgsrc-wip]
 	o gnocatan-0.8.0
 	o gnome-core-2.4
@@ -267,6 +268,7 @@ Suggested package updates
 	o openldap-2.1.23
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
+	o oss-3.9.8c
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
