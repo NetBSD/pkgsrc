@@ -1,0 +1,11 @@
+--- wily/Makefile.in.orig	Fri Jun 20 11:58:06 1997
++++ wily/Makefile.in	Tue Aug  4 21:54:46 1998
+@@ -23,7 +23,7 @@
+ 	sam.o text.o click.o tile.o search.o
+ 
+ MYLIBS=../libmsg/libmsg.a ../libframe/libframe.a ../libXg/libXg.a
+-XLIBS=$(LIBS) @X_LIBS@ -lXt @X_PRE_LIBS@ -lX11 @X_EXTRA_LIBS@
++XLIBS=$(LIBS) -Wl,-R$(X11BASE)/lib @X_LIBS@ -lXt @X_PRE_LIBS@ -lX11 @X_EXTRA_LIBS@
+ all: $(TARGET)
+ $(TARGET): $(OBJECTS) $(MYLIBS)
+ 	$(CC) $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(MYLIBS) $(XLIBS)
