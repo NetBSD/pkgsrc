@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1393 2003/02/16 02:05:51 salo Exp $
+$NetBSD: CHANGES,v 1.1394 2003/02/16 02:39:24 bad Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -694,3 +694,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tcpreplay to 1.3.2 [salo 2003-02-15]
 	Added wtail-0.2.2 [salo 2003-02-16]
 	Added ruby-rdoc-0.0.0.2 [salo 2003-02-16]
+	Updated vmware-module to 1.1 [bad 2003-02-16]
