@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/03/26 02:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2004/03/29 03:30:33 schmonz Exp $
 #
 
 DISTNAME=		lftp-2.6.12
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		michal@pasternak.w.lub.pl
 HOMEPAGE=		http://lftp.yar.ru/
 COMMENT=		Powerful command line ftp client
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
@@ -29,6 +31,8 @@ CONFIGURE_ENV+=		F77=${FALSE}
 
 EGDIR=			${PREFIX}/share/examples/lftp
 CONF_FILES=		${EGDIR}/lftp.conf.default ${PKG_SYSCONFDIR}/lftp.conf
+
+INSTALLATION_DIRS=	bin lib/lftp man/man1 share/examples/lftp share/lftp
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
