@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5154 2004/03/08 16:25:47 minskim Exp $
+$NetBSD: CHANGES,v 1.5155 2004/03/08 19:33:02 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1246,3 +1246,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sylpheed-claws to 0.9.10 [adam 2004-03-08]
         Updated gossip to 0.7.2 [jmmv 2004-03-08]
 	Removed gnuchess-book-small [minskim 2004-03-08]
+	Updated xdg-dirs to 1.1 [jmmv 2004-03-08]
+	Added xdg-x11-dirs-1.1 [jmmv 2004-03-08]
+	Updated gnome-dirs to 1.5 [jmmv 2004-03-08]
+	Updated gnome1-dirs to 1.5 [jmmv 2004-03-08]
+	Updated gnome2-dirs to 1.5 [jmmv 2004-03-08]
