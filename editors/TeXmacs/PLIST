@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/04/27 11:56:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/06/06 04:29:17 schmonz Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -1464,7 +1464,6 @@ share/TeXmacs/plugins/pari/packages/session/pari.ts
 share/TeXmacs/plugins/pari/progs/init-pari.scm
 share/TeXmacs/plugins/python/progs/init-python.scm
 share/TeXmacs/plugins/python/progs/init-python.scm.orig
-share/TeXmacs/plugins/python/progs/init-python.scm.subst.sav
 share/TeXmacs/plugins/qcl/progs/init-qcl.scm
 share/TeXmacs/plugins/qcl/progs/qcl-input.scm
 share/TeXmacs/plugins/r/progs/init-r.scm
