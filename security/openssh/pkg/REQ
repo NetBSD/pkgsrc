@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# $NetBSD: REQ,v 1.1 2000/01/27 17:13:02 hubertf Exp $
+#
+
+PKG=$1
+STAGE=$2
+
+if [ "$STAGE" != "INSTALL" ];
+then
+        exit 0
+fi
+
+if ! dd if=/dev/urandom of=/dev/null bs=1 count=1 2>/dev/null >/dev/null ; 
+then
+	echo ""
+	echo "Need working /dev/urandom for this package to work!"
+	echo ""
+	exit 1
+fi
+
+exit 0
