@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2004/07/28 08:05:32 agc Exp $
+
+--- snd-1.h	2004/07/28 07:54:48	1.1
++++ snd-1.h	2004/07/28 07:55:08
+@@ -474,7 +474,7 @@
+ char *sound_type(int type);
+ char *sound_format (int format);
+ char *copy_string (char *str);
+-int round(float x);
++int snd_round(float x);
+ void snd_error (char *msg);
+ char *filename_without_home_directory(char *name);
+ char *just_filename(char *name);

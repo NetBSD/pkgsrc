@@ -1,0 +1,26 @@
+$NetBSD: patch-aq,v 1.1 2004/07/28 08:05:32 agc Exp $
+
+--- snd-xenv.c	2004/07/28 07:57:26	1.1
++++ snd-xenv.c	2004/07/28 07:57:56
+@@ -278,8 +278,8 @@
+   int cols,rows,i,j,width,height,x,y,k;
+   if (all_envs_top > 1)
+     {
+-      cols = round(sqrt((float)(all_envs_top * env_window_width) / (float)env_window_height));
+-      rows = round((float)all_envs_top/(float)cols);
++      cols = snd_round(sqrt((float)(all_envs_top * env_window_width) / (float)env_window_height));
++      rows = snd_round((float)all_envs_top/(float)cols);
+       if ((rows*cols) < all_envs_top) rows++;
+     }
+   else
+@@ -312,8 +312,8 @@
+ 	return(0);
+       else
+ 	{
+-	  cols = round(sqrt((float)(all_envs_top * env_window_width) / (float)env_window_height));
+-	  rows = round((float)all_envs_top/(float)cols);
++	  cols = snd_round(sqrt((float)(all_envs_top * env_window_width) / (float)env_window_height));
++	  rows = snd_round((float)all_envs_top/(float)cols);
+ 	  if ((rows*cols) < all_envs_top) rows++;
+ 	  width = (int)((float)env_window_width/(float)cols);
+ 	  height = (int)((float)env_window_height/(float)rows);

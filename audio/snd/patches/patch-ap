@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2004/07/28 08:05:32 agc Exp $
+
+--- snd-snd.c	2004/07/28 07:57:26	1.1
++++ snd-snd.c	2004/07/28 07:58:29
+@@ -668,7 +668,7 @@
+       break;
+     case SPEED_AS_SEMITONE: 
+       /* find closest semitone to val */
+-      semi = round(log(val)*((float)tones/log(2.0)));
++      semi = snd_round(log(val)*((float)tones/log(2.0)));
+       /* space until (-) num (-52 to 52 is its range if 12-tone) */
+       for (i=0;i<3;i++) srcbuf[i] = ' '; 
+       sprintf(src_txt_buf,"%d",semi);
