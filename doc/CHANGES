@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2392 2003/06/02 06:33:03 simonb Exp $
+$NetBSD: CHANGES,v 1.2393 2003/06/02 07:27:43 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2268,3 +2268,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added linuxsms-0.64 [jmmv 2003-06-01]
 	Updated pwm to 1.0.20030528 [salo 2003-06-01]
 	Updated adzap to 20030525 [simonb 2003-06-02]
+	Updated vim to 6.2.0 [martti 2003-06-02]
