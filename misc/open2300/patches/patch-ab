@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/10 08:19:46 martin Exp $
+
+--- rw2300.c.orig	2004-04-18 09:51:14.000000000 +0200
++++ rw2300.c	2004-11-09 09:49:09.000000000 +0100
+@@ -2423,7 +2423,7 @@
+ 	{
+ 		if ((fptr = fopen("open2300.conf", "r")) == NULL)
+ 		{
+-			if ((fptr = fopen("/usr/local/etc/open2300.conf", "r")) == NULL)
++			if ((fptr = fopen(SYSCONFDIR "/open2300.conf", "r")) == NULL)
+ 			{
+ 				if ((fptr = fopen("/etc/open2300.conf", "r")) == NULL)
+ 				{
+@@ -2912,6 +2912,7 @@
+ 
+ 	for (j = 0; j < MAXRETRIES; j++)
+ 	{
++		if (j) sleep_long(2);
+ 		reset_06(ws2300);
+ 
+ 		// Read the data. If expected number of bytes read break out of loop.
