@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/02/17 09:13:33 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/02/17 13:44:34 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRANDR_BUILDLINK3_MK:=	${XRANDR_BUILDLINK3_MK}+
@@ -38,7 +38,7 @@ BUILDLINK_IS_BUILTIN.Xrandr= ${_IS_BUILTIN.Xrandr}
 # approximate determination of the Xrandr version.
 #
 _XRANDR_VERSIONS=	1.0.2  1.0.1  1.0
-_XRANDR_1.0=		4.2 4.2.* 4.3 4.3.[0-8][0-9]* 4.3.9[0-8]*
+_XRANDR_1.0=	4.2 4.2.* 4.3 4.3.[0-9] 4.3.[0-9].* 4.3.[1-8][0-9]* 4.3.9[0-8]*
 .      if !defined(_XF86_VERSION)
 _X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/version.def
 .        if !exists(${_X11_CONFIG_VERSION_DEF})
