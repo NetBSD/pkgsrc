@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/07/31 11:53:09 jdolecek Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/07 13:34:09 jdolecek Exp $
 
 DISTNAME=		suse_libpng-${SUSE_VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -18,7 +19,7 @@ NO_BUILD=		YES
 NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		libpng-1.2.5-182.${SUSE_ARCH}.rpm
+RPMFILES=		libpng-1.2.5-182.7.${SUSE_ARCH}.rpm
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
