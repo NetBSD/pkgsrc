@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.71 1999/11/17 15:57:45 agc Exp $
+# $NetBSD: Packages.txt,v 1.72 1999/11/23 16:38:22 dmcmahill Exp $
 ###########################################################################
 
 			==========================
@@ -1291,22 +1291,21 @@ Add the following to your /etc/mk.conf file: PASSIVE_FETCH=1
  9.12 Dependencies on other packages
  ===================================
 
-Your package may depend on some other package being present - and
-there are various ways of expressing this dependency.  NetBSD supports
-the BUILD_DEPENDS, RUN_DEPENDS and DEPENDS definitions (beware:  the
-DEPENDS definition is not the same as FreeBSD's deprecated one, and
-NetBSD does not use the FreeBSD LIB_DEPENDS definition any more - it
-proved problematic on ELF NetBSD platforms).
+Your package may depend on some other package being present - and there are
+various ways of expressing this dependency. NetBSD supports the
+BUILD_DEPENDS and DEPENDS definitions (beware: the DEPENDS definition is
+not the same as FreeBSD's deprecated one, and NetBSD does not use the
+FreeBSD LIB_DEPENDS definition any more - it proved problematic on ELF
+NetBSD platforms).
 
-[In the following examples, the BUILD_DEPENDS and RUN_DEPENDS
-dependencies have the format:  <file>:<directory containing package to
-build>[:<stage>] If the <stage> isn't specified, it defaults to
-``install''.  If the file contains a '/', it is interpreted as a
-regular file - otherwise, the name is taken to be an executable file,
-and the PATH is searched for <file>.  If the regular file is not
-found, or the exectable file is not in the path, then the
+[In the following examples, the BUILD_DEPENDS dependencies have the format:
+<file>:<directory containing package to build>[:<stage>] If the <stage>
+isn't specified, it defaults to ``install''. If the file contains a '/', it
+is interpreted as a regular file - otherwise, the name is taken to be an
+executable file, and the PATH is searched for <file>. If the regular file
+is not found, or the exectable file is not in the path, then the
 pre-requisite package will be built from the sources in <directory
-containing the package to build>.  The DEPENDS definition specifies a
+containing the package to build>. The DEPENDS definition specifies a
 package name (which contains its version number), and the directory
 containing the package to build if this version of the package is not
 installed.]
@@ -1339,13 +1338,13 @@ Note that these wildcards will be expanded while creating binary packages.
 Thus binary package will depend on exactly the version which was installed
 when they were created.
 
-(d) If your package needs some executable to be able to run correctly,
-this is specified using the RUN_DEPENDS definition.  The print/lyx
-package needs to be able to execute the latex and ispell binaries when
-it runs, and that is specified:
+(d) If your package needs some executable to be able to run correctly, this
+is specified using the DEPENDS definition. The print/lyx package needs to
+be able to execute the latex binary from the teTex package when it runs,
+and that is specified:
 
-RUN_DEPENDS=    latex:../../print/teTeX \
-                ispell:../../textproc/ispell
+DEPENDS=        teTex-*:../../print/teTeX 
+
 
 
  9.13 Conflicts with other packages
