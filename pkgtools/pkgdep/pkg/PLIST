@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/21 02:26:13 sakamoto Exp $
+bin/pkgdep
