@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2000/06/21 22:45:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/06/22 00:03:36 hubertf Exp $
 #
 
 DISTNAME=	url2pkg-1.11
 CATEGORIES=	pkgtools sysutils
-# The file is under CVS control in othersrc/usr.bin/url2pkg
-MASTER_SITES=	http://rfhs8012.fh-regensburg.de/~feyrer/Misc/
-EXTRACT_SUFX=	# Nothing
+MASTER_SITES=	# Nothing
+DISTFILES=	# Nothing
 
 MAINTAINER=	hubertf@netbsd.org
 
-NO_BUILD=	YES
-NO_PATCH=	YES
+EXTRACT_ONLY=	# empty
+NO_WRKSUBDIR=	yes
+NO_CHECKSUM=	yes
+NO_BUILD=	yes
+NO_PATCH=	yes
 EXTRACT_CMD=	${ECHO_CMD}
 
 do-install:
-	${INSTALL_SCRIPT} ${DISTDIR}/${DISTNAME} ${LOCALBASE}/bin/${DISTNAME:C/-.*$//}
+	${INSTALL_SCRIPT} ${FILESDIR}/${DISTNAME:C/-.*$//} ${LOCALBASE}/bin/${DISTNAME:C/-.*$//}
 
 .include "../../mk/bsd.pkg.mk"
