@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/06/09 14:14:51 kleink Exp $
+
+--- lib/Convert/ASN1/Debug.pm	Mon May 22 22:48:09 2000
++++ lib/Convert/ASN1/Debug.pm	Fri Jun  9 10:05:52 2000
+@@ -208,7 +208,9 @@
+   print STDERR "]";
+   if ($op->[cCHILD]) {
+     print STDERR " ",scalar @{$op->[cCHILD]},"\n";
+-    $line = dump_op($_,$indent . " ",$done,$line) for (@{$op->[cCHILD]});
++    for (@{$op->[cCHILD]}) {
++      $line = dump_op($_,$indent . " ",$done,$line);
++    }
+   }
+   else {
+     print STDERR "\n";
