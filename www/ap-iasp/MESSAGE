@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/01/01 07:04:28 jlam Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+  LoadModule iasp_module lib/httpd/mod_iasp.so
+  AddModule mod_iasp.c
+
+  <IfModule mod_iasp.c>
+  Alias /iasp ${IASP_DESTDIR}
+  IaspConfig server ${IASP_DESTDIR}/properties/server.properties
+  IaspConfig rules ${IASP_DESTDIR}/properties/rules.properties
+  </IfModule>
+
+ NOTE: ${IASP_DESTDIR} is the installed path of iASP.
+
+===========================================================================
