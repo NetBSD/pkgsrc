@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/12/06 00:28:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/21 10:03:42 xtraeme Exp $
 #
 
 DISTNAME=	opencdk-0.5.3
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/opencdk/
 
@@ -28,6 +29,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}/tests && ${INSTALL_DATA} *.gpg *.c ${EGDIR}
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/libgcrypt/buildlink2.mk"
 
