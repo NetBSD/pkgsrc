@@ -1,21 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2000/08/31 17:21:59 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/11/24 13:51:52 dmcmahill Exp $
 bin/gwave
+bin/gwave-exec
+bin/gwaverepl
 bin/sp2sp
 man/man1/sp2sp.1
-share/doc/gwave/gwave-concepts.txt
-share/doc/gwave/gwave-hooks.txt
-share/doc/gwave/gwave-procedures.txt
-share/doc/gwave/gwave-variables.txt
 share/guile/app/gwave/cmds.scm
 share/guile/app/gwave/dynlink.scm
 share/guile/app/gwave/extra-menus.scm
 share/guile/app/gwave/globals.scm
+share/guile/app/gwave/gwave-startup.scm 
 share/guile/app/gwave/minimal.scm
-share/guile/app/gwave/options.scm
 share/guile/app/gwave/std-args.scm
 share/guile/app/gwave/std-menus.scm
 share/guile/app/gwave/std-toolbar.scm
 share/guile/app/gwave/system.gwaverc
 share/guile/app/gwave/visiblewave-ops.scm
-@dirrm share/doc/gwave
 @dirrm share/guile/app/gwave
