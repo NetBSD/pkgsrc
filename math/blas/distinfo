@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:34:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 08:45:38 agc Exp $
 
-MD5 (blas.tgz) = 5811e4b3dffa7a10956abf923cec1bd4
+SHA1 (blas.tgz) = ab73fcc69d0c74888aea67a698f60cd91b0d3af2
+Size (blas.tgz) = 94981 bytes
