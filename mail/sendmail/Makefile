@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/01/02 17:46:47 itojun Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/09 01:29:07 wiz Exp $
 
 DISTNAME=	sendmail.8.9.3
 PKGNAME=	sendmail-8.9.3
@@ -24,7 +24,6 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}"
 
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
-OBJDIR!=	echo obj.`uname -srm | tr \  .`
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
 BUILD_DEFS+=    USE_INET6
@@ -49,7 +48,7 @@ MAKE_ENV+=	DB_ENVDEF="" DB_LIBS=""
 
 post-patch:
 .if defined(USE_INET6) && ${USE_INET6} == YES
-	@(cp ${FILESDIR}/site.config-v6 ${WRKSRC})
+	@(${CP} ${FILESDIR}/site.config-v6 ${WRKSRC})
 .endif
 
 post-build:
@@ -79,3 +78,6 @@ post-install:
 .endif
 
 .include "../../mk/bsd.pkg.mk"
+
+# has to be below include for bsd.pkg.mk, else substition fails
+OBJDIR!=	${ECHO} obj.`uname -srm | ${TR} \  .`
