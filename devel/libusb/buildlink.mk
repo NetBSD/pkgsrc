@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2002/01/03 10:42:49 martti Exp $
+# $NetBSD: buildlink.mk,v 1.5 2002/02/07 07:31:48 martti Exp $
 #
 # This Makefile fragment is included by packages that use libusb.
 #
@@ -17,7 +17,7 @@ LIBUSB_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libusb?=	libusb>=0.1.4
+BUILDLINK_DEPENDS.libusb?=	libusb>=0.1.5
 DEPENDS+=	${BUILDLINK_DEPENDS.libusb}:../../devel/libusb
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libusb=libusb
