@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2003/01/10 04:34:18 rh Exp $
+# $NetBSD: Makefile,v 1.32 2003/03/04 16:29:28 wiz Exp $
 #
 
-DISTNAME=		jpilot-0.99.3
+DISTNAME=		jpilot-0.99.5
 CATEGORIES=		comms
 MASTER_SITES=		http://jpilot.org/
 
@@ -10,6 +10,7 @@ HOMEPAGE=		http://jpilot.org/
 COMMENT=		desktop organizer application for the palm pilot
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS+=		gnome-dirs>=1.0:../../misc/gnome-dirs
 
 CONFLICTS+=		jpilot-libplugin-[0-9]*
 
@@ -20,6 +21,7 @@ USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
 CONFIGURE_ARGS+=	--with-pilot-prefix="${BUILDLINK_PREFIX.pilot-link-libs}"
+CONFIGURE_ARGS+=	--enable-gtk2
 LDFLAGS+=		-export-dynamic
 
 USE_LIBTOOL=		YES
@@ -54,6 +56,6 @@ post-install:
 
 .include "../../comms/pilot-link-libs/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
