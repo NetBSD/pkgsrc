@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/07/13 02:16:43 thorpej Exp $
+
+--- init.c.orig	Mon Jul 12 19:09:10 2004
++++ init.c	Mon Jul 12 19:09:02 2004
+@@ -261,7 +261,7 @@
+     {"rerandom", 0, 0, 1, PREFIX_PRIORITY, lrerandom},
+     {"right", 1, 1, 1, PREFIX_PRIORITY, lright},
+     {"rl", 0, 0, 0, PREFIX_PRIORITY, lreadlist},
+-    {"round", 1, 1, 1, PREFIX_PRIORITY, lround},
++    {"round", 1, 1, 1, PREFIX_PRIORITY, xlround},
+     {"rt", 1, 1, 1, PREFIX_PRIORITY, lright},
+     {"run", 1, 1, 1, MACRO_PRIORITY, lrun},
+     {"runparse", 1, 1, 1, PREFIX_PRIORITY, lrunparse},
