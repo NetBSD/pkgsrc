@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.6 2001/11/27 16:20:05 wiz Exp $
+
+--- src/upload.c.orig	Mon Jun  4 11:06:17 2001
++++ src/upload.c
+@@ -262,7 +262,7 @@
+      return;
+    
+    ptr = strrchr(s, '/');
+-   if (!ptr[1])
++   if (ptr && !ptr[1])
+      *ptr = 0;
+ }
+ 
