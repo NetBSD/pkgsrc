@@ -1,0 +1,7 @@
+--- include/structs.h.orig	Fri Feb 20 03:46:32 1998
++++ include/structs.h	Fri Feb 20 03:46:32 1998
+@@ -625,3 +625,3 @@
+ #endif
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+   int rplay_fd;    /* Connexion with the rplayd daemon (disabled if <= 0) */

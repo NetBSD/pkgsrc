@@ -1,0 +1,12 @@
+--- include/global.h.orig	Fri Feb 20 03:46:32 1998
++++ include/global.h	Fri Feb 20 03:46:32 1998
+@@ -50,3 +50,3 @@
+ #include "structs.h"
+-#if defined(RPLAY_SOUND) && !defined(__CEXTRACT__)
++#if defined(RPLAY_SND) && !defined(__CEXTRACT__)
+ #include <rplay.h> /* RPLAY structure */
+@@ -163,3 +163,3 @@
+ 
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+ EXTERN RPLAY	*sound_table[NROF_SOUNDS];

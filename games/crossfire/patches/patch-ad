@@ -1,0 +1,7 @@
+--- server/init.c.orig	Fri Feb 20 03:46:30 1998
++++ server/init.c	Fri Feb 20 03:46:30 1998
+@@ -521,3 +521,3 @@
+ #endif
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+   printf("Rplay_Sound:\t<true>\n");

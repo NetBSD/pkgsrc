@@ -1,0 +1,7 @@
+--- lib/Imakefile.orig	Sun Feb 22 05:55:15 1998
++++ lib/Imakefile	Sun Feb 22 05:55:24 1998
+@@ -43,3 +43,3 @@
+ 	skill_params \
+-	sounds \
++	sound_list \
+ 	spell_params \

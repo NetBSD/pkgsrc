@@ -1,0 +1,9 @@
+--- include/config.h.orig	Sat Feb  7 22:26:21 1998
++++ include/config.h	Sun Feb 22 05:52:23 1998
+@@ -882,4 +882,4 @@
+ 
+-#ifdef RPLAY_SOUND
+-#  define SOUNDS_LIST	"sounds"
++#ifdef RPLAY_SND
++#  define SOUNDS_LIST	"sound_list"
+ #endif

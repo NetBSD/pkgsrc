@@ -1,0 +1,11 @@
+#!/bin/sh
+#this script changes all the /usr/local/bin/perl stuff to what it should be.
+
+pl=`which perl | sed 's/\//\\\\\\//g'`
+find work -name \*.pl | (
+	while read a; do
+	   cp $a tmp
+	   sed "s/#! *\/usr\/local\/bin\/perl/#!$pl/" tmp > $a
+	done;
+)
+rm tmp
