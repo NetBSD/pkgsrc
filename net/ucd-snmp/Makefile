@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41.2.2 2002/06/23 18:57:12 jlam Exp $
+# $NetBSD: Makefile,v 1.41.2.3 2002/07/01 05:43:59 jlam Exp $
 
 DISTNAME=	ucd-snmp-4.2.4
 CATEGORIES=	net
@@ -68,9 +68,10 @@ pre-configure:
 		${MKDIR} vm;						\
 		${LN} -s /usr/include/uvm/uvm_param.h vm/vm_param.h;	\
 	fi
-.if (${LOWER_ARCH} == i386 && ${OS_VERSION:M1.5.[123]*} != "")
+.  if (${LOWER_ARCH} == i386 && ${OS_VERSION:M1.5.[123]*} != "")
 	${MKDIR} ${BUILDLINK_DIR}/include/sys
 	${LN} -s ${FILESDIR}/disklabel.h ${BUILDLINK_DIR}/include/sys
+.  endif
 .endif
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 #
