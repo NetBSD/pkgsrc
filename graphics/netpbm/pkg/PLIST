@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2000/05/17 18:41:22 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2000/06/05 00:36:32 wiz Exp $
 bin/anytopnm
 bin/asciitopgm
 bin/atktopbm
@@ -21,6 +21,7 @@ bin/ilbmtoppm
 bin/imgtoppm
 bin/jbigtopnm
 bin/jpegtopnm
+bin/leaftoppm
 bin/lispmtopgm
 bin/macptopbm
 bin/mdatopbm
@@ -74,6 +75,7 @@ bin/pgmnoise
 bin/pgmnorm
 bin/pgmoil
 bin/pgmramp
+bin/pgmslice
 bin/pgmtexture
 bin/pgmtofs
 bin/pgmtolispm
@@ -120,6 +122,7 @@ bin/pnmtoplainpnm
 bin/pnmtopng
 bin/pnmtops
 bin/pnmtorast
+bin/pnmtorle
 bin/pnmtosgi
 bin/pnmtosir
 bin/pnmtotiff
@@ -157,6 +160,7 @@ bin/ppmtogif
 bin/ppmtoicr
 bin/ppmtoilbm
 bin/ppmtojpeg
+bin/ppmtoleaf
 bin/ppmtomap
 bin/ppmtomitsu
 bin/ppmtopcx
@@ -171,6 +175,7 @@ bin/ppmtosixel
 bin/ppmtotga
 bin/ppmtouil
 bin/ppmtoxpm
+bin/ppmtowinicon
 bin/ppmtoyuv
 bin/ppmtoyuvsplit
 bin/ppmtv
@@ -181,6 +186,7 @@ bin/rasttopnm
 bin/rawtopgm
 bin/rawtoppm
 bin/rgb3toppm
+bin/rletopnm
 bin/sbigtopgm
 bin/sgitopnm
 bin/sirtopnm
@@ -190,6 +196,7 @@ bin/spottopgm
 bin/sputoppm
 bin/tgatoppm
 bin/tifftopnm
+bin/winicontoppm
 bin/xbmtopbm
 bin/ximtoppm
 bin/xpmtoppm
@@ -207,13 +214,17 @@ include/ppm.h
 include/ppmcmap.h
 include/shhopt.h
 lib/libpbm.a
-lib/libpbm.so.9.2
+lib/libpbm.la
+lib/libpbm.so.9.3
 lib/libpgm.a
-lib/libpgm.so.9.0
+lib/libpgm.la
+lib/libpgm.so.9.3
 lib/libpnm.a
-lib/libpnm.so.9.0
+lib/libpnm.la
+lib/libpnm.so.9.3
 lib/libppm.a
-lib/libppm.so.9.1
+lib/libppm.la
+lib/libppm.so.9.3
 man/man1/anytopnm.1
 man/man1/asciitopgm.1
 man/man1/atktopbm.1
@@ -235,6 +246,7 @@ man/man1/ilbmtoppm.1
 man/man1/imgtoppm.1
 man/man1/jbigtopnm.1
 man/man1/jpegtopnm.1
+man/man1/leaftoppm.1
 man/man1/lispmtopgm.1
 man/man1/macptopbm.1
 man/man1/mdatopbm.1
@@ -288,6 +300,7 @@ man/man1/pgmnoise.1
 man/man1/pgmnorm.1
 man/man1/pgmoil.1
 man/man1/pgmramp.1
+man/man1/pgmslice.1
 man/man1/pgmtexture.1
 man/man1/pgmtofs.1
 man/man1/pgmtolispm.1
@@ -332,6 +345,7 @@ man/man1/pnmtojbig.1
 man/man1/pnmtoplainpnm.1
 man/man1/pnmtopng.1
 man/man1/pnmtops.1
+man/man1/pnmtorle.1
 man/man1/pnmtorast.1
 man/man1/pnmtosgi.1
 man/man1/pnmtosir.1
@@ -370,6 +384,7 @@ man/man1/ppmtogif.1
 man/man1/ppmtoicr.1
 man/man1/ppmtoilbm.1
 man/man1/ppmtojpeg.1
+man/man1/ppmtoleaf.1
 man/man1/ppmtomap.1
 man/man1/ppmtomitsu.1
 man/man1/ppmtompeg.1
@@ -384,6 +399,7 @@ man/man1/ppmtorgb3.1
 man/man1/ppmtosixel.1
 man/man1/ppmtotga.1
 man/man1/ppmtouil.1
+man/man1/ppmtowinicon.1
 man/man1/ppmtoxpm.1
 man/man1/ppmtoyuv.1
 man/man1/ppmtoyuvsplit.1
@@ -395,6 +411,7 @@ man/man1/rasttopnm.1
 man/man1/rawtopgm.1
 man/man1/rawtoppm.1
 man/man1/rgb3toppm.1
+man/man1/rletopnm.1
 man/man1/sbigtopgm.1
 man/man1/sgitopnm.1
 man/man1/sirtopnm.1
@@ -404,6 +421,7 @@ man/man1/spottopgm.1
 man/man1/sputoppm.1
 man/man1/tgatoppm.1
 man/man1/tifftopnm.1
+man/man1/winicontoppm.1
 man/man1/xbmtopbm.1
 man/man1/ximtoppm.1
 man/man1/xpmtoppm.1
