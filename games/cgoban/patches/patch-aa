@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/01/31 21:49:17 bad Exp $
+$NetBSD: patch-aa,v 1.2 1999/02/01 01:16:59 bad Exp $
 
 --- Makefile.in.orig	Thu May 29 03:34:54 1997
 +++ Makefile.in	Wed Jan 27 18:57:37 1999
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/01/31 21:49:17 bad Exp $
  install:	cgoban-$(SYSTEM_TYPE) man6/cgoban.6
  	$(INSTALL_PROGRAM) cgoban-$(SYSTEM_TYPE) $(BINDIR)/cgoban
  	$(INSTALL_DATA) man6/cgoban.6 $(MANDIR)/man6/cgoban.6
-+	$(INSTALL_SCRIPT) grab_cgoban $(BINDIR)/grab_cgoban
++	$(BSD_INSTALL_SCRIPT) grab_cgoban $(BINDIR)/grab_cgoban
 +	$(INSTALL_DATA) seigen-minoru.sgf $(PREFIX)/share/misc/seigen-minoru.sgf
  
  clean:
