@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/08 16:47:50 wiz Exp $
+
+--- configure.orig	Thu Jul  6 10:04:29 2000
++++ configure
+@@ -1956,6 +1956,8 @@
+ 	echo "$ac_t""undefined, you should add it in your database" 1>&6
+     fi
+ fi
++
++if false; then
+ echo $ac_n "checking what is the name of the ICP port in your services database""... $ac_c" 1>&6
+ echo "configure:1961: checking what is the name of the ICP port in your services database" >&5
+ if grep icp /etc/services > /dev/null; then
+@@ -1971,6 +1973,11 @@
+ 
+     echo "$ac_t""undefined, you should add it in your database" 1>&6
+ fi
++fi;
++    cat >> confdefs.h <<\EOF
++#define ICP_UDP_PORT "3130"
++EOF
++
+ 
+ fi
+ 
