@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3199 2003/09/02 08:36:15 he Exp $
+$NetBSD: CHANGES,v 1.3200 2003/09/02 09:32:55 frueauf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3465,3 +3465,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Added windowlab 1.12 [xtraeme 2003-09-02]
 	Added loudmouth 0.13.2 [xtraeme 2003-09-02]
 	Added gossip 0.5 [xtraeme 2003-09-02]
+	Updated libnasl to 2.0.7 [frueauf 2003-09-02]
+	Updated nessus-core to 2.0.7 [frueauf 2003-09-02]
+	Updated nessus-libraries to 2.0.7 [frueauf 2003-09-02]
+	Updated nessus-plugins to 2.0.7 [frueauf 2003-09-02]
+	Updated nessus to 2.0.7 [frueauf 2003-09-02]
