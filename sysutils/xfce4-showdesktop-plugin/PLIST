@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 10:34:53 martti Exp $
+lib/xfce4/panel-plugins/libshowdesktop.a
+lib/xfce4/panel-plugins/libshowdesktop.la
+lib/xfce4/panel-plugins/libshowdesktop.so
