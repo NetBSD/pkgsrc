@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2001/01/29 02:48:11 jtb Exp $
+
+--- configure.orig	Mon Jan 29 02:46:23 2001
++++ configure
+@@ -128,7 +128,7 @@
+ # Save the original args to write them into config.status later.
+ configure_args="$*"
+ 
+-PROGS="libproj proj geod nad2nad nad2bin"
++PROGS="libproj.la proj geod nad2nad nad2bin"
+ LIB_DIR="proj.4"
+ if test -z "$RANLIB"; then
+   # Extract the first word of `ranlib', so it can be a program name with args.
