@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/18 17:46:35 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/20 19:36:24 jlam Exp $
 
 PKGNAME=		tk-${DISTNAME}
 
-DEPENDS+=		tcl-postgresql-6.5.3:../../databases/tcl-postgresql
+DEPENDS+=		tcl-postgresql-${PG_VERS}:../../databases/tcl-postgresql
 DEPENDS+=		tk-8.0.5:../../x11/tk80
 
 TCLSH=			${LOCALBASE}/bin/tclsh8.0
@@ -12,7 +12,7 @@ TCL_CONFIGDIR=		${LOCALBASE}/lib/tcl8.0
 TK_INCDIR=		${LOCALBASE}/include/tk8.0
 TK_CONFIGDIR=		${LOCALBASE}/lib/tk8.0
 
-USE_X11=		yes
+USE_X11=		# defined
 
 MAKE_ENV+=		INSTALLED_LIBPQ=1 INSTALLED_LIBPGTCL=1
 
@@ -32,5 +32,8 @@ do-install:
 	cd ${WRKSRC}/bin/pgtclsh && ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} install_tk
 	strip ${PREFIX}/bin/pgtksh
+	${GTAR} zxCf ${PREFIX}/man \
+		${WRKDIR}/${DISTNAME}/doc/man.tar.gz \
+		`${SED} -e "s/#.*//" ${FILESDIR}/man.tk`
 
 .include "../../databases/postgresql/Makefile.common"
