@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/03/07 18:59:47 tron Exp $
+# $NetBSD: Makefile,v 1.26 2000/03/07 20:05:22 tron Exp $
 
 DISTNAME=	squid-2.3.STABLE2-src
 PKGNAME=	squid-2.3s2
@@ -9,7 +9,7 @@ MASTER_SITES=  \
 	ftp://www.unimelb.edu.au/pub/cwis/servers/unix/squid/squid-2/STABLE/ \
 	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/STABLE/ \
 	ftp://ftp.net.lut.ac.uk/squid/squid-2/STABLE/ \
-	ftp://ftp.xlink.de/pub/mirror.squid/squid-2/STABLE/
+	ftp://ftp.xlink.net/pub/mirror.squid/squid-2/STABLE/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://squid.nlanr.net/Squid/
