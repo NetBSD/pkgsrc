@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1998/08/22 13:50:50 garbled Exp $
+# $NetBSD: Makefile,v 1.36 1998/08/22 20:16:19 tron Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -46,6 +46,7 @@
 #    SUBDIR += mkmf
 #    SUBDIR += mprof
     SUBDIR += ncurses
+    SUBDIR += newmkdep
     SUBDIR += noweb
 #    SUBDIR += omniBroker
 #    SUBDIR += omniORB
