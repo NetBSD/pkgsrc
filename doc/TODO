@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.550 2003/05/12 23:46:36 heinz Exp $
+$NetBSD: TODO,v 1.551 2003/05/13 00:29:36 salo Exp $
 
 Suggested new packages
 ======================
@@ -227,7 +227,6 @@ Suggested package updates
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snd-6.7
 	o snes9x-1.39a
-	o snortsnarf-20021111.1 [pkg/21540]
 	o soappy-0.9.8 [pkg/20787]
 	o source-highlight-1.7
 	o spamassassin-2.54 [heinz]
