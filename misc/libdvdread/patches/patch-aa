@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2002/01/21 14:02:46 dmcmahill Exp $
+
+fix format string for LP64 machines.
+
+--- dvdread/dvd_reader.c.orig	Tue Oct  9 16:07:40 2001
++++ dvdread/dvd_reader.c	Sun Jan 20 10:10:50 2002
+@@ -862,6 +862,6 @@
+ 			       offset * (int64_t) DVD_VIDEO_LB_LEN, SEEK_SET );
+ 		if( off != ( offset * (int64_t) DVD_VIDEO_LB_LEN ) ) {
+-		    fprintf( stderr, "libdvdread: Can't seek to block %d\n", 
+-			     offset );
++		    fprintf( stderr, "libdvdread: Can't seek to block %lld\n", 
++			     (long long) offset );
+ 		    return 0;
+ 		}
+@@ -879,6 +879,6 @@
+ 			       offset * (int64_t) DVD_VIDEO_LB_LEN, SEEK_SET );
+ 		if( off != ( offset * (int64_t) DVD_VIDEO_LB_LEN ) ) {
+-		    fprintf( stderr, "libdvdread: Can't seek to block %d\n", 
+-			     offset );
++		    fprintf( stderr, "libdvdread: Can't seek to block %lld\n", 
++			     (long long) offset );
+ 		    return 0;
+ 		}

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/12/10 20:26:38 veego Exp $
+$NetBSD: distinfo,v 1.2 2002/01/21 14:02:45 dmcmahill Exp $
 
 SHA1 (libdvdread-0.9.2.tar.gz) = 68fbd4a583b82b052f8a766c918f7814e805ae28
 Size (libdvdread-0.9.2.tar.gz) = 195657 bytes
+SHA1 (patch-aa) = 9955a59f0776214df8d234ad11abc7a4deb53898
