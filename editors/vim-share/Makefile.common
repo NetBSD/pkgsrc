@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.17 2001/12/14 18:01:11 martti Exp $
+# $NetBSD: Makefile.common,v 1.18 2001/12/19 07:16:06 martti Exp $
 
-VIM_VERSION=		6.0.97
+VIM_VERSION=		6.0.101
 DISTNAME=		vim-${VIM_VERSION:C/\.[0-9]*$//}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
@@ -23,7 +23,8 @@ PATCH_SITES=		${MASTER_SITES:S/unix/patches/}
 			061 062 063 065 066 067 068 069 \
 			071 072 074 075 076 077 078 079 080 \
 			081 082 083 084 085 086 088 089 090 \
-			091 092 094 095 096 097
+			091 092 094 095 096 097 098 099 100 \
+			101
 PATCHFILES+=		${VIM_VERSION:C/\.[0-9]*$//}.${p}
 .endfor
 
