@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/01/15 06:41:03 itojun Exp $
+# $NetBSD: Makefile,v 1.58 2001/01/18 18:25:39 explorer Exp $
 #
 
     SUBDIR += PAM
@@ -31,6 +31,8 @@
     SUBDIR += nfsbug
     SUBDIR += openssh
     SUBDIR += openssl
+    SUBDIR += p5-Crypt-Blowfish
+    SUBDIR += p5-Crypt-CBC
     SUBDIR += p5-Digest-MD5
     SUBDIR += p5-MD5
     SUBDIR += p5-SHA
