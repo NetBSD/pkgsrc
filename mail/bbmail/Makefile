@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:45:43 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/18 15:26:27 jschauma Exp $
 #
 
-DISTNAME=	bbmail-0.8.2
+DISTNAME=	bbmail-0.8.3
 CATEGORIES=	mail x11
 MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
 
