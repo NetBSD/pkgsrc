@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7836 2004/11/12 11:34:33 darcy Exp $
+$NetBSD: CHANGES,v 1.7837 2004/11/12 12:16:39 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5168,6 +5168,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cups to 1.1.22 [adam 2004-11-08]
 	Updated gcc34 to 3.4.3 [shannonjr 2004-11-08]
 	Updated gcc34-ada to 3.4.3 [shannonjr 2004-11-08]
+	Updated spamassassin to 3.0.1 [mjl 2004-11-08]
 	Updated mysql4-client to 4.1.7nb2 [xtraeme 2004-11-08]
 	Updated mysql4-server to 4.1.7nb1 [xtraeme 2004-11-08]
 	Added mantis-0.19.1 [adrianp 2004-11-08]
@@ -5249,3 +5250,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed p5-libxml-enno [erh 2004-11-12]
 	Updated pvm to 3.4.5 [adam 2004-11-12]
 	Added py-crack-0.01 [darcy 2004-11-12]
+	Updated amanda to 2.4.4p4 [mjl 2004-11-12]
+	Updated amanda-common to 2.4.4p4 [mjl 2004-11-12]
+	Updated amanda-server to 2.4.4p4 [mjl 2004-11-12]
+	Updated amanda-client to 2.4.4p4 [mjl 2004-11-12]
+	Updated amanda-plot to 2.4.4p4 [mjl 2004-11-12]
