@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/01/03 04:02:25 rh Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/06 10:54:17 dmcmahill Exp $
 #
 
 DISTNAME=		gnustep-make-1.5.1
@@ -20,10 +20,10 @@ CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_SCRIPT}"
 PLIST_SUBST+=	GNUSTEP_HOST_CPU=${GNUSTEP_HOST_CPU}
 PLIST_SUBST+=	APPEND_ELF=${APPEND_ELF}
 
-post-extract:
-	${CP} ${WRKSRC}/target.make ${WRKSRC}/target.make.orig \
-		&& ${SED} 's!/usr/pkg!${LOCALBASE}!g' \
-			${WRKSRC}/target.make.orig > ${WRKSRC}/target.make
+post-patch:
+	${CP} ${WRKSRC}/target.make ${WRKSRC}/target.make.bak && \
+		${SED} -e 's;/usr/pkg;${LOCALBASE};g'  -e 's;@object_fmt@;${LOWER_OPSYS}-${OBJECT_FMT};g' \
+			${WRKSRC}/target.make.bak > ${WRKSRC}/target.make
 
 post-install:
 .for sub in System Local
