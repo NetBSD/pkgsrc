@@ -1,18 +1,12 @@
-$NetBSD: patch-ah,v 1.6 1999/09/15 21:30:59 tron Exp $
-
---- popper.h.orig	Fri Jul 10 01:44:08 1998
-+++ popper.h	Wed Sep 15 23:28:17 1999
-@@ -31,14 +31,26 @@
- 
- #ifdef		HAVE_SYS_PARAM_H
+$NetBSD: patch-ah,v 1.7 2000/04/24 11:04:18 itojun Exp $
+--- popper.h.orig	Fri Jul 10 08:44:08 1998
++++ popper.h	Mon Apr 24 19:56:38 2000
+@@ -33,3 +33,3 @@
  #include <sys/param.h>
 -# if (defined(BSD) && (BSD >= 199103))
 +# if (defined(BSD) && (BSD >= 199103)) && 0 /* shouldn't be necessary anymore */
  #  define	HAVE_UNISTD_H
- #  define	HAVE_VPRINTF
- #  define	BIND43
- # endif
- #endif
+@@ -40,3 +40,15 @@
  
 -#ifdef BSDI
 +#ifdef	HAVE_STDLIB_H
@@ -29,10 +23,20 @@ $NetBSD: patch-ah,v 1.6 1999/09/15 21:30:59 tron Exp $
 +
 +#if defined (BSDI) || defined (__NetBSD__)
  #define BSD44_DBM
- #endif
- 
-@@ -67,12 +79,12 @@
- #define MAXPARMLEN      10
+@@ -62,3 +74,8 @@
+ #define MAXDROPLEN      64
+-#define MAXLINELEN      1024
++/*
++ * This program always assume that fgets return whole line,
++ * so the buffer must be at least one char bigger than sendmail
++ * use, because of >From
++ */
++#define MAXLINELEN      (2048 + 1)
+ #define MAXMSGLINELEN   MAXLINELEN
+@@ -66,11 +83,11 @@
+ #define MAXPARMCOUNT    5
+-#define MAXPARMLEN      10
++#define MAXPARMLEN      32	/* Large enough for 32-byte APOP parm */
  #define ALLOC_MSGS  20
  
 -#ifndef OSF1
@@ -46,21 +50,13 @@ $NetBSD: patch-ah,v 1.6 1999/09/15 21:30:59 tron Exp $
 -#define POP_PRIORITY    LOG_NOTICE
 +#define POP_PRIORITY    LOG_INFO
  #define POP_DEBUG       LOG_DEBUG
- #define POP_LOGOPTS     LOG_PID
- 
-@@ -292,13 +304,13 @@
- #ifdef KERBEROS
- 
+@@ -294,3 +311,3 @@
  #ifndef KERBEROS_SERVICE
 -# define KERBEROS_SERVICE	"rcmd"
 +# define KERBEROS_SERVICE	"pop"
  #endif
- 
- #ifdef SOLARIS2
- # include <kerberos/krb.h>
+@@ -300,3 +317,3 @@
  #else
 -# ifdef BSDI
 +# if defined (BSDI) || defined (__NetBSD__)
  #  include <kerberosIV/des.h>
- #  include <kerberosIV/krb.h>
- # else
