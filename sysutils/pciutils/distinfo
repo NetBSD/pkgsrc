@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/26 00:12:43 kristerw Exp $
+
+SHA1 (pciutils-2.1.11.tar.gz) = bb1e107a745a40e208f676cffc0826ca8b928688
+Size (pciutils-2.1.11.tar.gz) = 120948 bytes
+SHA1 (patch-aa) = 7d3cf856dc5493cc83c2310b57175d593753cea4
