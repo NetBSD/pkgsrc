@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.4 1999/02/10 15:20:06 frueauf Exp $
+
 --- Makefile.X.orig	Wed Nov 20 03:19:24 1996
 +++ Makefile.X	Fri Feb 20 08:11:35 1998
 @@ -55,6 +55,12 @@
