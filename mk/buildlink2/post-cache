@@ -1,4 +1,4 @@
-# $NetBSD: post-cache,v 1.1.2.3 2002/06/29 20:02:41 jlam Exp $
+# $NetBSD: post-cache,v 1.1.2.4 2002/06/29 20:09:24 jlam Exp $
 
 *)
 	case $arg in
@@ -36,8 +36,10 @@
 		arg="$newarg"
 		case $updatecache in
 		yes)
-			@ECHO@ "$arg) arg=\"$newarg\" ;; #3" >> $cache
-			cacheupdated=yes
+			if [ -n "$arg" ]; then
+				@ECHO@ "$arg) arg=\"$newarg\" ;; #3" >> $cache
+				cacheupdated=yes
+			fi
 			;;
 		esac
 		;;
