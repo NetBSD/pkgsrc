@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2001/04/22 10:00:14 kei Exp $
+# $NetBSD: Makefile,v 1.119 2001/04/27 15:28:26 agc Exp $
 #
 
 COMMENT=	Games
@@ -99,6 +99,7 @@ SUBDIR+=	spellcast
 SUBDIR+=	svb
 SUBDIR+=	tanked
 SUBDIR+=	tscp
+SUBDIR+=	ularn
 SUBDIR+=	wormz
 SUBDIR+=	xarchon
 SUBDIR+=	xbat
