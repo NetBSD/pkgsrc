@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.6 2004/03/11 20:47:56 tv Exp $
+# $NetBSD: bootstrap,v 1.7 2004/03/11 20:49:09 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -162,7 +162,9 @@ run_cmd()
 # install-sh wrapper instead.
 mkdir_p()
 {
-	run_cmd "($shprog ./files/install-sh -d -o $user -g $group -m 755 $@)"
+	for dir in $@; do
+		run_cmd "($shprog ./files/install-sh -d -o $user -g $group -m 755 $dir)"
+	done
 }
 
 copy_src()
