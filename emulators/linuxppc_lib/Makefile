@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/02/05 05:56:36 jmc Exp $
+# $NetBSD: Makefile,v 1.15 2002/11/25 11:16:01 schmonz Exp $
 
 DISTNAME=		linuxppc_lib-2000.4.6
 CATEGORIES=		emulators
@@ -19,6 +19,8 @@ HOMEPAGE=		http://www.linuxppc.org/
 COMMENT=		libraries to run Linux binaries on NetBSD/powerpc (includes X11)
 
 BUILD_DEPENDS+=		rpm2pkg-1.2:../../pkgtools/rpm2pkg
+
+CONFLICTS=		suse_base-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5[U-Z]-macppc NetBSD-1.5Z[A-Z]-macppc \
 			NetBSD-1.[6-9]*-macppc \
