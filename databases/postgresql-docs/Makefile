@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 14:11:50 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/27 05:44:22 snj Exp $
 
 PKGNAME=		postgresql-docs-${BASE_VERS}
 SVR4_PKGNAME=		pstgd
 COMMENT=		PostgreSQL database system documentation
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 .include "../../databases/postgresql/Makefile.common"
 

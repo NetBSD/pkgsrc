@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/03/26 02:27:37 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2004/04/27 05:44:22 snj Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 PKGREVISION=		4
@@ -10,7 +10,7 @@ DEPENDS+=		postgresql-client>=${BASE_VERS}:../../databases/postgresql-client
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 .include "../../databases/postgresql/Makefile.common"
 
@@ -22,7 +22,7 @@ BUILD_DIRS=		${WRKSRC}/src/backend
 BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs
 
 .if defined(USE_PAM)
-.  include "../../security/PAM/buildlink2.mk"
+.  include "../../security/PAM/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
 .endif
 
@@ -70,5 +70,5 @@ post-install:
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz		\
 		`${SED} -e "s|^#.*||" ${FILESDIR}/man.server`
 
-.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../../databases/postgresql-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
