@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.619 2002/11/27 14:41:21 mjl Exp $
+$NetBSD: CHANGES,v 1.620 2002/11/27 14:42:56 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3736,6 +3736,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libbonoboui to 2.0.3.2 [jmmv 2002-11-26]
 	Updated id3lib to 3.8.2 [schmonz 2002-11-26]
 	Updated rioutil to 1.2.1 [schmonz 2002-11-26]
+	Updated postgresql_autodoc to 1.01 [mjl 2002-11-26]
 	Added rmail-mime-1.13.0 [jschauma 2002-11-26]
 	Updated bmake to 3.1.14 [sjg 2002-11-26]
 	Updated pth to 1.4.1nb6 [skrll 2002-11-26]
