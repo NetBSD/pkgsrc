@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/22 22:00:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/22 02:18:31 jlam Exp $
 etc/rc.d/authdaemond
 libexec/courier/authdaemon.passwd
 libexec/courier/authlib/authdaemon
@@ -34,6 +34,7 @@ share/courier/pw2userdb
 share/courier/userdb
 share/courier/vchkpw2userdb
 share/examples/courier/authdaemonrc.dist
+share/examples/courier/system-auth.authpam
 @unexec ${RMDIR} -p %D/share/examples/courier 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/share/courier 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/libexec/courier/authlib 2>/dev/null || ${TRUE}
