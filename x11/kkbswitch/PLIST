@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/23 11:44:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/15 08:51:13 markd Exp $
 bin/kkbswitch
-share/kde/autostart/kkbswitch.desktop
+man/man1/kkbswitch.1
 share/doc/kde/HTML/en/kkbswitch/code_style.png
 share/doc/kde/HTML/en/kkbswitch/common
 share/doc/kde/HTML/en/kkbswitch/flag_code_style.png
@@ -12,7 +12,9 @@ share/kde/apps/kconf_update/kkbswitch.upd
 share/kde/apps/kconf_update/kkbswitch_update_14_icons
 share/kde/apps/kconf_update/kkbswitch_update_14_options
 share/kde/apps/kkbswitch/group_names
+share/kde/autostart/kkbswitch.desktop
 share/kde/locale/el/LC_MESSAGES/kkbswitch.mo
+share/kde/locale/he/LC_MESSAGES/kkbswitch.mo
 share/kde/locale/ru/LC_MESSAGES/kkbswitch.mo
 share/kde/locale/sk/LC_MESSAGES/kkbswitch.mo
 share/kde/locale/uk/LC_MESSAGES/kkbswitch.mo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/08/23 11:44:20 markd Exp $
+$NetBSD: distinfo,v 1.2 2004/11/15 08:51:13 markd Exp $
 
-SHA1 (kkbswitch-1.4.1.tar.gz) = b151333f3ea74fcdd7e6f26626b5c5c5ca34a7f6
-Size (kkbswitch-1.4.1.tar.gz) = 676705 bytes
-SHA1 (patch-aa) = 6f46bfb1e1e23d449b28a67d92f56dc2aaa1a9bb
+SHA1 (kkbswitch-1.4.2.tar.gz) = cbef165b5849da37bdac796e18fa730efed2bbee
+Size (kkbswitch-1.4.2.tar.gz) = 684195 bytes
+SHA1 (patch-aa) = 4661a76d3f2df9d9a2c2948105c91781ec730a54
