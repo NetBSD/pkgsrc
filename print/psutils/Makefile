@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/01/20 12:24:29 agc Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/17 12:52:35 jlam Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -15,6 +15,7 @@ COMMENT=	Utilities for manipulating PostScript documents
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
 
 WRKSRC=		${WRKDIR}/psutils
+USE_BUILDLINK3=	yes
 USE_PERL5=	yes
 USE_PKGINSTALL=	yes
 
@@ -22,12 +23,18 @@ USE_PKGINSTALL=	yes
 
 PAPERSIZE?=	A4
 
-MAKE_ENV+=	CC="${CC}" PERL5="${PERL5}"
+MAKE_ENV+=	PERL5="${PERL5}"
 MAKE_FLAGS+=	PAPER=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`
 MAKEFILE=	Makefile.unix
 
 EGDIR=		${PREFIX}/share/examples/psutils
 CONF_FILES=	${EGDIR}/psutils.cfg ${PKG_SYSCONFDIR}/psutils.cfg
+
+post-patch:
+	cd ${WRKSRC}; for file in psutil.c; do				\
+		${MV} -f $$file $$file.in;				\
+		${SED} -e "s|@prefix@|${PREFIX}|g" $$file.in > $$file;	\
+	done
 
 pre-configure:
 	@case "X${PAPERSIZE}" in					\
@@ -45,10 +52,6 @@ pre-configure:
 		${FALSE};						\
 		;;							\
 	esac
-
-post-patch:
-	${MV} ${WRKSRC}/psutil.c ${WRKSRC}/psutil.c.in
-	${SED} -e 's|@prefix@|${PREFIX}|g' ${WRKSRC}/psutil.c.in > ${WRKSRC}/psutil.c
 
 post-install:
 	for f in epsffit psbook psnup psresize psselect pstops; do	\
