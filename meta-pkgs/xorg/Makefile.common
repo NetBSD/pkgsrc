@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2005/01/24 10:57:27 hira Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/01/25 17:49:57 xtraeme Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will 
 #   be built in.
@@ -211,7 +211,9 @@ post-extract:
 	@${LN} -sf ${X11ROOT}/lib/X11/config/version.def ${WRKSRC}/config/cf
 	@${LN} -sf ${X11ROOT}/lib/X11/config/date.def ${WRKSRC}/config/cf
 
-	@${TOUCH} ${WRKSRC}/config/cf/DragonFly.cf
+.if ${OPSYS} == "DragonFly"
+	@${CP} ../../x11/xorg-libs/files/DragonFly.cf ${WRKSRC}/config/cf/
+.endif
 
 .  for F in ${SYSTEMS}
 	@${MV} ${WRKSRC}/config/cf/${F}.cf \

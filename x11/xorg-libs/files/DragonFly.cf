@@ -1,0 +1,280 @@
+/* xc/config/cf/DragonFly.cf */
+
+#ifndef LocalBase
+# define LocalBase	@LOCALBASE@
+#endif
+
+#define UseElfFormat		YES
+#define OSBinaryFormat		[ELF]
+
+#ifndef OSName
+# define OSName			DefaultOSName OSBinaryFormat
+#endif
+#ifndef OSVendor
+# define OSVendor		/**/
+#endif
+#ifndef OSMajorVersion
+# define OSMajorVersion		DefaultOSMajorVersion
+#endif
+#ifndef OSMinorVersion
+# define OSMinorVersion		DefaultOSMinorVersion
+#endif
+#ifndef OSTeenyVersion
+# define OSTeenyVersion		DefaultOSTeenyVersion
+#endif
+
+/* #ifndef OSRelVersion */
+/* Include this to get finer-grained information about the OS version */
+#include "/usr/include/osreldate.h"
+#define OSRelVersion __DragonFly_version
+/* #endif */
+
+XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVersion) (OSRelVersion)
+
+
+#define HasCplusplus		YES
+#define GccUsesGas		YES
+#define UseGas			YES
+#define GnuCpp			YES
+#define HasNdbm			YES
+#define HasPutenv		YES
+#define HasSnprintf		YES
+#define HasBSD44Sockets 	YES
+#define HasDlopen		YES
+#define HasSetProcTitle		YES
+#define HasLibCrypt		YES
+#define HasShm			YES
+#define HasWChar32		YES
+#define HasUsableFileMmap	YES
+#define HasNCurses		YES
+#define HasVarRun		YES
+#define HasVarDb		YES
+#define HasIssetugid		YES
+#define HasPoll			YES
+#define HasGetIfAddrs		YES
+
+#define IPv6SocketsAlsoIPv4	NO
+#define InstallXloadSetGID	NO
+#define HasWeakSymbols		UseElfFormat
+
+/*
+ * Multi-thread safe libs 
+ */	
+#define HasPosixThreads		YES
+#define ThreadedX		YES
+#define SystemMTDefines		-D_REENTRANT -D_THREAD_SAFE
+#define HasThreadSafeAPI	YES
+#define MTSafeAPIDefines	-DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI
+
+# define BuildThreadStubLibrary	YES
+# define NeedUIThrStubs		YES
+# define ThreadsLibraries	-pthread
+# define SharedX11Reqs		$(LDPRELIB)
+# define SharedXtReqs		$(LDPRELIB) $(XONLYLIB) $(SMLIB) $(ICELIB)
+
+#define AvoidNullMakeCommand	YES
+#define StripInstalledPrograms	YES
+#define CompressAllFonts	YES
+#define Malloc0ReturnsNull	YES
+#define NeedConstPrototypes	YES
+#define NeedFunctionPrototypes	YES
+#define NeedNestedPrototypes	YES
+#define NeedVarargsPrototypes	YES
+#define NeedWidePrototypes	NO
+
+#define HasPlugin		YES
+#define VendorHasX11R6_3libXext	YES	/* XC or XFree86 >= 3.3.1 */
+
+#define CcCmd                         cc
+#define OptimizedCDebugFlags         /* -O2 causes some files to die out */
+#define CplusplusCmd          c++
+#define CppCmd			cpp
+#define PreProcessCmd		CppCmd
+
+#define StandardCppOptions	-traditional
+#define StandardCppDefines	/**/
+#ifndef DefaultCCOptions
+# if defined(UseInstalled)
+#  define DefaultCCOptions	/**/
+# else
+#  if defined(HasGcc3) && HasGcc3
+#   define NoSystemWarn		-Wno-system-headers
+#  else
+#   define NoSystemWarn
+#  endif
+#  define DefaultCCOptions	-ansi -Dasm=__asm NoSystemWarn
+# endif
+#endif
+
+#define HasSetUserContext	YES
+#define HasGetpeereid		YES
+#define HasMTRRSupport		YES
+
+#ifndef BuildXF86DRI
+# define BuildXF86DRI		YES
+#endif
+
+#if defined(i386Architecture)
+# define HasAgpGart		YES
+#endif
+
+/*
+ * SSE and 3DNow will be autodetected, so binutils is the only 
+ * requirement for enabling this.  By 4.2 they were all supported.
+ */
+#if defined(i386Architecture)
+# define HasX86Support          YES
+# define HasMMXSupport		YES
+# define Has3DNowSupport	YES
+# define HasSSESupport		YES
+#else
+# define HasX86Support	        NO
+# define HasMMXSupport		NO
+# define Has3DNowSupport	NO
+# define HasSSESupport		NO
+#endif
+
+#ifndef UseRpath
+# define UseRpath		YES
+#endif
+
+#ifndef RpathLoadFlags
+# if UseRpath
+#  define RpathLoadFlags	-Wl,-rpath,$(USRLIBDIRPATH)
+# else
+#  define RpathLoadFlags	/**/
+# endif
+#endif
+
+#ifndef ExtraLoadFlags
+# if !defined(UseInstalled)
+#  define ExtraLoadFlags	RpathLoadFlags -Wl,-rpath-link,$(BUILDLIBDIR)
+# else
+#  define ExtraLoadFlags	RpathLoadFlags
+# endif
+#endif
+
+#ifndef StaticLibrary
+# define StaticLibrary(libpath,libname) -Wl,-Bstatic Concat(-L,libpath) Concat(-l,libname) -Wl,-Bdynamic
+#endif
+
+#define DlLibrary		-Wl,--export-dynamic
+
+#ifndef HasPam
+# define HasPam		YES
+#endif
+#ifndef PamLibraries
+# define PamLibraries		-lpam DlLibrary
+#endif
+
+#ifndef UseGnuMalloc
+# define UseGnuMalloc		NO
+#endif
+#ifndef GnuMallocLibrary
+# define GnuMallocLibrary	/**/
+#endif
+
+#ifndef HasZlib
+# define HasZlib		YES
+#endif
+
+#ifdef AlphaArchitecture
+# define IoLibrary		-lio
+#else
+# define IoLibrary		/**/
+#endif
+#define ServerExtraSysLibs	IoLibrary
+
+#ifndef HasExpat
+# define HasExpat		YES
+# define ExpatDir		LocalBase
+#endif
+
+#ifndef HasFreetype2
+# define HasFreetype2		YES
+# define Freetype2Dir		LocalBase
+#endif
+
+#undef  InstallCmd
+#define InstallCmd		/usr/bin/install
+
+#define AsmElfDefines		-D__ELF__
+
+#if GccUsesGas
+# define GccGasOption		-DGCCUSESGAS
+# define AsmDefines		-DUSE_GAS AsmElfDefines
+#else
+# define GccGasOption /**/
+# define AsmDefines		AsmElfDefines
+#endif
+
+#ifdef i386Architecture
+# define ServerExtraDefines GccGasOption XFree86ServerDefines
+#endif
+#if defined(AlphaArchitecture) || defined(Sparc64Architecture) || \
+	defined(ia64Architecture) || defined(AMD64Architecture)
+# define ServerExtraDefines GccGasOption XFree86ServerDefines -D_XSERVER64
+#endif
+
+#ifdef Sparc64Architecture
+# define AsVISOption		-Av9a
+# define AsOutputArchSize	64
+#endif
+
+#define StandardDefines	-DCSRG_BASED
+
+#define ServerOSDefines		XFree86ServerOSDefines -DDDXTIME
+#define XawI18nDefines		-DUSE_XWCHAR_STRING
+#define HasMakefileSafeInclude	YES
+#define IncludeMakefile(file) @@# dependencies are in .depend
+#define DependFileName		.depend
+#ifndef DoLoadableServer
+# define DoLoadableServer	YES
+#endif
+#ifndef ForceNormalLib
+# define ForceNormalLib		YES
+#endif
+#define HasMkstemp		YES
+
+#ifndef PreIncDir
+# define PreIncDir	/usr/include /* DefaultGccIncludeDir ? */
+#endif
+
+#define HasGroff	YES
+#define NroffCmd	env GROFF_NO_SGR=y groff -Tascii
+#define SetTtyGroup	YES
+
+#ifndef ExtraFilesToClean
+# define ExtraFilesToClean *.core
+#endif
+
+#define DefaultUserPath		/usr/pkg/bin/bin:/usr/bin:/sbin:/usr/sbin:$(BINDIR):/usr/local/bin
+#define DefaultSystemPath	/usr/pkg/sbin:/bin:/usr/bin:/sbin:/usr/sbin:$(BINDIR)
+
+#ifndef SystemManDirectory
+# define SystemManDirectory	/usr/share/man
+#endif
+
+#define InstKmemFlags	-g kmem -m 2755
+
+#ifndef CompressManPages
+# define CompressManPages	NO
+#endif
+
+#define HasBsdMake	YES
+
+#ifndef SharedLibXdmGreet
+# define SharedLibXdmGreet		NO
+#endif
+
+#ifndef HasCookieMaker
+/* Which versions have /dev/urandom? */
+#define HasCookieMaker		YES
+#define MkCookieCmd \
+	'dd if=/dev/urandom bs=16 count=1 2>/dev/null | hexdump -e \\"%08x\\"'
+#endif
+
+
+#include <bsdLib.rules>
+
+#include <xorg.cf>
