@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/25 17:23:28 jtb Exp $
+
+--- cweb.1.orig	Mon Oct 23 11:05:57 2000
++++ cweb.1
+@@ -77,13 +77,13 @@
+ means omit the index and table of contents.
+ .PP
+ .SH FILES
+-/usr/local/lib/tex/inputs/cwebmac.tex   TeX macros used by cweave output.
++%%PREFIX%%/share/texmf/tex/plain/base/cwebmac.tex   TeX macros used by cweave output.
+ .br
+-/usr/local/src/cweb/cwebman.tex      The user manual.
++%%PREFIX%%/share/doc/cweb/cwebman.tex      The user manual.
+ .br
+-/usr/local/src/cweb/examples/wc.w   An introductory example.
++%%PREFIX%%/share/examples/cweb/wc.w   An introductory example.
+ .br
+-/usr/local/lib/cweb    Directory for cweb "include" files.
++%%PREFIX%%/share/cweb    Directory for cweb "include" files.
+ .SH "SEE ALSO"
+ .I Literate Programming
+ by D.E. Knuth.
