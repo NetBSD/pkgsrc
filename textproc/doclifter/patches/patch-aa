@@ -1,0 +1,45 @@
+--- manlifter.orig	Fri Dec 24 23:44:11 2004
++++ manlifter	Sun Jan  9 14:06:09 2005
+@@ -300,7 +300,8 @@
+     signal.signal(signal.SIGUSR2, report)
+     signal.signal(signal.SIGHUP, bailout)
+     signal.signal(signal.SIGINT, bailout)
+-    signal.signal(signal.SIGPWR, bailout)
++    if sys.platform != 'darwin':
++         signal.signal(signal.SIGPWR, bailout)
+     signal.signal(signal.SIGTERM, bailout)
+     print "%Test started", time.ctime(), "\n"
+     try:
+@@ -557,22 +558,18 @@
+         fp.close()
+ 
+ if __name__ == "__main__":
+-    # Find a copy of doclifter
+-    for pathdir in ["."] + os.environ["PATH"].split(":"):
+-        where = os.path.join(pathdir, "doclifter")
+-        if os.path.exists(where):
+-            break
+-    else:
+-        sys.stderr.write("manlifter: can't find doclifter!")
+-        sys.exit(1)
+-    # Import it, so we can modify it while the test is running without
+-    # screwing up the results
++    import imp
++    fp = open('@@BIN_PATH@@/doclifter')
+     try:
+-        os.system("cp %s doclifter_test%s.py" % (where, os.getpid()))
+-        exec 'import doclifter_test%s' % os.getpid()
+-        exec "doclifter=doclifter_test%s" % os.getpid()
++        try:
++            doclifter = imp.load_module('doclifter', fp, '@@BIN_PATH@@/doclifter', ('.py', 'U', 1))
++        except ImportError:
++            sys.stderr.write("manlifter: can't find doclifter!")
++            sys.exit(1)
+     finally:
+-        os.system("rm -f doclifter_test%s.py*" % os.getpid())
++       if fp:
++            fp.close()
++
+     # Gather options
+     (options, arguments) = getopt.getopt(sys.argv[1:], "d:ef:hI:p:qs:Sv")
+     # Do the real work
