@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2001/04/02 03:59:34 mjl Exp $
+# $NetBSD: Makefile,v 1.215 2001/04/03 08:16:58 agc Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -125,6 +125,7 @@ SUBDIR+=	xpenguins
 SUBDIR+=	xpmicons
 SUBDIR+=	xpmroot
 SUBDIR+=	xpns
+SUBDIR+=	xpostit
 SUBDIR+=	xscreensaver
 SUBDIR+=	xscreensaver-gnome
 SUBDIR+=	xscribble
