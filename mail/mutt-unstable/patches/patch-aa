@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/12 18:34:38 tron Exp $
+
+--- mutt_socket.c.orig	Mon Oct 16 11:48:29 2000
++++ mutt_socket.c	Mon Feb 12 17:07:32 2001
+@@ -340,7 +340,7 @@
+     fd = socket (cur->ai_family, cur->ai_socktype, cur->ai_protocol);
+     if (fd >= 0)
+     {
+-      if ((rc = socket_connect (fd, res->ai_addr)) == 0)
++      if ((rc = socket_connect (fd, cur->ai_addr)) == 0)
+       {
+ 	conn->fd = fd;
+ 	break;
