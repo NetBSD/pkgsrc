@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2004/10/13 11:47:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2004/11/18 11:48:36 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -4508,7 +4508,10 @@ share/kde/servicetypes/scriptinterface.desktop
 @comment in xmlcatmgr: share/sgml/catalog
 @dirrm share/kde/servicetypes
 @dirrm share/kde/services/kresources/kabc
+@dirrm share/kde/services/kresources
 @dirrm share/kde/services/kded
+@exec ${MKDIR} %D/share/kde/services/kconfiguredialog
+@dirrm share/kde/services/kconfiguredialog
 @dirrm share/kde/services
 @dirrm share/kde/mimelnk/video
 @dirrm share/kde/mimelnk/text
@@ -4825,6 +4828,8 @@ share/kde/servicetypes/scriptinterface.desktop
 @dirrm share/kde/apps/kio_uiserver/icons/crystalsvg
 @dirrm share/kde/apps/kio_uiserver/icons
 @dirrm share/kde/apps/kio_uiserver
+@exec ${MKDIR} %D/share/kde/apps/khtml/kpartplugins
+@dirrm share/kde/apps/khtml/kpartplugins
 @dirrm share/kde/apps/khtml/icons/crystalsvg/64x64/actions
 @dirrm share/kde/apps/khtml/icons/crystalsvg/64x64
 @dirrm share/kde/apps/khtml/icons/crystalsvg/48x48/actions

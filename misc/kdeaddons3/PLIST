@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/13 12:44:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/18 11:48:37 markd Exp $
 bin/atlantikdesigner
 bin/exif.py
 bin/fsview
@@ -351,7 +351,7 @@ share/kde/services/webarchivethumbnail.desktop
 @dirrm share/kde/apps/knewsticker/scripts
 @dirrm share/kde/apps/knewsticker
 @dirrm share/kde/apps/kicker/applets
-@dirrm share/kde/apps/khtml/kpartplugins
+@comment dirrm share/kde/apps/khtml/kpartplugins
 @comment dirrm share/kde/apps/kcontrol/pics
 @dirrm share/kde/apps/katexmltools
 @comment dirrm share/kde/apps/kate/scripts

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2004/11/18 10:32:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2004/11/18 11:48:37 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -1006,7 +1006,7 @@ share/kde/servicetypes/kimageviewercanvas.desktop
 share/kde/servicetypes/ksvgrenderer.desktop
 @comment dirrm share/kde/servicetypes
 @comment dirrm share/kde/services/kded
-@dirrm share/kde/services/kconfiguredialog
+@comment dirrm share/kde/services/kconfiguredialog
 @comment dirrm share/kde/services
 @comment dirrm share/kde/mimelnk/text
 @comment dirrm share/kde/icons/locolor/32x32/apps

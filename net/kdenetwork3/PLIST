@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/09/22 08:09:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/11/18 11:48:37 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -1951,7 +1951,7 @@ share/kde/sounds/ktalkd.wav
 @comment dirrm share/kde/sounds
 @comment dirrm share/kde/servicetypes
 @comment dirrm share/kde/services/kded
-@dirrm share/kde/services/kconfiguredialog
+@comment dirrm share/kde/services/kconfiguredialog
 @comment dirrm share/kde/services
 @comment dirrm share/kde/mimelnk/application
 @comment dirrm share/kde/icons/locolor/32x32/apps
@@ -2222,11 +2222,11 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/konqueror/dirtree/remote
 @dirrm share/kde/apps/konqueror/dirtree
 @comment dirrm share/kde/apps/konqueror
-@dirrm share/kde/apps/konqsidebartng/virtual_folders/services
+@comment dirrm share/kde/apps/konqsidebartng/virtual_folders/services
 @dirrm share/kde/apps/knewsticker
 @dirrm share/kde/apps/kinetd
 @dirrm share/kde/apps/kicker/applets
-@dirrm share/kde/apps/khtml/kpartplugins
+@comment dirrm share/kde/apps/khtml/kpartplugins
 @dirrm share/kde/apps/kget/sounds
 @dirrm share/kde/apps/kget/pics
 @dirrm share/kde/apps/kget/icons/crystalsvg/22x22/actions
@@ -2270,5 +2270,5 @@ share/kde/sounds/ktalkd.wav
 @comment dirrm share/doc/kde/HTML/en
 @comment dirrm share/applications/kde
 @comment dirrm lib/kde3
-@dirrm lib/kconf_update_bin
+@comment dirrm lib/kconf_update_bin
 @dirrm include/rss
