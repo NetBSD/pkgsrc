@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/01/29 21:15:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/02/18 16:09:15 wiz Exp $
 share/sgml/docbook/2.4.1/241chg.txt
 share/sgml/docbook/2.4.1/announce.txt
 share/sgml/docbook/2.4.1/calstbl.mod
@@ -78,6 +78,40 @@ share/sgml/docbook/4.2/docbook.dcl
 share/sgml/docbook/4.2/docbook.dtd
 share/sgml/docbook/4.2/docbookx.dtd
 share/sgml/docbook/4.2/soextblx.dtd
+share/sgml/docbook/4.3/ChangeLog
+share/sgml/docbook/4.3/README
+share/sgml/docbook/4.3/calstblx.dtd
+share/sgml/docbook/4.3/catalog
+share/sgml/docbook/4.3/catalog.xml
+share/sgml/docbook/4.3/dbcentx.mod
+share/sgml/docbook/4.3/dbgenent.mod
+share/sgml/docbook/4.3/dbhierx.mod
+share/sgml/docbook/4.3/dbnotnx.mod
+share/sgml/docbook/4.3/dbpoolx.mod
+share/sgml/docbook/4.3/docbook.cat
+share/sgml/docbook/4.3/docbook.dcl
+share/sgml/docbook/4.3/docbook.dtd
+share/sgml/docbook/4.3/docbookx.dtd
+share/sgml/docbook/4.3/htmltblx.mod
+share/sgml/docbook/4.3/soextblx.dtd
+share/sgml/docbook/4.4/ChangeLog
+share/sgml/docbook/4.4/README
+share/sgml/docbook/4.4/calstblx.dtd
+share/sgml/docbook/4.4/catalog
+share/sgml/docbook/4.4/catalog.xml
+share/sgml/docbook/4.4/dbcentx.mod
+share/sgml/docbook/4.4/dbgenent.mod
+share/sgml/docbook/4.4/dbhierx.mod
+share/sgml/docbook/4.4/dbnotnx.mod
+share/sgml/docbook/4.4/dbpoolx.mod
+share/sgml/docbook/4.4/docbook.cat
+share/sgml/docbook/4.4/docbook.dcl
+share/sgml/docbook/4.4/docbook.dtd
+share/sgml/docbook/4.4/docbookx.dtd
+share/sgml/docbook/4.4/htmltblx.mod
+share/sgml/docbook/4.4/soextblx.dtd
+@dirrm share/sgml/docbook/4.4
+@dirrm share/sgml/docbook/4.3
 @dirrm share/sgml/docbook/4.2
 @dirrm share/sgml/docbook/4.1
 @dirrm share/sgml/docbook/4.0
