@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/06/18 10:26:55 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/02/05 20:14:05 skrll Exp $
 bin/gimp
 bin/gimp-1.2
 bin/gimp-config
@@ -250,19 +250,16 @@ lib/gimp/1.2/plug-ins/xjt
 lib/gimp/1.2/plug-ins/xpm
 lib/gimp/1.2/plug-ins/xwd
 lib/gimp/1.2/plug-ins/zealouscrop
-lib/libgck-1.2.so
 lib/libgck-1.2.so.0
 lib/libgck-1.2.so.0.5
 lib/libgck.a
 lib/libgck.la
 lib/libgck.so
-lib/libgimp-1.2.so
 lib/libgimp-1.2.so.0
 lib/libgimp-1.2.so.0.5
 lib/libgimp.a
 lib/libgimp.la
 lib/libgimp.so
-lib/libgimpui-1.2.so
 lib/libgimpui-1.2.so.0
 lib/libgimpui-1.2.so.0.5
 lib/libgimpui.a

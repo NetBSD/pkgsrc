@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/03 01:16:40 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/05 20:14:05 skrll Exp $
 bin/imgcmp
 bin/imginfo
 bin/jasper
@@ -16,7 +16,6 @@ include/jasper/jas_tvp.h
 include/jasper/jas_types.h
 include/jasper/jas_version.h
 include/jasper/jasper.h
-${AVAILABLE}lib/libjasper-1.600.so
 lib/libjasper-1.600.so.0
 lib/libjasper-1.600.so.0.0
 lib/libjasper.a

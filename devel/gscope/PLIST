@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/19 13:00:41 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/05 20:14:05 skrll Exp $
 bin/displaydata
 bin/gscope_load
 bin/gscope_load_app
@@ -7,7 +7,6 @@ include/gscope/gscope.h
 include/gscope/gscope_interface.h
 include/gscope/gtkscope.h
 include/gscope/gtkscopeapp.h
-lib/libgscope-0.4.so
 lib/libgscope-0.4.so.1
 lib/libgscope-0.4.so.1.0
 lib/libgscope.a

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:07 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/05 20:14:05 skrll Exp $
 include/GUI/GUI.h
 include/GUI/GUI_C.h
 include/GUI/GUI_area.h
@@ -13,7 +13,6 @@ include/GUI/GUI_status.h
 include/GUI/GUI_termwin.h
 include/GUI/GUI_widget.h
 include/GUI/GUI_widgets.h
-lib/libGUI-1.1.so
 lib/libGUI-1.1.so.0
 lib/libGUI-1.1.so.0.0
 lib/libGUI.a
