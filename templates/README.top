@@ -1,19 +1,35 @@
-<!-- $NetBSD: README.top,v 1.2 1997/11/21 15:56:52 agc Exp $ -->
+<!-- $NetBSD: README.top,v 1.3 1998/02/20 21:50:56 hubertf Exp $ -->
 <html>
-<title> The NetBSD Packages Collection</title>
-<head><h1> The NetBSD Packages Collection </h1> </head> <hr>
-<body>
+<head>
+<title>The NetBSD Packages Collection</title>
+</head>
+<body bgcolor=#ffffff>
+
+<a href="http://www.mckusick.com/beastie/mainpage/copyright.html">
+<img align=right src="templates/pkg-daemon.gif" alt="Daemon Power" border=0>
+</a>
+<h1>The NetBSD Packages Collection</h1>
 
 <p>You are at the top of the packages tree.
+</p>
 
 <p>
 %%DESCR%%
+</p>
 
 <p>Here are the one-line descriptions for each of the directories:
+</p>
 
-<p><hr>
-<p><pre>
+<hr noshade>
+<pre>
 %%SUBDIR%%
-</pre><p><hr>
+</pre>
+<hr noshade>
+
+For more information on how to build any of the packages from
+the NetBSD Packages Collection, see the included <A HREF="README">README</A> file.
+For a more in-depth description, see the
+<A HREF="http://www.netbsd.org/Documentation/netbsd/Packages.txt">Packages.txt</A> document.
+
 </body>
 </html>
