@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.2 2004/04/21 14:55:32 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.3 2004/04/21 19:24:49 tv Exp $
 
 --- libtool.m4.orig	Fri Jan 23 01:07:04 2004
 +++ libtool.m4
@@ -194,30 +194,42 @@ $NetBSD: manual-libtool.m4,v 1.2 2004/04/21 14:55:32 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -5131,6 +5176,11 @@ EOF
+@@ -5131,6 +5176,17 @@ EOF
        fi
        ;;
  
 +    interix3*)
-+      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname -o $lib'
-+      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$export_symbols -o $lib'
++      # Oy, what a hack.
++      # Because shlibs are not compiled -fPIC due to broken code, we must
++      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
++      # all libraries, leading to runtime relocations -- slow and very
++      # memory consuming.  To do this, we pick a random 256KB-aligned
++      # start address between 0x50000000 and 0x6ffc0000 at link time.
++      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$export_symbols ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      ;;
 +
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5534,6 +5584,14 @@ $echo "local: *; };" >> $output_objdir/$
+@@ -5534,6 +5590,20 @@ $echo "local: *; };" >> $output_objdir/$
  	  ;;
  	esac
        fi
 +      ;;
 +
 +    interix3*)
-+      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-+      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-+      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
-+      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-h,$libdir'
++      # Oy, what a hack.
++      # Because shlibs are not compiled -fPIC due to broken code, we must
++      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
++      # all libraries, leading to runtime relocations -- slow and very
++      # memory consuming.  To do this, we pick a random 256KB-aligned
++      # start address between 0x50000000 and 0x6ffc0000 at link time.
++      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
++      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
++      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-h,$libdir'
++      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
        ;;
  
      irix5* | irix6* | nonstopux*)
