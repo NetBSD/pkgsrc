@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/14 00:20:50 simonb Exp $
+$NetBSD: patch-aa,v 1.2 1999/09/12 00:20:01 simonb Exp $
 
 --- Makefile.in.orig	Fri Feb 26 18:25:14 1999
 +++ Makefile.in	Mon Jun 14 09:24:45 1999
@@ -17,3 +17,6 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/14 00:20:50 simonb Exp $
  	$(INSTALL_DATA) $(srcdir)/xboard.man $(man6dir)/xboard$(man6ext)
  	$(INSTALL_DATA) $(srcdir)/cmail.man $(man6dir)/cmail$(man6ext)
  	$(INSTALL_DATA) $(srcdir)/zic2xpm.man $(man6dir)/zic2xpm$(man6ext)
+
+	/usr/bin/install -c -m 644 xboard.info /usr/local/info/xboard.info
+
