@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/05/07 01:14:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/21 20:24:55 xtraeme Exp $
 #
 
-DISTNAME=	gnome-themes-extras-0.6
-PKGREVISION=	1
+DISTNAME=	gnome-themes-extras-0.7
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-themes-extras/0.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-themes-extras/0.7/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
