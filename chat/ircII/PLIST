@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2002/03/21 15:29:51 mrg Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/03/21 16:30:59 mrg Exp $
 bin/irc
-bin/irc-20020321
+bin/irc-20020322
 bin/ircbug
 bin/ircflush
 bin/ircio
