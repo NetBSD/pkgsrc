@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/08/09 10:44:48 seb Exp $
+# $NetBSD: Makefile,v 1.28 2003/12/30 17:21:55 cjep Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/10/13 05:11:40 jmacd Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.xcf.berkeley.edu/pub/prcs/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://prcs.sourceforge.net
+HOMEPAGE=		http://prcs.sourceforge.net/
 COMMENT=		Project Revision Control System
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\

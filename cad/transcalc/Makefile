@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:25:25 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/30 17:21:55 cjep Exp $
 #
 
 DISTNAME=	transcalc-0.13
@@ -8,7 +8,7 @@ MASTER_SITES=	http://transcalc.sourceforge.net/
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=transcalc/}
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://transcalc.sourceforge.net
+HOMEPAGE=	http://transcalc.sourceforge.net/
 COMMENT=	Transmission line analysis/synthesis
 
 GNU_CONFIGURE=	YES

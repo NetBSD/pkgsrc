@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/07/17 21:25:29 grant Exp $
+# $NetBSD: Makefile,v 1.33 2003/12/30 17:21:55 cjep Exp $
 #
 
 DISTNAME=	ViPEC-3.1.3
@@ -6,7 +6,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vipec/}
 
 MAINTAINER=	dmcmahill@NetBSD.org
-HOMEPAGE=	http://vipec.sourceforge.net
+HOMEPAGE=	http://vipec.sourceforge.net/
 COMMENT=	Network analyser for electrical networks
 
 BUILD_DEPENDS+=		tmake-*:../../devel/tmake

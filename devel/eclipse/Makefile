@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/08/23 15:09:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/30 17:21:55 cjep Exp $
 #
 
 DISTNAME=	${PKGNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jschauma/
 
 MAINTAINER=	jschauma@NetBSD.org
-HOMEPAGE=	http://www.eclipse.org
+HOMEPAGE=	http://www.eclipse.org/
 COMMENT=	Java IDE
 
 DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant

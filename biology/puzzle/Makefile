@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/10 23:46:15 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/30 17:21:54 cjep Exp $
 
 DISTNAME=	tree-puzzle-5.1
 PKGNAME=	puzzle-5.1
@@ -10,7 +10,7 @@ MASTER_SITES=	http://members.tripod.de/korbi/puzzle/ \
 		http://iubio.bio.indiana.edu/soft/molbio/evolve/puzzle/
 
 MAINTAINER=	babafou@babafou.eu.org
-HOMEPAGE=	http://www.tree-puzzle.de
+HOMEPAGE=	http://www.tree-puzzle.de/
 COMMENT=	Maximum likelihood analysis of molecular sequence data
 
 BUILD_DEPENDS=	mpich>=1.2.1:../../parallel/mpi-ch

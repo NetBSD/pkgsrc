@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:27:13 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/30 17:21:55 cjep Exp $
 #
 
 DISTNAME=	doc2html
@@ -8,7 +8,7 @@ CATEGORIES=	converters
 MASTER_SITES=	http://www.htdig.org/files/contrib/parsers/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.htdig.org
+HOMEPAGE=	http://www.htdig.org/
 COMMENT=	PERL external filter for htdig to convert numerous doc formats to HTML
 
 DEPENDS+=	xlhtml-[0-9]*:../../converters/xlhtml
