@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/10/19 09:17:11 veego Exp $
+# $NetBSD: Makefile,v 1.31 2001/10/20 17:31:44 veego Exp $
 
 DISTNAME=		inn-2.3.2
 CATEGORIES=		news
@@ -70,7 +70,7 @@ post-build:
 	done
 
 pre-install:
-	for DIR in ${INN_DATA_DIR} ${PREFIX}/etc/nntp  ${PREFIX}/inn; do
+	for DIR in ${INN_DATA_DIR} ${PREFIX}/etc/nntp  ${PREFIX}/inn; do \
 		${INSTALL_DATA_DIR} $$DIR; \
 	done
 
