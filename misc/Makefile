@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2004/07/29 05:03:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.208 2004/07/29 07:26:31 xtraeme Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -168,6 +168,7 @@ SUBDIR+=	xdg-dirs
 SUBDIR+=	xdg-x11-dirs
 SUBDIR+=	xfce4-weather-plugin
 SUBDIR+=	xjdic
+SUBDIR+=	xorg-dirs
 SUBDIR+=	xorg-docs
 SUBDIR+=	xrolodex
 SUBDIR+=	xtail
