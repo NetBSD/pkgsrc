@@ -1,8 +1,169 @@
-$NetBSD: patch-aa,v 1.12 2004/03/02 17:25:36 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2004/03/28 20:52:00 martin Exp $
 
---- bozohttpd.c.orig	Wed Feb 18 14:11:57 2004
-+++ bozohttpd.c
-@@ -1988,8 +1988,6 @@ print_cgi_header:
+--- bozohttpd.c.orig	2004-02-18 14:11:57.000000000 +0100
++++ bozohttpd.c	2004-03-28 22:46:29.000000000 +0200
+@@ -136,6 +136,9 @@
+ #ifndef REDIRECT_FILE
+ #define REDIRECT_FILE	".bzredirect"
+ #endif
++#ifndef ABSREDIRECT_FILE
++#define ABSREDIRECT_FILE	".bzabsredirect"
++#endif
+ 
+ /*
+  * And so it begins ..
+@@ -329,7 +332,7 @@
+ static	void	check_special_files(http_req *, const char *);
+ static	int	check_direct_access(http_req *request);
+ static	char	*transform_request(http_req *, int *);
+-static	void	handle_redirect(http_req *, const char *);
++static	void	handle_redirect(http_req *, const char *, int absolute);
+ static	void	print_header(http_req *, struct stat *, const char *,
+ 			     const char *);
+ 
+@@ -1186,7 +1189,7 @@
+ 	if (fstat(fd, &sb) < 0)
+ 		http_error(500, request, "can't fstat");
+ 	if (S_ISDIR(sb.st_mode))
+-		handle_redirect(request, NULL);
++		handle_redirect(request, NULL, 0);
+ 		/* NOTREACHED */
+ 	/* XXX RFC1945 10.9 If-Modified-Since (http code 304) */
+ 
+@@ -1438,6 +1441,9 @@
+ 	if (strcmp(name, REDIRECT_FILE) == 0)
+ 		http_error(403, request,
+ 		    "no permission to open redirect file");
++	if (strcmp(name, ABSREDIRECT_FILE) == 0)
++		http_error(403, request,
++		    "no permission to open redirect file");
+ #ifdef DO_HTPASSWD
+ 	if (strcmp(name, AUTH_FILE) == 0)
+ 		http_error(403, request,
+@@ -1454,8 +1460,8 @@
+ {
+ 	struct stat sb;
+ 	char dir[MAXPATHLEN], redir[MAXPATHLEN], redirpath[MAXPATHLEN];
+-	char *basename;
+-	int rv;
++	char *basename, *finalredir;
++	int rv, absolute;
+ 
+ 
+ 	/*
+@@ -1477,19 +1483,35 @@
+ 	}
+ 
+ 	snprintf(redir, sizeof(redir), "%s/%s", dir, REDIRECT_FILE);
+-	if (lstat(redir, &sb) < 0 || S_ISLNK(sb.st_mode) == 0)
+-		return;
++	if (lstat(redir, &sb) == 0) {
++		if (S_ISLNK(sb.st_mode) == 0)
++			return;
++		absolute = 0;
++	} else {
++		snprintf(redir, sizeof(redir), "%s/%s", dir, ABSREDIRECT_FILE);
++		if (lstat(redir, &sb) < 0 || S_ISLNK(sb.st_mode) == 0)
++			return;
++		absolute = 1;
++	}
+ 	debug((DEBUG_FAT, "check_bzredirect: calling readlink"));
+ 	rv = readlink(redir, redirpath, sizeof redirpath);
+-	if (rv == -1)
++	if (rv == -1) {
++		debug((DEBUG_FAT, "readlink failed"));
+ 		return;
++	}
+ 	if (rv - 1 < sizeof redirpath)
+ 		redirpath[rv] = '\0';
++	debug((DEBUG_FAT, "readlink returned \"%s\"", redirpath));
+ 	
+ 	/* now we have the link pointer, redirect to the real place */
+-	snprintf(redir, sizeof(redir), "/%s/%s", dir, redirpath);
+-	debug((DEBUG_FAT, "check_bzredirect: new redir %s", redir));
+-	handle_redirect(request, redir);
++	if (absolute) {
++		finalredir = redirpath;
++	} else {
++		snprintf(redir, sizeof(redir), "/%s/%s", dir, redirpath);
++		finalredir = redir;
++	}
++	debug((DEBUG_FAT, "check_bzredirect: new redir %s", finalredir));
++	handle_redirect(request, finalredir, absolute);
+ }
+ 
+ /*
+@@ -1602,7 +1624,7 @@
+ 			if (asprintf(&slashindexhtml, "/%s", index_html) < 0)
+ 				error(1, "asprintf");
+ 			debug((DEBUG_FAT, "rflag: redirecting %s to %s", url, slashindexhtml));
+-			handle_redirect(request, slashindexhtml);
++			handle_redirect(request, slashindexhtml, 0);
+ 			/* NOTREACHED */
+ 		}
+ 	}
+@@ -1619,7 +1641,7 @@
+ 		if (url[2] == '\0')
+ 			http_error(404, request, "missing username");
+ 		if (strchr(url + 2, '/') == NULL)
+-			handle_redirect(request, NULL);
++			handle_redirect(request, NULL, 0);
+ 			/* NOTREACHED */
+ 		debug((DEBUG_FAT, "calling transform_user"));
+ 		return (transform_user(request, isindex));
+@@ -1733,9 +1755,10 @@
+  * do automatic redirection
+  */
+ static void
+-handle_redirect(request, url)
++handle_redirect(request, url, absolute)
+ 	http_req *request;
+ 	const char *url;
++	int absolute;
+ {
+ 	char *urlbuf;
+ 	char portbuf[20];
+@@ -1755,16 +1778,24 @@
+ 	(void)bozoprintf("%s 301 Document Moved\r\n", request->hr_proto);
+ 	if (request->hr_proto != http_09) 
+ 		print_header(request, NULL, "text/html", NULL);
+-	if (request->hr_proto != http_09)
+-		(void)bozoprintf("Location: http://%s%s%s\r\n", myname, portbuf,
+-		    url);
++	if (request->hr_proto != http_09) {
++		if (absolute) 
++			(void)bozoprintf("Location: http://%s\r\n", url);
++		else
++			(void)bozoprintf("Location: http://%s%s%s\r\n", myname, portbuf,
++			    url);
++	}
+ 	(void)bozoprintf("\r\n");
+ 	if (request->hr_method == HTTP_HEAD)
+ 		goto head;
+ 	(void)bozoprintf("<html><head><title>Document Moved</title></head>\n");
+ 	(void)bozoprintf("<body><h1>Document Moved</h1>\n");
+-	(void)bozoprintf("This document had moved <a href=\"http://%s%s%s\">here</a>\n",
+-	    myname, portbuf, url);
++	if (absolute) 
++		(void)bozoprintf("This document had moved <a href=\"http://%s\">here</a>\n",
++		    url);
++	else
++		(void)bozoprintf("This document had moved <a href=\"http://%s%s%s\">here</a>\n",
++		    myname, portbuf, url);
+ 	(void)bozoprintf("</body></html>\n");
+ head:
+ 	fflush(stdout);
+@@ -1977,8 +2008,8 @@
+ 
+ 	/* may as well wait as long as possible */
+ print_cgi_header:
+-	(void)bozoprintf("%s 200 Here it is\r\n", request->hr_proto);
+ 	if (!aflag) {
++		(void)bozoprintf("%s 200 Here it is\r\n", request->hr_proto);
+ 		debug((DEBUG_OBESE, "process_cgi:  writing HTTP header .."));
+ 		if (request->hr_proto != http_09)
+ 			print_header(NULL, NULL, NULL, NULL);
+@@ -1988,8 +2019,6 @@
  	} else
  		debug((DEBUG_OBESE, "process_cgi:  not-writing HTTP header .."));
  
@@ -11,7 +172,7 @@ $NetBSD: patch-aa,v 1.12 2004/03/02 17:25:36 wiz Exp $
  	debug((DEBUG_FAT, "process_cgi: going exec %s, %s %s %s",
  	    path, argv[0], strornull(argv[1]), strornull(argv[2])));
  
-@@ -2291,6 +2289,7 @@ static struct content_map content_map[] 
+@@ -2291,6 +2320,7 @@
  	{ ".ppt",	"application/powerpoint",	"",		"", NULL },
  	{ ".rtf",	"application/rtf",		"",		"", NULL },
  	{ ".bcpio",	"application/x-bcpio",		"",		"", NULL },
