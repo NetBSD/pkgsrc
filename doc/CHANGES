@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4125 2003/12/15 00:21:31 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4126 2003/12/15 00:28:58 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5173,3 +5173,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gconf-editor to 2.4.0 [xtraeme 2003-12-14]
 	Updated gedit to 2.4.1 [xtraeme 2003-12-14]
 	Updated ggv2 to 2.4.0 [xtraeme 2003-12-14]
+	Updated gnome-session to 2.4.1 [xtraeme 2003-12-14]
