@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.23 2005/01/28 21:05:59 jlam Exp $
+# $NetBSD: Interix.mk,v 1.24 2005/02/04 09:19:41 jlam Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -161,7 +161,6 @@ _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_LIBTOOL_REQD=	1.5.10nb4
 _OPSYS_PERL_REQD=	5.8.3nb1 # base version of perl required
-_OPSYS_PKGTOOLS_REQD=	20040330
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type - not exactly true, but near enough
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
