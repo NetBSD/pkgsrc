@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/07/30 20:48:39 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/09/08 08:42:35 jlam Exp $
 
 GCC_VERSION=	3.3.4
 DISTNAME=	gcc-${GCC_VERSION}
@@ -91,12 +91,14 @@ BINUTILS_PREFIX_DEFAULT= ${LOCALBASE}
 CONFIGURE_ARGS+=	--with-as=${BINUTILS_PREFIX}/${MACHINE_GNU_PLATFORM}/bin/as
 .endif
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || \
-	${OPSYS} == "IRIX"
-CONFIGURE_ARGS+=	--enable-shared
-.else
-CONFIGURE_ARGS+=	--disable-shared
-.endif
+OPSYSVARS+=			GCC_SHARED_ARG
+GCC_SHARED_ARG.${OPSYS}?=	--disable-shared
+GCC_SHARED_ARG.FreeBSD=		--enable-shared
+GCC_SHARED_ARG.IRIX=		--enable-shared
+GCC_SHARED_ARG.Linux=		--enable-shared
+GCC_SHARED_ARG.NetBSD=		--enable-shared
+GCC_SHARED_ARG.SunOS=		--enable-shared
+CONFIGURE_ARGS+=		${GCC_SHARED_ARG}
 
 # gcc3 sub-packages must be built with gcc3.
 .if defined(PKGNAME) && empty(PKGNAME:Mgcc3-c-[0-9]*)
