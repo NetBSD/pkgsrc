@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/02/18 09:53:40 manu Exp $
+# $NetBSD: Makefile,v 1.12 2005/02/20 01:03:30 manu Exp $
 #
 
 DISTNAME=		ipsec-tools-0.5
@@ -42,17 +42,33 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}
+	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}/roadwarrior
+	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}/roadwarrior/client
+	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}/roadwarrior/server
 	${INSTALL_DATA} ${SAMPLE_DIR}/psk.txt ${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/psk.txt.in ${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/psk.txt.sample ${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf ${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.in ${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample ${EXAMPLE_DIR}
-	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-cvpn ${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-gssapi ${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-inherit ${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-natt ${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-plainrsa ${EXAMPLE_DIR}
+	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/README \
+	    ${EXAMPLE_DIR}/roadwarrior
+	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/client/racoon.conf \
+	    ${EXAMPLE_DIR}/roadwarrior/client
+	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/client/phase1-up.sh \
+	    ${EXAMPLE_DIR}/roadwarrior/client
+	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/client/phase1-down.sh \
+	    ${EXAMPLE_DIR}/roadwarrior/client
+	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/server/racoon.conf \
+	    ${EXAMPLE_DIR}/roadwarrior/server
+	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/server/racoon.conf-radius \
+	    ${EXAMPLE_DIR}/roadwarrior/server
+	${INSTALL_DATA} ${SAMPLE_DIR}/roadwarrior/server/phase1-down.sh \
+	    ${EXAMPLE_DIR}/roadwarrior/server
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
