@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6171 2004/06/06 23:08:11 heinz Exp $
+$NetBSD: CHANGES,v 1.6172 2004/06/06 23:51:36 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2829,4 +2829,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated exim-exiscan to 4.34_22 [abs 2004-06-06]
 	Updated cpuflags to 0.70 [abs 2004-06-06]
 	Updated opera to 7.51 [heinz 2004-06-06]
-
+	Updated boost to 1.31.0 [tv 2004-06-06]
+	Added boost-thread-1.31.0 [tv 2004-06-06]
+	Added boost-python-1.31.0 [tv 2004-06-06]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.504 2004/06/06 21:44:51 salo Exp $
+# $NetBSD: Makefile,v 1.505 2004/06/06 23:51:36 tv Exp $
 #
 
 COMMENT=	Development utilities
@@ -46,6 +46,8 @@ SUBDIR+=	boehm-gc
 SUBDIR+=	bonobo
 SUBDIR+=	bonobo-conf
 SUBDIR+=	boost
+SUBDIR+=	boost-python
+SUBDIR+=	boost-thread
 SUBDIR+=	buddy
 SUBDIR+=	buildtool
 SUBDIR+=	buildtool-doc

@@ -1,0 +1,3 @@
+This package adds static and shared libraries providing support for the
+"thread" Boost library, as well as multithreading-aware versions of the
+other Boost libraries.
