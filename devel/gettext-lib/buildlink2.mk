@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.31 2004/03/29 05:05:34 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.32 2004/04/01 18:33:20 jmmv Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -164,5 +164,23 @@ gettext-libintl-la:
 	lafile="${BUILDLINK_DIR}/lib/libintl.la";			\
 	libpattern="${BUILDLINK_PREFIX.gettext}/lib/libintl.*";		\
 	${BUILDLINK_FAKE_LA}
+
+.if defined(USE_MSGFMT_PLURALS) && !empty(USE_MSGFMT_PLURALS:M[Yy][Ee][Ss])
+USE_PERL5?=		build
+CONFIGURE_ENV+=		MSGFMT=${BUILDLINK_DIR}/bin/msgfmt
+
+SUBST_CLASSES+=			fix-msgfmt
+SUBST_STAGE.fix-msgfmt=		post-buildlink
+SUBST_MESSAGE.fix-msgfmt=	"Fixing paths in msgfmt wrapper."
+SUBST_FILES.fix-msgfmt=		${BUILDLINK_DIR}/bin/msgfmt
+SUBST_SED.fix-msgfmt=		-e 's|@PERL@|${PERL5}|g'
+SUBST_SED.fix-msgfmt+=		-e 's|@MSGFMT@|${BUILDLINK_PREFIX.gettext}/bin/msgfmt|g'
+
+BUILDLINK_TARGETS+=	buildlink-msgfmt
+
+buildlink-msgfmt:
+	@${CP} ../../devel/gettext/files/msgfmt.pl ${BUILDLINK_DIR}/bin/msgfmt
+	@${CHMOD} +x ${BUILDLINK_DIR}/bin/msgfmt
+.endif
 
 .endif	# GETTEXT_BUILDLINK2_MK
