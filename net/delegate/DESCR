@@ -7,4 +7,4 @@ translates protocols between clients and servers, merging several
 servers into a single server view with aliasing and filtering.  Born
 as a tiny proxy for Gopher in March 1994, it has steadily grown into a
 general purpose proxy server.  Besides proxy, DeleGate can be used as a
-simple origin server for some protocols (HTTP, FTP and NNTP). 
+simple origin server for some protocols (HTTP, FTP and NNTP).

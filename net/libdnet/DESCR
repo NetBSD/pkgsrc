@@ -5,4 +5,4 @@ networking routines, including
     * kernel arp(4) cache and route(4) table lookup and manipulation
     * network firewalling (IP filter, ipfw, ipchains, pf, ...)
     * network interface lookup and manipulation
-    * raw IP packet and Ethernet frame transmission 
+    * raw IP packet and Ethernet frame transmission

@@ -3,4 +3,4 @@ version. The DES library has been updated with his 3.23 version and
 numerous patches collected over the years have been applied to both
 the kerberos and DES sources, most notably the CMU patches for extended
 lifetimes that AFS uses. There is also support for AFS built into most
-programs.  
+programs. 

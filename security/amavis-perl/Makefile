@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/02 11:56:16 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/06 17:42:29 jmmv Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
@@ -48,7 +48,7 @@ VIRUSMAILTO?=	security		# whom to notify about viruses
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
-# XXX Milter needs pthreads, and configure fails looking for it 
+# XXX Milter needs pthreads, and configure fails looking for it
 # because ${PREFIX}/include is not available in the include path.
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
 CONFIGURE_ENV+=	CFLAGS="-I${PREFIX}/include"
@@ -102,7 +102,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/amavis.m4 ${PREFIX}/share/doc/amavis
 	# Man pages
 .if !defined(USE_MILTER) || ${USE_MILTER} != YES
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis.1 ${PREFIX}/man/man1 
+	${INSTALL_DATA} ${WRKSRC}/doc/amavis.1 ${PREFIX}/man/man1
 	${ECHO} "man/man1/amavis.1" >> ${PLIST_SRC}
 .endif
 	${INSTALL_DATA} ${WRKSRC}/doc/amavis-milter.1 ${PREFIX}/man/man1

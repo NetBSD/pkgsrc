@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.290 2003/05/06 00:15:52 zuntum Exp $
+# $NetBSD: Packages.txt,v 1.291 2003/05/06 17:40:18 jmmv Exp $
 ###########################################################################
 
 			==========================
@@ -88,7 +88,7 @@ is a description of all the terminology used within this document:
  * Program:
    The piece of software to be installed which will be constructed from
    all the files in the Distfile by the actions defined in the
-   corresponding package. 
+   corresponding package.
 
  * NetBSD RCS IDs:
    Some files in a package contain RCS IDs to reflect which version of
@@ -191,7 +191,7 @@ packages the "xbase" and "xcomp" distribution sets are required, too.
  =======================
 
 There are three ways to get pkgsrc. Either as a tar file, via SUP, or
-via CVS. All three ways are described here. 
+via CVS. All three ways are described here.
 
 To get the package source going, you need to get the pkgsrc.tar.gz file
 from ftp://ftp.netbsd.org/pub/NetBSD-current/tar_files/pkgsrc.tar.gz and
@@ -204,11 +204,11 @@ directory /usr/pkgsrc does exist. Then, simply start "sup -v
 /path/to/your/supfile".
 
 To get pkgsrc via CVS, make sure you have cvs installed. If not present on
-your system, it can be found as precompiled binary on ftp.netbsd.org. 
+your system, it can be found as precompiled binary on ftp.netbsd.org.
 To do an initial (full) checkout of pkgsrc, do the following steps:
 
 	% setenv CVSROOT anoncvs@anoncvs.netbsd.org:/cvsroot
-	% setenv CVS_RSH ssh 
+	% setenv CVS_RSH ssh
 	% cd /usr
 	% cvs checkout -P pkgsrc
 
@@ -273,7 +273,7 @@ your packages tree. So, to use /usr/local, set
 
 	LOCALBASE=/usr/local
 
-in your environment.  Please note that you should use a root which is 
+in your environment.  Please note that you should use a root which is
 dedicated to packages and not shared with other programs (ie, do not try
 and use LOCALBASE=/usr).  Also, you should not try to add any of your
 own files or directories (such as, for example, src, obj, or pkgsrc) below
@@ -323,7 +323,7 @@ target. This target will install a binary package - if available - via
 pkg_add, and do a "make package" else. The list of remote FTP sites
 searched is kept in the variable BINPKG_SITE, which defaults to
 ftp.netbsd.org. Any flags that should be added to pkg_add(8) can be put
-into BIN_INSTALL_FLAGS. See pkgsrc/mk/bsd.pkg.defaults.mk for more details. 
+into BIN_INSTALL_FLAGS. See pkgsrc/mk/bsd.pkg.defaults.mk for more details.
 
 A final word of warning: If you setup a system that has a non-standard
 setting for LOCALBASE (or X11BASE, for that matter), be sure to set that
@@ -341,7 +341,7 @@ LOCALBASE.
 
  3.1 Packaging a single package
  ==============================
- 
+
 Once you have built and installed the package as mentioned above, you can
 build it into a "binary package" - you might want to do this so that you
 can use the binaries you have just built on another NetBSD system, or to
@@ -381,7 +381,7 @@ actually compile on NFS storage, as this slows things down a lot.
  ====================
 
 You may want to set things in /etc/mk.conf.  Look at
-pkgsrc/mk/bsd.pkg.defaults.mk for details of the default settings. 
+pkgsrc/mk/bsd.pkg.defaults.mk for details of the default settings.
 You will want to make sure that ACCEPTABLE_LICENSES meet your local
 policy:
 
@@ -414,7 +414,7 @@ which user to su(8) to to do a 'cvs update'.
  3.2.1.3 pre-build.local
  =======================
 
-It is possible to configure the bulk build to perform certain site 
+It is possible to configure the bulk build to perform certain site
 specific tasks at the end of the pre-build stage.  If the file
 ``pre-build.local'' exists in pkgsrc/mk/bulk it will be executed
 (as a sh(1) script) at the end of the usual pre-build stage.  An
@@ -425,11 +425,11 @@ example use of pre-build.local is to have the line:
 
 to prevent the system from trying to build a particular package
 which requires nearly 3 Gb of disk space.
-    
+   
  3.2.2 Other environmental considerations
  ========================================
 
-As /usr/pkg will be completely deleted at the start of bulk builds, 
+As /usr/pkg will be completely deleted at the start of bulk builds,
 make sure your login shell is placed somewhere else. Either drop it into
 /usr/local/bin (and adjust your login shell in the password file), or
 (re-)install it via pkg_add from /etc/rc.local, so you can login after a
@@ -454,7 +454,7 @@ or crashes. You have been warned! :)
 
 Make sure you don't need any of the packages still installed.
 BEWARE: During the bulk build, ALL packages will be removed!!!
-Be sure to remove all other things that might interfere with builds, like 
+Be sure to remove all other things that might interfere with builds, like
 some libs installed in /usr/local, etc. then become root and type:
 
         # cd /usr/pkgsrc
@@ -492,7 +492,7 @@ During the build, a list of broken packages will be compiled in
 individual build logs of broken builds can be found in the package's
 directory. These files are used by the bulk-targets to mark broken builds
 to not waste time trying to rebuild them, and they can be used to debug
-these broken package builds later. 
+these broken package builds later.
 
 	
  3.2.5 Disk space requirements
@@ -513,7 +513,7 @@ Note that all pkgs will be de-installed as soon as they are turned into a
 binary package, and that work-sources are removed, so there is no huge
 demand to disk space. Afterwards, if the package is needed again, it will
 be installed via pkg_add instead of building again, so there are no cycles
-wasted by recompiling. 
+wasted by recompiling.
 
 
  3.2.6 Setting up a sandbox for chroot'ed builds
@@ -521,7 +521,7 @@ wasted by recompiling.
 
 If you don't want all the pkgs nuked from a machine (rendering it useless
 for anything but pkg compiling), there is the possibility of doing the pkg
-bulk build inside a chroot environment. 
+bulk build inside a chroot environment.
 
 The first step to do so is setting up a chroot sandbox, e.g. /usr/sandbox.
 After extracting all the sets from a NetBSD installation or doing a
@@ -553,7 +553,7 @@ items are present and properly configured:
  * adjust .../mk/bulk/build.conf
 
 !!! Don't forget to install X !!!
-If you are a developer and want to upload the resulting binary packages 
+If you are a developer and want to upload the resulting binary packages
 to ftp.netbsd.org, make sure you are using the default X version for your
 architecture and release (up to 1.6, that is 3.3.6 for all architectures).
 
@@ -561,7 +561,7 @@ Next thing you will want to is make sure /usr/sandbox/usr/pkgsrc contains a
 fresh checkout of pkgsrc (e.g. from anoncvs). Do not mount/link this to the
 copy of your pkgsrc tree you do development in, as this will likely cause
 problems! Adjust .../pkgsrc/packages and .../pkgsrc/distfiles to point to
-some places outside the sandbox if you want to make the files public. 
+some places outside the sandbox if you want to make the files public.
 
 Then, configure .../pkgsrc/mk/bulk/build.conf to fit your needs!
 
@@ -582,7 +582,7 @@ that points/mounts to/from).
 
 After your bulk pkgsrc build has completed, you may wish to create a CD-ROM
 set of the resulting binary packages to assist in installing packages on
-other machines.  The package pkgsrc/pkgtools/cdpack provides a simple tool for 
+other machines.  The package pkgsrc/pkgtools/cdpack provides a simple tool for
 creating the ISO 9660 images.  `cdpack' arranges the packages on the CD-ROM's
 in a way that keeps all the dependencies for given package on the same
 CD as that package.
@@ -685,7 +685,7 @@ if you want to add to it (rather than replace it), as you usually would.
 Currently the following values are available for CATEGORIES. If more than
 one is used, they need to be separated by spaces:
 
-       archivers  audio      benchmarks   biology       cad     
+       archivers  audio      benchmarks   biology       cad    
        chat       comms      converters   cross         databases
        devel      editors    emulators    finance       fonts
        games      graphics   ham          japanese      lang
@@ -721,7 +721,7 @@ Most important, the mandatory message digest, or checksum, of all the
 distfiles needed for the package to compile, confirming they match the
 original file distributed by the author.  This ensures that the
 distfile retrieved from the Internet has not been corrupted during
-transfer or altered by a malign force to introduce a security hole. 
+transfer or altered by a malign force to introduce a security hole.
 It is best generated using the "make makesum" command.  The digest
 algorithm used was, at one stage, md5, but that was felt lacking
 compared to sha1, and so sha1 is now the default algorithm.  The
@@ -792,7 +792,7 @@ stored inside these dirs (also known as $LOCALPATCHES/$PKGPATH). For
 example if you want to keep a private patch for pkgsrc/graphics/png, keep
 it in $LOCALPATCHES/graphics/png/mypatch. All files in the named directory
 are expected to be patch files, and they are applied after the "normal"
-pkgsrc patches are applied. 
+pkgsrc patches are applied.
 
 
  4.4 Other mandatory files
@@ -833,11 +833,11 @@ pkgsrc patches are applied.
    Useful for things like legal notices on almost-free software, etc.
    Please note that you can modify variables in it easily by using
    MESSAGE_SUBST in the package's Makefile:
-   
+  
 	MESSAGE_SUBST+=  SOMEVAR="somevalue"
 	
    replaces
-   
+  
 	${SOMEVAR}
 	
    in MESSAGE with "somevalue" before displaying the message.
@@ -852,7 +852,7 @@ directory.  It can be removed by typing
 	# make clean
 
 at the shell prompt. Also, this directory is used to keep various
-timestamp files. 
+timestamp files.
 
 
  4.7 files/*
@@ -860,7 +860,7 @@ timestamp files.
 
 If you have any files that you wish to be placed in the package prior
 to configuration or building, you could place these files here and use
-a ${CP} command in the pre-configure target to achieve this. 
+a ${CP} command in the pre-configure target to achieve this.
 Alternatively, you could simply diff the file against /dev/null and
 use the patch mechanism to manage the creation of this file.
 
@@ -933,7 +933,7 @@ to when dealing with the PLIST file (or files, see below!).
 
  * Semi-automatic PLIST generation:
    You can use the "make print-PLIST" command to output a PLIST that matches
-   any new files since the package was extracted. See below for more 
+   any new files since the package was extracted. See below for more
    information on this target.
 
 
@@ -984,7 +984,7 @@ are also substituted for in the PLIST.
  ====================
 
 Occasionally, packages require interaction from the user, and this can be
-in a number of ways: 
+in a number of ways:
 
 + help in fetching the distfiles
 + help to configure the package before it is built
@@ -1038,7 +1038,7 @@ which can be pretty annoying especially if you don't have all the
 machines at your hand to test things.  The "libtool" pkg can help
 here, as it just "knows" how to build both static and dynamic
 libraries from a set of source files, thus being platform
-independent. 
+independent.
 
 Here's how to use libtool in a pkg in seven simple steps:
 
@@ -1062,7 +1062,7 @@ Here's how to use libtool in a pkg in seven simple steps:
    the -version-info especially when major and minor are zero, as libtool
    will otherwise strip off the shared library version.
 
-   The "-release" option will produce different results for a.out and ELF 
+   The "-release" option will produce different results for a.out and ELF
    (excluding symlinks) in only one case. An ELF library of the form
    libfoo-release.so.x.y will have a symlink of libfoo.so.x.y on an a.out
    platform. This is handled automatically.
@@ -1133,7 +1133,7 @@ build in some circumstances. Some common errors are
    2. The -dlopen option is used when linking an executable.
 
  * The use of libltdl without the correct calls to initialisation routines.
-   The function lt_dlinit() should be called and the macro 
+   The function lt_dlinit() should be called and the macro
    LTDL_SET_PRELOADED_SYMBOLS included in executables.
 
 
@@ -1321,7 +1321,7 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    checksums don't match, the build is aborted. This is to ensure the same
    distfile is used for building, and that the distfile wasn't changed,
    e.g. by some malign force, deliberately changed distfiles on the master
-   distribution site or network lossage. 
+   distribution site or network lossage.
 
  * extract:
    When the distfiles are present on the local system, they need to be
@@ -1339,7 +1339,7 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    applied, files ending in .orig or .rej are ignored. Any special options
    to patch(1) can be handed in PATCH_DIST_ARGS. See section 4.3 for more
    details.
-   
+  
    By default patch is given special args to make it fail if the
    patches with some lines of fuzz. Please fix (regen) the patches
    so that they apply cleanly. The rationale behind this is that
@@ -1348,7 +1348,7 @@ The main targets used during the build process defined in bsd.pkg.mk are:
 
  * configure:
    Most pieces of software need information on the header files,
-   system calls, and library routines which are available in NetBSD. 
+   system calls, and library routines which are available in NetBSD.
    This is the process known as configuration, and is usually
    automated.  In most cases, a script is supplied with the source,
    and its invocation results in generation of header files,
@@ -1379,7 +1379,7 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    the software in public directories, for users.  As in the
    build-target, $MAKE_PROGRAM is invoked on $MAKEFILE here, but with
    the $INSTALL_TARGET instead, the latter defaulting to "install"
-   (plus "install.man", if USE_IMAKE is set). 
+   (plus "install.man", if USE_IMAKE is set).
 
 If no target is specified, the default is "build". If a subsequent stage
 is requested, all prior stages are made: e.g. "make build" will also
@@ -1414,17 +1414,17 @@ perform the equivalent of:
  * reinstall:
    If you did a "make install" and you noticed some file was not installed
    properly, you can repeat the installation with this target, which will
-   ignore the "already installed" flag. 
+   ignore the "already installed" flag.
 
  * deinstall:
    This target does a pkg_delete(1) in the current directory,
    effectively de-installing the package. The following variables can
    be used either on the command line or in /etc/mk.conf to tune the
-   behaviour: 
+   behaviour:
 
     - PKG_VERBOSE:
       Add a "-v" to the pkg_delete(1) command.
-      
+     
     - DEINSTALLDEPENDS:
       Remove all packages that require (depend on) the given package.
       This can be used to remove any packages that may have been pulled in
@@ -1528,7 +1528,7 @@ perform the equivalent of:
    FTP_PKG_URL_DIR=/usr/packages. The ${PACKAGES} directory and its
    subdirectories will be searched for all the binary packages.
 
- * readme-all: 
+ * readme-all:
    Use this target to create a file README-all.html which contains a
    list of all packages currently available in the NetBSD Packages
    Collection, together with the category they belong to and a short
@@ -1565,14 +1565,14 @@ perform the equivalent of:
    DEPENDS. Useful if out of date DEPENDS are causing build problems.
 
  * check-shlibs:
-   After a package is installed, check all its binaries and (on ELF 
+   After a package is installed, check all its binaries and (on ELF
    platforms) shared libraries to see if they find the shared libs they need.
    Run by default if PKG_DEVELOPER is set in /etc/mk.conf.
 
  * print-PLIST:
    After a 'make install' from a new or upgraded pkg, this prints out an
    attempt to generate a new PLIST from a 'find -newer work/.extract_done'.
-   An attempt is made to care for shared libs etc., but it is STRONGLY 
+   An attempt is made to care for shared libs etc., but it is STRONGLY
    recommended to review the result before putting it into PLIST. On
    upgrades, it's useful to diff the output of this command against an already
    existing PLIST file.
@@ -1587,7 +1587,7 @@ perform the equivalent of:
    package it (and it's depends, if PKG_DEPENDS is set properly, see
    section 3.2.1). After creating the binary package, the sources, the
    just-installed package and it's required packages are removed,
-   preserving free disk space. 
+   preserving free disk space.
 
  * bulk-install:
    Used during bulk-installs to install required packages. If an
@@ -1655,7 +1655,7 @@ description of how to use them properly.
 
 
  8.2 Writing buildlink2.mk files
- =============================== 
+ ===============================
 
 A simple example of a buildlink2.mk file for a mythical package foo
 follows:
@@ -1741,7 +1741,7 @@ debugging aids.
 
    Doing as non-root user will assure that no files are modified that
    shouldn't, esp. not during the build phase.
- * Look at Makefile, fix if necessary; see section 4.1. 
+ * Look at Makefile, fix if necessary; see section 4.1.
  * Generate a PLIST:
 
 	# make install
@@ -1750,7 +1750,7 @@ debugging aids.
 	# make install
 	# make deinstall
 
-   You usually need to be root to do this. 
+   You usually need to be root to do this.
  * Look if there are any files left:
 
 	# make print-PLIST
@@ -1758,11 +1758,11 @@ debugging aids.
    If this brings up any files that are missing in PLIST, add them.
  * Now that the PLIST is ok, install the package again and make a binary
    package:
-   
+  
 	# make reinstall && make package
 	
  * Delete the installed package:
- 
+
 	# pkg_delete blub
 	
  * Repeat the above find command, which shouldn't find anything now:
@@ -1770,7 +1770,7 @@ debugging aids.
 	# make print-PLIST
 
  * Reinstall the binary package:
- 
+
 	# pkg_add ..../blub.tgz
 	
  * Play with it. Make sure everything works.
@@ -1817,7 +1817,7 @@ pkgsrc/editors/sam again, but the quick answer is:
 
 	WRKSRC=		${WRKDIR}
 
-Please note that the old 
+Please note that the old
 
 	NO_WRKSUBDIR=   yes
 
@@ -1852,7 +1852,7 @@ university, where you can't run a "make fetch". But there's no archive of
 the distfiles on ftp.netbsd.org and the one on ftp.freebsd.org contains
 many distfiles for which there are no ports (yet).
 
-The answer here is to do a "make fetch-list" in /usr/pkgsrc, carry the 
+The answer here is to do a "make fetch-list" in /usr/pkgsrc, carry the
 resulting list to your machine at work/school and use it there. If you don't
 have a NetBSD-compatible ftp(1) (like lukemftp) at work, don't forget to
 set FETCH_CMD to something that fetches an URL:
@@ -1875,7 +1875,7 @@ directly by typing:
 
 	% make mirror-distfiles
 
-If you even decide to ignore NO_{SRC,BIN}_ON_{FTP,CDROM}, then you can 
+If you even decide to ignore NO_{SRC,BIN}_ON_{FTP,CDROM}, then you can
 get all & everything by typing
 
 	% make fetch NO_SKIP=yes
@@ -1924,7 +1924,7 @@ preprocessor-like .if, .ifdef, or .ifndef statements:
 
 If you wish to set the CFLAGS variable in /etc/mk.conf please make sure
 to use:
-   
+  
    CFLAGS+= -your -flags
 
 Using 'CFLAGS=' (ie without the '+') may lead to problems with packages
@@ -2001,7 +2001,7 @@ You can also use wildcards in package dependences:
 
 Note that such wildcard dependencies are retained when creating binary
 packages.  The dependency is checked when installing the binary
-package and any package which matches the pattern will be used. 
+package and any package which matches the pattern will be used.
 Wildcard dependencies should be used with care.
 
 The -[0-9]* should be used instead of -* to avoid potentially
@@ -2012,7 +2012,7 @@ is specified using the DEPENDS definition. The pkgsrc/print/lyx package needs
 to be able to execute the latex binary from the teTeX package when it runs,
 and that is specified:
 
-	DEPENDS+=        teTeX-[0-9]*:../../print/teTeX 
+	DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 
 The comment about wildcard dependencies from previous paragraph
 applies here, too.
@@ -2080,10 +2080,10 @@ variable.
 
 Sometimes authors of a software package make some modifications after the
 software was released, and they put up a new distfile without changing the
-package's version number. If a package is already in pkgsrc at that time, 
+package's version number. If a package is already in pkgsrc at that time,
 the md5 checksum will no longer match. The correct way to work around this
 is to update the package's md5 checksum to match the package on the master
-site (beware, any mirrors may not be up to date yet!), and to remove the 
+site (beware, any mirrors may not be up to date yet!), and to remove the
 old distfile from ftp.netbsd.org's /pub/NetBSD/packages/distfiles directory.
 Furthermore, a mail to the package's author seems appropriate making sure
 the distfile was really updated on purpose, and that no trojan horse or so
@@ -2131,7 +2131,7 @@ NetBSD machine. Please get it and install it, by extracting it in /:
 
 	# tar --unlink -pvxf .../comp.tgz
 
-comp.tgz is part of every NetBSD release, please get the one matching 
+comp.tgz is part of every NetBSD release, please get the one matching
 the release you have installed (determine via "uname -r").
 
 
@@ -2146,22 +2146,22 @@ that can be set to note these restrictions:
    This variable should be set whenever a restriction exists
    (regardless of its kind).  Set this variable to a string
    containing the reason for the restriction.
- 
+
  * NO_BIN_ON_CDROM:
    Binaries may not be placed on CD-ROM.  Set this variable to
    ${RESTRICTED} whenever a binary package may not be included
    on a CD-ROM.
- 
+
  * NO_BIN_ON_FTP:
    Binaries may not be placed on an ftp server.  Set this
    variable to ${RESTRICTED} whenever a binary package may not
    not be made available on the Internet.
- 
+
  * NO_SRC_ON_CDROM:
    Distfiles may not be placed on CD-ROM.  Set this variable to
    ${RESTRICTED} if re-distribution of the source code or other
    distfile(s) is not allowed on CD-ROMs.
- 
+
  * NO_SRC_ON_FTP:
    Distfiles may not be placed on FTP.  Set this variable to
    ${RESTRICTED} if re-distribution of the source code or other
@@ -2239,7 +2239,7 @@ installation procedure:
 Note to package developers: When a vulnerability is found, this should be
 noted in localsrc/security/advisories/pkg-vulnerabilities, and after the
 commit of that file, it should be copied to
-/pub/NetBSD/packages/distfiles/vulnerabilities on ftp.netbsd.org. 
+/pub/NetBSD/packages/distfiles/vulnerabilities on ftp.netbsd.org.
 
 
  10.22 What's the proper way to create an account from a package?
@@ -2359,7 +2359,7 @@ www/ap-aolserver, www/openacs. Try to be consistent with them.
  =================================================================================
 
 In order to use pkgsrc on a non-NetBSD operating system, you must first
-bootstrap the necessary utilities (BSD make, pkg_*, ...). See 
+bootstrap the necessary utilities (BSD make, pkg_*, ...). See
 http://www.netbsd.org/Documentation/software/packages.html#bootstrap
 for information on boostrapping.  Binary bootstrap-kits are available from that
 URL as well.  If your Operating System is not yet supported, we encourage you to
@@ -2517,10 +2517,10 @@ You have to separate between binary and "normal" (source) packages here:
 
  * precompiled binary packages:
    Our policy is that we accept binaries only from NetBSD developers to
-   guarantee that the packages don't contain any trojan horses etc. 
+   guarantee that the packages don't contain any trojan horses etc.
    This is not to piss anyone off but rather to protect our users!
    You're still free to put up your home-made binary packages and tell
-   the world where to get them. 
+   the world where to get them.
 
  * packages:
    First, check that your package is complete, compiles and runs well; see
@@ -2637,17 +2637,17 @@ The file contents in this section must be used without the "> " prefix.
  ===============
 
 	# <$>NetBSD<$>
-	 
+	
 	DISTNAME=       bison-1.25
 	CATEGORIES=     devel
 	MASTER_SITES=   ${MASTER_SITE_GNU}
 	MAINTAINER=     thorpej@netbsd.org
 	HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
 	COMMENT=        GNU yacc clone
-	 
+	
 	GNU_CONFIGURE=  yes
 	INFO_FILES=     bison.info
-	 
+	
 	.include "../../mk/texinfo.mk"
 	.include "../../mk/bsd.pkg.mk"
 
@@ -2716,11 +2716,11 @@ then continue with fetching the distfile:
 	>> Attempting to fetch from ftp://prep.ai.mit.edu/pub/gnu//.
 	Requesting ftp://prep.ai.mit.edu/pub/gnu//bison-1.25.tar.gz (via ftp://orpheus.amdahl.com:80/)
 	ftp: Error retrieving file: 500 Internal error
-	 
+	
 	>> Attempting to fetch from ftp://wuarchive.wustl.edu/systems/gnu//.
 	Requesting ftp://wuarchive.wustl.edu/systems/gnu//bison-1.25.tar.gz (via ftp://orpheus.amdahl.com:80/)
 	ftp: Error retrieving file: 500 Internal error
-	 
+	
 	>> Attempting to fetch from ftp://ftp.freebsd.org/pub/FreeBSD/distfiles//.
 	Requesting ftp://ftp.freebsd.org/pub/FreeBSD/distfiles//bison-1.25.tar.gz (via ftp://orpheus.amdahl.com:80/)
 	Successfully retrieved file.
@@ -2762,7 +2762,7 @@ Now compile:
 	cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g closure.c
 	cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g conflicts.c
 	cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g derives.c
-	cc -c -DXPFILE=\"/usr/pkg/share/bison.simple\"  -DXPFILE1=\"/usr/pkg/share/bison.hairy\" -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1  -g  ./files.c 
+	cc -c -DXPFILE=\"/usr/pkg/share/bison.simple\"  -DXPFILE1=\"/usr/pkg/share/bison.hairy\" -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1  -g  ./files.c
 	cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g getargs.c
 	cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g gram.c
 	cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g lalr.c
@@ -2893,7 +2893,7 @@ Appendix A: build logs
 	/usr/bin/install top.1 /usr/pkg/man/man1/top.1
 	strip /usr/pkg/bin/top
 	===>  Registering installation for top-3.5beta5
-	# 
+	#
 
 
  A.2 Packaging top
@@ -2949,7 +2949,7 @@ directory, stripping the tiny number off the directory name.  For packages
 that need to be tightly coupled with the OS Version, such as LKM's, you
 may create a major.minor.tiny release directory, and place those packages
 therein.  Such packages should be marked with the variable
-"OSVERSION_SPECIFIC=yes" to mark them in some way for binary package 
+"OSVERSION_SPECIFIC=yes" to mark them in some way for binary package
 builders.
 
 

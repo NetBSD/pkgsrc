@@ -10,9 +10,9 @@ The application can also, optionally, play a sound through a workstation's
 audio device, instead of generating the default beep sound, whenever new
 mail arrives.
 
-By default, pressing any mouse button in the image forces xmailbox to 
-remember the current size of the mail file as being the "empty" size and 
-to change its image accordingly. In addition to this, the user can 
+By default, pressing any mouse button in the image forces xmailbox to
+remember the current size of the mail file as being the "empty" size and
+to change its image accordingly. In addition to this, the user can
 optionally have xmailbox invoke his/her favourite mail retrieving program.
 
 By Dimitrios P. Bouras (dbouras@hol.gr) and

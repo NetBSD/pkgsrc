@@ -4,7 +4,7 @@ applications that are 100% portable across a wide range of hardware
 and operating systems.  PLIB is OpenSource software, issued under
 the terms of the Library varient GNU Public License (LGPL).
 
-The contents of PLIB are: 
+The contents of PLIB are:
 
  * GUI Widgets: Picoscopic User Interface Library (PUI)
 		A fully portable GUI interface that needs only

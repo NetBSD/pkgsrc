@@ -8,7 +8,7 @@ web interface (xttpd).
 
 The algorithm that XTide uses to predict tides is the one used by the
 National Ocean Service in the U.S.  It is significantly more accurate
-than the simple tide clocks that can be bought in novelty stores. 
+than the simple tide clocks that can be bought in novelty stores.
 However, it takes more to predict tides accurately than just a spiffy
 algorithm -- you also need some special data for each and every
 location for which you want to predict tides.  XTide reads this data

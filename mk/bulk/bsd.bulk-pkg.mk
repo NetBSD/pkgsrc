@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.43 2003/02/13 22:51:03 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.44 2003/05/06 17:42:03 jmmv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -67,7 +67,7 @@ BULK_ID?=       .${_HOSTNAME:C|\..*||}
 .elif defined(OBJMACHINE)
 BULK_ID?=       .${MACHINE_ARCH}
 .else
-BULK_ID?=      
+BULK_ID?=     
 .endif
 
 # This file exists to mark a package as broken
@@ -198,7 +198,7 @@ bulk-package:
 		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} ^d | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
 		${ECHO_MSG} '###' ; \
 	fi \
-	) 2>&1 | tee -a ${BUILDLOG} 
+	) 2>&1 | tee -a ${BUILDLOG}
 	@uptodate=`${MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
 	if ${PKG_INFO} -qe "${PKGNAME:C/-[^-]*$/-[0-9]*/}" ; then \
 		installed=1; \
@@ -371,7 +371,7 @@ bulk-package:
 	fi
 
 # Install pkg - if possible from binary pkg (i.e. available & upto date)
-# else revert to the old recompiling. 
+# else revert to the old recompiling.
 # Don't rely upon pkg_add to snarf in depending pkgs as they may have
 # been modified and need rebuilding.
 bulk-install:

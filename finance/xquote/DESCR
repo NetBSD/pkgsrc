@@ -1,5 +1,5 @@
 Xquote is a WWW ticker symbol quote retrieval program for UNIX systems
-using the X Window System. Xquote requires Motif 1.2 or later and XPM. 
+using the X Window System. Xquote requires Motif 1.2 or later and XPM.
 
 Xquote retrieves quotes from a number of net sources. It takes a ticker
 symbol (stock, mutual fund, currency) and displays info in a table or

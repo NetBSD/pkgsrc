@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.21 2002/08/22 08:21:30 jlam Exp $
+# $NetBSD: post-build,v 1.22 2003/05/06 17:42:03 jmmv Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -40,18 +40,18 @@ $reportf=basename($REPORT);
 
 # extract the name of the files used for the build log and broken build log.
 # these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
-chomp($BROKENFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=BROKENFILE )`); 
+chomp($BROKENFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=BROKENFILE )`);
 
-# also extract the names of the cache files used during the bulk build.  We'll save a copy of 
+# also extract the names of the cache files used during the bulk build.  We'll save a copy of
 # those to help debug if the build messed up.
-chomp($DEPENDSTREEFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=DEPENDSTREEFILE )`); 
-chomp($DEPENDSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=DEPENDSFILE )`); 
-chomp($SUPPORTSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=SUPPORTSFILE )`); 
-chomp($INDEXFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=INDEXFILE )`); 
-chomp($ORDERFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=ORDERFILE )`); 
-chomp($STARTFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=STARTFILE )`); 
-chomp($LOCALBASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=LOCALBASE )`); 
-chomp($X11BASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=X11BASE )`); 
+chomp($DEPENDSTREEFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=DEPENDSTREEFILE )`);
+chomp($DEPENDSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=DEPENDSFILE )`);
+chomp($SUPPORTSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=SUPPORTSFILE )`);
+chomp($INDEXFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=INDEXFILE )`);
+chomp($ORDERFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=ORDERFILE )`);
+chomp($STARTFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=STARTFILE )`);
+chomp($LOCALBASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=LOCALBASE )`);
+chomp($X11BASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=X11BASE )`);
 $dtfile=basename($DEPENDSTREEFILE);
 $depfile=basename($DEPENDSFILE);
 $supfile=basename($SUPPORTSFILE);
@@ -103,7 +103,7 @@ print HTML <<EOHTML
 
     Files not listed in PLISTs can be found in <A HREF="leftovers-${arch}.html">this list</A>.
     <P>
-    
+   
 <TABLE>
 <TR><TH> Package <TH> State <TH> Pkgs Broken by <TH> Last touched by <TH> File touched last <TH> Maintainer
 EOHTML
@@ -120,7 +120,7 @@ while (<BF>) {
 
 #    next
 #	if $pkg!~/^a/; # DEBUG! HF
-    
+   
     if ($nerrors > 0) {
 	$color = "red";
 	$state = "build broken";
@@ -145,10 +145,10 @@ while (<BF>) {
     # $maintainer=`( cd $USR_PKGSRC/$pkg ; ( echo '.include "Makefile"' ; echo 'bla: ; \@echo ${MAINTAINER}' ) | $ENV{"BMAKE"} -f - bla )`;
     $maintainer=`grep ^MAINTAINER $USR_PKGSRC/$pkg/Makefile | awk '{ print \$2\$3\$4\$5\$6}' | sed -e 's/\</&lt;/g' -e 's/\>/&gt;/g'`;
     chomp($maintainer);
-    
+   
     print HTML "<TR><TD><A HREF=\"$bf\">$pkg</A>";
     print HTML "    <TD><FONT COLOR=$color>$state</FONT>";
-    if ($nbrokenby > 0){ 
+    if ($nbrokenby > 0){
         print HTML "    <TD ALIGN=\"right\"><FONT COLOR=$color>$nbrokenby</FONT>";
     }
     else {
@@ -201,7 +201,7 @@ The following cache files were used during the build:
 </TABLE>
 
 <HR>
-<P>     
+<P>    
 <UL>
 <!-- <LI>View the <A HREF="$PROG">progress</A> of the build. -->
 <!-- <LI>See the list of <A HREF="../index.html">all log files</A>. -->
@@ -252,7 +252,7 @@ close(HTML);
 	system("tar plcf - `cat leftovers-${arch}.txt` | ( cd leftovers-${arch} ; tar plxf - )");
 
 	# Add links to leftover list:
-	open (IN, "< leftovers-${arch}.txt") 
+	open (IN, "< leftovers-${arch}.txt")
 		or die "can't read leftovers-${arch}.txt";
 	open (OUT, "> leftovers-${arch}.html")
 		or die "can't write leftovers-${arch}.html";

@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:42 jmmv Exp $
-# FreeBSD Id: Makefile,v 1.12 1998/08/23 02:10:57 hoek Exp 
+# $NetBSD: Makefile,v 1.6 2003/05/06 17:41:04 jmmv Exp $
+# FreeBSD Id: Makefile,v 1.12 1998/08/23 02:10:57 hoek Exp
 #
 
 DISTNAME=	beav_1.40-11

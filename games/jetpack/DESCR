@@ -1,7 +1,7 @@
 Jetpack is an arcade action game. The user controls a player wearing a
 jetpack.  The player must travel through the maze to find a key and
 bring it back to the door to exit to the next level.  There are three
-kinds of enemies in jetpack: guards, fireballs and wall sweepers. 
+kinds of enemies in jetpack: guards, fireballs and wall sweepers.
 Touching any enemy is fatal.  Guards patrol the maze.  They
 fly in the middle of the corridors and follow random paths through the
 maze.  Fireballs fly through space and bounce off walls.  Wall

@@ -3,7 +3,7 @@ compiled, you need a server to play on. The server source is included, so
 you can compile your own. Or you can play on ogesoft.dyn.ml.org, which is
 run by the author of Get Tanked (that's me!). With v0.90,
 ogresoft.dyn.ml.org is the default server in the client, so if you start
-it with no arguments, you will be connected to it automatically. 
+it with no arguments, you will be connected to it automatically.
 
 Once you are connected, you will see an MOTD window with server
 information and basic instructions. From there, click either the red or

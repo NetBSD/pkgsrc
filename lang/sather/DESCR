@@ -8,7 +8,7 @@ languages. One way of placing it in the "space of languages" is to say
 that it attempts to be as efficient as C, C++, or Fortran, as elegant
 and safe as Eiffel or CLU, and to support higher-order functions as
 well as Common Lisp, Scheme, or Smalltalk.
-   
+  
 Sather has garbage collection, statically-checked strong typing,
 multiple inheritance, separate implementation and type inheritance,
 parameterized classes, dynamic dispatch, iteration abstraction,

@@ -5,4 +5,4 @@ Features of this improved cvsweb:
 - There is a link at each revision to display (colored) diffs between
   that revision and the previous one or to annotate a revision.
 - A form at the bottom of the page that allows you to display diffs
-  between arbitrary revisions. 
+  between arbitrary revisions.

@@ -4,10 +4,10 @@ that is conformant, robust, full-featured, commercial-quality, and
 freely available.  This project is jointly managed by a group of
 companies and individual volunteers throughout the world, using the
 Internet and the Web to communicate, plan, and develop the compiler
-and its related software and documentation. 
+and its related software and documentation.
 
 The Jikes project is licensed under the IBM Public License, which has
-been approved by the Open Source Initiative. 
+been approved by the Open Source Initiative.
 
 The project currently includes the Jikes compiler, the Jikes Parser
 Generator, and the Jikes Test Suite.

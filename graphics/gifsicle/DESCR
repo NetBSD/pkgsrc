@@ -2,10 +2,10 @@ Gifsicle is a UNIX command-line tool for creating, editing,
 and getting information about GIF images and animations.
 You can also extract frames from animations, or replace, delete,
 or insert frames into existing animations.
-Some more gifsicle features: 
-  * Batch mode for changing GIFs in place. 
-  * Prints detailed information about GIFs, including comments. 
-  * Control over interlacing, comments, looping, transparency... 
+Some more gifsicle features:
+  * Batch mode for changing GIFs in place.
+  * Prints detailed information about GIFs, including comments.
+  * Control over interlacing, comments, looping, transparency...
   * Creates well-behaved GIFs: removes redundant colors, only uses
     local color tables if it absolutely has to (local color tables
     waste space and can cause viewing artifacts), etc.

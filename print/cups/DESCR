@@ -1,7 +1,7 @@
-The Common UNIX Printing System provides a portable printing layer for 
-UNIX operating systems. It has been developed by Easy Software Products 
-to promote a standard printing solution for all UNIX vendors and users. 
-CUPS provides the System V and Berkeley command-line interfaces. 
+The Common UNIX Printing System provides a portable printing layer for
+UNIX operating systems. It has been developed by Easy Software Products
+to promote a standard printing solution for all UNIX vendors and users.
+CUPS provides the System V and Berkeley command-line interfaces.
 
 CUPS uses the Internet Printing Protocol (IETF-IPP) as the basis for
 managing print jobs and queues.  The Line Printer Daemon (LPD, RFC1179)

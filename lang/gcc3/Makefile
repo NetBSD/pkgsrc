@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/05/02 13:36:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/05/06 17:41:38 jmmv Exp $
 #
 
 DISTNAME=		gcc-3.2.2
@@ -78,14 +78,14 @@ post-install:
 LDFLAGS=		${_STRIPFLAG_CC}
 
 # On NetBSD, the gcc-2.95.3 for:
-# 
+#
 #     alpha
 #
 # have an optimization bug when compiling with -O2 that is tickled by:
-# 
+#
 #   java/parse.o
 #
-# note that we don't override CFLAGS and CPPFLAGS because we want the 
+# note that we don't override CFLAGS and CPPFLAGS because we want the
 # crosscompiled compiler to be build with optimization.  This only
 # disables optimization for the stage 1 build.
 #

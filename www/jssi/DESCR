@@ -8,4 +8,4 @@ apache context while SHTML files are usually for traditional SSI (like
 <!--#ECHO -->). This is a bit confusing since in the Java Web Server
 (SUN) context SHTML files are used for java servlet SSI files and
 JHTML is used for page compiled pages. Java Apache SSI does not support
-page compiling. 
+page compiling.

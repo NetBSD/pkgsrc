@@ -1,6 +1,6 @@
 #!XXXLOCALBASEXXX/bin/perl
 #
-# $NetBSD: deinstall,v 1.1 2001/11/01 01:09:57 zuntum Exp $
+# $NetBSD: deinstall,v 1.2 2003/05/06 17:41:16 jmmv Exp $
 #
 open (FILE,"XXXLOCALBASEXXX/etc/rplay.conf");
 open (OUT,">tmp");
@@ -8,7 +8,7 @@ open (OUT,">tmp");
 while (<FILE>) {
    $found=0;
    foreach $datum (@data) {
-	$found++ if ($datum eq $_);	  
+	$found++ if ($datum eq $_);	 
    }
    print OUT "$_" if ($found == 0);
 }

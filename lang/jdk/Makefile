@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/02/11 04:23:14 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2003/05/06 17:41:39 jmmv Exp $
 #
 
 VERSION=	1.1.8
@@ -91,5 +91,5 @@ do-install:
 
 .include "../../mk/bsd.pkg.mk"
 
-# This needs to be after bsd.pkg.mk 
+# This needs to be after bsd.pkg.mk
 PREFIX=		${JVM_HOME}

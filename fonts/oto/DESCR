@@ -1,8 +1,8 @@
 The Open Type Organizer project provides programs to list and modify
-the 'name' and 'cmap' tables of OpenType font files. It can be used to 
-translate the 'name' and 'cmap' of an OpenType font in locale encodings 
-to Unicode encodings, so the font file can be used in an environment 
-which does not understand locale encodings. The translated tables are 
+the 'name' and 'cmap' tables of OpenType font files. It can be used to
+translate the 'name' and 'cmap' of an OpenType font in locale encodings
+to Unicode encodings, so the font file can be used in an environment
+which does not understand locale encodings. The translated tables are
 added to the font while keeping the original tables intact.
 
 Have a True Type font which is not recognized by X Window system?

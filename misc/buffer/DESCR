@@ -2,7 +2,7 @@ This is a program designed to speed up writing tapes on remote tape
 drives.  Requirements are shared memory and locks which normally
 means that these are supported in your kernel.
 
-[for Free/NetBSD, this means you MUST have a kernel with 
+[for Free/NetBSD, this means you MUST have a kernel with
  options SYSVSHM
  compiled in - markm]
 

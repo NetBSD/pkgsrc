@@ -41,7 +41,7 @@ if [ -z "$RSYNC_DST_SPECIFIC" -o -z "$RSYNC_DST_OTHER" ]; then
 	exit 1
 fi
 
-# 
+#
 # Some temp files
 #
 

@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.9 2003/03/21 12:49:58 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.10 2003/05/06 17:42:04 jmmv Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,7 +48,7 @@
 #
 # alldepends[]  : index=pkgdir (math/scilab)
 #                 Flattened dependency list by name.
-#                 
+#                
 BEGIN {
 	do_pkg_readme=1;
 # set to 1 to use "README-new.html" as the name
@@ -57,7 +57,7 @@ BEGIN {
 	fflush("/dev/stdout");
 }
 
-#conflicts /usr/pkgsrc/math/scilab 
+#conflicts /usr/pkgsrc/math/scilab
 #depends /usr/pkgsrc/math/scilab xless-[0-9]*:../../x11/xless pvm-3.4.3:../../parallel/pvm3
 #
 
@@ -86,12 +86,12 @@ BEGIN {
 			pkgcat = pkg;
 			gsub(/\/.*/, "", pkgcat);
 			pkgdir=pkgcat "/" pkgdir;
-			if (debug) 
+			if (debug)
 				printf("Corrected missing category directory to get \"%s\"\n",
 				       pkgdir);
 		}
 		if (debug){
-			printf("package in directory %s %s on:\n", 
+			printf("package in directory %s %s on:\n",
 			       pkg, deptype);
 			printf("\tpkgpat = %s\n", pkgpat);
 			printf("\tpkgdir = %s\n", pkgdir);
@@ -107,7 +107,7 @@ BEGIN {
 		if (deptype == "depends") {
 			topdepends[pkg] = topdepends[pkg] " " pkgpat " " ;
 			if (debug) {
-			  printf("Appending %s to topdepends[%s] (%s)\n", 
+			  printf("Appending %s to topdepends[%s] (%s)\n",
 				 pkgpat, pkg, topdepends[pkg]);
 			}
 		}
@@ -159,7 +159,7 @@ BEGIN {
 /^index / {
 #
 # read lines like:
-#index /usr/pkgsrc/math/scilab scilab-2.6nb3 
+#index /usr/pkgsrc/math/scilab scilab-2.6nb3
 # and store the directory name in a associative array where the index
 # is the package name and in a associative array that lets us lookup
 # name from directory.  We use fuldir2pkgdir to get "math/scilab"
@@ -204,9 +204,9 @@ END {
 		if (debug) printf("calling find_all_depends(%s, run)\n", toppkg);
 		find_all_depends(toppkg, "run");
 		if (debug) printf("%s depends on: %s, topdepends on %s\n",
-				  toppkg, alldepends[toppkg], 
+				  toppkg, alldepends[toppkg],
 				  topdepends[toppkg]);
-		printf("%s depends on: %s\n", 
+		printf("%s depends on: %s\n",
 		       toppkg, alldepends[toppkg]) >> dependsfile;
 		flatdepends[toppkg] = alldepends[toppkg];
 	}
@@ -232,7 +232,7 @@ END {
 	if ((cmd | getline) > 0) {
 		vuldate = sprintf("at %s %s %s\n",$6,$7,$8);
 # read the vulnerabilities file
-		printf("Reading vulnerability file \"%s\"\n which was updated %s\n", 
+		printf("Reading vulnerability file \"%s\"\n which was updated %s\n",
 		       vfile, vuldate);
 		fflush("/dev/stdout");
 		i = 1;
@@ -272,7 +272,7 @@ END {
 			pkgdir = PKGSRCDIR "/" toppkg;
 			readmenew=pkgdir  "/" readme_name;
 			
-			if (debug) printf("Creating %s for %s\n", 
+			if (debug) printf("Creating %s for %s\n",
 					  readme, readmenew);
 			printf(".");
 			if ((pkgcnt % 100) == 0) {
@@ -286,9 +286,9 @@ END {
 			i = 1;
 			while(i in dpkgs){
 				if (debug) {
-				  printf("\tdpkg=%s, pat2dir[%s] = %s\n", 
-					 dpkgs[i], 
-					 dpkgs[i], 
+				  printf("\tdpkg=%s, pat2dir[%s] = %s\n",
+					 dpkgs[i],
+					 dpkgs[i],
 					 pat2dir[dpkgs[i]]);
 				}
 				nm=dpkgs[i];
@@ -300,9 +300,9 @@ END {
 				gsub(/&/, "\\\\\\&amp;", nm);
 				gsub(/</, "\\\\\\&lt;", nm);
 				gsub(/>/, "\\\\\\&gt;", nm);
-				htmldeps=sprintf("%s<a href=\"../../%s/%s\">%s</a>\n", 
-						 htmldeps, 
-						 pat2dir[dpkgs[i]], 
+				htmldeps=sprintf("%s<a href=\"../../%s/%s\">%s</a>\n",
+						 htmldeps,
+						 pat2dir[dpkgs[i]],
 						 readme_name, nm);
 				i = i + 1;
 			}
@@ -332,10 +332,10 @@ END {
 					gsub(/</, "\\\\\\&lt;", printurl);
 					gsub(/>/, "\\\\\\&gt;", printurl);
 					if (vulpkg[i] ~ "^" pkgbase"[-<>=]+[0-9]") {
-						vul =  sprintf("%s<LI><STRONG> %s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", 
-							  vul, nm, 
+						vul =  sprintf("%s<LI><STRONG> %s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n",
+							  vul, nm,
 							  vultype[i],
-							  url, printurl); 
+							  url, printurl);
 					}
 					i = i + 1;
 				}
@@ -357,12 +357,12 @@ END {
 					pkgnm = pkgfile;
 					gsub(/\.tgz$/, "", pkgnm);
 					binpkgs = sprintf("%s\n<TR><TD>%s:<TD><a href=\"%s/%s\">%s</a><TD>(%s %s)",
-							  binpkgs, 
-							  MACHINE_ARCH, 
+							  binpkgs,
+							  MACHINE_ARCH,
 							  PKG_URL,
-							  pkgfile, 
-							  pkgnm, 
-							  OPSYS, 
+							  pkgfile,
+							  pkgnm,
+							  OPSYS,
 							  OS_VERSION);
 				}
 				close(cmd);
@@ -381,16 +381,16 @@ END {
 						if (debug) {
 							printf("%s:%s:%s (%s)\n",
 							       release,
-							       arch, 
-							       pkg, 
+							       arch,
+							       pkg,
 							       pkgnm);
 						}
 					binpkgs = sprintf("%s\n<TR><TD>%s:<TD><a href=\"%s/%s/%s/%s/%s\">%s</a><TD>(%s-%s)",
-						  binpkgs, arch, 
+						  binpkgs, arch,
 						  PKG_URL, release,
-						  arch, 
-						  PKGREPOSITORYSUBDIR, 
-						  pkg, pkgnm, 
+						  arch,
+						  PKGREPOSITORYSUBDIR,
+						  pkg, pkgnm,
 						  OPSYS, release);
 				}
 				FS = oldfs;
@@ -424,13 +424,13 @@ END {
 				if (homepage[toppkg] == "") {
 					gsub(/%%HOMEPAGE%%/, "");
 				} else {
-					gsub(/%%HOMEPAGE%%/, 
+					gsub(/%%HOMEPAGE%%/,
 					     "<p>This package has a home page at <a HREF=\"" homepage[toppkg] "\">" homepage[toppkg] "</a>.</p>");
 				}
 				if (license[toppkg] == "") {
 					gsub(/%%LICENSE%%/, "");
 				} else {
-					gsub(/%%LICENSE%%/, 
+					gsub(/%%LICENSE%%/,
 					     "<p>Please note that this package has a " license[toppkg] " license.</p>");
 				}
 				gsub(/%%VULNERABILITIES%%/, ""vul"");
@@ -489,36 +489,36 @@ END {
 			while((getline < cat_make) > 0){
 				if ($0 ~ /^[ \t]*SUBDIR.*=[^\$]*$/) {
 					pkg = $0;
-					gsub(/^[ \t]*SUBDIR.*=[ \t]*/, "", 
+					gsub(/^[ \t]*SUBDIR.*=[ \t]*/, "",
 					     pkg);
 					dir = category"/"pkg;
 					numpkg++;
 					tot_numpkg++;
 					if (debug) {
-					  printf("\tAdding %s (%s : %s)\n", 
+					  printf("\tAdding %s (%s : %s)\n",
 						 dir,
-						 pkgdir2name[dir], 
+						 pkgdir2name[dir],
 						 comment[dir]);
 					}
 					pkgs =  sprintf("%s<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
 							pkgs, pkg, readme_name,
-							pkgdir2name[dir], 
+							pkgdir2name[dir],
 							comment[dir]);
 					allpkg[tot_numpkg] =  sprintf("<!-- %s (for sorting) --><TR VALIGN=TOP><TD><a href=\"%s/%s/%s\">%s</a>: <TD>(<a href=\"%s/%s\">%s</a>) <td>%s\n",
 								      pkgdir2name[dir],
-								      category, pkg, 
+								      category, pkg,
 								      readme_name,
-								      pkgdir2name[dir], 
+								      pkgdir2name[dir],
 								      category,
-								      readme_name, 
+								      readme_name,
 								      category,
 								      comment[dir]);
-# we need slightly fewer escapes here since we are not gsub()-ing 
+# we need slightly fewer escapes here since we are not gsub()-ing
 # allpkg[] into the output files but just printf()-ing it.
 					gsub(/\\&/, "\\&", allpkg[tot_numpkg]);
 				} else if ($0 ~ /^[ \t]*COMMENT/) {
 					descr = $0;
-					gsub(/^[ \t]*COMMENT.*=[ \t]*/, "", 
+					gsub(/^[ \t]*COMMENT.*=[ \t]*/, "",
 					     descr);
 				}
 			}
@@ -533,10 +533,10 @@ END {
 			close(readme);
 			close(templatefile);
 			copy_readme(readmenew, readme);
-   
+  
 			gsub(/href=\"/, "href=\""category"/", pkgs);
 			allcat = sprintf("%s<TR><TD VALIGN=TOP><a href=\"%s/%s\">%s</a>: %s<TD>\n",
-					 allcat, category, readme_name, 
+					 allcat, category, readme_name,
 					 category, descr);
 			close(cat_make);
 		}
@@ -595,7 +595,7 @@ END {
 
 	close("/dev/stderr");
 	exit 0;
-} 
+}
 
 function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 # pkg is the package directory, like math/scilab
@@ -624,7 +624,7 @@ function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 				  pkg, topdep, alldepends[pkg]);
 		return(alldepends[pkg]);
 	}
-    
+   
 # recursively gather depends that each of the depends has
 	pkgreg = reg2str(pkg);
 	split(topdep, deps);
@@ -648,7 +648,7 @@ function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 # deps[i].
 		if (alldepends[pkg] !~ reg2str(deps[i])){
 		  alldepends[pkg] = alldepends[pkg] " " deps[i] " " find_all_depends(depdir, type);
-		} 
+		}
 		else {
 		  if (debug) printf("\t%s is already listed in %s\n",
 				    deps[i], alldepends[pkg]);
@@ -660,7 +660,7 @@ function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 	if (debug) printf("\tcalling uniq() on alldepends[%s] = %s\n",
 			  pkg, alldepends[pkg]);
 	alldepends[pkg] = uniq(alldepends[pkg]);
-	if (debug) printf("\tuniq() output alldepends[%s] = %s\n", 
+	if (debug) printf("\tuniq() output alldepends[%s] = %s\n",
 			  pkg, alldepends[pkg]);
 	return(alldepends[pkg]);	
 }
@@ -694,10 +694,10 @@ function fulldir2pkgdir(d, i){
 # take the depends lists and uniq them.
 #
 function uniq(list, deps, i, ulist){
-    
+   
 # split out the depends
 	split(list, deps);
-    
+   
 	i = 1;
 	ulist = " ";
 	while (i in deps){
@@ -744,7 +744,7 @@ function copy_readme(old, new, cmd, rc) {
 		printf("**** ------- ****\n") > "/dev/stderr";
 	}
 
-#	Compare the existing README.html file to the one we created.  If they are 
+#	Compare the existing README.html file to the one we created.  If they are
 #	not the same, then copy over the one we created
 
 	cmd = " if ! cmp -s "new" "old" ; then mv -f " new " " old " ; fi";

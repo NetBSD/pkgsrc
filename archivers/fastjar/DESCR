@@ -4,11 +4,11 @@ than the stock 'jar' program running without a JIT.  Currently,
 the author is working on adding all the features present in the sun
 utility.  At the moment, implemented features are:
 
-	* Archive creation 
-	* Verbose/quiet output 
-	* stdout vs. file output 
-	* Manifest file support 
-	* Deflation or storage 
+	* Archive creation
+	* Verbose/quiet output
+	* stdout vs. file output
+	* Manifest file support
+	* Deflation or storage
 	* Changing to a dir and adding files (-C)
-	* Archive content listing (-t) 
-	* Archive extraction (-x) 
+	* Archive content listing (-t)
+	* Archive extraction (-x)

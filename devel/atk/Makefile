@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/05/02 11:54:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/05/06 17:40:48 jmmv Exp $
 #
 
 DISTNAME=		atk-1.2.2
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/atk.pc.in
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir="${LOCALBASE}/share/doc/html"
 
-# glib-mkenums overflows a 2048kb stack on atkobject.h 
+# glib-mkenums overflows a 2048kb stack on atkobject.h
 UNLIMIT_RESOURCES=	stacksize
 
 .include "../../devel/glib2/buildlink2.mk"

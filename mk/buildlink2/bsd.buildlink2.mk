@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.83 2003/05/02 08:32:26 agc Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.84 2003/05/06 17:42:02 jmmv Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -388,7 +388,7 @@ _BLNK_CHECK_IS_TEXT_FILE?= \
 #
 # BUILDLINK_SUBST_MESSAGE.<package>	message to display, noting what is
 #					being substituted
-#                                       
+#                                      
 # BUILDLINK_SUBST_FILES.<package>	files on which to run the substitution;
 #					these are relative to ${WRKSRC}
 #
@@ -496,7 +496,7 @@ pkglocaledir-buildlink-subst: _BUILDLINK_SUBST_USE
 BUILDLINK_FAKE_LA=	${TRUE}
 .else
 #
-# Create a fake libtool archive $$lafile that uses the shared libraries 
+# Create a fake libtool archive $$lafile that uses the shared libraries
 # named in $$libpattern.
 #
 BUILDLINK_FAKE_LA=							\

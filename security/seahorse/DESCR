@@ -5,6 +5,6 @@ has.  Seahorse is also a keymanager, which can be used to edit almost
 all the properties of the keys stored in your keyrings.
 
 Seahorse currently consists of two projects.  Along with Seahorse
-itself, a bonobo component called Seahorse-bonobo is being developed. 
+itself, a bonobo component called Seahorse-bonobo is being developed.
 This bonobo component will serve as a backend to Seahorse, as the most
 gnupg common functions are being implemented in it.

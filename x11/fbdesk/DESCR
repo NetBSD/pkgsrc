@@ -1,4 +1,4 @@
-FbDesk is a fluxbox-util application that creates and manage icons on your 
+FbDesk is a fluxbox-util application that creates and manage icons on your
 Fluxbox desktop. Features:
 
 *  XPM and PNG image loading
@@ -7,4 +7,4 @@ Fluxbox desktop. Features:
 * Vertical text
 * Grid Snapping
 * GUI for editing command/label and add/remove icons
-* Fluxbox menu style 
+* Fluxbox menu style

@@ -19,6 +19,6 @@ it, producing a Verilog program that logically describes the
 design. This use useful for moving old designs to new tools.
 
 Please note that this package is a development snapshot and while it contains
-the latest and greatest features, it may be buggy as well.  When 
+the latest and greatest features, it may be buggy as well.  When
 available there will be a seperate ipal package which will be made of
 the stable releases.

@@ -1,4 +1,4 @@
-thttpd is a simple, small, portable, fast, and secure HTTP server. 
+thttpd is a simple, small, portable, fast, and secure HTTP server.
 
 Simple: It handles only the minimum necessary to implement HTTP/1.1.
 

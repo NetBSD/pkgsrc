@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/01/12 14:04:57 tron Exp $
+$NetBSD: MESSAGE,v 1.5 2003/05/06 17:40:46 jmmv Exp $
 
 Do *not* edit "${PREFIX}/share/phpmyadmin/config.inc.php" to customize
 this package because it is a link which will removed during upgrades.
@@ -7,12 +7,12 @@ The actual configuration file is "${PMCONFFILE}".
 
 You will need to make phpMyAdmin accessible through your HTTP server.
 If you are running Apache and ap-php, then you may either symlink
-        
+       
 	${PMDIR}
 
-into DocumentRoot, or copy 
+into DocumentRoot, or copy
 
-	${EXDIR}/phpmyadmin.conf 
+	${EXDIR}/phpmyadmin.conf
 
 to ${PKG_SYSCONFDIR}/httpd and add the following line to httpd.conf:
 

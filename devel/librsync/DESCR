@@ -8,4 +8,4 @@ the two files to calculate the delta.  Instead, it requires a set of
 checksums of each block of one file, which together form a signature
 for that file.  Blocks at any point in the other file which have the
 same checksum are likely to be identical, and whatever remains is the
-difference. 
+difference.

@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: chkdatabase.awk,v 1.1 2003/01/04 21:03:08 dmcmahill Exp $
+# $NetBSD: chkdatabase.awk,v 1.2 2003/05/06 17:42:04 jmmv Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -60,10 +60,10 @@ BEGIN {
 #build_depends /usr/pkgsrc/math/scilab libtool-base>=1.4.20010614nb9:../../devel/libtool-base
 #
   pkg = $2;
-  
+ 
 # mark this package as having its depencencies listed
   depended_pkgs[pkg] = 1;
-  
+ 
 # now go through the dependency lists and pull out all pkg directories that
 # we will need to examine to ensure they have been depended.
   for(i=3; i<=NF; i++) {
@@ -82,10 +82,10 @@ BEGIN {
       printf("\tpkgpat = %s\n",pkgpat) > "/dev/stderr";
       printf("\tpkgdir = %s\n",pkgdir) > "/dev/stderr";
     }
-    
+   
 # mark this package directory as being one which is depended upon
     depended_on_pkgs[pkgdir] = 1;
-    
+   
   }
   next;
 }
@@ -103,13 +103,13 @@ END {
       i++;
     }
   }
-  
+ 
   i=0;
   while(i in not_depended) {
     printf("%s\n",not_depended[i]);
     i++;
   }
   close("/dev/stderr");
-  
+ 
   exit(0);
 }

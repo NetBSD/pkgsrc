@@ -1,5 +1,5 @@
 Pmw is a toolkit for building high-level compound widgets in Python
-using the Tkinter module. 
+using the Tkinter module.
 
 It consists of a set of base classes and a library of flexible and
 extensible megawidgets built on this foundation. These megawidgets

@@ -9,13 +9,13 @@ This font set can be used for typesetting most of (La)TeX documents:
 - printing documents on a PostScript printer
   by using, for example, Rokiki's DVIPS;
 
-- printing documents on a wide set of matrix printers 
+- printing documents on a wide set of matrix printers
   by using DVIPS and GhostScript.
 
 - drawing slides on vector plotters by using PostScript 'plot.ps' program
   which is supplied with the collection.
-  For drawing documents on HPGL plotters, the 'ps2hpgl' utility can be used. 
-  It is available in 'ftp.mathworks.com' host 
+  For drawing documents on HPGL plotters, the 'ps2hpgl' utility can be used.
+  It is available in 'ftp.mathworks.com' host
   in the '/pub/contrib/tools' directory.
 
 - displaing documents under MS Windows by using TrueType version of

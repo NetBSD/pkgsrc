@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.14 2003/05/05 14:23:09 cjep Exp $
+$NetBSD: README,v 1.15 2003/05/06 17:40:18 jmmv Exp $
 
 Welcome to the NetBSD Packages Collection
 =========================================
@@ -13,7 +13,7 @@ NetBSD, and build it.  Any prerequisite software will also be built
 and installed for you.  Installation and de-installation of software
 is managed by the packaging utilities.
 
-The packages collection is made into a tar_file every week: 
+The packages collection is made into a tar_file every week:
 
 	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-current/tar_files/pkgsrc.tar.gz
 
@@ -69,7 +69,7 @@ You can also search for particular packages or keywords via
 "make search key=<somekeyword>".
 
 It is also possible to use the packaging software to install
-pre-compiled binary packages by typing "pkg_add <URL-of-binary-pkg>". 
+pre-compiled binary packages by typing "pkg_add <URL-of-binary-pkg>".
 To see what binary packages are available, see:
 
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/<release>/<arch>/All/

@@ -3,5 +3,5 @@ for the Perl Language. The DBI API Specification defines a set
 of functions, variables and conventions that provide a consistent
 database interface independant of the actual database being used.
 
-The Apache-DBI-LogConfig module redirects the apache logs into a 
+The Apache-DBI-LogConfig module redirects the apache logs into a
 database table.

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2001/10/31 22:11:11 zuntum Exp $
+# $NetBSD: INSTALL,v 1.2 2003/05/06 17:43:10 jmmv Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -31,7 +31,7 @@ POST-INSTALL)
 	else
 		${ECHO} -n "Creating ${HOSTDEF}..."
 		if [ -f ${X11_HOSTDEF} ]
-		then 
+		then
 			${CP} -f ${X11_HOSTDEF} ${HOSTDEF}.bak
 		else
 			${CP} -f /dev/null ${HOSTDEF}.bak

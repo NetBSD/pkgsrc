@@ -6,7 +6,7 @@ This package provides four sample theme engines for GTK+:
  Metal: A fairly complete theme engine that looks like the
    Java-Metal look of Swing.
 
- Redmond95: A simple theme engine that looks a bit like 
+ Redmond95: A simple theme engine that looks a bit like
    Microsoft Windows95.
 
  Notif: A simple Motif-look-alike theme

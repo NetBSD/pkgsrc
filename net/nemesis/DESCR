@@ -1,5 +1,5 @@
 
-nemesis is a command-line UNIX network packet injection suite. 
+nemesis is a command-line UNIX network packet injection suite.
 
 supported protocols: TCP, UDP, ICMP, ARP/RARP, IGMP, DNS,
                      RIP, and OSPF

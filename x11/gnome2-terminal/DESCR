@@ -4,13 +4,13 @@ finished at all.  See TODO for more information.
 How it works
 ===
 
-Profiles - 
+Profiles -
   all settings are stored in profiles. prefs dialog edits the current
   profile
 
-Session - 
+Session -
   just the number of open windows/tabs and their profile is stored
   per-session
- 
-Command line options - 
+
+Command line options -
   do not overlap things that are preferences

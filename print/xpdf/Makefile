@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.17 2003/03/25 14:02:37 salo Exp $
-# 
+# $NetBSD: Makefile,v 1.18 2003/05/06 17:42:29 jmmv Exp $
+#
 
 DISTNAME=	xpdf-2.02
 CATEGORIES=	print

@@ -7,9 +7,9 @@ platforms. The library provides:
 - Collation (language-sensitive)
 - Date & time formatting
 - Locales (140+ supported)
-- Message catalogs (resources) 
-- Message formatting 
-- Normalization 
+- Message catalogs (resources)
+- Message formatting
+- Normalization
 - Number & currency formatting
 - Time zones
 - Transliteration

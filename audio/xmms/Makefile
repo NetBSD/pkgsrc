@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/05/02 11:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2003/05/06 17:40:30 jmmv Exp $
 #
 
 DISTNAME=	xmms-1.2.7
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-gnome
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/libxmms/libtool
 
-# Broken configure script assumes that iconv_open lives in libc; work around.  
+# Broken configure script assumes that iconv_open lives in libc; work around. 
 CPPFLAGS+=		-DHAVE_ICONV_OPEN=1
 CONFIGURE_ENV+=		ac_cv_func_iconv_open=yes
 LIBS+=			-liconv

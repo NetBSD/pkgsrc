@@ -3,4 +3,4 @@ to Solaris, Linux, *BSD, AIX and probably other *NIX systems.
 
 This port consists of the introduction of autoconf support and
 replacement of OpenBSD library functions that are (regrettably)
-absent from other unices. 
+absent from other unices.

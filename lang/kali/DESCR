@@ -13,10 +13,10 @@ message-based distributed framework that allows any Scheme object
 of the applications and implementation techniques we have looked
 at using Kali Scheme include:
 
-	User-level load balancing and migration. 
-	Incremental distributed linking of code objects. 
-	Parameterized client-server applications. 
-	Long-lived parallel computations. 
-	Distributed data mining. 
+	User-level load balancing and migration.
+	Incremental distributed linking of code objects.
+	Parameterized client-server applications.
+	Long-lived parallel computations.
+	Distributed data mining.
 	Executable content in messages over wide-area networks
-	(e.g. the World-Wide Web) 
+	(e.g. the World-Wide Web)

@@ -1,5 +1,5 @@
 Cocoon is a 100% pure Java publishing framework that relies on new W3C
-technologies (such as DOM, XML, and XSL) to provide web content. 
+technologies (such as DOM, XML, and XSL) to provide web content.
 
 There is a good overview of the technologies Cocoon uses to streamline
 the web publishing process at

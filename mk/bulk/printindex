@@ -1,12 +1,12 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.10 2002/08/22 08:21:31 jlam Exp $
+# $NetBSD: printindex,v 1.11 2003/05/06 17:42:04 jmmv Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
-# by 
+# by
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -78,7 +78,7 @@ do
 		fi
 		echo "$pkgdir          $pkgname "
 	fi
-	cd $cwd 
+	cd $cwd
 done
 
 # get the list of packages which should always be installed during the build
@@ -105,7 +105,7 @@ do
 				#exit 1
 			fi
 			echo "$pkgdir          $pkgname "
-			cd $cwd 
+			cd $cwd
 			;;
 	esac
 done
