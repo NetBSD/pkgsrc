@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 1999/06/29 23:13:39 tron Exp $
+$NetBSD: patch-ab,v 1.2 1999/12/08 08:18:25 rh Exp $
 
---- lib-src/Makefile.in.in.orig	Sun Oct 12 03:39:30 1997
-+++ lib-src/Makefile.in.in	Wed Feb 25 01:34:51 1998
-@@ -186,7 +186,7 @@
+--- lib-src/Makefile.in.in.orig	Mon Jun 14 08:32:00 1999
++++ lib-src/Makefile.in.in	Wed Dec  8 09:14:11 1999
+@@ -192,7 +192,7 @@
  
  ## Install the internal utilities.  Until they are installed, we can
  ## just run them directly from lib-src.
@@ -10,10 +10,10 @@ $NetBSD: patch-ab,v 1.1 1999/06/29 23:13:39 tron Exp $
 +install-archlibdir: all
  	@echo; echo "Installing utilities run internally by XEmacs."
  	./make-path ${archlibdir}
- 	if test `(cd ${archlibdir} && $(pwd))` != `$(pwd)`; then \
-@@ -197,19 +197,29 @@
- 	if test `(cd ${archlibdir} && $(pwd))` \
- 	     != `(cd ${srcdir}     && $(pwd))`; then \
+ 	if test "`(cd ${archlibdir} && $(pwd))`" != "`$(pwd)`"; then \
+@@ -203,19 +203,29 @@
+ 	if test "`(cd ${archlibdir} && $(pwd))`" \
+ 	     != "`(cd ${srcdir}     && $(pwd))`"; then \
  	  for f in ${SCRIPTS}; do \
 -	    (cd .. && $(INSTALL_PROGRAM) ${srcdir}/$$f ${archlibdir}/$$f); \
 +	    (cd .. && $(INSTALL_SCRIPT) ${srcdir}/$$f ${archlibdir}/$$f); \
@@ -26,12 +26,11 @@ $NetBSD: patch-ab,v 1.1 1999/06/29 23:13:39 tron Exp $
 +install: install-archlibdir
  	@echo; echo "Installing utilities for users to run."
  	for file in ${INSTALLABLES} ; do \
--	  (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/$${file}) ; \
 +	  if [ $${file} = etags ] || [ $${file} = ctags ] || [ $${file} = b2m ] ; \
 +	  then \
 +	    (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/xemacs-$${file}) ; \
 +	  else \
-+	    (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/$${file}) ; \
+ 	  (cd .. && $(INSTALL_PROGRAM) lib-src/$${file} ${bindir}/$${file}) ; \
 +	  fi \
  	done
  	for file in ${INSTALLABLE_SCRIPTS} ; do \
