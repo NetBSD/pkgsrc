@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.174 2001/02/24 16:59:50 sakamoto Exp $
+# $NetBSD: mk.conf.example,v 1.175 2001/02/26 18:09:41 lukem Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -617,11 +617,11 @@ PAPERSIZE=	A4
 # Possible: A4, Letter, Letterdj.
 # Default: none
 
-#PGGROUP=	ingres
+#PGGROUP=	pgsql
 # Used in postgresql package as the groupname of the database
 # administrator
 # Possible: any group name
-# Default: ingres
+# Default: pgsql
 
 #PGUSER=	pgsql
 # Used in postgresql package as the username of the database admin
