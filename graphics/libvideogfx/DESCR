@@ -4,7 +4,7 @@ by providing high-level classes for commonly required tasks. The library
 comprises support for:
 
     basic image data classes
-    color-space convertion for RGB, YUV, HSV
+    color-space conversion for RGB, YUV, HSV
     drawing primitives (lines, circles, ...)
     image manipulation (scaling, pixel-ops, convolution)
     file-IO (ppm, yuv, jpeg, png, mpeg, V4L-grabbing)
