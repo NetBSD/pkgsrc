@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/11/14 14:47:57 agc Exp $
+# $NetBSD: Makefile,v 1.10 2002/01/14 15:30:44 jwise Exp $
 
 DISTNAME=	ApacheJSSI-1.1.2
 PKGNAME=	jssi-1.1.2
@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/ApacheJSSI-1.1.2/src/java
 MAKE_ENV+=	CLASSPATH=${CLASSPATH}
 
 post-build:
-	(cd ${WRKSRC}/../../docs && CLASSPATH=${CLASSPATH} ${SH} generate_javadoc)
+	(cd ${WRKSRC}/../../docs && ${SETENV} ${SCRIPTS_ENV} ${SH} generate_javadoc)
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/ApacheJSSI.jar ${PREFIX}/lib/java/ApacheJSSI.jar
