@@ -1,36 +1,39 @@
-# $NetBSD: Makefile,v 1.14 2004/02/10 02:22:50 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/21 14:45:22 jlam Exp $
 
 PKGNAME=	courier-maildirmake-${BASE_VERS}
-PKGREVISION?=	1
 COMMENT=	Courier Maildir utilities
-
-PERL5_REQD+=	5.6.0
-USE_PERL5=	build
-REPLACE_PERL=	sysconftool
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
-.include "../../mail/courier-auth/Makefile.common"
+.include "../courier-auth/Makefile.common"
 
+# WRKSRC_FILES is copied from ../courier-auth/Makefile.authdaemond.
 WRKSRC_FILES=		config.guess config.sub configure		\
-			install-sh mkinstalldirs
-WRKSRC_FILES+=		dbobj.h.in dbobj.config.in sysconftool
-WRKSRC_SUBDIRS=		bdbobj gdbmobj numlib unicode rfc822
+			install-sh mkinstalldirs			\
+			depcomp missing sysconftool
+WRKSRC_FILES+=		Makefile.in courier.spec.in courier.sysvinit.in	\
+			dbobj.h.in dbobj.config.in courier/courier.c
+
+# These are subdirectories of courier that build auxiliary libraries
+# used by courier-maildirmake.
+#
+WRKSRC_SUBDIRS=		bdbobj gdbmobj numlib liblock unicode rfc822
+
+# These are the parts of courier that we will be building and installing.
 WRKSRC_SUBDIRS+=	maildir
 
 EXTRACT_ELEMENTS=	${WRKSRC_FILES:S/^/${DISTNAME}\//}
 EXTRACT_ELEMENTS+=	${WRKSRC_SUBDIRS:S/^/${DISTNAME}\//}
 
 BUILD_DIRS=		${WRKSRC_SUBDIRS:S/^/${WRKSRC}\//}
+INSTALL_DIRS=		${WRKSRC}/maildir
 
 .if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL:M-s)
 INSTALL_TARGET=		install-strip
 .endif
 
-CONF_FILES=		${EGDIR}/quotawarnmsg ${PKG_SYSCONFDIR}/quotawarnmsg
-
-pre-configure: configure-init
+CONF_FILES=	${EGDIR}/quotawarnmsg ${PKG_SYSCONFDIR}/quotawarnmsg
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -41,5 +44,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/maildir/README.sharedfolders.txt	\
 		${DOCDIR}/README.sharedfolders
 
-.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

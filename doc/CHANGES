@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4941 2004/02/21 14:43:18 jlam Exp $
+$NetBSD: CHANGES,v 1.4942 2004/02/21 14:45:25 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -959,3 +959,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated courier-authldap to 0.44.2 [jlam 2004-02-21]
 	Updated courier-authmysql to 0.44.2 [jlam 2004-02-21]
 	Updated courier-authpgsql to 0.44.2 [jlam 2004-02-21]
+	Updated courier-maildirmake to 0.44.2 [jlam 2004-02-21]
