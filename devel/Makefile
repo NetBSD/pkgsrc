@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.520 2004/07/24 08:46:46 recht Exp $
+# $NetBSD: Makefile,v 1.521 2004/07/30 13:00:59 cube Exp $
 #
 
 COMMENT=	Development utilities
@@ -346,6 +346,7 @@ SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
 SUBDIR+=	p5-Module-Build
 SUBDIR+=	p5-Module-Dependency
+SUBDIR+=	p5-Module-Versions-Report
 SUBDIR+=	p5-Net-CIDR
 SUBDIR+=	p5-Net-Netmask
 SUBDIR+=	p5-OLE-Storage_Lite
@@ -371,6 +372,7 @@ SUBDIR+=	p5-Test-Harness
 SUBDIR+=	p5-Test-Inline
 SUBDIR+=	p5-Test-Simple
 SUBDIR+=	p5-Test-Unit
+SUBDIR+=	p5-Tree-Simple
 SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-WeakRef
 SUBDIR+=	p5-gettext
