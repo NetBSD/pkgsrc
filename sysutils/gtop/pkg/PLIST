@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/01 22:52:28 tron Exp $
+bin/gtop
+share/gnome/apps/Utilities/gtop.desktop
+share/gtoprc
