@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/08/25 21:51:49 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2002/10/30 10:37:35 seb Exp $
 #
 
 DISTNAME=		mod_perl-1.25
@@ -25,15 +25,12 @@ MAKE_PARAMS+=		USE_APXS=1
 MAKE_PARAMS+=		WITH_APXS=${APXS}
 MAKE_PARAMS+=		EVERYTHING=1
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
-
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/manual/mod
 	${INSTALL_DATA} ${WRKSRC}/htdocs/manual/mod/mod_perl.html \
 		${PREFIX}/share/httpd/htdocs/manual/mod
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../www/apache/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
