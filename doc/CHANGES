@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9336 2005/02/27 12:38:27 adam Exp $
+$NetBSD: CHANGES,v 1.9337 2005/02/27 12:54:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1170,3 +1170,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bidwatcher to 1.3.17nb1 [rillig 2005-02-27]
 	Updated transcode to 0.6.12nb4 [veego 2005-02-27]
 	Updated ImageMagick to 6.2.0-2 [adam 2005-02-27]
+	Updated libgnomecups to 0.1.14 [jmmv 2005-02-27]
