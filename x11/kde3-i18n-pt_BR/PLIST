@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/20 14:38:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/06/10 13:31:36 markd Exp $
 share/doc/kde/HTML/pt_BR/artsbuilder/digitalaudio.docbook
 share/doc/kde/HTML/pt_BR/artsbuilder/midiintro.docbook
 share/doc/kde/HTML/pt_BR/artsbuilder/porting.docbook
@@ -785,6 +785,10 @@ share/kde/locale/pt_BR/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kmid.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kmidi.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kmilo_generic.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kmilo_kvaio.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kmilo_powerbook.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kmilod.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kmines.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/pt_BR/LC_MESSAGES/kmix.mo

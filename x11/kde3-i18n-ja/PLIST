@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/20 14:38:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/06/10 13:31:36 markd Exp $
 share/doc/kde/HTML/ja/common/1.png
 share/doc/kde/HTML/ja/common/10.png
 share/doc/kde/HTML/ja/common/2.png
@@ -465,6 +465,7 @@ share/kde/locale/ja/LC_MESSAGES/kghostview.mo
 share/kde/locale/ja/LC_MESSAGES/kgoldrunner.mo
 share/kde/locale/ja/LC_MESSAGES/kgpg.mo
 share/kde/locale/ja/LC_MESSAGES/kgpgcertmanager.mo
+share/kde/locale/ja/LC_MESSAGES/kgreet_classic.mo
 share/kde/locale/ja/LC_MESSAGES/khangman.mo
 share/kde/locale/ja/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/ja/LC_MESSAGES/khexedit.mo

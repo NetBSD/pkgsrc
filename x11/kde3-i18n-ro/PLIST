@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/20 14:38:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/06/10 13:31:36 markd Exp $
 share/doc/kde/HTML/ro/common/1.png
 share/doc/kde/HTML/ro/common/10.png
 share/doc/kde/HTML/ro/common/2.png
@@ -91,22 +91,47 @@ share/doc/kde/HTML/ro/khelpcenter/visualdict/pict8.png
 share/doc/kde/HTML/ro/khelpcenter/visualdict/pict9.png
 share/doc/kde/HTML/ro/khelpcenter/welcome.docbook
 share/doc/kde/HTML/ro/khelpcenter/whatiskde.docbook
+share/doc/kde/HTML/ro/kioslave/bzip.docbook
+share/doc/kde/HTML/ro/kioslave/bzip2.docbook
 share/doc/kde/HTML/ro/kioslave/cgi.docbook
+share/doc/kde/HTML/ro/kioslave/data.docbook
 share/doc/kde/HTML/ro/kioslave/file.docbook
+share/doc/kde/HTML/ro/kioslave/imaps.docbook
+share/doc/kde/HTML/ro/kioslave/ldap.docbook
+share/doc/kde/HTML/ro/kioslave/mrml.docbook
+share/doc/kde/HTML/ro/kioslave/nntp.docbook
+share/doc/kde/HTML/ro/kioslave/pop3.docbook
+share/doc/kde/HTML/ro/kioslave/pop3s.docbook
+share/doc/kde/HTML/ro/kioslave/rlan.docbook
+share/doc/kde/HTML/ro/kioslave/rlogin.docbook
+share/doc/kde/HTML/ro/kioslave/sftp.docbook
+share/doc/kde/HTML/ro/kioslave/smtp.docbook
+share/doc/kde/HTML/ro/kioslave/tar.docbook
+share/doc/kde/HTML/ro/kioslave/telnet.docbook
+share/doc/kde/HTML/ro/kioslave/webdavs.docbook
+share/doc/kde/kinfocenter/common
+share/doc/kde/kinfocenter/index.cache.bz2
+share/doc/kde/kinfocenter/index.docbook
 share/kde/apps/ktuberling/sounds/ro/ceas.wav
 share/kde/apps/ktuberling/sounds/ro/cercel.wav
+share/kde/apps/ktuberling/sounds/ro/colier.wav
+share/kde/apps/ktuberling/sounds/ro/corn.wav
+share/kde/apps/ktuberling/sounds/ro/cravata.wav
+share/kde/apps/ktuberling/sounds/ro/domnul-cartof.wav
+share/kde/apps/ktuberling/sounds/ro/fular.wav
 share/kde/apps/ktuberling/sounds/ro/gura.wav
 share/kde/apps/ktuberling/sounds/ro/insigna.wav
 share/kde/apps/ktuberling/sounds/ro/mustata.wav
 share/kde/apps/ktuberling/sounds/ro/nas.wav
+share/kde/apps/ktuberling/sounds/ro/ochelari-de-soare.wav
 share/kde/apps/ktuberling/sounds/ro/ochelari.wav
-share/kde/apps/ktuberling/sounds/ro/ochelaridesoare.wav
 share/kde/apps/ktuberling/sounds/ro/ochi.wav
 share/kde/apps/ktuberling/sounds/ro/palarie.wav
 share/kde/apps/ktuberling/sounds/ro/papion.wav
+share/kde/apps/ktuberling/sounds/ro/par.wav
+share/kde/apps/ktuberling/sounds/ro/pinguin.wav
 share/kde/apps/ktuberling/sounds/ro/sprinceana.wav
 share/kde/apps/ktuberling/sounds/ro/tigara.wav
-share/kde/apps/ktuberling/sounds/ro/tuberling.wav
 share/kde/apps/ktuberling/sounds/ro/ureche.wav
 share/kde/locale/ro/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/ro/LC_MESSAGES/alsaplayerui.mo
@@ -413,6 +438,7 @@ share/kde/locale/ro/LC_MESSAGES/kmidi.mo
 share/kde/locale/ro/LC_MESSAGES/kmilo_generic.mo
 share/kde/locale/ro/LC_MESSAGES/kmilo_kvaio.mo
 share/kde/locale/ro/LC_MESSAGES/kmilo_powerbook.mo
+share/kde/locale/ro/LC_MESSAGES/kmilod.mo
 share/kde/locale/ro/LC_MESSAGES/kmines.mo
 share/kde/locale/ro/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/ro/LC_MESSAGES/kmix.mo
@@ -430,6 +456,7 @@ share/kde/locale/ro/LC_MESSAGES/knotify.mo
 share/kde/locale/ro/LC_MESSAGES/kodo.mo
 share/kde/locale/ro/LC_MESSAGES/kolf.mo
 share/kde/locale/ro/LC_MESSAGES/kolourpicker.mo
+share/kde/locale/ro/LC_MESSAGES/kommander.mo
 share/kde/locale/ro/LC_MESSAGES/kompare.mo
 share/kde/locale/ro/LC_MESSAGES/konq_smbmounterplugin.mo
 share/kde/locale/ro/LC_MESSAGES/konqsidebar_mediaplayer.mo
@@ -607,8 +634,10 @@ share/kde/locale/ro/flag.png
 @comment dirrm share/kde/locale/ro
 @dirrm share/kde/apps/ktuberling/sounds/ro
 @comment dirrm share/kde/apps/ktuberling/sounds
+@dirrm share/doc/kde/kinfocenter
 @dirrm share/doc/kde/HTML/ro/kioslave
 @dirrm share/doc/kde/HTML/ro/khelpcenter/visualdict
 @dirrm share/doc/kde/HTML/ro/khelpcenter
 @comment dirrm share/doc/kde/HTML/ro/common
 @comment dirrm share/doc/kde/HTML/ro
+@comment dirrm share/doc/kde

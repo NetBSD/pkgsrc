@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/20 14:38:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/06/10 13:31:36 markd Exp $
 share/kde/locale/pl/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/pl/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/pl/LC_MESSAGES/amor.mo
@@ -131,6 +131,7 @@ share/kde/locale/pl/LC_MESSAGES/kcmkontactnt.mo
 share/kde/locale/pl/LC_MESSAGES/kcmktalkd.mo
 share/kde/locale/pl/LC_MESSAGES/kcmkuick.mo
 share/kde/locale/pl/LC_MESSAGES/kcmkurifilt.mo
+share/kde/locale/pl/LC_MESSAGES/kcmkvaio.mo
 share/kde/locale/pl/LC_MESSAGES/kcmkwallet.mo
 share/kde/locale/pl/LC_MESSAGES/kcmkwindecoration.mo
 share/kde/locale/pl/LC_MESSAGES/kcmkwintheme.mo
@@ -298,6 +299,10 @@ share/kde/locale/pl/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/pl/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/pl/LC_MESSAGES/kmid.mo
 share/kde/locale/pl/LC_MESSAGES/kmidi.mo
+share/kde/locale/pl/LC_MESSAGES/kmilo_generic.mo
+share/kde/locale/pl/LC_MESSAGES/kmilo_kvaio.mo
+share/kde/locale/pl/LC_MESSAGES/kmilo_powerbook.mo
+share/kde/locale/pl/LC_MESSAGES/kmilod.mo
 share/kde/locale/pl/LC_MESSAGES/kmines.mo
 share/kde/locale/pl/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/pl/LC_MESSAGES/kmix.mo
@@ -315,6 +320,7 @@ share/kde/locale/pl/LC_MESSAGES/knotify.mo
 share/kde/locale/pl/LC_MESSAGES/kodo.mo
 share/kde/locale/pl/LC_MESSAGES/kolf.mo
 share/kde/locale/pl/LC_MESSAGES/kolourpicker.mo
+share/kde/locale/pl/LC_MESSAGES/kommander.mo
 share/kde/locale/pl/LC_MESSAGES/kompare.mo
 share/kde/locale/pl/LC_MESSAGES/konq_smbmounterplugin.mo
 share/kde/locale/pl/LC_MESSAGES/konqsidebar_mediaplayer.mo
@@ -460,6 +466,7 @@ share/kde/locale/pl/LC_MESSAGES/lyrics.mo
 share/kde/locale/pl/LC_MESSAGES/mediacontrol.mo
 share/kde/locale/pl/LC_MESSAGES/minitoolsplugin.mo
 share/kde/locale/pl/LC_MESSAGES/naughtyapplet.mo
+share/kde/locale/pl/LC_MESSAGES/nexscope.mo
 share/kde/locale/pl/LC_MESSAGES/noatun.mo
 share/kde/locale/pl/LC_MESSAGES/nsplugin.mo
 share/kde/locale/pl/LC_MESSAGES/passwords.mo
