@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/03/28 21:47:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/02 20:06:16 wiz Exp $
 #
 
 DISTNAME=	quanta-2.0-pr1
@@ -11,10 +11,10 @@ MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://quanta.sourceforge.net/
 COMMENT= 	HTML editor suitable for experienced web developers
 
+BUILD_USES_MSGFMT=	yes
 DEPENDS+=	kdebase>=2.1:../../x11/kdebase2
 
 USE_INTL=	yes
-BUILD_USES_MSGFMT=	yes
 WRKSRC=		${WRKDIR}/quanta
 
 .include "../../x11/kde2/Makefile.part2"

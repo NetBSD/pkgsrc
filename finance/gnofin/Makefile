@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/27 03:19:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/02 20:06:13 wiz Exp $
 #
 
 DISTNAME=       gnofin-0.8.4
@@ -10,7 +10,6 @@ HOMEPAGE=	http://gnofin.sourceforge.net/
 COMMENT=	Personal checking/savings account management program
 
 BUILD_USES_MSGFMT=	yes
-
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=	libxml>=1.8.10:../../textproc/libxml
