@@ -1,0 +1,21 @@
+$NetBSD: patch-bh,v 1.1 2004/07/26 17:22:40 dillo Exp $
+
+--- src/arch/unix/Makefile.in.orig	Fri May 14 15:24:41 2004
++++ src/arch/unix/Makefile.in
+@@ -253,6 +253,7 @@ libarch_a_SOURCES = \
+ 	icon.h \
+ 	joy.c \
+ 	joy.h \
++	joy_usb.c \
+ 	kbd.h \
+ 	mousedrv.c \
+ 	mousedrv.h \
+@@ -349,7 +349,7 @@ libarch_a_LIBADD =
+ am_libarch_a_OBJECTS = archdep.$(OBJEXT) blockdev.$(OBJEXT) \
+ 	c128ui.$(OBJEXT) c64ui.$(OBJEXT) catweaselmkiii.$(OBJEXT) \
+ 	cbm2ui.$(OBJEXT) console.$(OBJEXT) coproc.$(OBJEXT) \
+-	ffmpeglib.$(OBJEXT) joy.$(OBJEXT) mousedrv.$(OBJEXT) \
++	ffmpeglib.$(OBJEXT) joy.$(OBJEXT) joy_usb.$(OBJEXT) mousedrv.$(OBJEXT) \
+ 	petui.$(OBJEXT) plus4ui.$(OBJEXT) rs232.$(OBJEXT) ui.$(OBJEXT) \
+ 	uic64cart.$(OBJEXT) uicmdline.$(OBJEXT) uicommands.$(OBJEXT) \
+ 	uicrtc.$(OBJEXT) uidatasette.$(OBJEXT) uidrive.$(OBJEXT) \
