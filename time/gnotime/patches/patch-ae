@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
+$NetBSD: patch-ae,v 1.2 2005/03/16 12:48:49 rillig Exp $
 
---- src/journal.c.orig	Wed Nov 24 22:18:52 2004
-+++ src/journal.c	Wed Nov 24 22:26:45 2004
-@@ -195,11 +195,12 @@
+--- src/journal.c.orig	Sat May  8 18:14:49 2004
++++ src/journal.c	Wed Mar 16 11:03:07 2005
+@@ -197,11 +197,12 @@ remember_uri (Wiggy *wig, const char * f
  static void 
  save_to_gnomevfs (Wiggy *wig, const char * filename)
  {
@@ -17,7 +17,7 @@ $NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
  	gnome_vfs_uri_unref (parsed_uri);
  	if (exists)
  	{
-@@ -215,7 +216,6 @@
+@@ -217,7 +218,6 @@ save_to_gnomevfs (Wiggy *wig, const char
  	}
  		
  	/* Try to open the file for writing */
@@ -25,7 +25,61 @@ $NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
  	result = gnome_vfs_create (&wig->handle, filename, 
  	                     GNOME_VFS_OPEN_WRITE, FALSE, 0644);
  
-@@ -509,6 +509,7 @@
+@@ -392,12 +392,14 @@ interval_move_up_clicked_cb(GtkWidget * 
+ 	GttTask *tsk = gtt_interval_get_parent (wig->interval);
+ 	GttProject *prj = gtt_task_get_parent (tsk);
+ 	GList *tasks = gtt_project_get_tasks (prj);
++	GList *this_task, *prev_task;
++	GttTask *newtask;
+ 	if (!tasks) return;
+-	GList *this_task = g_list_find (tasks, tsk);
++	this_task = g_list_find (tasks, tsk);
+ 	if (!this_task) return;
+-	GList *prev_task = this_task->prev;
+-	if (!prev_task) return;
+-	GttTask *newtask = prev_task->data;
++	prev_task = this_task->prev;
++	if (!prev_task) return; /* FIXME: Memory leak */
++	newtask = prev_task->data;
+ 	gtt_task_append_interval (newtask, wig->interval);
+ }
+ 
+@@ -408,12 +410,14 @@ interval_move_down_clicked_cb(GtkWidget 
+ 	GttTask *tsk = gtt_interval_get_parent (wig->interval);
+ 	GttProject *prj = gtt_task_get_parent (tsk);
+ 	GList *tasks = gtt_project_get_tasks (prj);
++	GList *this_task, *next_task;
++	GttTask *newtask;
+ 	if (!tasks) return;
+-	GList *this_task = g_list_find (tasks, tsk);
++	this_task = g_list_find (tasks, tsk);
+ 	if (!this_task) return;
+-	GList *next_task = this_task->next;
++	next_task = this_task->next;
+ 	if (!next_task) return;
+-	GttTask *newtask = next_task->data;
++	newtask = next_task->data;
+ 	gtt_task_add_interval (newtask, wig->interval);
+ }
+ 
+@@ -461,6 +465,7 @@ interval_paste_memo_cb(GtkWidget * w, gp
+ static void
+ interval_popup_cb (Wiggy *wig)
+ {
++	GttTask *tsk;
+ 	gtk_menu_popup(GTK_MENU(wig->interval_popup), 
+ 		NULL, NULL, NULL, wig, 1, 0);
+ 	if (cutted_task_list)
+@@ -494,7 +499,7 @@ interval_popup_cb (Wiggy *wig)
+ 		gtk_widget_set_sensitive (wig->interval_move_down, FALSE);
+ 	}
+ 
+-	GttTask *tsk = gtt_interval_get_parent(wig->interval);
++	tsk = gtt_interval_get_parent(wig->interval);
+ 	if (gtt_task_is_first_task (tsk))
+ 	{
+ 		gtk_widget_set_sensitive (wig->interval_move_up, FALSE);
+@@ -558,6 +563,7 @@ task_edit_task_clicked_cb(GtkWidget * w,
  static void
  task_delete_memo_clicked_cb(GtkWidget * w, gpointer data) 
  {
@@ -33,7 +87,7 @@ $NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
  	Wiggy *wig = (Wiggy *) data;
  
  	/* It is physically impossible to cut just the memo, without
-@@ -517,7 +518,7 @@
+@@ -566,7 +572,7 @@ task_delete_memo_clicked_cb(GtkWidget * 
  
  	gtt_task_merge_up (wig->task);
  
@@ -42,7 +96,7 @@ $NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
  	gtt_task_remove (wig->task);
  	cutted_task_list = ctl;
  }
-@@ -697,10 +698,11 @@
+@@ -747,10 +753,11 @@ on_save_clicked_cb (GtkWidget *w, gpoint
  static void 
  on_close_clicked_cb (GtkWidget *w, gpointer data)
  {
@@ -55,7 +109,7 @@ $NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
  	wig->top = NULL;
  	gtk_widget_destroy (topper);
  
-@@ -786,19 +788,20 @@
+@@ -836,19 +843,20 @@ static void
  html_url_requested_cb(GtkHTML *doc, const gchar * url, 
                        GtkHTMLStream *handle, gpointer data) 
  {
@@ -81,7 +135,7 @@ $NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
  	result = gnome_vfs_read (vfs, buff, BSZ, &bytes_read);
  	while (GNOME_VFS_OK == result)
  	{
-@@ -859,8 +862,10 @@
+@@ -909,8 +917,10 @@ get_hover_msg (const gchar *url)
  		return msg;
  	}
  
@@ -92,7 +146,7 @@ $NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
  }
  
  static gint
-@@ -922,8 +927,13 @@
+@@ -972,8 +982,13 @@ html_on_url_cb(GtkHTML *doc, const gchar
  	/* Create and initialize the hover-help window */
  	if (!wig->hover_help_window)
  	{
@@ -107,7 +161,7 @@ $NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
  		gtk_window_set_decorated (wino, FALSE);
  		gtk_window_set_destroy_with_parent (wino, TRUE);
  		gtk_window_set_transient_for (wino, GTK_WINDOW(wig->top));
-@@ -931,19 +941,19 @@
+@@ -981,19 +996,19 @@ html_on_url_cb(GtkHTML *doc, const gchar
  		gtk_window_set_resizable (wino, FALSE);  /* FALSE to enable auto-resize */
  
  		/* There must be a better way to draw a line around the box ?? */
@@ -130,7 +184,7 @@ $NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
  		wig->hover_label = GTK_LABEL (label);
  		gtk_container_add(GTK_CONTAINER(align), label);
  		gtk_widget_show (label);
-@@ -952,7 +962,6 @@
+@@ -1002,7 +1017,6 @@ html_on_url_cb(GtkHTML *doc, const gchar
  		gtk_window_set_focus (GTK_WINDOW(wig->top), GTK_WIDGET(wig->html));
  
  		/* Set up in initial default, so later move works. */
@@ -138,7 +192,7 @@ $NetBSD: patch-ae,v 1.1 2004/11/24 22:35:25 kristerw Exp $
  		gtk_widget_get_pointer (GTK_WIDGET(wig->top), &px, &py);
  		gtk_window_get_position (GTK_WINDOW(wig->top), &rx, &ry);
  		gtk_window_move (wino, rx+px, ry+py);
-@@ -1003,25 +1012,28 @@
+@@ -1053,25 +1067,28 @@ static GList *
  perform_form_query (KvpFrame *kvpf)
  {
  	GList *results, *n;
