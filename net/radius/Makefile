@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/12/05 22:46:42 tron Exp $
+# $NetBSD: Makefile,v 1.15 2000/02/29 01:13:35 kim Exp $
 #
 # Tempted to install another radius package?
 #
@@ -21,23 +21,24 @@ HOMEPAGE=	http://www.merit.edu/aaa/
 
 DIST_SUBDIR=	radius
 
+.include "../../mk/bsd.prefs.mk"
+
 CFLAGS+=	-DHAVE_SETVBUF -DNOSHADOW
+
+.if defined(KERBEROS) && ${KERBEROS} == 4
+USE_KERBEROS=	yes
+CFLAGS+=	-DM_KERB -I/usr/include/kerberosIV
+RADLIBS=	-lkrb -ldes
+.endif
+
 DECOMPRESS_CMD=	${GZCAT} -f
-INSTALL_TARGET=	man-install install util-install config-install
 MAKE_ENV+=	RADLIBS="${RADLIBS} -lskey" LIBS=-lcrypt \
 		GNUZIP="`${ECHO} ${GZIP_CMD} | ${AWK} '{print $$1}'`" \
 		INSTALL="${INSTALL} -c"
+
+INSTALL_TARGET=	man-install install util-install config-install
 MESSAGE_FILE=   ${WRKDIR}/MESSAGE
 WRKSRC=		${WRKDIR}
-
-# XXX Kerberos IV support is known to be broken.
-#.if defined(KERBEROS) && ${KERBEROS} == 4
-#USE_KERBEROS=	yes
-#CFLAGS+=	-DM_KERB -I/usr/include/kerberosIV
-#RADLIBS=	-lkrb -ldes
-#.endif
-
-.include "../../mk/bsd.prefs.mk"
 
 pre-patch:
 .for FILE in prediff rad.simult rad.ftp rad.skey
