@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2670 2004/12/05 15:54:53 he Exp $
+$NetBSD: TODO,v 1.2671 2004/12/05 15:58:56 he Exp $
 
 Suggested new packages
 ======================
@@ -753,7 +753,6 @@ Suggested package updates
 	o p5-CDDB-1.15
 	o p5-CGI-FormBuilder-2.13
 	o p5-CGI_Lite-2.02
-	o p5-Class-Container-0.11
 	o p5-Class-MethodMaker-2.04.1
 	o p5-Class-ObjectTemplate-0.7
 	o p5-Class-ReturnValue-0.52
