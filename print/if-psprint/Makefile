@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/26 10:41:25 abs Exp $
+# $NetBSD: Makefile,v 1.7 2001/07/24 10:35:45 abs Exp $
 #
 
 DISTNAME=		if-psprint-1.4
@@ -7,7 +7,7 @@ MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		abs@netbsd.org
-COMMENT=		Filter to print text or postscript to arbitrary printer, can use smb
+COMMENT=		Print text or postscript to arbitrary printer, can use smb
 
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 DEPENDS+=	enscript-[0-9]*:../../print/enscript
