@@ -1,3 +1,4 @@
+$NetBSD: patch-ah,v 1.4 2002/05/20 19:07:42 cjep Exp $
 --- configure.in.orig	Thu Dec 14 11:49:06 2000
 +++ configure.in	Tue Aug 28 17:09:57 2001
 @@ -213,7 +213,12 @@
