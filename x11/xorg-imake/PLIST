@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/02/10 17:00:38 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/03/02 02:07:31 hira Exp $
 ${X11ROOT_PREFIX}/bin/ccmakedep
 ${X11ROOT_PREFIX}/bin/cleanlinks
 ${X11ROOT_PREFIX}/bin/gccmakedep
@@ -123,6 +123,7 @@ ${X11ROOT_PREFIX}/lib/X11/config/xfree86.cf
 ${X11ROOT_PREFIX}/lib/X11/config/xorg.cf
 ${X11ROOT_PREFIX}/lib/X11/config/xorg.tmpl
 ${X11ROOT_PREFIX}/lib/X11/config/xorgsite.def
+${X11ROOT_PREFIX}/lib/X11/config/xorgversion.def
 ${IMAKE_MANTOOLS}${X11ROOT_PREFIX}/${MAN_DIR}/ccmakedep.${MAN_SUFFIX}
 ${IMAKE_MANTOOLS}${X11ROOT_PREFIX}/${MAN_DIR}/cleanlinks.${MAN_SUFFIX}
 ${IMAKE_MANTOOLS}${X11ROOT_PREFIX}/${MAN_DIR}/gccmakedep.${MAN_SUFFIX}
