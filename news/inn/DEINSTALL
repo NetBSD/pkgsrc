@@ -1,0 +1,20 @@
+#! /bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/10/31 21:03:41 zuntum Exp $
+
+case "$2" in
+        DEINSTALL) cat <<EOF
+
+==========================================================================
+
+Note that the inn data directory (@@INN_DATA_DIR@@) is NOT deleted during
+the package deinstallation. Please remove this directory and all its
+contents manually if it is no longer needed.
+
+==========================================================================
+
+EOF
+        ;;
+esac
+
+exit 0

@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:27:56 zuntum Exp $
+bin/chemtool
+bin/cht
+man/man1/chemtool.1
+share/doc/chemtool/README
+share/doc/chemtool/TODO
+share/examples/chemtool/AAMP
+share/examples/chemtool/A_Fur_big
+share/examples/chemtool/N_ado
+share/examples/chemtool/Neu1
+share/examples/chemtool/Neu2
+share/examples/chemtool/amp.cht
+share/examples/chemtool/breve.cht
+share/examples/chemtool/camphor
+share/examples/chemtool/claisen.cht
+share/examples/chemtool/coronen
+share/examples/chemtool/example1
+share/examples/chemtool/example2
+share/examples/chemtool/example3
+share/examples/chemtool/example4
+share/examples/chemtool/example5
+share/examples/chemtool/example7
+share/examples/chemtool/indigo
+share/examples/chemtool/label
+share/examples/chemtool/pteridin
+share/examples/chemtool/tcdd.cht
+share/locale/cs/LC_MESSAGES/chemtool.mo
+share/locale/de/LC_MESSAGES/chemtool.mo
+@dirrm share/examples/chemtool
+@dirrm share/doc/chemtool

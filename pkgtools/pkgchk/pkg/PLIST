@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/07/31 17:32:08 tron Exp $
-sbin/pkg_chk
-man/man8/pkg_chk.8

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:05 zuntum Exp $
+bin/bbkeys
+bin/bbkeysConfigC
+share/bbtools/README.bbkeys
+share/bbtools/bbkeys.bb
+share/bbtools/bbkeys.nobb
+@dirrm share/bbtools

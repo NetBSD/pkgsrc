@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:03:53 zuntum Exp $
+bin/xrn
+lib/X11/app-defaults/XRn
+man/cat1/xrn.0
+share/doc/xrn/COMMON-PROBLMS
+share/doc/xrn/COPYRIGHT
+share/doc/xrn/CREDITS
+share/doc/xrn/ChangeLog
+@dirrm share/doc/xrn
