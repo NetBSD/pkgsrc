@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1220 2003/12/18 04:27:27 xtraeme Exp $
+$NetBSD: TODO,v 1.1221 2003/12/18 04:30:10 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -252,7 +252,6 @@ Suggested package updates
 	o pdmenu-1.2.81
 	o plib-1.7.0
 	o ploticus-2.20
-	o postfix-2.0.16
 	o postgresql-7.4
 	o py-curl-7.10.8
 	o py-dns-1.2.0
