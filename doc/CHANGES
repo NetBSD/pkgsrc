@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4596 2004/01/24 21:32:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.4597 2004/01/24 23:05:27 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -466,3 +466,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pygopherd to 2.09 [recht 2004-01-24]
 	Renamed gnome to gnome1 [jmmv 2004-01-24]
 	Renamed gnome2 to gnome [jmmv 2004-01-24]
+	Added gtk2-extras-2.2.4 [jmmv 2004-01-24]
+	Added gnome-base-2.4.1 [jmmv 2004-01-24]
+	Updated gnome to 2.4.1nb3 [jmmv 2004-01-24]
+	Added gnome-accessibility-2.4.1 [jmmv 2004-01-24]
+	Added gnome-extras-2.4.1 [jmmv 2004-01-24]
