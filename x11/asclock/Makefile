@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/10/28 19:04:56 jlam Exp $
+# $NetBSD: Makefile,v 1.16 1999/11/03 04:24:59 jlam Exp $
 #
 
 DISTNAME=	asclock-classic-1.0
@@ -48,18 +48,18 @@ do-install:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" \
 		${FILESDIR}/asclock.sh > ${WRKDIR}/asclock.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/asclock.sh ${PREFIX}/bin/asclock
-	${INSTALL_PROGRAM} ${WRKSRC}/asclock ${PREFIX}/libexec/asclock
+	${INSTALL_PROGRAM} ${WRKSRC}/asclock ${PREFIX}/libexec/asclock-classic
 	${INSTALL_DATA} ${WRKSRC}/asclock.0 ${PREFIX}/man/cat1/asclock.0
-	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock
+	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock-classic
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 .for LANGUAGE in ${LANGUAGES}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock/${LANGUAGE}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock-classic/${LANGUAGE}
 	cd ${WRKSRC}/${LANGUAGE}; ${INSTALL_DATA} month.xpm weekday.xpm \
-		${PREFIX}/share/asclock/${LANGUAGE}
-	@${ECHO} share/asclock/${LANGUAGE}/month.xpm >> ${PLIST_SRC}
-	@${ECHO} share/asclock/${LANGUAGE}/weekday.xpm >> ${PLIST_SRC}
-	@${ECHO} @dirrm share/asclock/${LANGUAGE} >> ${PLIST_SRC}
+		${PREFIX}/share/asclock-classic/${LANGUAGE}
+	@${ECHO} share/asclock-classic/${LANGUAGE}/month.xpm >> ${PLIST_SRC}
+	@${ECHO} share/asclock-classic/${LANGUAGE}/weekday.xpm >> ${PLIST_SRC}
+	@${ECHO} @dirrm share/asclock-classic/${LANGUAGE} >> ${PLIST_SRC}
 .endfor
-	@${ECHO} @dirrm share/asclock >> ${PLIST_SRC}
+	@${ECHO} @dirrm share/asclock-classic >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
