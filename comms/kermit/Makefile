@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/12/23 05:25:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.36 2002/01/28 12:06:55 agc Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -13,7 +13,14 @@ COMMENT=	Network and serial communication, file transfer, and scripting utility
 
 LICENSE=	kermit-license
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+ALL_TARGET=	macosx10
+.else
 ALL_TARGET=	netbsd
+.endif
+
 BUILD_DEFS+=	KFLAGS LIBS KERMIT_SUID_UUCP
 MAKE_ENV+=	KFLAGS="${KFLAGS}" LIBS="${LIBS}"
 MAKEFILE=	makefile
@@ -40,8 +47,6 @@ no-manpage-in-beta-release:
 		;; \
 	  esac; \
 	done
-
-.include "../../mk/bsd.prefs.mk"
 
 .if defined(KERMIT_SUID_UUCP)
 .if ${KERMIT_SUID_UUCP} == "yes" || ${KERMIT_SUID_UUCP} == "YES"
