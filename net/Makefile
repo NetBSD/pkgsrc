@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.386 2003/06/10 13:23:58 wiz Exp $
+# $NetBSD: Makefile,v 1.387 2003/06/19 08:34:50 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -301,6 +301,7 @@ SUBDIR+=	vsftpd
 SUBDIR+=	vtun
 SUBDIR+=	wakeup
 SUBDIR+=	wap-utils
+SUBDIR+=	waste
 SUBDIR+=	wget
 SUBDIR+=	whatmask
 SUBDIR+=	wistumbler
