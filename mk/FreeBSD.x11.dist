@@ -1,4 +1,4 @@
-#     $NetBSD: FreeBSD.x11.dist,v 1.4 2003/12/23 09:02:24 jmmv Exp $
+#     $NetBSD: FreeBSD.x11.dist,v 1.5 2003/12/28 19:30:44 jmmv Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -358,6 +358,10 @@
                 LC_MESSAGES
                 ..
             ..
+            el_GR
+                LC_MESSAGES
+                ..
+            ..
             en
                 LC_MESSAGES
                 ..
@@ -559,6 +563,10 @@
                 ..
             ..
             sp
+                LC_MESSAGES
+                ..
+            ..
+            sq_AL
                 LC_MESSAGES
                 ..
             ..
