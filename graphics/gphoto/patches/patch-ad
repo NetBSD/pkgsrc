@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/11/30 00:01:38 dmcmahill Exp $
+
+--- mustek/device.c.orig	Wed Nov 24 23:46:03 1999
++++ mustek/device.c	Wed Nov 24 23:47:06 1999
+@@ -59,8 +59,13 @@
+ 	newtio.c_cflag = (newtio.c_cflag & ~CSIZE) | CS8;
+ 
+ 	//  Set into raw, no echo mode 
++	#if defined(__NetBSD__)
++	newtio.c_iflag &= ~(IGNBRK | IGNCR | INLCR | ICRNL |
++		IXANY | IXON | IXOFF | INPCK | ISTRIP);
++	#else
+ 	newtio.c_iflag &= ~(IGNBRK | IGNCR | INLCR | ICRNL | IUCLC |
+ 		IXANY | IXON | IXOFF | INPCK | ISTRIP);
++	#endif
+ 	newtio.c_iflag |= (BRKINT | IGNPAR);
+ 	newtio.c_oflag &= ~OPOST;
+ 	newtio.c_lflag = ~(ICANON | ISIG | ECHO | ECHONL | ECHOE | ECHOK);

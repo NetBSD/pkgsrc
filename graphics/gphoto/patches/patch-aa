@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/30 00:01:38 dmcmahill Exp $
+
+--- canon/serial.c.orig	Wed Nov 24 23:37:05 1999
++++ canon/serial.c	Wed Nov 24 23:48:38 1999
+@@ -84,7 +84,7 @@
+     newtio.c_cflag = (newtio.c_cflag & ~CSIZE) | CS8;
+ 
+     /* Set into raw, no echo mode */
+-    #ifdef __FreeBSD__
++    #if defined(__FreeBSD__) || defined(__NetBSD__)
+     newtio.c_iflag &= ~(IGNBRK | IGNCR | INLCR | ICRNL | 
+ 			IXANY | IXON | IXOFF | INPCK | ISTRIP);
+     #else
