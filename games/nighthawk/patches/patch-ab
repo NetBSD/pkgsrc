@@ -1,0 +1,22 @@
+--- src/Makefile.orig	Sun Feb  7 01:25:16 1999
++++ src/Makefile	Sun Feb  7 01:26:48 1999
+@@ -3,13 +3,14 @@
+ #
+ ############################################################################
+ VERSION         = 2.1
+-CC		= gcc
+-CP		= g++
++CC		= gcc ${EVERYTHING}
++CP		= g++ ${EVERYTHING}
+ OPTIONS 	= -Wall -g -pipe -fomit-frame-pointer \
+-			-DVERSION='"$(VERSION)"'
++			-DVERSION='"$(VERSION)"' \
++			-DPREFIX=\"${PREFIX}\"
+ 
+-INCLUDE		=
+-LIBS		= -L/usr/X11R6/lib -lXpm -lX11
++INCLUDE		= -I${X11BASE}/include
++LIBS		= -L${X11BASE}/lib -lXpm -lX11
+ EVERYTHING	= $(OPTIONS) $(INCLUDE) $(LIBS)
+ 
+ ###############################
