@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.630 2000/12/19 02:32:22 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.631 2000/12/30 11:19:04 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -468,11 +468,13 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .endif
 
 COMMENT?=		${PKGDIR}/COMMENT
-DESCR_SRC?=		${PKGDIR}/DESCR
 DESCR=			${WRKDIR}/.DESCR
+DESCR_SRC?=		${PKGDIR}/DESCR
 PLIST=			${WRKDIR}/.PLIST
+PLIST_SRC?=		${PKGDIR}/PLIST
 DLIST=			${WRKDIR}/.DLIST
 DDIR=			${WRKDIR}/.DDIR
+
 
 # Set PLIST_SUBST to substitute "${variable}" to "value" in PLIST
 PLIST_SUBST+=	OPSYS=${OPSYS}						\
@@ -708,6 +710,7 @@ PKG_ARGS+=		-m ${MTREE_FILE}
 .endif
 .endif # !PKG_ARGS
 PKG_SUFX?=		.tgz
+#PKG_SUFX?=		.tbz		# bzip2(1) pkgs
 # where pkg_add records its dirty deeds.
 PKG_DBDIR?=		${DESTDIR}/var/db/pkg
 
@@ -1579,24 +1582,6 @@ delete-package:
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PKGFILE}
 .endif
 
-# Set the PLIST_SRC definition, if necessary
-.if !defined(PLIST_SRC)
-.if exists(${PKGDIR}/PLIST)
-PLIST_SRC=	${PKGDIR}/PLIST
-.elif exists(${PKGDIR}/PLIST-mi) && \
-      exists(${PKGDIR}/PLIST-md.shared) && \
-      exists(${PKGDIR}/PLIST-md.static)
-PLIST_SRC=	${PKGDIR}/PLIST-mi
-.if defined(NOPIC)
-PLIST_SRC+=	${PKGDIR}/PLIST-md.static
-.else
-PLIST_SRC+=	${PKGDIR}/PLIST-md.shared
-.endif  # NOPIC
-.else   # no PLIST at all
-PLIST_SRC=
-.endif  # ${PKGDIR}/PLIST
-.endif  # !PLIST_SRC
-
 ################################################################
 # This is the "generic" package target, actually a macro used from the
 # six main targets.  See below for more.
@@ -2228,14 +2213,16 @@ ${DLIST}:
 		${TAIL} -n +4 >${DLIST}
 
 # The 'info' target can be used to display information about a package.
-
 info: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} ${PKGWILDCARD}
 
 # The 'check' target can be used to check an installed package.
-
 check: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check ${PKGWILDCARD}
+
+# Run pkglint:
+lint:
+	${_PKG_SILENT}${_PKG_DEBUG}pkglint
 
 # This is for the use of sites which store distfiles which others may
 # fetch - only fetch the distfile if it is allowed to be
@@ -2275,8 +2262,9 @@ clean: pre-clean
 .endif
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RM} -f ${WRKDIR}/.*_done .SizeAll .SizePkg .build_info 	\
-		.build_version .DESCR .PLIST
+	${RM} -f ${WRKDIR}/.*_done ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}	\
+		${BUILD_VERSION_FILE} ${BUILD_INFO_FILE} ${DESCR} 	\
+		${PLIST}
 .endif
 .endif
 
@@ -3337,20 +3325,15 @@ PERL5_GENERATE_PLIST=	${TRUE}
 plist: ${PLIST}
 ${PLIST}: ${PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -z "${PLIST_SRC}" ]; then					\
-		${ECHO} "No ${PKGDIR}/PLIST or ${PKGDIR}/PLIST-{mi,md.shared,md.static}" ; \
-		${ECHO} "Please set PLIST_SRC in the package Makefile.";\
-	else								\
-		( ${CAT} ${PLIST_SRC};					\
-		  ${PERL5_GENERATE_PLIST} ) | 				\
-			${MANZ_NAWK_CMD} 				\
-			${IMAKE_MAN_CMD} 				\
-			${SED} 	${MANZ_EXPRESSION}			\
-				${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}\
-			> ${PLIST}; 					\
-		  ${MAKE} ${MAKEFLAGS} do-shlib-handling		\
-			SHLIB_PLIST_MODE=1 ;				\
-	fi
+	( ${CAT} ${PLIST_SRC};						\
+	  ${PERL5_GENERATE_PLIST} ) | 					\
+		${MANZ_NAWK_CMD} 					\
+		${IMAKE_MAN_CMD} 					\
+		${SED} 	${MANZ_EXPRESSION}				\
+			${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}	\
+		> ${PLIST}; 						\
+	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\
+		SHLIB_PLIST_MODE=1 ;					\
 
 # generate ${DESCR} from ${DESCR_SRC} by:
 # - Appending the homepage URL, if any
