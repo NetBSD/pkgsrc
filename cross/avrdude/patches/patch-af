@@ -1,0 +1,158 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/07/17 19:09:24 wennmach Exp $
+
+--- avrdude.conf.in.org	2003-07-14 23:14:05.000000000 +0200
++++ avrdude.conf.in	2003-07-14 23:15:04.000000000 +0200
+@@ -182,16 +182,16 @@
+ # PROGRAMMER DEFINITIONS
+ #
+ 
+-programmer
+-  id    = "bsd";
+-  desc  = "Brian Dean's Programmer";
+-  type  = par;
+-  vcc   = 2, 3, 4, 5;
+-  reset = 7;
+-  sck   = 8;
+-  mosi  = 9;
+-  miso  = 10;
+-;
++#programmer
++#  id    = "bsd";
++#  desc  = "Brian Dean's Programmer";
++#  type  = par;
++#  vcc   = 2, 3, 4, 5;
++#  reset = 7;
++#  sck   = 8;
++#  mosi  = 9;
++#  miso  = 10;
++#;
+ 
+ programmer
+   id    = "avrisp";
+@@ -217,69 +217,69 @@
+   type  = avr910;
+ ;
+ 
+-programmer
+-  id    = "stk200";
+-  desc  = "STK200";
+-  type  = par;
+-  buff  = 4, 5;
+-  sck   = 6;
+-  mosi  = 7;
+-  reset = 9;
+-  miso  = 10;
+-;
++#programmer
++#  id    = "stk200";
++#  desc  = "STK200";
++#  type  = par;
++#  buff  = 4, 5;
++#  sck   = 6;
++#  mosi  = 7;
++#  reset = 9;
++#  miso  = 10;
++#;
+ 
+ # The programming dongle used by the popular Ponyprog
+ # utility.  It is almost similar to the STK200 one,
+ # except that there is a LED indicating that the
+ # programming is currently in progress.
+ 
+-programmer
+-  id    = "pony-stk200";
+-  desc  = "Pony Prog STK200";
+-  type  = par;
+-  buff  = 4, 5;
+-  sck   = 6;
+-  mosi  = 7;
+-  reset = 9;
+-  miso  = 10;
+-  pgmled = 8; 
+-;
+-
+-programmer
+-  id    = "dt006";
+-  desc  = "Dontronics DT006";
+-  type  = par;
+-  reset = 4;
+-  sck   = 5;
+-  mosi  = 2;
+-  miso  = 11;
+-;
+-
+-programmer
+-  id    = "bascom";
+-  desc  = "Bascom SAMPLE programming cable";
+-  type  = par;
+-  reset = 4;
+-  sck   = 5;
+-  mosi  = 2;
+-  miso  = 11;
+-;
+-
+-programmer
+-  id     = "alf";
+-  desc   = "Tony Friebel's Programmer";
+-  type   = par;
+-  vcc    = 2, 3, 4, 5;
+-  buff   = 6;
+-  reset  = 7;
+-  sck    = 8;
+-  mosi   = 9;
+-  miso   = 10;
+-  errled = 1;
+-  rdyled = 14;
+-  pgmled = 16;
+-  vfyled = 17;
+-;
++#programmer
++#  id    = "pony-stk200";
++#  desc  = "Pony Prog STK200";
++#  type  = par;
++#  buff  = 4, 5;
++#  sck   = 6;
++#  mosi  = 7;
++#  reset = 9;
++#  miso  = 10;
++#  pgmled = 8; 
++#;
++
++#programmer
++#  id    = "dt006";
++#  desc  = "Dontronics DT006";
++#  type  = par;
++#  reset = 4;
++#  sck   = 5;
++#  mosi  = 2;
++#  miso  = 11;
++#;
++
++#programmer
++#  id    = "bascom";
++#  desc  = "Bascom SAMPLE programming cable";
++#  type  = par;
++#  reset = 4;
++#  sck   = 5;
++#  mosi  = 2;
++#  miso  = 11;
++#;
++
++#programmer
++#  id     = "alf";
++#  desc   = "Tony Friebel's Programmer";
++#  type   = par;
++#  vcc    = 2, 3, 4, 5;
++#  buff   = 6;
++#  reset  = 7;
++#  sck    = 8;
++#  mosi   = 9;
++#  miso   = 10;
++#  errled = 1;
++#  rdyled = 14;
++#  pgmled = 16;
++#  vfyled = 17;
++#;
+ 
+ 
+ 

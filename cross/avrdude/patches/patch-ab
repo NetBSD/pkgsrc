@@ -1,0 +1,61 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/17 19:09:23 wennmach Exp $
+
+--- config_gram.y.org	Tue Jul  8 10:06:16 2003
++++ config_gram.y	Tue Jul  8 10:08:38 2003
+@@ -87,8 +87,6 @@
+ %token K_MOSI
+ %token K_NUM_PAGES
+ %token K_PAGEL
+-%token K_PAR
+-%token K_PARALLEL
+ %token K_PART
+ %token K_PGMLED
+ %token K_PROGRAMMER
+@@ -276,12 +274,6 @@
+     }
+   } |
+ 
+-  K_TYPE TKN_EQUAL K_PAR {
+-    { 
+-      par_initpgm(current_prog);
+-    }
+-  } |
+-
+   K_TYPE TKN_EQUAL K_STK500 {
+     { 
+       stk500_initpgm(current_prog);
+@@ -388,9 +380,6 @@
+   K_DEDICATED | K_IO
+ ;
+ 
+-parallel_modes :
+-  yesno | K_PSEUDO
+-;
+ 
+ retry_lines :
+   K_RESET | K_SCK
+@@ -473,24 +462,6 @@
+       free_token($3);
+     } |
+ 
+-  K_PARALLEL TKN_EQUAL parallel_modes
+-    {
+-      if ($3->primary == K_YES) {
+-        current_part->flags |= AVRPART_PARALLELOK;
+-        current_part->flags &= ~AVRPART_PSEUDOPARALLEL;
+-      }
+-      else if ($3->primary == K_NO) {
+-        current_part->flags &= ~AVRPART_PARALLELOK;
+-        current_part->flags &= ~AVRPART_PSEUDOPARALLEL;
+-      }
+-      else if ($3->primary == K_PSEUDO) {
+-        current_part->flags |= AVRPART_PARALLELOK;
+-        current_part->flags |= AVRPART_PSEUDOPARALLEL;
+-      }
+-
+-
+-      free_token($3);
+-    } |
+ 
+   K_RETRY_PULSE TKN_EQUAL retry_lines
+     {
