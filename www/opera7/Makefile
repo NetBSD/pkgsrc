@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/08/14 14:02:26 tron Exp $
+# $NetBSD: Makefile,v 1.26 2004/11/10 09:11:06 markd Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 PKGREVISION=	# empty
@@ -23,7 +23,7 @@ LICENSE=	opera-license
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_BUILDLINK=           YES
-NO_CONFGURE=            YES
+NO_CONFIGURE=           YES
 NO_TOOLS=               YES
 USE_LANGUAGES=          # empty
 
@@ -47,6 +47,7 @@ OPERA_DIR=		linux/${OPERA_PKG_VERSION:S/.//g:C/beta.*//}/final/${OPERA_LANG}/${O
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//}-${OPERA_VER_DATE}.1-static-qt
 
 RPMFILES=	${DISTFILES}
+RPM2PKGSTRIP=	0
 
 .elif (${OPSYS} == FreeBSD)
 EXTRACT_SUFX=		.tar.gz
