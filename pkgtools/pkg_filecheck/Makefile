@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/14 12:27:57 dillo Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/18 14:28:08 grant Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.1
@@ -19,17 +19,14 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
+FILES_SUBST+=	X11PREFIX=${X11PREFIX}
 CONF_FILES=	${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf \
 		${PKG_SYSCONFDIR}/pkg_filecheck.conf
 
 do-build:
 .for f in builddb.pl builddb.1 pkg_filecheck.conf pkg_filecheck.conf.5 \
 	pkg_filecheck.c pkg_filecheck.1
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
-		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g' \
-		-e 's|@X11PREFIX@|${X11PREFIX}|g' \
-		< ${FILESDIR}/${f} \
-		> ${WRKSRC}/${f}
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/${f} > ${WRKSRC}/${f}
 .endfor
 	cd ${WRKSRC} \
 	    && ${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} \
