@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2005/02/04 13:58:32 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/02/05 00:00:11 cube Exp $
 #
 
 DISTNAME=	ion-2-20040729
 PKGNAME=	${DISTNAME:S/-2-/-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm x11
 MASTER_SITES=	http://modeemi.cs.tut.fi/~tuomov/ion/dl/
 
@@ -12,8 +12,6 @@ HOMEPAGE=	http://iki.fi/~tuomov/ion/
 COMMENT=	Keyboard friendly tiling window manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-CONFLICTS+=	pwm-[0-9]*
 
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES

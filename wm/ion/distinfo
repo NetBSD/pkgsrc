@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.14 2004/08/13 08:14:57 cube Exp $
+$NetBSD: distinfo,v 1.15 2005/02/05 00:00:11 cube Exp $
 
 SHA1 (ion-2-20040729.tar.gz) = 92329a392de13dfb79ecd236eeb121a7045327e5
 Size (ion-2-20040729.tar.gz) = 399367 bytes
 SHA1 (patch-ad) = 063d68427764a3cdde8ef52d798583d43a3f5dca
-SHA1 (patch-ae) = 1f7e6a47280ea9d7ea1bae146ea2ec6e12aa69d6
+SHA1 (patch-ae) = 69581555a9805360f6c15f338420a16912c2966f
 SHA1 (patch-ah) = 2e123cf133811518de31453a11ba2a1a47df440f
 SHA1 (patch-ai) = 05d9748fdbd04f5af3e89cafb69e1d060641af83
+SHA1 (patch-aj) = 8bd079ca571f058a5fb2c2112215d442d92f0e5f
+SHA1 (patch-ak) = a6236279a8ab91b9a9f0b24996825e590751f8a0

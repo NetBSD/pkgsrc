@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/02/05 00:00:11 cube Exp $
 bin/ion
-bin/pwm
+bin/pwm2
 lib/ion/de.la
 lib/ion/dock.la
 lib/ion/floatws.la
@@ -14,7 +14,7 @@ lib/ion/menu.la
 lib/ion/query.la
 libexec/ion/ion-completefile
 man/man1/ion.1
-man/man1/pwm.1
+man/man1/pwm2.1
 share/doc/ion/ChangeLog
 share/doc/ion/LICENSE
 share/doc/ion/README
