@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2003/07/23 17:00:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.300 2003/07/30 16:06:53 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -66,7 +66,6 @@ SUBDIR+=	hot-babe
 SUBDIR+=	imwheel
 SUBDIR+=	kde
 SUBDIR+=	kde2
-SUBDIR+=	kde3
 SUBDIR+=	kde3-i18n-af
 SUBDIR+=	kde3-i18n-ar
 SUBDIR+=	kde3-i18n-bg
