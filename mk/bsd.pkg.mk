@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.442 2000/05/30 22:36:53 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.443 2000/05/31 01:02:08 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -26,9 +26,6 @@ LOCALBASE?=		${DESTDIR}/usr/pkg
 .elif (${OPSYS} == "SunOS")
 DEF_UMASK?=		022
 X11BASE?=		${DESTDIR}/usr/openwin
-.elif (${OPSYS} == "OpenBSD")
-DEF_UMASK?=		022
-NOMANCOMPRESS?=		yes
 .elif (${OPSYS} == "Linux")
 DEF_UMASK?=		022
 NOMANCOMPRESS?=		yes
@@ -1105,7 +1102,7 @@ MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_SO
 MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt}"] = good["${srt}"] " " $$0 ; next; } 
 .endfor
 MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; } 
-SORTED_MASTER_SITES!= echo '${MASTER_SITES}' | awk '${MASTER_SORT_AWK}'
+SORTED_MASTER_SITES!= echo '${MASTER_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
 
 .if !target(do-fetch)
 do-fetch:
