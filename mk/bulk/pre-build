@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.45 2005/03/29 00:55:50 hubertf Exp $
+# $NetBSD: pre-build,v 1.46 2005/03/30 20:21:07 kristerw Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -245,6 +245,22 @@ yes|YES)
 	echo "Skipping pruning of packages links."
 	;;
 esac
+
+# Clean out the packages added above so that the real bulk build
+# is started in a consistent state.
+for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
+	echo Removing all installed packages in $dbdir
+	if [ -d $dbdir ]; then
+		cd $dbdir
+		for pkg in *
+		do
+			if `pkg_info -K $dbdir -qe $pkg`; then
+				echo pkg_delete -r $pkg
+				pkg_delete -K $dbdir -r $pkg
+			fi
+		done
+	fi
+done
 
 # on non-NetBSD, we don't want these to build as they overwrite
 # bootstrap-pkgsrc generated files and thus would break the following builds.
