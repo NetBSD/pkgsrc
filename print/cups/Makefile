@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/12/09 22:18:24 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2000/12/11 08:53:07 jlam Exp $
 #
 
 DISTNAME=		cups-1.1.4-source
@@ -32,20 +32,27 @@ CFLAGS+=		-I${LOCALBASE}/include
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(/usr/sbin/user)
-USERDIR=		/usr/sbin
-.else
-DEPENDS+=		user>=20000313:../../sysutils/user
-USERDIR=		${LOCALBASE}/sbin
-.endif
-
-# CUPS_USER	username of the database administrator
-# CUPS_GROUP	group of the database administrator
+# CUPS_USER	username of the CUPS administrator
+# CUPS_GROUP	group of the CUPS administrator
 #
 CUPS_USER?=		lp
 CUPS_GROUP?=		sys
 
 BUILD_DEFS+=		CUPS_USER CUPS_GROUP
+
+.if ${OPSYS} == "NetBSD"
+.if exists(/usr/sbin/user)
+ADDUSER=		/usr/sbin/useradd
+ADDGROUP=		/usr/sbin/groupadd
+.else
+DEPENDS+=		user>=20000313:../../sysutils/user
+ADDUSER=		${LOCALBASE}/sbin/useradd
+ADDGROUP=		${LOCALBASE}/sbin/groupadd
+.endif
+.elif ${OPSYS} == "SunOS"
+ADDUSER=		useradd
+ADDGROUP=		groupadd
+.endif
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
