@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/19 17:24:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/10 09:16:17 abs Exp $
 #
 
 DISTNAME=	skampi4
@@ -10,7 +10,7 @@ DISTFILES+=	skampili.ps
 
 MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://liinwww.ira.uka.de/~skampi/
-COMMENT=	SHORT_DESCRIPTION_OF_THE_PACKAGE
+COMMENT=	MPI (Message Passing Interface) benchmarks
 
 DEPENDS=	mpich>=1.2.1:../../parallel/mpi-ch
 DEPENDS+=	gnuplot>=3.7.1:../../graphics/gnuplot
