@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.651 2003/06/23 11:27:47 adam Exp $
+$NetBSD: TODO,v 1.652 2003/06/23 13:28:17 adam Exp $
 
 Suggested new packages
 ======================
@@ -189,7 +189,6 @@ Suggested package updates
 	o netatalk-1.6.3 [pkg/21930]
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
-	o ntop2-2.2
 	o nut-8.8
 	o openh323-1.11.2
 	o openldap-2.1.20 [pkg/21682]
