@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/20 21:17:13 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/15 00:25:42 dmcmahill Exp $
 
 DISTNAME=		qcad-1.4.7-src
 PKGNAME=		qcad-1.4.7
@@ -12,6 +12,7 @@ COMMENT=		2D CAD System
 
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 do-configure:
 	@for f in rappwin.cpp rconfig.cpp relement.cpp rfile.cpp	\
