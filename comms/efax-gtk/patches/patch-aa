@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/12/25 13:18:25 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2003/11/14 11:18:57 wiz Exp $
 
 --- Makefile.presets.orig	Sat Apr  6 13:07:24 2002
 +++ Makefile.presets
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2002/12/25 13:18:25 jmmv Exp $
  FAX_TARGETS = main.o pipes.o mainwindow.o dialogs.o efax_controller.o fax_list.o addressbook.o settings.o settings_help.o
  
  
-@@ -40,18 +40,11 @@ settings_help.o: settings_help.cpp setti
+@@ -40,18 +40,12 @@ settings_help.o: settings_help.cpp setti
  	$(CC) $(CXXFLAGS) $(COMPILE_OPTION) $(OUTPUT_OPTION)
  
  install: efax-gtk
@@ -31,6 +31,7 @@ $NetBSD: patch-aa,v 1.2 2002/12/25 13:18:25 jmmv Exp $
 +	$(BSD_INSTALL_SCRIPT) efax-gtk-send $(BINDIR)/
 +	$(BSD_INSTALL_DATA) efax-gtkrc $(DATADIR)/examples/efax-gtk/
 +	$(BSD_INSTALL_MAN) efax-gtk.1 $(MANDIR)/man1/
++	$(BSD_INSTALL_DATA_DIR) $(SPOOLDIR)
 +	$(BSD_INSTALL_SCRIPT) efax-gtk-faxfilter $(SPOOLDIR)/
  
  clean:
