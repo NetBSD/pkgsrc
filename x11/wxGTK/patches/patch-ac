@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.5 2003/09/04 13:07:01 adam Exp $
+$NetBSD: patch-ac,v 1.6 2004/01/10 14:23:52 recht Exp $
 
---- src/makelib.env.in.orig	Thu Mar  6 01:16:24 2003
-+++ src/makelib.env.in	Thu Mar  6 23:16:16 2003
+--- src/makelib.env.in.orig	2003-09-21 13:31:38.000000000 +0200
++++ src/makelib.env.in	2003-09-25 00:31:25.000000000 +0200
 @@ -33,6 +33,7 @@
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
