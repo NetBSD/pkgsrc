@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.18 2002/03/18 15:17:55 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.18.2.1 2002/06/23 18:54:38 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -126,14 +126,7 @@ FILES_SUBST+=		CONF_FILES_PERMS=${CONF_FILES_PERMS:Q}
 FILES_SUBST+=		SUPPORT_FILES=${SUPPORT_FILES:Q}
 FILES_SUBST+=		SUPPORT_FILES_MODE=${SUPPORT_FILES_MODE}
 FILES_SUBST+=		SUPPORT_FILES_PERMS=${SUPPORT_FILES_PERMS:Q}
-
-# Default to not installing the rc.d scripts automatically.
-INSTALL_RCD_SCRIPTS?=	NO
-.if defined(INSTALL_RCD_SCRIPTS) && (${INSTALL_RCD_SCRIPTS} == NO)
-FILES_SUBST+=		RCD_SCRIPTS=
-.else
 FILES_SUBST+=		RCD_SCRIPTS=${RCD_SCRIPTS:Q}
-.endif
 FILES_SUBST+=		RCD_SCRIPTS_MODE=${RCD_SCRIPTS_MODE}
 FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 
@@ -159,6 +152,24 @@ FILES_SUBST+=		MAKE_DIRS=${_MAKE_DIRS:Q}
 FILES_SUBST+=		MAKE_DIRS_PERMS=${MAKE_DIRS_PERMS:Q}
 FILES_SUBST+=		OWN_DIRS=${OWN_DIRS:Q}
 FILES_SUBST+=		OWN_DIRS_PERMS=${OWN_DIRS_PERMS:Q}
+
+# PKG_CREATE_USERGROUP indicates whether the INSTALL script should
+#	automatically add any needed users/groups to the system using
+#	useradd/groupadd.  It is either YES or NO and defaults to YES.
+#
+# PKG_CONFIG indicates whether the INSTALL/DEINSTALL scripts should do
+#	automatic config file and directory handling, or if it should
+#	merely inform the admin of the list of required files and
+#	directories needed to use the package.  It is either YES or NO
+#	and defaults to YES.
+#
+# These values merely set the defaults for INSTALL/DEINSTALL scripts, but
+# they may be overridden by resetting them in the environment.
+#
+PKG_CREATE_USERGROUP?=	YES
+PKG_CONFIG?=		YES
+FILES_SUBST+=		PKG_CREATE_USERGROUP=${PKG_CREATE_USERGROUP}
+FILES_SUBST+=		PKG_CONFIG=${PKG_CONFIG}
 
 # Substitute for various programs used in the DEINSTALL/INSTALL scripts.
 FILES_SUBST+=		AWK=${AWK:Q}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2001/11/29 01:12:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2002/06/23 18:56:33 jlam Exp $
 #
 
 DISTNAME=		nocol-4.3.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES= 		http://www.netplex-tech.com/software/nocol/downloads/
 

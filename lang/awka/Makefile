@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/06/13 14:23:15 zuntum Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/23 18:50:10 jlam Exp $
 #
 
-DISTNAME=	awka-0.7.4
+DISTNAME=	awka-0.7.5
 CATEGORIES=	lang devel
 MASTER_SITES=	http://awka.sourceforge.net/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/01/21 15:43:46 zuntum Exp $
+# $NetBSD: buildlink.mk,v 1.1.2.1 2002/06/23 18:53:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libdvdread.
 #
@@ -17,7 +17,7 @@ LIBDVDREAD_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libdvdread?=	libdvdread>=0.9.2
+BUILDLINK_DEPENDS.libdvdread?=	libdvdread>=0.9.3
 DEPENDS+=		${BUILDLINK_DEPENDS.libdvdread}:../../misc/libdvdread
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.libdvdread=libdvdread

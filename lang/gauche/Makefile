@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/02/01 08:10:39 minoura Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/23 18:50:17 jlam Exp $
 #
 
-DISTNAME=	Gauche-0.5
+DISTNAME=	Gauche-0.5.4
 CATEGORIES=	lang
-MASTER_SITES=	http://prdownloads.sourceforge.net/gauche/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minoura@netbsd.org
@@ -13,8 +13,6 @@ COMMENT=	R5RS Scheme implementation developed to be a handy script interpreter
 # devel/boehm-gc cannot be used because Gauche requires PIC version
 #DEPENDS+=	boehm-gc-[0-9]*:../../devel/boehm-gc
 DEPENDS+=	slib-[0-9]*:../../devel/slib
-# XXX: On newer SunOS/Linux we have to use their native iconv(3)...?
-DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
 
 # Due to GC dynamic loading support, this package runs on limited platforms
 # Plus, it is not LP64-safe
@@ -27,7 +25,6 @@ BROKEN=Test required on NetBSD/i386 a.out
 .  endif
 .endif
 
-WRKSRC=		${WRKDIR}/Gauche
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-slib=${PREFIX}/share/slib
 CONFIGURE_ARGS+=	--with-iconv=${PREFIX} --with-iconv-lib=iconv
@@ -39,4 +36,5 @@ CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
 .endif
 
+.include "../../converters/libiconv/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,458 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.2.2 2002/06/23 18:53:31 jlam Exp $
+bin/ical2vcal
+bin/kabcfrontend
+bin/kalarm
+bin/kalarmd
+bin/kandy
+bin/kandy_client
+bin/karm
+bin/knotes
+bin/konsolekalendar
+bin/korgac
+bin/korganizer
+bin/korganizerIn
+bin/kpilot
+bin/kpilotDaemon
+include/KNotesIface.h
+include/calendar/calendardecoration.h
+include/calendar/plugin.h
+include/kgantt/KGantt.h
+include/kgantt/KGanttBarConfig.h
+include/kgantt/KGanttItem.h
+include/kgantt/KGanttRelation.h
+include/kgantt/xQGanttBarView.h
+include/kgantt/xQGanttBarViewPort.h
+include/kgantt/xQGanttListView.h
+include/kgantt/xQGanttListViewPort.h
+include/korganizer/baseview.h
+include/korganizer/calendarviewbase.h
+include/korganizer/mainwindow.h
+include/korganizer/part.h
+include/kpilot/kpilotlink.h
+include/kpilot/pilotDatabase.h
+include/kpilot/pilotLocalDatabase.h
+include/kpilot/pilotRecord.h
+include/kpilot/pilotSerialDatabase.h
+include/kpilot/plugin.h
+include/kpilot/syncAction.h
+include/kpilot/uiDialog.h
+lib/kde3/libabbrowserconduit.a
+lib/kde3/libabbrowserconduit.la
+lib/kde3/libabbrowserconduit.so
+lib/kde3/libabbrowserconduit.so.0
+lib/kde3/libabbrowserconduit.so.0.0
+lib/kde3/libexpenseconduit.a
+lib/kde3/libexpenseconduit.la
+lib/kde3/libexpenseconduit.so
+lib/kde3/libexpenseconduit.so.0
+lib/kde3/libexpenseconduit.so.0.0
+lib/kde3/libkcm_alarmdaemonctrl.a
+lib/kde3/libkcm_alarmdaemonctrl.la
+lib/kde3/libkcm_alarmdaemonctrl.so
+lib/kde3/libknotesconduit.a
+lib/kde3/libknotesconduit.la
+lib/kde3/libknotesconduit.so
+lib/kde3/libknotesconduit.so.0
+lib/kde3/libknotesconduit.so.0.0
+lib/kde3/libkorg_datenums.a
+lib/kde3/libkorg_datenums.la
+lib/kde3/libkorg_datenums.so
+lib/kde3/libkorg_holidays.a
+lib/kde3/libkorg_holidays.la
+lib/kde3/libkorg_holidays.so
+lib/kde3/libkorg_projectview.a
+lib/kde3/libkorg_projectview.la
+lib/kde3/libkorg_projectview.so
+lib/kde3/libkorg_webexport.a
+lib/kde3/libkorg_webexport.la
+lib/kde3/libkorg_webexport.so
+lib/kde3/libnullconduit.a
+lib/kde3/libnullconduit.la
+lib/kde3/libnullconduit.so
+lib/kde3/libnullconduit.so.0
+lib/kde3/libnullconduit.so.0.0
+lib/kde3/libpopmailconduit.a
+lib/kde3/libpopmailconduit.la
+lib/kde3/libpopmailconduit.so
+lib/kde3/libpopmailconduit.so.0
+lib/kde3/libpopmailconduit.so.0.0
+lib/kde3/libtodoconduit.a
+lib/kde3/libtodoconduit.la
+lib/kde3/libtodoconduit.so
+lib/kde3/libtodoconduit.so.0
+lib/kde3/libtodoconduit.so.0.0
+lib/kde3/libvcalconduit.a
+lib/kde3/libvcalconduit.la
+lib/kde3/libvcalconduit.so
+lib/kde3/libvcalconduit.so.0
+lib/kde3/libvcalconduit.so.0.0
+lib/libkalarmd.a
+lib/libkalarmd.la
+lib/libkalarmd.so
+lib/libkalarmd.so.0
+lib/libkalarmd.so.0.0
+lib/libkcal.a
+lib/libkcal.la
+lib/libkcal.so
+lib/libkcal.so.2
+lib/libkcal.so.2.0
+lib/libkgantt.a
+lib/libkgantt.la
+lib/libkgantt.so
+lib/libkgantt.so.0
+lib/libkgantt.so.0.2
+lib/libkorganizer.a
+lib/libkorganizer.la
+lib/libkorganizer.so
+lib/libkorganizer.so.1
+lib/libkorganizer.so.1.0
+lib/libkpilot.a
+lib/libkpilot.la
+lib/libkpilot.so
+lib/libkpilot.so.0
+lib/libkpilot.so.0.0
+share/autostart/kalarm.tray.desktop
+share/autostart/kalarmd.autostart.desktop
+share/autostart/korgac.desktop
+share/doc/kde/HTML/en/kalarm/alarmmessage.png
+share/doc/kde/HTML/en/kalarm/common
+share/doc/kde/HTML/en/kalarm/editwindow.png
+share/doc/kde/HTML/en/kalarm/index.cache.bz2
+share/doc/kde/HTML/en/kalarm/index.docbook
+share/doc/kde/HTML/en/kalarm/mainwindow.png
+share/doc/kde/HTML/en/kandy/common
+share/doc/kde/HTML/en/kandy/index.cache.bz2
+share/doc/kde/HTML/en/kandy/index.docbook
+share/doc/kde/HTML/en/karm/common
+share/doc/kde/HTML/en/karm/index.cache.bz2
+share/doc/kde/HTML/en/karm/index.docbook
+share/doc/kde/HTML/en/karm/karm.png
+share/doc/kde/HTML/en/knotes/common
+share/doc/kde/HTML/en/knotes/index.cache.bz2
+share/doc/kde/HTML/en/knotes/index.docbook
+share/doc/kde/HTML/en/korganizer/common
+share/doc/kde/HTML/en/korganizer/i_copy.png
+share/doc/kde/HTML/en/korganizer/i_cut.png
+share/doc/kde/HTML/en/korganizer/i_edit_find.png
+share/doc/kde/HTML/en/korganizer/i_file_close.png
+share/doc/kde/HTML/en/korganizer/i_file_new.png
+share/doc/kde/HTML/en/korganizer/i_file_open.png
+share/doc/kde/HTML/en/korganizer/i_file_print.png
+share/doc/kde/HTML/en/korganizer/i_file_print_preview.png
+share/doc/kde/HTML/en/korganizer/i_file_quit.png
+share/doc/kde/HTML/en/korganizer/i_file_save.png
+share/doc/kde/HTML/en/korganizer/i_go_backward.png
+share/doc/kde/HTML/en/korganizer/i_go_forward.png
+share/doc/kde/HTML/en/korganizer/i_go_to_today.png
+share/doc/kde/HTML/en/korganizer/i_paste.png
+share/doc/kde/HTML/en/korganizer/i_settings_prefs.png
+share/doc/kde/HTML/en/korganizer/i_view_day.png
+share/doc/kde/HTML/en/korganizer/i_view_list.png
+share/doc/kde/HTML/en/korganizer/i_view_todo_list.png
+share/doc/kde/HTML/en/korganizer/i_view_week.png
+share/doc/kde/HTML/en/korganizer/i_view_work_week.png
+share/doc/kde/HTML/en/korganizer/index.cache.bz2
+share/doc/kde/HTML/en/korganizer/index.docbook
+share/doc/kde/HTML/en/kpilot/address-app.png
+share/doc/kde/HTML/en/kpilot/common
+share/doc/kde/HTML/en/kpilot/conduit-knotes.png
+share/doc/kde/HTML/en/kpilot/conduit-popmail-kmail.png
+share/doc/kde/HTML/en/kpilot/conduit-popmail-recv-method.png
+share/doc/kde/HTML/en/kpilot/conduit-popmail-send-as.png
+share/doc/kde/HTML/en/kpilot/conduit-popmail-send-method.png
+share/doc/kde/HTML/en/kpilot/conduit-popmail-sendmail.png
+share/doc/kde/HTML/en/kpilot/conduit-popmail-smtp.png
+share/doc/kde/HTML/en/kpilot/conduit-popmail-top.png
+share/doc/kde/HTML/en/kpilot/conduit-vcal.png
+share/doc/kde/HTML/en/kpilot/file-app.png
+share/doc/kde/HTML/en/kpilot/index.cache.bz2
+share/doc/kde/HTML/en/kpilot/index.docbook
+share/doc/kde/HTML/en/kpilot/main-app.png
+share/doc/kde/HTML/en/kpilot/memo-app.png
+share/doc/kde/HTML/en/kpilot/setup-address.png
+share/doc/kde/HTML/en/kpilot/setup-conduit.png
+share/doc/kde/HTML/en/kpilot/setup-dbspecial.png
+share/doc/kde/HTML/en/kpilot/setup-general.png
+share/doc/kde/HTML/en/kpilot/setup-sync.png
+share/doc/kde/HTML/en/kpilot/toolbar_backup.png
+share/doc/kde/HTML/en/kpilot/toolbar_hotsync.png
+share/kde/applnk/Applications/kalarm.desktop
+share/kde/applnk/Applications/korganizer.desktop
+share/kde/applnk/Settings/System/alarmdaemonctrl.desktop
+share/kde/applnk/Utilities/kandy.desktop
+share/kde/applnk/Utilities/karm.desktop
+share/kde/applnk/Utilities/knotes.desktop
+share/kde/applnk/Utilities/kpilot.desktop
+share/kde/applnk/Utilities/kpilotdaemon.desktop
+share/kde/apps/kalarm/icons/hicolor/16x16/actions/eventdelete.png
+share/kde/apps/kalarm/icons/hicolor/16x16/actions/eventnew.png
+share/kde/apps/kalarm/icons/hicolor/16x16/actions/kalarm.png
+share/kde/apps/kalarm/icons/hicolor/16x16/apps/kalarm.png
+share/kde/apps/kalarm/icons/hicolor/22x22/actions/kalarm.png
+share/kde/apps/kalarm/icons/hicolor/22x22/actions/kalarm_disabled.png
+share/kde/apps/kalarm/icons/hicolor/32x32/apps/kalarm.png
+share/kde/apps/kalarm/icons/hicolor/48x48/apps/kalarm.png
+share/kde/apps/kalarm/icons/locolor/16x16/apps/kalarm.png
+share/kde/apps/kalarm/icons/locolor/32x32/apps/kalarm.png
+share/kde/apps/kalarmdgui/icons/hicolor/22x22/actions/kalarmdgui.png
+share/kde/apps/kalarmdgui/icons/hicolor/22x22/actions/kalarmdgui_disabled.png
+share/kde/apps/kandy/default.kandy
+share/kde/apps/kandy/kandymobileui.rc
+share/kde/apps/kandy/kandyui.rc
+share/kde/apps/karm/karmui.rc
+share/kde/apps/karm/pics/clock.xpm
+share/kde/apps/karm/pics/clockedit.xpm
+share/kde/apps/karm/pics/empty-watch.xpm
+share/kde/apps/karm/pics/filedel.xpm
+share/kde/apps/karm/pics/watch-0.xpm
+share/kde/apps/karm/pics/watch-1.xpm
+share/kde/apps/karm/pics/watch-2.xpm
+share/kde/apps/karm/pics/watch-3.xpm
+share/kde/apps/karm/pics/watch-4.xpm
+share/kde/apps/karm/pics/watch-5.xpm
+share/kde/apps/karm/pics/watch-6.xpm
+share/kde/apps/karm/pics/watch-7.xpm
+share/kde/apps/kgantt/icons/hicolor/16x16/actions/ganttSelect.png
+share/kde/apps/kgantt/icons/hicolor/16x16/actions/ganttSelecttask.png
+share/kde/apps/kgantt/icons/hicolor/16x16/actions/ganttUnselecttask.png
+share/kde/apps/kgantt/icons/hicolor/22x22/actions/ganttSelect.png
+share/kde/apps/kgantt/icons/hicolor/22x22/actions/ganttSelecttask.png
+share/kde/apps/kgantt/icons/hicolor/22x22/actions/ganttUnselecttask.png
+share/kde/apps/kgantt/icons/hicolor/32x32/actions/ganttSelect.png
+share/kde/apps/kgantt/icons/hicolor/32x32/actions/ganttSelecttask.png
+share/kde/apps/kgantt/icons/hicolor/32x32/actions/ganttUnselecttask.png
+share/kde/apps/knotes/knotesui.rc
+share/kde/apps/knotes/pics/knotesclose.png
+share/kde/apps/knotes/pics/knotesdelete.png
+share/kde/apps/knotes/pics/knoteslogo.png
+share/kde/apps/korganizer/holiday_at
+share/kde/apps/korganizer/holiday_au
+share/kde/apps/korganizer/holiday_bavarian
+share/kde/apps/korganizer/holiday_be
+share/kde/apps/korganizer/holiday_ca
+share/kde/apps/korganizer/holiday_catalan
+share/kde/apps/korganizer/holiday_ch
+share/kde/apps/korganizer/holiday_cz
+share/kde/apps/korganizer/holiday_de
+share/kde/apps/korganizer/holiday_dk
+share/kde/apps/korganizer/holiday_es
+share/kde/apps/korganizer/holiday_fi
+share/kde/apps/korganizer/holiday_fr
+share/kde/apps/korganizer/holiday_frswiss
+share/kde/apps/korganizer/holiday_gb
+share/kde/apps/korganizer/holiday_gt
+share/kde/apps/korganizer/holiday_hu
+share/kde/apps/korganizer/holiday_il
+share/kde/apps/korganizer/holiday_is
+share/kde/apps/korganizer/holiday_it
+share/kde/apps/korganizer/holiday_ja
+share/kde/apps/korganizer/holiday_mx
+share/kde/apps/korganizer/holiday_nl
+share/kde/apps/korganizer/holiday_no
+share/kde/apps/korganizer/holiday_nz
+share/kde/apps/korganizer/holiday_pl
+share/kde/apps/korganizer/holiday_pt
+share/kde/apps/korganizer/holiday_py
+share/kde/apps/korganizer/holiday_quebec
+share/kde/apps/korganizer/holiday_ro
+share/kde/apps/korganizer/holiday_se
+share/kde/apps/korganizer/holiday_si
+share/kde/apps/korganizer/holiday_th
+share/kde/apps/korganizer/holiday_us
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/1day.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/1downarrow.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/1leftarrow.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/1rightarrow.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/1uparrow.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/2downarrow.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/2leftarrow.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/2rightarrow.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/2uparrow.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/3downarrow.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/3uparrow.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/5days.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/7days.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/appointment.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/bell.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/dayview.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/findf.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/groupevent.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/inverse_recur.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/list.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/mailappt.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/month.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/nomailappt.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/organizer.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/playsound.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/readonlyevent.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/recur.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/runprog.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/smallcal.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/smallclock.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/today.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/todo.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/webexport.png
+share/kde/apps/korganizer/icons/hicolor/16x16/actions/whatsnext.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/1day.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/3leftarrow.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/3rightarrow.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/5days.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/7days.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/agenda.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/appointment.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/checkedbox.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/checkedbox/mask.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/checkedclipboard.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/checkmark.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/delete.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/emptybox.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/emptybox/mask.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/list.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/month.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/newrecurevent.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/newtodo.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/search.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/send.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/timespan.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/today.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/todo.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/webexport.png
+share/kde/apps/korganizer/icons/hicolor/22x22/actions/whatsnext.png
+share/kde/apps/korganizer/icons/hicolor/32x32/actions/1day.png
+share/kde/apps/korganizer/icons/hicolor/32x32/actions/5days.png
+share/kde/apps/korganizer/icons/hicolor/32x32/actions/7days.png
+share/kde/apps/korganizer/icons/hicolor/32x32/actions/appointment.png
+share/kde/apps/korganizer/icons/hicolor/32x32/actions/list.png
+share/kde/apps/korganizer/icons/hicolor/32x32/actions/month.png
+share/kde/apps/korganizer/icons/hicolor/32x32/actions/today.png
+share/kde/apps/korganizer/icons/hicolor/32x32/actions/todo.png
+share/kde/apps/korganizer/korganizer_part.rc
+share/kde/apps/korganizer/korganizergsui.rc
+share/kde/apps/korganizer/korganizerui.rc
+share/kde/apps/korganizer/plugins/projectviewui.rc
+share/kde/apps/korganizer/plugins/webexportui.rc
+share/kde/apps/korganizer/sounds/alert.wav
+share/kde/apps/korganizer/sounds/icemag.wav
+share/kde/apps/korganizer/sounds/lightmag.wav
+share/kde/apps/korganizer/sounds/onscreen.wav
+share/kde/apps/korganizer/sounds/spinout.wav
+share/kde/apps/korganizer/tips
+share/kde/apps/kpilot/icons/hicolor/16x16/actions/backup.png
+share/kde/apps/kpilot/icons/hicolor/16x16/actions/busysync.png
+share/kde/apps/kpilot/icons/hicolor/16x16/actions/fastsync.png
+share/kde/apps/kpilot/icons/hicolor/16x16/actions/hotsync.png
+share/kde/apps/kpilot/icons/hicolor/16x16/actions/restore.png
+share/kde/apps/kpilot/kpilot-address.png
+share/kde/apps/kpilot/kpilot-fileinstaller.png
+share/kde/apps/kpilot/kpilot-hotsync.png
+share/kde/apps/kpilot/kpilot-knotes.png
+share/kde/apps/kpilot/kpilot-splash.png
+share/kde/apps/kpilot/kpilotui.rc
+share/kde/config/knotesrc
+share/kde/icons/hicolor/16x16/actions/kalarm.png
+share/kde/icons/hicolor/16x16/apps/kalarm.png
+share/kde/icons/hicolor/16x16/apps/karm.png
+share/kde/icons/hicolor/16x16/apps/knotes.png
+share/kde/icons/hicolor/16x16/apps/korganizer.png
+share/kde/icons/hicolor/16x16/apps/kpilot.png
+share/kde/icons/hicolor/16x16/apps/kpilotDaemon.png
+share/kde/icons/hicolor/22x22/actions/kalarm.png
+share/kde/icons/hicolor/22x22/apps/kpilot.png
+share/kde/icons/hicolor/32x32/apps/kalarm.png
+share/kde/icons/hicolor/32x32/apps/karm.png
+share/kde/icons/hicolor/32x32/apps/knotes.png
+share/kde/icons/hicolor/32x32/apps/korganizer.png
+share/kde/icons/hicolor/32x32/apps/kpilot.png
+share/kde/icons/hicolor/48x48/apps/kalarm.png
+share/kde/icons/hicolor/48x48/apps/karm.png
+share/kde/icons/hicolor/48x48/apps/knotes.png
+share/kde/icons/hicolor/48x48/apps/korganizer.png
+share/kde/icons/hicolor/48x48/apps/kpilot.png
+share/kde/icons/hicolor/48x48/apps/kpilotDaemon.png
+share/kde/icons/locolor/16x16/apps/kalarm.png
+share/kde/icons/locolor/16x16/apps/kpilot.png
+share/kde/icons/locolor/32x32/apps/kalarm.png
+share/kde/services/abbrowser_conduit.desktop
+share/kde/services/expense-conduit.desktop
+share/kde/services/knotes-conduit.desktop
+share/kde/services/korganizer/datenums.desktop
+share/kde/services/korganizer/holidays.desktop
+share/kde/services/korganizer/projectview.desktop
+share/kde/services/korganizer/webexport.desktop
+share/kde/services/null-conduit.desktop
+share/kde/services/popmail-conduit.desktop
+share/kde/services/todo-conduit.desktop
+share/kde/services/vcal-conduit.desktop
+share/kde/servicetypes/calendardecoration.desktop
+share/kde/servicetypes/calendarplugin.desktop
+share/kde/servicetypes/korganizerpart.desktop
+share/kde/servicetypes/kpilotconduit.desktop
+@comment dirrm share/kde/servicetypes
+@comment dirrm share/kde/services/korganizer
+@comment dirrm share/kde/services
+@comment dirrm share/kde/icons/locolor/32x32/apps
+@comment dirrm share/kde/icons/locolor/16x16/apps
+@comment dirrm share/kde/icons/hicolor/48x48/apps
+@comment dirrm share/kde/icons/hicolor/32x32/apps
+@comment dirrm share/kde/icons/hicolor/22x22/apps
+@comment dirrm share/kde/icons/hicolor/22x22/actions
+@comment dirrm share/kde/icons/hicolor/16x16/apps
+@comment dirrm share/kde/icons/hicolor/16x16/actions
+@comment dirrm share/kde/config
+@dirrm share/kde/apps/kpilot/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kpilot/icons/hicolor/16x16
+@dirrm share/kde/apps/kpilot/icons/hicolor
+@dirrm share/kde/apps/kpilot/icons
+@dirrm share/kde/apps/kpilot
+@dirrm share/kde/apps/korganizer/sounds
+@dirrm share/kde/apps/korganizer/plugins
+@dirrm share/kde/apps/korganizer/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/korganizer/icons/hicolor/32x32
+@dirrm share/kde/apps/korganizer/icons/hicolor/22x22/actions/emptybox
+@dirrm share/kde/apps/korganizer/icons/hicolor/22x22/actions/checkedbox
+@dirrm share/kde/apps/korganizer/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/korganizer/icons/hicolor/22x22
+@dirrm share/kde/apps/korganizer/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/korganizer/icons/hicolor/16x16
+@dirrm share/kde/apps/korganizer/icons/hicolor
+@dirrm share/kde/apps/korganizer/icons
+@dirrm share/kde/apps/korganizer
+@dirrm share/kde/apps/knotes/pics
+@dirrm share/kde/apps/knotes
+@dirrm share/kde/apps/kgantt/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/kgantt/icons/hicolor/32x32
+@dirrm share/kde/apps/kgantt/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kgantt/icons/hicolor/22x22
+@dirrm share/kde/apps/kgantt/icons/hicolor/16x16/actions
+@dirrm share/kde/apps/kgantt/icons/hicolor/16x16
+@dirrm share/kde/apps/kgantt/icons/hicolor
+@dirrm share/kde/apps/kgantt/icons
+@dirrm share/kde/apps/kgantt
+@dirrm share/kde/apps/karm/pics
+@dirrm share/kde/apps/karm
+@dirrm share/kde/apps/kandy
+@dirrm share/kde/apps/kalarmdgui/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kalarm/icons/locolor/32x32/apps
+@dirrm share/kde/apps/kalarm/icons/locolor/16x16/apps
+@dirrm share/kde/apps/kalarm/icons/hicolor/48x48/apps
+@dirrm share/kde/apps/kalarm/icons/hicolor/32x32/apps
+@dirrm share/kde/apps/kalarm/icons/hicolor/22x22/actions
+@dirrm share/kde/apps/kalarm/icons/hicolor/16x16/apps
+@dirrm share/kde/apps/kalarm/icons/hicolor/16x16/actions
+@comment dirrm share/kde/apps
+@comment dirrm share/kde/applnk/Utilities
+@comment dirrm share/kde/applnk/Settings/System
+@comment dirrm share/kde/applnk/Applications
+@dirrm share/doc/kde/HTML/en/kpilot
+@dirrm share/doc/kde/HTML/en/korganizer
+@dirrm share/doc/kde/HTML/en/knotes
+@dirrm share/doc/kde/HTML/en/karm
+@dirrm share/doc/kde/HTML/en/kandy
+@dirrm share/doc/kde/HTML/en/kalarm
+@comment dirrm share/doc/kde/HTML/en
+@comment dirrm share/autostart
+@comment dirrm lib/kde3
+@dirrm include/kpilot
+@dirrm include/korganizer
+@dirrm include/kgantt
+@dirrm include/calendar

@@ -1,39 +1,21 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 09:06:59 agc Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2002/06/23 18:50:11 jlam Exp $
 
 DISTNAME=	bwbasic-2.20
+WRKSRC=		${WRKDIR}/bwbasic-2.20p2/${PKGNAME_NOREV}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.rahul.net/pub/rhn/
-DISTFILES=	bwbasic-2.20.tar.Z \
-		bwb-2.20-patch01.tar.Z.uu.txt bwb-2.20-patch02.tar.Z.uu.txt
+EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	jspath@bcpl.net
 COMMENT=	The Bywater Basic interpreter
 
+DIST_SUBDIR=	${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
-EXTRACT_ONLY=	bwbasic-2.20.tar.Z
-
-# The patches come in a totally bizarre format; we have to 
-# uudecode them, unpack the resulting tarfile, and then replace
-# some of the original files.
-# Make a manual page from the doc file.
-
-pre-patch:
-	${MKDIR} ${WRKSRC}/tmp
-	cd ${WRKSRC}/tmp ; \
-	uudecode ${DISTDIR}/bwb-2.20-patch01.tar.Z.uu.txt ; \
-	${GTAR} -xzf bwb-2.20-patch01.tar.Z ; \
-	${MV} bwb-2.20-patch01/* ${WRKSRC}
-	cd ${WRKSRC}/tmp ; \
-	uudecode ${DISTDIR}/bwb-2.20-patch02.tar.Z.uu.txt ; \
-	${GTAR} -xzf bwb-2.20-patch02.tar.Z ; \
-	${MV} bwb-2.20-patch02/* ${WRKSRC}
-	${RM} -rf ${WRKSRC}/tmp
-	${CP} -pf ${WRKSRC}/bwbasic.doc ${WRKSRC}/bwbasic.1
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/bwbasic
-	${INSTALL_DATA} ${WRKSRC}/bwbasic.doc ${PREFIX}/share/bwbasic/
 	${CP} -r ${WRKSRC}/bwbtest ${PREFIX}/share/bwbasic/
-	${INSTALL_MAN} ${WRKSRC}/bwbasic.1 ${PREFIX}/man/man1/bwbasic.1
+	${INSTALL_MAN} ${WRKSRC}/bwbasic.doc ${PREFIX}/man/man1/bwbasic.1
 
 .include "../../mk/bsd.pkg.mk"

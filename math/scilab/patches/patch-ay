@@ -1,0 +1,21 @@
+$NetBSD: patch-ay,v 1.5.2.2 2002/06/23 18:52:47 jlam Exp $
+
+compile intmgetl without optimization.  The symptom is that the scilab
+function mgetl() will cause scilab to exit on netbsd-1.5.1/sparc.  This
+breaks the formatman() function and causes the man pages to not be built.
+
+--- routines/interf/Makefile.orig	Mon May 20 20:51:57 2002
++++ routines/interf/Makefile	Tue May 21 19:33:48 2002
+@@ -109,5 +109,4 @@
+ intfile.o : ../stack.h
+ intgetenv.o : ../stack.h
+-intmgetl.o: ../stack.h
+ stack0.o stack1.o stack2.o: ../stack.h
+ getdate.o: ../machine.h
+@@ -120,2 +119,6 @@
+ Makefile.amk	: Makefile
+ 	$(SCIDIR)/util/Mak2ABSMak Makefile
++
++intmgetl.o: intmgetl.f ../stack.h
++	$(FC) $(FC_OPTIONS_O0) -c intmgetl.f -o intmgetl.o
++

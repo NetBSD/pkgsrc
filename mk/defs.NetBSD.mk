@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.24 2002/04/09 22:15:41 jlam Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.24.2.1 2002/06/23 18:54:43 jlam Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -66,6 +66,7 @@ DEPENDS+=	user>=20000313:../../sysutils/user
 .endif
 .endif
 
+CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type

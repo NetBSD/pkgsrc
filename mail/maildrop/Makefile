@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2002/04/25 15:26:02 yyamano Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2002/06/23 18:51:29 jlam Exp $
 
-DISTNAME=	maildrop-1.3.7
+DISTNAME=	maildrop-1.3.9
 COMMENT=	Courier mail delivery agent with filtering abilities
 HOMEPAGE=	http://www.flounder.net/~mrsam/maildrop/
 

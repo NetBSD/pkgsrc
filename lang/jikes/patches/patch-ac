@@ -1,3 +1,4 @@
+$NetBSD: patch-ac,v 1.2.2.1 2002/06/23 18:50:26 jlam Exp $
 --- src/double.h.orig	Sat Sep 29 03:12:19 2001
 +++ src/double.h	Tue Feb 12 20:28:29 2002
 @@ -61,6 +61,8 @@

@@ -1,0 +1,36 @@
+$NetBSD: patch-aj,v 1.1.1.1.2.2 2002/06/23 18:53:44 jlam Exp $
+
+--- klaptopdaemon/Makefile.am.orig	Tue Feb 26 20:54:52 2002
++++ klaptopdaemon/Makefile.am
+@@ -1,15 +1,19 @@
+-lib_LTLIBRARIES = klaptopdaemon.la
++lib_LTLIBRARIES = libklaptopdaemon_main.la klaptopdaemon.la
+ kde_module_LTLIBRARIES = kcm_laptop.la
+ bin_PROGRAMS = klaptopdaemon
+ SUBDIRS = pics applnk
+ 
+-klaptopdaemon_la_SOURCES = laptop_daemon.cpp kpcmcia.cpp kpcmciainfo.cpp daemondock.cpp notify.cpp portable.cpp
++libklaptopdaemon_main_la_SOURCES = laptop_daemon.cpp kpcmcia.cpp kpcmciainfo.cpp daemondock.cpp notify.cpp portable.cpp
++libklaptopdaemon_main_la_LDFLAGS = $(all_libraries)
++libklaptopdaemon_main_la_LIBADD  = $(LIB_KDEUI)
++
++klaptopdaemon_la_SOURCES = klaptopdaemon_main.cpp
+ klaptopdaemon_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-klaptopdaemon_la_LIBADD   = $(LIB_KDEUI)
++klaptopdaemon_la_LIBADD  = libklaptopdaemon_main.la
+ 
+-klaptopdaemon_SOURCES = dummy.cpp
++klaptopdaemon_SOURCES = klaptopdaemon_main.cpp
+ klaptopdaemon_LDFLAGS = $(all_libraries)
+-klaptopdaemon_LDADD = klaptopdaemon.la
++klaptopdaemon_LDADD = libklaptopdaemon_main.la
+ 
+ kcm_laptop_la_SOURCES = battery.cpp  main.cpp  pcmcia.cpp  power.cpp  warning.cpp portable.cpp
+ 
+@@ -25,6 +29,3 @@
+ messages:
+ 	$(XGETTEXT) $(klaptopdaemon_la_SOURCES) -o $(podir)/klaptopdaemon.pot
+ 	$(XGETTEXT) $(kcm_laptop_la_SOURCES) -o $(podir)/kcmlaptop.pot
+-
+-dummy.cpp:
+-	echo >dummy.cpp

@@ -1,30 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2000/05/20 18:41:41 kim Exp $
+$NetBSD: patch-ac,v 1.2.2.1 2002/06/23 18:51:41 jlam Exp $
 
---- init.c	2000/05/17 03:35:49	2.29
-+++ init.c	2000/05/20 07:30:46
-@@ -42,7 +42,6 @@
- #include "init.h"
- #include "mailbox.h"
+--- po/Makefile.in.in.orig	Tue Jan  1 21:17:15 2002
++++ po/Makefile.in.in	Wed Jan  2 09:54:40 2002
+@@ -23,7 +23,7 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = @datadir@
+-localedir = $(datadir)/locale
++localedir = $(prefix)/$(PKGLOCALEDIR)/locale
+ gettextsrcdir = $(datadir)/gettext/po
  
--#include <pwd.h>
- #include <ctype.h>
- #include <stdlib.h>
- #include <unistd.h>
-@@ -1710,13 +1709,13 @@
-   /* Get some information about the user */
-   if ((pw = getpwuid (getuid ())))
-   {
-+    char rnbuf[STRING];
-+
-     Username = safe_strdup (pw->pw_name);
-     if (!Homedir)
-       Homedir = safe_strdup (pw->pw_dir);
--    if ((p = strchr (pw->pw_gecos, ',')))
--      Realname = mutt_substrdup (pw->pw_gecos, p);
--    else
--      Realname = safe_strdup (pw->pw_gecos);
-+
-+    Realname = safe_strdup (mutt_gecos_name (rnbuf, sizeof (rnbuf), pw));
-     Shell = safe_strdup (pw->pw_shell);
-   }
-   else 
+ INSTALL = @INSTALL@

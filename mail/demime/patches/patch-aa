@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1.50.2 2002/06/23 18:51:06 jlam Exp $
+
+--- demime.stable.orig	Wed Apr 17 17:08:40 2002
++++ demime.stable
+@@ -21,7 +21,7 @@
+ 
+ # Following controls whether only 7 bit output
+ # from message body sections should be done.
+-$::SEVEN_BIT_ONLY = 1;
++$::SEVEN_BIT_ONLY = 0;
+ 
+ # Following configuration variable controls whether a message/rfc822
+ # in a multipart/mixed main segment is rendered or elided.

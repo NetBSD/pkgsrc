@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2000/05/20 18:41:40 kim Exp $
+$NetBSD: patch-ab,v 1.6.2.1 2002/06/23 18:51:41 jlam Exp $
 
---- browser.c	2000/04/12 16:32:26	2.21
-+++ browser.c	2000/05/20 07:30:40
-@@ -34,8 +34,6 @@
- #include <ctype.h>
- #include <unistd.h>
- #include <sys/stat.h>
--#include <pwd.h>
--#include <grp.h>
+--- doc/Makefile.in.orig	Mon Jun  4 19:14:32 2001
++++ doc/Makefile.in	Sun Jul 22 15:09:17 2001
+@@ -29,7 +29,7 @@
+ CPPFLAGS = @CPPFLAGS@
  
- static struct mapping_t FolderHelp[] = {
-   { N_("Exit"),  OP_EXIT },
+ DEFS = -DSYSCONFDIR=\"$(sysconfdir)\" -DBINDIR=\"$(bindir)\" -DHAVE_CONFIG_H=1
+-INCLUDES = -I. -I.. -I$(includedir) -I$(top_srcdir)
++INCLUDES = -I. -I.. -I$(top_srcdir)
+ 
+ MAKEDOC_CPP = $(CPP) $(INCLUDES) $(DEFS) $(CPPFLAGS) -D_MAKEDOC -C 
+ 

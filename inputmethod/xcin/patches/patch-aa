@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1.20.2 2002/06/23 18:48:34 jlam Exp $
+
+--- etc/Makefile.in.orig	Mon Mar 26 22:08:24 2001
++++ etc/Makefile.in
+@@ -38,7 +38,6 @@
+ 
+ install: all
+ 	if [ ! -d "$(xcin_rcp)" ];  then $(INSTALL) -d $(xcin_rcp);  fi
+-	if [ -f $(xcin_rcp)/xcinrc ]; then mv $(xcin_rcp)/xcinrc $(xcin_rcp)/xcinrc.old; fi
+ 	$(INSTALL_DATA) xcinrc $(xcin_rcp)
+ 
+ clean:

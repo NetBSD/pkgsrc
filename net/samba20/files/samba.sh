@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: samba.sh,v 1.6 2002/02/05 06:04:39 jlam Exp $
+# $NetBSD: samba.sh,v 1.6.2.1 2002/06/23 18:57:00 jlam Exp $
 #
 # KEYWORD: nostart
 
@@ -11,23 +11,29 @@ fi
 
 rcd_dir=`@DIRNAME@ $0`
 
-# NOTE: run_rc_command sets $_arg
+# NOTE: run_rc_command sets $rc_arg
 #
 forward_commands()
 {
+	# Backward compat with NetBSD <1.6:
+	[ -z "$rc_arg" ] && rc_arg=$_arg
+
 	for file in $COMMAND_LIST; do
-		$rcd_dir/$file $_arg
+		$rcd_dir/$file $rc_arg
 	done
 }
 
 reverse_commands()
 {
+	# Backward compat with NetBSD <1.6:
+	[ -z "$rc_arg" ] && rc_arg=$_arg
+
 	REVCOMMAND_LIST=
 	for file in $COMMAND_LIST; do
 		REVCOMMAND_LIST="$file $REVCOMMAND_LIST"
 	done
 	for file in $REVCOMMAND_LIST; do
-		$rcd_dir/$file $_arg
+		$rcd_dir/$file $rc_arg
 	done
 }
 

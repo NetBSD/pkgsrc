@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/09/27 23:18:31 jlam Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/23 18:57:00 jlam Exp $
 #
 
 DISTNAME=	sftp-0.5
@@ -20,4 +20,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/sftp.1 	${PREFIX}/man/man1/sftp.1
 	${INSTALL_DATA}	${WRKSRC}/README	${PREFIX}/share/doc/README.sftp
 
+.include "../../devel/readline/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

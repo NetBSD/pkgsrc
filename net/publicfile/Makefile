@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/12/21 23:23:43 zuntum Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2002/06/23 18:56:44 jlam Exp $
 #
 
 DISTNAME=		publicfile-0.52
@@ -21,7 +21,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 pre-build:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${STRIPFLAG} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	${ECHO} ${PREFIX}/publicfile > ${WRKSRC}/conf-home
 
 .include "../../mk/bsd.pkg.mk"

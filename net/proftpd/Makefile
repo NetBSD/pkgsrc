@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/04/02 09:56:26 martti Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2002/06/23 18:56:41 jlam Exp $
 
-DISTNAME=	proftpd-1.2.4
+DISTNAME=	proftpd-1.2.5
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/
 
@@ -52,7 +52,7 @@ post-install:
 .for i in NEWS README README.LDAP README.PAM README.mod_sql README.modules
 	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/proftpd
 .endfor
-.for i in Configuration.html FAQ-config.html license.txt
+.for i in Configuration.html faq.html license.txt
 	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/proftpd
 .endfor
 	# examples

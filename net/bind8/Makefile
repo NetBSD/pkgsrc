@@ -1,14 +1,15 @@
 #
-# $NetBSD: Makefile,v 1.11 2002/03/23 05:34:54 itojun Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2002/06/23 18:54:51 jlam Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
 
 DISTNAME=	bind
-PKGNAME=	bind-8.3.1
+PKGNAME=	bind-${BIND_VERSION}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/src
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/8.3.1/
+MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/${BIND_VERSION}/
 DISTFILES=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
 MAINTAINER=	packages@NetBSD.org
@@ -17,7 +18,8 @@ COMMENT=	The Berkeley Internet Name Daemon, an implementation of DNS
 
 Y2K=		http://www.isc.org/ISC/y2k.html
 
-DIST_SUBDIR=	bind/8.3.1
+BIND_VERSION=	8.3.1
+DIST_SUBDIR=	bind/${BIND_VERSION}
 EXTRACT_ONLY=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
 .include "../../mk/bsd.prefs.mk"

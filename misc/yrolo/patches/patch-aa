@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1.2.2 2002/06/23 18:54:36 jlam Exp $
+
+--- Yrolo.tmpl	2002/05/09 14:46:24	1.1
++++ Yrolo.tmpl	2002/05/09 14:47:36
+@@ -51,7 +51,11 @@
+ XCOMM  LOCAL_LIBRARIES= -lXm -lXt -lX11
+ XCOMM
+ 
++#ifdef NetBSDArchitecture
++LOCAL_LIBRARIES= XmClientLibs -lcompat
++#else
+ LOCAL_LIBRARIES= XmClientLibs
++#endif
+ 
+ #ifdef HPArchitecture
+ CCOPTIONS= -Aa -D_HPUX_SOURCE -Dhpux

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.973.2.4 2002/06/21 21:27:36 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.973.2.5 2002/06/23 18:54:38 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -28,6 +28,13 @@ MAKE_ENV+=	MAKECONF=/dev/null
 ##### Pass information about desired toolchain to package build.
 .if defined(USETOOLS)
 MAKE_ENV+=	USETOOLS="${USETOOLS}"
+.endif
+
+##### Some NetBSD platforms permitted the user to set the binary format while
+##### they were in the process of transitioning to ELF. Packages with BSD-style
+##### make systems need this setting to be passed in.
+.if defined(OBJECT_FMT)
+MAKE_ENV+=	OBJECT_FMT="${OBJECT_FMT}"
 .endif
 
 ##### Build crypto packages by default.
@@ -75,10 +82,25 @@ JAVA_HOME?=		${JDK_HOME}
 .    else
 JAVA_HOME?=		${LOCALBASE}/java
 .    endif
-.  elif ${PKG_JVM} == "sun-jdk"
+.  elif ${PKG_JVM} == "sun-jdk14"
+BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk14
+DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre14
+JAVA_HOME?=		${LOCALBASE}/java
+.  elif ${PKG_JVM} == "sun-jdk13"
 BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre13
-
+JAVA_HOME?=		${LOCALBASE}/java
+.  elif ${PKG_JVM} == "sun-jdk"
+.    if ${MACHINE_PLATFORM:MNetBSD-1.5Z[A-Z]-i386} != "" || \
+	${MACHINE_PLATFORM:MNetBSD-1.[6-9]-i386} != "" || \
+	${MACHINE_PLATFORM:MLinux-*-i386} != ""
+BUILD_DEPENDS+=         sun-jdk-[0-9]*:../../lang/sun-jdk14
+DEPENDS+=               sun-jre-[0-9]*:../../lang/sun-jre14
+.    elif ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
+	${MACHINE_PLATFORM:MLinux-*-i386} != ""
+BUILD_DEPENDS+=		sun-jdk-[0-9]*:../../lang/sun-jdk13
+DEPENDS+=		sun-jre-[0-9]*:../../lang/sun-jre13
+.    endif
 JAVA_HOME?=		${LOCALBASE}/java
 .  elif ${PKG_JVM} == "blackdown-jdk13"
 DEPENDS+=		blackdown-jdk-[0-9]*:../../lang/blackdown-jdk13
@@ -164,7 +186,7 @@ MAKE_PROGRAM=		${MAKE}
 .endif
 CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM}"
 
-.if defined(USE_KERBEROS)
+.if defined(PKG_USE_KERBEROS)
 RESTRICTED?=		uses Kerberos encryption code
 BUILD_DEFS+=		KERBEROS
 .endif
@@ -196,7 +218,12 @@ PKG_FC?=		f2c-f77
 # it is anticipated that once /usr/bin/f77 is more stable that the following
 # default will be changed to f77.  However, in the case where there is no
 # /usr/bin/f77, the default will remain as f2c-f77.
-PKG_FC?=		f2c-f77
+.for __tmp__ in 1.[5-9]* [2-9].*
+.  if ${MACHINE_PLATFORM:MNetBSD-${__tmp__}-*} != ""
+PKG_FC?=		f77
+.  endif    # MACHINE_PLATFORM
+.endfor     # __tmp__
+PKG_FC?=	f2c-f77
 .  if  (${PKG_FC} == "f2c-f77")
 # this is a DEPENDS not BUILD_DEPENDS because of the
 # shared Fortran libs
@@ -223,6 +250,9 @@ _ULIMIT_CMD+=	ulimit -d `ulimit -H -d`;
 .  if ${UNLIMIT_RESOURCES:Mstacksize} != ""
 _ULIMIT_CMD+=	ulimit -s `ulimit -H -s`;
 .  endif
+.  if ${UNLIMIT_RESOURCES:Mmemorysize} != ""
+_ULIMIT_CMD+=	ulimit -m `ulimit -H -m`;
+.  endif
 .endif
 
 # -lintl in CONFIGURE_ENV is to workaround broken gettext.m4
@@ -244,6 +274,8 @@ LIBS+=		-L${LOCALBASE}/lib -lintl
 .  endif
 .endif
 
+CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
+
 # If GNU_CONFIGURE is defined, then pass LIBS to the GNU configure script.
 # also pass in a CONFIG_SHELL to avoid picking up bash
 .if defined(GNU_CONFIGURE)
@@ -252,7 +284,7 @@ CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 .endif
 
-LIBTOOL_REQD=		1.4.20010614nb8
+LIBTOOL_REQD=		1.4.20010614nb9
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/libtool
 PKGLIBTOOL=		${LIBTOOL}
@@ -296,8 +328,6 @@ BUILD_DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 BUILD_DEPENDS+=		{gettext-0.10.35nb1,gettext-m4-[0-9]*}:../../devel/gettext-m4
 .endif
 
-# Don't change these!!!  These names are built into the _TARGET_USE macro,
-# there is no way to refer to them cleanly from within the macro AFAIK.
 EXTRACT_COOKIE=		${WRKDIR}/.extract_done
 BUILDLINK_COOKIE=	${WRKDIR}/.buildlink_done
 CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
@@ -305,6 +335,7 @@ INSTALL_COOKIE=		${WRKDIR}/.install_done
 BUILD_COOKIE=		${WRKDIR}/.build_done
 PATCH_COOKIE=		${WRKDIR}/.patch_done
 PACKAGE_COOKIE=		${WRKDIR}/.package_done
+NULL_COOKIE=		${WRKDIR}/.null
 
 # New message digest defs
 DIGEST_ALGORITHM?=	SHA1
@@ -328,7 +359,10 @@ LDFLAGS+=		-L${X11BASE}/lib
 .endif
 .if ${_USE_RPATH} == "yes"
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
+.else
+LDFLAGS:=		${LDFLAGS:N*-Wl,-R*:N*-rpath*}
 .endif
+
 .if !defined(USE_BUILDLINK_ONLY)
 LDFLAGS+=		-L${LOCALBASE}/lib
 .endif
@@ -443,7 +477,7 @@ WRKSRC?=		${WRKDIR}/${DISTNAME}
 
 # A few aliases for *-install targets
 INSTALL_PROGRAM?= \
-	${INSTALL} ${COPY} ${STRIPFLAG} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 INSTALL_SCRIPT?= \
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 INSTALL_DATA?= \
@@ -588,7 +622,7 @@ uptodate-digest:
 	fi
 
 # Latest version of pkgtools required for this file.
-PKGTOOLS_REQD=		20020218
+PKGTOOLS_REQD=		20020402
 
 # Check that we are using up-to-date pkg_* tools with this file.
 .if defined(ZOULARIS_VERSION)
@@ -757,7 +791,7 @@ MASTER_SITE_GNU+=	\
 	ftp://ftp.progsoc.uts.edu.au/pub/gnu/
 
 MASTER_SITE_PERL_CPAN+=	\
-	ftp://ftp.loaded.net/pub/CPAN/modules/by-module/ \
+	ftp://cpan.pair.com/pub/CPAN/modules/by-module/ \
 	ftp://mirrors.cloud9.net/pub/mirrors/CPAN/modules/by-module/ \
 	ftp://ftp.sunet.se/pub/lang/perl/CPAN/modules/by-module/ \
 	ftp://ftp.uvsq.fr/pub/perl/CPAN/modules/by-module/ \
@@ -785,9 +819,9 @@ MASTER_SITE_R_CRAN+=	\
 	http://www.stats.bris.ac.uk/R/src/
 
 MASTER_SITE_TEX_CTAN+= \
-	ftp://ftp.wustl.edu/packages/TeX/  \
-	ftp://ftp.funet.fi/pub/TeX/CTAN/  \
-	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/  \
+	ftp://ftp.wustl.edu/packages/TeX/ \
+	ftp://ftp.funet.fi/pub/TeX/CTAN/ \
+	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/ \
 	ftp://ftp.dante.de/tex-archive/
 
 MASTER_SITE_SUNSITE+=	\
@@ -801,10 +835,15 @@ MASTER_SITE_GNOME+=	\
 	ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/
 
 MASTER_SITE_SOURCEFORGE+=	\
+	http://belnet.dl.sourceforge.net/sourceforge/ \
+	http://unc.dl.sourceforge.net/sourceforge/ \
+	http://telia.dl.sourceforge.net/sourceforge/ \
 	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
-	http://ftp2.sourceforge.net/ \
-	http://ftp1.sourceforge.net/ \
 	ftp://ftp.tuwien.ac.at/opsys/linux/sourceforge/
+
+MASTER_SITE_MOZILLA+=	\
+	ftp://ftp.mozilla.org/pub/mozilla/releases/ \
+	ftp://ftp.fu-berlin.de/pub/unix/network/www/mozilla/releases/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
@@ -930,7 +969,13 @@ CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 
 .if defined(GNU_CONFIGURE)
-CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}
+#
+# CONFIGURE_PREFIX is the argument to the --prefix option passed to the
+# GNU configure script.
+#
+GNU_CONFIGURE_PREFIX?=	${PREFIX}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
+CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX}
 HAS_CONFIGURE=		yes
 .  if ${X11PREFIX} == ${LOCALBASE}
 .    if !defined(X11_BUILDLINK_MK)
@@ -939,35 +984,8 @@ CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/inc
 .  endif
 .endif
 
-.if defined(USE_BUILDLINK2)
-.  include "../../mk/buildlink2/bsd.buildlink2.mk"
-.endif
-
-# PKG_SYSCONFDIR is where the configuration files for a package may be found.
-# This value may be customized in various ways:
 #
-# PKG_SYSCONFBASE is the main config directory under which all package
-#	configuration files are to be found.
-#
-# PKG_SYSCONFSUBDIR is the subdirectory of PKG_SYSCONFBASE under which the
-#	configuration files for a particular package may be found.
-#
-# PKG_SYSCONFVAR is the special suffix used to distinguish any overriding
-#	values for a particular package (see next item).  It defaults to
-#	${PKGNAME}, but for a collection of related packages that should
-#	all have the same PKG_SYSCONFDIR value, it can be set in each of
-#	the package Makefiles to a common value.
-#
-# PKG_SYSCONFDIR.${PKG_SYSCONFVAR} overrides the value of ${PKG_SYSCONFDIR}
-#	for packages with the same value for PKG_SYSCONFVAR.
-#
-# Users will typically want to set PKG_SYSCONFBASE to /etc, or accept the
-# default location of ${PREFIX}/etc.
-#
-# Package maintainers may want to set PKG_SYSCONFVAR to a common value for
-# related packages, e.g. all of the amanda packages set PKG_SYSCONFVAR=amanda
-# so that the PKG_SYSCONFDIR for all of them may be tweaked by just setting
-# PKG_SYSCONFDIR.amanda in /etc/mk.conf.
+# Config file related settings - see Packages.txt
 #
 PKG_SYSCONFVAR?=	${PKGBASE}
 .if defined(PKG_SYSCONFDIR.${PKG_SYSCONFVAR})
@@ -995,6 +1013,10 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 
 .if defined(BATCH)
 SCRIPTS_ENV+=	BATCH=yes
+.endif
+
+.if defined(USE_BUILDLINK2)
+.  include "../../mk/buildlink2/bsd.buildlink2.mk"
 .endif
 
 .MAIN: all
@@ -1573,7 +1595,7 @@ BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 .endif
 .if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha) || \
     !empty(EXTRACT_SUFX:M*.lzh) || !empty(EXTRACT_SUFX:M*.lha)
-BUILD_DEPENDS+=		lha-[0-9]*:../../archivers/lha  
+BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha  
 .endif
 
 DECOMPRESS_CMD.tar.gz?=		${GZCAT}
@@ -1672,25 +1694,25 @@ _LOCALPATCHFILES=	${_DFLT_LOCALPATCHFILES}
 do-patch: uptodate-digest
 .  if defined(PATCHFILES)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR}; \
-	  for i in ${PATCHFILES}; do \
-		if [ ${PATCH_DEBUG_TMP} = yes ]; then \
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
+	  for i in ${PATCHFILES}; do					\
+		if [ ${PATCH_DEBUG_TMP} = yes ]; then			\
 			${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patch $$i" ; \
-		fi; \
-		case $$i in \
-			*.Z|*.gz) \
+		fi;							\
+		case $$i in						\
+			*.Z|*.gz)					\
 				${GZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
 				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
-				;; \
-			*.bz2) \
+				;;					\
+			*.bz2)						\
 				${BZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
 				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
-				;; \
-			*) \
-				${PATCH} ${PATCH_DIST_ARGS} < $$i \
+				;;					\
+			*)						\
+				${PATCH} ${PATCH_DIST_ARGS} < $$i	\
 				|| { ${ECHO} Patch $$i failed ; exit 1; } ; \
-				;; \
-		esac; \
+				;;					\
+		esac;							\
 	  done
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -1861,7 +1883,7 @@ automake-pre-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(for _PATTERN in ${AUTOMAKE_PATTERNS}; do			\
 	   ${FIND} ${WRKSRC} -type f -name "$$_PATTERN" -print;		\
-	 done; echo /dev/null ) |					\
+	 done; echo ${NULL_COOKIE} ) |					\
 	${XARGS} ${TOUCH} ${TOUCH_FLAGS}
 .  endif
 
@@ -1876,7 +1898,7 @@ automake-post-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(for _PATTERN in ${AUTOMAKE_POST_PATTERNS}; do			\
 	   ${FIND} ${WRKSRC} -type f -name "$$_PATTERN" -print;		\
-	 done; echo /dev/null ) |					\
+	 done; echo ${NULL_COOKIE} ) |					\
 	${XARGS} ${TOUCH} ${TOUCH_FLAGS}
 .  endif
 .endif	# AUTOMAKE_OVERRIDE
@@ -2218,20 +2240,91 @@ do-shlib-handling:
 			fi						\
 			;;						\
 		"dylib")						\
-			${AWK} '/^@/ { print $$0; next }		\
+			${AWK} '					\
+				/^@/ { lines[NR] = $$0; next }		\
+		    		function libtool_release(lib) {		\
+					if (gsub("\.so\.", "\.", lib) || gsub("\.so$$", "", lib)) { \
+						lib = lib ".dylib"; \
+						if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
+							rels[NR] = lib; \
+						}			\
+					}				\
+				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
+					libtool_release($$0);		\
+					lines[NR] = $$0;		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					if (sub("-[^-]+\.so$$", "\.so")) { \
+						links[linkc++] = $$0;	\
+					}				\
 					next				\
 				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
+					libtool_release($$0);		\
+					lines[NR] = $$0;		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					if (sub("-[^-]+\.so$$", "\.so")) { \
+						links[linkc++] = $$0;	\
+					}				\
 					next				\
 				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+$$/ {		\
+					libtool_release($$0);		\
+					lines[NR] = $$0;		\
+					links[linkc++] = $$0;		\
+					sub("\.[0-9]+$$", "");		\
+					links[linkc++] = $$0;		\
+					if (sub("-[^-]+\.so$$", "\.so")) { \
+						links[linkc++] = $$0;	\
+					}				\
 					next				\
 				}					\
 				/.*\/lib[^\/]+\.so$$/ {			\
+					libtool_release($$0);		\
+					lines[NR] = $$0;		\
+					links[linkc++] = $$0;		\
+					if (sub("-[^-]+\.so$$", "\.so")) { \
+						links[linkc++] = $$0;	\
+					}				\
 					next				\
 				}					\
-				{ print $$0 }				\
+				{ lines[NR] = $$0 }			\
+				END {					\
+					for (i = 1 ; i <= linkc ; i++)	\
+						for (j = 1 ; j <= NR ; j++) \
+							if (lines[j] == links[i]) \
+								lines[j] = "@comment " lines[j]; \
+					if (${SHLIB_PLIST_MODE}) 	\
+						for (i = 1 ; i <= NR ; i++) { \
+							print lines[i]; \
+							if (rels[i] != "") { \
+								print rels[i]; \
+								"${LS} -l ${PREFIX}/" rels[i] | getline tgt; \
+								gsub(".* ", "", tgt); \
+								if (tgts[tgt] == "") { \
+									tgts[tgt] = tgt; \
+				                                	if (index(tgt, "/") == 1) \
+				                                		print tgt; \
+				                                	else { \
+				                                		prefix=""; \
+				                                        	if (match(rels[i], ".*/") != 0) \
+				                        				prefix=substr(rels[i],1,RLENGTH); \
+						                        	print prefix tgt; \
+				                        		} \
+								}	\
+							}		\
+						}			\
+				}					\
 			' <${PLIST} >${PLIST}.tmp ;			\
 			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
 				${MV} ${PLIST}.tmp ${PLIST};		\
@@ -2296,7 +2389,7 @@ check-shlibs:
 
 
 .if !target(show-shlib-type)
-# Show the shared lib type being built: one of ELF, a.out or none
+# Show the shared lib type being built: one of ELF, a.out, dylib, or none
 show-shlib-type:
 .  if exists(/usr/lib/libc.dylib)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2319,7 +2412,7 @@ show-shlib-type:
 	fi;								\
 	${ECHO} "$$sotype";						\
 	${RM} -f a.$$$$.c a.$$$$.out
-.  endif # libc.sylib
+.  endif # libc.dylib
 .endif
 
 acquire-extract-lock:
@@ -2625,7 +2718,7 @@ update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ ! -s ${DDIR} ] || for dep in `${CAT} ${DDIR}` ; do		\
 		(if cd ../.. && cd "$${dep}" ; then			\
-			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" &&	\
+			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" && \
 			if [ "${RESUMEUPDATE}" = "NO" -o 		\
 			     "${REINSTALL}" != "NO" ] ; then		\
 				${MAKE} ${MAKEFLAGS} deinstall;		\
@@ -2633,7 +2726,7 @@ update:
 			${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}		\
 				DEPENDS_TARGET=${DEPENDS_TARGET} ;	\
 		else							\
-			${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
+			${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}"; \
 		fi) ;							\
 	done
 .if ${NOCLEAN} == "NO"

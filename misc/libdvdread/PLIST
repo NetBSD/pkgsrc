@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/10 20:26:38 veego Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2002/06/23 18:53:56 jlam Exp $
 include/dvdread/dvd_reader.h
 include/dvdread/ifo_print.h
 include/dvdread/ifo_read.h
@@ -10,5 +10,5 @@ lib/libdvdread.a
 lib/libdvdread.la
 lib/libdvdread.so
 lib/libdvdread.so.2
-lib/libdvdread.so.2.1
+lib/libdvdread.so.2.2
 @dirrm include/dvdread

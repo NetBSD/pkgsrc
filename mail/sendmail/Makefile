@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2001/11/29 01:12:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.42.2.1 2002/06/23 18:52:04 jlam Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -25,35 +25,41 @@ COMMENT=	The well known Mail Transport Agent
 
 LICENSE=	no-profit
 
-NO_CONFIGURE=	yes
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
-		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}"
-
+		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}" \
+		BUILDLINK_DIR="${BUILDLINK_DIR}"
 WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
-BUILD_DEFS+=    USE_INET6
+BUILD_DEFS+=    USE_WIDEPATCH USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \
+		USE_STARTTLS
 
 .include "../../mk/bsd.prefs.mk"
+
+MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
 .else
 USE_DB2?=	NO
 .endif
-
-MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
-DESCR_SRC=	${WRKDIR}/.DESCR_SRC
+.if ${USE_DB2} == YES
+.include "../../databases/db/buildlink.mk"
+.endif
 
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
-DEPENDS+=	openldap-1.2.*:../../databases/openldap
+.include "../../databases/openldap/buildlink.mk"
 .endif
-.if ${USE_DB2} == YES
-DEPENDS+=	db-2.7.7:../../databases/db
-.endif
+
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-USE_SSL=	yes
+.include "../../security/openssl/buildlink.mk"
+.endif
+
+USE_TCPWRAPPERS?=	YES
+.if ${USE_TCPWRAPPERS} == YES
+.include "../../security/tcp_wrappers/buildlink.mk"
 .endif
 
 post-patch:
@@ -69,7 +75,7 @@ post-patch:
 	${CAT} ${FILESDIR}/site.config.m4-v6 >> ${SITECONFIG}
 	${ECHO} -n ' INET6' >> ${DESCR_SRC}
 .endif
-.if ${OPSYS} == "NetBSD"
+.if ${USE_TCPWRAPPERS} == YES
 	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >> ${SITECONFIG}
 	${ECHO} -n ' TCPWRAPPERS' >> ${DESCR_SRC}
 .endif
@@ -91,7 +97,7 @@ post-patch:
 	${ECHO} >> ${DESCR_SRC}
 
 do-build:
-	@(cd ${WRKSRC}; ./Build)
+	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2002/04/06 16:53:01 frueauf Exp $
+# $NetBSD: Makefile,v 1.113.2.1 2002/06/23 18:51:15 jlam Exp $
 
 DISTNAME=	fetchmail-5.9.11
 CATEGORIES=	mail
@@ -26,7 +26,6 @@ FETCHMAIL_USE_SSL?=	YES
 
 .if defined(FETCHMAIL_USE_SSL) && ${FETCHMAIL_USE_SSL} == YES
 .include "../../security/openssl/buildlink.mk"
-#USE_SSL=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 .else
 CONFIGURE_ARGS+=	--without-ssl
@@ -36,7 +35,7 @@ CONFIGURE_ARGS+=	--without-ssl
 BUILD_DEFS+=		FETCHMAIL_USE_SSL
 
 .if defined(KERBEROS)
-USE_KERBEROS=		yes
+PKG_USE_KERBEROS=	yes
 CONFIGURE_ARGS+=	--with-kerberos=yes
 .if ${MACHINE_PLATFORM:MNetBSD-1.[0-4]*-i386} == ""
 REPLACE_KERBEROS_LIBS=	# defined

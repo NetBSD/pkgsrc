@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.2.2 2002/06/23 18:56:35 jlam Exp $
+
+--- utility/notifier.pl.orig	Tue May  7 09:57:22 2002
++++ utility/notifier.pl
+@@ -256,7 +256,7 @@
+ sub EmailNotify {		# Send email notification of fault
+   local ($id, $address, $message) = @_;
+ 
+-  if ($email_program =~ /ucb/) {
++  if ($^O eq 'netbsd' || $email_program =~ /ucb/) {
+     open(XPIPE, "|$email_program -s \"NOCOL notification: $sitename{i} $siteaddr{$i}\" $address") ||
+       die "Cannot open $email_program.\n";
+   }

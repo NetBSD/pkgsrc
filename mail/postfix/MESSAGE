@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.2.2 2002/06/23 18:51:58 jlam Exp $
+
+To activate postfix:
+
+- Check the configuration files in /etc/postfix (see ${PREFIX}/share/postfix)
+- Modify /etc/mailer.conf (see ${PREFIX}/etc/mailer.conf.postfix)
+- Set postfix=YES in /etc/rc.conf
+===========================================================================

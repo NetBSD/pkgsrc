@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.50.2 2002/06/23 18:57:04 jlam Exp $
+bin/sipcalc
+man/man1/sipcalc.1

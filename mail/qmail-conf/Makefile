@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/28 17:44:48 zuntum Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2002/06/23 18:52:02 jlam Exp $
 #
 
 DISTNAME=	qmail-conf-0.60
@@ -26,7 +26,7 @@ LOCALBASE=	/
 
 post-patch:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC} ${STRIPFLAG} > ${WRKSRC}/conf-ld
+	${ECHO} ${CC} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 	# derive LOCALBASE from ${DIGEST}, because we have deliberately altered LOCALBASE
 	# and there's no easy way to guess what the real LOCALBASE is
 	${ECHO} ${DIGEST} | ${SED} 's,/bin/digest,,' > ${WRKSRC}/conf-ucspi-tcp

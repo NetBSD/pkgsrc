@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2002/04/14 10:00:48 rh Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2002/06/23 18:56:31 jlam Exp $
 #
 
 DISTNAME=		netsaint-plugins-1.2.9-4
 PKGNAME=		netsaint-plugins-1.2.9.4
 PKGREVISION=		2
 CATEGORIES=		net
-MASTER_SITES=		http://prdownloads.sourceforge.net/netsaintplug/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netsaintplug/}
 
 MAINTAINER=		murray@river-styx.org
 HOMEPAGE=		http://netsaintplug.sourceforge.net/
@@ -18,8 +18,6 @@ DEPENDS+=		netsaint-base-[0-9]*:../../net/netsaint-base
 .if !exists(/usr/bin/ssh)
 DEPENDS+=		{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/ssh
 .endif
-
-USE_SSL=		YES
 
 .include "../../net/netsaint-base/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
@@ -35,4 +33,5 @@ pre-configure:
 	${LOCALBASE}/bin/automake -a --foreign -i;	\
 	${LOCALBASE}/bin/autoconf
 
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,22 +1,19 @@
-$NetBSD: patch-ac,v 1.2 1999/08/31 22:09:42 wrstuden Exp $
+$NetBSD: patch-ac,v 1.2.2.1 2002/06/23 18:55:59 jlam Exp $
 
---- etc/Makefile	Tue Feb 20 08:37:56 1996
-+++ etc/Makefile	Mon Aug 30 06:47:41 1999
-@@ -10,7 +10,7 @@
- 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
--	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}"
-+	    ATALK_DESTDIR="${ATALK_DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}"
- 
- FRC:
- 
-@@ -27,7 +27,7 @@
- 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
- 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
--		DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
-+		ATALK_DESTDIR="${ATALK_DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
- 		INSTALL="${INSTALL}" install); \
- 	done
- 
+--- etc/atalkd/main.c.orig	Mon Dec 31 15:05:20 2001
++++ etc/atalkd/main.c	Mon Jan 14 21:59:05 2002
+@@ -276,12 +276,12 @@
+ 		    syslog( LOG_INFO, "config for no router" );
+ 		      
+ 		    if ( iface->i_flags & IFACE_PHASE2 ) {
+-			iface->i_rt->rt_firstnet = 0;
++			iface->i_rt->rt_firstnet = htons(1);
+ 			iface->i_rt->rt_lastnet = htons( STARTUP_LASTNET );
+ 			setaddr( iface, IFACE_PHASE2,
+ 				iface->i_addr.sat_addr.s_net,
+ 				iface->i_addr.sat_addr.s_node,
+-				0, htons( STARTUP_LASTNET ));
++				htons(1), htons( STARTUP_LASTNET ));
+ 		    }
+ 		    if ( looproute( iface, RTMP_ADD ) ) { /* -1 or 1 */
+ 			syslog( LOG_ERR,

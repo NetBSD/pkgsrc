@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+# $NetBSD: ja_freewnn,v 1.2.2.2 2002/06/23 18:47:38 jlam Exp $
+#
+# PROVIDE: freewnn
+# REQUIRE: DAEMON
+
+. /etc/rc.subr
+
+name="freewnn"
+command_start="@PREFIX@/sbin/jserver"
+command_stop="@PREFIX@/sbin/wnnkill"
+pidfile=""
+
+cmd=${1:-start}
+
+case ${cmd} in
+start)
+    if [ -x ${command_start} ]; then
+	echo "Starting ${name}."
+        ${command_start} >/dev/null 2>&1
+    fi
+    ;;
+stop)
+    if [ -x ${command_stop} ]; then
+        echo "Stopping ${name}."
+        ${command_stop} >/dev/null 2>&1
+    fi
+    ;;
+*)
+    :
+    ;;
+esac
+exit 0

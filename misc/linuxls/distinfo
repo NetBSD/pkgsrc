@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:15 agc Exp $
+$NetBSD: distinfo,v 1.2.2.1 2002/06/23 18:54:00 jlam Exp $
 
 SHA1 (fileutils-3.12.tar.gz) = cb5e7d61eec75c58a0978257183e090b495d9c52
 Size (fileutils-3.12.tar.gz) = 333928 bytes
 SHA1 (color-ls-3.12.0.2.patch.gz) = 37d30c5852e67781103730b291bdadc5c6c0e16d
 Size (color-ls-3.12.0.2.patch.gz) = 20884 bytes
 SHA1 (patch-aa) = bd2b88265b91c033f62da17c3cced3cf117b5318
+SHA1 (patch-ab) = 3d3f6bacccaf9a68359ad2fa125a88da7329f591

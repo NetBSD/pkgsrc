@@ -1,28 +1,39 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/08 14:34:48 frueauf Exp $
+$NetBSD: patch-aa,v 1.1.1.1.2.1 2002/06/23 18:52:40 jlam Exp $
 
---- Makefile.orig	Fri Jun  4 23:09:07 1999
-+++ Makefile	Sat Jun  5 06:59:43 1999
-@@ -20,5 +20,6 @@
- CFLAGS = -g -O2 -I/usr/X11/include  `$(GTK_DIR)gtk-config --cflags` -DGTK_VER_1_1
+--- Makefile.orig	Thu Apr  4 22:56:05 2002
++++ Makefile
+@@ -3,10 +3,10 @@
+ # Please read the next few lines and enter the correct values.
+ 
+ # where to install GRPN
+-PREFIX = /usr/local/
++#PREFIX = /usr/local/
+ 
+ # What compiler should be used
+-CC = gcc 
++#CC = gcc 
+ 
+ # Where to find the gtk-config script
+ GTK_DIR =
+@@ -20,9 +20,10 @@
+ # add -DUSE_GNOME if you want to make grpn GNOME compliant.
+ 
+ 
+-CFLAGS = -g -O2 -I/usr/X11/include  `$(GTK_DIR)gtk-config --cflags` -DGTK_VER_1_1
++#CFLAGS = -g -O2 -I/usr/X11/include  `$(GTK_DIR)gtk-config --cflags` -DGTK_VER_1_1
++CFLAGS+=`$(GTK_CONFIG) --cflags` -DGTK_VER_1_1
  
 -DFLAGS =  -L/usr/X11/lib 
 +#DFLAGS =  -L/usr/X11/lib 
-+DFLAGS =  
  
  # end of user configurable section
-@@ -37,4 +38,5 @@
- LIBS   = `$(GTK_DIR)gtk-config --libs` -lX11 -lm 
  
-+all: grpn
+@@ -37,7 +38,7 @@
+ 
+ 
+ 
+-LIBS   = `$(GTK_DIR)gtk-config --libs` -lX11 -lm 
++LIBS   = `$(GTK_DIR)$(GTK_CONFIG) --libs` -lX11 -lm 
+ 
  
  grpn:	$(OBJS)
-@@ -45,6 +47,7 @@
- 
- install:	grpn
--	cp grpn /usr/local/bin
--	chmod 755 /usr/local/bin/grpn
-+	#cp grpn /usr/local/bin
-+	#chmod 755 /usr/local/bin/grpn
-+	$(BSD_INSTALL_PROGRAM) grpn $(PREFIX)/bin
- 
- .c.o:

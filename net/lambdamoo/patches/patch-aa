@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1.50.2 2002/06/23 18:55:44 jlam Exp $
+
+--- config.h.in.orig	Mon Dec 28 21:26:51 1998
++++ config.h.in	Sun May 27 17:01:08 2001
+@@ -163,7 +163,7 @@
+  * system provides the named functions.
+  */
+ 
+-#undef HAVE_CRYPT
++/* #undef HAVE_CRYPT */
+ #undef HAVE_MATHERR
+ #undef HAVE_MKFIFO
+ #undef HAVE_REMOVE

@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/04 01:15:25 jtb Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2002/06/23 18:51:48 jlam Exp $
 bin/mailq
+@exec ${CHMOD} u+s %D/bin/mailq
+@exec ${CHOWN} ${NULLMAILER_USER}:${NULLMAILER_GROUP} %D/bin/mailq
 bin/nullmailer-inject
 libexec/nullmailer/qmqp
 libexec/nullmailer/smtp
@@ -7,6 +9,8 @@ man/man1/nullmailer-inject.1
 man/man1/sendmail.1
 man/man7/nullmailer.7
 sbin/nullmailer-queue
+@exec ${CHMOD} u+s %D/sbin/nullmailer-queue
+@exec ${CHOWN} ${NULLMAILER_USER}:${NULLMAILER_GROUP} %D/sbin/nullmailer-queue
 sbin/nullmailer-send
 sbin/sendmail
 share/doc/nullmailer/AUTHORS
@@ -17,6 +21,16 @@ share/doc/nullmailer/HOWTO
 share/doc/nullmailer/NEWS
 share/doc/nullmailer/README
 share/doc/nullmailer/TODO
-@dirrm share/doc/nullmailer
+@exec ${MKDIR} /var/nullmailer
+@exec ${MKDIR} /var/nullmailer/queue
+@exec ${MKDIR} /var/nullmailer/tmp
+@exec mkfifo /var/nullmailer/trigger
+@exec ${CHMOD} 600 /var/nullmailer/trigger
+@exec ${CHOWN} -R ${NULLMAILER_USER}:${NULLMAILER_GROUP} /var/nullmailer/*
 @dirrm libexec/nullmailer
-@dirrm etc/nullmailer
+@dirrm share/doc/nullmailer
+@unexec ${RMDIR} ${PKG_SYSCONFDIR}/nullmailer 2>/dev/null || true
+@unexec ${RMDIR} /var/nullmailer/queue 2>/dev/null || true
+@unexec ${RMDIR} /var/nullmailer/tmp 2>/dev/null || true
+@unexec ${RM} -f /var/nullmailer/trigger 2>/dev/null || true
+@unexec ${RMDIR} /var/nullmailer 2>/dev/null || true

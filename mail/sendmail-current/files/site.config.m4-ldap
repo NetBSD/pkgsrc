@@ -1,4 +1,0 @@
-# enable ldap
-APPENDDEF(`confMAPDEF', `-DLDAPMAP')
-APPENDDEF(`confENVDEF', `-I${LOCALBASE}/include')
-APPENDDEF(`confLIBS', `-L${LOCALBASE}/lib -lldap -llber')

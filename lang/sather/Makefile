@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/04 00:45:28 jtb Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2002/06/23 18:50:45 jlam Exp $
 
 DISTNAME=		sather-1.2.1
 CATEGORIES=		lang
@@ -8,20 +8,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/sather/index.html
 COMMENT=		Compiler for the Sather object oriented programming language
 
-DEPENDS+=		boehm-gc-[0-9]*:../../devel/boehm-gc
-DEPENDS+=		tcl-8.3.*:../../lang/tcl
-DEPENDS+=		tk-8.3.*:../../x11/tk
-
 USE_GMAKE=		# defined
 
 ALL_TARGET=		full optional
-
-GC_PREFIX_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=		GC_PREFIX=boehm-gc
-TCL_PREFIX_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=		TCL_PREFIX=tcl
-TK_PREFIX_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=		TK_PREFIX=tk
 
 INFO_FILES=		sather.info sather-tutorial.info sather-mode.info
 
@@ -45,9 +34,9 @@ do-configure:
 		-e 's:@GMAKE@:${GMAKE}:g'				\
 		-e 's:@PREFIX@:${PREFIX}:g'				\
 		-e 's:@X11BASE@:${X11BASE}:g'				\
-		-e 's:@GC_PREFIX@:${GC_PREFIX}:g'			\
-		-e 's:@TCL_PREFIX@:${TCL_PREFIX}:g'			\
-		-e 's:@TK_PREFIX@:${TK_PREFIX}:g'			\
+		-e 's:@GC_PREFIX@:${LOCALBASE}:g'			\
+		-e 's:@TCL_PREFIX@:${LOCALBASE}:g'			\
+		-e 's:@TK_PREFIX@:${LOCALBASE}:g'			\
 		$$f > $$f.tmp && ${MV} -f $$f.tmp $$f;			\
 	done
 
@@ -64,8 +53,6 @@ do-install:
 	${INSTALL_SCRIPT} PP gen_html saprep ${PREFIX}/lib/sather/Bin
 	${INSTALL_SCRIPT} ${WRKSRC}/debian/bin-wrapper			\
 		${PREFIX}/lib/sather/Bin
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/Library		\
-		${WRKSRC}/System
 	cd ${PREFIX}/bin;						\
 		 ${LN} -sf ../lib/sather/Bin/bin-wrapper sacomp;	\
 		 ${LN} -sf ../lib/sather/Bin/bin-wrapper sabrowse;	\
@@ -76,6 +63,8 @@ do-install:
 		System/Platforms/X System/Platforms/dualgui		\
 		System/Platforms/gui System/Platforms/tcltk		\
 		Browser	${PREFIX}/lib/sather
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/sather/Library \
+		${PREFIX}/lib/sather/System
 	${FIND} ${PREFIX}/lib/sather -name \*.config -o -name Makefile 	\
 		-o -name \*.orig | ${XARGS} ${RM} -f
 	${INSTALL_DATA} ${WRKSRC}/Emacs/*.info* ${PREFIX}/info
@@ -90,5 +79,8 @@ do-install:
 post-install:
 	${RM} -fr ${PREFIX}/lib/sather/System/Platforms/dualgui/dual_gui_server.code/
 
+.include "../../devel/boehm-gc/buildlink.mk"
+.include "../../x11/tk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/02/03 13:38:38 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2002/06/23 18:50:56 jlam Exp $
 
 DISTNAME=	courier-imap-1.4.2
 PKGREVISION=	1
@@ -16,7 +16,7 @@ REPLACE_PERL=		sysconftool
 
 CONFIGURE_ENV+=		OPENSSL=${BUILDLINK_PREFIX.openssl}/bin/openssl
 
-.if defined(STRIPFLAG) && !empty(STRIPFLAG:M-s)
+.if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL:M-s)
 INSTALL_TARGET=         install-strip
 .endif
 

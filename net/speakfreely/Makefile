@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 18:19:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2002/06/23 18:57:09 jlam Exp $
 #
 
 DISTNAME=		speak_freely-7.2
@@ -35,7 +35,7 @@ CCFLAGS+=		-DHALF_DUPLEX
 
 .if defined(USE_CRYPTO) && ${USE_CRYPTO} == "YES"
 HAVE_LIBCRYPTO=		YES
-USE_SSL=		YES
+.include "../../security/openssl/buildlink.mk"
 
 .if defined(USE_IDEA) && ${USE_IDEA} == "YES"
 LICENSE=		no-commercial-use

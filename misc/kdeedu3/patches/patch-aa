@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1.2.2 2002/06/23 18:53:27 jlam Exp $
+
+--- kvoctrain/kvoctrain/Makefile.am.orig	Mon Jan  7 17:54:37 2002
++++ kvoctrain/kvoctrain/Makefile.am
+@@ -45,7 +45,7 @@
+ 
+ install-data-local:
+ 	$(mkinstalldirs) $(DESTDIR)$(kde_bindir)
+-	$(INSTALL_PROGRAM) $(srcdir)/langen2kvtml $(DESTDIR)$(kde_bindir)/langen2kvtml
++	$(INSTALL_SCRIPT) $(srcdir)/langen2kvtml $(DESTDIR)$(kde_bindir)/langen2kvtml
+ 	$(mkinstalldirs) $(DESTDIR)$(kde_appsdir)/Edutainment/
+ 	$(INSTALL_DATA) $(srcdir)/kvoctrain.desktop $(DESTDIR)$(kde_appsdir)/Edutainment/kvoctrain.desktop
+ 	$(mkinstalldirs) $(DESTDIR)$(kde_icondir)/

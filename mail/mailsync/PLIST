@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.10.2 2002/06/23 18:51:32 jlam Exp $
+bin/mailsync
+man/man1/mailsync.1
+share/doc/mailsync/README
+share/doc/mailsync/WHATSNEW
+share/examples/mailsync/dot.mailsync
+@dirrm share/examples/mailsync
+@dirrm share/doc/mailsync

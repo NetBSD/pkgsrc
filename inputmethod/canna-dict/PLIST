@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.2.2 2002/06/23 18:47:15 jlam Exp $
+canna/canna/bushu.cld
+canna/canna/chimei.ctd
+canna/canna/dics.dir
+canna/canna/fuzokugo.cbd
+canna/canna/fuzokugo.cld
+canna/canna/hojomwd.ctd
+canna/canna/hojoswd.ctd
+canna/canna/iroha.cbd
+canna/canna/iroha.cld
+canna/canna/kanasmpl.ctd
+canna/canna/katakana.ctd
+canna/canna/keishiki.ctd
+canna/canna/necgaiji.ctd
+canna/canna/number.ctd
+canna/canna/software.ctd
+canna/canna/suffix.ctd
+@dirrm canna/canna
+@dirrm canna

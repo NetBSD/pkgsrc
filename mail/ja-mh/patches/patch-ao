@@ -1,0 +1,12 @@
+$NetBSD: patch-ao,v 1.1.1.1.10.2 2002/06/23 18:51:27 jlam Exp $
+
+--- ./uip/wmh.c.orig	Fri Apr 24 06:02:00 1998
++++ ./uip/wmh.c	Mon Nov  1 19:13:30 1999
+@@ -29,4 +29,7 @@
+ #include	<locale.h>
+ #endif
++#ifdef	UNISTD
++#include <unistd.h>
++#endif
+ 
+ 

@@ -1,0 +1,12 @@
+$NetBSD: patch-bg,v 1.1.1.1.6.2 2002/06/23 18:56:30 jlam Exp $
+--- config/AppleVolumes.system.orig	Fri Jul 28 00:53:30 2000
++++ config/AppleVolumes.system	Fri Jul 28 00:53:08 2000
+@@ -26,7 +26,7 @@
+ .html	TEXT	MOS!
+ .rtf	TEXT	MSWD
+ .doc	WDBN	MSWD
+-.pdf	CARO	PDF 
++.pdf	PDF 	CARO
+ 
+ # compressed archives
+ .bin	BINA	MB2P

@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1.2.2 2002/06/23 18:55:16 jlam Exp $
+
+Please install inetd.conf(5)'s entry like bellow.
+
+ ftp stream tcp nowait nobody ${LOCALBASE}/libexec/ftp.proxy ftp.proxy -e -l -m
+
+You may consider to select your own port other than standard ftp.
+
+===========================================================================

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1.20.2 2002/06/23 18:48:34 jlam Exp $
+
+--- script/Makefile.in.orig	Sun Nov 11 20:39:41 2001
++++ script/Makefile.in
+@@ -16,7 +16,7 @@
+ 	( cd etc; ${MAKE} install )
+ 	( cd cin; ${MAKE} install )
+ 	( cd po;  ${MAKE} install )
+-	( cd doc/man; ${MAKE} install )
++	( cd man; ${MAKE} install )
+ 
+ clean:
+ 	( cd src; ${MAKE} clean )

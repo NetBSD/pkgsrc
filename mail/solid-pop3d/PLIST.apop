@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.apop,v 1.1.1.1.50.2 2002/06/23 18:52:17 jlam Exp $
+man/man1/pop_auth.1

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.2.2 2002/06/23 18:55:19 jlam Exp $
+
+--- src/Makefile.orig	Tue Jan 22 00:46:03 2002
++++ src/Makefile
+@@ -12,7 +12,7 @@
+ 
+ 
+ ftp.proxy:	$(FTPPROXY)
+-	$(CC) -o $@ $(FTPPROXY)
++	$(CC) -o $@ $(FTPPROXY) $(LIBS)
+ 
+ 	
+ clean:

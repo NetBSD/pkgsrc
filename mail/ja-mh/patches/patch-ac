@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1.10.2 2002/06/23 18:51:21 jlam Exp $
+
+--- ./sbr/remdir.c.orig	Fri Apr 24 06:02:00 1998
++++ ./sbr/remdir.c	Mon Nov  1 19:13:30 1999
+@@ -6,4 +6,7 @@
+ #include "../h/mh.h"
+ #include <stdio.h>
++#ifdef	UNISTD
++#include <unistd.h>
++#endif
+ 
+ 

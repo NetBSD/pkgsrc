@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1.2.2 2002/06/23 18:53:38 jlam Exp $
+
+--- kcalc/kcalc.cpp.orig	Wed May  8 19:31:32 2002
++++ kcalc/kcalc.cpp
+@@ -2274,7 +2274,9 @@
+ //-------------------------------------------------------------------------
+ // Name: main(int argc, char *argv[])
+ //-------------------------------------------------------------------------
+-int main(int argc, char *argv[])
++extern "C" int kdemain(int, char *[]);
++
++int kdemain(int argc, char *argv[])
+ {
+ 	KAboutData aboutData( "kcalc", I18N_NOOP("KCalc"),
+ 		version, description, KAboutData::License_GPL,

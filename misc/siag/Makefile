@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/03/14 00:49:00 wiz Exp $
+# $NetBSD: Makefile,v 1.25.2.1 2002/06/23 18:54:19 jlam Exp $
 #
 
 DISTNAME=       siag-3.1.20
@@ -20,7 +20,7 @@ USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=	YES
 
 CFLAGS+=	-Dunix
-STRIPFLAG=
+_STRIPFLAG_INSTALL=
 
 XAW_TYPE?=	3d
 
