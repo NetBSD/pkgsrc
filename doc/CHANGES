@@ -190,3 +190,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libtool-base to 1.4.20010614nb11 [jlam 2003-01-10]
 	Updated libtool-info to 1.4.20010614nb11 [jlam 2003-01-10]
 	Updated gtk-engines to 0.12nb2 [jlam 2003-01-10]
+	Updated libctl to 2.2 [wiz 2003-01-10]
