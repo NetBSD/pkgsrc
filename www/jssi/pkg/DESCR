@@ -1,0 +1,11 @@
+Apache JSSI parses JHTML files, executes the servlets as specified by the
+<SERVLET> tag and replaces those tags with the output of the executed
+servlet. The <SERVLET> tag can be seen as the server side equivalent of
+the <APPLET> tag.
+
+Note that SSI files for java servlets are called JHTML files in the
+apache context while SHTML files are usually for traditional SSI (like
+<!--#ECHO -->). This is a bit confusing since in the Java Web Server
+(SUN) context SHTML files are used for java servlet SSI files and
+JHTML is used for page compiled pages. Java Apache SSI does not support
+page compiling. 
