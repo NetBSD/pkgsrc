@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.16 2004/11/04 16:29:56 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.17 2005/01/11 02:08:53 xtraeme Exp $
 #
-# Copyright (c) 2004 The NetBSD Foundation, Inc.
+# Copyright (c) 2004, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
-# by Juan RP <xtraeme@NetBSD.org>.
+# by Juan RP.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -374,7 +374,7 @@ _EOF_
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.16 2004/11/04 16:29:56 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.17 2005/01/11 02:08:53 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -407,10 +407,16 @@ _EOF_
 		fi
 	;;
 	chroot)
-		(					\
-		echo "export PS1=\"$KERNEL_NAME> \"";	\
-		echo "set -o emacs";			\
-		) > $ISODIR/etc/profile
+		if [ ! -f $ISODIR/etc/profile ]; then 
+			(					\
+			echo "export PS1=\"$KERNEL_NAME> \"";	\
+			echo "set -o emacs";			\
+			) > $ISODIR/etc/profile
+		else
+			if [ "$verbose_mode" = "on" ]; then
+				showmsg "Not overwriting /etc/profile."
+			fi
+		fi
 
 		if [ ! -d $ISODIR/usr/pkgsrc/distfiles ]; then
 		    mkdir -p $ISODIR/usr/pkgsrc/distfiles
@@ -598,37 +604,55 @@ _EOF_
 		showmsg "Done."
 	;;
 	iso)
-		[ -d $ISODIR/$BOOTDIR ] && chown -R root:wheel $ISODIR/$BOOTDIR
-
-		if [ ! -f $ISODIR/stand/mfs_etc.tgz ]; then
-			showmsg "Target iso failed!"
-			showmsg "Can't find mfs_etc.tgz file."
-			bye 1
-		fi
-
-		showmsg "Removing not needed directories."
-		for RM in ${REMOVE_DIRS}
-                do
-                    if [ -d $ISODIR/$RM ]; then
+		_do_real_iso_image()
+		{
 			if [ "$verbose_mode" = "on" ]; then
-			    echo "=> Removing $RM..."
+				echo "=> Removing $IMAGE_NAME.iso..."
 			fi
-			rm -rf $ISODIR/$RM
-		    else
-			echo "=> Nonexistent directory: $RM."
-		    fi
-		done
 
-		sleep 2 # Because I want to see the messages :-)
-		
-		if [ ! -f $BASEDIR/$IMAGE_NAME.iso ]; then
-		    echo
-		    showmsg "Creating ISO CD9660 image"
-		    $MKISOFS $MKISOFS_FIXED_ARGS $MKISOFS_ARGS \
-			-b $BOOTDIR/$BOOTIMAGE -o $BASEDIR/$IMAGE_NAME.iso \
-			$ISODIR
+			[ -f "$BASEDIR/$IMAGE_NAME.iso" ] && rm $BASEDIR/$IMAGE_NAME.iso
+			[ -d $ISODIR/$BOOTDIR ] && chown -R root:wheel $ISODIR/$BOOTDIR
+
+			if [ ! -f $ISODIR/stand/mfs_etc.tgz ]; then
+				showmsg "Target iso failed!"
+				showmsg "Can't find mfs_etc.tgz file."
+				bye 1
+			fi
+			showmsg "Removing not needed directories."
+			for RM in ${REMOVE_DIRS}
+			do
+				if [ -d $ISODIR/$RM ]; then
+					if [ "$verbose_mode" = "on" ]; then
+						echo "=> Removing $RM..."
+					fi
+					rm -rf $ISODIR/$RM
+				else
+					echo "=> Nonexistent directory: $RM."
+				fi
+			done
+
+			sleep 2 # Because I want to see the messages :-)
+
+			showmsg "Creating ISO CD9660 image"
+			$MKISOFS $MKISOFS_FIXED_ARGS $MKISOFS_ARGS \
+				-b $BOOTDIR/$BOOTIMAGE \
+				-o $BASEDIR/$IMAGE_NAME.iso $ISODIR
+		}
+		if [ -f $BASEDIR/$IMAGE_NAME.iso ]; then
+			showmsg "Found a previous ISO image, do you want to override it?"
+			echo
+			echo "[Press the Enter key to keep your ISO image, otherwise"
+			echo " press any other key to proceed removing this file and"
+			echo " creating a new one called: $IMAGE_NAME.iso]"
+			read output_u
+                        if [ -n "$output_u" ]; then
+				_do_real_iso_image
+			elif [ -z "$output_u" ]; then
+				showmsg "Not overwritting ISO image, skipped."
+			fi
+		else
+			_do_real_iso_image
 		fi
-
 	;;
 	burn)
 		if [ ! -f $BASEDIR/$IMAGE_NAME.iso ]; then
