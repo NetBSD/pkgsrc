@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 23:48:06 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/10 04:45:44 minskim Exp $
 share/xsl/tei/fo/catalog
 share/xsl/tei/fo/tei-bib.xsl
 share/xsl/tei/fo/tei-drama.xsl
@@ -18,7 +18,4 @@ share/xsl/tei/fo/tei-struct.xsl
 share/xsl/tei/fo/tei-table.xsl
 share/xsl/tei/fo/tei-xref.xsl
 share/xsl/tei/fo/tei.xsl
-share/xsl/tei/fo/teicommon.xsl
 @dirrm share/xsl/tei/fo
-@unexec ${RMDIR} %D/share/xsl/tei 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/xsl 2>/dev/null || ${TRUE}
