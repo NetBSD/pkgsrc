@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7815 2004/11/10 20:01:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.7816 2004/11/11 03:18:02 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5220,3 +5220,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.5 [minskim 2004-11-10]
 	Added p5-Cache-Simple-TimedExpiry-0.22 [seb 2004-11-10]
 	Updated gimageview to 0.2.26nb1 [jmmv 2004-11-10]
+	Updated musicpd to 0.11.5 [simonb 2004-11-11]
