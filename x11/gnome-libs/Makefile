@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2000/07/25 05:16:40 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2000/07/31 08:45:45 jlam Exp $
 
 DISTNAME=		gnome-libs-1.2.3
 CATEGORIES=		x11 gnome
@@ -54,6 +54,7 @@ pre-build:
 	cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h
 
 post-install:
+	${RMDIR} ${PREFIX}/share/gnome/html/zvt
 	${MKDIR} -p ${PREFIX}/etc/CORBA/servers
 	${TOUCH} ${PREFIX}/etc/CORBA/servers/.directory
 	${MKDIR} ${LOCALSTATEDIR}
