@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2004/05/31 10:00:42 grant Exp $
+# $NetBSD: builtin.mk,v 1.6 2004/07/13 01:20:32 danw Exp $
 
 _READLINE_H=		/usr/include/readline.h
 _READLINE_READLINE_H=	/usr/include/readline/readline.h
@@ -89,7 +89,7 @@ USE_BUILTIN.readline!=							\
 .    if !empty(_BLNK_LIBREADLINE_FOUND:M[nN][oO]) && \
         !empty(_BLNK_LIBEDIT_FOUND:M[yY][eE][sS])
 USE_BUILTIN.readline=	yes
-_INCOMPAT_READLINE?=	SunOS-*-*
+_INCOMPAT_READLINE?=	SunOS-*-* Darwin-*-*
 .      for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
 .        if !empty(MACHINE_PLATFORM:M${_pattern_})
 USE_BUILTIN.readline=	no
