@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2004/03/25 12:58:37 martti Exp $
+# $NetBSD: Makefile,v 1.126 2004/04/13 06:29:43 martti Exp $
 
 DISTNAME=	postfix-2.0.19
 CATEGORIES=	mail
@@ -79,6 +79,13 @@ CCARGS+=	-DHAS_LDAP
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
 		-lldap -llber
+.if ${OPSYS} != "Linux"
+.include "../../databases/db4/buildlink3.mk"
+CCARGS+=	-I${BUILDLINK_PREFIX.db}/include/db4
+AUXLIBS+=	-L${BUILDLINK_PREFIX.db}/lib                    \
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db}/lib     \
+		-ldb4
+.endif
 .endif
 
 .if defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
