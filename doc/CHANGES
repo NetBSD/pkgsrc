@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1270 2003/01/29 10:58:55 jlam Exp $
+$NetBSD: CHANGES,v 1.1271 2003/01/29 11:01:01 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -468,3 +468,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kile to 1.32 [markd 2003-01-29]
 	Added filmgimp-0.15 [jlam 2003-01-29]
 	Updated kaffe to 1.0.7nb1 [jlam 2003-01-29]
+	Updated blackdown-jre13 to 1nb1 [jlam 2003-01-29]
