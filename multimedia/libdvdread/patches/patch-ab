@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2004/05/18 15:51:21 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/21 16:14:14 drochner Exp $
 
---- dvdread/dvd_reader.c.orig	2004-05-18 15:53:26.000000000 +0200
+--- dvdread/dvd_reader.c.orig	2003-02-13 23:31:21.000000000 +0100
 +++ dvdread/dvd_reader.c
 @@ -282,7 +282,7 @@ static char *bsd_block2char( const char 
      char *new_path;
@@ -11,3 +11,21 @@ $NetBSD: patch-ab,v 1.1 2004/05/18 15:51:21 drochner Exp $
        return (char *) strdup( path );
  
      /* Replace "/dev/" with "/dev/r" */
+@@ -915,7 +915,7 @@ ssize_t DVDReadBlocks( dvd_file_t *dvd_f
+     return (ssize_t)ret;
+ }
+ 
+-int32_t DVDFileSeek( dvd_file_t *dvd_file, int32_t offset )
++int32_t DVDFileSeek( dvd_file_t *dvd_file, int offset )
+ {
+     /* Check arguments. */
+     if( dvd_file == NULL || offset < 0 )
+@@ -1033,7 +1033,7 @@ int DVDISOVolumeInfo( dvd_reader_t *dvd,
+ 
+   /* Check arguments. */
+   if( dvd == NULL )
+-    return 0;
++    return -1;
+   
+   if( dvd->dev == NULL ) {
+     /* No block access, so no ISO... */
