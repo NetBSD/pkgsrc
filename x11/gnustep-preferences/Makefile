@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/23 21:50:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 15:30:33 grant Exp $
 #
 
 DISTNAME=	Preferences-1.2.0
@@ -14,7 +14,7 @@ COMMENT=	Application for setting preferences for the GNUstep system
 
 NO_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 MAKEFILE=		GNUmakefile
 

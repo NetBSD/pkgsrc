@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/23 21:50:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 15:30:32 grant Exp $
 #
 
 DISTNAME=	gnustep-back-0.9.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	AppKit backend for GNUstep
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		YES

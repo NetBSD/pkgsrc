@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde2,v 1.8 2003/04/28 07:48:28 skrll Exp $
+# $NetBSD: Makefile.kde2,v 1.9 2004/01/24 15:30:33 grant Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE2-distributed packages (they all share common configure and build
@@ -13,7 +13,7 @@ EXTRACT_SUFX?=	.tar.bz2
 
 HOMEPAGE?=	http://www.kde.org/
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/admin/ltconfig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/03 18:50:00 reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/24 15:30:34 grant Exp $
 #
 
 DISTNAME=	vte-0.11.10
@@ -18,7 +18,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
 CONFIGURE_ARGS+=	--disable-gtk-doc

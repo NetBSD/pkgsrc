@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/09 23:09:44 cube Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/24 15:30:33 grant Exp $
 #
 
 DISTNAME=	ion-devel-dock-20031221
@@ -13,7 +13,7 @@ COMMENT=	Ion module that enables docking
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 
 MAKE_ENV+=		TOPDIR=${BUILDLINK_PREFIX.ion}/include/ion

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/23 21:50:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/24 15:30:34 grant Exp $
 #
 
 DISTNAME=	zenity-1.6
@@ -17,7 +17,7 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
 .include "../../devel/GConf2/schemas.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/23 21:50:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/24 15:30:32 grant Exp $
 #
 
 DISTNAME=		gnome-applets-2.4.2
@@ -17,7 +17,7 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_X11=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

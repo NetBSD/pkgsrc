@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/07/17 22:56:32 grant Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/01/24 15:30:33 grant Exp $
 #
 
 DISTNAME=		gtoolkit-0.9.5
@@ -11,7 +11,7 @@ HOMEPAGE?=		http://www.informatik.uni-osnabrueck.de/elmar/projects/gtoolkit/
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

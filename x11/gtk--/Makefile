@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/07/13 13:54:02 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/24 15:30:33 grant Exp $
 #
 
 DISTNAME=		gtkmm-1.2.10
@@ -19,7 +19,7 @@ USE_X11BASE=		YES
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_PERL5=		build
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 CONFIGURE_ARGS=		--enable-static
