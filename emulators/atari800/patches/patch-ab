@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/05/23 05:17:05 tv Exp $
+
+--- rt-config.c.orig	Sun May 23 00:57:27 1999
++++ rt-config.c	Sun May 23 00:57:49 1999
+@@ -41,7 +41,7 @@
+ extern int Ram256;
+ 
+ static char *rtconfig_filename1 = "atari800.cfg";
+-static char *rtconfig_filename2 = "/etc/atari800.cfg";
++static char *rtconfig_filename2 = PREFIX "/share/atari800/atari800.cfg";
+ 
+ int RtConfigLoad(char *rtconfig_filename)
+ {

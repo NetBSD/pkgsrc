@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/23 05:17:05 tv Exp $
+
+--- sound.c.orig	Tue Dec  1 11:46:36 1998
++++ sound.c	Sun May 23 00:35:02 1999
+@@ -5,7 +5,7 @@
+ #ifdef VOXWARE
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+-#include <sys/soundcard.h>
++#include <soundcard.h>
+ 
+ #include "pokeysnd.h"
+ 
+@@ -57,9 +57,9 @@
+ 		unsigned int formats;
+ 		int tmp;
+ 
+-		dsp_fd = open("/dev/dsp", O_WRONLY, 0777);
++		dsp_fd = open("/dev/audio", O_WRONLY, 0777);
+ 		if (dsp_fd == -1) {
+-			perror("/dev/dsp");
++			perror("/dev/audio");
+ 			exit(1);
+ 		}
+ 		/*
