@@ -1,14 +1,14 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/05/19 13:02:23 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2002/10/29 16:50:15 drochner Exp $
 
---- Makefile.in.orig	Sun Apr 29 15:42:08 2001
-+++ Makefile.in	Sat May 19 13:48:00 2001
+--- Makefile.in.orig	Sun Oct  6 20:53:55 2002
++++ Makefile.in	Tue Oct 29 14:09:07 2002
 @@ -41,8 +41,8 @@
  #
  #
  #
--SUBDIRS = @scsilib_dir@ edc_ecc trackdb paranoia dao utils @xdao@
+-SUBDIRS = @pccts_target@ @scsilib_dir@ trackdb paranoia dao utils @xdao@
 -SUBDIRSINST = trackdb dao utils @xdao@
-+SUBDIRS = @scsilib_dir@ edc_ecc trackdb paranoia dao @xdao@
++SUBDIRS = @scsilib_dir@ trackdb paranoia dao @xdao@
 +SUBDIRSINST = @xdao@
  
  all:
