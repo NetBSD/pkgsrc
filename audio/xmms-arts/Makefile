@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/11 23:04:46 snj Exp $
 #
 
 DISTNAME=	xmmsarts-0.4
@@ -14,16 +14,16 @@ COMMENT=	XMMS plugin to output sound through the aRts sound daemon
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
 
 LIBS+=			${LIBOSSAUDIO}
 
-.include "../../audio/arts/buildlink2.mk"
-.include "../../audio/xmms/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../audio/arts/buildlink3.mk"
+.include "../../audio/xmms/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
