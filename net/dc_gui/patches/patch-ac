@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2002/11/11 14:01:32 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2002/12/17 19:14:43 wiz Exp $
 
---- src/callbacks.c.orig	Sat Nov  9 16:54:13 2002
+--- src/callbacks.c.orig	Sun Dec  1 08:03:43 2002
 +++ src/callbacks.c
 @@ -2,6 +2,13 @@
  #  include <config.h>
@@ -24,21 +24,14 @@ $NetBSD: patch-ac,v 1.5 2002/11/11 14:01:32 wiz Exp $
  #include <gnome.h>
  #include <glib.h>
  #include <time.h>
-@@ -1733,7 +1739,7 @@ on_find_entry_activate                 (
+@@ -40,6 +46,10 @@
+ #include "find_result_clist.h"
+ #include "user_file_list_clist.h"
+ #include "ls_cache_clist.h"
++
++#ifndef MSG_NOSIGNAL
++#define MSG_NOSIGNAL 0
++#endif
  
- 		val=atof(gtk_entry_get_text(GTK_ENTRY(w)));
- 
--		g_string_sprintfa(req,"%lf",scale*val);
-+		g_string_sprintfa(req,"%f",scale*val);
- 	}
- 
- 	w=get_widget_by_widget_name("find_result");
-@@ -2975,7 +2981,7 @@ on_apply_pref_clicked                  (
- 			}
- 			if(i==4)
- 				i=0;
--			g_string_sprintf(out,"/OFFSET %lf\n",strtod(v,NULL)*scale[i]);
-+			g_string_sprintf(out,"/OFFSET %f\n",strtod(v,NULL)*scale[i]);
- 			send_data_to_dctc(out->str);
- 		}
- 	}
+ static void start_download_from_find_result_clist(void);
+ static void reload_flagged_user_clist(int only_if_empty);
