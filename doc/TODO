@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2522 2004/11/27 12:40:40 wiz Exp $
+$NetBSD: TODO,v 1.2523 2004/11/27 14:21:24 he Exp $
 
 Suggested new packages
 ======================
@@ -823,7 +823,6 @@ Suggested package updates
 	o oroborus-2.0.13.1
 	o osh-041028
 	o oss-3.99.1i
-	o p5-Algorithm-Merge-0.05
 	o p5-Apache-ASP-2.57
 	o p5-Apache-AuthCookie-3.06
 	o p5-Apache-DBILogConfig-0.02
