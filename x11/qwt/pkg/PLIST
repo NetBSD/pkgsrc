@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/17 18:32:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/16 00:29:02 wiz Exp $
 include/qwt/qwt.h
 include/qwt/qwt_arrbtn.h
 include/qwt/qwt_autoscl.h
@@ -29,8 +29,9 @@ include/qwt/qwt_spline.h
 include/qwt/qwt_symbol.h
 include/qwt/qwt_thermo.h
 include/qwt/qwt_wheel.h
-lib/libqwt.so.0.2
 lib/libqwt.a
+lib/libqwt.la
+lib/libqwt.so.0.2
 man/man3/Qwt.3
 man/man3/QwtArrowButton.3
 man/man3/QwtAutoScale.3
