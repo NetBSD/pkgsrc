@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 15:02:58 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/03 14:40:16 skrll Exp $
 
 DISTNAME=	arts-1.0.1
 CATEGORIES=	audio
@@ -12,6 +12,7 @@ USE_BUILDLINK_ONLY=	yes
 
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libltdl/libtool
 
+BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 USE_PTHREAD=		native pth-syscall
 .include "../../mk/bsd.prefs.mk"
 
