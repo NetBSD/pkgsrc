@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2003/12/10 04:03:02 taca Exp $
+# $NetBSD: Makefile,v 1.98 2003/12/17 16:48:27 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE4
 PKGNAME=	squid-2.5.4
-PKGREVISION=	4
+PKGREVISION=	5
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -28,7 +28,13 @@ PATCHFILES=	squid-2.5.STABLE4-reconfigure_message.patch \
 		squid-2.5.STABLE4-netroute.patch \
 		squid-2.5.STABLE4-synflood.patch \
 		squid-2.5.STABLE4-fqdn.patch \
-		squid-2.5.STABLE4-connect_cleanup.patch
+		squid-2.5.STABLE4-connect_cleanup.patch \
+		squid-2.5.STABLE4-pconn_post.patch \
+		squid-2.5.STABLE4-ftp_put.patch \
+		squid-2.5.STABLE4-pconn-load.patch \
+		squid-2.5.STABLE4-icon_urls.patch \
+		squid-2.5.STABLE4-redirector_access.patch \
+		squid-2.5.STABLE4-pconn-lifo.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
