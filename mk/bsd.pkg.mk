@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1342 2004/01/10 09:52:56 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1343 2004/01/12 10:08:37 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -2983,7 +2983,7 @@ show-shlib-type:
 	cd ${WRKDIR} &&							\
 	sotype=none;							\
 	if [ "X${MKPIC}" != "Xno" -a "X${NOPIC}" = "X" ]; then		\
-		${ECHO} "int main() { exit(0); }" > a.$$$$.c;		\
+		${ECHO} "int main() { return(0); }" > a.$$$$.c;		\
 		${CC} ${CFLAGS} a.$$$$.c -o a.$$$$.out;			\
 		case `${FILE_CMD} a.$$$$.out` in			\
 		*ELF*dynamically*)					\
