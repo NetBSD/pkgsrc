@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/03/07 23:03:12 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/03/11 16:22:04 tron Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
@@ -28,11 +28,14 @@ CC=		${LOCALBASE}/pthreads/bin/pgcc
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 post-extract:
-	@(cd ${WRKSRC}/Input/mpg123 && ${MV} decode_i586.s decode_i586.S && \
-	 ${MV} getbits.s getbits.S && cd ${WRKSRC}/Visualization/blur_scope && \
-	 ${MV} blur_8.s blur_8.S);
-	@${PERL} -pi.bak -e 's:\.s :\.S :g' ${WRKSRC}/Input/mpg123/Makefile.in
-	@${PERL} -pi.bak -e 's:blur_8.s:blur_8.S:g' \
-	    ${WRKSRC}/Visualization/blur_scope/Makefile.in
+	cd ${WRKSRC}/Input/mpg123 && \
+	${MV} decode_i586.s decode_i586.S && \
+	${MV} getbits.s getbits.S && \
+	${MV} Makefile.in Makefile.in.old && \
+	${SED} -e 's:\.s :\.S :g' <Makefile.in.old >Makefile.in
+	cd ${WRKSRC}/Visualization/blur_scope && \
+	${MV} blur_8.s blur_8.S && \
+	${MV} Makefile.in Makefile.in.old && \
+	${SED} -e 's:blur_8.s:blur_8.S:g' <Makefile.in.old >Makefile.in
 
 .include "../../mk/bsd.pkg.mk"
