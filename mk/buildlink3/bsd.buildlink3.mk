@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.3 2003/09/04 05:40:25 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.4 2003/09/04 19:38:06 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -112,10 +112,12 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 #				relevant for buildlink3.mk files that
 #				provide a setting for this variable.
 #
+# BUILDLINK_CFLAGS.<pkg>,
 # BUILDLINK_CPPFLAGS.<pkg>,
-# BUILDLINK_LDFLAGS.<pkg>	contain extra -D..., -I... and -L.../-Wl,-R
-#				options to be passed to the compiler/linker
-#				so that building against <pkg> will work.
+# BUILDLINK_LDFLAGS.<pkg>	contain extra compiler options, -D..., -I...
+#				and -L.../-Wl,-R options to be passed to the
+#				compiler/linker so that building against
+#				<pkg> will work.
 #
 # BUILDLINK_INCDIRS.<pkg>,
 # BUILDLINK_LIBDIRS.<pkg>	subdirectories of BUILDLINK_PREFIX.<pkg>
@@ -168,10 +170,12 @@ BUILDLINK_LIBDIRS.${_pkg_}?=	lib
 # BUILDLINK_CPPFLAGS and BUILDLINK_LDFLAGS contain the proper -I...
 # and -L.../-Wl,-R... options to be passed to the compiler and linker
 # to find the headers and libraries for the various packages at
-# configure/build time.
+# configure/build time.  BUILDLINK_CFLAGS contains any special compiler
+# options needed when building against the various packages.
 #
 BUILDLINK_CPPFLAGS=	# empty
 BUILDLINK_LDFLAGS=	# empty
+BUILDLINK_CFLAGS=	# empty
 
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 .  for _flag_ in ${BUILDLINK_CPPFLAGS.${_pkg_}}
@@ -182,6 +186,11 @@ BUILDLINK_CPPFLAGS+=	${_flag_}
 .  for _flag_ in ${BUILDLINK_LDFLAGS.${_pkg_}}
 .    if empty(BUILDLINK_LDFLAGS:M${_flag_})
 BUILDLINK_LDFLAGS+=	${_flag_}
+.    endif
+.  endfor
+.  for _flag_ in ${BUILDLINK_CFLAGS.${_pkg_}}
+.    if empty(BUILDLINK_CFLAGS:M${_flag_})
+BUILDLINK_CFLAGS+=	${_flag_}
 .    endif
 .  endfor
 .  if !empty(BUILDLINK_INCDIRS.${_pkg_})
@@ -226,15 +235,27 @@ BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib
 BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib
 .endif
 
-.for _flag_ in ${BUILDLINK_CPPFLAGS}
+.for _flag_ in ${BUILDLINK_CFLAGS}
 .  if empty(CFLAGS:M${_flag_})
 CFLAGS+=	${_flag_}
 .  endif
 .  if empty(CXXFLAGS:M${_flag_})
 CXXFLAGS+=	${_flag_}
 .  endif
+.endfor
+.for _flag_ in ${BUILDLINK_CPPFLAGS}
 .  if empty(CPPFLAGS:M${_flag_})
 CPPFLAGS+=	${_flag_}
+.  endif
+#
+# We add BUILDLINK_CPPFLAGS to both CFLAGS and CXXFLAGS since much software
+# ignores the value of CPPFLAGS that we set in the environment.
+#
+.  if empty(CFLAGS:M${_flag_})
+CFLAGS+=	${_flag_}
+.  endif
+.  if empty(CXXFLAGS:M${_flag_})
+CXXFLAGS+=	${_flag_}
 .  endif
 .endfor
 .for _flag_ in ${BUILDLINK_LDFLAGS}
