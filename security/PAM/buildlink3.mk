@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PAM_BUILDLINK3_MK:=	${PAM_BUILDLINK3_MK}+
 
-.if !empty(PAM_BUILDLINK3_MK:M+)
-.  include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
+.if !empty(PAM_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		pam
 BUILDLINK_DEPENDS.pam?=		PAM>=0.75
 BUILDLINK_PKGSRCDIR.pam?=	../../security/PAM
 .endif	# PAM_BUILDLINK3_MK
@@ -20,30 +21,21 @@ BUILDLINK_IS_BUILTIN.pam=	YES
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.pam:M[yY][eE][sS])
-_NEED_PAM=	NO
+BUILDLINK_USE_BUILTIN.pam=	YES
 .endif
 
-.if !defined(_NEED_PAM)
+.if !defined(BUILDLINK_USE_BUILTIN.pam)
 .  if !empty(BUILDLINK_IS_BUILTIN.pam:M[nN][oO])
-_NEED_PAM=	YES
+BUILDLINK_USE_BUILTIN.pam=	NO
 .  else
-_NEED_PAM=	NO
+BUILDLINK_USE_BUILTIN.pam=	YES
 .  endif
-MAKEFLAGS+=	_NEED_PAM="${_NEED_PAM}"
 .endif
 
-.if ${_NEED_PAM} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.pam:M[nN][oO])
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	pam
 .  endif
 .endif
-
-.if !empty(PAM_BUILDLINK3_MK:M+)
-.  if ${_NEED_PAM} == "YES"
-BUILDLINK_PACKAGES+=	pam
-.  else
-BUILDLINK_PREFIX.pam=	/usr
-.  endif
-.endif	# PAM_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
