@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2396 2003/06/02 12:44:07 is Exp $
+$NetBSD: CHANGES,v 1.2397 2003/06/02 13:16:06 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2271,4 +2271,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vim to 6.2.0 [martti 2003-06-02]
 	Added vim-gtk2-6.2.0 [martti 2003-06-02]
 	Added gini-0.5.1 [jmmv 2003-06-02]
-	Updated mad to mad-0.14.2bnb1 [is 2003-06-02]
+	Updated mad to 0.14.2bnb1 [is 2003-06-02]
+	Added bftpd-1.0.24 [jmmv 2003-06-02]
