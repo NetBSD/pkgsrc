@@ -1,4 +1,4 @@
-# $NetBSD: STATUS,v 1.7 2003/04/21 09:35:30 cjep Exp $
+# $NetBSD: STATUS,v 1.8 2003/04/21 18:21:42 cjep Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.
@@ -42,14 +42,14 @@ audio/mpg123                                 Y      Y                  Y
 devel/cvs                  Y        Y        Y      Y        Y         Y
 devel/gettext              Y        Y        Y      Y        Y         Y
 devel/libtool              Y        Y        Y      Y        Y         Y
-devel/ncurses                                                          Y
+devel/ncurses                                                X*        Y
 editors/vim                Y        Y        Y      Y                  Y
 editors/xemacs                                      Y
 editors/emacs                                       Y
 graphics/xfig                                       Y
 graphics/xv                Y                        Y
-lang/perl5                N/A       Y        Y      Y                  Y
-lang/perl58                Y                 Y      Y                  Y
+lang/perl5                N/A       Y        Y      Y        N         Y
+lang/perl58                Y                 Y      Y        Y         Y
 mail/mutt                  Y        Y        Y      Y                  Y
 misc/screen                Y        Y        Y      Y                  Y
 net/wget                   Y        Y               Y
@@ -58,7 +58,7 @@ print/gv                                            Y
 print/teTeX                                         Y
 print/xpdf                                         *[19860]
 security/openssh                             Y      Y                  Y
-security/openssl           Y                 Y      Y                  Y
+security/openssl           Y                 Y      Y        N         Y
 shells/tcsh                N        Y        Y      Y        Y         Y
 wm/blackbox                                         Y
 www/apache                 Y        Y        Y      Y        Y         Y
@@ -67,6 +67,7 @@ www/lynx                   Y        Y               Y                  Y
 ---------------------------------------------------------------------------
 notes:
 
+OpenBSD/ncurses: does not install a shared libncurses++ library.
 Linux/xpdf: depends on openmotif, see PR
 
 ---------------------------------------------------------------------------
