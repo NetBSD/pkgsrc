@@ -1,0 +1,25 @@
+$NetBSD: patch-aj,v 1.1 2001/06/20 16:46:13 bouyer Exp $
+
+--- cdrecord/scsi_cdr.c.orig	Wed Jun 20 16:35:42 2001
++++ cdrecord/scsi_cdr.c	Wed Jun 20 16:42:53 2001
+@@ -262,6 +262,12 @@
+ request_sense(scgp)
+ 	SCSI	*scgp;
+ {
++
++#ifdef __NetBSD__
++	/* request sense already done by kernel */
++	scsiprsense((Uchar *)scgp->scmd->u_sense.cmd_sense,
++	    scgp->scmd->sense_count);
++#else	
+ 		 char	sensebuf[CCS_SENSE_LEN];
+ 	register struct	scg_cmd	*scmd = scgp->scmd;
+ 
+@@ -282,6 +288,7 @@
+ 	if (scsicmd(scgp) < 0)
+ 		return (-1);
+ 	scsiprsense((Uchar *)sensebuf, CCS_SENSE_LEN - scsigetresid(scgp));
++#endif
+ 	return (0);
+ }
+ 
