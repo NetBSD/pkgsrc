@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.58 2004/12/22 15:12:18 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.59 2005/03/22 08:17:26 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -72,7 +72,7 @@ case $hw_machine_arch in
 	*Intel\ Pentium\ M\ *)		FLAGS='-march=pentium3m'	;;
 	*Intel\ Mobile\ Pentium\ 4\ *)	FLAGS='-march=pentium4m'	;;
 	*Intel\ Pentium\ 4\ *)		FLAGS='-march=pentium4'		;;
-	*VIA\ C3*\ Samuel*)		FLAGS='-march=c3'		;;
+	*VIA\ C3*\ *)			FLAGS='-march=c3'		;;
 	*AMD\ K6-III*)			FLAGS='-march=k6-3'		;;
 	*AMD\ K6-2*)			FLAGS='-march=k6-2'		;;
 	*AMD\ K6*)			FLAGS='-march=k6'		;;
