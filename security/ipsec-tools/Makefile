@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/11/11 10:53:08 manu Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/11 11:49:15 grant Exp $
 #
 
 DISTNAME=		ipsec-tools-0.5.pre20041109
@@ -15,7 +15,17 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-libradius --enable-frag --enable-hybrid
+PKG_OPTIONS_VAR=        PKG_OPTIONS.ipsec-tools
+PKG_DEFAULT_OPTIONS+=	radius
+PKG_SUPPORTED_OPTIONS+=	radius
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mradius)
+CONFIGURE_ARGS+=	--with-libradius
+.endif
+
+CONFIGURE_ARGS+=	--enable-frag --enable-hybrid
 
 # Require a kernel patch not integrated yet (IPR problem)
 #CONFIGURE_ARGS+=	--enable-natt
