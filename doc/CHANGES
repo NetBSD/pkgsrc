@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1831 2003/04/03 11:51:42 wiz Exp $
+$NetBSD: CHANGES,v 1.1832 2003/04/03 12:11:52 manu Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1451,3 +1451,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tuxracer to 0.61nb1 [wiz 2003-04-03]
 	Updated tuxpaint to 0.9.10nb1 [wiz 2003-04-03]
 	Updated nbtscan to 1.5 [wiz 2003-04-03]
+	Added bogofilter-0.11.1.3 [manu 2003-04-04]
