@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2003/07/21 17:11:54 martti Exp $
+# $NetBSD: Makefile,v 1.47 2003/07/29 16:27:26 wiz Exp $
 
 DISTNAME=		inn-${INN_VERSION}
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
@@ -109,6 +110,11 @@ pre-install:
 post-install:
 	${RM} -f ${PREFIX}/bin/inews
 	${LN} -s ../inn/bin/inews ${PREFIX}/bin/inews
+	${INSTALL_DATA_DIR} ${PREFIX}/include/inn
+	${INSTALL_DATA} ${WRKSRC}/include/config.h ${PREFIX}/include/inn
+	${INSTALL_DATA} ${WRKSRC}/include/dbz.h ${PREFIX}/include/inn
+	${INSTALL_DATA} ${WRKSRC}/include/libinn.h ${PREFIX}/include/inn
+	${INSTALL_DATA} ${WRKSRC}/include/storage.h ${PREFIX}/include/inn
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	for FILE in `ls -1 ${WRKSRC}/samples/* |			\
 		     ${EGREP} -v '(Makefile|.*\.(in|orig)$$)'`; do	\
