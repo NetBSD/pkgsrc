@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3217 2003/09/03 07:07:04 jlam Exp $
+$NetBSD: CHANGES,v 1.3218 2003/09/03 08:24:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3481,6 +3481,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated exim-exiscan to 4.22-11nb1 [abs 2003-09-02]
 	Updated fetchmail to 6.2.4 [frueauf 2003-09-02]
 	Updated fetchmailconf to 6.2.4 [frueauf 2003-09-02]
+	Removed ddskk [minoura 2003-09-02]
 	Added skk 12.2.0 [minoura 2003-09-02]
 	Updated libart2 to 2.3.14 [jmmv 2003-09-02]
 	Updated ftpproxy-1.2.1 [taca 2003-09-02]
