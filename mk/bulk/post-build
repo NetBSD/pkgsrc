@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.38 2004/03/13 11:55:40 wiz Exp $
+# $NetBSD: post-build,v 1.39 2004/03/18 14:27:20 grant Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -469,7 +469,10 @@ EOHTML
 
 # get and sort the broken packages
 sub getBroken {
-	open (BF, $BROKENFILE) or die "can't open $BROKENFILE: $!";
+	if (!open (BF, $BROKENFILE)) {
+		return undef;
+	}
+		
 	my @in = <BF>;
 	close (BF);
 
