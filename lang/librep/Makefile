@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.33 2004/02/12 09:10:51 jlam Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
@@ -14,15 +14,15 @@ COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 
 DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
 USE_GNU_READLINE=	# uses rl_basic_quote_characters
 
-USE_BUILDLINK2=		# defined
-USE_GNU_TOOLS+=		make
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 REP_LIBTOOL=		${PREFIX}/libexec/rep/${MACHINE_GNU_PLATFORM}/libtool
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-gmp
 CONFIGURE_ARGS+=	--enable-static
@@ -34,10 +34,10 @@ PLIST_SUBST+=		REP_VERS=${REP_VERS}
 
 post-install:
 	${RM} -f ${REP_LIBTOOL}
-	${LN} -sf ${LIBTOOL} ${REP_LIBTOOL}
+	${LN} -sf ${PKG_LIBTOOL} ${REP_LIBTOOL}
 
-.include "../../databases/gdbm/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/gmp/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
+.include "../../databases/gdbm/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
