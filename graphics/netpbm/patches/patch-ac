@@ -1,0 +1,28 @@
+*** pbm/pbmtext.c~	Wed Oct 27 08:27:04 1993
+--- pbm/pbmtext.c	Thu Nov 24 23:59:38 1994
+***************
+*** 105,114 ****
+      else
+  	{ /* Read text from stdin. */
+  	lines = 0;
+! 	while ( gets( buf ) != NULL )
+  	    {
+  	    int l;
+  
+  	    fix_control_chars( buf );
+  	    l = strlen( buf );
+  	    if ( lines >= maxlines )
+--- 105,117 ----
+      else
+  	{ /* Read text from stdin. */
+  	lines = 0;
+! 	while ( fgets( buf , 5000, stdin) != NULL )
+  	    {
+  	    int l;
++ 	    char *nl = strchr (buf, '\n');
+  
++ 	    if (nl)
++ 		*nl = 0;
+  	    fix_control_chars( buf );
+  	    l = strlen( buf );
+  	    if ( lines >= maxlines )

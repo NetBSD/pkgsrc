@@ -1,0 +1,17 @@
+#!/bin/sh
+
+cd $WRKSRC || exit 1;
+H=libtiff/tiffconf.h
+
+chmod +w $H || exit 1
+echo "#define MMAP_SUPPORT" >> $H || exit 1
+
+mv Pbmplus.tmpl Pbmplus.tmpl.orig || exit 1;
+cat >Pbmplus.tmpl<<EOF
+#define PbmplusBinDir $PREFIX/bin
+#define PbmplusManDir $PREFIX/man
+#define PbmplusLibDir $PREFIX/lib
+#define PbmplusIncDir $PREFIX/include
+EOF
+cat Pbmplus.tmpl.orig >> Pbmplus.tmpl
+exit 0

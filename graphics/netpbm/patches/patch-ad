@@ -1,0 +1,243 @@
+--- ./pnm/Imakefile.org	Sun Feb  5 22:37:44 1995
++++ ./pnm/Imakefile	Sun Feb  5 22:37:46 1995
+@@ -20,7 +20,7 @@
+ #if BuildLibTiff
+    CURRENTLIBS = $(LIBTIFF) $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
+ CURRENTDEPLIBS = $(DEPLIBTIFF) $(DEPLIBPNM) $(DEPLIBPPM) $(DEPLIBPGM) $(DEPLIBPBM)
+-     INCLUDES  = -I.. -I$(PBMDIR) -I$(PGMDIR) -I$(PPMDIR) -I$(TIFFDIR)
++     INCLUDES  = -I.. -I$(PBMDIR) -I$(PGMDIR) -I$(PPMDIR) -I$(TIFFINCDIR)
+        DEFINES = -DLIBTIFF
+          MERGE = pnmmerge
+       TIFFMAN1 = tifftopnm.1 pnmtotiff.1
+@@ -60,6 +60,7 @@
+ 		 pnmtoddif.c pnmtofits.c pnmtops.c pnmtorast.c pnmtosgi.c \
+ 		 pnmtosir.c pnmtoxwd.c \
+ 		 rasttopnm.c sgitopnm.c sirtopnm.c xwdtopnm.c zeisstopnm.c \
++		 pnmgamma.c pnmrotate.c pnmshear.c \
+ 		 $(TIFFSRCS)
+ 
+           OBJS = fitstopnm.o giftopnm.o \
+@@ -70,6 +71,7 @@
+ 		 pnmtoddif.o pnmtofits.o pnmtops.o pnmtorast.o pnmtosgi.o \
+ 		 pnmtosir.o pnmtoxwd.o \
+ 		 rasttopnm.o sgitopnm.o sirtopnm.o xwdtopnm.o zeisstopnm.o \
++		 pnmgamma.o pnmrotate.o pnmshear.o \
+ 		 $(TIFFOBJS)
+ 
+           BINS = fitstopnm giftopnm \
+@@ -80,6 +82,7 @@
+ 		 pnmtoddif pnmtofits pnmtops pnmtorast pnmtosgi \
+ 		 pnmtosir pnmtoxwd \
+ 		 rasttopnm sgitopnm sirtopnm xwdtopnm zeisstopnm \
++		 pnmgamma pnmrotate pnmshear \
+ 		 $(TIFFBINS)
+ 
+ includes:: anytopnm.script pnmindex.script pnmmargin.script pnmsmooth.script \
+@@ -168,9 +168,9 @@
+ #endif
+ 
+ #if InstallManuals
+-InstallMultipleMan($(MAN1),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man1)
+-InstallMultipleMan($(MAN3),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man3)
+-InstallMultipleMan($(MAN5),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man5)
++InstallMultipleManSuff($(MAN1),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man1,1)
++InstallMultipleManSuff($(MAN3),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man3,3)
++InstallMultipleManSuff($(MAN5),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man5,5)
+ #endif
+ 
+ #if InstallLibraries
+--- ./Imakefile.org	Sun Feb  5 22:36:43 1995
++++ ./Imakefile	Sun Feb  5 22:37:45 1995
+@@ -16,7 +16,7 @@
+ #define PassCDebugFlags 'CDEBUGFLAGS=$(CDEBUGFLAGS)'
+ 
+ #if BuildLibTiff
+-SUBDIRS = TiffDir PbmDir PgmDir PpmDir PnmDir
++SUBDIRS = PbmDir PgmDir PpmDir PnmDir
+ #else
+ SUBDIRS = PbmDir PgmDir PpmDir PnmDir
+ #endif
+--- Pbmplus.tmpl.orig	Mon Oct  4 02:13:09 1993
++++ Pbmplus.tmpl	Sun Feb  5 23:34:38 1995
+ /* Imake template and rules for PBMPLUS
+  *
+  * Copyright (C) 1991 Rainer Klute
+@@ -28,6 +28,10 @@
+  * By the way, you must have at least version 2.4 of libtiff.  Earlier
+  * versions will not work.
+  */
++/*
++ * Note: I changed this file and some Imakefiles to use the installed
++ * libtiff in /usr/local instad FreeBSD. - Satoshi
++ */
+ #ifndef BuildLibTiff
+ #define BuildLibTiff     YES
+ #endif
+@@ -43,10 +47,10 @@
+ #define InstallManuals   YES
+ #endif
+ #ifndef InstallLibraries
+-#define InstallLibraries NO
++#define InstallLibraries YES
+ #endif
+ #ifndef InstallIncludes
+-#define InstallIncludes  NO
++#define InstallIncludes  YES
+ #endif
+ 
+ /* CONFIGURE: Normally the Imakefiles build and install separate binaries for
+@@ -63,7 +67,7 @@
+  * until you do the install.
+  */
+ #ifndef InstallMerged
+-#define InstallMerged NO
++#define InstallMerged YES
+ #endif
+ 
+ 
+@@ -75,7 +79,7 @@
+ #define PbmplusBinDir $(BINDIR)
+ #endif
+ #ifndef PbmplusManDir
+-#define PbmplusManDir $(MANDIR)
++#define PbmplusManDir $(MANPATH)
+ #endif
+ #ifndef PbmplusLibDir
+ #define PbmplusLibDir $(USRLIBDIR)
+@@ -100,7 +104,10 @@
+ #define PnmDir TOPDIR/pnm
+ #endif
+ #ifndef TiffDir
+-#define TiffDir TOPDIR/libtiff
++#define TiffDir /usr/local/lib
++#endif
++#ifndef TiffIncDir
++#define TiffIncDir /usr/local/include
+ #endif
+ 
+ /* Libraries: */
+@@ -117,7 +124,7 @@
+ #define LibPnm $(PNMDIR)/libpnm.a
+ #endif
+ #ifndef LibTiff
+-#define LibTiff $(TIFFDIR)/libtiff.a
++#define LibTiff -L$(TIFFDIR) -ltiff
+ #endif
+ 
+ /* Dependency libraries: */
+@@ -134,7 +141,7 @@
+ #define DepLibPnm LibPnm
+ #endif
+ #ifndef DepLibTiff
+-#define DepLibTiff LibTiff
++#define DepLibTiff $(TIFFDIR)/libtiff.a
+ #endif
+ 
+    PBMPLUSDIR = PbmplusDir
+@@ -148,6 +155,7 @@
+        PPMDIR = PpmDir
+        PNMDIR = PnmDir
+       TIFFDIR = TiffDir
++   TIFFINCDIR = TiffIncDir
+ 
+        LIBPBM = LibPbm
+        LIBPGM = LibPgm
+@@ -166,7 +174,7 @@
+ #define InstallPbmplusPrograms(list,dest,flags)                             @@\
+ install:: list                                                              @@\
+ 	MakeDir($(DESTDIR)dest)                                             @@\
+-	@case '${MFLAGS}' in *[i]*) set +e;; esac; \                        @@\
++	@case '${MFLAGS}' in *[i]*) set +e;; esac;                          @@\
+ 	for i in list; do \                                                 @@\
+ 		(set -x; cd $(DESTDIR)dest; $(RM) $$i;  \                   @@\
+ 		$(LN) $(MERGE) $$i); \                                      @@\
+@@ -181,14 +189,14 @@
+ #endif /* NormalPbmplusProgramTarget */
+ 
+ #ifndef NormalPbmplusMathProgramTarget
+-#define NormalPbmplusMathProgramTarget(program) \                           @@\
++#define NormalPbmplusMathProgramTarget(program)                             @@\
+ NormalPbmplusProgramTarget(program)
+ #endif /* NormalPbmplusMathProgramTarget */
+ 
+ #else
+ 
+ #ifndef NormalPbmplusProgramTarget
+-#define NormalPbmplusProgramTarget(program) \                               @@\
++#define NormalPbmplusProgramTarget(program)                                 @@\
+ NormalProgramTarget(program,program.o,$(CURRENTDEPLIBS),$(CURRENTLIBS),)
+ #endif /* NormalPbmplusProgramTarget */
+ 
+@@ -201,7 +209,7 @@
+ #define InstallPbmplusPrograms(list,dest,flags)                             @@\
+ install:: list                                                              @@\
+ 	MakeDir($(DESTDIR)dest)                                             @@\
+-	@case '${MFLAGS}' in *[i]*) set +e;; esac; \                        @@\
++	@case '${MFLAGS}' in *[i]*) set +e;; esac;                          @@\
+ 	for i in list; do \                                                 @@\
+ 		(set -x; $(RM) $(DESTDIR)dest/$$i; \                        @@\
+ 		$(INSTALL) -c flags $$i $(DESTDIR)dest); \                  @@\
+@@ -217,3 +223,18 @@
+ #endif /* InstallPbmplusPrograms */
+ 
+ #endif /* InstallMerged */
++
++#ifndef InstallMultipleManSuff 
++#define InstallMultipleManSuff(list,dest,suff)                              @@\
++install.man:: list                                                      @@\
++	MakeDir($(DESTDIR)dest)                                         @@\
++	@case '${MFLAGS}' in *[i]*) set +e;; esac; \                    @@\
++	for i in list; do \                                             @@\
++		(set -x; \                                              @@\
++		MNAME=`echo $$i | cut -f1 -d.`; \                       @@\
++		$(RM) $(DESTDIR)dest/$${MNAME}*; \                      @@\
++		$(INSTALL) -c $(INSTMANFLAGS) $$i \                     @@\
++		  $(DESTDIR)dest/$${MNAME}.suff; \                      @@\
++		$(COMPRESSMANCMD) $(DESTDIR)dest/$${MNAME}.suff); \     @@\
++	done
++#endif
+--- ./pbm/Imakefile.org	Wed Nov  3 01:31:55 1993
++++ ./pbm/Imakefile	Mon Feb  6 00:16:49 1995
+@@ -142,9 +142,9 @@
+ #endif
+ 
+ #if InstallManuals
+-InstallMultipleMan($(MAN1),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man1)
+-InstallMultipleMan($(MAN3),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man3)
+-InstallMultipleMan($(MAN5),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man5)
++InstallMultipleManSuff($(MAN1),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man1,1)
++InstallMultipleManSuff($(MAN3),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man3,3)
++InstallMultipleManSuff($(MAN5),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man5,5)
+ #endif
+ 
+ #if InstallLibraries
+--- ./pgm/Imakefile.org	Mon Feb 21 01:14:01 1994
++++ ./pgm/Imakefile	Mon Feb  6 00:17:04 1995
+@@ -99,9 +99,9 @@
+ #endif
+ 
+ #if InstallManuals
+-InstallMultipleMan($(MAN1),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man1)
+-InstallMultipleMan($(MAN3),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man3)
+-InstallMultipleMan($(MAN5),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man5)
++InstallMultipleManSuff($(MAN1),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man1,1)
++InstallMultipleManSuff($(MAN3),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man3,3)
++InstallMultipleManSuff($(MAN5),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man5,5)
+ #endif
+ 
+ #if InstallLibraries
+--- ./ppm/Imakefile.org	Mon Jan 31 08:44:33 1994
++++ ./ppm/Imakefile	Mon Feb  6 00:17:24 1995
+@@ -184,9 +184,9 @@
+ #endif
+ 
+ #if InstallManuals
+-InstallMultipleMan($(MAN1),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man1)
+-InstallMultipleMan($(MAN3),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man3)
+-InstallMultipleMan($(MAN5),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man5)
++InstallMultipleManSuff($(MAN1),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man1,1)
++InstallMultipleManSuff($(MAN3),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man3,3)
++InstallMultipleManSuff($(MAN5),$(PBMPLUSDIR)$(PBMPLUSMANDIR)/man5,5)
+ #endif
+ 
+ #if InstallLibraries

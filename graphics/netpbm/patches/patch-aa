@@ -1,0 +1,91 @@
+*** Imakefile.orig	Mon Dec 13 13:01:21 1993
+--- Imakefile	Wed Sep 21 21:26:49 1994
+***************
+*** 22,64 ****
+  #endif
+  
+  all::
+!       stamp-date
+  
+  MakeSubdirs($(SUBDIRS))
+  DependSubdirs($(SUBDIRS))
+  
+  World::
+!         @echo ""
+!         @echo "Building PBMPLUS"
+!         @echo ""
+!         @date
+!         @echo ""
+  	$(MAKE) $(MFLAGS) Makefiles
+!         $(MAKE) $(MFLAGS) clean
+!         $(MAKE) $(MFLAGS) includes
+!         $(MAKE) $(MFLAGS) depend
+!         $(MAKE) $(MFLAGS)
+!         @echo ""
+!         @date
+!         @echo ""
+!         @echo "Full build of PBMPLUS complete."
+!         @echo ""
+  
+  Everything::
+!         @echo ""
+!         @echo "Rebuilding PBMPLUS"
+!         @echo ""
+!         @date
+!         @echo ""
+!         $(MAKE) $(MFLAGS) Makefiles
+!         $(MAKE) $(MFLAGS) includes
+!         $(MAKE) $(MFLAGS) depend
+!         $(MAKE) $(MFLAGS)
+!         @echo ""
+!         @date
+!         @echo ""
+!         @echo "Rebuild of PBMPLUS complete."
+!         @echo ""
+  
+  #if InstallIncludes
+  InstallMultipleFlags(pbmplus.h,$(PBMPLUSDIR)$(PBMPLUSINCDIR),$(INSTINCFLAGS))
+--- 22,64 ----
+  #endif
+  
+  all::
+! 	./stamp-date
+  
+  MakeSubdirs($(SUBDIRS))
+  DependSubdirs($(SUBDIRS))
+  
+  World::
+! 	@echo ""
+! 	@echo "Building PBMPLUS"
+! 	@echo ""
+! 	@date
+! 	@echo ""
+  	$(MAKE) $(MFLAGS) Makefiles
+! 	$(MAKE) $(MFLAGS) clean
+! 	$(MAKE) $(MFLAGS) includes
+! 	$(MAKE) $(MFLAGS) depend
+! 	$(MAKE) $(MFLAGS)
+! 	@echo ""
+! 	@date
+! 	@echo ""
+! 	@echo "Full build of PBMPLUS complete."
+! 	@echo ""
+  
+  Everything::
+! 	@echo ""
+! 	@echo "Rebuilding PBMPLUS"
+! 	@echo ""
+! 	@date
+! 	@echo ""
+! 	$(MAKE) $(MFLAGS) Makefiles
+! 	$(MAKE) $(MFLAGS) includes
+! 	$(MAKE) $(MFLAGS) depend
+! 	$(MAKE) $(MFLAGS)
+! 	@echo ""
+! 	@date
+! 	@echo ""
+! 	@echo "Rebuild of PBMPLUS complete."
+! 	@echo ""
+  
+  #if InstallIncludes
+  InstallMultipleFlags(pbmplus.h,$(PBMPLUSDIR)$(PBMPLUSINCDIR),$(INSTINCFLAGS))
