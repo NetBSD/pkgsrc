@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2000/08/23 23:14:33 tron Exp $
+# $NetBSD: Makefile,v 1.51 2000/09/03 13:46:46 wiz Exp $
 
 DISTNAME=		gnome-libs-1.2.3
 CATEGORIES=		x11 gnome
@@ -55,7 +55,7 @@ pre-build:
 
 post-install:
 	${RMDIR} ${PREFIX}/share/gnome/html/zvt
-	${MKDIR} -p ${PREFIX}/etc/CORBA/servers
+	${MKDIR} ${PREFIX}/etc/CORBA/servers
 	${TOUCH} ${PREFIX}/etc/CORBA/servers/.directory
 	${MKDIR} ${LOCALSTATEDIR}
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
