@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/23 19:29:56 drochner Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/24 11:45:27 drochner Exp $
 
 DISTNAME=	korganizer-1.1.2
 CATEGORIES=	kde
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic
 		ftp://ftp.de.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
 DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
