@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:29 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/01/04 12:25:13 wiz Exp $
 
 SHA1 (koth-0.7.6.tar.gz) = dcfe80c51b1e281763260af42e13fc6cd1dab92b
 Size (koth-0.7.6.tar.gz) = 145289 bytes
 SHA1 (patch-aa) = 5235e02794ef94ee1c49d895b8cc0ab4ec09a68b
+SHA1 (patch-ab) = 69ce8862b3cdba97f3a4040b0004254b89de3606
