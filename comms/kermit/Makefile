@@ -3,7 +3,7 @@
 # Date created:		Oct 27, 1994
 # Whom:			pst
 #
-# $NetBSD: Makefile,v 1.3 1998/03/05 13:04:03 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/05 17:11:10 agc Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -18,16 +18,14 @@ MAINTAINER=	ports@FreeBSD.org
 RESTRICTED=	"'No redistribution' copyright"
 MIRROR_DISTFILE= no
 NO_WRKSUBDIR=	yes
-MAN1=		kermit.1
 
-# MANZ is handled automatically
-.if defined(MANZ)
-MANCOMPRESSED=	1
-.endif
+PLIST_SRC=	${WRKDIR}/.PLIST-src
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/kermit
 	${INSTALL_DATA} ${FILESDIR}/dot.kermrc ${PREFIX}/share/examples/kermit
 	@${CAT} ${PKGDIR}/DESCR
+	[ "X$$MANZ" = X"" ] && ${SED} -e 's|.gz$$||' < pkg/PLIST > ${PLIST_SRC}
 
 .include <bsd.port.mk>
+
