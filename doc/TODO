@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2056 2004/08/17 09:15:21 wiz Exp $
+$NetBSD: TODO,v 1.2057 2004/08/17 13:38:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -165,7 +165,7 @@ Suggested package updates
 	o TeXmacs-1.0.4R2
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o abiword-2.0.9
+	o abiword-2.0.10
 	o ald-0.1.6 [pkg/26431]
 	o allegro-4.1.15
 	o amavisd-new-20040815
@@ -321,7 +321,7 @@ Suggested package updates
 	o mrproject-0.9.1
 	o mrtg-2.10.15
 	o msmtp-1.2.0 [pkg/26425]
-	o msmtp-1.2.1
+	o msmtp-1.2.2
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
 	o mummer-3.15
@@ -453,7 +453,6 @@ Suggested package updates
 	o yaz-2.0.12
 	o ysm-2.9.6
 	o zenicb 1.31 (needs merge with lots of local changes)
-	o zsh-4.2.1
 
 Infrastructure problems which need addressing
 =============================================
