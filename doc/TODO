@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.267 2003/02/15 11:05:38 jmmv Exp $
+$NetBSD: TODO,v 1.268 2003/02/15 11:09:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -125,7 +125,6 @@ Suggested package updates
 	o gkrellm-volume-2.1.7
 	o glade-0.6.4
 	o glade2-1.1.3 [pkg/19154]
-	o glib2-2.2.1 [pkg/20234]
 	o gmp-4.1.2
 	o gnome-applets-2.0.0
 	o gnome-python-1.4.4
@@ -140,7 +139,6 @@ Suggested package updates
 	o gsed-4.0.5
 	o gtetrinet-0.6.2
 	o gtk---2.2.0
-	o gtk2-2.2.1 [pkg/20237]
 	o gtk2-pan-0.13.3.92
 	o guile-1.6.3
 	o htmldoc-1.8.23
@@ -216,7 +214,6 @@ Suggested package updates
 	o oss-3.9.7h
 	o p0f-1.8.3
 	o p5-CGI-2.88 [pkg/20323]
-	o pango-1.2.1
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
 	o plib-1.6.0 [pkg/19015]
@@ -294,7 +291,6 @@ Suggested package updates
 	o xpaint-2.6.8
 	o xpuyopuyo-0.9.5
 	o xsane-0.90
-	o xscreensaver-4.07
 	o xsidplay-1.6.5pre20
 	o yudit-2.7.2
 
