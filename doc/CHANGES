@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1213 2003/01/24 09:42:08 jmmv Exp $
+$NetBSD: CHANGES,v 1.1214 2003/01/24 10:55:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -391,3 +391,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cups to 1.1.18nb1 [jlam 2003-01-23]
 	Updated g-wrap to 1.2.1nb1 [jlam 2003-01-23]
 	Updated pkg_comp to 1.6 [jmmv 2003-01-24]
+	Updated gqview to 1.2.1 [wiz 2003-01-24]
