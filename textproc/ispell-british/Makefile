@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/15 15:27:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/15 21:22:15 agc Exp $
 #
 
 DISTNAME=	ispell-3.1.20
@@ -17,6 +17,8 @@ WRKSRC=		${WRKDIR}/ispell-3.1
 ALL_TARGET=	config.sh all-languages
 
 DICT_LANG=	british
+
+MAKE_FLAGS+=	TMPDIR="${WRKDIR}"
 
 do-configure:
 	cd ${WRKSRC};							\
