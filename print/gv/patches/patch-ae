@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.5 2000/04/10 00:06:11 jlam Exp $
+$NetBSD: patch-ae,v 1.6 2001/03/09 15:49:54 wiz Exp $
 
---- source/Imakefile.orig	Fri Jun 20 15:00:00 1997
-+++ source/Imakefile	Fri Mar 24 01:25:44 2000
+--- source/Imakefile.orig	Fri Mar  9 16:45:44 2001
++++ source/Imakefile
 @@ -210,7 +210,6 @@
  InstallProgramWithFlags(program,$(GV_BINDIR),NullParameter)
  #endif /* InstallProgram */
@@ -10,3 +10,12 @@ $NetBSD: patch-ae,v 1.5 2000/04/10 00:06:11 jlam Exp $
  ComplexProgramTarget(gv)
  InstallNonExec($(GV_SYSTEM_AD),$(GV_LIBDIR))
  InstallNonExec($(GV_USER_AD),$(GV_LIBDIR))
+@@ -311,7 +311,7 @@
+ 	@echo ""							>> $(GV_INTERN_RES_DAT)
+ 	@echo "GV.gsInterpreter:	gs" >> $(GV_INTERN_RES_DAT)
+ 	@echo "GV.gsCmdScanPDF:	gs -dNODISPLAY -dQUIET -sPDFname=%s -sDSCname=%s pdf2dsc.ps -c quit" >> $(GV_INTERN_RES_DAT)
+-	@echo "GV.gsCmdConvPDF:	gs -dNODISPLAY -dQUIET $(PS_LEVEL) -dNOPAUSE -sPSFile=%s %s -c quit" >> $(GV_INTERN_RES_DAT)
++	@echo "GV.gsCmdConvPDF:	gs -dQUIET $(PS_LEVEL) -dNOPAUSE -dBATCH -sDEVICE=pswrite -sOutputFile=%s %s" >> $(GV_INTERN_RES_DAT)
+ 	@echo "GV.gsX11Device:		-sDEVICE=x11" >> $(GV_INTERN_RES_DAT)
+ 	@echo "GV.gsX11AlphaDevice:	-dNOPLATFONTS -sDEVICE=x11alpha" >> $(GV_INTERN_RES_DAT)
+ 	@echo "GV.gsSafer:		True" >> $(GV_INTERN_RES_DAT)
