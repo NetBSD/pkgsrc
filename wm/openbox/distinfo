@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2004/02/07 23:22:17 jmmv Exp $
+$NetBSD: distinfo,v 1.7 2004/04/20 21:49:00 snj Exp $
 
-SHA1 (openbox-3.1.tar.gz) = 9dc134c52717931d59d64db68cc4c7418ced9468
-Size (openbox-3.1.tar.gz) = 550425 bytes
+SHA1 (openbox-3.2.tar.gz) = 2cc97b38d1fd5e40ba2631fcd1b2a0bc5dcc2813
+Size (openbox-3.2.tar.gz) = 561115 bytes
 SHA1 (patch-aa) = 8ef551974b465a55e56d635df1f0e449250c579f
