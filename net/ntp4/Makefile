@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/07/28 08:55:12 fredb Exp $
+# $NetBSD: Makefile,v 1.6 1999/07/29 19:06:05 fredb Exp $
 #
 
 DISTNAME=	ntp-4.0.95
@@ -14,12 +14,16 @@ HOMEPAGE=	http://www.ntp.org/
 GNU_CONFIGURE=	YES
 
 DOCDIR=		${PREFIX}/share/doc
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 post-configure:
 	cd ${WRKSRC}; \
 	${SED} /ac_cv_make_ntptime/s/no/yes/ < config.cache > config.cache~; \
 	${MV} config.cache~ config.cache
 	@${MAKE} do-configure
+
+post-build:
+	${SED} 's#@PREFIX@#${PREFIX}#g' < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 post-install:
 	cd ${WRKSRC}; \

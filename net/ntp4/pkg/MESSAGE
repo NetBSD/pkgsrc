@@ -1,11 +1,14 @@
-THERE ARE NO MAN PAGES. Start browsing the installed docs at
+THERE ARE NO MAN PAGES. All installed documentation
+is accessible through
 
-	file://usr/pkg/share/doc/ntp4/index.htm
+	file:/@PREFIX@/share/doc/ntp4/index.htm
 
-On the web, NTP's home is
-
-	http://www.eecis.udel.edu/~ntp/
-
-User to user support is also available at
+User to user support is available at
 
 	news:comp.protocols.time.ntp
+
+and online docs are viewable through NTP's home at
+
+	http://www.ntp.org/
+or
+	http://www.eecis.udel.edu/~ntp/
