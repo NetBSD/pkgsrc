@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2000/12/19 07:03:22 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2001/01/22 13:30:36 martin Exp $
 
---- configure.in.orig	Wed Dec 13 05:48:29 2000
-+++ configure.in
-@@ -137,12 +137,14 @@
+--- configure.in.orig	Thu Dec 21 19:12:46 2000
++++ configure.in	Mon Jan 22 14:14:10 2001
+@@ -134,12 +134,14 @@
  
  dnl Check for libwrap library.
  AC_MSG_CHECKING([for hosts_access in -lwrap])
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.3 2000/12/19 07:03:22 jlam Exp $
  
  dnl Add SSL includes and libraries
  CFLAGS="$CFLAGS -I$ssldir/include"
-@@ -164,7 +166,7 @@
+@@ -161,7 +163,7 @@
  # AC_HEADER_DIRENT
  # AC_HEADER_STDC
  # AC_HEADER_SYS_WAIT
@@ -28,12 +28,12 @@ $NetBSD: patch-ab,v 1.3 2000/12/19 07:03:22 jlam Exp $
  
  # dnl Checks for typedefs, structures, and compiler characteristics.
  # AC_C_CONST
-@@ -175,6 +177,8 @@
- 
- dnl Checks for library functions.
- AC_CHECK_FUNCS(getopt snprintf vsnprintf openpty _getpty daemon)
+@@ -179,6 +181,8 @@
+ AC_CHECK_SIZEOF(unsigned int)
+ AC_CHECK_SIZEOF(unsigned long)
+ AC_CHECK_SIZEOF(unsigned long long)
 +
 +LIBS="$LIBS $wrap_LIB"
  
- AC_OUTPUT(Makefile stunnel.8)
+ AC_OUTPUT(Makefile)
  
