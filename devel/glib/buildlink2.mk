@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:38:28 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/10 19:44:48 jlam Exp $
 
 .if !defined(GLIB_BUILDLINK2_MK)
 GLIB_BUILDLINK2_MK=	# defined
@@ -16,7 +16,7 @@ BUILDLINK_FILES.glib+=	lib/libglib.*
 BUILDLINK_FILES.glib+=	lib/libgmodule.*
 BUILDLINK_FILES.glib+=	lib/libgthread.*
 
-USE_PTHREAD=		native pth
+PTHREAD_OPTS+=		require
 
 .include "../../mk/pthread.buildlink2.mk"
 
