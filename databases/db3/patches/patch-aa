@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/16 02:36:06 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2001/02/21 15:56:02 fvdl Exp $
 
---- ../dist/Makefile.in.orig	Thu Nov 11 08:09:48 1999
-+++ ../dist/Makefile.in	Fri Dec  3 18:11:09 1999
-@@ -18,7 +18,7 @@
+--- ../dist/Makefile.in.orig	Fri Dec  1 00:07:33 2000
++++ ../dist/Makefile.in	Wed Feb 21 13:10:10 2001
+@@ -17,7 +17,7 @@
+ INSTALLER=	@INSTALLER@
  
  LDFLAGS=	@LDFLAGS@
- LIBS=		@LIBS@
 -LIBDB_ARGS=	@LIBDB_ARGS@
 +LIBDB_ARGS=	-L. -Wl,-R/usr/pkg/lib libdb3.a
- LIBTOOL=	@LIBTOOL@
- 
- POSTLINK=	@POSTLINK@
-@@ -27,9 +27,9 @@
+ LIBJSO_LIBS=	@LIBJSO_LIBS@
+ LIBS=		@LIBS@
+ LIBSO_LIBS=	@LIBSO_LIBS@
+@@ -31,9 +31,9 @@
  SOMAJOR=	@DB_VERSION_MAJOR@
  SOVERSION=	@DB_VERSION_MAJOR@.@DB_VERSION_MINOR@
  
@@ -20,12 +20,12 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/16 02:36:06 hubertf Exp $
  
 -libso_base=	libdb
 +libso_base=	libdb3
- libso_linkname=	-ldb-$(SOVERSION)
+ libso_linkname=	$(libso_base)-$(SOVERSION).la
  libso=		$(libso_base)-$(SOVERSION).@SOSUFFIX@
  libso_target=	$(libso_base)-$(SOVERSION).la
-@@ -43,8 +43,8 @@
+@@ -47,8 +47,8 @@
  # You must configure it using:
- #	configure --enable-cxx [ --enable-dynamic ]
+ #	--enable-cxx
  ##################################################
 -libcxx=		libdb_cxx.a
 -libxso_base=	libdb_cxx
@@ -34,25 +34,27 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/16 02:36:06 hubertf Exp $
  libxso=		$(libxso_base)-$(SOVERSION).@SOSUFFIX@
  libxso_target=	$(libxso_base)-$(SOVERSION).la
  libxso_default=	$(libxso_base).@SOSUFFIX@
-@@ -66,7 +66,7 @@
- JAVA_DBDIR=	$(JAVA_SRCDIR)/com/sleepycat/db
+@@ -72,8 +72,8 @@
+ JAVA_DBDIR=	$(JAVA_SRCDIR)/$(JAVA_DBREL)
  JAVA_EXDIR=	$(JAVA_SRCDIR)/com/sleepycat/examples
  
+-libj_jarfile=	db.jar
 -libjso_base=	libdb_java
++libj_jarfile=	db3.jar
 +libjso_base=	libdb3_java
  libjso=		$(libjso_base)-$(SOVERSION).@SOSUFFIX@
  libjso_target=	$(libjso_base)-$(SOVERSION).la
  libjso_default=	$(libjso_base).@SOSUFFIX@
-@@ -79,7 +79,7 @@
- # You must configure it using:
- #	configure --enable-tcl --enable-dynamic
+@@ -88,7 +88,7 @@
+ #	--enable-tcl --with-tcl=DIR --enable-dynamic
  ##################################################
+ TCFLAGS=	@TCFLAGS@
 -libtso_base=	libdb_tcl
 +libtso_base=	libdb3_tcl
  libtso=		$(libtso_base)-$(SOVERSION).@SOSUFFIX@
  libtso_target=	$(libtso_base)-$(SOVERSION).la
  libtso_default=	$(libtso_base).@SOSUFFIX@
-@@ -91,9 +91,9 @@
+@@ -113,9 +113,9 @@
  prefix=	@prefix@
  exec_prefix=@exec_prefix@
  bindir=	@bindir@
@@ -64,63 +66,84 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/16 02:36:06 hubertf Exp $
  
  dmode=	755
  emode=	555
-@@ -159,8 +159,8 @@
- UOBJS=	db_archive@o@ db_checkpoint@o@ db_deadlock@o@ db_dump185@o@ \
- 	db_dump@o@ db_load@o@ db_printlog@o@ db_recover@o@ db_stat@o@
+@@ -192,8 +192,8 @@
+ 	db_dump@o@ db_load@o@ db_printlog@o@ db_recover@o@ db_stat@o@ \
+ 	db_upgrade@o@ db_verify@o@ util_log@o@ util_sig@o@ 
  
--PROGS=  @ADDITIONAL_PROGS@ db_archive db_checkpoint db_deadlock db_dump \
--	db_load db_printlog db_recover db_stat
-+PROGS=  @ADDITIONAL_PROGS@ db3_archive db3_checkpoint db3_deadlock db3_dump \
-+	db3_load db3_printlog db3_recover db3_stat
+-PROGS=  @ADDITIONAL_PROGS@ db_archive db_checkpoint db_deadlock \
+-	db_dump db_load db_printlog db_recover db_stat db_upgrade db_verify
++PROGS=  @ADDITIONAL_PROGS@ db3_archive db3_checkpoint db3_deadlock \
++	db3_dump db3_load db3_printlog db3_recover db3_stat db3_upgrade db3_verify
  
- EPROGS=	ex_access ex_btrec ex_env ex_lock ex_mpool ex_thread ex_tpcb
- 
-@@ -235,39 +235,39 @@
+ JAVA_DBSRCS=\
+ 	$(JAVA_DBDIR)/Db.java $(JAVA_DBDIR)/DbAppendRecno.java \
+@@ -275,57 +275,57 @@
  ##################################################
  # Utilities
  ##################################################
--db_archive: db_archive@o@ @DEFAULT_LIB@
-+db3_archive: db_archive@o@ @DEFAULT_LIB@
- 	$(CCLINK) -o $@ $(LDFLAGS) db_archive@o@ $(LIBDB_ARGS) $(LIBS)
+-berkeley_db_svc: $(RPC_SRV) util_log@o@ @DEFAULT_LIB@
++berkeley_db3_svc: $(RPC_SRV) util_log@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) $(RPC_SRV) util_log@o@ $(LIBDB_ARGS) $(LIBS)
  	$(POSTLINK) $@
  
--db_checkpoint: db_checkpoint@o@ @DEFAULT_LIB@
-+db3_checkpoint: db_checkpoint@o@ @DEFAULT_LIB@
- 	$(CCLINK) -o $@ $(LDFLAGS) db_checkpoint@o@ $(LIBDB_ARGS) $(LIBS)
+-db_archive: db_archive@o@ util_sig@o@ @DEFAULT_LIB@
++db3_archive: db_archive@o@ util_sig@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) \
+ 	    db_archive@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
  	$(POSTLINK) $@
  
--db_deadlock: db_deadlock@o@ @DEFAULT_LIB@
-+db3_deadlock: db_deadlock@o@ @DEFAULT_LIB@
- 	$(CCLINK) -o $@ $(LDFLAGS) db_deadlock@o@ $(LIBDB_ARGS) $(LIBS)
+-db_checkpoint: db_checkpoint@o@ util_log@o@ util_sig@o@ @DEFAULT_LIB@
++db3_checkpoint: db_checkpoint@o@ util_log@o@ util_sig@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) \
+ 	    db_checkpoint@o@ util_log@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
  	$(POSTLINK) $@
  
--db_dump: db_dump@o@ @DEFAULT_LIB@
-+db3_dump: db_dump@o@ @DEFAULT_LIB@
- 	$(CCLINK) -o $@ $(LDFLAGS) db_dump@o@ $(LIBDB_ARGS) $(LIBS)
+-db_deadlock: db_deadlock@o@ util_log@o@ util_sig@o@ @DEFAULT_LIB@
++db3_deadlock: db_deadlock@o@ util_log@o@ util_sig@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) \
+ 	    db_deadlock@o@ util_log@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
+ 	$(POSTLINK) $@
+ 
+-db_dump: db_dump@o@ util_sig@o@ @DEFAULT_LIB@
++db3_dump: db_dump@o@ util_sig@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) db_dump@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
  	$(POSTLINK) $@
  
 -db_dump185: db_dump185@o@ @LIBOBJS@
 +db3_dump185: db_dump185@o@ @LIBOBJS@
- 	$(CCLINK) -o $@ $(LDFLAGS) db_dump185@o@ @LIBOBJS@ $(LIBS)
+ 	$(CCLINK) -o $@ $(LDFLAGS) db_dump185@o@ @LIBOBJS@ $(DB185LIB)
  	$(POSTLINK) $@
  
--db_load: db_load@o@ @DEFAULT_LIB@
-+db3_load: db_load@o@ @DEFAULT_LIB@
- 	$(CCLINK) -o $@ $(LDFLAGS) db_load@o@ $(LIBDB_ARGS) $(LIBS)
+-db_load: db_load@o@ util_sig@o@ @DEFAULT_LIB@
++db3_load: db_load@o@ util_sig@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) db_load@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
  	$(POSTLINK) $@
  
--db_printlog: db_printlog@o@ @DEFAULT_LIB@
-+db3_printlog: db_printlog@o@ @DEFAULT_LIB@
- 	$(CCLINK) -o $@ $(LDFLAGS) db_printlog@o@ $(LIBDB_ARGS) $(LIBS)
+-db_printlog: db_printlog@o@ util_sig@o@ @DEFAULT_LIB@
++db3_printlog: db_printlog@o@ util_sig@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) \
+ 	    db_printlog@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
  	$(POSTLINK) $@
  
--db_recover: db_recover@o@ @DEFAULT_LIB@
-+db3_recover: db_recover@o@ @DEFAULT_LIB@
- 	$(CCLINK) -o $@ $(LDFLAGS) db_recover@o@ $(LIBDB_ARGS) $(LIBS)
+-db_recover: db_recover@o@ util_sig@o@ @DEFAULT_LIB@
++db3_recover: db_recover@o@ util_sig@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) \
+ 	    db_recover@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
  	$(POSTLINK) $@
  
--db_stat: db_stat@o@ @DEFAULT_LIB@
-+db3_stat: db_stat@o@ @DEFAULT_LIB@
- 	$(CCLINK) -o $@ $(LDFLAGS) db_stat@o@ $(LIBDB_ARGS) $(LIBS)
+-db_stat: db_stat@o@ util_sig@o@ @DEFAULT_LIB@
++db3_stat: db_stat@o@ util_sig@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) db_stat@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
  	$(POSTLINK) $@
  
+-db_upgrade: db_upgrade@o@ util_sig@o@ @DEFAULT_LIB@
++db3_upgrade: db_upgrade@o@ util_sig@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) \
+ 	    db_upgrade@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
+ 	$(POSTLINK) $@
+ 
+-db_verify: db_verify@o@ util_sig@o@ @DEFAULT_LIB@
++db3_verify: db_verify@o@ util_sig@o@ @DEFAULT_LIB@
+ 	$(CCLINK) -o $@ $(LDFLAGS) \
+ 	    db_verify@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
+ 	$(POSTLINK) $@
