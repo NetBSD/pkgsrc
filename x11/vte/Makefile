@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/12/07 21:27:41 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/03 16:53:09 jmmv Exp $
 #
 
-DISTNAME=	vte-0.11.11
-PKGREVISION=	1
+DISTNAME=	vte-0.11.12
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.11/}
 EXTRACT_SUFX=	.tar.bz2
