@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2005/02/15 20:08:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.33 2005/03/22 23:19:31 reed Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
 PKGREVISION=	6
 CATEGORIES=	mail
-MASTER_SITES=	ftp://thumper.bellcore.com/pub/nsb/
+MASTER_SITES=	http://ftp.funet.fi/pub/unix/mail/metamail/	\
+		ftp://ftp.research.telcordia.com/pub/nsb/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	tech-pkg@NetBSD.org
