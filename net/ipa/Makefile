@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2003/03/28 11:10:28 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/04/20 20:58:12 cjep Exp $
 
-DISTNAME=	ipa-1.3.2
+DISTNAME=	ipa-1.3.3
 CATEGORIES=	net sysutils
 MASTER_SITES=	http://ipa-system.sourceforge.net/ \
 		http://www.mirrors.wiretapped.net/security/network-monitoring/ipa/ \
