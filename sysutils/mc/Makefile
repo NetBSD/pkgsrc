@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2000/01/11 01:15:35 tron Exp $
+# $NetBSD: Makefile,v 1.37 2000/02/05 06:55:29 wiz Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
 DISTNAME=	mc-4.5.42
 CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/mc/}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/mc/
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/mc/}
 
 DEPENDS+=	libslang-*:../../devel/libslang
 DEPENDS+=	glib-1.2.*:../../devel/glib
