@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.851 2002/12/20 16:14:11 tsarna Exp $
+$NetBSD: CHANGES,v 1.852 2002/12/20 18:00:02 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4028,3 +4028,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated cups to 1.1.18 [jlam 2002-12-20]
 	Added fakeroot-0.5.8 [lonewolf 2002-12-20]
 	Updated matchbox to 0.3.6 [tsarna 2002-12-20]
+	Updated png to 1.2.5nb2 [fredb 2002-12-20]
