@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2001/02/06 18:13:53 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2003/03/10 08:15:56 jmc Exp $
 
---- ./Makefile2.m4.orig	Wed Aug  6 22:34:47 1997
-+++ ./Makefile2.m4	Thu Jan 25 07:08:42 2001
+--- Makefile2.m4.orig	Thu Aug  7 05:34:47 1997
++++ Makefile2.m4	Mon Mar 10 08:10:55 2003
 @@ -48,13 +48,13 @@
  SNOLIB_FILE=snolib.a
  
@@ -19,3 +19,12 @@ $NetBSD: patch-ad,v 1.1 2001/02/06 18:13:53 wiz Exp $
  
  ########
  # default lib source files
+@@ -154,7 +154,7 @@
+ ################
+ # compiler flags
+ 
+-CFLAGS=$(COPT) $(MYCPPFLAGS)
++CFLAGS=$(COPT) -DUSE_STDARG_H $(MYCPPFLAGS)
+ 
+ ################
+ # snobol commands
