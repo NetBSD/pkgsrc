@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/05/18 10:12:17 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/05/21 20:23:51 frueauf Exp $
 # FreeBSD ID: Makefile,v 1.8 1997/01/06 12:04:12 jkh Exp
 #
 
@@ -8,8 +8,9 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	audio/nas
 
+MAINTAINER=	packages@netbsd.org
+
 USE_IMAKE=	yes
-USE_X11=	yes
 
 CAT1=		auserver.0 AUVoxConfig.0 auvoxware.0 auconvert.0
 CAT1+=		auctl.0 audemo.0 audial.0 auedit.0 auinfo.0 aupanel.0
