@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/05/24 20:39:45 tv Exp $
+# $NetBSD: Makefile,v 1.7 1999/08/06 13:30:42 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/08/20 07:35:21 asami Exp
 #
 
@@ -16,5 +16,11 @@ USE_X11BASE=		yes
 NOT_FOR_PLATFORM=	*-*-alpha	#core dumps
 
 ALL_TARGET=		xlispstat
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=		CPPFLAGS=
+.endif
 
 .include "../../mk/bsd.pkg.mk"
