@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/02/16 12:39:00 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/02/17 08:59:04 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RENDER_BUILDLINK3_MK:=	${RENDER_BUILDLINK3_MK}+
@@ -28,9 +28,11 @@ BUILDLINK_IS_BUILTIN.render=	YES
 # or if the built-in one is sufficient.
 #
 _RENDER_MAJOR!=	\
-	${AWK} '/\#define[ 	]*RENDER_MAJOR/ { print $$3 }' ${_X11_EXTENSIONS_RENDER_H}
+	${AWK} '/\#define[ 	]*RENDER_MAJOR/ { print $$3 }'		\
+		${_X11_EXTENSIONS_RENDER_H}
 _RENDER_MINOR!=	\
-	${AWK} '/\#define[ 	]*RENDER_MINOR/ { print "."$$3 }' ${_X11_EXTENSIONS_RENDER_H}
+	${AWK} '/\#define[ 	]*RENDER_MINOR/ { print "."$$3 }'	\
+		${_X11_EXTENSIONS_RENDER_H}
 _RENDER_VERSION=	${_RENDER_MAJOR}${_RENDER_MINOR}
 _RENDER_PKG=		render-${_RENDER_VERSION}
 BUILDLINK_IS_BUILTIN.render?=	YES
