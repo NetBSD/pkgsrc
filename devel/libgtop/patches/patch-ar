@@ -1,0 +1,41 @@
+$NetBSD: patch-ar,v 1.1 2000/07/30 02:45:41 jlam Exp $
+
+--- sysdeps/freebsd/procmem.c.orig	Thu May 27 14:56:49 1999
++++ sysdeps/freebsd/procmem.c	Sat Jul 29 22:23:54 2000
+@@ -31,8 +31,12 @@
+ #include <sys/param.h>
+ #include <sys/proc.h>
+ #include <sys/resource.h>
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 105020000)
+ #include <vm/vm_object.h>
+ #include <vm/vm_map.h>
++#else
++#include <uvm/uvm_extern.h>
++#endif
+ 
+ #include <sys/vnode.h>
+ #include <ufs/ufs/quota.h>
+@@ -43,9 +47,14 @@
+ #include <sys/user.h>
+ #endif
+ #include <sys/sysctl.h>
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 105020000)
+ #include <vm/vm.h>
++#else
++#include <uvm/uvm.h>
++#endif
+ 
+-#if defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000)
++#if defined(__NetBSD__) && \
++	(__NetBSD_Version__ >= 104000000) && (__NetBSD_Version__ < 105020000)
+ /* Fixme ... */
+ #undef _KERNEL
+ #define _UVM_UVM_AMAP_I_H_ 1
+@@ -113,7 +122,6 @@
+ 	struct vmspace *vms, vmspace;
+ #if defined(__NetBSD__) && (__NetBSD_Version__ >= 104000000)
+ 	struct vnode vnode;
+-	struct inode inode;
+ #else
+ 	struct vm_object object;
+ #endif
