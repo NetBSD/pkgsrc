@@ -1,10 +1,33 @@
-@comment $NetBSD: PLIST,v 1.6 2005/01/07 12:35:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/04/06 12:42:49 markd Exp $
 bin/gwenview
+lib/kde3/gwenview.la
 lib/kde3/libgvdirpart.la
 lib/kde3/libgvimagepart.la
 lib/libgwenviewcore.la
+lib/libkdeinit_gwenview.la
 man/man1/gwenview.1
 share/applications/kde/gwenview.desktop
+share/doc/kde/HTML/en/gwenview/browse_mode.png
+share/doc/kde/HTML/en/gwenview/common
+share/doc/kde/HTML/en/gwenview/dock_grip.png
+share/doc/kde/HTML/en/gwenview/docked_windows.docbook
+share/doc/kde/HTML/en/gwenview/docked_windows.html
+share/doc/kde/HTML/en/gwenview/external_tools.docbook
+share/doc/kde/HTML/en/gwenview/external_tools.html
+share/doc/kde/HTML/en/gwenview/external_tools_dialog.png
+share/doc/kde/HTML/en/gwenview/index.cache.bz2
+share/doc/kde/HTML/en/gwenview/index.docbook
+share/doc/kde/HTML/en/gwenview/index.html
+share/doc/kde/HTML/en/gwenview/interface.docbook
+share/doc/kde/HTML/en/gwenview/interface.html
+share/doc/kde/HTML/en/gwenview/introduction.docbook
+share/doc/kde/HTML/en/gwenview/introduction.html
+share/doc/kde/HTML/en/gwenview/keybindings.docbook
+share/doc/kde/HTML/en/gwenview/keybindings.html
+share/doc/kde/HTML/en/gwenview/mouse.docbook
+share/doc/kde/HTML/en/gwenview/mouse.html
+share/doc/kde/HTML/en/gwenview/tips.html
+share/doc/kde/HTML/en/gwenview/view_mode.png
 share/kde/apps/gvdirpart/gvdirpart.rc
 share/kde/apps/gvimagepart/gvimagepart.rc
 share/kde/apps/gwenview/cursors/drag.png
@@ -86,11 +109,13 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gwenview.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gwenview.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/nso/LC_MESSAGES/gwenview.mo
@@ -100,6 +125,7 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gwenview.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gwenview.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gwenview.mo
@@ -135,5 +161,7 @@ ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gwenview.mo
 @dirrm share/kde/apps/gvimagepart
 @dirrm share/kde/apps/gvdirpart
 @comment in kde: @dirrm share/kde/apps
+@dirrm share/doc/kde/HTML/en/gwenview
+@comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/applications/kde
 @comment in kde: @dirrm lib/kde3
