@@ -1,10 +1,12 @@
-# $NetBSD: buildlink.mk,v 1.13 2001/11/30 17:21:54 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.14 2001/12/25 15:50:05 wiz Exp $
 #
 # This Makefile fragment is included by packages that use ncurses.
 #
 # To use this Makefile fragment, simply:
 #
-# (1) Optionally define USE_NCURSES to force use of ncurses.
+# (1) Optionally define USE_NCURSES to force use of ncurses,
+#     or define INCOMPAT_CURSES to specify NetBSD versions that are
+#     missing some needed functions.
 # (2) Optionally define BUILDLINK_DEPENDS.ncurses to the dependency pattern
 #     for the version of ncurses desired.
 # (3) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
@@ -25,7 +27,7 @@ _NEED_NCURSES=		YES
 .include "../../mk/bsd.prefs.mk"
 _NEED_NCURSES=		NO
 .if ${OPSYS} == "NetBSD"
-_INCOMPAT_CURSES=	0.* 1.[0123]* 1.4.* 1.4[A-X]
+_INCOMPAT_CURSES=	0.* 1.[0123]* 1.4.* 1.4[A-X] ${INCOMPAT_CURSES}
 .for PATTERN in ${_INCOMPAT_CURSES}
 .if ${OS_VERSION:M${PATTERN}} != ""
 _NEED_NCURSES=		YES
