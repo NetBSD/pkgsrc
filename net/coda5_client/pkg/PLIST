@@ -1,12 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/04/27 19:05:47 phil Exp $
-sbin/au
-sbin/codaconfedit
-sbin/coda-setup-ports
-sbin/sidekick
-sbin/venus
-sbin/venus-setup
-sbin/volmunge
-sbin/vutil
+@comment $NetBSD: PLIST,v 1.10 2001/05/31 22:55:55 jlam Exp $
 bin/cfs
 bin/clog
 bin/cmon
@@ -23,6 +15,13 @@ bin/replay
 bin/spy
 bin/xaskuser
 bin/xfrepair
-etc/coda/venus.conf.ex
 etc/coda/sidekick.intr.ex
-@dirrm etc/coda
+etc/coda/venus.conf.ex
+sbin/au
+sbin/sidekick
+sbin/venus
+sbin/venus-coda-setup-ports
+sbin/venus-codaconfedit
+sbin/venus-setup
+sbin/volmunge
+sbin/vutil
