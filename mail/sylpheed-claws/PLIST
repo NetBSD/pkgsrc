@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/01/13 13:03:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/02/09 15:41:13 adam Exp $
 bin/sylpheed
 include/sylpheed/account.h
 include/sylpheed/action.h
@@ -38,6 +38,7 @@ include/sylpheed/common/smtp.h
 include/sylpheed/common/socket.h
 include/sylpheed/common/ssl.h
 include/sylpheed/common/ssl_certificate.h
+include/sylpheed/common/string_match.h
 include/sylpheed/common/stringtable.h
 include/sylpheed/common/sylpheed.h
 include/sylpheed/common/template.h
@@ -68,6 +69,7 @@ include/sylpheed/filtering.h
 include/sylpheed/folder.h
 include/sylpheed/folder_item_prefs.h
 include/sylpheed/foldersel.h
+include/sylpheed/folderutils.h
 include/sylpheed/folderview.h
 include/sylpheed/grouplistdialog.h
 include/sylpheed/gtk/about.h
@@ -130,6 +132,7 @@ include/sylpheed/prefs_actions.h
 include/sylpheed/prefs_common.h
 include/sylpheed/prefs_customheader.h
 include/sylpheed/prefs_display_header.h
+include/sylpheed/prefs_ext_prog.h
 include/sylpheed/prefs_filtering.h
 include/sylpheed/prefs_filtering_action.h
 include/sylpheed/prefs_folder_item.h
@@ -139,6 +142,7 @@ include/sylpheed/prefs_matcher.h
 include/sylpheed/prefs_spelling.h
 include/sylpheed/prefs_summary_column.h
 include/sylpheed/prefs_template.h
+include/sylpheed/prefs_themes.h
 include/sylpheed/prefs_toolbar.h
 include/sylpheed/privacy.h
 include/sylpheed/procheader.h
@@ -158,7 +162,6 @@ include/sylpheed/sourcewindow.h
 include/sylpheed/ssl_manager.h
 include/sylpheed/statusbar.h
 include/sylpheed/stock_pixmap.h
-include/sylpheed/string_match.h
 include/sylpheed/summary_search.h
 include/sylpheed/summaryview.h
 include/sylpheed/textview.h
