@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/12/18 00:42:40 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/01 13:36:57 agc Exp $
 #
 
 DISTNAME=	pyth151
@@ -11,14 +11,14 @@ MAINTAINER=	dolecek@ics.muni.cz
 HOMEPAGE=	http://www.python.org/topics/tkinter/
 
 DEPENDS+=	python-1.5.1:../../lang/python
-DEPENDS+=	tk-8.0p2:../../x11/tk80
-DEPENDS+=	tcl-8.0p2:../../lang/tcl80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	tcl-8.0.5:../../lang/tcl80
 
 DIST_SUBDIR=	python
 
 WRKSRC=		${WRKDIR}/Python-1.5.1/Modules
 ALL_TARGET=	default
-EXTRACT_AFTER_ARGS=	Python-1.5.1/Modules/_tkinter.c \
+EXTRACT_ELEMENTS=	Python-1.5.1/Modules/_tkinter.c \
 			Python-1.5.1/Modules/tkappinit.c
 
 PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config/

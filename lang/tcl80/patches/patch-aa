@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.10 1999/04/01 09:57:07 agc Exp $
+$NetBSD: patch-aa,v 1.11 1999/04/01 13:36:56 agc Exp $
 
 Configure this for libtool operation
 
---- Makefile.in.orig	Tue Nov 25 16:31:41 1997
-+++ Makefile.in	Thu Sep 17 17:24:53 1998
+--- Makefile.in.orig	Tue Mar  9 06:51:26 1999
++++ Makefile.in	Thu Apr  1 12:57:13 1999
 @@ -55,7 +55,9 @@
  BIN_INSTALL_DIR =	$(INSTALL_ROOT)$(exec_prefix)/bin
  
@@ -15,7 +15,7 @@ Configure this for libtool operation
  
  # Top-level directory in which to install manual entries:
  MAN_INSTALL_DIR =	$(INSTALL_ROOT)$(prefix)/man
-@@ -133,7 +135,7 @@
+@@ -146,7 +148,7 @@
  # "install" around;  better to use the install-sh script that comes
  # with the distribution, which is slower but guaranteed to work.
  
@@ -24,7 +24,7 @@ Configure this for libtool operation
  INSTALL_PROGRAM =	${INSTALL}
  INSTALL_DATA =		${INSTALL} -m 644
  
-@@ -315,9 +317,7 @@
+@@ -336,9 +338,7 @@
  # The following target is configured by autoconf to generate either
  # a shared library or non-shared library for Tcl.
  ${TCL_LIB_FILE}: ${OBJS}
@@ -35,7 +35,7 @@ Configure this for libtool operation
  
  # Make target which outputs the list of the .o contained in the Tcl lib
  # usefull to build a single big shared library containing Tcl and other
-@@ -330,20 +330,19 @@
+@@ -351,20 +351,19 @@
  # case
  objs: ${OBJS}
  
@@ -63,7 +63,7 @@ Configure this for libtool operation
  
  
  # Note, in the target below TCL_LIBRARY needs to be set or else
-@@ -421,21 +420,20 @@
+@@ -444,17 +443,16 @@
  		fi; \
  	    done;
  	@echo "Installing $(TCL_LIB_FILE)"
@@ -87,12 +87,7 @@ Configure this for libtool operation
  	    do \
  	    if [ ! -d $$i ] ; then \
  		echo "Making directory $$i"; \
--		mkdir $$i; \
-+		mkdir -p $$i; \
- 		chmod 755 $$i; \
- 		else true; \
- 		fi; \
-@@ -449,8 +447,16 @@
+@@ -472,8 +470,16 @@
  		else true; \
  		fi; \
  	    done;
@@ -111,7 +106,7 @@ Configure this for libtool operation
  	@for i in $(TOP_DIR)/library/*.tcl $(TOP_DIR)/library/tclIndex $(UNIX_DIR)/tclAppInit.c $(UNIX_DIR)/ldAix; \
  	    do \
  	    echo "Installing $$i"; \
-@@ -502,6 +508,13 @@
+@@ -525,6 +531,13 @@
  	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
  	    done;
  	$(UNIX_DIR)/mkLinks $(MANN_INSTALL_DIR)
@@ -125,7 +120,7 @@ Configure this for libtool operation
  
  Makefile: $(UNIX_DIR)/Makefile.in
  	$(SHELL) config.status
-@@ -555,239 +568,239 @@
+@@ -578,245 +591,245 @@
  # Object files used on all Unix systems:
  
  panic.o: $(GENERIC_DIR)/panic.c
@@ -328,6 +323,10 @@ Configure this for libtool operation
 -	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclProc.c
 +	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclProc.c
  
+ tclResolve.o: $(GENERIC_DIR)/tclResolve.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclResolve.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclResolve.c
+ 
  tclStringObj.o: $(GENERIC_DIR)/tclStringObj.c
 -	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclStringObj.c
 +	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclStringObj.c
@@ -347,6 +346,10 @@ Configure this for libtool operation
  tclTestObj.o: $(GENERIC_DIR)/tclTestObj.c
 -	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTestObj.c
 +	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTestObj.c
+ 
+ tclTestProcBodyObj.o: $(GENERIC_DIR)/tclTestProcBodyObj.c
+-	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTestProcBodyObj.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTestProcBodyObj.c
  
  tclTimer.o: $(GENERIC_DIR)/tclTimer.c
 -	$(CC) -c $(CC_SWITCHES) $(GENERIC_DIR)/tclTimer.c
