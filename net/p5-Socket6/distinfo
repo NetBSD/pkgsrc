@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:28 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/12/16 08:05:05 recht Exp $
 
-SHA1 (Socket6-0.08.tar.gz) = 847710069b3d0b016bdbd8ecf18260418835c002
-Size (Socket6-0.08.tar.gz) = 28554 bytes
+SHA1 (Socket6-0.12.tar.gz) = 0619c2348247f24686c38c7a4313b5aedf6b9494
+Size (Socket6-0.12.tar.gz) = 33096 bytes
