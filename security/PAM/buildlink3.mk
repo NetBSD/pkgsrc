@@ -1,7 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.18 2005/01/14 00:08:46 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2005/01/14 05:10:37 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-PAM_BUILDLINK3_MK:=	${PAM_BUILDLINK3_MK}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+LINUX_PAM_BUILDLINK3_MK:=	${LINUX_PAM_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	linux-pam
@@ -10,11 +10,11 @@ BUILDLINK_DEPENDS+=	linux-pam
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlinux-pam}
 BUILDLINK_PACKAGES+=	linux-pam
 
-.if !empty(PAM_BUILDLINK3_MK:M+)
+.if !empty(LINUX_PAM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.linux-pam+=		PAM>=0.75
 BUILDLINK_RECOMMENDED.linux-pam+=	PAM>=0.77nb4
 BUILDLINK_PKGSRCDIR.linux-pam?=		../../security/PAM
-.endif	# PAM_BUILDLINK3_MK
+.endif	# LINUX_PAM_BUILDLINK3_MK
 
 .include "../../mk/dlopen.buildlink3.mk"
 
