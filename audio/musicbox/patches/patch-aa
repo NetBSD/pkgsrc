@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2001/09/14 03:34:45 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2004/10/28 12:20:39 wiz Exp $
 
 --- Makefile.orig	Wed Nov 12 14:01:58 1997
 +++ Makefile	Thu Sep 13 23:26:26 2001
@@ -8,9 +8,9 @@ $NetBSD: patch-aa,v 1.5 2001/09/14 03:34:45 jlam Exp $
 -LIB = /usr/X11R6/lib
 -MOC = moc
 +#INC = /usr/X11R6/include/X11/qt
-+INC = -I${X11BASE}/include -I${QT1DIR}/qt1/include
-+LIB = -L${QT1DIR}/qt1/lib -Wl,-R${QT1DIR}/qt1/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
-+MOC = ${QT1DIR}/qt1/bin/moc
++INC = -I${X11BASE}/include -I${QT1DIR}/include
++LIB = -L${QT1DIR}/lib -Wl,-R${QT1DIR}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
++MOC = ${QT1DIR}/bin/moc
  
  # if you use freebsd
 -CFLAGS = -DFreeBSD
