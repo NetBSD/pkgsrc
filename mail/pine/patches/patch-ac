@@ -8,7 +8,7 @@
 +#OPTIMIZE=    -O
  PROFILE=     # -pg
 -DEBUG=       -g -DDEBUG
-+DEBUG=       -DDEBUG #-g
++DEBUG=       # -DDEBUG -g
  
  IMAPDIR=     ../c-client
  PICODIR=     ../pico
