@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4446 2004/01/13 06:55:31 martti Exp $
+$NetBSD: CHANGES,v 1.4447 2004/01/13 09:03:55 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -202,3 +202,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated perl5 to 5.6.1nb10 [jlam 2004-01-12]
 	Updated p5-MIME-Base64 to 2.23 [grant 2004-01-13]
 	Updated xfce4-wm to 4.0.3.1 [martti 2004-01-13]
+	Updated cyrus-saslauthd to 2.1.17nb1 [jlam 2004-01-13]
