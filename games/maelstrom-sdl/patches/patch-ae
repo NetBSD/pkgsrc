@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/07/11 13:21:28 wiz Exp $
+
+--- load.h.orig	Sat Jul 21 22:46:17 2001
++++ load.h
+@@ -21,7 +21,7 @@
+ 	return(newstr);
+ }
+ #endif
+-#if defined(unix) || defined(__MACH__) || defined(__BEOS__)
++#if defined(unix) || defined(__MACH__) || defined(__BEOS__) || defined(__NetBSD__)
+ #include <unistd.h>
+ #endif
+ #endif /* WIN32 */
+@@ -29,7 +29,7 @@
+ #include "SDL_FrameBuf.h"
+ 
+ /* Pathing stuff for the different operating systems */
+-#if defined(unix) || defined(__MACH__)
++#if defined(unix) || defined(__MACH__) || defined(__NetBSD__)
+ #define DIR_SEP	"/"
+ #define CUR_DIR	"."
+ #elif defined(WIN32)
