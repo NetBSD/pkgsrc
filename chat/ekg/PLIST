@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2002/05/05 22:25:36 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/06/13 08:18:37 martti Exp $
 bin/ekg
 man/man1/ekg.1
 share/ekg/themes/2k2.theme
+share/ekg/themes/arim.theme
 share/ekg/themes/emers.theme
 share/ekg/themes/feeg.theme
 share/ekg/themes/jamzed.theme
@@ -10,4 +11,3 @@ share/ekg/themes/lcamtuf.theme
 share/ekg/themes/sic.theme
 share/ekg/themes/zdzichu.theme
 @dirrm share/ekg/themes
-@dirrm share/ekg
