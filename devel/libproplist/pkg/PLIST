@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/02 09:43:47 tron Exp $
+include/proplist.h
+lib/libPropList.a
+lib/libPropList.so.1.1

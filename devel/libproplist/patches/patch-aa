@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/02/02 09:43:46 tron Exp $
+
+--- configure.orig	Mon Jan 25 18:41:05 1999
++++ configure	Sun Jan 31 04:14:17 1999
+@@ -1512,8 +1512,8 @@
+   ac_tool_prefix=
+ fi
+ 
+-# Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++# Use LIBTOOL passed from environment
++#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags=
