@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9726 2005/04/02 22:43:09 minskim Exp $
+$NetBSD: CHANGES,v 1.9727 2005/04/03 01:05:21 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1870,3 +1870,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xmame to 0.95 [kristerw 2005-04-02]
 	Updated xmess to 0.95 [kristerw 2005-04-02]
 	Added ruby-syck-0.42 [minskim 2005-04-02]
+	Added p5-String-Format-1.13 [epg 2005-04-03]
