@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/01/08 15:45:23 darcy Exp $
+$NetBSD: distinfo,v 1.5 2005/01/12 10:55:36 darcy Exp $
 
 SHA1 (generate-2.2.tgz) = fbd17b29226f683edc80f96b660c3e74fbec05c9
 Size (generate-2.2.tgz) = 28661 bytes
-SHA1 (patch-aa) = 5f371ec67af9cca7f4ba8858ad135cad2e42ea5f
+SHA1 (patch-aa) = 2ceafdac084bc7e1cbc0ee55eac65091b21bf380
