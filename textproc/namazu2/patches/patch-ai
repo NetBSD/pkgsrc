@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1.1.1 2002/05/31 13:01:42 seb Exp $
+$NetBSD: patch-ai,v 1.1.1.1.4.1 2002/09/05 09:56:14 agc Exp $
 
 --- nmz/util.h.orig	Mon Jul  9 16:30:37 2001
 +++ nmz/util.h
