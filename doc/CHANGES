@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3918 2003/12/03 12:08:02 markd Exp $
+$NetBSD: CHANGES,v 1.3919 2003/12/03 12:33:33 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4761,3 +4761,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ispell-slovak to 0.2.1 [salo 2003-12-03]
 	Updated p5-Time-HiRes to 1.52 [chris 2003-12-03]
 	Updated R to 1.8.1 [markd 2003-12-03]
+	Updated mp3blaster to 3.2.0 [cube 2003-12-03]
