@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2005/02/18 16:59:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.25 2005/03/02 21:44:55 adrianp Exp $
 
 DISTNAME=	freeradius-1.0.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -21,6 +22,9 @@ LIBTOOLIZE_PLIST=	NO
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 FILES_SUBST+=		ROOT_USER=${ROOT_USER}
 FILES_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
+USE_OLD_DES_API=	YES
+
+BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.7
 
 # This package currently breaks using our libtool.  It does not appear to use
 # libtool properly/fully and as a result the daemon does not compile correctly.
@@ -97,12 +101,12 @@ CONFIGURE_ARGS+=	--without-threads
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"
 .include "../../devel/pthread-sem/buildlink3.mk"
 SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
-				-lpthread -lsemaphore|g" 
+				-lpthread -lsemaphore|g"
 .endif
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
 SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
-				-lpthread|g" 
+				-lpthread|g"
 .endif
 
 pre-build:
