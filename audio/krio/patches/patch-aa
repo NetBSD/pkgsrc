@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/17 13:09:54 agc Exp $
+
+Generalise out, in case qt and kde are installed in different dirs
+
+--- Makefile	2000/09/20 15:12:45	1.1
++++ Makefile	2000/09/20 15:15:37
+@@ -1,10 +1,9 @@
+ # anyone waht to clean this up for me, and perhaps make it use autoconf?
+ 
+ CC	= g++
+-RIODIR  = rio107
+-CFLAGS	= -Wall -O1 -I/usr/X11R6/include/qt -I/usr/include/kde -I/usr/include/qt -I$(RIODIR)
++CFLAGS	= -Wall -O1 -I${QT1DIR}/qt1/include -I${KDEDIR}/include -I$(RIODIR) -I${X11BASE}/include
+ # CFLAGS	= -DDEBUG_MESSAGES -Wall -O1 -I/usr/X11R6/include/qt -I/usr/include/kde -I/usr/include/qt -I$(RIODIR)
+-LDFLAGS	= -L/usr/X11R6/lib -L/usr/lib -L/usr/include -lqt -lkdecore -lkdeui -lkfile -lkfm -lX11 -lXext
++LDFLAGS+= -L${QT1DIR}/qt1/lib -Wl,-R${QT1DIR}/qt1/lib -L${KDEDIR}/lib -Wl,-R${KDEDIR}/lib -lqt -lkdecore -lkdeui -lkfile -lkfm -lX11 -lXext -li386
+ DEST	= krio
+ OBJS	= Krio.o MainWin.o rio.o KRioListView.o
+ SOURCES = Krio/Krio.cpp Krio/MainWin.cpp $(RIODIR)/rio.cpp Krio/KRioListView.cpp
+@@ -21,13 +20,13 @@
+ 	$(CC) -c Krio/MainWin.cpp $(CFLAGS)
+ 
+ Krio/MainWin.moc: Krio/MainWin.h
+-	moc Krio/MainWin.h -o Krio/MainWin.moc
++	${QT1DIR}/qt1/bin/moc Krio/MainWin.h -o Krio/MainWin.moc
+ 
+ KRioListView.o: Krio/KRioListView.moc Krio/KRioListView.cpp Krio/KRioListView.h
+ 	$(CC) -c Krio/KRioListView.cpp $(CFLAGS)
+ 
+ Krio/KRioListView.moc: Krio/KRioListView.h
+-	moc Krio/KRioListView.h -o Krio/KRioListView.moc
++	${QT1DIR}/qt1/bin/moc Krio/KRioListView.h -o Krio/KRioListView.moc
+ 
+ rio.o: $(RIODIR)/rio.cpp $(RIODIR)/rio.h
+ 	$(CC) -c $(RIODIR)/rio.cpp $(CFLAGS)
+@@ -38,8 +37,8 @@
+ re: clean all
+ 
+ install: all
+-	install -D -m4755 -o root ./krio /usr/X11R6/bin/Krio ; \
+-        install -D -m0644 ./icons/krio.xpm /usr/share/icons/krio.xpm ; \
+-        install -D -m0644 ./icons/mini/mini-krio.xpm /usr/share/icons/mini/krio.xpm ; \
+-	install -D -m0644 ./Krio.kdelnk /usr/share/applnk/Utilities/Krio.kdelnk
++	${INSTALL} -m 4755 -o root ./krio ${X11PREFIX}/bin/Krio
++	${INSTALL} -m 0644 ./icons/krio.xpm ${X11PREFIX}/share/pixmaps/krio.xpm
++	${INSTALL} -m0644 ./icons/mini/mini-krio.xpm ${X11PREFIX}/share/pixmaps/mini-krio.xpm
++	#${INSTALL} -m 0644 ./Krio.kdelnk ${X11PREFIX}/applnk/Utilities/Krio.kdelnk
+ 	
