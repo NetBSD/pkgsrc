@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.5 2001/04/19 00:56:34 jtb Exp $
+$NetBSD: patch-ao,v 1.6 2004/04/20 18:14:37 drochner Exp $
 
---- hdf/src/hdfi.h.orig	Tue Aug 22 20:26:57 2000
-+++ hdf/src/hdfi.h
-@@ -151,6 +151,8 @@
+--- hdf/src/hdfi.h.orig	2003-11-01 01:17:14.000000000 +0100
++++ hdf/src/hdfi.h	2004-04-20 17:02:01.000000000 +0200
+@@ -153,6 +153,8 @@
   * Define options for each platform
   *-------------------------------------------------------------------------*/
  
@@ -11,11 +11,10 @@ $NetBSD: patch-ao,v 1.5 2001/04/19 00:56:34 jtb Exp $
  /*
   * Meaning of each defined macros (not completed yet)
   *
-@@ -1253,6 +1255,71 @@
- #endif
+@@ -1384,6 +1386,71 @@
  
  #endif /* IA64 */
-+
+ 
 +#endif  /* ! NetBSD */
 +
 +#ifdef __NetBSD__
@@ -53,7 +52,7 @@ $NetBSD: patch-ao,v 1.5 2001/04/19 00:56:34 jtb Exp $
 +typedef int               intf;     /* size of INTEGERs in Fortran compiler */
 +typedef float             float32;
 +typedef double            float64;
-+#if defined(__alpha__) || defined(__sparc64__)
++#if defined(__alpha__) || defined(__sparc64__) || defined(__x86_64__)
 +typedef long              hdf_pint_t;   /* an integer the same size as a pointer */
 +#else
 +typedef int               hdf_pint_t;   /* an integer the same size as a pointer */
@@ -80,6 +79,7 @@ $NetBSD: patch-ao,v 1.5 2001/04/19 00:56:34 jtb Exp $
 +
 +#endif /* NetBSD */
 +
- 
++
  #ifndef GOT_MACHINE
  No machine type has been defined.  Your Makefile needs to have someing like
+ -DSUN or -DUNICOS in order for the HDF internal structures to be defined
