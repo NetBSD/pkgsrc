@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.5 2002/04/17 04:40:40 fredb Exp $
+
+--- Imakefile.orig	Tue Apr  2 11:05:09 2002
++++ Imakefile
+@@ -4,12 +4,12 @@
+ #define Optimize YES
+ #define UseSystemXpm YES
+ #define HaveStrerror YES
+-#define StaticLink YES
+-#define BuildGL YES
++#define StaticLink NO
++#define BuildGL NO
+ #define BuildShared YES
+-#define Solaris64Bit YES
++#define Solaris64Bit NO
+ 
+-#define XFormsInstallDir /usr/local
++#define XFormsInstallDir $(PREFIX)
+ #define XFormsLibRev 0.9999
+ 
+ #define OptimizationLevel -O4

@@ -1,5 +1,5 @@
-This is the binary distribution of XForms, a graphical user interface
-toolkit for X Window Systems. It should work under X11 R4, R5 & R6.
+This is the first Open Source distribution of the XForms Library,
+a graphical user interface toolkit for X Windows. XForms is
+licensed under the LGPL (Lesser Gnu Public License) version 2.1.
 
-Documentation on XForms is available from bragg.phys.uwm.edu /pub/xforms
-via anonymous ftp.
+This package is current built without OpenGL support.
