@@ -1,71 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2001/11/14 08:14:59 tron Exp $
+$NetBSD: patch-aa,v 1.5 2003/01/31 12:57:08 tron Exp $
 
---- Makefile.orig	Sun Jun 24 20:31:25 2001
-+++ Makefile	Thu Nov  1 12:35:28 2001
-@@ -2,16 +2,18 @@
- WMBIFF_VERSION="0.3.1"
- DESTDIR=
--prefix=/usr/local
-+prefix=${PREFIX}
- bindir=${prefix}/bin
--mandir=${prefix}/share/man
-+mandir=${prefix}/man
-+datadir=${prefix}/share/examples/wmbiff
-+
- CONF=/etc
+--- Makefile.in.orig	Sat Jan 25 05:31:04 2003
++++ Makefile.in	Thu Jan 30 13:39:32 2003
+@@ -120,7 +120,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = wmgeneral wmbiff autoconf scripts
++SUBDIRS = wmgeneral wmbiff autoconf
+ EXTRA_DIST = ChangeLog FAQ README.licq TODO
  
- CC     = gcc
--LIBDIR = -L/usr/X11R6/lib
-+LIBDIR = -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
- LIBS   = -lXpm -lXext -lX11
--CFLAGS = -O2 -Wall
- #CFLAGS = -g -Wall -pedantic 
--
-+#CFLAGS += -Wall -I${PREFIX}/include -I${X11BASE}/include
-+CFLAGS+= -I${X11BASE}/include -I${LOCALBASE}/include
- EXTRAFLAGS = -DWMBIFF_VERSION='$(WMBIFF_VERSION)'
- #EXTRAFLAGS += -DDEBUG_POP3 -DDEBUG_IMAP4 -DDEBUG_LICQ \
- #	-DDEBUG_MBOX -DDEBUG_MAILDIR -DDEBUG -DDEBUG_MAIL_COUNT
-@@ -24,14 +26,8 @@
- 	../wmgeneral/list.o \
- 	charutil.o
- 
--INSTALL = /usr/bin/install
--INSTALL_DIR	= $(INSTALL) -p -d -o root -g root -m 755
--INSTALL_PROGRAM	= $(INSTALL) -p -o root -g root -m 755
--INSTALL_FILE 	= $(INSTALL) -p -o root -g root -m 644
--
--
- .c.o:
--	$(CC) $(CFLAGS) $(EXTRAFLAGS) -c $< -o $*.o
-+	${CC} ${CFLAGS} $(EXTRAFLAGS) -c $< -o $*.o
- 
- all: wmbiff-master.xpm wmbiff
- 
-@@ -39,7 +35,7 @@
- 	ln -s wmbiff-master-led.xpm wmbiff-master.xpm
- 
- wmbiff:	$(OBJS)
--	$(CC) $(CFLAGS) $(EXTRAFLAGS) -o wmbiff -lX11 -lnsl $^ $(LIBDIR) $(LIBS)
-+	$(CC) ${CFLAGS} ${LDFLAGS} $(EXTRAFLAGS) -o wmbiff -lX11 $^ $(LIBDIR) $(LIBS)
- 
- clean:
- 	for i in $(OBJS) ; do \
-@@ -50,12 +46,11 @@
- distclean: clean
- 
- install: wmbiff
--	$(INSTALL_DIR) $(DESTDIR)$(bindir)
--	$(INSTALL_DIR) $(DESTDIR)$(mandir)/man1
--	$(INSTALL_DIR) $(DESTDIR)$(mandir)/man5
--	$(INSTALL_PROGRAM) wmbiff $(DESTDIR)$(bindir)
--	$(INSTALL_FILE) wmbiff.1 $(DESTDIR)$(mandir)/man1
--	$(INSTALL_FILE) wmbiffrc.5 $(DESTDIR)$(mandir)/man5
-+	${BSD_INSTALL_PROGRAM} wmbiff $(DESTDIR)$(bindir)
-+	${BSD_INSTALL_MAN} wmbiff.1 $(DESTDIR)$(mandir)/man1
-+	${BSD_INSTALL_MAN} wmbiffrc.5 $(DESTDIR)$(mandir)/man5
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)/$(datadir)
-+	${BSD_INSTALL_DATA} sample.wmbiffrc $(DESTDIR)$(datadir)/
- 
- # CODING STYLE AND INDENTATION [2001-Mar-12]:
- #
+ ACLOCAL_FLAGS = -I autoconf
