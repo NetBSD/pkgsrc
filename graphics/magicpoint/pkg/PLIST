@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/08/23 10:33:24 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/08/24 01:00:27 hubertf Exp $
 bin/mgp
 bin/mgp2ps
 bin/mgpnet
@@ -11,4 +11,25 @@ man/cat1/mgp.0
 man/cat1/mgp2ps.0
 man/cat1/mgpnet.0
 man/cat1/xwintoppm.0
+share/examples/mgp/README
+share/examples/mgp/README.jp
+share/examples/mgp/ascii.mgp
+share/examples/mgp/cloud.gif
+share/examples/mgp/dad.eps
+share/examples/mgp/dad.gif
+share/examples/mgp/default.mgp
+share/examples/mgp/dns.mgp
+share/examples/mgp/gradation.mgp
+share/examples/mgp/mgp-old1.gif
+share/examples/mgp/mgp-old2.gif
+share/examples/mgp/mgp-old3.gif
+share/examples/mgp/mgp1.gif
+share/examples/mgp/mgp2.gif
+share/examples/mgp/mgp3.gif
+share/examples/mgp/sample.mgp
+share/examples/mgp/tutorial.mgp
+share/examples/mgp/v6.mgp
+share/examples/mgp/v6header.eps
+share/examples/mgp/v6header.gif
+@dirrm share/examples/mgp
 @dirrm lib/X11/mgp
