@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1248 2003/01/27 16:10:08 itojun Exp $
+$NetBSD: CHANGES,v 1.1249 2003/01/27 17:27:29 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -444,3 +444,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-pilot to 0.1.71nb1 [jmmv 2003-01-27]
 	Added iperf-1.6.5 [seb 2003-01-27]
 	Updated cue to 20030120 [itojun 2003-01-27]
+	Updated graphopt to 0.1nb1 [atatat 2003-01-27]
