@@ -1,12 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/17 03:59:08 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/12 11:22:12 seb Exp $
 bin/pcb
 bin/pcb-bin
-info/pcb.info
-info/pcb.info-1
-info/pcb.info-2
-info/pcb.info-3
-info/pcb.info-4
-info/pcb.info-5
 share/pcb/CreateLibrary.sh
 share/pcb/CreateLibraryContents.sh
 share/pcb/ListLibraryContents.sh
