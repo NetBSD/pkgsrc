@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/11/26 06:49:54 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/13 22:22:46 seb Exp $
 
 DISTNAME=	Test-Cmd-1.04
 PKGNAME=        p5-${DISTNAME}
@@ -10,11 +10,8 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www.baldmt.com/Test-Cmd/
 COMMENT=	perl5 module for testing of external commands and scripts
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Test/Cmd/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

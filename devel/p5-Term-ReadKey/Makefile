@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/07/30 01:49:56 grant Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/13 22:22:54 seb Exp $
 #
 
 VERS=		2.21
@@ -12,11 +12,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/TermReadKey/
 COMMENT=	Change terminal modes and perform non-blocking reads
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Term/ReadKey/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/08/20 14:37:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/13 22:22:52 seb Exp $
 #
 
 DISTNAME=		Convert-ASN1-0.16
@@ -11,11 +11,8 @@ MAINTAINER=		packages@netbsd.org
 #HOMEPAGE=	
 COMMENT=		perl5 module to encode/decode ASN.1 data
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Convert/ASN1/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

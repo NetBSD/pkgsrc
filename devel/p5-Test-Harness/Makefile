@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/06/03 13:08:56 shell Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/13 22:22:47 seb Exp $
 
 DISTNAME=		Test-Harness-2.24
 PKGNAME=		p5-${DISTNAME}
@@ -9,11 +9,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 MAINTAINER=		shell@netbsd.org
 COMMENT=		perl5 module for testing
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Test/Harness/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

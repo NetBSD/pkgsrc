@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/10 02:35:49 shell Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/13 22:22:52 seb Exp $
 
 DISTNAME=	Attribute-Handlers-0.77
 PKGNAME=	p5-${DISTNAME}
@@ -10,11 +10,8 @@ MAINTAINER=	packages@netbsd.org
 # HOMEPAGE=	
 COMMENT=	Simpler definition of attribute handlers
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Attribute/Handlers/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

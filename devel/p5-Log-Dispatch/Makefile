@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/26 06:49:52 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/13 22:22:47 seb Exp $
 
 DISTNAME=	Log-Dispatch-1.79
 PKGNAME=	p5-${DISTNAME}
@@ -9,11 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	perl module for logging messages to multiple outputs
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Log/Dispatch/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
