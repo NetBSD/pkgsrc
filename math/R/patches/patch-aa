@@ -1,15 +1,17 @@
-$NetBSD: patch-aa,v 1.5 2000/08/16 19:04:43 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2001/07/23 13:14:44 jlam Exp $
 
---- configure.in.orig	Sun Jul 30 18:46:45 2000
-+++ configure.in	Wed Aug 16 13:56:09 2000
-@@ -321,10 +321,6 @@
+--- configure.in.orig	Sun Jun 17 12:41:20 2001
++++ configure.in
+@@ -380,9 +380,9 @@
  if ${use_libmoto}; then
    AC_CHECK_LIB(moto, sin)
  fi
 -AC_CHECK_LIB(ncurses, main,,
 -  AC_CHECK_LIB(termcap, main,,
 -    AC_CHECK_LIB(termlib, main)
--))
++AC_CHECK_LIB(termcap, main,,
++  AC_CHECK_LIB(termlib, main,,
++    AC_CHECK_LIB(ncurses, main)
+ ))
  AC_CHECK_LIB(dl, dlopen)
  AC_CHECK_LIB(z, main)
- 
