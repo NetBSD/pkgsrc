@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/09 15:11:19 agc Exp $
+$NetBSD: patch-aa,v 1.2 2002/06/27 19:05:01 agc Exp $
 
 --- Yrolo.tmpl	2002/05/09 14:46:24	1.1
 +++ Yrolo.tmpl	2002/05/09 14:47:36
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/09 15:11:19 agc Exp $
  XCOMM
  
 +#ifdef NetBSDArchitecture
-+LOCAL_LIBRARIES= XmClientLibs -lcompat
++LOCAL_LIBRARIES= XmClientLibs -lcompat -Wl,-R${X11BASE}/lib
 +#else
  LOCAL_LIBRARIES= XmClientLibs
 +#endif
