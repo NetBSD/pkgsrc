@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/12/13 01:25:14 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2001/01/05 20:51:24 hubertf Exp $
 #
 
     SUBDIR += abiword
@@ -6,7 +6,6 @@
     SUBDIR += biew
     SUBDIR += bvi
     SUBDIR += emacs
-    SUBDIR += framemaker
     SUBDIR += gnotepad
     SUBDIR += hexedit
     SUBDIR += jed
