@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2001/01/19 21:19:40 tron Exp $
+# $NetBSD: Makefile,v 1.60 2001/02/12 16:16:03 agc Exp $
 #
 
     SUBDIR += PAM
@@ -11,6 +11,7 @@
     SUBDIR += dsniff
     SUBDIR += egd
     SUBDIR += fortify
+    SUBDIR += fressh
     SUBDIR += fsh
     SUBDIR += gnupg
     SUBDIR += isakmpd
