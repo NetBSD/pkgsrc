@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/26 11:23:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/19 15:00:38 wiz Exp $
 #
 
 .include "../xosd/Makefile.common"
@@ -14,8 +14,8 @@ CONFIGURE_ARGS+=	--enable-new-plugin
 BUILD_DIRS=		${WRKSRC}/src/xmms_plugin
 INSTALL_DIRS=		${WRKSRC}/src/xmms_plugin
 
-.include "../../audio/xmms/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../x11/xosd/buildlink2.mk"
+.include "../../audio/xmms/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/xosd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
