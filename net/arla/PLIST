@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.11 2002/12/07 15:38:48 cjep Exp $
+@comment $NetBSD: PLIST,v 1.12 2003/01/14 12:00:09 wennmach Exp $
 bin/aklog
 bin/amon
 bin/bos
 bin/fs
 bin/kalog
-bin/klog
 bin/pts
 bin/rxdebug
 bin/themis
@@ -78,7 +77,6 @@ lkm/xfs_mod.o
 man/man1/aklog.1
 man/man1/fs.1
 man/man1/kalog.1
-man/man1/klog.1
 man/man1/pts.1
 man/man1/rxdebug.1
 man/man1/themis.1
@@ -110,6 +108,5 @@ share/examples/arla/fstab
 share/examples/arla/lkm.conf
 share/examples/arla/services
 @dirrm share/examples/arla
-@unexec ${RMDIR} %D/lkm 2>/dev/null || ${TRUE}
 @dirrm include/rx
 @dirrm include/afs
