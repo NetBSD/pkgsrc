@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.588 2003/05/25 16:46:03 grant Exp $
+$NetBSD: TODO,v 1.589 2003/05/25 18:29:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -130,6 +130,7 @@ Suggested package updates
 	o gdm-2.4.1.1
 	o generator-0.35
 	o getmail-3.1.2
+	o gettext-0.12
 	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.8 [pkgsrc-wip]
@@ -167,6 +168,7 @@ Suggested package updates
 	o libaudiofile-1.0.5
 	o libgda-0.11.0 [pkg/21532]
 	o libgnomedb-0.11.0 [pkg/21533]
+	o libiconv-1.9
 	o libmpeg3-1.5.1
 	o libole2-2.2.8
 	o librsvg-2.2.2.1
