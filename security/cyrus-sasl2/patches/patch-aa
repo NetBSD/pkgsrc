@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/08/16 09:06:42 recht Exp $
+$NetBSD: patch-aa,v 1.5 2004/02/14 03:16:59 jlam Exp $
 
---- configure.in.orig	2003-07-15 17:39:21.000000000 +0200
-+++ configure.in	2003-07-26 12:28:18.000000000 +0200
-@@ -114,6 +114,13 @@
+--- configure.in.orig	Fri Nov 28 10:37:10 2003
++++ configure.in
+@@ -104,6 +104,13 @@ target=$save_target
  
  dnl ltconfig might not have found support for shared libs
  dnl just do static libs if so.

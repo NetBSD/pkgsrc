@@ -1,16 +1,16 @@
-$NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
+$NetBSD: patch-as,v 1.2 2004/02/14 03:16:59 jlam Exp $
 
---- plugins/digestmd5.c.orig	2003-08-14 13:15:30.000000000 +0200
-+++ plugins/digestmd5.c	2003-08-14 13:41:39.000000000 +0200
-@@ -59,6 +59,7 @@
+--- plugins/digestmd5.c.orig	Tue Nov 11 08:26:07 2003
++++ plugins/digestmd5.c
+@@ -60,6 +60,7 @@
  /* DES support */
  #ifdef WITH_DES
  # ifdef WITH_SSL_DES
 +#  include <openssl/opensslv.h>
  #  include <openssl/des.h>
- # else /* system DES library */
- #  include <des.h>
-@@ -655,9 +656,15 @@
+ #  include <openssl/opensslv.h>
+ #  if (OPENSSL_VERSION_NUMBER >= 0x0090700f) && \
+@@ -733,9 +734,15 @@ static void get_pair(char **in, char **n
  
  #ifdef WITH_DES
  struct des_context_s {
@@ -26,7 +26,7 @@ $NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
  };
  
  typedef struct des_context_s des_context_t;
-@@ -692,6 +699,15 @@
+@@ -770,6 +777,15 @@ static int dec_3des(context_t *text,
      des_context_t *c = (des_context_t *) text->cipher_dec_context;
      int padding, p;
      
@@ -42,7 +42,7 @@ $NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
      des_ede2_cbc_encrypt((void *) input,
  			 (void *) output,
  			 inputlen,
-@@ -699,7 +715,7 @@
+@@ -777,7 +793,7 @@ static int dec_3des(context_t *text,
  			 c->keysched2,
  			 &c->ivec,
  			 DES_DECRYPT);
@@ -51,7 +51,7 @@ $NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
      /* now chop off the padding */
      padding = output[inputlen - 11];
      if (padding < 1 || padding > 8) {
-@@ -743,6 +759,15 @@
+@@ -818,6 +834,15 @@ static int enc_3des(context_t *text,
      
      len=inputlen+paddinglen+10;
      
@@ -67,7 +67,7 @@ $NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
      des_ede2_cbc_encrypt((void *) output,
  			 (void *) output,
  			 len,
-@@ -750,7 +775,7 @@
+@@ -825,7 +850,7 @@ static int enc_3des(context_t *text,
  			 c->keysched2,
  			 &c->ivec,
  			 DES_ENCRYPT);
@@ -76,7 +76,7 @@ $NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
      *outputlen=len;
      
      return SASL_OK;
-@@ -769,12 +794,23 @@
+@@ -844,12 +869,23 @@ static int init_3des(context_t *text, 
  
      /* setup enc context */
      slidebits(keybuf, enckey);
@@ -100,7 +100,7 @@ $NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
      memcpy(c->ivec, ((char *) enckey) + 8, 8);
  
      text->cipher_enc_context = (cipher_context_t *) c;
-@@ -782,13 +818,23 @@
+@@ -857,13 +893,23 @@ static int init_3des(context_t *text, 
      /* setup dec context */
      c++;
      slidebits(keybuf, deckey);
@@ -126,7 +126,7 @@ $NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
      memcpy(c->ivec, ((char *) deckey) + 8, 8);
  
      text->cipher_dec_context = (cipher_context_t *) c;
-@@ -813,12 +859,21 @@
+@@ -888,12 +934,21 @@ static int dec_des(context_t *text, 
      des_context_t *c = (des_context_t *) text->cipher_dec_context;
      int p, padding = 0;
      
@@ -148,7 +148,7 @@ $NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
  
      /* Update the ivec (des_cbc_encrypt implementations tend to be broken in
         this way) */
-@@ -867,12 +922,21 @@
+@@ -939,12 +994,21 @@ static int enc_des(context_t *text,
      
      len = inputlen + paddinglen + 10;
      
@@ -170,7 +170,7 @@ $NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
      
      /* Update the ivec (des_cbc_encrypt implementations tend to be broken in
         this way) */
-@@ -896,7 +960,12 @@
+@@ -968,7 +1032,12 @@ static int init_des(context_t *text,
      
      /* setup enc context */
      slidebits(keybuf, enckey);
@@ -183,7 +183,7 @@ $NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
  
      memcpy(c->ivec, ((char *) enckey) + 8, 8);
      
-@@ -905,8 +974,11 @@
+@@ -977,8 +1046,11 @@ static int init_des(context_t *text,
      /* setup dec context */
      c++;
      slidebits(keybuf, deckey);
