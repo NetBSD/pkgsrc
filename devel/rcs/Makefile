@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.4 1999/04/14 21:39:03 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/05/24 20:39:38 tv Exp $
 #
 
-DISTNAME=       rcs-5.7
-CATEGORIES=	devel
-MASTER_SITES=   ${MASTER_SITE_GNU:=rcs/}
+DISTNAME=		rcs-5.7
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_GNU:=rcs/}
 
-MAINTAINER=	gnu@gnu.org
-HOMEPAGE=	http://www.gnu.org/software/rcs/rcs.html
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.gnu.org/software/rcs/rcs.html
 
-NOT_FOR_OPSYS=	NetBSD # in the base system
+NOT_FOR_PLATFORM=	NetBSD-*-*	# in the base system
 
-DEPENDS+=	diffutils-2.7:../../devel/diffutils
+DEPENDS=		diffutils-2.7:../../devel/diffutils
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	PATH=${LOCALBASE}/bin:$PATH
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV=		PATH=${LOCALBASE}/bin:$PATH
 
 post-install:
 	${RM} -f ${PREFIX}/bin/rcslog

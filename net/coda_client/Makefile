@@ -1,25 +1,26 @@
-# $NetBSD: Makefile,v 1.8 1999/04/26 19:08:44 garbled Exp $
+# $NetBSD: Makefile,v 1.9 1999/05/24 20:39:46 tv Exp $
 #
 
-DISTNAME=	coda-4.6.6
-PKGNAME=	coda-client-4.6.6.1
-CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/coda/src/
-EXTRACT_SUFX=	.tgz
+DISTNAME=		coda-4.6.6
+PKGNAME=		coda-client-4.6.6.1
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.coda.cs.cmu.edu/pub/coda/src/
+EXTRACT_SUFX=		.tgz
 
-MAINTAINER=	rvb@cs.cmu.edu
-HOMEPAGE=	http://www.coda.cs.cmu.edu/
+MAINTAINER=		rvb@cs.cmu.edu
+HOMEPAGE=		http://www.coda.cs.cmu.edu/
 
-DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
-DEPENDS+=	readline-2.2:../../devel/readline
+DEPENDS=		gdbm-1.7.3:../../databases/gdbm \
+			readline-2.2:../../devel/readline
 
-NOT_FOR_ARCHS=	alpha  # needs custom asm.
+ONLY_FOR_PLATFORM=	NetBSD-*-*
+NOT_FOR_PLATFORM=	NetBSD-*-alpha	# needs custom asm.
 
-ALL_TARGET=	coda
-INSTALL_TARGET=	client-install
+ALL_TARGET=		coda
+INSTALL_TARGET=		client-install
 
-USE_PERL5=	yes
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USE_PERL5=		yes
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
 
 .include "../../mk/bsd.pkg.mk"

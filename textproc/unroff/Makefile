@@ -1,27 +1,25 @@
-# $NetBSD: Makefile,v 1.9 1998/11/19 15:40:47 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/05/24 20:39:48 tv Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/27 00:11:48 asami Exp
 #
 
-DISTNAME=	unroff-1.0
-PKGNAME=	unroff-1.0.2
-CATEGORIES=	textproc
-MASTER_SITES=	${UNROFF_SITE}/dist/ \
-		${UNROFF_SITE}/contrib/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${PATCH1} ${PATCH2}
+DISTNAME=		unroff-1.0
+PKGNAME=		unroff-1.0.2
+CATEGORIES=		textproc
+MASTER_SITES=		${UNROFF_SITE}/dist/ \
+			${UNROFF_SITE}/contrib/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${PATCH1} ${PATCH2}
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www-rn.informatik.uni-bremen.de/software/unroff/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www-rn.informatik.uni-bremen.de/software/unroff/
 
-DEPENDS+=	elk-3.0.2:../../lang/elk
+DEPENDS=		elk-3.0.2:../../lang/elk
 
-NOT_FOR_ARCHS=	alpha	#needs elk
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+DIST_SUBDIR=		unroff
 
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-DIST_SUBDIR=	unroff
-
-UNROFF_SITE=	http://www-rn.informatik.uni-bremen.de/software/unroff
-PATCH1=		me-misc-patch
-PATCH2=		misc-patch-2
+UNROFF_SITE=		http://www-rn.informatik.uni-bremen.de/software/unroff
+PATCH1=			me-misc-patch
+PATCH2=			misc-patch-2
 
 pre-patch:
 	@${ECHO_MSG} "===>  Applying distribution patches for ${PKGNAME}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/24 16:52:18 agc Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/24 20:39:48 tv Exp $
 #
 
 DISTNAME=		rc5-mlg-004
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.flame.org/netbsd-rc5/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://rc5.distributed.net/
 
-ONLY_FOR_ARCHS=		alpha arm32 i386
+ONLY_FOR_PLATFORM=	NetBSD-*-{alpha,arm32,i386}
 
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/04/16 20:27:16 jlam Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/24 20:39:36 tv Exp $
 #
 
 DISTNAME=		xisp-2.5p4
@@ -12,9 +12,9 @@ HOMEPAGE=		http://users.hol.gr/~dbouras/
 DEPENDS+=		xforms-0.88:../../x11/xforms
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-ONLY_FOR_ARCHS=		arm32 i386 m68k sparc ns32k
+ONLY_FOR_PLATFORM=	NetBSD-*-{arm32,i386,m68k,sparc,ns32k}
 
-USE_X11BASE=		yes
+USE_X11BASE=
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xisp

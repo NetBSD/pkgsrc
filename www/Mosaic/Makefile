@@ -1,31 +1,31 @@
-# $NetBSD: Makefile,v 1.11 1999/05/23 07:50:05 tron Exp $
+# $NetBSD: Makefile,v 1.12 1999/05/24 20:39:49 tv Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
-DISTNAME=       Mosaic-src-2.7b5
-PKGNAME=        mosaic-2.7b5
-WRKSRC=		${WRKDIR}/Mosaic-src
-CATEGORIES=     www
-MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/Web/Mosaic/Unix/source/
+DISTNAME=		Mosaic-src-2.7b5
+PKGNAME=		mosaic-2.7b5
+WRKSRC=			${WRKDIR}/Mosaic-src
+CATEGORIES=		www
+MASTER_SITES=		ftp://ftp.ncsa.uiuc.edu/Web/Mosaic/Unix/source/
 
-MAINTAINER=	tv@netbsd.org
-HOMEPAGE=	http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/
+MAINTAINER=		tv@netbsd.org
+HOMEPAGE=		http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/
 
-DEPENDS=	jpeg-6b:../../graphics/jpeg \
-		png-1.0.3:../../graphics/png \
-		xpm-3.4k:../../graphics/xpm
+DEPENDS=		jpeg-6b:../../graphics/jpeg \
+			png-1.0.3:../../graphics/png \
+			xpm-3.4k:../../graphics/xpm
 
-NOT_FOR_ARCHS=	alpha	#LP64 problems
+NOT_FOR_PLATFORM=	*-*-alpha	#LP64 problems
 
-USE_X11BASE=	yes
-USE_MOTIF=	yes
+USE_X11BASE=		yes
+USE_MOTIF=		yes
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 
-LDFLAGS+=	-L${X11BASE}/lib
+LDFLAGS+=		-L${X11BASE}/lib
 
-CONFIGURE_ENV= CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include -Dunix"
-CONFIGURE_ARGS=	--with-zdir=/usr --with-jpegdir=${LOCALBASE} --with-pngdir=${LOCALBASE}
+CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include -Dunix"
+CONFIGURE_ARGS=		--with-zdir=/usr --with-jpegdir=${LOCALBASE} --with-pngdir=${LOCALBASE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/Mosaic ${PREFIX}/bin

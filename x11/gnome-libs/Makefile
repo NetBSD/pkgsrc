@@ -1,25 +1,25 @@
-# $NetBSD: Makefile,v 1.24 1999/05/20 20:09:52 tron Exp $
+# $NetBSD: Makefile,v 1.25 1999/05/24 20:39:50 tv Exp $
 #
 
-DISTNAME=	gnome-libs-1.0.9
-CATEGORIES=	x11 gnome
-MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
-		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
-		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/
+DISTNAME=		gnome-libs-1.0.9
+CATEGORIES=		x11 gnome
+MASTER_SITES=		ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
+			ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
+			ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.gnome.org/
+MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.gnome.org/
 
-DEPENDS+=	ORBit-0.4.3:../../corba/ORBit
-DEPENDS+=	imlib-1.9.4:../../graphics/imlib
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
+DEPENDS+=		ORBit-0.4.3:../../corba/ORBit
+DEPENDS+=		imlib-1.9.4:../../graphics/imlib
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-NOT_FOR_ARCHS=	alpha	# problems with gtk
+NOT_FOR_PLATFORM=	*-*-alpha	# problems with gtk
 
-GNU_CONFIGURE=	yes
-USE_X11BASE=	yes
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+GNU_CONFIGURE=		yes
+USE_X11BASE=		yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
 LDFLAGS+=       	"-L${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${LOCALBASE}
@@ -27,9 +27,9 @@ CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include" \
 			LOCALBASE=${LOCALBASE} \
 			X11BASE=${X11BASE}
 
-LOCALSTATEDIR=	/var/gnome
+LOCALSTATEDIR=		/var/gnome
 
-PLIST_SRC=	${WRKDIR}/PLIST
+PLIST_SRC=		${WRKDIR}/PLIST
 
 pre-build:
 	(cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h)
