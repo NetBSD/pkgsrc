@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.58 2004/03/12 06:09:12 jlam Exp $
+# $NetBSD: gcc.mk,v 1.59 2004/03/13 17:52:24 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -20,6 +20,7 @@ _GCC2_PATTERNS=	[0-1].* 2.[0-9] 2.[0-9].* 2.[1-8][0-9] 2.[1-8][0-9].*	\
 _GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
 		2.[1-9][0-9][0-9]* 3.* [4-9]*
 
+# _CC is the full path to the compiler named by ${CC} if it can be found.
 .if !defined(_CC)
 _CC:=	${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 .  for _dir_ in ${PATH:C/\:/ /g}
