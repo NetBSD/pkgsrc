@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/18 09:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/18 09:58:58 wiz Exp $
 #
 
 DISTNAME=	openbox-2.2.3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://icculus.org/openbox/releases/
 
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://icculus.org/openbox/
-COMMENT=	Window manager based on Blackbox
+COMMENT=	Window manager based on Blackbox (2.x branch)
 
 DEPENDS=	bsetroot>=0.1nb1:../../wm/bsetroot
 
