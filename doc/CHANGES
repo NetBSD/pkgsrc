@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8942 2005/01/27 09:40:25 adam Exp $
+$NetBSD: CHANGES,v 1.8943 2005/01/27 12:01:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -622,3 +622,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnome-spell to 1.0.6 [jmmv 2005-01-26]
 	Updated drivel to 1.2.4 [jmmv 2005-01-26]
 	Updated dillo to 0.8.4 [adam 2005-01-27]
+	Updated fontforge to 20050117 [adam 2005-01-27]
