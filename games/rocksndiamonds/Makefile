@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2004/12/22 16:46:19 reed Exp $
+# $NetBSD: Makefile,v 1.22 2005/01/16 19:33:27 kristerw Exp $
 #
-
-.include "Makefile.common"
 
 COMMENT=	Game like Boulder Dash, Emerald Mine, or Sokoban (X11 build)
 PKGREVISION=	1
+
+.include "Makefile.common"
 
 .if ${OPSYS} == "SunOS"
 BUILD_TARGET=	solaris
