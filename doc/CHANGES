@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5480 2004/04/07 18:59:49 tron Exp $
+$NetBSD: CHANGES,v 1.5481 2004/04/07 22:39:20 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1839,3 +1839,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmbmon to 203nb1 [recht 2004-04-07]
 	Updated GConf2 to 2.6.0nb2 [jmmv 2004-04-07]
 	Updated gtar to 1.13.25nb2 [tron 2004-04-07]
+	Updated apache to 1.3.29nb2 [tron 2004-04-07]
