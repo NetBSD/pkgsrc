@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.888 2002/12/23 21:24:32 jlam Exp $
+$NetBSD: CHANGES,v 1.889 2002/12/23 22:31:05 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4076,3 +4076,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated m4 to 1.4nb1 [wiz 2002-12-23]
 	Updated gmake to 3.80nb1 [wiz 2002-12-23]
 	Updated PAM to 0.77 [jlam 2002-12-23]
+	Updated source-highlight to 1.6.1 [seb 2002-12-23]
