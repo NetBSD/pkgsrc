@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2004/12/20 11:31:07 grant Exp $
+# $NetBSD: Makefile,v 1.11 2005/02/09 09:04:02 seb Exp $
 
-DISTNAME=	SNMP_Session-0.83
-PKGNAME=	p5-SNMP_Session-0.83
+DISTNAME=	SNMP_Session-1.07
+PKGNAME=	p5-SNMP_Session-1.07
 SVR4_PKGNAME=	p5sns
-PKGREVISION=	1
 CATEGORIES=	net perl5
-MASTER_SITES=	ftp://ftp.switch.ch/software/sources/network/snmp/perl/
+MASTER_SITES=	http://www.switch.ch/misc/leinen/snmp/perl/dist/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.switch.ch/misc/leinen/snmp/perl/
