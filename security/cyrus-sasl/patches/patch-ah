@@ -1,16 +1,16 @@
-$NetBSD: patch-ah,v 1.1 2000/12/10 09:43:38 jlam Exp $
+$NetBSD: patch-ah,v 1.2 2002/01/13 14:23:38 skrll Exp $
 
---- plugins/gssapi.c.orig	Thu Jul 20 22:06:52 2000
+--- plugins/gssapi.c.orig	Sat Mar 10 05:56:46 2001
 +++ plugins/gssapi.c
-@@ -50,6 +50,11 @@
+@@ -49,6 +49,11 @@
+ #else
  #include <gssapi/gssapi.h>
  #endif
- 
++  
 +/* Heimdal has this, but MIT Kerberos doesn't */
 +#ifndef GSS_C_NO_NAME
 +#define GSS_C_NO_NAME  ((gss_name_t) 0)
 +#endif
-+
+ 
  #ifdef WIN32
- #include <winsock.h>
- #else
+ #  include <winsock.h>
