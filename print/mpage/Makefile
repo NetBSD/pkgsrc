@@ -3,6 +3,7 @@
 # Date created:		19 February 1998
 # Whom:			Kapil Chowksey
 #
+# $NetBSD: Makefile,v 1.2 1998/04/01 21:06:09 tron Exp $
 # $FreeBSD Id: Makefile,v 1.1.1.1 1998/02/20 04:37:31 steve Exp
 
 DISTNAME=	mpage-2.5
