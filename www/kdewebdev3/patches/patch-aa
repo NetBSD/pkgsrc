@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/21 15:24:06 markd Exp $
+
+--- kfilereplace/kexpression.cpp.orig	2004-03-27 06:25:58.000000000 +1200
++++ kfilereplace/kexpression.cpp
+@@ -115,7 +115,7 @@ bool KExpression::doesStringMatch(const 
+     }
+   else // case insensitive
+     {        
+-     bCharMatches = (::tolower(szString[0]) == ::tolower(szText[0]));
++     bCharMatches = (tolower(szString[0]) == tolower(szText[0]));
+     }
+ 
+   // CASE 3: IGNORE WHITESPACES (\t, \n, \r, double-spaces) OPTIONS IS ACTIVATED, AND THERE IS ONE HERE
