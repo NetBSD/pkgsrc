@@ -14,10 +14,10 @@ DDEESSCCRRIIPPTTIIOONN
      the pkg_create(1) command.
 
      The _p_k_g_-_n_a_m_e may be the name of an installed package (with our without
-     version), a pattern matching several installed packages (see the --ee
-     switch for a description of possible patterns), the pathname to a package
-     distribution file, a filename belonging to an installed package (if --FF is
-     also given), or a URL to an ftp-available package.
+     version), a pattern matching several installed packages (see the _P_A_C_K_A_G_E
+     _W_I_L_D_C_A_R_D_S section for a description of possible patterns), the pathname
+     to a binary package, a filename belonging to an installed package (if --FF
+     is also given), or a URL to an ftp-available package.
 
      The following command-line options are supported:
 
@@ -38,33 +38,12 @@ DDEESSCCRRIIPPTTIIOONN
      --dd      Show the long-description field for each package.
 
      --ee _p_k_g_-_n_a_m_e
-             This option allows you to test for the presence of another (per-
-             haps prerequisite) package from a script.  If the package identi-
-             fied by _p_k_g_-_n_a_m_e is currently installed, return 0, otherwise
-             return 1.  In addition, the names of any package(s) found
-             installed are printed to stdout unless turned off using the --qq
-             option.
-
-             If the given _p_k_g_-_n_a_m_e contains a shell meta character, it will be
-             matched against all installed packages using fnmatch(3).  csh(1)
-             style {,} alternates have also been implemented in addition to
-             this.  Package version numbers can also be matched in a rela-
-             tional manner using the _>_=_, _<_=_, _> and _< operators.  For example,
-             _p_k_g___i_n_f_o _-_e _'_n_a_m_e_>_=_1_._3_' will match versions 1.3 and later of the
-             _n_a_m_e package.  The collating sequence of the various package ver-
-             sion numbers is unusual, but strives to be consistent.  The magic
-             string ``alpha'' equates to _a_l_p_h_a _v_e_r_s_i_o_n and sorts before a beta
-             version.  The magic string ``beta'' equates to _b_e_t_a _v_e_r_s_i_o_n and
-             sorts before a release candidate.  The magic string ``rc''
-             equates to _r_e_l_e_a_s_e _c_a_n_d_i_d_a_t_e and sorts before a release.  For
-             example, _n_a_m_e_-_1_._3_r_c_3 will sort before _n_a_m_e_-_1_._3 and after
-             _n_a_m_e_-_1_._2_._9 Similarly _n_a_m_e_-_1_._3_a_l_p_h_a_2 will sort before
-             _n_a_m_e_-_1_._3_b_e_t_a_1 and they both sort before _n_a_m_e_-_1_._3_r_c_1 In addition,
-             alphabetic characters sort in the same place as their numeric
-             counterparts, so that _n_a_m_e_-_1_._2_e has the same sorting value as
-             _n_a_m_e_-_1_._2_._5 The magic string ``pl'' equates to a _p_a_t_c_h _l_e_v_e_l and
-             has the same value as a dot in the dewey-decimal ordering
-             schemes.
+             This option allows you to test for the existence of a given pack-
+             age.  If the package identified by _p_k_g_-_n_a_m_e is currently
+             installed, return code is 0, otherwise 1.  The names of any pack-
+             age(s) found installed are printed to stdout unless turned off
+             using the --qq option.  _p_k_g_-_n_a_m_e can contain wildcards, see the
+             _P_A_C_K_A_G_E _W_I_L_D_C_A_R_D_S section below.
 
      --FF      Interpret any pkg-name given as filename, and translate it to a
              package name using the Package Database.  This can be used to
@@ -122,6 +101,40 @@ DDEESSCCRRIIPPTTIIOONN
 
      --vv      Turn on verbose output.
 
+TTEECCHHNNIICCAALL DDEETTAAIILLSS
+     Package info is either extracted from package files named on the command
+     line, or from already installed package information in
+     _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-_n_a_m_e_>.
+
+     A filename can be given instead of a (installed) package name to query
+     information on the package this file belongs to.  This filename is then
+     resolved to a package name using the Package Database.  For this transla-
+     tion to take place, the --FF flag must be given.  The filename must be
+     absolute, compare the output of pkg_info --aaFF.
+
+PPAACCKKAAGGEE WWIILLDDCCAARRDDSS
+     In the places where a package name/version is expected, e.g. for the --ee
+     switch, several forms can be used.  Either use a package name with or
+     without version, or specify a package wildcard that gets matched against
+     all installed packages.
+
+     Package wildcards use fnmatch(3).  In addition, csh(1) style {,} alter-
+     nates have also been implemented.  Package version numbers can also be
+     matched in a relational manner using the _>_=, _<_=, _>, and _< operators.  For
+     example, _p_k_g___i_n_f_o _-_e _'_n_a_m_e_>_=_1_._3_' will match versions 1.3 and later of the
+     _n_a_m_e package.  The collating sequence of the various package version num-
+     bers is unusual, but strives to be consistent.  The magic string
+     ``alpha'' equates to _a_l_p_h_a _v_e_r_s_i_o_n and sorts before a beta version.  The
+     magic string ``beta'' equates to _b_e_t_a _v_e_r_s_i_o_n and sorts before a release
+     candidate.  The magic string ``rc'' equates to _r_e_l_e_a_s_e _c_a_n_d_i_d_a_t_e and
+     sorts before a release.  For example, _n_a_m_e_-_1_._3_r_c_3 will sort before
+     _n_a_m_e_-_1_._3 and after _n_a_m_e_-_1_._2_._9 Similarly _n_a_m_e_-_1_._3_a_l_p_h_a_2 will sort before
+     _n_a_m_e_-_1_._3_b_e_t_a_1 and they both sort before _n_a_m_e_-_1_._3_r_c_1 In addition, alpha-
+     betic characters sort in the same place as their numeric counterparts, so
+     that _n_a_m_e_-_1_._2_e has the same sorting value as _n_a_m_e_-_1_._2_._5 The magic string
+     ``pl'' equates to a _p_a_t_c_h _l_e_v_e_l and has the same value as a dot in the
+     dewey-decimal ordering schemes.
+
 EENNVVIIRROONNMMEENNTT
      PKG_DBDIR  If the --KK flag isn't given, then PKG_DBDIR is the location of
                 the package database directory.  The default package database
@@ -146,17 +159,6 @@ EENNVVIIRROONNMMEENNTT
                 these environment variables would ever need to be used to work
                 around limited available space in the default locations.
 
-TTEECCHHNNIICCAALL DDEETTAAIILLSS
-     Package info is either extracted from package files named on the command
-     line, or from already installed package information in
-     _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-_n_a_m_e_>.
-
-     A filename can be given instead of a (installed) package name to query
-     information on the package this file belongs to.  This filename is then
-     resolved to a package name using the Package Database.  For this transla-
-     tion to take place, the --FF flag must be given.  The filename must be
-     absolute, compare the output of pkg_info --aaFF.
-
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1), pkg_create(1), pkg_delete(1), mktemp(3),
      packages(7), mtree(8)
@@ -170,4 +172,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, depends displaying,
              pkg size display etc.
 
-NetBSD 1.6                     September 2, 2003                    NetBSD 1.6
+NetBSD 1.6                      January 6, 2004                     NetBSD 1.6

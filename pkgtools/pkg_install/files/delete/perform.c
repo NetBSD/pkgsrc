@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.10 2003/10/29 23:00:28 jlam Exp $	*/
+/*	$NetBSD: perform.c,v 1.11 2004/02/07 10:37:52 grant Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.10 2003/10/29 23:00:28 jlam Exp $");
+__RCSID("$NetBSD: perform.c,v 1.11 2004/02/07 10:37:52 grant Exp $");
 #endif
 #endif
 
@@ -782,6 +782,9 @@ pkg_do(char *pkg)
 			warnx(
 		"couldn't entirely delete package `%s'\n"
 		"(perhaps the packing list is incorrectly specified?)", pkg);
+	}
+	else {   /* Fake means Verbose */
+		printf("Attempting to delete package `%s'\n", pkg);
 	}
 	if (!isemptyfile(DEPOT_FNAME)) {
 		if (Verbose)

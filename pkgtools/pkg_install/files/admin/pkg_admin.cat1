@@ -4,7 +4,8 @@ NNAAMMEE
      ppkkgg__aaddmmiinn - perform various administrative tasks to the pkg system
 
 SSYYNNOOPPSSIISS
-     ppkkgg__aaddmmiinn [--VV] [--KK _p_k_g___d_b_d_i_r] [--ss _s_f_x___p_a_t_t_e_r_n] _c_o_m_m_a_n_d [args ...]
+     ppkkgg__aaddmmiinn [--bbSSVV] [--dd _l_s_d_i_r] [--KK _p_k_g___d_b_d_i_r] [--ss _s_f_x___p_a_t_t_e_r_n] _c_o_m_m_a_n_d [args
+               ...]
 
 DDEESSCCRRIIPPTTIIOONN
      This command performs various administrative tasks around the NetBSD
@@ -27,8 +28,7 @@ OOPPTTIIOONNSS
              otherwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
 
      --SS      Set the shell glob pattern for package suffices when matching
-             package names for llssaallll and llssbbeesstt to be the null suffix.  The
-             default pattern is ".t[bg]z".
+             package names for llssaallll and llssbbeesstt to be the null suffix.
 
      --ss _s_f_x___p_a_t_t_e_r_n
              Set the shell glob pattern for package suffices when matching
@@ -47,16 +47,20 @@ OOPPTTIIOONNSS
 
      cchheecckk [_p_k_g _._._.]
              Use this command to check the files belonging to some or all of
-             the packages installed on the local machine against their MD5
-             checksum noted in their +CONTENTS files.  If no additional argu-
-             ment is given, the files of all installed packages are checked,
-             else only the named packages will be checked (wildcards can be
-             used here, see pkg_info(1)).
+             the packages installed on the local machine against the checksum
+             which was recorded in the +CONTENTS files at package installation
+             time.  Symbolic links also have their integrity checked against
+             the recorded value at package installation time.  If no addi-
+             tional argument is given, the files of all installed packages are
+             checked, else only the named packages will be checked (wildcards
+             can be used here, see pkg_info(1)).
 
-             The packages' +CONTENTS files will be parsed and the MD5 checksum
+             The packages' +CONTENTS files will be parsed and the checksum
              will be checked for every file found.  A warning message is
              printed if the expected checksum differs from the checksum of the
-             file on disk.
+             file on disk.  Symbolic links are also checked, ensuring that the
+             targets on disk are the same as the contents recorded at package
+             installation time.
 
      ddeelleettee _p_k_g _._._.
              For each listed package, remove all file entries in the package
@@ -133,4 +137,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-NetBSD 1.6                     September 8, 2003                    NetBSD 1.6
+NetBSD 1.6                     January 26, 2004                     NetBSD 1.6
