@@ -1,5 +1,5 @@
-$NetBSD: md5,v 1.3 2000/05/14 23:35:27 jwise Exp $
+$NetBSD: md5,v 1.4 2000/12/13 03:49:30 jwise Exp $
 
-MD5 (jakarta-3.1/jakarta-tomcat.tar.gz) = 32025cd19b28c416532eb17e7cda1218
-MD5 (jakarta-3.1/jakarta-tools.tar.gz) = c9a7d3860b862e8b66200d2cc573ba0b
-MD5 (jakarta-3.1/jakarta-ant.tar.gz) = f3c6f2df40562b36eed067a8b6580526
+MD5 (jakarta-3.1.1/jakarta-tomcat-3.1.1-src.tar.gz) = 1c1091acc6fc3116d0ffbc5d8bac34de
+MD5 (jakarta-3.1.1/jakarta-tools.tar.gz) = c9a7d3860b862e8b66200d2cc573ba0b
+MD5 (jakarta-3.1.1/jakarta-ant.tar.gz) = f3c6f2df40562b36eed067a8b6580526
