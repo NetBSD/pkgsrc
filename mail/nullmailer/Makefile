@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/02/17 02:12:44 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2003/02/17 05:20:20 salo Exp $
 
 DISTNAME=		nullmailer-1.00RC7
+PKGNAME=		${DISTNAME:S/0RC7/.0.7/}
 CATEGORIES=		mail
 MASTER_SITES=		http://untroubled.org/nullmailer/
 
@@ -8,8 +9,10 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://untroubled.org/nullmailer/
 COMMENT=		Simple relay-only mail transport agent
 
+USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR} --localstatedir=/var/spool
+CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=/var/spool
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/libexec/nullmailer
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/nullmailer
 
@@ -28,23 +31,22 @@ MAKE_ENV+=		NULLMAILER_USER=${NULLMAILER_USER}
 PLIST_SUBST+=		NULLMAILER_GROUP=${NULLMAILER_GROUP}		\
 			NULLMAILER_USER=${NULLMAILER_USER}
 
-pre-configure:
-	for f in ${WRKSRC}/doc/nullmailer-send.8; do			\
-		${SED} -e 's:@PREFIX@:${PREFIX}:g'			\
-			-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:g'	\
-		$$f > $$f.tmp && ${MV} -f $$f.tmp $$f;			\
-	done
+RCD_SCRIPTS=			nullmailer
+RCD_SCRIPT_SRC.nullmailer=	${FILESDIR}/nullmailer
 
 post-configure:
-	${SED} -e 's:@PREFIX@:${PREFIX}:g'			\
-		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:g'	\
-		${FILESDIR}/nullmailer > ${WRKDIR}/nullmailer
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf	>	\
+		${WRKDIR}/mailer.conf
+	@${MV} ${WRKSRC}/doc/nullmailer-send.8 ${WRKDIR}/nullmailer-send.8
+	@${SED} ${FILES_SUBST_SED} ${WRKDIR}/nullmailer-send.8	>	\
+		${WRKSRC}/doc/nullmailer-send.8
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nullmailer
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/nullmailer
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS COPYING ChangeLog	\
 		HOWTO NEWS README TODO ${PREFIX}/share/doc/nullmailer
-	${INSTALL_SCRIPT} ${WRKDIR}/nullmailer ${PKG_SYSCONFDIR}/rc.d
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf				\
+		${PREFIX}/share/examples/nullmailer/
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
