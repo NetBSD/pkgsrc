@@ -1,4 +1,4 @@
-# $NetBSD: buffer,v 1.6 2004/01/29 07:19:00 jlam Exp $
+# $NetBSD: buffer,v 1.7 2004/01/30 13:44:52 jlam Exp $
 #
 # Push arguments onto the argument stack and shift the arguments.  The
 # next argument checked by the cache and logic files is take from the
@@ -12,17 +12,30 @@ if $test -z "$depth"; then
 	#
 	. $marshall
 	#
-	# Fill the buffers from $arg.
+	# Push the argument onto the stack.
 	#
+	depth=${depth}0
+	eval stack${depth}="\$arg"
+fi
+
+argok=no
+while $test "$argok" = "no"; do
+	#
+	# Take $arg from the top of the stack.
+	#
+	eval arg="\$stack${depth}"
+	depth=${depth%0}
+	argok=yes
+
 	case $arg in
+	#
+	# Change "-<rpath_flag>/path1:/path2" into
+	# "-<rpath_flag>/path1 -<rpath_flag>/path2" so that
+	# they can be checked correctly in the cache and logic
+	# files.
+	#
 	-R*:*|-Wl,-R*:*|-Wl,-rpath,*:*|-Wl,-rpath-link,*:*|\
 	-Wl,--rpath,*:*|-Wl,--rpath-link,*:*)
-		#
-		# Change "-<rpath_flag>/path1:/path2" into
-		# "-<rpath_flag>/path1 -<rpath_flag>/path2" so that
-		# they can be checked correctly in the cache and logic
-		# files.
-		#
 		case $arg in
 		-R*)			R="-R" ;;
 		-Wl,-R*)		R="-Wl,-R" ;;
@@ -32,27 +45,17 @@ if $test -z "$depth"; then
 		-Wl,--rpath-link,*)	R="-Wl,--rpath-link," ;;
 		esac
 		arg=`$echo "X$arg" | $Xsed -e "s|^"$R"||g"`
-		allargs="$@"
 		save_IFS="${IFS}"; IFS=":"
-		set -- $arg
-		while $test $# -gt 0; do
-			depth=${depth}0
-			eval stack${depth}="\$R\$1"
-			shift
+		revarg=
+		for dir in $arg; do
+			revarg="$dir $revarg"
 		done
 		IFS="${save_IFS}"
-		if $test -n "$allargs"; then
-			set -- $allargs
-		fi
-		;;
-	*)
-		depth=${depth}0
-		eval stack${depth}="\$arg"
+		for dir in $revarg; do
+			depth=${depth}0
+			eval stack${depth}="\$R\$dir"
+		done
+		argok=no
 		;;
 	esac
-fi
-#
-# Re-fetch $arg from the top of the stack.
-#
-eval arg="\$stack${depth}"
-depth=${depth%0}
+done
