@@ -1,3 +1,4 @@
+$NetBSD: patch-bv,v 1.2 1999/12/28 05:08:11 wiz Exp $
 diff -ur config/configure.in config/configure.in
 --- config/configure.in	Wed Nov  3 12:15:27 1999
 +++ config/configure.in	Wed Nov  3 19:23:27 1999
