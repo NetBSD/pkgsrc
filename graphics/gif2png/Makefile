@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2000/03/21 22:40:52 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/04/01 00:29:07 wiz Exp $
 #
 
-DISTNAME=	gif2png-2.3.0
+DISTNAME=	gif2png-2.3.2
 CATEGORIES=	graphics converters
 MASTER_SITES=	http://www.tuxedo.org/~esr/gif2png/ \
 		${MASTER_SITE_SUNSITE:=apps/graphics/convert/}
