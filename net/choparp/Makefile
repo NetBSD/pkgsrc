@@ -1,23 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2002/07/30 12:41:25 wiz Exp $
-# New ports collection makefile for:	choparp
-# Version required:	971007
-# Date created:		7 October 1997
-# Whom:			itojun@itojun.org
-#
-# FreeBSD: ports/net/choparp/Makefile,v 1.3 1999/08/30 14:22:16 peter Exp 
+# $NetBSD: Makefile,v 1.5 2002/11/09 02:23:22 itojun Exp $
 #
 
-DISTNAME=	choparp-971007
-PKGREVISION=	1
+DISTNAME=	choparp-20021107
 CATEGORIES=	net
-MASTER_SITES=	http://delegate.uec.ac.jp:8081/club/mma/~tree/soft/choparp/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=choparp/}
 
 MAINTAINER=	dbj@netbsd.org
-HOMEPAGE=	http://delegate.uec.ac.jp:8081/club/mma/~tree/soft/\#CHOPARP
+HOMEPAGE=	http://choparp.sf.net/
 COMMENT=	Simple proxy arp daemon
 
 MANCOMPRESSED_IF_MANZ=	yes
-
-WRKSRC=		${WRKDIR}/choparp
 
 .include "../../mk/bsd.pkg.mk"
