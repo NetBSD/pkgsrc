@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/09/02 17:27:16 taca Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/02 17:03:11 taca Exp $
 #
 
-DISTNAME=	ftpproxy-1.2.1
+DISTNAME=	ftpproxy-1.2.2
 CATEGORIES=	net
 MASTER_SITES=	http://www.ftpproxy.org/download/ \
 		http://www.ftpproxy.org/download/older_releases/
