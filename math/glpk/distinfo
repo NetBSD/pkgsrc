@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 12:06:55 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/03/30 15:23:53 adam Exp $
 
 SHA1 (glpk-4.8.tar.gz) = f45f7e0f8b38de7531aa84458877083a4094e0e8
 RMD160 (glpk-4.8.tar.gz) = 505921e0702996fec843e3704c33f07d4bfab869
 Size (glpk-4.8.tar.gz) = 972875 bytes
+SHA1 (patch-aa) = 2a33fe1d803ff7b9cd8943d08c5c37e1582a2532
+SHA1 (patch-ab) = a4b382b3d27dee710fb3127bf141a7c429662ab3
