@@ -1,12 +1,43 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:20 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/08/20 23:58:14 soren Exp $
+bin/simh-altair
+bin/simh-altairz80
+bin/simh-eclipse
+bin/simh-gri
+bin/simh-h316
+bin/simh-hp2100
 bin/simh-i1401
 bin/simh-nova
 bin/simh-pdp1
+bin/simh-pdp10
+bin/simh-pdp11
+bin/simh-pdp15
 bin/simh-pdp4
 bin/simh-pdp7
 bin/simh-pdp8
 bin/simh-pdp9
-bin/simh-pdp11
-bin/simh-pdp15
+bin/simh-s3
+bin/simh-vax
+share/simh/ka655.bin
+@dirrm share/simh
+share/doc/simh/0readme29.txt
+share/doc/simh/altair.txt
+share/doc/simh/altairZ80.txt
+share/doc/simh/eclipse.txt
+share/doc/simh/gri_doc.txt
+share/doc/simh/h316_doc.txt
+share/doc/simh/haltguide.txt
+share/doc/simh/hp2100_doc.txt
+share/doc/simh/i1401_doc.txt
+share/doc/simh/nova_doc.txt
+share/doc/simh/pdp10_doc.txt
+share/doc/simh/pdp11_doc.txt
+share/doc/simh/pdp18b_doc.txt
+share/doc/simh/pdp1_doc.txt
+share/doc/simh/pdp8_doc.txt
+share/doc/simh/readme1130.txt
+share/doc/simh/readme_s3.txt
 share/doc/simh/simh_doc.txt
+share/doc/simh/simh_swre.txt
+share/doc/simh/system3.txt
+share/doc/simh/vax_doc.txt
 @dirrm share/doc/simh
