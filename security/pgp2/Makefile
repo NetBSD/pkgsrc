@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/04/05 17:08:55 mycroft Exp $
+# $NetBSD: Makefile,v 1.17 1999/04/05 17:14:13 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -65,7 +65,7 @@ pre-fetch:
 .endif
 
 post-extract:
-	cd ${WRKDIR} && /usr/bin/tar -xf pgp263ii.tar && ${RM} -f pgp263ii.tar
+	cd ${WRKDIR} && ${GTAR} xf pgp263ii.tar && ${RM} -f pgp263ii.tar
 
 do-build:
 	cd ${WRKSRC} && ${MAKE} all CC=${CC} LD=${CC} OBJS_EXT="${OBJS_EXT}" \
