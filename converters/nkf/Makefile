@@ -1,21 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:00:35 seb Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/26 05:08:13 cjs Exp $
 
-DISTNAME=	nkf-1.7
+DISTNAME=	nkf204
+PKGNAME=	nkf-2.04
 CATEGORIES=	japanese converters
-MASTER_SITES=	ftp://ftp.sra.co.jp/pub/cmd/nkf/
+MASTER_SITES=	http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/
 
-PATCH_SITES=	http://www.rs.civil.tohoku.ac.jp/~ito/ws/
-PATCHFILES=	nkf.patch.txt
-
-MAINTAINER=	kay@kaynet.or.jp
-COMMENT=	Network Kanji code conversion Filter
+MAINTAINER=	cjs@NetBSD.org
+HOMEPAGE=	http://www.jazzdisco.org/bsdi/software/nkf/
+COMMENT=	Convert between various Japanese character encodings
 
 ALL_TARGET=	nkf
-PATCH_DIST_ARGS+= -R -d ${WRKSRC}
-
-post-extract:
-	@cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/nkf.post-extract
-	@${RM} -rf ${WRKSRC}/NKF
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nkf ${PREFIX}/bin
