@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/01/24 11:58:16 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1999/01/24 12:02:17 frueauf Exp $
 #
 
 DISTNAME=		tgif-4.0.9
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://bourbon.cs.umd.edu/pub/tgif/ \
 
 MAINTAINER=		mcmahill@alum.mit.edu
 HOMEPAGE=		http://bourbon.cs.umd.edu:8001/tgif/tgif.html
+
+CONFLICTS=		tgif-*
 
 USE_IMAKE=		yes
 
