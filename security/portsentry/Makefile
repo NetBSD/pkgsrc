@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 17:20:28 martti Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/30 05:47:10 wiz Exp $
 #
 
 DISTNAME=	portsentry-1.0
 PKGREVISION=	2
 CATEGORIES=	security
-MASTER_SITES=	http://www.psionic.com/tools/
+MASTER_SITES=	# was: http://www.psionic.com/tools/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.psionic.com/abacus/portsentry/
+#HOMEPAGE=	http://www.psionic.com/abacus/portsentry/
 COMMENT=	Detects and respond to port scans against a target host in real-time
 
 LICENSE=	portsentry-license
