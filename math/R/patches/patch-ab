@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.14 2002/12/10 11:58:11 markd Exp $
+$NetBSD: patch-ab,v 1.15 2003/12/03 12:05:18 markd Exp $
 
---- aclocal.m4.orig	Mon Oct 21 22:28:00 2002
+--- aclocal.m4.orig	2003-09-27 18:08:39.000000000 +1200
 +++ aclocal.m4
-@@ -522,6 +522,9 @@
+@@ -572,6 +572,7 @@ ${F77} ${FFLAGS} -c conftestf.f 1>&AS_ME
+ #else
+ # define F77_SYMBOL(x)   x
+ #endif
++int MAIN__ () { return 0; }
+ int main () {
+   exit(0);
+ }
+@@ -633,6 +634,9 @@ ${F77} ${FFLAGS} -c conftestf.f 1>&AS_ME
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -12,13 +20,13 @@ $NetBSD: patch-ab,v 1.14 2002/12/10 11:58:11 markd Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -602,6 +605,9 @@
- } Rcomplex;
+@@ -714,6 +718,9 @@ typedef struct {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
-+
+ 
 +int MAIN_ () { return 0; }
 +int MAIN__ () { return 0; }
- 
++
  int main () {
      Rcomplex z[3];
+     
