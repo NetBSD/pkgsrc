@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/01/16 11:52:45 agc Exp $
+$NetBSD: patch-aa,v 1.3 2002/01/16 12:32:35 agc Exp $
 
 Basic NetBSD and platform descriptions
 
@@ -33,9 +33,9 @@ Basic NetBSD and platform descriptions
 +platform-name:			ppc-netbsd-gcc
 +inherit-from:			gcc netbsd ppc
 +default-features:               compiled-for-netbsd compiled-for-ppc C-compiler-is-GCC
-+default-c-compiler-flags:	-I. -I%s -O -fomit-frame-pointer -no-cpp-precomp -Wno-long-double
-+default-c-compiler-debug-flags:	-I. -I%s -g -O -fno-inline-functions -no-cpp-precomp -Wno-long-double
-+default-c-compiler-profile-flags:	-I. -I%s -pg -g -O -fno-inline-functions -no-cpp-precomp -Wno-long-double
++default-c-compiler-flags:	-I. -I%s -O -fomit-frame-pointer
++default-c-compiler-debug-flags:	-I. -I%s -g -O -fno-inline-functions
++default-c-compiler-profile-flags:	-I. -I%s -pg -g -O -fno-inline-functions
 +
 +// This is untested. 
 +platform-name:			sparc-netbsd-gcc
