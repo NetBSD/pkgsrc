@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/16 10:29:01 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/30 03:09:34 rh Exp $
 #
 
 DISTNAME=		librsvg-2.0.1
@@ -16,6 +16,7 @@ USE_X11=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/librsvg-2.0.pc.in
 
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"

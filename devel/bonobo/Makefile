@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/10/19 10:54:44 rh Exp $
+# $NetBSD: Makefile,v 1.31 2002/10/30 03:09:28 rh Exp $
 #
 
 DISTNAME=		bonobo-1.0.18
@@ -24,6 +24,7 @@ CONFIGURE_ENV+=		X11BASE="${X11BASE}"
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/libefs/libefs.pc.in
 
 post-install:
 	-@${RMDIR} ${PREFIX}/share/libefs/html/libefs
