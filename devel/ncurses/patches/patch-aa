@@ -1,5 +1,29 @@
+--- c++/Makefile.in.orig	Wed Nov 26 13:39:11 1997
++++ c++/Makefile.in	Wed Nov 26 13:39:59 1997
+@@ -50,6 +50,8 @@
+ LINK		= $(CXX)
+ LDFLAGS		= @LDFLAGS@ @LD_MODEL@ @LIBS@ @LOCAL_LDFLAGS@
+ 
++ABI_VERSION	= @nc_cv_abi_version@
++
+ all: demo
+ 
+ OBJS_DEMO = \
+--- test/Makefile.in.orig	Sat Nov 16 22:05:54 1996
++++ test/Makefile.in	Fri Jan  9 12:13:01 1998
+@@ -39,7 +39,9 @@
+ 
+ CPPFLAGS	= @CPPFLAGS@ -DHAVE_CONFIG_H -I$(srcdir)
+ 
+-CCFLAGS		= $(CFLAGS) $(CPPFLAGS) $(CFLAGS_@DFT_UPR_MODEL@)
++CCFLAGS		= $(CFLAGS) $(CPPFLAGS) $(CFLAGS_NORMAL)
++
++ABI_VERSION	= @nc_cv_abi_version@
+ 
+ LOCAL_LIBS	= @TEST_DEPS@
+ 
 --- progs/Makefile.in.orig	Sat Jun 15 21:40:53 1996
-+++ progs/Makefile.in	Wed Nov 26 12:18:25 1997
++++ progs/Makefile.in	Fri Jan  9 12:41:20 1998
 @@ -79,12 +79,12 @@
  AUTO_SRC = \
  	termsort.c
@@ -31,25 +55,75 @@
  
  $(INSTALL_PREFIX)$(bindir) :
  	$(srcdir)/../mkinstalldirs $@
---- test/Makefile.in.orig	Wed Nov 26 13:02:17 1997
-+++ test/Makefile.in	Wed Nov 26 13:04:53 1997
-@@ -41,6 +41,8 @@
+@@ -120,40 +114,40 @@
+ 	$(MODEL)/dump_entry.o \
+ 	$(LIB_CURSES)
+ tic: $(DEPS_TIC)
+-	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_TIC) $(LDFLAGS) -o $@
++	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_TIC) $(LDFLAGS) -o $@
  
- CCFLAGS		= $(CFLAGS) $(CPPFLAGS) $(CFLAGS_@DFT_UPR_MODEL@)
+ DEPS_TOE = \
+ 	$(MODEL)/toe.o \
+ 	$(MODEL)/dump_entry.o \
+ 	$(LIB_CURSES)
+ toe: $(DEPS_TOE)
+-	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_TOE) $(LDFLAGS) -o $@
++	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_TOE) $(LDFLAGS) -o $@
  
-+ABI_VERSION	= @nc_cv_abi_version@
-+
- LOCAL_LIBS	= @TEST_DEPS@
+ DEPS_CLEAR = \
+ 	$(MODEL)/clear.o \
+ 	$(LIB_CURSES)
+ clear: $(DEPS_CLEAR)
+-	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_CLEAR) $(LDFLAGS) -o $@
++	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_CLEAR) $(LDFLAGS) -o $@
  
- LINK		= $(CC)
---- c++/Makefile.in.orig	Wed Nov 26 13:39:11 1997
-+++ c++/Makefile.in	Wed Nov 26 13:39:59 1997
-@@ -50,6 +50,8 @@
- LINK		= $(CXX)
- LDFLAGS		= @LDFLAGS@ @LD_MODEL@ @LIBS@ @LOCAL_LDFLAGS@
+ DEPS_TPUT = \
+ 	$(MODEL)/tput.o \
+ 	$(LIB_CURSES)
+ tput: $(DEPS_TPUT)
+-	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_TPUT) $(LDFLAGS) -o $@
++	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_TPUT) $(LDFLAGS) -o $@
  
-+ABI_VERSION	= @nc_cv_abi_version@
-+
- all: demo
+ DEPS_INFOCMP = \
+ 	$(MODEL)/infocmp.o \
+ 	$(MODEL)/dump_entry.o \
+ 	$(LIB_CURSES)
+ infocmp: $(DEPS_INFOCMP)
+-	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_INFOCMP) $(LDFLAGS) -o $@
++	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_INFOCMP) $(LDFLAGS) -o $@
  
- OBJS_DEMO = \
+ DEPS_TSET = \
+ 	$(MODEL)/tset.o \
+ 	$(MODEL)/dump_entry.o \
+ 	$(LIB_CURSES)
+ tset: $(DEPS_TSET)
+-	@ECHO_LINK@ $(LINK) $(CFLAGS_DEFAULT) $(DEPS_TSET) $(LDFLAGS) -o $@
++	@ECHO_LINK@ $(LINK) $(CFLAGS_NORMAL) $(DEPS_TSET) $(LDFLAGS) -o $@
+ 
+ termsort.c: $(srcdir)/MKtermsort.sh
+ 	sh -c "$(srcdir)/MKtermsort.sh $(AWK) $(srcdir)/../include/Caps" >$@
+--- configure.orig	Sun Dec  1 02:08:35 1996
++++ configure	Fri Jan  9 13:51:38 1998
+@@ -1283,12 +1283,7 @@
+     do
+        nc_test=`echo $nc_name | sed -e 's/*//'`
+        if test "x$nc_test" = "x$nc_name" ; then
+-	  case "$nc_name" in
+-	  *.gz) nc_form=gzip;     nc_name=`basename $nc_name .gz`;;
+-	  *.Z)  nc_form=compress; nc_name=`basename $nc_name .Z`;;
+-	  *.0)	nc_form=BSDI; nc_format=yes;;
+-	  *)    nc_form=cat;;
+-	  esac
++	  nc_form=cat
+ 	  break
+        fi
+     done
+@@ -1392,7 +1387,7 @@
+ BSDI)
+ cat >>man/edit_man.sh <<NC_EOF
+ 	# BSDI installs only .0 suffixes in the cat directories
+-	target="\`echo \$target|sed -e 's/\.[1-9]\+.\?/.0/'\`"
++	target="\`echo \$target|sed -e 's/\.[1-9]\(\.gz|\.Z\)\{0,1\}/.0\1/'\`"
+ NC_EOF
+   ;;
+ esac
