@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/15 20:27:18 tron Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/16 07:45:32 tron Exp $
 
 DISTNAME=	libspf_alt-0.4.0
 PKGREVISION=	1
@@ -15,5 +15,6 @@ USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-bind=${BUILDLINK_PREFIX.bind} --prefix=${PREFIX}
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../net/bind9/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
