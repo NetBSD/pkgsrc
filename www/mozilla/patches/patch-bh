@@ -1,8 +1,8 @@
-$NetBSD: patch-bh,v 1.3 2002/05/14 00:16:38 taya Exp $
+$NetBSD: patch-bh,v 1.4 2002/06/06 02:05:58 taya Exp $
 
 diff -ru ../Orig/mozilla/security/nss/lib/ssl/sslmutex.c ./security/nss/lib/ssl/sslmutex.c
 --- ../Orig/mozilla/security/nss/lib/ssl/sslmutex.c	Wed Apr 10 12:29:16 2002
-+++ ./security/nss/lib/ssl/sslmutex.c	Sat May 11 20:14:13 2002
++++ ./security/nss/lib/ssl/sslmutex.c	Thu Jun  6 09:13:42 2002
 @@ -83,7 +83,7 @@
      return SECSuccess;
  }
