@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2003/05/14 20:09:13 salo Exp $
+$NetBSD: distinfo,v 1.9 2003/12/02 01:55:48 jmcneill Exp $
 
 SHA1 (ircii-pana-1.0c19.tar.gz) = 4821ebbd3f55ec2cfc2a20e2109e34ea45b3f144
 Size (ircii-pana-1.0c19.tar.gz) = 2533621 bytes
@@ -14,3 +14,4 @@ SHA1 (patch-ai) = 7ebe26aaa82a993f5fa40ec5f74ed87769abe2fd
 SHA1 (patch-aj) = 156be839ab2dc5abebb918398f64c62373f3561e
 SHA1 (patch-ak) = 4e70e8d42b104b91849e79930fabe8c5a43d10f5
 SHA1 (patch-al) = dd501c530af801bece9f035b4355d1ecaaa7658a
+SHA1 (patch-am) = 6ed1f089f46ca1fb95192e14c1f26f3a7e6a9a98
