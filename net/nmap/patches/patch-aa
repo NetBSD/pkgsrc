@@ -1,43 +1,33 @@
-$NetBSD: patch-aa,v 1.8 2002/08/03 12:23:59 hubertf Exp $
+$NetBSD: patch-aa,v 1.9 2003/03/22 04:07:11 salo Exp $
 
---- Makefile.in.orig	Sun Jul 28 05:48:15 2002
-+++ Makefile.in
-@@ -14,8 +14,8 @@
- NBASEDIR=@NBASEDIR@
+--- Makefile.in.orig	2003-03-19 01:53:36.000000000 +0100
++++ Makefile.in	2003-03-22 04:24:12.000000000 +0100
+@@ -15,8 +15,7 @@
  CC = @CC@
+ CXX = @CXX@
  CCOPT = 
 -LIBPCAPDIR = @libpcapdir@
 -INCLS = -I$(LIBPCAPDIR) 
-+#LIBPCAPDIR = @libpcapdir@
 +INCLS = -I.
  DEFS = @DEFS@ -DNMAP_VERSION=\"$(NMAP_VERSION)\" -DNMAP_NAME=\"$(NMAP_NAME)\" -DNMAP_URL=\"$(NMAP_URL)\" -DNMAP_PLATFORM=\"$(NMAP_PLATFORM)\" -DNMAPDATADIR=\"$(nmapdatadir)\"
- CFLAGS = -g @CFLAGS@ $(CCOPT) $(DEFS) $(INCLS)
- # CFLAGS = -g -Wall $(DEFS) $(INCLS)
-@@ -37,15 +37,15 @@
- 
- DEPS = nmap.h nmap_error.h targets.h idle_scan.h osscan.h output.h scan_engine.h timing.h tcpip.h utils.h global_structures.h charpool.h services.h protocols.h nmap_rpc.h portlist.h
- 
--all: $(TARGET) nmapfe/nmapfe
-+all: $(TARGET) #HF#nmapfe/nmapfe
- 
- $(TARGET): $(DEPS) @PCAP_DEPENDS@ $(NBASEDIR)/libnbase.a $(OBJS)
- 	@echo Compiling nmap
+ # For mtrace debugging -- see MTRACE define in main.cc for instructions
+ # Should only be enabled during debugging and not in any real release.
+@@ -54,9 +53,6 @@
  	rm -f $@
- 	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+ 	$(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
  
 -$(LIBPCAPDIR)/libpcap.a: $(LIBPCAPDIR)/Makefile
 -	@echo Compiling libpcap; cd $(LIBPCAPDIR); $(MAKE)
-+#$(LIBPCAPDIR)/libpcap.a: $(LIBPCAPDIR)/Makefile
-+#	@echo Compiling libpcap; cd $(LIBPCAPDIR); $(MAKE)
- 
+-
  $(NBASEDIR)/libnbase.a: $(NBASEDIR)/Makefile
  	@echo Compiling libnbase;
-@@ -174,7 +174,7 @@
+ 	cd $(NBASEDIR); $(MAKE)
+@@ -200,7 +196,7 @@
  	$(MAKEDEPEND) $(INCLS) -s "# DO NOT DELETE" -- $(DEFS) -- $(SRCS)
  
- install: $(TARGET)
+ install-nmap: $(TARGET)
 -	$(SHTOOL) mkdir -f -p -m 755 $(bindir) $(mandir)/man1 $(nmapdatadir) $(deskdir)
 +	$(SHTOOL) mkdir -f -p -m 755 $(bindir) $(mandir)/man1 $(nmapdatadir)
  	$(INSTALL) -c -m 755 nmap $(bindir)/nmap
- 	@echo "If the next command fails -- you cannot use the X front end"
- 	-test -f nmapfe/nmapfe && $(INSTALL) -c -m 755 nmapfe/nmapfe $(bindir)/nmapfe && $(SHTOOL) mkln -f -s $(bindir)/nmapfe $(bindir)/xnmap && $(INSTALL) -c -m 644 nmapfe.desktop $(deskdir)/nmapfe.desktop && $(INSTALL) -c -m 644 docs/nmapfe.1 $(mandir)/man1/nmapfe.1 && $(INSTALL) -c -m 644 docs/xnmap.1 $(mandir)/man1/xnmap.1
+ 	$(INSTALL) -c -m 644 docs/$(TARGET).1 $(mandir)/man1/$(TARGET).1
+ 	$(INSTALL) -c -m 644 nmap-os-fingerprints  $(nmapdatadir)/nmap-os-fingerprints
