@@ -1,13 +1,13 @@
-$NetBSD: patch-ah,v 1.1 2002/02/02 11:59:09 jdolecek Exp $
+$NetBSD: patch-ah,v 1.2 2002/02/19 06:25:58 jmc Exp $
 
---- src/joystick.h.orig	Sat Feb  2 12:01:40 2002
-+++ src/joystick.h	Sat Feb  2 12:40:04 2002
+--- src/joystick.h.orig	Tue Dec  5 00:10:55 2000
++++ src/joystick.h	Tue Feb 19 05:47:49 2002
 @@ -20,7 +20,7 @@
  #define JOYSTICK_OFF		0
  #define	JOYSTICK_AVAILABLE	1
  
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || (defined(__NetBSD__) && defined(HAVE_JOYSTICK))
  #include <machine/joystick.h>
  #define DEV_JOYSTICK_0		"/dev/joy0"
  #define DEV_JOYSTICK_1		"/dev/joy1"
