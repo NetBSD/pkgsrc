@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.tls,v 1.5 2004/08/07 16:56:53 jlam Exp $
-libexec/postfix/tlsmgr
-man/man8/tlsmgr.8
