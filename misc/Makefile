@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2001/04/05 13:15:46 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2001/04/16 23:20:39 zuntum Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -44,6 +44,7 @@ SUBDIR+=	kdeutils
 SUBDIR+=	kdeutils2
 SUBDIR+=	koffice
 SUBDIR+=	kp
+SUBDIR+=	ktail
 SUBDIR+=	less
 SUBDIR+=	libutf
 SUBDIR+=	lile
