@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/02/13 15:29:15 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/15 15:55:25 minskim Exp $
 #
 
 DISTNAME=	awstats-6.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://awstats.sourceforge.net/files/
 EXTRACT_SUFX=	.tgz
