@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.4 2000/05/17 03:43:49 fredb Exp $
+$NetBSD: md5,v 1.5 2000/07/03 16:49:20 fredb Exp $
 
 MD5 (mgetty1.1.21-Jul24.tar.gz) = dce35cf36bdc6b87d3b931a644f0fc0e
-MD5 (mgetty-1.1.21-to-current.bz2) = 5ea32f4cbee7272871d9b1bdd3a86e16
+MD5 (mgetty-1.1.21-to-current.bz2) = b5e7b4da9bbd33a6cbbb7fae20e11a17
