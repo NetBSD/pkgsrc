@@ -1,18 +1,21 @@
-$NetBSD: patch-ae,v 1.3 1998/08/07 11:13:53 agc Exp $
+$NetBSD: patch-ae,v 1.4 2000/02/24 23:04:07 tron Exp $
 
 --- builtins/enable.def.orig	Fri Jul 18 15:55:00 1997
 +++ builtins/enable.def	Tue Aug  4 21:18:05 1998
-@@ -290,9 +290,10 @@
+@@ -290,9 +290,16 @@
        name = list->word->word;
  
        size = strlen (name);
--      struct_name = xmalloc (size + 8);
--      strcpy (struct_name, name);
--      strcpy (struct_name + size, "_struct");
++#ifdef __ELF__
+       struct_name = xmalloc (size + 8);
+       strcpy (struct_name, name);
+       strcpy (struct_name + size, "_struct");
++#else
 +      struct_name = xmalloc (size + 9);
 +      *struct_name = '_';
 +      strcpy (struct_name + 1, name);
 +      strcpy (struct_name + size + 1, "_struct");
++#endif
  
        b = (struct builtin *)dlsym (handle, struct_name);
        if (b == 0)
