@@ -1,23 +1,37 @@
-*** include/u.h~	Fri Jul 21 15:01:18 1995
---- include/u.h	Fri Jul 21 16:47:00 1995
-***************
-*** 46,53 ****
-  #define	NOFIFO			/* turn off exstart in samterm/unix.c */
-  #endif	/* UMIPS */
-  
-! #ifdef	SUNOS
-  typedef	unsigned short	ushort;
-  typedef unsigned long	ulong;
-  extern	char *strerror(int);
-  extern	void *memmove(void*, const void*, size_t);
---- 46,55 ----
-  #define	NOFIFO			/* turn off exstart in samterm/unix.c */
-  #endif	/* UMIPS */
-  
-! #if defined(SUNOS)
-! #ifndef __FreeBSD__
-  typedef	unsigned short	ushort;
-+ #endif
-  typedef unsigned long	ulong;
-  extern	char *strerror(int);
-  extern	void *memmove(void*, const void*, size_t);
+--- include/u.h.orig	Mon Sep 29 15:06:18 1997
++++ include/u.h	Mon Sep 29 17:03:25 1997
+@@ -2,6 +2,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <setjmp.h>
+ #include <stdio.h>
+ #include <unistd.h>
+@@ -46,9 +47,14 @@
+ #define	NOFIFO			/* turn off exstart in samterm/unix.c */
+ #endif	/* UMIPS */
+ 
+-#ifdef	SUNOS
++#if defined(SUNOS)
++#if !(defined(BSD) && BSD >= 199306)
+ typedef	unsigned short	ushort;
++#endif
++#ifndef __NetBSD__
++/* from the original FreeBSD port, it would seem they don't have this - agc */
+ typedef unsigned long	ulong;
++#endif
+ extern	char *strerror(int);
+ extern	void *memmove(void*, const void*, size_t);
+ extern	void *memcpy(void*, const void*, size_t);
+@@ -102,7 +108,10 @@
+ #endif	/* PTX */
+ 
+ #ifdef	BSDi
++/* The FreeBSD port seems to imply that this isn't a problem - agc */
++#ifndef __NetBSD__
+ typedef unsigned long   ulong;
++#endif /* !__NetBSD__ */
+ #endif	/* BSDi */
+ 
+ #ifdef	v10
