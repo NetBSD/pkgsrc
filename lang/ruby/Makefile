@@ -1,31 +1,39 @@
-# $NetBSD: Makefile,v 1.29 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.30 2004/11/27 15:02:10 taca Exp $
 # FreeBSD: ports/lang/ruby/Makefile,v 1.40 2001/01/18 19:53:38 knu Exp
 
 DISTNAME=	ruby-${RUBY_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
-COMMENT=	Ruby, object-oriented interpreted scripting language
+COMMENT=	Ruby, object-oriented interpreted programming language
 
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}base>=${RUBY_VERSION}:../../lang/${RUBY_PKGNAMEPREFIX}base
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}digest>=${RUBY_VERSION}:../../security/ruby-digest
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}readline>=${RUBY_VERSION}:../../devel/${RUBY_PKGNAMEPREFIX}readline
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}tcltklib>=${RUBY_VERSION}:../../x11/ruby-tcltklib
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}tk>=${RUBY_VERSION}:../../x11/${RUBY_PKGNAMEPREFIX}tk
+NO_CHECKSUM=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+NO_WRAPPER=	yes
+PLIST_SRC=	${WRKDIR}/PLIST
 
-RUBY_VER=	1.6
+.include "../../lang/ruby/rubyversion.mk"
 
-NO_CHECKSUM=	# defined
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
+DEPENDS+= 	${RUBY_PKGPREFIX}>=${RUBY_VERSION}:../${RUBY_PKGPREFIX}
+
+RUBY_COMMANDS=	irb ruby
+.if ${RUBY_VER} >= 18
+RUBY_COMMANDS+=	erb rdoc ri testrb
+.endif
 
 do-install:
-	@${ECHO_MSG} This is only a meta package.
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+.if ${RUBY_NAME} != "ruby"
+.for file in ${RUBY_COMMANDS}
+	${LN} -sf ${file}${RUBY_VER} ${LOCALBASE}/bin/${file}
+	${ECHO} bin/${file} >> ${PLIST_SRC}
+.endfor
+	${LN} -sf ${RUBY_NAME}.1 ${PREFIX}/man/man1/ruby.1
+	${ECHO} man/man1/ruby.1 >> ${PLIST_SRC}
+.endif
 
-.include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
