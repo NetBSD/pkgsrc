@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2003/08/29 11:22:22 xtraeme Exp $
+$NetBSD: patch-aa,v 1.15 2003/12/26 21:49:08 jmmv Exp $
 
---- Makefile.in.orig	2003-08-29 12:38:56.000000000 +0200
-+++ Makefile.in	2003-08-29 12:39:44.000000000 +0200
-@@ -289,8 +289,8 @@
+--- Makefile.in.orig	2003-12-10 05:56:54.000000000 -0600
++++ Makefile.in
+@@ -318,8 +318,8 @@ pkgconfig_DATA = libxml-2.0.pc
  # Instll the tests program sources as examples 
  #
  BASE_DIR = $(datadir)/doc
