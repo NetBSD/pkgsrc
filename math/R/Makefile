@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2002/10/31 23:30:36 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2002/12/10 11:58:10 markd Exp $
 
-DISTNAME=		R-1.5.1
+DISTNAME=		R-1.6.1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/}
 EXTRACT_SUFX=		.tgz
@@ -20,6 +20,7 @@ USE_GMAKE=		# defined
 USE_GNU_READLINE=	# uses callback interface
 
 GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--enable-R-shlib
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-tcltk
