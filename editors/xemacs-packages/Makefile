@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/11/25 11:00:11 tron Exp $
+# $NetBSD: Makefile,v 1.12 2000/11/25 11:33:04 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/22 22:16:53 gj Exp
 
 DISTNAME=	xemacs-packages
@@ -21,7 +21,7 @@ DISTFILES=	xemacs-base-1.46-pkg.tar.gz xemacs-devel-1.30-pkg.tar.gz \
 		text-modes-1.28-pkg.tar.gz time-1.10-pkg.tar.gz \
 		vc-1.24-pkg.tar.gz viper-1.22-pkg.tar.gz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
 
 DEPENDS+=	xemacs>=21.1.9:../../editors/xemacs
