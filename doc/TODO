@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1192 2003/12/14 14:17:13 jmmv Exp $
+$NetBSD: TODO,v 1.1193 2003/12/14 15:14:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -189,7 +189,6 @@ Suggested package updates
 	o gnuchess-5.06
 	o gnumeric-1.2.0
 	o gossip-0.6
-	o gpa-0.7.0
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.12
 	o grepmail-5.21
@@ -263,7 +262,6 @@ Suggested package updates
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
 	o pdmenu-1.2.81
-	o php-4.3.4
 	o plib-1.7.0
 	o ploticus-2.20
 	o postfix-2.0.16
