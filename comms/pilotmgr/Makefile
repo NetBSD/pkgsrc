@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/12/16 04:10:37 tron Exp $
+# $NetBSD: Makefile,v 1.30 2005/02/13 20:36:11 tron Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 PKGNAME=	pilotmgr-1.107.2
@@ -23,6 +23,7 @@ HAS_CONFIGURE=		YES
 NO_BUILD=		YES
 
 CONFIGURE_ARGS=		</dev/null
+CONFIGURE_ENV+=		PERL="${LOCALBASE}/bin/perl" WRKDIR="${WRKDIR}"
 CONFIGURE_SCRIPT=	./Setup
 
 PM_PERL_DIR=	${PREFIX}/lib/${DISTNAME:C/-.*$//}
