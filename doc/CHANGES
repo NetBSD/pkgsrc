@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4598 2004/01/25 00:17:24 kleink Exp $
+$NetBSD: CHANGES,v 1.4599 2004/01/25 00:48:51 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -472,3 +472,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gnome-accessibility-2.4.1 [jmmv 2004-01-24]
 	Added gnome-extras-2.4.1 [jmmv 2004-01-24]
 	Added libksba-0.9.1 [kleink 2004-01-25]
+	Added libksba-0.4.7 [kleink 2004-01-25]
