@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/11/25 18:51:47 erh Exp $
+# $NetBSD: Makefile,v 1.10 1999/11/26 19:14:56 erh Exp $
 #
 
 DISTNAME=		openssl-0.9.4
@@ -25,6 +25,9 @@ CONFIGURE_ARGS=		-fPIC -DPIC --openssldir=${PREFIX} --prefix=${PREFIX} \
 #CONFIGURE_ENV=		PREFIX=${PREFIX}
 MAKE_ENV=		LD_LIBRARY_PATH=${WRKSRC} MAKELIB=${FILESDIR}/makelib
 
+# Note, this list gets bigger if using the RSAref library
+PLIST_SRC=		pkg/PLIST
+
 .if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
 IGNORE=			requires shared object support
 .endif
@@ -34,6 +37,7 @@ IGNORE=			requires shared object support
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 DEPENDS=		rsaref-2.0p2:../../security/rsaref
 CONFIGURE_ARGS+=	rsaref
+PLIST_SRC+=		pkg/PLIST.rsaref
 .endif
 
 fetch-depends:
@@ -79,6 +83,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/apps/openssl.cnf ${PREFIX}/etc/openssl.cnf.example
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} libcrypto.so.?.0 libssl.so.?.0 ${PREFIX}/lib/
+.if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
+	# libRSAglue.a is only useful if you are using the RSAREF2 library.
+	cd ${WRKSRC} && ${INSTALL_DATA} libRSAglue.a ${PREFIX}/lib/
+.endif
 	${INSTALL_DATA_DIR} ${PREFIX}/include/openssl
 	cd ${WRKSRC}/include/openssl && \
 	for file in \
