@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9222 2005/02/19 20:54:48 wiz Exp $
+$NetBSD: CHANGES,v 1.9223 2005/02/19 21:09:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -968,3 +968,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-HTTP-Cache-Transparent-0.5 [wiz 2005-02-19]
 	Updated p5-xmltv to 0.5.38 [wiz 2005-02-19]
 	Updated p5-XML-LibXML to 1.58 [wiz 2005-02-19]
+	Updated cdrtools-ossdvd to 2.01.1.32 [wiz 2005-02-19]
