@@ -1,8 +1,12 @@
-# $NetBSD: bsd.pkg.obsolete.mk,v 1.5 2001/12/18 20:22:59 jlam Exp $
+# $NetBSD: bsd.pkg.obsolete.mk,v 1.6 2001/12/26 21:20:26 jlam Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
 # are, by definition, obsolete and deprecated.
+
+.if defined(APACHE_USER)
+APACHE_SUEXEC_USER?=			${APACHE_USER}
+.endif
 
 .if defined(APACHE_SYSCONFDIR)
 PKG_SYSCONFDIR.ap-ssl?=			${APACHE_SYSCONFDIR}
