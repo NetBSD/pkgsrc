@@ -1,13 +1,10 @@
-$NetBSD: patch-ad,v 1.2 1999/05/18 08:45:49 tv Exp $
+$NetBSD: patch-ad,v 1.3 2000/02/08 03:44:18 wiz Exp $
 
---- src/arch/unix/xaw/c64ui.c.orig	Tue May 18 04:31:52 1999
-+++ src/arch/unix/xaw/c64ui.c	Tue May 18 04:33:17 1999
-@@ -342,8 +342,14 @@
- /* ------------------------------------------------------------------------- */
- 
+--- ./src/arch/unix/x11/xaw/c64ui.c.orig	Sat Oct  2 23:05:26 1999
++++ ./src/arch/unix/x11/xaw/c64ui.c	Sun Feb  6 22:23:11 2000
+@@ -368,6 +368,12 @@
  static ui_menu_entry_t c64_romset_submenu[] = {
--    { "default ROMs",
-+    { "Default ROMs",
+     { "Load default ROMs",
        (ui_callback_t) ui_set_romset, (ui_callback_data_t)"default.vrs", NULL },
 +    { "C64 Game System (GS)",
 +      (ui_callback_t) ui_set_romset, (ui_callback_data_t)"64gs.vrs", NULL },
