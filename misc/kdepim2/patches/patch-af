@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2004/06/13 21:15:55 kristerw Exp $
+
+--- korganizer/calprinter.cpp.orig	2004-06-13 22:56:25.000000000 +0200
++++ korganizer/calprinter.cpp	2004-06-13 22:57:13.000000000 +0200
+@@ -412,7 +412,7 @@
+   p.end();
+ }
+ 
+-void CalPrinter::drawTodo(int count, Todo * item, QPainter &p,int level=0,QRect *r=0)
++void CalPrinter::drawTodo(int count, Todo * item, QPainter &p,int level,QRect *r)
+ {
+   QString outStr;
+   KLocale *local = KGlobal::locale();
