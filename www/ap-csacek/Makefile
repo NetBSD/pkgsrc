@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2001/04/30 03:46:33 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/05/19 17:46:20 jdolecek Exp $
 #
 
-DISTNAME=	csacek-2.1.4
-PKGNAME=	ap-csacek-2.1.4
+DISTNAME=	csacek-2.1.6
+PKGNAME=	ap-csacek-2.1.6
 CATEGORIES=	www
 MASTER_SITES=	http://www.csacek.cz/distrib/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,8 +19,8 @@ BUILD_DEPENDS=	perl>=${PERL5_REQD}:../../lang/perl5
 HAS_CONFIGURE=	yes
 
 CONFIGURE_ARGS+= --with-templatedir=${PREFIX}/share/csacek \
-		--with-target=Apache
-MAKE_ENV+=	LOCALBASE=${LOCALBASE}
+		--with-target=Apache \
+		--with-apxs=${LOCALBASE}/sbin/apxs
 
 do-install:
 	@${INSTALL_DATA} ${WRKSRC}/mod_csacek.so ${PREFIX}/lib/httpd/
