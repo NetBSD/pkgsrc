@@ -1,10 +1,8 @@
+# Makefile for:		xmame
+# Version required:	0.30.1
 #
-# New ports collection makefile for:	xmame
-# Version required:			0.30.1
-# Date Created:				30 January 1998
-# Whom:					root@garbled.futureone.com
+# $NetBSD: Makefile,v 1.3 1998/03/20 07:02:51 mycroft Exp $
 #
-# $NetBSD: Makefile,v 1.2 1998/02/20 20:38:14 hubertf Exp $
 
 DISTNAME=		xmame-0.30.1_src
 PKGNAME=		xmame-0.30.1
@@ -12,7 +10,7 @@ CATEGORIES=		emulators games x11
 MASTER_SITES=		ftp://drake.dit.upm.es/pub/emulators/mame/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		root@garbled.futureone.com
+MAINTAINER=		mycroft@NetBSD.ORG
 
 RUN_DEPENDS=		unzip:${PORTSDIR}/archivers/unzip
 LIB_DEPENDS=		Xpm.4.:${PORTSDIR}/graphics/xpm
