@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/03/13 14:14:29 wiz Exp $
+
+To use freefonts with X11, you can manually perform the following steps:
+
+1.  xset fp+ ${PREFIX}/lib/X11/fonts/freefont
+2.  xset fp rehash
+
+Or configure your /etc/XF86Config by adding
+${PREFIX}/lib/X11/fonts/freefont to your FontPath.
+
+A Fontmap file is available under ${PREFIX}/lib/X11/fonts/freefont
+for use with Ghostscript.
+
+License files are also included for individual fonts. Read
+${PREFIX}/lib/X11/fonts/freefont/<font>.license to
+find out more about a font.
+
+===========================================================================
