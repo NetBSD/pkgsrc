@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/04/22 15:33:35 seb Exp $
+$NetBSD: distinfo,v 1.5 2005/02/18 10:08:33 seb Exp $
 
 SHA1 (flow-tools-0.67.tar.gz) = 1896dad27db0c89e3e14d86b30aed15581134335
 Size (flow-tools-0.67.tar.gz) = 983667 bytes
@@ -12,4 +12,4 @@ SHA1 (patch-ag) = 60d7c6d07cc8f102d6281a55c8188d13eca80bdf
 SHA1 (patch-ah) = cd55409fd5781e204f32ffa51a9b39222eadb8c7
 SHA1 (patch-ai) = 5e0a5f3148e80c156198d74036ff2f1bf35ed779
 SHA1 (patch-aj) = d183dc3b360110a1a90165b0094e349d3a964a2e
-SHA1 (patch-ak) = d44f230e0d5a9713268801ff308cbadc3ff4f3ab
+SHA1 (patch-ak) = 0ae5fa523263fa9be836846b46b7f87b52557156
