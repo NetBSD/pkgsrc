@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/10/27 14:34:03 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/01/05 17:56:48 wiz Exp $
 share/doc/festival/speechtools/images_gen/docppimath_929959730_6.gif
 share/doc/festival/speechtools/images_gen/docppmath_929959728_2.gif
 share/doc/festival/speechtools/images_gen/docppmath_929959741_1.gif
@@ -140,6 +140,7 @@ share/doc/festival/speechtools/index.html
 share/doc/festival/speechtools/HTML.index
 share/doc/festival/speechtools/TeX.formulae
 @dirrm share/doc/festival/speechtools
+@unexec install-info --delete %D/info/festival.info %D/info/dir
 info/festival.info
 info/festival.info-9
 info/festival.info-8
@@ -151,7 +152,7 @@ info/festival.info-3
 info/festival.info-2
 info/festival.info-1
 info/festival.info-10
-@dirrm share/doc/festival/festival/info
+@exec install-info %D/info/festival.info %D/info/dir
 share/doc/festival/festival/user-manual/festival_35.html
 share/doc/festival/festival/user-manual/festival_1.html
 share/doc/festival/festival/user-manual/festival_2.html
@@ -192,7 +193,6 @@ share/doc/festival/festival/user-manual/festival_toc.html
 share/doc/festival/festival/src-manual/c3750.htm
 share/doc/festival/festival/src-manual/x3792.htm
 share/doc/festival/festival/src-manual/unisyn02.gif
-@dirrm share/doc/festival/festival/src-manual/images_gen
 @dirrm share/doc/festival/festival/src-manual
 share/doc/festival/festival/refcard.dvi
 share/doc/festival/festival/refcard.ps
