@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.65 2002/06/10 12:23:44 sakamoto Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.66 2002/06/15 15:26:15 fredb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -941,15 +941,21 @@ MPLAYER_FONT?= iso-8859-1/arial-18
 # Possible: defined, not defined
 # Default: not defined
 
-#MUTT_USE_SSL?= YES
-# Enable SSL in mutt (for pop and imap connections)
-# Possible: YES, NO
-# Default: YES
-
-#MUTT_USE_SLANG?= NO
-# Use slang instead of curses in mutt
+MUTT_USE_NCURSES?= NO
+# Force ncurses to be used by mutt. (Older NetBSD and most non-NetBSD
+# platforms get it anyway.)
 # Possible: YES, NO
 # Default: NO
+
+MUTT_USE_SLANG?= NO
+# Use slang instead of curses in mutt.
+# Possible: YES, NO
+# Default: NO
+
+MUTT_USE_SSL?= YES
+# Enable SSL in mutt (for pop and imap connections).
+# Possible: YES, NO
+# Default: YES
 
 NMH_EDITOR?= vi
 # default editor for use in nmh.
