@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/10/19 03:13:11 ben Exp $
+
+To actually use rip, you need to install at least one of the 
+following rippers and encoders:
+
+Rippers:
+ - audio/cdparanoia
+ - sysutils/cdrecord (includes cdda2wav)
+
+Encoders:
+ - audio/bladeenc
+ - audio/flac
+ - audio/gogo
+ - audio/lame
+ - audio/vorbis-tools (includes oggenc)
+===========================================================================
