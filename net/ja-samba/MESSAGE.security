@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE.security,v 1.1 2003/03/29 08:18:44 taca Exp $
+
+                  *===* ADDITIONAL SECURITY NOTES *===*
+
+ja-samba-2.2.7.1.1.1 already contains fixes for two security problems
+which are solved by samba 2.2.8.
+
+===========================================================================
