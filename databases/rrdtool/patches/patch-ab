@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+$NetBSD: patch-ab,v 1.2 2000/05/07 12:50:52 wulf Exp $
 
---- examples/Makefile.in.orig	Sat Aug 28 04:50:27 1999
-+++ examples/Makefile.in	Sat Nov  6 00:58:52 1999
-@@ -81,7 +81,7 @@
+--- examples/Makefile.in.orig	Tue May  2 21:22:41 2000
++++ examples/Makefile.in	Sat May  6 01:02:16 2000
+@@ -89,7 +89,7 @@
  
  EXTRA_DIST = cgi-demo.cgi.in    piped-demo.pl.in   shared-demo.pl.in stripes.pl.in bigtops.pl.in minmax.pl.in
  

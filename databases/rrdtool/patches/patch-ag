@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+$NetBSD: patch-ag,v 1.2 2000/05/07 12:50:52 wulf Exp $
 
---- doc/Makefile.in.orig	Sat Nov  6 01:34:08 1999
-+++ doc/Makefile.in	Sat Nov  6 01:32:55 1999
-@@ -96,9 +96,9 @@
+--- doc/Makefile.in.orig	Tue May  2 21:22:36 2000
++++ doc/Makefile.in	Sat May  6 01:09:07 2000
+@@ -104,9 +104,9 @@
  EXTRA_DIST = $(POD) $(HTML) $(TXT)
  
  # some install rules

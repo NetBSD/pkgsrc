@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+$NetBSD: patch-ae,v 1.2 2000/05/07 12:50:52 wulf Exp $
 
---- contrib/rrd-file-icon/Makefile.in.ORIG	Sat Oct 30 20:34:47 1999
-+++ contrib/rrd-file-icon/Makefile.in	Sat Oct 30 20:35:14 1999
-@@ -76,7 +76,7 @@
+--- contrib/rrd-file-icon/Makefile.in.orig	Tue May  2 21:22:46 2000
++++ contrib/rrd-file-icon/Makefile.in	Sat May  6 01:04:55 2000
+@@ -84,7 +84,7 @@
  ZLIB_LIB_DIR = @ZLIB_LIB_DIR@
  
  EXTRA_DIST = rrd.png
