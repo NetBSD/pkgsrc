@@ -1,14 +1,22 @@
-$NetBSD: patch-ac,v 1.1 2002/07/17 13:10:31 agc Exp $
+$NetBSD: patch-ac,v 1.2 2004/01/11 16:55:49 cjep Exp $
 
-Prototype select(2).
-
---- printsession.cc	2002/07/17 13:07:37	1.1
-+++ printsession.cc	2002/07/17 13:07:54
-@@ -4,6 +4,7 @@
+--- printsession.cc.orig	1999-04-05 17:25:46.000000000 +0100
++++ printsession.cc
+@@ -4,8 +4,10 @@
  #include "record.h"
  #include "stream5250.h"
  #include <sys/time.h>
 +#include <unistd.h>
  #include "printsession.h"
  #include "utility.h"
++#include <stdlib.h>
  
+ PrintSession::PrintSession()
+ {
+@@ -121,4 +123,4 @@ int PrintSession::waitevent() const
+       result = 1;
+  
+    return result;
+-}
+\ No newline at end of file
++}
