@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/11/26 06:50:34 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/17 10:46:04 shell Exp $
 
-DISTNAME=		HTML-Mason-1.03
+DISTNAME=		HTML-Mason-1.04
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5hma
 CATEGORIES=		www perl5
