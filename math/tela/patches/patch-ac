@@ -1,23 +1,36 @@
-$NetBSD: patch-ac,v 1.2 2001/04/09 03:55:20 jtb Exp $
+$NetBSD: patch-ac,v 1.3 2001/04/24 23:43:03 jtb Exp $
 
---- tela.C.orig	Thu Mar  8 07:20:04 2001
+--- tela.C.orig	Tue Mar 20 14:41:02 2001
 +++ tela.C
-@@ -14,7 +14,7 @@
+@@ -13,7 +13,7 @@
+ #include "d.y.h"
  #include "d.l.h"
  #include "version.H"
- #include <signal.h>
 -#include <values.h>
 +//#include <values.h>
  //#include <unistd.h>
- extern "C" {
- #include "readline/chardefs.h"
-@@ -30,9 +30,7 @@
- // On some Linux versions the libf77.so refers to external symbol MAIN__ which is supposed
- // to be the Fortran main program. Since we do not have a Fortran main program here, we define it here.
- // Hope it doesn't conflict with anything else.
+ #if HAVE_IEEE754_H == 1
+ #  include <ieee754.h>
+@@ -45,9 +45,9 @@
+ // MAIN__ which is supposed to be the Fortran main program. Since we
+ // do not have a Fortran main program here, we define it here.  Hope
+ // it doesn't conflict with anything else.
 -#ifdef LINUX
++// #ifdef LINUX
  int MAIN__;
 -#endif
++// #endif
  }
  
  char *VersionString = VERSION;
+@@ -229,8 +229,8 @@
+ 		return 0.0;
+ 	}
+ #else
+-	real zero = 0.0;
+-	real result = zero/zero;
++	Treal zero = 0.0;
++	Treal result = zero/zero;
+ 	return result;
+ #endif
+ }

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:57 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/24 23:43:02 jtb Exp $
 
-DISTNAME=	tela-1.31
+DISTNAME=	tela-1.32
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.funet.fi/pub/sci/math/tela/ \
 		ftp://sumppu.fmi.fi/pub/tela/
