@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/05/30 17:57:52 tron Exp $
+$NetBSD: patch-aa,v 1.3 2004/06/30 00:11:23 wiz Exp $
 
---- transport.hxx.orig	2004-01-20 16:55:16.000000000 +0100
-+++ transport.hxx	2004-05-30 19:55:42.000000000 +0200
-@@ -6,17 +6,22 @@
+--- transport.hxx.orig	2004-04-19 18:25:06.000000000 +0200
++++ transport.hxx
+@@ -6,7 +6,7 @@
  // For further details see http://fy.chalmers.se/~appro/linux/DVD+RW/
  //
  
@@ -11,18 +11,37 @@ $NetBSD: patch-aa,v 1.2 2004/05/30 17:57:52 tron Exp $
  #include <stdio.h>
  #include <stdlib.h>
  #include <unistd.h>
- #include <string.h>
- #include <sys/types.h>
-+#include <sys/param.h>
- #include <sys/stat.h>
+@@ -16,6 +16,9 @@
  #include <fcntl.h>
- 
- #include <errno.h>
- 
-+#if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
-+#define	statfs	statvfs
+ #include <poll.h>
+ #include <sys/time.h>
++#if __NetBSD_Version__ >= 200040000
++#include <sys/statvfs.h>
 +#endif
-+
- #ifndef EMEDIUMTYPE
- #define EMEDIUMTYPE	EINVAL
- #endif
+ 
+ inline long getmsecs()
+ { struct timeval tv;
+@@ -407,7 +410,11 @@ public:
+     // mounted, so that it could as well just return 0;
+     int umount(int f=-1)
+     { struct stat    fsb,msb;
++#if __NetBSD_Version__ >= 200040000
++      struct statvfs *mntbuf;
++#else
+       struct statfs *mntbuf;
++#endif
+       int            ret=0,mntsize,i;
+ 
+ 	if (f==-1) f=fd;
+@@ -603,7 +610,11 @@ public:
+     }
+     int umount(int f=-1)
+     { struct stat    fsb,msb;
++#if __NetBSD_Version__ >= 200040000
++      struct statvfs *mntbuf;
++#else
+       struct statfs *mntbuf;
++#endif
+       int            ret=0,mntsize,i;
+ 
+ 	if (f==-1) f=fd;

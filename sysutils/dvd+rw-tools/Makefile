@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/06/26 15:56:33 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/06/30 00:11:23 wiz Exp $
 #
 
-DISTNAME=	dvd+rw-tools-5.17.4.8.6
-PKGREVISION=	1
+DISTNAME=	dvd+rw-tools-5.19-1.4.9.7
+PKGNAME=	dvd+rw-tools-5.19.4.9.7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://fy.chalmers.se/~appro/linux/DVD+RW/tools/
 
@@ -12,9 +12,11 @@ COMMENT=	Tools for writing DVD+R[W] disks
 
 DEPENDS+=	{cdrecord-[1-9]*,cdrtools-ossdvd-[0-9]*}:../../sysutils/cdrecord
 
+WRKSRC=		${WRKDIR}/${PKGNAME}
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/growisofs ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/growisofs.1 ${PREFIX}/man/man1/growisofs.1
+	${INSTALL_MAN} ${WRKSRC}/growisofs.1 ${PREFIX}/man/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-booktype ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-format ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/dvd+rw-mediainfo ${PREFIX}/bin
