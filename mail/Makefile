@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2001/01/24 22:44:47 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2001/01/25 23:01:27 jlam Exp $
 #
 
     SUBDIR += balsa
@@ -17,6 +17,7 @@
     SUBDIR += fromto
     SUBDIR += grepmail
     SUBDIR += imap-uw
+    SUBDIR += imap-uw-utils
     SUBDIR += mailagent
     SUBDIR += maildrop
     SUBDIR += mailwrapper
