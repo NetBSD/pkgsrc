@@ -54,23 +54,3 @@
   }
   
   /* Macro to send STRING to the terminal. */
---- util/Makefile.in	1998/02/13 13:13:54	1.1
-+++ util/Makefile.in	1998/02/13 13:14:34
-@@ -40,7 +40,7 @@
- INSTALL = @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
- INSTALL_DATA = @INSTALL_DATA@
--INSTALL_SCRIPT = @INSTALL_SCRIPT@
-+INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
- transform = @program_transform_name@
- 
- NORMAL_INSTALL = true
-@@ -253,7 +253,7 @@
- all: Makefile $(PROGRAMS) $(SCRIPTS)
- 
- install-strip:
--	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_PROGRAM)' install
-+	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' INSTALL_SCRIPT='$(INSTALL_SCRIPT)' install
- installdirs:
- 	$(mkinstalldirs)  $(bindir) $(bindir)
- 
