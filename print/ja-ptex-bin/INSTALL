@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+
+TEXMF=@PREFIX@/share/texmf
+TEXMFLOCAL=@PREFIX@/share/texmf.local
+PSTRICKS=$TEXMF/dvips/pstricks
+
+case $STAGE in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	$MV $TEXMF/web2c/texmf.cnf $TEXMF/web2c/texmf.cnf.orig
+	$LN -s $TEXMFLOCAL/web2c/texmf.cnf $TEXMF/web2c/texmf.cnf
+	@PATCH@ -d $PSTRICKS < $PSTRICKS/PSTricks.patch
+	@PREFIX@/bin/mktexlsr
+	;;
+
+*)
+	$ECHO "Unexpected argument: $STAGE"
+	exit 1
+	;;
+
+esac

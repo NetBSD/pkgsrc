@@ -1,0 +1,15 @@
+pTeX/pLaTeX (Publishing TeX/LaTeX) are Japanese-support versions of
+TeX/LaTeX in respectively and have the following new/improved features
+as well as the one TeX has:
+
+  o it can layout text lines in vertically as well as horizontally, it
+    can even be mixed in the same page.
+  o it supports Japanese line-layout rules (kinsoku).
+  o it generates high quality page by adjusting the spacing between
+    Japanese-Japanese characters, or Japanese-Latin characters.
+  o it layout lines of the Japanese characters by JFM.
+
+pTeX is developed by ASCII Corp. and now distributed under the BSD style
+license.
+
+This package contains executables and few configuration files.

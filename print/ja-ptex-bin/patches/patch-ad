@@ -1,0 +1,39 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+
+--- texk/dvipsk/Makefile.in.orig	Sat Feb  1 03:07:46 2003
++++ texk/dvipsk/Makefile.in	Fri Feb 21 21:26:05 2003
+@@ -18,6 +18,7 @@
+ ac_include ../make/programs.mk
+ ac_include ../make/texi.mk
+ prog_cflags = -DUNIX -DKPATHSEA -DNeedFunctionPrototypes -DSHIFTLOWCHARS
++psheaderdir = $(texmflcl)/dvips
+ 
+ # The `t[mp]-' business is so that we don't create an empty .pro file,
+ # if running squeeze fails for some reason.  A dependency on squeeze
+@@ -36,13 +37,16 @@
+ pprescan.o papersiz.o color.o bbox.o hps.o t1part.o
+ 
+ program = dvips
+-programs = afm2tfm $(program)
++programs = pdvips
+ 
+ 
+ default all: $(programs) $(prologues) dvips.info
+ 
+ $(program): $(kpathsea) $(objects)
+ 	$(kpathsea_link) $(objects) $(LOADLIBES) 
++pdvips: $(program)
++	rm -f pdvips
++	ln $(program) pdvips
+ afm2tfm: $(kpathsea) afm2tfm.o
+ 	$(kpathsea_link) afm2tfm.o $(LOADLIBES) 
+ # Omit LOADLIBES since no need to dynamically link with kpathsea.
+@@ -96,6 +100,8 @@
+ #	      >/dev/null; then	\
+ #	  $(INSTALL_DATA) $(srcdir)/psfonts.map $(psheaderdir)/base/psfonts.map; \
+ #        else true; fi
++
++#_installed:
+ # Info files.
+ 	cd $(srcdir) && for i in $(program).i*; do \
+ 	  $(INSTALL_DATA) $$i $(infodir)/$$i; done
