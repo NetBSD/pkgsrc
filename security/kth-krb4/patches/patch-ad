@@ -1,0 +1,40 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/05/25 17:57:28 wennmach Exp $
+
+--- appl/kauth/Makefile.in.orig	Thu May 25 13:53:23 2000
++++ appl/kauth/Makefile.in	Thu May 25 14:17:49 2000
+@@ -17,6 +17,7 @@
+ LD_FLAGS = @LD_FLAGS@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = ${INSTALL_PROGRAM:C/-s//}
+ LIBS = @LIBS@
+ MKINSTALLDIRS = @top_srcdir@/mkinstalldirs
+ 
+@@ -28,9 +29,10 @@
+ transform=@program_transform_name@
+ EXECSUFFIX=@EXECSUFFIX@
+ 
+-PROG_BIN	= kauth$(EXECSUFFIX) ksrvtgt
++PROG_BIN	= kauth$(EXECSUFFIX)
+ PROG_LIBEXEC	= kauthd$(EXECSUFFIX)
+-PROGS = $(PROG_BIN) $(PROG_LIBEXEC)
++PROG_SCRIPT	= ksrvtgt
++PROGS = $(PROG_BIN) $(PROG_LIBEXEC) $(PROG_SCRIPT)
+ 
+ SOURCES_KAUTH  = kauth.c rkinit.c
+ SOURCES_KAUTHD = kauthd.c
+@@ -58,10 +60,13 @@
+ 	for x in $(PROG_BIN); do \
+ 	  $(INSTALL_PROGRAM) $$x $(DESTDIR)$(bindir)/`echo $$x| sed '$(transform)'`; \
+ 	done
++	for x in $(PROG_SCRIPT); do \
++	  $(INSTALL_SCRIPT) $$x $(DESTDIR)$(bindir)/`echo $$x| sed '$(transform)'`; \
++	done
+ 	if test -f $(DESTDIR)$(bindir)/zrefresh -o -r  $(DESTDIR)$(bindir)/zrefresh; then \
+ 	  true; \
+ 	else \
+-	  $(INSTALL_PROGRAM) $(srcdir)/zrefresh $(DESTDIR)$(bindir)/`echo zrefresh | sed '$(transform)'`; \
++	  $(INSTALL_SCRIPT) $(srcdir)/zrefresh $(DESTDIR)$(bindir)/`echo zrefresh | sed '$(transform)'`; \
+ 	fi
+ 	for x in $(PROG_LIBEXEC); do \
+ 	  $(INSTALL_PROGRAM) $$x $(DESTDIR)$(libexecdir)/`echo $$x| sed '$(transform)'`; \

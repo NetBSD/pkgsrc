@@ -1,0 +1,59 @@
+$NetBSD: services.diff,v 1.1.1.1 2000/05/25 17:57:29 wennmach Exp $
+This patch is relative to NetBSD-1.4.2.
+
+--- /etc/services.orig	Thu Apr 20 10:29:34 2000
++++ /etc/services	Thu May  4 10:38:16 2000
+@@ -52,8 +52,8 @@
+ www		80/tcp		http	# WorldWideWeb HTTP
+ www		80/udp			# HyperText Transfer Protocol
+ link		87/tcp		ttylink
+-kerberos	88/tcp		krb5	# Kerberos v5
+-kerberos	88/udp
++#kerberos	88/tcp		krb5	# Kerberos v5
++#kerberos	88/udp
+ supdup		95/tcp
+ # 100 - reserved
+ hostnames	101/tcp		hostname	# usually from sri-nic
+@@ -122,6 +122,8 @@
+ ldap	389/tcp				# Lightweight Directory Access Protocol
+ ldap	389/udp				# Lightweight Directory Access Protocol
+ 
++kpasswd		464/udp				# password changing
++kpasswd		464/tdp				# password changing
+ #
+ # UNIX specific services
+ #
+@@ -181,16 +183,29 @@
+ # Kerberos (Project Athena/MIT) services
+ # Note that these are for Kerberos v4, and are unofficial.
+ #
++#kerberos	88/tcp		krb5	# Kerberos v5
++#kerberos	88/udp
++kerberos-sec	88/tcp		krb5		# Kerberos secondary port TCP
++kerberos-sec	88/udp				# Kerberos secondary port UDP
+ klogin		543/tcp			# Kerberos `rlogin'
+ kshell		544/tcp		krcmd	# Kerberos `rsh'
++ekshell		545/tcp			# Kerberos encrypted remote shell -kfall
++kerberos-adm	749/udp			# v5 kadmin
+ kerberos-adm	749/tcp			# Kerberos `kadmin' (v5)
+-kerberos4	750/udp		kdc	# Kerberos (server) udp
+-kerberos4	750/tcp		kdc	# Kerberos (server) tcp
+-kerberos-master	751/udp			# Kerberos admin server udp
+-kerberos-master	751/tcp			# Kerberos admin server tcp
++kerberos4	750/udp		kdc kerberos kerberos-iv # Kerberos (server) udp
++kerberos4	750/tcp		kdc kerberos kerberos-iv # Kerberos (server) tcp
++kerberos-master	751/udp		kerberos_master	# Kerberos admin server udp
++kerberos-master	751/tcp		kerberos_master	# Kerberos admin server tcp
++krb_prop	754/tcp		hprop		# Kerberos slave propagation
+ krbupdate	760/tcp		kreg	# BSD Kerberos registration
+ kpasswd		761/tcp		kpwd	# BSD Kerberos `passwd'
++kpop		1109/tcp			# Pop with Kerberos
+ eklogin		2105/tcp		# Kerberos encrypted `rlogin'
++ekshell2	2106/tcp	      # What U of Colorado @ Boulder uses?
++rkinit		2108/tcp			# Kerberos remote kinit
++kx		2111/tcp			# X over kerberos
++kip		2112/tcp			# IP over kerberos
++kauth		2120/tcp			# Remote kauth
+ 
+ #
+ # Unofficial but necessary (for NetBSD) services

@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/05/25 17:57:28 wennmach Exp $
+
+--- lib/kadm/Makefile.in.orig	Thu May 25 13:31:47 2000
++++ lib/kadm/Makefile.in	Thu May 25 13:32:23 2000
+@@ -3,6 +3,7 @@
+ #
+ 
+ SHELL = /bin/sh
++CP = /bin/cp
+ 
+ srcdir = @srcdir@
+ VPATH = @srcdir@
+@@ -117,8 +118,8 @@
+ all-local: $(inc_DATA)
+ 	@for i in $(inc_DATA); do \
+ 		if cmp -s  $$i $(idir)/$$i 2> /dev/null ; then :; else\
+-			echo " $(INSTALL_DATA) $$i $(idir)/$$i"; \
+-			$(INSTALL_DATA) $$i $(idir)/$$i; \
++			echo " $(CP) $$i $(idir)/$$i"; \
++			$(CP) $$i $(idir)/$$i; \
+ 		fi ; \
+ 	done
+ 
