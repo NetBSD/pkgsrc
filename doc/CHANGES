@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7203 2004/09/21 17:28:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.7204 2004/09/21 17:56:50 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4382,3 +4382,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-devel to 2.8.0 [jmmv 2004-09-DD]
 	Updated gnome to 2.8.0 [jmmv 2004-09-DD]
 	Updated gnome-extras to 2.8.0 [jmmv 2004-09-DD]
+	Updated xorg to 6.8.1 [xtraeme 2004-09-21]
