@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4251 2003/12/24 17:52:50 jonb Exp $
+$NetBSD: CHANGES,v 1.4252 2003/12/25 13:29:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5373,3 +5373,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated latex2html to 2002.2.1nb1 [jmmv 2003-12-24]
 	Updated p5-Template-Toolkit to 2.10nb1 [jmmv 2003-12-24]
 	Updated bogofilter to 0.15.7 [jonb 2003-12-24]
+	Added tex-prosper-1.00.4 [jmmv 2003-12-25]
