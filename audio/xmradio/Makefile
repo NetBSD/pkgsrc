@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2000/08/23 23:14:22 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/20 20:34:17 tron Exp $
 
-DISTNAME=	xmradio-0.9b2
+DISTNAME=	xmradio-1.0b1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.rostock.zgdv.de/~runge/radio/
 
