@@ -73,16 +73,3 @@
   
   /*
    * C Source files
-*** ./dbconv_d/Imakefile.orig	Thu Apr  4 23:33:09 1996
---- ./dbconv_d/Imakefile	Thu Apr  4 23:33:53 1996
-***************
-*** 24,29 ****
---- 24,31 ----
-   *
-   */
-  
-+ MANSUFFIX = 1
-+ 
-  
-  /*
-   * Add local include path
