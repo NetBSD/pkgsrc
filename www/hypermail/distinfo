@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:36 skrll Exp $
-
-SHA1 (hypermail-20b3.tar.gz) = ab3825123abefce1facb4f8702e4b698506841c0
-Size (hypermail-20b3.tar.gz) = 132969 bytes
-SHA1 (patch-ac) = 1207f0583a9ba8ae3c5b3e8128ca315e8786570c
-SHA1 (patch-ad) = 6dd609a1b5fa9159a689ab24584f0b62c3d82460
-SHA1 (patch-ae) = b9c3d6da3367e8d0e2f37478f0f2b6c44fd5f25c
-SHA1 (patch-af) = 6af5579e814ca5bc1e3b932345c84b810b34285e
