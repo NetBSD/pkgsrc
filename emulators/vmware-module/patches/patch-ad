@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
+$NetBSD: patch-ad,v 1.2 2001/08/10 23:17:23 kristerw Exp $
 
 --- source/vmnet/if_hubvar.h	Tue Apr  3 00:57:57 2001
 +++ source/vmnet/if_hubvar.h	Sun Jun 10 11:35:34 2001
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
  
  #define HUBMINPKT	ETHER_HDR_LEN
 -#define HUBMAXPKT	(ETHER_MAX_FRAME(ETHERTYPE_VLAN, 1))
-+#if __NetBSD_Version__ >= 105230000
++#if __NetBSD_Version__ >= 105230000 || (__NetBSD_Version__ >= 105000100 && __NetBSD_Version__ < 105010000)
 +# define HUBMAXPKT(ifp)	(ETHER_MAX_FRAME(ifp, ETHERTYPE_VLAN, 1))
 +#else
 +# define HUBMAXPKT	(ETHER_MAX_FRAME(ETHERTYPE_VLAN, 1))
@@ -18,13 +18,13 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
  {
  	int error = 0, i, j;
  	struct hubdev_softc *sc;
-+#if __NetBSD_Version__ >= 105230000
++#if __NetBSD_Version__ >= 105230000 || (__NetBSD_Version__ >= 105000100 && __NetBSD_Version__ < 105010000)
 +	struct ifnet *ifp;
 +#endif
  	
  	switch (cmd) {
  	case LKM_E_LOAD:
-+#if __NetBSD_Version__ >= 105230000
++#if __NetBSD_Version__ >= 105230000 || (__NetBSD_Version__ >= 105000100 && __NetBSD_Version__ < 105010000)
 + 		ifp = (struct ifnet *)malloc(sizeof(*ifp), M_MRTABLE, M_WAITOK);
 +		ifp->if_mtu = ETHERMTU;
 +		if (HUBMAXPKT(ifp) > MCLBYTES) {
@@ -38,7 +38,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
  	fp->f_type = DTYPE_VNODE;
  	fp->f_ops = &vnops;
  	fp->f_data = (caddr_t)vp;
-+#if __NetBSD_Version__ >= 105230000
++#if __NetBSD_Version__ >= 105230000 || (__NetBSD_Version__ >= 105000100 && __NetBSD_Version__ < 105010000)
 +#ifdef FILE_SET_MATURE
 +	FILE_SET_MATURE(fp);
 +#endif
@@ -50,7 +50,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
  	struct hubport_softc *portsc;
  	struct mbuf *m;
  	int error;
-+#if __NetBSD_Version__ >= 105230000
++#if __NetBSD_Version__ >= 105230000 || (__NetBSD_Version__ >= 105000100 && __NetBSD_Version__ < 105010000)
 +	struct ifnet *ifp;
 +#endif
  
@@ -60,7 +60,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
  	if (uio->uio_resid == 0)
  		return (0);
  
-+#if __NetBSD_Version__ >= 105230000
++#if __NetBSD_Version__ >= 105230000 || (__NetBSD_Version__ >= 105000100 && __NetBSD_Version__ < 105010000)
 +	ifp = &portsc->port_if;
 +	if ((uio->uio_resid < HUBMINPKT) || (uio->uio_resid > HUBMAXPKT(ifp))) {
 +#else
