@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/09/13 14:43:30 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2003/09/13 14:55:30 jlam Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.55
 PKGNAME=	spamassassin-2.55
@@ -43,7 +43,7 @@ PLIST_SRC=		${PKGDIR}/PLIST ${PLIST_ADD}
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/SpamAssassin/.packlist
 
 GNU_CONFIGURE=		YES
-PERL5_CONFIGURE=	NO # need GNU_CONFIGURE "do-configure" target
+PERL5_CONFIGURE=	NO
 MAKE_PARAMS=		SYSCONFDIR="${PKG_SYSCONFDIR}"
 MAKE_PARAMS+=		LOCAL_RULES_DIR="${PKG_SYSCONFDIR}"
 MAKE_PARAMS+=		RUN_RAZOR1_TESTS="y" RUN_RAZOR2_TESTS="y"
@@ -82,7 +82,10 @@ DEPTHFIRST2=	-depth
 FILES_SUBST+=		INTERPRETER_SUPPORT="${INTERPRETER_SUPPORT}"
 FILES_SUBST+=		OPSYS="${OPSYS}"
 
-TEST_TARGET=	test
+# SpamAssassin is actually a perl module.
+.include "../../lang/perl5/module.mk"
+
+INSTALL_TARGET+=	inst_cfs
 
 post-extract:
 	@# correct bad SA permissions
@@ -175,5 +178,4 @@ post-install:
 	@${ECHO} "bin/sslspamc" >> ${PLIST_ADD}
 .endif
 
-.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
