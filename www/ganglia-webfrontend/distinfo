@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/07 14:39:28 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2005/02/10 02:34:54 jschauma Exp $
 
-SHA1 (ganglia-webfrontend-2.5.7.tar.gz) = db455c279e561a51c95004a9b709cfe15688d20f
-Size (ganglia-webfrontend-2.5.7.tar.gz) = 112477 bytes
+SHA1 (ganglia-3.0.0.tar.gz) = e669aa828e10a5f71e90c8226ba41566b5fb9e42
+Size (ganglia-3.0.0.tar.gz) = 3389093 bytes
 SHA1 (patch-aa) = 8f16c03a3f6c4234e2fbb742f54f748ff18e52b4
 SHA1 (patch-ab) = e78f35ea283860b345db4a4247b28898034cd7fd
