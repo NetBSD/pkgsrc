@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/05/22 09:32:22 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/06/25 23:58:32 zuntum Exp $
 #
 
 DISTNAME=       xart19980415
@@ -11,10 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cqi.com/~humbubba/linux.html
 COMMENT=	Paint program (enhanced xpaint)
 
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	tiff-*:../../graphics/tiff
-DEPENDS+=	png>=1.0.11:../../graphics/png
-
+USE_BUILDLINK_ONLY=YES
 USE_IMAKE=      YES
 USE_XPM=	YES
 
@@ -24,4 +21,7 @@ post-extract:
 	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
 	${FIND} ${WRKSRC} -type f -print | ${XARGS} ${CHMOD} 644
 
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
