@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/03/11 20:17:36 bad Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/02 17:21:31 bad Exp $
 
-DISTNAME=	gnugo-beta-1.72
+DISTNAME=	gnugo-2.0
 CATEGORIES=	games
-MASTER_SITES=	ftp://match.stanford.edu/pub/
+MASTER_SITES=	${MASTER_SITE_GNU:=gnugo/}
 
 MAINTAINER=	bad@netbsd.org
-HOMEPAGE=	http://www.gnu.org/software/gnugo/beta.html
+HOMEPAGE=	http://www.gnu.org/software/gnugo/
 
 do-configure:
 

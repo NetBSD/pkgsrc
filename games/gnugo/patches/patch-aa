@@ -1,34 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/03/11 20:17:36 bad Exp $
+$NetBSD: patch-aa,v 1.2 1999/05/02 17:21:31 bad Exp $
 
---- Makefile.orig	Wed Mar 10 07:36:07 1999
-+++ Makefile	Thu Mar 11 21:10:59 1999
-@@ -1,14 +1,14 @@
- # configuration info
+--- Makefile.orig	Tue Apr 20 18:12:49 1999
++++ Makefile	Sun May  2 18:30:29 1999
+@@ -65,6 +65,11 @@
  
--NAME = gnugo-beta
-+NAME = gnugo
- VERSION = 1.72
- PREVIOUS = 1.71
+ ALLOBJ =  $(OBJ) patterns.o gmp.o
  
- CFLAGS = -g -O2 $(COLOR) $(GCCWARNINGS) -DVERSION=\"$(VERSION)\"
- 
- # uncomment if you want to have color board display with curses
--COLOR=-DCURSES
--COLORLIB=-lncurses 
-+#COLOR=-DCURSES
-+#COLORLIB=-lncurses 
- 
- # or this to use hardcoded ansi escape sequences (dtterm, linux console)
- #COLOR=-DANSI_COLOR
-@@ -50,6 +50,11 @@
- OBJ = $(SRC:.c=.o)
- 
- ALLOBJ =  $(OBJ) patterns.o helpers.o gmp.o
-+
 +all : $(NAME)
 +
 +install : $(NAME)
 +	${BSD_INSTALL_PROGRAM} $(NAME) ${PREFIX}/bin
- 
++
  $(NAME) : $(ALLOBJ)
  	$(CC) $(CFLAGS) $(ALLOBJ) -o $(NAME) $(COLORLIB)
+ 
