@@ -1,0 +1,28 @@
+--- configure.orig	Sat Nov  6 18:42:55 2004
++++ configure	Sat Nov  6 18:43:15 2004
+@@ -7064,13 +7064,13 @@
+ 
+ 
+ # Checks for libraries.
+-echo "$as_me:$LINENO: checking for initscr in -lcurses" >&5
+-echo $ECHO_N "checking for initscr in -lcurses... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for initscr in -lncurses" >&5
++echo $ECHO_N "checking for initscr in -lncurses... $ECHO_C" >&6
+ if test "${ac_cv_lib_curses_initscr+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lcurses  $LIBS"
++LIBS="-lncurses  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+@@ -8467,7 +8467,7 @@
+ echo "$as_me: error: Curses library not found! Install Curses library or run ./configure with --disable-curses parameter." >&2;}
+    { (exit 1); exit 1; }; }
+     fi
+-    CURSES_LIBS="-lcurses"
++    CURSES_LIBS="-lncurses"
+ 
+ fi
+ 
