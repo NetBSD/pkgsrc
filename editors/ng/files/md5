@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/10/19 23:54:37 hubertf Exp $
+$NetBSD: md5,v 1.2 2001/03/18 01:16:51 jun Exp $
 
-MD5 (ng-1.4.tar.gz) = 83fd519100b78ba0f6809ba4899b1863
+MD5 (ng-1.4.3.tar.gz) = abf49d8472cdfc9187bb97a4fababc55
