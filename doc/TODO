@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1663 2004/04/22 20:18:05 dillo Exp $
+$NetBSD: TODO,v 1.1664 2004/04/22 23:44:06 ben Exp $
 
 Suggested new packages
 ======================
@@ -250,7 +250,6 @@ Suggested package updates
 	o lwm-1.2.0
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
-	o mailsync-4.4.4
 	o maradns-1.0.21
 	o marbles-1.0.6
 	o matchbox-0.8
