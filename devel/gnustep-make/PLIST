@@ -1,10 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/28 02:01:40 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/03 04:02:25 rh Exp $
 share/GNUstep/System/Makefiles/GNUstep-reset.sh
 share/GNUstep/System/Makefiles/GNUstep.csh
 share/GNUstep/System/Makefiles/GNUstep.sh
+share/GNUstep/System/Makefiles/Instance/Documentation/autogsdoc.make
+share/GNUstep/System/Makefiles/Instance/Documentation/gsdoc.make
+share/GNUstep/System/Makefiles/Instance/Documentation/install_files.make
+share/GNUstep/System/Makefiles/Instance/Documentation/javadoc.make
+share/GNUstep/System/Makefiles/Instance/Documentation/latex.make
+share/GNUstep/System/Makefiles/Instance/Documentation/texi.make
 share/GNUstep/System/Makefiles/Instance/Shared/bundle.make
 share/GNUstep/System/Makefiles/Instance/Shared/headers.make
 share/GNUstep/System/Makefiles/Instance/Shared/java.make
+share/GNUstep/System/Makefiles/Instance/Shared/strings.make
 share/GNUstep/System/Makefiles/Instance/application.make
 share/GNUstep/System/Makefiles/Instance/bundle.make
 share/GNUstep/System/Makefiles/Instance/clibrary.make
@@ -106,6 +113,8 @@ share/GNUstep/System/Tools/openapp
 share/GNUstep/System/Tools/opentool
 share/GNUstep/System/share/config.site
 @dirrm share/GNUstep/System/share
+@exec ${MKDIR} %D/share/GNUstep/System/Tools/Resources
+@dirrm share/GNUstep/System/Tools/Resources
 @exec ${MKDIR} %D/share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
@@ -117,7 +126,10 @@ share/GNUstep/System/share/config.site
 @dirrm share/GNUstep/System/Makefiles/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Makefiles/Master
 @dirrm share/GNUstep/System/Makefiles/Instance/Shared
+@dirrm share/GNUstep/System/Makefiles/Instance/Documentation
 @dirrm share/GNUstep/System/Makefiles/Instance
+@exec ${MKDIR} %D/share/GNUstep/System/Makefiles/Auxiliary
+@dirrm share/GNUstep/System/Makefiles/Auxiliary
 @exec ${MKDIR} %D/share/GNUstep/System/Makefiles/Additional
 @dirrm share/GNUstep/System/Makefiles/Additional
 @dirrm share/GNUstep/System/Makefiles
@@ -162,9 +174,6 @@ share/GNUstep/System/share/config.site
 @dirrm share/GNUstep/System
 @exec ${MKDIR} %D/share/GNUstep/Network
 @dirrm share/GNUstep/Network
-@exec ${MKDIR} %D/share/GNUstep/Local/Users/Administrator
-@dirrm share/GNUstep/Local/Users/Administrator
-@dirrm share/GNUstep/Local/Users
 @exec ${MKDIR} %D/share/GNUstep/Local/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/Local/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu
 @dirrm share/GNUstep/Local/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}
