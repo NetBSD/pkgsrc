@@ -3,7 +3,7 @@
 # Date created:				19971214
 # Whom:					hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.14 1998/03/18 03:05:45 tv Exp $
+# $NetBSD: Makefile,v 1.15 1998/03/19 02:20:53 tv Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -77,6 +77,11 @@ CONFIGURE_ARGS+=	--without-idea
 .if defined(USE_SOCKS) && ${USE_SOCKS} == YES
 CONFIGURE_ARGS+= 	--with-socks="-L${PREFIX}/lib -lsocks5"
 CFLAGS+=	 	-I${PREFIX}/include
+.endif
+
+# Make libwrap also compare against forwards (off by default)
+.if defined(LIBWRAP_FWD) && ${LIBWRAP_FWD} == YES
+CFLAGS+=		-DLIBWRAP_FWD
 .endif
 
 MAN1=			scp.1 ssh-add.1 ssh-agent.1 ssh-keygen.1 ssh.1 \
