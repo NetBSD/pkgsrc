@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.39 2004/04/11 01:53:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.40 2004/04/16 02:57:48 salo Exp $
 #
 
-DISTNAME=		lftp-3.0.1
+DISTNAME=		lftp-3.0.2
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/ \
+MASTER_SITES=		ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/ \
+			ftp://ftp.tuwien.ac.at/infosys/browsers/ftp/lftp/ \
+			http://the.wiretapped.net/mirrors/lftp/ \
+			ftp://ftp.130th.net/pub/mirror/lftp/ \
+			ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/ \
 			ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/old/
 EXTRACT_SUFX=		.tar.bz2
 
