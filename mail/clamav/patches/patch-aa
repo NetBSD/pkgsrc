@@ -1,25 +1,12 @@
-$NetBSD: patch-aa,v 1.8 2004/04/14 16:30:43 tv Exp $
+$NetBSD: patch-aa,v 1.9 2004/04/25 21:37:59 recht Exp $
 
---- configure.orig	2004-02-11 00:16:08.000000000 +0100
-+++ configure	2004-02-11 11:34:05.000000000 +0100
-@@ -9502,11 +9504,17 @@
- 
-     ;;
- netbsd*)
--    echo "$as_me:$LINENO: result: NetBSD detected. Disabling thread support." >&5
--echo "${ECHO_T}NetBSD detected. Disabling thread support." >&6
--    have_pthreads="no"
-+    if test "$have_pthreads" = "yes"; then
-+        LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -lpthread"
-+        CLAMD_LIBS="-lpthread"
-+        TH_SAFE="-thread-safe"
+--- configure.orig	2004-04-17 00:48:32.000000000 +0200
++++ configure	2004-04-25 22:07:17.000000000 +0200
+@@ -9873,6 +9873,7 @@
+  	LIBCLAMAV_LIBS="$LIBCLAMAV_LIBS -lpthread"
+  	CLAMD_LIBS="-lpthread"
+  	CLAMAV_MILTER_LIBS="$CLAMAV_MILTER_LIBS -lpthread"
++	TH_SAFE="-thread-safe"
  
  cat >>confdefs.h <<\_ACEOF
-+#define CL_THREAD_SAFE 1
-+_ACEOF
-+
-+    fi
-+cat >>confdefs.h <<\_ACEOF
- #define C_BSD 1
- _ACEOF
- 
+ #define CL_THREAD_SAFE 1
