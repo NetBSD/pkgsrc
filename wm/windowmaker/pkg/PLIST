@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/08/18 18:13:28 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/10/05 12:18:58 wiz Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -74,6 +74,7 @@ bin/geticonset
 bin/getstyle
 bin/seticons
 bin/setstyle
+bin/wcopy
 bin/wdread
 bin/wdwrite
 bin/wkdemenu.pl
@@ -84,6 +85,7 @@ bin/wmaker.inst
 bin/wmchlocale
 bin/wmsetbg
 bin/wmsetup
+bin/wpaste
 bin/wsetfont
 bin/wxcopy
 bin/wxpaste
@@ -95,6 +97,7 @@ etc/WindowMaker/WindowMaker
 include/WINGs/WINGs.h
 include/WINGs/WINGsP.h
 include/WINGs/WUtil.h
+include/WINGs/proplist-compat.h
 include/WINGs/wtabledelegates.h
 include/WINGs/wtableview.h
 include/WMaker.h
@@ -112,6 +115,7 @@ man/man1/geticonset.1
 man/man1/getstyle.1
 man/man1/seticons.1
 man/man1/setstyle.1
+man/man1/wcopy.1
 man/man1/wdwrite.1
 man/man1/wmaker.1
 man/man1/wmsetbg.1
@@ -289,6 +293,7 @@ share/WindowMaker/plmenu.pl
 share/WindowMaker/plmenu.ro
 share/WindowMaker/plmenu.sk
 share/WindowMaker/plmenu.zh_CN
+share/WindowMaker/plmenu.zh_TW.Big5
 share/WindowMaker/wmmacros
 share/WindowMaker/xtree.dat
 share/doc/WindowMaker/FAQ
@@ -350,6 +355,8 @@ ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/WPrefs.mo
 @dirrm share/WindowMaker/Backgrounds
 @dirrm share/WindowMaker
 @dirrm share/WINGs
+@dirrm man/sk/man1
+@dirrm man/sk
 @dirrm include/WINGs
 @dirrm etc/WindowMaker
 @dirrm GNUstep/Apps/WPrefs.app/xpm
