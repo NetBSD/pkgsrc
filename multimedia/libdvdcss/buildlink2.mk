@@ -1,8 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/01/28 14:25:37 recht Exp $
-#
-# This Makefile fragment is included by packages that use libdvdcss.
-#
-# This file was created automatically using createbuildlink 2.3.
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/28 14:27:29 recht Exp $
 #
 
 .if !defined(LIBDVDCSS_BUILDLINK2_MK)
@@ -10,7 +6,7 @@ LIBDVDCSS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libdvdcss
 BUILDLINK_DEPENDS.libdvdcss?=		libdvdcss>=1.2.4
-BUILDLINK_PKGSRCDIR.libdvdcss?=		../../misc/libdvdcss
+BUILDLINK_PKGSRCDIR.libdvdcss?=		../../multimedia/libdvdcss
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libdvdcss=libdvdcss
 BUILDLINK_PREFIX.libdvdcss_DEFAULT=	${LOCALBASE}
