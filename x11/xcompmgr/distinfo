@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/21 17:04:07 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/11/29 11:27:02 xtraeme Exp $
 
-SHA1 (xcompmgr-cvs-20040914.tgz) = 76e8fd98c5314fd2bdc427d567743860a65c5ae4
-Size (xcompmgr-cvs-20040914.tgz) = 16299 bytes
+SHA1 (xcompmgr-1.1.1.tar.gz) = 9b8427070a005c5300290aaae49d40c4ba17267c
+Size (xcompmgr-1.1.1.tar.gz) = 87131 bytes
