@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/03/26 04:05:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2003/03/28 21:14:21 wiz Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
@@ -19,7 +19,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_ONLY=	# empty
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}

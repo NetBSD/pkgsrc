@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/09 10:57:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/28 21:14:24 wiz Exp $
 #
 
 DISTNAME=	windowmaker-desktop-1.1
@@ -27,7 +27,6 @@ DEPENDS+=	wmmixer-[0-9]*:../../audio/wmmixer
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

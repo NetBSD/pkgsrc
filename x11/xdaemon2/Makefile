@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/13 17:38:05 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:42 wiz Exp $
 
 DISTNAME=	xdaemon-2.0
 PKGREVISION=	1
@@ -17,7 +17,6 @@ CONFLICT+=	xdaemon-1.*
 DIST_SUBDIR=xdaemon
 PIX=		xdaemon.png xdaemon2.png
 #WRKSRC=	${WRKDIR}
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/12/03 17:56:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/28 21:14:24 wiz Exp $
 #
 
 DISTNAME=	web-server-1.1
@@ -15,7 +15,6 @@ DEPENDS+=	glimpse>=4.1:../../textproc/glimpse
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

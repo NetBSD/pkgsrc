@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/13 14:14:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/28 21:14:19 wiz Exp $
 #
 
 DISTNAME=	freefonts-0.10
@@ -10,7 +10,6 @@ MAINTAINER=	reed@reedmedia.net
 COMMENT=	Collection of 79 freely available fonts
 
 EXTRACT_ONLY=	# empty
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

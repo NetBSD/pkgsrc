@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:51:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:30 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/08/31 07:51:40 tg Exp
 #
 
@@ -11,7 +11,6 @@ MAINTAINER=	packages@netbsd.org
 COMMENT=	Filter that converts RTF (MS's Rich Text Format) into LaTeX
 
 WRKSRC=		${WRKDIR}/rtf2LaTeX
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 
 post-extract:

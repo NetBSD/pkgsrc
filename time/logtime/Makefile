@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:48 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/28 21:14:37 wiz Exp $
 #
 
 DISTNAME=		logtime-1.0
@@ -13,7 +13,6 @@ DEPENDS+=		sh-utils-[0-9]*:../../sysutils/sh-utils
 .include "../../mk/bsd.prefs.mk"
 
 NO_CONFIGURE=		yes
-NO_PATCH=		yes
 
 MAKE_PARAMS+=		PREFIX=${PREFIX}
 MAKE_PARAMS+=		GDATE=${LOCALBASE}/bin/gdate

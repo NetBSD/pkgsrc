@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/12/25 03:24:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:22 wiz Exp $
 
 .include "Makefile.common"
 
@@ -7,7 +7,6 @@ COMMENT=	Documentation and fonts used by mplayer and gmplayer
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
-NO_PATCH=	YES
 
 MP_FONTS=	font-arial-iso-8859-1.tar.bz2 \
 		font-arial-iso-8859-2.tar.bz2 \

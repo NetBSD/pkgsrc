@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/01/21 14:22:31 tron Exp $
+# $NetBSD: Makefile,v 1.20 2003/03/28 21:14:10 wiz Exp $
 
 DISTNAME=	gtar-1.13.25
 PKGREVISION=	1
@@ -17,7 +17,6 @@ USE_BUILDLINK2=	yes
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/12/26 20:52:13 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/28 21:14:37 wiz Exp $
 #
 
 DISTNAME=	xp
@@ -14,7 +14,6 @@ COMMENT=	James Clark's non-validating XML Parser for Java
 EXTRACT_ONLY=	# empty
 USE_JAVA=	run
 USE_BUILDLINK2=
-NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
 

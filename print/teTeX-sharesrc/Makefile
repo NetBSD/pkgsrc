@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/10/31 03:08:09 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/03/28 21:14:31 wiz Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -18,7 +18,6 @@ DIST_SUBDIR=	teTeX
 WRKSRC=		${WRKDIR}
 USE_BUILDINK2=	yes
 EXTRACT_ONLY=	# empty
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
