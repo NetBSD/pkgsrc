@@ -1,16 +1,49 @@
-$NetBSD: patch-ag,v 1.1.1.1 2002/03/05 23:24:07 jlam Exp $
+$NetBSD: patch-ag,v 1.2 2002/03/05 23:56:24 jlam Exp $
 
---- srclib/apr-util/xml/apr_xml.c.orig	Thu Jan  3 16:34:11 2002
-+++ srclib/apr-util/xml/apr_xml.c	Thu Jan  3 16:34:26 2002
-@@ -63,11 +63,7 @@
+--- support/Makefile.in.orig	Tue Mar  5 14:37:53 2002
++++ support/Makefile.in
+@@ -2,6 +2,7 @@
+ 	logresolve.pl phf_abuse_log.cgi split-logfile
  
- #include "apu_config.h"
+ PROGRAMS = htpasswd htdigest rotatelogs logresolve ab checkgid htdbm
++SCRIPTS  = apxs apachectl dbmmanage
+ TARGETS  = $(PROGRAMS)
  
--#ifdef APR_HAVE_OLD_EXPAT
--#include "xmlparse.h"
--#else
- #include "expat.h"
--#endif
+ PROGRAM_LDADD        = $(EXTRA_LDFLAGS) $(UTIL_LDFLAGS) $(PROGRAM_DEPENDENCIES) $(EXTRA_LIBS)
+@@ -15,18 +16,30 @@
+ 	@test -d $(bindir) || $(MKINSTALLDIRS) $(bindir)
+ 	@test -d $(libexecdir) || $(MKINSTALLDIRS) $(libexecdir)
+ 	@cp -p $(top_builddir)/server/httpd.exp $(libexecdir)
+-	@for i in apxs apachectl dbmmanage; do \
+-	    if test -f "$(builddir)/$$i"; then \
+-	        cp -p $$i $(sbindir); \
+-	        chmod 755 $(sbindir)/$$i; \
+-	    fi ; \
+-	done
+ 	@if test -f "$(builddir)/envvars-std"; then \
+ 	    cp -p envvars-std $(sbindir); \
++	    if false; then \
+ 	    if test ! -f $(sbindir)/envvars; then \
+ 	        cp -p envvars-std $(sbindir)/envvars ; \
+ 	    fi ; \
++	    fi ; \
+ 	fi
++
++apxs: apxs.pl
++	sed -e "s#%prefix%#$(prefix)#g" \
++		-e "s#%installbuilddir%#$(installbuilddir)#g" \
++		< apxs.pl > $@
++	chmod +x $@
++
++apachectl: apachectl.sh
++	sed -e "s#%runtimedir%#$(runtimedir)#g" \
++		-e "s#%sbindir%#$(sbindir)#g" \
++		< apachectl.sh > $@
++	chmod +x $@
++
++dbmmanage: dbmmanage.pl
++	cp dbmmanage.pl $@
++	chmod +x $@
  
- #define DEBUG_CR "\r\n"
- 
+ htpasswd_OBJECTS = htpasswd.lo
+ htpasswd: $(htpasswd_OBJECTS)
