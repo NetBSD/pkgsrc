@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/16 13:30:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2001/07/01 21:24:25 jlam Exp $
 #
 
 DISTNAME=	xmcd-2.6
@@ -9,12 +9,11 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://metalab.unc.edu/tkan/xmcd/
 COMMENT=	Motif CD player
 
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
-
-USE_MOTIF=	yes
-USE_IMAKE=	yes
-IS_INTERACTIVE=	yes	# asks a lot of questions
-MAKE_ENV+=	SHELL=/bin/sh
+USE_BUILDLINK_ONLY=	yes
+USE_NCURSES=		yes
+USE_IMAKE=		yes
+IS_INTERACTIVE=		yes	# asks a lot of questions
+MAKE_ENV+=		SHELL=/bin/sh
 
 pre-install:
 	cd ${WRKSRC} && \
@@ -35,4 +34,6 @@ post-install:
 	${MV} ${PREFIX}/man/cat1/xmcd.1 ${PREFIX}/man/man1/xmcd.1
 	${PREFIX}/lib/X11/xmcd/config/config.sh
 
+.include "../../devel/ncurses/buildlink.mk"
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
