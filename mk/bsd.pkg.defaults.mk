@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.263 2004/07/21 22:32:24 schmonz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.264 2004/07/25 06:51:33 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -41,6 +41,11 @@ MANINSTALL?= maninstall catinstall
 # use machine-specific object directories, e.g.  work.i386, work.sparc
 # Possible: defined, not defined
 # Default: not defined
+
+#PKG_SUFX= .tbz
+# Create binary packages with bzip2(1) or gzip(1).
+# Possible: .tbz, .tgz
+# Default: .tgz
 
 PKGSRC_LOCKTYPE?= none
 # The type of locking which will be done if competing processes attempt to
