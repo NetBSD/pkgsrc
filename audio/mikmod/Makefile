@@ -1,29 +1,34 @@
-# $NetBSD: Makefile,v 1.10 1998/06/18 16:15:10 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/07/04 07:50:09 mycroft Exp $
 #
 
-DISTNAME=	mikmod-2.14-unix
-PKGNAME=	mikmod-2.14
+DISTNAME=	mikmod-3.0.3
 CATEGORIES=	audio
-MASTER_SITES=	http://www.chiark.greenend.org.uk/~stevem/mikmod/
+MASTER_SITES=	http://www.freenet.tlh.fl.us/~amstpi/	\
+		${MASTER_SITE_SUNSITE}
+MASTER_SITE_SUBDIR=	apps/sound/players
 
 MAINTAINER=	mycroft@NetBSD.ORG
 
-DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
+CONFLICTS=	mikmod-2.14
 
-RESTRICTED=	"Registration required for redistribution and commercial use."
-MIRROR_DISTFILE=	no
+DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
+USE_GMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/source
+post-patch:
+	chmod a+x ${WRKSRC}/build-mikmod.netbsd.sh
+
+do-build:
+	@(cd ${WRKSRC}; ${SETENV} PREFIX=${PREFIX} ./build-mikmod.netbsd.sh)
 
 do-install:
-	( cd ${WRKSRC} ; ${INSTALL_PROGRAM} mikmod mikcvt ${PREFIX}/bin )
-	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/docs/mikmod.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/usercode/mikmod ${PREFIX}/bin
+	#${INSTALL_MAN} ${WRKSRC}/docs/mikmod.1 ${PREFIX}/man/man1
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/mikmod
-.for f in  credits.txt mikmod.txt register.frm
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/docs/$f ${PREFIX}/share/doc/mikmod
+.for f in bugs.txt changes.txt future.txt mikmod.doc mikmod.txt tips.txt
+	${INSTALL_DATA} ${WRKSRC}/docs/$f ${PREFIX}/share/doc/mikmod
 .endfor
 .endif
 

@@ -1,11 +1,11 @@
---- display.c.orig	Sun Apr 20 17:13:42 1997
-+++ display.c	Sun Apr 20 17:13:59 1997
-@@ -26,7 +26,7 @@
- #include "mikmod.h"
- 
+--- usercode/display.c.orig	Sat Mar 21 14:44:23 1998
++++ usercode/display.c	Sat Jul  4 02:11:46 1998
+@@ -37,7 +37,7 @@
  #ifdef NCURSES
--#include <ncurses/ncurses.h>
-+#include <ncurses.h>
+ #include <ncurses/ncurses.h>
+ #else
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <ncurses.h>
  #else
  #include <curses.h>
- #endif
