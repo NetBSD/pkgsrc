@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.common,v 1.1 2003/04/03 17:01:36 salo Exp $
-
-For all systems, to use the "sipr" codec, a "libm.so.6" is required.  It is
-not yet known if the libm on your system will suit this functionality or
-not.
-===========================================================================
