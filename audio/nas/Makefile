@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/10/26 00:02:05 grant Exp $
+# $NetBSD: Makefile,v 1.34 2003/10/26 00:03:42 grant Exp $
 
 DISTNAME=	nas-1.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -12,7 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://radscan.com/nas.html
 COMMENT=	Network Audio System
 
-DEPENDS=	p5-perl-headers-${OS_VERSION}:../../devel/p5-perl-headers
+DEPENDS+=	p5-perl-headers-${OS_VERSION}:../../devel/p5-perl-headers
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
