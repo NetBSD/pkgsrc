@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/05 13:53:50 rh Exp $
+bin/antiword
+share/doc/antiword/COPYING
+share/doc/antiword/Changes
+share/doc/antiword/History
+share/doc/antiword/QandA
+share/doc/antiword/ReadMe
+@dirrm share/doc/antiword

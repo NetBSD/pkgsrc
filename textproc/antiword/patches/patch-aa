@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/05 13:53:50 rh Exp $
+
+--- Makefile.orig	Mon Nov  1 20:21:36 1999
++++ Makefile	Wed Jul  5 15:46:26 2000
+@@ -2,7 +2,6 @@
+ # Makefile for antiword (Linux version)
+ #
+ 
+-CC	= gcc
+ LD	= gcc
+ 
+ # must be equal to DEBUG or NDEBUG
+@@ -10,7 +9,7 @@
+ 
+ LDLIBS	=
+ 
+-CFLAGS	= -Wall -pedantic -O2 -D$(DB)
++CFLAGS += -Wall -pedantic -D$(DB)
+ LDFLAGS	=
+ 
+ OBJS	=\
+@@ -22,12 +21,16 @@
+ PROGS =\
+ 	antiword
+ 
+-INSTALL_DIR = $(HOME)/bin
++INSTALL_DIR = ${PREFIX}/bin
+ 
+ all:		$(PROGS)
+ 
+ install:	all
+-		cp -pf $(PROGS) $(INSTALL_DIR)
++		${BSD_INSTALL_PROGRAM} ${PROGS} ${INSTALL_DIR}
++		${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/doc/antiword
++.for file in COPYING Changes History QandA ReadMe
++		${BSD_INSTALL_DATA} Docs/${file} ${PREFIX}/share/doc/antiword
++.endfor
+ 
+ clean:
+ 		rm -f $(OBJS)
