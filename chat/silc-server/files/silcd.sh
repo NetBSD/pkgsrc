@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: silcd.sh,v 1.6 2002/09/20 02:01:55 grant Exp $
+# $NetBSD: silcd.sh,v 1.7 2003/10/16 12:37:44 salo Exp $
 #
 # PROVIDE: silcd
 # REQUIRE: DAEMON
@@ -23,7 +23,7 @@ stop_cmd="silcd_stop"
 silcd_precmd()
 {
 	if [ ! -f $confdir/silcd.prv ]; then
-		$command -C $confdir
+		umask 7177 && $command -C $confdir
 	fi
 }
 
