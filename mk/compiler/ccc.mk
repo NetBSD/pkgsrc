@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.9 2005/01/12 17:39:18 jlam Exp $
+# $NetBSD: ccc.mk,v 1.10 2005/01/12 17:39:34 jlam Exp $
 
 .if !defined(COMPILER_CCC_MK)
 COMPILER_CCC_MK=	defined
@@ -55,8 +55,8 @@ _LINKER_RPATH_FLAG=	-rpath
 _COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG},
 
 # Most packages assume ieee floats, make that the default.
-CFLAGS+=-ieee
-CXXFLAGS+=-ieee
+CFLAGS+=	-ieee
+CXXFLAGS+=	-ieee
 
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.ccc)
