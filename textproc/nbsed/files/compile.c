@@ -1,4 +1,4 @@
-/*	$NetBSD: compile.c,v 1.5 2004/07/25 05:40:08 grant Exp $	*/
+/*	$NetBSD: compile.c,v 1.6 2004/08/21 08:39:54 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -67,41 +67,52 @@
  * SUCH DAMAGE.
  */
 
+#if HAVE_CONFIG_H
 #include "config.h"
-
-#ifdef HAVE_SYS_CDEFS_H
+#endif
+#include <nbcompat.h>
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)compile.c	8.2 (Berkeley) 4/28/95";
 #else
-__RCSID("$NetBSD: compile.c,v 1.5 2004/07/25 05:40:08 grant Exp $");
+__RCSID("$NetBSD: compile.c,v 1.6 2004/08/21 08:39:54 jlam Exp $");
 #endif
 #endif /* not lint */
 
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
+#endif
+#if HAVE_SYS_STAT_H
 #include <sys/stat.h>
+#endif
 
+#if HAVE_CTYPE_H
 #include <ctype.h>
+#endif
+#if HAVE_ERRNO_H
 #include <errno.h>
-
-#ifdef HAVE_FCNTL_H
+#endif
+#if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-
-#ifdef HAVE_LIMITS_H
+#if HAVE_LIMITS_H
 #include <limits.h>
 #endif
-
-#ifdef HAVE_REGEX_H
+#if HAVE_REGEX_H
 #include <regex.h>
 #endif
-
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STDLIB_H
 #include <stdlib.h>
+#endif
+#if HAVE_STRING_H
 #include <string.h>
+#endif
 
 #include "defs.h"
 #include "extern.h"
@@ -559,7 +570,7 @@ compile_subst(char *p, struct s_subst *s)
 		size += sp - op;
 		if (asize - size < _POSIX2_LINE_MAX + 1) {
 			asize *= 2;
-			text = xmalloc(asize);
+			text = xrealloc(text, asize);
 		}
 	} while (cu_fgets(p = lbuf, sizeof(lbuf)));
 	err(COMPILE, "unterminated substitute in regular expression");

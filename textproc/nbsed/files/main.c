@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.4 2004/07/25 05:40:39 grant Exp $	*/
+/*	$NetBSD: main.c,v 1.5 2004/08/21 08:39:54 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -67,12 +67,13 @@
  * SUCH DAMAGE.
  */
 
+#if HAVE_CONFIG_H
 #include "config.h"
-
-#ifdef HAVE_SYS_CDEFS_H
+#endif
+#include <nbcompat.h>
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 1992, 1993\n\
 	The Regents of the University of California.  All rights reserved.\n");
@@ -82,38 +83,41 @@ __COPYRIGHT("@(#) Copyright (c) 1992, 1993\n\
 #if 0
 static char sccsid[] = "@(#)main.c	8.2 (Berkeley) 1/3/94";
 #else
-__RCSID("$NetBSD: main.c,v 1.4 2004/07/25 05:40:39 grant Exp $");
+__RCSID("$NetBSD: main.c,v 1.5 2004/08/21 08:39:54 jlam Exp $");
 #endif
 #endif /* not lint */
 
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
+#endif
 
+#if HAVE_CTYPE_H
 #include <ctype.h>
-
-#ifdef HAVE_ERRNO_H
+#endif
+#if HAVE_ERRNO_H
 #include <errno.h>
 #endif
-
-#ifdef HAVE_FCNTL_H
+#if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-
-#ifdef HAVE_REGEX_H
+#if HAVE_REGEX_H
 #include <regex.h>
 #endif
-
-#ifdef HAVE_STDDEF_H
+#if HAVE_STDDEF_H
 #include <stddef.h>
 #endif
-
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STDLIB_H
 #include <stdlib.h>
-
-#ifdef HAVE_STRING_H
+#endif
+#if HAVE_STRING_H
 #include <string.h>
 #endif
-
+#if HAVE_UNISTD_H
 #include <unistd.h>
+#endif
 
 #include "defs.h"
 #include "extern.h"

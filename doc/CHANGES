@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6960 2004/08/21 07:01:02 schmonz Exp $
+$NetBSD: CHANGES,v 1.6961 2004/08/21 08:39:59 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3927,3 +3927,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pax to 20040802 [jlam 2004-08-21]
 	Updated mtree to 20040722 [jlam 2004-08-21]
 	Updated memtester to 4.0.3 [schmonz 2004-08-21]
+	Updated nbsed to 20040821 [jlam 2004-08-21]

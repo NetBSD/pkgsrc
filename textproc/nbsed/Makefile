@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2004/07/25 05:42:30 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/21 08:39:54 jlam Exp $
 
-DISTNAME=		nbsed-20040725
+DISTNAME=		nbsed-20040821
 CATEGORIES=		textproc pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -10,11 +10,11 @@ HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		NetBSD-current's sed(1)
 
 NO_CHECKSUM=		# defined
-
 GNU_CONFIGURE=		# defined
 
 post-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${FILESDIR} && ${PAX} -rwpe . ${WRKSRC}
 
+.include "../../pkgtools/libnbcompat/inplace.mk"
 .include "../../mk/bsd.pkg.mk"
