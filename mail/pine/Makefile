@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2004/05/02 00:22:20 snj Exp $
+# $NetBSD: Makefile,v 1.87 2004/05/07 20:00:53 reed Exp $
 
 DISTNAME=       pine4.58
 PKGNAME=        pine-4.58
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
@@ -66,11 +66,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpdump ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpload ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${FILESDIR}/pgpencrypt ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${FILESDIR}/pgpdecode ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${FILESDIR}/pgpsign ${PREFIX}/bin/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pine
-	${INSTALL_DATA} ${FILESDIR}/dot.pinerc.pgp.sample ${PREFIX}/share/examples/pine/dot.pinerc.pgp
 	${INSTALL_MAN} ${WRKSRC}/doc/pine.1 ${PREFIX}/man/man1/pine.1
 	( ${ECHO} '# (This file is not part of the pine distribution! - HF)' ; \
 	  ${PREFIX}/bin/pine -conf ) | ${SED} \
