@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2002/11/20 10:29:53 chris Exp $
+# $NetBSD: Makefile,v 1.25 2002/11/24 12:39:20 chris Exp $
 
 DISTNAME=	sylpheed-0.8.6
+PKGREVISION=	1
 CATEGORIES=	mail news x11
 MASTER_SITES=	http://sylpheed.good-day.net/sylpheed/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,7 +28,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 BUILDLINK_DEPENDS.gpgme=	gpgme>=0.3.5
 
 .include "../../mk/bsd.prefs.mk"
-BUILD_DEFS+=		USE_INET6
+BUILD_DEFS+=		USE_INET6 USE_OPENLDAP
 
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ARGS+=	--enable-ipv6
@@ -40,6 +41,12 @@ FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
 .  include "../../mail/faces/buildlink2.mk"
 .endif
 
+.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
+CONFIGURE_ARGS+=	--enable-ldap
+.include "../../databases/openldap/buildlink2.mk"
+.endif
+
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../security/gpgme/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
