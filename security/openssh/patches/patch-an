@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.3 2004/08/04 06:43:52 minskim Exp $
+$NetBSD: patch-an,v 1.4 2004/08/31 11:27:12 wiz Exp $
 
---- sshd.c.orig	Sun Mar 21 16:36:01 2004
+--- sshd.c.orig	2004-08-12 15:08:15.000000000 +0200
 +++ sshd.c
-@@ -52,6 +52,9 @@ RCSID("$OpenBSD: sshd.c,v 1.290 2004/03/
+@@ -52,6 +52,9 @@ RCSID("$OpenBSD: sshd.c,v 1.301 2004/08/
  #include <sys/security.h>
  #include <prot.h>
  #endif
@@ -12,7 +12,7 @@ $NetBSD: patch-an,v 1.3 2004/08/04 06:43:52 minskim Exp $
  
  #include "ssh.h"
  #include "ssh1.h"
-@@ -570,10 +573,15 @@ privsep_preauth_child(void)
+@@ -579,10 +582,15 @@ privsep_preauth_child(void)
  	/* XXX not ready, too heavy after chroot */
  	do_setusercontext(pw);
  #else
@@ -28,7 +28,7 @@ $NetBSD: patch-an,v 1.3 2004/08/04 06:43:52 minskim Exp $
  #endif
  }
  
-@@ -817,8 +825,10 @@ main(int ac, char **av)
+@@ -911,8 +919,10 @@ main(int ac, char **av)
  	av = saved_argv;
  #endif
  
@@ -39,7 +39,7 @@ $NetBSD: patch-an,v 1.3 2004/08/04 06:43:52 minskim Exp $
  
  	/* Initialize configuration options to their default values. */
  	initialize_server_options(&options);
-@@ -1062,8 +1072,10 @@ main(int ac, char **av)
+@@ -1183,8 +1193,10 @@ main(int ac, char **av)
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */
@@ -48,5 +48,5 @@ $NetBSD: patch-an,v 1.3 2004/08/04 06:43:52 minskim Exp $
  		debug("setgroups() failed: %.200s", strerror(errno));
 +#endif /* __INTERIX */
  
- 	/* Initialize the log (it is reinitialized below in case we forked). */
- 	if (debug_flag && !inetd_flag)
+ 	if (rexec_flag) {
+ 		rexec_argv = xmalloc(sizeof(char *) * (rexec_argc + 2));

@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.3 2004/08/04 06:43:52 minskim Exp $
+$NetBSD: patch-al,v 1.4 2004/08/31 11:27:12 wiz Exp $
 
---- openbsd-compat/getrrsetbyname.c.orig	Mon Feb 23 22:51:07 2004
+--- openbsd-compat/getrrsetbyname.c.orig	2004-05-13 12:24:10.000000000 +0200
 +++ openbsd-compat/getrrsetbyname.c
 @@ -47,7 +47,7 @@
  
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.3 2004/08/04 06:43:52 minskim Exp $
  
  #include "getrrsetbyname.h"
  
-@@ -574,4 +574,4 @@ count_dns_rr(struct dns_rr *p, u_int16_t
+@@ -578,4 +578,4 @@ count_dns_rr(struct dns_rr *p, u_int16_t
  	return (n);
  }
  

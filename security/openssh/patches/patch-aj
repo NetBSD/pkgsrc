@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.4 2004/08/04 06:43:52 minskim Exp $
+$NetBSD: patch-aj,v 1.5 2004/08/31 11:27:12 wiz Exp $
 
---- ssh-keygen.c.orig	Tue Dec 30 18:34:52 2003
+--- ssh-keygen.c.orig	2004-07-17 08:12:08.000000000 +0200
 +++ ssh-keygen.c
-@@ -623,6 +623,7 @@ do_change_passphrase(struct passwd *pw)
+@@ -622,6 +622,7 @@ do_change_passphrase(struct passwd *pw)
  	exit(0);
  }
  
@@ -10,7 +10,7 @@ $NetBSD: patch-aj,v 1.4 2004/08/04 06:43:52 minskim Exp $
  /*
   * Print the SSHFP RR.
   */
-@@ -652,6 +653,7 @@ do_print_resource_record(struct passwd *
+@@ -651,6 +652,7 @@ do_print_resource_record(struct passwd *
  	printf("failed to read v2 public key from %s.\n", identity_file);
  	exit(1);
  }
@@ -18,7 +18,7 @@ $NetBSD: patch-aj,v 1.4 2004/08/04 06:43:52 minskim Exp $
  
  /*
   * Change the comment of a private key file.
-@@ -770,7 +772,9 @@ usage(void)
+@@ -769,7 +771,9 @@ usage(void)
  	fprintf(stderr, "  -C comment  Provide new comment.\n");
  	fprintf(stderr, "  -N phrase   Provide new passphrase.\n");
  	fprintf(stderr, "  -P phrase   Provide old passphrase.\n");
@@ -28,7 +28,7 @@ $NetBSD: patch-aj,v 1.4 2004/08/04 06:43:52 minskim Exp $
  #ifdef SMARTCARD
  	fprintf(stderr, "  -D reader   Download public key from smartcard.\n");
  	fprintf(stderr, "  -U reader   Upload private key to smartcard.\n");
-@@ -967,7 +971,11 @@ main(int ac, char **av)
+@@ -957,7 +961,11 @@ main(int ac, char **av)
  	if (print_public)
  		do_print_public(pw);
  	if (resource_record_hostname != NULL) {

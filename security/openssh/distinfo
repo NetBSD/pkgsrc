@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.34 2004/08/04 06:43:52 minskim Exp $
+$NetBSD: distinfo,v 1.35 2004/08/31 11:27:11 wiz Exp $
 
-SHA1 (openssh-3.8.1p1.tar.gz) = 772c3a69014a8a7bf8c1bde8ab6770f9c91049e4
-Size (openssh-3.8.1p1.tar.gz) = 817932 bytes
-SHA1 (patch-aa) = 171d144d781b28a6665e022ffbb449888f6302e3
-SHA1 (patch-ab) = 8c1b1d92cf45ea921db650e2eb50fcafbdd83407
-SHA1 (patch-ac) = 2652a918c43bb780c8b0e5e3691d2a1ffba74700
-SHA1 (patch-ad) = 15627b65ea3607bf5a66d0def463b05f57ed303d
+SHA1 (openssh-3.9p1.tar.gz) = 80b19d83a9d4717f5c38b2d950501e1471f60afc
+Size (openssh-3.9p1.tar.gz) = 854027 bytes
+SHA1 (patch-aa) = 5d0b1cf5cf92e0d314e6458b225074a73f35f857
+SHA1 (patch-ab) = 662440f96d38e43b0c8de7bef260f82d8b7ab737
+SHA1 (patch-ac) = 3ad72f42b066ef1f48e276bccd438da2d6fde980
+SHA1 (patch-ad) = 6a0c4edd2217f22f7c9622fb38124287e93c5fc8
 SHA1 (patch-ae) = fece020b1c2432f4ac5b62104be808aa3f70ea22
 SHA1 (patch-af) = 444fadaafdb45adc1008cbf106cd28c075700616
-SHA1 (patch-ag) = 873d2b8c3293a3a9c4da7581da574e22bddca15e
-SHA1 (patch-ah) = 8f1fa190e4fb115bb5311b4ccd839a649e1b09e5
+SHA1 (patch-ag) = d0c93842739da39b588acdb0449a2562e05497d3
+SHA1 (patch-ah) = 85a8f0fa5ddf13f8342faaff6bf81fcd3ad6648a
 SHA1 (patch-ai) = da31e53b3ccbef24abc6418ee466f1e43fdd7447
-SHA1 (patch-aj) = 677e614947c884c4208a6ca76fc9c6237d7aa6f7
-SHA1 (patch-ak) = 97bc28537830eaa889bd807cd9b3f2c20dc938a2
-SHA1 (patch-al) = 958c5516996e4040ac779bf1f53c486253c40cfb
+SHA1 (patch-aj) = ea07f23e66863e78bbe2cfced747795cb6c2f7ba
+SHA1 (patch-ak) = fe65dbf8771f6515d32ed994723b979f8e3211d6
+SHA1 (patch-al) = 5a0aed20f0c75b5bbcf4abce1e50d1ced3990ca7
 SHA1 (patch-am) = a88eb34b83789453b8e212b14f33d8e98d153667
-SHA1 (patch-an) = e92a4e3b3bc07eda155a17009743c110d88c8c22
+SHA1 (patch-an) = 4694cd36c85d76fe42411600a482dcfa1421f704
 SHA1 (patch-ao) = 00750c5f80bced34c54558cbd5ad3b96384e0d00
-SHA1 (patch-ap) = c2182328f9f108df14ce379c8dfa50fd53815a4a
-SHA1 (patch-aq) = 009f4696f32f0addde1c953aaab759f920816692
+SHA1 (patch-ap) = ba0a85060632dfa3939b7316f0acecfa3100082d
+SHA1 (patch-aq) = ee466164b653f521445884e119627f4927fabbe0
