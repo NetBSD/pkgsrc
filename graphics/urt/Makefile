@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/06/02 01:19:12 jschauma Exp $
+# $NetBSD: Makefile,v 1.28 2003/06/07 14:47:19 cjep Exp $
 
 DISTNAME=	urt
 PKGNAME=	urt-3.1b1
@@ -13,7 +13,7 @@ PATCHFILES=	urt-3.1b-3.1b1.patch
 PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	tech-pkg@netbsd.org
-COMMENT=	Utah raster toolkit - a toolkit and library for raster image processing
+COMMENT=	Toolkit and library for raster image processing
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z
 
