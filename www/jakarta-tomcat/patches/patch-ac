@@ -1,3 +1,4 @@
+$NetBSD: patch-ac,v 1.2 2000/09/03 13:38:50 wiz Exp $
 --- src/shell/tomcat.sh.orig	Wed May 31 15:43:29 2000
 +++ src/shell/tomcat.sh	Wed May 31 15:43:58 2000
 @@ -107,7 +107,8 @@
