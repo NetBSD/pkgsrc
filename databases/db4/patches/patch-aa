@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2003/12/07 02:30:31 epg Exp $
+$NetBSD: patch-aa,v 1.5 2004/06/28 22:11:38 jlam Exp $
 
 --- ../dist/Makefile.in.orig	Fri Nov 28 13:50:06 2003
 +++ ../dist/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2003/12/07 02:30:31 epg Exp $
  includedir=@includedir@
  libdir=	@libdir@
 -docdir=	$(prefix)/docs
-+docdir=	$(prefix)/share/doc/db4
++docdir=	$(prefix)/share/doc/html/db4
  
  dmode=	755
  emode=	555
