@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/14 08:03:54 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/05/14 08:22:45 xtraeme Exp $
 bin/al
 bin/cli-unknown-ar
 bin/cli-unknown-cpp
@@ -113,6 +113,7 @@ man/man1/ilstrip.1
 man/man1/ilverify.1
 man/man1/resgen.1
 @dirrm lib/pnet
+@dirrm lib/cscc/lib
 @dirrm lib/cscc/plugins
 @dirrm lib/cscc
 @dirrm include/pnet
