@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.2 2004/02/01 01:33:06 jlam Exp $
+# $NetBSD: distcc.mk,v 1.3 2004/02/02 10:03:46 jlam Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	defined
@@ -10,6 +10,19 @@ MAKEFLAGS+=	IGNORE_DISTCC=yes
 
 .if defined(IGNORE_DISTCC)
 _USE_DISTCC=	NO
+.endif
+
+# LANGUAGES.<compiler> is the list of supported languages by the compiler.
+# _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
+# requested by the package in USE_LANGUAGES.
+# 
+LANGUAGES.distcc=	c c++
+_LANGUAGES.distcc=	# empty
+.for _lang_ in ${USE_LANGUAGES}
+_LANGUAGES.distcc=	${LANGUAGES.distcc:M${_lang_}}
+.endfor
+.if empty(_LANGUAGES.distcc)
+_USE_CCACHE=	NO
 .endif
 
 .if !defined(_USE_DISTCC)
@@ -30,10 +43,16 @@ _DISTCCBASE?=		${LOCALBASE}
 _DISTCC_DIR=	${WRKDIR}/.distcc
 PATH:=		${_DISTCC_DIR}/bin:${PATH}
 
-CC:=		${_DISTCC_DIR}/bin/${CC:T}
-CXX:=		${_DISTCC_DIR}/bin/${CXX:T}
+.if !empty(_LANGUAGES:distcc:Mc)
+CC:=	${_DISTCC_DIR}/bin/${CC:T}
+_DISTCC_LINKS+=	CC
+.endif
+.if !empty(_LANGUAGES:distcc:Mc++)
+CXX:=	${_DISTCC_DIR}/bin/${CXX:T}
+_DISTCC_LINKS+=	CXX
+.endif
 
-.  for _target_ in CC CXX
+.  for _target_ in ${_DISTCC_LINKS}
 override-tools: ${${_target_}}
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
