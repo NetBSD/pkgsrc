@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/15 19:11:17 tron Exp $
+
+SHA1 (connect.c) = 27ecbd5d7e08908284f371679af514c8662f4dce
+Size (connect.c) = 67695 bytes
