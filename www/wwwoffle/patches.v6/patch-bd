@@ -1,3 +1,5 @@
+$NetBSD: patch-bd,v 1.2 1999/09/03 21:10:54 tron Exp $
+
 --- sockets.c.orig	Mon Aug 23 17:02:36 1999
 +++ sockets.c	Wed Aug 25 18:20:28 1999
 @@ -15,6 +15,7 @@
