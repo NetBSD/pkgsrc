@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1998/05/08 17:32:46 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.9 1998/07/12 21:29:46 frueauf Exp $
 bin/ali
 bin/anno
 bin/burst
@@ -31,6 +31,7 @@ bin/scan
 bin/send
 bin/show
 bin/sortm
+bin/viamail
 bin/whatnow
 bin/whom
 etc/nmh/MailAliases
@@ -68,9 +69,9 @@ libexec/nmh/rcvdist
 libexec/nmh/rcvpack
 libexec/nmh/rcvstore
 libexec/nmh/rcvtty
+libexec/nmh/sendfiles
 libexec/nmh/slocal
 libexec/nmh/spost
-libexec/nmh/viamail
 man/man1/ali.1.gz
 man/man1/anno.1.gz
 man/man1/burst.1.gz
@@ -106,6 +107,7 @@ man/man1/rmf.1.gz
 man/man1/rmm.1.gz
 man/man1/scan.1.gz
 man/man1/send.1.gz
+man/man1/sendfiles.1.gz
 man/man1/show.1.gz
 man/man1/slocal.1.gz
 man/man1/sortm.1.gz
