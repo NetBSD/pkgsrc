@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.42 2002/12/09 01:22:07 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.43 2002/12/09 05:38:57 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -20,7 +20,7 @@ FALSE?=		/usr/bin/false
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
-GREP?=		/usr/bin/grep
+GREP?=		/usr/xpg4/bin/grep
 .if exists(${LOCALBASE}/bin/gtar)
 GTAR?=		${LOCALBASE}/bin/gtar
 .else
