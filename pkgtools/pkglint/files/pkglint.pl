@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.134 2005/02/23 11:45:16 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.135 2005/02/24 22:50:44 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -880,17 +880,15 @@ sub checkfile_PLIST($) {
 		}
 
 		if ($line->text =~ /^info\/dir$/) {
-			log_error($line->file, $line->lineno, "\"info/dir\" should not be listed in ".
-				"$file. use install-info to add/remove an entry.");
+			log_error($line->file, $line->lineno, "\"info/dir\" should not be listed. Use install-info to add/remove an entry.");
 		}
 
 		if ($line->text =~ /^lib\/locale/) {
-			log_error($line->file, $line->lineno, "\"lib/locale\" should not be listed ".
-				"in $file. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
+			log_error($line->file, $line->lineno, "\"lib/locale\" should not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
 		if ($line->text =~ /^share\/locale/) {
-			log_warning($line->file, $line->lineno, "use of \"share/locale\" in $file is ".
+			log_warning($line->file, $line->lineno, "use of \"share/locale\" is ".
 				"deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 		}
 
@@ -903,8 +901,8 @@ sub checkfile_PLIST($) {
 			log_warning($line->file, $line->lineno, "installing to directory $curdir discouraged. could you please avoid it?");
 		}
 
-		if ("$curdir/$line->text" =~ m:^$conf_localbase/share/doc:) {
-			log_info($line->file, $line->lineno, "seen installation to share/doc ($curdir/$line).");
+		if ("$curdir/".$line->text =~ m:^$conf_localbase/share/doc:) {
+			log_info($line->file, $line->lineno, "seen installation to share/doc.");
 		}
 	}
 
