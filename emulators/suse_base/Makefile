@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/12/17 13:05:42 tron Exp $
+# $NetBSD: Makefile,v 1.19 2000/12/17 13:13:26 tron Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -16,13 +16,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-# Careful!  The ncurses-p1.rpm file doesn't come from SuSE, quite.
-# It's been rebuilt to use seteuid() where an ill-advised SuSE patch
-# to standard ncurses uses setfsuid(), which is basically impossible
-# to emulate correctly under NetBSD.  So you'll find _this_ file _only_
-# on your local NetBSD mirror, not on SuSE or its mirrors.  Don't use
-# SuSE's ncurses.rpm -- it'll make things like /bin/sh dump core.
-#
 RPMFILES=		aaa_dir.rpm shlibs.rpm libz.rpm \
 			bash.rpm gppshare.rpm ncurses.rpm
 RPMIGNOREPATH=		tmp usr/tmp var
