@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/05/04 21:42:24 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/06/28 18:24:07 jmmv Exp $
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-font-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-config-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-dialog.h
@@ -12,22 +12,22 @@ lib/libgnomeprintui-2-2.so
 lib/libgnomeprintui-2-2.so.1
 lib/libgnomeprintui-2-2.so.1.0
 lib/pkgconfig/libgnomeprintui-2.2.pc
-share/doc/html/libgnomeprintui/c7.html
-share/doc/html/libgnomeprintui/home.png
-share/doc/html/libgnomeprintui/index.html
-share/doc/html/libgnomeprintui/index.sgml
-share/doc/html/libgnomeprintui/left.png
-share/doc/html/libgnomeprintui/libgnomeprintui-gnome-font-dialog.html
-share/doc/html/libgnomeprintui/libgnomeprintui-gnome-print-copies.html
-share/doc/html/libgnomeprintui/libgnomeprintui-gnome-print-dialog.html
-share/doc/html/libgnomeprintui/libgnomeprintui-gnome-print-job-preview.html
-share/doc/html/libgnomeprintui/libgnomeprintui-gnome-print-paper-selector.html
-share/doc/html/libgnomeprintui/libgnomeprintui-gnome-print-preview.html
-share/doc/html/libgnomeprintui/libgnomeprintui-gnome-printer-selector.html
-share/doc/html/libgnomeprintui/libgnomeprintui.html
-share/doc/html/libgnomeprintui/right.png
-share/doc/html/libgnomeprintui/style.css
-share/doc/html/libgnomeprintui/up.png
+share/doc/libgnomeprintui/c7.html
+share/doc/libgnomeprintui/home.png
+share/doc/libgnomeprintui/index.html
+share/doc/libgnomeprintui/index.sgml
+share/doc/libgnomeprintui/left.png
+share/doc/libgnomeprintui/libgnomeprintui-gnome-font-dialog.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-copies.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-dialog.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-job-preview.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-paper-selector.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-preview.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-printer-selector.html
+share/doc/libgnomeprintui/libgnomeprintui.html
+share/doc/libgnomeprintui/right.png
+share/doc/libgnomeprintui/style.css
+share/doc/libgnomeprintui/up.png
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnomeprintui-2.2.mo
@@ -91,6 +91,6 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnomeprintui-2.2.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnomeprintui-2.2.mo
-@dirrm share/doc/html/libgnomeprintui
+@dirrm share/doc/libgnomeprintui
 @dirrm include/libgnomeprintui-2.2/libgnomeprintui
 @dirrm include/libgnomeprintui-2.2
