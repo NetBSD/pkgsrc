@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/13 17:37:52 fredb Exp $
+# $NetBSD: Makefile,v 1.9.4.1 2002/07/22 17:02:07 agc Exp $
 
 DISTNAME=	quanta-2.0-pr2
 PKGNAME=	quanta-1.9.9.2
@@ -27,7 +27,7 @@ WRKSRC=		${WRKDIR}/quanta
 
 pre-configure:
 	cd ${WRKSRC};							\
-	${LOCALBASE}/bin/aclocal;					\
+	${LOCALBASE}/bin/aclocal --acdir=${LOCALBASE}/share/aclocal;	\
 	${LOCALBASE}/bin/autoheader;					\
 	${LOCALBASE}/bin/autoreconf --force;				\
 	${LOCALBASE}/bin/automake -a --gnu -i;				\
