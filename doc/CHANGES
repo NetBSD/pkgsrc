@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7866 2004/11/15 11:16:27 adam Exp $
+$NetBSD: CHANGES,v 1.7867 2004/11/15 11:35:30 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5286,3 +5286,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kkbswitch to 1.4.2 [markd 2004-11-15]
 	Updated liferea to 0.6.2 [jmmv 2004-11-15]
 	Updated ImageMagick to 6.1.4.1 [adam 2004-11-15]
+	Updated dspam to 3.2.2 [xtraeme 2004-11-15]
+	Updated qemu to 0.6.1 [xtraeme 2004-11-15]

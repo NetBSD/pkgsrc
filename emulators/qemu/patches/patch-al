@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1 2004/11/15 11:35:30 xtraeme Exp $
+
+--- osdep.h.orig	2004-11-15 12:01:18.000000000 +0100
++++ osdep.h	2004-11-15 12:01:55.000000000 +0100
+@@ -2,6 +2,8 @@
+ #define QEMU_OSDEP_H
+ 
+ #include <stdarg.h>
++#include <sys/types.h>
++#include <sys/signal.h>
+ 
+ int qemu_vsnprintf(char *buf, int buflen, const char *fmt, va_list args);
+ void qemu_vprintf(const char *fmt, va_list ap);
+@@ -28,7 +30,7 @@
+ struct qemu_sigaction {
+     union {
+         void (*_sa_handler)(int);
+-        void (*_sa_sigaction)(int, struct siginfo *, void *);
++        void (*_sa_sigaction)(int, siginfo_t *, void *);
+     } _u;
+     unsigned long sa_flags;
+     void (*sa_restorer)(void);
