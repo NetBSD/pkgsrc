@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1330 2004/01/23 22:42:42 recht Exp $
+$NetBSD: TODO,v 1.1331 2004/01/23 22:43:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -351,6 +351,7 @@ Suggested package updates
 	o xnc-5.0.2
 	o xorp-0.5
 	o xpad-1.13
+	o xpdf-3.00
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
