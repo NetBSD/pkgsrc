@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6477 2004/07/07 05:12:25 grant Exp $
+$NetBSD: CHANGES,v 1.6478 2004/07/07 05:45:24 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3288,3 +3288,4 @@ Changes to the packages collection and infrastructure in 2004:
 	bsd.pkg.mk: buildlink2 retired in favour of buildlink3 [wiz 2004-07-06]
 	Updated pkglint to 3.85 [wiz 2004-07-06]
 	Updated createbuildlink to 3.5 [wiz 2004-07-06]
+	Updated musicpd to 0.11.2 [simonb 2004-07-07]
