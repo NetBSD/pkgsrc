@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.17 2004/02/01 14:09:04 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.18 2004/02/02 12:19:10 jlam Exp $
 
 # Do not directly include this file in package Makefiles. It is
 # automatically included when required based on USE_GCC2.
@@ -28,14 +28,14 @@ BUILDLINK_WRAPPER_ENV+=	\
 # These files are from gcc>=2.95.3.
 BUILDLINK_FILES.gcc=	${_GCC_SUBPREFIX}include/g++-3/*
 BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}include/g++-3/*/*
-BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*
-BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*/*
-BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*/*/*
-BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/include/*/*/*/*
-BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/lib*.*
-BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${_GCC_ARCHSUBDIR}/specs
-BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${MACHINE_GNU_PLATFORM}/include/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/include/*/*/*/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/include/*/*/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/include/*/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/include/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/lib*.*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/gcc-lib/*/*/specs
 BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${MACHINE_GNU_PLATFORM}/include/*/*
+BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}${MACHINE_GNU_PLATFORM}/include/*
 BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/libiberty.*
 BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/libstdc++.*
 
