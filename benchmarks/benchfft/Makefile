@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/12/07 15:40:49 cjep Exp $
+# $NetBSD: Makefile,v 1.15 2003/10/26 14:54:54 mrauch Exp $
 
 DISTNAME=		benchfft-2.0
 CATEGORIES=		benchmarks math
@@ -21,13 +21,9 @@ CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/fftw-2.0.1/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub ${WRKDIR}/fftw-2.0.1/config.sub
 
-do-configure:
-	(cd ${WRKDIR}/fftw-2.0.1 && ./configure)
-
-do-build:
-	(cd ${WRKDIR}/fftw-2.0.1 && ${GMAKE})
-	(cd ${WRKSRC} && ./configure)
-	(cd ${WRKSRC} && ${GMAKE})
+pre-configure:
+	CONFIGURE_DIRS=${WRKDIR}/fftw-2.0.1 ${MAKE} ${MAKEFLAGS} do-configure
+	BUILD_DIRS=${WRKDIR}/fftw-2.0.1 ${MAKE} ${MAKEFLAGS} do-build
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bench ${PREFIX}/bin/bench-fft
