@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.14 2000/11/10 16:57:24 abs Exp $
+# $NetBSD: Makefile,v 1.15 2000/11/13 10:26:16 abs Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
-DISTNAME=		vnc-3.3.3r1
-PKGNAME=		vnc-3.3.3.1
+DISTNAME=		vnc-3.3.3r2
+PKGNAME=		vnc-3.3.3.2
 CATEGORIES=		net x11
 MASTER_SITES=		http://www.uk.research.att.com/vnc/dist/
-DISTFILES=		vnc-3.3.3r1_unixsrc.tgz \
+DISTFILES=		vnc-3.3.3r2_unixsrc.tgz \
 			vnc-latest_doc.tgz
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		abs@netbsd.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
 
 DEPENDS+=		vncviewer:../../net/vncviewer
@@ -27,6 +27,7 @@ ALL_TARGET=		World
 # to do the install ourselves.
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Xvnc/programs/Xserver/Xvnc ${PREFIX}/bin/Xvnc
+	${INSTALL_PROGRAM} ${WRKSRC}/vncconnect/vncconnect ${PREFIX}/bin/vncconnect
 	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${PREFIX}/bin/vncpasswd
 	${SED} -e 's|/usr/local/vnc/classes|${X11PREFIX}/share/vnc/classes|g' \
 		-e 's|/usr/bin/perl|${PERL5}|g' \
