@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.6 2003/09/23 21:39:48 abs Exp $
+$NetBSD: patch-ao,v 1.7 2005/01/27 16:22:37 adam Exp $
 
---- hfaxd/User.c++.orig	Sat Feb  8 22:49:53 2003
+--- hfaxd/User.c++.orig	2005-01-10 04:52:09.000000000 +0000
 +++ hfaxd/User.c++
-@@ -218,7 +218,7 @@ HylaFAXServer::userName(u_int id)
+@@ -244,7 +244,7 @@ HylaFAXServer::userName(u_int id)
      if (id == uid)				// user currently logged in
  	return (const char*) the_user;
      if (id == FAXUID_ANON)			// anonymous user
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.6 2003/09/23 21:39:48 abs Exp $
      if (idcache == NULL)			// load cache from file
  	fillIDCache();
      const fxStr* hit = idcache->find(id);	// check cache
-@@ -237,7 +237,7 @@ HylaFAXServer::userID(const char* name, 
+@@ -263,7 +263,7 @@ HylaFAXServer::userID(const char* name, 
  {
      if (name == the_user)
  	id = uid;
@@ -20,7 +20,7 @@ $NetBSD: patch-ao,v 1.6 2003/09/23 21:39:48 abs Exp $
  	id = FAXUID_ANON;
      else {
  	if (idcache == NULL)
-@@ -324,7 +324,7 @@ HylaFAXServer::findUser(FILE* db, const 
+@@ -350,7 +350,7 @@ HylaFAXServer::findUser(FILE* db, const 
      if (faxuid < FAXUID_MAX)
  	SetBit(FAXUID_RESV);			// reserved uid
      else

@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
+$NetBSD: patch-ae,v 1.10 2005/01/27 16:22:37 adam Exp $
 
---- configure.orig	2003-05-23 15:28:51.000000000 +1200
+--- configure.orig	2004-12-28 04:45:03.000000000 +0000
 +++ configure
 @@ -37,23 +37,23 @@
  #
@@ -35,10 +35,11 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  SYSGID=
  DSO=auto
  GETTY=auto
-@@ -73,8 +73,8 @@ GS=no
+@@ -72,9 +72,8 @@ DPS=no
+ GS=no
  IMP=no
  UTMP=auto
- OPTIMIZER="-O"
+-OPTIMIZER="-O"
 -LIBTIFF="-L/usr/local/lib -ltiff"
 -TIFFINC=/usr/local/include
 +LIBTIFF="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -ltiff -ljpeg -lz -lm"
@@ -46,7 +47,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  TIFFBIN=
  LIBZ=
  ZLIBINC=
-@@ -82,8 +82,8 @@ REGEX=yes
+@@ -82,8 +81,8 @@ REGEX=yes
  LIBREGEX='-L${DEPTH}/regex -lregex'
  REGEXINC='${DEPTH}/${TOPSRCDIR}/regex'
  DBLIB=no
@@ -57,7 +58,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  FAXD=
  LIBFAXSERVER='libfaxserver.${DSO}'
  LIBUTIL='${UTIL}/libfaxutil.${DSO}'
-@@ -218,6 +218,7 @@ PKG_EMAIL
+@@ -222,6 +221,7 @@ PKG_EMAIL
  PKG_VENDOR
  PORT
  PORTFUNCS
@@ -65,7 +66,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  PROTOTYPES
  PSPACKAGE	PS
  PWDCMD
-@@ -281,7 +282,7 @@ test -d /usr/bsd && PATH=$PATH:/usr/bsd	
+@@ -287,7 +287,7 @@ test -d /usr/bsd && PATH=$PATH:/usr/bsd	
  test -d /usr/ucb && PATH=$PATH:/usr/ucb			# Sun and others
  test -d /usr/contrib/bin && PATH=$PATH:/usr/contrib/bin	# BSDi
  test -d /usr/5bin && PATH=/usr/5bin:$PATH:/usr/etc	# Sun and others
@@ -74,16 +75,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  PATH=$PATH:$OPATH
  
  POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
-@@ -2327,7 +2328,7 @@ EOF
- 	if [ ${header_ver} -ge 19960307 ]; then
- 	    if [ "${lib_ver}" = "3.4" ]; then
- 		tiff_runlen_t="uint16"
--	    elif [ "${lib_ver}" = "3.5" -o "${lib_ver}" = "3.6" ]; then
-+	    elif [ "${lib_ver}" = "3.5" -o "${lib_ver}" = "3.6" -o "${lib_ver}" = "3.7" ]; then
- 		tiff_runlen_t="uint32"
- 	    fi
- 	fi
-@@ -3042,13 +3043,7 @@ main()
+@@ -3086,13 +3086,7 @@ main()
          printf("old include files: version %u\n", ZLIB_VERSION);
          exit(-1);
      }
@@ -97,7 +89,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  }
  EOF
  capture cat t.c
-@@ -3110,7 +3105,7 @@ Note "Checking TIFF support."
+@@ -3154,7 +3148,7 @@ Note "Checking TIFF support."
  # Location of TIFF binaries
  #
  if [ -z "$TIFFBIN" ]; then
@@ -106,7 +98,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
      for i in $DIRS; do
          test -x $i/tiff2ps && { TIFFBIN=$i; break; }
      done
-@@ -3694,7 +3689,7 @@ fi
+@@ -3775,7 +3769,7 @@ fi
  if [ -z "$PATH_VGETTY" ]; then
      PATH_VGETTY=`findApp vgetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_VGETTY" ]; then
@@ -115,7 +107,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  	Note "WARNING, no vgetty program found to handle a voice call, using $PATH_VGETTY."
      else
  	Note "Looks like $PATH_VGETTY is the program to exec for a voice call."
-@@ -3707,7 +3702,7 @@ fi
+@@ -3788,7 +3782,7 @@ fi
  if [ -z "$PATH_EGETTY" ]; then
      PATH_EGETTY=`findApp egetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_EGETTY" ]; then
@@ -124,7 +116,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  	Note "WARNING, no egetty program found, using $PATH_EGETTY."
      else
  	Note "Looks like $PATH_EGETTY is the program to exec for an extern call."
-@@ -3778,6 +3773,7 @@ PickRIP()
+@@ -3859,6 +3853,7 @@ PickRIP()
  {
      if [ -z "$PATH_GSRIP" ]; then
  	GSLOCS="
@@ -132,7 +124,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  	    /usr/local/bin/gs
  	    /usr/contrib/bin/gs
  	    /usr/gnu/bin/gs
-@@ -3825,7 +3821,7 @@ fax software to operate correctly.  See 
+@@ -3906,7 +3901,7 @@ fax software to operate correctly.  See 
  on building Ghostscript with the necessary TIFF driver.
  
  EOF
@@ -141,7 +133,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  	PATH_GSRIP=$PATH_PSRIP
      fi
  }
-@@ -3892,9 +3888,9 @@ if [ -z "$PATH_AFM" ]; then
+@@ -3973,9 +3968,9 @@ if [ -z "$PATH_AFM" ]; then
      else
          DIR_AFMS="
  	    /usr/lib/afm
@@ -154,7 +146,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  	    /usr/share/ghostscript/fonts
  	    /usr/gnu/lib/ghostscript/fonts
  	    /opt/gnu/lib/ghostscript/fonts
-@@ -3914,7 +3910,7 @@ if [ -z "$PATH_AFM" ]; then
+@@ -3995,7 +3990,7 @@ if [ -z "$PATH_AFM" ]; then
  fi
  if [ -z "$PATH_AFM" ]; then
      # put it where ghostscript normally puts things
@@ -163,7 +155,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
      Note "WARNING, could not locate a directory with font metric information,"
      Note "guessing that font metric information goes in $PATH_AFM."
  else
-@@ -3933,6 +3929,7 @@ fi
+@@ -4014,6 +4009,7 @@ fi
  #
  if [ -z "$DIR_MAN" ]; then
      MANPATH="
@@ -171,7 +163,7 @@ $NetBSD: patch-ae,v 1.9 2005/01/03 22:58:14 markd Exp $
  	$MANPATH
  	/usr/local/man
  	/usr/contrib/man
-@@ -3942,7 +3939,7 @@ if [ -z "$DIR_MAN" ]; then
+@@ -4023,7 +4019,7 @@ if [ -z "$DIR_MAN" ]; then
      for i in $MANPATH; do
  	test -d $i && { DIR_MAN=$i; break; }
      done

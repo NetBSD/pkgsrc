@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/05/22 11:59:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/01/27 16:22:37 adam Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -19,7 +19,7 @@ libexec/hylafax/archive
 libexec/hylafax/faxrcvd
 libexec/hylafax/mkcover
 libexec/hylafax/notify
-libexec/hylafax/notify.awk
+libexec/hylafax/notify-4.1
 libexec/hylafax/pcl2fax
 libexec/hylafax/pdf2fax.gs
 libexec/hylafax/pollrcvd
@@ -27,6 +27,7 @@ libexec/hylafax/ps2fax.dps
 libexec/hylafax/ps2fax.gs
 libexec/hylafax/ps2fax.imp
 libexec/hylafax/tiff2fax
+libexec/hylafax/tiff2pdf
 libexec/hylafax/wedged
 libexec/lockname
 libexec/ondelay
@@ -130,6 +131,8 @@ sbin/tsitest
 sbin/typetest
 sbin/xferfaxstats
 share/doc/hylafax/COPYRIGHT
+share/hylafax/config_template/agere-mp-2
+share/hylafax/config_template/agere-mp-21
 share/hylafax/config_template/att-dataport
 share/hylafax/config_template/att-dataport-2
 share/hylafax/config_template/att-dataport-2.0
@@ -157,6 +160,7 @@ share/hylafax/config_template/hayes
 share/hylafax/config_template/intel-400e
 share/hylafax/config_template/lucent
 share/hylafax/config_template/lucent-isa
+share/hylafax/config_template/lucent-mt-10
 share/hylafax/config_template/lucent-mt-2
 share/hylafax/config_template/lucent-mt-20
 share/hylafax/config_template/lucent-mt-21
@@ -176,6 +180,7 @@ share/hylafax/config_template/rockwell-k56
 share/hylafax/config_template/rockwell-rc
 share/hylafax/config_template/sierra
 share/hylafax/config_template/skel
+share/hylafax/config_template/t38modem
 share/hylafax/config_template/telebit-qblazer
 share/hylafax/config_template/telebit-t3000
 share/hylafax/config_template/telebit-wb
