@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/11/12 11:17:15 skrll Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/20 18:33:29 skrll Exp $
 #
 
 DISTNAME=	wonka-src-0.9.4-release
@@ -46,10 +46,10 @@ post-extract:
 post-patch:
 	for file in ${SEDFILES}; do					\
 		${SED}	-e "s|@PREFIX@|${PREFIX}|g"			\
-			-e "s|@CC@|cc|g"				\
-			-e "s|@LD@|ld|g"				\
-			-e "s|@AS@|as|g"				\
-			-e "s|@AR@|ar|g"				\
+			-e "s|@CC@|${CC}|g"				\
+			-e "s|@LD@|${LD}|g"				\
+			-e "s|@AS@|${CC} -c|g"				\
+			-e "s|@AR@|${AR}|g"				\
 			-e "s|@RANLIB@|${RANLIB}|g"			\
 			$${file} > $${file}.fixed &&			\
 		${MV} -f $${file}.fixed $${file};			\
