@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2474 2004/11/26 08:47:05 adam Exp $
+$NetBSD: TODO,v 1.2475 2004/11/26 09:12:09 adam Exp $
 
 Suggested new packages
 ======================
@@ -505,7 +505,6 @@ Suggested package updates
 	o fort77-1.18
 	o fox-1.2.11
 	o freetds-0.62.4
-	o fsviewer-0.2.5
 	o ftpproxy-1.2.3
 	o fugu-1.2.3
 	o fvwm-devel-2.5.12

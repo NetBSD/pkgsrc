@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8007 2004/11/26 08:47:05 adam Exp $
+$NetBSD: CHANGES,v 1.8008 2004/11/26 09:12:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5442,3 +5442,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated db2latex to 0.8pre1 [minskim 2004-11-25]
 	Updated p5-Mail-Milter to 0.06 [tv 2004-11-25]
 	Updated eel2 to 2.8.2 [adam 2004-11-26]
+	Updated fsviewer to 0.2.5 [adam 2004-11-26]
