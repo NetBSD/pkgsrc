@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/25 04:18:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/05 12:47:12 skrll Exp $
 
 DISTNAME=	qwtlib-0.2
 CATEGORIES=	x11
@@ -16,6 +16,8 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/qwt
 ALL_TARGET=	src
+
+MAKE_ENV+=	CXX=${CXX}
 
 do-configure:
 	${CP} ${FILESDIR}/Makefile.* ${WRKSRC}
