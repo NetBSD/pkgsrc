@@ -1,5 +1,7 @@
+#	$NetBSD: Makefile,v 1.2 1999/12/20 03:28:38 hubertf Exp $
+
 CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lm
 
 all: emixer
 emixer: main.o
