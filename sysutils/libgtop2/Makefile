@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/26 21:03:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/19 10:53:55 sketch Exp $
 
 DISTNAME=		libgtop-2.8.1
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -12,7 +12,6 @@ COMMENT=		Library to retrieve system information, used in GNOME2
 
 BUILD_USES_MSGFMT=	YES
 
-NOT_FOR_PLATFORM=	SunOS-*-*
 OSVERSION_SPECIFIC=	YES
 USE_MSGFMT_PLURALS=	YES
 
