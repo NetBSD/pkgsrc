@@ -1,8 +1,7 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:33 agc Exp $
-
---- ./configure-orig	Thu Nov 20 03:13:44 1997
-+++ ./configure	Thu Jan 22 13:46:50 1998
-@@ -902,7 +902,7 @@
+$NetBSD: patch-aa,v 1.3 1998/08/29 12:31:43 garbled Exp $
+--- configure.orig	Mon Feb  9 20:59:34 1998
++++ configure	Fri Aug 28 09:18:31 1998
+@@ -902,9 +902,10 @@
      case "$canonical" in
        i[3-9]86-*-netbsd*) machine=intel386 ;;
        hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
@@ -10,16 +9,16 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:40:33 agc Exp $
 +                                            machine=m68k ;;
        pc532-*-netbsd* | ns32k-*-netbsd* )  machine=ns32000 ;;
        pmax-*-netbsd*  | mips-*-netbsd*  )  machine=pmax ;;
++      alpha-*-netbsd* ) machine=alpha ;;
      esac
---- ./configure.in-orig	Thu Nov 20 03:13:33 1997
-+++ ./configure.in	Thu Jan 22 13:58:06 1998
-@@ -1013,8 +1013,7 @@
-     case "$canonical" in
-       i[[3-9]]86-*-netbsd*) machine=intel386 ;;
-       hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
--                      dnl Yes, this is somewhat bogus.
--                      machine=hp9000s300 ;;
-+                      machine=m68k ;;
-       pc532-*-netbsd* | ns32k-*-netbsd* )  machine=ns32000 ;;
-       pmax-*-netbsd*  | mips-*-netbsd*  )  machine=pmax ;;
-     esac
+   ;;
+ 
+@@ -2233,7 +2234,7 @@
+       echo $ac_n "checking "for runtime libraries flag"""... $ac_c" 1>&6
+ echo "configure:2235: checking "for runtime libraries flag"" >&5
+   dash_r=""
+-  for try_dash_r in "-R" "-R " "-rpath "; do
++  for try_dash_r in "-Wl,-R" "-R" "-R " "-rpath "; do
+     xe_check_libs="${try_dash_r}/no/such/file-or-directory"
+     cat > conftest.$ac_ext <<EOF
+ #line 2240 "configure"
