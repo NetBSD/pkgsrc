@@ -26,7 +26,7 @@
 #    SUBDIR += fvwm
     SUBDIR += fvwm2
 #    SUBDIR += fvwm2-english
-#    SUBDIR += fvwm95
+    SUBDIR += fvwm95
 #    SUBDIR += getbdf
 #    SUBDIR += gwm
 #    SUBDIR += iv
@@ -77,7 +77,7 @@
 #    SUBDIR += xcb
 #    SUBDIR += xco
 #    SUBDIR += xcoloredit
-#    SUBDIR += xcolors
+    SUBDIR += xcolors
 #    SUBDIR += xdaliclock
 #    SUBDIR += xdtm
 #    SUBDIR += xfce
