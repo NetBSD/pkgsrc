@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
+$NetBSD: md5,v 1.2 2000/12/15 04:12:20 wiz Exp $
 
 MD5 (mgl2-alpha-019.tar.gz) = 349c75f751db1c141ea7ce00b13df950
+MD5 (mgl2-alpha-019-for-netbsd15.patch.gz) = ad212ed811233db939504fa6edb25611
