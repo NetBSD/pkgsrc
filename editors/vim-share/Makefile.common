@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 1999/12/21 13:20:32 pooka Exp $
+
+VIM_VERSION=		5.5
+
+DISTNAME=		vim-${VIM_VERSION}
+CATEGORIES=		editors
+MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
+			ftp://ftp.nuxi.com/pub/vim/unix/ \
+			ftp://ftp.fu-berlin.de/misc/editors/vim/unix/ \
+			ftp://ftp.twics.co.jp/pub/vim/unix
+DISTFILES=		${DISTNAME}-src${EXTRACT_SUFX}
+
+MAINTAINER=		pooka@iki.fi
+HOMEPAGE=		http://www.vim.org
+
+GNU_CONFIGURE=		yes
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
+
+MD5_FILE=		"${.CURDIR}/../vim-share/files/md5"
