@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.mi,v 1.1 1999/09/23 05:29:25 jlam Exp $
+bin/fd2ps
+bin/fdesign
+include/X11/forms.h
+lib/libforms.a
+lib/libxforms.a
+man/man1/fd2ps.1
+man/man1/fdesign.1
+man/man5/forms.5
+man/man5/xforms.5
