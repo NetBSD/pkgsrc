@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4610 2004/01/26 16:35:59 martti Exp $
+$NetBSD: CHANGES,v 1.4611 2004/01/26 17:14:32 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -496,3 +496,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cucipop 1.31nb1 [grant 2004-01-26]
 	Updated gtk-gnutella to 0.93.3 [adam 2004-01-26]
 	Added xfce4-menueditor-1.0rc3 [martti 2004-01-26]
+	Updated subversion to 0.37.0 [epg 2004-01-26
