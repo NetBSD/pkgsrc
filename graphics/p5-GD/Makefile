@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/04/10 23:32:32 snj Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/25 03:35:25 minskim Exp $
 
 DISTNAME=	GD-2.07
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}
 MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/GD/GD.html
 COMMENT=	Perl5 interface to gd graphics library
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_X11=		YES
