@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.4 1999/09/18 14:52:19 kim Exp $
+$NetBSD: patch-aa,v 1.4.8.1 2002/12/22 08:29:20 agc Exp $
 
---- src/Makefile.in.orig	Fri Apr 25 20:22:06 1997
-+++ src/Makefile.in	Wed Mar  4 09:49:44 1998
-@@ -102,7 +102,7 @@
+--- src/Makefile.in.orig	Wed Sep 26 22:34:33 2001
++++ src/Makefile.in	Sun Nov 17 18:04:11 2002
+@@ -103,7 +103,7 @@
  
- AUTOMAKE_OPTIONS = gnits ansi2knr
+ AUTOMAKE_OPTIONS = gnits
  bin_PROGRAMS = tar
 -libexec_PROGRAMS = @RMT@
 +libexec_PROGRAMS = 
  EXTRA_PROGRAMS = rmt
  
  noinst_HEADERS = arith.h common.h rmt.h system.h tar.h
+@@ -127,7 +127,7 @@
+ CONFIG_CLEAN_FILES =
+ EXTRA_PROGRAMS = rmt$(EXEEXT)
+ bin_PROGRAMS = tar$(EXEEXT)
+-libexec_PROGRAMS = @RMT@
++libexec_PROGRAMS =
+ PROGRAMS = $(bin_PROGRAMS) $(libexec_PROGRAMS)
+ 
+ am_rmt_OBJECTS = rmt.$(OBJEXT)
