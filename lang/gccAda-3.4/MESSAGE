@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/06/01 18:32:03 shannonjr Exp $
+
+A wrapper, "ada", has been placed in ${LOCALBASE}/bin to setup the 
+environment and call the tools in this package. So, to make a program
+with a main program file "main.adb" you would type:
+
+   ada gnatmake main.adb
+
+===========================================================================
