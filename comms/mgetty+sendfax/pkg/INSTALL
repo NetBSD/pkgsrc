@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+test -d /var/spool ||  \
+	( mkdir /var/spool ; chmod 755 /var/spool )
+test -d /var/spool/fax ||  \
+	( mkdir /var/spool/fax ; chmod 755 /var/spool/fax )
+test -d /var/spool/fax/incoming ||  \
+	( mkdir /var/spool/fax/incoming ; chmod 755 /var/spool/fax/incoming )
+test -d /var/spool/fax/outgoing ||  \
+	( mkdir /var/spool/fax/outgoing ; chmod 1777 /var/spool/fax/outgoing )
+test -d /var/spool/fax/outgoing/locks ||  \
+	( mkdir /var/spool/fax/outgoing/locks ; chmod 777 /var/spool/fax/outgoing/locks )
