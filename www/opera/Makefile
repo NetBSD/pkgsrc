@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/03/22 23:46:47 tron Exp $
+# $NetBSD: Makefile,v 1.14 2001/03/22 23:47:57 tron Exp $
 
 DISTNAME=	opera-5.0b7
 CATEGORIES=	www
@@ -22,6 +22,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 LICENSE=	opera-license
 
+DIST_SUBDIR=	.
 EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
@@ -32,5 +33,3 @@ post-install:
 	${LN} -fs ../${EMULSUBDIR}/usr/bin/opera ${PREFIX}/bin
 
 .include "../../emulators/suse_linux/Makefile.common"
-
-DIST_SUBDIR=	.
