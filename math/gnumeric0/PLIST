@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:50 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/07/19 04:32:35 mycroft Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -37,6 +37,10 @@ lib/gnumeric/${PKGVERSION}-bonobo/plugins/oleo/oleo.la
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/oleo/oleo.so
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/oleo/plugin.xml
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/plan_perfect/plugin.xml
+lib/gnumeric/${PKGVERSION}-bonobo/plugins/psiconv/plugin.xml
+lib/gnumeric/${PKGVERSION}-bonobo/plugins/psiconv/psiconv.a
+lib/gnumeric/${PKGVERSION}-bonobo/plugins/psiconv/psiconv.la
+lib/gnumeric/${PKGVERSION}-bonobo/plugins/psiconv/psiconv.so
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/sc/plugin.xml
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/sc/sc.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/sc/sc.la
@@ -769,10 +773,12 @@ share/pixmaps/gnumeric/top_border
 @dirrm share/gnumeric
 @dirrm share/gnome/help/gnumeric/C/images
 @dirrm share/gnome/help/gnumeric/C
+@dirrm share/gnome/help/gnumeric
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xbase
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/sylk
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/sc
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/psiconv
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/plan_perfect
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/oleo
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/numtheory
