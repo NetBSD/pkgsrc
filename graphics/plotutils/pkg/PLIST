@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/07/18 07:41:25 itohy Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/08/14 20:06:19 wiz Exp $
 bin/double
 bin/graph
 bin/ode
@@ -11,8 +11,10 @@ include/plot.h
 include/plotcompat.h
 include/plotter.h
 lib/libplot.a
+lib/libplot.la
 lib/libplot.so.3.0
 lib/libplotter.a
+lib/libplotter.la
 lib/libplotter.so.3.0
 man/man1/ode.1
 man/man1/plot.1
