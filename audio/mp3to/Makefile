@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2001/09/27 23:17:45 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/28 08:52:16 tron Exp $
 
 DISTNAME=	mp3to
 PKGNAME=	${DISTNAME}-1.0.1
 CATEGORIES=	audio
-MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.cs.berkeley.edu/~amc/utils/
 COMMENT=	Convert MP3 files to various other audio formats
+
+NO_SRC_ON_FTP=	"already in MASTER_SITE_LOCAL"
 
 DEPENDS+=	mpg123-[0-9]*:../mpg123
 DEPENDS+=	gmp3info>=0.8.2:../gmp3info
