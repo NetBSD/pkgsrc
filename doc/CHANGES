@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5618 2004/04/16 22:16:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.5619 2004/04/17 00:15:45 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2034,3 +2034,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmess to 0.81.1 [kristerw 2004-04-16]
 	Added p5-WWW-Mechanize-1.02 [minskim 2004-04-16]
 	Updated rhythmbox to 0.8.0 [jmmv 2004-04-16]
+	Updated SDL to 1.2.7 [snj 2004-04-17]
