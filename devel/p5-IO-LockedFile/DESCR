@@ -1,0 +1,3 @@
+IO::LockedFile class gives us the same interface of the IO::File class
+to files with the unique difference that those files are locked using
+the flock mechanism.
