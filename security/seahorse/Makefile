@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2002/09/23 17:29:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/03 15:26:59 jmmv Exp $
 
 DISTNAME=	seahorse-0.5.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=seahorse/}
 
-MAINTAINER=	jmmv@hispabsd.org
+MAINTAINER=	jmmv@netbsd.org
 HOMEPAGE=	http://seahorse.sourceforge.net
 COMMENT=	GnuPG front end and bonobo component for Gnome
 

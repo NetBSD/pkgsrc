@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/12/24 06:10:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/03 15:26:58 jmmv Exp $
 #
 
 DISTNAME=		libgnomecanvas-2.0.4
@@ -7,7 +7,7 @@ CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomecanvas/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jmmv@hispabsd.org
+MAINTAINER=		jmmv@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME Canvas library
 
