@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/11/28 07:31:12 taca Exp $
+# $NetBSD: Makefile,v 1.24 2004/11/28 12:16:02 taca Exp $
 #
 
 DISTNAME=	dctc-0.85.4
@@ -16,7 +16,6 @@ USE_BUILDLINK3=	YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
 USE_PERL5=	YES
 USE_GNU_TOOLS+=	make
-RUBY_DIST_SUBDIR=	# empty
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
 
