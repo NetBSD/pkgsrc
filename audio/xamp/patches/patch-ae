@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2000/10/18 11:22:44 rh Exp $
+$NetBSD: patch-ae,v 1.5 2002/06/28 13:15:16 agc Exp $
 
 --- Makefile.in.orig	Fri Jul 31 01:48:02 1998
 +++ Makefile.in	Mon Oct 16 16:22:20 2000
@@ -18,7 +18,7 @@ $NetBSD: patch-ae,v 1.4 2000/10/18 11:22:44 rh Exp $
  	id3.o id3Data.o QLayer.o mid3.o mid3Data.o pixmaps/pixmaps.o
  	
 -LIBS = @QT_LDFLAGS@ -lm -lqt
-+LIBS = @QT_LDFLAGS@ -lm -lqt -Wl,-R${X11BASE}/qt1/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lX11 -lXext
++LIBS = @QT_LDFLAGS@ -lm -lqt -L${QT1DIR}/qt1/lib -Wl,-R${QT1DIR}/qt1/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lX11 -lXext
  
  all: xamp
  
