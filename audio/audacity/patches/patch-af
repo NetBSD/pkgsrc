@@ -1,13 +1,99 @@
-$NetBSD: patch-af,v 1.2 2002/10/04 08:59:36 jlam Exp $
+$NetBSD: patch-af,v 1.3 2004/04/20 18:02:16 ben Exp $
 
---- snd/sndcvt.c.orig	Wed Jun  5 00:51:19 2002
-+++ snd/sndcvt.c
-@@ -16,7 +16,7 @@
- #ifdef WIN32
- #include <sys/stat.h>
- #include "io.h"
--#elif defined(__FreeBSD__)
-+#elif defined(__FreeBSD__) || defined(__NetBSD__)
- #include <sys/stat.h>
- #else
- #ifndef __WXMAC__
+--- configure.orig	Sat Feb 28 11:19:39 2004
++++ configure
+@@ -5869,7 +5869,8 @@ fi
+ subdirs="$subdirs lib-src/portaudio-v19"
+ 
+ 
+-else
++fi
++if [ "$use_portaudio" = "v18" ] ; then
+ 
+ 	CXXFLAGS="-I../lib-src/portaudio/pa_common $CXXFLAGS"
+ 
+@@ -5941,6 +5942,84 @@ _ACEOF
+ 
+ 		BUILDLIBS="$BUILDLIBS portaudio/pa_unix_oss/portaudio.a"
+ 		EXTRAOBJS="$EXTRAOBJS ../lib-src/portaudio/pa_unix_oss/portaudio.a"
++
++	   if [ "$use_portmixer" = "yes" ] ; then
++			BUILDLIBS="$BUILDLIBS portmixer/px_unix_oss/portmixer.a"
++			EXTRAOBJS="$EXTRAOBJS ../lib-src/portmixer/px_unix_oss/portmixer.a"
++	   fi
++
++		if [ "$use_ladspa" = "default" ] ; then
++			use_ladspa="yes";
++		fi
++
++		AFTERBUILD=""
++
++	esac
++fi
++if [ "$use_portaudio" = "system" ] ; then
++
++	LIBS="$LIBS -lportaudio"
++
++	case "${host_os}" in
++	  darwin* | rhapsody*)
++
++		CONFIGHEADER="configunix.h"
++
++
++		CXXFLAGS="-I../mac $CXXFLAGS"
++
++	   if [ "$use_portmixer" = "yes" ] ; then
++			BUILDLIBS="$BUILDLIBS portmixer/px_mac_core/portmixer.a"
++			EXTRAOBJS="$EXTRAOBJS ../lib-src/portmixer/px_mac_core/portmixer.a"
++	   fi
++
++		LIBS="-framework AudioUnit -framework AudioToolbox $LIBS"
++		LIBS="-framework CoreAudio $LIBS -lz"
++
++		EXTRATARGETS="../Audacity.app"
++
++		if [ "$use_ladspa" = "default" ] ; then
++			use_ladspa="yes";
++		fi
++
++
++		OPTOBJS="$OPTOBJS \$(OBJDIR)/effects/VST/LoadVSTMac.o"
++		OPTOBJS="$OPTOBJS \$(OBJDIR)/effects/VST/VSTEffect.o"
++
++	;;
++
++	cygwin*)
++
++ 	LIBS="$LIBS -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lodbc32 -lodbccp32 -lwsock32 -lwinmm"
++	LIBS="$LIBS -Wl,--subsystem,windows"
++ 	CONFIGHEADER="configwin.h"
++
++    if [ "$use_portmixer" = "yes" ] ; then
++ 		BUILDLIBS="$BUILDLIBS portmixer/px_win_wmme/portmixer.a"
++ 		EXTRAOBJS="$EXTRAOBJS ../lib-src/portmixer/px_win_wmme/portmixer.a Audacity.coff"
++    fi
++
++ 	if [ "$use_ladspa" = "default" ] ; then
++ 		use_ladspa="yes";
++ 	fi
++
++
++cat >>confdefs.h <<\_ACEOF
++#define __CYGWIN__ 1
++_ACEOF
++
++
++cat >>confdefs.h <<\_ACEOF
++#define _FILE_OFFSET_BITS 32
++_ACEOF
++
++
++ 	AFTERBUILD=""
++	;;
++
++	  *)
++
++		CONFIGHEADER="configunix.h"
+ 
+ 	   if [ "$use_portmixer" = "yes" ] ; then
+ 			BUILDLIBS="$BUILDLIBS portmixer/px_unix_oss/portmixer.a"
