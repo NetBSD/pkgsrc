@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.105 1998/06/23 10:35:56 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.106 1998/06/29 21:52:20 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1634,7 +1634,7 @@ readmes:	readme
 
 .if !target(readme)
 readme:
-	@rm -f README.html
+	@if [ -f README.html ]; then  mv -f README.html README.html.BAK ; fi
 	@cd ${.CURDIR} && ${MAKE} README.html
 .endif
 
@@ -1671,7 +1671,14 @@ README.html:
 			-e 's@%%BIN_POSTREL%%@</A>@g' \
 			-e 's@%%BIN_PREARCH%%@<LI> @g' \
 			-e 's@%%BIN_POSTARCH%%@@g' \
-		>> $@
+		>> $@.tmp
+	@if cmp -s $@.tmp $@.BAK ; then \
+		mv $@.BAK $@ ; \
+		rm $@.tmp ; \
+	else \
+		mv $@.tmp $@ ; \
+		rm -f $@.BAK ; \
+	fi
 	@rm -f $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4
 
 .if !target(print-depends-list)
