@@ -1,11 +1,30 @@
---- src/qfdes/qfDES-memory.c.orig	Thu Oct 31 14:39:50 1996
-+++ src/qfdes/qfDES-memory.c	Thu Oct 31 14:41:52 1996
-@@ -12,7 +12,7 @@
- 
- #include <stdio.h>
- #include <memory.h>
--#include <malloc.h>
-+#include <stdlib.h>
- #include <ctype.h>
- #include "qfDES.h"
- 
+--- ../../original/src/sip.c	Tue Oct 29 16:37:28 1996
++++ src/sip.c	Tue Nov 18 17:41:31 1997
+@@ -213,7 +213,7 @@
+ #ifndef WIN32
+ 	{
+ 	  char buf[200];
+-	  int ans[500];
++	  u_int32_t ans[500];
+ 	  int ctr;
+ 	  char *tstr, *resstr;
+ 	  struct dnshdr *dnsa;
+@@ -222,7 +222,7 @@
+ 	  len=res_mkquery(QUERY, hostname, C_IN, T_MX, NULL, NULL, 
+ 			  NULL, buf, 200);
+ 	  if (len==-1) perror("res_mkquery");
+-	  len=res_send(buf, len, ans, 2000);
++	  len=res_send(buf, len, (u_char *)ans, 2000);
+ 	  if (len==-1) perror("res_send");
+ 	  ans[0]=htonl(ans[0]);
+ 	  ans[1]=htonl(ans[1]);
+@@ -294,7 +294,8 @@
+ 		    } else {
+ 		      /*it's compressed*/
+ 		        if(*tstr==0) tstr+=2;
+-			resstr+=dn_expand(ans, ans+len, tstr-1, resstr, 200-strlen(resstr));
++			resstr+=dn_expand((u_char *)ans, (u_char *)(ans+len),
++			    tstr-1, resstr, 200-strlen(resstr));
+ 			tstr+=1;
+ 			ctr=0;
+ 		    }
