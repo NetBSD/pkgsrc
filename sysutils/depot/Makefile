@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/31 12:13:37 zuntum Exp $
+# $NetBSD: Makefile,v 1.10 2001/03/31 13:33:01 zuntum Exp $
 #
 
 DISTNAME=       depot-5.14
@@ -11,7 +11,7 @@ COMMENT=	Maps several separate packages into a tree without merging them
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	INSTALL="" CC="${CC}"
-MAKE_ENV+=	CC=${CC}
+MAKE_ENV+=	CC="${CC}"
 
 do-install:
 	@cd ${WRKSRC}/src/cmd && ${MAKE} DESTDIR=${PREFIX} install
