@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/21 10:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/06 16:49:15 dmcmahill Exp $
 
 DISTNAME=	lcc-4.1
 CATEGORIES=	devel lang
@@ -9,6 +9,10 @@ HOMEPAGE=	http://www.research.microsoft.com/~cwfraser/
 COMMENT=	local ANSI C compiler for a variety of platforms
 
 MAKE_ENV+=	BUILDDIR=${WRKSRC}/bin HOSTFILE=etc/netbsd.c
+
+# it builds and runs on others (like alpha) but still
+# seems to emit i386 assembler
+ONLY_FOR_PLATFORM=	*-*-i386
 
 .include "../../mk/bsd.prefs.mk"
 
