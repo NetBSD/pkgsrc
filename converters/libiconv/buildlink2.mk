@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2003/10/31 02:09:19 dmcmahill Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2004/01/15 23:04:00 tron Exp $
 
 .if !defined(ICONV_BUILDLINK2_MK)
 ICONV_BUILDLINK2_MK=	# defined
@@ -50,7 +50,9 @@ _BLNK_ICONV_LDFLAGS=		# empty
 BUILDLINK_TRANSFORM+=		S:-liconv:
 .  endif
 .endif
+.if ${_USE_RPATH} != no
 BUILDLINK_LIBICONV_LDADD=	-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.iconv}/lib
+.endif
 BUILDLINK_LIBICONV_LDADD+=	${_BLNK_ICONV_LDFLAGS}
 LDFLAGS+=			${BUILDLINK_LIBICONV_LDADD}
 
