@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/04/20 16:33:56 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/05/07 02:11:18 jlam Exp $
 #
 
 DISTNAME=	stylewriter
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.pobox.com/~monroe/styl/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.pobox.com/~monroe/styl/
 
-DEPENDS+=	ghostscript*-5.50nb2:../../print/ghostscript5
+DEPENDS+=	ghostscript{,-nox11,-x11}-[0-9]*:../../print/ghostscript-x11
 DEPENDS+=	enscript-1.6.1:../../print/enscript
 
 NO_CONFIGURE=	yes
