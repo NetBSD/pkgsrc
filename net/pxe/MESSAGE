@@ -1,9 +1,9 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:58:10 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2001/11/06 06:57:53 cjs Exp $
 
   The pxe daemon has now been installed on your system.  Before starting
-  the daemon, please copy ${PREFIX}/share/examples/pxe/pxe.conf to
-  ${PREFIX}/etc and modify according to your needs.
+  the daemon, please copy ${PREFIX}/share/examples/pxe/pxe.conf to /etc
+  and modify according to your needs.
 
   Under NetBSD-1.5 or above, you can enable pxe on system startup by
   copying ${PREFIX}/etc/rc.d/pxe to /etc/rc.d and setting pxe=YES

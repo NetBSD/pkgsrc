@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/06 09:46:47 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/06 06:57:53 cjs Exp $
 #
 
 DISTNAME=	pxe-1.2
@@ -11,7 +11,6 @@ COMMENT=	Preboot eXecution Environment (PXE) daemon
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-log=/var/log/pxe.log
-CONFIGURE_ARGS+=--with-config=${PREFIX}/etc/pxe.conf
 
 post-configure:
 	${SED} -e 's|@@PREFIX@@|${PREFIX}|g' < ${FILESDIR}/pxe > ${WRKDIR}/pxe
