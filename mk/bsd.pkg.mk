@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.147 1998/08/22 20:12:04 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.148 1998/08/25 16:26:09 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1018,16 +1018,22 @@ _PORT_USE: .USE
 .if make(real-install)
 .if !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
-	@(/bin/sh -f -c 'for i in ${CONFLICTS}; do \
-		if /usr/sbin/pkg_info -e "$$i" >${WRKDIR}/.CONFLICT.$$$$; then \
-			${ECHO_MSG} "===>  ${PKGNAME} conflicts with installed package: $$i - "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`" found."; \
-			${ECHO_MSG} "      They install the same files into the same place."; \
-			${ECHO_MSG} "      Please remove "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`" first with pkg_delete(1)."; \
-			exit 1; \
-		fi; \
-		${RM} ${WRKDIR}/.CONFLICT.$$$$ ; \
-	done')
-.endif
+	@${RM} -f ${WRKDIR}/.CONFLICTS
+.for conflict in ${CONFLICTS}
+	@found=`/bin/csh -f -c "/bin/ls -d ${PKG_DBDIR}/${conflict} |& ${SED} -e 's|^\(/bin/\)\{0,1\}ls: .*$$||g' || exit 0"`; \
+	if [ X"$$found" != X"" ]; then					\
+		${ECHO} "$$found" >> ${WRKDIR}/.CONFLICTS;		\
+	fi
+.endfor
+	@if [ -s ${WRKDIR}/.CONFLICTS ]; then				\
+		found=`cat ${WRKDIR}/.CONFLICTS | ${SED} -e s'|${PKG_DBDIR}/||g' | tr '\012' ' '`; \
+		${ECHO_MSG} "===>  ${PKGNAME} conflicts with installed package(s): $$found found."; \
+		${ECHO_MSG} "      They install the same files into the same place."; \
+		${ECHO_MSG} "      Please remove $$found first with pkg_delete(1)."; \
+		${RM} -f ${WRKDIR}/.CONFLICTS;				\
+		exit 1;							\
+	fi
+.endif	# CONFLICTS
 	@if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then \
 		${ECHO_MSG} "===>  ${PKGNAME} is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "      If so, you may wish to \`\`${MAKE} deinstall'' and install"; \
@@ -1273,7 +1279,7 @@ checkpatch:
 
 .if !target(reinstall)
 reinstall:
-	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
+	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE} ${PLIST}
 	@DEPENDS_TARGET=${DEPENDS_TARGET} ${MAKE} install
 .endif
 
@@ -1595,27 +1601,27 @@ run-depends:	_DEPENDS_USE
 misc-depends:
 .if defined(DEPENDS)
 .if !defined(NO_DEPENDS)
-	@(/bin/sh -f -c 'for dir in ${DEPENDS}; do			\
-		package="`${ECHO} \"$$dir\" | ${SED} -e s/:.\*//`";	\
-		dir="`${ECHO} \"$$dir\" | ${SED} -e s/.\*://`";		\
-		found=`/usr/sbin/pkg_info -e "$$package"`;		\
-		if [ $$? -eq 0 ]; then					\
-			${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package - $$found found";	\
+.for dep in ${DEPENDS}
+	@package="`${ECHO} \"${dep}\" | ${SED} -e s/:.\*//`";		\
+	dir="`${ECHO} \"${dep}\" | ${SED} -e s/.\*://`";		\
+	found=`/bin/csh -f -c "/bin/ls -d ${PKG_DBDIR}/$$package |& ${SED} -e 's|^\(/bin/\)\{0,1\}ls: .*$$||g' || exit 0"`; \
+	if [ X"$$found" != X"" ]; then					\
+		${ECHO_MSG} "===>  ${PKGNAME} depends on installed package: $$package - `${ECHO} $$found | ${SED} -e 's|${PKG_DBDIR}/||g' | tr '\012' '\040'` found"; \
+	else								\
+		${ECHO_MSG} "===>  ${PKGNAME} depends on package: $$package"; \
+		target=${DEPENDS_TARGET};				\
+		${ECHO_MSG} "===>  Verifying $$target for $$dir"; 	\
+		if [ ! -d $$dir ]; then					\
+			${ECHO_MSG} ">> No directory for $$dir.  Skipping.."; \
 		else							\
-			${ECHO_MSG} "===>  ${PKGNAME} depends on package: $$package";	\
-			target=${DEPENDS_TARGET};			\
-			${ECHO_MSG} "===>  Verifying $$target for $$dir"; \
-			if [ ! -d $$dir ]; then				\
-				${ECHO_MSG} ">> No directory for $$dir.  Skipping.."; \
-			else						\
-				(cd $$dir; ${MAKE} ${.MAKEFLAGS} $$target);	\
-			fi						\
+			(cd $$dir; ${MAKE} ${.MAKEFLAGS} $$target);	\
 		fi							\
-	done')
-.endif
+	fi							
+.endfor
+.endif	# !NO_DEPENDS
 .else
 	@${DO_NADA}
-.endif
+.endif	# DEPENDS
 
 .endif
 
