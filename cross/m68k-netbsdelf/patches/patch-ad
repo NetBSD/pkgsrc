@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.2 2001/01/24 12:12:40 wiz Exp $
 --- /dev/null	Thu Jan 18 01:37:09 2001
 +++ ../egcs-1.1.1/gcc/config/m68k/netbsd-elf.h	Sat Jan  6 13:01:39 2001
 @@ -0,0 +1,591 @@
