@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7326 2004/10/03 00:49:38 wiz Exp $
+$NetBSD: CHANGES,v 1.7327 2004/10/03 09:26:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4526,3 +4526,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lua to 5.0.2nb1 [cube 2004-10-02]
 	Updated ircservices to 5.0.40 [adrianp 2004-10-02]
 	Updated guile to 1.6.4nb2 [wiz 2004-10-03]
+	Updated bind9 to 9.3.0 [tron 2004-10-03]
+	Removed bind9-current [tron 2004-10-03]
