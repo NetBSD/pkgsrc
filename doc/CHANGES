@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5473 2004/04/07 12:02:08 wiz Exp $
+$NetBSD: CHANGES,v 1.5474 2004/04/07 12:55:59 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1829,3 +1829,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ggv2 to 2.6.0.1 [jmmv 2004-04-07]
 	Updated libebml to 0.6.5 [salo 2004-04-07]
 	Updated htmllint to 20040406 [wiz 2004-04-07]
+	Added libmatroska-0.6.3 [salo 2004-04-07]
