@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1526 2004/10/27 10:41:43 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1527 2004/10/27 13:47:41 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -4709,7 +4709,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 .  ifdef _USE_GMAKE
 	@${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
 .  endif
-.  if ${CHECK_SHLIBS} == "YES"
+.  if ${SHLIB_HANDLING} == "YES" && ${CHECK_SHLIBS} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case "${LDD}" in						\
 	"")	ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'`;; \
@@ -4723,7 +4723,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		fi;							\
 		linklibs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^[^@].*\.so$$/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
 		for i in $${linklibs}; do				\
-			if ${TEST} -r $$i -a ! -x $$i; then		\
+			if ${TEST} -r $$i -a ! -x $$i -a ! -h $$i; then	\
 				${ECHO} "$$i: installed without execute permission; fixing (should use [BSD_]INSTALL_LIB)"; \
 				${CHMOD} +x $$i;			\
 			fi;						\
