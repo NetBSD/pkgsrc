@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/28 22:49:15 seb Exp $
 etc/icu/convrtrs.txt
 include/unicode/bidi.h
 include/unicode/brkiter.h
@@ -83,6 +83,8 @@ include/unicode/utrans.h
 include/unicode/utypes.h
 lib/icu/1.7/Makefile.inc
 lib/icu/1.7/libicudata.so
+${LITTLE_ENDIAN}lib/icu/1.7/libicudt17l.so
+${BIG_ENDIAN}lib/icu/1.7/libicudt17b.so
 lib/icu/Makefile.inc
 lib/icu/current
 lib/libicui18n.so
