@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.3 1999/10/14 07:27:35 fredb Exp $
+$NetBSD: patch-ae,v 1.4 2000/02/06 03:49:49 fredb Exp $
 
 --- arena.h.in.orig	Sun Mar  8 11:35:06 1998
-+++ arena.h.in	Sun Oct 10 13:46:21 1999
++++ arena.h.in	Sat Oct 30 17:21:26 1999
 @@ -60,6 +60,9 @@
  #  define  ARENA_TRACE_MASK 0xffffffff
            /* Default mask for libwww debug tracing */
@@ -12,3 +12,36 @@ $NetBSD: patch-ae,v 1.3 1999/10/14 07:27:35 fredb Exp $
  #endif
  
  /* Persistent cache location.
+@@ -267,9 +270,9 @@
+ #  define ARENA_FLYBY_HINT 1
+ #  define ARENA_FLYBY_TERSE 2
+ #  define ARENA_FLYBY_VERBOSE 3
+-#  define ARENA_FLYBY_HOW_MUCH  ARENA_FLYBY_HINT
++#  define ARENA_FLYBY_HOW_MUCH  ARENA_FLYBY_VERBOSE
+ 
+-#  define ARENA_FLYBY_TIMER_INCREMENT 2
++#  define ARENA_FLYBY_TIMER_INCREMENT 0
+ #endif
+ 
+ 
+@@ -445,6 +448,20 @@
+  */
+ #ifndef HAVE_STRSTR
+ #  undef HAVE_STRSTR
++#endif
++
++/* Define the HAVE_SETITIMER preprocessor variable,
++ * if you have setitimer().
++ */
++#ifndef HAVE_SETITIMER
++#  undef HAVE_SETITIMER
++#endif
++
++/* Define the SETITIMER_USES_TIMEVAL preprocessor variable,
++ * if your setitimer() uses timevals (uS resolution).
++ */
++#ifndef SETITIMER_USES_TIMEVAL 
++#  undef SETITIMER_USES_TIMEVAL 
+ #endif
+ 
+ 
