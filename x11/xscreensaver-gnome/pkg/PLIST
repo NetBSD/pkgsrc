@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/07/14 07:21:03 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/07/26 18:15:05 frueauf Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -65,6 +65,7 @@ libexec/xscreensaver/moire2
 libexec/xscreensaver/morph3d
 libexec/xscreensaver/mountain
 libexec/xscreensaver/munch
+libexec/xscreensaver/nerverot
 libexec/xscreensaver/noseguy
 libexec/xscreensaver/pedal
 libexec/xscreensaver/penetrate
@@ -150,9 +151,11 @@ man/man1/lmorph.1
 man/man1/maze.1
 man/man1/moire.1
 man/man1/munch.1
+man/man1/nerverot.1
 man/man1/noseguy.1
 man/man1/pedal.1
 man/man1/penrose.1
+man/man1/petri.1
 man/man1/phosphor.1
 man/man1/pyro.1
 man/man1/qix.1
