@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2001/06/30 16:56:31 tron Exp $
+
+--- src/py_module.c.orig	Wed Nov  1 09:10:18 2000
++++ src/py_module.c	Sat Jun 30 18:44:56 2001
+@@ -101,11 +101,7 @@
+      strcat(tmp, "/.emma.py");
+      py_module_include_file(tmp, FALSE);
+ 
+-     py_module_include_file("/usr/share/emma.py", FALSE);
+-     py_module_include_file("/usr/local/share/emma.py", FALSE);
+-
+-     py_module_include_file("/usr/share/emma/emma.py", FALSE);
+-     py_module_include_file("/usr/local/share/emma/emma.py", FALSE);
++     py_module_include_file(PREFIX "/share/emma/emma.py", FALSE);
+ }
+ 
+ void py_module_redirect_stderr(void)
