@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.6 2004/06/21 15:18:53 recht Exp $
+$NetBSD: distinfo,v 1.7 2004/09/01 12:12:14 recht Exp $
 
-SHA1 (sylpheed-0.9.12-gtk2-20040617.tar.gz) = 55b3509235ed4d284fcf6b5899b9f059749e30c4
-Size (sylpheed-0.9.12-gtk2-20040617.tar.gz) = 3375376 bytes
-SHA1 (patch-aa) = a02ce94641b1b75dd050973e282f43af7d4aa505
+SHA1 (sylpheed-0.9.12-gtk2-20040622.tar.gz) = ba20a927ebd8ee6442cbebc9433c599bf9cf814e
+Size (sylpheed-0.9.12-gtk2-20040622.tar.gz) = 3375655 bytes
