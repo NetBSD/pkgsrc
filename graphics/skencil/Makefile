@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/12 13:07:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/02 03:55:16 snj Exp $
 #
 
 DISTNAME=	skencil-0.6.16
@@ -10,7 +10,7 @@ HOMEPAGE=	http://sketch.sourceforge.net/
 COMMENT=	Interactive drawing program
 
 USE_X11=	YES
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 PYTHON_PATCH_SCRIPTS= sk2ppm.py sk2ps.py skconvert.py skencil.py skshow.py
 SK_CONF_ARGS=	--imaging-include=${BUILDLINK_PREFIX.pyimaging}/${PYINC}/PIL
@@ -40,6 +40,6 @@ post-install:
 	cd ${WRKSRC}/Examples && ${PAX} -rwpm -v . ${SKETCHEXDIR}
 
 .include "../../lang/python/application.mk"
-.include "../../x11/py-Tk/buildlink2.mk"
-.include "../../graphics/py-imaging/buildlink2.mk"
+.include "../../x11/py-Tk/buildlink3.mk"
+.include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

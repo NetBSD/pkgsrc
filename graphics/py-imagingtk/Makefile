@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/08/18 10:15:39 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/02 03:55:16 snj Exp $
 #
 
 DISTNAME=	Imaging-1.1.4
@@ -14,7 +14,7 @@ DIST_SUBDIR=    python
 PYDISTUTILSPKG=	yes
 BUILDLINK_DEPENDS.python20=	python20>=2.0.1nb4
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_X11=	yes
 
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
@@ -34,6 +34,6 @@ post-install:
 	${PREFIX}/share/examples/${PYPKGPREFIX}-imaging )
 
 .include "../../lang/python/extension.mk"
-.include "../../graphics/py-imaging/buildlink2.mk"
-.include "../../x11/py-Tk/buildlink2.mk"
+.include "../../graphics/py-imaging/buildlink3.mk"
+.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
