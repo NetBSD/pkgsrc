@@ -1,0 +1,12 @@
+t1lib is a library written in C which implements functions for generating
+bitmaps from Adobe Type 1 fonts. It uses most internal parts of the Type 1
+rasterizer provided with X11R5 and newer but tries avoid the disadvantages
+known from that rasterizer. Although most people would use the rasterizer
+under X11, having X11 is not necessary at all. 
+
+The rasterizer is implemented as a shared or static library to be linked
+to the programs that want to use Type 1 fonts. In addition to this library
+there is a test-program called xglyph which, as the name indicates,
+requires X11. It can be used to show most of the features of the library.
+xglyph can be run out of the box without doing any X11 configuration like
+setting resources.
