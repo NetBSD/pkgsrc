@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.12 2004/10/26 13:55:37 adam Exp $
+$NetBSD: patch-ab,v 1.13 2004/10/27 19:20:33 drochner Exp $
 
 --- /dev/null	2004-10-25 16:57:21.000000000 +0000
 +++ configs/pkgsrc
@@ -10,5 +10,6 @@ $NetBSD: patch-ab,v 1.12 2004/10/26 13:55:37 adam Exp $
 +CONFIG_NAME = pkgsrc
 +
 +# Compiler and flags
++CFLAGS+= -DUSE_XSHM
 +APP_LIB_DEPS = -L$(LIB_DIR) -L${PREFIX}/lib -L${X11PREFIX}/lib -lXext -lXmu -lXi -lX11 -lm
 +
