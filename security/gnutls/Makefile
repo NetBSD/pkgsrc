@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2004/11/28 12:59:10 recht Exp $
+# $NetBSD: Makefile,v 1.24 2005/02/19 00:14:23 wiz Exp $
 
-DISTNAME=	gnutls-1.0.23
+DISTNAME=	gnutls-1.2.0
 CATEGORIES=	security devel
-MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/ \
+MASTER_SITES=	http://josefsson.org/gnutls/releases/ \
+		ftp://ftp.gnutls.org/pub/gnutls/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gnutls/ \
 		http://www.mirrors.wiretapped.net/security/network-security/gnutls/ \
 		ftp://ftp.mirrors.wiretapped.net/pub/security/network-security/gnutls/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
@@ -17,10 +19,13 @@ USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
+INFO_FILES=		gnutls.info
+
 PKGCONFIG_OVERRIDE=	lib/gnutls.pc.in
 PKGCONFIG_OVERRIDE+=	libextra/gnutls-extra.pc.in
 
 BUILDLINK_DEPENDS.opencdk=	opencdk>=0.5.5
+BUILDLINK_DEPENDS.libtasn1=	libtasn1>=0.2.11
 
 MAKE_ENV+=		RM="${RM}"
 
@@ -33,7 +38,7 @@ pre-install:
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/TODO ${DOCDIR}
-	cd ${WRKSRC}/doc/tex && ${INSTALL_DATA} *.ps *.tex *.eps ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/gnutls.ps ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}/doc/examples && ${INSTALL_DATA} *.c ${EGDIR}
 
