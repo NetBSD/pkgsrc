@@ -1,23 +1,35 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/03 04:17:38 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/02/25 17:45:19 drochner Exp $
 bin/xephem
-${IMAKE_MAN_DIR}/xephem.${IMAKE_MANNEWSUFFIX}
 lib/X11/app-defaults/XEphem
+man/cat1/xephem.0
 share/xephem/auxil/README
+share/xephem/auxil/SOHO_512_20030809_0719_eit_304.gif
 share/xephem/auxil/analemma.plt
+share/xephem/auxil/astorb2edb.pl
+share/xephem/auxil/dearth.gif
+share/xephem/auxil/eyepieces.eyp
+share/xephem/auxil/favorites.fav
 share/xephem/auxil/jupiter.9910
 share/xephem/auxil/jupitermap.gif
 share/xephem/auxil/logo.gif
 share/xephem/auxil/mars.9910
 share/xephem/auxil/mars_db
-share/xephem/auxil/marsmap.fts
+share/xephem/auxil/marsmap.jpg
 share/xephem/auxil/moon.fts
-share/xephem/auxil/moon_db
+share/xephem/auxil/mpcorb2edb.pl
+share/xephem/auxil/nearth.gif
 share/xephem/auxil/sample.hzn
+share/xephem/auxil/saturn00.gif
+share/xephem/auxil/saturn04.gif
+share/xephem/auxil/saturn10.gif
+share/xephem/auxil/saturn16.gif
+share/xephem/auxil/saturn20.gif
+share/xephem/auxil/saturn24.gif
 share/xephem/auxil/saturne.9910
 share/xephem/auxil/starcensus.txt
 share/xephem/auxil/uranus.9910
-share/xephem/auxil/xephem.hlp
-share/xephem/auxil/xephem.sit
+share/xephem/auxil/wmm.cof
+share/xephem/auxil/xephem_sites
 share/xephem/auxil/xephem_skyhist
 share/xephem/catalogs/Messier.edb
 share/xephem/catalogs/YBS.edb
@@ -25,11 +37,10 @@ share/xephem/fifos/Makefile
 share/xephem/fifos/README
 share/xephem/fits/Abell426.fts
 share/xephem/fits/horsehead.fts
-share/xephem/tools/astorb2edb.pl
-share/xephem/tools/mpcorb2edb.pl
+@exec ${MKDIR} %D/share/xephem/tools
 @dirrm share/xephem/tools
+@dirrm share/xephem/fits
+@dirrm share/xephem/fifos
 @dirrm share/xephem/catalogs
 @dirrm share/xephem/auxil
-@dirrm share/xephem/fifos
-@dirrm share/xephem/fits
 @dirrm share/xephem
