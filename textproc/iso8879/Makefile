@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:26:49 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/23 17:18:32 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
 DISTNAME=	isoENTS
 PKGNAME=	iso8879-1986
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://fallout.campusview.indiana.edu/ports/distfiles/
 EXTRACT_SUFX=	.zip
