@@ -1,0 +1,11 @@
+--- cnv/xbmtorle.c~	Thu Apr 30 07:01:54 1992
++++ cnv/xbmtorle.c	Wed Nov 25 23:56:38 1998
+@@ -206,7 +206,7 @@
+ 
+ 	if ( sscanf( line, "#define %s %d", name_and_type, &v ) == 2 )
+ 	{
+-	    if ( ! (t = rindex( name_and_type, '_' )) )
++	    if ( ! (t = rle_rindex( name_and_type, '_' )) )
+ 		t = name_and_type;
+ 	    else
+ 		t++;

@@ -1,0 +1,22 @@
+--- include/rle_config.tlr	Wed Nov 25 23:51:33 1998
++++ include/rle_config.tlr	Wed Nov 25 23:53:33 1998
+@@ -91,15 +91,15 @@
+ #ifdef USE_STRING_H
+     /* SYS V string routines. */
+ #   include <string.h>
+-#   define index strchr
+-#   define rindex strrchr
++#   define rle_index strchr
++#   define rle_rindex strrchr
+ #else
+     /* BSD string routines. */
+ #   include <strings.h>
+ /* Really, should define USE_STRING_H if __STDC__, but be safe. */
+ #ifdef __STDC__
+-#   define index strchr
+-#   define rindex strrchr
++#   define rle_index strchr
++#   define rle_rindex strrchr
+ #endif /* __STDC__ */
+ #endif /* USE_STRING_H */
+ 

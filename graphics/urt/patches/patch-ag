@@ -1,0 +1,20 @@
+--- lib/getopt.c~	Tue Jan 28 10:18:23 1992
++++ lib/getopt.c	Wed Nov 25 23:57:31 1998
+@@ -31,8 +31,6 @@
+ 
+ static char	*scan = NULL;	/* Private scan pointer. */
+ 
+-extern char	*index();
+-
+ int
+ getopt(argc, argv, optstring)
+ int argc;
+@@ -62,7 +60,7 @@
+     }
+     
+     c = *scan++;
+-    place = index(optstring, c);
++    place = rle_index(optstring, c);
+     
+     if (place == NULL || c == ':') {
+ 	fprintf(stderr, "%s: unknown option -%c\n", argv[0], c);
