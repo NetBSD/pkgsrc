@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/21 13:01:57 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/21 13:36:00 itojun Exp $
 # KAME Id: Makefile,v 1.3 2000/01/21 12:34:29 itojun Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/
 
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	netperf-21pl3-20000121a.diff.gz
+PATCHFILES=	netperf-21pl3-20000721.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	itojun@kame.net
