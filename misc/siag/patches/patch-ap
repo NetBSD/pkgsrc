@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2000/02/02 04:05:12 wiz Exp $
+
+--- pw/examples/Makefile.in.orig	Tue Jul  6 03:09:16 1999
++++ pw/examples/Makefile.in	Wed Feb  2 04:21:06 2000
+@@ -83,7 +83,7 @@
+ VERSION = @VERSION@
+ XAWLIB = @XAWLIB@
+ 
+-docdir = $(prefix)/doc/siag/pw/examples
++docdir = $(prefix)/share/doc/siag/pw/examples
+ 
+ doc_DATA = changes.pw chead.doc chead.html chead.pw chead.rtf chead.txt \
+ 	color.pw egon.pw egon.rtf morefonts.pw newpw.pw rtfex.rtf \

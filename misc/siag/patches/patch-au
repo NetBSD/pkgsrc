@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2000/02/02 04:05:16 wiz Exp $
+
+--- egon/examples/Makefile.in.orig	Tue Jul  6 03:09:25 1999
++++ egon/examples/Makefile.in	Wed Feb  2 04:38:17 2000
+@@ -83,7 +83,7 @@
+ VERSION = @VERSION@
+ XAWLIB = @XAWLIB@
+ 
+-docdir = $(prefix)/doc/siag/egon/examples
++docdir = $(prefix)/share/doc/siag/egon/examples
+ 
+ doc_DATA = bounce.egon ms.egon propeller.egon rondo.egon
+ 
