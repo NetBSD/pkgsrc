@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.128 2004/04/27 12:26:31 markd Exp $
+# $NetBSD: Makefile,v 1.129 2004/04/27 12:30:23 markd Exp $
 
 DISTNAME=		openssh-3.8p1
 PKGNAME=		openssh-3.8.1
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -99,6 +99,10 @@ CPPFLAGS+=		-I/usr/include/kerberosIV
 LDFLAGS+=		-lkrb -lcom_err -lroken -ldes -lcrypto
 .endif
 
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/utmpx.h)
+# if we have utmpx et al do not try to use login()
+CONFIGURE_ARGS+=	--disable-libutil
+.endif
 .if ${OPSYS} == "SunOS" && (${OS_VERSION} == "5.8" || ${OS_VERSION} == "5.9")
 CONFIGURE_ARGS+=	--disable-utmp --disable-wtmp
 .endif

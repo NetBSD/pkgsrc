@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.9 2004/04/27 12:30:23 markd Exp $
+
+--- defines.h.orig	2004-02-10 15:01:14.000000000 +1300
++++ defines.h
+@@ -574,6 +574,24 @@ struct winsize {
+ #    endif
+ #  endif
+ #endif
++#ifndef UTMPX_FILE
++#  ifdef _PATH_UTMPX
++#    define UTMPX_FILE _PATH_UTMPX
++#  else
++#    ifdef CONF_UTMPX_FILE
++#      define UTMPX_FILE CONF_UTMPX_FILE
++#    endif
++#  endif
++#endif
++#ifndef WTMPX_FILE
++#  ifdef _PATH_WTMPX
++#    define WTMPX_FILE _PATH_WTMPX
++#  else
++#    ifdef CONF_WTMPX_FILE
++#      define WTMPX_FILE CONF_WTMPX_FILE
++#    endif
++#  endif
++#endif
+ /* pick up the user's location for lastlog if given */
+ #ifndef LASTLOG_FILE
+ #  ifdef _PATH_LASTLOG

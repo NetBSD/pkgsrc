@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.15 2004/03/12 19:24:47 wiz Exp $
+$NetBSD: patch-ab,v 1.16 2004/04/27 12:30:23 markd Exp $
 
---- configure.ac.orig	Tue Feb 24 06:47:04 2004
+--- configure.ac.orig	2004-02-24 18:47:04.000000000 +1300
 +++ configure.ac
 @@ -438,6 +438,9 @@ mips-sony-bsd|mips-sony-newsos4)
  	;;
@@ -23,7 +23,47 @@ $NetBSD: patch-ab,v 1.15 2004/03/12 19:24:47 wiz Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  				],
-@@ -2793,7 +2800,7 @@ echo "OpenSSH has been configured with t
+@@ -2725,9 +2732,17 @@ AC_TRY_COMPILE([
+ )
+ if test -z "$conf_utmpx_location"; then
+ 	if test x"$system_utmpx_path" = x"no" ; then
+-		AC_DEFINE(DISABLE_UTMPX)
++		for f in /var/run/utmpx; do
++			if test -f $f ; then
++				conf_utmpx_location=$f
++			fi
++		done
++		if test -z "$conf_utmpx_location"; then
++			AC_DEFINE(DISABLE_UTMPX)
++		fi
+ 	fi
+-else
++fi
++if test -n "$conf_utmpx_location"; then
+ 	AC_DEFINE_UNQUOTED(CONF_UTMPX_FILE, "$conf_utmpx_location")
+ fi	
+ 
+@@ -2750,9 +2765,17 @@ AC_TRY_COMPILE([
+ )
+ if test -z "$conf_wtmpx_location"; then
+ 	if test x"$system_wtmpx_path" = x"no" ; then
+-		AC_DEFINE(DISABLE_WTMPX)
++		for f in /var/log/wtmpx; do
++			if test -f $f ; then
++				conf_wtmpx_location=$f
++			fi
++		done
++		if test -z "$conf_wtmpx_location"; then
++			AC_DEFINE(DISABLE_WTMPX)
++		fi
+ 	fi
+-else
++fi
++if test -n "$conf_wtmpx_location"; then
+ 	AC_DEFINE_UNQUOTED(CONF_WTMPX_FILE, "$conf_wtmpx_location")
+ fi	
+ 
+@@ -2793,7 +2816,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
