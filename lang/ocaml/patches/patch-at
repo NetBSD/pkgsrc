@@ -1,8 +1,15 @@
-$NetBSD: patch-at,v 1.2 2004/12/24 17:16:04 jmmv Exp $
+$NetBSD: patch-at,v 1.3 2005/01/24 21:18:16 tv Exp $
 
---- configure.orig	2002-08-07 14:45:00.000000000 +0200
+--- configure.orig	2002-08-07 08:45:00.000000000 -0400
 +++ configure
-@@ -528,6 +528,7 @@ case "$host" in
+@@ -522,12 +522,14 @@ case "$host" in
+   i[3456]86-*-solaris*)         arch=i386; system=solaris;;
+   i[3456]86-*-beos*)            arch=i386; system=beos;;
+   i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
++  i[3456]86-*-interix3*)        arch=i386; system=interix3;;
+   mips-*-irix6*)                arch=mips; system=irix;;
+   hppa1.1-*-hpux*)              arch=hppa; system=hpux;;
+   hppa1.1-*-nextstep*)          arch=hppa; system=nextstep;;
    rs6000-*-aix*)                arch=power; model=rs6000; system=aix;;
    powerpc-*-aix*)               arch=power; model=ppc; system=aix;;
    powerpc-*-linux*)             arch=power; model=ppc; system=elf;;
@@ -10,7 +17,7 @@ $NetBSD: patch-at,v 1.2 2004/12/24 17:16:04 jmmv Exp $
    powerpc-*-rhapsody*)          arch=power; model=ppc; system=rhapsody;;
    powerpc-*-darwin*)            arch=power; model=ppc; system=rhapsody;;
    arm*-*-linux*)                arch=arm; system=linux;;
-@@ -591,6 +592,7 @@ case "$arch,$model,$system" in
+@@ -591,6 +593,7 @@ case "$arch,$model,$system" in
    power,rs6000,aix) asflags='-u -m pwr -w'; asppflags="$asflags";;
    power,ppc,aix)    asflags='-u -m ppc -w'; asppflags="$asflags";;
    power,*,elf)      aspp='gcc'; asppflags='-c';;
@@ -18,7 +25,7 @@ $NetBSD: patch-at,v 1.2 2004/12/24 17:16:04 jmmv Exp $
    power,*,rhapsody) ;;
    arm,*,linux)      aspp='gcc'; asppflags='-c -DSYS_$(SYSTEM)';;
    ia64,*,linux)     asflags=-xexplicit
-@@ -601,6 +603,7 @@ case "$arch,$model,$system" in
+@@ -601,6 +604,7 @@ case "$arch,$model,$system" in
    alpha,*,digital) profiling='prof';;
    i386,*,linux_elf) profiling='prof';;
    i386,*,bsd_elf) profiling='prof';;
@@ -26,7 +33,7 @@ $NetBSD: patch-at,v 1.2 2004/12/24 17:16:04 jmmv Exp $
    *) profiling='noprof';;
  esac
  
-@@ -1044,6 +1047,7 @@ fi
+@@ -1044,6 +1048,7 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -34,7 +41,7 @@ $NetBSD: patch-at,v 1.2 2004/12/24 17:16:04 jmmv Exp $
  for dir in \
      $x11_include_dir          \
                                \
-@@ -1152,6 +1156,7 @@ do
+@@ -1152,6 +1157,7 @@ do
      break
    fi
  done
