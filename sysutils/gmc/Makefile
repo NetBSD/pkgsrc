@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/04/14 16:15:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.38 2004/05/04 08:08:19 wiz Exp $
 
 PKGNAME=		g${DISTNAME}
 PKGREVISION=		9
@@ -15,5 +15,5 @@ BUILD_USES_MSGFMT=	yes
 post-install:
 	${RMDIR} ${PREFIX}/share/gnome/help/gmc/C/figs
 
-.include "../../x11/gnome-core/buildlink2.mk"
+.include "../../x11/gnome-core/buildlink3.mk"
 .include "../../sysutils/mc/Makefile.common"
