@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2002/11/14 23:55:27 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/25 13:39:36 jmmv Exp $
 #
 
 DISTNAME=	ifcico-3.0.cm.alpha-4.1
 PKGNAME=	ifcico-cm-3.0a4.1
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://cmeerw.org/files/
 
@@ -12,14 +13,18 @@ COMMENT=	FidoNet transport program using FTS protocols via dial or TCP
 
 USE_BUILDLINK2=	# defined
 
+PKG_SYSCONFSUBDIR=	ifcico-cm
+MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+
 post-build:
-	${SED} -e 's,@PREFIX@,${PREFIX},g' ${WRKSRC}/misc/config >${WRKDIR}/config.dist
+	${SED} -e 's,@PREFIX@,${PREFIX},g' ${WRKSRC}/misc/config \
+		>${WRKDIR}/config
 	${SED} -e 's,@PREFIX@,${PREFIX},g' ${WRKSRC}/misc/config-global \
-		>${WRKDIR}/config-global.dist
+		>${WRKDIR}/config-global
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/ifcico
-	${INSTALL_DATA} ${WRKDIR}/config* ${PREFIX}/etc/ifcico/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ifcico-cm
+	${INSTALL_DATA} ${WRKDIR}/config* ${PREFIX}/share/examples/ifcico-cm/
 	cd ${WRKSRC}/ifcico && for f in *.8; do \
 		tbl <$$f >$$f.t && ${INSTALL_DATA} $$f.t ${PREFIX}/man/man8/$$f; \
 	done
