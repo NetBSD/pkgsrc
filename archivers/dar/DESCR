@@ -1,7 +1,7 @@
 DAR is a Disk ARchiver, for backing-up file systems to disk.  It's rather
 in the spirit of TAR, with some additions.  Notably:
 
-	DAR can break up a archive into multiple files, to facillitate
+	DAR can break up a archive into multiple files, to facilitate
 	storage on portable media, like CDs or DVDs.
 
 	Can perform incremental back-ups against a reference archive, or,
