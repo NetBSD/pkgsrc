@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1 2001/06/04 16:14:06 wiz Exp $
+
+--- configure.orig	Mon May 14 00:16:50 2001
++++ configure
+@@ -3506,8 +3506,8 @@
+ 
+ 
+       if test "$CURSES_CLIENT" = "yes" ; then
+-      echo $ac_n "checking for newterm in -lncurses""... $ac_c" 1>&6
+-echo "configure:3511: checking for newterm in -lncurses" >&5
++      echo $ac_n "checking for start_color in -lncurses""... $ac_c" 1>&6
++echo "configure:3511: checking for start_color in -lncurses" >&5
+ ac_lib_var=`echo ncurses'_'newterm | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -3520,10 +3520,10 @@
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char newterm();
++char start_color();
+ 
+ int main() {
+-newterm()
++start_color()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:3530: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
