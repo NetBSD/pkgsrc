@@ -1,0 +1,52 @@
+$NetBSD: patch-ab,v 1.1 2003/12/13 20:26:03 ben Exp $
+
+--- opcodes/midisend.c.orig	2003-02-25 19:24:01.000000000 -0800
++++ opcodes/midisend.c
+@@ -1,6 +1,8 @@
+ #include "cs.h"                                       /*    MIDISEND.C    */
+ #include "midioops.h"
+ 
++#undef USE_DLP_MIDI_OUT_CODE
++
+ #ifdef LINUX
+ /*
+    This is very provisional code for Linux Csound MIDI output. Data
+@@ -16,8 +18,20 @@
+ #include <ctype.h>
+ #include <sys/ioctl.h>
+ #include <fcntl.h>
+-#ifdef __FreeBSD__
+-#  include <sys/soundcard.h>
++#ifdef BSD
++#ifdef USE_DLP_MIDI_OUT_CODE
++#include <sys/midiio.h>
++#define SEQ_MIDIPUTC			SEQOLD_MIDIPUTC
++#define SEQ_DEFINEBUF(len)		unsigned char _seqbuf[len]; int _seqbuflen = len;int _seqbufptr = 0
++#define _SEQ_ADVBUF(len)		_seqbufptr += len
++#define _SEQ_NEEDBUF(len)		if ((_seqbufptr+(len)) > _seqbuflen) seqbuf_dump()
++#define SEQ_MIDIOUT(device, byte)	{_SEQ_NEEDBUF(4);\
++					_seqbuf[_seqbufptr] = SEQ_MIDIPUTC;\
++					_seqbuf[_seqbufptr+1] = (byte);\
++					_seqbuf[_seqbufptr+2] = (device);\
++					_seqbuf[_seqbufptr+3] = 0;\
++					_SEQ_ADVBUF(4);}
++#endif
+ #else
+ #  include <linux/soundcard.h>
+ #endif
+@@ -38,6 +52,7 @@ void pitch_bend(int /*chan*/, int /*lsb*
+ void poly_after_touch(int /*chan*/, int /*note_num*/, int /*value*/);
+ void openMIDIout(void);
+ 
++#ifdef USE_DLP_MIDI_OUT_CODE
+ #ifdef LINUX
+ #define _gotMIDIout
+ void seqbuf_dump(void);
+@@ -127,6 +142,7 @@ void openMIDIout()
+ }
+ 
+ #endif
++#endif
+ 
+ /* ********************************* */
+ /* This section for Windows95 and NT */
