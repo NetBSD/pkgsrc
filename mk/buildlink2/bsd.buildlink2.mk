@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.24 2002/09/20 00:57:43 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.25 2002/09/21 20:51:03 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -13,7 +13,7 @@
 # BUILDLINK_FILES.foo+=		include/bar.h
 # BUILDLINK_FILES.foo+=		lib/libfoo.*
 #
-# # We need "libbar.*" to look like "libfoo.*".
+# # We want "-lbar" to eventually resolve to "-lfoo".
 # BUILDLINK_TRANSFORM+=		l:bar:foo
 #
 # BUILDLINK_TARGETS+=		foo-buildlink
