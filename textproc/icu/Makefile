@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:52 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/28 22:49:15 seb Exp $
 #
 
 DISTNAME=	icu-1.7
@@ -13,22 +13,26 @@ COMMENT=	Robust and full-featured unicode support
 WRKSRC=		${WRKDIR}/icu/source
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
+USE_BUILDLINK2=	YES
 
-PLIST_INIT=	${PKGDIR}/PLIST
-PLIST_SRC=	${WRKSRC}/PLIST
+.include "../../mk/endian.mk"
+
+BIG_ENDIAN=
+LITTLE_ENDIAN=
+.if ${MACHINE_ENDIAN} == "little"
+BIG_ENDIAN=	'@comment '
+.elif ${MACHINE_ENDIAN} == "big"
+LITTLE_ENDIAN=	'@comment '
+.endif
+PLIST_SUBST+=	BIG_ENDIAN=${BIG_ENDIAN}
+PLIST_SUBST+=	LITTLE_ENDIAN=${LITTLE_ENDIAN}
 
 CONFIGURE_ARGS+= --disable-threads
-
-CPPFLAGS+=	-I${LOCALBASE}/include
 
 pre-configure:
 	${CHMOD} u+rx ${WRKSRC}/configure
 
 test: build
 	cd ${WRKSRC} && ${MAKE_PROGRAM} check
-
-post-install:
-	@${CP} ${PLIST_INIT} ${PLIST_SRC}
-	@(cd ${PREFIX} && ls lib/icu/1.7/libicudt17[lb].so >> ${PLIST_SRC})
 
 .include "../../mk/bsd.pkg.mk"
