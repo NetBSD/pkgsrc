@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:49 zuntum Exp $
-jre/lib/i386/libjavacomp.so
-jre/lib/i386/libjavacomp_g.so
-jre/README.javacomp
-jre/LICENSE.javacomp
+@comment $NetBSD: PLIST,v 1.2 2002/08/07 17:28:56 jschauma Exp $
+${JAVADIR}/lib/i386/libjavacomp.so
+${JAVADIR}/lib/i386/libjavacomp_g.so
+share/doc/jbuilder-jit/README.javacomp
+share/doc/jbuilder-jit/LICENSE.javacomp
+@dirrm share/doc/jbuilder-jit
+@unexec ${RMDIR} %D/sun-1.3.1/lib/i386 2>/dev/null || ${TRUE}
