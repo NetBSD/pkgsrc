@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/09/21 23:46:51 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/22 10:50:44 jlam Exp $
 #
 
 DISTNAME=	scigraphica-0.8.0
@@ -10,21 +10,27 @@ MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://scigraphica.sourceforge.net/
 COMMENT=	data analysis and technical graphics
 
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 USE_GMAKE=		YES
+USE_GNU_READLINE=	YES
+
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-gnome
 CONFIGURE_ENV+=		PYTHONBIN=${PYTHONBIN}
+
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-PY_PATCHPLIST=		YES
-USE_GNU_READLINE=	yes
 
-.include "../../devel/readline/buildlink.mk"
-.include "../../graphics/imlib/buildlink.mk"
+PY_PATCHPLIST=		YES
+
 .include "../../lang/python/application.mk"
-.include "../../math/py-Numeric/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../x11/gtk+extra/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+
+.include "../../devel/readline/buildlink2.mk"
+.include "../../graphics/imlib/buildlink2.mk"
+.include "../../math/py-Numeric/buildlink2.mk"
+.include "../../textproc/libxml/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk+extra/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
