@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.72 2001/06/20 07:09:49 jlam Exp $
+# $NetBSD: Makefile,v 1.73 2001/06/20 07:31:58 jlam Exp $
 
-DISTNAME=	mutt-1.2.5i
-CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/ \
-		ftp://ftp.funet.fi/pub/unix/mail/mutt/ \
-		ftp://ftp.uib.no/pub/mutt/ \
-		ftp://uiarchive.cso.uiuc.edu/pub/packages/mail/mutt/
+DISTNAME=		mutt-1.2.5i
+CATEGORIES=		mail
+MASTER_SITES=		ftp://ftp.mutt.org/pub/mutt/ \
+			ftp://ftp.funet.fi/pub/unix/mail/mutt/ \
+			ftp://ftp.uib.no/pub/mutt/ \
+			ftp://uiarchive.cso.uiuc.edu/pub/packages/mail/mutt/
 
-MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.mutt.org/
-COMMENT=	text-based MIME mail client with PGP support
+MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.mutt.org/
+COMMENT=		text-based MIME mail client with PGP support
 
 USE_BUILDLINK_ONLY=	YES
 
