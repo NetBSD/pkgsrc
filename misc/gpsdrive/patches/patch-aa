@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/12/26 19:55:01 tsarna Exp $
+
+I don't care enough to fix friendsd... disabled for now
+
+--- src/Makefile.in.orig	Sun Dec  8 13:30:56 2002
++++ src/Makefile.in	Thu Dec 26 14:06:03 2002
+@@ -122,7 +122,7 @@
+ 
+ @DISABLEGARMIN_TRUE@PRG1 = 
+ @DISABLEGARMIN_FALSE@PRG1 = garble
+-bin_PROGRAMS = $(PRG1) gpsdrive gpsd  friendsd 
++bin_PROGRAMS = $(PRG1) gpsdrive gpsd 
+ LIBS = 
+ 
+ # gpsdrive_LDADD= $(GLIB_LIBS) $(GTK_LIBS) $(PIXLIBS)
+@@ -176,9 +176,9 @@
+ am_libnautic_la_OBJECTS = nautic.lo
+ libnautic_la_OBJECTS = $(am_libnautic_la_OBJECTS)
+ @DISABLEGARMIN_TRUE@bin_PROGRAMS = gpsdrive$(EXEEXT) gpsd$(EXEEXT) \
+-@DISABLEGARMIN_TRUE@	friendsd$(EXEEXT)
++@DISABLEGARMIN_TRUE@	
+ @DISABLEGARMIN_FALSE@bin_PROGRAMS = garble$(EXEEXT) gpsdrive$(EXEEXT) \
+-@DISABLEGARMIN_FALSE@	gpsd$(EXEEXT) friendsd$(EXEEXT)
++@DISABLEGARMIN_FALSE@	gpsd$(EXEEXT) 
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+ am_friendsd_OBJECTS = friendsd.$(OBJEXT)
