@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/05/19 03:56:36 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/11 22:52:10 jtb Exp $
 
 DISTNAME=		mercury-compiler-0.10.1
 PKGNAME=		mercury-0.10.1
@@ -10,6 +10,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.mu.oz.au/mercury/
 COMMENT=		modern logic/functional programming language
 
+DEPENDS+=		boehm-gc>=5.3:../../devel/boehm-gc
+
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 
@@ -19,7 +21,7 @@ BOEHM_GC_DIR_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX=		BOEHM_GC_DIR=boehm-gc
 CONFIGURE_ENV+=		BOEHM_GC_DIR=${BOEHM_GC_DIR}
 
-# We need this. Some of the scripts test CC and use special settings for gcc.
+# Some of the scripts test CC and use special settings for gcc.
 CONFIGURE_ENV+=		CC=gcc
 
 post-install:
