@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.523 2004/12/25 19:15:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.524 2005/01/02 02:55:05 cube Exp $
 #
 
 COMMENT=	Networking tools
@@ -179,6 +179,7 @@ SUBDIR+=	mirror
 SUBDIR+=	mldonkey
 SUBDIR+=	mldonkey-gui
 SUBDIR+=	mouse-pppoe
+SUBDIR+=	mppe-lkm
 SUBDIR+=	mrstat
 SUBDIR+=	mrt
 SUBDIR+=	mrtg
@@ -279,6 +280,7 @@ SUBDIR+=	polsms
 SUBDIR+=	poptop
 SUBDIR+=	ppp-lzs
 SUBDIR+=	ppp-mppe
+SUBDIR+=	pppd
 SUBDIR+=	pptp
 SUBDIR+=	proftpd
 SUBDIR+=	proxycheck
