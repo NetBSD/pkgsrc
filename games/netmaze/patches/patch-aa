@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/29 10:09:46 jdc Exp $
+
+--- Imakefile.dist	Wed Apr 13 12:27:08 1994
++++ Imakefile	Fri Mar  3 15:52:25 2000
+@@ -1,5 +1,5 @@
+ #CC = gcc
+-LOCAL_LIBRARIES = $(XLIB) -lm
++LOCAL_LIBRARIES = @X11LIBS@ $(XLIB) -lm
+ EXTRA_DEFINES = -DSH_MEM
+ EXTRA_LOAD_FLAGS =
+ 
+@@ -13,14 +13,20 @@
+ 
+ OBJS2 = netserv.o maze.o
+ 
+-SRCS3 = follower.c dummy.c better.c allmove.c robot.c network.c maze.c
++OBJS3 = dummy.o allmove.o robot.o network.o maze.o
++
++OBJS4 = follower.o allmove.o robot.o network.o maze.o
++
++OBJS5 = better.o allmove.o robot.o network.o maze.o
+ 
+ PROGRAMS = netmaze netserv follower dummy betterbot
+ 
++MANSUFFIX = 6
++
+ ComplexProgramTarget_1 (netmaze, $(LOCAL_LIBRARIES),)
+ ComplexProgramTarget_2 (netserv, $(LOCAL_LIBRARIES),)
+-SingleProgramTarget(dummy,dummy.o allmove.o robot.o network.o maze.o,,)
+-SingleProgramTarget(follower,follower.o allmove.o robot.o network.o maze.o,,-lm)
+-SingleProgramTarget(betterbot,better.o allmove.o robot.o network.o maze.o,,-lm)
++ComplexProgramTarget_3(dummy,,)
++ComplexProgramTarget_4(follower,-lm,)
++ComplexProgramTarget_5(betterbot,-lm,)
+ 
+ 

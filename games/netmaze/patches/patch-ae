@@ -1,0 +1,31 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
+
+--- netserv.c.dist	Sun Apr 10 11:07:23 1994
++++ netserv.c	Fri Mar  3 15:07:05 2000
+@@ -629,7 +629,7 @@
+  #ifdef RS6000 /* ibm rs/6000 */
+    sigemptyset(&vec1.sa_mask);
+  #else
+-  vec1.sa_mask = 0;
++   (void)sigprocmask (SIG_SETMASK, 0, NULL);
+  #endif
+   vec1.sa_flags = 0;
+   if ( sigaction(SIGALRM, &vec1, (struct sigaction *) 0) == -1) perror("SIGALRM\n");
+@@ -652,7 +652,7 @@
+  #ifdef RS6000 /* ibm rs/6000 */
+    sigemptyset(&svec1.sa_mask);
+  #else
+-  svec1.sa_mask = 0;
++   (void)sigprocmask (SIG_SETMASK, 0, NULL);
+  #endif
+   svec1.sa_flags = 0;
+   if(sigaction(SIGCHLD,&svec1,(struct sigaction *)0) == -1) perror("SIGCHLD\n");
+@@ -914,7 +914,7 @@
+   char *saddr = (char *) &(((struct sockaddr_in *) &(q->remoteaddr))->sin_addr.s_addr);
+   hp = gethostbyaddr(saddr,4,AF_INET);
+ 
+-  if(strlen(hp->h_name) > 0)
++  if(hp && strlen(hp->h_name) > 0)
+     strcpy(name,hp->h_name);
+   else
+     sprintf(name,"%d.%d.%d.%d",(int) saddr[0],(int) saddr[1],(int) saddr[2],(int) saddr[3]);

@@ -1,0 +1,28 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
+
+--- /dev/null	Thu Feb 10 12:33:49 2000
++++ betterbot.man	Wed Feb  9 16:36:44 2000
+@@ -0,0 +1,23 @@
++.TH BETTERBOT 6 "08 January, 2000" "X Version 11"
++.SH NAME
++
++betterbot \-robot client for X windows multiplayer combat game
++
++.SH SYNOPSIS
++
++.B betterbot
++[ servername ]
++
++.SH DESCRIPTION
++
++.I betterbot
++is a simple robot client for the multiplayer combat game.
++This Smiley is quite intelligent.
++
++.SH SEE ALSO
++
++dummy (6), follower (6), netmaze (6), netserv (6)
++
++.SH AUTHORS
++
++Jens Kurlanda, Benjamin Baermann
