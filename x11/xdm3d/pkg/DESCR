@@ -1,0 +1,7 @@
+This is a direct port of Amit Margalit's patches for xdm to give it a
+3D effect.  Rather than using the hacked linux version of xdm, this uses
+one taken from the NetBSD-current xsrc tree, and was patched against it.
+
+Bugs should be directed to root@garbled.net
+For more information on the xdm-3d patches, see:
+	http://www.spade.com/linux/XBanner
