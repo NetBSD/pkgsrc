@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2001/04/07 12:43:49 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/04/09 01:44:40 dmcmahill Exp $
 bin/f2c
 bin/f2c-f77
 include/f2c.h
 lib/libf2c.a
+lib/libf2c_p.a
+lib/libf2c_pic.a
+lib/libf2c.so.${F2CMAJOR}.${F2CMINOR}
+lib/libf2c.so.${F2CMAJOR}
+lib/libf2c.so
 lib/libF77.a
 lib/libF77_p.a
 lib/libF77_pic.a
