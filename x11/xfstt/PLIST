@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/01 20:06:11 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/01/25 20:46:19 wiz Exp $
 bin/xfstt
 etc/rc.d/xfstt
 man/man1/xfstt.1
@@ -9,4 +9,3 @@ share/doc/xfstt/TODO
 share/examples/xfstt/font.properties
 @dirrm share/examples/xfstt
 @dirrm share/doc/xfstt
-@unexec ${RMDIR} -p %D/lib/X11/fonts/TrueType 2> /dev/null || ${TRUE}
