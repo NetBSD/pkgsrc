@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:31:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/06 21:14:56 tron Exp $
 #
 
 DISTNAME=	asclock-classic-1.0
@@ -40,9 +40,10 @@ post-extract:
 	${MV} ${WRKSRC}/danish ${WRKSRC}/da
 
 pre-configure:
-	${LN} -sf ./en/month.xpm ${WRKSRC}/month.xpm
-	${LN} -sf ./en/weekday.xpm ${WRKSRC}/weekday.xpm
-	${LN} -sf ./xpm/color.xpm ${WRKSRC}/clk.xpm
+	${RM} -f ${WRKSRC}/month.xpm ${WRKSRC}/weekday.xpm ${WRKSRC}/clk.xpm
+	${LN} -s ./en/month.xpm ${WRKSRC}/month.xpm
+	${LN} -s ./en/weekday.xpm ${WRKSRC}/weekday.xpm
+	${LN} -s ./xpm/color.xpm ${WRKSRC}/clk.xpm
 
 do-install:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" \
