@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/30 09:12:46 hubertf Exp $
+bin/isic
+bin/tcpsic
+bin/udpsic
+bin/icmpsic
+bin/esic
+share/doc/isic.README
