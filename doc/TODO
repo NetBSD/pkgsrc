@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2867 2005/01/09 08:39:01 schmonz Exp $
+$NetBSD: TODO,v 1.2868 2005/01/09 11:30:00 seb Exp $
 
 Suggested new packages
 ======================
@@ -409,7 +409,6 @@ Suggested package updates
 	o dict-server-1.9.11
 	o diction-1.07
 	o diffstat-1.37
-	o digikam-0.7
 	o dinotrace-9.2a
 	o dirac-0.5.0
 	o dirdiff-2.0
