@@ -1,15 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/10 09:47:26 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/19 14:50:06 uebayasi Exp $
 include/canna/RK.h
 include/canna/jrkanji.h
 include/canna/keydef.h
 include/canna/mfdef.h
 lib/libRKC.a
+lib/libRKC.so
+lib/libRKC.so.1
 lib/libRKC.so.1.0
 lib/libRKC16.a
+lib/libRKC16.so
+lib/libRKC16.so.1
 lib/libRKC16.so.1.0
 lib/libcanna.a
+lib/libcanna.so
+lib/libcanna.so.1
 lib/libcanna.so.1.0
 lib/libcanna16.a
+lib/libcanna16.so
+lib/libcanna16.so.1
 lib/libcanna16.so.1.0
 man/ja_JP.EUC/man3/RkCloseRoma.3
 man/ja_JP.EUC/man3/RkCvtEuc.3
