@@ -1,6 +1,18 @@
-$NetBSD: CHANGES,v 1.8554 2005/01/01 04:21:15 wiz Exp $
+$NetBSD: CHANGES,v 1.8555 2005/01/01 05:18:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
 	Updated antiword to 0.36.1 [wiz 2005-01-01]
 	Updated xquote to 2.6.10 [wiz 2005-01-01]
+	Updated mysql-server to 4.0.22nb2 [minskim 2005-01-01]
+	Updated mysql4-client to 4.1.7nb6 [minskim 2005-01-01]
+	Updated mysql4-server to 4.1.7nb3 [minskim 2005-01-01]
+	Updated mysql3-client to 3.23.58nb2 [minskim 2005-01-01]
+	Updated mysql3-server to 3.23.58nb3 [minskim 2005-01-01]
+	Updated eel to 1.0.1nb10 [minskim 2005-01-01]
+	Updated libgnomeui to 2.8.0nb2 [minskim 2005-01-01]
+	Updated papaya to 0.1.7nb1 [minskim 2005-01-01]
+	Updated patchutils to 0.2.30nb1 [minskim 2005-01-01]
+	Updated abiword-plugins to 2.0.14nb1 [minskim 2005-01-01]
+	Updated conglomerate to 0.7.12nb6 [minskim 2005-01-01]
+	Updated grap to 1.30nb1 [minskim 2005-01-01]
