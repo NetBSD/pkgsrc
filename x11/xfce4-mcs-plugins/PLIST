@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 10:44:37 martti Exp $
+lib/xfce4/mcs-plugins/keyboard_plugin.a
+lib/xfce4/mcs-plugins/keyboard_plugin.la
+lib/xfce4/mcs-plugins/keyboard_plugin.so
+lib/xfce4/mcs-plugins/mouse_plugin.a
+lib/xfce4/mcs-plugins/mouse_plugin.la
+lib/xfce4/mcs-plugins/mouse_plugin.so
+lib/xfce4/mcs-plugins/ui_plugin.a
+lib/xfce4/mcs-plugins/ui_plugin.la
+lib/xfce4/mcs-plugins/ui_plugin.so
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce-mcs-plugins.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce-mcs-plugins.mo
+share/xfce4/doc/C/images/font_selection.png
+share/xfce4/doc/C/images/keyboard_settings.png
+share/xfce4/doc/C/images/mouse_settings.png
+share/xfce4/doc/C/images/user_interface_settings.png
+share/xfce4/doc/C/xfce-mcs-plugins.html
+@dirrm lib/xfce4/mcs-plugins
