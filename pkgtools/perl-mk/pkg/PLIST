@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/20 16:23:55 wiz Exp $
-${MKPATH}/bsd.perl.mk
+@comment $NetBSD: PLIST,v 1.2 2001/04/22 06:25:19 jlam Exp $
+@comment this plist intentionally left empty
