@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7256 2004/09/26 04:16:52 epg Exp $
+$NetBSD: CHANGES,v 1.7257 2004/09/26 04:55:48 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4434,3 +4434,17 @@ Changes to the packages collection and infrastructure in 2004:
 	Added digikamplugins-0.6.2 [seb 2004-09-26]
 	Added tnt-1.2.2 [dmcmahill 2004-09-26]
 	Updated p5-Locale-Maketext-Lexicon to 0.42 [epg 2004-09-26]
+	Added p5-Clone-0.15 [epg 2004-09-26]
+	Added p5-Data-Hierarchy-0.20 [epg 2004-09-26]
+	Added p5-Regexp-Shellish-0.93 [epg 2004-09-26]
+	Added p5-Pod-Escapes-1.04 [epg 2004-09-26]
+	Added p5-Pod-Simple-3.02 [epg 2004-09-26]
+	Added p5-PerlIO-via-dynamic-0.11 [epg 2004-09-26]
+	Added p5-PerlIO-via-symlink-0.02 [epg 2004-09-26]
+	Added p5-IO-Digest-0.10 [epg 2004-09-26]
+	Added p5-SVN-Mirror-0.47 [epg 2004-09-26]
+	Added p5-SVN-Simple-0.25 [epg 2004-09-26]
+	Added p5-Locale-Maketext-Simple-0.12 [epg 2004-09-26]
+	Added p5-File-BaseDir-0.02 [epg 2004-09-26]
+	Added p5-File-MimeInfo-0.10 [epg 2004-09-26]
+	Added svk-0.21 [epg 2004-09-26]
