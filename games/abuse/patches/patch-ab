@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2001/07/02 15:30:59 abs Exp $
+$NetBSD: patch-ab,v 1.3 2004/07/11 00:11:26 wiz Exp $
 
---- abuse/Makefile.in.orig	Wed Jul  9 08:55:21 1997
+--- abuse/Makefile.in.orig	1997-07-09 09:55:21.000000000 +0200
 +++ abuse/Makefile.in
-@@ -37,10 +37,10 @@
+@@ -37,10 +37,10 @@ AUTOCONF = @AUTOCONF@
  AUTOMAKE = @AUTOMAKE@
  AUTOHEADER = @AUTOHEADER@
  
@@ -17,7 +17,16 @@ $NetBSD: patch-ab,v 1.2 2001/07/02 15:30:59 abs Exp $
  transform = @program_transform_name@
  
  NORMAL_INSTALL = true
-@@ -239,11 +239,11 @@
+@@ -170,7 +170,7 @@ abuse_x11R6_LDFLAGS = 
+ SCRIPTS =  $(bin_SCRIPTS)
+ 
+ CFLAGS = @CFLAGS@
+-LINK = $(CC) $(CFLAGS) $(LDFLAGS) -o $@
++LINK = $(CXX) $(CFLAGS) $(LDFLAGS) -o $@
+ DATA =  $(pkgdata_DATA)
+ 
+ DIST_COMMON =  Makefile.am Makefile.in abuse.in acinclude.m4 aclocal.m4 \
+@@ -239,11 +239,11 @@ maintainer-clean-pkglibPROGRAMS:
  
  install-pkglibPROGRAMS: $(pkglib_PROGRAMS)
  	@$(NORMAL_INSTALL)
