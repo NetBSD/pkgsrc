@@ -1,0 +1,61 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/07 17:30:12 xtraeme Exp $
+
+--- Makefile.orig	2003-08-04 01:20:07.000000000 +0200
++++ Makefile
+@@ -9,9 +9,9 @@ SOLARIS=0
+ FREEBSD=0
+ MACOSX=0
+ 
+-CC=gcc
++#CC=gcc
+ # explicit pcap include dir is for redhat which is fux0red
+-CFLAGS=-g -I/usr/local/include -L/usr/local/lib -DFINDIF=$(FINDIF) -DUSE_NETIF=$(USE_NETIF) -DOPENBSD=$(OPENBSD) -DLINUX=$(LINUX) -DSOLARIS=$(SOLARIS) -DFREEBSD=$(FREEBSD) -DMACOSX=$(MACOSX) -I/usr/include/pcap
++CFLAGS=-I$(BUILDLINK_DIR)/include -L$(BUILDLINK_DIR)/lib -DFINDIF=$(FINDIF) -DUSE_NETIF=$(USE_NETIF) -DOPENBSD=$(OPENBSD) -DLINUX=$(LINUX) -DSOLARIS=$(SOLARIS) -DFREEBSD=$(FREEBSD) -DMACOSX=$(MACOSX)
+ 
+ all: message arping2
+ 
+@@ -54,34 +54,34 @@ doc: arping.yodl
+ 	yodl2man -o arping.8 arping.yodl
+ 
+ linux-nofindif:
+-	make USE_NETIF=1 LINUX=1 FINDIF=0 arping1-make
++	$(MAKE) USE_NETIF=1 LINUX=1 FINDIF=0 arping1-make
+ linux:
+-	make USE_NETIF=1 LINUX=1 arping1-make
++	$(MAKE) USE_NETIF=1 LINUX=1 arping1-make
+ 
+ freebsd:
+-	make USE_NETIF=1 FREEBSD=1 arping1-make
++	$(MAKE) USE_NETIF=1 FREEBSD=1 arping1-make
+ 
+ macosx:
+-	make USE_NETIF=1 MACOSX=1 arping1-make
++	$(MAKE) USE_NETIF=1 MACOSX=1 arping1-make
+ 
+ openbsd:
+-	make OPENBSD=1 arping1-make
++	$(MAKE) OPENBSD=1 arping1-make
+ netbsd:
+-	make openbsd
++	$(MAKE) openbsd
+ 
+ solaris:
+-	make USE_NETIF=0 SOLARIS=1 arping1-make
++	$(MAKE) USE_NETIF=0 SOLARIS=1 arping1-make
+ 
+ install:
+-	install -c arping /usr/local/bin/arping
+-	install arping.8 /usr/local/man/man8/arping.8
++	$(BSD_INSTALL) -c arping $(PREFIX)/bin/arping
++	$(BSD_INSTALL) -c arping.8 $(PREFIX)/man/man8/arping.8
+ 
+ arping.o: arping.c
+ 	$(CC) -Wall $(CFLAGS) -c `libnet-config --defines` `libnet-config --cflags` arping.c
+ 
+ O_arping=arping.o
+ arping1-make: $(O_arping)
+-	$(CC) $(CFLAGS) -g -o arping $(O_arping) `libnet-config --libs` -lpcap
++	$(CC) $(CFLAGS) -o arping $(O_arping) `libnet-config --libs` -lpcap
+ 
+ O_arping2=arping-2/arping.c
+ arping2: arping-2/arping
