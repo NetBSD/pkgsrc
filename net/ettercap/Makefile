@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/12/18 03:01:38 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/23 23:38:13 wiz Exp $
 
 DISTNAME=		ettercap-0.6.b
 CATEGORIES=		security net
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--enable-plugins \
 
 USE_BUILDLINK2=		yes
 
-USE_NCURSES=		# newpad(), MAX_FORM_COMMAND
+USE_NCURSES=		# MAX_FORM_COMMAND
 PTHREAD_OPTS+=		require
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 LIBS+=			-ldes
