@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/11/05 00:05:06 recht Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/17 00:14:14 recht Exp $
 
 DISTNAME=	coreutils-5.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 EXTRACT_SUFX=	.tar.bz2
@@ -37,6 +37,13 @@ CONFLICTS+=		teTeX-bin-[0-9]*
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+
+.if ${OPSYS} == "NetBSD" ||  ${OPSYS} == "FreeBSD" || \
+  ${OPSYS} == "OpenBSD"
+MAKE_FLAGS+=	setuid_root_mode=a=rx
+MESSAGE_SRC=    ${.CURDIR}/MESSAGE.gsu
+MESSAGE_SUBST+=	OPSYS=${OPSYS}
+.endif
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
