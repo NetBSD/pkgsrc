@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:59 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/23 23:14:25 tron Exp $
 #
 
 DISTNAME=		xsoldier-0.96
@@ -8,10 +8,9 @@ MASTER_SITES=		http://www.surfline.ne.jp/hachi/xsoldier/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.surfline.ne.jp/hachi/xsoldier.html
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
-USE_IMAKE=		yes
-NO_INSTALL_MANPAGES=	yes
+USE_IMAKE=		YES
+USE_XPM=		YES
+NO_INSTALL_MANPAGES=	YES
 
 post-patch:
 	${TOUCH} ${WRKSRC}/xsoldier.man

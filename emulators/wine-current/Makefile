@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/23 15:33:40 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/23 23:14:24 tron Exp $
 
 DISTNAME=		Wine-990328
 PKGNAME=		wine-990328
@@ -9,13 +9,13 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=ALPHA/wine/development/}
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.winehq.com/
 
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		ncurses>=4.2:../../devel/ncurses
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-USE_X11=		yes
-GNU_CONFIGURE=		yes
+USE_X11=		YES
+USE_XPM=		YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--enable-dll
 CONFIGURE_ENV=		CC="${CC} -idirafter ${LOCALBASE}/include"
 MAKE_ENV=		LDOPTIONS="${LDFLAGS}"
