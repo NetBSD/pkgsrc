@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/14 16:04:23 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/15 20:39:21 agc Exp $
 #
 
 DISTNAME=		libwmf-0.1.17
@@ -20,9 +20,11 @@ WRKSRC=			${WRKDIR}/libwmf
 USE_X11=		YES
 
 GNU_CONFIGURE=		YES
+
+EVAL_PREFIX+=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--with-png="${LOCALBASE}"
 CONFIGURE_ARGS+=	--with-ttf="${LOCALBASE}"
-CONFIGURE_ARGS+=	--with-xpm="`${SHOW_PREFIX1} xpm ${SHOW_PREFIX2}`"
+CONFIGURE_ARGS+=	--with-xpm="${XPMDIR}"
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=		-I${LOCALBASE}/include -I${X11BASE}/include
 

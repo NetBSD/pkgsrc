@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/14 16:04:21 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/15 20:39:18 agc Exp $
 
 DISTNAME=	kdetoys-1.1.2
 CATEGORIES=	games kde
@@ -16,11 +16,13 @@ CONFLICTS=	kworldwatch-*
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+
+EVAL_PREFIX+=	QT1DIR=qt1
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
-		"--with-qt-dir=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1"
+		"--with-qt-dir=${QT1DIR}/qt1"
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
-		QTDIR=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1 \
+		QTDIR=${QT1DIR}/qt1 \
 		CXXFLAGS="${CFLAGS}" \
 		all_libraries="-L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/07/14 16:04:27 agc Exp $
+# $NetBSD: Makefile,v 1.13 2000/07/15 20:39:25 agc Exp $
 
 DISTNAME=	gdm-2.0beta4
 PKGNAME=	gdm-2.0b4
@@ -20,6 +20,8 @@ USE_X11BASE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
 LIBS=		-lintl
 LOCALSTATEDIR=	/var/gnome
+
+EVAL_PREFIX+=	KDEBASEDIR=kdebase
 CONFIGURE_ARGS+= --localstatedir=${LOCALSTATEDIR}
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" LIBS="${LIBS}" \
 		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
@@ -62,7 +64,7 @@ post-build:
 	cd ${WRKSRC}/config;						\
 	${RM} -f KDE Xsession;						\
 	${ECHO} '#! ${SH}' >KDE;					\
-	${ECHO} "export KDEDIR=`${SHOW_PREFIX1} kdebase ${SHOW_PREFIX2}`" >>KDE; \
+	${ECHO} "export KDEDIR=${KDEBASEDIR}" >>KDE;			\
 	${ECHO} 'exec $${KDEDIR}/bin/startkde $$@' >>KDE;		\
 	${ECHO} '#! ${SH}' >Xsession;					\
 	${ECHO} 'exec ${X11BASE}/lib/X11/xdm/Xsession $$@' >>Xsession;	\

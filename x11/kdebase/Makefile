@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2000/07/14 16:04:27 agc Exp $
+# $NetBSD: Makefile,v 1.67 2000/07/15 20:39:26 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -24,8 +24,10 @@ DEPENDS+=	libungif-*:../../graphics/libungif
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+
+EVAL_PREFIX+=	QT1DIR=qt1
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
-		"--with-qt-dir=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1"
+		"--with-qt-dir=${QT1DIR}/qt1"
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
