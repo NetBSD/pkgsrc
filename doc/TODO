@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2567 2004/11/29 01:57:47 tv Exp $
+$NetBSD: TODO,v 1.2568 2004/11/29 02:11:47 tv Exp $
 
 Suggested new packages
 ======================
@@ -410,7 +410,6 @@ Suggested package updates
 	o cwtext-0.94
 	o cxref-1.6
 	o cy-login-1.5.28
-	o cygwin_lib-1.5.12.1
 	o cyrus-imapd21-2.1.17
 	o cyrus-sasl-1.5.28
 	o daapd-0.2.3
