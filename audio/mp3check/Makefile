@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 21:57:46 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:30:47 wiz Exp $
 
 DISTNAME=	mp3check-0.5.2
 CATEGORIES=	audio
@@ -6,6 +6,7 @@ MASTER_SITES=	http://programmierer.freepage.de/cgi-bin/feets/freepage_ext/41030x
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://programmierer.freepage.de/overmann/soft/
+COMMENT=	Check MP3 files for consistency
 
 USE_GMAKE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/11/08 15:09:35 abs Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 13:30:43 wiz Exp $
 
 DISTNAME=	kdemultimedia-1.1.2
 CATEGORIES=	audio kde
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.kde.org/
+COMMENT=	KDE audio tools
 
 DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 

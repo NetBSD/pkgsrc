@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/11/03 04:02:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 13:30:53 wiz Exp $
 #
 
 DISTNAME=	xhippo-2.0
@@ -7,6 +7,7 @@ MASTER_SITES=	http://zenchaos.netpedia.net/software/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://zenchaos.netpedia.net/
+COMMENT=	Generic playlist manager for UNIX
 
 DEPENDS=	gtk+-1.2.*:../../x11/gtk
 

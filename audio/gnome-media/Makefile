@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/06/01 17:17:58 rh Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 13:30:41 wiz Exp $
 
 DISTNAME=	gnome-media-1.2.0
 CATEGORIES=	audio gnome
@@ -6,6 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gnome-media/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
+COMMENT=	Set of audio/multimedia applications for GNOME
 
 DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 

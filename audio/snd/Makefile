@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/09/22 06:50:06 minoura Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/16 13:30:49 wiz Exp $
 #
 
 DISTNAME=		snd
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://ccrma-www.stanford.edu/CCRMA/Software/snd/snd.html
+COMMENT=		X based sound editor
 
 NO_SRC_ON_FTP=		Already on MASTER_SITE_LOCAL
 
