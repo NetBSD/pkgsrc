@@ -1,0 +1,422 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/15 20:02:49 kei Exp $
+share/texmf.local/COPYRIGHT
+share/texmf.local/COPYRIGHT.jis
+share/texmf.local/Changes.txt
+share/texmf.local/README.txt
+share/texmf.local/doc/jbibtex/doc-ascii/Makefile
+share/texmf.local/doc/jbibtex/doc-ascii/README
+share/texmf.local/doc/jbibtex/doc-ascii/README.1st
+share/texmf.local/doc/jbibtex/doc-ascii/cpp.awk
+share/texmf.local/doc/jbibtex/doc-ascii/generate.sh
+share/texmf.local/doc/jbibtex/doc-ascii/jbibtex.bib
+share/texmf.local/doc/jbibtex/doc-ascii/jbibtex.tex
+share/texmf.local/doc/jbibtex/doc-ascii/jbtxbst.doc
+share/texmf.local/doc/jbibtex/doc-ascii/jbtxdoc.bib
+share/texmf.local/doc/jbibtex/doc-ascii/jbtxdoc.tex
+share/texmf.local/doc/jbibtex/doc-ascii/jbtxhak.tex
+share/texmf.local/doc/ptex/jfm.tex
+share/texmf.local/doc/ptex/jtex.tex
+share/texmf.local/doc/ptex/jtexdoc.tex
+share/texmf.local/doc/ptex/ptexdoc.tex
+share/texmf.local/doc/ptex/ptexskip.tex
+share/texmf.local/fonts/jis/README.txt
+share/texmf.local/fonts/jis/jis.map
+share/texmf.local/fonts/morisawa/COPYRIGHT
+share/texmf.local/fonts/morisawa/COPYRIGHT.jis
+share/texmf.local/fonts/morisawa/README.txt
+share/texmf.local/fonts/morisawa/morisawa.map
+share/texmf.local/fonts/nmin-ngoth/COPYRIGHT
+share/texmf.local/fonts/nmin-ngoth/COPYRIGHT.jis
+share/texmf.local/fonts/nmin-ngoth/README.txt
+share/texmf.local/fonts/nmin-ngoth/nmin-ngoth.map
+share/texmf.local/fonts/source/ascgrp/ascgrp.mf
+share/texmf.local/fonts/source/ascgrp/ascii.mf
+share/texmf.local/fonts/source/ascgrp/ascii10.mf
+share/texmf.local/fonts/source/ascgrp/ascii36.mf
+share/texmf.local/fonts/source/ptex/goth10.pl
+share/texmf.local/fonts/source/ptex/goth5.pl
+share/texmf.local/fonts/source/ptex/goth6.pl
+share/texmf.local/fonts/source/ptex/goth7.pl
+share/texmf.local/fonts/source/ptex/goth8.pl
+share/texmf.local/fonts/source/ptex/goth9.pl
+share/texmf.local/fonts/source/ptex/min10.pl
+share/texmf.local/fonts/source/ptex/min5.pl
+share/texmf.local/fonts/source/ptex/min6.pl
+share/texmf.local/fonts/source/ptex/min7.pl
+share/texmf.local/fonts/source/ptex/min8.pl
+share/texmf.local/fonts/source/ptex/min9.pl
+share/texmf.local/fonts/source/ptex/ngoth10.pl
+share/texmf.local/fonts/source/ptex/ngoth5.pl
+share/texmf.local/fonts/source/ptex/ngoth6.pl
+share/texmf.local/fonts/source/ptex/ngoth7.pl
+share/texmf.local/fonts/source/ptex/ngoth8.pl
+share/texmf.local/fonts/source/ptex/ngoth9.pl
+share/texmf.local/fonts/source/ptex/nmin10.pl
+share/texmf.local/fonts/source/ptex/nmin5.pl
+share/texmf.local/fonts/source/ptex/nmin6.pl
+share/texmf.local/fonts/source/ptex/nmin7.pl
+share/texmf.local/fonts/source/ptex/nmin8.pl
+share/texmf.local/fonts/source/ptex/nmin9.pl
+share/texmf.local/fonts/source/ptex/tgoth10.pl
+share/texmf.local/fonts/source/ptex/tgoth5.pl
+share/texmf.local/fonts/source/ptex/tgoth6.pl
+share/texmf.local/fonts/source/ptex/tgoth7.pl
+share/texmf.local/fonts/source/ptex/tgoth8.pl
+share/texmf.local/fonts/source/ptex/tgoth9.pl
+share/texmf.local/fonts/source/ptex/tmin10.pl
+share/texmf.local/fonts/source/ptex/tmin5.pl
+share/texmf.local/fonts/source/ptex/tmin6.pl
+share/texmf.local/fonts/source/ptex/tmin7.pl
+share/texmf.local/fonts/source/ptex/tmin8.pl
+share/texmf.local/fonts/source/ptex/tmin9.pl
+share/texmf.local/fonts/standard/COPYRIGHT
+share/texmf.local/fonts/standard/COPYRIGHT.jis
+share/texmf.local/fonts/standard/README.txt
+share/texmf.local/fonts/standard/standard.map
+share/texmf.local/fonts/tfm/ascgrp/ascgrp.tfm
+share/texmf.local/fonts/tfm/ascgrp/ascii10.tfm
+share/texmf.local/fonts/tfm/ascgrp/ascii36.tfm
+share/texmf.local/fonts/tfm/jis/dvips/gbm.tfm
+share/texmf.local/fonts/tfm/jis/dvips/gbmv.tfm
+share/texmf.local/fonts/tfm/jis/dvips/rml.tfm
+share/texmf.local/fonts/tfm/jis/dvips/rmlv.tfm
+share/texmf.local/fonts/tfm/jis/ptex/jis-v.tfm
+share/texmf.local/fonts/tfm/jis/ptex/jis.tfm
+share/texmf.local/fonts/tfm/jis/ptex/jisg-v.tfm
+share/texmf.local/fonts/tfm/jis/ptex/jisg.tfm
+share/texmf.local/fonts/tfm/jis/ptex/jisgn-v.tfm
+share/texmf.local/fonts/tfm/jis/ptex/jisgn.tfm
+share/texmf.local/fonts/tfm/jis/ptex/jisn-v.tfm
+share/texmf.local/fonts/tfm/jis/ptex/jisn.tfm
+share/texmf.local/fonts/tfm/morisawa/dvips/futogo-b-v.tfm
+share/texmf.local/fonts/tfm/morisawa/dvips/futogo-b.tfm
+share/texmf.local/fonts/tfm/morisawa/dvips/futomin-b-v.tfm
+share/texmf.local/fonts/tfm/morisawa/dvips/futomin-b.tfm
+share/texmf.local/fonts/tfm/morisawa/dvips/gtbbb-m-v.tfm
+share/texmf.local/fonts/tfm/morisawa/dvips/gtbbb-m.tfm
+share/texmf.local/fonts/tfm/morisawa/dvips/jun101-l-v.tfm
+share/texmf.local/fonts/tfm/morisawa/dvips/jun101-l.tfm
+share/texmf.local/fonts/tfm/morisawa/dvips/ryumin-l-v.tfm
+share/texmf.local/fonts/tfm/morisawa/dvips/ryumin-l.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/FutoGoB101-Bold-H.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/FutoGoB101-Bold-J.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/FutoGoB101-Bold-V.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/FutoMinA101-Bold-H.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/FutoMinA101-Bold-J.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/FutoMinA101-Bold-V.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/GothicBBB-Medium-H.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/GothicBBB-Medium-J.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/GothicBBB-Medium-V.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/Jun101-Light-H.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/Jun101-Light-J.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/Jun101-Light-V.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/Ryumin-Light-H.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/Ryumin-Light-J.tfm
+share/texmf.local/fonts/tfm/morisawa/ptex/Ryumin-Light-V.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/dvips/gbm.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/dvips/rml.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/ngoth10.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/ngoth5.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/ngoth6.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/ngoth7.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/ngoth8.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/ngoth9.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/nmin10.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/nmin5.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/nmin6.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/nmin7.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/nmin8.tfm
+share/texmf.local/fonts/tfm/nmin-ngoth/ptex/nmin9.tfm
+share/texmf.local/fonts/tfm/ptex/gbm.tfm
+share/texmf.local/fonts/tfm/ptex/gbmv.tfm
+share/texmf.local/fonts/tfm/ptex/goth10.tfm
+share/texmf.local/fonts/tfm/ptex/goth5.tfm
+share/texmf.local/fonts/tfm/ptex/goth6.tfm
+share/texmf.local/fonts/tfm/ptex/goth7.tfm
+share/texmf.local/fonts/tfm/ptex/goth8.tfm
+share/texmf.local/fonts/tfm/ptex/goth9.tfm
+share/texmf.local/fonts/tfm/ptex/min10.tfm
+share/texmf.local/fonts/tfm/ptex/min5.tfm
+share/texmf.local/fonts/tfm/ptex/min6.tfm
+share/texmf.local/fonts/tfm/ptex/min7.tfm
+share/texmf.local/fonts/tfm/ptex/min8.tfm
+share/texmf.local/fonts/tfm/ptex/min9.tfm
+share/texmf.local/fonts/tfm/ptex/ngoth10.tfm
+share/texmf.local/fonts/tfm/ptex/ngoth5.tfm
+share/texmf.local/fonts/tfm/ptex/ngoth6.tfm
+share/texmf.local/fonts/tfm/ptex/ngoth7.tfm
+share/texmf.local/fonts/tfm/ptex/ngoth8.tfm
+share/texmf.local/fonts/tfm/ptex/ngoth9.tfm
+share/texmf.local/fonts/tfm/ptex/nmin10.tfm
+share/texmf.local/fonts/tfm/ptex/nmin5.tfm
+share/texmf.local/fonts/tfm/ptex/nmin6.tfm
+share/texmf.local/fonts/tfm/ptex/nmin7.tfm
+share/texmf.local/fonts/tfm/ptex/nmin8.tfm
+share/texmf.local/fonts/tfm/ptex/nmin9.tfm
+share/texmf.local/fonts/tfm/ptex/rml.tfm
+share/texmf.local/fonts/tfm/ptex/rmlv.tfm
+share/texmf.local/fonts/tfm/ptex/tgoth10.tfm
+share/texmf.local/fonts/tfm/ptex/tgoth5.tfm
+share/texmf.local/fonts/tfm/ptex/tgoth6.tfm
+share/texmf.local/fonts/tfm/ptex/tgoth7.tfm
+share/texmf.local/fonts/tfm/ptex/tgoth8.tfm
+share/texmf.local/fonts/tfm/ptex/tgoth9.tfm
+share/texmf.local/fonts/tfm/ptex/tmin10.tfm
+share/texmf.local/fonts/tfm/ptex/tmin5.tfm
+share/texmf.local/fonts/tfm/ptex/tmin6.tfm
+share/texmf.local/fonts/tfm/ptex/tmin7.tfm
+share/texmf.local/fonts/tfm/ptex/tmin8.tfm
+share/texmf.local/fonts/tfm/ptex/tmin9.tfm
+share/texmf.local/fonts/tfm/standard/dvips/gbm.tfm
+share/texmf.local/fonts/tfm/standard/dvips/gbmv.tfm
+share/texmf.local/fonts/tfm/standard/dvips/rml.tfm
+share/texmf.local/fonts/tfm/standard/dvips/rmlv.tfm
+share/texmf.local/fonts/tfm/standard/ptex/goth10.tfm
+share/texmf.local/fonts/tfm/standard/ptex/goth5.tfm
+share/texmf.local/fonts/tfm/standard/ptex/goth6.tfm
+share/texmf.local/fonts/tfm/standard/ptex/goth7.tfm
+share/texmf.local/fonts/tfm/standard/ptex/goth8.tfm
+share/texmf.local/fonts/tfm/standard/ptex/goth9.tfm
+share/texmf.local/fonts/tfm/standard/ptex/min10.tfm
+share/texmf.local/fonts/tfm/standard/ptex/min5.tfm
+share/texmf.local/fonts/tfm/standard/ptex/min6.tfm
+share/texmf.local/fonts/tfm/standard/ptex/min7.tfm
+share/texmf.local/fonts/tfm/standard/ptex/min8.tfm
+share/texmf.local/fonts/tfm/standard/ptex/min9.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tgoth10.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tgoth5.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tgoth6.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tgoth7.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tgoth8.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tgoth9.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tmin10.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tmin5.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tmin6.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tmin7.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tmin8.tfm
+share/texmf.local/fonts/tfm/standard/ptex/tmin9.tfm
+share/texmf.local/fonts/vf/jis/jis-v.vf
+share/texmf.local/fonts/vf/jis/jis.vf
+share/texmf.local/fonts/vf/jis/jisg-v.vf
+share/texmf.local/fonts/vf/jis/jisg.vf
+share/texmf.local/fonts/vf/jis/jisgn-v.vf
+share/texmf.local/fonts/vf/jis/jisgn.vf
+share/texmf.local/fonts/vf/jis/jisn-v.vf
+share/texmf.local/fonts/vf/jis/jisn.vf
+share/texmf.local/fonts/vf/morisawa/FutoGoB101-Bold-H.vf
+share/texmf.local/fonts/vf/morisawa/FutoGoB101-Bold-J.vf
+share/texmf.local/fonts/vf/morisawa/FutoGoB101-Bold-V.vf
+share/texmf.local/fonts/vf/morisawa/FutoMinA101-Bold-H.vf
+share/texmf.local/fonts/vf/morisawa/FutoMinA101-Bold-J.vf
+share/texmf.local/fonts/vf/morisawa/FutoMinA101-Bold-V.vf
+share/texmf.local/fonts/vf/morisawa/GothicBBB-Medium-H.vf
+share/texmf.local/fonts/vf/morisawa/GothicBBB-Medium-J.vf
+share/texmf.local/fonts/vf/morisawa/GothicBBB-Medium-V.vf
+share/texmf.local/fonts/vf/morisawa/Jun101-Light-H.vf
+share/texmf.local/fonts/vf/morisawa/Jun101-Light-J.vf
+share/texmf.local/fonts/vf/morisawa/Jun101-Light-V.vf
+share/texmf.local/fonts/vf/morisawa/Ryumin-Light-H.vf
+share/texmf.local/fonts/vf/morisawa/Ryumin-Light-J.vf
+share/texmf.local/fonts/vf/morisawa/Ryumin-Light-V.vf
+share/texmf.local/fonts/vf/nmin-ngoth/ngoth10.vf
+share/texmf.local/fonts/vf/nmin-ngoth/ngoth5.vf
+share/texmf.local/fonts/vf/nmin-ngoth/ngoth6.vf
+share/texmf.local/fonts/vf/nmin-ngoth/ngoth7.vf
+share/texmf.local/fonts/vf/nmin-ngoth/ngoth8.vf
+share/texmf.local/fonts/vf/nmin-ngoth/ngoth9.vf
+share/texmf.local/fonts/vf/nmin-ngoth/nmin10.vf
+share/texmf.local/fonts/vf/nmin-ngoth/nmin5.vf
+share/texmf.local/fonts/vf/nmin-ngoth/nmin6.vf
+share/texmf.local/fonts/vf/nmin-ngoth/nmin7.vf
+share/texmf.local/fonts/vf/nmin-ngoth/nmin8.vf
+share/texmf.local/fonts/vf/nmin-ngoth/nmin9.vf
+share/texmf.local/fonts/vf/ptex/goth10.vf
+share/texmf.local/fonts/vf/ptex/goth5.vf
+share/texmf.local/fonts/vf/ptex/goth6.vf
+share/texmf.local/fonts/vf/ptex/goth7.vf
+share/texmf.local/fonts/vf/ptex/goth8.vf
+share/texmf.local/fonts/vf/ptex/goth9.vf
+share/texmf.local/fonts/vf/ptex/min10.vf
+share/texmf.local/fonts/vf/ptex/min5.vf
+share/texmf.local/fonts/vf/ptex/min6.vf
+share/texmf.local/fonts/vf/ptex/min7.vf
+share/texmf.local/fonts/vf/ptex/min8.vf
+share/texmf.local/fonts/vf/ptex/min9.vf
+share/texmf.local/fonts/vf/ptex/ngoth10.vf
+share/texmf.local/fonts/vf/ptex/ngoth5.vf
+share/texmf.local/fonts/vf/ptex/ngoth6.vf
+share/texmf.local/fonts/vf/ptex/ngoth7.vf
+share/texmf.local/fonts/vf/ptex/ngoth8.vf
+share/texmf.local/fonts/vf/ptex/ngoth9.vf
+share/texmf.local/fonts/vf/ptex/nmin10.vf
+share/texmf.local/fonts/vf/ptex/nmin5.vf
+share/texmf.local/fonts/vf/ptex/nmin6.vf
+share/texmf.local/fonts/vf/ptex/nmin7.vf
+share/texmf.local/fonts/vf/ptex/nmin8.vf
+share/texmf.local/fonts/vf/ptex/nmin9.vf
+share/texmf.local/fonts/vf/ptex/tgoth10.vf
+share/texmf.local/fonts/vf/ptex/tgoth5.vf
+share/texmf.local/fonts/vf/ptex/tgoth6.vf
+share/texmf.local/fonts/vf/ptex/tgoth7.vf
+share/texmf.local/fonts/vf/ptex/tgoth8.vf
+share/texmf.local/fonts/vf/ptex/tgoth9.vf
+share/texmf.local/fonts/vf/ptex/tmin10.vf
+share/texmf.local/fonts/vf/ptex/tmin5.vf
+share/texmf.local/fonts/vf/ptex/tmin6.vf
+share/texmf.local/fonts/vf/ptex/tmin7.vf
+share/texmf.local/fonts/vf/ptex/tmin8.vf
+share/texmf.local/fonts/vf/ptex/tmin9.vf
+share/texmf.local/fonts/vf/standard/goth10.vf
+share/texmf.local/fonts/vf/standard/goth5.vf
+share/texmf.local/fonts/vf/standard/goth6.vf
+share/texmf.local/fonts/vf/standard/goth7.vf
+share/texmf.local/fonts/vf/standard/goth8.vf
+share/texmf.local/fonts/vf/standard/goth9.vf
+share/texmf.local/fonts/vf/standard/min10.vf
+share/texmf.local/fonts/vf/standard/min5.vf
+share/texmf.local/fonts/vf/standard/min6.vf
+share/texmf.local/fonts/vf/standard/min7.vf
+share/texmf.local/fonts/vf/standard/min8.vf
+share/texmf.local/fonts/vf/standard/min9.vf
+share/texmf.local/fonts/vf/standard/tgoth10.vf
+share/texmf.local/fonts/vf/standard/tgoth5.vf
+share/texmf.local/fonts/vf/standard/tgoth6.vf
+share/texmf.local/fonts/vf/standard/tgoth7.vf
+share/texmf.local/fonts/vf/standard/tgoth8.vf
+share/texmf.local/fonts/vf/standard/tgoth9.vf
+share/texmf.local/fonts/vf/standard/tmin10.vf
+share/texmf.local/fonts/vf/standard/tmin5.vf
+share/texmf.local/fonts/vf/standard/tmin6.vf
+share/texmf.local/fonts/vf/standard/tmin7.vf
+share/texmf.local/fonts/vf/standard/tmin8.vf
+share/texmf.local/fonts/vf/standard/tmin9.vf
+share/texmf.local/jbibtex/bib/jxampl.bib
+share/texmf.local/jbibtex/bst/jabbrv.bst
+share/texmf.local/jbibtex/bst/jalpha.bst
+share/texmf.local/jbibtex/bst/jipsj.bst
+share/texmf.local/jbibtex/bst/jname.bst
+share/texmf.local/jbibtex/bst/jorsj.bst
+share/texmf.local/jbibtex/bst/jplain.bst
+share/texmf.local/jbibtex/bst/junsrt.bst
+share/texmf.local/jbibtex/bst/tieice.bst
+share/texmf.local/jbibtex/bst/tipsj.bst
+share/texmf.local/ptex/plain/base/jplain.tex
+share/texmf.local/ptex/plain/base/kinsoku.tex
+share/texmf.local/ptex/plain/base/ptex.tex
+share/texmf.local/ptex/plain/config/ptex.ini
+share/texmf.local/ptex/platex/base/.cvsignore
+share/texmf.local/ptex/platex/base/Changes.txt
+share/texmf.local/ptex/platex/base/README.txt
+share/texmf.local/ptex/platex/base/README2.txt
+share/texmf.local/ptex/platex/base/Xins.ins
+share/texmf.local/ptex/platex/base/ascmac.sty
+share/texmf.local/ptex/platex/base/jarticle.cls
+share/texmf.local/ptex/platex/base/jarticle.sty
+share/texmf.local/ptex/platex/base/jbk10.clo
+share/texmf.local/ptex/platex/base/jbk11.clo
+share/texmf.local/ptex/platex/base/jbk12.clo
+share/texmf.local/ptex/platex/base/jbook.cls
+share/texmf.local/ptex/platex/base/jbook.sty
+share/texmf.local/ptex/platex/base/jclasses.dtx
+share/texmf.local/ptex/platex/base/jltxdoc.cls
+share/texmf.local/ptex/platex/base/jltxdoc.dtx
+share/texmf.local/ptex/platex/base/jreport.cls
+share/texmf.local/ptex/platex/base/jreport.sty
+share/texmf.local/ptex/platex/base/jsize10.clo
+share/texmf.local/ptex/platex/base/jsize11.clo
+share/texmf.local/ptex/platex/base/jsize12.clo
+share/texmf.local/ptex/platex/base/jt1gt.fd
+share/texmf.local/ptex/platex/base/jt1mc.fd
+share/texmf.local/ptex/platex/base/jy1gt.fd
+share/texmf.local/ptex/platex/base/jy1mc.fd
+share/texmf.local/ptex/platex/base/kinsoku.dtx
+share/texmf.local/ptex/platex/base/kinsoku.tex
+share/texmf.local/ptex/platex/base/nidanfloat.dtx
+share/texmf.local/ptex/platex/base/nidanfloat.ins
+share/texmf.local/ptex/platex/base/nidanfloat.sty
+share/texmf.local/ptex/platex/base/oldpfont.sty
+share/texmf.local/ptex/platex/base/pl209.def
+share/texmf.local/ptex/platex/base/pl209.dtx
+share/texmf.local/ptex/platex/base/pl209.ins
+share/texmf.local/ptex/platex/base/platex.dtx
+share/texmf.local/ptex/platex/base/platex.ltx
+share/texmf.local/ptex/platex/base/plcls.ins
+share/texmf.local/ptex/platex/base/plcore.dtx
+share/texmf.local/ptex/platex/base/plcore.ins
+share/texmf.local/ptex/platex/base/plcore.ltx
+share/texmf.local/ptex/platex/base/pldefs.ltx
+share/texmf.local/ptex/platex/base/pldoc.tex
+share/texmf.local/ptex/platex/base/pldocs.ins
+share/texmf.local/ptex/platex/base/plext.dtx
+share/texmf.local/ptex/platex/base/plext.sty
+share/texmf.local/ptex/platex/base/plfmt.ins
+share/texmf.local/ptex/platex/base/plfonts.dtx
+share/texmf.local/ptex/platex/base/plnews.cls
+share/texmf.local/ptex/platex/base/plnews01.tex
+share/texmf.local/ptex/platex/base/plnews02.tex
+share/texmf.local/ptex/platex/base/plnews03.tex
+share/texmf.local/ptex/platex/base/plnews04.tex
+share/texmf.local/ptex/platex/base/plnews05.tex
+share/texmf.local/ptex/platex/base/plnews06.tex
+share/texmf.local/ptex/platex/base/plnews07.tex
+share/texmf.local/ptex/platex/base/plpatch.ltx
+share/texmf.local/ptex/platex/base/plvers.dtx
+share/texmf.local/ptex/platex/base/ptrace.sty
+share/texmf.local/ptex/platex/base/tarticle.cls
+share/texmf.local/ptex/platex/base/tarticle.sty
+share/texmf.local/ptex/platex/base/tascmac.sty
+share/texmf.local/ptex/platex/base/tbk10.clo
+share/texmf.local/ptex/platex/base/tbk11.clo
+share/texmf.local/ptex/platex/base/tbk12.clo
+share/texmf.local/ptex/platex/base/tbook.cls
+share/texmf.local/ptex/platex/base/tbook.sty
+share/texmf.local/ptex/platex/base/treport.cls
+share/texmf.local/ptex/platex/base/treport.sty
+share/texmf.local/ptex/platex/base/tsize10.clo
+share/texmf.local/ptex/platex/base/tsize11.clo
+share/texmf.local/ptex/platex/base/tsize12.clo
+share/texmf.local/ptex/platex/config/hyphen.cfg
+share/texmf.local/ptex/platex/config/platex.ini
+@dirrm share/texmf.local/ptex/platex/config
+@dirrm share/texmf.local/ptex/platex/base
+@dirrm share/texmf.local/ptex/platex
+@dirrm share/texmf.local/ptex/plain/config
+@dirrm share/texmf.local/ptex/plain/base
+@dirrm share/texmf.local/ptex/plain
+@dirrm share/texmf.local/ptex
+@dirrm share/texmf.local/jbibtex/bst
+@dirrm share/texmf.local/jbibtex/bib
+@dirrm share/texmf.local/jbibtex
+@dirrm share/texmf.local/fonts/vf/standard
+@dirrm share/texmf.local/fonts/vf/ptex
+@dirrm share/texmf.local/fonts/vf/nmin-ngoth
+@dirrm share/texmf.local/fonts/vf/morisawa
+@dirrm share/texmf.local/fonts/vf/jis
+@dirrm share/texmf.local/fonts/vf
+@dirrm share/texmf.local/fonts/tfm/standard/ptex
+@dirrm share/texmf.local/fonts/tfm/standard/dvips
+@dirrm share/texmf.local/fonts/tfm/standard
+@dirrm share/texmf.local/fonts/tfm/ptex
+@dirrm share/texmf.local/fonts/tfm/nmin-ngoth/ptex
+@dirrm share/texmf.local/fonts/tfm/nmin-ngoth/dvips
+@dirrm share/texmf.local/fonts/tfm/nmin-ngoth
+@dirrm share/texmf.local/fonts/tfm/morisawa/ptex
+@dirrm share/texmf.local/fonts/tfm/morisawa/dvips
+@dirrm share/texmf.local/fonts/tfm/morisawa
+@dirrm share/texmf.local/fonts/tfm/jis/ptex
+@dirrm share/texmf.local/fonts/tfm/jis/dvips
+@dirrm share/texmf.local/fonts/tfm/jis
+@dirrm share/texmf.local/fonts/tfm/ascgrp
+@dirrm share/texmf.local/fonts/tfm
+@dirrm share/texmf.local/fonts/standard
+@dirrm share/texmf.local/fonts/source/ptex
+@dirrm share/texmf.local/fonts/source/ascgrp
+@dirrm share/texmf.local/fonts/source
+@dirrm share/texmf.local/fonts/nmin-ngoth
+@dirrm share/texmf.local/fonts/morisawa
+@dirrm share/texmf.local/fonts/jis
+@dirrm share/texmf.local/fonts
+@dirrm share/texmf.local/doc/ptex
+@dirrm share/texmf.local/doc/jbibtex/doc-ascii
+@dirrm share/texmf.local/doc/jbibtex
+@dirrm share/texmf.local/doc
