@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:12:52 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/20 06:30:24 grant Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CLAMAV_BUILDLINK3_MK:=	${CLAMAV_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	clamav
 
 .if !empty(CLAMAV_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.clamav+=	clamav>=0.60nb1
-BUILDLINK_RECOMMENDED.clamav+=	clamav>=0.75.1nb2
+BUILDLINK_RECOMMENDED.clamav+=	clamav>=0.80
 BUILDLINK_PKGSRCDIR.clamav?=	../../mail/clamav
 .endif	# CLAMAV_BUILDLINK3_MK
 
