@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/04 11:58:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/04 23:09:07 jlam Exp $
 
 DISTNAME=	maradns-1.0.18
 PKGREVISION=	1
@@ -15,13 +15,14 @@ USE_PKGINSTALL=		yes
 RCD_SCRIPTS=		maradns
 HAS_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
+PTHREAD_AUTO_VARS=	yes
 MAKE_ENV+=		LANGUAGE="en"
 
 EGDIR=		${PREFIX}/share/examples/maradns
 CONF_FILES=	${EGDIR}/example_mararc ${PKG_SYSCONFDIR}/mararc
 
 .include "../../mk/pthread.buildlink3.mk"
-LDFLAGS+=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+LDFLAGS+=	${PTHREAD_LIBS}
 
 post-patch:
 	${SED} -e s,@@PKGSYSCONFDIR@@,${PKG_SYSCONFDIR},			\

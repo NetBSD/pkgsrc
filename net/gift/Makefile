@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/12 06:39:20 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/04 23:09:06 jlam Exp $
 #
 
 DISTNAME=	gift-0.11.6
@@ -15,6 +15,7 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+PTHREAD_AUTO_VARS=	yes
 
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/lib/libgift.pc.in
 
