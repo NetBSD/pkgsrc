@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.963 2003/10/23 16:33:47 junyoung Exp $
+$NetBSD: TODO,v 1.964 2003/10/24 01:14:21 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,6 @@ Suggested package updates
 	o xmule-1.6.1
 	o xosview-1.8.0 [pkg/20265]
 	o xpad-1.13
-	o xpdf-2.03 [pkg/23165]
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
