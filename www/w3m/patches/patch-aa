@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2001/03/31 09:21:17 itojun Exp $
+$NetBSD: patch-aa,v 1.9 2001/05/01 00:31:25 kei Exp $
 
---- configure.orig	Fri Mar 23 11:18:40 2001
-+++ configure	Fri Mar 30 21:11:58 2001
-@@ -188,7 +188,7 @@
+--- configure.orig	Sat Apr 21 13:43:38 2001
++++ configure	Sat Apr 21 13:44:34 2001
+@@ -194,7 +194,7 @@
  
  find_ssl() {
    sslinclude=""
@@ -11,37 +11,7 @@ $NetBSD: patch-aa,v 1.8 2001/03/31 09:21:17 itojun Exp $
    do
      for i2 in /openssl /ssl / 
      do
-@@ -312,13 +312,13 @@
- echo "Which language do you prefer?"
- echo "  1 - Japanese (charset ISO-2022-JP, EUC-JP, Shift_JIS)"
- echo "  2 - English (charset US_ASCII, ISO-8859-1, etc.)"
--if [ "$pref_lang" = 2 ]; then
--  Echo '[2]? '
--  def_lg=2
--else
--  Echo '[1]? '
--  def_lg=1
--fi
-+#if [ "$pref_lang" = 2 ]; then
-+#  Echo '[2]? '
-+#  def_lg=2
-+#else
-+#  Echo '[1]? '
-+#  def_lg=1
-+#fi
- while :
- do
-   readanswer lg_ans "$def_lg"
-@@ -469,7 +469,7 @@
- case "$ans" in
-   1)
-     use_color=n; def_color="#undef COLOR"
--    use_menu=n;  def_menu="#undef MENU"
-+    use_menu=y;  def_menu="#undef MENU"
-     use_mouse=n; def_mouse="#undef MOUSE"
-     use_cookie=n; def_cookie="#undef USE_COOKIE"
-     use_ssl=n; def_ssl="#undef USE_SSL"
-@@ -796,7 +796,7 @@
+@@ -907,7 +907,7 @@
  gclib=''
  gcinclude=''
  gctarget=''
@@ -50,7 +20,7 @@ $NetBSD: patch-aa,v 1.8 2001/03/31 09:21:17 itojun Exp $
  do
    if [ -f $libdir/libgc.a -o -f $libdir/libgc.so ] ; then 
      echo "$libdir/libgc found"
-@@ -804,7 +804,7 @@
+@@ -915,7 +915,7 @@
      break
    fi
  done
@@ -59,7 +29,7 @@ $NetBSD: patch-aa,v 1.8 2001/03/31 09:21:17 itojun Exp $
  do
    if [ -f $inc/gc.h ]; then
      echo "$inc/gc.h found"
-@@ -1699,6 +1699,7 @@
+@@ -1600,6 +1600,7 @@
  if [ `expr "$perl" : 'not found'` != 0 ]; then
    perl=/usr/local/bin/perl
  fi

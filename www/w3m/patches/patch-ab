@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2001/03/31 09:21:17 itojun Exp $
+$NetBSD: patch-ab,v 1.8 2001/05/01 00:31:25 kei Exp $
 
 --- main.c.orig	Fri Mar 23 11:14:58 2001
 +++ main.c	Fri Mar 30 21:02:12 2001
