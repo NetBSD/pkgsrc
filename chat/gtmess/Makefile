@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/22 14:33:05 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/02 23:32:12 minskim Exp $
 #
 
 DISTNAME=		gtmess-0.9
@@ -16,8 +16,12 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+CONFIGURE_ENV+=		ac_cv_search_iconv=${BUILDLINK_LDADD.iconv:Q}
+
+INCOMPAT_CURSES=	NetBSD-1.*
+
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
