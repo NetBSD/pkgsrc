@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.118 2004/08/24 15:18:29 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.119 2004/09/24 15:33:26 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -81,6 +81,9 @@ my $verbose_flag	= false;
 sub log_message($$$$)
 {
 	my ($file, $lineno, $type, $message) = @_;
+	if ($file ne NO_FILE) {
+		$file =~ s,^(?:\./)+,,;
+	}
 	if ($file eq NO_FILE) {
 		printf("%s: %s\n", $type, $message);
 	} elsif ($lineno == NO_LINE_NUMBER) {
@@ -204,7 +207,7 @@ package main;
 use strict;
 use warnings;
 
-use Getopt::Std;
+use Getopt::Long qw(:config no_ignore_case bundling require_order);
 use File::Basename;
 use FileHandle;
 use Cwd;
@@ -229,13 +232,50 @@ my $conf_distver	= '@DISTVER@';
 my $conf_make		= '@MAKE@';
 
 # Command Line Options
-my $opt_extrafile	= true; # check all files we can find for simple errors
-my $opt_parenwarn	= true; # warn about use for $(VAR) instead of ${VAR}
-my $opt_committer	= true; # check items especially for package developers
-my $opt_newpackage	= false; # consider this package new (uncommitted)
-my $opt_dumpmakefile	= false; # dump the Makefile after parsing
-my $opt_contblank	= 1; # number of allowed contiguous blank lines
-my $opt_packagedir	= "."; # directory to check
+my $opt_committer	= true;
+my $opt_dumpmakefile	= false;
+my $opt_contblank	= 1;
+my $opt_packagedir	= ".";
+my (%options) = (
+	"-p"		=> "warn about use of \$(VAR) instead of \${VAR}",
+	"-d"		=> "check items useful for package developers",
+	"-I"		=> "dump the Makefile after parsing",
+	"-N"		=> "assume a new (still uncommitted) package",
+	"-B#"		=> "allow # contiguous blank lines in Makefiles",
+	"-C{check,...}"	=> "enable or disable specific checks",
+	"-W{warn,...}"	=> "enable or disable specific warnings",
+	"-h|--help"	=> "print a detailed help message",
+	"-V|--version"	=> "print the version number of pkglint",
+	"-v|--verbose"	=> "print progress messages on STDERR",
+);
+
+my $opt_check_distinfo	= true;
+my $opt_check_extra	= true;
+my $opt_check_MESSAGE	= true;
+my $opt_check_patches	= true;
+my $opt_check_PLIST	= true;
+my $opt_check_newpkg	= false;
+my (%checks) = (
+	"distinfo"	=> [\$opt_check_distinfo, "check distinfo file"],
+	"extra"		=> [\$opt_check_extra, "check various additional files"],
+	"MESSAGE"	=> [\$opt_check_MESSAGE, "check MESSAGE files"],
+	"patches"	=> [\$opt_check_patches, "check patches"],
+	"PLIST"		=> [\$opt_check_PLIST, "check PLIST files"],
+	"newpkg"	=> [\$opt_check_newpkg, "special checks for uncommitted packages"],
+);
+
+my $opt_warn_patches	= true;
+my $opt_warn_exec	= true;
+my $opt_warn_absname	= true;
+my $opt_warn_directcmd	= true;
+my $opt_warn_paren	= true;
+my (%warnings) = (
+	"patches"	=> [\$opt_warn_patches, "warn on non-optimal patch files"],
+	"exec"		=> [\$opt_warn_exec, "warn if source files are executable"],
+	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
+	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
+	"paren"		=> [\$opt_warn_paren, "warn about usa of \$(VAR) instead of \${VAR} in Makefiles"],
+);
 
 # Constants
 my $regex_rcsidstr	= qr"\$($conf_rcsidstr)(?::[^\$]*|)\$";
@@ -280,29 +320,127 @@ sub is_predefined($);
 sub category_check();
 sub check_package();
 
-sub parse_command_line() {
-	my %opts = ();
-	getopts('hINB:qvV', \%opts);
-	if ($opts{"h"}) {
-		my $prog = basename($0);
-		print STDERR <<EOF;
-usage: $prog [-qvIN] [-B#] [package_directory]
-	-v	verbose mode
-	-V	version ($conf_distver)
-	-I	show Makefile (with all included files)
-	-N	writing a new package
-	-B#	allow # contiguous blank lines (default: $opt_contblank line)
-EOF
-		exit 0;
+sub print_table($$)
+{
+	my ($out, $table) = @_;
+	my (@width) = ();
+	foreach my $row (@$table) {
+		foreach my $i (0..(scalar(@$row)-1)) {
+			if (!defined($width[$i]) || length($row->[$i]) > $width[$i]) {
+				$width[$i] = length($row->[$i]);
+			}
+		}
 	}
-	if ($opts{"v"}) { PkgLint::Logging::set_verbose(true); }
-	if ($opts{"N"}) { $opt_newpackage = true; }
-	if ($opts{"I"}) { $opt_dumpmakefile = true; }
-	if ($opts{"B"}) { $opt_contblank = $opts{"B"}; }
-	if (scalar(@ARGV)) { $opt_packagedir = shift(@ARGV); }
-	if ($opts{"V"}) {
-		print "$conf_distver\n";
-		exit;
+	foreach my $row (@$table) {
+		my ($max) = (scalar(@$row) - 1);
+		foreach my $i (0..$max) {
+			if ($i != 0) {
+				print $out ("  ");
+			}
+			print $out ($row->[$i]);
+			if ($i != $max) {
+				print $out (" " x ($width[$i] - length($row->[$i])));
+			}
+		}
+		print $out ("\n");
+	}
+	return 1;
+}
+
+sub help($$$) {
+	my ($out, $exitval, $show_all) = @_;
+	my ($prog) = (basename($0));
+	print $out ("usage: $prog [options] [package_directory]\n\n");
+
+	my (@option_table) = ();
+	foreach my $opt (sort keys %options) {
+		push(@option_table, ["  ", $opt, $options{$opt}]);
+	}
+	print $out ("options:\n");
+	print_table($out, \@option_table);
+	print $out ("\n");
+
+	if (!$show_all) {
+		exit($exitval);
+	}
+
+	my (@checks_table) = (
+		["  ", "all", "", "enable all checks"],
+		["  ", "none", "", "disable all checks"],
+	);
+	foreach my $check (sort keys %checks) {
+		push(@checks_table, [ "  ", $check,
+			(${$checks{$check}->[0]} ? "(enabled)" : "(disabled)"),
+			$checks{$check}->[1]]);
+	}
+	print $out ("checks: (use \"check\" to enable, \"no-check\" to disable)\n");
+	print_table($out, \@checks_table);
+	print $out ("\n");
+
+	my (@warnings_table) = (
+		["  ", "all", "", "enable all warnings"],
+		["  ", "none", "", "disable all warnings"],
+	);
+	foreach my $warning (sort keys %warnings) {
+		push(@warnings_table, [ "  ", $warning,
+			(${$warnings{$warning}->[0]} ? "(enabled)" : "(disabled)"),
+			$warnings{$warning}->[1]]);
+	}
+	print $out ("warnings: (use \"warn\" to enable, \"no-warn\" to disable)\n");
+	print_table($out, \@warnings_table);
+	print $out ("\n");
+
+	exit($exitval);
+}
+
+sub parse_multioption($$) {
+	my ($value, $optdefs) = @_;
+	foreach my $opt (split(qr",", $value)) {
+		if ($opt eq "none") {
+			foreach my $key (keys %$optdefs) {
+				${$optdefs->{$key}->[0]} = false;
+			}
+		} elsif ($opt eq "all") {
+			foreach my $key (keys %$optdefs) {
+				${$optdefs->{$key}->[0]} = true;
+			}
+		} else {
+			my ($value) = (($opt =~ s/^no-//) ? false : true);
+			if (exists($optdefs->{$opt})) {
+				${$optdefs->{$opt}->[0]} = $value;
+			} else {
+				help(*STDERR, 1, 0);
+			}
+		}
+	}
+	return true;
+}
+
+sub parse_command_line() {
+	my (%options) = (
+		"warning|W=s" => sub {
+			my ($opt, $val) = @_;
+			parse_multioption($val, \%warnings);
+		},
+		"check|C=s" => sub {
+			my ($opt, $val) = @_;
+			parse_multioption($val, \%checks);
+		},
+		"help|h" => sub { help(*STDOUT, 0, 1); },
+		"newpackage|N" => \$opt_check_newpkg,
+		"verbose|v" => sub { PkgLint::Logging::set_verbose(true); },
+		"version|V" => sub { print("$conf_distver\n"); exit(0); },
+		"conblank|B=i" => \$opt_contblank,
+		"dumpmakefile|I" => \$opt_dumpmakefile,
+	);
+	{
+		local $SIG{__WARN__} = sub {};
+		if (!GetOptions(%options)) {
+			help(*STDERR, 1, false);
+		}
+	}
+	if (@ARGV) {
+		$opt_packagedir = shift(@ARGV);
 	}
 	return true;
 }
@@ -371,39 +509,40 @@ EOF
 	my @checker = ("$pkgdir/DESCR");
 	my %checker = ("$pkgdir/DESCR", \&checkfile_DESCR);
 
-	if ($opt_extrafile) {
-		foreach my $i ((<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>)) {
-			next if (! -T $i);
-			next if ($i =~ /distinfo$/);
-			next if ($i =~ /Makefile$/);
-			$i =~ s/^\Q$opt_packagedir\E\///;
-			next if (defined $checker{$i});
-			if ($i =~ /MESSAGE/) {
-				unshift(@checker, $i);
-				$checker{$i} = \&checkfile_MESSAGE;
-			} elsif ($i =~ /PLIST/) {
-			        unshift(@checker, $i);
-				$checker{$i} = \&checkfile_PLIST;
-			} else {
-			        push(@checker, $i);
-				$checker{$i} = \&checkpathname;
+	if ($opt_check_MESSAGE) {
+		foreach my $msg (<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>) {
+			if ($msg =~ qr"MESSAGE") {
+				push(@checker, $msg);
+				$checker{$msg} = \&checkfile_MESSAGE;
 			}
 		}
 	}
-	foreach my $i (<$opt_packagedir/$patchdir/patch-*>) {
-		next if (! -T $i);
-		$i =~ s/^\Q$opt_packagedir\E\///;
-		next if (defined $checker{$i});
-		push(@checker, $i);
-		$checker{$i} = \&checkfile_patches_patch;
+	if ($opt_check_PLIST) {
+		foreach my $plist (<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>) {
+			if ($plist =~ qr"PLIST") {
+				push(@checker, $plist);
+				$checker{$plist} = \&checkfile_PLIST;
+			}
+		}
 	}
-	if (-f "$opt_packagedir/$distinfo") {
-		my $i = "$distinfo";
-		next if (defined $checker{$i});
-		push(@checker, $i);
-		$checker{$i} = \&checkfile_distinfo;
+	if ($opt_check_patches) {
+		foreach my $i (<$opt_packagedir/$patchdir/patch-*>) {
+			next if (! -T $i);
+			$i =~ s/^\Q$opt_packagedir\E\///;
+			next if (defined $checker{$i});
+			push(@checker, $i);
+			$checker{$i} = \&checkfile_patches_patch;
+		}
 	}
-	{
+	if ($opt_check_distinfo) {
+		if (-f "$opt_packagedir/$distinfo") {
+			my $i = "$distinfo";
+			next if (defined $checker{$i});
+			push(@checker, $i);
+			$checker{$i} = \&checkfile_distinfo;
+		}
+	}
+	if ($opt_check_distinfo && $opt_check_patches) {
 		# Make sure there's a distinfo if there are patches
 		my $patches = false;
 		patch:
@@ -417,6 +556,18 @@ EOF
 			log_warning(NO_FILE, NO_LINE_NUMBER, "no $opt_packagedir/$distinfo file. Please run '$conf_make makepatchsum'.");
 		}
 	}
+	if ($opt_check_extra) {
+		foreach my $i ((<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>)) {
+			next if (! -T $i);
+			$i =~ s/^\Q$opt_packagedir\E\///;
+			next if ($i =~ qr"(?:distinfo$|Makefile$|PLIST|MESSAGE)");
+			next if (defined $checker{$i});
+
+			push(@checker, $i);
+			$checker{$i} = \&checkpathname;
+		}
+	}
+
 	foreach my $i (@checker) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "checking $i.");
 		if (! -f "$opt_packagedir/$i") {
@@ -728,7 +879,7 @@ sub checkfile_PLIST($) {
 sub checkperms($) {
 	my ($file) = @_;
 
-	if (-f $file && -x $file) {
+	if ($opt_warn_exec && -f $file && -x $file) {
 		log_warning($file, NO_LINE_NUMBER, "should not be executable.");
 	}
 	return true;
@@ -783,6 +934,10 @@ sub check_for_multiple_patches($) {
 	my ($lines) = @_;
 	my ($files_in_patch, $patch_state, $line_type);
 
+	if (!$opt_warn_patches) {
+		# all warnings are disabled, so why should we check?
+		return;
+	}
 	$files_in_patch = 0;
 	$patch_state = "";
 	foreach my $line (@$lines) {
@@ -980,7 +1135,7 @@ sub checkfile_Makefile($) {
 	#
 	# whole file: $(VARIABLE)
 	#
-	if ($opt_parenwarn) {
+	if ($opt_warn_paren) {
 		log_info(NO_FILE, NO_LINE_NUMBER, "checking for \$(VARIABLE).");
 		if ($whole =~ /\$\([\w\d]+\)/) {
 			log_warning(NO_FILE, NO_LINE_NUMBER, "use \${VARIABLE}, instead of ".
@@ -1169,10 +1324,12 @@ EOF
 	$j =~ s/\n#[\n]*/\n#/;
 	# ...nor COMMENTs
 	$j =~ s/\nCOMMENT[\t ]*=[\t ]*[^\n]*\n/\nCOMMENT=#replaced\n/;
-	foreach my $i (keys %cmdnames) {
-		if ($j =~ /[ \t\/@]$i[ \t\n;]/) {
-			log_warning(NO_FILE, NO_LINE_NUMBER, "possible direct use of command \"$i\" ".
-				"found. Use $cmdnames{$i} instead.");
+	if ($opt_warn_directcmd) {
+		foreach my $i (keys %cmdnames) {
+			if ($j =~ /[ \t\/@]$i[ \t\n;]/) {
+				log_warning(NO_FILE, NO_LINE_NUMBER, "possible direct use of command \"$i\" ".
+					"found. Use $cmdnames{$i} instead.");
+			}
 		}
 	}
 
@@ -1242,9 +1399,9 @@ EOF
 				"right before \$$conf_rcsidstr\$ tag.");
 		}
 		if ($2 ne '') {
-			if (PkgLint::Logging::is_verbose || $opt_newpackage) {	# XXX
+			if (PkgLint::Logging::is_verbose || $opt_check_newpkg) {	# XXX
 				log_warning(NO_FILE, NO_LINE_NUMBER, "".
-				    ($opt_newpackage ? 'for new package, '
+				    ($opt_check_newpkg ? 'for new package, '
 					      : 'is it a new package? if so, ').
 				    "make \$$conf_rcsidstr\$ tag in comment ".
 				    "section empty, to make CVS happy.");
@@ -1815,7 +1972,9 @@ sub abspathname($$) {
 		if ($i ne '') {
 			$i =~ s/\s.*$//;
 			$i =~ s/['"].*$//;
-			log_warning($file, NO_LINE_NUMBER, "possible use of absolute pathname \"$i\".");
+			if ($opt_warn_absname) {
+				log_warning($file, NO_LINE_NUMBER, "possible use of absolute pathname \"$i\".");
+			}
 		}
 	}
 
