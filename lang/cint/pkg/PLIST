@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/17 14:48:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/06/19 19:59:34 drochner Exp $
 bin/cint
 bin/makecint
 cint/G__ci.h
 cint/MAKEINFO
 cint/cint
 cint/makecint
+cint/include/_exception.h
+cint/include/_iostream
 cint/include/Common.h
 cint/include/README
 cint/include/README.txt
@@ -12,12 +14,10 @@ cint/include/ReadF.C
 cint/include/ReadF.cxx
 cint/include/ReadF.dl
 cint/include/ReadF.h
-cint/include/ReadF.o
 cint/include/RegE.C
 cint/include/RegE.cxx
 cint/include/RegE.dl
 cint/include/RegE.h
-cint/include/RegE.o
 cint/include/api.h
 cint/include/array.c
 cint/include/array.dl
@@ -56,8 +56,8 @@ cint/include/darray.cxx
 cint/include/darray.h
 cint/include/done
 cint/include/errno.h
-cint/include/error
 cint/include/ertti.h
+cint/include/exception
 cint/include/exception.h
 cint/include/fcntl.h
 cint/include/fft.c
@@ -67,9 +67,6 @@ cint/include/float.h
 cint/include/fstream
 cint/include/fstream.h
 cint/include/graphbuf.h
-cint/include/hp54503.h
-cint/include/hpib.c
-cint/include/hpib.h
 cint/include/iomanip.h
 cint/include/iosenum.cxx
 cint/include/iosenum.h
@@ -98,12 +95,14 @@ cint/include/regexp.h
 cint/include/setjmp.h
 cint/include/signal.h
 cint/include/socket.h
+cint/include/spice.h
 cint/include/sstream
 cint/include/statistics.c
 cint/include/statistics.dl
 cint/include/statistics.h
 cint/include/stdarg.h
 cint/include/stddef.h
+cint/include/stdfunc.dll
 cint/include/stdio.h
 cint/include/stdlib.h
 cint/include/stream.h
@@ -120,17 +119,38 @@ cint/include/winsock.h
 cint/include/xgraph.c
 cint/include/xgraph.dl
 cint/include/xygraphbuf.h
+cint/include/sys/ipc.h
+cint/include/sys/msg.h
+cint/include/sys/sem.h
+cint/include/sys/shm.h
+cint/include/sys/stat.h
+cint/include/sys/types.h
+cint/stl/G__postprocess.h
 cint/stl/README.txt
+cint/stl/_algorithm
+cint/stl/_autocontainer
+cint/stl/_bitset
+cint/stl/_deque
 cint/stl/_deque.h
+cint/stl/_iterator
 cint/stl/_iterator.h
+cint/stl/_list
 cint/stl/_list.h
+cint/stl/_map
 cint/stl/_map.h
+cint/stl/_memory
+cint/stl/_multimap
 cint/stl/_multimap.h
+cint/stl/_multiset
 cint/stl/_multiset.h
 cint/stl/_pair.h
+cint/stl/_set
 cint/stl/_set.h
+cint/stl/_stack
 cint/stl/_stack.h
+cint/stl/_utility
 cint/stl/_utility.h
+cint/stl/_vector
 cint/stl/_vector.h
 cint/stl/algo.h
 cint/stl/algobase.h
@@ -144,6 +164,7 @@ cint/stl/defalloc.h
 cint/stl/deque
 cint/stl/deque.dll
 cint/stl/deque.h
+cint/stl/exception.dll
 cint/stl/faralloc.h
 cint/stl/fdeque.h
 cint/stl/flist.h
@@ -212,6 +233,7 @@ cint/stl/teststl
 cint/stl/teststl.c
 cint/stl/tree.h
 cint/stl/utility
+cint/stl/utility.h
 cint/stl/valarray
 cint/stl/vector
 cint/stl/vector.dll
@@ -220,6 +242,7 @@ cint/lib/prec_stl/README.txt
 cint/lib/prec_stl/algorithm
 cint/lib/prec_stl/bitset
 cint/lib/prec_stl/deque
+cint/lib/prec_stl/exception
 cint/lib/prec_stl/functional
 cint/lib/prec_stl/iterator
 cint/lib/prec_stl/limits
@@ -236,6 +259,7 @@ cint/lib/prec_stl/string
 cint/lib/prec_stl/utility
 cint/lib/prec_stl/valarray
 cint/lib/prec_stl/vector
+@dirrm cint/include/sys
 @dirrm cint/include
 @dirrm cint/stl
 @dirrm cint/lib/prec_stl
