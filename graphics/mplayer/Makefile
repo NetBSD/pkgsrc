@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/12/25 18:02:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/12/25 18:38:00 zuntum Exp $
 #
 
 DISTNAME=	MPlayer-0.18pre
@@ -8,7 +8,7 @@ MASTER_SITES=	http://zuntum.utech.lublin.pl/distfiles/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	svs@ropnet.ru,zuntum@netbsd.org
-HOMEPAGE=	http://mplayer.sourceforge.net/
+HOMEPAGE=	http://www.mplayerhq.hu/
 COMMENT=	Software only MPEG-1/2/4 video decoder
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5[Y-Z]*-i386
