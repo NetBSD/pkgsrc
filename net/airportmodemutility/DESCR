@@ -1,0 +1,6 @@
+This is a small Java-based utility that monitors the connection state
+of the modem of an Apple AirPort Base Station, sends signals to
+connect or disconnect the modem on demand, and displays the
+(approximate) length of time the modem has been connected. Version 2.0
+also displays the modem connection speed when used with the new
+("snow") version base stations.
