@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2000/05/04 01:33:07 hubertf Exp $
+
+diff -x *.orig -urN ./common/input.c /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/input.c
+--- ./common/input.c	Tue Apr 18 03:40:44 2000
++++ /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/input.c	Thu May  4 03:24:27 2000
+@@ -38,6 +38,9 @@
+ #include "global.h"
+ #include <curses.h>
+ #include <setjmp.h>	/* jmp_buf */
++#ifdef __NetBSD__
++#include <termios.h>
++#endif
+ 
+ static char const rcsid[] = "$Id: patch-af,v 1.1 2000/05/04 01:33:07 hubertf Exp $";
+ 

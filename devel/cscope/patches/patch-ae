@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2000/05/04 01:33:07 hubertf Exp $
+
+diff -x *.orig -urN ./common/help.c /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/help.c
+--- ./common/help.c	Tue Apr 18 03:40:29 2000
++++ /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/help.c	Thu May  4 03:24:27 2000
+@@ -132,6 +132,7 @@
+ 					++ln;
+ 				}
+ 			}
++			move(ln, 0);
+ 			(void) addstr(*tp++);
+ 		}
+ 		else {

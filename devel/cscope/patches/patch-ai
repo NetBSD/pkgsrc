@@ -1,0 +1,32 @@
+$NetBSD: patch-ai,v 1.1 2000/05/04 01:33:07 hubertf Exp $
+
+diff -x *.orig -urN ./i386/Makefile /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/i386/Makefile
+--- ./i386/Makefile	Tue Apr 18 03:43:47 2000
++++ /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/i386/Makefile	Thu May  4 03:24:27 2000
+@@ -37,12 +37,12 @@
+ 
+ COMCS= ../common
+ INCLIST= -I$(COMCS)
+-DEFLIST= -DLinux
+-LIBS= -lncurses -lfl
++DEFLIST= -DBSD
++LIBS= -lcurses -lfl
+ 
+ INS= install
+-INSDIR=/usr/local/bin
+-INSMANDIR=/usr/local/man/man1
++INSDIR=${PREFIX}/bin
++INSMANDIR=${PREFIX}/man/man1
+ MANPAGE=../doc/cscope.1
+ 
+ OBJ = dir.o crossref.o scanner.o lookup.o command.o display.o find.o \
+@@ -163,7 +163,7 @@
+ 
+ install: all
+ 	$(INS) -s -m 755 $(PROGRAM) $(INSDIR)
+-	$(INS) -m 755 $(MANPAGE) $(INSMANDIR)
++#	$(INS) -m 755 $(MANPAGE) $(INSMANDIR)
+ 
+ clean:
+ 	rm -f *.o *.out lex.yy.c y.tab.? scanner.c egrep.c
+

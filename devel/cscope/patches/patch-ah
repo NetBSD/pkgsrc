@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2000/05/04 01:33:07 hubertf Exp $
+
+diff -x *.orig -urN ./common/vpaccess.c /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/vpaccess.c
+--- ./common/vpaccess.c	Tue Apr 18 03:42:45 2000
++++ /disk1/cvs/pkgsrc/devel/cscope/work.i386.unpatched/cscope-13.0/common/vpaccess.c	Thu May  4 03:24:27 2000
+@@ -37,7 +37,7 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ #include "vp.h"
+-#ifdef CCS
++#if defined(CCS) || defined(__NetBSD__)
+ #include <sys/types.h>
+ #else
+ typedef int mode_t;
