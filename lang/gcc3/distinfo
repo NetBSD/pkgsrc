@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.18 2004/05/28 22:28:09 shannonjr Exp $
+$NetBSD: distinfo,v 1.19 2004/07/02 15:40:01 drochner Exp $
 
-SHA1 (gcc-3.3.3.tar.bz2) = a9efbc34c5dd7fc48f7d700461de4fc014968cab
-Size (gcc-3.3.3.tar.bz2) = 23279245 bytes
+SHA1 (gcc-3.3.4.tar.bz2) = f1690df8d2f0c60ada0c8d0c9c350063aa00f705
+Size (gcc-3.3.4.tar.bz2) = 23331664 bytes
 SHA1 (patch-aa) = 2b8d1fcbe1f8028a6a011e85bb3ef9c1a9373b36
 SHA1 (patch-ab) = f0795e3792cd5200140bc19e291a2616b7d31468
-SHA1 (patch-ac) = a4483c1762c75dc1010dc0fd88a0f8b2a993bcd6
 SHA1 (patch-ae) = e5dd184ca1b0c415215e82d0250469792a432741
 SHA1 (patch-af) = ee41c43dbb6e710a9399954793c6ff7c4274e515
 SHA1 (patch-ag) = 23fecd85ddca19a2c543827b60ea555ffbdcaa6c
@@ -14,7 +13,6 @@ SHA1 (patch-ak) = 53b91c8315e5e2ccb5d74058bdfd33c6f8431ad6
 SHA1 (patch-al) = 6294061358e2b618a980e77cbf7bad6231feacbe
 SHA1 (patch-am) = 8eff72d76b135a9b0318de651341cb08976758b5
 SHA1 (patch-an) = c0795339102b4608a3813c3a2d488c71ea972d6f
-SHA1 (patch-ao) = b02a4bcf07d67511a337165164e8f344c3303fb7
 SHA1 (patch-ap) = d2f55ff6992f6afb106b3c861a8eee0a5b7bd70e
 SHA1 (patch-aq) = 1ee8d951e464a154c4f2a3f48d4c2101c2f3d79d
 SHA1 (patch-ar) = 1ed0338bde1e863ddcfbc0bdfb77aeafdbef7220
