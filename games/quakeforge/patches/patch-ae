@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2004/07/14 00:17:58 hubertf Exp $
+$NetBSD: patch-ae,v 1.2 2004/08/25 20:26:18 snj Exp $
 
---- ruamoko/game/Makefile.am.orig	2003-02-07 22:46:42.000000000 +0100
-+++ ruamoko/game/Makefile.am
+--- ruamoko/game/Makefile.am.orig	2004-02-02 22:00:16.000000000 -0800
++++ ruamoko/game/Makefile.am	2004-08-24 15:25:10.000000000 -0700
 @@ -9,7 +9,7 @@ QFCC_DEP=$(top_builddir)/tools/qfcc/sour
  QFCC=$(QFCC_DEP)
  QCFLAGS=-qq -g -Werror
@@ -13,8 +13,8 @@ $NetBSD: patch-ae,v 1.1 2004/07/14 00:17:58 hubertf Exp $
  else
 @@ -38,7 +38,7 @@ game_obj=$(addsuffix .qfo,$(basename $(g
  
- game.dat$(GZ): $(game_obj) ../lib/libr.a
- 	$(QFCC) $(QCFLAGS) -p $(STRIP) -o game.dat $(game_obj) ../lib/libr.a
+ game.dat$(GZ): $(game_obj) ../lib/libr.a ../lib/libqw.a
+ 	$(QFCC) $(QCFLAGS) -p $(STRIP) -o game.dat $(game_obj) ../lib/libqw.a ../lib/libr.a
 -	$(GZIP)
 +	$(XGZIP)
  
