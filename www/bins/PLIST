@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/07 06:47:25 simonb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/30 09:46:32 dmcmahill Exp $
 bin/bins
 bin/bins_edit
 man/man1/bins.1
 man/man1/bins_edit.1
 share/doc/html/bins/index.html
 share/doc/html/bins/index_fr.html
+share/examples/bins/binsrc
 share/examples/bins/templates.default/details.html
 share/examples/bins/templates.default/footer.html
 share/examples/bins/templates.default/image.html

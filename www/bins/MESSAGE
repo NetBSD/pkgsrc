@@ -1,10 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/07/04 19:37:38 wiz Exp $
+$NetBSD: MESSAGE,v 1.2 2002/07/30 09:46:32 dmcmahill Exp $
 
 	Before running bins, copy the example templates directory
 		${PREFIX}/share/examples/bins/templates.default
 	into your home directory as
 		~/.bins/templates.default
-	and modify.
+	and modify.  Also if you do not already have an installed
+		${PKG_SYSCONFDIR}/binsrc 
+	that you're happy with, copy
+		${PREFIX}/share/examples/bins/binsrc
+	to ${PKG_SYSCONFDIR}/bins/binsrc
 
 ===========================================================================

@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2002/07/07 13:21:53 simonb Exp $
+$NetBSD: patch-aa,v 1.2 2002/07/30 09:46:33 dmcmahill Exp $
 
---- bins.orig	Mon Jun 10 05:54:12 2002
+--- bins.orig	Sun Jun  9 15:54:12 2002
 +++ bins
+@@ -218,7 +218,7 @@
+    # any new options need corresponding new documentation.
+ 
+    # The following parameters cannot be set in config files for now :
+-   globalConfigDir => "/etc/bins",     # System wide
++   globalConfigDir => "@pkgsysconfdir@/bins",     # System wide
+                                        # configuration directory.
+    userConfigDir    => "~/.bins",      # User configuration directory
+    configFileName   => "binsrc",       # Configuration file.
 @@ -237,13 +237,14 @@
  
  );
