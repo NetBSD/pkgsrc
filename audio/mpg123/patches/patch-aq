@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.1 2004/02/10 09:32:47 tron Exp $
+$NetBSD: patch-aq,v 1.2 2004/11/07 08:55:04 tron Exp $
 
---- httpget.c.orig	Tue Feb 10 10:14:29 2004
-+++ httpget.c	Tue Feb 10 10:18:07 2004
+--- httpget.c.orig	2004-11-07 09:47:28.000000000 +0100
++++ httpget.c	2004-11-07 09:49:34.000000000 +0100
 @@ -55,11 +55,10 @@
  #endif
  	int pos = 0;
@@ -23,3 +23,47 @@ $NetBSD: patch-aq,v 1.1 2004/02/10 09:32:47 tron Exp $
  }
  
  void encode64 (char *source,char *destination)
+@@ -111,7 +111,7 @@
+ }
+ 
+ /* VERY  simple auth-from-URL grabber */
+-int getauthfromURL(char *url,char *auth)
++int getauthfromURL(char *url,char *auth,unsigned long authlen)
+ {
+   char *pos;
+ 
+@@ -126,9 +126,13 @@
+       if( url[i] == '/' )
+          return 0;
+     }
++    if (pos-url >= authlen) {
++      fprintf (stderr, "Error: authentication data exceeds max. length.\n");
++      return -1;
++    }
+     strncpy(auth,url,pos-url);
+     auth[pos-url] = 0;
+-    strcpy(url,pos+1);
++    memmove(url,pos+1,strlen(pos+1)+1);
+     return 1;
+   }
+   return 0;
+@@ -265,7 +269,10 @@
+ 	strncpy (purl, url, 1023);
+ 	purl[1023] = '\0';
+ 
+-        getauthfromURL(purl,httpauth1);
++        if (getauthfromURL(purl,httpauth1,sizeof(httpauth1)) < 0) {
++		sock = -1;
++		goto exit;
++	}
+ 
+ 	do {
+ 		strcpy (request, "GET ");
+@@ -399,6 +406,7 @@
+ 		fprintf (stderr, "Too many HTTP relocations.\n");
+ 		exit (1);
+ 	}
++exit:
+ 	free (purl);
+ 	free (request);
+ 	free(host);
