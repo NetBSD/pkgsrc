@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/08/22 17:25:07 skrll Exp $
+
+--- Jamfile.orig	Fri Aug 31 23:06:53 2001
++++ Jamfile
+@@ -3,13 +3,13 @@
+ #
+ 
+-BINDIR = /usr/local/bin ;
++BINDIR = $(PREFIX)/bin ;
+ 
+ LOCATE_TARGET ?= build-$(OSFULL[1]:L) ;
+ 
+-CCFLAGS += -Wall -O6 -fomit-frame-pointer -fexpensive-optimizations ;
++CCFLAGS += -Wall $(CFLAGS) ;
+ 
+ Main jamjar : jamjar.c class.c zip.c resource.c argument.c meta.c ;
+ 
+-LINKLIBS = /usr/lib/libz.a ;
++LINKLIBS = -lz ;
+ 
+ if $(BINDIR) { 
