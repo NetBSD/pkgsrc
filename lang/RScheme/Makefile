@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/08/06 16:55:10 jmc Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/06 18:28:58 jmc Exp $
 
 DISTNAME=		rs-0.7.3.2
 PKGNAME=		RScheme-0.7.3.2
@@ -52,8 +52,10 @@ do-build:
 	@cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE} ${ALL_TARGET}
 
 do-install:
-	@cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE} install-base && \
-		${CP} install/lib/librs.a ${BUILDLINK_DIR}/lib && \
+	cd ${WRKSRC}/src && \
+		(cd install; ${PAX} -rw include ${BUILDLINK_DIR}) && \
+		(cd install; ${PAX} -rw lib ${BUILDLINK_DIR}) && \
+		${SETENV} ${MAKE_ENV} ${MAKE} install-base && \
 		${SETENV} ${MAKE_ENV} ${MAKE} shell && \
 		${MAKE} install-shell && \
 		${MAKE} packages
