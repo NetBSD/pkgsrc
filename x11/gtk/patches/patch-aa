@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.19 2000/06/05 01:12:43 wiz Exp $
+$NetBSD: patch-aa,v 1.20 2001/02/26 21:42:57 tron Exp $
 
 --- configure.orig	Thu May 25 02:31:48 2000
 +++ configure	Thu May 25 18:53:46 2000
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.19 2000/06/05 01:12:43 wiz Exp $
  # AM_GTK_GNU_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
 -gtklocaledir='${prefix}/${DATADIRNAME}/locale'
-+gtklocaledir='${prefix}/share/locale'
++gtklocaledir='${prefix}/${PKGLOCALEDIR}/locale'
  
  
  echo $ac_n "checking for extra flags to get ANSI library prototypes""... $ac_c" 1>&6
