@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5135 2004/03/07 14:41:32 taca Exp $
+$NetBSD: CHANGES,v 1.5136 2004/03/07 17:18:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1221,3 +1221,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated scrollkeeper to 0.3.14nb2 [jmmv 2004-03-07]
 	Updated ruby-racc to 1.4.4 [taca 2004-03-07]
 	Deleted ruby-racc-runtime [taca 2004-03-07]
+	Added ccsh-0.0.4 [minskim 2004-03-07]
