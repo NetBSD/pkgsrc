@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2002/02/26 09:41:40 martti Exp $
+$NetBSD: patch-ab,v 1.3 2002/05/03 10:56:39 wiz Exp $
 
 --- src/aapm.cc.orig	Tue Oct  9 16:54:03 2001
-+++ src/aapm.cc	Tue Feb 26 09:02:17 2002
++++ src/aapm.cc
 @@ -25,6 +25,12 @@
  
  #ifdef CONFIG_APPLET_APM
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.2 2002/02/26 09:41:40 martti Exp $
      char buf[45];
      int len, i, fd = open("/proc/apm", O_RDONLY);
      char driver[16];
-@@ -102,6 +109,44 @@
+@@ -102,6 +109,46 @@
              strcat(s,_(" - Charging"));
          else
              strcat(s,_("M"));
@@ -35,8 +35,10 @@ $NetBSD: patch-ab,v 1.2 2002/02/26 09:41:40 martti Exp $
 +        return;
 +    }
 +
++    memset(&aip, 0, sizeof(aip));
 +    if (ioctl(fd, APM_IOC_GETPOWER, &aip) == -1) {
 +        fprintf(stderr, "ioctl failed on APMDEV");
++	close(fd);
 +        return;
 +    }
 +
