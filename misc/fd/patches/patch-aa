@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2000/10/19 04:26:40 hubertf Exp $
+$NetBSD: patch-aa,v 1.5 2001/12/30 13:46:04 wiz Exp $
 
---- Makefile.in.orig	Wed Oct 11 17:00:00 2000
-+++ Makefile.in
-@@ -3,7 +3,7 @@
- #
+--- Makefile.in.orig	Tue Dec 18 00:00:00 2001
++++ Makefile.in	Wed Dec 19 13:02:55 2001
+@@ -4,7 +4,7 @@
  
  TITLE	= FD-
+ VERSION	= __VERSION__
 -PREFIX	= /usr/local
 +PREFIX	?= /usr/local
  MANSEC	= 1
