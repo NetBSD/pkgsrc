@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2018 2004/08/10 14:09:20 taya Exp $
+$NetBSD: TODO,v 1.2019 2004/08/10 14:30:06 taya Exp $
 
 Suggested new packages
 ======================
@@ -399,7 +399,6 @@ Suggested package updates
 	o tct-1.14
 	o teapop-0.3.8
 	o texi2html-1.70
-	o thunderbird-0.7.3
 	o tk-8.4.7
 	o tkdesk-2.0
 	o tkman-2.2
