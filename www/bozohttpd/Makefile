@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2003/09/22 08:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2003/10/06 01:16:47 mrg Exp $
 #
 
-DISTNAME=	bozohttpd-20030626
-PKGREVISION=	1
+DISTNAME=	bozohttpd-20031005
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +21,8 @@ MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/man
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 CPPFLAGS+=	-DINET6
 .endif
+
+CPPFLAGS+=	-Wno-error
 
 pre-build:
 	cd ${WRKSRC}; for file in bozohttpd.8; do			\
