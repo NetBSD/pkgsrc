@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: linkfarm.sh.in,v 1.1 2003/09/08 04:49:07 jlam Exp $
+# $NetBSD: linkfarm.sh.in,v 1.2 2003/09/13 09:24:22 jlam Exp $
 
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -174,9 +174,9 @@ yes)
 		case $ignore in
 		no)	
 			if [ $verbose -gt 0 ]; then
-				echo "$rmprog $todir/$newf"
+				echo "$rmprog -f $todir/$newf"
 			fi
-			$doit $rmprog $todir/$f ;;
+			$doit $rmprog -f $todir/$f ;;
 		esac
 	done
 	for d in `$findprog . -type d -print | $sortprog -r`; do
