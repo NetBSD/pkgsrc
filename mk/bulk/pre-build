@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.18 2002/03/14 00:13:29 hubertf Exp $
+# $NetBSD: pre-build,v 1.19 2002/06/28 07:54:36 agc Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -22,14 +22,16 @@ PRUNEDISTFILES=`echo $PRUNEDISTFILES | tr "[:lower:]" "[:upper:]"`
 PRUNEPACKAGES=`echo $PRUNEPACKAGES | tr "[:lower:]" "[:upper:]"`
 PRUNELINKS=`echo $PRUNELINKS | tr "[:lower:]" "[:upper:]"`
 
+PKGLINT_PKG_DIR=${USR_PKGSRC}/pkgtools/pkglint
+
 # extract the name of the files used for the build log and broken build log.
 # these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
-export BROKENF=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=BROKENFILE )`;
+export BROKENF=`( cd ${PKGLINT_PKG_DIR} ; make show-var VARNAME=BROKENFILE )`;
 if [ "$BROKENF" = "" ]; then
 	echo "Had problems determining the name of the .broken.files"
 	exit 1
 fi
-BLDLOG=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=BUILDLOG )`;
+BLDLOG=`( cd ${PKGLINT_PKG_DIR} ; make show-var VARNAME=BUILDLOG )`;
 if [ "$BLDLOG" = "" ]; then
 	echo "Had problems determining the name of the .make.files"
 	exit 1
@@ -38,26 +40,28 @@ fi
 
 
 #
-# Clean out everything and it's mother
+# Clean out everything and its mother
 #
-echo Removing all installed packages 
+PKG_DBDIR=`(cd ${PKGLINT_PKG_DIR}; make show-var VARNAME=PKG_DBDIR)` ;;
 
-if [ -d /var/db/pkg ]; then
-	cd /var/db/pkg
+echo Removing all installed packages in ${PKG_DBDIR}
+
+if [ -d ${PKG_DBDIR} ]; then
+	cd ${PKG_DBDIR}
 	for pkg in *
 	do
-		if `pkg_info -qe $pkg`; then 
+		if `env PKG_DBDIR=${PKG_DBDIR} pkg_info -qe $pkg`; then 
 			echo pkg_delete -r $pkg
-			pkg_delete -r $pkg
+			env PKG_DBDIR=${PKG_DBDIR} pkg_delete -r $pkg
 		fi
 	done
 	# this should have removed everything.  Now force any broken pkgs
 	# to deinstall
 	for pkg in *
 	do
-		if `pkg_info -qe $pkg`; then 
+		if `env PKG_DBDIR=${PKG_DBDIR} pkg_info -qe $pkg`; then 
 			echo pkg_delete -f $pkg
-			pkg_delete -f $pkg
+			env PKG_DBDIR=${PKG_DBDIR} pkg_delete -f $pkg
 		fi
 	done
 	
@@ -67,8 +71,8 @@ if [ -d /var/db/pkg ]; then
 	rm -fr *
 fi
 
-LOCALBASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=LOCALBASE )`;
-X11BASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=X11BASE )`;
+LOCALBASE=`( cd ${PKGLINT_PKG_DIR} ; make show-var VARNAME=LOCALBASE )`;
+X11BASE=`( cd ${PKGLINT_PKG_DIR} ; make show-var VARNAME=X11BASE )`;
 	
 # General cleanout - easy!
 cd $LOCALBASE && rm -fr * && rm -fr .??*
@@ -80,7 +84,7 @@ rm -fr $X11BASE/share/kde
 rm -fr $X11BASE/share/netscape
 rm -fr /var/tmp/inst*
 rm -fr $X11BASE/lib/libgimp*	# gimp doesn't build with old libs around
-rm -fr /nonexistant		# broken useradd on pop3d
+rm -fr /nonexistent		# broken useradd on pop3d
 rm -fr /home/majordom		# mail/majordomo pkg
 rm -fr /home/nut		# sysutils/ups-net
 rm -fr /var/wwwoffle		# www/wwwoffle
@@ -116,12 +120,12 @@ fi
 #
 # Remove old/broken distfiles and binary packages
 #
-DISTDIR=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=DISTDIR )`;
-PACKAGES=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=PACKAGES )`;
+DISTDIR=`( cd ${PKGLINT_PKG_DIR} ; make show-var VARNAME=DISTDIR )`;
+PACKAGES=`( cd ${PKGLINT_PKG_DIR} ; make show-var VARNAME=PACKAGES )`;
 
 if [ $PRUNEDISTFILES = "YES" ]; then
 	echo "Removing old/broken distfiles"
-	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make PRECLEAN=yes bulk-install )
+	( cd ${PKGLINT_PKG_DIR} ; make PRECLEAN=yes bulk-install )
 	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -o -m -r
 	echo done.
 else
@@ -130,7 +134,7 @@ fi
 
 if [ $PRUNEPACKAGES = "YES" ]; then
 	echo "Removing old (out of date) binary packages"
-	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make PRECLEAN=yes bulk-install )
+	( cd ${PKGLINT_PKG_DIR} ; make PRECLEAN=yes bulk-install )
 	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -p -r
 	echo done.
 else
@@ -156,5 +160,7 @@ fi
 if [ -f mk/bulk/pre-build.local ]; then
 	. mk/bulk/pre-build.local
 fi
+
+mkdir ${PKG_DBDIR}
 
 touch .start.${arch}
