@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2004/04/16 02:57:48 salo Exp $
+# $NetBSD: Makefile,v 1.41 2004/05/25 12:01:16 salo Exp $
 #
 
-DISTNAME=		lftp-3.0.2
+DISTNAME=		lftp-3.0.3
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/ \
 			ftp://ftp.tuwien.ac.at/infosys/browsers/ftp/lftp/ \
@@ -13,7 +13,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		michal@pasternak.w.lub.pl
 HOMEPAGE=		http://lftp.yar.ru/
-COMMENT=		Powerful command line ftp client
+COMMENT=		Powerful command line file transfer client
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
