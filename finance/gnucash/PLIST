@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:01:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/17 22:29:04 mjl Exp $
 bin/gnc-prices
 bin/gnucash
 bin/gnucash-make-guids
@@ -19,6 +19,44 @@ lib/libgncengine.so
 man/man1/gnc-prices.1
 man/man1/gnucash.1
 share/gnome/apps/Applications/gnucash.desktop
+share/gnome/help/gnucash/C/stylesheet-images/caution.gif
+share/gnome/help/gnucash/C/stylesheet-images/home.gif
+share/gnome/help/gnucash/C/stylesheet-images/important.gif
+share/gnome/help/gnucash/C/stylesheet-images/next.gif
+share/gnome/help/gnucash/C/stylesheet-images/note.gif
+share/gnome/help/gnucash/C/stylesheet-images/prev.gif
+share/gnome/help/gnucash/C/stylesheet-images/tip.gif
+share/gnome/help/gnucash/C/stylesheet-images/toc-blank.gif
+share/gnome/help/gnucash/C/stylesheet-images/toc-minus.gif
+share/gnome/help/gnucash/C/stylesheet-images/toc-plus.gif
+share/gnome/help/gnucash/C/stylesheet-images/up.gif
+share/gnome/help/gnucash/C/stylesheet-images/warning.gif
+share/gnome/help/gnucash/C/x1001.html
+share/gnome/help/gnucash/C/x1008.html
+share/gnome/help/gnucash/C/x1017.html
+share/gnome/help/gnucash/C/x1025.html
+share/gnome/help/gnucash/C/x2472.html
+share/gnome/help/gnucash/C/x2541.html
+share/gnome/help/gnucash/C/x2612.html
+share/gnome/help/gnucash/C/x2741.html
+share/gnome/help/gnucash/C/x3033.html
+share/gnome/help/gnucash/C/x3049.html
+share/gnome/help/gnucash/C/x3106.html
+share/gnome/help/gnucash/C/x3635.html
+share/gnome/help/gnucash/C/x3679.html
+share/gnome/help/gnucash/C/x3683.html
+share/gnome/help/gnucash/C/x3857.html
+share/gnome/help/gnucash/C/x3866.html
+share/gnome/help/gnucash/C/x3872.html
+share/gnome/help/gnucash/C/x3877.html
+share/gnome/help/gnucash/C/x3882.html
+share/gnome/help/gnucash/C/x3973.html
+share/gnome/help/gnucash/C/x3990.html
+share/gnome/help/gnucash/C/x4013.html
+share/gnome/help/gnucash/C/x4018.html
+share/gnome/help/gnucash/C/x4032.html
+share/gnome/help/gnucash/C/x4177.html
+share/gnome/help/gnucash/C/x4555.html
 share/gnome/help/gnucash/C/bofa-mym.html
 share/gnome/help/gnucash/C/dialog-categories.html
 share/gnome/help/gnucash/C/help-search-index.db
@@ -83,32 +121,6 @@ share/gnome/help/gnucash/C/intro.html
 share/gnome/help/gnucash/C/sec002.html
 share/gnome/help/gnucash/C/sec003.html
 share/gnome/help/gnucash/C/topic.dat
-share/gnome/help/gnucash/C/x2442.html
-share/gnome/help/gnucash/C/x2511.html
-share/gnome/help/gnucash/C/x2582.html
-share/gnome/help/gnucash/C/x2711.html
-share/gnome/help/gnucash/C/x3003.html
-share/gnome/help/gnucash/C/x3019.html
-share/gnome/help/gnucash/C/x3076.html
-share/gnome/help/gnucash/C/x3605.html
-share/gnome/help/gnucash/C/x3649.html
-share/gnome/help/gnucash/C/x3653.html
-share/gnome/help/gnucash/C/x3827.html
-share/gnome/help/gnucash/C/x3836.html
-share/gnome/help/gnucash/C/x3842.html
-share/gnome/help/gnucash/C/x3847.html
-share/gnome/help/gnucash/C/x3852.html
-share/gnome/help/gnucash/C/x3943.html
-share/gnome/help/gnucash/C/x3960.html
-share/gnome/help/gnucash/C/x3983.html
-share/gnome/help/gnucash/C/x3988.html
-share/gnome/help/gnucash/C/x4002.html
-share/gnome/help/gnucash/C/x4147.html
-share/gnome/help/gnucash/C/x4525.html
-share/gnome/help/gnucash/C/x971.html
-share/gnome/help/gnucash/C/x978.html
-share/gnome/help/gnucash/C/x987.html
-share/gnome/help/gnucash/C/x995.html
 share/gnome/help/gnucash/C/xacc-about.html
 share/gnome/help/gnucash/C/xacc-account-hierarchy-creator.html
 share/gnome/help/gnucash/C/xacc-accountedit.html
@@ -205,6 +217,32 @@ share/gnome/help/gnucash/C/xacc-userdocs.html
 share/gnome/help/gnucash/C/xacc-versioning.html
 share/gnome/help/gnucash/C/xacc-whats-new.html
 share/gnome/help/gnucash/C/xacc-y2k.html
+share/gnome/help/gnucash/de_DE/x1005.html
+share/gnome/help/gnucash/de_DE/x1013.html
+share/gnome/help/gnucash/de_DE/x2460.html
+share/gnome/help/gnucash/de_DE/x2529.html
+share/gnome/help/gnucash/de_DE/x2600.html
+share/gnome/help/gnucash/de_DE/x2653.html
+share/gnome/help/gnucash/de_DE/x2945.html
+share/gnome/help/gnucash/de_DE/x2961.html
+share/gnome/help/gnucash/de_DE/x3018.html
+share/gnome/help/gnucash/de_DE/x3547.html
+share/gnome/help/gnucash/de_DE/x3591.html
+share/gnome/help/gnucash/de_DE/x3595.html
+share/gnome/help/gnucash/de_DE/x3769.html
+share/gnome/help/gnucash/de_DE/x3778.html
+share/gnome/help/gnucash/de_DE/x3784.html
+share/gnome/help/gnucash/de_DE/x3789.html
+share/gnome/help/gnucash/de_DE/x3794.html
+share/gnome/help/gnucash/de_DE/x3885.html
+share/gnome/help/gnucash/de_DE/x3902.html
+share/gnome/help/gnucash/de_DE/x3925.html
+share/gnome/help/gnucash/de_DE/x3930.html
+share/gnome/help/gnucash/de_DE/x3944.html
+share/gnome/help/gnucash/de_DE/x4424.html
+share/gnome/help/gnucash/de_DE/x722.html
+share/gnome/help/gnucash/de_DE/x989.html
+share/gnome/help/gnucash/de_DE/x996.html
 share/gnome/help/gnucash/de_DE/dialog-categories.html
 share/gnome/help/gnucash/de_DE/help-search-index.db
 share/gnome/help/gnucash/de_DE/index.html
@@ -212,32 +250,6 @@ share/gnome/help/gnucash/de_DE/intro.html
 share/gnome/help/gnucash/de_DE/sec002.html
 share/gnome/help/gnucash/de_DE/sec003.html
 share/gnome/help/gnucash/de_DE/topic.dat
-share/gnome/help/gnucash/de_DE/x1005.html
-share/gnome/help/gnucash/de_DE/x1013.html
-share/gnome/help/gnucash/de_DE/x2438.html
-share/gnome/help/gnucash/de_DE/x2507.html
-share/gnome/help/gnucash/de_DE/x2578.html
-share/gnome/help/gnucash/de_DE/x2631.html
-share/gnome/help/gnucash/de_DE/x2875.html
-share/gnome/help/gnucash/de_DE/x2891.html
-share/gnome/help/gnucash/de_DE/x2948.html
-share/gnome/help/gnucash/de_DE/x3475.html
-share/gnome/help/gnucash/de_DE/x3517.html
-share/gnome/help/gnucash/de_DE/x3521.html
-share/gnome/help/gnucash/de_DE/x3716.html
-share/gnome/help/gnucash/de_DE/x3725.html
-share/gnome/help/gnucash/de_DE/x3731.html
-share/gnome/help/gnucash/de_DE/x3736.html
-share/gnome/help/gnucash/de_DE/x3741.html
-share/gnome/help/gnucash/de_DE/x3832.html
-share/gnome/help/gnucash/de_DE/x3849.html
-share/gnome/help/gnucash/de_DE/x3872.html
-share/gnome/help/gnucash/de_DE/x3877.html
-share/gnome/help/gnucash/de_DE/x3891.html
-share/gnome/help/gnucash/de_DE/x4367.html
-share/gnome/help/gnucash/de_DE/x722.html
-share/gnome/help/gnucash/de_DE/x989.html
-share/gnome/help/gnucash/de_DE/x996.html
 share/gnome/help/gnucash/de_DE/xacc-about.html
 share/gnome/help/gnucash/de_DE/xacc-account-hierarchy-creator.html
 share/gnome/help/gnucash/de_DE/xacc-accountedit.html
@@ -603,6 +615,21 @@ share/gnucash/accounts/pt_PT/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_carloan.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_cdmoneymkt.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_childcare.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_common.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_currency.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_eduloan.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_fixedassets.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_homeloan.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_homeown.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_otherloan.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_renter.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_retiremt.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_spouseinc.gnucash-xea
+share/gnucash/accounts/sk/acctchrt_spouseretire.gnucash-xea
 share/gnucash/doc/AUTHORS
 share/gnucash/doc/COPYING
 share/gnucash/doc/ChangeLog
@@ -801,11 +828,15 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/es_NI/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnucash.mo
 share/mime-info/gnucash.keys
@@ -813,6 +844,8 @@ share/mime-info/gnucash.mime
 share/pixmaps/gnucash/gnucash_splash.png
 share/pixmaps/gnucash/stock_split_title.png
 share/pixmaps/gnucash/stock_split_watermark.png
+share/pixmaps/gnucash/one-euro.png
+share/pixmaps/gnucash/euro-notes.png
 @dirrm share/pixmaps/gnucash
 @dirrm share/gnucash/scm/report
 @dirrm share/gnucash/scm/qif-import
@@ -833,6 +866,7 @@ share/pixmaps/gnucash/stock_split_watermark.png
 @dirrm share/gnucash/accounts/de_DE
 @dirrm share/gnucash/accounts/es_ES
 @dirrm share/gnucash/accounts/pt_PT
+@dirrm share/gnucash/accounts/sk
 @dirrm share/gnucash/accounts/C
 @dirrm share/gnucash/accounts
 @dirrm share/gnucash
