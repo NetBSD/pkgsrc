@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.7 2003/03/09 19:46:53 jschauma Exp $
+$NetBSD: patch-ae,v 1.8 2005/02/17 18:23:24 xtraeme Exp $
 
 --- qw/makefile.linux.orig	Wed Apr 21 20:16:24 1999
 +++ qw/makefile.linux
@@ -42,7 +42,7 @@ $NetBSD: patch-ae,v 1.7 2003/03/09 19:46:53 jschauma Exp $
 +GLCFLAGS=-DGLQUAKE -I${MESA_DIR}/include -I/usr/include/glide
  
 -LDFLAGS=-lm
-+LDFLAGS+=-lm -lossaudio
++LDFLAGS+=-lm
  SVGALDFLAGS=-lvga
 -XLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext
 -GL_SVGA_LDFLAGS=-L/usr/X11/lib -L/usr/local/src/Mesa-3.0/lib -lm -lMesaGL -lglide2x -lX11 -lXext -lvga
