@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/07/15 20:39:25 agc Exp $
+# $NetBSD: Makefile,v 1.14 2000/11/19 19:40:17 rh Exp $
 
 DISTNAME=	gdm-2.0beta4
 PKGNAME=	gdm-2.0b4
@@ -44,6 +44,18 @@ GDMCFGFILES=	Default:Init.default/Default \
 		gdm.conf:gdm.conf.default \
 		locale.alias:locale.alias.default \
 		gnomerc:../gnomerc.default
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !defined(USE_PAM)
+DEPENDS+=	PAM-*:../../security/PAM
+
+post-patch:
+	cd ${WRKSRC} &&					\
+	${CP} configure configure.old &&		\
+	${SED} -e 's:security/pam_appl.h::g'		\
+		< configure.old > configure
+.endif
 
 post-build:
 	for f in DEINSTALL INSTALL; do					\
