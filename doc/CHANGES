@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4736 2004/02/09 00:38:59 chris Exp $
+$NetBSD: CHANGES,v 1.4737 2004/02/09 00:49:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -710,3 +710,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated musicbrainz to 2.0.2 [chris 2004-02-09]
 	Added trm-0.2.1 [chris 2004-02-09] 
 	Added taglib-1.0 [chris 2004-02-09]
+	Updated metacity to 2.6.3nb3 [minskim 2004-02-09]
