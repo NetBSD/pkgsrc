@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/09/11 14:55:49 taca Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/11 14:59:18 taca Exp $
 
 DISTNAME=		ruby-postgres-${VERSION}
 PKGNAME=		${RUBY_PKGNAMEPREFIX}postgresql-${VERSION}
@@ -24,7 +24,6 @@ REPLACE_RUBY=		sample/psql.rb sample/test1.rb sample/test2.rb \
 
 pre-install:
 	@cd ${WRKSRC}; \
-		${CP} -p README.jp README.ja; \
 		${CP} -p doc/postgres.jp.html doc/postgres.ja.html
 
 post-install:
