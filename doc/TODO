@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.160 2003/01/09 17:56:19 wiz Exp $
+$NetBSD: TODO,v 1.161 2003/01/09 18:44:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -9,10 +9,6 @@ Suggested new packages
 	balsa-2
 	GNOME2 version of balsa
 	http://balsa.gnome.org/
-
-	driftnet
-	Listens to network traffic and picks out images from TCP streams.
-	http://www.ex-parrot.com/~chris/driftnet/
 
 	figfonts
 	More fonts for figlet.
@@ -154,7 +150,7 @@ Suggested package updates
 	o jikes-1.18
 	o joe-2.9 [pkg/18022]
 	o jpilot-0.99.2 [dillo]
-	o kdevelop-2.1.4 [3.0alpha1]
+	o kdevelop-2.1.4
 	o koffice-1.2.1
 	o koth-0.7.7 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4
@@ -172,7 +168,7 @@ Suggested package updates
 	o lilypond-1.6.6
 	o lmbench-2.0.3
 	o lout-3.26 [pkg/18687]
-	o lynx-2.8.5dev9 (lynx-current)
+	o lynx-current-2.8.5dev9
 	o maildrop-1.5.1
 	o mcrypt-2.6.3
 	o memtest86-3.0
