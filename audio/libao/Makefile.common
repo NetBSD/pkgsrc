@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/01/05 20:52:56 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/01/07 18:00:16 jlam Exp $
 
 DISTNAME=	libao-0.8.4
 CATEGORIES=	audio devel
@@ -11,7 +11,6 @@ DISTINFO_FILE=	${.CURDIR}/../../audio/libao/distinfo
 PATCHDIR=	${.CURDIR}/../../audio/libao/patches
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 
@@ -32,5 +31,10 @@ CONFIGURE_ARGS+=	--disable-alsa09
 CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ARGS+=	--disable-esd
 
-.include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.if defined(USE_BUILDLINK3)
+.  include "../../devel/pkgconfig/buildlink3.mk"
+.  include "../../mk/ossaudio.buildlink3.mk"
+.elif defined(USE_BUILDLINK2)
+.  include "../../devel/pkgconfig/buildlink2.mk"
+.  include "../../mk/ossaudio.buildlink2.mk"
+.endif
