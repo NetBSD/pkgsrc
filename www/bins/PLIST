@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/12/23 21:37:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/04/08 11:00:05 martti Exp $
 bin/bins
 bin/bins_edit
 man/man1/bins.1
@@ -39,6 +39,7 @@ share/examples/bins/templates.joi/details.html
 share/examples/bins/templates.joi/footer.html
 share/examples/bins/templates.joi/image.html
 share/examples/bins/templates.joi/imagelist.html
+share/examples/bins/templates.joi/imagenavbar.html
 share/examples/bins/templates.joi/navbar.html
 share/examples/bins/templates.joi/path.html
 share/examples/bins/templates.joi/subalbum.html
@@ -47,6 +48,7 @@ share/examples/bins/templates.joi/thumbnail.html
 share/examples/bins/templates.joi/thumbnav.html
 share/examples/bins/templates.joi/thumbnavrow.html
 share/examples/bins/templates.joi/tree.html
+share/examples/bins/templates.joi/xlink.html
 share/examples/bins/templates.joi/static/actthumb.png
 share/examples/bins/templates.joi/static/albumtree.png
 share/examples/bins/templates.joi/static/back.png
@@ -55,8 +57,11 @@ share/examples/bins/templates.joi/static/exit.png
 share/examples/bins/templates.joi/static/home.png
 share/examples/bins/templates.joi/static/imagelist.png
 share/examples/bins/templates.joi/static/info.png
+share/examples/bins/templates.joi/static/joi.css
+share/examples/bins/templates.joi/static/joi.js
 share/examples/bins/templates.joi/static/large.png
 share/examples/bins/templates.joi/static/largeActive.png
+share/examples/bins/templates.joi/static/media.png
 share/examples/bins/templates.joi/static/medium.png
 share/examples/bins/templates.joi/static/mediumActive.png
 share/examples/bins/templates.joi/static/meshman.css
@@ -65,6 +70,7 @@ share/examples/bins/templates.joi/static/nextInactive.png
 share/examples/bins/templates.joi/static/prev.png
 share/examples/bins/templates.joi/static/prevInactive.png
 share/examples/bins/templates.joi/static/preview.js
+share/examples/bins/templates.joi/static/related.png
 share/examples/bins/templates.joi/static/small.png
 share/examples/bins/templates.joi/static/smallActive.png
 share/examples/bins/templates.joi/static/subalbum.png
