@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/07 02:11:18 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/10 15:39:07 jlam Exp $
 #
 
 DISTNAME=	html2ps-1.0b1
@@ -9,7 +9,7 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.tdb.uu.se/~jan/html2ps.html
 
 DEPENDS+=	ImageMagick-*:../../graphics/ImageMagick
-DEPENDS+=	ghostscript{,-nox11,-x11}-[0-9]*:../../print/ghostscript-x11
+DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	p5-PerlMagick-*:../../graphics/p5-PerlMagick
 DEPENDS+=	p5-libwww-*:../../www/p5-libwww
