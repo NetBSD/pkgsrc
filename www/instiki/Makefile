@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/04 15:33:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/06 13:36:10 taca Exp $
 
 DISTNAME=	instiki-0.9.2
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://instiki.org/
 COMMENT=	Wiki clone that focuses on simple installation and running
 
-DEPENDS+=	ruby>=1.8.1:../../lang/ruby
+DEPENDS+=	ruby${RUBY_VER}>=${RUBY_REQD}:../../lang/ruby${RUBY_VER}
 DEPENDS+=	ruby${RUBY_VER}-digest-[0-9]*:../../security/ruby-digest
 DEPENDS+=	ruby${RUBY_VER}-zlib-[0-9]*:../../devel/ruby-zlib
 
