@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.435 2000/05/11 11:23:22 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.436 2000/05/17 03:32:43 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -304,6 +304,19 @@ DECOMPRESS_CMD?=	${CAT}
 .else
 DECOMPRESS_CMD?=	${GZCAT}
 .endif
+
+# Also need bzip2 for PATCHFILES with .bz2 suffix.
+
+.if defined(PATCHFILES)
+.if ${PATCHFILES:E} == "bz2" && ${EXTRACT_SUFX} != ".tar.bz2"
+.if exists(/usr/bin/bzcat)
+BZCAT=			/usr/bin/bzcat
+.else
+BZCAT=			${LOCALBASE}/bin/bzcat
+BUILD_DEPENDS+=		${BZCAT}:${PKGSRCDIR}/archivers/bzip2
+.endif # !exists bzcat
+.endif
+.endif # defined(PATCHFILES)
 
 # If this is empty, then everything gets extracted.
 EXTRACT_ELEMENTS?=	
@@ -1205,6 +1218,10 @@ do-patch:
 		case $$i in \
 			*.Z|*.gz) \
 				${GZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
+				|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
+				;; \
+			*.bz2) \
+				${BZCAT} $$i | ${PATCH} ${PATCH_DIST_ARGS} \
 				|| ( ${ECHO} Patch $$i failed ; exit 1 ) ; \
 				;; \
 			*) \
