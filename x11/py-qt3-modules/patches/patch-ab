@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/07/22 17:24:50 drochner Exp $
+
+--- sip/qtcanvasmod.sip.orig	2003-07-05 12:53:05.000000000 +0200
++++ sip/qtcanvasmod.sip	2003-07-22 15:20:50.000000000 +0200
+@@ -57,12 +57,12 @@
+ 
+ TEMPLATE = lib
+ TARGET = @BL_TARGET@
+-DESTDIR = @BL_DESTDIR@
++#DESTDIR = @BL_DESTDIR@
+ CONFIG += qt warn_off @BL_DEBUG@ @BL_SIP@ @BL_DLL@ @BL_THREAD@
+ INCLUDEPATH = @BL_INCLUDEPATH@
+ DEFINES = SIP_MAKE_MODULE_DLL @BL_DEFINES@
+ 
+-sip3:unix:LIBS += -L@BL_DESTDIR@ -lqtcmodule -L@BL_SIPMODDIR@ -lsip
++sip3:unix:LIBS += -L@BL_DESTDIR@ -lqtcmodule -L@BL_SIPMODDIR@ -Wl,-R@BL_SIPMODDIR@ -lsip
+ sip3:win32:LIBS += @BL_DESTDIR@\libqtc.lib @BL_SIPMODDIR@\libsip.lib @BL_PYLIB@
+ 
+ sip4:win32:LIBS += @BL_PYLIB@
