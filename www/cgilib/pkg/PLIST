@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/06 16:50:47 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/03 14:23:37 jlam Exp $
 include/cgi.h
 lib/libcgi.a
 libexec/cgi-bin/cgitest
 libexec/cgi-bin/jumpto
-share/doc/cgilib/cgi.5.html
-share/doc/cgilib/cgiDebug.3.html
-share/doc/cgilib/cgiFree.3.html
-share/doc/cgilib/cgiFreeList.3.html
-share/doc/cgilib/cgiGetCookie.3.html
-share/doc/cgilib/cgiGetCookies.3.html
-share/doc/cgilib/cgiGetValue.3.html
-share/doc/cgilib/cgiGetVariables.3.html
-share/doc/cgilib/cgiHeader.3.html
-share/doc/cgilib/cgiInit.3.html
-share/doc/cgilib/cgiRedirect.3.html
-share/doc/cgilib/cgiSetHeader.3.html
-share/doc/cgilib/cgiSetType.3.html
-@dirrm share/doc/cgilib
+share/doc/html/cgilib/cgi.5.html
+share/doc/html/cgilib/cgiDebug.3.html
+share/doc/html/cgilib/cgiFree.3.html
+share/doc/html/cgilib/cgiFreeList.3.html
+share/doc/html/cgilib/cgiGetCookie.3.html
+share/doc/html/cgilib/cgiGetCookies.3.html
+share/doc/html/cgilib/cgiGetValue.3.html
+share/doc/html/cgilib/cgiGetVariables.3.html
+share/doc/html/cgilib/cgiHeader.3.html
+share/doc/html/cgilib/cgiInit.3.html
+share/doc/html/cgilib/cgiRedirect.3.html
+share/doc/html/cgilib/cgiSetHeader.3.html
+share/doc/html/cgilib/cgiSetType.3.html
+@dirrm share/doc/html/cgilib
