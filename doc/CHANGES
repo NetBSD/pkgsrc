@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5281 2004/03/20 15:35:38 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5282 2004/03/20 16:25:16 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1495,3 +1495,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lookup to 1.4 [uebayasi 2004-03-19]
 	Updated ruby-base to 1.6.8.nb4 [taca 2004-03-20]
 	Updated xfe to 0.54.2nb3 [xtraeme 2004-03-20]
+	Updated abiword to 2.0.4nb3 [xtraeme 2004-03-20]
