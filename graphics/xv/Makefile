@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/05/22 09:32:23 wiz Exp $
-# FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
-#
+# $NetBSD: Makefile,v 1.37 2001/07/08 20:12:45 tron Exp $
 
 DISTNAME=	xv-3.10a
 PKGNAME=	${DISTNAME}nb1
@@ -21,7 +19,7 @@ COMMENT=	X11 program that displays images of various formats
 DEPENDS+=	png>=1.0.11:../png
 DEPENDS+=	tiff-*:../../graphics/tiff
 
-USE_IMAKE=	yes
+USE_IMAKE=	YES
 
 LICENSE=	shareware
 
@@ -37,7 +35,7 @@ post-patch:
 
 .if ${OPSYS} == "SunOS"
 pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} xvinfo.o CC=cc
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} xvinfo.o CC=cc
 .endif
 
 post-install:
