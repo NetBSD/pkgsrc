@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/24 11:59:23 drochner Exp $
+
+--- configure.orig	2004-08-24 12:27:58.000000000 +0200
++++ configure
+@@ -871,7 +871,7 @@ if test "${with_libxml_prefix+set}" = se
+   withval="$with_libxml_prefix"
+   LIBXML_PREFIX=$withval
+         LIBXML_CFLAGS="-I$withval/include/libxml2 -I$withval/include/libxml"
+-        LIBXML_LIBS="$withval/lib/libxml2.a -lz -lm -lpthread"
++        LIBXML_LIBS="-L$withval/lib -lxml2 -lz -lm -lpthread"
+ 
+ fi
+ 
+@@ -920,7 +920,7 @@ if test "${with_libxslt_prefix+set}" = s
+   withval="$with_libxslt_prefix"
+   LIBXSLT_PREFIX=$withval
+         LIBXSLT_CFLAGS="-I$withval/include/libxslt -I$withval/include/libexslt"
+-        LIBXSLT_LIBS="$withval/lib/libxslt.a $withval/lib/libexslt.a -lz -lm -lpthread"
++        LIBXSLT_LIBS="-L$withval/lib -lxslt -lexslt -lz -lm -lpthread"
+ 
+ fi
+ 
