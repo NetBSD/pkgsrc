@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/11/29 02:10:48 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/29 23:30:26 tv Exp $
 #
 
-DISTNAME=		cygwin-1.5.12-1
+DISTNAME=		cygwin-1.5.13-1
 PKGNAME=		${DISTNAME:S/-/!/:S/-/./g:S/!/_lib-/}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_CYGWIN:=release/cygwin/}
