@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1 2000/11/17 14:18:03 wiz Exp $
+
+--- stow.info.orig	Sat Oct 12 00:10:55 1996
++++ stow.info
+@@ -1,8 +1,13 @@
+ This is Info file ./stow.info, produced by Makeinfo version 1.67 from
+ the input file stow.texi.
+ 
++INFO-DIR-SECTION Miscellaneous
++START-INFO-DIR-ENTRY
++* stow: (stow).		A program for managing the installation of software packages.
++END-INFO-DIR-ENTRY
++
+    This file describes GNU Stow version 1.3.2, a program for managing
+ the installation of software packages.
+ 
+    Software and documentation Copyright (C) 1993, 1994, 1995, 1996 by
+ Bob Glickstein <bobg+stow@zanshin.com>.
