@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1413 2004/02/27 16:50:48 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1414 2004/02/28 07:12:21 jdolecek Exp $
 #
 # This file is in the public domain.
 #
@@ -2474,7 +2474,7 @@ do-config-status-override:
 	for file in ${_pattern_}; do					\
 		if [ -f "$$file" ]; then				\
 			${MV} -f $$file $$file.overridden;		\
-			${AWK} '/ *-recheck *\| *--recheck.*)/ {	\
+			${AWK} '/ *-recheck *\| *--recheck.*\)/ {	\
 					print;				\
 					print "    exit 0";		\
 					next;				\
