@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/08/08 11:12:13 shannonjr Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/10 15:11:14 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -12,6 +12,7 @@ MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the gcc 3.4 compiler
 
+BUILD_USES_MSGFMT=	YES
 GCC_VERSION=		3.4.1
 
 .include "../../mk/bsd.prefs.mk"
@@ -80,6 +81,9 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--enable-long-long
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
+
 # GNU pth is useless here
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 # ADA tasking strictly requires native threads
@@ -95,7 +99,7 @@ CONFIGURE_ARGS+=	--disable-threads
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
-HAS_CONFIGURE=		YES
+HAS_CONFIGURE=		YES # no GNU_CONFIGURE!
 CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 USE_MAKEINFO=		YES
@@ -132,21 +136,19 @@ CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
 .if ${OPSYS} == "NetBSD"
+# thread / crtbegin / __cxa_atexit support depend on a "netbsd2" OS name
 GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/_.*//}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
-GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
-GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
-.endif
+.endif # NetBSD
 
 post-patch:
-.if (${MACHINE_GNU_ARCH} == "x86_64")
-	(${TEST} -d ${WRKSRC}/libstdc++-v3/config/abi/x86_64-netbsdelf2.0 || \
-	${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/x86_64-netbsdelf2.0 )
-	${CP} ${FILESDIR}/baseline_symbols64.txt ${WRKSRC}/libstdc++-v3/config/abi/x86_64-netbsdelf2.0/baseline_symbols.txt
-.else
-	(${TEST} -d ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0 || \
-	${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0 )
-	${CP} ${FILESDIR}/baseline_symbols.txt ${WRKSRC}/libstdc++-v3/config/abi/i386-netbsdelf2.0
+.if ${OPSYS} == "NetBSD"
+.  if exists(${FILESDIR}/${LOWER_ARCH}-baseline_symbols${LOWER_OS_VERSION:C/\..*//}.txt)
+	(${TEST} -d ${WRKSRC}/libstdc++-v3/config/abi/${GCC_PLATFORM:C/--/-/} || \
+		${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/${GCC_PLATFORM:C/--/-/})
+	${CP} ${FILESDIR}/${LOWER_ARCH}-baseline_symbols${LOWER_OS_VERSION:C/\..*//}.txt \
+		${WRKSRC}/libstdc++-v3/config/abi/${GCC_PLATFORM:C/--/-/}/baseline_symbols.txt
+.  endif
 .endif
 	(cd ${FILESDIR}; \
 		${CP} adasignal.c ${WRKSRC}/gcc/ada; \
