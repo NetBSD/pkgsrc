@@ -1,18 +1,16 @@
-$NetBSD: patch-ad,v 1.5 2002/11/11 14:01:33 wiz Exp $
+$NetBSD: patch-ad,v 1.6 2002/12/17 19:14:43 wiz Exp $
 
---- src/dctc_process.c.orig	Sat Nov  9 17:00:01 2002
+--- src/dctc_process.c.orig	Sat Nov 16 08:10:25 2002
 +++ src/dctc_process.c
-@@ -4100,11 +4100,11 @@ static void first_level_glst_end_fnc(Gtk
- 				spd=(double)(gce_root->c.root.last_10sec_speed)/10.0;		/* compute the speed of the last 10 seconds */
- 				if(spd<1024.0)
- 				{
--					g_string_sprintfa(spd_str,"[%.2lfB/s]",spd);
-+					g_string_sprintfa(spd_str,"[%.2fB/s]",spd);
- 				}
- 				else if(spd<(1024.0*1024.0))
- 				{
--					g_string_sprintfa(spd_str,"[%.2lfKB/s]",spd/1024.0);
-+					g_string_sprintfa(spd_str,"[%.2fKB/s]",spd/1024.0);
- 				}
- 
- 				/* Estimated Time to Arrival computation: now (in second) + missing_bytes/spd */
+@@ -575,9 +575,9 @@ static void update_users_info(void)
+ 		sprintf(buf,"%'d users (%'.2lfGB)",clst->rows,amount/(1024.0*1024.0*1024.0));				/* NO_PRINTF_LOCAL support added */
+ #else
+ 	if( (amount/(1024.0*1024.0*1024.0)) > 1024.0)
+-		sprintf(buf,"%d users (%.2lfTB)",clst->rows,amount/(1024.0*1024.0*1024.0*1024.0));
++		sprintf(buf,"%d users (%.2fTB)",clst->rows,amount/(1024.0*1024.0*1024.0*1024.0));
+ 	else
+-		sprintf(buf,"%d users (%.2lfGB)",clst->rows,amount/(1024.0*1024.0*1024.0));
++		sprintf(buf,"%d users (%.2fGB)",clst->rows,amount/(1024.0*1024.0*1024.0));
+ #endif
+ 	w=get_widget_by_widget_name("users_info_label");
+ 	if(w==NULL)
