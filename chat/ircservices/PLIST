@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/11 16:02:54 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/11 17:31:29 salo Exp $
 lib/services/convert-db
 lib/services/example-ircservices.conf
 lib/services/example-modules.conf
+lib/services/helpfiles/help
 lib/services/languages/de
 lib/services/languages/en_us
 lib/services/languages/es
@@ -74,4 +75,5 @@ sbin/ircservices-chk
 @dirrm lib/services/modules/chanserv
 @dirrm lib/services/modules
 @dirrm lib/services/languages
+@dirrm lib/services/helpfiles
 @dirrm lib/services
