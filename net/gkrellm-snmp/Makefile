@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/04/20 18:46:07 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/09 14:26:37 wiz Exp $
 
 DISTNAME=		gkrellm_snmp-0.18
 PKGNAME=		gkrellm-snmp-0.18
@@ -10,17 +10,16 @@ MAINTAINER=		jasper@pointless.net
 HOMEPAGE=		http://triq.net/gkrellm.html
 COMMENT=		simple snmp monitor for gkrellm
 
-DEPENDS+=		gkrellm-1.2.*:../../sysutils/gkrellm
-DEPENDS+=		ucd-snmp-4.2.4*:../../net/ucd-snmp
-
-USE_GMAKE=		#defined
+USE_BUILDLINK2=		# defined
+USE_GMAKE=		# defined
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 	${INSTALL_PROGRAM} ${WRKSRC}/gkrellm_snmp.so ${PREFIX}/lib/gkrellm/plugins/
 
-.include "../../mk/bsd.prefs.mk"
-.include "../../graphics/imlib/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
+.include "../../graphics/imlib/buildlink2.mk"
+.include "../../net/ucd-snmp/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
