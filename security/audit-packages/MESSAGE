@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:33 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2003/09/02 10:20:27 agc Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -8,7 +8,8 @@ to the root users crontab(5) entry.  For example the entry
 # download vulnerabilities file
 0 3 * * * ${PREFIX}/sbin/download-vulnerability-list >/dev/null 2>&1
 
-will update the vulnerability list every day at 3AM.
+will update the vulnerability list every day at 3AM. You may wish to do
+this more often than once a day.
 
 In addition, you may wish to run the package audit from the daily
 security script.  This may be accomplished by adding the following
