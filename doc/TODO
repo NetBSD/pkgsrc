@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1015 2003/11/11 07:58:23 wiz Exp $
+$NetBSD: TODO,v 1.1016 2003/11/11 10:49:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -243,6 +243,7 @@ Suggested package updates
 	o kaffe-1.1.2
 	o kbiff-3.7
 	o kile-1.6 [markd]
+	o koffice-1.2.94 [pkg/23412|kleink]
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.46
@@ -258,7 +259,6 @@ Suggested package updates
 	o libxml2-2.6.2
 	o libxslt-1.1.0
 	o lilypond-2.0.0
-	o links-2.11pre13
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lwm-1.01
@@ -324,6 +324,7 @@ Suggested package updates
 	o rdesktop-1.3.0
 	o rdiff-backup-0.12.6
 	o rep-gtk-0.17
+	o rocksndiamonds-3.0.7
 	o rox-1.2.2
 	o rox-session-0.1.20
 	o rrdtool-1.0.45

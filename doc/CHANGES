@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3812 2003/11/11 10:18:29 wiz Exp $
+$NetBSD: CHANGES,v 1.3813 2003/11/11 10:49:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4339,3 +4339,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ipcheck to 0.207 [wiz 2003-11-11]
 	Updated xjdic to 2.3nb2 [wiz 2003-11-11]
 	Updated x10_heyu to 1.35 [wiz 2003-11-11]
+	Updated links to 2.1.0.14 [wiz 2003-11-11]
+	Updated links-gui to 2.1.0.14 [wiz 2003-11-11]
