@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:59 skrll Exp $
-
-SHA1 (xscreensaver-3.28.tar.gz) = c1a0de2966f30d56c1660519d450b87e4892c95a
-Size (xscreensaver-3.28.tar.gz) = 1497039 bytes
-SHA1 (patch-aa) = 397e55a520f1e10e5a1bb1595b6b42e4b70674f1
-SHA1 (patch-ae) = c3e7ddffb2caab5c545b0834c93238455852dea6
