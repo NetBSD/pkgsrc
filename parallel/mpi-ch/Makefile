@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/12/03 21:06:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/18 13:33:41 jlam Exp $
 
 DISTNAME=		mpich-1.2.5.2
 CATEGORIES=		parallel
@@ -35,6 +35,8 @@ CONFIGURE_ARGS+=	--with-mpe
 CONFIGURE_ARGS+=	--disable-devdebug
 CONFIGURE_ARGS+=	--disable-f90
 CONFIGURE_ARGS+=	--disable-f90modules
+
+.include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-3*)
 CONFIGURE_ARGS+=	--disable-weak-symbols
 .endif

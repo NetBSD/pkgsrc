@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/18 13:33:41 jlam Exp $
 
 DISTNAME=		Sablot-1.0.1
 PKGNAME=		${DISTNAME:S/Sablot/sablotron/}
@@ -21,7 +21,7 @@ USE_LIBTOOL=		YES
 # buildlink2 finds.
 LIBS+=			${_BLNK_ICONV_LDFLAGS}
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 # both libstdc++ and libm are required for gcc 2.95.x, as libstdc++
 # does not include the math functions. gcc3 only needs libstdc++.

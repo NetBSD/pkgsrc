@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/20 12:27:16 agc Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/18 13:33:41 jlam Exp $
 
 DISTNAME=	plan-1.8.4
 CATEGORIES=	x11 time
@@ -13,7 +13,7 @@ USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 ALL_TARGET=	netbsd
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if !empty(CC_VERSION:Mgcc-3.*)
 post-configure:

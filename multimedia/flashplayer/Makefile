@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 13:36:18 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/18 13:33:41 jlam Exp $
 #
 
 .include "../../multimedia/libflash/Makefile.common"
@@ -11,7 +11,9 @@ USE_BUILDLINK2=	yes
 BUILD_DIRS=	${WRKSRC}/Player
 CPPFLAGS+=	-DDEV_DSP=\\\"${DEVOSSSOUND}\\\"
 
-.if defined(CC_VERSION) && !empty(CC_VERSION:Mgcc-3.*)
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc-3.*)
 MAKE_ENV+=	LIBSTDCPP=-lstdc++
 .else
 MAKE_ENV+=	LIBSTDCPP=

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2004/02/09 19:57:55 jlam Exp $
+# $NetBSD: Makefile,v 1.88 2004/02/18 13:33:41 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -102,6 +102,8 @@ APACHE_CUSTOM_CFLAGS+=	-O6 -fomit-frame-pointer -fexpensive-optimizations
 # Explicitly turn on large file support
 APACHE_CUSTOM_CFLAGS+=	-D_LARGEFILE_SOURCE
 APACHE_CUSTOM_CFLAGS+=	-D_FILE_OFFSET_BITS=64
+
+.include "../../mk/compiler.mk"
 
 # On NetBSD ELF platforms, we need to link libgcc.a whole-archive so that
 # certain symbols from the C++ implementation (__get_eh_context, etc.)
