@@ -1,0 +1,31 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/03/14 16:05:48 skrll Exp $
+
+--- khexedit/printerdialog.cc.orig	Sun Oct  1 13:14:02 2000
++++ khexedit/printerdialog.cc
+@@ -18,7 +18,7 @@
+  *
+  */
+ 
+-#include <values.h>
++#include <limits.h>
+ 
+ #include <qbuttongroup.h>
+ #include <qcombobox.h>
+@@ -590,7 +590,7 @@
+   mOption.pageSpin->setFixedHeight( mOption.pageSpin->sizeHint().height() );
+   mOption.pageSpin->setMinimumWidth( 
+     mOption.pageSpin->fontMetrics().width("M")*10 );
+-  mOption.pageSpin->setRange( 1, MAXINT );
++  mOption.pageSpin->setRange( 1, INT_MAX );
+ 
+   text = i18n("&Number of copies");
+   QLabel *pageLabel = new QLabel( mOption.pageSpin, text, page );
+@@ -707,7 +707,7 @@
+       mLayout.marginSpin[i]->sizeHint().height() );
+     mLayout.marginSpin[i]->setMinimumWidth( 
+       mLayout.marginSpin[i]->fontMetrics().width("M")*10 );
+-    mLayout.marginSpin[i]->setRange( 0, MAXINT );
++    mLayout.marginSpin[i]->setRange( 0, INT_MAX );
+ 
+     QLabel *label = new QLabel( mLayout.marginSpin[i], name[i], group );
+     label->setFixedHeight( mLayout.marginSpin[i]->sizeHint().height() );
