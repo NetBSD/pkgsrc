@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/02 20:07:03 zuntum Exp $
 
 DISTNAME=	vscmV0r4
 PKGNAME=	vscm-0.4
@@ -15,13 +15,13 @@ COMMENT=	Portable scheme implementation
 USE_GMAKE=	yes
 
 post-patch:
-	${SED} -e "s,@PREFIX@,${PREFIX}," <${FILESDIR}/path.h >${WRKSRC}/path.h
+	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/path.h >${WRKSRC}/path.h
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/scheme ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/vscm
 	${INSTALL_DATA} ${WRKSRC}/.scheme-boot ${PREFIX}/lib/vscm/scheme-boot
-	${MKDIR} ${PREFIX}/share/examples/vscm
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/vscm
 	for i in README INSTALL DESCRIPTION; do \
 		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/examples/vscm; \
 	done
