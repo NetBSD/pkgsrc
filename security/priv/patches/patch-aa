@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2003/07/26 13:27:05 simonb Exp $
+
+--- priv.c.orig	1997-07-08 16:19:06.000000000 +1000
++++ priv.c
+@@ -112,6 +112,12 @@ main(int argc, char **argv, char **envp)
+ 	}
+ 
+ 	pw = getpwuid(getuid());
++	if (pw == NULL) {
++		syslog(LOG_NOTICE, "%s: can't fetch password entry for uid %d",
++		    myname, getuid());
++		errx(EXIT_VAL, "can't fetch password entry for uid %d",
++		    getuid());
++	}
+ 	myname = xstrdup(pw->pw_name);	/* copy so we can use getpw* later */
+ 	strcpy(myfullname, pw->pw_name);
+ 	if ((logname = getlogin()) != NULL && strcmp(logname, myname)) {
