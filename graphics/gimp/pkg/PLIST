@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/02/13 12:19:45 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/02/24 20:56:24 tron Exp $
 bin/gimp
 include/libgimp/gimp.h
 include/libgimp/gimpenums.h
@@ -18,7 +18,7 @@ include/gck/gckvector.h
 info/pdb.info
 info/pdb.info-1
 info/pdb.info-2
-@exec [ ! -f %D/info/dir ] && /usr/bin/sed -ne '1,/Menu:/p' ${LOCALBASE}/info/dir > %D/info/dir
+@exec ([ ! -f %D/info/dir ] && /usr/bin/sed -ne '1,/Menu:/p' ${LOCALBASE}/info/dir > %D/info/dir) || /usr/bin/true
 @exec install-info %D/info/pdb.info %D/info/dir
 lib/libgimp.so.1.0
 lib/libgimp.la
