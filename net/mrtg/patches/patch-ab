@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 11:10:47 agc Exp $
+$NetBSD: patch-ab,v 1.4 1999/05/22 10:45:33 rh Exp $
 
---- mrtg.orig	Mon Jul 13 13:17:55 1998
-+++ mrtg	Mon Jul 13 13:19:52 1998
-@@ -54,7 +54,7 @@
+--- run/mrtg.orig	Tue Apr 27 10:04:06 1999
++++ run/mrtg	Sat May 22 10:59:57 1999
+@@ -52,7 +52,7 @@
    }
    die "ERROR: Can\'t find location of mrtg executable\n" 
      unless $main::binpath; 
