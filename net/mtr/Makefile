@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/10/27 16:18:31 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2004/11/05 09:01:11 grant Exp $
 #
 
 DISTNAME=	mtr-0.65
@@ -16,6 +16,11 @@ USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--without-gtk
 INSTALLATION_DIRS=	man/man8 sbin
+
+# mtr uses libtermcap by default, but needs wattr_{on,off} from (n)curses,
+# so we rewrite -ltermcap to -lncurses (which will be auto-mangled into
+# -lcurses on the appropriate platforms).
+BUILDLINK_TRANSFORM+=	l:termcap:ncurses
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mtr
