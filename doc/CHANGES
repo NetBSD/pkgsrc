@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6707 2004/07/28 00:06:45 minskim Exp $
+$NetBSD: CHANGES,v 1.6708 2004/07/28 01:44:40 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3606,3 +3606,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cpuflags to 0.73 [abs 2004-07-27]
 	Updated hpack to 0.79nb1 [minskim 2004-07-27]
 	Updated lbrate to 1.1nb1 [minskim 2004-07-28]
+	Updated pkgdepgraph to 2.7 [atatat 2004-07-28]
