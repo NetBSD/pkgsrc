@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/23 21:50:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/24 13:55:30 grant Exp $
 
 DISTNAME=	kbiff-3.6.3
 PKGREVISION=	6
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.granroth.org/kbiff/index.html
 COMMENT= 	A new mail notification utility for KDE
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=              yes
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=          yes
 
 .include "../../meta-pkgs/kde3/buildlink2.mk"

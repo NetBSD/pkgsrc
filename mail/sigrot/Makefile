@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:19:44 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/24 13:55:30 grant Exp $
 
 DISTNAME=	sigrot_1.2-1
 PKGNAME=	sigrot-1.2
@@ -11,7 +11,7 @@ COMMENT=	Signature file rotation program
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 
 DOCDIR=		${PREFIX}/share/doc/sigrot
 EGDIR=		${PREFIX}/share/examples/sigrot
