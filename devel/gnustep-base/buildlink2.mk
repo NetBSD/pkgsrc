@@ -1,12 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/03/26 02:27:38 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/04/10 23:41:01 rh Exp $
 #
 
 .if !defined(GNUSTEP_BASE_BUILDLINK2_MK)
 GNUSTEP_BASE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnustep-base
-BUILDLINK_DEPENDS.gnustep-base?=	gnustep-base>=1.8.0
-BUILDLINK_RECOMMENDED.gnustep-base?=	gnustep-base>=1.8.0nb2
+BUILDLINK_DEPENDS.gnustep-base?=	gnustep-base>=1.9.1
 BUILDLINK_PKGSRCDIR.gnustep-base?=	../../devel/gnustep-base
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnustep-base=gnustep-base
@@ -21,7 +20,7 @@ BUILDLINK_FILES.gnustep-base+=	share/GNUstep/System/Library/Libraries/libgnustep
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/ffcall/buildlink2.mk"
 .include "../../devel/gmp/buildlink2.mk"
-.include "../../devel/gnustep-objc/buildlink2.mk"
+.include "../../devel/gnustep-make/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 
