@@ -1,0 +1,37 @@
+$NetBSD: patch-ai,v 1.1.1.1 2000/07/31 17:36:02 abs Exp $
+
+--- sys/linux/Makefile.orig	Sat Feb 27 21:10:59 1999
++++ sys/linux/Makefile	Mon Jul 31 14:07:25 2000
+@@ -23,6 +23,7 @@
+ ${ALL}:	FRC
+ 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
+@@ -40,6 +41,8 @@
+ 	sed -e s@:DESTDIR:@${DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
+ 		< ../../rc.atalk.redhat > /etc/rc.d/init.d/atalk.init; \
+ 	sed -e s@:RCDIR:@/etc/rc.d/init.d@ \
+@@ -62,12 +65,15 @@
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 		< ../../rc.atalk.bsd > ${ETCDIR}/rc.atalk; \
+ 	fi \
+ 	fi
+ 
+ install : ${ETCDIR} install-sysv install-bsd
+ 	-mkdir ${DESTDIR} ${SBINDIR} ${BINDIR} ${LIBDIR}
++	-mkdir ${LIBEXECDIR} ${EXAMPLEDIR}
+ 	for i in ${ALL}; \
+ 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
