@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1094 2002/12/03 16:16:37 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1095 2002/12/03 18:57:53 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -306,17 +306,12 @@ CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
 # If GNU_CONFIGURE is defined, then pass LIBS to the GNU configure script.
 # also pass in a CONFIG_SHELL to avoid picking up bash
 .if defined(GNU_CONFIGURE)
-CONFIGURE_ENV+=	LIBS="${LIBS}"
+CONFIGURE_ENV+=		LIBS="${LIBS}"
 CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 .endif
 
-# FreeBSD shared library naming was fixed in libtool nb10.
-.if ${OPSYS} == "FreeBSD"
-LIBTOOL_REQD=		1.4.20010614nb10
-.else
-LIBTOOL_REQD=		1.4.20010614nb9
-.endif
+LIBTOOL_REQD=		${_OPSYS_LIBTOOL_REQD}
 LIBTOOL=		${LOCALBASE}/bin/libtool
 .if defined(USE_LIBTOOL)
 PKGLIBTOOL=		${LIBTOOL}

@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.32 2002/10/23 12:21:30 wiz Exp $
+# $NetBSD: defs.Linux.mk,v 1.33 2002/12/03 18:57:52 agc Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -84,6 +84,7 @@ _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard
 _OPSYS_HAS_MANZ=	no	# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
+_OPSYS_LIBTOOL_REQD=	1.4.20010614nb9 # base version of libtool required
 _PATCH_BACKUP_ARG= 	-b -V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_RPATH=		yes	# add rpath to LDFLAGS
