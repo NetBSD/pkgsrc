@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2003/09/23 21:39:47 abs Exp $
+$NetBSD: patch-ac,v 1.7 2005/01/27 16:22:37 adam Exp $
 
---- config/Makefile.in.orig	Tue Aug 27 23:56:42 2002
+--- config/Makefile.in.orig	2004-05-22 02:12:35.000000000 +0000
 +++ config/Makefile.in
-@@ -116,6 +116,7 @@ targets: ${TARGETS}
+@@ -120,6 +120,7 @@ targets: ${TARGETS}
  PUTSERVER=${INSTALL} -idb ${PRODUCT}.sw.server
  
  install: default ${CONFIGFILES}
