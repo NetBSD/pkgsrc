@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9243 2005/02/21 10:11:53 adam Exp $
+$NetBSD: CHANGES,v 1.9244 2005/02/21 11:08:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -996,3 +996,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nessus-core to 2.2.3 [adam 2005-02-21]
 	Updated nessus-plugins to 2.2.3 [adam 2005-02-21]
 	Updated nessus to 2.2.3 [adam 2005-02-21]
+	Updated zsh to 4.2.4 [adam 2005-02-21]
