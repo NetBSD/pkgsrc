@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/23 15:25:39 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/20 03:28:11 minskim Exp $
 #
 
 DISTNAME=	PyXML-0.8.3
@@ -12,7 +12,7 @@ HOMEPAGE=	http://pyxml.sourceforge.net/
 COMMENT=	Collection of libraries to process XML with Python
 
 CONFLICTS+=	PyXML-*
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
@@ -33,7 +33,7 @@ post-extract:
 PYTHON_PATCH_SCRIPTS=	${PYXML_SCRIPTS:S/$/${PYVERSSUFFIX}/g}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-.include "../../textproc/expat/buildlink2.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
