@@ -1,8 +1,22 @@
-$NetBSD: patch-ab,v 1.1 2004/01/21 10:11:19 recht Exp $
+$NetBSD: patch-ab,v 1.2 2004/01/21 17:43:55 recht Exp $
 
---- configure.orig	2004-01-20 23:11:37.000000000 +0100
-+++ configure	2004-01-20 23:11:54.000000000 +0100
-@@ -950,7 +950,7 @@
+--- configure.orig	2003-10-21 04:32:25.000000000 +0200
++++ configure	2004-01-21 18:22:46.000000000 +0100
+@@ -905,11 +905,8 @@
+ then
+ 	case "$FEATURE_XFT" in
+ 	  define)
+-		xft="-lXft "
+-		if [ -d /usr/include/freetype2 ]
+-		then
+-			CC="$CC -I/usr/include/freetype2"
+-		fi
++		xft="`pkg-config --libs freetype2 xft` "
++		CC="$CC `pkg-config --cflags freetype2 xft`"
+ 		;;
+ 	  *)	
+ 		xft=""
+@@ -950,7 +947,7 @@
  
  
  # Generate the "config.h" file
