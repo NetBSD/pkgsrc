@@ -1,0 +1,18 @@
+$NetBSD: patch-ar,v 1.1.1.1 2001/02/24 01:30:07 jtb Exp $
+
+--- sd/gd/Makefile.orig	Wed Dec 20 13:33:23 2000
++++ sd/gd/Makefile
+@@ -30,11 +30,8 @@
+ tcmd:   tcmd.o
+ 	$(PURIFY) $(CC) $(CFLAGS) tcmd.o -o $@ \
+ 	-I../dv -I../bv -I../tr -I../fv \
+-	$(LDFLAGS) $(LIB_DIR)/libtcmgd.a $(LIB_DIR)/libtcmtr.a \
+-        $(LIB_DIR)/libtcmdv.a $(LIB_DIR)/libtcmbv.a $(LIB_DIR)/libtcmfv.a \
+-	$(LIB_DIR)/libtcmpv.a \
+-	$(LIB_DIR)/libdiagram.a $(LIB_DIR)/libeditor.a \
+-        $(LIB_DIR)/libgui.a $(LIB_DIR)/libglobal.a $(LDLIBS)
++	$(LDFLAGS) -ltcmgd -ltcmtr -ltcmdv -ltcmbv -ltcmfv -ltcmpv \
++	-ldiagram -leditor -lgui -lglobal $(LDLIBS)
+ 	chmod a+rx $@
+ 	$(STRIP) $@
+ 	$(MV) $@ $(BIN_DIR)

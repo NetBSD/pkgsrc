@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/02/24 01:30:06 jtb Exp $
+
+--- sd/bv/rpdiagram.c.orig	Thu Feb 22 17:30:14 2001
++++ sd/bv/rpdiagram.c
+@@ -34,7 +34,13 @@
+ #include "line.h"
+ #include "rpdiagram.h"
+ #include "diagramchecks.h"
++#ifndef __NetBSD__
+ #include <values.h>
++#endif
++#ifdef __NetBSD__
++#include <limits.h>
++#define MAXINT INT_MAX
++#endif
+ 
+ const int RPDiagram::BOX_WIDTH = 58;
+ const int RPDiagram::BOX_HEIGHT = 38;

@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1.1.1 2001/02/24 01:30:07 jtb Exp $
+
+--- ed/helper.c.orig	Fri Feb 23 18:17:11 2001
++++ ed/helper.c
+@@ -44,7 +44,7 @@
+ 	char home[MAXNAME];
+ 	System::GetToolkitHome(home);
+ 	string helpFile = home;
+-	helpFile += "/lib/help/";
++	helpFile += "/share/tcm/help/";
+ 
+ 	switch(tp) {
+ 	case WELCOME:

@@ -1,0 +1,18 @@
+$NetBSD: patch-ah,v 1.1.1.1 2001/02/24 01:30:06 jtb Exp $
+
+--- sd/dv/crdiagram.c.orig	Thu Feb 22 17:33:44 2001
++++ sd/dv/crdiagram.c
+@@ -38,7 +38,13 @@
+ #include "textbox.h"
+ #include "comment.h"
+ #include "crdiagram.h"
++#ifndef __NetBSD__
+ #include <values.h>
++#endif
++#ifdef __NetBSD__
++#include <limits.h>
++#define MAXINT INT_MAX
++#endif
+ 
+ CRDiagram::CRDiagram(Config *c, CRWindow *d, CRViewer *v, CRGraph *g): 
+ 	   ERDiagram(c, d, v, g) {

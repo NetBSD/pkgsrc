@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/24 01:30:05 jtb Exp $
+
+--- /dev/null	Fri Feb 23 22:20:01 2001
++++ Config.tmpl_netbsd
+@@ -0,0 +1,43 @@
++# Configuration file for NetBSD 1.5 and GNU compilers.
++
++SYSFLAGS        = -DBSD -DLESSTIF
++
++SRC_DIR         = $(TCM_HOME)/src
++BIN_DIR         = $(TCM_HOME)/bin
++LIB_DIR         = $(TCM_HOME)/lib
++
++SHAREDFLAGS	= -shared
++
++MOTIF_INCLUDE	= $(MOTIF_HOME)/include
++MOTIF_LIB	= $(MOTIF_HOME)/lib
++
++XWIN_INCLUDE	= $(XWIN_HOME)/include
++XWIN_LIB	= $(XWIN_HOME)/lib
++
++LDFLAGS         += -Wl,-R$(LIB_DIR) -L$(LIB_DIR) -R$(MOTIF_LIB) -L$(MOTIF_LIB) -R$(XWIN_LIB) -L$(XWIN_LIB)
++
++LDLIBS += -lXm -lXt -lSM -lICE -lXext -lX11 -lm
++
++STRIP		?= /usr/bin/true
++MV		?= /bin/mv
++RM		?= /bin/rm
++
++INCLUDEDIRS     = -I.\
++                -I$(SRC_DIR)/bitmaps\
++                -I$(SRC_DIR)/gl\
++                -I$(SRC_DIR)/ui\
++                -I$(SRC_DIR)/ed\
++                -I$(SRC_DIR)/dg\
++                -I$(SRC_DIR)/tb\
++                -I$(MOTIF_INCLUDE)\
++                -I$(XWIN_INCLUDE)\
++
++CPPFLAGS	+= $(SYSFLAGS) $(INCLUDEDIRS)
++MKDEPEND	= $(XWIN_HOME)/bin/makedepend
++MKDEPENDFLAGS   = $(CPPFLAGS) -I/usr/include/g++
++
++xclean:
++	$(RM) *.o core $(SRC_DIR)/ptrepository/* $(SRC_DIR)/Templates.DB/*
++
++xdepend:
++	$(MKDEPEND) $(MKDEPENDFLAGS) *.*c

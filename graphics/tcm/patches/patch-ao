@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2001/02/24 01:30:07 jtb Exp $
+
+--- ui/psgrafport.c.orig	Fri Feb 23 18:12:13 2001
++++ ui/psgrafport.c
+@@ -25,7 +25,7 @@
+ #include "color.h"
+ #include <ctype.h>
+ 
+-const char PSGrafport::BANNER[] = "lib/banner.ps";
++const char PSGrafport::BANNER[] = "share/tcm/banner.ps";
+ 
+ const double PSGrafport::DEFAULT_LINE_WIDTH = 0.750;
+ 

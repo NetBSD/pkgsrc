@@ -1,0 +1,57 @@
+$NetBSD: patch-as,v 1.1.1.1 2001/02/24 01:30:08 jtb Exp $
+
+--- Makefile.gcc.orig	Fri Feb 23 23:59:17 2001
++++ Makefile.gcc
+@@ -18,13 +18,13 @@
+ 
+ tcm:
+ 	( cp ed/edinstances.h gl/instances.h )
+-	( cd ./gl ; touch llist.c )
++	( cd ./gl ; touch llist.cc )
+ 	( $(MAKE) libglobal.a )
+ 	( cd ./ed ; $(MAKE) $@)
+ 
+ tcmd:
+ 	( cp sd/sdinstances.h gl/instances.h )
+-	( cd ./gl ; touch llist.c )
++	( cd ./gl ; touch llist.cc )
+ 	( $(MAKE) libglobal.a )
+ 	( cd ./sd ; $(MAKE) $@)
+ 
+@@ -32,31 +32,31 @@
+ tgtt tfrt tgd terd tesd tcrd tssd tucd tatd tstd tpsd tsnd trpg \
+ tscd tsqd tcbd tcpd tdpd:
+ 	( cp dg/dginstances.h gl/instances.h )
+-	( cd ./gl ; touch llist.c )
++	( cd ./gl ; touch llist.cc )
+ 	( $(MAKE) libglobal.a )
+ 	( cd ./sd ; $(MAKE) $@)
+ 
+ tcmfv tdfd tefd:
+ 	( cp sd/fv/dfinstances.h gl/instances.h )
+-	( cd ./gl ; touch llist.c )
++	( cd ./gl ; touch llist.cc )
+ 	( $(MAKE) libglobal.a )
+ 	( cd ./sd ; $(MAKE) $@)
+ 
+ tcmt tgt ttdt ttut tfet:
+ 	( cp tb/tbinstances.h gl/instances.h )
+-	( cd ./gl ; touch llist.c )
++	( cd ./gl ; touch llist.cc )
+ 	( $(MAKE) libglobal.a )
+ 	( cd ./st ; $(MAKE) $@)
+ 
+ # csod:
+ # 	( cp cx/cx_instances.h gl/instances.h )
+-# 	( cd ./gl ; touch llist.c )
++# 	( cd ./gl ; touch llist.cc )
+ # 	( $(MAKE) libglobal.a )
+ # 	( cd ./cx ; $(MAKE) $@)
+ 
+ # ced:
+ # 	( cp dg/dginstances.h gl/instances.h )
+-# 	( cd ./gl ; touch llist.c )
++# 	( cd ./gl ; touch llist.cc )
+ # 	( $(MAKE) libglobal.a )
+ # 	( cd ./cx ; $(MAKE) $@)
+ 

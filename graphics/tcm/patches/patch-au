@@ -1,0 +1,16 @@
+$NetBSD: patch-au,v 1.1.1.1 2001/02/24 01:30:08 jtb Exp $
+
+--- sd/dv/Makefile.orig	Wed Dec 20 13:33:17 2000
++++ sd/dv/Makefile
+@@ -142,9 +142,9 @@
+ 	$(MV) $@ $(BIN_DIR)
+ 
+ cardconstraint.tab.h: cardconstraint.y
+-	$(YACC) --debug -p cardconstraint -d cardconstraint.y
++	$(YACC) -b cardconstraint -p cardconstraint -d cardconstraint.y
+ cardconstraint.tab.c: cardconstraint.y cardconstraint.l
+-	$(YACC) --debug -p cardconstraint -d cardconstraint.y
++	$(YACC) -b cardconstraint -p cardconstraint -d cardconstraint.y
+ cardconstraint.c: cardconstraint.l cardconstraint.tab.h
+ 	$(LEX) -Pcardconstraint -ocardconstraint.c cardconstraint.l
+ cardconstraint.o: cardconstraint.c
