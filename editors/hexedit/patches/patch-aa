@@ -1,24 +1,31 @@
-$NetBSD: patch-aa,v 1.1 1998/08/24 11:58:05 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 1998/08/27 22:08:38 frueauf Exp $
 
---- Makefile.orig	Fri Aug  7 17:09:38 1998
-+++ Makefile	Mon Aug 24 13:01:04 1998
-@@ -2,7 +2,7 @@
- VERSION = 0.9.4
+--- Makefile.orig	Wed Aug 26 14:32:18 1998
++++ Makefile	Thu Aug 27 23:23:26 1998
+@@ -2,15 +2,15 @@
+ VERSION = 0.9.5
  
  # Define BASENAME if your libc doesn't have it
 -#BASENAME=-DBASENAME
 +BASENAME=-DBASENAME
  
- CC=gcc
- TARSOURCE = $(PROJECT)-$(VERSION).src.tgz
-@@ -11,8 +11,8 @@
- HTMLFILES = $(PROJECT).html
- TMPFILES = $(DYNAMICBIN) $(TARSOURCE) $(HTMLFILES)
+-DESTDIR = /usr/local
++DESTDIR = ${PREFIX}
  
--CFLAGS = -Wall -O2 $(BASENAME)
--LOADLIBES = -lcurses #-lccmalloc -ldl
-+CFLAGS = -Wall -O2 $(BASENAME) -I${PREFIX}/include -L${PREFIX}/lib -lncurses
-+LOADLIBES = -lncurses #-lccmalloc -ldl
+ SHELL = /bin/sh
+ CC = gcc
+-CFLAGS = -O2 -Wall $(BASENAME)
+-LIBS = -lcurses
+-LFLAGS =
++CFLAGS = -O2 -Wall $(BASENAME) -I${PREFIX}/include
++LIBS = -lncurses
++LFLAGS =-L${PREFIX}/lib
  
- .PHONY: clean tgz docs
+ INCL = hexedit.h
+ SRCS = hexedit.c display.c mark.c page.c file.c interact.c misc.c search.c
+@@ -63,4 +63,4 @@
+ 	ci -l -mdefault *
  
+ TAGS:
+-	etags *.[hc]
++	etags *.[hc]
