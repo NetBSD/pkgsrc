@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2003/10/01 23:13:13 recht Exp $
+$NetBSD: patch-ac,v 1.2 2003/11/03 11:45:28 recht Exp $
 
---- p0f.1.orig Fri Sep 19 17:11:56 2003
-+++ p0f.1      Wed Sep 24 21:25:51 2003
+--- p0f.1.orig	2003-10-10 23:39:00.000000000 +0200
++++ p0f.1	2003-11-03 12:28:01.000000000 +0100
 @@ -32,9 +32,9 @@
  .TP
  \fB\-f\fR file
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.1 2003/10/01 23:13:13 recht Exp $
  Specifying multiple -f values will NOT combine several signature files
  together.
  .TP
-@@ -190,7 +190,7 @@
+@@ -199,7 +199,7 @@
  You need to consult the documentation for an up-to-date list of issues.
  .SH FILES
  .TP
