@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/07/13 13:53:37 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/08/29 15:47:46 xtraeme Exp $
 
 .if !defined(SABLOTRON_BUILDLINK2_MK)
 SABLOTRON_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		sablotron
-BUILDLINK_DEPENDS.sablotron?=	sablotron>=0.96nb2
+BUILDLINK_DEPENDS.sablotron?=	sablotron>=1.0
 BUILDLINK_PKGSRCDIR.sablotron?=	../../textproc/sablotron
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.sablotron=sablotron
