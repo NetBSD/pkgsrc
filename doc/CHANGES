@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1123 2003/01/14 12:02:15 wennmach Exp $
+$NetBSD: CHANGES,v 1.1124 2003/01/14 13:15:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -263,3 +263,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated coconut to 0.3.0nb2 [rh 2003-01-14]
 	Added Xrender-0.7 [jlam 2003-01-14]
 	Updated arla to 0.35.12pre1 [wennmach 2003-01-14]
+	Updated easytag to 0.26nb1 [wiz 2003-01-14]
