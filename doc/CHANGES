@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7736 2004/11/06 11:07:49 jmmv Exp $
+$NetBSD: CHANGES,v 1.7737 2004/11/06 13:28:32 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5125,3 +5125,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated suse_gtk2 to 9.1nb1 [wiz 2004-11-06]
 	Updated mserv_irman to 0.20 [abs 2004-11-06]
 	Updated samba to 3.0.7nb2 [jmmv 2004-11-06]
+	Updated phpmyadmin to 2.6.0-pl2 [jdolecek 2004-11-06]
