@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/09/14 21:26:40 bouyer Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/04 10:40:19 wiz Exp $
 
 DISTNAME=	horde-2.2.4
 CATEGORIES=	www
@@ -50,7 +50,9 @@ pre-install:
 		${FILESDIR}/horde.conf.dist > ${WRKDIR}/horde.conf.dist
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR} ${HORDEDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${HORDEDIR}
 	cd ${WRKDIR}; ${INSTALL_DATA} horde.conf.dist ${EGDIR}/horde.conf
 	cd ${WRKSRC}; ${INSTALL_DATA} COPYING README docs/* ${DOCDIR}
 	cd ${WRKSRC}; ${CP} -R graphics lib locale po scripts templates util ${HORDEDIR}
