@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/23 19:26:52 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/08/14 03:41:38 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -54,7 +54,7 @@ FILES_SUBST+=		ADDGROUP=${ADDGROUP:Q}
 FILES_SUBST+=		CAT=${CAT:Q}
 FILES_SUBST+=		CHGRP=${CHGRP:Q}
 FILES_SUBST+=		CHOWN=${CHOWN:Q}
-FILES_SUBST+=		GREP=${GREP:Q}
+FILES_SUBST+=		ID=${ID:Q}
 FILES_SUBST+=		MKDIR=${MKDIR:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		SU=${SU:Q}

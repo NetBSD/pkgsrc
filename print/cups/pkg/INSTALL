@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.10 2001/08/12 19:55:56 veego Exp $
+# $NetBSD: INSTALL,v 1.11 2001/08/14 03:41:39 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -15,7 +15,7 @@ CHGRP="@CHGRP@"
 CHMOD="@CHMOD@"
 CHOWN="@CHOWN@"
 CP="@CP@"
-GREP="@GREP@"
+ID="@ID@"
 MKDIR="@MKDIR@"
 RM="@RM@"
 TOUCH="@TOUCH@"
@@ -47,7 +47,7 @@ PRE-INSTALL)
 
 	# Use `id' to be able to use NIS.
 	#
-	id ${USER} 2>/dev/null >/dev/null
+	${ID} ${USER} 2>/dev/null >/dev/null
 	if [ $? -eq 0 ]
 	then
 		echo "User '${USER}' already exists...proceeding."
