@@ -1,5 +1,7 @@
+@comment $NetBSD: PLIST,v 1.2 1999/02/23 18:28:35 rh Exp $
 sbin/delegated
-share/examples/delegate/delegated.sh
-share/doc/delegate/Manual.txt
+etc/rc.d/delegated.sh.sample
+man/cat8/delegated.0
+share/doc/delegate/tutorial-en.html
+share/doc/delegate/tutorial-jp.html
 @dirrm share/doc/delegate
-@dirrm share/examples/delegate
