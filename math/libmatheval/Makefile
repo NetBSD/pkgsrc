@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/15 14:50:07 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/13 13:18:07 kristerw Exp $
 #
 
 DISTNAME=		libmatheval-1.1.1
@@ -14,7 +14,9 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+PTHREAD_OPTS+=		require
 
 .include "../../devel/flex/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
