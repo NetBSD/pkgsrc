@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/28 00:03:15 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/28 00:08:20 minskim Exp $
 # FreeBSD Id: ports/archivers/lbrate/Makefile,v 1.4 2002/06/19 08:18:05 sobomax Exp
 
 DISTNAME=	lbrate-1.1
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/utils/compress/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://rus.members.beeb.net/lbrate.html
 COMMENT=	Extract/decompress CP/M LBR archives
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
 MAKE_FLAGS+=	PREFIX=${PREFIX}
