@@ -1,33 +1,28 @@
-$NetBSD: patch-af,v 1.7 2003/03/24 12:12:10 jtb Exp $
+$NetBSD: patch-af,v 1.8 2003/04/05 05:42:56 jtb Exp $
 
---- /dev/null	Sat Jun 23 16:44:55 2001
+--- /dev/null
 +++ config/unix/netbsd/i386.c
-@@ -0,0 +1,28 @@
+@@ -0,0 +1,23 @@
 +/*
-+ * This is the co-expression context switch for the Intel 80386
-+ * under Microport Unix System V/386
++ * coswitch for i386 architecture
 + */
 +
-+/*
-+ * coswitch
-+ */
++int
++coswitch (int *old_cs, int *new_cs, int first)
++{
++	asm ("movl 8(%ebp),%eax");
++	asm ("movl %esp,0(%eax)");
++	asm ("movl %ebp,4(%eax)");
++	asm ("movl 12(%ebp),%eax");
 +
-+coswitch(old_cs, new_cs, first)
-+int *old_cs, *new_cs;
-+int first;
-+   {
-+   asm("  movl 8(%ebp),%eax");
-+   asm("  movl %esp,0(%eax)");
-+   asm("  movl %ebp,4(%eax)");
-+   asm("  movl 12(%ebp),%eax");
-+   if (first == 0) {		/* this is the first activation */
-+      asm("  movl 0(%eax),%esp");
-+      asm("  movl $0,%ebp");
-+      new_context(0, 0);
-+      syserr("interp() returned in coswitch");
-+      }
-+   else {
-+      asm("  movl 0(%eax),%esp");
-+      asm("  movl 4(%eax),%ebp");
-+      }
-+   }
++	if (first == 0) {                    /* this is the first activation */
++		asm ("movl 0(%eax),%esp");
++		asm ("movl $0,%ebp");
++		new_context (0, 0);
++		syserr ("interp() returned in coswitch");
++	}
++	else {
++		asm ("movl 0(%eax),%esp");
++		asm ("movl 4(%eax),%ebp");
++	}
++}

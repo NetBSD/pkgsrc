@@ -1,9 +1,10 @@
-$NetBSD: patch-ac,v 1.5 2003/03/24 12:12:10 jtb Exp $
+$NetBSD: patch-ac,v 1.6 2003/04/05 05:42:56 jtb Exp $
 
---- /dev/null	Mon Mar 24 11:07:29 2003
-+++ config/unix/netbsd/powerpc.s	Mon Mar 24 11:40:22 2003
-@@ -0,0 +1,47 @@
-+#       Adapted from ppc_macos/rswitch.s
+--- /dev/null
++++ config/unix/netbsd/powerpc.s
+@@ -0,0 +1,48 @@
++#
++#	coswitch for the PowerPC
 +#
 +
 +	.file   "rswitch.s"
@@ -42,7 +43,7 @@ $NetBSD: patch-ac,v 1.5 2003/03/24 12:12:10 jtb Exp $
 +	addic	%r1, %r1, RSIZE		# deallocate stack frame
 +	blr				# return into new context
 +
-+first:					# First-time call
++first:					# First-time call:
 +	lwz	%r1, 0(%r4)		# SP as figured by Icon
 +	addic	%r1, %r1, -64		# save area for callee
 +	addi	%r3, 0, 0		# arg1
