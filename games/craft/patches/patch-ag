@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.3 1999/07/24 22:52:44 dante Exp $
+$NetBSD: patch-ag,v 1.4 1999/08/11 21:54:22 tron Exp $
 
---- hcc/hcc.cc.orig     Sun Jul 25 00:11:11 1999
-+++ hcc/hcc.cc  Sun Jul 25 00:12:37 1999
+--- hcc/hcc.cc.orig	Fri Feb 21 12:50:16 1997
++++ hcc/hcc.cc	Wed Aug  4 15:37:39 1999
 @@ -1,6 +1,5 @@
 -#include "bool.h"
  #include "stdio.h"
@@ -10,3 +10,12 @@ $NetBSD: patch-ag,v 1.3 1999/07/24 22:52:44 dante Exp $
  #include "string.h"
  #include "ctype.h"
  
+@@ -203,7 +202,7 @@
+    char last_last_sym;
+    int  last_ref_sym_line;
+    int  last_ref_sym_no;
+-   char sym;
++   signed char sym;
+    int  nested_brackets;
+    bool inside_refinement;
+    bool inside_string;
