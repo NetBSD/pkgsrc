@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2001/12/11 16:02:09 wiz Exp $
+
+--- doc/Makefile.in.orig	Tue Dec 11 16:54:36 2001
++++ doc/Makefile.in
+@@ -65,9 +65,6 @@
+ aterm.pretbl: $(YODL_RXVT) yodl/versioninfo.yo yodl/masonyodl.yo
+ 	yodl2man -oaterm.pretbl yodl/aterm.yo
+ 
+-aterm.1: aterm.pretbl
+-	tbl aterm.pretbl > $@
+-
+ aterm.html: $(YODL_RXVT) yodl/versioninfo.yo yodl/masonyodl.yo
+ 	yodl2html -o$@ yodl/aterm.yo
+ 
