@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: samba.sh,v 1.14 2004/01/11 02:26:31 jlam Exp $
+# $NetBSD: samba.sh,v 1.15 2004/01/12 03:33:04 jlam Exp $
 #
 # KEYWORD: nostart
 
@@ -36,7 +36,7 @@ reverse_commands()
 	done
 }
 
-COMMAND_LIST="nmbd smbd"
+COMMAND_LIST="nmbd smbd winbindd"
 
 name="samba"
 start_cmd="forward_commands"
