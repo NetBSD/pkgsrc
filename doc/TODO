@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1007 2003/11/08 08:31:16 xtraeme Exp $
+$NetBSD: TODO,v 1.1008 2003/11/08 10:15:20 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -119,7 +119,6 @@ Suggested package updates
 	o Lesstif-0.93.91
 	o MozillaFirebird-0.7
 	o MozillaFirebird-bin-0.7 [grant]
-	o Ngraph-6.3.20 [pkg/22800]
 	o R-1.8.0 [markd]
 	o SDL_gfx-2.0.9
 	o TeXmacs-1.0.2.6
