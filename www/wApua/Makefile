@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/30 02:28:35 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/31 11:22:02 seb Exp $
 #
 
 DISTNAME=	wApua-0.05
@@ -16,11 +16,8 @@ DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-MIME-Base64-*:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 
-REPLACE_PERL+=	bin/wApua
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=         ${PERL5_SITEARCH}/auto/wApua/.packlist
-
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wApua
@@ -29,5 +26,5 @@ post-install:
 		${INSTALL_DATA} $$i ${PREFIX}/share/doc/wApua ; \
 	done
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
