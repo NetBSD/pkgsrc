@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/07/01 01:17:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/15 16:15:14 wiz Exp $
 #
 
-DISTNAME=	links-0.92
+DISTNAME=	links-0.93
 CATEGORIES=	www
 MASTER_SITES=	http://artax.karlin.mff.cuni.cz/~mikulas/links/download/ \
 		http://www.add.com.pl/links/download/
