@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/29 23:20:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/01 23:53:38 wiz Exp $
 #
 
 DISTNAME=	bbweather-0.4
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.netmeister.org/apps/bbweather/
 COMMENT=	show current weather conditions
 
-DEPENDS+=	wget:../../net/wget
+DEPENDS+=	wget>=1.7:../../net/wget
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
