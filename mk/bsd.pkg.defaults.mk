@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.114 2002/12/22 17:16:23 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.115 2002/12/22 20:05:34 atatat Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -959,6 +959,14 @@ LSOF_MORE_SECURE?=	0
 # Used in lsof to specify that non-root users can only view their own files
 # Possible:	0 (allow non-root users to view all open files), or
 #		1 (only allow root to view all open files)
+# Default: 0
+
+LSOF_LESS_SECURE_SOCKETS?=	0
+# Used in lsof to specify that non-root users should still be able to view
+# all open sockets even if LSOF_MORE_SECURE is set.  If LSOF_MORE_SECURE is
+# not set (ie, is zero), this option has no effect.
+# Possible:	0 (don't allow non-root users to see sockets they don't own)
+#		1 (allow all sockets to be viewed at all times)
 # Default: 0
 
 LYNX_SCREEN_LIB?=	curses
