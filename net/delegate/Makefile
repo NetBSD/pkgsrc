@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2000/07/20 15:41:07 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/10/15 17:24:28 rh Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
 DISTNAME=	${PKGNAME:S/-//}
-PKGNAME=	delegate-6.1.16
+PKGNAME=	delegate-6.1.18
 CATEGORIES=	net
-MASTER_SITES=	ftp://etlport.etl.go.jp/pub/DeleGate/ \
+MASTER_SITES=	ftp://ftp.delegate.org/pub/DeleGate/ \
+		ftp://etlport.etl.go.jp/pub/DeleGate/ \
 		ftp://ftp.kyushu-u.ac.jp/pub/Net/WWW/server/delegate/ \
 		ftp://ftp.nec.co.jp/pub/infosys/WWW/DeleGate/ \
 		ftp://ftp.fujitsu.co.jp/pub/networking/DeleGate/ \
@@ -17,7 +18,7 @@ MASTER_SITES=	ftp://etlport.etl.go.jp/pub/DeleGate/ \
 		ftp://ftp.ecrc.de/ftp/data/ftp.ecrc.net/pub/netsw/Network/IP/Firewall/Proxy/delegate/
 
 MAINTAINER=	packages@NetBSD.ORG
-HOMEPAGE=	http://wall.etl.go.jp/delegate/
+HOMEPAGE=	http://www.delegate.org/
 
 DEPENDS+=	readline>=4.0:../../devel/readline
 
