@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.244 2002/04/27 02:42:22 enami Exp $
+# $NetBSD: Packages.txt,v 1.245 2002/05/19 08:52:17 zuntum Exp $
 ###########################################################################
 
 			==========================
@@ -511,7 +511,7 @@ wasted by recompiling.
  ===============================================
 
 If you don't want all the pkgs nuked from a machine (rendering it useless
-for anything but pkg compiling), there the possibility of doing the pkg
+for anything but pkg compiling), there is the possibility of doing the pkg
 bulk build inside a chroot environment. 
 
 The first step to do so is setting up a chroot sandbox, e.g. /usr/sandbox.
