@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/09 18:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/19 13:04:48 grant Exp $
 
 DISTNAME=	teapop-0.3.5
 CATEGORIES=	mail
@@ -17,6 +17,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples/teapop
 CONF_FILES=	${EGDIR}/teapop.passwd ${PKG_SYSCONFDIR}/teapop.passwd
+
+RCD_SCRIPTS=	teapop
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,13 +42,9 @@ CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 LDFLAGS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql -Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 .endif
 
-post-build:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/teapop > ${WRKDIR}/teapop
-
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/teapop.passwd ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/teapop ${PREFIX}/etc/rc.d/teapop
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
