@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 1997/10/30 01:08:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1997/10/30 01:40:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
 #    SUBDIR += agrep
 #    SUBDIR += docbook
-#    SUBDIR += glimpse
+    SUBDIR += glimpse
 #    SUBDIR += html
 #    SUBDIR += info2html
 #    SUBDIR += isearch
