@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/11/12 19:39:15 dillo Exp $
+# $NetBSD: Makefile,v 1.5 2002/11/13 14:24:21 dillo Exp $
 #
 
 DISTNAME=		jasper-1.600.0
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.ece.uvic.ca/~mdadams/jasper/software/
 EXTRACT_SUFX=		.zip
