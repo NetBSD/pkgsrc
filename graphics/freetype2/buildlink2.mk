@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.16 2004/02/12 01:59:38 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.17 2004/02/12 02:35:06 jlam Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
@@ -45,7 +45,7 @@ _BUILTIN_FREETYPE2!=	\
 		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	_BUILTIN_FREETYPE=${_BUILTIN_FREETYPE}
+MAKEFLAGS+=	_BUILTIN_FREETYPE2=${_BUILTIN_FREETYPE2}
 .endif
 
 .if !empty(_BUILTIN_FREETYPE2:M[yY][eE][sS])
@@ -54,8 +54,18 @@ _NEED_FREETYPE2=	NO
 _NEED_FREETYPE2=	YES
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mfreetype2)
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    ${_BUILTIN_FREETYPE2} == "YES"
+_NEED_FREETYPE2=	NO
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+_NEED_FREETYPE2=	YES
+.endif
+.if !empty(PREFER_NATIVE:Mfreetype2) && \
+    ${_BUILTIN_FREETYPE2} == "YES"
+_NEED_FREETYPE2=	NO
+.endif
+.if !empty(PREFER_PKGSRC:Mfreetype2)
 _NEED_FREETYPE2=	YES
 .endif
 
