@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/03/10 23:03:02 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/07/04 08:50:42 mycroft Exp $
 bin/lynx
 etc/lynx.cfg
 etc/lynx_help/COPYHEADER
@@ -27,7 +27,6 @@ etc/lynx_help/lynx_help_main.html
 etc/lynx_help/lynx_url_support.html
 etc/lynx_help/samples/jumpsUnix.html
 etc/lynx_help/samples/jumpsVMS.html
-etc/lynx_help/samples/lynx.cfg
 etc/lynx_help/samples/lynx.com
 etc/lynx_help/samples/lynx.lss
 etc/lynx_help/samples/mailcap

@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.10 1998/06/21 15:22:20 tv Exp $
-# FreeBSD Id: Makefile,v 1.71 1997/11/24 19:35:30 ache Exp
+# $NetBSD: Makefile,v 1.11 1998/07/04 08:50:42 mycroft Exp $
 #
 
-DISTNAME=       lynx2.8rel.2
-PKGNAME=        lynx-2.8rel.2
+DISTNAME=       lynx2-8
+PKGNAME=        lynx-2.8
 WRKSRC=         ${WRKDIR}/lynx2-8
 CATEGORIES=	www
-MASTER_SITES=   http://sol.slcc.edu/lynx/current/
+MASTER_SITES=   http://sol.slcc.edu/lynx/release2-8/
 
 MAINTAINER=	packages@netbsd.org
+
+CONFLICTS=	lynx-2.8rel.2
 
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 
