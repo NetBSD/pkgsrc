@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:06:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/01/18 10:50:42 drochner Exp $
 #
 
 DISTNAME=	wxPython-2.2.2
-PKGNAME=	py-wxWindows-2.2.2
+PKGNAME=	${PYPKGPREFIX}-wxWindows-2.2.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 
@@ -10,29 +10,25 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://wxpython.org/
 COMMENT=	wxPython: Python bindings for wxWindows
 
-DEPENDS+=       python>=2.0:../../lang/python
-DEPENDS+=       wxGTK>=2.2.2:../../x11/wxGTK
-
 PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
-SITE_PKG=	lib/python2.0/site-packages
-PYTHON_LIBDIR=	${LOCALBASE}/${SITE_PKG}
 
 USE_GMAKE=	yes
 
-BUILD_OPTS=	BUILD_GLCANVAS=0
+PYTHON_VERSIONS_ACCEPTED=	20 # distutils problem with 21 and 22
+PYDISTUTILSPKG=	yes
+PYSETUPBUILDARGS=	BUILD_GLCANVAS=0
+PYBINMODULE=	yes
 
-do-build:
-	(cd ${WRKSRC}; ${PREFIX}/bin/python setup.py ${BUILD_OPTS} build)
-
-do-install:
-	(cd ${WRKSRC}; ${PREFIX}/bin/python setup.py install)
+post-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${PYTHON_LIBDIR}/wxPython; \
-	${PREFIX}/bin/python ${PREFIX}/lib/python2.0/compileall.py . ; \
-	${PREFIX}/bin/python -O ${PREFIX}/lib/python2.0/compileall.py . )
-	(cd ${PREFIX}; ${FIND} ${SITE_PKG}/wxPython \
+	(cd ${PREFIX}/${PYSITELIB}/wxPython; \
+	${PYTHONBIN} ${PREFIX}/${PYLIB}/compileall.py . ; \
+	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py . )
+	(cd ${PREFIX}; ${FIND} ${PYSITELIB}/wxPython \
 		-type f -print >>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} -d ${SITE_PKG}/wxPython \
+	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/wxPython \
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
+.include "../../x11/wxGTK/buildlink.mk"
+.include "../../lang/python/extension.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
