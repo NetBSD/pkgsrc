@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1808 2004/06/05 11:16:24 salo Exp $
+$NetBSD: TODO,v 1.1809 2004/06/05 11:25:18 tron Exp $
 
 Suggested new packages
 ======================
@@ -267,7 +267,6 @@ Suggested package updates
 	o idesk-0.5.6
 	o imp-3.2.3
 	o inform-6.30 [pkg/24631]
-	o inn-2.4.1
 	o intercal-0.24 [dillo]
 	o jakarta-tomcat-3.3.1a
 	o jam-2.5
