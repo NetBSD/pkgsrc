@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/12/17 19:58:13 jdolecek Exp $
+$NetBSD: distinfo,v 1.3 2004/04/02 22:00:50 jdolecek Exp $
 
-SHA1 (Log-1.8.1.tgz) = 44a9a02fc923983d58a6eb6ffaee12be50fb7748
-Size (Log-1.8.1.tgz) = 24960 bytes
+SHA1 (Log-1.8.4.tgz) = 4ba71cbe890b759ef269251e267058df2cee0cab
+Size (Log-1.8.4.tgz) = 29453 bytes
