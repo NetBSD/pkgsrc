@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/09/10 11:33:35 reinoud Exp $
+
+--- Makefile.in.orig	2004-07-23 09:35:20.000000000 +0200
++++ Makefile.in
+@@ -20,7 +20,7 @@ prefix=@prefix@
+ mandir=$(prefix)/man
+ libdir=$(prefix)/lib
+ plugindir=UNKNOWN
+-browsers=mozilla opera netscape firefox galeon
++browsers=mozilla opera netscape firefox galeon mozilla-gtk2
+ 
+ #
+ #
