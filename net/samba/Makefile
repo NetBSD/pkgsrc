@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2004/02/17 15:58:43 jlam Exp $
+# $NetBSD: Makefile,v 1.119 2004/03/28 08:36:47 jlam Exp $
 
 DISTNAME=		samba-3.0.2a
 CATEGORIES=		net
@@ -149,6 +149,10 @@ post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
 
 post-install:
+	${RMDIR} ${SAMBA_LIBDIR}/auth
+	${RMDIR} ${SAMBA_LIBDIR}/idmap
+	${RMDIR} ${SAMBA_LIBDIR}/pdb
+	${RMDIR} ${SAMBA_LIBDIR}/rpc
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/libnss_winbind.so ${PREFIX}/lib
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/libnss_wins.so ${PREFIX}/lib
