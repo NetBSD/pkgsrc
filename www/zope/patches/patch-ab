@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2000/10/22 23:11:48 tsarna Exp $
+
+--- lib/python/AccessControl/SecurityManagement.py.orig	Thu May 11 14:54:13 2000
++++ lib/python/AccessControl/SecurityManagement.py	Sun Oct 22 18:58:29 2000
+@@ -89,7 +89,9 @@
+ __version__='$Revision: 1.1 $'[11:-2]
+ 
+ import SpecialUsers
+-from thread import get_ident
++try: import thread
++except: get_ident=lambda: 0
++else: get_ident=thread.get_ident
+ from SecurityManager import SecurityManager
+ 
+ _managers={}
