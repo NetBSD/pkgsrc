@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2004/03/08 22:14:19 minskim Exp $
+$NetBSD: distinfo,v 1.14 2004/03/11 01:27:05 minskim Exp $
 
 SHA1 (tk8.4.6-src.tar.gz) = a0b2f364be20c3e312d1ba582d3a1b4b4b1d4d88
 Size (tk8.4.6-src.tar.gz) = 3230760 bytes
 SHA1 (patch-aa) = 77344c94315f7b1cc24f2f31413e8d75973e0cda
-SHA1 (patch-ab) = c0d4d2cb135f605757bea55aad90d8151f6f8dc7
-SHA1 (patch-ac) = 6a5b303de8a0f2c2f1345f7c13b62a62d1c3c60c
+SHA1 (patch-ab) = 7a6340a190a800abb09461dd36fc24846ab2b2d3
+SHA1 (patch-ac) = 9ecaba5cf937832b428fb17e88f874f3fe465bca
 SHA1 (patch-ad) = 2f65cb36160794991d940bb3ffc9a754dcd9febc
