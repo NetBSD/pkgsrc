@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2003/04/13 14:28:53 cjep Exp $
+$NetBSD: distinfo,v 1.5 2003/06/06 10:36:37 jmmv Exp $
 
 SHA1 (MySQL-python-0.9.2.tar.gz) = b6959ee5e28847e557229ddc318b097f10144ff2
 Size (MySQL-python-0.9.2.tar.gz) = 64258 bytes
-SHA1 (patch-aa) = 8865ed8dc0d9fd5ec9adac854a0fc4cec64ace2c
+SHA1 (patch-aa) = 27ab8d1f675197e1fdaf5760dbdad5ea95043f59
