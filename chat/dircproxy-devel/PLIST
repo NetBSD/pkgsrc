@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/03 14:18:01 adrianp Exp $
+bin/dircproxy
+bin/dircproxy-crypt
+man/man1/dircproxy-crypt.1
+man/man1/dircproxy.1
+share/dircproxy/cronchk.sh
+share/dircproxy/log.pl
+share/dircproxy/privmsg-log.pl
+share/examples/dircproxy/dircproxyrc
+@dirrm share/examples/dircproxy
+@dirrm share/dircproxy

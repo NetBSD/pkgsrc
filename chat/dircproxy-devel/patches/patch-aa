@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/04/03 14:18:02 adrianp Exp $
+
+--- conf/Makefile.in	2002-08-18 02:41:15.000000000 +0100
++++ conf/Makefile.in.orig
+@@ -33,7 +33,7 @@ infodir = @infodir@
+ mandir = @mandir@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+-pkgdatadir = $(datadir)/@PACKAGE@
++pkgdatadir = $(datadir)/examples/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+ top_builddir = ..
