@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.29 2004/11/26 20:00:21 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.30 2004/11/27 16:32:00 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -13,6 +13,8 @@ Pullup ticket 116 - requested by Eric Gillespie
 security fix for subversion
 Pullup ticket 118 - requested by Adrian Portelli
 build and security fixes for freeradius
+Pullup ticket 119 - requested by Jeremy C. Reed
+security fix for apache2
 Pullup ticket 120 - requested by Todd Vierling
 security fix for gzip
 Pullup ticket 121 - requested by Quentin Garnier
@@ -57,7 +59,7 @@ Pullup ticket 143 - requested by Takahiro Kambe
 security and usability fixes for ja-squirrelmail
 Pullup ticket 147 - requested by Julio M. Merino Vidal
 security fix for libxml
+Pullup ticket 148 - requested by Jan Schaumann
+security fix for sun-jdk13 and sun-jre13
 Pullup ticket 150 - requested by Dieter Baron
 security fix for xpdf
-Pullup ticket 119 - requested by Jeremy C. Reed
-security fix for apache2
