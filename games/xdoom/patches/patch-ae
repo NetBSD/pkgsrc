@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 1998/09/06 16:37:45 hubertf Exp $
+--- sndserv/linux.c.orig	Sun Sep  6 18:02:05 1998
++++ sndserv/linux.c	Sun Sep  6 18:02:31 1998
+@@ -39,8 +39,9 @@
+ #include <stdio.h>
+ #include <fcntl.h>
+ #include <unistd.h>
++#include <sys/ioctl.h>
+ 
+-#include <linux/soundcard.h>
++#include <soundcard.h>
+ 
+ #include "soundsrv.h"
+ 
