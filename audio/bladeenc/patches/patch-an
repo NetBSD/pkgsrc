@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.1 1999/09/13 03:33:36 simonb Exp $
+$NetBSD: patch-an,v 1.2 1999/09/20 09:30:19 agc Exp $
 
---- samplein.c.orig	Sat Jul 24 07:50:33 1999
-+++ samplein.c	Mon Sep 13 12:55:39 1999
+--- samplein.c.orig	Fri Jul 23 22:50:33 1999
++++ samplein.c	Mon Sep 20 10:19:51 1999
 @@ -52,11 +52,11 @@
  static int	initAIFF( SplIn * psInfo );
  static uint	readAIFFSamples( SplIn * psInfo, int nSamples, short * wpSamples );
@@ -17,7 +17,18 @@ $NetBSD: patch-an,v 1.1 1999/09/13 03:33:36 simonb Exp $
  ushort INLINE intlShort( char iShort[2] );
  ushort INLINE mcShort( char mcShort[2] );
  
-@@ -185,8 +185,8 @@
+@@ -124,6 +124,10 @@
+ 	return	FALSE;
+ }
+ 
++#if defined(__sun__) && defined(__svr4__)
++typedef unsigned char	u_int8_t;
++#endif
++
+ 
+ /*____ readSamples() __________________________________________________________*/
+ 
+@@ -185,8 +189,8 @@
  	if( psInfo->bits == 8 )
  	{
   		for( i = readSamples-1 ; i > 0 ; i-- )
@@ -28,7 +39,7 @@ $NetBSD: patch-an,v 1.1 1999/09/13 03:33:36 simonb Exp $
  	}
  
  	/* Convert unsigned to signed */
-@@ -256,8 +256,8 @@
+@@ -256,8 +260,8 @@
  { 
  	short		wFormatTag;						/* Format category */
    short		wChannels;						/* Number of channels */
@@ -39,7 +50,7 @@ $NetBSD: patch-an,v 1.1 1999/09/13 03:33:36 simonb Exp $
    short		wBlockAlign;					/* Data block size */
  	short		bitsPerSample;				/* Actually a PCM-specific additional byte... */
  } sFmtChunk;
-@@ -366,7 +366,7 @@
+@@ -366,7 +370,7 @@
  	struct 
  	{ 
  		short           numChannels;
@@ -48,7 +59,7 @@ $NetBSD: patch-an,v 1.1 1999/09/13 03:33:36 simonb Exp $
      short           sampleSize;
  /*    char						sampleRate[10]; */
  
-@@ -509,19 +509,19 @@
+@@ -509,19 +513,19 @@
  
  /*____ intlLong() _____________________________________________________________*/
  
@@ -74,7 +85,7 @@ $NetBSD: patch-an,v 1.1 1999/09/13 03:33:36 simonb Exp $
  }
  
  
-@@ -544,7 +544,7 @@
+@@ -544,7 +548,7 @@
  
  /* We can't use the real fseek() since you can't seek in a stream (stdin) */
  
