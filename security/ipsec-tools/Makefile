@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/11/10 09:11:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/10 16:44:51 manu Exp $
 #
 
 DISTNAME=		ipsec-tools-0.5.pre20041109
@@ -15,8 +15,10 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-libradius --enable-natt
-CONFIGURE_ARGS+=	--enable-frag --enable-hybrid
+CONFIGURE_ARGS+=	--with-libradius --enable-frag --enable-hybrid
+
+# Require a kernel patch not integrated yet (IPR problem)
+#CONFIGURE_ARGS+=	--enable-natt
 
 SAMPLE_DIR=	${WRKSRC}/src/racoon/samples
 EXAMPLE_DIR=	${PREFIX}/share/examples/ipsec-tools
