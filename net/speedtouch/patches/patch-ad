@@ -1,0 +1,143 @@
+$NetBSD: patch-ad,v 1.1 2002/07/09 14:38:19 wiz Exp $
+
+--- pusb-bsd.c.orig	Sat Jun  9 23:15:54 2001
++++ pusb-bsd.c
+@@ -9,6 +9,12 @@
+ #include <string.h>		/* for strerror */
+ #include <dev/usb/usb.h>
+ #include <sys/ioctl.h>
++#ifdef __NetBSD__
++#include <sys/param.h>
++#if __NetBSD_Version__ > 105270000
++#define USB_need_prefix	1
++#endif
++#endif
+ 
+ #include "pusb.h"
+ 
+@@ -79,7 +85,11 @@
+ 	{
+ 	    struct usb_device_info di;
+ 
++#ifdef USB_need_prefix
++	    di.udi_addr = device;
++#else
+ 	    di.addr = device;
++#endif
+ 	    if(ioctl(cfd, USB_DEVICEINFO, &di) < 0)
+ 		continue;
+ 
+@@ -88,22 +98,41 @@
+ 		int j;
+ 		fprintf(stderr, "something on controller %d device %d\n",
+ 		       controller, device);
++#ifdef USB_need_prefix
++		fprintf(stderr, "vendor %s product %s\n", 
++			di.udi_vendor, di.udi_product);
++		for(j=0; j<4; j++)
++		    fprintf(stderr, "name %s\n", di.udi_devnames[j]);
++#else
+ 		fprintf(stderr, "vendor %s product %s\n", 
+ 			di.vendor, di.product);
+ 		for(j=0; j<4; j++)
+ 		    fprintf(stderr, "name %s\n", di.devnames[j]);
++#endif
+ 	    }
+ #endif
+ 
++#ifdef USB_need_prefix
++	    if(di.udi_vendorNo == vendorID && di.udi_productNo == productID)
++#else
+ 	    if(di.vendorNo == vendorID && di.productNo == productID)
++#endif
+ 	    {
++#ifdef USB_need_prefix
++		if(strncmp(di.udi_devnames[0], "ugen", 4) != 0)
++#else
+ 		if(strncmp(di.devnames[0], "ugen", 4) != 0)
++#endif
+ 		{
+ 		    /* Has a real driver, don't mess with it */
+ 		    continue;
+ 		}
+ 
++#ifdef USB_need_prefix
++		sprintf(prefix, "/dev/%s", di.udi_devnames[0]);
++#else
+ 		sprintf(prefix, "/dev/%s", di.devnames[0]);
++#endif
+ #if defined(__FreeBSD__)
+ 		sprintf(buf, "%s", prefix);
+ #else		
+@@ -160,6 +189,16 @@
+ {
+     struct usb_ctl_request req;
+ 
++#ifdef USB_need_prefix
++    req.ucr_request.bmRequestType = request_type;
++    req.ucr_request.bRequest = request;
++    USETW(req.ucr_request.wValue, value);
++    USETW(req.ucr_request.wIndex, index);
++    USETW(req.ucr_request.wLength, size);
++
++    req.ucr_data = buf;
++    req.ucr_flags = USBD_SHORT_XFER_OK;
++#else
+     req.request.bmRequestType = request_type;
+     req.request.bRequest = request;
+     USETW(req.request.wValue, value);
+@@ -168,6 +207,7 @@
+ 
+     req.data = buf;
+     req.flags = USBD_SHORT_XFER_OK;
++#endif
+ 
+     /* !!! If your kernel is built with DIAGNOSTIC (which it is by
+        !!! default under some versions of NetBSD) this ioctl will fail.
+@@ -188,7 +228,11 @@
+     if(ioctl(dev->fd, USB_DO_REQUEST, &req) < 0)
+ 	return -1;
+     else
++#ifdef USB_need_prefix
++	return req.ucr_actlen;
++#else
+ 	return req.actlen;
++#endif
+ }
+ 
+ int pusb_set_configuration(pusb_device_t dev, int config)
+@@ -210,8 +254,13 @@
+     struct usb_alt_interface intf;
+     int config;
+ 
++#ifdef USB_need_prefix
++    intf.uai_interface_index = interface;
++    intf.uai_alt_no = alternate;
++#else
+     intf.interface_index = interface;
+     intf.alt_no = alternate;
++#endif
+ 
+     if(ioctl(dev->fd, USB_SET_ALTINTERFACE, &intf) < 0)
+     {
+@@ -239,12 +288,20 @@
+ {
+     struct usb_alt_interface intf;
+ 
++#ifdef USB_need_prefix
++    intf.uai_interface_index = interface;
++#else
+     intf.interface_index = interface;
++#endif
+ 
+     if(ioctl(dev->fd, USB_GET_ALTINTERFACE, &intf) < 0)
+ 	return -1;
+ 
++#ifdef USB_need_prefix
++    return intf.uai_alt_no;
++#else
+     return intf.alt_no;
++#endif
+ }
+ 
+ pusb_endpoint_t pusb_endpoint_open(pusb_device_t dev, int epnum, int flags)
