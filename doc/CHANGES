@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2312 2003/05/25 02:22:31 heinz Exp $
+$NetBSD: CHANGES,v 1.2313 2003/05/25 02:41:53 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2135,3 +2135,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated links to 2.1.0.11 [wiz 2003-05-24]
 	Updated links-gui to 2.1.0.11 [wiz 2003-05-24]
 	Updated p5-IO-Socket-SSL to 0.92 [heinz 2003-05-25]
+	Updated cvsync to 0.21.1 [gehenna 2003-05-25]
