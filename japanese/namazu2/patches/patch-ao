@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.1 2001/12/28 10:32:50 taca Exp $
+$NetBSD: patch-ao,v 1.2 2002/01/04 08:57:07 taca Exp $
 
 --- filter/powerpoint.pl.orig	Tue Dec 26 13:59:01 2000
 +++ filter/powerpoint.pl
@@ -22,7 +22,7 @@ $NetBSD: patch-ao,v 1.1 2001/12/28 10:32:50 taca Exp $
  
  sub status() {
 -	$pptconvpath = util::checkcmd('pptHtml');
-+	$pptconvpath = util::checkcmd('ppthtml') or util::checkcmd('pptHtml');
++	$pptconvpath = (util::checkcmd('ppthtml') or util::checkcmd('pptHtml'));
 +	$pptconvname = basename($pptconvpath);
  #	return 'no' unless defined $pptconvpath
  	if (defined $pptconvpath) {
