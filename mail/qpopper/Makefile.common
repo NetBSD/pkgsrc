@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/03/13 07:23:25 itojun Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/06/22 23:53:52 xtraeme Exp $
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
@@ -30,5 +30,12 @@ CONFIGURE_ARGS+=	--enable-servermode
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
 .endif
+
+.if defined(QPOPPER_USE_DRAC) && !empty(QPOPPER_USE_DRAC:M[Yy][Ee][Ss])
+.include "../../mail/drac/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-drac=${BUILDLINK_PREFIX.drac}
+.endif
+
+BUILD_DEFS+=		QPOPPER_USE_DRAC
 
 LIBS+=			${LDFLAGS}
