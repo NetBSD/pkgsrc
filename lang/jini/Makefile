@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/04 15:41:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/13 15:46:59 jschauma Exp $
 #
 
 DISTNAME=	jini-1_2_1-src
@@ -15,6 +15,7 @@ COMMENT=	Suns Jini(tm) Technology Starter Kit
 # comment out if you have a kernel built using that revision
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z[D-Z]-* NetBSD-1.[6-9]*-* Linux-*-*
 
+INTERACTIVE_STAGE=fetch
 LICENSE=	scsl3-jini-tsa-1.0-license
 RESTRICTED= "Redistribution of repackaged binaries not permitted"
 NO_SRC_ON_CDROM=${RESTRICTED}
