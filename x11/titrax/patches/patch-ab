@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/12/08 14:11:01 hwr Exp $
+
+--- titrat.orig Tue Oct 17 14:44:49 1995
++++ titrat      Tue Dec  8 13:48:48 1998
+@@ -7,9 +7,9 @@
+ require 'ctime.pl';
+ # If you cannot find errno.ph, just uncomment the following line, if
+ # EEXIST is 17 in your /usr/include/sys/errno.h file.
+-# eval 'sub EEXIST {17;}';
++eval 'sub EEXIST {17;}';
+ 
+-require 'errno.ph';
++# require 'errno.ph';
+ 
+ $SIG{'HUP'} = 'signal';
+ $SIG{'INT'} = 'signal';
+
