@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/05/09 12:53:26 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/05/10 19:26:57 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use boehm-gc.
 #
@@ -18,8 +18,13 @@ BUILDLINK_FILES.boehm-gc+=	include/gc/*
 BUILDLINK_FILES.boehm-gc+=	lib/libgc.*
 BUILDLINK_FILES.boehm-gc+=	lib/libleak.*
 
-BUILDLINK_TARGETS+=	boehm-gc-buildlink
+BUILDLINK_TARGETS+=	boehm-gc-buildlink boehm-gc-symlinks
 
 boehm-gc-buildlink: _BUILDLINK_USE
+
+boehm-gc-symlinks:
+	@cd ${BUILDLINK_DIR}/include && for hdr in gc/*.h; do \
+		${LN} -s $${hdr} .; \
+	done
 
 .endif	# BOEHM_GC_BUILDLINK2_MK
