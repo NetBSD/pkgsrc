@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.246 2005/01/25 00:20:25 simonb Exp $
+# $NetBSD: Makefile,v 1.247 2005/02/21 22:10:34 jlam Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -19,10 +19,6 @@ SUBDIR+=	clamav
 SUBDIR+=	clamsmtp
 SUBDIR+=	columba
 SUBDIR+=	coolmail
-SUBDIR+=	courier-auth
-SUBDIR+=	courier-authldap
-SUBDIR+=	courier-authmysql
-SUBDIR+=	courier-authpgsql
 SUBDIR+=	courier-imap
 SUBDIR+=	courier-maildir
 SUBDIR+=	cucipop
