@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
+$NetBSD: patch-aa,v 1.2 2002/10/07 00:36:35 jlam Exp $
 
---- configure.orig	Tue May 14 01:53:41 2002
+--- configure.orig	Wed Aug  7 11:02:50 2002
 +++ configure
-@@ -22016,6 +22016,40 @@
+@@ -22016,6 +22016,40 @@ if { (eval echo "$as_me:22007: \"$ac_lin
    echo "$as_me:22016: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
    eval "ac_cv_lib_vm='-lXxf86dga -lXxf86vm'"
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
  else
    echo "$as_me: failed program was:" >&5
  cat conftest.$ac_ext >&5
-@@ -22767,7 +22801,7 @@
+@@ -22767,7 +22801,7 @@ if test "x$au_enable_default" = xyes; th
        au_enable_sun=yes
        ;;
      *-*-netbsd*)
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
        ;;
      *-*-openbsd*)
        au_enable_sun=yes
-@@ -22788,7 +22822,7 @@
+@@ -22788,7 +22822,7 @@ if test "x$au_enable_oss" = xyes; then
  echo "${ECHO_T}yes - <sys/soundcard.h>" >&6
    else
      case "$target" in
@@ -61,7 +61,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
  		echo "$as_me:22792: result: yes" >&5
  echo "${ECHO_T}yes" >&6
  	;;
-@@ -26625,6 +26659,7 @@
+@@ -26278,7 +26312,7 @@ fi
+ echo "$as_me:26278: result: $ac_cv_lib_ossaudio_main" >&5
+ echo "${ECHO_T}$ac_cv_lib_ossaudio_main" >&6
+ if test $ac_cv_lib_ossaudio_main = yes; then
+-  LIBOSSAUDIO="-lossaudio"
++  LIBOSSAUDIO="${LIBOSSAUDIO}"
+ fi
+ 
+ echo "$as_me:26284: checking for main in -lasound" >&5
+@@ -26625,6 +26659,7 @@ case "$host" in
    *-*-*bsdi*) kscd_compile=yes;;
    *-*-*freebsd*) kscd_compile=yes;;
    *-*-*openbsd*) kscd_compile=yes;;
@@ -69,7 +78,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
    *-*-*bsd*) kscd_compile=no;;
    *) kscd_compile=yes;;
  esac
-@@ -26688,7 +26723,7 @@
+@@ -26688,7 +26723,7 @@ EOF
  fi
  done
  
@@ -78,7 +87,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
  echo "$as_me:26694: checking for $ac_header" >&5
-@@ -27007,7 +27042,22 @@
+@@ -27007,7 +27042,22 @@ if { (eval echo "$as_me:26998: \"$ac_com
    echo "$as_me:27007: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -101,7 +110,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -27056,7 +27106,22 @@
+@@ -27056,7 +27106,22 @@ if { (eval echo "$as_me:27047: \"$ac_com
    echo "$as_me:27056: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -124,7 +133,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -27105,7 +27170,22 @@
+@@ -27105,7 +27170,22 @@ if { (eval echo "$as_me:27096: \"$ac_com
    echo "$as_me:27105: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -147,7 +156,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -27381,6 +27461,9 @@
+@@ -27381,6 +27461,9 @@ esac
  kde_mpeglib_compiles=no
  
  case "$OS_TYPE" in
@@ -157,7 +166,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 14:46:47 skrll Exp $
    FreeBSD)
      kde_mpeglib_compiles=yes
      ;;
-@@ -27647,9 +27730,10 @@
+@@ -27647,9 +27730,10 @@ EOF
      ;;
  
    NetBSD)
