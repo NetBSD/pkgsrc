@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/10/05 14:17:15 kim Exp $
+
+--- doc/jwhois.texi.orig	Sun Sep 26 05:42:39 1999
++++ doc/jwhois.texi	Tue Oct  5 10:04:34 1999
+@@ -4,6 +4,10 @@
+ @settitle jwhois, Whois client
+ @c %**end of header
+ 
++@direntry
++* jwhois: (jwhois).	Whois client.
++@end direntry
++
+ @c This file has the new style title page commands.
+ @c Run `makeinfo' rather than `texinfo-format-buffer'.
+ 
