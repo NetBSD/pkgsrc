@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.1.1.1 2005/03/06 16:36:08 taca Exp $
+
+--- eval.c.orig	2002-12-16 16:34:22.000000000 +0900
++++ eval.c
+@@ -3531,7 +3531,8 @@ rb_jump_tag(tag)
+ int
+ rb_block_given_p()
+ {
+-    if (ruby_frame->iter) return Qtrue;
++    if (ruby_frame->iter && ruby_block)
++	return Qtrue;
+     return Qfalse;
+ }
+ 
+@@ -4489,7 +4490,7 @@ rb_call0(klass, recv, id, argc, argv, bo
+ 			rb_raise(rb_eArgError, "wrong # of arguments(%d for %d)",
+ 				 argc, i);
+ 		    }
+-		    if (node->nd_rest == -1) {
++		    if ((int)node->nd_rest == -1) {
+ 			int opt = i;
+ 			NODE *optnode = node->nd_opt;
+ 
+@@ -4525,7 +4526,7 @@ rb_call0(klass, recv, id, argc, argv, bo
+ 				rb_eval(recv, opt);
+ 			    }
+ 			}
+-			if (node->nd_rest >= 0) {
++			if ((int)node->nd_rest >= 0) {
+ 			    VALUE v;
+ 
+ 			    if (argc > 0)
