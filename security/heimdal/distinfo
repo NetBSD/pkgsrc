@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/02/22 11:59:50 markd Exp $
+$NetBSD: distinfo,v 1.4 2004/04/01 18:42:25 joda Exp $
 
-SHA1 (heimdal-0.6.tar.gz) = 06f00ea8ec26d64729806960f2f7f66bee8275bd
-Size (heimdal-0.6.tar.gz) = 3135319 bytes
-SHA1 (patch-aa) = 26482a8a642df10a2d816e660a2b80a6127c54d0
+SHA1 (heimdal-0.6.1.tar.gz) = d4f79a076727b7f909dffa04136504ca9fe01deb
+Size (heimdal-0.6.1.tar.gz) = 3312603 bytes
 SHA1 (patch-ab) = 400a9ac3a76ac7e8b4dcc230e0bdf7fc5222fbb7
 SHA1 (patch-ac) = 121961811f559822c6a4f3d7f7e4646b16908942
 SHA1 (patch-ad) = 47b4a76c1021f2683bd7f9940df78e2b38cf5448
-SHA1 (patch-ae) = 46d5125deec8b82c821208aa0091d96f625d8e88
-SHA1 (patch-af) = 7df1c2dfd7cb69d7ec657e4be0d56a57b394e3fd
-SHA1 (patch-ag) = 80c85e544f6be3ecdd538c89e888a80e77a2a630
