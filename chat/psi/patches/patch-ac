@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.4 2003/09/18 19:58:12 wiz Exp $
+
+--- src/profiles.cpp.orig	2003-05-26 02:40:13.000000000 +0200
++++ src/profiles.cpp
+@@ -518,7 +518,11 @@ void UserProfile::reset()
+ 	prefs.font[fMessage] = QApplication::font().toString();
+ 	prefs.font[fChat] = QApplication::font().toString();
+ 
++#ifdef __NetBSD__
++	prefs.player = "audioplay";
++#else
+ 	prefs.player = "play";
++#endif
+ 	prefs.noAwaySound = FALSE;
+ 
+ 	prefs.onevent[eMessage] = g.pathBase + "/sound/chat2.wav";
