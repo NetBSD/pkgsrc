@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/01/04 13:05:01 frueauf Exp $
+# $NetBSD: Makefile,v 1.23 1999/01/08 11:17:21 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.4.2
@@ -33,11 +33,13 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS= --prefix=${PREFIX}/${PGUSER} \
 		--enable-locale \
 		--with-tcl \
-		--with-tclconfig=${PREFIX}/lib/tcl8.0 \
+		--with-tclconfig="${PREFIX}/lib/tcl8.0 ${PREFIX}/lib/tk8.0" \
 		--with-includes=${PREFIX}/include \
 		--with-libs=${PREFIX}/lib \
 		--with-template=`${ECHO} ${OPSYS} | ${TR} '[A-Z]' '[a-z]'`
 CONFIGURE_ENV+=	CPPFLAGS="-I${PREFIX}/include/tcl8.0 -I${PREFIX}/include/tk8.0"
+
+INSTALL_TARGET=	install install-man
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -70,7 +72,7 @@ pre-install:
 .if defined(PACKAGE_BUILDING)
 	${RM} -rf ${PREFIX}/${PGUSER}
 .endif
-	@${MKDIR} ${PREFIX}/${PGUSER}
+	-@${MKDIR} ${PREFIX}/${PGUSER}
 	@${SETENV} ${MAKE_ENV} addnerd -h ${PREFIX} -g ${PGGROUP} ${PGUSER}
 	@${SED} -e 's|@PGUSER@|${PGUSER}|g' ${PKGDIR}/PLIST > ${PLIST_SRC}
 
@@ -99,14 +101,6 @@ post-install:
 	fi
 	@/usr/sbin/chown -R ${PGUSER}:${PGGROUP} ${PREFIX}/${PGUSER}
 	@${ECHO} 'Initializing PostgreSQL Databases - this may take a few minutes...'
-	@case `${GREP} -c '^${PREFIX}/${PGUSER}/lib$$' /etc/ld.so.conf` in	\
-	0)									\
-		${ECHO} "************** WARNING ********************";		\
-		${ECHO} "Please add ${PREFIX}/${PGUSER}/lib to /etc/ld.so.conf";\
-		${ECHO} "so that this package is usable after any reboot";	\
-		${ECHO} "************** WARNING ********************";		\
-		;;								\
-	esac
 	${LDCONFIG} ${PREFIX}/${PGUSER}/lib || ${TRUE}
 	@${ECHO} '${SETENV} PATH=${PREFIX}/${PGUSER}/bin:$$PATH ${PREFIX}/${PGUSER}/bin/initdb --pglib=${PREFIX}/${PGUSER}/lib --pgdata=${PREFIX}/${PGUSER}/data' | su -l ${PGUSER}
 	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" -e "s=!!PGUSER!!=${PGUSER}=g" \
@@ -116,7 +110,7 @@ post-install:
 	@${INSTALL} -c -o ${PGUSER} -g ${PGGROUP} -m 444 \
 		${FILESDIR}/post-install-notes ${PREFIX}/${PGUSER}
 .if !defined(NOPORTDOCS)
-	${MKDIR} ${PREFIX}/share/doc/pgsql
+	-${MKDIR} ${PREFIX}/share/doc/pgsql
 	${CP} -R ${WRKDIR}/${DISTNAME}/doc/* ${PREFIX}/share/doc/pgsql
 	${RM} -rf ${PREFIX}/share/doc/pgsql/src/CVS \
 		${PREFIX}/share/doc/pgsql/src/graphics/CVS \
@@ -127,5 +121,13 @@ post-install:
 .if !defined(BATCH)
 	@${CAT} ${FILESDIR}/post-install-notes
 .endif
+	@case `${GREP} -c '^${PREFIX}/${PGUSER}/lib$$' /etc/ld.so.conf` in	\
+	0)									\
+		${ECHO} "************** WARNING ********************";		\
+		${ECHO} "Please add ${PREFIX}/${PGUSER}/lib to /etc/ld.so.conf";\
+		${ECHO} "so that this package is usable after any reboot";	\
+		${ECHO} "************** WARNING ********************";		\
+		;;								\
+	esac
 
 .include "../../mk/bsd.pkg.mk"
