@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.5 1999/03/07 19:50:55 tron Exp $
+$NetBSD: md5,v 1.6 1999/08/30 08:54:03 jlam Exp $
 
-MD5 (libgtop-1.0.1.tar.gz) = f9b1c3c6f6eb178016a5213ab43a0219
+MD5 (libgtop-1.0.2.tar.gz) = 223d09d2c190e26109d731b1697f1bc8

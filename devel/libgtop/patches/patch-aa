@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.5 1999/03/07 19:50:55 tron Exp $
+$NetBSD: patch-aa,v 1.6 1999/08/30 08:54:03 jlam Exp $
 
---- configure.orig	Mon Mar  1 22:52:44 1999
-+++ configure	Sun Mar  7 20:37:46 1999
-@@ -2451,6 +2451,7 @@
- fi
+--- configure.orig	Thu May 27 20:43:55 1999
++++ configure	Sun Aug 29 18:59:43 1999
+@@ -2466,6 +2466,7 @@
+ USE_SYMBOL_UNDERSCORE=${ac_cv_sys_symbol_underscore=no}
  
  # Always use our own libtool.
 +if false; then
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
  # Check for any special flags to pass to ltconfig.
-@@ -2682,6 +2683,7 @@
+@@ -2697,6 +2698,7 @@
  ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
@@ -18,15 +18,16 @@ $NetBSD: patch-aa,v 1.5 1999/03/07 19:50:55 tron Exp $
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -5103,6 +5105,7 @@
+@@ -5116,7 +5118,7 @@
  
  
- # Always use our own libtool.
+ 
+-
 +if false; then
+ # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
- # Check for any special flags to pass to ltconfig.
-@@ -5334,6 +5337,7 @@
+@@ -5349,6 +5351,7 @@
  ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
