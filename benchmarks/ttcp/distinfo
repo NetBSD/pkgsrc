@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2002/03/26 16:30:03 abs Exp $
+$NetBSD: distinfo,v 1.4 2002/06/11 21:56:55 itojun Exp $
 
 SHA1 (ttcp.tar.Z) = 33a60af208eff3dc9ae745060f44b24c4e74aa7e
 Size (ttcp.tar.Z) = 18163 bytes
 SHA1 (patch-aa) = a9717aa9fd5f8cdff1a39c9b7d6ab17abbe399ad
-SHA1 (patch-ab) = 433b6665948d12155bc0e9fad0ffc9207b18294b
+SHA1 (patch-ab) = 8ee4942958765029f50a0b87e45be1f5ca4c56e2
