@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.8 2004/03/08 20:27:14 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/08 23:47:44 minskim Exp $
 
-DISTNAME=	otcl-1.0a8
-PKGNAME=	tcl-${DISTNAME:S/a/rc/}
-PKGREVISION=	2
+DISTNAME=	otcl-1.8
+PKGNAME=	tcl-${DISTNAME}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=otcl-tclcl/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://otcl-tclcl.sourceforge.net/otcl/
 COMMENT=	MIT Object Tcl
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_BUILDLINK2=	yes
 USE_X11=	yes
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
@@ -26,6 +27,11 @@ DOCS=		otcl-paper.ps.gz
 HTMLDOCDIR=	${PREFIX}/share/doc/html/tcl/otcl
 DOCDIR=		${PREFIX}/share/doc/tcl/otcl
 
+INSTALLATION_DIRS=	bin include lib
+
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
+
 post-install:
 	${INSTALL_DATA_DIR} ${HTMLDOCDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -36,5 +42,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${_file_} ${DOCDIR}
 .endfor
 
-.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
