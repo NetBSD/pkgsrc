@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/27 03:19:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/12/30 21:44:25 agc Exp $
 #
 
 DISTNAME=		xm71010s
@@ -24,10 +24,13 @@ LHA=			lha
 EXTRACT_CMD=		${LHA} xqte ${DOWNLOADED_DISTFILE}
 
 NO_CONFIGURE=		yes
-MAKEFILE=		Makefile.X11
+MAKEFILE=		makefile.x11
 
 post-extract:
 	@cd ${WRKDIR}; ${MV} linux/* vm
+
+pre-build:
+	cd ${WRKSRC}; ${MV} cpu.c cpu.c-msdos && ${SED} -e 's|.$$||g' cpu.c-msdos > cpu.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/vm/xm7 ${PREFIX}/bin
