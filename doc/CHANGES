@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1835 2003/04/03 14:44:50 markd Exp $
+$NetBSD: CHANGES,v 1.1836 2003/04/03 15:48:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1455,3 +1455,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libslang to 1.4.9 [wiz 2003-04-03]
 	Updated libnbcompat to 20030403 [grant 2003-04-03]
 	Updated kdegraphics3 to 3.1.1nb1 [markd 2003-04-03]
+	Updated sudo to 1.6.7.2 [wiz 2003-04-03]
