@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2003/12/14 11:38:21 markd Exp $
+$NetBSD: distinfo,v 1.6 2004/01/15 09:20:53 markd Exp $
 
 SHA1 (kile-1.6.tar.gz) = b9d1b0958bb26600df784f03e0df70f4f5f757ae
 Size (kile-1.6.tar.gz) = 2150149 bytes
-SHA1 (patch-aa) = 86e3c69f8356e715dfbf239667d729cd071e3b3c
+SHA1 (patch-aa) = 9c2fc465328a6813529c7c44c1391e8eed38e3dd
