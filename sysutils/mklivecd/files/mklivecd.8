@@ -1,4 +1,4 @@
-.\" $NetBSD: mklivecd.8,v 1.1.1.1 2004/02/26 03:58:54 xtraeme Exp $
+.\" $NetBSD: mklivecd.8,v 1.2 2004/02/27 01:32:31 xtraeme Exp $
 .\"
 .\" mklivecd - Build a NetBSD Live CD for i386 machines
 .\" Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
@@ -37,6 +37,9 @@
 Live CD for i386 machines
 .Sh SYNOPSIS
 .Nm
+.Oo
+.Ar -c conf_file
+.Oc 
 .Ar target
 .Sh DESCRIPTION
 .Nm
@@ -45,6 +48,15 @@ allows you to build your own
 Live CD, so you don't need to install
 .Nx
 to any disk, because it will run directly from the CD-ROM.
+.Pp
+The following options are recognized:
+.Bl -tag -width XcXconf_file
+.It Fl c Ar conf_file
+Use
+.Ar conf_file
+as configuration file (full name expected). Example:
+.Ar -c foo.conf .
+.El
 .Sh CONFIGURATION
 .Nm
 reads the parameters of the main configuration file
