@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.153 1998/08/28 14:03:48 garbled Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.154 1998/09/01 13:15:29 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -762,70 +762,70 @@ describe:
 .if !target(do-fetch)
 do-fetch:
 	@${MKDIR} ${_DISTDIR}
-	@(cd ${_DISTDIR}; \
-	 for file in ${_DISTFILES}; do \
-		bfile=`${BASENAME} $$file`; \
-		if [ ! -f $$file -a ! -f $$bfile ]; then \
-			if [ -h $$file -o -h $$bfile ]; then \
+	@(cd ${_DISTDIR};						\
+	 for file in ${_DISTFILES}; do					\
+		bfile=`${BASENAME} $$file`;				\
+		if [ ! -f $$file -a ! -f $$bfile ]; then		\
+			if [ -h $$file -o -h $$bfile ]; then		\
 				${ECHO_MSG} ">> ${_DISTDIR}/$$bfile is a broken symlink."; \
 				${ECHO_MSG} ">> Perhaps a filesystem (most likely a CD) isn't mounted?"; \
 				${ECHO_MSG} ">> Please correct this problem and try again."; \
-				exit 1; \
-			fi ; \
+				exit 1;					\
+			fi ;						\
 			${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
-			for site in ${MASTER_SITES}; do \
+			for site in ${MASTER_SITES}; do			\
 				${ECHO_MSG} ">> Attempting to fetch $$bfile from $${site}."; \
 				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
-					if [ -f ${MD5_FILE} ]; then \
+					if [ "X${FAILOVER_FETCH}" != X"" -a -f ${MD5_FILE} ]; then \
 						CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
 						CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
 						if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
-							continue 2; \
-						else \
+							continue 2;	\
+						else			\
 							${ECHO_MSG} ">> Checksum failure - trying next site."; \
-						fi; \
-					else \
-						continue 2; \
-					fi; \
-				fi \
-			done; \
+						fi;			\
+					else				\
+						continue 2;		\
+					fi;				\
+				fi					\
+			done;						\
 			${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
-			${ECHO_MSG} ">> port manually into ${_DISTDIR} and try again."; \
-			exit 1; \
-		fi \
+			${ECHO_MSG} ">> file manually into ${_DISTDIR} and try again."; \
+			exit 1;						\
+		fi							\
 	 done)
 .if defined(PATCHFILES)
-	@(cd ${_DISTDIR}; \
-	 for file in ${_PATCHFILES}; do \
-		bfile=`${BASENAME} $$file`; \
-		if [ ! -f $$file -a ! -f $$bfile ]; then \
-			if [ -h $$file -o -h $$bfile ]; then \
+	@(cd ${_DISTDIR};						\
+	 for file in ${_PATCHFILES}; do					\
+		bfile=`${BASENAME} $$file`;				\
+		if [ ! -f $$file -a ! -f $$bfile ]; then		\
+			if [ -h $$file -o -h $$bfile ]; then		\
 				${ECHO_MSG} ">> ${_DISTDIR}/$$bfile is a broken symlink."; \
 				${ECHO_MSG} ">> Perhaps a filesystem (most likely a CD) isn't mounted?"; \
 				${ECHO_MSG} ">> Please correct this problem and try again."; \
-				exit 1; \
-			fi ; \
+				exit 1;					\
+			fi ;						\
 			${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
-			for site in ${PATCH_SITES}; do \
+			for site in ${PATCH_SITES}; do			\
 			    ${ECHO_MSG} ">> Attempting to fetch from $${site}."; \
 				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
-					if [ -f ${MD5_FILE} ]; then \
+					if [ "X${FAILOVER_FETCH}" != X"" -a -f ${MD5_FILE} ]; then \
 						CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
 						CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
 						if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
-							continue 2; \
-						else \
+							continue 2;	\
+						else			\
 							${ECHO_MSG} ">> Checksum failure - trying next site."; \
-						fi; \
-					else \
-						continue 2; \
-					fi; \
-				fi \
-			done; \
+						fi;			\
+					else				\
+						continue 2;		\
+					fi;				\
+				fi					\
+			done;						\
 			${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
-			${ECHO_MSG} ">> port manually into ${_DISTDIR} and try again."; \
-			exit 1; \
-		fi \
+			${ECHO_MSG} ">> file manually into ${_DISTDIR} and try again."; \
+			exit 1;						\
+		fi							\
 	 done)
 .endif
 .endif
@@ -1662,34 +1662,28 @@ depends-list:
 # i.e. contain OS version and arch name as subdirs
 .if !target(binpkg-list)
 binpkg-list:
-	@cd ${PACKAGES}/../.. ; \
-	for i in */* ; \
-	do \
-		f=$$i/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ; \
-		if [ -f $$f ]; then \
-			echo $$i; \
-		fi ; \
-	done | awk ' 											\
-		BEGIN 												\
-		{ 													\
-			FS="/";											\
-		} 													\
-		{													\
-			rel=$$1 ; 										\
-			arch=$$2 ; 										\
-			if (arch != "m68k"){							\
-				if (arch in f) 								\
-					f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%, " f[arch];					\
-				else 											\
-					f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%";								\
-			}												\
-		} 													\
-		END 												\
-		{ 													\
-			for (rel in	f) {								\
-				print "%%BIN_PREARCH%%" rel "%%BIN_POSTARCH%% (NetBSD " f[rel] ")";						\
-			}												\
-		} 													\
+	@cd ${PACKAGES}/../..;						\
+	for i in */*; do						\
+		if [ -f $$i/${PKGREPOSITORYSUBDIR}/${PKGNAME}${PKG_SUFX} ]; then \
+			echo $$i;					\
+		fi ;							\
+	done | awk -F/ ' 						\
+		{							\
+			rel=$$1; 					\
+			arch=$$2; 					\
+			if (arch != "m68k"){				\
+				if (arch in f) 				\
+					f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%, " f[arch]; \
+				else 					\
+					f[arch] = "%%BIN_PREREL%%" rel "/" arch "%%BIN_MEDREL%%" rel "%%BIN_POSTREL%%"; \
+			}						\
+		} 							\
+		END 							\
+		{ 							\
+			for (rel in f) {				\
+				print "%%BIN_PREARCH%%" rel "%%BIN_POSTARCH%% (NetBSD " f[rel] ")"; \
+			}						\
+		} 							\
 	'
 .endif
 

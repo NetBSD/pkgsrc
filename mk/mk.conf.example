@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.24 1998/08/30 11:01:58 frueauf Exp $
+# $NetBSD: mk.conf.example,v 1.25 1998/09/01 13:15:29 agc Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -38,7 +38,7 @@ MANZ=		1		# gzip manual pages at installation time
 #PACKAGES=       ${PKGSRCDIR}/packages/${MACHINE_ARCH}
                                 # Store generated packages on a per-
                                 # architecture base
-                                # Possible: any path you like :)
+                                # Possible: any path you like
                                 # Default: /usr/pkgsrc/packages
 
 #OBJMACHINE=	1		# use machine-specific object directories,
@@ -56,17 +56,27 @@ MANZ=		1		# gzip manual pages at installation time
 
 #PASSIVE_FETCH=	1		# Use ftp(1) in passive mode, for use behind
                                 # filtering firewalls.
+                                # (Set by default in ftp(1) in NetBSD-current)
                                 # Possible: defined, not defined
                                 # Default: not defined
 
-#ACCEPTABLE_LICENSES=	shareware non-commercial-use
+#ACCEPTABLE_LICENSES=	shareware no-commercial-use
                                 # Whitespace-delimited list of the types of
                                 # license which are acceptable for installation.
                                 # (apart from standard "free" licenses such as
                                 # Berkeley/CMU and GPL).
-                                # Possible: shareware, non-commercial-use
+                                # Possible: shareware, no-commercial-use
                                 # 
                                 # Default: none
+
+#FAILOVER_FETCH= yes            # Perform a checksum at "make fetch" time.
+                                # If the checksum doesn't match the stored
+                                # value, try to retrieve the file from the
+                                # next site in the list
+                                # Possible: set, not set
+                                # Default: not set
+
+
 
 
 #
