@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 1998/10/11 22:06:20 kim Exp $
+# $NetBSD: Makefile,v 1.4 1998/10/12 06:11:39 kim Exp $
 #
 
-DISTNAME=	squid-2.0.PATCH1
+DISTNAME=	squid-2.0.PATCH2
 CATEGORIES=	www
 MASTER_SITES=  \
 	ftp://squid.nlanr.net/pub/squid-2/ \
@@ -12,7 +12,10 @@ MASTER_SITES=  \
 	ftp://ftp.net.lut.ac.uk/squid/squid-2/
 EXTRACT_SUFX=	-src.tar.gz
 
-CONFLICTS=	squid-1.1.21 squid-2.0.PRE1
+CONFLICTS=	squid-1.1.21 \
+		squid-2.0.PRE1 \
+		squid-2.0.RELEASE \
+		squid-2.0.PATCH1
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://squid.nlanr.net/Squid/
