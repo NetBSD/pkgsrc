@@ -121,7 +121,6 @@ if ($ARGV[0] eq "rtadvd-stop" or $ARGV[0] eq "stop-rtadvd") {
 }
 
 # rtadvd-start:
-# Write config file for rtadvd to /tmp and start rtadvd:
 if ($ARGV[0] eq "rtadvd-start" or $ARGV[0] eq "start-rtadvd" ) {
     if ( -f "/var/run/rtadvd.pid" ) {
 	print "rtadvd already running!\n";
