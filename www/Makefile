@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2003/08/16 14:21:09 taya Exp $
+# $NetBSD: Makefile,v 1.269 2003/08/20 11:26:17 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -89,6 +89,7 @@ SUBDIR+=	jakarta-tomcat
 SUBDIR+=	jsdk20
 SUBDIR+=	jssi
 SUBDIR+=	kannel
+SUBDIR+=	kimagemapeditor
 SUBDIR+=	lhs
 SUBDIR+=	libghttp
 SUBDIR+=	libgtkhtml
