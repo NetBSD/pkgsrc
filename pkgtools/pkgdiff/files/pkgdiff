@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkgdiff,v 1.11 2003/06/10 12:47:32 wiz Exp $
+# $NetBSD: pkgdiff,v 1.12 2003/06/14 19:12:41 atatat Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -38,7 +38,8 @@ dodiff() {
 }
 
 lines=3
-while [ `dodiff -u -p -$lines "$old" "$new" | egrep -c '\\$(NetBSD|Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State)(:.*)?\\$'`  !=  0 ]
+: ${PKGDIFF_FMT:=-u -p}
+while [ `dodiff "$PKGDIFF_FMT" -$lines "$old" "$new" | egrep -c '\\$(NetBSD|Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State)(:.*)?\\$'`  !=  0 ]
 do
 	lines=`expr $lines - 1`
 	if [ $lines = 0 ]; then
@@ -47,7 +48,7 @@ do
 	fi
 done
 
-if dodiff -q -u -p -$lines "$old" "$new" > /dev/null
+if dodiff -q "$PKGDIFF_FMT" -$lines "$old" "$new" > /dev/null
 then
 	:
 else
@@ -55,5 +56,5 @@ else
     echo ''
     # Strip out the date on the +++ line to reduce needless
     # differences in regenerated patches
-    dodiff -u -p -$lines "$old" "$new" | sed -e 's:^\(+++ [^	]*\)	.*:\1:'
+    dodiff "$PKGDIFF_FMT" -$lines "$old" "$new" | sed -e 's:^\(+++ [^	]*\)	.*:\1:'
 fi
