@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 18:24:41 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/05/15 11:33:28 jmmv Exp $
 bin/gnome-keyring-daemon
 include/gnome-keyring-1/gnome-keyring.h
 lib/libgnome-keyring.a
@@ -23,6 +23,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-keyring.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-keyring.mo
@@ -31,6 +32,7 @@ ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-keyring.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-keyring.mo
