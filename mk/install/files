@@ -1,0 +1,276 @@
+#!@SH@
+#
+# $NetBSD: files,v 1.1 2005/02/02 10:33:01 jlam Exp $
+#
+# +FILES - reference-counted configuration file management script
+#
+# Usage: ./+FILES ADD|REMOVE [metadatadir]
+#        ./+FILES VIEW-REMOVE depotdir viewdir
+#        ./+FILES CHECK-ADD|CHECK-REMOVE [metadatadir]
+#
+# This script supports two actions, ADD and REMOVE, that will add or
+# remove the configuration files needed by the package associated with
+# <metadatadir>.  The CHECK-ADD action will check whether any files
+# needed by the package are missing, and print an informative message
+# noting those files.  The CHECK-REMOVE action will check whether
+# any files needed by the package still exist, and print an informative
+# message noting those files.  The CHECK-ADD and CHECK-REMOVE actions
+# return non-zero if they detect either missing or existing files,
+# respectively.  The VIEW-REMOVE action will remove from <viewdir> the
+# links to the configuration files in <depotdir>.
+#
+# Lines starting with "# FILE: " are data read by this script that
+# name the files that this package requires to exist to function
+# correctly, along with the locations of the example files, e.g.
+#
+#	# FILE: /etc/bar.conf c /example/bar.conf
+#	# FILE: /etc/baz/conf c /example/baz.conf 0600 foo-user foo-group
+#
+# The second field in each FILE entry is a set of flags with the following
+# meaning:
+#
+#	c	file is copied into place
+#
+CAT="@CAT@"
+CP="@CP@"
+CHGRP="@CHGRP@"
+CHMOD="@CHMOD@"
+CHOWN="@CHOWN@"
+CMP="@CMP@"
+ECHO="@ECHO@"
+GREP="@GREP@"
+MKDIR="@MKDIR@"
+MV="@MV@"
+PWD_CMD="@PWD_CMD@"
+RM="@RM@"
+RMDIR="@RMDIR@"
+SED="@SED@"
+SORT="@SORT@"
+TEST="@TEST@"
+TRUE="@TRUE@"
+
+SELF=$0
+ACTION=$1
+
+case ${ACTION} in
+VIEW-REMOVE)
+	DEPOTDIR="$2"
+	VIEWDIR="$3"
+        ${TEST} -n "${DEPOTDIR}" -a -n "${VIEWDIR}" || exit 0
+	;;
+*)
+	PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
+	: ${PKGNAME=${PKG_METADATA_DIR##*/}}
+	: ${PKG_DBDIR=${PKG_METADATA_DIR%/*}}
+	: ${PKG_REFCOUNT_DBDIR=${PKG_DBDIR}.refcount}
+	PKG_REFCOUNT_FILES_DBDIR="${PKG_REFCOUNT_DBDIR}/files"
+	;;
+esac
+
+exitcode=0
+case $ACTION in
+ADD)
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read file f_flags f_eg f_mode f_user f_group; do
+		case $file in
+		""|[!/]*)	continue ;;
+		esac
+		case $f_flags in
+		*c*)	;;
+		*)	continue ;;
+		esac
+
+		shadow_dir="${PKG_REFCOUNT_FILES_DBDIR}$file"
+		perms="$shadow_dir/+PERMISSIONS"
+		preexist="$shadow_dir/+PREEXISTING"
+		token="$shadow_dir/${PKGNAME}"
+		if ${TEST} ! -d "$shadow_dir"; then
+			${MKDIR} $shadow_dir
+			${TEST} -f "$file" &&
+				${ECHO} "${PKGNAME}" > $preexist
+		fi
+		if ${TEST} -f "$token" && \
+		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
+			:
+		else
+			${ECHO} "${PKG_METADATA_DIR}" >> $token
+		fi
+
+		case $f_mode$f_user$f_group in
+		"")	;;
+	 	*)	${ECHO} "$f_mode $f_user $f_group" > $perms ;;
+		esac
+		if ${TEST} ! -f "$file" -a ! -f "$f_eg"; then
+			:
+		else
+			case "$printed_header" in
+			yes)	;;
+			*)	printed_header=yes
+				${ECHO} "==========================================================================="
+				${ECHO} "Installing files needed by ${PKGNAME}:"
+				;;
+			esac
+			if ${TEST} -f "$file"; then
+				${ECHO} ""
+				${ECHO} "	$file already exists."
+			elif ${TEST} -f "$f_eg"; then
+				${ECHO} ""
+				${ECHO} "	$file"
+				${ECHO} "	    [$f_eg]"
+				${CP} $f_eg $file
+				case $f_mode in
+				"")	;;
+				*)	${CHMOD} $f_mode $file ;;
+				esac
+				case $f_user in
+				"")	;;
+				*)	${CHOWN} $f_user $file ;;
+				esac
+				case $f_group in
+				"")	;;
+				*)	${CHGRP} $f_group $file ;;
+				esac
+			fi
+		fi
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		;;
+	esac; }
+	;;
+
+REMOVE)
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	while read file f_flags f_eg f_mode f_user f_group; do
+		case $file in
+		""|[!/]*)	continue ;;
+		esac
+		case $f_flags in
+		*c*)	;;
+		*)	continue ;;
+		esac
+		shadow_dir="${PKG_REFCOUNT_FILES_DBDIR}$file"
+		perms="$shadow_dir/+PERMISSIONS"
+		preexist="$shadow_dir/+PREEXISTING"
+		token="$shadow_dir/${PKGNAME}"
+		tokentmp="$token.tmp.$$"
+		if ${TEST} -f "$token" && \
+		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
+			${CAT} "$token" | ${GREP} -v "^${PKG_METADATA_DIR}$" > $tokentmp
+			case `${CAT} $tokentmp | ${SED} -n "$="` in
+			"")
+				if ${TEST} -f "$preexist"; then
+					:
+				elif ${TEST} -f "$file" -a -f "$f_eg" -a \
+					     ! "$file" -ef "$f_eg" && \
+					     ${CMP} -s "$file" "$f_eg"; then
+					${RM} -f "$file"
+				fi
+				${RM} -f $perms $preexist $token $token.tmp.*
+				${RMDIR} -p $shadow_dir 2>/dev/null || ${TRUE}
+				;;
+			*)
+				${MV} -f $tokentmp $token
+				;;
+			esac
+		fi
+	done
+	;;
+
+VIEW-REMOVE)
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	while read file f_flags f_eg f_mode f_user f_group; do
+		case $file in
+		${DEPOTDIR}/*)	;;
+		*)		continue ;;
+		esac
+		link="${VIEWDIR}/${file#${DEPOTDIR}/}"
+		dir="${link%[^/]*}"
+		if ${TEST} -h "$link"; then
+			${RM} -f $link
+			${RMDIR} -p $dir 2>/dev/null || ${TRUE}
+		fi
+	done
+	;;
+
+CHECK-ADD)
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	{ while read file f_flags f_eg f_mode f_user f_group; do
+		case $file in
+		""|[!/]*)	continue ;;
+		*)		${TEST} -f "$file" && continue ;;
+		esac
+		case $f_flags in
+		*c*)	;;
+		*)	continue ;;
+		esac
+		case "$printed_header" in
+		yes)	;;
+		*)	printed_header=yes
+			${ECHO} "==========================================================================="
+			${ECHO} "The following files should be created for ${PKGNAME}:"
+			;;
+		esac
+		${ECHO} ""
+		case $f_mode/$f_user/$f_group in
+		//)
+			${ECHO} "	$file"
+			;;
+		[!/]*//)
+			${ECHO} "	$file (m=$f_mode)"
+			;;
+		[!/]*/[!/]*/)
+			${ECHO} "	$file (o=$f_user, m=$f_mode)"
+			;;
+		[!/]*/[!/]*/[!/]*)
+			${ECHO} "	$file (o=$f_user, g=$f_group, m=$f_mode)"
+			;;
+		esac
+		${TEST} -f "$f_eg" && ${ECHO} "	    [$f_eg]"
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		exit 1
+		;;
+	esac; }
+	${TEST} $? -eq 0 || exitcode=1
+	;;
+
+CHECK-REMOVE)
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	{ while read file f_flags f_eg f_mode f_user f_group; do
+		case $file in
+		""|[!/]*)	continue ;;
+		*)		${TEST} -f "$file" || continue ;;
+		esac
+		shadow_dir="${PKG_REFCOUNT_FILES_DBDIR}$file"
+		${TEST} -d "$shadow_dir" && continue	# refcount isn't zero
+		case "$printed_header" in
+		yes)	;;
+		*)	printed_header=yes
+			${ECHO} "==========================================================================="
+			${ECHO} "The following file are no longer being used by ${PKGNAME},"
+			${ECHO} "and they can be removed if no other packages are using them:"
+			${ECHO} ""
+			;;
+		esac
+		${ECHO} "	$file"
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		exit 1
+		;;
+	esac; }
+	${TEST} $? -eq 0 || exitcode=1
+	;;
+
+*)
+	${ECHO} "Usage: ./+FILES ADD|REMOVE [metadatadir]"
+	${ECHO} "       ./+FILES VIEW-REMOVE depotdir viewdir"
+	${ECHO} "       ./+FILES CHECK-ADD|CHECK-REMOVE [metadatadir]"
+	;;
+esac
+exit $exitcode
