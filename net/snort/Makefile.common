@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.13 2003/12/31 14:11:42 salo Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/04/10 03:09:45 snj Exp $
 #
 
-DISTNAME=		snort-2.1.0
+DISTNAME=		snort-2.1.2
 CATEGORIES=		net security
 MASTER_SITES=		http://www.snort.org/dl/				\
 			ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
@@ -10,7 +10,7 @@ MASTER_SITES=		http://www.snort.org/dl/				\
 MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.snort.org/
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 
@@ -77,5 +77,5 @@ post-install:
 	done
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${PREFIX}/man/man8
 
-.include "../../devel/pcre/buildlink2.mk"
-.include "../../net/libpcap/buildlink2.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
