@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.5 2004/04/03 10:26:14 hubertf Exp $
+
+--- tests/test.c.orig	Fri Apr  2 23:11:59 2004
++++ tests/test.c
+@@ -1256,7 +1256,7 @@ void run_one_test()
+ 	FAIL;
+       }
+       if (!TEST_FAIL_COUNT(1)) {
+-#	if!(defined(RS6000) || defined(POWERPC) || defined(IA64))
++#	if!(defined(RS6000) || defined(POWERPC) || defined(IA64) || defined(M68K))
+ 	  /* ON RS6000s function pointers point to a descriptor in the	*/
+ 	  /* data segment, so there should have been no failures.	*/
+     	  (void)GC_printf0("GC_is_visible produced wrong failure indication\n");
