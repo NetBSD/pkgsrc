@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5858 2004/05/07 13:54:32 wiz Exp $
+$NetBSD: CHANGES,v 1.5859 2004/05/07 14:04:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2397,3 +2397,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-FileHandle-Unget-0.14 [wiz 2004-05-07]
 	Updated gentoo to 0.11.50 [adam 2004-05-07]
 	Added p5-Mail-Mbox-MessageParser-0.14 [wiz 2004-05-07]
+	Updated grepmail to 5.22nb1 [wiz 2004-05-07]
