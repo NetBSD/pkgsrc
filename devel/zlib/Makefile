@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/19 21:53:29 kim Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/20 23:23:57 kim Exp $
 #
 
 DISTNAME=	zlib-1.1.3
@@ -13,15 +13,11 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} --shared
 
 .include "../../mk/bsd.prefs.mk"
 
-#.if ${OPSYS} == "SunOS"
-#.if !make(fake-pkg)
-#CC=		cc
-#.endif
-#.endif
-
 .if exists(/usr/lib/libz.a)
 IGNORE=		"is part of your NetBSD distribution"
 .endif
+
+CFLAGS=		-fPIC -O3
 
 post-extract:
 	@cd ${WRKDIR} && ${MKDIR} static && ${PAX} -rw ${DISTNAME} static
@@ -30,11 +26,11 @@ post-patch:
 	@${MAKE} do-patch WRKSRC=${WRKDIR}/static/${DISTNAME}
 
 post-configure:
-	@${MAKE} do-configure WRKSRC=${WRKDIR}/static/${DISTNAME} \
+	@${MAKE} do-configure WRKSRC=${WRKDIR}/static/${DISTNAME} CFLAGS=-O3 \
 	CONFIGURE_ARGS="`${ECHO} ${CONFIGURE_ARGS} | ${SED} -e 's/--shared//'`"
 
 post-build:
-	@${MAKE} do-build WRKSRC=${WRKDIR}/static/${DISTNAME}
+	@${MAKE} do-build WRKSRC=${WRKDIR}/static/${DISTNAME} CFLAGS=-O3
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/static/${DISTNAME}/libz.a ${PREFIX}/lib
