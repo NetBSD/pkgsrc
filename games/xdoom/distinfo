@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/07/29 11:09:50 blymn Exp $
+$NetBSD: distinfo,v 1.4.4.1 2002/08/20 13:10:30 wiz Exp $
 
 SHA1 (doomsrc.zip) = ffd07e0bd95b7c6ba0cd003fb6ff5ebd535d6f99
 Size (doomsrc.zip) = 362698 bytes
@@ -9,7 +9,7 @@ SHA1 (patch-ab) = 32d4389a7fc2413d19fe8f66d6da9205effa710a
 SHA1 (patch-ac) = d47c6e1388f3d2d7ea5dbc074c5bec34adf14f1f
 SHA1 (patch-ad) = cb8e892e9fa561960da46c0bfea61bcf65246458
 SHA1 (patch-ae) = 5bba08b0ae36e3a9b9b48b1dba9570035cf1a54d
-SHA1 (patch-af) = 04b9683d1f4426240e83a47f9f14f7c0cc91a5e9
+SHA1 (patch-af) = 19367ee3112bfd0e5c054749347e642e6d0ff2ee
 SHA1 (patch-ag) = accb03154ee6fcd8771b5cd782bb4f4fb0c96b1b
 SHA1 (patch-ah) = 8ce7eff703079ca435bcffd125483285d8bade5c
 SHA1 (patch-ai) = 26222ea901448bf134bda6de0843f6fa6f220339

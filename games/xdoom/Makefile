@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2001/11/29 01:12:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.17.8.1 2002/08/20 13:10:30 wiz Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/source/
@@ -28,8 +28,8 @@ post-extract:
 	(cd ${WRKDIR}; ${GTAR} xzf sndserv.tgz)
 
 do-build:
-	cd ${WRKSRC}/${DISTNAME} ; ${GMAKE}
-	cd ${WRKSRC}/sndserv ; ${GMAKE}
+	cd ${WRKSRC}/${DISTNAME} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
+	cd ${WRKSRC}/sndserv && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME}/linux/linuxxdoom ${PREFIX}/bin/xdoom
