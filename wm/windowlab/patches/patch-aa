@@ -1,0 +1,61 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/02 07:24:00 xtraeme Exp $
+
+--- Makefile.orig	2003-04-19 14:19:28.000000000 +0200
++++ Makefile	2003-05-16 01:55:05.000000000 +0200
+@@ -6,7 +6,7 @@
+ 
+ # Information about the location of the menurc file
+ ifndef MENURC
+-MENURC = /etc/X11/windowlab/menurc
++MENURC = ${PKG_SYSCONFDIR}/menurc
+ endif
+ DEFINES += -DDEF_MENURC="\"$(MENURC)\""
+ 
+@@ -15,27 +15,26 @@
+ 
+ # Uncomment to add freetype support (requires XFree86 4.0.2 or later)
+ # This needs -lXext above, even if you have disabled shape support.
+-#DEFINES += -DXFT
+-#EXTRA_INC += `pkg-config --cflags xft`
+-#EXTRA_LIBS += `pkg-config --libs xft`
++DEFINES += -DXFT
++EXTRA_INC += `pkg-config --cflags xft`
++EXTRA_LIBS += `pkg-config --libs xft`
+ 
+ # Uncomment for debugging info (abandon all hope, ye who enter here)
+ #DEFINES += -DDEBUG
+ 
+ # This should be set to the location of the X installation you want to
+ # compile against.
+-XROOT = /usr/X11R6
++XROOT = ${PREFIX}
+ 
+ # --------------------------------------------------------------------
+ 
+-CC       = gcc
+-CFLAGS   = -g -O2 -Wall
++#CC       = gcc
++CFLAGS   += -g -O2 -Wall
+ 
+ BINDIR   = $(DESTDIR)$(XROOT)/bin
+ MANDIR   = $(DESTDIR)$(XROOT)/man/man1
+-CFGDIR   = $(DESTDIR)/etc/X11/windowlab
+ INCLUDES = -I$(XROOT)/include $(EXTRA_INC)
+-LDPATH   = -L$(XROOT)/lib
++LDPATH   = ${LDFLAGS}
+ LIBS     = -lX11 $(EXTRA_LIBS)
+ 
+ PROG     = windowlab
+@@ -52,10 +51,8 @@
+ 	$(CC) $(CFLAGS) $(DEFINES) $(INCLUDES) -c $< -o $@
+ 
+ install: all
+-	install -s $(PROG) $(BINDIR)
+-	install -m 644 $(MANPAGE) $(MANDIR)
+-	gzip -9vf $(MANDIR)/$(MANPAGE)
+-	mkdir -p $(CFGDIR) && cp menurc.sample $(CFGDIR)/menurc
++	${BSD_INSTALL_PROGRAM} $(PROG) $(BINDIR)
++	${BSD_INSTALL_MAN} $(MANPAGE) $(MANDIR)/windowlab.1
+ 
+ clean:
+ 	rm -f $(PROG) $(OBJS)
