@@ -1,12 +1,8 @@
-# $NetBSD: Makefile,v 1.3 1998/10/20 08:05:22 garbled Exp $
+# $NetBSD: Makefile,v 1.4 1998/12/14 18:38:00 garbled Exp $
 
-DISTNAME=		clusterit-1.1
+DISTNAME=		clusterit-1.2
 CATEGORIES=		parallel
 MASTER_SITES=		http://www.inficad.com/~garbled/
-
-PATCH_SITES=		${MASTER_SITES}
-PATCHFILES=		cluster-1.1.patch1
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.inficad.com/~garbled/clusterit.html
