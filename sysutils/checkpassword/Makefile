@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/22 01:10:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/26 19:16:09 schmonz Exp $
 #
 
 DISTNAME=	checkpassword-0.90
@@ -13,10 +13,14 @@ RESTRICTED=	"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	yes
 
 ALL_TARGET=	it
 INSTALL_TARGET=	setup check
+
+INSTALLATION_DIRS=	bin
 
 do-configure:
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
