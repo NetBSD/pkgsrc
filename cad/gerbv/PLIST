@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/15 01:57:58 dmcmahill Exp $
+bin/gerbv
+man/man1/gerbv.1
+share/gerbv/scheme/gerb-ps.scm
+@dirrm share/gerbv/scheme
+@dirrm share/gerbv

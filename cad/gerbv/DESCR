@@ -1,0 +1,14 @@
+Gerber Viewer (gerbv) is a viewer for Gerber files. Gerber files are
+generated from PCB CAD system and sent to PCB manufacturers as basis
+for the manufacturing process.
+
+The different layers of the PCB are separated into different
+files. gerbv can load all files at the same time, though it can not
+show them at the same time. You have to browse through the different
+layers with the radio buttons on the right side.
+   
+gerbv has also a batch feature. By writing a "backend" in Scheme you
+can for example generate other file formats or do design rule
+check. gerbv parses the Gerber file and calls an external function
+written in Scheme. Since the Scheme implementation is based on Guile,
+there are more functions available than the ordinary R4RS.
