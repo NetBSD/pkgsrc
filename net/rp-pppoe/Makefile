@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/11 21:20:35 tron Exp $
+# $NetBSD: Makefile,v 1.2 2000/07/11 21:37:24 tron Exp $
 
 DISTNAME=	rp-pppoe-1.9
 CATEGORIES=	net
-MASTER_SITES=	http://home.sprynet.com/~minaret/pppoe/
+MASTER_SITES=	${HOMEPAGE}src/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://home.sprynet.com/~minaret/pppoe/
