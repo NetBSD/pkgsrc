@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/23 17:18:12 kim Exp $
 
-DISTNAME=	pptpd-1.0.0
-PKGNAME=	poptop-1.0.0
+DISTNAME=	pptpd-1.0.1
+PKGNAME=	poptop-1.0.1
 CATEGORIES=	net
-MASTER_SITES=	http://www.moretonbay.com/vpn/releases/
-EXTRACT_SUFX=   .tgz
+MASTER_SITES=	ftp://ftp.snapgear.com/poptop/
 
 MAINTAINER=	dbj@netbsd.org
-HOMEPAGE=	http://www.moretonbay.com/vpn/pptp.html
+HOMEPAGE=	http://www.snapgear.com/vpn/pptp.html
 COMMENT=	PPTP server which can support Microsoft VPN clients
 
 GNU_CONFIGURE=	yes
