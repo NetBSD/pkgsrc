@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/30 22:09:35 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/02 15:15:27 agc Exp $
 
 DISTNAME=		httpd-2_0_15-alpha
 PKGNAME=		apache-2.0.15
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.apache.org/
-COMMENT=		HTTP (Web) server
+COMMENT=		HTTP (Web) server, version 2
 
 CONFLICTS=		apache-*modssl-* apache-* apache6-* ap-*
 
