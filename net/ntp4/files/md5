@@ -1,6 +1,10 @@
-$NetBSD: md5,v 1.5 1999/08/19 08:52:58 fredb Exp $
+$NetBSD: md5,v 1.6 1999/08/30 11:15:13 fredb Exp $
 
 MD5 (ntp-4.0.95.tar.gz) = 96a42abc0afabf34ad163d3ca544571b
 MD5 (ntp-4.0.95-4.0.96.diff.gz) = 6b927d1163bb3b7195defa699b495d7e
 MD5 (ntp-4.0.96-4.0.96p1.diff.gz) = eaa38cfe7d800aab0b2e2de4065981a2
 MD5 (ntp-4.0.96p1-4.0.97.diff.gz) = 05771929e832568d133a0f33e760e9bb
+MD5 (ntp-4.0.97-4.0.97a.diff.gz) = 41edd351f1b28dc1f1c3a855eba35825
+MD5 (ntp-4.0.97a-4.0.97b.diff.gz) = 3669c7a339a6d10b91638f9177563b35
+MD5 (ntp-4.0.97b-4.0.97c.diff.gz) = 9fea05d89687614d6669abeca695955d
+MD5 (ntp-4.0.97c-4.0.97d.diff.gz) = 863c2fb2c329bbc54c2f244e746f1b4c
