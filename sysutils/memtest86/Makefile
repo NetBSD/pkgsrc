@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/08 13:01:18 ben Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/17 23:26:06 ben Exp $
 #
 
 DISTNAME=		memtest86-3.1a
@@ -9,7 +9,7 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.memtest86.com/
 COMMENT=		Thorough, stand alone memory test for x86 arch
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
