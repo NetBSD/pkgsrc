@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.125 2003/01/03 16:37:25 jmmv Exp $
+$NetBSD: TODO,v 1.126 2003/01/03 18:24:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -10,6 +10,10 @@ Suggested new packages
 	Listens to network traffic and picks out images from TCP streams.
 	http://www.ex-parrot.com/~chris/driftnet/
 
+	fileroller
+	Archive manager for Gnome
+	http://fileroller.sourceforge.net/
+
 	figfonts
 	More fonts for figlet.
 	ftp://ftp.plig.org/pub/figlet/fonts/contributed/
@@ -20,6 +24,11 @@ Suggested new packages
 	jabber
 	Messaging client.
 	http://www.jabber.com/downloads/index.shtml
+
+	jgloss
+	application for adding reading and translation annotations to Japanese
+	  text documents
+	http://jgloss.sourceforge.net/
 
 	kde-i18n
 	Internationalisation package for KDE 2.
@@ -39,6 +48,10 @@ Suggested new packages
 	Fast JSP server. (I will import this when we have a native
 	  Java 2 -- it can't be built with our native jdk. [jwise])
 	http://www.caucho.com/products/resin/index.xtp
+
+	rox-filer
+	graphical file manager for ROX
+	http://rox.sourceforge.net/rox_filer.php3
 
 	squirm
 	Fast and configurable redirector for Squid.
@@ -64,8 +77,9 @@ Suggested package updates
 =========================
 
 	o ImageMagick-5.5.3
+	o Xbae-4.50.0
 	o acroread-5.1
-	o adobe-cmap-1.5 [pkg/19646]
+	o adobe-cmaps-1.5 [pkg/19646]
 	o amaya-7.0
 	o anjuta-1.0.1
 	o aspell-0.50.3
@@ -101,9 +115,6 @@ Suggested package updates
 	o evilwm-0.99.11 [pkg/19257]
 	o evolution-1.2.1
 	o exim-4.12
-	o fags-0.2.0
-	o fileroller-2.0
-	o flash-6.0.69
 	o fltk-1.1.1
 	o fox-1.0.28
 	o freeciv-1.13.0
@@ -120,21 +131,19 @@ Suggested package updates
 	o glade2-1.1.3 [pkg/19154]
 	o gmp-4.1.2
 	o gnome-applets-2.0.0
-	o gnome-file-manager-2.0.1
 	o gnome-python-1.4.4
 	o gnome-python-1.99.13
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99beta
 	o gnuboy-1.0.3 [pkg/19580]
-	o gnucash-1.7.6 [devel]
 	o gnumeric-1.0.11
-	o gnumeric-1.1.15 [devel]
 	o gpa-0.6.0
 	o gpgme-0.4.0
 	o grepmail-4.91
 	o groff-1.18.1
 	o grub-0.93
-	o gtkmm-2.1.0
+	o gsed-4.0.5
+	o gtk---2.1.0
 	o guile-1.6.1
 	o htmldoc-1.8.23
 	o horde-2.1 [pkg/19497]
@@ -150,10 +159,8 @@ Suggested package updates
 	o iozone-3.147
 	o jakarta-ant-1.5 [pkg/18322]
 	o jed-0.99.16 [pkg/18937]
-	o jgloss-1.0.6
 	o jikes-1.18
 	o joe-2.9 [pkg/18022]
-	o johntheripper-1.6.32
 	o jpilot-0.99.2 [dillo]
 	o kdevelop-2.1.4 [3.0alpha1]
 	o koffice-1.2.1
@@ -166,7 +173,6 @@ Suggested package updates
 	o libgnomeui-2.0.6
 	o libole2-2.2.8
 	o libmcrypt-2.5.4
-	o libmng-1.0.5rc2
 	o librep-0.16.1
 	o libslang-1.4.7
 	o libxml-2.4.30 [problems with kde2(?)]
@@ -174,26 +180,25 @@ Suggested package updates
 	o lilypond-1.6.6
 	o lmbench-2.0.3
 	o lout-3.26 [pkg/18687]
-	o lsh-1.4.1
 	o lynx-2.8.5dev9 (lynx-current)
 	o maildrop-1.5.1
 	o mcrypt-2.6.3
 	o memtest86-3.0
 	o metacity-2.4.8
-	o mgp-1.09a
 	o mhonarc-2.5.13 [pkg/19366]
 	o mixer.app-1.8.0
-	o mkfontscale-20020618 (needs freetype-2.1.1)
+	o mkfontscale-20020618
+	o mng-1.0.5rc2
 	o mrproject-0.7
 	o multi-gnome-terminal-1.6.1
-	o mysql-3.23.54 [security fix]
-	o mysql-4.0.3 [-devel]
+	o mysql-3.23.54
 	o naim-0.11.5
 	o nasm-0.98.35
 	o ncurses-5.3
 	o netpbm-10.8
 	o netscape-7.01
 	o novawm-0.8
+	o ns-flash-6.0.69
 	o openoffice-1.0.1 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openssh-3.5p1
@@ -201,21 +206,18 @@ Suggested package updates
 	o opensp-1.5
 	o pan-0.13.3 (gtk2-pan)
 	o pen-0.9.5 [pkg/19216]
-	o php-4.3.0
+	o php4-4.3.0
 	o pilot-link-0.11.4 [dillo]
 	o plib-1.6.0
 	o postfix-2.0
 	o postgresql-7.3.1
 	o povray-3.5
-	o psi-0.8.7
-	o psm-0.8.7 [pkg/19428]
+	o psi-0.8.7 [pkg/19428]
 	o pureftpd-0.13a [pkg/19233]
 	o pygtk-0.6.11
-	o pygtk-1.9.13
-	o qt-3.1.1
+	o qt3-3.1.1
 	o rep-gtk-0.16
 	o rocksndiamonds-2.2.0rc1
-	o rox-filer-1.3.3
 	o rox-session-0.1.17
 	o rrdtool-1.0.39
 	o rt-2.1.15
@@ -225,16 +227,15 @@ Suggested package updates
 	o scmxx-0.6.3.5
 	o scribus-0.8
 	o scrollkeeper-0.3.11
-	o sed-4.0.5
 	o sendfile-20010424
 	o sendmail-8.12.7
-	o siag-office-3.5.3
+	o siag-3.5.3
 	o smalltalk-2.0.10
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
 	o sodipodi-0.28
 	o squeak-3.2 [fredb|pkg/17950]
-	o srp-1.7.5 [jlam]
+	o srp_client-1.7.5 [jlam]
 	o stunnel-4.03 [pkg/19310]
 	o suck-4.3.1
 	o swig-1.3.17
@@ -250,7 +251,6 @@ Suggested package updates
 	o wine-20021219
 	o wwwoffle-2.7g
 	o xalan-c-1.4
-	o xbae-4.50.0
 	o xcdroast-0.98alpha13
 	o xerces-c-2.1.0 [heinz]
 	o xforms-1.0RC4
