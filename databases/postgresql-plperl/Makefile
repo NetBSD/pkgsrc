@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2003/11/12 03:39:39 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 14:11:50 jlam Exp $
 
 PKGNAME=		postgresql-plperl-${BASE_VERS}
 PKGREVISION=		1
 COMMENT=		PL/Perl procedural language for the PostgreSQL backend
 
 DEPENDS+=		postgresql-server>=${BASE_VERS}:../../databases/postgresql-server
+
+USE_BUILDLINK2=		yes
 
 .include "../postgresql/Makefile.common"
 
