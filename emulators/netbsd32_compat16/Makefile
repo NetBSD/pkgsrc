@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/30 22:51:17 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/11/23 05:22:34 grant Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
@@ -50,10 +50,10 @@ do-install:
 	(cd ${WRKDIR}/usr/lib; pax -rwv lib*.so* i18n/lib*.so* ${COMPAT_LIBDIR})
 	(cd ${WRKDIR}/usr/X11R6/lib; pax -rwv lib*.so* ${COMPAT_XLIBDIR})
 	(cd ${WRKDIR}/usr/libexec; pax -rwv ld.*so ${COMPAT_LIBEXECDIR})
-	chown ${ROOT_USER}:${ROOT_GROUP} \
+	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} \
 		${COMPAT_LIBDIR}/lib*.so* ${COMPAT_LIBDIR}/i18n/lib*.so* \
 		${COMPAT_XLIBDIR}/lib*.so* ${COMPAT_LIBEXECDIR}/ld.*so
-	chmod 555 ${COMPAT_LIBDIR}/lib*.so* ${COMPAT_LIBDIR}/i18n/lib*.so* \
+	${CHMOD} 555 ${COMPAT_LIBDIR}/lib*.so* ${COMPAT_LIBDIR}/i18n/lib*.so* \
 		  ${COMPAT_XLIBDIR}/lib*.so* ${COMPAT_LIBEXECDIR}/ld.*so
 
 .include "../../mk/bsd.pkg.mk"
