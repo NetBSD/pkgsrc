@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/11 11:39:13 cjep Exp $
+bin/oto
+share/oto/GB2312.TXT
+share/oto/GB12345.TXT
+share/oto/GB12345p.TXT
+share/oto/BIG5.TXT
+@dirrm share/oto
