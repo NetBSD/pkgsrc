@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/18 15:58:22 cube Exp $
 
---- mod_auth_mysql.c.orig	2003-11-24 16:36:19.000000000 +0100
+--- mod_auth_mysql.c.orig	2004-11-14 18:27:15.000000000 +0100
 +++ mod_auth_mysql.c
 @@ -189,7 +189,9 @@
  #include "http_core.h"
@@ -51,7 +51,20 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
   * open connection to DB server if necessary.  Return TRUE if connection
   * is good, FALSE if not able to connect.  If false returned, reason
   * for failure has been logged to error_log file already.
-@@ -280,16 +274,16 @@ open_db_handle(request_rec *r, mysql_aut
+@@ -274,22 +268,28 @@ open_db_handle(request_rec *r, mysql_aut
+     db_host = m->mysqlhost;
+   }
+ 
+-  mysql_handle=mysql_connect(&mysql_conn,db_host,m->mysqluser,m->mysqlpasswd);
++  if (mysql_init(&mysql_conn) == NULL) {
++    ap_log_error (APLOG_MARK, APLOG_ERR, 0, r->server,
++      "mysql_init() failed");
++    return FALSE;
++  }
++  mysql_handle=mysql_real_connect(&mysql_conn,db_host,m->mysqluser,m->mysqlpasswd,
++    NULL, 0, NULL, 0);
+ 
+   if (mysql_handle) {
  
      if (!m->mysqlKeepAlive) {
        /* close when request done */
@@ -72,7 +85,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
  		  "MySQL error: %s", mysql_error(&mysql_conn));
      return FALSE;
    }
-@@ -299,9 +293,9 @@ open_db_handle(request_rec *r, mysql_aut
+@@ -299,9 +299,9 @@ open_db_handle(request_rec *r, mysql_aut
  
  
  static void *
@@ -84,7 +97,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
    if (!m) return NULL;		/* failure to get memory is a bad thing */
  
    /* defaults values */
-@@ -316,45 +310,45 @@ create_mysql_auth_dir_config (pool *p, c
+@@ -316,45 +316,45 @@ create_mysql_auth_dir_config (pool *p, c
  
  static
  command_rec mysql_auth_cmds[] = {
@@ -169,7 +182,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
    { NULL }
  };
  
-@@ -379,7 +373,7 @@ get_mysql_pw(request_rec *r, char *user,
+@@ -379,7 +379,7 @@ get_mysql_pw(request_rec *r, char *user,
    }
  
    if (mysql_select_db(mysql_handle,m->mysqlDB) != 0) {
@@ -178,16 +191,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
  		  "MySQL error: %s", mysql_error(mysql_handle));
      return NULL;
    }
-@@ -394,13 +388,13 @@ get_mysql_pw(request_rec *r, char *user,
+@@ -394,13 +394,13 @@ get_mysql_pw(request_rec *r, char *user,
    }
  
    ulen = strlen(user);
 -  sql_safe_user = ap_pcalloc(r->pool, ulen*2+1);
-+  sql_safe_user = apr_pcalloc(r->pool, ulen*2+1);
-   mysql_escape_string(sql_safe_user,user,ulen);
+-  mysql_escape_string(sql_safe_user,user,ulen);
 -  ap_snprintf(query,sizeof(query)-1,"SELECT %s FROM %s WHERE %s='%s'",
 -	      m->mysqlPasswordField, m->mysqlpwtable,
 -	      m->mysqlNameField, sql_safe_user);
++  sql_safe_user = apr_pcalloc(r->pool, ulen*2+1);
++  mysql_real_escape_string(mysql_handle,sql_safe_user,user,ulen);
 +  apr_snprintf(query,sizeof(query)-1,"SELECT %s FROM %s WHERE %s='%s'",
 +	       m->mysqlPasswordField, m->mysqlpwtable,
 +	       m->mysqlNameField, sql_safe_user);
@@ -197,7 +211,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
  		  "MySQL error %s: %s", mysql_error(mysql_handle),r->uri);
      return NULL;
    }
-@@ -409,10 +403,10 @@ get_mysql_pw(request_rec *r, char *user,
+@@ -409,10 +409,10 @@ get_mysql_pw(request_rec *r, char *user,
    if (result && (mysql_num_rows(result) == 1)) {
      MYSQL_ROW data = mysql_fetch_row(result);
      if (data[0]) {
@@ -210,7 +224,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
  		   "MySQL user %s has no valid password: %s", user, r->uri);
        mysql_free_result(result);
        return NULL;
-@@ -443,19 +437,19 @@ get_mysql_groups(request_rec *r, char *u
+@@ -443,19 +443,19 @@ get_mysql_groups(request_rec *r, char *u
    }
  
    if (mysql_select_db(mysql_handle,m->mysqlDB) != 0) {
@@ -236,7 +250,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
  		  "MySQL error %s: %s", mysql_error(mysql_handle),r->uri);
      return NULL;
    }
-@@ -463,12 +457,12 @@ get_mysql_groups(request_rec *r, char *u
+@@ -463,12 +463,12 @@ get_mysql_groups(request_rec *r, char *u
    result = mysql_store_result(mysql_handle);
    if (result && (mysql_num_rows(result) > 0)) {
      int i = mysql_num_rows(result);
@@ -251,7 +265,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
        else
  	list[i] = "";		/* if no data, make it empty, not NULL */
      }
-@@ -499,15 +493,15 @@ mysql_authenticate_basic_user (request_r
+@@ -499,15 +499,15 @@ mysql_authenticate_basic_user (request_r
    if(!sec->mysqlpwtable)	/* not configured for mysql authorization */
      return DECLINED;
  
@@ -271,7 +285,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
    }
  
    /* if we don't require password, just return ok since they exist */
-@@ -517,10 +511,10 @@ mysql_authenticate_basic_user (request_r
+@@ -517,10 +517,10 @@ mysql_authenticate_basic_user (request_r
  
    /* compare the password, possibly encrypted */
    if(strcmp(real_pw, sec->mysqlCrypted ? crypt(sent_pw,real_pw) : sent_pw)) {
@@ -285,7 +299,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
    }
    return OK;
  }
-@@ -534,10 +528,10 @@ mysql_check_auth(request_rec *r)
+@@ -534,10 +534,10 @@ mysql_check_auth(request_rec *r)
    mysql_auth_config_rec *sec =
      (mysql_auth_config_rec *)ap_get_module_config(r->per_dir_config,
  						  &mysql_auth_module);
@@ -298,7 +312,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
    require_line *reqs = reqs_arr ? (require_line *)reqs_arr->elts : NULL;
  
    register int x;
-@@ -560,11 +554,11 @@ mysql_check_auth(request_rec *r)
+@@ -560,11 +560,11 @@ mysql_check_auth(request_rec *r)
      if(!strcmp(want,"group")) {
        /* check for list of groups from database only first time thru */
        if (!groups && !(groups = get_mysql_groups(r, user, sec))) {
@@ -312,7 +326,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/31 13:03:03 cube Exp $
        }
  
        /* loop through list of groups specified in htaccess file */
-@@ -578,35 +572,39 @@ mysql_check_auth(request_rec *r)
+@@ -578,35 +578,39 @@ mysql_check_auth(request_rec *r)
  	  ++i;
  	}
        }
