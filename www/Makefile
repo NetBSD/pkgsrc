@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.232 2002/12/16 17:06:47 drochner Exp $
+# $NetBSD: Makefile,v 1.233 2003/01/01 07:06:09 jlam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -18,6 +18,7 @@ SUBDIR+=	ap-dav
 SUBDIR+=	ap-dtcl
 SUBDIR+=	ap-fastcgi
 SUBDIR+=	ap-gzip
+SUBDIR+=	ap-iasp
 SUBDIR+=	ap-jk
 SUBDIR+=	ap-jserv
 SUBDIR+=	ap-layout
@@ -71,6 +72,7 @@ SUBDIR+=	htmldoc-x11
 SUBDIR+=	htmlfix
 SUBDIR+=	htmllint
 SUBDIR+=	http_load
+SUBDIR+=	iasp
 SUBDIR+=	ijb
 SUBDIR+=	jakarta-servletapi
 SUBDIR+=	jakarta-tomcat
