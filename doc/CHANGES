@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.381 2002/10/27 16:37:17 wiz Exp $
+$NetBSD: CHANGES,v 1.382 2002/10/27 21:56:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3410,3 +3410,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated sylpheed-claws to 0.8.5 [grant 2002-10-27]
 	Added cyrus-sasl-2.1.9 [chris 2002-10-27]
 	Added cyrus-imapd-2.1.9 [chris 2002-10-27]
+	Updated bidwatcher to 1.3.6 [tron 2002-10-27]
