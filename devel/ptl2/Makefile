@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/03/29 23:13:56 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/03/29 23:31:08 tron Exp $
 
 DISTNAME=	PTL2-current-990325
 PKGNAME=	ptl2-current-990325
@@ -24,16 +24,14 @@ post-install:
 	find PTL -type f >>${PLIST_SRC}; \
 	for LINK in `find PTL -type l`; do \
 	  set - X `file $$LINK`; \
-	  @${ECHO} "@exec ln -s $$6 %D/$$LINK" >>${PLIST_SRC}; \
-	  @${ECHO} "@unexec rm -f %D/$$LINK" >>${PLIST_SRC}; \
+	  ${ECHO} "@exec ln -s $$6 %D/$$LINK" >>${PLIST_SRC}; \
+	  ${ECHO} "@unexec rm -f %D/$$LINK" >>${PLIST_SRC}; \
 	done; \
 	for DIR in `find PTL -type d | sort -r`; do \
 	  if [ -z "`ls $$DIR`" ]; then \
-	    @${ECHO} "@exec mkdir -p %D/$$DIR" >>${PLIST_SRC}; \
+	    ${ECHO} "@exec mkdir -p %D/$$DIR" >>${PLIST_SRC}; \
 	  fi; \
-	  @${ECHO} "@dirrm $$DIR" >>${PLIST_SRC}; \
+	  ${ECHO} "@dirrm $$DIR" >>${PLIST_SRC}; \
 	done
-#	@cd ${PREFIX}; \
-#	find PTL -type d | sort -r | ${SED} -e 's#^P#@dirrm P#' >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
