@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.433 2003/04/01 08:34:57 jmmv Exp $
+$NetBSD: TODO,v 1.434 2003/04/01 10:23:16 rh Exp $
 
 Suggested new packages
 ======================
@@ -131,7 +131,6 @@ Suggested package updates
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99
 	o gnucash-1.8.2
-	o gnustep-0.8.5
 	o gpa-0.6.1
 	o gperiodic-2.0.3
 	o grace-5.1.12
