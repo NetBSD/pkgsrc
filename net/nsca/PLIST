@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:04 zuntum Exp $
-etc/nsca.cfg.sample
-etc/send_nsca.cfg.sample
+@comment $NetBSD: PLIST,v 1.2 2003/05/01 16:59:23 jmmv Exp $
 sbin/nsca
 sbin/send_nsca
 share/doc/nsca/Changelog
 share/doc/nsca/README
 share/doc/nsca/SECURITY
+share/examples/ncsa/nsca.cfg
+share/examples/ncsa/send_nsca.cfg
+@dirrm share/examples/ncsa
 @dirrm share/doc/nsca
