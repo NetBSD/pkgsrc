@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7004 2004/08/26 13:39:23 seb Exp $
+$NetBSD: CHANGES,v 1.7005 2004/08/26 18:28:42 wennmach Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4054,3 +4054,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gaim to 0.82 [gavan 2004-08-26]
 	Updated gnupg to 1.2.6 [wiz 2004-08-26]
 	Added gst-plugins-faad-0.8.2 [seb 2004-08-26]
+	Added duplicity-0.4.1 [wennmach 2004-08-26]
