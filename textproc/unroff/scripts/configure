@@ -21,9 +21,6 @@ install:
 	cp doc/tmac.hyper misc/sample.unroff \${LIBDIR}/misc
 	@chown -R bin.bin \${LIBDIR}
 	install -c -m 644 -o bin -g bin doc/*.1 \${MANDIR}
-.if !defined(NOMANCOMPRESS)
-	gzip -9nf \${MANDIR}/unroff*.1
-.endif
 
 EOF
 
