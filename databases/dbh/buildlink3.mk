@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/10 09:46:50 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/08 09:13:30 martti Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DBH_BUILDLINK3_MK:=	${DBH_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndbh}
 BUILDLINK_PACKAGES+=	dbh
 
 .if !empty(DBH_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.dbh+=		dbh>=1.0.14
+BUILDLINK_DEPENDS.dbh+=		dbh>=1.0.20
 BUILDLINK_PKGSRCDIR.dbh?=	../../databases/dbh
 .endif	# DBH_BUILDLINK3_MK
 
