@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
+
+--- gmond/cmdline.c.orig	2005-02-04 17:32:28.000000000 -0500
++++ gmond/cmdline.c	2005-02-04 17:32:47.000000000 -0500
+@@ -49,7 +49,7 @@
+   "Usage: %s [OPTIONS]...\n", PACKAGE);
+   printf("   -h         --help             Print help and exit\n");
+   printf("   -V         --version          Print version and exit\n");
+-  printf("   -cSTRING   --conf=STRING      Location of gmond configuration file (default='/etc/gmond.conf')\n");
++  printf("   -cSTRING   --conf=STRING      Location of gmond configuration file (default='@PKG_SYSCONFDIR@/gmond.conf')\n");
+   printf("   -lSTRING   --location=STRING  Location of this host in the cluster 'rack,rank,plane'. (default='0,0,0')\n");
+   printf("   -dINT      --debug=INT        Debug level. If greater than zero, daemon will stay in foreground. (default=0)\n");
+ }
+@@ -81,7 +81,7 @@
+   args_info->location_given = 0 ;
+   args_info->debug_given = 0 ;
+ #define clear_args() { \
+-  args_info->conf_arg = strdup("/etc/gmond.conf") ;\
++  args_info->conf_arg = strdup("@PKG_SYSCONFDIR@/gmond.conf") ;\
+   args_info->location_arg = strdup("0,0,0") ;\
+   args_info->debug_arg = 0 ;\
+ }

@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/07 14:33:19 jschauma Exp $
+bin/gmetric
+bin/gstat
+include/ganglia.h
+include/ganglia/ascii.h
+include/ganglia/asciitab.h
+include/ganglia/daemon_inetd.h
+include/ganglia/daemon_init.h
+include/ganglia/debug_msg.h
+include/ganglia/error.h
+include/ganglia/file.h
+include/ganglia/fsusage.h
+include/ganglia/gexec_funcs.h
+include/ganglia/gexec_process.h
+include/ganglia/gmond_config.h
+include/ganglia/hash.h
+include/ganglia/iasciitab.h
+include/ganglia/latin1tab.h
+include/ganglia/llist.h
+include/ganglia/my_inet_ntop.h
+include/ganglia/nametab.h
+include/ganglia/net.h
+include/ganglia/rdwr.h
+include/ganglia/utf8tab.h
+include/ganglia/xmldef.h
+include/ganglia/xmlparse.h
+include/ganglia/xmlrole.h
+include/ganglia/xmltok.h
+include/ganglia/xmltok_impl.h
+lib/libganglia.la
+sbin/gmond
+sbin/gmetad
+share/examples/ganglia/gmond.conf
+share/examples/ganglia/gmetad.conf
+@dirrm share/examples/ganglia
+@dirrm include/ganglia
