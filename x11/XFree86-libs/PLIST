@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2004/03/28 22:11:33 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/27 21:49:57 reed Exp $
 ${X11ROOT_PREFIX}/include/DPS/ColorSB.h
 ${X11ROOT_PREFIX}/include/DPS/ColorSBP.h
 ${X11ROOT_PREFIX}/include/DPS/DPSScrollW.h
@@ -658,9 +658,9 @@ ${X11ROOT_PREFIX}/lib/libfontenc.so
 ${X11ROOT_PREFIX}/lib/libfontenc.so.1
 ${SHARED_LIB_MINOR}${X11ROOT_PREFIX}/lib/libfontenc.so.1.0
 ${X11ROOT_PREFIX}/lib/liboldX.a
-${X11ROOT_PREFIX}/lib/liboldX.so
-${X11ROOT_PREFIX}/lib/liboldX.so.6
-${SHARED_LIB_MINOR}${X11ROOT_PREFIX}/lib/liboldX.so.6.0
+${LIBOLDX}${X11ROOT_PREFIX}/lib/liboldX.so
+${LIBOLDX}${X11ROOT_PREFIX}/lib/liboldX.so.6
+${LIBOLDX}${SHARED_LIB_MINOR}${X11ROOT_PREFIX}/lib/liboldX.so.6.0
 ${X11ROOT_PREFIX}/lib/libpsres.a
 ${X11ROOT_PREFIX}/lib/libpsres.so
 ${X11ROOT_PREFIX}/lib/libpsres.so.1
