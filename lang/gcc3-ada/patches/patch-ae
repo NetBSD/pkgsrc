@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.3 2003/07/16 18:19:37 drochner Exp $
+
+--- gcc/ada/Makefile.in.orig	2003-07-11 23:20:40.000000000 +0200
++++ gcc/ada/Makefile.in	2003-07-11 23:23:22.000000000 +0200
+@@ -1609,7 +1609,7 @@
+ 	  TOOLSCASE=native \
+ 	  ../../gnatchop$(exeext) ../../gnat$(exeext) ../../gnatkr$(exeext) \
+ 	  ../../gnatls$(exeext) ../../gnatprep$(exeext) \
+-	  ../../gnatpsta$(exeext) ../../gnatxref$(exeext) \
++	  ../../gnatxref$(exeext) \
+           ../../gnatfind$(exeext) ../../gnatname$(exeext)
+ 
+ # These tools are only built for the native version.
