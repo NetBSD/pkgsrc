@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/12 14:29:44 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/26 12:32:23 jmmv Exp $
 #
 
 VERS=		0.50.16
@@ -13,7 +13,7 @@ COMMENT=	Graphical frontend for DVD ripping
 
 DEPENDS+=	cdrdao>=1.1.7:../../sysutils/cdrdao
 DEPENDS+=	transcode>=0.6.9:../../graphics/transcode
-DEPENDS+=	mplayer>=0.90:../../graphics/mplayer
+DEPENDS+=	mplayer>=0.90:../../multimedia/mplayer
 DEPENDS+=	ogmtools-[0-9]*:../../graphics/ogmtools
 DEPENDS+=	vcdimager>=0.7.12:../../sysutils/vcdimager-devel
 DEPENDS+=	cdrecord>=1.10:../../sysutils/cdrecord
