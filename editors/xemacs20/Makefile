@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/10/06 13:07:43 agc Exp $
+# $NetBSD: Makefile,v 1.3 1997/12/08 16:17:17 mrg Exp $
 # New ports collection makefile for:	X-Emacs
 # Version required:	20.2
 # Date created:		26 August 1997
@@ -7,17 +7,17 @@
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
-DISTNAME=	xemacs-20.2
+DISTNAME=	xemacs-20.3
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs-20.2/ \
-		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs-20.2/ \
-		ftp://ftp.usyd.edu.au:/pub/Xemacs/xemacs-20.2/ \
-		ftp://ftp.lab.kdd.co.jp/xemacs/xemacs-20.2/ \
-		ftp://ftp.th-darmstadt.de:/pub/editors/xemacs/xemacs-20.2/ \
-		ftp://SunSITE.sut.ac.jp/pub/archives/xemacs/xemacs-20.2/ \
+MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs-20.3/ \
+		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs-20.3/ \
+		ftp://ftp.usyd.edu.au:/pub/Xemacs/xemacs-20.3/ \
+		ftp://ftp.lab.kdd.co.jp/xemacs/xemacs-20.3/ \
+		ftp://ftp.th-darmstadt.de:/pub/editors/xemacs/xemacs-20.3/ \
+		ftp://SunSITE.sut.ac.jp/pub/archives/xemacs/xemacs-20.3/ \
 		ftp://ftp.miranova.com/pub/xemacs/ \
-		ftp://ftp.gw.com/mirrors/pub/unix/xemacs/xemacs-20.2/
-
+		ftp://ftp.gw.com/mirrors/pub/unix/xemacs/xemacs-20.3/
+DISTFILES=	xemacs-20.3.tar.gz
 
 LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
 		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
@@ -41,8 +41,8 @@ CONFIGURE_ARGS=	i386--freebsd --prefix=${PREFIX} \
 # agc - NetBSD doesn't use the native sound option
 # agc - braindead xpm installation - or is it us?
 MAINTAINER=	agc@netbsd.org
-CONFIGURE_ARGS=	i386--netbsd --prefix=${PREFIX} \
-		--site-includes="${PREFIX}/include /usr/X11R6/include/X11" \
+CONFIGURE_ARGS=	--prefix=${PREFIX} \
+		--site-includes="${PREFIX}/include /usr/X11R6/include" \
 		--site-libraries=${PREFIX}/lib \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
 		${WITH_MULE} ${WITH_DIALOGS}
@@ -56,6 +56,7 @@ pre-configure:
 
 .if defined(USE_MULE)
 WITH_MULE=	--with-mule
+DISTFILES+=	xemacs-20.3-mule.tar.gz
 .endif
 
 # hack to avoid shipping binaries linked with Motif
