@@ -1,57 +1,55 @@
-# $NetBSD: Makefile,v 1.3 2004/10/31 23:47:32 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/27 22:34:19 jdolecek Exp $
 
-DISTNAME=	jpgraph-1.13
+DISTNAME=	jpgraph-1.16
 PKGNAME=	php-${DISTNAME}
 CATEGORIES=	graphics www
 MASTER_SITES=	http://www.aditus.nu/jpgraph/downloads/
 
-MAINTAINER=	adrianp@stindustries.net
+MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE= 	http://www.aditus.nu/jpgraph/index.php
 COMMENT=	Object Oriented class library for PHP
 
 DEPENDS+=	php-gd>=4.3.0:../../graphics/php-gd
 
+NO_CONFIGURE=	YES
 NO_BUILD=	YES
 NO_BUILDLINK=	YES
 
+EXDIR=		${PREFIX}/share/examples/php-jpgraph
+PJDIR=		${PREFIX}/share/php-jpgraph
+PJCONFFILE=	${PKG_SYSCONFDIR}/jpg-config.inc
+CONF_FILES=     ${EXDIR}/jpg-config.inc ${PKG_SYSCONFDIR}/jpg-config.inc
+
+USE_PKGINSTALL=         YES
+PKG_SYSCONFSUBDIR?=     php-jpgraph
+
+MESSAGE_SUBST+=	PJCONFFILE=${PJCONFFILE} PJDIR=${PJDIR} EXDIR=${EXDIR}
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/php-jpgraph
+	${INSTALL_DATA_DIR} ${EXDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/php-jpgraph
-	${INSTALL_DATA_DIR} ${PREFIX}/share/php-jpgraph
-	${INSTALL_DATA_DIR} ${PREFIX}/share/php-jpgraph/utils
-	${INSTALL_DATA_DIR} ${PREFIX}/share/php-jpgraph/utils/misc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/php-jpgraph/utils/jpdocgen
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/php-jpgraph
+	${INSTALL_DATA_DIR} ${PJDIR}
 
-	${INSTALL_SCRIPT} ${WRKSRC}/src/Examples/*.php \
-		${PREFIX}/share/examples/php-jpgraph
-	${INSTALL_DATA} ${WRKSRC}/src/Examples/*.png \
-		${PREFIX}/share/examples/php-jpgraph
-	${INSTALL_DATA} ${WRKSRC}/src/Examples/*.gif \
-		${PREFIX}/share/examples/php-jpgraph
-	${INSTALL_DATA} ${WRKSRC}/src/Examples/*.jpg \
-		${PREFIX}/share/examples/php-jpgraph
+	${INSTALL_SCRIPT} ${WRKSRC}/src/Examples/*.php ${EXDIR}
+	${INSTALL_DATA} ${WRKSRC}/src/Examples/*.png ${EXDIR}
+	${INSTALL_DATA} ${WRKSRC}/src/Examples/*.gif ${EXDIR}
+	${INSTALL_DATA} ${WRKSRC}/src/Examples/*.jpg ${EXDIR}
 
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/php-jpgraph
-	${INSTALL_DATA} ${WRKSRC}/src/Changelog ${PREFIX}/share/doc/php-jpgraph
+	${RM} -f ${PJDIR}/jpg-config.inc
 
-	${INSTALL_SCRIPT} ${WRKSRC}/src/*.php ${PREFIX}/share/php-jpgraph
-	${INSTALL_DATA} ${WRKSRC}/src/*.inc ${PREFIX}/share/php-jpgraph
+	${INSTALL_SCRIPT} ${WRKSRC}/src/*.php ${PJDIR}
+	${INSTALL_DATA} ${WRKSRC}/src/*.inc ${PJDIR}
+	${INSTALL_DATA} ${WRKSRC}/src/*.dat ${PJDIR}
 
-	${INSTALL_DATA} ${WRKSRC}/src/utils/Readme \
-		${PREFIX}/share/php-jpgraph/utils
-	${INSTALL_SCRIPT} ${WRKSRC}/src/utils/misc/*.php \
-		${PREFIX}/share/php-jpgraph/utils/misc
-	${INSTALL_DATA} ${WRKSRC}/src/utils/misc/*.inc \
-		${PREFIX}/share/php-jpgraph/utils/misc
+	${MV} -f ${PJDIR}/jpg-config.inc ${EXDIR}
+	${LN} -sf ${PJCONFFILE} ${PJDIR}/jpg-config.inc
 
-	${INSTALL_DATA} ${WRKSRC}/src/utils/jpdocgen/README \
-		${PREFIX}/share/php-jpgraph/utils/jpdocgen
-	${INSTALL_SCRIPT} ${WRKSRC}/src/utils/jpdocgen/*.php \
-		${PREFIX}/share/php-jpgraph/utils/jpdocgen
-	${INSTALL_DATA} ${WRKSRC}/src/utils/jpdocgen/*.css \
-		${PREFIX}/share/php-jpgraph/utils/jpdocgen
+	for f in README QPL.txt IMPORTANT_DO_README; do \
+		${INSTALL_DATA} ${WRKSRC}/$$f \
+			${PREFIX}/share/doc/php-jpgraph; \
+	done
+	cd ${WRKSRC}/docs && ${PAX} -rw . ${PREFIX}/share/doc/html/php-jpgraph
 
-	${INSTALL_DATA} ${WRKSRC}/QPL.txt ${PREFIX}/share/doc/php-jpgraph
-	cd ${WRKSRC}/docs && ${PAX} -rw . ${PREFIX}/share/doc/php-jpgraph
-
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
