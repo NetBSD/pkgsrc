@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8743 2005/01/14 08:58:43 adam Exp $
+$NetBSD: CHANGES,v 1.8744 2005/01/14 09:16:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -292,3 +292,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ike-scan to 1.7 [adrianp 2005-01-14]
 	Updated lbreakout2 to 2.5.2 [adam 2005-01-14]
 	Updated gg2 to 2.2.4 [adam 2005-01-14]
+	Updated corewars to 0.9.13 [adam 2005-01-14]
