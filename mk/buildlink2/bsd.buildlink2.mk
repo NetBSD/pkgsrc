@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.20 2002/09/17 06:20:14 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.21 2002/09/17 19:15:35 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -226,13 +226,16 @@ _BLNK_TRANSFORM+=	r:-R${_localbase_}
 # key directories from any argument filtering, as they may be
 # subdirectories of ${LOCALBASE}, /usr/pkg, or /usr/local.
 #
-_BLNK_PROTECT_SED=	-e "s|${_PKGSRCDIR}|_pKgSrCdIr_|g"
+_BLNK_PROTECT_SED=	# empty
+_BLNK_UNPROTECT_SED=	# empty
+
+_BLNK_PROTECT_SED+=	-e "s|${_PKGSRCDIR}|_pKgSrCdIr_|g"
 _BLNK_PROTECT_SED+=	-e "s|${BUILDLINK_DIR}|_bUiLdLiNk_dIr_|g"
 .if defined(ZOULARISBASE) && (${ZOULARISBASE} != ${LOCALBASE})
 _BLNK_PROTECT_SED+=	-e "s|${ZOULARISBASE}|_zOuLaRiSbAsE_|g"
 _BLNK_UNPROTECT_SED+=	-e "s|_zOuLaRiSbAsE_|${ZOULARISBASE}|g"
 .endif
-_BLNK_UNPROTECT_SED=	-e "s|_bUiLdLiNk_dIr_|${BUILDLINK_DIR}|g"
+_BLNK_UNPROTECT_SED+=	-e "s|_bUiLdLiNk_dIr_|${BUILDLINK_DIR}|g"
 _BLNK_UNPROTECT_SED+=	-e "s|_pKgSrCdIr_|${_PKGSRCDIR}|g"
 #
 # Create _BLNK_TRANSFORM_SED.{1,2,3} from _BLNK_TRANSFORM.  We must use
