@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2003/06/06 12:10:07 jmmv Exp $
+$NetBSD: patch-aa,v 1.10 2003/10/14 11:06:35 pooka Exp $
 
 --- include/config.h.orig	2003-02-23 16:43:19.000000000 +0200
 +++ include/config.h	2003-03-01 22:54:41.000000000 +0200
@@ -55,7 +55,7 @@ $NetBSD: patch-aa,v 1.9 2003/06/06 12:10:07 jmmv Exp $
  #    define HACKDIR "nethackdir"	/* nethack directory */
  #  else
 -#    define HACKDIR "/usr/games/lib/nethackdir"
-+#    define HACKDIR PREFIX "/share/nethackdir340"
++#    define HACKDIR "XXXPREFIXXXX/share/nethackdir340"
  #  endif
  # endif
  
