@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2004/03/30 21:27:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/27 17:55:54 jschauma Exp $
 #
 
-DISTNAME=	larswm-7.2.10
+DISTNAME=	larswm-7.5.3
 CATEGORIES=	wm x11
-MASTER_SITES=	http://www-personal.umich.edu/~larsb/larswm/
+MASTER_SITES=	http://home.earthlink.net/~lab1701/larswm/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DOCFILES}
 
 MAINTAINER=	jschauma@NetBSD.org
-HOMEPAGE=	http://www.fnurt.net/larswm/
+HOMEPAGE=	http://home.earthlink.net/~lab1701/larswm/
 COMMENT=	9wm-like window manager
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
