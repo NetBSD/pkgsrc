@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2004/12/28 23:18:18 reed Exp $
+# $NetBSD: Makefile,v 1.28 2005/01/11 10:29:49 wiz Exp $
 #
 
 DISTNAME=	tuxpaint-0.9.14
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/} \
 		ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/source/
@@ -16,6 +16,10 @@ USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 MANCOMPRESSED=		YES
+
+BUILDLINK_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.6
+BUILDLINK_DEPENDS.SDL_ttf+=	SDL_ttf>=2.0.7
+BUILDLINK_DEPENDS.SDL_image+=	SDL_image>=1.2.4
 
 CONFLICTS+=		tuxpaint-stamps<2003.12.23
 
