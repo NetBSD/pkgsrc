@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2002/09/13 20:14:18 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2002/09/13 22:27:11 jlam Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 GS_VERS=	7.05
@@ -67,6 +67,11 @@ post-extract:
 	${MKDIR} ${WRKSRC}/obj
 	${RM} -f ${WRKSRC}/jpeg
 	${LN} -s ${JPEG_WRKSRC} ${WRKSRC}/jpeg
+	cd ${WRKSRC}/lib; for file in gs_res.ps; do			\
+		${SED}  -e "s|/Resource/|${RESOURCEDIR}/|g"		\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
 
 # Reinstall the gs binary so that it's properly stripped.
 post-install:
