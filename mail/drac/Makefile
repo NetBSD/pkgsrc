@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/18 03:42:13 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/25 01:05:18 wiz Exp $
 #
 
 DISTNAME=	drac
@@ -13,7 +13,7 @@ COMMENT=	Dynamic Relay Authorization Control
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 NO_EXPORT_CPP=	YES
 
 MAKE_ENV+=	MKDIR="${MKDIR}"
