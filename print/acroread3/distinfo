@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/05/04 13:16:51 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:51:41 agc Exp $
 
 SHA1 (acroread_linux_301.tar.gz) = 4e67b3459deb273d4bf7932f0793d87991b3c171
+RMD160 (acroread_linux_301.tar.gz) = afd971021d985057c47ab4df038bac1dc8a1ae8e
 Size (acroread_linux_301.tar.gz) = 3669391 bytes
 SHA1 (acroread_osf_301.tar.gz) = 673eeff0165c90156ad2de18d8c8545558db83f1
 Size (acroread_osf_301.tar.gz) = 3656113 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2003/11/14 08:51:40 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 13:10:14 agc Exp $
 
 SHA1 (vlnx424e.tar.Z) = ab60091a790e5ac2f7c343158a2b599894f61c2e
+RMD160 (vlnx424e.tar.Z) = 94ee339ed5eb1209d0bd830b93d0d48b02df1d4e
 Size (vlnx424e.tar.Z) = 6958655 bytes

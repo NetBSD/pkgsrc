@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.3 2003/10/05 02:00:43 kei Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 12:51:43 agc Exp $
 
 SHA1 (xdvik-22.40v.tar.gz) = 2022029ae6efd458685ca29c427f47b792d9584c
+RMD160 (xdvik-22.40v.tar.gz) = 8f55c7fbd72191d42223c6acece24103d9aa8864
 Size (xdvik-22.40v.tar.gz) = 2254426 bytes
 SHA1 (xdvik-22.40v-j1.14.patch.gz) = 61519d8c06f09821588cec8425aa3f9c5a1cdb22
+RMD160 (xdvik-22.40v-j1.14.patch.gz) = 1006579ed886b4be2b6845a9ac6ce1f193e69092
 Size (xdvik-22.40v-j1.14.patch.gz) = 157221 bytes
 SHA1 (patch-aa) = 6acf03d0cf4c36a3c940af81049f314590d9b13a
 SHA1 (patch-ac) = 491facd23630101f1ec5b2ad0926387470dfb92c

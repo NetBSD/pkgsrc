@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/18 22:12:43 jlam Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 13:10:05 agc Exp $
 
 SHA1 (courier-authlib-0.54.tar.bz2) = a13765f0eaaf93cb937dcd371ed65045f4c3bc44
+RMD160 (courier-authlib-0.54.tar.bz2) = d90509f68f4be6201542ef7e30b2870da779d9f5
 Size (courier-authlib-0.54.tar.bz2) = 1966155 bytes
 SHA1 (patch-aa) = ef333fefd1331d577d9fdad50d7dcc6e28283d58
 SHA1 (patch-ab) = 9a7d3901ce0628e34e2b69ddc77fb613653e0c2a

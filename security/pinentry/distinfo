@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2004/10/23 13:30:10 shannonjr Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:10:11 agc Exp $
 
 SHA1 (pinentry-0.7.1.tar.gz) = fb1a17b603a0fa234cdf3a08d0efde3f33f5926c
+RMD160 (pinentry-0.7.1.tar.gz) = 4c2dd0414be767f047e48abc60ff0ffbbac1df03
 Size (pinentry-0.7.1.tar.gz) = 347047 bytes

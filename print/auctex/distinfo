@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2003/03/01 03:49:50 uebayasi Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 12:51:41 agc Exp $
 
 SHA1 (auctex-11.13.tar.gz) = 82004bc64a040cda9455356faab4b8c6866f2d49
+RMD160 (auctex-11.13.tar.gz) = 442255a11696242beefaca4ebd761321534cf16d
 Size (auctex-11.13.tar.gz) = 294261 bytes
 SHA1 (patch-aa) = 1b47ebf2a491cb0004f738058850cf010d3b2286
 SHA1 (patch-ab) = 08e32149fd6aa7d26c21f1881acdab54ce51b950

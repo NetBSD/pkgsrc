@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/11/22 14:51:05 adam Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:10:08 agc Exp $
 
 SHA1 (mhash-0.9.1.tar.gz) = 443f8d17a61d8abf4e16d0787045633eea147043
+RMD160 (mhash-0.9.1.tar.gz) = cc5cf781a629af053cb3b85500ba41c08bf14a91
 Size (mhash-0.9.1.tar.gz) = 371330 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2002/07/02 13:02:37 wiz Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:40:54 agc Exp $
 
 SHA1 (libirman-0.4.1b.tar.gz) = 739e7cbb4c7e0af59fd244e3d2ed73b97905849a
+RMD160 (libirman-0.4.1b.tar.gz) = 2121e085006079c02c3c84a9b66434c9ed882ec5
 Size (libirman-0.4.1b.tar.gz) = 52874 bytes
 SHA1 (patch-aa) = e060a7e54fc817634cd7e92d7e5e17f147003363
 SHA1 (patch-ab) = b16e235fbfe581ee1a2d4406be8911faa2d047fc

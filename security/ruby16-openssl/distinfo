@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/27 14:47:36 taca Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:10:12 agc Exp $
 
 SHA1 (ruby/ossl-0.1.4a.tar.gz) = b7b54f6c83f1d176299a176aee7dd5564cbd76f4
+RMD160 (ruby/ossl-0.1.4a.tar.gz) = 8592594f3c43d397bbb54cc86ae0bcf4adaa168b
 Size (ruby/ossl-0.1.4a.tar.gz) = 84122 bytes

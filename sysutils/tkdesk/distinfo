@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2002/07/21 15:45:17 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 13:40:58 agc Exp $
 
 SHA1 (tkdesk-1.2.tar.gz) = 6810b92a882956745c50ceb80eea72167dc24d94
+RMD160 (tkdesk-1.2.tar.gz) = bd17e981dbd53dba92a2bba83b77a847de313333
 Size (tkdesk-1.2.tar.gz) = 1079153 bytes
 SHA1 (patch-aa) = a37188993358a78d3e8a9ec46b08a3f1c0831c60
 SHA1 (patch-ab) = e93006a1f1eeb8d5060465ea73ad95fa234744c4

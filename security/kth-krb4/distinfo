@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2002/10/29 13:56:50 joda Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 13:10:07 agc Exp $
 
 SHA1 (krb4-1.2.1.tar.gz) = 8134bf761d030210cc87fe3b4635ce4afe817c66
+RMD160 (krb4-1.2.1.tar.gz) = 7de9fed607b8b0b1018439be8b761bbdefc43ea4
 Size (krb4-1.2.1.tar.gz) = 1876149 bytes
 SHA1 (patch-ag) = 41e3b00986b886d820e8d120709c057e58c209af
 SHA1 (patch-ah) = 87c87b38dcb3b9c16e2654122194a21bfeeb5180

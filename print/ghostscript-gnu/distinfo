@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.2 2004/03/25 15:35:48 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:51:42 agc Exp $
 
 SHA1 (ghostscript/ghostscript-7.07.tar.bz2) = 66ebae367f4f9c18a736860d513b2fd487975323
+RMD160 (ghostscript/ghostscript-7.07.tar.bz2) = 74b7dabaa700ccd092b596bf59ffa07effd9f495
 Size (ghostscript/ghostscript-7.07.tar.bz2) = 4138372 bytes
 SHA1 (ghostscript/jpegsrc.v6b.tar.gz) = 7079f0d6c42fad0cfba382cf6ad322add1ace8f9
+RMD160 (ghostscript/jpegsrc.v6b.tar.gz) = 18892206014fbb8cae2a44e281f4ed53feaf7882
 Size (ghostscript/jpegsrc.v6b.tar.gz) = 613261 bytes
 SHA1 (patch-aa) = f9d706b19430c32f568316c0b02eee792e311236
 SHA1 (patch-ab) = ee1cad8503700d088e2a4dcf4c3d14237cb84b0e

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/11/09 12:30:40 adam Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:41:00 agc Exp $
 
 SHA1 (xps-4.2.tar.gz) = 55c9176086e019a58d632580a31d70618235e149
+RMD160 (xps-4.2.tar.gz) = c20594526f3870c049e2ee185533487c51bc1aed
 Size (xps-4.2.tar.gz) = 279690 bytes
 SHA1 (patch-ac) = 6a94bd17251f440c2af8302b0c842191420e4efc

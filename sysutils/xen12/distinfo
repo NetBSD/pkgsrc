@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.3 2004/05/22 19:09:53 cl Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 13:40:59 agc Exp $
 
 SHA1 (xeno-1.2-src-040418.tgz) = d19f627dc40416f369f6728fcd86e4364e1713ee
+RMD160 (xeno-1.2-src-040418.tgz) = c3fec4a6f9cc4478abb493269f163b6498dff260
 Size (xeno-1.2-src-040418.tgz) = 2960238 bytes
 SHA1 (xen12-addtl-ide-dma-040522.tar.gz) = b6303d9946b5d8ddc4fd48a27fbb4df28d5d60fb
+RMD160 (xen12-addtl-ide-dma-040522.tar.gz) = 73208c0c61d612236711971d174a62a1eaa6b4ab
 Size (xen12-addtl-ide-dma-040522.tar.gz) = 26070 bytes
 SHA1 (xen12-com2-support-040522.diff) = 41acce2e7ddafd07253a2510ecf6317d6828ea4d
 Size (xen12-com2-support-040522.diff) = 1142 bytes

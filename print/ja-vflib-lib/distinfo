@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/02/10 10:58:56 agc Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 12:51:43 agc Exp $
 
 SHA1 (VFlib2-2.24.2.tar.gz) = 970ab8e18e50f10763af27ebcfee135bbfdbcda5
+RMD160 (VFlib2-2.24.2.tar.gz) = d27353348612316826200ca0bab4e397cea21478
 Size (VFlib2-2.24.2.tar.gz) = 540093 bytes
 SHA1 (patch-aa) = c78284c8126b8a2f1ccf43360b9f2e0f0468c2e1
 SHA1 (patch-ab) = 1654d8a602097eed3a8fb4c146287eadbae0c3be

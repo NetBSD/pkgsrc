@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/03/17 21:01:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:10:13 agc Exp $
 
 SHA1 (sfs-0.7.2.tar.gz) = 3619afc9b785e4aa41f7cdf202c5b233a6b5fe08
+RMD160 (sfs-0.7.2.tar.gz) = 30cd5e21c4f63292ef0f5671720f6036d08e5ff1
 Size (sfs-0.7.2.tar.gz) = 1283652 bytes

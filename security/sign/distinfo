@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/16 00:00:28 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:10:13 agc Exp $
 
 SHA1 (sign-1.0.4.tar.gz) = 33bd6f6cc19c429ea90ca63206e5c5afb93e0a11
+RMD160 (sign-1.0.4.tar.gz) = c831f54538d0c21527a30546c919c3b68810cd0d
 Size (sign-1.0.4.tar.gz) = 28403 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/10/23 07:48:03 minskim Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 13:14:41 agc Exp $
 
 SHA1 (bash-3.0.tar.gz) = 3acf1ff4910d4bc863620c7533cbf4858370017b
+RMD160 (bash-3.0.tar.gz) = abe76200003a9dc441ce34650a439cd968f643d4
 Size (bash-3.0.tar.gz) = 2418293 bytes
 SHA1 (patch-aa) = 611f9c7e512c7fb80b088d58d6b3d91e18b06911
 SHA1 (patch-ab) = c08789555515fd4afb621cb564397ad6f1ec4dea

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/09/02 02:30:19 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:40:55 agc Exp $
 
 SHA1 (memtester-4.0.4.tar.gz) = 42dc6626cd77212c8b5448e93a5479b9aadf34ee
+RMD160 (memtester-4.0.4.tar.gz) = bd9786a3769dfd82f144c2aa9b509c0f3b94eed3
 Size (memtester-4.0.4.tar.gz) = 16202 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2004/07/06 21:21:17 bouyer Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 13:40:52 agc Exp $
 
 SHA1 (findutils-4.1.tar.gz) = b91cd03ca4c9659b3e5d40e841c64bfd2e7f25d8
+RMD160 (findutils-4.1.tar.gz) = b66c0aa2e72d378e8c3cb9968ceb68d9138af874
 Size (findutils-4.1.tar.gz) = 294494 bytes
 SHA1 (patch-aa) = 5449d631e14c202ad626fc2b96c64a7cd878ee81
 SHA1 (patch-ab) = 13664baa3e9348413416c920776be659d5dc59c3

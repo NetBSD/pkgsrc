@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/15 23:10:35 recht Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 13:10:12 agc Exp $
 
 SHA1 (prngd-0.9.29.tar.gz) = 72e82928b99a94e11fe379159d5fe3a5ddab4112
+RMD160 (prngd-0.9.29.tar.gz) = 08a61c80ce18782e5accd5e7e7b7fd6482120eab
 Size (prngd-0.9.29.tar.gz) = 76392 bytes

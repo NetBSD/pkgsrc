@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:41:53 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:51:44 agc Exp $
 
 SHA1 (rtf2LaTeX.1.5.tar.gz) = dcf8c2ce49928bd38ce03aad1f5fda09381fd45e
+RMD160 (rtf2LaTeX.1.5.tar.gz) = d319753192d890937606e77a75097f430e676684
 Size (rtf2LaTeX.1.5.tar.gz) = 52075 bytes
