@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2003/09/28 09:03:53 jdolecek Exp $
+# $NetBSD: Makefile,v 1.51 2003/10/05 17:55:34 martti Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
-PKGREVISION=		1
 SVR4_PKGNAME=		mysqs
 COMMENT=		MySQL, a free SQL database (server)
 
@@ -15,26 +14,9 @@ USE_GMAKE=		YES
 USE_PKGINSTALL=		YES
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
-ONLY_FOR_PLATFORM=	SunOS-*-sparc Linux-*-*
+PTHREAD_OPTS=		require
 
-# on NetBSD, if native threads are not available, hardwire
-# included mit-pthreads, as this doesn't yet work properly with pth
-.if ${OPSYS} == "NetBSD"
-.  if exists(/usr/include/pthread.h)
-
-# native pthreads
-ONLY_FOR_PLATFORM+=	NetBSD-*-*
-.  else
-
-# force included mit-pthreads
-CONFIGURE_ARGS+=	--with-mit-threads
-
-# platforms on which included mit-pthreads is usable
-ONLY_FOR_PLATFORM+=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
-			NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-m68k	\
-			NetBSD-*-powerpc
-.  endif
-.endif
+CONFIGURE_ARGS+=	--with-pthreads
 
 PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}::MySQL\\ database\\ administrator:${MYSQL_DATADIR}:${SH}
 PKG_GROUPS=		${MYSQL_GROUP}
@@ -62,7 +44,15 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/man/safe_mysqld.1 ${PREFIX}/man/man1
 
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../databases/mysql-client/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
+
+.if ${PTHREAD_TYPE} == "pth"
+CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
+CXXFLAGS+=	-DSIGNALS_DONT_BREAK_READ
+CONFIGURE_ENV+=	ac_cv_func_pthread_setschedparam=no
+CONFIGURE_ENV+=	ac_cv_func_pthread_attr_setschedparam=no
+.endif
 
 .include "../../mk/bsd.pkg.mk"
