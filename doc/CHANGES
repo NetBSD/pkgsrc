@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5270 2004/03/17 00:27:32 abs Exp $
+$NetBSD: CHANGES,v 1.5271 2004/03/17 07:08:15 soren Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1478,4 +1478,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tk-Tix-8.2.0b1nb1 [minskim 2004-03-16]
 	Updated ruby-tcltklib to 1.6.8nb3 [minskim 2004-03-16]
 	Updated cpuflags to 0.63 [abs 2004-03-17]
+	Updated gsmlib to 1.10 [soren 2004-03-17]
 
