@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/24 10:13:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/31 19:30:03 jmmv Exp $
 share/doc/html/buildtool/bt_config.html
 share/doc/html/buildtool/bt_dist.html
 share/doc/html/buildtool/bt_doc.html
@@ -9,11 +9,13 @@ share/doc/html/buildtool/bt_swcgen.html
 share/doc/html/buildtool/bt_wizard.html
 share/doc/html/buildtool/buildtool.html
 share/doc/html/buildtool/config.html
-share/doc/html/buildtool/ctldir.html
 share/doc/html/buildtool/defs.html
 share/doc/html/buildtool/docs.html
 share/doc/html/buildtool/index.html
 share/doc/html/buildtool/intro.html
 share/doc/html/buildtool/mks.html
+share/doc/html/buildtool/pt01.html
+share/doc/html/buildtool/pt02.html
+share/doc/html/buildtool/scripts.html
 share/doc/html/buildtool/style.css
 @dirrm share/doc/html/buildtool
