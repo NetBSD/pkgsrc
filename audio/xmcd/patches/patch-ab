@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.4 1998/11/12 15:48:34 agc Exp $
+
 --- cda_d/Imakefile.orig	Wed Oct 28 03:03:25 1998
 +++ cda_d/Imakefile	Wed Nov  4 22:37:14 1998
 @@ -42,11 +42,11 @@
