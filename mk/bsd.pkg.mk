@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1312 2003/12/03 21:59:00 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1313 2003/12/04 11:17:40 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2813,14 +2813,14 @@ _DYLIB_AWK= \
 					gsub(".* ", "", tgt); \
 					if (tgts[tgt] == "") { \
 						tgts[tgt] = tgt; \
-										if (index(tgt, "/") == 1) \
-											print tgt; \
-										else { \
-											prefix=""; \
-												if (match(rels[i], ".*/") != 0) \
-											prefix=substr(rels[i],1,RLENGTH); \
-										print prefix tgt; \
-									} \
+						if (index(tgt, "/") == 1) \
+							print tgt; \
+						else { \
+							prefix=""; \
+							if (match(rels[i], ".*/") != 0) \
+								prefix=substr(rels[i],1,RLENGTH); \
+							print prefix tgt; \
+						} \
 					}	\
 				}		\
 			}			\
@@ -2829,35 +2829,34 @@ _DYLIB_AWK= \
 # Turn lib*.so.*, lib*.so into lib*.a.  Drop duplicates.
 _AIXLIB_AWK= \
 	/^@/ { lines[NR] = $$0; next }		\
-	/.*\/lib[^\/]+\.so(\.[0-9]+)*$$/ {		\
-		sub("(\.[0-9]+)*$$", "");		\
-		sub("\.so$$", "\.a");       \
-		lines[NR] = $$0;     \
+	/.*\/lib[^\/]+\.so(\.[0-9]+)*$$/ {	\
+		sub("(\.[0-9]+)*$$", "");	\
+		sub("\.so$$", "\.a");       	\
+		lines[NR] = $$0;     		\
 		next				\
 	}					\
 	{ lines[NR] = $$0 }			\
 	END {					\
-		nlibs = 0; \
-		for (i = 1; i <= NR; i++) { \
-	    	for (j = 0; j < nlibs; j++) \
-			{ \
+		nlibs = 0;			\
+		for (i = 1; i <= NR; i++) {	\
+			for (j = 0; j < nlibs; j++) { \
 				if (libs[j] == lines[i]) \
-					break; \
-			} \
-			if (j >= nlibs) \
-				print lines[i]; \
+					break;	\
+			}			\
+			if (j >= nlibs)		\
+				print lines[i];	\
 			if (match(lines[i], ".*\/lib[^\/]+\.a$$")) { \
 				libs[nlibs] = lines[i]; \
-				nlibs++; \
-			} \
-		} \
+				nlibs++;	\
+			}			\
+		}				\
 	}
 
 .PHONY: do-shlib-handling
 do-shlib-handling:
 .if ${SHLIB_HANDLING} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	sos=`${EGREP} -h -x '.*/lib[^/]+\.so' ${PLIST} || ${TRUE}`; \
+	sos=`${EGREP} -h -x '.*/lib[^/]+\.so' ${PLIST} || ${TRUE}`;	\
 	if [ "$$sos" != "" ]; then					\
 		shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;	\
 		if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 		\
@@ -2866,7 +2865,7 @@ do-shlib-handling:
 		case "$$shlib_type" in					\
 		ELF) 	;;						\
 		"a.out") 						\
-			${AWK} '${_AOUT_AWK}' <${PLIST} >${PLIST}.tmp ;			\
+			${AWK} '${_AOUT_AWK}' <${PLIST} >${PLIST}.tmp ;	\
 			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
 				${MV} ${PLIST}.tmp ${PLIST};		\
 			else 						\
@@ -2888,7 +2887,7 @@ do-shlib-handling:
 			fi						\
 			;;						\
 		"dylib")						\
-			${AWK} '${_DYLIB_AWK}' <${PLIST} >${PLIST}.tmp &&			\
+			${AWK} '${_DYLIB_AWK}' <${PLIST} >${PLIST}.tmp && \
 			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
 				${MV} ${PLIST}.tmp ${PLIST};		\
 			else						\
@@ -2896,9 +2895,9 @@ do-shlib-handling:
 			fi ;						\
 			;;						\
 		"aixlib")						\
-			${AWK} '${_AIXLIB_AWK}' <${PLIST} >${PLIST}.tmp &&			\
-			${MV} ${PLIST}.tmp ${PLIST};		\
-			;; \
+			${AWK} '${_AIXLIB_AWK}' <${PLIST} >${PLIST}.tmp && \
+			${MV} ${PLIST}.tmp ${PLIST};			\
+			;;						\
 		"*")							\
 			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 	\
 				${ECHO_MSG} "No shared libraries for ${MACHINE_ARCH}"; \
