@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.28 2005/02/04 09:10:13 jlam Exp $	*/
+/*	$NetBSD: perform.c,v 1.29 2005/03/07 08:41:58 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.28 2005/02/04 09:10:13 jlam Exp $");
+__RCSID("$NetBSD: perform.c,v 1.29 2005/03/07 08:41:58 agc Exp $");
 #endif
 #endif
 
@@ -401,7 +401,7 @@ pkg_do(const char *pkg, lpkg_head_t *pkgs)
 			}
 
 			if (status != Good) {
-				warnx("Package `%s' OS mismatch:", pkg);
+				warnx("Warning: package `%s' was built for a different version of the OS:", pkg);
 				warnx("%s/%s %s (pkg) vs. %s/%s %s (this host)",
 				    buildinfo[BI_OPSYS],
 				    buildinfo[BI_MACHINE_ARCH],
