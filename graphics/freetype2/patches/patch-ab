@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2003/03/21 22:25:51 dillo Exp $
+
+--- builds/unix/configure.orig	Fri Mar 21 23:12:07 2003
++++ builds/unix/configure
+@@ -9259,6 +9259,7 @@ s,@ac_ct_RANLIB@,$ac_ct_RANLIB,;t t
+ s,@STRIP@,$STRIP,;t t
+ s,@ac_ct_STRIP@,$ac_ct_STRIP,;t t
+ s,@LIBTOOL@,$LIBTOOL,;t t
++s,@RPATH_FLAG@,$RPATH_FLAG,;t t
+ CEOF
+ 
+ _ACEOF
