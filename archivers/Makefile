@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2004/07/06 14:41:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.77 2004/08/29 15:32:01 recht Exp $
 #
 
 COMMENT=	Archivers
@@ -55,6 +55,7 @@ SUBDIR+=	ppmd
 SUBDIR+=	ppunpack
 SUBDIR+=	rar
 SUBDIR+=	rar-linux
+SUBDIR+=	rzip
 SUBDIR+=	squsq
 SUBDIR+=	star
 SUBDIR+=	stuffit
