@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.5 2000/06/21 00:47:46 jlam Exp $
+@comment $NetBSD: PLIST.NetBSD,v 1.6 2000/07/25 03:54:50 jlam Exp $
 bin/cpumemusage_applet
 bin/deskguide_applet
 bin/diskusage_applet
@@ -899,3 +899,5 @@ share/pixmaps/vnterm.xpm
 @dirrm share/applets/Clocks
 @dirrm share/applets/Amusements
 @dirrm share/applets
+@dirrm etc/CORBA/servers
+@dirrm etc/CORBA
