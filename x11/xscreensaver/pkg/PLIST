@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 1999/07/02 15:23:13 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.16 1999/07/23 16:02:53 frueauf Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -104,6 +104,7 @@ libexec/xscreensaver/xjack
 libexec/xscreensaver/xlyap
 libexec/xscreensaver/xmatrix
 libexec/xscreensaver/xroger
+libexec/xscreensaver/xsublim
 lib/X11/app-defaults/XScreenSaver
 man/man1/attraction.1
 man/man1/blitspin.1
