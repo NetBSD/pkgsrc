@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2000/09/20 04:49:19 jlam Exp $
+# $NetBSD: Makefile,v 1.84 2000/09/26 19:59:54 fredb Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -20,6 +20,7 @@ CONFLICTS=		openssh-[0-9]* ssh6-[0-9]*
 
 CRYPTO=			YES
 LICENSE=		no-commercial-use
+USE_RSAREF2=		NO
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 CFLAGS=			-O2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/09/09 19:40:22 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2000/09/26 19:59:54 fredb Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -21,6 +21,7 @@ BUILD_DEPENDS=	${PERL5}:../../lang/perl5-base
 
 CRYPTO=		YES
 GNU_CONFIGURE=	YES
+USE_RSAREF2=	NO
 
 PGPLIB=	${PREFIX}/share/pgp5
 
