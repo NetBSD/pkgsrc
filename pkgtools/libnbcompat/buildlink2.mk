@@ -1,9 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/09/03 16:38:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2003/09/04 01:51:15 jlam Exp $
 
 .if !defined(LIBNBCOMPAT_BUILDLINK2_MK)
 LIBNBCOMPAT_BUILDLINK2_MK=     # defined
 
-BUILDLINK_DEPENDS.libnbcompat?=		libnbcompat>=20030827
+BUILDLINK_DEPENDS.libnbcompat?=		libnbcompat>=20030828
 BUILDLINK_PKGSRCDIR.libnbcompat?=	../../pkgtools/libnbcompat
 BUILDLINK_DEPMETHOD.libnbcompat?=	build
 

@@ -1,4 +1,4 @@
-/*	$NetBSD: mkdtemp.c,v 1.1 2003/09/01 15:31:18 jlam Exp $	*/
+/*	$NetBSD: mkdtemp.c,v 1.2 2003/09/04 01:51:16 jlam Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993
@@ -86,10 +86,10 @@ mkdtemp(char *path)
 		if (*trv == '/') {
 			*trv = '\0';
 			if (stat(path, &sbuf))
-				return (0);
+				return (char *)NULL;
 			if (!S_ISDIR(sbuf.st_mode)) {
 				errno = ENOTDIR;
-				return (0);
+				return (char *)NULL;
 			}
 			*trv = '/';
 			break;
@@ -98,14 +98,14 @@ mkdtemp(char *path)
 
 	for (;;) {
 		if (mkdir(path, 0700) >= 0)
-			return (1);
+			return path;
 		if (errno != EEXIST)
-			return (0);
+			return (char *)NULL;
 
 		/* tricky little algorithm for backward compatibility */
 		for (trv = start;;) {
 			if (!*trv)
-				return (0);
+				return (char *)NULL;
 			if (*trv == 'z')
 				*trv++ = 'a';
 			else {
