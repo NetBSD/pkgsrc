@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2004/09/16 20:14:05 minskim Exp $
+$NetBSD: patch-ab,v 1.5 2004/12/09 16:01:58 wiz Exp $
 
---- spegla.c.orig	1999-11-24 13:38:06.000000000 -0600
+--- spegla.c.orig	2000-05-27 15:38:14.000000000 +0200
 +++ spegla.c
-@@ -657,7 +657,7 @@ check_minfree(int minfree, char *path)
+@@ -708,7 +708,7 @@ check_minfree(int minfree, char *path)
  #ifdef ULTRIX
  	struct	fs_data f;
  #else
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 2004/09/16 20:14:05 minskim Exp $
  	struct	statvfs f;
  #else
  	struct	statfs f;
-@@ -667,7 +667,7 @@ check_minfree(int minfree, char *path)
+@@ -718,7 +718,7 @@ check_minfree(int minfree, char *path)
  	if (minfree == 0)
  		return;
  
