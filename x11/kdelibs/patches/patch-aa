@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.11 1999/11/22 20:27:23 jdolecek Exp $
+$NetBSD: patch-aa,v 1.12 2000/08/16 18:29:51 skrll Exp $
 
 The libtool staff was pulled into KDE, as rev 1.331 of
 	kde-common/admin/acinclude.m4.in (jdolecek)
 
---- configure.orig	Wed Apr 28 17:24:12 1999
-+++ configure	Thu Jun  3 19:26:48 1999
+--- configure.orig	Tue Sep  7 16:23:19 1999
++++ configure	Wed Aug 16 15:32:01 2000
 @@ -507,9 +507,9 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
@@ -17,24 +17,7 @@ The libtool staff was pulled into KDE, as rev 1.331 of
    fi
  fi
  for ac_site_file in $CONFIG_SITE; do
-@@ -2034,6 +2034,8 @@
- kde_save_cflags="$CFLAGS"
- CC=$CXX
- CFLAGS="$CXXFLAGS"
-+
-+if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool --silent'
- 
-@@ -2267,6 +2269,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+fi
- 
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
-@@ -5376,37 +5379,37 @@
+@@ -5382,37 +5382,37 @@
  if test "default" = "default"; then
  
    if test -z "$kde_htmldir"; then
