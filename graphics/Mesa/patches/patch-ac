@@ -1,0 +1,36 @@
+$NetBSD: patch-ac,v 1.1 1998/09/30 19:46:37 tron Exp $
+
+*** mklib.netbsd~	Mon Nov  3 21:55:42 1997
+--- mklib.netbsd	Thu Mar  5 15:29:05 1998
+***************
+*** 41,54 ****
+  set -x
+  
+! LIBRARY=`basename ${LIBRARY} .so`
+  
+! VERSION="${MAJOR}.${MINOR}"
+  
+! echo "Building PIC library $LIBRARY"
+! rm -f ${LIBRARY}_pic.a ${LIBRARY}.so.${VERSION}
+! ar cq ${LIBRARY}_pic.a ${OBJECTS}
+! ranlib ${LIBRARY}_pic.a
+  
+! ld -x -Bshareable -Bforcearchive -o ${LIBRARY}.so.${VERSION} ${LIBRARY}_pic.a
+  
+! cp ${LIBRARY}_pic.a ${LIBRARY}.so.${VERSION} ../lib
+--- 41,55 ----
+  set -x
+  
+! VERSION=$MAJOR.$MINOR
+  
+! BASENAME=`echo ${LIBRARY} | sed "s/\.a//g"`
+! SHLIB=${BASENAME}.so.${VERSION}
+! STLIB=${BASENAME}.a
+  
+! rm -f ${SHLIB} ${STLIB}
+  
+! ar cq ${STLIB} ${OBJECTS}
+! ranlib ${STLIB}
+! ld -Bshareable -o ${SHLIB} ${OBJECTS}
+  
+! mv ${SHLIB} ../lib

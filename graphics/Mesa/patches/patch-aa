@@ -1,59 +1,17 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:46 agc Exp $
+$NetBSD: patch-aa,v 1.4 1998/09/30 19:46:36 tron Exp $
 
-*** Make-config~	Sat Feb  7 09:17:53 1998
---- Make-config	Thu Mar  5 15:27:14 1998
-***************
-*** 688,696 ****
-  netbsd:
-  	$(MAKE) $(MFLAGS) targets \
-! 	"GL_LIB = libMesaGL.so" \
-! 	"GLU_LIB = libMesaGLU.so" \
-! 	"GLUT_LIB = libglut.so" \
-! 	"TK_LIB = libMesatk.so" \
-! 	"AUX_LIB = libMesaaux.so" \
-  	"CC = gcc" \
-  	"CFLAGS = -O2 -fPIC -DSHM -I/usr/X11R6/include -DHZ=100"  \
---- 688,696 ----
-  netbsd:
-  	$(MAKE) $(MFLAGS) targets \
-! 	"GL_LIB = libMesaGL.a" \
-! 	"GLU_LIB = libMesaGLU.a" \
-! 	"GLUT_LIB = libglut.a" \
-! 	"TK_LIB = libMesatk.a" \
-! 	"AUX_LIB = libMesaaux.a" \
-  	"CC = gcc" \
-  	"CFLAGS = -O2 -fPIC -DSHM -I/usr/X11R6/include -DHZ=100"  \
-*** mklib.netbsd~	Mon Nov  3 21:55:42 1997
---- mklib.netbsd	Thu Mar  5 15:29:05 1998
-***************
-*** 41,54 ****
-  set -x
-  
-! LIBRARY=`basename ${LIBRARY} .so`
-  
-! VERSION="${MAJOR}.${MINOR}"
-  
-! echo "Building PIC library $LIBRARY"
-! rm -f ${LIBRARY}_pic.a ${LIBRARY}.so.${VERSION}
-! ar cq ${LIBRARY}_pic.a ${OBJECTS}
-! ranlib ${LIBRARY}_pic.a
-  
-! ld -x -Bshareable -Bforcearchive -o ${LIBRARY}.so.${VERSION} ${LIBRARY}_pic.a
-  
-! cp ${LIBRARY}_pic.a ${LIBRARY}.so.${VERSION} ../lib
---- 41,55 ----
-  set -x
-  
-! VERSION=$MAJOR.$MINOR
-  
-! BASENAME=`echo ${LIBRARY} | sed "s/\.a//g"`
-! SHLIB=${BASENAME}.so.${VERSION}
-! STLIB=${BASENAME}.a
-  
-! rm -f ${SHLIB} ${STLIB}
-  
-! ar cq ${STLIB} ${OBJECTS}
-! ranlib ${STLIB}
-! ld -Bshareable -o ${SHLIB} ${OBJECTS}
-  
-! mv ${SHLIB} ../lib
+--- Make-config.orig	Sun Aug 30 05:27:56 1998
++++ Make-config	Wed Sep 30 20:23:27 1998
+@@ -773,9 +773,9 @@
+ 
+ netbsd:
+ 	$(MAKE) $(MFLAGS) targets \
+-	"GL_LIB = libMesaGL.so" \
+-	"GLU_LIB = libMesaGLU.so" \
+-	"GLUT_LIB = libglut.so" \
++	"GL_LIB = libMesaGL.a" \
++	"GLU_LIB = libMesaGLU.a" \
++	"GLUT_LIB = libglut.a" \
+ 	"CC = gcc" \
+ 	"CFLAGS = -O2 -fPIC -DSHM -I/usr/X11R6/include -DHZ=100"  \
+ 	"MAKELIB = ../mklib.netbsd" \

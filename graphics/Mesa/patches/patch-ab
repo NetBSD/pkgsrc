@@ -1,17 +1,15 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 10:40:46 agc Exp $
+$NetBSD: patch-ab,v 1.5 1998/09/30 19:46:36 tron Exp $
 
---- Makefile.orig	Thu Feb 12 04:38:13 1998
-+++ Makefile	Fri May  8 17:16:16 1998
-@@ -194,12 +194,9 @@
+--- Makefile.orig	Tue Sep  1 05:14:24 1998
++++ Makefile	Wed Sep 30 20:34:36 1998
+@@ -234,10 +234,7 @@
  	cd src ; $(MAKE) $@
  	cd src-glu ; $(MAKE) $@
- 	cd src-glut ; $(MAKE) $@
--	cd demos ; $(MAKE) $@
- 	if [ -d src-tk ]  ; then cd src-tk  ; $(MAKE) $@ ; fi
- 	if [ -d src-aux ] ; then cd src-aux ; $(MAKE) $@ ; fi
- 	if [ -d xdemos ]  ; then cd xdemos  ; $(MAKE) $@ ; fi
--	if [ -d samples ] ; then cd samples ; $(MAKE) $@ ; fi
--	if [ -d book ]    ; then cd book    ; $(MAKE) $@ ; fi
+ 	if [ -d src-glut ] ; then cd src-glut ; $(MAKE) $@ ; fi
+-	if [ -d demos ]    ; then cd demos    ; $(MAKE) $@ ; fi
+ 	if [ -d xdemos ]   ; then cd xdemos   ; $(MAKE) $@ ; fi
+-	if [ -d samples ]  ; then cd samples  ; $(MAKE) $@ ; fi
+-	if [ -d book ]     ; then cd book     ; $(MAKE) $@ ; fi
  
- amiwin:
- 	mklib.amiwin
+ 
+ irix6-n32 irix6-n32-dso irix6-gcc-n32-sl:

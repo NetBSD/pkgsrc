@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 1998/09/22 06:11:37 garbled Exp $
+# $NetBSD: Makefile,v 1.20 1998/09/30 19:46:36 tron Exp $
 #
 
-DISTNAME=       MesaLib-2.6
-PKGNAME=	Mesa-2.6
+DISTNAME=       MesaLib-3.0
+PKGNAME=	Mesa-3.0
 CATEGORIES=	graphics
 MASTER_SITES= 	ftp://iris.ssec.wisc.edu/pub/Mesa/ \
 		ftp://ftp.fu-berlin.de/unix/X11/graphics/Mesa/ \
@@ -10,18 +10,20 @@ MASTER_SITES= 	ftp://iris.ssec.wisc.edu/pub/Mesa/ \
 DISTFILES=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX} \
 		MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
 
-NOT_FOR_ARCHS=	alpha	#gcc lossage
-
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.ssec.wisc.edu/~brianp/Mesa.html
+
+CONFLICTS=	Mesa-2.4 Mesa-2.6
+
+NOT_FOR_ARCHS=	alpha	#gcc lossage
 
 WRKSRC=         ${WRKDIR}/${PKGNAME}
 ALL_TARGET=	netbsd
 USE_X11=	yes
-MESA_LIBS=	libMesaGL libMesaGLU libMesaaux libMesatk
-MESA_VERSION=	2.6
+MESA_LIBS=	libMesaGL libMesaGLU
+MESA_VERSION=	3.0
 GLUT_LIBS=	libglut
-GLUT_VERSION=	3.6
+GLUT_VERSION=	3.7
 
 post-extract:
 	@chmod +r ${WRKSRC}/demos/*
@@ -50,8 +52,8 @@ do-install:
 	${CP} -Rp ${WRKSRC}/book ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/widgets-sgi ${PREFIX}/share/examples/Mesa
 	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/Mesa
-	${LN} -f ${PREFIX}/lib/libMesaGL.so.2.6 ${PREFIX}/lib/libGL.so.2.6
-	${LN} -f ${PREFIX}/lib/libMesaGLU.so.2.6 ${PREFIX}/lib/libGLU.so.2.6
+	${LN} -f ${PREFIX}/lib/libMesaGL.so.3.0 ${PREFIX}/lib/libGL.so.3.0
+	${LN} -f ${PREFIX}/lib/libMesaGLU.so.3.0 ${PREFIX}/lib/libGLU.so.3.0
 	${LN} -f ${PREFIX}/lib/libMesaGL.a ${PREFIX}/lib/libGL.a
 	${LN} -f ${PREFIX}/lib/libMesaGLU.a ${PREFIX}/lib/libGLU.a
 
