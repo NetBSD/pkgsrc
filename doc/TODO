@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2556 2004/11/28 20:27:25 snj Exp $
+$NetBSD: TODO,v 1.2557 2004/11/28 20:32:15 snj Exp $
 
 Suggested new packages
 ======================
@@ -602,7 +602,6 @@ Suggested package updates
 	o icewm-gnome-1.2.17
 	o icewm-imlib-1.2.17
 	o icsi-finger-1.0.29
-	o id3v2-0.1.11
 	o idesk-0.5.6
 	o ijs-0.35
 	o imlib-1.9.15
