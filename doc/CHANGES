@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7653 2004/11/02 11:39:27 markd Exp $
+$NetBSD: CHANGES,v 1.7654 2004/11/02 16:37:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5020,4 +5020,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libnasl to 2.2.0 [adrianp 2004-11-01]
 	Updated gtk-send-pr to 0.3.5 [xtraeme 2004-11-01]
 	Updated netatalk to 2.0.1 [markd 2004-11-02]
-
+	Updated liferea to 0.6.1 [minskim 2004-11-02]
