@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1212 2003/07/12 10:21:33 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1213 2003/07/12 15:34:37 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -4373,10 +4373,10 @@ _IMAKE_MAN_CMD=
 PERL5_COMMENT=		( ${ECHO} "@comment The following lines are automatically generated"; \
 	${ECHO} "@comment from the installed .packlist files." )
 PERL5_PACKLIST_FILES=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
-	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
+	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,/*${PREFIX}/,," \
 	| ${SORT} -u
 PERL5_PACKLIST_DIRS=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
-	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
+	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,/*${PREFIX}/,," \
 		-e "s,^,@unexec \${RMDIR} -p %D/," \
 		-e "s,/[^/]*$$, 2>/dev/null || \${TRUE}," \
 	| ${SORT} -ur
