@@ -1,85 +1,14 @@
-$NetBSD: patch-ae,v 1.5 2004/05/04 16:35:57 minskim Exp $
+$NetBSD: patch-ae,v 1.6 2004/09/21 16:45:47 jmmv Exp $
 
-http://bugzilla.gnome.org/show_bug.cgi?id=141736
-
---- configure.orig	2004-04-20 04:54:46.000000000 -0500
+--- configure.orig	2004-08-30 15:04:08.000000000 +0200
 +++ configure
-@@ -20202,7 +20202,7 @@ if test -z "`$INTLTOOL_PERL -v | fgrep '
- echo "$as_me: error: perl 5.x required for intltool" >&2;}
-    { (exit 1); exit 1; }; }
- fi
--if `perl -e "require XML::Parser" 2>/dev/null`; then
-+if `$INTLTOOL_PERL -e "require XML::Parser" 2>/dev/null`; then
- :
- else
-    { { echo "$as_me:$LINENO: error: XML::Parser perl module is required for intltool" >&5
-@@ -25463,6 +25463,9 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
-+#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
- #ifdef HAVE_SYS_VFS_H
- #include <sys/vfs.h>
- #endif
-@@ -25516,6 +25519,9 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
-+#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
- #ifdef HAVE_SYS_VFS_H
- #include <sys/vfs.h>
- #endif
-@@ -25591,6 +25597,9 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
-+#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
- #ifdef HAVE_SYS_VFS_H
- #include <sys/vfs.h>
- #endif
-@@ -25644,6 +25653,9 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
-+#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
- #ifdef HAVE_SYS_VFS_H
- #include <sys/vfs.h>
- #endif
-@@ -25720,6 +25732,9 @@ cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- #include <unistd.h>
-+#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
- #ifdef HAVE_SYS_VFS_H
- #include <sys/vfs.h>
- #endif
-@@ -25780,6 +25795,9 @@ cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- #include <unistd.h>
-+#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
- #ifdef HAVE_SYS_VFS_H
- #include <sys/vfs.h>
- #endif
-@@ -25792,9 +25810,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -25969,9 +25969,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  int
  main ()
  {
 +#ifndef HAVE_STATVFS
  struct statfs st;
- statfs(NULL, &st, sizeof (st), 0);
+ statfs(NULL, &st);
    ;
 +#endif
    return 0;

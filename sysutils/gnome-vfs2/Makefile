@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.36 2004/05/03 15:39:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2004/09/21 16:45:47 jmmv Exp $
 #
-
-DEPENDS+=		shared-mime-info>=0.13:../../databases/shared-mime-info
 
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-vfs-module-2.0.pc.in
@@ -20,13 +18,9 @@ EGFILES+=		vfolders/system-settings.vfolder-info
 
 GCONF2_SCHEMAS=		desktop_default_applications.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_url_handlers.schemas
+GCONF2_SCHEMAS+=	system_dns_sd.schemas
 GCONF2_SCHEMAS+=	system_http_proxy.schemas
 GCONF2_SCHEMAS+=	system_smb.schemas
-
-# lib/vfs is shared with gnome-vfs.
-PRINT_PLIST_AWK+=	/^@dirrm lib\/vfs$$/ \
-				{ print "@unexec $${RMDIR} %D/" $$2 \
-				  " 2>/dev/null || $${TRUE}"; next; }
 
 .include "Makefile.common"
 
@@ -35,6 +29,7 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/vfs$$/ \
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../databases/gnome-mime-data/buildlink3.mk"
+.include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
