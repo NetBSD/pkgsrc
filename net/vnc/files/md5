@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.4 1999/02/17 18:50:50 tls Exp $
+$NetBSD: md5,v 1.5 1999/09/02 21:29:31 tron Exp $
 
-MD5 (vnc-3.3.2r3_unixsrc.tgz) = IGNORE
-MD5 (vnc-3.3.2r3_doc.tgz) = IGNORE
+MD5 (vnc-3.3.3_unixsrc.tgz) = 511bac2c503f6f870c768edcd25394b0
+MD5 (vnc-latest_doc.tgz) = d3603d8df13fd74f0140c735e9f11278
