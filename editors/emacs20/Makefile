@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/28 17:14:29 joda Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/30 00:17:06 seb Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	2
@@ -73,8 +73,10 @@ CONFIGURE_ARGS+=--with-ipv6
 CONFIGURE_ARGS+=--without-ipv6
 .endif
 MAKE_ENV+=	INSTALL_STRIP=${_STRIPFLAG_INSTALL}
+
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff \
-		    ccmode message widget reftex forms
+		    ccmode message widget reftex
 
 INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
@@ -84,5 +86,4 @@ pre-install:
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
