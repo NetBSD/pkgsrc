@@ -3,7 +3,7 @@
 # Date created:         6 November 1994
 # Whom:                 jmz
 #
-# $NetBSD: Makefile,v 1.3 1998/01/24 23:41:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/22 00:14:35 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
@@ -19,7 +19,7 @@ MAN1=		buildhash.1 findaffix.1 ispell.1 munchlist.1 \
 		sq.1 tryaffix.1 unsq.1
 MAN4=		ispell.4 english.4
 
-pre-fetch pre-build pre-install:
+pre-extract pre-build pre-install:
 .if !defined(ISPELL_FR)
 	@echo '******************************************************'
 	@echo '* Note that you can build a french/english version   *'
