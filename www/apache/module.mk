@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.5 2003/02/17 22:33:55 grant Exp $
+# $NetBSD: module.mk,v 1.6 2003/05/31 14:31:14 grant Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install apache modules.
@@ -26,13 +26,18 @@ APACHE_MODULE=		# defined
 
 .include "../../www/apache/buildlink2.mk"
 
+# ensure apxs finds the right version of gcc.
+.include "../../mk/gcc.buildlink2.mk"
+
 APACHE_MODULE_SRCDIR?=	${WRKSRC}
 APACHE_MODULE_SRC?=	*.c
 
 apache-module-build:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${APACHE_MODULE_SRCDIR} && ${APXS} ${CPPFLAGS} ${LDFLAGS}	\
-		-c -o ${APACHE_MODULE_NAME} ${APACHE_MODULE_SRC}
+	${_PKG_SILENT}${_PKG_DEBUG} \
+	cd ${APACHE_MODULE_SRCDIR} && \
+		${SETENV} PATH=${PATH} \
+		${APXS} ${CPPFLAGS} ${LDFLAGS} \
+			-c -o ${APACHE_MODULE_NAME} ${APACHE_MODULE_SRC}
 
 do-build: apache-module-build
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
