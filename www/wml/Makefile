@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/09/28 09:13:59 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/12/28 00:29:02 wiz Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -17,16 +17,19 @@ DEPENDS+=	p5-Term-ReadKey>=2.11:../../devel/p5-Term-ReadKey
 #DEPENDS+=	tidy-[0-9]*:../../www/tidy
 
 GNU_CONFIGURE=	yes
+# Don't change incdir/libdir -- they need to be this way so
+# that ncurses.h is found even if base system curses.h is used.
 CONFIGURE_ARGS=	--with-perl=${PERL5} \
-		--with-incdir=${BUILDLINK_PREFIX.ncurses}/include \
-		--with-libdir=${BUILDLINK_PREFIX.ncurses}/lib \
+		--with-incdir=${LOCALBASE}/include \
+		--with-libdir=${LOCALBASE}/lib \
 		--with-openworld \
 		--with-tidy=${LOCALBASE}/bin/tidy
 
 USE_BUILDLINK2=	yes
 TEST_TARGET=	test
 
-USE_NCURSES=	# redrawwin()
+INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
+INCOMPAT_CURSES=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*
 
 post-install:
 	cd ${PREFIX}/man/cat1 ; \
