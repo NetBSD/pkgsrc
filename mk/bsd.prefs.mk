@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.31 2001/03/24 21:06:52 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.32 2001/04/08 14:14:11 hubertf Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -186,9 +186,11 @@ LOCALBASE?=             ${DESTDIR}/usr/pkg
 PKG_TOOLS_BIN?=		/usr/sbin
 .elif (${OPSYS} == "SunOS")
 X11BASE?=               ${DESTDIR}/usr/openwin
-PKG_TOOLS_BIN?=		${LOCALBASE}/bsd/bin
+ZOULARISBASE?=		${LOCALBASE}/bsd
+PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
 .elif (${OPSYS} == "Linux")
-PKG_TOOLS_BIN?=		${LOCALBASE}/bsd/bin
+ZOULARISBASE?=		${LOCALBASE}/bsd
+PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/local
@@ -218,10 +220,10 @@ MAKEFLAGS+=	PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
 .endif
 
 .if (${OPSYS} == SunOS) && !defined(ZOULARIS_VERSION)
-.if !exists(${LOCALBASE}/bsd/share/mk/zoularis.mk)
+.if !exists(${ZOULARISBASE}/share/mk/zoularis.mk)
 ZOULARIS_VERSION=	20000522
 .else
-.include "${LOCALBASE}/bsd/share/mk/zoularis.mk"
+.include "${ZOULARISBASE}/share/mk/zoularis.mk"
 .endif
 MAKEFLAGS+=		ZOULARIS_VERSION="${ZOULARIS_VERSION}"
 .endif
