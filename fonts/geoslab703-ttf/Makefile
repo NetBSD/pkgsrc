@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/01/25 20:31:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/28 14:38:03 wiz Exp $
 #
 
 DISTNAME=	geoslab703-ttf-20010522
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.will-harris.com/fonts/
 DISTFILES=	geo703l.ttf geo703li.ttf
