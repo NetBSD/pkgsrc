@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: arg-source,v 1.2 2004/09/24 09:37:28 seb Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,7 +36,7 @@
 
 # This script manages a buffer through which arguments from the command
 # line are funneled.  Along the way, the arguments are potentially
-# merged and split an various ways to canonicalize their representation.
+# merged and split in various ways to canonicalize their representation.
 # This script should be sourced within a loop and upon exiting returns
 # an argument in $arg.
 #
