@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5175 2004/03/09 18:09:34 minskim Exp $
+$NetBSD: CHANGES,v 1.5176 2004/03/09 19:17:04 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1347,3 +1347,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added kde3-i18n-tg-3.2.1 [markd 2004-03-09]
 	Removed MozillaFirebird [taya 2004-03-09]
 	Updated wavesurfer to 1.4.6nb1 [minskim 2004-03-09]
+	Added scons-0.95 [recht 2004-03-09]
