@@ -5,7 +5,7 @@
  	done ; \
  	for i in $(SRCDISTPROGS) ; do \
 -	   $(INSTALL_PROGRAM) $$i $(LYX_DIR)/$$i ; \
-+	   $(INSTALL_DATA) $$i $(LYX_DIR)/$$i ; \
++	   $(BSD_INSTALL_SCRIPT) $$i $(LYX_DIR)/$$i ; \
  	done)
  	for i in $(BUILDINSTFILES) ; do \
  	   $(INSTALL_DATA) $$i $(LYX_DIR)/$$i ; \
