@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.594 2003/05/26 09:02:38 wiz Exp $
+$NetBSD: TODO,v 1.595 2003/05/27 15:48:32 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -142,7 +142,6 @@ Suggested package updates
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
 	o gsed-4.0.7
-	o gtetrinet-0.7.1
 	o gtkglext-1.0.0
 	o gtkmm-2.2.2
 	o guile-1.6.4
