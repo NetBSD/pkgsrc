@@ -1,39 +1,22 @@
-# $NetBSD: Makefile,v 1.37 2003/06/02 01:19:29 jschauma Exp $
+# $NetBSD: Makefile,v 1.38 2003/06/23 09:53:10 adam Exp $
 #
 
-DISTNAME=       gd-1.8.4
-PKGREVISION=	1
+DISTNAME=       gd-2.0.15
 CATEGORIES=	graphics
 MASTER_SITES=   http://www.boutell.com/gd/http/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	adam@netbsd.org
 HOMEPAGE=	http://www.boutell.com/gd/
 COMMENT=	graphics library for fast PNG creation
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 USE_X11=		YES
+GNU_CONFIGURE=		YES
 REPLACE_PERL=		bdftogd
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	EXTRA_LIBS="-lsocket -lnsl"
-.endif
-
-CPPFLAGS+=	-I${BUILDLINK_PREFIX.freetype}/include/freetype	# freetype.h
-CPPFLAGS+=	-I${BUILDLINK_PREFIX.xpm}/include/X11		# xpm.h
-
-# When the API changes and breaks binary-compatibility with the previous
-# version, increment the MAJOR by 1 and reset the MINOR to 0.  Otherwise,
-# bump the MINOR when a new version comes out.
-#
-GD_MAJOR=	1
-GD_MINOR=	9
-MAKE_ENV+=	GD_MAJOR="${GD_MAJOR}" GD_MINOR="${GD_MINOR}" COMPILER="${CC}"
-
 .include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/freetype-lib/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
