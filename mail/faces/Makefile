@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/06/11 04:59:58 jtb Exp $
-# FreeBSD Id: Makefile,v 1.5 1997/11/17 18:47:53 max Exp
-#
+# $NetBSD: Makefile,v 1.22 2001/07/24 17:04:27 tron Exp $
 
 DISTNAME=	faces-1.6.1
 CATEGORIES=	mail
@@ -14,13 +12,12 @@ COMMENT=	visual mail, user and print face server
 LICENSE=	limited-redistribution
 RESTRICTED=	"Distribution not allowed if money exchanged"
 
-WRKSRC=		${WRKDIR}/faces
-
 USE_X11=	yes
 
 MAKE_ENV+=	MKLINT=no
+WRKSRC=		${WRKDIR}/faces
 
-post-configure:
+do-configure:
 	@cd ${WRKSRC}; \
 	for f in Makefile faces.h x11.c compface/Makefile 		\
 		scripts/addxface scripts/facesall scripts/mkfacesindex; do \
@@ -47,6 +44,7 @@ post-install:
 
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=	SVR4LIBS="-lnsl -lsocket -lgen" SYSV=-DSYSV32 CC=gcc CPPFLAGS=
+PATH:=		/usr/ucb:${PATH}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
