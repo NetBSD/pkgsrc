@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.1.2.7 2003/08/30 07:48:53 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.1.2.8 2003/08/30 10:02:34 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -9,7 +9,7 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 # equivalents:
 #
 #	mangle:src:dst		mangles the directory "src" into "dst"
-#	rpath:src:dst		mangles the directory "src" into "dst"
+#	rpath:src:dst		translates the directory "src" into "dst"
 #					in rpath options
 #	no-rpath		removes "-R*", "-Wl,-R", and "-Wl,-rpath,*"
 #	depot:src:dst		translates "src/<dir>/" into "dst/"
@@ -23,6 +23,10 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 #	r:dir			removes "dir" and "dir/*"
 #	S:foo:bar		translates word "foo" into "bar"
 #	s:foo:bar		translates "foo" into "bar"
+#
+# Some transformations only make sense in one direction, so if a command
+# is prefixed with either "transform:" or "untransform:", then the
+# resulting sed commands are only appended the the corresponding sedfile.
 
 gen() {
 	action=$1; shift
@@ -196,10 +200,24 @@ EOF
 			;;
 		esac
 		;;
+	*)
+		echo "Unknown arg: $arg" 1>&2
+		exit 1
+		;;
 	esac
 }
 
-for arg do
-	gen transform "$arg"
-	gen untransform "$arg"
+for arg; do
+	case $arg in
+	transform:*)
+		gen transform "${arg#transform:}"
+		;;
+	untransform:*)
+		gen untransform "${arg#untransform:}"
+		;;
+	*)
+		gen transform "$arg"
+		gen untransform "$arg"
+		;;
+	esac
 done
