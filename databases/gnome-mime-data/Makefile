@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/11/30 16:24:35 salo Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/25 15:11:20 jmmv Exp $
 #
 
 DISTNAME=		gnome-mime-data-2.0.1
+PKGREVISION=		1
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-mime-data/2.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,6 +20,12 @@ USE_PKGLOCALEDIR=	YES
 USE_PERL5=		build
 GNU_CONFIGURE=		YES
 
+CONFIGURE_ARGS=		--sysconfdir="${PKG_SYSCONFDIR}"
+
+EGDIR=			${PREFIX}/share/examples/gnome-mime-data
+CONF_FILES=		${EGDIR}/gnome-vfs-mime-magic ${PKG_SYSCONFDIR}/gnome-vfs-mime-magic
+
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
