@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1998/11/24 00:56:24 hubertf Exp $
+$NetBSD: patch-aa,v 1.4 1998/11/24 05:23:24 mycroft Exp $
 
 --- Local.config.orig	Fri Oct 30 13:35:18 1998
 +++ Local.config	Tue Nov 24 01:46:55 1998
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.3 1998/11/24 00:56:24 hubertf Exp $
 -CDEBUGFLAGS = -g				/* General debug flag */
 -/* CDEBUGFLAGS = -O				/* General optimize flag */
 +/* CDEBUGFLAGS = -g				/* General debug flag */
-+CDEBUGFLAGS = -O6				/* General optimize flag */
++CDEBUGFLAGS = -O2				/* General optimize flag */
  /* CDEBUGFLAGS = -Ae +O3 +FPD			/* HP cc optimize flags (no +ESlit) */
  /* CDEBUGFLAGS = -Ae -g -z +w1			/* HP cc debug flags */
  /* CDEBUGFLAGS = -g2 -O2			/* SGI debug */
