@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/01 01:28:01 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/05 14:35:16 abs Exp $
 
 DISTNAME=	MLDBM-Sync-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,7 @@ MAINTAINER=	packages@netbsd.org
 COMMENT=	perl5 module for safe concurrent access to MLDBM databases
 
 DEPENDS+= 	p5-MLDBM-[0-9]*:../../databases/p5-MLDBM
+DEPENDS+= 	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/MLDBM/Sync/.packlist
