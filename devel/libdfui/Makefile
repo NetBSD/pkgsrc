@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/20 00:33:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/20 00:52:46 xtraeme Exp $
 #
 
 DISTNAME=	libdfui-3.0
@@ -18,6 +18,17 @@ SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	Makefile
 SUBST_SED.prefix=	-e "s,/usr/local,${PREFIX},g"
 SUBST_MESSAGE.prefix=	"Fixing hardcoded paths."
+
+INSTALLATION_DIRS=	include/dfui lib
+
+HEADER_FILES=		dfui dump lang system
+
+do-install:
+.for f in ${HEADER_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${f}.h ${PREFIX}/include/dfui
+.endfor
+	${INSTALL_LIB} ${WRKSRC}/libdfui.so* ${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/libdfui*.a ${PREFIX}/lib
 
 .include "../../devel/libaura/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
