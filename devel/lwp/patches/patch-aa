@@ -1,0 +1,89 @@
+$NetBSD: patch-aa,v 1.3 2004/12/04 11:54:54 blymn Exp $
+
+--- src/process.S.orig	2001-10-05 06:44:08.000000000 +0930
++++ src/process.S
+@@ -400,7 +400,83 @@ returnto:
+ 	.end	returnto
+ #endif /* mips */
+ 
+-#ifdef	i386
++#if	defined(__amd64)
++
++#include <machine/asm.h>
++
++/*
++   savecontext(f, area1, newsp)
++	int (*f)();
++ 	struct savearea *area1;
++	char *newsp;
++
++	f will be in %rdi
++	*area1 will be in %rsi
++	*newsp will be in %rdx
++*/
++	
++        .text
++ENTRY(savecontext)
++	pushq	%rsp
++	pushq	%rax
++	pushq	%rcx
++	pushq	%rdx
++	pushq	%rbx
++	pushq	%rbp
++	pushq	%rsi
++	pushq	%rdi
++	pushq	%r8
++	pushq	%r9
++	pushq	%r10
++	pushq	%r11
++	pushq	%r12
++	pushq	%r13
++	pushq	%r14
++	pushq	%r15
++		
++	movq	%rsp, (%rsi)	/* Store sp in savearea. */
++
++	cmpq	$0, %rdx	/* Check if newsp is NULL */
++	je	L1			/* Don't change the stack if newsp is zero. */
++	movq	%rdx, %rsp
++
++L1:	xorq	%rbp, %rbp		/* clear stackframe */
++	call	*%rdi			/* f(); */
++
++        /* Trigger a segfault, we shouldn't get here anyway. */
++        movq    $0, 0
++
++/*
++  returnto(area2)
++     struct savearea *area2;
++
++	area2 will be in %rdi
++*/
++#define	area2	8
++
++ENTRY(returnto)
++	mov	(%rdi), %rsp	/* Restore stack pointer. */
++	popq	%r15
++	popq	%r14
++	popq	%r13
++	popq	%r12
++	popq	%r11
++	popq	%r10
++	popq	%r9
++	popq	%r8
++	popq	%rdi
++	popq	%rsi
++	popq	%rbp
++	popq	%rbx
++	popq	%rdx
++	popq	%rcx
++	popq	%rax
++	popq	%rsp
++	ret
++
++#endif /* amd64 */
++
++#if	defined(i386)
+ 		
+ /*
+    savecontext(f, area1, newsp)
