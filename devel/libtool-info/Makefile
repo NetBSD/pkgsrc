@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2004/02/05 20:14:06 skrll Exp $
+# $NetBSD: Makefile,v 1.14 2004/10/14 19:04:56 tv Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
 
-PKGNAME=	${DISTNAME:C/-/-info-/}
+PKGNAME=	${DISTNAME:S/-/-info-/}
 SVR4_PKGNAME=	ltooi
 
 COMMENT=	Generic shared library support script - info pages
