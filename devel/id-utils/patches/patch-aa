@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1999/08/01 14:37:27 mrg Exp $
+
 --- src/lid.c.orig	Sun Aug  1 02:08:35 1999
 +++ src/lid.c	Sun Aug  1 02:09:38 1999
 @@ -563,7 +563,10 @@
