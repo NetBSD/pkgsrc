@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/06/12 02:02:07 grant Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/06/14 20:51:11 cube Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -52,7 +52,7 @@ SUBST_CLASSES+=			pkglocaledir
 SUBST_MESSAGE.pkglocaledir=	"Fixing locale directory references."
 SUBST_FILES.pkglocaledir=	configure config/programs.m4
 SUBST_STAGE.pkglocaledir=	post-patch
-SUBST_SED.pkglocaledir=		-e 's|\( localedir[ 	:]*=\).*|\1${_PKGLOCALEDIR}|'
+SUBST_SED.pkglocaledir=		-e 's|\(\s+localedir[ 	:]*=\).*|\1${_PKGLOCALEDIR}|'
 
 .include "../../mk/bsd.prefs.mk"
 
