@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/07 23:18:01 atatat Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/26 05:40:48 atatat Exp $
 #
 
-DISTNAME=	pkgdepgraph-1.0
+DISTNAME=	pkgdepgraph-1.1
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,7 +10,8 @@ MAINTAINER=	atatat@netbsd.org
 HOMEPAGE=	ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	Visual representation of installed NetBSD packages
 
-DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
+# removed so that pkgdepgraph can be used on "client" machines -- @@@
+# DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
 USE_PERL5=	YES
 
@@ -53,5 +54,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgdepgraph ${PREFIX}/bin/pkgdepgraph
 	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.0 ${PREFIX}/man/cat1
 	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.1 ${PREFIX}/man/man1
+
+post-install:
+	@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"

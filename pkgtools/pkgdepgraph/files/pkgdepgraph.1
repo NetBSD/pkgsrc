@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgdepgraph.1,v 1.1.1.1 2002/11/07 23:18:01 atatat Exp $
+.\"	$NetBSD: pkgdepgraph.1,v 1.2 2002/12/26 05:40:48 atatat Exp $
 .\"
 .\" Copyright (c) 2002 by Andrew Brown <atatat@netbsd.org>
 .\" Absolutely no warranty.
@@ -11,8 +11,8 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl d Ar pkg_dbdir
-.Op Fl clov
-.Op Pa lintpkgsrc output ...
+.Op Fl cglov
+.Op Pa data ...
 .Sh DESCRIPTION
 .Nm
 emits a
@@ -25,13 +25,22 @@ named
 and
 .Pa +REQUIRED_BY
 in order to gather its data.
+.Pp
 .Nm
 will also read any files passed to it as arguments (or stdin if it
 is not connected to a tty), in search of output that resembles that
 of either
-.Xr lintpkgsrc 1
-or
-.Xr audit-packages 1 .
+.Xr lintpkgsrc 1 ,
+.Xr audit-packages 1 ,
+or the output from a previous incantation of this program.
+.Pp
+In the latter case,
+.Nm
+will recolor the graph passed as input based, as usual, on information
+about currently installed pkgs.
+Packages that are in the input graph, but not currently installed,
+will be colored black, those that are installed will be colored green,
+and those that remain out of date for some reason will remain red.
 .Pp
 The options are as follows:
 .Bl -tag -width indent
@@ -54,6 +63,16 @@ The package is out of date or has had a security advisory issued
 against it, and should be replaced.
 .It purple
 The package was not found in the local pkgsrc tree.
+.It blue
+The package depends on something not found in the local pkgsrc tree.
+.It black
+The package has been removed and not yet replaced, or the graph is
+uncolored.
+The difference between an uncolored graph and a graph that has been
+recolored almost entirely black as a result of removing all the
+packages can be visually detected by the presence of the
+.Nm
+package.
 .El
 .It Fl d Ar pkg_dbdir
 The location of the package database files.
@@ -61,6 +80,14 @@ This defaults to the value of the
 .Pa PKG_DBDIR
 environment variable, if it is set, or to
 .Pa @PKG_DBDIR@ .
+.It Fl g
+Add package subgraph groupings.
+This places all packages with a common prefix (eg
+.Dq p5
+or
+.Dq gimp )
+in a subgraph with a line around it so you can visually associate
+packages.
 .It Fl l
 Adds package 
 .Dq location
@@ -101,20 +128,26 @@ To subsequently generate a graph of just the out-of-date nodes as a
 gif:
 .Bd -literal -offset indent
 $ grep -v green pkgdepgraph.dot | \\
-	sed 's/"packages"/"out of date packages"/' | \\
-	dot -Tgif \> pkgdepgraph.ood.gif
+	sed 's/"packages"/"out of date packages"/' \> out-of-date.dot
+$ dot -Tgif out-of-date.dot \> out-of-date.gif
 .Ed
 .Pp
 To make a list of packages that need to be removed in order to bring
 all packages up to date:
 .Bd -literal -offset indent
-$ grep -v green pkgdepgraph.dot \> out-of-date
-$ grep label out-of-date | \\
+$ grep label out-of-date.dot | \\
 	sort -t\\# +1n | \\
 	sed 's/\\(.\\)".*/\\1/;s/"//' \> delete_order
-$ grep LEAF out-of-date | \\
+$ grep LEAF out-of-date.dot | \\
 	sort -t\\# +1nr | \\
 	sed 's/.*label="//;s/\\\\.*//' \> rebuild_order
+.Ed
+.Pp
+To see the current state of the installed packages after some packages
+have been deleted, and some (but perhaps not all) have been
+reinstalled:
+.Bd -literal -offset indent
+$ pkgdepgraph out-of-date.dot | dot -Tps \> current.ps
 .Ed
 .Sh SEE ALSO
 .Xr dot 1 ,
