@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/09 13:05:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/09 14:17:47 jmmv Exp $
 #
 
 DISTNAME=	mono-0.24
@@ -9,7 +9,7 @@ MAINTAINER=	marc@informatik.uni-bremen.de
 HOMEPAGE=	http://www.go-mono.org/
 COMMENT=	Open source implementation of the .NET Development Framework
 
-BUILDLINK_DEPENDS.boehm-gc=	boehm-gc>=6.1.994
+BUILDLINK_DEPENDS.boehm-gc=	boehm-gc>=6.2alpha4
 
 # XXX: Is this really true?  As seen in the website, mono should work on
 # other platforms; please test.
