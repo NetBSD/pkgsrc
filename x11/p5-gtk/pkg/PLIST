@@ -1,31 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 1999/04/08 18:52:02 agc Exp $
-lib/perl5/site_perl/Gtk/Atoms.pm
-lib/perl5/site_perl/Gtk/ColorSelectButton.pm
-lib/perl5/site_perl/Gtk/Gdk.pm
-lib/perl5/site_perl/Gtk.pm
-lib/perl5/man/man3/GtkColorSelectButton.3
-lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/perllocal.pod
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/GdkTypes.h
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/GtkTypes.h
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/MiscTypes.h
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/gendefs.pl
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/genext.pl
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/pkg-gtk-1.1.defs
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/pkg-gtk.defs
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/pkg-gtk.typemap
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/PerlGtkExt.h
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/GtkTypemap
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/Files.pm
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install/GtkDefs.h
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Types.pm
+@comment $NetBSD: PLIST,v 1.3 1999/04/12 17:57:25 hubertf Exp $
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Gtk/Gtk.so
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Gtk/Gtk.bs
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Gtk/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Types.pm
 lib/perl5/site_perl/auto/Gtk/Gdk/autosplit.ix
 lib/perl5/site_perl/auto/Gtk/autosplit.ix
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk/Install
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk
+lib/perl5/site_perl/Gtk/Atoms.pm
+lib/perl5/site_perl/Gtk/ColorSelectButton.pm
+lib/perl5/site_perl/Gtk/Gdk.pm
+lib/perl5/site_perl/Gtk/LogHandler.pm
+lib/perl5/man/man3/Gtk::GtkColorSelectButton.3
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Gtk
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/Gtk
 @dirrm lib/perl5/site_perl/auto/Gtk/Gdk
 @dirrm lib/perl5/site_perl/auto/Gtk
 @dirrm lib/perl5/site_perl/Gtk
