@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2001/07/26 15:20:49 zuntum Exp $
+# $NetBSD: Makefile,v 1.10 2001/08/10 18:29:35 zuntum Exp $
 #
 
-DISTNAME=	avifile-0.6.20010726
+DISTNAME=	avifile-0.6.20010810
 CATEGORIES=	graphics
 MASTER_SITES=	http://flis.utech.lublin.pl/~zuntum/distfiles/
 EXTRACT_SUFX=	.tar.bz2
@@ -51,6 +51,11 @@ CONFIGURE_ARGS+=	--with-qt-dir="${BUILDLINK_DIR}/qt2"
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
+
+post-patch:
+	${SED} "s,\-lavifile,\-laviplay,g" ${WRKSRC}/avifile-config.in		\
+		> ${WRKSRC}/avifile-config.in.done
+	${MV} ${WRKSRC}/avifile-config.in.done ${WRKSRC}/avifile-config.in
 
 .include "../../devel/SDL/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
