@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.9 2002/12/05 19:10:44 drochner Exp $
+$NetBSD: patch-ar,v 1.10 2003/07/18 10:50:08 adam Exp $
 
---- doc/www.lesstif.org/images/Makefile.in.orig	Thu Dec  5 17:59:43 2002
-+++ doc/www.lesstif.org/images/Makefile.in	Thu Dec  5 18:00:16 2002
-@@ -145,7 +145,7 @@
+--- doc/www.lesstif.org/images/Makefile.in.orig	2003-07-18 01:04:25.000000000 +0200
++++ doc/www.lesstif.org/images/Makefile.in	2003-07-18 12:08:32.000000000 +0200
+@@ -156,7 +156,7 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
  #
