@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4964 2004/02/23 01:34:54 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4965 2004/02/23 01:58:41 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -986,3 +986,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bitlbee to 0.84 [xtraeme 2004-02-22]
 	Updated udfclient to 0.20 [reinoud 2004-02-23]
 	Added jftpgw-0.13.4 [xtraeme 2004-02-23]
+	Updated osh to 040216 [xtraeme 2004-02-23]
