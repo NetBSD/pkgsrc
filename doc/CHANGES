@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1801 2003/03/29 21:21:51 salo Exp $
+$NetBSD: CHANGES,v 1.1802 2003/03/29 21:57:21 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1344,3 +1344,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sendmail to 8.12.9 [seb 2003-03-29]
 	Updated libmilter to 8.12.9 [seb 2003-03-29]
 	Updated bitchx to 1.0.3.19nb1 [salo 2003-03-29]
+	Updated djbdns to 1.05nb2 [salo 2003-03-29]
