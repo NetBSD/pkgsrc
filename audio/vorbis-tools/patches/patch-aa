@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2003/10/28 12:32:42 reed Exp $
+$NetBSD: patch-aa,v 1.9 2003/12/08 14:43:48 wiz Exp $
 
---- ogg123/buffer.c.orig	2002-07-13 22:38:00.000000000 -0700
-+++ ogg123/buffer.c	2003-10-28 02:32:10.000000000 -0800
-@@ -37,7 +37,7 @@
- /* Special debugging code.  THIS IS NOT PORTABLE! */
- #ifdef DEBUG_BUFFER
- FILE *debugfile;
--#define DEBUG(x, y...) { fprintf (debugfile, "%d: " x "\n", getpid(),  ## y); }
-+#define DEBUG(...) { fprintf (debugfile, "%d: ", getpid());fprintf(debugfile, __VA_ARGS__);fprintf(debugfile,"\n"); }
- #else
- #define DEBUG(x, y...)
- #endif
-@@ -434,7 +434,9 @@ void buffer_destroy (buf_t *buf)
+--- ogg123/buffer.c.orig	Mon Sep  1 22:15:19 2003
++++ ogg123/buffer.c
+@@ -412,7 +412,9 @@ void buffer_reset (buf_t *buf)
  
    /* Cleanup pthread variables */
    pthread_mutex_destroy(&buf->mutex);
@@ -20,4 +11,4 @@ $NetBSD: patch-aa,v 1.8 2003/10/28 12:32:42 reed Exp $
 +  COND_SIGNAL(buf->playback_cond);
    pthread_cond_destroy(&buf->playback_cond);
    
-   free(buf);
+   /* Reinit pthread variables */
