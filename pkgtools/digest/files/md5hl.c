@@ -1,11 +1,17 @@
-/*	$NetBSD: md5hl.c,v 1.2 2001/07/09 21:43:21 hubertf Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.3 2002/12/21 04:06:14 schmonz Exp $	*/
 
 /*
  * Written by Jason R. Thorpe <thorpej@netbsd.org>, April 29, 1997.
  * Public domain.
  */
 
-#include <sys/cdefs.h>		/* hfpkg */
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
+#include <digest-types.h>
+
+#include <digest-types.h>
 
 #define	MDALGORITHM	MD5
 
@@ -16,7 +22,7 @@
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
-/*	$NetBSD: md5hl.c,v 1.2 2001/07/09 21:43:21 hubertf Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.3 2002/12/21 04:06:14 schmonz Exp $	*/
 
 /*
  * ----------------------------------------------------------------------------
@@ -33,14 +39,18 @@
  * Modifed April 29, 1997 by Jason R. Thorpe <thorpej@netbsd.org>
  */
 
-#include <sys/types.h>
-
 #include <assert.h>
+#ifdef HAVE_FCNTL_H
 #include <fcntl.h>
+#endif
+#ifdef HAVE_ERRNO_H
 #include <errno.h>
+#endif
 #include <stdio.h>
 #include <stdlib.h>
+#ifdef HAVE_UNISTD_H
 #include <unistd.h>
+#endif
 
 #define	CONCAT(x,y)	__CONCAT(x,y)
 #define	MDNAME(x)	CONCAT(MDALGORITHM,x)

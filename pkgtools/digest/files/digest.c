@@ -1,4 +1,4 @@
-/*	$NetBSD: digest.c,v 1.4 2001/08/07 22:14:53 wiz Exp $ */
+/*	$NetBSD: digest.c,v 1.5 2002/12/21 04:06:14 schmonz Exp $ */
 
 /*
  * Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
@@ -30,17 +30,25 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#include <sys/cdefs.h>
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
+#include <digest-types.h>
 
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 2001 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.4 2001/08/07 22:14:53 wiz Exp $");
+__RCSID("$NetBSD: digest.c,v 1.5 2002/12/21 04:06:14 schmonz Exp $");
 #endif
 
-#include <sys/types.h>
 
+#ifdef HAVE_ERRNO_H
+#include <errno.h>
+#endif
+#ifdef HAVE_LOCALE_H
 #include <locale.h>
+#endif
 #include <md5.h>
 #include <rmd160.h>
 #include <sha1.h>
@@ -48,7 +56,9 @@ __RCSID("$NetBSD: digest.c,v 1.4 2001/08/07 22:14:53 wiz Exp $");
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifdef HAVE_UNISTD_H
 #include <unistd.h>
+#endif
 
 /* perform an md5 digest, and print the results if successful */
 static int
@@ -229,11 +239,13 @@ main(int argc, char **argv)
 	int	rval;
 	int	i;
 
+#ifdef HAVE_SETLOCALE
 	(void) setlocale(LC_ALL, "");
+#endif
 	while ((i = getopt(argc, argv, "V")) != -1) {
 		switch(i) {
 		case 'V':
-			printf("%d\n", VERSION);
+			printf("%s\n", VERSION);
 			return EXIT_SUCCESS;
 		}
 	}
