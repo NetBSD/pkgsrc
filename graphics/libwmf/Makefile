@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/03/05 08:08:50 tron Exp $
+# $NetBSD: Makefile,v 1.21 2001/03/05 08:14:13 tron Exp $
 #
 
 DISTNAME=		libwmf-0.1.21
@@ -20,9 +20,7 @@ CONFIGURE_ARGS+=	--includedir="${PREFIX}/include/libwmf"
 CONFIGURE_ARGS+=	--with-png="${LOCALBASE}"
 CONFIGURE_ARGS+=	--with-ttf="${LOCALBASE}"
 CONFIGURE_ARGS+=	--with-xpm="${XPMDIR}"
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
-CPPFLAGS+=		-I${LOCALBASE}/include			# png.h
 INCLUDEDIR=		${PREFIX}/include/libwmf
 HTMLDIR=		${PREFIX}/share/doc/html/libwmf
 WRKSRC=			${WRKDIR}/libwmf
