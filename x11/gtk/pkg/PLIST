@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/02/13 11:49:30 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/02/24 20:53:13 tron Exp $
 lib/libglib.so.1.0
 lib/libglib.la
 lib/libglib.a
@@ -113,7 +113,7 @@ info/gtk.info-1
 info/gtk.info-2
 info/gtk.info-3
 info/gtk.info-4
-@exec [ ! -f %D/info/dir ] && /usr/bin/sed -ne '1,/Menu:/p' ${LOCALBASE}/info/dir > %D/info/dir
+@exec ([ ! -f %D/info/dir ] && /usr/bin/sed -ne '1,/Menu:/p' ${LOCALBASE}/info/dir > %D/info/dir) || /usr/bin/true
 @exec install-info %D/info/gdk.info %D/info/dir
 @exec install-info %D/info/gtk.info %D/info/dir
 @exec /sbin/ldconfig || /usr/bin/true
