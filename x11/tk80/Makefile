@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/01/26 21:36:06 agc Exp $
+# $NetBSD: Makefile,v 1.22 1999/01/26 22:03:20 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/10/01 09:20:31 tg Exp
 #
 
@@ -14,6 +14,8 @@ DEPENDS+=	tcl-8.0p2:../../lang/tcl80
 
 WRKSRC=		${WRKDIR}/tk8.0/unix
 GNU_CONFIGURE=	yes
+
+BUILD_USES_X11=	yes
 
 # let libtool look after shared libraries
 USE_LIBTOOL=	yes
