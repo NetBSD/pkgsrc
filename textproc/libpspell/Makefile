@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/11 17:49:28 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:31 wiz Exp $
 #
 
 DISTNAME=	pspell-.11.2
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pspell/}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://pspell.sourceforge.net/
+COMMENT=	generic interface to spell checker libraries
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES

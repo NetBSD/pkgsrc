@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/10/16 05:59:31 rh Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:37:44 wiz Exp $
 #
 
 DISTNAME=	t1utils-1.20
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.lcdf.org/~eddietwo/type/
 
 MAINTAINER=	jonb@netbsd.org
 HOMEPAGE=	http://www.lcdf.org/~eddietwo/type/
+COMMENT=	Utility programs for dealing with Postscript Type 1 font files
 
 GNU_CONFIGURE=	YES
 

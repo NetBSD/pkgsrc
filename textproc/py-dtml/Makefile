@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/10/22 20:01:54 tsarna Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 17:37:41 wiz Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/Documentation/Guides/DTML-HTML/DTML.html
+COMMENT=	DTML and StructuredText from Zope, also independently useful
 
 DEPENDS+=	py-extclass>=2.2.2:../../lang/py-extclass
 

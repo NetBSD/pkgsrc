@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/22 19:00:17 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:32:06 wiz Exp $
 #
 
 DISTNAME=	pcal_4_7_tar_Z
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.txt
 
 MAINTAINER=	kei@netbsd.org
 HOMEPAGE=	http://www.geocities.com/SunsetStrip/Palms/5555/PS/index.html
+COMMENT=	PostScript calendar program
 
 UUDECODE?=	uudecode -p
 EXTRACT_CMD=	${CAT} ${DOWNLOADED_DISTFILE} | ${UUDECODE} | ${PAX} -rz

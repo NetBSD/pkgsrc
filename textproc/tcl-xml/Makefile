@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/24 18:44:59 he Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:45 wiz Exp $
 #
 
 DISTNAME=	TclXML-1.2
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.zveno.com/in-tclxml/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.zveno.com/zm.cgi/in-tclxml/
+COMMENT=	XML parser implemented entirely in Tcl
 
 DEPENDS+=       tcl>=8.3.2:../../lang/tcl
 

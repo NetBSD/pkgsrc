@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/09/04 11:47:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/17 17:37:22 wiz Exp $
 # FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
 
 DISTNAME=	db157
@@ -9,6 +9,7 @@ DISTFILES=	db157.zip db157d.zip
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://nwalsh.com/docbook/dsssl/
+COMMENT=	DSSSL stylesheets for the DocBook DTD by Norman Walsh
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 DEPENDS+=	docbook>=4.0:../../textproc/docbook
