@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/16 01:48:19 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/09 13:32:11 wiz Exp $
 bin/dvipdfm
 bin/dvipdft
 bin/ebb
@@ -6,6 +6,7 @@ man/man1/dvipdfm.1
 share/texmf/dvipdfm/base/ot1.enc
 share/texmf/dvipdfm/base/ot1alt.enc
 share/texmf/dvipdfm/base/ot1r.enc
+share/texmf/dvipdfm/config/cid.map
 share/texmf/dvipdfm/config/cmr.map
 share/texmf/dvipdfm/config/config
 share/texmf/dvipdfm/config/lw35urw.map
