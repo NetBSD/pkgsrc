@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/05/16 23:18:46 kim Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/08 16:01:24 kim Exp $
 #
 
-DISTNAME=	anomy-sanitizer-1.59
+DISTNAME=	anomy-sanitizer-1.60
 WRKSRC=		${WRKDIR}/anomy
 CATEGORIES=	mail
 MASTER_SITES=	http://mailtools.anomy.net/dist/
