@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2001/04/09 11:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/04/16 07:39:03 wiz Exp $
 
 DISTNAME=		benchfft-2.0
 CATEGORIES=		benchmarks math
-MASTER_SITES=		ftp://theory.lcs.mit.edu/pub/fftw/benchfft/ ftp://theory.lcs.mit.edu/pub/fftw/
+MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/benchfft/ \
+			ftp://ftp.fftw.org/pub/fftw/old/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} fftw-2.0.1${EXTRACT_SUFX}
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://theory.lcs.mit.edu/~benchfft/download.html
+HOMEPAGE=		http://www.fftw.org/benchfft/
 COMMENT=		Benchmark your machine with a number of FFT algorithims
 
 GNU_CONFIGURE=		yes
