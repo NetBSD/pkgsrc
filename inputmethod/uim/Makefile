@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/28 17:10:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/01 17:40:44 minskim Exp $
 #
 
 DISTNAME=		uim-0.4.5
@@ -8,8 +8,6 @@ MASTER_SITES=		http://freedesktop.org/~tkng/
 MAINTAINER=		VEG03617@nifty.com
 HOMEPAGE=		http:/uim.freedesktop.org/
 COMMENT=		Uim is a multilingual input method library
-
-BUILD_DEPENDS+=		p5-XML-Parser>=2.34:../../textproc/p5-XML-Parser
 
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
@@ -28,6 +26,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../devel/ncurses/buildlink3.mk"
