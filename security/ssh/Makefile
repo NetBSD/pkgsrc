@@ -3,7 +3,7 @@
 # Date created:				19971214
 # Whom:					hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.8 1998/01/24 15:46:30 kleink Exp $
+# $NetBSD: Makefile,v 1.9 1998/01/24 22:59:35 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 # Maximal ssh package requires a YES value for USE_PERL
@@ -71,21 +71,20 @@ MAN1=		scp.1 ssh-add.1 ssh-agent.1 ssh-keygen.1 ssh.1 \
 		make-ssh-known-hosts.1
 MAN8=		sshd.8
 
-
 pre-patch:
 	@${MV} -f ${WRKSRC}/make-ssh-known-hosts.pl \
 	    ${WRKSRC}/make-ssh-known-hosts.pl.in
 
 fetch-depends:
 .if !defined(USA_RESIDENT) || ${USA_RESIDENT} != YES && ${USA_RESIDENT} != NO
-	@echo
-	@echo You must set variable USA_RESIDENT to YES if you are a USA
-	@echo resident or NO otherwise.
-	@echo If you are a USA resident you have to get the RSAREF2
-	@echo library \(RSA Inc. holds a patent on RSA and public key
-	@echo cypto in general - using RSA implementations other than
-	@echo RSAREF will violate the US patent law\)
-	@echo and extract it to ${WRKSRC}.
+	@${ECHO}
+	@${ECHO} You must set variable USA_RESIDENT to YES if you are a USA
+	@${ECHO} resident or NO otherwise.
+	@${ECHO} If you are a USA resident you have to get the RSAREF2
+	@${ECHO} library \(RSA Inc. holds a patent on RSA and public key
+	@${ECHO} cypto in general - using RSA implementations other than
+	@${ECHO} RSAREF will violate the US patent law\)
+	@${ECHO} and extract it to ${WRKSRC}.
 	@false
 .endif
 
@@ -98,21 +97,21 @@ post-install:
 	@ln -sf /etc/ssh_host_key ${PREFIX}/etc
 	@ln -sf /etc/ssh_host_key.pub ${PREFIX}/etc
 	@if [ ! -f ${PREFIX}/etc/ssh_host_key ]; then \
-		echo "Generating a secret host key..."; \
+		${ECHO} "Generating a secret host key..."; \
 		${PREFIX}/bin/ssh-keygen -f ${PREFIX}/etc/ssh_host_key -N ""; \
 	fi
 .if defined(MANZ)
-	rm -f ${PREFIX}/man/man1/slogin.1.gz
+	${RM} -f ${PREFIX}/man/man1/slogin.1.gz
 	ln -sf ssh.1.gz ${PREFIX}/man/man1/slogin.1.gz
 .else
-	rm -f ${PREFIX}/man/man1/slogin.1
+	${RM} -f ${PREFIX}/man/man1/slogin.1
 	ln -sf ssh.1 ${PREFIX}/man/man1/slogin.1
 .endif
 #	@if [ ! -f ${PREFIX}/etc/rc.d/sshd.sh ]; then \
-#		echo "Installing ${PREFIX}/etc/rc.d/sshd.sh startup file."; \
-#		echo "#!/bin/sh" > ${PREFIX}/etc/rc.d/sshd.sh; \
-#		echo "[ -f ${PREFIX}/etc/ssh_host_key ] || ${PREFIX}/bin/ssh-keygen -f ${PREFIX}/etc/ssh_host_key -N ''" >> ${PREFIX}/etc/rc.d/sshd.sh; \
-#		echo "[ -x ${PREFIX}/sbin/sshd ] && ${PREFIX}/sbin/sshd && echo -n ' sshd'" >> ${PREFIX}/etc/rc.d/sshd.sh; \
+#		${ECHO} "Installing ${PREFIX}/etc/rc.d/sshd.sh startup file."; \
+#		${ECHO} "#!/bin/sh" > ${PREFIX}/etc/rc.d/sshd.sh; \
+#		${ECHO} "[ -f ${PREFIX}/etc/ssh_host_key ] || ${PREFIX}/bin/ssh-keygen -f ${PREFIX}/etc/ssh_host_key -N ''" >> ${PREFIX}/etc/rc.d/sshd.sh; \
+#		${ECHO} "[ -x ${PREFIX}/sbin/sshd ] && ${PREFIX}/sbin/sshd && ${ECHO} -n ' sshd'" >> ${PREFIX}/etc/rc.d/sshd.sh; \
 #		chmod 755 ${PREFIX}/etc/rc.d/sshd.sh; \
 #	fi
 
