@@ -1,3 +1,5 @@
+$NetBSD: patch-ca,v 1.2 2001/02/16 13:06:41 dmcmahill Exp $
+
 --- deattack.c.orig	Wed May 12 13:19:25 1999
 +++ deattack.c	Tue Feb 13 11:23:07 2001
 @@ -79,7 +79,7 @@
