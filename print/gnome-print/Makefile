@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2002/03/26 09:20:44 rh Exp $
+# $NetBSD: Makefile,v 1.46 2002/03/27 18:51:51 perry Exp $
 #
 
 DISTNAME=		gnome-print-0.35
@@ -23,6 +23,7 @@ MAKE_ENV+=		HOME=${WRKSRC}
 CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
 
+.include "../../graphics/freetype2/buildlink.mk"
 .include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
 .include "../../textproc/libunicode/buildlink.mk"
 .include "../../textproc/libxml/buildlink.mk"
