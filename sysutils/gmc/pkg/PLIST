@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1999/09/03 20:02:52 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/09/03 20:05:50 tron Exp $
 bin/gmc
 bin/mc
 bin/mcedit
@@ -74,7 +74,7 @@ man/man1/mcedit.1
 man/man8/mcserv.8
 share/idl/FileManager.idl
 share/idl/Makefile.in
-share/gnome/help/gmc/C/figs
+@exec mkdir -p %D/share/gnome/help/gmc/C/figs
 share/gnome/help/gmc/C/topic.dat
 share/locale/ca/LC_MESSAGES/mc.mo
 share/locale/cs/LC_MESSAGES/mc.mo
@@ -168,6 +168,7 @@ share/pixmaps/mc/i-symlink.png
 share/pixmaps/mc/makefile.xpm
 share/pixmaps/mc/sound.xpm
 share/pixmaps/mc/trash.xpm
+@dirrm share/gnome/help/gmc/C/figs
 @dirrm share/gnome/help/gmc/C
 @dirrm share/gnome/help/gmc
 @dirrm share/pixmaps/mc
