@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.29 1999/01/29 19:48:34 tron Exp $
+#	$NetBSD: Makefile,v 1.30 1999/01/29 20:47:28 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += amanda
@@ -51,6 +51,7 @@
 #    SUBDIR += xcalendar
 #    SUBDIR += xmaddressbook	# needs Motif/Lesstif - HF
 #    SUBDIR += xopps		# needs Motif/Lesstif - HF
+    SUBDIR += xrolodex
 #    SUBDIR += xtar		# needs Motif/Lesstif - HF
     SUBDIR += zorro
 
