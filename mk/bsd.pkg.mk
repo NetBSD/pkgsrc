@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.600 2000/11/11 14:46:57 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.601 2000/11/11 17:55:44 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -855,7 +855,8 @@ MASTER_SITE_GNOME+=	\
 	ftp://ftp.gnome.org/pub/GNOME/ \
 	ftp://ftp.sunet.se/pub/X11/GNOME/ \
 	ftp://ftp.archive.de.uu.net/pub/X11/GNOME/ \
-	ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/
+	ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/ \
+	ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/
 
 MASTER_SITE_SOURCEFORGE+=	\
 	http://download.sourceforge.net/ \
@@ -3316,3 +3317,4 @@ ${DESCR}: ${DESCR_SRC}
 .if defined(BATCH)
 .include "../../mk/bulk/bsd.bulk-pkg.mk"
 .endif
+
