@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2002/07/07 02:30:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2002/07/07 10:21:38 wiz Exp $
 
-DISTNAME=		boost
-PKGNAME=		${DISTNAME}-1.28
+DISTNAME=		boost_1_28_0
+PKGNAME=		${DISTNAME:C/_/-/:C/_/./g}
 CATEGORIES=		devel
 MASTER_SITES=		http://boost.sourceforge.net/release/
-DISTFILES=		${DISTNAME}_1_28_0.tar.gz
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.boost.org/
@@ -12,9 +11,6 @@ COMMENT=		free, portable libraries that integrate with the ISO C++ Standard Libr
 
 # Need working <limits> and <memory> not present in NetBSD yet.
 DEPENDS+=		sgi-stl>=3.2:../../devel/sgi-stl
-
-DIST_SUBDIR=		${PKGNAME}
-WRKSRC=			${WRKDIR}/${DISTNAME}_1_28_0
 
 USE_LIBTOOL=		# defined
 BOOST_VERS=		0:0
