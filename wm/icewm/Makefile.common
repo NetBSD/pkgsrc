@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2002/11/21 10:09:59 grant Exp $
+# $NetBSD: Makefile.common,v 1.17 2003/01/09 20:12:01 jmmv Exp $
 
 DISTNAME=		icewm-1.2.0
 CATEGORIES=		x11 wm
@@ -23,11 +23,8 @@ CONFIGURE_ARGS+=	--disable-apm
 .endif
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-.if ${OPSYS} == "NetBSD"
-.if exists(/usr/include/machine/apmvar.h)
-CPPFLAGS+=		-DCONFIG_APM
-.endif
-CPPFLAGS+=		-DSTART_XPM="\"bsd-daemon.xpm\""
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+CPPFLAGS+=		-DSTART_PIXMAP=\"\\\"bsd-daemon.xpm\\\"\"
 .endif
 
 DOCDIR=			${PREFIX}/share/doc/icewm
