@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: usergroup,v 1.7 2005/01/31 21:41:06 jlam Exp $
+# $NetBSD: usergroup,v 1.8 2005/03/28 19:26:11 jlam Exp $
 #
 # +USERGROUP - users and groups management script
 #
@@ -68,13 +68,14 @@ PKG_USER_SHELL="@PKG_USER_SHELL@"
 
 group_exists()
 {
-	case $group in
+	_group="$1"
+	case $_group in
 	"")	return 2 ;;
 	esac
 	# Check using chgrp to work properly in an NIS environment.
 	testfile="./grouptest.tmp.$$"
 	${ECHO} > $testfile
-	if ${CHGRP} $group $testfile >/dev/null 2>&1; then
+	if ${CHGRP} $_group $testfile >/dev/null 2>&1; then
 		${RM} -f $testfile
 		return 0
 	fi
@@ -84,11 +85,12 @@ group_exists()
 
 user_exists()
 {
-	case $user in
+	_user="$1"
+	case $_user in
 	"")	return 2 ;;
 	esac
 	# Check using id to work properly in an NIS environment.
-	if ${ID} $user >/dev/null 2>&1; then
+	if ${ID} $_user >/dev/null 2>&1; then
 		return 0
 	fi
 	return 1
@@ -96,24 +98,24 @@ user_exists()
 
 listwrap()
 {
-	length=$1
-	buffer=
-	while read line; do
-		set -- $line
-		for word; do
-			case $buffer in
-			"")	buffer="$word" ;;
-			*)	buffer="$buffer  $word" ;;
+	_length=$1
+	_buffer=
+	while read _line; do
+		set -- $_line
+		for _word; do
+			case $_buffer in
+			"")	_buffer="$_word" ;;
+			*)	_buffer="$_buffer  $_word" ;;
 			esac
-			if ${TEST} ${#buffer} -gt $length; then
-				${ECHO} "	$buffer"
-				buffer=
+			if ${TEST} ${#_buffer} -gt $_length; then
+				${ECHO} "	$_buffer"
+				_buffer=
 			fi
 		done
 	done
-	case $buffer in
+	case $_buffer in
 	"")	;;
-	*)	${ECHO} "	$buffer" ;;
+	*)	${ECHO} "	$_buffer" ;;
 	esac
 }
 
