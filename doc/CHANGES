@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6221 2004/06/17 14:26:02 grant Exp $
+$NetBSD: CHANGES,v 1.6222 2004/06/17 16:07:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2955,3 +2955,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox-bin-java to 1.1 [abs 2004-06-15]
 	Updated python15 to 1.5.2nb1 [minskim 2004-06-16]
 	Updated db4 to 4.2.52nb2 [grant 2004-06-17]
+	Updated perl58-thread to 5.8.4nb1 [xtraeme 2004-06-17]
