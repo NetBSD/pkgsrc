@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/10/25 21:25:51 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/10/27 14:34:03 hubertf Exp $
 share/doc/festival/speechtools/images_gen/docppimath_929959730_6.gif
 share/doc/festival/speechtools/images_gen/docppmath_929959728_2.gif
 share/doc/festival/speechtools/images_gen/docppmath_929959741_1.gif
@@ -140,6 +140,17 @@ share/doc/festival/speechtools/index.html
 share/doc/festival/speechtools/HTML.index
 share/doc/festival/speechtools/TeX.formulae
 @dirrm share/doc/festival/speechtools
+info/festival.info
+info/festival.info-9
+info/festival.info-8
+info/festival.info-7
+info/festival.info-6
+info/festival.info-5
+info/festival.info-4
+info/festival.info-3
+info/festival.info-2
+info/festival.info-1
+info/festival.info-10
 @dirrm share/doc/festival/festival/info
 share/doc/festival/festival/user-manual/festival_35.html
 share/doc/festival/festival/user-manual/festival_1.html
