@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailqread.sh,v 1.3 2004/08/23 03:47:48 schmonz Exp $
+# $NetBSD: qmailqread.sh,v 1.4 2004/12/29 16:18:41 schmonz Exp $
 #
 # @PKGNAME@ script to control a service providing local non-root
 # users access to see the queue. Adapted from a script by Steinar Haug.
@@ -9,18 +9,19 @@
 # PROVIDE: qmailqread mail
 # REQUIRE: qmailsend
 
+name="qmailqread"
+
+# User-settable rc.conf variables and their default values:
+: ${qmailqread_logcmd:="@LOCALBASE@/bin/setuidgid qmaill @LOCALBASE@/bin/splogger nb${name}"}
+
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
-name="qmailqread"
 rcvar=${name}
 command="@LOCALBASE@/bin/tcpserver"
 procname=${name}
 start_precmd="qmailqread_precmd"
-
-# User-settable rc.conf variables and their default values:
-qmailqread_logcmd=${qmailqread_logcmd-"@LOCALBASE@/bin/setuidgid qmaill @LOCALBASE@/bin/splogger nb${name}"}
 
 qmailqread_precmd()
 {
