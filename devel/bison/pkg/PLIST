@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/03/20 22:45:16 thorpej Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/09/22 10:48:44 agc Exp $
 bin/bison
 man/man1/bison.1.gz
 @unexec %D/bin/install-info --delete %D/info/bison.info %D/info/dir
@@ -8,7 +8,6 @@ info/bison.info-2
 info/bison.info-3
 info/bison.info-4
 info/bison.info-5
-@exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 @exec %D/bin/install-info %D/info/bison.info %D/info/dir
 share/bison.simple
 share/bison.hairy
