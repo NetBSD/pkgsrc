@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/11 17:15:35 xtraeme Exp $
 #
 
 DISTNAME=	bla
@@ -84,7 +84,6 @@ DEPENDS+=	gqmpeg-[0-9]*:../gqmpeg
 
 DIST_SUBDIR=	gqmpeg-skins
 WRKSRC=		${WRKDIR}/Makefile PLIST distinfo
-USE_BUILDLINK2=	YES
 NO_BUILD=	yes
 
 do-install:
