@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2001/04/24 19:19:24 jun Exp $
+# $NetBSD: Makefile,v 1.21 2001/05/25 08:32:54 jun Exp $
 
-DISTNAME=	mew-1.95b121
+DISTNAME=	mew-1.95b123
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.mew.org/pub/Mew/beta/
 
