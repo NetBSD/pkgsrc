@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.37 2004/07/06 22:52:33 wiz Exp $
+# $NetBSD: module.mk,v 1.38 2005/02/21 12:08:45 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -25,6 +25,9 @@
 #
 # PERL5_LDFLAGS		extra linker flags to pass on to the build
 #			process.
+#
+# PERL5_USES_MODULE_BUILD	the package uses Module::Build instead
+#				of ExtUtils::MakeMaker
 
 .if !defined(_PERL5_MODULE_MK)
 _PERL5_MODULE_MK=	# defined
@@ -39,6 +42,10 @@ BUILDLINK_DEPMETHOD.perl+=	full
 .      include "../../lang/perl5/buildlink3.mk"
 .    endif
 .  endif
+.endif
+
+.if defined(PERL5_USES_MODULE_BUILD)
+BUILD_DEPENDS+=		p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 .endif
 
 PERL5_CONFIGURE?=	YES
@@ -58,13 +65,19 @@ BROKEN=		Perl does not like building with gcc on AIX, please use a different com
 .endif
 
 MAKE_ENV+=	LC_ALL=C
+.if defined(PERL5_USES_MODULE_BUILD)
+_CONF_ARG=	Build.PL
+.else
+_CONF_ARG=	Makefile.PL ${MAKE_PARAMS:Q}
+.endif
+
 .PHONY: perl5-configure
 perl5-configure:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
 		if [ -f $$dir/Makefile.PL ]; then			\
 			( cd $$dir && ${SETENV} ${MAKE_ENV}		\
-			  ${PERL5} Makefile.PL ${MAKE_PARAMS});		\
+			  ${PERL5} ${_CONF_ARG});		\
 		fi;							\
 	done
 
@@ -84,11 +97,25 @@ do-configure: perl5-configure
 PERL5_${_var_}=		${PREFIX}/${PERL5_SUB_${_var_}}
 PERL5_MAKE_FLAGS+=	${_var_}="${PERL5_${_var_}}"
 .endfor
+
+.if !defined(PERL5_USES_MODULE_BUILD)
 #
 # The PREFIX in the generated Makefile will point to ${_PERL5_PREFIX},
 # so override its value to the module's ${PREFIX}.
 #
 PERL5_MAKE_FLAGS+=	PREFIX="${PREFIX}"
+.endif
+
+.if defined(PERL5_USES_MODULE_BUILD)
+do-build:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build
+
+do-test:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build test
+
+do-install:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install
+.endif
 
 .if defined(DEFAULT_VIEW.perl)
 DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.perl}
