@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.6 2001/10/09 10:01:11 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.7 2001/10/21 21:26:57 seb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -525,6 +525,137 @@ INN_DATA_DIR?= /var/news
 # Used by inn to specify the data directory.
 # Possible: any path you like
 # Default: /var/news
+
+IRCD_HYBRID_SMALL_NET?=		YES
+# Used by ircd-hybrid to tune various ircd paramaters when running
+# small IRC networks so the daemon does not use much resources.
+# A set of variables - see below - can then be defined to fine tune the daemon
+# behaviour.
+# Possible: YES, NO
+# Default: YES
+
+#IRCD_HYBRID_LINK_PREALLOCATE=
+# Used by ircd-hybrid when IRCD_HYBRID_SMALL_NET is "YES". Specify
+# the number of server linkd to preallocate.
+# Possible: nearly any integer value
+# Default: 1024 from source, 64 if IRCD_HYBRID_SMALL_NET is "YES"
+
+#IRCD_HYBRID_CLIENTS_PREALLOCATE=
+# Used by ircd-hybrid when IRCD_HYBRID_SMALL_NET is "YES". Specify
+# the number of client structures to preallocate.
+# Possible: nearly any integer value
+# Default: 1024 from source, 64 if IRCD_HYBRID_SMALL_NET is "YES"
+
+#IRCD_HYBRID_USERS_PREALLOCATE=
+# Used by ircd-hybrid when IRCD_HYBRID_SMALL_NET is "YES". Specify
+# the number of user structures to preallocate.
+# Possible: nearly any integer value
+# Default: 1024 from source, 64 if IRCD_HYBRID_SMALL_NET is "YES"
+
+#IRCD_HYBRID_NICKNAMEHISTORYLENGTH=
+# Used by ircd-hybrid when IRCD_HYBRID_SMALL_NET is "YES". Specify
+# the number of entries in the nickname history.
+# Possible: nearly any integer value
+# Default: 15000 from source, 1000 if IRCD_HYBRID_SMALL_NET is "YES"
+
+#IRCD_HYBRID_MAXSENDQLENGTH=
+# Used by ircd-hybrid when IRCD_HYBRID_SMALL_NET is "YES". Specify
+# the maximum -in bytes- of internal send buffering for sockets.
+# Possible: nearly any integer value
+# Default: 9000000 from source, 500000 if IRCD_HYBRID_SMALL_NET is "YES"
+
+#IRCD_HYBRID_INITIAL_DBUFS=
+# Used by ircd-hybrid when IRCD_HYBRID_SMALL_NET is "YES". Specify
+# the initial number of dbufs (dynamic buffering of a byte stream,
+# similar to mbufs) to preallocate.
+# Possible: nearly any integer value
+# Default: 4000 from source, 300 if IRCD_HYBRID_SMALL_NET is "YES"
+
+#IRCD_HYBRID_HARD_FDLIMIT_=
+# Used by ircd-hybrid when IRCD_HYBRID_SMALL_NET is "YES". Specify
+# the maximum number of file descriptor the daemon will use.
+# Possible: 1 <> maximum file descriptor the system would give you
+# Default: 256 from source, 90 if IRCD_HYBRID_SMALL_NET is "YES"
+
+#IRCD_HYBRID_INIT_MAXCLIENTS=
+# Used by ircd-hybrid when IRCD_HYBRID_SMALL_NET is "YES". Specify
+# the maximum number of clients allowed to connect to the daemon.
+# Possible: 1<> ~IRCD_HYBRID_HARD_FDLIMIT_
+# Default: 200 from source, 40 if IRCD_HYBRID_SMALL_NET is "YES"
+
+IRCD_HYBRID_USE_LOGFILE?=       YES
+# Used by ircd-hybrid. Specify if the daemon should use a logfile.
+# Note: can be used even when IRCD_HYBRID_USE_SYSLOG is "YES".
+# Possible: YES, NO
+# Default: YES
+ 
+IRCD_HYBRID_USE_SYSLOG?=        NO
+# Used by ircd-hybrid. Specify if the daemon should use syslog.
+# Note: can be used even when IRCD_HYBRID_USE_LOGFILE is "YES".
+# Possible: YES, NO
+# Default: NO
+
+IRCD_HYBRID_DPATH?=	/etc/ircd-hybrid/
+# Used by ircd-hybrid. Specify the directory pathname where the daemon expects
+# various configuration files.
+# Possible: any path, with a trailing `/'
+# Default: /etc/ircd-hybrid/
+
+IRCD_HYBRID_LPATH?=	/var/log/ircd-hybrid.log
+# Used by ircd-hybrid. Specify the pathname of the daemon logfile.
+# Note: only used if IRCD_HYBRID_USE_LOGFILE is "YES".
+# Possible: any path
+# Default: /var/log/ircd-hybrid.log
+
+IRCD_HYBRID_FNAME_USERLOG?=	/var/log/ircd-hybrid.users.log
+# Used by ircd-hybrid. Specify the pathname of the user connections logfile.
+# IRCD_HYBRID_USE_SYSLOG should be set to "YES" for this logfile be used.
+# Possible: any path
+# Default: /var/log/ircd-hybrid.users.log
+
+IRCD_HYBRID_FNAME_OPERLOG?=	/var/log/ircd-hybrid.opers.log
+# Used by ircd-hybrid. Specify the pathname of the operator connections
+# logfile.
+# Possible: any path
+# Default: /var/log/ircd-hybrid.opers.log
+
+IRCD_HYBRID_PPATH?=		/var/run/ircd-hybrid.pid
+# Used by ircd-hybrid. Specify the pathname of the daemon pid file.
+# Possible: any path
+# Default: /var/run/ircd-hybrid.pid
+
+IRCD_HYBRID_SYSLOG_FACILITY?=	LOG_LOCAL4
+# Used by ircd-hybrid. Specify which syslog facility the daemon should use
+# when IRCD_HYBRID_USE_SYSLOG is "YES".
+# Possible: any syslog facility (LOG_*)
+# Default: LOG_LOCAL4
+
+IRCD_HYBRID_INIT_LOG_LEVEL?=	L_NOTICE
+# Used by ircd-hybrid. Specify initial minimum level from which the daemon logs
+# events. This is unrelated from syslog() level.
+# Possible: L_CRIT, L_ERROR, L_WARN, L_NOTICE, L_TRACE, L_INFO, L_DEBUG
+$ Default: L_NOTICE
+
+IRCD_HYBRID_IRC_USER?=		irc
+# Used by ircd-hybrid. Specify the user name under which the daemon runs.
+# Possible: any user name
+# Default: irc
+
+IRCD_HYBRID_IRC_GROUP?=		irc
+# Used by ircd-hybrid. Specify the group name under which the daemon runs.
+# Possible: any group name
+# Default: irc
+
+IRCD_HYBRID_NETWORK_NAME?=	PKGSRCNet
+# Used by ircd-hybrid. Specify the IRC network name advertised by the daemon.
+# Possible: anything
+# Default: PKGSRCNet
+
+IRCD_HYBRID_NETWORK_DESC?=	Package Source Network
+# Used by ircd-hybrid. Specify the IRC network description advertised by the 
+# daemon.
+# Possible: anything
+# Default: Package Source Network
 
 #IRRD_USE_PGP=
 # Used by irrd package to specify the version of PGP to use, if any.
