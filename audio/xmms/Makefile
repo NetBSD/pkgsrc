@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/05/06 18:23:51 rh Exp $
+# $NetBSD: Makefile,v 1.16 2001/05/10 11:45:39 tron Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.0/ \
 		ftp://ftp.nl.xmms.org/xmms/1.0/ \
 		ftp://ftp.de.xmms.org/xmms/1.0/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.xmms.org/
 COMMENT=	X Multimedia System --- An audio player with a Winamp GUI
 
