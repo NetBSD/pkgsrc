@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2651 2004/12/04 23:38:25 jmmv Exp $
+$NetBSD: TODO,v 1.2652 2004/12/05 08:14:17 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -502,7 +502,6 @@ Suggested package updates
 	o ghostscript-8.01 (gnu)
 	o ghostscript-8.33
 	o ghostscript-fonts-8.11
-	o gice-0.6.2
 	o giflib-4.1.3
 	o gift-0.11.8
 	o gift-fasttrack-0.8.7
