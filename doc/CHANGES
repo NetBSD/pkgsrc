@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9398 2005/03/02 21:49:07 adrianp Exp $
+$NetBSD: CHANGES,v 1.9399 2005/03/02 21:51:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1242,3 +1242,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cyrus-imapd to 2.2.12 [wiz 2005-03-02]
 	Removed cyrus-imapd22 [wiz 2005-03-02]
 	Updated freeradius to 1.0.2nb1 [adrianp 2005-03-02]
+	Updated g-wrap to 1.9.5 [wiz 2005-03-02]
+	Updated gnucash to 1.8.11 [wiz 2005-03-02]
