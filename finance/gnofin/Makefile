@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/11/30 23:44:11 salo Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/10 07:38:27 cjep Exp $
 #
 
 DISTNAME=       gnofin-0.8.4
@@ -13,7 +13,7 @@ COMMENT=	Personal checking/savings account management program
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK2=		yes
-USE_PKGLOCALEDI=	yes
+USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
