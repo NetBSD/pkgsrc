@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/03 16:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/21 20:34:14 kristerw Exp $
 
 DISTNAME=	guile-lib-0.1.2
 CATEGORIES=	devel
@@ -20,6 +20,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX}
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS=	make
 USE_MAKEINFO=	yes
+TEXINFO_REQD=	4.2
 INFO_FILES=	guile-library.info
 TEST_TARGET=	test
 
