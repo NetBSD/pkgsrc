@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/04/14 15:45:45 manu Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/15 20:31:36 tron Exp $
 
 DISTNAME=	milter-greylist-1.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
@@ -10,7 +11,7 @@ HOMEPAGE=	http://hcpnet.free.fr/milter-greylist/
 COMMENT=	Easy-to-use greylist milter for sendmail
 
 USE_PKGINSTALL=	YES
-USE_BUILDLINK2= YES
+USE_BUILDLINK3= YES
 
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-user=smmsp
@@ -29,7 +30,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/greylist.conf \
 	  ${PREFIX}/share/examples/milter-greylist
 
-.include "../../mail/libmilter/buildlink2.mk"
-.include "../../mail/libspf-alt/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mail/libmilter/buildlink3.mk"
+.include "../../mail/libspf-alt/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
