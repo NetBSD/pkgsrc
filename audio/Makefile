@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2004/05/02 04:01:26 grant Exp $
+# $NetBSD: Makefile,v 1.231 2004/05/02 04:30:35 grant Exp $
 #
 
 COMMENT=	Audio tools
@@ -93,6 +93,7 @@ SUBDIR+=	id3ed
 SUBDIR+=	id3lib
 SUBDIR+=	id3v2
 SUBDIR+=	juke
+SUBDIR+=	kmp
 SUBDIR+=	lame
 SUBDIR+=	liba52
 SUBDIR+=	libac3
