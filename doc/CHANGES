@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8103 2004/11/28 14:56:49 taca Exp $
+$NetBSD: CHANGES,v 1.8104 2004/11/28 15:01:20 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5580,3 +5580,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-uconv to 0.4.12 [taca 2004-11-28]
 	Updated hicolor-icon-theme to 0.5 [wiz 2004-11-28]
 	Updated ruby-opengl to 0.32f [taca 2004-11-28]
+	Updated gnutls to 1.0.23 [recht 2004-11-28]
+	Updated gnome-vfs2 to 2.8.3 [recht 2004-11-28]
+	Updated gnome-vfs2-cdda to 2.8.3 [recht 2004-11-28]
+	Updated gnome-vfs2-smb to 2.8.3 [recht 2004-11-28]
+	Updated pycurl to 7.12.2 [recht 2004-11-28]
+	Updated cyrus-imapd22 to 2.2.10 [recht 2004-11-28]
