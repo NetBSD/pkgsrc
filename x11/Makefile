@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 1999/10/07 17:29:39 jlam Exp $
+# $NetBSD: Makefile,v 1.119 1999/10/10 16:11:00 rh Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -45,6 +45,7 @@
     SUBDIR += glclock
     SUBDIR += gnome-core
     SUBDIR += gnome-libs
+    SUBDIR += gnome-users-guide
     SUBDIR += gtk
     SUBDIR += gtk--
     SUBDIR += gtk10
