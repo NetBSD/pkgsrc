@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7805 2004/11/10 12:59:37 adam Exp $
+$NetBSD: CHANGES,v 1.7806 2004/11/10 14:13:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5207,3 +5207,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added open2300-mysql [martin 2004-11-10]
 	Updated mimedefang to 2.48 [markd 2004-11-10]
 	Updated gd to 2.0.33 [adam 2004-11-10]
+	Updated iozone to 3.226 [adam 2004-11-10]
