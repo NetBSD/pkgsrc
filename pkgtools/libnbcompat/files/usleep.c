@@ -1,4 +1,5 @@
-/*	$Id: usleep.c,v 1.1.1.1 2003/03/31 05:03:06 grant Exp $	*/
+/*	$NetBSD: usleep.c,v 1.2 2003/09/06 23:03:06 grant Exp $	*/
+
 /*-
  * Copyright (c) 1999-2000 The NetBSD Foundation, Inc.
  * All rights reserved.
