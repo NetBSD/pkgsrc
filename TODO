@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.79 2002/04/21 09:42:42 zuntum Exp $
+$NetBSD: TODO,v 1.80 2002/05/20 22:07:09 jwise Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -13,6 +13,9 @@ packages TODO (Suggested new packages)
 	figfonts
 	More fonts for figlet
 	ftp://ftp.plig.org/pub/figlet/fonts/contributed/
+
+	gd-noX11
+	version of gd for systems without X11
 
 	jabber
 	Messaging client
