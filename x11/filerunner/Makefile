@@ -3,15 +3,15 @@
 # Date created:		3 August 1996
 # Whom:			lukin
 #
-# $NetBSD: Makefile,v 1.2 1998/03/08 21:19:30 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/24 09:54:56 tron Exp $
 # $FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:11 jseger Exp
 #
 
 DISTNAME=	FileRunner_2.4.1
 PKGNAME=	filerunner-2.4.1
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	X11/desktop
+MASTER_SITES=	${MASTER_SITE_XCONTRIB}
+MASTER_SITE_SUBDIR=	utilities
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	vanilla@FreeBSD.ORG
