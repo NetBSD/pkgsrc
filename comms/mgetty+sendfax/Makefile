@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2004/10/03 00:13:16 tv Exp $
+# $NetBSD: Makefile,v 1.42 2005/02/23 16:57:28 jwise Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
-DISTNAME=	mgetty1.1.30-Dec16
-PKGNAME=	mgetty-1.1.30
-PKGREVISION=	3
+DISTNAME=	mgetty1.1.31-Jul24
+PKGNAME=	mgetty-1.1.31
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/ \
 		ftp://alpha.greenie.net/pub/mgetty/source/1.1/
@@ -36,7 +35,9 @@ PKG_SYSCONFSUBDIR=	mgetty+sendfax
 			faxrunq.config		\
 			faxspool.rules.sample	\
 			login.config		\
-			mgetty.config
+			mgetty.config		\
+			voice.conf
+
 CONF_FILES+=		${_EXAMPLES_DIR}/${cfg} ${PKG_SYSCONFDIR}/${cfg}
 . endfor
 .endif
