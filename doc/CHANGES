@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7562 2004/10/25 16:43:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.7563 2004/10/25 17:05:41 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4860,3 +4860,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gkrellm to 2.2.4 [xtraeme 2004-10-25]
 	Updated liferea to 0.6.0 [minskim 2004-10-25]
 	Updated drivel to 1.2.2nb1 [jmmv 2004-10-25]
+	Updated samba2 to 2.2.12 [jdolecek 2004-10-25]
+	Updated winbond to 2.2.12 [jdolecek 2004-10-25]
+	Updated pam-smbpass to 2.2.12 [jdolecek 2004-10-25]
