@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2002/04/10 01:59:15 jlam Exp $
+$NetBSD: patch-aa,v 1.14 2002/08/26 19:39:30 mjl Exp $
 
---- configure.orig	Mon Jan 28 14:58:57 2002
-+++ configure
-@@ -5866,8 +5866,8 @@
+--- configure.orig	Sun Jun  2 18:44:20 2002
++++ configure	Sun Jun  9 00:30:57 2002
+@@ -5674,8 +5674,8 @@
  fi
  	if test x$gnome_cv_orbit_found = xyes; then
  		
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.13 2002/04/10 01:59:15 jlam Exp $
  		
  		
  	else
-@@ -5884,8 +5884,8 @@
+@@ -5692,8 +5692,8 @@
    
  		gnome_cv_gnorba_found=no
  		if test x$gnome_cv_orbit_found = xyes; then
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.13 2002/04/10 01:59:15 jlam Exp $
  			if test -n "$GNORBA_LIBS"; then
  				gnome_cv_gnorba_found=yes
  			fi
-@@ -5905,8 +5905,8 @@
+@@ -5713,8 +5713,8 @@
  fi
  	if test x$gnome_cv_orbit_found = xyes; then
  		
@@ -35,10 +35,10 @@ $NetBSD: patch-aa,v 1.13 2002/04/10 01:59:15 jlam Exp $
  		
  		
  	else
-@@ -8897,8 +8897,8 @@
+@@ -8718,8 +8718,8 @@
           
              echo $ac_n "checking for Glade libraries >= 0.13""... $ac_c" 1>&6
- echo "configure:8900: checking for Glade libraries >= 0.13" >&5
+ echo "configure:8721: checking for Glade libraries >= 0.13" >&5
 -   if gnome-config --libs libglade > /dev/null 2>&1; then 
 -      vers=`gnome-config --modversion libglade | awk 'BEGIN { FS = "."; } { print $1 * 1000 + $2;}'`
 +   if $GNOME_CONFIG --libs libglade > /dev/null 2>&1; then 
