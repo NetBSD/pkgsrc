@@ -1,50 +1,21 @@
-Index: Lib/urllib.py
-===================================================================
-RCS file: /projects/cvsroot/python/dist/src/Lib/urllib.py,v
-retrieving revision 1.64
-retrieving revision 1.65
-diff -c -r1.64 -r1.65
-*** urllib.py	1998/04/11 01:18:35	1.64
---- urllib.py	1998/04/27 15:19:17	1.65
-***************
-*** 214,222 ****
-  	# Use HTTP protocol
-  	def open_http(self, url, data=None):
-  		import httplib
-  		if type(url) is type(""):
-  			host, selector = splithost(url)
-! 			user_passwd, host = splituser(host)
-  			realhost = host
-  		else:
-  			host, selector = url
---- 214,224 ----
-  	# Use HTTP protocol
-  	def open_http(self, url, data=None):
-  		import httplib
-+ 		user_passwd = None
-  		if type(url) is type(""):
-  			host, selector = splithost(url)
-! 			if host:
-! 				user_passwd, host = splituser(host)
-  			realhost = host
-  		else:
-  			host, selector = url
-***************
-*** 226,232 ****
-  				realhost = None
-  			else:
-  				realhost, rest = splithost(rest)
-! 				user_passwd, realhost = splituser(realhost)
-  				if user_passwd:
-  					selector = "%s://%s%s" % (urltype,
-  								  realhost,
---- 228,236 ----
-  				realhost = None
-  			else:
-  				realhost, rest = splithost(rest)
-! 				if realhost:
-! 					user_passwd, realhost = \
-! 						     splituser(realhost)
-  				if user_passwd:
-  					selector = "%s://%s%s" % (urltype,
-  								  realhost,
+--- Lib/urllib.py.orig	Sat Apr 11 03:18:35 1998
++++ Lib/urllib.py	Wed May  6 23:26:57 1998
+@@ -221,6 +221,7 @@
+ 		else:
+ 			host, selector = url
+ 			urltype, rest = splittype(selector)
++			url = rest
+ 			user_passwd = None
+ 			if string.lower(urltype) != 'http':
+ 				realhost = None
+@@ -455,8 +456,8 @@
+ 		user, passwd = self.get_user_passwd(host, realm, i)
+ 		if not (user or passwd): return None
+ 		host = user + ':' + passwd + '@' + host
+-		newurl = '//' + host + selector
+-		return self.open_http(newurl)
++		newurl = 'http://' + host + selector
++		return self.open(newurl)
+ 
+ 	def get_user_passwd(self, host, realm, clear_cache = 0):
+ 		key = realm + '@' + string.lower(host)
