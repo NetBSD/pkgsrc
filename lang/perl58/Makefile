@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/05 20:45:13 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/05 20:46:07 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -39,9 +39,7 @@ CONFLICTS=	perl-5.00* perl-base-[0-9]* \
 		p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
 		perl-mk-[0-9]*
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-USE_BUILDLINK3=		YES
+USE_BUILDLINK2=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
