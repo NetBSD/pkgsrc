@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2005/01/03 01:04:26 minskim Exp $
+# $NetBSD: Makefile,v 1.65 2005/02/07 08:37:22 martin Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		apache-${APACHE_VERSION}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		www
 
 HOMEPAGE=		http://httpd.apache.org/
@@ -51,7 +51,7 @@ PLIST_SUBST.${APACHE_MPM}=	MPM_COMMENT.${APACHE_MPM}=
 
 DFLT_APACHE_MODULES=	all
 DFLT_APACHE_MODULES+=	proxy proxy_connect proxy_ftp proxy_http
-DFLT_APACHE_MODULES+=	ssl
+DFLT_APACHE_MODULES+=	ssl deflate
 
 # LDAP support
 .if !empty(PKG_OPTIONS.apr:Mldap)
