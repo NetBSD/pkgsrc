@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2004/04/09 23:37:28 danw Exp $
+# $NetBSD: Makefile,v 1.32 2004/05/12 23:50:15 minskim Exp $
 #
 
 DISTNAME=		tcl8.4.6-src
 PKGNAME=		tcl-8.4.6
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -69,17 +69,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/unix
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/generic
 	${INSTALL_DATA} ${WRKSRC}/tclUnixPort.h ${PREFIX}/include/tcl/unix
-	${INSTALL_DATA} ${WRKSRC}/../generic/tcl.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclCompile.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclIO.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclInitScript.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclInt.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclIntDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclIntPlatDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclMath.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclPlatDecls.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclPort.h ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/../generic/tclRegexp.h ${PREFIX}/include/tcl/generic
+.for f in	regex.h tcl.h tclCompile.h tclDecls.h tclIO.h		\
+		tclInitScript.h tclInt.h tclIntDecls.h tclIntPlatDecls.h\
+		tclMath.h tclPlatDecls.h tclPort.h tclRegexp.h
+	${INSTALL_DATA} ${WRKSRC}/../generic/${f} ${PREFIX}/include/tcl/generic
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
