@@ -1,13 +1,18 @@
-$NetBSD: patch-ad,v 1.2 2004/01/11 19:00:16 jlam Exp $
+$NetBSD: patch-ad,v 1.3 2004/02/23 13:40:21 cube Exp $
 
---- src/Makefile.orig	Wed May 23 23:58:05 2001
-+++ src/Makefile
-@@ -10,7 +10,7 @@ include ../system.mk
- LIBS += -L../libtu -ltu -lm $(X11_LIBS) -lX11
- #-lefence
- INCLUDES += -I../libtu/include $(X11_INCLUDES)
--DEFINES += -DETCDIR=\"$(ETCDIR)\"
-+DEFINES += -DETCDIR=\"$(PKG_SYSCONFBASEDIR)\"
+--- etc/Makefile.orig	2004-02-07 16:37:01.000000000 +0100
++++ etc/Makefile
+@@ -21,9 +21,9 @@ include $(TOPDIR)/rules.mk
+ ######################################
  
- CFLAGS += $(XOPEN_SOURCE) $(MODULE_SUPPORT)
- LDFLAGS += $(MODULE_SUPPORT_LDFLAGS)
+ _install:
+-	$(INSTALLDIR) $(ETCDIR)
++	$(INSTALLDIR) $(EXDIR)
+ 	for i in $(ETC); do \
+-		$(INSTALL) -m $(DATA_MODE) $$i $(ETCDIR); \
++		$(INSTALL) -m $(DATA_MODE) $$i $(EXDIR); \
+ 	done
+-	rm -f $(ETCDIR)/draw.lua
+-	ln -s look-cleanviolet.lua $(ETCDIR)/draw.lua
++	rm -f $(EXDIR)/draw.lua
++	ln -s look-cleanviolet.lua $(EXDIR)/draw.lua

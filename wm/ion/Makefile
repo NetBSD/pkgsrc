@@ -1,32 +1,39 @@
-# $NetBSD: Makefile,v 1.11 2004/01/24 15:18:32 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/23 13:40:21 cube Exp $
 #
 
-DISTNAME=	ion-20020207
-CATEGORIES=	x11 wm
-MASTER_SITES=	http://modeemi.cs.tut.fi/~tuomov/dl/
+DISTNAME=	ion-2-20040207
+PKGNAME=	${DISTNAME:S/-2-/-/}
+CATEGORIES=	wm x11
+MASTER_SITES=	http://modeemi.fi/~tuomov/dl/
 
-MAINTAINER=	daniel@codefactory.se,zuntum@NetBSD.org
-HOMEPAGE=	http://modeemi.cs.tut.fi/~tuomov/ion/
+MAINTAINER=	cube@NetBSD.org
+HOMEPAGE=	http://iki.fi/~tuomov/ion/
 COMMENT=	Keyboard friendly tiling window manager
 
-USE_BUILDLINK2=	YES
+BUILDLINK_DEPENDS.lua=	lua>=5.0.1
+
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_X11=	YES
 USE_GNU_TOOLS+=	make
+GNU_CONFIGURE=	YES
 
 PKG_SYSCONFSUBDIR=	ion
 EGDIR=			${PREFIX}/share/examples/ion
-EGFILES=		bindings-default.conf bindings-sun.conf kludges.conf \
-			look-brownsteel.conf look-greyviolet.conf \
-			look-simpleblue.conf look-wheat.conf sample.conf \
-			ion.conf
+EGFILES=		floatws.lua ion-bindings.lua ion-menus.lua	\
+			ion.lua ionws.lua kludges.lua			\
+			look-clean.lua look-cleanios.lua		\
+			look-cleanviolet.lua look-dusky.lua		\
+			look-greyviolet.lua look-ios.lua		\
+			look-simpleblue.lua look-wheat2.lua menu.lua	\
+			query.lua draw.lua pwm.lua pwm-bindings.lua	\
+			pwm-menus.lua dock.lua dock-draw.lua
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 .endfor
 .undef f
 
-# ion's sources will append "ion/" to PKG_SYSCONFBASEDIR, that is, the
-# PKG_SYSCONFSUBDIR we are currently using.
-MAKE_ENV=		PKG_SYSCONFBASEDIR="${PKG_SYSCONFBASEDIR}"
+.include "../../lang/lua/buildlink3.mk"
+.include "../../devel/libtool/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

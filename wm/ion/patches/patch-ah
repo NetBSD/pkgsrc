@@ -1,0 +1,30 @@
+$NetBSD: patch-ah,v 1.1 2004/02/23 13:40:21 cube Exp $
+
+--- system-ac.mk.in.orig	2004-01-27 14:49:08.000000000 +0100
++++ system-ac.mk.in
+@@ -20,7 +20,7 @@ ETCDIR=@sysconfdir@/@PACKAGE_TARNAME@
+ # Some .lua files and ion-* shell scripts
+ SHAREDIR=@datadir@/@PACKAGE_TARNAME@
+ # Manual pages
+-MANDIR=@datadir@/man
++MANDIR=@prefix@/man
+ # Some documents
+ DOCDIR=@datadir@/doc/@PACKAGE_TARNAME@
+ # Nothing at the moment
+@@ -31,6 +31,7 @@ LIBDIR=@libdir@
+ MODULEDIR=@libdir@/@PACKAGE_TARNAME@
+ # ion-completefile (does not belong in SHAREDIR being a binary file)
+ EXTRABINDIR=@libexecdir@/@PACKAGE_TARNAME@
++EXDIR=@datadir@/examples/@PACKAGE_TARNAME@
+ 
+ ##
+ ## Modules
+@@ -163,7 +164,7 @@ C99_SOURCE=@C99_SOURCE@
+ DEFINES += @_DCF_HAS_VA_COPY@
+ 
+ CFLAGS=@CFLAGS@ $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
+-LDFLAGS=@CFLAGS@ $(LIBS) $(EXTRA_LIBS)
++LDFLAGS=@LDFLAGS@ $(LIBS) $(EXTRA_LIBS)
+ 
+ 
+ ##

@@ -1,0 +1,727 @@
+$NetBSD: patch-ag,v 1.1 2004/02/23 13:40:21 cube Exp $
+
+--- configure.orig	2004-02-07 16:37:04.000000000 +0100
++++ configure
+@@ -848,50 +848,36 @@ if test -n "$ac_init_help"; then
+ Optional Features:
+   --disable-FEATURE       do not include FEATURE (same as --enable-FEATURE=no)
+   --enable-FEATURE[=ARG]  include FEATURE [ARG=yes]
+-  --disable-xinerama
+-                          Disable Xinerama support
++  --disable-xinerama      Disable Xinerama support
+   --disable-xfree86-textprop-bug-workaround
+                           Disable the XFree86 textprop bug workaround
+-  --enable-Xutf8
+-                          Use the Xutf8 routines (XFree86 extension) instead of
+-                          Xmb routines in an UTF-8 locale given the -i18n
++  --enable-Xutf8          Use the Xutf8 routines (XFree86 extension) instead
++                          of Xmb routines in an UTF-8 locale given the -i18n
+                           command line option
+-  --disable-shared
+-                          Do not dynamically load modules (preload modules instead)
+-  --enable-xopen-source
+-                          Enable X/Open C flags (development use only)
+-  --enable-c99-source
+-                          Enable C99 source (development use only)
++  --disable-shared        Do not dynamically load modules (preload modules
++                          instead)
++  --enable-xopen-source   Enable X/Open C flags (development use only)
++  --enable-c99-source     Enable C99 source (development use only)
+ 
+ Optional Packages:
+   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
+   --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
+   --with-x                use the X Window System
+-  --with-libtool=DIR
+-                          Libtool files are in DIR
+-  --with-lua-prefix=DIR
+-                          Lua files are in DIR
+-  --with-lua-includes=DIR
+-                          Lua include files are in DIR
++  --with-libtool=DIR      Libtool files are in DIR
++  --with-lua-prefix=DIR   Lua files are in DIR
++  --with-lua-includes=DIR Lua include files are in DIR
+   --with-lua-libraries=DIR
+                           Lua library files are in DIR
+-  --with-lua-suffix=ARG
+-                          Lua binary and library files are suffixed with
+-                          ARG
++  --with-lua-suffix=ARG   Lua binary and library files are suffixed with ARG
+ 
+ Some influential environment variables:
+-  CC
+-              C compiler command
+-  CFLAGS
+-              C compiler flags
+-  LDFLAGS
+-              linker flags, e.g. -L<lib dir> if you have
+-              libraries in a nonstandard directory <lib dir>
+-  CPPFLAGS
+-              C/C++ preprocessor flags, e.g. -I<include dir> if you
+-              have headers in a nonstandard directory <include dir>
+-  CPP
+-              C preprocessor
++  CC          C compiler command
++  CFLAGS      C compiler flags
++  LDFLAGS     linker flags, e.g. -L<lib dir> if you have libraries in a
++              nonstandard directory <lib dir>
++  CPPFLAGS    C/C++ preprocessor flags, e.g. -I<include dir> if you have
++              headers in a nonstandard directory <include dir>
++  CPP         C preprocessor
+ 
+ Use these variables to override the choices made by `configure' or to help
+ it to find libraries and programs with nonstandard names/locations.
+@@ -930,43 +916,40 @@ case $srcdir in
+     ac_srcdir=$ac_top_builddir$srcdir$ac_dir_suffix
+     ac_top_srcdir=$ac_top_builddir$srcdir ;;
+ esac
+-
+-# Do not use `cd foo && pwd` to compute absolute paths, because
+-# the directories may not exist.
+-case `pwd` in
+-.) ac_abs_builddir="$ac_dir";;
++case "$ac_dir" in
++.) ac_abs_builddir=$ac_builddir;;
+ *)
+-  case "$ac_dir" in
+-  .) ac_abs_builddir=`pwd`;;
+-  [\\/]* | ?:[\\/]* ) ac_abs_builddir="$ac_dir";;
+-  *) ac_abs_builddir=`pwd`/"$ac_dir";;
++  case $ac_builddir in
++  .) ac_abs_builddir="$ac_dir";;
++  [\\/]* | ?:[\\/]* ) ac_abs_builddir=$ac_builddir;;
++  *) ac_abs_builddir="$ac_dir"/$ac_builddir;;
+   esac;;
+ esac
+-case $ac_abs_builddir in
++case "$ac_dir" in
+ .) ac_abs_top_builddir=${ac_top_builddir}.;;
+ *)
+   case ${ac_top_builddir}. in
+-  .) ac_abs_top_builddir=$ac_abs_builddir;;
++  .) ac_abs_top_builddir="$ac_dir";;
+   [\\/]* | ?:[\\/]* ) ac_abs_top_builddir=${ac_top_builddir}.;;
+-  *) ac_abs_top_builddir=$ac_abs_builddir/${ac_top_builddir}.;;
++  *) ac_abs_top_builddir="$ac_dir"/${ac_top_builddir}.;;
+   esac;;
+ esac
+-case $ac_abs_builddir in
++case "$ac_dir" in
+ .) ac_abs_srcdir=$ac_srcdir;;
+ *)
+   case $ac_srcdir in
+-  .) ac_abs_srcdir=$ac_abs_builddir;;
++  .) ac_abs_srcdir="$ac_dir";;
+   [\\/]* | ?:[\\/]* ) ac_abs_srcdir=$ac_srcdir;;
+-  *) ac_abs_srcdir=$ac_abs_builddir/$ac_srcdir;;
++  *) ac_abs_srcdir="$ac_dir"/$ac_srcdir;;
+   esac;;
+ esac
+-case $ac_abs_builddir in
++case "$ac_dir" in
+ .) ac_abs_top_srcdir=$ac_top_srcdir;;
+ *)
+   case $ac_top_srcdir in
+-  .) ac_abs_top_srcdir=$ac_abs_builddir;;
++  .) ac_abs_top_srcdir="$ac_dir";;
+   [\\/]* | ?:[\\/]* ) ac_abs_top_srcdir=$ac_top_srcdir;;
+-  *) ac_abs_top_srcdir=$ac_abs_builddir/$ac_top_srcdir;;
++  *) ac_abs_top_srcdir="$ac_dir"/$ac_top_srcdir;;
+   esac;;
+ esac
+ 
+@@ -985,7 +968,7 @@ esac
+     else
+       echo "$as_me: WARNING: no configuration information is in $ac_dir" >&2
+     fi
+-    cd "$ac_popdir"
++    cd $ac_popdir
+   done
+ fi
+ 
+@@ -1913,7 +1896,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -1971,7 +1955,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -2087,7 +2072,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -2141,7 +2127,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -2186,7 +2173,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -2230,7 +2218,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3033,7 +3022,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3144,7 +3134,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3195,7 +3186,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3271,7 +3263,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3326,7 +3319,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3394,7 +3388,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3502,7 +3497,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3566,7 +3562,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3634,7 +3631,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3738,7 +3736,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3802,7 +3801,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3899,7 +3899,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -3963,7 +3964,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -4060,7 +4062,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -4124,7 +4127,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -4203,7 +4207,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -4236,7 +4241,7 @@ fi
+ 
+ fi
+ 
+-test "${X_DISPLAY_MISSING+set}" == set && exit 1
++test "${X_DISPLAY_MISSING+set}" = set && exit 1
+ echo "$as_me:$LINENO: checking for XMissingExtension in -lXext" >&5
+ echo $ECHO_N "checking for XMissingExtension in -lXext... $ECHO_C" >&6
+ if test "${ac_cv_lib_Xext_XMissingExtension+set}" = set; then
+@@ -4275,7 +4280,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -4356,7 +4362,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -4415,7 +4422,7 @@ if test "${enable_Xutf8+set}" = set; the
+ 
+ fi;
+ 
+-if test "x$enable_Xutf8" == xyes; then
++if test "x$enable_Xutf8" = xyes; then
+ 	echo "$as_me:$LINENO: checking for Xutf8*" >&5
+ echo $ECHO_N "checking for Xutf8*... $ECHO_C" >&6
+ 	save_CFLAGS="$CFLAGS"
+@@ -4533,7 +4540,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-test "x$LIBTOOL" == x && exit 1
++test "x$LIBTOOL" = x && exit 1
+ echo "$as_me:$LINENO: checking for libtool version >= 1.4.3" >&5
+ echo $ECHO_N "checking for libtool version >= 1.4.3... $ECHO_C" >&6
+ libtool_version=$($LIBTOOL --version | head -n 1 | cut -d' ' -f4)
+@@ -4573,7 +4580,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -4641,7 +4649,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -4683,7 +4692,7 @@ if test "${enable_shared+set}" = set; th
+ 
+ fi;
+ 
+-if test "x$enable_shared" == xno; then
++if test "x$enable_shared" = xno; then
+ 	PRELOAD_MODULES="1"
+ fi
+ 
+@@ -4719,12 +4728,12 @@ if test "${with_lua_suffix+set}" = set; 
+ 
+ fi;
+ 
+-if test "x$with_lua_prefix" == x; then
++if test "x$with_lua_prefix" = x; then
+ 	lua_search_path="$PATH"
+ else
+ 	lua_search_path="$with_lua_prefix/bin"
+ fi
+-if test "x$LUA" == x; then
++if test "x$LUA" = x; then
+ 	# Extract the first word of "lua$with_lua_suffix", so it can be a program name with args.
+ set dummy lua$with_lua_suffix; ac_word=$2
+ echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -4764,7 +4773,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-	test "x$LUA" == x && exit 1
++	test "x$LUA" = x && exit 1
+ fi
+ 
+ echo "$as_me:$LINENO: checking for lua version >= 5.0" >&5
+@@ -4782,7 +4791,7 @@ echo "${ECHO_T}yes (found $lua_version)"
+ 	;;
+ esac
+ 
+-if test "x$LUAC" == x; then
++if test "x$LUAC" = x; then
+ 	# Extract the first word of "luac$with_lua_suffix", so it can be a program name with args.
+ set dummy luac$with_lua_suffix; ac_word=$2
+ echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -4822,13 +4831,13 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-	test "x$LUAC" == x && exit 1
++	test "x$LUAC" = x && exit 1
+ fi
+ 
+ echo "$as_me:$LINENO: checking for lua version == luac version" >&5
+ echo $ECHO_N "checking for lua version == luac version... $ECHO_C" >&6
+ luac_version=$($LUAC -v 2>&1 | head -n 1 | cut -d' ' -f2)
+-if test "x$lua_version" == "x$luac_version"; then
++if test "x$lua_version" = "x$luac_version"; then
+ 	echo "$as_me:$LINENO: result: yes (found $luac_version)" >&5
+ echo "${ECHO_T}yes (found $luac_version)" >&6
+ else
+@@ -4877,7 +4886,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -5047,7 +5057,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -5115,7 +5126,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -5278,7 +5290,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -5347,7 +5360,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -5414,7 +5428,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -5482,7 +5497,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -5650,7 +5666,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -5740,7 +5757,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -5781,7 +5799,7 @@ if test "${enable_xopen_source+set}" = s
+ 
+ fi;
+ 
+-if test "x$enable_xopen_source" == xyes; then
++if test "x$enable_xopen_source" = xyes; then
+ 	echo "$as_me:$LINENO: checking for $CC flags to accept X/Open C" >&5
+ echo $ECHO_N "checking for $CC flags to accept X/Open C... $ECHO_C" >&6
+ 	case $host in
+@@ -5807,7 +5825,7 @@ if test "${enable_c99_source+set}" = set
+ 
+ fi;
+ 
+-if test "x$enable_c99_source" == xyes; then
++if test "x$enable_c99_source" = xyes; then
+ 	echo "$as_me:$LINENO: checking for $CC flags to accept C99" >&5
+ echo $ECHO_N "checking for $CC flags to accept C99... $ECHO_C" >&6
+ 	case $CC in
+@@ -5935,7 +5953,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -5997,7 +6016,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -6134,7 +6154,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -6306,7 +6327,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   cat conftest.err >&5
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
++	 { ac_try='test -z "$ac_c_werror_flag"
++			 || test ! -s conftest.err'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
+   ac_status=$?
+@@ -7140,43 +7162,40 @@ case $srcdir in
+     ac_srcdir=$ac_top_builddir$srcdir$ac_dir_suffix
+     ac_top_srcdir=$ac_top_builddir$srcdir ;;
+ esac
+-
+-# Do not use `cd foo && pwd` to compute absolute paths, because
+-# the directories may not exist.
+-case `pwd` in
+-.) ac_abs_builddir="$ac_dir";;
++case "$ac_dir" in
++.) ac_abs_builddir=$ac_builddir;;
+ *)
+-  case "$ac_dir" in
+-  .) ac_abs_builddir=`pwd`;;
+-  [\\/]* | ?:[\\/]* ) ac_abs_builddir="$ac_dir";;
+-  *) ac_abs_builddir=`pwd`/"$ac_dir";;
++  case $ac_builddir in
++  .) ac_abs_builddir="$ac_dir";;
++  [\\/]* | ?:[\\/]* ) ac_abs_builddir=$ac_builddir;;
++  *) ac_abs_builddir="$ac_dir"/$ac_builddir;;
+   esac;;
+ esac
+-case $ac_abs_builddir in
++case "$ac_dir" in
+ .) ac_abs_top_builddir=${ac_top_builddir}.;;
+ *)
+   case ${ac_top_builddir}. in
+-  .) ac_abs_top_builddir=$ac_abs_builddir;;
++  .) ac_abs_top_builddir="$ac_dir";;
+   [\\/]* | ?:[\\/]* ) ac_abs_top_builddir=${ac_top_builddir}.;;
+-  *) ac_abs_top_builddir=$ac_abs_builddir/${ac_top_builddir}.;;
++  *) ac_abs_top_builddir="$ac_dir"/${ac_top_builddir}.;;
+   esac;;
+ esac
+-case $ac_abs_builddir in
++case "$ac_dir" in
+ .) ac_abs_srcdir=$ac_srcdir;;
+ *)
+   case $ac_srcdir in
+-  .) ac_abs_srcdir=$ac_abs_builddir;;
++  .) ac_abs_srcdir="$ac_dir";;
+   [\\/]* | ?:[\\/]* ) ac_abs_srcdir=$ac_srcdir;;
+-  *) ac_abs_srcdir=$ac_abs_builddir/$ac_srcdir;;
++  *) ac_abs_srcdir="$ac_dir"/$ac_srcdir;;
+   esac;;
+ esac
+-case $ac_abs_builddir in
++case "$ac_dir" in
+ .) ac_abs_top_srcdir=$ac_top_srcdir;;
+ *)
+   case $ac_top_srcdir in
+-  .) ac_abs_top_srcdir=$ac_abs_builddir;;
++  .) ac_abs_top_srcdir="$ac_dir";;
+   [\\/]* | ?:[\\/]* ) ac_abs_top_srcdir=$ac_top_srcdir;;
+-  *) ac_abs_top_srcdir=$ac_abs_builddir/$ac_top_srcdir;;
++  *) ac_abs_top_srcdir="$ac_dir"/$ac_top_srcdir;;
+   esac;;
+ esac
+ 
+@@ -7186,6 +7205,11 @@ esac
+   *) ac_INSTALL=$ac_top_builddir$INSTALL ;;
+   esac
+ 
++  if test x"$ac_file" != x-; then
++    { echo "$as_me:$LINENO: creating $ac_file" >&5
++echo "$as_me: creating $ac_file" >&6;}
++    rm -f "$ac_file"
++  fi
+   # Let's still pretend it is `configure' which instantiates (i.e., don't
+   # use $as_me), people would be surprised to read:
+   #    /* config.h.  Generated by config.status.  */
+@@ -7224,12 +7248,6 @@ echo "$as_me: error: cannot find input f
+ 	 fi;;
+       esac
+     done` || { (exit 1); exit 1; }
+-
+-  if test x"$ac_file" != x-; then
+-    { echo "$as_me:$LINENO: creating $ac_file" >&5
+-echo "$as_me: creating $ac_file" >&6;}
+-    rm -f "$ac_file"
+-  fi
+ _ACEOF
+ cat >>$CONFIG_STATUS <<_ACEOF
+   sed "$ac_vpsub
+@@ -7290,7 +7308,7 @@ if test "$no_create" != yes; then
+ fi
+ 
+ 
+-if test "x$lua_version" == "x5.0"; then
++if test "x$lua_version" = "x5.0"; then
+ 	{ echo "$as_me:$LINENO: **" >&5
+ echo "$as_me: **" >&6;}
+ 	{ echo "$as_me:$LINENO: ** lua version 5.0 is buggy, consider upgrading to 5.0.1" >&5
