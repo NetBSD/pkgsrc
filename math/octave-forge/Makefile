@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:12:57 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/30 06:56:04 dmcmahill Exp $
 #
 
-DISTNAME=	octave-forge-2004.07.07
-PKGREVISION=	1
+DISTNAME=	octave-forge-2004.09.09
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=octave/}
 
@@ -25,6 +24,8 @@ USE_GNU_TOOLS+=	make
 USE_X11=	YES
 
 ALL_TARGET=	
+TEST_DIRS=	${WRKSRC}
+TEST_TARGET=	check
 
 GCC_REQD=	3.0
 USE_LANGUAGES=	c c++ fortran

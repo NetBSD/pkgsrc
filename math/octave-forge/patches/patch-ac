@@ -1,18 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/08/14 13:29:56 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
 
---- configure.base.orig	Mon Apr 12 01:47:27 2004
-+++ configure.base
-@@ -283,10 +283,10 @@ AC_PROG_INSTALL
- AC_PROG_RANLIB
+--- main/sparse/buildtests.sh.orig	Thu Sep  9 04:16:42 2004
++++ main/sparse/buildtests.sh
+@@ -453,7 +453,7 @@ EOF
+ # =======================================================
+ # sparse save and load tests
  
- dnl Use $(COPY_FLAGS) to set options for cp when installing .oct files.
--COPY_FLAGS="-fdp"
-+COPY_FLAGS="-Rfp"
- case "$canonical_host_type" in
--    powerpc-apple-darwin*)
--        COPY_FLAGS="-Rfp"
-+    *-*-linux*)
-+        COPY_FLAGS="-fdp"
-     ;;
- esac
- AC_SUBST(COPY_FLAGS)
+-function gen_save_tests {
++gen_save_tests() {
+     cat >>$TESTS <<EOF
+ %!test # save ascii
+ %! savefile= tmpnam();
