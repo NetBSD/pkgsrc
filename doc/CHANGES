@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.508 2002/11/12 19:40:55 dillo Exp $
+$NetBSD: CHANGES,v 1.509 2002/11/13 01:54:46 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3587,3 +3587,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated opera6 to 6.10nb1 [tron 2002-11-12]
 	Added ami-1.0.11 [itojun 2002-11-12]
 	Updated jasper to 1.600.0 [dillo 2002-11-12]
+	Updated bind9-current to 9.2.99.20021113, for 9.3.0s20021113
+		[itojun 2002-11-13]
