@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/11/03 00:56:26 heinz Exp $
+# $NetBSD: Makefile,v 1.34 2003/11/04 16:37:48 jdolecek Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.60
 PKGNAME=	spamassassin-2.60
@@ -17,7 +17,7 @@ CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.perl=	perl>=5.6.1  # MakeMaker >= 5.45 needed
+BUILDLINK_DEPENDS.perl=	perl>=5.6.0  # MakeMaker >= 5.45 needed
 
 DEPENDS+=	p5-Net-DNS>=0.29:../../net/p5-Net-DNS
 DEPENDS+=	p5-HTML-Parser>=3.29:../../www/p5-HTML-Parser
