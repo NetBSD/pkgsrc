@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 1999/11/15 00:53:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.58 1999/11/15 09:04:03 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -69,6 +69,7 @@ post-install:
 	${ECHO} 'LogoPixmap=${PREFIX}/share/kde/icons/Daemon.png' >>kdmrc ; \
 	${RM} kdmrc.new
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/kde/icons
-	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/kde/icons
+	${INSTALL_DATA} ${DISTDIR}/Daemon.README \
+	  ${PREFIX}/share/doc/kde/HTML/en/kdm
 
 .include "../../mk/bsd.pkg.mk"
