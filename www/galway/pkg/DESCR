@@ -1,0 +1,8 @@
+  Galway is a web editor programmed in Scheme using the guile-gtk
+(gnome-guile) bindings that currently supports HTML 4.0, javascript,
+VRML 2.0 - 97 and script-fu <and also some scheme =) >
+
+  Future support for CSS and MathMl is planned.
+
+  Currently Galway has Spanish, Italian, French, Danish and  English
+support.  For further information checkout the manual.
