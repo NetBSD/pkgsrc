@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1214 2003/12/16 11:11:53 adam Exp $
+$NetBSD: TODO,v 1.1215 2003/12/16 23:18:03 grant Exp $
 
 Suggested new packages
 ======================
@@ -183,7 +183,7 @@ Suggested package updates
 	o gnutls-1.0.1 [pkg/23754]
 	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.12
-	o grepmail-5.21
+	o grepmail-5.22
 	o gstreamer-0.6.4
 	o gtetrinet-0.7.4
 	o gtk-gnutella-0.93
