@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/09/20 22:58:52 wiz Exp $
+
+--- Makefile.orig	2004-05-03 00:10:09.000000000 +0200
++++ Makefile
+@@ -16,7 +16,7 @@
+ # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ 
+ CC=gcc
+-CFLAGS=-W -Wall -O -g '-DVERSION="$(shell cat VERSION)"' $(shell libgcrypt-config --cflags)
++CFLAGS=-W -Wall -O -g '-DVERSION="$(shell cat VERSION)"' $(shell libgcrypt-config --cflags) -DPKG_SYSCONFDIR=\"${PKG_SYSCONFDIR}\"
+ LDFLAGS=-g $(shell libgcrypt-config --libs)
+ 
+ ifeq ($(shell uname -s), Linux)
