@@ -1,4 +1,4 @@
-]2;feyrer@yui:/usr/pkgsrc/misc/git/work/git-4.3.17 ]1;yui--- src/Makefile.in.orig	Mon Mar 16 09:14:52 1998
+--- src/Makefile.in.orig	Mon Mar 16 09:14:52 1998
 +++ src/Makefile.in	Mon Mar 16 09:15:03 1998
 @@ -132,7 +132,7 @@
  	for i in $(GIT_SCRIPTS);\
