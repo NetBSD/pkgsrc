@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5142 2004/03/07 22:48:23 jmmv Exp $
+$NetBSD: CHANGES,v 1.5143 2004/03/07 23:28:05 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -337,7 +337,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-Scientific to 2.4.5 [recht 2004-01-18]
 	Updated py-Scientific-doc to 2.4.5 [recht 2004-01-18]
 	Updated bmake to 20040118 [sjg 2004-01-18]
-	Added enriched2html-1.0  [agc 2004-01-19]
+	Added enriched2html-1.0 [agc 2004-01-19]
 	Updated iperf to 1.7.0 [adam 2004-01-19]
 	Added dvorakng-0.6.0rc1 [jmmv 2004-01-19]
 	Updated automake to 1.8.2 [wiz 2004-01-19]
@@ -1222,11 +1222,12 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-racc to 1.4.4 [taca 2004-03-07]
 	Deleted ruby-racc-runtime [taca 2004-03-07]
 	Added ccsh-0.0.4 [minskim 2004-03-07]
-        Updated gnome-session to 2.4.2nb4 [jmmv 2004-03-07]
+	Updated gnome-session to 2.4.2nb4 [jmmv 2004-03-07]
 	Added py-GeoIP-1.2.0 [minskim 2004-03-07]
 	Updated mysql-client to 4.0.18 [martti 2004-03-07]
 	Updated mysql-server to 4.0.18 [martti 2004-03-07]
 	Updated bittorrent to 3.4 [recht 2004-03-07]
 	Updated bittorrent-gui to 3.4 [recht 2004-03-07]
-        Updated classpath to 0.07 [jmmv 2004-03-07]
-        Updated loudmouth to 0.15.1nb3 [jmmv 2004-03-07]
+	Updated classpath to 0.07 [jmmv 2004-03-07]
+	Updated loudmouth to 0.15.1nb3 [jmmv 2004-03-07]
+	Updated xscorch to 0.1.16 [snj 2004-03-07]
