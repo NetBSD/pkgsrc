@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 13:42:06 taca Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/17 15:25:43 taca Exp $
 # FreeBSD: ports/converters/ruby-sha1/Makefile,v 1.2 2000/11/03 18:14:37 knu Exp
 
 DISTNAME=	ruby-sha1-${VERSION}
@@ -13,6 +13,8 @@ COMMENT=	Ruby interface to the SHA-1 Secure Hash Algorithm
 VERSION=	1.2
 DIST_SUBDIR=	ruby
 USE_RUBY_EXTCONF= yes
+
+RUBY_VER=	1.4		# now this is for ruby 1.4 only.
 
 INSTALL_TARGET=	site-install
 
