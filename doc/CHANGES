@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4519 2004/01/20 14:46:34 recht Exp $
+$NetBSD: CHANGES,v 1.4520 2004/01/20 15:48:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -358,3 +358,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gdm to 2.4.4.7 [xtraeme 2004-01-20]
 	Updated gd to 2.0.21 [adam 2004-01-20]
 	Updated TeXmacs to 1.0.3.1 [recht 2004-01-20]
+	Updated lame to 3.95.1 [adam 2004-01-20]
