@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/10 17:32:59 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/24 09:59:41 wiz Exp $
 
---- locate/Makefile.in.orig	Sat Nov  5 06:44:08 1994
-+++ locate/Makefile.in	Fri Dec 10 07:35:53 1999
+--- locate/Makefile.in.orig	Sat Nov  5 09:44:08 1994
++++ locate/Makefile.in
 @@ -29,7 +29,7 @@
  datadir = $(prefix)/share
  sysconfdir = $(prefix)/etc
@@ -19,6 +19,15 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/10 17:32:59 bouyer Exp $
  INSTALL_DATA = @INSTALL_DATA@
  transform = @program_transform_name@
  
+@@ -68,7 +69,7 @@
+ DIST_FILES = $(DIST_CONF) $(SOURCES) $(TEXINFOS) $(INFOS) $(MANS) $(DIST_OTHER)
+ 
+ # The default database to build and search.
+-LOCATE_DB = $(localstatedir)/locatedb
++LOCATE_DB = /var/db/locate.database
+ 
+ PROGRAMS = locate
+ LIBPROGRAMS = frcode code bigram
 @@ -96,8 +97,11 @@
  
  install-programs: $(PROGRAMS) $(SCRIPTS)
