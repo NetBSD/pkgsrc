@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/08 23:33:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/09 00:30:49 xtraeme Exp $
 
 DISTNAME=	gnome-2.4.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -32,7 +32,6 @@ DEPENDS+=	gnome2-system-monitor>=2.4.0:../../sysutils/gnome2-system-monitor
 DEPENDS+=	gnome-utils>=2.4.1:../../misc/gnome2-utils
 DEPENDS+=	gnome-vfs2>=2.4.1:../../sysutils/gnome-vfs2
 DEPENDS+=	gtk2-engines>=2.2.0:../../x11/gtk2-engines
-DEPENDS+=	gtkmm>=2.2.1:../../x11/gtkmm
 DEPENDS+=	nautilus>=2.4.1:../../sysutils/nautilus
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
 
