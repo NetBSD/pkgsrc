@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
+
+--- iocntl.c.dist	Mon Mar 21 21:42:49 1994
++++ iocntl.c	Fri Jan  7 11:28:43 2000
+@@ -63,7 +63,7 @@
+  #ifdef RS6000 /* ibm rs/6000 */
+    sigemptyset(&vec.sa_mask);
+  #else
+-  vec.sa_mask = 0;
++   (void)sigprocmask (SIG_SETMASK, 0, NULL);
+  #endif
+   vec.sa_flags = 0;
+   if ( sigaction(SIGIO, &vec, (struct sigaction *) 0) == -1)

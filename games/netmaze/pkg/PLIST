@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/29 10:09:46 jdc Exp $
+bin/betterbot
+bin/dummy
+bin/follower
+bin/netmaze
+bin/netserv
+man/cat6/betterbot.0
+man/cat6/dummy.0
+man/cat6/follower.0
+man/cat6/netmaze.0
+man/cat6/netserv.0

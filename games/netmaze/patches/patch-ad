@@ -1,0 +1,31 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
+
+--- netmaze.c.dist	Fri Apr 15 21:34:04 1994
++++ netmaze.c	Fri Jan  7 11:35:04 2000
+@@ -32,7 +32,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <sys/signal.h>
++#include <signal.h>
+ #include <sys/time.h>
+ #include <sys/ioctl.h>
+ #include <sys/types.h>
+@@ -383,7 +383,7 @@
+  #ifdef RS6000 /* ibm rs/6000 */
+    sigemptyset(&vec.sa_mask);
+  #else
+-   vec.sa_mask = 0;
++   (void)sigprocmask (SIG_SETMASK, 0, NULL);
+  #endif
+   vec.sa_flags = 0;
+   if ( sigaction(SIGALRM, &vec, &ovec) == -1) perror("SIGALRM\n");
+@@ -412,7 +412,7 @@
+  #ifdef RS6000 /* ibm rs/6000 */
+    sigemptyset(&vec.sa_mask);
+  #else
+-  vec.sa_mask = 0;
++   (void)sigprocmask (SIG_SETMASK, 0, NULL);
+  #endif
+   vec.sa_flags = 0;
+   if ( sigaction(SIGCHLD, &vec, NULL) == -1) perror("SIGCHLD\n");

@@ -1,0 +1,28 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
+
+--- /dev/null	Thu Feb 10 12:33:49 2000
++++ dummy.man	Wed Feb  9 16:36:47 2000
+@@ -0,0 +1,23 @@
++.TH DUMMY 6 "08 January 2000" "X Version 11"
++.SH NAME
++
++dummy \- robot client for X windows multiplayer combat game
++
++.SH SYNOPSIS
++
++.B dummy
++[ servername ]
++
++.SH DESCRIPTION
++
++.I dummy
++is a simple robot client for the multiplayer combat game.
++This Smiley circles round shooting randomly.
++
++.Sh SEE ALSO
++
++betterbot (6), follower (6), netmaze (6) netserv (6)
++
++.SH AUTHOR
++
++M.Hipp
