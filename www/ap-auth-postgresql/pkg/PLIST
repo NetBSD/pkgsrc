@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/10 22:33:12 jwise Exp $
+lib/httpd/mod_auth_pg.so
+share/doc/mod_auth_pg/README
+share/doc/mod_auth_pg/README.ko
+share/doc/mod_auth_pg/mod_auth_pg.html
+share/doc/mod_auth_pg/mod_auth_pg.ko.html
+share/examples/mod_auth_pg.htaccess
+@dirrm share/doc/mod_auth_pg
