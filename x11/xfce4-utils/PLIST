@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/03 05:34:09 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/22 08:50:42 martti Exp $
 bin/startxfce4
 bin/xfce4-about
 bin/xfhelp4
@@ -11,6 +11,7 @@ etc/xfce4/xinitrc
 lib/xfce4/mcs-plugins/xftaskbar_plugin.a
 lib/xfce4/mcs-plugins/xftaskbar_plugin.la
 lib/xfce4/mcs-plugins/xftaskbar_plugin.so
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce-utils.mo
@@ -37,26 +38,31 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce-utils.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce-utils.mo
 share/xfce4/AUTHORS
+share/xfce4/AUTHORS.az
 share/xfce4/AUTHORS.ca
 share/xfce4/AUTHORS.de
 share/xfce4/AUTHORS.fr
 share/xfce4/AUTHORS.html
+share/xfce4/AUTHORS.html.az
 share/xfce4/AUTHORS.html.ca
 share/xfce4/AUTHORS.html.de
 share/xfce4/AUTHORS.html.fr
-share/xfce4/INFO.ca
-share/xfce4/INFO.fr
-share/xfce4/INFO.html.fr
+share/xfce4/AUTHORS.vi
 share/xfce4/BSD
 share/xfce4/BSD.html
 share/xfce4/COPYING
 share/xfce4/COPYING.html
+share/xfce4/COPYING.vi
 share/xfce4/GPL
 share/xfce4/GPL.html
 share/xfce4/INFO
+share/xfce4/INFO.ca
+share/xfce4/INFO.fr
 share/xfce4/INFO.html
 share/xfce4/INFO.html.ca
 share/xfce4/INFO.html.de
+share/xfce4/INFO.html.fr
+share/xfce4/INFO.vi
 share/xfce4/LGPL
 share/xfce4/LGPL.html
 share/xfce4/doc/C/BSD.html

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/03 05:34:08 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/22 08:50:40 martti Exp $
 bin/xfwm4
 lib/xfce4/mcs-plugins/margins_plugin.a
 lib/xfce4/mcs-plugins/margins_plugin.la
@@ -7,6 +7,7 @@ lib/xfce4/mcs-plugins/xfwm4_plugin.a
 lib/xfce4/mcs-plugins/xfwm4_plugin.la
 lib/xfce4/mcs-plugins/xfwm4_plugin.so
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfwm4.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfwm4.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfwm4.mo

@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/03 05:34:09 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/22 08:50:42 martti Exp $
 bin/xfce4-panel
 etc/xfce4/xfce4rc
+etc/xfce4/xfce4rc.az
 etc/xfce4/xfce4rc.ca
 etc/xfce4/xfce4rc.hu
 etc/xfce4/xfce4rc.nl
+etc/xfce4/xfce4rc.vi
 include/xfce4/panel/controls.h
 include/xfce4/panel/global.h
 include/xfce4/panel/icons.h
@@ -36,6 +38,7 @@ lib/xfce4/panel-plugins/libswitcher.so
 lib/xfce4/panel-plugins/libsystembuttons.a
 lib/xfce4/panel-plugins/libsystembuttons.la
 lib/xfce4/panel-plugins/libsystembuttons.so
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-panel.mo
