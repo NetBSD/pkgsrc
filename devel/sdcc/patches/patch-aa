@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/04/29 16:15:15 dmcmahill Exp $ 
+$NetBSD: patch-aa,v 1.5 2001/11/28 04:49:02 jlam Exp $ 
 
 --- as/z80/Makefile.in.orig	Mon Apr  9 21:38:43 2001
 +++ as/z80/Makefile.in	Mon Apr  9 21:38:59 2001
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2001/04/29 16:15:15 dmcmahill Exp $
  infodir         = ${prefix}/info
  
 -CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR)
-+CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -I$(LOCALBASE)/include -Dunix
++CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -I$(BUILDLINK_DIR)/include -Dunix
  CFLAGS		= @CFLAGS@ -Wall -DINDEXLIB -DMLH_MAP -DUNIX -DSDK -funsigned-char -ggdb
  M_OR_MM		= @M_OR_MM@
  LDFLAGS		= @LDFLAGS@ -lm
