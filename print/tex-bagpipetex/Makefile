@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/23 18:13:46 fredb Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/25 23:16:25 fredb Exp $
 #
 
 DISTNAME=	bagpipetex-3.01
@@ -53,12 +53,10 @@ post-install:
 	cd ${PREFIX}/share/texmf/doc/bagpipetex ; \
 		latex bagdoc ; \
 		dvips bagdoc.dvi -o bagdoc.ps ; \
-		ps2pdf bagdoc.ps ; \
 		musixtex quickref ; \
 		musixflx quickref ; \
 		musixtex quickref ; \
 		dvips quickref.dvi -o quickref.ps ; \
-		ps2pdf quickref.ps ; \
 		${RM} -f *.log *.mx?
 
 .include "../../mk/bsd.pkg.mk"
