@@ -1,0 +1,5 @@
+ColChess is primarily an analysis engine, though it can also be used for
+playing competitive games. It uses the brute force analysis method for
+tree searching, meaning that it analyses far more nodes per move than an
+ordinary chess program such as GNU Chess or Crafty, but it cuts out all the
+guesswork so that its analysis is always accurate to the depth specified.
