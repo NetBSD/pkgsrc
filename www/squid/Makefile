@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.120.2.2 2005/01/15 06:39:25 snj Exp $
+# $NetBSD: Makefile,v 1.120.2.3 2005/01/21 14:37:07 salo Exp $
 
 DISTNAME=	squid-2.5.STABLE7
 PKGNAME=	squid-2.5.7
-PKGREVISION=	5
+PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -23,7 +23,14 @@ PATCHFILES=	squid-2.5.STABLE7-half_closed_POST.patch \
 		squid-2.5.STABEL7-close_other.patch \
 		squid-2.5.STABLE7-fakeauth_auth.patch \
 		squid-2.5.STABLE7-gopher_html_parsing.patch \
-		squid-2.5.STABLE7-wccp_denial_of_service.patch
+		squid-2.5.STABLE7-wccp_denial_of_service.patch \
+		squid-2.5.STABLE7-dns_memleak.patch \
+		squid-2.5.STABLE7-fqdn_truncated.patch \
+		squid-2.5.STABLE7-ldap_spaces.patch \
+		squid-2.5.STABLE7-ftp_datachannel.patch \
+		squid-2.5.STABLE7-short_icons_urls.patch \
+		squid-2.5.STABLE7-response_splitting.patch
+#		squid-2.5.STABLE7-httpd_accel_no_pmtu_disc.patch # not yet
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
@@ -65,7 +72,10 @@ RCD_SCRIPTS=	squid
 
 SQUID_USER?=	squid
 SQUID_GROUP?=	squid
+BUILD_DEFS+=	SQUID_USER SQUID_GROUP
 
+PKG_GROUPS=	${SQUID_GROUP}
+PKG_USERS=	${SQUID_USER}:${SQUID_GROUP}::Squid\\ Web-Cache\\ pseudo-user
 CONF_FILES+=	${EXAMPLESDIR}/mime.conf ${PKG_SYSCONFDIR}/mime.conf
 CONF_FILES+=	${EXAMPLESDIR}/squid.conf ${PKG_SYSCONFDIR}/squid.conf
 OWN_DIRS=	${DATADIR}
