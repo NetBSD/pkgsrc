@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/10/03 22:00:23 tv Exp $
+# $NetBSD: Makefile,v 1.7 1998/10/04 04:47:20 tv Exp $
 #
 
 PKGNAME=	apache-1.3.2-modssl-2.0.12
@@ -44,7 +44,6 @@ pre-patch-modssl:
 		&& ${ECHO_MSG} "===>  Applying mod_ssl-2.0.12 extension" \
 		&& ./configure --with-apache=../${DISTNAME}
 
-pre-install: certificate
 certificate:
 	@cd ${WRKSRC} \
 		&& ${ECHO_MSG} "===>  Creating Test Certificate for Server" \

@@ -1,13 +1,20 @@
-@comment $NetBSD: PLIST,v 1.4 1998/10/03 21:01:16 tv Exp $
-http/conf/sslcerts/Makefile
-http/conf/sslcerts/server.pem
-@exec mkdir -p %D/http/conf/sslkeys
+@comment $NetBSD: PLIST,v 1.5 1998/10/04 04:47:20 tv Exp $
+http/conf/ssl.crt/README.CRT
+http/conf/ssl.crt/Makefile
+http/conf/ssl.crt/ca-bundle.crt
+http/conf/ssl.crt/snakeoil.crt
+http/conf/ssl.crt/server.crt
+http/conf/ssl.csr/README.CSR
+http/conf/ssl.csr/server.csr
+http/conf/ssl.key/README.KEY
+http/conf/ssl.key/snakeoil.key
+http/conf/ssl.key/server.key
 http/htdocs/manual/images/apache_pb.gif
 http/htdocs/manual/images/mod_ssl.jpg
 http/htdocs/manual/images/mod_ssl_sb.gif
 http/htdocs/manual/images/ssleay.gif
 http/htdocs/manual/mod/mod_ssl.html
 sbin/ssl_gcache
-@exec cd %D/http/etc/sslcerts/ && make >/dev/null 2>&1
-@dirrm http/conf/sslcerts
-@dirrm http/conf/sslkeys
+@dirrm http/conf/ssl.crt
+@dirrm http/conf/ssl.csr
+@dirrm http/conf/ssl.key
