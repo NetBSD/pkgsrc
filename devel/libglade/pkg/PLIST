@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 1999/09/06 21:05:52 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/09/08 16:10:25 rh Exp $
 bin/libglade-config
 bin/libglade-xgettext
 include/glade/glade.h
 include/glade/glade-xml.h
 include/glade/glade-build.h
 include/glade/glade-widget-tree.h
-lib/locale/no/LC_MESSAGES/libglade.mo
-lib/libglade.so.1.1
+lib/libglade.so.2.0
 lib/libglade.a
-lib/libglade-gnome.so.1.1
+lib/libglade-gnome.so.2.0
 lib/libglade-gnome.a
 lib/libgladeConf.sh
 share/aclocal/libglade.m4
