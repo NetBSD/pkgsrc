@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.32 2004/02/26 09:00:03 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.33 2004/06/26 23:56:21 xtraeme Exp $
 
-DISTNAME=		icewm-1.2.13
+DISTNAME=		icewm-1.2.14
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 
@@ -15,9 +15,12 @@ USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	# defined
 BUILD_USES_MSGFMT=	# defined
 
-DISTINFO_FILE=		${.CURDIR}/../../wm/icewm/distinfo
-FILESDIR=		${.CURDIR}/../../wm/icewm/files
-PATCHDIR=		${.CURDIR}/../../wm/icewm/patches
+DISTINFO_FILE=		${.CURDIR}/../icewm/distinfo
+FILESDIR=		${.CURDIR}/../icewm/files
+PATCHDIR=		${.CURDIR}/../icewm/patches
+
+CONFIGURE_ARGS+=	--enable-gradients
+CONFIGURE_ARGS+=	--enable-antialiasing
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,18 +33,18 @@ CONFIGURE_ARGS+=	--disable-xinerama
 PKG_SYSCONFSUBDIR=	icewm
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
-CPPFLAGS+=		-DSTART_PIXMAP=\"\\\"bsd-daemon.xpm\\\"\"
+CXXFLAGS+=		-DSTART_PIXMAP=\"\\\"bsd-daemon.xpm\\\"\"
 .endif
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+= --with-unicode-set=utf-32
 .endif
 
 DOCDIR=			${PREFIX}/share/doc/icewm
-HTMLDIR=		${PREFIX}/share/doc/html/icewm
+HTMLDIR=		${PREFIX}/share/doc/icewm/html
 INSTALL_TARGET=		install-base install-nls
 
 post-extract:
-	${CP} ${FILES} ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
+	@${CP} ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
