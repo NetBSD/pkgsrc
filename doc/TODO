@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.697 2003/07/12 01:13:09 zuntum Exp $
+$NetBSD: TODO,v 1.698 2003/07/12 01:38:29 zuntum Exp $
 
 Suggested new packages
 ======================
@@ -223,7 +223,6 @@ Suggested package updates
 	o py-soappy-0.10.1 [pkg/21735]
 	o pygtk-0.6.11
 	o qvwm-1.1.12 [pkg/21935]
-	o ratpoison-1.2.2
 	o rdiff-backup-0.12.0 [pkg/22095]
 	o rep-gtk-0.17
 	o rosegarden-2.1.4 [pkg/21904]
