@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/15 19:43:12 ben Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/17 19:08:37 ben Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -31,7 +31,7 @@ SUBST_SED.paths=	-e "s,XXXPREFIXXXX,${PREFIX},g" \
 
 .if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+=		unixconf
-SUBST_MESSAGE.unixconf=	"Configuring to use NetBSD pre-sets."
+SUBST_MESSAGE.unixconf=	"Configuring to use NetBSD presets."
 SUBST_STAGE.unixconf=	post-patch
 SUBST_FILES.unixconf=	include/unixconf.h
 SUBST_SED.unixconf=	-e 's,^\/\* \#define BSD 1 \*\/,\#define BSD 1,' \
