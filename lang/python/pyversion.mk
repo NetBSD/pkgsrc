@@ -1,15 +1,17 @@
-# $NetBSD: pyversion.mk,v 1.25 2004/04/22 16:03:51 recht Exp $
+# $NetBSD: pyversion.mk,v 1.26 2004/04/23 01:25:09 danw Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-PYTHON_VERSION_DEFAULT?=	23
+PYTHON_VERSION_DEFAULT?=		23
 .if ${OPSYS} == "Darwin"
-PYTHON_VERSIONS_ACCEPTED?=	23pth 22pth
+PYTHON_VERSIONS_ACCEPTED?=		23pth 22pth
+BUILDLINK_DEPENDS.python22-pth?=	python22-pth>=2.2.3nb2
+BUILDLINK_DEPENDS.python23-pth?=	python23-pth>=2.3.3nb3
 .else
-PYTHON_VERSIONS_ACCEPTED?=	23 23pth 22 22pth 21 21pth 20
+PYTHON_VERSIONS_ACCEPTED?=		23 23pth 22 22pth 21 21pth 20
 .endif
 
 BUILDLINK_DEPENDS.python15?=		python15>=1.5
