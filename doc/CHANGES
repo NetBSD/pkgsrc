@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5073 2004/03/03 16:02:25 minskim Exp $
+$NetBSD: CHANGES,v 1.5074 2004/03/03 16:26:40 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1138,3 +1138,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ncurses to 5.4 [adam 2004-03-03]
 	Updated lynx to 2.8.5 [adam 2004-03-03]
 	Updated gnet to 2.0.5 [minskim 2004-03-03]
+	mklivecd to 0.3 [xtraeme 2004-03-03]
