@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/03/10 09:46:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/22 23:16:44 snj Exp $
 
 DISTNAME=		dbh_1.0-15
 PKGNAME=		dbh-1.0.15
@@ -13,6 +13,9 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	src/dbh-1.0.pc.in
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dbh
