@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/09/19 12:34:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/09/19 12:58:14 wiz Exp $
 avr/bin/ar
 avr/bin/as
 avr/bin/ld
@@ -99,19 +99,6 @@ man/man1/avr-windres.1
 man/man1/avr-c++filt.1
 man/man1/avr-as.1
 man/man1/avr-ld.1
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/binutils.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/binutils.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gas.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/ld.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/binutils.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gas.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/ld.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/binutils.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/binutils.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/ld.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/binutils.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gas.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/ld.mo
 @dirrm avr/lib/ldscripts
 @dirrm avr/lib
 @dirrm avr/bin
