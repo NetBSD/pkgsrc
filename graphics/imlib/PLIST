@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/12/09 16:01:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/23 16:24:14 minskim Exp $
 bin/imlib_config
 bin/imlib-config
 include/gdk_imlib.h
@@ -61,6 +61,4 @@ share/examples/imlib/im_palette-small.pal
 share/examples/imlib/im_palette-tiny.pal
 @dirrm share/examples/imlib
 @dirrm share/doc/imlib
-@exec test %D = ${LOCALBASE} || ln -fs %D/share/aclocal/imlib.m4 ${LOCALBASE}/share/aclocal/imlib.m4
-@unexec test %D = ${LOCALBASE} || ${RM} ${LOCALBASE}/share/aclocal/imlib.m4
 @unexec ${RMDIR} %D/share/aclocal 2>/dev/null || ${TRUE}
