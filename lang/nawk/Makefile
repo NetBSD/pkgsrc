@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2000/04/20 08:26:11 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/23 22:21:12 jdolecek Exp $
 #
 
 DISTNAME=       awk
-PKGNAME=        nawk-19990620
+PKGNAME=        nawk-20001115
 CATEGORIES=	lang
 MASTER_SITES=   http://cm.bell-labs.com/who/bwk/
 
