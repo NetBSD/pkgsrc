@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2003/03/21 17:31:37 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2004/12/21 03:42:25 schmonz Exp $
 
---- BIN.orig	2003-03-21 18:19:14.000000000 +0100
+--- BIN.orig	2004-12-20 22:13:47.000000000 -0500
 +++ BIN
-@@ -21,9 +21,6 @@ c:::755:/:ezmlm-split:
+@@ -22,9 +22,6 @@ c:::755:/:ezmlm-split:
  c:::755:/:ezmlm-moderate:
  c:::755:/:ezmlm-sub:
  c:::755:/:ezmlm-unsub:

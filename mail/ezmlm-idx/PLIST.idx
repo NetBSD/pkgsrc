@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.idx,v 1.2 2003/03/21 17:31:37 jmmv Exp $
+@comment $NetBSD: PLIST.idx,v 1.3 2004/12/21 03:42:25 schmonz Exp $
 bin/ezmlm-accept
 bin/ezmlm-archive
 bin/ezmlm-check
 bin/ezmlm-clean
+bin/ezmlm-confirm
 bin/ezmlm-cron
 bin/ezmlm-gate
 bin/ezmlm-get
@@ -20,6 +21,7 @@ man/cat1/ezmlm-accept.0
 man/cat1/ezmlm-archive.0
 man/cat1/ezmlm-check.0
 man/cat1/ezmlm-clean.0
+man/cat1/ezmlm-confirm.0
 man/cat1/ezmlm-cron.0
 man/cat1/ezmlm-gate.0
 man/cat1/ezmlm-get.0
@@ -40,6 +42,7 @@ man/man1/ezmlm-accept.1
 man/man1/ezmlm-archive.1
 man/man1/ezmlm-check.1
 man/man1/ezmlm-clean.1
+man/man1/ezmlm-confirm.1
 man/man1/ezmlm-cron.1
 man/man1/ezmlm-gate.1
 man/man1/ezmlm-get.1
