@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6409 2004/06/30 20:21:05 schmonz Exp $
+$NetBSD: CHANGES,v 1.6410 2004/07/01 05:52:18 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3195,3 +3195,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added archivemail-0.6.1 [hubertf 2004-06-30]
 	Updated py-feedparser to 3.01 [schmonz 2004-06-30]
 	Updated rss2email to 2.51 [schmonz 2004-06-30]
+	Updated mips64emul to 0.1 [xtraeme 2004-07-01]
