@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/10/08 13:14:01 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/10/08 13:17:09 jlam Exp $
 #
 
 DISTNAME=		transfig.3.2.3d
@@ -12,6 +12,7 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/drawing_tools/transfig/} \
 MAINTAINER=		root@garbled.net
 COMMENT=		TeX document creation tool utilizing portable graphics
 
+USE_BUILDLINK2=		YES
 USE_IMAKE=		YES
 
 .include "../../graphics/jpeg/buildlink2.mk"
