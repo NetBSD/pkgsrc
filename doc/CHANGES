@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7045 2004/08/30 22:02:15 recht Exp $
+$NetBSD: CHANGES,v 1.7046 2004/08/31 08:23:44 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4115,3 +4115,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sendmail to 8.13.1 [adrianp 2004-08-30]
 	Updated libmilter to 8.13.1 [adrianp 2004-08-30]
 	Updated ncftp3 to 3.1.8 [recht 2004-08-30]
+	Updated pango to 1.4.1 [jmmv 2004-08-31]
