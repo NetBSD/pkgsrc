@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.25 2002/03/26 16:31:28 skrll Exp $
+$NetBSD: patch-ab,v 1.26 2002/12/23 19:32:13 jschauma Exp $
 
---- ltmain.sh.orig	Thu Jun 14 05:06:50 2001
-+++ ltmain.sh
+--- ltmain.sh.orig	Thu Jun 14 00:06:50 2001
++++ ltmain.sh	Mon Dec 23 13:23:11 2002
 @@ -211,6 +211,8 @@
    --mode) prevopt="--mode" prev=mode ;;
    --mode=*) mode="$optarg" ;;
@@ -83,13 +83,10 @@ $NetBSD: patch-ab,v 1.25 2002/03/26 16:31:28 skrll Exp $
      # Find all interdependent deplibs by searching for libraries
      # that are linked more than once (e.g. -la -lb -la)
      for deplib in $deplibs; do
--      case "$libs " in
--      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
--      esac
 +      if test "X$duplicate_deps" = "Xyes" ; then
-+	case "$libs " in
-+	*" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
-+	esac
+       case "$libs " in
+       *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+       esac
 +      fi
        libs="$libs $deplib"
      done
@@ -98,19 +95,13 @@ $NetBSD: patch-ab,v 1.25 2002/03/26 16:31:28 skrll Exp $
        # $postdeps and mark them as special (i.e., whose duplicates are
        # not to be eliminated).
        pre_post_deps=
--      for pre_post_dep in $predeps $postdeps; do
--        case "$pre_post_deps " in
--	*" $pre_post_dep "*) specialdeplibs="$specialdeplibs $pre_post_deps" ;;
--	esac
--	pre_post_deps="$pre_post_deps $pre_post_dep"
--      done
 +      if test "X$duplicate_deps" = "Xyes" ; then
-+	for pre_post_dep in $predeps $postdeps; do
-+	  case "$pre_post_deps " in
-+	  *" $pre_post_dep "*) specialdeplibs="$specialdeplibs $pre_post_deps" ;;
-+	  esac
-+	  pre_post_deps="$pre_post_deps $pre_post_dep"
-+	done
+       for pre_post_dep in $predeps $postdeps; do
+         case "$pre_post_deps " in
+ 	*" $pre_post_dep "*) specialdeplibs="$specialdeplibs $pre_post_deps" ;;
+ 	esac
+ 	pre_post_deps="$pre_post_deps $pre_post_dep"
+       done
 +      fi
        pre_post_deps=
      fi
@@ -119,13 +110,10 @@ $NetBSD: patch-ab,v 1.25 2002/03/26 16:31:28 skrll Exp $
  	    tmp_libs=
  	    for deplib in $dependency_libs; do
  	      deplibs="$deplib $deplibs"
--	      case "$tmp_libs " in
--	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
--	      esac
 +              if test "X$duplicate_deps" = "Xyes" ; then
-+	        case "$tmp_libs " in
-+	        *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
-+	        esac
+ 	      case "$tmp_libs " in
+ 	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+ 	      esac
 +              fi
  	      tmp_libs="$tmp_libs $deplib"
  	    done
@@ -134,13 +122,10 @@ $NetBSD: patch-ab,v 1.25 2002/03/26 16:31:28 skrll Exp $
  	      # or/and link against static libraries
  	      newdependency_libs="$deplib $newdependency_libs"
  	    fi
--	    case "$tmp_libs " in
--	    *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
--	    esac
 +	    if test "X$duplicate_deps" = "Xyes" ; then
-+	      case "$tmp_libs " in
-+	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
-+	      esac
+ 	    case "$tmp_libs " in
+ 	    *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+ 	    esac
 +	    fi
  	    tmp_libs="$tmp_libs $deplib"
  	  done # for deplib
@@ -149,17 +134,23 @@ $NetBSD: patch-ab,v 1.25 2002/03/26 16:31:28 skrll Exp $
  	  tmp_libs=
  	  for deplib in $dependency_libs; do
  	    newdependency_libs="$deplib $newdependency_libs"
--	    case "$tmp_libs " in
--	    *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
--	    esac
 +	    if test "X$duplicate_deps" = "Xyes" ; then
-+	      case "$tmp_libs " in
-+	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
-+	      esac
+ 	    case "$tmp_libs " in
+ 	    *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+ 	    esac
 +	    fi
  	    tmp_libs="$tmp_libs $deplib"
  	  done
  
+@@ -2582,7 +2610,7 @@
+ 	  ;;
+ 
+ 	irix)
+-	  major=`expr $current - $age + 1`
++	  major=`expr $current - $age`
+ 	  verstring="sgi$major.$revision"
+ 
+ 	  # Add in all the interfaces that we are compatible with.
 @@ -5053,7 +5081,7 @@
        fi
  

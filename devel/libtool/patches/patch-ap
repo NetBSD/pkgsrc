@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2002/12/23 19:32:13 jschauma Exp $
+
+--- ltmain.in.orig	Mon Dec 23 13:23:38 2002
++++ ltmain.in	Mon Dec 23 13:23:45 2002
+@@ -2582,7 +2582,7 @@
+ 	  ;;
+ 
+ 	irix)
+-	  major=`expr $current - $age + 1`
++	  major=`expr $current - $age`
+ 	  verstring="sgi$major.$revision"
+ 
+ 	  # Add in all the interfaces that we are compatible with.
