@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/28 21:08:04 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/05 16:08:45 wiz Exp $
 
 DISTNAME=	x2x-1.27
 CATEGORIES=	x11
@@ -11,7 +11,7 @@ USE_X11BASE=	yes
 USE_IMAKE=	yes
 
 post-configure:
-	(cd ${WRKSRC}; ln -s x2x.1 x2x.man)
+	(cd ${WRKSRC}; ${LN} -s x2x.1 x2x.man)
 
 post-install:
 	(cd ${WRKSRC}; ${INSTALL_MAN} x2x.1 ${PREFIX}/man/man1)
