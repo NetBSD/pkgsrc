@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2005/02/22 22:00:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2005/03/22 16:17:10 jmmv Exp $
 #
 
-DISTNAME=	control-center-2.8.2
+DISTNAME=	control-center-2.10.0
 PKGNAME=	gnome2-${DISTNAME}
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 configuration utility
 
 BUILD_USES_MSGFMT=	yes
-
-BUILDLINK_DEPENDS.libxklavier+=	libxklavier>=1.02
 
 USE_MSGFMT_PLURALS=	yes
 GNU_CONFIGURE=		yes
@@ -44,25 +42,25 @@ CONF_FILES=		${EGDIR}/theme-method.conf \
 CONF_FILES+=		${EGDIR}/font-method.conf \
 			${PKG_SYSCONFDIR}/font-method.conf
 
-post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/vfs-methods/themus/theme-method.conf \
-		${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/vfs-methods/fontilus/font-method.conf \
-		${EGDIR}
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
-.include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gst-plugins/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
@@ -72,4 +70,12 @@ post-install:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/vfs-methods/themus/theme-method.conf \
+		${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/vfs-methods/fontilus/font-method.conf \
+		${EGDIR}
+
 .include "../../mk/bsd.pkg.mk"
