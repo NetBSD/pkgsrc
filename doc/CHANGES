@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2686 2003/07/06 08:52:52 rh Exp $
+$NetBSD: CHANGES,v 1.2687 2003/07/06 12:04:36 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2682,3 +2682,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated monafonts to 2.22nb1 [uebayasi 2003-07-06]
 	Updated GWLib to 0.5.3 [rh 2003-07-06]
 	Updated gworkspace to 0.5.3 [rh 2003-07-06]
+	Updated gnome to 2.2.4 (gnome2) [rh 2003-07-06]
