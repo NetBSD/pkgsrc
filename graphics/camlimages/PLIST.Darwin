@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2005/02/04 22:07:24 adrianp Exp $
+lib/ocaml/camlimages/dllci_jpeg.so
+lib/ocaml/camlimages/dllci_tiff.so
+lib/ocaml/camlimages/dllci_gif.so
+lib/ocaml/camlimages/dllci_png.so
+lib/ocaml/camlimages/dllci_xpm.so
+lib/ocaml/camlimages/dllci_freetype.so
+@unexec ${RMDIR} %D/lib/ocaml/camlimages 2>/dev/null || ${TRUE}
