@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 14:40:50 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/01 00:51:46 wiz Exp $
 #
 
 DISTNAME=	hexedit-1.1.0
@@ -11,8 +11,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.chez.com/prigaux/hexedit.html
 COMMENT=	to view and edit files in hexadecimal or ASCII
 
-GNU_CONFIGURE=	yes
-LDFLAGS+=	-L${LOCALBASE}/lib	# for -lncurses
+GNU_CONFIGURE=		yes
+USE_BUILDLINK_ONLY=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hexedit
@@ -20,10 +20,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/hexedit
 .endfor
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
-.endif
-
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
