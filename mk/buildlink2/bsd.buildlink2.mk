@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.106 2004/01/31 22:00:51 recht Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.107 2004/02/01 12:04:31 grant Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -390,7 +390,7 @@ _BLNK_TRANSFORM+=	S:-L/usr/lib:
 #
 .if defined(_USE_RPATH) && empty(_USE_RPATH:M[yY][eE][sS])
 _BLNK_TRANSFORM+=	no-rpath
-.elif defined(USE_SUNPRO)
+.elif !empty(PKGSRC_COMPILER:Msunpro)
 _BLNK_TRANSFORM+=	sanitize-rpath
 .endif
 _BLNK_TRANSFORM+=	${_BLNK_UNPROTECT}
@@ -716,11 +716,10 @@ MAKE_ENV+=	${BUILDLINK_ENV}
 
 # OS-specific overrides for buildlink2 wrappers
 #
-.if defined(USE_SUNPRO)
+.if !empty(PKGSRC_COMPILER:Msunpro)
 _BLNK_WRAPPEES.SunOS?=	CC CXX
-SUNWSPROBASE?=		/opt/SUNWspro
-CC.SunOS?=		${SUNWSPROBASE}/bin/cc
-CXX.SunOS?=		${SUNWSPROBASE}/bin/CC
+CC.SunOS?=		${CC}
+CXX.SunOS?=		${CXX}
 .endif
 
 buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
