@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/08/27 17:32:34 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/29 17:15:15 jlam Exp $
 #
 
 DISTNAME=		blas
@@ -15,8 +15,6 @@ COMMENT=		Basic Linear Algebra Subprograms (Fortran)
 WRKSRC=			${WRKDIR}
 USE_FORTRAN=		YES
 USE_BUILDLINK2=		YES
-PKG_FC=			f2c-f77
-FFLAGS=			-v
 
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
