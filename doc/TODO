@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3033 2005/02/18 13:29:22 wiz Exp $
+$NetBSD: TODO,v 1.3034 2005/02/18 13:41:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -821,7 +821,6 @@ Suggested package updates
 	o p5-Scalar-List-Utils-1.14
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-Scalar-1.19
-	o p5-Storable-2.13
 	o p5-Sys-Hostname-Long-1.2
 	o p5-Template-Extract-0.38
 	o p5-Test-Cmd-1.05

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9176 2005/02/18 13:29:22 wiz Exp $
+$NetBSD: CHANGES,v 1.9177 2005/02/18 13:41:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -918,3 +918,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Net-SSLeay to 1.26 [wiz 2005-02-18]
 	Updated p5-IO-Socket-SSL to 0.96 [wiz 2005-02-18]
 	Updated p5-libwww to 5.803 [wiz 2005-02-18]
+	Updated p5-Storable to 2.13 [wiz 2005-02-18]
