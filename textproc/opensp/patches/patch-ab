@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.5 2004/06/07 19:25:58 shannonjr Exp $
+
+--- include/RangeMap.cxx.orig	2000-02-25 09:55:21.000000000 -0700
++++ include/RangeMap.cxx
+@@ -7,6 +7,7 @@
+ #include "RangeMap.h"
+ #include "ISet.h"
+ #include "types.h"
++#include "constant.h"
+ 
+ #ifdef SP_NAMESPACE
+ namespace SP_NAMESPACE {
