@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/05/04 10:15:46 skrll Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/05/07 18:28:37 jlam Exp $
 ${PKGNAME}/${MACHINE_GCC_PLATFORM}/include/_G_config.h
 ${PKGNAME}/bin/${MACHINE_GCC_PLATFORM}-gcc
 ${PKGNAME}/bin/c++
@@ -292,6 +292,7 @@ ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libg2c.a
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libgcc.a
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libobjc.a
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libstdc++.a
+${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/libstdc++.so
 ${PKGNAME}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${GCC_VERSION}/specs
 ${PKGNAME}/lib/libiberty.a
 ${PKGNAME}/lib/libstdc++.a.2.10
