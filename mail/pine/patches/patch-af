@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.9 2004/05/13 18:29:54 adam Exp $
+$NetBSD: patch-af,v 1.10 2004/05/20 07:56:34 adam Exp $
 
 --- pine/makefile.osx.orig	2003-12-17 22:12:52.000000000 +0000
 +++ pine/makefile.osx
@@ -22,7 +22,7 @@ $NetBSD: patch-af,v 1.9 2004/05/13 18:29:54 adam Exp $
 -LIBS=        $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
 -             -framework Carbon -framework ApplicationServices \
 -	     `cat $(CCLIENTDIR)/LDFLAGS`
-+STDLIBS=     -lssl -lcrypto
++STDLIBS=     -lssl -lcrypto -lcurses -framework Carbon
 +LOCLIBS=     -lpico -lc-client
 +LIBS=        -L$(PREFIX)/lib $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS)
  
