@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/02/13 08:26:03 seb Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/08/13 13:27:06 wiz Exp $
 bin/aclocal
 bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
@@ -34,6 +34,7 @@ share/aclocal-${PKG_DIR_VERSION}/regex.m4
 share/aclocal-${PKG_DIR_VERSION}/runlog.m4
 share/aclocal-${PKG_DIR_VERSION}/sanity.m4
 share/aclocal-${PKG_DIR_VERSION}/strip.m4
+share/aclocal-${PKG_DIR_VERSION}/tar.m4
 share/automake-${PKG_DIR_VERSION}/Automake/ChannelDefs.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Channels.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Condition.pm
@@ -71,6 +72,7 @@ share/automake-${PKG_DIR_VERSION}/am/distdir.am
 share/automake-${PKG_DIR_VERSION}/am/footer.am
 share/automake-${PKG_DIR_VERSION}/am/header-vars.am
 share/automake-${PKG_DIR_VERSION}/am/header.am
+share/automake-${PKG_DIR_VERSION}/am/inst-vars.am
 share/automake-${PKG_DIR_VERSION}/am/install.am
 share/automake-${PKG_DIR_VERSION}/am/java.am
 share/automake-${PKG_DIR_VERSION}/am/lang-compile.am
