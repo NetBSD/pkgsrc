@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8808 2005/01/18 17:57:30 peter Exp $
+$NetBSD: CHANGES,v 1.8809 2005/01/18 20:00:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -412,3 +412,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added cube-20040522 [peter 2005-01-18]
 	Added qstat-2.6 [peter 2005-01-18]
 	Added tcllib-1.7 [peter 2005-01-18]
+	Updated getmail to 4.3.1 [schmonz 2005-01-18]
