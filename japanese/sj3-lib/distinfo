@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:13 agc Exp $
+
+MD5 (sj3-2.0.1.20.tar.gz) = 36cc23702e2295e4552271b9d481c863
+SHA1 (patch-aa) = e2c60ca8709f8b78833ebc4f506b4cc63812a5bd
+SHA1 (patch-ab) = a64f78ccb3db3f4349f191abe47c6daebb2bbadd
+SHA1 (patch-ac) = a2a9c21618e7de1e56d371cb05cf866d549d50a1
+SHA1 (patch-ad) = be015448eb4ee267a2228838cc2a08e2586b0a85
+SHA1 (patch-ae) = 3b07eb2ea9d72049a8f322220836a631598ea7dc
+SHA1 (patch-af) = 33ac72303dfa13929d423ecaf5d9b7cb308f8ff5

@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:21 agc Exp $
+
+MD5 (chess-5.00.tar.gz) = 8bf7cd9250aa96c4e37e9770733d8fe3
+SHA1 (patch-aa) = 186f8b8eeed1457f4ea50e353d09f1bd039795e8
+SHA1 (patch-ab) = 093285e9955f23f6ab324cae3e768779a28010ff
+SHA1 (patch-ac) = f027b84d724ce0380784f2a6a67b1998fd119eee
+SHA1 (patch-ad) = 15187825fbbef7eceebcf9a22b090edf97f41764
+SHA1 (patch-ae) = 8e423476cc661952c5252ceb7fb721beef620db9
+SHA1 (patch-af) = 55c51f597607726895635024f5646009f8364a1c
+SHA1 (patch-ag) = f78fe990d448ed8c5b5bcd29c038b86ec0b4bc40
+SHA1 (patch-ah) = bce357fa655a49905b95b44c2709244ee04f88fc

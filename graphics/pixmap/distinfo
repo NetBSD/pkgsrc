@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:25:29 agc Exp $
+
+MD5 (pixmap2.6.tar.gz) = 96ab473c9e83476b39fba7fa19f7e621
+MD5 (pixmap_2.6.patch1.gz) = 4eb68fa5196b92b63a4f576a491c9788
+MD5 (pixmap_2.6.patch2.gz) = b7237e158672999f94212fa283925ccf
+MD5 (pixmap_2.6.patch3.gz) = f4cdafd15a314ef31f16acc2faa56ca2
+MD5 (pixmap_2.6.patch4.gz) = 625b81a90736e196b727f239dd7f5b63
+SHA1 (patch-aa) = 83e783b4308374e638a5b129f219a2b45d93126e
+SHA1 (patch-ab) = 67f64b30aa72d8a1fefe24d264c27d028cb8056b
+SHA1 (patch-ac) = 5743e4b2322658d131e01d51c24c49f1ca0a01e3

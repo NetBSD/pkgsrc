@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:27:53 agc Exp $
+
+MD5 (yplot-1.0.3.tar.gz) = ff911e80ca3019ca25fc7de405050b96
+SHA1 (patch-aa) = 21b83acb10b4a5ab64a89bf2d2a502394679be5b
+SHA1 (patch-ab) = 42a16248535188a1812807aec25a5fd5367ba190
+SHA1 (patch-ac) = 783b84c762b00a2173f52a215c1031e8bbfa010d
+SHA1 (patch-ad) = dde3046a391cfca857851cb3644dc4a6266b1393

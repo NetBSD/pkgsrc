@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:36 agc Exp $
+
+MD5 (mos20src.tar.gz) = b18f8022a06442f84c8dbfa47067ce07
+SHA1 (patch-aa) = ffe745a14f8b41d2c1c278fbd6f7057a856a1e47
+SHA1 (patch-ab) = 37645c33f1f1f5c2ead0183f6adb0d1ded6c90e3
+SHA1 (patch-ac) = b7b8fa6cc0d047f769874a3e2afd75364545dc34
+SHA1 (patch-ad) = dd2900330220b4e8226b1bf4cf9d15c8e2f8e24f

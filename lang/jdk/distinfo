@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:31:23 agc Exp $
+
+MD5 (jdk1.1.8-rc1.tgz) = 117e27c001acb7a474261fb5fa7dced2
+MD5 (jdk1.1.8-rc1-elf.tgz) = 3265a7d843e95e472fabdbebcc01c132

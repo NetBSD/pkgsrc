@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:24:35 agc Exp $
+
+MD5 (libwmf-0.1.21.tar.gz) = d9db1ec2a1264245e7808d42bc686b97
+SHA1 (patch-ac) = b5c91f373521a64e09550d169152f025f0fcd3db
+SHA1 (patch-ad) = 156438ad8eac1710f574b49c46b07b6da4aecc4a

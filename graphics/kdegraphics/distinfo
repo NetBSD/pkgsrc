@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:24:13 agc Exp $
+
+MD5 (kdegraphics-1.1.2.tar.bz2) = f79551371b5beacb543cac66aa8c42df
+SHA1 (patch-aa) = 597f484a0a991b09758bed81f20bea717b5c6aac
+SHA1 (patch-ab) = 6e237b851f273f480dcdec6dddc079d68589f215
+SHA1 (patch-ac) = 63a7979993f402d652c1bb9bf07e1e7d5c7f6c19
+SHA1 (patch-ad) = a6fc9ab48ae6d9d517fffde1384f3f652daae208
+SHA1 (patch-ae) = 2b5ea356fcc28fcfef3806b34221f1eb31b96ccd
+SHA1 (patch-af) = b5ef11ff6fff8c8cf5f51160bba579d97946710e
