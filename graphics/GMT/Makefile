@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/04/13 00:56:26 jtb Exp $
+# $NetBSD: Makefile,v 1.11 2001/04/14 21:43:42 jtb Exp $
 
 DISTNAME=	GMT3.3.6
 PKGNAME=	GMT-3.3.6
@@ -13,7 +13,7 @@ DISTFILES=	GMT3.3.6_progs.tar.bz2 GMT3.3.6_doc.tar.bz2 GMT_share.tar.bz2 \
 		GMT3.3.6_suppl.tar.bz2 GMT3.3.6_scripts.tar.bz2		      \
 		GMT3.3.6_web.tar.bz2
 
-MAINTAINER=	jtb@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://imina.soest.hawaii.edu/gmt/
 COMMENT=	Generic Mapping Tools
 
