@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/02/15 10:48:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/02/21 22:05:02 mycroft Exp $
 bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -14,6 +14,7 @@ libexec/xscreensaver/ant
 libexec/xscreensaver/apollonian
 libexec/xscreensaver/atlantis
 libexec/xscreensaver/attraction
+libexec/xscreensaver/atunnel
 libexec/xscreensaver/barcode
 libexec/xscreensaver/blaster
 libexec/xscreensaver/blitspin
@@ -105,6 +106,7 @@ libexec/xscreensaver/penetrate
 libexec/xscreensaver/penrose
 libexec/xscreensaver/petri
 libexec/xscreensaver/phosphor
+libexec/xscreensaver/piecewise
 libexec/xscreensaver/pipes
 libexec/xscreensaver/polyominoes
 libexec/xscreensaver/popsquares
@@ -168,6 +170,7 @@ man/man1/ant.1
 man/man1/apollonian.1
 man/man1/atlantis.1
 man/man1/attraction.1
+man/man1/atunnel.1
 man/man1/barcode.1
 man/man1/blaster.1
 man/man1/blitspin.1
@@ -259,6 +262,7 @@ man/man1/penetrate.1
 man/man1/penrose.1
 man/man1/petri.1
 man/man1/phosphor.1
+man/man1/piecewise.1
 man/man1/pipes.1
 man/man1/polyominoes.1
 man/man1/pulsar.1
@@ -331,6 +335,7 @@ share/control-center/screensavers/ant.xml
 share/control-center/screensavers/apollonian.xml
 share/control-center/screensavers/atlantis.xml
 share/control-center/screensavers/attraction.xml
+share/control-center/screensavers/atunnel.xml
 share/control-center/screensavers/barcode.xml
 share/control-center/screensavers/blaster.xml
 share/control-center/screensavers/blitspin.xml
@@ -425,6 +430,7 @@ share/control-center/screensavers/penetrate.xml
 share/control-center/screensavers/penrose.xml
 share/control-center/screensavers/petri.xml
 share/control-center/screensavers/phosphor.xml
+share/control-center/screensavers/piecewise.xml
 share/control-center/screensavers/pipes.xml
 share/control-center/screensavers/polyominoes.xml
 share/control-center/screensavers/popsquares.xml
