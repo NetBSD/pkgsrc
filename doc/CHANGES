@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7008 2004/08/27 00:22:01 reed Exp $
+$NetBSD: CHANGES,v 1.7009 2004/08/27 01:51:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4059,3 +4059,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated enlightenment to 0.16.7.1 [recht 2004-08-26]
 	Added madman-0.93 [wiz 2004-08-27]
 	Added ppp-lzs-1.2 [reed 2004-08-27] 
+	Added rcorder-20040826 [schmonz 2004-08-27]
