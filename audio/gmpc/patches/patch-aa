@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2005/01/23 18:11:46 kristerw Exp $
+
+--- src/tray-icon.c.orig	Sun Jan 23 18:47:03 2005
++++ src/tray-icon.c	Sun Jan 23 18:47:29 2005
+@@ -198,13 +198,13 @@
+ 	GdkRectangle msize;
+ 	int x,y;
+ 	int x_tv,y_tv;
++	char *tooltiptext = NULL;
+ 	int monitor = gdk_screen_get_monitor_at_window(
+ 			gtk_widget_get_screen(tv), tv->window);
+ 	GtkWidget *eventb;
+ 	if(tip != NULL) return FALSE;
+ 
+ 
+-	char *tooltiptext = NULL;
+ 
+ 	tooltiptext = tray_get_tooltip_text();
+ 	gdk_screen_get_monitor_geometry(
