@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2003/01/15 00:33:35 salo Exp $
+# $NetBSD: Makefile,v 1.186 2003/01/15 00:36:03 salo Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -73,7 +73,6 @@ SUBDIR+=	kakasi
 SUBDIR+=	kbanner
 SUBDIR+=	kdoc
 SUBDIR+=	latex2html
-SUBDIR+=	libpspell
 SUBDIR+=	libunicode
 SUBDIR+=	libxml
 SUBDIR+=	libxml2
