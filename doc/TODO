@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3188 2005/03/03 15:18:13 wiz Exp $
+$NetBSD: TODO,v 1.3189 2005/03/03 15:30:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1171,7 +1171,6 @@ Suggested package updates
 	o xmlstarlet-1.0.0
 	o xmms-crossfade-0.3.7
 	o xmms-dspectogram-1.2.1
-	o xmms-flac-1.1.2
 	o xmms-fmradio-1.5
 	o xmms-gdancer-0.4.6
 	o xmms-infinity-0.6.0
