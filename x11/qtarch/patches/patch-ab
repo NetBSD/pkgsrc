@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/04/28 20:31:44 drochner Exp $
+
+--- Makefile.common.orig	Mon Oct  4 03:24:17 1999
++++ Makefile.common	Fri Apr 28 21:41:31 2000
+@@ -19,14 +19,17 @@
+ else
+ CFLAGS	= -g -Wall -W -pipe
+ endif
++CFLAGS+= -D__unix__
+ 
+-LFLAGS  = -rdynamic -g -L$(QTDIR)/lib \
++LFLAGS  = -g -L$(QTDIR)/lib -Wl,-R$(QTDIR)/lib \
+ 	widget/libwidget.a \
+ 	prop/libprop.a \
+ 	bmp/libbmp.a \
+ 	layout/liblayout.a \
+ 	pixmap/libpixmap.a \
+-	-lfl -lqt -lstdc++ -ldl -rdynamic
++	-lfl -lqt \
++	-L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib -lX11 -lXext -lSM \
++	-L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib -lpng -lz -lstdc++
+ ARFLAGS	= -crs
+ CC	= g++
+ AR	= ar
