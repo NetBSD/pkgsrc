@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2003/01/23 01:32:56 grant Exp $
+$NetBSD: patch-aa,v 1.6 2003/01/30 14:27:47 salo Exp $
 
 --- Makefile.orig	Fri Dec  6 07:35:00 2002
 +++ Makefile
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.5 2003/01/23 01:32:56 grant Exp $
  # Edit this line if you don't want evilwm to install under /usr.
  # Note that $(DESTDIR) is used by the Debian build process.
 -prefix = $(DESTDIR)/usr
-+prefix = ${X11PREFIX}
++prefix = ${PREFIX}
  
 -XROOT    = /usr/X11R6
 +XROOT    = ${X11PREFIX}
