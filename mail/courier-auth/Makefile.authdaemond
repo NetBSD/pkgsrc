@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.authdaemond,v 1.4 2002/10/08 23:15:58 jlam Exp $
+# $NetBSD: Makefile.authdaemond,v 1.5 2004/01/11 19:41:39 cjep Exp $
 
 .include "../../mail/courier-auth/Makefile.common"
 
@@ -9,7 +9,7 @@ WRKSRC_FILES=		config.guess config.sub configure		\
 			install-sh mkinstalldirs
 WRKSRC_FILES+=		dbobj.h.in dbobj.config.in sysconftool
 WRKSRC_SUBDIRS=		afx bdbobj gdbmobj numlib soxwrap md5 sha1	\
-                        libhmac random128 unicode rfc822 rfc1035	\
+			libhmac random128 unicode rfc822 rfc1035	\
 			rfc2045 liblock
 WRKSRC_SUBDIRS+=	makedat userdb authlib
 
