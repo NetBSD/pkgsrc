@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/11/20 23:19:16 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2002/07/04 13:32:20 agc Exp $
 
 SHA1 (root-tail-0.0.10.tar.gz) = 19963087202e6b365f8d9820bdee283ace16caa4
 Size (root-tail-0.0.10.tar.gz) = 7816 bytes
+SHA1 (patch-aa) = dba9a38b50e538171cf060ad1ef2e035717037c5
