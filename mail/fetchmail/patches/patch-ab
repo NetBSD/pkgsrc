@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.7 1998/10/18 12:08:23 frueauf Exp $
+$NetBSD: patch-ab,v 1.8 1999/09/16 16:51:51 frueauf Exp $
 
---- Makefile.in.orig	Fri Oct 16 18:49:17 1998
-+++ Makefile.in	Sun Oct 18 13:45:13 1998
-@@ -80,7 +80,7 @@
+--- Makefile.in.orig	Tue Sep 14 12:53:08 1999
++++ Makefile.in	Thu Sep 16 18:38:36 1999
+@@ -84,7 +84,7 @@
  
  protobjs = rcfile_y.o rcfile_l.o socket.o getpass.o pop2.o pop3.o imap.o \
         etrn.o fetchmail.o env.o options.o daemon.o driver.o sink.o \
 -       rfc822.o smtp.o xmalloc.o uid.o mxget.o md5c.o md5ify.o rpa.o \
 +       rfc822.o smtp.o xmalloc.o uid.o mxget.o md5ify.o rpa.o \
-        interface.o netrc.o base64.o error.o unmime.o conf.o checkalias.o
+        interface.o netrc.o base64.o error.o unmime.o conf.o checkalias.o \
+        smbdes.o smbencrypt.o smbmd4.o smbutil.o
  
- objs = $(protobjs) $(extras) $(EXTRAOBJ)
-@@ -91,7 +91,7 @@
+@@ -96,7 +96,7 @@
         $(srcdir)/options.c $(srcdir)/daemon.c $(srcdir)/driver.c	\
         $(srcdir)/sink.c $(srcdir)/rfc822.c $(srcdir)/smtp.c		\
         $(srcdir)/xmalloc.c $(srcdir)/uid.c $(srcdir)/mxget.c 		\
@@ -19,8 +19,8 @@ $NetBSD: patch-ab,v 1.7 1998/10/18 12:08:23 frueauf Exp $
 +       $(srcdir)/md5ify.c $(srcdir)/rpa.c              \
         $(srcdir)/interface.c $(srcdir)/netrc.c $(srcdir)/base64.c	\
         $(srcdir)/error.c $(srcdir)/unmime.c $(srcdir)/conf.c		\
-        $(srcdir)/checkalias.c
-@@ -135,7 +135,7 @@
+        $(srcdir)/checkalias.c $(srcdir)/smbdes.c $(srcdir)/smbencrypt.c \
+@@ -151,7 +151,7 @@
  	@echo "Installing fetchmail binary..."
  	$(INSTALL_PROGRAM) ./fetchmail $(bindir)/fetchmail
  	@echo "Installing fetchmail configurator..."
@@ -28,4 +28,4 @@ $NetBSD: patch-ab,v 1.7 1998/10/18 12:08:23 frueauf Exp $
 +	$(BSD_INSTALL_SCRIPT) ${srcdir}/fetchmailconf $(bindir)/fetchmailconf
  	@echo "Installing manual page..."
  	$(INSTALL_DATA) $(srcdir)/fetchmail.man $(mandir)/fetchmail.$(manext)
- 	ln -f -s $(mandir)/fetchmail.$(manext) $(mandir)/fetchmailconf.$(manext)
+ 	rm -f $(mandir)/fetchmailconf.$(manext)
