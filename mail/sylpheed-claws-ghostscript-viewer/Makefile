@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/03/11 12:23:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/11 12:29:39 jmmv Exp $
 #
 
 DISTNAME=	ghostscript-viewer-0.6
 PKGNAME=	sylpheed-claws-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
