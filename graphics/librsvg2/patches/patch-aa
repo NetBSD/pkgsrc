@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2003/06/27 23:02:51 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2003/12/18 14:15:26 adam Exp $
 
---- doc/Makefile.in.orig	2003-06-27 15:38:16.000000000 +0200
+--- doc/Makefile.in.orig	2003-12-07 19:36:00.000000000 +0000
 +++ doc/Makefile.in
-@@ -283,6 +283,7 @@ mostlyclean-generic distclean-generic cl
+@@ -299,6 +299,7 @@ mostlyclean-generic distclean-generic cl
  maintainer-clean-generic clean mostlyclean distclean maintainer-clean
  
  

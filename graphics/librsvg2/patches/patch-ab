@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1 2003/06/27 23:02:52 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2003/12/18 14:15:26 adam Exp $
 
---- gdk-pixbuf-loader/Makefile.in.orig	2003-06-27 19:56:48.000000000 +0200
+--- gdk-pixbuf-loader/Makefile.in.orig	2003-12-18 12:46:17.000000000 +0000
 +++ gdk-pixbuf-loader/Makefile.in
-@@ -356,10 +356,6 @@ maintainer-clean-generic clean mostlycle
+@@ -362,10 +362,6 @@ maintainer-clean-generic clean mostlycle
  
  
- install-data-local: 
+ install-data-hook: 
 -	if [ -z "$(DESTDIR)" ] ; then \
 -	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/gtk-2.0 ; \
 -	  $(QUERYLOADERS) > $(DESTDIR)$(sysconfdir)/gtk-2.0/gdk-pixbuf.loaders ; \
