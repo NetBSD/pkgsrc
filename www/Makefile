@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2002/09/21 01:26:54 rh Exp $
+# $NetBSD: Makefile,v 1.213 2002/09/24 13:55:50 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -180,6 +180,7 @@ SUBDIR+=	www6to4
 SUBDIR+=	wwwcount
 SUBDIR+=	wwwoffle
 SUBDIR+=	zope
+SUBDIR+=	zope-confera
 SUBDIR+=	zope25
 SUBDIR+=	zope25-CMF
 SUBDIR+=	zope25-EasyImage
@@ -190,6 +191,5 @@ SUBDIR+=	zope25-ParsedXML
 SUBDIR+=	zope25-Silva
 SUBDIR+=	zope25-XMLWidgets
 SUBDIR+=	zope25-ZPhotoSlides
-SUBDIR+=	zope-confera
 
 .include "../mk/bsd.pkg.subdir.mk"
