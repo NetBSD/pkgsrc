@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/09/24 08:45:00 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/12/03 01:27:05 hubertf Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -28,7 +28,15 @@ post-configure:
 do-install:
 	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} ${SCRIPTDIR}/do-install
 
+.include "../../mk/bsd.prefs.mk"
+
 benchmark:
+.if defined(BATCH)
+	@${ECHO} "*** This benchmark may only be run in non-batch mode" ; \
+	exit 1
+.else
+	@if [ `id -u` != 0 ]; then echo "This benchmark must be run as root!" ; exit 1 ; fi
 	@cd ${WRKSRC}/src; ${GMAKE} results
+.endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/11/16 11:27:54 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/12/03 01:27:05 hubertf Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -41,6 +41,7 @@ do-install:
 	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} ${SCRIPTDIR}/do-install
 
 benchmark:
+	@if [ `id -u` != 0 ]; then echo "This benchmark must be run as root!" ; exit 1 ; fi
 	@cd ${WRKSRC};							\
 	${SED} -e 's|@pwd@|'`/bin/pwd`'|g' 				\
 		-e 's|@hostname@|'`/bin/hostname -s`'|g'		\
