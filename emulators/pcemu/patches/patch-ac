@@ -1,4 +1,4 @@
-# $NetBSD: patch-ac,v 1.1.1.1 1999/03/31 06:34:07 garbled Exp $
+$NetBSD: patch-ac,v 1.2 1999/12/29 01:45:39 wiz Exp $
 *** mfs.c.orig	Wed Jun 22 16:24:51 1994
 --- mfs.c	Tue Jan 24 18:41:20 1995
 ***************
