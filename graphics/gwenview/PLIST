@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/03 13:11:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/20 10:09:03 jklos Exp $
 bin/gwenview
 lib/kde3/libgvdirpart.la
 lib/kde3/libgvdirpart.so
@@ -74,6 +74,7 @@ share/kde/icons/crystalsvg/48x48/apps/gwenview.png
 share/kde/icons/crystalsvg/64x64/apps/gwenview.png
 share/kde/locale/ar/LC_MESSAGES/gwenview.mo
 share/kde/locale/az/LC_MESSAGES/gwenview.mo
+share/kde/locale/ca/LC_MESSAGES/gwenview.mo
 share/kde/locale/cs/LC_MESSAGES/gwenview.mo
 share/kde/locale/da/LC_MESSAGES/gwenview.mo
 share/kde/locale/de/LC_MESSAGES/gwenview.mo
@@ -83,6 +84,7 @@ share/kde/locale/es/LC_MESSAGES/gwenview.mo
 share/kde/locale/et/LC_MESSAGES/gwenview.mo
 share/kde/locale/fo/LC_MESSAGES/gwenview.mo
 share/kde/locale/fr/LC_MESSAGES/gwenview.mo
+share/kde/locale/gl/LC_MESSAGES/gwenview.mo
 share/kde/locale/he/LC_MESSAGES/gwenview.mo
 share/kde/locale/hu/LC_MESSAGES/gwenview.mo
 share/kde/locale/is/LC_MESSAGES/gwenview.mo
@@ -95,6 +97,9 @@ share/kde/locale/nso/LC_MESSAGES/gwenview.mo
 share/kde/locale/pl/LC_MESSAGES/gwenview.mo
 share/kde/locale/pt/LC_MESSAGES/gwenview.mo
 share/kde/locale/pt_BR/LC_MESSAGES/gwenview.mo
+share/kde/locale/ro/LC_MESSAGES/gwenview.mo
+share/kde/locale/ru/LC_MESSAGES/gwenview.mo
+share/kde/locale/sr/LC_MESSAGES/gwenview.mo
 share/kde/locale/sv/LC_MESSAGES/gwenview.mo
 share/kde/locale/ta/LC_MESSAGES/gwenview.mo
 share/kde/locale/tr/LC_MESSAGES/gwenview.mo
@@ -121,5 +126,3 @@ share/kde/services/gvimagepart.desktop
 @dirrm share/kde/apps/gwenview/icons
 @dirrm share/kde/apps/gwenview/cursors
 @dirrm share/kde/apps/gwenview
-@dirrm share/kde/apps/gvimagepart
-@dirrm share/kde/apps/gvdirpart
