@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.3 2001/05/10 14:25:35 agc Exp $
+
+If Subject is NULL, don't try to dereference it.
+
+--- rfc2047.c	2001/05/10 14:11:38	1.1
++++ rfc2047.c	2001/05/10 14:12:35
+@@ -390,6 +390,10 @@
+ 
+   dlen--; /* save room for the terminal nul */
+ 
++  if (s == NULL) {
++	return;
++  }
++
+   while (*s && dlen > 0)
+   {
+     if ((p = strstr (s, "=?")) == NULL ||
