@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/05/23 19:52:03 tron Exp $
+# $NetBSD: Makefile,v 1.28 2002/10/21 07:22:10 jlam Exp $
 #
 
 DISTNAME=	procmail-3.22
@@ -9,9 +9,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.procmail.org/
 COMMENT=	Local mail delivery agent
 
+USE_BUILDLINK2=	YES
+MAKE_ENV=	SHELL=${SH}
 INSTALL_TARGET=	install-suid install.man
-MAKE_ENV=	SHELL=/bin/sh
-USE_BUILDLINK_ONLY=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,14 +38,14 @@ pre-configure:
 do-install:
 	cd ${WRKSRC}/new;						\
 	for f in procmail formail lockfile; do				\
-		${INSTALL_PROGRAM} $$f ${LOCALBASE}/bin/$$f;		\
+		${INSTALL_PROGRAM} $$f ${PREFIX}/bin/$$f;		\
 	done;								\
-	${INSTALL_SCRIPT} mailstat ${LOCALBASE}/bin/mailstat;		\
+	${INSTALL_SCRIPT} mailstat ${PREFIX}/bin/mailstat;		\
 	for f in procmail.1 formail.1 lockfile.1; do			\
-		${INSTALL_MAN} $$f ${LOCALBASE}/man/man1/$$f;		\
+		${INSTALL_MAN} $$f ${PREFIX}/man/man1/$$f;		\
 	done;								\
 	for f in procmailex.5 procmailrc.5 procmailsc.5; do		\
-		${INSTALL_MAN} $$f ${LOCALBASE}/man/man5/$$f;		\
+		${INSTALL_MAN} $$f ${PREFIX}/man/man5/$$f;		\
 	done
 	${SH} ${WRKSRC}/suid.sh
 .endif
