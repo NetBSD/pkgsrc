@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2004/10/28 14:34:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2004/11/15 11:14:15 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -207,6 +207,7 @@ share/ImageMagick-${IM_MAJOR_VER}/www/Magick++/thumbnail-anatomy-plain.jpg
 share/ImageMagick-${IM_MAJOR_VER}/www/Magick++/thumbnail-sample-framed.jpg
 share/ImageMagick-${IM_MAJOR_VER}/www/Magick++/thumbnail-sample-plain.jpg
 share/ImageMagick-${IM_MAJOR_VER}/www/News.html
+share/ImageMagick-${IM_MAJOR_VER}/www/Notice.html
 share/ImageMagick-${IM_MAJOR_VER}/www/QuickStart.html
 share/ImageMagick-${IM_MAJOR_VER}/www/README.html
 share/ImageMagick-${IM_MAJOR_VER}/www/animate.html
