@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2000/05/02 15:17:47 pooka Exp $
+
+--- iozone.c.orig	Wed Sep 15 00:38:16 1999
++++ iozone.c	Tue May  2 17:23:53 2000
+@@ -6130,7 +6130,11 @@
+ #endif
+                 exit(119);
+         }
++#ifndef __NetBSD__
+         addr = (char *)shmat(shmid, 0, SHM_W);
++#else
++        addr = (char *)shmat(shmid, 0, 0);
++#endif
+ #ifdef __LP64__
+         if((long long)addr == (long long)-1)
+ #else
