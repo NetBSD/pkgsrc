@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.89 2003/07/14 15:36:29 martti Exp $
+# $NetBSD: pkglint.pl,v 1.90 2003/07/24 07:54:46 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1225,10 +1225,18 @@ EOF
 
         &checkorder('MAINTAINER', $tmp, @tocheck);
 
-	# warnings for missing HOMEPAGE
+	# warnings for missing or incorrect HOMEPAGE
 	$tmp = "\n" . $tmp;
-	if ($tmp !~ /\nHOMEPAGE=/) {
+	if ($tmp !~ /\nHOMEPAGE[+?]?=[ \t]*([^\n]*)\n/ || $1 =~ /^[ \t]*$/) {
 		&perror("WARN: please add HOMEPAGE if the package has one.");
+	} else {
+		$i = $1;
+		if ($i =~ m#^\w+://#) {
+			if ($i !~ m#^\w+://[^\n/]+/#) {
+				&perror("WARN: URL \"$i\" does not ".
+						"end with \"/\".");
+			}
+		}
 	}
 
 	# warnings for missing COMMENT
