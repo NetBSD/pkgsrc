@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/01/09 23:04:52 seb Exp $
+# $NetBSD: Makefile,v 1.19 2002/01/09 23:12:23 wiz Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/09/01 12:28:30 tg Exp
 #
 
@@ -11,7 +11,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-rn.informatik.uni-bremen.de/software/elk/
 COMMENT=		Embeddable Scheme interpreter
 
-NOT_FOR_PLATFORM=	*-*-alpha *-*-mips*	#elf loading problems, LP64
+# ELF loading problems, LP64
+NOT_FOR_PLATFORM=	*-*-alpha *-*-mips* *-*-sparc64
 
 ALL_TARGET=		default
 USE_BUILDLINK_ONLY=	yes
