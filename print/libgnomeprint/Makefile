@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2004/06/28 18:24:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2004/09/21 16:49:04 jmmv Exp $
 #
 
-DISTNAME=	libgnomeprint-2.6.2
+DISTNAME=	libgnomeprint-2.8.0
 CATEGORIES=	print gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeprint/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -26,18 +26,21 @@ PKGCONFIG_OVERRIDE=	libgnomeprint/libgnomeprint-2.2.pc.in
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.libgnomeprint
+PKG_SUPPORTED_OPTIONS=	cups
 
-BUILD_DEFS+=		USE_CUPS
+.include "../../mk/bsd.options.mk"
 
-.if defined(USE_CUPS) && !empty(USE_CUPS:M[Yy][Ee][Ss])
-.include "../../print/cups/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mcups)
+.include "../../print/libgnomecups/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-cups
 PLIST_SUBST+=		USE_CUPS=
 .else
 CONFIGURE_ARGS+=	--without-cups
 PLIST_SUBST+=		USE_CUPS="@comment "
 .endif
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
 # AC_LTDL_SHLIBEXT doesn't work on Darwin (and would give the wrong
