@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/02/25 14:27:16 agc Exp $
 bin/prcs
 man/man1/prcs.1.gz
 info/prcs.info
