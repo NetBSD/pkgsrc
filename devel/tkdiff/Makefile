@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/10 02:59:09 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/10 11:44:45 agc Exp $
 #
 
 DISTNAME=	tkdiff-3.03m.tcl.txt
@@ -12,9 +12,9 @@ HOMEPAGE=	http://www.ede.com/free/tkdiff/
 
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
-NO_BUILD=	YES
-NO_CONFIGURE=	YES
-NO_PATCH=	YES
+NO_BUILD=	yes
+NO_CONFIGURE=	yes
+NO_PATCH=	yes
 CMDNAME=	tkdiff3
 
 EXTRACT_CMD=	${CAT} ${DISTDIR}/${DISTNAME} |				\
@@ -23,5 +23,7 @@ EXTRACT_CMD=	${CAT} ${DISTDIR}/${DISTNAME} |				\
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${CMDNAME} ${LOCALBASE}/bin/${CMDNAME}
+	${RM} -f ${LOCALBASE}/bin/tkdiff
+	${LN} -s ${LOCALBASE}/bin/${CMDNAME} ${LOCALBASE}/bin/tkdiff
 
 .include "../../mk/bsd.pkg.mk"
