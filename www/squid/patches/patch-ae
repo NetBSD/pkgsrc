@@ -1,13 +1,21 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:14:27 agc Exp $
+$NetBSD: patch-ae,v 1.3 1998/12/06 12:42:01 tron Exp $
 
---- src/icmp.c.dist	Wed Mar 26 15:29:44 1997
-+++ src/icmp.c	Sun Jul  6 01:02:25 1997
-@@ -297,7 +297,7 @@
- 	dup2(fileno(debug_log), 2);
- 	fclose(debug_log);
- 	enter_suid();
--	execlp(Config.Program.pinger, "(pinger)", NULL);
-+	execlp(Config.Program.pinger, Config.Program.pinger, NULL);
- 	debug(50, 0, "icmpOpen: %s: %s\n", Config.Program.pinger, xstrerror());
- 	_exit(1);
-     }
+--- icons/Makefile.in.orig	Mon Feb  2 14:39:25 1998
++++ icons/Makefile.in	Thu Oct  1 16:26:08 1998
+@@ -4,6 +4,7 @@
+ exec_prefix	= @exec_prefix@
+ top_srcdir	= @top_srcdir@
+ bindir		= @bindir@
++datadir		= @datadir@
+ libexecdir      = @libexecdir@
+ sysconfdir	= @sysconfdir@
+ localstatedir   = @localstatedir@
+@@ -15,7 +16,7 @@
+ 
+ INSTALL         	= @INSTALL@
+ INSTALL_FILE    	= @INSTALL_DATA@
+-DEFAULT_ICON_DIR        = $(sysconfdir)/icons
++DEFAULT_ICON_DIR        = $(datadir)/squid/icons
+ 
+ SHARFILE	= $(srcdir)/icons.shar
+ ICONS		= anthony-binhex.gif \
