@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/05/03 21:25:59 frueauf Exp $
+# $NetBSD: Makefile,v 1.21 1998/05/05 13:12:16 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -17,7 +17,9 @@
 #    SUBDIR += cs
 #    SUBDIR += cutils
     SUBDIR += cvs
-    SUBDIR += cvs-current
+#    SUBDIR += cvs-current	# don't enable this by default unless we
+				# have a CONFLICTS feature (installs same
+				# files like cvs).
 #    SUBDIR += cxref
 #    SUBDIR += ddd
 #    SUBDIR += dmake
