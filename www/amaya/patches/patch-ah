@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2004/06/12 14:23:10 cube Exp $
+
+--- ../thotlib/presentation/presvariables.c.orig	2004-01-29 17:06:46.000000000 +0100
++++ ../thotlib/presentation/presvariables.c
+@@ -909,8 +909,8 @@ ThotBool NewVariable (int varNum, PtrSSc
+ {
+    int                 f, l;
+    int                 i;
+-   long                tod;
+-   long               *pt;
++   time_t                tod;
++   time_t               *pt;
+    struct tm          *ptm;
+    PtrTextBuffer       isOld, isNew;
+    PtrAttribute        pA;
