@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.35 2004/10/26 21:06:29 jmmv Exp $
-#
+# $NetBSD: Makefile,v 1.36 2004/11/26 08:45:41 adam Exp $
 
-DISTNAME=		eel-2.8.1
-PKGNAME=		${DISTNAME:S/-/2-/}
-CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eel/2.8/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	eel-2.8.2
+PKGNAME=	${DISTNAME:S/-/2-/}
+CATEGORIES=	devel gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eel/2.8/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
-COMMENT=		Eazel Extensions Library for GNOME2
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/
+COMMENT=	Eazel Extensions Library for GNOME2
 
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
-USE_PKGLOCALEDIR=	YES
-USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
+USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	eel-2.0.pc.in
 
