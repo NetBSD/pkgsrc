@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2001/03/10 17:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.204 2001/03/14 16:42:12 skrll Exp $
 #
 
 COMMENT=	Networking tools
@@ -57,6 +57,7 @@ SUBDIR+=	isic
 SUBDIR+=	ispman
 SUBDIR+=	jwhois
 SUBDIR+=	kdenetwork
+SUBDIR+=	kdenetwork2
 SUBDIR+=	kmap
 SUBDIR+=	lftp
 SUBDIR+=	libnids
