@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2004/06/02 06:56:07 itojun Exp $
+$NetBSD: patch-ab,v 1.5 2004/07/24 10:32:40 wiz Exp $
 
---- Makefile.in.orig	2004-05-21 06:21:13.000000000 +0900
-+++ Makefile.in	2004-06-02 15:31:19.000000000 +0900
-@@ -536,7 +536,7 @@
+--- Makefile.in.orig	2004-05-20 23:21:13.000000000 +0200
++++ Makefile.in
+@@ -536,7 +536,7 @@ am__CONFIG_DISTCLEAN_FILES = config.stat
   configure.lineno
  $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
  	cd $(top_srcdir) && \
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 2004/06/02 06:56:07 itojun Exp $
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && $(SHELL) ./config.status $@ $(am__depfiles_maybe)
  
-@@ -1440,9 +1440,9 @@
+@@ -1440,9 +1440,11 @@ csc.scm: csc.scm.in
  
  # Install docs and sources.
  install-data-local : chicken.html
@@ -21,10 +21,12 @@ $NetBSD: patch-ab,v 1.4 2004/06/02 06:56:07 itojun Exp $
 +	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
 +	-for file in $(DOCFILES); do cp $(srcdir)/$$file $(DESTDIR)$(prefix)/share/doc/chicken; done
 +	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
++	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
++
  
  chicken.html: chicken.texi
  	$(MAKEINFO) --no-split --html chicken.texi
-@@ -1630,7 +1630,7 @@
+@@ -1630,7 +1632,7 @@ paranoid :
  .PHONY : test
  
  test :

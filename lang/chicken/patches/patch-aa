@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2004/06/02 06:56:07 itojun Exp $
+$NetBSD: patch-aa,v 1.7 2004/07/24 10:32:40 wiz Exp $
 
---- Makefile.am.orig	2004-05-21 06:20:58.000000000 +0900
-+++ Makefile.am	2004-06-02 15:29:24.000000000 +0900
-@@ -294,9 +294,9 @@
+--- Makefile.am.orig	2004-05-20 23:20:58.000000000 +0200
++++ Makefile.am
+@@ -294,9 +294,11 @@ pkgdata_DATA = chicken-match-macros.scm 
  
  # Install docs and sources.
  install-data-local : chicken.html
@@ -12,10 +12,12 @@ $NetBSD: patch-aa,v 1.6 2004/06/02 06:56:07 itojun Exp $
 +	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
 +	-for file in $(DOCFILES); do cp $(srcdir)/$$file $(DESTDIR)$(prefix)/share/doc/chicken; done
 +	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/chicken
++	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)
++
  
  chicken.html: chicken.texi
  	$(MAKEINFO) --no-split --html chicken.texi
-@@ -514,7 +514,7 @@
+@@ -514,7 +516,7 @@ paranoid :
  .PHONY : test
  
  test :
