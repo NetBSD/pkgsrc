@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/10/24 22:11:16 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/01/19 15:31:43 jlam Exp $
 #
 
 DISTNAME=	wmWeather-1.31
@@ -12,11 +12,9 @@ COMMENT=	WindowMaker DockApp showing local weather conditions
 
 USE_BUILDLINK_ONLY=	# defined
 USE_X11BASE=		# defined
-USE_PERL5=		# defined
 REPLACE_PERL=		GrabWeather
 
-CPPFLAGS+=		-I${X11BASE}/include
-
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
