@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2004/01/03 18:49:35 reed Exp $
+# $NetBSD: Makefile,v 1.36 2004/05/22 11:59:15 wiz Exp $
 #
 
 DISTNAME=	hylafax-4.1.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.hylafax.org/source/ \
 		ftp://ftp.leo.org/pub/comp/os/unix/networking/fax/hylafax/source/
@@ -11,8 +11,6 @@ MAINTAINER=	hallmanns@surfeu.de
 HOMEPAGE=	http://www.hylafax.org/
 COMMENT=	Telecommunication and fax server system
 
-DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-DEPENDS+=	jpeg>=6b:../../graphics/jpeg
 DEPENDS+=	mawk>=1.2.2:../../lang/mawk
 
 DIST_SUBDIR=	hylafax
@@ -20,6 +18,8 @@ DIST_SUBDIR=	hylafax
 CONFLICTS=	mgetty-[0-9]*
 
 USE_PKGINSTALL=	yes
+USE_BUILDLINK3=	yes
+USE_LANGUAGES=	c c++
 
 FAXUSER?=	uucp
 FAXGROUP?=	dialer
@@ -37,5 +37,7 @@ post-install:
 	${CHOWN} ${FAXUSER} ${SUID_EXES}
 	${CHMOD} 4555 ${SUID_EXES}
 
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
