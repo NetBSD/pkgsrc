@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2004/11/16 23:45:25 jlam Exp $
+# $NetBSD: hacks.mk,v 1.2 2004/12/27 04:27:49 jlam Exp $
 
 ### [Sun Mar 14 19:32:40 UTC 2004 : jlam]
 ### Pre-3.3 GCC has an optimization bug on powerpc that's tickled by
@@ -18,10 +18,6 @@ _GCC_IS_TOO_OLD!=	\
 MAKEFLAGS+=	_GCC_IS_TOO_OLD=${_GCC_IS_TOO_OLD}
 .    endif
 .    if !empty(_GCC_IS_TOO_OLD:M[yY][eE][sS])
-#
-# Pre-3.3 GCC has an optimization bug tickled by the db4 code, so remove
-# optimization.
-#
 PKG_HACKS+=		powerpc-codegen
 BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 .    endif

@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.10 2004/11/17 07:10:45 jlam Exp $
+$NetBSD: distinfo,v 1.11 2004/12/27 04:27:49 jlam Exp $
 
-SHA1 (db-4.2.52.tar.gz) = 12d21a58efd7b5fd35b56815a8fb1ac2cbab2e5c
-Size (db-4.2.52.tar.gz) = 4073147 bytes
-SHA1 (patch.4.2.52.1) = fdbe677eb4314309e855c35359a493284ddc1936
-Size (patch.4.2.52.1) = 988 bytes
-SHA1 (patch.4.2.52.2) = ef55711f1bf643024d9d90f9b3885299f6c7b09a
-Size (patch.4.2.52.2) = 1433 bytes
-SHA1 (patch-aa) = 2a3db19cb2b18926531b1b7fc342d0caef78f67c
-SHA1 (patch-ab) = af89cccbfe7ed8b5ee75afa9445d7b0e11554525
-SHA1 (patch-ac) = b22889222bfd358226bba9af3479350ec053259c
+SHA1 (db-4.3.21.tar.gz) = 3b4e295c2ea61ba258da2b9a945f6d8d1b587fd9
+Size (db-4.3.21.tar.gz) = 5916550 bytes
+SHA1 (patch-aa) = 0ab7730d6eb4e1a93c9ca4dcf15f2b28c794d972
+SHA1 (patch-ab) = 6c8df0f11950a75af0818b3a3070bbb9e0f99280
+SHA1 (patch-ac) = d31cb82810577003de202ac81e91aa15108147c7
