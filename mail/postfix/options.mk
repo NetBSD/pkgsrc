@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2004/12/28 16:13:28 kim Exp $
+# $NetBSD: options.mk,v 1.15 2005/02/09 06:55:10 martti Exp $
 
 # Global and legacy options
 
@@ -25,9 +25,9 @@ AUXLIBS+=	${BUILDLINK_LDFLAGS.${BDB_TYPE}} ${BDB_LIBS}
 .  if empty(PKG_OPTIONS:Mtls)
 PKG_OPTIONS+=		tls
 .  endif
-IPV6TLS_PATCH=		tls+ipv6-1.25-pf-2.1.5.patch.gz
+IPV6TLS_PATCH=		tls+ipv6-1.26-pf-2.1.5.patch.gz
 PATCHFILES+=		${IPV6TLS_PATCH}
-SITES_${IPV6TLS_PATCH}=	ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
+SITES_${IPV6TLS_PATCH}=	ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.26/
 PATCH_DIST_STRIP.${IPV6TLS_PATCH}=	-p1
 PLIST_SRC+=		${PKGDIR}/PLIST.inet6
 
