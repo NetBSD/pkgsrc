@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/04/03 11:00:01 tron Exp $
+# $NetBSD: Makefile,v 1.31 2002/04/04 10:01:31 tron Exp $
 
 DISTNAME=		mtv-1.2.5
 CATEGORIES=		graphics
@@ -9,11 +9,8 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.mpegtv.com/
 COMMENT=		MPEG Video+Audio and VCD Player
 
-DEPENDS+=		suse_audio>=6.3:../../emulators/suse_audio
-DEPENDS+=		suse_xforms>=6.3:../../emulators/suse_xforms
-
-ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
-			NetBSD-1.5_ALPHA-i386 NetBSD-1.[5-9]*-i386
+DEPENDS+=		suse_audio>=7.3:../../emulators/suse_audio
+DEPENDS+=		suse_xforms>=7.3:../../emulators/suse_xforms
 
 DIST_SUBDIR=		mtv
 LICENSE=		fee-based-commercial-use
