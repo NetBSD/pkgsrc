@@ -1,13 +1,17 @@
-/*	$NetBSD: extract.c,v 1.3 2003/02/11 16:42:06 grant Exp $	*/
+/*	$NetBSD: extract.c,v 1.4 2003/09/01 16:27:11 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static const char *rcsid = "FreeBSD - Id: extract.c,v 1.17 1997/10/08 07:45:35 charnier Exp";
 #else
-__RCSID("$NetBSD: extract.c,v 1.3 2003/02/11 16:42:06 grant Exp $");
-#endif
+__RCSID("$NetBSD: extract.c,v 1.4 2003/09/01 16:27:11 jlam Exp $");
 #endif
 #endif
 
@@ -30,19 +34,15 @@ __RCSID("$NetBSD: extract.c,v 1.3 2003/02/11 16:42:06 grant Exp $");
  * This is the package extraction code for the add module.
  *
  */
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
 
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
 #include "lib.h"
 #include "add.h"
 
 #define TAR_ARGS	" cf - "
-#define TARX_CMD	"|" TAR_FULLPATHNAME " xpf - -C "
+#define TARX_CMD	"|" TAR_CMD " xpf - -C "
 
 /* 
  * This macro is used to determine if the 'where_args'  buffer is big enough to add the
@@ -58,16 +58,16 @@ __RCSID("$NetBSD: extract.c,v 1.3 2003/02/11 16:42:06 grant Exp $");
 		|| (strlen(str) + 3 + perm_count >= maxargs))
 
 #define PUSHOUT(todir) /* push out string */				\
-        if (where_count > sizeof(TAR_FULLPATHNAME) + sizeof(TAR_ARGS)-1) { \
-		    strcat(where_args, TARX_CMD);			\
-		    strcat(where_args, todir);				\
+        if (where_count > sizeof(TAR_CMD) + sizeof(TAR_ARGS)-1) {		\
+		    strlcat(where_args, TARX_CMD, maxargs);		\
+		    strlcat(where_args, todir, maxargs);		\
 		    if (system(where_args)) {				\
 			cleanup(0);					\
 			errx(2, "can not invoke %lu byte %s pipeline: %s", \
-				(u_long)strlen(where_args), TAR_FULLPATHNAME, \
+				(u_long)strlen(where_args), TAR_CMD,	\
 				where_args);				\
 		    }							\
-		    strcpy(where_args, TAR_FULLPATHNAME TAR_ARGS);	\
+		    strlcpy(where_args, TAR_CMD TAR_ARGS, maxargs);	\
 		    where_count = strlen(where_args);			\
 	}								\
 	if (perm_count) {						\
@@ -88,9 +88,7 @@ rollback(char *name, char *home, plist_t *start, plist_t *stop)
 		if (q->type == PLIST_FILE) {
 			(void) snprintf(try, sizeof(try), "%s/%s", dir, q->name);
 			if (make_preserve_name(bup, sizeof(bup), name, try) && fexists(bup)) {
-#ifdef HAVE_CHFLAGS
 				(void) chflags(try, 0);
-#endif
 				(void) unlink(try);
 				if (rename(bup, try))
 					warnx("rollback: unable to rename %s back to %s", bup, try);
@@ -128,7 +126,7 @@ extract_plist(char *home, package_t *pkg)
 		cleanup(0);
 		errx(2, "can't get argument list space");
 	}
-	strcpy(where_args, TAR_FULLPATHNAME TAR_ARGS);
+	strlcpy(where_args, TAR_CMD TAR_ARGS, maxargs);
 	/*
 	 * we keep track of how many characters are stored in 'where_args' with 'where_count'.
 	 * Note this doesn't include the trailing null character.
@@ -183,9 +181,7 @@ extract_plist(char *home, package_t *pkg)
 				/* first try to rename it into place */
 				(void) snprintf(try, sizeof(try), "%s/%s", Directory, p->name);
 				if (fexists(try)) {
-#ifdef HAVE_CHFLAGS
 					(void) chflags(try, 0);	/* XXX hack - if truly immutable, rename fails */
-#endif
 					if (preserve && PkgName) {
 						char    pf[FILENAME_MAX];
 
