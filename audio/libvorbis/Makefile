@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2001/12/30 08:00:46 lukem Exp $
+# $NetBSD: Makefile,v 1.14 2002/01/02 12:39:36 lukem Exp $
 
-DISTNAME=	libvorbis-1.0rc2
-PKGNAME=	libvorbis-1.0.0.6
+DISTNAME=	libvorbis-1.0rc3
+PKGNAME=	libvorbis-1.0.0.7
 CATEGORIES=	devel audio
-MASTER_SITES=	http://www.vorbis.com/files/rc2/unix/
+MASTER_SITES=	http://www.vorbis.com/files/rc3/unix/
 
 MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.xiph.org/ogg/vorbis/
