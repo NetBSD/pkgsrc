@@ -1,0 +1,11 @@
+--- mrtg.cfg-dist.orig	Fri Oct 24 21:35:55 1997
++++ mrtg.cfg-dist	Sat Dec  6 09:34:48 1997
+@@ -21,7 +21,7 @@
+ 
+ # Where should the logfiles, and webpages be created?
+ 
+-# WorkDir: /usr/tardis/pub/www/stats/mrtg
++WorkDir: /usr/local/www/data/mrtg
+ 
+ # --------------------------
+ # Optional Global Parameters
