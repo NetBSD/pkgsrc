@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2005/03/27 10:25:51 recht Exp $
+$NetBSD: patch-aa,v 1.11 2005/04/05 06:45:47 recht Exp $
 
---- mono/metadata/metadata.c.orig	Wed Mar 16 17:18:22 2005
+--- mono/metadata/metadata.c.orig	Wed Mar 30 23:26:16 2005
 +++ mono/metadata/metadata.c
 @@ -551,6 +551,7 @@ mono_metadata_compute_size (MonoImage *m
  				g_assert (i == 4 || i == 5);
