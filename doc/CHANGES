@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9705 2005/03/31 21:49:20 seb Exp $
+$NetBSD: CHANGES,v 1.9706 2005/03/31 22:11:19 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1842,3 +1842,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated squid to 2.5.9nb2 [taca 2005-03-31]
 	Added p5-Net-Dev-MIBLoadOrder-1.1.0 [seb 2005-03-31]
 	Updated p5-Want to 0.08 [seb 2005-03-31]
+	Added teTeX-bin-3.0 [hubertf 2005-04-01]
