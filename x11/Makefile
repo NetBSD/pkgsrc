@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2000/09/13 15:57:37 wiz Exp $
+# $NetBSD: Makefile,v 1.177 2000/10/15 12:26:38 rh Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -43,6 +43,7 @@
     SUBDIR += gnome-python
     SUBDIR += gnome-users-guide
     SUBDIR += gtk
+    SUBDIR += gtk+extra
     SUBDIR += gtk--
     SUBDIR += gtk-engines
     SUBDIR += gtk10
