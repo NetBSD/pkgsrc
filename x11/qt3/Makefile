@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/08/29 10:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/02 07:28:17 jlam Exp $
 #
 
 DISTNAME=	qt3-${QTVERSION}
@@ -14,6 +14,7 @@ DEPENDS+=	qt3-libs-${QTVERSION}:../../x11/qt3-libs
 DEPENDS+=	qt3-tools-${QTVERSION}:../../x11/qt3-tools
 DEPENDS+=	qt3-docs-${QTVERSION}:../../x11/qt3-docs
 
+USE_BUILDLINK2=	yes
 USE_X11BASE=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
