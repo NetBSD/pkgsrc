@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/10 02:22:50 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/08 00:15:53 minskim Exp $
 
 PKGNAME=	p5-subversion-${SVNVER}
 COMMENT=	Perl bindings for Subversion
@@ -23,8 +23,8 @@ post-install:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${PERL_DIR} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install
 
-.include "../../devel/subversion/buildlink2.mk"
-.include "../../devel/swig-build/buildlink2.mk"
-.include "../../devel/swig-perl/buildlink2.mk"
+.include "../../devel/subversion/buildlink3.mk"
+.include "../../devel/swig-build/buildlink3.mk"
+.include "../../devel/swig-perl/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
