@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2001/10/16 05:40:58 jlam Exp $
+# $NetBSD: Makefile,v 1.109 2001/11/15 16:10:18 taca Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -93,5 +93,6 @@ SUBDIR+=	xbuffy
 SUBDIR+=	xfmail
 SUBDIR+=	xmailbox
 SUBDIR+=	xmailwatcher
+SUBDIR+=	yatsvrs5
 
 .include "../mk/bsd.pkg.subdir.mk"
