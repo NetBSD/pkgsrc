@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2004/04/14 16:15:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.66 2004/04/14 19:30:22 jmmv Exp $
 
 DISTNAME=	galeon-1.2.13
 PKGREVISION=	3
@@ -19,7 +19,7 @@ EVAL_PREFIX+=	GCONF_PREFIX=GConf
 
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
-USE_DIRS+=		xdg-x11-1.1
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++

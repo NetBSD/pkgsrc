@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/04/14 16:15:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/14 19:30:23 jmmv Exp $
 
 DISTNAME=	multi-gnome-terminal-1.6.1
 PKGREVISION=	6
@@ -10,7 +10,7 @@ HOMEPAGE=	http://multignometerm.sourceforge.net/
 COMMENT=	Gnome tabbed terminal emulator
 
 USE_BUILDLINK2=		# defined
-USE_DIRS+=		xdg-x11-1.1
+USE_DIRS+=		xdg-1.1
 USE_X11BASE=		# defined
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		# defined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/04/14 16:15:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/14 19:30:22 jmmv Exp $
 #
 
 DISTNAME=	gnome-breakout-0.5.2
@@ -12,7 +12,7 @@ COMMENT=	Gnome version of the classic breakout game
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_DIRS+=		xdg-x11-1.1
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/04/14 16:15:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2004/04/14 19:30:22 jmmv Exp $
 
 DISTNAME=	Guppi-0.40.3
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -26,7 +26,7 @@ PLIST_SUBST+=		GNUMERIC="@comment "
 .endif
 
 USE_BUILDLINK2=		YES
-USE_DIRS+=		xdg-x11-1.1
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
