@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 17:27:26 martti Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/13 02:24:05 minskim Exp $
 #
 
 DISTNAME=	bibparse-1.04
@@ -9,7 +9,9 @@ MAINTAINER=	seb@pbox.org
 HOMEPAGE=	http://www.math.utah.edu/pub/bibparse/
 COMMENT=	Syntax checking tools for BibTeX bibliography databases
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 .include "../../mk/bsd.pkg.mk"
