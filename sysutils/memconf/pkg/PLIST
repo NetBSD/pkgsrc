@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/21 09:03:21 agc Exp $
+sbin/memconf

@@ -1,0 +1,6 @@
+memconf reports the size of each SIMM/DIMM memory module installed in
+a system.  It also reports the system type and any empty memory
+sockets.
+
+In verbose mode, it also reports:  banner name, model, and CPU/system
+frequencies address range and bank numbers for each module
