@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2003/08/27 16:06:13 adam Exp $
+$NetBSD: patch-aa,v 1.5 2003/11/01 18:24:39 wiz Exp $
 
---- Makefile.in.orig	2003-08-23 09:49:16.000000000 +0200
+--- Makefile.in.orig	2003-09-29 15:10:58.000000000 +0200
 +++ Makefile.in
 @@ -166,7 +166,7 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  ACLOCAL_AMFLAGS = -I scripts
  
--SUBDIRS = tools glib pango atk gdk gtk examples docs
-+SUBDIRS = tools glib pango atk gdk gtk docs
- DIST_SUBDIRS = $(SUBDIRS) scripts demos tests MSVC_Net2003
+-SUBDIRS = tools glib pango atk gdk gtk examples docs tests
++SUBDIRS = tools glib pango atk gdk gtk docs tests
+ DIST_SUBDIRS = $(SUBDIRS) scripts demos MSVC_Net2003
  
  EXTRA_DIST = gtkmm.spec.in \

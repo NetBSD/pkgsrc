@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/08/27 16:06:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/11/01 18:24:39 wiz Exp $
 include/gtkmm-2.0/atkmm.h
 include/gtkmm-2.0/atkmm/action.h
 include/gtkmm-2.0/atkmm/component.h
@@ -460,37 +460,38 @@ lib/libatkmm-1.0.a
 lib/libatkmm-1.0.la
 lib/libatkmm-1.0.so
 lib/libatkmm-1.0.so.6
-lib/libatkmm-1.0.so.6.6
+lib/libatkmm-1.0.so.6.7
 lib/libgdkmm-2.0.a
 lib/libgdkmm-2.0.la
 lib/libgdkmm-2.0.so
 lib/libgdkmm-2.0.so.6
-lib/libgdkmm-2.0.so.6.6
+lib/libgdkmm-2.0.so.6.7
 lib/libglibmm-2.0.a
 lib/libglibmm-2.0.la
 lib/libglibmm-2.0.so
 lib/libglibmm-2.0.so.6
-lib/libglibmm-2.0.so.6.6
+lib/libglibmm-2.0.so.6.7
 lib/libgtkmm-2.0.a
 lib/libgtkmm-2.0.la
 lib/libgtkmm-2.0.so
 lib/libgtkmm-2.0.so.6
-lib/libgtkmm-2.0.so.6.6
+lib/libgtkmm-2.0.so.6.7
 lib/libgtkmm_generate_extra_defs-2.0.a
 lib/libgtkmm_generate_extra_defs-2.0.la
 lib/libgtkmm_generate_extra_defs-2.0.so
 lib/libgtkmm_generate_extra_defs-2.0.so.6
-lib/libgtkmm_generate_extra_defs-2.0.so.6.6
+lib/libgtkmm_generate_extra_defs-2.0.so.6.7
 lib/libpangomm-1.0.a
 lib/libpangomm-1.0.la
 lib/libpangomm-1.0.so
 lib/libpangomm-1.0.so.6
-lib/libpangomm-1.0.so.6.6
+lib/libpangomm-1.0.so.6.7
 lib/pkgconfig/atkmm-1.0.pc
 lib/pkgconfig/gdkmm-2.0.pc
 lib/pkgconfig/glibmm-2.0.pc
 lib/pkgconfig/gtkmm-2.0.pc
 lib/pkgconfig/pangomm-1.0.pc
+share/devhelp/books/gtkmm-2.0/gtkmm2.devhelp
 share/doc/gtkmm-2.0/FAQ/html/index.html
 share/doc/gtkmm-2.0/images/gtkmm_logo.gif
 share/doc/gtkmm-2.0/images/top.gif
@@ -1987,6 +1988,10 @@ share/doc/gtkmm-2.0/reference/html/viewport_8h.html
 share/doc/gtkmm-2.0/reference/html/visual_8h.html
 share/doc/gtkmm-2.0/reference/html/widget_8h.html
 share/doc/gtkmm-2.0/reference/html/wrap_8h.html
+share/doc/gtkmm-2.0/tests/child_widget/main.cc
+share/doc/gtkmm-2.0/tests/child_widget/testwindow.cc
+share/doc/gtkmm-2.0/tests/child_widget/testwindow.h
+share/doc/gtkmm-2.0/tests/child_widget_managed/main.cc
 share/doc/gtkmm-2.0/tutorial/figures/alignment.png
 share/doc/gtkmm-2.0/tutorial/figures/aspectframe.png
 share/doc/gtkmm-2.0/tutorial/figures/box_packing1.png
@@ -2005,6 +2010,8 @@ share/doc/gtkmm-2.0/tutorial/figures/dialogs_fontselectiondialog.png
 share/doc/gtkmm-2.0/tutorial/figures/dialogs_messagedialog.png
 share/doc/gtkmm-2.0/tutorial/figures/dialogs_simple.png
 share/doc/gtkmm-2.0/tutorial/figures/drag_and_drop.png
+share/doc/gtkmm-2.0/tutorial/figures/drawingarea_lines.png
+share/doc/gtkmm-2.0/tutorial/figures/drawingarea_text.png
 share/doc/gtkmm-2.0/tutorial/figures/entry.png
 share/doc/gtkmm-2.0/tutorial/figures/eventbox.png
 share/doc/gtkmm-2.0/tutorial/figures/frame.png
@@ -2028,6 +2035,7 @@ share/doc/gtkmm-2.0/tutorial/figures/toolbar.png
 share/doc/gtkmm-2.0/tutorial/figures/treeview_draganddrop.png
 share/doc/gtkmm-2.0/tutorial/figures/treeview_editablecells.png
 share/doc/gtkmm-2.0/tutorial/figures/treeview_list.png
+share/doc/gtkmm-2.0/tutorial/figures/treeview_popup.png
 share/doc/gtkmm-2.0/tutorial/figures/treeview_tree.png
 share/doc/gtkmm-2.0/tutorial/html/apa.html
 share/doc/gtkmm-2.0/tutorial/html/apas02.html
@@ -2078,6 +2086,7 @@ share/doc/gtkmm-2.0/tutorial/html/ch08s03.html
 share/doc/gtkmm-2.0/tutorial/html/ch08s04.html
 share/doc/gtkmm-2.0/tutorial/html/ch08s05.html
 share/doc/gtkmm-2.0/tutorial/html/ch08s06.html
+share/doc/gtkmm-2.0/tutorial/html/ch08s07.html
 share/doc/gtkmm-2.0/tutorial/html/ch09.html
 share/doc/gtkmm-2.0/tutorial/html/ch09s02.html
 share/doc/gtkmm-2.0/tutorial/html/ch09s03.html
@@ -2126,12 +2135,18 @@ share/doc/gtkmm-2.0/tutorial/html/index.html
 @dirrm share/doc/gtkmm-2.0/tutorial/html
 @dirrm share/doc/gtkmm-2.0/tutorial/figures
 @dirrm share/doc/gtkmm-2.0/tutorial
+@dirrm share/doc/gtkmm-2.0/tests/child_widget_managed
+@dirrm share/doc/gtkmm-2.0/tests/child_widget
+@dirrm share/doc/gtkmm-2.0/tests
 @dirrm share/doc/gtkmm-2.0/reference/html
 @dirrm share/doc/gtkmm-2.0/reference
 @dirrm share/doc/gtkmm-2.0/images
 @dirrm share/doc/gtkmm-2.0/FAQ/html
 @dirrm share/doc/gtkmm-2.0/FAQ
 @dirrm share/doc/gtkmm-2.0
+@dirrm share/devhelp/books/gtkmm-2.0
+@dirrm share/devhelp/books
+@dirrm share/devhelp
 @dirrm lib/gtkmm-2.0/proc/pm
 @dirrm lib/gtkmm-2.0/proc/m4
 @dirrm lib/gtkmm-2.0/proc
