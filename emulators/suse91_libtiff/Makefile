@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/02 20:29:55 recht Exp $
+# $NetBSD: Makefile,v 1.1.1.1.4.1 2005/02/19 21:27:59 snj Exp $
 
 DISTNAME=		suse_libtiff-${SUSE_VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -18,7 +19,7 @@ NO_BUILD=		YES
 NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		libtiff-3.6.1-38.3.${SUSE_ARCH}.rpm
+RPMFILES=		libtiff-3.6.1-38.14.${SUSE_ARCH}.rpm
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
