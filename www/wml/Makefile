@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:58 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/12/25 19:25:28 wiz Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -9,7 +9,6 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.engelschall.com/sw/wml/
 COMMENT=	Web Meta Language
 
-DEPENDS+=	ncurses-[0-9]*:../../devel/ncurses
 DEPENDS+=	p5-Bit-Vector>=5.2:../../devel/p5-Bit-Vector
 DEPENDS+=	p5-File-PathConvert-[0-9]*:../../devel/p5-File-PathConvert
 DEPENDS+=	p5-Image-Size>=2.6:../../graphics/p5-Image-Size
@@ -18,13 +17,17 @@ DEPENDS+=	p5-Term-ReadKey>=2.11:../../devel/p5-Term-ReadKey
 
 USE_PERL5=	yes
 
-CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-perl=${PERL5} \
-		--with-incdir=${LOCALBASE}/include \
-		--with-libdir=${LOCALBASE}/lib \
+		--with-incdir=${BUILDLINK_DIR}/include \
+		--with-libdir=${BUILDLINK_DIR}/lib \
 		--with-openworld \
 		--with-tidy=${LOCALBASE}/bin/tidy
+
+USE_BUILDLINK_ONLY=	yes
+
+# redrawwin()
+USE_NCURSES=	yes
 
 post-install:
 	cd ${PREFIX}/man/cat1 ; \
@@ -43,4 +46,5 @@ post-install:
 test:
 	@cd ${WRKSRC} && ${MAKE} test
 
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
