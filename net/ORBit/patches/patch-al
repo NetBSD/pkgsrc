@@ -1,3 +1,4 @@
+$NetBSD: patch-al,v 1.8 2003/10/18 13:20:32 cjep Exp $
 --- src/daemons/interface_repository/Makefile.in.orig	Wed Mar 20 15:46:31 2002
 +++ src/daemons/interface_repository/Makefile.in	Tue Oct  7 19:08:10 2003
 @@ -105,8 +105,8 @@
