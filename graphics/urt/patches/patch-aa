@@ -1,9 +1,6 @@
-$NetBSD: patch-aa,v 1.1 1998/08/24 16:55:36 agc Exp $
-
-Set up the configuration for NetBSD.
-
---- config/urt.orig	Wed Jul 15 15:47:15 1992
-+++ config/urt	Wed Feb 11 01:01:24 1998
+$NetBSD: patch-aa,v 1.2 1998/09/12 17:01:59 garbled Exp $
+--- config/urt.orig	Wed Jul 15 12:47:15 1992
++++ config/urt	Sat Sep 12 09:26:38 1998
 @@ -1,3 +1,7 @@
 +# Configuration for HP 9000/300 series running BSD4.3
 +
@@ -140,15 +137,14 @@ Set up the configuration for NetBSD.
 -#defpath PBMDIR
 +PBMDIR= ${PKGSRCDIR}/graphics/netpbm/${WORKINGDIRNAME}/netpbm
  
--INCPBMPLUS = -I$(PBMDIR) -I$(PBMDIR)/ppm -I$(PBMDIR)/pgm -I$(PBMDIR)/pbm
+ INCPBMPLUS = -I$(PBMDIR) -I$(PBMDIR)/ppm -I$(PBMDIR)/pgm -I$(PBMDIR)/pbm
 -LIBPBMPLUS = $(PBMDIR)/ppm/libppm.a $(PBMDIR)/pgm/libpgm.a \
 -		$(PBMDIR)/pbm/libpbm.a 
-+INCPBMPLUS = -I$(PBMDIR) -I$(PBMDIR)/ppm -I$(PBMDIR)/pgm -I$(PBMDIR)/pbm
 +LIBPBMPLUS = $(PBMDIR)/ppm/libppm.a $(PBMDIR)/pgm/libpgm.a $(PBMDIR)/pbm/libpbm.a 
  #endif
  
  #ifdef SUNRASTER|SUNTOOLS|TAAC1
-@@ -216,9 +221,9 @@
+@@ -216,9 +219,9 @@
  
  #ifdef TIFF
  # Location of tiff library and include files.  Relative to URT root directory.
@@ -157,16 +153,16 @@ Set up the configuration for NetBSD.
 -LIBTIFF = $(TIFFDIR)/libtiff.a
 +##defpath TIFFDIR
 +INCTIFF = -I${LOCALBASE}/include
-+LIBTIFF = -L${LOCALBASE}/lib -ltiff
++LIBTIFF = -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -ltiff -ljpeg -lz
  #endif
  
  #ifdef X10
-@@ -227,6 +232,6 @@
+@@ -227,6 +230,6 @@
  #endif
  
  #ifdef X11
 -LIBX11 = -lX11
 -INCX11 = 
-+LIBX11 = -L${X11BASE}/lib -lX11
++LIBX11 = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lX11
 +INCX11 = -I${X11BASE}/include
  #endif
