@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/09 15:24:24 mjl Exp $
+
+--- Makefile.in.orig	Fri Feb  9 15:02:31 2001
++++ Makefile.in	Fri Feb  9 15:03:32 2001
+@@ -37,10 +37,10 @@
+ ### 
+ 
+ ### directory for lclint libraries
+-LIBDIR     = @installdir@/lib
++LIBDIR     = @installdir@/share/lclint/2.5q/lib
+ 
+ ### directory for lclint standard imports
+-IMPORTSDIR = @installdir@/imports
++IMPORTSDIR = @installdir@/share/lclint/2.5q/imports
+ 
+ ### directory for lclint binary
+ INSTALLDIR = @installdir@/bin
+@@ -227,14 +227,14 @@
+ dolibraries:
+ 	@echo '//  Installing libraries in '$(LIBDIR)
+ 	@echo "    (This will complain if the directory already exists, don't worry about it.)"
+-	-mkdir $(LIBDIR)
++	-mkdir -p $(LIBDIR)
+ 	$(CP) $(LCLINTLIB)/* $(LIBDIR)
+ 	@echo '//  Installed libraries.'
+ 
+ doimports:
+ 	@echo '//  Installing imports in '$(IMPORTSDIR)
+ 	@echo "    (This will complain if the directory already exists, don't worry about it.)"
+-	-mkdir $(IMPORTSDIR)
++	-mkdir -p $(IMPORTSDIR)
+ 	$(CP) $(LCLINTIMPORTS)/* $(IMPORTSDIR)
+ 	@echo '//  Installed imports.'
+ 
