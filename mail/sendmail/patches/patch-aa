@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/04/08 23:00:33 tron Exp $
+$NetBSD: patch-aa,v 1.2 1999/04/10 16:41:21 tron Exp $
 
 --- src/Makefile.m4.orig	Sun Jan 24 00:51:41 1999
-+++ src/Makefile.m4	Fri Apr  9 00:28:36 1999
++++ src/Makefile.m4	Sat Apr 10 18:04:54 1999
 @@ -27,7 +27,7 @@
  MAPDEF=	ifdef(`confMAPDEF', `confMAPDEF')
  
@@ -20,3 +20,14 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/04/08 23:00:33 tron Exp $
  
  # location of sendmail binary (usually /usr/sbin or /usr/lib)
  BINDIR=	${DESTDIR}ifdef(`confMBINDIR', `confMBINDIR', `/usr/sbin')
+@@ -87,10 +87,6 @@
+ BINOWN=	ifdef(`confSBINOWN', `confSBINOWN', `root')
+ BINGRP=	ifdef(`confSBINGRP', `confSBINGRP', `kmem')
+ BINMODE=ifdef(`confSBINMODE', `confSBINMODE', `4555')
+-
+-MANOWN=	ifdef(`confMANOWN', `confMANOWN', `bin')
+-MANGRP=	ifdef(`confMANGRP', `confMANGRP', `bin')
+-MANMODE=ifdef(`confMANMODE', `confMANMODE', `444')
+ 
+ MANROOT=${DESTDIR}ifdef(`confMANROOT', `confMANROOT', `/usr/share/man/cat')
+ MAN1=	${MANROOT}ifdef(`confMAN1', `confMAN1', `1')
