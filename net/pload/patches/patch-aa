@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1 2000/01/25 10:33:30 abs Exp $
+
+--- ioctl_stat.c	Thu Mar  4 07:33:03 1999
++++ /usr/home/abs/ioctl_stat.c	Tue Jan 25 02:05:44 2000
+@@ -68,6 +68,9 @@
+ 
+ void ioctl_stat(if_data *ifd)
+ {
++#ifdef __NetBSD__
++	struct ifreq ifr;
++#endif
+ 	struct ifpppstatsreq req;
+ 	
+ 	if (s < 0) getsocket();
+@@ -78,8 +81,20 @@
+ #define ifr_name ifr__name
+ 	req.stats_ptr = (caddr_t) &req.stats;
+ #endif
+-	sprintf(req.ifr_name, ifd->device);
+ 	
++#ifdef __NetBSD__
++	sprintf(ifr.ifr_name, ifd->device);
++	if (ioctl(s, SIOCGIFFLAGS, (caddr_t)&ifr) < 0 ||
++						!(ifr.ifr_flags&IFF_UP))
++	{
++		/* invalid interface, or interface down */
++		ifd->in_bytes = 0UL;
++		ifd->out_bytes = 0UL;
++		return;
++	}
++#endif
++
++	sprintf(req.ifr_name, ifd->device);
+ 	if (ioctl(s, SIOCGPPPSTATS, &req) != 0)
+ 	{
+ 		/* non-existant device? */
