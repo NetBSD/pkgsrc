@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/03 14:07:19 scw Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/06 16:58:15 jlam Exp $
 #
 
 DISTNAME=       tits-1.0.2
@@ -19,6 +19,6 @@ post-patch:
 	${SED} -e 's|/usr/local|${PREFIX}|g' ${WRKSRC}/tits.8.in > ${WRKSRC}/tits.8
 
 post-install:
-	${BSD_INSTALL_DATA} ${WRKSRC}/tits.conf ${PREFIX}/share/examples/
+	${INSTALL_DATA} ${WRKSRC}/tits.conf ${PREFIX}/share/examples/
 
 .include "../../mk/bsd.pkg.mk"
