@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.2 2003/09/02 06:59:52 jlam Exp $
+$NetBSD: README,v 1.3 2003/09/08 10:36:02 jlam Exp $
 
  0 Package Views
  ===============
@@ -12,8 +12,11 @@ different views by appropriately setting shell environment variables,
 e.g., PATH, MANPATH, etc.
 
 Package views is similar in spirit to the Encap Package Management
-System (http://www.encap.org/) and to the Carnegie Mellon University
-Depot software management system.
+System and to the Carnegie Mellon University Depot Configuration
+Management system:
+
+	http://www.encap.org/
+	http://asg.web.cmu.edu/andrew2/depot/
 
 
  0.1 A short history of package views
