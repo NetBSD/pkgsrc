@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.77 2003/01/02 22:58:43 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.78 2003/01/11 04:42:57 rh Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -89,6 +89,8 @@ $sharedocused = 0;
 $seen_PLIST_SRC = 0;
 $seen_NO_PKG_REGISTER = 0;
 $seen_NO_CHECKSUM = 0;
+$seen_USE_PKGLOCALEDIR = 0;
+$seen_USE_BUILDLINK2 = 0;
 
 %predefined = ();
 foreach $i (split("\n", <<EOF)) {
@@ -459,6 +461,11 @@ sub checkplist {
 			$infooverwrite++;
 		}
 
+		if ($_ =~ /\${PKGLOCALEDIR}/ && $seen_USE_BUILDLINK2 && ! $seen_USE_PKGLOCALEDIR) {
+			&perror("WARN: PLIST contains \${PKGLOCALEDIR}, ".
+				"but USE_PKGLOCALEDIR was not found.");
+		}
+
 		if ($curdir !~ m#^$localbase#
 		 && $curdir !~ m#^/usr/X11R6#) {
 			&perror("WARN: $file $.: installing to ".
@@ -751,6 +758,14 @@ sub checkmakefile {
 	if ($whole =~ /\nUSE_PKGLIBTOOL/) {
 		&perror("FATAL: USE_PKGLIBTOOL is deprecated, ".
 			"use USE_LIBTOOL instead.");
+	}
+	print "OK: checking for USE_BUILDLINK2.\n" if ($verbose);
+	if ($whole =~ /\nUSE_BUILDLINK2/) {
+		$seen_USE_BUILDLINK2=1;
+	}
+	print "OK: checking for USE_PKGLOCALEDIR.\n" if ($verbose);
+	if ($whole =~ /\nUSE_PKGLOCALEDIR/) {
+		$seen_USE_PKGLOCALEDIR=1;
 	}
 	print "OK: checking USE_SSL.\n" if ($verbose);
 	if ($whole =~ /\nUSE_SSL/) {
