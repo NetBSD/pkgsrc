@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.4 2004/12/17 20:49:40 minskim Exp $
+
+--- src/main.cc.orig	2003-10-12 11:36:01.000000000 -0500
++++ src/main.cc
+@@ -22,7 +22,7 @@
+ #include <config.h>
+ 
+ #include <gtk/gtk.h>
+-#include <gnome.h>
++#include <safe_gnome.h>
+ 
+ // #include <popt.h>
+ 

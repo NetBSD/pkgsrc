@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.4 2004/12/17 20:49:40 minskim Exp $
+
+--- src/safe_gnome.h.orig	2004-12-17 14:24:16.000000000 -0600
++++ src/safe_gnome.h
+@@ -0,0 +1,18 @@
++#ifndef CXUNZIP_SAFE_GNOME_H
++#define CXUNZIP_SAFE_GNOME_H
++
++#undef gettext
++#undef dgettext
++#undef dcgettext
++#undef textdomain
++#undef bindtextdomain
++
++#include <gnome.h>
++
++#undef gettext
++#undef dgettext
++#undef dcgettext
++#undef textdomain
++#undef bindtextdomain
++
++#endif
