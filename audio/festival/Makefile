@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/10/06 21:40:17 jmc Exp $
+# $NetBSD: Makefile,v 1.28 2003/12/23 10:35:30 sketch Exp $
 
 DISTNAME=	festival-1.4.1
 PKGREVISION=	1
@@ -28,6 +28,24 @@ FESTIVAL=	${WRKSRC}/festival
 FHOME=		${PREFIX}/share/festival
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_SUNPRO)
+PKG_COMPILER?=	suncc
+.else
+PKG_COMPILER!=	case "${CC_VERSION}" in					\
+			gcc-2.6.*)	${ECHO} gcc26;;			\
+			gcc-2.7.*)	${ECHO} gcc27;;			\
+			gcc-2.8.*)	${ECHO} gcc28;;			\
+			gcc-2.95.*)	${ECHO} gcc295;;		\
+			gcc-3.3.*)	${ECHO} gcc295;;		\
+			egcs*)		${ECHO} egcs;;			\
+			*)		${ECHO} ;;			\
+		esac
+.endif
+
+.if empty(PKG_COMPILER)
+PKG_FAIL_REASON=	"${CC_VERSION} is not currently supported."
+.endif
 
 MAKE_ENV+=	PKG_EST_HOME="${SPEECHTOOLS}"				\
 		EST_HOME="${SPEECHTOOLS}"				\
@@ -81,12 +99,3 @@ do-install:
 
 .include "../../audio/nas/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# has to be below bsd.pkg.mk, else ${ECHO} isn't expanded correctly
-PKG_COMPILER!=	case "`${CC} -v 2>&1`" in *2.6.*) ${ECHO} gcc26;;\
-					*2.7.*) ${ECHO} gcc27;;\
-					*2.8.*) ${ECHO} gcc28;;\
-					*2.95.*) ${ECHO} gcc295;;\
-					*3.3.*) ${ECHO} gcc295;;\
-					*egcs*) ${ECHO} egcs;;\
-					esac
