@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.3 2001/06/13 18:19:52 jlam Exp $
+# $NetBSD: defs.Linux.mk,v 1.4 2001/06/18 19:58:55 jlam Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -11,6 +11,7 @@ CHGRP?=		/bin/chgrp
 CP?=		/bin/cp
 CUT?=		/bin/cut
 DC?=		/usr/bin/dc
+DIRNAME?=	/bin/dirname
 ECHO?=		/bin/echo
 EGREP?=		/bin/egrep
 FALSE?=		/bin/false

@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.2 2001/06/12 13:16:09 jlam Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.3 2001/06/18 19:58:55 jlam Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -11,6 +11,7 @@ CHGRP?=		/usr/bin/chgrp
 CP?=		/bin/cp
 CUT?=		/usr/bin/cut
 DC?=		/usr/bin/dc
+DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
 EGREP?=		/usr/bin/egrep
 FALSE?=		false				# Shell builtin
