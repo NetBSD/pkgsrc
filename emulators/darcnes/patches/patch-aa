@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2000/02/20 18:15:15 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2000/06/03 10:57:12 wiz Exp $
 
---- ./Makefile.orig	Mon Feb 14 03:36:58 2000
-+++ ./Makefile	Sun Feb 20 15:28:50 2000
-@@ -11,10 +11,10 @@
+--- Makefile.orig	Sun May  7 02:04:10 2000
++++ Makefile	Thu Jun  1 02:47:55 2000
+@@ -11,16 +11,16 @@
  
  #C_ONLY=-DC_ONLY
  
@@ -15,25 +15,23 @@ $NetBSD: patch-aa,v 1.3 2000/02/20 18:15:15 wiz Exp $
  
  DEBUG=-g
  
-@@ -25,7 +25,7 @@
- 
  OPTFLAGS=-O2 -fomit-frame-pointer
  
--BASE_CFLAGS=-Wall $(DEBUG) $(OPTFLAGS) $(CDFLAGS) $(C_ONLY) $(BYTE_ORDER) $(MACH_TYPES)
-+BASE_CFLAGS=-Wall $(DEBUG) $(OPTFLAGS) $(CDFLAGS) $(C_ONLY) $(MACH_TYPES)
- BASE_SFLAGS=-Wall $(DEBUG) $(OPTFLAGS) $(CDFLAGS)
+-BASE_CFLAGS=-Wall $(DEBUG) $(OPTFLAGS) $(C_ONLY) $(BYTE_ORDER) $(MACH_TYPES)
++BASE_CFLAGS=-Wall $(DEBUG) $(OPTFLAGS) $(C_ONLY) $(MACH_TYPES)
+ BASE_SFLAGS=-Wall $(DEBUG) $(OPTFLAGS)
  
  #
-@@ -51,9 +51,9 @@
- AS=gcc
- LD=gcc
- 
+@@ -38,9 +38,9 @@
+ #
+ ifeq ($(TARGET),Linux_X)
+ CONFFLAGS=-DPCE_CD_SUPPORT -DSOUND
 -LDFLAGS=-L/usr/X11R6/lib
--CFLAGS=$(BASE_CFLAGS) -I/usr/X11R6/include
--SFLAGS=$(BASE_SFLAGS) -I/usr/X11R6/include
+-CFLAGS+=-I/usr/X11R6/include
+-SFLAGS+=-I/usr/X11R6/include
 +LDFLAGS=-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
-+CFLAGS=$(BASE_CFLAGS) -I${X11BASE}/include
-+SFLAGS=$(BASE_SFLAGS) ${ASM_FLAGS} -I${X11BASE}/include
++CFLAGS+=-I${X11BASE}/include
++SFLAGS+=${ASM_FLAGS} -I${X11BASE}/include
+ SYSTEMSRCS=video_x.c ui_x.c snd_unix.c keyboard_x.c cd_unix.c
  BINFILE=darcnes
  LIBS=-lXext -lXaw -lXmu -lXt -lX11
- endif
