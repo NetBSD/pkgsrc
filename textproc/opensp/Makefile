@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/09/27 23:18:45 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/12/19 20:28:53 wiz Exp $
 #
 
 DISTNAME=	OpenSP-1.4
@@ -11,6 +11,7 @@ HOMEPAGE=	http://openjade.sourceforge.net/doc-1.4/index.htm
 COMMENT=	SGML parser, successor to "sp"
 
 DEPENDS+=	unproven-pthreads-[0-9]*:../../devel/unproven-pthreads
+BUILD_DEPENDS+=	perl>=5.0:../../lang/perl
 
 CONFLICTS+=     sp-[0-9]*
 
