@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/04/01 18:58:40 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/05/15 14:41:13 jmmv Exp $
 bin/magnifier
 include/gnome-mag-1.0/magnifier/GNOME_Magnifier.h
 lib/bonobo/servers/GNOME_Magnifier.server
@@ -6,7 +6,7 @@ lib/libgnome-mag.a
 lib/libgnome-mag.la
 lib/libgnome-mag.so
 lib/libgnome-mag.so.1
-lib/libgnome-mag.so.1.10
+lib/libgnome-mag.so.1.11
 lib/pkgconfig/gnome-mag-1.0.pc
 share/gnome-mag/crosshair-cursor.xpm
 share/gnome-mag/default-cursor.xpm
