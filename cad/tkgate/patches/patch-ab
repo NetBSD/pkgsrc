@@ -1,13 +1,25 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/10/29 00:33:46 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/08 17:52:22 jmmv Exp $
 
---- configure.orig	Mon Oct 28 23:11:21 2002
-+++ configure	Mon Oct 28 23:11:43 2002
-@@ -70,7 +70,7 @@
+--- configure.orig	2001-06-11 22:44:36.000000000 +0200
++++ configure
+@@ -70,7 +70,7 @@ done
  #
  LPATH=""
  IPATH=""
 -LIBS=""
-+LIBS="-lm ${BUILDLINK_LDFLAGS}"
++LIBS="${BUILDLINK_LDFLAGS}"
  TCLTKOK=1
  
  ##################################################################
+@@ -453,6 +453,11 @@ find_tcltk_version()
+       union LIBS -l$tcl_lib
+       union LPATH -L$TCLLIB
+ 
++      . ${PREFIX}/lib/tclConfig.sh
++      for l in ${TCL_LIBS}; do
++          union LIBS ${l}
++      done
++
+       echo "Tcl/Tk Version: $tcltk_ver"
+   else
+       echo "Tcl/Tk Version: not found"
