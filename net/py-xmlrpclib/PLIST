@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:16 zuntum Exp $
-PYSITELIB/xmlrpclib.py
-PYSITELIB/xmlrpcserver.py
-PYSITELIB/xmlrpc_handler.py
+@comment $NetBSD: PLIST,v 1.2 2002/01/16 21:11:50 drochner Exp $
+${PYSITELIB}/xmlrpclib.py
+${PYSITELIB}/xmlrpcserver.py
+${PYSITELIB}/xmlrpc_handler.py
