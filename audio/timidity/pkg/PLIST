@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 1998/03/07 19:08:38 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/07/28 21:47:53 jlam Exp $
 bin/timidity
 bin/bag
 bin/wav2pat
-man/man1/timidity.1.gz
+man/man1/timidity.1
 lib/timidity/timidity.cfg
 lib/timidity/gsdrum.cfg
 lib/timidity/gravis.cfg
