@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2002/01/02 22:19:38 jlam Exp $
+$NetBSD: distinfo,v 1.6 2002/01/02 22:51:19 jlam Exp $
 
 SHA1 (courier-imap-1.4.0.tar.gz) = 3a1d5eec1db132b03bb295738aa615eaed4f0b84
 Size (courier-imap-1.4.0.tar.gz) = 1168483 bytes
-SHA1 (patch-aa) = d1dba22e273fd954faa1bea0f437e12d808f4a9c
+SHA1 (patch-aa) = 3ee927c83424d037e9997f3ef97ba51789a21d2b
 SHA1 (patch-ab) = e9da6801d310f792a205ccf7e4b6bce958b9a8ee
 SHA1 (patch-ac) = c5c3d03a06fa6c3818dad633fa89464a60a4f4f9
 SHA1 (patch-ad) = 3941221a4dd780a2b73c95028cb59774e4755089
