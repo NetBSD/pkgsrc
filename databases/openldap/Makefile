@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2004/10/15 11:54:10 tv Exp $
+# $NetBSD: Makefile,v 1.85 2004/11/08 18:42:08 tv Exp $
 
 DISTNAME=		openldap-2.2.13
 SVR4_PKGNAME=		oldap
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=		.tgz
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--enable-spasswd
 .endif
 CONFIGURE_ARGS+=	--enable-wrappers
 
-SLAPD_BACKEND_MODULES=	bdb:static dnnsrv hdb ldap ldbm meta		\
+SLAPD_BACKEND_MODULES=	dnssrv ldap ldbm meta \
 			monitor:static null passwd shell
 .for _mod_ in ${SLAPD_BACKEND_MODULES}
 .  if !empty(PKG_OPTIONS:Mdynamic)
@@ -96,7 +96,6 @@ OPENLDAP_PTHREAD_OPTS?=	native
 OPENLDAP_PTHREAD_OPTS?=	require
 PTHREAD_OPTS+=		${OPENLDAP_PTHREAD_OPTS}
 
-.include "../../databases/db4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
