@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:27 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.4 2002/06/27 21:35:09 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -37,15 +37,12 @@ BUILDLINK_TARGETS+=		gettext-buildlink
 # configure script fails to detect if libintl.a is the genuine GNU gettext
 # or not.
 #
-.    if ${BUILDLINK_PREFIX.gettext} == "/usr"
 INTLLIBS=		# empty
-.    else
-INTLLIBS=		-L${BUILDLINK_PREFIX.gettext}/lib
-.      if ${_NEED_GNU_GETTEXT} == "YES"
+.    if ${_NEED_GNU_GETTEXT} == "YES"
+INTLLIBS+=		-L${BUILDLINK_PREFIX.gettext}/lib
 .        if ${_USE_RPATH} == "yes"
 INTLLIBS+=		-Wl,-R${BUILDLINK_PREFIX.gettext}/lib
 .        endif
-.      endif
 .    endif
 INTLLIBS+=		-lintl
 LIBS+=			${INTLLIBS}
