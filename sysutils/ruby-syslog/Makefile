@@ -1,0 +1,26 @@
+# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 13:54:55 taca Exp $
+# FreeBSD: ports/sysutils/ruby-syslog/Makefile,v 1.4 2000/09/26 08:02:09 knu Exp
+
+DISTNAME=	syslog-20010130
+PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+CATEGORIES=	sysutils
+MASTER_SITES=	ftp://ftp.utdallas.edu/pub/staff/amos/ruby/
+
+MAINTAINER=	taca@netbsd.org
+HOMEPAGE=	http://www.utdallas.edu/~amos/ruby.html
+COMMENT=	Ruby module to access syslog(3) interface
+
+DIST_SUBDIR=	ruby
+USE_RUBY_EXTCONF= yes
+
+INSTALL_TARGET=	site-install
+
+pre-configure:
+	rm ${WRKSRC}/depend
+
+post-install:
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/syslog
+	${INSTALL_DATA} ${WRKSRC}/0README ${RUBY_DOCDIR}/syslog
+
+.include "../../lang/ruby-base/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
