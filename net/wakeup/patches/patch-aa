@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/18 22:28:16 hubertf Exp $
+
+--- hpwake.c.orig	Thu Nov 18 23:18:47 1999
++++ hpwake.c	Thu Nov 18 23:21:54 1999
+@@ -42,7 +42,7 @@
+ 
+         for (a = arg; *a; a++)
+                 if (*a != ':' && !isxdigit(*a)) {
+-                        fprintf(stderr, "MAC Adresse muss hexadezimal angegeben werden! [00:11:22:33:44:55]\n");
++                        fprintf(stderr, "MAC address must be given in hex! [00:11:22:33:44:55]\n");
+                         exit(2);
+                 }
+ 
+@@ -50,7 +50,7 @@
+                 &dstaddr[0], &dstaddr[1], &dstaddr[2], &dstaddr[3], &dstaddr[4], &dstaddr[5]);
+         
+         if (k != 6) {
+-                fprintf(stderr, "Ungueltige MAC Adresse! [00:11:22:33:44:55]\n");
++                fprintf(stderr, "Invalid MAC address! [00:11:22:33:44:55]\n");
+                 exit(2);
+         }
+                    
+@@ -98,6 +98,11 @@
+         int s;
+         int i;
+ 
++	if (argc < 2) {
++		fprintf(stderr, "Usage: %s xx:xx:xx:xx:xx:xx\n", argv[0]);
++		exit(1);
++	}
++
+         packetsize = get_magicpacket(magicpacket, argv[1]);
+         
+         if ((s = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
+@@ -111,7 +116,7 @@
+         server.sin_addr.s_addr = INADDR_ANY;
+         
+         client.sin_family = AF_INET;
+-        client.sin_port = 7777;
++        client.sin_port = 32768+666;		/* invalid port */
+         client.sin_addr.s_addr = INADDR_BROADCAST;
+         
+         if (bind(s, (struct sockaddr *)&server, sizeof(server)) < 0)
