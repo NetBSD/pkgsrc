@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/12/19 19:58:39 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2004/12/19 23:09:59 minskim Exp $
 
 DISTNAME=		devhelp-0.7
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/devhelp/0.7/}
 EXTRACT_SUFX=		.tar.bz2
