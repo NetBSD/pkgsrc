@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.6 2001/07/14 13:35:13 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2002/10/18 14:02:12 jlam Exp $
 
---- server/Imakefile.orig	Tue Dec 12 23:45:48 2000
+--- server/Imakefile.orig	Tue Dec 12 20:45:48 2000
 +++ server/Imakefile
-@@ -217,10 +217,11 @@
+@@ -38,7 +38,7 @@ XCOMM $NCDId: @(#)Imakefile,v 1.17 1995/
+      EXTENSIONS = 
+          XAULIB = 
+        XDMCPLIB = 
+-             OS = os/libos.a $(XAULIB) $(XDMCPLIB)
++             OS = os/libos.a $(XAULIB) $(XDMCPLIB) $(LIBOSSAUDIO)
+         BSDEMUL = $(LIBSRC)/Berk/Berklib.o
+             MFB =
+             CFB =
+@@ -217,10 +217,11 @@ clean::
  	$(RM) $(ALL)
  
   ETCDIR = NasConfigSearchPath
