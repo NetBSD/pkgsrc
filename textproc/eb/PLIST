@@ -1,21 +1,24 @@
-@comment $NetBSD: PLIST,v 1.11 2004/09/22 08:09:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/11/29 13:02:42 uebayasi Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
 bin/ebrefile
+bin/ebstopcode
 bin/ebunzip
 bin/ebzip
 bin/ebzipinfo
 include/eb/appendix.h
 include/eb/binary.h
+include/eb/booklist.h
 include/eb/defs.h
 include/eb/eb.h
 include/eb/error.h
 include/eb/font.h
+include/eb/sysdefs.h
 include/eb/text.h
 include/eb/zio.h
 lib/libeb.la
-share/aclocal/eb3.m4
+share/aclocal/eb4.m4
 share/eb/appendix/LIST
 share/eb/appendix/LIST-ja
 share/eb/appendix/cencro-1.0/catalog
@@ -198,8 +201,57 @@ share/eb/appendix/superdic98-1.0/kanjigen.app
 share/eb/appendix/superdic98-1.0/kanjigen/data/furoku
 share/eb/appendix/superdic98-1.0/koujien.app
 share/eb/appendix/superdic98-1.0/koujien/data/furoku
+share/eb/doc/eb-01.html
+share/eb/doc/eb-02.html
+share/eb/doc/eb-03.html
+share/eb/doc/eb-04.html
+share/eb/doc/eb-05.html
+share/eb/doc/eb-06.html
+share/eb/doc/eb-07.html
+share/eb/doc/eb-08.html
+share/eb/doc/eb-09.html
+share/eb/doc/eb-10.html
+share/eb/doc/eb-11.html
+share/eb/doc/eb-12.html
+share/eb/doc/eb-13.html
+share/eb/doc/eb-14.html
+share/eb/doc/eb.html
+share/eb/doc/ebappendix-01.html
+share/eb/doc/ebappendix-02.html
+share/eb/doc/ebappendix-03.html
+share/eb/doc/ebappendix-04.html
+share/eb/doc/ebappendix.html
+share/eb/doc/ebfont-01.html
+share/eb/doc/ebfont-02.html
+share/eb/doc/ebfont-03.html
+share/eb/doc/ebfont-04.html
+share/eb/doc/ebfont.html
+share/eb/doc/ebinfo-01.html
+share/eb/doc/ebinfo-02.html
+share/eb/doc/ebinfo-03.html
+share/eb/doc/ebinfo-04.html
+share/eb/doc/ebinfo-05.html
+share/eb/doc/ebinfo.html
+share/eb/doc/ebrefile-01.html
+share/eb/doc/ebrefile-02.html
+share/eb/doc/ebrefile-03.html
+share/eb/doc/ebrefile.html
+share/eb/doc/ebstopcode-01.html
+share/eb/doc/ebstopcode-02.html
+share/eb/doc/ebstopcode-03.html
+share/eb/doc/ebstopcode.html
+share/eb/doc/ebzip-01.html
+share/eb/doc/ebzip-02.html
+share/eb/doc/ebzip-03.html
+share/eb/doc/ebzip-04.html
+share/eb/doc/ebzip-05.html
+share/eb/doc/ebzip-06.html
+share/eb/doc/ebzip-07.html
+share/eb/doc/ebzip-08.html
+share/eb/doc/ebzip.html
 share/examples/eb/eb.conf.default
 @dirrm share/examples/eb
+@dirrm share/eb/doc
 @dirrm share/eb/appendix/superdic98-1.0/koujien/data
 @dirrm share/eb/appendix/superdic98-1.0/koujien
 @dirrm share/eb/appendix/superdic98-1.0/kanjigen/data
