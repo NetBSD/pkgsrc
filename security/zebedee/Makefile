@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/21 05:15:52 minskim Exp $
 #
 
 DISTNAME=		zebedee-2.3.1
@@ -11,16 +11,17 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.winton.org.uk/zebedee/
 COMMENT=		Simple tunneling program for TCP or UDP with encryption
 
+DEPENDS+=		tcl-[0-9]*:../../lang/tcl
+
 USE_PERL5=		build
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 
 MAKE_ENV+=		PERL5=${PERL5}
 MAKE_FLAGS=		OS=${LOWER_OPSYS}
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../lang/tcl83/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
