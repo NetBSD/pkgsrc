@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:18 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/18 21:36:53 jlam Exp $
 lib/java/xerces.jar
 share/doc/java/xerces/apiDocs/allclasses-frame.html
 share/doc/java/xerces/apiDocs/deprecated-list.html
@@ -570,3 +570,4 @@ share/examples/java/xerces/xercesSamples.jar
 @dirrm share/doc/java/xerces/apiDocs/index-files
 @dirrm share/doc/java/xerces/apiDocs
 @dirrm share/doc/java/xerces
+@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}
