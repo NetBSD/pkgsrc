@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/26 13:08:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/09 04:10:31 jlam Exp $
 #
 
 .include "../../multimedia/xine-lib/Makefile.common"
@@ -13,7 +13,7 @@ BUILD_DIRS=	${WRKSRC}/src/audio_out
 do-install:
 	cd ${WRKSRC}/src/audio_out && \
 		${LIBTOOL} --mode=install ${INSTALL_DATA} \
-		xineplug_ao_out_arts.la ${PREFIX}/lib/xine/plugins/1.0.0/
+		xineplug_ao_out_arts.la ${PREFIX}/lib/xine/plugins/1.0.0
 
 .include "../../audio/arts/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
