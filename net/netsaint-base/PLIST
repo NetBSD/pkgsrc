@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/25 12:54:18 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/04/14 10:57:11 rh Exp $
 bin/netsaint
-etc/netsaint/commands.cfg.sample
-etc/netsaint/hosts.cfg.sample
-etc/netsaint/netsaint.cfg.sample
-etc/netsaint/nscgi.cfg.sample
-etc/netsaint/resource.cfg.sample
+etc/netsaint/netsaint-setup.sh
 libexec/netsaint/cgi-bin/avail.cgi
 libexec/netsaint/cgi-bin/cmd.cgi
 libexec/netsaint/cgi-bin/config.cgi
@@ -20,7 +16,11 @@ libexec/netsaint/cgi-bin/statuswml.cgi
 libexec/netsaint/cgi-bin/statuswrl.cgi
 libexec/netsaint/cgi-bin/tac.cgi
 libexec/netsaint/cgi-bin/trends.cgi
-sbin/netsaint-setup.sh
+share/examples/netsaint/commands.cfg
+share/examples/netsaint/hosts.cfg
+share/examples/netsaint/netsaint.cfg
+share/examples/netsaint/nscgi.cfg
+share/examples/netsaint/resource.cfg
 share/netsaint/docs/about.html
 share/netsaint/docs/addons.html
 share/netsaint/docs/cgiauth.html
@@ -283,6 +283,7 @@ share/netsaint/stylesheets/trends.css
 @dirrm share/netsaint/docs/developer
 @dirrm share/netsaint/docs
 @dirrm share/netsaint
+@dirrm share/examples/netsaint
 @dirrm libexec/netsaint/cgi-bin
 @dirrm libexec/netsaint
 @dirrm etc/netsaint

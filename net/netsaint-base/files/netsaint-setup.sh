@@ -1,6 +1,8 @@
-#!/bin/sh
+#! /bin/sh
 #
-#       $NetBSD: netsaint-setup.sh,v 1.2 2002/03/25 12:54:18 rh Exp $
+#ident "@(#)$NetBSD: netsaint-setup.sh,v 1.3 2002/04/14 10:57:11 rh Exp $"
+#
+# Run this script as root to create these necessary runtime directories.
 #
 install -m 0755 -o @@USER@@ -g @@GROUP@@ -d /var/log/netsaint
 install -m 0755 -o @@USER@@ -g @@GROUP@@ -d /var/log/netsaint/archives
