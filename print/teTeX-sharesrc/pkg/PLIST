@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/03 14:10:42 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/12 21:11:30 tron Exp $
 share/texmf/source/latex/oberdiek/twoopt.sty
 share/texmf/source/latex/oberdiek/pagesel.sty
 share/texmf/source/latex/oberdiek/hypbmsec.sty
@@ -2430,4 +2430,4 @@ share/texmf/source/amstex/amsppt.sty
 @dirrm share/texmf/source/amstex
 share/texmf/source/README
 @dirrm share/texmf/source
-@dirrm share/texmf
+@unexec rmdir %D/share/texmf || true
