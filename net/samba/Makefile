@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2002/02/04 08:09:02 martti Exp $
+# $NetBSD: Makefile,v 1.76 2002/02/04 10:31:49 martti Exp $
 
 DISTNAME=		samba-2.2.3
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -59,6 +59,15 @@ BUILD_DEFS+=		USE_CUPS
 .include "../../security/PAM/buildlink.mk"
 BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--with-pam
+.endif
+
+.if defined(SAMBA_USE_LDAP) && ${SAMBA_USE_LDAP} == "YES"
+.include "../../databases/openldap/buildlink.mk"
+BUILD_DEFS+=		SAMBA_USE_LDAP
+CONFIGURE_ARGS+=	--with-ldapsam
+PLIST_SUBST+=		SAMBA_LDAP=""
+.else
+PLIST_SUBST+=		SAMBA_LDAP="@comment "
 .endif
 
 # The following are Linux-only options.
