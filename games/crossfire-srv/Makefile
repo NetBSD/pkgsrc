@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/24 13:30:55 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/27 03:09:58 snj Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -17,7 +17,7 @@ EXTRACT_ONLY=	${CF_SRC}
 CF_SRC=		crossfire-1.0.0.tar.bz2
 CF_MAPS=	crossfire-1.0.0-maps.tar.bz2
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_X11=	yes
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
@@ -43,8 +43,8 @@ post-install:
 	@${CHOWN} -R ${ROOT_USER}:games ${LOCALBASE}/var/crossfire
 	@${CHMOD} -R g+w ${LOCALBASE}/var/crossfire
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../devel/dmalloc/buildlink2.mk"
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../devel/dmalloc/buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
