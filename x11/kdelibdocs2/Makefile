@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/12/04 12:36:53 skrll Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/04 13:05:06 skrll Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGNAME=	${DISTNAME:S/kdelib/kdelibdoc/}
@@ -19,12 +19,12 @@ DOCINSTALLDIR=		${X11BASE}/share/doc/kde/HTML/en
 do-build:
 	${MKDIR} ${WRKDIR}/kdelibs
 	${LOCALBASE}/bin/qt2kdoc \
-		--outdir=${WRKDIR}/kdelibs \
+		--outdir=${WRKDIR}/kdelibs/kdoc-reference \
 		${QT2DIR}/qt2/doc/html
 	${LOCALBASE}/bin/makekdedoc \
 		--srcdir=${WRKSRC} \
 		--outputdir=${WRKDIR}/kdelibs \
-		--libdir=${WRKDIR}/kdelibs
+		--libdir=${WRKDIR}/kdelibs/kdoc-reference
 
 do-install:
 	cd ${WRKDIR}; \
