@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.15 2005/02/20 05:42:51 grant Exp $
+$NetBSD: patch-af,v 1.16 2005/03/23 09:06:38 jlam Exp $
 
---- Makefile.org.orig	2004-09-29 06:52:14.000000000 +1000
+--- Makefile.org.orig	2005-03-15 04:46:13.000000000 -0500
 +++ Makefile.org
 @@ -28,6 +28,7 @@ INSTALLTOP=/usr/local/ssl
  
@@ -43,7 +43,7 @@ $NetBSD: patch-af,v 1.15 2005/02/20 05:42:51 grant Exp $
  		-Wl,--whole-archive lib$$i.a \
  		-Wl,--no-whole-archive $$libs ${EX_LIBS} -lc ) || exit 1; \
  	libs="-l$$i $$libs"; \
-@@ -415,6 +417,7 @@ do_solaris-shared:
+@@ -422,6 +424,7 @@ do_solaris-shared:
  			-o lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
  			-h lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
  			-Wl,-Bsymbolic \
@@ -51,7 +51,7 @@ $NetBSD: patch-af,v 1.15 2005/02/20 05:42:51 grant Exp $
  			$${MINUSZ}allextract lib$$i.a $${MINUSZ}defaultextract \
  			$$libs ${EX_LIBS} -lc ) || exit 1; \
  		libs="-l$$i $$libs"; \
-@@ -548,7 +551,7 @@ do_hpux64-shared:
+@@ -565,7 +568,7 @@ do_hpux64-shared:
  #  HP/UX-64bit: +forceload
  #  AIX:		-bnogc
  # SHAREDFLAGS would be:
@@ -60,7 +60,7 @@ $NetBSD: patch-af,v 1.15 2005/02/20 05:42:51 grant Exp $
  #  Tru64 Unix:  -shared \
  #		-set_version "${SHLIB_VERSION_HISTORY}${SHLIB_VERSION_NUMBER}"
  #  Solaris:     -G -h lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
-@@ -790,16 +793,14 @@ dist:   
+@@ -798,16 +801,14 @@ dist:   
  dist_pem_h:
  	(cd crypto/pem; $(MAKE) CC='${CC}' SDIRS='${SDIRS}' CFLAG='${CFLAG}' pem.h; $(MAKE) clean)
  
@@ -76,6 +76,66 @@ $NetBSD: patch-af,v 1.15 2005/02/20 05:42:51 grant Exp $
 -		$(INSTALL_PREFIX)$(OPENSSLDIR)/certs \
 -		$(INSTALL_PREFIX)$(OPENSSLDIR)/private
 +		$(INSTALL_PREFIX)$(EXAMPLEDIR)
- 	@for i in $(EXHEADER) ;\
+ 	@headerlist="$(EXHEADER)"; for i in $$headerlist ;\
  	do \
  	(cp $$i $(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl/$$i; \
+@@ -893,35 +894,53 @@ install_docs:
+ 	for i in doc/apps/*.pod; do \
+ 		fn=`basename $$i .pod`; \
+ 		if [ "$$fn" = "config" ]; then sec=5; else sec=1; fi; \
+-		echo "installing man$$sec/$$fn.$${sec}$(MANSUFFIX)"; \
++		case "$$fn" in \
++		CA.pl|openssl) ofn="$$fn" ;; \
++		*) ofn="openssl_$$fn" ;; \
++		esac; \
++		echo "installing man$$sec/$$ofn.$${sec}$(MANSUFFIX)"; \
+ 		(cd `$(PERL) util/dirname.pl $$i`; \
+ 		sh -c "$$pod2man \
+ 			--section=$$sec --center=OpenSSL \
+ 			--release=$(VERSION) `basename $$i`") \
+-			>  $(INSTALL_PREFIX)$(MANDIR)/man$$sec/$$fn.$${sec}$(MANSUFFIX); \
++			>  $(INSTALL_PREFIX)$(MANDIR)/man$$sec/$$ofn.$${sec}$(MANSUFFIX); \
+ 		$(PERL) util/extract-names.pl < $$i | \
+ 			grep -v $$filecase "^$$fn\$$" | \
+ 			grep -v "[	]" | \
+ 			(cd $(INSTALL_PREFIX)$(MANDIR)/man$$sec/; \
+ 			 while read n; do \
+-				$$here/util/point.sh $$fn.$${sec}$(MANSUFFIX) "$$n".$${sec}$(MANSUFFIX); \
++				case "$$n" in \
++				CA.pl|openssl) on="$$n" ;; \
++				*) on="openssl_$$n" ;; \
++				esac; \
++				$$here/util/point.sh $$ofn.$${sec}$(MANSUFFIX) "$$on".$${sec}$(MANSUFFIX); \
+ 			 done); \
+ 	done; \
+ 	for i in doc/crypto/*.pod doc/ssl/*.pod; do \
+ 		fn=`basename $$i .pod`; \
+ 		if [ "$$fn" = "des_modes" ]; then sec=7; else sec=3; fi; \
+-		echo "installing man$$sec/$$fn.$${sec}$(MANSUFFIX)"; \
++		case "$$fn" in \
++		ui*) ofn="openssl_$$fn" ;; \
++		[A-Z]*|*_*) ofn="$$fn" ;; \
++		*) ofn="openssl_$$fn" ;; \
++		esac; \
++		echo "installing man$$sec/$$ofn.$${sec}$(MANSUFFIX)"; \
+ 		(cd `$(PERL) util/dirname.pl $$i`; \
+ 		sh -c "$$pod2man \
+ 			--section=$$sec --center=OpenSSL \
+ 			--release=$(VERSION) `basename $$i`") \
+-			>  $(INSTALL_PREFIX)$(MANDIR)/man$$sec/$$fn.$${sec}$(MANSUFFIX); \
++			>  $(INSTALL_PREFIX)$(MANDIR)/man$$sec/$$ofn.$${sec}$(MANSUFFIX); \
+ 		$(PERL) util/extract-names.pl < $$i | \
+ 			grep -v $$filecase "^$$fn\$$" | \
+ 			grep -v "[	]" | \
+ 			(cd $(INSTALL_PREFIX)$(MANDIR)/man$$sec/; \
+ 			 while read n; do \
+-				$$here/util/point.sh $$fn.$${sec}$(MANSUFFIX) "$$n".$${sec}$(MANSUFFIX); \
++				case "$$n" in \
++				ui*) on="openssl_$$n" ;; \
++				[A-Z]*|*_*) on="$$n" ;; \
++				*) on="openssl_$$n" ;; \
++				esac; \
++				$$here/util/point.sh $$ofn.$${sec}$(MANSUFFIX) "$$on".$${sec}$(MANSUFFIX); \
+ 			 done); \
+ 	done
+ 
