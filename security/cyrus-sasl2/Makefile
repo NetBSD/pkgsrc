@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2004/08/06 06:36:18 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2004/08/13 18:08:02 jlam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
 
@@ -21,26 +21,24 @@ USE_DB185=		no
 CONFIGURE_ARGS+=	--with-dblib=${SASL_DBTYPE}
 CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
 
-# Authentication mechanisms
-CONFIGURE_ARGS+=	--enable-anon		# ANONYMOUS
-CONFIGURE_ARGS+=	--enable-checkapop	# CHECKAPOP
-CONFIGURE_ARGS+=	--enable-cram		# CRAM-MD5
-CONFIGURE_ARGS+=	--enable-otp		# OTP
-CONFIGURE_ARGS+=	--enable-plain		# PLAIN
+# Support using Cyrus saslauthd (security/cyrus-saslauthd) for plaintext
+# password authentication.
+#
+SASLSOCKETDIR?=		${VARBASE}/run/saslauthd
+CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR}
+BUILD_DEFS+=		SASLSOCKETDIR
 
-CONFIGURE_ARGS+=	--enable-digest		# DIGEST-MD5
-CONFIGURE_ARGS+=	--with-rc4
-CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
-.include "../../security/openssl/buildlink3.mk"
-
-# Support using the Courier authdaemon (mail/courier-auth*) for
-# plaintext password authentication.
+# Support using the Courier authdaemon (mail/courier-auth*) for plaintext
+# password authentication.
 #
 AUTHDAEMONVAR?=		${VARBASE}/authdaemon
 CONFIGURE_ARGS+=        --with-authdaemond=${AUTHDAEMONVAR}
 BUILD_DEFS+=		AUTHDAEMONVAR
 
-.include "options.mk"
+# Support using APOP against a POP server for plaintext password
+# authentication.
+#
+CONFIGURE_ARGS+=	--enable-checkapop
 
 .if exists(/dev/urandom)
 SASL_ENTROPY_SOURCE?=	/dev/urandom
@@ -50,8 +48,17 @@ CONFIGURE_ARGS+=	--with-devrandom=${SASL_ENTROPY_SOURCE}
 .endif
 BUILD_DEFS+=		SASL_ENTROPY_SOURCE
 
-USE_PKGINSTALL=		YES
+USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+
+# CYRUS_USER		username of the Cyrus administrator
+# CYRUS_GROUP		group of the Cyrus administrator
+#
+CYRUS_USER?=		cyrus
+CYRUS_GROUP?=		mail
+FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
+FILES_SUBST+=		ROOT_USER=${ROOT_USER}
+BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 
 PKG_GROUPS=		${CYRUS_GROUP}
 PKG_USERS=		${CYRUS_USER}:${CYRUS_GROUP}::::${SH}
