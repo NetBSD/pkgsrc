@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9677 2005/03/29 16:03:18 wiz Exp $
+$NetBSD: CHANGES,v 1.9678 2005/03/29 16:25:05 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1813,3 +1813,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ImageMagick to 6.2.1.0 [adam 2005-03-29]
 	Updated putty to 0.57 [wiz 2005-03-29]
 	Updated openexr to 1.2.2 [wiz 2005-03-29]
+	Updated amarok to 1.2.3 [seb 2005-03-29]
