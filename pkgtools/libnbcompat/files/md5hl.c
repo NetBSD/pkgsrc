@@ -1,12 +1,12 @@
-/*	$NetBSD: md5hl.c,v 1.1.1.1 2003/03/31 05:02:45 grant Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.2 2003/09/01 15:31:17 jlam Exp $	*/
 
 /*
  * Written by Jason R. Thorpe <thorpej@netbsd.org>, April 29, 1997.
  * Public domain.
  */
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
+#if HAVE_CONFIG_H
+#include "nbconfig.h"
 #endif
 
 /* #include "namespace.h" */
@@ -20,7 +20,7 @@
 #define _DIAGASSERT(cond)	assert(cond)
 #endif
 
-/*	$NetBSD: md5hl.c,v 1.1.1.1 2003/03/31 05:02:45 grant Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.2 2003/09/01 15:31:17 jlam Exp $	*/
 
 /*
  * ----------------------------------------------------------------------------
@@ -38,15 +38,15 @@
  */
 
 #include <assert.h>
-#ifdef HAVE_FCNTL_H
+#if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-#ifdef HAVE_ERRNO_H
+#if HAVE_ERRNO_H
 #include <errno.h>
 #endif
 #include <stdio.h>
 #include <stdlib.h>
-#ifdef HAVE_UNISTD_H
+#if HAVE_UNISTD_H
 #include <unistd.h>
 #endif
 

@@ -1,3 +1,5 @@
+/*	$NetBSD: setenv.c,v 1.5 2003/09/01 15:31:19 jlam Exp $ */
+
 /*
  * Copyright (c) 1987 Regents of the University of California.
  * All rights reserved.
@@ -29,14 +31,14 @@
 
 #if defined(LIBC_SCCS) && !defined(lint)
 /*static char *sccsid = "from: @(#)setenv.c	5.6 (Berkeley) 6/4/91";*/
-static char *rcsid = "$Id: setenv.c,v 1.4 2003/08/27 12:25:40 jmmv Exp $";
+static char *rcsid = "$Id: setenv.c,v 1.5 2003/09/01 15:31:19 jlam Exp $";
 #endif /* LIBC_SCCS and not lint */
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
+#if HAVE_CONFIG_H
+#include "nbconfig.h"
 #endif
 
-#ifdef HAVE_STRINGS_H
+#if HAVE_STRINGS_H
 #include <strings.h>
 #endif
 
