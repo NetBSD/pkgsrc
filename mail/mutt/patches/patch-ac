@@ -1,10 +1,30 @@
-$NetBSD: patch-ac,v 1.1 2000/05/20 01:08:32 kim Exp $
+$NetBSD: patch-ac,v 1.2 2000/05/20 18:41:41 kim Exp $
 
---- protos.h.orig	Tue Mar  7 06:13:38 2000
-+++ protos.h	Fri May 19 20:56:17 2000
-@@ -437,4 +437,4 @@
- void ci_bounce_message (HEADER *, int *);
- int ci_send_message (int, HEADER *, char *, CONTEXT *, HEADER *);
+--- init.c	2000/05/17 03:35:49	2.29
++++ init.c	2000/05/20 07:30:46
+@@ -42,7 +42,6 @@
+ #include "init.h"
+ #include "mailbox.h"
  
--
-+char *mutt_expand_realname(char *, const char *);
+-#include <pwd.h>
+ #include <ctype.h>
+ #include <stdlib.h>
+ #include <unistd.h>
+@@ -1710,13 +1709,13 @@
+   /* Get some information about the user */
+   if ((pw = getpwuid (getuid ())))
+   {
++    char rnbuf[STRING];
++
+     Username = safe_strdup (pw->pw_name);
+     if (!Homedir)
+       Homedir = safe_strdup (pw->pw_dir);
+-    if ((p = strchr (pw->pw_gecos, ',')))
+-      Realname = mutt_substrdup (pw->pw_gecos, p);
+-    else
+-      Realname = safe_strdup (pw->pw_gecos);
++
++    Realname = safe_strdup (mutt_gecos_name (rnbuf, sizeof (rnbuf), pw));
+     Shell = safe_strdup (pw->pw_shell);
+   }
+   else 
