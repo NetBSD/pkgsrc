@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/11 22:22:50 kim Exp $
+lib/perl5/man/man3/HTML::Parser.3
+lib/perl5/man/man3/HTML::Entities.3
+lib/perl5/man/man3/HTML::Filter.3
+lib/perl5/man/man3/HTML::HeadParser.3
+lib/perl5/man/man3/HTML::TokeParser.3
+lib/perl5/man/man3/HTML::LinkExtor.3
+lib/perl5/site_perl/HTML/Parser.pm
+lib/perl5/site_perl/HTML/Entities.pm
+lib/perl5/site_perl/HTML/Filter.pm
+lib/perl5/site_perl/HTML/HeadParser.pm
+lib/perl5/site_perl/HTML/LinkExtor.pm
+lib/perl5/site_perl/HTML/TokeParser.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/HTML/Parser/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/HTML/Parser
+@dirrm lib/perl5/site_perl/HTML
