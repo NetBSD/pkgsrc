@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.6 2004/12/23 03:05:53 xtraeme Exp $
+$NetBSD: patch-ag,v 1.7 2005/03/28 08:12:48 jmmv Exp $
 
---- configure.ac.orig	2004-12-14 23:06:47.000000000 +0100
-+++ configure.ac	2004-12-23 02:02:47.000000000 +0100
-@@ -395,6 +395,9 @@
+--- configure.ac.orig	2004-12-25 18:40:24.000000000 +0100
++++ configure.ac
+@@ -400,6 +400,9 @@ AC_CHECK_LIB(socket, socket, NET_LIBS="-
  AC_CHECK_LIB(nsl, gethostbyname, NET_LIBS="-lnsl $NET_LIBS",)
  AC_SUBST(NET_LIBS)
  
@@ -12,7 +12,15 @@ $NetBSD: patch-ag,v 1.6 2004/12/23 03:05:53 xtraeme Exp $
  
  dnl ---------------------------------------------
  dnl socklen_t
-@@ -571,7 +574,7 @@
+@@ -514,6 +517,7 @@ if test x"$no_x" != "xyes"; then
+   AC_FIND_LIBXV
+ 
+ fi
++AM_CONDITIONAL(HAVE_XV, test x$ac_have_xv = "xyes")
+ 
+ 
+ host_or_hostalias="$host"
+@@ -576,7 +580,7 @@ XXMC_LIB="-L$xxmc_path -l$xxmc_stub"
  AC_MSG_CHECKING(whether to enable the xxmc plugin with vld extensions)
  AC_MSG_RESULT()
  dnl Check if vld "extended" XvMC is available
@@ -21,7 +29,7 @@ $NetBSD: patch-ag,v 1.6 2004/12/23 03:05:53 xtraeme Exp $
  	AC_CHECK_LIB($xxmc_stub, XvMCPutSlice,
               	     ac_have_xxmc="yes",
  	             [ac_have_xxmc="no"
-@@ -600,7 +603,7 @@
+@@ -605,7 +609,7 @@ if test x$ac_have_xxmc = "xyes"; then
  fi
  dnl Try fallback to standard XvMC if vld failed
  if test x$ac_have_xxmc = "xno"; then
@@ -30,7 +38,7 @@ $NetBSD: patch-ag,v 1.6 2004/12/23 03:05:53 xtraeme Exp $
  	  AC_CHECK_LIB($xxmc_stub, XvMCCreateContext,
                 ac_have_xxmc="yes",
  	       [ac_have_xxmc="no"
-@@ -654,7 +657,7 @@
+@@ -659,7 +663,7 @@ saved_libs="$LIBS"
  XVMC_LIB="-L$xvmc_path -l$xvmc_stub"
  AC_MSG_CHECKING(whether to enable the xvmc plugin)
  AC_MSG_RESULT()
@@ -39,7 +47,7 @@ $NetBSD: patch-ag,v 1.6 2004/12/23 03:05:53 xtraeme Exp $
  	AC_CHECK_LIB($xvmc_stub, XvMCCreateContext,
               ac_have_xvmc="yes",
  	     [ac_have_xvmc="no"
-@@ -694,8 +697,7 @@
+@@ -699,8 +703,7 @@ dnl Checks for Xinerama extension
  dnl ---------------------------------------------
  
  AC_CHECK_LIB(Xinerama, XineramaQueryExtension, 
@@ -49,7 +57,7 @@ $NetBSD: patch-ag,v 1.6 2004/12/23 03:05:53 xtraeme Exp $
                ac_have_xinerama="yes"],,
               [$X_LIBS $X_PRE_LIBS -lXext $X_EXTRA_LIBS])
  dnl AM_CONDITIONAL(HAVE_XINERAMA, test x$ac_have_xinerama = "xyes")
-@@ -1068,9 +1070,19 @@
+@@ -1073,9 +1076,19 @@ dnl ------------------------------------
  dnl OSS style audio interface
  dnl ---------------------------------------------
  
@@ -69,7 +77,7 @@ $NetBSD: patch-ag,v 1.6 2004/12/23 03:05:53 xtraeme Exp $
  	    #ifdef __NetBSD__
  	    #include <soundcard.h>
  	    #else
-@@ -1083,7 +1095,7 @@
+@@ -1088,7 +1101,7 @@ AC_TRY_COMPILE([
  	])
  AC_MSG_RESULT($have_ossaudio)
  AM_CONDITIONAL(HAVE_OSS, test x"$have_ossaudio" = "xyes")
@@ -78,7 +86,7 @@ $NetBSD: patch-ag,v 1.6 2004/12/23 03:05:53 xtraeme Exp $
  
  dnl ---------------------------------------------
  dnl Alsa support
-@@ -1124,9 +1136,10 @@
+@@ -1129,9 +1142,10 @@ dnl ------------------------------------
  dnl gnome-vfs support
  dnl ---------------------------------------------
  
