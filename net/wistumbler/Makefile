@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2002/08/08 05:47:17 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/09 13:36:51 wiz Exp $
 
-DISTNAME=	wistumbler-20020807
+DISTNAME=	wistumbler-20020809
 CATEGORIES=	net
 MASTER_SITES=	http://gongon.com/persons/iseki/wistumbler/
 
