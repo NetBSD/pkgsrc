@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/27 12:42:08 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/07/27 12:47:33 jlam Exp $
 
 DISTNAME=	thttpd-2.19
 CATEGORIES=	www
@@ -31,13 +31,13 @@ post-build:
 	done
 
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/www
+	${INSTALL_DATA_DIR} ${PREFIX}/share/thttpd
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/thttpd.conf ${PREFIX}/share/examples
 	${INSTALL_SCRIPT} ${WRKDIR}/thttpd.sh ${PREFIX}/etc/rc.d
-	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/www
-	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/www
+	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/thttpd
+	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/thttpd
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
