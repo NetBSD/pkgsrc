@@ -1,0 +1,15 @@
+FreeTDS is a free (open source, LGPL-licensed) implementation of
+Sybase's db-lib, ct-lib, and ODBC libraries.  Currently, dblib and ctlib
+are most mature.  Both of these libraries have several programs know to
+compile and run against them.  ODBC is just a roughed in skeleton, and
+not useful for real work.
+
+FreeTDS will run at protocol versions 4.2, 4.6, or 5.0 and thus can
+access both Sybase and Microsoft SQL-Servers.  Note: Microsoft SQL
+servers do not support TDS versions above 4.2 and need to be configured
+with the --with-tdsver=4.2 flag.
+
+Experimental support for TDS 7.0 (the version used by MS SQL Server 7.0)
+is now included.  It works for me but beyond that I can't promise much.
+That said, TDS 7.0 support can be configured by using the
+--with-tdsver=7.0 when running configure.
