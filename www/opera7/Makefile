@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/07/31 07:24:03 jdolecek Exp $
+# $NetBSD: Makefile,v 1.23 2004/08/12 16:49:30 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 PKGREVISION=	# empty
@@ -29,11 +29,11 @@ USE_LANGUAGES=          # empty
 
 .include "../../mk/bsd.prefs.mk"
 
-# A default so lintpkgsrc is happy
-OPERA_PKG_VERSION=	7.51
+OPERA_LANG=		en
+OPERA_VER_DATE=		20040716
+OPERA_PKG_VERSION=	7.53
 
 .if (${OPSYS} == NetBSD)
-DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_freetype2>=7.3:../../emulators/${SUSE_DIR_PREFIX}_freetype2
 DEPENDS+=	suse_libjpeg>=7.3:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
 DEPENDS+=	suse_libpng>=7.3:../../emulators/${SUSE_DIR_PREFIX}_libpng
@@ -47,9 +47,6 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 EXTRACT_SUFX=		.rpm
 OPERA_ARCH=		.i386
-OPERA_LANG=		en
-OPERA_VER_DATE=		20040716
-OPERA_PKG_VERSION=	7.53
 OPERA_DIR=		linux/${OPERA_PKG_VERSION:S/.//g:C/beta.*//}/final/${OPERA_LANG}/${OPERA_ARCH:S/.//}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//}-${OPERA_VER_DATE}.1-static-qt
 
@@ -58,9 +55,6 @@ RPMFILES=	${DISTFILES}
 .elif (${OPSYS} == FreeBSD)
 EXTRACT_SUFX=		.tar.gz
 OPERA_ARCH=		.i386.freebsd
-OPERA_LANG=		en
-OPERA_VER_DATE=		20040716
-OPERA_PKG_VERSION=	7.53
 OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION:S/.//g:}/final/${OPERA_LANG}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1-static-qt
 
@@ -71,9 +65,6 @@ OWN_DIRS=		${PREFIX}/share/opera/plugins
 .elif (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
 EXTRACT_SUFX=		.tar.gz
 OPERA_ARCH=		-sol8-sparc-local
-OPERA_LANG=		en
-OPERA_VER_DATE=		20040716
-OPERA_PKG_VERSION=	7.53
 OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION:S/.//g}/final/${OPERA_LANG}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1-static-qt
 
