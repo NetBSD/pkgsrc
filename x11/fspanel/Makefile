@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/23 16:59:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/01 13:44:51 jschauma Exp $
 #
 
 DISTNAME=	fspanel-0.8beta1
@@ -19,6 +19,6 @@ CFLAGS+=	-DHAVE_XPM -DXFT
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fspanel ${PREFIX}/bin/
 
-.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../fonts/Xft2/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
