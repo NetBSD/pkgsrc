@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/23 15:42:05 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/23 15:50:55 jlam Exp $
 #
 # This Makefile fragment is included by packages that use apxs from Apache.
 #
@@ -25,8 +25,8 @@ BUILD_DEPENDS+=			${BUILDLINK_DEPENDS.apache}:../../comms/apache
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.apache=apache
 BUILDLINK_PREFIX.apache_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.apache=			include/httpd/*/*.h
-BUILDLINK_FILES.apache+=		include/httpd/*.h
+BUILDLINK_FILES.apache=			include/httpd/*/*.[ch]
+BUILDLINK_FILES.apache+=		include/httpd/*.[ch]
 
 BUILDLINK_TARGETS.apache=	apache-buildlink
 BUILDLINK_TARGETS.apache+=	apache-apxs-buildlink
