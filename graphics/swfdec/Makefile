@@ -1,32 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2004/01/07 02:21:16 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/22 12:48:32 jmmv Exp $
 #
 
-DISTNAME=		swfdec-0.2.1
-PKGREVISION=		6
-CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swfdec/}
+.include "Makefile.common"
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://swfdec.sourceforge.net/
-COMMENT=		Library for rendering Flash(R) animations and games
+PKGREVISION=		7
 
-GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
-USE_PKGINSTALL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-PKGCONFIG_OVERRIDE=	${WRKSRC}/swfdec.pc.in
-
-.if !defined(PKG_SYSCONFDIR.gtk2) || empty(PKG_SYSCONFDIR.gtk2)
-MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFBASEDIR}/gtk-2.0"
-.else
-MESSAGE_SUBST+=		PKG_SYSCONFDIR.gtk2="${PKG_SYSCONFDIR.gtk2}"
-.endif
-
-pre-install:
-	echo "install:" >${WRKSRC}/plugin/Makefile
+CONFIGURE_ARGS+=	--disable-pixbuf-loader
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
