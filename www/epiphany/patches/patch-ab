@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.5 2004/09/25 17:59:08 jmmv Exp $
+
+--- embed/mozilla/GlobalHistory.cpp.orig	2004-08-27 22:39:10.000000000 +0200
++++ embed/mozilla/GlobalHistory.cpp
+@@ -133,7 +133,7 @@ NS_IMETHODIMP MozGlobalHistory::HidePage
+ 	return NS_ERROR_NOT_IMPLEMENTED;
+ }
+ 
+-#if (MOZILLA_IS_BRANCH (1, 7) && MOZILLA_CHECK_VERSION3 (1, 7, 3)) || MOZILLA_CHECK_VERSION4 (1, 8, MOZILLA_ALPHA, 3)
++#if MOZILLA_CHECK_VERSION4 (1, 8, MOZILLA_ALPHA, 3)
+ /* void removePage (in nsIURI aURI); */
+ NS_IMETHODIMP MozGlobalHistory::RemovePage(nsIURI *aURI)
+ {
+@@ -179,7 +179,7 @@ NS_IMETHODIMP MozGlobalHistory::GetCount
+     return NS_ERROR_NOT_IMPLEMENTED;
+ }
+ 
+-#if (MOZILLA_IS_BRANCH (1, 7) && MOZILLA_CHECK_VERSION3 (1, 7, 3)) || MOZILLA_CHECK_VERSION4 (1, 8, MOZILLA_ALPHA, 3)
++#if MOZILLA_CHECK_VERSION4 (1, 8, MOZILLA_ALPHA, 3)
+ /* void markPageAsTyped (in AUTF8String aURI) */
+ NS_IMETHODIMP MozGlobalHistory::MarkPageAsTyped(nsIURI *aURI)
+ {
