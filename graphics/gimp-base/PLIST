@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/15 20:52:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/07 14:54:42 hubertf Exp $
 bin/gimp
 bin/gimp-1.2
 bin/gimp-config
@@ -173,7 +173,7 @@ lib/gimp/1.2/plug-ins/gtm
 lib/gimp/1.2/plug-ins/guillotine
 lib/gimp/1.2/plug-ins/gz
 lib/gimp/1.2/plug-ins/header
-lib/gimp/1.2/plug-ins/helpbrowser
+${HELPBROWSER}lib/gimp/1.2/plug-ins/helpbrowser
 lib/gimp/1.2/plug-ins/hot
 lib/gimp/1.2/plug-ins/hrz
 lib/gimp/1.2/plug-ins/ifscompose
@@ -274,14 +274,14 @@ lib/libgimpui-1.2.so.0.3
 lib/libgimpui.a
 lib/libgimpui.la
 lib/libgimpui.so
-man/man1/gimp-remote.1
-man/man1/gimp-remote-1.2.1
-man/man1/gimp.1
 man/man1/gimp-1.2.1
-man/man1/gimptool.1
+man/man1/gimp-remote-1.2.1
+man/man1/gimp-remote.1
+man/man1/gimp.1
 man/man1/gimptool-1.2.1
-man/man5/gimprc.5
+man/man1/gimptool.1
 man/man5/gimprc-1.2.5
+man/man5/gimprc.5
 share/aclocal/gimp.m4
 share/gimp/1.2/brushes/10x10square.gbr
 share/gimp/1.2/brushes/10x10squareBlur.gbr
@@ -759,8 +759,8 @@ share/gimp/1.2/help/C/filters/depthmerge.html
 share/gimp/1.2/help/C/filters/despeckle.html
 share/gimp/1.2/help/C/filters/destripe.html
 share/gimp/1.2/help/C/filters/diffraction.html
-share/gimp/1.2/help/C/filters/ditherize.html
 share/gimp/1.2/help/C/filters/displace.html
+share/gimp/1.2/help/C/filters/ditherize.html
 share/gimp/1.2/help/C/filters/dust.html
 share/gimp/1.2/help/C/filters/edge.html
 share/gimp/1.2/help/C/filters/emboss.html
@@ -789,10 +789,10 @@ share/gimp/1.2/help/C/filters/gfig.html
 share/gimp/1.2/help/C/filters/gflare.html
 share/gimp/1.2/help/C/filters/gih.html
 share/gimp/1.2/help/C/filters/gimpressionist.html
-share/gimp/1.2/help/C/filters/gqbist.html
 share/gimp/1.2/help/C/filters/glasstile.html
 share/gimp/1.2/help/C/filters/glowing_steel.html
 share/gimp/1.2/help/C/filters/gouge.html
+share/gimp/1.2/help/C/filters/gqbist.html
 share/gimp/1.2/help/C/filters/gradmap.html
 share/gimp/1.2/help/C/filters/grid.html
 share/gimp/1.2/help/C/filters/gtm.html
@@ -1339,126 +1339,126 @@ share/gimp/1.2/tips/gimp_tips.uk.txt
 share/gimp/1.2/tips/gimp_tips.zh_CN.txt
 share/gimp/1.2/tips/gimp_tips.zh_TW.txt
 share/gimp/1.2/user_install
-share/locale/ca/LC_MESSAGES/gimp-libgimp.mo
-share/locale/ca/LC_MESSAGES/gimp-script-fu.mo
-share/locale/ca/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/ca/LC_MESSAGES/gimp.mo
-share/locale/cs/LC_MESSAGES/gimp-libgimp.mo
-share/locale/cs/LC_MESSAGES/gimp-script-fu.mo
-share/locale/cs/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/cs/LC_MESSAGES/gimp.mo
-share/locale/da/LC_MESSAGES/gimp-libgimp.mo
-share/locale/da/LC_MESSAGES/gimp-script-fu.mo
-share/locale/da/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/da/LC_MESSAGES/gimp.mo
-share/locale/de/LC_MESSAGES/gimp-libgimp.mo
-share/locale/de/LC_MESSAGES/gimp-script-fu.mo
-share/locale/de/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/de/LC_MESSAGES/gimp.mo
-share/locale/el/LC_MESSAGES/gimp-libgimp.mo
-share/locale/el/LC_MESSAGES/gimp-script-fu.mo
-share/locale/el/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/el/LC_MESSAGES/gimp.mo
-share/locale/en_GB/LC_MESSAGES/gimp-libgimp.mo
-share/locale/en_GB/LC_MESSAGES/gimp-script-fu.mo
-share/locale/en_GB/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/en_GB/LC_MESSAGES/gimp.mo
-share/locale/es/LC_MESSAGES/gimp-libgimp.mo
-share/locale/es/LC_MESSAGES/gimp-script-fu.mo
-share/locale/es/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/es/LC_MESSAGES/gimp.mo
-share/locale/fi/LC_MESSAGES/gimp-libgimp.mo
-share/locale/fi/LC_MESSAGES/gimp-script-fu.mo
-share/locale/fi/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/fi/LC_MESSAGES/gimp.mo
-share/locale/fr/LC_MESSAGES/gimp-libgimp.mo
-share/locale/fr/LC_MESSAGES/gimp-script-fu.mo
-share/locale/fr/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/fr/LC_MESSAGES/gimp.mo
-share/locale/ga/LC_MESSAGES/gimp-libgimp.mo
-share/locale/ga/LC_MESSAGES/gimp-script-fu.mo
-share/locale/ga/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/ga/LC_MESSAGES/gimp.mo
-share/locale/gl/LC_MESSAGES/gimp-libgimp.mo
-share/locale/gl/LC_MESSAGES/gimp-script-fu.mo
-share/locale/gl/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/gl/LC_MESSAGES/gimp.mo
-share/locale/hr/LC_MESSAGES/gimp-libgimp.mo
-share/locale/hr/LC_MESSAGES/gimp-script-fu.mo
-share/locale/hr/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/hr/LC_MESSAGES/gimp.mo
-share/locale/hu/LC_MESSAGES/gimp-libgimp.mo
-share/locale/hu/LC_MESSAGES/gimp-script-fu.mo
-share/locale/hu/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/hu/LC_MESSAGES/gimp.mo
-share/locale/it/LC_MESSAGES/gimp-libgimp.mo
-share/locale/it/LC_MESSAGES/gimp-script-fu.mo
-share/locale/it/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/it/LC_MESSAGES/gimp.mo
-share/locale/ja/LC_MESSAGES/gimp-libgimp.mo
-share/locale/ja/LC_MESSAGES/gimp-script-fu.mo
-share/locale/ja/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/ja/LC_MESSAGES/gimp.mo
-share/locale/ko/LC_MESSAGES/gimp-libgimp.mo
-share/locale/ko/LC_MESSAGES/gimp-script-fu.mo
-share/locale/ko/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/ko/LC_MESSAGES/gimp.mo
-share/locale/lt/LC_MESSAGES/gimp-libgimp.mo
-share/locale/lt/LC_MESSAGES/gimp-script-fu.mo
-share/locale/lt/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/lt/LC_MESSAGES/gimp.mo
-share/locale/nl/LC_MESSAGES/gimp-libgimp.mo
-share/locale/nl/LC_MESSAGES/gimp-script-fu.mo
-share/locale/nl/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/nl/LC_MESSAGES/gimp.mo
-share/locale/nn/LC_MESSAGES/gimp-libgimp.mo
-share/locale/nn/LC_MESSAGES/gimp-script-fu.mo
-share/locale/nn/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/nn/LC_MESSAGES/gimp.mo
-share/locale/no/LC_MESSAGES/gimp-libgimp.mo
-share/locale/no/LC_MESSAGES/gimp-script-fu.mo
-share/locale/no/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/no/LC_MESSAGES/gimp.mo
-share/locale/pl/LC_MESSAGES/gimp-libgimp.mo
-share/locale/pl/LC_MESSAGES/gimp-script-fu.mo
-share/locale/pl/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/pl/LC_MESSAGES/gimp.mo
-share/locale/pt_BR/LC_MESSAGES/gimp-libgimp.mo
-share/locale/pt_BR/LC_MESSAGES/gimp-script-fu.mo
-share/locale/pt_BR/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/pt_BR/LC_MESSAGES/gimp.mo
-share/locale/ru/LC_MESSAGES/gimp-libgimp.mo
-share/locale/ru/LC_MESSAGES/gimp-script-fu.mo
-share/locale/ru/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/ru/LC_MESSAGES/gimp.mo
-share/locale/ro/LC_MESSAGES/gimp-libgimp.mo
-share/locale/ro/LC_MESSAGES/gimp-script-fu.mo
-share/locale/ro/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/ro/LC_MESSAGES/gimp.mo
-share/locale/sk/LC_MESSAGES/gimp-libgimp.mo
-share/locale/sk/LC_MESSAGES/gimp-script-fu.mo
-share/locale/sk/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/sk/LC_MESSAGES/gimp.mo
-share/locale/sv/LC_MESSAGES/gimp-libgimp.mo
-share/locale/sv/LC_MESSAGES/gimp-script-fu.mo
-share/locale/sv/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/sv/LC_MESSAGES/gimp.mo
-share/locale/tr/LC_MESSAGES/gimp-libgimp.mo
-share/locale/tr/LC_MESSAGES/gimp-script-fu.mo
-share/locale/tr/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/tr/LC_MESSAGES/gimp.mo
-share/locale/uk/LC_MESSAGES/gimp-libgimp.mo
-share/locale/uk/LC_MESSAGES/gimp-script-fu.mo
-share/locale/uk/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/uk/LC_MESSAGES/gimp.mo
-share/locale/zh_CN/LC_MESSAGES/gimp-libgimp.mo
-share/locale/zh_CN/LC_MESSAGES/gimp-script-fu.mo
-share/locale/zh_CN/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/zh_CN/LC_MESSAGES/gimp.mo
-share/locale/zh_TW/LC_MESSAGES/gimp-libgimp.mo
-share/locale/zh_TW/LC_MESSAGES/gimp-script-fu.mo
-share/locale/zh_TW/LC_MESSAGES/gimp-std-plugins.mo
-share/locale/zh_TW/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gimp.mo
 @dirrm share/gimp/1.2/tips
 @dirrm share/gimp/1.2/scripts
 @dirrm share/gimp/1.2/patterns
@@ -1466,14 +1466,15 @@ share/locale/zh_TW/LC_MESSAGES/gimp.mo
 @dirrm share/gimp/1.2/help/C/tools
 @dirrm share/gimp/1.2/help/C/toolbox/help
 @dirrm share/gimp/1.2/help/C/toolbox
+@dirrm share/gimp/1.2/help/C/stylesheet-images
 @dirrm share/gimp/1.2/help/C/save
 @dirrm share/gimp/1.2/help/C/paths
 @dirrm share/gimp/1.2/help/C/open
 @dirrm share/gimp/1.2/help/C/layers/stack
 @dirrm share/gimp/1.2/help/C/layers
-@dirrm share/gimp/1.2/help/C/images/examples
-@dirrm share/gimp/1.2/help/C/images/glossary
 @dirrm share/gimp/1.2/help/C/images/tools
+@dirrm share/gimp/1.2/help/C/images/glossary
+@dirrm share/gimp/1.2/help/C/images/examples
 @dirrm share/gimp/1.2/help/C/images
 @dirrm share/gimp/1.2/help/C/image/view
 @dirrm share/gimp/1.2/help/C/image/select
@@ -1495,7 +1496,6 @@ share/locale/zh_TW/LC_MESSAGES/gimp.mo
 @dirrm share/gimp/1.2/help/C/dialogs/channels
 @dirrm share/gimp/1.2/help/C/dialogs
 @dirrm share/gimp/1.2/help/C/channels
-@dirrm share/gimp/1.2/help/C/stylesheet-images
 @dirrm share/gimp/1.2/help/C
 @dirrm share/gimp/1.2/help
 @dirrm share/gimp/1.2/gradients

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/09/24 09:34:37 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/07 14:54:42 hubertf Exp $
 
 DISTNAME=		gimp-1.2.3
 PKGNAME=		gimp-base-1.2.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.gimp.org/pub/gimp/v1.2/v1.2.3/ \
 		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/v1.2/v1.2.3/ \
@@ -23,6 +23,8 @@ USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
@@ -41,6 +43,8 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		X11BASE=${X11BASE}
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
+BUILD_DEFS+=		GIMP_WITH_HELPBROWSER
+
 pre-build:
 	${BUILDLINK_CC} -o ${WRKSRC}/docs/pdb_self_doc			\
 		${FILESDIR}/pdb_self_doc.c
@@ -52,6 +56,15 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/mpeg-lib/buildlink2.mk"
+.if defined(GIMP_WITH_HELPBROWSER) && ${GIMP_WITH_HELPBROWSER} != "no" 
+PLIST_SUBST+=	HELPBROWSER=""
 .include "../../x11/gnome-libs/buildlink2.mk"
+.else
+PLIST_SUBST+=	HELPBROWSER="@comment "
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
