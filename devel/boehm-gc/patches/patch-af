@@ -1,0 +1,28 @@
+# $NetBSD: patch-af,v 1.7 2003/08/17 05:01:59 kei Exp $
+
+--- Makefile.in.orig	Sun Jun 22 07:47:00 2003
++++ Makefile.in	Wed Jul 23 23:48:40 2003
+@@ -170,6 +170,9 @@
+ include/gc_pthread_redirects.h include/gc_config_macros.h \
+ include/leak_detector.h include/gc_typed.h @addincludes@
+ 
++include_PRIVATE_HEADERS = include/private/gc_hdrs.h \
++include/private/gc_locks.h include/private/gc_priv.h \
++include/private/gcconfig.h
+ 
+ EXTRA_HEADERS = include/gc_cpp.h include/gc_allocator.h
+ 
+@@ -541,6 +544,13 @@
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+ 	  echo " $(includeHEADERS_INSTALL) $$d$$p $(DESTDIR)$(includedir)/$$f"; \
+ 	  $(includeHEADERS_INSTALL) $$d$$p $(DESTDIR)$(includedir)/$$f; \
++	done
++	$(mkinstalldirs) $(DESTDIR)$(pkgincludedir)/private
++	@list='$(include_PRIVATE_HEADERS)'; for p in $$list; do \
++	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " $(includeHEADERS_INSTALL) $$d$$p $(DESTDIR)$(pkgincludedir)/private/$$f"; \
++	  $(includeHEADERS_INSTALL) $$d$$p $(DESTDIR)$(pkgincludedir)/private/$$f; \
+ 	done
+ 
+ uninstall-includeHEADERS:
