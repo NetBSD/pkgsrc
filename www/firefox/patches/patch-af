@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/02/29 17:45:02 xtraeme Exp $
+$NetBSD: patch-af,v 1.2 2004/06/23 16:47:12 taya Exp $
 
 diff -ru ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c ./security/nss/lib/freebl/unix_rand.c
---- ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c	2003-03-21 14:24:29.000000000 +0900
-+++ ./security/nss/lib/freebl/unix_rand.c	2003-10-20 11:07:15.000000000 +0900
+--- ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c	2003-05-31 08:31:19.000000000 +0900
++++ ./security/nss/lib/freebl/unix_rand.c	2004-06-15 23:55:49.000000000 +0900
 @@ -32,6 +32,7 @@
   */
  
