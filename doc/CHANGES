@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4247 2003/12/24 11:48:08 recht Exp $
+$NetBSD: CHANGES,v 1.4248 2003/12/24 12:03:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5336,3 +5336,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added py-fpconst-0.6.0 [recht 2003-12-24]
 	Updated py-soappy to 0.11.1 [recht 2003-12-24]
 	Updated py-google to 0.5.3 [recht 2003-12-24]
+	Updated qt3 to 3.2.3nb1 [tron 2003-12-24]
