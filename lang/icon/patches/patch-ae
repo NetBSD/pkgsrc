@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.7 2003/04/05 05:42:56 jtb Exp $
+$NetBSD: patch-ae,v 1.8 2003/06/06 08:58:43 jtb Exp $
 
 --- /dev/null
-+++ config/unix/netbsd/alpha.s
++++ config/netbsd/alpha.s
 @@ -0,0 +1,46 @@
 +/*
 + *  coswitch(old_cs, new_cs, first) for DEC Alpha architecture

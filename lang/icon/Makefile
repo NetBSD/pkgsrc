@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2003/06/02 01:19:02 jschauma Exp $
+# $NetBSD: Makefile,v 1.25 2003/06/06 08:58:42 jtb Exp $
 
-DISTNAME=       	icon.v941src
-PKGNAME=		icon-9.4.1
+DISTNAME=       	icon.v942src
+PKGNAME=		icon-9.4.2
 CATEGORIES=		lang
 MASTER_SITES=		http://www.cs.arizona.edu/icon/ftp/packages/unix/
 EXTRACT_SUFX=		.tgz
@@ -20,7 +20,7 @@ pre-build:
 	${MKDIR} ${WRKSRC}/lib/icon
 
 do-configure:
-	cd ${WRKSRC}/config/unix/netbsd; \
+	cd ${WRKSRC}/config/netbsd; \
 	${SED} -e 's:@X11BASE@:${X11BASE}:g' define.h.in \
 		> define.h
 	cd ${WRKSRC}; ${MAKE} ${CONFIGURE_TARGET} name=netbsd

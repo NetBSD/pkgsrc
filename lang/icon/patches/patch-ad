@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2003/04/05 05:42:56 jtb Exp $
+$NetBSD: patch-ad,v 1.2 2003/06/06 08:58:43 jtb Exp $
 
 --- /dev/null
-+++ config/unix/netbsd/m68k.c
++++ config/netbsd/m68k.c
 @@ -0,0 +1,25 @@
 +/*
 + * coswitch for the m68k architecture

@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.8 2003/04/05 05:42:56 jtb Exp $
+$NetBSD: patch-af,v 1.9 2003/06/06 08:58:43 jtb Exp $
 
 --- /dev/null
-+++ config/unix/netbsd/i386.c
++++ config/netbsd/i386.c
 @@ -0,0 +1,23 @@
 +/*
 + * coswitch for i386 architecture
