@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2001/04/06 22:08:10 rh Exp $
+$NetBSD: patch-aa,v 1.5 2002/03/23 23:20:36 fredb Exp $
 
---- capplets/sound-properties/Makefile.in.orig	Wed Mar 28 22:01:50 2001
+--- capplets/sound-properties/Makefile.in.orig	Sun Feb 10 15:48:00 2002
 +++ capplets/sound-properties/Makefile.in
-@@ -144,7 +144,7 @@
+@@ -165,7 +165,7 @@
  
- sound_properties_SOURCES = sound-properties.c
+ sound_properties_LDADD = ../../control-center/libcapplet.la \
+ 		     $(GNOME_LIBDIR) $(ORB_LIBS) \
+-		     $(GNOMEUI_LIBS) $(INTLLIBS) -lgnorba
++		     $(GNOMEUI_LIBS) $(ESD_LIBS) $(INTLLIBS) -lgnorba
  
--sound_properties_LDADD = ../../control-center/libcapplet.la 		     $(GNOME_LIBDIR) $(ORB_LIBS) 		     $(GNOMEUI_LIBS) $(INTLLIBS) -lgnorba
-+sound_properties_LDADD = ../../control-center/libcapplet.la 		     $(GNOME_LIBDIR) $(ORB_LIBS) 		     $(GNOMEUI_LIBS) $(ESD_LIBS) $(INTLLIBS) -lgnorba
  
- 
- EXTRA_DIST =  	sound-properties.desktop.in			sound-properties.desktop
+ EXTRA_DIST = \
