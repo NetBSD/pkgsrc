@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.90.4.8 2003/08/16 09:25:36 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.90.4.9 2003/08/16 09:33:03 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -87,13 +87,8 @@ MAKE_ENV+=		BUILDLINK_CACHE_ALL=yes
 .endfor
 
 .if defined(USE_X11)
-USE_X11_LINKS?=		YES
-.  if !empty(USE_X11_LINKS:M[nN][oO])
-.    include "../../mk/x11.buildlink2.mk"
-.  else
 BUILD_DEPENDS+=		x11-links>=0.12:../../pkgtools/x11-links
 _BLNK_X11_DIR=		${LOCALBASE}/share/x11-links
-.  endif
 _BLNK_CPPFLAGS+=	-I${X11BASE}/include
 _BLNK_LDFLAGS+=		-L${X11BASE}/lib
 .if ${_USE_RPATH} == "yes"
@@ -171,9 +166,7 @@ buildlink-directories:
 .if defined(USE_X11)
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILDLINK_X11_DIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
-.  if empty(USE_X11_LINKS:M[nN][oO])
 	${_PKG_SILENT}${_PKG_DEBUG}${CP} -R ${_BLNK_X11_DIR}/* ${BUILDLINK_X11_DIR}
-.  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib
