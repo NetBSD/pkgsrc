@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/12/09 10:37:17 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/05 22:21:17 cjep Exp $
 
---- Makefile.in	Wed Nov 20 17:54:32 2002
-+++ Makefile.in.nb	Wed Nov 20 18:01:50 2002
-@@ -108,6 +108,7 @@
+--- Makefile.in.orig	2003-01-13 00:34:32.000000000 +0000
++++ Makefile.in
+@@ -107,7 +107,7 @@ smtp.o strings.o temp.o tty.o vars.o
+ nail_LDADD = $(LDADD)
  nail_DEPENDENCIES = 
  nail_LDFLAGS = 
- CFLAGS = @CFLAGS@
-+CFLAGS = -DMIMEPATH=\"@prefix@/etc/mime.types\"
+-CFLAGS = @CFLAGS@
++CFLAGS = @CFLAGS@ -DMIMEPATH=\"@prefix@/etc/mime.types\"
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
  LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
