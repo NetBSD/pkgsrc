@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/11/26 11:10:50 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/07/29 00:47:00 wiz Exp $
 lib/gtk/themes/engines/libmetal.a
 lib/gtk/themes/engines/libmetal.la
 lib/gtk/themes/engines/libmetal.so
@@ -8,6 +8,9 @@ lib/gtk/themes/engines/libnotif.so
 lib/gtk/themes/engines/libpixmap.a
 lib/gtk/themes/engines/libpixmap.la
 lib/gtk/themes/engines/libpixmap.so
+lib/gtk/themes/engines/libraleigh.a
+lib/gtk/themes/engines/libraleigh.la
+lib/gtk/themes/engines/libraleigh.so
 lib/gtk/themes/engines/libredmond95.a
 lib/gtk/themes/engines/libredmond95.la
 lib/gtk/themes/engines/libredmond95.so
@@ -89,9 +92,14 @@ share/themes/Pixmap/gtk/shadow1.png
 share/themes/Pixmap/gtk/shadow2.png
 share/themes/Pixmap/gtk/trough.png
 share/themes/Pixmap/gtk/vline.png
+share/themes/Raleigh/ICON.png
+share/themes/Raleigh/README.html
+share/themes/Raleigh/gtk/gtkrc
 share/themes/Redmond95/ICON.png
 share/themes/Redmond95/README.html
 share/themes/Redmond95/gtk/gtkrc
+@dirrm share/themes/Raleigh/gtk
+@dirrm share/themes/Raleigh
 @dirrm share/themes/Redmond95/gtk
 @dirrm share/themes/Redmond95
 @dirrm share/themes/Pixmap/gtk
