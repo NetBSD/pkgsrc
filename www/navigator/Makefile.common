@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2000/01/14 17:56:33 abs Exp $
+# $NetBSD: Makefile.common,v 1.6 2000/01/15 11:02:18 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -56,7 +56,7 @@ SUB=		english/${NS_VERS}/unix/${DIST_DIR_NAME}/${DIST_SDIR_NAME}
 MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${SUB}/ \
 		ftp://ftp-uk.netscape.com/pub/communicator/${SUB}/ \
 		ftp://sunsite.utk.edu/pub/netscape/communicator/${SUB}/ \
-		ftp.informatik.rwth-aachen.de:/pub/mirror/ftp.netscape.com/pub/communicator/${SUB}/
+		ftp://ftp.informatik.rwth-aachen.de/pub/mirror/ftp.netscape.com/pub/communicator/${SUB}/
 ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-sparc
 
 MIRROR_DISTFILE=no
