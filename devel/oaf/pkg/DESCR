@@ -1,0 +1,10 @@
+  OAF is the new object activation framework for GNOME.  Since many GNOME
+applications utilize CORBA, a framework for locating and activating these
+applications is necessary.  OAF, the Object Activation Framework, provides a
+simple method for finding and running the CORBA objects available on a computer
+system.
+
+  Distributed operation is supported, allowing activation of objects on a
+network of computers being used in a GNOME desktop.  The flexibility of OAF
+enables it to be used outside of GNOME programs, allowing non-GNOME CORBA
+applications to be utilized alongside GNOME applications. 

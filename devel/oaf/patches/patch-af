@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/07/16 19:44:18 rh Exp $
+
+--- test/empty-server.c.orig	Tue May 30 12:29:28 2000
++++ test/empty-server.c	Sun Jul 16 20:33:37 2000
+@@ -4,7 +4,7 @@
+ #include <string.h>
+ #include <signal.h>
+ #include <orb/orbit.h>
+-#include <popt.h>
++#include <popt-gnome.h>
+ #include "empty.h"
+ #include "liboaf/liboaf.h"
+ 

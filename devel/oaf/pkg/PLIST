@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/16 19:44:18 rh Exp $
+bin/oafd
+bin/oaf-client
+bin/oaf-run-query
+bin/oaf-config
+include/liboaf/oaf.h
+include/liboaf/liboaf.h
+include/liboaf/gnome-factory.h
+include/liboaf/liboaf-version.h
+lib/liboaf.so.0.0
+lib/liboaf.la
+lib/liboaf.a
+lib/oafConf.sh
+share/aclocal/oaf.m4
+share/idl/gnome-factory-oaf.idl
+share/idl/oaf.idl
+share/oaf/oafd.oafinfo
+share/oaf/empty.oafinfo
+share/oaf/broken.oafinfo
+@dirrm include/liboaf
+@dirrm share/oaf
