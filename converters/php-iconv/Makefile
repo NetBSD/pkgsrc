@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/31 19:30:30 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/31 21:07:13 jdolecek Exp $
 
 MODNAME=		iconv
 CATEGORIES+=		converters
@@ -14,6 +14,7 @@ USE_BUILDLINK3=		YES
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/buildlink3/bsd.builtin.mk"
+.include "../../lang/php/ext.mk"
 
 .if !empty(USE_BUILTIN.iconv:M[nN][oO])
 # use libiconv
@@ -23,5 +24,4 @@ CONFIGURE_ARGS+=	--with-iconv=shared,${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-iconv
 .endif
 
-.include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
