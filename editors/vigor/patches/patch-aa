@@ -1,0 +1,37 @@
+--- Makefile.in.orig	Wed Jan 19 13:45:40 2000
++++ Makefile.in	Wed Jan 19 13:46:52 2000
+@@ -81,28 +81,16 @@
+ 	[ -d $(mandir)/cat1 ] || \
+ 	    ($(mkdir) $(mandir)/cat1 && $(chmod) $(dmode) $(mandir)/cat1)
+ 	@echo "Installing man pages: $(mandir) ..."
+-	cd $(mandir)/cat1 && $(rm) -f `echo vi.0 | sed '$(transform)'`
++	cd $(mandir)/cat1 && $(rm) -f `echo vigor.0 | sed '$(transform)'`
+ 	$(cp) $(srcdir)/docs/USD.doc/vi.man/vi.0 \
+-	    $(mandir)/cat1/`echo vi.0 | sed '$(transform)'`
+-	cd $(mandir)/cat1 && $(chmod) $(fmode) `echo vi.0 | sed '$(transform)'`
+-	cd $(mandir)/cat1 && $(rm) -f `echo ex.0 | sed '$(transform)'`
+-	cd $(mandir)/cat1 && $(rm) -f `echo view.0 | sed '$(transform)'`
+-	cd $(mandir)/cat1 && $(ln) \
+-	    `echo vi.0 | sed '$(transform)'` `echo ex.0 | sed '$(transform)'`
+-	cd $(mandir)/cat1 && $(ln) \
+-	    `echo vi.0 | sed '$(transform)'` `echo view.0 | sed '$(transform)'`
++	    $(mandir)/cat1/`echo vigor.0 | sed '$(transform)'`
++	cd $(mandir)/cat1 && $(chmod) $(fmode) `echo vigor.0 | sed '$(transform)'`
+ 	[ -d $(mandir)/man1 ] || \
+ 	    ($(mkdir) $(mandir)/man1 && $(chmod) $(dmode) $(mandir)/man1)
+-	cd $(mandir)/man1 && $(rm) -f `echo vi.1 | sed '$(transform)'`
++	cd $(mandir)/man1 && $(rm) -f `echo vigor.1 | sed '$(transform)'`
+ 	$(cp) $(srcdir)/docs/USD.doc/vi.man/vi.1 \
+-	    $(mandir)/man1/`echo vi.1 | sed '$(transform)'`
+-	cd $(mandir)/man1 && $(chmod) $(fmode) `echo vi.1 | sed '$(transform)'`
+-	cd $(mandir)/man1 && $(rm) -f `echo ex.1 | sed '$(transform)'`
+-	cd $(mandir)/man1 && $(rm) -f `echo view.1 | sed '$(transform)'`
+-	cd $(mandir)/man1 && $(ln) \
+-	    `echo vi.1 | sed '$(transform)'` `echo ex.1 | sed '$(transform)'`
+-	cd $(mandir)/man1 && $(ln) \
+-	    `echo vi.1 | sed '$(transform)'` `echo view.1 | sed '$(transform)'`
++	    $(mandir)/man1/`echo vigor.1 | sed '$(transform)'`
++	cd $(mandir)/man1 && $(chmod) $(fmode) `echo vigor.1 | sed '$(transform)'`
+ 
+ cat=	dutch english french german ru_SU.KOI8-R spanish swedish
+ install_common:
