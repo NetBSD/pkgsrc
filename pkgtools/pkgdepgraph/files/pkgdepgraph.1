@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgdepgraph.1,v 1.4 2003/03/06 21:13:13 atatat Exp $
+.\"	$NetBSD: pkgdepgraph.1,v 1.5 2003/03/14 23:39:56 atatat Exp $
 .\"
 .\" Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
 .\" Absolutely no warranty.
@@ -10,8 +10,9 @@
 .Nd visual representation of installed packages
 .Sh SYNOPSIS
 .Nm
-.Op Fl CcDfgLloRv
+.Op Fl ACcDfgLloRv
 .Op Fl d Ar pkg_dbdir
+.Op Fl K Ar packages
 .Op Fl O Ar package
 .Op Fl P Ar pkgsrcdir
 .Op Fl t Ar target
@@ -80,6 +81,13 @@ package.
 .Pp
 The options are as follows:
 .Bl -tag -width package
+.It Fl A
+This option modifies the output of
+.Fl R
+to use
+.Xr pkg_add 1
+to reinstall deleted packages, instead of building directly from the
+pkgsrc tree.
 .It Fl C
 Asserts
 .Fl c
@@ -126,6 +134,15 @@ or
 .Dq gimp )
 in a subgraph with a line around it so you can visually associate
 packages.
+.It Fl K Ar packages
+The base location or url from which to install binary packages.
+This defaults to the value of PKG_PATH, or to PACKAGES with
+.Pf \\*q Dv /All Ns \\*q
+added to the end, or to the value determined for pkgsrcdir (see the
+.Fl P
+option) with
+.Pf \\*q Dv /packages/All Ns \\*q
+appended to it.
 .It Fl L
 Limit the graph to those packages that are out of date
 or ultimately depend on some package that is.
@@ -202,6 +219,14 @@ Where to find registered packages instead of
 .Ss PKGSRCDIR
 Where the pkgsrc tree is located instead of
 .Pa @PKGSRCDIR@ .
+.Ss PKG_PATH
+.Ss PACKAGES
+Two variables that can be used as a location for binary packages.
+See the
+.Fl A
+and
+.Fl K
+options for more details.
 .Sh EXAMPLES
 The default output:
 .Bd -literal -offset indent
@@ -213,7 +238,7 @@ of it:
 .Bd -literal -offset indent
 $ lintpkgsrc -i \*[Gt] pkgdepgraph.in
 $ audit-packages \*[Gt]\*[Gt] pkgdepgraph.in
-$ pkgdepgraph -clv pkgdepgraph.in \*[Gt] pkgdepgraph.dot
+$ pkgdepgraph -lv pkgdepgraph.in \*[Gt] pkgdepgraph.dot
 $ dot -Tps pkgdepgraph.dot \*[Gt] pkgdepgraph.ps
 .Ed
 .Pp

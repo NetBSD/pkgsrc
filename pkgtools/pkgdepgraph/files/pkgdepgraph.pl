@@ -3,38 +3,54 @@
 # Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
 # Absolutely no warranty.
 
-# $NetBSD: pkgdepgraph.pl,v 1.4 2003/03/10 22:31:20 atatat Exp $
+# $NetBSD: pkgdepgraph.pl,v 1.5 2003/03/14 23:39:56 atatat Exp $
 # pkgdepgraph: @DISTVER@
 
 use strict;
 
-use Getopt::Std;
-my($opts, %opt) = ('CcDd:fgLlO:oP:Rt:vU:');
+use Getopt::Long;
+Getopt::Long::Configure("bundling");
+my(@opts, %opt);
 my($iam, $version, $usecolor, $group, $locations, $order, $versions);
-my($limit, $delete, $rebuild, $force, $outofdate, $update, $clean);
-my($pkg_dbdir, $pkgsrcdir);
+my($limit, $delete, $rebuild, $force, @outofdate, @update, $clean);
+my($pkg_dbdir, $pkgsrcdir, $packages, $pkgadd);
 
+$version = '@DISTVER@';
 ($iam = $0) =~ s:.*/::;
-die("usage: $iam [-CcDfgLloRv] [-d pkg_dbdir] [-O package] [-P pkgsrcdir]\n",
-    " " x (length($iam) + 8), "[-t target] [-U package] [data ...]\n")
-    if (!getopts($opts, \%opt));
+@opts = ('A', 'C', 'c', 'D', 'd=s', 'f', 'g', 'K=s', 'L', 'l', 'O=s',
+	 'o', 'P=s', 'R', 't=s', 'U=s', 'v');
+%opt = (
+	'A' => \$pkgadd,
+	# 'C' => implies "realclean", handled later
+	# 'c' => implies "clean", handled later
+	'D' => \$delete,
+	'd' => \$pkg_dbdir,
+	'f' => \$force,
+	'g' => \$group,
+	'K' => \$packages,
+	'L' => \$limit,
+	'l' => \$locations,
+	'O' => \@outofdate,
+	'o' => \$order,
+	'P' => \$pkgsrcdir,
+	'R' => \$rebuild,
+	# 't' => goes to rebuild, handled later
+	'U' => \@update,
+	'v' => \$versions,
+	);
+die("usage: $iam [-ACcDfgLloRv] [-d pkg_dbdir] [-K packages] [-O package]\n",
+    " " x (length($iam) + 8),
+    "[-P pkgsrcdir] [-t target] [-U package] [data ...]\n")
+    if (!GetOptions(\%opt, @opts));
 
-$version = "@DISTVER@";
-$usecolor = 0;
-$pkg_dbdir = $opt{d} || $ENV{'PKG_DBDIR'} || "/var/db/pkg";
-$pkgsrcdir = $opt{P} || $ENV{'PKGSRCDIR'} || "/usr/pkgsrc";
-$group = $opt{g};
-$locations = $opt{l};
-$order = $opt{o};
-$versions = $opt{v};
-$delete = $opt{D};
-$rebuild = $opt{t} || "install" if (defined($opt{R}));
-$force = $opt{f};
-$outofdate = $opt{O};
-$update = $opt{U};
-$limit = $opt{L};
-$clean = $opt{c} ? "clean" : "";
-$clean = $opt{C} ? "CLEANDEPENDS=YES clean" : $clean;
+$pkg_dbdir ||= $ENV{'PKG_DBDIR'} || "/var/db/pkg";
+$pkgsrcdir ||= $ENV{'PKGSRCDIR'} || "/usr/pkgsrc";
+$packages = $ENV{'PKG_PATH'} if (!$packages);
+$packages = $ENV{'PACKAGES'} . "/All" if (!$packages && $ENV{'PACKAGES'});
+$packages = $pkgsrcdir . "/packages/All" if (!$packages);
+$rebuild &&= $opt{t} || "install";
+$clean = "clean" if ($opt{c});
+$clean = "CLEANDEPENDS=YES clean" if ($opt{C});
 
 my(@pkgs, $pkg, $req, %req, @reqs, @rreqs);
 my(%clusters, $cluster);
@@ -231,15 +247,15 @@ foreach $pkg (sort(byord @pkgs)) {
 ## if we want to check a specific pkg for rebuild impact, mark it as
 ## "forced" to be out of date, unless it already *is* out of date.
 ##
-## XXX: i wish getopts could stuff successive -O values into an array
-##
-if ($outofdate) {
+if (@outofdate) {
     $usecolor = 1;
-    $outofdate = canonicalize($outofdate);
+    canonicalize(@outofdate);
 
-    if ($color{$outofdate} ne "red") {
-	$color{$outofdate} = "red";
-	$need{$outofdate} = "$outofdate (forced)";
+    foreach (@outofdate) {
+	if ($color{$_} ne "red") {
+	    $color{$_} = "red";
+	    $need{$_} = "$_ (forced)";
+	}
     }
 }
 
@@ -250,31 +266,32 @@ if ($outofdate) {
 ## $force is set, mark *all* dependencies of the given pkg as out of
 ## date.
 ##
-## XXX: i wish getopts could stuff successive -U values into an array
-##
-if ($update) {
-    $update = canonicalize($update);
+if (@update) {
+    my(@leftover);
 
-    # these things are directly related
-    @reqs = sort(keys %{$req{$update}});
-    @rreqs = recurse(@reqs);
+    canonicalize(@update);
+    @update = uniq(sort(@update, recurse(@update)));
 
-    # check each pkg to see if it will be affected
-    foreach $pkg (@pkgs) {
-	# these pkgs are dependencies
-	if (grep($pkg eq $_, ($update, @reqs, @rreqs))) {
-	    if ($force && $color{$pkg} ne "red") {
-		# we want to force rebuild of *all* dependencies
-		$color{$pkg} = "red";
-		$need{$pkg} = "$pkg (forced)";
+    if ($force) {
+	foreach (@update) {
+	    if ($color{$_} ne "red") {
+		$color{$_} = "red";
+		$need{$_} = "$_ (forced)";
 	    }
 	}
-	# these packages do not depend on any of $update's dependencies
+    }
+
+    foreach (sort(@pkgs)) {
+	if ($_ eq $update[0]) {
+	    shift(@update);
+	}
 	else {
-	    delete($color{$pkg});
-	    delete($need{$pkg});
+	    push(@leftover, $_);
 	}
     }
+
+    delete(@color{@leftover});
+    delete(@need{@leftover});
 }
 
 ##
@@ -289,16 +306,18 @@ if ($delete) {
 ##
 ## "rebuild" output for sh(1), with just leaves listed.  all the
 ## dependencies will be built "automagically" by the regular build
-## mechanism.
+## mechanism.  if $add is set, emit commands for installing binary
+## pkgs instead.
 ##
 if ($rebuild) {
-    map(printf("( pkg_info -qe %s || " .
-	       "( cd %s/%s && " .
-	       "make %s%s )) &&\n",
-	       ($need{$_} || $_) =~ /(.*)-.*/,
-	       $pkgsrcdir, $where{$_},
-	       $rebuild,
-	       $clean ? " && make $clean" : ""),
+    printf("PKG_PATH=\"$packages\"\nexport PKG_PATH\n") if ($pkgadd);
+
+    map($pkgadd ?
+	printf("( pkg_info -qe %s || pkg_add %s.tgz ) &&\n",
+	       /(.*)-.*/, ($need{$_} || $_)) :
+	printf("( pkg_info -qe %s || ( cd %s && make %s%s )) &&\n",
+	       /(.*)-.*/, "$pkgsrcdir/$where{$_}",
+	       $rebuild, $clean ? " && make $clean" : ""),
 	grep(color($_) ne "green" && $ord{$_} == 1, @pkgs));
     print("true\n");
     exit(0);
@@ -367,33 +386,36 @@ print("}\n");
 ## find all dependencies below a given node
 ##
 sub recurse {
-    my($pkg, @list, %list);
-    %list = @list = ();
-    foreach $pkg (@_) {
-	@list = keys %{$req{$pkg}};
-	map($list{$_} = $_, @list, recurse(@list));
+    my(@list, @new);
+    @list = ();
+    foreach (@_) {
+	@new = keys %{$req{$_}};
+	push(@list, @new, recurse(@new));
     }
-    sort(keys %list);
+    uniq(sort(@list));
 }
 
 ##
 ## canonicalize a pkg name based on what we have installed
 ##
 sub canonicalize {
-    my($canon);
-    my($pkg) = @_;
+    my($canon, $pkg);
 
-    # attempt to find actual pkg, first by argument given...
-    ($canon) = grep($pkg eq $_, @pkgs);
+    foreach $pkg (@_) {
+	# attempt to find actual pkg, first by argument given...
+	($canon) = grep($pkg eq $_, @pkgs);
 
-    # ...then by comparing against the internal list sans version numbers
-    ($canon) = grep(($a = $_) =~ s/(.*)-.*/$1/ && $pkg eq $a, @pkgs)
-        if (!defined($canon));
+	# ...then by comparing against the internal list sans version numbers
+	($canon) = grep(($a = $_) =~ s/(.*)-.*/$1/ && $pkg eq $a, @pkgs)
+	    if (!defined($canon));
 
-    die("package '$pkg' not found\n")
-        if (!defined($canon));
+	die("package '$pkg' not found\n")
+	    if (!defined($canon));
 
-    $canon;
+	$pkg = $canon;
+    }
+
+    @_;
 }
 
 ##
@@ -459,4 +481,20 @@ sub order {
 	$ord{$pkg} = $n if ($ord{$pkg} <= $n);
 	order($n + 1, sort(keys %{$req{$pkg}}));
     }
+}
+
+##
+## uniq - eliminate adjacent duplicate entries in an array
+##
+sub uniq {
+    my($i);
+    for ($i = 0; $i < $#_; ) {
+	if ($_[$i] eq $_[$i + 1]) {
+	    splice(@_, $i, 1);
+	}
+	else {
+	    $i++;
+	}
+    }
+    @_;
 }
