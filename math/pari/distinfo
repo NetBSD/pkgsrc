@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2004/02/22 02:19:50 heinz Exp $
+$NetBSD: distinfo,v 1.11 2005/02/23 12:06:57 agc Exp $
 
 SHA1 (pari-2.1.5.tar.gz) = fd9a969d2f6afbfd1ebf3293fb90df23f602a7fb
+RMD160 (pari-2.1.5.tar.gz) = 1ebd126e69cbb239304f67b420b16226ac335c59
 Size (pari-2.1.5.tar.gz) = 1540679 bytes
 SHA1 (patch-aa) = effffa3f2b1f111ae3718e13f521ff01d91b69dd
 SHA1 (patch-ab) = 60b0ba8f17aa8c07a1e57f61c6e0fa9e19892b57
