@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/10 00:55:17 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -163,16 +163,17 @@ MKPIC=		no
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
-.  if !defined(_GCC_IS_AT_LEAST_3_3)
-_GCC_IS_AT_LEAST_3_3!=	\
-	if ${PKG_ADMIN} pmatch 'gcc>=3.3' ${CC_VERSION}; then		\
+.  if !empty(CC_VERSION:Mgcc*)
+.    if !defined(_GCC_IS_TOO_OLD)
+_GCC_IS_TOO_OLD!=	\
+	if ${PKG_ADMIN} pmatch 'gcc<3.3' ${CC_VERSION}; then		\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
-MAKEFLAGS+=	_GCC_IS_AT_LEAST_3_3=${_GCC_IS_AT_LEAST_3_3}
-.  endif
-.  if !empty(_GCC_IS_AT_LEAST_3_3:M[nN][oO])
+MAKEFLAGS+=	_GCC_IS_TOO_OLD=${_GCC_IS_TOO_OLD}
+.    endif
+.    if !empty(_GCC_IS_TOO_OLD:M[yY][eE][sS])
 #
 # Fix brokenness when using an older toolchain (gcc<3.3) on sparc64.
 # Passing -g to the configure process triggers -DDEBUGGING, which plays
@@ -180,6 +181,7 @@ MAKEFLAGS+=	_GCC_IS_AT_LEAST_3_3=${_GCC_IS_AT_LEAST_3_3}
 # -g to CFLAGS to at least have a really debuggable build.
 #
 CFLAGS+=	-g -msoft-quad-float -O2
+.    endif
 .  endif
 .endif
 
