@@ -1,45 +1,39 @@
-$NetBSD: patch-aa,v 1.14 2002/02/13 16:41:41 tron Exp $
+$NetBSD: patch-aa,v 1.15 2002/04/09 09:53:55 itojun Exp $
 
---- configure.in.orig	Tue Nov 27 23:51:57 2001
-+++ configure.in	Fri Jan 11 15:28:57 2002
-@@ -1022,23 +1022,23 @@
- dnl
- dnl now check for rpm using the appropriate db library
- dnl
--AC_CHECK_LIB(rpm, rpmdbOpen,[
+--- configure.in.orig	Wed Mar 27 18:55:22 2002
++++ configure.in	Tue Apr  9 18:24:45 2002
+@@ -1037,18 +1037,18 @@
+ AC_CHECK_LIB(rpmio, Fopen, [_rpmlibs="-lrpmio $_rpmlibs"],,$_rpmlibs)
+ 
+ dnl now check for rpm using the appropriate libraries.
+-AC_CHECK_LIB(rpm, rpmGetFilesystemList,[
 -  AC_DEFINE(HAVE_LIBRPM)
--  LIBS="-lrpm $LIBS"
+-  LIBS="-lrpm $_rpmlibs $LIBS"
 -  CFLAGS="$CFLAGS -I/usr/include/rpm"
--],,-lz)
-+#AC_CHECK_LIB(rpm, rpmdbOpen,[
-+#  AC_DEFINE(HAVE_LIBRPM)
-+#  LIBS="-lrpm $LIBS"
-+#  CFLAGS="$CFLAGS -I/usr/include/rpm"
-+#],,-lz)
- 
- dnl
- dnl now check for rpm using the appropriate db library
- dnl
--if test x$ac_cv_lib_rpm_rpmdbOpen = xno; then
--  unset ac_cv_lib_rpm_rpmdbOpen
--  AC_CHECK_LIB(rpm, rpmdbOpen,[
+-],[
+-  dnl rpm-4.0.3 librpmdb actually contains what we need.
+-  AC_CHECK_LIB(rpmdb, rpmdbOpen,[
 -    AC_DEFINE(HAVE_LIBRPM)
--    LIBS="-lrpm -lpopt $LIBS"
+-    LIBS="-lrpmdb -lrpm $_rpmlibs $LIBS"
 -    CFLAGS="$CFLAGS -I/usr/include/rpm"
--  ],,-lpopt -lz)
--fi
-+#if test x$ac_cv_lib_rpm_rpmdbOpen = xno; then
-+#  unset ac_cv_lib_rpm_rpmdbOpen
-+#  AC_CHECK_LIB(rpm, rpmdbOpen,[
+-  ],,-lrpm $_rpmlibs)
+-])
++#AC_CHECK_LIB(rpm, rpmGetFilesystemList,[
++#  AC_DEFINE(HAVE_LIBRPM)
++#  LIBS="-lrpm $_rpmlibs $LIBS"
++#  CFLAGS="$CFLAGS -I/usr/include/rpm"
++#],[
++#  dnl rpm-4.0.3 librpmdb actually contains what we need.
++#  AC_CHECK_LIB(rpmdb, rpmdbOpen,[
 +#    AC_DEFINE(HAVE_LIBRPM)
-+#    LIBS="-lrpm -lpopt $LIBS"
++#    LIBS="-lrpmdb -lrpm $_rpmlibs $LIBS"
 +#    CFLAGS="$CFLAGS -I/usr/include/rpm"
-+#  ],,-lpopt -lz)
-+#fi
- 
++#  ],,-lrpm $_rpmlibs)
++#])
  
  dnl Replace `main' with a function in -lkstat:
-@@ -1064,7 +1064,7 @@
+ AC_CHECK_LIB(kstat, kstat_lookup)
+@@ -1073,7 +1073,7 @@
  AC_HEADER_STDC
  AC_HEADER_DIRENT
  AC_HEADER_SYS_WAIT
@@ -48,7 +42,7 @@ $NetBSD: patch-aa,v 1.14 2002/02/13 16:41:41 tron Exp $
  dnl FreeBSD required headers
  AC_CHECK_HEADERS(malloc.h sys/param.h net/if_dl.h sys/sysctl.h stdlib.h net/if_mib.h net/if_types.h net/if_var.h sys/queue.h osreldate.h sys/disklabel.h machine/types.h sys/socketvar.h)
  dnl Linux
-@@ -1072,7 +1072,7 @@
+@@ -1081,7 +1081,7 @@
  dnl NetBSD required headers
  AC_CHECK_HEADERS(arpa/inet.h kvm.h sys/pool.h)
  dnl BSDi2 headers
@@ -57,7 +51,7 @@ $NetBSD: patch-aa,v 1.14 2002/02/13 16:41:41 tron Exp $
  dnl BSDi3 headers
  AC_CHECK_HEADERS(sys/stat.h sys/vnode.h ufs/ufs/quota.h ufs/ufs/inode.h)
  dnl irix headers
-@@ -1329,11 +1329,7 @@
+@@ -1339,11 +1339,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -69,7 +63,7 @@ $NetBSD: patch-aa,v 1.14 2002/02/13 16:41:41 tron Exp $
  #include <net/route.h>
  ], rtentry, rt_dst, no)
  
-@@ -1347,11 +1343,7 @@
+@@ -1357,11 +1353,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -81,7 +75,7 @@ $NetBSD: patch-aa,v 1.14 2002/02/13 16:41:41 tron Exp $
  #include <net/route.h>
  ],[
  
-@@ -1371,11 +1363,7 @@
+@@ -1381,11 +1373,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -93,7 +87,7 @@ $NetBSD: patch-aa,v 1.14 2002/02/13 16:41:41 tron Exp $
  #include <net/route.h>
  ],[
  struct rtentry rt; 
-@@ -1428,11 +1416,7 @@
+@@ -1438,11 +1426,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -105,7 +99,7 @@ $NetBSD: patch-aa,v 1.14 2002/02/13 16:41:41 tron Exp $
  #include <net/route.h>
  ],[
  struct rtentry rt; 
-@@ -1452,11 +1436,7 @@
+@@ -1462,11 +1446,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -117,7 +111,7 @@ $NetBSD: patch-aa,v 1.14 2002/02/13 16:41:41 tron Exp $
  #include <net/route.h>
  ], rtentry, rt_unit)
  
-@@ -1465,11 +1445,7 @@
+@@ -1475,11 +1455,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -129,7 +123,7 @@ $NetBSD: patch-aa,v 1.14 2002/02/13 16:41:41 tron Exp $
  #include <net/route.h>
  ], rtentry, rt_refcnt)
  
-@@ -1478,11 +1454,7 @@
+@@ -1488,11 +1464,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
@@ -141,7 +135,7 @@ $NetBSD: patch-aa,v 1.14 2002/02/13 16:41:41 tron Exp $
  #include <net/route.h>
  ], rtentry, rt_hash)
  
-@@ -1491,11 +1463,7 @@
+@@ -1501,11 +1473,7 @@
  #include <sys/param.h>
  #endif
  #include <sys/types.h>
