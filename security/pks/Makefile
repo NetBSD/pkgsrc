@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:40 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/21 15:14:02 jlam Exp $
 
 DISTNAME=		pks-0.9.4
 CATEGORIES=		security www
@@ -15,19 +15,29 @@ MAINTAINER=		burgess@neonramp.com
 HOMEPAGE=		http://www.mit.edu/people/marc/pks/
 COMMENT=		PGP Public Key Server
 
-DEPENDS+=		db-[0-9]*:../../databases/db
-
-GNU_CONFIGURE=		# defined
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/pks
 CONFIGURE_ARGS+=	--localstatedir=/var/pks
-CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/examples
+#
+# pksd doesn't actually look for it's config file anywhere; it must be
+# specified directly on the command-line.  Setting sysconfdir here just
+# causes the example pksd.conf file to be installed at the named location.
+#
+CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
 
-post-build:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" \
-		< ${FILESDIR}/pksd.sh > ${WRKDIR}/pksd.sh
+EGDIR=		${PREFIX}/share/examples
+CONF_FILES=	${EGDIR}/pksd.conf ${CONFDIR}/pksd.conf
+RCD_SCRIPTS=	${PREFIX}/etc/rc.d/pksd /etc/rc.d/pksd
+OWN_DIRS=	/var/pks /var/pks/db /var/pks/incoming
+
+pre-install:
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/pksd.sh > ${WRKDIR}/pksd.sh
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/pksd.sh ${PREFIX}/etc/rc.d/pksd
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../databases/db/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
