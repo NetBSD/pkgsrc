@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/11/26 19:16:30 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/12/05 21:38:43 tron Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -125,6 +125,7 @@ bin/wm-oldmenu2new
 bin/wmaker
 bin/wmaker.inst
 bin/wmsetbg
+bin/wsetfont
 bin/wxcopy
 bin/wxpaste
 include/WMaker.h
