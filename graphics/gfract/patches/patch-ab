@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/08/12 22:07:50 zuntum Exp $
+
+--- main.c.orig	Fri Feb  9 01:25:57 2001
++++ main.c
+@@ -40,7 +40,7 @@
+ 
+ 
+ #define DUMP_COMMAND "--read-dump-from"
+-#define DEFAULT_PALETTE_FILE "/usr/local/share/gfract/palettes/blues.map"
++#define DEFAULT_PALETTE_FILE "/usr/pkg/share/gfract/palettes/blues.map"
+ 
+ /* why the fuck does gtk have to define these in its header files?
+    the glib/gdk/gtk combo is forgetting seriously that it's just a Yet
