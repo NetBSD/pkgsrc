@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/24 14:50:06 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/25 08:00:46 snj Exp $
 #
 
 DISTNAME=	tsocks-1.7
@@ -10,7 +10,7 @@ HOMEPAGE=	http://tsocks.sourceforge.net/
 COMMENT=	Transparent SOCKS proxying library
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 
 CONFIGURE_ARGS+=	--with-conf=${PKG_SYSCONFDIR}/tsocks.conf
