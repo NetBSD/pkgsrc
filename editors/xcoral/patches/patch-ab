@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.2 1999/02/02 23:14:04 tron Exp $
+
+--- fs_box.c.orig	Mon Oct 12 20:25:23 1998
++++ fs_box.c	Wed Feb  3 00:00:27 1999
+@@ -437,8 +437,16 @@
+       }
+     }
+   }
+-  qsort ( (char *) tmp_dir, ndir, sizeof ( char *), NewCompare ); 
+-  qsort ( (char *) tmp_file, nfile, sizeof ( char *), NewCompare ); 
++  qsort ( (char *) tmp_dir, ndir, sizeof ( char *),
++#if defined(__NetBSD__)
++			(int (*)(const void *, const void *))
++#endif
++			NewCompare ); 
++  qsort ( (char *) tmp_file, nfile, sizeof ( char *),
++#if defined(__NetBSD__)
++			(int (*)(const void *, const void *))
++#endif
++			NewCompare ); 
+   
+   for ( n = 0; n < ndir; n++ ) {
+     InsertNchar ( fs_box.buf_dir, (char *) tmp_dir [n], 
