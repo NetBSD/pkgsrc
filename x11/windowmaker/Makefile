@@ -4,8 +4,8 @@
 # Whom (FreeBSD):	handy@physics.montana.edu
 # Whom (NetBSD):	explorer@netbsd.org
 #
-# FreBSD Id: Makefile,v 1.1.1.1 1997/11/04 10:33:43 tg Exp
-# $NetBSD: Makefile,v 1.1.1.1 1997/12/08 13:28:51 explorer Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/09 09:27:33 agc Exp $
+# FreeBSD Id: Makefile,v 1.1.1.1 1997/11/04 10:33:43 tg Exp
 #
 
 DISTNAME=	WindowMaker-0.6.3
@@ -21,8 +21,8 @@ LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
 		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg
 
 USE_X11=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 STRIP=
+CONFIGURE_ARGS+=	--includedir=${LOCALBASE}/include
 
 .include <bsd.port.mk>
