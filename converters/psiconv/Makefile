@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/30 16:13:12 sakamoto Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/16 13:59:27 wiz Exp $
 #
 
 DISTNAME=	psiconv-0.6.1
@@ -7,6 +7,7 @@ MASTER_SITES=	http://huizen.dds.nl/~frodol/psiconv/
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://huizen.dds.nl/~frodol/psiconv/
+COMMENT=	PSION 5 file format data conversion utilities
 
 .if !exists(/usr/include/getopt.h)
 DEPENDS+=	libgetopt-[0-9]*:../../devel/libgetopt
