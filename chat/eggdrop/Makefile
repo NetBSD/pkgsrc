@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/11 08:30:31 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/22 21:47:58 cube Exp $
 #
 
 DISTNAME=	eggdrop1.6.15
@@ -83,7 +83,7 @@ do-install-modules:
 		seen.so server.so share.so transfer.so uptime.so wire.so \
 		${PREFIX}/lib/eggdrop
 .if !defined(USE_INET6) || empty(USE_INET6:M[Yy][Ee][Ss])
-	${INSTALL_DATA} dns.so ${PREFIX}/lib/eggdrop
+	cd ${WRKSRC} && ${INSTALL_DATA} dns.so ${PREFIX}/lib/eggdrop
 .endif
 	cd ${WRKSRC}/src/mod && ${FIND} . -name "*.lang" -exec ${INSTALL_DATA} "{}" \
 		${PREFIX}/share/eggdrop/language ";"
