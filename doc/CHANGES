@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.714 2002/12/07 17:56:50 cjep Exp $
+$NetBSD: CHANGES,v 1.715 2002/12/07 18:15:11 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3850,3 +3850,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added isync-0.8 [cjep 2002-12-07]
 	Updated readline to 4.3 [jmmv 2002-12-07]
 	Added eukleides-0.9.0 [cjep 2002-12-07]
+	Added xeukleides-0.9.0 [cjep 2002-12-07]
