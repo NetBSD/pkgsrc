@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/04/21 13:49:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/05/19 14:11:28 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -77,7 +77,7 @@ include/magick/quantize.h
 include/magick/random.h
 include/magick/registry.h
 include/magick/resize.h
-include/magick/resource.h
+include/magick/resource_.h
 include/magick/segment.h
 include/magick/shear.h
 include/magick/signature.h
@@ -161,6 +161,7 @@ share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/colorspace.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/draw.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/pixel_iterator.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/profile.html
+share/ImageMagick-${IM_MAJOR_LIB_VER}/www/archives.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/compare.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/download.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/index.html
