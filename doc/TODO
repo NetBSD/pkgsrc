@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3155 2005/02/28 20:59:31 reed Exp $
+$NetBSD: TODO,v 1.3156 2005/02/28 21:02:06 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -1102,7 +1102,6 @@ Suggested package updates
 	o tmake-1.13
 	o tob-0.26
 	o top-3.6alpha9
-	o tor-0.0.9.5
 	o totd-1.5
 	o tpasm-1.2
 	o tpb-0.6.3
