@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1 1999/08/24 19:01:45 agc Exp $
+
+--- sam/Make.solaris	1999/08/24 18:41:20	1.1
++++ sam/Make.solaris	1999/08/24 18:41:44
+@@ -21,9 +21,9 @@
+ #	where sam is to be installed.  SAMSAVEDIR is the name of the directory
+ #	where the samsave file restoration script is stored.
+ RSAMNAME=sam
+-TERMNAME=/usr/local/bin/samterm
+-SAMDIR=/usr/local/bin
+-SAMSAVEDIR=/usr/local/bin
++TERMNAME=${PREFIX}/bin/samterm
++SAMDIR=${PREFIX}/bin
++SAMSAVEDIR=${PREFIX}/bin
+ 
+ #	Set TMP to a good place for tmp files (with lots of room)
+ TMP=/tmp
