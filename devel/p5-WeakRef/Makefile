@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:32:56 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/23 18:48:49 minskim Exp $
 
 DISTNAME=	WeakRef-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,9 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/LUKKA/}
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Provide weak references in Perl
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/WeakRef/.packlist
 
 .include "../../lang/perl5/module.mk"
