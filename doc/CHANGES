@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6620 2004/07/20 21:47:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.6621 2004/07/20 21:56:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3476,3 +3476,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ap-python to 2.7.10 [recht 2004-07-20]
 	Updated p5-XML-Parser to 2.34 [recht 2004-07-20]
 	Added cgic-2.02 [jmmv 2004-07-20]
+	Updated xorp to 1.0 [wiz 2004-07-20]
