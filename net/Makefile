@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.466 2004/04/15 16:42:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.467 2004/04/20 09:37:19 xtraeme Exp $
 #
 
 COMMENT=	Networking tools
@@ -195,6 +195,7 @@ SUBDIR+=	ntop
 SUBDIR+=	ntop2
 SUBDIR+=	ntp4
 SUBDIR+=	oidentd
+SUBDIR+=	oinkmaster
 SUBDIR+=	openag
 SUBDIR+=	openh323
 SUBDIR+=	openslp
