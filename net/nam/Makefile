@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/27 08:06:08 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/28 10:10:55 seb Exp $
 
 DISTNAME=	nam-src-1.0a11a
 PKGNAME=	${DISTNAME:S/0a/0rc/:S/-src//}
@@ -20,7 +20,7 @@ ALL_TARGET=
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
-CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tclcl}
+CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
 
 post-install:
 	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
@@ -28,7 +28,7 @@ post-install:
 
 .include  "../../devel/gettext-lib/buildlink2.mk"
 .include  "../../devel/zlib/buildlink2.mk"
-.include  "../../lang/otcl/buildlink2.mk"
-.include  "../../devel/tclcl/buildlink2.mk"
+.include  "../../lang/tcl-otcl/buildlink2.mk"
+.include  "../../devel/tcl-tclcl/buildlink2.mk"
 .include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
