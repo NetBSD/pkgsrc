@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2002/09/10 16:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2002/09/23 21:55:11 jlam Exp $
 #
 
 DISTNAME=		gnumeric-1.0.9
@@ -16,48 +16,30 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5[R-Z]-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*-* SunOS-
 # for Python support a shared libpython is required but not provided yet
 #BUILD_DEPENDS+=		python>=2.0:../../lang/python
 
-BUILDLINK_DEPENDS.gtk=		gtk+>=1.2.7
-BUILDLINK_DEPENDS.libole2=	libole2>=0.2.4
-BUILDLINK_DEPENDS.gnome-print=	gnome-print>=0.29
-BUILDLINK_DEPENDS.bonobo=	bonobo>=1.0.9
-BUILDLINK_DEPENDS.oaf=		oaf>=0.6.2
-BUILDLINK_DEPENDS.libglade=	libglade>=0.16
-BUILDLINK_DEPENDS.gal=		gal>=0.16
-
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_PERL5=		YES
-USE_BUILDLINK_ONLY=	YES
 
-LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
-LDFLAGS+=      		-lunicode
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-psiconv
 CONFIGURE_ARGS+=	--localstatedir=${X11PREFIX}/var/lib
+LIBS+=      		-lunicode
+
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-pre-configure:
-	for i in ${WRKSRC}/plugins/*/Makefile.in ; do			\
-		${SED} <$$i >$$i.fixed					\
-		  -e 's/^\(COMPILE.*\)\\$$/\1 $${EXTRA_GNOME_CFLAGS} \\/' \
-		  -e 's/^\(COMPILE.*[^\\]\)$$/\1 $${EXTRA_GNOME_CFLAGS}/' && \
-		${MV} $$i.fixed $$i ;					\
-	done
+.include "../../devel/bonobo/buildlink2.mk"
+.include "../../devel/gal/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/libglade/buildlink2.mk"
+.include "../../devel/libole2/buildlink2.mk"
+.include "../../devel/oaf/buildlink2.mk"
+.include "../../print/gnome-print/buildlink2.mk"
+.include "../../textproc/libunicode/buildlink2.mk"
+.include "../../textproc/libxml/buildlink2.mk"
+.include "../../textproc/scrollkeeper/buildlink2.mk"
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/oaf/buildlink.mk"
-.include "../../devel/libglade/buildlink.mk"
-.include "../../devel/gal/buildlink.mk"
-.include "../../devel/bonobo/buildlink.mk"
-.include "../../devel/libole2/buildlink.mk"
-.include "../../devel/oaf/buildlink.mk"
-.include "../../devel/gal/buildlink.mk"
-.include "../../print/gnome-print/buildlink.mk"
-.include "../../textproc/libunicode/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
-.include "../../textproc/scrollkeeper/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

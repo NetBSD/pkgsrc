@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/05/12 23:21:53 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/23 22:08:13 jlam Exp $
 #
 
 DISTNAME=	grpn-1.1.2
@@ -11,12 +11,9 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://lashwhip.com/grpn.html
 COMMENT=	Graphical reverse polish notation (RPN) calculator
 
-USE_BUILDLINK_ONLY=     yes
+USE_BUILDLINK2=	# defined
+USE_X11=	# defined
 ALL_TARGET=	grpn
 
-#DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-#USE_X11=	yes
-
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
