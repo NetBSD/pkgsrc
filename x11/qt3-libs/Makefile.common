@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2002/10/09 20:59:42 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/01/25 13:21:04 jlam Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -14,6 +14,7 @@ PATCHDIR=		${.CURDIR}/../../x11/qt3-libs/patches
 HAS_CONFIGURE=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
+USE_CXX=		yes
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	-shared -sm -thread \
 			-system-zlib -system-libpng \
