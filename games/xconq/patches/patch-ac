@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2001/01/02 14:57:38 kleink Exp $
+$NetBSD: patch-ac,v 1.5 2001/10/23 13:25:31 jlam Exp $
 
 --- x11/Makefile.in.orig	Mon Jun 19 17:36:18 2000
 +++ x11/Makefile.in
@@ -30,7 +30,7 @@ $NetBSD: patch-ac,v 1.4 2001/01/02 14:57:38 kleink Exp $
  LIB_RUNTIME_DIR = $(libdir)
  TCL = @TCL_LD_SEARCH_FLAGS@ @TCL_LIB_SPEC@
 -TCL_CFLAGS = @TCLHDIR@
-+TCL_CFLAGS = -I${LOCALBASE}/include
++TCL_CFLAGS = -I${BUILDLINK_DIR}/include
  TCL_DEPS =
  
  TCL_DL_LIBS = @TCL_DL_LIBS@
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.4 2001/01/02 14:57:38 kleink Exp $
  # Tk stuff.
  TK = @TK_LIB_SPEC@
 -TK_CFLAGS = @TKHDIR@ @TK_BUILD_INCLUDES@
-+TK_CFLAGS = -I${LOCALBASE}/include @TK_BUILD_INCLUDES@
++TK_CFLAGS = -I${BUILDLINK_DIR}/include @TK_BUILD_INCLUDES@
  TK_DEPS =
  
  X11_CFLAGS = @TK_XINCLUDES@
