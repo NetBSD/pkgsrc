@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/27 02:46:07 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/09/12 16:52:57 jlam Exp $
 #
 
 DISTNAME=		texi2html
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.shar.Z
 
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://wwwcn1.cern.ch/dci/texi2html/
+
+CONFLICTS=		teTeX-bin-1.0 teTeX-bin-1.0.[1234567]
 
 USE_PERL5=		# defined
 
