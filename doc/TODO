@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2234 2004/10/20 19:00:05 adrianp Exp $
+$NetBSD: TODO,v 1.2235 2004/10/20 21:33:22 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -266,7 +266,6 @@ Suggested package updates
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.26
 	o glpk-4.6
-	o gnome-2.8
 	o gnomeicu-0.99.5
 	o gnunet-0.6.4a
 	o gogo-3.11p1
