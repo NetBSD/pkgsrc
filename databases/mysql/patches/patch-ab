@@ -1,62 +1,20 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 10:40:18 agc Exp $
+$NetBSD: patch-ab,v 1.4 1999/04/09 15:39:38 bad Exp $
 
---- configure.orig	Wed Jul  8 10:51:31 1998
-+++ configure	Fri Jul 17 11:33:30 1998
-@@ -2897,57 +2897,6 @@
- # For compress in zlib
- #AC_CHECK_LIB(z,compress)
+--- configure.orig	Mon Mar 15 15:31:46 1999
++++ configure	Sun Mar 21 23:55:25 1999
+@@ -1691,6 +1691,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
  
--# Check for gtty if termio.h doesn't exists
--if test "$ac_cv_header_termio_h" = "no" -a "$ac_cv_header_termios_h" = "no"
--then
--  echo $ac_n "checking for gtty in -lcompat""... $ac_c" 1>&6
--echo "configure:2905: checking for gtty in -lcompat" >&5
--ac_lib_var=`echo compat'_'gtty | sed 'y%./+-%__p_%'`
--if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
--  echo $ac_n "(cached) $ac_c" 1>&6
--else
--  ac_save_LIBS="$LIBS"
--LIBS="-lcompat  $LIBS"
--cat > conftest.$ac_ext <<EOF
--#line 2913 "configure"
--#include "confdefs.h"
--/* Override any gcc2 internal prototype to avoid an error.  */
--/* We use char because int might match the return type of a gcc2
--    builtin and then its argument prototype would still apply.  */
--char gtty();
--
--int main() {
--gtty()
--; return 0; }
--EOF
--if { (eval echo configure:2924: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
--  rm -rf conftest*
--  eval "ac_cv_lib_$ac_lib_var=yes"
--else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
--  eval "ac_cv_lib_$ac_lib_var=no"
--fi
--rm -f conftest*
--LIBS="$ac_save_LIBS"
--
--fi
--if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
--  echo "$ac_t""yes" 1>&6
--    ac_tr_lib=HAVE_LIB`echo compat | sed -e 's/[^a-zA-Z0-9_]/_/g' \
--    -e 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'`
--  cat >> confdefs.h <<EOF
--#define $ac_tr_lib 1
--EOF
--
--  LIBS="-lcompat $LIBS"
--
--else
--  echo "$ac_t""no" 1>&6
--fi
--
--fi
- # We make a special variable for client library's to avoid including
- # thread libs in the client.
- LIBS_AFTER_SOCKET=$LIBS
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1736,6 +1737,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ # AC_PROG_INSTALL We should only need a AM_PROG_INSTALL
+ 

@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST-server,v 1.2 1999/02/04 21:35:01 frueauf Exp $
+@comment $NetBSD: PLIST-server,v 1.3 1999/04/09 15:39:39 bad Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
-bin/mysql.server
 bin/mysql_install_db
 bin/perror
 bin/replace
 bin/safe_mysqld
+bin/resolveip
 lib/mysql/libdbug.a
 lib/mysql/libheap.a
 lib/mysql/libmerge.a
@@ -24,8 +24,14 @@ share/mysql/french/errmsg.sys
 share/mysql/french/errmsg.txt
 share/mysql/german/errmsg.sys
 share/mysql/german/errmsg.txt
+share/mysql/hungarian/errmsg.sys
+share/mysql/hungarian/errmsg.txt
 share/mysql/italian/errmsg.sys
 share/mysql/italian/errmsg.txt
+share/mysql/japanese/errmsg.sys
+share/mysql/japanese/errmsg.txt
+share/mysql/korean/errmsg.sys
+share/mysql/korean/errmsg.txt
 share/mysql/norwegian-ny/errmsg.sys
 share/mysql/norwegian-ny/errmsg.txt
 share/mysql/norwegian/errmsg.sys
@@ -38,20 +44,24 @@ share/mysql/russian/errmsg.sys
 share/mysql/russian/errmsg.txt
 share/mysql/spanish/errmsg.sys
 share/mysql/spanish/errmsg.txt
+share/mysql/slovak/errmsg.sys
+share/mysql/slovak/errmsg.txt
 share/mysql/swedish/errmsg.sys
 share/mysql/swedish/errmsg.txt
-@dirrm lib/mysql
 @dirrm share/mysql/czech
 @dirrm share/mysql/dutch
 @dirrm share/mysql/english
 @dirrm share/mysql/french
 @dirrm share/mysql/german
+@dirrm share/mysql/hungarian
 @dirrm share/mysql/italian
+@dirrm share/mysql/japanese
+@dirrm share/mysql/korean
 @dirrm share/mysql/norwegian
 @dirrm share/mysql/norwegian-ny
 @dirrm share/mysql/polish
 @dirrm share/mysql/portuguese
 @dirrm share/mysql/russian
 @dirrm share/mysql/spanish
+@dirrm share/mysql/slovak
 @dirrm share/mysql/swedish
-@dirrm share/mysql
