@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3654 2003/10/05 22:12:32 dillo Exp $
+$NetBSD: CHANGES,v 1.3655 2003/10/06 01:19:16 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4114,3 +4114,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Update mysql-server to 3.23.58 [martti 2003-10-05]
 	Updated libgsf to 1.8.2 [wiz 2003-10-05]
 	Added tads-3.0.5 [dillo 2003-10-05]
+	Updated bozohttpd to 20031005 [mrg 2003-10-05]
