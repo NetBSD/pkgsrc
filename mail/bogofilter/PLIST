@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/03 12:06:07 manu Exp $
+bin/bogofilter
+bin/bogoutil
+bin/bogolexer
+bin/bogoupgrade
+etc/bogofilter.cf.example
+man/man1/bogofilter.1
+man/man1/bogoutil.1
+man/man1/bogoupgrade.1
+man/man1/bogolexer.1
