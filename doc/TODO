@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1833 2004/06/14 07:00:05 jmmv Exp $
+$NetBSD: TODO,v 1.1834 2004/06/15 08:48:03 grant Exp $
 
 Suggested new packages
 ======================
@@ -228,6 +228,8 @@ Suggested package updates
 	o festival-1.4.3
 	o file-4.09
 	o findutils-4.1.20
+	o firefox-0.9
+	o firefox-bin-0.9 (+ gtk2, etc..) [grant]
 	o firewalk-5.0
 	o firewalk-gtk-5.0
 	o foomatic-2.9.1 [jlam]
