@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:22:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/06 06:48:15 jmc Exp $
 bin/RScheme
 lib/RScheme/bin/lssctl
 lib/RScheme/bin/rs
@@ -194,6 +194,11 @@ lib/RScheme/resource/modules/threads.mx
 lib/RScheme/resource/modules/unixm.mif
 lib/RScheme/resource/modules/unixm.mx
 lib/RScheme/resource/system.img
+lib/RScheme/resource/modules/libsyscalls.so
+lib/RScheme/resource/modules/libunixm.so
+lib/RScheme/resource/modules/libfasl.so
+lib/RScheme/resource/modules/librs_sys_threads_manager.so
+lib/RScheme/resource/modules/libdb.so
 share/doc/RScheme/COPYING
 share/doc/RScheme/README
 @dirrm share/doc/RScheme
