@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/09/01 09:33:41 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/09/14 21:48:04 garbled Exp $
 
 DISTNAME=	vim-5.3
 CATEGORIES=	editors
@@ -11,6 +11,7 @@ DISTFILES=	vim-5.3-src.tar.gz vim-5.3-rt.tar.gz
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.vim.org/
 
+LDFLAGS+=	-Wl,-R${X11BASE}/lib
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=	yes
 
