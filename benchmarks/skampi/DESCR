@@ -1,0 +1,9 @@
+The SKaMPI-Benchmark is a suite of tests designed to measure the performance
+of MPI. MPI (Message Passing Interface) is a machine independent standard to
+provide an efficient interface to message passing libraries of different
+parallel machines. The goal of SKaMPI is to create a database to illustrate
+the performance of these different MPI implementations. This database should
+allow to:
+1. Decide how to implement portable and efficient MPI programs.
+2. Predict the performance of MPI programs.
+3. Describe supercomputers in terms of MPI.
