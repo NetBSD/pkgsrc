@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:54:57 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/09/17 19:41:10 grant Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
@@ -72,8 +72,5 @@ do-install:
 .endfor
 	@${ECHO} @dirrm share/asclock-classic >> ${PLIST_SRC}
 
-.if defined(USE_GCC3)
-.  include "../../lang/gcc3/buildlink2.mk"
-.endif
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

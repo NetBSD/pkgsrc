@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/09/12 20:07:16 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/17 19:40:21 grant Exp $
 #
 
 DISTNAME=		angband-283
@@ -23,7 +23,7 @@ ALL_TARGET=		angband
 SPOILERFILE=		angband-spoilers.tar.gz
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC2=	# defined
+USE_PKGSRC_GCC=		# defined
 .endif
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2003/09/12 20:07:28 grant Exp $
+# $NetBSD: Makefile,v 1.39 2003/09/17 19:41:15 grant Exp $
 
 DISTNAME=		WindowMaker-0.80.2
 PKGNAME=		windowmaker-0.80.2
@@ -30,6 +30,10 @@ CONFIGURE_ENV+=		CPP_PATH="${CPP}"
 INSTALL_TARGET=		install-strip
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+GCC_REQD=	3.0
+.endif
 
 PKG_SYSCONFSUBDIR=	WindowMaker
 EGDIR=			${PREFIX}/share/examples/WindowMaker
@@ -92,7 +96,3 @@ post-install:
 .include "../../graphics/xpm/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC3=	# defined
-.endif

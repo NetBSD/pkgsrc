@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/08/08 08:30:19 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/17 19:41:14 grant Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -26,5 +26,4 @@ do-install:
 	( cd ${WRKSRC}/nls && ${MAKE} install )
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/09/12 20:07:22 grant Exp $
+# $NetBSD: Makefile,v 1.22 2003/09/17 19:40:47 grant Exp $
 
 DISTNAME=	octave-2.1.33
 PKGNAME=	octave-2.1.34
@@ -22,7 +22,7 @@ BUILD_DEPENDS+= teTeX>=1.0.7:../../print/teTeX
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC3=	# defined
+GCC_REQD=	3.0
 .endif
 
 USE_X11=	yes

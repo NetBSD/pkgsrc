@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/09/12 20:07:25 grant Exp $
+# $NetBSD: Makefile,v 1.51 2003/09/17 19:40:56 grant Exp $
 
 DISTNAME=		inn-${INN_VERSION}
 PKGREVISION=		1
@@ -85,7 +85,7 @@ CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC2=	# defined
+USE_PKGSRC_GCC=		# defined
 .endif
 
 post-patch:

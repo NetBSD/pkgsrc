@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/09/12 20:07:27 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/17 19:41:07 grant Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -22,9 +22,7 @@ USE_PKGINSTALL=		yes
 USE_BUILDLINK2=		yes
 USE_PERL5=		yes
 
-USE_GCC2=		# defined
-
-DIST_GCC=		2.95.3
+USE_PKGSRC_GCC=		# defined
 
 PKG_USERS=		sfs:sfs::Self-certifying\\ file\\ system:/
 PKG_GROUPS=		sfs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/09/12 20:07:34 grant Exp $
+# $NetBSD: Makefile,v 1.38 2003/09/17 19:41:25 grant Exp $
 
 DISTNAME=		xfce-3.8.18
 PKGREVISION=		2
@@ -22,7 +22,7 @@ USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
 
 .if ${MACHINE_ARCH} == "alpha"
-USE_GCC2=		# defined
+USE_PKGSRC_GCC=		# defined
 .endif
 
 CONFIGURE_ARGS+=	--without-included-gettext
