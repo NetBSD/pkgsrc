@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/05/29 23:36:10 recht Exp $
+# $NetBSD: Makefile,v 1.34 2004/06/15 07:29:00 cube Exp $
 #
 
 DISTNAME=	freetype-2.1.8
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 
 .include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if defined(MKTTINTERP) &&	\
   !empty(MKTTINTERP:M[yY][eE][sS])
@@ -42,6 +43,14 @@ CPPFLAGS:=	${CPPFLAGS:C/-O[0-9]*/-O/g}
 CFLAGS:=	${CFLAGS:C/-O[0-9]*/-O/g}
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=	CFLAGS="${CFLAGS}"
+.  endif
+.endif
+
+# source code breaks strict aliasing in gcc >= 2.95
+.if !empty(CC_VERSION:Mgcc-*)
+.  if empty(CC_VERSION:Mgcc-2.*) \
+      || !empty(CC_VERSION:Mgcc-2.95*)
+CFLAGS+=	-fno-strict-aliasing
 .  endif
 .endif
 
