@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4081 2003/12/13 21:12:01 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4082 2003/12/13 21:24:43 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3381,3 +3381,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added csound-dev-4.24.1 [ben 2003-12-13]
 	Updated libgtop2 to 2.0.7 [xtraeme 2003-12-13]
 	Added obconf-1.5 [xtraeme 2003-12-13]
+	Added db2latex-0.7 [xtraeme 2003-12-13]
+	Added docbook-simple-1.0 [xtraeme 2003-12-13]
+	Added dtdparse-2.0beta6 [xtraeme 2003-12-13]
