@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/08/18 18:13:27 tron Exp $
+# $NetBSD: Makefile,v 1.16 2001/08/21 19:41:56 tron Exp $
 
 DISTNAME=		WindowMaker-0.65.1
 PKGNAME=		windowmaker-0.65.1
@@ -39,6 +39,7 @@ CFLAGS=
 #	gnome		enable support for GNOME window manager hints
 #	openlook	enable support for OPEN LOOK(tm) window manager hints
 #	lite		remove Window Maker redundancies with KDE and GNOME
+#			(this option is broke in WindowMaker 0.65.x)
 #
 WINDOWMAKER_OPTIONS?=	gnome kde openlook
 
