@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/11 13:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/21 12:00:38 wiz Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
@@ -21,10 +21,9 @@ CONFLICTS=		maelstrom-[0-9]* maelstrom-sdl-[0-9]*
 EXTRACT_ONLY=		${DISTNAME}
 WRKSRC=			${WRKDIR}/Maelstrom
 
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
-USE_XPM=		YES
-EVAL_PREFIX+=		XPMDIR=xpm
-MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP} XPMDIR=${XPMDIR}
+MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP} XPMDIR=${BUILDLINK_PREFIX.xpm}
 
 post-install:
 	cd ${PREFIX}/share/maelstrom && \
@@ -38,4 +37,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.* ${PREFIX}/share/maelstrom
 	${INSTALL_PROGRAM} ${WRKSRC}/netplayd/netplayd ${PREFIX}/bin/Maelstrom_netplayd
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
