@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/10/13 03:11:50 tv Exp $
+@comment $NetBSD: PLIST,v 1.18 2004/12/05 11:14:10 wiz Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
@@ -182,6 +182,7 @@ qt3/plugins/designer/libwizards.la
 @dirrm qt3/mkspecs/irix-cc-o32
 @dirrm qt3/mkspecs/irix-cc-64
 @dirrm qt3/mkspecs/irix-cc
+@dirrm qt3/mkspecs/interix-g++
 @dirrm qt3/mkspecs/hurd-g++
 @dirrm qt3/mkspecs/hpuxi-acc-64
 @dirrm qt3/mkspecs/hpuxi-acc-32
