@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8099 2004/11/28 10:36:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.8100 2004/11/28 14:36:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5576,3 +5576,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-taskbar-plugin 0.2.2 [martti 2004-11-28]
 	Updated keychain to 2.4.3 [martti 2004-11-28]
 	Updated monotone to 0.15 [jmmv 2004-11-28]
+	Updated libdv to 0.103nb1 [wiz 2004-11-28]
