@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/12/03 15:37:18 skrll Exp $
+# $NetBSD: Makefile,v 1.34 2001/12/07 18:13:41 skrll Exp $
 
 DISTNAME=	kdebase-2.2.2
 CATEGORIES=	x11
@@ -76,8 +76,8 @@ post-install:
 		${PREFIX}/share/doc/kde/HTML/en/kdm
 
 	@# Several programs need to be setuid-root, but due to the way that
-	@# KDE2 finds executables, the files must have their read bit set,
-	@# which is a potential security risk.  "Ugh".
+	@# KDE2 finds executables, the files must have their read bit set
+	@# so that KStandardDir::findResource() will find them
 	@#
 	suid_progs="							\
 		bin/konsole_grantpty					\
