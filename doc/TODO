@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2172 2004/09/27 14:18:11 wiz Exp $
+$NetBSD: TODO,v 1.2173 2004/09/27 14:19:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -478,7 +478,6 @@ Suggested package updates
 	o xpaint-2.7.1
 	o xps-4.2
 	o xpuyopuyo-0.9.5
-	o xscreensaver-4.18
 	o xskat-4.0
 	o xzgv-0.8
 	o yacas-1.0.55
