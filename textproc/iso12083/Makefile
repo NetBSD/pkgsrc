@@ -1,17 +1,16 @@
-# New ports collection makefile for:	iso12083
-# Version required:	1993
-# Date created:		July 9, 1997
-# Whom:			jfieber
-#
-# $Id: Makefile,v 1.1.1.1 1999/03/14 16:15:52 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/03/14 16:17:42 rh Exp $
+# FreeBSD Id: Makefile,v 1.2 1998/06/27 05:19:39 asami Exp
 #
 
 DISTNAME=	iso12083-1993
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://info.ex.ac.uk/pub/SGML/ISO-12083/
+MASTER_SITES=	ftp://info.ex.ac.uk/pub/SGML/ISO-12083/ \
+		ftp://ftp.ifi.uio.no/pub/SGML/ISO12083/ \
+		ftp://ftp.oit.unc.edu/pub/packages/SGML/oslo-mirror/ISO12083/
 DISTFILES=	article.dtd book.dtd maths.dtd serial.dtd
 
-MAINTAINER=	jfieber@FreeBSD.ORG
+MAINTAINER=	rh@NetBSD.ORG
+HOMEPAGE=	http://www.oasis-open.org/cover/sgml-xml.html
 
 DIST_SUBDIR=	iso12083
 
@@ -31,4 +30,4 @@ do-install:
 	done
 	@${INSTALL_DATA} ${FILESDIR}/catalog ${INSTDIR}/catalog
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
