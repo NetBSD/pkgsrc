@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/07/09 12:34:53 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2004/07/22 17:04:28 drochner Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp
 
@@ -28,6 +28,7 @@ USE_X11BASE=		yes
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 ALL_TARGET=		World
+USE_TBL=		yes
 
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
@@ -119,5 +120,4 @@ post-install:
 		${INSTALL_MAN} $${file} ${PREFIX}/man/$${file};		\
 	done
 
-.include "../../textproc/groff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
