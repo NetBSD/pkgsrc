@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2005/02/23 03:28:49 minskim Exp $
+# $NetBSD: Makefile,v 1.31 2005/03/07 12:19:16 tv Exp $
 
 DISTNAME=	sox-12.17.6
 CATEGORIES=	audio
@@ -13,12 +13,20 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-fast-ulaw \
-			--enable-fast-alaw \
-			--with-sun-audio \
-			--disable-oss-dsp \
-			--with-ogg-vorbislib=${BUILDLINK_PREFIX.libvorbis}/lib \
-			--with-ogg-vorbisinc=${BUILDLINK_PREFIX.libvorbis}/include
+CONFIGURE_ARGS+=	--enable-fast-ulaw
+CONFIGURE_ARGS+=	--enable-fast-alaw
+CONFIGURE_ARGS+=	--disable-oss-dsp
+CONFIGURE_ARGS+=	--with-ogg-vorbislib=${BUILDLINK_PREFIX.libvorbis}/lib
+CONFIGURE_ARGS+=	--with-ogg-vorbisinc=${BUILDLINK_PREFIX.libvorbis}/include
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_SRC=		${PKGDIR}/PLIST.common
+
+.if ${OPSYS} != "Interix"
+CONFIGURE_ARGS+=	--with-sun-audio
+PLIST_SRC+=		${PKGDIR}/PLIST.play
+.endif
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
