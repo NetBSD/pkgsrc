@@ -9,7 +9,7 @@ such things. The main program tests database type access to a single file
 (or a set of files if you wish to test more than 1G of storage), and it
 tests creation, reading, and deleting of small files which can simulate
 the usage of programs such as Squid, INN, or Maildir format email. The
-ZCAV program which I initially released as a seperate package tests the
+ZCAV program which I initially released as a separate package tests the
 performance of different zones of a hard drive. It does not write any data
 (so you can use it on full file systems). It can show why comparing the
 speed of Windows at the start of a hard drive to Linux at the end of the

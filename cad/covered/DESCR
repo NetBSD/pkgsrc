@@ -13,5 +13,5 @@ metrics for determining logic coverage. This is where a code coverage
 utility, such as Covered, is very useful.
 
 Please note that this package is for a stable release version.
-There is a seperate package (covered-current) which is made of
+There is a separate package (covered-current) which is made of
 development snapshots.
