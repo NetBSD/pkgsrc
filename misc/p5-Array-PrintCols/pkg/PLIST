@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:02:29 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/07/28 11:48:10 frueauf Exp $
 lib/perl5/site_perl/Array/PrintCols-1.2.pm
 lib/perl5/site_perl/Array/PrintCols.pm
-lib/perl5/man/man3/Array::PrintCols.3p.gz
+lib/perl5/man/man3/Array::PrintCols.3p
 @dirrm lib/perl5/site_perl/Array
