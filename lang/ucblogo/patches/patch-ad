@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/07/13 02:16:43 thorpej Exp $
+
+--- math.c.orig	Mon Jul 12 19:09:10 2004
++++ math.c	Mon Jul 12 19:09:08 2004
+@@ -482,7 +482,7 @@
+     return(binary(args, 'i'));
+ }
+ 
+-NODE *lround(NODE *args) {
++NODE *xlround(NODE *args) {
+     return(binary(args, 'r'));
+ }
+ 
