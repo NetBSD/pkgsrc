@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/10/06 06:57:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/12/17 15:11:03 sketch Exp $
 #
 
 DISTNAME=	gawk-3.1.3
@@ -13,7 +13,6 @@ COMMENT=	GNU awk
 CONFLICTS=	ja-gawk-[0-9]*
 
 USE_BUILDLINK2=		# defined
-USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
 USE_PKGLOCALEDIR=	# defined
 TEST_DIRS=		${WRKSRC}
