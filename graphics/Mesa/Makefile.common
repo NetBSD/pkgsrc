@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2005/02/20 13:08:59 grant Exp $
+# $NetBSD: Makefile.common,v 1.40 2005/03/17 22:16:39 sketch Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -33,7 +33,7 @@ INSTALLATION_DIRS+=	lib
 # Mesa has proper support for Solaris and SunPro, use it.
 .if ${OPSYS} == "SunOS"
 .  if ${MACHINE_ARCH} == "sparc"
-.    if !empty(CC_VERSION:MSun)
+.    if !empty(PKGSRC_COMPILER:Msunpro)
 .      if ${SPARC_TARGET_ARCH} == "sparcv7"
 BUILD_TARGET=		sunos5
 .      elif ${SPARC_TARGET_ARCH} == "sparcv8"
@@ -45,7 +45,7 @@ BUILD_TARGET=		sunos5-v9
 BUILD_TARGET=		sunos5-gcc
 .    endif
 .  else	# i386
-.    if !empty(CC_VERSION:MSun)
+.    if !empty(PKGSRC_COMPILER:Msunpro)
 BUILD_TARGET=		solaris-x86
 .    else
 BUILD_TARGET=		solaris-x86-gcc
