@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2003/09/27 17:07:37 grant Exp $
+# $NetBSD: Makefile,v 1.65 2003/09/28 09:13:58 jlam Exp $
 
 DISTNAME=		gnome-utils-1.4.1.2
 PKGREVISION=		4
@@ -33,7 +33,7 @@ CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 .include "../../devel/gnome-objc/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../devel/libgtop/buildlink2.mk"
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 #.include "../../lang/guile14/buildlink2.mk"	# XXX: req. guile1[46] fix first
 .include "../../www/gtkhtml/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"

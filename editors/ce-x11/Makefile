@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/27 17:07:35 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/28 09:13:56 jlam Exp $
 #
 
 .include "../ce/Makefile.common"
@@ -13,5 +13,5 @@ USE_X11=		# defined
 ALL_TARGET=		xce
 INSTALL_TARGET=		install-x11 man-install-x11
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

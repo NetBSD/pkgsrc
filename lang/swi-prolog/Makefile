@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/09/27 17:07:37 grant Exp $
+# $NetBSD: Makefile,v 1.24 2003/09/28 09:13:57 jlam Exp $
 
 DISTNAME=		pl-lite-5.0.10
 PKGNAME=		swi-prolog-5.0.10
@@ -33,6 +33,6 @@ PLIST_SUBST+=		BITS=64
 PLIST_SUBST+=		BITS=32
 .endif
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

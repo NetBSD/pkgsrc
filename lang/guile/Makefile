@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/09/27 17:07:36 grant Exp $
+# $NetBSD: Makefile,v 1.46 2003/09/28 09:13:57 jlam Exp $
 
 DISTNAME=		guile-1.6.3
 #PKGREVISION=		1
@@ -27,6 +27,6 @@ USE_MAKEINFO=		YES
 INFO_FILES=		guile.info guile-tut.info goops.info r5rs.info
 
 .include "../../devel/libtool/buildlink2.mk"
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

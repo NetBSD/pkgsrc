@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/27 17:07:35 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/28 09:13:56 jlam Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-cursespanel-0
@@ -32,5 +32,5 @@ do-patch:
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/srcdist.mk"
 .include "../../devel/py-curses/buildlink2.mk"
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/09/27 17:07:37 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/28 09:13:58 jlam Exp $
 
 DISTNAME=	reed-5.4
 PKGREVISION=	1
@@ -29,5 +29,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/reed
 	${INSTALL_DATA} ${WRKSRC}/help ${PREFIX}/share/reed/
 
-.include "../../mk/curses.buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
