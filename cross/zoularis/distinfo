@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:36:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:36:26 skrll Exp $
 
-MD5 (zoularis-20001003.tar.gz) = 3812f7f977f5996e508a596138ae4200
+SHA1 (zoularis-20001003.tar.gz) = 7ccc158d041041bf5a761c6a815d64d1a13942cc
+Size (zoularis-20001003.tar.gz) = 72361 bytes
