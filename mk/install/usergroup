@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: usergroup,v 1.5 2005/01/31 18:41:08 jlam Exp $
+# $NetBSD: usergroup,v 1.6 2005/01/31 19:53:31 jlam Exp $
 #
 # +USERGROUP - users and groups management script
 #
@@ -184,6 +184,7 @@ ADD)
 			*)	${USERADD} -c "$descr" -d "$home" -s "$shell" \
 					-g $group -u $userid $user ;;
 			esac
+		fi
 		if ${TEST} -f "$token" && \
 		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
 			:
