@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2000/09/20 05:14:12 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2000/10/13 21:46:45 jlam Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -7,8 +7,8 @@
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
-DISTNAME=		apache_1.3.12
-PKGNAME=		apache-1.3.12
+DISTNAME=		apache_1.3.14
+PKGNAME=		apache-1.3.14
 CATEGORIES=		www
 MASTER_SITES=		http://www.apache.org/dist/ \
 			ftp://ftp.modssl.org/source/ \
@@ -22,7 +22,7 @@ HOMEPAGE=		http://www.apache.org/
 
 CONFLICTS=		apache-*modssl-* apache6-*
 
-SSL_DISTNAME=		mod_ssl-2.6.6-1.3.12
+SSL_DISTNAME=		mod_ssl-2.7.0-1.3.14
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
 HAS_CONFIGURE=		# defined
@@ -93,13 +93,14 @@ pre-patch:
 	cd ${WRKSRC} && ${TAIL} +148 \
 		${WRKDIR}/${SSL_DISTNAME}/pkg.ssldoc/ssldoc.patch \
 		| ${PATCH} ${PATCH_ARGS}
-
-post-patch:
-	${FIND} ${WRKSRC}/htdocs -name '*.orig' -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
 
 post-build:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" \
 		< ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
+
+pre-install:
+	${FIND} ${WRKSRC}/htdocs -name '*.orig' -exec ${RM} -f {} \;
 
 post-install:
 .if !defined(NOPIC)

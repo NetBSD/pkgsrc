@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.2 2000/09/07 04:55:30 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.3 2000/10/13 21:46:46 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -18,7 +18,7 @@ POST-DEINSTALL)
 	rmdir ${LOGDIR} 2>/dev/null || true
 	rmdir ${SERVERROOT}/ssl.prm 2>/dev/null || true
 	rmdir ${SERVERROOT}/ssl.key 2>/dev/null || true
-	rmdir ${SERVERROOT}/ssl.crs 2>/dev/null || true
+	rmdir ${SERVERROOT}/ssl.csr 2>/dev/null || true
 	rmdir ${SERVERROOT}/ssl.crt 2>/dev/null || true
 	rmdir ${SERVERROOT}/ssl.crl 2>/dev/null || true
 	rmdir ${SERVERROOT} 2>/dev/null || true
