@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/01/21 06:13:36 tv Exp $
+# $NetBSD: Makefile.common,v 1.5 2005/02/09 15:28:46 taca Exp $
 #
 # Ruby base distribution common definition
 
@@ -45,6 +45,9 @@ RUBY_SHLIBVER=		${RUBY_VER}.${_RUBY_VERS_TEENY}
 .elif ${OPSYS} == "FreeBSD"
 RUBY_SHLIBMAJOR=	# unused
 RUBY_SHLIBVER=		${_RUBY_VERS_TEENY}
+.elif ${OPSYS} == "OpenBSD"
+RUBY_SHLIBMAJOR=	# unused
+RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_VERS_TEENY}
 .elif ${OPSYS} == "IRIX"
 RUBY_SHLIBMAJOR=	# unused
 .elif ${OPSYS} == "Linux"
