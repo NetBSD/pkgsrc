@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/05 22:39:04 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/03/18 07:04:57 fredb Exp $
 bin/mindy
 bin/mindycomp
 bin/mindyexec
@@ -8,6 +8,7 @@ lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-lib.dbc
 lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/format-lib.dbc
 lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/format-out-lib.dbc
 lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/inspector-base-lib.dbc
+lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/io-lib.dbc
 lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/matrix-lib.dbc
 lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/parse-arguments-lib.dbc
 lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/print-lib.dbc
