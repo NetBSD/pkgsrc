@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2001/03/06 10:03:03 mrg Exp $
+# $NetBSD: Makefile,v 1.23 2001/06/28 13:19:56 drochner Exp $
 #
 
-DISTNAME=	BeOpen-Python-2.0
-PKGNAME=	python-2.0
+DISTNAME=	Python-2.0.1
+PKGNAME=	python-2.0.1
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0/
+MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0.1/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/
@@ -14,7 +15,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 DIST_SUBDIR=	python
 
-WRKSRC=		${WRKDIR}/Python-2.0
+WRKSRC=		${WRKDIR}/Python-2.0.1
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--without-threads
 
