@@ -1,0 +1,24 @@
+$NetBSD: patch-ak,v 1.1 2002/07/16 14:26:21 agc Exp $
+
+--- abuse/src/dev.c	2002/07/16 14:10:23	1.1
++++ abuse/src/dev.c	2002/07/16 14:12:11
+@@ -2057,7 +2057,8 @@
+ 	{ 	
+ 	  if (!mess_win)
+ 	  {
+-	    mess_win=file_dialog(eh,symbol_str("level_name"),current_level ? current_level->name() : "",
++		char *blank = "";
++	    mess_win=file_dialog(eh,symbol_str("level_name"),current_level ? current_level->name() : blank,
+ 				 ID_LEVEL_LOAD_OK,symbol_str("ok_button"),ID_CANCEL,symbol_str("cancel_button"),
+ 				 symbol_str("FILENAME"),ID_MESS_STR1);
+ 	    eh->grab_focus(mess_win);
+@@ -2093,7 +2094,8 @@
+ 	{
+ 	  if (!mess_win)
+ 	  {
+-	    mess_win=file_dialog(eh,symbol_str("saveas_name"),current_level ? current_level->name() : "untitled.spe",
++		char *untitled = "untitled.spe";
++	    mess_win=file_dialog(eh,symbol_str("saveas_name"),current_level ? current_level->name() : untitled,
+ 			       ID_LEVEL_SAVEAS_OK,symbol_str("ok_button"),
+ 				 ID_CANCEL,symbol_str("cancel_button"),
+ 				 symbol_str("FILENAME"),ID_MESS_STR1);
