@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/05/07 01:14:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/26 14:55:46 wiz Exp $
 
 DISTNAME=		gsasl-0.0.8
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		http://josefsson.org/gsasl/releases/ \
 			${MASTER_SITE_GNU:=gsasl/}
