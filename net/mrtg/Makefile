@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/05/03 20:25:37 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/05/18 14:16:53 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -15,6 +15,13 @@ USE_PERL5=	YES
 
 ALL_TARGET=	rateup substitute
 
+post-build:
+	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/mrtg.conf.example \
+	    >${WRKDIR}/mrtg.conf.example
+	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/netstat2mrtg \
+	    >${WRKDIR}/netstat2mrtg
+	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/sys2mrtg \
+	    >${WRKDIR}/sys2mrtg
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/mrtg
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mrtg
@@ -24,6 +31,10 @@ do-install:
 	done
 	for file in ${WRKSRC}/*.gif; do \
 		${INSTALL_DATA} $$file ${PREFIX}/share/mrtg/; \
+	done
+	${INSTALL_DATA} ${WRKDIR}/mrtg.conf.example ${PREFIX}/etc/mrtg
+	for file in netstat2mrtg sys2mrtg; do \
+		${INSTALL_SCRIPT} ${WRKDIR}/$$file ${PREFIX}/libexec/; \
 	done
 	${INSTALL_PROGRAM} ${WRKSRC}/rateup ${PREFIX}/libexec/
 	${INSTALL_SCRIPT} ${WRKSRC}/mrtg ${PREFIX}/bin/
