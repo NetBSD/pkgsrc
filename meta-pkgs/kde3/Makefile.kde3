@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.kde3,v 1.1.1.1 2003/07/30 12:55:40 markd Exp $
+# $NetBSD: Makefile.kde3,v 1.2 2003/09/17 22:58:45 markd Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
 # settings).
 
 CATEGORIES+=	kde
-_KDE_VERSION=	3.1.3
+_KDE_VERSION=	3.1.4
 MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
 		ftp://ftp.us.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
 		ftp://ftp.de.kde.org/pub/kde/stable/${_KDE_VERSION}/src/
