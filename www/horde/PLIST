@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:52 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/11 19:30:07 bouyer Exp $
 sbin/horde_setup
 sbin/horde_secure
 share/doc/horde/CHANGES
@@ -142,6 +142,17 @@ share/horde/locale/local/setup.lang
 share/horde/locale/local/signup.help
 share/horde/locale/local/signup.lang
 share/horde/locale/local/status.lang
+share/horde/locale/lt/help.lang
+share/horde/locale/lt/horde.lang
+share/horde/locale/lt/login.lang
+share/horde/locale/lt/logo.lang
+share/horde/locale/lt/menu.lang
+share/horde/locale/lt/modules.lang
+share/horde/locale/lt/problem.lang
+share/horde/locale/lt/setup.lang
+share/horde/locale/lt/signup.help
+share/horde/locale/lt/signup.lang
+share/horde/locale/lt/status.lang
 share/horde/locale/nl/help.lang
 share/horde/locale/nl/horde.lang
 share/horde/locale/nl/login.lang
@@ -305,6 +316,7 @@ share/horde/test.php3
 @dirrm share/horde/locale/pt-BR
 @dirrm share/horde/locale/nl
 @dirrm share/horde/locale/local
+@dirrm share/horde/locale/lt
 @dirrm share/horde/locale/kr
 @dirrm share/horde/locale/it
 @dirrm share/horde/locale/fr
