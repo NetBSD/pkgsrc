@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2001/03/20 13:02:05 hubertf Exp $
+$NetBSD: patch-aa,v 1.8 2001/05/03 00:24:12 itojun Exp $
 
---- INSTALL.sh.orig	Thu Jan 25 11:02:53 2001
-+++ INSTALL.sh	Sun Feb  4 14:45:40 2001
+--- INSTALL.sh.orig	Sat Apr 28 02:47:23 2001
++++ INSTALL.sh	Thu May  3 09:10:27 2001
 @@ -7,39 +7,39 @@
  umask 022
  
@@ -132,7 +132,7 @@ $NetBSD: patch-aa,v 1.7 2001/03/20 13:02:05 hubertf Exp $
  
  # Sanity checks
  
-@@ -159,32 +156,32 @@
+@@ -159,40 +156,40 @@
  
  CONFIG_DIRECTORY=$install_root$config_directory
  
@@ -142,15 +142,32 @@ $NetBSD: patch-aa,v 1.7 2001/03/20 13:02:05 hubertf Exp $
 -	eval $name='"`bin/postconf -c $CONFIG_DIRECTORY -h $name`"' || kill $$
 -    done
 -}
+-
+-test -f $CONFIG_DIRECTORY/install.cf && . $CONFIG_DIRECTORY/install.cf || {
+-    test -t 0 || {
+-	echo Non-interactive install needs the $CONFIG_DIRECTORY/install.cf 1>&2
+-	echo file from a previous Postfix installation. 1>&2
+-	echo 1>&2
+-	echo Use interactive installation instead. 1>&2
+-	exit 1
+-    }
+-}
 +#test -f $CONFIG_DIRECTORY/main.cf && {
 +#    for name in daemon_directory command_directory queue_directory mail_owner 
 +#    do
 +#	eval $name='"`bin/postconf -c $CONFIG_DIRECTORY -h $name`"' || kill $$
 +#    done
 +#}
- 
--test -f $CONFIG_DIRECTORY/install.cf && . $CONFIG_DIRECTORY/install.cf
-+#test -f $CONFIG_DIRECTORY/install.cf && . $CONFIG_DIRECTORY/install.cf
++
++#test -f $CONFIG_DIRECTORY/install.cf && . $CONFIG_DIRECTORY/install.cf || {
++#    test -t 0 || {
++#	echo Non-interactive install needs the $CONFIG_DIRECTORY/install.cf 1>&2
++#	echo file from a previous Postfix installation. 1>&2
++#	echo 1>&2
++#	echo Use interactive installation instead. 1>&2
++#	exit 1
++#    }
++#}
  
  # Override default settings.
  
@@ -187,7 +204,7 @@ $NetBSD: patch-aa,v 1.7 2001/03/20 13:02:05 hubertf Exp $
  
  # Sanity checks
  
-@@ -232,10 +229,10 @@
+@@ -240,10 +237,10 @@
  
  DAEMON_DIRECTORY=$install_root$daemon_directory
  COMMAND_DIRECTORY=$install_root$command_directory
@@ -201,7 +218,7 @@ $NetBSD: patch-aa,v 1.7 2001/03/20 13:02:05 hubertf Exp $
  MANPAGES=$install_root$manpages
  
  # Create any missing directories.
-@@ -244,7 +241,7 @@
+@@ -252,7 +249,7 @@
  test -d $DAEMON_DIRECTORY || mkdir -p $DAEMON_DIRECTORY || exit 1
  test -d $COMMAND_DIRECTORY || mkdir -p $COMMAND_DIRECTORY || exit 1
  test -d $QUEUE_DIRECTORY || mkdir -p $QUEUE_DIRECTORY || exit 1
@@ -210,7 +227,7 @@ $NetBSD: patch-aa,v 1.7 2001/03/20 13:02:05 hubertf Exp $
  do
      dir=`echo $path|sed -e 's/[/][/]*[^/]*$//' -e 's/^$/\//'`
      test -d $dir || mkdir -p $dir || exit 1
-@@ -264,8 +261,8 @@
+@@ -272,8 +269,8 @@
  
  test -f bin/sendmail && {
      compare_or_replace a+x,go-w bin/sendmail $SENDMAIL_PATH || exit 1
@@ -221,7 +238,7 @@ $NetBSD: patch-aa,v 1.7 2001/03/20 13:02:05 hubertf Exp $
  }
  
  if [ -f $CONFIG_DIRECTORY/main.cf ]
-@@ -290,13 +287,13 @@
+@@ -298,13 +295,13 @@
      "mail_owner = $mail_owner" \
  || exit 1
  
