@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/02/03 13:38:39 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/05/03 14:57:46 schmonz Exp $
 
 DISTNAME=	sqwebmail-3.3.1
 CATEGORIES=	www
@@ -29,6 +29,7 @@ HTMLDIR=		${PREFIX}/share/doc/html/sqwebmail
 CONFIGURE_ARGS+=	--with-cachedir=${CACHEDIR}
 CONFIGURE_ARGS+=	--with-calendardir=${CALENDARDIR}
 CONFIGURE_ARGS+=	--with-cacheowner=${ROOT_USER}
+CONFIGURE_ARGS+=	--with-mailer=/usr/sbin/sendmail
 CONFIGURE_ARGS+=	--enable-https=auto
 CONFIGURE_ARGS+=	--enable-cgibindir=${PREFIX}/libexec/cgi-bin
 CONFIGURE_ARGS+=	--enable-imagedir=${IMAGEDIR}
