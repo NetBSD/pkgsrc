@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.2 2003/08/16 08:33:31 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.3 2003/08/16 10:15:39 jlam Exp $
 #
 # Assume PKG_INSTALLATION_TYPE == "pkgviews".
 
@@ -882,9 +882,14 @@ ${_BLNK_WRAP_CACHE_ADD_TRANSFORM}:
 .  endfor
 .  if defined(USE_X11)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	( ${ECHO} "-[IL]${X11BASE}/*)";					\
-	  ${ECHO} "	flag=\"\$${arg%%${X11BASE}/*}\"";		\
-	  ${ECHO} "	arg=\"\$$flag${BUILDLINK_X11_DIR}/\$${arg#-[IL]${X11BASE}/}\""; \
+	( ${ECHO} "-I${X11BASE}/*)";					\
+	  ${ECHO} "	arg=\"-I${BUILDLINK_X11_DIR}/\$${arg#-I${X11BASE}/}\""; \
+	  ${ECHO} "	cachehit=yes";					\
+	  ${ECHO} "	;;";						\
+	) >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	( ${ECHO} "-L${X11BASE}/*)";					\
+	  ${ECHO} "	arg=\"-L${BUILDLINK_X11_DIR}/\$${arg#-L${X11BASE}/}\""; \
 	  ${ECHO} "	cachehit=yes";					\
 	  ${ECHO} "	;;";						\
 	) >> ${.TARGET}
