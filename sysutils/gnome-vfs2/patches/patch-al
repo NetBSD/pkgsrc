@@ -1,0 +1,61 @@
+$NetBSD: patch-al,v 1.1 2002/09/11 23:07:52 rh Exp $
+
+--- modules/file-method.c.orig	Mon Sep  9 12:29:10 2002
++++ modules/file-method.c	Mon Sep  9 12:33:33 2002
+@@ -511,8 +511,10 @@
+ 	result->uri = gnome_vfs_uri_ref (uri);
+ 	result->dir = dir;
+ 
++#ifdef HAVE_READDIR_R
+ 	/* Reserve extra space for readdir_r, see man page */
+ 	result->current_entry = g_malloc (sizeof (struct dirent) + GET_PATH_MAX() + 1);
++#endif
+ 
+ 	full_name = get_path_from_uri (uri);
+ 	g_assert (full_name != NULL); /* already done by caller */
+@@ -538,7 +540,9 @@
+ {
+ 	gnome_vfs_uri_unref (directory_handle->uri);
+ 	g_free (directory_handle->name_buffer);
++#ifdef HAVE_READDIR_R
+ 	g_free (directory_handle->current_entry);
++#endif
+ 	g_free (directory_handle);
+ }
+ 
+@@ -763,7 +767,11 @@
+ 	handle = (DirectoryHandle *) method_handle;
+ 	
+ 	errno = 0;
++#ifdef HAVE_READDIR_R
+ 	if (readdir_r (handle->dir, handle->current_entry, &result) != 0) {
++#else
++	if ((handle->current_entry = readdir (handle->dir)) == NULL) {
++#endif
+ 		/* Work around a Solaris bug.
+ 		 * readdir64_r returns -1 instead of 0 at EOF.
+ 		 */
+@@ -773,9 +781,11 @@
+ 		return gnome_vfs_result_from_errno ();
+ 	}
+ 	
++#ifdef HAVE_READDIR_R
+ 	if (result == NULL) {
+ 		return GNOME_VFS_ERROR_EOF;
+ 	}
++#endif
+ 
+ 	file_info->name = g_strdup (result->d_name);
+ 
+@@ -1068,7 +1078,11 @@
+ 
+ 	item_buffer = g_malloc (sizeof (struct dirent) + GET_PATH_MAX() + 1);
+ 	for (;;) {
++#ifdef HAVE_READDIR_R
+ 		if (readdir_r (directory, item_buffer, &item) != 0 || item == NULL) {
++#else
++		if ((item_buffer = readdir (directory)) == NULL) {
++#endif
+ 			break;
+ 		}
+ 

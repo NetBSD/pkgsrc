@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1 2002/09/11 23:07:52 rh Exp $
+
+--- config.h.in.orig	Mon Sep  9 12:25:36 2002
++++ config.h.in	Mon Sep  9 12:26:02 2002
+@@ -157,6 +157,9 @@
+ /* Define to 1 if you have the `statvfs' function. */
+ #undef HAVE_STATVFS
+ 
++/* Define to 1 if you have the `readdir_r' function. */
++#undef HAVE_READDIR_R
++
+ /* Define to 1 if you have the <stdint.h> header file. */
+ #undef HAVE_STDINT_H
+ 

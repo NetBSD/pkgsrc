@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2002/09/11 23:07:51 rh Exp $
+
+--- modules/Makefile.in.orig	Sat Sep  7 18:20:24 2002
++++ modules/Makefile.in	Sat Sep  7 18:24:03 2002
+@@ -213,7 +213,7 @@
+ @BUILD_CDEMENU_MODULE_TRUE@CDEMENU_LTLIBS = libcdemenu-desktop.la
+ @BUILD_CDEMENU_MODULE_FALSE@CDEMENU_LTLIBS = 
+ 
+-module_flags = -export_dynamic -avoid-version -module
++module_flags = -export_dynamic -avoid-version -module -L../libgnomevfs/.libs
+ modulesdir = $(libdir)/gnome-vfs-2.0/modules
+ 
+ modules_LTLIBRARIES = \
