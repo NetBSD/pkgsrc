@@ -1,17 +1,18 @@
-$NetBSD: patch-ai,v 1.1.1.1 2004/02/22 16:32:45 jmmv Exp $
+$NetBSD: patch-ai,v 1.2 2004/04/02 05:51:03 jmmv Exp $
 
---- configure.orig	2003-12-31 03:12:56.000000000 +0100
-+++ configure	2003-12-31 03:13:45.000000000 +0100
-@@ -12832,9 +12832,11 @@
- 
- case "$host" in
- *FreeBSD*)
--	CDROM_HOST=freebsd
- 	default_cd_device="/dev/acd0c"
+http://bugzilla.gnome.org/show_bug.cgi?id=135139
+
+--- configure.orig	2003-12-31 04:10:36.000000000 +0100
++++ configure
+@@ -23197,6 +23197,11 @@ case "$host" in
+ 	CDROM_HOST_LINUX=true
+ 	default_cd_device="/dev/cdrom"
  	;;
 +*NetBSD*)
++	CDROM_HOST=freebsd
++	CDROM_HOST_FREEBSD=true
 +	default_cd_device="/dev/rcd0d"
 +	;;
- *Linux*)
- 	CDROM_HOST=linux
- 	default_cd_device="/dev/cdrom"
+ *SunOS*)
+ 	CDROM_HOST=solaris
+ 	CDROM_HOST_SOLARIS=true
