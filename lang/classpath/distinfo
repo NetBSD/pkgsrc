@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/03/07 21:31:09 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2004/11/27 18:17:22 wiz Exp $
 
-SHA1 (classpath-0.07.tar.gz) = a3b34e4850e9741812f42e14b1e68c6c90a04136
-Size (classpath-0.07.tar.gz) = 5745703 bytes
+SHA1 (classpath-0.11.tar.gz) = b2cfb414f24262c60a3829265c3f3c2dbfad03ef
+Size (classpath-0.11.tar.gz) = 3967941 bytes
