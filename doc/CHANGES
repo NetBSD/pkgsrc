@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.718 2002/12/07 21:06:31 kristerw Exp $
+$NetBSD: CHANGES,v 1.719 2002/12/07 21:20:44 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3858,3 +3858,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added tcpreplay-1.2a [cjep 2002-12-07]
 	Updated xmame to 0.62.1nb1 [kristerw 2002-12-07]
 	Updated xmess to 0.56.2nb1 [kristerw 2002-12-07]
+	Added wdm-1.20 [cjep 2002-12-07]
