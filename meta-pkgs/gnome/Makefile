@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/04 21:41:59 rh Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/20 13:47:42 xtraeme Exp $
 
 DISTNAME=	gnome-1.4.2.1
 PKGREVISION=	5
@@ -12,7 +12,7 @@ COMMENT=	Meta-package for the GNU Network Object Model Environment
 
 DEPENDS+=	gnome-core>=1.4.2:../../x11/gnome-core
 DEPENDS+=	ee>=0.3.12nb3:../../graphics/ee
-DEPENDS+=	gdm>=2.2.0nb2:../../x11/gdm
+DEPENDS+=	gdm>=2.2.0nb2:../../x11/gdm1
 DEPENDS+=	ggv>=1.0.2nb5:../../print/ggv
 DEPENDS+=	glade>=0.6.2nb4:../../devel/glade
 DEPENDS+=	gmc>=4.5.51nb2:../../sysutils/gmc
