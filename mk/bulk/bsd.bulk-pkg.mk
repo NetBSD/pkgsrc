@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.45.2.5 2003/08/17 04:57:17 jlam Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.45.2.6 2003/08/21 02:06:17 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -160,13 +160,13 @@ bulk-check-uptodate:
 	fi ; \
 	if [ "$$uptodate" = "1" ]; then \
 		${SHCOMMENT} "Check required binary packages" ; \
-		deps=`${_PKG_INFO} -qf ${REF} \
+		deps=`${PKG_INFO} -qf ${REF} \
 		      | ${GREP} '^@pkgdep' \
 		      | ${SED} 's,@pkgdep.,,g'`; \
 		for dep in $$deps ; do \
 			${SHCOMMENT} "check against the binary pkg that pkg_add would pick, too:" ; \
 			${SHCOMMENT} "(Only one should be returned here, really...)" ; \
-			pkg=`${_PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"` ;  \
+			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"` ;  \
 			if [ -z "$$pkg" ]; then \
 				${ECHO_MSG} >&2 "BULK> Required binary package $$dep does not exist, rebuilding... " ; \
 				uptodate=0 ; \
@@ -200,7 +200,7 @@ bulk-package:
 	fi \
 	) 2>&1 | tee -a ${BUILDLOG}
 	@uptodate=`${MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
-	if ${_PKG_INFO} -qe "${PKGNAME:C/-[^-]*$/-[0-9]*/}" ; then \
+	if ${PKG_INFO} -qe "${PKGNAME:C/-[^-]*$/-[0-9]*/}" ; then \
 		installed=1; \
 	else \
 		installed=0; \
@@ -217,9 +217,9 @@ bulk-package:
 			${ECHO_MSG} "BULK> Removing outdated (installed) package ${PKGNAME} first." ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
 			${DO}       ${MAKE} deinstall ; \
-			if ${_PKG_INFO} -qe ${PKGWILDCARD} ; then \
-				${ECHO_MSG} ${_PKG_DELETE} -r ${PKGWILDCARD} ;\
-				${DO} ${_PKG_DELETE} -r ${PKGWILDCARD} ;\
+			if ${PKG_INFO} -qe ${PKGWILDCARD} ; then \
+				${ECHO_MSG} ${PKG_DELETE} -r ${PKGWILDCARD} ;\
+				${DO} ${PKG_DELETE} -r ${PKGWILDCARD} ;\
 			fi ;\
 		fi ; \
 		if [ -f ${PKGFILE} ]; then \
@@ -244,14 +244,14 @@ bulk-package:
 		fi; \
 		if [ "${PRECLEAN}" = "yes" ]; then \
 			${ECHO_MSG} "BULK> Removing installed packages which are not needed to build ${PKGNAME}" ; \
-			for pkgname in `${_PKG_INFO} -e \*` ; \
+			for pkgname in `${PKG_INFO} -e \*` ; \
 			do \
 				if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 					pkgdir=`${GREP} " $$pkgname " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
 					if [ -z "$$pkgdir" ]; then \
 					    pkgdir=unknown ; \
 					fi; \
-					if ${_PKG_INFO} -qe $$pkgname ; then \
+					if ${PKG_INFO} -qe $$pkgname ; then \
 						${SHCOMMENT} "Remove only unneeded pkgs" ; \
 						if ! ${EGREP} -q "^${PKGPATH} .* $$pkgdir( |$$)" ${DEPENDSFILE} ; then \
 							case "${BULK_PREREQ}" in \
@@ -259,10 +259,10 @@ bulk-package:
 									${ECHO_MSG} "BULK> Keeping BULK_PREREQ: $$pkgname ($$pkgdir)" ;\
 									;; \
 								* ) \
-									${ECHO_MSG} ${_PKG_DELETE} -r $$pkgname ; \
-									${DO}       ${_PKG_DELETE} -r $$pkgname || true ; \
-									if ${_PKG_INFO} -qe $$pkgname ; then \
-										${DO}       ${_PKG_DELETE} -f $$pkgname || true ; \
+									${ECHO_MSG} ${PKG_DELETE} -r $$pkgname ; \
+									${DO}       ${PKG_DELETE} -r $$pkgname || true ; \
+									if ${PKG_INFO} -qe $$pkgname ; then \
+										${DO}       ${PKG_DELETE} -f $$pkgname || true ; \
 									fi ;\
 									;; \
 							esac ; \
@@ -272,10 +272,10 @@ bulk-package:
 					fi ;\
 				else \
 					${SHCOMMENT} "Remove all pkgs" ; \
-					${ECHO_MSG} ${_PKG_DELETE} -r $$pkgname ; \
-					${DO}       ${_PKG_DELETE} -r $$pkgname || true ; \
-					if ${_PKG_INFO} -qe $$pkgname ; then \
-						${DO}       ${_PKG_DELETE} -f $$pkgname || true ; \
+					${ECHO_MSG} ${PKG_DELETE} -r $$pkgname ; \
+					${DO}       ${PKG_DELETE} -r $$pkgname || true ; \
+					if ${PKG_INFO} -qe $$pkgname ; then \
+						${DO}       ${PKG_DELETE} -f $$pkgname || true ; \
 					fi ;\
 				fi ;\
 			done ; \
@@ -287,10 +287,10 @@ bulk-package:
 				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
 				if [ -z "$$pkgname" ]; then continue ; fi ;\
 				pkgfile=${PACKAGES}/All/$${pkgname}.tgz ;\
-				if ! ${_PKG_INFO} -qe $$pkgname ; then \
+				if ! ${PKG_INFO} -qe $$pkgname ; then \
 					if [ -f $$pkgfile ]; then \
-						${ECHO_MSG} "BULK>  ${_PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile"; \
-						${DO} ${_PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile || ${ECHO_MSG} "warning:  could not add $$pkgfile." ; \
+						${ECHO_MSG} "BULK>  ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile"; \
+						${DO} ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile || ${ECHO_MSG} "warning:  could not add $$pkgfile." ; \
 					else \
 						${ECHO_MSG} "BULK> warning:  $$pkgfile does not exist.  It will be rebuilt." ;\
 					fi ;\
@@ -376,10 +376,10 @@ bulk-package:
 # been modified and need rebuilding.
 bulk-install:
 	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
-		if ! ${_PKG_INFO} -qe ${PKGNAME} ; then \
+		if ! ${PKG_INFO} -qe ${PKGNAME} ; then \
 			${DO} ${MAKE} install-depends ; \
-			${ECHO_MSG} "BULK> " ${_PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
-			${DO} ${_PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
+			${ECHO_MSG} "BULK> " ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
+			${DO} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 		fi ; \
 	else \
 		${ECHO_MSG} ${MAKE} bulk-package PRECLEAN=no; \

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.27 2003/06/06 18:28:47 jschauma Exp $
+# $NetBSD: pre-build,v 1.27.2.1 2003/08/21 02:06:17 jlam Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -69,6 +69,7 @@ fi
 # Clean out everything and its mother
 #
 PKG_DBDIR=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=PKG_DBDIR)`
+DEPOTBASE=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=DEPOTBASE)`
 
 echo Removing all installed packages in ${PKG_DBDIR}
 
@@ -76,7 +77,10 @@ if [ -d ${PKG_DBDIR} ]; then
 	cd ${PKG_DBDIR}
 	for pkg in *
 	do
-		if `env PKG_DBDIR=${PKG_DBDIR} pkg_info -qe $pkg`; then
+		if `env PKG_DBDIR=${DEPOTBASE} pkg_info -qe $pkg`; then
+			echo pkg_delete -r $pkg
+			env PKG_DBDIR=${DEPOTBASE} pkg_delete -r $pkg
+		elif `env PKG_DBDIR=${PKG_DBDIR} pkg_info -qe $pkg`; then
 			echo pkg_delete -r $pkg
 			env PKG_DBDIR=${PKG_DBDIR} pkg_delete -r $pkg
 		fi
@@ -85,7 +89,10 @@ if [ -d ${PKG_DBDIR} ]; then
 	# to deinstall
 	for pkg in *
 	do
-		if `env PKG_DBDIR=${PKG_DBDIR} pkg_info -qe $pkg`; then
+		if `env PKG_DBDIR=${DEPOTBASE} pkg_info -qe $pkg`; then
+			echo pkg_delete -f $pkg
+			env PKG_DBDIR=${DEPOTBASE} pkg_delete -f $pkg
+		elif `env PKG_DBDIR=${PKG_DBDIR} pkg_info -qe $pkg`; then
 			echo pkg_delete -f $pkg
 			env PKG_DBDIR=${PKG_DBDIR} pkg_delete -f $pkg
 		fi
