@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/09/28 09:13:58 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/25 08:04:25 snj Exp $
 #
 
 DISTNAME=	tn5250-0.12.51
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.linux-sna.org/software/5250/
 COMMENT=	Implementation of the IBM 5250 telnet protocol
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

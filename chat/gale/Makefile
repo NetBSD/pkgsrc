@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/26 02:27:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/25 08:07:21 snj Exp $
 #
 
 DISTNAME=	gale-0.99a
@@ -10,7 +10,7 @@ MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://gale.org/
 COMMENT=	Secure instant messaging system
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_READLINE=	# needs rl_named_function()
 USE_LIBTOOL=		YES
@@ -45,11 +45,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/kutils/ROOT ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${EGDIR}
 
-.include "../../devel/boehm-gc/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../net/adns/buildlink2.mk"
-.include "../../security/rsaref/buildlink2.mk"
-.include "../../www/libwww/buildlink2.mk"
+.include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../net/adns/buildlink3.mk"
+.include "../../security/rsaref/buildlink3.mk"
+.include "../../www/libwww/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
