@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/02 22:40:19 minskim Exp $
+${RUBY_SITEARCHLIBDIR}/syck.${RUBY_DLEXT}
+${RUBY_SITELIBDIR}/okay.rb
+${RUBY_SITELIBDIR}/yaml.rb
+${RUBY_SITELIBDIR}/yod.rb
+${RUBY_SITELIBDIR}/okay/news.rb
+${RUBY_SITELIBDIR}/okay/rpc.rb
+@dirrm ${RUBY_SITELIBDIR}/okay
+${RUBY_SITELIBDIR}/yaml/baseemitter.rb
+${RUBY_SITELIBDIR}/yaml/basenode.rb
+${RUBY_SITELIBDIR}/yaml/constants.rb
+${RUBY_SITELIBDIR}/yaml/dbm.rb
+${RUBY_SITELIBDIR}/yaml/emitter.rb
+${RUBY_SITELIBDIR}/yaml/encoding.rb
+${RUBY_SITELIBDIR}/yaml/error.rb
+${RUBY_SITELIBDIR}/yaml/loader.rb
+${RUBY_SITELIBDIR}/yaml/rubytypes.rb
+${RUBY_SITELIBDIR}/yaml/store.rb
+${RUBY_SITELIBDIR}/yaml/stream.rb
+${RUBY_SITELIBDIR}/yaml/stringio.rb
+${RUBY_SITELIBDIR}/yaml/syck.rb
+${RUBY_SITELIBDIR}/yaml/types.rb
+${RUBY_SITELIBDIR}/yaml/yamlnode.rb
+${RUBY_SITELIBDIR}/yaml/ypath.rb
+@dirrm ${RUBY_SITELIBDIR}/yaml
+${RUBY_EXAMPLESDIR}/syck/okayNews-modules.rb
+${RUBY_EXAMPLESDIR}/syck/okayNews-sample.rb
+${RUBY_EXAMPLESDIR}/syck/okayNews-validate.rb
+${RUBY_EXAMPLESDIR}/syck/okayRpc-client.rb
+${RUBY_EXAMPLESDIR}/syck/okayRpc-server.rb
+${RUBY_EXAMPLESDIR}/syck/yaml-sortHashKeys.rb
+@dirrm ${RUBY_EXAMPLESDIR}/syck
