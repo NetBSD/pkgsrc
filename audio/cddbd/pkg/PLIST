@@ -1,0 +1,4 @@
+bin/cddbd
+share/xmcd/cddbd/access
+share/xmcd/cddbd/motd
+share/xmcd/cddbd/sites

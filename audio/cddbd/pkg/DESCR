@@ -1,0 +1,20 @@
+This is a port of The Internet CD Database Server (cddbd v1.3.1)
+ 
+Copyright (c) 1996  Steve Scherf <steve@moonsoft.com>
+A Moondog Software Production
+ 
+The CD Database Server (cddbd) is a program designed to allow remote
+access of xmcd-style Compact Disc database entries via the Internet.
+Many CD players (such as xmcd--another FreeBSD port, and DiscPlay
+for Windows) can connect to this server through the Internet and
+download CD data from the server machine's CDDB.
+
+Current on-line information on cddbd can be found on the World
+Wide Web page with the following URL:
+
+	http://www.moonsoft.com/software.html
+
+--
+Port to FreeBSD 2.2 by
+Brent J. Nordquist <bjn@visi.com>
+Fri Apr 18 1997

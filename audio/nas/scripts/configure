@@ -1,0 +1,14 @@
+#!/bin/sh
+
+chmod -R +w ${WRKSRC}
+echo -n "Removing disgusting malloc.h includes.  Please wait.."
+for i in `find ${WRKSRC} -name '*.[ch]' | xargs fgrep -l malloc.h`; do
+	sed -e 's/malloc.h/stdlib.h/' < $i > $i.bak && mv $i.bak $i
+done
+echo " Done."
+
+echo -n "Ensuring Install uses the -c flag.  Please wait.."
+for i in `find ${WRKSRC} -name 'Imakefile' | xargs fgrep -l INSTALLFLAGS`; do
+        sed -e 's/INSTALLFLAGS = \$(INSTINCFLAGS)/INSTALLFLAGS \+= \$(INSTINCFLAGS)/' < $i > $i.bak && mv $i.bak $i
+done
+echo " Done."
