@@ -1,21 +1,32 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/15 01:57:12 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/10/14 22:29:04 dmcmahill Exp $
 bin/iverilog
 bin/iverilog-vpi
 bin/vvp
+include/_pli_types.h
 include/acc_user.h
 include/ivl_target.h
 include/veriuser.h
 include/vpi_user.h
 lib/libveriuser.a
 lib/libvpi.a
+lib/ivl/cadpli.vpl
+lib/ivl/fpga-s.conf
+lib/ivl/fpga.conf
 lib/ivl/fpga.tgt
 lib/ivl/ivl
-lib/ivl/iverilog.conf
 lib/ivl/ivlpp
+lib/ivl/null-s.conf
+lib/ivl/null.conf
 lib/ivl/null.tgt
+lib/ivl/system.sft
 lib/ivl/system.vpi
+lib/ivl/vvp-s.conf
+lib/ivl/vvp.conf
 lib/ivl/vvp.tgt
+lib/ivl/xnf-s.conf
+lib/ivl/xnf.conf
 man/man1/iverilog.1
+man/man1/iverilog-fpga.1
 man/man1/iverilog-vpi.1
 man/man1/vvp.1
 @dirrm lib/ivl
