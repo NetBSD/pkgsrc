@@ -1,4 +1,4 @@
-.\" $NetBSD: mklivecd.8,v 1.2 2004/02/27 01:32:31 xtraeme Exp $
+.\" $NetBSD: mklivecd.8,v 1.3 2004/02/27 01:48:43 wiz Exp $
 .\"
 .\" mklivecd - Build a NetBSD Live CD for i386 machines
 .\" Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd February 25, 2004
+.Dd February 27, 2004
 .Dt MKLIVECD 8
 .Os
 .Sh NAME
@@ -37,9 +37,7 @@
 Live CD for i386 machines
 .Sh SYNOPSIS
 .Nm
-.Oo
-.Ar -c conf_file
-.Oc 
+.Fl c Ar conf_file
 .Ar target
 .Sh DESCRIPTION
 .Nm
@@ -54,8 +52,9 @@ The following options are recognized:
 .It Fl c Ar conf_file
 Use
 .Ar conf_file
-as configuration file (full name expected). Example:
-.Ar -c foo.conf .
+as configuration file (full name expected).
+Example:
+.Fl c Ar foo.conf .
 .El
 .Sh CONFIGURATION
 .Nm
