@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.8 2002/03/11 00:13:10 jmc Exp $
+$NetBSD: patch-aa,v 1.9 2002/08/21 01:49:10 mjl Exp $
 
---- configure.orig	Sun Jan 20 11:45:14 2002
-+++ configure
-@@ -6593,7 +6593,7 @@
+--- configure.orig	Mon Aug 19 20:05:07 2002
++++ configure	Wed Aug 21 02:57:45 2002
+@@ -6888,7 +6888,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lpspell -lstdc++ -lpspell-modules $LIBS"
 +LIBS="-lpspell -lstdc++ -lpspell-modules $LIBS -lm"
  cat > conftest.$ac_ext <<EOF
- #line 6599 "configure"
+ #line 6894 "configure"
  #include "confdefs.h"
-@@ -6627,7 +6627,7 @@
+@@ -6922,7 +6922,7 @@
  #define $ac_tr_lib 1
  EOF
  
@@ -20,16 +20,7 @@ $NetBSD: patch-aa,v 1.8 2002/03/11 00:13:10 jmc Exp $
  
  else
    echo "$ac_t""no" 1>&6
-@@ -8131,7 +8131,7 @@
-   cat conftest.$ac_ext >&5
-   rm -rf conftest*
-   CATOBJEXT=.mo
--		   DATADIRNAME=lib
-+		   DATADIRNAME=${PKGLOCALEDIR}
- fi
- rm -f conftest*
- 		INSTOBJEXT=.mo
-@@ -9137,10 +9137,10 @@
+@@ -10111,10 +10111,10 @@
  /* Override any gcc2 internal prototype to avoid an error.  */
  /* We use char because int might match the return type of a gcc2
      builtin and then its argument prototype would still apply.  */
@@ -41,4 +32,4 @@ $NetBSD: patch-aa,v 1.8 2002/03/11 00:13:10 jmc Exp $
 +libiconv_open()
  ; return 0; }
  EOF
- if { (eval echo configure:9147: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+ if { (eval echo configure:10121: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
