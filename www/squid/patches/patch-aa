@@ -1,5 +1,5 @@
 --- src/Makefile.in.orig	Fri Oct 24 19:57:11 1997
-+++ src/Makefile.in	Sat May 23 22:31:58 1998
++++ src/Makefile.in	Sun May 24 12:01:18 1998
 @@ -5,19 +5,19 @@
  #
  #  Uncomment and customize the following to suit your needs:
@@ -32,6 +32,15 @@
  
  DEFINES         = $(HOST_OPT) $(AUTH_OPT) $(LOG_HDRS_OPT) \
                    $(ICMP_OPT) $(DELAY_HACK) $(USERAGENT_OPT) \
+@@ -41,7 +41,7 @@
+ DEFAULT_CACHE_LOG       = $(localstatedir)/logs/cache.log
+ DEFAULT_ACCESS_LOG      = $(localstatedir)/logs/access.log
+ DEFAULT_STORE_LOG       = $(localstatedir)/logs/store.log
+-DEFAULT_PID_FILE        = $(localstatedir)/logs/squid.pid
++DEFAULT_PID_FILE        = /var/run/squid.pid
+ DEFAULT_SWAP_DIR        = $(localstatedir)/cache
+ DEFAULT_PINGER		= $(libexecdir)/pinger
+ DEFAULT_UNLINKD		= $(libexecdir)/unlinkd
 @@ -199,14 +199,14 @@
  		echo "mkdir $(sysconfdir)"; \
  		mkdir $(sysconfdir); \
