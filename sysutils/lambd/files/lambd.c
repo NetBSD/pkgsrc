@@ -1,4 +1,4 @@
-/*	$NetBSD: lambd.c,v 1.2 2001/07/18 06:47:37 itojun Exp $	*/
+/*	$NetBSD: lambd.c,v 1.3 2001/07/19 20:23:43 itojun Exp $	*/
 
 /*
  * Copyright (C) 2001 WIDE Project.  All rights reserved.
@@ -35,6 +35,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <err.h>
+#include <ctype.h>
 
 #include "lambio.h"
 
@@ -42,10 +43,14 @@
 
 int main __P((int, char **));
 void usage __P((void));
-void mainloop __P((unsigned long));
+void mainloop __P((void));
 void lsleep __P((unsigned long));
 int monitor __P((void));
 void led __P((int));
+
+int cycle __P((void));
+int loadavg __P((void));
+int morse __P((void));
 
 int foreground = 0;
 int debug = 0;
@@ -54,6 +59,10 @@ int nohw = 0;
 #else
 const int nohw = 1;
 #endif
+unsigned long delay = 1 * 1000000;
+const char *morsestr = "LAMB";
+
+int (*func) __P((void)) = cycle;
 
 int
 main(argc, argv)
@@ -61,11 +70,17 @@ main(argc, argv)
 	char **argv;
 {
 	int ch;
-	unsigned long delay;
 	char *p, *ep;
 
-	while ((ch = getopt(argc, argv, "dfn")) != -1) {
+	while ((ch = getopt(argc, argv, "LM:dfn")) != -1) {
 		switch (ch) {
+		case 'L':
+			func = loadavg;
+			break;
+		case 'M':
+			func = morse;
+			morsestr = optarg;
+			break;
 		case 'd':
 			debug++;
 			break;
@@ -94,7 +109,6 @@ main(argc, argv)
 
 	switch (argc) {
 	case 0:
-		delay = 1 * 1000000;
 		break;
 	case 1:
 		p = *argv;
@@ -120,7 +134,7 @@ main(argc, argv)
 
 	if (debug)
 		fprintf(stderr, "delay=%lu\n", delay);
-	mainloop(delay);
+	mainloop();
 	/* NOTREACHED */
 
 	exit(0);	/* silent gcc */
@@ -129,26 +143,16 @@ main(argc, argv)
 void
 usage()
 {
-	fprintf(stderr, "usage: lambd [-f] [usec]\n");
+	fprintf(stderr, "usage: lambd [-LMdfn] [usec]\n");
 }
 
 void
-mainloop(delay)
-	unsigned long delay;
+mainloop()
 {
-	delay /= 2;
-
 	led(0);
 	while (1) {
-		if (monitor())
+		if ((*func)())
 			break;
-		led(1);
-		lsleep(delay);
-
-		if (monitor())
-			break;
-		led(0);
-		lsleep(delay);
 	}
 
 	led(0);
@@ -195,4 +199,123 @@ led(on)
 		return;
 
 	lamb_led(on);
+}
+
+/*
+ * define a interesting functions below!
+ */
+
+int
+cycle()
+{
+	if (monitor())
+		return 1;
+	led(1);
+	lsleep(delay / 2);
+
+	if (monitor())
+		return 1;
+	led(0);
+	lsleep(delay / 2);
+	return 0;
+}
+
+int
+loadavg()
+{
+	double v;
+	int i;
+	unsigned long t = delay / 10;
+
+	getloadavg(&v, 1);
+	if (debug)
+		fprintf(stderr, "loadavg=%g\n", v);
+	for (i = 0; i < v * 2; i++) {
+		if (monitor())
+			return 1;
+		led(1);
+		lsleep(t);
+		led(0);
+		lsleep(t);
+	}
+	lsleep(t * 5);
+	return 0;
+}
+
+static const char *const digit[] = {
+	"-----",
+	".----",
+	"..---",
+	"...--",
+	"....-",
+	".....",
+	"-....",
+	"--...",
+	"---..",
+	"----.",
+};
+static const char *const alph[] = {
+	".-",
+	"-...",
+	"-.-.",
+	"-..",
+	".",
+	"..-.",
+	"--.",
+	"....",
+	"..",
+	".---",
+	"-.-",
+	".-..",
+	"--",
+	"-.",
+	"---",
+	".--.",
+	"--.-",
+	".-.",
+	"...",
+	"-",
+	"..-",
+	"...-",
+	".--",
+	"-..-",
+	"-.--",
+	"--..",
+};
+
+int
+morse()
+{
+	const char *p, *q;
+	int mark, blank;
+	unsigned long t = delay / 10;
+
+	for (p = morsestr; *p; p++) {
+		if (isdigit(*p))
+			q = digit[*p - '0'];
+		else if (isalpha(*p) && isupper(*p))
+			q = alph[*p - 'A'];
+		else if (isalpha(*p) && islower(*p))
+			q = alph[*p - 'a'];
+
+		if (debug)
+			printf("%c <%s>\n", *p, q);
+		for (/*nothing*/; *q; q++) {
+			switch (*q) {
+			case '-':
+				mark = 3; blank = 1; break;
+			case '.':
+				mark = 1; blank = 1; break;
+			default:
+				mark = 0; blank = 3; break;
+			}
+			led(1);
+			lsleep(mark * t);
+			led(0);
+			lsleep(blank * t);
+		}
+		lsleep(1 * t);
+	}
+	lsleep(10 * t);
+	return 0;
 }
