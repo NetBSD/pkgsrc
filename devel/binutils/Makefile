@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/07/04 17:16:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2004/08/07 19:06:59 jschauma Exp $
 
 DISTNAME=	binutils-2.15
 PKGNAME=	binutils-2.15.0.0
@@ -28,7 +28,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.common_end
 
 INFO_FILES=	as.info bfd.info binutils.info ld.info
 
-# gprof (XXX: and others?) can not be built on all platforms
+# gprof (XXX: and others?) cannot be built on all platforms
 #
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "IRIX"
