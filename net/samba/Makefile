@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2003/09/05 19:13:41 kim Exp $
+# $NetBSD: Makefile,v 1.103 2003/09/14 22:25:25 jlam Exp $
 
 .include "Makefile.common"
-PKGREVISION=		3
+PKGREVISION=		4
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.samba.org/
@@ -56,9 +56,26 @@ EXAMPLESDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=		${EXAMPLESDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 SUPPORT_FILES_PERMS=	${SMBPASSWD_FILE}
+SUPPORT_FILES_PERMS+=	${EXAMPLESDIR}/adduser.sh ${SAMBA_ETCDIR}/adduser \
+			${ROOT_USER} ${ROOT_GROUP} 0555
+SUPPORT_FILES_PERMS+=	${EXAMPLESDIR}/deluser.sh ${SAMBA_ETCDIR}/deluser \
+			${ROOT_USER} ${ROOT_GROUP} 0555
 RCD_SCRIPTS=		samba nmbd smbd
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0500
+
+.if !defined(MKTEMP)
+MKTEMP!=	${TYPE} mktemp | \
+		${AWK} '/not found/ { print "mktemp"; exit } { print $$3 }'
+MAKEFLAGS+=	MKTEMP="${MKTEMP}"
+.endif
+.if !defined(PWD_MKDB)
+PWD_MKDB!=	${TYPE} pwd_mkdb | \
+		${AWK} '/not found/ { print "pwd_mkdb"; exit } { print $$3 }'
+MAKEFLAGS+=	PWD_MKDB="${PWD_MKDB}"
+.endif
+FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
+FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
 # Remove irrelevant files for this package.
 post-extract:
@@ -72,6 +89,10 @@ post-extract:
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/libsmbclient
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/svr4-startup
 
+post-build:
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/adduser.sh > ${WRKDIR}/adduser.sh
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
+
 post-install:
 	# Install Samba documentation.
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -82,6 +103,8 @@ post-install:
 
 	# Install Samba examples.
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh ${EXAMPLESDIR}/adduser.sh
+	${INSTALL_SCRIPT} ${WRKDIR}/deluser.sh ${EXAMPLESDIR}/deluser.sh
 	${CP} -R ${WRKDIR}/${DISTNAME}/examples/* ${EXAMPLESDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
 	${CHMOD} -R ugo-w ${EXAMPLESDIR}
