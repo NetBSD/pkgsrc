@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3749 2003/10/28 12:36:46 cube Exp $
+$NetBSD: CHANGES,v 1.3750 2003/10/28 17:01:55 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4264,3 +4264,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vcdimager-devel to 0.7.12nb2 [wiz 2003-10-28]
 	Updated nas to 1.6nb3 [grant 2003-10-28]
 	Updated tidy to 20031002 [cube 2003-10-28]
+	Updated libnids to 1.18 [cube 2003-10-28]
+	Updated dsniff to 2.3nb2 [cube 2003-10-28]
+	Updated pakemon to 0.3.1nb2 [cube 2003-10-28]
