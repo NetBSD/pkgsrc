@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/11/27 06:44:36 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/11/27 06:45:42 tron Exp $
 #
 
 DISTNAME=	GConf-0.8
@@ -34,7 +34,7 @@ post-install:
 	${SED} -e 's#@@X11PREFIX@@#${X11PREFIX}#g' < ${PKGDIR}/MESSAGE \
 		> ${MESSAGE_FILE}
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
-	${LN} -fs ${PREFIX}/share/aclocal/gimp.m4 \
-	  ${LOCALBASE}/share/aclocal/gimp.m4
+	${LN} -fs ${PREFIX}/share/aclocal/gconf-1.m4 \
+	  ${LOCALBASE}/share/aclocal/gconf-1.m4
 
 .include "../../mk/bsd.pkg.mk"
