@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/01/14 20:44:56 mellon Exp $
 bin/swig
 include/swig.h
 lib/swig_lib/tcl/blt.i
@@ -66,10 +67,10 @@ lib/swig_lib/swigptr.swg
 lib/swig_lib/Makefile
 lib/libswig.a
 man/man1/swig.1
-lib/swig_lib/perl4
-lib/swig_lib/perl5
-lib/swig_lib/python
-lib/swig_lib/guile
-lib/swig_lib/config
-lib/swig_lib/tcl
-lib/swig_lib
+@dirrm lib/swig_lib/perl4
+@dirrm lib/swig_lib/perl5
+@dirrm lib/swig_lib/python
+@dirrm lib/swig_lib/guile
+@dirrm lib/swig_lib/config
+@dirrm lib/swig_lib/tcl
+@dirrm lib/swig_lib
