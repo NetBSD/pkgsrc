@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/07 18:45:42 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/22 09:16:04 recht Exp $
 #
 
 DISTNAME=	GeoIP-Python-1.2.0
 PKGNAME=	${PYPKGPREFIX}-GeoIP-1.2.0
-CATEGORIES=	net
+CATEGORIES=	net python
 MASTER_SITES=	http://www.maxmind.com/download/geoip/api/python/
 
 MAINTAINER=	bartosz@atom.eu.org

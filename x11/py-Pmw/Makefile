@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/06/12 08:58:50 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/22 09:15:59 recht Exp $
 #
 
 DISTNAME=	Pmw.0.8.5
 PKGNAME=	${PYPKGPREFIX}-Pmw-0.8.5
-CATEGORIES=	x11
+CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmw/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
