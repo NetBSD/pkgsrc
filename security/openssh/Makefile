@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2004/05/10 18:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2004/05/21 22:54:43 reed Exp $
 
 DISTNAME=		openssh-3.8.1p1
 PKGNAME=		openssh-3.8.1.1
@@ -57,15 +57,14 @@ CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT}
 CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 
-# XXX: PAM authentication causes memory faults, and I haven't tracked down
-# XXX: why yet.  For the moment, disable PAM authentication.
-#
-#.if defined(USE_PAM)
-#.include "../../security/PAM/buildlink3.mk"
-#CONFIGURE_ARGS+=	--with-pam
-#PLIST_SRC+=		${.CURDIR}/PLIST.pam
-#MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
-#.endif
+# XXX: PAM authentication causes memory faults, and haven't tracked down
+# XXX: why yet.  For the moment, disable PAM authentication for non-Linux.
+.if defined(USE_PAM) && ${OPSYS} == "Linux"
+.include "../../security/PAM/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pam
+PLIST_SRC+=		${.CURDIR}/PLIST.pam
+MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
+.endif
 
 # the openssh configure script finds and uses ${LD} if defined and
 # defaults to ${CC} if not. we override LD here, since running the
@@ -149,8 +148,8 @@ post-install:
 	cd ${WRKSRC}; for file in ${CONFS} ${SUPPS}; do			\
 		${INSTALL_DATA} $${file}.out ${EGDIR}/$${file};		\
 	done
-#.if defined(USE_PAM)
-#	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.freebsd ${EGDIR}/sshd.pam
-#.endif
+.if defined(USE_PAM) && ${OPSYS} == "Linux"
+	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.generic ${EGDIR}/sshd.pam
+.endif
 
 .include "../../mk/bsd.pkg.mk"
