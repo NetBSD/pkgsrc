@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.755 2001/06/11 06:30:59 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.756 2001/06/12 12:49:55 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -164,11 +164,11 @@ BUILD_DEPENDS+=		perl-mk-1.1:../../pkgtools/perl-mk
 .include "${LOCALBASE}/share/mk/bsd.perl.mk"
 .elif !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
 PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
-			echo $${installsitelib}
+			${ECHO} $${installsitelib}
 PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
-			echo $${installsitearch}
+			${ECHO} $${installsitearch}
 PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; \
-			echo $${installarchlib}
+			${ECHO} $${installarchlib}
 MAKEFLAGS+=		PERL5_SITELIB=${PERL5_SITELIB}
 MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH}
 MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB}
@@ -476,8 +476,7 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .endif
 
 .if !defined(COMMENT)
-# ${CAT} isn't defined yet at the time this part gets executed
-COMMENT!=	(/bin/cat ${PKGDIR}/COMMENT || /usr/bin/cat ${PKGDIR}/COMMENT || echo -n "(no description)")  2>/dev/null
+COMMENT!=	(${CAT} ${PKGDIR}/COMMENT || ${ECHO} -n "(no description)") 2>/dev/null
 .endif
 
 DESCR=			${WRKDIR}/.DESCR
@@ -535,154 +534,6 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 		X11PREFIX=${X11PREFIX}					\
 		X11BASE=${X11BASE}
 .endif
-
-.if (${OPSYS} == "SunOS")
-AWK?=		/usr/bin/nawk
-BASENAME?=	/usr/bin/basename
-CAT?=		/usr/bin/cat
-CHMOD?=		/usr/bin/chmod
-CHOWN?=		/usr/bin/chown
-CHGRP?=		/usr/bin/chgrp
-CP?=		/usr/bin/cp
-CUT?=		/usr/bin/cut
-DC?=		/usr/bin/dc
-ECHO?=		/usr/ucb/echo
-EGREP?=		/usr/xpg4/bin/egrep
-FALSE?=		/usr/bin/false
-FILE?=		/usr/bin/file
-FIND?=		/usr/bin/find
-GREP?=		/usr/bin/grep
-GTAR?=		${ZOULARISBASE}/bin/tar
-.if exists(/usr/bin/gzip)
-GUNZIP_CMD?=	/usr/bin/gunzip -f
-GZCAT?=		/usr/bin/gzcat
-GZIP?=		-9
-GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
-.else
-GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
-GZCAT?=		${LOCALBASE}/bin/zcat
-GZIP?=		-9
-GZIP_CMD?=	${LOCALBASE}/bin/gzip -nf ${GZIP}
-.endif
-HEAD?=		/usr/bin/head
-ID?=		/usr/xpg4/bin/id
-LDCONFIG?=	/usr/bin/true
-LN?=		/usr/bin/ln
-LS?=		/usr/bin/ls
-MKDIR?=		/usr/bin/mkdir -p
-MTREE?=		${ZOULARISBASE}/bin/mtree
-MV?=		/usr/bin/mv
-.if exists(/usr/bin/gpatch)
-PATCH?=		/usr/bin/gpatch -b
-.else
-PATCH?=		${LOCALBASE}/bin/patch -b
-.endif
-PAX?=		/bin/pax
-PKGLOCALEDIR?=	lib
-RM?=		/usr/bin/rm
-RMDIR?=		/usr/bin/rmdir
-SED?=		/usr/bin/sed
-SETENV?=	/usr/bin/env
-SH?=		/bin/ksh
-SU?=		/usr/bin/su
-TAIL?=		/usr/xpg4/bin/tail
-TEST?=		/usr/bin/test
-TOUCH?=		/usr/bin/touch
-TR?=		/usr/bin/tr
-TRUE?=		/usr/bin/true
-TYPE?=		/usr/bin/type
-XARGS?=		/usr/bin/xargs
-.elif (${OPSYS} == "Linux")
-AWK?=		/usr/bin/awk
-BASENAME?=	/bin/basename
-CAT?=		/bin/cat
-CHMOD?=		/bin/chmod
-CHOWN?=		/bin/chown
-CHGRP?=		/bin/chgrp
-CP?=		/bin/cp
-CUT?=		/bin/cut
-DC?=		/usr/bin/dc
-ECHO?=		/bin/echo
-EGREP?=		/bin/egrep
-FALSE?=		/bin/false
-FILE?=		/usr/bin/file
-FIND?=		/usr/bin/find
-GREP?=		/bin/grep
-GTAR?=		/bin/tar
-GUNZIP_CMD?=	/usr/bin/gunzip -f
-GZCAT?=		/bin/zcat
-GZIP?=		-9
-GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
-HEAD?=		/usr/bin/head
-ID?=		/usr/bin/id
-LDCONFIG?=	/sbin/ldconfig
-LN?=		/bin/ln
-LS?=		/bin/ls
-MKDIR?=		/bin/mkdir -p
-MTREE?=		${ZOULARISBASE}/bin/mtree
-MV?=		/bin/mv
-PATCH?=		/usr/bin/patch
-PAX?=		${ZOULARISBASE}/bin/pax
-PKGLOCALEDIR?=	share
-RM?=		/bin/rm
-RMDIR?=		/bin/rmdir
-SED?=		/bin/sed
-SETENV?=	/usr/bin/env
-SH?=		/bin/sh
-SU?=		/bin/su
-TAIL?=		/usr/bin/tail
-TEST?=		/usr/bin/test
-TOUCH?=		/bin/touch
-TR?=		/usr/bin/tr
-TRUE?=		/bin/true
-TYPE?=		type
-XARGS?=		/usr/bin/xargs -r
-.else
-AWK?=		/usr/bin/awk
-BASENAME?=	/usr/bin/basename
-CAT?=		/bin/cat
-CHMOD?=		/bin/chmod
-CHOWN?=		/usr/sbin/chown
-CHGRP?=		/usr/bin/chgrp
-CP?=		/bin/cp
-CUT?=		/usr/bin/cut
-DC?=		/usr/bin/dc
-ECHO?=		echo				# Shell builtin
-EGREP?=		/usr/bin/egrep
-FALSE?=		false				# Shell builtin
-FILE?=		/usr/bin/file
-FIND?=		/usr/bin/find
-GREP?=		/usr/bin/grep
-GTAR?=		/usr/bin/tar
-GUNZIP_CMD?=	/usr/bin/gunzip -f
-GZCAT?=		/usr/bin/gzcat
-GZIP?=		-9
-GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
-HEAD?=		/usr/bin/head
-ID?=		/usr/bin/id
-LDCONFIG?=	/sbin/ldconfig
-LN?=		/bin/ln
-LS?=		/bin/ls
-MKDIR?=		/bin/mkdir -p
-MTREE?=		/usr/sbin/mtree
-MV?=		/bin/mv
-PATCH?=		/usr/bin/patch
-PAX?=		/bin/pax
-PKGLOCALEDIR?=	share
-RM?=		/bin/rm
-RMDIR?=		/bin/rmdir
-SED?=		/usr/bin/sed
-SETENV?=	/usr/bin/env
-SH?=		/bin/sh
-SU?=		/usr/bin/su
-TAIL?=		/usr/bin/tail
-TEST?=		test				# Shell builtin
-TOUCH?=		/usr/bin/touch
-TR?=		/usr/bin/tr
-TRUE?=		true				# Shell builtin
-TYPE?=		type				# Shell builtin
-XARGS?=		/usr/bin/xargs
-.endif # !SunOS
 
 PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
 PKG_ADMIN?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_admin
@@ -1350,7 +1201,7 @@ MASTER_SORT_AWK= BEGIN { RS = " "; ORS = " "; IGNORECASE = 1 ; gl = "${MASTER_SO
 MASTER_SORT_AWK+= /${srt:C/\//\\\//g}/ { good["${srt}"] = good["${srt}"] " " $$0 ; next; } 
 .endfor
 MASTER_SORT_AWK+= { rest = rest " " $$0; } END { n=split(gl, gla); for(i=1;i<=n;i++) { print good[gla[i]]; } print rest; }
-SORTED_MASTER_SITES_CMD= echo '${MASTER_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
+SORTED_MASTER_SITES_CMD= ${ECHO} '${MASTER_SITES}' | ${AWK} '${MASTER_SORT_AWK}'
 
 
 .if !target(do-fetch)
@@ -1978,10 +1829,10 @@ check-shlibs:
 	for i in $${bins} $${shlibs} ; do \
 		err=`{ $$ldd $$i 2>&1 || ${TRUE}; } | { ${GREP} "not found" || ${TRUE}; }`; \
 		if [ "${PKG_VERBOSE}" != "" ]; then \
-			echo "$$ldd $$i" ; \
+			${ECHO} "$$ldd $$i" ; \
 		fi ; \
 		if [ "$$err" != "" ]; then \
-			echo "$$i: $$err" ; \
+			${ECHO} "$$i: $$err" ; \
 			error=1; \
 		fi ; \
 	done ; \
@@ -2401,15 +2252,15 @@ clean-depends-list:
 		esac							\
 	done ;								\
 	if [ "${CLEAN_DEPENDS_LIST_TOP}" != "YES" ]; then		\
-		echo " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN";		\
+		${ECHO} " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN";	\
 	else								\
-		echo " $$CLEAN_DEPENDS_LIST_SEEN";			\
+		${ECHO} " $$CLEAN_DEPENDS_LIST_SEEN";			\
 	fi
 .else
 	@if [ "${CLEAN_DEPENDS_LIST_TOP}" != "YES" ]; then		\
-		echo " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN";		\
+		${ECHO} " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN";	\
 	else								\
-		echo " $$CLEAN_DEPENDS_LIST_SEEN";			\
+		${ECHO} " $$CLEAN_DEPENDS_LIST_SEEN";			\
 	fi
 .endif
 .endif
@@ -2651,12 +2502,12 @@ bin-install:
 		${ECHO_MSG} "Installing from binary pkg ${PKGFILE}" ;	\
 		${PKG_ADD} ${PKGFILE} ; 				\
 	else 				 				\
-		rel=`uname -r | sed 's@\.\([0-9]*\)[\._].*@\.\1@'`; 	\
+		rel=`${UNAME} -r | ${SED} 's@\.\([0-9]*\)[\._].*@\.\1@'`; 	\
 		arch=`sysctl -n hw.machine_arch`; 			\
 		for site in ${BINPKG_SITE} ; do 			\
-			${ECHO} Trying `eval echo $$site`/All ; 	\
-			${SHCOMMENT} echo ${SETENV} PKG_PATH="`eval echo $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
-			if ${SETENV} PKG_PATH="`eval echo $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; then \
+			${ECHO} Trying `eval ${ECHO} $$site`/All ; 	\
+			${SHCOMMENT} ${ECHO} ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
+			if ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; then \
 				${ECHO} "${PKGNAME} successfully installed." ; 			\
 				break ; 				\
 			fi ; 						\
@@ -3317,7 +3168,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 				continue ; 				\
 			fi ; 						\
 		done ; 						\
-		for realdep in `echo $$list | ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e | sort -u`; do \
+		for realdep in `${ECHO} $$list | ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e | sort -u`; do \
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
 			elif [ -d ${PKG_DBDIR}/$$realdep ]; then	\
@@ -3422,10 +3273,10 @@ MANZ_EXPRESSION=
 .if defined(PERL5_PACKLIST)
 PERL5_COMMENT=		( ${ECHO} "@comment The following lines are automatically generated"; \
 	${ECHO} "@comment from the installed .packlist files." )
-PERL5_PACKLIST_FILES=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || echo $$f; done ) \
+PERL5_PACKLIST_FILES=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
 	| sort -u
-PERL5_PACKLIST_DIRS=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || echo $$f; done ) \
+PERL5_PACKLIST_DIRS=	( ${CAT} ${PERL5_PACKLIST}; for f in ${PERL5_PACKLIST}; do [ ! -f $$f ] || ${ECHO} $$f; done ) \
 	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
 		-e "s,^,@unexec rmdir -p %D/," \
 		-e "s,/[^/]*$$, 2>/dev/null || true," \
