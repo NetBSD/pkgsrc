@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6118 2004/06/04 03:38:29 minskim Exp $
+$NetBSD: CHANGES,v 1.6119 2004/06/04 08:19:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2776,3 +2776,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated allegro to 4.1.14 [xtraeme 2004-06-03]
 	Updated acpi-isal to 20040311p1 [uebayasi 2004-06-04]
 	Updated mathomatic to 11.2 [minskim 2004-06-04]
+	Updated ffcall to 1.10 [adam 2004-06-04]
