@@ -1,0 +1,10 @@
+--- src/plugins/ftp_misc_overflows/ftp_misc_overflows.c.old	Thu Mar 18 22:25:23 1999
++++ src/plugins/ftp_misc_overflows/ftp_misc_overflows.c	Thu Mar 18 22:25:31 1999
+@@ -43,7 +43,6 @@
+ 	plug_set_copyright(desc, COPYRIGHT);
+ 	plug_set_category(desc, ACT_ATTACK);
+ 	plug_set_family(desc, "FTP");
+-	plug_set_dep(desc, "ftp_anonymous.nes");
+ 	return(0);
+ }
+ 	
