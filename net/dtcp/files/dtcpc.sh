@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # $FreeBSD: /repoman/r/pcvs/ports/net/dtcp/files/dtcpc.sh,v 1.1 2004/04/19 18:40:52 ume Exp $
-# $NetBSD: dtcpc.sh,v 1.2 2004/06/22 16:08:27 hamajima Exp $
+# $NetBSD: dtcpc.sh,v 1.3 2005/02/01 14:26:14 hamajima Exp $
 #
 
 # PROVIDE: dtcpc
@@ -33,7 +33,7 @@ dtcpc_flags=${dtcpc_flags:-"-t network -Dl"}	# Flags to dtcpc program
 name="dtcpc"
 rcvar=$name
 command="${prefix}/sbin/${name}"
-command_interpreter="${prefix}/bin/ruby"
+command_interpreter="@RUBY@"
 pidfile="/var/run/${name}.pid"
 extra_commands="reload"
 
