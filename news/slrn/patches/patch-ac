@@ -1,39 +1,28 @@
-$NetBSD: patch-ac,v 1.4 2000/01/01 18:24:32 mjl Exp $
+$NetBSD: patch-ac,v 1.5 2001/03/30 18:13:26 mjl Exp $
 
---- src/slrnfeat.h.orig	Sat Jan  1 18:42:08 2000
-+++ src/slrnfeat.h	Sat Jan  1 18:45:21 2000
-@@ -14,10 +14,10 @@
-  * NOTE: if you intend to use slrnpull, make sure you enable SPOOL_SUPPORT
-  *       in addition to PULL_SUPPORT.
-  */
--#define SLRN_HAS_PULL_SUPPORT	1
-+#define SLRN_HAS_PULL_SUPPORT	0
- #define SLRN_HAS_NNTP_SUPPORT	1
--#define SLRN_HAS_SPOOL_SUPPORT	1
--#define SLRN_HAS_INEWS_SUPPORT	1
-+#define SLRN_HAS_SPOOL_SUPPORT	0
-+#define SLRN_HAS_INEWS_SUPPORT	0
- /* Set this to 1 to force the user to use INEWS for posting.  This also means
-  * that slrn will use the hardcoded inews program pathname.
-  */
-@@ -65,7 +65,7 @@
- #define SLRN_HAS_SLANG		1
+--- src/Makefile.in.orig	Fri Mar 30 19:58:10 2001
++++ src/Makefile.in	Fri Mar 30 19:58:18 2001
+@@ -68,7 +68,7 @@
+ exec_prefix = @exec_prefix@
  
- /* Set this to 0 if you do not want slrn to generate message-id header. */
--#define SLRN_HAS_GEN_MSGID	1
-+#define SLRN_HAS_GEN_MSGID	0
- 
- /* If you want mapping ISO Latin <--> native character set, set this to 1.
-  * Supported character sets: isolatin, ibm850, and next
-@@ -214,9 +214,9 @@
- #   define SLRN_ARTICLE_FILENAME	".article"
- #   define SLRN_FOLLOWUP_FILENAME	".followup"
- #   define SLRN_SIGNATURE_FILE		".signature"
--#   define SLRN_SENDMAIL_COMMAND	"/usr/lib/sendmail -oi -t -oem -odb"
-+#   define SLRN_SENDMAIL_COMMAND	"/usr/sbin/sendmail -oi -t -oem -odb"
- #   ifndef SLRN_LIB_DIR
--#    define SLRN_LIB_DIR		"/usr/local/lib/slrn"
-+#    define SLRN_LIB_DIR		"/usr/pkg/lib/slrn"
- #   endif
- #  endif			       /* unix */
- # endif				       /* os2 */
+ BINDIR = @bindir@
+-DOCDIR = $(prefix)/doc/slrn
++DOCDIR = $(prefix)/share/doc/slrn
+ MANDIR = @mandir@
+ MACRODIR = @datadir@/slrn
+ MKINSDIR = ../autoconf/mkinsdir.sh
+@@ -188,14 +188,6 @@
+ 	do \
+ 		echo $(INSTALL_DATA) $$i $(DEST_MANDIR)/man1/; \
+ 		$(INSTALL_DATA) $$i $(DEST_MANDIR)/man1/; \
+-		if [ "$$?" != "0" ]; then \
+-		  exit 1; \
+-		fi; \
+-	done
+-	@for i in $(SLRNPULL_DOCS); \
+-	do \
+-		echo $(INSTALL_DATA) $$i $(DEST_DOCDIR)/slrnpull; \
+-		$(INSTALL_DATA) $$i $(DEST_DOCDIR)/slrnpull; \
+ 		if [ "$$?" != "0" ]; then \
+ 		  exit 1; \
+ 		fi; \
