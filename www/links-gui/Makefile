@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2.2.2 2002/06/23 19:04:10 jlam Exp $
+# $NetBSD: Makefile,v 1.2.2.3 2002/06/24 06:09:12 jlam Exp $
 #
 
 PKGNAME=	links-gui-2.0
@@ -7,6 +7,7 @@ COMMENT=	Lynx-like text and graphics WWW browser
 CONFLICTS+=	links-[0-9]*
 
 USE_BUILDLINK2=	YES
+USE_X11=	YES
 
 .include "../../www/links/Makefile.common"
 
