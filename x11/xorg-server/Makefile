@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/12/02 22:53:58 hira Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2004/12/27 18:30:52 snj Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-server-${XORG_VER}
@@ -28,7 +28,7 @@ XINSTALL_MAN_DIRS=	programs/Xserver
 
 REPLACE_PERL=		exports/lib/modules/getconfig*
 
-SUBST_CLASSES=		parser
+SUBST_CLASSES+=		parser
 SUBST_STAGE.parser=	pre-install
 SUBST_FILES.parser=	programs/Xserver/hw/xfree86/parser/Makefile
 SUBST_SED.parser=	-e '/$$(INSTALL).*lib$$(LIBNAME).a/ d'
