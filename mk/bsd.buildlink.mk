@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.58 2002/03/18 17:45:34 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.59 2002/03/20 14:11:54 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -141,6 +141,8 @@ MAKE_ENV+=		BUILDLINK_LDFLAGS="${_BUILDLINK_LDFLAGS}"
 
 ECHO_BUILDLINK_MSG?=	${ECHO_MSG} "=>"
 
+.if defined(_BUILDLINK_LIBTOOL_ARCHIVES) &&	\
+    (${_BUILDLINK_LIBTOOL_ARCHIVES} == "YES")
 # _LIBTOOL_ARCHIVE_TRANSFORM creates $${dest} from $${file}, where
 # $${file} is a libtool archive (*.la).  It allows libtool to properly
 # interact with buildlink at link time by linking against the libraries
@@ -156,6 +158,9 @@ _LIBTOOL_ARCHIVE_TRANSFORM_SED+=	${_BUILDLINK_CONFIG_WRAPPER_SED}
 
 _LIBTOOL_ARCHIVE_TRANSFORM=						\
 	${SED} ${_LIBTOOL_ARCHIVE_TRANSFORM_SED} $${file} > $${dest}
+.else
+_LIBTOOL_ARCHIVE_TRANSFORM=		${TRUE}
+.endif
 
 _BUILDLINK_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
