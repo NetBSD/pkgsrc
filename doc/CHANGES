@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8638 2005/01/06 16:51:10 wiz Exp $
+$NetBSD: CHANGES,v 1.8639 2005/01/06 17:41:51 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -148,3 +148,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated daapd to 0.2.4a [mjl 2005-01-06]
 	Updated openoffice to 1.1.4 [mrauch 2005-01-06]
 	Updated enchant to 1.1.5 [wiz 2005-01-06]
+	Updated mplayer to 1.0pre6a [drochner 2005-01-06]
+	Updated xine-lib to 1.0 [drochner 2005-01-06]
+	Updated gxine to 0.4.1 [drochner 2005-01-06]
+	Updated gphoto2 to 2.1.5 [drochner 2005-01-06]
+	Updated py-MyHDL to 0.4.1 [drochner 2005-01-06]
