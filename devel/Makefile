@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2002/01/18 21:58:32 mjl Exp $
+# $NetBSD: Makefile,v 1.262 2002/01/24 23:51:22 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -34,6 +34,7 @@ SUBDIR+=	cmdline
 SUBDIR+=	cook
 SUBDIR+=	cpuflags
 SUBDIR+=	cscope
+SUBDIR+=	cssc
 SUBDIR+=	cvs
 SUBDIR+=	cvs2cl
 SUBDIR+=	cvs2html
