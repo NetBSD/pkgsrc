@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9631 2005/03/25 19:14:09 kim Exp $
+$NetBSD: CHANGES,v 1.9632 2005/03/25 19:18:12 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1752,3 +1752,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libnet to 1.0.1nb5 [adrianp 2005-03-25]
 	Updated snort to 2.3.2 [adrianp 2005-03-25]
 	Updated tcsh to 6.14.00 [kim 2005-03-25]
+	Updated sun-jdk15 to 5.0.2 [tv 2005-03-25]
+	Updated sun-jre15 to 5.0.2 [tv 2005-03-25]
