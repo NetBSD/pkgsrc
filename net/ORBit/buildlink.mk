@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:59 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:27 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ORBit.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(ORBIT_BUILDLINK_MK)
 ORBIT_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.ORBit?=	ORBit>=0.5.1
 DEPENDS+=	${BUILDLINK_DEPENDS.ORBit}:../../net/ORBit
@@ -58,7 +60,5 @@ pre-configure: ${BUILDLINK_TARGETS.ORBit}
 ORBit-buildlink: _BUILDLINK_USE
 libIDL-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
 orbit-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# ORBIT_BUILDLINK_MK

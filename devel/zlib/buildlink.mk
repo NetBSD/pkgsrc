@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/06/23 19:26:55 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/01 22:59:20 jlam Exp $
 #
 # This Makefile fragment is included by packages that use zlib. 
 #
@@ -14,6 +14,8 @@
 
 .if !defined(ZLIB_BUILDLINK_MK)
 ZLIB_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.zlib?=	zlib>=1.1.3
 
@@ -39,7 +41,5 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.zlib}
 
 pre-configure: ${BUILDLINK_TARGETS.zlib}
 zlib-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# ZLIB_BUILDLINK_MK

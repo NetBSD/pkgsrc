@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/06/23 19:26:59 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/07/01 22:59:28 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libcups.
 #
@@ -15,6 +15,8 @@
 .if !defined(CUPS_BUILDLINK_MK)
 CUPS_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.cups?=	cups>=1.1.1
 DEPENDS+=	${BUILDLINK_DEPENDS.cups}:../../print/cups
 
@@ -28,7 +30,5 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.cups}
 
 pre-configure: ${BUILDLINK_TARGETS.cups}
 cups-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# CUPS_BUILDLINK_MK

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/06/23 19:26:55 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/01 22:59:23 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gdk-pixbuf.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(GDK_PIXBUF_BUILDLINK_MK)
 GDK_PIXBUF_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.gkd-pixbuf?=	gdk-pixbuf>=0.8.0nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.gkd-pixbuf}:../../graphics/gdk-pixbuf
@@ -41,7 +43,5 @@ CONFIGURE_ENV+=	GDK_PIXBUF_CONFIG="${BUILDLINK_CONFIG_WRAPPER.gdk-pixbuf}"
 pre-configure: ${BUILDLINK_TARGETS.gdk-pixbuf}
 gdk-pixbuf-buildlink: _BUILDLINK_USE
 gdk-pixbuf-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# GDK_PIXBUF_BUILDLINK_MK
