@@ -1,26 +1,27 @@
-# $NetBSD: Makefile,v 1.39 2004/06/28 15:45:18 toshii Exp $
+# $NetBSD: Makefile,v 1.40 2004/07/09 00:18:54 recht Exp $
 #
 
-DISTNAME=		gc6.2
-PKGNAME=		${DISTNAME:S/gc/boehm-gc-/}
-PKGREVISION=		3
-CATEGORIES=		devel
-MASTER_SITES=		http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
+DISTNAME=	gc6.3
+PKGNAME=	${DISTNAME:S/gc/boehm-gc-/}
+CATEGORIES=	devel
+MASTER_SITES=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
 
-MAINTAINER=		recht@NetBSD.org
-HOMEPAGE=		http://www.hpl.hp.com/personal/Hans_Boehm/gc/
-COMMENT=		Garbage collection and memory leak detection for C and C++
+MAINTAINER=	recht@NetBSD.org
+HOMEPAGE=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/
+COMMENT=	Garbage collection and memory leak detection for C and C++
 
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--enable-cplusplus --disable-threads
+USE_LANGUAGES=		c c++
 INSTALLATION_DIRS=	man/man3
 
-MAKE_ENV+=		COPTS="${CFLAGS}"
+MAKE_ENV+=		COPTS=${CFLAGS:Q}
 
 #TEST_TARGET=		check
 
@@ -42,9 +43,6 @@ pre-build:
 		${WRKSRC}/doc/gc.man.in > ${WRKSRC}/doc/gc.man
 
 post-install:
-	@cd ${WRKSRC}; \
-	${MAKE_PROGRAM} -f ${WRKSRC}/Makefile.direct bsd-libleak.a
-	${INSTALL_DATA} ${WRKSRC}/bsd-libleak.a ${PREFIX}/lib/libleak.a
 	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${PREFIX}/man/man3/gc.3
 
 do-test:
