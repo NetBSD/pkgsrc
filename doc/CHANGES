@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4732 2004/02/08 12:47:23 recht Exp $
+$NetBSD: CHANGES,v 1.4733 2004/02/08 13:13:27 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -702,3 +702,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openbox to 3.1nb2 [jmmv 2004-02-07]
 	Updated gnupg to 1.2.4nb1 [kleink 2004-02-08]
 	Updated kodos to 2.4.0 [recht 2004-02-08]
+	Updated kmplayer to 0.8.2 [markd 2004-02-08]
