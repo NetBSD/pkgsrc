@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/14 18:18:20 wiz Exp $
 bin/gif2epsn
 bin/gif2ps
 bin/gif2rgb
@@ -9,6 +9,7 @@ bin/gifcomb
 bin/giffix
 bin/gifflip
 bin/gifhisto
+bin/gifinfo
 bin/gifinter
 bin/gifinto
 bin/gifovly
