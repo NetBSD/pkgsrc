@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1129 2003/01/15 20:55:38 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1130 2003/01/17 13:55:27 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1836,7 +1836,7 @@ do-pkgconfig-override:
 #		sysutils/fileutils, www/curl, x11/lesstif, x11/kdelibs2
 #
 AUTOMAKE_OVERRIDE?=	YES
-.  if (${AUTOMAKE_OVERRIDE} == "YES")
+.  if empty(AUTOMAKE_OVERRIDE:M[nN][oO])
 AUTOMAKE_PATTERNS+=     aclocal.m4 
 AUTOMAKE_PATTERNS+=     configure.in
 AUTOMAKE_PATTERNS+=     Makefile.in
