@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/08/18 13:59:19 adam Exp $
+$NetBSD: patch-aa,v 1.6 2004/11/05 14:25:19 adam Exp $
 
---- configure.orig	2004-05-28 19:43:31.000000000 +0000
+--- configure.orig	2004-10-26 19:08:17.000000000 +0000
 +++ configure
-@@ -2634,12 +2634,12 @@ echo $ECHO_N "checking the Objective-C r
+@@ -2733,12 +2733,12 @@ echo $ECHO_N "checking the Objective-C r
  if test "$OBJC_RUNTIME_LIB" = "nx" -o "$OBJC_RUNTIME_LIB" = "apple"; then
    echo "$as_me:$LINENO: result: NeXT" >&5
  echo "${ECHO_T}NeXT" >&6
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.5 2004/08/18 13:59:19 adam Exp $
    CPPFLAGS="$CPPFLAGS -fgnu-runtime"
  fi
  
-@@ -2663,7 +2663,7 @@ fi
+@@ -2762,7 +2762,7 @@ fi
  # $GNUSTEP_HDIR are used before the standard ones
  #
  CPPFLAGS="$CPPFLAGS -I$GNUSTEP_HDIR"
