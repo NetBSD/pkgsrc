@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2000/04/06 15:51:25 kim Exp $
+# $NetBSD: Makefile,v 1.77 2000/04/20 20:53:45 fvdl Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -38,7 +38,7 @@
     SUBDIR += libwww
     SUBDIR += links
     SUBDIR += lynx
-    SUBDIR += mozilla
+#    SUBDIR += mozilla
     SUBDIR += navigator
     SUBDIR += navigator3
     SUBDIR += ns-remote
