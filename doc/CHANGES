@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8347 2004/12/16 20:48:05 darcy Exp $
+$NetBSD: CHANGES,v 1.8348 2004/12/17 00:36:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5929,3 +5929,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jwhois to 3.2.2nb10 [kleink 2004-12-16]
 	Updated ruby-eruby to 1.0.5nb1 [taca 2004-12-16]
 	Updated py-postgresql to 3.6 [darcy 2004-12-16]
+	Updated php to 4.3.10 [tron 2004-12-17]
