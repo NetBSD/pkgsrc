@@ -1,19 +1,19 @@
-*** doc/examples/ftpconversions.orig	Wed Jan 25 22:11:02 1995
---- doc/examples/ftpconversions	Wed Jan 25 22:11:49 1995
+*** src/makefiles/Makefile.nbs.orig	Mon Mar  2 19:24:23 1998
+--- src/makefiles/Makefile.nbs	Mon Mar  2 19:24:44 1998
 ***************
-*** 1,7 ****
-!  :.Z:  :  :/bin/compress -d -c %s:T_REG|T_ASCII:O_UNCOMPRESS:UNCOMPRESS
-   :   : :.Z:/bin/compress -c %s:T_REG:O_COMPRESS:COMPRESS
-   :.gz: :  :/bin/gzip -cd %s:T_REG|T_ASCII:O_UNCOMPRESS:GUNZIP
-   :   : :.gz:/bin/gzip -9 -c %s:T_REG:O_COMPRESS:GZIP
-   :   : :.tar:/bin/tar -c -f - %s:T_REG|T_DIR:O_TAR:TAR
-   :   : :.tar.Z:/bin/tar -c -Z -f - %s:T_REG|T_DIR:O_COMPRESS|O_TAR:TAR+COMPRESS
-!  :   : :.tar.gz:/bin/tar -c -z -f - %s:T_REG|T_DIR:O_COMPRESS|O_TAR:TAR+GZIP
---- 1,7 ----
-!  :.Z:  :  :/bin/gzip -d -c %s:T_REG|T_ASCII:O_UNCOMPRESS:UNCOMPRESS
-   :   : :.Z:/bin/compress -c %s:T_REG:O_COMPRESS:COMPRESS
-   :.gz: :  :/bin/gzip -cd %s:T_REG|T_ASCII:O_UNCOMPRESS:GUNZIP
-   :   : :.gz:/bin/gzip -9 -c %s:T_REG:O_COMPRESS:GZIP
-   :   : :.tar:/bin/tar -c -f - %s:T_REG|T_DIR:O_TAR:TAR
-   :   : :.tar.Z:/bin/tar -c -Z -f - %s:T_REG|T_DIR:O_COMPRESS|O_TAR:TAR+COMPRESS
-!  :   : :.tar.gz:/bin/tar -c -z -f - %s:T_REG|T_DIR:O_COMPRESS|O_TAR:TAR+GZIP
+*** 5,11 ****
+  CC       = cc
+  IFLAGS   = -I.. -I../support
+  LFLAGS   = -L../support
+! CFLAGS   = -O ${IFLAGS} ${LFLAGS}
+  LIBES    = -lsupport -lcrypt
+  LIBC     = /usr/lib/libc.a
+  LINTFLAGS=	
+--- 5,11 ----
+  CC       = cc
+  IFLAGS   = -I.. -I../support
+  LFLAGS   = -L../support
+! CFLAGS  += ${IFLAGS} ${LFLAGS}
+  LIBES    = -lsupport -lcrypt
+  LIBC     = /usr/lib/libc.a
+  LINTFLAGS=	
