@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9759 2005/04/05 08:10:14 adam Exp $
+$NetBSD: CHANGES,v 1.9760 2005/04/05 09:14:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1908,3 +1908,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated udfclient to 0.4.3 [reinoud 2005-04-04]
 	Updated subversion to 1.1.4 [epg 2005-04-05]
 	Updated netpbm to 10.26.7 [adam 2005-04-05]
+	Updated cksfv to 1.3.4 [wiz 2005-04-05]
