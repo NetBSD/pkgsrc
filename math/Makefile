@@ -1,21 +1,9 @@
-# $NetBSD: Makefile,v 1.89 2002/12/07 18:14:30 cjep Exp $
+# $NetBSD: Makefile,v 1.90 2002/12/10 12:41:31 markd Exp $
 #
 
 COMMENT=	Mathematics
 
 SUBDIR+=	R
-SUBDIR+=	R-KernSmooth
-SUBDIR+=	R-VR
-SUBDIR+=	R-boot
-SUBDIR+=	R-cluster
-SUBDIR+=	R-foreign
-SUBDIR+=	R-grid
-SUBDIR+=	R-lattice
-SUBDIR+=	R-mgcv
-SUBDIR+=	R-nlme
-SUBDIR+=	R-recommended
-SUBDIR+=	R-rpart
-SUBDIR+=	R-survival
 SUBDIR+=	abs
 SUBDIR+=	admesh
 SUBDIR+=	algae
@@ -69,6 +57,7 @@ SUBDIR+=	pspp
 SUBDIR+=	py-Numeric
 SUBDIR+=	py-Scientific
 SUBDIR+=	py-Scientific-doc
+SUBDIR+=	py-rpy
 SUBDIR+=	quadpack
 SUBDIR+=	randlib
 SUBDIR+=	rlab
