@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/29 21:56:34 reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/08 16:37:14 wulf Exp $
 
 DISTNAME=	scribus-i18n-en
 PKGNAME=	scribus-doc-1.0
 CATEGORIES=	print
-MASTER_SITES=	http://ftp.kde.com/Office/Text_Word_Processing/Scribus/ \
-		http://web2.altmuehlnet.de/fschmid/ \
+MASTER_SITES=	http://web2.altmuehlnet.de/fschmid/ \
 		http://scribus.planetmirror.com/ \
-		ftp://ftp.ntua.gr/pub/gnu/scribus/ \
-		http://scribus.ipc.one.pl/
+		ftp://ftp.ntua.gr/pub/gnu/scribus/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://web2.altmuehlnet.de/fschmid/
