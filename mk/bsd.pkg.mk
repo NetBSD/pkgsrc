@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.393 2000/01/14 11:58:21 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.394 2000/01/15 02:08:03 jwise Exp $
 #
 # This file is in the public domain.
 #
@@ -87,7 +87,11 @@ PKG_JVM?=		kaffe
 .endif
 .if ${PKG_JVM} == "jdk"
 DEPENDS+=		jdk-1.1.*:${PKGSRCDIR}/lang/jdk
+.if defined(JDK_HOME)
+JAVA_HOME?=		${JDK_HOME}
+.else
 JAVA_HOME?=		${LOCALBASE}/java
+.endif
 .elif ${PKG_JVM} == "kaffe"
 DEPENDS+=		kaffe-[0-9]*:${PKGSRCDIR}/lang/kaffe
 JAVA_HOME?=		${LOCALBASE}/kaffe
@@ -1520,7 +1524,7 @@ root-install:
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.install_done
 
-
+.if !target(show-shlib-type)
 # Show the shared lib type being built: one of ELF, a.out or none
 show-shlib-type:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -1538,6 +1542,7 @@ show-shlib-type:
 	fi;								\
 	${ECHO} "$$sotype";						\
 	${RM} -f a.$$$$.c a.$$$$.out
+.endif
  
 
 ################################################################
