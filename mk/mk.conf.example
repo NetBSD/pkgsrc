@@ -1,8 +1,8 @@
-# $NetBSD: mk.conf.example,v 1.23 1998/08/30 04:58:20 lukem Exp $
+# $NetBSD: mk.conf.example,v 1.24 1998/08/30 11:01:58 frueauf Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
-# for building either NetBSD or some of the NetBSD packages collection
-# See /usr/pkgsrc/mk/bsd.pkg.mk for a full description of all
+# for building either NetBSD or some of the NetBSD packages collection.
+# See the NetBSD packages(7) manual page for a full description of all
 # available options.
 #
 # Definitely not complete yet. - agc Fri Mar 27 16:42:38 GMT 1998
@@ -179,7 +179,7 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Possible: defined, not defined
                                 # Default: undefined
 
-#USE_MULE=			# Used in emacs package to build MULE
+#USE_MULE=			# Used in xemacs package to build MULE
                                 # extensions
                                 # Possible: defined, not defined
                                 # Default: not defined
@@ -191,6 +191,11 @@ PAPERSIZE=	A4		# Default paper size for packages.
 #USE_SOCKS=			# Used to specify SOCKS firewall support
                                 # Set this to the version of socks necessary.
                                 # Possible: 4, 5, not defined
+                                # Default: not defined
+
+#USE_XFACE=			# Used in xemacs package to build in
+                                # support for xface (pkgsrc/mail/face)
+                                # Possible: defined, not defined
                                 # Default: not defined
 
 #ZIP_ENCRYPTION=		# Add encryption code to zip, zip1, and unzip
