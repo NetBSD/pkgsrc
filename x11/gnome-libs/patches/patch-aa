@@ -1,8 +1,24 @@
-$NetBSD: patch-aa,v 1.13 2001/06/16 20:03:19 jlam Exp $
+$NetBSD: patch-aa,v 1.14 2001/10/07 10:13:11 rh Exp $
 
---- configure.orig	Fri Mar 16 14:46:20 2001
-+++ configure	Sat Jun 16 01:11:24 2001
-@@ -5312,6 +5312,11 @@
+--- configure.orig	Tue Aug 21 23:41:20 2001
++++ configure
+@@ -3471,12 +3471,9 @@
+ 
+ 
+ 
+-GLIB_CFLAGS=`echo $GTK_CFLAGS | sed 's/^.*\(-I[^ ]*glib[^ ]*  *-I[^ ]*\).*$/\1/'`
+-GLIB_LDFLAGS=`echo $GTK_LIBS | sed -e 's/^.*-lgdk[^ ]* *\(-L[^ ]*\).*$/\1/' -e 's/^.* -lgdk[^ ]* .*$//'`
+-if test -z "$GLIB_LDFLAGS" ; then
+-  GLIB_LDFLAGS=`echo $GTK_LIBS | sed -e 's/\(-L[^ ]*\) .*$/\1/' -e 's/^.*\(-L[^ ]*\)$/\1/'`
+-fi 
+-GLIB_LIBS="$GLIB_LDFLAGS `echo $GTK_LIBS | sed 's/^.*\(-lglib[^ ]*\).*$/\1/'`"
++GLIB_CFLAGS="`$GLIB_CONFIG --cflags`"
++GLIB_LIBS="`$GLIB_CONFIG --libs`"
++GLIB_LDFLAGS="$GLIB_LIBS"
+ 
+ 
+ 
+@@ -5314,6 +5311,11 @@
     rm -f po/POTFILES
     sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
  	< $srcdir/po/POTFILES.in > po/POTFILES
@@ -14,7 +30,7 @@ $NetBSD: patch-aa,v 1.13 2001/06/16 20:03:19 jlam Exp $
    
  # AM_GNOME_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
-@@ -10358,7 +10363,7 @@
+@@ -10116,7 +10118,7 @@
  GTKXMHTML_LIBS="-lgtkxmhtml $LIBGTKXMHTML_LIBS"
  ZVT_LIBS="-lzvt $UTIL_LIBS $GTK_LIBS"
  
@@ -23,7 +39,7 @@ $NetBSD: patch-aa,v 1.13 2001/06/16 20:03:19 jlam Exp $
  GNOME_INCLUDEDIR='-I${includedir} -DNEED_GNOMESUPPORT_H -I${pkglibdir}/include'
  GNOME_IDLDIR='-I${datadir}/idl'
  
-@@ -10462,8 +10467,8 @@
+@@ -10220,8 +10222,8 @@
  fi
  	if test x$gnome_cv_orbit_found = xyes; then
  		
