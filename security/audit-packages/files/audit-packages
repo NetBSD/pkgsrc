@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.14 2003/10/18 10:16:57 agc Exp $
+# $NetBSD: audit-packages,v 1.14.2.1 2003/12/30 15:45:01 agc Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -44,7 +44,7 @@ errmsg=""
 
 case "$errmsg" in
 "")	# check for old vulnerabilities file
-	[ -n "$(find $vuls -ctime +7)" ] && errmsg="** $vuls more than a week old"
+	[ -n "$(find $vuls -ctime +7)" ] && echo "*** WARNING - $vuls more than a week old, continuing..."
 	;;
 esac
 
