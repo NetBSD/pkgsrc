@@ -1,34 +1,40 @@
-$NetBSD: patch-ao,v 1.1 2001/03/19 13:23:36 dmcmahill Exp $
+$NetBSD: patch-ao,v 1.2 2004/08/23 15:18:02 tv Exp $
 
-alpha fixes...
-
---- src/toss/ftnexpire.c.orig	Fri Nov 17 16:18:08 2000
-+++ src/toss/ftnexpire.c	Mon Mar 19 08:12:29 2001
-@@ -113,5 +113,5 @@
+--- src/toss/ftnexpire.c.orig	2003-02-16 10:39:02.000000000 -0500
++++ src/toss/ftnexpire.c
+@@ -112,7 +112,7 @@ int do_expire(void)
+     if(exp_sec < 0)
  	exp_sec = 0;
      debug(4, "expire: now=%ld max=%ld, expire < %ld",
 -	  now_sec, max_sec, exp_sec                   );
 +	  (long) now_sec, (long) max_sec, (long) exp_sec                   );
  
      /* Open old history for reading */
-@@ -223,5 +223,5 @@
+     if( (hi_o = fopen(history, R_MODE)) == NULL ) 
+@@ -222,7 +222,7 @@ int do_line(FILE *hi_n, char *line)
+     t = atol(p);
      expired = t < exp_sec;
      debug(7, "msgid=%s  time=%ld  expired=%s",
 -	  msgid, t, expired ? "YES" : "NO"     );
 +	  msgid,(long) t, expired ? "YES" : "NO"     );
  
      /* Write if not expired */
-@@ -236,5 +236,5 @@
+     if(!expired) 
+@@ -235,7 +235,7 @@ int do_line(FILE *hi_n, char *line)
+ 	}
  	
  	/* Write MSGID line to history text file */
 -	ret = fprintf(hi_n, "%s\t%ld\n", msgid, t);
 +	ret = fprintf(hi_n, "%s\t%ld\n", msgid, (long) t);
  	if (ret == ERROR || fflush(hi_n) == ERROR)
  	{
-@@ -391,5 +391,5 @@
+ 	    log("$ERROR: write to MSGID history failed");
+@@ -390,7 +390,7 @@ int main(int argc, char **argv)
+     /* Statistics */
      log("ids processed: %ld total, %ld expired in %ld s, %.2f ids/s",
  	n_processed, n_expired,
 -	expire_delta, (double)n_processed/expire_delta);
 +	(long) expire_delta, (double)n_processed/expire_delta);
      
      unlock_program(DEFAULT_LOCK_HISTORY);
+ 
