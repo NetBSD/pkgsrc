@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:53:40 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/31 20:31:19 minskim Exp $
 #
 
 DISTNAME=	libirman-0.4.1b
@@ -11,12 +11,16 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.evation.com/libirman/libirman.html
 COMMENT=	Programming library for Irman - infrared control
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/irman.conf ${PKG_SYSCONFDIR}/irman.conf
+
+INSTALLATION_DIRS=	share/doc share/examples
 
 post-build:
 	    ${SED}  -e "s:/usr/local/etc:${PKG_SYSCONFDIR}:g" \
