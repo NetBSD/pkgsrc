@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/25 19:16:20 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/05/25 19:21:20 wiz Exp $
 #
 
 DISTNAME=	arphic-ttf-2.11
@@ -15,6 +15,8 @@ FONT_FILES=	bkai00mp.ttf.gz bsmi00lp.ttf.gz gbsn00lp.ttf.gz gkai00mp.ttf.gz
 MISC_FILES=	ARPHICPL.TXT logo.gif release.txt
 
 DIST_SUBDIR=	arphic-ttf
+
+CONFLICTS=	arphicttf-*
 
 EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
