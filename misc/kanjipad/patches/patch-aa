@@ -1,16 +1,24 @@
-$NetBSD: patch-aa,v 1.2 2002/10/13 11:38:17 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2004/09/25 23:03:13 wiz Exp $
 
---- Makefile.orig	Wed Mar 31 09:36:32 1999
+--- Makefile.orig	2002-08-25 21:00:54.000000000 +0200
 +++ Makefile
-@@ -1,10 +1,10 @@
+@@ -1,11 +1,10 @@
  OPTIMIZE=-g -Wall
  #OPTIMIZE=-O2 
  
- GTKLIBS=`gtk-config --libs`
- GTKINC=`gtk-config --cflags`
+-GTKINC=$(shell pkg-config --cflags gtk+-2.0) -DG_DISABLE_DEPRECATED  -DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
++GTKINC=$(shell pkg-config --cflags gtk+-2.0) -DG_DISABLE_DEPRECATED  -DGDK_DISABLE_DEPRECATED
+ GTKLIBS=$(shell pkg-config --libs gtk+-2.0)
+ GLIBLIBS=$(shell pkg-config --libs glib-2.0)
  
 -PREFIX=/usr/local
-+#PREFIX=/usr/local
  DATADIR=$(PREFIX)/share
  
  # location in which binaries are installed
+@@ -75,4 +74,4 @@ distcheck: dist
+ 	cd .. &&				\
+ 	rm -rf $$distdir
+ 
+-.PHONY: dist distcheck
+\ No newline at end of file
++.PHONY: dist distcheck
