@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.103 2003/12/12 21:37:55 erh Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.104 2003/12/19 19:22:28 veego Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -90,7 +90,7 @@ MAKE_ENV+=		BUILDLINK_CACHE_ALL=yes
 .if defined(USE_X11)
 USE_X11_LINKS?=		YES
 .  if empty(USE_X11_LINKS:M[nN][oO])
-BUILD_DEPENDS+=		x11-links>=0.17:../../pkgtools/x11-links
+BUILD_DEPENDS+=		x11-links>=0.19:../../pkgtools/x11-links
 _BLNK_X11_DIR=		${LOCALBASE}/share/x11-links
 .  endif
 _BLNK_CPPFLAGS+=	-I${X11BASE}/include
