@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2485 2004/11/26 20:51:15 snj Exp $
+$NetBSD: TODO,v 1.2486 2004/11/26 21:05:09 snj Exp $
 
 Suggested new packages
 ======================
@@ -1355,7 +1355,6 @@ Suggested package updates
 	o xmcd-3.3.0
 	o xmess-0.88
 	o xmlstarlet-0.9.5
-	o xmms-alarm-0.3.6
 	o xmms-crossfade-0.3.7
 	o xmms-fmradio-1.5
 	o xmms-funtimedancer-1.0

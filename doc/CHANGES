@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8021 2004/11/26 20:51:15 snj Exp $
+$NetBSD: CHANGES,v 1.8022 2004/11/26 21:05:09 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5458,3 +5458,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sudo to 1.6.8pl4 [cube 2004-11-26]
 	Updated xpenguins to 2.2 [snj 2004-11-26] 
 	Updated wmfishtime to 1.24 [snj 2004-11-26]
+	Updated xmms-alarm to 0.3.6 [snj 2004-11-26]
