@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/01/20 12:28:27 agc Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/12 05:02:55 taca Exp $
 # FreeBSD: ports/x11-toolkits/ruby-tk/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}tk-${RUBY_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
