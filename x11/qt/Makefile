@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 1998/11/05 07:44:45 mycroft Exp $
+# $NetBSD: Makefile,v 1.20 1998/11/05 10:20:51 tron Exp $
 #
 
 DISTNAME=	qt-1.41
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.cdrom.com/pub/linux/sunsite/Incoming/ \
-		ftp://ftp.kde.org/pub/qt/TGZ/ \
-		ftp://ftp.troll.no/qt/source/
+MASTER_SITES=	ftp://ftp.troll.no/qt/source/ \
+		ftp://ftp.fu-berlin.de/unix/X11/gui/Qt/source/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.troll.no/products/qt.html
