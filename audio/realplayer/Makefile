@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/18 22:20:03 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/14 12:37:53 jlam Exp $
 
 DISTNAME=		rp8_linux20_libc6_i386_cs2
 PKGNAME=		realplayer-8.0.1
@@ -66,8 +66,8 @@ do-build:
 		${FILESDIR}/realplay.sh > ${WRKDIR}/realplay.sh
 
 pre-install:
-	${FIND} ${WRKSRC} \( -name "*.orig" -o -name "*.old" \) -print0	\
-		| ${XARGS} -0 ${RM}
+	${FIND} ${WRKSRC} \( -name "*.orig" -o -name "*.old" \) -print	\
+		| ${XARGS} ${RM}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/realplay.sh ${PREFIX}/bin/realplay
