@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.375 2003/03/15 15:24:25 wiz Exp $
+$NetBSD: TODO,v 1.376 2003/03/15 16:15:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -177,7 +177,6 @@ Suggested package updates
 	o mtools-3.9.9
 	o mysql-3.23.54
 	o napshare-1.2
-	o nasm-0.98.36
 	o neon-0.23.8
 	o nessus-2.0.0 [pkg/20530]
 	o nessus-2.0.1
