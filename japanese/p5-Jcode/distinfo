@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2001/07/19 12:54:57 taca Exp $
+$NetBSD: distinfo,v 1.9 2001/12/17 05:00:56 taca Exp $
 
-SHA1 (Jcode-0.75.tar.gz) = 17e1809cac91b444c5e4e98c2a5abe6ce2c28c54
-Size (Jcode-0.75.tar.gz) = 188827 bytes
+SHA1 (Jcode-0.76.tar.gz) = 75297280e3f485700cd2efd112e1fcf88ebdcde3
+Size (Jcode-0.76.tar.gz) = 188882 bytes
 SHA1 (patch-aa) = fd3f24b9f2f927826eef07a125f2f96b44763f00
