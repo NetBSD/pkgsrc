@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/24 02:11:53 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/25 04:29:26 jlam Exp $
 #
 
 DISTNAME=	kulki-1.01
@@ -12,13 +12,21 @@ COMMENT=	Simple logic game - "balls"
 
 WRKSRC=		${WRKDIR}/kulki
 
-USE_X11=	YES
-USE_GMAKE=	YES
-
 USE_BUILDLINK_ONLY=	YES
+USE_X11=		YES
+USE_GMAKE=		YES
 
-MAKE_ENV=	QTDIR="${BUILDLINK_DIR}/qt2" MOC="${QTDIR}/bin/moc" CXX="${CXX}" CP="${CP}" \
-		CXXFLAGS="-I${QTDIR}/include"
+BUILDLINK_QTDIR=	${BUILDLINK_DIR}/qt2
+QTDIR=			${X11PREFIX}/qt2
+
+LDFLAGS+=	-Wl,-R${QTDIR}/lib
+
+MAKE_ENV+=	QTDIR="${BUILDLINK_QTDIR}"
+MAKE_ENV+=	MOC="${BUILDLINK_QTDIR}/bin/moc"
+MAKE_ENV+=	CXX="${CXX}"
+MAKE_ENV+=	CXXFLAGS="${CXXFLAGS}"
+MAKE_ENV+=	BASENAME="${BASENAME}"
+MAKE_ENV+=	CP="${CP}"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kulki
