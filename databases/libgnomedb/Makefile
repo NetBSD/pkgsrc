@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/13 14:17:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/05 08:22:13 rh Exp $
 #
 
 DISTNAME=		libgnomedb-0.12.2
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.gnome-db.org/
 COMMENT=		GNOME2 database library
 
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+
+BUILDLINK_DEPENDS.libgda=	libgda>=0.11.2
 
 USE_X11=		YES
 USE_GMAKE=		YES
