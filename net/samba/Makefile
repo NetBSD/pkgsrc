@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2004/02/17 11:51:54 jlam Exp $
+# $NetBSD: Makefile,v 1.117 2004/02/17 14:27:14 tron Exp $
 
 DISTNAME=		samba-3.0.2a
 CATEGORIES=		net
@@ -61,7 +61,7 @@ CONFIGURE_ARGS+=	--with-winbind
 .include "../../converters/libiconv/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 
-BUILDLINK_USE_BUILTIN.readline=	no
+PREFER_PKGSRC+=		readline
 .include "../../devel/readline/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
