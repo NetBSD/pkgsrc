@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3164 2003/08/31 00:30:36 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3165 2003/08/31 01:06:23 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3417,3 +3417,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mplayer-share to 0.91 [xtraeme 2003-08-31]
 	Updated gmplayer to 0.91 [xtraeme 2003-08-31]
 	Updated mencoder to 0.91 [xtraeme 2003-08-31]
+	Updated erlang to 9.2 [jtb 2003-08-31]
