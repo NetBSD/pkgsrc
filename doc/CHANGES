@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7287 2004/09/29 13:10:22 hubertf Exp $
+$NetBSD: CHANGES,v 1.7288 2004/09/30 00:15:13 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4480,6 +4480,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated php4 to 4.3.9 [jdolecek 2004-04-28]
 	Updated lesstif to 0.93.96 [adam 2004-09-28]
 	Updated pcre to 5.0 [wiz 2004-09-28]
+	Updated libpcap to 0.8.3 [mrg 2004-09-28]
 	Added firefox-gtk2-bin-flash-6.0.79 [rh 2004-09-29]
 	Added gattrib-20040313 [wulf 2004-09-29]
 	Updated tex-jadetex to 3.13 [hubertf 2004-09-29]
+	Added flodo-v3 [mrg 2004-09-29]
