@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 00:14:54 tv Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/30 00:47:37 xtraeme Exp $
 #
 
 DISTNAME=		jpegsrc.v6b
 PKGNAME=		jpeg-6b
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/graphics/jpeg/ \
 			ftp://ftp.uu.net/graphics/jpeg/
@@ -28,5 +28,6 @@ INSTALLATION_DIRS=	bin lib include man/man1
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jpeg
 	${INSTALL_DATA} ${WRKSRC}/*.doc ${PREFIX}/share/doc/jpeg
+	${INSTALL_DATA} ${WRKSRC}/jpegint.h ${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"
