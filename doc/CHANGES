@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6099 2004/06/02 15:12:06 taya Exp $
+$NetBSD: CHANGES,v 1.6100 2004/06/02 15:14:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2756,3 +2756,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated python23-pth to 2.3.4 [recht 2004-06-02]
 	Updated firefox to 0.8nb3 [taya 2004-06-02]
 	Updated firefox-gtk2 to 0.8nb3 [taya 2004-06-02]
+	Updated Gorm to 0.7.6 [adam 2004-06-02]
