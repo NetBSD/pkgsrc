@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2001/05/02 13:59:34 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2003/12/08 14:36:51 wiz Exp $
 
---- doc/Makefile.in.orig	Mon Feb 26 11:51:53 2001
+--- doc/Makefile.in.orig	Mon Nov 17 17:33:58 2003
 +++ doc/Makefile.in
-@@ -87,7 +87,7 @@
+@@ -103,7 +103,7 @@ AUTOMAKE_OPTIONS = foreign
  
  SUBDIRS = ogg
  
 -docdir = $(datadir)/doc/$(PACKAGE)-$(VERSION)
 +docdir = $(datadir)/doc/html/$(PACKAGE)-$(VERSION)
  
- doc_DATA = index.html framing.html oggstream.html white-xifish.png stream.png white-ogg.png
+ doc_DATA = framing.html index.html oggstream.html rfc3533.txt rfc3534.txt stream.png vorbisword2.png white-ogg.png white-xifish.png
  

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2003/09/25 13:00:53 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/12/08 14:36:51 wiz Exp $
 
-DISTNAME=	libogg-1.0
-PKGNAME=	libogg-1.0.0.8
+DISTNAME=	libogg-1.1
 CATEGORIES=	devel audio
-MASTER_SITES=	http://www.vorbis.com/files/1.0/unix/
+MASTER_SITES=	http://www.vorbis.com/files/1.0.1/unix/
 
 MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	http://www.xiph.org/ogg/
@@ -18,4 +17,7 @@ GCC_REQD=		2.95.3
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/ogg.pc.in
+
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
