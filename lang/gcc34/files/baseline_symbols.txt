@@ -602,6 +602,7 @@ FUNC:_ZNSt11range_errorC2ERKSs@@GLIBCXX_3.4
 FUNC:_ZNSt11range_errorD0Ev@@GLIBCXX_3.4
 FUNC:_ZNSt11range_errorD1Ev@@GLIBCXX_3.4
 FUNC:_ZNSt12__basic_fileIcE2fdEv@@GLIBCXX_3.4
+FUNC:_ZNSt12__basic_fileIcE4fileEv@@GLIBCXX_3.4.1
 FUNC:_ZNSt12__basic_fileIcE4openEPKcSt13_Ios_Openmodei@@GLIBCXX_3.4
 FUNC:_ZNSt12__basic_fileIcE4syncEv@@GLIBCXX_3.4
 FUNC:_ZNSt12__basic_fileIcE5closeEv@@GLIBCXX_3.4
@@ -885,6 +886,7 @@ FUNC:_ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEEC2ESt13_Ios_Openmode@@G
 FUNC:_ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED0Ev@@GLIBCXX_3.4
 FUNC:_ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev@@GLIBCXX_3.4
 FUNC:_ZNSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED2Ev@@GLIBCXX_3.4
+FUNC:_ZNSt19istreambuf_iteratorIcSt11char_traitsIcEEppEv@@GLIBCXX_3.4
 FUNC:_ZNSt5ctypeIcE13classic_tableEv@@GLIBCXX_3.4
 FUNC:_ZNSt5ctypeIcEC1EPKhbj@@GLIBCXX_3.4
 FUNC:_ZNSt5ctypeIcEC1EPiPKhbj@@GLIBCXX_3.4
@@ -1245,6 +1247,7 @@ FUNC:tanhl@@GLIBCXX_3.4
 FUNC:tanl@@GLIBCXX_3.4
 OBJECT:0:CXXABI_1.3
 OBJECT:0:GLIBCXX_3.4
+OBJECT:0:GLIBCXX_3.4.1
 OBJECT:12:_ZTIN10__cxxabiv116__enum_type_infoE@@CXXABI_1.3
 OBJECT:12:_ZTIN10__cxxabiv117__array_type_infoE@@CXXABI_1.3
 OBJECT:12:_ZTIN10__cxxabiv117__class_type_infoE@@CXXABI_1.3
