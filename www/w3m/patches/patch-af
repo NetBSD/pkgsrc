@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2001/02/11 22:30:09 hubertf Exp $
+
+--- file.c.orig	Wed Jun 14 12:35:40 2000
++++ file.c
+@@ -5239,7 +5239,9 @@
+ 	    Strcat(tmp, lineBuf2);
+ 	    lineBuf2 = tmp;
+ 	}
++#ifdef CHARSET_JP
+ 	lineBuf2 = convertLine(&uf, lineBuf2, &code);
++#endif
+ 	lineBuf2 = checkType(lineBuf2->ptr, propBuffer, LINELEN);
+ 	len = lineBuf2->length;
+ 	l = New(Line);
