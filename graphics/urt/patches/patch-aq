@@ -1,15 +1,33 @@
-$NetBSD: patch-aq,v 1.1 2001/02/26 16:56:36 agc Exp $
+$NetBSD: patch-aq,v 1.2 2001/03/26 22:51:39 skrll Exp $
 
-Use libtool to make the executable properly
-
---- tools/clock/makefile.src	2001/02/26 15:27:41	1.1
-+++ tools/clock/makefile.src	2001/02/26 15:29:16
-@@ -6,7 +6,7 @@
- 	mv rleClock ../rleClock.out
+--- tools/clock/makefile.src.orig	Fri Jun  7 16:56:38 1991
++++ tools/clock/makefile.src
+@@ -1,12 +1,17 @@
+ # Makefile for rleClock
  
- rleClock:rleClock.o font.o
+-default: install
++#set	DEST	TOOLS_DEST	Where to install the tools
++DEST = ../../bin
+ 
+-install: rleClock
+-	mv rleClock ../rleClock.out
++PGMS = 	rleClock.out
+ 
+-rleClock:rleClock.o font.o
 -	${CC} ${CFLAGS} rleClock.o font.o -lm ${LIBS} -o rleClock
-+	${LIBTOOL} --mode=link ${CC} ${CFLAGS} rleClock.o font.o -o rleClock ../../lib/librle.la -lm
++default: $(PGMS)
++
++install: $(PGMS) install-pgm
++	touch install
++
++rleClock.out:rleClock.o font.o
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} rleClock.o font.o -o rleClock.out ../../lib/librle.la -lm
  
  font.c:font.src makeFont
  	chmod +x makeFont
+@@ -23,3 +28,5 @@
+ 
+ # Dependencies.
+ rleClock.o font.o:$(RI)/rle_config.h
++# Description file for rle tool programs. 
++
