@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4190 2003/12/19 16:59:21 hubertf Exp $
+$NetBSD: CHANGES,v 1.4191 2003/12/19 19:21:09 veego Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5248,3 +5248,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated qt3-mysql to 3.2.3 [skrll 2003-12-19]
 	Updated qt3 to 3.2.3 [skrll 2003-12-19]
 	Updated xarchon to 0.60 [hubertf 2003-12-19]
+	Updated x11-links to 0.19 [veego 2003-12-19]
