@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2000/02/13 19:17:24 fredb Exp $
+$NetBSD: patch-ad,v 1.6 2000/09/09 17:33:13 wiz Exp $
 
 --- install.sh.orig	Sat Feb  5 01:26:20 2000
 +++ install.sh	Sun Feb 13 08:29:05 2000
@@ -16,7 +16,7 @@ $NetBSD: patch-ad,v 1.5 2000/02/13 19:17:24 fredb Exp $
  OS_SYS=`(uname -s) 2>/dev/null`
  OS_REL=`(uname -r) 2>/dev/null`
 -OS_MACH=`(uname -m) 2>/dev/null`
-+OS_MACH=$MACHINE_ARCH
++OS_MACH=@MACHINE_ARCH@
  
  if [ -z "$OS_SYS" ]
  then
