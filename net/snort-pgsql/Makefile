@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2003/03/30 23:22:21 jmc Exp $
+# $NetBSD: Makefile,v 1.10 2003/04/16 15:51:24 salo Exp $
 #
 
 .include "../../net/snort/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-pgsql-/}
+PKGREVISION=	1
 
 COMMENT=	Libpcap-based packet sniffer/logger using a PostgreSQL database
 
