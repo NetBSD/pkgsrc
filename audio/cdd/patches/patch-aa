@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2001/11/15 02:21:12 mason Exp $
+$NetBSD: patch-aa,v 1.7 2004/11/28 23:02:26 simonb Exp $
 
 --- cdd_cddb.c.orig	Thu Jun 26 03:29:21 1997
 +++ cdd_cddb.c
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.6 2001/11/15 02:21:12 mason Exp $
  
  #define NETBUFSIZ 256;
 -#define CDDB_SERVER "cddb.sonic.net"
-+#define CDDB_SERVER "freedb.freedb.de"
++#define CDDB_SERVER "freedb.freedb.org"
  #define CDDB_PORT 888
  #define CDDB_TIMEOUT 30
  
