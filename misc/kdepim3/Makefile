@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2004/01/23 21:50:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/04 22:50:18 markd Exp $
 
-DISTNAME=	kdepim-3.1.5
-PKGREVISION=	1
+DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 
@@ -9,6 +8,15 @@ COMMENT=	Personal Information Management tools for the KDE desktop
 
 USE_BUILDLINK2=		YES
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libical/libtool
+
+REPLACE_PERL=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
+		kmail/kmail-3.1-use-UOID-for-identities.pl \
+		kmail/kmail-3.1.4-dont-use-UOID-0-for-any-identity.pl \
+		kmail/kmail-pgpidentity.pl \
+		kmail/kmail-upd-identities.pl \
+		kmail/upgrade-signature.pl \
+		kmail/upgrade-transport.pl \
+		libkdenetwork/kpgp-3.1-upgrade-address-data.pl
 
 .include "../../comms/pilot-link-libs/buildlink2.mk"
 .include "../../meta-pkgs/kde3/buildlink2.mk"

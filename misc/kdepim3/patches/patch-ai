@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.7 2004/01/15 11:08:18 markd Exp $
+$NetBSD: patch-ai,v 1.8 2004/02/04 22:50:18 markd Exp $
 
---- configure.orig	2003-12-17 14:00:31.000000000 +1300
+--- configure.orig	2004-01-26 08:17:44.000000000 +1300
 +++ configure
-@@ -26101,64 +26101,6 @@ _ACEOF
+@@ -24859,63 +24859,6 @@ _ACEOF
  
  
  
--  echo "$as_me:$LINENO: checking sizeof(size_t) == sizeof(unsigned long)" >&5
--echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned long)... $ECHO_C" >&6
+-  echo "$as_me:$LINENO: checking sizeof size_t == sizeof unsigned long" >&5
+-echo $ECHO_N "checking sizeof size_t == sizeof unsigned long... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
 -/* #line $LINENO "configure" */
 -/* confdefs.h.  */
@@ -50,11 +50,11 @@ $NetBSD: patch-ai,v 1.7 2004/01/15 11:08:18 markd Exp $
 -      echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6
 -      { { echo "$as_me:$LINENO: error:
--       Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned long)
+-       Apparently on your system our assumption sizeof size_t == sizeof unsigned long
 -       does not apply. Please mail kde-devel@kde.org with a description of your system!
 -      " >&5
 -echo "$as_me: error:
--       Apparently on your system our assumption sizeof(size_t) == sizeof(unsigned long)
+-       Apparently on your system our assumption sizeof size_t == sizeof unsigned long
 -       does not apply. Please mail kde-devel@kde.org with a description of your system!
 -      " >&2;}
 -   { (exit 1); exit 1; }; }
@@ -63,7 +63,6 @@ $NetBSD: patch-ai,v 1.7 2004/01/15 11:08:18 markd Exp $
 -rm -f conftest.$ac_objext conftest.$ac_ext
 -
 -
--
- echo "$as_me:$LINENO: checking for Qt docs" >&5
- echo $ECHO_N "checking for Qt docs... $ECHO_C" >&6
- kde_qtdir=
+ # darwin needs this to initialize the environment
+ 
+ for ac_header in crt_externs.h
