@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/05/14 15:42:14 dillo Exp $
+
+This includes sound-20040508.diff from the master site.
+
+--- engine.h.orig	Sun Apr 18 19:42:26 2004
++++ engine.h
+@@ -21,6 +21,7 @@
+ 
+ #include "intern.h"
+ #include "logic.h"
++#include "mixer.h"
+ #include "resource.h"
+ #include "video.h"
+ 
+@@ -33,6 +34,7 @@ struct Engine {
+ 
+ 	SystemStub *_stub;
+ 	Logic _log;
++	Mixer _mix;
+ 	Resource _res;
+ 	Video _vid;
+ 	const char *_dataDir, *_saveDir;

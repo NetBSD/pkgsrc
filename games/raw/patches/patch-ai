@@ -1,0 +1,94 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/05/14 15:42:15 dillo Exp $
+
+This includes sound-20040508.diff from the master site.
+
+--- sdlstub.cpp.orig	Wed Apr 21 20:29:56 2004
++++ sdlstub.cpp
+@@ -26,7 +26,8 @@ struct SDLStub : SystemStub {
+ 
+ 	enum {
+ 		SCREEN_W = 320,
+-		SCREEN_H = 200
++		SCREEN_H = 200,
++		SOUND_SAMPLE_RATE = 22050
+ 	};
+ 
+ 	struct Scaler {
+@@ -52,6 +53,11 @@ struct SDLStub : SystemStub {
+ 	virtual void processEvents();
+ 	virtual void sleep(uint32 duration);
+ 	virtual uint32 getTimeStamp();
++	virtual void lockAudio();
++	virtual void unlockAudio();
++	virtual void startAudio(AudioCallback callback, void *param);
++	virtual void stopAudio();
++	virtual uint32 getOutputSampleRate();
+ 
+ 	void prepareGfxMode();
+ 	void cleanupGfxMode();
+@@ -73,7 +79,7 @@ SystemStub *SystemStub_SDL_create() {
+ }
+ 
+ void SDLStub::init(const char *title) {
+-	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER);
++	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_TIMER);
+ 	SDL_EnableKeyRepeat(SDL_DEFAULT_REPEAT_DELAY, SDL_DEFAULT_REPEAT_INTERVAL);
+ 	SDL_ShowCursor(SDL_DISABLE);
+ 	SDL_WM_SetCaption(title, NULL);
+@@ -89,6 +95,7 @@ void SDLStub::init(const char *title) {
+ 
+ void SDLStub::destroy() {
+ 	cleanupGfxMode();
++	SDL_Quit();
+ }
+ 
+ void SDLStub::setPalette(uint8 s, uint8 n, const uint8 *buf) {
+@@ -128,7 +135,7 @@ void SDLStub::processEvents() {
+ 	while(SDL_PollEvent(&ev)) {
+ 		switch (ev.type) {
+ 		case SDL_QUIT:
+-			exit(0);
++			_pi.quit = true;
+ 			break;
+ 		case SDL_KEYUP:
+ 			switch(ev.key.keysym.sym) {
+@@ -224,6 +231,39 @@ void SDLStub::sleep(uint32 duration) {
+ 
+ uint32 SDLStub::getTimeStamp() {
+ 	return SDL_GetTicks();	
++}
++
++void SDLStub::lockAudio() {
++	SDL_LockAudio();
++}
++
++void SDLStub::unlockAudio() {
++	SDL_UnlockAudio();
++}
++
++void SDLStub::startAudio(AudioCallback callback, void *param) {
++	SDL_AudioSpec desired;
++	memset(&desired, 0, sizeof(desired));
++
++	desired.freq = SOUND_SAMPLE_RATE;
++	desired.format = AUDIO_S8;
++	desired.channels = 1;
++	desired.samples = 2048;
++	desired.callback = callback;
++	desired.userdata = param;
++	if (SDL_OpenAudio(&desired, NULL) == 0) {
++		SDL_PauseAudio(0);
++	} else {
++		error("SDLStub::startAudio() unable to open sound device");
++	}
++}
++
++void SDLStub::stopAudio() {
++	SDL_CloseAudio();
++}
++
++uint32 SDLStub::getOutputSampleRate() {
++	return SOUND_SAMPLE_RATE;
+ }
+ 
+ void SDLStub::prepareGfxMode() {

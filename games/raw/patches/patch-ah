@@ -1,0 +1,49 @@
+$NetBSD: patch-ah,v 1.1.1.1 2004/05/14 15:42:15 dillo Exp $
+
+This includes sound-20040508.diff from the master site.
+
+--- resource.cpp.orig	Wed Apr 21 20:29:26 2004
++++ resource.cpp
+@@ -127,7 +127,6 @@ void Resource::load() {
+ }
+ 
+ void Resource::invalidateRes() {
+-	// XXX call ds:sound_stub_1_ptr
+ 	MemEntry *me = _memList;
+ 	uint16 i = _numMemList;
+ 	while (i--) {
+@@ -150,23 +149,19 @@ void Resource::invalidateAll() {
+ }
+ 
+ void Resource::update(uint16 num) {
+-	if (num == 0) {
+-		invalidateRes();
++	if (num > _numMemList) {
++		_newPtrsId = num;
+ 	} else {
+-		if (num > _numMemList) {
+-			_newPtrsId = num;
+-		} else {
+-			if (false) { // XXX (_audio_use_pro_or_adlib == 1 || _audio_use_spk == 1) {
+-				for (const uint16 *ml = _memListAudio; *ml != 0xFFFF; ++ml) {
+-					if (*ml == num)
+-						return;
+-				}
+-			}
+-			MemEntry *me = &_memList[num];
+-			if (me->valid == 0) {
+-				me->valid = 2;
+-				load();
++		if (false) { // XXX (_audio_use_pro_or_adlib == 1 || _audio_use_spk == 1) {
++			for (const uint16 *ml = _memListAudio; *ml != 0xFFFF; ++ml) {
++				if (*ml == num)
++					return;
+ 			}
++		}
++		MemEntry *me = &_memList[num];
++		if (me->valid == 0) {
++			me->valid = 2;
++			load();
+ 		}
+ 	}
+ }
