@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/07/21 16:51:40 martti Exp $
+# $NetBSD: Makefile,v 1.24 2003/11/20 10:06:22 abs Exp $
 #
 
 DISTNAME=		fnlib-0.5
@@ -8,6 +8,11 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
 MAINTAINER=		root@garbled.net
 COMMENT=		Color font rendering library for X11R6
+
+# XXX Added to stop old distfiles conflicting due to the authors updating
+# XXX fnlib-0.5.tar.gz without changing the filename.
+# XXX Delete when DISTNAME next changes
+DIST_SUBDIR=		fnlib
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
