@@ -1,0 +1,90 @@
+diff -u ../../work/timidity-0.2i/Makefile ./Makefile
+--- ../../work/timidity-0.2i/Makefile	Wed Oct 29 01:16:48 1997
++++ ./Makefile	Tue Oct 28 09:10:22 1997
+@@ -56,8 +56,8 @@
+ # Select the Linux/FreeBSD audio driver
+ SYSTEM += -DAU_LINUX
+ SYSEXTRAS += linux_a.c
+-#EXTRAINCS +=
+-#EXTRALIBS += 
++EXTRAINCS += -I${PREFIX}/include
++EXTRALIBS += -L${PREFIX}/lib -lossaudio
+ 
+ ## Select the HP-UX network audio server
+ #SYSTEM += -DHPUX -DAU_HPUX
+@@ -94,7 +94,7 @@
+ SYSTEM += -DIA_NCURSES
+ SYSEXTRAS += ncurs_c.c
+ #EXTRAINCS += -I/usr/include/ncurses
+-EXTRALIBS += -lncurses -lmytinfo
++EXTRALIBS += -lncurses
+ 
+ ## Select the S-Lang full-screen interface
+ #SYSTEM += -DIA_SLANG
+diff -u ../../work/timidity-0.2i/config.h ./config.h
+--- ../../work/timidity-0.2i/config.h	Wed Oct 29 01:16:48 1997
++++ ./config.h	Sun Oct 26 13:55:33 1997
+@@ -185,6 +185,12 @@
+    fragments under the VoxWare (Linux & FreeBSD) audio driver */
+ #define AUDIO_BUFFER_SIZE (1<<AUDIO_BUFFER_BITS)
+ 
++#if (defined(__unix__) || defined(unix)) && !defined(USG)
++#include <sys/param.h>
++#undef FSCALE
++#endif
++
++
+ /* Byte order, defined in <machine/endian.h> for FreeBSD and DEC OSF/1 */
+ #ifdef DEC
+ #include <machine/endian.h>
+@@ -217,7 +223,7 @@
+ # endif
+ #endif /* linux */
+ 
+-#ifdef __FreeBSD__
++#if (defined(BSD) && (BSD >= 199306))
+ #include <errno.h>
+ #include <machine/endian.h>
+ #if BYTE_ORDER == LITTLE_ENDIAN
+diff -u ../../work/timidity-0.2i/linux_a.c ./linux_a.c
+--- ../../work/timidity-0.2i/linux_a.c	Mon May 20 15:09:46 1996
++++ ./linux_a.c	Wed Oct 29 01:09:19 1997
+@@ -32,6 +32,16 @@
+ #include <linux/soundcard.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#include <sys/ioctl.h>
++#include <soundcard.h>
++#undef EINTR
++#define EINTR EWOULDBLOCK
++#define DEV "/dev/audio"
++#else
++#define DEV "/dev/dsp"
++#endif
++
+ #ifdef __FreeBSD__
+ #include <stdio.h>
+ #include <machine/soundcard.h>
+@@ -56,7 +66,7 @@
+   -1,
+   {0}, /* default: get all the buffer fragments you can */
+   "Linux dsp device", 'd',
+-  "/dev/dsp",
++  DEV,
+   open_output,
+   close_output,
+   output_data,
+@@ -220,10 +230,10 @@
+ 
+ static void flush_output(void)
+ {
+-  ioctl(dpm.fd, SNDCTL_DSP_SYNC);
++  ioctl(dpm.fd, SNDCTL_DSP_SYNC, 0);
+ }
+ 
+ static void purge_output(void)
+ {
+-  ioctl(dpm.fd, SNDCTL_DSP_RESET);
++  ioctl(dpm.fd, SNDCTL_DSP_RESET, 0);
+ }

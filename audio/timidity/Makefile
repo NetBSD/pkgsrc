@@ -4,7 +4,8 @@
 # Date created:         17 Nov 1996
 # Whom:                 ache
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:19:06 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/29 00:34:33 augustss Exp $
+# FreeBSD Id: Makefile,v 1.5 1997/09/07 22:08:13 ache Exp 
 #
 
 DISTNAME=       timidity-0.2i
@@ -14,11 +15,13 @@ MASTER_SITES=   ftp://ftp.cdrom.com/pub/demos/music/samples/ \
 TIINS=          dgguspat.zip
 DISTFILES=      ${TIINS} ${DISTNAME}.tar.gz
 
+# FreeBSD maintainer
 MAINTAINER=     ache@FreeBSD.ORG
 
 NO_CDROM=       "Uses copyrighted patches"
 
 BUILD_DEPENDS=  unzip:${PORTSDIR}/archivers/unzip
+BUILD_DEPENDS+=	${PREFIX}/lib/libncurses.a:${PORTSDIR}/devel/ncurses
 
 EXTRACT_ONLY=   ${DISTNAME}.tar.gz
 INSTALL_TARGET= install.all
