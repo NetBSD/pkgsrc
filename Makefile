@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2002/05/31 15:26:50 seb Exp $
+# $NetBSD: Makefile,v 1.48 2002/09/24 13:59:20 wiz Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -82,7 +82,7 @@ search:	${.CURDIR}/INDEX
 .endif
 
 
-# 
+#
 # Generate list of all packages by extracting information from
 # the category/README.html pages
 #
@@ -91,7 +91,7 @@ readme-all:
 		mv README-all.html README-all.html.BAK ; \
 	fi
 	@${MAKE} README-all.html
-	@if cmp -s README-all.html README-all.html.BAK  ; then \
+	@if cmp -s README-all.html README-all.html.BAK ; then \
 		mv README-all.html.BAK README-all.html ; \
 	else \
 		rm -f README-all.html.BAK ; \
@@ -121,7 +121,7 @@ README-all.html:
 		-e '/%%NPKGS%%/d' \
 		-e '/%%PKGS%%/r$@.newsorted' \
 		-e '/%%PKGS%%/d' \
-		> $@ 
+		> $@
 	@rm -f $@.npkgs
 	@rm -f $@.new
 	@rm -f $@.newsorted
@@ -145,8 +145,8 @@ README-IPv6.html:
 	@fgrep -f $@.pkgs README-all.html | sort -t/ +1 >$@.trs
 	@cat templates/README.ipv6 \
 	| ${SED} \
-                -e '/%%TRS%%/r$@.trs' \
-                -e '/%%TRS%%/d' \
+		-e '/%%TRS%%/r$@.trs' \
+		-e '/%%TRS%%/d' \
 		>$@
 	@${RM} $@.trs
 	@${RM} $@.pkgs

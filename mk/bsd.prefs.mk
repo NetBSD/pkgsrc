@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.77 2002/09/15 11:58:23 rh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.78 2002/09/24 13:59:34 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -10,7 +10,7 @@
 .ifndef BSD_PKG_MK
 
 # Let mk.conf know that this is pkgsrc.
-BSD_PKG_MK=1 
+BSD_PKG_MK=1
 __PREFIX_SET__:=${PREFIX}
 
 # Define a symbol BSD_PREFS_MK that may be checked by Makefile fragments to
@@ -312,7 +312,7 @@ MAKEFLAGS+=		DIGEST=${DIGEST}
 # Only add the DIGEST_VERSION value to MAKEFLAGS when we know
 # we've got a valid version number, retrieved from the digest(1)
 # binary. This is different to PKGTOOLS_VERSION, since, in that
-# case, the build dies when pkg_info(1) is out of date. 
+# case, the build dies when pkg_info(1) is out of date.
 
 .if !exists(${DIGEST})
 DIGEST_VERSION=		20010301
