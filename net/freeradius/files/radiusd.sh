@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: radiusd.sh,v 1.1 2003/07/30 14:50:10 jmmv Exp $
+# $NetBSD: radiusd.sh,v 1.2 2004/09/23 19:51:22 adrianp Exp $
 #
 # PROVIDE: radiusd
 # REQUIRE: network
@@ -13,7 +13,7 @@ fi
 
 name="radiusd"
 command="@PREFIX@/sbin/radiusd"
-pidfile="/var/run/radiusd/radiusd.pid"
+pidfile="@VARBASE@/run/radiusd/radiusd.pid"
 
 if [ -f /etc/rc.subr ]
 then
@@ -23,5 +23,5 @@ then
 	run_rc_command "$1"
 else
 	echo -n ' ${name}'
-	exec ${command} ${smbd_flags} ${command_args}
+	exec ${command} ${radiusd_flags} ${command_args}
 fi

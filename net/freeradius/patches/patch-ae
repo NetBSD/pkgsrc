@@ -1,18 +1,23 @@
-$NetBSD: patch-ae,v 1.2 2004/01/30 21:44:39 david Exp $
+$NetBSD: patch-ae,v 1.3 2004/09/23 19:51:22 adrianp Exp $
 
---- Makefile.orig	Fri Jun 27 11:04:15 2003
-+++ Makefile	Fri Jan 30 16:10:14 2004
-@@ -26,11 +26,12 @@
+--- Makefile.orig	2004-06-09 18:31:11.000000000 +0100
++++ Makefile	2004-09-14 20:50:36.000000000 +0100
+@@ -11,7 +11,7 @@
+ 
+ .PHONY: all clean install
+ 
+-SUBDIRS		= ${LIBLTDLPATH} src raddb scripts doc
++SUBDIRS		= ${LIBLTDLPATH} src scripts doc
+ WHAT_TO_MAKE	= all
+ 
+ all:
+@@ -38,9 +38,7 @@
+ install:
+ 	$(INSTALL) -d -m 755	$(R)$(sbindir)
  	$(INSTALL) -d -m 755	$(R)$(bindir)
- 	$(INSTALL) -d -m 755	$(R)$(raddbdir)
+-	$(INSTALL) -d -m 755	$(R)$(raddbdir)
  	$(INSTALL) -d -m 755	$(R)$(mandir)
 -	$(INSTALL) -d -m 755	$(R)$(RUNDIR)
  	$(INSTALL) -d -m 700	$(R)$(logdir)
  	$(INSTALL) -d -m 700	$(R)$(radacctdir)
  	$(INSTALL) -d -m 700	$(R)$(datadir)
- 	$(INSTALL) -d -m 755	$(R)$(dictdir)
-+
-+install-etc:
- 	@$(MAKE) $(MFLAGS) WHAT_TO_MAKE=$@ common
- 	for i in 1 5 8; do \
- 		$(INSTALL) -d -m 755	$(R)$(mandir)/man$$i; \
