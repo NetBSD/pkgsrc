@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.87 2003/06/25 22:48:02 seb Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.88 2003/07/02 21:19:09 seb Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -1055,7 +1055,7 @@ ${BUILDLINK_DIR}/bin/makeinfo:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} 'echo "${MAKEINFO} $$*" >> ${_BLNK_WRAP_LOG}' >> ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} 'exec ${MAKEINFO} $$*' >> ${.TARGET}
+	${ECHO} 'exec ${MAKEINFO} "$$@"' >> ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .  else # !USE_MAKEINFO
 do-buildlink: hide-makeinfo
