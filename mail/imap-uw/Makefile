@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/06/01 11:23:34 rh Exp $
+# $NetBSD: Makefile,v 1.13 2000/06/09 08:17:56 jlam Exp $
 #
 
 DISTNAME=       imap-4.7c2
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.washington.edu/imap/
 
-USE_PKGLIBTOOL=	# defined
+USE_LIBTOOL=	# defined
 
 WRKSRC=		${WRKDIR}/imap-4.7c
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
@@ -33,6 +33,7 @@ do-build:
 do-install:
 	${INST_LIB} ${WRKSRC}/c-client/libimapuw.la ${PREFIX}/lib
 	@${RM} -f ${PREFIX}/lib/libimapuw.a
+	@${RM} -f ${PREFIX}/lib/libimapuw.la
 	${INST_PROG} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop3d ${PREFIX}/libexec
