@@ -1,7 +1,8 @@
 #!/bin/sh
 #
-# $NetBSD: squid.sh,v 1.4 2000/12/16 09:45:44 hubertf Exp $
+# $NetBSD: squid.sh,v 1.5 2001/01/30 19:24:22 tron Exp $
 #
+# REQUIRE: DAEMON
 
 case $1 in
 start)
