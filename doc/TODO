@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1802 2004/06/03 22:44:55 xtraeme Exp $
+$NetBSD: TODO,v 1.1803 2004/06/03 22:45:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -153,6 +153,9 @@ Suggested new packages
 	http://player.helixcommunity.org/2004/downloads/
 	RealNetwork's open source audio/video player
 
+	Putty
+	http://www.chiark.greenend.org.uk/~sgtatham/putty/
+	SSH client
 
 Suggested package updates
 =========================
@@ -161,6 +164,7 @@ Suggested package updates
 	o TeXmacs-1.0.3.9
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
+	o abiword-2.0.7
 	o anjuta-1.2.2
 	o ap-jk-5.0.25
 	o ap-python-2.7.10
@@ -170,19 +174,22 @@ Suggested package updates
 	o balsa-1.4.4
 	o bind-9.3
 	o bins-1.1.26
+	o bitlbee-0.90
+	o bk_edit-0.6.23
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
 	o boost-1.31.0
 	o boson-0.10
+	o bzflag-1.10.6
 	o capc-calc-2.11.9.3
 	o centericq-4.9.12
 	o cervisia-2.1.2
 	o checkbot-1.74
 	o clanlib-0.7.8
 	o classpath-0.09
-	o clisp-2.33.1
+	o clisp-2.33.2
 	o cocoon-2.1.5
-	o conserver-8.1.5
+	o conserver-8.1.7
 	o courier-0.45
 	o courier-imap-3.0.0
 	o crafty-19.5
@@ -200,14 +207,19 @@ Suggested package updates
 	o dmalloc-5.3.0
 	o dnetc-2.9004-482 [pkg/22390]
 	o docbook-4.3
+	o doclifter-1.9
+	o docsis-0.9.1
 	o dvd+rw-tools-5.19-1.4.9.7 [pkg/25433]
 	o dvdrip-0.50.18
+	o dvipng-1.1
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
+	o easytag-0.31
 	o eclipse-2.1.3
 	o efax-gtk-2.2.7
 	o elk-3.99.6
 	o elm-me-2.4pl116
+	o ethereal-0.10.4
 	o evolution-1.5.2
 	o exim-4.34
 	o festival-1.4.3
@@ -239,6 +251,7 @@ Suggested package updates
 	o gnuplot-4.0.0 [pkg/25450]
 	o gogo-3.11p1
 	o gqmpeg-0.91.1
+	o grace-5.1.15
 	o grepmail-5.23
 	o grhino-0.12.0
 	o groff-1.19.1
@@ -264,11 +277,12 @@ Suggested package updates
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
-	o larswm-7.3.6
+	o larswm-7.3.9
 	o latex2rtf-1.9.15
 	o lavaps-2.4
 	o leafnode-1.9.54
 	o libcaca-0.9
+	o libidn-0.4.7
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libole2-2.2.8
@@ -283,13 +297,15 @@ Suggested package updates
 	o maradns-1.0.23
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
+	o mathomatic-11.2
 	o mhonarc-2.6.10
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o mimedefang-2.43
 	o minicom-2.1
+	o mkvtoolnix-0.9.0
 	o mowitz-0.3.0
-	o moz-bin-flash-7.0r25
+	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
 	o mozilla-stable-1.4.2
 	o mrproject-0.9.1
@@ -312,6 +328,7 @@ Suggested package updates
 	o openal-20040215
 	o openh323-1.12.2
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
+	o opera-7.51
 	o oss-3.99.1c
 	o p5-CGI-3.05
 	o p5-CGI-Application-3.1
@@ -329,6 +346,8 @@ Suggested package updates
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
+	o raine-0.40.2
+	o rdiff-backup-0.12.7
 	o rep-gtk-0.17
 	o roundup-0.7.2
 	o rox-1.2.2
@@ -376,11 +395,13 @@ Suggested package updates
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vfu-4.03
+	o vlc-0.7.2
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o w3m-0.5.1
 	o wavesurfer-1.5.3
 	o wdm-1.27
+	o wmaker-conf-2.9.1
 	o wwwoffle-2.8a
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xanalyser-1.23
@@ -395,6 +416,7 @@ Suggested package updates
 	o xfce-4.0.5
 	o xinvest-2.6.9
 	o xisp-2.7 [pkg/19566]
+	o xmbmon-2.04
 	o xmcd-3.3.0
 	o xmms-alarm-0.3.5
 	o xmms-crossfade-0.3.4
