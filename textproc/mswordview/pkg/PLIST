@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/06/15 12:19:22 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/06/15 12:37:47 hubertf Exp $
 bin/mswordview
 share/mswordview/symbolfont/100.gif
 share/mswordview/symbolfont/101.gif
@@ -661,7 +661,6 @@ share/mswordview/patterns/enewlytyped.jpg
 share/mswordview/patterns/wmf.jpg
 share/mswordview/config-mswordview
 man/man1/mswordview.1
-@dirrm bin/mswordview
 @dirrm share/mswordview/symbolfont
 @dirrm share/mswordview/patterns
 @dirrm share/mswordview/ttf
