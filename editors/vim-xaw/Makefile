@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/09/14 00:10:46 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2003/01/04 23:01:45 cjep Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -19,10 +19,10 @@ INSTALL_TARGET=		installvimbin
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(XAW_TYPE) && (${XAW_TYPE} == "3d" || ${XAW_TYPE} == "xpm")
-MAKE_ENV+=		XAW_LIB="Xaw3d" 
+MAKE_ENV+=		XAW_LIB="Xaw3d"
 .else
 XAW_TYPE=		standard
-MAKE_ENV+=		XAW_LIB="Xaw" 
+MAKE_ENV+=		XAW_LIB="Xaw"
 .endif
 
 post-install:
