@@ -1,0 +1,78 @@
+--- kvt/command.c.orig	Tue Mar 24 01:42:51 1998
++++ kvt/command.c	Wed Mar 25 11:06:38 1998
+@@ -160,8 +160,6 @@
+ extern int console;
+ 
+ KeySym SecureKeysym = XK_s;
+-KeySym BigFontKeysym = XK_greater;
+-KeySym SmallFontKeysym = XK_less;
+ KeySym PageUpKeysym = XK_Prior;
+ KeySym PageDownKeysym = XK_Next;
+ #ifdef GREEK_KBD
+@@ -630,16 +628,6 @@
+       count = 0;
+     }
+ 
+-  else if((keysym == BigFontKeysym)&&((ev->xkey.state &Mod1Mask) == Mod1Mask))
+-    {
+-/*       NewFont(BIGGER); */
+-      count = 0;
+-    }
+-  else if((keysym==SmallFontKeysym)&&((ev->xkey.state &Mod1Mask) == Mod1Mask))
+-    {
+-/*       NewFont(SMALLER); */
+-      count = 0;
+-    }
+   else
+ 
+   if((keysym == PageUpKeysym)&&((ev->xkey.state &Mod1Mask) == Mod1Mask))
+--- kvt/resources.c.orig	Thu Dec 11 16:31:47 1997
++++ kvt/resources.c	Wed Mar 25 11:07:12 1998
+@@ -27,8 +27,6 @@
+ extern int login_shell,fat_sbar, MetaHandling;
+ extern WindowInfo MyWinInfo;
+ extern KeySym SecureKeysym;
+-extern KeySym BigFontKeysym;
+-extern KeySym SmallFontKeysym;
+ extern KeySym PageUpKeysym;
+ extern KeySym PageDownKeysym;
+ #ifdef MAPALERT
+@@ -47,7 +45,6 @@
+ 
+ char *mask_string = NULL, *login_shell_string = NULL, *scrollbar = NULL;
+ char* SecureKeysym_string=NULL;
+-char *BigFontKeysym_string = NULL, *SmallFontKeysym_string = NULL;
+ char *PageUpKeysym_string = NULL, *PageDownKeysym_string = NULL;
+ #ifdef GREEK_KBD
+ char *elot_string = NULL;
+@@ -74,8 +71,6 @@
+   {&saveLines_string,           "saveLines"},
+   {&meta_string,                "meta"},
+   {&SecureKeysym_string,        "secure_key"},
+-  {&BigFontKeysym_string,       "bigger_font_key"},
+-  {&SmallFontKeysym_string,     "smaller_font_key"},
+   {&PageUpKeysym_string,        "page_up_key"},
+   {&PageDownKeysym_string,      "page_down_key"},
+ #ifdef MAPALERT
+@@ -136,10 +131,6 @@
+ 
+   if(SecureKeysym_string)
+     SecureKeysym = XStringToKeysym(SecureKeysym_string);
+-  if(BigFontKeysym_string)
+-    BigFontKeysym = XStringToKeysym(BigFontKeysym_string);
+-  if(SmallFontKeysym_string)
+-    SmallFontKeysym = XStringToKeysym(SmallFontKeysym_string);
+   if(PageUpKeysym_string)
+     PageUpKeysym = XStringToKeysym(PageUpKeysym_string);
+   if(PageDownKeysym_string)
+--- kvt/xsetup.c.orig	Thu Dec 11 16:31:49 1997
++++ kvt/xsetup.c	Wed Mar 25 11:06:59 1998
+@@ -117,8 +117,6 @@
+ 
+ 
+ extern KeySym SecureKeysym;
+-extern KeySym BigFontKeysym;
+-extern KeySym SmallFontKeysym;
+ extern KeySym PageUpKeysym;
+ extern KeySym PageDownKeysym;
+ #ifdef GREEK_KBD
