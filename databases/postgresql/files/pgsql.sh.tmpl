@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pgsql.sh.tmpl,v 1.8 2000/09/21 14:34:56 jlam Exp $
+# $NetBSD: pgsql.sh.tmpl,v 1.9 2000/12/07 16:56:40 jlam Exp $
 # FreeBSD Id: pgsql.sh.tmpl,v 1.3 1997/10/05 21:00:49 andreas Exp
 #
 # pgsql.sh - postgresql startup file for NetBSD
@@ -10,6 +10,7 @@
 
 CMD=${1:-start}
 USER=@PGUSER@
+PGHOME=@PREFIX@/${USER}
 
 if [ -x @PREFIX@/bin/postmaster -a -x @PREFIX@/bin/pg_ctl ]
 then
@@ -18,15 +19,15 @@ then
 		echo -n ' pgsql' 
 		su -l ${USER} -c 'exec @PREFIX@/bin/pg_ctl \
 			-p @PREFIX@/bin/postmaster -o "-S -o -F" start \
-			> @PGHOME@/errlog'
+			> ${PGHOME}/errlog'
 		;;
 	stop)
 		su -l ${USER} -c 'exec @PREFIX@/bin/pg_ctl stop \
-			>> @PGHOME@/errlog'
+			>> ${PGHOME}/errlog'
 		;;
 	restart)
 		su -l ${USER} -c 'exec @PREFIX@/bin/pg_ctl restart \
-			>> @PGHOME@/errlog'
+			>> ${PGHOME}/errlog'
 		;;
 	status)
 		su -l ${USER} -c 'exec @PREFIX@/bin/pg_ctl status'
