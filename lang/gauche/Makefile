@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2005/01/16 08:57:55 kei Exp $
+# $NetBSD: Makefile,v 1.29 2005/03/07 03:16:46 uebayasi Exp $
 #
 
 DISTNAME=	Gauche-0.8.3
-PKGREVISION=	# empty
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
 EXTRACT_SUFX=	.tgz
@@ -12,6 +12,15 @@ HOMEPAGE=	http://www.shiro.dreamhost.com/scheme/gauche/index.html
 COMMENT=	R5RS Scheme implementation aimed to be a handy tool for daily works
 
 DEPENDS+=	slib-[0-9]*:../../devel/slib
+
+.include "options.mk"
+
+# This is ad-hoc.  TRT would be to fix configure scripts, but that
+# would be also very tedious...
+SUBST_CLASSES+=		lgdbm
+SUBST_STAGE.lgdbm=	pre-configure
+SUBST_FILES.lgdbm=	configure
+SUBST_SED.lgdbm=	-e 's|"-lgdbm"|"${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gdbm}/lib -lgdbm"|g'
 
 GNU_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
@@ -25,11 +34,6 @@ LDFLAGS+=		${BUILDLINK_LIBICONV_LDADD}
 
 USE_MAKEINFO=		YES
 INFO_FILES=		gauche-refe.info gauche-refj.info
-
-.include "../../mk/bsd.prefs.mk"
-.if defined(GAUCHE_MULTIBYTE)
-CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
-.endif
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
