@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.246 2002/10/14 06:21:33 martti Exp $
+$NetBSD: CHANGES,v 1.247 2002/10/14 06:41:38 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3233,3 +3233,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated php4-domxml to 4.2.3 [martti 2002-10-14]
 	Updated php4-wddx to 4.2.3 [martti 2002-10-14]
 	Updated php4-xml to 4.2.3 [martti 2002-10-14]
+	Added php4-curl-4.2.3 [martti 2002-10-14]
