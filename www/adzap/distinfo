@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2005/01/03 23:48:21 simonb Exp $
+$NetBSD: distinfo,v 1.32 2005/01/18 02:51:48 simonb Exp $
 
-SHA1 (adzap-20041124.tar.gz) = d5e647630bd90a455b94fdefcf788408d28daed4
-Size (adzap-20041124.tar.gz) = 47760 bytes
+SHA1 (adzap-20050106.tar.gz) = 1a4f58ce9235796cdede21267219c30dc3514129
+Size (adzap-20050106.tar.gz) = 48058 bytes
 SHA1 (patch-aa) = 2b83211b9eee28f508bc6ac40575a46c8bbbcc56
 SHA1 (patch-ab) = 7aa67928e6a49bee814a75eac52c58e4ab5eb8eb
