@@ -1,16 +1,27 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/01/04 13:08:47 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 1999/02/19 14:28:08 rh Exp $
 
 --- Makefile.orig	Wed Aug  5 21:10:26 1998
-+++ Makefile	Mon Jan  4 13:43:43 1999
++++ Makefile	Thu Feb 18 17:33:28 1999
 @@ -1,6 +1,6 @@
  # Here, what you need for Pgsql
 -PGSQLIBS    = -L/usr/local/pgsql/lib -lpq
 -PGSQLCFLAGS = -I/usr/local/pgsql/include
-+PGSQLIBS    = -L${LOCALBASE}/@PGUSER@/lib -lpq
-+PGSQLCFLAGS = -I${LOCALBASE}/@PGUSER@/include
++PGSQLIBS    = -L${LOCALBASE}/pgsql/lib -lpq
++PGSQLCFLAGS = -I${LOCALBASE}/pgsql/include
  # Your favorite compilation options here :-)
  MCFLAGS  = -Wall -O -g
  
+@@ -14,8 +14,8 @@
+ OBJS    = $(MOBJS) $(DBOBJS)
+ CFLAGS  = $(MCFLAGS) $(DBFLAGS)
+ 
+-GTKLIBS     = `gtk-config --libs`
+-GTKCFLAGS   = `gtk-config --cflags`
++GTKLIBS     = `${PREFIX}/bin/gtk10-config --libs`
++GTKCFLAGS   = `${PREFIX}/bin/gtk10-config --cflags`
+ 
+ all: $(OBJS)
+ 	gcc -o gtksql $(OBJS) $(PGSQLIBS) $(GTKLIBS) $(CFLAGS)
 @@ -23,8 +23,8 @@
  clean:
  	rm *.o gtksql
@@ -21,5 +32,4 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/01/04 13:08:47 frueauf Exp $
 +	cp gtksql ${PREFIX}/bin/
  
  .c.o: 
--	gcc $(CFLAGS) $(GTKCFLAGS) $(PGSQLCFLAGS) -c $*.c -o ./$*.o
-+	gcc $(CFLAGS) $(GTKCFLAGS) $(PGSQLCFLAGS) -c $*.c -o ./$*.o
+ 	gcc $(CFLAGS) $(GTKCFLAGS) $(PGSQLCFLAGS) -c $*.c -o ./$*.o

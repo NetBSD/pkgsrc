@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:45 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/02/19 14:28:08 rh Exp $
 #
 
 DISTNAME=	gtksql-0.2
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.multimania.com/bbrox/GtkSQL/ \
 MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.multimania.com/bbrox/GtkSQL/
 
-DEPENDS+=	gtk+-1.0.6:../../x11/gtk10
+DEPENDS+=	gtk10-1.0.6:../../x11/gtk10
 DEPENDS+=	postgresql-6.4.2:../../databases/postgresql
 
 # restriction inherit from postgresql
