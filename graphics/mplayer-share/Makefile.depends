@@ -1,7 +1,11 @@
-# $NetBSD: Makefile.depends,v 1.19 2003/09/12 17:55:56 recht Exp $
+# $NetBSD: Makefile.depends,v 1.20 2003/09/12 21:46:46 jmmv Exp $
 #
 
 DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../graphics/mplayer-share
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-1.5*) && !defined(USE_GCC3)
+USE_GCC2=	yes
+.endif
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
 .  include "../../audio/cdparanoia/buildlink2.mk"
