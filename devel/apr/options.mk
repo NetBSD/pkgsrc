@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2004/11/17 19:30:12 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2004/11/17 19:33:11 xtraeme Exp $
 #
 # XXX Support for the following variables will be removed after the
-# XXX pkgsrc-2004Q3 branch is released:
+# XXX pkgsrc-2004Q4 branch is released:
 # XXX
 # XXX APR_USE_DB4
 # XXX APR_USE_OPENLDAP
