@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1374 2003/02/15 08:19:25 salo Exp $
+$NetBSD: CHANGES,v 1.1375 2003/02/15 08:36:24 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -670,3 +670,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated atk to 1.2.2 [salo 2003-02-15]
 	Added oroborus-2.0.11 [salo 2003-02-15]
 	Added tileworld-1.0 [salo 2003-02-15]
+	Updated gcombust to 0.1.54 [salo 2003-02-15]
