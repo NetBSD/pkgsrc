@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.41 2001/05/14 19:10:46 jlam Exp $
+$NetBSD: TODO,v 1.42 2001/05/15 06:56:54 zuntum Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -58,7 +58,6 @@ package update TODO (Suggested package updates)
 	o update print/a2ps to 4.13 [pkgsrc version was released on 1999-02-10, whee]
 	o update sysutils/gkrellm to 1.0.8
 		(zuntum will do that)
-	o update time/devtodo to 0.1.6
 	o update wm/windowmaker to 0.65.0
 	o update x11/xfce to 3.8.3
 	o update/add cyrus-imapd 2.0.13
