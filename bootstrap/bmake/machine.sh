@@ -2,7 +2,7 @@
 # derrived from /etc/rc_d/os.sh
 
 # RCSid:
-#	$Id: machine.sh,v 1.1.1.1 2004/03/11 13:04:08 grant Exp $
+#	$Id: machine.sh,v 1.2 2004/04/11 03:12:17 heinz Exp $
 #
 #	@(#) Copyright (c) 1994 Simon J. Gerraty
 #
@@ -26,7 +26,8 @@ MACHINE=
 # Great! Solaris keeps moving arch(1)
 # we need this here, and it is not always available...
 Which() {
-	for d in `IFS=:; echo ${2:-$PATH}`
+	pathcomponents=`IFS=:; echo ${2:-$PATH}`
+	for d in ${pathcomponents}
 	do
 		test -x $d/$1 && { echo $d/$1; break; }
 	done
@@ -60,6 +61,10 @@ IRIX)
 Interix)
 	MACHINE=i386
 	MACHINE_ARCH=i386
+	;;
+UnixWare)
+	OSREL=`uname -v`
+	OSMAJOR=`IFS=.; set $OSREL; echo $1`
 	;;
 esac
 
