@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/05/19 11:33:10 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/09 13:36:48 agc Exp $
 #
 
 DISTNAME=		snd
@@ -12,7 +12,7 @@ MAINTAINER=		hubertf@netbsd.org
 DEPENDS+=		xpm-3.4j:../../graphics/xpm
 
 USE_X11=		yes
-REQUIRES_MOTIF=		yes
+USE_MOTIF=		yes
 MAKEFILE=		makefile.netbsd
 ALL_TARGET=		snd
 

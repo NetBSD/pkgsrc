@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:15 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/09 13:36:49 agc Exp $
 # FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=   http://mercury.hypersurf.com/~amb/download/xmmix-1.2/src/
 MAINTAINER=	augustss@cs.chalmers.se
 
 USE_IMAKE=	yes
-REQUIRES_MOTIF=	yes
+USE_MOTIF=	yes
 
 CAT1=		xmmix.0
 
