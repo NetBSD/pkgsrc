@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2000/04/28 06:43:00 itojun Exp $
+# $NetBSD: Makefile,v 1.7 2000/05/25 02:03:12 hubertf Exp $
 #
 
-DISTNAME=	bind-9.0.0b2
+DISTNAME=	bind-9.0.0b3
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/9.0.0b2/
+MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/9.0.0b3/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
@@ -18,7 +18,7 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
 DEPENDS+=	unproven-pthreads-0.*:../../devel/unproven-pthreads
 
 # No need to set USE_INET6, will auto-detect.
-DIST_SUBDIR=	bind/9.0.0b2
+DIST_SUBDIR=	bind/9.0.0b3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-mit-pthreads \
 		--with-libtool=yes \
