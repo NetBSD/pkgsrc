@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/04/17 15:37:59 salo Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/17 15:39:51 salo Exp $
 #
 
 DISTNAME=	dbz
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.andrew.cmu.edu/~twm/fonts/
 EXTRACT_SUFX=	.zip
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://fonts.tom7.com/
