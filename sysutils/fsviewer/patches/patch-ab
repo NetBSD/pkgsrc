@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2001/07/22 17:42:08 wiz Exp $
 
 --- src/FSFileView.c.orig	Sat Oct  9 20:45:21 1999
 +++ src/FSFileView.c
@@ -17,3 +17,14 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
  	attributes.extra_flags = GSFullKeyboardEventsFlag;
  	attributes.flags = (GSWindowStyleAttr | GSWindowLevelAttr |
  			    GSExtraFlagsAttr);
+@@ -444,8 +444,8 @@
+                               WMViewSizeDidChangeNotification,
+                               WMWidgetView(fView->fileBrowserF));
+ 
+-    WMSetWindowMiniwindowImage(fView->fileView, 
+-			       WMGetApplicationIconImage(fView->scr));
++    WMSetWindowMiniwindowPixmap(fView->fileView, 
++			       WMGetApplicationIconPixmap(fView->scr));
+ 
+     array = WMGetUDObjectForKey(defaultsDB, "SHELF");
+     if(array && PLIsArray(array))

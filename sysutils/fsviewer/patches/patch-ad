@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2001/07/22 17:42:09 wiz Exp $
 
 --- src/FSViewer.c.orig	Sat Oct  9 20:45:22 1999
 +++ src/FSViewer.c
@@ -39,3 +39,12 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
      attributes.extra_flags = GSFullKeyboardEventsFlag;
      attributes.flags =
  	(GSWindowStyleAttr | GSWindowLevelAttr | GSExtraFlagsAttr);
+@@ -417,7 +417,7 @@
+     if ((fsViewer->wmpixmap = WMCreatePixmapFromRImage(fsViewer->scr, 
+ 						       fsViewer->image, 0)))
+     {
+-        WMSetApplicationIconImage(fsViewer->scr, fsViewer->wmpixmap);
++        WMSetApplicationIconPixmap(fsViewer->scr, fsViewer->wmpixmap);
+     }
+ }
+ 
