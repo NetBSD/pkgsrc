@@ -1,29 +1,26 @@
-# $NetBSD: Makefile,v 1.16 2001/09/27 23:17:55 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/10/04 19:18:38 rh Exp $
 
-DISTNAME=	gal-0.12
-CATEGORIES=	gnome devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/gal/}
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		gal-0.12
+CATEGORIES=		gnome devel
+MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/gal/}
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://www.gnome.org/
-COMMENT=	Gnome Application Libraries
+MAINTAINER=		rh@netbsd.org
+HOMEPAGE=		http://www.gnome.org/
+COMMENT=		Gnome Application Libraries
 
-DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
-DEPENDS+=	gnome-libs>=1.2.13:../../x11/gnome-libs
-DEPENDS+=	gnome-print>=0.28:../../print/gnome-print
-DEPENDS+=	gnome-vfs>=1.0:../../sysutils/gnome-vfs
-DEPENDS+=	libglade>=0.16:../../devel/libglade
-DEPENDS+=	libunicode>=0.4:../../textproc/libunicode
-DEPENDS+=	bonobo>=1.0.4:../../devel/bonobo
+DEPENDS+=		libunicode>=0.4:../../textproc/libunicode
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
-USE_X11BASE=	YES
-USE_LIBINTL=	YES
-
-CONFIGURE_ARGS+=	-with-libiconv=${LOCALBASE}
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+USE_X11BASE=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../converters/libiconv/buildlink.mk"
+.include "../../sysutils/gnome-vfs/buildlink.mk"
+.include "../../print/gnome-print/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/libglade/buildlink.mk"
+.include "../../devel/bonobo/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
