@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2000/02/22 22:08:23 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2000/03/27 23:36:14 explorer Exp $
 #
 
-DISTNAME=		unproven-pthreads-0.11
+DISTNAME=		unproven-pthreads-0.12
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.flame.org/pub/netbsd/
 
 MAINTAINER=		explorer@netbsd.org
-#HOMEPAGE=		http://www.mit.edu:8001/people/proven/pthreads.html
 
 #ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-sparc
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
