@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2530 2004/11/27 16:52:41 bouyer Exp $
+$NetBSD: TODO,v 1.2531 2004/11/27 17:53:48 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,6 @@ Suggested package updates
 	o corewars-0.9.13
 	o courier-auth-0.47
 	o courier-imap-3.0.8
-	o covered-current-20040325
 	o crafty-19.5
 	o criticalmass-0.99
 	o crossfire-cli-1.5.0
