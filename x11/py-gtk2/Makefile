@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:18:37 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/29 11:01:38 recht Exp $
 #
 
-DISTNAME=	pygtk-2.2.0
+DISTNAME=	pygtk-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
-PKGREVISION=	2
 CATEGORIES=	x11 python
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.4/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
@@ -21,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	pygtk-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
+PYTHON_VERSIONS_ACCEPTED=	24pth 23pth 22pth
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
 .include "../../devel/libglade2/buildlink3.mk"
