@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2000/07/12 20:02:54 tron Exp $
+# $NetBSD: Makefile,v 1.30 2000/08/02 17:18:46 wiz Exp $
 #
 
-DISTNAME=	rsync-2.4.3
+DISTNAME=	rsync-2.4.4
 CATEGORIES=	net
 MASTER_SITES=	ftp://rsync.samba.org/pub/rsync/ \
 		ftp://sunsite.auc.dk/pub/unix/rsync/  \
@@ -20,7 +20,7 @@ BUILD_DEFS+=	USE_INET6
 .if ${OPSYS} == "NetBSD"
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/ \
 		ftp://ftp.pasta.cs.uit.no/pub/IPv6/misc/
-PATCHFILES=	rsync-243-v6-20000620.diff.gz
+PATCHFILES=	rsync-244-v6-20000802.diff.gz
 PATCH_DIST_STRIP=	-p1
 .endif
 
