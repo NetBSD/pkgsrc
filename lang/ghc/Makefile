@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/22 03:39:00 kristerw Exp $
 
 DISTNAME=	ghc-5.04.3
 CATEGORIES=	lang
@@ -38,7 +38,7 @@ USE_GNU_TOOLS+=	make
 # osf/alpha etc are supported natively by ghc. pkg support for those
 # platforms and their NetBSD varients is left as a mid-level exercise
 # for the reader
-ONLY_FOR_PLATFORM= NetBSD-1.5*-i386 NetBSD-1.6*-i386
+ONLY_FOR_PLATFORM= NetBSD-1.5*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 
 pre-configure:
 	cd ${WRKSRC}; file=configure.in;				\
