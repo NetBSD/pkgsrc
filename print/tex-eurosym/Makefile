@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/02/10 01:18:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2005/02/11 00:57:44 hubertf Exp $
 #
 
 DISTNAME=	eurosym-1.0
@@ -13,6 +13,7 @@ COMMENT=	Euro symbols for LaTeX
 
 # included in teTeX[23]
 DEPENDS+=	teTeX-bin-1.0.*:../../print/teTeX1-bin
+CONFLICTS+=	teTeX>1
 
 WRKSRC=		${WRKDIR}/eurosym
 NO_CONFIGURE=	yes
