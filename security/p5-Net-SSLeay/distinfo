@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2002/06/10 01:53:32 shell Exp $
+$NetBSD: distinfo,v 1.11 2002/08/19 09:48:55 shell Exp $
 
-SHA1 (Net_SSLeay.pm-1.17.tar.gz) = e3e49b8960bad6744539fab6abdad57ce4c97852
-Size (Net_SSLeay.pm-1.17.tar.gz) = 71011 bytes
+SHA1 (Net_SSLeay.pm-1.19.tar.gz) = c63d3ef61a8312ee6a2c1c644c48e7dab236b7ef
+Size (Net_SSLeay.pm-1.19.tar.gz) = 72279 bytes
