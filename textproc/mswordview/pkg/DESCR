@@ -1,5 +1,3 @@
-MSWordView is a program that can understand the Microsofts Word 8
-binary file format (Office97), it currently converts Word into html,
-which can then be read with a browser. 
-
-This olny works for Word 8 on the moment, not for Word 6/7
+MSWordView is a program that understands the Microsoft Word 8 binary file
+format (Office97) and is able to convert Word documents into HTML, which
+can then be read with a browser.
