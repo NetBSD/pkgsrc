@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3492 2003/09/23 10:39:28 adam Exp $
+$NetBSD: CHANGES,v 1.3493 2003/09/23 10:42:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3889,3 +3889,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated openjade to 1.3.2 [wiz 2003-09-23]
 	Updated sitecopy to 0.13.4 [wiz 2003-09-23]
 	Updated wv to 0.7.6nb1 [adam 2003-09-23]
+	Updated wu-ftpd to 2.6.2nb2 [wiz 2003-09-23]
