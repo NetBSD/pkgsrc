@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/14 20:59:02 jwise Exp $
+--- docs/Makefile.in.orig	Fri Jan 14 14:33:41 2000
++++ docs/Makefile.in	Fri Jan 14 14:33:56 2000
+@@ -113,7 +113,7 @@
+ 
+ DOCFILES = $(strip $(shell ls $(EXTRA_DIST)))
+ 
+-docdir = ${prefix}/docs
++docdir = ${prefix}/share/httpd/htdocs/jserv-docs
+ doc_DATA = $(DOCFILES)
+ mkinstalldirs = $(SHELL) $(top_srcdir)/src/scripts/build/unix/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
