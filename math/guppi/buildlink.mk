@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/08/26 19:21:19 mjl Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/09/09 21:26:05 wiz Exp $
 #
 # This Makefile fragment is included by packages that use guppi.
 #
@@ -21,7 +21,7 @@ BUILDLINK_DEPENDS.guppi?=	guppi>=0.40.3
 DEPENDS+=	${BUILDLINK_DEPENDS.guppi}:../../math/guppi
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.guppi=guppi
-BUILDLINK_PREFIX.guppi=	${LOCALBASE}
+BUILDLINK_PREFIX.guppi=	${X11PREFIX}
 BUILDLINK_FILES.guppi+=	include/gnome-1.0/libguppi/*
 BUILDLINK_FILES.guppi+=	include/gnome-1.0/libguppitank/*
 BUILDLINK_FILES.guppi+=	lib/libguppi*
