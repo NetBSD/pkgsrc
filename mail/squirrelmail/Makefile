@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/12/02 06:56:42 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/12/11 06:15:16 jlam Exp $
 
 DISTNAME=	squirrelmail-1.0.6
 CATEGORIES=	mail www
@@ -11,7 +11,8 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.squirrelmail.org/
 COMMENT=	PHP4 webmail package
 
-DEPENDS+=	php>=4.0.4.1nb1:../../www/php4
+DEPENDS+=	php>=4.0.6:../../www/php4
+DEPENDS+=	php-session>=4.0.6:../../devel/php4-session
 
 USE_PERL5=	# defined
 NO_CONFIGURE=	# defined
