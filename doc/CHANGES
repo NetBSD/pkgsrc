@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.621 2002/11/27 17:17:28 agc Exp $
+$NetBSD: CHANGES,v 1.622 2002/11/27 17:20:06 agc Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3303,7 +3303,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Added newmat-10 [jschauma 2002-10-16]
 	Updated oss to 3.9.7e [jlam 2002-10-16]
 	Added lablgtk-1.2.5 [dillo 2002-10-16]
-	Added py-expat [tsarna 2002-10-16]
+	Added py-expat-0 [tsarna 2002-10-16]
 	Added ap2-php-4.2.3 [martti 2002-10-17]
 	Updated cpuflags to 0.35 [abs 2002-10-17]
 	Updated tightvncviewer to 1.2.6 [lukem 2002-10-17]
