@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.47 2004/02/08 03:34:20 jlam Exp $
+# $NetBSD: gcc.mk,v 1.48 2004/02/09 00:37:32 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -344,7 +344,7 @@ override-tools: ${${_target_}}
 ${${_target_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	(${ECHO} '#!${BUILDLINK_SHELL}';				\
+	(${ECHO} '#!${TOOLS_SHELL}';					\
 	 ${ECHO} 'exec ${_GCCBINDIR}/${${_target_}:T} "$$@"';		\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
