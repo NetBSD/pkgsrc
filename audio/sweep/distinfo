@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/12/21 23:25:18 jmmv Exp $
+
+SHA1 (sweep-0.5.13.tar.gz) = e3201e7ea02cec6cac238506b35c73724774306d
+Size (sweep-0.5.13.tar.gz) = 753432 bytes
+SHA1 (patch-aa) = 9def202596b9bcc5cc742531a9089046f17d28d4
