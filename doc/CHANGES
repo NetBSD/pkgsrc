@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1007 2003/01/04 12:26:51 wiz Exp $
+$NetBSD: CHANGES,v 1.1008 2003/01/04 12:47:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated groff to 1.18.1 [wiz 2003-01-04]
 	Updated libgnomeui to 2.0.6 [jmmv 2003-01-04]
 	Updated koth to 0.7.6nb1 [wiz 2003-01-04]
+	Added file-roller-2.0.4 [jmmv 2003-01-04]
