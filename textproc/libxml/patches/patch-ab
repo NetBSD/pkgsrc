@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.8 2001/05/21 19:45:05 rh Exp $
+$NetBSD: patch-ab,v 1.9 2001/09/30 20:15:49 rh Exp $
 
---- Makefile.in.orig	Mon May 14 12:39:15 2001
+--- Makefile.in.orig	Fri Sep 14 16:11:50 2001
 +++ Makefile.in
-@@ -162,7 +162,7 @@
- libxml_la_OBJECTS =  SAX.lo entities.lo encoding.lo error.lo parser.lo \
- parserold.lo HTMLparser.lo HTMLtree.lo debugXML.lo tree.lo xpath.lo \
+@@ -168,7 +168,7 @@
  xmlIO.lo xmlmemory.lo nanohttp.lo nanoftp.lo valid.lo xlink.lo uri.lo
+ noinst_PROGRAMS =  tester$(EXEEXT) testSAX$(EXEEXT) testHTML$(EXEEXT) \
+ testXPath$(EXEEXT)
 -PROGRAMS =  $(noinst_PROGRAMS)
 +PROGRAMS =
  
- tester_OBJECTS =  tester.o
- testSAX_OBJECTS =  testSAX.o
+ tester_OBJECTS =  tester.$(OBJEXT)
+ testSAX_OBJECTS =  testSAX.$(OBJEXT)
