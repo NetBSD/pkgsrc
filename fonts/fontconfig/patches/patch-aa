@@ -1,41 +1,21 @@
-$NetBSD: patch-aa,v 1.5 2004/06/07 23:37:41 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.6 2005/01/18 12:15:46 drochner Exp $
 
---- Makefile.in.orig	Sat May 29 19:43:19 2004
+--- Makefile.in.orig	2004-12-29 20:45:34.000000000 +0100
 +++ Makefile.in
-@@ -290,12 +290,12 @@ uninstall-info-am:
- configDATA_INSTALL = $(INSTALL_DATA)
- install-configDATA: $(config_DATA)
- 	@$(NORMAL_INSTALL)
--	$(mkinstalldirs) $(DESTDIR)$(configdir)
-+	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/fontconfig
- 	@list='$(config_DATA)'; for p in $$list; do \
- 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
--	  echo " $(configDATA_INSTALL) $$d$$p $(DESTDIR)$(configdir)/$$f"; \
--	  $(configDATA_INSTALL) $$d$$p $(DESTDIR)$(configdir)/$$f; \
-+	  echo " $(configDATA_INSTALL) $$d$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$f"; \
-+	  $(configDATA_INSTALL) $$d$$p $(DESTDIR)$(datadir)/examples/fontconfig/$$f; \
- 	done
+@@ -209,7 +209,7 @@ EXTRA_DIST = \
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = fontconfig.pc
  
- uninstall-configDATA:
-@@ -680,14 +680,14 @@ uninstall-info: uninstall-info-recursive
- 
- install-data-local:
- 	$(mkinstalldirs) $(DESTDIR)/$(configdir)
--	if [ -f $(DESTDIR)$(configdir)/local.conf ]; then \
--	  echo "not overwriting existing $(DESTDIR)$(configdir)/local.conf"; \
-+	if [ -f $(DESTDIR)$(datadir)/examples/fontconfig/local.conf ]; then \
-+	  echo "not overwriting existing $(DESTDIR)$(datadir)/examples/fontconfig/local.conf"; \
- 	else if [ -f $(srcdir)/local.conf ]; then \
--	  echo " $(INSTALL_DATA) $(srcdir)/local.conf $(DESTDIR)$(configdir)/local.conf"; \
--	  $(INSTALL_DATA) $(srcdir)/local.conf $(DESTDIR)$(configdir)/local.conf; \
-+	  echo " $(INSTALL_DATA) $(srcdir)/local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf"; \
-+	  $(INSTALL_DATA) $(srcdir)/local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf; \
- 	else if [ -f local.conf ]; then \
--	  echo " $(INSTALL_DATA) local.conf $(DESTDIR)$(configdir)/local.conf"; \
--	  $(INSTALL_DATA) local.conf $(DESTDIR)$(configdir)/local.conf; \
-+	  echo " $(INSTALL_DATA) local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf"; \
-+	  $(INSTALL_DATA) local.conf $(DESTDIR)$(datadir)/examples/fontconfig/local.conf; \
+-configdir = $(CONFDIR)
++configdir = $(prefix)/share/examples/fontconfig
+ config_DATA = fonts.dtd
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -700,7 +700,6 @@ install-data-local:
+ 	  echo " $(INSTALL_DATA) local.conf $(DESTDIR)$(configdir)/local.conf"; \
+ 	  $(INSTALL_DATA) local.conf $(DESTDIR)$(configdir)/local.conf; \
  	fi; fi; fi
- 	if [ x$(DESTDIR) = x ]; then fc-cache/fc-cache -f -v; fi
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
+-	if [ x$(DESTDIR) = x ]; then fc-cache/fc-cache -f -v; fi
+ 
+ uninstall-local:
+ 	if [ -f $(srcdir)/fonts.conf ]; then \
