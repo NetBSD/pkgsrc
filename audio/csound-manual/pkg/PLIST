@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/13 13:23:07 wiz Exp $
-share/doc/csound/4_07up.pdf
-share/doc/csound/4_07up1.pdf
-share/doc/csound/4_07up2.pdf
+@comment $NetBSD: PLIST,v 1.2 2001/06/05 16:03:53 zuntum Exp $
 share/doc/csound/manual.pdf
 share/doc/csound/manual.txt
 share/doc/csound/manual1.pdf
@@ -31,11 +28,15 @@ share/doc/html/csound/command/pc.htm
 share/doc/html/csound/command/top.htm
 share/doc/html/csound/contents.htm
 share/doc/html/csound/control/active.htm
+share/doc/html/csound/control/button.htm
+share/doc/html/csound/control/clock.htm
 share/doc/html/csound/control/clockon.htm
 share/doc/html/csound/control/cpuprc.htm
 share/doc/html/csound/control/follow2.htm
 share/doc/html/csound/control/schdkwhn.htm
 share/doc/html/csound/control/schedule.htm
+share/doc/html/csound/control/sense.htm
+share/doc/html/csound/control/setctrl.htm
 share/doc/html/csound/control/tempest.htm
 share/doc/html/csound/control/timek.htm
 share/doc/html/csound/control/xyin.htm
@@ -58,6 +59,7 @@ share/doc/html/csound/gen/gen11.htm
 share/doc/html/csound/gen/gen12.htm
 share/doc/html/csound/gen/gen13.htm
 share/doc/html/csound/gen/gen15.htm
+share/doc/html/csound/gen/gen16.htm
 share/doc/html/csound/gen/gen17.htm
 share/doc/html/csound/gen/gen20.htm
 share/doc/html/csound/gen/gen21.htm
@@ -163,6 +165,8 @@ share/doc/html/csound/siggen/lposcil.htm
 share/doc/html/csound/siggen/mandol.htm
 share/doc/html/csound/siggen/marimba.htm
 share/doc/html/csound/siggen/moog.htm
+share/doc/html/csound/siggen/mpulse.htm
+share/doc/html/csound/siggen/noise.htm
 share/doc/html/csound/siggen/oscil.htm
 share/doc/html/csound/siggen/phasor.htm
 share/doc/html/csound/siggen/phasrbnk.htm
@@ -187,6 +191,7 @@ share/doc/html/csound/siggen/tableiw.htm
 share/doc/html/csound/siggen/tablekt.htm
 share/doc/html/csound/siggen/tableng.htm
 share/doc/html/csound/siggen/tablera.htm
+share/doc/html/csound/siggen/transeg.htm
 share/doc/html/csound/siggen/trigger.htm
 share/doc/html/csound/siggen/vco.htm
 share/doc/html/csound/siggen/voice.htm
@@ -211,6 +216,7 @@ share/doc/html/csound/sigio/print.htm
 share/doc/html/csound/sigio/printk.htm
 share/doc/html/csound/sigio/printk2.htm
 share/doc/html/csound/sigio/space.htm
+share/doc/html/csound/sigmod/babo.htm
 share/doc/html/csound/sigmod/biquad.htm
 share/doc/html/csound/sigmod/butterhp.htm
 share/doc/html/csound/sigmod/clip.htm
@@ -236,6 +242,7 @@ share/doc/html/csound/sigmod/limit.htm
 share/doc/html/csound/sigmod/linen.htm
 share/doc/html/csound/sigmod/lowpass2.htm
 share/doc/html/csound/sigmod/lowres.htm
+share/doc/html/csound/sigmod/lpf18.htm
 share/doc/html/csound/sigmod/lpread.htm
 share/doc/html/csound/sigmod/lpslot.htm
 share/doc/html/csound/sigmod/multitap.htm
@@ -255,6 +262,7 @@ share/doc/html/csound/sigmod/rms.htm
 share/doc/html/csound/sigmod/samphold.htm
 share/doc/html/csound/sigmod/streson.htm
 share/doc/html/csound/sigmod/svfilter.htm
+share/doc/html/csound/sigmod/tbvcf.htm
 share/doc/html/csound/sigmod/tonex.htm
 share/doc/html/csound/sigmod/vbap.htm
 share/doc/html/csound/sigmod/vdelay.htm
@@ -293,8 +301,10 @@ share/doc/html/csound/utility/hetro.htm
 share/doc/html/csound/utility/lpanal.htm
 share/doc/html/csound/utility/pvanal.htm
 share/doc/html/csound/utility/pvlook.htm
+share/doc/html/csound/utility/sdif2ads.htm
 share/doc/html/csound/utility/sndinfo.htm
 share/doc/html/csound/utility/top.htm
+share/doc/html/csound/valcnv/ampdbfs.htm
 share/doc/html/csound/valcnv/dbamp.htm
 share/doc/html/csound/valcnv/filefax.htm
 share/doc/html/csound/valcnv/ftlen.htm
