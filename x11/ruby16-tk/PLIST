@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/27 14:52:52 taca Exp $
+${RUBY_SITEARCHLIBDIR}/tkutil.so
+${RUBY_SITELIBDIR}/tk.rb
+${RUBY_SITELIBDIR}/tkafter.rb
+${RUBY_SITELIBDIR}/tkbgerror.rb
+${RUBY_SITELIBDIR}/tkcanvas.rb
+${RUBY_SITELIBDIR}/tkclass.rb
+${RUBY_SITELIBDIR}/tkdialog.rb
+${RUBY_SITELIBDIR}/tkentry.rb
+${RUBY_SITELIBDIR}/tkfont.rb
+${RUBY_SITELIBDIR}/tkmenubar.rb
+${RUBY_SITELIBDIR}/tkmngfocus.rb
+${RUBY_SITELIBDIR}/tkpalette.rb
+${RUBY_SITELIBDIR}/tkscrollbox.rb
+${RUBY_SITELIBDIR}/tktext.rb
+${RUBY_SITELIBDIR}/tkvirtevent.rb
+${RUBY_EXAMPLESDIR}/tk/tkbiff.rb
+${RUBY_EXAMPLESDIR}/tk/tkbrowse.rb
+${RUBY_EXAMPLESDIR}/tk/tkdialog.rb
+${RUBY_EXAMPLESDIR}/tk/tkfrom.rb
+${RUBY_EXAMPLESDIR}/tk/tkhello.rb
+${RUBY_EXAMPLESDIR}/tk/tkline.rb
+${RUBY_EXAMPLESDIR}/tk/tktimer.rb
+@dirrm ${RUBY_EXAMPLESDIR}/tk
