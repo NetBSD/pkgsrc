@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1286 2003/01/30 14:11:18 wiz Exp $
+$NetBSD: CHANGES,v 1.1287 2003/01/30 14:29:46 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libflash-0.4.10nb4 [jlam 2003-01-30]
 	Updated moz-flash-1.0nb2 [jlam 2003-01-30]
 	Updated xmame to 0.64.1.0 [wiz 2003-01-30]
+	Updated evilwm to 0.99.14nb1 [salo 2003-01-30]
