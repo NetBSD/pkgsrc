@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2000/09/12 14:17:31 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2000/09/12 19:39:02 thorpej Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -48,8 +48,6 @@ SUEXEC_PATH=		/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 CONFIGURE_ARGS+=	--enable-suexec --suexec-caller=www \
 			--suexec-safepath='${SUEXEC_PATH}'
 PLIST_SRC=		${PKGDIR}/PLIST.suexec
-.else
-CONFIGURE_ARGS+=	--disable-suexec
 .endif
 
 .if !defined(NOPIC)
