@@ -1,0 +1,42 @@
+$NetBSD: patch-al,v 1.1 2000/07/02 22:07:56 itojun Exp $
+
+--- loginrec.c-	Mon Jul  3 06:49:20 2000
++++ loginrec.c	Mon Jul  3 06:51:59 2000
+@@ -618,3 +618,9 @@
+ 	/* Use strncpy because we don't necessarily want null termination */
++# ifdef HAVE_USER_IN_UTMP
+ 	strncpy(ut->ut_user, li->username, MIN_SIZEOF(ut->ut_user, li->username));
++# elif defined(HAVE_NAME_IN_UTMP)
++	strncpy(ut->ut_name, li->username, MIN_SIZEOF(ut->ut_name, li->username));
++# else
++#  error no ut_user nor ut_name
++# endif
+ # ifdef HAVE_HOST_IN_UTMP
+@@ -1008,4 +1014,12 @@
+ {
++# ifdef HAVE_USER_IN_UTMP
+ 	if (strncmp(li->username, ut->ut_user, 
+-		MIN_SIZEOF(li->username, ut->ut_user)) == 0) {
++		MIN_SIZEOF(li->username, ut->ut_user)) == 0)
++# elif defined(HAVE_NAME_IN_UTMP)
++	if (strncmp(li->username, ut->ut_name, 
++		MIN_SIZEOF(li->username, ut->ut_name)) == 0)
++# else
++#  error no ut_user nor ut_name
++# endif
++		{
+ # ifdef HAVE_TYPE_IN_UTMP
+@@ -1163,4 +1177,12 @@
+ {
++# ifdef HAVE_USER_IN_UTMP
+ 	if ( strncmp(li->username, utx->ut_user,
+-		MIN_SIZEOF(li->username, utx->ut_user)) == 0 ) {
++		MIN_SIZEOF(li->username, utx->ut_user)) == 0 )
++# elif defined(HAVE_NAME_IN_UTMP)
++	if ( strncmp(li->username, utx->ut_name,
++		MIN_SIZEOF(li->username, utx->ut_name)) == 0 )
++# else
++#  error no ut_user nor ut_name
++# endif
++		{
+ # ifdef HAVE_TYPE_IN_UTMPX

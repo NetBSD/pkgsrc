@@ -1,0 +1,11 @@
+$NetBSD: patch-am,v 1.1 2000/07/02 22:07:56 itojun Exp $
+
+--- acconfig.h-	Mon Jul  3 06:58:28 2000
++++ acconfig.h	Mon Jul  3 06:58:09 2000
+@@ -49,2 +49,6 @@
+ /* struct utmp and struct utmpx fields */
++#undef HAVE_NAME_IN_UTMP
++#undef HAVE_NAME_IN_UTMPX
++#undef HAVE_USER_IN_UTMP
++#undef HAVE_USER_IN_UTMPX
+ #undef HAVE_HOST_IN_UTMP
