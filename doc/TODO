@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2796 2004/12/29 11:16:45 recht Exp $
+$NetBSD: TODO,v 1.2797 2004/12/29 11:39:20 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -384,7 +384,6 @@ Suggested package updates
 	o cuetools-1.2
 	o curl-7.12.3
 	o cvs-1.11.18
-	o cvsgraph-1.5.1
 	o cwtext-0.94
 	o cxref-1.6
 	o cy-login-1.5.28
