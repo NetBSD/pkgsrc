@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/31 14:06:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/17 00:06:47 jlam Exp $
 #
 
 DISTNAME=		xmms-mad-0.0.9
@@ -22,5 +22,5 @@ CPPFLAGS+=              -DHAVE_NANOSLEEP=1
 
 .include "../../audio/mad/buildlink2.mk"
 .include "../../audio/xmms/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
