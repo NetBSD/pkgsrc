@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2002/05/04 00:38:13 jtb Exp $
+# $NetBSD: Makefile,v 1.118 2002/05/04 00:46:23 jtb Exp $
 #
 
 COMMENT=	Programming languages
@@ -81,6 +81,7 @@ SUBDIR+=	ruby
 SUBDIR+=	ruby-base
 SUBDIR+=	ruby14
 SUBDIR+=	ruby14-base
+SUBDIR+=	sather
 SUBDIR+=	scheme48
 SUBDIR+=	siod
 SUBDIR+=	smalleiffel
