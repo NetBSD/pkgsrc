@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/15 17:26:42 rh Exp $
+sbin/tac_plus
+man/man8/tac_plus.8
+share/doc/tacacs/users_guide
+@dirrm share/doc/tacacs

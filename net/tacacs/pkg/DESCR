@@ -1,0 +1,4 @@
+  Tacacs+ (or tac_plus) is a freely distributable daemon from Cisco Systems.
+It is used in conjunction with Cisco routers for authorization, authentication,
+and accounting services.  Tac_plus is configured via a single configuration
+file.
