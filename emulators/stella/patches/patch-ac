@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.3 2000/05/31 15:01:01 dmcmahill Exp $
+
 --- makefile.orig	Sat Feb 27 09:29:46 1999
 +++ makefile	Tue May 30 21:16:47 2000
 @@ -35,8 +35,6 @@
@@ -25,7 +27,7 @@
            OPTIONS="-DBSPF_UNIX" \
 -          LDFLAGS="-L/usr/X11R6/lib" \
 -          LDLIBS="-lX11 -lXext" \
-+          LDLIBS="-L$(X11BASE)/lib -lX11 -lXext" \
++          LDLIBS="-L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib -lX11 -lXext" \
            OBJS="mainX11.o SndUnix.o"
  
 @@ -325,6 +322,12 @@
