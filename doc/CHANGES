@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6787 2004/08/04 10:53:02 tron Exp $
+$NetBSD: CHANGES,v 1.6788 2004/08/04 11:20:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3717,3 +3717,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated clamsmtp to 0.5 [xtraeme 2004-08-04]
 	Updated apache-ant to 1.6.2 [recht 2004-08-04]
 	Updated analog to 5.32nb1 [tron 2004-08-04]
+	Updated libxml2 to 2.6.11nb1 [wiz 2004-08-04]
