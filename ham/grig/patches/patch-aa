@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/24 23:36:42 wulf Exp $
+
+--- src/grig-druid-loc.c.orig	2004-02-03 22:25:26.000000000 +1030
++++ src/grig-druid-loc.c	2004-02-03 22:25:42.000000000 +1030
+@@ -294,7 +294,7 @@
+ 	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (radll))) {
+ 		longlat2locator (g_strtod (gtk_entry_get_text (GTK_ENTRY (lonwdg)), NULL),
+ 				 g_strtod (gtk_entry_get_text (GTK_ENTRY (latwdg)), NULL),
+-				 loc);
++				 loc, 6);
+ 		gtk_entry_set_text (GTK_ENTRY (locatorwdg), g_strdup (loc));
+ 	}
+ #endif
