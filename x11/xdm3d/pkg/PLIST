@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/19 21:13:19 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/08/19 21:20:51 tron Exp $
 bin/xdm3d
 share/xdm3d/GiveConsole
 share/xdm3d/TakeConsole
@@ -11,5 +11,4 @@ share/xdm3d/chooser
 share/xdm3d/xdm-config
 share/xdm3d/Xresources
 @exec mkdir -p %D/share/xdm3d/authdir
-@unexec rm -rf %D/share/xdm3d/authdir
-@dirrm share/xdm3d
+@unexec rm -rf %D/share/xdm3d
