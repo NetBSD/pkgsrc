@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/24 13:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/12 00:12:11 snj Exp $
 #
 
 DISTNAME=	frozen-bubble-1.0.0
@@ -14,7 +14,7 @@ COMMENT=	Pop the frozen bubbles
 DEPENDS+=	p5-SDL>=1.19.2:../../devel/p5-SDL
 
 USE_PERL5=	run
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
 MAKE_ENV+=	PERL5="${PERL5}" CP="${CP}"
@@ -25,7 +25,7 @@ PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/fb_c_stuff/.packlist
 post-extract:
 	${RM} -rf ${WRKSRC}/gfx/.xvpics
 
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
