@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/24 22:13:22 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/26 15:50:21 dmcmahill Exp $
 #
 
-DISTNAME=	acs-0.25
+DISTNAME=	acs-0.26
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/dist/
 
@@ -13,7 +13,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/*/acs ${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/doc/acs.hlp ${PREFIX}/bin/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/acs
 	${INSTALL_DATA} ${WRKSRC}/doc/acs-tutorial ${PREFIX}/share/doc/acs
 	${INSTALL_DATA} ${WRKSRC}/doc/man.pdf ${PREFIX}/share/doc/acs
