@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:30:10 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/07/17 12:05:44 rh Exp $
 bin/another_clock_applet
 bin/asclock_applet
 bin/battery_applet
@@ -1962,3 +1962,5 @@ share/xmodmap/xmodmap.yu
 @dirrm share/asclock/Newstone
 @dirrm share/asclock/Freeamp
 @dirrm share/asclock
+@unexec scrollkeeper-rebuilddb
+@exec scrollkeeper-rebuilddb

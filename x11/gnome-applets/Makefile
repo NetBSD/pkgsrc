@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2002/05/31 02:52:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.20 2002/07/17 12:05:44 rh Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-applets/}
 EXTRACT_SUFX=		.tar.bz2
@@ -22,6 +22,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=        --localstatedir=${X11PREFIX}/var/lib
 CPPFLAGS+=		-I${LOCALBASE}/include
 
 AUTOGEN_ENV=		NOCONFIGURE=1
