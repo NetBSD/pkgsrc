@@ -1,0 +1,47 @@
+bin/tkcvs
+bin/tkdiff
+share/doc/tkcvs/README.tkcvs
+share/doc/tkcvs/README.tkdiff
+share/tkcvs/bindings.tcl
+share/tkcvs/checkout.tcl
+share/tkcvs/commit.tcl
+share/tkcvs/cvs.tcl
+share/tkcvs/errors.tcl
+share/tkcvs/filebrowse.tcl
+share/tkcvs/help.tcl
+share/tkcvs/import.tcl
+share/tkcvs/logcanvas.tcl
+share/tkcvs/merge.tcl
+share/tkcvs/modules.tcl
+share/tkcvs/reports.tcl
+share/tkcvs/search.tcl
+share/tkcvs/static.tcl
+share/tkcvs/tag.tcl
+share/tkcvs/tclIndex
+share/tkcvs/tkcvs_def.tcl
+share/tkcvs/tooltips.tcl
+share/tkcvs/update.tcl
+share/tkcvs/venget.tcl
+share/tkcvs/workdir.tcl
+share/tkcvs/bitmaps/add.xbm
+share/tkcvs/bitmaps/check.xbm
+share/tkcvs/bitmaps/checkin.xbm
+share/tkcvs/bitmaps/clean.xbm
+share/tkcvs/bitmaps/clear.xbm
+share/tkcvs/bitmaps/delete.xbm
+share/tkcvs/bitmaps/diff.xbm
+share/tkcvs/bitmaps/import.xbm
+share/tkcvs/bitmaps/logfile.xbm
+share/tkcvs/bitmaps/notebook.xbm
+share/tkcvs/bitmaps/refresh.xbm
+share/tkcvs/bitmaps/remove.xbm
+share/tkcvs/bitmaps/tkcvs16.xbm
+share/tkcvs/bitmaps/tkcvs32.xbm
+share/tkcvs/bitmaps/tkcvs32_mask.xbm
+share/tkcvs/bitmaps/tree16.xbm
+share/tkcvs/bitmaps/update.xbm
+man/man1/tkcvs.1.gz
+man/man1/tkdiff.1.gz
+@dirrm share/tkcvs/bitmaps
+@dirrm share/tkcvs
+@dirrm share/doc/tkcvs
