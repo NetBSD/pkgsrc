@@ -1,0 +1,22 @@
+--- ./lib/libxview/wmgr/wmgr_menu.c.orig	Tue Jun 29 01:17:24 1993
++++ ./lib/libxview/wmgr/wmgr_menu.c	Sun Dec 12 22:12:12 1999
+@@ -11,8 +11,13 @@
+  */
+ 
++#include <sys/param.h>
+ #include <sys/types.h>
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <string.h>
++
++#if defined(BSD) && (BSD >= 199306)
++#include <unistd.h>
++#else
+ #ifdef sparc
+ #ifdef SVR4
+@@ -21,4 +26,5 @@
+ #include <vfork.h>
+ #endif SVR4
++#endif sparc
+ #endif
+ 
