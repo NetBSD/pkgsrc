@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.1 2002/04/05 02:02:34 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2003/06/06 07:40:41 itojun Exp $
 
---- cftoken.l.orig	Wed Apr  3 07:32:18 2002
-+++ cftoken.l
-@@ -44,11 +44,7 @@
+--- cftoken.l-	2003-06-06 16:37:28.000000000 +0900
++++ cftoken.l	2003-06-06 16:37:34.000000000 +0900
+@@ -45,11 +45,7 @@
  #include "vmbuf.h"
  #include "debug.h"
  #include "cfparse-defs.h"
--#ifdef __NetBSD__
+-#if defined(__NetBSD__) && __NetBSD_Version__ >= 106000000	/*XXX*/
 -#include "cfparse.h"
 -#else
  #include "y.tab.h"
