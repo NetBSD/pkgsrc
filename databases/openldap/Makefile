@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2003/01/29 22:05:33 kleink Exp $
+# $NetBSD: Makefile,v 1.53 2003/02/17 15:27:59 dillo Exp $
 
 DISTNAME=	openldap-2.0.27
 PKGREVISION=	2
@@ -17,6 +17,7 @@ USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/build/ltconfig
+TEST_TARGET=		test
 
 # unfortunately, --enable-phonetic cannot be disabled by runtime configuration
 GNU_CONFIGURE=		YES
@@ -94,10 +95,6 @@ post-install:
 			${EGDIR}/$${file};				\
 		${RM} -f ${PKG_SYSCONFDIR}/$${file}.default;		\
 	done
-
-test:
-	-@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} test
 
 .include "../../security/openssl/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
