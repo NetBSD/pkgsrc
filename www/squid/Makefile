@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2003/05/25 14:58:16 taca Exp $
+# $NetBSD: Makefile,v 1.86 2003/07/06 14:08:43 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE3
 PKGNAME=	squid-2.5.3
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -10,7 +11,12 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE3-Lithuanian.patch
+PATCHFILES=	squid-2.5.STABLE3-Lithuanian.patch \
+		squid-2.5.STABLE3-deny_info.patch \
+		squid-2.5.STABLE3-HttpHeaderTools.patch \
+		squid-2.5.STABLE3-external_acl_ident.patch \
+		squid-2.5.STABLE3-aufs-openingfds.patch \
+		squid-2.5.STABLE3-gcc-3_3.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@netbsd.org
