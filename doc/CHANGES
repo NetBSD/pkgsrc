@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3044 2003/08/15 09:54:52 zuntum Exp $
+$NetBSD: CHANGES,v 1.3045 2003/08/15 11:21:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3270,3 +3270,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rdiff-backup to 0.12.3 [abs 2003-08-14]
 	Updated gnupg to 1.2.2nb2 [itojun 2003-08-15]
 	Added safecat-1.11 [zuntum 2003-08-15]
+	Added YoSucker-37 [wiz 2003-08-15]
