@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/02/22 01:52:05 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/02/22 16:03:29 jlam Exp $
 
 DISTNAME?=	courier-${DIST_VERS}
 CATEGORIES+=	mail
@@ -23,6 +23,7 @@ DATADIR=		${PREFIX}/share/courier
 LIBEXECDIR=		${PREFIX}/libexec/courier
 AUTHLIBDIR=		${LIBEXECDIR}/authlib
 DOCDIR=			${PREFIX}/share/doc/courier
+HTMLDIR=		${PREFIX}/share/doc/html/courier
 EGDIR=			${PREFIX}/share/examples/courier
 
 .include "../../mk/bsd.prefs.mk"
