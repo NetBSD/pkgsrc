@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2637 2004/12/03 13:03:12 wiz Exp $
+$NetBSD: TODO,v 1.2638 2004/12/03 13:29:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1215,7 +1215,6 @@ Suggested package updates
 	o xmon-1.5.6
 	o xnap-2.5r3
 	o xpad-2.0
-	o xpat2-1.0.7 [pkg/28519]
 	o xpuyopuyo-0.9.5
 	o xskat-4.0
 	o xtide-2.7.1
