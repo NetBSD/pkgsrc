@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/08/31 03:06:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/11/04 14:51:16 wiz Exp $
 
 .if !defined(SDL_BUILDLINK2_MK)
 SDL_BUILDLINK2_MK=	# defined
@@ -12,6 +12,8 @@ BUILDLINK_PREFIX.SDL_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.SDL=	include/SDL/*
 BUILDLINK_FILES.SDL+=	lib/libSDL.*
 BUILDLINK_FILES.SDL+=	lib/libSDLmain.*
+
+USE_X11=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
