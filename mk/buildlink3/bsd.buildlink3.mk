@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.39 2004/01/06 09:45:31 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.40 2004/01/07 06:47:29 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -693,7 +693,7 @@ _BLNK_TRANSFORM+=	rpath:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 # are just found in the default view.
 #
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_BLNK_TRANSFORM+=       depot:${DEPOTBASE}:${LOCALBASE}
+_BLNK_TRANSFORM+=	depot:${DEPOTBASE}:${LOCALBASE}
 .endif
 #
 # Convert direct paths to shared libraries into "-Ldir -llib" equivalents.
