@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/01/24 18:16:20 manu Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/20 10:51:32 manu Exp $
 #
 
 DISTNAME=	hobbit-4.0-beta6
 PKGNAME=	hobbit-4.0b6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hobbitmon/}
 
@@ -76,5 +76,6 @@ do-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../www/apache/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
