@@ -1,0 +1,110 @@
+$NetBSD: patch-aa,v 1.6 1999/02/24 06:34:52 sommerfe Exp $
+
+--- lib-src/mlwp/process.s~	Wed Oct  7 20:11:01 1998
++++ lib-src/mlwp/process.s	Wed Feb 24 01:05:51 1999
+@@ -590,5 +590,105 @@
+ 	jmp	r1
+ 
+ #endif	/* luna88k */
++	
++#ifdef arm32
++
++@ r0-r3		call arguments
++@ r4-r8		"saved over call"
++
++@ r9		frame pointer
++@ r10		stack limit
++@ r11		arg pointer
++@ r12		temp
++@ r13		sp
++@ r14		link/temp
++@ r15		pc
++
++@
++@ savecontext(f, area1, newsp)
++@    int (*f)(); struct savearea *area1; char *newsp;
++@
++@	set global _PRE_Block = 1
++
++rfp	.req	r9
++sl	.req	r10
++fp	.req	r11
++ip	.req	r12
++sp	.req	r13
++lr	.req	r14
++pc	.req	r15
++
++	.text
++	.align	0
++	
++	.global	_savecontext
++	.type	 _savecontext,#function
++
++_savecontext:
++	mov	ip, sp
++	stmfd	sp!, {fp, ip, lr, pc}
++
++	sub	fp, ip, #4
++
++	ldr	r3, Lpre_addr
++	mov	lr, #1			
++	str	lr, [r3, #0]		@ stall here waiting for r3?
++
++@ 	push callee-saves registers
++
++	stmfd	sp!, { r4-r10, fp }
++
++@	save old sp in area1
++
++	str	sp, [r1, #0]
++
++@	if newsp != 0, sp = newsp 
++
++	cmp	r2, #0
++	movne	sp, r2
++
++@	call f() with no arguments
++
++	mov	lr, pc
++	mov	pc, r0
++	bl	_abort		@ in case we fall down go boom
++
++Lpre_addr:
++	.word	_PRE_Block
++
++Lfe1:
++	.size	 _savecontext,Lfe1-_savecontext
++
++@
++@ returnto(area2)
++@     struct savearea *area2;
++@
++
++@	set _PRE_Block = 0
++	.global	_returnto
++	.type	_returnto, #function
++_returnto:
++	ldr	r3, Lpre_addr
++	mov	r2, #0
++	str	r2, [r3, #0]		@ stall here waiting for r3?
++
++@	restore sp from area2
++	ldr	sp, [r0, #0]
++
++@	pop callee-saves registers
++
++	ldmfd	sp!, { r4-r10, fp }
++
++@	return.
++
++	ldmea	fp, {fp, sp, pc}
++
++Lfe2:
++	.size	 _returnto,Lfe2-_returnto
++
++		
++
++#endif /* arm32 */
++	
+ 
+ #endif OLDLWP
