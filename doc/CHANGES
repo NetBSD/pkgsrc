@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8658 2005/01/08 13:20:42 minskim Exp $
+$NetBSD: CHANGES,v 1.8659 2005/01/08 13:42:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -179,3 +179,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated yatsvrs to 5.00.6nb4 [taca 2005-01-08]
 	Added p5-Text-Shellwords-1.02 [minskim 2005-01-08]
 	Added p5-WWW-Curl-2.0 [minskim 2005-01-08]
+	Added p5-Tree-DAG_Node-1.05 [minskim 2005-01-08]
