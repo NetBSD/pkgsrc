@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.99 2004/04/12 01:02:19 salo Exp $
+# $NetBSD: pkglint.pl,v 1.100 2004/04/12 08:52:14 jmmv Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -394,6 +394,8 @@ sub checkplist {
 	local($curdir) = ($localbase);
 	local($installinfoseen) = 0;
 	local($rcsidseen) = 0;
+	local($docseen) = 0;
+	local($etcseen) = 0;
 
 	open(IN, "< $portdir/$file") || return 0;
 	while (<IN>) {
@@ -446,6 +448,19 @@ sub checkplist {
 		if ($_ =~ /^\//) {
 			&perror("FATAL: $file $.: use of full pathname ".
 				"disallowed.");
+		}
+
+		if ($_ =~ /^doc/ and !$docseen) {
+			&perror("FATAL: documentation must be installed under ".
+				"share/doc, not doc.");
+			$docseen = 1;
+		}
+
+		if ($_ =~ /^etc/ && $_ !~ /^etc\/rc.d/ and !$etcseen) {
+			&perror("FATAL: configuration files must not be ".
+				"registered in the PLIST (don't you use the ".
+				"PKG_SYSCONFDIR framework?)");
+			$etcseen = 1;
 		}
 
 		if ($_ =~ /^info\/dir$/) {
