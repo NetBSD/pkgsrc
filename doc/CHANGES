@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9525 2005/03/20 17:34:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.9526 2005/03/20 17:52:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1426,3 +1426,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed apotheke [jmmv 2005-03-20]
 	Updated screws to 0.54nb3 [jmmv 2005-03-20]
 	Removed wmessage [jmmv 2005-03-20]
+	Updated screws to 0.56 [jmmv 2005-03-20]
