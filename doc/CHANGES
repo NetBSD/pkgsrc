@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9190 2005/02/18 17:23:40 wiz Exp $
+$NetBSD: CHANGES,v 1.9191 2005/02/18 18:05:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -934,3 +934,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libao to 0.8.6 [wiz 2005-02-18]
 	Updated libao-arts to 0.8.6 [wiz 2005-02-18]
 	Updated libao-esound to 0.8.6 [wiz 2005-02-18]
+	Updated curl to 7.13.0 [wiz 2005-02-18]
