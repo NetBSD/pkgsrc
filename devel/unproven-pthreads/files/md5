@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/11/12 21:24:11 explorer Exp $
+$NetBSD: md5,v 1.3 1999/11/24 09:47:09 explorer Exp $
 
-MD5 (unproven-pthreads-0.6.tar.gz) = c139afff8cf7299e7539bcee25c47169
+MD5 (unproven-pthreads-0.7.tar.gz) = 126b8ca38fdf3127c1447b08560b3f63
