@@ -1,14 +1,32 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/10 01:37:00 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/08 17:45:47 drochner Exp $
 bin/cdxa2mpeg
-bin/vcddebug
+bin/vcd-info
 bin/vcdimager
 bin/vcdxbuild
 bin/vcdxgen
 bin/vcdxminfo
 bin/vcdxrip
+include/libvcd/files.h
+include/libvcd/files_private.h
+include/libvcd/inf.h
+include/libvcd/info.h
+include/libvcd/logging.h
+include/libvcd/sector.h
+include/libvcd/types.h
+include/libvcd/version.h
+info/vcd-info.info
+info/vcdxrip.info
+lib/libvcdinfo.a
+lib/libvcdinfo.la
+lib/libvcdinfo.so
+lib/libvcdinfo.so.0
+lib/libvcdinfo.so.0.1
+lib/pkgconfig/libvcdinfo.pc
+man/man1/cdxa2mpeg.1
+man/man1/vcd-info.1
 man/man1/vcdimager.1
-man/man1/vcddebug.1
 man/man1/vcdxbuild.1
 man/man1/vcdxgen.1
 man/man1/vcdxminfo.1
 man/man1/vcdxrip.1
+@dirrm include/libvcd
