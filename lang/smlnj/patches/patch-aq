@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.1 2003/07/01 23:10:34 jtb Exp $
+$NetBSD: patch-aq,v 1.2 2003/07/01 23:19:14 jtb Exp $
 
 --- src/runtime/mach-dep/PPC.prim.asm.orig
 +++ src/runtime/mach-dep/PPC.prim.asm
