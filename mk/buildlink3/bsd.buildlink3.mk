@@ -1,10 +1,10 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.32 2003/08/30 14:23:02 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.33 2003/08/30 14:23:27 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
 # -------------8<-------------8<-------------8<-------------8<-------------
 # .if !defined(FOO_BUILDLINK3_MK)
-# FOO_BUILDLINK_MK=	# defined
+# FOO_BUILDLINK3_MK=	# defined
 # BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+		# push
 #
 # .if !empty(BUILDLINK_DEPTH:M\+)
