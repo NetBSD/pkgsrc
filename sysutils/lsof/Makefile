@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2001/10/22 12:39:17 atatat Exp $
+# $NetBSD: Makefile,v 1.49 2001/12/21 21:26:05 atatat Exp $
 #
 
-DISTNAME=		lsof_4.59_W
-PKGNAME=		lsof-4.59
+DISTNAME=		lsof_4.60_W
+PKGNAME=		lsof-4.60
 WRKSRC=			${WRKDIR}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
@@ -20,6 +20,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS=		-n ${LOWER_OPSYS}
 CONFIGURE_ENV+=		LSOF_CC="${CC} ${CFLAGS}"
+MAKE_FLAGS+=		LSOF_BLDCMT="NetBSD pkgsrc rocks!"
 CPPFLAGS+=		-DLSOF_MORE_SECURE=${LSOF_MORE_SECURE}
 
 SRCBALL_NAME=		${DISTNAME:S/_W$//}
