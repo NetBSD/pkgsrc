@@ -1,0 +1,14 @@
+Fixes typo reported in PR pkg/5864 by
+Mason Loring Bliss <mason@acheron.middleboro.ma.us>
+
+--- gemdropx.c.orig	Tue Jul 28 09:30:24 1998
++++ gemdropx.c	Tue Jul 28 09:30:38 1998
+@@ -1872,7 +1872,7 @@
+   
+   /* Setup: */
+   
+-  printf("Conneting to server \"%s\"\n", server);
++  printf("Connecting to server \"%s\"\n", server);
+   setup(server);
+   
+   
