@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2004/01/23 19:37:18 jlam Exp $
+# $NetBSD: Makefile.common,v 1.24 2004/02/07 19:25:27 minskim Exp $
 #
 
 DISTNAME=	MesaLib-${MESA_VERSION}
@@ -27,5 +27,3 @@ pre-install:
 	for lib in ${INSTLIBS}; do	\
 	    ${LIBTOOL} --mode=install ${INSTALL_DATA} $${lib} ${PREFIX}/lib ; \
 	done;
-
-.include "../../mk/bsd.prefs.mk"
