@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2000/12/18 04:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2001/01/18 04:04:32 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 #
 
-DISTNAME=		gqmpeg-0.8.1
+DISTNAME=		gqmpeg-0.8.2
 CATEGORIES=		audio
-MASTER_SITES=		http://www.netpedia.net/hosting/gqview/packages/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gqmpeg}
 
 MAINTAINER=		rxg@ms25.url.com.tw
-HOMEPAGE=		http://www.netpedia.net/hosting/gqview/mpeg-index.html
+HOMEPAGE=		http://gqmpeg.sourceforge.net/
 
 DEPENDS+=		gdk-pixbuf>=0.8.0nb1:../../graphics/gdk-pixbuf
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
