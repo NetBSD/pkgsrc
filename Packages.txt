@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.346 2004/08/04 16:10:40 jschauma Exp $
+# $NetBSD: Packages.txt,v 1.347 2004/08/04 16:14:34 jschauma Exp $
 ###########################################################################
 
 			==========================
@@ -1451,6 +1451,10 @@ When choosing which of these variables to use, follow the following rules:
 	GTKDIR_DEFAULT= ${LOCALBASE}
 
    where "GTKDIR" corresponds to the first definition in the EVAL_PREFIX pair.
+
+ * Within ${PREFIX}, packages should install files according to hier(7), with
+   the exception that manual pages go into ${PREFIX}/man, not
+   ${PREFIX}/share/man.
 
  7.2 Main targets
  ================
