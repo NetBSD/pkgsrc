@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2002/09/19 09:04:04 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/11/21 15:42:45 salo Exp $
 
-DISTNAME=		silc-server-0.9.5
+DISTNAME=		silc-server-0.9.8
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -11,7 +11,7 @@ MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			http://www.at.silcnet.org/download/server/sources/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		salo@silcnet.org
+MAINTAINER=		salo@netbsd.org
 HOMEPAGE=		http://www.silcnet.org/
 COMMENT=                Server for the Secure Internet Live Conferencing (SILC) protocol
 
@@ -50,6 +50,7 @@ RCD_SCRIPT_SRC.silcd=	${FILESDIR}/silcd.generic
 
 OWN_DIRS_PERMS+=	/var/log/silcd ${SILCD_USER} ${SILCD_GROUP} 0700
 
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/silcd
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silcd
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-silcd-config-file=${PKG_SYSCONFDIR}/silcd.conf
@@ -69,6 +70,17 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .if (${MACHINE_ARCH} != "i386")
 CONFIGURE_ARGS+=	--disable-asm
 .endif
+
+# Temporary hack which prevents installation of static libraries
+#
+post-build:
+	for file in \
+	${WRKSRC}/lib/libsilc.la \
+	${WRKSRC}/lib/.libs/libsilc.la ; \
+	do \
+		${CP} $$file $$file.orig ; \
+		${SED} "s|^old_library|#&|" $$file.orig > $$file ; \
+	done
 
 post-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/motd.txt \
