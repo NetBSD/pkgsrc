@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2004/06/21 15:55:55 drochner Exp $
+$NetBSD: patch-ag,v 1.5 2004/10/27 20:31:33 drochner Exp $
 
---- configure.ac.orig	2004-06-21 01:39:04.000000000 +0200
+--- configure.ac.orig	2004-09-16 17:10:45.000000000 +0200
 +++ configure.ac
-@@ -351,6 +351,9 @@ AC_CHECK_LIB(socket, socket, NET_LIBS="-
+@@ -385,6 +385,9 @@ AC_CHECK_LIB(socket, socket, NET_LIBS="-
  AC_CHECK_LIB(nsl, gethostbyname, NET_LIBS="-lnsl $NET_LIBS",)
  AC_SUBST(NET_LIBS)
  
@@ -11,26 +11,8 @@ $NetBSD: patch-ag,v 1.4 2004/06/21 15:55:55 drochner Exp $
 +AC_SUBST(WINE_LIBS)
  
  dnl ---------------------------------------------
- dnl IPv6
-@@ -398,7 +401,7 @@ case "$host" in
- 	AC_CHECK_LIB(GL, glBegin,
- 		[AC_CHECK_HEADER(GL/gl.h,
- 		     [ ac_have_opengl="yes"
--		       OPENGL_LIBS="-lGL" 
-+		       OPENGL_LIBS="-lGL -lm" 
- 		       AC_CHECK_LIB(glut, glutInit, dnl check for glut
- 				    [ ac_have_glut="yes"
- 				      GLUT_LIBS="-lglut"
-@@ -416,7 +419,7 @@ case "$host" in
- 		     ],
- 		[])],
- 	   [],
--	   [$X_LIBS $X_PRE_LIBS -lGL $X_EXTRA_LIBS])
-+	   [$X_LIBS $X_PRE_LIBS -lGL -lm $X_EXTRA_LIBS])
- 	;;
- esac
- 
-@@ -596,8 +599,7 @@ dnl Checks for Xinerama extension
+ dnl socklen_t
+@@ -610,8 +613,7 @@ dnl Checks for Xinerama extension
  dnl ---------------------------------------------
  
  AC_CHECK_LIB(Xinerama, XineramaQueryExtension, 
@@ -40,7 +22,7 @@ $NetBSD: patch-ag,v 1.4 2004/06/21 15:55:55 drochner Exp $
                ac_have_xinerama="yes"],,
               [$X_LIBS $X_PRE_LIBS -lXext $X_EXTRA_LIBS])
  dnl AM_CONDITIONAL(HAVE_XINERAMA, test x$ac_have_xinerama = "xyes")
-@@ -1031,9 +1033,10 @@ dnl ------------------------------------
+@@ -1015,9 +1017,10 @@ dnl ------------------------------------
  dnl gnome-vfs support
  dnl ---------------------------------------------
  
