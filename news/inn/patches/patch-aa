@@ -1,14 +1,22 @@
-$NetBSD: patch-aa,v 1.1 1998/09/05 03:21:11 garbled Exp $
---- configure.orig	Fri Jul 24 06:13:00 1998
-+++ configure	Fri Aug 28 12:22:23 1998
-@@ -961,8 +961,8 @@
+$NetBSD: patch-aa,v 1.2 1998/10/02 15:07:58 tv Exp $
+
+--- configure.orig	Fri Oct  2 10:54:16 1998
++++ configure	Fri Oct  2 10:56:27 1998
+@@ -960,7 +960,7 @@
  
  
  
--LIBTOOL='$(SHELL) ../libtool'
--UPLIBTOOL='$(SHELL) ../../libtool'
-+LIBTOOL='$(SHELL) $(PREFIX)/bin/libtool'
-+UPLIBTOOL='$(SHELL) $(PREFIX)/bin/libtool'
+-
++if false; do
+ LIBTOOL='$(SHELL) ../libtool'
+ UPLIBTOOL='$(SHELL) ../../libtool'
  EXTOBJ='lo'
- EXTLIB='la'
- # Check whether --enable-libtool or --disable-libtool was given.
+@@ -1057,7 +1057,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+-
++fi
+ 
+ test "x$prefix" = xNONE && prefix=$ac_default_prefix
+ test "x$exec_prefix" = xNONE && exec_prefix=$ac_default_prefix
