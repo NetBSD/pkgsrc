@@ -14,10 +14,10 @@ The distribution provides a command line tool to perform filtering,
 along with Mail::SpamAssassin, a set of perl modules which implement a
 Mail::Audit plugin, allowing SpamAssassin to be used in a Mail::Audit
 filter.
-In addition, there is "spamd", a persistently running daemonized
+In addition, there is "spamd", a persistently running, daemonized
 version of the command line tool "spamassassin". Together with the small
-client "spamc" this allows processing of large volumes of mail without the
-cost of starting a perl interpreter for each one.
+client "spamc" this allows processing of large volumes of mail without
+the cost of starting the perl interpreter for each one.
 
-SpamAssassin does not deliver mail to the  users mailbox. You need a
+SpamAssassin does not deliver mail to the users mailbox. You need a
 different program (procmail is recommended) for local mail delivery.
