@@ -1,0 +1,24 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/12/21 11:01:10 darcy Exp $
+#
+
+DISTNAME=	pytable-0.8.3a
+PKGNAME=	${PYPKGPREFIX}-table-0.8.3a
+CATEGORIES=	databases python
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pytable/}
+
+MAINTAINER=	darcy@NetBSD.org
+HOMEPAGE=	http://pytable.sf.net/
+COMMENT=	Python RDBMS wrapper for various databases
+
+DEPENDS+=	${PYPKGPREFIX}-basicproperty*:../../lang/py-basicproperty
+
+MAKE_ENV+=		MANDIR=${PREFIX}/man
+MAKE_ENV+=		BINDIR=${PREFIX}/bin
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+
+PYDISTUTILSPKG=	yes
+PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+
+.include "../../lang/python/extension.mk"
+.include "../../mk/bsd.pkg.mk"
