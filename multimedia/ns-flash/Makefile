@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/04/24 22:44:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/05 18:54:53 jdolecek Exp $
 
-DISTNAME=		flash_${DISTUNAME}
 CATEGORIES=		multimedia www
-MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
+MASTER_SITES=		http://fpdownload.macromedia.com/get/shockwave/flash/english/${DISTUNAME}/${FLASH_VERS}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.flash.com/
@@ -13,24 +12,24 @@ NOT_FOR_PLATFORM=	SunOS-*-i386
 
 WRKSRC=			${WRKDIR}/${WRKNAME}
 DIST_SUBDIR=		flash/${FLASH_VERS}
+WRKNAME=		install_flash_player_7_${DISTUNAME}
 
 .include "../../mk/bsd.prefs.mk"
 
-SUB=			english/${DISTUNAME}/${FLASH_VERS}
-
 .if (${MACHINE_ARCH} == "i386")
-FLASH_VERS=		5.0r51
+FLASH_VERS=		7.0r25
 DEPENDS+=		suse_compat>=6.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=		suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTUNAME=		linux
-WRKNAME=		flash_linux
+DISTNAME=		install_flash_player_7_${DISTUNAME}
 .elif ${MACHINE_ARCH} == "sparc" && ${OPSYS} == "SunOS"
-FLASH_VERS=		5.0r52
+FLASH_VERS=		7.0r53
 DISTUNAME=		solaris
-WRKNAME=		flash_solaris
+DISTNAME=		flash_player_7_${DISTUNAME}_sparc_r53
 .else
 # Defaults so lintpkgsrc is happy
 FLASH_VERS=		5.0
+DISTNAME=		flash_player
 .endif
 PKGNAME=		ns-flash-${FLASH_VERS:S/r/./}
 
@@ -54,7 +53,7 @@ NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 
 do-install:
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${INSTALL_DATA} ${WRKSRC}/ShockwaveFlash.class ${NS_PLUGINS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/flashplayer.xpt ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${NS_PLUGINS_DIR}
 
 .if ${OPSYS} != "SunOS"
