@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:29:57 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/25 03:59:47 snj Exp $
 
 DISTNAME=	cook-2.22
 PKGREVISION=	1
@@ -11,8 +11,8 @@ COMMENT=	More powerful replacement for the traditional make(1) tool
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	# defined
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
