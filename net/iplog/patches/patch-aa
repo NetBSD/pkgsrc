@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 11:06:04 hubertf Exp $
+
+--- src/iplog.h.orig	Mon Jan  1 17:02:14 2001
++++ src/iplog.h
+@@ -48,7 +48,7 @@
+ ** Path of the iplog configuration file.
+ */
+ 
+-#define CONFFILE	"/etc/iplog.conf"
++#define CONFFILE	"%PREFIX%/etc/iplog.conf"
+ 
+ /*
+ ** Making these smaller will probably do bad things.
