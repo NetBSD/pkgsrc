@@ -1,23 +1,22 @@
-# $NetBSD: Makefile.common,v 1.2 2001/07/26 12:25:55 taca Exp $
+# $NetBSD: Makefile.common,v 1.3 2001/07/26 15:43:28 taca Exp $
 
 GNU_CONFIGURE=		yes
-USE_SSL=		yes
 CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
 			--sysconfdir=${LOCALBASE}/etc \
-			--enable-apop=/etc/apop.auth \
+			--enable-apop=${QPOPPER_APOP_AUTH} \
 			--with-popuid=${QPOPPER_USER} \
 			--enable-log-facility=LOG_${QPOPPER_FAC} \
 			--disable-update-abort --without-gdbm
-.if exists(${LOCALBASE}/include/openssl/ssl.h)
-CONFIGURE_ARGS+=	--with-openssl=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=	--with-openssl=/usr
-.endif
 
 QPOPPER_USER?=		pop
 QPOPPER_FAC?=		LOCAL1
+QPOPPER_APOP_AUTH?=	/etc/apop.auth
+DB_SUFFIX?=		db
 
 .include "../../mk/bsd.prefs.mk"
+
+USE_BUILDLINK_ONLY=	# defined
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
 
 .if defined(KERBEROS)
 USE_KERBEROS=		# defined
@@ -32,3 +31,5 @@ CONFIGURE_ARGS+=	--enable-servermode
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
 .endif
+
+.include "../../security/openssl/buildlink.mk"
