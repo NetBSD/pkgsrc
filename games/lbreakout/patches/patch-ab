@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/22 16:58:12 rh Exp $
+
+--- lbreakout/Makefile.in.orig	Wed Oct 18 16:27:22 2000
++++ lbreakout/Makefile.in
+@@ -351,7 +351,8 @@
+ 	$(INSTALL_DATA) wall.wav $(DESTDIR)$(sdir)/wall.wav 
+ 	$(INSTALL_DATA) weapon.wav $(DESTDIR)$(sdir)/weapon.wav 
+ 	$(INSTALL_DATA) wontgiveup.wav $(DESTDIR)$(sdir)/wontgiveup.wav 
+-	$(INSTALL_DATA) -m 666 lbreakout.hscr $(DESTDIR)$(hdir)/lbreakout.hscr
++	$(INSTALL_DATA) -m 666 lbreakout.hscr $(DESTDIR)$(sdir)/lbreakout.hscr
++	[ -f $(DESTDIR)$(hdir)/lbreakout.hscr ] || $(INSTALL_DATA) -m 666 lbreakout.hscr $(DESTDIR)$(hdir)/lbreakout.hscr
+ 
+ uninstall-local:
+ 	rm -fr $(DESTDIR)$(sdir)
