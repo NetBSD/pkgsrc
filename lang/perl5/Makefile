@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2005/01/03 03:37:08 jlam Exp $
+# $NetBSD: Makefile,v 1.90 2005/03/23 16:52:01 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES+=		lang devel
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -122,10 +122,10 @@ CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
 PERL5=			${PREFIX}/bin/perl${PERL5_DIST_VERS}
-PERL5_PRIVLIB?=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}
+PERL5_PRIVLIB=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}
 PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
-PERL5_SITEPERL?=	${VIEWBASE}/lib/perl5/site_perl
-PERL5_SITELIB?=		${VIEWBASE}/lib/perl5/site_perl/${PERL5_DIST_VERS}
+PERL5_SITEPERL=		${VIEWBASE}/lib/perl5/site_perl
+PERL5_SITELIB=		${VIEWBASE}/lib/perl5/site_perl/${PERL5_DIST_VERS}
 PERL5_SITEARCH=		${VIEWBASE}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 PLIST_SUBST+=		PERL5_SITEPERL=${PERL5_SITEPERL:S/^${PREFIX}\///}
