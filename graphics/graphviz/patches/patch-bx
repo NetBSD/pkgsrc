@@ -1,0 +1,15 @@
+$NetBSD: patch-bx,v 1.1 2004/11/29 22:11:51 seb Exp $
+
+--- Makefile.am.orig	2004-08-23 13:49:11.000000000 +0000
++++ Makefile.am
+@@ -3,8 +3,8 @@
+ pkgindexdir = $(libdir)/@PACKAGE@
+ pkgindex_DATA = pkgIndex.tcl
+ 
+-txtdir = $(pkgdatadir)/doc
+-htmldir = $(pkgdatadir)/doc/html
++txtdir = $(prefix)/share/doc/graphviz
++htmldir = $(prefix)/share/doc/html/graphviz
+ 
+ txt = AUTHORS COPYING ChangeLog NEWS FAQ.txt MINTERMS.txt
+ html = LICENSE.html
