@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/03/13 17:37:15 fredb Exp $
+# $NetBSD: Makefile,v 1.19 2003/01/25 12:04:26 jlam Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -10,16 +10,16 @@ MAINTAINER=		dmcmahill@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/plotutils/plotutils.html
 COMMENT=		Programs and library for plotting scientific data
 
-DEPENDS+=		png>=1.2.1:../../graphics/png
+USE_BUILDLINK2=		yes
+USE_X11BASE=		yes
+USE_CXX=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libplotter
-# make sure configure finds png
-CPPFLAGS+=		-I${LOCALBASE}/include
 
 USE_LIBTOOL=		yes
-USE_X11BASE=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig ${WRKSRC}/libxmi/ltconfig
 
+.include "../../graphics/png/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
