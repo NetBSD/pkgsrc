@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/01/15 20:08:43 agc Exp $
+
+Basic NetBSD and platform descriptions
+
+--- d2c/compiler/platforms.descr	2002/01/14 11:28:08	1.1
++++ d2c/compiler/platforms.descr	2002/01/14 11:33:01
+@@ -242,6 +242,13 @@
+ make-command:                   	gmake
+ randomize-library-command:      	ranlib %s
+ 
++// NetBSD:
++platform-name:				netbsd
++inherit-from:				generic-unix
++default-features:			compiled-for-netbsd
++make-command:                   	gmake
++randomize-library-command:      	ranlib %s
++
+ // OpenBSD:
+ platform-name:				openbsd
+ inherit-from:				generic-unix
+@@ -519,6 +526,12 @@
+ inherit-from:			gcc irix mips
+ default-features:               compiled-for-irix compiled-for-mips C-compiler-is-GCC
+ link-shared-library-command:    $(LIBTOOL) cc -n32 -Wl,-woff,85 -o %s %s -rpath %s
++
++// This is untested. 
++platform-name:			x86-netbsd-gcc
++inherit-from:			gcc netbsd x86
++default-features:               compiled-for-netbsd compiled-for-x86 C-compiler-is-GCC
++default-c-compiler-debug-flags: -I. -I%s -g -O0 -fno-inline-functions
+ 
+ // This is untested. 
+ platform-name:			sparc-openbsd-gcc
