@@ -3,7 +3,7 @@
 # Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
 # Absolutely no warranty.
 
-# $NetBSD: pkgdepgraph.pl,v 1.5 2003/03/14 23:39:56 atatat Exp $
+# $NetBSD: pkgdepgraph.pl,v 1.6 2003/03/25 18:21:20 atatat Exp $
 # pkgdepgraph: @DISTVER@
 
 use strict;
@@ -13,12 +13,12 @@ Getopt::Long::Configure("bundling");
 my(@opts, %opt);
 my($iam, $version, $usecolor, $group, $locations, $order, $versions);
 my($limit, $delete, $rebuild, $force, @outofdate, @update, $clean);
-my($pkg_dbdir, $pkgsrcdir, $packages, $pkgadd);
+my($pkg_dbdir, $pkgsrcdir, $packages, $pkgadd, $fetch, $make);
 
 $version = '@DISTVER@';
 ($iam = $0) =~ s:.*/::;
-@opts = ('A', 'C', 'c', 'D', 'd=s', 'f', 'g', 'K=s', 'L', 'l', 'O=s',
-	 'o', 'P=s', 'R', 't=s', 'U=s', 'v');
+@opts = ('A', 'C', 'c', 'D', 'd=s', 'F', 'f', 'g', 'K=s', 'L', 'l',
+	 'M=s', 'O=s', 'o', 'P=s', 'R', 't=s', 'U=s', 'v');
 %opt = (
 	'A' => \$pkgadd,
 	# 'C' => implies "realclean", handled later
@@ -26,10 +26,12 @@ $version = '@DISTVER@';
 	'D' => \$delete,
 	'd' => \$pkg_dbdir,
 	'f' => \$force,
+	'F' => \$fetch,
 	'g' => \$group,
 	'K' => \$packages,
 	'L' => \$limit,
 	'l' => \$locations,
+	'M' => \$make,
 	'O' => \@outofdate,
 	'o' => \$order,
 	'P' => \$pkgsrcdir,
@@ -38,10 +40,17 @@ $version = '@DISTVER@';
 	'U' => \@update,
 	'v' => \$versions,
 	);
-die("usage: $iam [-ACcDfgLloRv] [-d pkg_dbdir] [-K packages] [-O package]\n",
+die("usage: $iam [-ACcDFfgLloRv] [-d pkg_dbdir] [-K packages] [-M make]\n",
     " " x (length($iam) + 8),
-    "[-P pkgsrcdir] [-t target] [-U package] [data ...]\n")
+    "[-O package] [-P pkgsrcdir] [-t target] [-U package]\n",
+    " " x (length($iam) + 8),
+    "[data ...]\n")
     if (!GetOptions(\%opt, @opts));
+
+die("$iam: -D, -F, and -R are mutually exclusive -- please pick one\n")
+    if (($delete != 0) + 
+	($fetch != 0) +
+	($rebuild ne "") > 1);
 
 $pkg_dbdir ||= $ENV{'PKG_DBDIR'} || "/var/db/pkg";
 $pkgsrcdir ||= $ENV{'PKGSRCDIR'} || "/usr/pkgsrc";
@@ -51,12 +60,13 @@ $packages = $pkgsrcdir . "/packages/All" if (!$packages);
 $rebuild &&= $opt{t} || "install";
 $clean = "clean" if ($opt{c});
 $clean = "CLEANDEPENDS=YES clean" if ($opt{C});
+$make ||= $ENV{'MAKE'} || "make";
 
 my(@pkgs, $pkg, $req, %req, @reqs, @rreqs);
 my(%clusters, $cluster);
 my(%where, $pkgcnt, $num, %num, @num, %ord, @ord, $suffix);
 my(%color, $color, %vuln);
-my(%need, $label);
+my(%need, %forced, $label);
 my($recolor, @graph);
 
 ##
@@ -203,16 +213,21 @@ foreach $pkg (@pkgs) {
 ## create a hash of clusters of package prefixes, with counts.  later,
 ## clusters that have more than one member can be marked as subgraphs.
 ##
-## the outer map() iterates over each pkg name.  the inner map()
-## breaks each pkg name up into tokens that end in either _ or - and
-## loops over the resulting list, appending each one to $a.  for
-## example:
+## the outer map() iterates over each pkg name after all instances of
+## _ in the pkg name have been changed to - (for the purposes of
+## accurate clustering).  the inner map() breaks each pkg name up into
+## tokens that end in - and loops over the resulting list, appending
+## each one to $a.  for example:
 ##
 ##	pkg:	one_two-three-4.56
-##	tokens:	one_     two-         three-
-##	$a:	one_ one_two- one_two-three-
+##	tokens:	one-     two-         three-
+##	$a:	one- one-two- one-two-three-
 ##
-map({ $a = ""; map({ $a .= $_; $clusters{$a}++; } /([^-_]*[-_])/g); } @pkgs);
+map({ $a = "";
+      ($b = $_) =~ s/_/-/g;
+      map({ $a .= $_; $clusters{$a}++; }
+	  $b =~ /([^-]*-)/g); }
+    @pkgs);
 
 ##
 ## impose some sort of order on the pkgs by assigning them numbers
@@ -254,7 +269,8 @@ if (@outofdate) {
     foreach (@outofdate) {
 	if ($color{$_} ne "red") {
 	    $color{$_} = "red";
-	    $need{$_} = "$_ (forced)";
+	    $need{$_} = $_;
+	    $forced{$_} = " (forced)";
 	}
     }
 }
@@ -276,7 +292,8 @@ if (@update) {
 	foreach (@update) {
 	    if ($color{$_} ne "red") {
 		$color{$_} = "red";
-		$need{$_} = "$_ (forced)";
+		$need{$_} = $_;
+		$forced{$_} = " (forced)";
 	    }
 	}
     }
@@ -304,6 +321,19 @@ if ($delete) {
 }
 
 ##
+## "fetch" output, in no particular order (as with the rebuild
+## output), but with all out-of-date pkgs listed, instead of all stale
+## leaf pkgs.
+##
+if ($fetch) {
+    printf("MAKE=\"$make\"\nexport MAKE\n");
+    map(print("( cd $pkgsrcdir/$where{$_} && \${MAKE} fetch ) &&\n"),
+	grep(color($_) eq "red", @pkgs));
+    print("true\n");
+    exit(0);
+}
+
+##
 ## "rebuild" output for sh(1), with just leaves listed.  all the
 ## dependencies will be built "automagically" by the regular build
 ## mechanism.  if $add is set, emit commands for installing binary
@@ -311,13 +341,14 @@ if ($delete) {
 ##
 if ($rebuild) {
     printf("PKG_PATH=\"$packages\"\nexport PKG_PATH\n") if ($pkgadd);
+    printf("MAKE=\"$make\"\nexport MAKE\n") if (!$pkgadd);
 
     map($pkgadd ?
 	printf("( pkg_info -qe %s || pkg_add %s.tgz ) &&\n",
 	       /(.*)-.*/, ($need{$_} || $_)) :
-	printf("( pkg_info -qe %s || ( cd %s && make %s%s )) &&\n",
+	printf("( pkg_info -qe %s || ( cd %s && \${MAKE} %s%s )) &&\n",
 	       /(.*)-.*/, "$pkgsrcdir/$where{$_}",
-	       $rebuild, $clean ? " && make $clean" : ""),
+	       $rebuild, $clean ? " && \${MAKE} $clean" : ""),
 	grep(color($_) ne "green" && $ord{$_} == 1, @pkgs));
     print("true\n");
     exit(0);
@@ -338,7 +369,7 @@ foreach $pkg (sort(bynum @pkgs)) {
     $label =~ s/(.*)-.*/$1/ if (!$versions);
     $label = "($ord{$pkg}) $label" if ($order);
     $label = "$where{$pkg}\\n$label" if ($locations);
-    $label .= "\\n$need{$pkg}" if ($need{$pkg});
+    $label .= "\\n$need{$pkg}$forced{$pkg}" if ($need{$pkg});
     if ($vuln{$pkg}) {
 	$label .= "\\n(no update available)" if (!$need{$pkg});
 	$label .= "\\n[$vuln{$pkg}]";
@@ -354,10 +385,10 @@ foreach $pkg (sort(bynum @pkgs)) {
     ## discovery order, so that we end up with the "least-specific"
     ## subgroup announced first.
     ##
-    $a = $pkg;
+    ($a = $pkg) =~ s/_/-/g;
     $b = 1;
     $cluster = "";
-    while ($group && $a =~ s/([-_])[^-_]+[-_]?$/$1/) {
+    while ($group && $a =~ s/-[^-]+-?$/-/) {
 	next if ($clusters{$a} == $b);
 	$b = $clusters{$a};
 	$cluster = sprintf("subgraph \"cluster_%s\" {\n", substr($a, 0, -1)) .
