@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/22 21:55:56 drochner Exp $
+bin/glclock
