@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.22 2004/12/19 05:34:07 grant Exp $
+# $NetBSD: Makefile.common,v 1.22.2.1 2005/02/16 14:00:08 salo Exp $
 #
 
 DISTNAME=	Python-2.3.4
-PKGREVISION=	3
+PKGREVISION=	7
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.3.4/
 EXTRACT_SUFX=	.tgz
