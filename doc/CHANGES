@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7774 2004/11/08 19:08:13 adrianp Exp $
+$NetBSD: CHANGES,v 1.7775 2004/11/08 19:35:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5171,3 +5171,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mysql-client to 4.1.7nb2 [xtraeme 2004-11-08]
 	Updated mysql-server to 4.1.7nb1 [xtraeme 2004-11-08]
 	Added mantis-0.19.1 [adrianp 2004-11-08]
+	Updated gnutls to 1.0.22 [jmmv 2004-11-08]

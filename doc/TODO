@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2330 2004/11/08 19:24:37 jmmv Exp $
+$NetBSD: TODO,v 1.2331 2004/11/08 19:35:41 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,6 @@ Suggested package updates
 	o gmpc-0.11.2
 	o gnomeicu-0.99.5
 	o gnunet-0.6.4a
-	o gnutls-1.0.22
 	o gogo-3.11p1
 	o gossip-0.7.7
 	o gpsdrive-2.09
