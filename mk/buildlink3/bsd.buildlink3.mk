@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.18 2003/09/28 10:38:03 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.19 2003/09/28 12:36:52 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -77,7 +77,23 @@ _BLNK_X11_LINKS_DIR=	${BUILDLINK_PREFIX.x11-links}/${X11_LINKS_SUBDIR}
 _BLNK_X11_LINKS_PACKAGE=	# empty
 .endif
 
+# _BLNK_DEPENDS contains all of the unique elements of BUILDLINK_DEPENDS.
+# _BLNK_PACKAGES contains all of the unique elements of BUILDLINK_PACKAGES.
+#
+_BLNK_DEPENDS=		# empty
 .for _pkg_ in ${BUILDLINK_DEPENDS}
+.  if empty(_BLNK_DEPENDS:M${_pkg_})
+_BLNK_DEPENDS+=		${_pkg_}
+.  endif
+.endfor
+_BLNK_PACKAGES=		# empty
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+.  if empty(_BLNK_PACKAGES:M${_pkg_})
+_BLNK_PACKAGES+=	${_pkg_}
+.  endif
+.endfor
+
+.for _pkg_ in ${_BLNK_DEPENDS}
 #
 # Add the proper dependency on each package pulled in by buildlink3.mk
 # files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
@@ -142,7 +158,7 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 #				exist before they're added to the search
 #				paths.
 #
-.for _pkg_ in ${BUILDLINK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
+.for _pkg_ in ${_BLNK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
 .  if !defined(_BLNK_PKG_DBDIR.${_pkg_})
 _BLNK_PKG_DBDIR.${_pkg_}!=	\
 	dir="";								\
@@ -201,7 +217,7 @@ BUILDLINK_CPPFLAGS=	# empty
 BUILDLINK_LDFLAGS=	# empty
 BUILDLINK_CFLAGS=	# empty
 
-.for _pkg_ in ${BUILDLINK_PACKAGES}
+.for _pkg_ in ${_BLNK_PACKAGES}
 .  for _flag_ in ${BUILDLINK_CPPFLAGS.${_pkg_}}
 .    if empty(BUILDLINK_CPPFLAGS:M${_flag_})
 BUILDLINK_CPPFLAGS+=	${_flag_}
@@ -341,7 +357,7 @@ do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
 #	sed arguments used to transform the name of the source filename
 #	into a destination filename, e.g. -e "s|/curses.h|/ncurses.h|g"
 #
-.for _pkg_ in ${BUILDLINK_PACKAGES}
+.for _pkg_ in ${_BLNK_PACKAGES}
 _BLNK_COOKIE.${_pkg_}=		${BUILDLINK_DIR}/.buildlink_${_pkg_}_done
 
 _BLNK_TARGETS+=			buildlink-${_pkg_}
@@ -544,7 +560,7 @@ _BLNK_ALLOWED_RPATHDIRS=	# empty
 # Add all of the depot directories for packages whose headers and
 # libraries we use.
 #
-.for _pkg_ in ${BUILDLINK_PACKAGES}
+.for _pkg_ in ${_BLNK_PACKAGES}
 .  if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 _BLNK_ALLOWED_RPATHDIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
 .  endif
@@ -608,7 +624,7 @@ _BLNK_PROTECT_DIRS+=	${BUILDLINK_DIR}
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_PROTECT_DIRS+=	${WRKDIR}
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-.  for _pkg_ in ${BUILDLINK_PACKAGES}
+.  for _pkg_ in ${_BLNK_PACKAGES}
 .    if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 _BLNK_PROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
 _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_PREFIX.${_pkg_}}
@@ -1300,7 +1316,7 @@ _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL].|-[IL]./*|-[IL]..*|-[IL][!/]*
 # headers and libraries for both -[IL]<dir>.
 #
 .  if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-.    for _pkg_ in ${BUILDLINK_PACKAGES}
+.    for _pkg_ in ${_BLNK_PACKAGES}
 .      if !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL]${BUILDLINK_PREFIX.${_pkg_}}/*
 .      endif
