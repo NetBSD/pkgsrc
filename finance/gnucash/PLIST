@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/05/30 16:19:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/06/30 19:46:22 seb Exp $
 bin/gnc-prices
 bin/gnc-test-env
 bin/gnucash
@@ -117,9 +117,7 @@ include/gnucash/table-layout.h
 include/gnucash/table-model.h
 include/gnucash/window-help.h
 include/gnucash/window-report.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gnucash-design.info
 info/gnucash-design.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gnucash-design.info
 info/gnucash-design.info-1
 info/gnucash-design.info-2
 info/gnucash-design.info-3
