@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:52:42 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/30 14:19:38 markd Exp $
 #
 # This Makefile fragment is included by packages that use kdepim.
 #
@@ -9,7 +9,7 @@
 KDEPIM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			kdepim
-BUILDLINK_DEPENDS.kdepim?=		kdepim>=3.1.2nb1
+BUILDLINK_DEPENDS.kdepim?=		kdepim>=3.1.3
 BUILDLINK_PKGSRCDIR.kdepim?=		../../misc/kdepim3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdepim=kdepim
@@ -38,7 +38,7 @@ BUILDLINK_FILES.kdepim+=	lib/libkorganizer.*
 BUILDLINK_FILES.kdepim+=	lib/libkpilot.*
 
 .include "../../comms/pilot-link-libs/buildlink2.mk"
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	kdepim-buildlink
