@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2004/10/15 12:22:13 tv Exp $
+# $NetBSD: Makefile,v 1.14 2005/01/11 14:00:31 adam Exp $
 
-DISTNAME=		libast-0.5
-PKGREVISION=		8
-CATEGORIES=		devel
-MASTER_SITES=   	http://www.eterm.org/download/
+DISTNAME=	libast-0.6.1
+CATEGORIES=	devel
+MASTER_SITES=  	http://www.eterm.org/download/
 
-MAINTAINER=		gendalia@NetBSD.org
-HOMEPAGE=		http://freshmeat.net/projects/libast/?topic_id=809%2C861
-COMMENT=		The Library of Assorted Spiffy Things
+MAINTAINER=	gendalia@NetBSD.org
+HOMEPAGE=	http://freshmeat.net/projects/libast/?topic_id=809%2C861
+COMMENT=	The Library of Assorted Spiffy Things
 
-GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
 TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
