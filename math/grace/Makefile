@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2003/06/02 01:18:31 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2003/06/05 20:56:41 wiz Exp $
 #
 
 DISTNAME=	grace-5.1.10
+PKGREVISION=	1
 CATEGORIES=	math graphics x11
 MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/ \
 		ftp://linux.mathematik.tu-darmstadt.de/pub/linux/mirrors/misc/grace/src/ \
@@ -14,8 +15,6 @@ MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/ \
 MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://plasma-gate.weizmann.ac.il/Grace/
 COMMENT=	GRaphing, Advanced Computation and Exploration of data
-
-#DEPENDS+=	fftw-[0-9]*:../../math/fftw
 
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
@@ -35,6 +34,7 @@ post-install:
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
+.include "../../math/fftw2/buildlink2.mk"
 .include "../../print/pdflib/buildlink2.mk"
 .include "../../x11/Xbae/buildlink2.mk"
 .include "../../mk/motif.buildlink2.mk"
