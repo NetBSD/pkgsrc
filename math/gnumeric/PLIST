@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/01/17 11:57:44 martti Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/02/16 14:34:37 martti Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -55,7 +55,6 @@ lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax/xml_sax.la
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax/xml_sax.so
 lib/gnumericConf.sh
 share/gnome/apps/Applications/gnumeric.desktop
-share/gnome/help/gnumeric/C/LEGALNOTICE.html
 share/gnome/help/gnumeric/C/alignmentandothertabs.html
 share/gnome/help/gnumeric/C/analysis-tools.html
 share/gnome/help/gnumeric/C/analysis-tools.sgml
@@ -85,7 +84,6 @@ share/gnome/help/gnumeric/C/edit-menu.html
 share/gnome/help/gnumeric/C/editing-selections.html
 share/gnome/help/gnumeric/C/editing.html
 share/gnome/help/gnumeric/C/editing.sgml
-share/gnome/help/gnumeric/C/exp-smoothing-tool.html
 share/gnome/help/gnumeric/C/fdl-section1.html
 share/gnome/help/gnumeric/C/fdl-section10.html
 share/gnome/help/gnumeric/C/fdl-section2.html
@@ -121,11 +119,15 @@ share/gnome/help/gnumeric/C/figures/analysistools-covariance.png
 share/gnome/help/gnumeric/C/figures/analysistools-descstats-ex1.png
 share/gnome/help/gnumeric/C/figures/analysistools-descstats-ex2.png
 share/gnome/help/gnumeric/C/figures/analysistools-descstats.png
+share/gnome/help/gnumeric/C/figures/analysistools-fourier-formula.png
+share/gnome/help/gnumeric/C/figures/analysistools-fourier.png
 share/gnome/help/gnumeric/C/figures/analysistools-ftest-ex1.png
 share/gnome/help/gnumeric/C/figures/analysistools-ftest-ex2.png
 share/gnome/help/gnumeric/C/figures/analysistools-ftest.png
+share/gnome/help/gnumeric/C/figures/analysistools-histogram-bins.png
 share/gnome/help/gnumeric/C/figures/analysistools-histogram-ex1.png
 share/gnome/help/gnumeric/C/figures/analysistools-histogram-ex2.png
+share/gnome/help/gnumeric/C/figures/analysistools-histogram-ex3.png
 share/gnome/help/gnumeric/C/figures/analysistools-histogram.png
 share/gnome/help/gnumeric/C/figures/analysistools-moving-average-ex1.png
 share/gnome/help/gnumeric/C/figures/analysistools-moving-average-ex2.png
@@ -243,7 +245,21 @@ share/gnome/help/gnumeric/C/figures/drawing-toolbar.png
 share/gnome/help/gnumeric/C/figures/editing-1.png
 share/gnome/help/gnumeric/C/figures/editing-cell-selection-1.png
 share/gnome/help/gnumeric/C/figures/file-dialog.png
+share/gnome/help/gnumeric/C/figures/file-formats-import-list.png
+share/gnome/help/gnumeric/C/figures/files-csv-export-ex1.png
+share/gnome/help/gnumeric/C/figures/files-csv-export-ex2.png
+share/gnome/help/gnumeric/C/figures/files-csv-import-ex1.png
+share/gnome/help/gnumeric/C/figures/files-csv-import-ex2.png
+share/gnome/help/gnumeric/C/figures/files-csv-import-ex3.png
+share/gnome/help/gnumeric/C/figures/files-csv-import-ex4.png
+share/gnome/help/gnumeric/C/figures/files-csv-import-ex5.png
+share/gnome/help/gnumeric/C/figures/files-dvi-example.png
 share/gnome/help/gnumeric/C/figures/files-formats-list.png
+share/gnome/help/gnumeric/C/figures/files-html-example.png
+share/gnome/help/gnumeric/C/figures/files-html32-example.png
+share/gnome/help/gnumeric/C/figures/files-html40-example.png
+share/gnome/help/gnumeric/C/figures/files-latex-example.png
+share/gnome/help/gnumeric/C/figures/files-xml-example.png
 share/gnome/help/gnumeric/C/figures/filter.png
 share/gnome/help/gnumeric/C/figures/function-wizard.png
 share/gnome/help/gnumeric/C/figures/function.png
@@ -279,12 +295,15 @@ share/gnome/help/gnumeric/C/figures/menu-view-labelled.png
 share/gnome/help/gnumeric/C/figures/menubar.png
 share/gnome/help/gnumeric/C/figures/modify-comment.png
 share/gnome/help/gnumeric/C/figures/money.png
+share/gnome/help/gnumeric/C/figures/number-format-border-dialog.png
 share/gnome/help/gnumeric/C/figures/number-format-buttonbar.png
 share/gnome/help/gnumeric/C/figures/number-format-color-dialog.png
 share/gnome/help/gnumeric/C/figures/number-format-dialog.png
 share/gnome/help/gnumeric/C/figures/number-format-font-dialog.png
 share/gnome/help/gnumeric/C/figures/number-format-justification-dialog-2.png
-share/gnome/help/gnumeric/C/figures/number-format-justification.png
+share/gnome/help/gnumeric/C/figures/number-format-protection.png
+share/gnome/help/gnumeric/C/figures/number-format-validation-warning.png
+share/gnome/help/gnumeric/C/figures/number-format-validation.png
 share/gnome/help/gnumeric/C/figures/oval.png
 share/gnome/help/gnumeric/C/figures/percentage.png
 share/gnome/help/gnumeric/C/figures/plug-ins.png
@@ -369,6 +388,7 @@ share/gnome/help/gnumeric/C/files.sgml
 share/gnome/help/gnumeric/C/filter.sgml
 share/gnome/help/gnumeric/C/filters.html
 share/gnome/help/gnumeric/C/fmt-toolbar.html
+share/gnome/help/gnumeric/C/forecasting-tools.html
 share/gnome/help/gnumeric/C/format-menu.html
 share/gnome/help/gnumeric/C/formatting.html
 share/gnome/help/gnumeric/C/formulas.html
@@ -552,6 +572,7 @@ share/gnome/help/gnumeric/C/gnumeric-isna.html
 share/gnome/help/gnumeric/C/gnumeric-isnontext.html
 share/gnome/help/gnumeric/C/gnumeric-isnumber.html
 share/gnome/help/gnumeric/C/gnumeric-isodd.html
+share/gnome/help/gnumeric/C/gnumeric-isoweeknum.html
 share/gnome/help/gnumeric/C/gnumeric-ispmt.html
 share/gnome/help/gnumeric/C/gnumeric-isref.html
 share/gnome/help/gnumeric/C/gnumeric-istext.html
@@ -712,6 +733,7 @@ share/gnome/help/gnumeric/C/gnumeric-varpa.html
 share/gnome/help/gnumeric/C/gnumeric-vdb.html
 share/gnome/help/gnumeric/C/gnumeric-vlookup.html
 share/gnome/help/gnumeric/C/gnumeric-weekday.html
+share/gnome/help/gnumeric/C/gnumeric-weeknum.html
 share/gnome/help/gnumeric/C/gnumeric-weibull.html
 share/gnome/help/gnumeric/C/gnumeric-workday.html
 share/gnome/help/gnumeric/C/gnumeric-xirr.html
@@ -734,7 +756,6 @@ share/gnome/help/gnumeric/C/introduction.sgml
 share/gnome/help/gnumeric/C/license.html
 share/gnome/help/gnumeric/C/license.sgml
 share/gnome/help/gnumeric/C/menus.html
-share/gnome/help/gnumeric/C/moving-average-tool.html
 share/gnome/help/gnumeric/C/number-format.sgml
 share/gnome/help/gnumeric/C/number-formatting-overview.html
 share/gnome/help/gnumeric/C/obj-toolbar.html
@@ -845,6 +866,7 @@ share/gnumeric/${PKGVERSION}-bonobo/templates/invoice.gnumeric
 share/gnumeric/${PKGVERSION}-bonobo/templates/loan.gnumeric
 share/gnumeric/${PKGVERSION}-bonobo/templates/mileage.gnumeric
 share/gnumeric/${PKGVERSION}-bonobo/templates/purchase_order.gnumeric
+share/gnumeric/1.0.4-bonobo/glade/tabulate.glade
 share/locale/ca/LC_MESSAGES/gnumeric.mo
 share/locale/cs/LC_MESSAGES/gnumeric.mo
 share/locale/da/LC_MESSAGES/gnumeric.mo
@@ -976,4 +998,6 @@ share/pixmaps/gnumeric/top_border
 @dirrm share/gnumeric
 @dirrm share/mc/templates
 @dirrm share/mc
+@dirrm share/omf/gnumeric
+@dirrm share/omf
 @dirrm share/pixmaps/gnumeric
