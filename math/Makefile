@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2000/08/03 17:50:51 rh Exp $
+# $NetBSD: Makefile,v 1.24 2000/11/06 17:56:09 wennmach Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
     SUBDIR += R
     SUBDIR += abacus
     SUBDIR += abs
+    SUBDIR += blas
     SUBDIR += cassowary
     SUBDIR += fftw
     SUBDIR += geg
