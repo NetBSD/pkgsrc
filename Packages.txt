@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.158 2001/05/08 14:59:26 abs Exp $
+# $NetBSD: Packages.txt,v 1.159 2001/05/09 17:43:22 skrll Exp $
 ###########################################################################
 
 			==========================
@@ -1012,21 +1012,16 @@ Here's how to use libtool in a pkg in seven simple steps:
    installed, preface the cc or ld line with "${LIBTOOL} --mode=link", and
    it will find the correct libraries (static or shared), but please be
    aware that libtool will not allow you to specify a relative path in -L
-   (such as -L../somelib), because it is trying to force you to change
-   that argument to be the .la file.  For example:
+   (such as -L../somelib), because it expects you to change that argument
+   to be the .la file.  For example:
 
 	${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
 
-   won't work; it needs to be changed to:
+   should be changed to:
 
 	${LIBTOOL} --mode=link ${CC} -o someprog ../somelib/somelib.la
 
-   and it will DTRT with the libraries.  If you *must* use a relative path 
-   with -L, and you are not going to run this program before installing
-   it, you can omit the use of libtool during link and install of this
-   program if you add the subdirectory ".libs" in your -L command:
-
-	${CC} -o someprog -L../somelib/.libs -lsomelib
+   and it will DTRT with the libraries.
 
 6. When installing libraries, preface the install or cp command with
    "${LIBTOOL} --mode=install", and change the library name to .la.  For
@@ -1050,12 +1045,12 @@ The pkg's own libtool is made by ltconfig script at do-configure target.
 If USE_LIBTOOL and LTCONFIG_OVERRIDE are defined, the specified ltconfig is
 overridden, using the devel/libtool instead of the pkg's own libtool.
 
-If your package makes use of the platform independant method of loading
-dynamic shared objects libltdl then you should add USE_LTDL= yes to the
-Makefile.
+If your package makes use of the platform independant library for loading
+dynamic shared objects, that comes with libtool (libltdl), you should
+add USE_LTDL= yes to the Makefile.
 
-Some packages use libtool incorrectly so that the package may work or build
-on NetBSD. Some common errors are
+Some packages use libtool incorrectly so that the package may not work or
+build in some circumstances. Some common errors are
 
  * The inclusion of a shared object (-module) as a dependent library in an
    executable or library. This in itself isn't a problem if one of two things
