@@ -1,39 +1,13 @@
-$NetBSD: patch-af,v 1.4 2000/12/14 01:27:33 jtb Exp $
+$NetBSD: patch-af,v 1.5 2001/01/29 01:15:35 jtb Exp $
 
---- cf/sysloc.in.orig	Wed May 10 20:47:53 2000
-+++ cf/sysloc.in
-@@ -20,9 +20,9 @@
- 
- DPLIBSTR=-ldpnetwork
- ITKLIBSTR=-litk
--TKLIBSTR=-ltk
-+TKLIBSTR=-ltk83
- ITCLLIBSTR=-litcl
--TCLLIBSTR=-ltcl
-+TCLLIBSTR=-ltcl83
- XLIBSTR=-lX11
- 
- # ----------------------------------------------------------------------------
-@@ -384,16 +384,19 @@
-     ADD_TO_LIBS($ITKLIBDIR, $ITKLIBSTR, LIBS, LIBPATH)
- fi
- if test "$enable_tk" = "yes"; then
--    ADD_TO_LIBS($TKLIBDIR, $TKLIBSTR, LIBS, LIBPATH)
-+    TKLIB="$TKLIBDIR -Wl,-R$TKLIBDIR"
-+    ADD_TO_LIBS($TKLIB, $TKLIBSTR, LIBS, LIBPATH)
- fi
- if test "$enable_itcl" = "yes"; then
-     ADD_TO_LIBS($ITCLLIBDIR, $ITCLLIBSTR, LIBS, LIBPATH)
- fi
- if test "$enable_tcl" = "yes"; then
--    ADD_TO_LIBS($TCLLIBDIR, $TCLLIBSTR, LIBS, LIBPATH)
-+    TCLLIB="$TCLLIBDIR -Wl,-R$TCLLIBDIR"
-+    ADD_TO_LIBS($TCLLIB, $TCLLIBSTR, LIBS, LIBPATH)
- fi
- if test "$enable_xwin" = "yes"; then
--    ADD_TO_LIBS($XLIBDIR, $XLIBSTR, LIBS, LIBPATH)
-+    XLIB="$XLIBDIR -Wl,-R$XLIBDIR"
-+    ADD_TO_LIBS($XLIB, $XLIBSTR, LIBS, LIBPATH)
- fi
- if test ! -z "$TCL_DL_LIBS"; then
-     ADD_TO_LIBS( default, $TCL_DL_LIBS, LIBS, LIBPATH)
+--- cf/aclocal.m4.orig	Thu Jan 11 07:20:36 2001
++++ cf/aclocal.m4
+@@ -447,7 +447,7 @@
+ define([ADD_TO_LIBS],[
+     LIBSW=""
+     if test "$1" != "default"; then
+-	LIBSW="-L$1"
++	LIBSW="-Wl,-R$1 -L$1"
+     fi
+     for dir in $$4; do
+ 	if test "$1" = "$dir"; then
