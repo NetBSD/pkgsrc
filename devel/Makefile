@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.422 2003/09/11 08:54:12 agc Exp $
+# $NetBSD: Makefile,v 1.423 2003/09/14 20:31:01 gson Exp $
 #
 
 COMMENT=	Development utilities
@@ -293,6 +293,7 @@ SUBDIR+=	p5-Proc-Daemon
 SUBDIR+=	p5-SDL
 SUBDIR+=	p5-Safe-Hole
 SUBDIR+=	p5-Scalar-List-Utils
+SUBDIR+=	p5-Set-IntSpan
 SUBDIR+=	p5-Set-Scalar
 SUBDIR+=	p5-SortVersions
 SUBDIR+=	p5-Storable
