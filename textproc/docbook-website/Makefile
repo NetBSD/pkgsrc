@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 13:03:50 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/29 21:31:17 jmmv Exp $
 #
 
 DISTNAME=	website-2.3
 PKGNAME=	docbook-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 
@@ -21,6 +21,8 @@ DOCDIR=		${PREFIX}/share/doc/docbook-website
 DTDDIR=		${PREFIX}/share/xml/website
 EGDIR=		${PREFIX}/share/examples/docbook-website
 
+XML_CATALOGS=	${DTDDIR}/catalog
+
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${DTDDIR}
@@ -30,9 +32,7 @@ do-install:
 	@cd ${WRKSRC}/example; ${PAX} -rw . ${EGDIR}
 	@cd ${WRKSRC}; ${PAX} -rw VERSION extensions xsl *.dtd *.mod	\
 		${DTDDIR}
-	${PREFIX}/bin/xmlcatmgr -c ${PREFIX}/share/xml/catalog \
-		add "CATALOG" "${PREFIX}/share/xml/website/catalog"
 	${INSTALL_DATA} ${FILESDIR}/catalog ${DTDDIR}/catalog
 
-.include "../../textproc/xmlcatmgr/buildlink2.mk"
+.include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
