@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.229 2004/04/18 12:08:42 uebayasi Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.230 2004/04/19 00:23:34 recht Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1624,6 +1624,13 @@ PGHOME?=	${PREFIX}/${PGUSER}
 # administrator
 # Possible: any valid location
 # Default: ${PREFIX}/${PGUSER}
+
+PGSQL_USE_HIER?=	no
+# Add support for hierarchical queries with Oracle like CONNECT BY syntax
+# to the PostgreSQL 7.4 package.
+# See http://gppl.terminal.ru/README.html for details.
+# Possible: yes, no
+# Default: no
 
 #PG_MB_ENCODING=	SQL_ASCII
 # Used to postgresql package to define the language encoding of the
