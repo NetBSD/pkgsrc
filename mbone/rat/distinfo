@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/10/10 04:44:07 rtr Exp $
+$NetBSD: distinfo,v 1.4 2004/06/18 12:50:51 markd Exp $
 
 SHA1 (rat-3.0.28.tar.gz) = 37ddf3a98fa9182016b1d132e767aec9838a2a9c
 Size (rat-3.0.28.tar.gz) = 351749 bytes
@@ -6,9 +6,9 @@ SHA1 (patch-aa) = 0bfc55971ad645ba82e6455324c0f97b3d92b193
 SHA1 (patch-ab) = c2729989f62aab05f3a741e1880c2e51d370a0dc
 SHA1 (patch-ac) = cad434382ac8c533215e2566d2ada219f1922d6a
 SHA1 (patch-ad) = 65ee926927401cb6c53786e6398f7de3c0c003b8
-SHA1 (patch-ae) = 5fda13af75ebf00bc6d831b9439c7dee5eea959e
+SHA1 (patch-ae) = 744982811f36e8bc18ae392d105b1e7fd14a9654
 SHA1 (patch-af) = 8b58c5ed398fb9d5c0bbe6d901fa90c6721ab703
 SHA1 (patch-ag) = ab08f597ce646a0fbc915c1b235da92e8bd83e5f
-SHA1 (patch-ah) = 18622ac59e75f1378c92ead6c75cb5d9ef296051
+SHA1 (patch-ah) = c727b18be73f6e91cb273735dbca45b822cf7126
 SHA1 (patch-ai) = 0cfe2a570e5870279ac765df458e727df134aaa2
 SHA1 (patch-aj) = 9e972414ced6aeb8ba434204dde7df22d9535379

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/03/08 20:27:15 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2004/06/18 12:50:51 markd Exp $
 #
 
 DISTNAME=	rat-3.0.28
@@ -9,16 +9,18 @@ MAINTAINER=	mycroft@NetBSD.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/
 COMMENT=	Robust Audio Tool - multicast audioconferencing
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk83
-
 CRYPTO=		yes
+USE_BUILDLINK3= yes
 USE_GNU_TOOLS+=	make
 USE_X11BASE=	yes
 
 USER=		build
 
+post-patch:
+	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_NetBSD_2
+
 do-build:
-	cd ${WRKSRC} && USER=${USER} PREFIX=${PREFIX} MAKE=${MAKE_PROGRAM} LDFLAGS="${LDFLAGS}" X11BASE=${X11BASE} LOCALBASE=${LOCALBASE} ./Build rat
+	cd ${WRKSRC} && USER=${USER} PREFIX=${PREFIX} MAKE=${MAKE_PROGRAM} LDFLAGS="${LDFLAGS}" X11BASE=${X11BASE} LOCALBASE=${LOCALBASE} TCLCONFIG=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh ./Build rat
 
 do-install:
 	cd ${WRKSRC} && ( \
@@ -28,4 +30,6 @@ do-install:
 	 ${INSTALL_MAN} \
 	    man/man1/rat.1 ${PREFIX}/man/man1/rat.1 )
 
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
