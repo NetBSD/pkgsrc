@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/06/27 01:13:47 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2000/11/26 11:34:56 mycroft Exp $
 #
 
 DISTNAME=		imlib-1.9.8.1
@@ -32,12 +32,6 @@ CPPFLAGS=		-DENABLE_NLS
 .endif
 
 CPPFLAGS+=		-I${LOCALBASE}/include
-
-.if ${OBJECT_FMT} == "a.out"
-PLIST_SRC=	${PKGDIR}/PLIST.mi
-.else
-PLIST_SRC=	${PKGDIR}/PLIST.mi ${PKGDIR}/PLIST.elf
-.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoconf && automake
