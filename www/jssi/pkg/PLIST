@@ -1,10 +1,41 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/18 01:51:44 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/01/20 05:03:35 jwise Exp $
+lib/ApacheJSSI.jar
 doc/jssi/generate_javadoc
 doc/jssi/images/java-apache-project.gif
 doc/jssi/index.html
 doc/jssi/install.html
 doc/jssi/parameterprop.html
 doc/jssi/traditionalssi.html
+doc/jssi/javadoc/packages.html
+doc/jssi/javadoc/Package-org.apache.java.io.html
+doc/jssi/javadoc/org.apache.java.io.PositionReader.html
+doc/jssi/javadoc/Package-org.apache.java.util.html
+doc/jssi/javadoc/org.apache.java.util.SGMLTag.html
+doc/jssi/javadoc/Package-org.apache.servlet.ssi.html
+doc/jssi/javadoc/org.apache.servlet.ssi.ParseContext.html
+doc/jssi/javadoc/org.apache.servlet.ssi.SpecialTagHandler.html
+doc/jssi/javadoc/org.apache.servlet.ssi.AbstractParseContext.html
+doc/jssi/javadoc/org.apache.servlet.ssi.ConfigTagHandler.html
+doc/jssi/javadoc/tree.html
+doc/jssi/javadoc/org.apache.servlet.ssi.DelegateHttpServletRequest.html
+doc/jssi/javadoc/org.apache.servlet.ssi.EchoTagHandler.html
+doc/jssi/javadoc/org.apache.servlet.ssi.ExampleTagHandler.html
+doc/jssi/javadoc/org.apache.servlet.ssi.FLastModTagHandler.html
+doc/jssi/javadoc/org.apache.servlet.ssi.FSizeTagHandler.html
+doc/jssi/javadoc/org.apache.servlet.ssi.HREFParameterPropagator.html
+doc/jssi/javadoc/org.apache.servlet.ssi.IncludeTagHandler.html
+doc/jssi/javadoc/org.apache.servlet.ssi.OSServletOutputStream.html
+doc/jssi/javadoc/org.apache.servlet.ssi.PageParser.html
+doc/jssi/javadoc/org.apache.servlet.ssi.PageParserServlet.html
+doc/jssi/javadoc/org.apache.servlet.ssi.ParamPropContext.html
+doc/jssi/javadoc/org.apache.servlet.ssi.ParameterPropagatingSSI.html
+doc/jssi/javadoc/org.apache.servlet.ssi.SSI.html
+doc/jssi/javadoc/org.apache.servlet.ssi.SSIContext.html
+doc/jssi/javadoc/org.apache.servlet.ssi.SSIHttpServletResponse.html
+doc/jssi/javadoc/org.apache.servlet.ssi.SSIOutputStream.html
+doc/jssi/javadoc/org.apache.servlet.ssi.SSITagHandler.html
+doc/jssi/javadoc/org.apache.servlet.ssi.ServletTagHandler.html
+doc/jssi/javadoc/AllNames.html
+@dirrm doc/jssi/javadoc/
 @dirrm doc/jssi/images
 @dirrm doc/jssi
-lib/ApacheJSSI.jar
