@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/06/23 03:49:46 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/21 11:55:43 wiz Exp $
 #
 
 DISTNAME=	crossfire-client-1.0.0
@@ -20,7 +20,7 @@ CF_SRC=		crossfire-client-1.0.0.tar.gz
 CF_SND=		client-0.95.2-au-sounds.tgz
 CF_RAW=		client-0.95.2-raw-sounds.tgz
 
-USE_XPM=	yes
+USE_BUILDLINK2=	yes
 USE_PERL5=	yes
 USE_X11=	yes
 USE_GMAKE=	yes
@@ -43,4 +43,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/def_keys ${LOCALBASE}/share/cfclient
 	@${CHOWN} -R ${ROOT_USER}:games ${LOCALBASE}/share/cfclient
 
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
