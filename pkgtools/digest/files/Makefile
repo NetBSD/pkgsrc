@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.5 2001/03/26 12:57:32 agc Exp $
+#	$NetBSD: Makefile,v 1.6 2001/03/29 08:42:14 agc Exp $
 
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the version definition in the package Makefile
@@ -8,9 +8,7 @@ SRCS= digest.c
 CPPFLAGS+= -I${.CURDIR} -DVERSION="${VERSION}"
 WARNS= 2
 
-.if !exists(/usr/include/rmd160.h)
 SRCS+= rmd160.c rmd160hl.c
-.endif
 
 SRCS+= sha1.c sha1hl.c
 
