@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.899 2002/01/09 12:53:46 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.900 2002/01/10 02:51:30 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -554,7 +554,8 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 		PREFIX=${PREFIX}					\
 		LOCALBASE=${LOCALBASE}					\
 		X11PREFIX=${X11PREFIX}					\
-		X11BASE=${X11BASE}
+		X11BASE=${X11BASE}					\
+		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 .endif
