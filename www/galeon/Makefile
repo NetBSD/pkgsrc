@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2003/11/12 01:31:52 salo Exp $
+# $NetBSD: Makefile,v 1.54.2.1 2003/12/11 19:48:11 agc Exp $
 
-DISTNAME=	galeon-1.2.11
-PKGREVISION=	3
+DISTNAME=	galeon-1.2.13
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
 
@@ -30,8 +29,8 @@ CONFIGURE_ARGS+=	--with-mozilla-includes=${BUILDLINK_PREFIX.mozilla}/include/moz
 			--disable-applet \
 			--disable-werror \
 			--sysconfdir=${PREFIX}/etc
-# XXX to build against mozilla 1.4
-CONFIGURE_ARGS+= --with-mozilla-snapshot=1.4
+# XXX to build against mozilla 1.5
+CONFIGURE_ARGS+= --with-mozilla-snapshot=1.5
 
 .include	"../../converters/libiconv/buildlink2.mk"
 .include	"../../devel/GConf/buildlink2.mk"
@@ -53,6 +52,14 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 pre-install:
 	${GCONF_PREFIX}/bin/gconftool --shutdown
+
+.if !empty(CC_VERSION:Mgcc-3*)
+# Workaround for gcc3 build issue
+post-buildlink:
+	${CP} ${BUILDLINK_DIR}/bin/cc ${BUILDLINK_DIR}/bin/cc.orig
+	${SED} 's:\(exec \$$cmd\):\1 -lstdc++ -lm:' ${BUILDLINK_DIR}/bin/cc.orig\
+						> ${BUILDLINK_DIR}/bin/cc
+.endif
 
 post-install:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA_PREFIX@,${MOZILLA_PREFIX},g" ${FILESDIR}/galeon.in > ${PREFIX}/bin/galeon
