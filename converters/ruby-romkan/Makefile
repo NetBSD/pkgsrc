@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/03/16 02:01:10 taca Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/27 15:36:43 taca Exp $
 
 DISTNAME=	ruby-romkan-0.4
+PKGNAME=	${RUBY_PKGPREFIX}-romkan-0.4
 CATEGORIES=	converters japanese ruby
 MASTER_SITES=	http://namazu.org/~satoru/ruby-romkan/
 
@@ -8,9 +9,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://namazu.org/~satoru/ruby-romkan/
 COMMENT=	Romaji <-> Kana conversion library for Ruby
 
-DIST_SUBDIR=	ruby
-USE_RUBY_RD=	# defined
-NO_CONFIGURE=	# defined
+USE_BUILDLINK3=	yes
+NO_CONFIGURE=	yes
 
 do-build:
 	cd ${WRKSRC}; ${RUBY_RD} romkan.en.rd > romkan.html
@@ -24,6 +24,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/romkan.en.rd ${RUBY_DOCDIR}/romkan/romkan.rd
 	${INSTALL_DATA} ${WRKSRC}/romkan.ja.rd ${RUBY_DOCDIR}/romkan
 
-.include "../../textproc/ruby-rdtool/Makefile.common"
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
+.include "../../textproc/ruby-rdtool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
