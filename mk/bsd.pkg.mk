@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.431 2000/04/26 21:16:10 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.432 2000/05/02 18:44:37 danw Exp $
 #
 # This file is in the public domain.
 #
@@ -1271,6 +1271,7 @@ do-configure:
 	${_PKG_SILENT}(${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
 	    CFLAGS="${CFLAGS}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
+	    ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_DATA="${INSTALL_DATA}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
