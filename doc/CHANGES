@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2668 2003/07/03 06:05:10 lukem Exp $
+$NetBSD: CHANGES,v 1.2669 2003/07/03 08:33:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2661,3 +2661,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dhid to 5.0 [hubertf 2003-07-03]
 	Added xlog-0.8 [wulf 2003-07-03]
 	Updated roundup to 0.5.8 [lukem 2003-07-03]
+	Updated adom to 1.1.1 [wiz 2003-07-03]
