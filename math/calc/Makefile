@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/23 12:50:12 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/10 14:26:39 wiz Exp $
 
 DISTNAME=	calc-2.02f
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_GNU:=calc/}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/calc/calc.html
 COMMENT=	Advanced Calculator for GNU Emacs
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/emacs.mk"
 

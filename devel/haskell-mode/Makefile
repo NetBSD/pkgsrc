@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/14 03:20:28 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/10 14:26:38 wiz Exp $
 
 DISTNAME=		haskell-mode-1.43
 CATEGORIES=		devel editors
@@ -9,8 +9,6 @@ HOMEPAGE=		http://www.haskell.org/haskell-mode/
 COMMENT=		Haskell mode for Emacs
 
 WRKSRC=			${WRKDIR}
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/emacs.mk"
 

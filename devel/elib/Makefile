@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/14 02:49:54 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/10 14:26:38 wiz Exp $
 #
 
 DISTNAME=	elib-1.0
@@ -7,8 +7,6 @@ MASTER_SITES=	http://jde.sunsite.dk/
 
 MAINTAINER=	cjones@netbsd.org
 COMMENT=	Library of utility functions for Emacs
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/emacs.mk"
 
