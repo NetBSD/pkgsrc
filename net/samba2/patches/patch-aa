@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/11/27 12:48:27 bouyer Exp $
-
---- Makefile.in.orig	Sat Nov 21 02:53:05 1998
-+++ Makefile.in	Fri Nov 27 00:29:07 1998
-@@ -23,12 +23,12 @@
+--- Makefile.in.orig	Mon Dec  7 22:50:26 1998
++++ Makefile.in	Fri Dec 11 12:38:09 1998
+@@ -23,12 +23,11 @@
  
  BASEDIR= @prefix@
  BINDIR = @bindir@
@@ -11,15 +9,14 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/11/27 12:48:27 bouyer Exp $
 -SBINDIR = @bindir@
 +SBINDIR = @sbindir@
  LIBDIR = @libdir@
--VARDIR = $(BASEDIR)/var
+-VARDIR = @localstatedir@
  MANDIR = @mandir@
 +ETCDIR?= $(BASEDIR)/etc
 +LOGDIR?= $(BASEDIR)/log
-+PRIVDIR?= $(BASEDIR)/private
  
  # The permissions to give the executables
  INSTALLPERMS = 0755
-@@ -36,20 +36,20 @@
+@@ -36,23 +35,23 @@
  # set these to where to find various files
  # These can be overridden by command line switches (see smbd(8))
  # or in smb.conf (see smb.conf(5))
@@ -29,18 +26,21 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/11/27 12:48:27 bouyer Exp $
 -LMHOSTSFILE = $(LIBDIR)/lmhosts
 -DRIVERFILE = $(LIBDIR)/printers.def
 -PASSWD_PROGRAM = /bin/passwd
--SMB_PASSWD_FILE = $(BASEDIR)/private/smbpasswd
 +SMBLOGFILE = $(LOGDIR)/log.smb
 +NMBLOGFILE = $(LOGDIR)/log.nmb
 +CONFIGFILE = $(ETCDIR)/smb.conf
 +LMHOSTSFILE = $(ETCDIR)/lmhosts
 +DRIVERFILE = $(ETCDIR)/printers.def
 +PASSWD_PROGRAM = /usr/bin/passwd
-+SMB_PASSWD_FILE = $(PRIVDIR)/smbpasswd
- SMB_PASSWD_PROGRAM = $(BINDIR)/smbpasswd
+ # This is where smbpasswd et al go
+-PRIVATEDIR = @privatedir@
++PRIVATEDIR?= @privatedir@
+ 
+ SMB_PASSWD_FILE = $(PRIVATEDIR)/smbpasswd
+ SMB_PASSGRP_FILE = $(PRIVATEDIR)/smbpassgrp
  
  # This is where SWAT images and help files go
--SWATDIR = $(BASEDIR)/swat
+-SWATDIR = @swatdir@
 +SWATDIR = $(BASEDIR)/share/swat
  
  # the directory where lock files go
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/11/27 12:48:27 bouyer Exp $
  
  # The directory where code page definition files go
  CODEPAGEDIR = $(LIBDIR)/codepages
-@@ -423,8 +423,8 @@
+@@ -426,8 +425,8 @@
  	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(CODEPAGEDIR)
  
  installbin: all installdirs
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/11/27 12:48:27 bouyer Exp $
  
  installscripts: installdirs
  	@$(SHELL) $(srcdir)/script/installscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
-@@ -449,8 +449,8 @@
+@@ -452,8 +451,8 @@
  	@$(SHELL) $(srcdir)/script/uninstallman.sh $(MANDIR) $(srcdir)
  
  uninstallbin:
