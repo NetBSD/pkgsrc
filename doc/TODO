@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2353 2004/11/10 15:17:43 adam Exp $
+$NetBSD: TODO,v 1.2354 2004/11/10 15:33:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -297,7 +297,6 @@ Suggested package updates
 	o cyrus-imapd21-2.1.16
 	o daapd-0.2.3
 	o dact-0.8.37
-	o dbench-2.1
 	o dctc-0.85.9
 	o dict-client-1.9.11
 	o dict-server-1.9.11
