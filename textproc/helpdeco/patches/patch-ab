@@ -1,19 +1,20 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/05/23 15:47:45 agc Exp $
+$NetBSD: patch-ab,v 1.2 2004/09/22 17:00:33 ben Exp $
 
 --- zapres.c.orig	Fri Sep 13 20:52:50 1996
-+++ zapres.c	Sat May 12 23:26:01 2001
-@@ -17,8 +17,9 @@
++++ zapres.c
+@@ -17,8 +17,10 @@ commercially. No fees may be charged on 
  
  #include <stdio.h>
  #include <stdlib.h>
 -#include <dir.h>
++#include <sys/types.h>
 +#include <sys/dir.h>
  #include <string.h>
 +#include "compat.h"
  
  int backup(FILE *f,char *oldname)
  {
-@@ -31,7 +32,7 @@
+@@ -31,7 +33,7 @@ int backup(FILE *f,char *oldname)
      int result=0;
  
      _splitpath(oldname,drive,dir,fname,ext);
@@ -22,7 +23,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/05/23 15:47:45 agc Exp $
      bak=fopen(path,"wb");
      if(bak)
      {
-@@ -102,7 +103,7 @@
+@@ -102,7 +104,7 @@ int main(int argc,char *argv[])
      else for(i=1;i<b;i++)
      {
  	_splitpath(argv[i],drive,dir,fname,ext);
