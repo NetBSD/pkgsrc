@@ -1,14 +1,21 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:09:02 agc Exp $
+$NetBSD: patch-aa,v 1.3 1998/11/15 20:17:57 perry Exp $
 
---- libguile/stime.c.orig	Sun Nov  2 14:40:38 1997
-+++ libguile/stime.c	Sun Nov  2 14:44:52 1997
-@@ -81,7 +81,9 @@
- extern char *tzname[]; /* RS6000 and others reject char **tzname.  */
- #endif
+--- configure.orig	Tue Oct 20 00:34:18 1998
++++ configure	Sun Nov 15 14:35:36 1998
+@@ -1319,6 +1319,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
  
-+#ifndef HAVE_STRPTIME
- char *strptime ();
-+#endif
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
- /* This should be figured out by autoconf.  */
- #ifdef CLK_TCK
+@@ -1364,7 +1365,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+-
++fi
+ 
+ echo $ac_n "checking for AIX""... $ac_c" 1>&6
+ echo "configure:1371: checking for AIX" >&5
