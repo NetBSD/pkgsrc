@@ -1,4 +1,4 @@
-$NetBSD: README.Interix,v 1.4 2004/03/12 00:16:42 tv Exp $
+$NetBSD: README.Interix,v 1.5 2004/03/27 14:46:59 grant Exp $
 
 Please read the general README file as well.
 
@@ -46,9 +46,6 @@ KNOWN CAVEATS
   the packages install to /usr/local).  If you want to have both kinds of
   packages installed in the system, supply "--pkgdbdir=DIRECTORY" to
   "bootstrap" to use an alternative package database directory.
-
-* As of this writing, the necessary Interix support stubs have not yet been
-  added to pkgsrc/mk.
 
 * On Windows under Interix, the "root" user is actually named
   "Administrator".  This may require some modification to pkgsrc to
