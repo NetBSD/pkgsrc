@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/03/31 21:00:22 garbled Exp $
+--- ee_conf.c.orig	Wed Mar 31 12:15:14 1999
++++ ee_conf.c	Wed Mar 31 12:22:10 1999
+@@ -10,6 +10,9 @@
+ #include <ee_image.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <errno.h>
++#include <sys/types.h>
++#include <sys/stat.h>
+ #include "globals.h"
+ #include "functions.h"
+ 
+@@ -25,10 +28,18 @@
+   gchar               *hom;
+   gchar               *s;
+   FILE                *f;
++  struct stat	      sb;
++  int 		      i;
++
++  extern int errno;
+   
+   hom = homedir(getuid());
+   if (!hom)
+     return;
++  s = g_strconcat(hom, "/.ee", NULL);
++  i = stat(s, &sb);
++  if (i == -1 && errno == ENOENT)
++	mkdir(s, 0);
+   s = g_strconcat(hom, "/.ee/settings", NULL);
+   g_free(hom);
+   f = fopen(s, "w");
