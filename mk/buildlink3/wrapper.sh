@@ -1,12 +1,13 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.4 2003/10/03 19:39:19 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.5 2003/10/09 12:15:15 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
 
 buildcmd="@_BLNK_WRAP_BUILDCMD@"
 quotearg="@_BLNK_WRAP_QUOTEARG@"
+buffer="@_BLNK_WRAP_BUFFER@"
 marshall="@_BLNK_WRAP_MARSHALL@"
 private_pre_cache="@_BLNK_WRAP_PRIVATE_PRE_CACHE@"
 private_cache_add="@_BLNK_WRAP_PRIVATE_CACHE_ADD@"
@@ -33,17 +34,18 @@ BUILDLINK_DIR="@BUILDLINK_DIR@"
 WRKDIR="@WRKDIR@"
 WRKSRC="@WRKSRC@"
 
+# Argument buffers
+buf1=; buf2=; buf3=; buf4=; buf5=
+
 cmd="@WRAPPEE@ @_BLNK_WRAP_EXTRA_FLAGS@"
-while $test $# -gt 0; do
-	arg="$1"; shift
+while $test $# -gt 0 -o -n "${buf1}${buf2}${buf3}${buf4}${buf5}"; do
 	cachehit=no
 	skipcache=no
 	skipargs=0
 	#
-	# Marshall any group of consecutive arguments into a single
-	# $arg to be checked in the cache and logic files.
+	# Get the next argument from the buffer.
 	#
-	. $marshall
+	. $buffer
 	#
 	# Check the private cache, and possibly set skipcache=yes.
 	#

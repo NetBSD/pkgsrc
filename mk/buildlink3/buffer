@@ -1,0 +1,71 @@
+# $NetBSD: buffer,v 1.1 2003/10/09 12:15:15 jlam Exp $
+#
+# Fill the buffer if it's empty, and shift the arguments.  The next
+# argument checked by the cache and logic files is taken from the
+# first non-empty buffer.  We avoid using "eval" so that we can skip
+# having to specially quote the argument using "sed".
+#
+case ${buf1}${buf2}${buf3}${buf4}${buf5} in
+"")
+	arg="$1"; shift
+	#
+	# Marshall any group of consecutive arguments into a single
+	# $arg to be checked in the cache and logic files.
+	#
+	. $marshall
+	#
+	# Fill the buffers from $arg.
+	#
+	case $arg in
+	-Wl,-R*:*|-Wl,-rpath,*:*|-Wl,-rpath-link,*:*|\
+	-Wl,--rpath,*:*|-Wl,--rpath-link,*:*)
+		#
+		# Change "-Wl,-R/path1:/path2:/path3" into
+		# "-Wl,-R/path1 -Wl,-R/path2 -Wl,-R/path3" so that
+		# they can be checked correctly in the cache and logic
+		# files.
+		#
+		case $arg in
+		-Wl,-R*)		R="-Wl,-R" ;;
+		-Wl,-rpath,*)		R="-Wl,-rpath," ;;
+		-Wl,-rpath-link,*)	R="-Wl,-rpath-link," ;;
+		-Wl,--rpath,*)		R="-Wl,--rpath," ;;
+		-Wl,--rpath-link,*)	R="-Wl,--rpath-link," ;;
+		esac
+		arg=`$echo "X$arg" | $Xsed -e "s|^"$R"||g"`
+		allargs="$@"
+		save_IFS="${IFS}"; IFS=":"
+		set -- $arg
+		while $test $# -gt 0; do
+			if   $test -z "$buf1"; then buf1="$R$1"; shift
+			elif $test -z "$buf2"; then buf2="$R$1"; shift
+			elif $test -z "$buf3"; then buf3="$R$1"; shift
+			elif $test -z "$buf4"; then buf4="$R$1"; shift
+			elif $test -z "$buf5"; then buf5="$R$1"; shift
+			fi
+		done
+		IFS="${save_IFS}"
+		if $test -n "$allargs"; then
+			set -- $allargs
+		fi
+		;;
+	*)
+		if   $test -z "$buf1"; then buf1="$arg"
+		elif $test -z "$buf2"; then buf2="$arg"
+		elif $test -z "$buf3"; then buf3="$arg"
+		elif $test -z "$buf4"; then buf4="$arg"
+		elif $test -z "$buf5"; then buf5="$arg"
+		fi
+		;;
+	esac
+	;;
+esac
+#
+# Re-fetch $arg from the first non-empty buffer.
+#
+if   $test -n "$buf1"; then arg="$buf1"; buf1=
+elif $test -n "$buf2"; then arg="$buf2"; buf2=
+elif $test -n "$buf3"; then arg="$buf3"; buf3=
+elif $test -n "$buf4"; then arg="$buf4"; buf4=
+elif $test -n "$buf5"; then arg="$buf5"; buf5=
+fi
