@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2000/07/05 15:15:11 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/23 10:31:51 rh Exp $
 #
 
-DISTNAME=	pngcrush-1.4.5
+DISTNAME=	pngcrush-1.4.8
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.sourceforge.net/pmt/
 
