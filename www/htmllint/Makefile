@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/03/18 14:05:11 kei Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/21 13:28:09 kei Exp $
 #
 
 DISTNAME=	htmllint
-PKGNAME=	htmllint-2.36
+PKGNAME=	htmllint-20010413
 CATEGORIES=	www japanese
 MASTER_SITES=	http://openlab.ring.gr.jp/k16/htmllint/archives/
 EXTRACT_SUFX=	.zip
@@ -32,7 +32,8 @@ post-patch:
 do-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/htmllint ${PREFIX}/bin; \
 	${INSTALL_SCRIPT_DIR} ${CGIDIR}; \
-	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${WRKSRC}/htmllintrc ${CGIDIR}; \
+	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${CGIDIR}; \
+	${INSTALL_DATA} ${WRKSRC}/htmllintrc ${CGIDIR}; \
 	${INSTALL_DATA} ${WRKSRC}/htmllintenv ${CGIDIR}/htmllint.env.default; \
 	${TEST} -f ${CGIDIR}/htmllint.env || \
 	    ${CP} ${CGIDIR}/htmllint.env.default  ${CGIDIR}/htmllint.env; \

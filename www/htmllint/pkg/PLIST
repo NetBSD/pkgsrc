@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2001/03/18 14:05:12 kei Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/04/21 13:28:09 kei Exp $
 bin/htmllint
 libexec/cgi-bin/htmllint.cgi
 libexec/cgi-bin/htmllint.env.default
 @exec [ -f %D/htmllint.env ] || cp %D/htmllint.env.default %D/htmllint.env
 libexec/cgi-bin/htmllintrc
 libexec/cgi-bin/tagslist.cgi
+share/httpd/htdocs/htmllint/15445-preparation.dtd
+share/httpd/htdocs/htmllint/15445-preparation.rul
 share/httpd/htdocs/htmllint/15445.dtd
 share/httpd/htdocs/htmllint/15445.rul
 share/httpd/htdocs/htmllint/HTMLlat1.ent
