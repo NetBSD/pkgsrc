@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.3 2002/08/08 11:59:37 wiz Exp $
+
+--- src/resid/Makefile.am.orig	Sun Mar  4 13:24:35 2001
++++ src/resid/Makefile.am
+@@ -6,13 +6,13 @@ libresid_a_SOURCES = sid.cc voice.cc wav
+ 
+ BUILT_SOURCES = $(noinst_DATA:.dat=.cc)
+ 
+-pkginclude_HEADERS = siddefs.h sid.h voice.h wave.h envelope.h filter.h extfilt.h pot.h spline.h
++noinst_HEADERS = siddefs.h sid.h voice.h wave.h envelope.h filter.h extfilt.h pot.h spline.h
+ 
+ noinst_DATA = wave6581_PST.dat wave6581_PS_.dat wave6581_P_T.dat wave6581__ST.dat wave8580_PST.dat wave8580_PS_.dat wave8580_P_T.dat wave8580__ST.dat
+ 
+ noinst_SCRIPTS = samp2src.pl
+ 
+-EXTRA_DIST = $(noinst_DATA) $(noinst_SCRIPTS) README.VICE
++EXTRA_DIST = $(noinst_DATA) $(noinst_HEADERS) $(noinst_SCRIPTS) README.VICE
+ 
+ SUFFIXES = .dat
+ 
