@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/06/18 16:06:37 agc Exp $
-# FreeBSD Id: Makefile,v 1.9 1996/12/15 02:05:58 max Exp 
-#
+# $NetBSD: Makefile,v 1.7 1999/05/22 20:11:32 tv Exp $
 
 DISTNAME=       lha-114c
 PKGNAME=        lha-1.14c
@@ -10,6 +8,11 @@ EXTRACT_SUFX=   .tgz
 
 MAINTAINER=     packages@netbsd.org
 
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
+MAKE_FLAGS=	MAKE="${MAKE}" CC="${CC}" OPTIMIZE="${CFLAGS}" \
+		MACHINE="-DSYSTIME_HAS_NO_TM -DTIMELOCAL -DUSESTRCASECMP -DSYSV_SYSTEM_DIR" \
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/src/lha ${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/man/lha.n ${PREFIX}/man/ja_JP.EUC/man1/lha.1
 
 .include "../../mk/bsd.pkg.mk"
