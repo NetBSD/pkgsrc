@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:32:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/02 20:07:03 zuntum Exp $
 #
 
 DISTNAME=	cs113ins
@@ -39,7 +39,7 @@ post-build:
 		${SED} -e s,@JAVA_HOME@,${JAVA_HOME},g < ${WRKDIR}/csched.tmp2 > ${WRKDIR}/csched
 
 do-install:
-		${MKDIR} ${PREFIX}/lib/cardboard-schedule
+		${INSTALL_DATA_DIR} ${PREFIX}/lib/cardboard-schedule
 		@(cd ${WRKDIR}/C:/projects && ${GTAR} cf - ${CSFILES} | (cd ${PREFIX}/lib/cardboard-schedule && ${GTAR} xvf -))
 		${INSTALL_SCRIPT} ${WRKDIR}/csched ${PREFIX}/bin
 

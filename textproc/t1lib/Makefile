@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2001/04/02 20:07:03 zuntum Exp $
 #
 
 DISTNAME=	t1lib-1.0.1
@@ -25,7 +25,7 @@ post-install:
 	  ${CHMOD} go+r ${PREFIX}/share/t1lib/Fonts/enc/IsoLatin2.enc; \
 	  ${PAX} -rw -s "/doc/t1lib/" doc ${PREFIX}/share/doc
 
-	${MKDIR} ${PREFIX}/share/examples/t1lib
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/t1lib
 	cd ${WRKSRC}/examples; \
 	  ${PAX} -rw FontDataBase README.t1example1 t1example1.c t1lib.config \
 	      ${PREFIX}/share/examples/t1lib
