@@ -1,0 +1,4 @@
+XT is an implementation in Java of XSL Transformations. This version of XT
+implements the PR-xslt-19991008 version of XSLT. Stylesheets written for
+earlier versions of the XSLT WD must be converted before they can be used
+with this version of XT.
