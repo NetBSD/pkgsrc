@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.662 2003/06/27 23:05:09 jmmv Exp $
+$NetBSD: TODO,v 1.663 2003/06/28 10:56:43 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -272,8 +272,6 @@ Suggested package updates
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.0
 	o xmms-crossfade-0.3.2
-	o xmule-1.4.1 [pkg/21940]
-	o xmule-1.4.1a
 	o xosview-1.8.0 [pkg/20265]
 	o xpaint-2.7.0
 	o xplanet-1.0.0
