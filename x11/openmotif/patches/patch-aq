@@ -1,0 +1,11 @@
+$NetBSD: patch-aq,v 1.1 2001/12/01 02:00:43 dmcmahill Exp $
+
+--- clients/uil/Imakefile.orig	Thu Nov 29 09:34:10 2001
++++ clients/uil/Imakefile	Thu Nov 29 22:17:48 2001
+@@ -74,5 +74,5 @@
+ 		UilLstMac.o	UilSemVal.o	UilSemCSet.o	UilDB.o
+ 
+-#if DoSharedLib && DoNormalLib
++#if DoSharedLib && DoNormalLib && SeparateSharedCompile
+ NORMAL_OBJ =	unshared/UilCmd.o	unshared/UilDiags.o \
+ 	unshared/UilKeyTab.o	unshared/UilLexAna.o	unshared/UilLexPars.o \
