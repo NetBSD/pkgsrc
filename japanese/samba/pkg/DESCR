@@ -1,0 +1,22 @@
+Samba is a suite of programs which work together to allow clients to access to
+a server's filespace and printers via the SMB (Server Message Block) protocol.
+
+In practice, this means that you can redirect disks and printers to Unix disks
+and printers from Lan Manager clients, Windows for Workgroups 3.11 clients,
+Windows NT clients, Linux clients and OS/2 clients.  There is also a generic
+Unix client program supplied as part of the suite which allows Unix users to
+use an ftp-like interface to access filespace and printers on any other SMB
+servers.  This gives the capability for these operating systems to behave much
+like a LAN Server or Windows NT Server machine, only with added functionality
+and flexibility designed to make life easier for administrators.
+
+                    *===* Security Notes *===*
+
+The users' encrypted passwords stored in ${ETCDIR}/private/smbpasswd (default:
+/etc/samba/private/smbpasswd) *ARE PASSWORD EQUIVALENT* from the viewpoint of
+SMB protocol.  Do not weaken the permission mode of this file (default:
+root.wheel and rw-------) without any special reasons.  And please note that
+even if you pkg_delete this port, pkg_delete will *NOT* remove the smbpasswd
+file because pkg_delete can be used for upgrading this package.  If you won't
+use this package anymore, I strongly recommend that you remove the smbpasswd
+file manually.

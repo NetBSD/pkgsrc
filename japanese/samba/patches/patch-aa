@@ -1,0 +1,67 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/30 17:29:44 kei Exp $
+
+--- Makefile.in.orig	Tue Apr 25 19:06:11 2000
++++ Makefile.in	Fri Apr 28 16:26:52 2000
+@@ -25,10 +25,12 @@
+ BINDIR = @bindir@
+ # we don't use sbindir because we want full compatibility with
+ # the previous releases of Samba
+-SBINDIR = @bindir@
++SBINDIR = @sbindir@
+ LIBDIR = @libdir@
+ VARDIR = @localstatedir@
+ MANDIR = @mandir@
++ETCDIR?= $(BASEDIR)/etc
++LOGDIR?= $(BASEDIR)/log
+ SAMBABOOK = @sambabook@
+ 
+ # The permissions to give the executables
+@@ -37,12 +39,12 @@
+ # set these to where to find various files
+ # These can be overridden by command line switches (see smbd(8))
+ # or in smb.conf (see smb.conf(5))
+-SMBLOGFILE = $(VARDIR)/log.smb
+-NMBLOGFILE = $(VARDIR)/log.nmb
+-CONFIGFILE = $(LIBDIR)/smb.conf
+-LMHOSTSFILE = $(LIBDIR)/lmhosts
+-DRIVERFILE = $(LIBDIR)/printers.def
+-PASSWD_PROGRAM = /bin/passwd
++SMBLOGFILE = $(LOGDIR)/log.smb
++NMBLOGFILE = $(LOGDIR)/log.nmb
++CONFIGFILE = $(ETCDIR)/smb.conf
++LMHOSTSFILE = $(ETCDIR)/lmhosts
++DRIVERFILE = $(ETCDIR)/printers.def
++PASSWD_PROGRAM = /usr/bin/passwd
+ # This is where smbpasswd et al go
+ PRIVATEDIR = @privatedir@
+ 
+@@ -470,14 +472,14 @@
+ 
+ installdirs:
+ 	$(SHELL) $(srcdir)/install-sh -d -m $(INSTALLPERMS) \
+-	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(CODEPAGEDIR) ${SWATDIR} ${SAMBABOOK}
++	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(ETCDIR) $(LOGDIR) $(CODEPAGEDIR) ${SWATDIR} ${SAMBABOOK}
+ 
+ installservers: all installdirs
+-	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
++	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
+ 
+ installbin: all installdirs
+-	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
+-	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(PROGS)
++	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
++	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
+ 
+ installscripts: installdirs
+ 	@$(SHELL) $(srcdir)/script/installscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
+@@ -495,8 +497,8 @@
+ 	@$(SHELL) $(srcdir)/script/uninstallman.sh $(MANDIR) $(srcdir)
+ 
+ uninstallbin:
+-	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
+-	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(PROGS)
++	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
++	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
+ 
+ uninstallscripts:
+ 	@$(SHELL) $(srcdir)/script/uninstallscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)

@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2000/08/30 17:29:45 kei Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+SAMBA_PRIVATE=@SAMBA_PRIVATE@
+ROOT_GROUP=@ROOT_GROUP@
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	mkdir -p ${SAMBA_PRIVATE}
+	if [ ! -f ${SAMBA_PRIVATE}/smbpasswd ]
+	then
+		echo -n "Creating ${SAMBA_PRIVATE}/smbpasswd..."
+		chown -R root ${SAMBA_PRIVATE}
+		chgrp -R ${ROOT_GROUP} ${SAMBA_PRIVATE}
+		cat /etc/passwd | ${PKG_PREFIX}/bin/mksmbpasswd.sh \
+			>${SAMBA_PRIVATE}/smbpasswd
+		chmod 500 ${SAMBA_PRIVATE}
+		chmod 600 ${SAMBA_PRIVATE}/smbpasswd
+		echo "done."
+	fi
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0

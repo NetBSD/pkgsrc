@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/08/30 17:29:44 kei Exp $
+
+--- acconfig.h.orig	Tue Apr 25 19:06:11 2000
++++ acconfig.h	Fri Apr 28 16:27:20 2000
+@@ -81,7 +81,9 @@
+ #undef SIZEOF_INO_T
+ #undef SIZEOF_OFF_T
+ #undef STAT_STATVFS64
++#undef HAVE_READLINE
+ #undef HAVE_LIBREADLINE
++#undef HAVE_LIBEDIT
+ #undef HAVE_KERNEL_OPLOCKS
+ #undef HAVE_IRIX_SPECIFIC_CAPABILITIES
+ #undef HAVE_INT16_FROM_RPC_RPC_H

@@ -1,0 +1,55 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/08/30 17:29:44 kei Exp $
+
+--- configure.in.orig	Tue Apr 25 19:06:39 2000
++++ configure.in	Fri Apr 28 16:33:54 2000
+@@ -234,9 +234,6 @@
+ AC_CHECK_TYPE(offset_t,loff_t)
+ AC_CHECK_TYPE(ssize_t, int)
+ 
+-# we need libcups for CUPS support...
+-AC_CHECK_LIB(cups,httpConnect)
+-
+ # we need libdl for PAM and the new VFS code
+ AC_CHECK_LIB(dl,main)
+ 
+@@ -312,7 +309,14 @@
+ # test for where we get readline() from
+ if test "$ac_cv_header_readline_h" = "yes" ||
+    test "$ac_cv_header_readline_readline_h" = "yes"; then
+-  AC_CHECK_LIB(readline,readline)
++    AC_CHECK_LIB(termcap, tputs)
++    if test "$ac_cv_lib_termcap_tputs" = "yes"; then
++        AC_CHECK_LIB(edit, readline, , [AC_CHECK_LIB(readline, readline)])
++        if test "$ac_cv_lib_edit_readline" = "yes" ||
++           test "$ac_cv_lib_readline_readline" = "yes"; then
++            AC_DEFINE(HAVE_READLINE)
++       fi
++    fi
+ fi
+ 
+ 
+@@ -1138,6 +1142,24 @@
+     AC_DEFINE(BROKEN_NISPLUS_INCLUDE_FILES)
+ fi
+ 
++
++#################################################
++# check for CUPS support
++AC_MSG_CHECKING(whether to use CUPS)
++AC_ARG_WITH(cups,
++[  --with-cups    Include CUPS support
++  --without-cups Don't include CUPS support (default)],
++[ case "$withval" in
++  yes)
++    AC_MSG_RESULT(yes)
++    AC_CHECK_LIB(cups, httpConnect)
++    ;;
++  *)
++    AC_MSG_RESULT(no)
++    ;;
++  esac ],
++  AC_MSG_RESULT(no)
++)
+ 
+ #################################################
+ # check for smbwrapper support
