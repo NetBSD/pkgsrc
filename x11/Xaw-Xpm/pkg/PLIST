@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/05/05 13:46:33 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/15 10:42:31 agc Exp $
 include/X11/Xaw3d/AllWidgets.h
 include/X11/Xaw3d/AsciiSink.h
 include/X11/Xaw3d/AsciiSinkP.h
@@ -77,8 +77,6 @@ include/X11/Xaw3d/XawInit.h
 include/X11/Xaw3d/Xpm.h
 lib/libXaw3d.a
 lib/libXaw3d.so.6.1
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 share/doc/Xaw-Xpm/README-XPM
 share/doc/Xaw-Xpm/defaults-XawXpm
 share/pixmaps/a036.xpm
