@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/12/18 14:24:01 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/02 04:19:41 snj Exp $
 #
 
 DISTNAME=	grepmail-5.22
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/grepmail/.packlist
 
 MAKE_PARAMS+=	INSTALLDIRS=site
