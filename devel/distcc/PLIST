@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/15 12:34:06 martti Exp $
+bin/distcc
+bin/distccd
+man/man1/distcc.1
+man/man1/distccd.1
+share/doc/distcc/AUTHORS
+share/doc/distcc/COPYING
+share/doc/distcc/COPYING.FDL
+share/doc/distcc/NEWS
+share/doc/distcc/OLDNEWS
+share/doc/distcc/README
+share/doc/distcc/DEPENDENCIES
+share/doc/distcc/INSTALL
+@dirrm share/doc/distcc
