@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1998/10/02 14:19:21 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/10/05 23:06:17 rvb Exp $
 bin/filcon
 bin/norton
 bin/norton-reinit
@@ -8,7 +8,6 @@ sbin/backup
 sbin/backup.sh
 sbin/bldvldb.sh
 sbin/codasrv
-sbin/createvol
 sbin/createvol_rep
 sbin/initpw
 sbin/inoder
@@ -24,8 +23,6 @@ sbin/purgevol_rep
 sbin/pwd2pdb
 sbin/rdsinit
 sbin/readdump
-sbin/recreatevol
-sbin/recreatevol_rep
 sbin/rpc2portmap
 sbin/rvmutl
 sbin/startserver
