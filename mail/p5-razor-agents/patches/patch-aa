@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/04/24 21:42:43 heinz Exp $
+$NetBSD: patch-aa,v 1.3 2003/10/07 23:20:43 heinz Exp $
 
 --- Makefile.PL.orig	Wed Oct 16 00:49:34 2002
 +++ Makefile.PL
-@@ -127,7 +127,7 @@
+@@ -127,8 +127,21 @@ sub MY::install {
   
    $inherited =~ s/(\$\(INSTALLMAN1DIR\))/$1$man5/gm;
    $inherited =~ s/install :: all pure_install doc_install/install :: all pure_install doc_install install_razor_agents/;
@@ -10,4 +10,18 @@ $NetBSD: patch-aa,v 1.2 2003/04/24 21:42:43 heinz Exp $
 +  $inherited .= "\ninstall_razor_agents::\n\t " . '$(INSTALLSCRIPT)/razor-client'; 
    $inherited;
  
++}
++
++sub MY::libscan {
++
++  package MY;
++
++  my ($self, $path) = @_;
++
++  if ($path =~ m/\.orig$/i) {
++    return q{};
++  } else {
++    return $path;
++  }
  }
+ 
