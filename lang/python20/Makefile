@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/11/22 21:48:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2004/12/19 05:34:07 grant Exp $
 #
 
 DISTNAME=	Python-2.0.1
@@ -78,4 +78,5 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
