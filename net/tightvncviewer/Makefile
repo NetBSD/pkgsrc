@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/10/03 00:18:00 tv Exp $
-# FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
-#
+# $NetBSD: Makefile,v 1.18 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=		tightvnc-1.2.9
 PKGNAME=		${DISTNAME:S/tightvnc/tightvncviewer/}

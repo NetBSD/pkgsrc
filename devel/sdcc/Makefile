@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/12/03 15:14:55 wiz Exp $
-# FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
+# $NetBSD: Makefile,v 1.28 2005/03/24 21:12:53 wiz Exp $
 
 DISTNAME=	sdcc-2.4.0
 PKGNAME=	${DISTNAME:S/-src//}

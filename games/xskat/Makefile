@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/05/27 18:18:07 wiz Exp $
-# FreeBSD Id: Makefile,v 1.10 1998/12/22 16:07:01 tg Exp
-#
+# $NetBSD: Makefile,v 1.10 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=	xskat-3.4
 PKGREVISION=	1

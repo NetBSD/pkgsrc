@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/06/05 14:09:42 minskim Exp $
-# FreeBSD Id: Makefile,v 1.6 1998/08/07 23:56:12 asami Exp
-#
+# $NetBSD: Makefile,v 1.27 2005/03/24 21:12:51 wiz Exp $
 
 DISTNAME=	tkhylafax-3.1
 PKGREVISION=	3

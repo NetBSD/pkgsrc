@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/05 09:56:36 taca Exp $
-# FreeBSD Id: Makefile,v 1.1.1.1 1999/03/31 11:52:07 flathill Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/24 21:13:02 wiz Exp $
 
 DISTNAME=	namazu-1.3.0.11
 PKGREVISION=	1

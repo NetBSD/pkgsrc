@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/04/12 15:07:41 xtraeme Exp $
-# FreeBSD Id: Makefile,v 1.4 1997/01/27 15:59:35 erich Exp
-#
+# $NetBSD: Makefile,v 1.18 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=	libXg.utf.fonts
 PKGNAME=	libXgFonts-1.0

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/24 15:13:20 grant Exp $
-# FreeBSD Id: Makefile,v 1.15 1999/01/27 07:41:16 fenner Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/24 21:13:02 wiz Exp $
 
 DISTNAME=	groff-1.10
 PKGNAME=	ja-groff-0.99

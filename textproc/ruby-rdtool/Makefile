@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/03/06 17:19:07 taca Exp $
-# FreeBSD: ports/textproc/ruby-rdtool/Makefile,v 1.15 2001/01/30 19:20:09 knu Exp
+# $NetBSD: Makefile,v 1.15 2005/03/24 21:13:02 wiz Exp $
 
 DISTNAME=	rdtool-0.6.14
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}

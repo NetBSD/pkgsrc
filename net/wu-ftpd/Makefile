@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/03/01 16:06:37 wiz Exp $
-# FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
-#
+# $NetBSD: Makefile,v 1.27 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=	wu-ftpd-2.6.2
 PKGREVISION=	3

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/21 07:27:16 snj Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/10/13 09:14:49 tg Exp
-#
+# $NetBSD: Makefile,v 1.18 2005/03/24 21:12:58 wiz Exp $
 
 DISTNAME=	bing-1.0.4
 CATEGORIES=	net

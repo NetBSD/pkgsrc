@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/03/09 23:30:40 kristerw Exp $
-# FreeBSD Id: Makefile,v 1.6 1999/01/27 07:41:12 fenner Exp
-#
+# $NetBSD: Makefile,v 1.24 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=	gnuchess-5.07
 PKGREVISION=	1

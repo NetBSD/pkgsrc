@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/12/03 15:15:00 wiz Exp $
-# FreeBSD Id: Makefile,v 1.2 2000/04/12 06:18:03 obrien Exp
+# $NetBSD: Makefile,v 1.12 2005/03/24 21:12:55 wiz Exp $
 
 DISTNAME=	cu-prolog-3.94
 CATEGORIES=	lang

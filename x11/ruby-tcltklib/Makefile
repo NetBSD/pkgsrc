@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/06 17:19:08 taca Exp $
-# FreeBSD: ports/lang/ruby-tcltklib/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
+# $NetBSD: Makefile,v 1.16 2005/03/24 21:13:03 wiz Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-tcltklib-${RUBY_VERSION}

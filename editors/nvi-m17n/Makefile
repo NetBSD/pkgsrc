@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/09/16 10:51:17 agc Exp $
-# FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
+# $NetBSD: Makefile,v 1.28 2005/03/24 21:12:53 wiz Exp $
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.19991117

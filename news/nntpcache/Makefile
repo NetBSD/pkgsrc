@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/03/18 17:56:10 tv Exp $
-# FreeBSD Id: Makefile,v 1.11 1998/02/01 03:04:11 itojun Exp
-#
+# $NetBSD: Makefile,v 1.22 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=		nntpcache-3.0.1
 CATEGORIES=		news

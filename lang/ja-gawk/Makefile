@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/08/09 10:59:09 seb Exp $
-# FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:14 fenner Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/24 21:12:55 wiz Exp $
 
 DISTNAME=	gawk-3.0.4
 PKGNAME=	ja-gawk-3.0.4

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/01/01 11:43:27 kristerw Exp $
-# FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:09 fenner Exp
-#
+# $NetBSD: Makefile,v 1.21 2005/03/24 21:12:50 wiz Exp $
 
 DISTNAME=       arc521e.pl8
 PKGNAME=        arc-5.21e

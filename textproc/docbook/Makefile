@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/02/18 16:09:15 wiz Exp $
-# FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
-#
+# $NetBSD: Makefile,v 1.32 2005/03/24 21:13:01 wiz Exp $
 
 DISTNAME=	docbook-4.4
 CATEGORIES=	textproc

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/20 11:31:05 grant Exp $
-# FreeBSD Id: Makefile,v 1.9 1997/09/14 02:54:03 jfitz Exp
-#
+# $NetBSD: Makefile,v 1.19 2005/03/24 21:12:58 wiz Exp $
 
 DISTNAME=		Array-PrintCols-2.1
 PKGNAME=		p5-${DISTNAME}

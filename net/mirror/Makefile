@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/20 12:22:19 agc Exp $
-# FreeBSD Id: Makefile,v 1.6 1996/12/01 01:22:54 obrien Exp
-#
+# $NetBSD: Makefile,v 1.23 2005/03/24 21:12:58 wiz Exp $
 
 DISTNAME=	mirror-2.9
 PKGREVISION=	1

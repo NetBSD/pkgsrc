@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:18:17 agc Exp $
-# FreeBSD Id: Makefile,v 1.7 1998/08/05 09:31:14 asami Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/24 21:12:55 wiz Exp $
 
 DISTNAME=	vcg.1.30.r3.17
 PKGNAME=	vcg-1.30

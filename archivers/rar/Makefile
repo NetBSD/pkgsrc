@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/11/08 13:38:17 wiz Exp $
-# FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp
-#
+# $NetBSD: Makefile,v 1.39 2005/03/24 21:12:50 wiz Exp $
 
 DISTNAME=		rarbsd
 PKGNAME=		rar-2.02

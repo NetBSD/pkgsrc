@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/12/28 02:47:48 reed Exp $
-# FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
-#
+# $NetBSD: Makefile,v 1.34 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2

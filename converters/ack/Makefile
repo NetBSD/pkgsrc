@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/12/03 15:14:52 wiz Exp $
-# FreeBSD Id: Makefile,v 1.1.1.1 1998/09/15 22:05:58 kuriyama Exp
+# $NetBSD: Makefile,v 1.4 2005/03/24 21:12:52 wiz Exp $
 
 DISTNAME=	ack139
 PKGNAME=	ack-1.39

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/11/23 14:15:29 wiz Exp $
-# FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
-#
+# $NetBSD: Makefile,v 1.19 2005/03/24 21:13:02 wiz Exp $
 
 DISTNAME=	ISOEnts
 PKGNAME=	iso8879-1986

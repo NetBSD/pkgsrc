@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:25:33 grant Exp $
-# FreeBSD Id: ports/irc/bnc/Makefile,v 1.9 2000/05/22 06:38:58 will Exp
+# $NetBSD: Makefile,v 1.10 2005/03/24 21:12:51 wiz Exp $
 
 DISTNAME=	bnc2.8.6
 PKGNAME=	${DISTNAME:S/bnc/&-/}

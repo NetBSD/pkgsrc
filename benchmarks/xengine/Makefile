@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/07/30 15:50:38 minskim Exp $
-# FreeBSD Id: ports/benchmarks/xengine/Makefile,v 1.9 2000/02/02 22:31:24 mharo Exp
+# $NetBSD: Makefile,v 1.13 2005/03/24 21:12:51 wiz Exp $
 
 DISTNAME=	xengine-1.0.1
 PKGREVISION=	1

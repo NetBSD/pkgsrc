@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/06 16:52:39 taca Exp $
-# FreeBSD: ports/archivers/ruby-zlib/Makefile,v 1.7 2000/09/26 22:01:12 knu Exp
+# $NetBSD: Makefile,v 1.8 2005/03/24 21:12:53 wiz Exp $
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGPREFIX}-zlib-${RUBY_VERSION}

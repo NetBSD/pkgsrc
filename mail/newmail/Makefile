@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/06/17 12:49:01 grant Exp $
-# FreeBSD: ports/mail/newmail/Makefile,v 1.4 2001/06/08 18:36:36 dwcjr Exp
-#
+# $NetBSD: Makefile,v 1.6 2005/03/24 21:12:56 wiz Exp $
 
 DISTNAME=	newmail-1.0.1
 CATEGORIES=	mail

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 17:01:14 martti Exp $
-# FreeBSD Id: ports/misc/colortail/Makefile,v 1.10 2000/06/28 17:20:27 alex Exp
+# $NetBSD: Makefile,v 1.8 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=	colortail-0.3.0
 CATEGORIES=	misc

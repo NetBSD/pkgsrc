@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/02/19 05:27:35 taca Exp $
-# FreeBSD: ports/devel/ruby-byaccr/Makefile,v 1.2 2000/11/03 15:49:06 knu Exp
+# $NetBSD: Makefile,v 1.7 2005/03/24 21:12:53 wiz Exp $
 
 DISTNAME=	byaccr-0.1
 PKGNAME=	ruby-${DISTNAME}

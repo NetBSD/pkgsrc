@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/10/03 00:14:56 tv Exp $
-# FreeBSD: Makefile,v 1.8 1996/11/18 09:53:36 asami Exp
-#
+# $NetBSD: Makefile,v 1.25 2005/03/24 21:12:55 wiz Exp $
 
 DISTNAME=		pixmap2.6
 PKGNAME=		pixmap-2.6.4

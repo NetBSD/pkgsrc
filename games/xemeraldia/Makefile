@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:58 wiz Exp $
-# FreeBSD Id: ports/games/xemeraldia/Makefile,v 1.17 1999/12/10 19:24:55 steve Exp
+# $NetBSD: Makefile,v 1.7 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=	xemeraldia-0.3
 PKGNAME=	xemeraldia-0.31

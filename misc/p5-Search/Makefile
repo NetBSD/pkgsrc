@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/20 11:31:06 grant Exp $
-# FreeBSD Id: Makefile,v 1.9 1997/06/24 18:43:31 jfitz Exp
-#
+# $NetBSD: Makefile,v 1.17 2005/03/24 21:12:58 wiz Exp $
 
 DISTNAME=		Search-0.2
 PKGNAME=		p5-Search-0.2

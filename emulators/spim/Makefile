@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/12/03 15:14:56 wiz Exp $
-# FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:35 obrien Exp
-#
+# $NetBSD: Makefile,v 1.21 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=		spim
 PKGNAME=		spim-6.5

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/21 07:19:12 snj Exp $
-# FreeBSD Id: Makefile,v 1.2 1999/05/01 04:00:25 taoka Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=	jhd-2.3
 CATEGORIES=	japanese misc

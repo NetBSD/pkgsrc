@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/11/03 00:46:24 kristerw Exp $
-# FreeBSD Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
-#
+# $NetBSD: Makefile,v 1.30 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=	vicsrc-2.8
 PKGNAME=	${DISTNAME:S/src//}

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:10 wiz Exp $
-# FreeBSD Id: ports/misc/dog/Makefile,v 1.1 2000/06/10 05:45:34 will Exp
+# $NetBSD: Makefile,v 1.9 2005/03/24 21:13:01 wiz Exp $
 
 DISTNAME=	dog-1.7
 CATEGORIES=	misc

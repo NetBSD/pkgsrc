@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/12/03 15:14:58 wiz Exp $
-# FreeBSD Id: Makefile,v 1.3 1998/08/05 09:31:04 asami Exp
-#
+# $NetBSD: Makefile,v 1.12 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=	xworm102
 PKGNAME=	xworm-1.02

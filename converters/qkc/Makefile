@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/03 15:14:52 wiz Exp $
-# FreeBSD: ports/japanese/qkc/Makefile,v 1.15 2001/05/10 11:42:23 max Exp
+# $NetBSD: Makefile,v 1.6 2005/03/24 21:12:52 wiz Exp $
 
 DISTNAME=	qkcc100
 PKGNAME=	qkc-1.0

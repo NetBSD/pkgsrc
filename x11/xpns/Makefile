@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/12/03 15:15:13 wiz Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
-#
+# $NetBSD: Makefile,v 1.16 2005/03/24 21:13:04 wiz Exp $
 
 DISTNAME=	pns_source
 PKGNAME=	xpns-1.0

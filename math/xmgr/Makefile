@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/01/12 15:32:01 jlam Exp $
-# FreeBSD Id: Makefile,v 1.13 1998/12/12 22:27:21 jseger Exp
-#
+# $NetBSD: Makefile,v 1.21 2005/03/24 21:12:56 wiz Exp $
 
 DISTNAME=		xmgr-4.1.2
 PKGREVISION=		1

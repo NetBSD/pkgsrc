@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/12/17 22:41:15 wiz Exp $
-# FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp
-#
+# $NetBSD: Makefile,v 1.42 2005/03/24 21:12:50 wiz Exp $
 
 DISTNAME=	zip-2.3
 PKGREVISION=	3

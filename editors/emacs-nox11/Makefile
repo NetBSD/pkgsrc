@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/22 15:40:49 wiz Exp $
-# FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
+# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:53 wiz Exp $
 
 DISTNAME=	emacs-21.4a
 PKGNAME=	emacs-nox11-21.4a

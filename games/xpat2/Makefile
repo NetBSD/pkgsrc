@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/12/03 13:28:22 wiz Exp $
-# FreeBSD: ports/games/xpat2/Makefile,v 1.11 2000/04/14 12:27:59 asami Exp
+# $NetBSD: Makefile,v 1.13 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=	xpat2-1.07
 CATEGORIES=	games
