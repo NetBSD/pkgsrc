@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/04/13 15:31:07 agc Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/21 15:32:06 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -16,8 +16,14 @@ DEPENDS+=		amanda-common-2.4.1p1:../amanda-common
 USE_PERL5=		yes
 
 .include "../../mk/bsd.prefs.mk"
-AMANDA_USER?=		backup
+
+.if ${OPSYS} == "NetBSD"
 AMANDA_GROUP=		operator
+.elif ${OPSYS} == "SunOS"
+AMANDA_GROUP=		sysadmin
+.endif
+
+AMANDA_USER?=		backup
 AMANDA_VAR?=		/var/amanda
 
 USE_LIBTOOL=		yes
