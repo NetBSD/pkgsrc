@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5014 2004/02/27 01:32:30 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5015 2004/02/27 01:59:03 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1065,3 +1065,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added jigdo-0.7.0 [agc 2004-02-26]
 	Updated SDL_gfx to 2.0.10 [ben 2004-02-26]
 	Updated mklivecd to 0.2 [xtraeme 2004-02-27]
+	Updated gtk2 to 2.2.4nb4 [snj 2004-02-27]
+	Updated gtk-thinice-engine to 2.0.2nb3 [snj 2004-02-27]
+	Updated xfce4-gtk2-engines to 2.1.8nb1 [snj 2004-02-27]
