@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/03/11 18:03:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2004/04/25 23:16:22 tv Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -14,6 +14,8 @@ COMMENT=	Create/update ZIP files compatible with pkzip version 1
 RESTRICTED=	"Do not modify.  Do not sell for profit."
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
+
+NOT_FOR_PLATFORM+= Interix-*-* # needs porting
 
 WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
