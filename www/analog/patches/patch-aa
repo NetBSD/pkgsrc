@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.21 2002/02/13 13:03:14 tron Exp $
+$NetBSD: patch-aa,v 1.22 2002/07/11 10:23:13 abs Exp $
 
---- Makefile.orig	Wed Feb 13 10:45:52 2002
-+++ Makefile	Wed Feb 13 13:54:55 2002
+--- Makefile.orig	Tue May 14 21:20:07 2002
++++ Makefile
 @@ -2,15 +2,20 @@
  # Please read docs/Readme.html, or http://www.analog.cx/
  # This is a general Unix-like Makefile: Makefiles for other OS's can be found
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.21 2002/02/13 13:03:14 tron Exp $
  #                 NeXTSTEP needs CFLAGS = -O2 -pipe -no-precomp 
 -DEFS =          # any combination of -DNOPIPES -DNODNS -DNODIRENT -DNOGLOB ...
 +DEFS =	-DANALOGDIR=\"${PREFIX}/lib/analog/\" \
-+	-DDEFAULTCONFIGFILE=\"${PREFIX}/etc/analog.cfg\" \
++	-DDEFAULTCONFIGFILE=\"${SYSCONFDIR}/analog.cfg\" \
 +	-DIMAGEDIR=\"/images/\" \
 +	-DLANGDIR=\"${PREFIX}/lib/analog/lang/\" \
 +	-DLOGFILE=\"/var/log/httpd-access.log\"
