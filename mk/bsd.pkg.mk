@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1302 2003/11/20 15:07:53 cube Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1303 2003/11/20 16:59:02 cube Exp $
 #
 # This file is in the public domain.
 #
@@ -2190,7 +2190,7 @@ do-patch: uptodate-digest
 					${ECHO_MSG} "**************************************"; \
 					${ECHO_MSG} "Ignoring unknown patch file: $$i"; \
 					${ECHO_MSG} "**************************************"; \
-					continue;
+					continue;			\
 				fi;					\
 				;;					\
 			esac;						\
