@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/04/15 10:38:52 agc Exp $
+# $NetBSD: Makefile,v 1.13 1998/06/05 12:06:12 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 09:33:26 asami Exp
 #
 
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	widgets/Xaw3d/R6.1
 
 MAINTAINER=	tron@netbsd.org
+
+CONFLICTS=	Xaw-Xpm-1.1
 
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/xc/lib/Xaw3d

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 1998/05/05 13:46:31 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/05 12:06:12 frueauf Exp $
 #
 
-DISTNAME=			Xaw-XPM-1.1
+DISTNAME=			Xaw-Xpm-1.1
 WRKSRC=				${WRKDIR}/XawXpm
 CATEGORIES=			x11
 MASTER_SITES=			${MASTER_SITE_SUNSITE}
