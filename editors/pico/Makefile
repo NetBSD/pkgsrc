@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/02/08 04:03:15 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2004/04/12 11:12:31 xtraeme Exp $
 
 DISTNAME=	pine4.58
 PKGNAME=	pico-4.6
@@ -13,7 +13,7 @@ COMMENT=	Text editor (ships with Pine), and Pine's text editing lib
 
 LICENSE=	pine-license
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 
 .include "../../mk/bsd.prefs.mk"
@@ -47,5 +47,5 @@ do-install:
 	cd ${WRKSRC}/pico && \
 	${INSTALL_DATA} *.h ${PREFIX}/include/pico
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
