@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2005/02/09 16:19:35 jschauma Exp $
+
+--- cmd/shlibsign/sign.sh.orig	Sun Feb  6 17:41:50 2005
++++ cmd/shlibsign/sign.sh	Sun Feb  6 17:42:29 2005
+@@ -39,7 +39,7 @@
+     export LIBPATH
+     SHLIB_PATH=${1}/lib:$SHLIB_PATH
+     export SHLIB_PATH
+-    LD_LIBRARY_PATH=${1}/lib:$LD_LIBRARY_PATH
++    LD_LIBRARY_PATH=${1}/lib:$PREFIX/lib
+     export LD_LIBRARY_PATH
+     DYLD_LIBRARY_PATH=${1}/lib:$DYLD_LIBRARY_PATH
+     export DYLD_LIBRARY_PATH
