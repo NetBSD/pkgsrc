@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.864 2002/12/22 13:07:27 taca Exp $
+$NetBSD: CHANGES,v 1.865 2002/12/22 13:24:04 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4047,3 +4047,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gettext to 0.11.5nb1 [jlam 2002-12-21]
 	Updated tracker to 5.3nb1 [jmmv 2002-12-22]
 	Updated bkpupsd to 2.1.1 [taca 2002-12-22]
+	Added cfengine-2.0.4 [seb 2002-12-22]
+	Added cfengine-doc-2.0.4 [seb 2002-12-22]
