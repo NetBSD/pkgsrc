@@ -1,5 +1,7 @@
---- Makefile.in.orig	2004-01-08 10:21:29.000000000 -0800
-+++ Makefile.in	2004-02-24 08:26:13.000000000 -0800
+$NetBSD: patch-ab,v 1.5 2004/05/12 20:53:51 bouyer Exp $
+
+--- Makefile.in.orig	2004-05-12 22:51:17.000000000 +0200
++++ Makefile.in	2004-05-12 21:53:57.000000000 +0200
 @@ -168,20 +168,14 @@
  # order is significant, don't change it arbitrarily
  SUBDIRS = \
@@ -23,3 +25,12 @@
  
  
  EXTRA_DIST = $(SNAPSHOT_STAMP) \
+@@ -506,7 +500,7 @@
+ uninstall: uninstall-recursive
+ 
+ install-am: all-am
+-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am
++	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+ 
+ installcheck: installcheck-recursive
+ install-strip:
