@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1136 2003/12/06 18:30:02 wiz Exp $
+$NetBSD: TODO,v 1.1137 2003/12/06 18:51:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -118,7 +118,6 @@ Suggested package updates
 	o awstats-5.9
 	o balsa-1.4.4
 	o bins-1.1.24
-	o bkedit-0.6.22
 	o blender-2.31a
 	o bzflag-1.7g2
 	o centericq-4.9.9
@@ -161,7 +160,7 @@ Suggested package updates
 	o elk-3.99.6
 	o elm-me-2.4pl109a
 	o enlightenment-0.16.6
-	o epic4-1.1.15
+	o epic4-1.2.1
 	o ettercap-0.6.b
 	o evolution-1.4.4
 	o exim-4.24
