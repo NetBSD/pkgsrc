@@ -1,18 +1,26 @@
-$NetBSD: patch-aa,v 1.5 1999/12/02 03:03:32 sakamoto Exp $
+$NetBSD: patch-aa,v 1.6 2001/07/19 00:06:52 wiz Exp $
 
---- ./setup.py.orig	Fri Oct 15 03:13:08 1999
-+++ ./setup.py	Thu Dec  2 10:05:26 1999
-@@ -64,4 +64,6 @@
+--- setup.py.orig	Sat May 12 21:20:07 2001
++++ setup.py
+@@ -84,6 +84,8 @@
+             config.macros.append(item)
          elif head == '-L':
              config.lib_dirs.append(item)
 +        elif head == '-R':
 +            config.lib_dirs.append(item)
          elif head == '-l':
              config.libraries.append(item)
-@@ -213,5 +215,5 @@
-     if setup == None:
-         setup = os.path.join(sys.prefix, 'lib/python' + sys.version[:3],
--                             'config/Setup')
-+                             'config/Setup.tk')
-     print 'reading configuration from', setup, '...',
-     configs = extract_config(setup, ['_tkinter'])
+         else:
+@@ -346,6 +348,12 @@
+         print 'reading additional configuration from', setup_local, '...',
+         configs = extract_config(setup_local, configs)
+         print 'done'
++                                              
++    # NetBSD separately has 'Setup.tk' for tk-related configuration
++    setup_tk = os.path.join(configdir, 'Setup.tk')
++    print 'reading tk-related configuration from', setup_tk, '...',
++    configs = extract_config(setup_tk, configs)
++    print 'done'                        
+ 
+     configure_tkinter(configs, flags)
+     #if not configs.has_key('_tkinter'):
