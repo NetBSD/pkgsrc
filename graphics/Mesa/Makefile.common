@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2004/02/07 23:00:14 minskim Exp $
+# $NetBSD: Makefile.common,v 1.26 2004/02/10 23:23:02 jlam Exp $
 #
 
 DISTNAME=	MesaLib-${MESA_VERSION}
@@ -18,6 +18,7 @@ ALL_TARGET=             pkgsrc
 USE_LIBTOOL=		yes
 USE_X11=		yes
 
+BUILDING_MESA=		yes
 NO_CONFIGURE=		yes
 DIST_SUBDIR=		Mesa-${MESA_VERSION}
 PATCHDIR?=		${.CURDIR}/../../graphics/MesaLib/patches
