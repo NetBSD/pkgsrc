@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:54:56 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/24 15:13:20 grant Exp $
 
 DISTNAME=	xml-i18n-tools-0.9
 PKGREVISION=	1
@@ -13,7 +13,7 @@ CONFLICTS=	intltool<=0.25
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 

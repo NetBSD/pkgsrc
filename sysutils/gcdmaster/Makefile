@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/24 15:06:57 grant Exp $
 #
 
 DISTNAME=		cdrdao-1.1.7.src
@@ -17,7 +17,7 @@ WRKSRC=			${WRKDIR}/cdrdao-1.1.7
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 CONFIGURE_ARGS+=	--with-pcctsbin=${LOCALBASE}/bin
 CONFIGURE_ARGS+=	--with-pcctsinc=${LOCALBASE}/include/pccts
 CONFIGURE_ARGS+=	--without-posix-threads

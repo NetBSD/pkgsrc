@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 22:54:27 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/24 15:13:20 grant Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/01/27 07:41:16 fenner Exp $
 
 DISTNAME=	groff-1.10
@@ -15,7 +15,7 @@ MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/groff/groff.html
 COMMENT=	Japanese enhancement of GNU groff
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
 #CONFIGURE_ENV+= CXXFLAGS="-fno-rtti -fno-exceptions -O"
 
