@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2003/04/14 00:20:50 grant Exp $
+# $NetBSD: Makefile,v 1.55 2003/04/14 00:28:17 grant Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -44,11 +44,7 @@ PLIST_SRC=		${PKGDIR}/PLIST.SunOS
 ALL_TARGET=		bootstrap
 .  endif
 # we know it's a GNU toolchain on Linux and the BSDs.
-.elif
-      ${OPSYS} == "FreeBSD" || \
-      ${OPSYS} == "Linux" || \
-      ${OPSYS} == "NetBSD" || \
-      ${OPSYS} == "OpenBSD"
+.elif ${OPSYS:M*BSD} != "" || ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
@@ -61,7 +57,7 @@ GCC_PREFIX=		${PREFIX}/${PKGNAME}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 # play it safe, force a bootstrap build if we don't know for sure it
 # is gcc.
-.  if (${OPSYS} != "FreeBSD" && ${OPSYS} != "OpenBSD") && ${CC:M*gcc*} == ""
+.  if ${CC:M*gcc*} == ""
 ALL_TARGET=		bootstrap
 .  endif
 .endif
