@@ -1,0 +1,28 @@
+GTK frontend for systrace.
+
+Systrace enforces system call policies for applications by constraining
+the application's access to the system.  The policy is generated
+interactively. Operations not covered by the policy raise an alarm
+and allow an user to refine the currently configured policy.
+
+For complicated applications, it is difficult to know the correct
+policy before running them.  Initially, Systrace notifies the user
+about all system calls that an applications tries to execute.  The
+user configures a policy for the specific system call that caused
+the warning.  After a few minutes, a policy is generated that allows
+the application to run without any warnings.  However, events that
+are not covered still generate a warning.  Normally, that is an
+indication of a security problem.  Systrace improves cyber security
+by providing intrusion prevention.
+
+With systrace untrusted binary applications can be sandboxed.
+Their access to the system can be restricted almost arbitrarily.
+Sandboxing applications available only as binaries is only sensible
+as it is not possible to directly analyze what they are designed
+to do.  However, constraining the system calls large open-source
+applications are allowed to execute is useful too as it is very
+difficult to determine their correctness.
+
+System call arguments can be rewritten dynamically.  This effects
+a virtual chroot for the sandboxed application.  It also prevents
+race conditions in the argument evaluation.
