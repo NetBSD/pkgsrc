@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2004/01/17 19:31:30 atatat Exp $
+$NetBSD: distinfo,v 1.37 2004/01/17 19:37:35 atatat Exp $
 
-SHA1 (lsof_4.70.tar.gz) = 4e383bca9dd48382c978784118d6e7e375a54cce
-Size (lsof_4.70.tar.gz) = 976701 bytes
+SHA1 (lsof_4.70.tar.bz2) = a2a988ef0d64048445f882425e3066bad167f601
+Size (lsof_4.70.tar.bz2) = 693981 bytes
 SHA1 (patch-aa) = 36790019394b4088c226222d4aefaec50430bcf3
