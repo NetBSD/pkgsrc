@@ -1,0 +1,673 @@
+# $NetBSD: Packages.txt,v 1.1 1997/11/05 09:35:52 hubertf Exp $
+
+		  =======================================
+		    An attempt of some documentation on
+		       the NetBSD's Packages system
+                  =======================================
+
+		      Alistair Crooks, Hubert Feyrer
+		       Tue Nov  4 11:20:56 GMT 1997
+
+
+0. Introduction and Overview
+============================
+
+There's an awful lot of freely-available software available, some of
+which has also been "ported" to NetBSD.  The NetBSD packages
+collection, which is derived from the FreeBSD ports collection,
+incorporates any changes necessary to make that software run on
+NetBSD, and makes the installation of the package easy by means of a
+single command.  De-installation is equally simple.
+
+The NetBSD package system is derived from the FreeBSD ports system. 
+It is used to enable third-party software to be built easily on NetBSD
+hosts.  Once the software has been built, it is manipulated with the
+pkg_* tools so that installation and de-installation is simple, and
+inventory printed, and one-line comments and more verbose descriptions
+can be retrieved.
+
+this document detailes 4 sections below. They are:
+
+ 1. To install packages by building
+ 2. To make a binary package
+ 3. To install a binary package
+ 4. Making your own package
+
+The patient readers are advised to go and read the "guidelines" section of
+the FreeBSD handbook
+(http://www.freebsd.org/handbook/handbook251.html#porting), which provides
+detailed instructions on the construction of a FreeBSD "port".  Impatient
+readers are also advised to read that section.  A lot of the information is
+this document is taken from that section of the FreeBSD handbook, mostly
+without attribution.
+
+
+1. To install packages by Building
+====================================
+
+This assumes that the package is already part of the NetBSD package
+system.  If it is not, then you are advised to read section 4 of this
+document:  "Making your own package".
+
+Firstly, become root and change into the relevant directory. You can then
+type
+
+	make
+
+at the shell prompt to build the various components of the package, and
+
+	make install
+
+at the shell prompt to install the various components into the correct
+place on your system.
+
+There is one gotcha:
+
+The distribution file (i.e. the unmodified source) must exist on your
+system for the packages system to be able to build it.  If it's not, then
+ftp(1) is used to fetch the distribution files automatically.  If you are
+sitting behind a firewall, you must specify the relevant proxy hosts to
+enable you to talk to other machines on the Internet which are not behind
+your firewall.  This is an environment variable in the form of a URL e.g.
+in Amdahl, the machine orpheus.amdahl.com is one of our firewalls, and it
+uses port 80 as the proxy port number.  So the proxy environment variables
+look like:
+
+	ftp_proxy=ftp://orpheus.amdahl.com:80/
+	http_proxy=http://orpheus.amdahl.com:80/
+
+Taking the top system utility as an example, we can install it on
+our system by building as shown in the typescript below:
+
+> Script started on Fri Oct  3 13:22:31 1997
+> root@pumpy:/u/pkgsrc/sysutils/top(1342)# make
+> >> top-3.5beta5.tar.gz doesn't seem to exist on this system.
+> >> Attempting to fetch from ftp://ftp.groupsys.com/pub/top/.
+> Requesting ftp://ftp.groupsys.com/pub/top/top-3.5beta5.tar.gz (via ftp://orpheus.amdahl.com:80/)
+> Successfully retrieved file.
+> >> Checksum OK for top-3.5beta5.tar.gz.
+> ===>  Extracting for top-3.5beta5
+> ===>  Patching for top-3.5beta5
+> ===>  Applying NetBSD patches for top-3.5beta5
+> ===>  Configuring for top-3.5beta5
+> /bin/cp /u/pkgsrc/sysutils/top/files/defaults /u/pkgsrc/sysutils/top/work/top-3.5beta5/.defaults
+> chmod a-x /u/pkgsrc/sysutils/top/work/top-3.5beta5/install
+> 
+> Reading configuration from last time...
+> 
+> Using these settings:
+>         Bourne Shell   /bin/sh
+>           C compiler   cc
+>     Compiler options   -DHAVE_GETOPT -O
+>          Awk command   awk
+>      Install command   /usr/bin/install
+> 
+>               Module   netbsd13
+>              LoadMax   5.0
+>         Default TOPN   -1
+>         Nominal TOPN   18
+>        Default Delay   2
+> Random passwd access   yes
+>           Table Size   47
+>                Owner   root
+>          Group Owner   kmem
+>                 Mode   2755
+>        bin directory   $(PREFIX)/bin
+>        man directory   $(PREFIX)/man/man1
+>        man extension   1
+>        man style       man
+> 
+> Building Makefile...
+> Building top.local.h...
+> Building top.1...
+> Doing a "make clean".
+> rm -f *.o top core core.* sigdesc.h
+> To create the executable, type "make".
+> To install the executable, type "make install".
+> ===>  Building for top-3.5beta5
+> cc -DHAVE_GETOPT -DORDER -DHAVE_GETOPT -O  -c top.c
+> awk -f sigconv.awk /usr/include/sys/signal.h >sigdesc.h
+> cc -DHAVE_GETOPT -DORDER -DHAVE_GETOPT -O  -c commands.c
+> cc -DHAVE_GETOPT -DORDER -DHAVE_GETOPT -O  -c display.c
+> cc -DHAVE_GETOPT -DORDER -DHAVE_GETOPT -O  -c screen.c
+> cc -DHAVE_GETOPT -DORDER -DHAVE_GETOPT -O  -c username.c
+> cc -DHAVE_GETOPT -DORDER -DHAVE_GETOPT -O  -c utils.c
+> utils.c: In function `errmsg':
+> utils.c:348: warning: return discards `const' from pointer target type
+> cc -DHAVE_GETOPT -DORDER -DHAVE_GETOPT -O  -c version.c
+> cc -DHAVE_GETOPT -DORDER -DHAVE_GETOPT -O  -c getopt.c
+> cc "-DOSREV=12G" -DHAVE_GETOPT -DORDER -DHAVE_GETOPT -O -c machine.c
+> rm -f top
+> cc -o top top.o commands.o display.o screen.o username.o  utils.o version.o getopt.o machine.o -ltermcap -lm -lkvm
+> root@pumpy:/u/pkgsrc/sysutils/top(1343)# make install
+> >> Checksum OK for top-3.5beta5.tar.gz.
+> ===>  Installing for top-3.5beta5
+> /usr/bin/install -o root -m 2755 -g kmem top /usr/pkg/bin
+> /usr/bin/install top.1 /usr/pkg/man/man1/top.1
+> strip /usr/pkg/bin/top
+> ===>  Registering installation for top-3.5beta5
+> root@pumpy:/u/pkgsrc/sysutils/top(1344)# 
+
+As you can see, the package is installed under the default root of
+the packages tree - /usr/pkg. Should this not conform to your tastes,
+simply set the PREFIX variable in your environment, and it will use that
+value as the root of your packages tree. So, to use /usr/local, set
+
+	PREFIX=/usr/local
+
+in your environment.
+
+
+2. To make a binary package
+===========================
+
+Once you have built and installed the package mentioned in section 1
+above, you can build it into a "binary package" - you might want to do
+this so that you can use the binaries you have just built on another
+NetBSD system, or to provide a simple means for others to use your
+binary package - this is done by changing to the appropriate directory
+in the pkgsrc tree, and typing the command
+
+	make package
+
+at the shell prompt.  This will build and install your package, and
+then construct a binary package out of the results so that you can use
+the pkg_* tools to manipulate this. At the present time, this binary
+package is in the form of a gzipped tar file.
+
+> root@pumpy:/u/pkgsrc/sysutils/top(1344)# make package
+> >> Checksum OK for top-3.5beta5.tar.gz.
+> ===>  Building package for top-3.5beta5
+> Creating package top-3.5beta5.tgz
+> Registering depends:.
+> Creating gzip'd tar ball in '/u/pkgsrc/sysutils/top/top-3.5beta5.tgz'
+> root@pumpy:/u/pkgsrc/sysutils/top(1345)#
+
+
+3. Installing a binary package
+==============================
+
+To install a binary package on a NetBSD system, you should use the
+pkg_add(1) command.  Please pay very careful attention to the warnings
+expressed in that manual page about the inherent dangers of installing
+binary packages which you did not create yourself, and the security
+holes that can be introduced onto your system by indiscriminate adding
+of such files.
+
+Any packages needed to run the package in question will be installed too,
+assuming they are present on your system.
+
+
+4. Making your own package
+==========================
+
+This section should also be known as "How to make files for a pkgsrc
+directory."
+
+
+4.1 Category
+
+Firstly, you should consider into which category your software falls. 
+The NetBSD package collection is divided into categories.  At the time
+of writing, these categories are:
+
+  archivers
+  astro
+  audio
+  benchmarks
+  cad
+  chinese
+  comms
+  converters
+  databases
+  devel
+  editors
+  emulators
+  games
+  german
+  graphics
+  japanese
+  korean
+  lang
+  mail
+  math
+  mbone
+  misc
+  net
+  news
+  plan9
+  print
+  russian
+  security
+  shells
+  sysutils
+  textproc
+  vietnamese
+  www
+  x11
+
+It is possible that your package may fall into more than one category
+- in that case, you should pick the one most likely to describe your
+software.  After all, that is the place that most people will look for
+it, and so you have more chance of other people using it if you
+describe it properly.
+
+
+4.2 A package's directory and its component directories and files
+
+4.2.1 Makefile
+
+The building, installation, and creation of a binary package are all
+controlled by the package's Makefile.
+
+There's a Makefile for each package.  This file includes the standard
+<bsd.port.mk> file, which sets all the definitions and actions necessary
+for the package to compile and install itself. The mandatory fields are the
+DISTNAME, which specifies the base name of the distribution file which will
+be downloaded from the site on the Internet, MASTER_SITES which specifies
+that site, CATEGORIES which denotes the categories into which the package
+falls, PKGNAME which is the name of the package, and the MAINTAINER name.
+This is so that anyone who quibbles with the (always completely correct)
+decisions taken by the guy who maintains the port can complain vigorously.
+(Actually, in my experience, the FreeBSD maintainers have all been very
+responsive.)
+
+See /usr/share/mk/bsd.port.mk for a description of all available options. 
+
+
+4.2.2 The files directory
+
+If you have any files that you wish to be placed in the package prior to
+configuration or building, you could place these files here, and use a cp
+command in the pre-configure target to achieve this.  Alternatively, you
+could simply diff the file against /dev/null, and use the patch mechanism
+to manage the creation of this file.
+
+Besides that, this directory contains the (mandatory) md5 checksome of all
+the distfiles need for the package to compile. 
+
+
+4.2.2.1 The files/md5 file
+
+This file contains an md5 checksum of the distribution file(s).  It can be
+generated by hand using the md5(1) command.  An md5 checksum is kept on
+most ports to ensure that the file retrieved from the Internet has not been
+altered by a malign force to introduce a security hole.  The file contains
+the md5 checksum of the original distribution file used to create the
+NetBSD package, from which any patches were generated etc.
+
+(I usually create this by doing
+
+	md5 <dist-file> > files/md5
+
+and then manually editing the name of the file to delete any directory
+names)
+
+
+4.2.3 The patches directory
+
+This directory contains files that are used by the patch(1) command to
+modify the sources as distributed in the distribution file, into a form
+that will compile and run perfectly on NetBSD.  The files are applied
+successively, in alphabetic order (as returned by a shell "patches/patch-*"
+glob expansion), so patch-aa is applied before patch-ab etc.
+
+The patch-?? files should be in diff -u format.  This is because the
+FreeBSD ports tsar finds this format easier to read than context diffs, and
+so you have more chance of getting your NetBSD package accepted as part of
+the FreeBSD ports system if you format your diffs in a unified fashion.
+
+
+4.2.4 The pkg directory
+
+This directory contains three files used to manage the creation of
+binary packages.  Files from this directory are used in the binary
+package itself, and will thus be installed on other machines, so you
+should be aware that there is a wider audience than you might think
+for your comments and witticisms.
+
+
+4.2.4.1 The pkg/COMMENT file
+
+A one-line description of the piece of software. There is no need
+to mention the package's name - this will automatically be added by
+the pkg_* tools when they are invoked.
+
+
+4.2.4.2 The pkg/DESCR file
+
+A multi-line description of the piece of software.  This should
+include any credits where they are due.  Please bear in mind that
+others do not share your sense of humour (or spelling idiosyncracies),
+and that others will read everything that you write here.
+
+
+4.2.4.3 The pkg/PLIST file
+
+This file governs the files that are installed on your system: all the
+binaries, manual pages, etc. There are other directives which may be
+entered in this file, to control the creation and deletion of directories,
+and the location of inserted files.  
+
+
+4.2.5 The scripts directory
+
+This directory contains any files that are necessary for configuration
+of your software, etc.
+
+
+4.2.6 The work directory
+
+When you type "make" the distribution files are unpacked into this
+directory.  It can be removed by typing
+
+	make clean
+
+at the shell prompt.
+
+
+4.3 CPP definitions
+
+To port an application to NetBSD, it's usually necessary for the
+compiler to be able to judge the system on which it's compiling,
+and we use definitions so that the C pre-processor can do this.
+
+The really impatient should just note that a number of the FreeBSD
+ports (which are called packages in the NetBSD world) rely on the CPP
+definition __FreeBSD__.  I believe that this should be used sparingly,
+for FreeBSD-specific features, but unfortunately this is not always
+the case.  A number also rely on the fact that the CPU type is an
+Intel-based little-endian CPU.
+
+To test whether you are working on a 4.4 BSD-derived system, you
+should use the BSD definition, which is defined in <sys/param.h> on
+said systems.  Unfortunately, it may not always be appropriate to
+include that header file without checking whether it's available -
+
+        #ifdef (defined(__unix__) || defined(unix)) && !defined(USG)
+        #include <sys/param.h>
+        #endif
+
+and then you can surround the BSD-specific parts of your port using
+the conditional:
+
+	#if (defined(BSD) && BSD >= 199306)
+	...
+	#endif
+
+Please use the __NetBSD__ definition sparingly - it should only apply
+to features of NetBSD that are not present in other 4.4-lite derived
+BSDs.
+
+You should also avoid defining __FreeBSD__=1 and then simply using the
+FreeBSD port, if only from an aesthetic viewpoint (see section 4.4,
+FreeBSD ports).
+
+
+4.4 FreeBSD ports
+
+It's quite possible that a FreeBSD port exists for the piece of
+software you're trying to build on NetBSD.  If that is the case, it's
+very possible that the FreeBSD port will work on NetBSD.  However,
+check that the person who ported the software to FreeBSD has not
+played fast and loose with the __FreeBSD__ cpp definition without good
+cause - a simple way to do this is to do
+
+	grep -i freebsd patches/patch-??
+
+in the package directory.
+
+
+4.5 Idiosyncracies
+
+4.5.1 If your package uses GNU autoconf
+
+> GNU_CONFIGURE= yes
+
+Note that this appends --prefix=${PREFIX} to CONFIGURE_ARGS, so you
+don't have to do that yourself, and this may not be what you want.
+
+
+4.5.2 If your package uses imake or xmkmf
+
+> USE_IMAKE= yes
+
+
+4.5.3 You don't have to have a patches directory if you don't have any
+patches, but it won't hurt you either.
+
+
+4.5.4 If your package uses a different distribution method from
+.tar.gz:  take a look at the packages for sam, which uses a gzipped
+shell archive (shar), but the quick solution is to set EXTRACT_SUFX to
+the name after the DIST_NAME field, and
+> EXTRACT_SUFX=   .msg.gz
+> EXTRACT_CMD=            zcat
+> EXTRACT_BEFORE_ARGS=
+> EXTRACT_AFTER_ARGS=     |sh
+
+
+4.5.5 Your package doesn't create a subdirectory for itself (like GNU
+software does, for instance), but extracts itself in the current directory:
+see sam again, but the quick answer is:
+> NO_WRKSUBDIR=   yes
+
+
+4.5.6 Your package uses a weird Configure script:
+See the top package, but the quick answer is
+> HAS_CONFIGURE=          yes
+> CONFIGURE_SCRIPT=       Configure
+> CONFIGURE_ARGS=	netbsd13
+
+
+4.5.7 Your package has an HTTP URL:
+No problem, see the libutf and mysql packages, just use the http URL
+and ftp(1) will handle it.
+> MASTER_SITES=   http://www.tcx.se/ \
+>                 http://www.buoy.com/mysql/ \
+>                 http://web.tryc.on.ca/mysql/ \
+>                 http://mysql.staufen.de/ \
+>                 http://mysql.acer.net/
+
+
+4.5.8 Your package builds in a different directory from its base DIST_NAME:
+see tcl and tk packages:
+> WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
+
+
+4.5.9 Your package needs to specify a different PREFIX: This can be fraught
+with danger if you're using GNU configure, as (see 4.5.1)
+--prefix=${PREFIX} is automatically appended to CONFIGURE_ARGS.  SO take a
+look at mit-pthreads, omit GNU_CONFIGURE=yes, use HAS_CONFIGURE=yes, and
+manually add the modified PREFIX to CONFIGURE_ARGS yourself:
+> HAS_CONFIGURE= yes
+> CONFIGURE_ARGS += ${PREFIX}/dirname
+
+
+4.6 A worked example
+
+I checked to find a piece of software that isn't in the FreeBSD ports
+collection, and picked GNU bison.  Quite why someone would want to
+have bison when Berkeley yacc is already present in the tree is beyond
+me, but it's useful for the purposes of this exercise.
+
+> root@pumpy:/u/pkgsrc/lang(1765)# cd /usr/pkgsrc/lang
+> root@pumpy:/u/pkgsrc/lang(1765)# mkdir bison
+> root@pumpy:/u/pkgsrc/lang(1766)# cd bison
+> root@pumpy:/u/pkgsrc/lang/bison(1767)# cat > Makefile << EOF
+> # <NetBSD RCS Id>
+> # New ports collection makefile for:    bison
+> # Version required:     1.25
+> # Date created:         1 October 1997
+> # Whom:                 agc@netbsd.org
+> #
+> #
+>  
+> DISTNAME=       bison-1.25
+> CATEGORIES=     lang
+> MASTER_SITES=   ${MASTER_SITE_GNU}
+>  
+> GNU_CONFIGURE=  yes
+> MAN1=           bison.1
+>  
+> .include <bsd.port.mk>
+> EOF
+> root@pumpy:/u/pkgsrc/lang/bison(1768)# mkdir files patches pkg
+> root@pumpy:/u/pkgsrc/lang/bison(1769)# make fetch
+> >> bison-1.25.tar.gz doesn't seem to exist on this system.
+> >> Attempting to fetch from ftp://prep.ai.mit.edu/pub/gnu//.
+> Requesting ftp://prep.ai.mit.edu/pub/gnu//bison-1.25.tar.gz (via ftp://orpheus.amdahl.com:80/)
+> ftp: Error retrieving file: 500 Internal error
+>  
+> >> Attempting to fetch from ftp://wuarchive.wustl.edu/systems/gnu//.
+> Requesting ftp://wuarchive.wustl.edu/systems/gnu//bison-1.25.tar.gz (via ftp://orpheus.amdahl.com:80/)
+> ftp: Error retrieving file: 500 Internal error
+>  
+> >> Attempting to fetch from ftp://ftp.freebsd.org/pub/FreeBSD/distfiles//.
+> Requesting ftp://ftp.freebsd.org/pub/FreeBSD/distfiles//bison-1.25.tar.gz (via ftp://orpheus.amdahl.com:80/)
+> Successfully retrieved file.
+> root@pumpy:/u/pkgsrc/lang/bison(1770)# md5 /usr/pkgsrc/distfiles/bison-1.25.tar.gz | sed -e 's;/usr/pkgsrc/distfiles/;;' > files/md5
+> root@pumpy:/u/pkgsrc/lang/bison(1771)# cat > pkg/COMMENT << EOF
+> GNU yacc clone.
+> EOF
+> root@pumpy:/u/pkgsrc/lang/bison(1772)# cat > pkg/DESCR << EOF
+> GNU version of yacc.  Can make re-entrant parsers, and numerous other
+> improvements.  Why you would want this when Berkeley yacc(1) is part
+> of the NetBSD source tree is beyond me.
+>  
+> Alistair Crooks (agc@netbsd.org)
+>  
+> EOF
+> root@pumpy:/u/pkgsrc/lang/bison(1773)# cat > pkg/PLIST << EOF
+> bin/bison
+> EOF
+> root@pumpy:/u/pkgsrc/lang/bison(1777)# make
+> >> Checksum OK for bison-1.25.tar.gz.
+> ===>  Extracting for bison-1.25
+> ===>  Patching for bison-1.25
+> ===>   Ignoring empty patch directory
+> ===>  Configuring for bison-1.25
+> creating cache ./config.cache
+> checking for gcc... cc
+> checking whether we are using GNU C... yes
+> checking for a BSD compatible install... /usr/bin/install -c -o bin -g bin
+> checking how to run the C preprocessor... cc -E
+> checking for minix/config.h... no
+> checking for POSIXized ISC... no
+> checking whether cross-compiling... no
+> checking for ANSI C header files... yes
+> checking for string.h... yes
+> checking for stdlib.h... yes
+> checking for memory.h... yes
+> checking for working const... yes
+> checking for working alloca.h... no
+> checking for alloca... yes
+> checking for strerror... yes
+> updating cache ./config.cache
+> creating ./config.status
+> creating Makefile
+> ===>  Building for bison-1.25
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g LR0.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g allocate.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g closure.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g conflicts.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g derives.c
+> cc -c -DXPFILE=\"/usr/pkg/share/bison.simple\"  -DXPFILE1=\"/usr/pkg/share/bison.hairy\" -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1  -g  ./files.c 
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g getargs.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g gram.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g lalr.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g lex.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g main.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g nullable.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g output.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g print.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g reader.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g reduce.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g symtab.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g warshall.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g version.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g getopt.c
+> cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g getopt1.c
+> cc  -g -o bison LR0.o allocate.o closure.o conflicts.o derives.o files.o         getargs.o gram.o lalr.o lex.o                                   main.o nullable.o output.o print.o reader.o reduce.o symtab.o   warshall.o version.o                                            getopt.o getopt1.o  
+> ./files.c:240: warning: mktemp() possibly used unsafely, consider using mkstemp()
+> rm -f bison.s1
+> sed -e "/^#line/ s|bison|/usr/pkg/share/bison|" < ./bison.simple > bison.s1
+> root@pumpy:/u/pkgsrc/lang/bison(1785)# make install
+> >> Checksum OK for bison-1.25.tar.gz.
+> ===>  Installing for bison-1.25
+> sh ./mkinstalldirs /usr/pkg/bin /usr/pkg/share  /usr/pkg/info /usr/pkg/man/man1
+> rm -f /usr/pkg/bin/bison
+> cd /usr/pkg/share; rm -f bison.simple bison.hairy
+> rm -f /usr/pkg/man/man1/bison.1 /usr/pkg/info/bison.info*
+> install -c  -o bin -g bin -m 555 bison /usr/pkg/bin/bison
+> /usr/bin/install -c -o bin -g bin -m 644 bison.s1 /usr/pkg/share/bison.simple
+> /usr/bin/install -c -o bin -g bin -m 644 ./bison.hairy /usr/pkg/share/bison.hairy
+> cd .; for f in bison.info*;  do /usr/bin/install -c -o bin -g bin -m 644 $f /usr/pkg/info/$f; done
+> /usr/bin/install -c -o bin -g bin -m 644 ./bison.1 /usr/pkg/man/man1/bison.1
+> ===>  Registering installation for bison-1.25
+> root@pumpy:/u/pkgsrc/lang/bison(1786)# make package
+> >> Checksum OK for bison-1.25.tar.gz.
+> ===>  Building package for bison-1.25
+> Creating package bison-1.25.tgz
+> Registering depends:.
+> Creating gzip'd tar ball in '/u/pkgsrc/lang/bison/bison-1.25.tgz'
+> root@pumpy:/u/pkgsrc/lang/bison(1787)# make clean
+> ===>  Cleaning for bison-1.25
+> root@pumpy:/u/pkgsrc/lang/bison(1788)# 
+
+Finally, please tar up and gzip the package directory (without the
+binary package) and mail it to me (agc@netbsd.org), remembering to
+uuencode it first.
+
+
+4.7 Gotchas
+
+Whenever you're preparing a port from the FreeBSD collection or doing it
+from scratch, there's a number of points to take care for in order to get
+everything done propperly. Here is an attempt of list of all these
+gotchas. 
+
+4.7.1 Makefile
+
+ - Add MANCOMPRESSED (if not already there), see comment in bsd.port.mk
+ - Update MAN?; important for manpages being compressed correctly if MANZ
+   is set
+ - Replace /usr/local by ${PREFIX} in all Files but Makefiles (see patches
+   below) 
+
+4.7.2 pkg/PLIST
+
+ - If there's a "@exec ldconfig ...", add an "@unexec ldconfig ...", so the
+   hints-file for ld.so doesn't grow without end.
+ - Add any missing @dirrm statements
+
+4.7.3 Debugging
+
+To check out all these gotchas, here are the steps that I do in order to
+get a package working (Please note this is basically the same as above,
+only with some debugging aids ;):
+
+ - Look at Makefile, fix if necessary
+ - Look at patches, remember if not appropriate
+ - have a look at pkg/PLIST
+ - make
+ - If something's not ok, fix; for patches: fix the file, then re-generate
+   the diff: 'diff foo foo.orig >../../patches/patch-xx' (mv patch-xx
+   patch-xx.orig before); If there's no foo.orig from a previous patch, be
+   sure to have an old version of the file somewhere; re-iterate :)
+ - If all builds ok: touch /tmp/bla
+ - make install
+ - find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla >/tmp/x
+ - pkg_delete blub
+ - find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla: if this brings up any files,
+   they are missing pkg/PLIST; add them.
+ - Compare pkg/PLIST against /tmp/x, fix the further one
+ - make reinstall && make package
+ - pkg_delete blub
+ - find /usr/pkg/ /usr/X11R6/ -type f -newer /tmp/bla shouldn't find anything
+   now
+ - pkg_add .../blub.tgz
+ - Play with it :)
+ - pkg_delete - still no file should be left (re-run above find)
+ - submit :)
+
