@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/03/17 16:07:32 taya Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/05/13 10:23:18 markd Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -93,6 +93,8 @@ lib/${MOZILLA}/components/libxpical.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpinstall.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxremote_client.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxremoteservice.${SO_SUFFIX}
+${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.${SO_SUFFIX}
+${SUNOSLIB}lib/${MOZILLA}/libfreebl_pure32_3.${SO_SUFFIX}
 lib/${MOZILLA}/libgkgfx.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkembedmoz.${SO_SUFFIX}
 lib/${MOZILLA}/libgtksuperwin.${SO_SUFFIX}
