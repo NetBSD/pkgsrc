@@ -16,6 +16,3 @@ number of extensions that take advantage of these two new objects.
        + Linear Algebra (LAPACK)
        + Fourier Transforms (FFTPACK)
        + Random Numbers (RANLIB)
-
-To use the numeric extension, add /usr/local/share/python1.4/NumPy
-to your PYTHONPATH.
