@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/05 17:20:11 bad Exp $
+$NetBSD: patch-aa,v 1.2 2000/11/03 20:56:32 veego Exp $
 
 --- Makefile.orig	Mon Dec  7 12:52:39 1998
 +++ Makefile	Thu Aug  5 19:08:30 1999
@@ -85,7 +85,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/08/05 17:20:11 bad Exp $
  #-------------------------------------------------------
  #XFORMINCDIR = -I/opt/local/include
 -XFORMINCDIR = -I/usr/X11R6/include
-+XFORMINCDIR = -I${X11BASE}/include -I${X11BASE}/include/X11
++XFORMINCDIR = -I${X11BASE}/include -I${X11PREFIX}/include/X11
  ########################################################
  
  
