@@ -1,0 +1,11 @@
+R is a language which bears a passing resemblance to the S language
+developed at AT&T Bell Laboratories.  It provides support for a
+variety of statistical and graphical analyses.  R is a true
+computer language which contains a number of control-flow
+constructions for iteration and alternation.  It allows users to
+add additional functionality by defining new functions.  On
+platforms which support the dlopen (3) interface, Fortran and C
+code can be linked and called at run time.
+
+R is very close to S in both syntax and semantics, but is not identical.
+Whether this is a bug or feature is an open question.
