@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/08/15 14:32:27 drochner Exp $
+
+--- cdvpasswd.orig	2004-08-14 16:47:38.000000000 +0200
++++ cdvpasswd
+@@ -32,7 +32,7 @@ def run(args):
+     for (opt, arg) in optlist:
+         if opt == '-c':
+             noconfig = False
+-            configfile = arg
++            config_file = arg
+ 
+     config = ConfigParser()
+ 
