@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/04/21 21:26:26 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/22 23:45:54 minskim Exp $
 #
 
 DISTNAME=		mathomatic-11.0c
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		http://www.panix.com/~gesslein/
 EXTRACT_SUFX=		.tgz
@@ -18,8 +19,7 @@ USE_BUILDLINK3=		yes
 NO_CONFIGURE=		yes
 MAKEFILE=		makefile
 
-# gcc's optimizer causes problems with this version of the program
-CFLAGS+=		-DUNIX -O0
+CFLAGS+=		-DUNIX
 CFLAGS.SunOS+=		-DSOLARIS
 
 INSTALLATION_DIRS=	bin man/man1
