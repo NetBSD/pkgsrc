@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/05/09 02:30:53 snj Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/05 13:38:00 drochner Exp $
 #
 
 DISTNAME=		vis5d+-1.2.1
 CATEGORIES=		geography x11
-MASTER_SITES=		http://easynews.dl.sourceforge.net/sourceforge/vis5d/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vis5d/}
 
 MAINTAINER=		hdp@nmsu.edu
 HOMEPAGE=		http://vis5d.sourceforge.net/
