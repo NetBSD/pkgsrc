@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1229 2003/12/20 23:54:57 wiz Exp $
+$NetBSD: TODO,v 1.1230 2003/12/21 09:32:09 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -234,7 +234,6 @@ Suggested package updates
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.0.2
-	o nabi-0.12 [pkg/23795]
 	o nano-1.2.2
 	o nap-1.5.2
 	o napshare-1.2
