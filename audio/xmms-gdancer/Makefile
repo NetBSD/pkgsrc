@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/16 05:38:51 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/23 14:07:32 jlam Exp $
 #
 
 DISTNAME=	gdancer-0.4.3
@@ -10,6 +10,7 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://figz.com/gdancer/
 COMMENT=	XMMS plugin to animate characters to the beat of the music
 
+USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
