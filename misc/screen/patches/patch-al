@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2002/09/15 06:51:39 kim Exp $
+$NetBSD: patch-al,v 1.2 2003/12/01 15:18:27 ben Exp $
 
 Make extra calls to remove utmp entries when utmpx is used.
 For non-login entries we only update utmpx, as it stores
@@ -39,3 +39,21 @@ more information, and utilities are reading both.
    if (utmpok && D_loginslot != (slot_t)0 && D_loginslot != (slot_t)-1)
      {
        debug1(" logging you in again (slot %#x)\n", (int)D_loginslot);
+@@ -604,6 +616,7 @@
+ char *line, *user;
+ int pid;
+ {
++  time_t temp;
+   u->ut_type = USER_PROCESS;
+   strncpy(u->ut_user, user, sizeof(u->ut_user));
+   /* Now the tricky part... guess ut_id */
+@@ -618,7 +631,8 @@
+ #endif /* sgi */
+   strncpy(u->ut_line, line, sizeof(u->ut_line));
+   u->ut_pid = pid;
+-  (void)time((time_t *)&u->ut_time);
++  (void)time(&temp);
++  u->ut_time = temp;
+ }
+ 
+ static slot_t
