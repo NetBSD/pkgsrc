@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/09/04 15:56:05 jlam Exp $
+
+Please make a symbolic link from your printer device to /dev/stylewriter.
+
+There are example /etc/printcap entries for the stylewriter located in
+
+	${PREFIX}/share/examples/printcap
+	${PREFIX}/share/examples/printcap.a4
+
+===========================================================================
