@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2003/09/27 22:57:32 wiz Exp $
+$NetBSD: distinfo,v 1.6 2004/08/30 21:44:23 recht Exp $
 
-SHA1 (ncftp-3.1.6-src.tar.gz) = 1282c889e11f883e1ea5314ed5f8898eb31ea62d
-Size (ncftp-3.1.6-src.tar.gz) = 503887 bytes
+SHA1 (ncftp-3.1.8-src.tar.gz) = 0fca0dd12ceafd9d491f32afca404c6b5da3ef31
+Size (ncftp-3.1.8-src.tar.gz) = 509185 bytes
 SHA1 (patch-aa) = 38d3b7d1796424bf40b07a1e7e8627ad8d01ea8c
