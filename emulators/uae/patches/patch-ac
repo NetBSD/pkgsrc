@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1 2001/05/31 21:38:52 kristerw Exp $
+--- configure.bak	Tue Aug 15 22:01:31 2000
++++ configure	Thu May 31 22:46:00 2001
+@@ -6396,9 +6396,8 @@
+ fi
+ 
+ 
+-if [ "x$HAVE_MACHINE_JOYSTICK_H" = "xyes" ]; then
+-  cat > conftest.$ac_ext <<EOF
+ #line 6402 "configure"
++cat > conftest.$ac_ext <<EOF
+ #include "confdefs.h"
+ #include <machine/joystick.h>
+ int main() {
+@@ -6411,11 +6410,10 @@
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+-fi
+-rm -f conftest*
+-else
++  rm -rf conftest*
+     OD_JOYSTICK=$OSDEP/joystick.c
+ fi
++rm -f conftest*
+ 
+ rm -f src/machdep
+ rm -f src/osdep
