@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2004/01/24 21:26:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/24 22:55:07 jmmv Exp $
 
 DISTNAME=	gnome-2.4.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,28 +16,20 @@ DEPENDS+=	file-roller>=2.4.2:../../archivers/file-roller
 DEPENDS+=	gcalctool>=4.2.83:../../math/gcalctool
 DEPENDS+=	gconf-editor>=2.4.0:../../editors/gconf-editor
 DEPENDS+=	gedit>=2.4.1:../../editors/gedit
-DEPENDS+=	gdm>=2.4.4.7:../../x11/gdm
 DEPENDS+=	ggv>=2.4.0.2:../../print/ggv2
 DEPENDS+=	glade2>=2.0.0:../../devel/glade2
 DEPENDS+=	gnome-applets>=2.4.1:../../x11/gnome2-applets
+DEPENDS+=	gnome-base>=2.4.1:../../meta-pkgs/gnome-base
 DEPENDS+=	gnome-audio>=2.0.0:../../audio/gnome-audio
 DEPENDS+=	gnome-games>=2.4.1:../../games/gnome2-games
 DEPENDS+=	gnome-icon-theme>=1.0.9:../../graphics/gnome-icon-theme
 DEPENDS+=	gnome-media>=2.4.1.1:../../audio/gnome2-media
-DEPENDS+=	gnome-panel>=2.4.1:../../x11/gnome-panel
-DEPENDS+=	gnome-session>=2.4.1:../../x11/gnome-session
 DEPENDS+=	gnome-themes>=2.4.1:../../x11/gnome-themes
 DEPENDS+=	gnome2-user-docs>=2.4.1:../../misc/gnome2-user-docs
-DEPENDS+=	gnome2-terminal>=2.4.1:../../x11/gnome2-terminal
 DEPENDS+=	gnome2-system-monitor>=2.4.0:../../sysutils/gnome2-system-monitor
 DEPENDS+=	gnome-utils>=2.4.1:../../misc/gnome2-utils
-DEPENDS+=	gnome-vfs2>=2.4.1:../../sysutils/gnome-vfs2
-DEPENDS+=	gtk2-engines>=2.2.0:../../x11/gtk2-engines
-DEPENDS+=	librsvg2-gtk2>=2.5.0:../../graphics/librsvg2-gtk2
-DEPENDS+=	nautilus>=2.4.1:../../sysutils/nautilus
-DEPENDS+=	swfdec-gtk2>=0.2.1:../../graphics/swfdec-gtk2
-DEPENDS+=	xscreensaver>=4.14nb1:../../x11/xscreensaver
-DEPENDS+=	yelp>=2.4.2:../../misc/yelp
+DEPENDS+=	gtk2-extras>=2.2.4:../../meta-pkgs/gtk2-extras
+DEPENDS+=	vera-ttf>=1.10:../../fonts/vera-ttf
 
 USE_X11=	yes
 USE_BUILDLINK2=	yes
