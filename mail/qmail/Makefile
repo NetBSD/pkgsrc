@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/01/28 19:39:00 zuntum Exp $
+# $NetBSD: Makefile,v 1.10 2002/01/28 20:39:35 zuntum Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -18,7 +18,7 @@ PATCH_SITES=	http://www.ckdhr.com/ckd/
 PATCHFILES+=	qmail-103.patch
 
 # Apply QMAILQUEUE patch
-PATCH_SITES+=	http://qmail.obeer.com/
+PATCH_SITES+=	http://www.qmail.org/
 PATCHFILES+=	qmailqueue-patch
 
 PATCH_DIST_STRIP=	-p1
