@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2003/03/26 04:05:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.34 2003/07/17 21:41:53 grant Exp $
 
 DISTNAME=		mtv-1.2.5
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.mpegtv.com/pub/mpeg/mpegtv/player/x86-unknown-linux-glibc2.1/packages/RPMS/
 DISTFILES=		${DISTNAME}-1.i386.rpm SDL-1.1.2-1.i386.rpm
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.mpegtv.com/
 COMMENT=		MPEG Video+Audio and VCD Player
 

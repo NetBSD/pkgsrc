@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:49:11 grant Exp $
 #
 
 DISTNAME=	hh2000-0.6
@@ -7,7 +7,7 @@ PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hitchhiker/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://hirame.hiram.edu/~worleyam
 COMMENT=	Astronomical simulation and visualization program
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:44:38 grant Exp $
 #
 
 DISTNAME=	jasmin-1.06
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/jasmin
 CATEGORIES=     lang
 MASTER_SITES=	http://www.cat.nyu.edu/~meyer/jasmin/
 
-MAINTAINER=	jschauma@netbsd.org
+MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.cat.nyu.edu/~meyer/jasmin/
 COMMENT=	Java "assembler" interface
 

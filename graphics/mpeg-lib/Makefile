@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/06/12 13:00:08 salo Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 21:41:46 grant Exp $
 #
 
 DISTNAME=	mpeg_lib-1.3.1
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.mni.mcgill.ca/pub/mpeg/ \
 		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/libs/ \
 		ftp://ftp.gimp.org/pub/gimp/libs/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://starship.python.net/~gward/mpeglib/
 COMMENT=	Library for decoding MPEG movies
 

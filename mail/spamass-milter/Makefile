@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/05/02 11:55:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:47:02 grant Exp $
 #
 
 DISTNAME=	spamass-milter-0.1.3a
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://savannah.nongnu.org/download/spamass-milt/
 
-MAINTAINER=	manu@netbsd.org
+MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://savannah.nongnu.org/projects/spamass-milt/
 COMMENT=	Milter interface to Spamassassin
 

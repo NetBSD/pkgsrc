@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/07 15:20:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:43:27 grant Exp $
 #
 
 DISTNAME=	dpbox-60000
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/dpbox-6.00.00/source
 CATEGORIES=	ham
 MASTER_SITES=	http://userpage.fu-berlin.de/~jschurig/
 
-MAINTAINER=	wulf@netbsd.org
+MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://userpage.fu-berlin.de/~jschurig/
 COMMENT=	Multi-Protocol Amateur Packet Radio BBS
 

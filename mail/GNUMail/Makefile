@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:52:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:45:39 grant Exp $
 #
 
 DISTNAME=	GNUMail-1.0.3
@@ -8,7 +8,7 @@ CATEGORIES=	mail gnustep
 MASTER_SITES=	http://extrovert.screwdriver.net/~extra/cgi-bin/
 DISTFILES=	mirror.cgi?file=${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.collaboration-world.com/gnumail/
 COMMENT=	GNUstep clone of NeXT's Mail.app application
 

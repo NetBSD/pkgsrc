@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/04/10 01:28:20 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/17 21:45:29 grant Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
 			ftp://ftp.funet.fi/pub/languages/tcl/tcl/tcl8_3/ \
 			ftp://ftp.mpi-sb.mpg.de/pub/tcl/mirror/ftp.scriptics.com/tcl8_3/
 
-MAINTAINER=		jwise@netbsd.org
+MAINTAINER=		jwise@NetBSD.org
 HOMEPAGE=		http://www.tcltk.com/
 COMMENT=		Ousterhout's Tool Command Language, a scripting language
 

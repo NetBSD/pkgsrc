@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/13 13:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:42:45 grant Exp $
 #
 
 DISTNAME=	scigraphica-0.8.0
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
-MAINTAINER=	drochner@netbsd.org
+MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://scigraphica.sourceforge.net/
 COMMENT=	data analysis and technical graphics
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:47:26 grant Exp $
 
 DISTNAME=		dfftpack-20001209
 WRKSRC=			${WRKDIR}/dfftpack
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Double precision version of FFTPACK
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL

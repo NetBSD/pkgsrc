@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/07/13 13:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2003/07/17 21:45:54 grant Exp $
 
 DISTNAME=		elm2.5.5
 PKGREVISION=		2
@@ -6,7 +6,7 @@ PKGNAME=		elm-2.5.5
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.virginia.edu/pub/elm/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.instinct.org/elm/
 COMMENT=		ELM Mail User Agent (without ME extensions)
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/06/02 01:18:12 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:49:26 grant Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/08/15 16:47:08 jmz Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.inria.fr/system/user/
 EXTRACT_SUFX=	.tar.z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Input Line Editor that wraps itself around programs
 
 post-patch:
