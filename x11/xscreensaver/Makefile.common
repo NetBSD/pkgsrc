@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2003/09/17 19:41:28 grant Exp $
+# $NetBSD: Makefile.common,v 1.57 2003/11/14 14:58:15 fredb Exp $
 #
 
 DISTNAME=		xscreensaver-4.13
@@ -46,6 +46,10 @@ CFLAGS+=		-I/usr/include/kerberosIV
 .  else
 CONFIGURE_ARGS+=	--without-kerberos
 .  endif
+.endif
+
+.if (${_CC_IS_GCC} == "YES")
+CFLAGS+=		-fno-strict-aliasing
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
