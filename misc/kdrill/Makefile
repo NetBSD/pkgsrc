@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/09/24 10:42:12 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/02 20:21:36 jschauma Exp $
 #
 
 DISTNAME=	kdrill5.11.6
 PKGNAME=	kdrill-5.11.6
+PKGREVISIO=	1
 CATEGORIES=	japanese misc
 MASTER_SITES=	http://www.bolthole.com/kdrill/
 
