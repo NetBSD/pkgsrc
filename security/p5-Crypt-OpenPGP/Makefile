@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2001/10/01 00:00:08 mcr Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/03 02:31:20 hubertf Exp $
 #
 
 DISTNAME=		Crypt-OpenPGP-0.17
@@ -10,20 +10,20 @@ MAINTAINER=		packages@netbsd.org
 #HOMEPAGE=	
 COMMENT=		perl5 module for OpenPGP support
 
-DEPENDS+=		p5-MIME-Base64-*:../../converters/p5-MIME-Base64
-DEPENDS+=		p5-Compress-Zlib-*:../../devel/p5-Compress-Zlib
-DEPENDS+=		p5-Crypt-DES-*:../../security/p5-Crypt-DES
-DEPENDS+=		p5-Crypt-DES_EDE3-*:../../security/p5-Crypt-DES_EDE3
-DEPENDS+=		p5-Crypt-Blowfish-*:../../security/p5-Crypt-Blowfish
-DEPENDS+=		p5-Data-Buffer-*:../../devel/p5-Data-Buffer
-DEPENDS+=		p5-Math-Pari-*:../../math/p5-Math-Pari
-DEPENDS+=		p5-Crypt-Twofish-*:../../security/p5-Crypt-Twofish
-DEPENDS+=		p5-Crypt-Rijndael-*:../../security/p5-Crypt-Rijndael
-DEPENDS+=		p5-Crypt-RIPEMD160-*:../../security/p5-Crypt-RIPEMD160
-DEPENDS+=		p5-Crypt-RSA-*:../../security/p5-Crypt-RSA
-DEPENDS+=		p5-Crypt-DSA-*:../../security/p5-Crypt-DSA
+DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=		p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
+DEPENDS+=		p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
+DEPENDS+=		p5-Crypt-DES_EDE3-[0-9]*:../../security/p5-Crypt-DES_EDE3
+DEPENDS+=		p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
+DEPENDS+=		p5-Data-Buffer-[0-9]*:../../devel/p5-Data-Buffer
+DEPENDS+=		p5-Math-Pari-[0-9]*:../../math/p5-Math-Pari
+DEPENDS+=		p5-Crypt-Twofish-[0-9]*:../../security/p5-Crypt-Twofish
+DEPENDS+=		p5-Crypt-Rijndael-[0-9]*:../../security/p5-Crypt-Rijndael
+DEPENDS+=		p5-Crypt-RIPEMD160-[0-9]*:../../security/p5-Crypt-RIPEMD160
+DEPENDS+=		p5-Crypt-RSA-[0-9]*:../../security/p5-Crypt-RSA
+DEPENDS+=		p5-Crypt-DSA-[0-9]*:../../security/p5-Crypt-DSA
 # hmmm
-#DEPENDS+=		p5-Crypt-IDEA-*:../../security/p5-Crypt-IDEA
+#DEPENDS+=		p5-Crypt-IDEA-[0-9]*:../../security/p5-Crypt-IDEA
 
 # hmmm
 IS_INTERACTIVE=		# defined
