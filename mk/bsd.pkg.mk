@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.373 1999/11/29 19:48:15 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.374 1999/11/30 04:17:58 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2045,7 +2045,11 @@ package-depends:
 	@pkg="`${ECHO} \"${dep}\" | ${SED} -e 's/:.*//'`";		\
 	dir="`${ECHO} \"${dep}\" | ${SED} -e 's/[^:]*://'`";		\
 	if [ -d $$dir ]; then						\
-		(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+		if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then		\
+			${ECHO} "$$pkg";				\
+		else							\
+			(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+		fi;							\
 		(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 	else								\
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
