@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2001/03/22 10:45:56 wiz Exp $
+
+--- abuse/inc/bus_type.hpp.orig	Wed Jan 24 07:10:12 1996
++++ abuse/inc/bus_type.hpp
+@@ -1,6 +1,10 @@
+ #ifndef BUS_TYPE_HPP
+ #define BUS_TYPE_HPP
+ 
++#ifdef __arm__
++#define WORD_ALLIGN 1
++#endif
++
+ #ifdef __sgi
+ #define WORD_ALLIGN 1
+ #endif
