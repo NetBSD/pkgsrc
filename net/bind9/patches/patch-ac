@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/02/22 03:51:00 hubertf Exp $
+
+--- lib/lwres/Makefile.in.orig	Fri Feb  4 07:02:49 2000
++++ lib/lwres/Makefile.in	Mon Feb 21 05:08:46 2000
+@@ -19,6 +19,8 @@
+ 
+ @BIND9_VERSION@
+ 
++@LIBDNS_API@
++
+ @BIND9_INCLUDES@
+ 
+ CINCLUDES =	-I. -I./include -I${srcdir}/include ${ISC_INCLUDES}
+@@ -53,7 +55,7 @@
+ 		-DLIBAGE=${LIBAGE} \
+ 		-c ${srcdir}/version.c
+ 
+-liblwres.@A@: ${OBJS}
++liblwres.a: ${OBJS}
+ 	${AR} ${ARFLAGS} $@ ${OBJS}
+ 	${RANLIB} $@
+ 

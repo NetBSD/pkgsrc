@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/02/22 03:51:00 hubertf Exp $
+
+--- lib/omapi/Makefile.in.orig	Fri Feb  4 02:58:37 2000
++++ lib/omapi/Makefile.in	Mon Feb 21 05:11:56 2000
+@@ -55,13 +55,13 @@
+ 		-DLIBAGE=${LIBAGE} \
+ 		-c ${srcdir}/version.c
+ 
+-libomapi.@A@: ${OBJS}
++libomapi.a: ${OBJS}
+ 	${AR} ${ARFLAGS} $@ ${OBJS}
+ 	${RANLIB} $@
+ 
+ libomapi.la: ${OBJS}
+ 	${LIBTOOL} --mode=link \
+-		${CC} ${ALL_CFLAGS} -o libisc.la -rpath ${libdir} \
++		${CC} ${ALL_CFLAGS} -o libomapi.la -rpath ${libdir} \
+ 		-version-info ${LIBINTERFACE}:${LIBREVISION}:${LIBAGE} \
+ 		${OBJS} ${LIBS}
+ 
