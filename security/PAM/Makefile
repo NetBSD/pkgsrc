@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/28 13:39:17 rh Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.kernel.org/pub/linux/libs/pam/pre/library/
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.kernel.org/pub/linux/libs/pam/
 
+BUILD_DEPENDS+=	bison:../../devel/bison
 DEPENDS+=	libcrack-*:../../security/libcrack
 
 USE_GMAKE=	YES
