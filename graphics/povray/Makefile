@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/01/04 16:28:42 agc Exp $
+# $NetBSD: Makefile,v 1.7 2000/02/09 15:22:33 tron Exp $
 # FreeBSD Id: Makefile,v 1.9 1998/08/20 18:56:00 jseger Exp
 #
 
@@ -14,7 +14,7 @@ DIST_SUBDIR=	${PKGNAME}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.povray.org/
 
-DEPENDS+=	png-1.0.3:../../graphics/png
+DEPENDS+=	png-*:../../graphics/png
 
 USE_X11=	yes
 
