@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 20:05:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/28 22:41:39 xtraeme Exp $
 #
 
 DISTNAME=	pekwm-0.1.3
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://pekwm.pekdon.net/files/source/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +17,12 @@ USE_GMAKE=	YES
 USE_X11=	YES
 USE_PERL5=	run
 USE_PKGINSTALL=	YES
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${X11BASE}/include/X11/extensions/Xinerama.h)
+CONFIGURE_ARGS+=	--disable-xinerama
+.endif
 
 CONFIGURE_ARGS+=	--enable-harbour
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
