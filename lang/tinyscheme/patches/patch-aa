@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/10/28 09:04:02 agc Exp $
+$NetBSD: patch-aa,v 1.2 2002/10/30 07:56:09 agc Exp $
 
 --- makefile	2002/10/24 09:41:47	1.1
 +++ makefile	2002/10/24 09:42:36
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/10/28 09:04:02 agc Exp $
  PLATFORM_FEATURES= -DSUN_DL=1
  
   
-@@ -47,26 +48,30 @@
+@@ -47,26 +48,31 @@
  #LIBPREFIX = lib 
  #OUT = -o $@ 
   
@@ -63,6 +63,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/10/28 09:04:02 agc Exp $
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} scheme${EXE_EXT} ${PREFIX}/bin/tinyscheme
 +	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/tinyscheme
 +	${BSD_INSTALL_DATA} init.scm ${PREFIX}/share/tinyscheme
++	${BSD_INSTALL_DATA} scheme.h ${PREFIX}/include/tinyscheme.h
  
  $(OBJS): scheme.h scheme-private.h opdefines.h
  dynload.$(Osuf): dynload.h 
