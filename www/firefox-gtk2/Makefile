@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/11 04:22:47 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/11 08:27:09 grant Exp $
 
 MOZILLA=	firefox-gtk2
 MOZILLA_BIN=	firefox-bin
@@ -13,7 +13,7 @@ MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}
 		ftp://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/
 
 HOMEPAGE=	http://www.mozilla.org/projects/firefox/
-COMMENT=	Lightweight gecko-based web browser built on gtk2
+COMMENT=	Lightweight gecko-based web browser built with GTK2
 
 DISTINFO_FILE=	${.CURDIR}/../../www/firefox/distinfo
 PATCHDIR=	${.CURDIR}/../../www/firefox/patches
