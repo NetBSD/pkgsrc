@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/30 10:53:41 agc Exp $
+
+Use the right signal handler type.
+
+--- xmeter.c	1998/10/30 10:41:09	1.1
++++ xmeter.c	1998/10/30 10:41:51
+@@ -231,7 +228,7 @@
+     char	*name;		/* Name of stat for menu widget		*/
+ } STATDATA;
+ 
+-#if defined(SVR4) || defined(sgi)
++#if defined(SVR4) || defined(sgi) || (defined(BSD) && BSD >= 199306)
+ #define SIGTYPE	void
+ #else
+ #define SIGTYPE	int
