@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.3 2004/02/27 05:28:06 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.4 2004/03/03 14:46:55 keihan Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -325,7 +325,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.3 2004/02/27 05:28:06 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.4 2004/03/03 14:46:55 keihan Exp $
 # 
 
 # PROVIDE: root
@@ -483,6 +483,7 @@ _EOF_
 		    root tmp usr var sbin home
 		do
 		    if [ -d $ISODIR/$F ]; then
+			showmsg "Cleaning ISODIR: $ISODIR/$F"
 			rm -rf $ISODIR/$F
 		    fi
 		done
