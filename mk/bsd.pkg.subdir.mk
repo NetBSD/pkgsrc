@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.13 1998/05/14 14:27:47 agc Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.14 1998/05/15 12:14:24 agc Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -110,7 +110,7 @@ readme:
 	@${MAKE} README.html
 .endif
 
-.if defined(PORTSTOP)
+.if defined(PKGSRCTOP)
 README=	templates/README.top
 .else
 README=	../templates/README.category
@@ -122,7 +122,7 @@ README.html:
 	@echo "===>  Creating README.html for ${_THISDIR_}${.CURDIR:T}"
 	@> $@.tmp
 .for entry in ${SUBDIR}
-.if defined(PORTSTOP)
+.if defined(PKGSRCTOP)
 	@echo -n '<a href="'${entry}/README.html'">'"`echo ${entry} | ${HTMLIFY}`"'</a>: ' >> $@.tmp
 .else
 	@echo -n '<a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} package-name | ${HTMLIFY}`</a>: " >> $@.tmp
