@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.19 2004/11/06 15:58:50 tron Exp $
+# $NetBSD: bsd.sites.mk,v 1.20 2004/11/22 17:12:42 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -106,13 +106,12 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.sunet.se/pub/X11/GNOME/ \
 	ftp://ftp.tuwien.ac.at/hci/GNOME/ \
 	ftp://ftp.cse.buffalo.edu/pub/Gnome/ \
-	ftp://ftp.tuwien.ac.at/linux/gnome.org/ \
 	ftp://ftp.dti.ad.jp/pub/X/gnome/ \
 	ftp://ftp.kddlabs.co.jp/pub/GNOME/ \
 	ftp://ftp.chg.ru/pub/X11/gnome/ \
 	ftp://ftp.dataplus.se/pub/linux/gnome/ \
 	ftp://ftp.dit.upm.es/linux/gnome/ \
-	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/GNOME/
+	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/
 
 MASTER_SITE_SOURCEFORGE+=	\
 	http://belnet.dl.sourceforge.net/sourceforge/ \
