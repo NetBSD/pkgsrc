@@ -1,24 +1,35 @@
-$NetBSD: distinfo,v 1.6 2004/01/03 01:08:06 wiz Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 19:18:26 agc Exp $
 
 SHA1 (adobe-cmaps-20030924/ac14.tar.Z) = 5f95e93442e4aa8b7d14c064b4e33623753671b1
+RMD160 (adobe-cmaps-20030924/ac14.tar.Z) = 35e1cfc4332531a69a993b39f80c7a7a2a4fc729
 Size (adobe-cmaps-20030924/ac14.tar.Z) = 1388945 bytes
 SHA1 (adobe-cmaps-20030924/ag14.tar.Z) = 4d38a49b589186f7432eacc41bfb6b321ba65b06
+RMD160 (adobe-cmaps-20030924/ag14.tar.Z) = 2b7ba5ec42b6e03e0eb3512678c175720726d1bc
 Size (adobe-cmaps-20030924/ag14.tar.Z) = 2057991 bytes
 SHA1 (adobe-cmaps-20030924/ai0.tar.Z) = df90b2e71bcc045524dcc4683c1b084713e645ea
+RMD160 (adobe-cmaps-20030924/ai0.tar.Z) = 8b2c1f40aa3d3ce71c9beafc24300fa73f1ac703
 Size (adobe-cmaps-20030924/ai0.tar.Z) = 4037 bytes
 SHA1 (adobe-cmaps-20030924/aj15.tar.Z) = be206ecf0c8e05f9c91ca4533b6b58099a4f9d60
+RMD160 (adobe-cmaps-20030924/aj15.tar.Z) = fd2002c13efbf49cd1f4938a2d84bb4fa0bc3c64
 Size (adobe-cmaps-20030924/aj15.tar.Z) = 1048901 bytes
 SHA1 (adobe-cmaps-20030924/aj20.tar.Z) = 45e7ebb82fa18eb3f2dc989949e0f673e00c4141
+RMD160 (adobe-cmaps-20030924/aj20.tar.Z) = 7915552a2f2a0f719879858d8326ce278b05c092
 Size (adobe-cmaps-20030924/aj20.tar.Z) = 258583 bytes
 SHA1 (adobe-cmaps-20030924/ak12.tar.Z) = c4c91f6baedee44b8e38c2b8cd8e572dfa4f007c
+RMD160 (adobe-cmaps-20030924/ak12.tar.Z) = ea8824fe1655b095f9e6d4ae4f8426be27f956fb
 Size (adobe-cmaps-20030924/ak12.tar.Z) = 792646 bytes
 SHA1 (adobe-cmaps-20030924/rksj-cmaps.tar.Z) = 48e7831f299ed01b3cb6d26f0bf1b6bee8bc3a5a
+RMD160 (adobe-cmaps-20030924/rksj-cmaps.tar.Z) = ea2fcbdd1a4229a2577be2cc2944dec76db4f306
 Size (adobe-cmaps-20030924/rksj-cmaps.tar.Z) = 40873 bytes
 SHA1 (adobe-cmaps-20030924/chinese_s.zip) = 220425be74ba6aebeada7e9e7970d640a8617b09
+RMD160 (adobe-cmaps-20030924/chinese_s.zip) = abf2d85c054ffcb0abf38e2c50c1ae4ca56d642f
 Size (adobe-cmaps-20030924/chinese_s.zip) = 427910 bytes
 SHA1 (adobe-cmaps-20030924/chinese_t.zip) = 8eecb56627e6971194e4d20d7308c3faa24cd85c
+RMD160 (adobe-cmaps-20030924/chinese_t.zip) = ae8867b632044393556aff40fe1dbe97a7566b68
 Size (adobe-cmaps-20030924/chinese_t.zip) = 399452 bytes
 SHA1 (adobe-cmaps-20030924/japanese.zip) = 9114cf1f1dc8e00494d5b37079aa95fd55583376
+RMD160 (adobe-cmaps-20030924/japanese.zip) = d5cc98a9f46323073f8c9c104bcf8d7a0ae3f975
 Size (adobe-cmaps-20030924/japanese.zip) = 236664 bytes
 SHA1 (adobe-cmaps-20030924/korean.zip) = 817d8dd57d8bb8f23a6439c5a548f0975573d7d1
+RMD160 (adobe-cmaps-20030924/korean.zip) = 95fc2e413ad519863c2678ee6f71da3f846f9290
 Size (adobe-cmaps-20030924/korean.zip) = 258946 bytes
