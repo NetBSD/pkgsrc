@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2003/10/05 12:03:33 martti Exp $
+# $NetBSD: Makefile,v 1.22 2003/12/07 15:17:08 martti Exp $
 #
 
-DISTNAME=	bins-1.1.23
+DISTNAME=	bins-1.1.24
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -39,28 +39,53 @@ post-patch:
 		${WRKSRC}/bins.bak > ${WRKSRC}/bins
 
 do-install:
+	# Programs and manual pages
+	${INSTALL_SCRIPT} ${WRKSRC}/anti_bins ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bins ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bins_cleanupgallery ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bins_edit ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/bins.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/bins_edit.1 ${PREFIX}/man/man1
+	# HTML documentation
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/bins
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html \
-		${PREFIX}/share/doc/html/bins
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/html/bins/
+	# Example configuration file
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins
+	${INSTALL_DATA} ${WRKSRC}/binsrc ${PREFIX}/share/examples/bins/
+	# template: default
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.default
-	${INSTALL_DATA} ${WRKSRC}/templates/*.html \
-		${PREFIX}/share/examples/bins/templates.default
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.joi
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.joi/static
-	${INSTALL_DATA} ${WRKSRC}/templates.joi/*.html \
-		${PREFIX}/share/examples/bins/templates.joi
-	${INSTALL_DATA} ${WRKSRC}/templates.joi/static/*.css \
-		${WRKSRC}/templates.joi/static/*.png \
-		${WRKSRC}/templates.joi/static/*.js \
+	${INSTALL_DATA} ${WRKSRC}/templates/*.html			\
+		${PREFIX}/share/examples/bins/templates.default/
+	# template: jab
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.jab
+	${INSTALL_DATA} ${WRKSRC}/templates.jab/*.html			\
+		${PREFIX}/share/examples/bins/templates.jab/
+	# template: joi
+	${INSTALL_DATA_DIR}						\
+		${PREFIX}/share/examples/bins/templates.joi		\
 		${PREFIX}/share/examples/bins/templates.joi/static
-	${INSTALL_DATA} ${WRKSRC}/binsrc \
-		${PREFIX}/share/examples/bins
-	for lang in es de fr it nl pl ru zh; do \
+	${INSTALL_DATA} ${WRKSRC}/templates.joi/*.html			\
+		${PREFIX}/share/examples/bins/templates.joi/
+	${INSTALL_DATA}							\
+		${WRKSRC}/templates.joi/static/*.css			\
+		${WRKSRC}/templates.joi/static/*.png			\
+		${WRKSRC}/templates.joi/static/*.js			\
+		${PREFIX}/share/examples/bins/templates.joi/static/
+	# template: new
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.new
+	${INSTALL_DATA} ${WRKSRC}/templates.new/*.html			\
+		${PREFIX}/share/examples/bins/templates.new/
+	# template: satyap
+	${INSTALL_DATA_DIR}						\
+		${PREFIX}/share/examples/bins/templates.satyap		\
+		${PREFIX}/share/examples/bins/templates.satyap/static
+	${INSTALL_DATA} ${WRKSRC}/templates.satyap/*.html		\
+		${PREFIX}/share/examples/bins/templates.satyap/
+	${INSTALL_DATA}							\
+		${WRKSRC}/templates.satyap/static/*.css			\
+		${PREFIX}/share/examples/bins/templates.satyap/static/
+	# Translations
+	for lang in de eo es fi fr it ja nl pl ru zh; do \
 		${INSTALL_DATA} ${WRKSRC}/intl/$$lang.mo \
 		${PREFIX}/${PKGLOCALEDIR}/locale/$$lang/LC_MESSAGES/bins.mo; \
 	done
