@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 1999/06/08 10:40:28 sakamoto Exp $
+$NetBSD: patch-aa,v 1.2 1999/08/27 05:49:42 sakamoto Exp $
 
 --- Makefile.in.orig	Thu May 20 19:09:16 1999
 +++ Makefile.in	Tue Jun  8 19:22:39 1999
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.1 1999/06/08 10:40:28 sakamoto Exp $
  	cp ../COPYING ../ToDo ../ChangeLog $(DOCDIR)
  	cp ../README.ja ../doc/ja/* "$(DOCDIR)/ja"
  	cp ../README.en ../doc/en/* "$(DOCDIR)/en"
-+	rm ../lib/*.bak
++	rm -f ../lib/*.bak
  	cp ../lib/* $(LIBDIR)
  	cp ../contrib/* $(CONTRIBDIR)
  	cp namazu mknmz $(BINDIR_SYS)
