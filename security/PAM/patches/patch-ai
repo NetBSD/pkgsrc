@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.2 2002/01/29 17:10:12 jlam Exp $
+$NetBSD: patch-ai,v 1.3 2002/12/23 21:23:59 jlam Exp $
 
---- modules/pam_env/Makefile.orig	Mon Jan 28 17:28:23 2002
-+++ modules/pam_env/Makefile
-@@ -15,8 +15,4 @@
+--- modules/pam_access/Makefile.orig	Sun Nov 19 18:54:03 2000
++++ modules/pam_access/Makefile
+@@ -14,8 +14,4 @@ INSTALLED_CONFILE=$(SCONFIGD)/access.con
  DEFS=-DDEFAULT_CONF_FILE=\"$(INSTALLED_CONFILE)\"
  CFLAGS += $(DEFS)
  
