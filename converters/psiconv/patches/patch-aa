@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/06 01:58:07 sakamoto Exp $
+
+--- ./compat/Makefile.in.orig	Sun Dec  5 06:42:06 1999
++++ ./compat/Makefile.in	Mon Dec  6 10:00:29 1999
+@@ -101,5 +101,5 @@
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+-LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
++LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@ -rpath $(PREFIX)/lib
+ DIST_COMMON =  Makefile.am Makefile.in getopt.c getopt1.c strdup.c
+ 
