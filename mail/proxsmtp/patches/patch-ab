@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/12/02 04:08:18 jlam Exp $
+
+--- common/smtppass.c.orig	2004-10-30 14:27:33.000000000 -0400
++++ common/smtppass.c
+@@ -586,7 +586,7 @@ static spctx_t* init_thread(int fd)
+                 g_unique_id++;
+         sp_unlock();    
+             
+-        sp_messagex(ctx, LOG_DEBUG, "processing %d on thread %x", fd, (int)pthread_self());
++        sp_messagex(ctx, LOG_DEBUG, "processing %d on thread %p", fd, pthread_self());
+         
+         /* Connect to the outgoing server ... */
+         if(make_connections(ctx, fd) == -1)
