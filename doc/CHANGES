@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.250 2002/10/14 09:53:11 wiz Exp $
+$NetBSD: CHANGES,v 1.251 2002/10/14 10:37:42 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3238,3 +3238,20 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated links-gui to 2.1.0.4 [wiz 2002-10-14]
 	Updated xmms to 1.2.7nb2 [rh 2002-10-14]
 	Updated ORBit2 to 2.4.3 [wiz 2002-10-14]
+	Updated arts to 1.0.4 [skrll 2002-10-14]
+	Updated kdelibs to 3.0.4 [skrll 2002-10-14]
+	Updated kdebase to 3.0.4 [skrll 2002-10-14]
+	Updated kdeaddons to 3.0.4 [skrll 2002-10-14]
+	Updated kdeadmin to 3.0.4 [skrll 2002-10-14]
+	Updated kdeartwork to 3.0.4 [skrll 2002-10-14]
+	Updated kdeedu to 3.0.4 [skrll 2002-10-14]
+	Updated kdegames to 3.0.4 [skrll 2002-10-14]
+	Updated kdegraphics to 3.0.4 [skrll 2002-10-14]
+	Updated kdemultimedia to 3.0.4 [skrll 2002-10-14]
+	Updated kdenetwork to 3.0.4 [skrll 2002-10-14]
+	Updated kdepim to 3.0.4 [skrll 2002-10-14]
+	Updated kdetoys to 3.0.4 [skrll 2002-10-14]
+	Updated kdeutils to 3.0.4 [skrll 2002-10-14]
+	Updated kdesdk to 3.0.4 [skrll 2002-10-14]
+	Updated kdelibdocs to 3.0.4 [skrll 2002-10-14]
+	Updated kde to 3.0.4 [skrll 2002-10-14]
