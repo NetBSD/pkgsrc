@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.389 2003/07/10 09:20:27 jtb Exp $
+# $NetBSD: Makefile,v 1.390 2003/07/12 14:21:45 salo Exp $
 #
 
 COMMENT=	Networking tools
@@ -215,6 +215,7 @@ SUBDIR+=	proftpd
 SUBDIR+=	proxycheck
 SUBDIR+=	publicfile
 SUBDIR+=	puf
+SUBDIR+=	pure-ftpd
 SUBDIR+=	pureftpd
 SUBDIR+=	pxe
 SUBDIR+=	py-IP
