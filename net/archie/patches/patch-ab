@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:35 agc Exp $
+$NetBSD: patch-ab,v 1.3 1999/07/08 00:38:25 tron Exp $
 
 *** archie.h.orig	Fri Oct 21 00:25:42 1994
 --- archie.h	Fri Oct 21 00:26:59 1994
@@ -12,26 +12,31 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:35 agc Exp $
   #endif
   
   /*
---- 8,30 ----
+--- 8,35 ----
   
   /* You can't touch this.  */
   #ifndef XARCHIE
 ! /* Dated: March 13th, 1996 */
-! # define ARCHIES	"archie.au (Australia)","archie.uni-linz.ac.at (Austria)", \
-! 	"archie.univie.ac.at (Austria)","archie.cs.mcgill.ca (Canada)", \
-! 	"archie.uqam.ca (Canada)","archie.funet.fi (Finland)", \
-! 	"archie.univ-rennes1.fr (France","archie.th-darmstadt.de (Germany)", \
-! 	"archie.ac.il (Israel)","archie.unipi.it (Italy)", \
-! 	"archie.wide.ad.jp (Japan)","archie.hana.nm.kr (Korea)", \
-! 	"archie.sogang.ac.kr (Korea)","archie.uninett.no (Norway)", \
-!	"archie.uct.ac.za (South Africa [CT])", \
-! 	"archie.rediris.es (Spain)","archie.luth.se (Sweden)", \
-! 	"archie.switch.ch (Switzerland)","archie.twnic.net (Taiwan)", \
-! 	"archie.ncu.edu.tw (Taiwan)","archie.doc.ic.ac.uk (United Kingdom)", \
-! 	"archie.hensa.ac.uk (United Kingdom)","archie.unl.edu (USA [NE])", \
-! 	"archie.internic.net (USA [NJ])","archie.rutgers.edu (USA [NJ])", \
-! 	"archie.ans.net (USA [NY])","archie.sura.net (USA [MD])"
-! # define NARCHIES	27
+! # define ARCHIES	"archie.au (Australia)", \
+! 			"archie.univie.ac.at (Austria)", \
+! 			"archie.belnet.be", \
+! 			"archie.bunyip.com", \
+! 			"archie.cs.mcgill.ca (Canada)", \
+! 			"archie.funet.fi (Finland)", \
+! 			"archie.th-darmstadt.de (Germany)", \
+! 			"archie.ac.il (Israel)", \
+! 			"archie.unipi.it (Italy)", \
+! 			"archie.wide.ad.jp (Japan)", \
+! 			"archie.kornet.ac.kr (Korea)", \
+! 			"archie.sogang.ac.kr (Korea)", \
+! 			"archie.icm.edu.pl (Poland)", \
+! 			"archie.rediris.es (Spain)", \
+! 			"archie.switch.ch (Switzerland)", \
+! 			"archie.ncu.edu.tw (Taiwan)", \
+! 			"archie.doc.ic.ac.uk (United Kingdom)", \
+! 			"archie.hensa.ac.uk (United Kingdom)", \
+! 			"archie.rutgers.edu (USA [NJ])"
+! # define NARCHIES	19
 ! 
   #endif
   
