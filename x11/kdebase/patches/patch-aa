@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.16 2000/02/29 19:43:59 jlam Exp $
-
-The ossaudio check pulled into KDE. 1999-12-11 jdolecek
---- configure.old	Tue Sep  7 17:21:06 1999
-+++ configure	Fri Dec  3 18:56:37 1999
+$NetBSD: patch-aa,v 1.17 2000/04/03 11:01:58 drochner Exp $
+--- configure.orig	Tue Sep  7 17:21:06 1999
++++ configure	Sun Apr  2 23:16:38 2000
 @@ -517,9 +517,10 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
@@ -83,6 +81,27 @@ The ossaudio check pulled into KDE. 1999-12-11 jdolecek
    cat >> confdefs.h <<EOF
  #define HAVE_PAM_LIB 1
  EOF
+@@ -5628,7 +5629,7 @@
+ 
+     ac_save_ldflags="$LDFLAGS"
+     ac_save_cflags="$CFLAGS"
+-    LDFLAGS="$LDFLAGS $GL_LDFLAGS $all_libraries -lMesaGL -lMesaGLU -lX11 -lXext -lm $LIBSOCKET"
++    LDFLAGS="$LDFLAGS $GL_LDFLAGS $all_libraries -lGL -lGLU -lX11 -lXext -lm $LIBSOCKET"
+     CFLAGS="$CFLAGS $X_INCLUDES"
+     test ! -z "$GL_INCLUDE" && CFLAGS="-I$GL_INCLUDE $CFLAGS"
+     cat > conftest.$ac_ext <<EOF
+@@ -5665,9 +5666,9 @@
+ EOF
+ 
+     if test "$GL_LDFLAGS" = ""; then
+-       GLLIB='-lMesaGL -lMesaGLU $(LIB_X11)'
++       GLLIB='-lGL -lGLU $(LIB_X11)'
+     else
+-       GLLIB="$GL_LDFLAGS -lMesaGL -lMesaGLU "'$(LIB_X11)'
++       GLLIB="$GL_LDFLAGS -lGL -lGLU "'$(LIB_X11)'
+     fi
+     if test "$GL_INCLUDE" = ""; then
+        GLINC=""
 @@ -6166,6 +6167,46 @@
  
  
