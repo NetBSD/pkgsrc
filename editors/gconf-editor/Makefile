@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/04/14 16:15:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/15 11:16:04 jmmv Exp $
 #
 
 DISTNAME=		gconf-editor-2.6.0
@@ -15,6 +15,7 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
+USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
