@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.7 2005/01/30 05:34:16 minskim Exp $
+
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=266519
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=277122
+
+--- dfa.c.orig	2004-07-26 09:11:41.000000000 -0500
++++ dfa.c
+@@ -634,7 +634,7 @@ parse_bracket_exp_mb ()
+ 		      work_mbc->coll_elems[work_mbc->ncoll_elems++] = elem;
+ 		    }
+  		}
+-	      wc = WEOF;
++	      wc = wc1 = WEOF;
+ 	    }
+ 	  else
+ 	    /* We treat '[' as a normal character here.  */
+@@ -2871,6 +2871,14 @@ dfaexec (struct dfa *d, char const *begi
+   if (MB_CUR_MAX > 1)
+     {
+       int remain_bytes, i;
++#if 0
++      /*
++       * This caching can get things wrong:
++
++      printf "ab\n\tb\n" | LC_ALL=de_DE.UTF-8 ./gawk '/^[ \t]/ { print }'
++
++       * should print \tb but doesn't
++       */
+       buf_begin -= buf_offset;
+       if (buf_begin <= (unsigned char const *)begin && (unsigned char const *) end <= buf_end) {
+ 	buf_offset = (unsigned char const *)begin - buf_begin;
+@@ -2878,6 +2886,7 @@ dfaexec (struct dfa *d, char const *begi
+ 	buf_end = end;
+ 	goto go_fast;
+       }
++#endif
+ 
+       buf_offset = 0;
+       buf_begin = begin;
+@@ -2916,7 +2925,9 @@ dfaexec (struct dfa *d, char const *begi
+       mblen_buf[i] = 0;
+       inputwcs[i] = 0; /* sentinel */
+     }
++#if 0
+ go_fast:
++#endif
+ #endif /* MBS_SUPPORT */
+ 
+   for (;;)
