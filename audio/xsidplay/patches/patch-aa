@@ -1,13 +1,53 @@
-$NetBSD: patch-aa,v 1.7 2000/10/29 08:54:54 pooka Exp $
+$NetBSD: patch-aa,v 1.7.6.1 2003/03/15 12:23:50 grant Exp $
 
---- src/Makefile.in.orig	Thu Oct 26 18:51:21 2000
-+++ src/Makefile.in	Sat Oct 28 15:18:33 2000
-@@ -104,7 +104,7 @@
- 
+--- src/Makefile.in.orig	Thu Oct 26 11:51:21 2000
++++ src/Makefile.in	Fri Mar 14 20:54:45 2003
+@@ -105,5 +105,5 @@
  bin_PROGRAMS = xsidplay
  
 -xsidplay_LDADD = audio/libaudio.a stilview/libstilview.a songlendb/libsonglendb.a tools/libtools.a widgets/libwidgets.a @SIDPLAY_LDFLAGS@ -lsidplay @QT_LDFLAGS@ -lqt
 +xsidplay_LDADD = audio/libaudio.a stilview/libstilview.a songlendb/libsonglendb.a tools/libtools.a widgets/libwidgets.a @SIDPLAY_LDFLAGS@ -lsidplay @QT_LDFLAGS@ -lX11 -lXext -lICE -lSM -lqt @LIBAUDIO@
  
  
- xsidplay_SOURCES = $(BUILT_SOURCES) AudioDialog.cpp AudioDialog.h AudioDialogData.cpp AudioDialogData.h ConfigC.cpp ConfigC.h ConfigFile.cpp ConfigFile.h ConfigFileOld.cpp ConfigFileOld.h EmuDialog.cpp EmuDialog.h EmuDialogData.cpp EmuDialogData.h FilterDialog.cpp FilterDialog.h FilterDialogData.cpp FilterDialogData.h GlobalIcon.h HVSC_Dialog.cpp HVSC_Dialog.h HVSC_DialogData.cpp HVSC_DialogData.h HVSC_Config.h HistoryDialog.cpp HistoryDialog.h HistoryDialogData.cpp HistoryDialogData.h HistoryFile.cpp HistoryFile.h HistoryItem.h MainDialog.cpp MainDialog.h MainDialogData.cpp MainDialogData.h MixerConfig.h MixerDialog.cpp MixerDialog.h MixerDialogData.cpp MixerDialogData.h Player.h Player.cpp Playlist.cpp Playlist.h PlaylistDialog.cpp PlaylistDialog.h PlaylistDialogData.cpp PlaylistDialogData.h PlaylistEditDialog.cpp PlaylistEditDialog.h PlaylistEditDialogData.cpp PlaylistEditDialogData.h PlaylistCheck.cpp PlaylistCheck.h PlaylistItem.h PlaylistOptDialog.cpp PlaylistOptDialog.h StilDialog.cpp StilDialog.h WaveViewDialog.cpp WaveViewDialog.h WaveViewDialogData.cpp WaveViewDialogData.h WidgetOffset.cpp WidgetOffset.h myTimer.h filenames.h xsidplay.cpp
+@@ -140,4 +140,6 @@
+ CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
++CXXCOMPILE_NOOPT = $(CXXCOMPILE:-O%=)
++LTCXXCOMPILE_NOOPT = $(LTCXXCOMPILE:-O%=)
+ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
+@@ -159,5 +161,5 @@
+ all: all-redirect
+ .SUFFIXES:
+-.SUFFIXES: .S .c .cpp .lo .o .s
++.SUFFIXES:  .S .c .cxx .cpp .lo .o .s
+ $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+ 	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps src/Makefile
+@@ -239,4 +241,11 @@
+ 	$(LTCXXCOMPILE) -c $<
+ 
++.cxx.o:
++	$(CXXCOMPILE_NOOPT) -c $<
++.cxx.lo:
++	$(LTCXXCOMPILE_NOOPT) -c $<
++.cpp.cxx:
++	cp $< $@
++
+ # This directory's subdirectories are mostly independent; you can cd
+ # into them and run `make' without going through this Makefile.
+@@ -515,2 +524,15 @@
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
++
++# problem files  -- compile with no optimization
++ifeq (${MACHINE_ARCH},alpha)
++moc_FilterDialogData.o: moc_FilterDialogData.cxx
++moc_MainDialog.o: moc_MainDialog.cxx
++moc_MainDialogData.o: moc_MainDialogData.cxx
++moc_MixerDialog.o: moc_MixerDialog.cxx
++moc_MixerDialogData.o:  moc_MixerDialogData.cxx
++moc_PlaylistDialog.o: moc_PlaylistDialog.cxx
++moc_PlaylistEditDialog.o: moc_PlaylistEditDialog.cxx
++moc_PlaylistEditDialogData.o: moc_PlaylistEditDialogData.cxx
++endif
++
