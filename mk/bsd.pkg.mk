@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.378 1999/12/28 03:33:53 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.379 1999/12/29 16:04:18 bad Exp $
 #
 # This file is in the public domain.
 #
@@ -416,8 +416,8 @@ uptodate-pkgtools:
 	fi
 
 # Files to create for versioning and build information
-BUILD_VERSION_FILE=	${WRKDIR}/BuildVersion
-BUILD_INFO_FILE=	${WRKDIR}/BuildInfo
+BUILD_VERSION_FILE=	${WRKDIR}/.build_version
+BUILD_INFO_FILE=	${WRKDIR}/.build_info
 
 # Files containing size of pkg w/o and w/ all required pkgs
 SIZE_PKG_FILE=		${WRKDIR}/SizePkg
