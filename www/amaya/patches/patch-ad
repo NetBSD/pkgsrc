@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/06/20 16:50:11 drochner Exp $
+
+--- ../thotlib/base/registry.c.orig	Sun Jun 18 18:07:20 2000
++++ ../thotlib/base/registry.c	Sun Jun 18 18:03:11 2000
+@@ -1597,14 +1597,16 @@
+ 	  if (c_filename[0] == DIR_SEP)
+ 	    {
+ 	      strcpy (c_execname, c_filename);
++	    }
++	  else
++	    {
+ 	      c_end = c_execname;
+ 	      while (*c_end)
+ 		c_end++; /* go to the ending NUL */
+ 	      while (c_end > c_execname && *c_end != DIR_SEP)
+ 		c_end--;
++	      strcpy (c_end + 1, c_filename);
+ 	    }
+-	  else
+-	    strcpy (c_end + 1, c_filename);
+ 	} 
+     }
+   iso2wc_strcpy (execname, c_execname);
