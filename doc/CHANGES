@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5583 2004/04/15 10:41:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.5584 2004/04/15 10:48:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1958,3 +1958,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added rudiments-0.25.1 [grant 2004-04-15]
 	Added sqlrelay-0.33.1 [grant 2004-04-15]
 	Updated gtk2 to 2.4.0nb1 [jmmv 2004-04-15]
+	Added gtk2-engines-bluecurve-1.0 [jmmv 2004-04-15]
