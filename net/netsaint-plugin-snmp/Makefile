@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/04/20 18:46:07 fredb Exp $
+# $NetBSD: Makefile,v 1.8.4.1 2002/07/22 17:23:10 agc Exp $
 #
 
 DISTNAME=	netsaint-plugins-1.2.9-4
@@ -21,21 +21,21 @@ DEPENDS+=	ucd-snmp-4.2.4*:../../net/ucd-snmp
 ALL_TARGET=	check_snmp check_hpjd
 
 pre-configure:
-	cd ${WRKSRC};	\
-	${LOCALBASE}/bin/aclocal;	\
-	${LOCALBASE}/bin/autoheader;	\
-	${LOCALBASE}/bin/automake -a --foreign -i;	\
+	cd ${WRKSRC};							\
+	${LOCALBASE}/bin/aclocal --acdir=${LOCALBASE}/share/aclocal;	\
+	${LOCALBASE}/bin/autoheader;					\
+	${LOCALBASE}/bin/automake -a --foreign -i;			\
 	${LOCALBASE}/bin/autoconf
 
 do-build:
-	cd ${WRKSRC}/plugins &&		\
-	${SETENV} ${MAKE_ENV}		\
+	cd ${WRKSRC}/plugins &&						\
+	${SETENV} ${MAKE_ENV}						\
 	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 
 do-install:
-	for PROG in ${ALL_TARGET}; do	\
-		${INSTALL_PROGRAM} ${WRKSRC}/plugins/$${PROG}	\
-		${PREFIX}/libexec/netsaint;	\
+	for PROG in ${ALL_TARGET}; do					\
+		${INSTALL_PROGRAM} ${WRKSRC}/plugins/$${PROG}		\
+		${PREFIX}/libexec/netsaint;				\
 	done
 
 .include "../../mk/bsd.pkg.mk"
