@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/05/07 01:44:03 danw Exp $
+$NetBSD: distinfo,v 1.6 2004/06/16 15:33:00 minskim Exp $
 
 SHA1 (fastcap/fastcap-2.0-15Jul92.tar.Z) = 256fa1a09ee41ab2bc59cb72730353605b108793
 Size (fastcap/fastcap-2.0-15Jul92.tar.Z) = 2528677 bytes
@@ -12,3 +12,4 @@ SHA1 (patch-aa) = 489b5f8716627f9c9297e8d11f1cfb0e1777b3fe
 SHA1 (patch-ab) = 4336ebcb0ba385e6937129735653db20d48d186f
 SHA1 (patch-ac) = d1f207e0921e0a0b4f86234277153a9d6d736ccf
 SHA1 (patch-ad) = a9d971f0990d5cf04651afd73689170ce1eb0f13
+SHA1 (patch-ae) = fd04e26454f89661a02e37fc51770746af108fd1
