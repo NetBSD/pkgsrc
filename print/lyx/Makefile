@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2003/03/02 14:57:35 kei Exp $
+# $NetBSD: Makefile,v 1.54 2003/03/22 10:49:16 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
 DISTNAME=		lyx-1.3.0
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/ \
 			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/ \
@@ -38,6 +39,15 @@ DBG=	-O
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+PYTHON_PATCH_SCRIPTS=	lib/lyx2lyx/lyx2lyx \
+			development/tools/generate_symbols_list.py \
+			lib/scripts/fen2ascii.py \
+			lib/scripts/fig2pstex.py \
+			lib/scripts/general_command_wrapper.py \
+			lib/scripts/listerrors \
+			lib/scripts/pic2ascii.py \
+			lib/scripts/pic2png_eps.py
+
 # IPv6 support
 .if defined(LYX_USE_QT) && !empty(LYX_USE_QT:M[Yy][Ee][Ss])
 .include "../../x11/qt3-tools/buildlink2.mk"
@@ -54,6 +64,7 @@ CONFIGURE_ARGS+= 	--with-extra-prefix=${BUILDLINK_PREFIX.xforms} \
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../lang/gcc/buildlink2.mk"
+.include "../../lang/python/application.mk"
 .include "../../textproc/aiksaurus/buildlink2.mk"
 .include "../../textproc/aspell/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
