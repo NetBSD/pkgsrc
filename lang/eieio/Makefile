@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/11 08:53:48 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/04 20:41:36 seb Exp $
 #
 
 DISTNAME=	eieio-0.17
@@ -21,6 +21,7 @@ MAKEFLAGS+=	EMACS=${EMACS_BIN}
 NO_CONFIGURE=	# set
 USE_GMAKE=	# set
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	eieio.info
 
 # XXX $cd ${WRKSRC}; ${MAKE} -V eieio_LISP
@@ -35,5 +36,4 @@ do-install:
 			${EMACS_LISPPREFIX}/eieio
 	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${PREFIX}/info
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/11 08:53:48 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/04 20:41:36 seb Exp $
 ${EMACS_LISPPREFIX}/eieio/call-tree.el
 ${EMACS_LISPPREFIX}/eieio/call-tree.elc
 ${EMACS_LISPPREFIX}/eieio/chart.el
@@ -21,7 +21,5 @@ ${EMACS_LISPPREFIX}/eieio/linemark.el
 ${EMACS_LISPPREFIX}/eieio/linemark.elc
 ${EMACS_LISPPREFIX}/eieio/tree.el
 ${EMACS_LISPPREFIX}/eieio/tree.elc
-@unexec ${INSTALL_INFO} --delete %D/info/eieio.info %D/info/dir
 info/eieio.info
-@exec ${INSTALL_INFO} %D/info/eieio.info %D/info/dir
 @dirrm ${EMACS_LISPPREFIX}/eieio
