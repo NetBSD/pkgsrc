@@ -2,6 +2,10 @@ XPenguins is a simple program that animates a number of penguins that
 fall from the top of the screen, walk along the top of windows, up
 the side of windows, up the side of the screen, and sometimes even
 levitate with their genetically-modified go-go-gadget 'copter
-ability. Use the `-h' option to see a list of current options -
-currently you can specify the display to send the penguins to, the
-delay between frames and the number of penguins that are created.
+ability.
+
+Version 2 is themeable, so if you're bored of penguins you can try
+`xpenguins --theme "Turtles"' to get some nice turtles images
+(by Mayuko Nagata), or download some extra themes. Most of the default
+penguin images were taken from Pingus, a free lemmings clone for Linux,
+although more have been created for XPenguins version 2.

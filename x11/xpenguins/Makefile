@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:07:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/11 22:26:56 zuntum Exp $
 #
 
-DISTNAME=	xpenguins-1.2
+DISTNAME=	xpenguins-2.1
 CATEGORIES=	games x11
 MASTER_SITES=	http://xpenguins.seul.org/
 
@@ -10,9 +10,8 @@ HOMEPAGE=	http://xpenguins.seul.org/
 COMMENT=	Little penguins walking along the tops of your windows
 
 USE_XPM=	YES
+USE_X11=	YES
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xpenguins	 ${PREFIX}/bin
-	${INSTALL_MAN}     ${WRKSRC}/xpenguins.1 ${PREFIX}/man/man1
+GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.pkg.mk"
