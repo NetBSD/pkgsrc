@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.5 2000/08/18 22:43:53 christos Exp $
+$NetBSD: patch-ad,v 1.6 2002/12/11 21:38:06 christos Exp $
 
 --- bsd/kernel.cc.orig	Tue Feb 16 09:09:21 1999
-+++ bsd/kernel.cc	Fri Aug 18 18:36:14 2000
++++ bsd/kernel.cc	Wed Dec 11 16:34:46 2002
 @@ -30,6 +30,10 @@
  #include <errno.h>
  #include <sys/dkstat.h>         /*  For CPUSTATES, which tells us how
@@ -71,3 +71,15 @@ $NetBSD: patch-ad,v 1.5 2000/08/18 22:43:53 christos Exp $
  }
  
  
+@@ -651,7 +681,11 @@
+   while (kvmdiskptr != NULL) {
+     safe_kvm_read ((u_long)kvmdiskptr, &kvmcurrdisk, sizeof(kvmcurrdisk));
+       /*  Add up the contribution from this disk.  */
++#if defined(__NetBSD_Version__) &&  __NetBSD_Version__ > 106070000 /* > 1.6G */
++    *bytesXferred += kvmcurrdisk.dk_rbytes + kvmcurrdisk.dk_wbytes;
++#else
+     *bytesXferred += kvmcurrdisk.dk_bytes;
++#endif
+ #ifdef DEBUG
+     printf ("Got %#x (lower 32bits)\n", (int) (*bytesXferred & 0xffffffff));
+ #endif
