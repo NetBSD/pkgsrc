@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2323 2004/11/08 13:33:51 wiz Exp $
+$NetBSD: TODO,v 1.2324 2004/11/08 13:34:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -493,7 +493,6 @@ Suggested package updates
 	o p7zip-4.10
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
-	o php-5.0.2
 	o phppgadmin-3.4.1 [pkg/26539|recht]
 	o phylip-3.62
 	o pilot-link-0.11.8
