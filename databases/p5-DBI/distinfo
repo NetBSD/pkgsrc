@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2002/08/21 00:30:20 mjl Exp $
+$NetBSD: distinfo,v 1.9 2003/03/06 12:53:05 mjl Exp $
 
-SHA1 (DBI-1.30.tar.gz) = 807fbcb7bca687f1ecb2db21eb179a6d88212b0d
-Size (DBI-1.30.tar.gz) = 257016 bytes
+SHA1 (DBI-1.34.tar.gz) = 409d9edd0ee43f00ca849c0103a91a38cf0c294f
+Size (DBI-1.34.tar.gz) = 290116 bytes
