@@ -1,9 +1,9 @@
-/*	$NetBSD: main.c,v 1.1.1.1 2002/12/20 18:13:53 schmonz Exp $	*/
+/*	$NetBSD: main.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.1.1.1 2002/12/20 18:13:53 schmonz Exp $");
+__RCSID("$NetBSD: main.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $");
 #endif
 #endif
 
@@ -98,13 +98,13 @@ check1pkg(const char *pkgdir)
 
 	f = fopen(CONTENTS_FNAME, "r");
 	if (f == NULL)
-		err(1, "can't open %s/%s/%s", _pkgdb_getPKGDB_DIR(), pkgdir, CONTENTS_FNAME);
+		err(EXIT_FAILURE, "can't open %s/%s/%s", _pkgdb_getPKGDB_DIR(), pkgdir, CONTENTS_FNAME);
 
 	Plist.head = Plist.tail = NULL;
 	read_plist(&Plist, f);
 	p = find_plist(&Plist, PLIST_NAME);
 	if (p == NULL)
-		errx(1, "Package %s has no @name, aborting.",
+		errx(EXIT_FAILURE, "Package %s has no @name, aborting.",
 		    pkgdir);
 	PkgName = p->name;
 	for (p = Plist.head; p; p = p->next) {
@@ -184,15 +184,16 @@ rebuild(void)
 	plist_t *p;
 	char   *PkgName, dir[FILENAME_MAX], *dirp = NULL;
 	char   *PkgDBDir = NULL, file[FILENAME_MAX];
+	char	cachename[FILENAME_MAX];
 
 	pkgcnt = 0;
 	filecnt = 0;
 
-	if (unlink(_pkgdb_getPKGDB_FILE()) != 0 && errno != ENOENT)
-		err(1, "unlink %s", _pkgdb_getPKGDB_FILE());
+	if (unlink(_pkgdb_getPKGDB_FILE(cachename, sizeof(cachename))) != 0 && errno != ENOENT)
+		err(EXIT_FAILURE, "unlink %s", cachename);
 
-	if (pkgdb_open(0) == -1)
-		err(1, "cannot open pkgdb");
+	if (!pkgdb_open(ReadWrite))
+		err(EXIT_FAILURE, "cannot open pkgdb");
 
 	setbuf(stdout, NULL);
 	PkgDBDir = _pkgdb_getPKGDB_DIR();
@@ -202,7 +203,7 @@ rebuild(void)
 #endif
 	dp = opendir(".");
 	if (dp == NULL)
-		err(1, "opendir failed");
+		err(EXIT_FAILURE, "opendir failed");
 	while ((de = readdir(dp))) {
 		package_t Plist;
 
@@ -223,13 +224,13 @@ rebuild(void)
 
 		f = fopen(CONTENTS_FNAME, "r");
 		if (f == NULL)
-			err(1, "can't open %s/%s", de->d_name, CONTENTS_FNAME);
+			err(EXIT_FAILURE, "can't open %s/%s", de->d_name, CONTENTS_FNAME);
 
 		Plist.head = Plist.tail = NULL;
 		read_plist(&Plist, f);
 		p = find_plist(&Plist, PLIST_NAME);
 		if (p == NULL)
-			errx(1, "Package %s has no @name, aborting.",
+			errx(EXIT_FAILURE, "Package %s has no @name, aborting.",
 			    de->d_name);
 		PkgName = p->name;
 		for (p = Plist.head; p; p = p->next) {
@@ -294,7 +295,7 @@ rebuild(void)
 	printf("Stored %d file%s from %d package%s in %s.\n",
 	    filecnt, filecnt == 1 ? "" : "s",
 	    pkgcnt, pkgcnt == 1 ? "" : "s",
-	    _pkgdb_getPKGDB_FILE());
+	    cachename);
 }
 
 static void 
@@ -311,7 +312,7 @@ checkall(void)
 
 	dp = opendir(".");
 	if (dp == NULL)
-		err(1, "opendir failed");
+		err(EXIT_FAILURE, "opendir failed");
 	while ((de = readdir(dp))) {
 		if (!isdir(de->d_name))
 			continue;
@@ -344,7 +345,7 @@ checkpattern_fn(const char *pkg, void *vp)
 
 	rc = chdir(pkg);
 	if (rc == -1)
-		err(1, "Cannot chdir to %s/%s", _pkgdb_getPKGDB_DIR(), pkg);
+		err(EXIT_FAILURE, "Cannot chdir to %s/%s", _pkgdb_getPKGDB_DIR(), pkg);
 
 	check1pkg(pkg);
 	printf(".");
@@ -416,12 +417,12 @@ main(int argc, char *argv[])
 
 			rc = chdir(_pkgdb_getPKGDB_DIR());
 			if (rc == -1)
-				err(1, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
+				err(EXIT_FAILURE, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
 
 			while (*argv != NULL) {
 				if (ispkgpattern(*argv)) {
 					if (findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, checkpattern_fn, NULL) == 0)
-						errx(1, "No matching pkg for %s.", *argv);
+						errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
 				} else {
 					rc = chdir(*argv);
 					if (rc == -1) {
@@ -432,7 +433,7 @@ main(int argc, char *argv[])
 						if (findmatchingname(_pkgdb_getPKGDB_DIR(), try,
 								     checkpattern_fn, NULL) <= 0) {
 
-							errx(1, "cannot find package %s", *argv);
+							errx(EXIT_FAILURE, "cannot find package %s", *argv);
 						} else {
 							/* nothing to do - all the work is/was
 							 * done in checkpattern_fn() */
@@ -466,7 +467,7 @@ main(int argc, char *argv[])
 		/* preserve cwd */
 		saved_wd=open(".", O_RDONLY);
 		if (saved_wd == -1)
-			err(1, "Cannot save working dir");
+			err(EXIT_FAILURE, "Cannot save working dir");
 
 		while (*argv != NULL) {
 			/* args specified */
@@ -482,11 +483,11 @@ main(int argc, char *argv[])
 			fchdir(saved_wd);
 			rc = chdir(dir);
 			if (rc == -1)
-				err(1, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
+				err(EXIT_FAILURE, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
 
 			cwd = getcwd(NULL, 0);
 			if (findmatchingname(cwd, base, lspattern_fn, cwd) == -1)
-				errx(1, "Error in findmatchingname(\"%s\", \"%s\", ...)",
+				errx(EXIT_FAILURE, "Error in findmatchingname(\"%s\", \"%s\", ...)",
 				     cwd, base);
 			free(cwd);
 			
@@ -504,7 +505,7 @@ main(int argc, char *argv[])
 		/* preserve cwd */
 		saved_wd=open(".", O_RDONLY);
 		if (saved_wd == -1)
-			err(1, "Cannot save working dir");
+			err(EXIT_FAILURE, "Cannot save working dir");
 
 		while (*argv != NULL) {
 			/* args specified */
@@ -521,7 +522,7 @@ main(int argc, char *argv[])
 			fchdir(saved_wd);
 			rc = chdir(dir);
 			if (rc == -1)
-				err(1, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
+				err(EXIT_FAILURE, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
 
 			cwd = getcwd(NULL, 0);
 			p = findbestmatchingname(cwd, base);
@@ -540,11 +541,13 @@ main(int argc, char *argv[])
 	    strcasecmp(argv[1], "dump") == 0) {
 
 		char   *key, *val;
+		char	cachename[FILENAME_MAX];
 
-		printf("Dumping pkgdb %s:\n", _pkgdb_getPKGDB_FILE());
 
-		if (pkgdb_open(1) == -1) {
-			err(1, "cannot open %s", _pkgdb_getPKGDB_FILE());
+		printf("Dumping pkgdb %s:\n", _pkgdb_getPKGDB_FILE(cachename, sizeof(cachename)));
+
+		if (!pkgdb_open(ReadOnly)) {
+			err(EXIT_FAILURE, "cannot open %s", cachename);
 		}
 		while ((key = pkgdb_iter())) {
 			val = pkgdb_retrieve(key);
@@ -560,8 +563,8 @@ main(int argc, char *argv[])
 
 		int     rc;
 
-		if (pkgdb_open(0) == -1)
-			err(1, "cannot open pkgdb");
+		if (!pkgdb_open(ReadWrite))
+			err(EXIT_FAILURE, "cannot open pkgdb");
 
 		rc = pkgdb_remove(argv[2]);
 		if (rc) {
@@ -577,8 +580,8 @@ main(int argc, char *argv[])
 
 		int     rc;
 
-		if (pkgdb_open(0) == -1) {
-			err(1, "cannot open pkgdb");
+		if (!pkgdb_open(ReadWrite)) {
+			err(EXIT_FAILURE, "cannot open pkgdb");
 		}
 
 		rc = pkgdb_store(argv[2], argv[3]);

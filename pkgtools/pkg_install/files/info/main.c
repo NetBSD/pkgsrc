@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.1.1.1 2002/12/20 18:14:12 schmonz Exp $	*/
+/*	$NetBSD: main.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.14 1997/10/08 07:47:26 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.1.1.1 2002/12/20 18:14:12 schmonz Exp $");
+__RCSID("$NetBSD: main.c,v 1.2 2003/01/06 04:34:16 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -216,15 +216,15 @@ main(int argc, char **argv)
 	if (CheckPkg && File2Pkg) {
 		char   *s;
 
-		if (pkgdb_open(1) == -1)
-			err(1, "cannot open pkgdb");
+		if (pkgdb_open(ReadOnly) == -1)
+			err(EXIT_FAILURE, "cannot open pkgdb");
 
 		s = pkgdb_retrieve(CheckPkg);
 
 		if (s) {
 			CheckPkg = strdup(s);
 		} else {
-			errx(1, "No matching pkg for %s.", CheckPkg);
+			errx(EXIT_FAILURE, "No matching pkg for %s.", CheckPkg);
 		}
 
 		pkgdb_close();
@@ -234,8 +234,8 @@ main(int argc, char **argv)
 
 	/* Get all the remaining package names, if any */
 	if (File2Pkg && !AllInstalled)
-		if (pkgdb_open(1) == -1) {
-			err(1, "cannot open pkgdb");
+		if (pkgdb_open(ReadOnly) == -1) {
+			err(EXIT_FAILURE, "cannot open pkgdb");
 		}
 	while (*argv) {
 		/* pkgdb: if -F flag given, don't add pkgnames to the "pkgs"
@@ -250,11 +250,11 @@ main(int argc, char **argv)
 				lpp = alloc_lpkg(s);
 				TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
 			} else
-				errx(1, "No matching pkg for %s.", *argv);
+				errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
 		} else {
 			if (ispkgpattern(*argv)) {
 				if (findmatchingname(_pkgdb_getPKGDB_DIR(), *argv, add_to_list_fn, &pkgs) == 0)
-					errx(1, "No matching pkg for %s.", *argv);
+					errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
 			} else {
 				lpp = alloc_lpkg(*argv);
 				TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);

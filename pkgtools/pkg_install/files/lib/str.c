@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.1.1.1 2002/12/20 18:14:05 schmonz Exp $	*/
+/*	$NetBSD: str.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $	*/
 
 #if 0
 #include <sys/cdefs.h>
@@ -6,7 +6,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: str.c,v 1.1.1.1 2002/12/20 18:14:05 schmonz Exp $");
+__RCSID("$NetBSD: str.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $");
 #endif
 #endif
 #endif
@@ -93,7 +93,7 @@ dirname_of(const char *path)
 	}
 	cc = (size_t) (s - path);
 	if (cc >= sizeof(buf))
-		errx(1, "dirname_of: too long dirname: '%s'", path);
+		errx(EXIT_FAILURE, "dirname_of: too long dirname: '%s'", path);
 	(void) memcpy(buf, path, cc);
 	buf[cc] = 0;
 	return buf;
@@ -335,7 +335,7 @@ alternate_match(const char *pattern, const char *pkg)
 	int     found;
 
 	if ((sep = strchr(pattern, '{')) == (char *) NULL) {
-		errx(1, "alternate_match(): '{' expected in `%s'", pattern);
+		errx(EXIT_FAILURE, "alternate_match(): '{' expected in `%s'", pattern);
 	}
 	(void) strncpy(buf, pattern, (size_t) (sep - pattern));
 	alt = &buf[sep - pattern];
@@ -348,7 +348,7 @@ alternate_match(const char *pattern, const char *pkg)
 		}
 	}
 	if (cnt != 0) {
-		errx(1, "Malformed alternate `%s'", pattern);
+		errx(EXIT_FAILURE, "Malformed alternate `%s'", pattern);
 	}
 	for (found = 0, cp = sep + 1; *sep != '}'; cp = sep + 1) {
 		for (cnt = 0, sep = cp; cnt > 0 || (cnt == 0 && *sep != '}' && *sep != ','); sep++) {
@@ -381,7 +381,7 @@ dewey_match(const char *pattern, const char *pkg)
 	int     n;
 
 	if ((sep = strpbrk(pattern, "<>")) == NULL) {
-		errx(1, "dewey_match(): '<' or '>' expected in `%s'", pattern);
+		errx(EXIT_FAILURE, "dewey_match(): '<' or '>' expected in `%s'", pattern);
 	}
 	(void) snprintf(name, sizeof(name), "%.*s", (int) (sep - pattern), pattern);
         if ((n = mktest(&op, sep)) < 0) {
@@ -458,7 +458,7 @@ findmatchingname(const char *dir, const char *pattern, matchfn match, void *data
 	char pat_sfx[PKG_SUFFIX_MAX], file_sfx[PKG_SUFFIX_MAX];	/* suffixes */
 
 	if (strlen(pattern) >= PKG_PATTERN_MAX)
-		errx(1, "too long pattern '%s'", pattern);
+		errx(EXIT_FAILURE, "too long pattern '%s'", pattern);
 
 	found = 0;
 	if ((dirp = opendir(dir)) == (DIR *) NULL) {
@@ -625,7 +625,7 @@ strip_txz(char *buf, char *sfx, const char *fname)
 		buf[len - suffixlen] = 0;
 		if (sfx) {
 			if (suffixlen >= PKG_SUFFIX_MAX)
-				errx(1, "too long suffix '%s'", fname);
+				errx(EXIT_FAILURE, "too long suffix '%s'", fname);
 			memcpy(sfx, *suffixp, suffixlen+1);
 			return;
 		}
