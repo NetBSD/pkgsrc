@@ -1,0 +1,18 @@
+# start of install-post
+#
+# $NetBSD: install-post,v 1.1 2003/11/23 07:14:43 jlam Exp $
+
+# Ensure that the VIEW-INSTALL action is called for overwrite packages.
+# This is here to ensure that it's the final POST-INSTALL action (after
+# any INSTALL_EXTRA_TMPL POST-INSTALL actions).
+#
+case ${STAGE} in
+POST-INSTALL)
+	if [ "${PKG_INSTALLATION_TYPE}" = "overwrite" ]; then
+		${SETENV} PKG_PREFIX="${PKG_PREFIX}" \
+			$0 ${PKGNAME} VIEW-INSTALL
+        fi
+	;;
+esac
+
+# end of install-post

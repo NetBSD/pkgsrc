@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.52 2003/09/17 02:38:22 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.53 2003/11/23 07:14:43 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -30,10 +30,12 @@ HEADER_EXTRA_TMPL?=	${.CURDIR}/HEADER
 .else
 HEADER_EXTRA_TMPL?=	# empty
 .endif
+DEINSTALL_PRE_TMPL?=	${.CURDIR}/../../mk/install/deinstall-pre
 DEINSTALL_EXTRA_TMPL?=	# empty
 DEINSTALL_TMPL?=	${.CURDIR}/../../mk/install/deinstall
 INSTALL_TMPL?=		${.CURDIR}/../../mk/install/install
 INSTALL_EXTRA_TMPL?=	# empty
+INSTALL_POST_TMPL?=	${.CURDIR}/../../mk/install/install-post
 _FOOTER_TMPL?=		${.CURDIR}/../../mk/install/footer
 
 # DEINSTALL_TEMPLATES and INSTALL_TEMPLATES are the default list of source
@@ -41,6 +43,7 @@ _FOOTER_TMPL?=		${.CURDIR}/../../mk/install/footer
 #
 DEINSTALL_TEMPLATES=	${_HEADER_TMPL}
 DEINSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
+DEINSTALL_TEMPLATES+=	${DEINSTALL_PRE_TMPL}
 DEINSTALL_TEMPLATES+=	${DEINSTALL_EXTRA_TMPL}
 DEINSTALL_TEMPLATES+=	${DEINSTALL_TMPL}
 DEINSTALL_TEMPLATES+=	${_FOOTER_TMPL}
@@ -48,6 +51,7 @@ INSTALL_TEMPLATES=	${_HEADER_TMPL}
 INSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
 INSTALL_TEMPLATES+=	${INSTALL_TMPL}
 INSTALL_TEMPLATES+=	${INSTALL_EXTRA_TMPL}
+INSTALL_TEMPLATES+=	${INSTALL_POST_TMPL}
 INSTALL_TEMPLATES+=	${_FOOTER_TMPL}
 
 # These are the list of source files that are concatenated to form the
