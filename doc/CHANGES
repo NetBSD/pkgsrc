@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8955 2005/01/27 23:54:05 ben Exp $
+$NetBSD: CHANGES,v 1.8956 2005/01/28 00:00:57 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -635,3 +635,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgfind to 20050127 [jschauma 2005-01-27]
 	Added mencvcd-0.2.2 [tron 2005-01-27]
 	Update win32-codecs to 050115 [ben 2005-01-27]
+	Update windowmaker-desktop to 1.2 [ben 2005-01-27]
