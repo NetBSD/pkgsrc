@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/04 20:47:10 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/13 07:11:36 jlam Exp $
 
-PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-login/}
-COMMENT=	Cyrus SASL LOGIN authentication plugin
+PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-sql/}
+COMMENT=	Cyrus SASL SQL authentication plugin
 SASL_PLUGIN=	yes
 
 .include "../cyrus-sasl2/Makefile.common"
@@ -33,8 +33,7 @@ ALL_TARGET=	libsql.la
 
 do-install:
 	${INSTALL_DATA_DIR} ${PLUGINDIR}
-	cd ${WRKSRC}/plugins && \
-	${SHLIBTOOL} --mode=install \
+	cd ${WRKSRC}/plugins && ${SHLIBTOOL} --mode=install \
 		${INSTALL_PROGRAM} libsql.la ${PLUGINDIR}
 
 .include "../../mk/bsd.pkg.mk"
