@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/23 22:07:54 reed Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/07/14 20:07:16 jlam Exp $
 bin/couriertls
 bin/imapd
 bin/pop3d
-libexec/courier/courierlogger
 libexec/courier/couriertcpd
 libexec/courier/imapd-ssl.rc
 libexec/courier/imapd.rc
@@ -12,15 +11,14 @@ man/man1/couriertcpd.1
 man/man8/courier-imapd.8
 man/man8/mkimapdcert.8
 man/man8/mkpop3dcert.8
-sbin/imapd.sysconftool
 sbin/imaplogin
 sbin/mkimapdcert
 sbin/mkpop3dcert
 sbin/pop3login
 share/courier/mkimapdcert
 share/courier/mkpop3dcert
-share/doc/courier/BUGS.imap
-share/doc/courier/README.imap
+share/doc/courier/imap/BUGS
+share/doc/courier/imap/README
 share/examples/courier/imapd-ssl.dist
 share/examples/courier/imapd.authpam
 share/examples/courier/imapd.cnf
@@ -30,6 +28,7 @@ share/examples/courier/pop3d.authpam
 share/examples/courier/pop3d.cnf
 share/examples/courier/pop3d.dist
 @unexec ${RMDIR} -p %D/share/examples/courier 2>/dev/null || ${TRUE}
+@dirrm share/doc/courier/imap
 @unexec ${RMDIR} -p %D/share/doc/courier 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/share/courier 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/libexec/courier 2>/dev/null || ${TRUE}
