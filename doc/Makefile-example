@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.3 2004/01/21 10:48:21 agc Exp $
+# $NetBSD: Makefile-example,v 1.4 2004/02/15 14:09:25 jlam Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -56,6 +56,17 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
+# buildlink[23] files should come after all variables have been set,
+# sorted alphabetically.
+.include "../../devel/gettext-lib/buildlink3.mk"
+
+# The section that handles pthreads should come after all other buildlink[23]
+# files have been included.
+.include "../../mk/pthread.buildlink3.mk"
+.if ${PTHREAD_TYPE} == "none"
+CONFIGURE_ARGS+=	--disable-threads
+.endif
+
 # Makefile targets should occur after all the other definitions in the file
 post-install:
 	${CHMOD} g-s ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
@@ -65,10 +76,6 @@ post-install:
 	${RM} -f ${PREFIX}/bin/gmake
 	${LN} -s ${GNU_PROGRAM_PREFIX}make ${PREFIX}/bin/gmake
 .endif
-
-# buildlink2 and buildlink3 files should come at the end of the file,
-# sorted alphabetically
-.include "../../devel/gettext-lib/buildlink3.mk"
 
 # Finally, please include bsd.pkg.mk
 .include "../../mk/bsd.pkg.mk"
