@@ -1,2 +1,7 @@
-You need the APM driver enabled in your kernel,
-see man apm(4) for details.
+$NetBSD: MESSAGE,v 1.2 1999/10/06 22:54:21 jlam Exp $
+===========================================================================
+
+This package requires that the APM driver be enabled in your kernel.
+See apm(4) for details.
+
+===========================================================================
