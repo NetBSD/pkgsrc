@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.11 2004/02/05 22:05:42 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.12 2004/02/06 03:04:50 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	one
@@ -40,7 +40,11 @@ COMPILER_MIPSPRO_MK+=	two
 
 # Prepend the path to the compiler to the PATH.
 .    if !empty(_LANGUAGES.mipspro)
-PATH:=	${MIPSPROBASE}/bin:${PATH}
+.      if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE}) && \
+          empty(PREPEND_PATH:M${MIPSPROBASE}/bin)
+PREPEND_PATH+=	${MIPSPROBASE}/bin
+PATH:=		${MIPSPROBASE}/bin:${PATH}
+.      endif
 .    endif
 .  endif # COMPILER_MIPSPRO_MK
 .endif	 # BSD_PREFS_MK

@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.37 2004/02/05 04:12:28 jlam Exp $
+# $NetBSD: gcc.mk,v 1.38 2004/02/06 03:04:50 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -18,14 +18,19 @@ _GCC2_PATTERNS=	2.8 2.8.* 2.9 2.9.* 2.[1-8][0-9] 2.[1-8][0-9].*	\
 _GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
 		2.[1-9][0-9][0-9]* 3.* [4-9]*
 
+.  if !defined(_CC)
 _CC:=	${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-.  for _dir_ in ${PATH:C/\:/ /g}
-.    if empty(_CC:M/*)
-.      if exists(${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//})
+.    for _dir_ in ${PATH:C/\:/ /g}
+.      if empty(_CC:M/*)
+.        if exists(${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//})
 _CC:=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
+.        endif
 .      endif
+.    endfor
+.    if !empty(_CC:M/*)
+MAKEFLAGS+=	_CC="${_CC}"
 .    endif
-.  endfor
+.  endif
 
 .  if !defined(_GCC_VERSION)
 _GCC_VERSION_STRING!=	\
@@ -293,12 +298,19 @@ COMPILER_GCC_MK+=	two
 # Prepend the path to the compiler to the PATH.
 .    if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
 .      if exists(${_GCC_PREFIX}bin/gcc) && !empty(_LANGUAGES.gcc)
-PATH:=	${_GCC_PREFIX}bin:${PATH}
+.        if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE}) && \
+            empty(PREPEND_PATH:M${_GCC_PREFIX}bin)
+PREPEND_PATH+=	${GCC_PREFIX}bin
+PATH:=		${_GCC_PREFIX}bin:${PATH}
+.        endif
 .      endif
-.    else
-.      if !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
-.        if !empty(_CC:M/*)
-PATH:=	${_CC:H}:${PATH}
+.    elif !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
+_CC_DIRPATH=	${_CC:H}
+.      if !empty(_CC_DIRPATH:M/*)
+.        if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE}) && \
+            empty(PREPEND_PATH:M${_CC_DIRPATH})
+PREPEND_PATH+=	${_CC_DIRPATH}
+PATH:=		${_CC_DIRPATH}:${PATH}
 .        endif
 .      endif
 .    endif
