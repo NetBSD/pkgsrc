@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/01 18:41:49 agc Exp $
 bin/gkrellm
 include/gkrellm/gkrellm.h
 include/gkrellm/gkrellm_public_proto.h
 man/man1/gkrellm.1
 share/gkrellm/README
+@exec ${MKDIR} %D/share/gkrellm/themes
+@unexec ${RMDIR} %D/share/gkrellm/themes
 @exec ${MKDIR} %D/lib/gkrellm/plugins
 @unexec ${RMDIR} %D/lib/gkrellm/plugins
 @dirrm include/gkrellm
