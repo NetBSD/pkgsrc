@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.netbsd-sparc,v 1.1 2001/10/31 23:31:15 zuntum Exp $
+@comment $NetBSD: PLIST.NetBSD-sparc,v 1.1 2005/02/21 21:26:15 veego Exp $
 Acrobat3/Reader/desktop/olwm/acroread.cetable
 Acrobat3/Reader/desktop/olwm/acroread.deskinstall
 Acrobat3/Reader/desktop/olwm/acroread.prog.icon

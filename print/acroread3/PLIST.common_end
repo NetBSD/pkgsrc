@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.post,v 1.2 2002/02/15 10:12:56 skrll Exp $
+@comment $NetBSD: PLIST.common_end,v 1.1 2005/02/21 21:26:15 veego Exp $
 @exec ln -sf %D/Acrobat3/Reader/Fonts %D/Acrobat3/Reader/${PLATFORM}/fonts
 @unexec ${RM} -f %D/Acrobat3/Reader/${PLATFORM}/fonts
 @exec ln -sf %D/Acrobat3/Reader/res %D/Acrobat3/Reader/${PLATFORM}/res
