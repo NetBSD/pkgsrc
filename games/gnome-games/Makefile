@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/15 09:58:15 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/05/09 20:07:15 dmcmahill Exp $
 
 DISTNAME=	gnome-games-1.0.51
 CATEGORIES=	games gnome
@@ -8,6 +8,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
+DEPENDS+=	guile-[0-9]*:../../lang/guile
 DEPENDS+=	xbill-*:../../games/xbill
 
 GNU_CONFIGURE=	yes
