@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2700 2003/07/08 14:58:38 gehenna Exp $
+$NetBSD: CHANGES,v 1.2701 2003/07/08 16:31:40 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2698,3 +2698,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnus to 5.10.2nb1 [seb 2003-07-08]
 	Updated fftw to 3.0.1 [wiz 2003-07-08]
 	Updated cvsync to 0.23.7 [gehenna 2003-07-08]
+	Updated gcc3 to gcc3-3.3nb4 [abs 2003-07-08]
