@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:07 skrll Exp $
 bin/gdm
 bin/gdmchooser
 bin/gdmconfig
@@ -21,7 +21,7 @@ share/gnome/help/gdm/C/daemonov.html
 share/gnome/help/gdm/C/docbook.css
 share/gnome/help/gdm/C/f21.html
 share/gnome/help/gdm/C/gdm.html
-@exec mkdir -p %D/share/gnome/help/gdm/C/images
+@exec ${MKDIR} -p %D/share/gnome/help/gdm/C/images
 share/gnome/help/gdm/C/index.html
 share/gnome/help/gdm/C/intro.html
 share/gnome/help/gdm/C/ln15.html
@@ -75,6 +75,6 @@ share/pixmaps/nohost.png
 @dirrm etc/gdm/PreSession.default
 @dirrm etc/gdm/PostSession.default
 @dirrm etc/gdm/Init.default
-@unexec rmdir %D/etc/gdm/Sessions %D/etc/gdm/PreSession %D/etc/gdm/PostSession %D/etc/gdm/Init %D/etc/gdm 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/gdm/Sessions %D/etc/gdm/PreSession %D/etc/gdm/PostSession %D/etc/gdm/Init %D/etc/gdm 2>/dev/null || true
 @exec ${INSTALL} -d -o ${GDMOWN} -g ${GDMGRP} -m 750 ${LOCALSTATEDIR}/gdm
-@unexec rm -rf ${LOCALSTATEDIR}/gdm
+@unexec ${RM} -rf ${LOCALSTATEDIR}/gdm

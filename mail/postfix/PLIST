@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:06 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:48 skrll Exp $
 etc/mailer.conf.postfix
 libexec/postfix/bounce
 libexec/postfix/cleanup
@@ -104,9 +104,9 @@ man/man8/trivial-rewrite.8
 @dirrm share/postfix
 @dirrm share/doc/postfix
 @dirrm libexec/postfix
-@exec mkdir -p /etc/postfix
+@exec ${MKDIR} -p /etc/postfix
 @exec if [ ! -f /etc/postfix/main.cf ]; then cp %D/share/postfix/main.cf /etc/postfix ; fi
 @exec if [ ! -f /etc/postfix/master.cf ]; then cp %D/share/postfix/master.cf /etc/postfix ; fi
-@exec if [ ! -d /var/spool/postfix ]; then mkdir /var/spool/postfix; chmod 755 /var/spool/postfix ; fi
+@exec if [ ! -d /var/spool/postfix ]; then ${MKDIR} /var/spool/postfix; ${CHMOD} 755 /var/spool/postfix ; fi
 @exec ln -sf %D/share/postfix/postfix-script /etc/postfix
-@unexec rm -f /etc/postfix/postfix-script
+@unexec ${RM} -f /etc/postfix/postfix-script

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:08 skrll Exp $
 lib/gtk/themes/engines/libmetal.a
 lib/gtk/themes/engines/libmetal.la
 lib/gtk/themes/engines/libmetal.so
@@ -108,5 +108,5 @@ share/themes/Redmond95/gtk/gtkrc
 @dirrm share/themes/Notif
 @dirrm share/themes/Metal/gtk
 @dirrm share/themes/Metal
-@unexec rmdir -p %D/share/themes 2>/dev/null || true
-@unexec rmdir -p %D/lib/gtk/themes/engines 2>/dev/null || true
+@unexec ${RMDIR} -p %D/share/themes 2>/dev/null || true
+@unexec ${RMDIR} -p %D/lib/gtk/themes/engines 2>/dev/null || true

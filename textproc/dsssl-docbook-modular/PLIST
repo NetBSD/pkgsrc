@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:59 skrll Exp $
 share/sgml/docbook/dsssl/modular/BUGS
 share/sgml/docbook/dsssl/modular/ChangeLog
 share/sgml/docbook/dsssl/modular/README
@@ -743,4 +743,4 @@ share/sgml/docbook/dsssl/modular/test/xtables.sgm
 @dirrm share/sgml/docbook/dsssl/modular/common
 @dirrm share/sgml/docbook/dsssl/modular/bin
 @dirrm share/sgml/docbook/dsssl/modular
-@unexec rmdir %D/share/sgml/docbook/dsssl 2>/dev/null || true
+@unexec ${RMDIR} %D/share/sgml/docbook/dsssl 2>/dev/null || true

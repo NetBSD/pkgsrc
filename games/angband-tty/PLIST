@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:50:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:38 skrll Exp $
 bin/angband
 share/angband/edit/a_info.txt
 share/angband/edit/e_info.txt
@@ -70,9 +70,9 @@ share/angband/user/pref-x11.prf
 share/angband/user/pref.prf
 share/angband/user/user-mac.prf
 share/angband/user/user.prf
-@unexec rm -r %D/share/angband/apex
-@unexec rm -r %D/share/angband/data
-@unexec rm -r %D/share/angband/save
+@unexec ${RM} -r %D/share/angband/apex
+@unexec ${RM} -r %D/share/angband/data
+@unexec ${RM} -r %D/share/angband/save
 @dirrm share/angband/bone
 @dirrm share/angband/edit
 @dirrm share/angband/file

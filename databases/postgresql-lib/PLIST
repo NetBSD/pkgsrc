@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:33 skrll Exp $
 bin/ecpg
 include/pgsql/access/attnum.h
 include/pgsql/access/genam.h
@@ -358,4 +358,4 @@ man/man1/ecpg.1
 @dirrm include/pgsql/catalog
 @dirrm include/pgsql/bootstrap
 @dirrm include/pgsql/access
-@unexec rmdir -p %D/include/pgsql 2>/dev/null || true
+@unexec ${RMDIR} -p %D/include/pgsql 2>/dev/null || true

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/13 22:30:27 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:12:36 skrll Exp $
 bin/any2ps
 bin/b2m
 bin/coco
@@ -8,7 +8,7 @@ bin/etags
 bin/m2ps
 bin/mule-19.28
 @exec ln %D/%F %B/mule
-@unexec rm %B/mule
+@unexec ${RM} %B/mule
 bin/rcs-checkin
 @comment @unexec install-info --delete %D/info/CCL %D/info/dir
 @comment @unexec install-info --delete %D/info/ISO2022 %D/info/dir
@@ -1024,7 +1024,7 @@ lib/mule/19.28/lisp/yow.el
 lib/mule/19.28/lisp/yow.elc
 @comment f=%D/lib/mule/lock ; [ ! -d $f ] && ${MKDIR} $f && ${CHMOD} 1777 $f
 @exec   f=%D/lib/mule/lock ; [ ! -d $f ] && ${MKDIR} $f
-@unexec f=%D/lib/mule/lock ; [ -d $f ] && rm -rf $f
+@unexec f=%D/lib/mule/lock ; [ -d $f ] && ${RM} -rf $f
 @exec   f=%D/lib/mule/site-lisp ; [ ! -d $f ] && ${MKDIR} $f
 @unexec f=%D/lib/mule/site-lisp ; [ -d $f ] && ${MKDIR} $f
 @dirrm lib/mule/19.28/lisp/its

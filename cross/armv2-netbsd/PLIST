@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:03:23 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:32 skrll Exp $
 bin/armv2-netbsd-addr2line
 bin/armv2-netbsd-ar
 bin/armv2-netbsd-as
@@ -27,4 +27,4 @@ lib/ldscripts/armelf.xn
 lib/ldscripts/armelf.xr
 lib/ldscripts/armelf.xs
 lib/ldscripts/armelf.xu
-@unexec rmdir %D/lib/ldscripts 2>/dev/null || true
+@unexec ${RMDIR} %D/lib/ldscripts 2>/dev/null || true

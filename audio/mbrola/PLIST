@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:18 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:29 skrll Exp $
 bin/mbrola
 share/doc/mbrola/readme.txt
-@unexec rm -r %D/share/mbrola
+@unexec ${RM} -r %D/share/mbrola
 @dirrm share/doc/mbrola

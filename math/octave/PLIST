@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:33:45 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:51 skrll Exp $
 bin/octave
 bin/octave-bug
 bin/mkoctfile
@@ -208,7 +208,7 @@ include/${PKGNAME}/defaults.h
 include/${PKGNAME}/oct-conf.h
 include/${PKGNAME}/oct-gperf.h
 @exec ln -s ${PKGNAME} %D/include/octave
-@unexec rm -f %D/include/octave
+@unexec ${RM} -f %D/include/octave
 @unexec install-info --delete %D/info/octave.info %D/info/dir
 @unexec install-info --delete %D/info/liboctave.info %D/info/dir
 info/octave.info
@@ -234,12 +234,12 @@ lib/${PKGNAME}/libcruft.a
 lib/${PKGNAME}/liboctave.a
 lib/${PKGNAME}/liboctinterp.a
 @exec ln -s ${PKGNAME} %D/lib/octave
-@unexec rm -f %D/lib/octave
+@unexec ${RM} -f %D/lib/octave
 libexec/octave/2.0.16/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/info-emacs-info
 libexec/octave/2.0.16/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/info-emacs-octave-help
-@exec mkdir -p %D/libexec/octave/2.0.16/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@exec mkdir -p %D/libexec/octave/site/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@exec mkdir -p %D/libexec/octave/site/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@exec ${MKDIR} -p %D/libexec/octave/2.0.16/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@exec ${MKDIR} -p %D/libexec/octave/site/exec/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+@exec ${MKDIR} -p %D/libexec/octave/site/oct/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 libexec/octave/ls-R
 man/man1/octave.1
 share/octave/2.0.16/doc/Octave-FAQ.ps

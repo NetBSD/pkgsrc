@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:03:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:56 skrll Exp $
 etc/nntpcache/VERSION
 etc/nntpcache/innreport.conf-dist
 etc/nntpcache/innreport.pl
@@ -13,10 +13,10 @@ etc/nntpcache/spam.filter
 etc/nntpcache/http/index.html
 etc/nntpcache/http/moose.gif
 etc/nntpcache/http/nntpcache.jpg
-@exec mkdir -p %D/etc/nntpcache/http/innreport/pics
-@exec chown -R news:news %D/etc/nntpcache
-@exec chmod 700 %D/etc/nntpcache
-@unexec rmdir -p %D/etc/nntpcache/http/innreport/pics 2>/dev/null || true
+@exec ${MKDIR} -p %D/etc/nntpcache/http/innreport/pics
+@exec ${CHOWN} -R news:news %D/etc/nntpcache
+@exec ${CHMOD} 700 %D/etc/nntpcache
+@unexec ${RMDIR} -p %D/etc/nntpcache/http/innreport/pics 2>/dev/null || true
 etc/rc.d/nntpcached
 sbin/innreport.sh
 sbin/newshound
@@ -26,12 +26,12 @@ libexec/nntpcache-gdb.sh
 libexec/nntpcache.gdb
 man/man8/newshound.8
 man/man8/nntpcached.8
-@unexec rmdir etc/nntpcache 2>/dev/null || true
-@exec mkdir -p /var/spool/nntpcache
+@unexec ${RMDIR} etc/nntpcache 2>/dev/null || true
+@exec ${MKDIR} -p /var/spool/nntpcache
 @exec cp %D/etc/nntpcache/VERSION /var/spool/nntpcache/VERSION
-@exec chown -R news:news /var/spool/nntpcache
-@exec chmod 700 /var/spool/nntpcache
-@unexec rm -rf /var/spool/nntpcache
+@exec ${CHOWN} -R news:news /var/spool/nntpcache
+@exec ${CHMOD} 700 /var/spool/nntpcache
+@unexec ${RM} -rf /var/spool/nntpcache
 share/doc/nntpcache/INSTALL
 share/doc/nntpcache/README
 share/doc/nntpcache/FAQ
