@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.406 2000/02/17 17:30:15 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.407 2000/02/25 05:46:27 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -709,8 +709,10 @@ MASTER_SITE_BACKUP?=	\
 	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 .if defined(DIST_SUBDIR)
 MASTER_SITE_BACKUP:=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}/}
+.if defined(MASTER_SITE_OVERRIDE)
 MASTER_SITE_OVERRIDE:=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}/}
-.endif
+.endif # MASTER_SITE_OVERRIDE
+.endif # DIST_SUBDIR
 
 # Where to put distfiles that don't have any other master site
 .if defined(DIST_SUBDIR)
