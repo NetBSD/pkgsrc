@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2001/05/26 06:37:46 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2003/12/01 16:35:51 ben Exp $
 
---- configure.orig	Mon May  7 10:53:14 2001
+--- configure.orig	2001-05-07 07:53:14.000000000 -0700
 +++ configure
-@@ -18,6 +18,9 @@
+@@ -18,6 +18,9 @@ ac_help="$ac_help
  ac_help="$ac_help
    --enable-shared         turn on shared libraries [default=no]"
  ac_help="$ac_help
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.4 2001/05/26 06:37:46 jlam Exp $
    --with-x                use the X Window System"
  
  # Initialize some variables set by options.
-@@ -562,6 +565,9 @@
+@@ -562,6 +565,9 @@ fi
  
  
  LIBNAME="libfltk.a"
@@ -22,7 +22,7 @@ $NetBSD: patch-ac,v 1.4 2001/05/26 06:37:46 jlam Exp $
  if test "$RANLIB" != ":"; then
    LIBCOMMAND="ar cr"
  else
-@@ -600,8 +606,23 @@
+@@ -600,8 +606,23 @@ fi
  # Check whether --enable-shared or --disable-shared was given.
  if test "${enable_shared+set}" = set; then
    enableval="$enable_shared"
@@ -47,7 +47,7 @@ $NetBSD: patch-ac,v 1.4 2001/05/26 06:37:46 jlam Exp $
    PICFLAG=1
    case $uname in
        SunOS* | UNIX_S*)
-@@ -638,13 +659,18 @@
+@@ -638,8 +659,13 @@ if eval "test x$enable_shared = xyes"; t
  	  ;;
    esac
  fi
@@ -62,13 +62,16 @@ $NetBSD: patch-ac,v 1.4 2001/05/26 06:37:46 jlam Exp $
  
  # Extract the first word of "gcc", so it can be a program name with args.
  set dummy gcc; ac_word=$2
- echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
--echo "configure:648: checking for $ac_word" >&5
-+echo "configure:674: checking for $ac_word" >&5
- if eval "test \"`echo '$''{'ac_cv_prog_CC'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-@@ -3220,6 +3246,10 @@
+@@ -3072,7 +3098,7 @@ MAKEDEPEND="\$(CXX) -M"
+ if test -n "$GXX"; then
+     # Use gcc instead of c++ or g++, since we don't need the C++
+     # library to depend on...
+-    CXX="$CC"
++#    CXX="$CC"
+     CFLAGS="-Wall $CFLAGS"
+     CXXFLAGS="-Wall $CXXFLAGS"
+     if test -z "$DEBUGFLAG"; then
+@@ -3220,6 +3246,10 @@ CXXFLAGS="$DEBUGFLAG $CXXFLAGS"
  
  
  
@@ -79,7 +82,7 @@ $NetBSD: patch-ac,v 1.4 2001/05/26 06:37:46 jlam Exp $
  trap '' 1 2 15
  cat > confcache <<\EOF
  # This file is a shell script that caches the results of configure
-@@ -3369,7 +3399,11 @@
+@@ -3369,7 +3399,11 @@ s%@CAT3EXT@%$CAT3EXT%g
  s%@DSONAME@%$DSONAME%g
  s%@DSOCOMMAND@%$DSOCOMMAND%g
  s%@LIBNAME@%$LIBNAME%g
