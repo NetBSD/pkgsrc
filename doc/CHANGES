@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2044 2003/04/26 03:11:11 rh Exp $
+$NetBSD: CHANGES,v 1.2045 2003/04/26 08:35:25 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1740,3 +1740,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Parse-RecDescent to 1.94 [mjl 2003-04-25]
 	Updated p5-Spreadsheet-WriteExcel to 0.41 [mjl 2003-04-25]
 	Updated balsa to 1.4.3 [rh 2003-04-26]
+	Updated cfengine2 to 2.0.6 [seb 2003-04-26]
+	Updated cfengine2-doc to 2.0.6 [seb 2003-04-26]
