@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 13:15:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/16 10:29:51 jlam Exp $
 
 DISTNAME=	unlzx.c
 PKGNAME=	unlzx-1.0
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.Z
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Extracts .lzx archives from Amiga systems
 
+USE_BUILDLINK_ONLY=	# defined
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} >${DISTNAME}
 WRKSRC=		${WRKDIR}
 
