@@ -1,15 +1,22 @@
-$NetBSD: distinfo,v 1.8 2003/01/06 22:00:40 grant Exp $
+$NetBSD: distinfo,v 1.9 2004/10/08 21:02:53 mjl Exp $
 
-SHA1 (pwlib_1.4.4.tar.gz) = 5432ba3e4771fb281283161bb956b5a19e5200c7
-Size (pwlib_1.4.4.tar.gz) = 907721 bytes
-SHA1 (patch-aa) = 13d2e40664a725bf59569d837df54c06d707eda2
-SHA1 (patch-ab) = 0be1aec99542d677f8ec983a358712b2f5f5cc58
+SHA1 (pwlib_1.5.2.tar.gz) = cbf9170dfe727d2423e312ca701cdf263c42ac86
+Size (pwlib_1.5.2.tar.gz) = 1085203 bytes
+SHA1 (patch-src::ptclib::asner.cxx) = 453ac80169ddf7fb1fdd0e9dc287b4c4b4610fd8
+SHA1 (patch-src::ptclib::asner.cxx) = 453ac80169ddf7fb1fdd0e9dc287b4c4b4610fd8
+SHA1 (patch-src::ptclib::asner.cxx) = 0a33ba537af0d447d9e4b0b07396df707e9a0585
+SHA1 (patch-src::ptclib::asner.cxx) = 0a33ba537af0d447d9e4b0b07396df707e9a0585
+SHA1 (patch-src::ptclib::asner.cxx) = 0a33ba537af0d447d9e4b0b07396df707e9a0585
+SHA1 (patch-ptclib-asnerr.cxx) = 0a33ba537af0d447d9e4b0b07396df707e9a0585
+SHA1 (patch-aa) = d45d246db4f674837aa273305b10b82b7db78eae
+SHA1 (patch-ab) = ad4aa81c76d6d3c232c3de1b3c8b8f5673c79952
 SHA1 (patch-ac) = 07fa4e45663840e273e21b8f240ec749fff4a13a
-SHA1 (patch-ae) = 02d323e53908049146c4b389e2b2d32ebf2c4a61
-SHA1 (patch-af) = e410a5e918e4e957ad8902b29f0a2f385c116bde
-SHA1 (patch-ag) = 1356cbddc7bbf4d63108128e8cc6d3e544d39e9b
-SHA1 (patch-ai) = 62a5ba1fa41b05d1b90738870c00a4d1785c6ecc
+SHA1 (patch-af) = 6e1042c5c34df4ebb9336a36466a2483fcd2528a
+SHA1 (patch-ai) = ee2e8401ecaeb3b1e4bffe1a08d09a66290e95f1
 SHA1 (patch-aj) = 93e039bb60c5cb75abb916e2797c644b67a6b9b0
-SHA1 (patch-al) = 29256c9f08e9e76779676651f4dd9569a747ced0
+SHA1 (patch-al) = 3eca475154580f2cdd461f2e6da131f532173b95
 SHA1 (patch-am) = 5b80fce03de136913dadfdbbdc161edef2f72919
 SHA1 (patch-an) = f79776e86d32bd15fd9f8fe1c0c02196ce4bcd3e
+SHA1 (patch-ba) = d3d14dd17214e099077da02283cbefa0cc24022e
+SHA1 (patch-bb) = 0cdd7c0d9ecca5c40754cd2f880afa6e30acca36
+SHA1 (patch-bc) = 1c1f2a5e7482c8366e6ac3dd58621e077c6e5176
