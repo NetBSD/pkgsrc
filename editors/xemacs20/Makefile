@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.16 1998/02/23 11:32:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.17 1998/02/23 12:27:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -54,28 +54,6 @@ MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 MAN1=		gnuattach.1 gnuclient.1 gnudoit.1 gnuserv.1 xemacs.1 \
 		xemacs-ctags.1 xemacs-etags.1
 
-# Include local make config file here.  It is essential to have this
-# precede any override targets (those that override defaults in
-# <bsd.port.mk> that test variables that may be set here.  Note that
-# this inclusion is otherwise redundant, since <bsd.port.mk> includes
-# <bsd.own.mk>, which includes it.
-
-.if (${OPSYS} == "FreeBSD")
-.if exists(/etc/make.conf)
-.include "/etc/make.conf"
-.endif
-.else
-.if exists(/etc/mk.conf)
-.include "/etc/mk.conf"
-.endif
-.endif
-
-.if defined(MANZ)
-DCOMPRESSUFFIX=	.gz
-.else
-DCOMPRESSUFFIX=
-.endif
-
 PLIST_SRC=	${WRKDIR}/PLIST.tmp
 
 pre-configure:
@@ -83,15 +61,17 @@ pre-configure:
 
 pre-install:
 	${RM} -f ${WRKSRC}/etc/ctags.1.orig
-	sed "s,@.GZ@,${DCOMPRESSUFFIX}," ${PKGDIR}/PLIST \
-		> ${PLIST_SRC}
+	@(if [ "X${MANZ}" != X"" ]; then \
+		GZSUFFIX=.gz; \
+	fi; \
+	${SED} -e 's|@.GZ@|'$$GZSUFFIX'|g' ${PKGDIR}/PLIST > ${PLIST_SRC})
 
 post-install:
 .for file in xemacs-b2m xemacs-ctags xemacs-etags gnuclient xemacs-20.3
 	strip ${PREFIX}/bin/${file}
 .endfor
-.if defined(MANZ)
-	${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/xemacs-20.3/lisp
-.endif
+	@if [ "X${MANZ}" != X"" ]; then \
+		${.CURDIR}/work/xemacs-20.3/lib-src/gzip-el.sh ${PREFIX}/lib/xemacs-20.3/lisp; \
+	fi
 
 .include <bsd.port.mk>
