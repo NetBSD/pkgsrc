@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/11/25 21:56:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 2002/01/22 18:16:17 drochner Exp $
 #
 
 DISTNAME=	sketch-0.6.12
@@ -9,10 +9,11 @@ MAINTAINER=	uebayasi@soum.co.jp
 HOMEPAGE=	http://sketch.sourceforge.net/
 COMMENT=	Interactive drawing program
 
-DEPENDS+=	py-imaging>=1.0:../../graphics/py-imaging
 DEPENDS+=	py-Tk>=1.5.2:../../x11/py-Tk
 
 USE_X11=	YES
+
+PYTHON_VERSIONS_ACCEPTED= 20 # XXX until some things are cleaned up
 
 SKETCHDIR=	${PREFIX}/share/sketch
 SKETCHDOCDIR=	${PREFIX}/share/doc/sketch
@@ -24,10 +25,11 @@ echo:
 
 do-configure:
 	@(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-	    python setup.py configure --imaging-include=${PREFIX}/include/PIL)
+	    ${PYTHONBIN} setup.py configure \
+		--imaging-include=${PREFIX}/include/python2.0/PIL)
 
 do-build:
-	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} python setup.py build)
+	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py build)
 
 do-install:
 	${INSTALL_DATA_DIR} ${SKETCHDIR}
@@ -40,10 +42,12 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw -pe -v ${SKETCHDOCS} ${SKETCHDOCDIR}
 	${INSTALL_DATA_DIR} ${SKETCHEXDIR}
 	cd ${WRKSRC}/Examples && ${PAX} -rw -pe -v . ${SKETCHEXDIR}
-	(cd ${SKETCHDIR}; python finishinst.py)
+	(cd ${SKETCHDIR}; ${PYTHONBIN} finishinst.py)
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" < ${FILESDIR}/sketch.in > ${PREFIX}/bin/sketch
 	${CHMOD} +x ${PREFIX}/bin/sketch
 	${SED} -e "s|@PREFIX@|${PREFIX}|g" < ${FILESDIR}/sk2ps.in > ${PREFIX}/bin/sk2ps
 	${CHMOD} +x ${PREFIX}/bin/sk2ps
 
+.include "../../lang/python/application.buildlink.mk"
+.include "../../graphics/py-imaging/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
