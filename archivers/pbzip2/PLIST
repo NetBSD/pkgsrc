@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/12 13:45:27 wiz Exp $
+bin/pbzip2
+share/doc/pbzip2/LICENSE.txt
+share/doc/pbzip2/README.txt
+@dirrm share/doc/pbzip2
