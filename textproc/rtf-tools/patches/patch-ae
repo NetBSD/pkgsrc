@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2001/05/31 11:04:56 agc Exp $
+$NetBSD: patch-ae,v 1.3 2005/03/27 18:22:35 ben Exp $
 
---- lib/reader.c.orig	Tue Apr  5 12:14:55 1994
-+++ lib/reader.c	Wed May 16 22:10:17 2001
-@@ -587,38 +587,45 @@
+--- lib/reader.c.orig	1994-04-05 12:14:55.000000000 -0700
++++ lib/reader.c
+@@ -587,38 +587,45 @@ RTFFont	*fp;
  	if (autoCharSetFlags == 0)
  		return;
  
@@ -75,7 +75,7 @@ $NetBSD: patch-ae,v 1.2 2001/05/31 11:04:56 agc Exp $
  		}
  	}
  }
-@@ -1194,6 +1201,7 @@
+@@ -1194,6 +1213,7 @@ RTFFont	*fp;
  char	buf[rtfBufSiz], *bp;
  int	old = -1;
  char	*fn = "ReadFontTbl";
@@ -83,7 +83,7 @@ $NetBSD: patch-ae,v 1.2 2001/05/31 11:04:56 agc Exp $
  
  	for (;;)
  	{
-@@ -1311,11 +1319,30 @@
+@@ -1311,11 +1331,30 @@ char	*fn = "ReadFontTbl";
  				RTFPanic ("%s: missing \"}\"", fn);
  		}
  	}
@@ -115,4 +115,12 @@ $NetBSD: patch-ae,v 1.2 2001/05/31 11:04:56 agc Exp $
 +
  	RTFRouteToken ();	/* feed "}" back to router */
  }
+ 
+@@ -2260,6 +2299,7 @@ static RTFKey	rtfKey[] =
+ 
+ 	rtfCharSet,	rtfMacCharSet,		"mac",		0,
+ 	rtfCharSet,	rtfAnsiCharSet,		"ansi",		0,
++	rtfCharSet,	rtfAnsiCpCharSet,	"ansicpg",	0,
+ 	rtfCharSet,	rtfPcCharSet,		"pc",		0,
+ 	rtfCharSet,	rtfPcaCharSet,		"pca",		0,
  

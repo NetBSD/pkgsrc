@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/27 18:22:35 ben Exp $
 #
 
 DISTNAME=		RTF-1.10
 PKGNAME=		rtf-tools-1.10
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.snake.net/software/RTF/
 EXTRACT_SUFX=		.tar.Z
@@ -31,6 +31,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/rtf-tools
 	${INSTALL_DATA} ${WRKSRC}/h/standard-names ${PREFIX}/lib/rtf-tools
 	cd ${WRKSRC}/lib && ${INSTALL_DATA} ansi-gen ansi-sym \
+		ansicpg1252-gen ansicpg1252-sym \
 		mac-gen mac-sym pc-gen pc-sym pca-gen pca-sym \
 		${PREFIX}/lib/rtf-tools
 	${INSTALL_DATA} ${WRKSRC}/rtf2text/text-map ${PREFIX}/lib/rtf-tools
