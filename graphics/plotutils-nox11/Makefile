@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/09 10:53:30 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/11 10:02:25 jmmv Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -11,6 +11,9 @@ HOMEPAGE=		http://www.gnu.org/software/plotutils/plotutils.html
 COMMENT=		Programs and library for plotting scientific data
 
 CONFLICTS+=		plotutils-[0-9]*
+
+DISTINFOFILE=		${.CURDIR}/../../graphics/plotutils/distinfo
+PATCHDIR=		${.CURDIR}/../../graphics/plotutils/patches
 
 USE_BUILDLINK2=		yes
 USE_GCC_SHLIB=		yes
