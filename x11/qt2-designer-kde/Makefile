@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/23 21:50:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/08 03:00:29 jlam Exp $
 #
 
 PKGNAME=		qt2-designer-kde-${QTVERSION}
@@ -20,11 +20,11 @@ ALL_TARGET=		sub-tools
 UNLIMIT_RESOURCES=	datasize
 
 do-install:
-	${PKGLIBTOOL} ${INSTALL_DATA} \
+	${LIBTOOL} ${INSTALL_DATA} \
 		${WRKSRC}/tools/designer/util/libqutil.la ${QTPREFIX}/lib
-	${PKGLIBTOOL} ${INSTALL_PROGRAM} \
+	${LIBTOOL} ${INSTALL_PROGRAM} \
 		${WRKSRC}/tools/designer/uic/uic ${QTPREFIX}/bin
-	${PKGLIBTOOL} ${INSTALL_PROGRAM} \
+	${LIBTOOL} ${INSTALL_PROGRAM} \
 		${WRKSRC}/tools/designer/designer/designer ${QTPREFIX}/bin
 
 .include "../../x11/kdelibs2/buildlink2.mk"

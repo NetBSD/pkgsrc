@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2003/11/12 03:39:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.73 2004/02/08 03:00:29 jlam Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -18,8 +18,8 @@ COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 USE_BUILDLINK2=	# defined
 USE_LIBTOOL=	# defined
 
-INST_PROG=	${PKGLIBTOOL} ${INSTALL_PROGRAM}
-INST_LIB=	${PKGLIBTOOL} ${INSTALL_DATA}
+INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
+INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
 INC_DIR=	${PREFIX}/include/c-client
 LIB_DIR=	${PREFIX}/lib
 DOC_DIR=	${PREFIX}/share/doc/imap-uw
@@ -70,7 +70,7 @@ MAKE_ENV+=	CCLIENT_MAJOR=${CCLIENT_MAJOR:Q}
 MAKE_ENV+=	CCLIENT_MINOR=${CCLIENT_MINOR:Q}
 MAKE_ENV+=	CREATEPROTO=${IMAP_UW_CCLIENT_MBOX_FMT:Q}proto
 
-ALL_TARGET+=	CC="${PKGLIBTOOL} ${CC}"
+ALL_TARGET+=	CC="${LIBTOOL} ${CC}"
 ALL_TARGET+=	EXTRACFLAGS="${CFLAGS}"
 ALL_TARGET+=	EXTRALDFLAGS="${LDFLAGS}"
 .if defined(IMAP_UW_NO_CLEARTEXT) && ${IMAP_UW_NO_CLEARTEXT} == "YES"
@@ -133,7 +133,7 @@ post-patch:
 #
 post-build:
 	cd ${WRKSRC}/c-client;						\
-	${PKGLIBTOOL} ${CC} -o ${CCLIENT_PICLIB:.a=.la} *.lo
+	${LIBTOOL} ${CC} -o ${CCLIENT_PICLIB:.a=.la} *.lo
 
 do-install:
 	${INSTALL_DATA_DIR} ${INC_DIR}
