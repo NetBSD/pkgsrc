@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2004/08/09 11:50:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2004/08/19 15:27:24 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -109,17 +109,17 @@ lib/libMagick++.a
 lib/libMagick++.la
 lib/libMagick++.so
 lib/libMagick++.so.6
-lib/libMagick++.so.6.4
+lib/libMagick++.so.6.5
 lib/libMagick.a
 lib/libMagick.la
 lib/libMagick.so
 lib/libMagick.so.6
-lib/libMagick.so.6.4
+lib/libMagick.so.6.5
 lib/libWand.a
 lib/libWand.la
 lib/libWand.so
 lib/libWand.so.6
-lib/libWand.so.6.4
+lib/libWand.so.6.5
 lib/pkgconfig/ImageMagick++.pc
 lib/pkgconfig/ImageMagick.pc
 lib/pkgconfig/Wand.pc
@@ -286,6 +286,7 @@ share/ImageMagick-${IM_MAJOR_VER}/www/api/blob.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/cache.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/cache_view.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/color.html
+share/ImageMagick-${IM_MAJOR_VER}/www/api/compare.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/composite.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/constitute.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/decorate.html
@@ -315,6 +316,7 @@ share/ImageMagick-${IM_MAJOR_VER}/www/api/signature.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/stream.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/transform.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/types.html
+share/ImageMagick-${IM_MAJOR_VER}/www/api/version.html
 share/ImageMagick-${IM_MAJOR_VER}/www/api/widget.html
 share/ImageMagick-${IM_MAJOR_VER}/www/apis.html
 share/ImageMagick-${IM_MAJOR_VER}/www/cd.html
