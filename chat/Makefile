@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2003/07/27 21:48:13 jdolecek Exp $
+# $NetBSD: Makefile,v 1.76 2003/08/23 22:08:49 itojun Exp $
 #
 
 COMMENT=	Communication programs
@@ -65,6 +65,7 @@ SUBDIR+=	psi-ssl
 SUBDIR+=	quirc
 SUBDIR+=	roxirc
 SUBDIR+=	scrollz
+SUBDIR+=	ser
 SUBDIR+=	silc-client
 SUBDIR+=	silc-client-icb
 SUBDIR+=	silc-server
