@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 1999/03/27 23:37:22 frueauf Exp $
+# $NetBSD: Makefile,v 1.22 1999/04/12 19:41:14 hubertf Exp $
 #
 
-DISTNAME=	xscreensaver-3.08
+DISTNAME=	xscreensaver-3.09
 CATEGORIES=	x11
 MASTER_SITES=	http://www.jwz.org/xscreensaver/
 
