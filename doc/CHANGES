@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1879 2003/04/09 16:01:25 jmmv Exp $
+$NetBSD: CHANGES,v 1.1880 2003/04/09 16:17:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1516,3 +1516,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkgdiff to 0.108 [seb 2003-04-09]
 	Updated setiathome to 3.03nb1 [jmmv 2003-04-09]
 	Added yasm-0.2.0 [jmmv 2003-04-09]
+	Updated dnetc to 2.8015.469nb1 [jmmv 2003-04-09]
