@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2004/04/03 21:36:23 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2004/04/06 09:36:28 jmmv Exp $
 
 --- configure.orig	2004-03-16 12:55:09.000000000 +0100
 +++ configure	2004-04-03 15:19:00.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.3 2004/04/03 21:36:23 jmmv Exp $
  
  
 -GST_PLUGIN_LDFLAGS='-module -avoid-version -export-symbols-regex _*{gst_,Gst,GST_}.*'
-+GST_PLUGIN_LDFLAGS='-module -avoid-version -export-symbols-regex _*[Gg][Ss][Tt].*'
++GST_PLUGIN_LDFLAGS="-module -avoid-version -export-symbols-regex '_*(gst_|Gst|GST_).*'"
  
  
  GST_PLUGINS_ALL="\
