@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:46 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:47 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TIFF_BUILDLINK3_MK:=	${TIFF_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	tiff
 
 .if !empty(TIFF_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		tiff
-BUILDLINK_DEPENDS.tiff?=	tiff>=3.5.4
+BUILDLINK_DEPENDS.tiff+=	tiff>=3.5.4
 BUILDLINK_PKGSRCDIR.tiff?=	../../graphics/tiff
 
 .  include "../../devel/zlib/buildlink3.mk"

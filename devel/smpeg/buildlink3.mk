@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/24 03:26:46 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SPMEG_BUILDLINK3_MK:=	${SPMEG_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	smpeg
 
 .if !empty(SPMEG_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		smpeg
-BUILDLINK_DEPENDS.smpeg?=	smpeg>=0.4.4nb3
+BUILDLINK_DEPENDS.smpeg+=	smpeg>=0.4.4nb3
 BUILDLINK_PKGSRCDIR.smpeg?=	../../devel/smpeg
 
 .  include "../../devel/SDL/buildlink3.mk"
