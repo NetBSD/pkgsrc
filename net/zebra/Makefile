@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/03/27 03:20:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.37 2001/05/28 21:02:28 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -17,48 +17,48 @@ BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
-# libedit does not work due to missing functions.
+PLIST_SRC=		# empty
+
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
-DEPENDS+=	readline-*:../../devel/readline
-CONFIGURE_ARGS+=--enable-vtysh
-CONFIGURE_ENV+=	LIBS=-L${LOCALBASE}/lib CPPFLAGS=-I${LOCALBASE}/include
+USE_GNU_READLINE=	uses rl_pending_input
+.include "../../devel/readline/buildlink.mk"
+CONFIGURE_ARGS+=	--enable-vtysh
+CPPFLAGS+=		-I${BUILDLINK_INCDIR}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
+PLIST_SRC+=		${PKGDIR}/PLIST.vtysh
 .else
-CONFIGURE_ARGS+=--disable-vtysh
+CONFIGURE_ARGS+=	--disable-vtysh
 .endif
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--sysconfdir=/etc/zebra
-USE_GTEXINFO=	yes
-USE_GMAKE=	yes
+GNU_CONFIGURE=		# defined
+CONFIGURE_ARGS+=	--sysconfdir=/etc/zebra
+USE_GTEXINFO=		# defined
+USE_GMAKE=		# defined
 
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=		USE_INET6
 
 .if defined(USE_INET6) && ${USE_INET6} == YES
+PLIST_SRC+=		${PKGDIR}/PLIST.v6
 .else
-CONFIGURE_ARGS+=--disable-ospf6d --disable-ripngd
+CONFIGURE_ARGS+=	--disable-ospf6d
+CONFIGURE_ARGS+=	--disable-ripngd
 .endif
-PLIST_SRC=	${WRKDIR}/PLIST
 
-post-patch:
-		${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-.if defined(USE_INET6) && ${USE_INET6} == YES
-		${CAT} ${PKGDIR}/PLIST.v6 >> ${PLIST_SRC}
-.endif
-.if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
-		${CAT} ${PKGDIR}/PLIST.vtysh >> ${PLIST_SRC}
-.endif
-		${ECHO} '@dirrm share/examples/zebra' >>${PLIST_SRC}
+PLIST_SRC+=		${PKGDIR}/PLIST
 
-pre-configure:
-		cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
-#		cd ${WRKSRC} && ${LOCALBASE}/bin/automake
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=		LIBS="${LDFLAGS} ${LIBS}"
+
+pre-configure: ${BUILDLINK_TARGETS}
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
+#	cd ${WRKSRC} && ${LOCALBASE}/bin/automake
 
 #post-build:
-#		cd ${WRKSRC}/doc ; \
-#		${TOUCH} zebra.texi ; \
-#		makeinfo --no-split zebra.texi
+#	cd ${WRKSRC}/doc ; \
+#	${TOUCH} zebra.texi ; \
+#	makeinfo --no-split zebra.texi
 
 post-install:
-		@${CHMOD} a+r ${PREFIX}/share/examples/zebra/*
+	@${CHMOD} a+r ${PREFIX}/share/examples/zebra/*
 
 .include "../../mk/bsd.pkg.mk"
