@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2002/08/25 19:22:12 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/20 21:26:30 jlam Exp $
 
 PKGNAME=		unixodbc-${ODBC_BASE_VERS}
 PKGREVISION=		1
 COMMENT=		ODBC 2.x/3.x driver manager
 
 CONFLICTS+=		iodbc-[0-9]*
-USE_BUILDLINK_ONLY=	YES
 
 .include "../../databases/unixodbc/Makefile.common"
 
@@ -30,6 +29,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/odbcinst.ini ${EGDIR}/odbcinst.ini
 
-.include "../../devel/readline/buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
