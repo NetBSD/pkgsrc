@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.1 2000/10/01 14:03:27 rh Exp $
+
+--- ltmain.sh.orig	Thu Apr  1 03:11:12 1999
++++ ltmain.sh
+@@ -794,6 +794,7 @@
+     old_convenience=
+     deplibs=
+     linkopts=
++    wllinkopts=
+     lib_search_path=`pwd`
+ 
+     avoid_version=no
+@@ -1105,6 +1106,25 @@
+ 	continue
+ 	;;
+ 
++      -Wl,*)
++	args=`$echo "X$arg" | $Xsed -e "$sed_quote_subst" -e 's/^-Wl,//'`
++	arg=
++	IFS="${IFS=     }"; save_ifs="$IFS"; IFS=','
++	for flag in $args; do
++	  IFS="$save_ifs"
++	  case "$flag" in
++	    *[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
++	    flag="\"$flag\""
++	    ;;
++	  esac
++	  arg="$arg $wl$flag"
++	  linkopts="$linkopts $flag"
++	  wllinkopts="$wllinkopts $wl$flag"
++	done
++	IFS="$save_ifs"
++	arg=`$echo "X$arg" | $Xsed -e "s/^ //"`
++	;;
++
+       # Some other compiler flag.
+       -* | +*)
+ 	# Unknown arguments in both finalize_command and compile_command need
+@@ -2244,6 +2264,7 @@
+ 	if test "$thread_safe" = yes && test -n "$thread_safe_flag_spec"; then
+ 	  eval flag=\"$thread_safe_flag_spec\"
+ 	  linkopts="$linkopts $flag"
++	  wllinkopts="$linkopts $wl$flag"
+ 	fi
+ 
+ 	# Prepare the list of exported symbols
