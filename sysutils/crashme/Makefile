@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:26 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1998/10/15 19:51:08 agc Exp $
 #
 
 DISTNAME=       	crashme-2.4
-CATEGORIES=		devel
+CATEGORIES=		sysutils
 MASTER_SITES=   	http://ochimizu-www.jaist.ac.jp:8000/linux/vger/crashme/
 EXTRACT_SUFX=		-shar
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 1998/04/24 09:20:39 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/10/15 19:51:08 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/22 20:10:39 jseger Exp
 #
 
 DISTNAME=	tkcron-2.12
-CATEGORIES=	misc tk80
+CATEGORIES=	x11 tk80
 MASTER_SITES=	ftp://ftp.neosoft.com/languages/tcl/alcatel/code/
 EXTRACT_SUFX=	.tcl.gz
 
