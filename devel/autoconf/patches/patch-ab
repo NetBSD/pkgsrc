@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.8 2003/03/23 11:46:45 grant Exp $
+$NetBSD: patch-ab,v 1.9 2003/12/06 18:26:36 wiz Exp $
 
---- doc/autoconf.info.orig	Tue Dec  3 18:43:16 2002
+--- doc/autoconf.info.orig	Tue Nov  4 09:47:35 2003
 +++ doc/autoconf.info
 @@ -27,7 +27,7 @@ START-INFO-DIR-ENTRY
- * Autoconf: (autoconf).         Create source code configuration scripts
+ * Autoconf: (autoconf).         Create source code configuration scripts.
  END-INFO-DIR-ENTRY
  
 -INFO-DIR-SECTION Individual utilities
