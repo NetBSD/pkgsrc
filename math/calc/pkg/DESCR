@@ -1,0 +1,24 @@
+"Calc" is an advanced calculator and mathematical tool that runs as
+part of the GNU Emacs environment.  Very roughly based on the HP-28/48
+series of calculators, its many features include:
+
+   * Choice of algebraic or RPN (stack-based) entry of calculations.
+   * Arbitrary precision integers and floating-point numbers.
+   * Arithmetic on rational numbers, complex numbers (rectangular and
+     polar), error forms with standard deviations, open and closed
+     intervals, vectors and matrices, dates and times, infinities,
+     sets, quantities with units, and algebraic formulas.
+   * Mathematical operations such as logarithms and trigonometric
+     functions.
+   * Programmer's features (bitwise operations, non-decimal numbers).
+   * Financial functions such as future value and internal rate of
+     return.
+   * Number theoretical features such as prime factorization and
+     arithmetic modulo M for any M.
+   * Algebraic manipulation features, including symbolic calculus.
+   * Moving data to and from regular editing buffers.
+   * "Embedded mode" for manipulating Calc formulas and data directly
+     inside any editing buffer.
+   * Graphics using GNUPLOT, a versatile (and free) plotting program.
+   * Easy programming using keyboard macros, algebraic formulas,
+     algebraic rewrite rules, or extended Emacs Lisp.
