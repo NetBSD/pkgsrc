@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/03/26 20:50:12 rh Exp $
+# $NetBSD: Makefile,v 1.18 2002/04/05 04:13:55 mycroft Exp $
 
 DISTNAME=		evolution-1.0.3
 CATEGORIES=		mail time gnome
@@ -34,7 +34,8 @@ REPLACE_PERL+=		libical/scripts/mkrestrictiontable.pl
 REPLACE_PERL+=		tools/csv2vcard
 REPLACE_PERL+=		tools/evolution-addressbook-clean.in
 REPLACE_PERL+=		tools/killev
-CONFIGURE_ARGS+=	--enable-ldap=no
+CONFIGURE_ARGS+=	--with-openldap --without-static-ldap
+CONFIGURE_ARGS+=	--enable-nntp=yes
 CONFIGURE_ARGS+=	--with-db3-includes=${LOCALBASE}/include/db3
 CONFIGURE_ARGS+=	--with-db3-libs=${LOCALBASE}/lib
 CONFIGURE_ENV+=		CFLAGS="-D_POSIX_THREAD_SYSCALL_SOFT=1 ${CFLAGS}"
@@ -56,6 +57,7 @@ pre-configure:
 .include "../../print/gnome-print/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
 .include "../../databases/db3/buildlink.mk"
+.include "../../databases/openldap/buildlink.mk"
 .include "../../www/gtkhtml/buildlink.mk"
 .include "../../devel/bonobo/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"

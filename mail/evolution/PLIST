@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/26 20:50:12 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/04/05 04:13:55 mycroft Exp $
 bin/csv2vcard
 bin/evolution
 bin/evolution-addressbook
@@ -82,6 +82,14 @@ include/camel/camel-mime-part.h
 include/camel/camel-mime-utils.h
 include/camel/camel-movemail.h
 include/camel/camel-multipart.h
+include/camel/camel-nntp-auth.h
+include/camel/camel-nntp-folder.h
+include/camel/camel-nntp-grouplist.h
+include/camel/camel-nntp-newsrc.h
+include/camel/camel-nntp-resp-codes.h
+include/camel/camel-nntp-store.h
+include/camel/camel-nntp-types.h
+include/camel/camel-nntp-utils.h
 include/camel/camel-object.h
 include/camel/camel-operation.h
 include/camel/camel-pgp-context.h
@@ -187,6 +195,12 @@ lib/evolution/camel-providers/1.0/libcamellocal.so
 lib/evolution/camel-providers/1.0/libcamellocal.so.0
 lib/evolution/camel-providers/1.0/libcamellocal.so.0.0
 lib/evolution/camel-providers/1.0/libcamellocal.urls
+lib/evolution/camel-providers/1.0/libcamelnntp.a
+lib/evolution/camel-providers/1.0/libcamelnntp.la
+lib/evolution/camel-providers/1.0/libcamelnntp.so
+lib/evolution/camel-providers/1.0/libcamelnntp.so.0
+lib/evolution/camel-providers/1.0/libcamelnntp.so.0.0
+lib/evolution/camel-providers/1.0/libcamelnntp.urls
 lib/evolution/camel-providers/1.0/libcamelpop3.a
 lib/evolution/camel-providers/1.0/libcamelpop3.la
 lib/evolution/camel-providers/1.0/libcamelpop3.so
@@ -1288,6 +1302,8 @@ share/pixmaps/evolution.png
 @dirrm share/evolution/ecps
 @exec ${MKDIR} %D/share/evolution/default_user/private
 @dirrm share/evolution/default_user/private
+@exec ${MKDIR} %D/share/evolution/default_user/news
+@dirrm share/evolution/default_user/news
 @dirrm share/evolution/default_user/local/Trash
 @dirrm share/evolution/default_user/local/Tasks
 @dirrm share/evolution/default_user/local/Sent
@@ -1297,6 +1313,8 @@ share/pixmaps/evolution.png
 @dirrm share/evolution/default_user/local/Contacts
 @dirrm share/evolution/default_user/local/Calendar
 @dirrm share/evolution/default_user/local
+@exec ${MKDIR} %D/share/evolution/default_user/config
+@dirrm share/evolution/default_user/config
 @dirrm share/evolution/default_user
 @dirrm share/evolution
 @dirrm lib/evolution/evolution-mail-importers/1.0.3
