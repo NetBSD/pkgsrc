@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/12/28 15:43:15 tron Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/04 13:09:16 martin Exp $
 #
 
 DISTNAME=		zenicb-19981202
@@ -14,6 +14,7 @@ MIRROR_DISTFILE=	no
 .if defined(USE_XEMACS)
 EMACS=			xemacs
 DEPENDS+=		xemacs-*:../../editors/xemacs
+MAKEFLAGS+=		USE_XEMACS=${USE_XEMACS}
 .else
 EMACS=			emacs
 DEPENDS+=		emacs-*:../../editors/emacs
@@ -21,13 +22,17 @@ DEPENDS+=		emacs-*:../../editors/emacs
 
 ELISPDIR=		${PREFIX}/share/${EMACS}/site-lisp
 
-PLIST_SRC=		${WRKDIR}/PLIST.tmp
+PLIST_SUBST+=		EMACS=${EMACS}
 
 pre-configure:
+.if defined(USE_XEMACS)
+	@${ECHO} "You have chosen Xemacs configuration."
+.else
 	@${ECHO} "To install for Xemacs, set the environment variable USE_XEMACS."
+.endif
 
 pre-install:
-	${SED} -e "s/@EMACS@/${EMACS}/g" ${PKGDIR}/PLIST > ${PLIST_SRC}
+	${MKDIR} ${ELISPDIR}
 
 do-build:
 
