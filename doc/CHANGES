@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5203 2004/03/11 08:31:51 grant Exp $
+$NetBSD: CHANGES,v 1.5204 2004/03/11 08:47:37 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1404,3 +1404,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox-gtk2 to 0.8nb2 [snj 2004-03-11]
 	Updated xmms-infinity to 0.2nb4 [grant 2004-03-11]
 	Updated eggdrop to 1.6.15nb2 [grant 2004-03-11]
+	Removed MozillaFirebird-bin-nightly [grant 2004-03-11]
