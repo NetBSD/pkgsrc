@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/18 11:00:41 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/23 19:29:05 drochner Exp $
 
 DISTNAME=		cint5.14
 PKGNAME=		cint-5.14
@@ -6,7 +6,7 @@ NO_WRKSUBDIR=		yes
 CATEGORIES=		lang
 MASTER_SITES=		ftp://root.cern.ch/root/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		drochner@netbsd.org
 HOMEPAGE=		http://root.cern.ch/root/Cint.html
 
 do-build:
