@@ -1,22 +1,24 @@
-$NetBSD: patch-ac,v 1.1 1998/09/04 22:14:26 agc Exp $
+$NetBSD: patch-ac,v 1.2 1998/10/04 23:42:01 tron Exp $
 
-Use NetBSD's libtool
-
---- libgtktty/configure	1998/09/01 21:20:44	1.1
-+++ libgtktty/configure	1998/09/01 21:21:08
-@@ -1936,6 +1936,7 @@
+--- libgnome/Makefile.in.orig	Tue Sep 29 01:46:58 1998
++++ libgnome/Makefile.in	Mon Oct  5 01:20:21 1998
+@@ -136,7 +136,7 @@
+ 
+ lib_LTLIBRARIES = libgnome.la
+ 
+-scoredir=$(localstatedir)/games
++scoredir=/var/games
+ 
+ LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ 
+@@ -487,8 +487,8 @@
  
  
- # Always use our own libtool.
-+if false; then
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ install-data-local:
+-	$(mkinstalldirs) $(scoredir)
+-	-chgrp games $(scoredir) && chmod g=rwXs $(scoredir)
++#	$(mkinstalldirs) $(scoredir)
++#	-chgrp games $(scoredir) && chmod g=rwXs $(scoredir)
  
- 
-@@ -2015,6 +2016,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+fi
- 
- 
- 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
