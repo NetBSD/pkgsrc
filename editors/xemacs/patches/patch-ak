@@ -1,13 +1,15 @@
-$NetBSD: patch-ak,v 1.1 1999/06/29 23:13:42 tron Exp $
+$NetBSD: patch-ak,v 1.2 1999/07/03 15:43:33 tron Exp $
 
 --- src/Makefile.in.in.orig	Sat Jun 20 02:58:42 1998
-+++ src/Makefile.in.in	Tue Jun 29 21:53:08 1999
-@@ -52,7 +52,7 @@
++++ src/Makefile.in.in	Sat Jul  3 17:30:31 1999
+@@ -52,8 +52,8 @@
  RECURSIVE_MAKE=@RECURSIVE_MAKE@
  
  c_switch_all=@c_switch_all@
 -ld_switch_all=@ld_switch_all@
+-ld_libs_all=@ld_libs_all@
 +ld_switch_all=@ld_switch_all@ @LDFLAGS@
- ld_libs_all=@ld_libs_all@
++ld_libs_all=@ld_libs_all@ -lossaudio
  ld_dynamic_link_flags=@ld_dynamic_link_flags@
  
+ extra_objs=@extra_objs@
