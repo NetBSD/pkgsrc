@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.730 2002/12/09 03:19:58 rh Exp $
+$NetBSD: CHANGES,v 1.731 2002/12/09 10:39:55 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3870,3 +3870,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated nawk to 20021129 [jschauma 2002-12-08]
 	Updated phoenix-linux to 0.5 [grant 2002-12-08]
 	Added imapproxy-1.0 [rh 2002-12-09]
+	Added nail-10.3 [cjep 2002-12-09]
