@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2002/10/23 17:09:39 bouyer Exp $
+# $NetBSD: Makefile,v 1.80 2002/11/18 20:51:21 jlam Exp $
 
 DISTNAME=		gnome-libs-1.4.1.4
 PKGREVISION=		1
@@ -25,26 +25,12 @@ CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} \
 			PKGLOCALEDIR=${PKGLOCALEDIR}
 
 USE_BUILDLINK2=		YES
+USE_DB185=		YES
 
 LOCALSTATEDIR=		/var/gnome
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
 			LOCALEDIR=${LOCALEDIR} \
 			LOCALSTATEDIR=${LOCALSTATEDIR}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-.  include "../../databases/db/buildlink2.mk"
-
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.db}/include/db2
-
-pre-configure:
-	${MV} ${WRKSRC}/configure ${WRKSRC}/configure-pre-db-sub && \
-		${SED} -e 's|-ldb|-ldb2|g' \
-			< ${WRKSRC}/configure-pre-db-sub \
-			> ${WRKSRC}/configure && \
-		${CHMOD} 0755 ${WRKSRC}/configure
-.endif
 
 post-extract:
 .for file in gnome-app-helper-convenience-macros.htm			\
@@ -72,6 +58,7 @@ post-install:
 		${LOCALBASE}/share/aclocal/libart.m4
 
 .include "../../audio/esound/buildlink2.mk"
+.include "../../databases/db/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/imlib/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
