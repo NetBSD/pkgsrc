@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/11/17 09:02:02 salo Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/06/20 05:59:02 uebayasi Exp $
 bin/zsh
 bin/${PKGNAME}
 @unexec ${INSTALL_INFO} --delete %D/info/zsh.info %D/info/dir
@@ -28,10 +28,13 @@ share/zsh/${PKGVERSION}/functions/_aliases
 share/zsh/${PKGVERSION}/functions/_all_labels
 share/zsh/${PKGVERSION}/functions/_all_matches
 share/zsh/${PKGVERSION}/functions/_alternative
+share/zsh/${PKGVERSION}/functions/_ant
+share/zsh/${PKGVERSION}/functions/_antiword
 share/zsh/${PKGVERSION}/functions/_apachectl
 share/zsh/${PKGVERSION}/functions/_apm
 share/zsh/${PKGVERSION}/functions/_approximate
 share/zsh/${PKGVERSION}/functions/_apt
+share/zsh/${PKGVERSION}/functions/_apt-show-versions
 share/zsh/${PKGVERSION}/functions/_archie
 share/zsh/${PKGVERSION}/functions/_arg_compile
 share/zsh/${PKGVERSION}/functions/_arguments
@@ -76,8 +79,10 @@ share/zsh/${PKGVERSION}/functions/_correct_word
 share/zsh/${PKGVERSION}/functions/_cpio
 share/zsh/${PKGVERSION}/functions/_cvs
 share/zsh/${PKGVERSION}/functions/_cvsup
+share/zsh/${PKGVERSION}/functions/_dcop
 share/zsh/${PKGVERSION}/functions/_dd
 share/zsh/${PKGVERSION}/functions/_deb_packages
+share/zsh/${PKGVERSION}/functions/_debchange
 share/zsh/${PKGVERSION}/functions/_debfoster
 share/zsh/${PKGVERSION}/functions/_default
 share/zsh/${PKGVERSION}/functions/_describe
@@ -98,6 +103,7 @@ share/zsh/${PKGVERSION}/functions/_dupload
 share/zsh/${PKGVERSION}/functions/_dvi
 share/zsh/${PKGVERSION}/functions/_echotc
 share/zsh/${PKGVERSION}/functions/_echoti
+share/zsh/${PKGVERSION}/functions/_elinks
 share/zsh/${PKGVERSION}/functions/_elm
 share/zsh/${PKGVERSION}/functions/_emulate
 share/zsh/${PKGVERSION}/functions/_enable
@@ -127,6 +133,7 @@ share/zsh/${PKGVERSION}/functions/_global
 share/zsh/${PKGVERSION}/functions/_global_tags
 share/zsh/${PKGVERSION}/functions/_gnu_generic
 share/zsh/${PKGVERSION}/functions/_gprof
+share/zsh/${PKGVERSION}/functions/_gqview
 share/zsh/${PKGVERSION}/functions/_grep
 share/zsh/${PKGVERSION}/functions/_groups
 share/zsh/${PKGVERSION}/functions/_gs
@@ -154,6 +161,7 @@ share/zsh/${PKGVERSION}/functions/_joe
 share/zsh/${PKGVERSION}/functions/_kill
 share/zsh/${PKGVERSION}/functions/_killall
 share/zsh/${PKGVERSION}/functions/_kld
+share/zsh/${PKGVERSION}/functions/_larch
 share/zsh/${PKGVERSION}/functions/_last
 share/zsh/${PKGVERSION}/functions/_limits
 share/zsh/${PKGVERSION}/functions/_links
@@ -161,11 +169,13 @@ share/zsh/${PKGVERSION}/functions/_list
 share/zsh/${PKGVERSION}/functions/_loadkeys
 share/zsh/${PKGVERSION}/functions/_logical_volumes
 share/zsh/${PKGVERSION}/functions/_look
+share/zsh/${PKGVERSION}/functions/_losetup
 share/zsh/${PKGVERSION}/functions/_lp
 share/zsh/${PKGVERSION}/functions/_ls
 share/zsh/${PKGVERSION}/functions/_lscfg
 share/zsh/${PKGVERSION}/functions/_lsdev
 share/zsh/${PKGVERSION}/functions/_lslv
+share/zsh/${PKGVERSION}/functions/_lsof
 share/zsh/${PKGVERSION}/functions/_lspv
 share/zsh/${PKGVERSION}/functions/_lsvg
 share/zsh/${PKGVERSION}/functions/_lynx
@@ -187,6 +197,7 @@ share/zsh/${PKGVERSION}/functions/_mondo
 share/zsh/${PKGVERSION}/functions/_most_recent_file
 share/zsh/${PKGVERSION}/functions/_mount
 share/zsh/${PKGVERSION}/functions/_mozilla
+share/zsh/${PKGVERSION}/functions/_mt
 share/zsh/${PKGVERSION}/functions/_mtools
 share/zsh/${PKGVERSION}/functions/_multi_parts
 share/zsh/${PKGVERSION}/functions/_mutt
@@ -233,11 +244,13 @@ share/zsh/${PKGVERSION}/functions/_prompt
 share/zsh/${PKGVERSION}/functions/_ps
 share/zsh/${PKGVERSION}/functions/_pspdf
 share/zsh/${PKGVERSION}/functions/_psutils
+share/zsh/${PKGVERSION}/functions/_python
 share/zsh/${PKGVERSION}/functions/_rcs
 share/zsh/${PKGVERSION}/functions/_read
 share/zsh/${PKGVERSION}/functions/_read_comp
 share/zsh/${PKGVERSION}/functions/_redirect
 share/zsh/${PKGVERSION}/functions/_regex_arguments
+share/zsh/${PKGVERSION}/functions/_renice
 share/zsh/${PKGVERSION}/functions/_requested
 share/zsh/${PKGVERSION}/functions/_retrieve_cache
 share/zsh/${PKGVERSION}/functions/_rlogin
@@ -276,6 +289,8 @@ share/zsh/${PKGVERSION}/functions/_tar_archive
 share/zsh/${PKGVERSION}/functions/_telnet
 share/zsh/${PKGVERSION}/functions/_tex
 share/zsh/${PKGVERSION}/functions/_texi
+share/zsh/${PKGVERSION}/functions/_texinfo
+share/zsh/${PKGVERSION}/functions/_tidy
 share/zsh/${PKGVERSION}/functions/_tiff
 share/zsh/${PKGVERSION}/functions/_tilde
 share/zsh/${PKGVERSION}/functions/_tilde_files
@@ -284,6 +299,7 @@ share/zsh/${PKGVERSION}/functions/_trap
 share/zsh/${PKGVERSION}/functions/_ttyctl
 share/zsh/${PKGVERSION}/functions/_typeset
 share/zsh/${PKGVERSION}/functions/_ulimit
+share/zsh/${PKGVERSION}/functions/_uml
 share/zsh/${PKGVERSION}/functions/_unhash
 share/zsh/${PKGVERSION}/functions/_unsetopt
 share/zsh/${PKGVERSION}/functions/_update-alternatives
@@ -293,6 +309,7 @@ share/zsh/${PKGVERSION}/functions/_user_admin
 share/zsh/${PKGVERSION}/functions/_user_at_host
 share/zsh/${PKGVERSION}/functions/_users
 share/zsh/${PKGVERSION}/functions/_users_on
+share/zsh/${PKGVERSION}/functions/_valgrind
 share/zsh/${PKGVERSION}/functions/_value
 share/zsh/${PKGVERSION}/functions/_values
 share/zsh/${PKGVERSION}/functions/_vared
@@ -331,6 +348,7 @@ share/zsh/${PKGVERSION}/functions/_xauth
 share/zsh/${PKGVERSION}/functions/_xdvi
 share/zsh/${PKGVERSION}/functions/_xfig
 share/zsh/${PKGVERSION}/functions/_xloadimage
+share/zsh/${PKGVERSION}/functions/_xmlsoft
 share/zsh/${PKGVERSION}/functions/_xmodmap
 share/zsh/${PKGVERSION}/functions/_xrdb
 share/zsh/${PKGVERSION}/functions/_xset
@@ -349,6 +367,7 @@ share/zsh/${PKGVERSION}/functions/_zftp
 share/zsh/${PKGVERSION}/functions/_zip
 share/zsh/${PKGVERSION}/functions/_zle
 share/zsh/${PKGVERSION}/functions/_zmodload
+share/zsh/${PKGVERSION}/functions/_zmv
 share/zsh/${PKGVERSION}/functions/_zpty
 share/zsh/${PKGVERSION}/functions/_zstyle
 share/zsh/${PKGVERSION}/functions/allopt
@@ -359,6 +378,7 @@ share/zsh/${PKGVERSION}/functions/bash-forward-word
 share/zsh/${PKGVERSION}/functions/bash-kill-word
 share/zsh/${PKGVERSION}/functions/bash-transpose-words
 share/zsh/${PKGVERSION}/functions/bash-up-case-word
+share/zsh/${PKGVERSION}/functions/bashcompinit
 share/zsh/${PKGVERSION}/functions/checkmail
 share/zsh/${PKGVERSION}/functions/colors
 share/zsh/${PKGVERSION}/functions/compaudit
