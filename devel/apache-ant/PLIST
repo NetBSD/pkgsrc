@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2003/06/03 17:00:11 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/07 09:17:30 jdolecek Exp $
 bin/ant
 bin/antRun
 lib/java/ant.jar
 share/doc/java/ant/LICENSE
 share/doc/java/ant/README
 share/doc/java/ant/WHATSNEW
-share/doc/java/ant/ant15_todo.html
 share/doc/java/ant/ant2/FunctionalRequirements.html
 share/doc/java/ant/ant2/VFS.txt
 share/doc/java/ant/ant2/actionlist.html
@@ -17,12 +16,12 @@ share/doc/java/ant/ant_in_anger.html
 share/doc/java/ant/ant_task_guidelines.html
 share/doc/java/ant/antnews.html
 share/doc/java/ant/appendix_e.pdf
+share/doc/java/ant/bylaws.html
 share/doc/java/ant/breadcrumbs.js
 share/doc/java/ant/contributors.html
 share/doc/java/ant/cvs.html
 share/doc/java/ant/external.html
 share/doc/java/ant/faq.html
-share/doc/java/ant/guidelines.html
 share/doc/java/ant/images/ant_logo.ico
 share/doc/java/ant/images/ant_logo_large.gif
 share/doc/java/ant/images/ant_logo_medium.gif
@@ -30,6 +29,8 @@ share/doc/java/ant/images/ant_logo_small.gif
 share/doc/java/ant/images/current.gif
 share/doc/java/ant/images/group-logo.gif
 share/doc/java/ant/images/jw_ec_logo_winner2002.gif
+share/doc/java/ant/images/jw_ec_logo_winner2003.gif
+share/doc/java/ant/images/jp_rcwinner_2003.gif
 share/doc/java/ant/images/label.gif
 share/doc/java/ant/images/menu-left.gif
 share/doc/java/ant/images/menu-right.gif
