@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/11/26 06:49:50 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/15 12:11:10 martti Exp $
 #
 
-DISTNAME=	File-PathConvert-0.85
+DISTNAME=	File-PathConvert-0.9
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5fpc
 CATEGORIES=	devel perl5
