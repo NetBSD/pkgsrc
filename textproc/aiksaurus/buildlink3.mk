@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:17 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/12/29 09:18:20 recht Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AIKSAURUS_BUILDLINK3_MK:=	${AIKSAURUS_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Naiksaurus}
 BUILDLINK_PACKAGES+=	aiksaurus
 
 .if !empty(AIKSAURUS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.aiksaurus+=	aiksaurus>=1.0.1
-BUILDLINK_RECOMMENDED.aiksaurus+=	aiksaurus>=1.0.1nb1
+BUILDLINK_DEPENDS.aiksaurus+=	aiksaurus>=1.2.1
 BUILDLINK_PKGSRCDIR.aiksaurus?=	../../textproc/aiksaurus
 .endif	# AIKSAURUS_BUILDLINK3_MK
 
