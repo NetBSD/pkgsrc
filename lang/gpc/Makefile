@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/06/06 05:46:22 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/05 13:25:44 seb Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		2
@@ -52,6 +52,7 @@ INSTALL_DIRS=		${BUILD_DIRS}/gcc
 
 INSTALL_TARGET=		pascal.install
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		gpc.info gpcs.info
 
 post-extract:
@@ -77,6 +78,4 @@ pre-configure:
 .if ${OPSYS} != "NetBSD"
 .include "../../mk/gcc.buildlink2.mk"
 .endif
-.include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
