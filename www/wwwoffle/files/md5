@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.10 2000/11/21 01:11:19 itojun Exp $
+$NetBSD: md5,v 1.11 2001/03/12 19:08:37 fredb Exp $
 
-MD5 (wwwoffle-2.6.tgz) = 40360860c6f57c27316f1a6efcc90457
-MD5 (wwwoffle-26-v6-20001121b.diff.gz) = fe85131408f2c41eed4f3734fed61a88
+SHA1 (wwwoffle-2.6a.tgz) = 93e8a9d0e713cfef8e0eadddd49d1bbf13f0e4f6
+SHA1 (wwwoffle-26a-v6-20010312.diff.gz) = e2ccf0002ad08f358c3ee9086a868656af7c1e03

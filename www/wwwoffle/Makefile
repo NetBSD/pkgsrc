@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.27 2001/03/12 18:05:24 fredb Exp $
+# $NetBSD: Makefile,v 1.28 2001/03/12 19:08:37 fredb Exp $
 
-DISTNAME=	wwwoffle-2.6
+DISTNAME=	wwwoffle-2.6a
 CATEGORIES=	www
 MASTER_SITES=	http://www.gedanken.demon.co.uk/download-wwwoffle/ \
 		ftp://ftp.demon.co.uk/pub/unix/httpd/ \
 		${MASTER_SITE_SUNSITE:=apps/www/servers/}
 EXTRACT_SUFX=	.tgz
 
-PATCHFILES+=	wwwoffle-26-v6-20001121b.diff.gz
+PATCHFILES+=	wwwoffle-26a-v6-20010312.diff.gz
 PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
 PATCH_DIST_STRIP=	-p1
 
@@ -56,8 +56,12 @@ post-install:
 	  ${CP} -p ${PREFIX}/etc/wwwoffle/wwwoffle.conf \
 	    ${PREFIX}/etc/wwwoffle/wwwoffle.conf.default; \
 	fi
-	${INSTALL_PROGRAM} ${WRKSRC}/convert-cache ${PREFIX}/sbin/convert-cache
-	${INSTALL_SCRIPT} ${WRKSRC}/upgrade-config.pl ${PREFIX}/sbin/wwwoffle-upgrade-config.pl
+	${INSTALL_PROGRAM} ${WRKSRC}/convert-cache \
+	  ${PREFIX}/sbin/wwwoffle-convert-cache
+	${INSTALL_SCRIPT} ${WRKSRC}/upgrade-config.pl \
+	  ${PREFIX}/sbin/wwwoffle-upgrade-config.pl
+	${INSTALL_SCRIPT} ${WRKSRC}/upgrade-config-2.x-2.5.pl \
+	  ${PREFIX}/sbin/wwwoffle-upgrade-config-2.x-2.5.pl
 	${INSTALL_SCRIPT} ${WRKDIR}/wwwoffle.sh ${PREFIX}/etc/rc.d/wwwoffle
 	${INSTALL_SCRIPT} ${WRKDIR}/wwwoffled ${PREFIX}/etc/rc.d
 	# directories other than html are automatically created at run time
@@ -70,7 +74,7 @@ post-install:
 	@${ECHO} If your are upgrading from an older version of wwwoffle,
 	@${ECHO} your cache will not be converted automatically. Please do
 	@${ECHO} so by executing the command
-	@${ECHO} \"${PREFIX}/libexec/convert-cache /var/wwwoffle\".
+	@${ECHO} \"${PREFIX}/libexec/wwwoffle-convert-cache /var/wwwoffle\".
 	@${ECHO}
 	@${ECHO} ==+===+===+===+===+===+===+===+===+===+===+===+===+===+===+=
 	@${ECHO}

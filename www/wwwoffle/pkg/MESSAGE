@@ -1,5 +1,5 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.7 2001/03/12 18:08:32 fredb Exp $
+$NetBSD: MESSAGE,v 1.8 2001/03/12 19:08:37 fredb Exp $
 
 1) To enable "wwwwoffled" to start on boot on NetBSD-1.5 or newer,
 please copy "${PREFIX}/etc/rc.d/wwwoffled" to "/etc/rc.d/" and add
@@ -12,9 +12,10 @@ fi
 
 2) If this was an upgrade, your cache may have been converted and
 re-indexed automatically. If not, you may do so by executing the
-command "${PREFIX}/sbin/convert-cache /var/wwwoffle". To upgrade
-your wwwoffle.conf file, try the perl script
-"${PREFIX}/sbin/wwwoffle-upgrade-config.pl".
+command "${PREFIX}/sbin/wwwoffle-convert-cache /var/wwwoffle". To
+upgrade your wwwoffle.conf file, try the perl script
+"${PREFIX}/sbin/wwwoffle-upgrade-config.pl", and also 
+"${PREFIX}/sbin/wwwoffle-upgrade-config-2.x-2.5.pl", if required.
 
 3) The hooks are present to to use the package version of "htdig",
 if installed, to serve a searchable index of your cached pages.
