@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2003/09/30 07:11:48 xtraeme Exp $
+
+--- Makefile.in.orig	2003-09-30 08:55:28.000000000 +0200
++++ Makefile.in	2003-09-30 08:56:15.000000000 +0200
+@@ -148,6 +148,7 @@
+ 
+ # what to build
+ sysconf_DATA = bogofilter.cf.example
++egdir = $(prefix)/share/examples/bogofilter
+ 
+ # what to build that from
+ 
+@@ -205,14 +206,8 @@
+ uninstall-info-am:
+ sysconfDATA_INSTALL = $(INSTALL_DATA)
+ install-sysconfDATA: $(sysconf_DATA)
+-	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
+-	@list='$(sysconf_DATA)'; for p in $$list; do \
+-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+-	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f"; \
+-	  $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f; \
+-	done
++	$(mkinstalldirs) $(egdir)
++	$(INSTALL_DATA) $(sysconf_DATA) $(egdir)/bogofilter.cf
+ 
+ uninstall-sysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
