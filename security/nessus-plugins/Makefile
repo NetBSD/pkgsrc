@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/04 11:46:54 tron Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/25 12:32:10 wiz Exp $
 #
 
 DISTNAME=	nessus-plugins-${VERS}
@@ -6,11 +6,12 @@ DISTNAME=	nessus-plugins-${VERS}
 
 COMMENT=	Plugins for the Nessus Network Security Scanner
 
-DEPENDS+=	nessus-core-${VERS}:../nessus-core
 DEPENDS+=	nmap>=2.0:../../net/nmap
 
 WRKSRC=		${WRKDIR}/nessus-plugins
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 
+.include "../../security/nessus-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
