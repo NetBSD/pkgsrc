@@ -1,35 +1,35 @@
-# $NetBSD: Makefile,v 1.18 2005/03/23 00:51:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2005/03/23 00:57:21 schmonz Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
-DISTNAME=	daemontools-0.76
-CATEGORIES=	sysutils
-MASTER_SITES=	http://cr.yp.to/daemontools/				\
-		ftp://cr.yp.to/daemontools/				\
-		http://smarden.org/pape/djb/manpages/
-DISTFILES=	${DISTNAME}.tar.gz					\
-		${DISTNAME}-man.tar.gz
+DISTNAME=		daemontools-0.76
+CATEGORIES=		sysutils
+MASTER_SITES=		http://cr.yp.to/daemontools/			\
+			ftp://cr.yp.to/daemontools/			\
+			http://smarden.org/pape/djb/manpages/
+DISTFILES=		${DISTNAME}.tar.gz				\
+			${DISTNAME}-man.tar.gz
 
-MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://cr.yp.to/daemontools.html
-COMMENT=	Service monitoring and logging utilities by djb
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		http://cr.yp.to/daemontools.html
+COMMENT=		Service monitoring and logging utilities by djb
 
-DJB_RESTRICTED=	YES
+DJB_RESTRICTED=		YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=	yes
+USE_BUILDLINK3=		yes
 
-SAMPLERC=	svscan.sh.sample
-SERVICEDIR?=	${VARBASE}/spool/service
-WRKSRC=		${WRKDIR}/admin/${DISTNAME}
-CMDDIR=		${WRKSRC}/command
+SAMPLERC=		svscan.sh.sample
+SERVICEDIR?=		${VARBASE}/spool/service
+WRKSRC=			${WRKDIR}/admin/${DISTNAME}
+CMDDIR=			${WRKSRC}/command
 
-PLIST_SUBST+=	SERVICEDIR=${SERVICEDIR}
-DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
+PLIST_SUBST+=		SERVICEDIR=${SERVICEDIR}
+DEINSTALL_FILE=		${WRKDIR}/.DEINSTALL
 
 INSTALLATION_DIRS=	bin man man/man8 share/examples/daemontools
 
-DJB_CONFIG_DIR=	${WRKSRC}/src
+DJB_CONFIG_DIR=		${WRKSRC}/src
 
 do-build:
 	cd ${WRKSRC} && package/compile

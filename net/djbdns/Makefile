@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/03/23 00:51:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.41 2005/03/23 00:57:20 schmonz Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
@@ -32,7 +32,7 @@ SUPPORT_FILES+=		${EGDIR}/dnsroots.global ${PKG_SYSCONFDIR}/dnsroots.global
 PLIST_SRC=		${PKGDIR}/PLIST
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=	3.0
+GCC_REQD+=		3.0
 .endif
 
 INSTALLATION_DIRS=	bin man man/man1 man/man5 man/man8 share/examples/djbdns
