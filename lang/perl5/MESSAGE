@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 00:24:30 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:08 wiz Exp $
 
 Note: Perl no longer installs manual pages for Perl library functions,
 such as "open" or "Data::Dumper", into section 3 of the system manual
@@ -8,4 +8,4 @@ such as "open" or "Data::Dumper", into section 3 of the system manual
 Use the "perldoc" program instead to obtain documentation for Perl
 library functions.
 
-======================================================================
+===========================================================================
