@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/01/15 10:10:18 agc Exp $
 bin/cvs
 bin/cvsbug
 bin/rcs2log
