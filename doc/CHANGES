@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6867 2004/08/13 13:27:46 wiz Exp $
+$NetBSD: CHANGES,v 1.6868 2004/08/13 16:15:36 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3816,3 +3816,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ethereal to 0.10.6 [adam 2004-08-13]
 	Updated py-ldap to 2.0.2 [cube 2004-08-13]
 	Updated automake to 1.9.1 [wiz 2004-08-13]
+	Updated stella to 1.4 [dillo 2004-08-13]
+	Removed stella-sdl [dillo 2004-08-13]
