@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2001/07/24 11:04:21 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2001/08/22 17:38:56 jlam Exp $
 
 --- src/Imakefile.orig	Mon Oct 18 01:35:58 1999
 +++ src/Imakefile
@@ -12,12 +12,12 @@ $NetBSD: patch-ab,v 1.5 2001/07/24 11:04:21 jlam Exp $
 -WRASTERCFLAGS = `get-wraster-flags --cflags`
 -WRASTERLFLAGS = `get-wraster-flags --lflags`
 -WRASTERLIBS = `get-wraster-flags --libs`
-+WSOUNDCFLAGS = `${BUILDLINK_DIR}/bin/get-wsound-flags --cflags`
-+WSOUNDLFLAGS = `${BUILDLINK_DIR}/bin/get-wsound-flags --lflags`
-+WSOUNDLIBS = `${BUILDLINK_DIR}/bin/get-wsound-flags --libs`
-+WRASTERCFLAGS = `${BUILDLINK_DIR}/bin/get-wraster-flags --cflags`
-+WRASTERLFLAGS = `${BUILDLINK_DIR}/bin/get-wraster-flags --lflags`
-+WRASTERLIBS = `${BUILDLINK_DIR}/bin/get-wraster-flags --libs`
++WSOUNDCFLAGS = `${GET_WSOUND_FLAGS} --cflags`
++WSOUNDLFLAGS = `${GET_WSOUND_FLAGS} --lflags`
++WSOUNDLIBS = `${GET_WSOUND_FLAGS} --libs`
++WRASTERCFLAGS = `${GET_WRASTER_FLAGS} --cflags`
++WRASTERLFLAGS = `${GET_WRASTER_FLAGS}} --lflags`
++WRASTERLIBS = `${GET_WRASTER_FLAGS} --libs`
  WINGSLIBS = -lWINGs -lPropList
  
  STD_INCLUDES = $(WRASTERCFLAGS) $(WSOUNDCFLAGS)
