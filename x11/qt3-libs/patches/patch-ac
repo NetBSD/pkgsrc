@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2003/03/18 08:36:25 skrll Exp $
+$NetBSD: patch-ac,v 1.5 2004/04/16 14:30:45 recht Exp $
 
---- src/tools/qdir_unix.cpp.orig	Mon Dec  9 22:40:32 2002
-+++ src/tools/qdir_unix.cpp
+--- src/tools/qdir_unix.cpp.orig	2004-02-18 14:22:42.000000000 +0100
++++ src/tools/qdir_unix.cpp	2004-04-15 01:49:24.000000000 +0200
 @@ -36,6 +36,16 @@
  **********************************************************************/
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/18 08:36:25 skrll Exp $
  #include "qdir.h"
  
  #ifndef QT_NO_DIR
-@@ -86,10 +96,19 @@
+@@ -88,10 +98,19 @@
  
  bool QDir::mkdir( const QString &dirName, bool acceptAbsPath ) const
  {
@@ -42,7 +42,7 @@ $NetBSD: patch-ac,v 1.4 2003/03/18 08:36:25 skrll Exp $
      int status =
  	::mkdir( QFile::encodeName(filePath(name,acceptAbsPath)), 0777 );
  #else
-@@ -101,7 +120,24 @@ bool QDir::mkdir( const QString &dirName
+@@ -103,7 +122,24 @@
  
  bool QDir::rmdir( const QString &dirName, bool acceptAbsPath ) const
  {
