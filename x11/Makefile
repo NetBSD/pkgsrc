@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2000/10/19 18:40:29 skrll Exp $
+# $NetBSD: Makefile,v 1.180 2000/10/23 15:04:07 wiz Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -68,14 +68,11 @@
     SUBDIR += polclock
     SUBDIR += py-Tk
     SUBDIR += py-wxWindows
-    SUBDIR += rep-gtk
-    SUBDIR += qt
     SUBDIR += qt1
     SUBDIR += qt2
     SUBDIR += qt2-designer
     SUBDIR += qt2-docs
     SUBDIR += qt2-libs
-    SUBDIR += qt21
     SUBDIR += qtarch
     SUBDIR += qwspritefield
     SUBDIR += qwt
