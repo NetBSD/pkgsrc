@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2002/05/06 21:42:37 seb Exp $
+$NetBSD: distinfo,v 1.5 2002/09/29 14:20:04 wiz Exp $
 
-SHA1 (htmldoc-1.8.19-source.tar.bz2) = 98e3710f9d46346ae4043db37fa81d670df67eab
-Size (htmldoc-1.8.19-source.tar.bz2) = 1740140 bytes
+SHA1 (htmldoc-1.8.22-source.tar.bz2) = 73493e3d921ab8419593b7a85d342d7f08e5ae38
+Size (htmldoc-1.8.22-source.tar.bz2) = 2335516 bytes
+SHA1 (patch-aa) = 8b42b0e3bfa16dc816284895d8d24a5401732202
