@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2003/11/05 13:38:27 agc Exp $
+$NetBSD: patch-aa,v 1.7 2003/11/18 14:43:08 xtraeme Exp $
 
 --- makefile.orig	1998-06-19 04:28:34.000000000 +0100
 +++ makefile	2003-11-05 12:36:20.000000000 +0000
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.6 2003/11/05 13:38:27 agc Exp $
 +#CC=gcc
  MATHLIB=-lm
 -CFLAGS=-I/usr/X11/include
-+CFLAGS=-I$(PREFIX)/include -I${X11BASE}/include -DSOUNDS=\"$(SOUNDS)\" -DPIXMAPS=\"$(PIXMAPS)\" -DLEVELS=\"$(LEVELS)\" -DBITMAPS=\"$(BITMAPS)\"
++CFLAGS=-I${X11BASE}/include -DSOUNDS=\"$(SOUNDS)\" -DPIXMAPS=\"$(PIXMAPS)\" -DLEVELS=\"$(LEVELS)\" -DBITMAPS=\"$(BITMAPS)\"
  
  # Change this to "touch" if your system doesn't have the "strip" command:
  POSTPROCESS=strip

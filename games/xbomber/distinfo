@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2003/11/05 13:38:27 agc Exp $
+$NetBSD: distinfo,v 1.5 2003/11/18 14:43:08 xtraeme Exp $
 
 SHA1 (xbomber.0.8.tar.gz) = 1146d1cc9d10f1115f650ad20bf4fd9e77cf2b8b
 Size (xbomber.0.8.tar.gz) = 241168 bytes
-SHA1 (patch-aa) = da4ba6ba91dc5d5c946626ad5a5793e2f5fc06f6
+SHA1 (patch-aa) = d4fccbda2d59db7a776b8505ea2ddc633b9d5a9c
 SHA1 (patch-ab) = 934cd3bba0f7f257c7e5dd9490c4114413f4a094
