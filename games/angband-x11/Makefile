@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/09/15 13:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2003/09/17 19:40:23 grant Exp $
 #
 
 DISTNAME=	angband-3.0.3
@@ -25,7 +25,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-setgid=games --prefix=${PREFIX}
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC2=	# defined
+USE_PKGSRC_GCC=		# defined
 .endif
 
 # add spoiler files and clean up a bit

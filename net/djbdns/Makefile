@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/09/12 20:07:24 grant Exp $
+# $NetBSD: Makefile,v 1.26 2003/09/17 19:40:51 grant Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
@@ -38,7 +38,7 @@ INSTALL_TARGET=	setup check
 MANVERSION=	20021211
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC3=	# defined
+GCC_REQD=	3.0
 .endif
 
 post-extract:

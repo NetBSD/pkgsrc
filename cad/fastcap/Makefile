@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/09/12 20:07:08 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/17 19:40:02 grant Exp $
 #
 
 DISTNAME=	fastcap-2.0-15Jul92
@@ -25,7 +25,7 @@ CONFIGURE_SCRIPT=	./config
 CONFIGURE_ARGS=		4
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC2=		# defined
+USE_PKGSRC_GCC=		# defined
 .endif
 
 do-install:

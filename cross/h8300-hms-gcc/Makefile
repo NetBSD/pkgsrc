@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/12 20:07:10 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/17 19:40:06 grant Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -32,7 +32,7 @@ CONFIGURE_SCRIPT=	${SRCDIR}/configure
 SRCDIR=			${WRKDIR}/gcc-3.1
 ALL_TARGET=		CFLAGS="-O2 -fomit-frame-pointer" all
 
-USE_GCC2=		# defined
+USE_PKGSRC_GCC=		# defined
 
 post-extract:
 	${LN} -s ${WRKDIR}/newlib-1.10.0/newlib ${SRCDIR}/newlib

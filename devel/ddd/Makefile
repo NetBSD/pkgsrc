@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2003/09/12 21:02:10 tron Exp $
+# $NetBSD: Makefile,v 1.54 2003/09/17 19:40:11 grant Exp $
 #
 
 DISTNAME=	ddd-3.3.7
@@ -16,7 +16,7 @@ USE_GMAKE=		YES
 TEST_TARGET=		check
 INFO_FILES=		ddd-themes.info ddd.info
 
-USE_GCC3=		# defined
+GCC_REQD=		3.0
 
 CONFIGURE_ARGS+=	--with-ncurses=no
 CONFIGURE_ENV+=		COMPFACE="${FALSE}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/08/08 08:30:48 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/17 19:41:13 grant Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -18,5 +18,4 @@ USE_X11=	YES
 GNU_CONFIGURE=	YES
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-
 .include "../../mk/bsd.pkg.mk"
