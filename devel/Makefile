@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.394 2003/05/25 09:54:35 epg Exp $
+# $NetBSD: Makefile,v 1.395 2003/06/03 17:00:08 jschauma Exp $
 #
 
 COMMENT=	Development utilities
@@ -18,6 +18,7 @@ SUBDIR+=	acunia-jam
 SUBDIR+=	aegis
 SUBDIR+=	ald
 SUBDIR+=	anjuta
+SUBDIR+=	apache-ant
 SUBDIR+=	apel
 SUBDIR+=	apr
 SUBDIR+=	arch
@@ -146,7 +147,6 @@ SUBDIR+=	idiff
 SUBDIR+=	ipv6socket_scrub
 SUBDIR+=	isect
 SUBDIR+=	its4
-SUBDIR+=	jakarta-ant
 SUBDIR+=	jam
 SUBDIR+=	javadeps
 SUBDIR+=	jlib
