@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7929 2004/11/20 16:06:21 uebayasi Exp $
+$NetBSD: CHANGES,v 1.7930 2004/11/20 16:26:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5358,3 +5358,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added RealPlayerGold-10.0.1 [rh 2004-11-20]
 	Updated eb to 4.1.1 [uebayasi 2004-11-20]
 	Updated eblook to 1.6.1 [uebayasi 2004-11-20]
+	Added dasm-2.12 [minskim 2004-11-20]
