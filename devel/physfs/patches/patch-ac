@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2004/09/15 16:45:44 agc Exp $
+$NetBSD: patch-ac,v 1.2 2004/09/21 00:30:59 wiz Exp $
 
---- platform/unix.c	2004/09/15 16:35:55	1.1
-+++ platform/unix.c	2004/09/15 16:40:46
-@@ -77,11 +77,19 @@
+--- platform/unix.c.orig	2003-05-24 05:26:03.000000000 +0200
++++ platform/unix.c
+@@ -212,11 +212,19 @@ char **__PHYSFS_platformDetectAvailableC
  
- #ifdef PHYSFS_HAVE_SYS_UCRED_H
+ #elif (defined PHYSFS_HAVE_SYS_UCRED_H)
  
 +#if defined(__NetBSD__) && (__NetBSD_Version__ >= 200040000)
 +#include <sys/statvfs.h>
