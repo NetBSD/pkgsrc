@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/01 15:04:46 tron Exp $
+bin/alevt
+bin/alevt-date
+bin/alevt-cap
+man/man1/alevt.1x
+man/man1/alevt-cap.1
+man/man1/alevt-date.1
+share/pixmaps/mini-alevt.xpm
+@unexec rmdir %D/share/pixmaps 2>/dev/null || true
