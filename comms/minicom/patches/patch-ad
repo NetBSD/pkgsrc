@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 1999/11/15 14:22:48 rh Exp $
+$NetBSD: patch-ad,v 1.5 2000/01/05 22:58:14 tron Exp $
 
 --- rwconf.c.orig	Mon Nov 15 15:19:03 1999
 +++ rwconf.c	Mon Nov 15 15:19:03 1999
@@ -20,8 +20,8 @@ $NetBSD: patch-ad,v 1.4 1999/11/15 14:22:48 rh Exp $
 +  { BINDIR "/lrz -vv",	PUBLIC,   "pprog4" },
 +  { BINDIR "/lrb -vv",	PUBLIC,   "pprog5" },
 +  { BINDIR "/lrx -vv",	PUBLIC,   "pprog6" },
-+  { BINDIR "/kermit -i -l %l -s", PUBLIC, "pprog7" },
-+  { BINDIR "/kermit -i -l %l -r", PUBLIC, "pprog8" },
++  { BINDIR "/gkermit -i -s", PUBLIC, "pprog7" },
++  { BINDIR "/gkermit -i -r", PUBLIC, "pprog8" },
  #endif
    { "/usr/bin/ascii-xfr -dsv", PUBLIC,   "pprog9" },
    { "",			PUBLIC,   "pprog10" },
