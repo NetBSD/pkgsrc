@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/19 19:21:40 kei Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/08 10:15:27 wiz Exp $
 #
 
-DISTNAME=	xpdf-latin2
-PKGNAME=	${DISTNAME}-20020604
+DISTNAME=	xpdf-latin2-2002-oct-22
+PKGNAME=	xpdf-latin2-20021022
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
@@ -14,8 +14,7 @@ DEPENDS+=	xpdf>=1.00:../../print/xpdf
 
 USE_X11BASE=	yes
 
-DIST_SUBDIR=	${PKGNAME}
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/xpdf-latin2
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
