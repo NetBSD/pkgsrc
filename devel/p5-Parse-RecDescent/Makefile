@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/05 22:16:25 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2004/09/04 07:53:20 grant Exp $
 #
 
 DISTNAME=	Parse-RecDescent-1.94
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-COMMENT=	Generate recursive-descent parsers
+COMMENT=	Perl5 module to generate recursive-descent parsers
 
 DEPENDS+=	p5-Text-Balanced-[0-9]*:../../textproc/p5-Text-Balanced
 
