@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2001/09/09 20:36:21 agc Exp $
+# $NetBSD: Makefile,v 1.19 2001/11/18 19:17:05 dillo Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3nb1
-CATEGORIES=		editors
+CATEGORIES=		editors plan9
 MASTER_SITES=		ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 EXTRACT_SUFX=		.msg.gz
 
