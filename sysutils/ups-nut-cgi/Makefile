@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/01/28 22:04:19 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2003/02/05 18:36:47 dmcmahill Exp $
 
 DISTNAME=		nut-1.2.1
 PKGREVISION=		1
@@ -38,5 +38,6 @@ CONF_FILES+=		${NUT_EGDIR}/upsstats-single.html.sample \
 CONF_FILES+=		${NUT_EGDIR}/upsstats.html.sample \
 			${NUT_CONFDIR}/upsstats.html
 
+.include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
