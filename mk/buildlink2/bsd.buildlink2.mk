@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.1 2002/06/21 21:39:25 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.2 2002/06/24 16:32:37 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -40,7 +40,7 @@ _BLNK_LDFLAGS=		-L${LOCALBASE}/lib
 
 .if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
 .  if !defined(_FOR_X11_LINKS_ONLY)
-BUILD_DEPENDS+=		x11-links>=0.6:../../pkgtools/x11-links
+BUILD_DEPENDS+=		x11-links>=0.8:../../pkgtools/x11-links
 .  endif
 BUILDLINK_X11_DIR=	${LOCALBASE}/share/x11-links
 CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
