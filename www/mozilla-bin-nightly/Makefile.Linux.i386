@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.Linux.i386,v 1.1.1.1 2003/05/20 14:25:14 grant Exp $
+#
+
+DISTNAME=	mozilla-i686-pc-linux-gnu
+
+PLATFORM=	linux
+PHOENIX_LIB=    ${PREFIX}/lib/mozilla-${PLATFORM}
