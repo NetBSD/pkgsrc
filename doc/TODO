@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1499 2004/03/10 22:26:26 tron Exp $
+$NetBSD: TODO,v 1.1500 2004/03/11 14:20:57 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -282,6 +282,7 @@ Suggested package updates
 	o ploticus-2.20
 	o postgresql-7.4.1 [pkgsrc-wip]
 	o psi-0.9.1
+	o py-gtk-2.2.0
 	o py-psycopg-1.1.10
 	o py-sqlite-0.5.0 [pkg/24663]
 	o pygtk-0.6.11
