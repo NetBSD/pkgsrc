@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/06 13:47:43 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2005/02/07 15:10:42 wiz Exp $
 
-SHA1 (libtheora-1.0alpha3.zip) = d0406ecade7ac6b426a73fdb12cb8ac3a8462633
-Size (libtheora-1.0alpha3.zip) = 1111940 bytes
+SHA1 (libtheora-1.0alpha4.zip) = 6c9e7eaf75953f8959ddb8f2568669fc15a0667b
+Size (libtheora-1.0alpha4.zip) = 2172338 bytes
 SHA1 (patch-aa) = 742cbb3aef9f9e0efebaa60fd97f5302c1c24d6f
