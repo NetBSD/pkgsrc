@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pgsql.sh,v 1.2 2001/05/14 20:38:56 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.3 2001/05/14 21:02:39 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -33,7 +33,7 @@ fi
 # $flags from environment overrides $pgsql_flags
 if [ -n ${flags} ]
 then
-	pgsql_flags="${flags}"
+	eval ${rcvar}_flags="${flags}"
 fi
 
 pgsql_doit()
