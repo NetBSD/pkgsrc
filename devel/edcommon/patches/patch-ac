@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/12/30 11:56:01 rh Exp $
+
+--- FoundationExtensions.subproj/NSFileHandle+Extensions.m.orig	2002-08-17 04:12:48.000000000 +1000
++++ FoundationExtensions.subproj/NSFileHandle+Extensions.m
+@@ -144,7 +144,7 @@
+                     format: @"PeekNamedPipe() NT Error # %d", GetLastError()];
+ 
+     return lpTotalBytesAvail;
+-#elif defined(__APPLE__) || defined(__FreeBSD__) || defined(linux)
++#elif defined(__APPLE__) || defined(__FreeBSD__) || defined(linux) || defined(__NetBSD__)
+     int numBytes;
+ 
+     if(ioctl(EDSOCKETHANDLE, FIONREAD, (char *) &numBytes) == -1)
