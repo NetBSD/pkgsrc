@@ -1,0 +1,45 @@
+$NetBSD: patch-ab,v 1.1 1998/08/23 05:52:46 garbled Exp $
+--- builtins.c.orig	Mon Mar  7 03:32:49 1994
++++ builtins.c	Tue Feb 24 11:04:28 1998
+@@ -466,12 +466,18 @@
+ 
+ #ifndef SYSVR4
+ extern int getrlimit(int, struct rlimit *);
++
++/* #ifndef __FreeBSD__ */
++#include <sys/param.h>
++#if !(defined(BSD) && BSD >= 199306)
+ extern int setrlimit(int, struct rlimit *);
+ #endif
+ 
++#endif
++
+ static void printlimit(const Limit *limit, bool hard) {
+ 	struct rlimit rlim;
+-	long lim;
++	u_quad_t lim;
+ 	getrlimit(limit->flag, &rlim);
+ 	if (hard)
+ 		lim = rlim.rlim_max;
+@@ -481,16 +487,19 @@
+ 		fprint(1, "%s \tunlimited\n", limit->name);
+ 	else {
+ 		const Suffix *suf;
++		char buf[1024];
+ 		for (suf = limit->suffix; suf != NULL; suf = suf->next)
+ 			if (lim % suf->amount == 0 && (lim != 0 || suf->amount > 1)) {
+ 				lim /= suf->amount;
+ 				break;
+ 			}
+-		fprint(1, "%s \t%d%s\n", limit->name, lim, (suf == NULL || lim == 0) ? "" : suf->name);
++		(void) snprintf(buf, sizeof(buf), "%s \t%qu%s\n",
++			limit->name, lim, (suf == NULL || lim == 0) ? "" : suf->name);
++		fprint(1, "%s", buf);
+ 	}
+ }
+ 
+-static long parselimit(const Limit *limit, char *s) {
++static u_quad_t parselimit(const Limit *limit, char *s) {
+ 	char *t;
+ 	int len = strlen(s);
+ 	long lim = 1;

@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.1 1998/08/23 05:52:47 garbled Exp $
+--- proto.h.orig	Sun Mar  6 20:33:11 1994
++++ proto.h	Mon Jul 13 02:29:15 1998
+@@ -15,2 +15,3 @@
+ */
++#include <sys/param.h>
+ 
+@@ -34,7 +35,10 @@
+ 
++#if !(defined(BSD) && BSD >= 199306)
+ extern void exit(int);
+ extern void qsort(void *, SIZE_T, SIZE_T, int (*)(const void *, const void *));
+-
++#else
++#include <stdlib.h>
++#endif
+ /* fake string.h */
+-
++#if !(defined(BSD) && BSD >= 199306)
+ extern int strncmp(const char *, const char *, SIZE_T);
+@@ -50,2 +54,5 @@
+ extern void *memset(void *, int, SIZE_T);
++#else
++#include <string.h>
++#endif
+ 
+@@ -67,3 +74,4 @@
+ extern int isatty(int);
+-#ifndef SYSVR4 /* declares AND defines this in sys/stat.h!! */
++#if !defined(SYSVR4) && !(defined(BSD) && BSD >= 199306)
++/* SVR4 declares AND defines this in sys/stat.h!! */
+ extern int mknod(const char *, int, int);
