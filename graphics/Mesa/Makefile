@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/06/17 08:08:49 veego Exp $
+# $NetBSD: Makefile,v 1.41 2001/07/06 00:49:05 fredb Exp $
 #
 
 .include "Makefile.common"
@@ -10,7 +10,7 @@ MASTER_SITES= 	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.ssec.wisc.edu/~brianp/Mesa.html
+HOMEPAGE=	http://www.mesa3d.org/
 COMMENT=	Graphics library meta package, similar to SGI's OpenGL
 
 
