@@ -1,11 +1,12 @@
-# $NetBSD: buildlink2.mk,v 1.6 2002/10/07 19:11:16 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2002/10/16 22:07:47 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.10.35nb1
+GETTEXT_REQD?=			0.10.35nb1
+BUILDLINK_DEPENDS.gettext?=	gettext-lib>=${GETTEXT_REQD}
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 
 .if defined(USE_GNU_GETTEXT)
@@ -14,7 +15,21 @@ _NEED_GNU_GETTEXT=	YES
 _BLNK_LIBINTL_LIST!=         ${ECHO} /usr/lib/libintl.*
 .  if exists(/usr/include/libintl.h) && \
       (${_BLNK_LIBINTL_LIST} != "/usr/lib/libintl.*")
-_NEED_GNU_GETTEXT=	NO
+#
+# Consider the base system libintl to be gettext-lib-0.10.35nb1.
+#
+# XXX This isn't correct on Linux systems, as it may cause the installation
+# XXX of the pkgsrc gettext-lib even if the system one is the latest
+# XXX version.
+#
+_GETTEXT_PKG=		gettext-lib-0.10.35nb1
+_GETTEXT_DEPENDS=	${BUILDLINK_DEPENDS.gettext}
+_NEED_GNU_GETTEXT!= \
+	if ${PKG_ADMIN} pmatch '${_GETTEXT_DEPENDS}' ${_GETTEXT_PKG}; then \
+		${ECHO} "NO";						\
+	else								\
+		${ECHO} "YES";						\
+	fi
 .  else
 _NEED_GNU_GETTEXT=	YES
 .  endif
@@ -50,16 +65,23 @@ BUILDLINK_TARGETS+=		gettext-libintl-la
 # configure script fails to detect if libintl.a is the genuine GNU gettext
 # or not.
 #
-_BLNK_INTLLIBS=		# empty
+_BLNK_INCINTL=		# empty
+_BLNK_LIBINTL=		# empty
 .if ${_NEED_GNU_GETTEXT} == "YES"
-_BLNK_INTLLIBS+=	-L${BUILDLINK_PREFIX.gettext}/lib
-_BLNK_INTLLIBS+=	-Wl,-R${BUILDLINK_PREFIX.gettext}/lib
+_BLNK_INCINTL+=		-I${BUILDLINK_PREFIX.gettext}/include
+_BLNK_LIBINTL+=		-L${BUILDLINK_PREFIX.gettext}/lib
+_BLNK_LIBINTL+=		-Wl,-R${BUILDLINK_PREFIX.gettext}/lib
 .endif
-_BLNK_INTLLIBS+=	-lintl
+_BLNK_LIBINTL+=	-lintl
 .if defined(GNU_CONFIGURE)
-INTLLIBS=		${_BLNK_INTLLIBS}
-LIBS+=			${INTLLIBS}
-CONFIGURE_ENV+=		INTLLIBS="${INTLLIBS}"
+LIBS+=			${_BLNK_LIBINTL}
+CONFIGURE_ENV+=		INTLLIBS="${_BLNK_LIBINTL}"
+.  if ${_NEED_GNU_GETTEXT} == "NO"
+#CONFIGURE_ENV+=	INCINTL="${_BLNK_INCINTL}"
+#CONFIGURE_ENV+=	LIBINTL="${_BLNK_LIBINTL}"
+#CONFIGURE_ENV+=	gt_cv_func_gnugettext_libintl="yes"
+CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
+.  endif
 .endif
 
 .if ${_NEED_GNU_GETTEXT} == "NO"
