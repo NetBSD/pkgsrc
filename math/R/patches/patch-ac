@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1998/12/21 10:29:41 frueauf Exp $
+
+--- src/main/Makefile.in.orig	Wed Nov 25 12:54:51 1998
++++ src/main/Makefile.in	Sun Dec 20 09:53:29 1998
+@@ -34,7 +34,7 @@
+ 
+ $(top_builddir)/bin/R.binary: $(OBJS) $(RLIBS)
+ 	@$(MKINSTALLDIRS) $(top_builddir)/bin
+-	$(LDCMD) $(DLLFLAGS) -o $@ $(OBJS) $(ALL_LIBS)
++	$(LDCMD) $(DLLFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(ALL_LIBS)
+ 
+ ../unix/libunix.a:
+ 	(cd ../unix;  $(MAKE) $(@F))

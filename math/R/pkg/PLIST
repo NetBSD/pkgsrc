@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/04 11:36:03 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/12/21 10:29:42 frueauf Exp $
 bin/R
 bin/Rd2txt
 bin/Rdconv
@@ -109,6 +109,7 @@ share/R/doc/keyword-test
 share/R/doc/manual/ABOUT.tex
 share/R/doc/manual/Man.tex
 share/R/doc/manual/Rd.sty
+share/R/doc/manual/Rd2dvi.tex
 share/R/doc/manual/plotmath.tex
 share/R/doc/manual/primitive-funs.tex
 share/R/doc/manual/writing-Rd.tex
@@ -128,6 +129,7 @@ share/R/include/Mathlib.h
 share/R/include/Memory.h
 share/R/include/Platform.h
 share/R/include/PrtUtil.h
+share/R/include/Random.h
 share/R/include/S.h
 share/R/include/S_compat.h
 share/R/include/Utils.h
@@ -168,6 +170,7 @@ share/R/library/base/R-ex/Logistic.R
 share/R/library/base/R-ex/Lognormal.R
 share/R/library/base/R-ex/Machine.R
 share/R/library/base/R-ex/Math.R
+share/R/library/base/R-ex/Memory.R
 share/R/library/base/R-ex/NA.R
 share/R/library/base/R-ex/NChisquare.R
 share/R/library/base/R-ex/NULL.R
@@ -227,6 +230,7 @@ share/R/library/base/R-ex/box.R
 share/R/library/base/R-ex/boxplot.R
 share/R/library/base/R-ex/boxplot.stats.R
 share/R/library/base/R-ex/browser.R
+share/R/library/base/R-ex/bug.report.R
 share/R/library/base/R-ex/bxp.R
 share/R/library/base/R-ex/c.R
 share/R/library/base/R-ex/call.R
@@ -404,6 +408,7 @@ share/R/library/base/R-ex/model.extract.R
 share/R/library/base/R-ex/model.frame.R
 share/R/library/base/R-ex/model.matrix.R
 share/R/library/base/R-ex/model.tables.R
+share/R/library/base/R-ex/mosaicplot.R
 share/R/library/base/R-ex/mtext.R
 share/R/library/base/R-ex/na.action.R
 share/R/library/base/R-ex/na.fail.R
@@ -487,6 +492,7 @@ share/R/library/base/R-ex/rev.R
 share/R/library/base/R-ex/rgb.R
 share/R/library/base/R-ex/rivers.R
 share/R/library/base/R-ex/row.R
+share/R/library/base/R-ex/rowsum.R
 share/R/library/base/R-ex/rug.R
 share/R/library/base/R-ex/sample.R
 share/R/library/base/R-ex/save.R
@@ -656,6 +662,7 @@ share/R/library/base/help/Logistic
 share/R/library/base/help/Lognormal
 share/R/library/base/help/Machine
 share/R/library/base/help/Math
+share/R/library/base/help/Memory
 share/R/library/base/help/NA
 share/R/library/base/help/NChisquare
 share/R/library/base/help/NULL
@@ -715,6 +722,7 @@ share/R/library/base/help/box
 share/R/library/base/help/boxplot
 share/R/library/base/help/boxplot.stats
 share/R/library/base/help/browser
+share/R/library/base/help/bug.report
 share/R/library/base/help/bxp
 share/R/library/base/help/c
 share/R/library/base/help/call
@@ -892,6 +900,7 @@ share/R/library/base/help/model.extract
 share/R/library/base/help/model.frame
 share/R/library/base/help/model.matrix
 share/R/library/base/help/model.tables
+share/R/library/base/help/mosaicplot
 share/R/library/base/help/mtext
 share/R/library/base/help/na.action
 share/R/library/base/help/na.fail
@@ -975,6 +984,7 @@ share/R/library/base/help/rev
 share/R/library/base/help/rgb
 share/R/library/base/help/rivers
 share/R/library/base/help/row
+share/R/library/base/help/rowsum
 share/R/library/base/help/rug
 share/R/library/base/help/sample
 share/R/library/base/help/save
@@ -1092,6 +1102,7 @@ share/R/library/base/html/Logistic.html
 share/R/library/base/html/Lognormal.html
 share/R/library/base/html/Machine.html
 share/R/library/base/html/Math.html
+share/R/library/base/html/Memory.html
 share/R/library/base/html/NA.html
 share/R/library/base/html/NChisquare.html
 share/R/library/base/html/NULL.html
@@ -1151,6 +1162,7 @@ share/R/library/base/html/box.html
 share/R/library/base/html/boxplot.html
 share/R/library/base/html/boxplot.stats.html
 share/R/library/base/html/browser.html
+share/R/library/base/html/bug.report.html
 share/R/library/base/html/bxp.html
 share/R/library/base/html/c.html
 share/R/library/base/html/call.html
@@ -1328,6 +1340,7 @@ share/R/library/base/html/model.extract.html
 share/R/library/base/html/model.frame.html
 share/R/library/base/html/model.matrix.html
 share/R/library/base/html/model.tables.html
+share/R/library/base/html/mosaicplot.html
 share/R/library/base/html/mtext.html
 share/R/library/base/html/na.action.html
 share/R/library/base/html/na.fail.html
@@ -1411,6 +1424,7 @@ share/R/library/base/html/rev.html
 share/R/library/base/html/rgb.html
 share/R/library/base/html/rivers.html
 share/R/library/base/html/row.html
+share/R/library/base/html/rowsum.html
 share/R/library/base/html/rug.html
 share/R/library/base/html/sample.html
 share/R/library/base/html/save.html
@@ -1527,6 +1541,7 @@ share/R/library/base/latex/Logistic.tex
 share/R/library/base/latex/Lognormal.tex
 share/R/library/base/latex/Machine.tex
 share/R/library/base/latex/Math.tex
+share/R/library/base/latex/Memory.tex
 share/R/library/base/latex/NA.tex
 share/R/library/base/latex/NChisquare.tex
 share/R/library/base/latex/NULL.tex
@@ -1586,6 +1601,7 @@ share/R/library/base/latex/box.tex
 share/R/library/base/latex/boxplot.stats.tex
 share/R/library/base/latex/boxplot.tex
 share/R/library/base/latex/browser.tex
+share/R/library/base/latex/bug.report.tex
 share/R/library/base/latex/bxp.tex
 share/R/library/base/latex/c.tex
 share/R/library/base/latex/call.tex
@@ -1763,6 +1779,7 @@ share/R/library/base/latex/model.extract.tex
 share/R/library/base/latex/model.frame.tex
 share/R/library/base/latex/model.matrix.tex
 share/R/library/base/latex/model.tables.tex
+share/R/library/base/latex/mosaicplot.tex
 share/R/library/base/latex/mtext.tex
 share/R/library/base/latex/na.action.tex
 share/R/library/base/latex/na.fail.tex
@@ -1846,6 +1863,7 @@ share/R/library/base/latex/rev.tex
 share/R/library/base/latex/rgb.tex
 share/R/library/base/latex/rivers.tex
 share/R/library/base/latex/row.tex
+share/R/library/base/latex/rowsum.tex
 share/R/library/base/latex/rug.tex
 share/R/library/base/latex/sample.tex
 share/R/library/base/latex/save.tex
@@ -1961,7 +1979,6 @@ share/R/library/modreg/R-ex/smooth.spline.R
 share/R/library/modreg/R-ex/supsmu.R
 share/R/library/modreg/R/modreg
 share/R/library/modreg/TITLE
-share/R/library/modreg/data/.keep_me
 share/R/library/modreg/help/00Titles
 share/R/library/modreg/help/AnIndex
 share/R/library/modreg/help/ksmooth
@@ -2090,7 +2107,6 @@ share/R/library/stepfun/latex/stepfun.tex
 @dirrm share/R/library/eda
 @dirrm share/R/library/modreg/R
 @dirrm share/R/library/modreg/R-ex
-@dirrm share/R/library/modreg/data
 @dirrm share/R/library/modreg/help
 @dirrm share/R/library/modreg/html
 @dirrm share/R/library/modreg/latex
