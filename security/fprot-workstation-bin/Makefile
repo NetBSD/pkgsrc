@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/07 18:47:00 ben Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/07 23:10:17 ben Exp $
 #
 
 DISTNAME=		fp-netbsd-ws-4.3.1
@@ -13,6 +13,8 @@ COMMENT=		F-prot antivirus for home users
 
 DEPENDS+=		p5-libwww>=5.69:../../www/p5-libwww
 
+PKG_INSTALLATION_TYPES= overwrite pkgviews
+
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -22,7 +24,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 LICENSE=		fprot-workstation-license
 
 NO_BUILD=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 post-patch:
 	cd ${WRKSRC}/tools && ${MV} check-updates.pl check-updates.pl.bak
@@ -52,5 +54,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc_ws/* \
 		${PREFIX}/share/doc/html/fprot-workstation-bin
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
