@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2823 2003/07/18 13:13:38 wiz Exp $
+$NetBSD: CHANGES,v 1.2824 2003/07/18 13:40:52 jwise Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2856,3 +2856,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_comp to 1.7 [jmmv 2003-07-18]
 	Added libffi-2.0beta [agc 2003-07-18]
 	Updated scmxx to 0.6.3.8 [wiz 2003-07-18]
+	Updated devtodo to 0.1.7 [jwise 2003-07-18]
