@@ -1,8 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
-
---- src/io.c.orig	Sun Nov 24 20:02:58 2002
-+++ src/io.c	Mon Dec  2 20:21:20 2002
-@@ -19,6 +19,14 @@
+--- src/io.c.orig	2003-05-29 15:14:42.000000000 +0200
++++ src/io.c	2003-06-05 17:56:20.000000000 +0200
+@@ -24,6 +24,14 @@
  #include <sys/wait.h>
  #include <signal.h>
  #include <time.h>
@@ -17,7 +15,7 @@ $NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
  #if defined(linux) || defined(__FreeBSD__)
  # include <sys/soundcard.h>
  # include <sys/ioctl.h>
-@@ -1200,22 +1208,22 @@
+@@ -1690,22 +1698,22 @@
  struct stat buf;
  #endif
  
@@ -45,7 +43,7 @@ $NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
  	/* check if the user has any special audio-hardware running,
  	   which set the AUDIODEV-environment-variable */
  	audiodev = getenv("AUDIODEV");
-@@ -1297,15 +1305,15 @@
+@@ -1814,15 +1822,15 @@
  struct stat buf;
  # endif
  #endif
@@ -64,7 +62,7 @@ $NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
  		strcpy(tmp,dsp+8);
  		g_snprintf(tmp2,MAXLINE,"/dev/mixer%s",tmp);
  
-@@ -1315,7 +1323,7 @@
+@@ -1832,7 +1840,7 @@
  		}	
  	}	
  #endif
@@ -73,7 +71,7 @@ $NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
  
  	g_snprintf(tmp,MAXLINE,"%s%s",dsp,"ctl");
  
-@@ -2795,10 +2803,10 @@
+@@ -3573,10 +3581,10 @@
  #if !(defined(__MACH__) && defined(__APPLE__)) 
  gint mix;
  #endif
@@ -86,7 +84,7 @@ $NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
  audio_info_t ainfo;
  #endif
  #ifdef hpux
-@@ -2813,7 +2821,7 @@
+@@ -3591,7 +3599,7 @@
  		return -1;
  	}
  
@@ -95,7 +93,7 @@ $NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
  
  	dodebug(10,"quering mixer %s\n", setupdata.mix_device);
  	mix = open(setupdata.mix_device, O_RDWR);
-@@ -2833,7 +2841,7 @@
+@@ -3611,7 +3619,7 @@
  	return ((val & 0x7f) + ((val >> 8) & 0x7f))/2;
  
  #endif
@@ -104,7 +102,7 @@ $NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
  
  	dodebug(10,"quering mixer %s\n", setupdata.mix_device);
  	mix = open(setupdata.mix_device, O_RDONLY);
-@@ -2921,7 +2929,7 @@
+@@ -3699,7 +3707,7 @@
  #if !(defined(__MACH__) && defined(__APPLE__)) 
  gint mix;
  #endif
@@ -113,7 +111,7 @@ $NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
  audio_info_t ainfo;
  #endif
  #ifdef aix
-@@ -2939,7 +2947,7 @@
+@@ -3717,7 +3725,7 @@
  		return -1;
  	}
  
@@ -122,7 +120,7 @@ $NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
  
  	dodebug(10,"setting mixer %s to %d\n", setupdata.mix_device, val);
  	mix = open(setupdata.mix_device, O_RDWR);
-@@ -2957,7 +2965,7 @@
+@@ -3735,7 +3743,7 @@
  	close(mix);
  
  #endif 
@@ -131,3 +129,37 @@ $NetBSD: patch-ac,v 1.7 2002/12/02 20:29:49 drochner Exp $
  
  	dodebug(10,"setting mixer %s to %d\n", setupdata.mix_device, val);
  	mix = open(setupdata.mix_device, O_WRONLY);
+@@ -5507,7 +5515,11 @@
+ 	}
+ 
+ 	/* build command line */
+-	get_wrap_path_cdrecord(tmp3);
++	if (curset.isProDVD) {
++		get_wrap_path("CDRECORDPRODVD", tmp3);
++	} else {
++		get_wrap_path("CDRECORD", tmp3);
++	}
+ 	g_snprintf(line,MAXLINE,"%s %s -atip 2>&1",
+ 		tmp3,tmp);
+ 
+@@ -5518,6 +5530,11 @@
+                 g_error("popen error\n");
+         }
+ 
++	/* syntax for dvd-atip is different */
++	if (is_dvdwriter(curset.writer_devnr)) {
++		found_atip = 1;
++	}
++
+ 	errcount = 0;
+         for (;;) {
+                 if (fgets(line,MAXLINE,fpin) == NULL) 
+@@ -6605,7 +6622,7 @@
+ 				read_output_ctrl = 4;
+ 			} 
+ 			/* check Medium error/buffer underrun */
+-			if (strncmp(tmp2,"Input/output error",18)) {
++			if (strncmp(tmp2,"Input/output error",18) == 0) {
+ 				read_output_ctrl = 5;
+ 			}
+ 		}
