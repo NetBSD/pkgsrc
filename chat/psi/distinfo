@@ -1,8 +1,30 @@
-$NetBSD: distinfo,v 1.8 2003/11/18 17:54:48 xtraeme Exp $
+$NetBSD: distinfo,v 1.9 2004/11/27 21:58:18 jdolecek Exp $
 
-SHA1 (psi-0.9.tar.bz2) = 66ab7a6b540f60c9e117bc964a70c126b30aff47
-Size (psi-0.9.tar.bz2) = 968348 bytes
-SHA1 (patch-aa) = 7cb3505e80c180411257ea5755a351e57d77de9b
-SHA1 (patch-ab) = d7f9fc5f183117d3f81912ef73f27c0f2fa8c6a0
-SHA1 (patch-ac) = a3b0f87f54f4d7397c8be6f152209bef3a14d4a6
+SHA1 (psi-0.9.2/psi-0.9.2.tar.bz2) = 6681c6447064f1e94889a1e160584bd577ebe6c4
+Size (psi-0.9.2/psi-0.9.2.tar.bz2) = 1154392 bytes
+SHA1 (psi-0.9.2/psi_zh.qm) = d5f9bef42161b27fe013dc211a279fd385e5ae28
+Size (psi-0.9.2/psi_zh.qm) = 69489 bytes
+SHA1 (psi-0.9.2/psi_nl.qm) = 039a19fc91d8954167c314085d5234bfad5e46b5
+Size (psi-0.9.2/psi_nl.qm) = 131016 bytes
+SHA1 (psi-0.9.2/psi_sk.qm) = 907bf5326caaaf117131e17470efcc2b81f0dce0
+Size (psi-0.9.2/psi_sk.qm) = 121985 bytes
+SHA1 (psi-0.9.2/psi_fr.qm) = 328f757ec754f663420de2580ddc5b9c178ed2d5
+Size (psi-0.9.2/psi_fr.qm) = 147411 bytes
+SHA1 (psi-0.9.2/psi_fi.qm) = 8198e07dcff01807e4969414d8f1552808d64b12
+Size (psi-0.9.2/psi_fi.qm) = 126909 bytes
+SHA1 (psi-0.9.2/psi_de.qm) = a608df8d248f97ba3b803c1b1c976818f48388a7
+Size (psi-0.9.2/psi_de.qm) = 135542 bytes
+SHA1 (psi-0.9.2/psi_sw.qm) = d134e91be015df74fa0c8498850e7b5f841808d8
+Size (psi-0.9.2/psi_sw.qm) = 138546 bytes
+SHA1 (psi-0.9.2/psi_pl.qm) = ef6501ce42a1129d6ec90c2910ff341d7c7ea044
+Size (psi-0.9.2/psi_pl.qm) = 128935 bytes
+SHA1 (psi-0.9.2/psi_mk.qm) = d762175a585e34665641dc3747abda2cd87238e3
+Size (psi-0.9.2/psi_mk.qm) = 125833 bytes
+SHA1 (psi-0.9.2/psi_el.qm) = 98d6bad933b267f31c0b0bc3395dcdd9d2bb4c04
+Size (psi-0.9.2/psi_el.qm) = 139378 bytes
+SHA1 (psi-0.9.2/psi_es.qm) = ce918282d42cbb569db569973ee41259ee8cbc7f
+Size (psi-0.9.2/psi_es.qm) = 131774 bytes
+SHA1 (psi-0.9.2/psi_ru.qm) = a49e15eed950476aa0d3adf1b7e8294624903432
+Size (psi-0.9.2/psi_ru.qm) = 130398 bytes
+SHA1 (patch-ac) = e934f2cf6474dcdd825b7eaf089b02fa0f2e0ee2
 SHA1 (patch-ad) = 8d255aa9de01ccb39d2cdc7b0074b5dec0e3c0cb
