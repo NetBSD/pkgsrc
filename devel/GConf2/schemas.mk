@@ -1,4 +1,4 @@
-# $NetBSD: schemas.mk,v 1.9 2004/06/11 18:12:11 minskim Exp $
+# $NetBSD: schemas.mk,v 1.10 2005/03/24 22:42:58 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GConf2 schema files.  It takes care of registering them in the GConf2
@@ -57,9 +57,6 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/gconf\/schemas$$/ \
 				{ print "@comment in GConf2: " $$0; next; }
 
 .include "../../mk/bsd.prefs.mk"
-
-.if empty(USE_BUILDLINK3:M[nN][oO])
 .include "../../devel/GConf2/buildlink3.mk"
-.endif
 
 .endif	# GCONF2_SCHEMAS_MK

@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.32 2005/01/24 08:04:41 recht Exp $
+# $NetBSD: pyversion.mk,v 1.33 2005/03/24 22:42:58 jlam Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -137,23 +137,15 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 	error: no valid Python version
 .endif
 
-.if (defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO]))
 PTHREAD_OPTS=	require
-.    include "../../mk/pthread.buildlink3.mk"
-.    if ${PTHREAD_TYPE} == "pth"
-.        include "../../devel/pth/buildlink3.mk"
-.    endif
-.  if defined(PYTHON_FOR_BUILD_ONLY)
-BUILD_DEPMETHOD.python?=	build
-.  endif
-.  include "${PYPKGSRCDIR}/buildlink3.mk"
-.else
-.  if defined(PYTHON_FOR_BUILD_ONLY)
-BUILD_DEPENDS+=	${PYDEPENDENCY}
-.  else
-DEPENDS+=	${PYDEPENDENCY}
-.  endif
+.include "../../mk/pthread.buildlink3.mk"
+.if ${PTHREAD_TYPE} == "pth"
+.  include "../../devel/pth/buildlink3.mk"
 .endif
+.if defined(PYTHON_FOR_BUILD_ONLY)
+BUILD_DEPMETHOD.python?=	build
+.endif
+.include "${PYPKGSRCDIR}/buildlink3.mk"
 
 PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
 
