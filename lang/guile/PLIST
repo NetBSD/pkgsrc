@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/01/07 01:48:09 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/01/21 15:16:16 wiz Exp $
 bin/guile
 bin/guile-snarf
 bin/guile-config
@@ -143,26 +143,31 @@ info/r5rs.info-5
 @exec ${INSTALL_INFO} %D/info/goops.info %D/info/dir
 @exec ${INSTALL_INFO} %D/info/guile-tut.info %D/info/dir
 @exec ${INSTALL_INFO} %D/info/guile.info %D/info/dir
+lib/libguile.a
+lib/libguile.la
 lib/libguile.so
 lib/libguile.so.15
 lib/libguile.so.15.0
-lib/libguile.la
-lib/libguile.a
+lib/libguile-ltdl.a
+lib/libguile-ltdl.la
+lib/libguile-ltdl.so
+lib/libguile-ltdl.so.1
+lib/libguile-ltdl.so.1.0
+lib/libguilereadline-v-12.a
+lib/libguilereadline-v-12.la
 lib/libguilereadline-v-12.so
 lib/libguilereadline-v-12.so.15
 lib/libguilereadline-v-12.so.15.0
-lib/libguilereadline-v-12.la
-lib/libguilereadline-v-12.a
+lib/libguile-srfi-srfi-4-v-1.a
+lib/libguile-srfi-srfi-4-v-1.la
 lib/libguile-srfi-srfi-4-v-1.so
 lib/libguile-srfi-srfi-4-v-1.so.1
 lib/libguile-srfi-srfi-4-v-1.so.1.0
-lib/libguile-srfi-srfi-4-v-1.la
-lib/libguile-srfi-srfi-4-v-1.a
+lib/libguile-srfi-srfi-13-14-v-1.a
+lib/libguile-srfi-srfi-13-14-v-1.la
 lib/libguile-srfi-srfi-13-14-v-1.so
 lib/libguile-srfi-srfi-13-14-v-1.so.1
 lib/libguile-srfi-srfi-13-14-v-1.so.1.0
-lib/libguile-srfi-srfi-13-14-v-1.la
-lib/libguile-srfi-srfi-13-14-v-1.a
 share/aclocal/guile.m4
 share/guile/1.6/oop/goops/active-slot.scm
 share/guile/1.6/oop/goops/compile.scm
@@ -261,3 +266,4 @@ share/guile/1.6/srfi/srfi-19.scm
 @dirrm share/guile/1.6/oop
 @dirrm share/guile/1.6/ice-9
 @dirrm share/guile/1.6
+@dirrm share/guile
