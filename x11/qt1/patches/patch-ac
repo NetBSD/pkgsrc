@@ -1,0 +1,68 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/03/23 21:27:40 dmcmahill Exp $
+
+--- configs/solaris-g++-static.orig	Fri Feb 26 12:02:12 1999
++++ configs/solaris-g++-static	Wed Mar 22 13:46:36 2000
+@@ -1,9 +1,10 @@
+ # Compiling
+-SYSCONF_CXX		= g++
++SYSCONF_CXX		= ${LOCALBASE}/egcs/bin/g++
++SYSCONF_CXX_LIB		= $(LIBTOOL) --mode=compile ${SYSCONF_CXX}
+ 
+ # Compiling with support libraries
+-SYSCONF_CXXFLAGS_X11	= -I/usr/openwin/include
++SYSCONF_CXXFLAGS_X11	= -I${X11BASE}/include
+ SYSCONF_CXXFLAGS_QT	= -I$(QTDIR)/include
+-SYSCONF_CXXFLAGS_OPENGL	= 
++SYSCONF_CXXFLAGS_OPENGL	= -I${X11BASE}/include
+ 
+ # Compiline YACC output
+@@ -12,18 +13,18 @@
+ # Linking with support libraries
+ # X11
+-SYSCONF_LFLAGS_X11	= -L/usr/openwin/lib
++SYSCONF_LFLAGS_X11	= -L${X11BASE}/lib
+ SYSCONF_LIBS_X11	= -lX11 -lXext
+ # Qt, Qt+OpenGL
+ SYSCONF_LFLAGS_QT	= -L$(QTDIR)/lib
+-SYSCONF_LIBS_QT		= -lqt
++SYSCONF_LIBS_QT		= -lqt1
+ SYSCONF_LIBS_QT_OPENGL	= -lqgl
+ # OpenGL
+-SYSCONF_LFLAGS_OPENGL	= 
+-SYSCONF_LIBS_OPENGL	= -lGL -lGLU -lXmu
++SYSCONF_LFLAGS_OPENGL	= -L${X11BASE}/lib
++SYSCONF_LIBS_OPENGL	= -lMesaGL -lMesaGLU -lXmu -lXext -lm
+ # Yacc
+ SYSCONF_LIBS_YACC	= 
+ 
+ # Linking applications
+-SYSCONF_LINK		= g++
++SYSCONF_LINK		= ${LOCALBASE}/egcs/bin/g++
+ SYSCONF_LFLAGS		= 
+ SYSCONF_LIBS		= 
+@@ -33,5 +34,5 @@
+ 
+ # Meta-object compiler
+-SYSCONF_MOC		= $(QTDIR)/bin/moc
++SYSCONF_MOC		= $(QTDIR)/bin/moc1
+ 
+ # Linking shared libraries
+@@ -40,5 +41,5 @@
+ #   - Usually needs to incorporate $(VER_MAJ) and $(VER_MIN)
+ #
+-SYSCONF_LINK_SHLIB	= g++
++SYSCONF_LINK_SHLIB	= ${LOCALBASE}/egcs/bin/g++
+ SYSCONF_LINK_TARGET_SHARED	= lib$(TARGET).so.$(VER_MAJ).$(VER_MIN)
+ SYSCONF_LINK_LIB_SHARED	=  $(SYSCONF_LINK_SHLIB) -h $(TARGET1) -shared  \
+@@ -55,8 +56,8 @@
+ #   - Place target in $(DESTDIR) - which has a trailing /
+ #
+-SYSCONF_AR		= ar cq
+-SYSCONF_LINK_TARGET_STATIC = lib$(TARGET).a
++SYSCONF_AR		= $(LIBTOOL) --mode=link $(SYSCONF_CXX) -rpath $(PREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) -o
++SYSCONF_LINK_TARGET_STATIC = lib$(TARGET).la
+ SYSCONF_LINK_LIB_STATIC	= rm -f $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) ; \
+-				 $(SYSCONF_AR) $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) $(OBJECTS) $(OBJMOC) 
++				 $(SYSCONF_AR) $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) $(OBJECTS:.o=.lo) $(OBJMOC:.o=.lo) 
+ # Compiling application source
+ SYSCONF_CXXFLAGS	= -O2 -fno-strength-reduce
