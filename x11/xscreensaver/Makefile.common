@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.11 2000/10/17 05:44:47 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2001/02/08 05:57:52 fredb Exp $
 #
 
-DISTNAME=		xscreensaver-3.25
+DISTNAME=		xscreensaver-3.28
 CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE} \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/xscreensaver/
@@ -28,7 +28,9 @@ CONFIGURE_ARGS+=	--without-motif
 CONFIGURE_ARGS+=	--without-shadow
 CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
 CONFIGURE_ENV+=		INSTALL=/usr/bin/install
+CONFIGURE_ENV+=		X_PRE_LIBS=-lXt
 CONFIGURE_ENV+=		ac_cv_x_app_defaults="${X11PREFIX}/lib/X11/app-defaults"
+MAKE_ENV+=		KDEDIR=${X11PREFIX}
 
 FILESDIR=		${.CURDIR}/../../x11/xscreensaver/files
 PATCHDIR=		${.CURDIR}/../../x11/xscreensaver/patches
