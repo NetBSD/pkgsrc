@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/08/26 11:26:04 itojun Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/09/13 09:48:48 itojun Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -174,6 +174,11 @@ include/lwres/netdb.h
 include/lwres/platform.h
 include/lwres/result.h
 include/lwres/version.h
+lib/libbind9.a
+lib/libbind9.la
+lib/libbind9.so
+lib/libbind9.so.0
+lib/libbind9.so.0.0
 lib/libdns.a
 lib/libdns.la
 lib/libdns.so
