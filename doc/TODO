@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.164 2003/01/09 22:34:02 grant Exp $
+$NetBSD: TODO,v 1.165 2003/01/10 04:35:57 rh Exp $
 
 Suggested new packages
 ======================
@@ -149,7 +149,6 @@ Suggested package updates
 	o jed-0.99.16 [pkg/18937]
 	o jikes-1.18
 	o joe-2.9 [pkg/18022]
-	o jpilot-0.99.2 [dillo]
 	o kdevelop-2.1.4
 	o koffice-1.2.1
 	o koth-0.7.7 [http://www.nongnu.org/koth/]
@@ -198,7 +197,6 @@ Suggested package updates
 	o p5-Image-Size-2.991
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
-	o pilot-link-0.11.4 [dillo]
 	o plib-1.6.0
 	o povray-3.5
 	o pureftpd-0.13a [pkg/19233]
