@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/06 21:11:33 tron Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/07/07 06:19:21 tron Exp $
 #
 # This Makefile fragment is included by packages that use xpm.
 #
@@ -21,7 +21,8 @@ BUILDLINK_DEPENDS.xpm?=	xpm-3.4k
 # depend on the Xpm package.
 #
 .include "../../mk/bsd.prefs.mk"
-.if exists(${X11BASE}/include/X11/xpm.h)
+.if exists(${X11BASE}/include/X11/xpm.h) &&
+    exists(${X11BASE}/lib/X11/config/X11.tmpl)
 _IS_BUILTIN_XPM!=	${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_XPM=	0
