@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/24 11:59:23 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/12 21:23:16 kristerw Exp $
 #
 
 DISTNAME=		xmlstarlet-0.9.3
@@ -14,8 +14,10 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-libxslt-prefix=${BUILDLINK_PREFIX.libxslt}
+PTHREAD_OPTS+=		require
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
