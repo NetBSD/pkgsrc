@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2001/09/17 05:42:16 zuntum Exp $
+# $NetBSD: Makefile,v 1.109 2001/09/25 19:54:25 magick Exp $
 #
 
 COMMENT=	System utilities
@@ -83,6 +83,7 @@ SUBDIR+=	ups-nut
 SUBDIR+=	ups-nut-cgi
 SUBDIR+=	usbutil
 SUBDIR+=	user
+SUBDIR+=	vcdimager
 SUBDIR+=	vidc-tools
 SUBDIR+=	whowatch
 SUBDIR+=	xbatt
