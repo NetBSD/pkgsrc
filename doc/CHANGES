@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4563 2004/01/23 06:26:03 martti Exp $
+$NetBSD: CHANGES,v 1.4564 2004/01/23 06:38:53 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -414,3 +414,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated liba52 to 0.7.4nb1 [grant 2004-01-23]
 	Updated libcdaudio to 0.99.9nb1 [grant 2004-01-23]
 	Updated postfix to 2.0.18 [martti 2004-01-23]
+	Updated mserv to 0.35nb7 [grant 2004-01-23]
+	Updated mserv-devel to 0.39anb1 [grant 2004-01-23]
