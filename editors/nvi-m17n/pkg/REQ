@@ -4,6 +4,6 @@ if [ "$2" != "INSTALL" ]; then
 fi
 echo "********************************************************"
 echo "*                      W a r n i n g                   *"
-echo "* Read /usr/local/share/vi/README.* for controlling    *"
+echo "* Read ${PREFIX}/share/vi/README.* for controlling     *"
 echo "* multilingual functionalities.                        *"
 echo "********************************************************"
