@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.10 2004/04/24 22:08:55 danw Exp $
+
+--- gdk/x11/gdkspawn-x11.c.orig	Mon Apr 12 23:01:39 2004
++++ gdk/x11/gdkspawn-x11.c
+@@ -27,6 +27,11 @@
+ #include <glib.h>
+ #include <gdk/gdk.h>
+ 
++#if defined(__APPLE__)
++#include <crt_externs.h>
++#define environ (*_NSGetEnviron())
++#endif
++
+ extern char **environ;
+ 
+ /**
