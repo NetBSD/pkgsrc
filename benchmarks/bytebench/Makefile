@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/04 06:13:26 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/04 08:50:16 jlam Exp $
 
 DISTNAME=		byte
 PKGNAME=		bytebench-3.6
@@ -15,12 +15,16 @@ BENCHMARK_ENV+=		TESTDIR=${WRKSRC}/testdir
 post-patch:
 	${SED} -e 's|@PREFIX@|${PREFIX}|' ${WRKSRC}/Run >${WRKSRC}/run-byte
 
+pre-install:
+	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} {} \;
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pgms/* ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/bytebench
-	${MKDIR} ${PREFIX}/share/doc/bytebench
+	${INSTALL_DATA_DIR} ${PREFIX}/libexec/bytebench
+	${INSTALL_SCRIPT} ${WRKSRC}/pgms/* ${PREFIX}/libexec/bytebench
+	${INSTALL_DATA_DIR} ${PREFIX}/share/bytebench
 	${INSTALL_DATA} ${WRKSRC}/testdir/* ${PREFIX}/share/bytebench
-	${INSTALL_MAN} ${WRKSRC}/doc/* ${PREFIX}/share/doc/bytebench
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bytebench
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/bytebench
 	${INSTALL_SCRIPT} ${WRKSRC}/run-byte ${PREFIX}/bin
 
 benchmark:
