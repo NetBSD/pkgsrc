@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/12/20 03:40:30 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/24 09:38:38 jlam Exp $
 
 DISTNAME=	guile-slib-2.4.2
 CATEGORIES=	devel
@@ -12,6 +12,7 @@ COMMENT=	SLIB installation for guile Scheme interpreter
 DEPENDS+=	guile>=1.3.2:../../lang/guile
 DEPENDS+=	slib-2.4.2:../../devel/slib
 
+USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
