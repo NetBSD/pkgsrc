@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/08/20 14:48:54 wiz Exp $
+$NetBSD: distinfo,v 1.7 2002/09/27 09:43:53 shell Exp $
 
-SHA1 (URI-1.21.tar.gz) = 44085ba1c90df32e4dbec6ebaf6b013104550317
-Size (URI-1.21.tar.gz) = 85266 bytes
+SHA1 (URI-1.22.tar.gz) = 76d183a485a69097d2c2f9cf7ff1da02da76ee40
+Size (URI-1.22.tar.gz) = 88267 bytes
