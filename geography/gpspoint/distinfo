@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/04 20:51:18 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2005/02/22 21:08:32 agc Exp $
 
 SHA1 (gpspoint-2.030521.tar.gz) = b65466fae17e35bed019869d66515acc388b3242
+RMD160 (gpspoint-2.030521.tar.gz) = a1be4a5230488965533254a82cf0f57fe7abbfb8
 Size (gpspoint-2.030521.tar.gz) = 235522 bytes
 SHA1 (patch-aa) = 0f20b9a87eeff5d9c3fbc203b183b24be87bbd9c
