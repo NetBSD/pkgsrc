@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/09/27 08:22:29 recht Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/28 00:12:53 kim Exp $
 #
 
-DISTNAME=	tmda-0.84
+DISTNAME=	tmda-1.0
 CATEGORIES=	mail python
 MASTER_SITES=	http://tmda.net/releases/ \
 		http://tmda.net/releases/old/
@@ -73,6 +73,9 @@ do-install:
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/htdocs/*.html ${PREFIX}/${HTMLDIR}
+
+	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}/img
+	${INSTALL_DATA} ${WRKSRC}/htdocs/img/*.png ${PREFIX}/${HTMLDIR}/img
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
