@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/11 15:32:58 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/04/23 21:34:55 jmc Exp $
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
 ${EMACS_LISPPREFIX}/w3m/ChangeLog.1
 ${EMACS_LISPPREFIX}/w3m/mew-w3m.el
@@ -50,7 +50,7 @@ ${EMACS_LISPPREFIX}/w3m/w3m-util.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-weather.el
 ${EMACS_LISPPREFIX}/w3m/w3m-weather.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-xmas.el
-${FOR_xemacs211}${EMACS_LISPPREFIX}/w3m/w3m-xmas.elc
+${FOR_xemacs214}${EMACS_LISPPREFIX}/w3m/w3m-xmas.elc
 ${FOR_xemacs215}${EMACS_LISPPREFIX}/w3m/w3m-xmas.elc
 ${EMACS_LISPPREFIX}/w3m/w3m.el
 ${EMACS_LISPPREFIX}/w3m/w3m.elc
@@ -191,10 +191,10 @@ ${EMACS_LISPPREFIX}/w3m/sb-zdnet.el
 ${EMACS_LISPPREFIX}/w3m/sb-zdnet.elc
 ${EMACS_LISPPREFIX}/w3m/shimbun.el
 ${EMACS_LISPPREFIX}/w3m/shimbun.elc
-${FOR_xemacs211}${EMACS_LISPPREFIX}/w3m/auto-autoloads.el
-${FOR_xemacs211}${EMACS_LISPPREFIX}/w3m/auto-autoloads.elc
-${FOR_xemacs211}${EMACS_LISPPREFIX}/w3m/custom-load.el
-${FOR_xemacs211}${EMACS_LISPPREFIX}/w3m/custom-load.elc
+${FOR_xemacs214}${EMACS_LISPPREFIX}/w3m/auto-autoloads.el
+${FOR_xemacs214}${EMACS_LISPPREFIX}/w3m/auto-autoloads.elc
+${FOR_xemacs214}${EMACS_LISPPREFIX}/w3m/custom-load.el
+${FOR_xemacs214}${EMACS_LISPPREFIX}/w3m/custom-load.elc
 ${DOCDIR}/COPYING
 ${DOCDIR}/ChangeLog
 ${DOCDIR}/ChangeLog.1
@@ -222,22 +222,22 @@ ${FOR_emacs21}${ICONDIR}/parent-up.xpm
 ${FOR_emacs21}${ICONDIR}/reload-up.xpm
 ${FOR_emacs21}${ICONDIR}/search-up.xpm
 ${FOR_emacs21}${ICONDIR}/weather-up.xpm
-${FOR_xemacs211}${ICONDIR}/antenna-up.xpm
-${FOR_xemacs211}${ICONDIR}/back-disabled.xpm
-${FOR_xemacs211}${ICONDIR}/back-up.xpm
-${FOR_xemacs211}${ICONDIR}/copy-up.xpm
-${FOR_xemacs211}${ICONDIR}/db-history-up.xpm
-${FOR_xemacs211}${ICONDIR}/forward-disabled.xpm
-${FOR_xemacs211}${ICONDIR}/forward-up.xpm
-${FOR_xemacs211}${ICONDIR}/history-up.xpm
-${FOR_xemacs211}${ICONDIR}/home-up.xpm
-${FOR_xemacs211}${ICONDIR}/image-up.xpm
-${FOR_xemacs211}${ICONDIR}/open-up.xpm
-${FOR_xemacs211}${ICONDIR}/parent-disabled.xpm
-${FOR_xemacs211}${ICONDIR}/parent-up.xpm
-${FOR_xemacs211}${ICONDIR}/reload-up.xpm
-${FOR_xemacs211}${ICONDIR}/search-up.xpm
-${FOR_xemacs211}${ICONDIR}/weather-up.xpm
+${FOR_xemacs214}${ICONDIR}/antenna-up.xpm
+${FOR_xemacs214}${ICONDIR}/back-disabled.xpm
+${FOR_xemacs214}${ICONDIR}/back-up.xpm
+${FOR_xemacs214}${ICONDIR}/copy-up.xpm
+${FOR_xemacs214}${ICONDIR}/db-history-up.xpm
+${FOR_xemacs214}${ICONDIR}/forward-disabled.xpm
+${FOR_xemacs214}${ICONDIR}/forward-up.xpm
+${FOR_xemacs214}${ICONDIR}/history-up.xpm
+${FOR_xemacs214}${ICONDIR}/home-up.xpm
+${FOR_xemacs214}${ICONDIR}/image-up.xpm
+${FOR_xemacs214}${ICONDIR}/open-up.xpm
+${FOR_xemacs214}${ICONDIR}/parent-disabled.xpm
+${FOR_xemacs214}${ICONDIR}/parent-up.xpm
+${FOR_xemacs214}${ICONDIR}/reload-up.xpm
+${FOR_xemacs214}${ICONDIR}/search-up.xpm
+${FOR_xemacs214}${ICONDIR}/weather-up.xpm
 ${FOR_xemacs215}${ICONDIR}/antenna-up.xpm
 ${FOR_xemacs215}${ICONDIR}/back-disabled.xpm
 ${FOR_xemacs215}${ICONDIR}/back-up.xpm
@@ -257,7 +257,7 @@ ${FOR_xemacs215}${ICONDIR}/weather-up.xpm
 @dirrm ${EMACS_LISPPREFIX}/w3m
 @dirrm ${DOCDIR}
 ${FOR_emacs21}@dirrm ${ICONDIR}
-${FOR_xemacs211}@dirrm ${ICONDIR}
+${FOR_xemacs214}@dirrm ${ICONDIR}
 ${FOR_xemacs215}@dirrm ${ICONDIR}
 ${FOR_emacs20}@dirrm share/emacs/${EMACS_VERSION}/etc/w3m
 ${FOR_emacs21}@dirrm share/emacs/${EMACS_VERSION}/etc/w3m
