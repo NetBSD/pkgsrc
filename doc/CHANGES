@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8748 2005/01/14 10:04:45 jmmv Exp $
+$NetBSD: CHANGES,v 1.8749 2005/01/14 10:14:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -297,3 +297,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gimageview to 0.2.27 [adam 2005-01-14]
 	Updated gtranslator to 1.0.2 [adam 2005-01-14]
 	Updated pkg_notify to 0.4.2 [jmmv 2005-01-14]
+	Updated fontforge to 20041231 [adam 2005-01-14]
