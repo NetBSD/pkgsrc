@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2005/03/30 15:26:43 cube Exp $
+
+--- server/main.c.orig	2005-03-11 16:03:54.000000000 +0100
++++ server/main.c
+@@ -1051,7 +1051,7 @@ main(gint argc, gchar **argv)
+ 				{
+ 				client_fd = accept(server_fd,
+ 						(struct sockaddr *) &client_addr,
+-						(socklen_t *) &addr_len);
++						(socklen_t *) (void *)&addr_len);
+ 				if (client_fd == -1)
+ 					{
+ 					fprintf(stderr, "gkrellmd accept() failed: %s\n",
