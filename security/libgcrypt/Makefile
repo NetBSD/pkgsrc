@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/02/05 00:09:51 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/10 00:13:24 jlam Exp $
 #
 
 DISTNAME=	libgcrypt-1.1.90
@@ -11,7 +11,7 @@ MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/directory/security/libgcrypt.html
 COMMENT=	GNU cryptographic library
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
@@ -25,18 +25,17 @@ INFO_FILES=		gcrypt.info
 # Our "libtool" doesn't like the crafted ".lo" files with the assembly
 # implementations. So we use the bundled "libtool" for NetBSD-i386 ELF
 # and ours otherwise.
-.if ${MACHINE_GNU_PLATFORM} != i386--netbsdelf && ${MACHINE_GNU_PLATFORM} != alpha--netbsd
+#
+.if empty(MACHINE_PLATFORM:MNetBSD-*-i386) && \
+    empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
 CONFIGURE_ARGS+=	--disable-asm
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 .endif
 
-.if exists(/usr/include/pthread.h)
+.include "../../mk/pthread.buildlink3.mk"
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "native")
 CONFIGURE_ARGS+=	--without-pth
 .endif
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../security/libgpg-error/buildlink2.mk"
-
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
