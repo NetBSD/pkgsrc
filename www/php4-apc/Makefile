@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/11/05 21:44:44 jdolecek Exp $
+# $NetBSD: Makefile,v 1.15 2004/12/04 12:05:15 wiz Exp $
 
 DISTNAME=	APC-2.0.4
 PKGNAME=	php-${DISTNAME:tl}
@@ -15,7 +15,6 @@ EXTRACT_ELEMENTS=	# empty
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_BUILDLINK3=		YES
-DISTINFO_FILE=		${.CURDIR}/distinfo
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
@@ -29,5 +28,9 @@ post-install:
 		INSTALL LICENSE NOTICE ${DOCDIR}
 
 PHP_VERSION_REQD=	4		# PHP 4.x only
+
 .include "../../lang/php/ext.mk"
+# override with local distinfo file
+DISTINFO_FILE=	${.CURDIR}/distinfo
+
 .include "../../mk/bsd.pkg.mk"
