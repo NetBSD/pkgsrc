@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/02/04 06:10:24 itojun Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/03/02 04:18:20 itojun Exp $
 etc/mailer.conf.postfix
 libexec/postfix/bounce
 libexec/postfix/cleanup
@@ -7,7 +7,6 @@ libexec/postfix/flush
 libexec/postfix/lmtp
 libexec/postfix/local
 libexec/postfix/master
-libexec/postfix/nqmgr
 libexec/postfix/pickup
 libexec/postfix/pipe
 libexec/postfix/qmgr
@@ -17,7 +16,6 @@ libexec/postfix/smtp
 libexec/postfix/smtpd
 libexec/postfix/spawn
 libexec/postfix/trivial-rewrite
-libexec/postfix/virtual
 sbin/postalias
 sbin/postcat
 sbin/postconf
@@ -95,7 +93,6 @@ man/man8/flush.8
 man/man8/lmtp.8
 man/man8/local.8
 man/man8/master.8
-man/man8/nqmgr.8
 man/man8/pickup.8
 man/man8/pipe.8
 man/man8/qmgr.8
