@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/17 20:28:18 jlam Exp $
 
 DISTNAME=	CmdLine
 PKGNAME=	cmdline-${PKG_VERS}
@@ -16,17 +16,15 @@ DIST_SUBDIR=	cmdline-${DIST_VERS}
 USE_LIBTOOL=	# defined
 NO_CONFIGURE=	# defined
 
-.if exists(/usr/include/readline.h)
-MOREUSRDEFS+=	-DHAVE_READLINE_H
-MOREUSRLIBS+=	-ledit -ltermcap
-.else
-DEPENDS+=	readline-*:../../devel/readline
-MOREUSRDEFS+=	-DHAVE_READLINE_READLINE_H
-MOREUSRLIBS+=	${LDFLAGS} -lreadline -ltermcap
-.endif
+.include "../../devel/readline/Makefile.readline"
+
+MOREUSRDEFS=	-I${WRKINCDIR}/readline
+MOREUSRLIBS=	-L${WRKLIBDIR} -lreadline -ltermcap
 
 MAKE_ENV+=	OPT="${CXXFLAGS}"
 MAKE_ENV+=	MOREUSRDEFS="${MOREUSRDEFS}"
 MAKE_ENV+=	MOREUSRLIBS="${MOREUSRLIBS}"
+
+pre-build: link-readline-headers link-readline-libs
 
 .include "../../mk/bsd.pkg.mk"
