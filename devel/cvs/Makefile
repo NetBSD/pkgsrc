@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2003/08/09 10:44:38 seb Exp $
+# $NetBSD: Makefile,v 1.69 2003/12/12 22:05:55 wiz Exp $
 #
 
-DISTNAME=	cvs-1.11.6
+DISTNAME=	cvs-1.11.10
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cvshome.org/files/19/10/ \
 		http://ftp.cvshome.org/release/stable/${DISTNAME}/
@@ -23,7 +23,7 @@ USE_BUILDLINK2=		yes
 	empty(MACHINE_PLATFORM:MSunOS-5.[89]-*) && empty(MACHINE_PLATFORM:MLinux-*)
 CONFIGURE_ARGS+=	--enable-ipv6
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=		cvs-1.11.6-v6-20030623.diff.gz
+PATCHFILES=		cvs-1.11.10-v6-20031205.diff.gz
 PATCH_DIST_STRIP=	-p1
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
