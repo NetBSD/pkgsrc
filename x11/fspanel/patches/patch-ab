@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2005/03/17 15:49:54 wiz Exp $
+
+--- fspanel.c.orig	2002-06-23 07:12:50.000000000 +0200
++++ fspanel.c
+@@ -559,10 +559,10 @@ gui_draw_task (task *tk)
+ 
+ 		/* check how many chars can fit */
+ 		len = strlen (tk->name);
+-		while (1)
++		while (len > 0)
+ 		{
+ 			XftTextExtents8 (dd, xfs, tk->name, len, &ext);
+-			if (ext.width < taskw - (text_x - x) - 2 && len > 0)
++			if (ext.width < taskw - (text_x - x) - 2)
+ 				break;
+ 			len--;
+ 		}
