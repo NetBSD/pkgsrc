@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/09/09 19:15:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/30 06:28:58 xtraeme Exp $
 #
 
-DISTNAME=		balsa-2.0.14
+DISTNAME=		balsa-2.0.15
 CATEGORIES=		mail gnome
 MASTER_SITES=		http://balsa.gnome.org/				\
 			ftp://ftp.newton.cx/pub/balsa/
