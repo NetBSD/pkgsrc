@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.760 2002/12/13 04:24:52 lukem Exp $
+$NetBSD: CHANGES,v 1.761 2002/12/13 05:25:38 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3919,3 +3919,11 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated fontconfig to 2.1nb1 [jmmv 2002-12-12]
 	Updated ups-nut to 1.2.1 [lukem 2002-12-13]
 	Updated ups-nut-cgi to 1.2.1 [lukem 2002-12-13]
+	Updated geda to 20021103 [dmcmahill 2002-12-13]
+	Updated geda-docs to 20021103 [dmcmahill 2002-12-13]
+	Updated geda-symbols to 20021103 [dmcmahill 2002-12-13]
+	Updated geda-utils to 20021103 [dmcmahill 2002-12-13]
+	Updated gnetlist to 20021103 [dmcmahill 2002-12-13]
+	Updated gschem to 20021103 [dmcmahill 2002-12-13]
+	Updated gsymcheck to 20021103 [dmcmahill 2002-12-13]
+	Updated libgeda to 20021103 [dmcmahill 2002-12-13]
