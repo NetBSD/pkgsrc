@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/05/23 05:17:05 tv Exp $
+
+--- atari800.man.orig	Sun May 23 01:07:10 1999
++++ atari800.man	Sun May 23 01:15:31 1999
+@@ -117,8 +117,8 @@
+ Runs the emulator in a huge window where each Atari 800 pixel is
+ represented by a 3x3 X Window rectange.
+ .TP
+-\fB-sound
+-Enable sound using the Network Audio System.
++\fB-nosound
++Disable sound (necessary if no audio device is available).
+ .SS Amiga Options
+ .TP
+ \fB-ocs
