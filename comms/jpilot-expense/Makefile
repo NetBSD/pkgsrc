@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/27 18:07:54 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/28 13:21:35 wiz Exp $
 
 DISTNAME=		jpilot-0.99
 PKGNAME=		jpilot-expense-0.99
@@ -30,5 +30,5 @@ post-extract:
 	${LN} -sf ${LIBTOOL} ${WRKSRC}/../libtool
 
 .include "../../comms/jpilot/buildlink.mk"
-.include "../../comms/pilot-link-lib/buildlink.mk"
+.include "../../comms/pilot-link-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
