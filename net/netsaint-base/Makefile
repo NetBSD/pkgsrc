@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/04/14 10:57:11 rh Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2002/07/01 17:45:02 jlam Exp $
 #
 
 DISTNAME=		netsaint-0.0.7
@@ -10,7 +10,7 @@ MAINTAINER=		murray@river-styx.org
 HOMEPAGE=		http://www.netsaint.org/
 COMMENT=		network monitor
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 .include "../../net/netsaint-base/Makefile.common"
 
@@ -33,6 +33,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/logofullsize.gif ${PREFIX}/share/netsaint/images
 	${INSTALL_DATA} ${WRKDIR}/sblogo.gif ${PREFIX}/share/netsaint/images
 
-.include "../../graphics/gd/buildlink.mk"
+.include "../../graphics/gd/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

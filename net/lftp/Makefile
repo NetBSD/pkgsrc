@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15.2.1 2002/06/23 18:55:51 jlam Exp $
+# $NetBSD: Makefile,v 1.15.2.2 2002/07/01 17:45:00 jlam Exp $
 
 DISTNAME=	lftp-2.5.2
 CATEGORIES=	net
@@ -10,21 +10,29 @@ HOMEPAGE=	http://lftp.yar.ru/
 COMMENT=	powerful command line ftp client
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR} \
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
 			--sysconfdir=${PKG_SYSCONFDIR}
-USE_BUILDLINK_ONLY=	YES
-# uses GNU readline internal variables (_rl_mark_modified_lines)
-USE_GNU_READLINE=	YES
+USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+# uses GNU readline internal variables (_rl_mark_modified_lines)
+USE_GNU_READLINE=	YES
+
 PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+
+EGDIR=		${PREFIX}/share/examples/lftp
+CONF_FILES=	${EGDIR}/lftp.conf ${PKG_SYSCONFDIR}/lftp.conf
+OWN_DIRS=	${PREFIX}/lib/lftp
+OWN_DIRS+=	${PREFIX}/lib/lftp/${PKG_VERSION}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/lftp
 	${INSTALL_DATA} ${WRKSRC}/lftp.conf ${PREFIX}/share/examples/lftp
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

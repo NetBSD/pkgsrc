@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/02/14 16:29:03 abs Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/07/01 17:45:14 jlam Exp $
 #
 
 DISTNAME=	validate
@@ -16,9 +16,9 @@ DEPENDS+=	lq-sp>=1.3.4.5:../../textproc/lq-sp
 DIST_SUBDIR=	wdg-validate
 EXTRACT_ONLY=	sgml-lib.tar.gz
 
-USE_BUILDLINK_ONLY=	YES
-REPLACE_PERL=		validate.netbsd
-NO_BUILD=		YES
+USE_BUILDLINK2=	YES
+REPLACE_PERL=	validate.netbsd
+NO_BUILD=	YES
 
 post-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/validate ${WRKSRC}/validate.netbsd
@@ -34,5 +34,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/validate.README
 	${CP} -R ${WRKSRC}/lib/* ${PREFIX}/lib/validate
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

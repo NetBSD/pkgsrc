@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10.2.1 2002/06/23 18:45:04 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.2 2002/07/01 17:44:57 jlam Exp $
 #
 
 DISTNAME=	rpc2-1.13
@@ -12,14 +12,16 @@ COMMENT=	CMU (Coda) remote procedure call package
 
 BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
-USE_BUILDLINK_ONLY=	YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PERL=${PERL5}
 
-.include "../../devel/lwp/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+.include "../../devel/lwp/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/02/16 01:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2002/07/01 17:45:06 jlam Exp $
 #
 
 DISTNAME=	mpage-2.5
@@ -9,8 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Print multiple pages per sheet of paper
 
-USE_BUILDLINK_ONLY=	yes
-ALL_TARGET=		default
+USE_BUILDLINK2=	yes
+ALL_TARGET=	default
 
 .include "../../mk/bsd.prefs.mk"
 

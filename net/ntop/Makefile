@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/11/29 01:12:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2002/07/01 17:45:02 jlam Exp $
 
 DISTNAME=		ntop-1.1
 PKGREVISION=		1
@@ -10,12 +10,13 @@ MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.ntop.org/
 COMMENT=		shows network usage (similar to "top" for processes)
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-threads=no
 
 INSTALL_TARGET=		install install-man
 
-.include "../../net/libpcap/buildlink.mk"
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../net/libpcap/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

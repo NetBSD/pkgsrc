@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/29 22:35:59 jlam Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2002/07/01 17:45:09 jlam Exp $
 
 DISTNAME=	samba-2.2.2
 #
@@ -19,7 +19,7 @@ COMMENT=	PAM authentication against a Samba password database
 
 DEPENDS+=	samba>=2.0:../../net/samba
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 
 USE_LIBTOOL=		yes
@@ -51,5 +51,5 @@ do-install:
 		${INSTALL_DATA} $${file} ${EGDIR}/$${file};		\
 	done
 
-.include "../../security/PAM/buildlink.mk"
+.include "../../security/PAM/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

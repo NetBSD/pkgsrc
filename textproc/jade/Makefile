@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18.2.1 2002/06/23 19:02:03 jlam Exp $
+# $NetBSD: Makefile,v 1.18.2.2 2002/07/01 17:45:11 jlam Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	4
@@ -17,7 +17,7 @@ PATCH_DIST_STRIP=	-p1
 
 CONFLICTS+=	sp-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -50,7 +50,7 @@ post-install:
 # Installed by print/tex-jadetex
 	${RM} ${PREFIX}/share/sgml/jade/*jadetex.*
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Turn off C++ optimization as there seem to be problems with the generated

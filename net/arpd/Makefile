@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/27 19:33:03 jlam Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2002/07/01 17:44:58 jlam Exp $
 #
 
 DISTNAME=	arpd
@@ -9,12 +9,12 @@ MASTER_SITES=	ftp://subzero.campus.luth.se/pub/arpd/
 MAINTAINER=	hubertf@netbsd.org
 COMMENT=	arp daemon
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 MAKE_ENV+=	BINDIR=${PREFIX}/sbin
 
 post-install:
-		${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/arpd.README
-		${INSTALL_DATA} ${WRKSRC}/arpd.conf ${PREFIX}/etc/arpd.conf.example
+	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/arpd.README
+	${INSTALL_DATA} ${WRKSRC}/arpd.conf ${PREFIX}/etc/arpd.conf.example
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/05/03 12:43:06 drochner Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/07/01 17:45:05 jlam Exp $
 #
 
 DISTNAME=	gimp-print-4.2.1
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gimp-print.sourceforge.net/
 COMMENT=	drivers for Canon, Epson, Lexmark, and PCL printers
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -24,5 +24,5 @@ CONFIGURE_ARGS+=	--without-translated-ppds
 CONFIGURE_ARGS+=	--without-samples
 CONFIGURE_ARGS+=	--disable-escputil
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/09/27 23:18:32 jlam Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2002/07/01 17:45:03 jlam Exp $
 #
 
 DISTNAME=	export.socks.cstc.4.2.2
@@ -17,7 +17,7 @@ RESTRICTED=		"no commercial use"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 MAKE_ENV+=		OPTIMIZE="${CFLAGS}"
 
 post-patch:
