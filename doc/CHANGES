@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.115 2002/09/29 23:17:17 wiz Exp $
+$NetBSD: CHANGES,v 1.116 2002/09/29 23:45:51 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3039,3 +3039,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tuxpaint to 2002.09.28 [wiz 2002-09-29]
 	Updated pkgconfig to 0.13.0 [rh 2002-09-30]
 	Added pfaedit-20020910 [wiz 2002-09-30]
+	Updated spamassassin to 2.41 [simonb 2002-09-30]
