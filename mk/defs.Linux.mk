@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.63 2003/12/16 23:07:42 heinz Exp $
+# $NetBSD: defs.Linux.mk,v 1.64 2004/01/27 16:11:47 agc Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -75,9 +75,9 @@ LN?=		/bin/ln
 LS?=		/bin/ls
 M4?=		/usr/bin/m4
 .if exists(/bin/mail)
-MAIL?=		/bin/mail # RH, Mandrake
+MAIL_CMD?=	/bin/mail # RH, Mandrake
 .else
-MAIL?=		/usr/bin/mail # Debian, Slackware, SuSE
+MAIL_CMD?=	/usr/bin/mail # Debian, Slackware, SuSE
 .endif
 MKDIR?=		/bin/mkdir -p
 MTREE?=		${LOCALBASE}/sbin/mtree
