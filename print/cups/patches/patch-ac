@@ -1,15 +1,81 @@
-$NetBSD: patch-ac,v 1.3 2000/12/07 20:33:06 jlam Exp $
+$NetBSD: patch-ac,v 1.4 2000/12/21 14:59:38 jlam Exp $
 
---- conf/cupsd.conf.in.orig	Fri Sep 29 13:42:53 2000
-+++ conf/cupsd.conf.in
-@@ -213,8 +213,8 @@
- # program is run...
- #
+--- backend/serial.c.orig	Wed Dec  6 17:56:08 2000
++++ backend/serial.c
+@@ -48,9 +48,9 @@
+ #  include <unistd.h>
+ #  include <fcntl.h>
+ #  include <termios.h>
+-#  ifdef __linux
++#  ifdef HAVE_SYS_IOCTL_H
+ #    include <sys/ioctl.h>
+-#  endif /* __linux */
++#  endif /* HAVE_SYS_IOCTL_H */
+ #endif /* WIN32 || __EMX__ */
  
--#User lp
--#Group sys
-+User @CUPS_USER@
-+Group @CUPS_GROUP@
+ #ifdef __sgi
+@@ -484,10 +484,10 @@
+ void
+ list_devices(void)
+ {
+-#if defined(__hpux) || defined(__sgi) || defined(__sun)
++#if defined(__hpux) || defined(__sgi) || defined(__sun) || defined(__FreeBSD__) || defined(__OpenBSD__)
+   static char	*funky_hex = "0123456789abcdefghijklmnopqrstuvwxyz";
+ 				/* Funky hex numbering used for some devices */
+-#endif /* __hpux || __sgi || __sun */
++#endif /* __hpux || __sgi || __sun || __FreeBSD__ || __OpenBSD__ */
  
- #
- # RIPCache: the amount of memory that each RIP should use to cache
+ #ifdef __linux
+   int	i;		/* Looping var */
+@@ -718,7 +718,7 @@
+       printf("serial serial:%s?baud=38400 \"Unknown\" \"Serial Port #%d\"\n",
+              device, i + 1);
+   }
+-#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#elif defined(__FreeBSD__) || defined(__OpenBSD__)
+   int	i, j;		/* Looping vars */
+   int	fd;		/* File descriptor */
+   char	device[255];	/* Device filename */
+@@ -800,6 +800,42 @@
+              device, i + 1);
+     }
+   }
++#elif defined(__NetBSD__)
++  int	i, j;		/* Looping vars */
++  int	fd;		/* File descriptor */
++  char	device[255];	/* Device filename */
++
++
++ /*
++  * Standard serial ports...
++  */
++
++  for (i = 0; i < 4; i ++)
++  {
++    sprintf(device, "/dev/tty%02d", i);
++    if ((fd = open(device, O_WRONLY | O_NOCTTY | O_NDELAY)) >= 0)
++    {
++      close(fd);
++      printf("serial serial:%s?baud=115200 \"Unknown\" \"Serial Port #%d\"\n",
++             device, i + 1);
++    }
++  }
++
++ /*
++  * Cyclades-Z ports...
++  */
++
++  for (i = 0; i < 16; i ++) /* Should be up to 65536 boards... */
++    for (j = 0; j < 64; j ++)
++    {
++      sprintf(device, "/dev/ttyCZ%02d%02d", i, j);
++      if ((fd = open(device, O_WRONLY | O_NOCTTY | O_NDELAY)) >= 0)
++      {
++	close(fd);
++	printf("serial serial:%s?baud=115200 \"Unknown\" \"Cyclades #%d Serial Port #%d\"\n",
++               device, i, j + 1);
++      }
++    }
+ #endif
+ }
+ 

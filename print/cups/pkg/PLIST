@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/12/07 20:33:06 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/12/21 14:59:39 jlam Exp $
 bin/cancel
 bin/disable
 bin/enable
@@ -182,6 +182,8 @@ share/cups/model/deskjet.ppd
 share/cups/model/epson24.ppd
 share/cups/model/epson9.ppd
 share/cups/model/laserjet.ppd
+share/cups/model/okidat24.ppd
+share/cups/model/okidata9.ppd
 share/cups/model/stcolor.ppd
 share/cups/model/stphoto.ppd
 share/cups/pstoraster/Fontmap
@@ -264,6 +266,9 @@ share/cups/templates/printer-stop.tmpl
 share/cups/templates/printers.tmpl
 share/cups/templates/test-page.tmpl
 share/cups/templates/trailer.tmpl
+share/doc/cups/ENCRYPTION
+share/doc/cups/LICENSE
+share/doc/cups/README
 share/doc/html/cups/cmp.html
 share/doc/html/cups/cmp.pdf
 share/doc/html/cups/cups.css
@@ -346,6 +351,7 @@ share/locale/it/cups_it
 @dirrm share/examples/cups
 @dirrm share/doc/html/cups/images
 @dirrm share/doc/html/cups
+@dirrm share/doc/cups
 @dirrm share/cups/templates
 @dirrm share/cups/pstoraster
 @dirrm share/cups/model
