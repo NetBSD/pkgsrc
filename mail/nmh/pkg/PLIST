@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2000/03/02 05:11:45 kim Exp $
+@comment $NetBSD: PLIST,v 1.15 2000/04/15 07:56:16 simonb Exp $
 bin/ali
 bin/anno
 bin/burst
@@ -55,6 +55,8 @@ etc/nmh/rcvdistcomps
 etc/nmh/rcvdistcomps.outbox
 etc/nmh/replcomps
 etc/nmh/replgroupcomps
+etc/nmh/scan.MMDDYY
+etc/nmh/scan.YYYYMMDD
 etc/nmh/scan.default
 etc/nmh/scan.mailx
 etc/nmh/scan.nomime
