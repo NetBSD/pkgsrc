@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.16 2004/07/03 17:12:11 jmmv Exp $
+
+--- po/am.po.orig	2004-06-23 06:41:03.000000000 +0200
++++ po/am.po
+@@ -5176,7 +5176,7 @@ msgstr ""
+ 
+ #: plugins/fn-info/plugin.xml.in.h:2
+ msgid "Information"
+-msgstr "&መረጃ"
++msgstr "መረጃ"
+ 
+ #: plugins/fn-info/plugin.xml.in.h:3
+ msgid "Information Functions"
