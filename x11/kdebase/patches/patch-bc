@@ -1,8 +1,96 @@
-$NetBSD: patch-bc,v 1.1 2001/03/20 00:20:41 fredb Exp $
+$NetBSD: patch-bc,v 1.2 2001/03/20 05:27:10 fredb Exp $
 
 --- kdehelp/man.cpp.orig	Thu Aug 19 14:32:11 1999
-+++ kdehelp/man.cpp
-@@ -475,8 +475,12 @@
++++ kdehelp/man.cpp	Mon Mar 19 23:18:51 2001
+@@ -20,6 +20,9 @@
+ #include "man.h"
+ #include "error.h"
+ #include <errno.h>
++#ifdef __NetBSD__
++#include <sys/param.h>
++#endif
+ 
+ #include "dbnew.h"
+ 
+@@ -171,11 +174,15 @@
+         }
+         else
+         {
+-#ifndef __FreeBSD__
+-            searchPath[numPaths++] = StrDup("/usr/man");
+-#else
++#ifdef __FreeBSD__
+             searchPath[numPaths++] = StrDup(_PATH_MAN);
+             searchPath[numPaths++] = StrDup("/usr/X11R6/man");
++#else
++            searchPath[numPaths++] = StrDup("/usr/man");
++#ifdef __NetBSD__
++            searchPath[numPaths++] = StrDup("/usr/X11R6/man");
++            searchPath[numPaths++] = StrDup("/usr/pkg/man");
++#endif
+ #endif
+             searchPath[numPaths++] = StrDup("/usr/local/man");
+         }
+@@ -271,10 +278,18 @@
+ //
+ void cManSection::ReadDir(const char *dirName )
+ {
++#ifdef __NetBSD__
++	DIR *dir, *subdir;
++#else
+ 	DIR *dir;
++#endif
+ 	struct dirent *dirEntry;
+ 	char *ptr;
++#ifdef __NetBSD__
++	char buffer[256], subdirName[256];
++#else
+ 	char buffer[256];
++#endif
+ 
+ //	cout << klocale->translate("Reading Dir: ") << dirName << endl;
+ 
+@@ -287,6 +302,39 @@
+             if ( dirEntry->d_name[0] == '.' )
+                 continue;
+ 
++#ifdef __NetBSD__
++            if ( !strcmp( dirEntry->d_name, MACHINE_ARCH ) )
++	    {
++		  sprintf( subdirName, "%s/%s", dirName, MACHINE_ARCH );
++		  subdir = opendir(subdirName);
++		  if ( subdir )
++		  {
++		      while ( (dirEntry = readdir(subdir)) )
++		      {
++			  if ( dirEntry->d_name[0] == '.' )
++			      continue;
++
++			  strcpy( buffer, dirEntry->d_name );
++
++			  ptr = strrchr( buffer, '.' );
++			  if ( !strcmp(ptr, ".gz") || !strcmp(ptr, ".Z") ||
++			       !strcmp(ptr,".bz2") ) // skip compress extn
++			  {
++			      *ptr = '\0';
++			      ptr = strrchr( buffer, '.' );
++			  }
++			  if (ptr)
++			  {
++			      *ptr = '\0';
++			      AddPage( buffer );
++			  }
++		      }
++		      closedir(subdir);
++		  }
++		  continue;
++	    }
++#endif	/* __NetBSD__ */
++
+             strcpy( buffer, dirEntry->d_name );
+ 
+             ptr = strrchr( buffer, '.' );
+@@ -475,8 +523,12 @@
  		sprintf(errFile, "%s/khelpXXXXXX", _PATH_TMP);	// temp file
  		mktemp(errFile);
  
