@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/08/17 14:00:27 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2000/08/27 02:46:06 jlam Exp $
 
 DISTNAME=		inn-2.2.2
 CATEGORIES=		news
@@ -13,9 +13,9 @@ CONFLICTS+=		nntpclnt-*
 
 INN_DATA_DIR?=		/var/news
 
-USE_PERL5=		yes
-USE_LIBTOOL=		yes
-HAS_CONFIGURE=		yes
+USE_PERL5=		# defined
+USE_LIBTOOL=		# defined
+HAS_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
 			--mandir=${PREFIX}/man \
 			--with-perl --with-tmp-path=/tmp \
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
 			--with-log-dir=${INN_DATA_DIR}/log \
 			--with-run-dir=${INN_DATA_DIR}/run \
 			--with-spool-dir=${INN_DATA_DIR}/spool
-CONFIGURE_ENV+=		_PATH_PERL=${LOCALBASE}/bin/perl
+CONFIGURE_ENV+=		_PATH_PERL=${PERL5}
 
 .include "../../mk/bsd.prefs.mk"
 
