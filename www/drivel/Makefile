@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/01/26 23:51:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2005/03/16 16:27:19 jmmv Exp $
 #
 
 DISTNAME=	drivel-1.2.4
@@ -22,6 +22,7 @@ GCONF2_SCHEMAS=		drivel.schemas
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
@@ -31,6 +32,7 @@ GCONF2_SCHEMAS=		drivel.schemas
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
