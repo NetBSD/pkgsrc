@@ -1,0 +1,10 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/03/14 05:13:05 kei Exp $
+
+--- tagslist.cgi.orig	Wed Jan 24 10:05:39 2001
++++ tagslist.cgi	Wed Jan 24 10:10:59 2001
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!@PREFIX@/bin/perl
+ 
+ # 規則ファイルから要素一覧HTMLを生成する
+ 

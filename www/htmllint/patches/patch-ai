@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2001/03/14 05:13:05 kei Exp $
+
+--- htmllintl.html.orig	Mon Jan 29 10:57:18 2001
++++ htmllintl.html	Mon Jan 29 10:58:12 2001
+@@ -72,7 +72,7 @@
+ このページは、基本的な設定だけの軽いゲートウェイです (軽いのはこのHTMLのことで、チェック自体はどれでも同じです)。細かなオプションを指定したいときは、<a href="./htmllint.html">こちらのゲートウェイ</a>を利用してください。
+ </p>
+ 
+-<form action="./htmllint.cgi" method="post" enctype="multipart/form-data">
++<form action="/cgi-bin/htmllint.cgi" method="post" enctype="multipart/form-data">
+ <input type="hidden" name="Stat" value="on">
+ 
+ <hr>

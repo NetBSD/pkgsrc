@@ -1,0 +1,10 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/03/14 05:13:05 kei Exp $
+
+--- parsedtd.pl.orig	Wed Jan 24 10:05:31 2001
++++ parsedtd.pl	Wed Jan 24 10:10:43 2001
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!@PREFIX@/bin/perl
+ 
+ # Simple DTD Parser for HTML ##########################
+ 
