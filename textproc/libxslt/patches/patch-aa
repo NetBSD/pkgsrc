@@ -1,15 +1,39 @@
-$NetBSD: patch-aa,v 1.8 2003/07/11 23:43:54 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2003/12/04 19:33:47 xtraeme Exp $
 
---- libexslt/Makefile.in.orig	Mon Jul  7 00:00:12 2003
-+++ libexslt/Makefile.in
-@@ -153,8 +153,8 @@ libexslt_la_SOURCES = \
+--- doc/Makefile.in.orig	2003-12-04 18:57:11.000000000 +0100
++++ doc/Makefile.in	2003-12-04 18:58:19.000000000 +0100
+@@ -76,7 +76,7 @@
+ ECHO = @ECHO@
+ EXTRA_LIBS = @EXTRA_LIBS@
  
- # The following DOES NOT WORK reliably. Sorry no prelinking to uninstalled
- # yet libraries.
--# libexslt_la_LIBADD = $(top_builddir)/libxslt/libxslt.la $(EXTRA_LIBS)
--libexslt_la_LIBADD = $(INSTALLED_XSLT_LIB) $(EXTRA_LIBS)
-+libexslt_la_LIBADD = $(top_builddir)/libxslt/libxslt.la $(EXTRA_LIBS)
-+# libexslt_la_LIBADD = $(INSTALLED_XSLT_LIB) $(EXTRA_LIBS)
- libexslt_la_LDFLAGS = -version-info @LIBEXSLT_VERSION_INFO@
+-HTML_DIR = $(datadir)/doc
++HTML_DIR = $(datadir)/doc/html
+ INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+ LDFLAGS = @LDFLAGS@
+ LIBEXSLT_MAJOR_VERSION = @LIBEXSLT_MAJOR_VERSION@
+@@ -139,7 +139,7 @@
  
- man_MANS = libexslt.3
+ 
+ # The name of the module.
+-DOC_MODULE = libxslt-$(VERSION)
++DOC_MODULE = libxslt
+ 
+ # The top-level SGML file.
+ DOC_MAIN_XML_FILE = libxslt.xml
+@@ -150,7 +150,7 @@
+ # A file in win32 depends upon two of the doc files
+ WIN32_DIR = $(top_srcdir)/win32
+ 
+-TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)/html
++TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
+ PAGES = API.html bugs.html contribs.html docs.html downloads.html \
+        help.html index.html intro.html news.html xsltproc2.html FAQ.html
+ 
+@@ -424,7 +424,6 @@
+ 	-@INSTALL@ -m 0644 $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR)/html
+ 	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)/tutorial
+ 	-@INSTALL@ -m 0644 $(srcdir)/tutorial/* $(DESTDIR)$(TARGET_DIR)/tutorial
+-	-(cd $(DESTDIR); gtkdoc-fixxref --module=libxslt --html-dir=$(HTML_DIR))
+ 
+ dist-hook:
+ 	(cd $(srcdir) ; tar cvf - *.1 *.html site.xsl news.xsl xsa.xsl *.gif html/*.html html/*.png tutorial/libxslt*) | (cd $(distdir); tar xf -)
