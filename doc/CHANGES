@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1629 2003/03/12 16:42:29 jmmv Exp $
+$NetBSD: CHANGES,v 1.1630 2003/03/12 16:44:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1113,3 +1113,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgnomeprintui to 2.2.1.2 [jmmv 2003-03-12]
 	Updated ethereal to 0.9.11 [salo 2003-03-12]
 	Updated gedit to 2.2.1 [jmmv 2003-03-12]
+	Updated bkpupsd to 2.1.2 [taca 2003-03-12]
