@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.138 2000/05/09 18:12:40 tron Exp $
+# $NetBSD: mk.conf.example,v 1.139 2000/05/20 17:39:20 kim Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -459,6 +459,11 @@
 # Used by the majordomo package as the directory to store temp files.
 # Possible: any directory.
 # Default: /var/tmp
+
+#MUTT_USE_SSL=	YES
+# Enable SSL in mutt (for pop and imap connections)
+# Possible: YES, NO
+# Default: YES
 
 #NMH_EDITOR=
 # default editor for use in nmh.
