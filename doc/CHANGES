@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6439 2004/07/04 14:25:31 wiz Exp $
+$NetBSD: CHANGES,v 1.6440 2004/07/04 15:26:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3235,3 +3235,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gcc3 to 3.3.4 [drochner 2004-07-04]
 	Added libsigc++2-2.0.3 [drochner 2004-07-04]
 	Added gtkmm24-2.4.4 [drochner 2004-07-04]
+	Removed kaffe-nox11 [jmmv 2004-07-04]
+	Updated kaffe to 1.1.4nb2 [jmmv 2004-07-04]
+	Added kaffe-esound-1.1.4 [jmmv 2004-07-04]
+	Added kaffe-x11-1.1.4 [jmmv 2004-07-04]
