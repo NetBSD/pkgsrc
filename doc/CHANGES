@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1231 2003/01/25 16:34:44 jmmv Exp $
+$NetBSD: CHANGES,v 1.1232 2003/01/25 22:28:03 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -410,3 +410,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lbreakout to 010315nb1 [rh 2003-01-25]
 	Updated guile-gtk to 0.19nb1 [jlam 2003-01-25]
 	Updated GConf2 to 1.2.1nb5 [jmmv 2003-01-25]
+	Updated libbonobo to 2.2.0 [jmmv 2003-01-25]
