@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/02 04:46:46 markd Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/04 00:14:18 chris Exp $
 
 DISTNAME=	kdeutils-3.0.3
 COMMENT=	Utilities for the KDE integrated X11 desktop
@@ -14,6 +14,11 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 post-install:
 	${CHMOD} -s ${PREFIX}/bin/efax
+
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h)
+CPPFLAGS+=             -D__NetBSD_APM__
+.endif
+
 
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
