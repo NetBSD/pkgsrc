@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.227 2004/04/04 07:09:38 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.228 2004/04/10 12:26:23 salo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1408,7 +1408,7 @@ MOZILLA_USE_XFT?=	NO
 MPLAYER_DISABLE_DRIVERS?=
 # Whitespace separated list of output drivers that are not wanted in
 # mplayer/gmplayer's binary.
-# Possible: arts esd nas sdl
+# Possible: arts esd matroska nas sdl
 # Default: empty
 
 MPLAYER_ENABLE_RUNTIME_CPU_DETECTION?= YES
