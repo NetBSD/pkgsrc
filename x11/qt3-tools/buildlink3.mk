@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:38 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2005/03/07 12:59:54 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT3_TOOLS_BUILDLINK3_MK:=	${QT3_TOOLS_BUILDLINK3_MK}+
@@ -18,7 +18,9 @@ BUILDLINK_PKGSRCDIR.qt3-tools?=	../../x11/qt3-tools
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 
-CONFIGURE_ENV+=			UIC="${QTDIR}/bin/uic"
-MAKE_ENV+=			UIC="${QTDIR}/bin/uic"
+CONFIGURE_ENV+=		UIC="${QTDIR}/bin/uic"
+MAKE_ENV+=		UIC="${QTDIR}/bin/uic"
+CONFIGURE_ENV+=		QMAKE="${QTDIR}/bin/qmake"
+MAKE_ENV+=		QMAKE="${QTDIR}/bin/qmake"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
