@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2004/11/11 18:17:52 sketch Exp $
+# $NetBSD: Makefile,v 1.64 2004/11/20 06:34:26 grant Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
@@ -35,6 +35,8 @@ PKG_FAIL_REASON=	"${PKGNAME} requires X headers to be installed"
 
 .if ${OPSYS} == "IRIX"
 .  include "xsgi.mk"
+.elif ${OPSYS} == "OSF1"
+.  include "xdec.mk"
 .elif !empty(X11BASE:M*openwin)
 .  include "openwin.mk"
 .else
