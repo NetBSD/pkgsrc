@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/23 15:20:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/03 20:13:03 abs Exp $
 #
 
 DISTNAME=		gridsimtoolkit-2.1
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.gridbus.org/gridsim/
 COMMENT=		Toolkit for simulation of parallel systems
 
 USE_JAVA2=		run
-PKG_JVMS_ACCEPTED=	sun-jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk14 jdk14
 NO_BUILD=		# defined
 
 do-configure:
