@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/04 20:03:30 wiz Exp $
+
+--- Makefile.orig	Thu Nov 30 07:44:57 2000
++++ Makefile
+@@ -9,17 +9,19 @@
+ # Copyright (c) 2000 Jonathan B. Leffert <jonathan@leffert.net>
+ # All rights reserved.
+ 
++prefix = ${PREFIX}
++
+ VERSION=1.15
+ PKG=gdbm_primitive
+ 
+ CC = gcc
+-CFLAGS = -O2 -pedantic -Wall -I/opt/include -DVERSION=$(VERSION)
++CFLAGS = -O2 -pedantic -Wall -DVERSION=$(VERSION) -I${BUILDLINK_DIR}/include
+ 
+ PROGS = gdbm-clear gdbm-create gdbm-dump gdbm-exists gdbm-keys gdbm-load \
+ 	gdbm-get gdbm-put gdbm-remove gdbm-revget
+-LIBS = -L/opt/lib -lgdbm
++LIBS = -L${BUILDLINK_DIR}/lib -Wl,-R${PREFIX}/lib -lgdbm
+ 
+-INSTALL_PREFIX=/opt/pkgs/gdbm_primitive-$(VERSION)
++INSTALL_PREFIX=${prefix}
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) -c $<
