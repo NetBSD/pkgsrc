@@ -1,8 +1,8 @@
-# $NetBSD: Makefile-firefox.common,v 1.9 2004/11/13 07:03:08 taya Exp $
+# $NetBSD: Makefile-firefox.common,v 1.10 2004/12/03 16:45:54 taya Exp $
 
 MOZILLA_BIN=	firefox-bin
 MOZ_VER=	1.0
-PKGREVISION=	1
+PKGREVISION=	2
 EXTRACT_SUFX=	.tar.bz2
 
 DISTNAME=	firefox-${MOZ_VER}-source
@@ -35,5 +35,10 @@ pre-install:
 		${PAX} -Lrw extensions ${WRKSRC}/dist/bin
 	${MV} ${WRKSRC}/dist/bin/extensions/installed-extensions.txt \
 		${WRKSRC}/dist/bin/extensions/installed-extensions-processed.txt
+
+post-install:
+	cd ${PREFIX}/lib/${MOZILLA} && \
+	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. HOME=${WRKSRC} \
+				./${MOZILLA_BIN} -register
 
 .include "../../www/mozilla/Makefile.common"
