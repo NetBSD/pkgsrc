@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/11/19 12:15:14 adam Exp $
+# $NetBSD: Makefile,v 1.26 2004/11/23 19:02:43 adam Exp $
 
 DISTNAME=	libsndfile-1.0.11
 CATEGORIES=	audio
@@ -26,6 +26,10 @@ CONFIGURE_ENV+=		F77=${FALSE}
 .  include "../../mk/ossaudio.buildlink3.mk"
 OSS_DEFS=		-DDEV_DSP=\\\"${DEVOSSAUDIO}\\\" -DUSE_OSS=1
 MAKE_ENV+=		AM_CFLAGS="${OSS_DEFS}"
+.endif
+
+.if ${OPSYS} == "Darwin"
+BUILDLINK_PASSTHRU_DIRS+=	/Developer
 .endif
 
 .include "../../mk/bsd.pkg.mk"
