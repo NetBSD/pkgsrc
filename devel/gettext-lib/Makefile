@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/03/27 15:39:38 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2003/03/27 18:59:37 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -17,7 +17,6 @@ CONFLICTS=		gettext<=0.10.35
 USE_BUILDLINK2=		# defined
 USE_LIBTOOL=		# defined
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-PKGSRC_GETTEXTLIB_AGE=	2
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-included-gettext
@@ -26,7 +25,6 @@ CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
 CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
-MAKE_ENV+=		PKGSRC_GETTEXTLIB_AGE="${PKGSRC_GETTEXTLIB_AGE}"
 
 ALL_TARGET=		all-yes
 INSTALL_TARGET=		install-exec
@@ -36,10 +34,6 @@ BUILD_DIRS=		${WRKSRC}/intl
 
 .if ${OPSYS} == "Darwin"
 CPPFLAGS+=		-D_INTL_REDIRECT_MACROS=1
-.endif
-
-.if ${OPSYS} == "IRIX"
-PKGSRC_GETTEXTLIB_AGE=	0
 .endif
 
 .include "../../converters/libiconv/buildlink2.mk"
