@@ -1,5 +1,5 @@
 # $OpenBSD: Makefile,v 1.5 2001/11/21 01:17:43 naddy Exp $
-# $NetBSD: Makefile,v 1.2 2002/10/08 14:18:56 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/17 09:01:59 salo Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -25,6 +25,8 @@ NO_BUILDLINK2=	# arcane build procedure causes buildlink2 to not work
 WRKSRC=		${WRKDIR}
 MAKE_FLAGS=	CC="${BUILDLINK_CC}" CCFLAGS="${CFLAGS}"
 
+PKG_SHELL=	${PREFIX}/bin/ksh93
+
 do-build:
 	cd ${WRKSRC}; \
 	${SETENV} SHELL=${SH} ${SH} ./bin/package ${MAKE_PROGRAM} ${MAKE_FLAGS}
@@ -36,4 +38,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/arch/$${arch}/man/man1/sh.1 \
 		${PREFIX}/man/man1/ksh93.1
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
