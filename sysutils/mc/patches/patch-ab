@@ -1,23 +1,25 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 11:10:25 agc Exp $
-
---- vfs/Makefile.in.orig	Tue Sep 16 23:53:51 1997
-+++ vfs/Makefile.in	Sun Oct 26 01:32:05 1997
-@@ -91,23 +91,23 @@
+--- vfs/Makefile.in.orig	Mon May 25 06:16:04 1998
++++ vfs/Makefile.in	Sun Oct  4 09:07:34 1998
+@@ -91,25 +91,25 @@
  
- install: mcserv install.extfs
- 	if test x@mcserv@ != x; then \
+ install: @mcserv@ install.extfs
+ 	-(if test x@mcserv@ != x; then \
 -	    $(INSTALL_PROGRAM) mcserv $(DESTDIR)$(bindir)/$(binprefix)mcserv; \
 +	    $(INSTALL_PROGRAM) mcserv $(DESTDIR)$(sbindir)/$(binprefix)mcserv; \
- 	fi
+ 	fi)
  
  install.extfs:
  	$(INSTALL_DATA) $(srcdir)/extfs/README $(DESTDIR)$(libdir)/extfs/README
  	$(INSTALL_DATA) $(srcdir)/extfs/extfs.ini $(DESTDIR)$(libdir)/extfs/extfs.ini
 -	$(INSTALL_PROGRAM) $(srcdir)/extfs/a $(DESTDIR)$(libdir)/extfs/a
+-	$(INSTALL_PROGRAM) $(srcdir)/extfs/arfs $(DESTDIR)$(libdir)/extfs/arfs
 -	$(INSTALL_PROGRAM) $(srcdir)/extfs/rpm  $(DESTDIR)$(libdir)/extfs/rpm
+-	$(INSTALL_PROGRAM) $(srcdir)/extfs/hp48  $(DESTDIR)$(libdir)/extfs/hp48
 +	$(INSTALL_DATA) $(srcdir)/extfs/a $(DESTDIR)$(libdir)/extfs/a
++	$(INSTALL_DATA) $(srcdir)/extfs/arfs $(DESTDIR)$(libdir)/extfs/arfs
 +	$(INSTALL_DATA) $(srcdir)/extfs/rpm  $(DESTDIR)$(libdir)/extfs/rpm
- 
++	$(INSTALL_DATA) $(srcdir)/extfs/hp48  $(DESTDIR)$(libdir)/extfs/hp48
+ 	
 -	$(INSTALL_PROGRAM) extfs/cpio $(DESTDIR)$(libdir)/extfs/cpio
 -	$(INSTALL_PROGRAM) extfs/deb  $(DESTDIR)$(libdir)/extfs/deb
 -	$(INSTALL_PROGRAM) extfs/ftplist $(DESTDIR)$(libdir)/extfs/ftplist
