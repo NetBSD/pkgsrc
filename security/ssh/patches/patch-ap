@@ -1,0 +1,26 @@
+--- gmp-2.0.2-ssh-2/configure.in.orig	Mon Apr 26 19:50:09 1999
++++ gmp-2.0.2-ssh-2/configure.in	Mon Apr 26 20:06:07 1999
+@@ -222,6 +222,10 @@
+   sh2-*-*)
+     path="sh/sh2 sh"
+     ;;
++  mips*-*-netbsd*)
++    path="mips2"
++    SFLAGS="-Wa,-KPIC"
++    ;;
+   mips[34]*-*-*)
+     path="mips3"
+     ;;
+--- gmp-2.0.2-ssh-2/configure.orig	Thu Jul  9 02:40:44 1998
++++ gmp-2.0.2-ssh-2/configure	Mon Apr 26 20:06:12 1999
+@@ -1955,6 +1955,10 @@
+   sh2-*-*)
+     path="sh/sh2 sh"
+     ;;
++  mips*-*-netbsd*)
++    path="mips2"
++    SFLAGS="-Wa,-KPIC"
++    ;;
+   mips[34]*-*-*)
+     path="mips3"
+     ;;
