@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7711 2004/11/05 15:12:08 peter Exp $
+$NetBSD: CHANGES,v 1.7712 2004/11/05 16:25:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5075,6 +5075,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mklivecd to 0.8 [xtraeme 2004-11-04]
 	Added php4-extensions 4.3 [jdolecek 2004-11-04]
 	Added php5-extensions 5.0 [jdolecek 2004-11-04]
+	Renamed ap-php5 to ap-php [jdolecek 2004-11-04]
 	Added p5-Chart-ThreeD 0.01 [he 2004-11-04]
 	Added p5-SNMP-MIB-Compiler 0.06 [he 2004-11-04]
 	Updated dopewars to 1.5.10 [adam 2004-11-05]
