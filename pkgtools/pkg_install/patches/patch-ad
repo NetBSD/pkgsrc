@@ -1,12 +1,13 @@
-$NetBSD: patch-ad,v 1.3 2002/08/01 14:43:39 schmonz Exp $
+$NetBSD: patch-ad,v 1.4 2002/08/06 11:51:02 wiz Exp $
 
---- lib/Makefile.orig	Thu Aug  1 04:46:31 2002
+--- lib/Makefile.orig	Thu Aug  1 10:46:31 2002
 +++ lib/Makefile
-@@ -5,13 +5,31 @@ LIB+=		install
+@@ -5,13 +5,36 @@
  SRCS+=		exec.c file.c ftpio.c global.c lpkg.c pen.c pkgdb.c \
  		plist.c str.c version.c path.c
  
 +OPSYS!=		uname -s
++RELEASE!=	uname -r
 +
 +.if ${OPSYS} == "Darwin"
 +SRCS+=		md5c.c md5hl.c strlcpy.c
@@ -14,6 +15,10 @@ $NetBSD: patch-ad,v 1.3 2002/08/01 14:43:39 schmonz Exp $
 +
 +.if ${OPSYS} == "Linux"
 +SRCS+=		fgetln.c md5c.c md5hl.c
++.endif
++
++.if ${OPSYS} == "NetBSD" && (${RELEASE:M1.4.[12]} != "" || ${RELEASE:M1.4} != "")
++SRCS+=		strlcpy.c
 +.endif
 +
  NOLINT=		# defined
