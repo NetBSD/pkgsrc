@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.581 2000/09/28 10:50:43 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.582 2000/10/08 13:59:10 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -636,11 +636,11 @@ TRUE?=		true				# Shell builtin
 TYPE?=		type				# Shell builtin
 .endif # !SunOS
 
-PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
-PKG_ADMIN?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_admin
-PKG_CREATE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_create
-PKG_DELETE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_delete
-PKG_INFO?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_info
+PKG_ADD?=	PKG_PATH= PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
+PKG_ADMIN?=	PKG_PATH= PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_admin
+PKG_CREATE?=	PKG_PATH= PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_create
+PKG_DELETE?=	PKG_PATH= PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_delete
+PKG_INFO?=	PKG_PATH= PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_info
 
 .if !defined(PKGTOOLS_VERSION)
 .if !exists(${IDENT})
