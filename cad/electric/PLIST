@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/01 04:47:53 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/20 18:21:39 jmmv Exp $
 bin/electric
 share/electric/doc/html/images/chap01-01.png
 share/electric/doc/html/images/chap01-02.png
@@ -400,6 +400,7 @@ share/electric/lib/umc18.txt
 @dirrm share/electric/lib/ui
 @dirrm share/electric/lib/java
 @dirrm share/electric/lib/international/fr/LC_MESSAGES
+@dirrm share/electric/lib/international/fr
 @dirrm share/electric/lib/international
 @dirrm share/electric/lib
 @dirrm share/electric/doc/html/text
