@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.69 2004/07/06 22:49:18 wiz Exp $
+# $NetBSD: gcc.mk,v 1.70 2004/08/27 06:29:09 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -244,6 +244,12 @@ _NEED_NEWER_GCC!=	\
 PKG_SKIP_REASON=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
 .endif
 
+# GNU ld option used to set the rpath
+_LINKER_RPATH_FLAG=	-R
+
+# GCC passes rpath directives to the linker using "-Wl,-R".
+_COMPILER_RPATH_FLAG=	-Wl,${_LINKER_RPATH_FLAG}
+
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
 #
 # Ensure that the correct rpath is passed to the linker if we need to
@@ -287,7 +293,7 @@ _GCC_SUBPREFIX:=	${_GCC_ARCHDIR:H:H:H:H:T}/
 _GCC_LIBDIRS=	${_GCC_ARCHDIR} ${_GCC_PREFIX}lib
 _GCC_LDFLAGS=	# empty
 .  for _dir_ in ${_GCC_LIBDIRS:N*not_found*}
-_GCC_LDFLAGS+=	-L${_dir_} ${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
+_GCC_LDFLAGS+=	-L${_dir_} ${COMPILER_RPATH_FLAG}${_dir_}
 .  endfor
 LDFLAGS+=	${_GCC_LDFLAGS}
 .endif
@@ -328,9 +334,6 @@ PKG_FC=		${_GCC_FC}
 FC=		${PKG_FC:T}
 F77=		${PKG_FC:T}
 .endif
-
-# GCC passes flags to the linker using "-Wl,".
-_COMPILER_LD_FLAG=	-Wl,
 
 # Pass the required flags to imake to tell it we're using gcc on Solaris.
 .if ${OPSYS} == "SunOS"

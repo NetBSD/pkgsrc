@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.24 2004/06/10 20:34:08 jschauma Exp $
+# $NetBSD: mipspro.mk,v 1.25 2004/08/27 06:29:09 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
@@ -41,8 +41,11 @@ CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		MIPSpro Compilers
 .endif
 
-# MIPSPro passes flags to the linker using "-Wl,".
-_COMPILER_LD_FLAG=	-Wl,
+# MIPSPro linker option used to set the rpath.
+_LINKER_RPATH_FLAG=	-rpath
+
+# MIPSPro passes rpath directives to the linker using "-Wl,-rpath,".
+_COMPILER_RPATH_FLAG=	-Wl,${_LINKER_RPATH_FLAG},
 
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.mipspro)

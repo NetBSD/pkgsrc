@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/04 06:22:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/27 06:29:07 jlam Exp $
 #
 
 DISTNAME=	mips64emul-0.2
@@ -17,8 +17,7 @@ HAS_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
-GLOBAL_LDFLAGS=	-L${X11BASE}/lib \
-		${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib
+GLOBAL_LDFLAGS=	-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mips64emul ${PREFIX}/bin

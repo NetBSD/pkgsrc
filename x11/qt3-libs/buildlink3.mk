@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/05/07 15:25:13 cjep Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/08/27 06:29:11 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT3_LIBS_BUILDLINK3_MK:=	${QT3_LIBS_BUILDLINK3_MK}+
@@ -38,7 +38,7 @@ PTHREAD_OPTS+=	require
 
 CONFIGURE_ENV+=		MOC="${QTDIR}/bin/moc"
 MAKE_ENV+=		MOC="${QTDIR}/bin/moc"
-#LDFLAGS+=		-Wl,${RPATH_FLAG}${QTDIR}/lib
+#LDFLAGS+=		${COMPILER_RPATH_FLAG}${QTDIR}/lib
 
 .if !defined(BUILD_QT3)
 CONFIGURE_ENV+=		QTDIR="${QTDIR}"

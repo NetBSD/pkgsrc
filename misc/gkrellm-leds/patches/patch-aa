@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/25 00:52:33 cube Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/27 06:29:08 jlam Exp $
 
 --- Makefile.orig	2003-01-29 00:14:08.000000000 +0100
 +++ Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/25 00:52:33 cube Exp $
  GTK_LIBS = `pkg-config gtk+-2.0 --libs`
  
 -X11_LIB = -L/usr/X11R6/lib -lX11 -lXtst
-+X11_LIB = -L$(X11BASE)/lib $(RPATH_FLAG)$(X11BASE)/lib -lX11 -lXtst
++X11_LIB = -L$(X11BASE)/lib $(LINKER_RPATH_FLAG) $(X11BASE)/lib -lX11 -lXtst
  
  WIN32_LIBS = -luser32 -lkernel32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lodbc32 -lodbccp32 -lws2_32 $(GTK_LIBS)
  UNIX_LIBS = $(X11_LIB) $(GTK_LIBS)

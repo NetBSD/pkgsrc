@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/04/20 17:52:48 ben Exp $
+$NetBSD: patch-ac,v 1.2 2004/08/27 06:29:06 jlam Exp $
 
 --- Makefile.in.orig	Tue Feb 11 23:24:56 2003
 +++ Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/04/20 17:52:48 ben Exp $
  CC = @CC@
  CFLAGS = @CFLAGS@ -Ipa_common
 -LIBS = @LIBS@
-+LIBS = ${LIBOSSAUDIO} -L@prefix@/lib -Wl,${RPATH_FLAG} @prefix@/lib @LIBS@
++LIBS = ${LIBOSSAUDIO} -L@prefix@/lib ${COMPILER_RPATH_FLAG}@prefix@/lib @LIBS@
  AR = @AR@
  RANLIB = @RANLIB@
  INSTALL = @INSTALL@

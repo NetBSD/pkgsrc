@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2004/08/23 23:22:29 schmonz Exp $
+# $NetBSD: options.mk,v 1.4 2004/08/27 06:29:08 jlam Exp $
 
 .if ${OPSYS} == "Darwin"
 PKG_DEFAULT_OPTIONS+=	darwin
@@ -130,7 +130,7 @@ PLIST_SRC+=             ${PKGDIR}/PLIST.tls
 SUBST_CLASSES+=		load
 SUBST_STAGE.load=	do-configure
 SUBST_FILES.load=	make-load.sh
-SUBST_SED.load=		-e '$$s|$$| -Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.syncdir}/lib -L${BUILDLINK_PREFIX.syncdir}/lib \-lsyncdir|'
+SUBST_SED.load=		-e '$$s|$$| ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.syncdir}/lib -L${BUILDLINK_PREFIX.syncdir}/lib \-lsyncdir|'
 .  if ${OPSYS} == "Darwin"
 SUBST_SED.load+=	-e '$$s|$$| -bind_at_load|'
 .  endif

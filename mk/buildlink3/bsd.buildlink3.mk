@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.149 2004/08/13 03:43:23 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.150 2004/08/27 06:29:09 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -414,8 +414,8 @@ BUILDLINK_LDFLAGS+=	-L${_dir_}
 .  if !empty(BUILDLINK_RPATHDIRS.${_pkg_}) && (${_USE_RPATH} == "yes")
 .    for _dir_ in ${BUILDLINK_RPATHDIRS.${_pkg_}:S/^/${BUILDLINK_PREFIX.${_pkg_}}\//}
 .      if exists(${_dir_})
-.        if empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_})
-BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
+.        if empty(BUILDLINK_LDFLAGS:M${COMPILER_RPATH_FLAG}${_dir_})
+BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${_dir_}
 .        endif
 .      endif
 .    endfor
@@ -427,8 +427,8 @@ BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 #
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 .  if (${_USE_RPATH} == "yes") && \
-      empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${PREFIX}/lib)
-BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${PREFIX}/lib
+      empty(BUILDLINK_LDFLAGS:M${COMPILER_RPATH_FLAG}${PREFIX}/lib)
+BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 .  endif
 .endif
 #
@@ -440,8 +440,8 @@ BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${PREFIX}/lib
 .  if !empty(BUILDLINK_RPATHDIRS.${_pkg_}) && (${_USE_RPATH} == "yes")
 .    for _dir_ in ${BUILDLINK_RPATHDIRS.${_pkg_}:S/^/${LOCALBASE}\//}
 .      if exists(${_dir_})
-.        if empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_})
-BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
+.        if empty(BUILDLINK_LDFLAGS:M${COMPILER_RPATH_FLAG}${_dir_})
+BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${_dir_}
 .        endif
 .      endif
 .    endfor
@@ -451,8 +451,8 @@ BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${_dir_}
 # Ensure that ${LOCALBASE}/lib is in the runtime library search path.
 #
 .if (${_USE_RPATH} == "yes") && \
-    empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib)
-BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib
+    empty(BUILDLINK_LDFLAGS:M${COMPILER_RPATH_FLAG}${LOCALBASE}/lib)
+BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 .endif
 #
 # Add the X11 library directory to the library search paths if the package
@@ -463,8 +463,8 @@ BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib
 BUILDLINK_LDFLAGS+=	-L${X11BASE}/lib${ABI}
 .  endif
 .  if (${_USE_RPATH} == "yes") && \
-      empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib${ABI})
-BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib${ABI}
+      empty(BUILDLINK_LDFLAGS:M${COMPILER_RPATH_FLAG}${X11BASE}/lib${ABI})
+BUILDLINK_LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib${ABI}
 .  endif
 .endif
 
@@ -1619,8 +1619,6 @@ ${BUILDLINK_DIR}/bin/.libtool-fix-la:					\
 # Seed the common transforming cache with obvious values that greatly
 # speed up the wrappers.
 #
-_BLNK_RPATH_FLAGS=	${RPATH_FLAG}
-_BLNK_RPATH_FLAGS+=	-Wl,${RPATH_FLAG}
 .for _rflag_ in \
 	-Wl,-R -Wl,-rpath, -Wl,--rpath, -Wl,-rpath-link, -Wl,--rpath-link
 .  if empty(_BLNK_RPATH_FLAGS:M${_rflag_})
@@ -1748,8 +1746,6 @@ ${_BLNK_GEN_TRANSFORM}: ${.CURDIR}/../../mk/buildlink3/gen-transform.sh
 		-e "s|@_BLNK_TRANSFORM_SEDFILE@|${_BLNK_TRANSFORM_SEDFILE:Q}|g" \
 		-e "s|@_BLNK_UNTRANSFORM_SEDFILE@|${_BLNK_UNTRANSFORM_SEDFILE:Q}|g" \
 		-e "s|@_BLNK_REORDERLIBS@|${_BLNK_REORDERLIBS:Q}|g"	\
-		-e "s|@_COMPILER_LD_FLAG@|${_COMPILER_LD_FLAG:Q}|g"     \
-		-e "s|@_OPSYS_RPATH_NAME@|${_OPSYS_RPATH_NAME:Q}|g"     \
 		-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL:Q}|g"         \
 		-e "s|@CAT@|${CAT:Q}|g"                                 \
 		${.ALLSRC} > ${.TARGET}.tmp

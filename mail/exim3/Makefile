@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/07/24 22:45:15 recht Exp $
+# $NetBSD: Makefile,v 1.12 2004/08/27 06:29:08 jlam Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	2
@@ -53,7 +53,7 @@ BDB_ACCEPTED=	native db3 db2
 .if defined(EXIM_DB.mysql) && ${EXIM_DB.mysql} == "YES"
 LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 LOOKUP_LIBS+=		-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql
-LOOKUP_LIBS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql
+LOOKUP_LIBS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 LOOKUP_LIBS+=		-lmysqlclient
 MAKE_ENV+=		LOOKUP_MYSQL=YES
 .  include "../../databases/mysql-client/buildlink3.mk"
@@ -61,7 +61,7 @@ MAKE_ENV+=		LOOKUP_MYSQL=YES
 .if defined(EXIM_DB.pgsql) && ${EXIM_DB.pgsql} == "YES"
 LOOKUP_INCLUDE+=	-I${PGSQL_PREFIX}/include/postgresql
 LOOKUP_LIBS+=		-L${PGSQL_PREFIX}/lib
-LOOKUP_LIBS+=		-Wl,${RPATH_FLAG}${PGSQL_PREFIX}/lib -lpq
+LOOKUP_LIBS+=		${COMPILER_RPATH_FLAG}${PGSQL_PREFIX}/lib -lpq
 MAKE_ENV+=		LOOKUP_PGSQL=YES
 .  include "../../mk/pgsql.buildlink3.mk"
 .endif

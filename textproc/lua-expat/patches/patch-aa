@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/05 13:57:53 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/27 06:29:10 jlam Exp $
 
 --- makefile.orig	2004-01-29 22:54:22.000000000 +0000
 +++ makefile	2004-01-29 22:58:13.000000000 +0000
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/05 13:57:53 xtraeme Exp $
  
  liblxp.so : lxplib.o
 -	ld -o liblxp.so -shared lxplib.o -lexpat
-+	ld -o liblxp.so -L${PREFIX}/lib -Wl,${RPATH_FLAG}${PREFIX}/lib -shared lxplib.o -lexpat
++	ld -o liblxp.so -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -shared lxplib.o -lexpat
  
  liblxp.dylib : lxplib.o
  	gcc -o liblxp.dylib -dynamiclib lxplib.o -lexpat -llua.5.0 -llualib.5.0

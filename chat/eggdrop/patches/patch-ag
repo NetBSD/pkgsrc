@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2003/05/24 16:43:06 salo Exp $
+$NetBSD: patch-ag,v 1.5 2004/08/27 06:29:06 jlam Exp $
 
 --- Makefile.in.orig	Tue Feb 27 20:06:27 2001
 +++ Makefile.in	Fri Nov  2 11:40:10 2001
@@ -7,7 +7,7 @@ $NetBSD: patch-ag,v 1.4 2003/05/24 16:43:06 salo Exp $
  # make modules
  SHLIB_CC = @SHLIB_CC@
 -SHLIB_LD = @SHLIB_LD@
-+SHLIB_LD = @SHLIB_LD@ $(RPATH_FLAG)@TCLLIB@
++SHLIB_LD = @SHLIB_LD@ $(LINKER_RPATH_FLAG) @TCLLIB@
  SHLIB_STRIP = @SHLIB_STRIP@
  MOD_EXT = @MOD_EXT@
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ag,v 1.4 2003/05/24 16:43:06 salo Exp $
  # stuff for Tcl
  XREQS = @TCL_REQS@
  XLIBS = @TCL_LIBS@ @LIBS@
-+XLDFLAGS = -Wl,$(RPATH_FLAG)@TCLLIB@
++XLDFLAGS = $(COMPILER_RPATH_FLAG)@TCLLIB@
  TCLLIB = @TCLLIB@
  TCLLIBFN = @TCLLIBFN@
  

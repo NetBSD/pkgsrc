@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/07/19 21:07:39 heinz Exp $
+# $NetBSD: Makefile,v 1.17 2004/08/27 06:29:07 jlam Exp $
 #
 
 DISTNAME=		DBD-Sybase-0.94
@@ -29,7 +29,7 @@ PKG_FAIL_REASON+=	"You must define SYBASE to the base directory of your Open Cli
 _SYBASE=		${BUILDLINK_PREFIX.freetds}/freetds
 .endif
 
-PERL5_LDFLAGS+=		-Wl,${RPATH_FLAG}${_SYBASE}/lib
+PERL5_LDFLAGS+=		${COMPILER_RPATH_FLAG}${_SYBASE}/lib
 MAKE_ENV+=		SYBASE=${_SYBASE}
 
 .if !defined(USE_SYBASE_OPENCLIENT)

@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2004/05/02 03:19:50 snj Exp $
+$NetBSD: patch-ab,v 1.2 2004/08/27 06:29:08 jlam Exp $
 
 --- libguile/Makefile.in.orig	2004-04-28 20:56:11.000000000 -0700
 +++ libguile/Makefile.in	2004-04-28 20:59:32.000000000 -0700
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1 2004/05/02 03:19:50 snj Exp $
  
  guile_SOURCES = guile.c
 -guile_LDADD = libguile.la ${THREAD_LIBS_LOCAL}
-+guile_LDADD = libguile.la ${THREAD_LIBS_LOCAL} -Wl,${RPATH_FLAG}${PREFIX}/lib
++guile_LDADD = libguile.la ${THREAD_LIBS_LOCAL} ${COMPILER_RPATH_FLAG}${PREFIX}/lib
  guile_LDFLAGS = @DLPREOPEN@
  
  libguile_la_SOURCES = \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2004/07/17 12:43:37 tron Exp $
+# $NetBSD: Makefile,v 1.82 2004/08/27 06:29:11 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.19-1.3.31
 PKGNAME=		ap-ssl-2.8.19
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
-SSL_RPATH_LDFLAGS=	${RPATH_FLAG}${SSLBASE}/lib
+SSL_RPATH_LDFLAGS=	${LINKER_RPATH_FLAG} ${SSLBASE}/lib
 FIX_RPATH+=		SSL_RPATH_LDFLAGS
 MAKE_ENV+=		SSL_RPATH_LDFLAGS="${SSL_RPATH_LDFLAGS}"
 

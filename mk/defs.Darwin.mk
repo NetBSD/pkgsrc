@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.79 2004/08/14 19:35:39 schmonz Exp $
+# $NetBSD: defs.Darwin.mk,v 1.80 2004/08/27 06:29:09 jlam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -131,7 +131,8 @@ _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_LIBTOOL_REQD=	1.5.2nb5 # base version of libtool required
 _OPSYS_PERL_REQD=	5.8.0	# base version of perl required
 _OPSYS_PTHREAD_AUTO=	yes	# -lpthread not needed for pthreads
-_OPSYS_RPATH_NAME=	-L	# darwin has no rpath, use -L instead
+_OPSYS_LINKER_RPATH_FLAG=	-L	# darwin has no rpath, use -L instead
+_OPSYS_COMPILER_RPATH_FLAG=	-L	# compiler flag to pass rpaths to linker
 _OPSYS_SHLIB_TYPE=	dylib	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -b -z	# switch to patch(1) for backup suffix
