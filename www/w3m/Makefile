@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/03/04 15:55:33 kei Exp $
+# $NetBSD: Makefile,v 1.32 2002/03/05 15:32:00 toshii Exp $
 #
 
 DISTNAME=	w3m-0.2.5-m17n-20020216
@@ -93,7 +93,7 @@ HELP_W3M=			-w3m
 CONFIGURE_ENV+= use_menu=y use_matrix=n ansi_color=y
 CONFIGURE_ENV+= ded=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+= dcc="${CC}" dtermlib="-ltermcap"
-CONFIGURE_ENV+= dldflags="-Wl,-rpath,${LOCALBASE}/lib -L${LOCALBASE}/lib"
+CONFIGURE_ENV+= dldflags="-Wl,-rpath,${LOCALBASE}/lib"
 CONFIGURE_ENV+= dmodel=6
 CONFIGURE_ENV+= LOCALBASE="${LOCALBASE}"
 CONFIGURE_ARGS+= --yes
