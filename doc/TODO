@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2847 2005/01/05 15:28:35 adam Exp $
+$NetBSD: TODO,v 1.2848 2005/01/06 10:40:12 adam Exp $
 
 Suggested new packages
 ======================
@@ -421,7 +421,6 @@ Suggested package updates
 	o docbook-4.3
 	o docbook-website-2.5.0
 	o docsis-0.9.1
-	o doxygen-1.4.0
 	o dpkg-1.10.25
 	o dropbear-0.44
 	o drscheme-208
