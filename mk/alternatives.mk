@@ -1,4 +1,4 @@
-# $NetBSD: alternatives.mk,v 1.3 2005/01/25 16:29:16 jmmv Exp $
+# $NetBSD: alternatives.mk,v 1.4 2005/01/25 16:48:53 jmmv Exp $
 #
 # This Makefile fragment handles the alternatives system, registering a
 # package in the database.
@@ -28,7 +28,7 @@ ${WRKDIR}/.altinstall: ${ALTERNATIVES_SRC}
 	${SED} ${FILES_SUBST_SED} <${ALTERNATIVES_SRC}; \
 	${ECHO} 'EOF'; \
 	${ECHO} 'if ${TEST} -x ${PKG_ALTERNATIVES}; then'; \
-	${ECHO} '${PKG_ALTERNATIVES} -s register ./+ALTERNATIVES'; \
+	${ECHO} '${PKG_ALTERNATIVES} -gs register ./+ALTERNATIVES'; \
 	${ECHO} 'fi'; \
 	${ECHO} 'fi'; \
 	} >${WRKDIR}/.altinstall
@@ -36,7 +36,7 @@ ${WRKDIR}/.altinstall: ${ALTERNATIVES_SRC}
 ${WRKDIR}/.altdeinstall: ${ALTERNATIVES_SRC}
 	@{ ${ECHO} 'if ${TEST} $${STAGE} = "DEINSTALL"; then'; \
 	${ECHO} 'if ${TEST} -x ${PKG_ALTERNATIVES}; then'; \
-	${ECHO} '${PKG_ALTERNATIVES} -s unregister ./+ALTERNATIVES'; \
+	${ECHO} '${PKG_ALTERNATIVES} -gs unregister ./+ALTERNATIVES'; \
 	${ECHO} 'fi'; \
 	${ECHO} '${RM} -f ./+ALTERNATIVES'; \
 	${ECHO} 'fi'; \
