@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/20 09:10:11 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/20 10:29:22 rh Exp $
 #
 
 .include "../../x11/gnome-core/Makefile.common"
@@ -23,6 +23,7 @@ DISTINFO_FILE=	${.CURDIR}/../../x11/gnome-core/distinfo
 PATCHDIR=	${.CURDIR}/../../x11/gnome-core/patches
 
 BUILD_DIRS=	${WRKSRC}/panel
+BUILD_DIRS+=	${WRKSRC}/applets
 
 .include "../../archivers/bzip2/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
