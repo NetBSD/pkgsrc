@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/03/31 19:20:26 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/10 23:31:39 rh Exp $
 #
 
-DISTNAME=	gnustep-make-1.8.0
+DISTNAME=	gnustep-make-1.9.1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	ftp://ftp.gnustep.org/pub/gnustep/core/
 
@@ -11,14 +11,11 @@ COMMENT=	GNUstep makefile package
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		yes
-USE_GNU_TOOLS+=		make
-USE_X11=		YES
-MAKEFILE=		GNUmakefile
-GNU_CONFIGURE=		YES
-GNU_CONFIGURE_PREFIX=	${PREFIX}/share/GNUstep
-GNUSTEP_HOST_CPU=	${MACHINE_GNU_ARCH:S/i386/ix86/}
-CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_SCRIPT}"
+USE_BUILDLINK3=	yes
+USE_X11=	yes
+CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL_SCRIPT}"
+
+.include "gnustep.mk"
 
 post-patch:
 	${CP} ${WRKSRC}/target.make ${WRKSRC}/target.make.bak
@@ -30,6 +27,7 @@ post-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/share/GNUstep/Local/Applications
 	${INSTALL_DATA_DIR} ${PREFIX}/share/GNUstep/Local/Library
 	${INSTALL_DATA_DIR} ${PREFIX}/share/GNUstep/Local/Library/Bundles
+	${INSTALL_DATA_DIR} ${PREFIX}/share/GNUstep/Local/Library/Frameworks
 	${INSTALL_DATA_DIR} ${PREFIX}/share/GNUstep/Local/Library/Headers
 	${INSTALL_DATA_DIR} ${PREFIX}/share/GNUstep/Local/Library/Libraries
 
