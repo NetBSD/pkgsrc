@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/06/17 12:58:22 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2002/07/19 11:20:30 martti Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -52,8 +52,8 @@ post-install:
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | \
 		${SED} -e 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
-	${INSTALL_DATA} ${WRKDIR}/named ${PREFIX}/etc/rc.d/named9
-	${INSTALL_DATA} ${WRKDIR}/lwresd ${PREFIX}/etc/rc.d/lwresd
+	${INSTALL_SCRIPT} ${WRKDIR}/named ${PREFIX}/etc/rc.d/named9
+	${INSTALL_SCRIPT} ${WRKDIR}/lwresd ${PREFIX}/etc/rc.d/lwresd
 
 .include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
