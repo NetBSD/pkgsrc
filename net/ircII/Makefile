@@ -3,7 +3,7 @@
 # Date created:		18 Oct 1994
 # Whom:			torstenb
 #
-# $NetBSD: Makefile,v 1.8 1998/02/20 07:23:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1998/02/23 15:18:05 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -20,36 +20,17 @@ GNU_CONFIGURE=		yes
 
 MAN1=			ircII.1 ircbug.1
 
-# Include local make config file here.  It is essential to have this
-# precede any override targets (those that override defaults in
-# <bsd.port.mk> that test variables that may be set here.  Note that
-# this inclusion is otherwise redundant, since <bsd.port.mk> includes
-# <bsd.own.mk>, which includes it.
-
-OPSYS!=			uname -s
-.if (${OPSYS} == "FreeBSD")
-.if exists(/etc/make.conf)
-.include "/etc/make.conf"
-.endif
-.else
-.if exists(/etc/mk.conf)
-.include "/etc/mk.conf"
-.endif
-.endif
-
-.if defined(MANZ)
-DCOMPRESSUFFIX=		.gz
-.else
-DCOMPRESSUFFIX=
-.endif
-
 PLIST_SRC=		${WRKDIR}/PLIST.tmp
 
 pre-install:
-	sed "s,@.GZ@,${DCOMPRESSUFFIX}," ${PKGDIR}/PLIST \
-		> ${PLIST_SRC}
+	@(if [ "X${MANZ}" != X"" ]; then \
+		GZSUFFIX=.gz; \
+	fi; \
+	${SED} -e 's|@.GZ@|'$$GZSUFFIX'|g' ${PKGDIR}/PLIST > ${PLIST_SRC})
 
 post-install:
-	find ${PREFIX}/lib/irc/help -type f -exec gzip -9 {} \;
+	@if [ "X${MANZ}" != X"" ]; then \
+		find ${PREFIX}/lib/irc/help -type f -exec gzip -9 {} \;; \
+	fi
 
 .include <bsd.port.mk>
