@@ -1,35 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/08/02 18:10:50 jlam Exp $
 bin/onsgmls
 bin/osgmlnorm
 bin/ospam
 bin/ospcat
 bin/ospent
 bin/osx
-share/doc/OpenSP/AUTHORS
-share/doc/OpenSP/COPYING
-share/doc/OpenSP/ChangeLog
-share/doc/OpenSP/NEWS
-share/doc/OpenSP/archform.htm
-share/doc/OpenSP/build.htm
-share/doc/OpenSP/catalog.htm
-share/doc/OpenSP/charset.htm
-share/doc/OpenSP/features.htm
-share/doc/OpenSP/generic.htm
-share/doc/OpenSP/ideas.htm
-share/doc/OpenSP/index.htm
-share/doc/OpenSP/new.htm
-share/doc/OpenSP/nsgmls.htm
-share/doc/OpenSP/sgmldecl.htm
-share/doc/OpenSP/sgmlnorm.htm
-share/doc/OpenSP/sgmlsout.htm
-share/doc/OpenSP/spam.htm
-share/doc/OpenSP/spcat.htm
-share/doc/OpenSP/spent.htm
-share/doc/OpenSP/sx.htm
-share/doc/OpenSP/sysdecl.htm
-share/doc/OpenSP/sysid.htm
-share/doc/OpenSP/xml.htm
-share/doc/OpenSP/xmlwarn.htm
 include/OpenSP/Allocator.h
 include/OpenSP/ArcEngine.h
 include/OpenSP/Attribute.h
@@ -193,9 +168,33 @@ share/OpenSP/japan.dcl
 share/OpenSP/opensp-implied.dcl
 share/OpenSP/xml.dcl
 share/OpenSP/xml.soc
+share/doc/OpenSP/AUTHORS
+share/doc/OpenSP/COPYING
+share/doc/OpenSP/ChangeLog
+share/doc/OpenSP/NEWS
+share/doc/OpenSP/archform.htm
+share/doc/OpenSP/build.htm
+share/doc/OpenSP/catalog.htm
+share/doc/OpenSP/charset.htm
+share/doc/OpenSP/features.htm
+share/doc/OpenSP/generic.htm
+share/doc/OpenSP/ideas.htm
+share/doc/OpenSP/index.htm
+share/doc/OpenSP/new.htm
+share/doc/OpenSP/nsgmls.htm
+share/doc/OpenSP/sgmldecl.htm
+share/doc/OpenSP/sgmlnorm.htm
+share/doc/OpenSP/sgmlsout.htm
+share/doc/OpenSP/spam.htm
+share/doc/OpenSP/spcat.htm
+share/doc/OpenSP/spent.htm
+share/doc/OpenSP/sx.htm
+share/doc/OpenSP/sysdecl.htm
+share/doc/OpenSP/sysid.htm
+share/doc/OpenSP/xml.htm
+share/doc/OpenSP/xmlwarn.htm
 share/locale/de/LC_MESSAGES/sp.mo
 share/locale/sv/LC_MESSAGES/sp.mo
+@dirrm share/doc/OpenSP
 @dirrm share/OpenSP
 @dirrm include/OpenSP
-@dirrm share/doc/OpenSP
-@dirrm doc
