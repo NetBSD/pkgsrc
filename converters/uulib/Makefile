@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/06/10 16:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/10 16:42:50 wiz Exp $
 #
 
 DISTNAME=       uudeview-0.5.15
@@ -33,7 +33,6 @@ do-install:
 		< ${FILESDIR}/uulib.3 > ${WRKSRC}/uulib.3
 	${INSTALL_MAN} ${WRKSRC}/uulib.3 ${PREFIX}/man/man3
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uulib
-	@${INSTALL_MAN} ${FILESDIR}/porting.notes ${PREFIX}/share/doc/uulib
 .for docfile in ${DOCFILES}
 	@${INSTALL_MAN} ${WRKSRC}/../${docfile} ${PREFIX}/share/doc/uulib
 .endfor

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/01/04 15:10:23 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/06/10 16:42:51 wiz Exp $
 include/uu.h
 lib/libuu.a
 lib/libuu.la
@@ -11,7 +11,6 @@ share/doc/uulib/Makefile
 share/doc/uulib/README
 share/doc/uulib/binhex.fig
 share/doc/uulib/library.ltx
-share/doc/uulib/porting.notes
 share/doc/uulib/structure.fig
 share/doc/uulib/td-v1.c
 share/doc/uulib/td-v2.c
