@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/05 11:17:11 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/10 00:56:54 seb Exp $
 bin/dirsearch
 bin/newaid
 bin/rex
@@ -128,10 +128,6 @@ include/${PKGNAME}/xdr_suio.h
 include/${PKGNAME}/xdrmisc.h
 include/${PKGNAME}/xhinfo.h
 include/sfs.h
-info/sfs.info
-info/sfs.info-1
-info/sfs.info-2
-info/sfs.info-3
 lib/libsfs.a
 lib/sfs
 lib/${PKGNAME}/aiod
