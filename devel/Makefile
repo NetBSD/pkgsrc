@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2001/02/10 04:42:38 jtb Exp $
+# $NetBSD: Makefile,v 1.167 2001/02/12 04:42:26 jtb Exp $
 #
 
     SUBDIR += GConf
@@ -118,6 +118,7 @@
     SUBDIR += p5-LDAP
     SUBDIR += p5-MLDBM
     SUBDIR += p5-PV
+    SUBDIR += p5-Storage
     SUBDIR += p5-Term-ReadKey
     SUBDIR += p5-Time-HiRes
     SUBDIR += p5-TimeDate
