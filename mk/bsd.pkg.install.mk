@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.12 2001/12/18 19:54:00 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.13 2001/12/19 14:54:48 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -124,15 +124,16 @@ FILES_SUBST+=		CONF_FILES_PERMS=${CONF_FILES_PERMS:Q}
 FILES_SUBST+=		SUPPORT_FILES=${SUPPORT_FILES:Q}
 FILES_SUBST+=		SUPPORT_FILES_MODE=${SUPPORT_FILES_MODE}
 FILES_SUBST+=		SUPPORT_FILES_PERMS=${SUPPORT_FILES_PERMS:Q}
-FILES_SUBST+=		RCD_SCRIPTS=${RCD_SCRIPTS:Q}
-FILES_SUBST+=		RCD_SCRIPTS_MODE=${RCD_SCRIPTS_MODE}
-FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 
 # Default to not installing the rc.d scripts automatically.
 INSTALL_RCD_SCRIPTS?=	NO
 .if defined(INSTALL_RCD_SCRIPTS) && (${INSTALL_RCD_SCRIPTS} == NO)
-RCD_SCRIPTS:=		# empty
+FILES_SUBST+=		RCD_SCRIPTS=${RCD_SCRIPTS:Q}
+.else
+FILES_SUBST+=		RCD_SCRIPTS=
 .endif
+FILES_SUBST+=		RCD_SCRIPTS_MODE=${RCD_SCRIPTS_MODE}
+FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 
 # OWN_DIRS contains a list of directories for this package that should be
 #       created and should attempt to be destroyed by the INSTALL/DEINSTALL
