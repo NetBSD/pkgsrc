@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/10/30 07:56:09 agc Exp $
+$NetBSD: patch-aa,v 1.3 2004/05/23 23:28:29 danw Exp $
 
 --- makefile	2002/10/24 09:41:47	1.1
 +++ makefile	2002/10/24 09:42:36
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.2 2002/10/30 07:56:09 agc Exp $
  
  scheme$(EXE_EXT): $(OBJS) 
 -	$(CC) -o $@ $(DEBUG) $(OBJS) $(SYS_LIBS) 
-+	${LIBTOOL} --mode=link ${CC} -o $@ ${DEBUG} ${OBJS} ${SYS_LIBS} ${LIBS:.a=.la} -o scheme${EXE_EXT}
++	${LIBTOOL} --mode=link ${CC} ${DEBUG} ${OBJS} ${SYS_LIBS} ${LIBS:.a=.la} -o scheme${EXE_EXT}
  
  $(STATICLIBTARGET): $(OBJS)
 -	$(AR) $@ $(OBJS)
