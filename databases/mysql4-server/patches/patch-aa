@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/20 16:00:42 martti Exp $
+
+--- Makefile.in.orig	2003-12-14 21:24:01.000000000 +0000
++++ Makefile.in	2003-12-20 12:08:19.000000000 +0000
+@@ -210,11 +210,8 @@
+ 
+ # These are built from source in the Docs directory
+ EXTRA_DIST = INSTALL-SOURCE README COPYING 
+-SUBDIRS = . include @docs_dirs@ @readline_dir@ \
+-			@thread_dirs@ pstack @sql_client_dirs@ \
+-			@sql_server_dirs@ scripts man tests \
+-			BUILD @netware_dir@ os2 @libmysqld_dirs@ \
+-			@bench_dirs@ support-files @fs_dirs@ @tools_dirs@
++SUBDIRS = . include @thread_dirs@ pstack @sql_server_dirs@ \
++			tests @bench_dirs@ support-files
+ 
+ 
+ # Relink after clean
