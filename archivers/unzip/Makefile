@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/09/05 19:00:58 tron Exp $
+# $NetBSD: Makefile,v 1.44 2004/01/05 11:42:20 jlam Exp $
 
 DISTNAME=	unzip550
 PKGNAME=	unzip-5.50
@@ -18,7 +18,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/UnZip.html
 COMMENT=	List, test and extract compressed files in a ZIP archive
 
-USE_BUILDLINK2=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,6 +32,8 @@ MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz ${_ST
 MAKE_FLAGS=	CF="${CFLAGS} -I. -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz ${_STRIPFLAG_CC} ${LDFLAGS}"
 .endif
 
+INSTALLATION_DIRS=	bin man/man1 share/doc
+
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} unzip funzip unzipsfx ${PREFIX}/bin
 	${LN} -sf unzip ${PREFIX}/bin/zipinfo
@@ -37,8 +41,10 @@ do-install:
 	cd ${WRKSRC}/man && ${INSTALL_MAN} funzip.1 unzip.1 unzipsfx.1 \
 		zipgrep.1 zipinfo.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unzip
-	cd ${WRKSRC} && ${INSTALL_DATA} BUGS COPYING.OLD LICENSE README WHERE \
+	cd ${WRKSRC} && ${INSTALL_DATA} BUGS LICENSE README WHERE \
 		${PREFIX}/share/doc/unzip
+	cd ${WRKSRC} && ${INSTALL_DATA} COPYING.OLD \
+		${PREFIX}/share/doc/unzip/COPYING
 
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

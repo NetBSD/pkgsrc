@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2004/01/03 17:24:07 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2004/01/05 11:44:22 jlam Exp $
 #
 
 DISTNAME=	cvs-1.11.11
@@ -12,12 +12,14 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.cvshome.org/
 COMMENT=	Concurrent Versions System
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		USE_INET6
-USE_BUILDLINK2=		yes
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES" && 	\
 	empty(MACHINE_PLATFORM:MSunOS-5.[89]-*) && empty(MACHINE_PLATFORM:MLinux-*)
@@ -51,5 +53,5 @@ INFO_FILES=	cvs.info cvsclient.info
 USE_MAKEINFO=		yes
 TEXINFO_REQD?=		4.0
 
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

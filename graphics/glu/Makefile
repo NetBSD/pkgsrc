@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/11/28 18:41:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/05 11:47:33 jlam Exp $
 
 PKGNAME=		${DISTNAME:C/MesaLib/glu/}
 PKGREVISION=		3
@@ -9,10 +9,12 @@ COMMENT=		GLU polygon tesselation facility for Mesa
 CONFLICTS+=		Mesa-glx-[0-9]*
 CONFLICTS+=		Mesa<3.2.1
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 .include "../../graphics/Mesa/Makefile.common"
 
-USE_BUILDLINK2=		yes
-USE_X11BASE=		yes
+USE_BUILDLINK3=		yes
+USE_X11=		yes
 BUILD_DIRS=		${WRKSRC}/si-glu
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,9 +27,5 @@ post-install:
 		${INSTALL_DATA} $${hdr} ${PREFIX}/include/GL;		\
 	done
 
-.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# must be below bsd.pkg.mk to overwrite values
-PREFIX=		${LOCALBASE}
-X11PREFIX=	${LOCALBASE}
