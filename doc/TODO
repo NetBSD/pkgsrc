@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1244 2003/12/26 12:41:56 jmmv Exp $
+$NetBSD: TODO,v 1.1245 2003/12/26 18:28:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -242,6 +242,7 @@ Suggested package updates
 	o ngrep-1.41
 	o ns-flash-6.0.79
 	o nsd-1.2.3
+	o nut-9.6
 	o openh323-1.11.2
 	o openldap-2.1.25
 	o openoffice-1.1 [skrll]
