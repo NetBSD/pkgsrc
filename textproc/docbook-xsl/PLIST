@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/05/27 08:18:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/07/22 18:34:32 jmmv Exp $
 share/doc/docbook-xsl/ChangeLog
 share/doc/docbook-xsl/book.xsl
 share/doc/docbook-xsl/ch01s02.html
@@ -58,6 +58,12 @@ share/doc/docbook-xsl/fo/column.count.index.html
 share/doc/docbook-xsl/fo/column.count.lot.html
 share/doc/docbook-xsl/fo/column.count.of.index.html
 share/doc/docbook-xsl/fo/column.count.titlepage.html
+share/doc/docbook-xsl/fo/column.gap.back.html
+share/doc/docbook-xsl/fo/column.gap.body.html
+share/doc/docbook-xsl/fo/column.gap.front.html
+share/doc/docbook-xsl/fo/column.gap.index.html
+share/doc/docbook-xsl/fo/column.gap.lot.html
+share/doc/docbook-xsl/fo/column.gap.titlepage.html
 share/doc/docbook-xsl/fo/compact.list.item.spacing.html
 share/doc/docbook-xsl/fo/component.title.properties.html
 share/doc/docbook-xsl/fo/current.docid.html
@@ -338,6 +344,7 @@ share/doc/docbook-xsl/html/default.encoding.html
 share/doc/docbook-xsl/html/default.float.class.html
 share/doc/docbook-xsl/html/default.image.width.html
 share/doc/docbook-xsl/html/default.table.width.html
+share/doc/docbook-xsl/html/draft.mode.html
 share/doc/docbook-xsl/html/draft.watermark.image.html
 share/doc/docbook-xsl/html/ebnf.assignment.html
 share/doc/docbook-xsl/html/ebnf.statement.terminator.html
@@ -535,6 +542,8 @@ share/doc/docbook-xsl/html/show.comments.html
 share/doc/docbook-xsl/html/show.revisionflag.html
 share/doc/docbook-xsl/html/spacing.paras.html
 share/doc/docbook-xsl/html/stylesheet.result.type.html
+share/doc/docbook-xsl/html/suppress.footer.navigation.html
+share/doc/docbook-xsl/html/suppress.header.navigation.html
 share/doc/docbook-xsl/html/suppress.navigation.html
 share/doc/docbook-xsl/html/table.border.color.html
 share/doc/docbook-xsl/html/table.border.style.html
@@ -621,6 +630,7 @@ share/xsl/docbook/common/fi.xml
 share/xsl/docbook/common/fr.xml
 share/xsl/docbook/common/gentext.xsl
 share/xsl/docbook/common/he.xml
+share/xsl/docbook/common/hr.xml
 share/xsl/docbook/common/hu.xml
 share/xsl/docbook/common/id.xml
 share/xsl/docbook/common/it.xml
@@ -853,7 +863,6 @@ share/xsl/docbook/html/xref.xsl
 share/xsl/docbook/htmlhelp/ChangeLog
 share/xsl/docbook/htmlhelp/htmlhelp-common.xsl
 share/xsl/docbook/htmlhelp/htmlhelp.xsl
-share/xsl/docbook/htmlhelp/langcodes.xml
 share/xsl/docbook/htmlhelp/profile-htmlhelp-common.xsl
 share/xsl/docbook/htmlhelp/profile-htmlhelp.xsl
 share/xsl/docbook/images/ChangeLog
@@ -991,6 +1000,12 @@ share/xsl/docbook/params/column.count.front.xml
 share/xsl/docbook/params/column.count.index.xml
 share/xsl/docbook/params/column.count.lot.xml
 share/xsl/docbook/params/column.count.titlepage.xml
+share/xsl/docbook/params/column.gap.back.xml
+share/xsl/docbook/params/column.gap.body.xml
+share/xsl/docbook/params/column.gap.front.xml
+share/xsl/docbook/params/column.gap.index.xml
+share/xsl/docbook/params/column.gap.lot.xml
+share/xsl/docbook/params/column.gap.titlepage.xml
 share/xsl/docbook/params/compact.list.item.spacing.xml
 share/xsl/docbook/params/css.decoration.xml
 share/xsl/docbook/params/current.docid.xml
