@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/09/15 03:23:41 jlam Exp $
-
---- gtksheet/Makefile.in.orig	Fri Sep 10 19:57:36 1999
-+++ gtksheet/Makefile.in	Tue Sep 14 22:29:57 1999
+$NetBSD: patch-ab,v 1.2 2000/04/28 00:35:00 garbled Exp $
+--- gtksheet/Makefile.in.orig	Tue Apr 25 17:41:09 2000
++++ gtksheet/Makefile.in	Tue Apr 25 17:41:38 2000
 @@ -89,7 +89,7 @@
  VERSION = @VERSION@
  l = @l@
  
 -docdir = ${prefix}/doc/quicklist-${VERSION}/gtksheet
-+docdir = ${prefix}/share/doc/quicklist-${VERSION}/gtksheet
++docdir = ${prefix}/share/doc/quicklist/gtksheet
  
  docs = AUTHORS ChangeLog TODO BUGS CONTRIB COPYING README 
  
