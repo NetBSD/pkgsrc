@@ -1,3 +1,4 @@
+$NetBSD: patch-aq,v 1.2 2000/10/21 22:47:25 wiz Exp $
 --- sdr/src/Makefile.template.orig	Fri Sep  8 14:19:35 2000
 +++ sdr/src/Makefile.template	Fri Sep  8 14:20:04 2000
 @@ -88,7 +88,7 @@
