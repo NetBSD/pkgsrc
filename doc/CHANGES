@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3976 2003/12/05 00:26:38 uebayasi Exp $
+$NetBSD: CHANGES,v 1.3977 2003/12/05 08:46:05 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4865,7 +4865,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wv to 0.7.6nb2 [xtraeme 2003-12-04]
 	Updated GConf2 to 2.2.0nb4 [xtraeme 2003-12-04]
 	Updated autogen to 5.5.3nb4 [xtraeme 2003-12-04]
-	Updated bonovo-activation to 2.1.1nb4 [xtraeme 2003-12-04]
+	Updated bonobo-activation to 2.1.1nb4 [xtraeme 2003-12-04]
 	Updated buildtool-doc to 0.14nb1 [xtraeme 2003-12-04]
 	Updated coconut to 0.3.0nb7 [xtraeme 2003-12-04]
 	Updated gal2 to 0-0.0.7nb6 [xtraeme 2003-12-04]
