@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 13:41:02 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/04 16:02:36 taca Exp $
 # FreeBSD: ports/security/ruby-acl/Makefile,v 1.4 2000/12/26 04:13:28 knu Exp
 
 DISTNAME=	acl-1.0.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www2a.biglobe.ne.jp/~seki/ruby/
 COMMENT=	Ruby module to provide Access Control List checks
 
 DIST_SUBDIR=	ruby
-USE_RUBY=	yes
 USE_RUBY_RD=	yes
 
 do-build:
