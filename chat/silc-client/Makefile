@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/29 16:17:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/30 23:01:17 hubertf Exp $
 
 DISTNAME=		silc-client-0.6.6
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://ftp.silcnet.org/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -24,9 +25,7 @@ USE_BUILDLINK_ONLY=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.ifndef PKG_SYSCONFSUBDIR
-PKG_SYSCONFSUBDIR=	silc
-.endif
+PKG_SYSCONFSUBDIR?=	silc
 
 CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/silc/help \
 			--with-docdir=${PREFIX}/share/doc/silc \
