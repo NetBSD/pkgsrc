@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.3 2000/08/29 21:09:54 jwise Exp $
 --- Makefile.in.orig	Thu Jun  8 15:35:14 2000
 +++ Makefile.in	Tue Aug 29 16:32:25 2000
 @@ -35,7 +35,7 @@
