@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/09/19 09:04:29 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/20 19:51:53 jlam Exp $
 
 DISTNAME=		httpd-${APACHE_VERSION}
 PKGNAME=		apache-${APACHE_VERSION}
@@ -22,8 +22,7 @@ USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/shlibtool
-LIBTOOL_OVERRIDE+=	${WRKSRC}/srclib/apr/libtool
+LIBTOOL_OVERRIDE=	${WRKSRC}/srclib/apr/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
@@ -124,6 +123,8 @@ AP_CONF_FILE_SED+=	-e "s|^\(User[	 ]\).*|\1${APACHE_USER}|g"
 AP_CONF_FILE_SED+=	-e "s|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g"
 
 post-install:
+	${RM} ${PREFIX}/share/httpd/build/libtool
+	${INSTALL_SCRIPT} ${LIBTOOL} ${PREFIX}/share/httpd/build/libtool
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
 		${MAKE_PROGRAM} install-conf sysconfdir="${EGDIR}"
 	@cd ${EGDIR};							\
