@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.316 1999/08/19 07:32:57 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.317 1999/08/21 01:17:59 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -57,7 +57,7 @@ NOMANCOMPRESS?=		yes
 
 DEF_UMASK?=		0022
 CLEANDEPENDS?=		NO
-DEINSTALLDEPENDS?=	NO
+DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
 
 LOCALBASE?=		${DESTDIR}/usr/local
 X11BASE?=		${DESTDIR}/usr/X11R6
@@ -1534,23 +1534,24 @@ pkg-su-deinstall: uptodate-pkgtools
 	else								\
 		make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`;	\
 		${ECHO_MSG} "===>  Becoming root@`/bin/hostname` to deinstall ${PKGNAME}."; \
-		${SU_CMD} "cd ${.CURDIR}; $$make ${.MAKEFLAGS} root-deinstall"; \
+		${SU_CMD} "cd ${.CURDIR}; $$make ${.MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} root-deinstall"; \
 	fi
 
-root-deinstall:
+
+.if (${DEINSTALLDEPENDS} != "NO")
+root-install-flags+=	-R
+.endif
 .ifdef PKG_VERBOSE
-.if (${DEINSTALLDEPENDS} != "NO")
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -v -R ${PKGNAME} || ${TRUE}
-.else						# DEINSTALLDEPENDS = NO
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -v ${PKGNAME} || ${TRUE}
-.endif						# DEINSTALLDEPENDS != NO
-.else						# !PKG_VERBOSE
-.if (${DEINSTALLDEPENDS} != "NO")
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -R ${PKGNAME} || ${TRUE}
-.else						# DEINSTALLDEPENDS = NO
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} ${PKGNAME} || ${TRUE}
-.endif						# DEINSTALLDEPENDS != NO
-.endif						# PKG_VERBOSE
+root-install-flags+=	-v
+.endif
+
+root-deinstall:
+	${_PKG_SILENT}${_PKG_DEBUG} \
+	found=`${PKG_INFO} -e "${PKGNAME:C/-[^-]*$/-[0-9]*/}" || ${TRUE}` ; \
+	if [ "$$found" != "" ]; then \
+		${ECHO_CMD} ${PKG_DELETE} ${root-install-flags} $$found || ${TRUE} ; \
+		${PKG_DELETE} ${root-install-flags} $$found || ${TRUE} ; \
+	fi
 	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
 .endif						# target(deinstall)
 
