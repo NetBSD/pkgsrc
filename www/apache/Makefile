@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1998/12/03 17:23:52 tv Exp $
+# $NetBSD: Makefile,v 1.26 1998/12/03 22:26:52 tv Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -9,7 +9,7 @@
 #
 
 DISTNAME=		apache_1.3.3
-PKGNAME=		apache-1.3.3.0
+PKGNAME=		apache-1.3.3.1
 CATEGORIES=		www
 MASTER_SITES=		http://www.apache.org/dist/ \
 			http://www.engelschall.com/sw/mod_ssl/distrib/ \
