@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2002/10/27 09:31:01 rh Exp $
+
+--- bonobo-activation/bonobo-activation-activate.c.orig	Sat Oct 19 15:29:58 2002
++++ bonobo-activation/bonobo-activation-activate.c	Sat Oct 19 15:30:18 2002
+@@ -37,6 +37,10 @@
+ #include <string.h>
+ #include <stdlib.h>
+ 
++#ifdef HAVE_LOCALE_H
++#include <locale.h>
++#endif
++
+ static Bonobo_ActivationEnvironment activation_environment;
+ 
+ /* FIXME: deprecated internal functions. Should we just remove?
