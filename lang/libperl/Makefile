@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/07/22 22:03:34 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2002/11/15 00:33:04 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -10,28 +10,25 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://language.perl.com/index.html
 COMMENT=	Perl DynaLoader as a shared object
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		# defined
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/DynaLoader
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
 
-BUILDLINK_DEPENDS.perl=	perl-${PERL5_DIST_VERS}*
+#BUILDLINK_DEPENDS.perl=	perl-${PERL5_DIST_VERS}*
 
 .include "../../mk/bsd.prefs.mk"
 
 MKPIC?=		yes
 
 .if ${OPSYS} == "NetBSD"
-.if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
+.  if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
 MKPIC=		no
-.endif
+.  endif
 .endif
 
 .if ${MKPIC} == "no"
-IGNORE=		${PKGNAME} needs shared objects
+IGNORE=		${PKGNAME} needs shared objects.
 .endif
-
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 do-build:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
@@ -40,5 +37,5 @@ do-build:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/DynaLoader.o ${PERL5_ARCHLIB}/DynaLoader_pic.o
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
