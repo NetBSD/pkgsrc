@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/02/27 02:58:06 snj Exp $
+$NetBSD: patch-ab,v 1.2 2004/12/03 13:02:18 wiz Exp $
 
---- src/linux/main_linux.c.orig	2003-10-22 18:31:57.000000000 +0200
-+++ src/linux/main_linux.c
+--- src/linux/main_linux.c.orig	Sat May  1 16:53:54 2004
++++ src/linux/main_linux.c	Thu Dec  2 01:58:01 2004
 @@ -3,6 +3,7 @@
  UNIX systems */
  
@@ -10,18 +10,25 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/02/27 02:58:06 snj Exp $
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
-@@ -234,6 +235,50 @@ static void printsonginfo(int current_fr
+@@ -342,12 +343,59 @@
+ static void printsonginfo(int current_frame, int total_frames, int limited)
+ {
     /*Why not printf directly?  Our termios hijinks for input kills the output*/
-    char *hi = (char *)malloc(255);
- 
 +
 +   /*
-+    * The new hijinks seem to cause trouble for NetBSD (\r sometimes
-+    * doesn't get printed), so I'm adding \r to the beginning of these
-+    * strings.  Suggested by Bruce J.A Nourish, implemented by David
-+    * Griffith.
++    * Once again, the termios hijinks cause trouble for NetBSD.  \r 
++    * sometimes doesn't get printed.  Following is a mostly complete 
++    * rewrite of the text output section as presented in my NetBSD 
++    * pkgsrc package for version 1.92i-mls.  The fix was suggested by 
++    * Bruce J.A. Nourish.  I'm David Griffith.
 +    */
 +
+    char *hi = (char *)malloc(255);
+    char blank[82]; 
+    memset(blank, ' ', 80);
+    blank[80] = '\r';
+    blank[81] = '\0';
+ 
 +   if (total_frames !=0) {
 +	if (limited) {
 +		snprintf(hi, 254, "\rPlaying track %d of %d, channels %c%c%c%c%c%c, %d/%d seconds, %d/%d frames\r",
@@ -37,36 +44,46 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/02/27 02:58:06 snj Exp $
 +		snprintf(hi, 254, "\rPlaying track %d of %d, channels %c%c%c%c%c%c, %d/? seconds, %d/? frames\r",
 +			nsf->current_song, nsf->num_songs,
 +			enabled[0]?'1':'-',      enabled[1]?'2':'-',
-+
-+                       enabled[2]?'3':'-',      enabled[3]?'4':'-',
-+                       enabled[4]?'5':'-',      enabled[5]?'6':'-',
-+                       (int)((float)(current_frame + nsf->playback_rate - 1)/(float)nsf->playback_rate),
-+                       current_frame);
-+       }
-+   } else {
-+       snprintf(hi, 254, "\rPlaying track %d of %d, channels %c%c%c%c%c%c, %d seconds, %d frames\r",
-+                       nsf->current_song, nsf->num_songs,
-+                       enabled[0]?'1':'-',      enabled[1]?'2':'-',
-+                       enabled[2]?'3':'-',      enabled[3]?'4':'-',
-+                       enabled[4]?'5':'-',      enabled[5]?'6':'-',
-+                       (int)((float)(current_frame + nsf->playback_rate - 1)/(float)nsf->playback_rate),
-+                       current_frame);
-+   }   
++			enabled[2]?'3':'-',      enabled[3]?'4':'-',
++			enabled[4]?'5':'-',      enabled[5]?'6':'-',
++			(int)((float)(current_frame + nsf->playback_rate - 1)/(float)nsf->playback_rate),
++			current_frame);
++	}
++  } else {
++	snprintf(hi, 254, "\rPlaying track %d of %d, channels %c%c%c%c%c%c, %d seconds, %d frames\r",
++		nsf->current_song, nsf->num_songs,
++		enabled[0]?'1':'-',      enabled[1]?'2':'-',
++		enabled[2]?'3':'-',      enabled[3]?'4':'-',
++		enabled[4]?'5':'-',      enabled[5]?'6':'-',
++		(int)((float)(current_frame + nsf->playback_rate - 1)/(float)nsf->playback_rate),
++		current_frame);
++  }   
++ 
 +
 +/*
-+ * This stuff doesn't seem to work.
++ * Not only does the following section do funny things to terminals, 
++ * it's a good example of how to use the trinary operator to make your 
++ * code very hard to understand.  Please don't use the trinary operator 
++ * when if-then-else will do.  
 + */
-+
-+/*
++#ifdef __REALLY_BIG_COMMENT__
     snprintf(hi, 254, 
     total_frames != 0 ? 
-    "Playing track %d of %d, channels %c%c%c%c%c%c, %d/%d seconds, %d/%d frames\r":
-@@ -249,7 +294,7 @@ static void printsonginfo(int current_fr
+    "Playing track %d/%d, channels %c%c%c%c%c%c, %d/%d sec, %d/%d frames\r":
+@@ -363,9 +411,16 @@
     current_frame,
     total_frames
     );
--
++#endif /* __REALLY_BIG_COMMENT__ */
++
+ 
++/*
++ * I'm not sure what this is supposed to do.  Under NetBSD it garbles 
++ * the screen, but not to the degree as the above commented-out code.
++/*
+    if(!(current_frame%10))
+       write(STDOUT_FILENO, (void *)blank, strlen(blank));
 +*/
+ 
     write(STDOUT_FILENO, (void *)hi, strlen(hi));
     free(hi);
- }
