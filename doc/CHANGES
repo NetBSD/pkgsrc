@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9021 2005/02/04 09:20:44 jlam Exp $
+$NetBSD: CHANGES,v 1.9022 2005/02/04 09:39:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -737,3 +737,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated firefox-bin-java to 1.1nb2 [tron 2005-02-03]
 	Updated firefox-gtk2-bin-java to 1.1nb2 [tron 2005-02-03]
 	Updated pkg_install to 20050204 [jlam 2005-02-04]
+	Updated powwow to 1.2.5 [adam 2005-02-04]
