@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2003/09/25 12:43:36 grant Exp $
+# $NetBSD: Makefile,v 1.89 2003/10/11 07:29:29 grant Exp $
 
 # Notes to package maintainers:
 #
@@ -32,6 +32,9 @@ NO_PKG_REGISTER=	# defined
 NO_PACKAGE=		Deinstallation is not permitted
 NO_TOOLS=		# defined
 PKG_PRESERVE=		# defined
+
+PLIST_SUBST+=		MANDIR=${MANDIR}
+PLIST_SUBST+=		PKG_TOOLS_BIN=${PKG_TOOLS_BIN}
 
 LIBNBCOMPAT_FILESDIR=	${.CURDIR}/../../pkgtools/libnbcompat/files
 LIBNBCOMPAT_SRCDIR=	${WRKDIR}/libnbcompat
@@ -69,6 +72,8 @@ post-install:
 PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 .if ${PREFIX} == "/usr"
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/share/man
+MANDIR=			share/
 .else
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
+MANDIR=			# empty
 .endif
