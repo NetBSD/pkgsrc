@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/17 21:48:01 grant Exp $
+# $NetBSD: Makefile,v 1.27 2003/08/02 21:38:11 seb Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -25,6 +25,9 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-Dunix=1
 CONFIGURE_ARGS=	--sysconfdir="${PKG_SYSCONFDIR}"
 
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	pspp.info
+
 PKG_SYSCONFSUBDIR=	pspp
 EGDIR=		${PREFIX}/share/examples/pspp
 CONF_FILES=	${EGDIR}/devices ${PKG_SYSCONFDIR}/devices
@@ -33,5 +36,4 @@ CONF_FILES+=	${EGDIR}/papersize ${PKG_SYSCONFDIR}/papersize
 CONF_FILES+=	${EGDIR}/ps-prologue ${PKG_SYSCONFDIR}/ps-prologue
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
