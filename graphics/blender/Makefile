@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2003/12/08 14:41:40 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/10 19:59:02 jschauma Exp $
 #
 
-DISTNAME=		blender-2.28
-PKGREVISION=		2
+DISTNAME=		blender-2.31
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
 			http://download.blender.org/source/
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://www.blender.org/
@@ -25,20 +23,14 @@ LDFLAGS+=		-lcrypto
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --without-ode
 
-PLIST_SRC=		${PKGDIR}/PLIST
-
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(BLENDER_INSTALL_DOC)
-MASTER_SITES+=		http://download.blender.org/documentation/
-DISTFILES+=		BlenderManual.html.tar.gz
-PLIST_SRC+=		${PKGDIR}/PLIST.doc
+BUILD_DEFS+=		BLENDER_USE_OGG BLENDER_USE_VORBIS
+BUILD_DEFS+=		BLENDER_USE_OPENAL BLENDER_USE_EXPPYTHON
+BUILD_DEFS+=		BLENDER_INSTALL_DOC
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/blender
-	cd ${WRKDIR}/html && ${PAX} -s,.*/CVS.*,, -s,.*/.xvpics.*,, \
-		-rw . ${PREFIX}/share/doc/html/blender
-	cd ${PREFIX}/share/doc/html/blender && ln -s book1.html index.html
+.if defined(BLENDER_INSTALL_DOC)
+DEPENDS+=		blender-doc:../../graphics/blender-doc
 .endif
 
 .if defined(BLENDER_USE_OGG)
