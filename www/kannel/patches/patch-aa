@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2002/08/25 21:52:11 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2005/01/24 13:59:47 wulf Exp $
 
---- utils/start-stop-daemon.c.orig	Mon Apr 23 16:52:29 2001
-+++ utils/start-stop-daemon.c	Sun Jul  7 21:28:04 2002
-@@ -34,8 +34,13 @@
+--- utils/start-stop-daemon.c.orig	2004-01-23 00:38:25.000000000 +1030
++++ utils/start-stop-daemon.c	2005-01-22 13:43:30.000000000 +1030
+@@ -90,8 +90,13 @@
  #elif defined(__FreeBSD__) || defined(__APPLE__)
  #define FreeBSD
  #else
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.4 2002/08/25 21:52:11 jlam Exp $
  
  #ifdef HAVE_HURH_H
  #include <hurd.h>
-@@ -607,6 +612,46 @@
+@@ -663,6 +668,46 @@
  }
  #endif /*FreeBSD*/
  
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.4 2002/08/25 21:52:11 jlam Exp $
  static void
  check(int pid)
  {
-@@ -641,7 +686,7 @@
+@@ -697,7 +742,7 @@
  
  /* WTA: this  needs to be an autoconf check for /proc/pid existance.
   */
@@ -72,7 +72,7 @@ $NetBSD: patch-aa,v 1.4 2002/08/25 21:52:11 jlam Exp $
  static void
  do_procinit(void)
  {
-@@ -859,7 +904,7 @@
+@@ -915,7 +960,7 @@
  		close(fd);
  		chdir("/");
  		umask(022); /* set a default for dumb programs */
