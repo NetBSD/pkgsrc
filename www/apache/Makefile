@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2004/04/25 06:21:11 snj Exp $
+# $NetBSD: Makefile,v 1.144 2004/04/26 20:06:58 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -112,30 +112,14 @@ APACHE_CUSTOM_CFLAGS+=	-D_FILE_OFFSET_BITS=64
 .  if ${OBJECT_FMT} == "ELF"
 LINK_LIBGCC_LDFLAGS=	${LINK_ALL_LIBGCC_HACK}
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
-# if we are using gcc3, we need to link against libgcc_s, too. This
+#
+# If we are using gcc3, we need to link against libgcc_s, too.  This
 # ensures modules can resolve symbols they require from gcc.
+#
 .    if !empty(CC_VERSION:Mgcc-3*)
-USE_GCC_SHLIB=		YES # defined
+USE_GCC_SHLIB=		YES
 LINK_LIBGCC_LDFLAGS+=	-lgcc_s
 .    endif
-.  endif
-.endif
-
-# Use operating system's db1 functions (where available)
-USE_DB185=		# defined
-
-.include "../../databases/db/buildlink3.mk"
-BUILDLINK_DEPENDS.db=	db>=2.7.7
-
-.if defined(BUILDLINK_PREFIX.db_DEFAULT)
-CONFIGURE_ENV+=		INCLUDES="${BUILDLINK_CPPFLAGS.db}"
-
-# on Solaris, we also need libdbm
-.  if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
-LDFLAGS+=		-Wl,${RPATH_FLAG}/usr/ucblib -L/usr/ucblib
-.  else
-CONFIGURE_ENV+=		LIBS="-ldb2"
 .  endif
 .endif
 
@@ -162,6 +146,10 @@ PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\\ user
 
 MAKE_ENV+=		CHMOD="${CHMOD}" CHOWN="${CHOWN}" XARGS="${XARGS}"
 MAKE_ENV+=		FIND="${FIND}" CHGRP="${CHGRP}"
+
+.include "../../devel/libmm/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 
 post-extract:
 	@${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
@@ -209,8 +197,5 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${CHMOD} ${NONBINMODE} ${PREFIX}/libexec/cgi-bin/printenv \
 	  ${PREFIX}/libexec/cgi-bin/test-cgi
-
-.include "../../devel/libmm/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
