@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.6 1998/11/01 13:51:09 hubertf Exp $
+$NetBSD: md5,v 1.7 1999/01/20 19:37:01 hubertf Exp $
 
 MD5 (sirc/sirc-2.211.tar.gz) = deff882465928be699a6324a5f788469
 MD5 (sirc/adcc.pl) = 7c41343ab4d5d7605c72bff91a9139e0
@@ -7,7 +7,7 @@ MD5 (sirc/avoice.pl) = 5a7c523788668886c6f189d25b8d0520
 MD5 (sirc/country.pl) = e3f67baf7f68d59d194af2fb904604e5
 MD5 (sirc/finger.pl) = 67c4e5df4dc1da7ddc905afda9b091fa
 MD5 (sirc/ftp.pl) = d3453d70c5c07b36f6be5a4fd4bce53a
-MD5 (sirc/howl.pl) = e0fcb3d1aad99ff4860766e0394e30d4
+MD5 (sirc/howl.pl) = 2d50aaa75c8051635b9dcf5fe0d35aed
 MD5 (sirc/hotmail.pl) = bb8002418de38f7f479677eed97fcfe4
 MD5 (sirc/lastlog.pl) = 9a77e86093bf559013542bd245b3ea32
 MD5 (sirc/nocolor.pl) = 2b8ff233506c5a1c8799b194270b6129
