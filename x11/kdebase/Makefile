@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2000/07/15 20:39:26 agc Exp $
+# $NetBSD: Makefile,v 1.68 2000/08/07 07:32:41 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -38,6 +38,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 PLIST_DIRS=	share/kde/applnk share/kde/apps/kappfinder \
 		share/kde/apps/kdisknav share/kde/icons share/kde/mimelnk
 
+IMAKEDIR=	${WRKDIR}/imake
 KDE_DIRS=	share/doc/kde/HTML/cs share/doc/kde/HTML/da \
 		share/doc/kde/HTML/de share/doc/kde/HTML/el \
 		share/doc/kde/HTML/fi share/doc/kde/HTML/fr \
@@ -56,6 +57,13 @@ PLIST_INIT=	${PKGDIR}/PLIST
 post-extract:
 	@${LN} -fs ${FILESDIR}/info_netbsd.cpp ${WRKSRC}/kcontrol/info
 	@${LN} -fs ${FILESDIR}/memory_netbsd.cpp ${WRKSRC}/kcontrol/info
+
+post-configure:
+	${MKDIR} ${IMAKEDIR}
+	${LN} -fs ${FILESDIR}/Imakefile ${IMAKEDIR}
+	cd ${IMAKEDIR} && \
+	${XMKMF} && ${MAKE} hasxdmauth >>${WRKSRC}/kdm/kdm-config.h
+	${RM} -rf ${IMAKEDIR}
 
 post-install:
 	@${CHMOD} u+s ${PREFIX}/bin/klock
