@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/02/14 18:51:58 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/17 17:53:45 jschauma Exp $
 #
 
 DISTNAME=		tor-0.0.9.4
@@ -64,6 +64,7 @@ post-install:
 		${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
 		${PREFIX}/share/examples/tor/tor-tsocks.conf
+	${INSTALL_DATA_DIR} ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/tor.pkgsrc.rc ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/tor
 
 .include "../../security/openssl/buildlink3.mk"
