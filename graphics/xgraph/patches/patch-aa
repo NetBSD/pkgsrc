@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/13 11:10:00 frueauf Exp $
+
+--- xgraph.h.dist	Mon Oct 12 18:17:31 1998
++++ xgraph.h	Mon Oct 12 18:18:08 1998
+@@ -34,6 +34,8 @@
+ extern void set_X();		/* Initializes X device    */
+ 
+ /* To make lint happy */
++#if 0
++/*  rindex() might be a macro, so doing these prototypes can lead to problems.  */
+ extern char *malloc();
+ extern char *realloc();
+ extern char *sprintf();
+@@ -41,6 +43,7 @@
+ extern char *strcat();
+ extern char *rindex();
+ extern char *index();
++#endif
+ extern void exit();
+ extern void free();
+ extern double atof();
