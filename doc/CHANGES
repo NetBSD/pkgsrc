@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5763 2004/04/28 15:55:43 wiz Exp $
+$NetBSD: CHANGES,v 1.5764 2004/04/29 04:52:34 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2276,3 +2276,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mplayer to 1.0rc4 [wiz 2004-04-28]
 	Updated mencoder to 1.0rc4 [wiz 2004-04-28]
 	Updated gmplayer to 1.0rc4 [wiz 2004-04-28]
+	Updated lsof to 4.71nb1 [atatat 2004-04-29]
