@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1008 2002/07/20 17:01:09 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1009 2002/07/21 11:53:18 mrauch Exp $
 #
 # This file is in the public domain.
 #
@@ -332,6 +332,7 @@ INSTALL_COOKIE=		${WRKDIR}/.install_done
 BUILD_COOKIE=		${WRKDIR}/.build_done
 PATCH_COOKIE=		${WRKDIR}/.patch_done
 PACKAGE_COOKIE=		${WRKDIR}/.package_done
+INTERACTIVE_COOKIE=	${WRKDIR}/.interactive_stage
 NULL_COOKIE=		${WRKDIR}/.null
 
 # New message digest defs
@@ -1337,6 +1338,7 @@ batch-check-distfiles:
 		[ ! -z "${HOMEPAGE}" ] && 				\
 			${ECHO} "*** See ${HOMEPAGE} for more details";	\
 		${ECHO};						\
+		${TOUCH} ${INTERACTIVE_COOKIE}				\
 		${FALSE} ;;						\
 	esac
 
@@ -2516,6 +2518,7 @@ ${CONFIGURE_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
 	@${ECHO} "*** The configuration stage of this package requires user interaction"
 	@${ECHO} "*** Please configure manually with \"cd ${PKGDIR} && ${MAKE} configure\""
+	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-configure
@@ -2525,6 +2528,7 @@ ${BUILD_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mbuild} == "build" && defined(BATCH)
 	@${ECHO} "*** The build stage of this package requires user interaction"
 	@${ECHO} "*** Please build manually with \"cd ${PKGDIR} && ${MAKE} build\""
+	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-build
@@ -2534,6 +2538,7 @@ ${INSTALL_COOKIE}:
 .if ${INTERACTIVE_STAGE:Minstall} == "install" && defined(BATCH)
 	@${ECHO} "*** The installation stage of this package requires user interaction"
 	@${ECHO} "*** Please install manually with \"cd ${PKGDIR} && ${MAKE} install\""
+	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-install
