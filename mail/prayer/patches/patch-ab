@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
+
+--- Makefile.orig	Wed Oct 30 13:56:30 2002
++++ Makefile
+@@ -12,7 +12,7 @@ endif
+ all:
+ 	(cd files; $(MAKE) all)
+ 	(cd prayer; $(MAKE) all)
+-	(cd accountd; $(MAKE) all)
++#	(cd accountd; $(MAKE) all)
+ 
+ cert:
+ 	(cd files; $(MAKE) cert)
+@@ -23,7 +23,7 @@ install-cert:
+ install:
+ 	(cd files;  $(MAKE) install)
+ 	(cd prayer; $(MAKE) install)
+-	(cd accountd; $(MAKE) install)
++# 	(cd accountd; $(MAKE) install)
+ ifeq ($(strip $(RPM_BUILD)), true)
+ 	(cd files;  $(MAKE) redhat-install-init.d)
+ endif
+@@ -44,7 +44,7 @@ clean:
+ 	rm -rf docs/*~ docs/\#*\#
+ 	(cd prayer; $(MAKE) clean)
+ 	(cd files; $(MAKE) clean)
+-	(cd accountd; $(MAKE) clean)
++# 	(cd accountd; $(MAKE) clean)
+ 
+ distclean: clean
+ 	(cd files; $(MAKE) distclean)
