@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/02 22:05:39 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/02/22 08:38:53 rh Exp $
 bin/gesym-config
 share/gEDA/sym/4000/4016-1.sym
 share/gEDA/sym/4000/4020-1.sym
@@ -7,6 +7,13 @@ share/gEDA/sym/4000/4046-1.sym
 share/gEDA/sym/4000/4051-1.sym
 share/gEDA/sym/4000/4066-1.sym
 share/gEDA/sym/4000/4538-1.sym
+share/gEDA/sym/4000/4000-1.sym
+share/gEDA/sym/4000/4001-1.sym
+share/gEDA/sym/4000/4013-1.sym
+share/gEDA/sym/74/74243-1.sym
+share/gEDA/sym/74/74280-1.sym
+share/gEDA/sym/74/74367-1.sym
+share/gEDA/sym/74/74673A-1.sym
 share/gEDA/sym/74/7400-1.sym
 share/gEDA/sym/74/7400-2.sym
 share/gEDA/sym/74/7401-1.sym
@@ -283,6 +290,18 @@ share/gEDA/sym/analog/voltage-1.sym
 share/gEDA/sym/analog/voltage-2.sym
 share/gEDA/sym/analog/voltage-3.sym
 share/gEDA/sym/analog/zener-1.sym
+share/gEDA/sym/analog/diode-2.sym
+share/gEDA/sym/analog/leddual-1.sym
+share/gEDA/sym/analog/leddual-2.sym
+share/gEDA/sym/analog/mc1496-1.sym
+share/gEDA/sym/analog/opamp-2.sym
+share/gEDA/sym/connector/DB25-2.sym
+share/gEDA/sym/connector/DIN41612C48-1.sym
+share/gEDA/sym/connector/DIN41612C56-1.sym
+share/gEDA/sym/connector/DIN41612C96-1.sym
+share/gEDA/sym/connector/connector2-1.sym
+share/gEDA/sym/connector/gpib-1.sym
+share/gEDA/sym/connector/pwrjack-1.sym
 share/gEDA/sym/connector/BNC-1.sym
 share/gEDA/sym/connector/DB25-1.sym
 share/gEDA/sym/connector/DB9-1.sym
@@ -409,6 +428,7 @@ share/gEDA/sym/io/in-1.sym
 share/gEDA/sym/io/input-1.sym
 share/gEDA/sym/io/out-1.sym
 share/gEDA/sym/io/output-1.sym
+share/gEDA/sym/lattice/isp2032-1.sym
 share/gEDA/sym/linear/lm135-1.sym
 share/gEDA/sym/linear/lm311-1.sym
 share/gEDA/sym/linear/lm324-1.sym
@@ -435,6 +455,14 @@ share/gEDA/sym/local/mt8870-1.sym
 share/gEDA/sym/local/osc-1.sym
 share/gEDA/sym/local/pwrxfmr-1.sym
 share/gEDA/sym/local/test.sym
+share/gEDA/sym/local/2phase-stepper-1.sym
+share/gEDA/sym/local/4phase-stepper6-1.sym
+share/gEDA/sym/local/4phase-stepper8-1.sym
+share/gEDA/sym/local/DM9368.sym
+share/gEDA/sym/local/L293.sym
+share/gEDA/sym/local/PCF8591.sym
+share/gEDA/sym/local/ULN2003-1.sym
+share/gEDA/sym/local/lt1108-1.sym
 share/gEDA/sym/maxim/adc0820-1.sym
 share/gEDA/sym/maxim/max038-1.sym
 share/gEDA/sym/maxim/max100-1.sym
@@ -470,6 +498,8 @@ share/gEDA/sym/memory/HM6264P15-1.sym
 share/gEDA/sym/memory/N82S23N-1.sym
 share/gEDA/sym/memory/am27S13D-1.sym
 share/gEDA/sym/memory/am9128-1.sym
+share/gEDA/sym/memory/24Cxx-1.sym
+share/gEDA/sym/memory/93Cx6-1.sym
 share/gEDA/sym/micro/8031.sym
 share/gEDA/sym/micro/8086-1.sym
 share/gEDA/sym/micro/8088-1.sym
@@ -481,6 +511,10 @@ share/gEDA/sym/micro/DS80C320.sym
 share/gEDA/sym/micro/pic16C74A-1.sym
 share/gEDA/sym/micro/pic16c505-1.sym
 share/gEDA/sym/micro/pic16c5x-1.sym
+share/gEDA/sym/micro/pic16C84.sym
+share/gEDA/sym/micro/sx28ac-1.sym
+share/gEDA/sym/micro/z80pio-1.sym
+share/gEDA/sym/misc/include-1.sym
 share/gEDA/sym/misc/12V-minus-1.sym
 share/gEDA/sym/misc/12V-plus-1.sym
 share/gEDA/sym/misc/3.3V-plus-1.sym
@@ -510,6 +544,7 @@ share/gEDA/sym/switch/switch-dip8-1.sym
 share/gEDA/sym/switch/switch-pushbutton-nc-1.sym
 share/gEDA/sym/switch/switch-pushbutton-spdt-1.sym
 share/gEDA/sym/switch/switch-spst-1.sym
+share/gEDA/sym/switch/switch-dip6-1.sym
 share/gEDA/sym/titleblock/title-A.sym
 share/gEDA/sym/titleblock/title-A0.sym
 share/gEDA/sym/titleblock/title-A1.sym
@@ -652,6 +687,7 @@ share/gEDA/system-commonrc
 @dirrm share/gEDA/sym/foot
 @dirrm share/gEDA/sym/idt
 @dirrm share/gEDA/sym/io
+@dirrm share/gEDA/sym/lattice
 @dirrm share/gEDA/sym/linear
 @dirrm share/gEDA/sym/local
 @dirrm share/gEDA/sym/maxim

@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/02 22:41:23 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/02/22 08:38:55 rh Exp $
 bin/gnetlist
+bin/gschem2pcb
 bin/mk_verilog_syms
 man/man1/gnetlist.1
 share/gEDA/system-gnetlistrc
 share/gEDA/scheme/gnet-PCB.scm
+share/gEDA/scheme/gnet-PCBboard.scm
 share/gEDA/scheme/gnet-allegro.scm
 share/gEDA/scheme/gnet-bom.scm
 share/gEDA/scheme/gnet-geda.scm
