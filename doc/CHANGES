@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4584 2004/01/23 22:53:43 recht Exp $
+$NetBSD: CHANGES,v 1.4585 2004/01/23 23:10:35 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -438,3 +438,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kopete to 0.8beta2 [jmmv 2004-01-23]
 	Updated elinks to 0.9.1 [recht 2004-01-23]
 	Updated curl to 7.11.0 [recht 2004-01-23]
+	Updated py-curl to 7.10.8 [recht 2004-01-23]
