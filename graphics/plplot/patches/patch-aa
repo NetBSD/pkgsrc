@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/02 05:40:33 jtb Exp $
+
+--- configure.orig	Sat Oct 21 14:25:03 2000
++++ configure
+@@ -2517,9 +2517,9 @@
+ 	fi
+     done
+     if test -n "$LIBSW"; then
+-	LIBS="$LIBS $LIBSW -ltk"
++	LIBS="$LIBS $LIBSW -ltk83"
+     else
+-	LIBS="$LIBS -ltk"
++	LIBS="$LIBS -ltk83"
+     fi
+     lib_path="$lib_path $TKLIBDIR"
+ 
+@@ -2557,9 +2557,9 @@
+ 	fi
+     done
+     if test -n "$LIBSW"; then
+-	LIBS="$LIBS $LIBSW -ltcl"
++	LIBS="$LIBS $LIBSW -ltcl83"
+     else
+-	LIBS="$LIBS -ltcl"
++	LIBS="$LIBS -ltcl83"
+     fi
+     lib_path="$lib_path $TCLLIBDIR"
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/12/02 05:40:33 jtb Exp $
+
+--- bindings/tk/tkMain.c.orig	Sat Oct 21 14:27:04 2000
++++ bindings/tk/tkMain.c
+@@ -201,7 +201,7 @@
+      * Initialize the Tk application.
+      */
+ 
+-    mainWindow = Tk_CreateMainWindow(interp, display, name, "Tk");
++    mainWindow = TkCreateMainWindow(interp, display, name, "Tk");
+     if (mainWindow == NULL) {
+ 	fprintf(stderr, "%s\n", interp->result);
+ 	exit(1);
