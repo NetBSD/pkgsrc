@@ -1,0 +1,25 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:58:00 agc Exp $
+
+MD5 (emacs-20.7.tar.gz) = c732cf5e668d4ac67d9418ecb103ecf5
+SHA1 (patch-aa) = 3b3fd76c058a0a46e0458338ce4c2327a238fb3d
+SHA1 (patch-ab) = f096c32ebe1174341c189dc3d1be3c4dcb0a0c75
+SHA1 (patch-ad) = dd21028a6360ccfb442ecced4c67717f60ea78a6
+SHA1 (patch-ae) = 7aaca5409a71f8a292ac57f828ee5ec7a07e3880
+SHA1 (patch-af) = 185c8e045236eb87fafa585288610bbd7f8ca01c
+SHA1 (patch-ag) = 14469c8907ea09395031594e7e0d0fe967b915d9
+SHA1 (patch-ah) = 2cfb03c57fad97db9eaaf9cda610f5d6c906aa4a
+SHA1 (patch-ai) = d1e5bb8fe797761f63fad42dbfb48834284f4533
+SHA1 (patch-aj) = 34490603ca6985fb6e02879c6fe50337d9ce31dd
+SHA1 (patch-ak) = 604f80fbf7d24ec7b732c7ac3cc99a07fb4a2eb6
+SHA1 (patch-ax) = 572eed7ad29d0b2a2e82e53c1acdfab39c12b1b2
+SHA1 (patch-ay) = bc91b0759ce0b3f3c1be542c043748472cb8d8fc
+SHA1 (patch-az) = 643f927b726d825238b14cd6a4b70e3a0722104e
+SHA1 (patch-bc) = ce6240227e8a7af506c908e0c199e17ce73d7f27
+SHA1 (patch-bf) = 8a55b30ec5992e0408b3693b4f31f7d9e931d731
+SHA1 (patch-bg) = 368d6da638b42afd563251ad2e155262d3f501d6
+SHA1 (patch-bh) = f59b14cc43d5977a5d80d5d1ab4e246df394d86a
+SHA1 (patch-bi) = d97512603b313ee730687e3b5680d45002ade51c
+SHA1 (patch-bj) = 6dba88723ee632b67fcf6a2dd2918e69034837e2
+SHA1 (patch-bk) = 7582e915a5bd9778259961e7fa842d5cdce3e85c
+SHA1 (patch-bl) = f2cd03713d7cdb6cb41119569031249d7d708b13
+SHA1 (patch-bm) = 148b3148587a31ec7a0674c5c1a359e8f09d952f

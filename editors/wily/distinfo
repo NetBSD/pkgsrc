@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:58:26 agc Exp $
+
+MD5 (wily-0.13.41.tgz) = 6fd6052741a4c3915982878405f752ca
+SHA1 (patch-aa) = 55be9c5a89e471f853d2c0f5090392d0d9de30cd
+SHA1 (patch-ab) = c4a7788468c6ca6a7abae7f0b195c1980e22968e
