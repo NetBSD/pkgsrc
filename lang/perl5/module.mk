@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.16 2003/09/13 13:53:31 jlam Exp $
+# $NetBSD: module.mk,v 1.17 2003/09/13 14:13:14 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -74,8 +74,11 @@ _PERL5_SITEVARS=							\
 
 .if !defined(_PERL5_SITEPREFIX)
 .  if exists(${PERL5})
+_PERL5_PREFIX!=	\
+	eval `${PERL5} -V:prefix 2>/dev/null`; ${ECHO} $$prefix
 _PERL5_SITEPREFIX!=	\
-	eval `${PERL5} -V:siteprefix 2>/dev/null`; ${ECHO} $${siteprefix}
+	eval `${PERL5} -V:siteprefix 2>/dev/null`; ${ECHO} $$siteprefix
+MAKEFLAGS+=	_PERL5_PREFIX="${_PERL5_PREFIX}"
 MAKEFLAGS+=	_PERL5_SITEPREFIX="${_PERL5_SITEPREFIX}"
 #
 # Repoint all of the site-specific variables to be under the perl5
@@ -96,10 +99,15 @@ _PERL5_SUB_${_var_}!=	\
 	${SED} -e "s,^${_PERL5_SITEPREFIX}/,,"
 MAKEFLAGS+=	_PERL5_SUB_${_var_}="${_PERL5_SUB_${_var_}}"
 .    endfor
+_PERL5_SUB_INSTALLSCRIPT!=	\
+	eval `${PERL5} -V:installscript 2>/dev/null`;			\
+	${ECHO} $$installscript |					\
+	${SED} -e "s,^${_PERL5_PREFIX}/,,"
+MAKEFLAGS+=	_PERL5_SUB_INSTALLSCRIPT="${_PERL5_SUB_INSTALLSCRIPT}"
 .  endif
 .endif
 
-.for _var_ in ${_PERL5_SITEVARS}
+.for _var_ in ${_PERL5_SITEVARS} INSTALLSCRIPT
 _PERL5_${_var_}=	${PREFIX}/${_PERL5_SUB_${_var_}}
 MAKE_FLAGS+=		${_var_}="${_PERL5_${_var_}}"
 .endfor
