@@ -1,0 +1,25 @@
+$NetBSD: patch-ag,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- conf/cupsd.conf.orig	Mon Aug 23 11:24:48 1999
++++ conf/cupsd.conf	Sun Nov 28 21:06:28 1999
+@@ -107,6 +107,20 @@
+ #ServerRoot /var/cups
+ 
+ #
++# ConfRoot: the root directory for the configuration files.
++# By default the compiled-in value
++#
++
++#ConfRoot /etc/cups
++
++#
++# ExecRoot: the root directory for the CUPS executables.
++# By default the compiled-in value
++#
++
++#ExecRoot /usr/pkg/libexec/cups
++
++#
+ # AccessLog: the access log file; if this does not start with a leading /
+ # then it is assumed to be relative to ServerRoot.  By default set to
+ # "logs/access_log"

@@ -1,0 +1,30 @@
+$NetBSD: patch-ap,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- locale/Makefile.orig	Mon Jun 21 14:47:44 1999
++++ locale/Makefile	Sun Nov 28 21:06:28 1999
+@@ -47,12 +47,12 @@
+ #
+ 
+ install:
+-	-$(MKDIR) $(LIBDIR)/locale
++	-$(BSD_INSTALL_DATA_DIR) $(LOCALEDIR)
+ 	for dir in $(LOCALES) ; do \
+-		if test ! -d $(LIBDIR)/locale/$$dir ; then \
+-			$(MKDIR) $(LIBDIR)/locale/$$dir ; \
++		if test ! -d $(LOCALEDIR)/$$dir ; then \
++			$(BSD_INSTALL_DATA_DIR) $(LOCALEDIR)/$$dir ; \
+ 		fi ; \
+-		$(CP) cups_$$dir $(LIBDIR)/locale/$$dir ; \
++		$(BSD_INSTALL_DATA) $$dir/cups_$$dir $(LOCALEDIR)/$$dir ; \
+ 	done
+ 
+ #
+@@ -64,7 +64,7 @@
+ 
+ translate:	translate.o ../cups/libcups.a
+ 	echo Linking $<...
+-	$(CC) $(LDFLAGS) -o translate translate.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o translate translate.o $(LIBS)
+ 
+ translate.o:	../cups/http.h
+ 

@@ -1,0 +1,33 @@
+$NetBSD: patch-at,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- scheduler/Makefile.orig	Mon Sep 27 14:21:21 1999
++++ scheduler/Makefile	Sun Nov 28 21:06:28 1999
+@@ -46,8 +46,8 @@
+ #
+ 
+ install:
+-	-$(MKDIR) $(SBINDIR)
+-	$(CP) cupsd $(SBINDIR)
++	-$(BSD_INSTALL_PROGRAM_DIR) $(SBINDIR)
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) cupsd $(SBINDIR)
+ 	-$(MKDIR) $(SERVERROOT)/interfaces
+ 	-$(MKDIR) $(SERVERROOT)/logs
+ 	-$(MKDIR) $(SERVERROOT)/ppd
+@@ -59,7 +59,7 @@
+ 
+ cupsd:	$(CUPSDOBJS) ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o cupsd $(CUPSDOBJS) $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o cupsd $(CUPSDOBJS) $(LIBS)
+ 
+ $(CUPSDOBJS):	auth.h classes.h client.h conf.h cupsd.h dirsvc.h job.h \
+ 		printers.h ../cups/cups.h ../cups/http.h ../cups/ipp.h \
+@@ -71,7 +71,7 @@
+ 
+ testspeed:	testspeed.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o testspeed testspeed.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o testspeed testspeed.o $(LIBS)
+ 
+ testspeed.o:	../cups/cups.h ../cups/http.h ../cups/ipp.h ../cups/language.h
+ 

@@ -1,0 +1,42 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- cgi-bin/Makefile.orig	Thu Jul  8 10:20:38 1999
++++ cgi-bin/Makefile	Sun Nov 28 21:06:28 1999
+@@ -45,8 +45,8 @@
+ #
+ 
+ install:
+-	-$(MKDIR) $(SERVERROOT)/cgi-bin
+-	$(CP) $(TARGETS) $(SERVERROOT)/cgi-bin
++	-$(BSD_INSTALL_PROGRAM_DIR) $(EXECDIR)/cgi-bin
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) $(TARGETS) $(EXECDIR)/cgi-bin
+ 
+ #
+ # classes.cgi
+@@ -54,7 +54,7 @@
+ 
+ classes.cgi:	classes.o ../Makedefs ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ classes.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o $@ classes.o $(LIBS)
+ 
+ $(OBJS):	../Makedefs ../cups/cups.h ../cups/ipp.h ../cups/language.h
+ 
+@@ -64,7 +64,7 @@
+ 
+ jobs.cgi:	jobs.o ../Makedefs ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ jobs.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o $@ jobs.o $(LIBS)
+ 
+ $(OBJS):	../Makedefs ../cups/cups.h ../cups/ipp.h ../cups/language.h
+ 
+@@ -74,7 +74,7 @@
+ 
+ printers.cgi:	printers.o ../Makedefs ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ printers.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o $@ printers.o $(LIBS)
+ 
+ $(OBJS):	../Makedefs ../cups/cups.h ../cups/ipp.h ../cups/language.h
+ 

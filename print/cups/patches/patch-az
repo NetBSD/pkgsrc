@@ -1,0 +1,22 @@
+$NetBSD: patch-az,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- scheduler/printers.c.orig	Wed Oct 13 12:50:13 1999
++++ scheduler/printers.c	Sun Nov 28 21:06:29 1999
+@@ -376,7 +376,7 @@
+   * Open the printer.conf file...
+   */
+ 
+-  sprintf(line, "%s/conf/printers.conf", ServerRoot);
++  sprintf(line, "%s/printers.conf", ConfRoot);
+   if ((fp = fopen(line, "r")) == NULL)
+     return;
+ 
+@@ -549,7 +549,7 @@
+   * Create the printers.conf file...
+   */
+ 
+-  sprintf(temp, "%s/conf/printers.conf", ServerRoot);
++  sprintf(temp, "%s/printers.conf", ConfRoot);
+   if ((fp = fopen(temp, "w")) == NULL)
+   {
+     LogMessage(LOG_ERROR, "Unable to save printers.conf - %s", strerror(errno));

@@ -1,0 +1,55 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- berkeley/Makefile.orig	Tue Jul 13 08:39:37 1999
++++ berkeley/Makefile	Sun Nov 28 21:06:28 1999
+@@ -45,10 +45,10 @@
+ #
+ 
+ install:
+-	-$(MKDIR) $(BINDIR)
+-	-$(MKDIR) $(SBINDIR)
+-	$(CP) lpq lpr lprm $(BINDIR)
+-	$(CP) lpc $(SBINDIR)
++	-$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
++	-$(BSD_INSTALL_PROGRAM_DIR) $(SBINDIR)
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) lpq lpr lprm $(BINDIR)
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) lpc $(SBINDIR)
+ 
+ #
+ # lpc
+@@ -56,7 +56,7 @@
+ 
+ lpc:	lpc.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o lpc lpc.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o lpc lpc.o $(LIBS)
+ 
+ lpc.o:	../cups/cups.h ../Makedefs
+ 
+@@ -66,7 +66,7 @@
+ 
+ lpq:	lpq.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o lpq lpq.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o lpq lpq.o $(LIBS)
+ 
+ lpq.o:	../cups/cups.h ../Makedefs
+ 
+@@ -76,7 +76,7 @@
+ 
+ lpr:	lpr.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o lpr lpr.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o lpr lpr.o $(LIBS)
+ 
+ lpr.o:	../cups/cups.h ../Makedefs
+ 
+@@ -86,7 +86,7 @@
+ 
+ lprm:	lprm.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o lprm lprm.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o lprm lprm.o $(LIBS)
+ 
+ lprm.o:	../cups/cups.h ../Makedefs
+ 
