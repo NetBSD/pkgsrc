@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2001/02/24 22:40:40 tron Exp $
+$NetBSD: patch-ag,v 1.5 2001/03/10 22:05:54 tron Exp $
 
 --- src/sysdeps.c.orig	Tue Dec 29 11:46:52 1998
 +++ src/sysdeps.c	Sat Feb 24 23:31:43 2001
@@ -44,7 +44,7 @@ $NetBSD: patch-ag,v 1.4 2001/02/24 22:40:40 tron Exp $
 +    struct addrinfo	hints, *res;
 +
 +    port = 0;
-+    c = strchr(host, ':');
++    c = strrchr(host, ':');
 +    if (c) {
 +	*c = '\0';
 +	if (c[1] >= '0' && c[1] <= '9')
