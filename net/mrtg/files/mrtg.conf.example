@@ -1,4 +1,4 @@
-#	$NetBSD: mrtg.conf.example,v 1.2 2001/06/19 12:32:17 hubertf Exp $
+#	$NetBSD: mrtg.conf.example,v 1.3 2001/11/07 18:26:50 bouyer Exp $
 
 WorkDir: @PREFIX@/share/httpd/htdocs/mrtg
 Refresh: 300
@@ -107,3 +107,17 @@ Legend4[load]:
 LegendI[load]: &nbsp;
 LegendO[load]: 
 options[load]: nopercent,gauge
+
+Target[cputemp]: `@PREFIX@/libexec/envstat2mrtg Temp\ 1`
+MaxBytes[cputemp]: 20000
+Title[cputemp]: CPU temperature
+PageTop[cputemp]: <H1>CPU temperature</H1> 
+YLegend[cputemp]: deg. celius (x100)
+ShortLegend[cputemp]: deg. celius (x100)
+Legend1[cputemp]: CPU temperature (deg. cel. x100)
+Legend2[cputemp]:
+Legend3[cputemp]: Maximal 5 Minute temperature
+Legend4[cputemp]:
+LegendI[cputemp]: &nbsp;
+LegendO[cputemp]:
+options[cputemp]: nopercent,gauge

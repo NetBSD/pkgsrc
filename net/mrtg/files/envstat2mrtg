@@ -1,0 +1,73 @@
+#! @PREFIX@/bin/perl
+#	$NetBSD: envstat2mrtg,v 1.1 2001/11/07 18:26:50 bouyer Exp $
+
+if (@ARGV == 1)
+{
+	open(CMDOUT, "envstat -n0 -s '@ARGV[0]'|");
+	$line = <CMDOUT>;
+	chop $line;
+	if ($line =~ m|^[\s\t]+(\w+)$|)
+	{
+		print "$1\n";
+	}
+	elsif ($line =~ m|^[\s\t]+(\w+\.\w+)$|)
+	{
+		$val = $1  * 100;
+		print "$val\n";
+	}
+	else
+	{
+		print "0\n";
+	}
+	print "0\n";
+	&end();
+}
+
+if (@ARGV == 2)
+{
+	open(CMDOUT, "envstat -n0 -s '@ARGV[0],@ARGV[1]'|");
+	$line = <CMDOUT>;
+	if ($line =~ m|^[\s\t]+(\w+)[\s\t]+(\w+)$|)
+	{
+		print "$1\n";
+		print "$2\n";
+	}
+	elsif ($line =~ m|^[\s\t]+(\w+\.\w+)[\s\t]+(\w+\.\w+)$|)
+	{
+		$val = $1 * 100;
+		print "$val\n";
+		$val = $2 * 100;
+		print "$val\n";
+	}
+	else
+	{
+		print "0\n";
+		print "0\n";
+	}
+	&end();
+}
+
+print STDERR
+	"usage: envstat2mrtg sens1 [sens2]\n";
+exit(1);
+
+sub end
+{
+	open(UP, "uptime|");
+	while($line = <UP>)
+	{
+		chop $line;
+		if ($line =~ m|^.*up\s+(.+),\s+\d+\suser.*|)
+		{
+			print "$1\n";
+		}
+	}
+	close(UP);
+	open(HOST, "hostname -s|");
+	while (<HOST>)
+	{
+		print $_;
+	}
+	exit(0);
+}
+

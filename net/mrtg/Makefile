@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/06/20 14:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2001/11/07 18:26:50 bouyer Exp $
 #
 
 DISTNAME=	mrtg-2.9.17
@@ -41,6 +41,8 @@ post-build:
 	    >${WRKDIR}/netstat2mrtg
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/sys2mrtg \
 	    >${WRKDIR}/sys2mrtg
+	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/envstat2mrtg \
+	    >${WRKDIR}/envstat2mrtg
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/mrtg
@@ -60,7 +62,7 @@ do-install:
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/mrtg; \
 	done
 	${INSTALL_DATA} ${WRKDIR}/mrtg.conf.example ${PREFIX}/etc/mrtg
-	for FILE in netstat2mrtg sys2mrtg; do \
+	for FILE in netstat2mrtg sys2mrtg envstat2mrtg; do \
 	  ${INSTALL_SCRIPT} ${WRKDIR}/$$FILE ${PREFIX}/libexec; \
 	done
 	${INSTALL_DATA_DIR} ${PERL5_SITELIB}
