@@ -1,0 +1,9 @@
+--- server/Makefile.orig	Fri Jul 31 03:38:53 1998
++++ server/Makefile	Fri Jul 31 03:39:33 1998
+@@ -7,3 +7,5 @@
+ 
+-EXTRAFLAGS = -g -Wall -DLIFE -DLIFEFREQ=300
++EXTRAFLAGS = -g -Wall -DLIFE -DLIFEFREQ=300 -DTANKDIR=\"$(TANKDIR)\"
++
++TANKDIR= $(X11BASE)/share/tanked
+ 
