@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.7 2005/02/10 11:26:00 sketch Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.8 2005/02/10 13:39:15 grant Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -136,7 +136,7 @@
       <programlisting>&lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;</programlisting>
     
       <para> Please note that the <quote>pre-req-package-name</quote>
-        may include any of the wildcard version numbers recognised by
+        may include any of the wildcard version numbers recognized by
         &man.pkg.info.1;.  </para>
     
       <orderedlist>
