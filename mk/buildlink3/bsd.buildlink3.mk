@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.30 2003/08/30 10:22:00 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.31 2003/08/30 10:35:53 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -422,12 +422,28 @@ CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 # The caching code, which greatly speeds up the build process, works only
 # on certain platforms.
 #
-_BLNK_SEED_CACHE?=	# passthru transform block
 _BLNK_CACHE_ALL=	# empty
 _BLNK_CACHE_ALL+=	Darwin-6*-*
 _BLNK_CACHE_ALL+=	IRIX-*-*
 _BLNK_CACHE_ALL+=	NetBSD-1.[5-9]*-*
 _BLNK_CACHE_ALL+=	SunOS-[25].[89]-*
+
+# There are three different parts we can add to the common transforming
+# cache to speed things up:
+#
+#	passthru	automatically accept certain options without
+#			further checking
+#
+#	transform	change -[IL]{${X11BASE},${LOCALBASE},${DEPOTBASE}/*}
+#			to the correct ${BUILDLINK_DIR} reference
+#
+#	block		block certain options without further checking
+#
+# Seeding the cache appropriately lets us handle large classes of options
+# without having to go through the wrapper logic file, which generates
+# a cache hit for every single option and bloats the cache quite bit more.
+#
+_BLNK_SEED_CACHE?=	passthru # transform block
 
 .for _pattern_ in ${_BLNK_CACHE_ALL}
 .  if !empty(MACHINE_PLATFORM:M${_pattern_})
