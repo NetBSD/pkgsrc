@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1008 2003/11/08 10:15:20 xtraeme Exp $
+$NetBSD: TODO,v 1.1009 2003/11/08 14:59:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -136,6 +136,7 @@ Suggested package updates
 	o awstats-5.9
 	o balsa-1.4.4
 	o bitlbee-0.81a [xtraeme]
+	o bkedit-0.6.22
 	o blender-2.30
 	o bzflag-1.7g2
 	o centericq-4.9.8
@@ -291,7 +292,6 @@ Suggested package updates
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
 	o opera-7.21
-	o oss-3.9.8b
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
