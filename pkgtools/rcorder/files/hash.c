@@ -1,4 +1,4 @@
-/*	$NetBSD: hash.c,v 1.1.1.1 2004/08/27 01:49:16 schmonz Exp $	*/
+/*	$NetBSD: hash.c,v 1.2 2004/08/27 03:06:07 jlam Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -69,11 +69,13 @@
  * SUCH DAMAGE.
  */
 
-#include <nbcompat.h>
-
 #ifdef MAKE_BOOTSTRAP
-static char rcsid[] = "$NetBSD: hash.c,v 1.1.1.1 2004/08/27 01:49:16 schmonz Exp $";
+static char rcsid[] = "$NetBSD: hash.c,v 1.2 2004/08/27 03:06:07 jlam Exp $";
 #else
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
@@ -81,7 +83,7 @@ static char rcsid[] = "$NetBSD: hash.c,v 1.1.1.1 2004/08/27 01:49:16 schmonz Exp
 #if 0
 static char sccsid[] = "@(#)hash.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: hash.c,v 1.1.1.1 2004/08/27 01:49:16 schmonz Exp $");
+__RCSID("$NetBSD: hash.c,v 1.2 2004/08/27 03:06:07 jlam Exp $");
 #endif
 #endif /* not lint */
 #endif
