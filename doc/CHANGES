@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.176 2002/10/06 02:41:29 heinz Exp $
+$NetBSD: CHANGES,v 1.177 2002/10/06 03:13:53 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3125,3 +3125,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated logsurfer to 1.5.2 [tron 2002-10-05]
 	Added aquaified-0.30 [mrg 2002-10-05]
 	Updated p5-Net-DNS to 0.29 [heinz 2002-10-06]
+	Added p5-Digest-Nilsimsa-0.06 [heinz 2002-10-06]
