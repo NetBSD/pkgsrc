@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2002/09/23 22:24:16 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2003/07/07 21:57:50 jtb Exp $
 
---- Configure.orig	Fri Apr 27 09:51:44 2001
+--- Configure.orig
 +++ Configure
-@@ -169,35 +169,9 @@
+@@ -187,35 +187,7 @@
  pth="\
    /bin\
    /usr/bin\
@@ -26,8 +26,7 @@ $NetBSD: patch-aa,v 1.7 2002/09/23 22:24:16 jlam Exp $
 -  /bsd43/bin\
 -  /opt/ansic/bin\
 -  /usr/ccs/bin\
-+  $LOCALBASE/bin\
-   /usr/lib\
+-  /usr/lib\
 -  /usr/ucblib\
 -  /lib\
 -  /usr/ccs/lib\
@@ -36,11 +35,11 @@ $NetBSD: patch-aa,v 1.7 2002/09/23 22:24:16 jlam Exp $
 -  /usr/libexec\
 -  /usr/openwin/bin\
 -  /usr/local/bin\
-+  $LOCALBASE/lib\
++  $LOCALBASE/bin\
  "
  # /usr/openwin/bin added for xmkmf
  
-@@ -272,7 +246,7 @@
+@@ -290,7 +262,7 @@
  ==========================================================================
  I know of the following Operating Systems
  EOM
@@ -49,16 +48,56 @@ $NetBSD: patch-aa,v 1.7 2002/09/23 22:24:16 jlam Exp $
    . ./display
    echo $n ..."Any of these apply ? $c"
    dflt=$osname; . ./myread
-@@ -308,7 +282,7 @@
- #   Modifications for pretty name and asm file
+@@ -302,20 +274,26 @@
+ #   The asm file used (if any)
  #
- case "$osname" in
--  cygwin*|linux|freebsd|os2) pretty="$pretty running $osname";;
-+  cygwin*|linux|freebsd|netbsd|os2) pretty="$pretty running $osname";;
-   nextstep) pretty="$pretty running $osname";
-             if test "$arch" = m68k; then asmarch=none; fi ;;
+ case "$arch" in
+-  sparc)         asmarch=sparcv8_micro; pretty=Sparc ;;
++  sparc)         asmarch=sparcv8_micro; pretty=SPARC ;;
+   sparcv7)       asmarch=$arch;         pretty=SparcV7 ;;
+   sparcv8_micro) asmarch=$arch;         pretty=MicroSparc ;;
+   sparcv8_super) asmarch=$arch;         pretty=SuperSparc ;;
+   sparcv9)       asmarch=sparcv8_micro; pretty=UltraSparc ;;
++  sparc64)       asmarch=none;          pretty=UltraSPARC ;;
+   m68k)          asmarch=$arch;         pretty="MC680x0, x>=2" ;;
+   i?86)          asmarch=ix86 ;         pretty=$arch ;;
+-  hppa)          asmarch=none ;         pretty=HP
++  hppa)          asmarch=none ;         pretty=HPPA
+         case "$osname-`uname -r`" in
+         hpux-?.09.*)  asmarch=none  ;;
+         hpux-?.10.*)  asmarch=$arch ;;
+         esac ;;
+   alpha)         asmarch=$arch;         pretty=Alpha ;;
+-  mips)          asmarch=none;          pretty=Mips ;;
++  arm)           asmarch=$arch;         pretty=ARM ;;
++  mips)          asmarch=none;          pretty=MIPS ;;
++  powerpc)       asmarch=none;          pretty=PowerPC ;;
++  sh3)           asmarch=none;          pretty=SH-3 ;;
++  sh5)           asmarch=none;          pretty=SH-5 ;;
++  vax)           asmarch=none;          pretty=VAX ;;
+   fx2800)        asmarch=none;          pretty="Alliant FX/2800" ;;
+   none)          asmarch=none;          pretty="unknown" ;;
+   *)             asmarch=none;          pretty=$arch
+@@ -329,6 +307,9 @@
+   nextstep|cygwin*|linux|freebsd|os2)
+        pretty="$pretty running $osname";
+         if test "$arch" = m68k; then asmarch=none; fi ;;
++  netbsd)
++       pretty="$pretty running NetBSD";
++        if test "$arch" = m68k; then asmarch=none; fi ;;
  esac
-@@ -362,7 +336,7 @@
+ 
+ if test "$kernel" = no; then
+@@ -351,7 +332,7 @@
+   fi
+ fi
+ case "$asmarch" in
+-  none)          prettyk="C portable";;
++  none)          prettyk="portable C";;
+   sparcv7)       prettyk=SparcV7;;
+   sparcv8_super) prettyk=SuperSparc;;
+   sparcv8_micro) prettyk=MicroSparc;;
+@@ -375,7 +356,7 @@
  case "$osname-$arch" in
    os2-*)  ln_s=cp; make_sh=sh; exe_suff=.exe; extraflag="-Zexe" ;;
    cygwin*) ln_s="ln -s"; make_sh="/bin/sh"; exe_suff=.exe; extraflag="" ;;
@@ -67,7 +106,7 @@ $NetBSD: patch-aa,v 1.7 2002/09/23 22:24:16 jlam Exp $
  esac
  
  ####################### CONFIGURE - LIBRARIES ###############################
-@@ -405,20 +379,8 @@
+@@ -418,20 +399,8 @@
  	fi;;
        os2) libpth=`echo $LIBRARY_PATH | sed 's/;/ /g' | sed 's,\\\\,/,g'`;;
   	*) libpth="\
@@ -85,11 +124,29 @@ $NetBSD: patch-aa,v 1.7 2002/09/23 22:24:16 jlam Exp $
 - 	/usr/ccs/lib\
 - 	/usc/ucblib\
 - 	/usr/shlib\
-+        $LOCALBASE/lib\
++ 	$LOCALBASE/lib\
   	.\
       ";;
       esac
-@@ -528,21 +490,11 @@
+@@ -518,17 +487,9 @@
+ # Readline -- TermCap
+     lib=$rl_fullname; sym=tgetent; . ./locatesymbol
+     if test -n "$try"; then # tgetent needed
+-      lib=ncurses; . ./locatelib
+-      if test -n "$try"; then # ncurses found. Does it contain tgetent ?
+-        lib=$try; . ./locatesymbol
+-      fi
+-      if test -n "$try"; then
+-        rl_ncurses=$ncurses
+-      else
+         lib=termcap; . ./locatelib
+         rl_termcap=$termcap
+       fi
+-    fi
+ # Readline -- Allocation
+     lib=$rl_fullname; sym=alloca; . ./locatesymbol
+     if test -n "$try"; then # alloca needed
+@@ -546,24 +507,15 @@
         $cygtop/H-${arch}-cygwin32/${arch}-cygwin32/include\
       ";;
        *) incpth="\
@@ -113,7 +170,11 @@ $NetBSD: patch-aa,v 1.7 2002/09/23 22:24:16 jlam Exp $
      CPPF_defined=
      case $x in
       ?:/*|/*) rl_include=`echo $x | sed 's,/readline.h,,'`
-@@ -580,7 +532,7 @@
++         echo $x $rl_include
+          if (grep CPPFunction $x > /dev/null 2>&1); then CPPF_defined=yes; fi
+          if (grep rl_message  $x > /dev/null 2>&1); then rl_message=yes; fi
+          if (grep rl_completion_matches $x > /dev/null 2>&1); then
+@@ -601,7 +553,7 @@
  # in case headers are not installed correctly
        RLINCLUDE="-I$rl_include -DREADLINE_LIBRARY"
      fi
@@ -122,7 +183,7 @@ $NetBSD: patch-aa,v 1.7 2002/09/23 22:24:16 jlam Exp $
      if test -n "$rl_ncurses"; then
        echo ..."Library ncurses needed by readline"
        RLLIBS="$RLLIBS -lncurses"
-@@ -638,33 +590,7 @@
+@@ -662,33 +614,7 @@
        # X11 -- Headers
        if test ! -f $Xincroot/X11/Xos.h; then
          x11pth="\
@@ -157,66 +218,39 @@ $NetBSD: patch-aa,v 1.7 2002/09/23 22:24:16 jlam Exp $
          ";
          pth=`echo $x11pth | s,/lib,/include,g`
          x=`./locate X11/Xos.h '' $pth`
-@@ -806,7 +732,7 @@
- if test -n "$__gnuc__"; then
-   __GNUC__="-D__GNUC__"
-   warn="-Wall -Wno-implicit"
--  OPTFLAGS="-O3 -DGCC_INLINE $warn"
-+  OPTFLAGS="-DGCC_INLINE $warn"
-   DBGFLAGS="-g $warn"
-   # Some architectures need -fPIC for building dynamic lib
-   case "$osname-$arch" in hpux-*) DLCFLAGS=-fPIC;; esac
-@@ -926,6 +852,7 @@
+@@ -877,7 +803,7 @@
+   esac
+   PRFFLAGS="$PRFFLAGS $OPTFLAGS"
+ fi
+-cflags="$cflags $DLCFLAGS"
++cflags="$CFLAGS $cflags $DLCFLAGS"
+ 
+ case "$osname" in
+   nextstep)  cflags="-traditional-cpp $cflags";;
+@@ -962,6 +888,7 @@
    linux-*|cygwin*)
        LD=$CC; LDFLAGS="$cflags -Xlinker -export-dynamic"
        runpathprefix='-Xlinker -rpath -Xlinker ';;
-+  netbsd-*)  LD=$CC;;
++  netbsd*) LD=$CC; LDFLAGS="-Wl,-E";;
    osf1-alpha)
        LD=$ld; LIBS="$LIBS -lots -lc"; runpathprefix='-rpath '
        LDFLAGS='-std0 -call_shared /usr/lib/cmplrs/cc/crt0.o'
-@@ -970,6 +897,7 @@
- #    aix-*)  DLSUFFIX=a  ;; dynamic linking does not work!
-     sunos-*) sodest=$VersionMajor$VersionMinor.$patch
-              soname=$sodest;;
-+    netbsd-*) DLLD=;;
-     *-alpha|solaris-*|linux-*|freebsd-*)
-       case $libpari_base in
-         pari) sodest=$version.$patch;; # released versions
-@@ -1006,6 +934,7 @@
-       aix-*)      DLLDFLAGS="-r" ;;
-       hpux-*)     DLLDFLAGS="-b -E" ;;
-       freebsd-*)  DLLDFLAGS="-Bshareable -x" ;;
-+      netbsd-*)   DLLD=;;
-       linux-*)    DLLDFLAGS="-shared -soname \$(LIBPARI_SONAME)" ;;
-       irix-*)     DLLDFLAGS="-shared -elf -no_unresolved -all" ;;
-       *-alpha)    DLLDFLAGS="-shared"; EXTRADLLDFLAGS='${LIBS}'
-@@ -1141,11 +1070,9 @@
- dflt=$share_prefix; . ./myread; share_prefix=$ans
- 
- if test -z "$share_prefix"; then
--  dfltman=$prefix/man/man1
+@@ -1207,8 +1134,8 @@
+   dfltman=$prefix/man/man1
    dfltall=$prefix/lib/pari
  else
 -  dfltman=$share_prefix/man/man1
 -  dfltall=$share_prefix/doc/pari
++  dfltman=$prefix/man/man1
 +  dfltall=$share_prefix/pari
  fi
  
  echo $n ..."\"gp\" executable ? $c"
-@@ -1158,7 +1085,7 @@
- dflt=$prefix/include/pari; . ./myread; includedir=$ans
- 
- echo $n ..."manual pages ? $c"
--dflt=$dfltman; . ./myread; mandir=$ans
-+dflt=$prefix/man/man1; . ./myread; mandir=$ans
- 
- echo $n ..."documentation, examples, and emacs macros ? $c"
- dflt=$dfltall; . ./myread; miscdir=$ans
-@@ -1222,6 +1149,7 @@
+@@ -1289,6 +1216,7 @@
  case "$osname" in
    *cygwin*) LDDYN="-L$libdir -lpari_dll" ; runpath="$libdir" ;
  	    DYNLIBS=-lpari_dll ; DYNFLAGS=-Dlibpari_USE_DLL ;;
-+  netbsd)   LDDYN="-Wl,-R$libdir -L$libdir -l$libpari_base" ; runpath="$libdir" ;;
++  netbsd)  LDDYN="-Wl,-R$libdir -L$libdir -l$libpari_base" ; runpath="$libdir" ;;
    *)        LDDYN="-L$libdir -l$libpari_base" ; runpath="$libdir" ;;
  esac
  
