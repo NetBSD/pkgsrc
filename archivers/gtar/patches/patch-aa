@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:35:49 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/08/10 05:05:40 christos Exp $
 
 --- src/Makefile.in.orig	Fri Apr 25 20:22:06 1997
 +++ src/Makefile.in	Wed Mar  4 09:49:44 1998
@@ -11,12 +11,3 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:35:49 agc Exp $
  EXTRA_PROGRAMS = rmt
  
  noinst_HEADERS = arith.h common.h rmt.h system.h tar.h
-@@ -121,7 +121,7 @@
- 
- DEFS = @DEFS@ -I. -I$(srcdir) -I..
- CPPFLAGS = @CPPFLAGS@
--LDFLAGS = @LDFLAGS@
-+LDFLAGS = @LDFLAGS@ -lgnumalloc
- LIBS = @LIBS@
- o = @U@o
- ANSI2KNR = @ANSI2KNR@
