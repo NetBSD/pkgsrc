@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/07/18 15:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/04/10 01:28:06 grant Exp $
 
 DISTNAME=	voice_hvs_di-2.0
 PKGNAME=	festvox-hvs-2.0
@@ -27,6 +27,6 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
-	cd ${WRKSRC} && ${PAX} -r -w * ${FHOME}
+	cd ${WRKSRC} && ${PAX} -rw * ${FHOME}
 
 .include "../../mk/bsd.pkg.mk"

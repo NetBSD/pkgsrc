@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/29 12:42:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/04/10 01:28:31 grant Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
@@ -22,7 +22,7 @@ post-extract:
 	${FIND} ${WRKSRC} -type f -name "*.ace" -print | ${XARGS} ${RM} -f
 	${RMDIR} ${WRKSRC}/examples/toolbar
 	${RM} ${WRKSRC}/examples/Makefile
-	cd ${WRKSRC}/C/se; ${MAKE_PROGRAM} ${MAKE_FLAGS} -f Makefile.se clean
+	cd ${WRKSRC}/C/se && ${MAKE_PROGRAM} ${MAKE_FLAGS} -f Makefile.se clean
 	${MV} ${WRKSRC}/bin/egtkbuild ${WRKSRC}/bin/egtkbuild.in
 	${MV} ${WRKSRC}/man/egtkbuild.1 ${WRKSRC}/man/egtkbuild.1.in
 
@@ -35,7 +35,7 @@ do-configure:
 		${FILESDIR}/loadpath.se.in > ${WRKDIR}/loadpath.se
 
 do-build:
-	cd ${WRKSRC}/C/se; ${MAKE_PROGRAM} ${MAKE_FLAGS} -f Makefile.se
+	cd ${WRKSRC}/C/se && ${MAKE_PROGRAM} ${MAKE_FLAGS} -f Makefile.se
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/egtkbuild ${PREFIX}/bin
@@ -43,19 +43,19 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/C/se/eif_gtk.a ${PREFIX}/lib/libegtk_se.a
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/egtk
-	cd ${WRKSRC}/lib; ${PAX} -rw * ${PREFIX}/share/egtk
-	cd ${WRKSRC}; ${PAX} -rw pixmaps ${PREFIX}/share/egtk
+	cd ${WRKSRC}/lib && ${PAX} -rw * ${PREFIX}/share/egtk
+	cd ${WRKSRC} && ${PAX} -rw pixmaps ${PREFIX}/share/egtk
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/egtk
 	${INSTALL_DATA_DIR} ${PREFIX}/share/egtk/se
 	${INSTALL_DATA} ${WRKSRC}/C/se/cecil.se ${PREFIX}/share/egtk/se
 	${INSTALL_DATA} ${WRKSRC}/C/se/eif_gtk_se.c ${PREFIX}/share/egtk/se
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/egtk
-	cd ${WRKSRC}/examples; ${PAX} -rw * ${PREFIX}/share/examples/egtk
+	cd ${WRKSRC}/examples && ${PAX} -rw * ${PREFIX}/share/examples/egtk
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/egtk
 
 post-install:
-	cd ${WRKSRC}; ${INSTALL_DATA} copyright forum.txt ${PREFIX}/share/egtk
+	cd ${WRKSRC} && ${INSTALL_DATA} copyright forum.txt ${PREFIX}/share/egtk
 	${INSTALL_DATA} ${WRKDIR}/loadpath.se ${PREFIX}/share/egtk/se
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/08/06 15:17:27 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/04/10 01:28:05 grant Exp $
 
 DISTNAME=	voice_aec_di-2.0
 PKGNAME=	festvox-aec-2.0
@@ -29,6 +29,6 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
-	cd ${WRKSRC} && ${PAX} -r -w * ${FHOME}
+	cd ${WRKSRC} && ${PAX} -rw * ${FHOME}
 
 .include "../../mk/bsd.pkg.mk"
