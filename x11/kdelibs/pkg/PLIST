@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/07/13 20:33:48 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/07/15 12:51:37 agc Exp $
 lib/libkdecore.so.1.0
 lib/libkdecore.la
 lib/libkdeui.so.1.0
@@ -13,8 +13,6 @@ lib/libkfm.so.1.0
 lib/libkfm.la
 lib/libmediatool.so.1.0
 lib/libmediatool.la
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 include/kpixmap.h
 include/kled.h
 include/kcontainer.h
