@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2001/01/08 02:13:44 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2001/01/11 21:08:39 dent Exp $
 
 DISTNAME=	netpbm-9.7
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://netpbm.sourceforge.net/info
+HOMEPAGE=	http://netpbm.sourceforge.net/
 
 DEPENDS+=	tiff>=3.5.4:../../graphics/tiff
 DEPENDS+=	png>=1.0.6:../../graphics/png
