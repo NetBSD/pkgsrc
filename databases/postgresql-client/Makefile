@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/14 14:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/16 05:28:56 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
-.include "../../databases/postgresql/Makefile.getopt"
-.include "../../databases/postgresql/Makefile.readline"
 .include "../../databases/postgresql/Makefile.ssl"
+.include "../../devel/libgetopt/Makefile.getopt"
+.include "../../devel/readline/Makefile.readline"
 
 PKGNAME=		postgresql-client-${PG_VERS}
 PG_PKG_VERS=		# empty
@@ -12,10 +12,14 @@ COMMENT=		PostgreSQL database client programs
 DEPENDS+=		postgresql-lib>=${PG_BASE_VERS}:../../databases/postgresql-lib
 
 MAKE_ENV+=		INSTALLED_LIBPQ=1
+CONFIGURE_ARGS+=	--enable-readline
+
+CFLAGS+=		-L${WRKLIBDIR}
+LDFLAGS+=		-L${WRKLIBDIR}
 
 DIRS_TO_BUILD=		src/bin
 
-pre-configure: link-getopt-headers link-readline-headers
+pre-configure: link-getopt-headers link-readline-headers link-readline-libs
 
 pre-build:
 	cd ${WRKSRC}/src/bin/psql &&					\
