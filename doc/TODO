@@ -223,7 +223,6 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
-	o gkrellm2-2.1.28
 	o global-4.6
 	o glpk-4.3
 	o gnomeicu-0.99.5
@@ -321,7 +320,6 @@ Suggested package updates
 	o p5-Term-Readline-1.14 [pkg/25163]
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
-	o php-4.3.6
 	o physfs-1.0.0
 	o plib-1.7.0
 	o ploticus-2.20
