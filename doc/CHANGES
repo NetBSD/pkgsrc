@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3873 2003/11/27 20:30:21 wiz Exp $
+$NetBSD: CHANGES,v 1.3874 2003/11/27 23:38:25 taya Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4664,3 +4664,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tightvnc to 1.2.9 [abs 2003-11-27]
 	Updated abcde to 2.1.9 [abs 2003-11-27]
 	Updated screen to 4.0.1nb1 [wiz 2003-11-27]
+	Updated mozilla-stable to 1.4.1 [taya 2003-11-27]
