@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/06 04:24:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/06/18 00:59:45 hubertf Exp $
 #
 
-DISTNAME=	url2pkg-1.3
+DISTNAME=	url2pkg-1.4
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	http://rfhs8012.fh-regensburg.de/~feyrer/Misc/
 EXTRACT_SUFX=	# Nothing
