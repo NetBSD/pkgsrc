@@ -1,8 +1,9 @@
-$NetBSD: patch-ab,v 1.28 2003/04/27 09:49:06 grant Exp $
+$NetBSD: patch-ab,v 1.28.2.1 2003/12/05 17:05:26 agc Exp $
 
---- configure.in.orig	7 Mar 2003 21:25:31 -0000
-+++ configure.in	15 Apr 2003 14:53:02 -0000
-@@ -859,6 +859,9 @@
+diff -ru ../Orig/mozilla/configure.in ./configure.in
+--- ../Orig/mozilla/configure.in	2003-08-30 02:14:58.000000000 +0900
++++ ./configure.in	2003-10-16 15:38:38.000000000 +0900
+@@ -902,6 +902,9 @@
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -12,7 +13,7 @@ $NetBSD: patch-ab,v 1.28 2003/04/27 09:49:06 grant Exp $
      ;; 
  
  *-hpux*)
-@@ -1134,6 +1137,13 @@
+@@ -1190,6 +1193,13 @@
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
      fi
@@ -26,7 +27,7 @@ $NetBSD: patch-ab,v 1.28 2003/04/27 09:49:06 grant Exp $
      ;;
  
  *-nto*) 
-@@ -1493,7 +1503,7 @@
+@@ -1596,7 +1606,7 @@
                   [siginfo_t* info;],
                   [ac_cv_siginfo_t=true],
                   [ac_cv_siginfo_t=false])])
@@ -35,7 +36,7 @@ $NetBSD: patch-ab,v 1.28 2003/04/27 09:49:06 grant Exp $
    AC_DEFINE(HAVE_SIGINFO_T)
    AC_MSG_RESULT(yes)
  else
-@@ -2037,9 +2047,6 @@
+@@ -2143,9 +2153,6 @@
  				CXXFLAGS="$CXXFLAGS -mt" 
  			fi
  			;;
