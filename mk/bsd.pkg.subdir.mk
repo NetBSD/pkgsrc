@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.34 2000/05/11 11:23:22 agc Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.35 2000/05/28 12:42:26 dmcmahill Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -85,7 +85,7 @@ _SUBDIRUSE: .USE
 			if [ -z "${_THISDIR_}" -a ! -d "files" ]; then \
 				${ECHO_MSG} "===> category ${_THISDIR_}$${edir}"; \
 				${MAKE} ${.TARGET:realinstall=install} \
-					"_THISDIR_=${_THISDIR_}$${edir}/"; \
+					"_THISDIR_=${_THISDIR_}$${edir}/" || /usr/bin/true ; \
 			else \
 				${ECHO_MSG} "===> package ${_THISDIR_}$${edir}"; \
 				${MAKE} ${.TARGET:realinstall=install} \
