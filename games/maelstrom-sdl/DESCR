@@ -1,0 +1,8 @@
+Maelstrom is a port of the original shareware game for the Macintosh.
+It is a fast-action, high resolution (640x480) asteroids-like game,
+with detailed graphics and original sounds.
+
+This version uses the SDL (Simple DirectMedia Layer) which provides
+faster graphics and better sound than the old X11 version for NetBSD.
+SDL also allows the screen resolution to be changed to 640x480 when
+Maelstrom is run in full-screen mode.
