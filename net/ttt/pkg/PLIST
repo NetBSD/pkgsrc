@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/22 03:55:17 sakamoto Exp $
+bin/ttt
+bin/tttprobe
+bin/tttview
+lib/ttt/ttt.tcl
+@dirrm lib/ttt
