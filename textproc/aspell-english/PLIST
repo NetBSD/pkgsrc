@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/15 00:31:54 salo Exp $
+lib/aspell/american-w-accents.alias
+lib/aspell/american.alias
+lib/aspell/british-w-accents.alias
+lib/aspell/british.alias
+lib/aspell/canadian-w-accents.alias
+lib/aspell/canadian.alias
+lib/aspell/en-only.rws
+lib/aspell/en.multi
+lib/aspell/en_CA-only.rws
+lib/aspell/en_CA-w-accents.multi
+lib/aspell/en_CA.multi
+lib/aspell/en_GB-only.rws
+lib/aspell/en_GB-w-accents.multi
+lib/aspell/en_GB.multi
+lib/aspell/en_US-only.rws
+lib/aspell/en_US-w-accents.multi
+lib/aspell/en_US.multi
+lib/aspell/english.alias
+share/aspell/en.dat
+share/aspell/en_phonet.dat
