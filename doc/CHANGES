@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7863 2004/11/15 06:37:01 snj Exp $
+$NetBSD: CHANGES,v 1.7864 2004/11/15 08:54:19 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5282,4 +5282,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glitz to 0.2.3 [rh 2004-11-15]
 	Updated libpixman to 0.1.2 [rh 2004-11-15]
 	Updated cairo to 0.2.0 [rh 2004-11-15]
-	Updated devilspie 0.7 [snj 2004-11-15]
+	Updated devilspie to 0.7 [snj 2004-11-15]
+	Updated kkbswitch to 1.4.2 [markd 2004-11-15]
