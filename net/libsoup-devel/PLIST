@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/01 16:58:06 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/21 16:51:37 jmmv Exp $
 include/libsoup-2.2/libsoup/soup-address.h
 include/libsoup-2.2/libsoup/soup-connection.h
 include/libsoup-2.2/libsoup/soup-headers.h
@@ -23,8 +23,8 @@ include/libsoup-2.2/libsoup/soup.h
 lib/libsoup-2.2.a
 lib/libsoup-2.2.la
 lib/libsoup-2.2.so
-lib/libsoup-2.2.so.4
-lib/libsoup-2.2.so.4.0
+lib/libsoup-2.2.so.7
+lib/libsoup-2.2.so.7.0
 lib/pkgconfig/libsoup-2.2.pc
 share/doc/libsoup/SoupAddress.html
 share/doc/libsoup/SoupAuth.html
