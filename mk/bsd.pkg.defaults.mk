@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.121 2002/12/26 05:02:36 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.122 2002/12/28 17:14:10 kristerw Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1512,7 +1512,7 @@ USE_IDEA?=	NO
 # Default: not defined
 
 USE_MMX?=	NO
-# Used in eterm, imlib2, and libast to specify if the i386 MMX
+# Used in eterm, imlib2, libast, and snes9x to specify if the i386 MMX
 # extensions should be used.
 # Possible: YES, NO
 # Default: NO
