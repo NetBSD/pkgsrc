@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/06/12 20:33:02 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2001/09/14 02:39:07 jlam Exp $
 #
 
 DISTNAME=	openldap-1.2.12
@@ -13,30 +13,33 @@ COMMENT=	Lightweight directory access protocol server and client package
 # for the moment without threads and thus without slurpd and ldapd
 #DEPENDS+=	../../devel/mit-pthreads
 
-CONFLICTS+=	ldapsdk*
+CONFLICTS+=	ldapsdk-[0-9]*
 
-USE_LIBTOOL=	yes
+USE_BUILDLINK_ONLY=	YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/build/ltconfig
+
+# unfortunately, --enable-phonetic cannot be disabled by runtime configuration
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--enable-dns
+CONFIGURE_ARGS+=	--enable-cldap
+CONFIGURE_ARGS+=	--enable-passwd
+CONFIGURE_ARGS+=	--enable-shell
 
 .include "../../mk/bsd.prefs.mk"
 
-# unfortunately, --enable-phonetic cannot be disabled by runtime configuration
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable-dns --enable-cldap --enable-passwd --enable-shell
 .if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+= --enable-wrappers
+CONFIGURE_ARGS+=	--enable-wrappers
 .endif
 
 .if ${OPSYS} == "SunOS"
-DEPENDS+=	db-2.7.7:../../databases/db
-CPPFLAGS+=	-I${LOCALBASE}/include/db2
+.include "../../databases/db/buildlink.mk"
+CPPFLAGS+=	-I${BUILDLINK_DIR}/include/db2
 LIBS=		-ldb2 -lpthread -lrt
 .endif
 
-PLIST_SRC=	${WRKDIR}/.PLIST_SRC
-
-post-build:
-	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
+PLIST_SRC=	${PKGDIR}/PLIST.common
+PLIST_SRC+=	${PKGDIR}/PLIST.${LOWER_OPSYS}
 
 post-configure:
 	${ECHO} "SLAPD_LIBS = " >> ${WRKSRC}/servers/slapd/tools/Makefile
