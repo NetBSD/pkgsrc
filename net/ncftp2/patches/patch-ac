@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.3 1998/08/07 11:10:48 agc Exp $
+$NetBSD: patch-ac,v 1.4 1999/05/22 22:32:04 tron Exp $
 
---- configure.orig	Fri Jul 31 22:54:32 1998
-+++ configure	Fri Jul 31 22:52:16 1998
+--- configure.orig	Sun Jun  8 07:25:04 1997
++++ configure	Sun May 23 00:25:56 1999
 @@ -1072,7 +1072,7 @@
  echo "checking for extra include and lib directories..." 1>&6
  b1=`cd .. ; pwd`
  b2=`cd ../.. ; pwd`
 -exdirs="$HOME $j $b1 $b2 $prefix /usr/local /usr/ccs"
-+exdirs="$HOME $j $b1 $b2 $prefix /usr/ccs"
++exdirs="$HOME $j $b1 $b2 $prefix"
  
  subexdirs="-"
  if test "$subexdirs" = "" ; then
@@ -20,3 +20,30 @@ $NetBSD: patch-ac,v 1.3 1998/08/07 11:10:48 agc Exp $
                nc_cv_socks=no
        else
                LIBS="$savelibs"
+@@ -2285,7 +2285,7 @@
+ 		echo "checking for extra include and lib directories..." 1>&6
+ b1=`cd .. ; pwd`
+ b2=`cd ../.. ; pwd`
+-exdirs="$HOME $j $b1 $b2 $prefix /usr/local /usr /usr/ccs"
++exdirs="$HOME $j $b1 $b2 $prefix"
+ 
+ subexdirs="ncurses"
+ if test "$subexdirs" = "" ; then
+@@ -2345,7 +2345,7 @@
+ 
+ 		# See if we should add -I/usr/local/ncurses
+ 		
+-incdir="/usr/local/ncurses"
++incdir="$prefix/ncurses"
+ if test -r $incdir ; then
+ 	case "$CPPFLAGS" in
+ 		*${incdir}*)
+@@ -2366,7 +2366,7 @@
+ 		# Some people (me) have two versions of ncurses on
+ 		# the system.  Use the one in /usr/local first.
+ 		case "$CPPFLAGS" in
+-			*/usr/local/include/ncurses*/usr/include/ncurses*)
++			*$prefix/include/ncurses*/usr/include/ncurses*)
+ 				CPPFLAGS=`echo "$CPPFLAGS" | sed 's@-I/usr/include/ncurses@@g'`
+ 		esac
+ 	fi
