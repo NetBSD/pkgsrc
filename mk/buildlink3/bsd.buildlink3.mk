@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.99 2004/02/23 08:58:22 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.100 2004/02/23 09:15:33 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -134,7 +134,7 @@ _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
 # dependency, when converted to a pkg name, will satisfy every dependency.
 #
 _BLNK_DEPENDS.${_pkg_}=		# empty
-_BLNK_GE_DEPENDS.${_pkg_}=	${BUILDLINK_DEPENDS.${_pkg_}:N*{*:M*>=[0-9]*}
+_BLNK_GE_DEPENDS.${_pkg_}=	${BUILDLINK_DEPENDS.${_pkg_}:N*\{*:M*>=[0-9]*}
 _BLNK_STRICTEST_DEPENDS.${_pkg_}?=	none
 .      for _depend_ in ${_BLNK_GE_DEPENDS.${_pkg_}}
 .        for _dep2pkg_ in ${_depend_:S/>=/-/}
