@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2000/10/15 17:17:05 rh Exp $
+# $NetBSD: Makefile,v 1.144 2000/10/17 17:16:27 rh Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -33,6 +33,7 @@
     SUBDIR += electricfence
     SUBDIR += ffcall
     SUBDIR += flex
+    SUBDIR += gal
     SUBDIR += gdb
     SUBDIR += gettext
     SUBDIR += gindent
