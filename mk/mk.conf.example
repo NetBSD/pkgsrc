@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.90 1999/10/22 14:43:59 agc Exp $
+# $NetBSD: mk.conf.example,v 1.91 1999/10/24 15:43:46 minoura Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -412,6 +412,11 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Possible: YES, or NO.
                                 # Default: NO
 
+#USE_CANNA=			# Used in kinput2 and nvi-m17n to enable Canna
+                                # kana-kanji converter support.
+                                # Possible: YES, or NO.
+                                # Default: YES
+
 #USE_GIF=			# Enable GIF support in qt.
  				# (disabled per default due to licensing
  				# problems; future revisions might have no
@@ -432,10 +437,20 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Possible: YES (US domestic only), or NO.
                                 # Default: not defined.
 
+#USE_SJ3=			# Used in kinput2 to enable SJ3 kana-kanji
+                                # converter support.
+                                # Possible: YES, or NO.
+                                # Default: YES
+
 #USE_SOCKS=			# Used to specify SOCKS firewall support
                                 # Set this to the version of socks necessary.
                                 # Possible: 4, 5, not defined
                                 # Default: not defined
+
+#USE_WNN4=			# Used in kinput2 to enable FreeWnn (a.k.a.
+                                # Wnn4) kana-kanji converter support.
+                                # Possible: YES, or NO.
+                                # Default: YES
 
 #USE_XFACE=			# Used in xemacs package to build in
                                 # support for xface (pkgsrc/mail/face)
