@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6808 2004/08/06 09:58:49 adam Exp $
+$NetBSD: CHANGES,v 1.6809 2004/08/06 10:37:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3744,3 +3744,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pango to 1.4.0nb1 [minskim 2004-08-06]
 	Updated netpbm to 10.18.14 [adam 2004-08-06]
 	Updated xplanet to 1.1.1 [adam 2004-08-06]
+	Updated gimp to 2.0.4 [adam 2004-08-06]
