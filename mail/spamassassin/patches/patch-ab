@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2003/12/27 19:16:04 heinz Exp $
+$NetBSD: patch-ab,v 1.7 2004/01/21 22:19:30 heinz Exp $
 
 --- Makefile.PL.orig	Sun Nov  2 01:42:04 2003
 +++ Makefile.PL
@@ -51,7 +51,7 @@ $NetBSD: patch-ab,v 1.6 2003/12/27 19:16:04 heinz Exp $
 @@ -745,7 +746,7 @@ sub MY::libscan {
  
    return q{} if $path =~ m{
-                   (^|/)CVS(/|$)|
+                   (^|/)(\.svn|CVS)(/|$)|
 -                  [/.](orig|old|rej|diff|patch|bak|backup|my)$
 +                  [/.](orig|old|rej|diff|patch|bak|backup|my|subst.sav)$
                  }ix;
