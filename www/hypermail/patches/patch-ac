@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 1999/12/14 16:31:21 bouyer Exp $
+
 diff -r -u ../hypermail-orig/Makefile.in ./Makefile.in
 --- Makefile.in	Thu Aug 20 23:12:36 1998
 +++ Makefile.in	Tue Jan  5 06:52:58 1988
@@ -11,4 +13,3 @@ diff -r -u ../hypermail-orig/Makefile.in ./Makefile.in
  
  all:   hypermail support 
 
-diff -r -u ../hypermail-orig/configure ./configure
