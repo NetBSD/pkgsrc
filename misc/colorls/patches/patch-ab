@@ -1,9 +1,8 @@
-$NetBSD: patch-ab,v 1.5 1999/11/27 22:55:07 rh Exp $
+$NetBSD: patch-ab,v 1.6 2000/02/05 20:05:24 wiz Exp $
 
 --- colorls.1.orig	Sat Nov 27 23:53:51 1999
 +++ colorls.1	Sat Nov 27 23:53:52 1999
-@@ -36,16 +36,24 @@
- .\"	$Id: patch-ab,v 1.5 1999/11/27 22:55:07 rh Exp $
+@@ -35,15 +35,23 @@
  .\"
  .Dd July 29, 1994
 -.Dt LS 1
