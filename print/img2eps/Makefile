@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/16 14:45:54 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/07 04:23:04 dillo Exp $
 #
 
 DISTNAME=	img2eps-0.1
@@ -12,6 +12,7 @@ COMMENT=	convert raster images to EPS files
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
+TEST_TARGET=	check
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/libungif/buildlink2.mk"
