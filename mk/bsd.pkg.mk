@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.19 2005/02/11 15:27:57 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.20 2005/02/11 15:36:39 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -350,10 +350,10 @@ ${var}+=	${${var}.*}
 
 CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
 
-.if !empty(USE_BUILDLINK3:M[nN][oO])
+.  if !empty(USE_BUILDLINK3:M[nN][oO])
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 LDFLAGS+=	-L${LOCALBASE}/lib
-.endif
+.  endif
 
 ALL_ENV+=	CC=${CC:Q}
 ALL_ENV+=	CFLAGS=${CFLAGS:Q}
