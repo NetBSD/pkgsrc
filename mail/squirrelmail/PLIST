@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/09/01 11:51:26 martti Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/10/08 05:12:08 martti Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -49,6 +49,7 @@ share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.0.txt
 share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.1.txt
 share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.0.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.1.txt
 share/squirrelmail/doc/addressbook.txt
 share/squirrelmail/doc/authentication.txt
 share/squirrelmail/doc/compose.txt
@@ -275,6 +276,15 @@ share/squirrelmail/help/ru_RU/main_folder.hlp
 share/squirrelmail/help/ru_RU/options.hlp
 share/squirrelmail/help/ru_RU/read_mail.hlp
 share/squirrelmail/help/ru_RU/search.hlp
+share/squirrelmail/help/sk_SK/FAQ.hlp
+share/squirrelmail/help/sk_SK/addresses.hlp
+share/squirrelmail/help/sk_SK/basic.hlp
+share/squirrelmail/help/sk_SK/compose.hlp
+share/squirrelmail/help/sk_SK/folders.hlp
+share/squirrelmail/help/sk_SK/main_folder.hlp
+share/squirrelmail/help/sk_SK/options.hlp
+share/squirrelmail/help/sk_SK/read_mail.hlp
+share/squirrelmail/help/sk_SK/search.hlp
 share/squirrelmail/help/sl_SI/FAQ.hlp
 share/squirrelmail/help/sl_SI/addresses.hlp
 share/squirrelmail/help/sl_SI/basic.hlp
@@ -311,10 +321,25 @@ share/squirrelmail/help/th_TH/main_folder.hlp
 share/squirrelmail/help/th_TH/options.hlp
 share/squirrelmail/help/th_TH/read_mail.hlp
 share/squirrelmail/help/th_TH/search.hlp
+share/squirrelmail/help/zh_CN/FAQ.hlp
+share/squirrelmail/help/zh_CN/addresses.hlp
+share/squirrelmail/help/zh_CN/basic.hlp
+share/squirrelmail/help/zh_CN/compose.hlp
+share/squirrelmail/help/zh_CN/folders.hlp
+share/squirrelmail/help/zh_CN/main_folder.hlp
+share/squirrelmail/help/zh_CN/options.hlp
+share/squirrelmail/help/zh_CN/read_mail.hlp
+share/squirrelmail/help/zh_CN/search.hlp
+share/squirrelmail/images/delitem.png
 share/squirrelmail/images/down_pointer.png
+share/squirrelmail/images/draft.png
+share/squirrelmail/images/folder.png
+share/squirrelmail/images/inbox.png
 share/squirrelmail/images/index.php
 share/squirrelmail/images/minus.gif
+share/squirrelmail/images/minus.png
 share/squirrelmail/images/plus.gif
+share/squirrelmail/images/plus.png
 share/squirrelmail/images/sec_remove_da_DK.png
 share/squirrelmail/images/sec_remove_eng.png
 share/squirrelmail/images/sec_remove_es_ES.png
@@ -323,9 +348,11 @@ share/squirrelmail/images/sec_remove_id_ID.png
 share/squirrelmail/images/sec_remove_ja_JP.png
 share/squirrelmail/images/sec_remove_ko_KR.png
 share/squirrelmail/images/sec_remove_lt_LT.png
+share/squirrelmail/images/sec_remove_pt_PT.png
 share/squirrelmail/images/sec_remove_ru.png
 share/squirrelmail/images/sec_remove_sl_SI.png
 share/squirrelmail/images/sec_remove_sr_YU.png
+share/squirrelmail/images/senti.png
 share/squirrelmail/images/sm_logo.png
 share/squirrelmail/images/sort_none.png
 share/squirrelmail/images/up_pointer.png
@@ -382,6 +409,8 @@ share/squirrelmail/locale/ko_KR/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/ko_KR/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/ms_MY/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/ms_MY/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/nl_NL/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/nl_NL/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/squirrelmail.mo
@@ -611,6 +640,7 @@ share/squirrelmail/themes/kind_of_blue.php
 share/squirrelmail/themes/maize_theme.php
 share/squirrelmail/themes/methodical_theme.php
 share/squirrelmail/themes/midnight.php
+share/squirrelmail/themes/minimal_bw.php
 share/squirrelmail/themes/monostochastic.php
 share/squirrelmail/themes/penguin.php
 share/squirrelmail/themes/plain_blue_theme.php
@@ -686,6 +716,8 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/locale/nn_NO
 @dirrm share/squirrelmail/locale/nl_NL/LC_MESSAGES
 @dirrm share/squirrelmail/locale/nl_NL
+@dirrm share/squirrelmail/locale/ms_MY/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ms_MY
 @dirrm share/squirrelmail/locale/lt_LT/LC_MESSAGES
 @dirrm share/squirrelmail/locale/lt_LT
 @dirrm share/squirrelmail/locale/ko_KR/LC_MESSAGES
@@ -734,10 +766,12 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/include/options
 @dirrm share/squirrelmail/include
 @dirrm share/squirrelmail/images
+@dirrm share/squirrelmail/help/zh_CN
 @dirrm share/squirrelmail/help/th_TH
 @dirrm share/squirrelmail/help/sv_SE
 @dirrm share/squirrelmail/help/sr_YU
 @dirrm share/squirrelmail/help/sl_SI
+@dirrm share/squirrelmail/help/sk_SK
 @dirrm share/squirrelmail/help/ru_RU
 @dirrm share/squirrelmail/help/pt_PT
 @dirrm share/squirrelmail/help/pt_BR
