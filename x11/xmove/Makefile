@@ -3,13 +3,15 @@
 # Date created:		Tue Mar 10 22:45:33 GMT 1998
 # Whom:			Alistair Crooks agc@netbsd.org
 #
-# $NetBSD: Makefile,v 1.1 1998/03/11 02:44:52 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/16 12:36:33 frueauf Exp $
 #
 
 DISTNAME=	xmove.2.0beta2
 PKGNAME=	xmove-2.0b2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.cs.columbia.edu/pub/xmove/
+
+MAINTAINER=	packages@netbsd.org
 
 WRKSRC=		${WRKDIR}/xmove
 USE_IMAKE=	yes
