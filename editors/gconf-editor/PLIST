@@ -1,19 +1,31 @@
-@comment $NetBSD: PLIST,v 1.5 2004/04/16 13:47:17 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/21 17:10:43 jmmv Exp $
 bin/gconf-editor
 man/man1/gconf-editor.1
 share/applications/gconf-editor.desktop
+share/gconf/schemas/gconf-editor.schemas
+share/gnome/help/gconf-editor/C/figures/entry-blank.png
+share/gnome/help/gconf-editor/C/figures/entry-bool.png
+share/gnome/help/gconf-editor/C/figures/entry-list.png
+share/gnome/help/gconf-editor/C/figures/entry-number.png
+share/gnome/help/gconf-editor/C/figures/entry-schema.png
+share/gnome/help/gconf-editor/C/figures/entry-string.png
+share/gnome/help/gconf-editor/C/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/C/gconf-editor.xml
+share/gnome/help/gconf-editor/C/legal.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gconf-editor.mo
@@ -41,8 +53,11 @@ ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gconf-editor.mo
+${PKGLOCALEDIR}/locale/or/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gconf-editor.mo
@@ -62,6 +77,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gconf-editor.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gconf-editor.mo
+share/omf/gconf-editor/gconf-editor-C.omf
 share/pixmaps/gconf-editor.png
 share/pixmaps/gconf-editor/entry-blank.png
 share/pixmaps/gconf-editor/entry-bool.png
@@ -71,7 +87,13 @@ share/pixmaps/gconf-editor/entry-schema.png
 share/pixmaps/gconf-editor/entry-string.png
 share/pixmaps/gconf-editor/folder-closed.png
 share/pixmaps/gconf-editor/folder-open.png
-share/pixmaps/gconf-editor/stock-about-16.png
 @dirrm share/pixmaps/gconf-editor
 @comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/omf/gconf-editor
+@dirrm share/omf
+@dirrm share/gnome/help/gconf-editor/C/figures
+@dirrm share/gnome/help/gconf-editor/C
+@dirrm share/gnome/help/gconf-editor
+@dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
