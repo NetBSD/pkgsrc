@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2111 2004/09/10 19:25:36 wiz Exp $
+$NetBSD: TODO,v 1.2112 2004/09/10 21:16:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -391,6 +391,7 @@ Suggested package updates
 	o py-psycopg-1.1.10
 	o py-wxWindows-2.5.2.8
 	o pysol-4.82
+	o quanta-3.3
 	o raine-0.41
 	o ratpoison-1.3.0
 	o readline-5.0
