@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:49 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/07/07 21:57:50 jtb Exp $
 bin/gp
 bin/gp-2.1
 bin/gphelp
@@ -17,6 +17,10 @@ include/pari/paristio.h
 include/pari/parisys.h
 include/pari/paritype.h
 lib/libpari.a
+lib/libpari.la
+lib/libpari.so
+lib/libpari.so.0
+lib/libpari.so.0.0
 man/man1/gp.1
 man/man1/gphelp.1
 man/man1/pari.1
@@ -35,6 +39,7 @@ share/pari/doc/Makefile
 share/pari/doc/appa.tex
 share/pari/doc/appb.tex
 share/pari/doc/appc.tex
+share/pari/doc/paricfg.tex
 share/pari/doc/paricfg.tex.in
 share/pari/doc/parimacro.tex
 share/pari/doc/pdfmacs.tex
@@ -53,7 +58,6 @@ share/pari/doc/usersch4.tex
 share/pari/doc/usersch5.tex
 share/pari/emacs/pari-translator.el
 share/pari/emacs/pari.el
-share/pari/emacs/pari.elc
 share/pari/emacs/pariemacs.txt
 share/pari/emacs/with-syntax.el
 share/pari/examples/EXPLAIN
