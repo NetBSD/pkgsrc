@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/05/15 15:48:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2004/05/28 18:27:10 reed Exp $
 #
 
 DISTNAME=		gnome-panel-2.6.1
@@ -22,6 +22,8 @@ PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+
+BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.6.1
 
 GCONF2_SCHEMAS= 	clock.schemas
 GCONF2_SCHEMAS+=	fish.schemas
