@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1488 2004/08/07 15:58:59 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1489 2004/08/16 01:56:03 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -570,6 +570,16 @@ PATCH_DIST_CAT?=	{ case $$patchfile in				\
 .for i in ${PATCHFILES}
 PATCH_DIST_CAT.${i:S/=/--/}?=	{ patchfile=${i}; ${PATCH_DIST_CAT}; }
 .endfor
+
+PKG_PATCH_FAIL=								\
+if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
+	${ECHO} "==========================================================================";								\
+	${ECHO};							\
+	${ECHO} "Some of the selected build options and/or local patches may be incompatible.";								\
+	${ECHO} "Please try building with fewer options or patches.";	\
+	${ECHO};							\
+	${ECHO} "==========================================================================";								\
+fi; exit 1
 
 EXTRACT_SUFX?=		.tar.gz
 
@@ -2070,7 +2080,7 @@ do-patch: uptodate-digest
 	fi;								\
 	${PATCH_DIST_CAT.${i:S/=/--/}} |				\
 	${PATCH} ${PATCH_DIST_ARGS.${i:S/=/--/}}			\
-		|| { ${ECHO} "Patch ${i} failed"; exit 1; }
+		|| { ${ECHO} "Patch ${i} failed"; ${PKG_PATCH_FAIL}; }
 .    endfor
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2147,11 +2157,11 @@ do-patch: uptodate-digest
 			fuzz="";					\
 			${PATCH} -v > /dev/null 2>&1 && fuzz="${PATCH_FUZZ_FACTOR}"; \
 			${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||		\
-				{ ${ECHO} Patch $$i failed ; exit 1; };	\
+				{ ${ECHO} Patch $$i failed ; ${PKG_PATCH_FAIL}; };	\
 		done;							\
 		if [ "X$$fail" != "X" ]; then				\
 			${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
-			exit 1;						\
+			${PKG_PATCH_FAIL};						\
 		fi;							\
 	fi
 .endif
