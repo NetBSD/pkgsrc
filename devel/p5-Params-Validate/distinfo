@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/03/15 12:05:03 martti Exp $
+$NetBSD: distinfo,v 1.4 2002/04/27 19:22:40 shell Exp $
 
-SHA1 (Params-Validate-0.14.tar.gz) = ec37bc42e082a4256fff2db4469b40b6dec09e2d
-Size (Params-Validate-0.14.tar.gz) = 14908 bytes
+SHA1 (Params-Validate-0.15.tar.gz) = 73aff3b811c62ab81f91ae0f357e56c4e4a19d97
+Size (Params-Validate-0.15.tar.gz) = 14939 bytes
