@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7128 2004/09/10 10:51:33 reinoud Exp $
+$NetBSD: CHANGES,v 1.7129 2004/09/10 12:50:57 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4226,3 +4226,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvs to 1.11.17nb1 [wiz 2004-09-09]
 	Updated gcal to 3.01nb2 [atatat 2004-09-10]
 	Added mozilla-plugger-5.1.3 [reinoud 2004-09-10]
+	Updated udfclient to 0.3nb1 [reinoud 2004-09-10]
+
