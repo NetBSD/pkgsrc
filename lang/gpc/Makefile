@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/01 01:43:29 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/02 11:28:22 seb Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		3
@@ -54,7 +54,7 @@ INSTALL_DIRS=		${BUILD_DIRS}/gcc
 
 INSTALL_TARGET=		pascal.install
 
-INFO_FILES=		gpc.info gpcs.info
+INFO_FILES=		gpc.info gpcs.info gpcs-de.info gpcs-hr.info
 
 post-extract:
 	${MKDIR} ${WRKSRC}
