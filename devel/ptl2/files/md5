@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/03/29 23:13:56 tron Exp $
+$NetBSD: md5,v 1.2 1999/05/12 13:24:26 msaitoh Exp $
 
-MD5 (PTL2-current-990325.tar.gz) = e4692f9604bda21f85a61e3936d47d1a
+MD5 (PTL2-current-990512.tar.gz) = 77179c8ec14047540a624c1b9002c06e
