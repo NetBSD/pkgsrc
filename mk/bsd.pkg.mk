@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.609 2000/11/18 21:53:31 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.610 2000/11/18 21:55:28 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -3020,15 +3020,15 @@ print-PLIST:
 	esac ;								\
 	${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED}							\
-		-e  s@${PREFIX}/./@@ 					\
-		-e  s@${OPSYS}@\$${OPSYS}@ 				\
-		-e  s@${OS_VERSION}@\$${OS_VERSION}@ 			\
-		-e  s@${MACHINE_ARCH}@\$${MACHINE_ARCH}@ 		\
-		-e  s@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@	\
-		-e  s@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@ \
-		-e  s@${LOWER_VENDOR}@\$${LOWER_VENDOR}@ 		\
-		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
-		-e  s@${PKGNAME}@\$${PKGNAME}@ 				\
+		-e  's@${PREFIX}/./@@' 					\
+		-e  's@${OPSYS}@\$${OPSYS}@' 				\
+		-e  's@${OS_VERSION:S/./\./}@\$${OS_VERSION}@'	\
+		-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 		\
+		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
+		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
+		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
+		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
+		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
 		$$RMELFLIBS 						\
 	 | sort								\
 	 | ${AWK} '							\
