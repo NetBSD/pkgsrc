@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.16 1998/11/12 23:20:10 frueauf Exp $
+
 --- makefile.unix.orig	Wed Oct 21 08:20:43 1998
 +++ makefile.unix	Sun Oct 25 04:03:24 1998
 @@ -39,7 +39,7 @@
