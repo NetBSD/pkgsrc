@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.4 2003/12/20 05:29:55 xtraeme Exp $
+
+--- dox/file.c.orig	Wed Nov  5 08:42:17 2003
++++ dox/file.c	Fri Dec 19 20:56:04 2003
+@@ -26,6 +26,11 @@
+ # include <wctype.h>
+ #endif
+ 
++#include <sys/param.h>
++#if defined(__NetBSD_Version__) && (__NetBSD_Version__ < 106210000)
++typedef unsigned int wctype_t;
++#endif
++
+ #ifdef __EMX__
+ #define chdir	_chdir2
+ #define getcwd	_getcwd2
+@@ -618,7 +623,7 @@
+    int                 cnt, i;
+    char               *start, *finish, *ss, *w;
+ 
+-   int                 wcflg, mbflg;
++   int                 mbflg;
+    struct              char_class {
+      char               *name;
+      wctype_t            wt;
+@@ -654,6 +659,7 @@
+      }
+ 
+    /*  Check multibyte character class is available or not */
++/*
+    wcflg = 0;
+    for ( cc = char_class_tbl; cc->name != NULL; cc++ )
+      {
+@@ -661,7 +667,7 @@
+ 	if ( cc->wt != (wctype_t)0 )
+ 	  wcflg = 1;
+      }
+-
++*/
+    cnt = 0;
+    i = 0;
+    start = NULL;
+@@ -679,6 +685,7 @@
+ 	if ( len < 0 )		{ i++; continue; }
+ 
+ 	/*  Check multibyte character class */
++/*
+ 	if ( wcflg )
+ 	  {
+ 	     wchar_t             wc;
+@@ -700,6 +707,7 @@
+ 	       }
+ 	  }
+ 	else
++*/
+ 	  mbflg = len;
+ 
+ 	if ((cnt == num) && (
