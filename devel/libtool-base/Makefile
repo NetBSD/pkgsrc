@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/02/22 12:12:38 markd Exp $
+# $NetBSD: Makefile,v 1.31 2004/02/22 12:22:47 grant Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
@@ -51,7 +51,7 @@ CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
 .endif
 
-.if !empty(MACHINE_PLATFORM:MDarwin-*-*)
+.if ${OPSYS} == "Darwin"
 .  include "../../devel/dlcompat/buildlink3.mk"
 .endif
 
