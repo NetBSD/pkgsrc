@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/07/20 15:41:06 tron Exp $
+# $NetBSD: Makefile,v 1.13 2000/09/02 18:49:38 wiz Exp $
 #
 
 DISTNAME=		coda-4.6.6
@@ -22,5 +22,13 @@ INSTALL_TARGET=		client-install
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
+
+pre-configure:
+	cd ${WRKSRC} &&							\
+	for F in coda-src/advice/Makefile.in; do 		\
+		${SED} -e "s_-lgdbm_-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lgdbm_"\
+			< $$F > $$F.patched &&			\
+		${MV} $$F.patched $$F;				\
+	done
 
 .include "../../mk/bsd.pkg.mk"
