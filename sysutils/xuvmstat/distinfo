@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2003/08/11 07:39:27 martin Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 13:41:00 agc Exp $
 
 SHA1 (xuvmstat20030810.tar.gz) = 20644f01e6458b5bb5765a704d018b5c233d18f1
+RMD160 (xuvmstat20030810.tar.gz) = 64a1062f1e46df19eb127d3f9d2e9e7d22d4e9b4
 Size (xuvmstat20030810.tar.gz) = 7552 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2003/07/25 16:37:58 drochner Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 13:10:12 agc Exp $
 
 SHA1 (pycrypto-1.9a6.tar.gz) = 8cd40121260ab5aa1ff56b1d3a4f49de2db1343f
+RMD160 (pycrypto-1.9a6.tar.gz) = 581aa26c37cec87ec27c23ea0210b47f1b87f36d
 Size (pycrypto-1.9a6.tar.gz) = 158801 bytes

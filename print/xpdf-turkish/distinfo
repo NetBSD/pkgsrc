@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/03/25 14:07:04 salo Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:51:46 agc Exp $
 
 SHA1 (xpdf-turkish-20020410/xpdf-turkish.tar.gz) = 2a225c726ebef40f63902081604064bd8b4ae117
+RMD160 (xpdf-turkish-20020410/xpdf-turkish.tar.gz) = 25e49dd17c93d6904372f1223c2204543ddbf22d
 Size (xpdf-turkish-20020410/xpdf-turkish.tar.gz) = 1140 bytes

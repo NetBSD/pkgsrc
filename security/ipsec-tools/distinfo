@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/02/18 09:53:40 manu Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 13:10:07 agc Exp $
 
 SHA1 (ipsec-tools-0.5.tar.bz2) = d52e75156b89c4a589ef014aaec07d0be2248710
+RMD160 (ipsec-tools-0.5.tar.bz2) = 96c3d9806ab7e83167c606990b144c3b57e6da22
 Size (ipsec-tools-0.5.tar.bz2) = 646397 bytes
