@@ -1,4 +1,4 @@
-# $Id: cpuflags.mk,v 1.11 2003/10/02 16:10:00 abs Exp $
+# $Id: cpuflags.mk,v 1.12 2004/01/20 23:38:46 abs Exp $
 # Makefile include fragment to simplify use of cpuflags in pkgsrc
 # abs@netbsd.org - freely distributable, no warrenties, stick no bills.
 
@@ -12,17 +12,20 @@
 #
 #	CPU_DIR		CPU_FLAGS with spaces stripped (eg: for use in PACKAGES)
 
-.ifndef CPU_FLAGS
-
-.if defined(BSD_PKG_MK) || ${USETOOLS:Uyes} == "no"
+.ifndef CPU_FLAGS 
+. if defined(BSD_PKG_MK) || ${USETOOLS:Uyes} == "no"
 CPU_FLAGS!=/usr/pkg/bin/cpuflags ${CC}
-.else
+. else
 CPU_FLAGS!=/usr/pkg/bin/cpuflags
+. endif
 .endif
 
+.ifndef CPU_DIR
 CPU_DIR!=echo ${CPU_FLAGS} | sed 's/ //'
-MAKEFLAGS+=CPU_FLAGS=${CPU_FLAGS} CPU_DIR="${CPU_DIR}" 		# For sub makes
+.endif
 
+.if empty(MAKEFLAGS:MCPU_FLAGS=)
+MAKEFLAGS+=CPU_FLAGS=${CPU_FLAGS} CPU_DIR="${CPU_DIR}" 		# For sub makes
 .endif
 
 .ifdef BSD_PKG_MK			# Try to catch various package opts
