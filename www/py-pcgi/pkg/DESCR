@@ -1,0 +1,5 @@
+Persistent CGI provides a transparent architecture for accessing
+published web objects as long-running processes.  Published objects may
+be accessed on any server supporting CGI.  PCGI is one way to interface
+Zope or other ZPublisher applications to Apache. 
+
