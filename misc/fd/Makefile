@@ -3,7 +3,8 @@
 # Date created:         20 Feb 1996
 # Whom:                 Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/24 01:08:15 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.5 1997/01/06 06:38:33 max Exp
 #
 
 DISTNAME=	FD-1.01
@@ -31,5 +32,6 @@ do-configure:
 
 post-install:
 	@strip ${PREFIX}/bin/fd
+	cd ${WRKSRC} ; [ -f .fdrc ] && cp .fdrc ${PREFIX}/etc/fdrc
 
 .include <bsd.port.mk>
