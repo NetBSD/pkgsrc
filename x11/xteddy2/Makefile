@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/09 15:49:07 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/23 04:58:04 jlam Exp $
 
 DISTNAME=	xteddy-2.0.1
 CATEGORIES=	x11 games
@@ -10,26 +10,23 @@ COMMENT=	Teddy bear for your desktop
 
 CONFLICT+=	xteddy-1.*
 
-USE_BUILDLINK_ONLY=	YES
-GNU_CONFIGURE=	yes
-USE_X11=	yes
+USE_BUILDLINK_ONLY=	yes
+GNU_CONFIGURE=		yes
+USE_X11=		yes
 
-CPPFLAGS+=	-I${X11BASE}/include
+CPPFLAGS+=		-I${X11BASE}/include
 
 pre-configure:
-	${SED} \
-		-e 's|@PREFIX@|${PREFIX}|' \
-		${WRKSRC}/configure >${WRKSRC}/configure.new
-	${MV} ${WRKSRC}/configure.new ${WRKSRC}/configure
-	${CHMOD} 755 ${WRKSRC}/configure
-	${SED} \
-		-e 's|@PREFIX@|${PREFIX}|' \
-		${WRKSRC}/xteddy_test >${WRKSRC}/xteddy_test.new
-	${MV} ${WRKSRC}/xteddy_test.new ${WRKSRC}/xteddy_test
-	${SED} \
-		-e 's|@PREFIX@|${PREFIX}|' \
-		${WRKSRC}/xtoys >${WRKSRC}/xtoys.new
-	${MV} ${WRKSRC}/xtoys.new ${WRKSRC}/xtoys
+	files="configure xteddy_test xtoys";				\
+	cd ${WRKSRC}; for file in $${files}; do				\
+		${MV} $${file} $${file}.fixme;				\
+		${SED} -e "s|@PREFIX@|${PREFIX}|g"			\
+			$${file}.fixme >> $${file};			\
+		if [ -x $${file}.fixme ]; then				\
+			${CHMOD} +x $${file};				\
+		fi;							\
+		${RM} -f $${file}.fixme;				\
+	done
 
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
