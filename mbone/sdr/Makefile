@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/03/08 20:27:15 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2004/06/08 12:23:59 cjep Exp $
 #
 
 DISTNAME=	sdr-3.0
@@ -15,6 +15,8 @@ DEPENDS+=	common-mml>=1.2.0:../common-mml
 WRKSRC=		${WRKDIR}/sdr/${SYSDIR}
 CRYPTO=		yes
 USE_GNU_TOOLS+=	make
+
+BUILD_DEFS+=		USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/12 21:05:15 kim Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/08 12:24:00 cjep Exp $
 
 DISTNAME=	smokeping-1.28
 CATEGORIES=	net
@@ -16,6 +16,8 @@ DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
 USE_PERL5=	YES
 PERL5_REQD+=	5.6.0
 USE_PKGINSTALL=	yes
+
+BUILD_DEFS+=	USE_INET6
 
 PKG_SYSCONFSUBDIR?=     smokeping
 MESSAGE_SUBST+=         PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
