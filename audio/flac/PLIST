@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/10/01 13:17:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/02/28 14:09:19 wiz Exp $
 bin/flac
 bin/metaflac
 include/FLAC++/all.h
@@ -24,9 +24,9 @@ include/OggFLAC++/decoder.h
 include/OggFLAC++/encoder.h
 include/OggFLAC++/export.h
 include/OggFLAC/all.h
+include/OggFLAC/export.h
 include/OggFLAC/file_decoder.h
 include/OggFLAC/file_encoder.h
-include/OggFLAC/export.h
 include/OggFLAC/seekable_stream_decoder.h
 include/OggFLAC/seekable_stream_encoder.h
 include/OggFLAC/stream_decoder.h
@@ -48,6 +48,7 @@ share/doc/html/flac/developers.html
 share/doc/html/flac/documentation.html
 share/doc/html/flac/download.html
 share/doc/html/flac/faq.html
+share/doc/html/flac/favicon.ico
 share/doc/html/flac/features.html
 share/doc/html/flac/format.html
 share/doc/html/flac/goals.html
