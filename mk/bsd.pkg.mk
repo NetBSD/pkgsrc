@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.421 2000/03/27 08:43:05 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.422 2000/04/06 16:03:22 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -277,6 +277,8 @@ BZCAT=			${LOCALBASE}/bin/bzcat
 BUILD_DEPENDS+=		${BZCAT}:${PKGSRCDIR}/archivers/bzip2
 .endif # !exists bzcat
 DECOMPRESS_CMD?=	${BZCAT}
+.elif ${EXTRACT_SUFX} == ".tar"
+DECOMPRESS_CMD?=	${CAT}
 .else
 DECOMPRESS_CMD?=	${GZCAT}
 .endif
@@ -2585,7 +2587,7 @@ print-pkg-depend-sizes:
 	${SHCOMMENT} "depends of depends (XXX complete!)"; 		\
 	dps=`${PKG_INFO} -qf "$$p" | grep '@pkgdep' | awk '{ print $$2; }'` ; \
 	for dp in $$dps ; do						\
-			${PKG_INFO} -qL "$$dp" ;			\
+		${PKG_INFO} -qL "$$dp" ;				\
 	done
 .endfor
 
