@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/25 13:37:36 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/26 05:02:15 sakamoto Exp $
 
 DISTNAME=	kterm-6.2.0
 CATEGORIES=	x11
@@ -17,7 +17,7 @@ USE_XAW=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-XAW_TYPE?=	3d
+XAW_TYPE?=	standard
 
 .if defined(USE_WALLPAPER) && ${USE_WALLPAPER} == YES
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
@@ -26,8 +26,8 @@ PATCHFILES+=	KTerm-BGP-1.0.patch.gz
 .endif
 
 post-patch:
-.if defined(USE_XAW3DLIB)
-	@${ECHO_MSG}  "===>  Applying Xaw3d scrollbar patch"
+.if ${XAW_TYPE} != "standard"
+	@${ECHO_MSG}  "===>  Applying Xaw scrollbar patch"
 	@${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-xaw3d
 .endif
 
