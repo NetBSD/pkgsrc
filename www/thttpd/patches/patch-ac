@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2001/01/14 06:14:14 jlam Exp $
+$NetBSD: patch-ac,v 1.6 2002/06/16 19:10:26 wiz Exp $
 
---- cgi-src/Makefile.in.orig	Tue Sep 26 16:20:14 2000
+--- cgi-src/Makefile.in.orig	Mon Nov 12 22:52:00 2001
 +++ cgi-src/Makefile.in
 @@ -34,7 +34,7 @@
  CCOPT =		@V_CCOPT@
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.5 2001/01/14 06:14:14 jlam Exp $
  NETLIBS =	@V_NETLIBS@
 @@ -69,15 +69,15 @@
  install:	all
- 	-mkdir $(CGIBINDIR)
+ 	-mkdir -p $(CGIBINDIR)
  	rm -f $(CGIBINDIR)/redirect
 -	cp redirect $(CGIBINDIR)/redirect
 +	$(BSD_INSTALL_PROGRAM) redirect $(CGIBINDIR)/redirect

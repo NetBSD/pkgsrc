@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2002/05/12 14:47:28 joda Exp $
+# $NetBSD: Makefile,v 1.19 2002/06/16 19:10:25 wiz Exp $
 
-DISTNAME=	thttpd-2.21b
+DISTNAME=	thttpd-2.23beta1
+PKGNAME=	thttpd-2.23.0.1
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/thttpd/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \

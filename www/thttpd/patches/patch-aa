@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2000/12/17 22:21:44 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2002/06/16 19:10:26 wiz Exp $
 
---- Makefile.in.orig	Tue Jul  4 12:21:32 2000
+--- Makefile.in.orig	Wed Apr  3 04:49:35 2002
 +++ Makefile.in
 @@ -34,7 +34,7 @@
  # Pathname of directory to install the man page.
@@ -29,15 +29,19 @@ $NetBSD: patch-aa,v 1.5 2000/12/17 22:21:44 jlam Exp $
  LDFLAGS =	@LDFLAGS@
  LIBS =		@LIBS@
  NETLIBS =	@V_NETLIBS@
-@@ -111,10 +111,10 @@
+@@ -109,12 +109,12 @@
  install:	installthis install-man installsubdirs
  
  installthis:
+-	-mkdir -p $(DESTDIR)$(BINDIR)
 -	$(INSTALL) -m 555 -o bin -g bin thttpd $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) thttpd $(DESTDIR)$(BINDIR)
  
  install-man:
+-	-mkdir -p $(DESTDIR)$(MANDIR)/man8
 -	$(INSTALL) -m 444 -o bin -g bin thttpd.8 $(DESTDIR)$(MANDIR)/man8
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(MANDIR)/man8
 +	$(BSD_INSTALL_MAN) thttpd.8 $(DESTDIR)$(MANDIR)/man8
  
  installsubdirs:
