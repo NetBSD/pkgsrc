@@ -3,7 +3,7 @@
 # Date created:				Tue Oct 28 00:12:41 CET 1997
 # Whom:					Hubert Feyrer (hubertf@netbsd.org)
 #
-# $NetBSD: Makefile,v 1.5 1997/12/09 02:49:22 agc Exp $
+# $NetBSD: Makefile,v 1.6 1997/12/13 04:05:28 hubertf Exp $
 
 DISTNAME=	ncurses-1.9.9g
 WRKSRC=		${WRKDIR}/ncurses_1.9.9g
@@ -17,7 +17,7 @@ MAINTAINER=	hubertf@netbsd.org
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-normal --with-shared --enable-bsdpad
 
-MANCOMPRESSED=	yes
+#MANCOMPRESSED=	yes
 MAN1=		captoinfo.1 infocmp.1 tic.1 toe.1
 MAN3=		curs_addch.3 curs_addchstr.3 curs_addstr.3 curs_attr.3 \
 		curs_beep.3 curs_bkgd.3 curs_border.3 curs_clear.3 \
