@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.9 2004/03/24 20:35:09 xtraeme Exp $
+$NetBSD: distinfo,v 1.10 2004/04/14 21:02:34 xtraeme Exp $
 
 SHA1 (xchat-2.0.8.tar.bz2) = 68177f242001a2632f4f474989ee9a8a41e725f9
 Size (xchat-2.0.8.tar.bz2) = 997439 bytes
+SHA1 (patch-aa) = 98e1efa4e83bcfb76dafeb96176d760738e8021b
