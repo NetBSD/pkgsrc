@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/06/23 15:06:10 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/04 14:39:38 salo Exp $
 #
 
-DISTNAME=	dovecot-0.99.10-rc2
-PKGNAME=	${DISTNAME:S/-rc/rc/}
+DISTNAME=	dovecot-0.99.10
 CATEGORIES=	mail
-MASTER_SITES=	http://dovecot.procontrol.fi/	\
-		http://dovecot.procontrol.fi/rc/
+MASTER_SITES=	http://dovecot.procontrol.fi/
 
 MAINTAINER=	tom@replic8.net
 HOMEPAGE=	http://dovecot.procontrol.fi/
