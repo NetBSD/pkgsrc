@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.7 2002/01/31 15:02:22 minoura Exp $
+$NetBSD: distinfo,v 1.8 2002/04/11 15:26:19 abs Exp $
 
 SHA1 (tcsh-6.11.tar.gz) = bfc2ccd2d9e04975308cdf0a50b7383e580594b6
 Size (tcsh-6.11.tar.gz) = 716863 bytes
-SHA1 (patch-aa) = d133152687288556ab9ea2b3ed8d0c7c4363d4fd
-SHA1 (patch-ac) = 5e7424ad50ddcd7e75c04d3c64c2136cc360bbdf
-SHA1 (patch-af) = 8db810383f043e65858b5925988cac5fd193c948
-SHA1 (patch-ag) = e71ea3d9dd4ea70040ab18702260d3c8890b9da9
-SHA1 (patch-aj) = e06125ea332549c4f72b08b72e4f9aae8778209a
-SHA1 (patch-ak) = fddc3b0d20f7012b8486a845c3e4a9ad5bf7b7ff
+SHA1 (patch-aa) = 51b96fff19fcfb55e6c841460c7a771c4678978f
+SHA1 (patch-ab) = beb167a266e96ac84325615d437ef8474763756d
+SHA1 (patch-ac) = 3d2ed4818c3dce640fd754ee54af1e4c51be694d
+SHA1 (patch-ad) = aa39de839e228bb1da8c38f67aa6f7019f040040
+SHA1 (patch-ae) = e7a00876ac67d836833f6c1145f2b03086f91a6f
+SHA1 (patch-af) = 7c367f927f0207baa174a7eaa76db329e19a0e6c
+SHA1 (patch-ag) = 2a2cc3052a2459b599df5b7511fa54f3a2838a92

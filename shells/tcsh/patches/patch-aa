@@ -1,29 +1,24 @@
-$NetBSD: patch-aa,v 1.6 2001/12/17 19:26:25 tron Exp $
+$NetBSD: patch-aa,v 1.7 2002/04/11 15:26:20 abs Exp $
 
---- sh.func.c.orig	Tue Mar 13 13:53:50 2001
-+++ sh.func.c	Mon Dec 17 20:23:03 2001
-@@ -2143,6 +2143,9 @@
-     else
- 	rlim.rlim_cur = limit;
+--- Makefile.in.orig	Sun Sep  2 22:16:25 2001
++++ Makefile.in
+@@ -475,17 +475,10 @@
+ install-strip: install
  
-+    if (rlim.rlim_cur > rlim.rlim_max)
-+	rlim.rlim_max = rlim.rlim_cur;
-+
-     if (setrlimit(lp->limconst, &rlim) < 0) {
- # else /* BSDLIMIT */
-     if (limit != RLIM_INFINITY && lp->limconst == RLIMIT_FSIZE)
-@@ -2153,10 +2156,10 @@
- # endif /* aiws */
-     if (ulimit(toset(lp->limconst), limit) < 0) {
- # endif /* BSDLIMIT */
--	xprintf(CGETS(15, 1, "%s: %s: Can't %s%s limit\n"), bname, lp->limname,
--		limit == RLIM_INFINITY ? CGETS(15, 2, "remove") :
--		CGETS(15, 3, "set"),
--		hard ? CGETS(14, 4, " hard") : "");
-+	xprintf(CGETS(15, 1, "%s: %s: Can't %s%s limit (%s)\n"), bname,
-+	    lp->limname, limit == RLIM_INFINITY ? CGETS(15, 2, "remove") :
-+	    CGETS(15, 3, "set"), hard ? CGETS(14, 4, " hard") : "",
-+	    strerror(errno));
- 	return (-1);
-     }
-     return (0);
+ install: tcsh 
+-	-mkdir -p ${DESTBIN}
+-	-mv -f ${DESTBIN}/tcsh  ${DESTBIN}/tcsh.old
+-	cp tcsh ${DESTBIN}/tcsh
+-	-strip ${DESTBIN}/tcsh
+-	chmod 555 ${DESTBIN}/tcsh
++	${BSD_INSTALL_PROGRAM} tcsh ${DESTBIN}/tcsh
+ 
+ install.man: tcsh.man
+-	-mkdir -p ${DESTMAN}
+-	-rm -f ${DESTMAN}/tcsh.${MANSECT}
+-	cp $(srcdir)/tcsh.man ${DESTMAN}/tcsh.${MANSECT}
+-	chmod 444 ${DESTMAN}/tcsh.${MANSECT}
++	${BSD_INSTALL_MAN} tcsh.man ${DESTMAN}/tcsh.${MANSECT}
+ 
+ # Amiga Unix
+ #install.man: tcsh.man
