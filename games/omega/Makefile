@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:39:11 grant Exp $
+# $NetBSD: Makefile,v 1.16 2003/09/19 23:08:23 dent Exp $
 
 DISTNAME=	omega-0.90-pa4
 PKGNAME=	omega-0.90.4
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/proff/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 #HOMEPAGE=	http://dolphin.openprojects.net/Omega/
-HOMEPAGE=	http://www.win.tue.nl/games/roguelike/omega
+HOMEPAGE=	http://home-13.tiscali-business.nl/~bwaijers/omega/
 COMMENT=	Complex rogue-like game of exploration with a sense of humor
 
 USE_BUILDLINK2=		# defined
