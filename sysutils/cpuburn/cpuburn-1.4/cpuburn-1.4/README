@@ -1,0 +1,77 @@
+N E W   burnK7 for the AMD Athlon/Duron has been released. 
+
+These programs are designed to load x86 CPUs as heavily as possible for
+the purposes of system testing.  They have been optimized for different
+processors.  FPU and ALU instructions are coded an assembler endless loop.
+They do not test every instruction.  The goal has been to maximize heat
+production from the CPU, putting stress on the CPU itself, cooling
+system, motherboard (especially voltage regulators) and power supply
+(likely cause of burnBX/MMX errors).
+
+burnP5   is optimized for Intel Pentium w&w/o MMX processors
+    P6   is for Intel PentiumPro, PentiumII&III and Celeron CPUs
+    K6   is for AMD K6 processors
+    K7   is for AMD Athlon/Duron processors
+    MMX  is to test cache/memory interfaces on all CPUs with MMX
+    BX   is an alternate cache/memory test for Intel CPUs
+
+TO USE:  root priviliges are NOT required.  It has been designed for ELF
+	 Linux, but also tested under FreeBSD. and a.out.  Burn Testing 
+	 is best done from a ramdisk distribution (tomsrtbt) or with 
+	 filesystems unmounted or mounted read-only.  untar the source 
+	 in a convenient directory:
+`tar zxf cpuburn`
+	 compile excutables 
+`make`
+	 run desired program in background [ _repeat_ for SMP]:
+`burnP6 || echo $? &`   
+
+Monitor progress of cpuburn by `ps`.  When finished, `kill` the burn*
+process(es).  If you have temperature probes (fingers) or the lm-sensors
+package, you can check your CPU temperature and/or system voltages.
+
+If an error occurs in calculations, it will be preserved, and the
+program will terminate with error code 254 for an integer/memory error,
+and error code 255 for a FP/MMX error.  Error checking happens every
+10-40 sec for burnP6/K6/K7 and I haven't seen any CPU errors in testing
+[lockups occur first].  burnBX and burnMMX check for error every 512 MB
+(4-10 sec), and error termination is frequently seen, lockups are rarer.
+
+burnBX and burnMMX are essentially very intense RAM testers.  They can
+also take an optional parameter indicating the RAM size to be tested:
+
+  A =  2 kB   E =  32 kB   I = 512 kB   M =  8 MB
+  B =  4      F =  64      J =   1 MB   N = 16   
+  C =  8      G = 128      K =   2      O = 32
+  D = 16      H = 256      L =   4      P = 64
+
+`burnBX L` (4 MB) and `burnMMX F` (64 kB) are the default sizes.
+A-E mostly test L1 cache, F-H test L2 cache, and H-P force their way
+to RAM.  But even A-E will have some cacheline writeouts to RAM.
+
+In spite of it's name, burnBX can be run on any chipset [RAM controller]
+and tests alot more than the RAM controller.  Unfortunately, burnBX is
+not optimal on AMD processors. burnMMX is preferable for any CPU that
+has an MMX unit.
+
+burnBX/MMX needs about 72 MB of total RAM + swap to start (not necessarily
+free), but doesn't use this much unless you request it.  They will
+throw a `Sig 11` if you don't have enough swap.  If you don't want to
+add more, you can adjust the .bss section downward as indicated in the
+source comments.  I use very simple memory management. They can also
+test swap, and at least on my system, I can run 2*`burnBX 8` with 128
+MB SDRAM with some use of swap, but no excessive thrashing[seeks]. YMMV.
+
+If sub-spec, your system may lock up after 2-10 minutes.  It shouldn't.
+burn* are just an unpriviliged user processes.  But it probably means
+your CPU is undercooled, most likely no thermal grease or other interface
+material between CPU & heatsink.  Or some other deficiency.  A power
+cycle should reset the system.  But you should fix it.
+
+Robert Redelmeier
+redelm@ev1.net
+
+*** WARNING ***    This program is designed to heavily load CPU chips.
+Undercooled, overclocked or otherwise weak systems may fail causing data
+loss (filesystem corruption) and possibly permanent damage to electronic
+components.  Nor will it catch all flaws.   *** USE AT YOUR OWN RISK ***
