@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3053 2003/08/16 16:55:59 recht Exp $
+$NetBSD: CHANGES,v 1.3054 2003/08/16 18:29:42 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3282,3 +3282,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added MozillaFirebird-0.6.1 [taya 2003-08-16]
 	Added zoom-1.0.1pl1 [dillo 2003-08-16]
 	Update py-soappy to 0.10.2 [recht 2003-08-16]
+	Added freesci-0.3.4a [dillo 2003-08-16]
