@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.22 2002/07/15 10:48:47 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.23 2002/07/17 10:10:40 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -22,8 +22,8 @@ case $hw_machine_arch in
     alpha)
 	# cpu0 at mainbus0: ID 0 (primary), 21164A-0 (unknown ...
 	case "`egrep '^cpu0 ' /var/run/dmesg.boot`" in
-	    *21164A*)	FLAGS="-mcpu=21164a" ;;
-	    *21066*)	FLAGS="-mcpu=21064" ;;
+	    *\ 21164A\ *)	FLAGS="-mcpu=21164a" ;;
+	    *\ 21066\ *)	FLAGS="-mcpu=21064" ;;
 	esac
 	;;
 
@@ -51,18 +51,18 @@ case $hw_machine_arch in
 	esac ;;
 
     i386) case $hw_model in
-	*386-class*)	FLAGS='-march=i386'		;;
-	*486-class*)	FLAGS='-march=i486'		;;
-	*AMD\ K6*)	FLAGS='-march=k6'		;;
-	*586-class*)	FLAGS='-march=pentium'		;;
-	*686-class*)	FLAGS='-march=pentiumpro'	;;
+	*386-class*)		FLAGS='-march=i386'		;;
+	*486-class*)		FLAGS='-march=i486'		;;
+	*AMD\ K6*)		FLAGS='-march=k6'		;;
+	*586-class*)		FLAGS='-march=pentium'		;;
+	*686-class*)		FLAGS='-march=pentiumpro'	;;
     esac ;;
 
     m68k) case $hw_model in				   # Examples
-	*\(68020)		FLAGS='-m68020'		;; # Untested
-	*\(68030)		FLAGS='-m68030'		;; # Mac LC III
-	*\(68040)		FLAGS='-m68040'		;; # Untested
-	*\(68060)		FLAGS='-m68060'		;; # Upgr amiga 3000
+	*\(68020*)		FLAGS='-m68020'		;; # Untested
+	*\(68030*)		FLAGS='-m68030'		;; # Mac LC III
+	*\(68040*)		FLAGS='-m68040'		;; # Untested
+	*\(68060*)		FLAGS='-m68060'		;; # Upgr amiga 3000
     esac ;;
 
     powerpc) case $hw_model in				   # Examples
