@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/10/12 11:21:54 markd Exp $
 bin/kmplayer
 bin/kxineplayer
 lib/kde3/kmplayer.la
@@ -6,6 +6,30 @@ lib/kde3/libkmplayerpart.la
 lib/libkdeinit_kmplayer.la
 lib/libkmplayercommon.la
 share/applications/kde/kmplayer.desktop
+share/doc/kde/HTML/da/kmplayer/common
+share/doc/kde/HTML/da/kmplayer/index.cache.bz2
+share/doc/kde/HTML/da/kmplayer/index.docbook
+share/doc/kde/HTML/en/kmplayer/common
+share/doc/kde/HTML/en/kmplayer/index.cache.bz2
+share/doc/kde/HTML/en/kmplayer/index.docbook
+share/doc/kde/HTML/es/kmplayer/common
+share/doc/kde/HTML/es/kmplayer/index.cache.bz2
+share/doc/kde/HTML/es/kmplayer/index.docbook
+share/doc/kde/HTML/et/kmplayer/common
+share/doc/kde/HTML/et/kmplayer/index.cache.bz2
+share/doc/kde/HTML/et/kmplayer/index.docbook
+share/doc/kde/HTML/fr/kmplayer/common
+share/doc/kde/HTML/fr/kmplayer/index.cache.bz2
+share/doc/kde/HTML/fr/kmplayer/index.docbook
+share/doc/kde/HTML/it/kmplayer/common
+share/doc/kde/HTML/it/kmplayer/index.cache.bz2
+share/doc/kde/HTML/it/kmplayer/index.docbook
+share/doc/kde/HTML/pt/kmplayer/common
+share/doc/kde/HTML/pt/kmplayer/index.cache.bz2
+share/doc/kde/HTML/pt/kmplayer/index.docbook
+share/doc/kde/HTML/sv/kmplayer/common
+share/doc/kde/HTML/sv/kmplayer/index.cache.bz2
+share/doc/kde/HTML/sv/kmplayer/index.docbook
 share/kde/apps/kmplayer/bookmarks.xml
 share/kde/apps/kmplayer/kmplayerpartui.rc
 share/kde/apps/kmplayer/kmplayerui.rc
@@ -14,6 +38,39 @@ share/kde/config/kmplayerrc
 share/kde/icons/crystalsvg/32x32/apps/kmplayer.png
 share/kde/icons/locolor/16x16/apps/kmplayer.png
 share/kde/icons/locolor/32x32/apps/kmplayer.png
+share/kde/locale/ar/LC_MESSAGES/kmplayer.mo
+share/kde/locale/br/LC_MESSAGES/kmplayer.mo
+share/kde/locale/bs/LC_MESSAGES/kmplayer.mo
+share/kde/locale/ca/LC_MESSAGES/kmplayer.mo
+share/kde/locale/cs/LC_MESSAGES/kmplayer.mo
+share/kde/locale/da/LC_MESSAGES/kmplayer.mo
+share/kde/locale/de/LC_MESSAGES/kmplayer.mo
+share/kde/locale/el/LC_MESSAGES/kmplayer.mo
+share/kde/locale/en_GB/LC_MESSAGES/kmplayer.mo
+share/kde/locale/es/LC_MESSAGES/kmplayer.mo
+share/kde/locale/et/LC_MESSAGES/kmplayer.mo
+share/kde/locale/fi/LC_MESSAGES/kmplayer.mo
+share/kde/locale/fr/LC_MESSAGES/kmplayer.mo
+share/kde/locale/hu/LC_MESSAGES/kmplayer.mo
+share/kde/locale/is/LC_MESSAGES/kmplayer.mo
+share/kde/locale/it/LC_MESSAGES/kmplayer.mo
+share/kde/locale/ja/LC_MESSAGES/kmplayer.mo
+share/kde/locale/lt/LC_MESSAGES/kmplayer.mo
+share/kde/locale/nb/LC_MESSAGES/kmplayer.mo
+share/kde/locale/nl/LC_MESSAGES/kmplayer.mo
+share/kde/locale/pa/LC_MESSAGES/kmplayer.mo
+share/kde/locale/pl/LC_MESSAGES/kmplayer.mo
+share/kde/locale/pt/LC_MESSAGES/kmplayer.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kmplayer.mo
+share/kde/locale/ro/LC_MESSAGES/kmplayer.mo
+share/kde/locale/ru/LC_MESSAGES/kmplayer.mo
+share/kde/locale/sk/LC_MESSAGES/kmplayer.mo
+share/kde/locale/sr/LC_MESSAGES/kmplayer.mo
+share/kde/locale/sv/LC_MESSAGES/kmplayer.mo
+share/kde/locale/ta/LC_MESSAGES/kmplayer.mo
+share/kde/locale/tr/LC_MESSAGES/kmplayer.mo
+share/kde/locale/xx/LC_MESSAGES/kmplayer.mo
+share/kde/locale/zh_CN/LC_MESSAGES/kmplayer.mo
 share/kde/mimelnk/application/x-kmplayer.desktop
 share/kde/mimelnk/application/x-mplayer2.desktop
 @comment in kdelibs share/kde/mimelnk/audio/x-ms-wma.desktop
@@ -33,4 +90,12 @@ share/kde/services/pnm.protocol
 @comment dirrm share/kde/config
 @dirrm share/kde/apps/kmplayer
 @comment dirrm share/kde/apps
+@dirrm share/doc/kde/HTML/sv/kmplayer
+@dirrm share/doc/kde/HTML/pt/kmplayer
+@dirrm share/doc/kde/HTML/it/kmplayer
+@dirrm share/doc/kde/HTML/fr/kmplayer
+@dirrm share/doc/kde/HTML/et/kmplayer
+@dirrm share/doc/kde/HTML/es/kmplayer
+@dirrm share/doc/kde/HTML/en/kmplayer
+@dirrm share/doc/kde/HTML/da/kmplayer
 @comment dirrm share/applications/kde
