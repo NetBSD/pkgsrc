@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/09/20 22:44:19 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/10/09 11:40:40 jlam Exp $
 
 .if !defined(PYTHON20_BUILDLINK2_MK)
 PYTHON20_BUILDLINK2_MK=	# defined
@@ -18,6 +18,13 @@ BUILDLINK_PREFIX.python20_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.python20!= \
 	${GREP} "^include/" ${.CURDIR}/${BUILDLINK_PKGSRCDIR.python20}/PLIST
 BUILDLINK_FILES.python20+=	lib/python2.0/config/libpython2.0.*
+BUILDLINK_TRANSFORM+=		l:python:python2.0
+
+BUILDLINK_CPPFLAGS.python20+= \
+	-I${BUILDLINK_PREFIX.python20}/include/python2.0
+BUILDLINK_LDFLAGS.python20+= \
+	-L${BUILDLINK_PREFIX.python20}/lib/python2.0/config		\
+	-Wl,-R${BUILDLINK_PREFIX.python20}/lib/python2.0/config
 
 BUILDLINK_TARGETS+=	python20-buildlink
 
