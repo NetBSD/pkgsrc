@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/02/10 03:21:31 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2005/02/26 22:14:01 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	PAM bdb ldap mysql pgsql
@@ -55,7 +55,12 @@ CONFIGURE_ARGS+=	--with-authldap
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthldap.la
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authldaprc.dist
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authldap.schema
+AUTHLIB_PLIST+=		${AUTHDOCDIR}/README.ldap
 GEN_FILES+=		authldaprc
+POST_INSTALL_TARGETS+=	post-install-ldap
+
+post-install-ldap:
+	${INSTALL_DATA} ${WRKSRC}/README.ldap ${DOCDIR}
 .else
 CONFIGURE_ARGS+=	--without-authldap
 .endif
@@ -68,7 +73,12 @@ CONFIGURE_ARGS+=	--without-authldap
 CONFIGURE_ARGS+=	--with-authmysql
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthmysql.la
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authmysqlrc.dist
+AUTHLIB_PLIST+=		${AUTHDOCDIR}/README.authmysql.html
 GEN_FILES+=		authmysqlrc
+POST_INSTALL_TARGETS+=	post-install-mysql
+
+post-install-mysql:
+	${INSTALL_DATA} ${WRKSRC}/README.authmysql.html ${DOCDIR}
 .else
 CONFIGURE_ARGS+=	--without-authmysql
 .endif
@@ -81,7 +91,12 @@ CONFIGURE_ARGS+=	--without-authmysql
 CONFIGURE_ARGS+=	--with-authpgsql
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthpgsql.la
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authpgsqlrc.dist
+AUTHLIB_PLIST+=		${AUTHDOCDIR}/authpostgres.html
 GEN_FILES+=		authpgsqlrc
+POST_INSTALL_TARGETS+=	post-install-pgsql
+
+post-install-pgsql:
+	${INSTALL_DATA} ${WRKSRC}/README.authpostgres.html ${DOCDIR}
 .else
 CONFIGURE_ARGS+=	--without-authpgsql
 .endif
