@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.157 1998/09/04 10:26:59 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.158 1998/09/05 19:45:25 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -762,74 +762,50 @@ describe:
 ################################################################
 
 # Fetch
+_FETCH_FILE=								\
+		bfile=`${BASENAME} $$file`;				\
+		if [ ! -f $$file -a ! -f $$bfile ]; then		\
+			if [ -h $$file -o -h $$bfile ]; then		\
+				${ECHO_MSG} ">> ${_DISTDIR}/$$bfile is a broken symlink."; \
+				${ECHO_MSG} ">> Perhaps a filesystem (most likely a CD) isn't mounted?"; \
+				${ECHO_MSG} ">> Please correct this problem and try again."; \
+				exit 1;					\
+			fi ; \
+			${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
+			for site in $$sites; do				\
+				${ECHO_MSG} ">> Attempting to fetch $$bfile from $${site}."; \
+				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
+					if [ -n "${FAILOVER_FETCH}" -a -f ${MD5_FILE} ]; then	\
+						CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
+						CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
+						if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
+							continue 2;	\
+						else			\
+							${ECHO_MSG} ">> Checksum failure - trying next site."; \
+						fi;			\
+					else				\
+						continue 2;		\
+					fi;				\
+				fi					\
+			done;						\
+			${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
+			${ECHO_MSG} ">> file manually into ${_DISTDIR} and try again."; \
+			exit 1;						\
+		fi
 
 .if !target(do-fetch)
 do-fetch:
 	@${MKDIR} ${_DISTDIR}
-	@(cd ${_DISTDIR};						\
-	 for file in ${_DISTFILES}; do					\
-		bfile=`${BASENAME} $$file`;				\
-		if [ ! -f $$file -a ! -f $$bfile ]; then		\
-			if [ -h $$file -o -h $$bfile ]; then		\
-				${ECHO_MSG} ">> ${_DISTDIR}/$$bfile is a broken symlink."; \
-				${ECHO_MSG} ">> Perhaps a filesystem (most likely a CD) isn't mounted?"; \
-				${ECHO_MSG} ">> Please correct this problem and try again."; \
-				exit 1;					\
-			fi ;						\
-			${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
-			for site in ${MASTER_SITES}; do			\
-				${ECHO_MSG} ">> Attempting to fetch $$bfile from $${site}."; \
-				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
-					if [ "X${FAILOVER_FETCH}" != X"" -a -f ${MD5_FILE} ]; then \
-						CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
-						CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
-						if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
-							continue 2;	\
-						else			\
-							${ECHO_MSG} ">> Checksum failure - trying next site."; \
-						fi;			\
-					else				\
-						continue 2;		\
-					fi;				\
-				fi					\
-			done;						\
-			${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
-			${ECHO_MSG} ">> file manually into ${_DISTDIR} and try again."; \
-			exit 1;						\
-		fi							\
+	@(cd ${_DISTDIR}; \
+	 sites="${MASTER_SITES}"; \
+	 for file in ${_DISTFILES}; do \
+		${_FETCH_FILE} \
 	 done)
 .if defined(PATCHFILES)
-	@(cd ${_DISTDIR};						\
-	 for file in ${_PATCHFILES}; do					\
-		bfile=`${BASENAME} $$file`;				\
-		if [ ! -f $$file -a ! -f $$bfile ]; then		\
-			if [ -h $$file -o -h $$bfile ]; then		\
-				${ECHO_MSG} ">> ${_DISTDIR}/$$bfile is a broken symlink."; \
-				${ECHO_MSG} ">> Perhaps a filesystem (most likely a CD) isn't mounted?"; \
-				${ECHO_MSG} ">> Please correct this problem and try again."; \
-				exit 1;					\
-			fi ;						\
-			${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
-			for site in ${PATCH_SITES}; do			\
-			    ${ECHO_MSG} ">> Attempting to fetch from $${site}."; \
-				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
-					if [ "X${FAILOVER_FETCH}" != X"" -a -f ${MD5_FILE} ]; then \
-						CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
-						CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
-						if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
-							continue 2;	\
-						else			\
-							${ECHO_MSG} ">> Checksum failure - trying next site."; \
-						fi;			\
-					else				\
-						continue 2;		\
-					fi;				\
-				fi					\
-			done;						\
-			${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
-			${ECHO_MSG} ">> file manually into ${_DISTDIR} and try again."; \
-			exit 1;						\
-		fi							\
+	@(cd ${_DISTDIR}; \
+	 sites="${PATCH_SITES}"; \
+	 for file in ${_PATCHFILES}; do \
+		${_FETCH_FILE} \
 	 done)
 .endif
 .endif
