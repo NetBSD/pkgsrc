@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2000/06/26 06:52:33 rh Exp $
+# $NetBSD: Makefile,v 1.14 2000/07/31 08:13:46 tron Exp $
 
-DISTNAME=	gnome-1.2.1
+DISTNAME=	gnome-1.2.1nb1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	control-center>=1.0.51:../controlcenter
-DEPENDS+=	ee>=0.3.11:../../graphics/ee
+DEPENDS+=	ee>=0.3.12:../../graphics/ee
 DEPENDS+=	gdm>=2.0b4:../gdm
 DEPENDS+=	ggv>=0.95:../../print/ggv
 DEPENDS+=	glade>=0.5.3:../../devel/glade
@@ -27,7 +27,7 @@ DEPENDS+=	gnumeric>=0.54:../../math/gnumeric
 DEPENDS+=	gtk-->=1.0.3:../gtk--
 DEPENDS+=	gtk-engines>=0.8:../gtk-engines
 DEPENDS+=	gtop>=1.0.9:../../sysutils/gtop
-DEPENDS+=	xchat>=1.4.1:../../net/xchat
+DEPENDS+=	xchat>=1.5.6:../../net/xchat
 DEPENDS+=	xscreensaver-gnome>=3.24:../xscreensaver-gnome
 
 USE_X11=	yes
