@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.676 2003/07/03 08:19:41 wiz Exp $
+$NetBSD: TODO,v 1.677 2003/07/03 08:33:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -68,7 +68,6 @@ Suggested package updates
 	o TeXmacs-1.0.1.16
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o adom-1.1.1 [pkg/21847]
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o atari800-1.3
