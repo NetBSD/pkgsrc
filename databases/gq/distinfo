@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.4 2003/09/09 18:51:41 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2004/01/21 16:26:37 cube Exp $
 
-SHA1 (gq-0.6.0.tar.gz) = 23c0d839f83f69931b30c33f500ca8d697d651ed
-Size (gq-0.6.0.tar.gz) = 296812 bytes
-SHA1 (patch-aa) = 4cb231c738ad41aedb60a4dd22f6fb87b91deb27
-SHA1 (patch-ab) = d33da9a07f2fcf080de5bda02408c844a71f136e
+SHA1 (gq-1.0beta1.tar.gz) = fcfeb2874326962e891433d54df7932840fab6ff
+Size (gq-1.0beta1.tar.gz) = 475081 bytes
+SHA1 (patch-aa) = 65c7e14f38e20862cace92b36fbd2ca091f60e10
+SHA1 (patch-ab) = f1ade063dad913f334cb47c9cfb0b1d49c3ac22f
 SHA1 (patch-ac) = b750774ac9292a7c466716fc46ad39cf5bfe1e5f
+SHA1 (patch-ad) = 5a9da1912fea5f7fcbe1cd807caf6b77e498ea05
+SHA1 (patch-ae) = 295196adb9b78af2feab13206dd6e38ef1618d91
