@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/07/14 13:21:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.40 2004/07/14 14:36:48 seb Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 CATEGORIES=		www
@@ -50,7 +50,7 @@ INSTALL_TARGET=install install-error install-other install-include \
 	install-suexec install-man install-build
 .else
 APACHE_DEFAULT_FILES?=	YES
-PLIST_SRC+=	${PKGDIR}/PLIST.deffiles
+PLIST_SRC+=	${PKGDIR}/PLIST ${PKGDIR}/PLIST.deffiles
 .endif
 
 .include "../../mk/bsd.prefs.mk"
