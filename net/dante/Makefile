@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/12/19 22:25:30 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/07/12 14:47:03 wiz Exp $
 #
 
-DISTNAME=		dante-1.1.9
+DISTNAME=		dante-1.1.13
 CATEGORIES=		net security
 MASTER_SITES=		ftp://ftp.inet.no/pub/socks/
 
@@ -17,11 +17,6 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-socks-conf=${PREFIX}/etc/socks.conf
 CONFIGURE_ARGS+=	--with-sockd-conf=${PREFIX}/etc/sockd.conf
-
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dante
