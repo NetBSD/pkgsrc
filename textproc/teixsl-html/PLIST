@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/08/03 14:11:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/09/11 03:36:54 minskim Exp $
 share/xsl/tei/common/teicommon.xsl
 share/xsl/tei/html/teihtml-bibl.xsl
 share/xsl/tei/html/teihtml-chunk.xsl
@@ -12,12 +12,14 @@ share/xsl/tei/html/teihtml-main.xsl
 share/xsl/tei/html/teihtml-math.xsl
 share/xsl/tei/html/teihtml-misc.xsl
 share/xsl/tei/html/teihtml-notes.xsl
+share/xsl/tei/html/teihtml-odds.xsl
 share/xsl/tei/html/teihtml-pagetable.xsl
 share/xsl/tei/html/teihtml-param.xsl
 share/xsl/tei/html/teihtml-poetry.xsl
 share/xsl/tei/html/teihtml-slides.xsl
 share/xsl/tei/html/teihtml-struct.xsl
 share/xsl/tei/html/teihtml-tables.xsl
+share/xsl/tei/html/teihtml-teic.xsl
 share/xsl/tei/html/teihtml-xref.xsl
 share/xsl/tei/html/teihtml.xsl
 @dirrm share/xsl/tei/html
