@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.371 2003/01/28 04:33:26 markd Exp $
+# $NetBSD: Makefile,v 1.372 2003/02/05 22:20:31 jmmv Exp $
 #
 
 COMMENT=	Development utilities
 
 SUBDIR+=	GConf
 SUBDIR+=	GConf2
+SUBDIR+=	GConf2-ui
 SUBDIR+=	Gorm
 SUBDIR+=	SDL
 SUBDIR+=	SDL_gfx
