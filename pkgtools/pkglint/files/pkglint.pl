@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.87 2003/04/22 10:18:23 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.88 2003/05/27 17:14:52 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1159,10 +1159,6 @@ EOF
 
 	# additional checks for committer.
 	$i = ($pkgname eq '') ? $distname : $pkgname;
-	if ($committer && $i =~ /^(de|ja|ko|ru|vi|zh)-/) {
-		&perror("WARN: be sure to include country code \"$1-\" ".
-			"in the module alias name.");
-	}
 	if ($committer && -f "$portdir/$i.tgz") {
 		&perror("WARN: be sure to remove $portdir/$i.tgz ".
 			"before committing the package.");
