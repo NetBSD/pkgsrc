@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.18 1999/04/03 21:45:16 mycroft Exp $
+$NetBSD: patch-aa,v 1.19 1999/07/27 03:20:38 mycroft Exp $
 
 --- makefile.unix.orig	Sat Mar 27 14:28:37 1999
 +++ makefile.unix	Sat Apr  3 14:19:27 1999
@@ -81,7 +81,7 @@ $NetBSD: patch-aa,v 1.18 1999/04/03 21:45:16 mycroft Exp $
 -X11INC		= -I/usr/X11R6/include
 -X11LIB		= -L/usr/X11R6/lib
 +X11INC		= -I${PREFIX}/include
-+X11LIB		= -L${PREFIX}/lib
++X11LIB		= -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
  # for Sun systems
  # X11INC		= -I/usr/openwin/include
  # X11LIB		= -L/usr/openwin/lib
