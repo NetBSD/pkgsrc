@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/04 23:46:39 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 11:05:45 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MYSQL_CLIENT_BUILDLINK3_MK:=	${MYSQL_CLIENT_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_LIBDIRS.mysql-client?=	lib/mysql
 .  include "../../devel/zlib/buildlink3.mk"
 .endif	# MYSQL_CLIENT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.35 2004/01/05 07:01:43 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.36 2004/01/05 11:05:47 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -21,7 +21,7 @@
 # .  include "../../category/baz/buildlink3.mk"
 # .endif # FOO_BUILDLINK3_MK
 #
-# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 # -------------8<-------------8<-------------8<-------------8<-------------
 #
 # Most of the buildlink3.mk file is protected against multiple inclusion,
@@ -209,9 +209,9 @@ MAKEFLAGS+=	_BLNK_PKG_DBDIR.${_pkg_}=${_BLNK_PKG_DBDIR.${_pkg_}}
 .  endif
 
 .  if empty(_BLNK_PKG_DBDIR.${_pkg_}:Mnot_found)
-_BLNK_PKG_INFO.${_pkg_}=	${PKG_INFO_CMD} -K ${_BLNK_PKG_DBDIR.${_pkg_}:H}
+_BLNK_PKG_INFO.${_pkg_}?=	${PKG_INFO_CMD} -K ${_BLNK_PKG_DBDIR.${_pkg_}:H}
 .  else
-_BLNK_PKG_INFO.${_pkg_}=	${PKG_INFO_CMD} -K ${_PKG_DBDIR}
+_BLNK_PKG_INFO.${_pkg_}?=	${PKG_INFO_CMD} -K ${_PKG_DBDIR}
 .  endif
 
 BUILDLINK_PKGNAME.${_pkg_}?=	${_BLNK_PKG_DBDIR.${_pkg_}:T}

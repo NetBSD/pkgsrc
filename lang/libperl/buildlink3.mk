@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:46 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBPERL_BUILDLINK3_MK:=	${LIBPERL_BUILDLINK3_MK}+
@@ -17,4 +17,4 @@ LIBPERL5_REQD?=		${PERL5_REQD}
 .  include "../../lang/perl5/buildlink3.mk"
 .endif	# LIBPERL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

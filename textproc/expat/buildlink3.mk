@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 11:05:47 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EXPAT_BUILDLINK3_MK:=	${EXPAT_BUILDLINK3_MK}+
@@ -13,4 +13,4 @@ BUILDLINK_DEPENDS.expat?=	expat>=1.95.4
 BUILDLINK_PKGSRCDIR.expat?=	../../textproc/expat
 .endif	# EXPAT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
