@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2001/01/01 23:42:05 veego Exp $
 
---- ./configure.orig	Fri May 28 17:15:29 1999
-+++ ./configure	Wed Feb  2 03:39:39 2000
+--- configure.orig	Mon Nov 29 10:07:03 1999
++++ configure	Mon Jan  1 22:23:09 2001
 @@ -654,7 +654,7 @@
  # It thinks the first close brace ends the variable substitution.
  test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
 -PACKAGE=fvwm
 +PACKAGE=fvwm2
  
- VERSION=2.2.2
+ VERSION=2.2.4
  
 @@ -2984,7 +2984,7 @@
  # It thinks the first close brace ends the variable substitution.

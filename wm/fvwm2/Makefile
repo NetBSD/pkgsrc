@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/01 23:42:04 veego Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
-DISTNAME=	fvwm-2.2.2
+DISTNAME=	fvwm-2.2.4
 PKGNAME=	${DISTNAME:S/fvwm/fvwm2/}
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/ \
