@@ -1,6 +1,15 @@
 --- bin/initdb/initdb.sh.orig	Wed Apr  2 07:09:13 1997
 +++ bin/initdb/initdb.sh	Wed Apr  2 07:09:33 1997
-@@ -344,6 +344,5 @@
+@@ -289,7 +289,7 @@
+ #----------------------------------------------------------------------------
+ 
+ if [ $template_only -eq 0 ]; then
+-    echo "Creating global classes in $PG_DATA/base"
++    echo "Creating global classes in $PGDATA/base"
+     echo "Running: postgres $BACKENDARGS template1"
+ 
+     cat $GLOBAL \
+@@ -346,6 +346,5 @@
  
  if [ $debug -eq 0 ]; then
      echo "vacuuming template1"
