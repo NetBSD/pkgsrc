@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3569 2003/09/28 19:04:11 is Exp $
+$NetBSD: CHANGES,v 1.3570 2003/09/28 21:08:59 sjg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3998,3 +3998,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgphoto2 to 2.1.2 [is 2003-09-28]
 	Updated gphoto2 to 2.1.2 [is 2003-09-28]
 	Updated gtkam to 0.1.10nb3 [is 2003-09-28]
+	Updated mk-files to 20030928 [sjg 2003-09-28]
+	Updated bmake to 20030928 [sjg 2003-09-28]
