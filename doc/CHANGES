@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8044 2004/11/27 01:05:02 wiz Exp $
+$NetBSD: CHANGES,v 1.8045 2004/11/27 01:23:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5480,3 +5480,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Proc-Daemon to 0.03 [sketch 2004-11-27]
 	Updated galeon to 1.3.18 [abs 2004-11-27]
 	Updated liferea to 0.6.3 [minskim 2004-11-27]
+	Updated moss to 0.1.13 [minskim 2004-11-27]
