@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/04/29 01:15:06 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/18 15:14:31 seb Exp $
 
 DISTNAME=	mcsim-4.2.0
 CATEGORIES=	math
@@ -11,7 +11,7 @@ WRKSRC=		${WRKDIR}/mcsim
 INFO_FILES=	mcsim
 
 post-build:
-	cd ${WRKSRC}/doc && makeinfo mcsim.texinfo
+	cd ${WRKSRC}/doc && ${MAKEINFO} mcsim.texinfo
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mod/mod ${PREFIX}/bin
@@ -25,4 +25,5 @@ do-install:
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} mcsim mcsim-1 mcsim-2 	\
 		mcsim-3	${PREFIX}/info/
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

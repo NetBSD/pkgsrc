@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:46 seb Exp $
 include/bitmaps/1x1
 include/bitmaps/2x2
 include/bitmaps/black
@@ -512,21 +512,21 @@ include/xview_private/xv_path_util.h
 lib/.text_extras_menu
 lib/.textswrc
 lib/.ttyswrc
-@unexec install-info --delete --info-dir=%D/info %D/lib/help/props.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/lib/help/props.info
 lib/help/props.info
-@exec install-info --info-dir=%D/info %D/lib/help/props.info
-@unexec install-info --delete --info-dir=%D/info %D/lib/help/textedit.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/lib/help/props.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/lib/help/textedit.info
 lib/help/textedit.info
-@exec install-info --info-dir=%D/info %D/lib/help/textedit.info
-@unexec install-info --delete --info-dir=%D/info %D/lib/help/textsw.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/lib/help/textedit.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/lib/help/textsw.info
 lib/help/textsw.info
-@exec install-info --info-dir=%D/info %D/lib/help/textsw.info
-@unexec install-info --delete --info-dir=%D/info %D/lib/help/ttysw.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/lib/help/textsw.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/lib/help/ttysw.info
 lib/help/ttysw.info
-@exec install-info --info-dir=%D/info %D/lib/help/ttysw.info
-@unexec install-info --delete --info-dir=%D/info %D/lib/help/xview.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/lib/help/ttysw.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/lib/help/xview.info
 lib/help/xview.info
-@exec install-info --info-dir=%D/info %D/lib/help/xview.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/lib/help/xview.info
 lib/libolgx.a
 lib/libolgx.so
 lib/libolgx.so.3

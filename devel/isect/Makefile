@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:27 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/02/18 15:14:12 seb Exp $
 #
 
 DISTNAME=	isect-1.0
@@ -37,4 +37,5 @@ post-install:
 
 	@PKG_PREFIX=${PREFIX} ${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:36 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:17 seb Exp $
 bin/emacs
 bin/emacs-${PKGVERSION}
 bin/emacs-b2m
@@ -6,33 +6,33 @@ bin/emacs-ctags
 bin/emacs-etags
 bin/emacs-rcs-checkin
 bin/emacsclient
-@unexec install-info --delete %D/info/ccmode %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/ccmode %D/info/dir
 info/ccmode
-@exec   install-info          %D/info/ccmode %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/ccmode %D/info/dir
 info/ccmode-1
 info/ccmode-2
 info/ccmode-3
-@unexec install-info --delete %D/info/cl %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/cl %D/info/dir
 info/cl
-@exec   install-info          %D/info/cl %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/cl %D/info/dir
 info/cl-1
 info/cl-2
 info/cl-3
 info/cl-4
 info/cl-5
 info/cl-6
-@unexec install-info --delete %D/info/dired-x %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/dired-x %D/info/dir
 info/dired-x
-@exec   install-info          %D/info/dired-x %D/info/dir
-@unexec install-info --delete %D/info/ediff %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/dired-x %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/ediff %D/info/dir
 info/ediff
-@exec   install-info          %D/info/ediff %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/ediff %D/info/dir
 info/ediff-1
 info/ediff-2
 info/ediff-3
-@unexec install-info --delete %D/info/emacs %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/emacs %D/info/dir
 info/emacs
-@exec   install-info          %D/info/emacs %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/emacs %D/info/dir
 info/emacs-1
 info/emacs-10
 info/emacs-11
@@ -65,12 +65,12 @@ info/emacs-6
 info/emacs-7
 info/emacs-8
 info/emacs-9
-@unexec install-info --delete %D/info/forms %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/forms %D/info/dir
 info/forms
-@exec   install-info          %D/info/forms %D/info/dir
-@unexec install-info --delete %D/info/gnus %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/forms %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/gnus %D/info/dir
 info/gnus
-@exec   install-info          %D/info/gnus %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/gnus %D/info/dir
 info/gnus-1
 info/gnus-10
 info/gnus-11
@@ -87,44 +87,44 @@ info/gnus-6
 info/gnus-7
 info/gnus-8
 info/gnus-9
-@unexec install-info --delete %D/info/message %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/message %D/info/dir
 info/message
-@exec   install-info          %D/info/message %D/info/dir
-@unexec install-info --delete %D/info/mh-e %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/message %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/mh-e %D/info/dir
 info/mh-e
-@exec   install-info          %D/info/mh-e %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/mh-e %D/info/dir
 info/mh-e-1
 info/mh-e-2
 info/mh-e-3
 info/mh-e-4
-@unexec install-info --delete %D/info/reftex %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/reftex %D/info/dir
 info/reftex
-@exec   install-info          %D/info/reftex %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/reftex %D/info/dir
 info/reftex-1
 info/reftex-2
 info/reftex-3
-@unexec install-info --delete %D/info/sc %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/sc %D/info/dir
 info/sc
-@exec   install-info          %D/info/sc %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/sc %D/info/dir
 info/sc-1
 info/sc-2
 info/sc-3
-@unexec install-info --delete %D/info/vip %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/vip %D/info/dir
 info/vip
-@exec   install-info          %D/info/vip %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/vip %D/info/dir
 info/vip-1
 info/vip-2
-@unexec install-info --delete %D/info/viper %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/viper %D/info/dir
 info/viper
-@exec   install-info          %D/info/viper %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/viper %D/info/dir
 info/viper-1
 info/viper-2
 info/viper-3
 info/viper-4
 info/viper-5
-@unexec install-info --delete %D/info/widget %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/widget %D/info/dir
 info/widget
-@exec   install-info          %D/info/widget %D/info/dir
+@exec   ${INSTALL_INFO}          %D/info/widget %D/info/dir
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/cvtmail
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/digest-doc
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/emacsserver

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:10:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/02/18 15:14:19 seb Exp $
 
 DISTNAME=	gnugo-2.6
 CATEGORIES=	games
@@ -10,6 +10,6 @@ COMMENT=	Go playing program
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GTEXINFO=	yes
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

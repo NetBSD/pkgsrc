@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/02/16 11:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2002/02/18 15:14:34 seb Exp $
 #
 
 DISTNAME=	screen-3.9.11
@@ -14,6 +14,7 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		screen.info
 PLIST_SUBST=		DISTNAME=${DISTNAME}
 USE_BUILDLINK_ONLY=	yes
+TEXINFO_OVERRIDE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 .if (${OPSYS} == SunOS)
@@ -29,4 +30,5 @@ post-install:
 	  /usr/5bin/tic screeninfo.src
 .endif
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

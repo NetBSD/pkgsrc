@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/12/04 06:15:01 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:43 seb Exp $
 #
 
 DISTNAME=	sed-3.02
@@ -15,4 +15,5 @@ CONFIGURE_ARGS= --program-prefix=g
 INFO_FILES=	sed.info
 AUTOMAKE_PATTERNS+=	sed.info version.texi stamp-vti
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

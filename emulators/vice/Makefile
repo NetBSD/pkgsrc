@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/10/24 22:10:54 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2002/02/18 15:14:18 seb Exp $
 #
 
 DISTNAME=		vice-1.7
@@ -25,7 +25,6 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 GNU_CONFIGURE=		YES
 BUILD_USES_MSGFMT=	YES
-USE_GTEXINFO=		YES
 USE_BUILDLINK_ONLY=	YES
 
 # These changes are rather common, so sed instead of patch:
@@ -70,6 +69,7 @@ post-install:
 #.include "../../graphics/png/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # This is the emulator's recommended setting.  We place it last so that it

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:33 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:37 seb Exp $
 #
 
 DISTNAME=	gnus-5.8.8
@@ -12,7 +12,8 @@ COMMENT=	News/Mail reader for Emacs
 # XXX Someone who cares can make this work with Xemacs.
 DEPENDS+=	emacs-[0-9]*:../../editors/emacs
 
-USE_GTEXINFO=	YES
 GNU_CONFIGURE=	YES
+TEXINFO_OVERRIDE=	YES
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:56 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:46 seb Exp $
 bin/gtk10-config
 include/gtk10/gdk/gdk.h
 include/gtk10/gdk/gdkcursors.h
@@ -103,9 +103,9 @@ include/gtk10/gtk/gtkvscrollbar.h
 include/gtk10/gtk/gtkvseparator.h
 include/gtk10/gtk/gtkwidget.h
 include/gtk10/gtk/gtkwindow.h
-@unexec install-info --delete %D/info/gdk10.info %D/info/dir
-@unexec install-info --delete %D/info/glib10.info %D/info/dir
-@unexec install-info --delete %D/info/gtk10.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/gdk10.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/glib10.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/gtk10.info %D/info/dir
 info/gdk10.info
 info/glib10.info
 info/gtk10.info
@@ -114,9 +114,9 @@ info/gtk10.info-2
 info/gtk10.info-3
 info/gtk10.info-4
 info/gtk10.info-5
-@exec install-info %D/info/gdk10.info %D/info/dir
-@exec install-info %D/info/glib10.info %D/info/dir
-@exec install-info %D/info/gtk10.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/gdk10.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/glib10.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/gtk10.info %D/info/dir
 lib/libgdk10.a
 lib/libgdk10.la
 lib/libgdk10.so
