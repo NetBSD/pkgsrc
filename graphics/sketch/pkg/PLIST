@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/06/22 04:16:31 sakamoto Exp $
 bin/sketch
 bin/sk2ps
 share/sketch/Filter/streamfilter.so
