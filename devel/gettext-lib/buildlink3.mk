@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2004/02/11 11:30:49 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2004/02/12 01:59:37 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -17,19 +17,43 @@ BUILDLINK_CHECK_BUILTIN.gettext?=	NO
 BUILDLINK_IS_BUILTIN.gettext=	NO
 .  if exists(/usr/include/libintl.h)
 BUILDLINK_IS_BUILTIN.gettext=	YES
+.    if !empty(BUILDLINK_CHECK_BUILTIN.gettext:M[nN][oO])
+#
+# Consider the base system libintl to be gettext-lib-0.10.35nb1.
+#
+_GETTEXT_PKG=		gettext-lib-0.10.35nb1
+.      for _depend_ in ${BUILDLINK_DEPENDS.gettext}
+.        if !empty(BUILDLINK_IS_BUILTIN.gettext:M[yY][eE][sS])
+BUILDLINK_IS_BUILTIN.gettext!=	\
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_GETTEXT_PKG}; then	\
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
+.        endif
+.      endfor
+.    endif
 .  endif
+.  if !empty(BUILDLINK_CHECK_BUILTIN.gettext:M[nN][oO])
 #
 # The listed platforms have a broken (for the purposes of pkgsrc) version
 # of gettext-lib.  
 #
 _INCOMPAT_GETTEXT=	SunOS-*-*
 INCOMPAT_GETTEXT?=	# empty
-.  for _pattern_ in ${_INCOMPAT_GETTEXT} ${INCOMPAT_GETTEXT}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+.    for _pattern_ in ${_INCOMPAT_GETTEXT} ${INCOMPAT_GETTEXT}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
 BUILDLINK_IS_BUILTIN.gettext=	NO
-.    endif
-.  endfor
+.      endif
+.    endfor
+.  endif
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.gettext=${BUILDLINK_IS_BUILTIN.gettext}
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.gettext:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.gettext=	YES
+.else
+BUILDLINK_USE_BUILTIN.gettext=	NO
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
@@ -43,29 +67,6 @@ BUILDLINK_USE_BUILTIN.gettext=	NO
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.gettext:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.gettext=	YES
-.endif
-
-.if !defined(BUILDLINK_USE_BUILTIN.gettext)
-.  if !empty(BUILDLINK_IS_BUILTIN.gettext:M[nN][oO])
-BUILDLINK_USE_BUILTIN.gettext=	NO
-.  else
-#
-# Consider the base system libintl to be gettext-lib-0.10.35nb1.
-#
-_GETTEXT_PKG=		gettext-lib-0.10.35nb1
-BUILDLINK_USE_BUILTIN.gettext?=	YES
-.    for _depend_ in ${BUILDLINK_DEPENDS.gettext}
-.      if !empty(BUILDLINK_USE_BUILTIN.gettext:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.gettext!=	\
-	if ${PKG_ADMIN} pmatch '${_depend_}' ${_GETTEXT_PKG}; then	\
-		${ECHO} "YES";						\
-	else								\
-		${ECHO} "NO";						\
-	fi
-.      endif
-.    endfor
-.  endif
-MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.gettext=${BUILDLINK_USE_BUILTIN.gettext}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.gettext:M[nN][oO])
