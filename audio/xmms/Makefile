@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2002/12/20 21:34:25 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2003/03/09 20:13:04 jschauma Exp $
 #
 
 DISTNAME=	xmms-1.2.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
 		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
