@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1156 2003/01/18 09:40:49 jmmv Exp $
+$NetBSD: CHANGES,v 1.1157 2003/01/18 09:41:51 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -320,3 +320,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated keychain to 2.0.2 [martti 2003-01-18]
 	Updated stunnel to 4.04 [martti 2003-01-18]
 	Updated docbook-website to 2.3nb1 [grant 2003-01-18]
+	Updated disc-cover to 1.4.0nb1 [jmmv 2003-01-18]
+	Updated docbook-xml to 4.2nb3 [jmmv 2003-01-18]
