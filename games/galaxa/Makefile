@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:15:40 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/23 20:58:41 danw Exp $
 #
 
 DISTNAME=	galaxa.0.1
@@ -14,6 +14,7 @@ COMMENT=	Space game based loosely on "Galaga"
 WRKSRC=		${WRKDIR}/galaxa
 MAKEFILE=	makefile
 USE_X11=	yes
+USE_BUILDLINK3=	yes
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/galaxa

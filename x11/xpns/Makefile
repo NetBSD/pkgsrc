@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:28:29 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/23 20:58:42 danw Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
@@ -14,6 +14,7 @@ COMMENT=	Petri-Net Simulator for Xwindows
 
 WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
+USE_BUILDLINK3=	yes
 MAKEFILE=	makefile
 ALL_TARGET=	pns
 
