@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/11/12 01:31:47 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2003/12/23 13:24:40 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use libgda.
 #
@@ -24,6 +24,7 @@ BUILDLINK_FILES.libgda+=	lib/pkgconfig/libgda.pc
 
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 
