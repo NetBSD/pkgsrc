@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/23 07:16:10 snj Exp $
+# $NetBSD: Makefile,v 1.17.4.1 2004/07/30 16:11:33 agc Exp $
 #
 
 DISTNAME=	gpgme-0.4.3
@@ -16,6 +16,8 @@ USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
+
+LIBS.SunOS+=		-lnsl -lsocket
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}

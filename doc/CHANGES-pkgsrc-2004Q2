@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.51 2004/07/30 16:06:57 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.52 2004/07/30 16:11:33 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -98,4 +98,6 @@ Pullup ticket 86, requested by Grant Beattie [agc 2004-07-30]
 	Build fix for gopher
 Pullup ticket 87, requested by Grant Beattie [agc 2004-07-30]
 	Solaris fix for buildlink3
+Pullup ticket 88, requested by Grant Beattie [agc 2004-07-30]
+	Solaris fix for gpgme
 
