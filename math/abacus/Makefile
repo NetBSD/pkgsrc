@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/01 13:36:56 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/11/18 15:24:18 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/09/25 10:07:44 asami Exp
 #
 
@@ -15,6 +15,11 @@ DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 USE_GMAKE=	yes
 USE_X11BASE=	yes
+
+pre-patch:
+	@for d in `find ${WRKSRC} -name RCS -type d -print`; do		\
+		${MV} $$d $$d-dist;					\
+	done
 
 # Until we have tcl 8.0.3 in pkgsrc
 pre-build:
