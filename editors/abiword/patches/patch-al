@@ -1,18 +1,18 @@
-$NetBSD: patch-al,v 1.5 2003/01/10 06:52:54 mycroft Exp $
+$NetBSD: patch-al,v 1.6 2003/01/28 13:57:53 martti Exp $
 
---- GNUmakefile.in.orig	Thu Sep 12 00:26:24 2002
-+++ GNUmakefile.in	Fri Jan 10 06:47:05 2003
-@@ -135,8 +135,7 @@
+--- GNUmakefile.in.orig	2003-01-23 03:07:40.000000000 +0200
++++ GNUmakefile.in	2003-01-28 15:46:23.000000000 +0200
+@@ -130,8 +130,7 @@
+ psiconv_peerdir = @PSICONV_PEERDIR@
  libiconv_peerdir = @LIBICONV_PEERDIR@
  libpng_peerdir = @LIBPNG_PEERDIR@
- 
 -@BIGENDIAN_TRUE@dictionary = $(top_srcdir)/../abidistfiles/dictionary/BigEndian32.american.hash
 -@BIGENDIAN_FALSE@dictionary = $(top_srcdir)/../abidistfiles/dictionary/LittleEndian32.american.hash
 +dictionary = ${prefix}/lib/american.hash
- subdir = .
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/ac-helpers/mkinstalldirs
-@@ -495,7 +494,7 @@
+ CONFIG_CLEAN_FILES = 
+@@ -446,7 +445,7 @@
            for dir in `cd $(top_srcdir)/../abidistfiles; find . -type d ! -name CVS` ; do \
              $(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/$$dir ;\
              if test "$$dir" = "./dictionary"; then \

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2002/07/03 21:59:09 hubertf Exp $
+$NetBSD: patch-ab,v 1.7 2003/01/28 13:57:53 martti Exp $
 
---- src/Makefile.orig	Thu May 30 23:51:53 2002
-+++ src/Makefile
-@@ -141,7 +141,7 @@
+--- src/Makefile.orig	2002-06-24 09:13:48.000000000 +0300
++++ src/Makefile	2003-01-28 15:44:36.000000000 +0200
+@@ -142,7 +142,7 @@
  endif
  
  # The generic target
