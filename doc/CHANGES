@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2155 2003/05/06 00:02:43 salo Exp $
+$NetBSD: CHANGES,v 1.2156 2003/05/06 05:59:57 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1863,3 +1863,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sablecc to 2.16.2nb1 [wiz 2003-05-05]
 	Updated lmule to 1.2.0 [jmmv 2003-05-05]
 	Updated p5-SDL to 1.19.2nb3 [salo 2003-05-06]
+	Updated gnustep-preferences to 1.2.0nb4 [rh 2003-05-06]
