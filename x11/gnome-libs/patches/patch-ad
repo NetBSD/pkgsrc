@@ -1,13 +1,22 @@
-$NetBSD: patch-ad,v 1.7 1999/07/15 07:57:50 tron Exp $
+$NetBSD: patch-ad,v 1.8 2000/10/17 23:57:45 jlam Exp $
 
---- libgnome/Makefile.in.orig	Wed Apr 28 02:57:58 1999
-+++ libgnome/Makefile.in	Tue May  4 19:26:57 1999
-@@ -74,7 +74,7 @@
- AWK = @AWK@
- CATALOGS = @CATALOGS@
- CATOBJEXT = @CATOBJEXT@
--CC = @CC@
-+CC = @CC@ ${A_OUT_STATIC}
- DATADIRNAME = @DATADIRNAME@
- DLLTOOL = @DLLTOOL@
- DL_LIB = @DL_LIB@
+--- libgnome/Makefile.in.orig	Thu Oct 12 23:03:30 2000
++++ libgnome/Makefile.in
+@@ -233,7 +233,7 @@
+ gnome_gen_mimedb_LDFLAGS = 
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
++LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) ${LIBGNOME_LTCOMPILE_FLAGS} $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+ HEADERS =  $(libgnomeinclude_HEADERS) $(noinst_HEADERS)
+ 
+@@ -322,7 +322,7 @@
+ maintainer-clean-libtool:
+ 
+ libgnome.la: $(libgnome_la_OBJECTS) $(libgnome_la_DEPENDENCIES)
+-	$(LINK) -rpath $(libdir) $(libgnome_la_LDFLAGS) $(libgnome_la_OBJECTS) $(libgnome_la_LIBADD) $(LIBS)
++	$(LINK) ${LIBGNOME_LTLINK_FLAGS} -rpath $(libdir) $(libgnome_la_LDFLAGS) $(libgnome_la_OBJECTS) $(libgnome_la_LIBADD) $(LIBS)
+ 
+ mostlyclean-binPROGRAMS:
+ 
