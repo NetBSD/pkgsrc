@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2499 2003/06/13 15:18:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.2500 2003/06/13 20:57:15 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2450,3 +2450,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pwm to 1.0.20030528nb1 [jlam 2003-06-13]
 	Updated libgnomedb to 0.12.2 [jmmv 2003-06-13]
 	Updated linuxsms to 0.65 [jmmv 2003-06-13]
+	Updated BasiliskII to 1.0 [tron 2003-06-13]
