@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2004/01/09 20:43:02 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2004/01/09 22:48:16 jlam Exp $
 #
 
 DISTNAME=		openldap-2.1.22
@@ -65,6 +65,7 @@ CONFIGURE_ARGS+=	--without-kerberos
 EGDIR=			${PREFIX}/share/examples/openldap
 MAKE_DIRS=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/schema
 OWN_DIRS=		/var/openldap
+OWN_DIRS_PERMS=		/var/openldap/openldap-data ${ROOT_USER} ${ROOT_GROUP} 0700
 OWN_DIRS_PERMS=		/var/openldap/openldap-ldbm ${ROOT_USER} ${ROOT_GROUP} 0700
 OWN_DIRS_PERMS+=	/var/openldap/openldap-slurp ${ROOT_USER} ${ROOT_GROUP} 0700
 
@@ -91,16 +92,11 @@ SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 RCD_SCRIPTS=		slapd
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}/schema
-	for f in ${CNFS} ${CNFS_PERMS} ${SUPPS}; do			\
-		if [ ! -r ${PKG_SYSCONFDIR}/$${f}.default ]; then	\
-			${CP} -p ${PKG_SYSCONFDIR}/$${f}		\
-				${PKG_SYSCONFDIR}/$${f}.default;	\
-		fi;							\
-		${INSTALL_DATA} ${PKG_SYSCONFDIR}/$${f}.default	\
-			${EGDIR}/$${f};				\
-		${RM} -f ${PKG_SYSCONFDIR}/$${f}.default;		\
-	done
+	${_ULIMIT_CMD}cd ${WRKSRC}/libraries/libldap;			\
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install-conf sysconfdir=${EGDIR}
+	${_ULIMIT_CMD}cd ${WRKSRC}/servers/slapd;			\
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install-conf sysconfdir=${EGDIR}; \
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install-schema sysconfdir=${EGDIR}
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

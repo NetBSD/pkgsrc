@@ -1,0 +1,27 @@
+$NetBSD: patch-af,v 1.1 2004/01/09 22:48:16 jlam Exp $
+
+--- libraries/libldap/Makefile.in.orig	Sun Mar 30 09:47:09 2003
++++ libraries/libldap/Makefile.in
+@@ -50,17 +50,18 @@ CFFILES=ldap.conf
+ 
+ install-local: $(CFFILES) FORCE
+ 	-$(MKDIR) $(DESTDIR)$(libdir)
+-	$(LTINSTALL) $(INSTALLFLAGS) -m 644 $(LIBRARY) $(DESTDIR)$(libdir)
++	$(LTINSTALL) $(INSTALLFLAGS) -m 444 $(LIBRARY) $(DESTDIR)$(libdir)
+ 	$(LTFINISH) $(DESTDIR)$(libdir)
++
++install-conf: $(CFFILES) FORCE
+ 	-$(MKDIR) $(DESTDIR)$(sysconfdir)
+ 	@for i in $(CFFILES); do \
+ 		if test ! -f $(DESTDIR)$(sysconfdir)/$$i; then \
+ 			echo "installing $$i in $(sysconfdir)"; \
+-			echo "$(INSTALL) $(INSTALLFLAGS) -m 644  $(srcdir)/$$i $(DESTDIR)$(sysconfdir)/$$i"; \
+-			$(INSTALL) $(INSTALLFLAGS) -m 644 $(srcdir)/$$i $(DESTDIR)$(sysconfdir)/$$i; \
++			echo "$(INSTALL) $(INSTALLFLAGS) -m 444  $(srcdir)/$$i $(DESTDIR)$(sysconfdir)/$$i"; \
++			$(INSTALL) $(INSTALLFLAGS) -m 444 $(srcdir)/$$i $(DESTDIR)$(sysconfdir)/$$i; \
+ 		else \
+ 			echo "PRESERVING EXISTING CONFIGURATION FILE $(sysconfdir)/$$i" ; \
+ 		fi; \
+-		$(INSTALL) $(INSTALLFLAGS) -m 644 $(srcdir)/$$i $(DESTDIR)$(sysconfdir)/$$i.default; \
+ 	done
+ 
