@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1568 2004/04/02 12:34:19 adam Exp $
+$NetBSD: TODO,v 1.1569 2004/04/02 13:24:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -136,7 +136,6 @@ Suggested package updates
 	o afio-2.5
 	o amanda-2.4.4p2 [pkg/24550]
 	o ap-python-2.7.10
-	o apache-ant.1.6.1
 	o audacity-1.2.0
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
@@ -174,7 +173,7 @@ Suggested package updates
 	o dylan-interpreter-2.3.11
 	o efax-gtk-2.2.5a
 	o elk-3.99.6
-	o elm-me-2.4pl113
+	o elm-me-2.4pl114
 	o evolution-1.5.2
 	o exim-4.31
 	o festival-1.4.3
@@ -229,6 +228,7 @@ Suggested package updates
 	o kile-1.6.2
 	o lavaps-2.4
 	o leafnode-1.9.50
+	o lftp-3.0.0
 	o libcaca-0.9
 	o libebml-0.6.4
 	o libesmtp-1.0.2
@@ -237,7 +237,7 @@ Suggested package updates
 	o libnet-1.1.1
 	o libole2-2.2.8
 	o licq-1.2.7
-	o lilypond-2.0.3
+	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
 	o lua-5.0.2
@@ -355,7 +355,7 @@ Suggested package updates
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.1
 	o xmms-1.2.10
-	o xmms-alarm-0.3.4
+	o xmms-alarm-0.3.5
 	o xmms-crossfade-0.3.4
 	o xorp-0.5
 	o xpad-1.13
@@ -367,8 +367,9 @@ Suggested package updates
 	o xzgv-0.8
 	o yacas-1.0.55
 	o yaz-2.0.12
-	o ysm-2.9.2
+	o ysm-2.9.4
 	o zenicb 1.31 (needs merge with lots of local changes)
+	o zsnes-1.40
 
 Infrastructure problems which need addressing
 =============================================
