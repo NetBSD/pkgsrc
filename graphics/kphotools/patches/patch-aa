@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2004/07/31 22:30:12 markd Exp $
+
+--- src/GalleryThrd.cpp.orig	2004-06-13 03:14:01.000000000 +1200
++++ src/GalleryThrd.cpp
+@@ -305,7 +305,7 @@ void GalleryThrd::doCreateWebsite(uint f
+ 		if(strFiles[i][0] == 'f')//if is file copy it
+ 		{
+ 			strFiles[i].remove(0,1);
+-			system("cp /usr/share/kphotools/styles/"+m_strStyle+"/"+strFiles[i]+"  "+m_strLocation+"/"+strFiles[i]);
++			system("cp @kphotoolsdir@/styles/"+m_strStyle+"/"+strFiles[i]+"  "+m_strLocation+"/"+strFiles[i]);
+ 		}else if(strFiles[i][0] == 'd')//if is dir create it
+ 		{
+ 			strFiles[i].remove(0,1);
+@@ -319,7 +319,7 @@ void GalleryThrd::doCreateWebsite(uint f
+ QStringList GalleryThrd::readConfig()
+ {
+ 	//load configuration for style
+-	QFile* pFile = new QFile("/usr/share/kphotools/styles/"+m_strStyle+"/config");
++	QFile* pFile = new QFile("@kphotoolsdir@/styles/"+m_strStyle+"/config");
+ 	pFile->open(IO_ReadOnly);
+ 	QStringList strList;
+ 	QString strLine = "";

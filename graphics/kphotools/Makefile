@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/28 14:09:40 markd Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/31 22:30:12 markd Exp $
 #
 
 DISTNAME=	kphotools-0.2.1
+PKGREVISION=	1
 CATEGORIES=	kde graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kphotools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +16,12 @@ USE_GNU_TOOLS+=	make
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
+
+SUBST_CLASSES+=		kphotools
+SUBST_MESSAGE.kphotools=	"Fixing /usr/share path."
+SUBST_FILES.kphotools=	src/GalleryThrd.cpp src/LogoWid.cpp src/LogoWid.ui src/StyleWid.ui.h
+SUBST_SED.kphotools=	-e 's|@kphotoolsdir@|${KDEDIR}/share/kde/apps/kphotools|'
+SUBST_STAGE.kphotools=	post-patch
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
