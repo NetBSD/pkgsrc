@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/05/07 16:14:39 wrstuden Exp $
+# $NetBSD: Makefile,v 1.17 2003/06/02 01:21:09 jschauma Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Sleepycat Software's Berkeley DB version 3
 

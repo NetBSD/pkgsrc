@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2003/01/20 22:55:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.30 2003/06/02 01:18:38 jschauma Exp $
 #
 
 DISTNAME=	procmail-3.22
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.procmail.org/pub/procmail/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.procmail.org/
 COMMENT=	Local mail delivery agent
 

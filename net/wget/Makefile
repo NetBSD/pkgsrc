@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.60 2003/03/22 12:06:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.61 2003/06/02 01:17:38 jschauma Exp $
 
 DISTNAME=	wget-1.8.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
 COMMENT=	Retrieve files from the 'net via HTTP and FTP
 

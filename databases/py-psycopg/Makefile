@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/05 19:05:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:21:01 jschauma Exp $
 #
 
 DISTNAME=	psycopg-1.0.14
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://initd.org/pub/software/psycopg/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://initd.org/software/psycopg
 COMMENT=	PostgreSQL database adapter for Python
 

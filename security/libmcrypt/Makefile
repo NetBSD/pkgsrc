@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/05 08:42:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/02 01:17:16 jschauma Exp $
 
 DISTNAME=	libmcrypt-2.5.6
 CATEGORIES=	security devel
@@ -6,7 +6,7 @@ MASTER_SITES=	ftp://mcrypt.hellug.gr/pub/mcrypt/libmcrypt/ \
 		ftp://mcrypt.hellug.gr/pub/mcrypt/libmcrypt/old/ \
 		http://mcrypt.hellug.gr/lib/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://mcrypt.hellug.gr/
 COMMENT=	crypto algorithms library
 

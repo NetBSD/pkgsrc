@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/29 12:41:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:00 jschauma Exp $
 #
 
 DISTNAME=	Flan
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/src
 CATEGORIES=	net
 MASTER_SITES=	http://picolibre.enst-bretagne.fr/projects/flan/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://picolibre.enst-bretagne.fr/projects/flan/index.html
 COMMENT=	Simulator for IP networks writen in Java
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/03/14 19:37:37 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/02 01:20:01 jschauma Exp $
 #
 
 DISTNAME=	atari800-1.2.5
@@ -7,7 +7,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atari800/}
 DISTFILES=	atari800-1.2.5.tar.gz xf25.zip
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://atari800.atari.org
 COMMENT=	Atari 8-bit computer, 5200 console emulator
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:56:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:15:52 jschauma Exp $
 
 DISTNAME=	Silva-0.8.6.1
 PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/faassen/Silva/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.infrae.com/products/silva
 COMMENT=	browser based publication system
 

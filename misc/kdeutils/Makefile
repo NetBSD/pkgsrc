@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/03/14 19:37:50 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2003/06/02 01:18:14 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	misc kde
 MASTER_SITES=	${MASTER_SITE_LOCAL}/kde1
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Various utilities for the KDE integrated X11 desktop
 

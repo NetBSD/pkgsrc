@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:18:23 jschauma Exp $
 
 DISTNAME=	randlib.c-1.3
 PKGNAME=	randlib-1.3
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/randlib.c/src
 CATEGORIES=	math
 MASTER_SITES=	ftp://odin.mdacc.tmc.edu/pub/source/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://odin.mdacc.tmc.edu/anonftp/page_2.html
 COMMENT=	Library of C Routines for Random Number Generation
 

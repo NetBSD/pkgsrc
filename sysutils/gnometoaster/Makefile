@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/05 19:05:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:16:55 jschauma Exp $
 #
 
 DISTNAME=	gtoaster1.0Beta5
@@ -9,7 +9,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://gnometoaster.rulez.org/archive/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://gnometoaster.rulez.org/
 COMMENT=	cd recording frontend for X/Gtk
 

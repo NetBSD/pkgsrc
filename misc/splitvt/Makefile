@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 18:09:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:18:07 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/02 08:39:12 obrien Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=		splitvt-1.6.3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/console/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		run two shells in a split window/terminal
 
 HAS_CONFIGURE=		yes

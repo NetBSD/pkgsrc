@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:15:40 jschauma Exp $
 #
 
 DISTNAME=	pygtk-0.6.9
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/python/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.daa.com.au/~james/pygtk/
 COMMENT=	Python Bindings for the GTK Widget Set
 

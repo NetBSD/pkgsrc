@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/11/14 13:31:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/02 01:17:35 jschauma Exp $
 #
 
 DISTNAME=	tin-1.4.6
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/current/ \
 		ftp://uiarchive.uiuc.edu/pub/packages/news/client/tin/unoff/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.tin.org/
 COMMENT=	TIN newsreader (termcap based)
 

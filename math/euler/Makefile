@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/11 00:06:13 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:32 jschauma Exp $
 
 DISTNAME=		euler-1.60.6
 PKGREVISION=		2
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/euler-1.60/source
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=euler/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://euler.sourceforge.net/index.html
 COMMENT=		Interactive numerical analysis and graphics program
 

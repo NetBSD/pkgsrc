@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/02 11:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:15:59 jschauma Exp $
 
 DISTNAME=	quanta-docs-1.0
 PKGREVISION=	2
@@ -13,7 +13,7 @@ DISTFILES=	# empty
 DISTFILES+=	${DOCS}${EXTRACT_SUFX}
 .endfor
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://quanta.sourceforge.net/
 COMMENT= 	documentation collection for Quanta, the KDE web editor
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/03/14 15:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2003/06/02 01:17:01 jschauma Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 PATCH_SITES=	${MASTER_SITES:=bash-2.05b-patches/}
 PATCHFILES=	bash205b-001 bash205b-002 bash205b-003 bash205b-004
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 COMMENT=	The GNU Bourne Again Shell
 
