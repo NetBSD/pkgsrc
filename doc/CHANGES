@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5414 2004/04/02 07:42:45 rh Exp $
+$NetBSD: CHANGES,v 1.5415 2004/04/02 08:54:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1687,8 +1687,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome2-pixmaps to 2.6.0 [jmmv 2004-04-01]
 	Updated gnome-desktop to 2.6.0 [jmmv 2004-04-01]
 	Updated eel2 to 2.6.0 [jmmv 2004-04-01]
-	Updated librsvg to 2.6.3 [jmmv 2004-04-01]
-	Updated librsvg-gtk2 to 2.6.3 [jmmv 2004-04-01]
+	Updated librsvg2 to 2.6.3 [jmmv 2004-04-01]
+	Updated librsvg2-gtk2 to 2.6.3 [jmmv 2004-04-01]
 	Updated swfdec-gtk2 to 0.2.1nb1 [jmmv 2004-04-01]
 	Updated nautilus to 2.6.0 [jmmv 2004-04-01]
 	Updated gnome2-control-center to 2.6.0 [jmmv 2004-04-01]
@@ -1727,7 +1727,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Added nautilus-cd-burner-2.6.0 [jmmv 2004-04-01]
 	Updated nautilus-media to 0.8.0 [jmmv 2004-04-01]
 	Updated gnome2-media to 2.6.0 [jmmv 2004-04-01]
-	Updated gnome-system-monitor to 2.6.0 [jmmv 2004-04-01]
+	Updated gnome2-system-monitor to 2.6.0 [jmmv 2004-04-01]
 	Updated gnome2-utils to 2.6.0 [jmmv 2004-04-01]
 	Added gnome-netstatus-2.6.0 [jmmv 2004-04-01]
 	Updated gtk2-extras to 2.4.0 [jmmv 2004-04-01]
