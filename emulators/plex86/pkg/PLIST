@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/07 14:44:20 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/07 14:58:27 tron Exp $
 bin/plex86
 bin/plex86_reset
 lib/X11/fonts/local/vga.pcf.gz
 @exec %D/bin/mkfontdir %D/lib/X11/fonts/local
 @unexec %D/bin/mkfontdir %D/lib/X11/fonts/local
+lib/plex86/bios/BIOS-plex86-2000_0802a
 lib/plex86/bios/BIOS-plex86-2000_0817a
+lib/plex86/bios/BIOS-plex86-2000_1228a
+lib/plex86/bios/BIOS-plex86-current
 lib/plex86/bios/VGABIOS-elpin-2.40
 lib/plex86/netbsd_post.sh
 lib/plex86/plugin-bochs.so
