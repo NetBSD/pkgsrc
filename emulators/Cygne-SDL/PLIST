@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/23 19:01:40 wiz Exp $
+bin/Cygne-SDL
+share/Cygne-SDL/Wondersnake.txt
+share/Cygne-SDL/Wondersnake.zip
+share/doc/Cygne-SDL/README
+@dirrm share/doc/Cygne-SDL
