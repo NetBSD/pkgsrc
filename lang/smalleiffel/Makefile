@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/09/06 14:31:38 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 09:07:29 agc Exp $
 #
 
 DISTNAME=	se
@@ -13,6 +13,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://smalleiffel.loria.fr/
+COMMENT=	GNU Eiffel compiler
 
 MAKE_ENV+=	SmallEiffel=${WRKSRC}/sys/system.se
 ALL_TARGET=	./bin/compile_to_c

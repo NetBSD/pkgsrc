@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/07/05 22:10:05 nathanw Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/17 09:07:12 agc Exp $
 
 DISTNAME=	hugs98-Feb2000
 PKGNAME=	hugs98-200002
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://www.cse.ogi.edu/pub/pacsoft/hugs/
 
 MAINTAINER=	nathanw@mit.edu
 HOMEPAGE=	http://www.haskell.org/hugs/
+COMMENT=	Nottingham and Yale Haskell interpreter and programming environment
 
 DEPENDS+=	readline-*:../../devel/readline
 

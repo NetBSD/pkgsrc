@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/12/05 15:04:32 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/17 09:07:27 agc Exp $
 #
 
 DISTNAME=	BeOpen-Python-2.0
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0/
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/
+COMMENT=	Interpreted, interactive, object-oriented programming language
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 

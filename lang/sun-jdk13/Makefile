@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/18 00:37:15 tv Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 09:07:33 agc Exp $
 #
 
 # MASTER_SITES is very special, and must end in "=":
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.bin
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://java.sun.com/
+COMMENT=	Sun's Java(tm) Development Kit 1.3.0
 
 DEPENDS=	sun-jre-1.3.0:../../lang/sun-jre13
 
