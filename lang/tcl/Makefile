@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/30 18:24:17 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/25 19:42:58 jlam Exp $
 #
 
 DISTNAME=		tcl8.3.2
@@ -28,6 +28,15 @@ INSTALL_TARGET=		install
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
 #
 CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
+
+.include "../../mk/bsd.prefs.mk"
+
+# NetBSD-1.5.x-m68k platforms apparently have a compiler optimization bug
+# tickled by the Tcl code that manifests in code generation problems.
+#
+.if (${MACHINE_PLATFORM:MNetBSD-1.5*-m68k} != "")
+CONFIGURE_ENV+=		COMPILER_OPTIMIZATION_BUG=YES
+.endif
 
 # Modify mkLinks script to remove the short-filename manpage if it was
 # linked to a longer filename.
