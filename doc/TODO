@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.700 2003/07/12 01:47:44 zuntum Exp $
+$NetBSD: TODO,v 1.701 2003/07/12 01:54:48 zuntum Exp $
 
 Suggested new packages
 ======================
@@ -175,7 +175,6 @@ Suggested package updates
 	o lout-3.26 [pkg/18687]
 	o lwm-1.01
 	o lynx-current-2.8.5dev9
-	o mad-0.15.0b
 	o maildrop-1.5.2
 	o mailsync-5.1.0
 	o memtest86-3.0
