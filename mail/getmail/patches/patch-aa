@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/05 20:56:44 jtb Exp $
+
+--- getmail.orig	Tue Feb 20 23:24:07 2001
++++ getmail
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ 
+ # Change this to your getmail directory; defaults to /usr/lib/getmail
+-GETMAILPATH="/usr/local/lib/getmail"
++GETMAILPATH="@PREFIX@/libexec/getmail"
+ 
+ OLDPYTHONPATH=${PYTHONPATH}
+ PYTHONPATH="${GETMAILPATH}:${PYTHONPATH}"
