@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:12 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/03/12 22:30:10 jmc Exp $
 #
 
 DISTNAME=		Csound4.12
@@ -11,8 +11,9 @@ HOMEPAGE=		http://www.csound.org
 COMMENT=		software synthesizer and sequencer
 
 LICENSE=		csound-license
-NO_SRC_ON_CDROM=	"no for-fee-redistribution"
-NO_BIN_ON_CDROM=	${NO_SRC_ON_CDROM}
+RESTRICTED=		"no for-fee-redistribution"
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		csound
