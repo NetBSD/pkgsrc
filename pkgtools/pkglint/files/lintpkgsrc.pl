@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.2 1999/04/19 07:36:43 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.3 1999/06/05 00:32:40 abs Exp $
 
 # (Somewhat quickly) Written by David Brownlee <abs@anim.dreamworks.com>.
 # Caveats:
@@ -70,27 +70,27 @@ sub list_possible_versions
     my($pkg,%pkg2dir)=@_;
     my($pkgname,@maybe,$fail);
 
-    if( !defined($pkg2dir{$pkg}) )
+    if (!defined($pkg2dir{$pkg}))
 	{
 	$pkgname=$pkg;
-	$pkgname =~ s/-[^-]+$//;
+	$pkgname =~ s/-[^-]+$/-/;
 	foreach ( sort keys %pkg2dir )
 	    {
-	    if( substr($_,0,length($pkgname)) eq $pkgname )
+	    if (/^$pkgname[0-9]/)
 		{ push(@maybe,$_); }
 	    }
 	$_="Unknown package: '$pkg'";
 	if( @maybe )
 	    { $_.=" (Maybe @maybe)"; }
 	else
-	    { $_.=" (DBG $pkgname)"; }
+	    { $_.=" ($pkgname)"; }
 	print "$_\n";
 	$fail=1;
 	}
     $fail;
     }
 
-# List (recursive) non diretory contents of specified directory
+# List (recursive) non directory contents of specified directory
 #
 sub listdir
     {
@@ -178,9 +178,13 @@ sub parse_makefile
 		if ($vars{$key} =~ m#\${(\w+):S/(\w+)/(\w+)/}#)
 		    {
 		    my($var,$from,$to)=($1,$2,$3);
-		    $_=$vars{$var};
-		    s/$from/$to/;
-		    $vars{$key} =~ s#\${$var:S/$from/$to/}#$_#;
+
+		    if (defined($vars{$var}))
+			{
+			$_=$vars{$var};
+			s/$from/$to/;
+			$vars{$key} =~ s#\${$var:S/$from/$to/}#$_#;
+			}
 		    }
 		$vars{$key} =~ s/\$\{$value\}/$vars{$value}/g;
 		}
