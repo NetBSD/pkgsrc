@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2004/12/03 16:06:31 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2004/12/04 16:24:17 wiz Exp $
 
 DISTNAME=		gnucash-1.8.9
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -31,26 +31,13 @@ CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${X11BASE}/lib/pkgconf
 # code is using char/unsigned char inconsistently
 BUILDLINK_TRANSFORM+=  rm:-Werror
 
-CFLAGS+=		-Wl,-R${PREFIX}/${GUILE14_SUBDIR}/lib
-#CFLAGS+=		-L${PREFIX}/${GUILE14_SUBDIR}/lib -Wl,-R${PREFIX}/${GUILE14_SUBDIR}/lib
-LDFLAGS+=		-L${PREFIX}/${GUILE14_SUBDIR}/lib -Wl,-R${PREFIX}/${GUILE14_SUBDIR}/lib
-
 AM_MAKEFLAGS=		LIBTOOL='${LIBTOOL} ${LIBTOOL_FLAGS}'
 MAKE_ENV+=		AM_MAKEFLAGS="${AM_MAKEFLAGS}"
-MAKE_ENV+=		GUILE14_SUBDIR=${GUILE14_SUBDIR:Q}
 
 INFO_FILES=		gnucash-design.info
 
 # 1.8.9 includes empty info file, so we must rebuild it
 USE_MAKEINFO=		yes
-
-SUBST_CLASSES+=		guile14
-SUBST_STAGE.guile14=	pre-configure
-SUBST_MESSAGE.guile14=	"Substitute interpreter calls to use guile14."
-SUBST_FILES.guile14+=	src/bin/overrides/gnucash
-SUBST_FILES.guile14+=	src/bin/overrides/gnucash-make-guids
-SUBST_FILES.guile14+=	src/bin/overrides/gnucash-run-script
-SUBST_SED.guile14+=	"s, guile , ${PREFIX}/${GUILE14_SUBDIR}/bin/guile ,"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -93,7 +80,7 @@ GNUCASH_GUILE_MAKEFILE_IN_FILES= \
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
-.include "../../lang/guile14/buildlink3.mk"
+.include "../../lang/guile/buildlink3.mk"
 .include "../../math/guppi/buildlink3.mk"
 .include "../../net/ORBit/buildlink3.mk"
 .include "../../textproc/libxml/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/10/23 09:22:46 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/12/04 16:24:17 wiz Exp $
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnucash.mo
@@ -546,12 +546,6 @@ share/gnucash/guile-modules/gnucash/report/utility-reports.scm
 share/gnucash/guile-modules/gnucash/report/view-column.scm
 share/gnucash/guile-modules/gnucash/report/welcome-to-gnucash.scm
 share/gnucash/guile-modules/gnucash/tax/us.scm
-share/gnucash/guile-modules/srfi/srfi-1.scm
-share/gnucash/guile-modules/srfi/srfi-11.scm
-share/gnucash/guile-modules/srfi/srfi-19.scm
-share/gnucash/guile-modules/srfi/srfi-2.scm
-share/gnucash/guile-modules/srfi/srfi-8.scm
-share/gnucash/guile-modules/srfi/srfi-9.scm
 share/gnucash/guile-modules/www/cgi.scm
 share/gnucash/guile-modules/www/http.scm
 share/gnucash/guile-modules/www/main.scm
