@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/15 06:50:36 rh Exp $
+bin/heyu
+man/man1/heyu.1
+man/man5/x10config.5
+man/man5/x10sched.5
