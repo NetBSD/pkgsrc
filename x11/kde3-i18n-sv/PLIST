@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:13:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:23 markd Exp $
 share/doc/kde/HTML/sv/KRegExpEditor/altntool.png
 share/doc/kde/HTML/sv/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/sv/KRegExpEditor/boundarytools.png
@@ -445,9 +445,6 @@ share/doc/kde/HTML/sv/kdvi/index.cache.bz2
 share/doc/kde/HTML/sv/kdvi/index.docbook
 share/doc/kde/HTML/sv/kdvi/optionrequester1.png
 share/doc/kde/HTML/sv/kdvi/optionrequester2.png
-share/doc/kde/HTML/sv/kedit/common
-share/doc/kde/HTML/sv/kedit/index.cache.bz2
-share/doc/kde/HTML/sv/kedit/index.docbook
 share/doc/kde/HTML/sv/keduca/common
 share/doc/kde/HTML/sv/keduca/index.cache.bz2
 share/doc/kde/HTML/sv/keduca/index.docbook
@@ -649,9 +646,6 @@ share/doc/kde/HTML/sv/kioslave/telnet.docbook
 share/doc/kde/HTML/sv/kioslave/thumbnail.docbook
 share/doc/kde/HTML/sv/kioslave/webdav.docbook
 share/doc/kde/HTML/sv/kioslave/webdavs.docbook
-share/doc/kde/HTML/sv/kit/common
-share/doc/kde/HTML/sv/kit/index.cache.bz2
-share/doc/kde/HTML/sv/kit/index.docbook
 share/doc/kde/HTML/sv/kiten/common
 share/doc/kde/HTML/sv/kiten/index.cache.bz2
 share/doc/kde/HTML/sv/kiten/index.docbook
@@ -678,8 +672,16 @@ share/doc/kde/HTML/sv/klipper/common
 share/doc/kde/HTML/sv/klipper/index.cache.bz2
 share/doc/kde/HTML/sv/klipper/index.docbook
 share/doc/kde/HTML/sv/kmail/common
+share/doc/kde/HTML/sv/kmail/configure.docbook
+share/doc/kde/HTML/sv/kmail/credits-and-licenses.docbook
+share/doc/kde/HTML/sv/kmail/faq.docbook
+share/doc/kde/HTML/sv/kmail/getting-started.docbook
+share/doc/kde/HTML/sv/kmail/importing.docbook
 share/doc/kde/HTML/sv/kmail/index.cache.bz2
 share/doc/kde/HTML/sv/kmail/index.docbook
+share/doc/kde/HTML/sv/kmail/intro.docbook
+share/doc/kde/HTML/sv/kmail/menus.docbook
+share/doc/kde/HTML/sv/kmail/using-kmail.docbook
 share/doc/kde/HTML/sv/kmathtool/common
 share/doc/kde/HTML/sv/kmathtool/index.cache.bz2
 share/doc/kde/HTML/sv/kmathtool/index.docbook
@@ -818,17 +820,28 @@ share/doc/kde/HTML/sv/konq-plugins/validators/index.docbook
 share/doc/kde/HTML/sv/konq-plugins/webarchiver/common
 share/doc/kde/HTML/sv/konq-plugins/webarchiver/index.cache.bz2
 share/doc/kde/HTML/sv/konq-plugins/webarchiver/index.docbook
+share/doc/kde/HTML/sv/konqueror/basics.docbook
+share/doc/kde/HTML/sv/konqueror/bookmarks.docbook
+share/doc/kde/HTML/sv/konqueror/browser.docbook
 share/doc/kde/HTML/sv/konqueror/cmndline.png
+share/doc/kde/HTML/sv/konqueror/commands.docbook
 share/doc/kde/HTML/sv/konqueror/common
+share/doc/kde/HTML/sv/konqueror/config.docbook
+share/doc/kde/HTML/sv/konqueror/credits.docbook
 share/doc/kde/HTML/sv/konqueror/dirtree.png
 share/doc/kde/HTML/sv/konqueror/dragdrop.png
+share/doc/kde/HTML/sv/konqueror/faq.docbook
 share/doc/kde/HTML/sv/konqueror/filetype1.png
 share/doc/kde/HTML/sv/konqueror/filetype3.png
 share/doc/kde/HTML/sv/konqueror/filetype4.png
 share/doc/kde/HTML/sv/konqueror/index.cache.bz2
 share/doc/kde/HTML/sv/konqueror/index.docbook
+share/doc/kde/HTML/sv/konqueror/introduction.docbook
 share/doc/kde/HTML/sv/konqueror/konqorg.png
 share/doc/kde/HTML/sv/konqueror/parts.png
+share/doc/kde/HTML/sv/konqueror/path-complete.docbook
+share/doc/kde/HTML/sv/konqueror/plugins.docbook
+share/doc/kde/HTML/sv/konqueror/save-settings.docbook
 share/doc/kde/HTML/sv/konqueror/shortcut1.png
 share/doc/kde/HTML/sv/konqueror/shortcut2.png
 share/doc/kde/HTML/sv/konquest/common
@@ -1782,7 +1795,6 @@ share/kde/locale/sv/flag.png
 @dirrm share/doc/kde/HTML/sv/kjumpingcube
 @dirrm share/doc/kde/HTML/sv/kjots
 @dirrm share/doc/kde/HTML/sv/kiten
-@dirrm share/doc/kde/HTML/sv/kit
 @dirrm share/doc/kde/HTML/sv/kioslave
 @dirrm share/doc/kde/HTML/sv/kinfocenter/xserver
 @dirrm share/doc/kde/HTML/sv/kinfocenter/usb
@@ -1821,7 +1833,6 @@ share/kde/locale/sv/flag.png
 @dirrm share/doc/kde/HTML/sv/kfind
 @dirrm share/doc/kde/HTML/sv/kenolaba
 @dirrm share/doc/kde/HTML/sv/keduca
-@dirrm share/doc/kde/HTML/sv/kedit
 @dirrm share/doc/kde/HTML/sv/kdvi
 @dirrm share/doc/kde/HTML/sv/kdm
 @dirrm share/doc/kde/HTML/sv/kdict

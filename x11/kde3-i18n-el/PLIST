@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 10:56:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:16 markd Exp $
 share/kde/locale/el/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/el/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/el/LC_MESSAGES/appletproxy.mo
@@ -243,6 +243,7 @@ share/kde/locale/el/LC_MESSAGES/kppplogview.mo
 share/kde/locale/el/LC_MESSAGES/kprinter.mo
 share/kde/locale/el/LC_MESSAGES/krdb.mo
 share/kde/locale/el/LC_MESSAGES/kreadconfig.mo
+share/kde/locale/el/LC_MESSAGES/krec.mo
 share/kde/locale/el/LC_MESSAGES/kreversi.mo
 share/kde/locale/el/LC_MESSAGES/kruler.mo
 share/kde/locale/el/LC_MESSAGES/krunapplet.mo
@@ -271,6 +272,7 @@ share/kde/locale/el/LC_MESSAGES/ktux.mo
 share/kde/locale/el/LC_MESSAGES/kuick_plugin.mo
 share/kde/locale/el/LC_MESSAGES/kview.mo
 share/kde/locale/el/LC_MESSAGES/kview_scale.mo
+share/kde/locale/el/LC_MESSAGES/kviewbrowserplugin.mo
 share/kde/locale/el/LC_MESSAGES/kviewpresenterplugin.mo
 share/kde/locale/el/LC_MESSAGES/kviewscannerplugin.mo
 share/kde/locale/el/LC_MESSAGES/kviewtemplateplugin.mo
