@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/06 21:53:40 hubertf Exp $
+
+--- sdbm.c.orig	Wed Jan  6 22:48:06 1999
++++ sdbm.c	Wed Jan  6 22:48:38 1999
+@@ -35,17 +35,6 @@
+ #endif
+ 
+ /*
+- * externals
+- */
+-#ifndef sun
+-extern int errno;
+-#endif
+-
+-extern char *malloc proto((unsigned int));
+-extern void free proto((void *));
+-extern long lseek();
+-
+-/*
+  * forward
+  */
+ static int getdbit proto((DBM *, long));
