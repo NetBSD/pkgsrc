@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:07 tv Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/14 08:18:33 uebayasi Exp $
 
 DISTNAME=	libhydrogen-0.8.0
 PKGREVISION=	1
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-alsa-seq
 CONFIGURE_ARGS+=	--disable-jack-support
 
-CPPFLAGS+=		-DDEVOSSAUDIO=\"\\\"${DEVOSSAUDIO}\\\"\"
+CPPFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
