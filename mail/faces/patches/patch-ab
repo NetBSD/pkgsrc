@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 2000/07/11 09:53:11 agc Exp $
+$NetBSD: patch-ab,v 1.8 2000/09/04 11:29:36 tron Exp $
 
---- Makefile.orig	Sat Jul  8 14:25:27 2000
-+++ Makefile	Sat Jul  8 14:28:16 2000
+--- Makefile.orig	Mon Sep  4 10:37:54 2000
++++ Makefile	Mon Sep  4 10:55:54 2000
 @@ -0,0 +1,475 @@
 +#
 +#  Makefile for faces, an icon face server, plus associated software.
@@ -322,7 +322,7 @@ $NetBSD: patch-ab,v 1.7 2000/07/11 09:53:11 agc Exp $
 +
 +STDSRCS		= address.c get.c main.c mon.c parsefrom.c rec.c
 +STDOBJS		= address.o get.o main.o mon.o parsefrom.o rec.o
-+STDLIBS		= -L./compface -lcompface $(DNSLIB) $(SGILIBS)
++STDLIBS		= -L./compface -Wl,-R@localbase@/lib -lcompface $(DNSLIB) $(SGILIBS)
 +
 +COMPFACE	= compface
 +FACES		= facedir
@@ -363,7 +363,7 @@ $NetBSD: patch-ab,v 1.7 2000/07/11 09:53:11 agc Exp $
 +#  Dell Unix (Interactive 386/ix): $(X11LIBDIR) -lX11 -linet
 +#  AT&T's XWIN:                    $(X11LIBDIR) -lX11_s -lc_s -lnsl_s -lpt
 +#
-+X11LIBS		= -L@x11base@/lib -lX11
++X11LIBS		= -L@x11base@/lib -Wl,-R@x11base@/lib -lX11
 +XVIEWLIBS	= $(XVIEWLIBDIR) -lxview -lolgx -lX11
 +
 +help:
