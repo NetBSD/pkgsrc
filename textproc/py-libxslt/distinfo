@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/04 11:48:30 recht Exp $
+
+SHA1 (libxml2-python-2.6.4.tar.gz) = 320f50a6dde61d157eef7c804dce2ba5bfee1470
+Size (libxml2-python-2.6.4.tar.gz) = 197009 bytes
+SHA1 (patch-aa) = b13a62a16d65bc2ed768a576a898b2fe3d03d45f
