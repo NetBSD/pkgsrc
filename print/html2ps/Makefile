@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/03/13 17:37:35 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/13 06:53:41 jlam Exp $
 #
 
 DISTNAME=	html2ps-1.0b1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.tdb.uu.se/~jan/html2ps.html
 COMMENT=	HTML to PostScript converter
 
 DEPENDS+=	ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
-DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
@@ -28,4 +27,5 @@ do-install:
 	@cd ${WRKSRC} && ./install ${PREFIX}
 	@${INSTALL_DATA} ${WRKSRC}/sample ${PREFIX}/share/html2ps/sample.rc
 
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
