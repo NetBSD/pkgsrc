@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2000/08/24 22:32:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/07/13 16:22:55 wulf Exp $
 bin/labltk
 bin/ocaml
-bin/ocaml299to3
 bin/ocamlbrowser
 bin/ocamlc
 bin/ocamlcp
