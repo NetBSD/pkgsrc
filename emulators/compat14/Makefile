@@ -1,14 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2001/05/30 20:22:04 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/13 02:53:26 jdarrow Exp $
 #
 
-DISTNAME=		compat14-${MACHINE_ARCH}
-PKGNAME=		compat14-1.4.3
+DISTNAME=		compat14-${MACHINE_ARCH}-${VERSION}
+PKGNAME=		compat14-${VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/Releases/formal-1.4/index.html
 COMMENT=		Shared libraries for NetBSD 1.4 (and earlier) compatibility
+
+VERSION=		1.4.3.1
+
+CONFLICTS=		compat14-crypto-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-*-sparc NetBSD-*-i386
 NOT_FOR_PLATFORM=	NetBSD-1.3*-* NetBSD-1.4*-*

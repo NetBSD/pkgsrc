@@ -1,23 +1,24 @@
-# $NetBSD: Makefile,v 1.3 2002/08/01 02:37:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/13 03:06:10 jdarrow Exp $
 #
+
+DISTNAME=		compat14-${MACHINE32_ARCH}-${VERSION}
+PKGNAME=		netbsd32_compat14-${VERSION}
+CATEGORIES=		emulators
+MASTER_SITES=		${MASTER_SITE_LOCAL}
+
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.netbsd.org/Releases/formal-1.4/index.html
+COMMENT=		32-bit shared libraries for NetBSD 1.4 (and earlier) compatibility
+
+DEPENDS+=		netbsd32_compat15>=1.0:../netbsd32_compat15
+
+VERSION=		1.4.3.1
 
 .if ${MACHINE_ARCH} == "sparc64"
 MACHINE32_ARCH=	sparc
 .else
 MACHINE32_ARCH=	${MACHINE_ARCH}
 .endif
-
-DISTNAME=		compat14-${MACHINE32_ARCH}
-PKGNAME=		netbsd32_compat14-1.0
-CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_LOCAL}
-
-DEPENDS+=		netbsd32_compat15-1.0:../netbsd32_compat15
-
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.netbsd.org/Releases/formal-1.4/index.html
-COMMENT=		32-bit shared libraries for NetBSD 1.4 (and earlier) compatibility
-
 ONLY_FOR_PLATFORM=	NetBSD-*-sparc64
 
 NO_MTREE=		# defined
