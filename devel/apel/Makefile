@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/01 14:51:00 minoura Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/12 02:49:44 minoura Exp $
 
 DISTNAME=	apel-10.6
 CATEGORIES=	devel
@@ -28,6 +28,7 @@ ALL_TARGET=
 INSTALL_TARGET=	install-package
 PLIST_SRC=	${PKGDIR}/PLIST.xemacs
 MAKE_FLAGS+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
+DEPENDS+=	xemacs-packages-*:../../editors/xemacs-packages
 .endif
 
 DOCDIR=		${PREFIX}/share/doc/apel
