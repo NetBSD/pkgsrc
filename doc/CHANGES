@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5919 2004/05/13 06:44:55 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5920 2004/05/13 08:35:01 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2502,3 +2502,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated amaya to 8.5 [xtraeme 2004-05-13]
 	Updated fluxbox to 0.9.9 [xtraeme 2004-05-13]
 	Updated samba to 3.0.4 [xtraeme 2004-05-13]
+	Added p5-I18N-LangTags-0.30 [mjl 2004-05-13]
+	Added p5-Locale-Maketext-10.8 [mjl 2004-05-13]
