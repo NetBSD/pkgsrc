@@ -1,0 +1,47 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/04/28 17:18:23 drochner Exp $
+
+--- src/Makefile.in.orig	Tue Jul 20 04:45:37 1999
++++ src/Makefile.in	Thu Oct 21 19:23:16 1999
+@@ -2,7 +2,7 @@
+ 
+ ####### Compiler, tools and options
+ 
+-CXX	=	$(SYSCONF_CXX)
++CXX	=	$(SYSCONF_CXX_LIB)
+ CXXFLAGS=	$(SYSCONF_CXXFLAGS_QT) $(SYSCONF_CXXFLAGS_X11) $(SYSCONF_CXXFLAGS) $(SYSCONF_CXXFLAGS_LIB) $(QT_CXXFLAGS_OPT)
+ CC	=	$(SYSCONF_CC)
+ CFLAGS	=	$(SYSCONF_CFLAGS) $(SYSCONF_CFLAGS_LIB) $(QT_CFLAGS_OPT)
+@@ -13,7 +13,7 @@
+ 
+ ####### Target
+ 
+-DESTDIR = ../lib/
++DESTDIR = 
+ VER_MAJ = 2
+ VER_MIN = 0
+ VER_PATCH = 2
+@@ -694,22 +694,10 @@
+ 
+ ####### Implicit rules
+ 
+-.SUFFIXES: .cpp .cxx .cc .C .c
++.SUFFIXES: .cpp
+ 
+ .cpp.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+-
+-.cxx.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+-
+-.cc.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+-
+-.C.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+-
+-.c.o:
+-	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
++	@cd `dirname $@` && $(CXX) -c $(CXXFLAGS) `basename $<`
+ 
+ ####### Build rules
+ 
