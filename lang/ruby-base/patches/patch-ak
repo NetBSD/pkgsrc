@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2002/10/06 14:56:59 taca Exp $
+
+--- marshal.c.orig	Thu Feb 28 15:52:47 2002
++++ marshal.c
+@@ -1047,7 +1047,7 @@ r_object(arg)
+ 	break;
+     }
+     if (arg->proc) {
+-	rb_funcall(arg->proc, rb_intern("yield"), 1, v);
++	rb_funcall(arg->proc, rb_intern("call"), 1, v);
+     }
+     return v;
+ }
