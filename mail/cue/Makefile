@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/05/07 05:05:57 itojun Exp $
+# $NetBSD: Makefile,v 1.37 2004/06/17 12:59:11 grant Exp $
 
 DISTNAME=	cue-snap-20040426
 PKGNAME=	cue-20040426
@@ -15,7 +15,8 @@ USE_BUILDLINK3=	yes
 
 BUILD_DEFS+=	USE_INET6 USE_IDEA CUE_USE_CANNA
 
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss]) && \
+    ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
