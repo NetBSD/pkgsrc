@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/10/08 21:12:52 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2000/06/30 10:04:48 agc Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -15,8 +15,8 @@ DEPENDS+=	tiff-*:../../graphics/tiff
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-gtk-prefix=${X11BASE}
-# XXX Actually, Mesa's in X11BASE too, but as our tiff is in LOCALBASE
+CONFIGURE_ARGS+= --with-gtk-prefix=${X11PREFIX}
+# XXX Actually, Mesa's in X11PREFIX too, but as our tiff is in LOCALBASE
 # and xtraceroute doesn't have a switch to tell it so (yet?), we abuse
 # the --with-GL-prefix switch for this.
 CONFIGURE_ARGS+= --with-GL-prefix=${LOCALBASE}
