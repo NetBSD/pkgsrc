@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/11/18 11:48:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/12/10 06:09:37 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -1948,27 +1948,27 @@ share/kde/sounds/Kopete_Received.ogg
 share/kde/sounds/Kopete_Sent.ogg
 share/kde/sounds/Kopete_User_is_Online.ogg
 share/kde/sounds/ktalkd.wav
-@comment dirrm share/kde/sounds
-@comment dirrm share/kde/servicetypes
-@comment dirrm share/kde/services/kded
-@comment dirrm share/kde/services/kconfiguredialog
-@comment dirrm share/kde/services
-@comment dirrm share/kde/mimelnk/application
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment dirrm share/kde/icons/crystalsvg/48x48/mimetypes
-@comment dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment dirrm share/kde/icons/crystalsvg/22x22/mimetypes
-@comment dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment dirrm share/kde/icons/crystalsvg/16x16/mimetypes
-@comment dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/128x128/apps
-@comment dirrm share/kde/config.kcfg
-@comment dirrm share/kde/config
+@comment in kde: @dirrm share/kde/sounds
+@comment in kde: @dirrm share/kde/servicetypes
+@comment in kde: @dirrm share/kde/services/kded
+@comment in kde: @dirrm share/kde/services/kconfiguredialog
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/lisa
 @dirrm share/kde/apps/ksirc/pics/emoticons
 @dirrm share/kde/apps/ksirc/pics
@@ -2219,14 +2219,14 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/kopete/icons/crystalsvg
 @dirrm share/kde/apps/kopete/icons
 @dirrm share/kde/apps/kopete
-@dirrm share/kde/apps/konqueror/dirtree/remote
-@dirrm share/kde/apps/konqueror/dirtree
-@comment dirrm share/kde/apps/konqueror
-@comment dirrm share/kde/apps/konqsidebartng/virtual_folders/services
-@dirrm share/kde/apps/knewsticker
+@comment in kde: @dirrm share/kde/apps/konqueror/dirtree/remote
+@comment in kde: @dirrm share/kde/apps/konqueror/dirtree
+@comment in kde: @dirrm share/kde/apps/konqueror
+@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
+@unexec ${RMDIR} %D/share/kde/apps/knewsticker 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/kinetd
-@dirrm share/kde/apps/kicker/applets
-@comment dirrm share/kde/apps/khtml/kpartplugins
+@comment in kde: @dirrm share/kde/apps/kicker/applets
+@comment in kde: @dirrm share/kde/apps/khtml/kpartplugins
 @dirrm share/kde/apps/kget/sounds
 @dirrm share/kde/apps/kget/pics
 @dirrm share/kde/apps/kget/icons/crystalsvg/22x22/actions
@@ -2243,10 +2243,9 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/kde/apps/kdict/icons/crystalsvg
 @dirrm share/kde/apps/kdict/icons
 @dirrm share/kde/apps/kdict
-@comment dirrm share/kde/apps/kconf_update
-@comment dirrm share/kde/apps
-@comment dirrm share/kde/applnk/Internet
-@comment dirrm share/kde/applnk/.hidden
+@comment in kde: @dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/.hidden
 @dirrm share/doc/kde/HTML/en/lisa
 @dirrm share/doc/kde/HTML/en/kwifimanager
 @dirrm share/doc/kde/HTML/en/ktalkd
@@ -2266,9 +2265,9 @@ share/kde/sounds/ktalkd.wav
 @dirrm share/doc/kde/HTML/en/kdenetwork-apidocs
 @dirrm share/doc/kde/HTML/en/kcontrol/lanbrowser
 @dirrm share/doc/kde/HTML/en/kcontrol/kcmtalkd
-@comment dirrm share/doc/kde/HTML/en/kcontrol
-@comment dirrm share/doc/kde/HTML/en
-@comment dirrm share/applications/kde
-@comment dirrm lib/kde3
-@comment dirrm lib/kconf_update_bin
+@comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3
+@comment in kde: @dirrm lib/kconf_update_bin
 @dirrm include/rss
