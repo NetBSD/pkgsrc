@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/26 22:51:41 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/05/28 23:24:03 jwise Exp $
 lib/java/xerces.jar
 share/doc/java/xerces/design.css
 share/doc/java/xerces/design.dtd
@@ -499,7 +499,7 @@ share/doc/java/xerces/apiDocs/serialized-form.html
 share/doc/java/xerces/apiDocs/package-list
 share/doc/java/xerces/apiDocs/help-doc.html
 share/doc/java/xerces/apiDocs/stylesheet.css
-share/examples/java/xerces/xerces.jar
+share/examples/java/xerces/xercesSamples.jar
 share/examples/java/xerces/personal-schema.xml
 share/examples/java/xerces/personal.dtd
 share/examples/java/xerces/personal.xml
