@@ -1,29 +1,18 @@
---- hints/freebsd.sh.orig	Wed Apr 23 16:01:37 1997
-+++ hints/freebsd.sh	Tue Jun  3 14:29:50 1997
-@@ -63,6 +63,7 @@
- 	d_setreuid='define'
- 	d_setegid='undef'
- 	d_seteuid='undef'
-+	d_dosuid='define'
- 	test -r ./broken-db.msg && . ./broken-db.msg
- 	;;
- #
-@@ -76,12 +77,18 @@
- 	d_setreuid='define'
- 	d_setegid='undef'
- 	d_seteuid='undef'
-+	d_dosuid='define'
- 	;;
- #
- # Guesses at what will be needed after 2.2
- *)	usevfork='true'
- 	usemymalloc='n'
- 	libswanted=`echo $libswanted | sed 's/ malloc / /'`
-+	d_setregid='define'
-+	d_setreuid='define'
-+	d_setegid='undef'
-+	d_seteuid='undef'
-+	d_dosuid='define'
- 	;;
- esac
+--- perl.h.BAK	Wed Nov 19 23:07:32 1997
++++ perl.h	Wed Nov 19 23:08:54 1997
+@@ -223,6 +223,15 @@
+ #   include <sys/param.h>
+ #endif
  
++/* needed for IAMSUID case for 4.4BSD systems
++ * XXX there should probably be a Configure variable
++ */
++
++#ifdef I_SYS_PARAM
++#if (defined (BSD) && (BSD >= 199306))
++#   include <sys/mount.h>
++#endif /* !BSD */
++#endif /* !I_SYS_PARAM */
+ 
+ /* Use all the "standard" definitions? */
+ #if defined(STANDARD_C) && defined(I_STDLIB)
