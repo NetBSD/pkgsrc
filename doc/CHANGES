@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6955 2004/08/20 03:21:43 mrg Exp $
+$NetBSD: CHANGES,v 1.6956 2004/08/20 11:48:59 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3922,3 +3922,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated getmail to 4.0.13 [schmonz 2004-08-20]
 	Updated bozohttpd to 20040808 [mrg 2004-08-20]
 	Updated ircII to 20040820 [mrg 2004-08-20]
+	Updated ifile to 1.3.4 [salo 2004-08-20]
