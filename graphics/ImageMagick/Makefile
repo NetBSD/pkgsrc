@@ -1,25 +1,10 @@
-# $NetBSD: Makefile,v 1.95 2003/04/15 11:11:50 mjl Exp $
+# $NetBSD: Makefile,v 1.96 2003/04/16 13:27:21 mjl Exp $
 
-IM_MAJOR_VER=		5.5.6
-IM_MINOR_VER=		NONE
-IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}-Q16
+.include "./Makefile.common"
 
-.if (${IM_MINOR_VER} != NONE)
-DISTNAME=		ImageMagick-${IM_MAJOR_VER}-${IM_MINOR_VER}
-PKGNAME=		ImageMagick-${IM_MAJOR_VER}.${IM_MINOR_VER}
-.else
-DISTNAME=		ImageMagick-${IM_MAJOR_VER}
-PKGNAME=		ImageMagick-${IM_MAJOR_VER}
-.endif
-WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
+PKGNAME=		ImageMagick-${DISTSUFFIX}
+
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
-			ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
-			ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/ \
-			ftp://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/ \
-			ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/ \
-			http://imagemagick.sourceforge.net/http/
-EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
@@ -52,14 +37,8 @@ GCC_REQD=		2.95.3
 CFLAGS=			-O
 .endif
 
-# For things for which we do not specify an explicit dependency above, disable
-# so that we don't cause implicit "hidden" dependencies.  Users may reenable
-# any of these manually as desired (PerlMagick should probably be a separate
-# pkg, however).
-CONFIGURE_ARGS+=	--without-perl --without-dps --without-fpx \
-			--without-hdf --without-jbig --without-threads \
-			--without-ttf --without-wmf --without-xml \
-			--without-lcms
+# Some configure_args come from Makefile.common
+CONFIGURE_ARGS+=	--without-perl
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Copyright.txt ${WRKSRC}/QuickStart.txt \
