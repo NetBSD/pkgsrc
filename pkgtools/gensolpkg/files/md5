@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.8 2000/07/26 13:34:02 agc Exp $
+$NetBSD: md5,v 1.9 2000/08/02 10:53:50 agc Exp $
 
-MD5 (gensolpkg-1.7.tar.gz) = 36bd2b212a6cfacdd7c167dadcb4743e
+MD5 (gensolpkg-1.8.tar.gz) = a4a38bd760727c2225c84dca6580be5f
