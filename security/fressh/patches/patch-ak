@@ -1,0 +1,26 @@
+$NetBSD: patch-ak,v 1.1 2003/10/28 00:14:11 kristerw Exp $
+
+--- transport/ssh_deattack.c.orig	Tue Oct 28 00:51:29 2003
++++ transport/ssh_deattack.c	Tue Oct 28 00:52:01 2003
+@@ -132,8 +132,8 @@
+     n = l;
+     h = (u_int32_t *) malloc(n * HASH_ENTRYSIZE);
+     if (h == NULL) {
+-      SSH_ERROR("Unable to allocate memory for CRC compensation
+- 		attack detector: %s\n", strerror(errno));
++      SSH_ERROR("Unable to allocate memory for CRC compensation "
++ 		"attack detector: %s\n", strerror(errno));
+       return -1;
+     }
+   } else
+@@ -144,8 +144,8 @@
+       h = (u_int32_t *) realloc(h, n * HASH_ENTRYSIZE);
+ 
+       if (h == NULL) {
+-        SSH_ERROR("Unable to allocate memory for CRC compensation
+-                   attack detector: %s\n", strerror(errno));
++        SSH_ERROR("Unable to allocate memory for CRC compensation "
++                  "attack detector: %s\n", strerror(errno));
+         return -1;                                  
+       }                     
+     }

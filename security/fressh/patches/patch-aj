@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2003/10/28 00:14:11 kristerw Exp $
+
+--- ssh_sys_bsd44+.c.orig	Tue Oct 28 00:53:17 2003
++++ ssh_sys_bsd44+.c	Tue Oct 28 00:55:52 2003
+@@ -830,7 +830,7 @@
+ 	if (pwent == NULL)
+ 		return -1;
+ 
+-	if (pwent->pw_passwd[0] == NULL) {
++	if (pwent->pw_passwd[0] == 0) {
+ 		ret = 0;
+ 		goto out;
+ 	}
