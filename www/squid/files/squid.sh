@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: squid.sh,v 1.9 2001/07/29 16:41:19 tron Exp $
+# $NetBSD: squid.sh,v 1.10 2001/07/30 07:30:12 tron Exp $
 #
 
 # PROVIDE: squid
@@ -14,12 +14,13 @@ conf_file="${SQUID_CONF_DIR}/squid.conf"
 name="squid"
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-required_files="${conf_file} ${SQUID_CONF_DIR}/squid-mime.conf"
+required_files="${conf_file} ${SQUID_CONF_DIR}/mime.conf"
+command_args="-Y -f $conf_file"
 
-start_cmd="@PREFIX@/sbin/RunCache ${conf_file} &"
 stop_cmd="stop_nicely"
 kill_command="${command} -k shutdown"
 reload_cmd="${command} -k reconfigure"
+rotate_cmd="${command} -k rotate"
 
 #### end of configuration section ####
 
@@ -33,12 +34,20 @@ stop_nicely ()
 		${kill_command}
 		if [ ${DAEMON_PID} -ne 0 ]; then
 			echo -n '['
-			while kill -0 ${DAEMON_PID} >/dev/null 2>&1; do
-				sleep 2
-				echo -n '.'
+			for WAIT in 0 1 2 3 4 5 6 7 8 9
+			do
+				if kill -0 ${DAEMON_PID} >/dev/null 2>&1; then
+					sleep 2
+					echo -n '.'
+					test $WAIT -lt 9 || kill ${DAEMON_PID}
+				else
+					break
+				fi
 			done
-			echo ']  Stopped.'
+			echo '].'
+			unset WAIT
 		fi
+		unset DAEMON_PID
 	fi
 }
 
@@ -46,14 +55,8 @@ if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	. /etc/rc.subr
 	. /etc/rc.conf
 
-	start_precmd="checkyesno squid"
-	stop_precmd=${start_precmd}
-	reload_precmd=${start_precmd}
-	extra_commands="reload"
-
-	if type load_rc_config > /dev/null 2>&1 ; then
-		load_rc_config $name
-	fi
+	extra_commands="reload rotate"
+	load_rc_config $name
 	run_rc_command "$1"
 
 else				# old NetBSD, Solaris, Linux, etc...
@@ -70,6 +73,11 @@ else				# old NetBSD, Solaris, Linux, etc...
 	reload)
 		if [ -f ${pidfile} ] ; then
 			${reload_cmd}
+		fi
+		;;
+	rotate)
+		if [ -f ${pidfile} ] ; then
+			${rotate_cmd}
 		fi
 		;;
 	*)
