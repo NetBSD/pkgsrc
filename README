@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.13 2001/12/03 21:33:56 agc Exp $
+$NetBSD: README,v 1.14 2003/05/05 14:23:09 cjep Exp $
 
 Welcome to the NetBSD Packages Collection
 =========================================
@@ -89,5 +89,4 @@ be available as separate packages.
 
 For more information on the packages collection see the file
 Packages.txt file in the same place where you found this README,
-usually in the top-level pkgsrc dir.
-directory.
+usually in the top-level pkgsrc directory.
