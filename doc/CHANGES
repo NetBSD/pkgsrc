@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6531 2004/07/11 19:54:22 cube Exp $
+$NetBSD: CHANGES,v 1.6532 2004/07/12 08:25:18 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3342,3 +3342,24 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated groff to 1.19.1 [wiz 2004-07-11]
 	Updated xemacs-packages to 1.14nb1 [cube 2004-07-11]
 	Updated top to 3.6a7 [cube 2004-07-11]
+	Updated libxfce4gui to 4.0.6 [martti 2004-07-12]
+	Updated libxfce4mcs to 4.0.6 [martti 2004-07-12]
+	Updated libxfce4util to 4.0.6 [martti 2004-07-12]
+	Updated xfce4 to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-desktop to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-fm to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-fm-icons to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-gtk2-engine-2.1.10 [martti 2004-07-12]
+	Updated xfce4-iconbox to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-mcs-manager to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-mcs-plugins to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-mixer to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-panel to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-print to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-systray to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-themes to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-toys to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-trigger-launcher to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-utils to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-wm to 4.0.6 [martti 2004-07-12]
+	Updated xfce4-wm-themes to 4.0.6 [martti 2004-07-12]
