@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2004/10/27 20:31:33 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2004/12/21 18:56:44 drochner Exp $
 bin/xine-config
 include/xine.h
 include/xine/attributes.h
@@ -13,9 +13,11 @@ include/xine/info_helper.h
 include/xine/input_plugin.h
 include/xine/io_helper.h
 include/xine/metronom.h
+include/xine/os_types.h
 include/xine/osd.h
 include/xine/plugin_catalog.h
 include/xine/post.h
+include/xine/refcounter.h
 include/xine/resample.h
 include/xine/scratch.h
 include/xine/spu_decoder.h
@@ -88,6 +90,8 @@ lib/xine/plugins/1.0.0/xineplug_decode_spucc.a
 lib/xine/plugins/1.0.0/xineplug_decode_spucc.so
 lib/xine/plugins/1.0.0/xineplug_decode_spucmml.a
 lib/xine/plugins/1.0.0/xineplug_decode_spucmml.so
+lib/xine/plugins/1.0.0/xineplug_decode_spudvb.a
+lib/xine/plugins/1.0.0/xineplug_decode_spudvb.so
 lib/xine/plugins/1.0.0/xineplug_decode_sputext.a
 lib/xine/plugins/1.0.0/xineplug_decode_sputext.so
 lib/xine/plugins/1.0.0/xineplug_decode_vorbis.a
@@ -193,6 +197,7 @@ share/doc/xine/README.network_dvd
 share/doc/xine/README.opengl
 share/doc/xine/README.solaris
 share/doc/xine/README.syncfb
+share/doc/xine/README_xxmc.html
 share/doc/xine/faq/faq.html
 share/doc/xine/faq/faq.txt
 share/doc/xine/hackersguide/architecture.png
