@@ -3,7 +3,7 @@
 # Date created:		13 March 1998
 # Whom:			mycroft
 #
-# $NetBSD: Makefile,v 1.1 1998/03/13 22:15:23 mycroft Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/13 22:21:12 mycroft Exp $
 
 DISTNAME=	macutil
 PKGNAME=	macutil-2.0b3
@@ -13,6 +13,9 @@ DISTFILES=	macutil2.0b3.shar.Z
 MAKEFILE=	makefile
 
 MAINTAINER=	mycroft@NetBSD.ORG
+
+MAN1=		macunpack.1 hexbin.1 macsave.1 macstream.1 binhex.1 tomac.1 \
+		frommac.1 macutil.1
 
 do-extract:
 	@${RM} -rf ${WRKDIR}
