@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/03 20:33:46 frueauf Exp $
+
+--- Makeconf.orig	Thu Jul 23 21:17:56 1998
++++ Makeconf	Sat Oct  3 09:17:41 1998
+@@ -1,10 +1,10 @@
+ # where should the vista directory be installed: 
+ 
+-DEST = /usr/local/lib
++DEST = share
+ 
+ # where should the vista start script be installed: 
+ 
+-BINDEST = /usr/local/bin
++BINDEST = bin
+ 
+ # (during installation the value of $(PREFIX) will be prepended,
+ #  allowing to install in a temporary build root [e.g. with rpm])
+@@ -12,7 +12,7 @@
+ 
+ # the path to your xlispstat binary:
+ 
+-XLISP = /usr/local/bin/xlispstat
++XLISP = ${PREFIX}/bin/xlispstat
+ 
+ 
+ # needed for installation:
