@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 1998/11/04 23:36:49 mycroft Exp $
+
+--- contrib.mak.orig	Mon Sep 14 22:03:52 1998
++++ contrib.mak	Wed Nov  4 18:27:02 1998
+@@ -432,6 +432,9 @@
+ 
+ cdeskjet8_=$(GLOBJ)gdevcd8.$(OBJ) $(HPPCL)
+ 
++$(GLOBJ)gdevcd8.$(OBJ): $(GLSRC)gdevcd8.c $(PDEVH) $(gdevpcl_h)
++	$(GLCC) $(GLO_)gdevcd8.$(OBJ) $(C_) $(GLSRC)gdevcd8.c
++
+ cdj850.dev: $(cdeskjet8_) page.dev
+ 	$(SETPDEV) cdj850 $(cdeskjet8_)
+ 
