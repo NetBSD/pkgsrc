@@ -1,8 +1,16 @@
-$NetBSD: patch-bt,v 1.1 2001/11/17 12:01:35 skrll Exp $
+$NetBSD: patch-bt,v 1.2 2002/08/15 08:38:34 skrll Exp $
 
 --- kssl/kopenssl.cc.orig	Wed Sep  5 00:08:18 2001
 +++ kssl/kopenssl.cc
-@@ -117,7 +117,7 @@
+@@ -92,6 +92,7 @@ static int (*K_SSL_CTX_use_certificate) 
+ static int (*K_SSL_get_error) (SSL*, int) = NULL;
+ static STACK_OF(X509)* (*K_SSL_get_peer_cert_chain) (SSL*) = NULL;
+ static void (*K_X509_STORE_CTX_set_chain) (X509_STORE_CTX *, STACK_OF(X509)*) = NULL;
++static void (*K_X509_STORE_CTX_set_purpose) (X509_STORE_CTX *, int) = NULL;
+ static void (*K_sk_free) (STACK*) = NULL;
+ static int (*K_sk_num) (STACK*) = NULL;
+ static char* (*K_sk_value) (STACK*, int) = NULL;
+@@ -117,7 +118,7 @@ void KOpenSSLProxy::destroy() {
    _me = NULL;
  }
  
@@ -11,7 +19,7 @@ $NetBSD: patch-bt,v 1.1 2001/11/17 12:01:35 skrll Exp $
  #include <qdir.h>
  #include <qstring.h>
  #include <qstringlist.h>
-@@ -180,20 +180,16 @@
+@@ -180,20 +181,16 @@ KConfig *cfg;
  
     delete cfg;
  
@@ -38,7 +46,7 @@ $NetBSD: patch-bt,v 1.1 2001/11/17 12:01:35 skrll Exp $
  // FIXME: #define here for the various OS types to optimize
     libnamess << "libssl.so.0"
               << "libssl.so"
-@@ -202,10 +198,16 @@
+@@ -202,10 +199,16 @@ KConfig *cfg;
     libnamesc << "libcrypto.so.0"
               << "libcrypto.so"
               << "libcrypto.sl";
@@ -55,7 +63,7 @@ $NetBSD: patch-bt,v 1.1 2001/11/17 12:01:35 skrll Exp $
        for (QStringList::Iterator shit = libnamesc.begin();
                                   shit != libnamesc.end();
                                   ++shit) {
-@@ -213,9 +215,9 @@
+@@ -213,9 +216,9 @@ KConfig *cfg;
           _cryptoLib = ll->globalLibrary(alib.latin1());
           if (_cryptoLib) break;
        }
@@ -66,7 +74,15 @@ $NetBSD: patch-bt,v 1.1 2001/11/17 12:01:35 skrll Exp $
  
     if (_cryptoLib) {
  #ifdef HAVE_SSL 
-@@ -263,16 +265,14 @@
+@@ -254,6 +257,7 @@ KConfig *cfg;
+                 X509**, STACK_OF(X509)**)) _cryptoLib->symbol("PKCS12_parse");
+       K_EVP_PKEY_free = (void (*) (EVP_PKEY *)) _cryptoLib->symbol("EVP_PKEY_free");
+       K_X509_STORE_CTX_set_chain = (void (*)(X509_STORE_CTX *, STACK_OF(X509)*)) _cryptoLib->symbol("X509_STORE_CTX_set_chain");
++      K_X509_STORE_CTX_set_purpose = (void (*)(X509_STORE_CTX *, int)) _cryptoLib->symbol("X509_STORE_CTX_set_purpose");
+       K_sk_free = (void (*) (STACK *)) _cryptoLib->symbol("sk_free");
+       K_sk_num = (int (*) (STACK *)) _cryptoLib->symbol("sk_num");
+       K_sk_value = (char* (*) (STACK *, int)) _cryptoLib->symbol("sk_value");
+@@ -263,16 +267,14 @@ KConfig *cfg;
  #endif
     }
  
@@ -88,7 +104,7 @@ $NetBSD: patch-bt,v 1.1 2001/11/17 12:01:35 skrll Exp $
        for (QStringList::Iterator shit = libnamess.begin();
                                   shit != libnamess.end();
                                   ++shit) {
-@@ -280,9 +280,9 @@
+@@ -280,9 +282,9 @@ KConfig *cfg;
           _sslLib = ll->globalLibrary(alib.latin1());
           if (_sslLib) break;
        }
@@ -99,3 +115,14 @@ $NetBSD: patch-bt,v 1.1 2001/11/17 12:01:35 skrll Exp $
  
     if (_sslLib) {
  #ifdef HAVE_SSL 
+@@ -742,6 +744,10 @@ char *KOpenSSLProxy::sk_value(STACK *s, 
+ 
+ void KOpenSSLProxy::X509_STORE_CTX_set_chain(X509_STORE_CTX *v, STACK_OF(X509)* x) {
+    if (K_X509_STORE_CTX_set_chain) (K_X509_STORE_CTX_set_chain)(v,x);
++}
++
++void KOpenSSLProxy::X509_STORE_CTX_set_purpose(X509_STORE_CTX *v, int purpose) {
++   if (K_X509_STORE_CTX_set_purpose) (K_X509_STORE_CTX_set_purpose)(v,purpose);
+ }
+ 
+ 
