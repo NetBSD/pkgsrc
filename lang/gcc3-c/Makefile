@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.7 2003/08/11 14:16:00 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.8 2004/02/01 14:05:46 jlam Exp $
 
-PKGNAME=		gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}
-COMMENT=		GNU Compiler Collection, version 3, C compiler
+PKGNAME=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}
+COMMENT=	GNU Compiler Collection, v3 - C compiler
 
 INFO_FILES=	cpp.info gcc.info gccint.info cppinternals.info
 
 .include "Makefile.common"
 
-# the "gcc" frontend knows all languages (by patch)
+# The "gcc" frontend knows all languages (by patch)
 CONFIGURE_ARGS+=	--enable-languages=c
-PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+
+.if empty(CC_VERSION:Mgcc-*)
+ALL_TARGET=	bootstrap
+.endif
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/gcc3.mk > ${WRKDIR}/gcc3.mk
