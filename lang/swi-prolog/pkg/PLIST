@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2001/06/17 14:32:28 jtb Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/07/15 12:27:39 jtb Exp $
 bin/${SWIPL}
 bin/plld
 bin/plrc
@@ -28,7 +28,6 @@ lib/${SWILIBDIR}/boot/toplevel.pl
 lib/${SWILIBDIR}/boot/topvars.pl
 lib/${SWILIBDIR}/boot/writef.pl
 lib/${SWILIBDIR}/boot32.prc
-lib/${SWILIBDIR}/include/SWI-Exports
 lib/${SWILIBDIR}/include/SWI-Prolog.h
 lib/${SWILIBDIR}/include/SWI-Stream.h
 lib/${SWILIBDIR}/include/stub.c
@@ -49,7 +48,10 @@ lib/${SWILIBDIR}/library/help.pl
 lib/${SWILIBDIR}/library/helpidx.pl
 lib/${SWILIBDIR}/library/listing.pl
 lib/${SWILIBDIR}/library/netscape.pl
+lib/${SWILIBDIR}/library/occurs.pl
+lib/${SWILIBDIR}/library/ordsets.pl
 lib/${SWILIBDIR}/library/oset.pl
+lib/${SWILIBDIR}/library/qpforeign.pl
 lib/${SWILIBDIR}/library/qsave.pl
 lib/${SWILIBDIR}/library/quintus.pl
 lib/${SWILIBDIR}/library/readln.pl
