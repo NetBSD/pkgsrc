@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/06/23 19:26:51 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/01 22:59:13 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gdbm.
 #
@@ -15,6 +15,8 @@
 .if !defined(GDBM_BUILDLINK_MK)
 GDBM_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.gdbm?=	gdbm>=1.7.3
 DEPENDS+=	${BUILDLINK_DEPENDS.gdbm}:../../databases/gdbm
 
@@ -27,7 +29,5 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.gdbm}
 
 pre-configure: ${BUILDLINK_TARGETS.gdbm}
 gdbm-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# GDBM_BUILDLINK_MK

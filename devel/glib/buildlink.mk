@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:53 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:15 jlam Exp $
 #
 # This Makefile fragment is included by packages that use glib.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(GLIB_BUILDLINK_MK)
 GLIB_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.glib?=	glib>=1.2.8
 DEPENDS+=	${BUILDLINK_DEPENDS.glib}:../../devel/glib
@@ -41,7 +43,5 @@ CONFIGURE_ENV+=		GLIB_CONFIG="${BUILDLINK_CONFIG_WRAPPER.glib}"
 pre-configure: ${BUILDLINK_TARGETS.glib}
 glib-buildlink: _BUILDLINK_USE
 glib-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# GLIB_BUILDLINK_MK

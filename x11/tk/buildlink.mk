@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:27:02 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:34 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tk.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(TK_BUILDLINK_MK)
 TK_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.tk?=	tk>=8.3.2
 DEPENDS+=		${BUILDLINK_DEPENDS.tk}:../../x11/tk
@@ -48,7 +50,5 @@ tkConfig-buildlink:
 		${CHMOD} +x ${BUILDLINK_DIR}/$${file};			\
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# TK_BUILDLINK_MK

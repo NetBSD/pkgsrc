@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/06/23 19:26:57 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/01 22:59:24 jlam Exp $
 #
 # This Makefile fragment is included by packages that use mng.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(MNG_BUILDLINK_MK)
 MNG_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.mng?=	mng>=1.0.0
 DEPENDS+=		${BUILDLINK_DEPENDS.mng}:../../graphics/mng
@@ -33,7 +35,5 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.mng}
 
 pre-configure: ${BUILDLINK_TARGETS.mng}
 mng-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# MNG_BUILDLINK_MK

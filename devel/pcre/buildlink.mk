@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/27 03:46:06 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:18 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pcre.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(PCRE_BUILDLINK_MK)
 PCRE_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.pcre?=	pcre>=3.4
 DEPENDS+=	${BUILDLINK_DEPENDS.pcre}:../../devel/pcre
@@ -38,7 +40,5 @@ CONFIGURE_ENV+=		PCRE_CONFIG="${BUILDLINK_CONFIG_WRAPPER.pcre}"
 pre-configure: ${BUILDLINK_TARGETS.pcre}
 pcre-buildlink: _BUILDLINK_USE
 pcre-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# PCRE_BUILDLINK_MK

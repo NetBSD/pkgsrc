@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:58 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:27 jlam Exp $
 #
 # This Makefile fragment is included by packages that use imap-uw.
 #
@@ -15,6 +15,8 @@
 .if !defined(IMAP_UW_BUILDLINK_MK)
 IMAP_UW_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.imap-uw?=	imap-uw>=2000.0.3nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.imap-uw}:../../mail/imap-uw
 
@@ -29,7 +31,5 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.imap-uw}
 
 pre-configure: ${BUILDLINK_TARGETS.imap-uw}
 imap-uw-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# IMAP_UW_BUILDLINK_MK

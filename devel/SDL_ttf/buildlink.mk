@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/06/26 21:42:52 zuntum Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/01 22:59:14 jlam Exp $
 #
 # This Makefile fragment is included by packages that use SDL_ttf.
 #
@@ -15,6 +15,8 @@
 .if !defined(SDL_ttf_BUILDLINK_MK)
 SDL_ttf_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.SDL_ttf?=	SDL_ttf>=2.0.3
 DEPENDS+=	${BUILDLINK_DEPENDS.SDL_ttf}:../../devel/SDL_ttf
 
@@ -30,7 +32,5 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.SDL_ttf}
 
 pre-configure: ${BUILDLINK_TARGETS.SDL_ttf}
 SDL_ttf-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# SDL_ttf_BUILDLINK_MK

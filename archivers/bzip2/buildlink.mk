@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:48 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:08 jlam Exp $
 #
 # This Makefile fragment is included by packages that use bzip2.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(BZIP2_BUILDLINK_MK)
 BZIP2_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.bzip2?=	bzip2>=1.0.1
 
@@ -49,7 +51,5 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.bzip2}
 
 pre-configure: ${BUILDLINK_TARGETS.bzip2}
 bzip2-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# BZIP2_BUILDLINK_MK

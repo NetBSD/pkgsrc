@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/06/23 19:26:53 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/01 22:59:15 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gmp.
 #
@@ -15,6 +15,8 @@
 .if !defined(GMP_BUILDLINK_MK)
 GMP_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.gmp?=	gmp>=3.0
 DEPENDS+=		${BUILDLINK_DEPENDS.gmp}:../../devel/gmp
 
@@ -27,7 +29,5 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.gmp}
 
 pre-configure: ${BUILDLINK_TARGETS.gmp}
 gmp-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# GMP_BUILDLINK_MK

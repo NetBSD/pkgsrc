@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/06/17 17:45:52 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/01 22:59:21 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Mesa.
 #
@@ -12,6 +12,8 @@
 
 .if !defined(MESA_BUILDLINK_MK)
 MESA_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 USE_MESA=		# defined
 
@@ -39,7 +41,5 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.Mesa}
 pre-configure: ${BUILDLINK_TARGETS.Mesa}
 Mesa-x11base-buildlink: _BUILDLINK_USE
 Mesa-localbase-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# MESA_BUILDLINK_MK

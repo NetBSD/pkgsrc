@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:27:00 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:29 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tcp_wrappers.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(TCP_WRAPPERS_BUILDLINK_MK)
 TCP_WRAPPERS_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.tcp_wrappers?=	tcp_wrappers>=7.6.1nb1
 
@@ -38,7 +40,5 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.tcp_wrappers}
 
 pre-configure: ${BUILDLINK_TARGETS.tcp_wrappers}
 tcp_wrappers-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# TCP_WRAPPERS_BUILDLINK_MK

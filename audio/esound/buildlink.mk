@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:26:49 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:09 jlam Exp $
 #
 # This Makefile fragment is included by packages that use esound.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(ESOUND_BUILDLINK_MK)
 ESOUND_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.esound?=	esound>=0.2.18
 DEPENDS+=			${BUILDLINK_DEPENDS.esound}:../../audio/esound
@@ -38,7 +40,5 @@ CONFIGURE_ENV+=		ESD_CONFIG="${BUILDLINK_CONFIG_WRAPPER.esound}"
 pre-configure: ${BUILDLINK_TARGETS.esound}
 esound-buildlink: _BUILDLINK_USE
 esound-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# ESOUND_BUILDLINK_MK

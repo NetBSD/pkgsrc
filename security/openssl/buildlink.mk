@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/06/28 21:22:18 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/01 22:59:29 jlam Exp $
 #
 # This Makefile fragment is included by packages that use OpenSSL.
 #
@@ -13,6 +13,8 @@
 
 .if !defined(OPENSSL_BUILDLINK_MK)
 OPENSSL_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.openssl?=	openssl-0.9.[56]*
 
@@ -62,7 +64,5 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.openssl}
 
 pre-configure: ${BUILDLINK_TARGETS.openssl}
 openssl-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# OPENSSL_BUILDLINK_MK
