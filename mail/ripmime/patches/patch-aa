@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/01 20:45:55 reed Exp $
+
+--- Makefile.orig	Sat Jun 14 18:35:38 2003
++++ Makefile
+@@ -1,13 +1,13 @@
+-LOCATION=/usr/local
++LOCATION=$(PREFIX)
+ VERSION=0.1.11
+-CC=gcc
++CC?=gcc
+ #CC=tcc
+ #CC= ccmalloc gcc
+ 
+ # PERFORMANCE RELATED FLAG SETS
+ #CFLAGS=-Wall -O3 -march=i686
+ #CFLAGS= -Wall -O3 -march=k6
+-CFLAGS= -Wall -O2
++CFLAGS?= -Wall -O2
+ 
+ #  DEBUGGING Related Flags
+ #CFLAGS= -Wall -ggdb 
