@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/11/16 12:05:54 sketch Exp $
+# $NetBSD: Makefile,v 1.31 2004/11/16 12:07:03 sketch Exp $
 
 DISTNAME=	flac-1.1.1
 PKGREVISION=	1
@@ -32,9 +32,10 @@ CONFIGURE_ARGS+=	--disable-altivec
 .endif
 .endif
 
+.include "../../mk/compiler.mk"
+
 # This version of flac doesn't seem to build correctly with -O3 using
 # the MIPSpro compiler.
-.include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mmipspro)
 BUILDLINK_TRANSFORM+=	rm:-O3
 .endif
