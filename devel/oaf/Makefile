@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/07/21 16:43:33 martti Exp $
+# $NetBSD: Makefile,v 1.29 2003/10/10 16:31:08 reed Exp $
 #
 
 DISTNAME=		oaf-0.6.10
@@ -23,9 +23,14 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+.if ${OPSYS} == SunOS || !exists(/usr/bin/flex)
 BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
+LEX=			${LOCALBASE}/bin/flex
+.endif
+
+.if !exists(/usr/bin/yacc)
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+YACC=			${LOCALBASE}/bin/bison 
 .endif
 
 .include "../../devel/popt/buildlink2.mk"
