@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:05:35 agc Exp $
-lib/X11/app-defaults/XLock
-man/man1/xlock.1.gz
+@comment $NetBSD: PLIST,v 1.3 2000/05/11 16:37:54 hubertf Exp $
 bin/xlock
+man/man1/xlock.1.gz
+lib/X11/app-defaults/XLock
+lib/X11/xlockmore/thank-you.au
+lib/X11/xlockmore/identify-please.au
+lib/X11/xlockmore/not-programmed.au
+lib/X11/xlockmore/complete.au

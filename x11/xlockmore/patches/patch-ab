@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.5 2000/02/05 16:13:41 wiz Exp $
---- xlock/xlock.h	Tue Mar  9 01:51:30 1999
-+++ xlock/xlock.h.BAK	Tue Mar  9 01:49:16 1999
-@@ -131,7 +131,7 @@
- #define XSCREENSAVER_PREF 1	/* Disagreements handled with this  :) */
- 
- #else /* STANDALONE */
--#include <sys/signal.h>
-+#include <signal.h>
- # include <X11/Xlib.h>
- #include <X11/Xutil.h>
- #include <X11/Xos.h>
+$NetBSD: patch-ab,v 1.6 2000/05/11 16:37:53 hubertf Exp $
+
+--- xlock/xlock.c.orig	Wed Mar 22 17:55:32 2000
++++ xlock/xlock.c	Tue May  9 13:35:51 2000
+@@ -592,7 +592,9 @@
+ #ifdef USE_DPMS
+ #define MIN_DPMS 30		/* 30 second minimum */
+ #include <X11/extensions/dpms.h>
++#ifndef __NetBSD__
+ extern unsigned char DPMSQueryExtension(Display *, int *, int *);
++#endif
+ extern int  DPMSGetTimeouts(Display *, unsigned short *, unsigned short *, unsigned short *);
+ extern int  DPMSSetTimeouts(Display *, unsigned short, unsigned short, unsigned short);
+ extern int  dpmsstandby;
