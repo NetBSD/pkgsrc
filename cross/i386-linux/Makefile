@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/09/27 23:17:51 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/07/16 13:37:00 fredb Exp $
 #
 
 DISTVERSION=		2.0.7.1
@@ -51,5 +51,10 @@ post-extract:
 
 post-patch:
 	@${RM} -f ${SYS_LIB}/*.orig
+
+post-install:
+	@cd ${PREFIX}/${TARGET_ARCH}/lib; \
+		${LN} -sf libdb.so libndbm.so; \
+		${LN} -sf libbsd-compat.a libbsd.a
 
 .include "../COMMON/cross.mk"
