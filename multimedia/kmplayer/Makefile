@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/04/05 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/24 19:11:39 snj Exp $
 #
 
 DISTNAME=	kmplayer-0.8.2
@@ -18,7 +18,7 @@ DEPENDS+=		xine-arts>=1rc0a:../../audio/xine-arts
 
 WRKSRC=			${WRKDIR}/kmplayer
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PERL5=		build
@@ -31,10 +31,10 @@ SUBST_STAGE.desktop=	pre-configure
 SUBST_FILES.desktop=	src/kmplayer.desktop
 SUBST_SED.desktop=	-e 's|@PREFIX@|${PREFIX}|g'
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../meta-pkgs/kde3/buildlink2.mk"
-.include "../../multimedia/xine-lib/buildlink2.mk"
-.include "../../x11/kdelibs3/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../multimedia/xine-lib/buildlink3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
