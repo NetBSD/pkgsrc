@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5099 2004/03/05 14:48:31 adam Exp $
+$NetBSD: CHANGES,v 1.5100 2004/03/05 19:42:06 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1176,3 +1176,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgeda to 20040111 [dmcmahill 2004-03-05]
 	Updated postfix to 2.0.18nb1 [grant 2004-03-05]
 	Added cln-1.1.6 [adam 2004-03-05]
+	Updated createbuildlink to 3.2 [jlam 2004-03-05]

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.18 2004/02/10 03:36:55 jlam Exp $
+#	$NetBSD: createbuildlink,v 1.19 2004/03/05 19:42:09 jlam Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,7 @@
 # and PLIST
 #
 
-REV=`echo '$Revision: 1.18 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.19 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
@@ -130,11 +130,11 @@ echo >>$sedrules "s|@@PKGVERSION@@|@PKGVERSION@|g"
 #
 sed -f $sedrules <<EOF
 # @@ID@@
-#
-# This Makefile fragment is included by packages that use $PKGNOVER.
-#
-# This file was created automatically using createbuildlink-@PKGVERSION@.
-#
+# XXX
+# XXX This file was created automatically using createbuildlink-@PKGVERSION@.
+# XXX After this file as been verified as correct, the comment lines
+# XXX beginning with "XXX" should be removed.  Please do not commit
+# XXX unverified buildlink[23].mk files.
 
 EOF
 
@@ -152,38 +152,38 @@ EOF
 else	# buildlink 3
 
 sed -f $sedrules <<EOF
-BUILDLINK_DEPTH:=	\${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		\${BUILDLINK_DEPTH}+
 ${PKGUPPER}_BUILDLINK3_MK:=	\${${PKGUPPER}_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	${PKGNOVER}
 .endif
 
+BUILDLINK_PACKAGES:=	\${BUILDLINK_PACKAGES:N${PKGNOVER}}
+BUILDLINK_PACKAGES+=	$PKGNOVER
+
 .if !empty(${PKGUPPER}_BUILDLINK3_MK:M+)
 EOF
 
 fi	# buildlink 2/3
 
-sed -f $sedrules <<EOF
-BUILDLINK_PACKAGES+=			$PKGNOVER
-EOF
-
 if [ $blver = 2 ]; then
 
 sed -f $sedrules <<EOF
-BUILDLINK_DEPENDS.$PKGNOVER?=		$PKGNOVER>=$PKGVER
+BUILDLINK_PACKAGES+=		$PKGNOVER
+BUILDLINK_DEPENDS.$PKGNOVER?=	$PKGNOVER>=$PKGVER
 EOF
 
 else # [ $blver = 3 ]
 
 sed -f $sedrules <<EOF
-BUILDLINK_DEPENDS.$PKGNOVER+=		$PKGNOVER>=$PKGVER
+BUILDLINK_DEPENDS.$PKGNOVER+=	$PKGNOVER>=$PKGVER
 EOF
 
 fi
 
 sed -f $sedrules <<EOF
-BUILDLINK_PKGSRCDIR.$PKGNOVER?=		../../$CURDIR
+BUILDLINK_PKGSRCDIR.$PKGNOVER?=	../../$CURDIR
 
 EOF
 
@@ -242,21 +242,24 @@ if [ $blver = 2 ]; then
 ##
 ## main buildlink target for this package
 ##
-echo "BUILDLINK_TARGETS+=	${PKGNOVER}-buildlink"
-echo ""
+sed -f $sedrules <<EOF
+BUILDLINK_TARGETS+=	${PKGNOVER}-buildlink
+
+EOF
 
 ##
 ## buildlink targets for this package
 ##
-echo "${PKGNOVER}-buildlink: _BUILDLINK_USE"
-echo ""
+sed -f $sedrules <<EOF
+${PKGNOVER}-buildlink: _BUILDLINK_USE
 
-echo ".endif	# ${PKGUPPER}_BUILDLINK2_MK"
+.endif	# ${PKGUPPER}_BUILDLINK2_MK
+EOF
 
 else	# buildlink 3
 
 sed -f $sedrules <<EOF
-.endif # ${PKGUPPER}_BUILDLINK3_MK
+.endif	# ${PKGUPPER}_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     \${BUILDLINK_DEPTH:S/+\$//}
 EOF
