@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/26 02:28:02 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/13 21:44:42 snj Exp $
 #
 
 DISTNAME=	wmweather-2.4.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.godisch.de/debian/wmweather/
 COMMENT=	WindowMaker DockApp showing local weather conditions
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 
 GNU_CONFIGURE=		yes
@@ -23,13 +23,9 @@ CONFIGURE_ARGS+=	--with-sysconfdir=${PKG_SYSCONFDIR}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=	${EGDIR}/wmweather.conf ${PKG_SYSCONFDIR}/wmweather.conf
 
-.include "../../mk/bsd.prefs.mk"
+LDFLAGS.SunOS+=	-lsocket
 
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=	-lsocket
-.endif
-
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../www/curl/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
