@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2004/06/06 19:33:11 jschauma Exp $
+$NetBSD: patch-ab,v 1.7 2004/06/10 15:31:47 minskim Exp $
 
---- config.h.orig	1993-11-24 10:36:07.000000000 -0500
-+++ config.h	2004-06-06 13:08:50.000000000 -0400
-@@ -40,7 +40,7 @@
+--- config.h.orig	1993-11-24 09:36:07.000000000 -0600
++++ config.h
+@@ -40,7 +40,7 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
  #define SYSV /* Linux is SysV */
  #endif
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2004/06/06 19:33:11 jschauma Exp $
  #ifndef SYSV
  /* Stupid SGI machines define SVR3 but not SYSV */
  #define SYSV
-@@ -65,6 +65,12 @@
+@@ -65,6 +65,12 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
  #endif
  #endif
  
@@ -24,17 +24,21 @@ $NetBSD: patch-ab,v 1.6 2004/06/06 19:33:11 jschauma Exp $
  /* NOTE:  The RESET_PROGRAM resets the terminal to a "normal" state 
     If you comment out the definition, all will be well except that metamail's
     -R switch won't work, and metamail-called programs might be more likely
-@@ -100,7 +106,9 @@
+@@ -100,9 +106,13 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
  #endif
  
  #ifdef SYSV
-+#if !(defined(__sun__) && defined(__svr4__))
++#if !(defined(__sun__) && defined(__svr4__)) && !defined(LINUX)
  #define killpg(a, b) kill(-(a), (b))
 +#endif
  #define bcopy(a, b, c) memcpy(b, a, c)
++#ifndef LINUX
  #define bzero(a, b) memset(a, 0, b)
++#endif
  #define bcmp memcmp
-@@ -155,9 +163,13 @@
+ #define index strchr
+ #define rindex strrchr
+@@ -155,9 +165,13 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
  #ifdef NeXT
  #define sigtype void
  #else
@@ -48,7 +52,7 @@ $NetBSD: patch-ab,v 1.6 2004/06/06 19:33:11 jschauma Exp $
  
  #ifdef MSDOS
  #define PATH_SEPARATOR ';'
-@@ -173,7 +185,7 @@
+@@ -173,7 +187,7 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
  #else
  #define PATH_SEPARATOR ':'
  #ifndef STDPATH
