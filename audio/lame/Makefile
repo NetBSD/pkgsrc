@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/08/28 06:49:34 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/10/03 08:43:29 jlam Exp $
 #
 
 VERS=		3.92
@@ -20,7 +20,7 @@ USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-vorbis
 
 .include "../../mk/bsd.prefs.mk"
@@ -28,11 +28,11 @@ CONFIGURE_ARGS+=	--without-vorbis
 .if defined(LAME_USE_GTK)
 .  include "../../x11/gtk/buildlink2.mk"
 .else
-CONFIGURE_ARGS+=	--enable-analyzer=no
+CONFIGURE_ARGS+=	--disable-analyzer
 .endif
 
-.if (${MACHINE_ARCH} == "alpha")
-DEPENDS+=	libffm-[0-9]*:../../math/libffm
+.if ${MACHINE_ARCH} == "alpha"
+.  include "../../math/libffm/buildlink2.mk"
 # double is faster than float on Alpha
 CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-mfp-regs -fschedule-insns -fschedule-insns2 		  \
