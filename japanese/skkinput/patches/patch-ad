@@ -1,0 +1,184 @@
+$NetBSD: patch-ad,v 1.1 2000/11/09 03:54:08 itohy Exp $
+
+--- skksoc.c.orig	Thu Oct 30 13:40:59 1997
++++ skksoc.c	Wed Nov  8 21:48:24 2000
+@@ -36,6 +36,11 @@
+ 
+ #include "commondef.h"
+ #include "buffers.h"
++#include "config.h"
++
++#ifdef PF_INET6
++# define HAVE_GETADDRINFO
++#endif
+ 
+ /*
+  * プロトタイプ宣言。
+@@ -51,12 +56,15 @@
+ } ;
+ 
+ extern char *skkserv_host ;
+-extern int  skkserv_portnum ;
++extern char *skkserv_portnum ;
++extern char *skkserv_portstr ;
+ 
+ /* skkserv とお話する際のバッファ。*/
+ static struct MessageBuffer mesbuf ;
++#ifndef HAVE_GETADDRINFO
+ /* SKK server の情報。*/
+ struct sockaddr_in server ;
++#endif
+ /* SKK server の Host の情報。*/
+ static struct hostent *host ;
+ /* skkserv をお話するのに利用する socket */
+@@ -79,13 +87,14 @@
+ static void myCharStringToNormalString
+ ( struct MessageBuffer *buf, struct myChar *string ) ;
+ 
++#ifndef HAVE_GETADDRINFO
+ /*
+  * ソケットを作成する関数。
+  *------------
+  * server の名前が与えられると、そこに対しての socket を作成しよう
+  * と試みる。
+  */
+-static int makeSocket( char *server_name, int port_num )
++static int makeSocket( char *server_name )
+ {
+   struct protoent *proto;
+   /* Protocol の設定。*/
+@@ -115,22 +124,10 @@
+ #else
+   memcpy( &server.sin_addr, host->h_addr, host->h_length ) ;
+ #endif
+-  server.sin_port = htons( port_num ) ;
+-
+-  read_skkserv_fp  = fdopen( skkserv_soc, "r" ) ;
+-  write_skkserv_fp = fdopen( skkserv_soc, "w" ) ;
+ 
+-  /* fdopen に失敗したら… */
+-  if( read_skkserv_fp == NULL || write_skkserv_fp == NULL ){
+-    if( read_skkserv_fp != NULL )
+-      fclose( read_skkserv_fp ) ;
+-    if( write_skkserv_fp != NULL )
+-      fclose( write_skkserv_fp ) ;
+-    read_skkserv_fp = write_skkserv_fp = NULL ;
+-    return 1 ; 
+-  }
+   return 0 ;
+ }
++#endif	/* ! HAVE_GETADDRINFO */
+ 
+ /*
+  * skkserv に message を送信する関数。
+@@ -294,14 +291,72 @@
+  * socket を用意し、skkerv に接続する関数。
+  *----
+  */
+-int skkinput_StartCommunication( char *server_name, int port_num )
++int skkinput_StartCommunication( char *server_name, char *port_str )
+ {
++#ifdef HAVE_GETADDRINFO
++  struct addrinfo aihint, *ai0, *ai;
++  int error;
++  char portnum[32];
++
++  /* backward compatibility */
++  if (skkserv_portnum) {
++    sprintf(portnum, "%d", skkserv_portnum);
++    port_str = portnum;
++  }
++
++#ifdef HAVE_BZERO
++  bzero((char*)&aihint, sizeof aihint);
++#else
++  memset((char*)&aihint, 0, sizeof aihint);
++#endif
++  aihint.ai_family = PF_UNSPEC;
++  aihint.ai_socktype = SOCK_STREAM;
++  aihint.ai_flags = AI_CANONNAME;
++  error = getaddrinfo(server_name, port_str, &aihint, &ai0);
++  if (error) {
++    printf("%s: %s\r\n", gai_strerror(error), server_name);
++    return -1;
++  }
++
++  skkserv_soc = -1;
++  for (ai = ai0; ai; ai = ai->ai_next) {
++    skkserv_soc = socket(ai->ai_family, ai->ai_socktype, ai->ai_protocol);
++    if (skkserv_soc >= 0 &&
++	connect(skkserv_soc, ai->ai_addr, ai->ai_addrlen) == 0)
++      break;
++    close(skkserv_soc);
++    skkserv_soc = -1;
++  }
++  if (skkserv_soc < 0) {
++    perror(server_name);
++    skkserv_connection_ok = False ;
++    return 1;
++  }
++#else
++  struct servent *servent ;
++  int port;
++
++  if ((port = atoi(port_str)) <= 0) {
++    /* "/etc/services" からポート番号を得ておく。*/
++    servent = getservbyname( port_str, SKKSERV_SERVICE_PROTO ) ;
++    if( servent == NULL ){
++      /* /etc/services に設定はなかったので、config.h の中のを使う。*/
++      port = atoi( DEFAULT_SKKPORT ) ;
++    } else {
++      /* /etc/services に設定があった…。*/
++      port = ntohs( servent->s_port ) ;
++#if defined(DEBUG)
++      fprintf( stderr, "getservbyname: \"%s\", %d\n", servent->s_name, port ) ;
++#endif
++    }
++  }
+   /* skkerv と通信するためのソケットを作成致します。*/
+-  if( makeSocket( server_name, port_num ) ){
++  if( makeSocket( server_name ) ){
+     fprintf( stderr, "Warning : cannot make a socket." ) ;
+     skkserv_connection_ok = False ;
+     return 1 ;
+   }
++  server.sin_port = htons( port ) ;
+   /* 接続要求。*/
+   if( connect( skkserv_soc, 
+ 	       ( struct sockaddr *)&server, sizeof( server ) ) < 0 ){
+@@ -312,6 +367,19 @@
+     skkserv_connection_ok = False ;
+     return 1 ;
+   }
++#endif
++  read_skkserv_fp  = fdopen( skkserv_soc, "r" ) ;
++  write_skkserv_fp = fdopen( skkserv_soc, "w" ) ;
++
++  /* fdopen に失敗したら… */
++  if( read_skkserv_fp == NULL || write_skkserv_fp == NULL ){
++    if( read_skkserv_fp != NULL )
++      fclose( read_skkserv_fp ) ;
++    if( write_skkserv_fp != NULL )
++      fclose( write_skkserv_fp ) ;
++    read_skkserv_fp = write_skkserv_fp = NULL ;
++    return 1 ; 
++  }
+   skkserv_connection_ok = True ;
+   return 0 ;
+ }
+@@ -357,13 +425,13 @@
+ 
+ #ifndef MAIKAI_SKKSERV_TO_CONNECT_SURU
+   if( !skkserv_connection_ok ){
+-    if( skkinput_StartCommunication( skkserv_host, skkserv_portnum ) )
++    if( skkinput_StartCommunication( skkserv_host, skkserv_portstr ) )
+       return top ;
+   }
+ #else
+   /* skkserv が生きていなければ、メッセージの送りようが無いので終了
+      する。*/
+-  if( skkinput_StartCommunication( skkserv_host, skkserv_portnum ) )
++  if( skkinput_StartCommunication( skkserv_host, skkserv_portstr ) )
+     return top ;
+ #endif
+ 
