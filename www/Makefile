@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2001/05/17 21:04:33 jlam Exp $
+# $NetBSD: Makefile,v 1.139 2001/05/27 19:11:22 kim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -127,6 +127,7 @@ SUBDIR+=	waplet
 SUBDIR+=	web500gw
 SUBDIR+=	webalizer
 SUBDIR+=	weblint
+SUBDIR+=	webnew
 SUBDIR+=	wml
 SUBDIR+=	www6to4
 SUBDIR+=	wwwcount
