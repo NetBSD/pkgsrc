@@ -1,0 +1,52 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/10/19 07:41:16 skrll Exp $
+
+--- src/Makefile.in.orig	Wed Oct  4 10:55:53 2000
++++ src/Makefile.in
+@@ -2,7 +2,7 @@
+ 
+ ####### Compiler, tools and options
+ 
+-CXX	=	$(SYSCONF_CXX) $(QT_CXX_MT)
++CXX	=	$(SYSCONF_CXX_LIB) $(QT_CXX_MT)
+ CXXFLAGS=	$(SYSCONF_CXXFLAGS_OPENGL) $(SYSCONF_CXXFLAGS_QT) $(SYSCONF_CXXFLAGS_X11) $(SYSCONF_CXXFLAGS) $(SYSCONF_CXXFLAGS_LIB) $(QT_CXXFLAGS_OPT)
+ CC	=	$(SYSCONF_CC) $(QT_C_MT)
+ CFLAGS	=	$(SYSCONF_CFLAGS) $(SYSCONF_CFLAGS_LIB) $(QT_CFLAGS_OPT)
+@@ -14,7 +14,7 @@
+ 
+ ####### Target
+ 
+-DESTDIR = ../lib/
++DESTDIR = 
+ VER_MAJ = 2
+ VER_MIN = 2
+ VER_PATCH = 1
+@@ -358,19 +358,7 @@
+ .SUFFIXES: .cpp .cxx .cc .C .c
+ 
+ .cpp.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+-
+-.cxx.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+-
+-.cc.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+-
+-.C.o:
+-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+-
+-.c.o:
+-	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
++	@cd `dirname $@` && $(CXX) -c $(CXXFLAGS) `basename $<`
+ 
+ ####### Build rules
+ 
+@@ -378,7 +366,7 @@
+ all: $(DESTDIR)$(SYSCONF_LINK_TARGET)
+ 
+ $(DESTDIR)$(SYSCONF_LINK_TARGET): $(UICDECLS) $(OBJECTS) $(OBJMOC) $(SUBLIBS)
+-	$(SYSCONF_LINK_LIB)
++	$(SYSCONF_LINK_LIB) $(SYSCONF_RPATH_X11) $(SYSCONF_RPATH_OPENGL)
+ 
+ moc: $(SRCMOC)
+ 
