@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.1 2003/11/03 00:56:26 heinz Exp $
+$NetBSD: patch-aq,v 1.2 2003/12/27 19:16:04 heinz Exp $
 
---- README.orig	Sat Sep 13 03:05:21 2003
+--- README.orig	Sun Sep 28 18:21:54 2003
 +++ README
-@@ -105,30 +105,30 @@ Mail::SpamAssassin::Conf class (run the 
+@@ -116,30 +116,30 @@ Mail::SpamAssassin::Conf class (run the 
  the standard defaults that people use.  There is an explanation of all the
  default locations that SpamAssassin will look at the end.
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2003/12/02 12:36:00 grant Exp $
+$NetBSD: patch-ae,v 1.8 2003/12/27 19:16:04 heinz Exp $
 
---- spamd/spamd.raw.orig	2003-09-11 11:05:22.000000000 +1000
+--- spamd/spamd.raw.orig	Sat Nov 15 03:55:31 2003
 +++ spamd/spamd.raw
-@@ -207,8 +207,8 @@ if ($opt{'auth-ident'}) {
+@@ -208,8 +208,8 @@ if ($opt{'auth-ident'}) {
  }
  
  # Check for server certs
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.7 2003/12/02 12:36:00 grant Exp $
  if ($opt{'ssl'}) {
    eval { require IO::Socket::SSL };
    die "fatal: SSL encryption requested, but IO::Socket::SSL is unavailable\n" if ($@);
-@@ -1221,8 +1221,9 @@ sub restart_handler {
+@@ -1240,8 +1240,9 @@ sub restart_handler {
  use POSIX 'setsid';
  sub daemonize
  {
@@ -25,7 +25,7 @@ $NetBSD: patch-ae,v 1.7 2003/12/02 12:36:00 grant Exp $
  
      # Be a nice daemon and chdir() to the root so we don't block any unmount attempts
      chdir '/' or die "Can't chdir to /: $!\n";
-@@ -1341,7 +1342,7 @@ Options:
+@@ -1360,7 +1361,7 @@ Options:
   -a, --auto-whitelist, --whitelist  Use auto-whitelists
   -c, --create-prefs                 Create user preferences files
   -C path, --configpath=path         Path for default config files
@@ -34,7 +34,7 @@ $NetBSD: patch-ae,v 1.7 2003/12/02 12:36:00 grant Exp $
   -d, --daemonize                    Daemonize
   -h, --help                         Print usage message.
   -i ipaddr, --listen-ip=ipaddr,...  Listen on the IP ipaddr (default: 127.0.0.1)
-@@ -1416,12 +1417,12 @@ Create user preferences files if they do
+@@ -1435,12 +1436,12 @@ Create user preferences files if they do
  =item B<-C> I<path>, B<--configpath>=I<path>
  
  Use the specified path for locating the distributed configuration files.

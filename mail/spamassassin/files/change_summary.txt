@@ -1,0 +1,56 @@
+Subject: SpamAssassin 2.61 is released!
+
+SpamAssassin is a mail filter which uses advanced statistical
+and heuristic tests to identify spam (also known as unsolicited
+commercial/bulk email).
+
+Downloading
+-----------
+
+Pick it up from:
+
+  http://SpamAssassin.org/released/Mail-SpamAssassin-2.61.tar.gz
+  http://SpamAssassin.org/released/Mail-SpamAssassin-2.61.tar.bz2
+  http://SpamAssassin.org/released/Mail-SpamAssassin-2.61.zip
+
+md5sum:
+  6521ad3e6ed5a2eba35476c43c1697b7  Mail-SpamAssassin-2.61.tar.gz
+  25a87ca67c1550360e1378c816301b53  Mail-SpamAssassin-2.61.tar.bz2
+  8ab5e24ddb64f8a7d9d0299a72b3ea0b  Mail-SpamAssassin-2.61.zip
+
+sha1sum:
+  da8f10c1c7eb91f2fced05366f4d792bcb6255ec  Mail-SpamAssassin-2.61.tar.gz
+  bf161bc92f33bdad298daefc279e2b85efa34f7d  Mail-SpamAssassin-2.61.tar.bz2
+  050cd37240b34b7d0f1bf31df7cb46fb0ad50678  Mail-SpamAssassin-2.61.zip
+
+Or on CPAN shortly, once the mirrors update.
+
+The release files also have a .asc accompanying them.  The file serves
+as an external GPG signature for the given release file.  The signing
+key is available via the wwwkeys.pgp.net keyserver, as well as
+http://www.spamassassin.org/released/GPG-SIGNING-KEY
+
+The key information is:
+
+pub  1024D/265FA05B 2003-06-09 SpamAssassin Signing Key <release@spamassassin.org>
+     Key fingerprint =3D 26C9 00A4 6DD4 0CD5 AD24  F6D7 DEE0 1987 265F A05B
+
+
+Summary of major changes since 2.60
+-----------------------------------
+
+  - Dramatically reduced memory usage of Bayes expiry.
+
+  - avoid false positives on Outlook 2003 messages, mails from Mac, Palm, and
+    localized versions of Eudora, several AOL MUAs, and newer versions of The
+    Bat!
+
+  - new set of French translations from Michel Bouissou
+
+  - updated to reflect new Dynablock DNSBL location
+
+  - avoids a possible hole that was giving AWL bonuses to
+    spammer forgeries on some networks
+
+  - miscellaneous bug fixes
+

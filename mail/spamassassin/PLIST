@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.11 2003/11/03 00:56:26 heinz Exp $
+@comment $NetBSD: PLIST,v 1.12 2003/12/27 19:16:04 heinz Exp $
 @comment Most of this PLIST is auto-generated; see Makefile.
 etc/rc.d/spamd
 share/doc/html/spamassassin/ninjabutton.png
 @comment @dirrm share/doc/html/spamassassin
-share/doc/spamassassin/2.60_change_summary
+share/doc/spamassassin/change_summary.txt
 share/examples/spamassassin/local.cf
 share/examples/spamassassin/netbsd_lists.cf
 share/examples/spamassassin/procmailrc.example
