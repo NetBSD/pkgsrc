@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2003/05/24 09:32:34 salo Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/24 20:51:47 snj Exp $
 
---- examples/Makefile.in.orig	2002-01-14 15:24:34.000000000 +0100
-+++ examples/Makefile.in	2003-05-24 10:54:12.000000000 +0200
-@@ -88,26 +88,25 @@
+--- examples/Makefile.in.orig	2002-01-14 06:24:34.000000000 -0800
++++ examples/Makefile.in	2004-04-24 13:04:41.000000000 -0700
+@@ -88,26 +88,25 @@ INCLUDES = \
  @GLUT_CHECK_TRUE@PLAYER = @GLUT_CHECK_TRUE@player
  @GLUT_CHECK_FALSE@PLAYER = 
  
 -noinst_PROGRAMS = \
 +PROGRAMS = \
    3ds2rib \
-   $(PLAYER)
+-  $(PLAYER)
++  player
  
  
  LDADD = \
@@ -21,7 +22,7 @@ $NetBSD: patch-aa,v 1.1 2003/05/24 09:32:34 salo Exp $
  player_SOURCES = player.c
  player_LDADD = \
 -  $(top_builddir)/lib3ds/lib3ds.a \
-+  -L$(top_builddir)/lib3ds -l3ds \
++  -L$(top_builddir)/lib3ds -l3ds -lGL -lGLU -lX11 -lXi -lXmu -lglut \
    @GLUT_LIBS@ \
    @DMALLOC_LIBS@ -lm
  
@@ -32,7 +33,7 @@ $NetBSD: patch-aa,v 1.1 2003/05/24 09:32:34 salo Exp $
  
  
  DEFS = @DEFS@ -I. -I$(srcdir) -I..
-@@ -239,6 +238,8 @@
+@@ -239,6 +238,8 @@ check: check-am
  installcheck-am:
  installcheck: installcheck-am
  install-exec-am:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:40 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/24 20:52:02 snj Exp $
 #
 
 DISTNAME=		boson-all-0.8
@@ -14,7 +14,7 @@ COMMENT=		OpenGL real-time strategy game for KDE 3
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_X11=		yes
@@ -23,9 +23,10 @@ USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-debug
 
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../games/kdegames3/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/lib3ds/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../games/kdegames3/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/lib3ds/buildlink3.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../mk/bsd.pkg.mk"
