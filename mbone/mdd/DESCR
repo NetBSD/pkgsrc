@@ -1,0 +1,6 @@
+mdd stands for multicast data dump. It was designed for distributing 
+a file using multicast. The primary goal was to replicate a hard disk
+image on all the workstations of a computer room at the same time.
+
+The protocol used is rather simple and will not make any effort to avoid
+flooding your network. IGMP-snooping enabled switches are advised.
