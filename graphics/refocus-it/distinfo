@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/16 11:52:43 drochner Exp $
+
+SHA1 (refocus-it-2.0.0.tar.gz) = 746adb97da84cde10d9f8cd1925652164306dd95
+Size (refocus-it-2.0.0.tar.gz) = 249425 bytes
+SHA1 (patch-aa) = 60e48f3f2d1b0886ed79ff140cbc268768470c1a
