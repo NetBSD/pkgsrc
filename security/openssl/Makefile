@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2004/03/26 08:33:49 jlam Exp $
+# $NetBSD: Makefile,v 1.93 2004/07/30 21:05:42 jlam Exp $
 
 DISTNAME=		openssl-0.9.6m
 SVR4_PKGNAME=		ossl
@@ -34,7 +34,20 @@ CONFIGURE_ARGS+=	shared
 # IDEA, RC5, and MDC2 are disabled due to licensing and/or patent issues.
 CONFIGURE_ARGS+=	no-idea no-rc5 no-mdc2
 
-.if defined(USE_RSAREF2) && ${USE_RSAREF2} == "YES"
+# Global and legacy options
+.if defined(USE_RSAREF2)
+.  if !defined(PKG_OPTIONS.openssl)
+.    if defined(USE_RSAREF2) && !empty(USE_RSAREF2:M[yY][eE][sS])
+PKG_OPTIONS.openssl+=	rsaref
+.    endif
+.  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.openssl
+PKG_SUPPORTED_OPTIONS=	rsaref
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mrsaref)
 .  include "../../security/rsaref/buildlink3.mk"
 CONFIGURE_ARGS+=	rsaref
 PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
