@@ -1,4 +1,65 @@
-/*	$NetBSD: xpkgwedge.def,v 1.10 2004/01/03 23:34:21 jlam Exp $	*/
+/*	$NetBSD: xpkgwedge.def,v 1.11 2004/04/30 19:44:21 tv Exp $	*/
+
+#ifdef BeforeVendorCF
+
+/*
+ * OS-specific overrides for Interix to make it behave similarly to NetBSD
+ * when creating binaries for pkgsrc.
+ */
+#ifdef __INTERIX
+#undef  ForceNormalLib /* this is always YES on Interix */
+#define NullMakeCommand @ true
+#define SharedLibraryLoadFlags -shared -Wl,-rpath,$(USRLIBDIRPATH)
+
+#ifdef UseInstalled  
+#define ExtraLoadFlags -Wl,-rpath,$(USRLIBDIRPATH)
+#define LinkBuildSonameLibrary(lib) true
+#else
+#define ExtraLoadFlags -Wl,-rpath,$(USRLIBDIRPATH) -Wl,-rpath-link,$(BUILDLIBDIR)
+#define LinkBuildSonameLibrary(lib) (RemoveFile($(BUILDLIBDIR)/lib); \
+	cd $(BUILDLIBDIR); $(LN) $(BUILDINCTOP)/$(CURRENT_DIR)/lib .)
+#endif
+
+/*
+ * Oy, what a hack: see pkgsrc/devel/libtool for an explanation of the
+ * bizarre --image-base option used below.
+ */
+#define SharedLibraryTarget(libname,rev,solist,down,up)			@@\
+AllTarget(Concat(lib,libname.so.rev))					@@\
+									@@\
+Concat(lib,libname.so.rev):  solist					@@\
+	$(RM) $@~							@@\
+	@SONAME=`echo $@ | sed 's/\.[^\.]*$$//'`; set -x; \		@@\
+		(cd down; $(CC) -o up/$@~ $(SHLIBLDFLAGS) \		@@\
+			-Wl,--image-base,$$(($$RANDOM %4096/2*262144+1342177280)) \ @@\
+			-Wl,-h,$$SONAME solist $(REQUIREDLIBS)); \	@@\
+		$(RM) $$SONAME; $(LN) $@ $$SONAME; \			@@\
+		LinkBuildSonameLibrary($$SONAME)			@@\
+	$(RM) $@							@@\
+	$(MV) $@~ $@							@@\
+	LinkBuildLibrary($@)						@@\
+	$(RM) Concat(lib,libname.so)					@@\
+	$(LN) $@ Concat(lib,libname.so)					@@\
+	LinkBuildLibrary(Concat(lib,libname.so))			@@\
+									@@\
+clean::									@@\
+	@SONAME=`echo Concat(lib,libname.so.rev) | sed 's/\.[^\.]*$$//'`; \ @@\
+	set -x; $(RM) $$SONAME						@@\
+	$(RM) Concat(lib,libname.so)					@@\
+	$(RM) Concat(lib,libname.so.rev)
+
+#define InstallSharedLibrary(libname,rev,dest)				@@\
+install:: Concat(lib,libname.so.rev)					@@\
+	MakeDir($(DESTDIR)dest)						@@\
+	$(INSTALL) $(INSTALLFLAGS) $(INSTBINFLAGS) Concat(lib,libname.so.rev) $(DESTDIR)dest @@\
+	@T=`echo Concat($(DESTDIR)dest/lib,libname.so.rev) | sed 's/\.[^\.]*$$//'`;\ @@\
+	  set -x; $(RM) $$T && $(LN) Concat(lib,libname.so.rev) $$T	@@\
+	$(RM) Concat($(DESTDIR)dest/lib,libname.so)			@@\
+	$(LN) Concat(lib,libname.so.rev) Concat($(DESTDIR)dest/lib,libname.so)
+
+#endif /* __INTERIX && BeforeVendorCF */
+
+#endif /* BeforeVendorCF */
 
 #ifdef AfterVendorCF
 
