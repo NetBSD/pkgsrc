@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7040 2004/08/30 16:02:34 jmmv Exp $
+$NetBSD: CHANGES,v 1.7041 2004/08/30 18:41:41 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4109,3 +4109,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated safecat to 1.12 [schmonz 2004-08-30]
 	Updated ht to 0.8.0 [jmmv 2004-08-30]
 	Updated tkpasman to 2.2anb4 [jmmv 2004-08-30]
+	Updated mrtg to 2.10.15 [martti 2004-08-30]
