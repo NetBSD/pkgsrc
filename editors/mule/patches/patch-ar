@@ -1,0 +1,18 @@
+$NetBSD: patch-ar,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+
+*** man/cl.texi.orig	Fri Nov 17 13:56:11 2000
+--- man/cl.texi	Fri Nov 17 14:09:59 2000
+***************
+*** 2,7 ****
+--- 2,12 ----
+  @setfilename ../info/cl
+  @settitle Common Lisp Extensions
+  
++ @dircategory Editors
++ @direntry
++ * CL: (cl).		Partial Common Lisp support for Emacs Lisp.
++ @end direntry
++ 
+  @iftex
+  @finalout
+  @end iftex

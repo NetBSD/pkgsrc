@@ -1,0 +1,30 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+
+--- src/fileio.c.orig	Mon Sep 20 23:29:04 1999
++++ src/fileio.c	Mon Sep 20 23:30:03 1999
+@@ -2604,8 +2604,6 @@
+   return value;
+ }
+ 
+-#ifdef unix
+-
+ DEFUN ("unix-sync", Funix_sync, Sunix_sync, 0, 0, "",
+   "Tell Unix to finish all pending disk updates.")
+   ()
+@@ -2614,8 +2612,6 @@
+   return Qnil;
+ }
+ 
+-#endif /* unix */
+-
+ DEFUN ("file-newer-than-file-p", Ffile_newer_than_file_p, Sfile_newer_than_file_p, 2, 2, 0,
+   "Return t if file FILE1 is newer than file FILE2.\n\
+ If FILE1 does not exist, the answer is nil;\n\
+@@ -4507,7 +4503,5 @@
+   defsubr (&Sread_file_name_internal);
+   defsubr (&Sread_file_name);
+ 
+-#ifdef unix
+   defsubr (&Sunix_sync);
+-#endif
+ }

@@ -1,0 +1,16 @@
+$NetBSD: patch-al,v 1.1.1.1 2000/11/21 05:21:10 kei Exp $
+
+--- src/lread.c.orig	Mon Sep 20 23:44:46 1999
++++ src/lread.c	Mon Sep 20 23:45:25 1999
+@@ -86,9 +86,9 @@
+ 
+ Lisp_Object Qread_char, Qget_file_char, Qstandard_input, Qcurrent_load_list;
+ Lisp_Object Qvariable_documentation, Vvalues, Vstandard_input, Vafter_load_alist;
+-Lisp_Object Qascii_character, Qload;
++Lisp_Object Qascii_character;
+ 
+-extern Lisp_Object Qevent_symbol_element_mask;
++extern Lisp_Object Qload, Qevent_symbol_element_mask;
+ 
+ /* non-zero if inside `load' */
+ int load_in_progress;
