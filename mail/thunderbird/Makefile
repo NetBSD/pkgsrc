@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/19 23:25:27 taya Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/26 13:56:09 taya Exp $
 
 MOZILLA=	thunderbird
 MOZILLA_BIN=	thunderbird-bin
 MOZ_VER=	0.5
+PKGREVISION=	1
 EXTRACT_SUFX=	.tar.gz
 DISTNAME=	thunderbird-${MOZ_VER}-source
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/ \
@@ -15,8 +16,6 @@ CONFIGURE_ENV+=	MOZ_THUNDERBIRD=1
 MAKE_ENV+=	MOZ_THUNDERBIRD=1
 
 CONFIGURE_ARGS+=	--enable-extensions=wallet,spellcheck,xmlextras
-MOZILLA_USE_GTK2=	# defined
-MOZILLA_USE_XFT=	YES
 
 #
 # XXX
