@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.35 2001/05/14 13:18:56 zuntum Exp $
+$NetBSD: TODO,v 1.36 2001/05/14 15:08:29 wiz Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -61,7 +61,6 @@ package update TODO (Suggested package updates)
 		(kleink, after freeze)
 	o update IPv6 patch in mail/postfix to 20010510a
 	o update net/samba to 2.2.0 [jlam has new version ready]
-	o update IPv6 patch in net/wget to 20010508b
 	o update print/a2ps to 4.13 [pkgsrc version was released on 1999-02-10, whee]
 	o update sysutils/gkrellm to 1.0.8
 		(zuntum will do that)
