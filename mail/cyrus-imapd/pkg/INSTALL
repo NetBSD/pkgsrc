@@ -1,0 +1,49 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2000/08/25 12:35:40 veego Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CYUSER=@CYUSER@
+CYGROUP=@CYGROUP@
+ADDUSER=@ADDUSER@
+ADDGROUP=@ADDGROUP@
+CHGRP=@CHGRP@
+ID=@ID@
+TOUCH=@TOUCH@
+RM=@RM@
+
+case ${STAGE} in
+PRE-INSTALL)
+	# Group... the default's shipped with NetBSD
+	# We need to check that ${CYGROUP} exists before adding the user.
+	#
+	${TOUCH} "/tmp/grouptestcyrus.$$"
+	${CHGRP} ${CYGROUP} "/tmp/grouptestcyrus.$$" >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		echo "Group '${CYGROUP}' already exists...proceeding."
+	else
+		echo "Creating '${CYGROUP}' group..."
+		${ADDGROUP} ${CYGROUP}
+		echo "Done."
+	fi
+	${RM} -f "/tmp/grouptestcyrus.$$"
+
+	${ID} ${CYUSER} >/dev/null 2>&1
+	if [ $? -eq 0 ]; then
+		echo "User '${CYUSER}' already exists...proceeding."
+	else
+		echo "Creating '${CYUSER}' user..."
+		${ADDUSER} -c "Amanda User" -g ${CYGROUP} -s /bin/sh ${CYUSER}
+		echo "Done."
+	fi
+	;;
+POST-INSTALL)
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0
