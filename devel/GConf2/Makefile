@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/11 00:53:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/12 19:07:00 jmmv Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
@@ -26,7 +26,6 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"
