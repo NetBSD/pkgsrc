@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 1998/11/26 19:16:29 tron Exp $
+# $NetBSD: Makefile,v 1.16 1998/12/05 21:38:42 tron Exp $
 
-DISTNAME=		WindowMaker-0.20.2
-PKGNAME=		windowmaker-0.20.2
+DISTNAME=		WindowMaker-0.20.3
+PKGNAME=		windowmaker-0.20.3
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
 			ftp://ftp.windowmaker.org/pub/contrib/icons/
@@ -22,7 +22,7 @@ CONFIGURE_ENV+=		INSTALL="${INSTALL}" \
 			INSTALL_DATA="${INSTALL_DATA}" \
 			INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
-CONFLICTS=		windowmaker-0.6.3 windowmaker-0.16.1
+CONFLICTS=		windowmaker-0.6.3 windowmaker-0.16.1 windowmaker-0.20.2
 
 USE_X11=		yes
 GNU_CONFIGURE=		yes
