@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/04/12 19:15:41 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/04/13 02:39:53 jlam Exp $
 #
 
 DISTNAME=	Canna35b2
@@ -20,7 +20,7 @@ INSTALL_TARGET=	install install.man
 
 # XXX USE_IMAKE can't pass MAKE_FLAGS to XMKMF.
 #USE_IMAKE=	# defined
-USE_X11=	# defined
+USE_X11BASE=	# defined
 BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
