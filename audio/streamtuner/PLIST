@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/13 11:19:01 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/30 22:21:31 xtraeme Exp $
 bin/streamtuner
-bin/streamtuner-theme-convert
+include/streamtuner/st-action-api.h
 include/streamtuner/st-category-api.h
 include/streamtuner/st-dialog-api.h
 include/streamtuner/st-handler-api.h
 include/streamtuner/st-handler-field-api.h
 include/streamtuner/st-handlers-api.h
+include/streamtuner/st-m3u-api.h
+include/streamtuner/st-pls-api.h
 include/streamtuner/st-programs-api.h
 include/streamtuner/st-re-api.h
 include/streamtuner/st-settings-api.h
+include/streamtuner/st-sgml-ref-api.h
 include/streamtuner/st-state-api.h
 include/streamtuner/st-stream-api.h
 include/streamtuner/st-transfer-api.h
@@ -18,13 +21,19 @@ lib/pkgconfig/streamtuner.pc
 lib/streamtuner/plugins/shoutcast.a
 lib/streamtuner/plugins/shoutcast.la
 lib/streamtuner/plugins/shoutcast.so
-man/man1/streamtuner-theme-convert.1
-man/man1/streamtuner.1
 share/applications/streamtuner.desktop
+share/doc/streamtuner/C/documentation-license.xml
+share/doc/streamtuner/C/figures/main-window.png
+share/doc/streamtuner/C/figures/search-category.png
+share/doc/streamtuner/C/figures/search-dialog.png
+share/doc/streamtuner/C/software-license.xml
+share/doc/streamtuner/C/streamtuner.xml
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/streamtuner.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/streamtuner.mo
+share/omf/streamtuner/streamtuner-C.omf
 share/pixmaps/streamtuner.png
-@comment in gnome2-dirs: @dirrm share/applications
+@dirrm share/omf/streamtuner
+@dirrm share/doc/streamtuner/C/figures
 @dirrm lib/streamtuner/plugins
 @dirrm lib/streamtuner
 @dirrm include/streamtuner
