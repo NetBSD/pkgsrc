@@ -1,0 +1,69 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
+
+--- config/lib.in.orig	Fri Jan 10 00:55:18 2003
++++ config/lib.in
+@@ -26,8 +26,9 @@
+ # STOBJLISTS=dir1/OBJS.ST dir2/OBJS.ST etc...
+ SHOBJLISTS=$(STOBJLISTS:.ST=.SH)
+ PFOBJLISTS=$(STOBJLISTS:.ST=.PF)
++LAOBJLISTS=$(STOBJLISTS:.ST=.LA)
+ 
+-dummy-target-1 $(SUBDIROBJLISTS) $(SUBDIROBJLISTS:.ST=.SH) $(SUBDIROBJLISTS:.ST=.PF): all-recurse
++dummy-target-1 $(SUBDIROBJLISTS) $(SUBDIROBJLISTS:.ST=.SH) $(SUBDIROBJLISTS:.ST=.PF) $(SUBDIROBJLISTS.ST=.LA): all-recurse
+ 
+ lib$(LIB)$(STLIBEXT): $(STOBJLISTS)
+ 	$(RM) $@
+@@ -66,6 +67,17 @@ lib$(LIB)$(PFLIBEXT): $(PFOBJLISTS)
+ 				$$d/OBJS.PF; done`
+ 	$(RANLIB) $@
+ 
++lib$(LIB)$(LALIBEXT): $(LAOBJLISTS)
++	$(RM) $@
++	@echo "building $(LIB) libtool archive ($(LIBMAJOR).$(LIBMINOR))"
++	@dirs=`echo $(LAOBJLISTS) | \
++		sed -e 's%/OBJS.LA%%g' -e 's%OBJS.LA%.%'`; \
++		$(LIBTOOL) --mode=link $(CC) -o $@ `for d in $$dirs; do \
++			sed -e '/^$$/d' -e "s%^%$$d/%" -e "s% % $$d/%g" \
++				$$d/OBJS.LA; done` \
++			$(LALIB_EXPFLAGS) \
++			$(LIBTOOL_TAIL)
++
+ $(TOPLIBD)/lib$(LIB)$(STLIBEXT): lib$(LIB)$(STLIBEXT)
+ 	$(RM) $@
+ 	(cd $(TOPLIBD) && $(LN_S) $(RELDIR)/lib$(LIB)$(STLIBEXT) .)
+@@ -81,6 +93,9 @@ $(TOPLIBD)/lib$(LIB)$(SHLIBVEXT): lib$(L
+ $(TOPLIBD)/lib$(LIB)$(PFLIBEXT): lib$(LIB)$(PFLIBEXT)
+ 	$(RM) $@
+ 	(cd $(TOPLIBD) && $(LN_S) $(RELDIR)/lib$(LIB)$(PFLIBEXT) .)
++$(TOPLIBD)/lib$(LIB)$(LALIBEXT): lib$(LIB)$(LALIBEXT)
++	$(RM) $@
++	(cd $(TOPLIBD) && $(LN_S) $(RELDIR)/lib$(LIB)$(LALIBEXT) .)
+ 
+ all-libs: $(LIBLIST)
+ all-liblinks: $(LIBLINKS)
+@@ -91,6 +106,7 @@ clean-libs:
+ 	$(RM) lib$(LIB)$(SHLIBSEXT)
+ 	$(RM) lib$(LIB)$(SHLIBEXT)
+ 	$(RM) lib$(LIB)$(PFLIBEXT)
++	$(LIBTOOL) mode=uninstall $(RM) lib$(LIB)$(LALIBEXT)
+ 
+ clean-liblinks:
+ 	$(RM) $(TOPLIBD)/lib$(LIB)$(STLIBEXT)
+@@ -98,6 +114,7 @@ clean-liblinks:
+ 	$(RM) $(TOPLIBD)/lib$(LIB)$(SHLIBSEXT)
+ 	$(RM) $(TOPLIBD)/lib$(LIB)$(SHLIBEXT)
+ 	$(RM) $(TOPLIBD)/lib$(LIB)$(PFLIBEXT)
++	$(RM) $(TOPLIBD)/lib$(LIB)$(LALIBEXT)
+ 
+ install-libs: $(LIBINSTLIST)
+ install-static:
+@@ -118,6 +135,9 @@ install-profiled:
+ 	$(RM) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIB)$(PFLIBEXT)
+ 	$(INSTALL_DATA) lib$(LIB)$(PFLIBEXT) $(DESTDIR)$(KRB5_LIBDIR)
+ 	$(RANLIB) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIB)$(PFLIBEXT)
++install-libtool:
++	$(LIBTOOL) --mode=uninstall $(RM) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIB)$(LALIBEXT)
++	$(LIBTOOL) --mode=install $(INSTALL_DATA) lib$(LIB)$(LALIBEXT) $(DESTDIR)$(KRB5_LIBDIR)
+ 
+ Makefile: $(SRCTOP)/config/lib.in
+ config.status: $(SRCTOP)/config/shlib.conf
