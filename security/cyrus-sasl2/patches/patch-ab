@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.5 2004/02/14 07:45:36 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2004/03/29 05:47:31 jlam Exp $
 
---- aclocal.m4.orig	Mon Dec  1 08:35:02 2003
+--- aclocal.m4.orig	Wed Mar 10 10:56:07 2004
 +++ aclocal.m4
-@@ -2905,7 +2905,10 @@ AC_DEFUN([SASL_GSSAPI_CHK],[
+@@ -1714,7 +1714,7 @@ AC_DEFUN([CYRUS_BERKELEY_DB_CHK],
+ 	dnl Note that FreeBSD puts it in a wierd place
+         dnl (but they should use with-bdb-incdir)
+         AC_CHECK_HEADER(db.h,
+-                        CYRUS_BERKELEY_DB_CHK_LIB(),
++                        [CYRUS_BERKELEY_DB_CHK_LIB()],
+                         dblib="no")
+ 
+ 	CPPFLAGS=$cmu_save_CPPFLAGS
+@@ -2908,7 +2908,10 @@ AC_DEFUN([SASL_GSSAPI_CHK],[
    AC_MSG_RESULT(with implementation ${gss_impl})
    AC_CHECK_LIB(resolv,res_search,GSSAPIBASE_LIBS="$GSSAPIBASE_LIBS -lresolv")
    SASL_MECHS="$SASL_MECHS libgssapiv2.la"

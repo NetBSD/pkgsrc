@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/02/14 17:21:50 jlam Exp $
+# $NetBSD: Makefile.common,v 1.19 2004/03/29 05:47:31 jlam Exp $
 #
 # This file is currently included by:
 #
@@ -9,7 +9,7 @@
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
 
-DISTNAME=	cyrus-sasl-2.1.17
+DISTNAME=	cyrus-sasl-2.1.18
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
@@ -32,11 +32,11 @@ DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.cyrus-sasl}
 .  endif
 .endif
 
-USE_BUILDLINK3=		YES
-USE_PKGINSTALL=		YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
 
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
 MAKE_ENV+=		SHLIBTOOL=${SHLIBTOOL:Q}
 
 # CYRUS_USER		username of the Cyrus administrator
@@ -46,19 +46,16 @@ CYRUS_USER?=		cyrus
 CYRUS_GROUP?=		mail
 FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
 FILES_SUBST+=		ROOT_USER=${ROOT_USER}
+BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 
 PLUGINDIR=		${PREFIX}/lib/sasl2
 _PLUGINDIR=		${VIEWBASE}/lib/sasl2
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-sasl
-# /var/run/saslauthd matches the default value in configure.
-SASLSOCKETDIR=		/var/run/saslauthd
-
-BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
+SASLSOCKETDIR?=		/var/run/saslauthd
+BUILD_DEFS+=		SASLSOCKETDIR
 
 CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR}
-CONFIGURE_ARGS+=	--with-dblib=ndbm
-CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
 CONFIGURE_ARGS+=	--with-plugindir=${_PLUGINDIR}
 
 # Authentication mechanisms
@@ -75,20 +72,23 @@ CONFIGURE_ARGS+=	--disable-plain		# PLAIN
 CONFIGURE_ARGS+=	--disable-sql		# SQL
 CONFIGURE_ARGS+=	--disable-srp		# SRP
 CONFIGURE_ARGS+=	--disable-srp-setpass
+CONFIGURE_ARGS+=	--with-dblib=none
 CONFIGURE_ARGS+=	--without-pam
 
 # clean up a bit to help package maintainer produce patch files
 post-extract:
-	${_PKG_SILENT}${_PKG_DEBUG}			\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${FIND} ${WRKSRC} -type f -name "*.orig" -print | ${XARGS} ${RM} -f
 
 # Left here as reference for patch makers...
 #pre-configure:
-#	cd ${WRKSRC};					\
-#	${ACLOCAL} -I cmulocal -I config;		\
-#	${AUTOHEADER};					\
-#	${AUTOMAKE} -a --gnu -i ;			\
+#	cd ${WRKSRC};							\
+#	${ACLOCAL} -I cmulocal -I config;				\
+#	${AUTOHEADER};							\
+#	${AUTOMAKE} -a --gnu -i ;					\
 #	${AUTOCONF}
+#
+#.include "../../mk/automake.mk"
 
 post-configure:
 	cd ${WRKSRC}; for file in plugins/Makefile; do			\

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 2004/03/29 05:47:31 jlam Exp $
+
+--- cmulocal/berkdb.m4.orig	Sat Feb 14 16:13:03 2004
++++ cmulocal/berkdb.m4
+@@ -253,7 +253,7 @@ AC_DEFUN([CYRUS_BERKELEY_DB_CHK],
+ 	dnl Note that FreeBSD puts it in a wierd place
+         dnl (but they should use with-bdb-incdir)
+         AC_CHECK_HEADER(db.h,
+-                        CYRUS_BERKELEY_DB_CHK_LIB(),
++                        [CYRUS_BERKELEY_DB_CHK_LIB()],
+                         dblib="no")
+ 
+ 	CPPFLAGS=$cmu_save_CPPFLAGS

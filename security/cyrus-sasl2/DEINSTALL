@@ -1,13 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.3 2004/01/09 19:37:48 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.4 2004/03/29 05:47:31 jlam Exp $
 
 SASLDB=@PKG_SYSCONFDIR@/sasldb.db
 
 case ${STAGE} in
 POST-DEINSTALL)
-	if [ -e ${SASLDB} ]
-	then
+	if [ -f ${SASLDB} ]; then
 		${CAT} << EOF
 ===========================================================================
 You may want to remove the SASL password data file:
