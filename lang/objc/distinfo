@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/24 00:28:01 rh Exp $
+
+SHA1 (objc-3.2.5.tar.gz) = 0af30f78ad6952a4ae05933dfafb110e7068e957
+Size (objc-3.2.5.tar.gz) = 889452 bytes
+SHA1 (objc-bootstrap-3.1.33.tar.gz) = d6e621d0a586c9767954eb3d9e042b4418ac6cf2
+Size (objc-bootstrap-3.1.33.tar.gz) = 343075 bytes
+SHA1 (patch-aa) = 1ab7815f8a205b3b78da2f74626693892fa35f84
