@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/19 07:41:14 skrll Exp $
+
+--- Makefile.orig	Wed Oct  4 10:55:36 2000
++++ Makefile
+@@ -25,7 +25,7 @@
+ 	-rm -f bin/moc
+ 	cp src/moc/moc bin/moc
+ 
+-sub-tools: sub-src FORCE
++sub-tools: FORCE
+ 	cd tools; $(MAKE)
+ 
+ symlinks: .buildopts

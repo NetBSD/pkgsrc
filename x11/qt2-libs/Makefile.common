@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2000/10/19 07:41:12 skrll Exp $
+#
+
+DISTNAME=		qt-x11-2.2.1
+WRKSRC=			${WRKDIR}/qt-2.2.1
+CATEGORIES=		x11
+MASTER_SITES=	\
+	ftp://ftp.trolltech.com/qt/source/ \
+	ftp://ftp.fu-berlin.de/unix/X11/gui/Qt/source/
+
+MAINTAINER=		skrll@netbsd.org
+HOMEPAGE=		http://www.trolltech.com/products/qt.html
+
+HAS_CONFIGURE=		yes
+USE_X11BASE=		yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+CONFIGURE_ARGS+=	-static -sm -system-zlib \
+			-system-libpng -system-jpeg -no-thread \
+			-I${LOCALBASE}/include -L${LOCALBASE}/lib
+
+CONFIGURE_SCRIPT=	${ECHO} yes | ./configure
+
+QTPREFIX=		${PREFIX}/qt2
+
+MAKE_ENV+=		QTPREFIX=${QTPREFIX}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_GIF)
+CONFIGURE_ARGS+=	-gif
+.endif
+
+.if ${OPSYS} == "SunOS"
+BUILD_DEPENDS+=	${LOCALBASE}/egcs/bin/g++:../../lang/egcs
+CONFIGURE_ENV+=	CXX=${LOCALBASE}/egcs/bin/g++
+CONFIGURE_ARGS+=-platform solaris-g++
+.endif

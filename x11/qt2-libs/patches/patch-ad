@@ -1,0 +1,30 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/10/19 07:41:15 skrll Exp $
+
+--- configure.orig	Tue Oct 17 12:27:35 2000
++++ configure
+@@ -17,25 +17,6 @@
+     HELP=yes
+ else
+ 
+-touch .test.qt.
+-if [ '!' -f ${QTDIR}/.test.qt. ];
+-then
+-    rm .test.qt.
+-    echo
+-    echo
+-    echo '   The environment variable $QTDIR is not set correctly. It is currently'
+-    echo '   set to "'$QTDIR'", but it should be set to this directory,'
+-    echo '   which is "'`pwd`'".'
+-    echo
+-    echo '   Please read the INSTALL file for instructions on how to set $QTDIR'
+-    echo '   correctly. If you have set $QTDIR in your .profile or .login, you '
+-    echo '   will need to log out and log in again to make the setting effective.'
+-    echo
+-    echo
+-    exit 1
+-fi
+-rm .test.qt.
+-
+ # Find a make command
+ if ( make /dev/null ) >/dev/null 2>/dev/null
+ then
