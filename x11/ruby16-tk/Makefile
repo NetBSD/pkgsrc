@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/01/28 14:19:35 taca Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/06 13:13:56 taca Exp $
 # FreeBSD: ports/x11-toolkits/ruby-tk/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -26,7 +26,7 @@ REPLACE_RUBY=		sample/tkbiff.rb sample/tkbrowse.rb \
 
 pre-configure:
 	@cd ${WRKSRC}; \
-	${FIND} . \( -name '*.orig' -o -name '*.bak' \) -exec rm -f {} \;
+	${FIND} . \( -name '*.orig' -o -name '*.bak' \) -exec ${RM} -f {} \;
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/tk
