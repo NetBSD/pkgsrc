@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/24 09:53:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/10 19:08:25 kristerw Exp $
 #
 
 DISTNAME=	exif-0.6
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libexif/}
 
-MAINTAINER=	packages@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://libexif.sourceforge.net/
 COMMENT=	Grab Exif information from digital camera images
 
