@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6271 2004/06/22 08:52:17 salo Exp $
+$NetBSD: CHANGES,v 1.6272 2004/06/22 08:52:53 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3015,3 +3015,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmame to 0.83.1 [kristerw 2004-06-21]
 	Updated xmess to 0.83.1 [kristerw 2004-06-21]
 	Updated rconfig to 0.33 [abs 2004-06-21]
+	Updated wmi to 8 [salo 2004-06-22]
