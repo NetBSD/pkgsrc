@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.common,v 1.14 2004/04/10 03:09:45 snj Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/07/01 17:10:22 adrianp Exp $
 #
 
-DISTNAME=		snort-2.1.2
+DISTNAME=		snort-2.1.3
 CATEGORIES=		net security
 MASTER_SITES=		http://www.snort.org/dl/				\
 			ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
 			ftp://gd.tuwien.ac.at/infosys/security/snort/dl/
 
-MAINTAINER=		salo@NetBSD.org
+MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://www.snort.org/
 
 USE_BUILDLINK3=		YES
@@ -50,18 +50,21 @@ SUPPORT_FILES+=		${EGDIR}/unicode.map \
 
 EGDIR=			${PREFIX}/share/examples/snort
 
-post-configure:
-	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/etc/snort.conf > \
-		${WRKDIR}/snort.conf.default
+SUBST_CLASSES=		paths
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	etc/snort.conf
+SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_MESSAGE.cgi=	"Fixing paths."
 
 post-install:
+	@${CP} ${WRKSRC}/etc/snort.conf ${WRKSRC}/etc/snort.conf.default
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/*.config \
 			${WRKSRC}/etc/*.map \
 			${WRKSRC}/etc/generators \
 			${WRKSRC}/etc/sid \
 			${WRKSRC}/etc/threshold.conf \
-			${WRKDIR}/snort.conf.default ${EGDIR}/
+			${WRKSRC}/etc/snort.conf.default ${EGDIR}/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort
 	cd ${WRKSRC}/doc ; \
 	for i in `${LS} | ${EGREP} -v "(Makefile|signatures)"` ; do \
