@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3951 2003/12/04 00:44:11 heinz Exp $
+$NetBSD: CHANGES,v 1.3952 2003/12/04 04:29:43 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4821,3 +4821,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added teixsl-html-3.0 [xtraeme 2003-12-03]
 	Updated fkiss to 0.33a [ben 2003-12-03]
 	Added p5-Net-DNS-SEC-0.11 [heinz 2003-12-04]
+	Added exim3-3.36 [grant 2003-12-04]
