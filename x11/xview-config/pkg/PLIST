@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2000/09/13 22:00:37 jlam Exp $
-bin/xvmkmf
-lib/X11/xview/XView.cf
-lib/X11/xview/XView.lib
-lib/X11/xview/XView.obj
-lib/X11/xview/XView.prog
-lib/X11/xview/XView.rules
-lib/X11/xview/XView.tmpl
-@dirrm lib/X11/xview
+@comment $NetBSD: PLIST,v 1.5 2000/10/23 18:02:56 jlam Exp $
+lib/X11/config/XView.cf
+lib/X11/config/XView.lib
+lib/X11/config/XView.obj
+lib/X11/config/XView.prog
+lib/X11/config/XView.rules
+lib/X11/config/XView.tmpl

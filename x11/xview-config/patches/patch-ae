@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2000/09/13 20:21:54 jlam Exp $
+$NetBSD: patch-ae,v 1.5 2000/10/23 18:02:56 jlam Exp $
 
 --- XView.tmpl.orig	Sun Jun 26 22:10:00 1994
 +++ XView.tmpl
@@ -11,20 +11,7 @@ $NetBSD: patch-ae,v 1.4 2000/09/13 20:21:54 jlam Exp $
  #endif
  
  #if OsHasLocale
-@@ -158,6 +158,12 @@
- # endif
-               CONFIGDIR = XVConfigdir
- #endif
-+/*
-+ *	Set the config directory for XView and add this directory to
-+ *	the places imake searches for config files.
-+ */
-+            XVCONFIGDIR = $(XVDESTDIR)/lib/X11/xview
-+         IMAKE_DEFINES += -I$(XVCONFIGDIR)
- 
-                XVLIBSRC = $(TOP)/lib
-               HELP_DEST = XVHelpDest
-@@ -192,14 +198,6 @@
+@@ -192,14 +192,6 @@
                       AS = as
   */
  /*
@@ -39,7 +26,7 @@ $NetBSD: patch-ae,v 1.4 2000/09/13 20:21:54 jlam Exp $
   *	Temporary directory used during build process before the include
   *	files are installed.  This is just a place where symbolic links are
   *	placed to point back to the actual files in the build hierarchy to
-@@ -224,7 +222,7 @@
+@@ -224,7 +216,7 @@
   *	afterwards.
   */
  #ifndef XVIncludeDirName
@@ -48,7 +35,7 @@ $NetBSD: patch-ae,v 1.4 2000/09/13 20:21:54 jlam Exp $
  #endif
                   INCDIR = XVIncludeDirName
  /*
-@@ -356,10 +354,10 @@
+@@ -356,10 +348,10 @@
  
  #if SystemV4
               SYSV_CLIENT_LIB = -lintl -ldl
@@ -61,7 +48,7 @@ $NetBSD: patch-ae,v 1.4 2000/09/13 20:21:54 jlam Exp $
  #endif
  
  /*
-@@ -371,16 +369,16 @@
+@@ -371,16 +363,16 @@
   */
  
  #if XvI18nLevel == 4
