@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.4 2001/06/21 16:38:34 rh Exp $
+$NetBSD: patch-ai,v 1.5 2002/03/21 18:52:31 drochner Exp $
 
---- xmms/main.c.orig	Sun Jun 17 01:05:47 2001
-+++ xmms/main.c
-@@ -36,6 +36,23 @@
+--- xmms/main.c.orig	Wed Feb 27 15:30:28 2002
++++ xmms/main.c	Thu Mar 21 12:58:10 2002
+@@ -37,6 +37,23 @@
  #include "libxmms/dirbrowser.h"
  #include "xmms_mini.xpm"
  
@@ -26,16 +26,16 @@ $NetBSD: patch-ai,v 1.4 2001/06/21 16:38:34 rh Exp $
  GtkWidget *mainwin, *mainwin_url_window = NULL, *mainwin_dir_browser = NULL;
  GtkWidget *mainwin_jtt = NULL, *mainwin_jtf = NULL;
  GtkItemFactory *mainwin_options_menu, *mainwin_songname_menu, *mainwin_vis_menu;
-@@ -3330,7 +3347,7 @@
+@@ -3377,7 +3394,7 @@
  {
  	gchar *filename;
  	struct cmdlineopt options;
 -#if defined(HAVE_SCHED_SETSCHEDULER) && defined(HAVE_SCHED_GET_PRIORITY_MAX)
 +#if defined(HAVE_SCHED_SETSCHEDULER) && defined(HAVE_SCHED_GET_PRIORITY_MAX) && !defined(__NetBSD__)
  	struct sched_param sparam;
- 
  #endif
-@@ -3361,7 +3378,7 @@
+ 
+@@ -3408,7 +3425,7 @@
  
  	if (geteuid() == 0)
  	{
@@ -44,15 +44,13 @@ $NetBSD: patch-ai,v 1.4 2001/06/21 16:38:34 rh Exp $
  		if (cfg.use_realtime)
  		{
  			sparam.sched_priority = sched_get_priority_max(SCHED_RR);
-@@ -3450,6 +3467,11 @@
- 
+@@ -3501,6 +3518,9 @@
  	/* enable_x11r5_session_management(argc, argv); */
  	sm_init(argc, argv);
-+
+ 	GDK_THREADS_LEAVE();
 +#ifdef __NetBSD__
 +	gtk_timeout_add (150, pth_nbschedule, NULL);
 +#endif
-+
  	gtk_main();
  
  	return 0;

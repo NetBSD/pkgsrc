@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2001/11/06 00:30:47 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2002/03/21 18:52:30 drochner Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
-DISTNAME=	xmms-1.2.5
+DISTNAME=	xmms-1.2.7
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
 		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 
 CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 CONFIGURE_ARGS+=	--without-gnome
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.prefs.mk"
 

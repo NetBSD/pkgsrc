@@ -1,150 +1,66 @@
-$NetBSD: patch-aa,v 1.5 2001/06/21 16:38:33 rh Exp $
+$NetBSD: patch-aa,v 1.6 2002/03/21 18:52:31 drochner Exp $
 
---- Input/cdaudio/cdaudio.c.orig	Tue Mar 13 15:16:07 2001
-+++ Input/cdaudio/cdaudio.c
-@@ -96,7 +96,7 @@
- #define STOP_UNLOCK() pthread_mutex_unlock(&stop_mutex)
+--- Input/cdaudio/cdaudio.c.orig	Tue Feb  5 15:39:11 2002
++++ Input/cdaudio/cdaudio.c	Thu Mar 21 19:08:26 2002
+@@ -398,7 +398,7 @@
+ 	if (cdda_fd < 0)
+ 		return;
  
- 
--#if !defined(CDROMVOLREAD) && !(defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__)))
-+#if !defined(CDROMVOLREAD) && !(defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)))
- static gint volume_left = 100, volume_right = 100;
- #endif
- 
-@@ -140,9 +140,13 @@
- 		cdda_cfg.device = g_strdup("/dev/acd0c");
- 	if (!cdda_cfg.directory)
- 		cdda_cfg.directory = g_strdup("/cdrom");
--# elif defined __OpenBSD__
-+# elif defined(__NetBSD__) || defined(__OpenBSD__)
- 	if (!cdda_cfg.device)
-+#  if RAW_PART == 3
-+		cdda_cfg.device = g_strdup("/dev/cd0d");
-+#  else
- 		cdda_cfg.device = g_strdup("/dev/cd0c");
-+#  endif
- 	if (!cdda_cfg.directory)
- 		cdda_cfg.directory = g_strdup("/cdrom");
- # else
-@@ -412,7 +416,7 @@
- 		pthread_attr_setdetachstate(attr, PTHREAD_CREATE_DETACHED);
+-	ioctl(cdda_fd, XMMS_PAUSE);
++	ioctl(cdda_fd, XMMS_PAUSE, 0);
+ 	close(cdda_fd);
+ 	cdda_fd = -1;
+ 	stop_timeout_id = gtk_timeout_add(STOP_DELAY * 100, stop_timeout, NULL);
+@@ -409,11 +409,11 @@
+ 	if (p)
+ 	{
+ 		pause_time = get_time();
+-		ioctl(cdda_fd, XMMS_PAUSE);
++		ioctl(cdda_fd, XMMS_PAUSE, 0);
  	}
- 	
--#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
-+#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
- /*  	ioctl(cdda_fd, CDIOCSTOP, 0); */
- 	ioctl(cdda_fd, CDIOCPAUSE, 0);
- #else
-@@ -430,8 +434,8 @@
- 
- static void cdda_pause(short p)
- {
--#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
--	ioctl(cdda_fd, p ? CDIOCPAUSE : CDIOCRESUME);
-+#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
-+	ioctl(cdda_fd, p ? CDIOCPAUSE : CDIOCRESUME, 0);
- #else
- 	ioctl(cdda_fd, p ? CDROMPAUSE : CDROMRESUME);
- #endif
-@@ -442,7 +446,7 @@
- {
- 	struct cdda_msf *end, start;
- 
--#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
-+#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
- 	struct ioc_play_msf msf;
- #else
- 	struct cdrom_msf msf;
-@@ -457,7 +461,7 @@
  	else
- 		end = &cd_toc.track[track + 1];
- 
--#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
-+#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
- 	msf.start_m = start.minute;
- 	msf.start_s = start.second;
- 	msf.start_f = start.frame;
-@@ -481,7 +485,7 @@
- static int get_time(void)
- {
- 	gint frame, start_frame, length;
--#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
-+#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
- 	struct ioc_read_subchannel subchnl;
+ 	{
+-		ioctl(cdda_fd, XMMS_RESUME);
++		ioctl(cdda_fd, XMMS_RESUME, 0);
+ 		pause_time = -1;
+ 	}
+ 	is_paused = p;
+@@ -554,9 +554,11 @@
  	struct cd_sub_channel_info subinfo;
+ 	subchnl.address_format = CD_MSF_FORMAT;
+ 	subchnl.data_format = CD_CURRENT_POSITION;
++	subchnl.track = 0;
+ 	subchnl.data_len = sizeof(subinfo);
+ 	subchnl.data = &subinfo;
+-	ioctl(cdda_fd, CDIOCREADSUBCHANNEL, &subchnl);
++	if (ioctl(cdda_fd, CDIOCREADSUBCHANNEL, &subchnl))
++		return (-1);
  
-@@ -572,7 +576,7 @@
- 	if (!cdda_cfg.use_oss_mixer)
- 	{
- 
--#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
-+#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
- 		struct ioc_vol vol;
- 
- 		if (cdda_fd != -1)
-@@ -600,7 +604,7 @@
- 
- static void set_volume(int l, int r)
+ 	return(LBA(subchnl.data->what.position.absaddr.msf));
+ }
+@@ -591,6 +593,7 @@
  {
--#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
-+#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
- 	struct ioc_vol vol;
- #else
- 	struct cdrom_volctrl vol;
-@@ -633,7 +637,7 @@
- 	{
- 		if (cdda_fd != -1)
- 		{
--#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
-+#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
- 			vol.vol[0] = vol.vol[2] = (l * 255) / 100;
- 			vol.vol[1] = vol.vol[3] = (r * 255) / 100;
- 			ioctl(cdda_fd, CDIOCSETVOL, &vol);
-@@ -643,7 +647,7 @@
- 			ioctl(cdda_fd, CDROMVOLCTRL, &vol);
- #endif
- 		}
--#if !defined(CDROMVOLREAD) && !(defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__)))
-+#if !defined(CDROMVOLREAD) && !(defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)))
- 		volume_left = l;
- 		volume_right = r;
- #endif
-@@ -654,9 +658,9 @@
- {
- 	gboolean retv = FALSE;
- 
--#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
-+#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
  	struct ioc_toc_header tochdr;
--#if defined(__OpenBSD__)
-+#if defined(__NetBSD__) || defined(__OpenBSD__)
  	struct ioc_read_toc_entry tocentry;
- #else
- 	struct ioc_read_toc_single_entry tocentry;
-@@ -676,7 +680,7 @@
++	struct cd_toc_entry tocentrydata;
+ 	int i;
  
- 	memset(info, 0, sizeof(cdda_disc_toc_t));
- 
--#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__OpenBSD__))
-+#if defined(HAVE_SYS_CDIO_H) && (defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__))
- 	if ( ioctl(fd, CDIOREADTOCHEADER, &tochdr) )
- 	    goto done;
- 
-@@ -684,7 +688,7 @@
- 	{		
+ 	if (ioctl(fd, CDIOREADTOCHEADER, &tochdr))
+@@ -601,6 +604,8 @@
  		tocentry.address_format = CD_MSF_FORMAT;
  
--#if defined(__OpenBSD__)
-+#if defined(__NetBSD__) || defined(__OpenBSD__)
  		tocentry.starting_track = i;
++		tocentry.data = &tocentrydata;
++		tocentry.data_len = sizeof(tocentrydata);
  		if (ioctl(fd, CDIOREADTOCENTRYS, &tocentry))
- 			goto done;
-@@ -714,7 +718,7 @@
- 	/* Get the leadout track */
+ 			return FALSE;
+ 		info->track[i].minute =
+@@ -617,6 +622,8 @@
  	tocentry.address_format = CD_MSF_FORMAT;
  
--#if defined(__OpenBSD__)
-+#if defined(__NetBSD__) || defined(__OpenBSD__)
  	tocentry.starting_track = 0xAA;
++	tocentry.data = &tocentrydata;
++	tocentry.data_len = sizeof(tocentrydata);
  	if (ioctl(fd, CDIOREADTOCENTRYS, &tocentry))
- 		goto done;
+ 		return FALSE;
+ 	info->leadout.minute = tocentry.data->addr.msf.minute;
