@@ -1,0 +1,72 @@
+$NetBSD: patch-ac,v 1.1 1998/08/23 11:24:53 garbled Exp $
+--- Imakefile.orig	Sun Mar 29 12:41:25 1992
++++ Imakefile	Sun Aug 23 03:31:04 1998
+@@ -1,5 +1,5 @@
+-	SRCS = bitmap.c bonus.c collision.c demo.c draw.c erase.c events.c\
++SRCS = bitmap.c bonus.c collision.c demo.c draw.c erase.c events.c\
+ 	 gameover.c initx.c main.c maze.c message.c normal.c quitx.c scores.c\
+ 	 setinmaze.c setup.c special.c time.c update.c windowx.c
+-	OBJS = bitmap.o bonus.o collision.o demo.o draw.o erase.o events.o\
++OBJS = bitmap.o bonus.o collision.o demo.o draw.o erase.o events.o\
+ 	 gameover.o initx.o main.o maze.o message.o normal.o quitx.o scores.o\
+@@ -7,5 +7,8 @@
+ 
+-	PROGRAMS = jetpack
++PROGRAMS = jetpack
+ 
+-	DESTDIR = /usrd/s/m/meb2
++BINDIR = $(PREFIX)/bin
++LIBDIR = $(PREFIX)/share/jetpack
++MANDIR = $(PREFIX)/man/man6
++MANSUFFIX = 6
+ 
+@@ -13,16 +16,14 @@
+ # use the template locations
+-	USRLIBDIR = $(DESTDIR)/lib/jetpack
+-	BINDIR = $(DESTDIR)/bin
+-	MANPATH = $(DESTDIR)/man
+-	MANDIR = $(MANSOURCEPATH)1
+-	TOP_INCLUDES =
+-	DEPXLIB =
+-	EXTRA_LIBRARIES = $(XLIB)
++#	LIBDIR = $(DESTDIR)/lib/jetpack
++#	BINDIR = $(DESTDIR)/bin
++#	MANPATH = $(DESTDIR)/man
++#	MANDIR = $(MANSOURCEPATH)1
++EXTRA_LIBRARIES = $(XLIB)
+ 
+ # I like my programs optimized, stripped, and setuid. Do what you like.
+-	INSTPGMFLAGS = $(INSTUIDFLAGS) -s
+-	CDEBUGFLAGS = -O4
++INSTPGMFLAGS = -s
++CDEBUGFLAGS = -O2
+ 
+ # Since my programs are setuid, I make the data files readable only by me.
+-	INSTDATFLAGS = -m 0600
++INSTDATFLAGS = -m 0644
+ 
+@@ -32,3 +33,4 @@
+ # graphics workhorse, leave it in, there will be no flicker)
+-	DEFINES = -DBLIT -DSCOREPATH=\"$(SCOREFILE)\" -DLEVELPATH=\"$(LEVELFILE)\"
++#	DEFINES = -DBLIT -DSCOREPATH=\"$(SCOREFILE)\" -DLEVELPATH=\"$(LEVELFILE)\"
++DEFINES = -DSCOREPATH=\"$(SCOREFILE)\" -DLEVELPATH=\"$(LEVELFILE)\"
+ 
+@@ -39,4 +41,4 @@
+ # the level number appended to it.
+-	SCOREFILE = $(USRLIBDIR)/jetpack.scores
+-	LEVELFILE = $(USRLIBDIR)/jetpack.lev
++SCOREFILE = $(LIBDIR)/jetpack.scores
++LEVELFILE = $(LIBDIR)/jetpack.lev
+ 
+@@ -47,8 +49,5 @@
+ 
+-InstallNonExec(levels/000,$(LEVELFILE)000)
++install::
++	MakeDir($(LIBDIR))
+ 
+-# oops, I can't figure how to override the template default to install the
+-# man page as jetpack.1, so I install both and remove the bad one.
+-install.man:: jetpack.man
+-	$(INSTALL) -c $(INSTMANFLAGS) jetpack.man $(MANDIR)/jetpack.1
+-	@rm -f $(MANDIR)/jetpack.n
++InstallNonExec(levels/000,$(LEVELFILE)000)

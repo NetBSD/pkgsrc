@@ -1,0 +1,20 @@
+$NetBSD: patch-ah,v 1.1 1998/08/23 11:24:54 garbled Exp $
+*** draw.c~	Mon Nov  8 15:15:54 1993
+--- draw.c	Sun Feb 12 17:34:39 1995
+***************
+*** 533,539 ****
+          y, CGREY, fontinfo);
+      y += fontinfo->descent + fontinfo->ascent;
+      place_string(
+!         "             center button : fire jetpack                    ",
+          y, CYELLOW, fontinfo);
+      y += fontinfo->descent + 10 + fontinfo->ascent;
+      place_string("Extra Player awarded every 10000 points", y, CGREY,
+--- 533,539 ----
+          y, CGREY, fontinfo);
+      y += fontinfo->descent + fontinfo->ascent;
+      place_string(
+!         "             center button : fire jetpack  T : turbo         ",
+          y, CYELLOW, fontinfo);
+      y += fontinfo->descent + 10 + fontinfo->ascent;
+      place_string("Extra Player awarded every 10000 points", y, CGREY,
