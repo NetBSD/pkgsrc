@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2000/02/25 01:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2000/02/27 18:34:05 wiz Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -40,6 +40,7 @@
     SUBDIR += libgdgeda
     SUBDIR += libggi
     SUBDIR += libgii
+    SUBDIR += libwmf
     SUBDIR += libungif
     SUBDIR += magicpoint
     SUBDIR += mpeg-lib
