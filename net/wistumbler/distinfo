@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2002/08/04 22:44:04 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/08/08 05:47:17 itojun Exp $
 
-SHA1 (wistumbler-0.1.tar.gz) = 4a3eeec7300e03a57814ee8f58e51fd4abdb765b
-Size (wistumbler-0.1.tar.gz) = 6925 bytes
+SHA1 (wistumbler-20020807.tar.gz) = 32e43da7740ad38de2b2ef751a432adb35289f00
+Size (wistumbler-20020807.tar.gz) = 7316 bytes
 SHA1 (patch-aa) = 696fbd4dbb4c9c81d6d86bf4e708757ad0756f4c
