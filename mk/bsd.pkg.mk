@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.677 2001/03/06 16:00:15 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.678 2001/03/07 00:26:26 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1589,7 +1589,7 @@ do-package: ${PLIST} ${DESCR}
 			exit 1;					\
 		fi;						\
 	fi;							\
-	if ${PKG_CREATE} ${PKG_ARGS_BINPKG} ${PKGFILE}; then		\
+	if ${PKG_CREATE} ${PKG_ARGS_BINPKG} ${PKGFILE}; then	\
 		${MAKE} ${MAKEFLAGS} package-links;		\
 	else							\
 		${MAKE} ${MAKEFLAGS} delete-package;		\
@@ -1901,6 +1901,7 @@ do-shlib-handling:
 # ${PLIST} exists.
 #
 check-shlibs:
+.if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	bins=`${PKG_INFO} -qL ${PKGNAME} | ( ${EGREP} -h '/(bin|sbin|libexec)/' || ${TRUE} )`; \
 	if [ "${OBJECT_FMT}" = "ELF" ]; then \
@@ -1929,6 +1930,7 @@ check-shlibs:
 		${SHCOMMENT} Might not error-out for non-pkg-developers; \
 		exit 1 ; \
 	fi
+.endif # NO_PKG_REGISTER
 
 
 .if !target(show-shlib-type)
