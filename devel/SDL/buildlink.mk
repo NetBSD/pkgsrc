@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.14 2002/06/24 20:25:26 tron Exp $
+# $NetBSD: buildlink.mk,v 1.15 2002/06/25 06:54:43 tron Exp $
 #
 # This Makefile fragment is included by packages that use SDL.
 #
@@ -26,8 +26,6 @@ BUILDLINK_FILES.SDL=	include/SDL/*
 BUILDLINK_FILES.SDL+=	lib/libSDL.*
 BUILDLINK_FILES.SDL+=	lib/libSDLmain.*
 
-USE_PTHREAD=		native pth
-
 .include "../../mk/bsd.prefs.mk"
 
 REPLACE_BUILDLINK_SED+=	\
@@ -37,9 +35,9 @@ REPLACE_BUILDLINK_SED+=	\
 .include "../../audio/nas/buildlink.mk"
 .endif
 .include "../../audio/esound/buildlink.mk"
+.include "../../devel/pth/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
 .include "../../graphics/aalib-x11/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
 
 BUILDLINK_TARGETS.SDL=		SDL-buildlink
 BUILDLINK_TARGETS.SDL+=		SDL-buildlink-config-wrapper
