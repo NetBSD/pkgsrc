@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.16 2003/10/06 07:11:19 grant Exp $
+# $NetBSD: compiler.mk,v 1.17 2003/10/06 11:14:22 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -124,7 +124,7 @@ USE_GCC2=		# defined
 .  endif
 .endif
 
-.if defined(USE_GCC2) && empty(PKGPATH:Mlang/gcc) && empty(_PKGSRC_DEPS:Mgcc-2*)
+.if defined(USE_GCC2) && empty(_PKGSRC_DEPS:Mgcc-2*)
 GCC_REQD=		2.95.3
 
 # we need to define these early, as they are used by gcc/buildlink2.mk.
@@ -140,19 +140,24 @@ _GCC_LIBGCCDIR!=						\
 _GCC_ARCHSUBDIR= \
   ${_GCC_LIBGCCDIR:S|^${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}||}
 
-.  if empty(USE_BUILDLINK2:M[nN][oO])
-.    include "../lang/gcc/buildlink2.mk"
-.  else
+# Only pull in the pkg dependency if we're not actually building it
+.  if empty(PKGPATH:Mlang/gcc)
+
+.    if empty(USE_BUILDLINK2:M[nN][oO])
+.      include "../lang/gcc/buildlink2.mk"
+.    else
 
 # Packages that link against gcc shared libraries need a full
 # dependency.
-.    if defined(USE_GCC_SHLIB)
+.      if defined(USE_GCC_SHLIB)
 DEPENDS+=		gcc>=${GCC_REQD}:../../lang/gcc
-.    else
+.      else
 BUILD_DEPENDS+=		gcc>=${GCC_REQD}:../../lang/gcc
-.    endif
-.  endif	# buildlink2
+.      endif
+.    endif	# buildlink2
+.  endif	# PKGPATH != lang/gcc
 
+.  if exists(${_GCC_PREFIX}bin/gcc)
 _CC_IS_GCC=		YES
 PATH:=			${_GCC_PREFIX}bin:${PATH}
 CC=			${_GCC_PREFIX}bin/gcc
@@ -160,33 +165,38 @@ CPP=			${_GCC_PREFIX}bin/cpp
 CXX=			${_GCC_PREFIX}bin/g++
 F77=			${_GCC_PREFIX}bin/g77
 PKG_FC:=		${F77}
+.  endif
 
-.elif defined(USE_GCC3) && empty(PKGPATH:Mlang/gcc3) && empty(_PKGSRC_DEPS:Mgcc-3*)
+.elif defined(USE_GCC3) && empty(_PKGSRC_DEPS:Mgcc-3*)
 GCC_REQD=		3.3
 
 # we need to define these early, as they are used by gcc3/buildlink2.mk.
 _GCC_SUBPREFIX=		gcc-3.3/
 _GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
-
-.  if empty(USE_BUILDLINK2:M[nN][oO])
-.    include "../lang/gcc3/buildlink2.mk"
-.  else
 _GCC_PREFIX=		${LOCALBASE}/${_GCC_SUBPREFIX}
-.    if exists(${_GCC_PREFIX}bin/gcc)
+
+# Only pull in the pkg dependency if we're not actually building it
+.  if empty(PKGPATH:Mlang/gcc3)
+
+.    if empty(USE_BUILDLINK2:M[nN][oO])
+.      include "../lang/gcc3/buildlink2.mk"
+.    else
+
+# Packages that link against gcc shared libraries need a full
+# dependency.
+.      if defined(USE_GCC_SHLIB)
+DEPENDS+=		gcc3>=${GCC_REQD}:../../lang/gcc3
+.      else
+BUILD_DEPENDS+=		gcc3>=${GCC_REQD}:../../lang/gcc3
+.      endif
+.    endif	# buildlink2
+.  endif	# PKGPATH != lang/gcc3
+
+.  if exists(${_GCC_PREFIX}bin/gcc)
 _GCC_LIBGCCDIR!= \
   dirname `${_GCC_PREFIX}bin/gcc --print-libgcc-file-name`
 _GCC_ARCHSUBDIR= \
   ${_GCC_LIBGCCDIR:S|^${LOCALBASE}/${_GCC_SUBPREFIX}||}
-.    endif
-
-# Packages that link against gcc shared libraries need a full
-# dependency.
-.    if defined(USE_GCC_SHLIB)
-DEPENDS+=		gcc3>=${GCC_REQD}:../../lang/gcc3
-.    else
-BUILD_DEPENDS+=		gcc3>=${GCC_REQD}:../../lang/gcc3
-.    endif
-.  endif	# buildlink2
 
 _CC_IS_GCC=		YES
 PATH:=			${_GCC_PREFIX}bin:${PATH}
@@ -195,6 +205,7 @@ CPP=			${_GCC_PREFIX}bin/cpp
 CXX=			${_GCC_PREFIX}bin/g++
 F77=			${_GCC_PREFIX}bin/g77
 PKG_FC:=		${F77}
+.  endif
 .endif	# USE_GCC3
 
 # Ensure that the correct rpath is passed to the linker if we need to
