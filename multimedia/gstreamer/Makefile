@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/04/01 19:05:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/06 09:30:01 jmmv Exp $
 #
 
 DISTNAME=		gstreamer-0.8.0
+PKGREVISION=		1
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gstreamer/0.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -22,7 +23,7 @@ USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 
 CONFIGURE_ARGS+=	--disable-plugin-builddir
-CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ARGS+=	--localstatedir=${PREFIX}/libdata/gstreamer-0.8
 CONFIGURE_ENV+=		ac_cv_path_PYTHON="${PYTHONBIN}"
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-control.pc.in
@@ -30,13 +31,21 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer.pc.in
 
 PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
 
-OWN_DIRS_PERMS=		/var/cache/gstreamer-0.8 ${ROOT_USER} ${ROOT_GROUP} 1777
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# We must have a glib2 compiled with the RTLD_GLOBAL fix; if not, plugins
+# won't work at all.
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb1
+.endif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../lang/python/application.mk"
+_GSTREAMER_NO_DEPEND=		# defined
+.include "../../multimedia/gstreamer/plugins.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
