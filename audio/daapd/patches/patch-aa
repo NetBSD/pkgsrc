@@ -1,9 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2005/01/06 14:43:09 mjl Exp $
-
---- makefile.orig	2005-01-05 00:18:48.000000000 +0100
-+++ makefile	2005-01-06 15:02:36.000000000 +0100
+--- makefile.orig	2004-09-08 03:17:58.000000000 +0200
++++ makefile	2005-01-08 06:12:42.000000000 +0100
+@@ -4,3 +4,3 @@
+ ZLIB_ENABLE = 1
+-MPEG4_ENABLE = 1
++MPEG4_ENABLE = 0
+ 
 @@ -16,6 +16,6 @@
- LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz
+ LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz -lpthread 
 -LIBPATH = -L. -L./daaplib/src -L./libhttpd/src  -L/usr/local/lib
 -INCPATH = -I. -I./daaplib/include -I./libhttpd/src  -I/usr/local/include
 -DEPLOY = /usr/local
@@ -21,7 +24,7 @@ $NetBSD: patch-aa,v 1.3 2005/01/06 14:43:09 mjl Exp $
 -$(error howl not found in /usr/local/include. Install howl or disable it in the makefile)
 +$(error howl not found in ${PREFIX}/include. Install howl or disable it in the makefile)
  endif
-@@ -82,4 +82,2 @@
+@@ -76,4 +76,2 @@
  install: $(DEPS) $(TARGET)
 -	cd libhttpd && $(MAKE) install
 -	cd daaplib/src && $(MAKE) install
