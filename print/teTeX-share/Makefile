@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2000/03/06 02:59:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/03/06 22:15:03 tron Exp $
 #
 
-DISTNAME=	teTeX-texmf-1.0
-PKGNAME=	teTeX-share-1.0
+DISTNAME=	teTeX-texmf-1.0.2
+PKGNAME=	teTeX-share-1.0.2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
