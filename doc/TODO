@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.642 2003/06/14 00:06:43 grant Exp $
+$NetBSD: TODO,v 1.643 2003/06/16 10:14:59 grant Exp $
 
 Suggested new packages
 ======================
@@ -206,7 +206,6 @@ Suggested package updates
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12 [pkg/21667]
 	o polsms-1.9.2
-	o postfix-2.0.11
 	o postgresql-7.3.3
 	o povray-3.5
 	o py-soappy-0.10.1 [pkg/21735]
