@@ -9,7 +9,4 @@ the goals are:
 3. RFC compliance (slightly relaxed to work with real-world POP3 clients).
 4. Performance (limited by the more important goals, above).
 
-This package is installed to be run from inetd, which is sufficient 
-for normal usage. However, it is possible to build a stand-alone 
-version, should you need better performance. (This is currently not
-supported by the package system.)
+popa3d can be run from inetd, or as a stand-alone server.
