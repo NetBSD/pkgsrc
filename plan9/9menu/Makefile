@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 1997/10/17 13:06:49 hubertf Exp $
 # New ports collection makefile for:    9menu
 # Version required:     1.5
 # Date created:         Sun Aug 13 12:36:14 CDT 1995
 # Whom:                 erich@rrnet.com
 #
+# $NetBSD: Makefile,v 1.4 1998/01/24 22:03:36 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/08 12:23:55 tg Exp
 #
 
