@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.139 2000/05/20 17:39:20 kim Exp $
+# $NetBSD: mk.conf.example,v 1.140 2000/05/20 19:44:15 jlam Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -497,16 +497,23 @@ PAPERSIZE=	A4
 # Possible: A4, Letter, Letterdj.
 # Default: none
 
-#PGGROUP=ingres
+#PGGROUP=	ingres
 # Used in postgresql package as the groupname of the database
 # administrator
 # Possible: any group name
 # Default: ingres
 
-#PGUSER=pgsql
+#PGUSER=	pgsql
 # Used in postgresql package as the username of the database admin
 # Possible: any user name
 # Default: pgsql
+
+#PG_MB_ENCODING=	SQL_ASCII
+# Used to postgresql package to define the language encoding of the
+# backend server process.
+# Possible: SQL_ASCII, EUC_JP, EUC_CN, EUC_KR, EUC_TW, UNICODE, MULE_INTERNAL,
+#	LATIN1, LATIN2, LATIN3, LATIN4, LATIN5, KOI8, WIN, ALT
+# Default: undefined
 
 #PKG_JVM=
 # Used to choose a java virtual machine for packages which use Java.
