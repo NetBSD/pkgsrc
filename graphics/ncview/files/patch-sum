@@ -1,4 +1,4 @@
-$NetBSD: patch-sum,v 1.1.1.1 2001/02/09 23:41:34 jtb Exp $
+$NetBSD: patch-sum,v 1.2 2001/04/06 21:00:34 jtb Exp $
 
-MD5 (patch-aa) = 95a36d17289da147390b13adb6438841
-MD5 (patch-ab) = 4f9674bdbe559349dee2fb1e0f93d294
+SHA1 (patch-aa) = 77ce989232b1a926e7cdfbbbe9e0e22f653bfb23
+SHA1 (patch-ab) = 6dbdfaea8b37ef792571320c38e9113709bcbbd4
