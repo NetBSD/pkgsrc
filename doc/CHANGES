@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.495 2002/11/10 01:23:33 wiz Exp $
+$NetBSD: CHANGES,v 1.496 2002/11/10 08:00:22 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3571,3 +3571,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated reed to 5.4 [wiz 2002-11-09]
 	Updated Basilisk to 0.9.1nb1 [wiz 2002-11-09]
 	Updated pvm to 3.4.4 [is 2002-11-09]
+	Updated aperture to 2.0nb4 [tron 2002-11-10]
