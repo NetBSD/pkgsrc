@@ -1,32 +1,23 @@
-$NetBSD: patch-ag,v 1.2 2001/09/02 21:26:01 hubertf Exp $
+$NetBSD: patch-aj,v 1.1 2001/09/02 21:26:01 hubertf Exp $
 
---- texk/web2c-j/Makefile.in.orig	Sat Mar  4 19:01:21 2000
-+++ texk/web2c-j/Makefile.in
-@@ -5,7 +5,7 @@
- # install-fmts/install-bases/install-mems will install. plain.* is
- # created automatically (as a link).  See the Formats node in
- # doc/web2c.texi for details on the fmts.
--@TEX@fmts = jlatex.fmt jlatex209.fmt # amsjtex.fmt jeplain.fmt texinfo.fmt
-+@TEX@fmts = jlatex.fmt # jlatex209.fmt amsjtex.fmt jeplain.fmt texinfo.fmt
- @ETEX@efmts = #elatex.efmt
- @CTEX@cfmts = #latex.efmt
- @PTEX@pdffmts = #pdflatex.fmt
-@@ -460,75 +460,75 @@
+--- texk/web2c-m/Makefile.in.orig	Sat Mar  4 18:25:00 2000
++++ texk/web2c-m/Makefile.in
+@@ -456,75 +456,75 @@
  
- jtex.fmt: jtex
- 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=jtex jplain.tex dmjhira10.tfm" prereq-check
--	$(dumpenv) ./jtex --fmt=jtex --ini \\input jplain \\dump </dev/null
-+	$(dumpenv) ./jtex --fmt=jtex --ini \\input jplain \\dump </dev/null || true
+ multex.fmt: multex
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=multex mulplain.tex dm10.tfm" prereq-check
+-	$(dumpenv) ./multex --fmt=multex --ini \\input mulplain \\dump </dev/null
++	$(dumpenv) ./multex --fmt=multex --ini \\input mulplain \\dump </dev/null || true
  
- jlatex.fmt: jtex
- 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=jlatex jlatex.ltx" prereq-check
--	$(dumpenv) ./jtex --progname=jlatex --ini \\input jlatex.ltx </dev/null
-+	$(dumpenv) ./jtex --progname=jlatex --ini \\input jlatex.ltx </dev/null || true
+ mullatex.fmt: multex
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=mullatex mullatex.ltx" prereq-check
+-	$(dumpenv) ./multex --progname=mullatex --ini \\input mullatex.ltx </dev/null
++	$(dumpenv) ./multex --progname=mullatex --ini \\input mullatex.ltx </dev/null || true
  
- jlatex209.fmt: jtex
- 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=jlatex209 jlplain.tex" prereq-check
--	$(dumpenv) ./jtex --fmt=jlatex209 --ini \\input jlplain \\dump </dev/null
-+	$(dumpenv) ./jtex --fmt=jlatex209 --ini \\input jlplain \\dump </dev/null || true
+ mullatex209.fmt: multex
+ 	$(dumpenv) $(MAKE) $(makeargs) files="--progname=mullatex209 mullplain.tex" prereq-check
+-	$(dumpenv) ./multex --fmt=mullatex209 --ini \\input mullplain \\dump </dev/null
++	$(dumpenv) ./multex --fmt=mullatex209 --ini \\input mullplain \\dump </dev/null || true
  
  etex.efmt: etex
  	$(dumpenv) $(MAKE) files="--progname=etex etex.src plain.tex cmr10.tfm" prereq-check
@@ -105,22 +96,22 @@ $NetBSD: patch-ag,v 1.2 2001/09/02 21:26:01 hubertf Exp $
  
  # This is meant to be called recursively, with $(files) set.
  prereq-check: $(kpathsea_dir)/kpsewhich
-@@ -550,15 +550,15 @@
+@@ -546,15 +546,15 @@
  $(kpathsea_dir)/kpsewhich: $(kpathsea)
  
- amsjtex.fmt: jtex
--	$(dumpenv) ./jtex --progname=amsjtex --ini amsjtex.ini </dev/null
-+	$(dumpenv) ./jtex --progname=amsjtex --ini amsjtex.ini </dev/null || true
+ amsmultex.fmt: multex
+-	$(dumpenv) ./multex --progname=amsmultex --ini amsmultex.ini </dev/null
++	$(dumpenv) ./multex --progname=amsmultex --ini amsmultex.ini </dev/null || true
  
  # Texinfo changes the escape character from `\' to `@'.
  texinfo.fmt: tex.fmt
 -	$(dumpenv) ./tex --progname=texinfo --ini texinfo @dump </dev/null
 +	$(dumpenv) ./tex --progname=texinfo --ini texinfo @dump </dev/null || true
  
- jeplain.fmt: jtex.fmt
- 	touch jeplain.aux # Makes cross-reference warnings work right.
--	$(dumpenv) ./jtex --fmt=jeplain --ini \&./jtex eplain \\dump </dev/null
-+	$(dumpenv) ./jtex --fmt=jeplain --ini \&./jtex eplain \\dump </dev/null || true
+ muleplain.fmt: multex.fmt
+ 	touch muleplain.aux # Makes cross-reference warnings work right.
+-	$(dumpenv) ./multex --fmt=muleplain --ini \&./multex eplain \\dump </dev/null
++	$(dumpenv) ./multex --fmt=muleplain --ini \&./multex eplain \\dump </dev/null || true
  
  # 
  install: install-exec install-data
