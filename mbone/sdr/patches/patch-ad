@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.8 1999/10/28 02:40:24 hubertf Exp $
+
 --- sdr/src/sd_listen.c.orig	Fri Jul 16 15:07:27 1999
 +++ sdr/src/sd_listen.c	Sat Oct  2 20:42:45 1999
 @@ -55,6 +55,9 @@

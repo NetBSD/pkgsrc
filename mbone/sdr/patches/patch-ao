@@ -1,3 +1,5 @@
+$NetBSD: patch-ao,v 1.2 1999/10/28 02:40:24 hubertf Exp $
+
 --- common/net_udp.c.original	Mon Oct  4 15:10:55 1999
 +++ common/net_udp.c	Mon Oct  4 15:12:16 1999
 @@ -341,8 +341,8 @@
