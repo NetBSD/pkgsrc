@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2669 2003/07/03 08:33:23 wiz Exp $
+$NetBSD: CHANGES,v 1.2670 2003/07/03 08:34:20 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2662,3 +2662,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xlog-0.8 [wulf 2003-07-03]
 	Updated roundup to 0.5.8 [lukem 2003-07-03]
 	Updated adom to 1.1.1 [wiz 2003-07-03]
+	Added mad123-0.7 [agc 2003-07-03]
