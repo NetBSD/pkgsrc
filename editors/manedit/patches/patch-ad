@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/01/21 18:18:04 fredb Exp $
+
+--- help/manpage_xml_referance.orig	Sat Jan 20 05:39:30 2001
++++ help/manpage_xml_referance	Sun Jan 21 11:28:54 2001
+@@ -1,6 +1,6 @@
+-.TH "ManPage XML Referance" "5" "Release 0.0.0" "WolfPack Entertainment" "File Formats"
++.TH "ManPage XML Reference" "5" "Release 0.0.0" "WolfPack Entertainment" "File Formats"
+ .SH "NAME"
+-\fBManPage XML Referance\fR \- Tags and symbolic representations list
++\fBManPage XML Reference\fR \- Tags and symbolic representations list
+ .SH "DESCRIPTION"
+ .LP 
+ Contains a (mostly complete) list of UNIX Manual Page format
+@@ -87,4 +87,4 @@
+ \fB&gt;\fR
+ Greater than (the > character).
+ .SH "SEE ALSO"
+-manpage_writing_procedures(5)
++manpage_writing_procedures(7)

@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/21 18:18:04 fredb Exp $
+bin/manedit
+man/man7/manpage_writing_procedures.7
+man/man7/manpage_xml_reference.7
+man/man1/manedit.1
+share/manedit/icons/manedit.xpm
+share/manedit/templates/api.mpt
+share/manedit/templates/config.mpt
+share/manedit/templates/intro.mpt
+share/manedit/templates/program.mpt
+@dirrm share/manedit/templates
+@dirrm share/manedit/icons
+@dirrm share/manedit

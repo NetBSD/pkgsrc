@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/21 18:18:04 fredb Exp $
+
+--- ../include/xsw_ctype.h.orig	Sat Jan 20 12:39:31 2001
++++ ../include/xsw_ctype.h
+@@ -4,7 +4,6 @@
+ #if defined(__cplusplus) || defined(c_plusplus)
+ 
+ extern bool isblank(char c);
+-extern bool isblank(int c);
+ 
+ #else
+ 
