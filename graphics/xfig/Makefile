@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/07/04 05:11:14 mycroft Exp $
+# $NetBSD: Makefile,v 1.12 1998/07/04 05:53:33 mycroft Exp $
 #
 
 DISTNAME=		xfig.3.2.2
@@ -13,7 +13,7 @@ MAINTAINER=		root@garbled.futureone.com
 DEPENDS+=		transfig-3.2.1:../../print/transfig
 DEPENDS+=		xpm-3.4j:../../graphics/xpm
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		Xaw3d-1.3:../../x11/Xaw3d
+DEPENDS+=		Xaw3d-1.5:../../x11/Xaw3d
 
 CONFLICTS=		xfig-3.2
 
