@@ -1,0 +1,68 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/04/11 23:39:29 groo Exp $
+
+--- Makefile.orig	Tue Dec 28 21:46:19 1999
++++ Makefile	Tue Apr 11 19:01:56 2000
+@@ -5,9 +5,11 @@
+ 
+ # Paths
+ 
+-INSTALL = /usr/ucb/install
+-EBIN = /usr/local/sbin
+-MAN = /usr/local/man/man
++MKDIR = /bin/mkdir
++INSTALL = /usr/bin/install
++EBIN = $(LOCALBASE)/libexec
++MAN = $(LOCALBASE)/man/man
++EXAMPLES = $(LOCALBASE)/share/examples/drac
+ 
+ # OS-Dependant settings
+ 
+@@ -33,22 +35,24 @@
+ # -DCIDR_KEY	# keys in CIDR format
+ # -DTERM_KD	# keys and data nul-terminated
+ 
+-DEFS = -DTI_RPC -DFCNTL_LOCK -DSYSINFO
++# DEFS = -DTI_RPC -DFCNTL_LOCK -DSYSINFO
++DEFS = -DSOCK_RPC -DFCNTL_LOCK -DGETHOST -DDASH_C
+ 
+ # Compiler flags 
+ CC = cc
+-RANLIB = :
+-CFLAGS = $(DEFS) -g -I/usr/local/src/db/db-2.4.14/Unix
++RANLIB = ranlib
++#CFLAGS = $(DEFS) -g -I/usr/local/src/db/db-2.4.14/Unix
++CFLAGS = $(DEFS) 
+ #CFLAGS = $(DEFS) -g -I/usr/local/src/db/db.1.85/PORT/sunos.5.2/include
+-LDLIBS = -L/usr/local/src/db/db-2.4.14/Unix -lnsl -ldb
++LDLIBS = 
+ #LDLIBS = -L/usr/local/src/db/db.1.85/PORT/sunos.5.2 -lnsl -ldb
+-TSTLIBS = -L. -ldrac -lnsl
+-RPCGENFLAGS = 
++TSTLIBS = -L. -ldrac
++RPCGENFLAGS = -I -C
+ #RPCGENFLAGS = -C
+ 
+ # Man sections
+ MANLIB = 3
+-MANADM = 1m
++MANADM = 8
+ 
+ ## Nothing to change after this point
+ 
+@@ -117,8 +121,13 @@
+ 
+ install: $(SERVER)
+ 	$(INSTALL) -c -o bin -g bin -m 0755 $(SERVER) $(EBIN)
+-
+-install-man: $(SERVER).1m dracauth.3
+ 	$(INSTALL) -c -m 0444 $(SERVER).1m $(MAN)$(MANADM)/$(SERVER).$(MANADM)
+ 	$(INSTALL) -c -m 0444 dracauth.3 $(MAN)$(MANLIB)/dracauth.$(MANLIB)
+-
++	$(MKDIR) -p $(EXAMPLES)
++	$(INSTALL) -c -m 0444 README $(EXAMPLES)/README
++	$(INSTALL) -c -m 0444 INSTALL $(EXAMPLES)/INSTALL
++	$(INSTALL) -c -m 0444 testing.c $(EXAMPLES)/testing.c
++	$(INSTALL) -c -m 0444 dracd-setup $(EXAMPLES)/dracd-setup
++	$(INSTALL) -c -m 0444 dracd.allow-sample $(EXAMPLES)/dracd.allow-sample
++	$(INSTALL) -c -m 0444 drac.h $(LOCALBASE)/include/drac.h
++	$(INSTALL) -c -m 0444 libdrac.a $(LOCALBASE)/lib/libdrac.a
