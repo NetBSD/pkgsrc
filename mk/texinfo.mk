@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.7 2003/01/28 00:08:29 seb Exp $
+# $NetBSD: texinfo.mk,v 1.8 2003/01/28 20:03:02 seb Exp $
 #
 # This Makefile fragment is included by packages that provide info files.
 #
@@ -7,8 +7,13 @@
 TEXINFO_MK=	# defined
 
 # Does the system have the GNU texinfo tools and if yes, what version are they?
-_INSTALL_INFO=	/usr/bin/install-info
-.if exists(${_INSTALL_INFO})
+_INSTALL_INFO=
+.for _i_ in /usr/bin/install-info /sbin/install-info
+.  if exists(${_i_})
+_INSTALL_INFO=	${_i_}
+.  endif
+.endfor
+.if !empty(_INSTALL_INFO)
 .  if !defined(INSTALL_INFO_VERSION)
 _INSTALL_INFO_VERSION_OUTPUT!=  ${_INSTALL_INFO} --version 2>/dev/null
 # if install-info departs from the [0-9].[0-9] numbering scheme, the following
@@ -34,15 +39,16 @@ _NEED_TEXINFO=	# defined
 DEPENDS+=		gtexinfo>=${TEXINFO_REQD}:../../devel/gtexinfo
 _GTEXINFO_PREFIX_DEFAULT=${LOCALBASE}
 EVAL_PREFIX+=		_GTEXINFO_PREFIX=gtexinfo
+INSTALL_INFO=	${_GTEXINFO_PREFIX}/bin/install-info
+MAKEINFO=	${_GTEXINFO_PREFIX}/bin/makeinfo
 .else
-_GTEXINFO_PREFIX=	${_INSTALL_INFO:C|/bin/install-info$||}
+INSTALL_INFO=	${_INSTALL_INFO}
+MAKEINFO=	/usr/bin/makeinfo	# we assume it!
 .endif
 
 #
 # Advertise in environment which install-info and makeinfo should be used.
 #
-INSTALL_INFO=	${_GTEXINFO_PREFIX}/bin/install-info
-MAKEINFO=	${_GTEXINFO_PREFIX}/bin/makeinfo
 CONFIGURE_ENV+=	MAKEINFO="${MAKEINFO}" INSTALL_INFO="${INSTALL_INFO}"
 MAKE_ENV+=	MAKEINFO="${MAKEINFO}" INSTALL_INFO="${INSTALL_INFO}"
 
