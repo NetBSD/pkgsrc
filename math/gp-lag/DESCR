@@ -1,0 +1,13 @@
+This GAP package contains a variety of functions for working with Lie
+algebras obtained from associative algebras by using the "bracket"
+operation ab-ba. 
+
+In case the associative algebra has been constructed using the
+GroupRing function, the package uses fast methods that take advantage
+of known special properties of group algebras. Some of the functions
+provided are LieCentre, LieDerivedSubalgebra, IsLieAbelian,
+IsLieSolvable, IsLieNilpotent and variations on these.
+
+There are also functions for maintaining contact with the original
+associative ring and with the underlying group in case the algebra is
+a group algebra.
