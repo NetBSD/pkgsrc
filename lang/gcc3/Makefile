@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/06/11 18:20:23 fredb Exp $
+# $NetBSD: Makefile,v 1.22 2003/06/17 06:18:28 grant Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -36,7 +36,7 @@ INFO_FILES=		cpp.info g77.info gcc.info gcj.info
 
 .include "../../mk/bsd.prefs.mk"
 
-.ifndef USE_BINUTILS
+.if ${OPSYS} == "NetBSD" && !defined(USE_BINUTILS)
 AS_VERSION!=		${AS} --version | ${AWK} '{				\
 			    split($$3, v, /[.]/);				\
 			    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
@@ -45,7 +45,7 @@ AS_VERSION!=		${AS} --version | ${AWK} '{				\
 USE_BINUTILS!=		${TEST} ${AS_VERSION} -lt 02130201 && echo YES || echo NO
 .endif
 
-.if ${USE_BINUTILS} == YES
+.if defined(USE_BINUTILS) && ${USE_BINUTILS} == "YES"
 DEPENDS=		binutils>=2.13.2.1:../../devel/binutils
 CONFIGURE_ARGS+=	--with-as=${PREFIX}/${MACHINE_GNU_PLATFORM}/bin/as
 #.  include "../../devel/binutils/buildlink2.mk"
