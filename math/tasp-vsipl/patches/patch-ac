@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/05/16 21:18:37 jtb Exp $
+
+--- /dev/null	Thu May 10 17:42:02 2001
++++ libVU/Makefile
+@@ -0,0 +1,35 @@
++LIB= 	VU_c
++
++SHLIB_MAJOR= 0
++SHLIB_MINOR= 0
++
++LIBDIR= ${PREFIX}/lib
++
++CPPFLAGS+= -I${.CURDIR}/../../include -I${X11BASE}/include
++CPPFLAGS+= -DVSIP_PERFORMANCE_MODE
++
++LDADD+= --rpath ${X11BASE}/lib -L${X11BASE}/lib -lX11 -lm
++
++NOLINT= 1
++
++SRCS= 	VUX_mgram_colorarray_f.c VUX_mgram_f.c VUX_mgram_gsarray_f.c	\
++	VUX_mgramaxis_f.c VUX_mgramclose_f.c VUX_mgraminit_f.c		\
++	VUX_mgramopen_f.c VUX_mgramtitle_f.c VUX_mgramupdate_f.c	\
++	VUX_mgramxtitle_f.c VUX_mgramytitle_f.c VUX_vxyplot_f.c		\
++	VUX_vxyplotaxis_f.c VUX_vxyplotclose_f.c VUX_vxyplotinit_f.c	\
++	VUX_vxyplotopen_f.c VUX_vxyplotsize_f.c VUX_vxyplottitle_f.c	\
++	VUX_vxyplotxtitle_f.c VUX_vxyplotytitle_f.c VU_vprintm_mi.c	\
++	VU_vprintm_vi.c VU_cmprintm_d.c VU_cmprintm_f.c			\
++	VU_cvprintm_d.c VU_cvprintm_f.c VU_mprintm_d.c VU_mprintm_f.c	\
++	VU_vprintm_d.c VU_vprintm_f.c VU_cmreadf_d.c VU_cmreadf_f.c	\
++	VU_cvreadf_d.c VU_cvreadf_f.c VU_mreadf_d.c VU_mreadf_f.c	\
++	VU_vreadf_d.c VU_vreadf_f.c
++
++.PATH:	${.CURDIR}/../../src_VU/graphics/X_f				\
++	${.CURDIR}/../../src_VU/utility/print				\
++	${.CURDIR}/../../src_VU/utility/read
++
++afterinstall:
++	${BSD_INSTALL_DATA} ${.CURDIR}/../../include/VU*.h ${PREFIX}/include
++
++.include <bsd.lib.mk>
