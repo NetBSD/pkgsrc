@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/07/22 11:31:46 agc Exp $
-
-SHA1 (espa~nol-1.7.tar.gz) = de8a2f2dbab0d3658aecd7ef109e91773da23dd7
-Size (espa~nol-1.7.tar.gz) = 424599 bytes
-SHA1 (patch-aa) = 569ee4831cd95c4ef126440283d15f29f5e37d8e
