@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/10/07 02:03:24 tv Exp $
+
+--- include/SearchResultMessageArg.h.orig	Fri Oct  6 21:34:14 2000
++++ include/SearchResultMessageArg.h	Fri Oct  6 21:34:40 2000
+@@ -29,7 +29,7 @@
+   int errnum(size_t) const;
+ private:
+   Vector<StringC> filename_;
+-  Vector<unsigned int> errno_;
++  Vector<size_t> errno_;
+ };
+ 
+ inline
