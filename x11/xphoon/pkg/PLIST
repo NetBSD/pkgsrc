@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/18 14:27:31 nra Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/07/18 14:50:40 nra Exp $
 bin/xphoon
-lib/X11/doc/html/xphoon.1.html
 man/cat1/xphoon.0
