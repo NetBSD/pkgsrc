@@ -1,24 +1,24 @@
-$NetBSD: patch-ab,v 1.10 2001/08/02 03:37:39 jlam Exp $
+$NetBSD: patch-ab,v 1.11 2001/08/18 04:41:46 jlam Exp $
 
---- Makefile.orig	Thu Jun 28 12:20:08 2001
+--- Makefile.orig	Mon Aug  6 15:37:08 2001
 +++ Makefile
-@@ -60,8 +60,8 @@
+@@ -60,8 +60,6 @@
  		echo Installing in $$dir... ;\
  		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
  	done
 -	echo Installing in conf...
 -	(cd conf; $(MAKE) $(MFLAGS) install)
-+#	echo Installing in conf...
-+#	(cd conf; $(MAKE) $(MFLAGS) install)
  	echo Installing in data...
  	(cd data; $(MAKE) $(MFLAGS) install)
  	echo Installing in doc...
-@@ -75,7 +75,7 @@
- 	echo Installing in templates...
- 	(cd templates; $(MAKE) $(MFLAGS) install)
- 	echo Installing startup script...
--	if test "x$INITDIR" != "x"; then \
-+	if test "x$(INITDIR)" != "x"; then \
- 		$(INSTALL_DIR) $(prefix)/$(INITDIR)/init.d; \
- 		$(INSTALL_SCRIPT) cups.sh $(prefix)/$(INITDIR)/init.d/cups; \
- 		$(INSTALL_DIR) $(prefix)/$(INITDIR)/rc0.d; \
+@@ -86,10 +84,6 @@
+ 		$(INSTALL_SCRIPT) cups.sh $(prefix)/$(INITDIR)/rc3.d/S99cups; \
+ 		$(INSTALL_DIR) $(prefix)/$(INITDIR)/rc5.d; \
+ 		$(INSTALL_SCRIPT) cups.sh $(prefix)/$(INITDIR)/rc5.d/S99cups; \
+-	fi
+-	if test "x$(INITDIR)" = "x" -a "x$(INITDDIR)" != "x"; then \
+-		$(INSTALL_DIR) $(prefix)/$(INITDDIR); \
+-		$(INSTALL_SCRIPT) cups.sh $(prefix)/$(INITDDIR)/cups; \
+ 	fi
+ 
+ 
