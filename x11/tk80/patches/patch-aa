@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:18:16 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/04/01 10:23:36 agc Exp $
 
 --- configure.orig	Tue Nov 25 17:41:56 1997
 +++ configure	Sat Feb 14 00:58:41 1998
@@ -29,7 +29,17 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 11:18:16 agc Exp $
  LIB_RUNTIME_DIR='${LIB_RUNTIME_DIR}'
  
  # If Tcl and Tk are installed in different places, adjust the library
-@@ -2276,6 +2278,7 @@
+@@ -2107,6 +2109,9 @@
+     MAKE_LIB="ar cr ${TK_LIB_FILE} \${OBJS}"
+ fi
+ 
++# Force the issue
++TK_SHARED_BUILD=1
++
+ # Note:  in the following variable, it's important to use the absolute
+ # path name of the Tcl directory rather than "..":  this is because
+ # AIX remembers this path and will attempt to use it at run-time to look
+@@ -2276,6 +2281,7 @@
  s%@SHLIB_VERSION@%$SHLIB_VERSION%g
  s%@TCL_BIN_DIR@%$TCL_BIN_DIR%g
  s%@TCL_BUILD_LIB_SPEC@%$TCL_BUILD_LIB_SPEC%g
