@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7878 2004/11/16 13:54:47 adrianp Exp $
+$NetBSD: CHANGES,v 1.7879 2004/11/16 14:18:26 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5300,3 +5300,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ImageMagick to 6.1.4.3 [adam 2004-11-16]
 	Updated ja-squirrelmail to 1.4.3anb3 [taca 2004-11-16]
 	Updated freeradius to 1.0.1nb4 [adrianp 2004-11-16]
+	Updated squirrelmail to 1.4.3anb1 [martti 2004-11-16]
