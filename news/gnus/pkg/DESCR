@@ -1,0 +1,6 @@
+Gnus is a newsreader and mail reader for Emacs. It is astonishingly
+flexible and powerful in dealing with large amounts of news and mail.
+
+The Gnus package replaces the version of Gnus that comes with the normal
+gnu emacs distribution with a much more up to date one. The package
+is not needed with xemacs -- a new gnus is included in xemacs-packages.
