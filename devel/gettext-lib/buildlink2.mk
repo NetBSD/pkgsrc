@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2002/11/20 08:48:03 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2002/11/26 10:25:05 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
@@ -57,7 +57,9 @@ BUILDLINK_FILES.gettext=	include/libintl.h
 BUILDLINK_FILES.gettext+=	lib/libintl.*
 
 BUILDLINK_TARGETS+=		gettext-buildlink
+.if ${_BLNK_LIBINTL_FOUND} == "YES"
 BUILDLINK_TARGETS+=		gettext-libintl-la
+.endif
 
 # Add -lintl to LIBS in CONFIGURE_ENV to work around broken gettext.m4:
 # older gettext.m4 does not add -lintl where it should, and the resulting
@@ -89,9 +91,14 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
 .endif
 
 .if ${_NEED_GNU_GETTEXT} == "NO"
+.  if ${_BLNK_LIBINTL_FOUND} == "YES"
+_BLNK_INTL_LDFLAGS=	-L${BUILDLINK_PREFIX.gettext}/lib -lintl
+.  else
+_BLNK_INTL_LDFLAGS=	# empty
+.  endif
 LIBTOOL_ARCHIVE_UNTRANSFORM_SED+= \
-	-e "s|${BUILDLINK_PREFIX.gettext}/lib/libintl.la|-L${BUILDLINK_PREFIX.gettext}/lib -lintl|g" \
-	-e "s|${LOCALBASE}/lib/libintl.la|-L${BUILDLINK_PREFIX.gettext}/lib -lintl|g"
+	-e "s|${BUILDLINK_PREFIX.gettext}/lib/libintl.la|${_BLNK_INTL_LDFLAGS}|g" \
+	-e "s|${LOCALBASE}/lib/libintl.la|${_BLNK_INTL_LDFLAGS}|g"
 .endif
 
 gettext-buildlink: _BUILDLINK_USE
