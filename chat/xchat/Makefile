@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/15 00:36:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/25 18:32:14 tron Exp $
 
-DISTNAME=	xchat-1.5.7
+DISTNAME=	xchat-1.6.2
 CATEGORIES=	chat x11 gnome
-MASTER_SITES=	${HOMEPAGE}/files/source/1.5/
+MASTER_SITES=	${HOMEPAGE}/files/source/1.6/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://xchat.org/
 
-DEPENDS+=	gnome-core>=1.0.55:../../x11/gnome-core
-DEPENDS+=	python>=1.5.2:../../lang/python
+DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
+DEPENDS+=	python>=2.0:../../lang/python
 
 USE_GMAKE=	yes
 USE_PERL5=	yes
