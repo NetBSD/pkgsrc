@@ -1,0 +1,21 @@
+--- wine.ini.orig	Sat May 30 17:29:40 1998
++++ wine.ini	Thu Jun 18 00:58:54 1998
+@@ -55,13 +55,13 @@
+ Default = -adobe-times-
+ 
+ [serialports]
+-Com1=/dev/cua0
+-Com2=/dev/cua1
+-Com3=/dev/modem,38400
+-Com4=/dev/modem
++Com1=/dev/tty00
++Com2=/dev/tty01
++Com3=/dev/tty02
++Com4=/dev/tty03
+ 
+ [parallelports]
+-Lpt1=/dev/lp0
++Lpt1=/dev/lpt0
+ 
+ [spooler]
+ LPT1:=|lpr

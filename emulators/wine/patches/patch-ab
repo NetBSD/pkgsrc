@@ -1,12 +1,20 @@
---- win32/console.c.orig	Sun Feb 15 14:21:01 1998
-+++ win32/console.c	Sun Mar 15 22:28:20 1998
-@@ -9,7 +9,9 @@
- #include <stdio.h>
- #include <stdlib.h>
- #include <unistd.h>
-+#ifndef __NetBSD__
- #include <pty.h>
-+#endif
- #include <termios.h>
- #include <sys/ioctl.h>
- #include <sys/types.h>
+--- Makefile.in.orig	Sun Feb 15 14:20:52 1998
++++ Makefile.in	Sun Mar 15 23:37:10 1998
+@@ -108,7 +108,7 @@
+ lib: $(LIBSUBDIRS) $(LIB_TARGET)
+ 
+ wine wine.sym: $(LIBSUBDIRS) $(LIB_TARGET) $(EMUSUBDIRS) dummy
+-	$(CC) -o wine $(EMUOBJS) $(LIB_TARGET) $(LDOPTIONS) $(X_LIBS) $(XPM_LIB) $(XLIB) $(LIBS)
++	$(CC) -o wine $(EMUOBJS) -L. -lwine $(LDOPTIONS) $(X_LIBS) $(XPM_LIB) $(XLIB) $(LIBS)
+ 	nm -n wine | grep -v _compiled >wine.sym
+ 
+ libwine.a: $(LIBOBJS)
+@@ -117,7 +117,7 @@
+ 	$(RANLIB) $@
+ 
+ libwine.so.1.0: $(LIBOBJS)
+-	$(CC) -shared -Wl,-soname,libwine.so -o$@ $(LIBOBJS) $(LDOPTIONS) $(X_LIBS) $(XPM_LIB) $(XLIB) $(LIBS)
++	${LDSHARE} -o$@ $(LIBOBJS) $(LDOPTIONS)
+ 
+ install_emu: install_lib
+ 	$(INSTALL_PROGRAM) wine $(bindir)/wine

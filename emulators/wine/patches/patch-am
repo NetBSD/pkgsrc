@@ -1,0 +1,29 @@
+--- multimedia/init.c.orig	Sat May 30 17:29:48 1998
++++ multimedia/init.c	Fri Jun 19 00:52:52 1998
+@@ -29,6 +29,7 @@
+ #ifdef HAVE_OSS
+ int unixToWindowsDeviceType(int type)
+ {
++#ifndef __NetBSD__
+   /* MOD_MIDIPORT     output port 
+    * MOD_SYNTH        generic internal synth 
+    * MOD_SQSYNTH      square wave internal synth 
+@@ -46,6 +47,9 @@
+     ERR(midi, "Cannot determine the type of this midi device. Assuming FM Synth\n");
+     return MOD_FMSYNTH;
+   }
++#else
++    return MOD_FMSYNTH;
++#endif
+ }
+ #endif
+ 
+@@ -57,7 +61,7 @@
+  */
+ BOOL32 MULTIMEDIA_Init (void)
+ {
+-#ifdef HAVE_OSS
++#if defined(HAVE_OSS) && !defined(__NetBSD__)
+   int i, status, numsynthdevs, nummididevs;
+   struct synth_info sinfo;
+   struct midi_info minfo;

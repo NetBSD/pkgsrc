@@ -1,0 +1,18 @@
+--- multimedia/mmaux.c.orig	Sun May 31 18:14:58 1998
++++ multimedia/mmaux.c	Wed Jun 17 00:56:12 1998
+@@ -16,11 +16,15 @@
+ #include "mmsystem.h"
+ #include "debug.h"
+ 
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #ifdef HAVE_SYS_SOUNDCARD_H
+ # include <sys/soundcard.h>
+ #endif
+ #ifdef HAVE_MACHINE_SOUNDCARD_H
+ # include <machine/soundcard.h>
++#endif
+ #endif
+ 
+ #define MIXER_DEV "/dev/mixer"

@@ -1,0 +1,21 @@
+--- multimedia/dsound.c.orig	Sun May 31 18:14:50 1998
++++ multimedia/dsound.c	Wed Jun 17 00:00:14 1998
+@@ -45,13 +45,17 @@
+ #include "debug.h"
+ 
+ #ifdef HAVE_OSS
+-# include <sys/ioctl.h>
++#include <sys/ioctl.h>
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ # ifdef HAVE_MACHINE_SOUNDCARD_H
+ #  include <machine/soundcard.h>
+ # endif
+ # ifdef HAVE_SYS_SOUNDCARD_H
+ #  include <sys/soundcard.h>
+ # endif
++#endif
+ 
+ static int audiofd = -1;
+ static LPDIRECTSOUND	dsound = NULL;

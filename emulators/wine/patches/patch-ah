@@ -1,0 +1,18 @@
+--- misc/lstr.c.orig	Thu Jun 18 00:22:09 1998
++++ misc/lstr.c	Thu Jun 18 00:27:01 1998
+@@ -43,13 +43,13 @@
+ /* FIXME: should probably get rid of wctype.h altogether */
+ #include "casemap.h"
+ 
+-WCHAR _towupper(WCHAR code)
++WCHAR towupper(WCHAR code)
+ {
+     const WCHAR * ptr = uprtable[HIBYTE(code)];
+     return ptr ? ptr[LOBYTE(code)] : code;
+ }
+ 
+-WCHAR _towlower(WCHAR code)
++WCHAR towlower(WCHAR code)
+ {
+     const WCHAR * ptr = lwrtable[HIBYTE(code)];
+     return ptr ? ptr[LOBYTE(code)] : code;
