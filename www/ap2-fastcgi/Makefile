@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/28 21:04:16 cube Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/09 22:52:03 seb Exp $
 
 .include "../../www/ap-fastcgi/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/mod_/ap2-/}
 PKG_APACHE_ACCEPTED=	apache2
 APACHE_MANUAL=		manual
+USE_LIBTOOL=		YES
+
+MAKE_FLAGS+=		LIBTOOL=${LIBTOOL:Q}
 
 SUBST_CLASSES+=		ap2
 SUBST_STAGE.ap2=	pre-build
