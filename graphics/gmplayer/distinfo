@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2002/06/08 23:41:55 veego Exp $
+$NetBSD: distinfo,v 1.12 2002/06/11 23:22:42 fredb Exp $
 
 SHA1 (mplayer/MPlayer-0.90pre5.tar.bz2) = 1a78063dd055ce99985001072fb2057156f8cd2a
 Size (mplayer/MPlayer-0.90pre5.tar.bz2) = 2438747 bytes
@@ -43,3 +43,4 @@ Size (mplayer/CornerMP-aqua.tar.bz2) = 247987 bytes
 SHA1 (mplayer/hwswskin.tar.bz2) = 2b5b59d2e91bfa5c01011773c71db0ab2b48edec
 Size (mplayer/hwswskin.tar.bz2) = 20275 bytes
 SHA1 (patch-aa) = 2c1c6f35caf047f188871ac223d672ce453c26ec
+SHA1 (patch-ab) = ba4990ac8df3b79dfd452530fe4aea66e26f4e7e
