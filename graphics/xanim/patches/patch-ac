@@ -1,17 +1,17 @@
---- xa_audio.c-orig	Mon May 26 12:57:15 1997
-+++ xa_audio.c	Mon May 26 15:55:13 1997
-@@ -4480,6 +4480,22 @@
+--- xa_audio.c.orig	Sun Jan 26 11:22:03 1997
++++ xa_audio.c	Sat Mar  7 07:56:29 1998
+@@ -4479,26 +4479,57 @@
+   AUDIO_INITINFO(&a_info);
    a_info.blocksize = 1024;
    ioctl(devAudio, AUDIO_SETINFO, &a_info);
-   AUDIO_INITINFO(&a_info);
 +#ifdef AUDIO_ENCODING_SLINEAR
 +  /* Use new encoding names */
-+  a_info.play.encoding = AUDIO_ENCODING_SLINEAR;
-+  ioctl(devAudio, AUDIO_SETINFO, &a_info);
-+  AUDIO_INITINFO(&a_info);
+   AUDIO_INITINFO(&a_info);
+-  a_info.play.encoding = AUDIO_ENCODING_PCM16;
 +  a_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
-+  ioctl(devAudio, AUDIO_SETINFO, &a_info);
-+  AUDIO_INITINFO(&a_info);
+   ioctl(devAudio, AUDIO_SETINFO, &a_info);
+   AUDIO_INITINFO(&a_info);
++  a_info.play.encoding = AUDIO_ENCODING_SLINEAR;
 +  a_info.play.precision = 16;
 +  if (ioctl(devAudio, AUDIO_SETINFO, &a_info) < 0) {
 +    AUDIO_INITINFO(&a_info);
@@ -20,14 +20,47 @@
 +    ioctl(devAudio, AUDIO_SETINFO, &a_info);
 +  }
 +#else
-   a_info.play.encoding = AUDIO_ENCODING_PCM16;
++  AUDIO_INITINFO(&a_info);
+   a_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
    ioctl(devAudio, AUDIO_SETINFO, &a_info);
    AUDIO_INITINFO(&a_info);
-@@ -4488,6 +4504,7 @@
-   AUDIO_INITINFO(&a_info);
++  a_info.play.encoding = AUDIO_ENCODING_PCM16;
    a_info.play.precision = 16;
-   ioctl(devAudio, AUDIO_SETINFO, &a_info);
++  if (ioctl(devAudio, AUDIO_SETINFO, &a_info) < 0) {
++    AUDIO_INITINFO(&a_info);
++    a_info.play.encoding = AUDIO_ENCODING_PCM;
++    a_info.play.precision = 8;
++    ioctl(devAudio, AUDIO_SETINFO, &a_info);
++  }
 +#endif
-   AUDIO_INITINFO(&a_info);
-   a_info.play.sample_rate = 11025;
++  AUDIO_INITINFO(&a_info);
++  a_info.play.channels = /*2*/1;
    ioctl(devAudio, AUDIO_SETINFO, &a_info);
+   AUDIO_INITINFO(&a_info);
+-  a_info.play.sample_rate = 11025;
++  a_info.play.sample_rate = 22050;
+   ioctl(devAudio, AUDIO_SETINFO, &a_info);
+   ioctl(devAudio, AUDIO_GETINFO, &a_info);
+ 
+-  xa_audio_hard_type  = (a_info.play.precision==8)?XA_AUDIO_LINEAR_1M
+-						  :XA_AUDIO_SIGNED_2ML;
++  if (a_info.play.channels == 2)
++    if (a_info.play.precision == 8)
++      xa_audio_hard_type = XA_AUDIO_LINEAR_1S;
++    else
++      xa_audio_hard_type = XA_AUDIO_SIGNED_2SL;
++  else
++    if (a_info.play.precision == 8)
++      xa_audio_hard_type = XA_AUDIO_LINEAR_1M;
++    else
++      xa_audio_hard_type = XA_AUDIO_SIGNED_2ML;
+   xa_audio_hard_freq  = a_info.play.sample_rate;
+   xa_audio_hard_buff  = a_info.blocksize;
+-  xa_audio_hard_bps   = (a_info.play.precision==8)?1:2;
+-  xa_audio_hard_chans = 1;
++  xa_audio_hard_bps   = a_info.play.precision / 8;
++  xa_audio_hard_chans = a_info.play.channels;
++
+   Gen_Ulaw_2_Signed();
+   Gen_Signed_2_Ulaw();
+ 
