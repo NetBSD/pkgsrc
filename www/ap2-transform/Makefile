@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/30 13:27:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/01 21:19:07 kristerw Exp $
 #
 
 DISTNAME=	mod_transform-0.4.0
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS}
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/apache2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
