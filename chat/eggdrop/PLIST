@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/16 08:46:15 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/04/30 19:43:48 jmmv Exp $
 bin/eggdrop
-etc/eggdrop.conf.dist
 lib/eggdrop/assoc.so
 lib/eggdrop/blowfish.so
 lib/eggdrop/channels.so
@@ -97,8 +96,10 @@ share/eggdrop/scripts/userinfo.tcl
 share/eggdrop/scripts/weed
 share/eggdrop/tcl-commands.doc
 share/eggdrop/tricks
+share/examples/eggdrop/eggdrop.conf
 @comment The directory does not exist for NOPIC, so don't issue an error.
 @unexec rmdir %D/lib/eggdrop 2>/dev/null || ${TRUE}
+@dirrm share/examples/eggdrop
 @dirrm share/eggdrop/help/set
 @dirrm share/eggdrop/help/msg
 @dirrm share/eggdrop/help
