@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/07/22 04:14:37 martti Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/28 20:05:23 xtraeme Exp $
 #
 
 DISTNAME=	tinyproxy-1.5.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tinyproxy/}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://tinyproxy.sourceforge.net/
 COMMENT=	Lightweight HTTP/SSL proxy
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/09 10:29:57 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/28 20:05:13 xtraeme Exp $
 #
 
 DISTNAME=	openal-20030125
@@ -9,7 +9,7 @@ MASTER_SITES=	http://math.smsu.edu/~erik/files/fbsd/ \
 		http://www.smluc.org/~erik/ \
 		http://csc.smsu.edu/~greenwald/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.openal.org/
 COMMENT=	3D positional spatialized sound library
 

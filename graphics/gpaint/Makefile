@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/13 13:52:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/28 20:05:18 xtraeme Exp $
 #
 
 DISTNAME=	gpaint-0.2
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpaint/}
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://gpaint.sourceforge.net/
 COMMENT=	Simple, easy-to-use paint program for GNOME
 
