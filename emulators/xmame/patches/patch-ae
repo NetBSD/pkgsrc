@@ -1,34 +1,23 @@
-$NetBSD: patch-ae,v 1.15 2002/01/06 09:36:45 kristerw Exp $
---- doc/xmamerc.dist.orig	Wed Jan  2 03:45:53 2002
-+++ doc/xmamerc.dist	Sun Jan  6 09:44:30 2002
-@@ -47,10 +47,6 @@
- 
- ### XFree86 DGA Related ###
- 
--### Video Mode Selection Related ###
--keepaspect              1
--displayaspectratio      1.330000
--
- ### X11-input related ###
- grabmouse               0
- winkeys                 0
-@@ -70,20 +66,19 @@
+$NetBSD: patch-ae,v 1.16 2002/12/02 00:14:34 kristerw Exp $
+--- doc/xmamerc.dist.orig	Fri Nov 29 01:45:12 2002
++++ doc/xmamerc.dist	Mon Dec  2 00:42:16 2002
+@@ -69,20 +69,19 @@
  mouse                   1
  
  ### Fileio Related ###
--rompath                 /usr/games/lib/xmame
--spooldir                /usr/games/lib/xmame
+-rompath                 /usr/games/lib/xmame/roms
+-hiscore_directory       /usr/games/lib/xmame/hiscore
 +rompath                 @ROMPATH@
-+spooldir                @SPOOLDIR@
- screenshotdir           .
--cheatfile               /usr/games/lib/xmame/cheat.dat
--hiscorefile             /usr/games/lib/xmame/hiscore.dat
--historyfile             /usr/games/lib/xmame/history.dat
--mameinfofile            /usr/games/lib/xmame/mameinfo.dat
-+cheatfile               @SPOOLDIR@/cheat.dat
-+hiscorefile             @SPOOLDIR@/hiscore.dat
-+historyfile             @SPOOLDIR@/history.dat
-+mameinfofile            @SPOOLDIR@/mameinfo.dat
++hiscore_directory       @SPOOLDIR@/hiscore
+ snapshot_directory      .
+-cheat_file              /usr/games/lib/xmame/cheat.dat
+-hiscore_file            /usr/games/lib/xmame/hiscore.dat
+-history_file            /usr/games/lib/xmame/history.dat
+-mameinfo_fie            /usr/games/lib/xmame/mameinfo.dat
++cheat_file              @SPOOLDIR@/cheat.dat
++hiscore_file            @SPOOLDIR@/hiscore.dat
++history_file            @SPOOLDIR@/history.dat
++mameinfo_file           @SPOOLDIR@/mameinfo.dat
  
  ### Mame Related ###
  defaultgame             pacman
