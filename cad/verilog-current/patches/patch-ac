@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1 2001/03/31 00:00:35 dmcmahill Exp $
+
+--- tgt-vvp/vvp_scope.c.orig	Tue Mar 20 20:49:43 2001
++++ tgt-vvp/vvp_scope.c	Fri Mar 30 09:54:01 2001
+@@ -51,5 +51,5 @@
+       }
+ 
+-      ivl_scope_children(net, draw_scope, net);
++      ivl_scope_children(net, (ivl_scope_f *) draw_scope, net);
+       return 0;
+ }
