@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2003/06/27 18:10:15 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.19 2003/08/27 10:58:17 wiz Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -190,6 +190,9 @@ include/gtk-2.0/gtk/gtkwindow.h
 lib/gtk-2.0/2.2.0/immodules/im-am-et.a
 lib/gtk-2.0/2.2.0/immodules/im-am-et.la
 lib/gtk-2.0/2.2.0/immodules/im-am-et.so
+lib/gtk-2.0/2.2.0/immodules/im-cedilla.a
+lib/gtk-2.0/2.2.0/immodules/im-cedilla.la
+lib/gtk-2.0/2.2.0/immodules/im-cedilla.so
 lib/gtk-2.0/2.2.0/immodules/im-cyrillic-translit.a
 lib/gtk-2.0/2.2.0/immodules/im-cyrillic-translit.la
 lib/gtk-2.0/2.2.0/immodules/im-cyrillic-translit.so
@@ -261,22 +264,22 @@ lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.la
 lib/libgdk-x11-2.0.so
 lib/libgdk-x11-2.0.so.200
-lib/libgdk-x11-2.0.so.200.2
+lib/libgdk-x11-2.0.so.200.3
 lib/libgdk_pixbuf-2.0.a
 lib/libgdk_pixbuf-2.0.la
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.200
-lib/libgdk_pixbuf-2.0.so.200.2
+lib/libgdk_pixbuf-2.0.so.200.3
 lib/libgdk_pixbuf_xlib-2.0.a
 lib/libgdk_pixbuf_xlib-2.0.la
 lib/libgdk_pixbuf_xlib-2.0.so
 lib/libgdk_pixbuf_xlib-2.0.so.200
-lib/libgdk_pixbuf_xlib-2.0.so.200.2
+lib/libgdk_pixbuf_xlib-2.0.so.200.3
 lib/libgtk-x11-2.0.a
 lib/libgtk-x11-2.0.la
 lib/libgtk-x11-2.0.so
 lib/libgtk-x11-2.0.so.200
-lib/libgtk-x11-2.0.so.200.2
+lib/libgtk-x11-2.0.so.200.3
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
@@ -310,6 +313,7 @@ share/doc/html/gdk-pixbuf/gdk-pixbuf.devhelp
 share/doc/html/gdk-pixbuf/home.png
 share/doc/html/gdk-pixbuf/index.html
 share/doc/html/gdk-pixbuf/index.sgml
+share/doc/html/gdk-pixbuf/ix01.html
 share/doc/html/gdk-pixbuf/left.png
 share/doc/html/gdk-pixbuf/license.html
 share/doc/html/gdk-pixbuf/right.png
@@ -380,6 +384,7 @@ share/doc/html/gdk/icon.png
 share/doc/html/gdk/index.html
 share/doc/html/gdk/index.sgml
 share/doc/html/gdk/iron_cross.png
+share/doc/html/gdk/ix01.html
 share/doc/html/gdk/left.png
 share/doc/html/gdk/left_ptr.png
 share/doc/html/gdk/left_side.png
@@ -602,6 +607,7 @@ share/doc/html/gtk/gtkobjects.html
 share/doc/html/gtk/home.png
 share/doc/html/gtk/index.html
 share/doc/html/gtk/index.sgml
+share/doc/html/gtk/ix01.html
 share/doc/html/gtk/left.png
 share/doc/html/gtk/right.png
 share/doc/html/gtk/stock_add_24.png
@@ -707,6 +713,7 @@ share/gtk-2.0/demo/stock_browser.c
 share/gtk-2.0/demo/textview.c
 share/gtk-2.0/demo/tree_store.c
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gtk20.mo
@@ -731,6 +738,7 @@ ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ia/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtk20.mo
@@ -740,6 +748,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gtk20.mo
@@ -779,10 +788,10 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @exec ${MKDIR} %D/lib/gtk-2.0/modules 2>/dev/null || ${TRUE}
 @dirrm lib/gtk-2.0/modules
 @dirrm lib/gtk-2.0/include
+@exec ${MKDIR} %D/lib/gtk-2.0/engines 2>/dev/null || ${TRUE}
+@dirrm lib/gtk-2.0/engines
 @dirrm lib/gtk-2.0/2.2.0/loaders
 @dirrm lib/gtk-2.0/2.2.0/immodules
-@exec ${MKDIR} %D/lib/gtk-2.0/2.2.0/engines 2>/dev/null || ${TRUE}
-@dirrm lib/gtk-2.0/2.2.0/engines
 @dirrm lib/gtk-2.0/2.2.0
 @dirrm lib/gtk-2.0
 @dirrm include/gtk-2.0/gtk
