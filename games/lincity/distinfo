@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/03/02 16:43:50 adam Exp $
+$NetBSD: distinfo,v 1.6 2004/11/26 10:04:56 adam Exp $
 
-SHA1 (lincity-1.12.0.tar.gz) = 3fb4ca7923098598f3405b1908b34ed4f2dbc3b3
-Size (lincity-1.12.0.tar.gz) = 772216 bytes
+SHA1 (lincity-1.12.1.tar.gz) = 280375273f6e741d707dc8e11fdedb160d230c95
+Size (lincity-1.12.1.tar.gz) = 795709 bytes
