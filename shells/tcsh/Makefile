@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 1998/10/03 07:06:23 kim Exp $
+# $NetBSD: Makefile,v 1.15 1998/11/13 12:31:15 agc Exp $
 #
 
-DISTNAME=	tcsh-6.08.00
-DISTFILES=	tcsh-6.08.tar.gz
+DISTNAME=	tcsh-6.08
+PKGNAME=	tcsh-6.08.00
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 		ftp://ftp.gw.com/pub/unix/tcsh/ \
@@ -10,18 +10,20 @@ MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 
 MAINTAINER=	kim@tac.nyc.ny.us
 
+WRKSRC=		${WRKDIR}/tcsh-6.08.00
+
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all catalogs
 INSTALL_TARGET=	install install.man
 
 NLSDIR=		share/nls
-PLIST_SRC=	${PKGDIR}/PLIST ${WRKSRC}/PLIST.nls
+PLIST_SRC=	${WRKDIR}/PLIST-src
 
 post-install:
 	@${ECHO} "Installing message catalogues"
 	@${INSTALL_DATA} ${WRKSRC}/tcsh.C.cat ${PREFIX}/${NLSDIR}/C/tcsh.cat
-	@-${RM} -f ${WRKSRC}/PLIST.nls
-	@${ECHO} ${NLSDIR}/C/tcsh.cat > ${WRKSRC}/PLIST.nls
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	@${ECHO} ${NLSDIR}/C/tcsh.cat >> ${PLIST_SRC}
 	@for i in 						\
 	    french:ISO_8859-1:fr:BE:CA:CH:FR			\
 	    german:ISO_8859-1:de:AT:CH:DE			\
@@ -51,7 +53,7 @@ post-install:
 		    ${LN} -f ${PREFIX}/$${o}/tcsh.cat		\
 			${PREFIX}/$${d};			\
 		fi;						\
-		${ECHO} $${d}/tcsh.cat >> ${WRKSRC}/PLIST.nls;	\
+		${ECHO} $${d}/tcsh.cat >> ${PLIST_SRC};		\
 	    done;						\
 	done
 	@${ECHO} "updating /etc/shells";			\
