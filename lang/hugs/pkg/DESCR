@@ -17,6 +17,3 @@ The Nottingham and Yale Haskell interpreter and programming environment.
    can move from module to module to test different portions of a
    program).  However, being an interpreter, it does not nearly match
    the run-time performance of, for example, GHC or HBC.
-
-   We keep the latest information about Hugs (including a known bug
-   list and porting information) at http://www.haskell.org/hugs.
