@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.3 2001/06/14 14:55:48 skrll Exp $
+$NetBSD: patch-ag,v 1.4 2001/10/26 07:47:43 skrll Exp $
 
 --- ltcf-cxx.sh.orig	Wed May 23 05:05:06 2001
 +++ ltcf-cxx.sh
@@ -23,7 +23,7 @@ $NetBSD: patch-ag,v 1.3 2001/06/14 14:55:48 skrll Exp $
 +      hardcode_shlibpathvar_var=no
 +    fi
 +    # Workaround for some pre-1.5 ELF toolchains
-+    output_verbose_link_cmds='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | egrep "\-L" | sed -e "s/-lgcc -lc -lgcc//"'
++    output_verbose_link_cmds='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | egrep conftest.$objext | sed -e "s/-lgcc -lc -lgcc//"'
      ;;
    osf3*)
      if test "$with_gcc" = yes && test "$with_gnu_ld" = no; then
