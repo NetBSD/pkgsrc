@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6726 2004/07/29 15:28:21 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6727 2004/07/29 18:16:52 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3641,3 +3641,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed openldap1 [xtraeme 2004-07-29]
 	Updated postfix to 2.1.4 [martti 2004-07-29]
 	Removed www500gw [xtraeme 2004-07-29]
+	Updated cyrus-imapd22 to 2.2.7nb1 [recht 2004-07-29]
