@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:00 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/31 15:44:29 jlam Exp $
 #
 
 DISTNAME=       jde-2.2.7.1
@@ -33,7 +33,6 @@ BUILD_ENV+=     LISPDIR=${LISPDIR}
 PLIST_SUBST+=   LISPDIR=${LISPDIR}
 
 NO_CONFIGURE=   # set
-USE_JAVA=       yes
 
 WRKSRC=         ${WRKDIR}/${DISTNAME}/lisp
 MAKEFILE=       makefile
@@ -43,4 +42,5 @@ do-install:
 	cd ${WRKDIR}/${DISTNAME} ; tar cf - . | \
 		( cd ${PREFIX}/${LISPDIR} ; tar xf - )
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

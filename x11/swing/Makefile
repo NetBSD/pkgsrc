@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/07/29 22:23:30 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/12/31 15:44:31 jlam Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -74,4 +74,5 @@ do-install:
 	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/doc/java/swing \
 		${PREFIX}/share/examples/java/swing
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

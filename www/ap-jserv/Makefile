@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/10/10 01:01:12 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2002/12/31 15:44:30 jlam Exp $
 
 DISTNAME=	ApacheJServ-1.1.2
 PKGNAME=	ap-jserv-1.1.2
@@ -14,17 +14,18 @@ DEPENDS+=	{apache-1.3.9*,apache-1.3.[1-9][0-9]*,apache6-1.3.9*,apache6-1.3.[1-9]
 DEPENDS+=	jsdk-2.0:../../www/jsdk20
 USE_PERL5=	build	# for "apxs"
 
-.include "../../mk/bsd.prefs.mk"
-
-USE_JAVA=	yes
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/src/scripts/build/unix/ltconfig
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-apxs=${LOCALBASE}/sbin/apxs --with-jdk-home=${PKG_JAVA_HOME} \
-	--with-JSDK=${PREFIX}/lib/java/jsdk.jar --with-logdir=/var/log/httpd \
-	--with-servlets=${LOCALBASE}/share/httpd/servlets -enable-EAPI
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-apxs=${LOCALBASE}/sbin/apxs
+CONFIGURE_ARGS+=	--with-jdk-home=${PKG_JAVA_HOME}
+CONFIGURE_ARGS+=	--with-JSDK=${PREFIX}/lib/java/jsdk.jar
+CONFIGURE_ARGS+=	--with-logdir=/var/log/httpd
+CONFIGURE_ARGS+=	--with-servlets=${LOCALBASE}/share/httpd/servlets
+CONFIGURE_ARGS+=	--enable-EAPI
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
 
 JSDK_HOME=	${PKG_JAVA_HOME}/jsdk
