@@ -1,0 +1,6 @@
+FOP is the world's first print formatter driven by XSL formatting
+objects. It is a Java 1.1 application that reads a formatting object
+tree and then turns it into a PDF document. The formatting object
+tree, can be in the form of an XML document (output by an XSLT engine
+like XT or Xalan) or can be passed in memory as a DOM Document or (in
+the case of XT) SAX events.
