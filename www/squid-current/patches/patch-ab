@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/10/09 17:49:20 kim Exp $
+
+--- scripts/Makefile.in.orig	Sat May  4 00:56:18 1996
++++ scripts/Makefile.in	Sat May 23 21:36:03 1998
+@@ -29,8 +29,8 @@
+ 		echo "mkdir $(bindir)"; \
+ 		mkdir $(bindir); \
+ 	fi
+-	$(INSTALL_BIN) RunCache $(bindir)
+-	$(INSTALL_BIN) RunAccel $(bindir)
++	$(INSTALL_SCRIPT) RunCache $(bindir)
++	$(INSTALL_SCRIPT) RunAccel $(bindir)
+ 
+ clean:
+ 
