@@ -1,0 +1,5 @@
+ruby-tcpwrap -- TCP wrappers library for Ruby.
+
+
+Author:	Shugo Maeda <shugo@ruby-lang.org>
+WWW:	http://www.ruby-lang.org/en/raa-list.rhtml?name=libwrap-ruby
