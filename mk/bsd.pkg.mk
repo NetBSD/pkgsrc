@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.118 1998/07/14 15:53:54 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.119 1998/07/14 16:48:48 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1114,6 +1114,10 @@ _PORT_USE: .USE
 			;;						\
 		*)							\
 			${ECHO_MSG} "No shared libraries for ${MACHINE_ARCH}";	\
+			for so in $$sos; do				\
+				${SED} -e "s|^$$so$$|@comment No shared objects - &|" ${PLIST} > ${PLIST}.tmp && \
+					${MV} ${PLIST}.tmp ${PLIST};	\
+			done;						\
 			;;						\
 		esac;							\
 	fi)
