@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.43 2002/10/22 22:54:09 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.44 2002/10/23 19:07:56 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -189,9 +189,7 @@ _LT_ARCHIVE_TRANSFORM=							\
 #                           ${LOCALBASE} or ${X11PREFIX}
 #
 # BUILDLINK_FILES.<pkg>     files relative to ${BUILDLINK_PREFIX.<pkg>}
-#                           to be symlinked into ${BUILDLINK_DIR};
-#                           libtool archive files are automatically
-#                           filtered out and not linked
+#                           to be symlinked into ${BUILDLINK_DIR}
 #
 # BUILDLINK_FILES_CMD.<pkg> shell pipeline that outputs to stdout a list
 #                           of files relative to ${BUILDLINK_PREFIX.<pkg>};
