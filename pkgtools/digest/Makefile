@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/11/17 09:37:22 cjep Exp $
+# $NetBSD: Makefile,v 1.30 2002/12/21 04:06:10 schmonz Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -12,44 +12,22 @@ MAINTAINER=	agc@netbsd.org
 HOMEPAGE=	http://www.netbsd.org/Documentation/software/packages.html
 COMMENT=	Message digest wrapper utility
 
-VERSION=	20010807
+USE_BUILDLINK2=		no
 
-USE_BUILDLINK2=	# defined
+GNU_CONFIGURE=		# defined
 
-EXTRACT_ONLY=   # empty
-WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	# defined
-NO_PATCH=	# defined
-NO_CONFIGURE=	# defined
-MANCOMPRESSED_IF_MANZ=	YES
-BUILD_DEFS+=	MANINSTALL
-
-MAKE_ENV+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
-MAKE_ENV+=	VERSION="${VERSION}"
+NO_CHECKSUM=		# defined
+NO_PATCH=		# defined
+MANCOMPRESSED_IF_MANZ=	# defined
+BUILD_DEFS+=		MANINSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-MAKEFLAGS+=	NETBSD_COMPATIBLE=YES
-MANINSTALL=
-.elif ${OPSYS} == "Linux" || ${OPSYS} == "OpenBSD"
-CPPFLAGS+=-D__COPYRIGHT\(x\)=\; -D__RCSID\(x\)=\;
-.endif
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux" || ${OPSYS} == "OpenBSD"
-PLIST=	${WRKSRC}/.PLIST
-post-install:
-	${GREP} -v '^man/cat' ${PKGDIR}/PLIST > ${PLIST}
-.endif
+VERSION!=	${AWK} -F "'" '/^PACKAGE_VERSION=/ {print $$2}' \
+		${FILESDIR}/configure
 
-post-extract:
-	@for FILE in Makefile regress.sh digest.c digest.1		\
-		md5c.c md5.h md5hl.c					\
-		rmd160.c rmd160.h rmd160hl.c				\
-		sha1.c sha1.h sha1hl.c					\
-		sha2.c sha2.h sha2hl.c					\
-	; do								\
-		${CP} ${FILESDIR}/$$FILE ${WRKSRC};			\
-	done
+do-extract:
+	@${CP} -Rp ${FILESDIR} ${WRKSRC}
 
 test:
 	@${ECHO} "No news is good news"
