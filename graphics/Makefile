@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.339 2004/10/25 20:02:36 minskim Exp $
+# $NetBSD: Makefile,v 1.340 2004/10/31 21:46:40 jdolecek Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -193,8 +193,8 @@ SUBDIR+=	p5-SWF-File
 SUBDIR+=	pgraf
 SUBDIR+=	photopc
 SUBDIR+=	php-jpgraph
-SUBDIR+=	php4-exif
-SUBDIR+=	php4-gd
+SUBDIR+=	php-exif
+SUBDIR+=	php-gd
 SUBDIR+=	phpsview
 SUBDIR+=	pixieplus
 SUBDIR+=	pixmap
