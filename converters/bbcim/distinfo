@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:35:07 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:28:00 agc Exp $
 
-MD5 (bbcim095-5.zip) = 5fc16f632d20d69eb48475ab834ceef8
+SHA1 (bbcim095-5.zip) = ebb92acbc0de8c4f5b5dfdf5a155332c2a9a00b9
+Size (bbcim095-5.zip) = 35547 bytes
 SHA1 (patch-aa) = 156692e86c9f36964ff8d2f707d66f9a9953d76a
 SHA1 (patch-ab) = 850858e87d2467d3f1631447e892b97c218b3e05
 SHA1 (patch-ac) = 481e1b7ba8cf9043977e71f7aaa5bdff95e7b7c3

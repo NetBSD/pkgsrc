@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:35:19 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:28:03 agc Exp $
 
-MD5 (uudeview-0.5.13.tar.gz) = fda32e2de4a6b92eb56f1e286ae3815a
+SHA1 (uudeview-0.5.13.tar.gz) = 889bbadadede2525bfb90f21863dc4a879b97287
+Size (uudeview-0.5.13.tar.gz) = 259627 bytes
 SHA1 (patch-aa) = 87c644df382fd36c08a999741cb8a39bfa46b3c0
 SHA1 (patch-ab) = bdd62a84d0f62c697dd4440df861c343ffeb683a
 SHA1 (patch-ac) = a095ee53382f9daec7a32319b1d13ff0f46c0710

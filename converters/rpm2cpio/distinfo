@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:35:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 16:28:02 agc Exp $
 
-MD5 (rpm2cpio) = 60e416bc9a91870944a9fc2a6d706478
+SHA1 (rpm2cpio) = 964de1cd8d3a7483bb7835cd325e2f2cef943e6c
+Size (rpm2cpio) = 2691 bytes
