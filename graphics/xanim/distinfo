@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/05/31 00:28:05 itohy Exp $
+$NetBSD: distinfo,v 1.8 2002/09/25 12:04:06 jlam Exp $
 
 SHA1 (xanim2801.tar.gz) = 1966880880c3779d02199fbcd1acb771bc57f754
 Size (xanim2801.tar.gz) = 441250 bytes
@@ -30,5 +30,5 @@ SHA1 (xa2.0_cvid_linuxPPC.o.Z) = d6736d7fe65008293863c31b8f4c28e13152afda
 Size (xa2.0_cvid_linuxPPC.o.Z) = 5192 bytes
 SHA1 (xa1.0_cyuv_linuxPPC.o.Z) = b9af24646b46d94ccfb5e042ca20f32006a8b0af
 Size (xa1.0_cyuv_linuxPPC.o.Z) = 1513 bytes
-SHA1 (patch-ab) = 44ec064497c46a6f9e69b22c9cc1aaa13b6cec25
-SHA1 (patch-ae) = 230f52e95997ba72d36baa8f4d5cd5a5e5500f9a
+SHA1 (patch-ab) = b55ebcb351152de078b7dd167b82a59cf5f61eb1
+SHA1 (patch-ae) = 6023e76bc0471a0810b0789cd24355c06eac02b8
