@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.4 2003/11/03 00:56:26 heinz Exp $
+$NetBSD: patch-ak,v 1.5 2003/12/27 19:16:04 heinz Exp $
 
---- lib/Mail/SpamAssassin/DBBasedAddrList.pm.orig	Sat Mar 29 00:48:07 2003
+--- lib/Mail/SpamAssassin/DBBasedAddrList.pm.orig	Wed Nov 12 08:31:18 2003
 +++ lib/Mail/SpamAssassin/DBBasedAddrList.pm
 @@ -5,7 +5,8 @@ use bytes;
  use Fcntl;

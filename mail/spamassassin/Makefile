@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.36 2003/12/01 16:04:40 heinz Exp $
+# $NetBSD: Makefile,v 1.37 2003/12/27 19:16:04 heinz Exp $
 
-DISTNAME=	Mail-SpamAssassin-2.60
-PKGNAME=	spamassassin-2.60
-PKGREVISION=	2
+DISTNAME=	Mail-SpamAssassin-${PKGVERSION}
+PKGNAME=	spamassassin-2.61
+PKGREVISION=	# empty
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}			\
 		http://www.spamassassin.org/released/		\
 		http://eu.spamassassin.org/released/
 
-MAINTAINER=	heinz-sa@NetBSD.org
+MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://www.spamassassin.org/
 COMMENT=	Mail filter to identify spam
 
@@ -150,7 +150,7 @@ post-install:
 	@${TEST} -r ${PLIST_ADD} && ${RM} ${PLIST_ADD} ; :
 	@ # ninja image is in the static PLIST
 	@${INSTALL_DATA} ${WRKSRC}/ninjabutton.png ${HTMLDIR}/
-	@${INSTALL_DATA} ${FILESDIR}/2.60_change_summary ${DOCDIR}/
+	@${INSTALL_DATA} ${FILESDIR}/change_summary.txt ${DOCDIR}/
 .for f in CONTRIB_CERT COPYRIGHT INSTALL License README TRADEMARK USAGE	\
 		sample-nonspam.txt sample-spam.txt spamd/README.spamd	\
 		spamd/README.spamd-vpopmail

@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2003/12/02 11:40:20 grant Exp $
+$NetBSD: MESSAGE,v 1.8 2003/12/27 19:16:04 heinz Exp $
 
-SA 2.60 uses a new format for the Bayes database. *Before* deinstalling
+SA 2.6x uses a new format for the Bayes database. *Before* deinstalling
 SA 2.5x, make sure you ran 'sa-learn --rebuild' for every Bayes database.
 
 If you're running Razor please use at least p5-razor-agents-2.22nb2
