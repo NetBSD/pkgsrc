@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/11/30 01:48:43 jtb Exp $
+# $NetBSD: Makefile,v 1.35 2000/12/05 00:09:34 jtb Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -19,6 +19,7 @@
     SUBDIR += gsl
     SUBDIR += libffm
     SUBDIR += mcsim
+    SUBDIR += meschach
     SUBDIR += octave
     SUBDIR += odepack
     SUBDIR += otter
