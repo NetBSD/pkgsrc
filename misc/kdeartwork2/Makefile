@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/27 09:30:01 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/27 09:41:27 skrll Exp $
 
 DISTNAME=	kdeartwork-2.2.2
-COMMENT=	Art work for the KDE integrated X11 desktop
+COMMENT=	Artwork for the KDE integrated X11 desktop
 
 .include "../../x11/kde2/Makefile.kde2"
 
