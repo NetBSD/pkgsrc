@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2370 2003/05/30 23:57:31 seb Exp $
+$NetBSD: CHANGES,v 1.2371 2003/05/31 02:49:37 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2240,3 +2240,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gmc to 4.5.51nb4 [jmmv 2003-05-30]
 	Updated gnome-libs to 1.4.1.4nb5 [jmmv 2003-05-30]
 	Updated cssc to 0.15a.0 [seb 2003-05-30]
+	Updated etach to 1.2.9 [jschauma 2003-05-30]
