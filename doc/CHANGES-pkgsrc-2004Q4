@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.101 2005/03/09 19:29:53 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.102 2005/03/10 12:37:23 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -213,3 +213,5 @@ Pullup ticket 335 - requested by Takahiro Kambe
 security fix for squid
 Pullup ticket 339 - requested by Shin'ichiro TAYA
 security fix for firefox
+Pullup ticket 347 - requested by Matthias Scheler
+security fix for ethereal
