@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6262 2004/06/21 14:17:16 taya Exp $
+$NetBSD: CHANGES,v 1.6263 2004/06/21 15:21:46 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3002,3 +3002,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated html2wml to 0.4.8.2nb2 [wiz 2004-06-21]
 	Updated mozilla to 1.7 [taya 2004-06-21]
 	Updated mozilla-gtk2 to 1.7 [taya 2004-06-21]
+	Updated cyrus-imapd22 to 2.2.6 [recht 2004-06-21]
+	Updated sylpheed-gtk2 to 0.9.12 [recht 2004-06-21]
