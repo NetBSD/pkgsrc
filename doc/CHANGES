@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5848 2004/05/06 19:21:36 wiz Exp $
+$NetBSD: CHANGES,v 1.5849 2004/05/06 22:37:35 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2387,3 +2387,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wine to 20040505 [adam 2004-05-06]
 	Updated scrollkeeper to 0.3.14nb3 [minskim 2004-05-06]
 	Updated lynx to 2.5.8.2 [wiz 2004-05-06]
+	Updated exim3 to 3.36nb1 [reed 2004-05-06]
