@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2000/07/16 00:52:36 thorpej Exp $
+# $NetBSD: Makefile,v 1.126 2000/07/16 01:05:02 thorpej Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -88,6 +88,7 @@
     SUBDIR += p5-Devel-DProf
     SUBDIR += p5-Devel-SmallProf
     SUBDIR += p5-Devel-Symdump
+    SUBDIR += p5-Expect
     SUBDIR += p5-File-PathConvert
     SUBDIR += p5-FileKGlob
     SUBDIR += p5-IO-stringy
