@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/22 08:36:04 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/23 10:30:47 simonb Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -27,6 +27,7 @@ POSE_BUILD_DIR=	${WRKSRC}/BuildUnix
 POSE_SHARE_DIR=	${PREFIX}/share/palmosemulator
 POSE_SKINS_DIR=	${POSE_SHARE_DIR}/skins
 WRKSRC_SKINS=	${WRKDIR}/Skins_v1.9
+CPPFLAGS+=	-DFLTK_1_0_COMPAT
 
 CONFIGURE_DIRS=	${POSE_BUILD_DIR}
 BUILD_DIRS=	${POSE_BUILD_DIR}
