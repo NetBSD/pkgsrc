@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2002/08/25 21:52:03 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2002/10/20 02:19:42 shell Exp $
 
-DISTNAME=	curl-7.9.7
+DISTNAME=	curl-7.10.1
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/ \
@@ -31,6 +31,6 @@ post-install:
 	done
 	${SED} '/php/d' ${WRKSRC}/docs/examples/README >		\
 		${PREFIX}/share/examples/curl/README
-	
+
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
