@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/07/29 21:15:46 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/08/18 08:38:51 agc Exp $
 
 DISTNAME=		inn-2.2
 CATEGORIES=		news
@@ -31,6 +31,8 @@ CONFIGURE_ENV+=		_PATH_PERL=${LOCALBASE}/bin/perl
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
+
+BUILD_DEFS+=		INN_DATA_DIR
 
 post-build:
 	${SED} -e 's#@@INN_DATA_DIR@@#${INN_DATA_DIR}#g' \
