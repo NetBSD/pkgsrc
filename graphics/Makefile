@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 1999/05/02 17:53:38 tsarna Exp $
+# $NetBSD: Makefile,v 1.42 1999/05/17 12:55:23 tron Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -40,6 +40,7 @@
 #    SUBDIR += mpeg_stat
 #    SUBDIR += mpegedit
 #    SUBDIR += mplex
+    SUBDIR += mtv
     SUBDIR += netpbm
 #    SUBDIR += p5-GD
 #    SUBDIR += p5-Image-Size
