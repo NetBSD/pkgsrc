@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/04/05 04:37:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 1999/06/28 11:54:50 agc Exp $
 #
 
 DISTNAME=	sdr-2.5.8
@@ -15,10 +15,8 @@ WRKSRC=		${WRKDIR}/sdr
 USE_GMAKE=	yes
 USE_X11BASE=	yes
 
-_INTTYPES!=	if [ -e /usr/include/sys/inttypes.h ]; then echo "Exists"; else echo "No go"; fi
-
-.if (${_INTTYPES} == "Exists")
-EXTRA_FLAGS+= -DHAVE_SYS_INTTYPES_H
+.if exists(/usr/include/sys/inttypes.h)
+EXTRA_FLAGS+=	-DHAVE_SYS_INTTYPES_H
 MAKE_FLAGS+=	EXTRA_FLAGS="${EXTRA_FLAGS}"
 .endif
 
