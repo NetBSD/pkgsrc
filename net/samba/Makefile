@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2004/10/03 00:17:58 tv Exp $
+# $NetBSD: Makefile,v 1.131 2004/11/06 11:07:17 jmmv Exp $
 
 DISTNAME=		samba-3.0.7
-PKGREVISION=	1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/old-versions/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/old-versions/ \
@@ -145,6 +145,9 @@ post-install:
 	cd ${WRKSRC}/pam_smbpass/samples; for file in [a-z]*; do	\
 		${INSTALL_DATA} $${file} ${EGDIR}/pam_smbpass/$${file};	\
 	done
+.endif
+.if !empty(PKG_OPTIONS:Mcups)
+	cd ${PREFIX}/libexec/cups/backend && ${LN} -s ../../../bin/smbspool smb
 .endif
 
 .include "../../mk/bsd.pkg.mk"
