@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.11 2005/01/13 01:31:53 xtraeme Exp $
+
+--- src/ylocale.cc.orig	2004-08-16 06:58:31.000000000 +0200
++++ src/ylocale.cc	2005-01-13 02:25:55.000000000 +0100
+@@ -15,6 +15,7 @@
+ 
+ #include "intl.h"
+ #include <string.h>
++#include <sys/param.h> /* __NetBSD_Version__ */
+ 
+ #ifdef CONFIG_I18N
+ #include <errno.h>
+@@ -152,7 +153,11 @@
+     char * inbuf((char *) lStr), * outbuf((char *) uStr);
+     size_t inlen(lLen), outlen(4 * lLen);
+ 
++#if __NetBSD_Version__ >= 200000000
++    if (0 > (int) iconv(instance->toUnicode, (const char **)&inbuf, &inlen, &outbuf, &outlen))
++#else
+     if (0 > (int) iconv(instance->toUnicode, &inbuf, &inlen, &outbuf, &outlen))
++#endif
+ 	warn(_("Invalid multibyte string \"%s\": %s"), lStr, strerror(errno));
+ 
+     *((YUChar *) outbuf) = 0;
