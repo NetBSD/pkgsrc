@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/08/02 05:22:57 mrg Exp $
+# $NetBSD: Makefile,v 1.8 2003/08/31 21:58:23 mycroft Exp $
 
-DISTNAME=	mjpegtools-1.6.1
-PKGREVISION=	2
+DISTNAME=	mjpegtools-1.6.1.90
+#PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
@@ -16,7 +16,7 @@ USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/ltmain.sh
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-large-file
