@@ -1,4 +1,8 @@
 Canna is a Kana-Kanji conversion server.
+
+This package just contains the binary for the server; install
+the canna-server package for all files.
+
 Support Mule(Multi-lingal extention Emacs), kinput2 X11 input method,
 cannum front end and some others.
 
