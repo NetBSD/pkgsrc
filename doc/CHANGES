@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1080 2003/01/10 17:55:36 salo Exp $
+$NetBSD: CHANGES,v 1.1081 2003/01/10 19:26:19 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -197,3 +197,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added sarien-0.7.0 [jmmv 2003-01-10]
 	Updated autotrace to 0.31.1 [jmmv 2003-01-10]
 	Updated id3ed to 1.10.4 [salo 2003-01-10]
+	Added xmlcatmgr-0.1 [jmmv 2003-01-10]
