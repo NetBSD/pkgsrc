@@ -1,0 +1,17 @@
+$NetBSD: patch-ak,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+
+--- perl-shared/Makefile.PL.orig	Wed Aug 25 07:26:44 1999
++++ perl-shared/Makefile.PL	Sat Nov  6 03:06:13 1999
+@@ -9,10 +9,10 @@
+     'NAME'         => 'RRDs',
+     'VERSION_FROM' => 'RRDs.pm', # finds $VERSION
+     'OPTIMIZE'     => '-g',
+-    'INC'          => '-I../src -I../gd1.3',
++    'INC'          => '-I../src -I${PREFIX}/include',
+     # where to look for the necessary libraries 
+     # Perl will figure out which one is valid
+     'depend'	   => {'RRDs.c' => $librrd},
+-    'dynamic_lib'  => {'OTHERLDFLAGS' => "$librrd -lm"},
++    'dynamic_lib'  => {'OTHERLDFLAGS' => "$librrd -lm -lgd -lpng -lcgi -lz"},
+     'realclean'    => {FILES => 't/demo?.rrd t/demo?.gif' }
+ );

@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+
+--- contrib/log2rrd/Makefile.in.ORIG	Sat Oct 30 20:35:34 1999
++++ contrib/log2rrd/Makefile.in	Sat Oct 30 20:37:05 1999
+@@ -77,7 +77,7 @@
+ 
+ EXTRA_DIST = log2rrd.pl.in
+ 
+-contribdir = $(prefix)/contrib/log2rrd
++contribdir = $(prefix)/share/rrdtool/contrib/log2rrd
+ contrib_DATA = README
+ contrib_SCRIPTS = log2rrd.pl
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs

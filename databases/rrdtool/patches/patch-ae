@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+
+--- contrib/rrd-file-icon/Makefile.in.ORIG	Sat Oct 30 20:34:47 1999
++++ contrib/rrd-file-icon/Makefile.in	Sat Oct 30 20:35:14 1999
+@@ -76,7 +76,7 @@
+ ZLIB_LIB_DIR = @ZLIB_LIB_DIR@
+ 
+ EXTRA_DIST = rrd.png
+-contribdir = $(prefix)/contrib/rrd-file-icon
++contribdir = $(prefix)/share/rrdtool/contrib/rrd-file-icon
+ contrib_DATA = README       rrd.png
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
+ CONFIG_HEADER = ../../config/config.h
