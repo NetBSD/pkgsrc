@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/12/31 06:59:54 dsainty Exp $
+
+SHA1 (palmosemulator/emulator_src_3.5.tar.gz) = 2debd7690736397d0af41f7b2d482df65391fc65
+Size (palmosemulator/emulator_src_3.5.tar.gz) = 3162363 bytes
+SHA1 (palmosemulator/emulator-skins-19.tar.gz) = 70b0497061d6877a4e3c6a378fa647c64fe3e019
+Size (palmosemulator/emulator-skins-19.tar.gz) = 2443913 bytes
+SHA1 (patch-aa) = eef35ce5c3d91bf56903bb48c0c78bd333591fcc
+SHA1 (patch-ab) = 7019049a50432317283cfe8b57fc042879fddf20
+SHA1 (patch-ac) = c00a821d390ab92b28a01a47e7934eed4261fe6f
+SHA1 (patch-ad) = 71b971e6961134fe179609602b709e7a5ef62605
+SHA1 (patch-ae) = 93ac777942b85b0abf3310c833406b6d24771f39
+SHA1 (patch-af) = 746c83222cd847d6383fe9484ac81366b083ad22
+SHA1 (patch-ag) = 9d4fba5f8bef808b8a00b71484c308da613d8140

@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1.1.1 2002/12/31 06:59:57 dsainty Exp $
+
+Without this patch and with non-preemptive threads, the emulator hangs on the
+first stylus event (mouse click).  Even worse, it hangs with the mouse
+grabbed.  Strategies for reducing the number of calls to yield() may improve
+emulation performance.
+
+--- SrcShared/Hardware/EmCPU68K.cpp.orig	Sun Nov 24 17:47:03 2002
++++ SrcShared/Hardware/EmCPU68K.cpp	Sun Nov 24 17:34:23 2002
+@@ -136,6 +136,7 @@
+ 		if (sleeping || ((++counter & 0x7FFF) == 0))							\
+ 		{																		\
+ 			this->CycleSlowly (sleeping);										\
++			omni_thread::yield();												\
+ 		}																		\
+ 	}																			\
+ }
