@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/25 16:04:07 xtraeme Exp $
+
+--- src/dh-base.c.orig	2003-06-28 23:16:34.000000000 +0200
++++ src/dh-base.c
+@@ -221,9 +221,12 @@ base_init_books (DhBase *base)
+ 	}
+ 	
+ 	/* Insert the books from default gtk-doc install path. */
+-	base_add_books (base, DATADIR "/gtk-doc/html");
+-	base_add_books (base, "/usr/share/gtk-doc/html");
+-	base_add_books (base, DATADIR "/devhelp/books");
++	dir = g_build_filename (DATADIR, "doc", "html", NULL);
++	base_add_books (base, dir);
++	g_free (dir);
++	dir = g_build_filename (g_get_home_dir (), ".devhelp2", "books", NULL);
++	base_add_books (base, dir);
++	g_free (dir);
+ 	dir = g_build_filename (g_get_home_dir (), ".devhelp", "books", NULL);
+ 	base_add_books (base, dir);
+ 	g_free (dir);
