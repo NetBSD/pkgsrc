@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2002/07/28 05:49:29 schmonz Exp $
+$NetBSD: patch-ag,v 1.6 2003/07/28 15:44:12 adam Exp $
 
---- pine/osdep/os-osx.h.orig	Tue Feb  6 19:53:14 2001
-+++ pine/osdep/os-osx.h
-@@ -298,5 +298,6 @@ void free();
+--- pine/osdep/os-osx.h.orig	2003-05-23 18:07:02.000000000 +0200
++++ pine/osdep/os-osx.h	2003-07-28 14:14:03.000000000 +0200
+@@ -310,5 +310,6 @@
  #define MAX_ADDR_EXPN   (1000)  /* Longest expanded addr                    */
  #define MAX_ADDR_FIELD (10000)  /* Longest fully-expanded addr field        */
  
