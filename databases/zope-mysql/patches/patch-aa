@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/19 18:39:25 tsarna Exp $
+
+--- python/Products/ZmySQLDA/db.py.orig	Fri Dec 18 14:54:28 1998
++++ python/Products/ZmySQLDA/db.py	Sat Dec 19 12:02:01 1998
+@@ -97,7 +97,7 @@
+ """Db connection implementation"""
+ __version__='$Revision: 1.1.1.1 $'[11:-2]
+ 
+-import mySQL, regex, sys
++import MySQL, regex, sys
+ from string import strip, split, find, join
+ from time import gmtime, strftime
+ 
+@@ -118,7 +118,7 @@
+         "timestamp": "d", "varchar": "t", "string": "t",
+         }
+ 
+-    Database_Error=mySQL.error
++    Database_Error=MySQL.error
+ 
+     def __init__(self,connection):
+         self.connection=connection
+@@ -132,7 +132,7 @@
+                 if len(dbhost) == 1: db, host = dbhost[0], 'localhost'
+                 else: [db, host] = dbhost
+                 
+-                c=mySQL.connect(host,user,pw)
++                c=MySQL.connect(host,user,pw)
+                 c.selectdb(db)
+                 self.db=c
+                 return
+@@ -161,10 +161,10 @@
+             if not queries: raise 'Query Error', 'empty query'
+             result=()
+             for qs in queries:
+-                c=db.querycursor(qs)
++                c=db.query(qs)
+                 try:
+                     desc=c.fields()
+-                    r=c.fetchmany(max_rows)
++                    r=c.fetchrows()
+                 except: r=None
+                 if not r: continue
+                 if result:
