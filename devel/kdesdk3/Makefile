@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2004/11/02 12:02:36 markd Exp $
+# $NetBSD: Makefile,v 1.30 2004/12/10 06:29:31 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -17,6 +16,10 @@ USE_PERL5=		run
 
 REPLACE_PERL=	cervisia/change_colors.pl \
 		cervisia/move_repositories.pl \
+		kcachegrind/converters/dprof2calltree \
+		kcachegrind/converters/memprof2calltree \
+		kcachegrind/converters/op2calltree \
+		scripts/cvs-clean \
 		scripts/cvs2pack \
 		scripts/cvsblame \
 		scripts/cvscheck \
@@ -25,7 +28,10 @@ REPLACE_PERL=	cervisia/change_colors.pl \
 		scripts/extend_dmalloc \
 		scripts/extractrc \
 		scripts/fixincludes \
+		scripts/fixkdeincludes \
+		scripts/fixuifiles \
 		scripts/includemocs \
+		scripts/kdemangen.pl \
 		scripts/noncvslist
 
 .include "../../mk/bsd.prefs.mk"

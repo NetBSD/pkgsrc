@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/11/18 11:48:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/12/10 06:29:31 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -13,6 +13,7 @@ bin/cvsaskpass
 bin/cvsbackport
 bin/cvsblame
 bin/cvscheck
+bin/cvsforwardport
 bin/cvslastchange
 bin/cvslastlog
 bin/cvsrevertlast
@@ -758,46 +759,46 @@ share/kde/servicetypes/kbabeldict_module.desktop
 share/kde/servicetypes/kbabelfilter.desktop
 share/kde/servicetypes/komparenavigationpart.desktop
 share/kde/servicetypes/kompareviewpart.desktop
-@comment dirrm share/kde/servicetypes
-@comment dirrm share/kde/services
-@comment dirrm share/kde/mimelnk/application
-@comment dirrm share/kde/icons/locolor/32x32/mimetypes
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/mimetypes
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/48x48/apps
-@comment dirrm share/kde/icons/hicolor/32x32/mimetypes
-@comment dirrm share/kde/icons/hicolor/32x32/apps
-@comment dirrm share/kde/icons/hicolor/16x16/mimetypes
-@comment dirrm share/kde/icons/hicolor/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/scalable/mimetypes
-@comment dirrm share/kde/icons/crystalsvg/scalable/apps
-@comment dirrm share/kde/icons/crystalsvg/scalable/actions
-@comment dirrm share/kde/icons/crystalsvg/64x64/mimetypes
-@comment dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment dirrm share/kde/icons/crystalsvg/48x48/mimetypes
-@comment dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment dirrm share/kde/icons/crystalsvg/48x48/actions
-@comment dirrm share/kde/icons/crystalsvg/32x32/mimetypes
-@comment dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment dirrm share/kde/icons/crystalsvg/32x32/actions
-@comment dirrm share/kde/icons/crystalsvg/22x22/mimetypes
-@comment dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment dirrm share/kde/icons/crystalsvg/16x16/mimetypes
-@comment dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment dirrm share/kde/icons/crystalsvg/128x128/mimetypes
-@comment dirrm share/kde/icons/crystalsvg/128x128/apps
-@comment dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/servicetypes
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/mimetypes
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/mimetypes
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/mimetypes
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/umbrello/pics
 @dirrm share/kde/apps/umbrello/headings
 @dirrm share/kde/apps/umbrello
 @dirrm share/kde/apps/kuiviewerpart
 @dirrm share/kde/apps/kuiviewer
-@dirrm share/kde/apps/kstyle/themes
+@comment in kde: @dirrm share/kde/apps/kstyle/themes
 @dirrm share/kde/apps/kompare
-@comment dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcachegrind/icons/hicolor/32x32/actions
 @dirrm share/kde/apps/kcachegrind/icons/hicolor/32x32
 @dirrm share/kde/apps/kcachegrind/icons/hicolor/22x22/actions
@@ -839,19 +840,19 @@ share/kde/servicetypes/kompareviewpart.desktop
 @dirrm share/kde/apps/kapptemplate/appframework
 @dirrm share/kde/apps/kapptemplate/admin
 @dirrm share/kde/apps/kapptemplate
-@comment dirrm share/kde/apps/kabc/formats
+@comment in kde: @dirrm share/kde/apps/kabc/formats
 @dirrm share/kde/apps/cervisiapart
 @dirrm share/kde/apps/cervisia
 @dirrm share/kde/apps/catalogmanager
-@comment dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/apps
 @dirrm share/doc/kde/HTML/en/umbrello
 @dirrm share/doc/kde/HTML/en/kompare
 @dirrm share/doc/kde/HTML/en/kcachegrind
 @dirrm share/doc/kde/HTML/en/kbugbuster
 @dirrm share/doc/kde/HTML/en/kbabel
 @dirrm share/doc/kde/HTML/en/cervisia
-@comment dirrm share/doc/kde/HTML/en
-@comment dirrm share/applications/kde
-@comment dirrm lib/kde3/plugins/styles
-@comment dirrm lib/kde3
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3/plugins/styles
+@comment in kde: @dirrm lib/kde3
 @dirrm include/kbabel
