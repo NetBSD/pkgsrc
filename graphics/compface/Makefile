@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 12:13:17 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/24 15:46:43 grant Exp $
 
 DISTNAME=	compface-1.4
 CATEGORIES=	graphics
@@ -12,6 +12,6 @@ CONFLICTS=	faces-[0-9]*
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 
 .include "../../mk/bsd.pkg.mk"

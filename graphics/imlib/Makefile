@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2004/01/22 11:04:59 jlam Exp $
+# $NetBSD: Makefile,v 1.82 2004/01/24 15:46:43 grant Exp $
 #
 
 DISTNAME=		imlib-1.9.14
@@ -17,7 +17,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/imlib.pc.in
 GNU_CONFIGURE=		yes
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 UNLIMIT_RESOURCES=	datasize
 
 CPPFLAGS+=		-DENABLE_NLS

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile,v 1.38 2004/01/24 15:46:42 grant Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -23,7 +23,7 @@ WRKSRC=			${WRKDIR}/avifile-0.6
 AUTOMAKE_REQD=		1.4
 USE_BUILDLINK2=		YES
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

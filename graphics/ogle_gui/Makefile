@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/23 21:50:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/24 15:46:44 grant Exp $
 
 DISTNAME=	ogle_gui-0.9.2
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	GUI for the Ogle DVD player
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/lib/ogle

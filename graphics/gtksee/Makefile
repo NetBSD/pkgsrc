@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/03 18:49:43 reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/24 15:46:43 grant Exp $
 #
 
 DISTNAME=		gtksee-0.5.2
@@ -15,7 +15,7 @@ BUILDLINK_DEPENDS.gtk?=	gtk+>=1.2.10
 
 GNU_CONFIGURE=		YES
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 

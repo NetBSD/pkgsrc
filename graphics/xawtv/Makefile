@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/22 16:37:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/24 15:46:44 grant Exp $
 #
 
 DISTNAME=	xawtv_3.90
@@ -14,7 +14,7 @@ COMMENT=	TV application for Brooktree 848 compatible cards
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 
 CONFIGURE_ARGS+=	--disable-aalib

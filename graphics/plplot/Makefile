@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/08/07 10:32:23 seb Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/24 15:46:44 grant Exp $
 
 DISTNAME=		plplot-5.2.1
 CATEGORIES=		graphics
@@ -12,7 +12,7 @@ BUILD_DEPENDS+=		m4>=1.4:../../devel/m4
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 USE_FORTRAN=		# defined
 USE_X11=		# defined
 USE_PERL5=		build

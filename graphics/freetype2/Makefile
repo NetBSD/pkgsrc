@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/01/05 11:54:07 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/24 15:46:43 grant Exp $
 #
 
 DISTNAME=	freetype-2.1.5
@@ -20,7 +20,7 @@ COMMENT=	Font rendering engine and library API
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 CONFIGURE_DIRS=		${WRKSRC}/builds/unix
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include

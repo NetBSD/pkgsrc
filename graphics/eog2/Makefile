@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/23 21:50:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/24 15:46:43 grant Exp $
 #
 
 DISTNAME=	eog-2.5.1
@@ -16,7 +16,7 @@ DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_X11=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 
