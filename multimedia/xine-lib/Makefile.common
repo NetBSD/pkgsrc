@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2004/03/11 17:26:02 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/03/28 20:14:22 mycroft Exp $
 #
 
-DISTNAME=		xine-lib-1-rc3a
-PKGNAME=		xine-lib-1rc3a
+DISTNAME=		xine-lib-1-rc3b
+PKGNAME=		xine-lib-1rc3b
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
@@ -16,6 +16,7 @@ PATCHDIR=		${.CURDIR}/../../multimedia/xine-lib/patches
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
+AUTOCONF_REQD=		2.58
 USE_PKGLOCALEDIR=	YES
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
@@ -28,13 +29,19 @@ CONFIGURE_ENV+=		have_libpng="yes"
 CONFIGURE_ENV+=		PNG_CFLAGS="-I${PREFIX}/include"
 CONFIGURE_ENV+=		PNG_LIBS="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lpng"
 
+.include "../../mk/bsd.prefs.mk"
+
 .if !exists(${X11BASE}/lib/libXv.so)
 PLIST_SUBST+=		XV_WORKAROUND="@comment "
 .else
 PLIST_SUBST+=		XV_WORKAROUND=""
 .endif
 
+pre-configure::
+	cd ${WRKSRC} && ${AUTOCONF}
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/autoconf.mk"

@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.2 2004/03/11 17:26:02 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2004/03/28 20:14:22 mycroft Exp $
 
-SHA1 (xine-lib-1-rc3a.tar.gz) = 6ccf01f697693e31f78a51acf2f20d6d24e25586
-Size (xine-lib-1-rc3a.tar.gz) = 6121483 bytes
+SHA1 (xine-lib-1-rc3b.tar.gz) = 0ab8e26526f81480d028cafcf7d83aa48cc5151c
+Size (xine-lib-1-rc3b.tar.gz) = 6422089 bytes
 SHA1 (patch-aa) = b8493cabd3f9d9eb57d414265ea1eac4db71fa08
 SHA1 (patch-ab) = a5205d23d02dff84b0e8a9f850f3833cacc28c5a
 SHA1 (patch-ac) = 7959d6d3599c9debe79b1b4a5749b6af714588a0
-SHA1 (patch-ad) = ed65116acfa1f32a0508338a11567589bc2b4123
+SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
 SHA1 (patch-ae) = cf7486ed50a782fcfb17ad0985e76a7ae09a2938
 SHA1 (patch-af) = 0d2860c863c4121288289b88d46433a94dde120b
-SHA1 (patch-ag) = ebfc011fdef1831caa0f6a7e10a2c77fc2b420fb
+SHA1 (patch-ag) = 23fca3bd89be1f852456d31e46f6449b577c0dad
 SHA1 (patch-ah) = 3f9b23c4a7994259056b73209a9e194db759f06d
 SHA1 (patch-ai) = f71e3cb57bf30cbf9653a469c040b6e3f717ba97
 SHA1 (patch-al) = af557ce4fd64e11f84947e067f445e59628c6f99
@@ -18,3 +18,6 @@ SHA1 (patch-ap) = aaf63024c1049c1f2175d9974367a6b84ac3028f
 SHA1 (patch-aq) = ec5707d3b7b69912342afc7bef3e8cd182c75ded
 SHA1 (patch-ar) = c0053ebca44544c42e39aab775e8441b6e9faa30
 SHA1 (patch-as) = ad09d98ba79cdaa0367589658d7fa05a78d075ba
+SHA1 (patch-at) = b43d07b20f209a31df454620673a21f174550cf9
+SHA1 (patch-au) = 666ecb544f904178465bdd7854642a40f4ce4970
+SHA1 (patch-av) = 56f462e6091a72e87544ece689557d60fbb749aa
