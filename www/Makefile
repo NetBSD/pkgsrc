@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.340 2004/08/19 14:14:05 wennmach Exp $
+# $NetBSD: Makefile,v 1.341 2004/08/21 15:31:40 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -112,7 +112,7 @@ SUBDIR+=	jakarta-tomcat4
 SUBDIR+=	jsdk20
 SUBDIR+=	jssi
 SUBDIR+=	kannel
-SUBDIR+=	kimagemapeditor
+SUBDIR+=	kdewebdev3
 SUBDIR+=	lhs
 SUBDIR+=	libghttp
 SUBDIR+=	libgtkhtml
@@ -215,7 +215,6 @@ SUBDIR+=	py-zpublisher
 SUBDIR+=	qDecoder
 SUBDIR+=	quanta
 SUBDIR+=	quanta-docs
-SUBDIR+=	quanta3
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-fcgi
 SUBDIR+=	ruby-htmlsplit
