@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2001/10/01 00:51:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/01/18 22:59:30 mjl Exp $
 #
 
-DISTNAME=	hexedit-1.1.0
+DISTNAME=	hexedit-1.2.2
 WRKSRC=		${WRKDIR}/hexedit
 CATEGORIES=	editors
 MASTER_SITES=	http://www.chez.com/prigaux/
