@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/02/13 17:38:58 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/02/13 19:20:21 grant Exp $
 
 DISTNAME=		sh-utils-2.0
 PKGREVISION=		2
@@ -19,9 +19,14 @@ GNU_CONFIGURE=		YES
 
 .if defined(GNU_PROGRAM_PREFIX)
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+# devel/id-utils installs a 'gid' program, so conflict with it if
+# GNU_PROGRAM_PREFIX == 'g'
+.  if ${GNU_PROGRAM_PREFIX} == "g"
+CONFLICTS+=		id-utils-[0-9]*
+.  endif
+.endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
-.endif
 CONFIGURE_ENV+=		ac_cv_func_uname=no
 
 .include "../../mk/texinfo.mk"
