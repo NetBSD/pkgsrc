@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/12/29 10:22:27 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/01/18 13:37:26 minskim Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -104,6 +104,8 @@ awstats/cgi-bin/plugins/clusterinfo.pm
 awstats/cgi-bin/plugins/decodeutfkeys.pm
 awstats/cgi-bin/plugins/geoip.pm
 awstats/cgi-bin/plugins/geoip_city_maxmind.pm
+awstats/cgi-bin/plugins/geoip_isp_maxmind.pm
+awstats/cgi-bin/plugins/geoip_org_maxmind.pm
 awstats/cgi-bin/plugins/geoip_region_maxmind.pm
 awstats/cgi-bin/plugins/geoipfree.pm
 awstats/cgi-bin/plugins/graphapplet.pm
@@ -572,7 +574,6 @@ share/doc/html/awstats/images/license_chart.png
 share/doc/html/awstats/images/screen_shot_1.jpg
 share/doc/html/awstats/images/screen_shot_1.png
 share/doc/html/awstats/images/screen_shot_2.png
-share/doc/html/awstats/images/screen_shot_3.gif
 share/doc/html/awstats/images/screen_shot_3.png
 share/doc/html/awstats/images/screen_shot_4.png
 share/doc/html/awstats/images/star.png
