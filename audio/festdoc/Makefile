@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/06/26 12:42:30 seb Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/22 13:40:45 wiz Exp $
 
 DISTNAME=	festdoc-1.4.0.1
 PKGNAME=	festival-doc-1.4.0.1
@@ -28,6 +28,7 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${FDOC}
+	${INSTALL_DATA_DIR} ${HDOC}
 	cd ${WRKSRC};							\
 	${PAX} -rw speechtools ${HDOC};					\
 	cd festival;							\
