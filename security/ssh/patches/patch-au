@@ -1,7 +1,16 @@
-$NetBSD: patch-au,v 1.3 1999/12/01 20:48:35 bouyer Exp $
+$NetBSD: patch-au,v 1.4 1999/12/25 05:28:36 kim Exp $
 
 --- login.c.orig	Wed May 12 07:19:26 1999
-+++ login.c	Sat Sep 18 17:03:20 1999
++++ login.c	Fri Dec 24 22:01:25 1999
+@@ -255,7 +255,7 @@
+    were more standardized. */
+ 
+ void record_login(int pid, const char *ttyname, const char *user, uid_t uid,
+-                  const char *host, struct sockaddr_in *addr)
++		  const char *host, struct sockaddr *addr)
+ {
+   int fd;
+ 
 @@ -271,7 +271,22 @@
    struct utmp u, u2;
    off_t offset;
@@ -25,7 +34,7 @@ $NetBSD: patch-au,v 1.3 1999/12/01 20:48:35 bouyer Exp $
    /* Construct an utmp/wtmp entry. */
    memset(&u, 0, sizeof(u));
  #ifdef DEAD_PROCESS
-@@ -301,12 +316,14 @@
+@@ -301,17 +316,21 @@
    strncpy(u.ut_user, user, sizeof(u.ut_user));
  #endif /* HAVE_NAME_IN_UTMP */
  #ifdef HAVE_HOST_IN_UTMP
@@ -44,8 +53,15 @@ $NetBSD: patch-au,v 1.3 1999/12/01 20:48:35 bouyer Exp $
 +    strncpy(u.ut_host, host, sizeof(u.ut_host));
  #endif /* HAVE_HOST_IN_UTMP */
  #ifdef HAVE_ADDR_IN_UTMP
++#if 0 /* XXX */
    if (addr)
-@@ -490,7 +507,12 @@
+     memcpy(&u.ut_addr, &addr->sin_addr, sizeof(u.ut_addr));
+   else
++#endif /* XXX */
+     memset(&u.ut_addr, 0, sizeof(u.ut_addr));
+ #endif
+ 
+@@ -490,7 +509,12 @@
        /* Update lastlog. */
        ll.ll_time = time(NULL);
        strncpy(ll.ll_line, ttyname + 5, sizeof(ll.ll_line));
