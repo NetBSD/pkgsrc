@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1780 2003/03/27 05:17:13 atatat Exp $
+$NetBSD: CHANGES,v 1.1781 2003/03/27 07:25:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1322,3 +1322,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added SDL_sound-1.0.0 [wiz 2003-03-26]
 	Updated opera6 to 6.12 [jdolecek 2003-03-26]
 	Updated pkglint to 3.47 [atatat 2003-03-26]
+	Updated rxvt to 2.7.10 [wiz 2003-03-27]
