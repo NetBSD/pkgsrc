@@ -1,21 +1,25 @@
-# $NetBSD: Makefile,v 1.7 1998/05/29 19:57:27 tv Exp $
+# $NetBSD: Makefile,v 1.8 1998/07/14 18:48:37 tv Exp $
 #
 
 DISTNAME=		rsaref20
 PKGNAME=		rsaref-2.0
-WRKSRC=			${WRKDIR}/source
+WRKSRC=			${WRKDIR}/install
+MAKEFILE=		unix/makefile
 CATEGORIES=		security
 MASTER_SITES=		${RSA_SITE}
 EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=		packages@NetBSD.ORG
+MAINTAINER=		tv@netbsd.org
+
+BUILD_DEPENDS=		${PREFIX}/bin/libtool:../../devel/libtool
 
 RESTRICTED=		"Cryptographic source usable only within the USA"
 MIRROR_DISTFILE=	no
 IS_INTERACTIVE=		yes
 
+ALL_TARGET=		librsaref.la
+
 RSA_SITE=		ftp://ftp.rsa.com/rsaref/
-PLIST_SRC=		${WRKSRC}/.PLIST
 
 # XXX time-dependent directory; can't give a sensible response
 fetch-list:
@@ -32,21 +36,20 @@ do-fetch:
 		cd ${_DISTDIR} && ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${RSA_SITE}`egrep '^dist/U\.S\.-only-' ${WRKDIR}/README`/${DISTNAME}${EXTRACT_SUFX} ${FETCH_AFTER_ARGS}; \
 	fi
 
-pre-configure:
-	@${RM} -f ${WRKSRC}/md5.h
-	@${CP} ${FILESDIR}/Makefile ${FILESDIR}/md5.h ${WRKSRC}
-	@${LN} -s . ${WRKSRC}/rsaref
+do-configure:
+	@${RM} -f ${WRKDIR}/source/md5.h
+	@${CP} ${FILESDIR}/md5.h ${WRKDIR}/source/
+	@${LN} -sf . ${WRKDIR}/source/rsaref
 
-post-install:
+do-install:
 	${MKDIR} ${PREFIX}/include/rsaref ${PREFIX}/share/doc/rsaref
 	cd ${WRKSRC} && \
+		${PREFIX}/bin/libtool --mode=install ${INSTALL_DATA} \
+			librsaref.la ${PREFIX}/lib
+	cd ${WRKDIR}/source && \
 		${INSTALL_DATA} des.h global.h md2.h md5.h rsa.h rsaref.h \
-			${PREFIX}/include/rsaref
-	@(${CAT} ${PKGDIR}/PLIST.pre; cd ${PREFIX}; \
-		/bin/ls 2>/dev/null -1d lib/librsaref*.a lib/librsaref.so*) \
-		>${PLIST_SRC}
-	${LDCONFIG} || ${TRUE}
+			${PREFIX}/include/rsaref/
 	cd ${WRKDIR}/doc && \
-		${INSTALL_DATA} info.txt rsaref.txt ${PREFIX}/share/doc/rsaref
+		${INSTALL_DATA} info.txt rsaref.txt ${PREFIX}/share/doc/rsaref/
 
 .include "../../mk/bsd.pkg.mk"
