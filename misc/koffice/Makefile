@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/07 04:32:40 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/09 12:00:28 wiz Exp $
 
 DISTNAME=	koffice-2.0.1
 PKGNAME=	koffice-1.0.1
@@ -8,12 +8,9 @@ MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/2.0.1/distribution/tar/generic/sr
 		ftp://ftp.de.kde.org/pub/kde/stable/2.0.1/distribution/tar/generic/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	skrll@netbsd.org
-HOMEPAGE=	http://www.kde.org/
-
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.koffice.org/
-COMMENT=	KDE Office Suite with text processor, spreadsheet, ...
+COMMENT=	KDE Office Suite with text processor, spreadsheet, et cetera
 
 DEPENDS+=	kdebase-2.1:../../x11/kdebase2
 
