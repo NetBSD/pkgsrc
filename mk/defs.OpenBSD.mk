@@ -1,4 +1,4 @@
-# $NetBSD: defs.OpenBSD.mk,v 1.22 2003/09/16 03:10:32 itojun Exp $
+# $NetBSD: defs.OpenBSD.mk,v 1.23 2003/09/17 05:28:31 itojun Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -122,7 +122,7 @@ _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-R	# name of symbol in rpath directive to linker 
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
-_PATCH_BACKUP_ARG=	-V simple -b 	# switch to patch(1) for backup suffix
+_PATCH_BACKUP_ARG=	-V simple -z 	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
 _USE_GNU_GETTEXT=	no	# Don't use GNU gettext
 _USE_RPATH=		yes	# add rpath to LDFLAGS
