@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2003/08/09 11:16:22 seb Exp $
+# $NetBSD: Makefile,v 1.58 2003/08/13 07:27:06 itojun Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -20,6 +20,8 @@ PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # you might need debugging, it's a developer release !
 #CFLAGS+=	-g
+
+CONFLICTS+=		quagga-[0-9]*
 
 PLIST_SRC=		# empty
 
