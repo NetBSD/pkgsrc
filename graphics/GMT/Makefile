@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/04/20 21:57:39 jtb Exp $
+# $NetBSD: Makefile,v 1.15 2001/05/03 21:06:12 jtb Exp $
 
 DISTNAME=	GMT3.4
 PKGNAME=	GMT-3.4
@@ -25,6 +25,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+NETCDF_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=	NETCDF=netcdf
 
 CONFIGURE_ARGS+=--includedir=${PREFIX}/include/gmt

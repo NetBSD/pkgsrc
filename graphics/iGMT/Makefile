@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/26 20:56:38 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/03 21:06:13 jtb Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -18,7 +18,10 @@ DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 WRKSRC=			${WRKDIR}/igmt_1.2
 NO_BUILD=		YES
-EVAL_PREFIX+=		GMT_PREFIX=GMT TK_PREFIX=tk
+
+GMT_PREFIX_DEFAULT=	${LOCALBASE}
+EVAL_PREFIX+=		GMT_PREFIX=GMT
+EVAL_PREFIX+=		TK_PREFIX=tk
 
 post-patch:
 	${RM} ${WRKSRC}/*.orig ${WRKSRC}/configure_script
