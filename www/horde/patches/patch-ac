@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/02/12 15:26:05 jlam Exp $
+
+--- setup.php3.orig	Wed Sep 20 12:18:50 2000
++++ setup.php3
+@@ -634,7 +634,7 @@
+   */
+   $form_title = '';
+   include( './templates/setup/form_header.inc' );
+-  echo '<p>Please go to the top level directory for your installation and run "sh ./install.sh"; this will enable the configuration manager.</p>';
++  echo '<p>Please run "horde_setup"; this will enable the configuration manager.</p>';
+   
+ } else if (
+ 	   ! is_writeable( './config/horde.php3' )
+@@ -642,7 +642,7 @@
+ 	   ) {
+   $form_title = '';
+   include './templates/setup/form_header.inc';
+-  echo '<p>Please go to the top level directory for your installation and run "sh ./install.sh"; this will enable the configuration manager.</p>';
++  echo '<p>Please run "horde_setup"; this will enable the configuration manager.</p>';
+ } else {
+ 
+ 

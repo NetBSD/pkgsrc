@@ -1,0 +1,50 @@
+# $NetBSD: horde.conf.dist,v 1.1.1.1 2001/02/12 15:26:04 jlam Exp $
+#
+# Horde configuration file fragment for Apache
+
+<IfModule mod_alias.c>
+    Alias /horde/ "@HORDEDIR@/"
+</IfModule>
+
+<Directory "@HORDEDIR@">  
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+    <IfModule mod_php3.c>
+	php3_include_path '@PHPLIBDIR@:.'
+	php3_auto_prepend_file @PHPLIBDIR@/prepend.php3
+	php3_magic_quotes_gpc Off
+	php3_track_vars On
+    </IfModule>
+    <IfModule mod_php4.c>
+	php_value include_path '@PHPLIBDIR@:.'
+	php_value auto_prepend_file @PHPLIBDIR@/prepend.php3
+	php_flag magic_quotes_gpc Off
+	php_flag track_vars On
+    </IfModule>
+</Directory>
+#
+# For security, don't serve pages from the Horde configuration and library
+# directories.
+#
+<Directory "@HORDEDIR@/config">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@HORDEDIR@/lib">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@HORDEDIR@/locale">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@HORDEDIR@/scripts">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@HORDEDIR@/templates">
+    Order deny,allow
+    Deny from all
+</Directory>

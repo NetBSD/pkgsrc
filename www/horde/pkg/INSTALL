@@ -1,0 +1,57 @@
+#! /bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2001/02/12 15:26:05 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CAT="@CAT@"
+CHMOD="@CHMOD@"
+CP="@CP@"
+
+CONFDIR=${PKG_PREFIX}/etc/httpd
+HORDEDIR=${PKG_PREFIX}/@HORDEDIR@
+PHPLIBDIR=${PKG_PREFIX}/@PHPLIBDIR@
+
+CONFFILES="${CONFDIR}/horde.conf ${PHPLIBDIR}/local.inc ${PHPLIBDIR}/prepend.php3 ${HORDEDIR}/config/horde.php3"
+NONCONFFILES="${HORDEDIR}/config/MOTD.html ${HORDEDIR}/config/header.txt ${HORDEDIR}/config/html.php3 ${HORDEDIR}/config/lang.php3 ${HORDEDIR}/config/menu.txt ${HORDEDIR}/config/mime.php3"
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	echo "Installing configuration files:"
+	for FILE in ${CONFFILES} ${NONCONFFILES}
+	do
+		SAMPLEFILE=${FILE}.dist
+		if [ -f ${FILE} ]
+		then
+			echo "    ${FILE} already exists"
+		else
+			echo "    ${FILE}"
+			${CP} ${SAMPLEFILE} ${FILE}
+			${CHMOD} 644 ${FILE}
+		fi
+	done
+	${CAT} << EOF
+
+===========================================================================
+Some files you might need to customize include the following:
+
+EOF
+	for FILE in ${CONFFILES}
+	do
+		echo "	${FILE}"
+	done
+	${CAT} << EOF
+===========================================================================
+EOF
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

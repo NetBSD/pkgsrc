@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/02/12 15:26:05 jlam Exp $
+
+--- templates/index/horde_notconfigured.inc.orig	Wed Oct 18 15:52:49 2000
++++ templates/index/horde_notconfigured.inc
+@@ -11,8 +11,7 @@
+ <p>You can also use the horde setup wizard. In order to use the setup wizard you will need to enable write privileges to your configuration files by running the following commands:
+ <ul>
+ <li>UN*X People: <br><br>
+-<code>cd &lt;your horde root&gt;</code><br>
+-<code>sh ./install.sh</code><br>
++<code>horde_setup</code><br>
+ Click here: <a href="setup.php3">setup.php3</a>
+ <br><br>
+ <li>win32: The best option at this time is to build the libs and defaults files on a unix machine, and transfer them over. If you're a win32 scripting wizard and want to provide win32 setup scripts, that'd be great! Let us know: <a href="mailto:dev@lists.horde.org">dev@lists.horde.org</a>.
