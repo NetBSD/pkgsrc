@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE.security,v 1.2.2.2 2003/04/20 12:30:22 grant Exp $
+
+                  *===* ADDITIONAL SECURITY NOTES *===*
+
+${PKGNAME} already contains fixes for two security problems
+which are solved by samba 2.2.8 and samba 2.2.8a.
+
+===========================================================================
