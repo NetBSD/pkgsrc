@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8633 2005/01/06 13:07:48 adrianp Exp $
+$NetBSD: CHANGES,v 1.8634 2005/01/06 13:08:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -143,3 +143,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ntop to 3.1 [adam 2005-01-06]
 	Updated xine-lib to 1rc8nb2 [tron 2005-01-06]
 	Updated nasm to 0.98.38nb1 [adrianp 2005-01-06]
+	Updated cmake to 2.0.5 [adam 2005-01-06]
