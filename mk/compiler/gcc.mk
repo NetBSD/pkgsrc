@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.54 2004/02/20 07:10:06 jlam Exp $
+# $NetBSD: gcc.mk,v 1.55 2004/02/20 07:18:19 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -13,7 +13,7 @@ GCC_REQD+=	2.8.0
 _GCC_DIST_VERSION=	3.3.2
 
 # _GCC2_PATTERNS matches N s.t. N <= 2.95.3.
-_GCC2_PATTERNS=	2.8 2.8.* 2.9 2.9.* 2.[1-8][0-9] 2.[1-8][0-9].*	\
+_GCC2_PATTERNS=	[0-1].* 2.[0-9] 2.[0-9].* 2.[1-8][0-9] 2.[1-8][0-9].*	\
 		2.9[0-4] 2.9[0-4].* 2.95 2.95.[0-3]
 
 # _GCC3_PATTERNS matches N s.t. 2.95.3 < N.
