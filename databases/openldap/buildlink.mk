@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2002/01/31 05:06:55 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2002/03/07 21:50:40 jlam Exp $
 #
 # This Makefile fragment is included by packages that use openldap.
 #
@@ -41,6 +41,10 @@ USE_PTHREAD=		native
 .endif
 
 .include "../../mk/pthread.buildlink.mk"
+
+.if defined(USE_SASL) && (${USE_SASL} == "YES")
+.include "../../security/cyrus-sasl/buildlink.mk"
+.endif
 
 BUILDLINK_TARGETS.openldap=	openldap-buildlink
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.openldap}
