@@ -1,39 +1,35 @@
-$NetBSD: patch-ad,v 1.1 1998/08/23 11:24:53 garbled Exp $
-*** initx.c.orig	Mon Apr  6 12:59:29 1992
---- initx.c	Mon Jan  2 12:14:16 1995
-***************
-*** 44,57 ****
-  	resulting fontname right into the code.
-  */
-  
-! static char	*fontname = "-*-fixed-medium-r-normal--*-70-*-*-c-*-*-*";
-  static char	*bigfontname = "-*-courier-bold-r-normal--*-180-*-*-m-150-*-*";
-  
-  /*	init_X opens the display and sets up all the color stuff
-  */
-  init_X()
-  {
-!     display = XOpenDisplay(NULL);
-      if (display == NULL) {
-         fprintf(stderr, "Jetpack : Cannot connect to X Server %s\n",
-                 XDisplayName(NULL));
---- 44,62 ----
-  	resulting fontname right into the code.
-  */
-  
-! static char	*fontname = "-misc-fixed-medium-r-semicondensed--13-120-75-75-c-*-*-*";
-  static char	*bigfontname = "-*-courier-bold-r-normal--*-180-*-*-m-150-*-*";
-  
-  /*	init_X opens the display and sets up all the color stuff
-  */
-  init_X()
-  {
-!     int saved_euid;
-! 
-!     saved_euid = geteuid();
-!     seteuid(getuid());
-!     display = XOpenDisplay("");
-!     seteuid(saved_euid);
-      if (display == NULL) {
-         fprintf(stderr, "Jetpack : Cannot connect to X Server %s\n",
-                 XDisplayName(NULL));
+--- initx.c.orig	Sun Mar 29 12:41:21 1992
++++ initx.c	Thu Aug 27 10:32:51 1998
+@@ -44,14 +44,19 @@
+ 	resulting fontname right into the code.
+ */
+ 
+-static char	*fontname = "-*-fixed-medium-r-normal--*-70-*-*-c-*-*-*";
++static char	*fontname = "-misc-fixed-medium-r-semicondensed--13-120-75-75-c-*-*-*";
+ static char	*bigfontname = "-*-courier-bold-r-normal--*-180-*-*-m-150-*-*";
+ 
+ /*	init_X opens the display and sets up all the color stuff
+ */
+ init_X()
+ {
+-    display = XOpenDisplay(NULL);
++    int saved_euid;
++
++    saved_euid = geteuid();
++    seteuid(getuid());
++    display = XOpenDisplay("");
++    seteuid(saved_euid);
+     if (display == NULL) {
+        fprintf(stderr, "Jetpack : Cannot connect to X Server %s\n",
+                XDisplayName(NULL));
+@@ -162,8 +167,8 @@
+ 				case CWHITE:
+ 					tmpcolor.pixel = pixel | planes[2] | planes[1] | planes[0];
+ 					break;
+-			}
+-			XStoreColor(display, colormap, &tmpcolor);
++			} /*Store*/
++			XAllocColor(display, colormap, &tmpcolor);
+ 			ctable[i].pixelvalue = tmpcolor.pixel;
+ 		}
+ 	}
