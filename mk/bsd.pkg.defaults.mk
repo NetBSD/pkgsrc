@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.242 2004/05/23 16:01:49 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.243 2004/05/25 21:51:42 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2118,6 +2118,11 @@ USERPPP_GROUP?=	network
 # Used in the userppp package to specify the default group.
 # Possible: any group name
 # Default: network
+
+VICE_USE_FFMPEG?= no
+# Used in vice package to enable ffmpeg support.
+# Possible: yes, no.
+# Default: no
 
 #VIM_EXTRA_OPTS=
 # Used in vim package to build with non-gui extra options
