@@ -1,0 +1,37 @@
+#!/bin/sh
+
+cd $WRKSRC
+DIR=`ls -1d bin/*`
+OSDIR=`basename $DIR`
+BINS="bw_file_rd bw_mem bw_mmap_rd bw_pipe bw_tcp bw_unix disk enough flushdisk hello lat_connect lat_ctx lat_fifo lat_fs lat_http lat_mem_rd lat_mmap lat_pagefault lat_pipe lat_proc lat_rpc lat_select lat_sig lat_syscall lat_tcp lat_udp lat_unix lat_unix_connect lmdd lmhttp loop_o memsize mhz msleep timing_o"
+SCRIPTS="allctx allmem bargraph bghtml compiler config config-run depend do_ctx getbg getbw getctx getdisk getlist getmax getmem getpercent getsummary gifs gnu-os graph html-list html-man info info-template lmbench man2html mkrelease new2oldctx opercent os percent rccs results save stats synchronize target version xroff"
+MAN3="lmbench.3 reporting.3 results.3 timing.3"
+MAN8="lmbench.8 lat_proc.8 lat_mmap.8 lat_ctx.8 lat_syscall.8 lat_pipe.8 lat_tcp.8 lat_udp.8 lat_rpc.8 lat_connect.8 lat_fs.8 lat_pagefault.8 lat_mem_rd.8 bw_file_rd.8 bw_mem_cp.8 bw_mem_rd.8 bw_mem_wr.8 bw_mmap_rd.8 bw_pipe.8 bw_tcp.8 mhz.8 lmdd.8"
+MAN1="bargraph.1 graph.1"
+
+mkdir -p $PREFIX/bin/lmbench
+mkdir -p $PREFIX/share/lmbench
+for files in $BINS; do
+	/usr/bin/install -c -s -o bin -g bin -m 0755 bin/$OSDIR/$files $PREFIX/bin/lmbench
+done
+for files in $SCRIPTS; do
+	/usr/bin/install -c -o bin -g bin -m 0755 scripts/$files $PREFIX/bin/lmbench
+done
+for files in $MAN1; do
+	/usr/bin/install -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man1
+done
+for files in $MAN8; do
+	/usr/bin/install -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man8
+done
+for files in $MAN3; do
+	/usr/bin/install -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man3
+done
+cat <<EOF >$PREFIX/bin/run-lmbench
+#!/bin/sh
+${PREFIX}/bin/lmbench/config-run
+${PREFIX}/bin/lmbench/results
+EOF
+chmod 0755 ${PREFIX}/bin/run-lmbench
+cp -R src/webpage-lm $PREFIX/share/lmbench
+mkdir -p ${PREFIX}/share/lmbench/results
+cp results/Makefile ${PREFIX}/share/lmbench/results
