@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5784 2004/05/01 16:05:36 minskim Exp $
+$NetBSD: CHANGES,v 1.5785 2004/05/02 02:30:30 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2306,3 +2306,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gqview to 1.4.3 [snj 2004-04-30]
 	Updated mklivecd to 0.6 [xtraeme 2004-05-01]
 	Updated getmail to 3.2.2nb1 [minskim 2004-05-01]
+	Updated p5-Storable to 2.12 [heinz 2004-05-02]
+	Updated p5-MIME-Base64 to 3.01 [heinz 2004-05-02]
+	Updated p5-Digest to 1.08 [heinz 2004-05-02]
+	Updated p5-Digest-SHA1 to 2.10 [heinz 2004-05-02]
