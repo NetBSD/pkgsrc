@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2001/03/16 10:10:35 wiz Exp $
+
+--- src/ao_wav.c.orig	Sat Feb 24 02:31:46 2001
++++ src/ao_wav.c
+@@ -221,7 +221,7 @@
+ 
+ 		/* Swap the bytes into the swap buffer (so we don't
+ 		 mess up the output_samples buffer) */
+-		for(i = 0; i < num_bytes/2; i+=2) {
++		for(i = 0; i < num_bytes; i+=2) {
+ 			s->swap_buffer[i]   = ((char *) output_samples)[i+1];
+ 			s->swap_buffer[i+1] = ((char *) output_samples)[i];
+ 		}
