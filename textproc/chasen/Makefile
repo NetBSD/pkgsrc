@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/02/13 09:54:38 taca Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/13 10:07:40 taca Exp $
 #
 
 DISTNAME=	chasen-${CHASEN_VERSION}
@@ -13,7 +13,6 @@ COMMENT=	ChaSen, Japanese Morphological Analysis System
 DEPENDS+=	chasen-base>=${CHASEN_VERSION}:../../textproc/chasen-base
 DEPENDS+=	ipadic>=2.6.3:../../textproc/ipadic
 
-EXTRACT_ONLY=	yes
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
