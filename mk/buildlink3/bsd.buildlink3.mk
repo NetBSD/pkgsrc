@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.8 2003/09/09 09:15:03 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.9 2003/09/10 02:16:42 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -137,7 +137,10 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 .for _pkg_ in ${BUILDLINK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
 .  if !defined(_BLNK_PKG_DBDIR.${_pkg_})
 _BLNK_PKG_DBDIR.${_pkg_}!=	\
-	dir=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}" || ${TRUE}`; \
+	dir="";								\
+	if [ -d ${_PKG_DBDIR} ]; then					\
+		dir=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}" || ${TRUE}`; \
+	fi;								\
 	case "$$dir" in							\
 	"")	dir="not_found" ;;					\
 	*)	if [ -f $$dir/+DEPOT ]; then				\
