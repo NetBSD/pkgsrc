@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2000/02/14 02:44:43 wiz Exp $
+
+--- ./pce_vdp.c.orig	Sun Feb  6 23:28:03 2000
++++ ./pce_vdp.c	Mon Feb 14 02:36:38 2000
+@@ -13,6 +13,7 @@
+ #include "video.h"
+ #include "blitters.h"
+ #include "tiledraw.h"
++#include "endian.h"
+ 
+ #define PCE_VDP_RAMSIZE 0x10000
+ 
