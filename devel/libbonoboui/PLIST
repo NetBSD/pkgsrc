@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/04/27 09:59:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/07/30 21:29:11 jmmv Exp $
 bin/test-moniker
 include/libbonoboui-2.0/bonobo.h
 include/libbonoboui-2.0/bonobo/bonobo-canvas-component.h
@@ -44,6 +44,40 @@ lib/libglade/2.0/libbonobo.a
 lib/libglade/2.0/libbonobo.la
 lib/libglade/2.0/libbonobo.so
 lib/pkgconfig/libbonoboui-2.0.pc
+share/doc/html/libbonoboui/bonobo-controls.html
+share/doc/html/libbonoboui/bonobo-support-utilities.html
+share/doc/html/libbonoboui/bonobo-ui.html
+share/doc/html/libbonoboui/ch01.html
+share/doc/html/libbonoboui/control-frame.png
+share/doc/html/libbonoboui/control.png
+share/doc/html/libbonoboui/home.png
+share/doc/html/libbonoboui/index.html
+share/doc/html/libbonoboui/index.sgml
+share/doc/html/libbonoboui/left.png
+share/doc/html/libbonoboui/libbonoboui-bonobo-a11y.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-control-frame.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-control.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-file-selector-util.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-plug.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-property-control.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-selector-widget.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-selector.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-socket.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-ui-component.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-ui-container.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-ui-engine-config.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-ui-engine.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-ui-node.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-ui-preferences.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-ui-sync.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-ui-util.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-widget.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-window.html
+share/doc/html/libbonoboui/libbonoboui-bonobo-wrapper.html
+share/doc/html/libbonoboui/libbonoboui-faq.html
+share/doc/html/libbonoboui/libbonoboui.devhelp
+share/doc/html/libbonoboui/right.png
+share/doc/html/libbonoboui/up.png
 share/gnome-2.0/ui/Bonobo_Sample_Hello.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libbonoboui-2.0.mo
@@ -52,6 +86,7 @@ ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libbonoboui-2.0.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libbonoboui-2.0.mo
@@ -68,6 +103,7 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/libbonoboui-2.0.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libbonoboui-2.0.mo
@@ -80,17 +116,19 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libbonoboui-2.0.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libbonoboui-2.0.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libbonoboui-2.0.mo
+${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libbonoboui-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libbonoboui-2.0.mo
 @comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
 @comment in gnome2-dirs: @dirrm share/gnome-2.0
-@exec ${MKDIR} %D/share/doc/html/libbonoboui
 @dirrm share/doc/html/libbonoboui
 @comment in libglade2: @dirrm lib/libglade/2.0
 @comment in bonobo-activation: @dirrm lib/bonobo/servers
