@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/03/19 12:39:27 tron Exp $
+
+--- ffserver.c.orig	Wed Aug 15 00:38:17 2001
++++ ffserver.c	Tue Mar 19 13:27:31 2002
+@@ -1526,7 +1526,7 @@
+     config_filename = "/etc/ffserver.conf";
+ 
+     for(;;) {
+-        c = getopt_long_only(argc, argv, "Lh?f:", NULL, NULL);
++        c = getopt(argc, argv, "Lh?f:");
+         if (c == -1)
+             break;
+         switch(c) {
