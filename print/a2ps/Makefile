@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/20 11:56:32 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/05/08 16:20:43 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/15 21:24:42 steve Exp
 #
 
@@ -18,6 +18,8 @@ CONFIGURE_ENV+=		LPR=lpr
 
 ALL_TARGET=	all PAPERSIZE=${PAPERSIZE}
 
+PAPERSIZE?=	A4
+
 pre-build:
 	${TOUCH} ${WRKSRC}/doc/*.info
 	${TOUCH} ${WRKSRC}/doc/*.dvi
@@ -26,10 +28,6 @@ pre-configure:
 	@(case "X${PAPERSIZE}" in 					\
 	XA4|XLetter|XLetterdj) 						\
 		goodsize=yes; 						\
-		;; 							\
-	X"") 								\
-		goodsize=no; 						\
-		${ECHO} "PAPERSIZE not specified."; 			\
 		;; 							\
 	*) 								\
 		goodsize=no; 						\
