@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2004/01/03 18:49:47 reed Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/07 21:46:06 jmmv Exp $
 #
 
 DISTNAME=	BitTorrent-3.3
 PKGNAME=	${DISTNAME:S/BitT/bitt/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://bitconjurer.org/BitTorrent/
 
