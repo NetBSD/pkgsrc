@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/05/03 10:59:31 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/12 00:51:12 zuntum Exp $
 #
 
-DISTNAME=	poink-1.5
+DISTNAME=	poink-1.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
