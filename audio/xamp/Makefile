@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/25 04:17:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2002/06/30 01:24:03 jschauma Exp $
 # FreeBSD: ports/audio/xamp/Makefile,v 1.5 1999/08/25 04:36:22 obrien Exp
 #
 
@@ -31,6 +31,13 @@ CONFIGURE_ENV+=	"MOC=${QT1DIR}/qt1/bin/moc"
 
 SKIN_DATA=	bfamp.tar.gz chrome.tar.gz mmxamp.tar.gz
 SKIN_DIR=	${PREFIX}/lib/X11/xamp
+
+post-patch:
+		for f in about.cpp aboutData.cpp readmex.h; do \
+			${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f.tmp; \
+			${SED} -e 's:/usr/X11R6:'${PREFIX}':g' < ${WRKSRC}/$$f.tmp > \
+			${WRKSRC}/$$f; \
+		done
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/xamp ${PREFIX}/bin
