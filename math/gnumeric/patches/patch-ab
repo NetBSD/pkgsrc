@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2000/01/26 12:00:40 rh Exp $
+
+--- plugins/python/Makefile.in.orig	Wed Jan 26 10:26:55 2000
++++ plugins/python/Makefile.in	Wed Jan 26 10:42:09 2000
+@@ -255,7 +255,9 @@
+ 
+ maintainer-clean-libtool:
+ 
+-libgnum_python.la: $(libgnum_python_la_OBJECTS) $(libgnum_python_la_DEPENDENCIES)
++libgnum_python.la: libgnum_python.a
++
++libgnum_python.a: $(libgnum_python_la_OBJECTS) $(libgnum_python_la_DEPENDENCIES)
+ 	$(LINK)  $(libgnum_python_la_LDFLAGS) $(libgnum_python_la_OBJECTS) $(libgnum_python_la_LIBADD) $(LIBS)
+ 
+ install-PythonscriptsDATA: $(Pythonscripts_DATA)
