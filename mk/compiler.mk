@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.23 2003/11/12 13:13:43 grant Exp $
+# $NetBSD: compiler.mk,v 1.24 2003/12/10 09:08:24 sketch Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -65,6 +65,7 @@ COMPILER_MK=	# defined
 # command line.
 .if defined(USE_SUNPRO) && defined(CC) && !empty(CC:Mgcc)
 CC=	/opt/SUNWspro/bin/cc
+CPP=	/opt/SUNWspro/bin/cc -E
 CXX=	/opt/SUNWspro/bin/CC
 .endif
 
