@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/08/09 13:09:49 abs Exp $
+# $NetBSD: Makefile,v 1.39 2000/08/29 12:35:55 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/31 07:23:58 max Exp
 #
 
@@ -16,6 +16,7 @@
     SUBDIR += simh
     SUBDIR += spim
     SUBDIR += stella
+    SUBDIR += suse_audio
     SUBDIR += suse_base
     SUBDIR += suse_compat
     SUBDIR += suse_devel
