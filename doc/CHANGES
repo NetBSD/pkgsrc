@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1279 2003/01/29 17:37:10 tron Exp $
+$NetBSD: CHANGES,v 1.1280 2003/01/29 20:25:12 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -479,3 +479,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cpuflags to 0.39 [abs 2003-01-29]
 	Updated sawfish-themes to 0.2nb1 [jmmv 2003-01-29]
 	Updated spamassassin to 2.43nb2 [tron 2003-01-29]
+	Updated swing to 1.1.1nb1 [jlam 2003-01-29]
