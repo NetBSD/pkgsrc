@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.14 2000/07/29 08:52:22 jlam Exp $
+$NetBSD: patch-aa,v 1.15 2000/08/13 12:19:29 kim Exp $
 
---- dialects/n+obsd/dlsof.h.orig	Thu Jun 22 08:55:29 2000
-+++ dialects/n+obsd/dlsof.h	Sat Jul 29 04:45:23 2000
+--- dialects/n+obsd/dlsof.h.orig	Thu Jun 22 15:55:29 2000
++++ dialects/n+obsd/dlsof.h	Sun Aug 13 15:13:46 2000
 @@ -47,6 +47,7 @@
  #include <unistd.h>
  #include <sys/filedesc.h>
@@ -10,7 +10,22 @@ $NetBSD: patch-aa,v 1.14 2000/07/29 08:52:22 jlam Exp $
  
  # if	defined(NETBSDV)
  #include <sys/buf.h>
-@@ -183,6 +184,9 @@
+@@ -90,14 +91,12 @@
+ #include <netinet/tcp_var.h>
+ #include <sys/ucred.h>
+ 
+-# if	defined(UVM)
+ /*
+  * Avoid conflicts with definitions in <vm/vm_param.h>.
+  */
+ 
+ #undef	FALSE
+ #undef	TRUE
+-# endif	/* defined(UVM) */
+ 
+ #include <sys/vnode.h>
+ 
+@@ -183,6 +182,9 @@
  #define _KERNEL
  #include <sys/file.h>
  #include <sys/fcntl.h>
@@ -20,17 +35,17 @@ $NetBSD: patch-aa,v 1.14 2000/07/29 08:52:22 jlam Exp $
  #include <sys/lockf.h>
  #undef	KERNEL
  #undef	_KERNEL
-@@ -197,10 +201,14 @@
+@@ -197,10 +199,14 @@
  #include <uvm/uvm.h>
  # endif	/* defined(UVM) */
  
-+#if defined(__NetBSD_Version__) && (__NetBSD_Version__ < 105020000)
++#if defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 105020000)
++#include <uvm/uvm_extern.h>
++#else
  #include <vm/vm.h>
  #include <vm/vm_map.h>
  #include <vm/vm_object.h>
  #include <vm/vm_pager.h>
-+#else
-+#include <uvm/uvm_extern.h>
 +#endif
  
  # if	defined(OPENBSDV)
