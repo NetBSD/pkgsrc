@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2000/08/03 23:52:03 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/11/11 17:49:25 tron Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/12/09 06:59:39 vanilla Exp
 #
 
 DISTNAME=	gqview-0.8.2
 CATEGORIES=	graphics x11
-MASTER_SITES=	http://download.sourceforge.net/gqview/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gqview/}
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://gqview.sourceforge.net/index.html

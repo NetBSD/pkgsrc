@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2000/10/22 16:37:23 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.5 2000/11/11 17:49:23 tron Exp $
 #
 
 DISTNAME=	mad-0.11.4b
 PKGNAME=	madplay-0.11.4b
 CATEGORIES=	audio
-MASTER_SITES=	http://download.sourceforge.net/mad/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/}
 
 MAINTAINER=	simonb@netbsd.org
 HOMEPAGE=	http://sourceforge.net/projects/mad/

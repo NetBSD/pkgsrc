@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/08 03:05:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/11 17:49:25 tron Exp $
 #
 
 DISTNAME=	bacKgammon-1.9.1b
 CATEGORIES=	games
-MASTER_SITES=	http://download.sourceforge.net/backgammon/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=backgammon/}
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://bacKgammon.sourceforge.net/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2000/09/17 21:48:23 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:27 tron Exp $
 
 DISTNAME=	gtm-0.4.5
 CATEGORIES=	net gnome
-MASTER_SITES=	http://download.sourceforge.net/gtm/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtm/}
 
 MAINTAINER=	magick@bundy.lip.owl.de
 HOMEPAGE=	http://gtm.sourceforge.net/

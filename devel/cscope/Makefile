@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2000/11/02 03:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2000/11/11 17:49:24 tron Exp $
 
 DISTNAME=	cscope-15.0bl2
 PKGNAME=	cscope-15.0.2
 CATEGORIES=	devel
-MASTER_SITES=	http://download.sourceforge.net/cscope/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cscope/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://cscope.sourceforge.net/

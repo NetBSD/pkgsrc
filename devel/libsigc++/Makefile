@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2000/07/15 08:41:26 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/11 17:49:24 tron Exp $
 
 DISTNAME=		libsigc++-1.0.1
 CATEGORIES=		devel
-MASTER_SITES=		ftp://download.sourceforge.net/pub/sourceforge/libsigc/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libsigc/}
 
 MAINTAINER=		bsieker@freenet.de
 HOMEPAGE=		http://libsigc.sourceforge.net/
