@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1 1998/08/23 06:49:29 garbled Exp $
+--- cdrom_globs.h.orig	Tue Jan 12 11:59:31 1993
++++ cdrom_globs.h	Wed Jul 22 21:48:44 1998
+@@ -101,9 +101,6 @@
+ 
+-
+-extern Boolean		display_timer;
+-
+ extern XtAppContext	appc;
+ 
+-extern char		*file;
+-extern char		*device;
++#include "app.h"
++
+ extern char             info_filename[];
+@@ -111,10 +108 @@
+ extern unsigned int     timer_fsecs;
+-
+-
+-extern float		volbase;
+-extern float		volpcent;
+-extern int		replayThreshold;
+-extern float    	scanPauseInterval;
+-extern int      	scanSkipInterval;
+-extern float      	pausePauseInterval;
+-extern int      	pauseSkipInterval;
