@@ -1,13 +1,14 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/05/06 23:22:28 tv Exp $
+$NetBSD: patch-ad,v 1.2 1999/12/13 20:31:53 bad Exp $
 
---- readline/Makefile.in.orig	Mon May  3 18:47:25 1999
-+++ readline/Makefile.in	Mon May  3 18:47:36 1999
-@@ -377,7 +377,7 @@
- install-data: install-pkgincludeHEADERS
- 	@$(NORMAL_INSTALL)
+--- readline/Makefile.in.orig	Sun Dec  5 21:35:26 1999
++++ readline/Makefile.in	Sun Dec  5 21:38:20 1999
+@@ -388,7 +388,8 @@
  
--install: install-exec install-data all
+ install-am: all-am
+ 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+-install: install-am
 +install: all
- 	@:
- 
- uninstall: uninstall-pkgincludeHEADERS
++	@:
+ uninstall-am: uninstall-pkgincludeHEADERS
+ uninstall: uninstall-am
+ all-am: Makefile $(LIBRARIES) $(HEADERS)
