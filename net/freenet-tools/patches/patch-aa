@@ -1,8 +1,31 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/29 18:43:47 tv Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/29 17:06:50 tv Exp $
 
---- ftmain.c.orig	Wed Sep 24 22:56:49 2003
+--- ftmain.c.orig	Thu May 20 06:31:47 2004
 +++ ftmain.c
-@@ -248,8 +248,7 @@ int main(int argc, char **argv)
+@@ -218,9 +218,9 @@ void usage(int cmd)
+ 	}
+ }
+ 
+-#ifdef	__CYGWIN__
+-/* The CYGWIN libc does not have a timegm() function */
+-time_t cyg_timegm(struct tm *tm)
++#if	defined(__CYGWIN__) || defined(__INTERIX)
++/* Replacement timegm() function for libc's missing it */
++time_t timegm(struct tm *tm)
+ {
+ 	time_t time_temp;
+ 	struct tm *tm_temp;
+@@ -234,7 +234,9 @@ time_t cyg_timegm(struct tm *tm)
+ 	tm_temp = gmtime(&time_temp);
+ 	return (time_t)(time_temp + (time_temp - mktime(tm_temp)));
+ }
++#endif
+ 
++#ifdef	__CYGWIN__
+ ////////////////////////////////////////////////////////
+ // private popen2() - in-fact this is exact copy of
+ // newlib/libc/posix.c/popen.c with fork() instead of vfork()
+@@ -420,8 +422,7 @@ int main(int argc, char **argv)
  	} else {
  		progname = strdup(argv[0]);
  		free(progpath);
