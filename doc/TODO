@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1366 2004/02/11 04:07:16 minskim Exp $
+$NetBSD: TODO,v 1.1367 2004/02/11 04:15:00 minskim Exp $
 
 Suggested new packages
 ======================
@@ -267,7 +267,6 @@ Suggested package updates
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
 	o p5-HTML-FillInForm-1.03 [pkg/23976]
-	o p5-XML-Xerces-2.3.0-4 [pkg/23862]
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
 	o plib-1.7.0
