@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/27 00:42:58 rh Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/31 12:37:00 recht Exp $
 
---- libmutt/configure.orig	2003-03-22 19:26:17.000000000 +1000
-+++ libmutt/configure
-@@ -9873,7 +9873,7 @@ if test "${with_ssl+set}" = set; then
+--- libmutt/configure.orig	2004-03-29 00:00:08.000000000 +0200
++++ libmutt/configure	2004-03-31 14:07:35.000000000 +0200
+@@ -10512,7 +10512,7 @@
  echo "$as_me: error: SSL support is only for IMAP, but IMAP is not enabled" >&2;}
     { (exit 1); exit 1; }; }
  	  fi
