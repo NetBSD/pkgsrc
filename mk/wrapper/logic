@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.8 2005/01/10 03:40:25 jlam Exp $
+# $NetBSD: logic,v 1.9 2005/01/18 05:24:47 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -74,6 +74,19 @@ while ! queue_is_empty argbuf; do
 			*/*)		argok=yes; continue ;;
 			*.so)		lib="${lib%.so}" ;;
 			*.so.[0-9]*)	lib="${lib%.so.[0-9]*}" ;;
+			esac
+			prepend_queue argbuf "-l$lib"
+			$debug_log $wrapperlog "    (logic) pre:  -l$lib"
+			prepend_queue argbuf "-L$dir"
+			$debug_log $wrapperlog "    (logic) pre:  -L$dir"
+			;;
+		/*/lib*.sl|/*/lib*.sl.[0-9]*)	# HP-UX
+			dir="${arg%/lib*}"
+			lib="${arg#$dir/lib}"
+			case $lib in
+			*/*)		argok=yes; continue ;;
+			*.sl)		lib="${lib%.sl}" ;;
+			*.sl.[0-9]*)	lib="${lib%.sl.[0-9]*}" ;;
 			esac
 			prepend_queue argbuf "-l$lib"
 			$debug_log $wrapperlog "    (logic) pre:  -l$lib"
