@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2001/11/30 15:26:58 mjl Exp $
+# $NetBSD: Makefile,v 1.8 2002/01/18 22:50:16 mjl Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
-DISTNAME=	Net-SNMP-4.0.0
+DISTNAME=	Net-SNMP-4.0.1
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5nsn
 CATEGORIES=	net perl5
