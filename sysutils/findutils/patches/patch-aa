@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/10 17:32:59 bouyer Exp $
+
+--- locate/Makefile.in.orig	Sat Nov  5 06:44:08 1994
++++ locate/Makefile.in	Fri Dec 10 07:35:53 1999
+@@ -29,7 +29,7 @@
+ datadir = $(prefix)/share
+ sysconfdir = $(prefix)/etc
+ sharedstatedir = $(prefix)/com
+-localstatedir = $(prefix)/var
++localstatedir = /var/run
+ libdir = $(exec_prefix)/lib
+ infodir = $(prefix)/info
+ mandir = $(prefix)/man
+@@ -38,6 +38,7 @@
+ 
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ INSTALL_DATA = @INSTALL_DATA@
+ transform = @program_transform_name@
+ 
+@@ -96,8 +97,11 @@
+ 
+ install-programs: $(PROGRAMS) $(SCRIPTS)
+ 	$(top_srcdir)/mkinstalldirs $(bindir)
+-	for p in $(PROGRAMS) $(SCRIPTS); do \
++	for p in $(PROGRAMS); do \
+ 	  $(INSTALL_PROGRAM) $$p $(bindir)/`echo $$p|sed '$(transform)'`; \
++	done
++	for p in $(SCRIPTS); do \
++	  $(INSTALL_SCRIPT) $$p $(bindir)/`echo $$p|sed '$(transform)'`; \
+ 	done
+ 
+ uninstall:: uninstall-programs
