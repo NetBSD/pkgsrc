@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2002/08/25 18:39:23 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2002/10/20 09:15:23 jlam Exp $
 
 DISTNAME=	tiff-v3.5.7
 PKGNAME=	tiff-3.5.7
@@ -12,12 +12,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.libtiff.org/
 COMMENT=	Library and tools for reading and writing TIFF data files
 
-USE_LIBTOOL=	yes
-HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR} --prefix=${PREFIX}
-CONFIGURE_ENV+=	CC="${CC}"
-
 USE_BUILDLINK2=	# defined
+USE_LIBTOOL=	# defined
+HAS_CONFIGURE=	# defined
+CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR} --prefix=${PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,21 +46,14 @@ pre-patch:
 	${SED}	-e "s,\(\$${CC} -o\),\$${LIBTOOL} \1,g" \
 		${WRKSRC}/tools/Makefile.in.in  > ${WRKSRC}/tools/Makefile.in
 
-.if defined(HAVE_OPENWINDOWS)
-INSTALL_FILE=	${WRKDIR}/INSTALL
-DEINSTALL_FILE=	${INSTALL_FILE}
-
-pre-build:
-	@${SED} -e 's#@LN@#${LN}#g' \
-	  -e 's#@MV@#${MV}#g' \
-	  -e 's#@PREFIX@#${PREFIX}#g' \
-	  -e 's#@X11BASE@#${X11BASE}#g' \
-	  ${PKGDIR}/INSTALL.OpenWindows >${INSTALL_FILE}
-
-pre-install:
-	${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-.endif
-
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
+
+.if !empty(X11BASE:M*openwin)
+INSTALL_TMPL=	${.CURDIR}/INSTALL.OpenWindows
+DEINSTALL_TMPL=	${INSTALL_TMPL}
+
+.  include "../../mk/bsd.pkg.install.mk"
+.endif
+
 .include "../../mk/bsd.pkg.mk"

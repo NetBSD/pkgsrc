@@ -1,23 +1,19 @@
-#!/bin/sh
+# INSTALL_TMPL replacement
 #
-# $NetBSD: INSTALL.OpenWindows,v 1.1 2001/11/01 20:38:21 zuntum Exp $
+# $NetBSD: INSTALL.OpenWindows,v 1.2 2002/10/20 09:15:23 jlam Exp $
 
-PKGNAME=$1
-STAGE=$2
+LIBTIFF="libtiff.so libtiff.so.3"
 
 case ${STAGE} in
 PRE-INSTALL)
-	cd @X11BASE@/lib
-	if [ -f libtiff.so ]
-	then
-		@MV@ libtiff.so libtiff.so.openwin
-		@LN@ -s @PREFIX@/lib/libtiff.so 
-	fi
-	if [ -f libtiff.so.3 ]
-	then
-		@MV@ libtiff.so.3 libtiff.so.3.openwin
-		@LN@ -s @PREFIX@/lib/libtiff.so.3 
-	fi
+	for lib in ${LIBTIFF}; do
+		src="${PKG_PREFIX}/lib/${lib}"
+		dest="@X11BASE@/lib/${lib}"
+		if [ -f ${dest} ]; then
+			${MV} -f ${dest} ${dest}.openwin
+			${LN} -sf ${src} ${dest}
+		fi
+	done
 	;;
 
 POST-INSTALL)
@@ -27,20 +23,16 @@ DEINSTALL)
 	;;
 	
 POST-DEINSTALL)
-	cd @X11BASE@/lib
-	if [ -f libtiff.so.3.openwin ]
-	then
-		@MV@ libtiff.so.3.openwin libtiff.so.3
-	fi
-	if [ -f libtiff.so.openwin ]
-	then
-		@MV@ libtiff.so.openwin libtiff.so
-	fi
+	for lib in ${LIBTIFF}; do
+		file="@X11BASE@/lib/${lib}"
+		if [ -f ${file}.openwin ]; then
+			${MV} -f ${file}.openwin ${file}
+		fi
+	done
 	;;
 
 *)
-	echo "Unexpected argument: ${STAGE}"
+	${ECHO} "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac
-exit 0
