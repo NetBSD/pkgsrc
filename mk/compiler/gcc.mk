@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.60 2004/03/13 19:08:37 jlam Exp $
+# $NetBSD: gcc.mk,v 1.61 2004/03/13 20:02:52 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -218,7 +218,7 @@ _NEED_NEWER_GCC!=	\
 	else								\
 		${ECHO} "YES";						\
 	fi
-MAKEFLAGS+=	_NEED_NEWER_GCC=${_NEED_NEWER_GCC}
+#MAKEFLAGS+=	_NEED_NEWER_GCC=${_NEED_NEWER_GCC}
 .endif
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && \
     !empty(_NEED_NEWER_GCC:M[yY][eE][sS])
