@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/20 11:57:41 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/20 12:01:25 wiz Exp $
 #
 
 DISTNAME=	maude-linux
@@ -12,7 +12,7 @@ HOMEPAGE=	http://maude.csl.sri.com/
 COMMENT=	system for equational and rewriting logic specification/programming
 
 # see http://maude.csl.sri.com/license/license.html
-#LICENSE=	maude-license
+LICENSE=	maude-license
 
 RESTRICTED=		license does not explicitly allow redistribution
 NO_SRC_ON_FTP=		${RESTRICTED}
