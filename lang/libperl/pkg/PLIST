@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.4 2001/05/18 13:52:49 jlam Exp $
-${PERL5_ARCHLIB}/CORE/${LIBPERL}
+@comment $NetBSD: PLIST,v 1.5 2001/05/20 05:21:45 jlam Exp $
 ${PERL5_ARCHLIB}/DynaLoader_pic.o

@@ -5,5 +5,5 @@ and shell.  See the manual page for more hype.  There are also two Nutshell
 Handbooks published by O'Reilly & Assoc.  See pod/perlbook.pod
 for more information.
 
-This package is a placeholder for packages to depend upon when requiring a
-shared libperl.so.
+This package is contains the Perl DynaLoader built as relocatable shared
+object.
