@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1853 2004/06/21 20:18:17 adrianp Exp $
+$NetBSD: TODO,v 1.1854 2004/06/22 13:46:02 grant Exp $
 
 Suggested new packages
 ======================
@@ -215,7 +215,6 @@ Suggested package updates
 	o evolution-1.5.2
 	o exim-4.34
 	o festival-1.4.3
-	o file-4.09
 	o findutils-4.1.20
 	o firefox-0.9
 	o firefox-bin-0.9 (+ gtk2, etc..) [grant]
