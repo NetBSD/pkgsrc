@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/22 15:22:23 tron Exp $
 bin/lftp
 bin/lftpget
-etc/lftp.conf
 man/man1/lftp.1
+share/examples/lftp/lftp.conf
+@exec test -f ${PKG_SYSCONFDIR}/lftp.conf || cp -p %D/%F ${PKG_SYSCONFDIR}
+share/lftp/import-ncftp
+share/lftp/import-netscape
 share/locale/de/LC_MESSAGES/lftp.mo
 share/locale/es/LC_MESSAGES/lftp.mo
 share/locale/fr/LC_MESSAGES/lftp.mo
@@ -10,10 +13,12 @@ share/locale/it/LC_MESSAGES/lftp.mo
 share/locale/ja/LC_MESSAGES/lftp.mo
 share/locale/ko/LC_MESSAGES/lftp.mo
 share/locale/pl/LC_MESSAGES/lftp.mo
-share/locale/ru/LC_MESSAGES/lftp.mo
 share/locale/pt_BR/LC_MESSAGES/lftp.mo
+share/locale/ru/LC_MESSAGES/lftp.mo
 share/locale/zh_CN/LC_MESSAGES/lftp.mo
 share/locale/zh_TW/LC_MESSAGES/lftp.mo
-share/lftp/import-ncftp
-share/lftp/import-netscape
+@exec mkdir -p %D/lib/lftp/${PKGVERSION}
+@dirrm lib/lftp/${PKGVERSION}
+@dirrm lib/lftp
 @dirrm share/lftp
+@dirrm share/examples/lftp
