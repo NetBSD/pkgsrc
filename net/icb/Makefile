@@ -3,12 +3,12 @@
 # Date created:		18 March 1998
 # Whom:			cjs
 #
-# $NetBSD: Makefile,v 1.3 1998/03/20 00:09:18 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/28 21:59:06 tron Exp $
 #
 
 DISTNAME=		icb-5.0.5
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		cjs@netbsd.org
 
