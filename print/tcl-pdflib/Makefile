@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/20 23:36:33 minskim Exp $
 
 .include "../pdflib/Makefile.common"
 
 PKGNAME=		tcl-pdflib-${PDFLIB_BASE_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Tcl interface to PDFlib for generating PDF files
 
 BUILDLINK_DEPENDS.pdflib=	pdflib>=${PDFLIB_BASE_VERS}
 
 CONFIGURE_ARGS+=	--with-tcl=${TCLSH}
 CONFIGURE_ARGS+=        --with-tclincl="${BUILDLINK_PREFIX.tcl}/include"
+CONFIGURE_ARGS+=        --with-tclpkg="${PREFIX}/lib/tcl8.4"
 TCLSH=                  ${BUILDLINK_PREFIX.tcl}/bin/tclsh
 
 DIRS_TO_BUILD=		bind/tcl
@@ -30,6 +31,6 @@ do-install:
 .endfor
 
 .include "../pdflib/buildlink2.mk"
-.include "../../lang/tcl83/buildlink2.mk"
+.include "../../lang/tcl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
