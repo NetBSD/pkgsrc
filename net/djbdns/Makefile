@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/03/04 20:42:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/03/06 16:13:36 hubertf Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 
 DISTNAME=	djbdns-1.05
@@ -21,6 +21,10 @@ MAINTAINER=	zuntum@eik.pl
 HOMEPAGE=	http://cr.yp.to/djbdns.html
 COMMENT=	Collection of secure and reliable DNS tools by Dan Bernstein
 
+RESTRICTED=	"Redistribution of modified package is forbidden"
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+
 EXTRACT_ONLY=	${DISTNAME}.tar.gz \
 		${DISTNAME}-man.tar.gz
 
@@ -28,9 +32,9 @@ ALL_TARGET=	it
 INSTALL_TARGET=	setup check
 
 post-extract:
-	${SED} "s|/usr/bin/perl|${LOCALBASE}/bin/perl|" \
+	${SED} "s|/usr/bin/perl|${LOCALBASE}/bin/perl|"			\
 		${DISTDIR}/tinydns-log.pl.txt > ${WRKDIR}/tinydns-log.pl
-	${SED} "s|/usr/bin/perl|${LOCALBASE}/bin/perl|" \
+	${SED} "s|/usr/bin/perl|${LOCALBASE}/bin/perl|"			\
 		${DISTDIR}/dnscache-log.pl.txt > ${WRKDIR}/dnscache-log.pl
 
 post-patch:
