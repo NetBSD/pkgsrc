@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/02/13 00:16:00 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/02/13 00:27:28 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GCC3OBJC_BUILDLINK3_MK:=	${GCC3OBJC_BUILDLINK3_MK}+
@@ -10,8 +10,10 @@ BUILDLINK_DEPENDS+=	gcc3objc
 .endif
 
 .if !empty(GCC3OBJC_BUILDLINK3_MK:M+)
-.  if ${GCC3_INSTALLTO_SUBPREFIX} != "gcc3"
+.  if defined(GCC3_INSTALLTO_SUBPREFIX)
+.    if ${GCC3_INSTALLTO_SUBPREFIX} != "gcc3"
 GCC3_PKGMODIF=			_${GCC3_INSTALLTO_SUBPREFIX}
+.    endif
 .  endif
 BUILDLINK_PACKAGES+=		gcc3objc
 BUILDLINK_DEPENDS+=		gcc3objc
