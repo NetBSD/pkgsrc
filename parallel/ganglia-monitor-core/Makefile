@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/07 14:33:19 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/10 02:33:53 jschauma Exp $
 #
 
-DISTNAME=		ganglia-monitor-core-2.5.7
+DISTNAME=		ganglia-3.0.0
+PKGNAME=		ganglia-monitor-core-3.0.0
 CATEGORIES=		net parallel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ganglia/}
 
@@ -16,9 +17,10 @@ USE_PKGINSTALL=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-gmetad
 
-PATCH_ETC=		lib/ganglia/gmond_config.h			\
-			mans/gmetad.1 mans/gmond.1			\
-			gmetad/cmdline.c gmond/cmdline.c
+PATCH_ETC=		mans/gmetad.1 mans/gmond.1			\
+			gmetad/cmdline.c gmetad/conf.c 			\
+			gmond/cmdline.c gmond/g25_config.h		\
+			ganglia.html
 
 PATCH_RCS=		gmond gmetad
 
@@ -27,6 +29,9 @@ CONF_FILES=		${EGDIR}/gmond.conf ${PKG_SYSCONFDIR}/gmond.conf
 CONF_FILES+=		${EGDIR}/gmetad.conf ${PKG_SYSCONFDIR}/gmetad.conf
 
 RCD_SCRIPTS=		gmond gmetad
+
+pre-patch:
+	${MKDIR} ${WRKSRC}/srclib/libmetrics/netbsd
 
 post-patch:
 .for pfile in ${PATCH_ETC}
@@ -46,15 +51,12 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/mans/gmetric.1 ${PREFIX}/man/man1/
 	${INSTALL_MAN} ${WRKSRC}/mans/gmond.1 ${PREFIX}/man/man1/
 	${INSTALL_MAN} ${WRKSRC}/mans/gstat.1 ${PREFIX}/man/man1/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ganglia
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/gmetad/gmetad.conf ${EGDIR}/
+	${PREFIX}/sbin/gmond -t > ${EGDIR}/gmond.conf
 	${INSTALL_DATA_DIR} ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/gmond/gmond.conf ${PREFIX}/share/examples/ganglia/
-	${INSTALL_DATA} ${WRKSRC}/gmetad/gmetad.conf ${PREFIX}/share/examples/ganglia/
 	${INSTALL_DATA} ${WRKSRC}/gmond.sh ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/gmond
 	${INSTALL_DATA} ${WRKSRC}/gmetad.sh ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/gmetad
-
-CFLAGS+=-g
-LDFLAGS+=-g
 
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

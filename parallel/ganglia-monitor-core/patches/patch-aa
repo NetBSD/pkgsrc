@@ -1,23 +1,28 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/07 14:33:19 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/10 02:33:53 jschauma Exp $
 
---- configure.orig	2005-02-03 16:34:11.000000000 -0500
-+++ configure	2005-02-03 16:34:49.000000000 -0500
-@@ -11470,6 +11470,18 @@
- #define FREEBSD 1
+--- srclib/libmetrics/configure.orig	2005-02-02 13:24:14.000000000 -0500
++++ srclib/libmetrics/configure	2005-02-07 22:39:36.000000000 -0500
+@@ -22271,6 +22271,14 @@
  _ACEOF
- ;;
-+*netbsd*)      metric_source="netbsd.c"
-+                CFLAGS="-pthread $CFLAGS -D_REENTRANT"
-+
-+cat >>confdefs.h <<\_ACEOF
-+#define SUPPORT_GEXEC 0
-+_ACEOF
-+
+ 
+ 		;;
++*netbsd*)      OS="netbsd"
++		varstatedir="/var/db"
 +
 +cat >>confdefs.h <<\_ACEOF
 +#define NETBSD 1
 +_ACEOF
-+;;
- *cygwin*)      	metric_source="cygwin.c"
++
++		;;
+ *cygwin*)      	OS="cygwin"
  
  cat >>confdefs.h <<\_ACEOF
+@@ -22281,7 +22289,7 @@
+ esac
+ 
+ 
+-                                                                                                              ac_config_files="$ac_config_files Makefile tests/Makefile aix/Makefile cygwin/Makefile darwin/Makefile freebsd/Makefile hpux/Makefile irix/Makefile linux/Makefile osf/Makefile solaris/Makefile"
++                                                                                                              ac_config_files="$ac_config_files Makefile tests/Makefile aix/Makefile cygwin/Makefile darwin/Makefile freebsd/Makefile hpux/Makefile irix/Makefile linux/Makefile netbsd/Makefile osf/Makefile solaris/Makefile"
+ 
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure

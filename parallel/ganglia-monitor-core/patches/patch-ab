@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
+$NetBSD: patch-ab,v 1.2 2005/02/10 02:33:53 jschauma Exp $
 
---- /dev/null	2005-02-06 17:33:10.000000000 -0500
-+++ gmond/machines/netbsd.c	2005-02-06 17:33:11.000000000 -0500
-@@ -0,0 +1,1006 @@
+--- /dev/null	2005-02-08 14:28:37.000000000 -0500
++++ srclib/libmetrics/netbsd/metrics.c	2005-02-08 14:34:29.000000000 -0500
+@@ -0,0 +1,1110 @@
 +/*
 + *  First stab at support for metrics in NetBSD
 + *  by Jan Schaumann <jschauma@netbsd.org>
@@ -18,9 +18,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +#include <sys/time.h>
 +#include <sys/user.h>
 +#include <sys/resource.h>
++#include <sys/sched.h>
 +#include <sys/stat.h>
 +#include <sys/swap.h>
-+#include <vm/vm_param.h>
++#include <uvm/uvm_param.h>
 +
 +#include <sys/socket.h>
 +#include <net/if.h>
@@ -33,9 +34,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +#include <limits.h>
 +#include <paths.h>
 +
-+#include "dnet.h"
-+#include "ganglia.h"
-+#include "metric_typedefs.h"
++#include "interface.h"
++#include "libmetrics.h"
 +
 +#define MIB_SWAPINFO_SIZE 3
 +
@@ -92,7 +92,11 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   g_val_t val;
 +   int ncpu;
 +   size_t len = sizeof (int);
-+   if (sysctlbyname("hw.ncpu", &ncpu, &len, NULL, 0) == -1 || !len)
++   int mib[2];
++
++   mib[0] = CTL_HW;
++   mib[1] = HW_NCPU;
++   if (sysctl(mib, 2, &ncpu, &len, NULL, 0) == -1 || !len)
 +        ncpu = 1;
 +
 +   val.uint16 = ncpu;
@@ -106,8 +110,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   size_t len;
 +   long cpu_speed;
 +
++   cpu_speed = 0;
++
++#if (__NetBSD_Version__ > 299000000)
 +   if (sysctlbyname("machdep.est.frequency.target", &cpu_speed, &len, NULL, 0) == -1)
 +	val.uint16 = 0;
++#endif
 +
 +   val.uint16 = cpu_speed /= 1000000;
 +   return val;
@@ -194,7 +202,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   g_val_t val;
 +   char machine_type[MAX_G_STRING_SIZE];
 +   size_t len = MAX_G_STRING_SIZE;
-+   if (sysctlbyname("hw.machine", &machine_type, &len, NULL, 0) == -1 || !len)
++   int mib[2];
++
++   mib[0] = CTL_HW;
++   mib[1] = HW_MACHINE;
++
++   if (sysctl(mib, 2, &machine_type, &len, NULL, 0) == -1 || !len)
 +        strncpy( val.str, "x86", MAX_G_STRING_SIZE );
 +
 +   strncpy( val.str, machine_type, MAX_G_STRING_SIZE );
@@ -207,7 +220,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   g_val_t val;
 +   char osname[MAX_G_STRING_SIZE];
 +   size_t len = MAX_G_STRING_SIZE;
-+   if (sysctlbyname("kern.ostype", &osname, &len, NULL, 0) == -1 || !len)
++   int mib[2];
++
++   mib[0] = CTL_KERN;
++   mib[1] = KERN_OSTYPE;
++
++   if (sysctl(mib, 2, &osname, &len, NULL, 0) == -1 || !len)
 +        strncpy( val.str, "NetBSD", MAX_G_STRING_SIZE );
 +
 +   strncpy( val.str, osname, MAX_G_STRING_SIZE );
@@ -236,11 +254,11 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   return val;
 +}
 +
-+/* Get the CPU state given by index, from kern.cp_time
-+ * Use the constants in <sys/dkstat.h>
-+ * CP_USER=0, CP_NICE=1, CP_SYS=2, CP_INTR=3, CP_IDLE=4
-+ */
-+int cpu_state(int which) {
++g_val_t
++cpu_user_func ( void )
++{
++   g_val_t val;
++   int res;
 +
 +   static u_int64_t cp_time[CPUSTATES];
 +   static u_int64_t cp_old[CPUSTATES];
@@ -257,20 +275,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   memcpy(&cp_old, &cp_time, CPUSTATES*sizeof(long));
 +   /* puts kern.cp_time array into cp_time */
 +   if (sysctl(mib, 2, &cp_time, &len, NULL, 0) == -1 || !len)
-+      return 0.0;
-+   /* Use percentages function lifted from top(1) to figure percentages */
-+   tot = percentages(CPUSTATES, cpu_states, cp_time, cp_old, cp_diff);
-+
-+   return cpu_states[which];
-+}
-+
-+g_val_t
-+cpu_user_func ( void )
-+{
-+   g_val_t val;
-+   int res;
-+
-+   res = cpu_state(CP_USER); 
++      res = 0.0;
++   else {
++	   /* Use percentages function lifted from top(1) to figure percentages */
++	   tot = percentages(CPUSTATES, cpu_states, cp_time, cp_old, cp_diff);
++	   res = cpu_states[CP_USER];
++   }
 +   val.f = (float)res/10;
 +   return val;
 +}
@@ -281,9 +291,28 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   g_val_t val;
 +   int res;
 +
-+   res = cpu_state(CP_NICE); 
-+   val.f = (float)res/10;
++   static u_int64_t cp_time[CPUSTATES];
++   static u_int64_t cp_old[CPUSTATES];
++   static u_int64_t cp_diff[CPUSTATES];
++   static u_int64_t cpu_states[CPUSTATES];
++   static long tot;
++   size_t len = sizeof(cp_time);
++   int mib[2];
 +
++   mib[0] = CTL_KERN;
++   mib[1] = KERN_CP_TIME;
++
++   /* Copy the last cp_time into cp_old */
++   memcpy(&cp_old, &cp_time, CPUSTATES*sizeof(long));
++   /* puts kern.cp_time array into cp_time */
++   if (sysctl(mib, 2, &cp_time, &len, NULL, 0) == -1 || !len)
++      res = 0.0;
++   else {
++	   /* Use percentages function lifted from top(1) to figure percentages */
++	   tot = percentages(CPUSTATES, cpu_states, cp_time, cp_old, cp_diff);
++	   res = cpu_states[CP_NICE];
++   }
++   val.f = (float)res/10;
 +   return val;
 +}
 +
@@ -293,9 +322,28 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   g_val_t val;
 +   int res;
 +
-+   res = cpu_state(CP_SYS); 
-+   val.f = (float)res/10;
++   static u_int64_t cp_time[CPUSTATES];
++   static u_int64_t cp_old[CPUSTATES];
++   static u_int64_t cp_diff[CPUSTATES];
++   static u_int64_t cpu_states[CPUSTATES];
++   static long tot;
++   size_t len = sizeof(cp_time);
++   int mib[2];
 +
++   mib[0] = CTL_KERN;
++   mib[1] = KERN_CP_TIME;
++
++   /* Copy the last cp_time into cp_old */
++   memcpy(&cp_old, &cp_time, CPUSTATES*sizeof(long));
++   /* puts kern.cp_time array into cp_time */
++   if (sysctl(mib, 2, &cp_time, &len, NULL, 0) == -1 || !len)
++      res = 0.0;
++   else {
++	   /* Use percentages function lifted from top(1) to figure percentages */
++	   tot = percentages(CPUSTATES, cpu_states, cp_time, cp_old, cp_diff);
++	   res = cpu_states[CP_SYS];
++   }
++   val.f = (float)res/10;
 +   return val;
 +}
 +
@@ -305,9 +353,39 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   g_val_t val;
 +   int res;
 +
-+   res = cpu_state(CP_IDLE); 
-+   val.f = (float)res/10;
++   static u_int64_t cp_time[CPUSTATES];
++   static u_int64_t cp_old[CPUSTATES];
++   static u_int64_t cp_diff[CPUSTATES];
++   static u_int64_t cpu_states[CPUSTATES];
++   static long tot;
++   size_t len = sizeof(cp_time);
++   int mib[2];
 +
++   mib[0] = CTL_KERN;
++   mib[1] = KERN_CP_TIME;
++
++   /* Copy the last cp_time into cp_old */
++   memcpy(&cp_old, &cp_time, CPUSTATES*sizeof(long));
++   /* puts kern.cp_time array into cp_time */
++   if (sysctl(mib, 2, &cp_time, &len, NULL, 0) == -1 || !len)
++      res = 0.0;
++   else {
++	   /* Use percentages function lifted from top(1) to figure percentages */
++	   tot = percentages(CPUSTATES, cpu_states, cp_time, cp_old, cp_diff);
++	   res = cpu_states[CP_IDLE];
++   }
++   val.f = (float)res/10;
++   return val;
++}
++
++/*
++** FIXME
++*/
++g_val_t 
++cpu_wio_func ( void )
++{
++   g_val_t val;
++   val.f = 0.0;
 +   return val;
 +}
 +
@@ -316,6 +394,49 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +{
 +   g_val_t val;
 +   
++   val.f = 0.0;
++   return val;
++}
++
++g_val_t 
++cpu_intr_func ( void )
++{
++   g_val_t val;
++   int res;
++
++   static u_int64_t cp_time[CPUSTATES];
++   static u_int64_t cp_old[CPUSTATES];
++   static u_int64_t cp_diff[CPUSTATES];
++   static u_int64_t cpu_states[CPUSTATES];
++   static long tot;
++   size_t len = sizeof(cp_time);
++   int mib[2];
++
++   mib[0] = CTL_KERN;
++   mib[1] = KERN_CP_TIME;
++
++   /* Copy the last cp_time into cp_old */
++   memcpy(&cp_old, &cp_time, CPUSTATES*sizeof(long));
++   /* puts kern.cp_time array into cp_time */
++   if (sysctl(mib, 2, &cp_time, &len, NULL, 0) == -1 || !len)
++      res = 0.0;
++   else {
++	   /* Use percentages function lifted from top(1) to figure percentages */
++	   tot = percentages(CPUSTATES, cpu_states, cp_time, cp_old, cp_diff);
++	   res = cpu_states[CP_INTR];
++   }
++
++   val.f = (float)res/10;
++   return val;
++}
++
++/*
++** FIXME
++*/
++g_val_t 
++cpu_sintr_func ( void )
++{
++   g_val_t val;
 +   val.f = 0.0;
 +   return val;
 +}
@@ -403,7 +524,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +      state = kp->kp_proc.p_stat;
 +#endif
 +      switch(state) {
++#if (__NetBSD_Version__ >= 200000000)
 +	 case SACTIVE:
++#else
++	 case SRUN:
++	 case SONPROC:
++#endif
 +	 case SIDL:
 +		val.uint32++;
 +		break;
@@ -459,9 +585,13 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   g_val_t val;
 +   size_t len;
 +   int buffers;
++   int mib[2];
++
++   mib[0] = CTL_VM;
++   mib[1] = VM_NKMEMPAGES;
 +
 +   len = sizeof (buffers);
-+   if((sysctlbyname("vfs.nkmempages", &buffers, &len, NULL, 0) == -1) || !len)
++   if((sysctl(mib, 2, &buffers, &len, NULL, 0) == -1) || !len)
 +		buffers = 0; 
 +   buffers /= 1024;
 +
@@ -522,42 +652,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +	return val;
 +}
 +
-+
-+static int
-+find_mtu(const struct intf_entry *entry, void *arg)
-+{ 
-+   unsigned int mtu;
-+   unsigned int *min = (unsigned int *) arg;
-+
-+   /* Only consider interfaces that are up. */
-+   if (! entry->intf_flags & INTF_FLAG_UP)
-+      return 0;
-+
-+   mtu=entry->intf_mtu;
-+   if ( !*min || *min>mtu)
-+      *min=mtu;
-+
-+   return 0;
-+}
-+
 +g_val_t
 +mtu_func ( void )
 +{
 +   /* We want to find the minimum MTU (Max packet size) over all UP interfaces.
 +*/
-+   unsigned int min=0;
 +   g_val_t val;
-+
-+   intf_t *intf;
-+   intf = intf_open();
-+   intf_loop(intf, find_mtu, &min);
-+   intf_close(intf);
-+   val.uint32 = min;
-+
++   val.uint32 = get_min_mtu();
 +   /* A val of 0 means there are no UP interfaces. Shouldn't happen. */
 +   return val;
 +}
-+
 +
 +/*
 + * Function to get cpu percentages.

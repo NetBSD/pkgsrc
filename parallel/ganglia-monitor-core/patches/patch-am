@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2005/02/10 02:33:53 jschauma Exp $
+
+--- srclib/libmetrics/Makefile.in.orig	2005-02-07 22:33:09.000000000 -0500
++++ srclib/libmetrics/Makefile.in	2005-02-07 22:33:21.000000000 -0500
+@@ -93,7 +93,7 @@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+ SUBDIRS = @OS@ . tests
+-DIST_SUBDIRS = aix cygwin darwin freebsd hpux irix linux osf solaris tests
++DIST_SUBDIRS = aix cygwin darwin freebsd hpux irix linux netbsd osf solaris tests
+ 
+ 
+ #AM_CFLAGS  = -I$(top_builddir)/lib 
