@@ -1,10 +1,10 @@
-$NetBSD: patch-av,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+$NetBSD: patch-av,v 1.2 2001/12/21 03:55:13 taca Exp $
 
---- yatd/fldr_etc.c.orig	Tue Jun  5 17:36:00 2001
-+++ yatd/fldr_etc.c
-@@ -229,7 +229,7 @@
- 	goto LBL_CONTINUE;
-       FldrSummary.nMailDel = atoi(p);
+--- yatd/fldr_etc.c.orig	Wed Dec 19 23:08:04 2001
++++ yatd/fldr_etc.c	Fri Dec 21 00:36:45 2001
+@@ -275,7 +275,7 @@
+       }
+ 
  #ifdef DEBUG_LOCAL
 -      LogDEBUG("<<<Summary: %.256s %u %u %u",
 +      LogDEBUG("<<<Summary: %.256s %ld %d %d",

@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/11/15 23:21:31 taca Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/21 03:55:13 taca Exp $
 
---- Makefile.in.orig	Mon Jul  9 12:18:00 2001
-+++ Makefile.in
+--- Makefile.in.orig	Thu Dec 20 21:31:50 2001
++++ Makefile.in	Fri Dec 21 00:34:46 2001
 @@ -68,7 +68,7 @@
  YAT5SYSDIR = @YAT5SYSDIR@
  YATSYSDIROLD = @YATSYSDIROLD@
  
 -SUBDIRS = common yatd yatconfd ascyd doc sample 
 +SUBDIRS = common yatd yatconfd ascyd doc
- EXTRA_DIST = conf.h pkg_ver.h IMPORTANT INSTALL README UPDATE pkg_ver.h.in
+ EXTRA_DIST = conf.h pkg_ver.h IMPORTANT INSTALL README UPDATE pkg_ver.h.in 	yatsvr5.00.spec.in yatsvr5.00.spec
+ 
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
