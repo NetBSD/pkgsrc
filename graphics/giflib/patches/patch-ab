@@ -1,61 +1,13 @@
-$NetBSD: patch-ab,v 1.7 1999/09/30 15:21:55 agc Exp $
+$NetBSD: patch-ab,v 1.8 1999/10/09 20:31:34 jlam Exp $
 
---- util/Makefile.orig	Thu Jun 26 18:22:30 1997
-+++ util/Makefile	Thu Sep 30 16:01:59 1999
-@@ -22,12 +22,12 @@
- # X_INC_DIR = /server/sun4/usr/new/lib/X11R4
- 
- # Declare the include files and libraries for the GIF utils:
--INC = -I../lib
--GIF_LIB = ../lib/libgif.a
--GIF_INC_DEPEND = ../lib/libgif.a ../lib/gif_lib.h ../lib/getarg.h
-+CDEFS= -I../lib
-+GIF_LIB = ../lib/libgif.la
-+GIF_INC_DEPEND = ../lib/libgif.la ../lib/gif_lib.h ../lib/getarg.h
- 
- # Where to copy executables to:
--DEST = /usr/bin
-+DEST = ${PREFIX}/bin
- 
- # These are the flags for gcc, in BSD4.3 or Sun O.S. 4.0.3
- #
-@@ -81,14 +81,14 @@
- 
- # Linux using XFree86
- #
--CC = gcc
-+#CC = gcc
- #CFLAGS = $(INC) -fno-builtin -O -s -W -Wreturn-type -Wcomment
--CFLAGS = $(INC) -fno-builtin -g -W -Wreturn-type -Wcomment
--XLIBS = -lX11
-+#CFLAGS = $(INC) -fno-builtin -g -W -Wreturn-type -Wcomment
-+#XLIBS = -lX11
- X_INC_DIR = /usr/X11/include
- X_LIB_DIR = /usr/X11/lib
- 
--BINARIES = gif2epsn gif2ps gif2rgb gif2x11 gifasm gifbg \
-+BINARIES = gif2epsn gif2ps gif2rgb gifasm gifbg \
- 	gifclip gifclrmp gifcomb giffix gifflip gifhisto \
- 	gifinter gifinto gifovly gifpos gifrotat gifrsize giftext \
- 	gifwedge raw2gif rgb2gif text2gif gifspnge giffiltr \
-@@ -105,7 +105,8 @@
- iris: $(IRIS)
- 
- install-all:
--	cp $(BINARIES) $(SCRIPTS) $(DEST)
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $(BINARIES) $(DEST)
-+	${BSD_INSTALL_SCRIPT} $(SCRIPTS) $(DEST)
- 
- install-rle:
- 	cp $(RLE) $(DEST)
-@@ -113,8 +114,8 @@
- install-iris:
- 	cp $(IRIS) $(DEST)
- 
--.c:
--	$(CC) $(CFLAGS) $< $(GIF_LIB) -lm $(LDFLAGS) -o $*
-+.c:
-+	${LIBTOOL} --mode=link $(CC) $(CDEFS) ${CFLAGS} $< $(GIF_LIB) -lm $(LDFLAGS) -L$(X_LIB_DIR) $(XLIBS) -o $*
- 
- uninstall-utils:
- 	(cd $(DEST); rm -f $(BINARIES) $(RLE) $(IRIS) $(SCRIPTS))
+--- ./doc/index.html.orig	Sun Sep  6 12:07:35 1998
++++ ./doc/index.html	Wed Oct  6 00:08:07 1999
+@@ -65,8 +65,6 @@
+ <DD>convert images saved as GIF to 24-bit RGB image(s)
+ <DT><a href="gif2rle.html">gif2rle</a>
+ <DD>convert images saved as GIF to RLE (Utah raster toolkit) format
+-<DT><a href="gif2x11.html">gif2x11</a>
+-<DD>display images saved as GIF files under X window system
+ <DT><a href="raw2gif.html">raw2gif</a>
+ <DD>convert raw 8-bit image data into GIF files
+ <DT><a href="rgb2gif.html">rgb2gif</a>

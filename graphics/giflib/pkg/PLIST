@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 1998/09/15 00:48:39 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/10/09 20:31:35 jlam Exp $
 bin/gif2epsn
 bin/gif2ps
 bin/gif2rgb
 bin/gifasm
 bin/gifbg
 bin/gifclip
-bin/gifclrmp
 bin/gifcomb
 bin/giffix
 bin/gifflip
@@ -14,7 +13,6 @@ bin/gifinter
 bin/gifinto
 bin/gifovly
 bin/gifpos
-bin/gifrotat
 bin/gifrsize
 bin/giftext
 bin/gifwedge
@@ -25,13 +23,16 @@ bin/gifspnge
 bin/giffiltr
 bin/icon2gif
 bin/gifcolor
+bin/gifclrmp
+bin/gifrotat
 bin/gifcompose
 bin/gifburst
-include/giflib/getarg.h
-include/giflib/gif_hash.h
-include/giflib/gif_lib.h
+include/gif_lib.h
 lib/libgif.a
-lib/libgif.so.3.0
+lib/libgif.so.5.0
+share/doc/giflib/COPYING
+share/doc/giflib/GifFileType.png
+share/doc/giflib/PATENT_PROBLEMS
 share/doc/giflib/gif2bgi.html
 share/doc/giflib/gif2epsn.html
 share/doc/giflib/gif2herc.html
@@ -70,5 +71,4 @@ share/doc/giflib/raw2gif.html
 share/doc/giflib/rgb2gif.html
 share/doc/giflib/rle2gif.html
 share/doc/giflib/text2gif.html
-@dirrm include/giflib
 @dirrm share/doc/giflib
