@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.5 1999/12/10 00:26:15 ad Exp $
+$NetBSD: md5,v 1.6 2000/01/21 12:53:43 ad Exp $
 
-MD5 (exim-3.12.tar.gz) = 336cd605cb121703af4f22a8c34bb333
+MD5 (exim-3.13.tar.gz) = d4821c12e75814ddeb9a304d58c1e248
 MD5 (exim-html-3.10.tar.gz) = be4fbbc5623a2b5af892c90ecee7fbdb
