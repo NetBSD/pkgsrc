@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/11/15 21:02:50 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/11/16 05:07:14 jlam Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -2546,6 +2546,7 @@ share/kde/services/kurisearchfilter.desktop
 share/kde/services/kwrite_component.desktop
 share/kde/services/kxkb.desktop
 share/kde/services/kxmlrpcd.desktop
+share/kde/services/ldap.protocol
 share/kde/services/man.protocol
 share/kde/services/nfs.protocol
 share/kde/services/nntp.protocol
