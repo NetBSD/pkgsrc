@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8312 2004/12/05 21:02:20 he Exp $
+$NetBSD: CHANGES,v 1.8313 2004/12/05 21:05:14 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5816,3 +5816,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Business-ISBN to 1.78 [he 2004-12-05]
 	Updated tileworld to 1.2.1 [wiz 2004-12-05]
 	Updated p5-Apache-DBILogConfig to 0.02 [he 2004-12-05]
+	Updated p5-CGI-FormBuilder to 2.13 [he 2004-12-05]
