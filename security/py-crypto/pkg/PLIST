@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/07 14:51:56 tsarna Exp $
+lib/python1.5/site-packages/arc4module.so
+lib/python1.5/site-packages/blowfishmodule.so
+lib/python1.5/site-packages/des3module.so
+lib/python1.5/site-packages/desmodule.so
+lib/python1.5/site-packages/diamondmodule.so
+lib/python1.5/site-packages/havalmodule.so
+lib/python1.5/site-packages/ideamodule.so
+lib/python1.5/site-packages/md2module.so
+lib/python1.5/site-packages/md4module.so
+lib/python1.5/site-packages/rc5module.so
+lib/python1.5/site-packages/redoc3module.so
+lib/python1.5/site-packages/sapphiremodule.so
+lib/python1.5/site-packages/shamodule.so
+lib/python1.5/site-packages/ufcryptmodule.so
+lib/python1.5/site-packages/DSA.py
+lib/python1.5/site-packages/DSA.pyc
+lib/python1.5/site-packages/DSA.pyo
+lib/python1.5/site-packages/ESIGN.py
+lib/python1.5/site-packages/ESIGN.pyc
+lib/python1.5/site-packages/ESIGN.pyo
+lib/python1.5/site-packages/ElGamal.py
+lib/python1.5/site-packages/ElGamal.pyc
+lib/python1.5/site-packages/ElGamal.pyo
+lib/python1.5/site-packages/RSA.py
+lib/python1.5/site-packages/RSA.pyc
+lib/python1.5/site-packages/RSA.pyo
+lib/python1.5/site-packages/pubkey.py
+lib/python1.5/site-packages/pubkey.pyc
+lib/python1.5/site-packages/pubkey.pyo
+lib/python1.5/site-packages/randpool.py
+lib/python1.5/site-packages/randpool.pyc
+lib/python1.5/site-packages/randpool.pyo
+lib/python1.5/site-packages/rfc1751.py
+lib/python1.5/site-packages/rfc1751.pyc
+lib/python1.5/site-packages/rfc1751.pyo
+lib/python1.5/site-packages/testpk.py
+lib/python1.5/site-packages/testpk.pyc
+lib/python1.5/site-packages/testpk.pyo
+@unexec %D/bin/install-info --delete %D/info/pct.info %D/info/dir
+info/pct.info
+@exec %D/bin/install-info %D/info/pct.info %D/info/dir
+info/pct.info-1
+info/pct.info-2
+
