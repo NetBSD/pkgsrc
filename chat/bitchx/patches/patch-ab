@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/11/09 14:50:38 wiz Exp $
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/15 23:16:34 wiz Exp $
 
 --- include/config.h.orig	Tue Oct 24 20:24:43 2000
 +++ include/config.h	Tue Oct 24 20:25:52 2000
