@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/09/21 07:51:59 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2002/10/27 19:27:34 seb Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
@@ -21,8 +21,5 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Tk/.packlist
 MAKE_PARAMS=	X11=${X11BASE}
 WRKSRC=		${WRKDIR}/Tk800.024
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
-
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
