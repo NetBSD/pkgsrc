@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/28 23:33:52 manu Exp $
+
+SHA1 (org.opendarwin.Libsystem-6.6.2-4.fat.rpm) = 933ede3dd6ea4188e66529ed9378db92c1934e0b
+Size (org.opendarwin.Libsystem-6.6.2-4.fat.rpm) = 6155242 bytes
+SHA1 (org.opendarwin.Libm-6.6.2-4.fat.rpm) = 5a7a7311e929a8f4867f0c7bd43c64e7fe450b08
+Size (org.opendarwin.Libm-6.6.2-4.fat.rpm) = 463844 bytes
+SHA1 (org.opendarwin.cctools-6.6.2-4.fat.rpm) = 13c4d5a19ee63c008e11ef950b8d0c1b34852d3f
+Size (org.opendarwin.cctools-6.6.2-4.fat.rpm) = 5060022 bytes
+SHA1 (org.opendarwin.ncurses-6.6.2-4.fat.rpm) = e20ffe8d410f456fe59ff27f4759a3f02869146c
+Size (org.opendarwin.ncurses-6.6.2-4.fat.rpm) = 1653506 bytes
+SHA1 (org.opendarwin.IOKitUser-6.6.2-4.fat.rpm) = 34199c0e0fc298df262c04886b0fce8fa9ea5e66
+Size (org.opendarwin.IOKitUser-6.6.2-4.fat.rpm) = 418276 bytes
+SHA1 (org.opendarwin.XFree86-6.6.2-4.ppc.rpm) = 1988a42ce40f43138636bb43f3882a299c772222
+Size (org.opendarwin.XFree86-6.6.2-4.ppc.rpm) = 49851200 bytes
