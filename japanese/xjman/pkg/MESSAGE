@@ -5,4 +5,4 @@ Copyright (c) 1998-1999 The X Japanese Documentation Project.
 This product includes software developed by
 the University of California, Lawrence Berkeley Laboratory.
 --
-Refer to the documentations at `/usr/local/share/doc/xjman/'.
+Refer to the documentations at `${X11BASE}/share/doc/xjman/'.
