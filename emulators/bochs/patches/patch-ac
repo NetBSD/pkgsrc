@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.5 2002/05/13 14:47:41 wiz Exp $
+
+--- gui/Makefile.in.orig	Sun May 12 23:47:32 2002
++++ gui/Makefile.in
+@@ -82,6 +82,9 @@
+ beos.o: beos.@CPP_SUFFIX@
+ 	$(CXX) -c $(CXXFLAGS) $(LOCAL_CXXFLAGS) $(BX_INCDIRS) $(BEOS_CFLAGS) $<
+ 
++gui.o: gui.@CPP_SUFFIX@
++	$(CXX) -c $(CXXFLAGS) $(LOCAL_CXXFLAGS) $(BX_INCDIRS) $(X_CFLAGS) $<
++
+ x.o: x.@CPP_SUFFIX@
+ 	$(CXX) -c $(CXXFLAGS) $(LOCAL_CXXFLAGS) $(BX_INCDIRS) $(X_CFLAGS) $<
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/05/13 14:12:03 fredb Exp $
+# $NetBSD: Makefile,v 1.18 2002/05/13 14:47:41 wiz Exp $
 
 DISTNAME=		bochs-1.4
 CATEGORIES=		emulators
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://bochs.sourceforge.net/
-COMMENT=		I386 machine emulator capable of running dos/windows
+COMMENT=		i386 machine emulator capable of running DOS/Windows
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
@@ -14,7 +14,6 @@ USE_GMAKE=		yes
 # performance. The number of processors can be either 1 (default), 2, or 4.
 #CONFIGURE_ARGS+=	--enable-debugger --enable-disasm
 #CONFIGURE_ARGS+=	--enable-processors=2
-CONFIGURE_ENV+=		CXXFLAGS=-I${X11BASE}/include
 USE_X11=		yes
 
 BOCHS_MAINDIR=		${PREFIX}/share/bochs
@@ -42,12 +41,15 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs-html/00README ${BOCHS_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs-html/*.gif ${BOCHS_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs-html/*.html ${BOCHS_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs-html/*.txt ${BOCHS_DOCDIR}
 	${INSTALL_DATA_DIR} ${BOCHS_FONTDIR}
 	${INSTALL_DATA} ${WRKSRC}/font/hercules.bdf ${BOCHS_FONTDIR}
 	${INSTALL_DATA} ${WRKSRC}/font/vga.bdf ${BOCHS_FONTDIR}
 	${INSTALL_DATA} ${WRKSRC}/font/vga.pcf ${BOCHS_FONTDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/bochs ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bximage ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/bochsrc ${PREFIX}/share/bochs
+	${INSTALL_MAN} ${WRKSRC}/doc/man/*.1 ${PREFIX}/man/man1
 	${X11BASE}/bin/mkfontdir ${PREFIX}/share/bochs/xfonts
 
 .include "../../mk/bsd.pkg.mk"
