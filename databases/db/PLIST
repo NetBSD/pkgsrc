@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/11/18 20:13:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/11/19 09:59:18 tron Exp $
 bin/db_archive
 bin/db_checkpoint
 bin/db_deadlock
@@ -450,6 +450,19 @@ share/doc/html/db/ref/txn/limits.html
 share/doc/html/db/ref/txn/other.html
 share/doc/html/db/ref/txn/stability.html
 share/doc/html/db/sleepycat/contact.html
+share/doc/html/db/test/build.html
+share/doc/html/db/test/build_faq.html
+share/doc/html/db/test/run.html
+share/doc/html/db/test/debug.html
+share/doc/html/db/sleepycat/products.html
+share/doc/html/db/utility/index.html
+share/doc/html/db/utility/db_checkpoint.html
+share/doc/html/db/utility/db_deadlock.html
+share/doc/html/db/utility/db_dump.html
+share/doc/html/db/utility/db_load.html
+share/doc/html/db/utility/db_recover.html
+share/doc/html/db/utility/db_stat.html
+share/doc/html/db/utility/db_archive.html
 @exec ${MKDIR} %D/share/doc/html/db/api_java/special
 @exec ${MKDIR} %D/share/doc/html/db/api_cxx/special
 @exec ${MKDIR} %D/share/doc/html/db/api_c/special
