@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/01/15 21:57:42 jlam Exp $
+
+--- pnet/pnetconnect.c.orig	Mon Jan  3 00:21:12 2000
++++ pnet/pnetconnect.c	Sat Jan 15 16:18:13 2000
+@@ -45,7 +45,7 @@
+ static int pnet_set_nonblocking(int socket) {
+ 
+    /* Setup the socket as nonblocking */
+-   return(fcntl(socket, F_SETFL, FNONBLOCK));
++   return(fcntl(socket, F_SETFL, O_NONBLOCK));
+ 
+ }
+ 

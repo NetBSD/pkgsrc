@@ -1,0 +1,6 @@
+Xpuyopuyo is a Tetris-like puzzle game where you strive to match up four
+"blobs" of the same color.  Each match gives you points, and also dumps gray
+rocks on your opponent which are irritating and troublesome to get rid of. 
+Multiple matches at one time score more points, and result in more rocks
+being dumped on the opponent (much to their dismay).  First person to fill
+up their screen with puyopuyo blobs loses.
