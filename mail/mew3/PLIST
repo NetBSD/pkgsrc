@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/11 15:29:59 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/12 13:50:34 uebayasi Exp $
+bin/incm
 bin/mewcat
 bin/mewdecode
 bin/mewencode
@@ -8,6 +9,7 @@ info/mew.info
 info/mew.info-1
 info/mew.info-2
 info/mew.info-3
+info/mew.info-4
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/mew.info
 share/mew/Mew.img
 share/mew/Mew.png
@@ -35,6 +37,7 @@ share/mew/mew-cite.xpm
 share/mew/mew-comp.xpm
 share/mew/mew-forward.xpm
 share/mew/mew-inc.xpm
+share/mew/mew-lock.xpm
 share/mew/mew-next.xpm
 share/mew/mew-pgp-enc.xpm
 share/mew/mew-pgp-sigenc.xpm
@@ -48,6 +51,7 @@ share/mew/mew-sep.xpm
 share/mew/mew-show.xpm
 share/mew/mew-write.xpm
 share/mew/mew-yank.xpm
+man/man1/incm.1
 man/man1/mewcat.1
 man/man1/mewdecode.1
 man/man1/mewencode.1
@@ -112,6 +116,7 @@ ${EMACS_LISPPREFIX}/mew/mew-imap.elc
 ${EMACS_LISPPREFIX}/mew/mew-key.el
 ${EMACS_LISPPREFIX}/mew/mew-key.elc
 ${EMACS_LISPPREFIX}/mew/mew-lang-jp.el
+${EMACS_LISPPREFIX}/mew/mew-lang-latin.el
 ${EMACS_LISPPREFIX}/mew/mew-local.el
 ${EMACS_LISPPREFIX}/mew/mew-local.elc
 ${EMACS_LISPPREFIX}/mew/mew-mark.el

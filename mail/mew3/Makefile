@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/11 15:29:59 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/12 13:50:34 uebayasi Exp $
 
-DISTNAME=	mew-3.1
+DISTNAME=	mew-3.2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.mew.org/pub/Mew/release/
 
@@ -27,6 +27,7 @@ post-patch:
 		${MV} $$f $${f}.orig; \
 		${SED} -e 's|/usr/local|${PREFIX}|g' $${f}.orig >$$f; \
 	done
+	@${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} {} \;
 
 post-install:
 	@${INSTALL_DATA_DIR} ${MEW_CONTRIB_DIR}
