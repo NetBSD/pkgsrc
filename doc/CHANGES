@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7505 2004/10/21 00:18:30 seb Exp $
+$NetBSD: CHANGES,v 1.7506 2004/10/21 03:13:02 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4796,3 +4796,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wistumbler2 to 2.00-pre9 [xtraeme 2004-10-20] 
 	Added libradius-20040827 [manu 2004-10-21]
 	Updated source-highlight to 1.11 [seb 2004-10-21]
+	Added bash-3.0 [xtraeme 2004-10-21]
