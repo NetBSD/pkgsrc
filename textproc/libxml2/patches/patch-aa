@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2002/01/29 07:40:11 martti Exp $
+$NetBSD: patch-aa,v 1.8 2002/04/26 10:32:37 martti Exp $
 
---- configure.orig	Mon Jan 14 18:58:56 2002
-+++ configure	Mon Jan 28 15:45:08 2002
-@@ -7095,7 +7095,7 @@
+--- configure.orig	Mon Apr 15 17:20:23 2002
++++ configure	Fri Apr 26 11:43:56 2002
+@@ -7097,7 +7097,7 @@
  fi
  
  
 -XML_LIBDIR='-L${libdir}'
 +XML_LIBDIR='-L${libdir} -Wl,-R${libdir}'
- XML_INCLUDEDIR='-I${includedir}/libxml2/libxml -I${includedir}/libxml2'
+ XML_INCLUDEDIR='-I${includedir}/libxml2'
  
  XML_CFLAGS=""
