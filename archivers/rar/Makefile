@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/05/22 21:35:59 tv Exp $
+# $NetBSD: Makefile,v 1.15 1999/05/22 21:47:01 tv Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -16,10 +16,10 @@ MAINTAINER=     packages@netbsd.org
 NO_PACKAGE=     Only unmodified original package can be distributed
 
 NO_WRKSUBDIR=   yes
-EXTRACT_CMD=	${DOWNLOADED_DISTFILE}
+EXTRACT_CMD=	${DOWNLOADED_DISTFILE} >/dev/null
 
 pre-extract:
-	chmod a+x ${DISTDIR}/${DISTFILES}
+	@${CHMOD} a+x ${DISTDIR}/${DISTFILES}
 
 do-build:
 	cd ${WRKSRC} && \
