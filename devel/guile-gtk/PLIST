@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/25 12:34:41 jlam Exp $
 bin/build-guile-gtk
 bin/guile-gtk
 bin/guile-gtk-1.2
@@ -8,16 +8,16 @@ lib/libguilegtk-1.2.la
 lib/libguilegtk-1.2.so
 lib/libguilegtk-1.2.so.0
 lib/libguilegtk-1.2.so.0.0
-share/guile-gtk/gdk-1.2.defs
-share/guile-gtk/gtk-1.2.defs
-share/guile/gtk-1.2/gdk.scm
-share/guile/gtk-1.2/gtk.scm
-share/guile/gtk/config.scm
-share/guile/gtk/dynlink-old.scm
-share/guile/gtk/dynlink.scm
-share/guile/gtk/event-repl.scm
-share/guile/gtk/gdk.scm
-share/guile/gtk/gtk.scm
-@dirrm share/guile/gtk
-@dirrm share/guile/gtk-1.2
-@dirrm share/guile-gtk
+${GUILE14_SUBDIR}/share/guile-gtk/gdk-1.2.defs
+${GUILE14_SUBDIR}/share/guile-gtk/gtk-1.2.defs
+${GUILE14_SUBDIR}/share/guile/gtk-1.2/gdk.scm
+${GUILE14_SUBDIR}/share/guile/gtk-1.2/gtk.scm
+${GUILE14_SUBDIR}/share/guile/gtk/config.scm
+${GUILE14_SUBDIR}/share/guile/gtk/dynlink-old.scm
+${GUILE14_SUBDIR}/share/guile/gtk/dynlink.scm
+${GUILE14_SUBDIR}/share/guile/gtk/event-repl.scm
+${GUILE14_SUBDIR}/share/guile/gtk/gdk.scm
+${GUILE14_SUBDIR}/share/guile/gtk/gtk.scm
+@dirrm ${GUILE14_SUBDIR}/share/guile/gtk
+@dirrm ${GUILE14_SUBDIR}/share/guile/gtk-1.2
+@dirrm ${GUILE14_SUBDIR}/share/guile-gtk
