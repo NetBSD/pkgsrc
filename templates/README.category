@@ -1,8 +1,14 @@
-<!-- $NetBSD: README.category,v 1.2 1997/11/21 15:56:50 agc Exp $ -->
+<!-- $NetBSD: README.category,v 1.3 1998/02/20 21:50:56 hubertf Exp $ -->
 <html>
-<title> The NetBSD Packages Collection (%%CATEGORY%%)</title>
-<head><h1> The NetBSD Packages Collection ("%%CATEGORY%%")</h1> </head> <hr>
-<body>
+<head>
+<title>The NetBSD Packages Collection: %%CATEGORY%%</title>
+</head>
+<body bgcolor=#ffffff>
+
+<a href="http://www.mckusick.com/beastie/mainpage/copyright.html">
+<img align=right src="../templates/pkg-daemon.gif" alt="Daemon Power" border=0>
+</a>
+<h1>The NetBSD Packages Collection: <i>%%CATEGORY%%</i></h1>
 
 <p>You are now in the directory "%%CATEGORY%%".
 
@@ -11,12 +17,14 @@
 
 <p>Here are the one-line descriptions for each items in this directory:
 
-<p><hr>
+<p><hr noshade>
 <p><pre>
 %%SUBDIR%%
 </pre>
 
-<p><hr><p>
+<hr noshade>
+[
 <a href="../README.html"> Go to top of packages tree</a>
+]
 </body>
 </html>
