@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2004/07/10 22:18:23 wiz Exp $
+$NetBSD: patch-af,v 1.2 2005/01/22 03:04:31 minskim Exp $
 
---- xqcctl-tk.C.orig	1997-10-27 03:31:30.000000000 +0100
+--- xqcctl-tk.C.orig	1997-10-26 20:31:30.000000000 -0600
 +++ xqcctl-tk.C
 @@ -6,6 +6,7 @@
  
@@ -10,3 +10,21 @@ $NetBSD: patch-af,v 1.1 2004/07/10 22:18:23 wiz Exp $
  #include <unistd.h>
  #include <fcntl.h>
  #include <errno.h>
+@@ -148,7 +149,7 @@ void xqc_quit(void) {
+ }
+ 
+ int SetCamValCmd(ClientData clientdata, Tcl_Interp *interp,
+-		 int argc, char *argv[])
++		 int argc, const char *argv[])
+ {
+   char type;
+   long value = atoi(argv[2]);
+@@ -163,7 +164,7 @@ int SetCamValCmd(ClientData clientdata, 
+ }
+ 
+ int CamButtonCmd(ClientData clientdata, Tcl_Interp *interp,
+-		 int argc, char *argv[])
++		 int argc, const char *argv[])
+ {
+   char type;
+   long value = 0;

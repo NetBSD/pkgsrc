@@ -1,0 +1,9 @@
+$NetBSD: patch-ah,v 1.1 2005/01/22 03:04:31 minskim Exp $
+
+--- configure.orig	2005-01-21 20:52:15.000000000 -0600
++++ configure
+@@ -0,0 +1,4 @@
++#! /bin/sh
++. $TCLCONFIG_SH
++$ECHO "LDLIBS+=	$TCL_LIBS" > Makefile
++$CAT Makefile.in >> Makefile
