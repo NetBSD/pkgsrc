@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2004/01/23 08:42:14 agc Exp $
+
+--- sshpty.c	2004/01/23 07:41:29	1.1
++++ sshpty.c	2004/01/23 07:52:50
+@@ -276,7 +276,7 @@
+ 		}
+ 		/* set tty modes to a sane state for broken clients */
+ 		if (tcgetattr(*ptyfd, &tio) < 0)
+-			log("Getting tty modes for pty failed: %.100s", strerror(errno));
++			error("Getting tty modes for pty failed: %.100s", strerror(errno));
+ 		else {
+ 			tio.c_lflag |= (ECHO | ISIG | ICANON);
+ 			tio.c_oflag |= (OPOST | ONLCR);
+@@ -284,7 +284,7 @@
+ 
+ 			/* Set the new modes for the terminal. */
+ 			if (tcsetattr(*ptyfd, TCSANOW, &tio) < 0)
+-				log("Setting tty modes for pty failed: %.100s", strerror(errno));
++				error("Setting tty modes for pty failed: %.100s", strerror(errno));
+ 		}
+ 
+ 		return 1;
