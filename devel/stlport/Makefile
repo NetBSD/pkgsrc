@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2003/05/29 23:14:09 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/05 22:14:18 mrauch Exp $
 
-DISTNAME=	STLport-4.0
-PKGNAME=	stlport-4.0
-PKGREVISION=	2
+DISTNAME=	STLport-4.6
+PKGNAME=	stlport-4.6
 CATEGORIES=	devel
 MASTER_SITES=	http://www.stlport.com/archive/
 
-MAINTAINER=	p99dreyf@criens.u-psud.fr
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.stlport.org/
 COMMENT=	Complete C++ standard library
 
@@ -21,15 +20,14 @@ BUILD_DIRS=	${WRKSRC}/src
 MAKE_ENV+=	CXXFLAGS="${CXXFLAGS}"
 MAKEFILE=	gcc-libtool.mak
 
-# A threads implementation isn't necessary when building the library.
-CPPFLAGS+=	-D__STL_NO_THREADS
+PTHREAD_OPTS+=	require
 
 INCDIR=		${PREFIX}/include/stlport
 LIBDIR=		${PREFIX}/lib
 HTMLDIR=	${PREFIX}/share/doc/html/stlport
 
 pre-install:
-	cd ${WRKSRC}/stlport && ${RM} -rf BC50 SC5 config/new_compiler old_hp
+	cd ${WRKSRC}/stlport && ${RM} -rf BC50 config/new_compiler old_hp
 	${FIND} ${WRKSRC}/stlport -name "*.orig" | ${XARGS} ${RM} -f
 
 do-install:
@@ -39,7 +37,6 @@ do-install:
 	${CHMOD} -R a+X ${INCDIR}
 	for lib in							\
 		libstlport_gcc.la					\
-		libstlport_gcc_debug.la					\
 		libstlport_gcc_stldebug.la;				\
 	do								\
 		${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/$${lib} ${LIBDIR}; \
@@ -49,4 +46,5 @@ do-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.css *.html ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} images/* ${HTMLDIR}/images
 
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
