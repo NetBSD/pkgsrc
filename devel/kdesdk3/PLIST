@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/03/09 12:47:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/04/20 14:08:39 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -319,7 +319,7 @@ share/kde/apps/kapptemplate/appframework/no-exe/INSTALL
 share/kde/apps/kapptemplate/appframework/po-Makefile.am
 share/kde/apps/kapptemplate/bin/mkinstalldirs
 share/kde/apps/kapptemplate/existing/app-Makefile.am
-share/kde/apps/kapptemplate/existing/app.desktop
+share/kde/apps/kapptemplate/existing/app-desktop
 share/kde/apps/kapptemplate/include/existing.module
 share/kde/apps/kapptemplate/include/kapptemplate.common
 share/kde/apps/kapptemplate/include/kapptemplate.module
@@ -327,8 +327,8 @@ share/kde/apps/kapptemplate/include/kpartapp.module
 share/kde/apps/kapptemplate/include/kpartplugin.module
 share/kde/apps/kapptemplate/kapp/app-Makefile.am
 share/kde/apps/kapptemplate/kapp/app-configure.in.in
+share/kde/apps/kapptemplate/kapp/app-desktop
 share/kde/apps/kapptemplate/kapp/app.cpp
-share/kde/apps/kapptemplate/kapp/app.desktop
 share/kde/apps/kapptemplate/kapp/app.h
 share/kde/apps/kapptemplate/kapp/app_client.cpp
 share/kde/apps/kapptemplate/kapp/appiface.h
@@ -354,11 +354,11 @@ share/kde/apps/kapptemplate/kapp/no-exe/lo32-app-app.png
 share/kde/apps/kapptemplate/kapp/pics-Makefile.am
 share/kde/apps/kapptemplate/kpartapp/app-Makefile.am
 share/kde/apps/kapptemplate/kpartapp/app-configure.in.in
+share/kde/apps/kapptemplate/kpartapp/app-desktop
 share/kde/apps/kapptemplate/kpartapp/app.cpp
-share/kde/apps/kapptemplate/kpartapp/app.desktop
 share/kde/apps/kapptemplate/kpartapp/app.h
+share/kde/apps/kapptemplate/kpartapp/app_part-desktop
 share/kde/apps/kapptemplate/kpartapp/app_part.cpp
-share/kde/apps/kapptemplate/kpartapp/app_part.desktop
 share/kde/apps/kapptemplate/kpartapp/app_part.h
 share/kde/apps/kapptemplate/kpartapp/app_part.rc
 share/kde/apps/kapptemplate/kpartapp/app_shell.rc
@@ -385,6 +385,7 @@ share/kde/apps/kapptemplate/kpartplugin/plugin_app.cpp
 share/kde/apps/kapptemplate/kpartplugin/plugin_app.h
 share/kde/apps/kapptemplate/kpartplugin/plugin_app.rc
 share/kde/apps/kbabel/icons/hicolor/16x16/actions/autodiff.png
+share/kde/apps/kbabel/icons/hicolor/16x16/actions/catalogmanager.png
 share/kde/apps/kbabel/icons/hicolor/16x16/actions/diff.png
 share/kde/apps/kbabel/icons/hicolor/16x16/actions/insert_arg.png
 share/kde/apps/kbabel/icons/hicolor/16x16/actions/insert_tag.png
@@ -413,6 +414,7 @@ share/kde/apps/kbabel/icons/hicolor/16x16/actions/syntax.png
 share/kde/apps/kbabel/icons/hicolor/16x16/actions/togglefuzzy.png
 share/kde/apps/kbabel/icons/hicolor/16x16/actions/transsearch.png
 share/kde/apps/kbabel/icons/hicolor/22x22/actions/autodiff.png
+share/kde/apps/kbabel/icons/hicolor/22x22/actions/catalogmanager.png
 share/kde/apps/kbabel/icons/hicolor/22x22/actions/diff.png
 share/kde/apps/kbabel/icons/hicolor/22x22/actions/insert_arg.png
 share/kde/apps/kbabel/icons/hicolor/22x22/actions/insert_tag.png
@@ -437,6 +439,7 @@ share/kde/apps/kbabel/icons/hicolor/22x22/actions/syntax.png
 share/kde/apps/kbabel/icons/hicolor/22x22/actions/togglefuzzy.png
 share/kde/apps/kbabel/icons/hicolor/22x22/actions/transsearch.png
 share/kde/apps/kbabel/icons/hicolor/32x32/actions/autodiff.png
+share/kde/apps/kbabel/icons/hicolor/32x32/actions/catalogmanager.png
 share/kde/apps/kbabel/icons/hicolor/32x32/actions/diff.png
 share/kde/apps/kbabel/icons/hicolor/32x32/actions/insert_arg.png
 share/kde/apps/kbabel/icons/hicolor/32x32/actions/insert_tag.png
@@ -461,6 +464,7 @@ share/kde/apps/kbabel/icons/hicolor/32x32/actions/syntax.png
 share/kde/apps/kbabel/icons/hicolor/32x32/actions/togglefuzzy.png
 share/kde/apps/kbabel/icons/hicolor/32x32/actions/transsearch.png
 share/kde/apps/kbabel/icons/locolor/16x16/actions/autodiff.png
+share/kde/apps/kbabel/icons/locolor/16x16/actions/catalogmanager.png
 share/kde/apps/kbabel/icons/locolor/16x16/actions/diff.png
 share/kde/apps/kbabel/icons/locolor/16x16/actions/insert_arg.png
 share/kde/apps/kbabel/icons/locolor/16x16/actions/insert_tag.png
@@ -491,6 +495,7 @@ share/kde/apps/kbabel/icons/locolor/16x16/actions/transsearch.png
 share/kde/apps/kbabel/icons/locolor/22x22/actions/statistics.png
 share/kde/apps/kbabel/icons/locolor/22x22/actions/syntax.png
 share/kde/apps/kbabel/icons/locolor/32x32/actions/autodiff.png
+share/kde/apps/kbabel/icons/locolor/32x32/actions/catalogmanager.png
 share/kde/apps/kbabel/icons/locolor/32x32/actions/diff.png
 share/kde/apps/kbabel/icons/locolor/32x32/actions/insert_arg.png
 share/kde/apps/kbabel/icons/locolor/32x32/actions/insert_tag.png
@@ -620,11 +625,6 @@ share/kde/apps/umbrello/pics/datatype.xpm
 share/kde/apps/umbrello/pics/dependency.xpm
 share/kde/apps/umbrello/pics/end_state.xpm
 share/kde/apps/umbrello/pics/enum.xpm
-share/kde/apps/umbrello/pics/folder_green.png
-share/kde/apps/umbrello/pics/folder_green_open.png
-share/kde/apps/umbrello/pics/folder_grey.png
-share/kde/apps/umbrello/pics/folder_grey_open.png
-share/kde/apps/umbrello/pics/folder_home.png
 share/kde/apps/umbrello/pics/fork.xpm
 share/kde/apps/umbrello/pics/generalization.xpm
 share/kde/apps/umbrello/pics/hline.xpm
