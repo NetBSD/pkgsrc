@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/04/24 19:11:39 snj Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/22 01:01:52 markd Exp $
 #
 
-DISTNAME=	kmplayer-0.8.2
-PKGREVISION=	4
+DISTNAME=	kmplayer-0.8.3rc4
 CATEGORIES=	multimedia kde
 MASTER_SITES=	http://www.xs4all.nl/~jjvrieze/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,10 +15,10 @@ DEPENDS=		mplayer>=1.0rc3:../../multimedia/mplayer
 DEPENDS+=		mencoder>=1.0rc3:../../multimedia/mencoder
 DEPENDS+=		xine-arts>=1rc0a:../../audio/xine-arts
 
-WRKSRC=			${WRKDIR}/kmplayer
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PERL5=		build
 
