@@ -1,0 +1,35 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
+
+--- config/libobj.in.orig	Mon Mar  3 02:09:44 2003
++++ config/libobj.in
+@@ -7,11 +7,13 @@
+ # STLIBOBJS	list of .o objects; this must not contain variable
+ #		references.
+ 
+-.SUFFIXES: .c .so .po
++.SUFFIXES: .c .so .po .lo
+ .c.so:
+ 	$(CC) $(PICFLAGS) $(ALL_CFLAGS) -c $< -o $*.so.o && $(MV) $*.so.o $*.so
+ .c.po:
+ 	$(CC) $(PROFFLAGS) $(ALL_CFLAGS) -c $< -o $*.po.o && $(MV) $*.po.o $*.po
++.c.lo:
++	$(LIBTOOL) --mode=compile $(CC) $(ALL_CFLAGS) -c $<
+ 
+ # rules to generate object file lists
+ 
+@@ -24,10 +26,14 @@ OBJS.SH: $(SHLIBOBJS)
+ OBJS.PF: $(PFLIBOBJS)
+ 	@echo $(PFLIBOBJS) > $@
+ 
++OBJS.LA: $(LALIBOBJS)
++	@echo $(LALIBOBJS) > $@
++
+ all-libobjs: $(OBJLISTS)
+ 
+ clean-libobjs:
+-	$(RM) OBJS.ST OBJS.SH OBJS.PF $(STLIBOBJS) $(SHLIBOBJS) $(PFLIBOBJS)
++	$(RM) OBJS.ST OBJS.SH OBJS.PF OBJS.LA $(STLIBOBJS) $(SHLIBOBJS) $(PFLIBOBJS)
++	$(LIBTOOL) --mode=uninstall $(RM) $(LALIBOBJS)
+ 
+ Makefile: $(SRCTOP)/config/libobj.in
+ config.status: $(SRCTOP)/config/shlib.conf
