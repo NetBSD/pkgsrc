@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2003/02/21 22:05:02 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.12 2003/03/25 10:38:01 wiz Exp $
 bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -19,6 +19,7 @@ libexec/xscreensaver/barcode
 libexec/xscreensaver/blaster
 libexec/xscreensaver/blitspin
 libexec/xscreensaver/bouboule
+libexec/xscreensaver/bouncingcow
 libexec/xscreensaver/boxed
 libexec/xscreensaver/braid
 libexec/xscreensaver/bsod
@@ -55,6 +56,7 @@ libexec/xscreensaver/flipscreen3d
 libexec/xscreensaver/flow
 libexec/xscreensaver/fluidballs
 libexec/xscreensaver/flurry
+libexec/xscreensaver/flyingtoasters
 libexec/xscreensaver/forest
 libexec/xscreensaver/galaxy
 libexec/xscreensaver/gears
@@ -62,6 +64,7 @@ libexec/xscreensaver/gflux
 libexec/xscreensaver/glblur
 libexec/xscreensaver/glforestfire
 libexec/xscreensaver/glplanet
+libexec/xscreensaver/glslideshow
 libexec/xscreensaver/glsnake
 libexec/xscreensaver/gltext
 libexec/xscreensaver/goop
@@ -76,6 +79,7 @@ libexec/xscreensaver/hypercube
 libexec/xscreensaver/ifs
 libexec/xscreensaver/imsmap
 libexec/xscreensaver/interference
+libexec/xscreensaver/jigglypuff
 libexec/xscreensaver/jigsaw
 libexec/xscreensaver/juggle
 libexec/xscreensaver/julia
@@ -175,6 +179,7 @@ man/man1/barcode.1
 man/man1/blaster.1
 man/man1/blitspin.1
 man/man1/bouboule.1
+man/man1/bouncingcow.1
 man/man1/boxed.1
 man/man1/braid.1
 man/man1/bsod.1
@@ -211,6 +216,7 @@ man/man1/flipscreen3d.1
 man/man1/flow.1
 man/man1/fluidballs.1
 man/man1/flurry.1
+man/man1/flyingtoasters.1
 man/man1/forest.1
 man/man1/galaxy.1
 man/man1/gears.1
@@ -218,6 +224,7 @@ man/man1/gflux.1
 man/man1/glblur.1
 man/man1/glforestfire.1
 man/man1/glplanet.1
+man/man1/glslideshow.1
 man/man1/glsnake.1
 man/man1/gltext.1
 man/man1/goop.1
@@ -340,6 +347,7 @@ share/control-center/screensavers/barcode.xml
 share/control-center/screensavers/blaster.xml
 share/control-center/screensavers/blitspin.xml
 share/control-center/screensavers/bouboule.xml
+share/control-center/screensavers/bouncingcow.xml
 share/control-center/screensavers/boxed.xml
 share/control-center/screensavers/braid.xml
 share/control-center/screensavers/bsod.xml
@@ -378,6 +386,7 @@ share/control-center/screensavers/flipscreen3d.xml
 share/control-center/screensavers/flow.xml
 share/control-center/screensavers/fluidballs.xml
 share/control-center/screensavers/flurry.xml
+share/control-center/screensavers/flyingtoasters.xml
 share/control-center/screensavers/forest.xml
 share/control-center/screensavers/galaxy.xml
 share/control-center/screensavers/gears.xml
@@ -385,6 +394,7 @@ share/control-center/screensavers/gflux.xml
 share/control-center/screensavers/glblur.xml
 share/control-center/screensavers/glforestfire.xml
 share/control-center/screensavers/glplanet.xml
+share/control-center/screensavers/glslideshow.xml
 share/control-center/screensavers/glsnake.xml
 share/control-center/screensavers/gltext.xml
 share/control-center/screensavers/goban.xml
@@ -404,6 +414,7 @@ share/control-center/screensavers/jigsaw.xml
 share/control-center/screensavers/juggle.xml
 share/control-center/screensavers/julia.xml
 share/control-center/screensavers/kaleidescope.xml
+share/control-center/screensavers/klein.xml
 share/control-center/screensavers/kumppa.xml
 share/control-center/screensavers/lament.xml
 share/control-center/screensavers/laser.xml
@@ -528,6 +539,7 @@ share/xscreensaver/xscreensaver-demo.glade2
 share/xscreensaver/xscreensaver.xpm
 @dirrm share/xscreensaver
 @dirrm share/control-center/screensavers
-@dirrm share/control-center-2.0/capplets
-@unexec ${RMDIR} %D/share/control-center-2.0 2>/dev/null || ${TRUE}
+@comment in controlcenter: dirrm share/control-center/capplets
+@comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
+@comment in gnome2-dirs: @dirrm share/control-center-2.0
 @dirrm libexec/xscreensaver
