@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 11:06:04 hubertf Exp $
+man/man5/iplog.conf.5
+man/man8/iplog.8
+sbin/iplog
+etc/rc.d/iplog
+etc/iplog.conf.sample

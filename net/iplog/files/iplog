@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# $NetBSD: iplog,v 1.1.1.1 2003/04/06 11:06:04 hubertf Exp $
+#
+# PROVIDE: iplog
+# REQUIRE: SERVERS
+
+. /etc/rc.subr
+
+name="iplog"
+rcvar=${name}
+command="%PREFIX%/sbin/${name}"
+pidfile="/var/run/${name}.pid"
+
+load_rc_config ${name}	
+
+run_rc_command "$1"

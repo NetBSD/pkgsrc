@@ -1,0 +1,15 @@
+iplog is a TCP/IP traffic logger.  Currently, it is capable of logging 
+TCP, UDP and ICMP traffic.  Adding support for other protocols
+should be relatively easy.
+
+iplog's capabilities include the ability to detect TCP port
+scans, TCP null scans, FIN scans, UDP and ICMP "smurf" attacks,
+bogus TCP flags (used by scanners to detect the operating system in use), 
+TCP SYN scans, TCP "Xmas" scans, ICMP ping floods, UDP scans, and IP
+fragment attacks.
+
+iplog is able to run in promiscuous mode and monitor traffic to all hosts
+on a network.
+
+iplog uses libpcap to read data from the network and can be ported
+to any system that supports pthreads and on which libpcap will function.
