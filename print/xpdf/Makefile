@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2004/04/18 23:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2004/07/28 11:06:43 wiz Exp $
 
 DISTNAME=	xpdf-3.00
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
-		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/}
+		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/} \
+		http://gd.tuwien.ac.at/publishing/xpdf/
 
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
