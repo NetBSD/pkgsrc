@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.17 2001/12/19 15:29:29 tron Exp $
+# $NetBSD: buildlink.mk,v 1.18 2001/12/20 12:09:50 tron Exp $
 #
 # This Makefile fragment is included by packages that use kdelibs2.
 #
@@ -46,10 +46,6 @@ USE_OPENSSL_VERSION=		${OPENSSL_VERSION_096}
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
 .include "../../print/cups/buildlink.mk"
-
-PLIST_SUBST+=		CUPS=
-.else
-PLIST_SUBST+=		CUPS="@comment "
 .endif
 
 BUILDLINK_TARGETS.kdelibs2=	kdelibs2-buildlink
