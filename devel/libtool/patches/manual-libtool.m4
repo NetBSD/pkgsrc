@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.6 2004/10/04 19:48:09 tv Exp $
 
 --- libtool.m4.orig	2004-09-19 08:15:08.000000000 -0400
 +++ libtool.m4
@@ -90,7 +90,18 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -2198,6 +2207,10 @@ hpux10.20* | hpux11*)
+@@ -1688,9 +1697,7 @@ if test -f "$ltmain" && test -n "$tagnam
+ 
+       case $tagname in
+       CXX)
+-	if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
+-	    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) || 
+-	    (test "X$CXX" != "Xg++"))) ; then
++	if test -n "$CXX" && test "X$CXX" != "Xno"; then
+ 	  AC_LIBTOOL_LANG_CXX_CONFIG
+ 	else
+ 	  tagname=""
+@@ -2198,6 +2205,10 @@ hpux10.20* | hpux11*)
    esac
    ;;
  
@@ -101,7 +112,39 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
  irix5* | irix6* | nonstopux*)
    case $LD in
    *-32|*"-32 ") libmagic=32-bit;;
-@@ -3091,6 +3104,8 @@ case $host_os in
+@@ -2425,21 +2436,10 @@ AC_DEFUN([AC_LIBTOOL_CXX],
+ # ---------------
+ AC_DEFUN([_LT_AC_LANG_CXX],
+ [AC_REQUIRE([AC_PROG_CXX])
+-AC_REQUIRE([_LT_AC_PROG_CXXCPP])
++AC_REQUIRE([AC_PROG_CXXCPP])
+ _LT_AC_SHELL_INIT([tagnames=${tagnames+${tagnames},}CXX])
+ ])# _LT_AC_LANG_CXX
+ 
+-# _LT_AC_PROG_CXXCPP
+-# ---------------
+-AC_DEFUN([_LT_AC_PROG_CXXCPP],
+-[
+-AC_REQUIRE([AC_PROG_CXX])
+-if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
+-    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) || 
+-    (test "X$CXX" != "Xg++"))) ; then
+-  AC_PROG_CXXCPP
+-fi
+-])# _LT_AC_PROG_CXXCPP
+ 
+ # AC_LIBTOOL_F77
+ # --------------
+@@ -2604,7 +2604,7 @@ AC_DEFUN([AC_LIBTOOL_LANG_CXX_CONFIG], [
+ AC_DEFUN([_LT_AC_LANG_CXX_CONFIG],
+ [AC_LANG_PUSH(C++)
+ AC_REQUIRE([AC_PROG_CXX])
+-AC_REQUIRE([_LT_AC_PROG_CXXCPP])
++AC_REQUIRE([AC_PROG_CXXCPP])
+ 
+ _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
+ _LT_AC_TAGVAR(allow_undefined_flag, $1)=
+@@ -3091,6 +3091,8 @@ case $host_os in
  	;;
      esac
      ;;
@@ -110,7 +153,7 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
    irix5* | irix6*)
      case $cc_basename in
        CC)
-@@ -3210,6 +3225,13 @@ case $host_os in
+@@ -3210,6 +3212,13 @@ case $host_os in
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
        _LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
        wlarc=
@@ -124,7 +167,7 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
        _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
        _LT_AC_TAGVAR(hardcode_direct, $1)=yes
        _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-@@ -3651,6 +3673,14 @@ if AC_TRY_EVAL(ac_compile); then
+@@ -3651,6 +3660,14 @@ if AC_TRY_EVAL(ac_compile); then
      esac
    done
  
@@ -139,7 +182,7 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -4591,9 +4621,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4591,9 +4608,11 @@ AC_MSG_CHECKING([for $compiler option to
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -152,7 +195,7 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -4615,6 +4647,10 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4615,6 +4634,10 @@ AC_MSG_CHECKING([for $compiler option to
  	;;
        esac
        ;;
@@ -163,7 +206,7 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -4689,6 +4725,8 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4689,6 +4712,8 @@ AC_MSG_CHECKING([for $compiler option to
  	    ;;
  	esac
  	;;
@@ -172,7 +215,7 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -4854,9 +4892,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4854,9 +4879,11 @@ AC_MSG_CHECKING([for $compiler option to
        ;;
  
      darwin* | rhapsody*)
@@ -185,7 +228,7 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
        ;;
  
      msdosdjgpp*)
-@@ -4885,6 +4925,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4885,6 +4912,11 @@ AC_MSG_CHECKING([for $compiler option to
        esac
        ;;
  
@@ -197,7 +240,7 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -5187,6 +5232,17 @@ EOF
+@@ -5187,6 +5219,17 @@ EOF
        fi
        ;;
  
@@ -215,7 +258,7 @@ $NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5592,6 +5648,20 @@ $echo "local: *; };" >> $output_objdir/$
+@@ -5592,6 +5635,20 @@ $echo "local: *; };" >> $output_objdir/$
        fi
        ;;
  
