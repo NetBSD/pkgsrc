@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2003/07/17 21:29:09 grant Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/01/27 00:53:10 heinz Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 PKGREVISION=	1
@@ -42,7 +42,7 @@ post-patch: fix-ltdl-and-lexlib
 
 fix-driver-installation:
 	cd ${WRKSRC};							\
-	files=`${FIND} ODBCConfig DRVConfig Drivers -name Makefile.in`;	\
+	files=`${FIND} ODBCConfig DRVConfig Drivers -name Makefile.in -print`;\
 	for file in $${files}; do					\
 		${SED}  -e "s|^\(libdir =\).*|\1 ${PREFIX}/${UNIXODBC_DRIVERS_DIR}|g" \
 			$${file} >> $${file}.fixed;			\
@@ -51,7 +51,7 @@ fix-driver-installation:
 
 fix-ltdl-and-lexlib:
 	cd ${WRKSRC};							\
-	files=`${FIND} . -name Makefile.in`;				\
+	files=`${FIND} . -name Makefile.in -print`;			\
 	for file in $${files}; do					\
 		${SED}	-e "/DEPENDENCIES/s|\$$(LIBLTDL)||g"		\
 			-e "/LIBADD/s|@LEXLIB@|\$$(LEXLIB)|g"		\

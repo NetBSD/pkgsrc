@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:11:16 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/27 00:53:10 heinz Exp $
 #
 
 DISTNAME=	sitescooper-2.2.8
@@ -27,7 +27,7 @@ do-configure:
 		<${file}.orig >${file} && \
 	${RM} ${file}.orig
 .endfor
-	${RM} -rf `${FIND} ${WRKSRC}/* -name CVS -type d`
+	${RM} -rf `${FIND} ${WRKSRC}/* -name CVS -type d -print`
 
 do-install:
 .for file in sitescooper rss-to-site subs-to-site

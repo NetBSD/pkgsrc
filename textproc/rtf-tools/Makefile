@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/20 12:26:50 agc Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/27 00:53:10 heinz Exp $
 #
 
 DISTNAME=		RTF-1.10
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/rtf
 INSTALL_TARGET=		install install.man
 
 post-patch:
-	for i in `${FIND} ${WRKSRC} -name Makefile`; do \
+	for i in `${FIND} ${WRKSRC} -name Makefile -print`; do \
 		${MV} $$i $$i.bak;\
 		${SED} <$$i.bak >$$i \
 			-e "s|-DVARARGS|-DSTDARGS|g" \

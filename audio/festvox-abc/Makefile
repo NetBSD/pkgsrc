@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:07:42 agc Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/27 00:53:12 heinz Exp $
 
 DISTNAME=	voice_abc_di-2.0
 PKGNAME=	festvox-abc-2.0
@@ -24,7 +24,7 @@ post-extract:
 	${CHMOD} -R a+r ${WRKSRC}
 	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
 	${RM} -f ${WRKSRC}/lib/voices/spanish/abc_diphone/group/hvslpcOGI16k.group
-	${FIND} ${WRKSRC} -type d -name CVS | ${XARGS} ${RM} -fr
+	${FIND} ${WRKSRC} -type d -name CVS -print | ${XARGS} ${RM} -fr
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
