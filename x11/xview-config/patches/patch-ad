@@ -1,26 +1,48 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 11:18:33 agc Exp $
+$NetBSD: patch-ad,v 1.3 1999/07/23 22:52:17 tron Exp $
 
-diff -rc ../old/xview3.2p1-X11R6/config/XView.rules XView.rules
-*** ../old/xview3.2p1-X11R6/config/XView.rules	Tue Jun 29 01:13:20 1993
---- XView.rules	Sun Nov 20 13:38:59 1994
-***************
-*** 366,374 ****
-  #ifndef InstallSharedLibraryNoBuild
-  #define	InstallSharedLibraryNoBuild(libname,rev,dest)				@@\
-  install::  								@@\
-!         $(RM) /dest/lib/**/libname.so                                   @@\
-  	$(INSTALL) -c $(INSTSHAREDLIBFLAGS) lib/**/libname.so.rev dest	@@\
-!         (cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
-  
-  #endif /* InstallSharedLibraryNoBuild */
-  
---- 366,374 ----
-  #ifndef InstallSharedLibraryNoBuild
-  #define	InstallSharedLibraryNoBuild(libname,rev,dest)				@@\
-  install::  								@@\
-! 	$(RM) /dest/lib/**/libname.so                                   @@\
-  	$(INSTALL) -c $(INSTSHAREDLIBFLAGS) lib/**/libname.so.rev dest	@@\
-! 	(cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
-  
-  #endif /* InstallSharedLibraryNoBuild */
-  
+--- XView.rules.orig	Tue Jun 29 07:13:20 1993
++++ XView.rules	Sat Jul 24 00:28:53 1999
+@@ -141,6 +141,23 @@
+  * included in both the .so and the .sa parts of the library.
+  */
+ #ifndef SubdirBuildNormalSharedLibraryTarget
++#if UseElfFormat == YES
++#define SubdirBuildNormalSharedLibraryTarget(libname,rev,solist,sodir)		@@\
++AllTarget(lib/**/libname.so.rev)					@@\
++									@@\
++lib/**/libname.so.rev:: solist 						@@\
++	$(RM) $@~ sodir/lib/**/libname.so.xs.o				@@\
++	@if [ -f xstrings ]; then \                                     @@\
++        	$(RM) strings; $(CP) xstrings strings; fi               @@\
++	(cd sodir; $(CC) -o ../$@~ $(SHLIBLDFLAGS) ?*.o)		@@\
++	-@if [ -f strings~ ]; then $(RM) strings~; else exit 0; fi	@@\
++	$(RM) $@  							@@\
++	$(MV) $@~ $@							@@\
++									@@\
++clean::									@@\
++	$(RM) lib/**/libname.so.rev sodir/?*.o strings*
++
++#else
+ #define SubdirBuildNormalSharedLibraryTarget(libname,rev,solist,sodir)		@@\
+ AllTarget(lib/**/libname.so.rev)					@@\
+ 									@@\
+@@ -156,6 +173,7 @@
+ clean::									@@\
+ 	$(RM) lib/**/libname.so.rev sodir/?*.o strings*
+ 
++#endif
+ #endif /* SubdirBuildNormalSharedLibraryTarget */
+ 
+ /*
+@@ -366,9 +384,9 @@
+ #ifndef InstallSharedLibraryNoBuild
+ #define	InstallSharedLibraryNoBuild(libname,rev,dest)				@@\
+ install::  								@@\
+-        $(RM) /dest/lib/**/libname.so                                   @@\
++	$(RM) /dest/lib/**/libname.so                                   @@\
+ 	$(INSTALL) -c $(INSTSHAREDLIBFLAGS) lib/**/libname.so.rev dest	@@\
+-        (cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
++	(cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
+ 
+ #endif /* InstallSharedLibraryNoBuild */
+ 
