@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/11/20 16:57:54 bouyer Exp $
+$NetBSD: distinfo,v 1.6 2002/11/22 12:05:05 bouyer Exp $
 
 SHA1 (tar-1.13.25.tar.gz) = d27fda27af621a1182bff289d4bfc7b37019effe
 Size (tar-1.13.25.tar.gz) = 1312227 bytes
@@ -8,3 +8,4 @@ SHA1 (patch-ad) = 430fca61e5d39ed596cbc66f5cf03b3ed5363921
 SHA1 (patch-ae) = c91b7225146d6dd18031a5ebaa69993904c5c078
 SHA1 (patch-af) = 2a5eff3022bcc279131dcd1144fe9c8a7acebecb
 SHA1 (patch-ag) = fdb46bf9c32ae6df32c6569f12e9232217f53506
+SHA1 (patch-ah) = b1774f7e8b1e7c501bfeeed58561b2d73becf241
