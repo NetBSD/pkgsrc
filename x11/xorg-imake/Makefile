@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/29 23:32:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/05 10:14:50 adam Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -51,6 +51,7 @@ pre-configure:
 		-e "s|@@PKGSRC_CPP@@|${CPP}|g"		\
 		-e "s|@@PKGSRC_CXX@@|${CXX}|g"		\
 		-e "s|@@PKGSRC_CFLAGS@@|${CFLAGS}|g"	\
+		-e "s|@@DARWIN_USE_QUARTZ@@|${DARWIN_USE_QUARTZ}|g"	\
 		${WRKSRC}/config/cf/${F}.cf.in > ${WRKSRC}/config/cf/${F}.cf
 .endfor
 .undef F
