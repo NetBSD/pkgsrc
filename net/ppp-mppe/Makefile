@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/04/22 19:48:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/17 23:23:16 hubertf Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.moretonbay.com/vpn/releases/
 COMMENT=	PPP daemon and LKM with MPPE - Microsoft Point-to-Point Encryption
 
 OPENSSL_VERS=	0.9.6
-OPENSSL_SRC=	${BUILD_ROOT}/security/openssl/${WRKDIR:T}/openssl-${OPENSSL_VERS}
+OPENSSL_SRC=	${PKGSRCDIR}/security/openssl/${WRKDIR:T}/openssl-${OPENSSL_VERS}
 
 HAS_CONFIGURE=  yes
 MANCOMPRESSED_IF_MANZ=	yes

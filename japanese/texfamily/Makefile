@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/09/27 23:18:15 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/17 23:23:15 hubertf Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 CATEGORIES=	japanese
@@ -26,7 +26,7 @@ DEPENDS+=	TeXfamily-share-1.2.1:../../japanese/texfamily-share
 DEPENDS+=	ja-vflib-lib-[0-9]*:../../japanese/vflib-lib
 
 DIST_SUBDIR=	TeXfamily
-TETEX_DIR=	${BUILD_ROOT}/print/teTeX-bin/${WRKDIR:T}/teTeX-1.0
+TETEX_DIR=	${PKGSRCDIR}/print/teTeX-bin/${WRKDIR:T}/teTeX-1.0
 WRKSRC=		${TETEX_DIR}
 EXTRACT_ONLY=	# none
 
