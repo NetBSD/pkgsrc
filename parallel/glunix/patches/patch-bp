@@ -1,0 +1,11 @@
+$NetBSD: patch-bp,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/glunix/glunix.1~	Thu Mar 27 12:11:28 1997
++++ progs/glunix/glunix.1	Thu Apr  9 11:40:46 1998
+@@ -10,4 +10,4 @@
+ All programs discussed in this overview page are located in the
+-directory <EM>/usr/now/bin</EM>.  They all link with the <EM>libglunix.so</EM>
+-dynamic library in <EM>/usr/now/lib</EM>.
++directory <EM>%%%NOW_ROOT%%%/bin</EM>.  They all link with the <EM>libglunix.so</EM>
++dynamic library in <EM>%%%NOW_ROOT%%%/lib</EM>.
+ 

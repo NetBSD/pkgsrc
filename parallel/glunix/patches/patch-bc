@@ -1,0 +1,98 @@
+$NetBSD: patch-bc,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/glumake/Makefile.orig	Wed Nov  5 13:43:50 1997
++++ progs/glumake/Makefile	Mon Oct 12 22:05:32 1998
+@@ -27,26 +27,17 @@
+ #
+ # Configure the GLUnix modifications here
+ #
++# for netbsd below.  do *not* run configure in here.. it will make a mess
++
++GLUNIX_ARCH= $(ARCH)
++GLUNIX_OS= $(OPSYS)
++GLUNIX_NET:=tcp
++INSTALL := /usr/bin/install
+ 
+-ifeq ($(GLUNIX_ARCH),)
+-GLUNIX_ARCH = sun4
+-endif
+-ifeq ($(GLUNIX_ARCH),sun4)
+-   GLUNIX_OS = solaris2.4
+-   GLUNIX_NET = tcp
+-   # Generic install program.
+-   INSTALL = /usr/sww/bin/ginstall -c
+-endif
+-ifeq ($(GLUNIX_ARCH),i386)
+-   GLUNIX_OS = solaris2.6
+-   GLUNIX_NET = tcp
+-   # Generic install program.
+-   INSTALL = /usr/now/bin/install -c
+-endif
+ GLUNIX_PLATFORM = $(GLUNIX_ARCH)-$(GLUNIX_OS)-$(GLUNIX_NET)
+ 
+-GLUNIX_DEVEL_BASE = /disks/barad-dur/now/glunix/devel
+-GLUNIX_BASE = /usr/now
++GLUNIX_DEVEL_BASE = $(WRKDIR)
++#GLUNIX_BASE = $(NOW_ROOT)
+ 
+ ############################################################################
+ 
+@@ -56,7 +47,7 @@
+ 
+ CC = gcc
+ 
+-CFLAGS = -g -O -I$(GLUNIX_BASE)/include
++CFLAGS = -g -O2 -I$(GLUNIX_DEVEL_BASE)/glunix/include
+ CPPFLAGS = 
+ LDFLAGS = 
+ 
+@@ -70,6 +61,7 @@
+ # NeXT 1.0a uses an old version of GCC, which required -D__inline=inline.
+ # See also `config.h'.
+ defines = -DHAVE_CONFIG_H -DLIBDIR=\"$(libdir)\" -DINCLUDEDIR=\"$(includedir)\"
++defines += -DHAVE_SYS_SIGLIST
+ 
+ # Which flavor of remote job execution support to use.
+ # The code is found in `remote-$(REMOTE).c'.
+@@ -97,16 +89,16 @@
+ # libPW.a is broken on HP9000s300 and HP9000s400 machines.  Use
+ # alloca.c instead on those machines.
+ ifneq ($(origin GLUNIX_DEVEL),undefined)
+-LOADLIBES =  -lelf -lkvm  -R$(GLUNIX_DEVEL_BASE)/$(USER)/lib/$(GLUNIX_PLATFORM) -lglunix -L$(GLUNIX_DEVEL_BASE)/$(USER)/lib/$(GLUNIX_PLATFORM) -lsocket -lnsl
++LOADLIBES = -lkvm  -R$(GLUNIX_DEVEL_BASE)/$(USER)/lib/$(GLUNIX_PLATFORM) -lglunix -L$(GLUNIX_DEVEL_BASE)/$(USER)/lib/$(GLUNIX_PLATFORM)
+ else
+-LOADLIBES =  -lelf -lkvm  -R$(GLUNIX_BASE)/lib -lglunix -L$(GLUNIX_BASE)/lib -lsocket -lnsl
++LOADLIBES = -lkvm  -R$(GLUNIX_DEVEL_BASE)/glunix/lib/$(GLUNIX_PLATFORM) -lglunix -L$(GLUNIX_DEVEL_BASE)/glunix/lib/$(GLUNIX_PLATFORM)
+ endif
+ 
+ # Any extra object files your system needs.
+ extras =  getloadavg.o
+ 
+ # Common prefix for machine-independent installed files.
+-prefix = ../..
++prefix = ../../glunix
+ # Common prefix for machine-dependent installed files.
+ exec_prefix = ${prefix}
+ 
+@@ -138,7 +130,7 @@
+ # Program to install `glumake'.
+ INSTALL_PROGRAM = ${INSTALL}
+ # Program to install the man page.
+-INSTALL_DATA = ${INSTALL} -m 644
++INSTALL_DATA = ${INSTALL} -c -m 644
+ 
+ # Program to format Texinfo source into Info files.
+ MAKEINFO = makeinfo
+@@ -259,9 +251,9 @@
+ 
+ installman $(mandir)/$(manprefix)make.$(manext):
+ 	if test -x $(GLUNIX_BASE)/bin/mhtml2html; then \
+-	$(INSTALL) -m 0775 $(srcdir)/glumake.1 $(mandir)/$(manprefix)make.$(manext); \
+-	$(GLUNIX_BASE)/bin/mhtml2html nroff <$(srcdir)/glumake.1 >../../man/man1/glumake.1; \
+-	$(GLUNIX_BASE)/bin/mhtml2html html <$(srcdir)/glumake.1 >../../man/html1/glumake.html; \
++	$(INSTALL_DATA) $(srcdir)/glumake.1 $(mandir)/$(manprefix)make.$(manext); \
++	$(GLUNIX_BASE)/bin/mhtml2html nroff <$(srcdir)/glumake.1 >../../glunix/man/man1/glumake.1; \
++	$(GLUNIX_BASE)/bin/mhtml2html html <$(srcdir)/glumake.1 >../../glunix/man/html1/glumake.html; \
+ 	fi
+ 
+ loadavg: loadavg.c config.h

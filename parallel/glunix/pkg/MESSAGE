@@ -1,0 +1,30 @@
+QUICK START GUIDE:
+
+Change your directory to the now installation base, eg:
+${NOW_ROOT}/bin.  Run ./glupart install as root.
+
+You must initialize the partition management system to
+understand the machines in your cluster.  The tool to use is
+"glupart".  You will need to do a "glupart machine <name> new" for
+each new machine.  Multiple machines can be added at a time using a
+comma-separated list of names.  You can also do "glupart -help" for
+more detailed information.
+
+To run GLUnix, you need a single machine which is able to do a root
+rsh (or ssh or kerberized rsh) without a password to all of the
+machines you want to run GLUnix on.  Call this trusted machine the
+"master" machine.  The scripts that get GLUnix running initially (the
+run_glunix_* scripts) need to run an rsh command on each node in order
+to set up GLUnix.  Log on to the master machine and run "run_glunix
+-start <nodes>" where "<nodes>" is the list of nodes you want to run
+GLUnix on:  generally a comma-separated list of machines.  (You can do
+"run_glunix -help" to see all the options.)  If the names of some of
+the machines are of the form of some base string followed by
+consecutive numbers (our machines are u0, u1, u2, u3, u4), then these
+machines can be abbreviated to the run_glunix command as "u0..u4".
+Here is a sample run_glunix command:
+
+	run_glunix -start thunk,sparc,u0..u110,pc0..pc9,dawn0..dawn30,cayuse
+
+Once the run_glunix command has successfully completed, you can run
+"glustat" to find out how many nodes came up.

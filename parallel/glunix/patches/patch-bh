@@ -1,0 +1,25 @@
+$NetBSD: patch-bh,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/tools/run_glunix_script.pl.orig	Wed Nov  5 13:44:28 1997
++++ progs/tools/run_glunix_script.pl	Thu Apr  2 21:40:47 1998
+@@ -15,3 +15,3 @@
+ $data_dir = "%%GLUNIX_DATA_DIR%%";
+-$release_dir = "$root_dir/release";
++$release_dir = "$root_dir";
+ $devel_dir = "$root_dir/devel";
+@@ -19,5 +19,6 @@
+ $run_glunix_agent = "%%INSTALL_DIR%%/bin/run_glunix_agent";
+-$command_master = "u";    # The preferred location of the master
++# The preferred location of the master
++$command_master = "%%MASTER_HOSTNAME%%";    
+ $mail_cmd = "%%MAIL_PATH%%";
+-$admin_email = "glunix-admin\@now.cs";
++$admin_email = "root";
+ $questions_email = "glunix\@now.cs.berkeley.edu";
+@@ -550,4 +551,4 @@
+ 	$full_hostname = &expand_hostname($host);
+-	$ping_str = `/usr/sbin/ping -v $full_hostname 2`;
+-	if ($ping_str =~ m/$full_hostname.* is alive/) {
++	$ping_str = `/sbin/ping -o $full_hostname`;
++	if ($ping_str =~ m/1 packets transmitted, 1 packets received, 0% packet loss/) {
+ 	    push(@alive, $host);

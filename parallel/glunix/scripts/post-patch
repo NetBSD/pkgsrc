@@ -1,0 +1,20 @@
+#! /bin/sh
+
+cd $WRKSRC/progs
+
+sed "s+%%%NOW_ROOT%%%+$NOW_ROOT+" glupart/glupart.c > bak
+mv bak glupart/glupart.c
+sed "s+%%%NOW_ROOT%%%+$NOW_ROOT+" glunix/glunix.1 > bak
+mv bak glunix/glunix.1
+sed "s+%%%NOW_ROOT%%%+$NOW_ROOT+" glurun/glurun-wrapper.pl > bak
+mv bak glurun/glurun-wrapper.pl
+sed "s+%%%NOW_ROOT%%%+$NOW_ROOT+" tools/run_glunix.c > bak
+mv bak tools/run_glunix.c
+
+sed "s+%%%PLAT%%%+$ARCH-NetBSD-tcp+" glush/Makefile > bak
+mv bak glush/Makefile
+
+cd $WRKSRC/glunix
+sed "s+%%%NOW_ROOT%%%+$NOW_ROOT+" src/init/glunix.h > bak
+mv bak src/init/glunix.h
+

@@ -1,0 +1,12 @@
+$NetBSD: patch-au,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/gludebug/Makefile.orig	Fri Dec  6 17:19:06 1996
++++ progs/gludebug/Makefile	Thu Mar 12 01:13:22 1998
+@@ -16,5 +16,5 @@
+ SRCS    = gludebug.c
+-LIBS    = -lglunix -lsocket -lnsl
++LIBS    = -lglunix
+ 
+-BINS     = $(TARGET) $(TARGET2)
++BINS     = $(TARGET) #$(TARGET2)
+ MANPAGES = $(addsuffix .1,$(BINS))

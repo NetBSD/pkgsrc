@@ -1,0 +1,8 @@
+$NetBSD: patch-bm,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- glunix/src/glib/glib.cc~	Thu Oct  2 12:33:49 1997
++++ glunix/src/glib/glib.cc	Fri Apr  3 16:59:37 1998
+@@ -205,3 +205,2 @@
+ #include "csignal.h"
+-#include "lpdb.h"
+ #include "lidle.h"

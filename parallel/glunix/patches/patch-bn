@@ -1,0 +1,8 @@
+$NetBSD: patch-bn,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- glunix/src/comm/ccomm.cc~	Thu Oct  2 12:33:46 1997
++++ glunix/src/comm/ccomm.cc	Fri Apr  3 17:04:02 1998
+@@ -397,3 +397,2 @@
+ #include "cdebug.h"
+-#include "ctime.h"
+ #include "clist.h"

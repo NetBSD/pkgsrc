@@ -1,0 +1,46 @@
+$NetBSD: patch-bo,v 1.1.1.1 1998/10/21 19:59:30 garbled Exp $
+
+--- progs/glupart/glupart.c.orig	Thu Sep 18 14:01:35 1997
++++ progs/glupart/glupart.c	Thu Apr  9 11:37:35 1998
+@@ -1,18 +1,40 @@
+ #include <stdio.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
++#include <sys/param.h>
+ #include <netdb.h>
+ #include <netinet/in.h>
+ #include <unistd.h>
+ #include <stdlib.h>
+ 
++#if (defined(BSD) && BSD >= 199306)
++#include <pwd.h>
++#include <grp.h>
++
++#define userId	pwp->pw_uid
++#define groupId	grp->gr_gid
++#else
+ #define userId  GLUNIX_ACCOUNT       /* This is the glunix account */
+ #define groupId GLUNIX_GROUP         /* The glunix group */
++#endif
+ 
+-#define progPath     "/usr/now/bin/glupart_script"
++#define progPath     "%%%NOW_ROOT%%%/now/bin/glupart_script"
+ 
+ int
+ main(int argc, char **argv) {
++#if (defined(BSD) && BSD >= 199306)
++	struct passwd	*pwp;
++	struct group	*grp;
++
++	if ((pwp = getpwnam("glunix")) == (struct passwd *) NULL) {
++		(void) fprintf(stderr, "Error: can't get uid for `%s'\n", "glunix");
++		exit(1);
++	}
++	if ((grp = getgrnam("glunix")) == (struct group *) NULL) {
++		(void) fprintf(stderr, "Error: can't get gid for `%s'\n", "glunix");
++		exit(1);
++	}
++#endif
+     setegid(groupId);
+ /*    setgid(groupId); */
+     seteuid(userId);
