@@ -1,0 +1,14 @@
+--- io_static.c.orig	2003-03-14 06:04:51.000000000 +0100
++++ io_static.c	2004-03-07 01:53:17.000000000 +0100
+@@ -2,8 +2,11 @@
+ 
+ #include "io_cpu.h"
+ #ifdef NETBSD
+ #include "machine/sysarch.h"
++# ifdef __amd64__
++#  define i386_iopl x86_64_iopl
++# endif
+ #endif
+ 
+ static int OpenIO()
+ {
