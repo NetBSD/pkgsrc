@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2004/07/13 13:14:41 markd Exp $
+# $NetBSD: Makefile.common,v 1.33 2004/08/11 14:18:12 markd Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -62,11 +62,11 @@ CONFIGURE_ARGS+=	-no-xinerama
 
 .if defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS])
 .  include "../../print/cups/buildlink3.mk"
-CONFIGURE_ARGS+=        -cups
+CONFIGURE_ARGS+=	-cups
 .else
-CONFIGURE_ARGS+=        -no-cups
+CONFIGURE_ARGS+=	-no-cups
 .endif
-BUILD_DEFS+=            USE_CUPS
+BUILD_DEFS+=		USE_CUPS
 
 #
 # Reverse the change to how templates are handled made between 3.0.4
