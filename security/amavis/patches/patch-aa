@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/06/05 14:37:58 rh Exp $
+
+--- configure.orig	Tue Jul 20 19:29:02 1999
++++ configure	Mon Jun  5 16:06:52 2000
+@@ -2983,7 +2983,7 @@
+ 
+ 
+ 
+-deliver=/usr/bin/procmail
++deliver=/usr/libexec/mail.local
+ 
+ 
+ trap '' 1 2 15
