@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/20 20:39:46 tron Exp $
+bin/${BINNAME}
+lib/${BINNAME}/${BINNAME}.jar
+share/doc/${BINNAME}/AUTHORS
+share/doc/${BINNAME}/COPYING
+share/doc/${BINNAME}/README
+share/doc/${BINNAME}/mainscreen.jpg
+share/doc/${BINNAME}/manual.html
+@dirrm share/doc/${BINNAME}
+@dirrm lib/${BINNAME}

@@ -1,0 +1,6 @@
+The Airport Base Station Configurator is a Java application which is used
+to inspect and change the configuration of Apple's Airport Base Station.
+Apple itself offers software to provide this functionality; however, it
+requires a Macintosh running Mac OS 8.6 or greater to run. This application,
+being written entirely in Java, will run on any host which has a Java Runtime
+Environment installed, including Windows-based machines and most Unix variants.
