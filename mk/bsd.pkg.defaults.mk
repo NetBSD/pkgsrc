@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.215 2004/02/28 12:22:14 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.216 2004/02/29 10:32:13 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -119,7 +119,7 @@ PKGSRC_RUN_TEST?=	no
 # Possible: yes, no
 # Default: no
 
-PREFER_PKGSRC?=		no
+PREFER_PKGSRC?=		Xrender render Xft2 freetype2 Xrandr randr xcursor
 PREFER_NATIVE?=		yes
 #
 # When building packages, whether to prefer the pkgsrc or native
