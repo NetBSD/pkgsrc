@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.25 2003/08/27 20:43:15 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.26 2003/08/28 09:48:20 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -343,12 +343,55 @@ ${_BLNK_COOKIE.${_pkg_}}:
 			if [ ! -d $$dir ]; then				\
 				${MKDIR} $$dir;				\
 			fi;						\
-			${LN} -sf $$src $$dest;				\
+			${RM} -f $$dest;				\
+			case $$src in					\
+			*.la)						\
+				${CAT} $$src |				\
+				${_BLNK_LT_ARCHIVE_FILTER}		\
+				> $$dest;				\
+				;;					\
+			*)						\
+				${LN} -sf $$src $$dest;			\
+				;;					\
+			esac;						\
 			${ECHO} "$$msg" >> ${.TARGET};			\
 		done;							\
 		;;							\
 	esac
 .endfor
+
+# _BLNK_LT_ARCHIVE_FILTER is a command-line filter for transforming
+# libtool archives (*.la) to allow libtool to properly interact with
+# buildlink at link time by linking against the libraries pointed to by
+# symlinks in ${BUILDLINK_DIR}.  It achieves this in two ways:
+#
+#     -	Modifies the dependency_libs line by changing all full paths to
+#	other *.la files into the canonical ${BUILDLINK_DIR} path.
+#
+#     -	Modifies the libdir line to point to within ${BUILDLINK_DIR}.
+#	This prevents libtool from looking into the original directory
+#	for other *.la files.
+#
+_BLNK_LT_ARCHIVE_FILTER=						\
+	${AWK} '							\
+		/^dependency_libs=/ {					\
+			line = $$0;					\
+			line = gensub("/usr(/lib/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
+			line = gensub("${DEPOTBASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
+			line = gensub("${LOCALBASE}(/[^ 	]*/lib[^/ 	]*\.la)", "${BUILDLINK_DIR}\\1", "g", line); \
+			print line;					\
+			next;						\
+		}							\
+		/^libdir=/ {						\
+			line = $$0;					\
+			line = gensub("/usr(/lib/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
+			line = gensub("${DEPOTBASE}(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
+			line = gensub("${LOCALBASE}(/[^ 	]*)", "${BUILDLINK_DIR}\\1", "g", line); \
+			print line;					\
+			next;						\
+		}							\
+		{ print }						\
+	'
 
 # Add each of the targets in BUILDLINK_TARGETS as a prerequisite for the
 # do-buildlink target.  This ensures that all the buildlink magic happens
@@ -366,7 +409,7 @@ CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 # The caching code, which greatly speeds up the build process, works only
 # on certain platforms.
 #
-_BLNK_SEED_CACHE?=	yes
+_BLNK_SEED_CACHE?=	passthru transform # block
 _BLNK_CACHE_ALL=	# empty
 _BLNK_CACHE_ALL+=	Darwin-6*-*
 _BLNK_CACHE_ALL+=	IRIX-*-*
@@ -460,6 +503,13 @@ _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
 #
+# Change any buildlink directories in runtime library search paths into
+# the canonical actual installed paths.
+#
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}:${LOCALBASE}
+.endif
+#
 # Protect some directories that we allow to be specified for the runtime
 # library search path.
 #
@@ -472,12 +522,14 @@ _BLNK_TRANSFORM+=	rpath:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 _BLNK_TRANSFORM+=	p:${_BLNK_MANGLE_SED_PATTERN:Q}
 _BLNK_TRANSFORM+=	p:
 #
-# Convert direct paths to static libraries in ${LOCALBASE} or ${X11BASE}
-# into references into ${BUILDLINK_DIR}.
+# Convert direct paths to static libraries and libtool archives in
+# ${LOCALBASE} or ${X11BASE} into references into ${BUILDLINK_DIR}.
 #
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_BLNK_TRANSFORM+=	static:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
-_BLNK_TRANSFORM+=	static:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
+.  if defined(USE_X11)
+_BLNK_TRANSFORM+=	P:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
+.  endif
+_BLNK_TRANSFORM+=	P:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 .endif
 #
 # Transform references into ${X11BASE} into ${BUILDLINK_X11_DIR}.
@@ -1017,10 +1069,18 @@ ${_BLNK_LIBTOOL_FIX_LA}:						\
 		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
-.if !empty(_BLNK_SEED_CACHE:M[yY][eE][sS])
-#
 # Seed the common transforming cache with obvious values that greatly
-# speed up the wrappers:
+# speed up the wrappers.
+#
+_BLNK_RPATH_FLAGS=	${RPATH_FLAG}
+_BLNK_RPATH_FLAGS+=	-Wl,${RPATH_FLAG}
+.for _rflag_ in -Wl,-R -Wl,-rpath, -Wl,-rpath-link,
+.  if empty(_BLNK_RPATH_FLAGS:M${_rflag_})
+_BLNK_RPATH_FLAGS+=	${_rflag_}
+.  endif
+.endfor
+#
+.if !empty(_BLNK_SEED_CACHE:Mpassthru)
 #
 # Pass through all single letter options, because we don't touch those.
 #
@@ -1041,14 +1101,6 @@ _BLNK_CACHE_PASSTHRU_GLOB+=	-[IL]${BUILDLINK_PREFIX.${_pkg_}}/*
 .    endif
 .  endfor
 #
-_BLNK_RPATH_FLAGS=	${RPATH_FLAG}
-_BLNK_RPATH_FLAGS+=	-Wl,${RPATH_FLAG}
-.for _rflag_ in -Wl,-R -Wl,-rpath, -Wl,-rpath-link,
-.  if empty(_BLNK_RPATH_FLAGS:M${_rflag_})
-_BLNK_RPATH_FLAGS+=	${_rflag_}
-.  endif
-.endfor
-#
 # Allow all subdirs of ${_BLNK_ALLOWED_RPATHDIRS} to be in the runtime
 # library search path.
 #
@@ -1058,7 +1110,10 @@ _BLNK_RPATH_FLAGS+=	${_rflag_}
 _BLNK_CACHE_PASSTHRU_GLOB+=	${_R_}${_dir_}|${_R_}${_dir_}/*
 .      endfor
 .    endfor
-.  endif	# _USE_RPATH
+.  endif
+.endif # _BLNK_SEED_CACHE has "passthru"
+
+.if !empty(_BLNK_SEED_CACHE:Mblock)
 #
 # Block all other absolute paths (we handle the ${X11BASE} case below).
 #
@@ -1067,22 +1122,25 @@ _BLNK_CACHE_BLOCK_GLOB=		-[IL]/*
 .    for _R_ in ${_BLNK_RPATH_FLAGS}
 _BLNK_CACHE_BLOCK_GLOB:=	${_BLNK_CACHE_BLOCK_GLOB}|${_R_}/*
 .    endfor
-.  endif	# _USE_RPATH
-.endif	# _BLNK_SEED_CACHE
+.  endif
+.endif # _BLNK_SEED_CACHE has "block"
 
 ${_BLNK_WRAP_CACHE_ADD_TRANSFORM}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${.TARGET}
-.if !empty(_BLNK_SEED_CACHE:M[yY][eE][sS])
-.  for _glob_ in ${_BLNK_CACHE_PASSTHRU_GLOB}
+.if !empty(_BLNK_SEED_CACHE)
+.  if !empty(_BLNK_SEED_CACHE:Mpassthru)
+.    for _glob_ in ${_BLNK_CACHE_PASSTHRU_GLOB}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	( ${ECHO} "${_glob_})";						\
 	  ${ECHO} "	cachehit=yes";					\
 	  ${ECHO} "	;;";						\
 	) >> ${.TARGET}
-.  endfor
-.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
+.    endfor
+.  endif # _BLNK_SEED_CACHE has "passthru"
+.  if !empty(_BLNK_SEED_CACHE:Mtransform)
+.    if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	( ${ECHO} "-I${LOCALBASE}/*)";					\
 	  ${ECHO} "	arg=\"-I${BUILDLINK_DIR}/\$${arg#-I${LOCALBASE}/}\""; \
@@ -1095,8 +1153,8 @@ ${_BLNK_WRAP_CACHE_ADD_TRANSFORM}:
 	  ${ECHO} "	cachehit=yes";					\
 	  ${ECHO} "	;;";						\
 	) >> ${.TARGET}
-.  endif
-.  if defined(USE_X11)
+.    endif
+.    if defined(USE_X11)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	( ${ECHO} "-I${X11BASE}/*)";					\
 	  ${ECHO} "	arg=\"-I${BUILDLINK_X11_DIR}/\$${arg#-I${X11BASE}/}\""; \
@@ -1109,15 +1167,18 @@ ${_BLNK_WRAP_CACHE_ADD_TRANSFORM}:
 	  ${ECHO} "	cachehit=yes";					\
 	  ${ECHO} "	;;";						\
 	) >> ${.TARGET}
-.  endif
-.  for _glob_ in ${_BLNK_CACHE_BLOCK_GLOB}
+.    endif
+.  endif # _BLNK_SEED_CACHE has "transform"
+.  if !empty(_BLNK_SEED_CACHE:Mblock)
+.    for _glob_ in ${_BLNK_CACHE_BLOCK_GLOB}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	( ${ECHO} "${_glob_})";						\
 	  ${ECHO} "	arg=; cachehit=yes;";				\
 	  ${ECHO} "	;;";						\
 	) >> ${.TARGET}
-.  endfor
-.endif	# _BLNK_SEED_CACHE
+.    endfor
+.  endif # _BLNK_SEED_CACHE has "block"
+.endif	 # _BLNK_SEED_CACHE
 
 ${_BLNK_GEN_TRANSFORM}: ${.CURDIR}/../../mk/buildlink3/gen-transform.sh
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}

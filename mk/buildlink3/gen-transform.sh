@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.1.2.2 2003/08/27 06:09:01 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.1.2.3 2003/08/28 09:48:20 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -14,12 +14,13 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 #       I:src:dst		translates "-Isrc" into "-Idst"
 #       L:src:dst		translates "-Lsrc" into "-Ldst"
 #       l:foo:bar		translates "-lfoo" into "-lbar"
+#	P:src:dst		translates "src/libfoo.{a,la}" into
+#					"dst/libfoo.{a,la}"
 #	p:path			translates "path/*/libfoo.so" into
 #					"-Lpath/* -lfoo"
 #       r:dir			removes "dir" and "dir/*"
 #       S:foo:bar		translates word "foo" into "bar"
 #       s:foo:bar		translates "foo" into "bar"
-#	static:src:dst		translates "src/libfoo.a" into "dst/libfoo.a"
 #	no-rpath		removes "-R*", "-Wl,-R", and "-Wl,-rpath,*"
 
 gen() {
@@ -47,6 +48,12 @@ EOF
 		gen $action mangle:-Wl,-rpath,$2:-Wl,-rpath,$3
 		gen $action mangle:-Wl,-R$2:-Wl,-R$3
 		gen $action mangle:-R$2:-R$3
+		;;
+	no-rpath)
+		gen $action _r:-Wl,-rpath-link,
+		gen $action _r:-Wl,-rpath,
+		gen $action _r:-Wl,-R
+		gen $action _r:-R
 		;;
 	I|L)
 		case "$action" in
@@ -77,10 +84,12 @@ EOF
 			;;
 		esac
 		;;
-	static)
+	P)
 		case "$action" in
 		transform)
 			@CAT@ >> $sedfile << EOF
+s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.la\)[ 	]|$3\1 |g
+s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.la\)$|$3\1|g
 s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)[ 	]|$3\1 |g
 s|$2\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)$|$3\1|g
 EOF
@@ -89,6 +98,8 @@ EOF
 			@CAT@ >> $sedfile << EOF
 s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)[ 	]|$2\1 |g
 s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.a\)$|$2\1|g
+s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.la\)[ 	]|$2\1 |g
+s|$3\(/[^ 	"':;]*/lib[^ 	/"':;]*\.la\)$|$2\1|g
 EOF
 			;;
 		esac
@@ -149,18 +160,6 @@ EOF
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
 s|$2|$3|g
-EOF
-			;;
-		esac
-		;;
-	no-rpath)
-		case "$action" in
-		transform|untransform)
-			@CAT@ >> $sedfile << EOF
-s|-Wl,-rpath-link,[^ 	"':;]*||g
-s|-Wl,-rpath,[^ 	"':;]*||g
-s|-Wl,-R[^ 	"':;]*||g
-s|-R[^ 	"':;]*||g
 EOF
 			;;
 		esac
