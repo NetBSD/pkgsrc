@@ -1,8 +1,20 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
+$NetBSD: patch-ae,v 1.2 2002/10/02 05:28:37 uebayasi Exp $
 
 --- source/vmmon/netbsd/drv.c	Tue Apr  3 00:41:32 2001
 +++ source/vmmon/netbsd/drv.c	Sat Jun 23 22:12:21 2001
-@@ -280,6 +280,11 @@
+@@ -121,7 +121,11 @@
+ static int vmmon_debug = 0;
+ 
+ 
++#if __NetBSD_Version__ >= 106080000
++MOD_DEV("vmmon", "vmmon", NULL, -1, &vmmon_dev, -1)
++#else
+ MOD_DEV("vmmon", LM_DT_CHAR, -1, &vmmon_dev)
++#endif
+ 
+ int
+ vmmon_lkmentry(struct lkm_table *lkmtp, int cmd, int ver)
+@@ -280,6 +284,11 @@
  	fp->f_type = DTYPE_VNODE;
  	fp->f_ops = &vnops;
  	fp->f_data = (caddr_t)vp;
