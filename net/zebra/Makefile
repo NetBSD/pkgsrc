@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/08/30 02:57:35 itojun Exp $
+# $NetBSD: Makefile,v 1.15 1999/09/03 22:00:52 tron Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -18,7 +18,7 @@ BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_INET6)
+.if defined(USE_INET6) && ${USE_INET6} == YES
 PLIST_SRC=	${PKGDIR}/PLIST.v6
 .else
 CONFIGURE_ARGS+=--disable-ospf6d --disable-ripngd
