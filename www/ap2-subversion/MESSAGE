@@ -1,0 +1,22 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/02/03 20:24:13 drochner Exp $
+
+See ${PREFIX}/share/doc/subversion/INSTALL for details on making
+a repository accessible via mod_dav_svn.  Basically, you need
+something like this in httpd.conf:
+
+    LoadModule dav_svn_module "lib/httpd/mod_dav_svn.so"
+    <Location /svn>
+        DAV svn
+        SVNPath "/path/to/repository"
+        <LimitExcept GET HEAD OPTIONS POST PROPFIND REPORT TRACE>
+            AuthType Basic
+            AuthName "Subversion repository"
+            AuthUserFile "/path/to/passwd-file"
+            Require valid-user
+            Order deny,allow
+            Deny from all
+        </LimitExcept>
+    </Location>
+
+===========================================================================

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/03 20:24:13 drochner Exp $
+lib/httpd/mod_dav_svn.so
