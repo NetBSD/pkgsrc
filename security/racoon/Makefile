@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2000/09/12 15:32:06 itojun Exp $
+# $NetBSD: Makefile,v 1.22 2000/09/23 21:25:06 itojun Exp $
 #
 
-DISTNAME=	racoon-20000913b
+DISTNAME=	racoon-20000923a
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 
@@ -45,9 +45,13 @@ CONFIGURE_ARGS+=--disable-ipv6
 CONFIGURE_ARGS+=--sysconfdir=/etc/racoon
 
 pre-configure:
-	(cd ${WRKSRC}/../libipsec; make)
+	(cd ${WRKSRC}/../libipsec; ${MAKE})
 
 post-install:
+	${MKDIR} ${PREFIX}/share/doc/racoon
+	for i in FAQ README.certificate; do \
+		${INSTALL_DATA} ${WRKSRC}/doc/$$i ${PREFIX}/share/doc/racoon; \
+	done
 	${MKDIR} ${PREFIX}/share/examples/racoon
 	${INSTALL_DATA} ${WRKSRC}/samples/racoon.conf.sample \
 		${PREFIX}/share/examples/racoon
