@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1 1998/08/25 12:53:07 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/22 06:11:38 garbled Exp $
 #
 
 DISTNAME=	scilab-2.4-src
 PKGNAME=	scilab-2.4
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/
+
+NOT_FOR_ARCHS=	alpha #LP64 problems
 
 MAINTAINER=	mcmahill@alum.mit.edu
 HOMEPAGE=	http://www-rocq.inria.fr/scilab/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/08/20 15:17:08 tsarna Exp $
+# $NetBSD: Makefile,v 1.11 1998/09/22 06:11:38 garbled Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/08/27 19:31:37 jmacd Exp
 #
 
@@ -6,6 +6,8 @@ DISTNAME=	scheme48-0.51
 CATEGORIES=	lang
 MASTER_SITES=	http://www.neci.nj.nec.com/homepages/kelsey/
 EXTRACT_SUFX=	.tgz
+
+NOT_FOR_ARCHS=	alpha	# *severe* problems.  Bus error, alignment
 
 MAINTAINER= 	packages@netbsd.org
 HOMEPAGE=	http://www.neci.nj.nec.com/homepages/kelsey/

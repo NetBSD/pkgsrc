@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1998/08/25 11:06:52 agc Exp $
+# $NetBSD: Makefile,v 1.25 1998/09/22 06:11:37 garbled Exp $
 
 DISTNAME=	gimp-1.0.0
 CATEGORIES=	graphics
@@ -6,6 +6,8 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v1.0/v1.0.0/ \
 		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gimp/v1.0/v1.0.0/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		${GIMP_DATA}${EXTRACT_SUFX}
+
+NOT_FOR_ARCHS=	alpha	#illegal instruction, core dumped.
 
 MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 HOMEPAGE=	http://www.gimp.org/

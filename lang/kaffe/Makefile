@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.11 1998/08/20 15:17:05 tsarna Exp $
+# $NetBSD: Makefile,v 1.12 1998/09/22 06:11:38 garbled Exp $
 #
 
 DISTNAME=	kaffe-1.0.b1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.transvirtual.com/pub/kaffe/
+
+NOT_FOR_ARCHS=	alpha	#assembler problems
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.transvirtual.com/kaffe.html

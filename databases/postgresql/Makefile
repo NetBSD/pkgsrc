@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.17 1998/09/10 11:46:31 frueauf Exp $
+# $NetBSD: Makefile,v 1.18 1998/09/22 06:11:35 garbled Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.3.2
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.PostgreSQL.org/pub/ \
 		ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
+
+NOT_FOR_ARCHS=	alpha	# Needs ELF clue
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.PostgreSQL.ORG/

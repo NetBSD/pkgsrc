@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/09/17 12:21:56 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/22 06:11:40 garbled Exp $
 # FreeBSD: Makefile,v 1.2 1998/08/29 21:24:13 rse Exp
 
 DISTNAME=	apache_1.3.1
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://www.apache.org/apache/dist/ \
 		ftp://ftp.engelschall.com/sw/mod_ssl/ \
 		ftp://ftp.ulpgc.es/pub/mod_ssl/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} mod_ssl-2.0.6-1.3.1${EXTRACT_SUFX}
+
+NOT_FOR_ARCHS=	alpha	#mod_include.so ELF problems
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.apache.org/
