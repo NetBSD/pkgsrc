@@ -1,0 +1,22 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2005/01/16 21:36:27 adrianp Exp $
+
+Please refer to the file:
+
+	${PREFIX}/share/doc/imp/INSTALL
+
+on how to setup your IMP installation. You need to at least edit
+
+	${PREFIX}/share/horde/config/registry.php
+
+to enable IMP in the horde framework.  You will also need to configure IMP
+by using the Horde administrative interface.
+
+Finally you will also need to make IMP accessible through your HTTP server.  If
+you are running Apache and ap-php, then you can add the following lines
+to httpd.conf:
+
+	Include ${PKG_SYSCONFDIR}/horde.conf
+	Include ${PKG_SYSCONFDIR}/imp.conf
+
+===========================================================================
