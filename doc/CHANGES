@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3564 2003/09/28 11:26:29 jmmv Exp $
+$NetBSD: CHANGES,v 1.3565 2003/09/28 11:43:36 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3990,3 +3990,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mysql-server to 3.23.51nb1 [jdolecek 2003-09-28]
 	Updated vice to 1.13 [kristerw 2003-09-28]
 	Added sylpheed-gtk2-0.9.5 [xtraeme 2003-09-28]
+	Updated sylpheed to 0.9.6nb1 [xtraeme 2003-09-28]
+	Updated sylpheed-claws to 0.9.4nb1 [xtraeme 2003-09-28]
