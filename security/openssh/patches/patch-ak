@@ -1,36 +1,31 @@
-$NetBSD: patch-ak,v 1.5 2004/08/31 11:27:12 wiz Exp $
+$NetBSD: patch-ak,v 1.6 2005/03/07 23:29:50 tv Exp $
 
---- sshconnect.c.orig	2004-06-22 04:56:02.000000000 +0200
-+++ sshconnect.c
-@@ -727,6 +727,7 @@ check_host_key(char *host, struct sockad
- 			/* The default */
- 			fp = key_fingerprint(host_key, SSH_FP_MD5, SSH_FP_HEX);
- 			msg2[0] = '\0';
-+#ifndef __INTERIX
- 			if (options.verify_host_key_dns) {
- 				if (matching_host_key_dns)
- 					snprintf(msg2, sizeof(msg2),
-@@ -737,6 +738,7 @@ check_host_key(char *host, struct sockad
- 					    "No matching host key fingerprint"
- 					    " found in DNS.\n");
- 			}
-+#endif /* __INTERIX */
- 			snprintf(msg, sizeof(msg),
- 			    "The authenticity of host '%.200s (%s)' can't be "
- 			    "established%s\n"
-@@ -894,6 +896,7 @@ verify_host_key(char *host, struct socka
- 	struct stat st;
- 	int flags = 0;
+--- auth.c.orig	2004-08-12 08:40:25.000000000 -0400
++++ auth.c
+@@ -356,7 +356,7 @@ check_key_in_hostfiles(struct passwd *pw
+ 		user_hostfile = tilde_expand_filename(userfile, pw->pw_uid);
+ 		if (options.strict_modes &&
+ 		    (stat(user_hostfile, &st) == 0) &&
+-		    ((st.st_uid != 0 && st.st_uid != pw->pw_uid) ||
++		    ((st.st_uid != ROOTUID && st.st_uid != pw->pw_uid) ||
+ 		    (st.st_mode & 022) != 0)) {
+ 			logit("Authentication refused for %.100s: "
+ 			    "bad owner or modes for %.200s",
+@@ -409,7 +409,7 @@ secure_filename(FILE *f, const char *fil
  
-+#ifndef __INTERIX
- 	if (options.verify_host_key_dns &&
- 	    verify_host_key_dns(host, hostaddr, host_key, &flags) == 0) {
+ 	/* check the open file to avoid races */
+ 	if (fstat(fileno(f), &st) < 0 ||
+-	    (st.st_uid != 0 && st.st_uid != uid) ||
++	    (st.st_uid != ROOTUID && st.st_uid != uid) ||
+ 	    (st.st_mode & 022) != 0) {
+ 		snprintf(err, errlen, "bad ownership or modes for file %s",
+ 		    buf);
+@@ -426,7 +426,7 @@ secure_filename(FILE *f, const char *fil
  
-@@ -913,6 +916,7 @@ verify_host_key(char *host, struct socka
- 			}
- 		}
- 	}
-+#endif /* !defined(__INTERIX) */
- 
- 	/* return ok if the key can be found in an old keyfile */
- 	if (stat(options.system_hostfile2, &st) == 0 ||
+ 		debug3("secure_filename: checking '%s'", buf);
+ 		if (stat(buf, &st) < 0 ||
+-		    (st.st_uid != 0 && st.st_uid != uid) ||
++		    (st.st_uid != ROOTUID && st.st_uid != uid) ||
+ 		    (st.st_mode & 022) != 0) {
+ 			snprintf(err, errlen,
+ 			    "bad ownership or modes for directory %s", buf);

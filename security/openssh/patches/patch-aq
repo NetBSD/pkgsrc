@@ -1,13 +1,22 @@
-$NetBSD: patch-aq,v 1.4 2004/08/31 11:27:12 wiz Exp $
+$NetBSD: patch-aq,v 1.5 2005/03/07 23:29:50 tv Exp $
 
---- packet.c.orig	2004-06-22 04:56:02.000000000 +0200
-+++ packet.c
-@@ -1405,7 +1405,7 @@ packet_not_very_much_data_to_write(void)
- static void
- packet_set_tos(int interactive)
+--- sshpty.c.orig	2004-06-21 22:56:02.000000000 -0400
++++ sshpty.c
+@@ -62,7 +62,7 @@ pty_allocate(int *ptyfd, int *ttyfd, cha
+ void
+ pty_release(const char *tty)
  {
--#if defined(IP_TOS) && !defined(IP_TOS_IS_BROKEN)
-+#if defined(IP_TOS) && !defined(IP_TOS_IS_BROKEN) && !defined(__INTERIX)
- 	int tos = interactive ? IPTOS_LOWDELAY : IPTOS_THROUGHPUT;
- 
- 	if (!packet_connection_is_on_socket() ||
+-	if (chown(tty, (uid_t) 0, (gid_t) 0) < 0)
++	if (chown(tty, (uid_t) ROOTUID, (gid_t) ROOTGID) < 0)
+ 		error("chown %.100s 0 0 failed: %.100s", tty, strerror(errno));
+ 	if (chmod(tty, (mode_t) 0666) < 0)
+ 		error("chmod %.100s 0666 failed: %.100s", tty, strerror(errno));
+@@ -203,7 +203,7 @@ pty_setowner(struct passwd *pw, const ch
+ 	if (st.st_uid != pw->pw_uid || st.st_gid != gid) {
+ 		if (chown(tty, pw->pw_uid, gid) < 0) {
+ 			if (errno == EROFS &&
+-			    (st.st_uid == pw->pw_uid || st.st_uid == 0))
++			    (st.st_uid == pw->pw_uid || st.st_uid == ROOTUID))
+ 				debug("chown(%.100s, %u, %u) failed: %.100s",
+ 				    tty, (u_int)pw->pw_uid, (u_int)gid,
+ 				    strerror(errno));

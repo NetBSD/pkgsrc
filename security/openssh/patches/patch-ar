@@ -1,28 +1,50 @@
-$NetBSD: patch-ar,v 1.3 2004/11/04 12:46:33 markd Exp $
+$NetBSD: patch-ar,v 1.4 2005/03/07 23:29:50 tv Exp $
 
---- includes.h.orig	2004-08-15 02:01:48.000000000 +1200
-+++ includes.h
-@@ -176,11 +176,6 @@ static /**/const char *const rcsid[] = {
- # include <libutil.h> /* Openpty on FreeBSD at least */
- #endif
+--- uidswap.c.orig	2004-02-23 21:17:30.000000000 -0500
++++ uidswap.c
+@@ -56,12 +56,12 @@ temporarily_use_uid(struct passwd *pw)
+ 	debug("temporarily_use_uid: %u/%u (e=%u/%u)",
+ 	    (u_int)pw->pw_uid, (u_int)pw->pw_gid,
+ 	    (u_int)saved_euid, (u_int)saved_egid);
+-	if (saved_euid != 0) {
++	if (saved_euid != ROOTUID) {
+ 		privileged = 0;
+ 		return;
+ 	}
+ #else
+-	if (geteuid() != 0) {
++	if (geteuid() != ROOTUID) {
+ 		privileged = 0;
+ 		return;
+ 	}
+@@ -85,9 +85,11 @@ temporarily_use_uid(struct passwd *pw)
  
--#if defined(KRB5) && defined(USE_AFS)
--# include <krb5.h>
--# include <kafs.h>
--#endif
--
- /*
-  * On HP-UX 11.11, shadow.h and prot.h provide conflicting declarations
-  * of getspnam when _INCLUDE__STDC__ is defined, so we unset it here.
-@@ -195,6 +190,11 @@ static /**/const char *const rcsid[] = {
- 
- #include "defines.h"
- 
-+#if defined(KRB5) && defined(USE_AFS)
-+# include <krb5.h>
-+# include <kafs.h>
+ 	/* set and save the user's groups */
+ 	if (user_groupslen == -1) {
++#ifndef HAVE_INTERIX
+ 		if (initgroups(pw->pw_name, pw->pw_gid) < 0)
+ 			fatal("initgroups: %s: %.100s", pw->pw_name,
+ 			    strerror(errno));
 +#endif
-+
- #include "version.h"
- #include "openbsd-compat/openbsd-compat.h"
- #include "openbsd-compat/bsd-nextstep.h"
+ 
+ 		user_groupslen = getgroups(0, NULL);
+ 		if (user_groupslen < 0)
+@@ -172,6 +174,10 @@ permanently_set_uid(struct passwd *pw)
+ 	debug("permanently_set_uid: %u/%u", (u_int)pw->pw_uid,
+ 	    (u_int)pw->pw_gid);
+ 
++#if defined(HAVE_INTERIX)
++	if (setuser(pw->pw_name, NULL, SU_COMPLETE))
++		fatal("setuser %u: %.100s", (u_int)pw->pw_gid, strerror(errno));
++#else
+ #if defined(HAVE_SETRESGID) && !defined(BROKEN_SETRESGID)
+ 	if (setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) < 0)
+ 		fatal("setresgid %u: %.100s", (u_int)pw->pw_gid, strerror(errno));
+@@ -218,6 +224,7 @@ permanently_set_uid(struct passwd *pw)
+ 	    (setuid(old_uid) != -1 || seteuid(old_uid) != -1))
+ 		fatal("%s: was able to restore old [e]uid", __func__);
+ #endif
++#endif /* HAVE_INTERIX */
+ 
+ 	/* Verify UID drop was successful */
+ 	if (getuid() != pw->pw_uid || geteuid() != pw->pw_uid) {

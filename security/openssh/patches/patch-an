@@ -1,52 +1,37 @@
-$NetBSD: patch-an,v 1.4 2004/08/31 11:27:12 wiz Exp $
+$NetBSD: patch-an,v 1.5 2005/03/07 23:29:50 tv Exp $
 
---- sshd.c.orig	2004-08-12 15:08:15.000000000 +0200
-+++ sshd.c
-@@ -52,6 +52,9 @@ RCSID("$OpenBSD: sshd.c,v 1.301 2004/08/
- #include <sys/security.h>
- #include <prot.h>
- #endif
-+#ifdef __INTERIX
-+#include <interix/security.h>
-+#endif /* __INTERIX */
+--- scp.c.orig	2004-08-13 07:19:38.000000000 -0400
++++ scp.c
+@@ -294,7 +294,11 @@ main(int argc, char **argv)
+ 	argc -= optind;
+ 	argv += optind;
  
- #include "ssh.h"
- #include "ssh1.h"
-@@ -579,10 +582,15 @@ privsep_preauth_child(void)
- 	/* XXX not ready, too heavy after chroot */
- 	do_setusercontext(pw);
- #else
-+#ifdef __INTERIX
-+	if (setuser(SSH_PRIVSEP_USER, NULL, SU_COMPLETE) != 0)
-+		fatal("setuser: %s, %.100s", SSH_PRIVSEP_USER, strerror(errno));
-+#else /* __INTERIX */
- 	gidset[0] = pw->pw_gid;
- 	if (setgroups(1, gidset) < 0)
- 		fatal("setgroups: %.100s", strerror(errno));
- 	permanently_set_uid(pw);
-+#endif /* __INTERIX */
- #endif
- }
- 
-@@ -911,8 +919,10 @@ main(int ac, char **av)
- 	av = saved_argv;
- #endif
- 
-+#ifndef __INTERIX
- 	if (geteuid() == 0 && setgroups(0, NULL) == -1)
- 		debug("setgroups(): %.200s", strerror(errno));
++#ifdef HAVE_INTERIX
++	if ((pwd = getpwuid_ex(userid = getuid(), PW_FULLNAME)) == NULL)
++#else
+ 	if ((pwd = getpwuid(userid = getuid())) == NULL)
 +#endif
+ 		fatal("unknown user %u", (u_int) userid);
  
- 	/* Initialize configuration options to their default values. */
- 	initialize_server_options(&options);
-@@ -1183,8 +1193,10 @@ main(int ac, char **av)
- 	 * to create a file, and we can't control the code in every
- 	 * module which might be used).
- 	 */
-+#ifndef __INTERIX
- 	if (setgroups(0, NULL) < 0)
- 		debug("setgroups() failed: %.200s", strerror(errno));
-+#endif /* __INTERIX */
- 
- 	if (rexec_flag) {
- 		rexec_argv = xmalloc(sizeof(char *) * (rexec_argc + 2));
+ 	if (!isatty(STDERR_FILENO))
+@@ -637,8 +641,10 @@ rsource(char *name, struct stat *statp)
+ 		return;
+ 	}
+ 	while ((dp = readdir(dirp)) != NULL) {
++#ifndef HAVE_INTERIX
+ 		if (dp->d_ino == 0)
+ 			continue;
++#endif
+ 		if (!strcmp(dp->d_name, ".") || !strcmp(dp->d_name, ".."))
+ 			continue;
+ 		if (strlen(name) + 1 + strlen(dp->d_name) >= sizeof(path) - 1) {
+@@ -1086,7 +1092,9 @@ okname(char *cp0)
+ 			case '\'':
+ 			case '"':
+ 			case '`':
++#ifndef HAVE_INTERIX
+ 			case ' ':
++#endif
+ 			case '#':
+ 				goto bad;
+ 			default:

@@ -1,18 +1,13 @@
-$NetBSD: patch-ap,v 1.4 2004/08/31 11:27:12 wiz Exp $
+$NetBSD: patch-ap,v 1.5 2005/03/07 23:29:50 tv Exp $
 
---- session.c.orig	2004-08-12 14:40:25.000000000 +0200
-+++ session.c
-@@ -1271,11 +1271,13 @@ do_setusercontext(struct passwd *pw)
- 			perror("setgid");
- 			exit(1);
- 		}
-+#ifndef __INTERIX
- 		/* Initialize the group list. */
- 		if (initgroups(pw->pw_name, pw->pw_gid) < 0) {
- 			perror("initgroups");
- 			exit(1);
- 		}
-+#endif /* __INTERIX */
- 		endgrent();
- # ifdef USE_PAM
- 		/*
+--- ssh.c.orig	2004-08-15 03:23:34.000000000 -0400
++++ ssh.c
+@@ -593,7 +593,7 @@ again:
+ 	/* Open a connection to the remote host. */
+ 	if (ssh_connect(host, &hostaddr, options.port,
+ 	    options.address_family, options.connection_attempts,
+-#ifdef HAVE_CYGWIN
++#if defined(HAVE_CYGWIN) || defined(HAVE_INTERIX)
+ 	    options.use_privileged_port,
+ #else
+ 	    original_effective_uid == 0 && options.use_privileged_port,

@@ -1,0 +1,56 @@
+$NetBSD: patch-av,v 1.1 2005/03/07 23:29:50 tv Exp $
+
+--- sshd.c.orig	2004-08-12 09:08:15.000000000 -0400
++++ sshd.c
+@@ -579,10 +579,15 @@ privsep_preauth_child(void)
+ 	/* XXX not ready, too heavy after chroot */
+ 	do_setusercontext(pw);
+ #else
++#ifdef HAVE_INTERIX
++	if (setuser(pw->pw_name, NULL, SU_COMPLETE))
++		fatal("setuser: %.100s", strerror(errno));
++#else
+ 	gidset[0] = pw->pw_gid;
+ 	if (setgroups(1, gidset) < 0)
+ 		fatal("setgroups: %.100s", strerror(errno));
+ 	permanently_set_uid(pw);
++#endif /* HAVE_INTERIX */
+ #endif
+ }
+ 
+@@ -622,7 +627,7 @@ privsep_preauth(Authctxt *authctxt)
+ 		close(pmonitor->m_sendfd);
+ 
+ 		/* Demote the child */
+-		if (getuid() == 0 || geteuid() == 0)
++		if (getuid() == ROOTUID || geteuid() == ROOTUID)
+ 			privsep_preauth_child();
+ 		setproctitle("%s", "[net]");
+ 	}
+@@ -635,7 +640,7 @@ privsep_postauth(Authctxt *authctxt)
+ #ifdef DISABLE_FD_PASSING
+ 	if (1) {
+ #else
+-	if (authctxt->pw->pw_uid == 0 || options.use_login) {
++	if (authctxt->pw->pw_uid == ROOTUID || options.use_login) {
+ #endif
+ 		/* File descriptor passing is broken or root login */
+ 		monitor_apply_keystate(pmonitor);
+@@ -911,7 +916,7 @@ main(int ac, char **av)
+ 	av = saved_argv;
+ #endif
+ 
+-	if (geteuid() == 0 && setgroups(0, NULL) == -1)
++	if (geteuid() == ROOTUID && setgroups(0, NULL) == -1)
+ 		debug("setgroups(): %.200s", strerror(errno));
+ 
+ 	/* Initialize configuration options to their default values. */
+@@ -1166,7 +1171,7 @@ main(int ac, char **av)
+ 		    (st.st_uid != getuid () ||
+ 		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
+ #else
+-		if (st.st_uid != 0 || (st.st_mode & (S_IWGRP|S_IWOTH)) != 0)
++		if (st.st_uid != ROOTUID || (st.st_mode & (S_IWGRP|S_IWOTH)) != 0)
+ #endif
+ 			fatal("%s must be owned by root and not group or "
+ 			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
