@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/08 20:14:08 tron Exp $
+sbin/vpn
+etc/vpn/peers/sample.peer
+etc/vpn/global.conf
+man/man8/vpn.8
+@unexec /bin/rm -rf %D/etc/vpn/peers
+@dirrm etc/vpn
