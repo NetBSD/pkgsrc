@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.25 2002/02/05 13:00:43 martti Exp $
+# $NetBSD: Makefile.common,v 1.26 2002/02/12 09:24:38 martti Exp $
 
-VIM_VERSION=		6.0.185
+VIM_VERSION=		6.0.220
 DISTNAME=		vim-${VIM_VERSION:C/\.[0-9]*$//}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
@@ -10,28 +10,10 @@ DIST_SUBDIR=		vim
 EXTRACT_SUFX=		.tar.bz2
 
 #
-# Following patches were ignored:
-# 121, 122, 123, 125, 135, 137, 138, 144, 147, 152, 161, 162, 164, 165, 179,
-# 181
-#
-PATCH_SITES+=		${MASTER_SITES:S/unix/patches/}
-.for p in		124 126 127 128 129 130 \
-			131 132 133 134 136 139 140 \
-			141 142 143 145 146 148 149 150 \
-			151 153 154 155 156 157 158 159 160 \
-			163 166 167 168 169 170 \
-			171 172 173 174 175 176 177 178 180 \
-			182 183 184 185
-PATCHFILES+=		${VIM_VERSION:C/\.[0-9]*$//}.${p}
-.endfor
-
-#
-# Combine the first 120 patches into one big patch
-#
-# Ignored: 12, 27, 48, 53, 64, 70, 73, 87, 93, 106, 107, 115, 116, 117, 119
+# Combine the first 220 patches into one big patch
 #
 PATCH_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
-PATCHFILES+=		vim-6.0-001-120.diff.gz
+PATCHFILES+=		vim-6.0-001-220.diff.gz
 
 MAINTAINER=		martti@netbsd.org
 HOMEPAGE=		http://www.vim.org/
