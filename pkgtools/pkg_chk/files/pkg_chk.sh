@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkg_chk.sh,v 1.2 2004/03/27 07:54:34 grant Exp $
+# $Id: pkg_chk.sh,v 1.3 2004/04/08 18:48:53 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -30,8 +30,8 @@ check_packages_installed()
 	fi
 	if [ ! -d $PKG_DBDIR/$PKGNAME ];then
 	    echo_n "$PKGNAME: "
-	    pkg=`echo $PKGNAME | sed 's/-[0-9].*//'`
-	    pkginstalled=`sh -c "${PKG_INFO} -e $pkg" || true`
+	    pkg=$(echo $PKGNAME | sed 's/-[0-9].*//')
+	    pkginstalled=$(sh -c "${PKG_INFO} -e $pkg" || true)
 	    INSTALL=
 	    if [ -n "$pkginstalled" ];then
 		echo_n "version mismatch - $pkginstalled"
@@ -47,8 +47,8 @@ check_packages_installed()
 	    echo
 	else
 	    if [ -n "$opt_B" ];then
-		current_build_ver=`get_build_ver`
-		installed_build_ver=`sed "s|^[^:]*/[^:]*:||" $PKG_DBDIR/$PKGNAME/+BUILD_VERSION`
+		current_build_ver=$(get_build_ver)
+		installed_build_ver=$(sed "s|^[^:]*/[^:]*:||" $PKG_DBDIR/$PKGNAME/+BUILD_VERSION)
 		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
 		    echo "$PKGNAME: build version information mismatch"
 		    MISMATCH_TODO="$MISMATCH_TODO $PKGNAME"
@@ -80,7 +80,7 @@ list_packages()
 	fi
 	if [ ! -f $PACKAGES/All/$PKGNAME.tgz ] ;then
 	    echo " ** $PKGNAME - binary package missing"
-	    if [ -n "$opt_k" ];then
+	    if [ -z "$opt_k" ];then
 		exit 1
 	    fi
 	    continue
@@ -89,10 +89,6 @@ list_packages()
 	    echo "$PKGNAME.tgz: found"
 	fi
 	CHECKLIST="$CHECKLIST$PKGNAME ";
-	if [ $PKGNAME = 'samba-2.2.8anb4.tgz' ] ; then
-	    echo XXX
-	    break
-	fi
     done
     while [ "$CHECKLIST" != ' ' ]; do
 	PKGLIST="$PKGLIST$CHECKLIST"
@@ -100,12 +96,12 @@ list_packages()
 	for pkg in $CHECKLIST ; do
 	    if [ ! -f $PACKAGES/All/$pkg.tgz ] ; then
 		echo " ** $PKGNAME - binary package (dependency) missing"
-		if [ -n "$opt_k" ];then
+		if [ -z "$opt_k" ];then
 		    exit 1
 		fi
 		continue
 	    fi
-	    for dep in `pkg_info -N $PACKAGES/All/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..` ; do
+	    for dep in $(pkg_info -N $PACKAGES/All/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..) ; do
 		case "$PKGLIST$NEXTCHECK" in
 		    *\ $dep\ *)
 			if [ -n "$opt_v" ];then
@@ -137,8 +133,8 @@ extract_make_vars()
     for var in $* ; do
 	MAKEDATA=$MAKEDATA"\t@echo $var=\${$var}\n"
     done
-    eval `printf "$MAKEDATA" | ${MAKE} -f - -f Makefile x | \
-					sed -e 's/[^=]*=/&"/' -e 's/$/"/'`
+    eval $(printf "$MAKEDATA" | ${MAKE} -f - -f Makefile x | \
+					sed -e 's/[^=]*=/&"/' -e 's/$/"/')
     }
 
 # $1 = name of variable
@@ -146,7 +142,7 @@ extract_make_vars()
 extract_mk_dir_var()
     {
     if [ -z "`eval echo \\$$1`" ] ; then
-	eval `printf "BSD_PKG_MK=1\n.PHONY: x\nx:\n\t@echo $1="'$'"{$1}\n" | ${MAKE} -f - -f $MAKECONF x`
+	eval $(printf "BSD_PKG_MK=1\n.PHONY: x\nx:\n\t@echo $1="'$'"{$1}\n" | ${MAKE} -f - -f $MAKECONF x)
 	if [ -z "`eval echo \\$$1`" ]; then
 	    eval "$1=$2"
 	fi
@@ -188,7 +184,7 @@ get_build_ver()
 	fi
     done
     if [ -f ${DISTINFO_FILE} ]; then
-	for f in `${AWK} 'NF == 4 && $3 == "=" { gsub("[()]", "", $2); print $2 }' < ${DISTINFO_FILE}`; do 
+	for f in $(${AWK} 'NF == 4 && $3 == "=" { gsub("[()]", "", $2); print $2 }' < ${DISTINFO_FILE}); do 
 	    if [ -f ${PATCHDIR}/$f ]; then
 		files="$files ${PATCHDIR}/$f";
 	    fi;
@@ -229,7 +225,7 @@ pkg_install()
 	echo "$PKGNAME installed in previous stage"
     elif [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
 	if [ $INSTALL = Update ];then
-	    PKG=`echo $PKGNAME | sed 's/-[0-9].*//'`
+	    PKG=$(echo $PKGNAME | sed 's/-[0-9].*//')
 	    run_cmd "${PKG_DELETE} $PKG" 1
 	    if [ -n "$FAIL" ]; then
 		echo "Can only update packages with dependencies via -s"
@@ -308,7 +304,7 @@ run_cmd()
     fi
     }
 
-args=`getopt BC:D:L:U:abcfghiklnrsuv $*`
+args=$(getopt BC:D:L:U:abcfghiklnrsuv $*)
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -416,17 +412,17 @@ if [ -n "$opt_C" ] ; then
 fi
 
 cd $PKGSRCDIR
-real_pkgsrcdir=`pwd`
+real_pkgsrcdir=$(pwd)
 
 if [ -n "$opt_i" ];then
-    PKGDIRLIST=`sh -c "${PKG_INFO} -B \*" | ${AWK} -F= '/PKGPATH=/{print $2" "}'`
+    PKGDIRLIST=$(sh -c "${PKG_INFO} -B \*" | ${AWK} -F= '/PKGPATH=/{printf $2" "}')
 fi
 
 if [ -n "$opt_g" ]; then
 	if [ -r $PKGCHK_CONF ]; then
 		mv $PKGCHK_CONF ${PKGCHK_CONF}.old
 	fi
-	echo "# Generated automatically at `date`" > $PKGCHK_CONF
+	echo "# Generated automatically at $(date)" > $PKGCHK_CONF
 	${PKG_INFO} -qBa | ${AWK} '/^PKGPATH/ { sub("PKGPATH=[ ]*", ""); print }' >> $PKGCHK_CONF
 fi
 
@@ -439,7 +435,7 @@ if [ -n "$opt_c" -o -n "$opt_l" ];then
 
     # Determine list of tags
     #
-    TAGS="`hostname | sed -e 's,\..*,,'`,`hostname`,`uname -srm | ${AWK} '{print $1"-"$2"-"$3","$1"-"$2","$1"-"$3","$1","$2","$3}'`"
+    TAGS="$(hostname | sed -e 's,\..*,,'),$(hostname),$(uname -srm | ${AWK} '{print $1"-"$2"-"$3","$1"-"$2","$1"-"$3","$1","$2","$3}')"
     if [ -f /usr/X11R6/lib/libX11.so -o -f /usr/X11R6/lib/libX11.a ];then
 	TAGS="$TAGS,x11"
     fi
@@ -463,7 +459,7 @@ if [ -n "$opt_c" -o -n "$opt_l" ];then
 
     # Extract list of valid pkgdirs (skip any 'alreadyset' in $PKGDIRLIST)
     #
-    PKGDIRLIST="$PKGDIRLIST "`${AWK} -v alreadyset="$PKGDIRLIST" -v setlist=$TAGS -v unsetlist=$opt_U '
+    PKGDIRLIST="$PKGDIRLIST "$(${AWK} -v alreadyset="$PKGDIRLIST" -v setlist=$TAGS -v unsetlist=$opt_U '
     BEGIN {
 	split(alreadyset, tmp, " ");
 	for (tag in tmp) { skip[tmp[tag]] = 1; }
@@ -512,7 +508,7 @@ if [ -n "$opt_c" -o -n "$opt_l" ];then
 	{ print $1 }
     }
     ' < $PKGCHK_CONF
-    `
+    )
 fi
 
 if [ -n "$opt_l" ] ; then
@@ -537,9 +533,9 @@ if [ -n "$UPDATE_TODO" ];then
     #
     set -- $UPDATE_TODO
     while [ $# != 0 ]; do
-	PKGNAME=`echo $1 | sed 's/-[0-9].*//'`
+	PKGNAME=$(echo $1 | sed 's/-[0-9].*//')
 	if [ -f $PKG_DBDIR/$PKGNAME-[0-9]*/+REQUIRED_BY ];then
-	    LIST="$LIST$1|$2|`cat $PKG_DBDIR/$PKGNAME-[0-9]*/+REQUIRED_BY | xargs echo`\n"
+	    LIST="$LIST$1|$2|$(cat $PKG_DBDIR/$PKGNAME-[0-9]*/+REQUIRED_BY | xargs echo)\n"
 	else
 	    LIST="$LIST$1|$2\n"
 	fi
@@ -548,7 +544,7 @@ if [ -n "$UPDATE_TODO" ];then
 
     # drop any packages whose 'parents' are also to be updated
     #
-    UPDATE_TODO=`printf "$LIST" | ${AWK} -F '|' '
+    UPDATE_TODO=$(printf "$LIST" | ${AWK} -F '|' '
     {
     pkg2dir[$1] = $2
     split($3, deplist, " ")
@@ -568,7 +564,7 @@ if [ -n "$UPDATE_TODO" ];then
 	    print pkg" "pkg2dir[pkg]
 	}
     }
-    '`
+    ')
 fi
 
 if [ -n "$opt_f" ] ; then
