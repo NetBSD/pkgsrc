@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/05 05:02:41 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/06/03 23:29:53 xtraeme Exp $
 
-SHA1 (allegro-4.1.13.tar.gz) = 0238c39abdfe9f9de093576b7c66c37665bb8ce8
-Size (allegro-4.1.13.tar.gz) = 2773434 bytes
-SHA1 (patch-aa) = 9cd0b652ac08d121575fc9209203b213657f5682
-SHA1 (patch-ab) = cd316b805e6f4f33cc156b1242696651f5765d9b
-SHA1 (patch-ac) = 510655ab2fdaf0583e0044d974a5a1007e57d822
+SHA1 (allegro-4.1.14.tar.gz) = 3b2cf8089304f7904ba0e4dfba3ef46bd99b8a37
+Size (allegro-4.1.14.tar.gz) = 2774495 bytes
+SHA1 (patch-aa) = 37d96e45d8271d5605dda962fb8e156de2618baf
