@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/06 04:10:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/12 21:58:05 salo Exp $
 #
 
 VERS=		0.50.16
@@ -13,13 +13,13 @@ HOMEPAGE=	http://www.exit1.org/dvdrip/
 COMMENT=	Graphical frontend for DVD ripping
 
 DEPENDS+=	cdrdao>=1.1.7:../../sysutils/cdrdao
-DEPENDS+=	transcode>=0.6.9:../../graphics/transcode
-DEPENDS+=	mplayer>=0.90:../../multimedia/mplayer
-DEPENDS+=	ogmtools-[0-9]*:../../graphics/ogmtools
-DEPENDS+=	vcdimager>=0.7.12:../../sysutils/vcdimager-devel
 DEPENDS+=	cdrecord>=1.10:../../sysutils/cdrecord
-DEPENDS+=	subtitleripper-[0-9]*:../../textproc/subtitleripper
+DEPENDS+=	mplayer>=0.90:../../multimedia/mplayer
+DEPENDS+=	ogmtools-[0-9]*:../../multimedia/ogmtools
 DEPENDS+=	p5-Gdk-Pixbuf-[0-9]*:../../graphics/p5-Gdk-Pixbuf
+DEPENDS+=	subtitleripper-[0-9]*:../../textproc/subtitleripper
+DEPENDS+=	transcode>=0.6.9:../../graphics/transcode
+DEPENDS+=	vcdimager>=0.7.12:../../sysutils/vcdimager-devel
 
 .if (${MACHINE_ARCH} == "i386")
 #DEPENDS+=	rar>=2.02:../../archivers/rar
@@ -37,5 +37,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Video/DVDRip/.packlist
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
+
 .include "../../lang/perl5/module.mk"
+
 .include "../../mk/bsd.pkg.mk"
