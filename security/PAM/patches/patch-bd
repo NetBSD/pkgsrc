@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1 2002/01/29 17:10:12 jlam Exp $
+
+--- doc/Makefile.orig	Mon Jan 28 18:45:38 2002
++++ doc/Makefile
+@@ -5,7 +5,7 @@
+ 
+ # These two should probably be moved into autoconf...
+ DOCDIR=/usr/doc/Linux-PAM
+-MANDIR=/usr/man
++MANDIR=${mandir}
+ 
+ #######################################################
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-bg,v 1.1 2002/01/29 17:10:13 jlam Exp $
+
+--- libpamc/Makefile.orig	Mon Jan 28 19:00:46 2002
++++ libpamc/Makefile
+@@ -85,7 +85,7 @@
+ 	$(INSTALL) -m $(SHLIBMODE) $(LIBNAMED) $(FAKEROOT)$(libdir)/$(LIBNAMEDFULL)
+ 	$(LDCONFIG)
+   ifneq ($(DYNTYPE),"sl")
+-	( cd $(FAKEROOT)$(libdir) ; rm -f $(LIBNAMED) ; ln -s $(LIBNAMEDNAME) $(LIBNAMED) )
++	( cd $(FAKEROOT)$(libdir) ; rm -f $(LIBNAMED) $(LIBNAMEDNAME); ln -s $(LIBNAMEDFULL) $(LIBNAMED); ln -s $(LIBNAMEDFULL) $(LIBNAMEDNAME) )
+   endif
+ endif
+ ifeq ($(STATIC_LIBPAM),yes)

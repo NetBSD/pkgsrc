@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+$NetBSD: patch-al,v 1.2 2002/01/29 17:10:11 jlam Exp $
 
---- modules/pam_issue/pam_issue.c.orig	Sat Oct 21 11:56:30 2000
+--- modules/pam_issue/pam_issue.c.orig	Wed Feb 21 23:49:45 2001
 +++ modules/pam_issue/pam_issue.c
 @@ -21,6 +21,7 @@
  #include <stdio.h>
@@ -8,9 +8,9 @@ $NetBSD: patch-al,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
  #include <sys/types.h>
 +#include <sys/param.h>
  #include <sys/stat.h>
+ #include <time.h>
  #include <fcntl.h>
- #include <string.h>
-@@ -214,12 +215,24 @@
+@@ -215,12 +216,24 @@
  	      case 'U':
  		{
  		    int users = 0;
@@ -23,7 +23,7 @@ $NetBSD: patch-al,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
 +			    if (ut.ut_name[0] != '\0')
 +				++users;
 +			(void) fclose(uf);
-+		    }
++		}
 +#else
  		    struct utmp *ut;
  		    setutent();
