@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8636 2005/01/06 14:44:39 mjl Exp $
+$NetBSD: CHANGES,v 1.8637 2005/01/06 15:54:39 mrauch Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -146,3 +146,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cmake to 2.0.5 [adam 2005-01-06]
 	Updated bugzilla to 2.18rc3nb1 [adrianp 2005-01-06]
 	Updated daapd to 0.2.4a [mjl 2005-01-06]
+	Updated openoffice to 1.1.4 [mrauch 2005-01-06]
