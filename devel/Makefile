@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2001/02/09 15:28:54 mjl Exp $
+# $NetBSD: Makefile,v 1.166 2001/02/10 04:42:38 jtb Exp $
 #
 
     SUBDIR += GConf
@@ -133,6 +133,7 @@
     SUBDIR += pwlib
     SUBDIR += py-curses
     SUBDIR += py-idle
+    SUBDIR += ratfor
     SUBDIR += rcs
     SUBDIR += rdp
     SUBDIR += readline
