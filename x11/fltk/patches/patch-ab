@@ -1,0 +1,93 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
+
+--- src/Makefile.orig	Tue Mar 30 02:39:28 1999
++++ src/Makefile	Mon Apr 26 13:49:20 1999
+@@ -146,30 +146,25 @@
+ 
+ include ../makeinclude
+ 
+-LIBRARY = ../lib/$(LIBNAME)
++LIBRARY = $(LIBNAME)
+ 
+-OBJECTS = $(CPPFILES:.cxx=.o) $(CFILES:.c=.o)
++OBJECTS = $(CPPFILES:.cxx=.lo) $(CFILES:.c=.lo)
+ 
+-all:	$(LIBRARY) $(DSONAME)
++all:	$(LIBRARY)
+ 
+ $(LIBRARY): $(OBJECTS)
+-	@echo $(LIBCOMMAND) $@ ...
+-	@$(LIBCOMMAND) $@ $(OBJECTS)
+-	@$(RANLIB) $@
+-
+-$(DSONAME): $(OBJECTS)
+-	@echo $(DSOCOMMAND) $@ ...
+-	@$(DSOCOMMAND) $@ $(OBJECTS)
+-
+-.SUFFIXES:	.cxx .h .o
+-
+-.cxx.o :
+-	$(CXX) -I.. $(CXXFLAGS) -c $<
+-.c.o :
+-	$(CC) -I.. $(CFLAGS) -c -o $@ $<
++	$(LIBTOOL) --mode=link $(CXX) -o $@ $(OBJECTS) \
++		-rpath $(PREFIX)/lib -version-info 1:0
++
++.SUFFIXES:	.cxx .h .lo
++
++.cxx.lo :
++	$(LIBTOOL) --mode=compile $(CXX) -I.. $(CXXFLAGS) -c $<
++.c.lo :
++	$(LIBTOOL) --mode=compile $(CC) -I.. $(CFLAGS) -c $<
+ 
+ clean :
+-	-@ rm -f *.o *.do $(DSONAME) $(LIBRARY) $(CLEAN) core *~ ../include/*~ makedepend cmap
++	-@ rm -f *.o *.do $(LIBRARY) $(CLEAN) core *~ ../include/*~ makedepend cmap
+ 	@touch makedepend
+ 
+ depend:
+@@ -178,36 +173,19 @@
+ 
+ ################################################################
+ 
+-install: $(LIBRARY) $(DSONAME)
++install: all
+ 	@echo "Installing libraries..."
+-	@-mkdir -p $(libdir)
+-	@rm -f $(libdir)/$(LIBNAME)
+-	@-cp $(LIBRARY) $(libdir)
+-	@-chmod 644 $(libdir)/$(LIBNAME)
+-	@if test "$(DSONAME)" = libfltk.so.1; then\
+-		rm -f $(libdir)/libfltk.so*;\
+-		cp libfltk.so.1 $(libdir); \
+-		chmod 755 $(libdir)/libfltk.so.1; \
+-		ln -s $(libdir)/libfltk.so.1 $(libdir)/libfltk.so;\
+-	fi
+-	@if test "$(DSONAME)" = libfltk.sl.1; then\
+-		rm -f $(libdir)/libfltk.sl*;\
+-		cp libfltk.sl.1 $(libdir); \
+-		chmod 755 $(libdir)/libfltk.sl.1; \
+-		ln -s $(libdir)/libfltk.sl.1 $(libdir)/libfltk.sl;\
+-	fi
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIBNAME) $(libdir)
+ 	@echo "Installing include files..."
+-	@-mkdir -p $(includedir)
+-	@rm -rf $(includedir)/FL $(includedir)/Fl
+-	@-cp -r ../FL $(includedir)
+-	@-chmod 755 $(includedir)/FL
+-	@-chmod 644 $(includedir)/FL/*
+-	@for file in $(includedir)/FL/*.H; do\
++	$(BSD_INSTALL_DATA_DIR) $(includedir)/FL
++	$(BSD_INSTALL_DATA) ../FL/* $(includedir)/FL
++	@(cd $(includedir)/FL; \
++	  for file in *.H; do\
+ 		newfile="`basename $$file H`h";\
+-		ln -s $$file $(includedir)/FL/$$newfile;\
+-	done
++		ln -s $$file $$newfile;\
++	  done)
+ 	@-ln -s FL $(includedir)/Fl
+ 
+ #
+ # End of "$Id: patch-ab,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $".
+ #

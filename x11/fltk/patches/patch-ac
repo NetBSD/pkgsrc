@@ -1,0 +1,48 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
+
+--- fluid/Makefile.orig	Mon Apr 19 23:01:23 1999
++++ fluid/Makefile	Mon Apr 26 13:52:02 1999
+@@ -45,21 +45,20 @@
+ 
+ ################################################################
+ 
+-OBJECTS = $(CPPFILES:.cxx=.o)
++OBJECTS = $(CPPFILES:.cxx=.lo)
+ 
+ include ../makeinclude
+ 
+-.SUFFIXES : .cxx .c .o
++.SUFFIXES : .cxx .c .lo
+ 
+-.cxx.o :
+-	$(CXX) -I.. $(CXXFLAGS) -c $<
+-.c.o :
+-	$(CC) -I.. $(CFLAGS) -c $<
+-.cxx :
+-	$(CXX) -I.. $(CXXFLAGS) -o $@ $< -L../lib -lfltk $(LDLIBS)
+-
+-$(PROGRAM) : $(OBJECTS) ../lib/$(LIBNAME)
+-	$(CXX) $(CXXFLAGS) -o $(PROGRAM) $(OBJECTS) -L../lib -lfltk $(LDLIBS)
++.cxx.lo :
++	$(LIBTOOL) --mode=compile $(CXX) -I.. $(CXXFLAGS) -c $<
++.c.lo :
++	$(LIBTOOL) --mode=compile $(CC) -I.. $(CFLAGS) -c $<
++
++$(PROGRAM) : $(OBJECTS) ../src/$(LIBNAME)
++	$(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) \
++		../src/$(LIBNAME) $(LDLIBS)
+ 
+ clean :
+ 	-@ rm -f *.o $(PROGRAM) $(CLEAN) core *~ makedepend
+@@ -71,10 +70,7 @@
+ 
+ install: $(PROGRAM)
+ 	@echo "Installing FLUID..."
+-	@strip $(PROGRAM)
+-	@-mkdir -p $(bindir)
+-	@cp $(PROGRAM) $(bindir)/$(PROGRAM)
+-	@chmod 755 $(bindir)/$(PROGRAM)
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(PROGRAM) $(bindir)
+ 
+ uninstall:
+ 	-@ rm -f $(bindir)/$(PROGRAM)
