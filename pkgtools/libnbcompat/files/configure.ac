@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.41 2004/04/20 10:45:48 grant Exp $
+dnl $NetBSD: configure.ac,v 1.42 2004/04/20 12:13:05 grant Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -35,10 +35,10 @@ AC_HEADER_TIME
 AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
 	errno.h fcntl.h fts.h inttypes.h libutil.h limits.h \
 	machine/endian.h memory.h ndir.h netdb.h netinet/in6_machtypes.h \
-	paths.h poll.h pwd.h stdint.h stdlib.h stringlist.h strings.h \
+	paths.h pwd.h stdint.h stdlib.h stringlist.h strings.h \
 	string.h sys/bitypes.h sys/byteorder.h sys/cdefs.h sys/dir.h \
 	sys/endian.h sys/file.h sys/mkdev.h sys/ndir.h \
-	sys/param.h sys/poll.h sys/queue.h sys/time.h sys/ttycom.h \
+	sys/param.h sys/queue.h sys/time.h sys/ttycom.h \
 	sys/stat.h sys/statfs.h sys/statvfs.h sys/vfs.h sys/types.h \
 	sys/vfs.h termcap.h termios.h time.h tzfile.h unistd.h util.h \
 	utmp.h])
@@ -137,7 +137,7 @@ AC_FUNC_VPRINTF
 
 AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv inet_ntop \
 	inet_pton isblank lchflags lchmod lchown lutimes mkstemp mkdtemp \
-	poll setprogname snprintf strdup strerror strlcat strlcpy \
+	setprogname snprintf strdup strerror strlcat strlcpy \
 	strmode strptime strsep strtoll timegm usleep utimes])
 
 AC_CHECK_FUNCS([setgroupent setgrent setpassent setpwent])
@@ -182,6 +182,41 @@ AC_CHECK_FUNC(SHA1File, [:], [
 	AC_LIBOBJ(sha1)
 	AC_LIBOBJ(sha1hl)
 ])
+
+# handle Darwin 7 having a poll() compatibility function. be
+# conservative, if we don't find one of poll.h or sys/poll.h, use our
+# local poll() implementation.
+pkg_use_nbcompat_poll=no
+AC_CHECK_HEADERS([poll.h sys/poll.h])
+
+if test $ac_cv_header_poll_h = no && test $ac_cv_header_sys_poll_h = no; then
+	pkg_use_nbcompat_poll=yes
+fi
+
+if test $pkg_use_nbcompat_poll = yes; then
+	AC_DEFINE(HAVE_NBCOMPAT_POLL, 1)
+	AH_TEMPLATE([HAVE_NBCOMPAT_POLL], [
+		Define to 1 if the `poll' function is built into the library.
+	])
+	AC_LIBOBJ(poll)
+else
+	AC_CHECK_FUNC(poll, [
+        	AC_MSG_TRY_COMPILE([if poll() is implemented natively],
+                pkg_cv_POLL_COMPAT,
+		[ #if HAVE_POLL_H
+		  #include <poll.h>
+		  #endif
+		  #if HAVE_SYS_POLL_H
+		  #include <sys/poll.h>
+		  #endif
+		],
+                [ #ifdef _POLL_EMUL_H_
+		  #error "poll() is emulated"
+	 	  #endif
+		],
+                [:], [AC_LIBOBJ(poll)])
+])
+fi
 
 AC_CHECK_FUNCS([strunvis strvis strsvis])
 AC_CHECK_FUNCS([strunvis strvis strsvis],
