@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.4.4.3 2005/02/13 15:52:07 salo Exp $
+$NetBSD: distinfo,v 1.4.4.4 2005/02/15 21:05:52 snj Exp $
 
-SHA1 (awstats-6.3nb3/awstats-6.3.tgz) = 3ca8d0b3e008beaa544b4bc344fec7cab2554da4
-Size (awstats-6.3nb3/awstats-6.3.tgz) = 938794 bytes
+SHA1 (awstats-6.3nb4/awstats-6.3.tgz) = 3ca8d0b3e008beaa544b4bc344fec7cab2554da4
+Size (awstats-6.3nb4/awstats-6.3.tgz) = 938794 bytes
+SHA1 (patch-aa) = ecc293ac7e6a04da2b684cea01ba278d899a90bf
+SHA1 (patch-ab) = 715dcd2689f129aa71872a73a9abe15c3894d5a1
