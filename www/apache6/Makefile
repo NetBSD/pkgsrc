@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/09/03 22:00:53 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/09/21 15:12:03 jdolecek Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -29,7 +29,7 @@ HOMEPAGE=		http://www.apache.org/
 
 CONFLICTS=		apache-*modssl-* apache-*
 
-SSL_DISTNAME=		mod_ssl-2.2.8-1.3.6
+#SSL_DISTNAME=		mod_ssl-2.2.8-1.3.6
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
 HAS_CONFIGURE=		YES
