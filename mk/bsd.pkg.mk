@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.27 2003/08/23 03:59:43 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.28 2003/08/23 04:01:53 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4572,7 +4572,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		done ;;							\
 	esac
 .  if (${PKG_INSTALLATION_TYPE} == "pkgviews") && (${BUILD_VIEWS} == "yes")
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} PKG_DBDIR=${PKG_DBDIR} build-views
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} build-views
 .  endif	# pkgviews
 .endif		# !fake-pkg
 
