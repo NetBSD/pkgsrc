@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6401 2004/06/30 07:13:32 grant Exp $
+$NetBSD: CHANGES,v 1.6402 2004/06/30 09:54:16 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3185,3 +3185,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dvd+rw-tools to 5.19.4.9.7 [wiz 2004-06-30]
 	Updated easytag to 0.31 [wiz 2004-06-30]
 	Added p5-Log-Dispatch-DBI-0.02 [grant 2004-06-30]
+	Updated pkg_chk to 1.49 [abs 2004-06-30]
+
