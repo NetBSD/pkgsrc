@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/31 02:42:24 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/04/03 12:45:47 grant Exp $
 #
 
 DISTNAME=		mozilla-i686-pc-linux-gnu-1.3
@@ -27,7 +27,7 @@ post-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${MOZILLA_LIB}
-	cd ${WRKSRC}; && ${CP} -r . ${MOZILLA_LIB}
+	cd ${WRKSRC} && ${CP} -r . ${MOZILLA_LIB}
 	${INSTALL_SCRIPT} ${WRKDIR}/mozilla.sh ${PREFIX}/bin/mozilla-linux
 
 post-install:
