@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:16 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/25 03:17:55 snj Exp $
 #
 
 DISTNAME=	SnortSnarf-021111.1
@@ -12,7 +12,7 @@ COMMENT=	Generate HTML report summaries from snort incident alerts
 
 DEPENDS=	p5-Time>=101.062101:../../time/p5-Time
 
-USE_BUILDLINK2=	YES
+NO_BUILDLINK=	YES
 NO_BUILD=	YES
 USE_PERL5=	run
 
@@ -31,7 +31,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snortsnarf
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/snortsnarf
 	${INSTALL_DATA} ${WRKSRC}/Usage ${PREFIX}/share/doc/snortsnarf
-
-.include "../../lang/perl5/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
