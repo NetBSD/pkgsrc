@@ -1,0 +1,51 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/30 17:39:26 sommerfeld Exp $
+bin/xzwrite
+bin/zaway
+bin/zctl
+bin/zleave
+bin/zlocate
+bin/zmailnotify
+bin/znol
+bin/zstat
+bin/zwgc
+bin/zwrite
+etc/rc.d/zhm
+etc/zephyr/default.subscriptions
+include/zephyr/mit-copyright.h
+include/zephyr/zephyr.h
+include/zephyr/zephyr_err.h
+lib/libzephyr.a
+man/man1/xzwrite.1
+man/man1/zaway.1
+man/man1/zctl.1
+man/man1/zephyr.1
+man/man1/zleave.1
+man/man1/zlocate.1
+man/man1/zmailnotify.1
+man/man1/znol.1
+man/man1/zwgc.1
+man/man1/zwrite.1
+man/man8/zephyrd.8
+man/man8/zhm.8
+man/man8/zpopnotify.8
+man/man8/zshutdown_notify.8
+man/man8/zstat.8
+sbin/zephyrd
+sbin/zhm
+sbin/zpopnotify
+sbin/zshutdown_notify
+share/doc/zephyr/INSTALL
+share/doc/zephyr/NOTES
+share/doc/zephyr/OPERATING
+share/doc/zephyr/README
+share/doc/zephyr/USING
+share/zephyr/XZwrite
+share/zephyr/xzwrite.bitmap
+share/zephyr/zwgc.desc
+share/zephyr/zwgc_resources
+@dirrm share/zephyr
+@dirrm share/doc/zephyr
+@dirrm include/zephyr
+@exec ${MKDIR} %D/etc/zephyr/acl
+@dirrm etc/zephyr/acl
+@dirrm etc/zephyr

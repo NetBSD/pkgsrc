@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/12/30 17:39:26 sommerfeld Exp $
+
+--- lib/ZMkAuth.c.orig	Fri Jan 22 18:19:16 1999
++++ lib/ZMkAuth.c
+@@ -42,7 +42,9 @@ Code_t ZMakeAuthentication(notice, buffe
+     char *cstart, *cend;
+     ZChecksum_t checksum;
+     CREDENTIALS cred;
+-    extern unsigned long des_quad_cksum();
++#ifdef ERROR_TABLE_BASE_krb
++#define krb_err_base ERROR_TABLE_BASE_krb
++#endif
+ 
+     now = time(0);
+     if (last_authent_time == 0 || (now - last_authent_time > 120)) {

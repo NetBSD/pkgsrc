@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/12/30 17:39:27 sommerfeld Exp $
+
+--- server/realm.c.orig	Mon Feb 26 23:51:07 2001
++++ server/realm.c
+@@ -1096,6 +1096,10 @@ realm_dump_realms(fp)
+ }
+ 
+ #ifdef HAVE_KRB4
++#ifdef ERROR_TABLE_BASE_krb
++#define krb_err_base ERROR_TABLE_BASE_krb
++#endif
++
+ static void
+ realm_sendit_auth(notice, who, auth, realm, ack_to_sender)
+     ZNotice_t *notice;

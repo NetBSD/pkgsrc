@@ -1,0 +1,46 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/12/30 17:39:27 sommerfeld Exp $
+
+--- server/kopt.c.orig	Mon Feb 26 23:48:01 2001
++++ server/kopt.c
+@@ -161,7 +161,7 @@ void add_to_key_sched_cache(key, sched)
+ 
+ int
+ krb_set_key(key,cvt)
+-    char *key;
++    void *key;
+     int cvt;
+ {
+ #ifdef NOENCRYPTION
+@@ -172,7 +172,7 @@ krb_set_key(key,cvt)
+     int ret;
+ 
+     if (cvt)
+-	string_to_key(key,serv_key);
++	string_to_key((char *)key,serv_key);
+     else
+ 	memcpy((char *)serv_key,key,8);
+ 
+@@ -187,6 +187,14 @@ krb_set_key(key,cvt)
+ #endif /* NOENCRYPTION */
+ }
+ 
++static u_long
++swap_u_long(u_long x)
++{
++	return ((x & 0xff000000) >> 24) |
++	    ((x & 0x00ff0000) >> 8) |
++	    ((x & 0x0000ff00) << 8) |
++	    ((x & 0x000000ff) << 24);
++}
+ 
+ /*
+  * krb_rd_req() takes an AUTH_MSG_APPL_REQUEST or
+@@ -234,7 +242,7 @@ krb_rd_req(authent,service,instance,from
+     KTEXT authent;			/* The received message */
+     char *service;			/* Service name */
+     char *instance;			/* Service instance */
+-    unsigned KRB_INT32 from_addr;	/* Net address of originating host */
++    KRB_INT32 from_addr;		/* Net address of originating host */
+     AUTH_DAT *ad;			/* Structure to be filled in */
+     char *fn;				/* Filename to get keys from */
+ {

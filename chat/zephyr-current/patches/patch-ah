@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1.1.1 2002/12/30 17:39:27 sommerfeld Exp $
+
+--- zhm/zhm.c.orig	Fri May 19 19:19:21 2000
++++ zhm/zhm.c
+@@ -22,7 +22,9 @@ int use_hesiod = 0;
+ #define srandom srand48
+ #endif
+ 
+-#define PIDDIR "/var/athena/"
++#ifndef PIDDIR
++#define PIDDIR "/var/run/"
++#endif
+ 
+ int hmdebug, rebootflag, noflushflag, errflg, dieflag, inetd, oldpid, nofork;
+ int no_server = 1, nservchang, nserv, nclt;
