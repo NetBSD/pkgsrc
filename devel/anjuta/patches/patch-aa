@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.3 2004/06/28 12:32:42 kristerw Exp $
+
+--- src/debugger.c.orig	Mon Jun 28 14:13:36 2004
++++ src/debugger.c	Mon Jun 28 14:14:16 2004
+@@ -2108,9 +2108,10 @@
+ void debugger_query_evaluate_expr_tip (const gchar *expr,
+ 			void (*parser) (GList *outputs, gpointer data), gpointer data)
+ {
++	gchar *printcmd;
+ 	query_set_verbose (FALSE);
+ 	query_set_print_staticmembers (FALSE);
+-	gchar *printcmd = g_strconcat ("print ", expr, NULL);
++	printcmd = g_strconcat ("print ", expr, NULL);
+ 	debugger_put_cmd_in_queqe (printcmd, DB_CMD_NONE, parser, data);
+ 	query_set_verbose (TRUE);
+ 	query_set_print_staticmembers (TRUE);
+@@ -2120,9 +2121,10 @@
+ void debugger_query_evaluate_expr (const gchar *expr,
+ 			void (*parser) (GList *outputs, gpointer data), gpointer data)
+ {
++	gchar *printcmd;
+ 	query_set_print_pretty (TRUE);
+ 	query_set_verbose (FALSE);
+-	gchar *printcmd = g_strconcat ("print ", expr, NULL);
++	printcmd = g_strconcat ("print ", expr, NULL);
+ 	debugger_put_cmd_in_queqe (printcmd, DB_CMD_SE_MESG | DB_CMD_SE_DIALOG,
+ 				parser, data);
+ 	query_set_print_pretty (FALSE);
