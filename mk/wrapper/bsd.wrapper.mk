@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.4 2004/09/26 21:38:03 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.5 2004/09/27 12:05:53 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,16 +34,13 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+.include "../../mk/wrapper/wrapper-defs.mk"
+
 .if ${PKG_DEBUG_LEVEL} > 0
 ECHO_WRAPPER_MSG?=	${ECHO}
 .else
 ECHO_WRAPPER_MSG?=	${TRUE}
 .endif
-WRAPPER_DIR=		${WRKDIR}/.wrapper
-WRAPPER_BINDIR=		${WRAPPER_DIR}/bin
-WRAPPER_TMPDIR=		${WRAPPER_DIR}/tmp
-WRAPPER_SRCDIR=		${.CURDIR}/../../mk/wrapper
-WRAPPER_SHELL=		${SH}
 _WRAP_VARS_MK=		${WRAPPER_DIR}/vars.mk
 
 .if exists(${_WRAP_VARS_MK})
