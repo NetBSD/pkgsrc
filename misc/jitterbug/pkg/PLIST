@@ -1,19 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/05 12:37:19 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/10/11 13:39:34 wennmach Exp $
 @JB_USER@/config/footer.html
-@exec [ -f %D/@JB_DATADIR@/footer.html ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/footer.html
+@exec if [ ! -d %D/@JB_DATADIR@ ]; then /bin/mkdir -p %D/@JB_DATADIR@; fi
+@exec if [ ! -f %D/@JB_DATADIR@/footer.html ]; then /bin/cp -p %D/%F %D/@JB_DATADIR@/footer.html; fi
 @JB_USER@/config/guest.prefs
-@exec [ -f %D/@JB_DATADIR@/guest.prefs ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/guest.prefs
+@exec if [ ! -f %D/@JB_DATADIR@/guest.prefs ]; then /bin/cp -p %D/%F %D/@JB_DATADIR@/guest.prefs; fi
 @JB_USER@/config/guestintro.html
-@exec [ -f %D/@JB_DATADIR@/guestintro.html ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/guestintro.html
+@exec if [ ! -f %D/@JB_DATADIR@/guestintro.html ]; then /bin/cp -p %D/%F %D/@JB_DATADIR@/guestintro.html; fi
 @JB_USER@/config/intro.html
-@exec [ -f %D/@JB_DATADIR@/intro.html ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/intro.html
+@exec if [ ! -f %D/@JB_DATADIR@/intro.html ]; then /bin/cp -p %D/%F %D/@JB_DATADIR@/intro.html; fi
 @JB_USER@/config/reportform.html
-@exec [ -f %D/@JB_DATADIR@/reportform.html ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/reportform.html
+@exec if [ ! -f %D/@JB_DATADIR@/reportform.html ]; then /bin/cp -p %D/%F %D/@JB_DATADIR@/reportform.html; fi
 @JB_USER@/config/users
-@exec [ -f %D/@JB_DATADIR@/users ] || /bin/cp -p %D/%F %D/@JB_DATADIR@/users
+@exec if [ ! -f %D/@JB_DATADIR@/users ]; then /bin/cp -p %D/%F %D/@JB_DATADIR@/users; fi
 @JB_USER@/config/jitterbug.config
-@exec [ -f %D/etc/jitterbug/@JB_PACKAGE@ ] || /bin/cp -p %D/%F %D/etc/jitterbug/@JB_PACKAGE@
-@exec [ -f %D/etc/jitterbug/@JB_PACKAGE@.private ] || /bin/cp -p %D/%F %D/etc/jitterbug/@JB_PACKAGE@.private
+@exec if [ ! -d %D/etc/jitterbug/@JB_PACKAGE@ ]; then /bin/mkdir -p %D/etc/jitterbug/@JB_PACKAGE@; fi
+@exec if [ ! -f %D/etc/jitterbug/@JB_PACKAGE@ ]; then /bin/cp -p %D/%F %D/etc/jitterbug/@JB_PACKAGE@; fi
+@exec if [ ! -f %D/etc/jitterbug/@JB_PACKAGE@.private ]; then /bin/cp -p %D/%F %D/etc/jitterbug/@JB_PACKAGE@.private; fi
+@exec if [ ! -d %D/@JB_USER@/etc ]; then /bin/mkdir -p %D/@JB_USER@/etc; fi
 @exec [ -f %D/@JB_USER@/etc/jitterbug.auth ] || /bin/echo "@JB_USER@:*************" > %D/@JB_USER@/etc/jitterbug.auth
 @JB_USER@/bin/new_message
 @JB_USER@/bin/jitterbug
@@ -22,16 +25,10 @@
 @JB_USER@/doc/CONFIG.txt
 @JB_USER@/doc/INSTALL
 @JB_USER@/doc/JitterBug.txt
+@exec /usr/sbin/chown -R @JB_USER@ %D/@JB_USER@
+@exec /usr/bin/chgrp -R @JB_GROUP@ %D/@JB_USER@
 @dirrm @JB_USER@/bin
 @dirrm @JB_USER@/doc
 @dirrm @JB_USER@/config
 @CGIBINDIR@/@JB_PACKAGE@
 @CGIBINDIR@/@JB_PACKAGE@.private
-@unexec echo "If you are removing jitterbug permanently, you may wish to"
-@unexec echo "  - remove user @JB_USER@"
-@unexec echo "  - remove group @JB_GROUP@"
-@unexec echo "  - rm -rf %D/@JB_USER@"
-@unexec echo "  - rm -rf %D/etc/jitterbug"
-@unexec echo "  - remove entries in %D/etc/httpd/httpd.conf"
-@unexec echo "  - remove mail alias for @JB_PACKAGE@-bugs in /etc/aliases"
-@unexec echo "           and run newaliases"
