@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/09/20 23:48:47 jlam Exp $
+# $NetBSD: Makefile,v 1.9 1999/10/07 01:11:49 hubertf Exp $
 #
 
 DISTNAME=		gtksql-0.3
@@ -16,6 +16,7 @@ DEPENDS+=		postgresql-6.5.2:../../databases/postgresql
 
 USE_X11BASE=
 
+.include "../../mk/bsd.prefs.mk"
 PGUSER?=		pgsql
 
 post-patch:
