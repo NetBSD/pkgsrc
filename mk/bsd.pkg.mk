@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.276 1999/05/25 01:08:22 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.277 1999/05/26 15:27:23 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1800,7 +1800,7 @@ real-fetch: check-depends
 .if !target(check-depends)
 check-depends:
 .if (defined(DEPENDS) || defined(BUILD_DEPENDS) || defined(RUN_DEPENDS)) && \
-    !defined(NO_DEPENDS) && !defined(NO_CHECK_DEPENDS)
+    !defined(NO_DEPENDS) && !defined(NO_CHECK_DEPENDS) && !exists(${EXTRACT_COOKIE})
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "===>  Validating dependencies for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 depends || \
 		(${ECHO_MSG} "===>  ${PKGNAME} cannot build necessary dependencies."; ${FALSE})
