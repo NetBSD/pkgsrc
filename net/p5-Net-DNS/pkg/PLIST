@@ -1,0 +1,74 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/08 01:06:49 hubertf Exp $
+lib/perl5/site_perl/Net/DNS.pm
+lib/perl5/site_perl/Net/DNS/Header.pm
+lib/perl5/site_perl/Net/DNS/Packet.pm
+lib/perl5/site_perl/Net/DNS/Question.pm
+lib/perl5/site_perl/Net/DNS/RR.pm
+lib/perl5/site_perl/Net/DNS/Resolver.pm
+lib/perl5/site_perl/Net/DNS/Update.pm
+lib/perl5/site_perl/Net/DNS/RR/A.pm
+lib/perl5/site_perl/Net/DNS/RR/AAAA.pm
+lib/perl5/site_perl/Net/DNS/RR/AFSDB.pm
+lib/perl5/site_perl/Net/DNS/RR/CNAME.pm
+lib/perl5/site_perl/Net/DNS/RR/EID.pm
+lib/perl5/site_perl/Net/DNS/RR/HINFO.pm
+lib/perl5/site_perl/Net/DNS/RR/ISDN.pm
+lib/perl5/site_perl/Net/DNS/RR/LOC.pm
+lib/perl5/site_perl/Net/DNS/RR/MB.pm
+lib/perl5/site_perl/Net/DNS/RR/MG.pm
+lib/perl5/site_perl/Net/DNS/RR/MINFO.pm
+lib/perl5/site_perl/Net/DNS/RR/MR.pm
+lib/perl5/site_perl/Net/DNS/RR/MX.pm
+lib/perl5/site_perl/Net/DNS/RR/NAPTR.pm
+lib/perl5/site_perl/Net/DNS/RR/NIMLOC.pm
+lib/perl5/site_perl/Net/DNS/RR/NS.pm
+lib/perl5/site_perl/Net/DNS/RR/NSAP.pm
+lib/perl5/site_perl/Net/DNS/RR/NULL.pm
+lib/perl5/site_perl/Net/DNS/RR/PTR.pm
+lib/perl5/site_perl/Net/DNS/RR/PX.pm
+lib/perl5/site_perl/Net/DNS/RR/RP.pm
+lib/perl5/site_perl/Net/DNS/RR/RT.pm
+lib/perl5/site_perl/Net/DNS/RR/SOA.pm
+lib/perl5/site_perl/Net/DNS/RR/SRV.pm
+lib/perl5/site_perl/Net/DNS/RR/TXT.pm
+lib/perl5/site_perl/Net/DNS/RR/X25.pm
+lib/perl5/man/man3/Net::DNS::RR::EID.3
+lib/perl5/man/man3/Net::DNS::RR::NSAP.3
+lib/perl5/man/man3/Net::DNS::RR::PTR.3
+lib/perl5/man/man3/Net::DNS::RR::MINFO.3
+lib/perl5/man/man3/Net::DNS::RR::NULL.3
+lib/perl5/man/man3/Net::DNS::RR::LOC.3
+lib/perl5/man/man3/Net::DNS.3
+lib/perl5/man/man3/Net::DNS::Resolver.3
+lib/perl5/man/man3/Net::DNS::RR::MR.3
+lib/perl5/man/man3/Net::DNS::RR::TXT.3
+lib/perl5/man/man3/Net::DNS::RR::RP.3
+lib/perl5/man/man3/Net::DNS::RR::CNAME.3
+lib/perl5/man/man3/Net::DNS::RR::MX.3
+lib/perl5/man/man3/Net::DNS::RR::NAPTR.3
+lib/perl5/man/man3/Net::DNS::Packet.3
+lib/perl5/man/man3/Net::DNS::RR::RT.3
+lib/perl5/man/man3/Net::DNS::RR::PX.3
+lib/perl5/man/man3/Net::DNS::Update.3
+lib/perl5/man/man3/Net::DNS::RR.3
+lib/perl5/man/man3/Net::DNS::RR::HINFO.3
+lib/perl5/man/man3/Net::DNS::RR::MG.3
+lib/perl5/man/man3/Net::DNS::Header.3
+lib/perl5/man/man3/Net::DNS::RR::SRV.3
+lib/perl5/man/man3/Net::DNS::RR::X25.3
+lib/perl5/man/man3/Net::DNS::RR::AFSDB.3
+lib/perl5/man/man3/Net::DNS::RR::A.3
+lib/perl5/man/man3/Net::DNS::RR::NS.3
+lib/perl5/man/man3/Net::DNS::RR::NIMLOC.3
+lib/perl5/man/man3/Net::DNS::RR::SOA.3
+lib/perl5/man/man3/Net::DNS::RR::AAAA.3
+lib/perl5/man/man3/Net::DNS::Question.3
+lib/perl5/man/man3/Net::DNS::RR::ISDN.3
+lib/perl5/man/man3/Net::DNS::RR::MB.3
+lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/perllocal.pod
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Net/DNS/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Net/DNS
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Net
+@dirrm lib/perl5/site_perl/Net/DNS/RR
+@dirrm lib/perl5/site_perl/Net/DNS
+@dirrm lib/perl5/site_perl/Net
