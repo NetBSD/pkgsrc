@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/30 16:18:58 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2003/09/25 04:13:06 xtraeme Exp $
 
-SHA1 (raptor-0.9.12.tar.gz) = 646742a722ca98a1c15d9dd826c676960b887480
-Size (raptor-0.9.12.tar.gz) = 415325 bytes
+SHA1 (raptor-1.0.0.tar.gz) = 220216268d291fc5574b482cedb4150fb09d53f9
+Size (raptor-1.0.0.tar.gz) = 420807 bytes
