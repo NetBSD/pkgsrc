@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/01/24 13:30:55 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/11 19:04:44 snj Exp $
 #
 
 DISTNAME=	crossfire-client-1.0.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/crossfire/
 DISTFILES=	${CF_SRC} ${CF_SND} ${CF_RAW}
@@ -11,25 +11,26 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://crossfire.real-time.com/
 COMMENT=	Client for X11 game similar to gauntlet and nethack
 
-DEPENDS+=	gtk+>=1.2.4:../../x11/gtk
-DEPENDS+=	png>=1.2.1:../../graphics/png
-
 EXTRACT_ONLY=	${CF_SRC}
 
 CF_SRC=		crossfire-client-1.0.0.tar.gz
 CF_SND=		client-0.95.2-au-sounds.tgz
 CF_RAW=		client-0.95.2-raw-sounds.tgz
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_PERL5=	yes
 USE_X11=	yes
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
-SCRIPTS_ENV+=	${SCRIPTSDIR}
-CONFIGURE_ARGS+=	--with-includes=-I${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-sound-dir=${LOCALBASE}/share/cfclient/sounds
 
 REPLACE_PERL=	utils/deftoheader.pl items.pl
+
+SUBST_CLASSES+=		dsp
+SUBST_STAGE.dsp=	post-patch
+SUBST_MESSAGE.dsp=	Adjusting path to sound device.
+SUBST_FILES.dsp=	cfsndserv.c
+SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} soundsdef.h
@@ -43,7 +44,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/def_keys ${LOCALBASE}/share/cfclient
 	@${CHOWN} -R ${ROOT_USER}:games ${LOCALBASE}/share/cfclient
 
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
