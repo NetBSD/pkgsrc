@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/12/28 08:55:31 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2005/03/21 14:44:08 tv Exp $
 
 DISTNAME=	coreutils-5.2.1
 PKGREVISION=	1
@@ -30,6 +30,13 @@ SUBST_FILES.root=	src/Makefile.in
 SUBST_SED.root=		-e 's, root , ${ROOT_USER} ,g'
 
 .include "../../mk/bsd.prefs.mk"
+
+# Exclude programs from PLIST which aren't built on a platform.
+.if ${OPSYS} == "Interix"
+PLIST_SUBST+=		COREUTILS_HAVE_HOSTID="@comment "
+.else
+PLIST_SUBST+=		COREUTILS_HAVE_HOSTID=""
+.endif
 
 CONFIGURE_ARGS=		--program-prefix=${GNU_PROGRAM_PREFIX}
 # if GNU_PROGRAM_PREFIX == 'g'
