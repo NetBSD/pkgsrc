@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2004/07/21 22:35:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2004/08/02 03:57:17 schmonz Exp $
 #
 
-DISTNAME=	qmail-1.03
-PKGREVISION=	7
+PKGNAME=	${QMAIL_VERS}
+PKGREVISION=	8
 CATEGORIES=	mail
-MASTER_SITES=	http://cr.yp.to/software/			\
-		ftp://ftp.ntnu.no/pub/unix/mail/qmail/		\
-		ftp://ftp.jp.qmail.org/qmail/			\
-		ftp://ftp.net.ohio-state.edu/pub/networking/mail/qmail/
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/qmail.html
@@ -21,6 +17,8 @@ RESTRICTED=	"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_PACKAGE=	"needs work to function properly as a binary package"
+
+APPLY_NETQMAIL=	${DO_NADA}
 
 .include "../../mail/qmail/Makefile.common"
 

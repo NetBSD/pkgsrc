@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/07/21 22:35:59 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/08/02 03:57:17 schmonz Exp $
 bin/bouncesaying
 bin/condredirect
 bin/datemail
@@ -28,7 +28,6 @@ bin/qmail-qmqpc
 bin/qmail-qmqpd
 bin/qmail-qmtpd
 bin/qmail-qread
-bin/qmail-qread-client
 bin/qmail-qstat
 bin/qmail-queue
 bin/qmail-remote
@@ -147,7 +146,7 @@ man/man8/qmail-tcpok.8
 man/man8/qmail-tcpto.8
 man/man8/splogger.8
 share/doc/qmail/FAQ
-share/doc/qmail/INSTALL
+share/doc/qmail/INSTALL${OSXSUFX}
 share/doc/qmail/INSTALL.alias
 share/doc/qmail/INSTALL.ctl
 share/doc/qmail/INSTALL.ids
@@ -165,7 +164,7 @@ share/doc/qmail/PIC.relaygood
 share/doc/qmail/PIC.rem2local
 share/doc/qmail/REMOVE.binmail
 share/doc/qmail/REMOVE.sendmail
-share/doc/qmail/SENDMAIL
+share/doc/qmail/SENDMAIL${OSXSUFX}
 share/doc/qmail/TEST.deliver
 share/doc/qmail/TEST.receive
 share/doc/qmail/UPGRADE
@@ -179,7 +178,6 @@ share/examples/qmail/boot/home
 share/examples/qmail/boot/home+df
 share/examples/qmail/boot/proc
 share/examples/qmail/boot/proc+df
-share/examples/qmail/mailer.conf
 share/qmail/setup/config
 share/qmail/setup/config-fast
 share/qmail/setup/dnsfq
