@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/25 20:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/26 13:39:39 darcy Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.2.4
@@ -19,7 +19,7 @@ USE_GNU_TOOLS+=	make
 CONFLICTS+=	${PYPKGPREFIX}-wxWindows-[0-9]*
 
 # we depend on glib which pulls in threads
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
+PYTHON_VERSIONS_ACCEPTED=	24pth 23pth 22pth 21pth
 BUILDLINK_DEPENDS.python21-pth=	python21-pth>=2.1.3nb3
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
