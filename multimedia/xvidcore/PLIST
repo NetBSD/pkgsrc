@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 12:38:26 jmmv Exp $
+include/xvid.h
+lib/libxvidcore.a
+lib/libxvidcore.so.2.1
