@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/07/06 19:37:01 tv Exp $
+# $NetBSD: Makefile,v 1.3 2002/07/06 20:18:26 tv Exp $
 # FreeBSD Id: ports/mail/demime/Makefile,v 1.4 2002/03/26 08:18:20 petef Exp
 
-DISTNAME=	demime-0.99c.7
-PKGNAME=	demime-0.99.3.7
+DISTNAME=	demime-0.99c.8
+PKGNAME=	demime-0.99.3.8
 CATEGORIES=	mail textproc
 MASTER_SITES=	http://scifi.squawk.com/
 DISTFILES=	demime.stable demime_junkmail.cf
