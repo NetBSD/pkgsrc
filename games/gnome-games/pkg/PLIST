@@ -1,0 +1,375 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/18 23:20:18 tron Exp $
+bin/GnomeScott
+bin/freecell
+bin/gataxx
+bin/glines
+bin/gnibbles
+bin/gnobots2
+bin/gnome-stones
+bin/gnome-xbill
+bin/gnometris
+bin/gnomine
+bin/gnotravex
+bin/gtali
+bin/gturing
+bin/iagno
+bin/mahjongg
+bin/same-gnome
+bin/sol
+etc/sound/events/gataxx.soundlist
+etc/sound/events/gnibbles.soundlist
+etc/sound/events/gnobots2.soundlist
+etc/sound/events/iagno.soundlist
+include/gdkcardimage/gdk-card-image.h
+lib/gnome-stones/objects/libgnome-stones.a
+lib/gnome-stones/objects/libgnome-stones.so.0.0
+lib/gnome-stones/objects/libgnomekoban.a
+lib/gnome-stones/objects/libgnomekoban.so.0.0
+lib/libgdkcardimage.a
+lib/libgdkcardimage.so.0.0
+share/gnibbles/level001.gnl
+share/gnibbles/level002.gnl
+share/gnibbles/level003.gnl
+share/gnibbles/level004.gnl
+share/gnibbles/level005.gnl
+share/gnibbles/level006.gnl
+share/gnibbles/level007.gnl
+share/gnibbles/level008.gnl
+share/gnibbles/level009.gnl
+share/gnibbles/level010.gnl
+share/gnibbles/level011.gnl
+share/gnibbles/level012.gnl
+share/gnibbles/level013.gnl
+share/gnibbles/level014.gnl
+share/gnibbles/level015.gnl
+share/gnibbles/level016.gnl
+share/gnibbles/level017.gnl
+share/gnibbles/level018.gnl
+share/gnibbles/level019.gnl
+share/gnibbles/level020.gnl
+share/gnibbles/level021.gnl
+share/gnibbles/level022.gnl
+share/gnibbles/level023.gnl
+share/gnibbles/level024.gnl
+share/gnibbles/level025.gnl
+share/gnibbles/level026.gnl
+share/gnobots2/classic_robots.cfg
+share/gnobots2/nightmare.cfg
+share/gnobots2/robots2.cfg
+share/gnobots2/robots2_easy.cfg
+share/gnobots2/robots_with_safe_teleport.cfg
+share/gnome-stones/default.caves
+share/gnome-stones/gnomekoban.caves
+share/gnome-stones/tutorial.caves
+share/gnome-stonesrc
+share/gnome-stonesrc.ko
+share/gnome/apps/Games/freecell.desktop
+share/gnome/apps/Games/gataxx.desktop
+share/gnome/apps/Games/glines.desktop
+share/gnome/apps/Games/gnibbles.desktop
+share/gnome/apps/Games/gnobots2.desktop
+share/gnome/apps/Games/gnome-stones.desktop
+share/gnome/apps/Games/gnometris.desktop
+share/gnome/apps/Games/gnomine.desktop
+share/gnome/apps/Games/gnotravex.desktop
+share/gnome/apps/Games/gtali.desktop
+share/gnome/apps/Games/gturing.desktop
+share/gnome/apps/Games/iagno.desktop
+share/gnome/apps/Games/mahjongg.desktop
+share/gnome/apps/Games/same-gnome.desktop
+share/gnome/apps/Games/sol.desktop
+share/gnome/apps/Games/xbill.desktop
+share/gnome/help/aisleriot/C/auld-lang-syne.html
+share/gnome/help/aisleriot/C/beleaguered-castle.html
+share/gnome/help/aisleriot/C/bristol.html
+share/gnome/help/aisleriot/C/camelot-goal.gif
+share/gnome/help/aisleriot/C/camelot.html
+share/gnome/help/aisleriot/C/canfield.html
+share/gnome/help/aisleriot/C/clock-rules.gif
+share/gnome/help/aisleriot/C/clock.html
+share/gnome/help/aisleriot/C/docbook.css
+share/gnome/help/aisleriot/C/doublets.html
+share/gnome/help/aisleriot/C/eagle-wing.html
+share/gnome/help/aisleriot/C/elevator.html
+share/gnome/help/aisleriot/C/first-law.html
+share/gnome/help/aisleriot/C/fortunes.html
+share/gnome/help/aisleriot/C/fourteen.html
+share/gnome/help/aisleriot/C/freecell.html
+share/gnome/help/aisleriot/C/glossary.html
+share/gnome/help/aisleriot/C/gpl.html
+share/gnome/help/aisleriot/C/hopscotch.html
+share/gnome/help/aisleriot/C/index.html
+share/gnome/help/aisleriot/C/intro.html
+share/gnome/help/aisleriot/C/kansas.html
+share/gnome/help/aisleriot/C/klondike.html
+share/gnome/help/aisleriot/C/lady-jane.html
+share/gnome/help/aisleriot/C/neighbor.html
+share/gnome/help/aisleriot/C/odessa.html
+share/gnome/help/aisleriot/C/osmosis.html
+share/gnome/help/aisleriot/C/pileon.html
+share/gnome/help/aisleriot/C/royal-east.html
+share/gnome/help/aisleriot/C/scorpion.html
+share/gnome/help/aisleriot/C/spider.html
+share/gnome/help/aisleriot/C/straight-up.html
+share/gnome/help/aisleriot/C/thieves.html
+share/gnome/help/aisleriot/C/thirteen.html
+share/gnome/help/aisleriot/C/thumb-and-pouch.html
+share/gnome/help/aisleriot/C/topic.dat
+share/gnome/help/aisleriot/C/union-square.html
+share/gnome/help/aisleriot/C/westhaven.html
+share/gnome/help/aisleriot/C/yukon.html
+share/gnome/help/aisleriot/C/zebra.html
+share/gnome/help/gnobots2/C/index.html
+share/gnome/help/gnobots2/C/topic.dat
+share/gnome/help/gnobots2/es/index.html
+share/gnome/help/gnobots2/es/topic.dat
+share/gnome/help/gnobots2/it/index.html
+share/gnome/help/gnobots2/it/topic.dat
+share/gnome/help/gtali/C/index.html
+share/gnome/help/gtali/C/topic.dat
+share/gnome/help/gturing/C/topic.dat
+share/gnome/help/samegnome/C/authors.html
+share/gnome/help/samegnome/C/book1.html
+share/gnome/help/samegnome/C/bugs.html
+share/gnome/help/samegnome/C/c11.html
+share/gnome/help/samegnome/C/docbook.css
+share/gnome/help/samegnome/C/index.html
+share/gnome/help/samegnome/C/ln9.html
+share/gnome/help/samegnome/C/newthemes.html
+share/gnome/help/samegnome/C/topic.dat
+share/gturing/examples/3ones2zeroes.tur
+share/gturing/examples/add.tur
+share/gturing/examples/addbin.tur
+share/gturing/examples/bb2.tur
+share/gturing/examples/bb3.tur
+share/gturing/examples/bb5.tur
+share/gturing/examples/bin2dec.tur
+share/gturing/examples/dashnumbers.tur
+share/gturing/examples/dec2bin.tur
+share/gturing/examples/subst.tur
+share/mime-info/gnome-stones.keys
+share/mime-info/gnome-stones.mime
+share/pixmaps/cards/backs/beige.png
+share/pixmaps/cards/backs/face.png
+share/pixmaps/cards/backs/grey.png
+share/pixmaps/cards/backs/rods.png
+share/pixmaps/cards/baize.png
+share/pixmaps/cards/honors/bonded.png
+share/pixmaps/cards/honors/xpat.png
+share/pixmaps/cards/jokers/gnome.png
+share/pixmaps/cards/ranks/bold-09x14.png
+share/pixmaps/cards/ranks/fine-07x12.png
+share/pixmaps/cards/slots/hand.png
+share/pixmaps/cards/slots/plain.png
+share/pixmaps/cards/splash.png
+share/pixmaps/cards/suits_large/knuth-09x10.png
+share/pixmaps/cards/suits_large/knuth-15x19.png
+share/pixmaps/cards/suits_large/knuth-18x21.png
+share/pixmaps/cards/suits_large/knuth-21x25.png
+share/pixmaps/cards/suits_large/xpat-11x11.png
+share/pixmaps/cards/suits_large/xpat-15x15.png
+share/pixmaps/cards/suits_large/xpat-21x21.png
+share/pixmaps/cards/suits_large/xpat-41x41.png
+share/pixmaps/cards/suits_medium/knuth-09x10.png
+share/pixmaps/cards/suits_medium/knuth-15x19.png
+share/pixmaps/cards/suits_medium/knuth-18x21.png
+share/pixmaps/cards/suits_medium/knuth-21x25.png
+share/pixmaps/cards/suits_medium/xpat-11x11.png
+share/pixmaps/cards/suits_medium/xpat-15x15.png
+share/pixmaps/cards/suits_medium/xpat-21x21.png
+share/pixmaps/cards/suits_small/knuth-09x10.png
+share/pixmaps/cards/suits_small/xpat-11x11.png
+share/pixmaps/cards/suits_small/xpat-15x15.png
+share/pixmaps/gataxx.png
+share/pixmaps/gataxx/blend.png
+share/pixmaps/gataxx/classic.png
+share/pixmaps/gataxx/flipblend.png
+share/pixmaps/gataxx/metal.png
+share/pixmaps/gataxx/metal2.png
+share/pixmaps/gataxx/shrink.png
+share/pixmaps/gataxx/woodtrim.png
+share/pixmaps/glines.xpm
+share/pixmaps/glines/ball.xpm
+share/pixmaps/glines/box.xpm
+share/pixmaps/gnibbles/gnibbles-logo.png
+share/pixmaps/gnibbles/gnibbles.png
+share/pixmaps/gnobots2/aieee.png
+share/pixmaps/gnobots2/cows.png
+share/pixmaps/gnobots2/eggs.png
+share/pixmaps/gnobots2/gnomes.png
+share/pixmaps/gnobots2/mice.png
+share/pixmaps/gnobots2/robots.png
+share/pixmaps/gnobots2/splat.png
+share/pixmaps/gnobots2/windows.png
+share/pixmaps/gnobots2/yahoo.png
+share/pixmaps/gnome-aisleriot.png
+share/pixmaps/gnome-gnobots2.png
+share/pixmaps/gnome-gtali.png
+share/pixmaps/gnome-gtetris.png
+share/pixmaps/gnome-mahjongg.png
+share/pixmaps/gnome-nibbles.png
+share/pixmaps/gnome-stones-file.png
+share/pixmaps/gnome-stones.png
+share/pixmaps/gnome-stones/amoeba.png
+share/pixmaps/gnome-stones/background.png
+share/pixmaps/gnome-stones/boulder.png
+share/pixmaps/gnome-stones/butterfly.png
+share/pixmaps/gnome-stones/crate.png
+share/pixmaps/gnome-stones/curtain.png
+share/pixmaps/gnome-stones/diamond.png
+share/pixmaps/gnome-stones/dirt.png
+share/pixmaps/gnome-stones/door.png
+share/pixmaps/gnome-stones/empty.png
+share/pixmaps/gnome-stones/explosion.png
+share/pixmaps/gnome-stones/firefly.png
+share/pixmaps/gnome-stones/frame.png
+share/pixmaps/gnome-stones/gnome.png
+share/pixmaps/gnome-stones/title.png
+share/pixmaps/gnome-stones/wall.png
+share/pixmaps/gnometris/5blocks-tig.png
+share/pixmaps/gnometris/5blocks-tim.png
+share/pixmaps/gnometris/5blocks.png
+share/pixmaps/gnometris/7blocks-tig.png
+share/pixmaps/gnometris/7blocks.png
+share/pixmaps/gnometris/bg/fishy-bg.png
+share/pixmaps/gnometris/bg/greyprint-bg.png
+share/pixmaps/gnometris/bg/leaves-bg.png
+share/pixmaps/gnometris/bg/sweet-bg.png
+share/pixmaps/gnometris/bg/vortex-bg.png
+share/pixmaps/gnometris/bg/watery-bg.png
+share/pixmaps/gnometris/bg/weirdo-bg.png
+share/pixmaps/gnotravex/gnome-gnotravex.png
+share/pixmaps/gnotravex/gnotravex.png
+share/pixmaps/iagno.png
+share/pixmaps/iagno/blend.png
+share/pixmaps/iagno/classic.png
+share/pixmaps/iagno/flipblend.png
+share/pixmaps/iagno/metal.png
+share/pixmaps/iagno/metal2.png
+share/pixmaps/iagno/shrink.png
+share/pixmaps/iagno/woodtrim.png
+share/pixmaps/mahjongg/bg/bg1.png
+share/pixmaps/mahjongg/bg/bg2.png
+share/pixmaps/mahjongg/bg/bg3.png
+share/pixmaps/mahjongg/bg/bg4.png
+share/pixmaps/mahjongg/default.png
+share/pixmaps/mahjongg/seta.png
+share/pixmaps/same-gnome/blink-sync.png
+share/pixmaps/same-gnome/marbles.png
+share/pixmaps/same-gnome/planets.png
+share/pixmaps/same-gnome/rotate.png
+share/pixmaps/same-gnome/stones.png
+share/pixmaps/xbill.png
+share/sol-games/auld_lang_syne.scm
+share/sol-games/beleaguered_castle.scm
+share/sol-games/bristol.scm
+share/sol-games/camelot.scm
+share/sol-games/canfield.scm
+share/sol-games/clock.scm
+share/sol-games/doublets.scm
+share/sol-games/eagle_wing.scm
+share/sol-games/elevator.scm
+share/sol-games/first_law.scm
+share/sol-games/fortunes.scm
+share/sol-games/fourteen.scm
+share/sol-games/freecell.scm
+share/sol-games/hopscotch.scm
+share/sol-games/kansas.scm
+share/sol-games/klondike.scm
+share/sol-games/lady_jane.scm
+share/sol-games/neighbor.scm
+share/sol-games/odessa.scm
+share/sol-games/osmosis.scm
+share/sol-games/pileon.scm
+share/sol-games/royal_east.scm
+share/sol-games/scorpion.scm
+share/sol-games/sol.scm
+share/sol-games/spider.scm
+share/sol-games/straight_up.scm
+share/sol-games/thieves.scm
+share/sol-games/thirteen.scm
+share/sol-games/thumb_and_pouch.scm
+share/sol-games/union_square.scm
+share/sol-games/westhaven.scm
+share/sol-games/yukon.scm
+share/sol-games/zebra.scm
+share/sounds/gataxx/flip-piece.wav
+share/sounds/gataxx/gameover.wav
+share/sounds/gnibbles/appear.wav
+share/sounds/gnibbles/bonus.wav
+share/sounds/gnibbles/crash.wav
+share/sounds/gnibbles/gobble.wav
+share/sounds/gnibbles/laughter.wav
+share/sounds/gnibbles/life.wav
+share/sounds/gnibbles/pop.wav
+share/sounds/gnibbles/reverse.wav
+share/sounds/gnibbles/teleport.wav
+share/sounds/gnobots2/bad.wav
+share/sounds/gnobots2/die.wav
+share/sounds/gnobots2/splat.wav
+share/sounds/gnobots2/teleport.wav
+share/sounds/gnobots2/victory.wav
+share/sounds/gnobots2/yahoo.wav
+share/sounds/iagno/flip-piece.wav
+share/sounds/iagno/gameover.wav
+share/xbill/cursors/apple.xpm
+share/xbill/cursors/bsd.xpm
+share/xbill/cursors/bucket.xpm
+share/xbill/cursors/hand_down.xpm
+share/xbill/cursors/hand_down_mask.xpm
+share/xbill/cursors/hand_up.xpm
+share/xbill/cursors/hand_up_mask.xpm
+share/xbill/cursors/hurd.xpm
+share/xbill/cursors/linux.xpm
+share/xbill/cursors/next.xpm
+share/xbill/cursors/os2.xpm
+share/xbill/cursors/redhat.xpm
+share/xbill/cursors/sgi.xpm
+share/xbill/cursors/sun.xpm
+@dirrm share/xbill/cursors
+@dirrm share/sounds/iagno
+@dirrm share/sounds/gnobots2
+@dirrm share/sounds/gnibbles
+@dirrm share/sounds/gataxx
+@dirrm share/sol-games
+@dirrm share/pixmaps/same-gnome
+@dirrm share/pixmaps/mahjongg/bg
+@dirrm share/pixmaps/mahjongg
+@dirrm share/pixmaps/iagno
+@dirrm share/pixmaps/gnotravex
+@dirrm share/pixmaps/gnometris/bg
+@dirrm share/pixmaps/gnometris
+@dirrm share/pixmaps/gnome-stones
+@dirrm share/pixmaps/gnobots2
+@dirrm share/pixmaps/gnibbles
+@dirrm share/pixmaps/glines
+@dirrm share/pixmaps/gataxx
+@dirrm share/pixmaps/cards/suits_small
+@dirrm share/pixmaps/cards/suits_medium
+@dirrm share/pixmaps/cards/suits_large
+@dirrm share/pixmaps/cards/slots
+@dirrm share/pixmaps/cards/ranks
+@dirrm share/pixmaps/cards/jokers
+@dirrm share/pixmaps/cards/honors
+@dirrm share/pixmaps/cards/backs
+@dirrm share/pixmaps/cards
+@dirrm share/gturing/examples
+@dirrm share/gturing
+@dirrm share/gnome/help/samegnome/C
+@dirrm share/gnome/help/samegnome
+@dirrm share/gnome/help/gturing/C
+@dirrm share/gnome/help/gturing
+@dirrm share/gnome/help/gtali/C
+@dirrm share/gnome/help/gtali
+@dirrm share/gnome/help/gnobots2/it
+@dirrm share/gnome/help/gnobots2/es
+@dirrm share/gnome/help/gnobots2/C
+@dirrm share/gnome/help/gnobots2
+@dirrm share/gnome/help/aisleriot/C
+@dirrm share/gnome/help/aisleriot
+@dirrm share/gnome-stones
+@dirrm share/gnobots2
+@dirrm share/gnibbles
+@dirrm lib/gnome-stones/objects
+@dirrm lib/gnome-stones
+@dirrm include/gdkcardimage

@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/18 23:20:18 tron Exp $
+
+--- configure.orig	Wed Oct  6 07:30:29 1999
++++ configure	Thu Nov 18 23:59:57 1999
+@@ -78,7 +78,7 @@
+ datadir='${prefix}/share'
+ sysconfdir='${prefix}/etc'
+ sharedstatedir='${prefix}/com'
+-localstatedir='${prefix}/var'
++localstatedir=/var
+ libdir='${exec_prefix}/lib'
+ includedir='${prefix}/include'
+ oldincludedir='/usr/include'
+@@ -2123,6 +2123,7 @@
+ fi
+ 
+ 
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -2276,6 +2277,7 @@
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
