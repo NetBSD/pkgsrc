@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/18 19:13:30 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/22 12:12:38 markd Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
@@ -44,6 +44,12 @@ CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
 #
 CONFIGURE_ENV+=		SED=${SED:Q}
 CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
+
+# The configure script doesn't seem to be working out the need for -p
+# so tell it
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
+.endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-*)
 .  include "../../devel/dlcompat/buildlink3.mk"
