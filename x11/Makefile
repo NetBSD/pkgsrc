@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2000/12/21 15:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.200 2001/01/14 02:28:56 hubertf Exp $
 #
 
     SUBDIR += 9term
@@ -7,6 +7,7 @@
     SUBDIR += Xaw3d
     SUBDIR += Xbae
     SUBDIR += XmHTML
+    SUBDIR += aterm
     SUBDIR += blt
     SUBDIR += controlcenter
     SUBDIR += dxpc
