@@ -1,4 +1,4 @@
-/* $Id: tnftp.h,v 1.1 2004/03/11 13:01:01 grant Exp $ */
+/* $Id: tnftp.h,v 1.2 2004/03/11 13:45:55 grant Exp $ */
 
 #define	FTP_PRODUCT	"tnftp"
 #define	FTP_VERSION	"20030825"
@@ -367,6 +367,10 @@ size_t	strlcpy(char *, const char *, size_t);
 
 #if ! HAVE_STRSEP
 char   *strsep(char **stringp, const char *delim);
+#endif
+
+#if ! HAVE_UTIMES
+int utimes(const char *, const struct timeval *);
 #endif
 
 #if ! HAVE_MEMMOVE
