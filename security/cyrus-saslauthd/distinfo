@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2004/12/07 09:17:35 adam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/21 22:10:18 adam Exp $
 
-SHA1 (cyrus-sasl-2.1.19.tar.gz) = 9512d70ecea33b9d44e69d185a323a0f7b133705
-Size (cyrus-sasl-2.1.19.tar.gz) = 1537350 bytes
-SHA1 (patch-aa) = f3497c322d073ccb2a54e439067227f2f03a99b1
-SHA1 (patch-ab) = 864bfe7c47b445107cdc517e2fe2e5ad2b459be1
+SHA1 (cyrus-sasl-2.1.20.tar.gz) = d1eec5644c4e87edb95fa5ab8bf124cfdf277eb6
+Size (cyrus-sasl-2.1.20.tar.gz) = 1775163 bytes
+SHA1 (patch-aa) = 1a4b8fd35e1888fcdf6eb1cef3cc6ae95c816acd
+SHA1 (patch-ab) = 8123e54b10b7094f73604c5ad055d0bfeb8fa0ac
 SHA1 (patch-ac) = 79267ad3e175632728e43fb2ba159ab411e7ff3c
-SHA1 (patch-ad) = ab0b9d948741b28fcea91f7833e06e829f459669
+SHA1 (patch-ad) = c14defd79e6e0cec153be004fff3016ad6f0e731
