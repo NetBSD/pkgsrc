@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2003/07/11 10:28:28 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2003/12/14 19:48:04 jmmv Exp $
 
---- gnome-data/Makefile.in.orig	2003-07-10 20:42:20.000000000 +0200
-+++ gnome-data/Makefile.in
-@@ -142,7 +142,7 @@ YACC = @YACC@
- Z_LIBS = @Z_LIBS@
+--- gnome-data/Makefile.in.orig	2003-10-26 01:53:29.000000000 +0000
++++ gnome-data/Makefile.in	2003-10-26 01:53:42.000000000 +0000
+@@ -141,7 +141,7 @@
+ cxxflags_set = @cxxflags_set@
  gnomelocaledir = @gnomelocaledir@
  
 -soundlistdir = $(sysconfdir)/sound/events
