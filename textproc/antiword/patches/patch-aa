@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2004/08/20 09:14:19 sketch Exp $
+$NetBSD: patch-aa,v 1.9 2004/11/23 18:20:03 wiz Exp $
 
---- Makefile.orig	Wed Feb 26 20:05:47 2003
-+++ Makefile	Fri Aug 20 10:05:22 2004
+--- Makefile.orig	2004-10-21 20:13:03.000000000 +0200
++++ Makefile
 @@ -2,8 +2,8 @@
  # Makefile for antiword (Linux version)
  #
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.8 2004/08/20 09:14:19 sketch Exp $
  
  INSTALL		= cp -f
  INSTALL_PROGRAM	= $(INSTALL)
-@@ -16,7 +16,7 @@
+@@ -16,7 +16,7 @@ OPT	= -O2
  
  LDLIBS	=
  
@@ -22,8 +22,8 @@ $NetBSD: patch-aa,v 1.8 2004/08/20 09:14:19 sketch Exp $
  LDFLAGS	=
  
  OBJS	=\
-@@ -29,23 +29,32 @@
- 	worddos.o wordlib.o wordmac.o wordole.o wordwin.o xmalloc.o xml.o
+@@ -30,22 +30,31 @@ OBJS	=\
+ 	xmalloc.o xml.o
  
  PROGS =\
 -	antiword\
@@ -57,12 +57,11 @@ $NetBSD: patch-aa,v 1.8 2004/08/20 09:14:19 sketch Exp $
 +		for i in Resources/* ; do				\
 +			${BSD_INSTALL_DATA} $$i ${GLOBAL_RESOURCES_DIR};\
 +		done
- 
 +
+ 
  # NOTE: you might have to be root to do this
  global_install:	all
- #	@[ `id -u` -eq 0 ] || (echo "You must be root to do this" && false)
-@@ -68,10 +77,11 @@
+@@ -70,10 +79,11 @@ global_uninstall:
  clean:
  	rm -f $(OBJS)
  	rm -f $(PROGS)
@@ -75,7 +74,7 @@ $NetBSD: patch-aa,v 1.8 2004/08/20 09:14:19 sketch Exp $
  	@chmod 750 $@
  
  kantiword:	Unix-only/KDE2-only/kantiword.sh
-@@ -80,9 +90,6 @@
+@@ -82,9 +92,6 @@ kantiword:	Unix-only/KDE2-only/kantiword
  	cat $? >> $@
  	@chmod 750 $@
  
@@ -84,4 +83,4 @@ $NetBSD: patch-aa,v 1.8 2004/08/20 09:14:19 sketch Exp $
 -
  main_u.o:	version.h
  postscript.o:	version.h
- fonts_u.o:	fontinfo.h
+ pdf.o:		version.h
