@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2003/12/14 17:44:32 wiz Exp $
+
+--- common/game.c.orig	Tue Oct 14 12:13:05 2003
++++ common/game.c
+@@ -174,8 +174,8 @@ static gboolean find_no_setup (Map *map,
+ 	for (idx = 0; idx < numElem (hex->nodes); ++idx) {
+ 		Node *node = hex->nodes[idx];
+ 		if (node->no_setup) {
+-			if (node->x != hex->x || node->y != hex->y) continue;
+ 			gchar buff[512];
++			if (node->x != hex->x || node->y != hex->y) continue;
+ 			snprintf (buff, sizeof(buff), "nosetup %d %d %d",
+ 					node->x, node->y, node->pos);
+ 			data->func (data->user_data, buff);
