@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.11 2004/11/12 16:27:57 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.12 2004/11/20 04:37:08 grant Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -149,7 +149,7 @@ _WRAPPEES+=	${_wrappee_}
 
 _WRAP_ALIASES.AS=	as
 _WRAP_ALIASES.CC=	cc gcc
-_WRAP_ALIASES.CXX=	c++ g++ CC
+_WRAP_ALIASES.CXX=	c++ g++ CC cxx
 _WRAP_ALIASES.CPP=	cpp
 _WRAP_ALIASES.FC=	f77 g77
 _WRAP_ALIASES.IMAKE=	imake
@@ -247,6 +247,13 @@ _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .endif
 
+.if !empty(PKGSRC_COMPILER:Mccc)
+_WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-ccc-cc
+_WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-ccc-cc
+_WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
+_WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
+.endif
+
 _WRAP_CMD_SINK.LD=		${WRAPPER_TMPDIR}/cmd-sink-ld
 _WRAP_TRANSFORM_SED.IMAKE=	# empty
 
@@ -264,6 +271,10 @@ _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-interix-ld
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-unixware-gcc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
+.elif ${OPSYS} == "OSF1"
+_WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-osf1-ld
+_WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-osf1-cc
+_WRAP_CMD_SINK.CXX=	${WRAPPER_TMPDIR}/cmd-sink-osf1-cc
 .endif
 
 # Filter to scrunch shell scripts by removing comments and empty lines.
@@ -417,6 +428,24 @@ ${WRAPPER_TMPDIR}/cmd-sink-unixware-gcc:				\
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
+${WRAPPER_TMPDIR}/cmd-sink-osf1-ld:					\
+		${WRAPPER_SRCDIR}/cmd-sink-osf1-ld
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/cmd-sink-osf1-cc:					\
+		${WRAPPER_SRCDIR}/cmd-sink-osf1-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/transform-ccc-cc:					\
+		${WRAPPER_SRCDIR}/transform-ccc-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
 ${WRAPPER_TMPDIR}/transform-mipspro-cc:					\
 		${WRAPPER_SRCDIR}/transform-mipspro-cc
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
@@ -440,7 +469,6 @@ ${WRAPPER_TMPDIR}/transform-xlc-cc:					\
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
-
 
 .if !target(${_WRAP_GEN_REORDER})
 ${_WRAP_GEN_REORDER}: 							\
