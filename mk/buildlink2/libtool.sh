@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.1.2.6 2002/06/30 05:07:10 jlam Exp $
+# $NetBSD: libtool.sh,v 1.1.2.7 2002/06/30 08:04:36 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -77,4 +77,4 @@ if [ -n "$lafile" ] && [ -f "$lafile" ]; then
 	. $libtool_fix_la
 fi
 
-return ${wrapper_result}
+exit ${wrapper_result}
