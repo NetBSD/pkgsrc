@@ -1,19 +1,23 @@
-$NetBSD: patch-ac,v 1.2 2000/05/27 01:23:05 sommerfeld Exp $
+$NetBSD: patch-ac,v 1.3 2002/01/31 13:49:21 mrg Exp $
 
---- libidu/scanners.c.orig	Wed Jul 17 17:45:52 1996
-+++ libidu/scanners.c	Fri May 26 21:07:43 2000
-@@ -65,8 +65,10 @@
+--- libidu/scanners.c.orig	Thu Jul 18 07:45:52 1996
++++ libidu/scanners.c	Fri Feb  1 00:20:36 2002
+@@ -65,8 +65,14 @@
  struct language languages_0[] =
  {
    { "C", parse_args_c, get_token_c, help_me_c },
 +  { "C++", parse_args_c, get_token_c, help_me_c },
++  { "cpp", parse_args_c, get_token_c, help_me_c },
++  { "cc", parse_args_c, get_token_c, help_me_c },
    { "asm", parse_args_asm, get_token_asm, help_me_asm },
++  { "S", parse_args_asm, get_token_asm, help_me_asm },
++  { "s", parse_args_asm, get_token_asm, help_me_asm },
    { "text", parse_args_text, get_token_text, help_me_text },
 +  { "make", parse_args_text, get_token_text, help_me_text },
  };
  struct language const *languages_N = &languages_0[cardinalityof (languages_0)];
  
-@@ -906,7 +908,7 @@
+@@ -906,7 +910,7 @@
  	  || strequ (id_0, "define")
  	  || strequ (id_0, "undef"))
  	goto next;
