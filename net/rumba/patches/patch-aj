@@ -1,0 +1,29 @@
+--- nfs/Makefile.orig	Sat Dec 14 21:58:42 1996
++++ nfs/Makefile	Tue Jul 15 15:47:33 1997
+@@ -15,8 +15,8 @@
+ 
+ RPCGEN = rpcgen 
+ 
+-CFLAGS = -g -I. -I..
+-LDFLAGS = -g
++CFLAGS +=  -I. -I..
++LDFLAGS += 
+ WARNFLAGS = -Wall
+ RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
+ TRANSPORTFLAGS =  -s udp -s tcp
+@@ -26,13 +26,13 @@
+ 
+ all: nfs.o
+ 
+-COMPILE = $(CC) $(ARCH) -c $(CPPFLAGS) $(DEFS) $(CFLAGS) $(WARNFLAGS)
++COMPILE = $(CC) -c $(CPPFLAGS) $(DEFS) $(CFLAGS) $(WARNFLAGS)
+ 
+ .c.o:
+ 	$(COMPILE) $<
+ 
+ nfs.o: $(OFILES)
+-	$(LD) $(ARCH) -r -o $@ $(OFILES)
++	$(LD) -r -o $@ $(OFILES)
+ 
+ nfs_prot.h: nfs_prot.x
+ 	rm -f $@
