@@ -1,0 +1,2 @@
+This package enables Ghostscript to use the CID-keyed fonts provided in
+the adobe-cidfonts package.
