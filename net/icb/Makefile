@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 11:15:34 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/07/03 23:30:10 tron Exp $
 #
 
 DISTNAME=		icb-5.0.9
@@ -6,6 +6,8 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		cjs@netbsd.org
+
+MIRROR_DISTFILE=	no
 
 do-configure:
 	@cd ${WRKSRC}; \
