@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.279 2004/01/26 13:06:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.280 2004/01/26 13:19:02 jmmv Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -110,7 +110,6 @@ SUBDIR+=	gri
 SUBDIR+=	gtkam
 SUBDIR+=	gtkglext
 SUBDIR+=	gtksee
-SUBDIR+=	gxine
 SUBDIR+=	hermes
 SUBDIR+=	hp2xx
 SUBDIR+=	iGMT
