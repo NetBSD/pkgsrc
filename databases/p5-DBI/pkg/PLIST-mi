@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST-mi,v 1.1.1.1 1999/06/10 12:46:35 bad Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBI/DBI.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBI/DBI.so

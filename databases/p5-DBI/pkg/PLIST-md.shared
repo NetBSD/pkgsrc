@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST-md.shared,v 1.1.1.1 1999/06/10 12:46:35 bad Exp $
+bin/dbiproxy
+bin/dbish
+man/man1/dbiproxy.1
+man/man1/dbish.1
+lib/perl5/man/man3/Bundle::DBI.3
+lib/perl5/man/man3/DBD::ADO.3
+lib/perl5/man/man3/DBD::Proxy.3
+lib/perl5/man/man3/DBI.3
+lib/perl5/man/man3/DBI::DBD.3
+lib/perl5/man/man3/DBI::FAQ.3
+lib/perl5/man/man3/DBI::Format.3
+lib/perl5/man/man3/DBI::ProxyServer.3
+lib/perl5/man/man3/DBI::Shell.3
+lib/perl5/man/man3/DBI::W32ODBC.3
+lib/perl5/man/man3/Win32::DBIODBC.3
+lib/perl5/site_perl/Bundle/DBI.pm
+lib/perl5/site_perl/DBD/ADO.pm
+lib/perl5/site_perl/DBD/ExampleP.pm
+lib/perl5/site_perl/DBD/NullP.pm
+lib/perl5/site_perl/DBD/Proxy.pm
+lib/perl5/site_perl/DBD/Sponge.pm
+@dirrm lib/perl5/site_perl/DBD
+lib/perl5/site_perl/DBI.pm
+lib/perl5/site_perl/DBI/DBD.pm
+lib/perl5/site_perl/DBI/FAQ.pm
+lib/perl5/site_perl/DBI/Format.pm
+lib/perl5/site_perl/DBI/ProxyServer.pm
+lib/perl5/site_perl/DBI/Shell.pm
+lib/perl5/site_perl/DBI/W32ODBC.pm
+@dirrm lib/perl5/site_perl/DBI
+lib/perl5/site_perl/Win32/DBIODBC.pm
+@dirrm lib/perl5/site_perl/Win32
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBI/Driver.xst
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBI/dbd_xsh.h
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBI/dbi_sql.h
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBI/DBIXS.h
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBI/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBI
