@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 09:07:29 agc Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/27 21:36:07 wiz Exp $
 #
 
-DISTNAME=	se
+DISTNAME=	${PKGNAME:S/smalleiffel/se/}
 PKGNAME=	smalleiffel-0.77
 WRKSRC=		${WRKDIR}/SmallEiffel
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.loria.fr/pub/loria/genielog/SmallEiffel/ \
-		ftp://ftp.cs.rit.edu/pub/mirrors/SmallEiffel/ \
-		ftp://ftp.progsoc.uts.edu.au/pub/Eiffel/SmallEiffel/ \
-		ftp://gd.tuwien.ac.at/pub/languages/SmallEiffel/
+MASTER_SITES=	ftp://ftp.loria.fr/pub/loria/genielog/SmallEiffel/Oldies/ \
+		ftp://ftp.cs.rit.edu/pub/mirrors/SmallEiffel/Oldies/ \
+		ftp://ftp.progsoc.uts.edu.au/pub/Eiffel/SmallEiffel/Oldies/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jlam@netbsd.org
@@ -18,7 +17,6 @@ COMMENT=	GNU Eiffel compiler
 MAKE_ENV+=	SmallEiffel=${WRKSRC}/sys/system.se
 ALL_TARGET=	./bin/compile_to_c
 
-DIST_SUBDIR=	${PKGNAME}
 DOCDIR=		${PREFIX}/share/doc/html/smalleiffel
 EGDIR=		${PREFIX}/share/examples/smalleiffel
 LIBDIR=		${PREFIX}/share/smalleiffel
