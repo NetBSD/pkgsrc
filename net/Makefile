@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1997/12/24 11:00:09 agc Exp $
+# $NetBSD: Makefile,v 1.11 1997/12/29 03:53:13 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -30,6 +30,7 @@
 #    SUBDIR += ircii-epic
 #    SUBDIR += isc-dhcp
 #    SUBDIR += ivs
+   SUBDIR += kdenetwork
 #    SUBDIR += ldap
 #    SUBDIR += libsocket++
     SUBDIR += mirror
