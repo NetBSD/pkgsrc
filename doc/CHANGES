@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8816 2005/01/19 13:45:54 minskim Exp $
+$NetBSD: CHANGES,v 1.8817 2005/01/19 14:55:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -420,3 +420,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ntop to 3.1nb2 [adam 2005-01-19]
 	Updated radmind to 1.4.0 [wiz 2005-01-19]
 	Updated awstats to 6.3nb1 [minskim 2005-01-19]
+	Updated artist to 1.2.6 [adam 2005-01-19]
