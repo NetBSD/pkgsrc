@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9017 2005/02/03 17:56:55 jschauma Exp $
+$NetBSD: CHANGES,v 1.9018 2005/02/03 18:06:30 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -732,3 +732,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gdm to 2.6.0.7 [jmmv 2005-02-03]
 	Added beacon-1.1.0 [cube 2005-02-03]
 	Updated nspr to 4.4.1nb1 [jschauma 2004-02-03]
+	Updated nss to 3.9.2nb1 [jschauma 2004-02-03]
