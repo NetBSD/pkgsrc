@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7743 2004/11/06 21:45:53 kristerw Exp $
+$NetBSD: CHANGES,v 1.7744 2004/11/06 21:56:25 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5134,3 +5134,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Class-DBI 0.96 [he 2004-11-06]
 	Updated websvn to 1.61 [jdolecek 2004-11-06]
 	Updated xmame to 0.87 [kristerw 2004-11-06]
+	Added p5-File-Type-0.22 [epg 2004-11-06]
+	Added p5-PerlIO-eol-0.13 [epg 2004-11-06]
+	Updated svk to 0.25 [epg 2004-11-06]
