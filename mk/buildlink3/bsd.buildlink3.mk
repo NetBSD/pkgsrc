@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.143 2004/05/17 21:32:34 seb Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.144 2004/06/04 15:00:15 jschauma Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -358,7 +358,7 @@ BUILDLINK_VARS+=	BUILDLINK_PREFIX.${_pkg_}
 BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LDFLAGS.${_pkg_}?=	# empty
 BUILDLINK_INCDIRS.${_pkg_}?=	include
-BUILDLINK_LIBDIRS.${_pkg_}?=	lib
+BUILDLINK_LIBDIRS.${_pkg_}?=	lib${ABI}
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 BUILDLINK_RPATHDIRS.${_pkg_}?=	${BUILDLINK_LIBDIRS.${_pkg_}}
 .  else
@@ -458,12 +458,12 @@ BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${LOCALBASE}/lib
 # uses X11.
 #
 .if defined(USE_X11)
-.  if empty(BUILDLINK_LDFLAGS:M-L${X11BASE}/lib)
-BUILDLINK_LDFLAGS+=	-L${X11BASE}/lib
+.  if empty(BUILDLINK_LDFLAGS:M-L${X11BASE}/lib${ABI})
+BUILDLINK_LDFLAGS+=	-L${X11BASE}/lib${ABI}
 .  endif
 .  if (${_USE_RPATH} == "yes") && \
-      empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib)
-BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib
+      empty(BUILDLINK_LDFLAGS:M${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib${ABI})
+BUILDLINK_LDFLAGS+=	${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib${ABI}
 .  endif
 .endif
 
@@ -509,7 +509,7 @@ buildlink-directories:
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/lib${ABI}
 
 # Create the saved variables Makefile fragment to pass variables through
 # to sub-make processes invoked on the same Makefile.
