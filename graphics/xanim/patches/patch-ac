@@ -4,9 +4,9 @@
    a_info.blocksize = 1024;
    ioctl(devAudio, AUDIO_SETINFO, &a_info);
    AUDIO_INITINFO(&a_info);
-+#ifdef AUDIO_ENCODING_LINEAR_LE
++#ifdef AUDIO_ENCODING_SLINEAR
 +  /* Use new encoding names */
-+  a_info.play.encoding = AUDIO_ENCODING_LINEAR_LE;
++  a_info.play.encoding = AUDIO_ENCODING_SLINEAR;
 +  ioctl(devAudio, AUDIO_SETINFO, &a_info);
 +  AUDIO_INITINFO(&a_info);
 +  a_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
