@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/09/27 23:17:57 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/02/06 16:58:13 jlam Exp $
 #
 
 DISTNAME=	pwlib_min_1.1pl17
@@ -38,9 +38,9 @@ do-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/include/ptclib ${PREFIX}/include/ptlib/unix/ptlib
 		cd ${WRKSRC}/include; \
 			for f in `find . -name CVS -prune -o -type f ! -name "*.orig" -print` ; \
-			do ${BSD_INSTALL_DATA} $$f ${PREFIX}/include/`dirname $$f`; done
+			do ${INSTALL_DATA} $$f ${PREFIX}/include/`dirname $$f`; done
 		${INSTALL_DATA_DIR} ${PREFIX}/share/pwlib/make
 		cd ${WRKSRC}/make; for f in unix.mak common.mak lib.mak ptlib.mak ; \
-			do ${BSD_INSTALL_DATA} $$f ${PREFIX}/share/pwlib/make; done
+			do ${INSTALL_DATA} $$f ${PREFIX}/share/pwlib/make; done
 
 .include "../../mk/bsd.pkg.mk"
