@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.8 2004/02/09 07:54:58 minskim Exp $
+$NetBSD: distinfo,v 1.9 2005/02/23 17:15:13 agc Exp $
 
 SHA1 (xemacs/xemacs-21.4.15.tar.gz) = 6ee2583c71b46ef1edb78bd170c9adbef97ae5db
+RMD160 (xemacs/xemacs-21.4.15.tar.gz) = 9c2d4d1d8c84486ed63b07c3983ec3c648c2a6c7
 Size (xemacs/xemacs-21.4.15.tar.gz) = 10652161 bytes
 SHA1 (xemacs/xemacs-21.4.15-elc.tar.gz) = 7162d6e6b0ddee893f890ec65aec63edc3482919
+RMD160 (xemacs/xemacs-21.4.15-elc.tar.gz) = 3b838d897c9018c02c55d27d7aca1d6e288af9fb
 Size (xemacs/xemacs-21.4.15-elc.tar.gz) = 927962 bytes
 SHA1 (xemacs/xemacs-21.4.15-info.tar.gz) = 7d509aeecbee0bc879e6d412370969768e7422ab
+RMD160 (xemacs/xemacs-21.4.15-info.tar.gz) = 474d3a14ac3275c097875998eda12c82114edf52
 Size (xemacs/xemacs-21.4.15-info.tar.gz) = 1603029 bytes
 SHA1 (patch-aa) = f625428b9fb782d452a01e82a9d5d716fba4c4ed
 SHA1 (patch-ab) = 1487edf8addea7971f4fcbcf57818090f32edef5

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2004/03/20 22:08:10 agc Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 17:15:11 agc Exp $
 
 SHA1 (manedit-0.5.6.tar.bz2) = 1a6f413f614e5f3620fd9fae16d754eb722984e6
+RMD160 (manedit-0.5.6.tar.bz2) = 7c380b19d08f67390eada485d910a8d020631561
 Size (manedit-0.5.6.tar.bz2) = 425714 bytes
 SHA1 (patch-aa) = 9ace1dfdc027cbda50e2c06f08db6c16e2c27b63
 SHA1 (patch-ab) = 80a4e693601b353c271d1fbd9afb31bace75f75e

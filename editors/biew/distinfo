@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2004/10/13 22:16:37 ben Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 17:15:10 agc Exp $
 
 SHA1 (biew562.tar.bz2) = 44435c0815a59d38c9a6c74d09c0f495e71e23fe
+RMD160 (biew562.tar.bz2) = 413f2c72a70056adbebd5e79d541201d6e3b27cb
 Size (biew562.tar.bz2) = 594367 bytes
 SHA1 (patch-aa) = 6a717b0bd36c39dbdc2e50f4536d28e40e876f88
