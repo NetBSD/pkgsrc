@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1277 2003/01/29 13:09:15 abs Exp $
+$NetBSD: CHANGES,v 1.1278 2003/01/29 15:53:28 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -477,4 +477,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gtk2-pan to 0.13.3nb1 [jmmv 2003-01-29]
 	Updated gcombust to 0.1.53nb1 [jmmv 2003-01-29]
 	Updated cpuflags to 0.39 [abs 2003-01-29]
-
+	Updated sawfish-themes to 0.2nb1 [jmmv 2003-01-29]
