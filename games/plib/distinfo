@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:34 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/09/22 12:27:28 xtraeme Exp $
 
-SHA1 (plib-1.2.0.tar.gz) = 7e94d9f6729aa3bc585772e9274b2ccb518608f7
-Size (plib-1.2.0.tar.gz) = 260989 bytes
+SHA1 (plib-1.6.0.tar.gz) = f2c0c8ba909e7df12850fafba9bb57152cb96976
+Size (plib-1.6.0.tar.gz) = 523897 bytes
+SHA1 (patch-aa) = 3c3adf01bd2107b1b91cac98410081a3f25f7b47
+SHA1 (patch-ab) = a4f82828a88e6d6605c3627e73f769ae8e0fcade
+SHA1 (patch-ac) = 167ddbc8de4448d94644cce8ac28d77aa70a2704

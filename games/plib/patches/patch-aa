@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.3 2003/09/22 12:27:29 xtraeme Exp $
+
+--- src/sl/slPortability.h.orig	Mon Sep 22 06:08:29 2003
++++ src/sl/slPortability.h	Mon Sep 22 06:09:02 2003
+@@ -78,7 +78,11 @@
+ #  if defined(__linux__)
+ #    include <linux/soundcard.h>
+ #  elif defined(__FreeBSD__)
++#  if __FreeBSD_version >= 500000
++#    include <sys/soundcard.h>
++#  else
+ #    include <machine/soundcard.h>
++#  endif
+ #  else
+     /*
+       Tom thinks this file may be <sys/soundcard.h> under some
