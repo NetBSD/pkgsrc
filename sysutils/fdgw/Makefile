@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/12/26 11:45:22 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/07 17:26:08 wennmach Exp $
 #
 
 DISTNAME=	fdgw-20011216
+PKGREVISION=	1
 CATEGORIES=	sysutils net
 MASTER_SITES=	ftp://ftp.fml.org/pub/fdgw/source/
 
@@ -21,7 +22,7 @@ IGNORE=                 "${PKGNAME} requires the 'lndir' command, and hence X11"
 
 .if (${MACHINE_ARCH} != "i386")
 IGNORE=  "Sorry, fdgw is currently only available for i386 machines."
-IGNORE+= "Please report ${MAINTAINER} if you succeed to port fdgw to other architectures"
+IGNORE+= "Please report to ${MAINTAINER} if you succeed to port fdgw to other architectures"
 .endif
 
 # we need NetBSD source tree.
@@ -30,6 +31,14 @@ IGNORE= "${PKGNAME} requires the NetBSD source tree in BSDSRCDIR (${BSDSRCDIR})"
 .endif
 
 ALL_TARGET=	dist-build
+
+pre-fetch:
+	@ ${ECHO} "";
+	@ ${ECHO} "************************************";
+	@ ${ECHO} "Please note: The install stage of fdgw requires a kernel"
+	@ ${ECHO} "             with 'pseudo-device vnd 4' enabled.";
+	@ ${ECHO} "************************************";
+	@ ${ECHO} "";
 
 pre-install:
 	(cd ${WRKSRC} && ${MAKE} dist-image)
