@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 1999/07/06 07:51:06 jlam Exp $
+
+--- menu/menu.h.orig	Wed Feb 11 07:13:50 1998
++++ menu/menu.h	Fri Jul  2 02:46:52 1999
+@@ -33,7 +33,7 @@
+ #ifndef ETI_MENU
+ #define ETI_MENU
+ 
+-#include <curses.h>
++#include <ncurses.h>
+ #include <eti.h>
+ 
+ #ifdef __cplusplus

@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1 1998/12/28 20:03:08 tron Exp $
+$NetBSD: patch-ad,v 1.2 1999/07/06 07:51:04 jlam Exp $
 
---- man/Makefile.in.orig	Sun Aug  4 03:16:40 1996
-+++ man/Makefile.in	Mon Dec 28 20:16:31 1998
-@@ -48,7 +48,7 @@
+--- man/Makefile.in.orig	Wed Feb 11 07:13:49 1998
++++ man/Makefile.in	Tue Jun 29 09:07:25 1999
+@@ -63,7 +63,7 @@
  # We compose terminfo.5 from the real sources...
  CAPLIST=$(srcdir)/../include/Caps
  terminfo.5: $(srcdir)/terminfo.head $(CAPLIST) $(srcdir)/terminfo.tail Makefile $(srcdir)/MKterminfo.sh
 -	sh $(srcdir)/MKterminfo.sh $(srcdir)/terminfo.head $(CAPLIST) $(srcdir)/terminfo.tail >terminfo.5
 +	sh $(srcdir)/MKterminfo.sh $(srcdir)/terminfo.head $(CAPLIST) $(srcdir)/terminfo.tail | tbl >terminfo.5
  
- clean mostlyclean:
- 	rm -f terminfo.5
+ mostlyclean :
+ 	-rm -f core tags TAGS *~ *.ln *.atac trace
