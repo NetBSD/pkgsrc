@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.1 1999/05/01 17:12:00 tv Exp $
+$NetBSD: patch-aj,v 1.2 1999/11/25 18:51:47 erh Exp $
 
---- crypto/bn/bn_div.c.orig	Sat May  1 13:10:52 1999
-+++ crypto/bn/bn_div.c	Sat May  1 13:11:42 1999
-@@ -61,7 +61,7 @@
- #include "bn_lcl.h"
+--- e_os.h.orig	Thu Jun 10 03:12:20 1999
++++ e_os.h	Wed Oct 20 17:50:34 1999
+@@ -231,7 +231,7 @@
+      /* !defined VMS */
+ #    include OPENSSL_UNISTD
  
- /* The old slow way */
--#if 0
-+#if defined(__NetBSD__) && defined(__m68k__) && (__GNUC_MINOR__ == 91)
- int BN_div(dv, rem, m, d,ctx)
- BIGNUM *dv;
- BIGNUM *rem;
+-#    define OPENSSL_CONF	"openssl.cnf"
++#    define OPENSSL_CONF	"etc/openssl.cnf"
+ #    define SSLEAY_CONF		OPENSSL_CONF
+ #    define RFILE		".rnd"
+ #    define LIST_SEPARATOR_CHAR ':'
