@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/11/18 16:10:55 jschauma Exp $
+
+--- configure.orig	2003-11-08 19:10:36.000000000 -0500
++++ configure	2003-11-08 19:10:53.000000000 -0500
+@@ -7121,7 +7121,7 @@
+ if test "x$enable_optim" = xyes; then
+     if test "x$enable_debug" = xno && test "x$enable_prof" = xno; then
+     if test "x$GCC" = xyes; then
+-      CFLAGS="$CFLAGS -fomit-frame-pointer -ffast-math -fexpensive-optimizations -fstrict-aliasing"
++      CFLAGS="$CFLAGS -fomit-frame-pointer -ffast-math -fexpensive-optimizations -fno-strict-aliasing"
+       case "$host" in
+       i*86-*-*) CFLAGS="$CFLAGS -malign-loops=2 -malign-jumps=2 -malign-functions=2";;
+       esac
