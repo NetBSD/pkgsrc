@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/01 13:34:49 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/03 20:56:44 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libole2.
 #
@@ -31,8 +31,10 @@ BUILDLINK_TARGETS.libole2=	libole2-buildlink
 BUILDLINK_TARGETS.libole2+=	libole2-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libole2}
 
-BUILDLINK_CONFIG.libole2=		${BUILDLINK_PREFIX.libole2}/lib/libole2Conf.sh
+BUILDLINK_CONFIG.libole2=	${BUILDLINK_PREFIX.libole2}/lib/libole2Conf.sh
 BUILDLINK_CONFIG_WRAPPER.libole2=	${BUILDLINK_DIR}/lib/libole2Conf.sh
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.libole2}|${BUILDLINK_CONFIG.libole2}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 LIBOLE2_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.libole2}

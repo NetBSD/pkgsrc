@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/10/01 11:57:11 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/03 20:56:43 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gconf.
 #
@@ -36,6 +36,8 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gconf}
 
 BUILDLINK_CONFIG.gconf=	${BUILDLINK_PREFIX.gconf}/bin/gconf-config
 BUILDLINK_CONFIG_WRAPPER.gconf=${BUILDLINK_DIR}/bin/gconf-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.gconf}|${BUILDLINK_CONFIG.gconf}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 GCONF_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.gconf}
