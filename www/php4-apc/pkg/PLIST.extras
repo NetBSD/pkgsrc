@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.extras,v 1.1.1.1 2001/10/29 16:50:16 jlam Exp $
+share/doc/${PKGBASE}/INSTALL
+share/doc/${PKGBASE}/GORY_DETAILS
+share/doc/${PKGBASE}/LICENSE
+share/doc/${PKGBASE}/README.compiler
+share/examples/${PKGBASE}/apcinfo.php
+@dirrm share/examples/${PKGBASE}
+@dirrm share/doc/${PKGBASE}
