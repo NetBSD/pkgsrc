@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2002/12/16 11:39:01 wiz Exp $
+$NetBSD: distinfo,v 1.16 2002/12/16 16:14:06 drochner Exp $
 
 SHA1 (wget-1.8.2.tar.gz) = cb14189c47f281b33fd1ef37c4c8df39250fa7d5
 Size (wget-1.8.2.tar.gz) = 1154648 bytes
@@ -7,3 +7,4 @@ SHA1 (patch-ad) = ecd764d96e1d0646ab0b6dbce5b2aad606979d43
 SHA1 (patch-ae) = 200b93efcbea69292dd62559a90116c379aa6e0d
 SHA1 (patch-af) = 3921360a2986004063ded15f9eaa5a6290a54bfc
 SHA1 (patch-ag) = ea1e64523b8a6dcf5976840863ca995a7d4c755b
+SHA1 (patch-ah) = 208428640f131fe85a5c38ecabd0e89bee983f74
