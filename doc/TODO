@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.467 2003/04/15 08:28:55 wiz Exp $
+$NetBSD: TODO,v 1.468 2003/04/15 08:35:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -101,7 +101,6 @@ Suggested package updates
 	o crafty-19.1
 	o crossfire-1.5.0
 	o ctwm-3.6 [pkg/20648]
-	o curl-7.10.4
 	o cyrus-sasl-2.1.13
 	o db4-4.1.25 [pkg/20289]
 	o dctc-0.85.1
@@ -153,7 +152,6 @@ Suggested package updates
 	o icewm-1.2.7
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.5
-	o iozone-3.167
 	o jakarta-ant-1.5 [pkg/18322]
 	o jakarta-ant-1.5.2
 	o jakarta-tomcat-3.3.1a
