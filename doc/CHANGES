@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7293 2004/09/30 11:37:44 agc Exp $
+$NetBSD: CHANGES,v 1.7294 2004/09/30 11:42:17 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4490,3 +4490,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dylan-interpreter to 2.3.11 [agc 2004-09-30]
 	Added libmatchbox-1.4 [agc 2004-09-30]
 	Updated matchbox to 0.8.4 [agc 2004-09-30]
+	Added fillets-ng-0.5.0 [salo 2004-09-30]
+	Added fillets-ng-data-0.5.1 [salo 2004-09-30]
+	Added fillets-ng-data-cs-0.5.0 [salo 2004-09-30]
