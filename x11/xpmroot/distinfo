@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:16:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/06/29 13:58:52 zuntum Exp $
 
 SHA1 (fvwm-2.2.5.tar.gz) = 2cb0c6dbd1a361987a301956315d9f3b9a68f78b
+Size (fvwm-2.2.5.tar.gz) = 1080046 bytes
 SHA1 (patch-aa) = 0942aa827c56def48c44e71f81f7678db6ff8192
-SHA1 (patch-ab) = 593f24232ab61531ac8797e79a672ae8bdc12632
+SHA1 (patch-ab) = bc7424b13dbe85e2fa4949280e4242dba86af4b1
