@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.15 2001/10/17 19:17:00 jlam Exp $
+$NetBSD: patch-aa,v 1.16 2001/11/15 05:32:57 jlam Exp $
 
---- Makefile.tmpl.orig	Wed Oct 17 11:47:02 2001
+--- Makefile.tmpl.orig	Thu Nov 15 00:06:33 2001
 +++ Makefile.tmpl
 @@ -387,34 +387,6 @@
  			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
@@ -37,6 +37,15 @@ $NetBSD: patch-aa,v 1.15 2001/10/17 19:17:00 jlam Exp $
  		done; \
  	fi
  	@echo "<=== [programs]"
+@@ -531,7 +503,7 @@
+ #   icons and distributed CGI scripts.
+ install-data:
+ 	@echo "===> [data: Installing initial data files]"
+-	-@if [ -f $(root)$(htdocsdir)/index.html ] || [ -f $(root)$(htdocsdir)/index.html.en ]; then \
++	-@if false; then \
+ 		echo "[PRESERVING EXISTING DATA SUBDIR: $(root)$(htdocsdir)/]"; \
+ 	else \
+ 		echo "Copying tree $(TOP)/htdocs/ -> $(root)$(htdocsdir)/"; \
 @@ -547,15 +519,16 @@
  		find $(root)$(manualdir)/ -type d -exec chmod a+rx {} \; ; \
  		find $(root)$(manualdir)/ -type f -print | xargs chmod a+r ; \
@@ -66,3 +75,66 @@ $NetBSD: patch-aa,v 1.15 2001/10/17 19:17:00 jlam Exp $
  		if [ .$$conf = .httpd.conf ]; then \
  			target_conf="$(TARGET).conf"; \
  		else \
+@@ -622,7 +595,7 @@
+         	> $(TOP)/$(SRC)/.apaci.install.tmp && \
+ 		echo "$(INSTALL_DATA) $(TOP)/conf/$${conf}-dist[*] $(root)$(sysconfdir)/$${target_conf}.default"; \
+ 		$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(sysconfdir)/$${target_conf}.default; \
+-		if [ ! -f "$(root)$(sysconfdir)/$${target_conf}" ]; then \
++		if true; then \
+ 			echo "$(INSTALL_DATA) $(TOP)/conf/$${conf}-dist[*] $(root)$(sysconfdir)/$${target_conf}"; \
+ 			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(sysconfdir)/$${target_conf}; \
+ 		else \
+@@ -632,7 +605,7 @@
+ 	-@for conf in mime.types magic; do \
+ 		echo "$(INSTALL_DATA) $(TOP)/conf/$${conf} $(root)$(sysconfdir)/$${conf}.default"; \
+ 		$(INSTALL_DATA) $(TOP)/conf/$${conf} $(root)$(sysconfdir)/$${conf}.default; \
+-		if [ ! -f "$(root)$(sysconfdir)/$${conf}" ]; then \
++		if true; then \
+ 			echo "$(INSTALL_DATA) $(TOP)/conf/$${conf} $(root)$(sysconfdir)/$${conf}"; \
+ 			$(INSTALL_DATA) $(TOP)/conf/$${conf} $(root)$(sysconfdir)/$${conf}; \
+ 		else \
+@@ -650,7 +623,7 @@
+ 		chmod 700 $(root)$(sysconfdir)/ssl.key; \
+ 		echo "chmod 755 $(root)$(sysconfdir)/ssl.prm"; \
+ 		chmod 755 $(root)$(sysconfdir)/ssl.prm; \
+-		if [ ! -f "$(root)$(sysconfdir)/ssl.crt/README.CRT" ]; then \
++		if true; then \
+ 			echo "$(INSTALL_DATA) $(TOP)/conf/ssl.crt/README.CRT $(root)$(sysconfdir)/ssl.crt/README.CRT"; \
+ 			$(INSTALL) $(TOP)/conf/ssl.crt/README.CRT $(root)$(sysconfdir)/ssl.crt/README.CRT; \
+ 			echo "$(INSTALL_DATA) $(TOP)/conf/ssl.crt/Makefile $(root)$(sysconfdir)/ssl.crt/Makefile"; \
+@@ -677,7 +650,7 @@
+ 		echo "Updating hash symlinks in $(root)$(sysconfdir)/ssl.crt/:"; \
+ 		SSL_PROGRAM="`grep '^SSL_PROGRAM=' $(TOP)/$(SRC)/Makefile.config | sed -e 's:^.*=::'`"; \
+ 		(cd $(root)$(sysconfdir)/ssl.crt/ && $(MAKE) $(MFLAGS) SSL_PROGRAM=$$SSL_PROGRAM); \
+-		if [ ! -f "$(root)$(sysconfdir)/ssl.csr/README.CSR" ]; then \
++		if true; then \
+ 			echo "$(INSTALL_DATA) $(TOP)/conf/ssl.csr/README.CSR $(root)$(sysconfdir)/ssl.csr/README.CSR"; \
+ 			$(INSTALL) $(TOP)/conf/ssl.csr/README.CSR $(root)$(sysconfdir)/ssl.csr/README.CSR; \
+ 			echo "$(INSTALL_DATA) -m 400 $(TOP)/conf/ssl.csr/server.csr $(root)$(sysconfdir)/ssl.csr/server.csr"; \
+@@ -685,7 +658,7 @@
+ 		else \
+ 			echo "[PRESERVING EXISTING CSR FILES: $(root)$(sysconfdir)/ssl.csr/*]"; \
+ 		fi; \
+-		if [ ! -f "$(root)$(sysconfdir)/ssl.crl/README.CRL" ]; then \
++		if true; then \
+ 			echo "$(INSTALL_DATA) $(TOP)/conf/ssl.crl/README.CRL $(root)$(sysconfdir)/ssl.crl/README.CRL"; \
+ 			$(INSTALL) $(TOP)/conf/ssl.crl/README.CRL $(root)$(sysconfdir)/ssl.crl/README.CRL; \
+ 			echo "$(INSTALL_DATA) $(TOP)/conf/ssl.crl/Makefile $(root)$(sysconfdir)/ssl.crl/Makefile"; \
+@@ -693,7 +666,7 @@
+ 		else \
+ 			echo "[PRESERVING EXISTING CRL FILES: $(root)$(sysconfdir)/ssl.crl/*]"; \
+ 		fi; \
+-		if [ ! -f "$(root)$(sysconfdir)/ssl.key/README.KEY" ]; then \
++		if true; then \
+ 			echo "$(INSTALL_DATA) $(TOP)/conf/ssl.key/README.KEY $(root)$(sysconfdir)/ssl.key/README.KEY"; \
+ 			$(INSTALL) $(TOP)/conf/ssl.key/README.KEY $(root)$(sysconfdir)/ssl.key/README.KEY; \
+ 			echo "$(INSTALL_DATA) -m 400 $(TOP)/conf/ssl.key/snakeoil-ca-rsa.key $(root)$(sysconfdir)/ssl.key/snakeoil-ca-rsa.key"; \
+@@ -713,7 +686,7 @@
+ 		else \
+ 			echo "[PRESERVING EXISTING KEY FILES: $(root)$(sysconfdir)/ssl.key/*]"; \
+ 		fi; \
+-		if [ ! -f "$(root)$(sysconfdir)/ssl.prm/README.PRM" ]; then \
++		if true; then \
+ 			echo "$(INSTALL_DATA) $(TOP)/conf/ssl.prm/README.PRM $(root)$(sysconfdir)/ssl.prm/README.PRM"; \
+ 			$(INSTALL) $(TOP)/conf/ssl.prm/README.PRM $(root)$(sysconfdir)/ssl.prm/README.PRM; \
+ 			echo "$(INSTALL_DATA) -m 400 $(TOP)/conf/ssl.prm/snakeoil-ca-dsa.prm $(root)$(sysconfdir)/ssl.prm/snakeoil-ca-dsa.prm"; \
