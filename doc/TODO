@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.321 2003/02/26 21:51:40 fredb Exp $
+$NetBSD: TODO,v 1.322 2003/02/27 04:09:52 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -131,8 +131,6 @@ Suggested package updates
 	o gnome-python-1.99.13
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99beta
-	o gnucash-1.8.0 [pkg/20271]
-	o gnucash-1.8.1
 	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.1
 	o gpgme-0.4.0
