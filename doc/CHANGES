@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8824 2005/01/19 22:35:09 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8825 2005/01/19 23:28:09 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -428,3 +428,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cgiirc to 0.5.5 [adrianp 2005-01-19]
 	Updated ircservices to 5.0.44 [adrianp 2005-01-19]
 	Updated dspam to 3.2.6 [xtraeme 2005-01-19]
+	Updated gtk-send-pr to 0.4.2 [jmmv 2005-01-19]
