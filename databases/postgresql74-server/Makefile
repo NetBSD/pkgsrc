@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/01/14 05:15:39 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/02 08:15:09 jdolecek Exp $
 
 PKGNAME=		postgresql74-server-${BASE_VERS}
 PKGREVISION=		3
@@ -21,7 +21,8 @@ BUILD_DIRS=		${WRKSRC}/src/backend
 BUILD_DIRS+=		${WRKSRC}/src/backend/utils/mb/conversion_procs
 
 # PostgreSQL has loadable server-side language modules.
-.include "../../mk/dlopen.buildlink3.mk"
+# XXX this breaks PostgreSQL server - see PR pkg/28729
+#.include "../../mk/dlopen.buildlink3.mk"
 
 .if defined(USE_PAM)
 .  include "../../mk/pam.buildlink3.mk"
