@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:38 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 09:32:44 agc Exp $
 
-MD5 (unzip542.tar.gz) = 4fc23bb7f3fb00ef6af35c5e77ede016
+SHA1 (unzip542.tar.gz) = 713d498975ff03dec702cbb2a07d3d46fa4267f5
+Size (unzip542.tar.gz) = 1070770 bytes
 SHA1 (patch-aa) = a90ed5bb96f5b1c1be4ef5ddc952edb364fa7a05
 SHA1 (patch-ab) = f1763f9ccc61eafa6719cfe55584ddf1088a14be

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:21 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 09:32:43 agc Exp $
 
-MD5 (fastjar-0.90.tgz) = e17723206263a314b937055c6c91607a
+SHA1 (fastjar-0.90.tgz) = bf88e42e10f66ed8a142833a93c5bc59c3ef9d84
+Size (fastjar-0.90.tgz) = 40115 bytes
