@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/08/25 19:23:58 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/08/27 09:13:50 skrll Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
 
 PKGNAME=		qt3-tools-${QTVERSION}
-PKGREVISION=		2
 COMMENT=		QT GUI (WYSIWYG) builder and other tools
 
 CONFIGURE_ARGS+=	-I${BUILDLINK_QTDIR}/include \
