@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/07/25 18:02:37 kristerw Exp $
+$NetBSD: distinfo,v 1.5 2003/08/12 23:28:58 kristerw Exp $
 
-SHA1 (INIT.2003-06-21.tgz) = 35cb97239fdc36e32523cbebddfa9058eb61b6f0
-Size (INIT.2003-06-21.tgz) = 258926 bytes
-SHA1 (ast-ksh.2003-06-21.tgz) = edfad2c85fed900589cafdb8831dd44483bce059
-Size (ast-ksh.2003-06-21.tgz) = 1458117 bytes
+SHA1 (INIT.2003-07-24.tgz) = 92946d1b522345b6c8ac25cb11e4b621a95a9150
+Size (INIT.2003-07-24.tgz) = 258944 bytes
+SHA1 (ast-ksh.2003-07-24.tgz) = 08d80d4ecb02a005886bbe0adb67c7e7f53be70c
+Size (ast-ksh.2003-07-24.tgz) = 1459120 bytes
+SHA1 (patch-aa) = dd3e5cc9b80ae6e24faed3f15af354cf34fb16a0
