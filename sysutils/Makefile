@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2002/12/22 13:13:39 seb Exp $
+# $NetBSD: Makefile,v 1.179 2003/01/03 16:30:32 lukem Exp $
 
 COMMENT=	System utilities
 
@@ -24,7 +24,6 @@ SUBDIR+=	c++rt0
 SUBDIR+=	cdbkup
 SUBDIR+=	cdrdao
 SUBDIR+=	cdrecord
-SUBDIR+=	cdrecord-devel
 SUBDIR+=	cdrecord-xcdroast
 SUBDIR+=	cfengine
 SUBDIR+=	cfengine2
