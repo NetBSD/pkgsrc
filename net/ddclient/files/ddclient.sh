@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ddclient.sh,v 1.3 2002/02/05 06:04:38 jlam Exp $
+# $NetBSD: ddclient.sh,v 1.4 2002/09/20 02:01:57 grant Exp $
 #
 # Dynamic DNS update client
 #

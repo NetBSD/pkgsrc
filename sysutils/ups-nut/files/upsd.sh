@@ -1,6 +1,6 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upsd.sh,v 1.4 2002/02/15 08:55:59 seb Exp $
+# $NetBSD: upsd.sh,v 1.5 2002/09/20 02:02:01 grant Exp $
 #
 # PROVIDE: upsd
 # REQUIRE: upsdriver
