@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2004/05/29 16:01:14 kim Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/24 01:39:30 kim Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
 PKGNAME=		ices-mp3-${ICES_VERSION}
-ICES_VERSION=		0.3
+ICES_VERSION=		0.4
 CATEGORIES=		audio
-MASTER_SITES=		http://www.icecast.org/files/ices/
+MASTER_SITES=		http://svn.xiph.org/releases/ices/
 
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.icecast.org/ices.php
@@ -31,6 +31,9 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 MODDIR=			${PREFIX}/share/${PKGBASE}
 
+pre-configure:
+	cd ${WRKSRC} && ${AUTORECONF} --force
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/ices ${PREFIX}/bin/${PKGBASE}
 	${INSTALL_MAN} ${WRKSRC}/doc/ices.1 ${PREFIX}/man/man1/${PKGBASE}.1
@@ -47,6 +50,7 @@ do-install:
 	done
 	${INSTALL_DATA_DIR} ${MODDIR}
 
+.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libshout/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
@@ -61,4 +65,5 @@ CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 .include "../../textproc/libxml2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
