@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.864 2001/11/28 10:21:46 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.865 2001/11/28 19:55:31 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -50,36 +50,6 @@ PATCHDIR?=		${.CURDIR}/patches
 SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}
-
-# PKG_SYSCONFDIR is where the configuration files for a package may be found.
-# This value may be customized in various ways:
-#
-# PKG_SYSCONFBASE is the main config directory under which all package
-#	configuration files are to be found.
-#
-# PKG_SYSCONFSUBDIR is the subdirectory of PKG_SYSCONFBASE under which the
-#	configuration files for a particular package may be found.
-#
-# PKG_SYSCONFDIR.${PKGBASE} overrides the value of ${PKG_SYSCONFDIR} for a
-#	particular package.
-#
-# Users will typically want to set PKG_SYSCONFBASE to /etc, or accept the
-# default location of ${PREFIX}/etc.
-#
-.if defined(PKG_SYSCONFDIR.${PKGBASE})
-PKG_SYSCONFDIR=		${PKG_SYSCONFDIR.${PKGBASE}}
-.else
-PKG_SYSCONFSUBDIR?=	# empty
-PKG_SYSCONFBASE?=	${PREFIX}/etc
-.  if empty(PKG_SYSCONFSUBDIR)
-PKG_SYSCONFDIR?=	${PKG_SYSCONFBASE}
-.  else
-PKG_SYSCONFDIR?=	${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
-.  endif
-.endif
-
-CONFIGURE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
-MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 
 .if defined(USE_JAVA)
 BUILD_DEFS+=		PKG_JVM JAVA_HOME
@@ -973,6 +943,36 @@ CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/inc
 .    endif
 .  endif
 .endif
+
+# PKG_SYSCONFDIR is where the configuration files for a package may be found.
+# This value may be customized in various ways:
+#
+# PKG_SYSCONFBASE is the main config directory under which all package
+#	configuration files are to be found.
+#
+# PKG_SYSCONFSUBDIR is the subdirectory of PKG_SYSCONFBASE under which the
+#	configuration files for a particular package may be found.
+#
+# PKG_SYSCONFDIR.${PKGBASE} overrides the value of ${PKG_SYSCONFDIR} for a
+#	particular package.
+#
+# Users will typically want to set PKG_SYSCONFBASE to /etc, or accept the
+# default location of ${PREFIX}/etc.
+#
+.if defined(PKG_SYSCONFDIR.${PKGBASE})
+PKG_SYSCONFDIR=		${PKG_SYSCONFDIR.${PKGBASE}}
+.else
+PKG_SYSCONFSUBDIR?=	# empty
+PKG_SYSCONFBASE?=	${PREFIX}/etc
+.  if empty(PKG_SYSCONFSUBDIR)
+PKG_SYSCONFDIR?=	${PKG_SYSCONFBASE}
+.  else
+PKG_SYSCONFDIR?=	${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
+.  endif
+.endif
+
+CONFIGURE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 
 # Passed to most of script invocations
 SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
