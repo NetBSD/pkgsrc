@@ -1,4 +1,7 @@
-# $NetBSD: x11.buildlink2.mk,v 1.1 2002/09/27 09:22:58 jlam Exp $
+# $NetBSD: x11.buildlink2.mk,v 1.2 2002/10/08 14:32:10 jlam Exp $
+#
+# This file is for internal use by bsd.buildlink2.mk and should _not_ be
+# include by package Makefiles.
 
 .if !defined(X11_BUILDLINK2_MK)
 X11_BUILDLINK2_MK=	# defined
