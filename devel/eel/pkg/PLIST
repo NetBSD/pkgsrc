@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/14 17:56:29 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/08/14 08:11:11 rh Exp $
 bin/eel-config
 include/eel/eel-art-extensions.h
 include/eel/eel-art-gtk-extensions.h
@@ -26,6 +26,7 @@ include/eel/eel-glib-extensions.h
 include/eel/eel-glyph.h
 include/eel/eel-gnome-extensions.h
 include/eel/eel-graphic-effects.h
+include/eel/eel-gtk-container.h
 include/eel/eel-gtk-extensions.h
 include/eel/eel-gtk-macros.h
 include/eel/eel-image-chooser.h
@@ -84,6 +85,7 @@ share/eel/fonts/urw/n019024l.pfb
 share/eel/fonts/urw/n019024l.pfm
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/eel.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/eel.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/eel.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/eel.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/eel.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/eel.mo
