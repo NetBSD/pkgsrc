@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/02/06 10:21:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/03/09 13:36:49 markd Exp $
 share/doc/kde/HTML/it/amor/common
 share/doc/kde/HTML/it/amor/index.cache.bz2
 share/doc/kde/HTML/it/amor/index.docbook
@@ -78,6 +78,12 @@ share/doc/kde/HTML/it/kamera/index.docbook
 share/doc/kde/HTML/it/kasteroids/common
 share/doc/kde/HTML/it/kasteroids/index.cache.bz2
 share/doc/kde/HTML/it/kasteroids/index.docbook
+share/doc/kde/HTML/it/kate-plugins/htmltools.docbook
+share/doc/kde/HTML/it/kate-plugins/insertcommand.docbook
+share/doc/kde/HTML/it/kate-plugins/openheader.docbook
+share/doc/kde/HTML/it/kate-plugins/textfilter.docbook
+share/doc/kde/HTML/it/kate-plugins/xmlcheck.docbook
+share/doc/kde/HTML/it/kate-plugins/xmltools.docbook
 share/doc/kde/HTML/it/katomic/common
 share/doc/kde/HTML/it/katomic/index.cache.bz2
 share/doc/kde/HTML/it/katomic/index.docbook
@@ -486,6 +492,7 @@ share/doc/kde/HTML/it/kpercentage/using.docbook
 share/doc/kde/HTML/it/kpoker/common
 share/doc/kde/HTML/it/kpoker/index.cache.bz2
 share/doc/kde/HTML/it/kpoker/index.docbook
+share/doc/kde/HTML/it/kppp/global-settings.docbook
 share/doc/kde/HTML/it/krec/common
 share/doc/kde/HTML/it/krec/index.cache.bz2
 share/doc/kde/HTML/it/krec/index.docbook
@@ -708,6 +715,9 @@ share/doc/kde/HTML/it/lskat/index.docbook
 share/doc/kde/HTML/it/megami/common
 share/doc/kde/HTML/it/megami/index.cache.bz2
 share/doc/kde/HTML/it/megami/index.docbook
+share/doc/kde/HTML/it/mouse/common
+share/doc/kde/HTML/it/mouse/index.cache.bz2
+share/doc/kde/HTML/it/mouse/index.docbook
 share/doc/kde/HTML/it/noatun/common
 share/doc/kde/HTML/it/noatun/index.cache.bz2
 share/doc/kde/HTML/it/noatun/index.docbook
@@ -1179,8 +1189,6 @@ share/kde/locale/it/LC_MESSAGES/kwin_quartz_config.mo
 share/kde/locale/it/LC_MESSAGES/kwireless.mo
 share/kde/locale/it/LC_MESSAGES/kworldclock.mo
 share/kde/locale/it/LC_MESSAGES/kwriteconfig.mo
-share/kde/locale/it/LC_MESSAGES/kwuftpd.mo
-share/kde/locale/it/LC_MESSAGES/kxconfig.mo
 share/kde/locale/it/LC_MESSAGES/kxkb.mo
 share/kde/locale/it/LC_MESSAGES/kxmlrpcd.mo
 share/kde/locale/it/LC_MESSAGES/kxsconfig.mo
@@ -1247,6 +1255,7 @@ share/kde/locale/it/flag.png
 @dirrm share/kde/apps/ktuberling/sounds/it
 @comment dirrm share/kde/apps/ktuberling/sounds
 @dirrm share/doc/kde/HTML/it/noatun
+@dirrm share/doc/kde/HTML/it/mouse
 @dirrm share/doc/kde/HTML/it/megami
 @dirrm share/doc/kde/HTML/it/lskat
 @dirrm share/doc/kde/HTML/it/lisa
@@ -1278,6 +1287,7 @@ share/kde/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kruler
 @dirrm share/doc/kde/HTML/it/kreversi
 @dirrm share/doc/kde/HTML/it/krec
+@dirrm share/doc/kde/HTML/it/kppp
 @dirrm share/doc/kde/HTML/it/kpoker
 @dirrm share/doc/kde/HTML/it/kpercentage
 @dirrm share/doc/kde/HTML/it/kpat
@@ -1379,13 +1389,14 @@ share/kde/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kbattleship
 @dirrm share/doc/kde/HTML/it/kbackgammon
 @dirrm share/doc/kde/HTML/it/katomic
+@dirrm share/doc/kde/HTML/it/kate-plugins
 @dirrm share/doc/kde/HTML/it/kasteroids
 @dirrm share/doc/kde/HTML/it/kamera
 @dirrm share/doc/kde/HTML/it/kalzium
 @dirrm share/doc/kde/HTML/it/kaboodle
 @dirrm share/doc/kde/HTML/it/juk
 @dirrm share/doc/kde/HTML/it/flashkard
-@comment dirrm share/doc/kde/HTML/it/common
+@dirrm share/doc/kde/HTML/it/common
 @dirrm share/doc/kde/HTML/it/atlantik
 @dirrm share/doc/kde/HTML/it/artsbuilder
 @dirrm share/doc/kde/HTML/it/amor
