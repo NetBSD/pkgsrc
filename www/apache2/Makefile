@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2002/09/20 19:51:53 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/10/02 13:10:02 itojun Exp $
 
 DISTNAME=		httpd-${APACHE_VERSION}
 PKGNAME=		apache-${APACHE_VERSION}
-APACHE_VERSION=		2.0.40
+APACHE_VERSION=		2.0.42
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://httpd.apache.org/dist/httpd/old/ \
