@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6519 2004/07/09 22:09:09 recht Exp $
+$NetBSD: CHANGES,v 1.6520 2004/07/09 23:24:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3331,3 +3331,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cross-i386-linuxglibc1 to 5.3.12.1nb1 [kristerw 2004-07-09]
 	Updated cross-i386-msdosdjgpp to 2.02.0nb1 [kristerw 2004-07-09]
 	Updated ORBit2 to 2.10.3 [recht 2004-07-09]
+	Updated naim to 0.11.7.1 [wiz 2004-07-09]
