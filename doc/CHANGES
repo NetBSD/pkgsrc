@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.364 2002/10/26 16:02:13 grant Exp $
+$NetBSD: CHANGES,v 1.365 2002/10/26 18:47:14 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3392,3 +3392,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added python-mode-4.6 [cjep 2002-10-25]
 	Updated fileutils to 4.1.11 [grant 2002-10-26]
 	Updated less to 378 [grant 2002-10-26]
+	Updated freetds to 0.60 [grant 2002-10-26]
