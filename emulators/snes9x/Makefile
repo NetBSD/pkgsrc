@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2002/07/08 01:04:09 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2002/07/14 07:44:43 kristerw Exp $
 
 DISTNAME=		s9xs139
 PKGNAME=		snes9x-1.39
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/release
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.snes9x.com/zips/
@@ -51,6 +52,13 @@ MAKE_ENV+=	ASMKREED=1
 
 .if exists(${X11BASE}/lib/libXxf86dga.a)
 MAKE_ENV+=	NETBSD_USE_DGA=1
+.endif
+
+.if exists(/usr/include/usb.h) || exists(/usr/include/usbhid.h)
+MAKE_ENV+=	USBJOY=1
+.if exists(/usr/include/usbhid.h)
+MAKE_ENV+=	USBHID_H=1
+.endif
 .endif
 
 .include "../../mk/pthread.buildlink.mk"
