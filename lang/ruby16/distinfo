@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
+$NetBSD: distinfo,v 1.2 2005/01/21 06:13:36 tv Exp $
 
 SHA1 (ruby/ruby-1.6.8.tar.gz) = 4b475ac1c837cd62b6dfe85359e1502a71b08cd1
 Size (ruby/ruby-1.6.8.tar.gz) = 1023403 bytes
-SHA1 (patch-aa) = 1c6d4f4c376ac666f9d70e3b556bef314450156f
-SHA1 (patch-ab) = 6709764404153b1f3c125480256b8af23c74a218
+SHA1 (patch-aa) = ba4551cc3de31036a3cf8d50478bfdcbcadee38b
+SHA1 (patch-ab) = 57abd1b0e6af14b20c3a284615160c144c18cfdc
 SHA1 (patch-ac) = 19f520406a9b699a4bbe53b0e9e2b69b4eb7d96a
 SHA1 (patch-ad) = 8a3e5eb250f517f10bea7f52fbfe8b05957b7bb4
 SHA1 (patch-ae) = 2e096dcb882be923d2ff775a4271a300954a9dec
