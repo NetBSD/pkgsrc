@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2004/03/16 15:19:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.199 2004/03/28 21:04:59 martin Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -124,6 +124,7 @@ SUBDIR+=	postfix
 SUBDIR+=	postfix-current
 SUBDIR+=	prayer
 SUBDIR+=	procmail
+SUBDIR+=	pulsar
 SUBDIR+=	qcheck
 SUBDIR+=	qmHandle
 SUBDIR+=	qmail
