@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2163 2003/05/06 23:06:00 seb Exp $
+$NetBSD: CHANGES,v 1.2164 2003/05/06 23:34:03 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1871,3 +1871,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated acroread5 to 5.06nb2 [jmmv 2003-05-06]
 	Updated wdm to 1.23 [jmmv 2003-05-06]
 	Updated pstoedit to 3.31nb1 [seb 2003-05-06]
+	Updated xlockmore to 5.08 [hubertf 2003-05-07]
