@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 1998/09/08 10:17:26 agc Exp $
+$NetBSD: patch-ac,v 1.2 1999/01/04 02:40:16 abs Exp $
 
 Introduce a configure script which produces a file called
 res_cpp_symbol, containing either a definition or "undefinition" of
@@ -27,7 +27,7 @@ HAVE_RESOLUTION_FIELD
 +EOF
 +
 +ex=1
-+cc -g config.c 2>/dev/null
++cc -I/usr/X11R6/include -g config.c 2>/dev/null
 +case $? in
 +0)
 +	echo "-DHAVE_RESOLUTION_FIELD=1" > ./res_cpp_symbol

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1998/09/08 10:17:26 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/01/04 02:40:16 abs Exp $
 
 --- Imakefile.orig	Thu Mar  5 04:19:56 1998
 +++ Imakefile	Sun Jun 28 18:56:38 1998
@@ -32,11 +32,9 @@ $NetBSD: patch-aa,v 1.3 1998/09/08 10:17:26 agc Exp $
          INCLUDES = -I../os-support -I../common \
  		   -I$(SERVERSRC)/include -I$(XINCLUDESRC) -I$(INCLUDESRC) \
  		   -I$(EXTINCSRC) $(USEINSTALLEDINC) \
-@@ -119,3 +133,7 @@
+@@ -119,3 +133,5 @@
  
  #endif
  
 +depend:: res_cpp_symbol
-+
-+res_cpp_symbol:
 +	-sh ./configure
