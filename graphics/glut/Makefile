@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/11/11 17:49:26 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/12 17:22:40 drochner Exp $
 #
 
-DISTNAME=		Mesa-3.2.1
+DISTNAME=		Mesa-3.4
 PKGNAME=		${DISTNAME:S/Mesa/glut/}
 CATEGORIES=		graphics
 MASTER_SITES= 		ftp://ftp.mesa3d.org/mesa/ \
