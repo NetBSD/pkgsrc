@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2000/08/14 07:27:39 tron Exp $
+$NetBSD: patch-ab,v 1.4 2000/12/28 17:29:45 wiz Exp $
 
 --- libGL/Makefile.in.orig	Sat Jun  3 10:16:36 2000
-+++ libGL/Makefile.in	Sun Aug 13 23:46:13 2000
++++ libGL/Makefile.in
 @@ -14,7 +14,7 @@
  # These define the name/version of the shared library we're building
  # ------------------------------------------------------------------
@@ -67,7 +67,7 @@ $NetBSD: patch-ab,v 1.3 2000/08/14 07:27:39 tron Exp $
  
  tags :
  	${TAGS} -w *.[ch]
-@@ -110,21 +87,9 @@
+@@ -110,21 +87,10 @@
  render.c: genlib.tcl genGL.tcl
  	${TCLSH} genlib.tcl
  
@@ -88,7 +88,8 @@ $NetBSD: patch-ab,v 1.3 2000/08/14 07:27:39 tron Exp $
 -	${LN} $@ lib${LIBNAME}.so
 +lib${LIBNAME}.la : render.c ${OBJS}
 +	${LIBTOOL} --mode=link ${CC} -rpath ${DESTDIR}${INSTALL_libdir} \
-+	  -version-info ${SOGLREV} -o $@ ${OBJS:.o=.lo}
++	  -version-info ${SOGLREV} -Wl,-R${X11BASE}/lib ${XLIBDIR} ${XLIBS} \
++	  ${LIBS} ${MATHLIBS} -o $@ ${OBJS:.o=.lo}
  
  lib${LIBNAME}.a : render.c ${UNSHARED_OBJS}
  	${RM} $@~
