@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.18 1998/05/08 10:18:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 1998/05/24 18:57:40 tron Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
-DISTNAME=		ssh-1.2.22
+DISTNAME=		ssh-1.2.23
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
 			ftp://ftp.funet.fi/pub/unix/security/login/ssh/
 
-MAINTAINER=		mrg@eterna.com.au
+MAINTAINER=		tron@netbsd.org
 
 RESTRICTED=		"Crypto; export-controlled"
 MIRROR_DISTFILE=	no
@@ -38,7 +38,7 @@ OPSYS!= uname -s
 SSH_CONF_DIR?=		/etc
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --with-etcdir=${SSH_CONF_DIR} \
-			--disable-suid-ssh --with-libwrap
+			--with-libwrap
 
 #Uncomment if all your users are in their own group and their homedir
 #is writeable by that group.  Beware the security implications!
@@ -79,9 +79,20 @@ CFLAGS+=	 	-I${PREFIX}/include
 CFLAGS+=		-DLIBWRAP_FWD
 .endif
 
-MAN1=			scp.1 ssh-add.1 ssh-agent.1 ssh-keygen.1 ssh.1 \
-			make-ssh-known-hosts.1
-MAN8=			sshd.8
+MAN1=		scp.1 scp1.1 slogin.1 slogin1.1 ssh-add.1 ssh-add1.1 \
+		ssh-agent.1 ssh-agent1.1 ssh-keygen.1 ssh-keygen1.1 \
+		ssh.1 ssh1.1 make-ssh-known-hosts.1 make-ssh-known-hosts1.1
+MAN8=		sshd.8 sshd1.8
+
+PKGDIR=		${WRKDIR}/pkg
+
+post-extract:
+	@${MKDIR} ${PKGDIR}
+.for FILE in COMMENT DEINSTALL DESCR MESSAGE PLIST
+	@${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
+	  -e 's#@PREFIX@#${PREFIX}#g' \
+	  <${.CURDIR}/pkg/${FILE} >${PKGDIR}/${FILE}
+.endfor
 
 pre-patch:
 	@${MV} -f ${WRKSRC}/make-ssh-known-hosts.pl \
@@ -102,17 +113,10 @@ fetch-depends:
 	@${FALSE}
 .endif
 
-pre-install:
-	@${CAT} ${PKGDIR}/PLIST.pre | ${SED} \
-		-e 's;\<\$$SSH_CONF_DIR\>;'${SSH_CONF_DIR}';g' \
-		> ${PKGDIR}/PLIST
-	@${CAT} ${PKGDIR}/MESSAGE.pre | ${SED} \
-		-e 's;\<\$$SSH_CONF_DIR\>;'${SSH_CONF_DIR}';g' \
-		-e 's;\<\$$PREFIX\>;'${PREFIX}';g' \
-		> ${PKGDIR}/MESSAGE
-	@${CAT} ${PKGDIR}/DEINSTALL.pre | ${SED} \
-		-e 's;\<\$$SSH_CONF_DIR\>;'${SSH_CONF_DIR}';g' \
-		> ${PKGDIR}/DEINSTALL
+post-build:
+	@${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
+	  -e 's#@PREFIX@#${PREFIX}#g' \
+	  <${FILESDIR}/sshd.sh >${WRKDIR}/sshd.sh
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/ssh
@@ -121,28 +125,14 @@ post-install:
 		${MAKEFILE} install_prefix=${WRKDIR} install-configs)
 	${INSTALL_DATA} ${WRKDIR}${SSH_CONF_DIR}/ssh_config \
 		${WRKDIR}${SSH_CONF_DIR}/sshd_config ${PREFIX}/share/examples/ssh
+	@${RM} -rf ${WRKDIR}${SSH_CONF_DIR}
 	@if [ ! -f ${SSH_CONF_DIR}/ssh_host_key ]; then \
 		${ECHO} "Generating a secret host key..."; \
 		${PREFIX}/bin/ssh-keygen \
 			-f ${SSH_CONF_DIR}/ssh_host_key -N ""; \
 	fi
-	${RM} -f ${PREFIX}/man/man1/slogin.1 ${PREFIX}/man/man1/slogin.1.gz
-.if defined(MANZ)
-	${LN} -sf ssh.1.gz ${PREFIX}/man/man1/slogin.1.gz
-.else
-	${LN} -sf ssh.1 ${PREFIX}/man/man1/slogin.1
-.endif
-#	@if [ ! -f ${PREFIX}/etc/rc.d/sshd.sh ]; then \
-#		${ECHO} "Installing ${PREFIX}/etc/rc.d/sshd.sh startup file."; \
-#		${ECHO} "#!/bin/sh" > ${PREFIX}/etc/rc.d/sshd.sh; \
-#		${ECHO} "[ -f ${SSH_CONF_DIR}/ssh_host_key ] || ${PREFIX}/bin/ssh-keygen -f ${SSH_CONF_DIR}/ssh_host_key -N ''" >> ${PREFIX}/etc/rc.d/sshd.sh; \
-#		${ECHO} "[ -x ${PREFIX}/sbin/sshd ] && ${PREFIX}/sbin/sshd && ${ECHO} -n ' sshd'" >> ${PREFIX}/etc/rc.d/sshd.sh; \
-#		chmod 755 ${PREFIX}/etc/rc.d/sshd.sh; \
-#	fi
+	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd.sh
 	@${CAT} ${PKGDIR}/MESSAGE
-
-pre-clean:
-	@${RM} -f ${PKGDIR}/PLIST ${PKGDIR}/MESSAGE ${PKGDIR}/DEINSTALL
 
 # Include <bsd.pkg.mk> here.  It is essential to have all the override
 # targets precede inclusion of this.
