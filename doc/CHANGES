@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2863 2003/07/22 21:16:19 jmmv Exp $
+$NetBSD: CHANGES,v 1.2864 2003/07/22 22:39:51 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2905,3 +2905,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Deleted ruby-ossl, renamed to ruby-openssl [taca 2003-07-22]
 	Updated docbook-xsl to 1.61.3 [jmmv 2003-07-22]
 	Updated xtide to 2.4nb2 [jmmv 2003-07-22]
+	Updated battalion to 1.4nb2 [jmmv 2003-07-22]
