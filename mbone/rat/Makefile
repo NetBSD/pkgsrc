@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 1998/04/22 14:22:45 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/05/04 23:42:39 hubertf Exp $
 #
 
-DISTNAME=	rat-3.0
+DISTNAME=	rat-3.0.24
 CATEGORIES=	mbone tk80
 MASTER_SITES=	ftp://cs.ucl.ac.uk/mice/rat/src/
-DISTFILES=	rat-3.0.23.tar.gz
 
 MAINTAINER=	mycroft@NetBSD.ORG
 
@@ -20,10 +19,10 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ( \
-	 install -c -s -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
+	 ${INSTALL_PROGRAM} \
 	    bin/$${USER:=`whoami`}/rat-`uname -s`-`uname -r` \
 	    ${LOCALBASE}/bin/rat; \
-	 install -c -o ${MANOWN} -g ${MANGRP} -m ${MANMODE} \
+	 ${INSTALL_MAN} \
 	    man/man1/rat.1 ${LOCALBASE}/man/man1/rat.1 )
 
 .include "../../mk/bsd.pkg.mk"
