@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/05/24 02:58:29 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2001/06/21 18:55:02 jlam Exp $
 
 --- Makefile.in.orig	Tue Aug  8 15:19:31 2000
 +++ Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/24 02:58:29 jlam Exp $
  # for this version of Tk ("srcdir" will be replaced or has already
  # been replaced by the configure script):
 -TCL_GENERIC_DIR		= @TCL_SRC_DIR@/generic
-+TCL_GENERIC_DIR		= ${PREFIX}/include/tcl/generic
++TCL_GENERIC_DIR		= ${BUILDLINK_DIR}/include/tcl/generic
  
  # The directory containing the Tcl library archive file appropriate
  # for this version of Tk:
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/24 02:58:29 jlam Exp $
  SHLIB_LD_LIBS		= @SHLIB_LD_LIBS@
  
  # Additional search flags needed to find the various shared libraries
-@@ -233,11 +233,12 @@
+@@ -233,7 +233,8 @@
  # either.
  #----------------------------------------------------------------
  
@@ -50,11 +50,6 @@ $NetBSD: patch-aa,v 1.4 2001/05/24 02:58:29 jlam Exp $
  
  CC_SWITCHES_NO_STUBS = ${CFLAGS} ${CFLAGS_WARNING} ${SHLIB_CFLAGS} \
  -I${UNIX_DIR} -I${GENERIC_DIR} \
---I${BMAP_DIR} -I${TCL_GENERIC_DIR} ${X11_INCLUDES} \
-+-I${BMAP_DIR} -I${TCL_GENERIC_DIR} -I${PREFIX}/include ${X11_INCLUDES} \
- ${AC_FLAGS} ${PROTO_FLAGS} \
- ${SECURITY_FLAGS} ${MEM_DEBUG_FLAGS} ${KEYSYM_FLAGS} ${NO_DEPRECATED_FLAGS}
- 
 @@ -389,7 +390,7 @@
  
  
