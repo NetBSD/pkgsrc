@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:19 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:27:00 agc Exp $
 
-MD5 (geda/libgeda-20000220.tar.gz) = b8952f645133f3df0323024dc1cd9b86
+SHA1 (geda/libgeda-20000220.tar.gz) = d8f81b1d3b184a4d2584b5e472b9ebd54966e84f
+Size (geda/libgeda-20000220.tar.gz) = 221407 bytes

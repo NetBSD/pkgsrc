@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:30:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 16:26:59 agc Exp $
 
-MD5 (geda/gschem-20000220.tar.gz) = 0d66cb58815a6ba0c5e717d02ba35adb
+SHA1 (geda/gschem-20000220.tar.gz) = 538fdaeb38fcdb1a01586b2f9f2d67ea4b7a0d85
+Size (geda/gschem-20000220.tar.gz) = 341740 bytes
