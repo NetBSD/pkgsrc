@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/16 04:15:18 tsarna Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/07/28 17:23:57 tsarna Exp $
 libexec/pcgi-wrapper
 lib/python1.5/site-packages/pcgi_publisher.py
 lib/python1.5/site-packages/pcgi_publisher.pyc
 lib/python1.5/site-packages/pcgi_publisher.pyo
+sbin/pcgifile
+sbin/killpcgi
+
