@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2000/05/20 19:36:24 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/01 14:34:21 jwise Exp $
 
 PKGNAME=		tk-${DISTNAME}
 
 DEPENDS+=		tcl-postgresql-${PG_VERS}:../../databases/tcl-postgresql
-DEPENDS+=		tk-8.0.5:../../x11/tk80
+DEPENDS+=		tk-8.3.2:../../x11/tk
 
-TCLSH=			${LOCALBASE}/bin/tclsh8.0
-TCL_INCDIR=		${LOCALBASE}/include/tcl8.0
-TCL_CONFIGDIR=		${LOCALBASE}/lib/tcl8.0
+TCLSH=			${LOCALBASE}/bin/tclsh
+TCL_INCDIR=		${LOCALBASE}/include
+TCL_CONFIGDIR=		${LOCALBASE}/lib
 
-TK_INCDIR=		${LOCALBASE}/include/tk8.0
-TK_CONFIGDIR=		${LOCALBASE}/lib/tk8.0
+TK_INCDIR=		${LOCALBASE}/include
+TK_CONFIGDIR=		${LOCALBASE}/lib
 
 USE_X11=		# defined
 
