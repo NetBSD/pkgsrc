@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 16:15:16 skrll Exp $
+$NetBSD: patch-aa,v 1.2 2001/09/04 05:31:10 tron Exp $
 
---- korganizer/Makefile.in.orig	Mon Jan 22 15:38:33 2001
-+++ korganizer/Makefile.in
-@@ -829,7 +829,7 @@
+--- korganizer/Makefile.in.orig	Wed Feb 21 13:13:32 2001
++++ korganizer/Makefile.in	Tue Sep  4 07:13:40 2001
+@@ -206,7 +206,7 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
+-INCLUDES = $(all_includes) 	   -I$(srcdir)/versit            -I$(top_srcdir)/libical/src/libical            -I$(top_srcdir)/libical/src/libicalss 	   -I$(top_builddir)/libical/src/libical 	   -I$(top_builddir)/libical/src/libicalss
++INCLUDES = -I$(srcdir)/versit            -I$(top_srcdir)/libical/src/libical            -I$(top_srcdir)/libical/src/libicalss 	   -I$(top_builddir)/libical/src/libical 	   -I$(top_builddir)/libical/src/libicalss $(all_includes)
+ 
+ 
+ bin_PROGRAMS = korganizer alarmd
+@@ -835,7 +835,7 @@
  #>- $(srcdir)/parseholiday.c: parseholiday.y
  #>+ 1
  $(srcdir)/parseholiday.c: outgoingdialog_base.h incomingdialog_base.h categoryselectdialog_base.h categoryeditdialog_base.h kofilterview_base.h  parseholiday.y
