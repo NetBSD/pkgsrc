@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2004/12/15 14:57:58 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2004/12/18 22:35:05 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -138,6 +138,17 @@ PERL5_HINTS_LDFLAGS+=	${LOCLIBRPATHFLAGS}
 .include "../../mk/dlopen.buildlink3.mk"
 
 PERL5_USE_THREADS?=	${DLOPEN_REQUIRE_PTHREADS}
+
+### [Sat Dec 18 17:29:44 EST 2004 : jlam]
+### Native threading on VAX isn't ready for primetime in NetBSD>=2.0.
+### Build Perl without threads-support until VAX native threads are
+### known to work.
+###
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-vax)
+PKG_HACKS+=		broken-vax-pthreads
+PERL5_USE_THREADS=	no
+.endif
+
 .if !empty(PERL5_USE_THREADS:M[nN][oO])
 CONFIGURE_ARGS+=	-Uuseithreads
 .else
