@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1534 2004/03/28 13:58:49 jmmv Exp $
+$NetBSD: TODO,v 1.1535 2004/03/28 19:52:19 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -380,7 +380,6 @@ Suggested package updates
 	o xmcd-3.2.1
 	o xmame-0.80.1
 	o xmess-0.80.1
-	o xmlcatmgr-2.0 [jmmv]
 	o xmms-1.2.10
 	o xmms-alarm-0.3.4
 	o xmms-crossfade-0.3.4
