@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.307 1999/07/28 10:58:30 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.308 1999/08/04 13:49:02 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -967,7 +967,7 @@ do-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
 .ifdef WRKOBJDIR
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RM} -f ${WRKDIR_BASENAME};					\
+	${RM} -f ${WRKDIR_BASENAME} || ${TRUE};				\
 	if ${LN} -s ${WRKDIR} ${WRKDIR_BASENAME} 2>/dev/null; then	\
 		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
 	fi
