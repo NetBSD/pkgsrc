@@ -1,6 +1,23 @@
---- configure.orig	Sat Mar 14 16:50:38 1998
-+++ configure	Sun Mar 22 22:59:29 1998
-@@ -3946,7 +3946,7 @@
+--- configure.orig	Thu Jul  2 22:43:41 1998
++++ configure	Fri Jul 17 12:47:52 1998
+@@ -1307,6 +1307,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1352,7 +1353,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+-
++fi
+ 
+ version=1.2
+ version_suffix=""
+@@ -4107,7 +4108,7 @@
  
  lexicographic_readdir=1
  

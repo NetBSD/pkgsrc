@@ -1,6 +1,24 @@
---- configure.orig	Sat Mar 14 16:50:38 1998
-+++ configure	Sun Mar 22 22:59:29 1998
-@@ -3946,7 +3946,7 @@
+--- configure.orig	Sun May 10 07:57:03 1998
++++ configure	Fri Jul 17 13:09:34 1998
+@@ -1190,7 +1190,7 @@
+ 
+ 
+ 
+-
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(top_builddir)/libtool'
+ 
+@@ -1241,7 +1241,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+-
++fi
+ 
+ canonical=$host
+ configuration=$host_alias
+@@ -4001,7 +4001,7 @@
  
  lexicographic_readdir=1
  

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 1998/07/15 10:51:16 agc Exp $
+@comment $NetBSD: PLIST,v 1.12 1998/07/17 17:18:49 tv Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -134,9 +134,7 @@ lib/X11/lesstif/Imake.tmpl
 lib/X11/lesstif/Motif.rules
 lib/X11/lesstif/Motif.tmpl
 lib/libXm.so.1.2
-lib/libXm.la
 lib/libMrm.so.1.2
-lib/libMrm.la
 share/lesstif/AUTHORS
 share/lesstif/BUG-REPORTING
 share/lesstif/COPYING
