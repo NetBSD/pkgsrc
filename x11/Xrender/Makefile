@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/02/09 04:13:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/09 06:24:05 xtraeme Exp $
 
 DISTNAME=	xrender-0.8.3
-PKGNAME=	${DISTNAME:S/X/x/}
+PKGNAME=	${DISTNAME:S/x/X/}
 PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://pdx.freedesktop.org/software/fontconfig/releases/
