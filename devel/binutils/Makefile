@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/08/07 19:06:59 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2004/08/13 18:47:49 jlam Exp $
 
 DISTNAME=	binutils-2.15
 PKGNAME=	binutils-2.15.0.0
@@ -32,13 +32,11 @@ INFO_FILES=	as.info bfd.info binutils.info ld.info
 #
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "IRIX"
-NO_GPROF=	"@comment "
+PLIST_SUBST+=	NO_GPROF="@comment "
 .else
-NO_GPROF=	""
+PLIST_SUBST+=	NO_GPROF=""
 INFO_FILES+=	gprof.info
 .endif
-
-PLIST_SUBST+=	NO_GPROF=${NO_GPROF}
 
 # Prevent the need to run texi2pod.pl and pod2man hence
 # the need for perl as build dependency.
