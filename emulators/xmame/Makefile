@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/11/23 23:51:23 kristerw Exp $
+# $NetBSD: Makefile,v 1.58 2001/12/04 05:52:22 jlam Exp $
 #
 
 DISTNAME=		xmame-0.56.1
@@ -16,61 +16,107 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_X11BASE=		YES
-USE_XPM=		YES
 USE_GMAKE=		YES
-MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} \
-			MAME_CPU=${MAME_CPU} \
-			INSTALL_MAN="${INSTALL_MAN}" \
-			INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-			NETBSD_JOYSTICK="${NETBSD_JOYSTICK}" \
-			NETBSD_DGA="${NETBSD_DGA}" \
-			DISPLAY_METHOD="${DISPLAY_METHOD}"
 MAKEFILE=		makefile.unix
-DISPLAY_METHOD= 	x11
+TARGET=			${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
-ROMPATH=		${PREFIX}/share/xmame
-SPOOLDIR=		/var/games/xmame
-.if exists(/usr/include/machine/joystick.h)
-NETBSD_JOYSTICK=	yes
-.else
-NETBSD_JOYSTICK=	no
-.endif
-.if exists(${X11BASE}/include/X11/extensions/xf86dga.h)
-NETBSD_DGA=		yes
-.else
-NETBSD_DGA=		no
+ROMPATH=		${PREFIX}/share/${TARGET}
+SPOOLDIR=		/var/games/${TARGET}
+
+MAKE_FLAGS+=		CC="${CC}"
+MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
+MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
+MAKE_FLAGS+=		X11INC= X11LIB=
+
+MAME_DISP_METHOD?=	x11
+
+# Determine which CPU-specific code to use.
+.for MARCH in i386 alpha m68k
+MAME_CPU.${MARCH}?=	${MARCH}
+.endfor
+.if !defined(MAME_CPU.${MACHINE_ARCH})
+# Determine the endianness of the CPU by checking header files.
+.  if !defined(MACHINE_ENDIAN)
+_ENDIAN_H_FILES=	/usr/include/sys/endian.h
+_ENDIAN_H_FILES+=	/usr/include/machine/endian.h
+_ENDIAN_H_FILES+=	/usr/include/endian.h
+_ENDIAN_H_FILES+=	/usr/include/sys/byteorder.h
+_ENDIAN_H_FILES+=	/dev/null
+.    for FILE in ${_ENDIAN_H_FILES}
+.      if exists(${FILE})
+_ENDIAN_H?=		${FILE:S/\/usr\/include\///}
+.      endif
+.    endfor
+MACHINE_ENDIAN!=							\
+	if (								\
+		${ECHO} "\#include <${_ENDIAN_H}>";			\
+		${ECHO} "\#ifndef BYTE_ORDER";				\
+		${ECHO} "\#ifdef _BIG_ENDIAN";				\
+		${ECHO} "\#define BYTE_ORDER 4321";			\
+		${ECHO} "\#else";					\
+		${ECHO} "\#define BYTE_ORDER 1234";			\
+		${ECHO} "\#endif";					\
+		${ECHO} "\#endif";					\
+		${ECHO} "BYTE_ORDER";					\
+	   ) | ${CC} -E - | ${GREP} "4321" >/dev/null 2>&1;		\
+	then								\
+		${ECHO} big;						\
+	else								\
+		${ECHO} little;						\
+	fi
+MAKEFLAGS+=	MACHINE_ENDIAN="${MACHINE_ENDIAN}"
+.  endif
+_MAME_CPU.big-endian=		risc
+_MAME_CPU.little-endian=	risc_lsb
+MAME_CPU.${MACHINE_ARCH}?=	${_MAME_CPU.${MACHINE_ENDIAN}-endian}
 .endif
 
-post-patch:
-	(cd ${WRKSRC}/doc && ${SED} 's|@ROMPATH@|${ROMPATH}|;s|@SPOOLDIR@|${SPOOLDIR}|' \
-		xmamerc.dist >xmamerc)
+# Determine which operating system defaults to use.
+MAME_ARCH.NetBSD?=	netbsd
+MAME_ARCH.Linux?=	linux
+MAME_ARCH.SunOS?=	solaris
+.if !defined(MAME_ARCH.${OPSYS})
+MAME_ARCH.${OPSYS}?=	generic
+.endif
+
+MAKE_FLAGS+=		DISPLAY_METHOD="${MAME_DISP_METHOD}"
+MAKE_FLAGS+=		MY_CPU="${MAME_CPU.${MACHINE_ARCH}}"
+MAKE_FLAGS+=		ARCH="${MAME_ARCH.${OPSYS}}"
+
+.if exists({${X11BASE}/include/X11/extensions/xf86dga.h)
+MAKE_FLAGS+=		X11_DGA=1
+.endif
+
+# If supported, add appropriate definitions to build joystick drivers.
+.if exists(/usr/include/machine/joystick.h) ||				\
+    exists(/usr/include/linux/joystick.h)
+MAKE_FLAGS+=		JOY_I386=1
+.endif
+.if ${OPSYS} == "NetBSD"
+.  if exists(/usr/lib/libusb.a)
+MAKE_FLAGS+=		JOY_USB=1
+.  endif
+.endif
+
+OWN_DIRS=		${SPOOLDIR}
+
+post-configure:
+	cd ${WRKSRC}/doc;						\
+	${SED}	-e "s|@ROMPATH@|${ROMPATH}|g"				\
+		-e "s|@SPOOLDIR@|${SPOOLDIR}|g"				\
+		${TARGET}rc.dist > ${TARGET}rc
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xmame.${DISPLAY_METHOD} \
-		${PREFIX}/bin/xmame)
-	(cd ${WRKSRC}/doc && ${INSTALL_MAN} xmame.6 \
-		${PREFIX}/man/man6/xmame.6)
+	${INSTALL_PROGRAM} ${WRKSRC}/${TARGET}.${MAME_DISP_METHOD}	\
+		${PREFIX}/bin/${TARGET}
+	${INSTALL_MAN} ${WRKSRC}/doc/${TARGET}.6			\
+		${PREFIX}/man/man6/${TARGET}.6
 	${INSTALL_DATA_DIR} ${ROMPATH}
-	(cd ${WRKSRC}/doc && ${INSTALL_DATA} xmamerc ${ROMPATH}/xmamerc)
-	@${ECHO} Remember to set ROMPATH to ${ROMPATH}.
+	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
 
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# This has to come after bsd.pkg.mk to make sure we have FILESDIR
-.if ${MACHINE_ARCH} == "m68k"
-MAME_CPU=		m68k
-.elif ${MACHINE_ARCH} == "alpha"
-MAME_CPU=		alpha
-.elif ${MACHINE_ARCH} == "i386"
-MAME_CPU=		i386
-.else
-# Rather than enumerating all CPU types, check machine/endian.h
-ENDIAN!=		${SH} ${FILESDIR}/endian.sh
-.if ${ENDIAN} == "LITTLE_ENDIAN"
-MAME_CPU=		risc_lsb
-.else
-MAME_CPU=		risc
-.endif
-.endif
