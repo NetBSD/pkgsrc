@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/31 06:59:54 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/05 03:31:25 dsainty Exp $
 bin/pose
 share/palmosemulator/docs/12rollin.pdf
 share/palmosemulator/docs/13hewgil.pdf
@@ -16,6 +16,21 @@ share/palmosemulator/docs/_OldNews.txt
 share/palmosemulator/docs/_ReadMe.txt
 share/palmosemulator/docs/_ToDo.txt
 share/palmosemulator/prc/ROM_Transfer.prc
+share/palmosemulator/scripting/Perl/EmFunctions.pm
+share/palmosemulator/scripting/Perl/EmRPC.pm
+share/palmosemulator/scripting/Perl/EmSysTraps.pm
+share/palmosemulator/scripting/Perl/EmUtils.pm
+share/palmosemulator/scripting/Perl/FormSpy.pl
+share/palmosemulator/scripting/Perl/HostControl.pm
+share/palmosemulator/scripting/Perl/HostControlTest.pl
+share/palmosemulator/scripting/Perl/ListDatabases.pl
+share/palmosemulator/scripting/Perl/ListOpenDatabases.pl
+share/palmosemulator/scripting/Perl/MakeSysTraps.pl
+share/palmosemulator/scripting/Perl/PoserRPC.pl
+share/palmosemulator/scripting/Perl/SkipStartup.pl
+share/palmosemulator/scripting/Python/Poser.py
+share/palmosemulator/scripting/Python/SysTraps.py
+share/palmosemulator/scripting/Python/Test.py
 share/palmosemulator/skins/HandEra330.skin
 share/palmosemulator/skins/HandEra330Cards.skin
 share/palmosemulator/skins/HandEra330Cards_16.jpg
@@ -83,6 +98,9 @@ share/palmosemulator/skins/Workpad_c3.skin
 share/palmosemulator/skins/Workpad_c3_16.jpg
 share/palmosemulator/skins/Workpad_c3_32.jpg
 @dirrm share/palmosemulator/skins
+@dirrm share/palmosemulator/scripting/Python
+@dirrm share/palmosemulator/scripting/Perl
+@dirrm share/palmosemulator/scripting
 @dirrm share/palmosemulator/prc
 @dirrm share/palmosemulator/docs
 @dirrm share/palmosemulator
