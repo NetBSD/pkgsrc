@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:19 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/02/06 04:24:12 uebayasi Exp $
 
 DISTNAME=	monafont-2.22
 PKGNAME=	${DISTNAME:S/font/fonts/}
@@ -6,7 +6,7 @@ CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=monafont/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	uebayasi@soum.co.jp
+MAINTAINER=	uebayasi@netbsd.org
 HOMEPAGE=	http://monafont.sourceforge.net/
 COMMENT=	Japanese fonts for "Mona" seen at 2ch.net
 
