@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/25 08:57:53 tron Exp $
+sbin/rpm2pkg
