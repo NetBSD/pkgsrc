@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:14 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/15 09:23:34 dmcmahill Exp $
 bin/gnetlist
 bin/gschem2pcb
 bin/mk_verilog_syms
+bin/sw2asc
 man/man1/gnetlist.1
 share/gEDA/system-gnetlistrc
 share/gEDA/scheme/gnet-PCB.scm
@@ -21,6 +22,8 @@ share/gEDA/scheme/gnet-partslist2.scm
 share/gEDA/scheme/gnet-partslist3.scm
 share/gEDA/scheme/gnet-protelII.scm
 share/gEDA/scheme/gnet-spice.scm
+share/gEDA/scheme/gnet-spice-sdb.scm
+share/gEDA/scheme/gnet-switcap.scm
 share/gEDA/scheme/gnet-tango.scm
 share/gEDA/scheme/gnet-vams.scm
 share/gEDA/scheme/gnet-verilog.scm

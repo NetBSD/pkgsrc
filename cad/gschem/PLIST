@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/06/26 23:32:57 seb Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/07/15 09:23:35 dmcmahill Exp $
 bin/gschem
 info/gschemdoc.info
 info/gschemdoc.info-1
@@ -11,7 +11,6 @@ info/gschemdoc.info-15
 info/gschemdoc.info-16
 info/gschemdoc.info-17
 info/gschemdoc.info-18
-info/gschemdoc.info-19
 info/gschemdoc.info-2
 info/gschemdoc.info-3
 info/gschemdoc.info-4
