@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/12/21 00:12:29 schmonz Exp $
+
+SHA1 (bglibs-1.019.tar.gz) = 851e74a3b3a1fc9ea6edd3cc04693db4187580b2
+Size (bglibs-1.019.tar.gz) = 266793 bytes
+SHA1 (patch-aa) = 043782561c1aa7c0f1590d5bd49242bea3bb0c7b
