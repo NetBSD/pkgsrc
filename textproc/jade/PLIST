@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/06 23:15:05 tron Exp $
 bin/jade
 bin/nsgmls
 bin/sgmlnorm
@@ -176,6 +176,6 @@ share/sgml/jade/dsssl.dtd
 share/sgml/jade/fot.dtd
 share/sgml/jade/style-sheet.dtd
 @dirrm share/sgml/jade
-@dirrm share/sgml
+@unexec ${RMDIR} %D/share/sgml 2>/dev/null || ${TRUE}
 @dirrm share/doc/jade
 @dirrm include/sp
