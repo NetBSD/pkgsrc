@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1381 2004/02/15 12:13:11 markd Exp $
+$NetBSD: TODO,v 1.1382 2004/02/15 17:39:20 snj Exp $
 
 Suggested new packages
 ======================
@@ -190,6 +190,7 @@ Suggested package updates
 	o gettext-0.13.1
 	o gforth-0.6.2
 	o ghostscript-8.00 (apfl)
+	o ghostscript-8.01 (gnu)
 	o gimp-print-4.2.6
 	o gkrellm-2.1.22 [pkgsrc-wip]
 	o gkrellm-volume-2.1.9 [pkgsrc-wip]
