@@ -1,15 +1,15 @@
 #! /bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1.1.1 2001/02/11 05:24:29 hubertf Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/03/01 19:07:53 jlam Exp $
 #
 
 case "$2" in
 	DEINSTALL) 
-		if [ -f @PREFIX@/etc/6to4.conf ]; then
+		if [ -f ${PKG_PREFIX}/etc/6to4.conf ]; then
 		cat <<EOF
 
 =============================================================
-Note that the 6to4 configuration file (@PREFIX@/etc/6to4.conf)
+Note that the 6to4 configuration file (${PKG_PREFIX}/etc/6to4.conf)
 was not removed in the deinstallation process.  You should
 remove it by hand, if you no longer need it.
 =============================================================

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/25 04:18:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 2001/03/01 19:07:52 jlam Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -127,7 +127,6 @@ pre-install:
 		-e 's|@JB_USERID@|${JB_USERID}|g'                             \
 		-e 's|@JB_GROUP@|${JB_GROUP}|g'                               \
 		-e 's|@JB_GROUPID@|${JB_GROUPID}|g'                           \
-		-e 's|@PREFIX@|${PREFIX}|g'                                   \
 		-e 's|@ADDUSER@|${ADDUSER}|g'				      \
 		-e 's|@ADDGROUP@|${ADDGROUP}|g'				      \
 		-e 's|@CHGRP@|${CHGRP}|g'                                     \
@@ -158,7 +157,6 @@ pre-install:
 		-e 's|@JB_USER@|${JB_USER}|g'                                 \
 		-e 's|@JB_GROUP@|${JB_GROUP}|g'                               \
 		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
-		-e 's|@PREFIX@|${PREFIX}|g'                                   \
 			<${PKGDIR}/DEINSTALL                                  \
 			>${DEINSTALL_FILE}
 	@${SED}								      \
@@ -167,7 +165,7 @@ pre-install:
 		-e 's|@PREFIX@|${PREFIX}|g'				      \
 			< ${FILESDIR}/httpd.conf			      \
 			> ${WRKDIR}/httpd.conf
-	${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${JB_CONFIGDIR}

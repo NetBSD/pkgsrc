@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2000/04/14 14:06:54 pooka Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/03/01 19:07:52 jlam Exp $
 #
 
 case $2 in
@@ -9,7 +9,7 @@ case $2 in
 =============================================================
 The records, log and savegames were not wiped out by this
 deletion process. If you don't want them around, please
-remove @PREFIX@/share/nethackdir.
+remove ${PKG_PREFIX}/share/nethackdir.
 =============================================================
 
 EOF
