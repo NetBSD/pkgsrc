@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 1999/06/04 03:42:35 mycroft Exp $
+$NetBSD: patch-ab,v 1.8 1999/06/15 13:59:15 bad Exp $
 
 --- configure.orig	Mon Jul 27 04:17:07 1998
 +++ configure	Thu Jun  3 22:49:02 1999
-@@ -751,12 +751,14 @@
+@@ -751,12 +751,15 @@
      opsys=netbsd
      case "${canonical}" in
        alpha*-*-netbsd*)	machine=alpha ;;
@@ -12,6 +12,7 @@ $NetBSD: patch-ab,v 1.7 1999/06/04 03:42:35 mycroft Exp $
  			# This is somewhat bogus.
  			machine=hp9000s300 ;;
        mips-*-netbsd*)	machine=pmax ;;
++      mipsel-*-netbsd*)	machine=pmax ;;
        ns32k-*-netbsd*)	machine=ns32000 ;;
 +      powerpc-*-netbsd*) machine=powerpc ;;
        sparc-*-netbsd*)	machine=sparc ;;
