@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/14 11:27:03 agc Exp $
+bin/cbrowser
+share/cbrowser/builder.tcl
+share/cbrowser/calltree.tcl
+share/cbrowser/hierarchy.tcl
+share/cbrowser/tclIndex
+share/cbrowser/widget.tcl
+@dirrm share/cbrowser

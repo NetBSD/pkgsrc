@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/14 11:27:03 agc Exp $
+
+Set up cbrowser so that it can find its subsidiary tcl files
+
+--- cbrowser	2001/11/14 11:06:30	1.1
++++ cbrowser	2001/11/14 11:07:59
+@@ -3594,6 +3594,12 @@
+ }
+ set button_defaults [expr [info tclversion] >= 8.0]
+ 
++set env(CBROWSER_LIB) "@PREFIX@/share/cbrowser"
++
++if {[info exists env(CBROWSER_LIB)]} {
++    lappend auto_path $env(CBROWSER_LIB)
++}
++
+ # Setup some aliases for those pesky string commands
+ interp alias {} strcmp {} string compare
+ interp alias {} strlen {} string length

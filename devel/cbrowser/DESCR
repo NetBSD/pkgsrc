@@ -1,0 +1,15 @@
+Cbrowser helps manage the recursive process of searching through
+source code for usages by providing a history mechanism.  Every query
+is recorded and can be recalled at any time, without the need of
+re-querying the database. 
+
+Cbrowser allows you to build and use multiple source code databases
+for individual software projects.  Switching databases is as simple as
+selecting the file, and a history of all databases used is kept at all
+times. 
+
+Best of all, cbrowser provides a hierarchical function viewer. 
+Functions may be expanded and contracted to show or hide the functions
+they call.  The function's code itself is shown in an adjoining
+viewer.  This feature is implemented using the megawidget Library by
+Jeff Hobbs which luckily for me comes with an unrestricted license.
