@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/13 16:41:04 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/28 05:06:28 snj Exp $
 
 DISTNAME=		oo2c_${BITS}-2.0.11
 PKGNAME=		oo2c-2.0.11
@@ -21,7 +21,7 @@ BITS=64
 BITS=32
 .endif
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
@@ -40,5 +40,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	cd ${PREFIX}/share/emacs/site-lisp && ${LN} -sf ${PREFIX}/lib/oo2c/emacs oo2c
 
-.include "../../devel/boehm-gc/buildlink2.mk"
+.include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
