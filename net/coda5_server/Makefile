@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/07/27 00:20:50 phil Exp $
+# $NetBSD: Makefile,v 1.24 2000/07/31 08:42:01 rh Exp $
 #
 
 DISTNAME=		coda-5.3.5
@@ -22,5 +22,8 @@ INSTALL_TARGET=		server-install
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
+
+CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -I${WRKSRC}/include"
+CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS} -I${WRKSRC}/include"
 
 .include "../../mk/bsd.pkg.mk"
