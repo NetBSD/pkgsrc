@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/06/06 07:03:51 chris Exp $
+# $NetBSD: Makefile,v 1.41 2003/06/15 23:33:09 chris Exp $
 
 DISTNAME=	sylpheed-0.9.2
 #PKGREVISION=	2
@@ -47,6 +47,12 @@ FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
 .if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
 CONFIGURE_ARGS+=	--enable-ldap
 .include "../../databases/openldap/buildlink2.mk"
+.endif
+
+.if defined(USE_JPILOT) && ${USE_JPILOT} == YES
+CONFIGURE_ARGS+=	--enable-jpilot
+.include "../../comms/pilot-link-libs/buildlink2.mk"
+.include "../../comms/jpilot/buildlink2.mk"
 .endif
 
 EGDIR=		${PREFIX}/share/examples/sylpheed
