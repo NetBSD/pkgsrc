@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2000/01/06 13:48:10 rh Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/26 22:03:12 rh Exp $
 #
 
-DISTNAME=	xsane-0.48
+DISTNAME=	xsane-0.51
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.wolfsburg.de/~rauch/sane/ \
 		http://gd.tuwien.ac.at/hci/sane/xsane/ \
