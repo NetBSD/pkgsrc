@@ -1,8 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/14 00:51:17 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/14 01:12:08 jtb Exp $
 bin/mgv
 man/man1/mgv.1
 share/doc/html/mgv
 share/mgv/3.1.5/MGv
+share/mgv/3.1.5/help/file-info.gif
+share/mgv/3.1.5/help/file-open.gif
+share/mgv/3.1.5/help/file-print.gif
+share/mgv/3.1.5/help/file-save.gif
+share/mgv/3.1.5/help/gs-log.gif
+share/mgv/3.1.5/help/help-about.gif
+share/mgv/3.1.5/help/help-bldopts.gif
+share/mgv/3.1.5/help/main-zoom.gif
+share/mgv/3.1.5/help/mainwindow.gif
 share/mgv/3.1.5/help/mgv-1.html
 share/mgv/3.1.5/help/mgv-10.html
 share/mgv/3.1.5/help/mgv-11.html
@@ -34,6 +43,9 @@ share/mgv/3.1.5/help/mgv-7.html
 share/mgv/3.1.5/help/mgv-8.html
 share/mgv/3.1.5/help/mgv-9.html
 share/mgv/3.1.5/help/mgv.html
+share/mgv/3.1.5/help/next.gif
+share/mgv/3.1.5/help/prev.gif
+share/mgv/3.1.5/help/toc.gif
 share/mgv/3.1.5/icon.xbm
 share/mgv/3.1.5/icon.xpm
 share/mgv/3.1.5/mask.xbm
