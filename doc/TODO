@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.425 2003/03/27 17:54:07 wiz Exp $
+$NetBSD: TODO,v 1.426 2003/03/27 20:03:55 bouyer Exp $
 
 Suggested new packages
 ======================
@@ -80,7 +80,6 @@ Suggested package updates
 	o abcde-2.1.1
 	o angband-3.0.3
 	o ap-ssl-2.8.14
-	o apcupsd-3.8.6
 	o arch-1.0pre17 [pkg/20776]
 	o asp2php-0.76.15 [pkg/20506]
 	o atari800-1.3
