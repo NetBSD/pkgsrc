@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/09/14 18:13:51 recht Exp $
+# $NetBSD: Makefile,v 1.12 2003/11/05 00:05:06 recht Exp $
 
 DISTNAME=	coreutils-5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 EXTRACT_SUFX=	.tar.bz2
