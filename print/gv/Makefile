@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/08/23 04:26:54 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/08/23 16:59:09 jlam Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -13,6 +13,7 @@ COMMENT=	PostScript and PDF previewer
 DEPENDS+=	ghostscript-[6-9]*:../../print/ghostscript
 
 USE_IMAKE=	yes
+XAW_TYPE?=	3d
 
 .include "../../mk/bsd.prefs.mk"
 
