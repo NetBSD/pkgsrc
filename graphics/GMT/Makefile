@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/04/19 20:51:30 jtb Exp $
+# $NetBSD: Makefile,v 1.13 2001/04/20 17:16:19 jtb Exp $
 
 DISTNAME=	GMT3.4
 PKGNAME=	GMT-3.4
@@ -17,7 +17,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://imina.soest.hawaii.edu/gmt/
 COMMENT=	Generic Mapping Tools
 
-DEPENDS+=	netcdf>=3.2:../../devel/netcdf
+DEPENDS+=	netcdf>=3.4:../../devel/netcdf
 
 EXTRACT_SUFFIX= .tar.bz2
 DIST_SUBDIR=	${DISTNAME}
@@ -59,6 +59,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/examples/
 	(cd ${WRKSRC}/examples; ${GTAR} cf - . ) |			\
-	(cd ${PREFIX}/share/examples/gmt/; ${GTAR} xvf - )
+	(cd ${PREFIX}/share/examples/gmt/; ${GTAR} xf - )
 
 .include "../../mk/bsd.pkg.mk"

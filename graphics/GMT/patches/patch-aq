@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.2 2001/04/19 20:51:32 jtb Exp $
+$NetBSD: patch-aq,v 1.3 2001/04/20 17:16:19 jtb Exp $
 
 --- src/misc/makefile.orig	Wed Apr 11 19:58:09 2001
 +++ src/misc/makefile
@@ -25,8 +25,8 @@ $NetBSD: patch-aq,v 1.2 2001/04/19 20:51:32 jtb Exp $
  
  $(MISC):	$(MISC_O)
 -		$(CC) $(CFLAGS) $(LDFLAGS) $@.o -L.. -L$(libdir) -lpsl -lgmt $(CDF) $(LIBS) -o $@
-+		$(LIBTOOL) $(CC) $(CFLAGS) $(LDFLAGS) $@.lo ../libpsl.la ../libgmt.la $(CDF) $(LIBS) -o $@
++		@$(LIBTOOL) $(CC) $(CFLAGS) $(LDFLAGS) $@.lo ../libpsl.la ../libgmt.la $(CDF) $(LIBS) -o $@
  
  .c.o:
 -		$(CC) -c $(CFLAGS) $<
-+		$(LIBTOOL) $(CPPFLAGS) $(CC) -c $(CFLAGS) $<
++		@$(LIBTOOL) $(CPPFLAGS) $(CC) -c $(CFLAGS) $<
