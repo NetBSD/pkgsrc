@@ -1,0 +1,4 @@
+This is a JIT (Just-In-Time) compiler for Linux/i386 based Java Virtual
+Machines.  It precompiles classes as they are referenced into native code,
+permitting applications that stay running to run much faster than standard
+bytecode interpretation.
