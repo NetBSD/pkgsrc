@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/21 15:14:02 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/21 15:44:23 jlam Exp $
 
 DISTNAME=		pks-0.9.4
 CATEGORIES=		security www
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${EGDIR}
 
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/pksd.conf ${CONFDIR}/pksd.conf
-RCD_SCRIPTS=	${PREFIX}/etc/rc.d/pksd /etc/rc.d/pksd
+RCD_SCRIPTS=	pksd
 OWN_DIRS=	/var/pks /var/pks/db /var/pks/incoming
 
 pre-install:

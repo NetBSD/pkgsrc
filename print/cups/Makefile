@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/11/19 16:23:11 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2001/11/21 15:44:23 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
@@ -71,7 +71,7 @@ SUPPORT_FILES=		${EGDIR}/classes.conf ${CONFDIR}/cups/classes.conf
 SUPPORT_FILES+=		${EGDIR}/mime.convs ${CONFDIR}/cups/mime.convs
 SUPPORT_FILES+=		${EGDIR}/mime.types ${CONFDIR}/cups/mime.types
 SUPPORT_FILES+=		${EGDIR}/printers.conf ${CONFDIR}/cups/printers.conf
-RCD_SCRIPTS=		${PREFIX}/etc/rc.d/cupsd /etc/rc.d/cupsd
+RCD_SCRIPTS=		cupsd
 
 OWN_DIRS+=		${CONFDIR}/cups
 OWN_DIRS+=		${CONFDIR}/cups/interfaces
