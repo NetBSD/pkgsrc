@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2003/04/17 06:00:13 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/08/07 11:59:29 seb Exp $
 bin/tcinput
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/tc.info
 info/tc.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/tc.info
 ${EMACS_LISPPREFIX}/tc/eelll.el
 ${EMACS_LISPPREFIX}/tc/eelll.elc
 ${EMACS_LISPPREFIX}/tc/tc-bitmap.el
