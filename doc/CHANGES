@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.584 2002/11/23 23:39:29 wiz Exp $
+$NetBSD: CHANGES,v 1.585 2002/11/23 23:42:20 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3697,3 +3697,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated vcdimager to 0.7.12 [wiz 2002-11-23]
 	Updated mplex to 1.6.0 [wiz 2002-11-23]
 	Updated icepref to 1.1nb1 [wiz 2002-11-24]
+	Updated pkg_install to 20021123 [jschauma 2002-11-23]
