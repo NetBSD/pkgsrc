@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6418 2004/07/02 07:59:58 minskim Exp $
+$NetBSD: CHANGES,v 1.6419 2004/07/02 08:04:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3205,3 +3205,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated liferea to 0.5.1 [minskim 2004-07-01]
 	Updated snort to 2.1.3 [adrianp 2004-07-01]
 	Updated pkglint to 3.84 [abs 2004-07-01]
+	Updated xchat2 to 2.0.10 [minskim 2004-07-02]
