@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.329 1999/08/31 09:20:21 sakamoto Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.330 1999/08/31 21:45:45 christos Exp $
 #
 # This file is in the public domain.
 #
@@ -2232,7 +2232,11 @@ README.html: .PRECIOUS
 
 .if !target(show-pkgtools-version)
 show-pkgtools-version:
+.if !exists(${IDENT})
+	@echo ${PKGTOOLS_REQD}
+.else
 	@${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ { gsub("/", "", $$4); print $$4 }' | sort | ${TAIL} -n 1
+.endif
 .endif
 
 .if !target(print-depends-list)
