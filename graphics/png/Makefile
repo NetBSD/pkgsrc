@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/06/11 02:05:11 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2001/06/19 04:03:42 jlam Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -18,6 +18,8 @@ USE_LIBTOOL=	yes
 
 MAKEFILE=	scripts/makefile.std
 MAKE_ENV+=	REALCC="${CC}"
+
+USE_BUILDLINK_ONLY=	yes
 
 .include "../../devel/zlib/buildlink.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/06/16 19:50:17 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/06/19 04:08:42 jlam Exp $
 #
 
 DISTNAME=		libungif-4.1.0
@@ -16,6 +16,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS=		--without-x
+
+USE_BUILDLINK_ONLY=	# defined
 
 DOCDIR=			${PREFIX}/share/doc/libungif
 HTMLDIR=		${PREFIX}/share/doc/html/libungif
