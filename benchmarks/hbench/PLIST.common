@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2001/10/31 23:48:36 zuntum Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2005/02/21 20:51:21 veego Exp $
 bin/hbench/argsort
 bin/hbench/config.guess
 bin/hbench/config.sub
@@ -14,6 +14,32 @@ bin/hbench/interactive-setup
 bin/hbench/maindriver
 bin/hbench/stats-full
 bin/hbench/stats-single
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/bw_bzero
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/bw_file_rd
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/bw_mem_cp
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/bw_mem_rd
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/bw_mem_wr
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/bw_mmap_rd
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/bw_pipe
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/bw_tcp
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/hello
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/hello-s
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_connect
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_ctx
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_ctx2
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_fs
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_fslayer
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_mem_rd
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_mmap
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_pipe
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_proc
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_rpc
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_sig
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_syscall
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_tcp
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/lat_udp
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/memsize
+bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}/mhz
 bin/run-hbench
 share/doc/hbench/README
 share/doc/hbench/benchmark-descriptions
@@ -23,8 +49,3 @@ share/doc/hbench/using-hbench
 share/hbench/Results/Makefile
 share/hbench/conf/full.test
 share/hbench/conf/sample.run
-@dirrm bin/hbench
-@dirrm share/doc/hbench
-@dirrm share/hbench/Results
-@dirrm share/hbench/conf
-@dirrm share/hbench
