@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2003/07/25 18:25:46 drochner Exp $
+$NetBSD: patch-ae,v 1.2 2004/07/23 15:09:57 recht Exp $
 
---- libbalsa/filter-file.c.orig	2003-07-25 19:39:19.000000000 +0200
-+++ libbalsa/filter-file.c	2003-07-25 19:39:41.000000000 +0200
-@@ -34,7 +34,7 @@
+--- libbalsa/filter-file.c.orig	2004-05-22 20:53:17.000000000 +0200
++++ libbalsa/filter-file.c	2004-07-23 12:01:56.000000000 +0200
+@@ -30,7 +30,7 @@
  #include "config.h"
  
  /* define _XOPEN_SOURCE to make strptime visible */
