@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:39 skrll Exp $
 
-MD5 (gtk-engines-0.10.tar.gz) = bc202dcb0e30ce742233e9237de4edc1
+SHA1 (gtk-engines-0.10.tar.gz) = cf50adc0074396bbd00ba4c4845a0f6094ba5a54
+Size (gtk-engines-0.10.tar.gz) = 638558 bytes
