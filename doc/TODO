@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1553 2004/03/30 22:44:44 xtraeme Exp $
+$NetBSD: TODO,v 1.1554 2004/03/31 04:39:17 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -365,8 +365,6 @@ Suggested package updates
 	o xerces-j-2.6.2
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.1
-	o xmame-0.80.1
-	o xmess-0.80.1
 	o xmms-1.2.10
 	o xmms-alarm-0.3.4
 	o xmms-crossfade-0.3.4
