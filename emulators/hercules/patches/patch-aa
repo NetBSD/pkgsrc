@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/19 12:35:21 agc Exp $
+
+Set up compilation flags for NetBSD
+
+--- makefile	2001/02/19 09:39:42	1.1
++++ makefile	2001/02/19 09:40:37
+@@ -38,9 +38,9 @@
+ 
+ # Uncomment these lines for NetBSD, with either the unproven-pthreads
+ #   or pth packages
+-#CFLAGS  += -I/usr/pkg/pthreads/include -I/usr/pkg/include
+-#LFLAGS	 += -L/usr/pkg/pthreads/lib -R/usr/pkg/pthreads
+-#LFLAGS	 += -L/usr/pkg/lib -R/usr/pkg/pthreads/lib
++CFLAGS  += -I${PREFIX}/pthreads/include -I${PREFIX}/include
++LFLAGS	 += -L${PREFIX}/pthreads/lib -R${PREFIX}/pthreads
++LFLAGS	 += -L${PREFIX}/lib -R${PREFIX}/pthreads/lib
+ 
+ # Reverse the comments below to disable Compressed CKD Dasd support
+ #CFLAGS  += -DNO_CCKD
