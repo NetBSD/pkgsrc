@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:23:57 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/29 22:25:06 snj Exp $
 #
 
 DISTNAME=	pkgdepgraph-2.5
@@ -57,8 +57,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgdepgraph ${PREFIX}/bin/pkgdepgraph
 	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.0 ${PREFIX}/man/cat1
 	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.1 ${PREFIX}/man/man1
-
-post-install:
-	@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
