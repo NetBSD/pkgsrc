@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.6 2003/08/11 14:16:01 drochner Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/12/03 11:28:55 drochner Exp $
 #
 
-GCC_VERSION=	3.3.1
+GCC_VERSION=	3.3.2
 DISTNAME=	gcc-${GCC_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
