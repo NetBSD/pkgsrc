@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.1 2000/10/07 02:03:25 tv Exp $
+
+--- lib/parser_inst.cxx.orig	Fri Oct  6 21:35:11 2000
++++ lib/parser_inst.cxx	Fri Oct  6 21:35:46 2000
+@@ -1324,7 +1324,6 @@
+ #endif
+ #endif
+ #endif
+-#if 0
+ #ifdef __DECCXX
+ #pragma define_template Vector<size_t>
+ #else
+@@ -1335,20 +1334,6 @@
+ template class Vector<size_t>;
+ #else
+ typedef Vector<size_t> Dummy_96;
+-#endif
+-#endif
+-#endif
+-#endif
+-#ifdef __DECCXX
+-#pragma define_template Vector<unsigned int>
+-#else
+-#ifdef __xlC__
+-#pragma define(Vector<unsigned int>)
+-#else
+-#ifdef SP_ANSI_CLASS_INST
+-template class Vector<unsigned int>;
+-#else
+-typedef Vector<unsigned int> Dummy_97;
+ #endif
+ #endif
+ #endif

@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2000/10/07 02:03:24 tv Exp $
+
+--- lib/parser_inst.m4.orig	Fri Oct  6 21:36:27 2000
++++ lib/parser_inst.m4	Fri Oct  6 21:36:32 2000
+@@ -164,10 +164,7 @@
+ __instantiate(Vector<ContentModelAmbiguity>)
+ __instantiate(Vector<Transition>)
+ __instantiate(Vector<LeafContentToken*>)
+-#if 0
+ __instantiate(Vector<size_t>)
+-#endif
+-__instantiate(Vector<unsigned int>)
+ 
+ __instantiate(NamedTable<Id>)
+ __instantiate(NamedTableIter<Id>)
