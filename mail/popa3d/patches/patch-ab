@@ -1,20 +1,20 @@
-$NetBSD: patch-ab,v 1.7 2003/02/20 13:51:23 salo Exp $
+$NetBSD: patch-ab,v 1.8 2003/12/07 19:18:17 wiz Exp $
 
---- Makefile.orig	2001-10-28 02:10:49.000000000 +0100
-+++ Makefile	2003-02-20 14:27:15.000000000 +0100
+--- Makefile.orig	Mon Nov 17 01:43:35 2003
++++ Makefile
 @@ -1,30 +1,32 @@
 -CC = gcc
 -LD = gcc
 -RM = rm -f
 -MKDIR = mkdir -p
--INSTALL = install
--CFLAGS = -c -Wall -O2 -fomit-frame-pointer
+-INSTALL = install -c
+-CFLAGS = -Wall -O2 -fomit-frame-pointer
 +#CC = gcc
 +LD = $(CC)
 +#RM = rm -f
 +#MKDIR = mkdir -p
-+#INSTALL = install
-+CFLAGS += -c -Wall -O2 -fomit-frame-pointer
++#INSTALL = install -c
++CFLAGS += -Wall -O2 -fomit-frame-pointer
  # You may use OpenSSL's MD5 routines instead of the ones supplied here
  #CFLAGS += -DHAVE_OPENSSL
 -LDFLAGS = -s
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.7 2003/02/20 13:51:23 salo Exp $
  LIBS =
  # Linux with glibc, FreeBSD, NetBSD
 -#LIBS += -lcrypt
-+LIBS += -lc -lcrypt
++LIBS += -lcrypt
  # HP-UX trusted system
  #LIBS += -lsec
  # Solaris (POP_STANDALONE, POP_VIRTUAL)
