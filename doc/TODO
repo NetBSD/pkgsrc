@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1679 2004/04/28 13:43:43 xtraeme Exp $
+$NetBSD: TODO,v 1.1680 2004/04/29 13:08:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -144,6 +144,7 @@ Suggested package updates
 	o ap-python-2.7.10
 	o apcupsd-3.10.13
 	o aqsis-0.9.1
+	o automake-1.8.4
 	o avidemux-2.0.20
 	o balsa-1.4.4
 	o bidwatcher-1.3.15
@@ -165,6 +166,7 @@ Suggested package updates
 	o crossfire-1.5.0
 	o cscope-15.5
 	o cue-20040329
+	o curl-7.11.2
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
 	o daemontools-0.76 [pkg/25153]
@@ -238,6 +240,7 @@ Suggested package updates
 	o larswm-7.3.2
 	o lavaps-2.4
 	o leafnode-1.9.52
+	o lftp-3.0.3
 	o libcaca-0.9
 	o libesmtp-1.0.3
 	o libgcrypt-1.2.0
@@ -246,7 +249,7 @@ Suggested package updates
 	o libnet-1.1.1
 	o libole2-2.2.8
 	o licq-1.2.7
-	o liferea-0.4.7c
+	o liferea-0.4.7d
 	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
@@ -264,7 +267,6 @@ Suggested package updates
 	o mono-0.31
 	o mowitz-0.3.0
 	o moz-bin-plugger-1.5.1
-	o mplayer-1.0pre4
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.1.2
@@ -288,6 +290,7 @@ Suggested package updates
 	o openoffice-1.1.1
 	o openssh-3.8.1p1
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
+	o oss-3.99.1c
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
 	o p5-Devel-StackTrace-1.05
@@ -306,9 +309,10 @@ Suggested package updates
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
+	o qt-3.3.2
 	o rep-gtk-0.17
 	o rox-1.2.2
-	o rox-session-0.1.20
+	o rox-session-0.1.22
 	o rrdtool-1.0.45
 	o rt-3.0.10 [pkgsrc-wip]
 	o ruby-1.8.1 [taca]
@@ -340,6 +344,8 @@ Suggested package updates
 	o ted-2.15 [do not update per tech-pkg mail from Jonathan on 20040404]
 	o texi2html-1.70
 	o texinfo-4.7
+	o thy-0.9.0 [pkg/25318]
+	o tkcvs-7.2.1
 	o tkdesk-2.0
 	o tkman-2.2
 	o tmda-1.0.2
@@ -353,7 +359,7 @@ Suggested package updates
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
-	o w3m-0.5
+	o w3m-0.5.1
 	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wwwoffle-2.8a
@@ -373,7 +379,7 @@ Suggested package updates
 	o xmms-crossfade-0.3.4
 	o xmms-iris-0.12
 	o xorp-0.5
-	o xpad-1.13
+	o xpad-1.13.1
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xscreensaver-4.15
