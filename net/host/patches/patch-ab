@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/10 17:06:37 wiz Exp $
+
+--- info.c.orig	Mon Mar 27 12:59:11 2000
++++ info.c
+@@ -85,6 +85,7 @@
+ 		if (*cp == '.')
+ 			dot++;
+ 
++#ifdef ALLOW_HOSTALIASES
+ /*
+  * Check for aliases of single name.
+  * Note that the alias is supposed to be fully qualified.
+@@ -97,6 +98,7 @@
+ 		result = get_domaininfo(cp, (char *)NULL);
+ 		return(result);
+ 	}
++#endif
+ 
+ /*
+  * Trailing dot means absolute (fully qualified) address.
