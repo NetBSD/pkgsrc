@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/10/18 21:41:06 sjg Exp $
+# $NetBSD: Makefile,v 1.4 2002/02/06 16:58:12 jlam Exp $
 #
 
 DISTNAME=       bmake-3.1.12
@@ -21,8 +21,8 @@ do-build:
 	cd ${WRKSRC} && MAKESYSPATH=${makesyspath} make -f makefile.boot bootstrap
 
 do-install:
-	${BSD_INSTALL_PROGRAM} ${WRKSRC}/bmake ${PREFIX}/bin
-	${BSD_INSTALL_MAN} ${WRKSRC}/bmake.cat1 ${PREFIX}/man/cat1/bmake.0
-	${BSD_INSTALL_MAN} ${WRKSRC}/bmake.1 ${PREFIX}/man/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/bmake ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/bmake.cat1 ${PREFIX}/man/cat1/bmake.0
+	${INSTALL_MAN} ${WRKSRC}/bmake.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
