@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/20 14:53:18 agc Exp $
+$NetBSD: distinfo,v 1.2 2002/08/20 16:39:54 itojun Exp $
 
 SHA1 (chicken-0.1072.tar.gz) = 8386fa737e6d08da99ea858e41cb3eec044e8564
 Size (chicken-0.1072.tar.gz) = 2027291 bytes
+SHA1 (patch-aa) = 4c71fad29ce5bd7736e4f96b7ea978bfa600e9fa
