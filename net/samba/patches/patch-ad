@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.10 2002/08/25 21:50:14 jlam Exp $
+$NetBSD: patch-ad,v 1.11 2002/10/18 11:50:28 martti Exp $
 
---- Makefile.in.orig	Sun Jul 28 18:13:04 2002
-+++ Makefile.in
-@@ -89,6 +89,8 @@ FLAGS5 = $(FLAGS1) $(FLAGS2) $(FLAGS3) $
+--- Makefile.in.orig	Wed Oct  9 22:27:15 2002
++++ Makefile.in	Fri Oct 18 13:04:01 2002
+@@ -89,6 +89,8 @@
  FLAGS  = $(ISA) $(FLAGS5) $(PASSWD_FLAGS)
  FLAGS32  = $(ISA32) $(FLAGS5) $(PASSWD_FLAGS)
  
@@ -11,16 +11,16 @@ $NetBSD: patch-ad,v 1.10 2002/08/25 21:50:14 jlam Exp $
  WINBIND_PROGS = @WINBIND_TARGETS@
  WINBIND_SPROGS = @WINBIND_STARGETS@
  WINBIND_PAM_PROGS = @WINBIND_PAM_TARGETS@
-@@ -650,7 +652,7 @@ bin/libsmbclient.a: $(LIBSMBCLIENT_PICOB
+@@ -654,7 +656,7 @@
  
  bin/pam_smbpass.@SHLIBEXT@: $(PAM_SMBPASS_OBJ) bin/.dummy
  	@echo Linking shared library $@
--	$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(DYNEXP) $(LIBS) -lc \
-+	$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(DYNEXP) $(LIBS) $(PAM_NEEDS_LIBC) \
+-	$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(DYNEXP) $(LIBS) $(LDAPLIBS) -lc \
++	$(SHLD) @LDSHFLAGS@ -o $@ $(PAM_SMBPASS_OBJ) $(LDFLAGS) -lpam $(DYNEXP) $(LIBS) $(LDAPLIBS) $(PAM_NEEDS_LIBC) \
  		@SONAMEFLAG@`basename $@`
  
  nsswitch/libnss_wins.so: $(NSS_OBJ)
-@@ -674,7 +676,7 @@ nsswitch/libnss_winbind.so: $(WINBIND_NS
+@@ -678,7 +680,7 @@
  
  nsswitch/pam_winbind.so: $(PAM_WINBIND_OBJ)
  	@echo Linking $@

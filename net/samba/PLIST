@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/08/25 21:50:11 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/10/18 11:50:27 martti Exp $
 bin/findsmb
 bin/make_printerdef
 bin/make_smbcodepage
@@ -71,6 +71,7 @@ share/doc/samba/Application_Serving.txt
 share/doc/samba/BROWSING-Config.txt
 share/doc/samba/BROWSING.txt
 share/doc/samba/BUGS.txt
+share/doc/samba/CUPS-PrintingInfo.txt
 share/doc/samba/DHCP-Server-Configuration.txt
 share/doc/samba/DIAGNOSIS.txt
 share/doc/samba/DNIX.txt
@@ -117,6 +118,7 @@ share/examples/samba/LDAP/export_smbpasswd.pl
 share/examples/samba/LDAP/import_smbpasswd.pl
 share/examples/samba/LDAP/ldapchpasswd
 share/examples/samba/LDAP/ldapsync.pl
+share/examples/samba/LDAP/samba-nds.schema
 share/examples/samba/LDAP/samba-schema-netscapeds4.x
 share/examples/samba/LDAP/samba-schema-netscapeds5.x
 share/examples/samba/LDAP/samba-schema.IBMSecureWay
@@ -188,6 +190,7 @@ share/examples/samba/validchars/nwdos70.out
 share/examples/samba/validchars/readme
 share/examples/samba/validchars/validchr.c
 share/examples/samba/validchars/validchr.com
+share/samba/codepages/codepage.1125
 share/samba/codepages/codepage.1251
 share/samba/codepages/codepage.437
 share/samba/codepages/codepage.737
@@ -201,6 +204,7 @@ share/samba/codepages/codepage.932
 share/samba/codepages/codepage.936
 share/samba/codepages/codepage.949
 share/samba/codepages/codepage.950
+share/samba/codepages/unicode_map.1125
 share/samba/codepages/unicode_map.1251
 share/samba/codepages/unicode_map.437
 share/samba/codepages/unicode_map.737
@@ -222,6 +226,7 @@ share/samba/codepages/unicode_map.ISO8859-5
 share/samba/codepages/unicode_map.ISO8859-7
 share/samba/codepages/unicode_map.ISO8859-9
 share/samba/codepages/unicode_map.KOI8-R
+share/samba/codepages/unicode_map.KOI8-U
 share/samba/swat/help/CVS-Access.html
 share/samba/swat/help/DOMAIN_MEMBER.html
 share/samba/swat/help/ENCRYPTION.html
@@ -275,6 +280,7 @@ share/samba/swat/images/samba.gif
 share/samba/swat/images/shares.gif
 share/samba/swat/images/status.gif
 share/samba/swat/images/viewconfig.gif
+share/samba/swat/images/wizard.gif
 share/samba/swat/include/footer.html
 share/samba/swat/include/header.html
 share/samba/swat/using_samba/appa_01.html
