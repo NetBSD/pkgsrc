@@ -1,23 +1,23 @@
-$NetBSD: patch-bj,v 1.4 2005/03/25 17:40:25 wennmach Exp $
+$NetBSD: patch-bj,v 1.5 2005/03/26 16:50:59 wennmach Exp $
 
-Fix gcc warnings on NetBSD-2.0/amd64.
-NB: it seems 'size' is used inconsistently.
+From Love.  Still cast "size" to (unsigned long long) to avoid a
+compiler warning on amd64.
 
 --- tools/release-tools/tar-rootify.c.orig	2005-03-23 11:07:28.000000000 +0100
 +++ tools/release-tools/tar-rootify.c	2005-03-23 11:23:11.000000000 +0100
-@@ -79,7 +79,7 @@
-     int bufsz = 512;
-     int i, skip = 0, rec = 0;
-     struct posix_header *p;
--    uint64_t size;
-+    uint64_t size = 0;
-     unsigned long cksum, hcksum;
-     int verbose = 0;
+@@ -108,6 +108,7 @@
+ 	    if (i < 148 || 155 < i)
+ 		cksum += (u_long)(buf[i] & 0xff);
  
-@@ -118,7 +118,7 @@
++	size = estrntoll(p->size, 12, 8);
+ 	if (verbose) {
+ 	    fprintf(stderr, "rec #%d\n", rec);
+ 	    fprintf(stderr, "name = %.*s\n", (int)sizeof(p->name), p->name);
+@@ -117,8 +118,7 @@
+ 	    fprintf(stderr, "gname = %.*s\n", (int)sizeof(p->gname), p->gname);
  	    fprintf(stderr, "type =     %c\n", p->typeflag);
  	    fprintf(stderr, "size = %.*s\n", (int)sizeof(p->size), p->size);
- 	    size = estrntoll(p->size, 12, 8);
+-	    size = estrntoll(p->size, 12, 8);
 -	    fprintf(stderr, "size = %llo\n", size);
 +	    fprintf(stderr, "size = %llo\n", (unsigned long long)size);
  	}
