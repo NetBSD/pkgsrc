@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/02 02:52:57 cube Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/06 18:22:16 cube Exp $
 
 --- ppp_mppe_compress.c.orig	2004-05-31 07:31:51.000000000 +0200
 +++ ppp_mppe_compress.c
@@ -250,7 +250,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/02 02:52:57 cube Exp $
 +      struct mbuf *mfirst = NULL;
 +      struct mbuf *mprev;
 +      struct mbuf *m = NULL;
-+      int bleft = isize+MPPE_OVHD;
++      int bleft = isize+MPPE_OVHD+2;
 +      do {
 +	mprev = m;
 +	MGET(m,M_DONTWAIT, MT_DATA);
@@ -400,7 +400,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/02 02:52:57 cube Exp $
 +    if (mp->m_len <= PPP_HDRLEN + MPPE_OVHD) {
 +	if (state->debug)
 +	    aprint_error("mppe_decompress[%d]: short pkt (%d)\n",
-+		   state->unit, isize);
++		   state->unit, mp->m_len);
  	return DECOMP_ERROR;
      }
 -    osize = isize - MPPE_OVHD - 2;	/* assume no PFC */
