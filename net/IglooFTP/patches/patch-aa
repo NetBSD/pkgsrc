@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/07/11 21:40:41 agc Exp $
+$NetBSD: patch-aa,v 1.2 2002/10/13 11:50:11 wiz Exp $
 
 --- Makefile.orig	Fri Apr 16 00:05:15 1999
 +++ Makefile
@@ -6,11 +6,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/11 21:40:41 agc Exp $
  SHELL=/bin/sh
 -CC = gcc
 -C_FLAGS = -Wall -g -O2 -m486 -fno-strength-reduce
--GTK_CFLAGS = `gtk-config --cflags`
--GTK_LIBS = `gtk-config --libs` 
 +C_FLAGS = $(CFLAGS) -Wall
-+GTK_CFLAGS = `$(GTK_CONFIG) --cflags`
-+GTK_LIBS = `$(GTK_CONFIG) --libs` 
+ GTK_CFLAGS = `gtk-config --cflags`
+ GTK_LIBS = `gtk-config --libs` 
  LFLAGS = $(GTK_LIBS) -lresolv -lXmu -lXt -lSM -lICE
  PROGNAME = IglooFTP
  PROGNAME-STATIC = IglooFTP-static
@@ -79,13 +77,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/11 21:40:41 agc Exp $
 +	$(BSD_INSTALL_DATA) ../share/gtkrc $(SHARE_PATH)/gtkrc	
  
  
- 
-@@ -111,7 +112,7 @@
- 	@echo "#define COMPILE_TIME \"`date +%T`\"" >> version.h
- 	@echo "#define COMPILE_BY \"`whoami`\"" >> version.h
- 	@echo "#define COMPILE_HOST \"`hostname`\"" >> version.h
--	@echo "#define GTK_VERSION \"GTK+ `gtk-config --version`\"" >> version.h
-+	@echo "#define GTK_VERSION \"GTK+ `$(GTK_CONFIG) --version`\"" >> version.h
- 	@echo "#define CC_VERSION \"`$(CC) -v 2>&1 | tail -1`\"">>version.h
- 	@echo "#define CODE_LINES \"`cat *.c *.h | grep -ch -e \"[[:alpha:]|[:punct:]]\"`\"">>version.h
  
