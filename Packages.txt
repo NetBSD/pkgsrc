@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.321 2004/01/14 06:57:45 rh Exp $
+# $NetBSD: Packages.txt,v 1.322 2004/01/14 07:25:48 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -2066,7 +2066,7 @@ an earlier version of tiff.
 Please note that such dependencies should only be updated if a package requires
 a newer pre-requisite, but not to denote recommendations such as security
 updates or ABI changes that do not prevent a package from building correctly.
-Such recommendations can be expressed using RECOMENDED:
+Such recommendations can be expressed using RECOMMENDED:
 
 	RECOMMENDED+=   tiff>=3.6.1:../../graphics/tiff
 
