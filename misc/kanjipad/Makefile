@@ -1,24 +1,21 @@
-# $NetBSD: Makefile,v 1.7 2004/04/18 19:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/09/25 23:03:13 wiz Exp $
 #
 
-DISTNAME=	kanjipad-1.2.1
-PKGREVISION=	2
-CATEGORIES=	misc
-MASTER_SITES=	ftp://ftp.gtk.org/pub/users/otaylor/kanjipad/
+DISTNAME=		kanjipad-2.0.0
+CATEGORIES=		misc
+MASTER_SITES=		http://fishsoup.net/software/kanjipad/
 
-MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.gtk.org/~otaylor/kanjipad/index.html
-COMMENT=	Japanese handwriting recognition with GTK interface
+MAINTAINER=		wiz@NetBSD.org
+HOMEPAGE=		http://fishsoup.net/software/kanjipad/
+COMMENT=		Japanese handwriting recognition
 
-USE_PERL5=	build
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+USE_PERL5=		build
 
-USE_BUILDLINK3=		YES
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/kanjipad
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/kanjipad
 
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kanjipad
-	${INSTALL_PROGRAM} ${WRKSRC}/kanjipad ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/kpengine ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/jdata.dat ${PREFIX}/share/kanjipad
-
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
