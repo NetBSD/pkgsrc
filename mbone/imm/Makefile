@@ -1,3 +1,7 @@
+# $NetBSD: Makefile,v 1.2 1997/11/24 12:06:23 is Exp $
+#
+# NetBSD "imm" package, based on:
+#
 # New ports collection makefile for:	imm
 # Version required:	3.5a1
 # Date created:		13 October 1994
@@ -12,7 +16,7 @@ MASTER_SITES=	ftp://ftp.hawaii.edu/paccom/imm-3.5a1/
 DISTFILES=	imm.source.tar.Z
 WRKSRC=		${WRKDIR}/mnm
 
-MAINTAINER=	fenner@freebsd.org
+MAINTAINER=	is@netbsd.org
 
 LIB_DEPENDS=	tk80\\.1:${PORTSDIR}/x11/tk80
 
