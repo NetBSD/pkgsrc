@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2004/02/05 08:27:59 markd Exp $
+# $NetBSD: Makefile,v 1.20 2004/02/15 11:10:50 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -35,7 +36,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.kmtrace
 .endif
 PLIST_SRC+=	${PKGDIR}/PLIST
 
-.include "../../databases/db/buildlink2.mk"
+.include "../../databases/db4/buildlink2.mk"
 .include "../../devel/libtool/buildlink2.mk"
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
