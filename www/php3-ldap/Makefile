@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 1999/12/17 11:16:45 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/06/15 13:06:04 kleink Exp $
 #
 
 PKGNAME=	php-ldap-${PHP_VERSION}
 
-DEPENDS+=	openldap-1.2.7p1:../../databases/openldap
+DEPENDS+=	openldap-1.2.*:../../databases/openldap
 
 CONFIGURE_ARGS+=--with-ldap=${LOCALBASE}
 
