@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5768 2004/04/29 09:28:56 wiz Exp $
+$NetBSD: CHANGES,v 1.5769 2004/04/29 12:55:23 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2282,3 +2282,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated netpbm to 10.18.12 [adam 2004-04-29]
 	Updated links to 2.1.0.15 [wiz 2004-04-29]
 	Updated links-gui to 2.1.0.15 [wiz 2004-04-29]
+	Updated qt3-libs to 3.3.2 [markd 2004-04-29]
+	Updated qt3-tools to 3.3.2 [markd 2004-04-29]
+	Updated qt3-docs to 3.3.2 [markd 2004-04-29]
+	Updated qt3-psql to 3.3.2 [markd 2004-04-29]
+	Updated qt3-mysql to 3.3.2 [markd 2004-04-29]
+	Updated qt3 to 3.3.2 [markd 2004-04-29]
