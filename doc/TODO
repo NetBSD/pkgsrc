@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2403 2004/11/20 01:25:39 wiz Exp $
+$NetBSD: TODO,v 1.2404 2004/11/20 16:25:27 taca Exp $
 
 Suggested new packages
 ======================
@@ -1107,7 +1107,7 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wavesurfer-1.5.3
 	o wdm-1.27
-	o webmin-1.160
+	o webmin-1.170
 	o weechat-0.0.8
 	o wesnoth-0.8.7
 	o windowlab-1.24
