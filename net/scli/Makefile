@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/23 21:50:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/25 07:40:23 snj Exp $
 #
 
 DISTNAME=		scli-0.2.12
@@ -10,7 +10,7 @@ MAINTAINER=		seb@NetBSD.org
 HOMEPAGE=		http://www.ibr.cs.tu-bs.de/projects/scli/
 COMMENT=		SNMP command line interface
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 AUTOMAKE_POST_PATTERNS+=	*.info *.info-*
 
@@ -28,8 +28,8 @@ LDFLAGS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.${_p_}}/lib
 LDFLAGS+=		-L${BUILDLINK_PREFIX.${_p_}}/lib
 .endfor
 
-.include "../../devel/readline/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
