@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/11/01 08:48:26 jlam Exp $
-
-SHA1 (jamjar-0.6.tar.gz) = 3cc58c25add175382e9022648590600db12f689a
-Size (jamjar-0.6.tar.gz) = 231879 bytes
-SHA1 (patch-aa) = 9db8bef4191f3b1d82862ab7a1ed42977499a28e

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 08:45:44 agc Exp $
-
-SHA1 (sc-6.21.tar.Z) = 80d8972bcd1b5adcbc00345b6866954603dadf31
-Size (sc-6.21.tar.Z) = 180360 bytes
-SHA1 (patch-aa) = d9092f0d2b996f2e9b89b708bc59d3bcffe8f18a
-SHA1 (patch-ab) = 2055f81bbabaa2752ed6dc18ce66ca857b9654f4
-SHA1 (patch-ac) = 0bad09044cecf55139d2a709b6f35dc2b90b8fcc

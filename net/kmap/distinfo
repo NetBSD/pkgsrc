@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:20 wiz Exp $
-
-SHA1 (kmap-0.5.6.tar.gz) = 92dc57e3d2c590afe097cd299bc18da40fad927b
-Size (kmap-0.5.6.tar.gz) = 173852 bytes
-SHA1 (patch-aa) = 3935c5e24a8844bba9f8fea975eae81d28421f8f

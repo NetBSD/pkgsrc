@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:11 agc Exp $
-
-SHA1 (whowatch-1.4.tar.gz) = 0d60c8ddb56b9bf9d2f3e1452832ccb2c862ff0c
-Size (whowatch-1.4.tar.gz) = 43084 bytes
-SHA1 (patch-ab) = f66829eaf7d148df10c2ca064ed81bdedf5c9adc
-SHA1 (patch-ac) = 9482d1b1759858a83b1efeaa5fc9dd9ec49043c7

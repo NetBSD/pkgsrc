@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/10/08 07:53:46 jlam Exp $
-
-SHA1 (gnome-iconedit-1.2.0.tar.gz) = eed36cd64bf7a07bdc2aa604f1e714b4f25bd7ac
-Size (gnome-iconedit-1.2.0.tar.gz) = 205360 bytes
-SHA1 (patch-aa) = 6bea8b8a9683ad0f840b25bbc00bffdeb27f4574
-SHA1 (patch-ab) = c35a3b1243136ef82ca1e1d49af8f70cbb774115
-SHA1 (patch-ac) = 5293a22901cc713fdd349986bfde9797347ff122

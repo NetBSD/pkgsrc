@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.sparc,v 1.1 2001/10/31 23:10:39 zuntum Exp $
-lib/ICAClient/pkginf/F.core.solaris
-lib/ICAClient/pkginf/Ver.core.solaris

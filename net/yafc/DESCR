@@ -1,4 +1,0 @@
-Yafc is yet another FTP client.
-It offers features like directory caching, tab completion, aliases, colored
-ls, recursive commands, autologin, bookmarks, multiple connections opened
-simultaneously, nohup mode transfers and SSH2 support (sftp).

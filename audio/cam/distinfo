@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 13:04:18 agc Exp $
-
-SHA1 (cam-1.02.tgz) = 3bdd11137cfe637bc3c0a77ab1bdbe3df89cbfa3
-Size (cam-1.02.tgz) = 26307 bytes
-SHA1 (patch-aa) = 39ebb8450eab5317ec743a5d8ed3a2e5a565acbd
-SHA1 (patch-ab) = 81cdcb9535c40c91257b0d873c9648d61e8cab4d
-SHA1 (patch-ac) = 7cd10a672df67bbd236e5a735957100f12fc73bb
-SHA1 (patch-ad) = e9e398143aa7f4d7c06f78fff8279a49bbf21f81
-SHA1 (patch-ae) = 570f663a3288d53ae7365d088edefc4146ddba74

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/11/09 02:23:22 itojun Exp $
-
-SHA1 (choparp-20021107.tar.gz) = 1b83f967c46ec466513447b10b4a98371301f504
-Size (choparp-20021107.tar.gz) = 6687 bytes
-SHA1 (patch-aa) = 94dbd0c5b97acd28b0229e6bc4499d107f6051d5
-SHA1 (patch-ab) = f84b37123897111c4b9e6f7ad4437c5ac7682b27

@@ -1,4 +1,0 @@
-GtkBalls is a simple logic game.  The goal of the game is to make the
-maximum number of lines with balls of the same color.  A line is made
-of five balls.  Each time you don't do a line, extra balls appear on
-the grid.  You lose when the grid is full.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/01/05 14:07:48 jmmv Exp $
-
-SHA1 (bonobo-activation-2.1.1.tar.bz2) = bf5d2e5a2fe444fd891a9e0b9d20413f246d30bf
-Size (bonobo-activation-2.1.1.tar.bz2) = 415100 bytes
-SHA1 (patch-ac) = a7a29227124a7277625ca3fb7080d9a52acda3c0

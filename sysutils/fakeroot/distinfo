@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/01/04 11:27:44 cjep Exp $
-
-SHA1 (fakeroot_0.5.8.tar.gz) = 84931109b1f734e0aeedd5ada2ef79d503de198b
-Size (fakeroot_0.5.8.tar.gz) = 420642 bytes
-SHA1 (patch-aa) = f0d712b2880c9d4309ba426b98e8600e8ca14ffb
-SHA1 (patch-ab) = cb921a4b9babe356e17cde41a07e92e46d6ebd0a

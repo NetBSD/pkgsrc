@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/13 05:43:26 jlam Exp $
-
-SHA1 (ghostscript/ghostscript-7.05.tar.bz2) = 5cf6c4d9f953b8057d0841db3616a2bf5fb5c131
-Size (ghostscript/ghostscript-7.05.tar.bz2) = 4103119 bytes
-SHA1 (ghostscript/jpegsrc.v6b.tar.gz) = 7079f0d6c42fad0cfba382cf6ad322add1ace8f9
-Size (ghostscript/jpegsrc.v6b.tar.gz) = 613261 bytes
-SHA1 (patch-aa) = f9d706b19430c32f568316c0b02eee792e311236
-SHA1 (patch-ab) = ee1cad8503700d088e2a4dcf4c3d14237cb84b0e

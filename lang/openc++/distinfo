@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/06/06 15:33:39 jmc Exp $
-
-SHA1 (opencxx2512.tar.gz) = 9f75238a244ec6256ea4379be47752a0453b1115
-Size (opencxx2512.tar.gz) = 635457 bytes
-SHA1 (patch-aa) = 19174ce593e5e92d4124a6656567accd133c1757
-SHA1 (patch-ab) = afbbda7e3767f4f4c6f6eea6f4328a1113fa3a37
-SHA1 (patch-ac) = a80157b35b3f2e3c1e1cd9c007927faa035e3df8
-SHA1 (patch-ad) = fa00b57561b7a663fb1f6a24cbf355a08786e3f6

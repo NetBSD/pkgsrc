@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/06/23 21:13:11 seb Exp $
-
-SHA1 (nasm-0.98.36.tar.gz) = 19b8920f7c26b5a9d6cfcfbc7cfc95f68afc8ac0
-Size (nasm-0.98.36.tar.gz) = 624085 bytes
-SHA1 (patch-aa) = 05a3d32e4b1be539a595c79cdcd8b9390d50ab65
-SHA1 (patch-ab) = bbe1d7219dd2e5ade8f97a4f3070bc87d3a7d4b5

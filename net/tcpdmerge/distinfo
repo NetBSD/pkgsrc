@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:35 wiz Exp $
-
-SHA1 (tcpdmerge.c) = 6cf440a4f4802c28ab1cdbc71a6b1845efe062d6
-Size (tcpdmerge.c) = 9944 bytes
-SHA1 (00README.TXT) = ee508be0ffc9004c3ef42d98cc3ce394081634be
-Size (00README.TXT) = 3388 bytes

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/02 11:54:27 hubertf Exp $
-bin/cue
-share/examples/cue/sample.cuerc
-@dirrm share/examples/cue
-share/doc/cue/cue.hlp
-share/doc/cue/cue.html
-@dirrm share/doc/cue

@@ -1,9 +1,0 @@
-GNU Cim is a compiler for the programming language Simula.  It offers
-a class concept, separate compilation with full type checking,
-interface to external C routines, an application package for process
-simulation and a coroutine concept.
-
-The portability of GNU Cim is based on the C programming language.
-The compiler and the run-time system is written in C, and the compiler
-produces C code, that is passed to a C compiler for further processing
-towards machine code.

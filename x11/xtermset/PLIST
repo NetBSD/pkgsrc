@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:40 zuntum Exp $
-bin/xtermset
-man/man1/xtermset.1
-share/doc/xtermset/ctlseqs.ms
-share/doc/xtermset/ctlseqs.0
-share/doc/xtermset/COPYING
-share/doc/xtermset/README
-@dirrm share/doc/xtermset

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/02 22:44:47 jmmv Exp $
-include/linda/linda.h
-lib/libinda.a
-lib/libinda.la
-lib/libinda.so
-lib/libinda.so.0
-lib/libinda.so.0.0
-lib/pkgconfig/linda.pc
-@dirrm include/linda

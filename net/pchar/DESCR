@@ -1,4 +1,0 @@
-pchar is a reimplementation of the pathchar utility, written by Van Jacobson.
-Both programs attempt to characterize the bandwidth, latency, and loss of
-links along an end-to-end path through the Internet. pchar works in both
-IPv4 and IPv6 networks.

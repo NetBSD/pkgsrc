@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:39 wiz Exp $
-
-SHA1 (hpwake.c.gz) = 9df23297ac93cf48aed2929990b80bff0143675a
-Size (hpwake.c.gz) = 1193 bytes
-SHA1 (patch-aa) = 7e69f75a494133733ef35ab3bef25cf5e683fc22

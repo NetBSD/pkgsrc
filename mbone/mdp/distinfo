@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/08/13 08:33:09 agc Exp $
-
-SHA1 (src-mdp-1.9a5.tgz) = 62d688cc7f570d4492d6e0839026b6a72a5c7163
-Size (src-mdp-1.9a5.tgz) = 439296 bytes
-SHA1 (src-protolib-1.0a3d.tgz) = 4532de7a4bce6e7190ab3afa5dbf82f31f1775a8
-Size (src-protolib-1.0a3d.tgz) = 59402 bytes
-SHA1 (patch-aa) = 0cadf302bbf20bb4a283500c6589a1fbbd455dd7
-SHA1 (patch-ab) = 27624d9968821d3533c383e151f5e8c8f2ec133d

@@ -1,8 +1,0 @@
-This package provides support files needed to use the Xpdf tools with
-Japanese PDF files.
-
-Contents:
-- Adobe-Japan1 character collection support
-- ISO-2022-JP encoding
-- EUC-JP encoding
-- Shift-JIS encoding

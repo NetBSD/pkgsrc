@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/12/05 21:44:32 drochner Exp $
-
-SHA1 (dxsamples-4.2.0.tar.gz) = 1e2d99c5537f83129c81823d963cc74df8d51b8c
-Size (dxsamples-4.2.0.tar.gz) = 7560487 bytes
-SHA1 (patch-ab) = e27259c95bae0d63919841ddc801e7db6f4211db

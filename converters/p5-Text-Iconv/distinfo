@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/03/06 19:49:00 wiz Exp $
-
-SHA1 (Text-Iconv-1.2.tar.gz) = 93b8896321aca94095568d73a2cf6e3d7360a92d
-Size (Text-Iconv-1.2.tar.gz) = 6455 bytes
-SHA1 (patch-aa) = 8a3b147e8fcac8982f0e1822e1581fe18c39ad4e

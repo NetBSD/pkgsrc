@@ -1,3 +1,0 @@
-FSViewer is a NeXT FileViewer lookalike for Window Maker. Viewing is currently
-supported via browser mode and list mode. It has been written in C using the
-WINGs library. 

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/12/04 09:52:17 scw Exp $
-
-SHA1 (tits-1.0.3.tar.gz) = 4ad844795d850140c1bf518cae4a7a70f114c74e
-Size (tits-1.0.3.tar.gz) = 20781 bytes
-SHA1 (patch-aa) = cb97029249e318d30b859ad4479ae6cb0c0ffcf2

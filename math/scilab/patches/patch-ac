@@ -1,9 +1,0 @@
-$NetBSD: patch-ac,v 1.6 2003/02/22 04:31:07 dmcmahill Exp $
-
---- routines/interf/stcreate.c.orig	Thu Dec 19 05:10:48 2002
-+++ routines/interf/stcreate.c	Fri Feb 21 06:50:54 2003
-@@ -1,2 +1,4 @@
-+#include <string.h>
-+
- #include "../stack-c.h"
- #define memused(it,mn) ((((mn)*( it % 10))/sizeof(int))+1)

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/03 12:23:57 hubertf Exp $
-bin/nmap
-man/man1/nmap.1
-share/nmap/nmap-os-fingerprints
-share/nmap/nmap-protocols
-share/nmap/nmap-rpc
-share/nmap/nmap-services
-@dirrm share/nmap

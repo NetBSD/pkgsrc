@@ -1,8 +1,0 @@
-libwmf is a library for UNIX-like machines that can convert wmf
-(Windows Meta Files) files into other formats.  Currently it supports
-a gd binding to convert to png, and an X one to draw direct to an X
-window or pixmap. It also comes with a program to display wmfs: xwmf.
-
-Without a TrueType font server and the standard MS Windows fonts, the X
-binding might render text in a different font than would appear under
-MS Windows natively (this is a runtime issue for the xwmf program).

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/11 21:15:48 zuntum Exp $
-include/SDL/SDL_net.h
-lib/libSDL_net-1.2.so
-lib/libSDL_net-1.2.so.0
-lib/libSDL_net-1.2.so.0.3
-lib/libSDL_net.a
-lib/libSDL_net.la
-lib/libSDL_net.so

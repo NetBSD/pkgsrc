@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:38 wiz Exp $
-
-SHA1 (perldap-1.2.2.tgz) = 71511b4c2c246db1b520732c3797551d35c26ae7
-Size (perldap-1.2.2.tgz) = 74058 bytes
-SHA1 (patch-aa) = 430f7e2e41087ca3a3eba19b012ba4f96c0a1de3

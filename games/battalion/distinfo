@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/03/09 19:46:51 jschauma Exp $
-
-SHA1 (battalionSource1.4.tar.Z) = 50891668a9b6745fcb4e070805c085487a5176d8
-Size (battalionSource1.4.tar.Z) = 186221 bytes
-SHA1 (battalionSUN4.tar.gz) = 5cc314e192320a7505dddf730bbcccaef212ff4a
-Size (battalionSUN4.tar.gz) = 1593265 bytes
-SHA1 (patch-aa) = 351f783154a992de348d29c039b670d7ef324507
-SHA1 (patch-ab) = a47c5be93d82555b4fed23f5d5e71169859ebb49

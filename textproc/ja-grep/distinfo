@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/31 13:00:42 seb Exp $
-
-SHA1 (grep-2.0.tar.gz) = 99e8f917557f1496cd3786e6c13f3900b8de24d8
-Size (grep-2.0.tar.gz) = 127065 bytes
-SHA1 (patch-aa) = 41d2bd451f1332b8dbc3f72e6c6a56308a2c081b
-SHA1 (patch-ab) = 4431f51bdfff5c5d710a80fe51b27886e9239956
-SHA1 (patch-ac) = e66d5d68f2e37139e1d706b1cfd51551b3075433

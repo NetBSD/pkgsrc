@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 16:28:00 agc Exp $
-
-SHA1 (kdesupport-1.1.2.tar.bz2) = 0f07df088259f7de3003d28be3e209f18be29a95
-Size (kdesupport-1.1.2.tar.bz2) = 979489 bytes
-SHA1 (patch-aa) = 12fc9851200435884daff74e7078ffb5424b7666
-SHA1 (patch-ab) = 955c75bc17b90ebb9a639277dfc61a0adc26e78e

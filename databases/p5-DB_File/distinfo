@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/03/22 19:13:02 heinz Exp $
-
-SHA1 (DB_File-1.806.tar.gz) = 83cd50f25699f8661e03671cea210e0996ce05f8
-Size (DB_File-1.806.tar.gz) = 80078 bytes
-SHA1 (patch-aa) = 6f72a793009f39b8ff8c5ab5d367be20370958c7

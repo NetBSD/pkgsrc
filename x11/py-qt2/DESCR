@@ -1,4 +1,0 @@
-PyQt is a set of Python bindings for the Qt toolkit. The bindings are
-implemented as a set of Python modules: qt, qtcanvas, qtgl,
-qtnetwork, qtsql, qttable and qtxml, and contains 300
-classes and over 5,750 functions and methods.

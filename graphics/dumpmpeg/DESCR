@@ -1,5 +1,0 @@
-dumpmpeg is a program that allows you to dump video frames from
-MPEG movie files. It uses the SDL MPEG Player Library to  accomplish
-this  and  thus requires an open X-Window.  Since it uses the SMPEG
-library, it can dump  frames  from format it supports, which
-currently is MPEG-1 video files.

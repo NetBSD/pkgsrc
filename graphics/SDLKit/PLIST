@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/29 06:16:53 rh Exp $
-share/GNUstep/Local/Headers/SDLKit/G3DSDLCamera.h
-share/GNUstep/Local/Headers/SDLKit/G3DSDLEventHandler.h
-share/GNUstep/Local/Headers/SDLKit/G3DSDLKit.h
-share/GNUstep/Local/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libSDLKit.so
-share/GNUstep/Local/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libSDLKit.so.0.4.0
-@dirrm share/GNUstep/Local/Headers/SDLKit

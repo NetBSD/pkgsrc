@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:52:53 zuntum Exp $
-
-This package requires that the APM driver be enabled in your kernel.
-See apm(4) for details.
-
-===========================================================================

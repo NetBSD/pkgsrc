@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.8 2003/07/14 11:42:13 jmmv Exp $
-
-SHA1 (ettercap-0.6.9.tar.gz) = 2f70055af569cca75cf2460677229b7b4e4c38a5
-Size (ettercap-0.6.9.tar.gz) = 681245 bytes
-SHA1 (patch-aa) = 4096f767a61e96788b7bee33f51948c9006cc665
-SHA1 (patch-ab) = 107ef5dda9457313d7d939745a6a21dbe2b989ce
-SHA1 (patch-ac) = 6771b96f36fa9439b0edf79e632f0d2f1125eecd
-SHA1 (patch-ad) = c7f997876c5b76fff77f70280f5b5fe523778abf
-SHA1 (patch-ae) = 58ea3d1500fb5f1c4b38ec795b884cfb2dd0ab42

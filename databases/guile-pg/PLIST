@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/29 13:11:19 seb Exp $
-share/guile/database/postgres.scm
-@dirrm share/guile/database
-info/guile-pg.info
-lib/libpostgres.a
-lib/libpostgres.la
-lib/libpostgres.so.2.0
-bin/guile-pg

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:27 zuntum Exp $
-bin/flex
-bin/flex++
-include/FlexLexer.h
-lib/libfl.a
-man/man1/flex.1

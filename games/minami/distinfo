@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/11/15 00:23:48 jlam Exp $
-
-SHA1 (minami-1.0.2.tgz) = c64f0e7dfd29e9cf6569a37ad0c21639c0ddf070
-Size (minami-1.0.2.tgz) = 89527 bytes
-SHA1 (patch-aa) = 72b8b91d8a9a1926054c677ef6de959af1494500
-SHA1 (patch-ab) = 084ba46c1c7ddaa00d8624f6e896acac35b4d395
-SHA1 (patch-af) = 55e015142821cc8abffc0852c264b68d2f46c280

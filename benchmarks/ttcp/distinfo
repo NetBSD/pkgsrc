@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/03/19 13:12:22 tron Exp $
-
-SHA1 (ttcp.tar.Z) = 33a60af208eff3dc9ae745060f44b24c4e74aa7e
-Size (ttcp.tar.Z) = 18163 bytes
-SHA1 (patch-aa) = a9717aa9fd5f8cdff1a39c9b7d6ab17abbe399ad
-SHA1 (patch-ab) = e84c027a0b2c1ab55682faa14a7e3e447cb3175e

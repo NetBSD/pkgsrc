@@ -1,1 +1,0 @@
-@JAVA_HOME@/bin/java -classpath $CLASSPATH:@PREFIX@/lib/java/flan/flan.jar:@PREFIX@/lib/java/flan/crimson.jar:@PREFIX@/lib/java/flan/xalan2.jar:@PREFIX@/lib/java/flan/xmlcode.jar flan.frontend.Interface

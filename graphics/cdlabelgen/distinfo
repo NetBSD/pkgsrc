@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2003/03/23 02:02:34 rh Exp $
-
-SHA1 (cdlabelgen-2.5.0.tgz) = f259008107c353b4cc2d4110f8e6abe1a42e3560
-Size (cdlabelgen-2.5.0.tgz) = 131977 bytes
-SHA1 (patch-aa) = 02f497ce19ab5f4839147523d006f4c4346f618a
-SHA1 (patch-ab) = 737bcdbaeb0078a4187efd284341015d037568fc

@@ -1,9 +1,0 @@
-These tools allow you to access Macintosh disks without mounting them.
-You can copy from or to BSD files, list directories, or run various
-other file / directory modification commands. The command naming is
-similar to that used by the mtools command (which is similar to MS-DOS
-command names), except that the names begin with an 'h'.
-
-This package installs only the traditional "Command Line Tools" from
-Robert Leslie's HFS Utilities. The advanced Tcl shell and Tk GUI are
-packaged independently, as the sysutils/xhfs package.

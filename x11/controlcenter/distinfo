@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2002/08/29 08:42:50 jlam Exp $
-
-SHA1 (control-center-1.4.0.4.tar.gz) = 7f18cbcdadcebfc967d4a9abac7804d513d4298f
-Size (control-center-1.4.0.4.tar.gz) = 3567130 bytes
-SHA1 (patch-aa) = 423ad6c931885f1975311b8cc90d9de636e9c808
-SHA1 (patch-ab) = 64b3fdd656ba029a092086d040c48c55679edfd9
-SHA1 (patch-ac) = 2fc67976315b8a203233e71d1f311f3e097aa499
-SHA1 (patch-af) = fa276788e2ff16fd82674c7031b8ed806cc37ddf

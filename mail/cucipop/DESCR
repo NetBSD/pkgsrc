@@ -1,8 +1,0 @@
-Cucipop, the Cubic Circle POP3 server, is a very small and fast server for
-POP3 mail clients--far faster than UW's ipop3d.  It does not support POP2,
-but it does include support for the TOP extension to POP3, Content-Length:
-headers, and APOP.  It can be run from inetd or standalone.
-
-In most environments, this should be invoked from inetd.conf as:
-
-pop3	stream	tcp	nowait	root	/usr/pkg/sbin/cucipop cucipop -AY

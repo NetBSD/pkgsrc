@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/09 16:01:23 tron Exp $
-lib/X11/fonts/TrueType/geo703l.ttf
-lib/X11/fonts/TrueType/geo703li.ttf
-@unexec ${RMDIR} -p %D/lib/X11/fonts/TrueType 2> /dev/null || ${TRUE}

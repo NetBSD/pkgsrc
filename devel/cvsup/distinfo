@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/10/24 00:54:08 jdarrow Exp $
-
-SHA1 (cvsup-i386-1.5/cvsup-static-16.1.f.tgz) = 7cebfe932d25009276d7b928cadf0a474fdfcf98
-Size (cvsup-i386-1.5/cvsup-static-16.1.f.tgz) = 1240024 bytes
-SHA1 (cvsup-i386-1.6/cvsup-static-16.1.f.tgz) = 2d66c9259cb8369c4521d4c1e556046a3d9f8e67
-Size (cvsup-i386-1.6/cvsup-static-16.1.f.tgz) = 1252032 bytes

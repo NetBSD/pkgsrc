@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/12/09 11:40:49 ad Exp $
-
-SHA1 (exim-html-4.10.tar.bz2) = 5a13b6c25685a26ae0ea9d2fba7ba93d7027f215
-Size (exim-html-4.10.tar.bz2) = 409608 bytes
-SHA1 (patch-aa) = 24370521bf1c1b8c2d7e7ade6490b0f61a58fa52

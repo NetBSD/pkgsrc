@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:59:53 zuntum Exp $
-
-${LISPDIR}/etach.el
-share/doc/etach/FAQ.txt
-share/doc/etach/LICENSE.txt
-share/doc/etach/README.txt
-@dirrm share/doc/etach

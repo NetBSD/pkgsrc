@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/03/07 11:45:28 wiz Exp $
-
-SHA1 (tuxpaint-stamps-2003.02.22.tar.gz) = c6b67be6b50a75a2ea8c9d128525cd4efb53e417
-Size (tuxpaint-stamps-2003.02.22.tar.gz) = 3529148 bytes
-SHA1 (patch-aa) = df3edb2322fe7217fa7fd33ad0b93a14567cb9c4

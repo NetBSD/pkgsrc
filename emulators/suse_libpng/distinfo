@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/05/25 15:19:29 taca Exp $
-
-SHA1 (suse73/i386/libpng-2.1.0.12-160.i386.rpm) = 1275639d01bb0f99a5103965c423bec2602bd3cb
-Size (suse73/i386/libpng-2.1.0.12-160.i386.rpm) = 330158 bytes
-SHA1 (suse73/ppc/libpng-2.1.0.12-131.ppc.rpm) = 5e7598f4e339b49071f2554c6852798648c11ec3
-Size (suse73/ppc/libpng-2.1.0.12-131.ppc.rpm) = 324808 bytes

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/11/25 11:01:16 schmonz Exp $
-
-SHA1 (suse73/i386/openmotif.rpm) = b4ab8826a90429f47cac6c1cd38c68eb8caa21c2
-Size (suse73/i386/openmotif.rpm) = 1198634 bytes
-SHA1 (suse73/ppc/openmotif.rpm) = 47c6c49768b6e187267674ad882670272dbd631a
-Size (suse73/ppc/openmotif.rpm) = 1305398 bytes

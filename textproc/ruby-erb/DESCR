@@ -1,3 +1,0 @@
-ERb is an implementation of eRuby (embedded ruby).
-You can include ERb in your script.  ERb is purely written by Ruby
-without any C module.

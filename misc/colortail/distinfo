@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/12/13 23:01:42 jschauma Exp $
-
-SHA1 (colortail-0.3.0.tar.gz) = 5c55a9b0550868129d8ede133f6b34fa5356c5ce
-Size (colortail-0.3.0.tar.gz) = 54329 bytes
-SHA1 (patch-aa) = 21a8249fd27487078d141a2e30e1e917586e1c3a
-SHA1 (patch-ab) = 055d1a11e6a555b569d11fe2c870332ae93b13e6
-SHA1 (patch-ac) = fed43fd42497b951dd237f86ef08337f76fef494

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/05/02 15:10:43 agc Exp $
-
-SHA1 (pclock0.7.tgz) = f0bd6d5c73d84805362304cc29f657def2622284
-Size (pclock0.7.tgz) = 17644 bytes
-SHA1 (patch-aa) = 572e374535f1c63ec571a563b5466226951fda08
-SHA1 (patch-ab) = d102aa199415cdbdab8aac3f2ac41de38620e8ea

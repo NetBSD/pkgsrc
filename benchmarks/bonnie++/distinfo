@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/03/10 10:00:38 wiz Exp $
-
-SHA1 (bonnie++-1.03a.tgz) = b519b79a00fb7145d51320abc3cd46caca7ff05b
-Size (bonnie++-1.03a.tgz) = 76207 bytes
-SHA1 (patch-aa) = 2edc5fb589af0d8fbeaba89e3fd38f01a6115090

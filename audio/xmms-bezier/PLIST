@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/15 00:56:45 hubertf Exp $
-lib/xmms/Visualization/libbezier.a
-lib/xmms/Visualization/libbezier.la
-lib/xmms/Visualization/libbezier.so

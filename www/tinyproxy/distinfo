@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/05/09 16:30:12 salo Exp $
-
-SHA1 (tinyproxy-1.5.3.tar.gz) = d629070ac0c103aec05f4340605785e57e30a72f
-Size (tinyproxy-1.5.3.tar.gz) = 352005 bytes
-SHA1 (patch-aa) = e94f2410ae2b5dd94a1039e96635b32505de9f5d
-SHA1 (patch-ab) = b6a18b859cb3260c237a98745ca9e2d0e1a1b486
-SHA1 (patch-ac) = baab9768068f1d11a34c22295396726e867e32a4

@@ -1,3 +1,0 @@
-This package adds a new desktop type to the the CDE login service called
-"X11". If it is selected as the user's desktop it will launch a normal
-X11 session - no CDE - like "xdm" would do under NetBSD.

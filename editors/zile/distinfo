@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/06/29 22:19:13 jtb Exp $
-
-SHA1 (zile-1.6.2.tar.gz) = 3e88d5d7d50f65c58f1d305f93fe275a49650ac7
-Size (zile-1.6.2.tar.gz) = 254162 bytes
-SHA1 (patch-aa) = 80456cfebddddec4029a37db493acce46bc69e8c

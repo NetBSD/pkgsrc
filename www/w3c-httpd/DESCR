@@ -1,7 +1,0 @@
-W3C httpd is a generic public domain full-featured hypertext server
-which can be used as a regular HTTP server. The running typically on
-port 80 to serve hypertext and other documents, and also as a proxy --
-a server on a firewall machine -- that provides access for people
-inside a firewall to the outside world. When running as proxy httpd
-may be configured to do caching of documents resulting in faster
-response times.

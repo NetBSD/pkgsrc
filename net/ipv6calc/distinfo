@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/02/06 14:34:57 tron Exp $
-
-SHA1 (ipv6calc-0.45.tar.gz) = 0215a7e19246bde252c30ab715b0e1a8c419769a
-Size (ipv6calc-0.45.tar.gz) = 297967 bytes
-SHA1 (patch-aa) = 773b4a88f5f2cbf5fafa9875314f5e73bce8bd8b
-SHA1 (patch-ab) = 0d09d6f7e1857640a7c81e4a8345106210555a79

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:30 zuntum Exp $
-bin/guavac
-bin/guavad
-bin/gcok
-man/cat1/guavac.0
-man/man1/guavac.1
-share/guavac/classes.zip
-@dirrm share/guavac

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/05/25 08:52:37 epg Exp $
-
-SHA1 (swig-1.3.17.tar.gz) = 2252de9949410a6a0586bcdc85671a0060f3ed31
-Size (swig-1.3.17.tar.gz) = 1559991 bytes
-SHA1 (patch-aa) = 2718553f5aa9f0af8fa5756ce3c3b82c13045312
-SHA1 (patch-ab) = 7ba7ffed43bb3bc7e50d1aa79beb7cd5c844c97c

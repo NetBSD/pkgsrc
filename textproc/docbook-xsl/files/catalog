@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN"
-	"http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
-
-<!-- $NetBSD: catalog,v 1.1 2003/01/29 21:28:27 jmmv Exp $ -->
-
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <system systemId="http://docbook.sourceforge.net/release/xsl/current/html/docbook.xsl" uri="html/docbook.xsl" />
-</catalog>

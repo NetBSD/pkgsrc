@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2001/05/29 05:48:56 jlam Exp $
-
-SHA1 (devtodo-0.1.6-1.tar.gz) = 567a9102ba5569a8e77669f09fd58db1bc28ae80
-Size (devtodo-0.1.6-1.tar.gz) = 165672 bytes
-SHA1 (patch-aa) = 9696d32bfaaec0650bbb75aad240e35ab2ca8656
-SHA1 (patch-ab) = 6be42fb9d890b89e97fc3e443a9558040da0cb2d
-SHA1 (patch-ac) = 18d7ed5fa238c80bd8dd15b65e675f24c47c6602

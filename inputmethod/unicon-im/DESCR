@@ -1,5 +1,0 @@
-The Unicon project intend to implement display/input CJK
-(Chinese/Japanese/Korean) characters under the Framebuffer under
-Linux.
-
-This package will install the libraries and modules for Chinput.

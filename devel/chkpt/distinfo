@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/08/04 21:09:24 jdolecek Exp $
-
-SHA1 (chkpt-1.7.1.tar.gz) = 5d0b441415e6473e9ada5d9c8f0aef52beaa4196
-Size (chkpt-1.7.1.tar.gz) = 44954 bytes
-SHA1 (patch-aa) = 1b9a9bd40701950c64d06ff3b2710668930ef979
-SHA1 (patch-ab) = daaf4763ee951e5a366e0e94ba3362806e239f8d
-SHA1 (patch-ac) = 91ab70a614d011360c23608a969d5b2c9200075f

@@ -1,6 +1,0 @@
-Nap is a powerful Java file sharing client.  It has OpenFT support via
-giFT.  Other features include fetching a server list from Napigator,
-connecting to multiple OpenNap servers, doing multiple concurrent
-searches, and automatic downloading.  You can view your MP3 files and
-play them conveniently from within XNap.  It also provides a
-commandline interface for use on a terminal.

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:22:40 zuntum Exp $
-bin/bmore
-bin/bvedit
-bin/bvi
-bin/bview
-man/man1/bmore.1
-man/man1/bvi.1
-share/bmore.help

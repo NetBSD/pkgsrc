@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:41 wiz Exp $
-
-If you'd like to display multibyte characters, e.g. kanji, set the
-MultiByteText option to YES in ~/GNUstep/Defaults/WindowMaker and in
-~/GNUstep/Defaults/WMGLOBAL.
-
-===========================================================================

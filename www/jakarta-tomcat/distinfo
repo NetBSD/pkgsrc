@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/04/19 17:48:21 jwise Exp $
-
-SHA1 (jakarta-tomcat-3.2.4-src.tar.gz) = 15592fa13356fc35eea97e59196ea99884613399
-Size (jakarta-tomcat-3.2.4-src.tar.gz) = 982282 bytes
-SHA1 (patch-aa) = f2011b93f21ca109048603de1840ed099ba2bbd9
-SHA1 (patch-ab) = 759c6373af773d45931bba58e512e4be50dfdc9e
-SHA1 (patch-ac) = 3bdcc53f7f8649131d2d9f37c82f2d833f497281
-SHA1 (patch-ad) = 6bf096f144865af5b9f0fddfe913632d7ef893c1
-SHA1 (patch-ae) = 182cdcae7df89c6d6cbaa9ca05cced8030c3eda6

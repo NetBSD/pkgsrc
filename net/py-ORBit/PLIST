@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/09 16:33:38 drochner Exp $
-include/pyorbit-2/pyorbit.h
-lib/pkgconfig/pyorbit-2.pc
-${PYSITELIB}/ORBit.a
-${PYSITELIB}/ORBit.la
-${PYSITELIB}/ORBit.so
-@dirrm include/pyorbit-2

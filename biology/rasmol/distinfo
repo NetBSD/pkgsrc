@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 16:02:25 agc Exp $
-
-SHA1 (RasMol_2.7.1.tar.gz) = 5960b1c397aa13824e6524e97f80493e468f19e6
-Size (RasMol_2.7.1.tar.gz) = 3482749 bytes
-SHA1 (patch-aa) = 627dbdee004e58451a76a9394197de5c39dd0ae4
-SHA1 (patch-ab) = c9f829a2c0873dc1eb156efff57ea69f90bdd442
-SHA1 (patch-ac) = 0ec2fbf59a92398e3b514637b686cfff80ee7a19

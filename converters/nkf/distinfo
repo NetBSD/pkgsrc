@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/31 13:00:35 seb Exp $
-
-SHA1 (nkf-1.7.tar.gz) = 2116864c1acc8e6f80d4c59dc63c73eb37c9e80c
-Size (nkf-1.7.tar.gz) = 28222 bytes
-SHA1 (nkf.patch.txt) = f7b0a640be331a707584ba34d083f5e2361c3969
-Size (nkf.patch.txt) = 3558 bytes

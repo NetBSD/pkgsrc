@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/04 16:22:06 hubertf Exp $
-bin/slurm
-man/man1/slurm.1

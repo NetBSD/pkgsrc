@@ -1,8 +1,0 @@
-#!/bin/sh
-if [ "$2" = "POST-DEINSTALL" ]; then
-echo Please note:
-echo
-echo If you do not intend to reinstall the htdig package, you may wish to
-echo remove the config directory, ${PKG_PREFIX}/etc/htdig, as well as any
-echo database directories you created.
-fi

@@ -1,4 +1,0 @@
-Ruby HTML Split library
-
-It parses HTML into an array of tag and string; the result could be
-converted back to HTML by the to_s method.

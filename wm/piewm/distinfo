@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/10/28 22:28:32 agc Exp $
-
-SHA1 (piewm-1.02.tar.gz) = 0b9e65853642d86f2e7254f59f7d03b951d77018
-Size (piewm-1.02.tar.gz) = 207006 bytes
-SHA1 (patch-aa) = 2292cf41f5c0d4d97a185b9d1c3336a798c824fa
-SHA1 (patch-ab) = 38d8407cb4d40425db0cf998a08e75d4218cad41
-SHA1 (patch-ac) = 62b7491e7658db8ac0c00bf691ba4e0e270a7b70

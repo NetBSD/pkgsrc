@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/09/11 20:02:26 tron Exp $
-
-SHA1 (dgd-1.2p2.tar.gz) = 22e4848a1e2b817f65e5b2ef8501967a36d63214
-Size (dgd-1.2p2.tar.gz) = 471097 bytes
-SHA1 (patch-aa) = bb85916706717011f00b21301ad17cfcefef68e9
-SHA1 (patch-ab) = 9efa9f6f8f457e2cce586ae6da2760708a8d26b4

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:30 zuntum Exp $
-bin/xmess
-man/man6/xmess.6
-share/xmess/xmessrc
-@dirrm share/xmess

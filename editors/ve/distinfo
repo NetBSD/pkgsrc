@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/04/19 14:05:17 zuntum Exp $
-
-SHA1 (ve-1.0.tgz) = 0faac299b697ff6dfc28d234ee47089ad4d148ff
-Size (ve-1.0.tgz) = 31527 bytes
-SHA1 (patch-aa) = 5cd86d04368f46cf247db23b99202f5a8c44f61a
-SHA1 (patch-ab) = b9fb31c6c047bad051e1e11f611f67fec75f6f86
-SHA1 (patch-ac) = 6b6c6e2d79076994a133001ba44495760d3b8930

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/25 02:12:40 markd Exp $
-bin/yafc
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/yafc.info
-info/yafc.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/yafc.info
-man/man1/yafc.1

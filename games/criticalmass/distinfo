@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/12 17:09:18 zuntum Exp $
-
-SHA1 (CriticalMass-0.97.tar.bz2) = 7b0f9b9f7400e25ee5a9043ee1201f7467519c38
-Size (CriticalMass-0.97.tar.bz2) = 2267315 bytes
-SHA1 (patch-ab) = 9bde672164770de4705b1a8f38651748b001232c

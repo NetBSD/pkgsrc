@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/07/24 09:27:57 jlam Exp $
-
-SHA1 (plan-1.8.4.tar.gz) = 0b4c5f2d078d3ad48f734c89a316258a56a5749a
-Size (plan-1.8.4.tar.gz) = 422458 bytes
-SHA1 (patch-aa) = 8e1ff57d70df86b641c51dd16e74a0a75437beea
-SHA1 (patch-ab) = 6670c398271e5ee6d32194c0b69850f381b5cc5c
-SHA1 (patch-ac) = 3e78546544e2b55e296068be4de31f6366cab2b0
-SHA1 (patch-ad) = f50e8e46e1ed503bf6f16c6cd31dd935e9251772

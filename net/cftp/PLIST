@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:36 seb Exp $
-bin/cftp
-@unexec ${INSTALL_INFO} --delete %D/info/cftp.info %D/info/dir
-info/cftp.info
-@exec ${INSTALL_INFO} %D/info/cftp.info %D/info/dir
-share/doc/cftp/README
-share/doc/cftp/bindings.desc
-@dirrm share/doc/cftp

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/10 12:30:58 markd Exp $
-${PYSITELIB}/rpy.py
-${PYSITELIB}/rpy.pyc
-${PYSITELIB}/io.py
-${PYSITELIB}/io.pyc
-${PYSITELIB}/_rpymodule.so

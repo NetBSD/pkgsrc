@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/21 03:43:22 dmcmahill Exp $
-bin/gerbv
-man/man1/gerbv.1

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:22 wiz Exp $
-
-SHA1 (GTL-0.3.3.tar.gz) = 5cf7baab5ec299045fc9f8df455cb32be39cb736
-Size (GTL-0.3.3.tar.gz) = 469283 bytes
-SHA1 (patch-aa) = 131765fe15c7486260db302b69c8a2b5923ff6d4
-SHA1 (patch-ab) = db8612a600166c9962b3d6c219de54b9f9c16636

@@ -1,2 +1,0 @@
-TclCL (Tcl with classes) is a Tcl/C++ interface used by Mash, vic, vat,
-rtp_play, ns, and nam.  It provides a layer of C++ glue over OTcl.

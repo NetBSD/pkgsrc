@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2003/02/28 22:15:30 grant Exp $
-lib/libiconv_plug.so

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/05/12 21:27:10 jmc Exp $
-
-SHA1 (elfsh-0.43b-portable.tgz) = a4ccc9e8727409f65a3b9571455d7e2fea56e55b
-Size (elfsh-0.43b-portable.tgz) = 101978 bytes
-SHA1 (patch-aa) = 32c31367c920dde165a79464c984bfdb346598b5
-SHA1 (patch-ab) = 4d9e36b5f163c582d636256afff5b9f9460264eb
-SHA1 (patch-ac) = 76b9926e1e3705be731784859304a168f211cf91

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/01 02:00:12 salo Exp $
-bin/baduki
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/baduki.mo
-share/baduki/baduki.gtkrc
-share/baduki/board.xpm
-@dirrm share/baduki

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2002/11/19 13:04:38 salo Exp $
-
-SHA1 (libmikmod-3.1.10.tar.gz) = 8d4daec66b17e556e8977cb077c4186111808e0d
-Size (libmikmod-3.1.10.tar.gz) = 528929 bytes
-SHA1 (patch-aa) = bfff6a9a77238e159e039bfa7d3f590bce8c9c9c
-SHA1 (patch-ab) = afda9a7d29e70e42c037163ac5b2d2742c77daab
-SHA1 (patch-ac) = 97554f00e4a4823e7a90f742679044fb8f887167
-SHA1 (patch-ad) = f2fc607efccd4d883ce6b642ab644f0e7bf747f6

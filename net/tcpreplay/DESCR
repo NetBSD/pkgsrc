@@ -1,4 +1,0 @@
-tcpreplay is a tool to replay saved tcpdump or snoop files at arbitrary
-speeds. It allows you to recreate real network traffic from a real network
-for use in testing. For example, it can be used to test Intrusion
-Detection Systems.

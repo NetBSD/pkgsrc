@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/15 00:56:49 hubertf Exp $
-lib/xmms/Visualization/libnebulus.a
-lib/xmms/Visualization/libnebulus.la
-lib/xmms/Visualization/libnebulus.so

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/01/04 18:16:22 cjep Exp $
-
-SHA1 (python-ldap-1.10alpha3-src.tar.gz) = feca8c817bd2c08d771ea4d6299b6e512801b491
-Size (python-ldap-1.10alpha3-src.tar.gz) = 87188 bytes
-SHA1 (patch-aa) = 56f2577c16c1c48f671f9b5534d849ef2d588334

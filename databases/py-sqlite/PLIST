@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/25 21:38:21 tsarna Exp $
-${PYSITELIB}/_sqlite.so
-${PYSITELIB}/sqlite/__init__.py
-${PYSITELIB}/sqlite/__init__.pyc
-${PYSITELIB}/sqlite/main.py
-${PYSITELIB}/sqlite/main.pyc
-@dirrm ${PYSITELIB}/sqlite

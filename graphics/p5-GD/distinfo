@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/06/23 12:10:13 adam Exp $
-
-SHA1 (GD-2.07.tar.gz) = 417161314db6e5c6c3059c4fe38c10f8e531b7fc
-Size (GD-2.07.tar.gz) = 153759 bytes
-SHA1 (patch-aa) = 1758791194c853a2eec8052f5f5cb29ca13c5768

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/17 16:00:52 hubertf Exp $
-
-SHA1 (dumpmpeg-0.6.tar.gz) = 99bd1e62d69c3727d69d1f313c0277718b83d66e
-Size (dumpmpeg-0.6.tar.gz) = 43257 bytes
-SHA1 (patch-aa) = 3b1613a264dd5704d74ab732d3c335c971f5f819

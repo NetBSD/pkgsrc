@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.19 2002/11/08 15:39:55 fredb Exp $
-
-SHA1 (wwwoffle-2.7f.tgz) = 16c16aff9f34b20b30235b4c8b05fafe61b65e23
-Size (wwwoffle-2.7f.tgz) = 889422 bytes
-SHA1 (patch-aa) = 897de385a47826e16a8a09b1bc1c207a2d350f94

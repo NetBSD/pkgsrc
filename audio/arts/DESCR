@@ -1,5 +1,0 @@
-The Analog Real-Time Synthesizer, or aRts, is a modular system for synthesizing
-sound and music on a digital computer. Using small building blocks called
-modules, the user can easily build complex audio processing tools. Modules
-typically provide functions such as sound waveform generators, filters, audio
-effects, mixing, and playback of digital audio in different file formats.

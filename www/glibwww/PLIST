@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:44 zuntum Exp $
-include/glibwww/glibwww.h
-lib/glibwwwConf.sh
-lib/libglibwww.a
-lib/libglibwww.la
-lib/libglibwww.so
-lib/libglibwww.so.1
-lib/libglibwww.so.1.0
-@dirrm include/glibwww

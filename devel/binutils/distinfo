@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/07/14 19:01:35 fredb Exp $
-
-SHA1 (binutils-2.14.tar.gz) = a9c2d3bd4dc55761df050dc804cea2a4a14aa941
-Size (binutils-2.14.tar.gz) = 14269432 bytes
-SHA1 (patch-aa) = 34f4efe9ab793c38eccb016bd9498a7db1494953

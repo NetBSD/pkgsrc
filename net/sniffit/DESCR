@@ -1,4 +1,0 @@
-Sniffit is a packet sniffer for TCP/UDP/ICMP packets.  Sniffit is able
-to give you very detailed technical info on these packets (SEQ, ACK,
-TTL, Window, ...), and also packet contents in different formats (hex
-or plain text, ...)

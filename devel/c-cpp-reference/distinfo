@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/07/17 11:23:09 skrll Exp $
-
-SHA1 (c_cpp_reference-2.0.2.tar.gz) = 1346c174c1f0f21e0f3f708a4cba53f1fee6dcaf
-Size (c_cpp_reference-2.0.2.tar.gz) = 1431552 bytes
-SHA1 (patch-aa) = 38450c99e0643a7e58dfc10c21d47778400f3b9a

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 08:45:44 agc Exp $
-
-SHA1 (randlib.c-1.3.tar.gz) = 6cb73c02c1702b3c3b9eb2732f3879944e60e7aa
-Size (randlib.c-1.3.tar.gz) = 42044 bytes
-SHA1 (patch-aa) = d4ec41f0dc0da1ebc4facff2066a21f1746e3526

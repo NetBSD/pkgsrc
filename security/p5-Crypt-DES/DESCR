@@ -1,7 +1,0 @@
-Crypt::DES - an XS-based DES implementation for Perl.
-
-The 2.XX tree represents a major improvement over the
-1.XX tree. This package builds on big-endian
-machines and many more x86 platforms than before.
-(with a few rare exceptions, like gcc on DUX against
-5.004).

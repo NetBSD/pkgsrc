@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:41 wiz Exp $
-
-SHA1 (xpuyopuyo-0.9.1.tar.gz) = deadbd3171be68e5684a099a4f27cd68fd7c5bd6
-Size (xpuyopuyo-0.9.1.tar.gz) = 577373 bytes
-SHA1 (patch-aa) = b25bd262eff6b21d4a5f2a28fd529426cceb4263
-SHA1 (patch-ab) = 76e9d2d3da387e49f87525bc0218cc90faffa92d
-SHA1 (patch-ac) = ab7ec69a6e90bf6821e4fc5ff527b9ec025df081

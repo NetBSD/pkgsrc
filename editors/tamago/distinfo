@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/12/28 02:43:53 kei Exp $
-
-SHA1 (tamago-4.0.6.tar.gz) = f1ae53cbcdeb5f2aad9d90d75742efe2fcd83d39
-Size (tamago-4.0.6.tar.gz) = 260021 bytes
-SHA1 (patch-aa) = 03ab079886bd58997cd797909eae230aaa6b91a5

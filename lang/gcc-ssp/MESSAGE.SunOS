@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.SunOS,v 1.2 2002/09/24 12:30:07 wiz Exp $
-
-To avoid conflicts with e.g. Sun WorkShop the GNU C compiler can only be
-invoked as "gcc" but not as "cc".
-
-===========================================================================

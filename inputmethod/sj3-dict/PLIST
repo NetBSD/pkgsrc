@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/10 09:15:23 sakamoto Exp $
-sj3/sj3main.dic
-@dirrm sj3/user
-@dirrm sj3

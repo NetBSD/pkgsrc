@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/06/23 13:23:37 adam Exp $
-
-SHA1 (ntop-2.2.tgz) = 062d33668ca29dd22a97c3bf8cb3a142aff360cd
-Size (ntop-2.2.tgz) = 2551153 bytes
-SHA1 (patch-aa) = e464ffc668512c773d8f528673ec67346dfb487e

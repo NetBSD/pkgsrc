@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2003/06/05 08:22:32 wiz Exp $
-
-SHA1 (feh-1.2.6.tar.gz) = 4f1090b22566767c3bc2f866a7565ad9da4001a5
-Size (feh-1.2.6.tar.gz) = 351906 bytes
-SHA1 (patch-aa) = 745c9ca77355a0beaacbe32bc33174e8dc057cbd
-SHA1 (patch-ab) = 4935ca2171f02d59df7e294b1b520881e21e0d6d

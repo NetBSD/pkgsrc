@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:36 wiz Exp $
-
-SHA1 (tcpillust-1.0a.tar.gz) = 326f9d16f7fb59aa68d9ffb21697b85adb3c45ad
-Size (tcpillust-1.0a.tar.gz) = 45364 bytes
-SHA1 (patch-aa) = 2ef369a732d2f4403ce293282853d743461cd7ad
-SHA1 (patch-ab) = b674343b8036c8ffbe0d2cce371f40f3ed8ee0c0
-SHA1 (patch-ac) = 8c1a77f8b123fddefc5db0482839768f292a59d7

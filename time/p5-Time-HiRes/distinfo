@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/07/08 17:42:44 gson Exp $
-
-SHA1 (Time-HiRes-1.49.tar.gz) = 56f19aaddf15c28ad036322cd8ba766afd5c063b
-Size (Time-HiRes-1.49.tar.gz) = 27931 bytes
-SHA1 (patch-aa) = 8d9ec8a0ad73c4a55f3cccc320c011b6f54f8b7d

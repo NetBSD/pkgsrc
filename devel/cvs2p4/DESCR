@@ -1,8 +1,0 @@
-This small set of tools provides a means for importing a CVS module
-into Perforce.
-
-It was originally developed for use at Network Appliance, to convert
-our product source code revision history from CVS into Perforce.
-
-cvs2p4 tries make the resultant Perforce depot look as if the work in
-CVS had been going on in Perforce.

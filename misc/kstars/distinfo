@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/01/19 00:29:20 kristerw Exp $
-
-SHA1 (kstars-0.9.kde2.tar.gz) = 0a2e3ceb9169974df4d31e0a6880c3c43ce106e2
-Size (kstars-0.9.kde2.tar.gz) = 4556143 bytes
-SHA1 (patch-aa) = a135868b4affc0edd9a79e3835b665329e94e3f8

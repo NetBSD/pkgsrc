@@ -1,7 +1,0 @@
-xdvipresent provides glue for developing slides for on-line presentation using
-LaTeX and xdvi, and a (portable) computer with a XGA (1024x768), SVGA
-(800x600), VGA (640x480), or SUN (1152x900) screen running Xwindows.  The idea
-is that you prepare the slides in LaTeX with the enclosed style file(s) and
-you use the "xdvipresent" script (which simply calls xdvi with an appropriate
-set of options) to show the slides on the screen.
-This package provides a convenient style for slideshow presentations as well.

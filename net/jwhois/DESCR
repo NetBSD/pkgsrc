@@ -1,3 +1,0 @@
-jwhois queries Internet Whois servers for information. The
-Whois server contacted can be specified on the command line,
-or looked up via regexps in the configuration file.

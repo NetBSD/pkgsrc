@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/10/15 23:34:41 dillo Exp $
-
-SHA1 (pilrc-2.9p9.tgz) = bfce7c87f9e70977588821bf72e6759161887610
-Size (pilrc-2.9p9.tgz) = 243935 bytes
-SHA1 (pilrc-2.9p10.diff) = 6c91b19e864f116f5dd4d28c8f7714e15c257244
-Size (pilrc-2.9p10.diff) = 6459 bytes

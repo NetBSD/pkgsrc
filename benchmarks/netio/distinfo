@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2001/04/20 09:10:07 agc Exp $
-
-SHA1 (netio114.zip) = 992f8e2d4cee6a268231e8d9aa296d48e687abc7
-Size (netio114.zip) = 210744 bytes
-SHA1 (patch-aa) = dda59d9542d4b99eecb7274f8f3275159fe17795

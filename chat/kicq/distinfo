@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/03/15 16:48:15 skrll Exp $
-
-SHA1 (kicq-1.0.0.tar.gz) = 97c96ccc8c73290be37045a6f609a293c4af6212
-Size (kicq-1.0.0.tar.gz) = 704919 bytes
-SHA1 (patch-aa) = 021b142e77fd7b2308c223859019fcf6b1c0812b
-SHA1 (patch-ab) = f7713f84bc1475b5c7666b509f7e25d13d3ef828

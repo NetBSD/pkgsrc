@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/21 19:02:33 zuntum Exp $
-${QMAILDIR}/bin/dot-forward
-${QMAILDIR}/man/man1/dot-forward.1
-${QMAILDIR}/man/cat1/dot-forward.0

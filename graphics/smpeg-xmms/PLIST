@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/10 13:32:34 jmmv Exp $
-lib/xmms/Input/libsmpeg_xmms.a
-lib/xmms/Input/libsmpeg_xmms.la
-lib/xmms/Input/libsmpeg_xmms.so
-@comment in xmms: @dirrm lib/xmms/Input

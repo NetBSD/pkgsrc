@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/03/05 12:51:12 wiz Exp $
-
-SHA1 (id3v2-0.1.9.tar.gz) = 80978679b4925485085b244b9615088c26eecba7
-Size (id3v2-0.1.9.tar.gz) = 21144 bytes
-SHA1 (patch-aa) = 49fb4721c94edd4edbbaef406b97a3879dc2999b

@@ -1,5 +1,0 @@
-Purpose: To use intrusion fingerprints to track down compromised hosts.
-Scope:   TCP/UDP/ICMP (No fragmentation reassembly)
-Specs:   Program can create somewhat arbitrary UDP/ICMP/TCP packets/streams
-         and send them to a range of hosts.  It also listens promiscuously
-         for predefined intrusion "fingerprints".
