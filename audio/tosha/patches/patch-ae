@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.1 1999/03/12 16:44:14 hubertf Exp $
+$NetBSD: patch-ae,v 1.2 1999/12/25 23:45:23 wiz Exp $
 
 --- scsi.c.orig	Fri Mar 12 17:41:59 1999
 +++ scsi.c	Fri Mar 12 17:42:26 1999
 @@ -0,0 +1,1194 @@
-+/*	$OpenBSD: scsi.c,v 1.2 1996/07/31 09:25:48 niklas Exp $	*/
++/*	OpenBSD Id: scsi.c,v 1.2 1996/07/31 09:25:48 niklas Exp 	*/
 +
 +/* Copyright (c) 1994 HD Associates
 + * (contact: dufault@hda.com)
@@ -36,7 +36,7 @@ $NetBSD: patch-ae,v 1.1 1999/03/12 16:44:14 hubertf Exp $
 + * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 + * SUCH DAMAGE.
 + *
-+ *	$FreeBSD: scsi.c,v 1.6 1995/05/30 05:47:26 rgrimes Exp $
++ *	FreeBSD Id: scsi.c,v 1.6 1995/05/30 05:47:26 rgrimes Exp 
 + */
 +#include <stdlib.h>
 +#include <stdio.h>
