@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2001/04/09 11:59:43 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2001/05/14 16:34:38 drochner Exp $
 
 DISTNAME=		ImageMagick-5.2.8
 CATEGORIES=		graphics
@@ -34,7 +34,7 @@ CFLAGS=			-O
 # pkg, however).
 CONFIGURE_ARGS+=	--without-perl --without-dps --without-fpx \
 			--without-hdf --without-jbig --without-threads \
-			--without-ttf --without-xml
+			--without-ttf --without-wmf --without-xml
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Copyright.txt ${WRKSRC}/QuickStart.txt \
