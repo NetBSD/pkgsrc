@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST.themes,v 1.1.1.1 1999/10/07 17:26:15 jlam Exp $
-share/asclock/Freeamp/Makefile
-share/asclock/Freeamp/Makefile.am
-share/asclock/Freeamp/Makefile.in
+@comment $NetBSD: PLIST.themes,v 1.2 1999/10/07 17:37:28 jlam Exp $
 share/asclock/Freeamp/beats.xpm
 share/asclock/Freeamp/clock.xpm
 share/asclock/Freeamp/config
