@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/11/09 16:43:42 wiz Exp $
+
+--- port.h.orig	Mon Jan 24 16:13:54 2000
++++ port.h
+@@ -164,6 +164,10 @@
+ #define TITLE "Snes9X: Linux"
+ #endif
+ 
++#ifdef __NetBSD__
++#define TITLE "Snes9X: NetBSD"
++#endif
++
+ #ifndef TITLE
+ #define TITLE "Snes9x"
+ #endif
