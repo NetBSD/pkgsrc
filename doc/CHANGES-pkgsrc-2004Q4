@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.37 2005/01/19 13:17:57 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.38 2005/01/21 01:10:35 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -83,3 +83,5 @@ Pullup ticket 231 - requested by Min Sik Kim
 build fix for canna
 Pullup ticket 230 - requested by Min Sik Kim
 security fix for awstats
+Pullup ticket 235 - requested by Dan McMahill
+build fix for octave-forge
