@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/23 23:45:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/29 23:06:31 fredb Exp $
 #
 
 DISTNAME=		netatalk-990130
@@ -12,6 +12,9 @@ HOMEPAGE=		http://www.umich.edu/~rsug/netatalk/
 
 CONFLICTS=		netatalk-asun-[0-9]*
 CONFLICTS+=		netatalk-19981109
+
+do-configure:
+	${CP} ${FILESDIR}/shlib_version ${WRKSRC}/libatalk
 
 post-install:
 	${RM} ${PREFIX}/share/examples/netatalk/AppleVolumes.system.orig
