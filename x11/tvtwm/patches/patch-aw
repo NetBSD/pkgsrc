@@ -1,0 +1,85 @@
+Index: twm.c
+===================================================================
+RCS file: /home/siren/src/tvtwm/twm.c,v
+retrieving revision 1.1.1.1
+retrieving revision 1.2
+diff -u -r1.1.1.1 -r1.2
+--- twm.c	1999/08/08 05:46:53	1.1.1.1
++++ twm.c	1999/08/08 05:56:58	1.2
+@@ -142,6 +142,7 @@
+ #include <signal.h>
+ #include <fcntl.h>
+ #include <sys/wait.h>
++#include <unistd.h>
+ #include "twm.h"
+ #include "add_window.h"
+ #include "gc.h"
+@@ -153,9 +154,12 @@
+ #include "gram.h"
+ #include "screen.h"
+ #include "iconmgr.h"
++#include "list.h"
++#include "icons.h"
+ #include <X11/Xproto.h>
+ #include <X11/Xatom.h>
+ #include <X11/bitmaps/root_weave>
++#include <X11/Xmu/Error.h>
+ #include "vdt.h"
+ #define XK_LATIN1
+ #include <X11/keysymdef.h>
+@@ -230,6 +234,10 @@
+ 
+ extern void assign_var_savecolor();
+ 
++void InternUsefulAtoms (void);
++void InitVariables(void);
++void CreateFonts (void);
++
+ /***********************************************************************
+  *
+  *  Procedure:
+@@ -238,7 +246,7 @@
+  ***********************************************************************
+  */
+ 
+-main(argc, argv, environ)
++int main(argc, argv, environ)
+     int argc;
+     char **argv;
+     char **environ;
+@@ -727,6 +735,8 @@
+     }
+ 
+     HandleEvents();
++    exit(0);
++      /* NOTREACHED */
+ }
+ 
+ /***********************************************************************
+@@ -827,7 +837,7 @@
+  ***********************************************************************
+  */
+ 
+-InitVariables()
++void InitVariables(void)
+ {
+     FreeList(&Scr->BorderColorL);
+     FreeList(&Scr->IconBorderColorL);
+@@ -1020,7 +1030,7 @@
+ }
+ 
+ 
+-RestoreWithdrawnLocation (tmp)
++void RestoreWithdrawnLocation (tmp)
+     TwmWindow *tmp;
+ {
+     int gravx, gravy;
+@@ -1227,7 +1237,7 @@
+ Atom _XA_TWM_PROCESS;   /* used to record where twm is */
+ Atom _XA_TWM_MACHINE;
+ 
+-InternUsefulAtoms ()
++void InternUsefulAtoms (void)
+ {
+     /* 
+      * Create priority colors if necessary.
