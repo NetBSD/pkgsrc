@@ -1,5 +1,5 @@
 #!/bin/sh
-#	$NetBSD: do-sandbox-upload,v 1.1 2005/01/10 18:52:25 hubertf Exp $
+#	$NetBSD: do-sandbox-upload,v 1.2 2005/01/10 20:00:30 hubertf Exp $
 
 #
 # Script to start a sandbox build
@@ -8,4 +8,4 @@
 #
 
 sh=`which sh`
-chroot /usr/sandbox $sh -c "cd /usr/cvs.local/pkgsrc/ ; $sh mk/bulk/upload $@"
+chroot /usr/sandbox $sh -c "cd /usr/pkgsrc/ ; $sh mk/bulk/upload $@"
