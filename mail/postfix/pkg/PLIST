@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/09/14 01:54:23 simonb Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/09/14 02:07:00 simonb Exp $
 etc/mailer.conf.postfix
 libexec/postfix/bounce
 libexec/postfix/cleanup
@@ -31,6 +31,7 @@ man/cat5/virtual.0
 man/cat8/bounce.0
 man/cat8/cleanup.0
 man/cat8/defer.0
+man/cat8/error.0
 man/cat8/local.0
 man/cat8/master.0
 man/cat8/pickup.0
@@ -58,6 +59,7 @@ man/man5/virtual.5
 man/man8/bounce.8
 man/man8/cleanup.8
 man/man8/defer.8
+man/man8/error.8
 man/man8/local.8
 man/man8/master.8
 man/man8/pickup.8
