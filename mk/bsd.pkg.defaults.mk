@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.28 2001/12/21 03:59:15 fredb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.29 2001/12/26 21:20:26 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -386,11 +386,17 @@ APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs
 # Possible: Any valid directory                                              
 # Default: ${LOCALBASE}/share/httpd/htdocs                                   
 
-APACHE_USER?=	www
+APACHE_SUEXEC_USER?=	www
 # Used in the apache package to specify the user allowed to execute
 # the `suexec' wrapper.
 # Possible: any user name
 # Default: www
+
+#APACHE_SUEXEC_CONFIGURE_ARGS=	--suexec-uidmin=1000
+# Used in the apache package to specify additional suexec options to be
+# passed to the Apache configure script.
+# Possible: any --suexec-* options recognized by the Apache configure script.
+# Default: not defined
 
 ARLA_CACHE?=	${LOCALBASE}/cache
 # Specifies the location of the cache used by arla. Should be on a local disk.
