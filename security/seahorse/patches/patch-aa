@@ -1,33 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2003/05/30 15:25:09 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2004/10/20 20:45:55 jmmv Exp $
 
---- src/main.c.orig	2003-04-14 16:22:32.000000000 +0200
-+++ src/main.c
-@@ -29,7 +29,7 @@
- #include "seahorse-libdialogs.h"
+--- agent/seahorse-agent.c.orig	2004-10-15 00:12:08.000000000 +0200
++++ agent/seahorse-agent.c
+@@ -264,8 +264,12 @@ main (int argc, char *argv[])
+     secmem_init (65536);
  
- static gchar *import = NULL;
--static gchar *encrypt = NULL;
-+static gchar *encrypt_opt = NULL;
- static gchar *sign = NULL;
- static gchar *encrypt_sign = NULL;
- static gchar *decrypt = NULL;
-@@ -40,7 +40,7 @@ static const struct poptOption options[]
- 	{ "import", 'i', POPT_ARG_STRING, &import, 0,
- 	  N_("Import keys from the file"), N_("FILE") },
+     /* We need to drop privileges completely for security */
++#ifdef _GNU_SOURCE
+     if (setresuid (getuid (), getuid (), getuid ()) == -1 ||
+         setresgid (getgid (), getgid (), getgid ()) == -1)
++#else
++    if (setuid (getuid ()) == -1 || setgid (getgid ()) == -1)
++#endif
+         err (1, _("couldn't drop privileges properly"));
  
--	{ "encrypt", 'e', POPT_ARG_STRING, &encrypt, 0,
-+	{ "encrypt", 'e', POPT_ARG_STRING, &encrypt_opt, 0,
- 	  N_("Encrypt file"), N_("FILE") },
- 
- 	{ "sign", 's', POPT_ARG_STRING, &sign, 0,
-@@ -137,8 +137,8 @@ main (int argc, char **argv)
- 			return 0;
- 		}
- 	}
--	if (encrypt != NULL)
--		do_encrypt (sctx, encrypt, seahorse_op_encrypt_file, _("Encrypt file is %s"));
-+	if (encrypt_opt != NULL)
-+		do_encrypt (sctx, encrypt_opt, seahorse_op_encrypt_file, _("Encrypt file is %s"));
- 	if (sign != NULL) {
- 		new_path = seahorse_op_sign_file (sctx, sign, &err);
- 		
+     gtk_init (&argc, &argv);
