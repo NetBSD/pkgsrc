@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/01/21 11:18:44 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2004/03/10 18:35:32 jlam Exp $
 
 DISTNAME=       xpm-3.4k
 PKGREVISION=	1
@@ -13,11 +13,11 @@ COMMENT=	The X Pixmap library
 USE_BUILDLINK3=	# defined
 USE_IMAKE=	# defined
 
-BUILDLINK_CHECK_BUILTIN.xpm=	YES
+CHECK_BUILTIN.xpm=	yes
 
-.include "buildlink3.mk"
+.include "builtin.mk"
 
-.if ${BUILDLINK_IS_BUILTIN.xpm} == "YES"
+.if !empty(IS_BUILTIN.xpm:M[yY][eE][sS])
 PKG_SKIP_REASON= "${PKGNAME} is part of your X11 distribution"
 .endif
 
