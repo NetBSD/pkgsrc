@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1153 2003/12/09 06:55:46 xtraeme Exp $
+$NetBSD: TODO,v 1.1154 2003/12/09 08:11:59 cube Exp $
 
 Suggested new packages
 ======================
@@ -113,7 +113,7 @@ Suggested package updates
 	o Xbae-4.50.0
 	o abiword-2.0.1 [pkgsrc-wip]
 	o amanda-2.4.4p1
-	o anjuta-1.2.0
+	o anjuta-1.2.0 [cube]
 	o atari800-1.3.1
 	o atk-1.4.1 [pkg/23684]
 	o autogen-5.5.6
