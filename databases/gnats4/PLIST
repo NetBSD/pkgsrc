@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/06 18:33:21 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/08 09:05:20 seb Exp $
 bin/edit-pr
 bin/getclose
 bin/install-sid
@@ -14,14 +14,6 @@ etc/gnats/defaults/responsible
 etc/gnats/defaults/states
 etc/gnats/defaults/submitters
 etc/gnats/gnatsd.host_access
-info/gnats-faq.info
-info/gnats.info
-info/gnats.info-1
-info/gnats.info-2
-info/gnats.info-3
-info/gnats.info-4
-info/gnats.info-5
-info/gnats.info-6
 libexec/gnats/at-pr
 libexec/gnats/check-db
 libexec/gnats/delete-pr
