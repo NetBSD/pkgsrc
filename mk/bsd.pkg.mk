@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.757 2001/06/12 13:17:01 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.758 2001/06/12 20:30:09 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -227,16 +227,21 @@ DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
 .if defined(USE_LIBINTL)
 .if exists(/usr/include/libintl.h)
 .if defined(GNU_CONFIGURE)
-CONFIGURE_ENV+=	LIBS="${LIBS} -lintl"
+LIBS+=		-lintl
 .endif
 .else
 DEPENDS+=	gettext-lib>=0.10.35nb1:../../devel/gettext-lib
 .if defined(GNU_CONFIGURE)
 CPPFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV+=	LIBS="${LIBS} -L${LOCALBASE}/lib -lintl"
+LIBS+=		-L${LOCALBASE}/lib -lintl
 .endif
 .endif
 .endif
+.endif
+
+# If GNU_CONFIGURE is defined, then pass LIBS to the GNU configure script.
+.if defined(GNU_CONFIGURE)
+CONFIGURE+=	LIBS="${LIBS}"
 .endif
 
 LIBTOOL_REQD=		1.4.20010219nb6
