@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/04/09 13:18:07 wiz Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2002/06/23 18:45:41 jlam Exp $
 #
 
 COMMENT=	Fonts
@@ -9,8 +9,9 @@ SUBDIR+=	acroread-chtfont
 SUBDIR+=	acroread-font-share
 SUBDIR+=	acroread-jpnfont
 SUBDIR+=	acroread-korfont
-SUBDIR+=	arphicttf
+SUBDIR+=	arphic-ttf
 SUBDIR+=	bakoma-fonts
+SUBDIR+=	dbz-ttf
 SUBDIR+=	freefonts
 SUBDIR+=	ghostscript-fonts
 SUBDIR+=	intlfonts
@@ -24,10 +25,12 @@ SUBDIR+=	ko-kaist
 SUBDIR+=	ko-mizi
 SUBDIR+=	ko-x11fonts
 SUBDIR+=	mglfonts
-SUBDIR+=	mkttfdir
+SUBDIR+=	mkfontalias
+SUBDIR+=	mkfontscale
 SUBDIR+=	monafonts
 SUBDIR+=	mozilla-fonts
 SUBDIR+=	ms-ttf
+SUBDIR+=	p5-Font-TTF
 SUBDIR+=	watanabe_vfont
 
 .include "../mk/bsd.pkg.subdir.mk"

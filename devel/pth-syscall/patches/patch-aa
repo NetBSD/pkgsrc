@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.2.2 2002/06/23 18:44:58 jlam Exp $
+
+--- Makefile.in.orig	Thu Apr  5 10:27:27 2001
++++ Makefile.in
+@@ -59,7 +59,7 @@
+ MKFLAGS     = $(MFLAGS) DESTDIR=$(DESTDIR)
+ LIBS        = @LIBS@
+ SHTOOL      = $(srcdir)/shtool
+-LIBTOOL     = $(C)libtool
++LIBTOOL     = @LIBTOOL@
+ RM          = rm -f
+ RMDIR       = rmdir
+ TRUE        = true
+@@ -232,14 +232,14 @@
+ 	$(SHTOOL) install -c -m 644 $(S)pth.m4 $(DESTDIR)$(datadir)/aclocal/pth.m4
+ 	$(SHTOOL) install -c -m 644 pth.h $(DESTDIR)$(includedir)/pth.h
+ 	@umask 022; $(LIBTOOL) --mode=install \
+-	$(SHTOOL) install -c libpth.la $(DESTDIR)$(libdir)/libpth.la
++	install -c libpth.la $(DESTDIR)$(libdir)/libpth.la
+ install-pthread:
+ 	$(SHTOOL) install -c -m 755 pthread-config $(DESTDIR)$(bindir)/pthread-config
+ 	$(SHTOOL) install -c -m 644 $(S)pthread-config.1 $(DESTDIR)$(mandir)/man1/pthread-config.1
+ 	$(SHTOOL) install -c -m 644 pthread.h $(DESTDIR)$(includedir)/pthread.h
+ 	$(SHTOOL) install -c -m 644 $(S)pthread.3 $(DESTDIR)$(mandir)/man3/pthread.3
+ 	@umask 022; $(LIBTOOL) --mode=install \
+-	$(SHTOOL) install -c libpthread.la $(DESTDIR)$(libdir)/libpthread.la
++	install -c libpthread.la $(DESTDIR)$(libdir)/libpthread.la
+ 
+ #   uninstall the package
+ uninstall:

@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1.2.2 2002/06/23 18:46:14 jlam Exp $
+
+--- config.orig	Mon Aug  6 21:06:13 2001
++++ config
+@@ -57,20 +57,23 @@
+   LDFLAGS="$LDFLAGS `sdl-config --libs`"
+ fi
+ 
+-POSDOT=`expr index $SDLVER '.'`
+-POSDOTp=`expr $POSDOT - 1`
+-POSDOTn=`expr $POSDOT + 1`
+-SDL_MAJ=`expr substr $SDLVER 1 $POSDOTp`
+-LEN=`expr length $SDLVER`
+-LEN=`expr $LEN - $POSDOT`
+-SDLVER=`expr substr $SDLVER $POSDOTn $LEN`
+-POSDOT=`expr index $SDLVER '.'`
+-POSDOTp=`expr $POSDOT - 1`
+-POSDOTn=`expr $POSDOT + 1`
+-SDL_MIN=`expr substr $SDLVER 1 $POSDOTp`
+-LEN=`expr length $SDLVER`
+-LEN=`expr $LEN - $POSDOT`
+-SDL_MIC=`expr substr $SDLVER $POSDOTn $LEN`
++#POSDOT=`expr index $SDLVER '.'`
++#POSDOTp=`expr $POSDOT - 1`
++#POSDOTn=`expr $POSDOT + 1`
++#SDL_MAJ=`expr substr $SDLVER 1 $POSDOTp`
++SDL_MAJ=`echo $SDLVER |  sed -e 's/\([0-9]*\).*/\1/'`
++#LEN=`expr length $SDLVER`
++#LEN=`expr $LEN - $POSDOT`
++#SDLVER=`expr substr $SDLVER $POSDOTn $LEN`
++#POSDOT=`expr index $SDLVER '.'`
++#POSDOTp=`expr $POSDOT - 1`
++#POSDOTn=`expr $POSDOT + 1`
++#SDL_MIN=`expr substr $SDLVER 1 $POSDOTp`
++SDL_MIN=`echo $SDLVER |  sed -e 's/[0-9]\.\([0-9]*\).*/\1/'`
++#LEN=`expr length $SDLVER`
++#LEN=`expr $LEN - $POSDOT`
++#SDL_MIC=`expr substr $SDLVER $POSDOTn $LEN`
++SDL_MIC=`echo $SDLVER |  sed -e 's/[0-9]\.[0-9]\.\([0-9]*\).*/\1/'`
+ 
+ case "$TARGET" in
+   cygwin* | CYGWIN*)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/04/14 15:13:59 jlam Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2002/06/23 18:45:19 jlam Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -14,7 +14,7 @@ PATCHFILES=	nvi-1.79.m17n-19991117.diff.gz
 MAINTAINER=	itojun@itojun.org
 COMMENT=	Clone of vi/ex, with multilingual patch
 
-CONFLICTS=	vigor-[0-9]*
+CONFLICTS=	vigor-[0-9]* nvi-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
 GNU_CONFIGURE=	YES
@@ -27,9 +27,8 @@ CONFIGURE_ARGS+=--enable-multibyte --program-prefix=n
 PATCH_FUZZ_FACTOR=	-F1
 
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
-DEPENDS+=	Canna-lib>=3.5.2:../../japanese/canna-lib
-USE_X11=	YES
-CONFIGURE_ARGS+=--enable-canna=${X11PREFIX}
+.include "../../inputmethod/canna-lib/buildlink.mk"
+CONFIGURE_ARGS+=--enable-canna=${BUILDLINK_DIR}
 CANNA_OPT.euc-jp=canna cannactrl cannakey=
 CANNA_OPT.sjis=${CANNA_OPT.euc-jp}
 CANNA_OPT.iso-2022-jp=${CANNA_OPT.euc-jp}

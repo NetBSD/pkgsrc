@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2002/04/10 15:45:46 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6.2.1 2002/06/23 18:43:53 jlam Exp $
 #
 # This Makefile fragment is included by packages that use bonobo.
 #
@@ -30,6 +30,7 @@ BUILDLINK_FILES.bonobo+=	lib/libbonobo.*
 BUILDLINK_FILES.bonobo+=	lib/libbonobox.*
 BUILDLINK_FILES.bonobo+=	lib/libbonobo-print.*
 BUILDLINK_FILES.bonobo+=	lib/libefs.*
+BUILDLINK_FILES.bonobo+=	share/idl/Bonobo*.idl
 
 CPPFLAGS+=			-I${BUILDLINK_DIR}/include/gnome-1.0
 

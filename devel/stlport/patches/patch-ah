@@ -1,3 +1,4 @@
+$NetBSD: patch-ah,v 1.1.2.1 2002/06/23 18:45:11 jlam Exp $
 --- stlport/stl/_config.h.orig	Sat Nov 10 19:51:04 2001
 +++ stlport/stl/_config.h	Sat Nov 10 19:51:28 2001
 @@ -174,7 +174,7 @@

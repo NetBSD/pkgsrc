@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.3.2.2 2002/06/23 18:45:29 jlam Exp $
+
+--- iodev/harddrv.cc.orig	Sun Mar 24 19:47:14 2002
++++ iodev/harddrv.cc
+@@ -1000,8 +1000,8 @@
+ 
+ 				    if (!LoEj && !Start) { // stop the disc
+ 					  BX_PANIC(("Stop disc not implemented"));
+-				    } else if (!LoEj && Start) { // start the disc and read the TOC
+-					  BX_PANIC(("Start disc not implemented"));
++				    } else if (!LoEj && Start) { // Start (spin up) the disc.
++                                          BX_HD_THIS s[1].cdrom.cd->start_cdrom();
+ 				    } else if (LoEj && !Start) { // Eject the disc
+                                           atapi_cmd_nop();
+                                           if (BX_HD_THIS s[1].cdrom.ready) {

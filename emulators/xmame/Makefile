@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.73 2002/05/07 15:56:24 kristerw Exp $
+# $NetBSD: Makefile,v 1.73.2.1 2002/06/23 18:45:39 jlam Exp $
 #
 
 DISTNAME=		xmame-0.60.1
 CATEGORIES=		emulators games x11
-MASTER_SITES=		http://x.mame.net/download/
+MASTER_SITES=		http://x.mame.net/download/ \
+			http://roms2.mame.dk/emu/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		kristerw@netbsd.org
@@ -21,6 +22,12 @@ TARGET=			${PKGBASE}
 UNLIMIT_RESOURCES=	datasize
 
 .include "../../mk/bsd.prefs.mk"
+
+.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm")
+.if (${CFLAGS:M-O2} == "-O2")
+CFLAGS=         ${CFLAGS:S/-O2/-O0/} 
+.endif
+.endif
 
 ROMPATH=		${PREFIX}/share/${TARGET}
 SPOOLDIR=		/var/games/${TARGET}

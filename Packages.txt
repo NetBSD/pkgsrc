@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.244 2002/04/27 02:42:22 enami Exp $
+# $NetBSD: Packages.txt,v 1.244.2.1 2002/06/23 18:37:13 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -296,6 +296,27 @@ get an overview of what will be set there by default.  Environment
 variables such as LOCALBASE, and X11BASE can be set in /etc/mk.conf to
 save having to remember to set them each time you want to use pkgsrc.
 
+Occasionally, people want to "look under the covers" to see what is
+going on when a package is building or being installed. This may be
+for debugging purposes, or out of simple curiosity. A number of utility
+values have been added to help with this.
+
+(1) If you invoke the make(1) command with PKG_DEBUG_LEVEL=2, then a
+huge amount of information will be displayed.  As a worked example,
+
+	make patch PKG_DEBUG_LEVEL=2
+
+will show all the commands that are invoked, up to and including the
+"patch stage".
+
+(2) If you want to know the value of a certain make(1) definition, then
+the VARNAME definition should be used, in conjunction with the show-var
+target. e.g.
+
+	make show-var VARNAME=DISTFILES
+
+will show the expansion of the make(1) variable "DISTFILES".
+
 If you want to de-install and re-install a binary package that you've
 created (see next section), that you put into pkgsrc/packages manually or
 that's located on a remote FTP server, you can use the the "bin-install"
@@ -511,7 +532,7 @@ wasted by recompiling.
  ===============================================
 
 If you don't want all the pkgs nuked from a machine (rendering it useless
-for anything but pkg compiling), there the possibility of doing the pkg
+for anything but pkg compiling), there is the possibility of doing the pkg
 bulk build inside a chroot environment. 
 
 The first step to do so is setting up a chroot sandbox, e.g. /usr/sandbox.
@@ -533,6 +554,9 @@ items are present and properly configures:
  * adjust .../mk/bulk/build.conf
 
 !!! Don't forget to install X !!!
+If you are a developer and want to upload the resulting binary packages 
+to ftp.netbsd.org, make sure you are using the default X version for your
+architecture and release (up to 1.6, that is 3.3.6 for all architectures).
 
 Next thing you will want to is make sure /usr/sandbox/usr/pkgsrc contains a
 fresh checkout of pkgsrc (e.g. from anoncvs). Do not mount/link this to the
@@ -864,8 +888,8 @@ to when dealing with the PLIST file (or files, see below!).
    their file. To handle this case, PLIST will be preprocessed before
    actually used, and the symbol "${MACHINE_ARCH}" will be replaced by
    what "uname -p" gives. The same is done if the string ${MACHINE_GNU_ARCH}
-   is embedded in PLIST somewhere - use this on packages that use GNU
-   autoconfigure.
+   is embedded in PLIST somewhere - use this on packages that have GNU
+   autoconf created configure scripts.
 
    Legacy note: There used to be a symbol "<$ARCH>" that was replaced by
    the output of "uname -m", but that's no longer supported and has been
@@ -1720,11 +1744,11 @@ debugging aids.
  10 FAQs & features of the package system
  ========================================
 
- 10.1 Packages using GNU autoconfig
- ==================================
+ 10.1 Packages using GNU autoconf
+ ================================
 
-If your package uses GNU autoconf, add the following to your package's
-Makefile:
+If your package uses GNU autoconf created configure scripts, add the following
+to your package's Makefile:
 
 	GNU_CONFIGURE= yes
 
@@ -2199,7 +2223,9 @@ By default, a new user will have home directory /nonexistent, and login shell
 The package Makefile must also include "../../mk/bsd.pkg.install.mk" prior to
 the inclusion of bsd.pkg.mk.  This will cause the users and groups to be
 created at pre-install time, and the admin will be prompted to remove them at
-post-deinstall time.
+post-deinstall time.  Automatic creation of the users and groups can be
+toggled on and off by setting the environment variable PKG_CREATE_USERGROUP
+prior to package installation.
 
 
  10.23 How to handle compiler bugs
@@ -2290,6 +2316,73 @@ bootstrap the necessary utilities (BSD make, pkg_*, ...). See
 http://www.zoularis.org/ for information on boostrapping.
 
 
+ 10.27 Configuration files handling and placement
+ ================================================
+
+The global variable PKG_SYSCONFBASE (and some others) can be set by the
+system administrator in /etc/mk.conf to define the place where
+configuration files get installed. Therefore, packages must be adapted to
+support this feature. Keep in mind that you should only install files that
+are strictly necessary in the configuration directory, files that can
+go to $PREFIX/share should go there.
+
+We will take a look at available variables first (bsd.pkg.mk contains more
+information). PKG_SYSCONFDIR is where the configuration files for a package
+may be found (that is, the full path, e.g. /etc or /usr/pkg/etc). This
+value may be customized in various ways:
+
+ 1) PKG_SYSCONFBASE is the main config directory under which all package
+    configuration files are to be found. Users will typically want to set
+    it to /etc, or accept the default location of $PREFIX/etc.
+
+ 2) PKG_SYSCONFSUBDIR is the subdirectory of PKG_SYSCONFBASE under which
+    the configuration files for a particular package may be found. Defaults
+    to $SYSCONFBASE
+
+ 3) PKG_SYSCONFVAR is the special suffix used to distinguish any overriding
+    values for a particular package (see next item). It defaults to
+    ${PKGBASE}, but for a collection of related packages that should all
+    have the same PKG_SYSCONFDIR value, it can be set in each of the
+    package Makefiles to a common value.
+
+ 4) PKG_SYSCONFDIR.${PKG_SYSCONFVAR} overrides the value of
+    ${PKG_SYSCONFDIR} for packages with the same value for PKG_SYSCONFVAR.
+
+    As an example, all the various KDE packages may want to set
+    PKG_SYSCONFVAR to "kde" so admins can set ${PKG_SYSCONFDIR.kde} in
+    /etc/mk.conf to define where to install KDE config files.
+
+Programs' configuration directory should be defined during the configure
+stage. Packages that use GNU autoconf can usually do this by using the
+--sysconfdir parameter, but this brings some problems as we will see now.
+When you change this pathname in packages, you should not allow them to
+install files in that directory directly. Instead they need to install
+those files under share/examples/${PKGNAME} so PLIST can register them.
+
+Once you have the required configuration files in place (under the
+share/examples directory) the variable CONF_FILES should be set to copy
+them into PKG_SYSCONFDIR. The contents of this variable is formed by pairs
+of filenames; the first element of the pair specifies the file inside the
+examples directory (registered by PLIST) and the second element specifies
+the target file. This is done this way to allow binary packages to place
+files in the right directory using INSTALL/DEINSTALL scripts which are
+created automatically.  The package Makefile must also include
+"../../mk/bsd.pkg.install.mk" prior to the inclusion of bsd.pkg.mk to use
+these automatically generated scripts.  The automatic copying of config
+files can be toggled by setting the environment variable PKG_CONFIG prior
+to package installation.
+
+Here is an example, taken from mail/mutt/Makefile:
+
+	EGDIR=	${PREFIX}/share/doc/mutt/samples
+	CONF_FILES=	${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+
+As you can see, this package installs configuration files inside EGDIR,
+which are registered by PLIST. After that, the variable CONF_FILES lists
+the installed file first and then the target file. Users will also get an
+automatic message when files are installed using this method.
+
+
  11 Submitting & Committing
  ==========================
 
@@ -2349,6 +2442,10 @@ Please note all package updates/additions in doc/pkg-CHANGES! It's very
 important to keep this file up to date and conforming to the existing
 format, because it will be used by scripts to automatically update pages on
 www.netbsd.org and other sites.
+
+For new packages, "cvs import" is preferred to "cvs add" because
+the former gets everything with a single command, and provides a
+consistent tag.
 
 
  11.3 Updating a Package to a Newer Version

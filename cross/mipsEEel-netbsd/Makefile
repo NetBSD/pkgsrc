@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2001/09/27 23:17:52 jlam Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/23 18:43:01 jlam Exp $
 
 DISTNAME=	cross-${TARGET_ARCH}-${DISTVERSION}
 TARGET_ARCH=	mipsEEel-netbsd
 DISTVERSION=	1.0.0
+PKGREVISION=	1
 CATEGORIES+=	cross lang
-MAINTAINER=	kent@netbsd.org
+MAINTAINER=	packages@netbsd.org
 COMMENT=	Cross-compiler for NetBSD/PlayStation2 kernel
 
 BZCAT=		/usr/bin/bzcat
@@ -20,11 +21,9 @@ PLIST_SUBST+=	SUBDIR="cross-ps2" TARGET_ARCH="${TARGET_ARCH}" \
 #
 # binutils
 #
-MASTER_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/misc/tshiozak/PlayStation2/GPLed-from-SCEI/binutils-2.9EE/
-DISTFILES+=		binutils-2.9EE.linux.patch.bz2
-BINUTILS_PATCH1=	${_DISTDIR}/binutils-2.9EE.linux.patch.bz2
-DISTFILES+=		binutils-ps2linux-0.9.patch.bz2
-BINUTILS_PATCH2=	${_DISTDIR}/binutils-ps2linux-0.9.patch.bz2
+MASTER_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/misc/hamajima/PlayStation2/GPLed-from-SCEI/binutils-2.9EE/
+DISTFILES+=		binutils-ps2linux-1.0.0.patch.bz2
+BINUTILS_PATCH1=	${_DISTDIR}/binutils-ps2linux-1.0.0.patch.bz2
 
 BINUTILS_DISTNAME=	binutils-2.9EE
 BINUTILS_WRKSRC=	${WRKDIR}/${BINUTILS_DISTNAME}
@@ -34,16 +33,18 @@ EXTRACT_ONLY=		${BINUTILS_DISTNAME}.tar.gz
 #
 # gcc
 #
-MASTER_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/misc/tshiozak/PlayStation2/GPLed-from-SCEI/gcc-2.95.2EE/
+MASTER_SITES+=		ftp://ftp.netbsd.org/pub/NetBSD/misc/hamajima/PlayStation2/GPLed-from-SCEI/gcc-2.95.2EE/
 GCC_VERSION=		2.95.2
 GCC_DISTNAME=		gcc-${GCC_VERSION}
 GCC_WRKSRC=		${WRKDIR}/${GCC_DISTNAME}
 DISTFILES+=		${GCC_DISTNAME}.tar.gz
 EXTRACT_ONLY+=		${GCC_DISTNAME}.tar.gz
-DISTFILES+=		gcc-${GCC_VERSION}.EE-linux.patch.bz2
-GCC_PATCH1=		${_DISTDIR}/gcc-${GCC_VERSION}.EE-linux.patch.bz2
-DISTFILES+=		gcc-ps2linux-0.9.1.patch.bz2
-GCC_PATCH2=		${_DISTDIR}/gcc-ps2linux-0.9.1.patch.bz2
+DISTFILES+=		gcc-${GCC_VERSION}-frankengcc-patches.patch.bz2
+GCC_PATCH0=		${_DISTDIR}/gcc-${GCC_VERSION}-frankengcc-patches.patch.bz2
+DISTFILES+=		gcc-${GCC_VERSION}-single-float-const.patch.bz2
+GCC_PATCH1=		${_DISTDIR}/gcc-${GCC_VERSION}-single-float-const.patch.bz2
+DISTFILES+=		gcc-ps2linux-1.0.0.patch.bz2
+GCC_PATCH2=		${_DISTDIR}/gcc-ps2linux-1.0.0.patch.bz2
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=		autoconf-[0-9]*:../../devel/autoconf
 
@@ -56,7 +57,6 @@ do-install: binutils-install gcc-install
 
 binutils-patch:
 	${BZCAT} ${BINUTILS_PATCH1} | ${PATCH} -d ${BINUTILS_WRKSRC} --forward --quiet -p1 -E
-	${BZCAT} ${BINUTILS_PATCH2} | ${PATCH} -d ${BINUTILS_WRKSRC} --forward --quiet -p1 -E
 	for i in patches/binutils-*; do \
 		${PATCH} -d ${BINUTILS_WRKSRC} --forward --quiet -E < $$i; \
 	done
@@ -74,6 +74,7 @@ binutils-install:
 
 
 gcc-patch:
+	${BZCAT} ${GCC_PATCH0} | ${PATCH} -d ${GCC_WRKSRC} --forward --quiet -p1 -E
 	${BZCAT} ${GCC_PATCH1} | ${PATCH} -d ${GCC_WRKSRC} --forward --quiet -p1 -E
 	${BZCAT} ${GCC_PATCH2} | ${PATCH} -d ${GCC_WRKSRC} --forward --quiet -p1 -E
 	for i in patches/gcc-*; do \
@@ -84,21 +85,20 @@ gcc-configure:
 	${MKDIR} ${GCC_WRKSRC}/obj
 	cd ${GCC_WRKSRC}/obj && ../configure --prefix=${TARGET_DIR} \
 		--enable-shared --target=${TARGET_ARCH} \
-		--enable-languages=c,c++ --with-gnu-as \
+		--enable-languages=c --with-gnu-as \
 		--with-gnu-ld --disable-nls
 	-${RM} ${GCC_WRKSRC}/obj/texinfo/makeinfo/Makefile
 
 gcc-build:
-	-${RM} ${GCC_WRKSRC}/obj/gcc/as
-	-${RM} ${GCC_WRKSRC}/obj/gcc/ld
-	${LN} -s ${BINUTILS_WRKSRC}/obj/gas/as-new ${GCC_WRKSRC}/obj/gcc/as
-	${LN} -s ${BINUTILS_WRKSRC}/obj/ld/ld-new ${GCC_WRKSRC}/obj/gcc/ld
+	${LN} -sf ${BINUTILS_WRKSRC}/obj/gas/as-new ${GCC_WRKSRC}/obj/gcc/as
+	${LN} -sf ${BINUTILS_WRKSRC}/obj/ld/ld-new ${GCC_WRKSRC}/obj/gcc/ld
 	${GMAKE} -C ${GCC_WRKSRC}/obj/libiberty
 #	${GMAKE} -C ${GCC_WRKSRC}/obj/texinfo
 	${GMAKE} -C ${GCC_WRKSRC}/obj/gcc LIBGCC="" LIBGCC1_TEST="" INSTALL_LIBGCC=""
 
 gcc-install:
-	${GMAKE} -C ${GCC_WRKSRC}/obj/gcc install-common install-headers install-cpp lang.install-normal install-driver
+	${GMAKE} -C ${GCC_WRKSRC}/obj/gcc install-common install-headers \
+		install-cpp lang.install-normal install-driver
 
 .include "../../mk/bsd.pkg.mk"
 

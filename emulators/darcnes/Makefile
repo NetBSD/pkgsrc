@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/02/08 14:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2002/06/23 18:45:30 jlam Exp $
 
 DISTNAME=	dn9b0401
 PKGNAME=	darcnes-20010401
@@ -25,6 +25,7 @@ do-install:
 
 .if ( ${OBJECT_FMT} == "a.out" )
 MAKE_FLAGS+=	ASM_FLAGS=-DASM_UNDERBARS
+MAKE_FLAGS+=	NO_MULTIPLE_COMMON_WARNING=-DNO_MULTIPLE_COMMON_WARNING
 .endif
 
 .if ( ${MACHINE_ARCH} == "i386" )

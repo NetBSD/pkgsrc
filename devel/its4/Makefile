@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:38:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/23 18:44:22 jlam Exp $
 #
 
 DISTNAME=	its4-1.1.1
@@ -13,13 +13,9 @@ COMMENT=	static C/C++ code scanner for potential security problems
 
 LICENSE=        no-commercial-use
 
-USE_CONFIGURE=	YES
-
+HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/its4
-
-do-configure:
-	cd ${WRKSRC} && ./configure ${CONFIGURE_ARGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/its4 ${PREFIX}/bin

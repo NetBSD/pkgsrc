@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27.2.2 2002/06/21 23:05:05 jlam Exp $
+# $NetBSD: Makefile,v 1.27.2.3 2002/06/23 18:43:50 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/09/19 09:29:04 max Exp
 #
 
@@ -17,7 +17,7 @@ DEPENDS=	autoconf>=2.13:../../devel/autoconf
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV=		PERL=${PERL5}
-STRIPFLAG=		# none
+_STRIPFLAG_INSTALL=	# none
 
 INFO_FILES=		automake.info
 TEXINFO_OVERRIDE=	YES

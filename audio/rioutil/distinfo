@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1.2.2 2002/06/23 18:39:10 jlam Exp $
+
+SHA1 (rioutil-1.1.2alpha.tar.gz) = d7cd8f21d1337946b7530b8d36d3d1ce2e2e818d
+Size (rioutil-1.1.2alpha.tar.gz) = 277773 bytes
+SHA1 (patch-aa) = 3a5adf41ff1bcf56f2178fb31b31c207dd608a65

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/03/13 17:37:07 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.3.2.1 2002/06/23 18:46:23 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gdk-pixbuf-gnome.
 #
@@ -22,7 +22,7 @@ DEPENDS+=	${BUILDLINK_DEPENDS.gdk-pixbuf-gnome}:../../graphics/gdk-pixbuf-gnome
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gdk-pixbuf-gnome=gdk-pixbuf-gnome
 BUILDLINK_PREFIX.gdk-pixbuf-gnome_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.gdk-pixbuf-gnome=	include/gdk-pixbuf/gnome-canvas-pixbuf.h
+BUILDLINK_FILES.gdk-pixbuf-gnome=	include/gdk-pixbuf-1.0/gdk-pixbuf/gnome-canvas-pixbuf.h
 BUILDLINK_FILES.gdk-pixbuf-gnome+=	lib/libgnomecanvaspixbuf.*
 
 .include "../../graphics/gdk-pixbuf/buildlink.mk"

@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2.2.1 2002/06/23 18:44:09 jlam Exp $
 --- Makefile.in.orig	Sat Nov  3 00:49:25 2001
 +++ Makefile.in	Mon Apr 29 11:14:13 2002
 @@ -436,30 +436,19 @@

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:03:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2002/06/23 18:43:02 jlam Exp $
 ${SUBDIR}/bin/cpp
 ${SUBDIR}/bin/ee-dvp-as
 ${SUBDIR}/bin/ee-dvp-gasp
@@ -6,9 +6,7 @@ ${SUBDIR}/bin/gcov
 ${SUBDIR}/bin/${TARGET_ARCH}-addr2line
 ${SUBDIR}/bin/${TARGET_ARCH}-ar
 ${SUBDIR}/bin/${TARGET_ARCH}-as
-${SUBDIR}/bin/${TARGET_ARCH}-c++
 ${SUBDIR}/bin/${TARGET_ARCH}-c++filt
-${SUBDIR}/bin/${TARGET_ARCH}-g++
 ${SUBDIR}/bin/${TARGET_ARCH}-gasp
 ${SUBDIR}/bin/${TARGET_ARCH}-gcc
 ${SUBDIR}/bin/${TARGET_ARCH}-ld
@@ -27,7 +25,6 @@ ${SUBDIR}/include/bfd.h
 ${SUBDIR}/include/bfdlink.h
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/SYSCALLS.c.X
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/cc1
-${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/cc1plus
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/collect2
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/cpp
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/crtbegin.o
@@ -36,19 +33,15 @@ ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/crtend.o
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/crtendS.o
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/README
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/assert.h
-${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/exception
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/fixed
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/float.h
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/iso646.h
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/limits.h
-${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/new
-${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/new.h
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/proto.h
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/stdarg.h
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/stdbool.h
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/stddef.h
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/syslimits.h
-${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/typeinfo
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/va-alpha.h
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/va-arc.h
 ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include/va-c4x.h
@@ -120,6 +113,7 @@ ${SUBDIR}/${TARGET_ARCH}/lib/ldscripts/mipslit.xr
 ${SUBDIR}/${TARGET_ARCH}/lib/ldscripts/mipslit.xu
 @dirrm ${SUBDIR}/bin
 @dirrm ${SUBDIR}/include
+@dirrm ${SUBDIR}/info
 @dirrm ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}/include
 @dirrm ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}/${GCC_VERSION}
 @dirrm ${SUBDIR}/lib/gcc-lib/${TARGET_ARCH}
@@ -131,4 +125,5 @@ ${SUBDIR}/${TARGET_ARCH}/lib/ldscripts/mipslit.xu
 @dirrm ${SUBDIR}/${TARGET_ARCH}/lib/ldscripts
 @dirrm ${SUBDIR}/${TARGET_ARCH}/lib
 @dirrm ${SUBDIR}/${TARGET_ARCH}
+@dirrm ${SUBDIR}/share
 @dirrm ${SUBDIR}

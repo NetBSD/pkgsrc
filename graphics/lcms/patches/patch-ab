@@ -1,7 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2002/03/15 11:12:57 markd Exp $
-
---- source/cmsmtrx.c	Thu May 18 18:08:13 2000
-+++ source/cmsmtrx.c	Mon Oct 30 09:53:39 2000
+$NetBSD: patch-ab,v 1.4.2.1 2002/06/23 18:46:31 jlam Exp $
+--- source/cmsmtrx.c.orig	Thu May 18 23:08:13 2000
++++ source/cmsmtrx.c	Tue May 14 22:38:58 2002
 @@ -31,6 +31,7 @@
  // Vector & Matrix stuff
  
@@ -10,12 +9,18 @@ $NetBSD: patch-ab,v 1.4 2002/03/15 11:12:57 markd Exp $
  
  
  void cdecl VEC3init(LPVEC3 r, double x, double y, double z);
-@@ -248,7 +249,12 @@
+@@ -242,13 +243,18 @@
+ // support asm at all. Use with care, since this will slow down
+ // all operations
+ 
++#include <sys/param.h>
+ Fixed32 FixedMul(Fixed32 a, Fixed32 b)
+ {
+ 
  // If newest __int64 defined, then use it
  
  #ifdef USE_INT64
 -       __int64 l = (__int64) a * b + 0x8000i64;
-+#include <sys/param.h>
 +#if (defined(BSD) && BSD >= 199506)
 +       u_int64_t l = (u_int64_t) a * b + (u_int64_t)0x8000;
 +#else

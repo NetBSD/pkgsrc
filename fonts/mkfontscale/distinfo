@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.3.2.2 2002/06/23 18:45:50 jlam Exp $
+
+SHA1 (mkfontscale-20020524.tar.gz) = 4c1f8bba8fd2a939a95d1ad18700320b7ec993b5
+Size (mkfontscale-20020524.tar.gz) = 8133 bytes
+SHA1 (patch-aa) = 759f60cca2f29a4537a1b9576ddce76a3db45e27

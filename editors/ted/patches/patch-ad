@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.1.2.1 2002/06/23 18:45:21 jlam Exp $
 --- bitmap/configure.orig	Sun Mar  3 23:24:16 2002
 +++ bitmap/configure	Tue Apr  9 12:14:17 2002
 @@ -1825,7 +1825,6 @@

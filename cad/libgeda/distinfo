@@ -1,9 +1,4 @@
-$NetBSD: distinfo,v 1.3 2001/07/17 03:06:27 dmcmahill Exp $
+$NetBSD: distinfo,v 1.3.2.1 2002/06/23 18:40:10 jlam Exp $
 
-SHA1 (geda/libgeda-20010708.tar.gz) = 5065d32555d8cf752f9cd60914e9e96b1785bc93
-Size (geda/libgeda-20010708.tar.gz) = 378209 bytes
-SHA1 (patch-aa) = 67ec389e7e4d71e9b8f6054cbe0ea236c01544e6
-SHA1 (patch-ab) = 05a8cbf224376dab4359957acac678dc83de4dfb
-SHA1 (patch-ac) = b23cd3e8400e0e58f3e54aac8031beb325ba5009
-SHA1 (patch-ad) = 31845d02fd867b0580feb8e410ca974d3786c737
-SHA1 (patch-ae) = 9453d3fd6825e2d85b87f836eaa923836f3fd980
+SHA1 (geda/libgeda-20020414.tar.gz) = b545f581fd04283238416efda29b3a9301a8abc4
+Size (geda/libgeda-20020414.tar.gz) = 838513 bytes

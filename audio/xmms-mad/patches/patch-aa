@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1.2.2 2002/06/23 18:39:39 jlam Exp $
+
+--- src/decoder.c.orig	Sat May 25 21:06:58 2002
++++ src/decoder.c	Sat May 25 21:07:05 2002
+@@ -205,6 +205,9 @@
+   /* main loop */
+   do
+     {
++#ifdef __NetBSD__
++	  pthread_yield_np();
++#endif
+       if (info->stop)
+         break;
+       if (seek_skip)

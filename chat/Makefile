@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/05/03 15:50:31 zuntum Exp $
+# $NetBSD: Makefile,v 1.35.2.1 2002/06/23 18:40:29 jlam Exp $
 #
 
 COMMENT=	communication programs
@@ -10,6 +10,7 @@ SUBDIR+=	bnc
 SUBDIR+=	centericq
 SUBDIR+=	dircproxy
 SUBDIR+=	ekg
+SUBDIR+=	emech
 SUBDIR+=	epic4
 SUBDIR+=	epic4-doc
 SUBDIR+=	everybuddy
@@ -18,6 +19,7 @@ SUBDIR+=	fugu
 SUBDIR+=	gaim
 SUBDIR+=	gale
 SUBDIR+=	gnomeicu
+SUBDIR+=	goofey
 SUBDIR+=	gtkyahoo
 SUBDIR+=	icb
 SUBDIR+=	icqlib
@@ -31,10 +33,12 @@ SUBDIR+=	kxicq
 SUBDIR+=	kyahoo
 SUBDIR+=	libirc
 SUBDIR+=	libyahoo
+SUBDIR+=	lmme
 SUBDIR+=	micq
 SUBDIR+=	naim
 SUBDIR+=	p5-Net-AIM
 SUBDIR+=	p5-Net-AOLIM
+SUBDIR+=	p5-Net-Goofey
 SUBDIR+=	p5-Net-ICQ2000
 SUBDIR+=	silc-client
 SUBDIR+=	silc-server

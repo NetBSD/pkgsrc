@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2001/12/17 02:33:46 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.46.2.1 2002/06/23 18:37:12 jlam Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -27,7 +27,7 @@ SUBDIR += fonts
 SUBDIR += games
 SUBDIR += graphics
 SUBDIR += ham
-SUBDIR += japanese
+SUBDIR += inputmethod
 SUBDIR += lang
 SUBDIR += mail
 SUBDIR += math

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/04/05 18:44:01 magick Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/23 18:45:24 jlam Exp $
 
 DISTNAME=	xemacs-21.5.5
 CATEGORIES=	editors
@@ -16,6 +16,10 @@ HAS_CONFIGURE=	YES
 
 PLIST_SUBST+=	EMACSVER=xemacs-21.5-b5
 MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b5
+
+.if (${MACHINE_ARCH} == "arm32")
+.include "../../lang/gcc/Makefile.gcc"
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -52,8 +56,8 @@ WITH_XFACE=	--with-xface=no
 .endif
 
 .if defined(EMACS_CANNA) && ${EMACS_CANNA} == YES
+.include "../../inputmethod/canna-lib/buildlink.mk"
 WITH_CANNA=	--with-canna=yes
-DEPENDS+=	Canna-lib-3*:../../japanese/canna-lib
 .else
 WITH_CANNA=	--with-canna=no
 .endif

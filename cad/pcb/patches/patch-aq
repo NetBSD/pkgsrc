@@ -1,0 +1,11 @@
+$NetBSD: patch-aq,v 1.1.2.2 2002/06/23 18:40:27 jlam Exp $
+
+--- lib/CreateLibrary.sh.raw.orig	Sat May 16 17:11:04 1998
++++ lib/CreateLibrary.sh.raw	Sat Jun  1 14:56:58 2002
+@@ -30,5 +30,5 @@
+ # usage: CreateContents.sh library common_macro_file file...
+ 
+-M4=GNUM4
++M4="GNUM4"
+ 
+ if [ $# -lt 3 ]; then

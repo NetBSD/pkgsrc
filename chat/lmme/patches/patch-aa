@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1.2.2 2002/06/23 18:40:55 jlam Exp $
+
+--- src/threadTemplate.h.orig	Sun Dec 30 20:45:43 2001
++++ src/threadTemplate.h
+@@ -24,10 +24,14 @@
+ 
+ #include "headerManager.h"
+ 
++#ifdef _POSIX_THREAD_IS_GNU_PTH
++#define initCond(PCond)	PCond = PTHREAD_COND_INITIALIZER;
++#else
+ #define initCond(PCond)												\
+ 		PCond.__c_lock.__status 	= 0;							\
+ 		PCond.__c_lock.__spinlock	= 0;							\
+ 		PCond.__c_waiting 			= 0;
++#endif
+ 
+ 
+ class Thread_Class

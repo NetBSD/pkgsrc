@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2.2.2 2002/06/23 18:41:29 jlam Exp $
+
+SHA1 (conserver-7.2.1.tar.gz) = a517c7ba8f1ee770bdb435921f959632408b6812
+Size (conserver-7.2.1.tar.gz) = 150276 bytes
+SHA1 (patch-aa) = 01ab5e3430137e72b786164026785f91295232d4
+SHA1 (patch-ab) = e4fb98f61d6b6937e8989c9a15c2e7fbd26d8e05

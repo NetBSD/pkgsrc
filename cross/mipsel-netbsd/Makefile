@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 14:05:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2002/06/23 18:43:07 jlam Exp $
 #
 
 DISTVERSION=		1.3.0.0
@@ -17,5 +17,10 @@ USE_CROSS_EGCS=		yes
 EGCS_FAKE_RUNTIME=	yes
 
 TARGET_ARCH=		mipsel-netbsd
+
+.include "../../mk/bsd.prefs.mk"
+.if (${MACHINE_ARCH} == sparc) 
+.include "../../lang/gcc/Makefile.gcc"
+.endif
 
 .include "../COMMON/cross.mk"

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: silcd.sh,v 1.4 2002/05/03 22:02:49 hubertf Exp $
+# $NetBSD: silcd.sh,v 1.4.2.1 2002/06/23 18:41:12 jlam Exp $
 #
 # PROVIDE: silcd
 # REQUIRE: DAEMON
@@ -15,7 +15,7 @@ rcvar=$name
 confdir="@PKG_SYSCONFDIR@"
 required_files="$confdir/silcd.conf"
 required_dirs="/var/log/silcd"
-pidfile="/var/log/silcd/${name}.pid"
+pidfile="/var/run/${name}.pid"
 command="@PREFIX@/sbin/silcd"
 start_precmd="silcd_precmd"
 stop_cmd="silcd_stop"
@@ -29,7 +29,11 @@ silcd_precmd()
 
 silcd_stop()
 {
-	if [ -z "$_pid" ]; then
+	# Backward compat with NetBSD <1.6:
+	[ -z "$rc_pid" ] && rc_pid=$_pid
+	[ -z "$rc_pidcmd" ] && rc_pidcmd=$_pidcmd
+
+	if [ -z "$rc_pid" ]; then
 		if [ -n "$pidfile" ]; then
 			echo "${name} not running? (check $pidfile)."
 		else
@@ -40,11 +44,11 @@ silcd_stop()
 
 	echo "Stopping ${name}."
 	_doit=\
-"${_user:+su -m $_user -c '}kill -${sig_stop:-TERM} $_pid${_user:+'}"
+"${_user:+su -m $_user -c '}kill -${sig_stop:-TERM} $rc_pid${_user:+'}"
 	eval $_doit
 
-	eval $_pidcmd
-	if [ ! $_pid ]; then
+	eval $rc_pidcmd
+	if [ ! $rc_pid ]; then
 		rm -f $pidfile
 	fi
 }

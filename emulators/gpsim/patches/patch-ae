@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.2.2 2002/06/23 18:45:34 jlam Exp $
+
+--- gpsim/main.cc.orig	Mon Nov 20 07:20:43 2000
++++ gpsim/main.cc
+@@ -147,7 +147,7 @@
+   poptContext optCon;   /* context for parsing command-line options */
+ 
+ 
+-  optCon = poptGetContext(NULL, argc, argv, optionsTable, 0);
++  optCon = poptGetContext(NULL, argc, (const char **)argv, optionsTable, 0);
+   poptSetOtherOptionHelp(optCon, "[-h] [-p <device> [<hex_file>]] [-c <stc_file>]");
+ 
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2002/05/03 23:46:18 jtb Exp $
+# $NetBSD: Makefile,v 1.187.2.1 2002/06/23 18:46:14 jlam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -91,7 +91,9 @@ SUBDIR+=	jhead
 SUBDIR+=	jpeg
 SUBDIR+=	kdegraphics
 SUBDIR+=	kdegraphics2
+SUBDIR+=	kdegraphics3
 SUBDIR+=	lcms
+SUBDIR+=	libart2
 SUBDIR+=	libexif
 SUBDIR+=	libflash
 SUBDIR+=	libgdgeda
@@ -101,6 +103,7 @@ SUBDIR+=	librsvg
 SUBDIR+=	libungif
 SUBDIR+=	libwmf
 SUBDIR+=	magicpoint
+SUBDIR+=	mencoder
 SUBDIR+=	mgl
 SUBDIR+=	mng
 SUBDIR+=	moz-flash
@@ -108,7 +111,9 @@ SUBDIR+=	mpeg-lib
 SUBDIR+=	mpeg2codec
 SUBDIR+=	mpeg_encode
 SUBDIR+=	mpeg_play
+SUBDIR+=	mpgtx
 SUBDIR+=	mplayer
+SUBDIR+=	mplayer-share
 SUBDIR+=	mplex
 SUBDIR+=	mtv
 SUBDIR+=	ncview
@@ -149,6 +154,7 @@ SUBDIR+=	py-gdchart
 SUBDIR+=	py-gimp
 SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk
+SUBDIR+=	qiv
 SUBDIR+=	qvplay
 SUBDIR+=	rayshade
 SUBDIR+=	ruby-opengl

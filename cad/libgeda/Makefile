@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2002/03/13 17:36:40 fredb Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2002/06/23 18:40:09 jlam Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
-PKGREVISION=		1
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 			ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
@@ -21,7 +20,7 @@ DEPENDS+=		gtk+>=1.2.3:../../x11/gtk
 CONFLICTS+=		gEDA<19991011
 
 DIST_SUBDIR=		geda
-PKGVERSION=		20010708
+PKGVERSION=		20020414
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

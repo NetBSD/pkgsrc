@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1.2.2 2002/06/23 18:39:19 jlam Exp $
+
+--- SpiralInfo.C.orig	Sun Nov 26 07:52:43 2000
++++ SpiralInfo.C
+@@ -41,7 +41,7 @@
+ float  SpiralInfo::VALUECONV   = 1.0f/MAXSAMPLE;
+ bool   SpiralInfo::WANTMIDI    = true;
+ int    SpiralInfo::FILTERGRAN  = 50;
+-string SpiralInfo::OUTPUTFILE  = "/dev/dsp";
++string SpiralInfo::OUTPUTFILE  = "/dev/sound";
+ string SpiralInfo::MIDIFILE    = "/dev/midi";
+ int    SpiralInfo::POLY        = 2;
+ bool   SpiralInfo::REALTIMEOUT = true;

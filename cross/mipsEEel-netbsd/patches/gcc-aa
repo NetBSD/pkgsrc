@@ -1,11 +1,27 @@
-$NetBSD: gcc-aa,v 1.1 2001/08/05 15:28:41 kent Exp $
+$NetBSD: gcc-aa,v 1.1.2.1 2002/06/23 18:43:04 jlam Exp $
 
---- gcc/configure.hoge	Thu Aug  2 23:14:48 2001
+--- gcc/configure.orig	Wed Apr 24 15:23:36 2002
 +++ gcc/configure
-@@ -4686,6 +4686,15 @@
+@@ -2947,6 +2947,10 @@
+ 	sparc*-*-*)
+ 		cpu_type=sparc
+ 		;;
++	algor-*-netbsd* | arc-*-netbsd* | cobalt-*-netbsd* | hpcmips-*-netbsd* | playstation2-*-netbsd* | pmax-*-netbsd*)
++		cpu_type=mips
++		machine=mipsel-unknown-netbsd
++		;;
+ 	esac
+ 
+ 	tm_file=${cpu_type}/${cpu_type}.h
+@@ -4682,9 +4686,19 @@
+ 	      fi
+ 	      ;;
+ 	mipsel-*-netbsd* | mips-dec-netbsd*)    # Decstation running NetBSD
++		xmake_file=x-netbsd
+ 		tm_file=mips/netbsd.h
  		# On NetBSD, the headers are already okay, except for math.h.
  		tmake_file=t-netbsd
- 		;;
++		;;
 +	mipsEEel-*-netbsd*)			# for NetBSD/PlayStation2, incomplete!!
 +		xmake_file=x-linux		# Oops
 +		xm_file="xm-siglist.h ${xm_file}"
@@ -14,7 +30,6 @@ $NetBSD: gcc-aa,v 1.1 2001/08/05 15:28:41 kent Exp $
 +		extra_parts="crtbegin.o crtbeginS.o crtend.o crtendS.o"
 +		gnu_ld=yes
 +		gas=yes
-+		;;
+ 		;;
  	mipsEE*-*-linux*)		# MIPS EE w/ Linux & ELF
  		xmake_file=x-linux
- 		xm_file="xm-siglist.h ${xm_file}"

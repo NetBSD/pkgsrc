@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/21 03:40:05 fredb Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2002/06/23 18:46:25 jlam Exp $
 
 DISTNAME=	gtkam-0.1.2
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.gphoto.org/gphoto2/
-COMMENT=	Download and view files from various digital cameras
+COMMENT=	GTK+ application for downloading, saving and manipulating on images from digital cameras
 
 BUILD_USES_MSGFMT=	yes
 

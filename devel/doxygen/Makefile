@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/03/17 17:23:03 fredb Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/23 18:44:07 jlam Exp $
 
 DISTNAME=		doxygen-1.2.10.src
 PKGNAME=		doxygen-1.2.10
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.stack.nl/pub/users/dimitri/
 
@@ -18,6 +18,7 @@ USE_PERL5=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS=		--make ${GMAKE} --prefix ${LOCALBASE}
 CONFIGURE_ARGS+=	--docdir ${LOCALBASE}/share/doc
+REPLACE_PERL=		${WRKSRC}/doc/translater.pl
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 

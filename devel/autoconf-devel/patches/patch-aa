@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.2.2 2002/06/23 18:43:49 jlam Exp $
+
+--- doc/autoconf.texi.orig	Fri Mar  8 13:57:41 2002
++++ doc/autoconf.texi
+@@ -413,7 +413,7 @@
+ * Changed Quotation::           Broken code which used to work
+ * New Macros::                  Interaction with foreign macros
+ * Hosts and Cross-Compilation::  Bugward compatibility kludges
+-* AC_LIBOBJ vs. LIBOBJS::
++* AC_LIBOBJ vs LIBOBJS::
+ 
+ Generating Test Suites with Autotest
+ 
+@@ -11838,7 +11838,7 @@
+ * Changed Quotation::           Broken code which used to work
+ * New Macros::                  Interaction with foreign macros
+ * Hosts and Cross-Compilation::  Bugward compatibility kludges
+-* AC_LIBOBJ vs. LIBOBJS::       LIBOBJS is a forbidden token
++* AC_LIBOBJ vs LIBOBJS::       LIBOBJS is a forbidden token
+ @end menu
+ 
+ @node Changed Quotation
+@@ -12081,7 +12081,7 @@
+ @end example
+ 
+ 
+-@node AC_LIBOBJ vs. LIBOBJS
++@node AC_LIBOBJ vs LIBOBJS
+ @subsection @code{AC_LIBOBJ} vs. @code{LIBOBJS}
+ 
+ Up to Autoconf 2.13, the replacement of functions was triggered via the

@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2002/05/07 14:39:14 jdolecek Exp $
+$NetBSD: patch-aa,v 1.4.2.1 2002/06/23 18:44:47 jlam Exp $
 
 --- Makefile.PL.orig	Mon Feb  4 10:37:19 2002
 +++ Makefile.PL	Mon Feb  4 10:37:37 2002
-@@ -81,7 +81,7 @@
+@@ -79,7 +79,7 @@
  close(F);
  
  # compile it
--$comp_cmd = "$Config{cc} $RLINC $Config{ccflags} $defs $frlver -o rlver $RLLIB $Config{ldflags} $libs";
-+$comp_cmd = "$Config{cc} $RLINC $Config{ccflags} $defs $frlver -o rlver $RLLIB $Config{ldflags} $ENV{LDFLAGS} $libs";
+-$comp_cmd = "$Config{cc} $RLINC $Config{ccflags} $defs $frlver -o rlver $RLLIB $ldflags $Config{ldflags} $libs";
++$comp_cmd = "$Config{cc} $RLINC $Config{ccflags} $defs $frlver -o rlver $RLLIB $ldflags $Config{ldflags} $ENV{LDFLAGS} $libs";
  print $comp_cmd, "\n";
  system($comp_cmd);
  if ($?) {

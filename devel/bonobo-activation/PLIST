@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/27 08:57:57 rh Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2002/06/23 18:43:54 jlam Exp $
 bin/activation-client
 bin/bonobo-activation-empty-server
 bin/bonobo-activation-run-query
@@ -23,6 +23,7 @@ lib/bonobo/servers/Bonobo_CosNaming_NamingContext.server
 lib/bonobo/servers/broken.server
 lib/bonobo/servers/empty.server
 lib/bonobo/servers/plugin.server
+lib/libbonobo-activation.a
 lib/libbonobo-activation.la
 lib/libbonobo-activation.so
 lib/libbonobo-activation.so.4

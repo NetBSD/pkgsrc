@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/25 18:46:29 kleink Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2002/06/23 18:43:28 jlam Exp $
 #
 
 DISTNAME=	openldap-1.2.13
@@ -46,7 +46,7 @@ post-configure:
 	${ECHO} "SLAPD_LIBS = " >> ${WRKSRC}/servers/slapd/tools/Makefile
 
 .if defined(KERBEROS)
-USE_KERBEROS=	yes
+PKG_USE_KERBEROS=	yes
 CONFIGURE_ARGS+=--with-kerberos
 .else
 CONFIGURE_ARGS+=--without-kerberos

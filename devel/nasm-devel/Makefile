@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:14 seb Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2002/06/23 18:44:35 jlam Exp $
 #
 
 DISTNAME=	nasm-0.98.08
 CATEGORIES=	devel lang
-MASTER_SITES=	ftp://nasm.2y.net/nasm/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nasm/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://nasm.2y.net/

@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.2 2001/02/13 21:45:07 tron Exp $
+$NetBSD: patch-ac,v 1.2.2.1 2002/06/23 18:46:19 jlam Exp $
 
 --- tvaudio.c.orig	Mon Feb 12 15:56:29 2001
-+++ tvaudio.c	Tue Feb 13 22:39:48 2001
++++ tvaudio.c
 @@ -107,7 +107,11 @@
  #ifdef SOUND_MIXER_VIDEO
      else if ( STREQ( buf, "VIDEO" ) ) {
         Mixer_dev_id   = SOUND_MIXER_VIDEO;
-+#ifdef __NetBSD__
++#ifndef SOUND_MASK_VIDEO
 +       Mixer_dev_mask = 1 << SOUND_MIXER_VIDEO;
 +#else
         Mixer_dev_mask = SOUND_MASK_VIDEO;

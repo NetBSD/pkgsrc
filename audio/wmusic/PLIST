@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.4.2 2002/06/23 18:39:30 jlam Exp $
+bin/wmusic
+@exec ${MKDIR} %D/share/doc/wmusic
+@dirrm share/doc/wmusic

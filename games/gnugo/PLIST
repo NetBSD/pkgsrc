@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:19 seb Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2002/06/23 18:46:00 jlam Exp $
+bin/debugboard
 bin/gnugo
 @unexec ${INSTALL_INFO} --delete %D/info/gnugo.info %D/info/dir
 info/gnugo.info
@@ -7,5 +8,12 @@ info/gnugo.info-2
 info/gnugo.info-3
 info/gnugo.info-4
 info/gnugo.info-5
+info/gnugo.info-6
+info/gnugo.info-7
+info/gnugo.info-8
+info/gnugo.info-9
+info/gnugo.info-10
+info/gnugo.info-11
+info/gnugo.info-12
 @exec ${INSTALL_INFO} %D/info/gnugo.info %D/info/dir
 man/man6/gnugo.6

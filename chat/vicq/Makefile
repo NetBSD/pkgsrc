@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2002/05/07 15:41:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/23 18:41:14 jlam Exp $
 
 DISTNAME=	vicq-0.4.1
+PKGREVISION=	1
+WRKSRC=		${WRKDIR}/vicq
 CATEGORIES=	chat
-MASTER_SITES=	http://gonzo.kiev.ua/projects/vicq/
+MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gonzo.kiev.ua/projects/vicq/
 COMMENT=	simple icq client written in perl
 
-WRKSRC=		${WRKDIR}/vicq
+DEPEND+=	p5-Term-ReadLine>=1.11:../../devel/p5-Term-ReadLine
 
 REPLACE_PERL=	${WRKSRC}/vicq
 NO_BUILD=	YES

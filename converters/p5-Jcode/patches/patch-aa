@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1.8.2 2002/06/23 18:42:21 jlam Exp $
+
+--- MANIFEST.orig	Fri May  3 09:01:24 2002
++++ MANIFEST
+@@ -15,7 +15,6 @@
+ Unicode/_test.pl
+ Unicode/table.h
+ Unicode/uni.c
+-mac_install.pl
+ t/ambiguous.pl
+ t/benchmark.pl
+ t/convert.t
+@@ -32,4 +31,3 @@
+ t/unibench.pl
+ t/x0212.euc
+ t/zenkaku.euc
+-win_install.pl

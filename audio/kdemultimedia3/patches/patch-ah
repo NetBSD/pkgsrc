@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1.1.1.2.2 2002/06/23 18:38:05 jlam Exp $
+
+--- kmidi/b_out.cpp.orig	Thu Apr 12 10:09:23 2001
++++ kmidi/b_out.cpp
+@@ -16,6 +16,11 @@
+ #include <linux/soundcard.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#include <sys/ioctl.h>
++#include <soundcard.h>
++#endif
++
+ #ifdef __FreeBSD__
+ #include <machine/soundcard.h>
+ #endif

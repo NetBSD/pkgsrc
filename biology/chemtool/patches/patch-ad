@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.1.2.1 2002/06/23 18:39:46 jlam Exp $
 --- ct.h.orig	Mon Apr 29 10:18:39 2002
 +++ ct.h	Mon Apr 29 10:18:45 2002
 @@ -1,4 +1,3 @@

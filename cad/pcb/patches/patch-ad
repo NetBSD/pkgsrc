@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.2.2 2002/06/23 18:40:18 jlam Exp $
+
+--- src/main.c.orig	Wed May 13 06:29:47 1998
++++ src/main.c
+@@ -787,9 +787,9 @@
+ 	Output.fgGC = XCreateGC(Dpy, Output.OutputWindow, 0, NULL);
+ 	Output.bgGC = XCreateGC(Dpy, Output.OutputWindow, 0, NULL);
+ 	Output.GridGC = XCreateGC(Dpy, Output.OutputWindow, 0, NULL);
+-	if (!VALID_GC((int) Output.fgGC) ||
+-		!VALID_GC((int) Output.bgGC) ||
+-		!VALID_GC((int) Output.GridGC))
++	if (!VALID_GC( (long int) Output.fgGC) ||
++		!VALID_GC( (long int) Output.bgGC) ||
++		!VALID_GC( (long int) Output.GridGC))
+ 		MyFatal("can't create default GC\n");
+ 
+ 	XSetForeground(Dpy, Output.bgGC, Settings.bgColor);

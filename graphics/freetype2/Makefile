@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.10.2.2 2002/06/21 23:05:19 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.3 2002/06/23 18:46:18 jlam Exp $
 #
 
 DISTNAME=	freetype-2.0.5
 PKGNAME=	freetype2-2.0.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}			\
-		http://freetype.sourceforge.net/pub/freetype/freetype2/	\
-		http://gd.tuwien.ac.at/publishing/freetype/freetype2/	\
-		http://ftp.funet.fi/pub/mirrors/ftp.freetype.org/freetype2/ \
-		http://ftp.sunet.se/pub/text-processing/freetype/freetype2/ \
-		ftp://www.nigels.com/pub/freetype/freetype2/
+		ftp://ftp.freetype.org/freetype/freetype2/		\
+		ftp://ftp.ntua.gr/mirror/freetype/freetype2/		\
+		ftp://ring.aist.go.jp/pub/graphics/freetype/freetype2/	\
+		ftp://sunsite.cnlab-switch.ch/mirror/freetype/freetype2/ \
+		http://gd.tuwien.ac.at/publishing/freetype/freetype2/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.freetype.org/

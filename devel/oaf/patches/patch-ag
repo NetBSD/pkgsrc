@@ -1,17 +1,17 @@
-$NetBSD: patch-ag,v 1.5 2001/10/01 11:01:04 rh Exp $
+$NetBSD: patch-ag,v 1.5.2.1 2002/06/23 18:44:42 jlam Exp $
 
---- configure.orig	Tue Aug 21 07:45:23 2001
-+++ configure
-@@ -7215,7 +7215,7 @@
-   cat conftest.$ac_ext >&5
-   rm -rf conftest*
-   CATOBJEXT=.mo
+--- configure.orig	Sat May 18 12:24:35 2002
++++ configure	Sat May 18 12:25:54 2002
+@@ -9196,7 +9196,7 @@
+   echo "$as_me: failed program was:" >&5
+ cat conftest.$ac_ext >&5
+ CATOBJEXT=.mo
 -		   DATADIRNAME=lib
 +		   DATADIRNAME=share
  fi
- rm -f conftest*
+ rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
  		INSTOBJEXT=.mo
-@@ -8825,7 +8825,6 @@
+@@ -11009,7 +11009,6 @@
  	-Wall \
  	-Wchar-subscripts -Wmissing-declarations -Wmissing-prototypes \
  	-Wnested-externs -Wpointer-arith \

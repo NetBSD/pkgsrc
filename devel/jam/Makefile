@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/20 20:04:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2002/06/23 18:44:24 jlam Exp $
 #
 
-DISTNAME=	jam-2.3
+DISTNAME=	jam-2.4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.perforce.com/pub/jam/
 EXTRACT_SUFX=	.tar

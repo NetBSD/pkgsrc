@@ -1,21 +1,22 @@
-# $NetBSD: Makefile.common,v 1.21.2.1 2002/05/11 02:09:10 jlam Exp $
+# $NetBSD: Makefile.common,v 1.21.2.2 2002/06/23 18:46:21 jlam Exp $
 #
 
-DISTNAME=		gdk-pixbuf-0.11.0
+DISTNAME=		gdk-pixbuf-0.17.0
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/gdk-pixbuf/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
-USE_GMAKE=		# defined
-USE_X11BASE=		# defined
-USE_LIBTOOL=		# defined
+USE_GMAKE=		YES
+USE_X11BASE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		path_rgb_txt="${X11BASE}/lib/X11/rgb.txt"
 
 M4=			${LOCALBASE}/bin/gm4

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2002/04/15 17:40:02 kleink Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2002/06/23 18:41:45 jlam Exp $
 #
 
-DISTNAME=		scmxx-0.6.0
+DISTNAME=		scmxx-0.6.1.1
 CATEGORIES=		comms
-MASTER_SITES=		http://www.hendrik-sattler.de/scmxx/download/ \
-			http://ma2geo.mathematik.uni-karlsruhe.de/~hendrik/scmxx/download/
+MASTER_SITES=		http://ma2geo.mathematik.uni-karlsruhe.de/~hendrik/scmxx/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		kleink@netbsd.org
@@ -16,7 +15,7 @@ USE_GMAKE=		yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scmxx
-	${INSTALL_DATA} ${WRKSRC}/docs/README				\
+	${INSTALL_DATA} ${WRKSRC}/docs/doc_sources.txt			\
 	    ${PREFIX}/share/doc/scmxx
 	${INSTALL_DATA} ${WRKSRC}/docs/greekchars.txt			\
 	    ${PREFIX}/share/doc/scmxx

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/03/25 12:30:09 grant Exp $
+# $NetBSD: Makefile,v 1.33.2.1 2002/06/23 18:44:28 jlam Exp $
 #
 
 DISTNAME=	slang-1.4.5
@@ -7,11 +7,9 @@ SVR4_PKGNAME=	lslan
 CATEGORIES=	devel
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v1.4/ \
 		http://gd.tuwien.ac.at/editors/davis/slang/v1.4/ \
-		ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/v1.4/ \
-		ftp://ftp.fu-berlin.de/pub/unix/news/slrn/v1.4/ \
-		ftp://ftp.ntua.gr/pub/lang/slang/v1.4/ \
-		ftp://ftp.plig.org/pub/slang/v1.4/ \
-		ftp://ftp.gigabell.net/pub/lang/1.4/
+		ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/slang/v1.4/ \
+		ftp://ftp.ntua.gr/pub/lang/slang/slang/v1.4/ \
+		ftp://ftp.plig.org/pub/slang/v1.4/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=    	packages@netbsd.org

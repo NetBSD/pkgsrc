@@ -1,0 +1,18 @@
+#! /bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.2.2 2002/06/23 18:40:15 jlam Exp $
+#
+
+case "$2" in
+	DEINSTALL) cat <<EOF
+
+=============================================================
+Note that the local library configuration file
+(@pkg_sysconfdir@/pcb/local.inc) is not removed by the
+deinstallation process.  You should remove this by hand, if
+you no longer need it.
+=============================================================
+
+EOF
+	;;
+esac

@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:27 wiz Exp $
+$NetBSD: distinfo,v 1.2.2.1 2002/06/23 18:46:01 jlam Exp $
 
-SHA1 (gnugo-2.6.tar.gz) = 03b3da993a62b6fee473784900795eaade7e788a
-Size (gnugo-2.6.tar.gz) = 617161 bytes
-SHA1 (patch-aa) = 8ba523dd10dfc3c08af06750bf1eff9eff76571b
+SHA1 (gnugo-3.2.tar.gz) = 9485fc53fc7d7353d9d672b8aaec96d480480b77
+Size (gnugo-3.2.tar.gz) = 2012129 bytes

@@ -1,0 +1,6 @@
+wmmp3 is an mpg123 frontend.  It is a small X application that will also 
+work as a windowmaker dock app.
+
+All user options are contained in a config file, ~/.wmmp3 .  There is a 
+sample.wmmp3 file in the distribution that can be used as an 
+example/template.

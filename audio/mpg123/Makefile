@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2002/04/25 16:34:15 abs Exp $
+# $NetBSD: Makefile,v 1.32.2.1 2002/06/23 18:38:37 jlam Exp $
 
 DISTNAME=	mpg123-0.59r
-PKGREVISION=	1
 PKGNAME=	mpg123-0.59.18
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mpg123.de/mpg123/ \
 		http://www-ti.informatik.uni-tuebingen.de/~hippm/mpg123/
@@ -13,6 +13,8 @@ PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mpg123.de/
 COMMENT=	Command-line player for mpeg layer 1, 2 and 3 audio
+
+CONFLICTS+=	mpg123-nas-[0-9]*
 
 BUILD_DEFS+=	USE_INET6
 DIST_SUBDIR=	mpg123

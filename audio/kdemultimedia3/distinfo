@@ -1,0 +1,32 @@
+$NetBSD: distinfo,v 1.1.1.1.2.2 2002/06/23 18:37:58 jlam Exp $
+
+SHA1 (kdemultimedia-3.0.1.tar.bz2) = 0d957474431d636d429f64003f38beee48dd97f3
+Size (kdemultimedia-3.0.1.tar.bz2) = 5789849 bytes
+SHA1 (patch-aa) = e7b1587d8efb48c48484ca90ed9c7d8fe8d7bc94
+SHA1 (patch-ab) = 85b8216b50ab22435835b07e068d326563d0e217
+SHA1 (patch-ac) = ffc738496170c34c8c3ee84544ec1eeac27992ec
+SHA1 (patch-ad) = 7821e0466fb29f7ca9692df817fcdd833a12b791
+SHA1 (patch-ae) = 23ccdd4f77aae953bc0ab3ab88c73dbcb3d2ba62
+SHA1 (patch-af) = 07038f3523e1fbc44aa999c9d7ba7b4e9d4f3367
+SHA1 (patch-ag) = aee2716c219e7e6c977cf74b0640ae7528f0755e
+SHA1 (patch-ah) = 1dd023976df014a217fcaf39f7ea4280b9f011d8
+SHA1 (patch-ai) = 6d4ff2feecbe66380dc3d08f7a95076c0b0524e2
+SHA1 (patch-aj) = 4da67d4d4a509f933335baa4395d08ae406958ab
+SHA1 (patch-ak) = c55b86b33aadc563360b4dfddf46ef1110a79765
+SHA1 (patch-al) = dece03fdff70a1414fb2bb566170092188285536
+SHA1 (patch-am) = a2119b0882b3d4790c8dcfe925e05157844478fa
+SHA1 (patch-an) = 2ec87bdfea4d19c71bfece3a58ce2bd8c5c1eee6
+SHA1 (patch-ao) = a31e51c87c76664188515fd1640608cef3a33927
+SHA1 (patch-ap) = 3f072d45cfe5b0d57eab27c90a37afec3bd0d5c0
+SHA1 (patch-aq) = 6918d9ff057873dc0e25fa8e37c64160d4a19302
+SHA1 (patch-ar) = a0f31a40a2e671dacfe3c00706bc5068e648a472
+SHA1 (patch-as) = 434f297212876a0f189221a2b09fbb2c04676fd7
+SHA1 (patch-at) = 33a3f9b2d6b1890150c39294354e71d0d571ab85
+SHA1 (patch-au) = 877c2150000dc7c7344f5e4ab86ebc3b691f3e34
+SHA1 (patch-av) = 1b14a5c0bb9ae5979cc6e07c34dffe0fbefdc2be
+SHA1 (patch-aw) = 87444988e9109f2d59dc7168c4f2337d0c1a7168
+SHA1 (patch-ax) = efd01de997033aa2cebd0ba5d875b4d547bfd624
+SHA1 (patch-ay) = d4f6d85e802d9b05b00a659bf9b4fbf96d3b81bc
+SHA1 (patch-az) = 90f457bb6d4c5b7186533c168aefde4abd4ba94b
+SHA1 (patch-ba) = 5cee048125a71eb5a1358966c0a61c4553eff24c
+SHA1 (patch-bb) = f8d2ad72945566dd575f21c7f3f25ca7a720ecb3

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/23 03:33:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2002/06/23 18:39:32 jlam Exp $
 #
 
 DISTNAME=	xanalyser-1.21
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.suse.com/pub/people/arvin/private/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,5 +16,6 @@ GNU_CONFIGURE=		# defined
 
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/motif.buildlink.mk"
+.include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

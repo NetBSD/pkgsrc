@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/03/18 03:25:46 kent Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2002/06/23 18:45:12 jlam Exp $
 # $PEACE: Makefile,v 1.18 2001/12/16 16:23:38 kent Exp $
 
 DISTNAME=	w32api-1.2-src
@@ -6,7 +6,7 @@ PKGNAME=	w32api-1.2
 PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	devel
-MASTER_SITES=	http://prdownloads.sourceforge.net/mingw/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mingw/}
 
 MAINTAINER=	peace-sacrifice@hauN.org
 HOMEPAGE=	http://www.mingw.org/

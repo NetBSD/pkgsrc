@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1.2.2 2002/06/23 18:37:31 jlam Exp $
+
+--- Makefile.in.orig	Wed May  8 19:59:26 2002
++++ Makefile.in
+@@ -271,7 +271,7 @@
+ x_libraries = @x_libraries@
+ 
+ AUTOMAKE_OPTIONS = foreign 1.4
+-COMPILE_FIRST = libltdl mcop mcopidl flow mcop_mt soundserver artsc examples tests doc 
++COMPILE_FIRST = libltdl mcop mcopidl flow soundserver artsc examples tests doc 
+ SUBDIRS = $(COMPILE_FIRST) $(TOPSUBDIRS)
+ EXTRA_DIST = admin
+ subdir = .

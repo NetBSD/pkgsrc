@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/01/02 12:23:48 lukem Exp $
+# $NetBSD: buildlink.mk,v 1.3.2.1 2002/06/23 18:38:25 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libao.
 #
@@ -12,8 +12,8 @@
 # (4) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
 #     path.
 
-.if !defined(LIGAO_BUILDLINK_MK)
-LIGAO_BUILDLINK_MK=	# defined
+.if !defined(LIBAO_BUILDLINK_MK)
+LIBAO_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
@@ -33,4 +33,4 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.libao}
 pre-configure: ${BUILDLINK_TARGETS.libao}
 libao-buildlink: _BUILDLINK_USE
 
-.endif	# LIGAO_BUILDLINK_MK
+.endif	# LIBAO_BUILDLINK_MK

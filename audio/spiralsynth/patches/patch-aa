@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.2.2.2 2002/06/23 18:39:18 jlam Exp $
+
+--- Makefile.in.orig	Tue Aug 14 20:12:55 2001
++++ Makefile.in
+@@ -11,10 +11,10 @@
+ CXX	=	g++
+ CFLAGS	=	-pipe -Wall -O3 -ffast-math -DNO_DEBUG -Wno-unused
+ CXXFLAGS=	-pipe -Wall -O3 -ffast-math -DNO_DEBUG -Wno-unused
+-INCPATH	=	-I/usr/X11R6/include
+-LINK	=	g++
++INCPATH	=	-I${BUILDLINK_X11_DIR}/include -I${BUILDLINK_DIR}/include
++LINK	=	g++ -Wl,-R${X11BASE}/lib -Wl,-R${X11PREFIX}/lib
+ LFLAGS	=	
+-LIBS	=   -L/usr/X11R6/lib -lfltk -lGL -lXext -lX11 -lm 
++LIBS	=   -L${BUILDLINK_X11_DIR}/lib -L${BUILDLINK_DIR}/lib -lfltk -lGL -lXext -lX11 -lm  -lossaudio
+ MOC	=	moc
+ 
+ TAR	=	tar -cf

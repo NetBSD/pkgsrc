@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.2.2.2 2002/06/23 18:40:35 jlam Exp $
+bin/mech
+bin/genuser
+share/example/emech/sample.set
+share/example/emech/mech.help
+@dirrm share/example/emech

@@ -1,13 +1,23 @@
-$NetBSD: patch-aa,v 1.2 2001/05/14 12:14:47 rh Exp $
+$NetBSD: patch-aa,v 1.2.2.1 2002/06/23 18:42:11 jlam Exp $
 
---- libcharset/lib/config.charset.orig	Sun Mar 11 15:37:53 2001
+--- libcharset/lib/config.charset.orig	Mon Jun 25 14:01:22 2001
 +++ libcharset/lib/config.charset
-@@ -235,7 +235,7 @@
- 	#echo "sun_eu_greek ?" # what is this?
- 	echo "UTF-8 UTF-8"
+@@ -435,4 +435,18 @@
+ 	echo "eo CP850"
+ 	echo "eo_EO CP850"
  	;;
--    freebsd*)
-+    *bsd*)
- 	# FreeBSD 4.2 doesn't have nl_langinfo(CODESET); therefore
- 	# localcharset.c falls back to using the full locale name
- 	# from the environment variables.
++     netbsd*)
++	echo "646 ASCII"
++	echo "ISO8859-1 ISO-8859-1"
++	echo "ISO8859-2 ISO-8859-2"
++	echo "ISO8859-4 ISO-8859-4"
++	echo "ISO8859-5 ISO-8859-5"  
++	echo "ISO8859-15 ISO-8859-15"
++	echo "eucCN GB2312"
++	echo "eucJP EUC-JP"
++	echo "eucKR EUC-KR"
++	echo "eucTW EUC-TW"
++	echo "BIG5 BIG5"
++	echo "SJIS SHIFT_JIS"
++	;;
+ esac

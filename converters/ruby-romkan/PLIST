@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1.38.2 2002/06/23 18:42:46 jlam Exp $
+${RUBY_SITELIBDIR}/romkan.rb
+${RUBY_DOCDIR}/romkan/romkan.html
+${RUBY_DOCDIR}/romkan/romkan.html.ja
+${RUBY_DOCDIR}/romkan/romkan.ja.rd
+${RUBY_DOCDIR}/romkan/romkan.rd
+@dirrm ${RUBY_DOCDIR}/romkan

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/04/15 18:25:45 kei Exp $
+# $NetBSD: Makefile,v 1.35.2.1 2002/06/23 18:44:29 jlam Exp $
 #
 
 DISTFILES=	# empty
@@ -7,8 +7,8 @@ DISTFILES=	# empty
 PKGNAME=	${PKGPFX}
 SVR4_PKGNAME=	ltool
 
-DEPENDS+=	${PKGNAME:C/-/-base-/}:../libtool-base
-DEPENDS+=	${PKGNAME:C/-/-info-/}:../libtool-info
+DEPENDS+=	${PKGPFX:S/-/-base-/}${PKGREVISION:C/[0-9]*/nb/}${PKGREVISION}:../libtool-base
+DEPENDS+=	${PKGPFX:S/-/-info-/}${PKGREVISION:C/[0-9]*/nb/}${PKGREVISION}:../libtool-info
 
 COMMENT=	Generic shared library support script
 

@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.depends,v 1.1.2.2 2002/06/23 18:46:45 jlam Exp $
+
+DEPENDS+=	mplayer-share-${MPLAYER_PKG_VERSION}${PKGREVISION:Dnb${PKGREVISION}}:../../graphics/mplayer-share
+
+.include "../../audio/mad/buildlink.mk"
+.include "../../devel/binutils/buildlink.mk"
+.include "../../devel/SDL/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/libungif/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../lang/gcc/Makefile.gcc"
+.include "../../misc/libdvdread/buildlink.mk"
+.include "../../mk/ossaudio.buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
+.include "../../mk/x11.buildlink.mk"

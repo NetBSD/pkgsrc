@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/04/05 18:55:26 kent Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2002/06/23 18:42:59 jlam Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-1.2
 PKGREVISION=		3
@@ -12,7 +12,7 @@ USE_CROSSBASE=		yes
 TARGET_ARCH=		i386-mingw32
 TARGET_DIR=		${PREFIX}/${TARGET_ARCH}
 
-MASTER_SITES+=		http://prdownloads.sourceforge.net/mingw/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw/}
 CROSS_DISTFILES+=	binutils-2.11.92-20011113-src.tar.gz
 BINUTILS_WRKSRC=	${WRKDIR}/binutils-2.11.92-20011113
 BINUTILS_EXTRAS=	dlltool dllwrap windres

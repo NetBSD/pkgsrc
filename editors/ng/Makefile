@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/04/14 15:10:04 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2002/06/23 18:45:17 jlam Exp $
 
 DISTNAME=	ng-1.4.3
 CATEGORIES=     editors japanese
@@ -15,8 +15,7 @@ USE_CANNA=	YES
 .endif
 
 .if ${USE_CANNA} == "YES"
-DEPENDS=	Canna-lib>=3.5.2:../../japanese/canna-lib
-USE_X11=	YES
+.include "../../inputmethod/canna-lib/buildlink.mk"
 .endif
 
 WRKSRC=         ${WRKDIR}/ng

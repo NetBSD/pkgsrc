@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1.2.2 2002/06/23 18:39:38 jlam Exp $
+
+SHA1 (xmms-mad-0.0.9.tar.gz) = b8743ff110ef0c61062f25cdd0f8a591f43b789c
+Size (xmms-mad-0.0.9.tar.gz) = 203320 bytes
+SHA1 (patch-aa) = f502b03b845cb54078c5d086f6bcf88ca8e8111f
+SHA1 (patch-ab) = 556c28f55718acc0bb1178c107fa22bd120a5660

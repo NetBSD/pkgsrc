@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1.2.2 2002/06/23 18:46:04 jlam Exp $
+
+--- kbackgammon/Makefile.am.orig	Fri Oct  5 12:52:05 2001
++++ kbackgammon/Makefile.am
+@@ -2,21 +2,22 @@
+ INCLUDES = -I$(top_srcdir)/libkdegames -I$(top_srcdir)/libkdegames/kgame/ -I$(srcdir)/engines $(all_includes)
+ 
+ bin_PROGRAMS = kbackgammon
+-lib_LTLIBRARIES = kbackgammon.la
++lib_LTLIBRARIES = libkbackgammon_main.la kbackgammon.la
+ 
+-CLEANFILES = dummy.cpp
+-
+-kbackgammon_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) -lkdeprint \
++libkbackgammon_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) -lkdeprint \
+ 			./engines/libkbgengines.la
+-kbackgammon_la_SOURCES = main.cpp kbg.cpp kbgboard.cpp kbgtextview.cpp \
++libkbackgammon_main_la_SOURCES = main.cpp kbg.cpp kbgboard.cpp kbgtextview.cpp \
+ 			kbgstatus.cpp
+ 
++kbackgammon_la_LIBADD = libkbackgammon_main.la
++kbackgammon_la_SOURCES = kbackgammon_main.cpp
++
+ kbackgammon_la_METASOURCES = AUTO
+ kbackgammon_la_LDFLAGS = $(all_libraries) $(KDE_RPATH) -module -avoid-version
+ 
+-kbackgammon_LDADD = kbackgammon.la $(top_builddir)/libkdegames/libkdegames.la \
++kbackgammon_LDADD = libkbackgammon_main.la $(top_builddir)/libkdegames/libkdegames.la \
+ 		$(LIB_KSYCOCA)
+-kbackgammon_SOURCES = dummy.cpp
++kbackgammon_SOURCES = kbackgammon_main.cpp
+ kbackgammon_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ noinst_HEADERS = version.h kbg.h kbgboard.h kbgtextview.h kbgstatus.h
+@@ -34,9 +35,6 @@
+ messages: rc.cpp	
+ 	LIST=`find . -name \*.h -o -name \*.hh -o -name \*.H -o -name \*.hxx -o -name \*.hpp -o -name \*.cpp -o -name \*.cc -o -name \*.cxx -o -name \*.ecpp -o -name \*.C`; \
+ 	$(XGETTEXT) $$LIST -o $(podir)/kbackgammon.pot
+-
+-dummy.cpp:
+-	echo > dummy.cpp
+ 
+ install-data-local:
+ 	rm -rf $(kde_appsdir)/Games/kbackgammon.desktop

@@ -1,0 +1,131 @@
+$NetBSD: patch-aa,v 1.1.2.2 2002/06/23 18:37:21 jlam Exp $
+
+--- cabextract.c.orig	Mon Aug 20 17:06:11 2001
++++ cabextract.c	Fri May 10 10:19:42 2002
+@@ -50,6 +50,7 @@
+ #ifdef HAVE_CONFIG_H
+ #include <config.h>
+ 
++#include <ctype.h>
+ #include <stdio.h> /* everyone has this! */
+ 
+ #ifdef HAVE_SYS_TYPES_H
+@@ -1434,14 +1435,25 @@
+             }
+ 
+             rundest = window + window_posn;
+-            runsrc  = rundest - match_offset;
+-            window_posn += match_length;
+             this_run -= match_length;
+ 
+             /* copy any wrapped around source data */
+-            while ((runsrc < window) && (match_length-- > 0)) {
+-             *rundest++ = *(runsrc + window_size); runsrc++;
++            if (window_posn >= match_offset) {
++	      /* no wrap */
++              runsrc = rundest - match_offset;
++            } else {
++              int copy_length;
++              runsrc = rundest + (window_size - match_offset);
++              copy_length = match_offset - window_posn;
++              if (copy_length < match_length) {
++                match_length -= copy_length;
++                window_posn += copy_length;
++                while (copy_length-- > 0) *rundest++ = *runsrc++;
++                runsrc = window;
++              }
+             }
++            window_posn += match_length;
++
+             /* copy match data - no worries about destination wraps */
+             while (match_length-- > 0) *rundest++ = *runsrc++;
+ 
+@@ -1514,14 +1526,25 @@
+             }
+ 
+             rundest = window + window_posn;
+-            runsrc  = rundest - match_offset;
+-            window_posn += match_length;
+             this_run -= match_length;
+ 
+             /* copy any wrapped around source data */
+-            while ((runsrc < window) && (match_length-- > 0)) {
+-             *rundest++ = *(runsrc + window_size); runsrc++;
++            if (window_posn >= match_offset) {
++	      /* no wrap */
++              runsrc = rundest - match_offset;
++            } else {
++              int copy_length;
++              runsrc = rundest + (window_size - match_offset);
++              copy_length = match_offset - window_posn;
++              if (copy_length < match_length) {
++                match_length -= copy_length;
++                window_posn += copy_length;
++                while (copy_length-- > 0) *rundest++ = *runsrc++;
++                runsrc = window;
++              }
+             }
++            window_posn += match_length;
++
+             /* copy match data - no worries about destination wraps */
+             while (match_length-- > 0) *rundest++ = *runsrc++;
+ 
+@@ -1635,7 +1658,7 @@
+   d = &name[strlen(name)];
+   do {
+     c = *s++;
+-    *d++ = (c=='/') ? '\\' : ((c=='\\') ? '/' : (lower ? tolower(c) : c));
++    *d++ = (c=='/') ? '\\' : ((c=='\\') ? '/' : (lower ? tolower((unsigned char) c) : c));
+   } while (c);
+   
+   /* create directories if needed, attempt to write file */
+@@ -1655,14 +1678,17 @@
+ void file_close(struct file *fi) {
+   struct utimbuf utb;
+   struct tm time;
++  mode_t m;
+ 
+   if (fi->fh) fclose(fi->fh);
+   fi->fh = NULL;
+ 
++  m = umask(0);
++  (void) umask(m);
+   chmod(fi->filename,
+-    (mode_t) 0444
++   ((mode_t) 0444
+     | (fi->attribs & cffile_A_EXEC   ? 0111 : 0)
+-    | (fi->attribs & cffile_A_RDONLY ? 0 : 0222)
++    | (fi->attribs & cffile_A_RDONLY ? 0 : 0222)) & ~m
+   );
+ 
+ 
+@@ -1670,8 +1696,9 @@
+   time.tm_min  = (fi->time >> 5)   & 0x3f;
+   time.tm_hour = (fi->time >> 11);
+   time.tm_mday =  fi->date         & 0x1f;
+-  time.tm_mon  = (fi->date >> 5)   & 0xf;
++  time.tm_mon  = ((fi->date >> 5)  & 0xf) - 1;
+   time.tm_year = (fi->date >> 9)   + 80;
++  time.tm_isdst = -1;
+ #ifdef HAVE_UTIME
+   utb.actime = utb.modtime = mktime(&time);
+   utime(fi->filename, &utb);
+@@ -1726,7 +1753,7 @@
+     char *p, c;
+     p = strrchr(name, '/'); /* only modify the filename, not the path */
+     if (!p) p = name;
+-    while ((c = *p)) *p++ = (char) tolower((int) c);
++    while ((c = *p)) *p++ = (char) tolower((unsigned char) c);
+     fh = fopen(name, "rb");
+     if (!fh) { perror(name); return 0; }
+   }
+@@ -1818,7 +1845,8 @@
+ 	 * file, and the 'file offset' header isn't beyond the cabinet
+ 	 * length, this is a reasonable cabinet header.
+ 	 */
+-	if ((len+offset+i) < cab->filelen && foff < len) {
++	/* XXX 20 for self-extracting cabinet */
++	if ((len+offset+i) <= cab->filelen+20 && foff < len) {
+ 	  cabinet_seek(cab, offset+i-20); return 1;
+ 	}
+       }

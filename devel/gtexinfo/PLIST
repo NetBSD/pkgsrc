@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/04 11:10:22 seb Exp $
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/info-stnd.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/info.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/texinfo
+@comment $NetBSD: PLIST,v 1.2.2.1 2002/06/23 18:44:21 jlam Exp $
 bin/makeinfo
+@unexec %D/bin/install-info --delete --info-dir=%D/info %D/info/info-stnd.info
+@unexec %D/bin/install-info --delete --info-dir=%D/info %D/info/info.info
+@unexec %D/bin/install-info --delete --info-dir=%D/info %D/info/texinfo
 bin/texi2dvi
 bin/texindex
 bin/install-info
@@ -25,9 +25,9 @@ info/texinfo-6
 info/texinfo-7
 info/texinfo-8
 info/texinfo-9
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/info-stnd.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/info.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/texinfo
+@exec %D/bin/install-info --info-dir=%D/info %D/info/info-stnd.info
+@exec %D/bin/install-info --info-dir=%D/info %D/info/info.info
+@exec %D/bin/install-info --info-dir=%D/info %D/info/texinfo
 man/man1/info.1
 man/man1/install-info.1
 man/man1/makeinfo.1

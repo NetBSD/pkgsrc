@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.2.2.2 2002/06/23 18:45:32 jlam Exp $
+
+SHA1 (generator-0.34.tar.gz) = abf57875c60f63c9ffb97894f4ce9c638f60054f
+Size (generator-0.34.tar.gz) = 442852 bytes
+SHA1 (patch-aa) = 0878709485d884c1e4956b5ac4659024e31ef3ac
+SHA1 (patch-ab) = 4c03632abd9a02cc2a616c2de7601223886334e4

@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.26 2001/10/04 07:58:02 skrll Exp $
+$NetBSD: patch-aa,v 1.26.2.1 2002/06/23 18:44:30 jlam Exp $
 
 --- ltconfig.in.orig	Mon May 21 05:05:06 2001
 +++ ltconfig.in
+@@ -1104,7 +1104,7 @@
+   version_type=darwin
+   need_lib_prefix=no
+   need_version=no
+-  library_names_spec='${libname}${release}${versuffix}.`test .$module = .yes && echo so || echo dylib` ${libname}${release}${major}.$`test .$module = .yes && echo so || echo dylib` ${libname}.`test .$module = .yes && echo so || echo dylib`'
++  library_names_spec='${libname}${release}${versuffix}.`test .$module = .yes && echo so || echo dylib` ${libname}${release}${major}.`test .$module = .yes && echo so || echo dylib` ${libname}.`test .$module = .yes && echo so || echo dylib`'
+   soname_spec='${libname}${release}${major}.`test .$module = .yes && echo so || echo dylib`'
+   shlibpath_overrides_runpath=yes
+   shlibpath_var=DYLD_LIBRARY_PATH
 @@ -1198,7 +1198,7 @@
  
  # This must be Linux ELF.

@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1.2.2 2002/06/23 18:37:35 jlam Exp $
+
+--- soundserver/Makefile.in.orig	Wed May  8 19:59:27 2002
++++ soundserver/Makefile.in
+@@ -303,7 +303,7 @@
+ bin_PROGRAMS = artsd artsplay artscat artswrapper artsshell artsrec
+ 
+ artsd_LDADD = libsoundserver_idl.la $(FLOWLIBS) \
+-	$(top_builddir)/mcop_mt/libmcop_mt.la $(USE_THREADS)
++	$(top_builddir)/mcop/libmcop.la $(USE_THREADS)
+ 
+ artsd_SOURCES = soundserverv2_impl.cc soundserver_impl.cc simplesoundserver_impl.cc artsd.cc cpuusage.cc samplestorage_impl.cc
+ 
+@@ -395,7 +395,7 @@
+ @KDE_USE_FINAL_TRUE@artsd_OBJECTS = $(artsd_final_OBJECTS)
+ artsd_DEPENDENCIES = libsoundserver_idl.la \
+ 	$(top_builddir)/flow/libartsflow.la \
+-	$(top_builddir)/mcop_mt/libmcop_mt.la
++	$(top_builddir)/mcop/libmcop.la
+ artsd_LDFLAGS =
+ am_artsplay_OBJECTS = artsplay.$(OBJEXT)
+ #>- artsplay_OBJECTS = $(am_artsplay_OBJECTS)
