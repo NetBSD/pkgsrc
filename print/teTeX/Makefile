@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/07/04 01:38:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 2000/09/03 13:07:40 wiz Exp $
 #
 
 DISTNAME=	teTeX-1.0.7
@@ -7,6 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	hubertf@netbsd.org
+HOMEPAGE=	http://www.tug.org/tetex/
 
 DEPENDS+=	teTeX-bin>=1.0.7:../teTeX-bin
 DEPENDS+=	teTeX-sharesrc>=1.0.1:../teTeX-sharesrc
