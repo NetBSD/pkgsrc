@@ -1,7 +1,5 @@
-# $NetBSD: Makefile.common,v 1.6 2001/04/19 13:55:17 wiz Exp $
-
+# $NetBSD: Makefile.common,v 1.7 2001/04/22 16:25:58 wiz Exp $
 VIM_VERSION=		5.7
-
 DISTNAME=		vim-${VIM_VERSION}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
@@ -15,12 +13,3 @@ HOMEPAGE=		http://www.vim.org
 
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-
-DISTINFO_FILE=		${.CURDIR}/../vim-share/distinfo
-PATCHDIR=		${WRKDIR}/.patches
-
-pre-patch:
-	@${MKDIR} ${WRKDIR}/.patches
-	@${CP} ${.CURDIR}/../vim-share/patches.common/patch* ${WRKDIR}/.patches
-	@if [ -d ${.CURDIR}/patches ] ; then \
-		${CP} ${.CURDIR}/patches/patch* ${WRKDIR}/.patches ; fi

@@ -1,4 +1,4 @@
-$NetBSD: patch-zb,v 1.2 2000/06/25 11:50:39 pooka Exp $
+$NetBSD: patch-zb,v 1.1 2001/04/22 16:25:59 wiz Exp $
 
 --- feature.h.orig	Wed Mar 29 17:10:34 2000
 +++ feature.h	Sun Jun 25 12:42:47 2000
