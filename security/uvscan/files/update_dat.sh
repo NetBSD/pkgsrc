@@ -1,7 +1,7 @@
 #!/bin/sh
 
 UVSCANDIR="@UVSCANDIR@"
-DAT_SITE="ftp://ftp.nai.com/pub/datfiles/english/"
+DAT_SITE="http://download.nai.com/products/datfiles/4.x/nai/"
 DAT_FILES="@DATFILES@"
 TMPDIR="${TMPDIR:-/tmp}/$$"
 
@@ -25,25 +25,38 @@ while getopts vf: arg; do
 	esac
 done
 
+(${ECHO} writetest > ${UVSCANDIR}/writetest) >/dev/null 2>&1
+if [ $? != 0 ]; then
+	echo ${progname}: no write access to ${UVSCANDIR} -- update aborted.
+	exit 1
+else
+	${RM} -f ${UVSCANDIR}/writetest
+fi
+
 ${MKDIR} ${TMPDIR}
 
 if [ -n "$dat_tar" ]; then
-	if ! (${GTAR} -x -C ${TMPDIR} -f $dat_tar readme.txt >/dev/null); then
-		${ECHO} "$progname: unable to extract readme.txt"
+	if ! (${GTAR} -x -C ${TMPDIR} -f $dat_tar pkgdesc.ini >/dev/null); then
+		${ECHO} "$progname: unable to extract pkgdesc.ini"
 		${RM} -rf ${TMPDIR}
 		exit 1  
 	fi
+	curver=`${AWK} -F= '/Version/ { print $2; exit }' ${TMPDIR}/pkgdesc.ini | ${SED} -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
 else
-	# Fetch the ReadMe file to read the latest version of the DAT files.
-	if ! (cd ${TMPDIR}; ftp ${DAT_SITE}readme.txt >/dev/null); then
-		${ECHO} "$progname: unable to fetch ${DAT_SITE}readme.txt"
+	# Fetch the update.ini file to read the latest version of the DAT files.
+	if ! (cd ${TMPDIR}; ftp ${DAT_SITE}update.ini >/dev/null); then
+		${ECHO} "$progname: unable to fetch ${DAT_SITE}update.ini"
 		${RM} -rf ${TMPDIR}
 		exit 1  
 	fi
+	curver=`${AWK} -F= '/DATVersion/ { print $2; exit }' ${TMPDIR}/update.ini | ${SED} -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
 fi
 
-curver=`${AWK} '/DAT Version/ { print $4; exit }' ${TMPDIR}/readme.txt | ${SED} -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
-oldver=`${AWK} '/DAT Version/ { print $4; exit }' ${UVSCANDIR}/readme.txt | ${SED} -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
+if [ -e ${UVSCANDIR}/pkgdesc.ini ]; then
+	oldver=`${AWK} -F= '/Version/ { print $2; exit }' ${UVSCANDIR}/pkgdesc.ini | ${SED} -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
+else
+	oldver=0
+fi
 
 if [ $curver -le $oldver ]; then
 	if [ -z "$verbose" ]; then
