@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/07 09:17:29 jdolecek Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/22 23:55:15 jlam Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -23,7 +23,7 @@ CONFLICTS=	jakarta-ant*
 
 USE_BUILDLINK2=	# defined
 
-EXTRACT_CMD.zip=	${LOCALBASE}/bin/unzip -Caq $${extract_file}
+EXTRACT_CMD_OPTS.zip=	-Caq
 
 do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD} cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} ${SH} bootstrap.sh
