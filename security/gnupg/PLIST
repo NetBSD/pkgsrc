@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/08/04 23:12:17 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/08/25 21:25:24 itojun Exp $
 bin/gpg
 bin/gpgsplit
 bin/gpgv
@@ -31,6 +31,7 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnupg.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnupg.mo
