@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/01 08:27:31 garbled Exp $
+--- Makefile.orig	Thu Jul  1 00:07:30 1999
++++ Makefile	Thu Jul  1 01:07:42 1999
+@@ -1,8 +1,8 @@
+-CFLAGS = -Wall
++CFLAGS = -Wall -I${LOCALBASE}/include
+ CC = gcc
+ HEADERS = message.h dopewars.h serverside.h clientside.h AIPlayer.h
+ OBJS = message.o dopewars.o serverside.o clientside.o AIPlayer.o
+-LIBS = -lncurses
++LIBS = $(LDFLAGS) -lncurses
+ 
+ dopewars : $(OBJS)
+ 	$(CC) $(CFLAGS) -o dopewars $(OBJS) $(LIBS)
+@@ -23,10 +23,10 @@
+ 	$(CC) $(CFLAGS) -c AIPlayer.c
+ 
+ install :
+-	install -o root -g games -m 2755 dopewars /usr/bin/dopewars
+-	touch /var/lib/games/dopewars.sco
+-	chown root.games /var/lib/games/dopewars.sco
+-	chmod 0660 /var/lib/games/dopewars.sco
++	install -o root -g games -m 2755 dopewars ${PREFIX}/bin/dopewars
++	touch /var/games/dopewars.sco
++	chown root.games /var/games/dopewars.sco
++	chmod 0660 /var/games/dopewars.sco
+ 
+ clean :
+ 	rm -f $(OBJS)
