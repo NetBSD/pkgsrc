@@ -1,0 +1,57 @@
+$NetBSD: patch-cd,v 1.3 2003/02/08 11:13:13 dmcmahill Exp $
+
+--- kdefx/Makefile.in.orig	Tue Dec 17 05:43:25 2002
++++ kdefx/Makefile.in
+@@ -359,12 +359,15 @@ HEADERS = $(include_HEADERS)
+ DIST_COMMON = $(include_HEADERS) Makefile.am Makefile.in
+ SOURCES = $(libkdefx_la_SOURCES)
+ 
++CXXCOMPILE_NOOPT=${CXXCOMPILE:-O%=}
++LTCXXCOMPILE_NOOPT=${LTCXXCOMPILE:-O%=}
++
+ #>- all: all-am
+ #>+ 1
+ all: docs-am  all-am
+ 
+ .SUFFIXES:
+-.SUFFIXES: .cpp .lo .o .obj
++.SUFFIXES: .cc .cpp .lo .o .obj
+ 
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+@@ -443,6 +446,28 @@ distclean-depend:
+ @AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
+ @AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ 	$(LTCXXCOMPILE) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
++.cc.o:
++@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
++@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(CXXCOMPILE_NOOPT) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
++.cc.obj:
++@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
++@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(CXXCOMPILE_NOOPT) -c -o $@ `cygpath -w $<`
++
++.cc.lo:
++@AMDEP_TRUE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
++@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
++@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(LTCXXCOMPILE_NOOPT) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
++.cpp.cc:
++	cp -f $< $@
++
+ CXXDEPMODE = @CXXDEPMODE@
+ uninstall-info-am:
+ install-includeHEADERS: $(include_HEADERS)
+@@ -683,3 +708,6 @@ kde-rpo-clean:
+ #>+ 3
+ kstyle.lo: kstyle.moc 
+ kstyle.o: kstyle.moc 
++
++kpixmap.o: kpixmap.cc
++
