@@ -1,8 +1,8 @@
 PKG_DELETE(1)           NetBSD General Commands Manual           PKG_DELETE(1)
 
 NNAAMMEE
-     ppkkgg__ddeelleettee - a utility for deleting previously installed software package
-     distributions
+     ppkkgg__ddeelleettee -- a utility for deleting previously installed software pack-
+     age distributions
 
 SSYYNNOOPPSSIISS
      ppkkgg__ddeelleettee [--DDddFFffnnOORRrrVVvv] [--KK _p_k_g___d_b_d_i_r] [--pp _p_r_e_f_i_x] _p_k_g_-_n_a_m_e _._._.
@@ -62,6 +62,10 @@ OOPPTTIIOONNSS
 
      --nn      Don't actually deinstall a package, just report the steps that
              would be taken if it were.
+
+     --NN      Remove the package's registration and its entries from the pack-
+             age database, but leave the files installed.  Don't run any dein-
+             stall scripts or @unexec lines either.
 
      --OO      Only delete the package's entries from the package database, do
              not touch the package or its files itself.
