@@ -1,0 +1,4 @@
+httperf is a popular web server benchmarking program that supports
+the HTTP/1.1 protocol
+
+It was written by David Mosberger at Hewlett-Packard.
