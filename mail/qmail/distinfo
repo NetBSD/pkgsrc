@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2004/08/22 00:10:52 schmonz Exp $
+$NetBSD: distinfo,v 1.8.4.1 2004/12/28 23:32:35 salo Exp $
 
 SHA1 (netqmail-1.05.tar.gz) = fe4cbe97bd2f18a5ca1b36e4fbbd6c524256a829
 Size (netqmail-1.05.tar.gz) = 252264 bytes
@@ -18,3 +18,7 @@ SHA1 (qmail-1.03-realrcptto-2004.08.20.patch) = 1406bddae6eb59c50324c15907ef3178
 Size (qmail-1.03-realrcptto-2004.08.20.patch) = 16663 bytes
 SHA1 (netqmail-1.05-tls-smtpauth-20040705.patch) = 3d26efd3601bc6a88be2685dcaed51fc553a59d3
 Size (netqmail-1.05-tls-smtpauth-20040705.patch) = 57631 bytes
+SHA1 (qmail-smtpd-viruscan-1.3.patch) = 3a8f4e38df1c3f483f72b1a24ebc36664d075dd9
+Size (qmail-smtpd-viruscan-1.3.patch) = 8891 bytes
+SHA1 (qmail-smtpd-viruscan-logging.patch) = ca7105b5561cf280e9e3a465d2d68a16673ff56c
+Size (qmail-smtpd-viruscan-logging.patch) = 2157 bytes
