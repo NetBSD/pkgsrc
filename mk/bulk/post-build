@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.14 2001/10/15 23:00:10 hubertf Exp $
+# $NetBSD: post-build,v 1.15 2001/10/15 23:18:51 hubertf Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -62,7 +62,7 @@ if ($verbose) {
 	print "*** NetBSD $osrev/$arch\n";
 	print "*** Result of bulk pkgsrc build as of $date:\n";
 	print "\n";
-	printf ("%-23s State       \tPkgs broken by\t(last modified, maintainer)\n","Pkg");
+	printf ("%-23s State       \tBreaks\t(last modified, maintainer)\n","Pkg");
 }
 
 system("mkdir -p ${FTP}");
@@ -157,11 +157,11 @@ while (<BF>) {
 
     if ($nerrors != 0) {
 	if ($nbrokenby > 0){
-    	    printf("%-23s $state\t%-13d\t($who, $maintainer)\n", "$pkg:",$nbrokenby)
+    	    printf("%-23s $state\t%-5d\t($who, $maintainer)\n", "$pkg:",$nbrokenby)
 	        if $verbose;
 	}
 	else {
-    	    printf("%-23s $state\t%-13s\t($who, $maintainer)\n", "$pkg:","")
+    	    printf("%-23s $state\t%-5s\t($who, $maintainer)\n", "$pkg:","")
 	        if $verbose;
 	}
 
