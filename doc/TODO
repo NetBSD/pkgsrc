@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1558 2004/03/31 06:08:21 snj Exp $
+$NetBSD: TODO,v 1.1559 2004/03/31 10:41:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -176,7 +176,6 @@ Suggested package updates
 	o efax-gtk-2.2.5a
 	o elk-3.99.6
 	o elm-me-2.4pl113
-	o ethereal-0.10.3 [cube]
 	o evolution-1.5.2
 	o exim-4.31
 	o festival-1.4.3
