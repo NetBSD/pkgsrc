@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2003/09/10 23:43:36 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.8 2004/03/05 13:03:47 dmcmahill Exp $
 
 --- scheme/gnet-PCBboard.scm.orig	Sun Aug 24 01:36:06 2003
 +++ scheme/gnet-PCBboard.scm
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.7 2003/09/10 23:43:36 dmcmahill Exp $
  ;;  (let ((pipe (open-output-pipe (string-append "m4 " *m4-pcbdir* "/common.m4 - >> " output-filename))))
  ;; Fixed pipe command (AVH 1/27/02)
 -   (let ((pipe (open-output-pipe (string-append "m4 -d -I" *m4-pcbdir* " " *m4-pcbdir* "/common.m4 - >> " output-filename))))
-+   (let ((pipe (open-output-pipe (string-append "gm4 -d -I" *m4-pcbdir* " -I" *m4-pcbconfdir* " -I$HOME/.pcb -I. " *m4-pcbdir* "/common.m4 - >> " output-filename))))
++   (let ((pipe (open-output-pipe (string-append "@M4@ -d -I" *m4-pcbdir* " -I" *m4-pcbconfdir* " -I$HOME/.pcb -I. " *m4-pcbdir* "/common.m4 - >> " output-filename))))
  
  
         ;; packages is a list with the different uref value
