@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2005/01/18 22:03:55 tv Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/25 23:39:30 cube Exp $
 
-DISTNAME=	pkgfind-20050118
+DISTNAME=	pkgfind-20050125
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,7 +20,7 @@ do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-build:
-	${COMPILE.c} -o ${WRKSRC}/pkgfind ${WRKSRC}/pkgfind.c
+	${LINK.c} -o ${WRKSRC}/pkgfind ${WRKSRC}/pkgfind.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pkgfind ${PREFIX}/bin/pkgfind
