@@ -1,8 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-install,v 1.1.1.1 1999/02/28 15:17:54 hwr Exp $
-
-echo -n "Worksource:" 
-echo ${WRKSRC}
+# $NetBSD: pre-install,v 1.2 1999/02/28 15:39:09 hwr Exp $
 
 cd ${WRKSRC}
 cp p_port.h ${PREFIX}/include
