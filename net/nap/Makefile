@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/01/24 12:04:54 tron Exp $
+# $NetBSD: Makefile,v 1.11 2002/08/07 06:10:35 jlam Exp $
 
 DISTNAME=	nap-1.4.4
 CATEGORIES=	net
@@ -11,7 +11,8 @@ COMMENT=	Terminal based Napster client similar to ircII
 GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
 # newterm()
-INCOMPAT_CURSES=	1.4* 1.5 1.5_* 1.5.[1-9]* 1.5[A-Z]
+INCOMPAT_CURSES=	NetBSD-1.4*-*
+INCOMPAT_CURSES+=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-Z]-*
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nap ${PREFIX}/share/examples/nap
