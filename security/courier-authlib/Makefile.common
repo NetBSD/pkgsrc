@@ -1,7 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2005/02/10 03:21:30 jlam Exp $
-
-MAINTAINER=		jlam@NetBSD.org
-HOMEPAGE=		http://www.courier-mta.org/
+# $NetBSD: Makefile.common,v 1.2 2005/02/10 03:50:03 jlam Exp $
 
 COURIER_USER?=		courier
 COURIER_GROUP?=		courier
