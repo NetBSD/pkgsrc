@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2666 2004/12/05 15:26:00 cube Exp $
+$NetBSD: TODO,v 1.2667 2004/12/05 15:32:22 he Exp $
 
 Suggested new packages
 ======================
@@ -751,7 +751,6 @@ Suggested package updates
 	o p5-Business-CreditCard-0.28
 	o p5-Business-ISBN-1.78
 	o p5-CDDB-1.15
-	o p5-CGI-3.05
 	o p5-CGI-Application-3.31
 	o p5-CGI-FormBuilder-2.13
 	o p5-CGI_Lite-2.02
@@ -805,7 +804,6 @@ Suggested package updates
 	o p5-HTML-Mason-1.28
 	o p5-HTML-Parser-3.37
 	o p5-HTML-Table-1.20
-	o p5-HTML-Template-2.7
 	o p5-HTMLObject-2.23
 	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
