@@ -1,8 +1,17 @@
-$NetBSD: patch-ag,v 1.4 2004/02/02 21:07:26 abs Exp $
+$NetBSD: patch-ag,v 1.5 2004/07/10 23:45:59 salo Exp $
 
---- install.sh.orig	Tue Sep  4 05:11:45 2001
-+++ install.sh
-@@ -28,7 +28,7 @@ if [ "$FOUND" = "" ] ; then
+--- install.sh.orig	2003-12-16 17:54:55.000000000 +0100
++++ install.sh	2004-07-11 01:44:38.000000000 +0200
+@@ -17,7 +17,7 @@
+ # Files:  x10config x10sched.conf
+ FOUND=
+ for FL in $X10CONFIG $HOME/.x10config /etc/x10.conf ; do
+-if [ -e $FL ] ; then
++if [ -f $FL -o -h $FL ] ; then
+     FOUND=$FL
+     echo "An X10 Configuration file was found at $FL"
+     break
+@@ -28,7 +28,7 @@
      while : ; do
  	echo "Where would you like the sample X10 configuration installed?"
  	echo "The default is $HOME/.x10config"
@@ -11,25 +20,23 @@ $NetBSD: patch-ag,v 1.4 2004/02/02 21:07:26 abs Exp $
  	if [ "$WHERE" = "" ]  ; then
  	    FOUND=$HOME/.x10config
  	    break
-@@ -56,14 +56,9 @@ if [ ! -f $FOUND ] ; then
+@@ -56,14 +56,9 @@
  		    ;;
  	    esac
  	    echo "To which port is the CM11 attached?"
 -	    read WHERE
 -	    if [ "$WHERE" != "" ]  ; then
 -		if [ -e $WHERE ] ; then
--		    TTY=$WHERE
--		    break
++	    WHERE=$DEFAULT_SERIAL_DEVICE
+ 		    TTY=$WHERE
+ 		    break
 -		fi
 -		echo "I could not find the device you specified. Please try again."
 -	    fi
-+	    WHERE=$DEFAULT_SERIAL_DEVICE
-+	    TTY=$WHERE
-+	    break
  	done
  	sed "s;^TTY.*;TTY	$TTY;" x10config > $FOUND
  
-@@ -71,29 +66,22 @@ fi
+@@ -71,29 +66,22 @@
  
  echo "X10 configuration file at $FOUND will be used."
  
@@ -44,28 +51,24 @@ $NetBSD: patch-ag,v 1.4 2004/02/02 21:07:26 abs Exp $
 -    echo "fatal error:  The TTY device $TTY can not be located"
 -    exit
 -fi
-+if [ -e $TTY ]; then
++if [ -c $TTY -o -h $TTY ]; then
 +	eval `sed -n "s/^TTY[ 	]*/TTY=/p" $FOUND`
  
 -if [ "$1" != crwxrwxrwx ] ; then
 -    if [ "$ME" != root ] ; then
--	echo "If you want users other than root to be able to run HEYU, "
--	echo "you'll have to log in as root and run the command \"chmod 777 $TTY\""
--    else
--        chmod 777 $TTY
--    fi
--else
--    echo "The TTY permissions were OK."
 +	#Check TTY permisions
 +	set `ls -l $TTY` none
 +	if [ $1 = "none" ] ; then
 +	    echo "WARNING:  The TTY device $TTY can not be located"
 +	else
 +		if [ "$1" != crwxrwxrwx ] ; then
-+			echo "If you want users other than root to be able to run HEYU, "
-+			echo "you'll have to log in as root and run the command \"chmod 777 $TTY\""
-+		else
-+    			echo "The TTY permissions were OK."
+ 	echo "If you want users other than root to be able to run HEYU, "
+ 	echo "you'll have to log in as root and run the command \"chmod 777 $TTY\""
+     else
+-        chmod 777 $TTY
+-    fi
+-else
+     echo "The TTY permissions were OK."
 +		fi
 +	fi
  fi
