@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.43 2001/04/02 19:02:34 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.44 2001/04/17 17:08:50 abs Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -184,14 +184,14 @@ foreach $i (<$portdir/$patchdir/patch-*>) {
 	push(@checker, $i);
 	$checker{$i} = 'checkpatch';
 }
-if (-f "$portdir/$patchsumfile") {
-	$i="$patchsumfile";
+if (-e <$portdir/$distinfo>) {
+	$i = "$distinfo";
 	next if (defined $checker{$i});
 	push(@checker, $i);
-	$checker{$i} = 'checkpatchsum';
+	$checker{$i} = 'checkdistinfo';
 }
 {
-	# Make sure there's a files/patch-sum if there are patches
+	# Make sure there's a distinfo if there are patches
 	$patches=0;
 	patch:
     	    foreach $i (<$portdir/$patchdir/patch-*>) {
@@ -200,15 +200,9 @@ if (-f "$portdir/$patchsumfile") {
 			last patch;
 		}
 	}
-	if ($patches && ! -f "$portdir/$patchsumfile" ) {
-		&perror("WARN: no $portdir/$patchsumfile file. Please run 'make makepatchsum'.");
+	if ($patches && ! -f "$portdir/$distinfo" ) {
+		&perror("WARN: no $portdir/$distinfo file. Please run 'make makepatchsum'.");
 	}
-}
-if (-e <$portdir/$digestfile>) {
-	$i = "$digestfile";
-	next if (defined $checker{$i});
-	push(@checker, $i);
-	$checker{$i} = 'checkdigest';
 }
 foreach $i (@checker) {
 	print "OK: checking $i.\n";
@@ -223,14 +217,20 @@ foreach $i (@checker) {
 		}
 	}
 }
-if (-e <$portdir/$digestfile> ) {
+if (-e <$portdir/$distinfo> ) {
 	if ( $seen_NO_CHECKSUM ) {
-		&perror("WARN: NO_CHECKSUM set, but $portdir/$digestfile exists. Please remove it.");
+		&perror("WARN: NO_CHECKSUM set, but $portdir/$distinfo exists. Please remove it.");
 	}
 } else {
 	if ( ! $seen_NO_CHECKSUM ) {
-		&perror("WARN: no $portdir/$digestfile file. Please run 'make makesum'.");
+		&perror("WARN: no $portdir/$distinfo file. Please run 'make makesum'.");
 	}
+}
+if (-e <$pkgdir/files/md5> ) {
+	&perror("FATAL: pkg/files/md5 is deprecated -- run 'make mdi' to generate distinfo.");
+}
+if (-e <$pkgdir/files/patch-sum> ) {
+	&perror("FATAL: pkg/files/patch-sum is deprecated -- run 'make mps' to generate distinfo.");
 }
 if (-e <$pkgdir/COMMENT> ) {
 	&perror("FATAL: pkg/COMMENT is deprecated -- please use a COMMENT variable instead.");
@@ -301,11 +301,11 @@ sub checkdescr {
 }
 
 #
-# files/patch-sum
+# distinfo
 #
-sub checkpatchsum {
-	local($file) = @_;	# files/patch-sum
-	local(%inpatchsumfile);
+sub checkdistinfo {
+	local($file) = @_;	# distinfo
+	local(%indistinfofile);
 
 	open(SUM,"<$portdir/$file") || return 0;
 	while(<SUM>) {
@@ -326,18 +326,18 @@ sub checkpatchsum {
 				&perror("FATAL: checksum of $patch differs between $portdir/$file and\n"
 				       ."       $portdir/$patchdir/$patch. Rerun 'make makepatchsum'.");
 			}
-		} else {
+		} elsif ($patch =~ /^patch-/)  {
 			&perror("FATAL: patchfile '$patch' is in $file\n"
 			       ."       but not in $portdir/$patchdir/$patch. Rerun 'make makepatchsum'.");
 		}
 
-		$inpatchsumfile{$patch} = 1;
+		$indistinfofile{$patch} = 1;
 	}
 	close(SUM);
 
 	foreach $patch ( <$portdir/$patchdir/patch-*> ) {
 		$patch =~ /\/([^\/]+)$/;
-		if (! $inpatchsumfile{$1}) {
+		if (! $indistinfofile{$1}) {
 			&perror("FATAL: patchsum of '$1' is in $portdir/$patchdir/$1 but not in\n"
 			       ."       $file. Rerun 'make makepatchsum'.");
 		}
@@ -571,21 +571,6 @@ sub checkpatch {
 	close(IN);
 }
 
-sub checkdigest {
-	local($file) = @_;
-	local($rcsidseen) = 0;
-
-	open(IN, "< $portdir/$file") || return 0;
-	while (<IN>) {
-		$rcsidseen++ if /\$$rcsidstr[:\$]/;
-	}
-	if (!$rcsidseen) {
-		&perror("FATAL: RCS tag \"\$$rcsidstr\$\" must be present ".
-			"in digest $file.")
-	}
-	close(IN);
-}
-
 sub readmakefile {
 	local ($file) = @_;
 	local $contents = "";
@@ -707,19 +692,14 @@ sub checkmakefile {
 	$scriptdir = $1 if ($whole =~ /\nSCRIPTDIR[+?]?=[ \t]*([^\n]+)\n/);
 	$scriptdir =~ s/\$\{.CURDIR\}/./;
 
-	$digestfile = "$filesdir/md5";
-	$digestfile = $1 if ($whole =~ /\nDIGEST_FILE[+?]?=[ \t]*([^\n]+)\n/);
-	$digestfile =~ s/\$\{.CURDIR\}/./;
-	$digestfile =~ s/\${PKGSRCDIR}/..\/../;
+	$distinfo = "distinfo";
+	$distinfo = $1 if ($whole =~ /\nDIGEST_FILE[+?]?=[ \t]*([^\n]+)\n/);
+	$distinfo =~ s/\$\{.CURDIR\}/./;
+	$distinfo =~ s/\${PKGSRCDIR}/..\/../;
 
-	$patchsumfile = "$filesdir/patch-sum";
-	$patchsumfile = $1
-	    if ($whole =~ /\nPATCH_SUM_FILE[+?]?=[ \t]*([^\n]+)\n/);
-	$patchsumfile =~ s/\$\{.CURDIR\}/./;
 	print("OK: PATCHDIR: $patchdir, SCRIPTDIR: $scriptdir, ".
 	      "FILESDIR: $filesdir, PKGDIR: $pkgdir, ".
-	      "DIGEST_FILE: $digestfile, ".
-	      "PATCH_SUM_FILE: $patchsumfile\n") if ($verbose);
+	      "DISTINFO: $distinfo\n") if ($verbose);
 
 	#
 	# whole file: IS_INTERACTIVE/NOPORTDOCS
