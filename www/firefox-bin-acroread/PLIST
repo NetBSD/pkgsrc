@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2004/02/10 12:26:24 grant Exp $
+@exec ${LN} -s %D/${ACROREAD}/Browsers/${PLATFORM}/nppdf.so %D/lib/firefox-linux/plugins/nppdf.so
+lib/firefox-linux/plugins/nppdf.so
