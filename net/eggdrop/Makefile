@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/10/09 18:02:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/11/14 16:39:56 abs Exp $
 #
 
 DISTNAME=	eggdrop1.3.22
@@ -8,12 +8,12 @@ MASTER_SITES=	ftp://ftp.sodre.net/pub/eggdrop/ \
 		ftp://ftp.bots.org/pub/mirrors/eggdrop/ \
 		ftp://ftp.gymnet.com/pub/irc/bots/eggdrop/
 
-BROKEN=		This package has not yet been updated to work with tcl-8.3.2.
+BROKEN=		This package has not yet been updated to work past tcl-8.0.5.
 
 MAINTAINER=     tv@netbsd.org
 HOMEPAGE=	http://www.sodre.net/eggdrop/
 
-DEPENDS+=	tcl-8.0.5:../../lang/tcl
+DEPENDS+=	tcl-8.3.2:../../lang/tcl
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include/tcl8.0"
