@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/06/03 13:12:49 shell Exp $
+$NetBSD: distinfo,v 1.4 2004/01/04 18:07:28 xtraeme Exp $
 
-SHA1 (HTML-FillInForm-0.29.tar.gz) = 88b033b7eb7346ff4e58d7aae05e24624d3653af
-Size (HTML-FillInForm-0.29.tar.gz) = 9057 bytes
+SHA1 (HTML-FillInForm-1.03.tar.gz) = 16fa943ef6a3686f3640b9a941b9ee820e3bf079
+Size (HTML-FillInForm-1.03.tar.gz) = 9869 bytes
