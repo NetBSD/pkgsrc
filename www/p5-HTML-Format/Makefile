@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.9 2003/07/22 04:14:31 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/18 21:48:42 heinz Exp $
 
-DISTNAME=		HTML-Format-1.23
+DISTNAME=		HTML-Format-2.03
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5hfo
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		heinz@NetBSD.org
+HOMEPAGE=		http://search.cpan.org/dist/HTML-Format/
 COMMENT=		Perl5 modules for converting HTML to other text formats
 
 DEPENDS+=		p5-Font-AFM>=1.18:../../fonts/p5-Font-AFM
-DEPENDS+=		p5-HTML-Tree>=3.04:../../www/p5-HTML-Tree
+DEPENDS+=		p5-HTML-Tree>=3.15:../../www/p5-HTML-Tree
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML-Format/.packlist
