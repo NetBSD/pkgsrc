@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.231 2004/09/30 11:40:30 salo Exp $
+# $NetBSD: Makefile,v 1.232 2004/10/14 12:29:12 adam Exp $
 #
 
 COMMENT=	Games
@@ -200,6 +200,7 @@ SUBDIR+=	xbill
 SUBDIR+=	xblast
 SUBDIR+=	xboard
 SUBDIR+=	xboing
+SUBDIR+=	xbomb
 SUBDIR+=	xbomber
 SUBDIR+=	xbreaky
 SUBDIR+=	xconq
