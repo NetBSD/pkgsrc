@@ -1,20 +1,21 @@
-# $NetBSD: Makefile.common,v 1.28 2002/10/02 22:08:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.29 2003/01/15 21:03:25 wiz Exp $
 #
 
-DISTNAME=		gdk-pixbuf-0.18.0
+DISTNAME=		gdk-pixbuf-${VER}.0
 CATEGORIES=		graphics devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/gdk-pixbuf/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${VER}/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
-AUTOCONF_REQD=		2.13
-AUTOMAKE_REQD=		1.4
+VER=			0.22
+
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		path_rgb_txt="${X11BASE}/lib/X11/rgb.txt"
@@ -25,15 +26,7 @@ PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 DISTINFO_FILE=		${.CURDIR}/../gdk-pixbuf/distinfo
 PATCHDIR=		${.CURDIR}/../gdk-pixbuf/patches
 
-pre-configure:
-	cd ${WRKSRC};							\
-	${ACLOCAL};							\
-	${AUTOHEADER};							\
-	${AUTOMAKE} -a --foreign -i;					\
-	${AUTOCONF}
-
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
-.include "../../mk/automake.mk"
