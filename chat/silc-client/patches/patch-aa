@@ -1,19 +1,16 @@
-$NetBSD: patch-aa,v 1.6 2002/03/03 23:27:49 hubertf Exp $
+$NetBSD: patch-aa,v 1.7 2002/05/03 21:51:57 hubertf Exp $
 
---- Makefile.in.orig	Tue Feb 26 12:25:52 2002
-+++ Makefile.in	Thu Feb 28 19:36:32 2002
-@@ -528,10 +528,8 @@
- 
- install-dirs:
- 	-mkdir -p $(etcdir)
--	-mkdir -p $(modulesdir)
+--- Makefile.in.orig	Tue Apr 16 18:30:05 2002
++++ Makefile.in	Wed May  1 15:18:56 2002
+@@ -531,7 +531,6 @@
+ 	-mkdir -p $(modulesdir)
  	-mkdir -p $(helpdir)
  	-mkdir -p $(docdir)
 -	-mkdir -p $(logsdir)
  
  generate-server-key:
  	-@if test '!' -f $(etcdir)/silcd.pub ; then \
-@@ -544,8 +542,7 @@
+@@ -544,8 +543,7 @@
  doc-install:
  	$(INSTALL_DATA) $(srcdir)/doc/CodingStyle $(docdir)/
  	$(INSTALL_DATA) $(srcdir)/doc/FAQ $(docdir)/
@@ -23,7 +20,7 @@ $NetBSD: patch-aa,v 1.6 2002/03/03 23:27:49 hubertf Exp $
  	$(INSTALL_DATA) $(srcdir)/COPYING $(docdir)/
  	$(INSTALL_DATA) $(srcdir)/CHANGES $(docdir)/
  	$(INSTALL_DATA) $(srcdir)/CREDITS $(docdir)/
-@@ -565,19 +562,12 @@
+@@ -565,13 +563,6 @@
  	$(INSTALL_DATA) $(srcdir)/doc/examples/cell* $(docdir)/examples/
  
  etc-install:
@@ -37,10 +34,3 @@ $NetBSD: patch-aa,v 1.6 2002/03/03 23:27:49 hubertf Exp $
  	-@if test '!' -f $(etcdir)/silc.conf ; then \
  	  $(INSTALL_DATA) $(srcdir)/irssi/silc.conf \
  	  $(etcdir)/silc.conf; \
- 	fi
- 
--@SILC_DIST_CLIENT_TRUE@install-data-hook: install-dirs sim-install doc-install etc-install
-+@SILC_DIST_CLIENT_TRUE@install-data-hook: install-dirs doc-install etc-install
- @SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_TRUE@install-data-hook: install-dirs generate-server-key sim-install doc-install toolkit-install examples-install etc-install
- @SILC_DIST_CLIENT_FALSE@@SILC_DIST_TOOLKIT_FALSE@install-data-hook: install-dirs generate-server-key sim-install doc-install examples-install etc-install
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
