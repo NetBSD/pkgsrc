@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2004/01/26 13:12:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.1 2004/02/10 12:58:19 grant Exp $
 
-DISTNAME= 		MozillaFirebird-bin-realplayer-1.0
+DISTNAME= 		firefox-bin-realplayer-1.0
 PKGREVISION=		1
 CATEGORIES=		www audio graphics
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
 MAINTAINER=		kei@NetBSD.org
-COMMENT=		RealAudio and RealVideo player plugin for MozillaFirebird-bin
+COMMENT=		RealAudio and RealVideo player plugin for firefox-bin
 
-DEPENDS+=		MozillaFirebird-bin>=0.6.1:../../www/MozillaFirebird-bin
+DEPENDS+=		firefox-bin>=0.8:../../www/firefox-bin
 DEPENDS+=		realplayer-[0-9]*:../../multimedia/realplayer
-
-# this package was previously called "phoenix-bin-realplayer"
-CONFLICTS+=		phoenix-bin-realplayer-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
@@ -22,7 +19,7 @@ NO_CHECKSUM=		YES
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
 
-NS_PLUGINS_DIR=		${PREFIX}/lib/MozillaFirebird-linux/plugins
+NS_PLUGINS_DIR=		${PREFIX}/lib/firefox-linux/plugins
 PLUGIN_SOURCE=		${PREFIX}/lib/netscape/plugins/rpnp.so
 
 do-install:
