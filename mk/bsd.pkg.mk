@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1277 2003/09/13 08:20:08 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1278 2003/09/13 11:23:35 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -3886,7 +3886,8 @@ run-depends-list:
 		fi;							\
 	fi;								\
 	if ${PACKAGE_DEPENDS_QUICK}; then 				\
-		${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}'; \
+		found=`${PKG_BEST_EXISTS} "$$pkg"`;			\
+		${PKG_INFO} -qf "$$found" | ${AWK} '/^@pkgdep/ {print $$2}'; \
 	else 								\
 		if cd $$dir 2>/dev/null; then				\
 			${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE} PACKAGE_DEPENDS_WITH_PATTERNS=${PACKAGE_DEPENDS_WITH_PATTERNS}; \
@@ -4301,7 +4302,7 @@ print-pkg-size-this:
 .PHONY: print-pkg-size-depends
 print-pkg-size-depends:
 	@${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true \
-	| ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e			\
+	| ${XARGS} -n 1 ${SETENV} ${PKG_BEST_EXISTS}			\
 	| ${SORT} -u							\
 	| ${XARGS} -n 256 ${SETENV} ${PKG_INFO} -qs			\
 	| ${AWK} -- 'BEGIN { print("0 "); }				\
@@ -4601,7 +4602,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		fi;							\
 		list="`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | ${SORT} -u`" ; \
 		for dep in $$list; do \
-			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
+			realdep="`${PKG_BEST_EXISTS} \"$$dep\" || ${TRUE}`" ; \
 			if [ `${ECHO} $$realdep | ${WC} -w` -gt 1 ]; then \
 				${ECHO} '***' "WARNING: '$$dep' expands to several installed packages " ; \
 				${ECHO} "    (" `${ECHO} $$realdep` ")." ; \
@@ -4609,7 +4610,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 				continue ; 				\
 			fi ; 						\
 		done ;							\
-		for realdep in `${ECHO} $$list | ${XARGS} -n 1 ${SETENV} ${PKG_INFO} -e | ${SORT} -u`; do \
+		for realdep in `${ECHO} $$list | ${XARGS} -n 1 ${SETENV} ${PKG_BEST_EXISTS} | ${SORT} -u`; do \
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
 			elif [ -d ${_PKG_DBDIR}/$$realdep ]; then	\
