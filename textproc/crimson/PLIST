@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/13 20:58:53 jwise Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/18 20:58:32 jlam Exp $
 lib/java/crimson.jar
 share/doc/java/crimson/api/org/w3c/dom/class-use/NodeList.html
 share/doc/java/crimson/api/org/w3c/dom/class-use/EntityReference.html
@@ -178,3 +178,4 @@ share/examples/java/crimson/index.html
 @dirrm share/doc/java/crimson/api/javax
 @dirrm share/doc/java/crimson/api
 @dirrm share/doc/java/crimson
+@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

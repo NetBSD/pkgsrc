@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/31 19:33:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/18 21:10:02 jlam Exp $
 #
 
 DISTNAME=	javadeps-1.1
@@ -10,11 +10,18 @@ MAINTAINER=	ben@wongs.net
 HOMEPAGE=	http://www.vet.com.au/java/javadeps/
 COMMENT=	Automatic dependency tracking for Java
 
+USE_BUILDLINK2=	# defined
 USE_JAVA=	run
 
 WRKSRC=		${WRKDIR}/JavaDeps-1.1
 
-NO_BUILD=	yes
+do-build:
+	cd ${WRKSRC}; for file in jdeps; do				\
+		${SED}	-e "s|@PREFIX@|${PREFIX}|g"			\
+			-e "s|@JAVA_HOME@|${PKG_JAVA_HOME}|g"		\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
 
 do-install:
 	${CP} ${WRKSRC}/jdeps ${PREFIX}/bin
@@ -24,4 +31,5 @@ do-install:
 	cd ${WRKSRC}/doc; ${PAX} -rwpe . ${PREFIX}/share/doc/jdeps
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/jdeps ${PREFIX}/share/doc/jdeps
 
+.include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"
