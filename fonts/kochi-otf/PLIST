@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/14 14:25:31 kei Exp $
-share/doc/README.kochi-otf
-share/ghostscript/Resource/Font/Kochi-Gothic.otf
-share/ghostscript/Resource/Font/Kochi-Mincho.otf
