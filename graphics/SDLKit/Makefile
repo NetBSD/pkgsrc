@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/26 21:41:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/28 12:56:56 wiz Exp $
 #
 
 .include "../../graphics/3DKit/Makefile.common"
@@ -13,5 +13,6 @@ DISTINFO_FILE=	${.CURDIR}/distinfo
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../graphics/RenderKit/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
