@@ -3,7 +3,8 @@
 # Date created:		24 Oct 1997
 # Whom:			hubertf@netbsd.org
 #
-# $Id: Makefile,v 1.3 1997/12/22 07:45:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/24 21:18:18 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
 DISTNAME=	mc-4.1
