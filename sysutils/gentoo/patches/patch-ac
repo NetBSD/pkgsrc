@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/01/29 12:37:16 wiz Exp $
+
+--- src/gentoo.h.orig	Tue Aug 28 18:36:46 2001
++++ src/gentoo.h
+@@ -13,7 +13,7 @@
+ 
+ #include "config.h"
+ 
+-#if !defined __alpha		/* I've heard this helps on Alpha systems... */
++#if !defined __alpha && !defined __NetBSD__		/* I've heard this helps on Alpha systems... */
+ #define __EXTENSIONS__
+ #define _POSIX_C_SOURCE	3	/* This is for Solaris. */
+ #define	POSIX_C_SOURCE	3
+@@ -42,7 +42,7 @@
+ #if defined __linux
+ #include <linux/limits.h>
+ #include <sys/vfs.h>
+-#elif defined __OpenBSD__ || defined __FreeBSD__
++#elif defined __OpenBSD__ || defined __FreeBSD__ || defined __NetBSD__
+ #include <sys/param.h>
+ #include <sys/mount.h>
+ #else
+@@ -442,7 +442,7 @@
+ 
+ typedef struct {			/* Some trivial file system information. Updated on rescan. */
+ 	gboolean	valid;			/* Set if the structure's contents are valid. */
+-#if defined __linux || defined __OpenBSD__ || defined __FreeBSD__
++#if defined __linux || defined __OpenBSD__ || defined __FreeBSD__ || defined __NetBSD__
+ 	struct statfs	stat;			/* Holds information about filesystem. */
+ #else
+ 	struct statvfs	stat;
