@@ -1,11 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2004/05/05 06:24:58 martti Exp $
+$NetBSD: patch-aa,v 1.3 2005/03/16 13:29:46 martti Exp $
 
---- src/dbh-1.0.pc.in.orig	2004-05-03 15:02:37.000000000 +0300
-+++ src/dbh-1.0.pc.in	2004-05-03 15:03:26.000000000 +0300
-@@ -7,5 +7,5 @@
- Description: Diskbased Hashtables
- Requires:
- Version: @DBH_FULL_VERSION@
+--- src/dbh-1.0.pc.in.orig	2005-01-28 22:26:35.000000000 +0200
++++ src/dbh-1.0.pc.in	2005-03-16 15:20:44.000000000 +0200
+@@ -9,3 +9,3 @@
+ Version: @DBH_VERSION@
 -Libs: -Wl,-R${libdir} -L${libdir} -ldbh -lm
 +Libs: -L${libdir} -ldbh -lm
  Cflags: -I${includedir}
