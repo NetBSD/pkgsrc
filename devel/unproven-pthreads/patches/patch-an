@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.1 2001/01/09 16:14:22 briggs Exp $
+$NetBSD: patch-an,v 1.2 2001/01/10 03:18:17 briggs Exp $
 
 --- /dev/null	Wed Dec 31 19:00:00 1969
 +++ machdep/syscall-powerpc-netbsd.S	Tue Jan  9 10:42:07 2001
@@ -50,7 +50,7 @@ $NetBSD: patch-an,v 1.1 2001/01/09 16:14:22 briggs Exp $
 +ENTRY(machdep_sys_fork)
 +	li	0, SYS_fork
 +	sc
-+	bso	_C_LABEL(machdep_cerror)
++	bso	PIC_PLT(_C_LABEL(machdep_cerror))
 +	addi  4,4,-1
 +	blr
 +
@@ -59,7 +59,7 @@ $NetBSD: patch-an,v 1.1 2001/01/09 16:14:22 briggs Exp $
 +	mr	5,3
 +	li	0,SYS_pipe
 +	sc
-+	bso	_C_LABEL(machdep_cerror)
++	bso	PIC_PLT(_C_LABEL(machdep_cerror))
 +	stw	3,0(5)		# Success, store fds
 +	stw	4,4(5)
 +	li	3,0
@@ -71,7 +71,7 @@ $NetBSD: patch-an,v 1.1 2001/01/09 16:14:22 briggs Exp $
 +	lwz	3,0(3)
 +	li	0,SYS_compat_13_sigsuspend13
 +	sc
-+	b	_C_LABEL(machdep_cerror)
++	b	PIC_PLT(_C_LABEL(machdep_cerror))
 +#endif /* SYS_sigsuspend14 */
 +
 +#ifndef SYS___sigprocmask14
@@ -85,7 +85,7 @@ $NetBSD: patch-an,v 1.1 2001/01/09 16:14:22 briggs Exp $
 +Ldoit:	mr	3,6		# ... using sigprocmask(SIG_BLOCK)
 +	li	0,SYS_compat_13_sigprocmask13
 +	sc
-+	bso	_C_LABEL(machdep_cerror)
++	bso	PIC_PLT(_C_LABEL(machdep_cerror))
 +	or.	5,5,5		# Check to see if oset requested
 +	beq	Ldone		# if oset != NULL
 +	stw	3,0(5)		#   *oset = oldmask
@@ -101,7 +101,7 @@ $NetBSD: patch-an,v 1.1 2001/01/09 16:14:22 briggs Exp $
 +	li	0, SYS___fstat13
 +	sc
 +	bnslr
-+	b	_C_LABEL(machdep_cerror)
++	b	PIC_PLT(_C_LABEL(machdep_cerror))
 +
 +/* Do we need to save the entire floating point state?  I think so... */
 +ENTRY(__machdep_save_fp_state)
