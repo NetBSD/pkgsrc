@@ -1,0 +1,3 @@
+GeneWeb is a comprehensive genealogy database application written in 
+Objective Caml. It uses a Web interface which allows it to operate off-line
+or as a dedicated web-server.
