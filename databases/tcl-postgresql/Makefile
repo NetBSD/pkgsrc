@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2000/09/01 14:20:17 jwise Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/11 16:43:12 jlam Exp $
+
+.include "../../databases/postgresql/Makefile.common"
 
 PKGNAME=		tcl-${DISTNAME}
 
 DEPENDS+=		postgresql-${PG_VERS}:../../databases/postgresql
-DEPENDS+=		tcl-8.3.2:../../lang/tcl
+DEPENDS+=		tcl>=8.3.2:../../lang/tcl
 
-TCLSH=			${LOCALBASE}/bin/tclsh
-TCL_INCDIR=		${LOCALBASE}/include
-TCL_CONFIGDIR=		${LOCALBASE}/lib
-USE_LIBTOOL=
+EVAL_PREFIX+=		TCLDIR=tcl
+TCLSH=			${TCLDIR}/bin/tclsh
+TCL_INCDIR=		${TCLDIR}/include
+TCL_CONFIGDIR=		${TCLDIR}/lib
 
 MAKE_ENV+=		INSTALLED_LIBPQ=1
 
@@ -16,7 +18,7 @@ CONFIGURE_ARGS+=	--without-perl --without-odbc
 CONFIGURE_ARGS+=	--with-tcl \
 			--with-tclconfig="${TCL_CONFIGDIR}" \
 			--with-includes="${TCL_INCDIR}" \
-			--with-libraries="${LOCALBASE}/lib"
+			--with-libraries="${LOCALBASE}/lib ${TCLDIR}/lib"
 CONFIGURE_ENV+=		TCLSH="${TCLSH}"
 
 DIRS_TO_BUILD=		interfaces/libpgtcl \
@@ -39,4 +41,4 @@ do-install:
 		${WRKDIR}/${DISTNAME}/doc/man.tar.gz \
 		`${SED} -e "s/#.*//" ${FILESDIR}/man.tcl`
 
-.include "../../databases/postgresql/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2000/12/08 17:16:32 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2000/12/11 16:43:11 jlam Exp $
 #
 # This file is included by the following packages:
 #
@@ -51,10 +51,11 @@ CONFIGURE_ARGS+=	--enable-multibyte=${PG_MB_ENCODING}
 CONFIGURE_ARGS+=	--enable-multibyte	# accept default
 .endif
 
+# Pass CFLAGS from environment into the PostgreSQL build.
+MAKE_ENV+=		COPT="${CFLAGS}"
+
 post-extract:
 	${CP} ${FILESDIR}/Makefile.custom ${WRKSRC}
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
-
-.include "../../mk/bsd.pkg.mk"
