@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.1.1.1 2001/02/10 18:34:23 tron Exp $
+
+--- ../spunk/menue.cc.orig	Sun Jan 26 18:17:32 1997
++++ ../spunk/menue.cc	Sat Feb 10 18:38:35 2001
+@@ -495,8 +495,8 @@
+ 
+ i16 GenericMenue::GetChoice ()
+ {
+-    const AltNextKeyCode = MaxUserID + 1;
+-    const AltPrevKeyCode = MaxUserID + 2;
++    const int AltNextKeyCode = MaxUserID + 1;
++    const int AltPrevKeyCode = MaxUserID + 2;
+ 
+ 
+     // Remember old window state
