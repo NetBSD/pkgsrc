@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/05/12 06:15:07 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/05/29 22:46:45 jlam Exp $
 include/boost/array.hpp
 include/boost/call_traits.hpp
 include/boost/cast.hpp
@@ -40,8 +40,6 @@ include/boost/stdint.h
 include/boost/timer.hpp
 include/boost/type_traits.hpp
 include/boost/utility.hpp
-include/limits
-include/memory
 lib/libboost.a
 lib/libboost.so.0.0
 share/doc/html/boost/libs/array/array-article.html
@@ -109,9 +107,12 @@ share/doc/html/boost/libs/utility/type_traits_test.cpp
 share/doc/html/boost/libs/utility/utility.htm
 share/doc/html/boost/more/count_bdy.htm
 share/doc/html/boost/more/faq.htm
+share/doc/html/boost/more/formal_review_process.htm
 share/doc/html/boost/more/header.htm
 share/doc/html/boost/more/imp_vars.htm
 share/doc/html/boost/more/lib_guide.htm
+share/doc/html/boost/more/submission_process.htm
+share/doc/html/boost/more/use_other_libs.htm
 @dirrm share/doc/html/boost/more
 @dirrm share/doc/html/boost/libs/utility
 @dirrm share/doc/html/boost/libs/timer
