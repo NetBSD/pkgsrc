@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2794 2004/12/29 09:23:09 recht Exp $
+$NetBSD: TODO,v 1.2795 2004/12/29 10:24:28 minskim Exp $
 
 Suggested new packages
 ======================
@@ -318,7 +318,6 @@ Suggested package updates
 	o avidemux-2.0.34
 	o avl-2.0.1
 	o avr-libc-1.0.4 [pkg/28570]
-	o awstats-6.3
 	o balsa-1.4.4
 	o bbsload-0.2.8
 	o bchunk-1.2.0
