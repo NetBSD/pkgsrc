@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.26 2002/09/21 23:19:23 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.27 2002/09/21 23:31:41 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -383,9 +383,13 @@ _BLNK_UNTRANSFORM_SED.3+=	${_BLNK_TRANSFORM_SED.r}
 #
 .if defined(_USE_RPATH) && empty(_USE_RPATH:M[yY][eE][sS])
 _BLNK_TRANSFORM_SED.3+= \
-	-e "s|-Wl,-R/.*||g" -e "s|-R/.*||g" -e "s|-Wl,-rpath,.*||g"
+	-e "s|-Wl,-R/[^ 	]*||g"					\
+	-e "s|-R/[^ 	]*||g"						\
+	-e "s|-Wl,-rpath,[^ 	]*||g"
 _BLNK_UNTRANSFORM_SED.3+= \
-	-e "s|-Wl,-R/.*||g" -e "s|-R/.*||g" -e "s|-Wl,-rpath,.*||g"
+	-e "s|-Wl,-R/[^ 	]*||g"					\
+	-e "s|-R/[^ 	]*||g"						\
+	-e "s|-Wl,-rpath,[^ 	]*||g"
 .endif
 #
 # Explicitly remove "-I/usr/include" and "-L/usr/lib" as they're redundant.
