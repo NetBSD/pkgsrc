@@ -1,3 +1,4 @@
+$NetBSD: patch-ae,v 1.2 2002/05/20 18:14:19 cjep Exp $
 --- xa_audio.c.original	Fri Aug 24 17:33:57 2001
 +++ xa_audio.c	Fri Aug 24 17:35:14 2001
 @@ -4665,10 +4665,10 @@
