@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2866 2003/07/23 11:10:46 tron Exp $
+$NetBSD: CHANGES,v 1.2867 2003/07/23 11:23:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2908,3 +2908,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated battalion to 1.4nb2 [jmmv 2003-07-22]
 	Updated xmms to 1.2.7nb8 [jmmv 2003-07-22]
 	Updated qt3 to 3.1.2nb2 [tron 2003-07-23]
+	Updated streamtuner to 0.10.0 [jmmv 2003-07-23]
