@@ -1,36 +1,25 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: snmptrapd.sh,v 1.6 2003/03/06 23:00:15 hubertf Exp $
+# $NetBSD: snmptrapd.sh,v 1.7 2003/07/30 21:05:00 jmmv Exp $
 #
 # PROVIDE: snmpd
 # REQUIRE: DAEMON LOGIN network
 #
-# PID file:
-PF=/var/run/snmptrapd.pid
 
+if [ -f /etc/rc.subr ]; then
+	. /etc/rc.subr
+fi
 
-case $1 in
-start)
-	if [ -x @PREFIX@/sbin/snmptrapd ]
-	then
-		echo 'Starting snmptrapd.'
-		@PREFIX@/sbin/snmptrapd -s -l 1 -u ${PF}
-	fi
-	;;
-stop)
-	if [ -f ${PF} ]; then
-		kill `cat ${PF}`
-		rm -f ${PF}
-	else
-		echo "$0: snmptrapd not running or PID not recorded!" 1>&2
-	fi
-	;;
-restart)
-	sh $0 stop
-	sleep 5
-	sh $0 start
-	;;
-*)
-	echo "Usage: $0 {start|stop|restart}"
-	exit 1
-esac
+name="snmptrapd"
+rcvar="${name}"
+pidfile="/var/run/snmptrapd.pid"
+command="@PREFIX@/sbin/snmptrapd"
+command_args="-s -l 1 -u ${pidfile}"
+
+if [ -f /etc/rc.subr ]; then
+	load_rc_config "$name"
+	run_rc_command "$1"
+else
+	printf " $name"
+	${command} ${snmptrapd_flags} ${command_args}
+fi
