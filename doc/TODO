@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1278 2004/01/05 04:43:35 xtraeme Exp $
+$NetBSD: TODO,v 1.1279 2004/01/06 06:42:15 reed Exp $
 
 Suggested new packages
 ======================
@@ -98,6 +98,10 @@ Suggested new packages
 	moz-plugger
 	http://mozplugger.mozdev.org/
 	source version of www/moz-bin-plugger
+
+	prngd [wip/prngd, PR 23998]
+	http://www.aet.tu-cottbus.de/personen/jaenicke/postfix_tls/prngd.html
+	Pseudo Random Number Generator Daemon
 
 Suggested package updates
 =========================
@@ -293,7 +297,7 @@ Suggested package updates
 	o tcl/tk-8.4.5
 	o tcl-expect-5.39.0
 	o tcpreplay-1.4.6
-	o tct-1.12
+	o tct-1.14
 	o teapop-0.3.8
 	o tkcvs-7.2
 	o tkman-2.2
