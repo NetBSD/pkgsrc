@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.52 2001/06/09 15:36:13 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.53 2001/07/08 16:41:53 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -571,7 +571,8 @@ sub checkmakefile {
 	local($tmp, $tmp2);
 	local($i, $j, $k, $l);
 	local(@varnames) = ();
-	local($distfiles, $pkgname, $distname, $extractsufx) = ('', '', '', '');
+	local($distfiles, $pkgname, $svrpkgname, $distname,
+	      $extractsufx) = ('', '', '', '', '');
 	local($bogusdistfiles) = (0);
 	local($realwrksrc, $wrksrc, $nowrksubdir) = ('', '', '');
 	local($includefile);
@@ -838,8 +839,8 @@ EOF
 
 	# check the order of items.
         @tocheck=split(/\s+/, <<EOF);
-DISTNAME PKGNAME WRKSRC NO_WRKSUBDIR CATEGORIES MASTER_SITES MASTER_SITE_SUBDIR
-EXTRACT_SUFX DISTFILES
+DISTNAME PKGNAME SVR4_PKGNAME WRKSRC NO_WRKSUBDIR CATEGORIES MASTER_SITES
+MASTER_SITE_SUBDIR EXTRACT_SUFX DISTFILES
 EOF
 	push(@tocheck,"ONLY_FOR_ARCHS");
 	push(@tocheck,"NO_SRC_ON_FTP");
@@ -888,10 +889,11 @@ EOF
 	}
 
 	# check DISTFILES and related items.
-	$distfiles = $1 if ($tmp =~ /\nDISTFILES[+?]?=[ \t]*([^\n]+)\n/);
-	$pkgname = $1 if ($tmp =~ /\nPKGNAME[+?]?=[ \t]*([^\n]+)\n/);
 	$distname = $1 if ($tmp =~ /\nDISTNAME[+?]?=[ \t]*([^\n]+)\n/);
+	$pkgname = $1 if ($tmp =~ /\nPKGNAME[+?]?=[ \t]*([^\n]+)\n/);
+	$svrpkgname = $1 if ($tmp =~ /\nSVR4_PKGNAME[+?]?=[ \t]*([^\n]+)\n/);
 	$extractsufx = $1 if ($tmp =~ /\nEXTRACT_SUFX[+?]?=[ \t]*([^\n]+)\n/);
+	$distfiles = $1 if ($tmp =~ /\nDISTFILES[+?]?=[ \t]*([^\n]+)\n/);
 
 	# check bogus EXTRACT_SUFX.
 	if ($extractsufx ne '') {
@@ -914,6 +916,12 @@ EOF
 	if ($pkgname ne '' && $pkgname eq $distname) {
 		&perror("WARN: PKGNAME is \${DISTNAME} by default, ".
 			"you don't need to define PKGNAME.");
+	}
+	if ($svrpkgname ne '') {
+		if (length($svrpkgname) > 5) {
+			&perror("FATAL: SVR4_PKGNAME should not be longer ".
+				"than 5 characters.");
+		}
 	}
 	$i = ($pkgname eq '') ? $distname : $pkgname;
 	$i =~ s/\${DISTNAME[^}]*}/$distname/g;
@@ -999,7 +1007,7 @@ EOF
 	}
 
 	push(@varnames, split(/\s+/, <<EOF));
-DISTNAME PKGNAME CATEGORIES MASTER_SITES MASTER_SITE_SUBDIR
+DISTNAME PKGNAME SVR4_PKGNAME CATEGORIES MASTER_SITES MASTER_SITE_SUBDIR
 EXTRACT_SUFX DISTFILES
 EOF
 
