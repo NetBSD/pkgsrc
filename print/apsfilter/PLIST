@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/09 13:58:03 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/11/26 11:26:33 jmmv Exp $
 bin/aps2file
 bin/apsfilter-bug
 bin/apspreview
-etc/apsfilter/basedir
 man/man1/aps2file.1
 man/man1/apsfilter-bug.1
 man/man1/apsfilter.1
