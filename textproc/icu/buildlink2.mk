@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/28 22:49:15 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/10/30 09:45:18 seb Exp $
 #
 # This Makefile fragment is included by packages that use icu.
 #
@@ -105,7 +105,6 @@ BUILDLINK_FILES.icu+=	lib/libicui18n.*
 BUILDLINK_FILES.icu+=	lib/libicutoolutil.*
 BUILDLINK_FILES.icu+=	lib/libicuuc.*
 BUILDLINK_FILES.icu+=	lib/libustdio.*
-
 
 BUILDLINK_TARGETS+=	icu-buildlink
 
