@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.27 2003/11/21 10:32:25 jlam Exp $
+# $NetBSD: install,v 1.28 2003/11/23 07:14:43 jlam Exp $
 
 if [ -z "${CONF_FILES}" -a -z "${CONF_FILES_PERMS}" -a			\
      -z "${SUPPORT_FILES}" -a -z "${SUPPORT_FILES_PERMS}" -o		\
@@ -385,10 +385,6 @@ EOF
 ===========================================================================
 EOF
 		fi
-	fi
-	if [ "${PKG_INSTALLATION_TYPE}" = "overwrite" ]; then
-		${SETENV} PKG_PREFIX="${PKG_PREFIX}" \
-			$0 ${PKGNAME} VIEW-INSTALL
 	fi
 	;;
 
