@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 1999/05/19 00:15:37 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/11 22:05:34 augustss Exp $
 #
 
-DISTNAME=       usbutil-0.1
+DISTNAME=       usbutil-0.2
 CATEGORIES=	sysutils
 MASTER_SITES=   ftp://ftp.augustsson.net/pub/netbsd/
 
