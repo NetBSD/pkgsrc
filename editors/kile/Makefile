@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/05 05:53:58 markd Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/30 09:56:44 markd Exp $
 
-DISTNAME=		kile-1.2
+DISTNAME=		kile-1.3
 CATEGORIES=		editors kde
 MASTER_SITES=		http://xm1.net.free.fr/kile/
 
