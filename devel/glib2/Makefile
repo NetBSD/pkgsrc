@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/11/30 21:08:23 salo Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/19 13:07:10 grant Exp $
 #
 
 DISTNAME=		glib-2.0.7
@@ -6,8 +6,8 @@ PKGNAME=		${DISTNAME:S/glib/glib2/}
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \
-			http://www.ameth.org/gimp/pub/gtk/v2.0/ \
 			${MASTER_SITE_GNOME:=sources/glib/2.0/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gtk.org/docs/glib_toc.html
