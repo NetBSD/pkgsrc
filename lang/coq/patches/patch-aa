@@ -1,31 +1,177 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/03/22 20:21:17 kristerw Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/05 11:19:02 adrianp Exp $
 
---- Makefile.orig	Mon Feb  3 05:11:32 2003
-+++ Makefile
-@@ -368,7 +368,10 @@ COQTOPBYTE=bin/coqtop.byte$(EXE)
- COQTOPOPT=bin/coqtop.opt$(EXE)
- BESTCOQTOP=bin/coqtop.$(BEST)$(EXE)
- COQTOP=bin/coqtop$(EXE)
--COQINTERFACE=bin/coq-interface$(EXE) bin/coq-interface.opt$(EXE) bin/parser$(EXE)
-+COQINTERFACE=bin/coq-interface$(EXE)
-+ifeq ($(BEST),opt)
-+COQINTERFACE+=bin/coq-interface.opt$(EXE) bin/parser$(EXE)
-+endif
+--- Makefile.orig	2004-07-19 11:37:31.000000000 +0200
++++ Makefile	2005-01-20 12:15:39.000000000 +0100
+@@ -608,22 +608,22 @@
+ install-ide-no:
  
- COQBINARIES= $(COQMKTOP) $(COQC) $(COQTOPBYTE) $(BESTCOQTOP) $(COQTOP) \
-              $(COQINTERFACE) 
-@@ -877,9 +880,12 @@ install-library-light:
- 	cp tools/coq.el tools/coq-inferior.el $(FULLEMACSLIB)
+ install-ide-byte: 
+-	$(MKDIR) $(FULLBINDIR)
+-	cp $(COQIDEBYTE) $(FULLBINDIR)
++	${BSD_INSTALL_PROGRAM_DIR} $(FULLBINDIR)
++	${BSD_INSTALL_SCRIPT} $(COQIDEBYTE) $(FULLBINDIR)
+ 	cd $(FULLBINDIR); ln -sf coqide.byte$(EXE) coqide$(EXE)
+ 
+ install-ide-opt:
+-	$(MKDIR) $(FULLBINDIR)
+-	cp $(COQIDEBYTE) $(COQIDEOPT) $(FULLBINDIR)
++	${BSD_INSTALL_PROGRAM_DIR} $(FULLBINDIR)
++	${BSD_INSTALL_SCRIPT} $(COQIDEBYTE) $(COQIDEOPT) $(FULLBINDIR)
+ 	cd $(FULLBINDIR); ln -sf coqide.opt$(EXE) coqide$(EXE)
+ 
+ install-ide-files:
+-	$(MKDIR) $(FULLIDELIB)
+-	cp $(IDEFILES) $(FULLIDELIB)
++	${BSD_INSTALL_PROGRAM_DIR} $(FULLIDELIB)
++	${BSD_INSTALL_DATA} $(IDEFILES) $(FULLIDELIB)
+ 
+ install-ide-info:
+-	$(MKDIR) $(FULLIDELIB)
+-	cp ide/FAQ $(FULLIDELIB)
++	${BSD_INSTALL_PROGRAM_DIR} $(FULLIDELIB)
++	${BSD_INSTALL_DATA} ide/FAQ $(FULLIDELIB)
+ 
+ ###########################################################################
+ # Pcoq: special binaries for debugging (coq-interface, parser)
+@@ -700,18 +700,18 @@
+ install-pcoq:: install-pcoq-binaries install-pcoq-files install-pcoq-manpages
+ 
+ install-pcoq-binaries::
+-	$(MKDIR) $(FULLBINDIR)
+-	cp $(COQINTERFACE) $(FULLBINDIR)
++	${BSD_INSTALL_PROGRAM_DIR} $(FULLBINDIR)
++	${BSD_INSTALL_PROGRAM} $(COQINTERFACE) $(FULLBINDIR)
+ 
+ install-pcoq-files::
+-	$(MKDIR) $(FULLCOQLIB)/contrib/interface
+-	cp $(INTERFACERC) $(FULLCOQLIB)/contrib/interface
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/contrib/interface
++	${BSD_INSTALL_DATA} $(INTERFACERC) $(FULLCOQLIB)/contrib/interface
+ 
+ PCOQMANPAGES=man/coq-interface.1 man/parser.1
+ 
+ install-pcoq-manpages:
+-	$(MKDIR) $(FULLMANDIR)/man1
+-	cp $(PCOQMANPAGES) $(FULLMANDIR)/man1
++	${BSD_INSTALL_DATA_DIR} $(FULLMANDIR)/man1
++	${BSD_INSTALL_MAN} $(PCOQMANPAGES) $(FULLMANDIR)/man1
+ 
+ ###########################################################################
+ # tests
+@@ -1146,18 +1146,18 @@
+ install-binaries:: install-$(BEST) install-tools
+ 
+ install-byte::
+-	$(MKDIR) $(FULLBINDIR)
+-	cp $(COQMKTOP) $(COQC) $(COQTOPBYTE) $(FULLBINDIR)
++	${BSD_INSTALL_PROGRAM_DIR} $(FULLBINDIR)
++	${BSD_INSTALL_SCRIPT} $(COQMKTOP) $(COQC) $(COQTOPBYTE) $(FULLBINDIR)
+ 	cd $(FULLBINDIR); ln -sf coqtop.byte$(EXE) coqtop$(EXE)
+ 
+ install-opt::
+-	$(MKDIR) $(FULLBINDIR)
+-	cp $(COQMKTOP) $(COQC) $(COQTOPBYTE) $(COQTOPOPT) $(FULLBINDIR)
++	${BSD_INSTALL_PROGRAM_DIR} $(FULLBINDIR)
++	${BSD_INSTALL_SCRIPT} $(COQMKTOP) $(COQC) $(COQTOPBYTE) $(COQTOPOPT) $(FULLBINDIR)
+ 	cd $(FULLBINDIR); ln -sf coqtop.opt$(EXE) coqtop$(EXE)
+ 
+ install-tools::
+-	$(MKDIR) $(FULLBINDIR)
+-	cp $(TOOLS) $(FULLBINDIR)
++	${BSD_INSTALL_PROGRAM_DIR} $(FULLBINDIR)
++	${BSD_INSTALL_SCRIPT} $(TOOLS) $(FULLBINDIR)
+ 
+ LIBFILES=$(OLDTHEORIESVO) $(OLDCONTRIBVO)
+ LIBFILESLIGHT=$(OLDTHEORIESLIGHTVO)
+@@ -1168,61 +1168,65 @@
+ install-library: install-library7 install-library8
+ 
+ install-library8:
+-	$(MKDIR) $(FULLCOQLIB)
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)
+ 	for f in $(NEWLIBFILES); do \
+-	  $(MKDIR) $(FULLCOQLIB)/`dirname $$f`; \
+-	  cp $$f $(FULLCOQLIB)/`dirname $$f`; \
++	  ${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/`dirname $$f`; \
++	  ${BSD_INSTALL_DATA} $$f $(FULLCOQLIB)/`dirname $$f`; \
+         done
+-	$(MKDIR) $(FULLCOQLIB)/states
+-	cp states/*.coq $(FULLCOQLIB)/states
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/states
++	${BSD_INSTALL_DATA} states/*.coq $(FULLCOQLIB)/states
+ 
+ install-library7:
+-	$(MKDIR) $(FULLCOQLIB)
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)
+ 	for f in $(LIBFILES); do \
+-	  $(MKDIR) $(FULLCOQLIB)/`dirname $$f`; \
+-	  cp $$f $(FULLCOQLIB)/`dirname $$f`; \
++	  ${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/`dirname $$f`; \
++	  ${BSD_INSTALL_DATA} $$f $(FULLCOQLIB)/`dirname $$f`; \
+         done
+-	$(MKDIR) $(FULLCOQLIB)/states7
+-	cp states7/*.coq $(FULLCOQLIB)/states7
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/states7
++	${BSD_INSTALL_DATA} states7/*.coq $(FULLCOQLIB)/states7
+ 
+ install-library-light:
+-	$(MKDIR) $(FULLCOQLIB)
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)
+ 	for f in $(LIBFILESLIGHT) $(NEWLIBFILESLIGHT); do \
+-	  $(MKDIR) $(FULLCOQLIB)/`dirname $$f`; \
+-	  cp $$f $(FULLCOQLIB)/`dirname $$f`; \
++	  ${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/`dirname $$f`; \
++	  ${BSD_INSTALL_DATA} $$f $(FULLCOQLIB)/`dirname $$f`; \
+         done
+-	$(MKDIR) $(FULLCOQLIB)/states
+-	cp states/*.coq $(FULLCOQLIB)/states
+-	$(MKDIR) $(FULLCOQLIB)/states7
+-	cp states7/*.coq $(FULLCOQLIB)/states7
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/states
++	${BSD_INSTALL_DATA} states/*.coq $(FULLCOQLIB)/states
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/states7
++	${BSD_INSTALL_DATA} states7/*.coq $(FULLCOQLIB)/states7
+ 
+ install-allreals::
+ 	for f in $(ALLREALS); do \
+-	  $(MKDIR) $(FULLCOQLIB)/`dirname $$f`; \
+-	  cp $$f $(FULLCOQLIB)/`dirname $$f`; \
++	  ${BSD_INSTALL_DATA_DIR} $(FULLCOQLIB)/`dirname $$f`; \
++	  ${BSD_INSTALL_DATA} $$f $(FULLCOQLIB)/`dirname $$f`; \
+         done
+ 
+ install-coq-info: install-coq-manpages install-emacs install-latex
  
  MANPAGES=man/coq-tex.1 man/coqdep.1 man/gallina.1 \
 -	man/coqc.1 man/coqtop.1 man/coqtop.byte.1 man/coqtop.opt.1 \
 +	man/coqc.1 man/coqtop.1 man/coqtop.byte.1 \
- 	man/coq_makefile.1 man/coqmktop.1 \
--	man/coq-interface.1 man/parser.1 man/coq_vo2xml.1
-+	man/coq-interface.1 man/coq_vo2xml.1
-+ifeq ($(BEST),opt)
-+MANPAGES+=man/coqtop.opt.1 man/parser.1
-+endif
+ 	man/coqwc.1 man/coqdoc.1 \
+ 	man/coq_makefile.1 man/coqmktop.1
++	ifeq ($(BEST),opt)
++	MANPAGES+=man/coqtop.opt.1
++	endif
++
  
- install-manpages:
- 	$(MKDIR) $(FULLMANDIR)/man1
+ install-coq-manpages:
+-	$(MKDIR) $(FULLMANDIR)/man1
+-	cp $(MANPAGES) $(FULLMANDIR)/man1
++	${BSD_INSTALL_DATA_DIR} $(FULLMANDIR)/man1
++	${BSD_INSTALL_MAN} $(MANPAGES) $(FULLMANDIR)/man1
+ 
+ install-emacs:
+-	$(MKDIR) $(FULLEMACSLIB)
+-	cp tools/coq.el tools/coq-inferior.el $(FULLEMACSLIB)
++	${BSD_INSTALL_DATA_DIR} $(FULLEMACSLIB)
++	${BSD_INSTALL_DATA} tools/coq.el tools/coq-inferior.el $(FULLEMACSLIB)
+ 
+ # command to update TeX' kpathsea database
+ #UPDATETEX = $(MKTEXLSR) /usr/share/texmf /var/spool/texmf $(BASETEXDIR) > /dev/null
+ 
+ install-latex:
+-	$(MKDIR) $(FULLCOQDOCDIR)
+-	cp tools/coqdoc/coqdoc.sty $(FULLCOQDOCDIR)	
++	${BSD_INSTALL_DATA_DIR} $(FULLCOQDOCDIR)
++	${BSD_INSTALL_DATA} tools/coqdoc/coqdoc.sty $(FULLCOQDOCDIR)	
+ #	-$(UPDATETEX)
+ 
+ ###########################################################################
