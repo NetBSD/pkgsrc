@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2004/05/13 14:14:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2004/05/26 13:20:53 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -2102,7 +2102,6 @@ share/kde/config/kdesktop_custom_menu2
 share/kde/config/kdm/README
 share/kde/config/kdm/Xaccess
 share/kde/config/kdm/Xreset
-share/kde/config/kdm/Xresources
 share/kde/config/kdm/Xservers
 share/kde/config/kdm/Xsession
 share/kde/config/kdm/Xsetup
