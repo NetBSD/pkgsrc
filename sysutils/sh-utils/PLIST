@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/07 10:52:11 seb Exp $
 bin/gbasename
 bin/gchroot
 bin/gdate
@@ -11,10 +11,10 @@ bin/gfalse
 bin/ggroups
 bin/ghostid
 bin/ghostname
-bin/gid
 bin/glogname
 bin/gnice
 bin/gnohup
+bin/gnuid
 bin/gpathchk
 bin/gpinky
 bin/gprintenv
@@ -45,10 +45,10 @@ man/man1/gfalse.1
 man/man1/ggroups.1
 man/man1/ghostid.1
 man/man1/ghostname.1
-man/man1/gid.1
 man/man1/glogname.1
 man/man1/gnice.1
 man/man1/gnohup.1
+man/man1/gnuid.1
 man/man1/gpathchk.1
 man/man1/gpinky.1
 man/man1/gprintenv.1
