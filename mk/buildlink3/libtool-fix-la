@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.1.2.1 2003/08/14 13:16:51 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.1.2.2 2003/08/16 10:52:35 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -10,7 +10,11 @@
 # We rely on the proper rpath settings to be set by libtool.
 #
 # For the *.lai files, in the "dependency_libs" line, we remove redundant
-# -Ldir and -llib options.
+# -Ldir and -llib options.  We also make sure that we don't ever reference
+# other .la files, only referring to other libraries via the usual
+# "-L/path -llib" and making sure that /path is always somewhere under the
+# default view.  This makes wildcard dependencies work for "overwrite"
+# packages by letting libtool find libraries in the default view.
 
 labase=`@BASENAME@ $lafile .la`
 ladir=`@DIRNAME@ $lafile`
@@ -22,6 +26,7 @@ if $test -f $lafile; then
 	deps=
 	for i in ${dependency_libs}; do
 		case "$i" in
+		# Catch -L<dir> and remove redundant ones.
 		-L*)
 			case "$deps" in
 			*"$i "*) ;;
@@ -29,6 +34,12 @@ if $test -f $lafile; then
 			*) deps="${deps} $i" ;;
 			esac
 			;;
+		# Convert "dirpath/libfoo.la" into "-Ldirpath/.libs libfoo.la"
+		# if it's an uninstalled libtool archive.  This allows
+		# proper relinking by libtool during the install stage
+		# by allowing it to find the uninstalled shared library
+		# in the .libs directory.
+		#
 		*.la)
 			fixla=0
 			ltlibsdir=`@DIRNAME@ $i`/.libs
@@ -53,6 +64,7 @@ if $test -f $lafile; then
 			fi
 			deps="${deps} $i"
 			;;
+		# Everything else Just Belongs in the dependency_libs line.
 		*)
 			deps="${deps} $i"
 			;;
@@ -62,8 +74,10 @@ if $test -f $lafile; then
 	relink=
 	for i in ${relink_command}; do
 		case "$i" in
+		# -I* and -D* are useless for linking.
 		-I*|-D*)
 			;;
+		# Catch -L<dir> and remove redundant ones.
 		-L*)
 			case "$relink" in
 			*"$i "*) ;;
@@ -71,9 +85,16 @@ if $test -f $lafile; then
 			*) relink="${relink} $i" ;;
 			esac
 			;;
+		# This is the .la file we're relinking... don't touch it!
 		$lafile)
 			relink="${relink} $i"
 			;;
+		# Convert "dirpath/libfoo.la" into "-Ldirpath/.libs libfoo.la"
+		# if it's an uninstalled libtool archive.  This allows
+		# proper relinking by libtool during the install stage
+		# by allowing it to find the uninstalled shared library
+		# in the .libs directory.
+		#
 		*.la)
 			fixla=0
 			ltlibsdir=`@DIRNAME@ $i`/.libs
@@ -98,6 +119,7 @@ if $test -f $lafile; then
 			fi
 			relink="${relink} $i"
 			;;
+                # Everything else Just Belongs in the relink_command line.
 		*)
 			relink="${relink} $i"
 			;;
@@ -107,6 +129,9 @@ if $test -f $lafile; then
 	   @EGREP@ "^#.*modified by buildlink3" $lafile >/dev/null 2>&1; then
 		:
 	else
+		# Save the orignal .la file produced by libtool as
+		# .la.blsav, and create the new one with a signature.
+		#
 		@MV@ -f $lafile ${lafile}.blsav
 		if $test -n "$deps"; then
 			(
@@ -131,6 +156,9 @@ if $test -f $lafile; then
 		@RM@ ${lafile}.tmp
 		$echo "==> Fixed $lafile" >> $wrapperlog
 	fi
+	#
+	# Fix up any .lai files (libtool archives that will be installed).
+	#
 	if $test -z "$laifile" || $test ! -f "$laifile" || \
 	   @EGREP@ "^#.*modified by buildlink3" $laifile >/dev/null 2>&1; then
 		:
@@ -141,13 +169,32 @@ if $test -f $lafile; then
 		L=; l=; lexist=; prev=
 		for i in ${dependency_libs}; do
 			case "$i" in
+			#
+			# Don't allowed repeated arguments, so "-lm -lm"
+			# becomes just "-lm".
+			#
 			$prev)
 				;;
+			# Skip directories that should never appear in
+			# the -L<dir> flags.  Also modify directories in
+			# ${DEPOTBASE} to point to somewhere in the
+			# default view ${LOCALBASE}, since we want "overwrite"
+			# packages to think the libraries really do just
+			# exist through the default view.
+			#
 			-L*)
 				case "$i" in
 				-L${BUILDLINK_DIR})
 					;;
 				-L@WRKSRC@/*)
+					;;
+				-L@DEPOTBASE@/*)
+					i=`$echo "X$i" | $Xsed -e "s/-L@DEPOTBASE@/-L@LOCALBASE@/"`
+					case "$L" in
+					*"$i "*) ;;
+					*"$i") ;;
+					*) L="$L $i" ;;
+					esac
 					;;
 				*)
 					case "$L" in
@@ -158,10 +205,36 @@ if $test -f $lafile; then
 					;;
 				esac
 				;;
+			# Libraries really do exist, so we want to keep
+			# any -L<dir> flags we've seen in the generated
+			# dependency_libs line.
+			#
 			-l*)
 				lexist=1
 				l="$l $i"
 				;;
+			# Libtool archives should be changed from
+			# "/path/libfoo.la" to "-L/path -lfoo", where /path
+			# is appropriately modified so that the depot
+			# directory is changed to the views directory.  This
+			# allows the .la files to be used by either "overwrite"
+			# or "pkgviews" packages and works correctly with
+			# wildcard dependencies.
+			#
+			*.la)
+				dirbase=`@DIRNAME@ $i`
+				dir=`$echo "X$dirbase" | $Xsed -e "s/^@DEPOTBASE@\//@LOCALBASE@\//"`
+				case "$L" in
+				*"-L$dir "*) ;;
+				*"-L$dir") ;;
+				*) L="$L -L$dir" ;;
+				esac
+				libbase=`@BASENAME@ $i .la`
+				lib=`$echo "X$libbase" | $Xsed -e "s/^lib//"`
+				lexist=1
+				l="$l -l$lib"
+				;;
+			# Everything else Just Belongs.
 			*)
 				l="$l $i"
 				;;
