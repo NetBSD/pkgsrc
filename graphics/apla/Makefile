@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/26 21:41:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/26 15:16:53 jmmv Exp $
 #
 
 DISTNAME=	apla-1.0.3
@@ -23,6 +23,6 @@ do-install:
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/SDL_ttf/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/avifile-devel/buildlink2.mk"
+.include "../../multimedia/avifile-devel/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
