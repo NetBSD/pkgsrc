@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/05 15:32:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/30 06:24:19 jlam Exp $
 #
 
 DISTNAME=	pspell-.12.2
@@ -11,12 +11,12 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://pspell.sourceforge.net/
 COMMENT=	generic interface to spell checker libraries
 
+USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_LIBTOOL=	YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--enable-doc-dir=${PREFIX}/share/doc/pspell
-USE_BUILDLINK_ONLY=	YES
 
 .include "../../mk/bsd.pkg.mk"

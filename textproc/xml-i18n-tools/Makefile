@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/29 13:27:47 jlam Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/30 06:24:22 jlam Exp $
 
 DISTNAME=	xml-i18n-tools-0.9
 CATEGORIES=	textproc gnome
@@ -8,7 +8,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://news.gnome.org/gnome-news/979851911/
 COMMENT=	XML internationalisation tools
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 
@@ -20,5 +20,5 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR};		\
 	done
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

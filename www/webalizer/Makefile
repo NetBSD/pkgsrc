@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/03/13 17:37:53 fredb Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2002/06/30 06:24:36 jlam Exp $
 #
 
 DISTNAME=	webalizer-2.01-09-src
@@ -16,11 +16,12 @@ COMMENT=	Web server log file analysis program
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+USE_X11=		YES
 GNU_CONFIGURE=  	YES
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-dns
-CONFIGURE_ENV+=		ac_cv_GDLIB=${BUILDLINK_DIR}/include
+CONFIGURE_ENV+=		ac_cv_GDLIB=${BUILDLINK_PREFIX.gd}/include
 
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/webalizer.conf.sample ${PKG_SYSCONFDIR}/webalizer.conf
@@ -32,7 +33,7 @@ post-build:
 		${MV} -f ${WRKSRC}/$${file}.fixed ${WRKSRC}/$${file};	\
 	done
 
-.include "../../graphics/gd/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/gd/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

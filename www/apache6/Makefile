@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49.2.1 2002/06/23 19:03:34 jlam Exp $
+# $NetBSD: Makefile,v 1.49.2.2 2002/06/30 06:24:31 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -28,7 +28,7 @@ COMMENT=		HTTP (Web) server with IPv6 support
 CONFLICTS=		apache-[0-9]* apache-*modssl-[0-9]* apache6-[0-9]*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif:N*.diff.gz}
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
 CONFIGURE_ARGS+=	--enable-module=most \
@@ -91,10 +91,10 @@ MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 
 .if (${OPSYS} == "SunOS")
 LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib
-CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_DIR}/include/db2"
+CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_PREFIX.db}/include/db2"
 CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
 BUILDLINK_DEPENDS.db=	db>=2.7.7
-.include "../../databases/db/buildlink.mk"
+.include "../../databases/db/buildlink2.mk"
 .endif
 
 BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
@@ -143,6 +143,7 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 
-.include "../../textproc/expat/buildlink.mk"
+.include "../../textproc/expat/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

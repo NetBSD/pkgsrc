@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18.2.1 2002/06/23 19:01:10 jlam Exp $
+# $NetBSD: Makefile,v 1.18.2.2 2002/06/30 06:24:16 jlam Exp $
 #
 
 DISTNAME=		nut-0.45.5
@@ -13,7 +13,7 @@ COMMENT=		Network UPS Tools
 
 BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
 			--with-user=${NUT_USER}				\

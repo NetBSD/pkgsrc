@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/10/02 08:49:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2002/06/30 06:24:07 jlam Exp $
 
 DISTNAME=		libPropList-0.10.1
 PKGNAME=		libproplist-0.10.1
@@ -9,7 +9,7 @@ MAINTAINER=		jlam@netbsd.org
 COMMENT=		GNUstep/OPENSTEP property lists compatibility library
 
 GNU_CONFIGURE=		# defined
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 

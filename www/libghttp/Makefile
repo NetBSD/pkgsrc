@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/30 09:59:50 zuntum Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2002/06/30 06:24:33 jlam Exp $
 
 DISTNAME=		libghttp-1.0.9
 CATEGORIES=		www gnome
@@ -8,7 +8,7 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME http client library
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15.2.1 2002/06/23 19:01:14 jlam Exp $
+# $NetBSD: Makefile,v 1.15.2.2 2002/06/30 06:24:15 jlam Exp $
 
 DISTNAME=		nut-0.45.5
 PKGNAME=		ups-nut-cgi-0.45.5
@@ -21,7 +21,8 @@ NUT_CONFDIR=		${PKG_SYSCONFDIR}
 NUT_STATEDIR=		/var/db/nut
 NUT_CGIDIR=		${PREFIX}/share/nut/cgi
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
 			--with-statepath=${NUT_STATEDIR}		\
@@ -31,6 +32,5 @@ CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
 
-.include "../../graphics/gd/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/gd/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

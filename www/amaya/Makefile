@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/04/23 02:08:54 jlam Exp $
+# $NetBSD: Makefile,v 1.17.2.1 2002/06/30 06:24:30 jlam Exp $
 
 DISTNAME=	amaya-src-5.1
 PKGNAME=	amaya-5.1
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.w3.org/Amaya/
 COMMENT=	Web Browser/Editor from the World Wide Web Consortium
 
 EXTRACT_ELEMENTS=	Amaya
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
 
@@ -30,8 +30,8 @@ CFLAGS+=		-Dunix
 # files in the right place.
 #
 ac_cv_path_motif=	no_motif=
-ac_cv_path_motif+=	ac_motif_includes=${BUILDLINK_DIR}/include
-ac_cv_path_motif+=	ac_motif_libraries=${BUILDLINK_DIR}/lib
+ac_cv_path_motif+=	ac_motif_includes=${MOTIFBASE}/include
+ac_cv_path_motif+=	ac_motif_libraries=${MOTIFBASE}/lib
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -49,9 +49,9 @@ post-patch:
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/Amaya
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../www/libwww/buildlink.mk"
-.include "../../mk/motif.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../www/libwww/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

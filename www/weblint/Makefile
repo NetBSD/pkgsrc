@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/11/29 13:27:48 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2002/06/30 06:24:36 jlam Exp $
 #
 
 DISTNAME=	weblint-1.020
@@ -13,7 +13,7 @@ MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=	http://www.weblint.org/
 COMMENT=	HTML validator and sanity checker
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=	YES
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

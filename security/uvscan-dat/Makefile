@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32.2.1 2002/06/23 18:59:32 jlam Exp $
+# $NetBSD: Makefile,v 1.32.2.2 2002/06/30 06:24:11 jlam Exp $
 #
 
 DISTNAME=		dat-4208
@@ -15,7 +15,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mcafeeb2b.com/naicommon/download/dats/mcafee_4x.asp
 COMMENT=		AntiVirus DAT file for uvscan
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 NO_BUILD=		YES
 
 RESTRICTED=		"restricted to the license terms set for VirusScan"

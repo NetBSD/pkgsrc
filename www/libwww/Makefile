@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30.2.1 2002/06/23 19:04:05 jlam Exp $
+# $NetBSD: Makefile,v 1.30.2.2 2002/06/30 06:24:33 jlam Exp $
 
 DISTNAME=		w3c-libwww-5.3.2
 PKGNAME=		libwww-5.3.2
@@ -14,13 +14,13 @@ COMMENT=		The W3C Reference Library
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
-CONFIGURE_ARGS+=	--with-ssl="${BUILDLINK_DIR}"
+CONFIGURE_ARGS+=	--with-ssl="${SSLBASE}"
 
 DOCDIR=			${PREFIX}/share/doc/libwww
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
@@ -39,15 +39,16 @@ pre-configure:
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
 .if ${USE_SOCKS} == 4
 .include "../../net/socks4/buildlink.mk"
-CONFIGURE_ARGS+= 	--with-socks4=${BUILDLINK_DIR}/lib/libsocks4.a
+CONFIGURE_ARGS+= 	--with-socks4=${BUILDLINK_PREFIX.socks4}/lib/libsocks4.a
 CONFIGURE_ARGS+=	--with-socks5=no
 .else
 .include "../../net/socks5/buildlink.mk"
 CONFIGURE_ARGS+=	--with-socks4=no
-CONFIGURE_ARGS+= 	--with-socks5=${BUILDLINK_DIR}/lib/libsocks5.a
+CONFIGURE_ARGS+= 	--with-socks5=${BUILDLINK_prefix.socks5}/lib/libsocks5.a
 .endif
 .endif
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

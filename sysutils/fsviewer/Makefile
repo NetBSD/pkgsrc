@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/13 17:37:42 fredb Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/30 06:24:13 jlam Exp $
 #
 
 DISTNAME=	FSViewer.app-0.2.3
@@ -17,16 +17,16 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 # needed for the new location of WINGs include files -- can be removed
 # when the application gets updated for windowmaker>=0.64.0
-CFLAGS+=	-I${BUILDLINK_DIR}/include/WINGs
+CFLAGS+=	-I${BUILDLINK_PREFIX.windowmaker}/include/WINGs
 
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
-USE_BUILDLINK_ONLY=	yes
+USE_X11=		yes
+USE_BUILDLINK2=		yes
 
 post-install:
 	cd ${PREFIX}/GNUstep/Apps/FSViewer.app && \
 		${PAX} -zrf ${_DISTDIR}${DISTSUBDIR}/icons.tar.gz *.xpm *.tif
 
-.include "../../wm/windowmaker/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../wm/windowmaker/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

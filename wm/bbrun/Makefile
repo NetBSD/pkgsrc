@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2.2.2 2002/06/23 19:03:02 jlam Exp $
+# $NetBSD: Makefile,v 1.2.2.3 2002/06/30 06:24:26 jlam Exp $
 
 DISTNAME=	bbrun-1.3
 WRKSRC=		${WRKDIR}/${DISTNAME}/bbrun
@@ -9,8 +9,9 @@ MAINTAINER=	ptiJo@noos.fr
 HOMEPAGE=	http://www.dwave.net/~jking/bbrun/
 COMMENT=	run utility for BlackBox
 
-USE_GMAKE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=	YES
+USE_X11=	YES
+USE_GMAKE=	YES
 
 ALL_TARGET=	bbrun
 
@@ -19,7 +20,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bbrun
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/README ${PREFIX}/share/doc/bbrun
 
-.include "../../mk/x11.buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
