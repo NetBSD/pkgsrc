@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.7 2004/12/03 19:15:00 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.8 2004/12/05 03:42:35 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1605,7 +1605,7 @@ undo-replace: real-undo-replace
 
 .  for targ in ${_PKG_PHASES_WRKDIR}
 ${${targ}_COOKIE}: real-${targ}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >${${targ}_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f $@ && ${ECHO} ${PKGNAME} >$@
 .  endfor
 
 # mark a stage as complete if its cookie (and all parent cookies) exist
