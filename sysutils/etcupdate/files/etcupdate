@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: etcupdate,v 1.6 2001/11/22 15:39:31 martti Exp $
+# $NetBSD: etcupdate,v 1.7 2001/11/23 19:16:38 martti Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -73,7 +73,7 @@ Usage: `basename $0` [options]
 
 Options:
 
-  -b binfile   Location of the .tgz files
+  -b           Use binary distributions
   -p pager     Which pager to use              (default: /usr/bin/more)
   -s srcdir    Location of the source files    (default: /usr/src)
   -t temproot  Where to store temporary files  (default: /tmp/temproot)
@@ -244,14 +244,14 @@ USERRC="${HOME}/.`basename $0`rc"
 [ -r ${USERRC} ] && . ${USERRC}
 
 # Read command line arguments
-ARGV=`getopt b:hp:s:t:vw: $*`
+ARGV=`getopt bhp:s:t:vw: $*`
 [ $? != 0 ] && usage
 set -- ${ARGV}
 for i; do
 	case "${i}" in
 	-b)
-		BINARY="${BINARY} ${2}"
-		shift 2
+		BINARY=YES
+		shift
 		;;
 	-h)
 		usage
@@ -288,6 +288,9 @@ if [ `id -u` -ne 0 ]; then
 	echo "*** ERROR: You MUST be root"
 	exit 1
 fi
+if [ ! -z "${BINARY}" ]; then
+	TEMPROOT="${SRCDIR}"
+fi
 if [ -z "${SRCDIR}" -o -z "${TEMPROOT}" ]; then
 	echo "*** ERROR: One of the following variables is undefined"
 	echo ""
@@ -296,7 +299,7 @@ if [ -z "${SRCDIR}" -o -z "${TEMPROOT}" ]; then
 	echo ""
 	exit 1
 fi
-if [ -r "${TEMPROOT}" ]; then
+if [ -z "${BINARY}" -a -r "${TEMPROOT}" ]; then
 	echo ""
 	echo "*** WARNING: ${TEMPROOT} already exists"
 	echo ""
@@ -309,16 +312,16 @@ if [ -r "${TEMPROOT}" ]; then
 fi
 
 if [ -z "${CONTINUE}" ]; then
-	# Create the temporary root directory
-	echo "*** Creating ${TEMPROOT}"
-	mkdir -p "${TEMPROOT}"
-	if [ ! -d "${TEMPROOT}" ]; then
-		echo "*** ERROR: Unable to create ${TEMPROOT}"
-		exit 1
-	fi
-
 	# Are we using the sources or binaries?
 	if [ -z "${BINARY}" ]; then
+		# Create the temporary root directory
+		echo "*** Creating ${TEMPROOT}"
+		mkdir -p "${TEMPROOT}"
+		if [ ! -d "${TEMPROOT}" ]; then
+			echo "*** ERROR: Unable to create ${TEMPROOT}"
+			exit 1
+		fi
+
 		# Populate ${TEMPROOT} from ${SRCDIR}
 		if [ ! -f "${SRCDIR}/etc/Makefile" ]; then
 			echo "*** ERROR: Unable to find ${SRCDIR}/etc/Makefile"
@@ -335,11 +338,12 @@ if [ -z "${CONTINUE}" ]; then
 				INSTALL_DONE=1 NO_SENDMAIL=1		\
 				distribution
 		fi
-	else
-		for i in ${BINARY}; do
-			echo "*** Extracting ${i} to ${TEMPROOT}"
-			tar xzf "${i}" -C "${TEMPROOT}"
-		done
+	elif [ ! -f "${TEMPROOT}/dev/MAKEDEV" ]; then
+		echo ""
+		echo "*** WARNING: ${TEMPROOT}/dev/MAKEDEV not found"
+		echo "Make sure you update /dev/MAKEDEV later and run"
+		echo "(cd /dev && ./MAKEDEV all) to rebuild the device nodes"
+		echo ""
 	fi
 
 	# Ignore the following files during comparision
