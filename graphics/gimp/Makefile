@@ -3,7 +3,7 @@
 # Date created:         29 January 1998
 # Whom:                 Bernd Sieker <bsieker@techfak.uni-bielefeld.de>
 #
-# $NetBSD: Makefile,v 1.5 1998/02/22 00:01:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/24 15:08:26 tron Exp $
 
 DISTNAME=	gimp-0.99.18
 CATEGORIES=	graphics
@@ -32,6 +32,7 @@ LIB_DEPENDS=	jpeg.7.:${PORTSDIR}/graphics/jpeg \
 		tcl80.1.0:${PORTSDIR}/lang/tcl80 \
 		tk80.1.0:${PORTSDIR}/x11/tk80 \
 		gtk.1.0:${PORTSDIR}/x11/gtk \
+		Xpm.4.:${PORTSDIR}/graphics/xpm
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
