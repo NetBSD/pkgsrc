@@ -1,4 +1,4 @@
-/*	$NetBSD: compare.c,v 1.2 2003/09/05 04:38:46 grant Exp $	*/
+/*	$NetBSD: compare.c,v 1.3 2004/04/16 23:43:36 heinz Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -40,7 +40,7 @@
 #if 0
 static char sccsid[] = "@(#)compare.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: compare.c,v 1.2 2003/09/05 04:38:46 grant Exp $");
+__RCSID("$NetBSD: compare.c,v 1.3 2004/04/16 23:43:36 heinz Exp $");
 #endif
 #endif /* not lint */
 
@@ -99,7 +99,7 @@ do {									\
 } while (0)
 #define	LABEL if (!label++) MARK
 
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 
 
 #define CHANGEFLAGS							\
@@ -137,7 +137,7 @@ do {									\
 	flags = (~(s->st_flags & (mask)) & CH_MASK) & (pflags);		\
 	CHANGEFLAGS;							\
 } while (0)
-#endif	/* HAVE_STRUCT_STAT_ST_FLAGS */
+#endif	/* HAVE_FILE_FLAGS */
 
 int
 compare(NODE *s, FTSENT *p)
@@ -187,7 +187,7 @@ compare(NODE *s, FTSENT *p)
 	}
 	if (Wflag)
 		goto afterpermwhack;
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 	if (iflag && !uflag) {
 		if (s->flags & F_FLAGS)
 		    SETFLAGS(p->fts_statp->st_flags, SP_FLGS);
@@ -343,7 +343,7 @@ compare(NODE *s, FTSENT *p)
 			tab = "\t";
 		}
 	}
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 	/*
 	 * XXX
 	 * since lchflags(2) will reset file times, the utimes() above
@@ -370,7 +370,7 @@ compare(NODE *s, FTSENT *p)
 			printf(")\n");
 		tab = "\t";
 	}
-#endif	/* HAVE_STRUCT_STAT_ST_FLAGS */
+#endif	/* HAVE_FILE_FLAGS */
 
 	/*
 	 * from this point, no more permission checking or whacking
