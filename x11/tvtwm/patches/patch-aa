@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2000/10/02 08:01:13 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2000/10/02 08:05:11 jlam Exp $
 
 --- Imakefile.orig	Thu Feb  2 19:25:44 1995
 +++ Imakefile
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.3 2000/10/02 08:01:13 jlam Exp $
         LINTLIBS = $(LINTXMU) $(LINTEXTENSIONLIB) $(LINTXLIB)
          DEFINES = -DSHAPE $(RELEASE_DEFINES) $(LOCAL_DEFINES) $(SIGNAL_DEFINES)
  
-@@ -93,11 +93,11 @@
+@@ -93,14 +93,15 @@
                    iconmgr.o cursor.o icons.o vdt.o move.o LocPixmap.o \
                    regexp.o
  
@@ -49,8 +49,13 @@ $NetBSD: patch-aa,v 1.3 2000/10/02 08:01:13 jlam Exp $
 +SpecialObjectRule(LocPixmap.o,NullParameter,'-DBITMAPDIR="$(INCDIR)/X11/bitmaps"')
  SpecialObjectRule(twm.o,NullParameter,$(TWM_DEFS))
  
- #if defined(UltrixArchitecture) || defined(AlphaArchitecture)
-@@ -120,11 +120,12 @@
+-#if defined(UltrixArchitecture) || defined(AlphaArchitecture)
++/* The following rule is only applicable to a specific compiler on Ultrix. */
++#if defined(UltrixArchitecture)
+ SpecialObjectRule(menus.o,NullParameter,-Olimit 700)
+ #endif
+ 
+@@ -120,11 +121,12 @@
  XCOMM	ln $(BINDIR)/tvtwm $(BINDIR)/twm
  
  #if (ProjectX < 5)
@@ -66,7 +71,7 @@ $NetBSD: patch-aa,v 1.3 2000/10/02 08:01:13 jlam Exp $
  #endif
  
  gram.h gram.c: gram.y
-@@ -135,7 +136,10 @@
+@@ -135,7 +137,10 @@
  clean::
  	$(RM) y.tab.h y.tab.c lex.yy.c gram.h gram.c lex.c deftwmrc.c 
  
