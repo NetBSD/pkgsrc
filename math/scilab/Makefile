@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2004/10/03 00:12:57 tv Exp $
+# $NetBSD: Makefile,v 1.57 2004/11/29 22:05:08 dmcmahill Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
 PKGNAME=	${SCIBASE}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Scilab/distributions/
 
@@ -91,6 +91,7 @@ post-install:
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/macros/util/scipad.sci.orig
 	${RM} -f ${PREFIX}/lib/${SCIBASE}/libtool
 	${LN} -s ${LOCALBASE}/bin/libtool ${PREFIX}/lib/${SCIBASE}/libtool
+	${RM} -f ${PREFIX}/lib/${SCIBASE}/config/*.subst.sav
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=		2.95.3
@@ -106,6 +107,16 @@ do-test:
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
 		${TEE} ${WRKDIR}/examples.log
 
+# scilab wants ocamlopt so use the same list here as in the
+# lang/ocaml package
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
+    (${MACHINE_ARCH} == "sparc")
+PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
+.include "../../lang/ocaml/buildlink3.mk"
+.else
+PLIST_SRC=	${PKGDIR}/PLIST
+CONFIGURE_ARGS+=	--without-ocaml
+.endif
 .include "../../parallel/pvm3/buildlink3.mk"
 .include "../../textproc/sablotron/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
