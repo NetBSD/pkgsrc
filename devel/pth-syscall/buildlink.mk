@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2002/07/18 11:22:01 agc Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/07/22 07:46:39 skrll Exp $
 #
 # This Makefile fragment is included by packages that use pth-syscall.
 #
@@ -17,7 +17,7 @@ PTH_SYSCALL_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.pth-syscall?=	pth-syscall>=1.4.1
+BUILDLINK_DEPENDS.pth-syscall?=	pth-syscall>=1.4.1nb1
 DEPENDS+=		${BUILDLINK_DEPENDS.pth-syscall}:../../devel/pth-syscall
 
 EVAL_PREFIX+=		PTH_SYSCALL_PREFIX=pth-syscall
