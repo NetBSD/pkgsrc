@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/02 14:57:38 kleink Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/24 18:44:58 he Exp $
 
 DISTNAME=		xconq-7.4.1
 CATEGORIES=		games x11
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://sources.redhat.com/pub/xconq/
 MAINTAINER=		kleink@netbsd.org
 HOMEPAGE=		http://sources.redhat.com/xconq/
 
-DEPENDS+=		tcl-8.3.2:../../lang/tcl
+DEPENDS+=		tcl>=8.3.2:../../lang/tcl
 DEPENDS+=		tk-8.3.2:../../x11/tk
 
 USE_X11BASE=		YES

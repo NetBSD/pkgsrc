@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/09/03 23:08:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/01/24 18:44:59 he Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/09/25 10:07:44 asami Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/abacus.html
 
-DEPENDS+=	tcl-8.3.2:../../lang/tcl
+DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 DEPENDS+=	tk-8.3.2:../../x11/tk
 
 BROKEN=		This package has been updated to compile with tcl-8.3.2, but dumps core on startup.
