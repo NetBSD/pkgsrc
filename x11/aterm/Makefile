@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/01/02 05:55:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/02 12:13:10 jmmv Exp $
 #
 
 DISTNAME=	aterm-0.4.2
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=--enable-background-image \
 		--enable-wtmp
 
 .if defined(ATERM_USE_XTERM_SCROLL) && ${ATERM_USE_XTERM_SCROLL} != NO
-CONFIGUE_ARGS+=--enable-xterm-scroll
+CONFIGURE_ARGS+=--enable-xterm-scroll
 .endif
 
 .if defined(ATERM_USE_KANJI) && ${ATERM_USE_KANJI} != NO
