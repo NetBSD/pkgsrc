@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2004/11/14 07:48:30 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2004/11/17 22:55:15 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -149,20 +149,10 @@ PERL5_HINTS_LDDLFLAGS=	# empty
 
 PERL5_HINTS_LDFLAGS+=	${LOCLIBRPATHFLAGS}
 
-# On platforms that have native pthreads, default to installing the
-# threaded perl.  This can be overridden by explicitly setting
-# PERL5_USE_THREADS.
-#
-.if exists(/usr/include/pthread.h) && \
-    !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
-PERL5_USE_THREADS?=	yes
-.else
-PERL5_USE_THREADS?=	no
-.endif
-
 # If perl58 is built with threads support, then name the package
 # "perl-thread", otherwise it's just "perl" as usual.
 #
+PERL5_USE_THREADS?=	no
 .if !empty(PERL5_USE_THREADS:M[nN][oO])
 PERL5_PKGSUFFIX=	# empty
 CONFLICTS+=		perl-thread-[0-9]*
