@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.259 2004/07/16 23:21:50 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.260 2004/07/19 20:00:15 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1768,30 +1768,11 @@ PKG_LANG?=english
 # Possible: YES, not defined
 # Default: not defined
 
-#POSTFIX_USE_INET6=YES
-# Add support for IPv6.
-# Possible: YES, not defined
-# Default: not defined
-
-#POSTFIX_USE_MYSQL=YES
-# Add support for MySQL maps.
-# Possible: YES, not defined
-# Default: not defined
-
-#POSTFIX_USE_PCRE=YES
-# Add support for Perl Compatible Regular Expressions.
-# Possible: YES, not defined
-# Default: not defined
-
-#POSTFIX_USE_TLS=YES
-# Add support for TLS.
-# Possible: YES, not defined
-# Default: not defined
-
-#POSTFIX_VERP=YES
-# Add support for Variable Envelope Return Paths.
-# Possible: YES, not defined
-# Default: not defined
+#POSTFIX_OPTIONS?=	inet6 mysql sasl
+# Add support for various optional add-ons to Postfix.
+# Possible: Valid values can be found in POSTFIX_ALL_OPTIONS in
+#	mail/postfix/Makefile.options.
+# Default: empty
 
 PURE_FTPD_USE_MYSQL?=	NO
 # Compile in MySQL support.
