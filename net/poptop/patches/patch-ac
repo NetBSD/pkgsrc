@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/10/08 04:32:23 dbj Exp $
+$NetBSD: patch-ac,v 1.2 2005/01/12 12:28:04 cube Exp $
 
---- pptpctrl.c.orig	Wed Sep 22 20:01:28 1999
-+++ pptpctrl.c	Sat Sep 25 21:27:35 1999
-@@ -33,6 +33,7 @@
+--- pptpctrl.c.orig	2004-04-28 13:36:07.000000000 +0200
++++ pptpctrl.c
+@@ -32,6 +32,7 @@
  #include <netinet/in.h>
  #include <arpa/inet.h>
  #ifdef HAVE_OPENPTY
@@ -10,3 +10,12 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/10/08 04:32:23 dbj Exp $
  #ifdef HAVE_PTY_H
  #include <pty.h>
  #endif
+@@ -734,7 +735,7 @@ static void launch_pppd(char **pppaddrs,
+ 
+         if (pptp_logwtmp) {
+                  pppd_argv[an++] = "plugin";
+-                 pppd_argv[an++] = "/usr/lib/pptpd/pptpd-logwtmp.so";
++                 pppd_argv[an++] = "@@PREFIX@@/lib/pptpd/pptpd-logwtmp.so";
+                  pppd_argv[an++] = "pptpd-original-ip";
+                  pppd_argv[an++] = inet_ntoa(inetaddrs[1]);
+         }
