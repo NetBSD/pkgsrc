@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9539 2005/03/22 01:00:21 hubertf Exp $
+$NetBSD: CHANGES,v 1.9540 2005/03/22 01:09:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1445,3 +1445,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated getmail to 4.3.4 [schmonz 2005-03-21]
 	Updated memtester to 4.0.5 [schmonz 2005-03-22]
 	Updated xlockmore to 5.16 [hubertf 2005-03-22]
+	Added dsniff-nox11-2.3 [wiz 2005-03-22]
+	Updated dsniff to 2.3nb4 [wiz 2005-03-22]
