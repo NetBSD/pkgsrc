@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/12/28 02:47:50 reed Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/22 10:55:13 jmmv Exp $
 #
 
 .include "Makefile.common"
-
-PKGREVISION=	2
 
 PKG_USERS=	messagebus:messagebus::System\\ message\\ bus:${VARBASE}/run/dbus:/sbin/nologin
 PKG_GROUPS=	messagebus

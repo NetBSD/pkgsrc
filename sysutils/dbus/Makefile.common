@@ -1,7 +1,10 @@
-# $NetBSD: Makefile.common,v 1.2 2004/11/26 17:22:54 sketch Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/03/22 10:55:13 jmmv Exp $
 #
 
-DBUS_VERSION=	0.22
+# XXX Do not update to 0.30 or above yet.  The API in the 0.2x series is
+# XXX the most commonly used ATM.
+
+DBUS_VERSION=	0.23.4
 
 DISTNAME=	dbus-${DBUS_VERSION}
 CATEGORIES=	sysutils
