@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/02/13 11:47:05 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/02/26 19:47:44 tron Exp $
 bin/gchgrp
 bin/gchown
 bin/gchmod
@@ -41,11 +41,20 @@ man/man1/grm.1
 man/man1/gdu.1
 man/man1/gtouch.1
 man/man1/ginstall.1
-${LOCALEDIR}/locale/de/LC_MESSAGES/fileutils.mo
-${LOCALEDIR}/locale/fr/LC_MESSAGES/fileutils.mo
-${LOCALEDIR}/locale/es/LC_MESSAGES/fileutils.mo
-${LOCALEDIR}/locale/pt/LC_MESSAGES/fileutils.mo
-${LOCALEDIR}/locale/nl/LC_MESSAGES/fileutils.mo
-${LOCALEDIR}/locale/sl/LC_MESSAGES/fileutils.mo
-${LOCALEDIR}/locale/sv/LC_MESSAGES/fileutils.mo
-${LOCALEDIR}/locale/pl/LC_MESSAGES/fileutils.mo
+man/man1/gdir.1
+man/man1/gsync.1
+man/man1/gvdir.1
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/fileutils.mo
