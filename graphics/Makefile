@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2000/12/02 05:45:06 jtb Exp $
+# $NetBSD: Makefile,v 1.107 2000/12/03 15:11:45 wiz Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -45,6 +45,7 @@
     SUBDIR += giram
     SUBDIR += glu
     SUBDIR += glut
+    SUBDIR += gnome-iconedit
     SUBDIR += gnuplot
     SUBDIR += gphoto
     SUBDIR += gqview
