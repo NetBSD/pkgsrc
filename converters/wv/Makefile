@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/10/16 15:14:22 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/17 05:47:19 rh Exp $
 #
 
 DISTNAME=		wv-0.6.0
@@ -8,7 +8,6 @@ MASTER_SITES=		http://download.sourceforge.net/wvware/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.wvWare.com/
 
-BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 DEPENDS+=		libwmf-0.1.17nb1:../../graphics/libwmf
 DEPENDS+=		ImageMagick>=5.2.2:../../graphics/ImageMagick
 
@@ -37,14 +36,6 @@ MAKE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 pre-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} {} \;
-
-pre-configure:
-	#cd ${WRKSRC} && autoconf
-
-post-configure:
-	#cd ${WRKSRC} && ${RM} -rf magick &&				\
-	#${LN} -s ${PREFIX}/include/magick .
-	#cd ${WRKSRC} && ${LN} -s ${PREFIX}/include/magick/config.h magick
 
 post-install:
 	${TOUCH} ${PREFIX}/share/wv/ttf/.directory
