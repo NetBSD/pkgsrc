@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/11/10 23:06:14 adrianp Exp $
+# $NetBSD: Makefile,v 1.18 2004/11/16 13:51:45 adrianp Exp $
 
 DISTNAME=	freeradius-1.0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -47,19 +47,9 @@ CONFIGURE_ARGS+=	--without-snmp
 
 SUBST_CLASSES=		make
 SUBST_STAGE.make=	post-patch
-SUBST_FILES.make=	src/modules/rlm_counter/Makefile.in \
-			src/modules/rlm_ldap/Makefile.in \
-			src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in \
+SUBST_FILES.make=	src/modules/rlm_ldap/Makefile.in \
 			src/modules/rlm_mschap/Makefile
-SUBST_SED.make=		-e "s|@counter_ldflags@|@counter_ldflags@ \
-				-L${PREFIX}/lib \
-				${COMPILER_RPATH_FLAG}${PREFIX}/lib|g" \
-			-e "s|@ldap_ldflags@|@ldap_ldflags@ -L${PREFIX}/lib \
-				${COMPILER_RPATH_FLAG}${PREFIX}/lib|g" \
-			-e "s|@postgresql_ldflags@|@postgresql_ldflags@ \
-				-L${PREFIX}/lib \
-				${COMPILER_RPATH_FLAG}${PREFIX}/lib|g" \
-			-e "s|RLM_LDFLAGS	=|RLM_LDFLAGS 	= \
+SUBST_SED.make= 	-e "s|RLM_LDFLAGS	=|RLM_LDFLAGS 	= \
 				-L../../../src/lib/.libs/ -lradius|g"
 SUBST_MESSAGE.make=	"Fixing Makefiles."
 
@@ -118,6 +108,17 @@ post-install:
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
 CONFIGURE_ARGS+=	--without-threads
+.endif
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"
+.include "../../devel/pthread-sem/buildlink3.mk"
+SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
+				-lpthread -lsemaphore|g" 
+.endif
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
+SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
+				-lpthread|g" 
 .endif
 
 .include "../../mk/bsd.pkg.mk"
