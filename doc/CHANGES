@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3674 2003/10/10 12:59:33 agc Exp $
+$NetBSD: CHANGES,v 1.3675 2003/10/11 08:05:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4138,3 +4138,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dsniff to 2.3nb1 [cube 2003-10-10]
 	Updated pakemon to 0.3.1nb1 [cube 2003-10-10]
 	Updated isakmpd to 20030903 [agc 2003-10-10]
+	Updated pkglint to 3.65 [wiz 2003-10-11]
