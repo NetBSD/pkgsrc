@@ -1,4 +1,4 @@
-/*	$NetBSD: rcorder.c,v 1.1.1.1 2004/08/27 01:49:15 schmonz Exp $	*/
+/*	$NetBSD: rcorder.c,v 1.2 2004/08/27 03:06:07 jlam Exp $	*/
 
 /*
  * Copyright (c) 1998, 1999 Matthew R. Green
@@ -58,8 +58,10 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
 #include <nbcompat.h>
-
 #if HAVE_SYS_TYPES_H
 #include <sys/types.h>
 #endif
