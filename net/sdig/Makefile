@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2002/04/20 19:02:03 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2003/04/07 15:01:22 bouyer Exp $
 
-DISTNAME=	sdig-0.11
-PKGREVISION=	1
+DISTNAME=	sdig-0.30
 CATEGORIES=	net
 MASTER_SITES=	http://www.exploits.org/sdig/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} mactable.gz
@@ -10,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.exploits.org/sdig/
 COMMENT=	Switch Digger finds port assignment for hosts on a switched Ethernet
 
-DEPENDS=	ucd-snmp-4.2.4*:../../net/ucd-snmp
+USE_BUILDLINK2=	yes
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -24,7 +23,10 @@ post-build: my-post-build
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/sdig.conf ${PREFIX}/share/examples/
 	${INSTALL_DATA} ${WRKDIR}/mactable ${PREFIX}/share/misc/
+	${INSTALL_DATA} ${WRKSRC}/sdig.8 ${PREFIX}/man/man8/
+	${INSTALL_DATA} ${WRKSRC}/sdig.conf.5 ${PREFIX}/man/man5/
 
+.include "../../net/net-snmp/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Note:  this depends on having a MESSAGE file, which we do.
