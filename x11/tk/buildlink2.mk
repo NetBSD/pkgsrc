@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2004/03/24 15:24:36 jwise Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/04/09 23:39:00 danw Exp $
 
 .if !defined(TK_BUILDLINK2_MK)
 TK_BUILDLINK2_MK=	# defined
@@ -22,10 +22,11 @@ USE_X11=	YES
 .include "../../lang/tcl/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 
-# Make "-ltk" resolve into "-ltk84", so that we don't need to patch so
-# many Makefiles.
+# Make "-ltk" and "-ltk8.4" resolve into "-ltk84", so that we don't
+# need to patch so many Makefiles.
 #
 BUILDLINK_TRANSFORM+=		l:tk:tk84
+BUILDLINK_TRANSFORM+=		l:tk8.4:tk84
 
 BUILDLINK_TARGETS+=	tk-buildlink
 

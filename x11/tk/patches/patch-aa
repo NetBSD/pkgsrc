@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2004/03/25 22:49:15 jlam Exp $
+$NetBSD: patch-aa,v 1.11 2004/04/09 23:39:00 danw Exp $
 
 --- Makefile.in.orig	Mon Mar  1 19:04:48 2004
 +++ Makefile.in
@@ -31,7 +31,15 @@ $NetBSD: patch-aa,v 1.10 2004/03/25 22:49:15 jlam Exp $
  INSTALL_LIBRARY		= ${INSTALL}
  INSTALL_DATA		= ${INSTALL} -m 644
  
-@@ -234,7 +234,7 @@ WISH_LIBS = $(TCL_LIB_SPEC) @LIBS@ $(X11
+@@ -208,6 +208,7 @@ TK_STUB_LIB_FLAG	= @TK_STUB_LIB_FLAG@
+ #TK_STUB_LIB_FLAG	= -ltkstub
+ 
+ TK_LIB_FILE		= @TK_LIB_FILE@
++TK_LA_FILE		= ${TK_LIB_FILE:C/@SHLIB_SUFFIX@/.la/}
+ #TK_LIB_FILE		= libtk.a
+ 
+ # Generic lib name used in rules that apply to tcl and tk
+@@ -234,7 +235,7 @@ WISH_LIBS = $(TCL_LIB_SPEC) @LIBS@ $(X11
  # The values of the symbolis normally set by the configure script.
  
  STLIB_LD		= @STLIB_LD@
@@ -40,7 +48,7 @@ $NetBSD: patch-aa,v 1.10 2004/03/25 22:49:15 jlam Exp $
  SHLIB_LD_FLAGS		= @SHLIB_LD_FLAGS@
  SHLIB_LD_LIBS		= @SHLIB_LD_LIBS@
  TK_SHLIB_LD_EXTRAS	= @TK_SHLIB_LD_EXTRAS@
-@@ -274,7 +274,8 @@ TOOL_DIR		= @TCL_SRC_DIR@/tools
+@@ -274,7 +275,8 @@ TOOL_DIR		= @TCL_SRC_DIR@/tools
  # should be compressed and linked with softlinks
  MKLINKS_FLAGS           = @MKLINKS_FLAGS@
  
@@ -50,16 +58,36 @@ $NetBSD: patch-aa,v 1.10 2004/03/25 22:49:15 jlam Exp $
  
  CC_SWITCHES_NO_STUBS = ${CFLAGS} ${CFLAGS_WARNING} ${SHLIB_CFLAGS} \
  -I${UNIX_DIR} -I${GENERIC_DIR} \
-@@ -422,7 +423,7 @@ objs: ${OBJS}
+@@ -390,7 +392,7 @@ DEMOPROGS = browse hello ixset rmt rolod
+ 
+ all: binaries libraries doc
+ 
+-binaries: ${LIB_FILE} ${STUB_LIB_FILE} wish
++binaries: ${TK_LA_FILE} ${STUB_LIB_FILE} wish
+ 
+ libraries:
+ 
+@@ -402,7 +404,7 @@ doc: $(SRC_DIR)/doc/man.macros
+ 
+ # The following target is configured by autoconf to generate either
+ # a shared library or non-shared library for Tk.
+-${LIB_FILE}: ${OBJS}
++${TK_LA_FILE}: ${OBJS}
+ 	rm -f $@
+ 	@MAKE_LIB@
+ 
+@@ -421,8 +423,8 @@ tkLibObjs:
+ objs: ${OBJS}
  
  
- wish: $(WISH_OBJS) $(TK_LIB_FILE) $(TK_STUB_LIB_FILE)
+-wish: $(WISH_OBJS) $(TK_LIB_FILE) $(TK_STUB_LIB_FILE)
 -	$(CC) $(LDFLAGS) $(WISH_OBJS) \
++wish: $(WISH_OBJS) $(TK_LA_FILE) $(TK_STUB_LIB_FILE)
 +	$(LD) $(LDFLAGS) $(WISH_OBJS) \
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(CC_SEARCH_FLAGS) -o wish
  
-@@ -436,7 +437,7 @@ tktest: $(TKTEST_OBJS) $(TK_LIB_FILE)
+@@ -436,7 +438,7 @@ tktest: $(TKTEST_OBJS) $(TK_LIB_FILE)
  	$(MAKE) tktest-real LIB_RUNTIME_DIR=`pwd`:$(TCL_BIN_DIR)
  
  tktest-real:
@@ -68,7 +96,7 @@ $NetBSD: patch-aa,v 1.10 2004/03/25 22:49:15 jlam Exp $
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(CC_SEARCH_FLAGS) -o tktest
  
-@@ -445,7 +446,7 @@ tktest-real:
+@@ -445,7 +447,7 @@ tktest-real:
  # lib location logic from tktest, and it is not clear where this
  # test.o object file comes from.
  xttest: test.o tkTest.o tkSquare.o $(TK_LIB_FILE)
@@ -77,3 +105,12 @@ $NetBSD: patch-aa,v 1.10 2004/03/25 22:49:15 jlam Exp $
  		@TK_BUILD_LIB_SPEC@ \
  		$(WISH_LIBS) $(LD_SEARCH_FLAGS) -lXt -o xttest
  
+@@ -507,7 +509,7 @@ install-strip:
+ # some ranlibs write to current directory, and this might not always be
+ # possible (e.g. if installing as root).
+ 
+-install-binaries: $(TK_LIB_FILE) $(TK_STUB_LIB_FILE) $(TK_BUILD_EXP_FILE) wish
++install-binaries: $(TK_LA_FILE) $(TK_STUB_LIB_FILE) $(TK_BUILD_EXP_FILE) wish
+ 	@for i in $(LIB_INSTALL_DIR) $(BIN_INSTALL_DIR) $(PKG_INSTALL_DIR); \
+ 	    do \
+ 	    if [ ! -d $$i ] ; then \

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2004/03/25 22:49:15 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/09 23:39:00 danw Exp $
 
 DISTNAME=	tk8.4.6-src
 PKGNAME=	tk-8.4.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -45,13 +45,6 @@ post-patch:
 		>> mkLinks;						\
 	${RM} -f mkLinks.tmp;						\
 	${CHMOD} +x mkLinks;
-
-pre-install:
-	cd ${WRKSRC}; for file in					\
-		tkUnixInit.o libtk84.so wish;				\
-	do								\
-		${TOUCH} $${file};					\
-	done
 
 post-install:
 	cd ${WRKDIR} && ${PAX} -rwpm man ${PREFIX}

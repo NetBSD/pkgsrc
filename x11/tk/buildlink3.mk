@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/03/24 15:24:36 jwise Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/04/09 23:39:00 danw Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TK_BUILDLINK3_MK:=	${TK_BUILDLINK3_MK}+
@@ -16,10 +16,11 @@ BUILDLINK_PKGSRCDIR.tk?=	../../x11/tk
 
 BUILDLINK_FILES.tk=	bin/wish*
 #
-# Make "-ltk" resolve into "-ltk84", so that we don't need to patch so
-# many Makefiles.
+# Make "-ltk" and "-ltk8.4" resolve into "-ltk84", so that we don't
+# need to patch so many Makefiles.
 #
 BUILDLINK_TRANSFORM+=	l:tk:tk84
+BUILDLINK_TRANSFORM+=	l:tk8.4:tk84
 
 .endif	# TK_BUILDLINK3_MK
 
