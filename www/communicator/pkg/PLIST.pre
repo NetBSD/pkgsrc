@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST.pre,v 1.7 2000/05/09 13:23:20 abs Exp $
+@comment $NetBSD: PLIST.pre,v 1.8 2000/09/05 18:31:02 abs Exp $
 bin/${BINNAME}-${NS_VERS}
 bin/${BINNAME}
-bin/netscape
 lib/netscape/${BINNAME}-${NS_VERS}/java/classes/ifc11.jar
 lib/netscape/${BINNAME}-${NS_VERS}/java/classes/iiop10.jar
 lib/netscape/${BINNAME}-${NS_VERS}/java/classes/jae40.jar
