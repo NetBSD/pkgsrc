@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.15 2005/01/26 13:09:19 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/03/22 16:16:33 jmmv Exp $
 #
 
-DISTNAME=		gst-plugins-0.8.7
+DISTNAME=		gst-plugins-0.8.8
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gst-plugins/0.8/} \
 			http://gstreamer.freedesktop.org/src/gst-plugins/
@@ -39,6 +39,7 @@ CONFIGURE_ENV+=		have_func=no
 		aalib \
 		aalibtest \
 		alsa \
+		amrnb \
 		arts \
 		artsc \
 		artstest \
@@ -155,9 +156,11 @@ SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=	${GST_PLUGINS_DIR}/Makefile.in
 SUBST_SED.libs=		-e 's|$$(top_builddir)/gst-libs/gst/libgst|${BUILDLINK_PREFIX.gst-plugins}/lib/libgst|g'
 
-BUILDLINK_DEPENDS.gst-plugins+=	gst-plugins>=0.8.7
+BUILDLINK_DEPENDS.gst-plugins+=	gst-plugins>=0.8.8
 .include "../../multimedia/gst-plugins/buildlink3.mk"
 .endif
+
+BUILDLINK_DEPENDS.gstreamer+=	gstreamer>=0.8.9
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
