@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2120 2003/05/02 08:05:22 jmmv Exp $
+$NetBSD: CHANGES,v 1.2121 2003/05/02 08:22:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1824,3 +1824,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated newscache to 0.99.17nb1 [jmmv 2003-05-02]
 	Updated ekg to 1.0 [zuntum 2003-05-02]
 	Added sigrot-1.2 [jmmv 2003-05-02]
+	Updated gcc to 2.95.3nb1 [jmmv 2003-05-02]
