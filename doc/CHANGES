@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3330 2003/09/11 17:23:22 drochner Exp $
+$NetBSD: CHANGES,v 1.3331 2003/09/11 18:11:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3642,3 +3642,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated magicpoint to 1.10a [jmmv 2003-09-11]
 	Updated ruby-termios to 0.9.4 [taca 2003-09-11]
 	Added focal81-0 [drochner 2003-09-11]
+	Updated tavrasm to 1.19 [jmmv 2003-09-11]
