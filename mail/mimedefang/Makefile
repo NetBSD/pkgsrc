@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2003/09/02 12:39:12 markd Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/07 11:18:33 markd Exp $
 
-DISTNAME=		mimedefang-2.35
+DISTNAME=		mimedefang-2.40
 CATEGORIES=		mail
-MASTER_SITES=		http://www.roaringpenguin.com/mimedefang/
+MASTER_SITES=		http://www.mimedefang.org/static/
 
 MAINTAINER=		markd@NetBSD.org
-HOMEPAGE=		http://www.roaringpenguin.com/mimedefang/
+HOMEPAGE=		http://www.mimedefang.org/
 COMMENT=		To inspect/modify e-mail as it passes through your mail relay
 
 DEPENDS+=		p5-Digest-SHA1>=2.00:../../security/p5-Digest-SHA1
@@ -37,6 +37,9 @@ SHAREDIR=		${PREFIX}/share/mimedefang
 
 FILES_SUBST+=		SHAREDIR=${SHAREDIR}
 FILES_SUBST+=		DEFANG_USER=${DEFANG_USER}
+FILES_SUBST+=		DEFANG_SPOOLDIR=${DEFANG_SPOOLDIR}
+
+RCD_SCRIPTS=		mimedefang-multiplexor mimedefang
 
 OWN_DIRS_PERMS+=	${DEFANG_SPOOLDIR} ${DEFANG_USER} ${DEFANG_GROUP} 0700
 
@@ -49,7 +52,17 @@ CONFIGURE_ARGS+=	--with-milterinc=${BUILDLINK_PREFIX.libmilter}/include
 CONFIGURE_ARGS+=	--with-milterlib=${BUILDLINK_PREFIX.libmilter}/lib
 CONFIGURE_ARGS+=	--with-spooldir=${DEFANG_SPOOLDIR}
 CONFIGURE_ARGS+=	--with-quarantinedir=${DEFANG_SPOOLDIR}
-CONFIGURE_ARGS+=	--disable-anti-virus
+# CONFIGURE_ARGS+=	--disable-anti-virus
+#	list the paths where they _would_ be installed, so they
+#	can be found at runtime. -- they have to be listed
+#	in the environment, as the --enable-<> flags don't work
+CONFIGURE_ENV+=		CLAMD=${PREFIX}/sbin/clamd
+CONFIGURE_ENV+=		CLAMSCAN=${PREFIX}/sbin/clamscan
+CONFIGURE_ENV+=		FPROT=${PREFIX}/bin/f-prot
+CONFIGURE_ENV+=		NAI=${PREFIX}/bin/uvscan
+
+# Doesn't work with pth
+PTHREAD_OPTS+=		require native
 
 do-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
