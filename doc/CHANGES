@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.63 2002/09/25 19:14:17 wiz Exp $
+$NetBSD: CHANGES,v 1.64 2002/09/25 19:23:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2972,3 +2972,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkg_comp to 1.1 [wiz 2002-09-25]
 	Updated adjustkernel to 1.5 [wiz 2002-09-25]
 	Updated autoconf-devel to 2.54 [wiz 2002-09-25]
+	Updated automake to 1.4.6 [wiz 2002-09-25]
