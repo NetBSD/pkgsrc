@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/02/16 14:17:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2001/04/18 17:28:26 jtb Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/01/28 08:11:23 asami Exp 
 #
 
@@ -13,5 +13,6 @@ COMMENT=	The GNU database manager
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+INFO_FILES=		gdbm.info
 
 .include "../../mk/bsd.pkg.mk"
