@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2004/12/22 08:08:08 martti Exp $
+# $NetBSD: Makefile,v 1.49 2005/01/23 07:02:03 martti Exp $
 
-DISTNAME=	squirrelmail-1.4.3a
-PKGREVISION=	1
+DISTNAME=	squirrelmail-1.4.4
+#PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -68,6 +68,7 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
 	${FIND} ${SMDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${SMDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE} 
+	${CHMOD} a+x ${SMDIR}/config/conf.pl
 	${INSTALL_DATA} ${WRKSRC}/data/index.php ${USER_PREFS_DIR}/
 	${INSTALL_DATA} ${WRKSRC}/data/.htaccess ${USER_PREFS_DIR}/
 
