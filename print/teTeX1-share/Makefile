@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/24 12:54:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:24:29 agc Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0.2
 PKGNAME=	teTeX-share-1.0.2
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
@@ -14,6 +13,7 @@ COMMENT=	Machine-independent part of teTeX
 
 CONFLICTS+=	teTeX2-share-[2-9]*
 
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	teTeX
 USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty

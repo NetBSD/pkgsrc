@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/07/01 23:10:32 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:19:17 agc Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
 PKGNAME=	smlnj-${SML_VERSION}
-WRKSRC=		${WRKDIR}
 CATEGORIES=	lang
 MASTER_SITES=	http://www.smlnj.org/dist/working/${SML_VERSION}/ \
 		http://smlnj.cs.uchicago.edu/dist/working/${SML_VERSION}/ \
@@ -36,6 +35,7 @@ SML_VERSION=	110.42
 # 	ftp://ftp.cl.cam.ac.uk/MIRRORED/smlnj/release/
 # 	ftp://ftp.ntua.gr/pub/lang/smlnj/release/
 
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	smlnj-${SML_VERSION}
 USE_GMAKE=	yes
 

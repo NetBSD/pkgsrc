@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2003/01/28 03:41:02 markd Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/20 12:19:18 agc Exp $
 #
 
 DISTNAME=	expect-${EXPECT_VERSION}
@@ -8,7 +8,6 @@ HOMEPAGE=	http://expect.nist.gov/
 EXPECT_VERSION=	5.38.0
 
 WRKSRC=		${WRKDIR}/expect-5.38
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 TEST_TARGET=	test

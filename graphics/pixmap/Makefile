@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 21:42:11 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/20 12:18:16 agc Exp $
 # FreeBSD: Makefile,v 1.8 1996/11/18 09:53:36 asami Exp
 #
 
 DISTNAME=		pixmap2.6
 PKGNAME=		pixmap-2.6.4
 PKGREVISION=		2
-WRKSRC=			${WRKDIR}/pixmap
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/pixmap/}
 
@@ -18,6 +17,7 @@ PATCHFILES=		pixmap_2.6.patch1.gz \
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Pixmap editor based on XPM library
 
+WRKSRC=			${WRKDIR}/pixmap
 USE_BUILDLINK2=		YES
 USE_IMAKE=		YES
 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2003/12/30 17:27:31 cjep Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:20:05 agc Exp $
 
 DISTNAME=	tochnog-20010429
-WRKSRC=		${WRKDIR}/tochnog/src
 CATEGORIES=	math
 MASTER_SITES=	ftp://tochnog.sourceforge.net/pub/tochnog/
 DISTFILES=	tn.tar.gz tnu.ps.gz tnp.ps.gz
@@ -10,6 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tochnog.sourceforge.net/
 COMMENT=	Finite Element Analysis Program
 
+WRKSRC=		${WRKDIR}/tochnog/src
 DIST_SUBDIR=	${DISTNAME}
 EXTRACT_ONLY=	tn.tar.gz
 MAKEFILE=	makefile

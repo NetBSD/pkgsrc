@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 17:11:12 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:22:20 agc Exp $
 #
 
 DISTNAME=	xmlrpc-0.9.8-990621
 PKGNAME=	${PYPKGPREFIX}-xmlrpc-0.9.8
-WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	http://www.pythonware.com/downloads/
 EXTRACT_SUFX=	.zip
@@ -12,6 +11,7 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.pythonware.com/products/xmlrpc/
 COMMENT=	Implementation of the XML-RPC protocol for Python
 
+WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 
 PY_PATCHPLIST=	yes

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2004/01/05 20:38:35 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/20 12:18:16 agc Exp $
 #
 
 DISTNAME=		jpegsrc.v6b
 PKGNAME=		jpeg-6b
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/graphics/jpeg/ \
 			ftp://ftp.uu.net/graphics/jpeg/
@@ -15,6 +14,7 @@ COMMENT=		IJG's jpeg compression utilities
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2004/01/10 05:40:40 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2004/01/20 12:23:57 agc Exp $
 #
 
 DISTNAME=	pkgdiff-0.113
-WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,6 +18,7 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
+WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	yes
 
 MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR:Q}

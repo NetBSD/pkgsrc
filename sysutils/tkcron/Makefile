@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 17:24:40 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:26:16 agc Exp $
 #
 
 DISTNAME=	tkcron-2.12
-WRKSRC=		${WRKDIR}
 CATEGORIES=	x11 tk
 MASTER_SITES=	ftp://ftp.neosoft.com/languages/tcl/alcatel/code/
 EXTRACT_SUFX=	.tcl.gz
@@ -12,6 +11,7 @@ COMMENT=	Graphical frontend to crontab
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
+WRKSRC=		${WRKDIR}
 USE_X11=	yes
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} > tkcron.tcl
 

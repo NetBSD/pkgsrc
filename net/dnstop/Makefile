@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/01/11 15:05:43 cjep Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:22:19 agc Exp $
 #
 
 DISTNAME=	dnstop-20021224
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	http://dnstop.measurement-factory.com/src/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} dnstop.8
@@ -12,6 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://dnstop.measurement-factory.com/src/
 COMMENT=	Diagnose tcpdump trace for DNS queries/replies
 
+WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/11/12 10:43:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:28:00 agc Exp $
 #
 
 DISTNAME=	validate-1.2
 PKGNAME=	wdg-${DISTNAME}
-WRKSRC=		${WRKDIR}
 CATEGORIES=	www
 MASTER_SITES=	http://www.htmlhelp.com/tools/validator/offline/
 DISTFILES=	${DISTNAME} wdg-sgml-lib-1.1.3.tar.gz README
@@ -14,6 +13,7 @@ COMMENT=	HTML validator from the Web Design Group
 
 DEPENDS+=	lq-sp>=1.3.4.5:../../textproc/lq-sp
 
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	validate
 EXTRACT_ONLY=	wdg-sgml-lib-1.1.3.tar.gz
 SITES_wdg-sgml-lib-1.1.3.tar.gz=	http://www.htmlhelp.com/tools/validator/src/

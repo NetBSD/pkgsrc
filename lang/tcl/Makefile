@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2004/01/05 11:22:13 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/20 12:19:18 agc Exp $
 #
 
 DISTNAME=		tcl8.3.4
 PKGNAME=		tcl-8.3.4
-WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
 			ftp://gd.tuwien.ac.at/languages/tcl/scriptics/tcl8_3/ \
@@ -18,6 +17,7 @@ CONFLICTS+=		tclman80-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		TOUCH="${TOUCH}"
 TEST_TARGET=		test

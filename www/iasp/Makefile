@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:27:59 agc Exp $
 
 .include "../iasp/Makefile.common"
 
 PKGNAME=	iasp-${IASP_VERSION}
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${IASP_DIR}
 COMMENT=	Instant ASP: Java implementation of Active Server Pages
 
 SCRIPTS_ENV+=	CAT=${CAT:Q}
@@ -25,6 +24,7 @@ FILES_SUBST+=	IASP_GROUP=${IASP_GROUP}
 PKG_USERS=	${IASP_USER}:${IASP_GROUP}
 PKG_GROUPS=	${IASP_GROUP}
 
+WRKSRC=		${WRKDIR}/${IASP_DIR}
 USE_PKGINSTALL=	yes
 OWN_DIRS=	${IASP_DESTDIR}
 OWN_DIRS_PERMS=	${IASP_DESTDIR}/logs ${IASP_USER} ${IASP_GROUP} 0750
