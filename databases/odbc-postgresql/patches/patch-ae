@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2002/04/03 09:29:56 jlam Exp $
+
+--- src/makefiles/Makefile.netbsd.orig	Sat Dec 16 10:14:25 2000
++++ src/makefiles/Makefile.netbsd
+@@ -3,7 +3,9 @@
+ ifdef ELF_SYSTEM
+ export_dynamic = -Wl,-E
+ rpath = -Wl,-R$(libdir)
+-shlib_symbolic = -Wl,-Bsymbolic
++shlib_symbolic = -Wl,-Bsymbolic -lc
++else
++rpath = -R$(libdir)
+ endif
+ 
+ DLSUFFIX = .so

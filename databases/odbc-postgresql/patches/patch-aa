@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2002/04/03 09:29:55 jlam Exp $
+
+--- config/programs.m4.orig	Sat Feb 10 14:31:42 2001
++++ config/programs.m4
+@@ -85,7 +85,7 @@
+   for pgac_rllib in -lreadline -ledit ; do
+     pgac_save_LIBS=$LIBS
+     LIBS="${pgac_rllib}${pgac_lib} $LIBS"
+-    AC_TRY_LINK_FUNC([readline], [pgac_cv_check_readline="${pgac_rllib}${pgac_lib}"; break 2])
++    AC_TRY_LINK_FUNC([readline], AC_TRY_RUN([int main() { return 0; }], [pgac_cv_check_readline="${pgac_rllib}${pgac_lib}"; break 2]))
+     LIBS=$pgac_save_LIBS
+   done
+ done

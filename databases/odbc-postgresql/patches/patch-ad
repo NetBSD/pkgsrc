@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2002/04/03 09:29:56 jlam Exp $
+
+--- src/interfaces/odbc/GNUmakefile.orig	Mon Mar 26 01:34:17 2001
++++ src/interfaces/odbc/GNUmakefile
+@@ -44,7 +44,6 @@
+ 
+ install: all installdirs
+ 	for i in $(odbc_headers); do $(INSTALL_DATA) $(srcdir)/$$i $(DESTDIR)$(odbc_includedir)/$$i || exit 1; done
+-	$(INSTALL_DATA) $(srcdir)/odbcinst.ini $(DESTDIR)$(odbcinst_ini_dir)/odbcinst.ini
+ 	$(INSTALL_DATA) $(srcdir)/odbc.sql $(DESTDIR)$(datadir)/odbc.sql
+ 	$(MAKE) install-lib
+ 

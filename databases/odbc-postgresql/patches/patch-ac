@@ -1,0 +1,150 @@
+$NetBSD: patch-ac,v 1.1 2002/04/03 09:29:55 jlam Exp $
+
+--- configure.orig	Thu Aug 16 11:36:31 2001
++++ configure
+@@ -19,6 +19,8 @@
+ ac_help="$ac_help
+   --with-libs=DIRS        alternative spelling of --with-libraries"
+ ac_help="$ac_help
++  --disable-readline      disable readline support"
++ac_help="$ac_help
+   --enable-locale         enable locale support"
+ ac_help="$ac_help
+   --enable-recode         enable character set recode support"
+@@ -53,6 +55,8 @@
+ ac_help="$ac_help
+   --with-python           build Python interface module"
+ ac_help="$ac_help
++  --with-python-compile   byte-compile modules if Python is enabled"
++ac_help="$ac_help
+   --with-java             build JDBC interface and Java tools"
+ ac_help="$ac_help
+   --with-krb4[=DIR]       build with Kerberos 4 support [/usr/athena]"
+@@ -811,6 +815,32 @@
+ 
+ 
+ #
++# Readline support
++#
++echo $ac_n "checking whether to build with readline support""... $ac_c" 1>&6
++echo "configure:822: checking whether to build with readline support" >&5
++# Check whether --enable-readline was given
++if test x"${enable_readline+set}" = xset; then
++  case $enable_readline in
++    yes)
++      :
++      ;;
++    no)
++      :
++      ;;
++    *)
++      enableval=$enable_readline
++      { echo "configure: error: no argument expected for --enable-readline option" 1>&2; exit 1; }
++      ;;
++  esac # $enable_readline
++else
++  enable_readline=yes
++
++fi
++echo "$ac_t""$enable_readline" 1>&6
++
++
++#
+ # Locale (--enable-locale)
+ #
+ echo $ac_n "checking whether to build with locale support""... $ac_c" 1>&6
+@@ -1905,6 +1935,35 @@
+ fi
+ 
+ 
++# If python is enabled (above), then optionally byte-compile the modules.
++echo $ac_n "checking whether to byte-compile Python modules""... $ac_c" 1>&6
++echo "configure:1941: checking whether to byte-compile Python modules" >&5
++if test "$with_python" = yes; then
++  # Check whether --with-python_compile was given
++if test x"${with_python_compile+set}" = xset; then
++  case $with_python_compile in
++    yes)
++      :
++      ;;
++    no)
++      :
++      ;;
++    *)
++      withval=$with_python_compile
++      { echo "configure: error: no argument expected for --with-python_compile option" 1>&2; exit 1; }
++      ;;
++  esac # $with_python_compile
++else
++  with_python_compile=no
++
++fi
++else
++  with_python_compile=no
++fi
++echo "$ac_t""$with_python_compile" 1>&6
++
++
++
+ #
+ # Optionally build the Java/JDBC tools
+ #
+@@ -3095,8 +3154,9 @@
+ ## Libraries
+ ##
+ 
++if test "$enable_readline" = yes; then
+ echo $ac_n "checking for readline""... $ac_c" 1>&6
+-echo "configure:3100: checking for readline" >&5
++echo "configure:3160: checking for readline" >&5
+ 
+ if eval "test \"`echo '$''{'pgac_cv_check_readline'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+@@ -3118,13 +3178,30 @@
+ readline()
+ ; return 0; }
+ EOF
+-if { (eval echo configure:3122: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++if { (eval echo configure:3182: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   rm -rf conftest*
++  if test "$cross_compiling" = yes; then
++    { echo "configure: error: can not run test program while cross compiling" 1>&2; exit 1; }
++else
++  cat > conftest.$ac_ext <<EOF
++#line 3188 "configure"
++#include "confdefs.h"
++int main() { return 0; }
++EOF
++if { (eval echo configure:3192: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext} && (./conftest; exit) 2>/dev/null
++then
+   pgac_cv_check_readline="${pgac_rllib}${pgac_lib}"; break 2
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+ fi
++rm -fr conftest*
++fi
++
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++fi
+ rm -f conftest*
+     LIBS=$pgac_save_LIBS
+   done
+@@ -3208,6 +3285,7 @@
+ else :
+   
+ fi
++fi
+ 
+ if test "$PORTNAME" != "aix" -a "$PORTNAME" != "alpha"
+ then
+@@ -8103,6 +8181,7 @@
+ s%@python_moduledir@%$python_moduledir%g
+ s%@python_extmakefile@%$python_extmakefile%g
+ s%@with_python@%$with_python%g
++s%@with_python_compile@%$with_python_compile%g
+ s%@ANT@%$ANT%g
+ s%@with_java@%$with_java%g
+ s%@with_krb4@%$with_krb4%g
