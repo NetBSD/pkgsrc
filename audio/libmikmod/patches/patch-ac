@@ -1,16 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2000/03/07 22:45:10 tron Exp $
+$NetBSD: patch-ac,v 1.2 2000/04/02 16:07:05 pooka Exp $
 
---- configure.orig	Mon Jun 28 05:57:18 1999
-+++ configure	Tue Mar  7 23:38:45 2000
-@@ -1618,6 +1618,7 @@
+--- configure.orig	Mon Feb 14 22:20:17 2000
++++ configure	Sun Apr  2 14:50:50 2000
+@@ -1646,6 +1646,7 @@
+ *) lt_target="$target" ;;
+ esac
  
- 
- 
-+if false; then
++if false ; then
  # Check for any special flags to pass to ltconfig.
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -1771,6 +1772,7 @@
+@@ -1799,6 +1800,7 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
@@ -18,3 +18,19 @@ $NetBSD: patch-ac,v 1.1 2000/03/07 22:45:10 tron Exp $
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
+@@ -1862,6 +1864,7 @@
+ fi
+ 
+ 
++if false ; then
+ # Check if makeinfo support html output. If it doesn't, pretend it's missing
+ # rather than failing rebuilding the documentation.
+ echo $ac_n "checking if makeinfo supports html output""... $ac_c" 1>&6
+@@ -1881,6 +1884,7 @@
+ if test $libmikmod_cv_makeinfo_html = no
+ then
+ 	MAKEINFO="$missing_dir/missing makeinfo"
++fi
+ fi
+ 
+ # ====================

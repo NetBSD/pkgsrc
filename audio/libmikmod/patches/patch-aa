@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/10 01:33:28 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2000/04/02 16:07:05 pooka Exp $
 
---- docs/Makefile.in.orig	Sun Oct  3 18:22:08 1999
-+++ docs/Makefile.in	Sun Oct  3 18:22:19 1999
-@@ -77,7 +77,7 @@
+--- docs/Makefile.in.orig	Tue Feb 15 00:19:59 2000
++++ docs/Makefile.in	Sun Apr  2 14:46:09 2000
+@@ -76,7 +76,7 @@
  LIB_LDADD = @LIB_LDADD@
  LN_S = @LN_S@
  MAINT = @MAINT@
 -MAKEINFO = @MAKEINFO@
 +MAKEINFO = @MAKEINFO@ --no-split
- NM = @NM@
  OBJDUMP = @OBJDUMP@
  PACKAGE = @PACKAGE@
+ PLAYER_LIB = @PLAYER_LIB@
