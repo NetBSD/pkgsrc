@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2004/11/17 18:29:20 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2004/11/17 18:47:19 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB4_BUILDLINK3_MK:=	${DB4_BUILDLINK3_MK}+
@@ -30,6 +30,10 @@ BUILDLINK_TRANSFORM+=		l:db:db4
 .  endif
 .endif	# DB4_BUILDLINK3_MK
 
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/compiler.mk"
+.if empty(PKGSRC_COMPILER:Mgcc)
+PTHREAD_OPTS+=	native
+.  include "../../mk/pthread.buildlink3.mk"
+.endif
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
