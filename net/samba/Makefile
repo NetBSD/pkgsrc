@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2001/06/01 15:21:53 groo Exp $
+# $NetBSD: Makefile,v 1.54 2001/06/07 20:17:39 jlam Exp $
 
 DISTNAME=		samba-2.2.0
 PKGNAME=		${DISTNAME}nb1
@@ -15,7 +15,6 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-USE_LIBINTL=		# defined
 USE_SSL=		# defined
 
 GNU_CONFIGURE=		# defined
@@ -29,6 +28,7 @@ USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 
 CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
 CFLAGS+=		-I${BUILDLINK_INCDIR}
+CPPFLAGS+=		-I${BUILDLINK_INCDIR}
 LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 SAMBA_LOGDIR=		/var/log
