@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/23 16:19:49 agc Exp $
+
+Tell the users the right version number
+
+--- configure	2000/08/21 17:49:31	1.1
++++ configure	2000/08/21 17:49:38
+@@ -535,7 +535,7 @@
+ 
+ 
+ 
+-VERSION=1.8.1
++VERSION=1.8.2
+ MAINTAINER="bonzini@gnu.org"
+ echo "GNU Smalltalk Version $VERSION"
+ 
