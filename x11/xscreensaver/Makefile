@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.66 2004/05/11 13:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2005/03/18 14:44:58 wiz Exp $
 
 COMMENT=	Screen saver and locker for the X window system
 
 CONFLICTS+=	xscreensaver-gnome<4.14
+# man/man1/barcode.1
+CONFLICTS+=	barcode-[0-9]*
 
 USE_BUILDLINK3=	yes
 
