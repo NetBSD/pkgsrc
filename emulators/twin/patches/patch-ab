@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/05/15 09:46:37 agc Exp $
+
+--- osdll/Makefile.in.orig	Sun May 13 00:21:55 2001
++++ osdll/Makefile.in	Sun May 13 00:23:18 2001
+@@ -18,6 +18,7 @@
+ THREAD_sparc_solaris 	= DrvThreads_generic.c
+ THREAD_sparc_sunos	= DrvThreads_generic.c
+ THREAD_X386_freebsd	= DrvThreads_X386.c
++THREAD_X386_netbsd	= DrvThreads_X386.c
+ THREAD_X386_linux	= DrvThreads_X386.c
+ THREAD_X386_sco		= DrvThreads_X386.c
+ THREAD_X386_solaris 	= DrvThreads_X386.c
+@@ -35,6 +36,7 @@
+ SYSTEM_sparc_solaris 	= DrvSystem_sparc.s
+ SYSTEM_sparc_sunos	= DrvSystem_sparc.s
+ SYSTEM_X386_freebsd	=
++SYSTEM_X386_netbsd	=
+ SYSTEM_X386_linux	=
+ SYSTEM_X386_sco		=
+ SYSTEM_X386_solaris 	=
