@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/03/18 04:33:53 mjl Exp $
+# $NetBSD: Makefile,v 1.14 2001/06/16 19:53:08 jlam Exp $
 #
 .include "Makefile.common"
 
@@ -14,6 +14,18 @@ post-patch:
 post-configure:
 	${SED} -e 's/ doc$$//' ${WRKSRC}/Makefile >${WRKSRC}/.tmp && \
 	${MV} ${WRKSRC}/.tmp ${WRKSRC}/Makefile
+
+# Fix config scripts by removing buildlink directory references.
+post-build:
+	@cd ${WRKSRC};							\
+	for file in gdk_pixbufConf.sh gdk_pixbuf_xlibConf.sh; do	\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
+			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
+			$${file}.fixme > $${file};			\
+		${RM} -f $${file}.fixme;				\
+		${CHMOD} +x $${file};					\
+	done
 
 post-install:
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
