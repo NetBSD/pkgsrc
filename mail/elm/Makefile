@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2000/03/27 08:54:58 tron Exp $
+# $NetBSD: Makefile,v 1.12 2000/06/04 16:28:21 jdolecek Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
-DISTNAME=		elm-2.4ME+54
+DISTNAME=		elm-2.4ME+78
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.ozone.fmi.fi/KEH/ \
 			ftp://ftp.funet.fi/pub/unix/mail/elm/elm-2.4ME+/ \
@@ -13,14 +13,13 @@ HOMEPAGE=		http://www.myxa.com/old/elm.html
 
 HAS_CONFIGURE=		Yes
 CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ENV=		PREFIX="${PREFIX}"
+CONFIGURE_ENV=		PREFIX="${PREFIX}" RUN_AS_BATCH=yes
 CONFIGURE_ARGS=		-S
 
-WRKSRC=			${WRKDIR}/elm2.4.ME+.54
+WRKSRC=			${WRKDIR}/elm2.4.ME+.78
 
 pre-configure:
 	${CP} ${FILESDIR}/config.sh ${WRKSRC}/
-	${CP} ${FILESDIR}/elm.mimecharsets ${WRKSRC}/bin/
 	${MV} ${WRKSRC}/nls/LANGS ${WRKSRC}/nls/LANGS.tmpl
 	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/nls/LANGS.tmpl > ${WRKSRC}/nls/LANGS
 
