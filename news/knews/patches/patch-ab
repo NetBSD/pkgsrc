@@ -1,6 +1,6 @@
---- src/global.h.orig	Tue Aug 13 16:30:33 1996
-+++ src/global.h	Sun Nov 30 18:32:48 1997
-@@ -109,6 +109,7 @@
+--- src/global.h.orig	Fri Jan  9 18:16:21 1998
++++ src/global.h	Thu Apr 23 00:52:42 1998
+@@ -100,6 +100,7 @@
      long		no_unread;
      long		first_art;
      long		last_art;
