@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/05/19 07:58:25 minoura Exp $
+$NetBSD: distinfo,v 1.5 2002/10/02 08:25:13 minoura Exp $
 
-SHA1 (Gauche-0.5.4.tgz) = 614bb7d61cddcff351c6108e39a960e83ea362f3
-Size (Gauche-0.5.4.tgz) = 1440436 bytes
-SHA1 (patch-ad) = 7574f5ffe95671ac01f4b5dc1775bc93f10d062e
+SHA1 (Gauche-0.6.3.tgz) = e2a80b7f20a93eb7af7b649dce0b0667810bad40
+Size (Gauche-0.6.3.tgz) = 2449515 bytes
+SHA1 (patch-ae) = 5504dfcefebf4bd02fcd1ea1e185753183a69326
+SHA1 (patch-af) = 8f86ac9e8799fe3d4a08e11b31bc5d8350860389
+SHA1 (patch-ba) = ab0f7e77bc116b9975897f0381edde7981030b6c
