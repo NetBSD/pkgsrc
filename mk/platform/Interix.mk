@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.18 2005/01/21 02:09:10 tv Exp $
+# $NetBSD: Interix.mk,v 1.19 2005/01/21 06:14:23 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -25,6 +25,10 @@
 # openssl	0x5e000000	0x5fffffff	0x00100000	32
 # perl58	*
 # python23	*
+# ruby16	0x50000000	0x6fffffff	0x00040000	2048
+#   (main lib)	0x48000000
+# ruby18	0x50000000	0x6fffffff	0x00040000	2048
+#   (main lib)	0x48000000
 # zsh		*
 
 # "catinstall" not yet supported as there's no shipped [gn]roff
