@@ -1,0 +1,59 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- default.defs.orig	Thu Jul  8 07:01:39 1999
++++ default.defs
+@@ -1,36 +1,20 @@
+-##
+-# defs for Red Hat Linux
+-# Michael K. Johnson <johnsonm@redhat.com>
+-##
+-# this file indicates the compiler and the various hardware/OS dependent
+-# flags for installation. It also defines the various destinations of
+-# installed files on the system.
+-#
+-# This file is the version used for Red Hat Linux.
+-
+-OS=linux
+-ARCH=$(shell rpm --showrc | grep '^build arch' | sed 's/^.*: //g')
+-CC=gcc
+-INSTALL=install
+-MKDIR=mkdir -p
+-CFLAGS=$(RPM_OPT_FLAGS) -pipe -g
+-ULIBS=#-lefence
+-LD=ld
+-LD_D=gcc -shared -Xlinker -x
+-LD_L=$(LD) -x -shared 
++OS=${LOWER_OPSYS}
++ARCH=${MACHINE_GNU_ARCH}
++INSTALL=${BSD_INSTALL}
++WARNINGS=
++ULIBS=
++LD_L=${LD} -G 
++LD_D=${LD_L}
++RDYNAMIC=
+ USESONAME=yes
+-SOSWITCH=-soname
+-LINKLIBS=-lc
++SOSWITCH=-h
+ NEEDSONAME=no
+-LDCONFIG=/sbin/ldconfig
+-AR=ar -cr
+-RANLIB=ranlib
+-FAKEROOT=$(RPM_BUILD_ROOT)
+-PREFIX=
+-SUPLEMENTED=$(PREFIX)/sbin
+-LIBDIR=$(PREFIX)/lib
+-SECUREDIR=$(LIBDIR)/security
+-INCLUDED=/usr/include/security
+-CONFIGED=/etc
+-SCONFIGED=/etc/security
+-EXTRALS=-lcrypt
++LDCONFIG=echo
++AR=${ARPRG} -cr
++FAKEROOT=
++SUPLEMENTED=${PREFIX}/sbin
++LIBDIR=${PREFIX}/lib
++SECUREDIR=${LIBDIR}/security
++INCLUDED=${PREFIX}/include/security
++CONFIGED=${PREFIX}/etc
++SCONFIGED=${CONFIGED}/pam

@@ -1,0 +1,74 @@
+$NetBSD: patch-ap,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- modules/pam_unix/support.c.orig	Sat Oct 21 14:21:48 2000
++++ modules/pam_unix/support.c
+@@ -12,7 +12,10 @@
+ #include <string.h>
+ #include <malloc.h>
+ #include <pwd.h>
++#include <sys/param.h>
++#ifndef BSD
+ #include <shadow.h>
++#endif
+ #include <limits.h>
+ #include <utmp.h>
+ 
+@@ -99,6 +102,9 @@
+    */
+ char *PAM_getlogin(void)
+ {
++#ifdef BSD
++	return getlogin();
++#else
+ 	struct utmp *ut, line;
+ 	char *curr_tty, *retval;
+ 	static char curr_user[UT_NAMESIZE + 4];
+@@ -120,6 +126,7 @@
+ 	D(("PAM_getlogin retval: %s", retval));
+ 
+ 	return retval;
++#endif
+ }
+ 
+ /*
+@@ -302,6 +309,7 @@
+ 	pwd = getpwnam(name);	/* Get password file entry... */
+ 
+ 	if (pwd != NULL) {
++#ifndef BSD
+ 		if (strcmp( pwd->pw_passwd, "*NP*" ) == 0)
+ 		{ /* NIS+ */                 
+ 			uid_t save_euid, save_uid;
+@@ -339,6 +347,7 @@
+ 		if (spwdent)
+ 			salt = x_strdup(spwdent->sp_pwdp);
+ 		else
++#endif
+ 			salt = x_strdup(pwd->pw_passwd);
+ 	}
+ 	/* Does this user have a password? */
+@@ -450,6 +459,7 @@
+ 	pwd = getpwnam(name);	/* Get password file entry... */
+ 
+ 	if (pwd != NULL) {
++#ifndef BSD	
+ 		if (strcmp( pwd->pw_passwd, "*NP*" ) == 0)
+ 		{ /* NIS+ */                 
+ 			uid_t save_euid, save_uid;
+@@ -467,7 +477,7 @@
+ 						return PAM_CRED_INSUFFICIENT;
+ 				}
+ 			}
+-	
++
+ 			spwdent = getspnam( name );
+ 			if (save_uid == pwd->pw_uid)
+ 				setreuid( save_uid, save_euid );
+@@ -486,6 +496,7 @@
+ 		if (spwdent)
+ 			salt = x_strdup(spwdent->sp_pwdp);
+ 		else
++#endif
+ 			salt = x_strdup(pwd->pw_passwd);
+ 	}
+ 
