@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/17 15:25:39 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/20 23:43:20 wiz Exp $
 bin/cddb_query
 include/cddb/cddb.h
 include/cddb/cddb_cmd.h
+include/cddb/cddb_config.h
 include/cddb/cddb_conn.h
 include/cddb/cddb_disc.h
 include/cddb/cddb_error.h
