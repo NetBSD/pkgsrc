@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/02/15 04:46:31 bad Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/19 22:46:24 jdolecek Exp $
 #
 
 DISTNAME=	mysql-3.22.32
@@ -14,7 +14,7 @@ NO_CDROM=	"Restrictive license."
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--without-perl --without-debug --without-bench \
-		--without-server
+		--without-server --with-named-curses-libs="-lcurses"
 
 .if exists(/usr/include/readline.h)
 CONFIGURE_ARGS+=--without-readline
