@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 18:19:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/26 11:34:54 wiz Exp $
 #
 
-DISTNAME=	sendfile-2.1
+DISTNAME=	sendfile-2.1a
+PKGNAME=	sendfile-2.1.0.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.uni-stuttgart.de/pub/unix/comm/sendfile/current/
 
