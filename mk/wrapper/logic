@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.6 2004/10/08 21:53:53 jlam Exp $
+# $NetBSD: logic,v 1.7 2004/12/05 03:43:18 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -207,6 +207,7 @@ while ! queue_is_empty argbuf; do
 		*)
 			# Apply transformations to $arg.
 			addtocache=no
+			split_arg=no
 			case $skip_transform in
 			yes)	
 				$debug_log $wrapperlog "    (logic) to:   $arg [untransformed]"
@@ -231,12 +232,22 @@ while ! queue_is_empty argbuf; do
 				;;
 			esac
 
+			##############################################
+			# Split all -l options along whitespace.  This
+			# disallows library names with whitespace, but it
+			# allows us to handle transformations that look
+			# like, e.g. "-lreadline" -> "-ledit -ltermcap".
+			##############################################
+			case $arg in
+			-l*)	split_arg=yes ;;
+			esac
+
 			# Re-create the cache file if we're adding to it.
 			case $updatecache,$addtocache in
 			yes,yes)
 				shquote "$arg"; cachedarg="$shquoted"
 				$cat >> $cache_body << EOF
-$cachearg) arg=$cachedarg; cachehit=yes ;;
+$cachearg) arg=$cachedarg; split_arg=$split_arg; cachehit=yes ;;
 EOF
 				$cat $cache_header \
 				     $cache_body \
@@ -245,23 +256,24 @@ EOF
 			esac
 			;;
 		esac
-		case $arg in
+
+		case $split_arg in
 		######################################################
-		# Split -l options along whitespace.  This disallows
-		# library names with whitespace, but it allows us to
-		# handle transformations that look like, e.g.
-		# "-lreadline" -> "-ledit -ltermcap".
+		# Split some options along whitespace.  This disallows
+		# options that contain whitespace, but it allows us to
+		# handle transformations that transform one arg into
+		# several.
 		######################################################
-		-l*)
-			for lib in $arg; do
-				append_queue cmdbuf "$lib"
-				$debug_log $wrapperlog "    (logic) push: $lib"
+		yes)
+			for i in $arg; do
+				append_queue cmdbuf "$i"
+				$debug_log $wrapperlog "    (logic) push: $i"
 			done
 			;;
 		######################################################
 		# Everything else goes into the command buffer unchanged.
 		######################################################
-		*)
+		no)
 			append_queue cmdbuf "$arg"
 			$debug_log $wrapperlog "    (logic) push: $arg"
 			;;
