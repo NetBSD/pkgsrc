@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.3 2000/08/22 02:55:40 wiz Exp $
+@comment $NetBSD: PLIST.opt,v 1.4 2000/08/24 22:32:35 wiz Exp $
 bin/ocamlopt
 bin/ocamlc.opt
 bin/ocamlopt.opt
@@ -108,5 +108,3 @@ lib/ocaml/unix.cmx
 lib/ocaml/unix.cmxa
 lib/ocaml/weak.cmx
 lib/ocaml/weak.p.cmx
-man/man1/ocamlc.opt.1
-man/man1/ocamlopt.opt.1

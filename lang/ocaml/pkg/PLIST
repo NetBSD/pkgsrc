@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/08/22 02:54:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/08/24 22:32:35 wiz Exp $
 bin/labltk
 bin/ocaml
 bin/ocaml299to3
@@ -240,11 +240,13 @@ lib/ocaml/weak.ml
 lib/ocaml/weak.mli
 man/man1/ocaml.1
 man/man1/ocamlc.1
+man/man1/ocamlc.opt.1
 man/man1/ocamlcp.1
 man/man1/ocamldep.1
 man/man1/ocamllex.1
 man/man1/ocamlmktop.1
 man/man1/ocamlopt.1
+man/man1/ocamlopt.opt.1
 man/man1/ocamlprof.1
 man/man1/ocamlrun.1
 man/man1/ocamlyacc.1

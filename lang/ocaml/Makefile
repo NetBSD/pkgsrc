@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/12 15:17:45 wulf Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/24 22:32:34 wiz Exp $
 #
 
 DISTNAME=		ocaml-3.00
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	-prefix ${LOCALBASE} -tklibs -L${LOCALBASE}/lib -tkdefs "-I${LO
 
 ALL_TARGET=		world
 
-pre-install:
+post-build:
 			if ${TEST} ${MACHINE_ARCH} = 'i386'; then \
 			  cd ${WRKSRC}; \
 			  ${GMAKE} opt; \
