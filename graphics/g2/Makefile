@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/05/03 21:17:23 jtb Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/29 01:12:35 hubertf Exp $
 
 DISTNAME=		g2-0.40
-PKGNAME=		g2-0.40nb1
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://g2.sourceforge.net/pub/g2/
 

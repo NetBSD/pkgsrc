@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2001/09/27 23:18:18 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/29 01:12:39 hubertf Exp $
 #
 
 DISTNAME=	snobol-0.99.4
-PKGNAME=	snobol-0.99.4nb1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.snobol4.com/ \
 		ftp://alpha.gnu.org/budne/snobol/

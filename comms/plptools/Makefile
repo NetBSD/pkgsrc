@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2001/11/06 22:23:49 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/11/29 01:12:27 hubertf Exp $
 #
 
 DISTNAME=	plptools-0.6
-PKGNAME=	${DISTNAME}nb1
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.to.com/pub/psion/tarballs/
 

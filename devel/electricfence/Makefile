@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/11/10 19:59:00 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/29 01:12:29 hubertf Exp $
 
 DISTNAME=		ElectricFence-2.1
-PKGNAME=		ElectricFence-2.1nb1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.perens.com/pub/ElectricFence/
 
