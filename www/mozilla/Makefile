@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2001/11/22 16:25:36 taya Exp $
+# $NetBSD: Makefile,v 1.78 2001/12/27 15:02:36 taya Exp $
 
-MOZ_VER=	0.9.6
-NB_VER=
+MOZ_VER=	0.9.7
 DISTNAME=	mozilla-source-${MOZ_VER}
-PKGNAME=	mozilla-${MOZ_VER}${NB_VER}
+PKGNAME=	mozilla-${MOZ_VER}
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla${MOZ_VER}/src/ \
@@ -22,12 +21,13 @@ USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tests \
 		--disable-debug \
-		--with-jpeg=${BUILDLINK_DIR} \
-		--with-png=${BUILDLINK_DIR} \
+		--with-system-jpeg=${BUILDLINK_DIR} \
+		--with-system-png=${BUILDLINK_DIR} \
 		--enable-mathml \
-		--enable-svg \
 		--enable-crypto
 SHAREMODE?=	644
+#ALL_TARGET=	default
+ALL_TARGET=
 
 .include	"../../x11/gtk/buildlink.mk"
 .include	"../../graphics/gdk-pixbuf/buildlink.mk"
