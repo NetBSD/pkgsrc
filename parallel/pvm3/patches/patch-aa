@@ -1,7 +1,32 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
---- src/ddpro.c.orig	Fri Aug  7 00:37:07 1998
-+++ src/ddpro.c	Fri Aug  7 00:37:25 1998
-@@ -234,2 +234,3 @@
- #ifdef NEEDMENDIAN
-+#include <sys/types.h>
- #include <machine/endian.h>
+$NetBSD: patch-aa,v 1.2 1999/11/23 16:05:30 dmcmahill Exp $
+
+--- ./lib/pvmgetarch.orig	Wed Jul  7 15:54:41 1999
++++ ./lib/pvmgetarch	Mon Nov  1 19:57:42 1999
+@@ -128,12 +128,19 @@
+ 
+ 	if [ -f /netbsd ]; then
+-		case "`/usr/bin/machine`" in
+-		i386)   ARCH=NETBSDI386 ;;
+-		amiga)  ARCH=NETBSDAMIGA ;;
+-		hp300)  ARCH=NETBSDHP300 ;;
+-		mac68k) ARCH=NETBSDMAC68K ;;
+-		pmax)   ARCH=NETBSDPMAX ;;
+-		sparc)  ARCH=NETBSDSPARC ;;
+-		sun3)   ARCH=NETBSDSUN3 ;;
++		# use the processor type for NetBSD because machines with
++		# the same processor are binary compatible.
++		case "`/usr/bin/uname -p`" in
++		alpha)   ARCH=NETBSDALPHA ;;
++		arm32)   ARCH=NETBSDARM32 ;;
++		i386)    ARCH=NETBSDI386 ;;
++		m68k)    ARCH=NETBSDM68K ;;
++		mipseb)  ARCH=NETBSDMIPSEB ;;
++		mipsel)  ARCH=NETBSDMIPSEL ;;
++		ns32k)   ARCH=NETBSDNS32K ;;
++		powerpc) ARCH=NETBSDPOWERPC ;;
++		sh3)     ARCH=NETBSDSH3 ;;
++		sparc)   ARCH=NETBSDSPARC ;;
++		sparc64) ARCH=NETBSDSPARC64 ;;
++		vax)     ARCH=NETBSDVAX ;;
+ 		esac
+ 	elif [ -f /usr/bin/machine ]; then

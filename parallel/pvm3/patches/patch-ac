@@ -1,7 +1,10 @@
-$NetBSD: patch-ac,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
---- src/pvmdpack.c.orig	Fri Aug  7 00:39:13 1998
-+++ src/pvmdpack.c	Fri Aug  7 00:39:27 1998
-@@ -66,2 +66,3 @@
+$NetBSD: patch-ac,v 1.2 1999/11/23 16:05:30 dmcmahill Exp $
+ 
+--- ./src/ddpro.c.orig	Thu Aug 19 11:39:22 1999
++++ ./src/ddpro.c	Sun Oct 31 11:41:54 1999
+@@ -278,4 +278,5 @@
+ 
  #ifdef NEEDMENDIAN
 +#include <sys/types.h>
  #include <machine/endian.h>
+ #endif

@@ -1,7 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
---- src/hoster.c.orig	Fri Aug  7 00:37:49 1998
-+++ src/hoster.c	Fri Aug  7 00:38:11 1998
-@@ -142,2 +142,3 @@
- #ifdef NEEDMENDIAN
-+#include <sys/types.h>
- #include <machine/endian.h>
+$NetBSD: patch-ab,v 1.2 1999/11/23 16:05:30 dmcmahill Exp $
+
+--- ./xep/imp.c.orig	Tue Mar 16 11:01:44 1999
++++ ./xep/imp.c	Mon Nov  1 09:39:01 1999
+@@ -73,4 +73,5 @@
+ #define	byteswide(w) (((w)+7)/8)
+ 
++static int mkrbow(unsigned int *,unsigned int *,unsigned int *,int,int);
+ 
+ /***************
