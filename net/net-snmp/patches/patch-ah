@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2004/04/26 17:39:00 tron Exp $
+$NetBSD: patch-ah,v 1.2 2004/05/14 13:30:34 adam Exp $
 
---- agent/mibgroup/host/hr_filesys.c.orig	2003-02-28 19:17:35.000000000 +0100
-+++ agent/mibgroup/host/hr_filesys.c	2004-04-26 19:31:03.000000000 +0200
-@@ -85,6 +85,15 @@
+--- agent/mibgroup/host/hr_filesys.c.orig	2004-01-29 13:53:59.000000000 +0000
++++ agent/mibgroup/host/hr_filesys.c
+@@ -86,6 +86,15 @@ struct mnttab  *HRFS_entry = &HRFS_entry
  #define	HRFS_type	mnt_fstype
  #define	HRFS_statfs	statvfs
  
@@ -18,7 +18,7 @@ $NetBSD: patch-ah,v 1.1 2004/04/26 17:39:00 tron Exp $
  #elif defined(HAVE_GETFSSTAT)
  static struct statfs *fsstats = 0;
  static int      fscount;
-@@ -447,7 +456,9 @@
+@@ -452,7 +461,9 @@ var_hrfilesys(struct variable *vp,
          return (u_char *) fsys_type_id;
  
      case HRFSYS_ACCESS:
