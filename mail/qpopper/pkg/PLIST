@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 1998/02/12 22:18:46 mellon Exp $
-libexec/popper
-man/man8/popper.8
-man/cat8/popper.0
+@comment $NetBSD: PLIST,v 1.2 1998/02/13 02:27:02 mellon Exp $
+libexec/qpopper
+bin/qpopauth
+man/man8/qpopper.8
+man/cat8/qpopper.0
+man/man8/qpopauth.8
