@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/06/28 12:37:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2004/06/28 12:46:11 jmmv Exp $
 #
 
 DISTNAME=	gail-1.6.6
@@ -20,7 +20,7 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE=	gail.pc.in
 PKGCONFIG_OVERRIDE+=	gail-uninstalled.pc.in
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
