@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2000/09/02 19:22:41 wiz Exp $
+
+--- Makefile.in.orig	Sun Sep 26 18:44:16 1999
++++ Makefile.in
+@@ -378,7 +378,7 @@
+ 
+ libclanlayer1.so: libclancommon.so $(OBJF_GENERIC_ALL) $(OBJF_UNIX) $(ALL_TARGETS)
+ 	@echo "Building dynamic library (libclanlayer1.so)"
+-	@$(LINK_COMMAND) -Wl,-soname=libclanlayer1.so.$(D_VERSION_MAJOR) -o libclanlayer1.so.$(D_VERSION_MINOR) -L. -lclancommon $(LINK_LIBS1) $(OBJF_GENERIC_ALL) $(OBJF_UNIX)
++	@$(LINK_COMMAND) -Wl,-soname=libclanlayer1.so.$(D_VERSION_MAJOR) -o libclanlayer1.so.$(D_VERSION_MINOR) -Wl,-R$(LIB_PREFIX) -L. -lclancommon $(LINK_LIBS1) $(OBJF_GENERIC_ALL) $(OBJF_UNIX)
+ 	@ln -s -f libclanlayer1.so.$(D_VERSION_MINOR) libclanlayer1.so.$(D_VERSION_MAJOR)
+ 	@ln -s -f libclanlayer1.so.$(D_VERSION_MAJOR) libclanlayer1.so
+ 
