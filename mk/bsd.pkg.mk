@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.965 2002/04/18 15:54:34 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.966 2002/04/18 20:54:51 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2429,10 +2429,10 @@ do-su-install:
 	case "$$extractname" in						\
 	"")	${ECHO_MSG} "*** Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
 	"${PKGNAME}")	;;						\
-	*)	${ECHO_MSG} "*** Error: Package version $$extractname in ${WRKDIR}"; \
+	*)	${ECHO_MSG} "*** Warning: Package version $$extractname in ${WRKDIR}"; \
 		${ECHO_MSG} "*** Current version ${PKGNAME} in pkgsrc directory"; \
-		${ECHO_MSG} "*** Please rebuild the package using the newer version: \"${MAKE} clean && ${MAKE}\""; \
-		exit 1 ;;						\
+		${ECHO_MSG} "*** Cleaning and rebuilding the newer version of the package..."; \
+		${MAKE} clean && ${MAKE} build ;;			\
 	esac
 	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
