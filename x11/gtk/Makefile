@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2002/08/05 10:45:32 tron Exp $
+# $NetBSD: Makefile,v 1.74 2002/08/13 14:53:31 tron Exp $
 
 DISTNAME=		gtk+-1.2.10
-PKGREVISION=	2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.2/ \
@@ -23,7 +23,8 @@ USE_GMAKE=		yes
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree \
-					--sysconfdir=${X11PREFIX}/share
+			--with-native-locale=yes \
+			--sysconfdir=${X11PREFIX}/share
 CONFIGURE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
 
 INFO_FILES=		gdk.info gtk.info
