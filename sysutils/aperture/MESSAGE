@@ -1,13 +1,6 @@
-#!/bin/sh
-#
-# $NetBSD: INSTALL,v 1.1 2001/10/31 22:52:52 zuntum Exp $
-
-case $2 in
-PRE-INSTALL)
-	;;
-POST-INSTALL)
-	/bin/cat << EOF
 ===========================================================================
+$NetBSD: MESSAGE,v 1.1 2002/01/27 19:31:59 jlam Exp $
+
 Add the following line to /etc/lkm.conf:
 
     ${PREFIX}/lkm/xf86.o    - -  ${PREFIX}/lkm/xf86_mod_install - AFTERMOUNT
@@ -18,11 +11,3 @@ and set:
 
 in /etc/rc.conf.  Then, reboot your system.
 ===========================================================================
-EOF
-	;;
-*)
-	echo "Unexpected argument: $2"
-	exit 1
-	;;
-esac
-exit 0
