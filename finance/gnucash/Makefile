@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2004/01/22 08:37:19 grant Exp $
+# $NetBSD: Makefile,v 1.57 2004/02/08 03:00:29 jlam Exp $
 
 DISTNAME=		gnucash-1.8.8
 PKGREVISION=		2
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ENV+=		GUILE="${GUILE14}"
 CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
 
-AM_MAKEFLAGS=		LIBTOOL='${PKGLIBTOOL} ${LIBTOOL_FLAGS}'
+AM_MAKEFLAGS=		LIBTOOL='${LIBTOOL} ${LIBTOOL_FLAGS}'
 MAKE_ENV+=		AM_MAKEFLAGS="${AM_MAKEFLAGS}"
 
 INFO_FILES=		gnucash-design.info

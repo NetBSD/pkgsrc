@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/19 21:09:46 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/08 03:00:29 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy-login/}
 COMMENT=	Cyrus SASL LOGIN authentication plugin
@@ -22,6 +22,6 @@ ALL_TARGET=	liblogin.la
 
 do-install:
 	cd ${WRKSRC}/plugins && \
-	${PKGLIBTOOL} --mode=install ${INSTALL_PROGRAM} liblogin.la ${PLUGINDIR}
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} liblogin.la ${PLUGINDIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/11/30 22:58:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/08 03:00:29 jlam Exp $
 
 PKGNAME=	qt2-libs-${QTVERSION}
 PKGREVISION=	5
@@ -24,7 +24,7 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTPREFIX}/bin
 	${INSTALL_DATA_DIR} ${QTPREFIX}/lib
-	${PKGLIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${QTPREFIX}/lib
+	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${QTPREFIX}/lib
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/02/02 13:02:49 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/08 03:00:29 jlam Exp $
 #
 
 DISTNAME=	fltk-1.0.11-source
@@ -27,7 +27,7 @@ USE_X11BASE=		# defined
 TEST_TARGET=		test
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--enable-libtool=${PKGLIBTOOL}
+CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL}
 
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"
