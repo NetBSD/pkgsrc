@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/01/26 09:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2001/01/31 08:55:21 jun Exp $
 #
 
     SUBDIR += abiword
@@ -22,6 +22,7 @@
     SUBDIR += pico
     SUBDIR += sam
     SUBDIR += ssam
+    SUBDIR += tamago
     SUBDIR += uemacs
     SUBDIR += vigor
     SUBDIR += vile
