@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 1999/09/21 03:36:02 hubertf Exp $
+$NetBSD: patch-aa,v 1.7 1999/09/24 15:54:11 tron Exp $
 
---- contrib/emacs/Makefile.in.orig	Thu Feb 18 16:25:36 1999
-+++ contrib/emacs/Makefile.in	Tue Sep 21 05:28:37 1999
-@@ -58,7 +58,7 @@
- includedir = @includedir@
- oldincludedir = /usr/include
+--- contrib/emacs/Makefile.in.orig	Fri Sep 24 17:45:15 1999
++++ contrib/emacs/Makefile.in	Thu Feb 18 16:25:36 1999
+@@ -146,7 +146,7 @@
+ YACC = @YACC@
+ file_prog = @file_prog@
+ l = @l@
+-lispdir = @lispdir@
++lispdir = @prefix@/share/emacs/site-lisp
  
--DESTDIR =
-+DESTDIR = @prefix@/share/emacs/site-lisp
+ lisp_DATA = make-regexp.el a2ps.el a2ps-print.el
  
- pkgdatadir = $(datadir)/@PACKAGE@
- pkglibdir = $(libdir)/@PACKAGE@
