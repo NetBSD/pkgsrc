@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.7 1998/09/15 17:29:58 garbled Exp $
+# $NetBSD: Makefile,v 1.8 1998/09/22 06:11:41 garbled Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
 DISTNAME=	arena-0.3.61
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.yggdrasil.com/pub/dist/web/arena/
+
+NOT_FOR_ARCHS=	alpha	#Runs, displays black screen
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.yggdrasil.com/Products/Arena/

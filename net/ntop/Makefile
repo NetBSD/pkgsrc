@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:17:18 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/22 06:11:39 garbled Exp $
 
 DISTNAME=	ntop-0.4-src
 PKGNAME=	ntop-0.4
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://jake.unipi.it/~deri/ntop/
+
+NOT_FOR_ARCHS=	alpha mips # elf problems WRT libcurses
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://jake.unipi.it/~deri/ntop/

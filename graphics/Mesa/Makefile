@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/09/05 19:26:02 tron Exp $
+# $NetBSD: Makefile,v 1.19 1998/09/22 06:11:37 garbled Exp $
 #
 
 DISTNAME=       MesaLib-2.6
@@ -9,6 +9,8 @@ MASTER_SITES= 	ftp://iris.ssec.wisc.edu/pub/Mesa/ \
 		ftp://iris.ssec.wisc.edu/pub/Mesa/old-versions/
 DISTFILES=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX} \
 		MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
+
+NOT_FOR_ARCHS=	alpha	#gcc lossage
 
 MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.ssec.wisc.edu/~brianp/Mesa.html

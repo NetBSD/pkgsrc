@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/09/15 17:05:07 agc Exp $
+# $NetBSD: Makefile,v 1.15 1998/09/22 06:11:39 garbled Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -6,6 +6,8 @@ DISTNAME=       9term.1.6.3
 PKGNAME=	9term-1.6.3
 CATEGORIES=	plan9
 MASTER_SITES=   ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
+
+NOT_FOR_ARCHS=	alpha	#LP64 Problems
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
