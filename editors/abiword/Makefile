@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/08/23 23:14:23 tron Exp $
+# $NetBSD: Makefile,v 1.13 2000/11/22 13:19:41 abs Exp $
 #
 
 # According to AbiSource's explanation of their trademark rights,
@@ -35,6 +35,7 @@ ICONVSRC=	libiconv-${ABIWORD_VERS}${EXTRACT_SUFX}
 UNIXFONTS=	unixfonts-${ABIWORD_VERS}${EXTRACT_SUFX}
 WVSRC=		wv-${ABIWORD_VERS}${EXTRACT_SUFX}
 
+CPPFLAGS+=	-I${WRKDIR}/wv 		# avoid using installed wv includes
 CPPFLAGS+=	-I${LOCALBASE}/include				# png.h
 LDFLAGS+=	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib	# -lpng
 
