@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/27 03:19:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/05 01:59:01 itojun Exp $
 #
 
 DISTNAME=	ksc5601fonts-20001029
@@ -66,15 +66,6 @@ post-extract:
 .endif
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 	(cd ${WRKSRC}; ${MAKE} prepare)
-
-post-patch:
-.if defined(BAEKMUK)
-	for i in ${BAEKMUK_BDF}; do \
-		${MV} ${WRKDIR}/$$i ${WRKDIR}/$$i.dist; \
-		${SED} -e 's/ksx1001.1997/ksc5601.1987/g' <${WRKDIR}/$$i.dist \
-		    >${WRKDIR}/$$i; \
-	done
-.endif
 
 post-build:
 .if defined(MIZI)
