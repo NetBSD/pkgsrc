@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2002/10/06 03:10:19 heinz Exp $
+# $NetBSD: Makefile,v 1.121 2002/10/18 17:07:37 jlam Exp $
 #
 
 COMMENT=	Security tools
@@ -93,6 +93,7 @@ SUBDIR+=	pscan
 SUBDIR+=	py-amkCrypto
 SUBDIR+=	py-cryptkit
 SUBDIR+=	py-gnupg
+SUBDIR+=	pyca
 SUBDIR+=	qident
 SUBDIR+=	racoon
 SUBDIR+=	rats
