@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 1999/12/10 13:55:16 soren Exp $
+$NetBSD: patch-ad,v 1.2 1999/12/10 15:14:03 soren Exp $
 
---- ia64sim.c.orig	Fri Dec 10 14:52:42 1999
-+++ ia64sim.c	Fri Dec 10 14:52:55 1999
+--- ia64sim.c.orig	Sun Dec  5 02:15:28 1999
++++ ia64sim.c	Fri Dec 10 15:55:16 1999
 @@ -95,7 +95,7 @@
           currslot = SLOT0;
        }
@@ -56,3 +56,13 @@ $NetBSD: patch-ad,v 1.1 1999/12/10 13:55:16 soren Exp $
     if(*junk) {
        printf("3syntax error\n");
        return;
+@@ -422,6 +422,9 @@
+    while(1) {
+       printf("IA64sim>> ");
+       gets(cmd);
++
++      if (feof(stdin))
++         return 0;
+ 
+       nextchar = cmd;
+       while(*nextchar) *nextchar++ = tolower(*nextchar);
