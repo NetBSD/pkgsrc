@@ -3,11 +3,11 @@
 # Date created:		9 November 1994
 # Whom:			smace
 #
-# $NetBSD: Makefile,v 1.3 1997/11/03 01:01:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/23 23:15:59 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
-DISTNAME=       xlockmore-4.05
+DISTNAME=       xlockmore-4.06.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	applications
