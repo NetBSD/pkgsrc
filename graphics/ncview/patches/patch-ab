@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/02/09 23:41:35 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2001/04/06 21:00:34 jtb Exp $
 
 --- Makefile.in.orig	Sat Dec  9 20:27:09 2000
 +++ Makefile.in
@@ -11,6 +11,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/02/09 23:41:35 jtb Exp $
  
  ################################################################
  ## If you DON'T want the udunits support, which will format
+@@ -33,7 +33,7 @@
+ ## files will be kept and installed.  Comment this line out if
+ ## no such directory will be specified.
+ #####################################################################
+-NCVIEW_LIB_DIR = @prefix@/lib/ncview
++NCVIEW_LIB_DIR = @prefix@/libdata/ncview
+ 
+ ######################################################################
+ ## If needed, *add* here the names of any additional include or library 
 @@ -133,5 +133,5 @@
  	@echo "Installing manual in directory $(MANDIR)"
  	@echo "--------------------------------------------------------"
