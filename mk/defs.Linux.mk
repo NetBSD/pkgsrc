@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.12 2001/11/21 12:53:05 agc Exp $
+# $NetBSD: defs.Linux.mk,v 1.13 2001/11/21 12:58:16 agc Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -63,4 +63,5 @@ USERADD?=	/usr/sbin/useradd
 ROOT_USER?=	root
 ROOT_GROUP?=	wheel
 
+_DO_LIBINTL_CHECKS=	no	# perform checks for valid libintl
 _IMAKE_MAKE=	${MAKE}		# program which gets invoked by imake
