@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.15 2002/09/06 07:21:28 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.16 2002/09/06 14:25:24 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -222,9 +222,22 @@ _BLNK_TRANSFORM+=	r:-I/usr/local
 _BLNK_TRANSFORM+=	r:-L/usr/local
 .endif
 #
+# Create _BLNK_PROTECT_SED and _BLNK_UNPROTECT_SED variables to protect
+# ${_PKGSRCDIR} and ${BUILDLINK_DIR} from any filtering, as they may be
+# subdirectories of ${LOCALBASE}, /usr/pkg, or /usr/local.
+#
+_BLNK_PROTECT_SED=	-e "s|${_PKGSRCDIR}|_pKgSrCdIr_|g"
+_BLNK_PROTECT_SED+=	-e "s|${BUILDLINK_DIR}|_bUiLdLiNk_dIr_|g"
+_BLNK_UNPROTECT_SED=	-e "s|_bUiLdLiNk_dIr_|${BUILDLINK_DIR}|g"
+_BLNK_UNPROTECT_SED+=	-e "s|_pKgSrCdIr_|${_PKGSRCDIR}|g"
+#
 # Create _BLNK_TRANSFORM_SED.{1,2,3} from _BLNK_TRANSFORM.  We must use
 # separate variables instead of just one because the contents are too long
 # for one variable when we substitute into a shell script later on.
+#
+_BLNK_TRANSFORM_SED.1+=	${_BLNK_PROTECT_SED}
+_BLNK_TRANSFORM_SED.2+=	${_BLNK_PROTECT_SED}
+_BLNK_TRANSFORM_SED.3+=	${_BLNK_PROTECT_SED}
 #
 # Change "/usr/pkg/lib/libfoo.so"   into "-L/usr/pkg/lib -lfoo" and
 #        "/usr/X11R6/lib/libbar.so" into "-L/usr/X11R6/lib -lbar".
@@ -342,6 +355,10 @@ _BLNK_TRANSFORM_SED.3+= \
 	-e "s|-I/usr/include$$||g"					\
 	-e "s|-L/usr/lib ||g"						\
 	-e "s|-L/usr/lib$$||g"
+
+_BLNK_TRANSFORM_SED.1+=	${_BLNK_UNPROTECT_SED}
+_BLNK_TRANSFORM_SED.2+=	${_BLNK_UNPROTECT_SED}
+_BLNK_TRANSFORM_SED.3+=	${_BLNK_UNPROTECT_SED}
 
 # Generate wrapper scripts for the compiler tools that sanitize the
 # argument list by converting references to ${LOCALBASE} and ${X11BASE}
