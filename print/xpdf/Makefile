@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2002/08/25 21:50:34 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/19 01:45:42 jlam Exp $
 # 
 
-DISTNAME=	xpdf-1.00
-PKGREVISION=	1		# because of switch to freetype2
+DISTNAME=	xpdf-1.01
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/}
@@ -17,8 +16,9 @@ CONFLICTS=	xpdf-crypto-[0-9]*
 
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
-GNU_CONFIGURE=		YES
 
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-freetype2-includes=${BUILDLINK_PREFIX.freetype2}/include/freetype2
 CONFIGURE_ARGS+=	--with-t1-includes=${BUILDLINK_PREFIX.t1lib}/include
 CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS}"
@@ -30,8 +30,16 @@ MAKE_ENV+=		SED="${SED}" ECHO="${ECHO}"
 CONFIGURE_ARGS+=	--enable-a4-paper
 .endif
 
+EGDIR=			${PREFIX}/share/examples/xpdf
+CONF_FILES=		${EGDIR}/xpdfrc ${PKG_SYSCONFDIR}/xpdfrc
+
 .include "../../fonts/t1lib/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel)
+CXXFLAGS:=	${CXXFLAGS:N-O[0-9]*}
+.endif
