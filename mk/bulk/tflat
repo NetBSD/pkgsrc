@@ -1,5 +1,4 @@
-#!/usr/bin/awk -f
-# $NetBSD: tflat,v 1.8 2003/05/06 17:42:04 jmmv Exp $
+# $NetBSD: tflat,v 1.9 2003/07/11 23:54:33 grant Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
