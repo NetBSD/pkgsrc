@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.26 2000/08/17 16:16:02 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.27 2000/08/28 14:15:00 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -19,9 +19,7 @@ use Getopt::Std;
 use File::Find;
 my(	$pkgsrcdir,		# Base of pkgsrc tree
 	$pkgdistdir,		# Distfiles directory
-	%pkgver2dir,		# Map package-version to category/pkgname
-	%pkg2ver,		# Map pkgname to version
-	%pkgrestricted,		# NO_BIN_ON_FTP/RESTRICTED packages, by pkgname
+	%pkg,			# pkgname ->{'restricted'} and ->{'ver'}
 	%default_makefile_vars,	# Default vars set for Makefiles
 	%opt,			# Command line options
 	@old_prebuiltpackages,	# List of obsolete prebuilt package paths
@@ -93,7 +91,7 @@ if ($opt{'D'})
 	{
 	my($binpkgdir);
 
-	if (!%pkgver2dir)
+	if (!%pkg)
 	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
 	if ($opt{'K'})
 	    { $binpkgdir = $opt{'K'}; }
@@ -117,7 +115,7 @@ if ($opt{'D'})
 	my(@pkgs, @bad, $pkg);
 
 	@pkgs = &list_installed_packages;
-	if (!%pkgver2dir)
+	if (!%pkg)
 	    { &scan_pkgsrc_makefiles($pkgsrcdir); }
 	foreach $pkg ( @pkgs )
 	    {
@@ -134,7 +132,7 @@ if ($opt{'D'})
 		my($pkgdir);
 
 		if ( $pkg =~ /^([^*?[]+)-([\d*?[].*)/ ) 
-		    { $pkgdir = $pkgver2dir{"$1-$pkg2ver{$1}"}; }
+		    { $pkgdir = $pkg{$1}{$2}->{'dir'}; }
 
 		if (!defined($pkgdir))
 		    { &fail("Unable to determine directory for '$pkg'"); }
@@ -155,13 +153,13 @@ sub check_prebuilt_packages
 	{ $File::Find::prune = 1; }
     elsif (/(.*)\.tgz$/)
 	{
-	if (!defined($pkgver2dir{$1}))
+	if (!defined $pkg{$1})
 	    {
 	    if ($opt{'p'})
 		{ print "$File::Find::dir/$_\n"; }
 	    push(@old_prebuiltpackages, "$File::Find::dir/$_");
 	    }
-	elsif (defined($pkgrestricted{$1}))
+	elsif (defined $pkg{$1}->{'restricted'}) # XXX
 	    {
 	    if ($opt{'R'})
 		{ print "$File::Find::dir/$_\n"; }
@@ -250,8 +248,8 @@ sub invalid_version
 
     if (defined($badver))
 	{
-	if (defined($pkg2ver{$pkg}))
-	    { $fail = "Version mismatch: '$pkg' $badver vs $pkg2ver{$pkg}\n"; }
+	if (defined $pkg{$pkg})
+	    { $fail = "Version mismatch: '$pkg' $badver vs ".join(',', sort keys %{$pkg{$pkg}})."\n"; }
 	else
 	    { $fail = "Unknown package: '$pkg' version $badver\n"; }
 	}
@@ -314,6 +312,37 @@ sub list_pkgsrc_categories
     @categories;
     }
 
+sub glob2regex
+    {
+    my($glob) = @_;
+    my(@chars, $in_alt);
+    my($regex);
+
+    $regex = '^';
+    @chars = split(//, $glob);
+    while (defined($_ = shift @chars))
+	{
+	if ($_ eq '*')
+	    { $regex .= '.*'; }
+	elsif ($_ eq '?')
+	    { $regex .= '.'; }
+	elsif ($_ eq '\\')
+	    { $regex .= $_ . shift @chars; }
+	elsif ($_ eq '.' || $_ eq '|' )
+	    { $regex .= quotemeta; }
+	elsif ($_ eq '{' )
+	    { $regex .= '('; $in_alt = 1; }
+	elsif ($_ eq '}' )
+	    { $regex .= ')'; $in_alt = 0; }
+	elsif ($_ eq ','  && $in_alt)
+	    { $regex .= '|'; }
+	else
+	    { $regex .= $_; }
+	}
+    $regex .= '$';
+    $regex;
+    }
+
 # Perform some (reasonable) subset of 'pkg_info -e' / glob(3)
 # Returns (sometimes best guess at) package name,
 # and either 'problem version' or undef if all OK
@@ -321,64 +350,73 @@ sub list_pkgsrc_categories
 sub package_globmatch
     {
     my($pkgmatch) = @_;
-    my($pkg, $ver, $matchver);
+    my($matchpkgname, $matchver);
 
-    if ( $pkgmatch =~ /^([^*?[]+)-([\d*?[].*)/ )
+    # if ($pkgmatch =~ /^([^*?[]+)(<|>|<=|>=|-)([\d*?{].*)/) 
+	# {
+	# }
+    if ( $pkgmatch =~ /^([^[]+)-([\d*?{[].*)/ )
 	{					 	# (package)-(globver)
-	my($regexver, @chars, $in_alt);
+	my($pkgname, @pkgnames);
+	($matchpkgname, $matchver) = ($1, $2);
 
-	($pkg, $matchver) = ($1, $2);
-
-	# Try to convert $globver into regex version $regexver
-	if (defined($ver = $pkg2ver{$pkg}))
+	if (defined $pkg{$matchpkgname})
+	    { push(@pkgnames, $matchpkgname); }
+	else
 	    {
-	    if ($ver eq $matchver)	# Exact match
-		{ return($ver); }
-	    @chars = split(//, $matchver);
-	    $regexver = '^';
-	    while (defined($_ = shift @chars))
+	    # Uh, check all package names against this regex. hmmmm.
+	    my($pkgregex) = glob2regex($matchpkgname);
+	    my($pkgname);
+	    foreach $pkgname (sort keys %pkg)
 		{
-		if ($_ eq '*')
-		    { $regexver .= '.*'; }
-		elsif ($_ eq '?')
-		    { $regexver .= '.'; }
-		elsif ($_ eq '\\')
-		    { $regexver .= $_ . shift @chars; }
-		elsif ($_ eq '.' || $_ eq '|' )
-		    { $regexver .= quotemeta; }
-		elsif ($_ eq '{' )
-		    { $regexver .= '('; $in_alt = 1; }
-		elsif ($_ eq '}' )
-		    { $regexver .= ')'; $in_alt = 0; }
-		elsif ($_ eq ','  && $in_alt)
-		    { $regexver .= '|'; }
-		else
-		    { $regexver .= $_; }
+		if ($pkgname =~ /$pkgregex/)
+		    { push(@pkgnames, $pkgname); }
 		}
-	    $regexver .= '$';
-	    if( $ver =~ /$regexver/ )
-		{ $matchver = undef; }
+	    }
+	foreach $pkgname (@pkgnames)
+	    {
+	    if (defined $pkg{$pkgname}{$matchver})
+		{ return($matchver); }
+	    # Try to convert $globver into regex version $regexver
+
+	    my($regexver);
+	    $regexver = glob2regex($matchver);
+
+	    my($ver);
+	    foreach $ver (%{$pkg{$pkgname}})
+		{
+		if( $ver =~ /$regexver/ )
+		    { $matchver = undef; last }
+		}
+	    $matchver || last;
 	    }
 	}
     elsif ( $pkgmatch =~ /^([^*?[]+)(<|>|<=|>=)(\d.+)/ ) 
 	{						# (package)(cmp)(dewey)
 	my($test);
 
-	($pkg, $test, $matchver) = ($1, $2, $3);
+	($matchpkgname, $test, $matchver) = ($1, $2, $3);
 
 	if ($matchver !~ /^[\d.]+(nb\d+|)$/ )
 	    { $matchver = "invalid-dewey($test$matchver)"; }
-	elsif (defined($ver = $pkg2ver{$pkg}))
+	else
 	    {
-	    if ( deweycmp($ver, $test, $matchver) )
-		{ $matchver = undef; }
-	    else
-		{ $matchver = "$test$matchver"; }
+	    my($ver);
+	    if (defined $pkg{$matchpkgname})
+		{
+		foreach $ver (%{$pkg{$matchpkgname}})
+		    {
+		    if (deweycmp($ver, $test, $matchver))
+			{ $matchver = undef; last }
+		    }
+		if ($matchver)
+		    { $matchver = "$test$matchver"; }
+		}
 	    }
 	}
     else
-	{ ($pkg, $matchver) = ($pkgmatch, 'missing'); }
-    ($pkg, $matchver);
+	{ ($matchpkgname, $matchver) = ($pkgmatch, 'missing'); }
+    ($matchpkgname, $matchver);
     }
 
 # Extract variable assignments from Makefile, include pkgname.
@@ -497,10 +535,10 @@ sub parse_makefile
 		{ $vars{$key} = $value; }
 	    } 
 	}
-    debug("simple-expand: $file\n");
 
-    # Handle simple variable substitutions FRED = a-${FRED}-b
-    # Must be before next block to handle FRED = a-${JIM:S/-/-${SHELIA}-/}
+    debug("expand: $file\n");
+
+    # Handle variable substitutions  FRED = a-${JIM:S/-/-b-/}
     #
     my($loop);
     for ($loop = 1 ; $loop ;)
@@ -508,42 +546,30 @@ sub parse_makefile
 	$loop = 0;
 	foreach $key ( keys %vars )
 	    {
+	    if ( index($vars{$key}, '$') == -1 )
+		{ next; }
 	    $_ = parse_expand_vars($vars{$key}, \%vars);
-	    if ( $_ ne $vars{$key} )
+	    if ($_ ne $vars{$key})
 		{
 		$vars{$key} = $_;
 		$loop = 1;
 		}
-	    }
-	}
-
-    debug("complex-expand: $file\n");
-
-    # Handle more complex variable substitutions FRED = a-${JIM:S/-/-b-/}
-    #
-    for ($loop = 1 ; $loop ;)
-	{
-	$loop = 0;
-	foreach $key ( keys %vars )
-	    {
-	    if ( index($vars{$key}, '$') == -1 )
-		{ next; }
-	    foreach $value ( keys %vars )
+	    elsif ($vars{$key} =~ m#\${(\w+):([CS])/([^/]+)/([^/]*)/(g?)}#)
 		{
-		if ($vars{$key} =~ m#\${(\w+):[CS]/([^/]+)/([^/]*)/(g?)}#)
-		    {
-		    my($var, $from, $to, $global) = ($1, $2, $3, $4);
+		my($var, $how, $from, $to, $global) = ($1, $2, $3, $4, $5);
 
-		    if (defined($vars{$var}))
-			{
-			$from =~ s/\./\\./g;	# Change . etc to \\.
-			$to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
-			$_ = $vars{$var};
-			eval "s/$from/$to/$global";
-			if ($vars{$key} =~
-					s#\${$var:[CS]/[^/]+/[^/]*/$global}#$_#)
-			    { $loop = 1; }
-			}
+		# If $vars{$var} contains a $ skip it on this pass.
+		# Hopefully it will get subtituted and we can catch it
+		# next time around.
+		if (defined($vars{$var}) && index($vars{$var}, '$') == -1 )
+		    {
+		    if ($how eq 'S')
+			{ $from =~ s/\./\\./g; } # Change . etc to \\.
+		    $to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
+		    $_ = $vars{$var};
+		    eval "s/$from/$to/$global";
+		    if ($vars{$key} =~ s#\${$var:[CS]/[^/]+/[^/]*/$global}#$_#)
+			{ $loop = 1; }
 		    }
 		}
 	    }
@@ -557,8 +583,13 @@ sub parse_makefile
 	{
 	if ( $pkgname =~ /\$/ )
 	    { print "\rBogus: $pkgname (from $file)\n"; }
-	if (defined($vars{'NO_BIN_ON_FTP'}) || defined($vars{'RESTRICTED'}))
-	    { $pkgrestricted{$pkgname} = 1; }
+	elsif ($pkgname !~ /(.*)-(\d.*)/)
+	    { print "Cannot extract $pkgname version ($file)\n"; }
+	else
+	    {
+	    if (defined $vars{'NO_BIN_ON_FTP'} || defined $vars{'RESTRICTED'})
+		{ $pkg{$1}{$2}{'restricted'} = 1; }
+	    }
 	return($pkgname, %vars);
 	}
     else
@@ -656,7 +687,6 @@ sub scan_pkgsrc_makefiles
     {
     my($pkgsrcdir, $check_depends) = @_;
     my($cat, @categories, $pkgdir, $pkgname);
-    my(%depends);
 
     @categories = &list_pkgsrc_categories($pkgsrcdir);
     &verbose("Scanning pkgsrc Makefiles: ");
@@ -678,16 +708,8 @@ sub scan_pkgsrc_makefiles
 		{
 		if ($pkgname !~ /(.*)-(\d.*)/)
 		    { print "Cannot extract $pkgname version ($cat/$pkgdir)\n"; }
-		elsif ($pkgdir !~ /-current/)
-		    {
-		    if (defined $pkg2ver{$1} &&
-					&deweycmp($pkg2ver{$1}, '>', $2))
-			{ next; }
-		    $pkg2ver{$1} = $2;
-		    $pkgver2dir{$pkgname} = "$cat/$pkgdir";
-		    if (defined($vars{'DEPENDS'}))
-			{ $depends{$pkgname} = $vars{'DEPENDS'}; }
-		    }
+		$pkg{$1}{$2}{'dir'} = "$cat/$pkgdir";
+		$pkg{$1}{$2}{'depends'} = $vars{'DEPENDS'};
 		}
 	    }
 	close(CAT);
@@ -698,30 +720,34 @@ sub scan_pkgsrc_makefiles
     if (!$opt{'L'})
 	{
 	my ($len);
-	$_ = scalar(keys %pkgver2dir).' packages';
+	$_ = scalar(keys %pkg).' packages';
 	$len = @categories - length($_);
 	&verbose("\b"x@categories, $_, ' 'x$len, "\b"x$len, "\n");
 	}
 
     if ($check_depends)
 	{
-	foreach $pkgname ( sort keys %depends )
+	foreach $pkgname (sort keys %pkg)
 	    {
-	    my($err, $msg);
-	    foreach (split("\n", $depends{$pkgname}))
+	    my($ver);
+	    foreach $ver (keys %{$pkg{$pkgname}})
 		{
-		s/:.*// || next;
-		if (($msg = &invalid_version($_)) )
+		my($err, $msg);
+		defined $pkg{$pkgname}{$ver}{'depends'} || next;
+		foreach (split("\n", $pkg{$pkgname}{$ver}{'depends'}))
 		    {
-		    if (!defined($err))
-			{ print "$pkgver2dir{$pkgname} DEPENDS errors:\n"; }
-		    $err = 1;
-		    print "\t$msg";
+		    s/:.*// || next;
+		    if (($msg = &invalid_version($_)) )
+			{
+			if (!defined($err))
+			    { print "$pkgname-$ver DEPENDS errors:\n"; }
+			$err = 1;
+			print "\t$msg";
+			}
 		    }
 		}
 	    }
 	}
-    %pkgver2dir;
     }
 
 # Extract all md5 entries, then verify contents of distfiles
@@ -839,6 +865,7 @@ opts:
   -o	     : List old/obsolete distfiles (not referenced by any md5).
   -p	     : List old/obsolete prebuilt packages.
   -r	     : Remove any 'bad' distfiles (Without -m, -o, or -p, implies all).
+  -u	     : For each installed package ensure distfiles are fetched.
 
   -L         : List each Makefile when scanned
   -P path    : Set PKGSRCDIR
