@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/10/01 20:21:40 dillo Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/21 11:10:46 dillo Exp $
 #
 
 DISTNAME=		Level9_3.0_Source
@@ -15,7 +15,7 @@ COMMENT=		Curses port of the Level 9 text adventure interpreter
 
 USE_BUILDLINK2=		yes
 # uses halfkey (present since 1.6M)
-INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6 NetBSD-1.6.*
+INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]* NetBSD-1.5* NetBSD-1.6-* NetBSD-1.6.*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*
 
 post-extract:
