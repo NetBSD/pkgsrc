@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/11 13:29:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/12/04 20:43:49 minskim Exp $
 bin/nabi
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/nabi.mo
 share/nabi/candidate/nabi.txt
 share/nabi/compose/default
+share/nabi/compose/full
 share/nabi/keyboard/2qwerty
 share/nabi/keyboard/32qwerty
 share/nabi/keyboard/39qwerty
 share/nabi/keyboard/3fqwerty
+share/nabi/keyboard/3sqwerty
+share/nabi/nabi-about.png
 share/nabi/nabi.png
+share/nabi/nabi.svg
 share/nabi/themes/KingSejong/README
 share/nabi/themes/KingSejong/english.png
 share/nabi/themes/KingSejong/hangul.png
@@ -29,11 +33,15 @@ share/nabi/themes/Onion/none.png
 share/nabi/themes/SimplyRed/english.png
 share/nabi/themes/SimplyRed/hangul.png
 share/nabi/themes/SimplyRed/none.png
+share/nabi/themes/Tux/english.png
+share/nabi/themes/Tux/hangul.png
+share/nabi/themes/Tux/none.png
 share/nabi/themes/keyboard/README
 share/nabi/themes/keyboard/english.png
 share/nabi/themes/keyboard/hangul.png
 share/nabi/themes/keyboard/none.png
 @dirrm share/nabi/themes/keyboard
+@dirrm share/nabi/themes/Tux
 @dirrm share/nabi/themes/SimplyRed
 @dirrm share/nabi/themes/Onion
 @dirrm share/nabi/themes/Mac
