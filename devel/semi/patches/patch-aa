@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/20 09:47:37 jun Exp $
+--- Makefile	2001/02/16 10:48:02	1.1
++++ Makefile	2001/02/16 10:48:48
+@@ -16,7 +16,7 @@
+ XEMACS	= xemacs
+ FLAGS   = -batch -q -no-site-file -l SEMI-MK
+ 
+-PREFIX	= NONE
++#PREFIX	= NONE
+ LISPDIR = NONE
+ PACKAGEDIR = NONE
+ VERSION_SPECIFIC_LISPDIR = NONE
+@@ -26,6 +26,7 @@
+ VERSION	= $(API).$(RELEASE)
+ ARC_DIR = /home/tomo/public_html/comp/emacsen/lisp/semi/semi-$(API)-for-flim-$(FLIM_API)
+ 
++all: elc
+ 
+ elc:
+ 	$(EMACS) $(FLAGS) -f compile-semi \
