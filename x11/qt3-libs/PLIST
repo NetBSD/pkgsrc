@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/03/18 08:36:24 skrll Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/03/19 17:28:00 tron Exp $
 qt3/bin/moc
 qt3/include/private/qapplication_p.h
 qt3/include/private/qcolor_p.h
@@ -200,11 +200,8 @@ qt3/include/qmime.h
 qt3/include/qmlined.h
 qt3/include/qmngio.h
 qt3/include/qmodules.h
-qt3/include/qmotif.h
-qt3/include/qmotifdialog.h
 qt3/include/qmotifplusstyle.h
 qt3/include/qmotifstyle.h
-qt3/include/qmotifwidget.h
 qt3/include/qmovie.h
 qt3/include/qmsgbox.h
 qt3/include/qmultilinedit.h
