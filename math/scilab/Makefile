@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/11/23 16:26:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 1999/11/23 16:42:01 dmcmahill Exp $
 #
 # IMPORTANT: Before upgrading this package, please read files/README.next_rev!
 
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www-rocq.inria.fr/scilab/
 
-RUN_DEPENDS+=	xless-1.7:../../x11/xless
+DEPENDS+=	xless-*:../../x11/xless
 DEPENDS+=	pvm-3.4.2:../../parallel/pvm3
 
 RESTRICTED=	"no paid distribution of SCILAB"
