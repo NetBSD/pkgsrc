@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/24 15:14:11 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/11 16:54:27 snj Exp $
 #
 
 DISTNAME=	wmCalClock-1.25
@@ -10,7 +10,7 @@ HOMEPAGE=	http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml
 COMMENT=	Another WindowMaker calendar/clock dockapp
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Src
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
 USE_GNU_TOOLS+=	make
 
@@ -24,5 +24,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/wmCalClock.1 ${PREFIX}/man/man1/
 	${INSTALL_PROGRAM} ${WRKSRC}/wmCalClock ${PREFIX}/bin/
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
