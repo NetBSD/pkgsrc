@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2002/11/25 19:02:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/03/25 09:14:06 wiz Exp $
 #
 
-DISTNAME=	sox-12.17.3
-PKGREVISION=	1
+DISTNAME=	sox-12.17.4
 CATEGORIES=	audio
-MASTER_SITES=	http://home.sprynet.com/~cbagwell/
+MASTER_SITES=	http://prdownloads.sourceforge.net/sox/ \
+		${MASTER_SITE_SOURCEFORGE:=sox/} \
+		http://www.cnpbagwell.com/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://home.sprynet.com/~cbagwell/sox.html
+HOMEPAGE=	http://sox.sourceforge.net/
 COMMENT=	SOund eXchange - universal sound sample translator
 
 USE_BUILDLINK2=		yes
@@ -20,4 +21,5 @@ CONFIGURE_ARGS+=	--enable-fast-ulaw \
 			--with-ogg-vorbisinc=${BUILDLINK_PREFIX.libvorbis}/include
 
 .include "../../audio/libvorbis/buildlink2.mk"
+.include "../../audio/mad/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
