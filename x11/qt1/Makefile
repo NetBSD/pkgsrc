@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/24 15:30:33 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/22 15:06:52 bouyer Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -14,6 +14,7 @@ COMMENT=	C++ X GUI toolkit
 USE_BUILDLINK2=	yes
 USE_X11BASE=	yes
 USE_GNU_TOOLS+=	make
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 QTPREFIX=${PREFIX}/qt1
@@ -23,11 +24,6 @@ MAKE_ENV+=	CXXOPTS="${CFLAGS}"
 ALL_TARGET=	src
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-DEPENDS+=	egcs-1.1.2:../../lang/egcs
-CXX=		${LOCALBASE}/egcs/bin/g++
-.endif
 
 do-configure:
 	@cd ${WRKSRC} && ${MAKE} QTDIR=${WRKSRC} ${LOWER_OPSYS}-g++-static

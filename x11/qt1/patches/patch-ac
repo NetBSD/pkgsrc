@@ -1,11 +1,10 @@
-$NetBSD: patch-ac,v 1.5 2001/05/01 16:43:40 jlam Exp $
+$NetBSD: patch-ac,v 1.6 2004/03/22 15:06:52 bouyer Exp $
 
 --- configs/solaris-g++-static.orig	Fri Feb 26 12:02:12 1999
 +++ configs/solaris-g++-static
 @@ -1,30 +1,31 @@
  # Compiling
--SYSCONF_CXX		= g++
-+SYSCONF_CXX		= ${LOCALBASE}/egcs/bin/g++
+ SYSCONF_CXX		= g++
 +SYSCONF_CXX_LIB		= $(LIBTOOL) --mode=compile ${SYSCONF_CXX}
  
  # Compiling with support libraries
@@ -36,20 +35,10 @@ $NetBSD: patch-ac,v 1.5 2001/05/01 16:43:40 jlam Exp $
  SYSCONF_LIBS_YACC	= 
  
  # Linking applications
--SYSCONF_LINK		= g++
-+SYSCONF_LINK		= ${LOCALBASE}/egcs/bin/g++
+ SYSCONF_LINK		= g++
  SYSCONF_LFLAGS		= 
  SYSCONF_LIBS		= 
  
-@@ -39,7 +40,7 @@
- #   - Place target in $(DESTDIR) - which has a trailing /
- #   - Usually needs to incorporate $(VER_MAJ) and $(VER_MIN)
- #
--SYSCONF_LINK_SHLIB	= g++
-+SYSCONF_LINK_SHLIB	= ${LOCALBASE}/egcs/bin/g++
- SYSCONF_LINK_TARGET_SHARED	= lib$(TARGET).so.$(VER_MAJ).$(VER_MIN)
- SYSCONF_LINK_LIB_SHARED	=  $(SYSCONF_LINK_SHLIB) -h $(TARGET1) -shared  \
- 				     $(LFLAGS) -o $(SYSCONF_LINK_TARGET_SHARED) \
 @@ -54,15 +55,15 @@
  #   - Build the $(TARGET) library, eg. lib$(TARGET).a
  #   - Place target in $(DESTDIR) - which has a trailing /
