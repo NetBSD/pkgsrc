@@ -1,25 +1,13 @@
-$NetBSD: patch-be,v 1.1 1998/08/25 12:53:11 agc Exp $
+$NetBSD: patch-be,v 1.2 1999/03/05 11:22:35 frueauf Exp $
 
---- ./imp/Slatexpr2.c.orig	Mon Jul 20 07:32:41 1998
-+++ ./imp/Slatexpr2.c	Sat Aug  8 13:10:17 1998
-@@ -9,4 +9,12 @@
- #include <stdio.h>
+--- routines/sound/st.h.orig    Mon Dec 21 21:14:29 1998
++++ routines/sound/st.h Mon Dec 21 21:18:03 1998
+@@ -8,4 +8,8 @@
+  */
  
-+#if defined(netbsd)
-+#include <ieeefp.h>
++#if (defined(netbsd) || defined(freebsd)) && !defined(unix) 
++#define unix
 +#endif
 +
-+#if defined(freebsd)
-+#include <floatingpoint.h>
-+#endif
-+
- void readOneLine();
- 
-@@ -149,4 +157,7 @@
-   FILE *fd;
-   FILE *fdo;
-+#if defined(netbsd) || defined(freebsd)
-+  fpsetmask(0);
-+#endif
- #ifdef WIN32 
-   SciEnv();
+ #define IMPORT  extern
+ #define EXPORT 

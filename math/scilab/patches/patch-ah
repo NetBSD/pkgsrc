@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 1998/08/25 12:53:08 agc Exp $
+$NetBSD: patch-ah,v 1.2 1999/03/05 11:22:34 frueauf Exp $
 
 --- ./routines/default/mainsci.f.orig	Mon Jul 20 07:37:23 1998
 +++ ./routines/default/mainsci.f	Mon Jul 20 07:37:23 1998

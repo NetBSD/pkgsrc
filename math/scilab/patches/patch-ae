@@ -1,15 +1,23 @@
-$NetBSD: patch-ae,v 1.1 1998/08/25 12:53:08 agc Exp $
+$NetBSD: patch-ae,v 1.2 1999/03/05 11:22:34 frueauf Exp $
 
---- ./routines/Make.lib.orig	Sat Jul 18 22:35:59 1998
-+++ ./routines/Make.lib	Sat Jul 18 22:40:49 1998
-@@ -21,8 +21,8 @@
- 
- cleanC :
--	$(RM) $(OBJSC)
-+	if [ "$(OBJSC)xx" != "xx" ]; then $(RM) $(OBJSC); fi
- 
- cleanF :
--	$(RM) $(OBJSF)
-+	if [ "$(OBJSF)xx" != "xx" ]; then $(RM) $(OBJSF); fi
- 
- F2CFILES=$(OBJSF:.o=.c)
+--- /dev/null	Fri Dec 18 02:05:39 1998
++++ config/Makefile.freebsd	Sat Dec 19 00:06:25 1998
+@@ -0,0 +1,18 @@
++# Copyright INRIA
++
++
++FFLAGS = $(FC_OPTIONS)
++
++bin/scilex: scilex-lib 
++	@x=1;if test -f $@; then  \
++		x=`find $(DEFAULTS) $(LIBR)  \( -name '*.a' -o -name '*.o' \) \
++		-newer $@ -print | wc -l `; \
++	fi;\
++	if test $$x -ne 0; then \
++		$(RM) $@; \
++		echo "linking"; \
++		$(FC) $(FFLAGS) -o $@ $(DEFAULTS) $(FC_LDFLAGS) $(LIBR)  \
++			$(TCLTK_LIBS) $(XLIBS) $(TERMCAPLIB); \
++	else \
++		echo bin/scilex is up to date ; \
++	fi

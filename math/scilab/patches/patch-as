@@ -1,10 +1,19 @@
-$NetBSD: patch-as,v 1.1 1998/08/25 12:53:09 agc Exp $
+$NetBSD: patch-as,v 1.2 1999/03/05 11:22:35 frueauf Exp $
 
---- ./pvm3/src/lpvmpack.c.orig	Sat Jul 18 22:31:47 1998
-+++ ./pvm3/src/lpvmpack.c	Sat Jul 18 22:31:47 1998
-@@ -138,4 +138,5 @@
- #endif
- #include <stdio.h>
+--- ./xmetanet/init.c.orig	Sat Aug  8 13:47:04 1998
++++ ./xmetanet/init.c	Sat Aug  8 14:18:41 1998
+@@ -1,6 +1,14 @@
+ /* Copyright INRIA */
++#if defined(freebsd) || defined(netbsd)
 +#include <sys/types.h>
- #ifdef NEEDMENDIAN
- #include <machine/endian.h>
++#endif
++
+ #include <dirent.h>
+ #include <stdlib.h>
+ #include <string.h>
++
++#if defined(netbsd) || defined(freebsd)
++#include <unistd.h>
++#endif
+ 
+ #include "list.h"

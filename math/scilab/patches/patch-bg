@@ -1,24 +1,10 @@
-$NetBSD: patch-bg,v 1.1 1998/08/25 12:53:11 agc Exp $
+$NetBSD: patch-bg,v 1.2 1999/03/05 11:22:35 frueauf Exp $
 
---- ./xmetanet/metanet.c.orig	Mon Jul 20 08:08:03 1998
-+++ ./xmetanet/metanet.c	Sat Aug  8 13:50:47 1998
-@@ -8,5 +8,10 @@
- #include <X11/Xaw/Form.h>
- #include <X11/Xaw/Label.h>
--
-+#ifdef netbsd
-+#include <ieeefp.h>
-+#endif
-+#ifdef freebsd
-+#include <floatingpoint.h>
-+#endif
- #include "defs.h"
- #include "color.h"
-@@ -221,4 +226,7 @@
+--- routines/interf/ctest.c.orig        Mon Dec 21 21:43:23 1998
++++ routines/interf/ctest.c     Mon Dec 21 21:43:39 1998
+@@ -2,4 +2,5 @@
  
-   iniG = NULL;
-+#if defined(netbsd) || defined(freebsd)
-+  fpsetmask(0);
-+#endif
+ #include <stdio.h>
++#include <string.h>
+ #include "../machine.h"
  
-   /* Is xmetanet called by Scilab? */
