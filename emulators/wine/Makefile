@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2003/11/30 22:58:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.55 2003/12/01 15:59:50 adam Exp $
 
-DISTNAME=		Wine-20031016
+DISTNAME=		Wine-20031118
 PKGNAME=		${DISTNAME:S/W/w/}
-PKGREVISION=		1
 WRKSRC= 		${WRKDIR}/${DISTNAME:S/W/w/}
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.ibiblio.org/Linux/ALPHA/wine/development/ \
@@ -25,7 +24,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 YACC=			${PREFIX}/bin/bison -y
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--without-curses #--without-opengl
+CONFIGURE_ARGS+=	--without-curses #--disable-debug --disable-trace
 CONFIGURE_ENV+=		ac_cv_path_ARTSCCONFIG=${TRUE}
 CONFIGURE_ENV+=		ac_cv_prog_sane_devel=no
 
@@ -54,7 +53,6 @@ post-install:
 	${INSTALL_DATA} config ${EGDIR}/wine.conf &&			\
 	${INSTALL_DATA} generic.ppd ${EGDIR}/generic.ppd &&		\
 	${INSTALL_DATA} system.ini ${EGDIR}/system.ini &&		\
-#	${INSTALL_DATA} win.ini ${EGDIR}/win.ini
 	${RMDIR} ${PREFIX}/man/man3w
 
 .include "../../graphics/MesaLib/buildlink2.mk"
