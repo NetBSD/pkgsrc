@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2001/03/18 18:55:29 tron Exp $
+$NetBSD: patch-aa,v 1.6 2001/10/07 13:26:38 tron Exp $
 
---- Makefile.in.orig	Mon Feb  5 17:34:49 2001
-+++ Makefile.in	Sun Mar 18 19:40:17 2001
+--- Makefile.in.orig	Fri Sep 14 21:18:53 2001
++++ Makefile.in	Sun Oct  7 14:14:39 2001
 @@ -20,7 +20,7 @@
  prefix=@prefix@
  exec_prefix=@exec_prefix@
@@ -11,31 +11,7 @@ $NetBSD: patch-aa,v 1.5 2001/03/18 18:55:29 tron Exp $
  install=@INSTALL@
  install_dir=@INSTALL@ -d
  sbindir=@sbindir@
-@@ -49,7 +49,7 @@
- 
- CFLAGS= @CFLAGS@ $(DEFINES) $(PATHS)
- 
--all: pppoe pppoe-server pppoe-sniff $(LINUX_KERNELMODE_PLUGIN) $(PPPOE_RELAY)
-+all: pppoe pppoe-server $(LINUX_KERNELMODE_PLUGIN) $(PPPOE_RELAY)
- 	@echo ""
- 	@echo "Type 'make install' as root to install the software."
- 
-@@ -117,12 +117,12 @@
- plugin/common.o: common.c
- 	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o plugin/common.o -fPIC common.c
- 
--install: pppoe pppoe-server pppoe-sniff
-+install: pppoe pppoe-server
- 	-mkdir -p $(RPM_INSTALL_ROOT)$(sbindir)
- 	$(install) -m 755 -s pppoe $(RPM_INSTALL_ROOT)$(sbindir)
- 	$(install) -m 755 -s pppoe-server $(RPM_INSTALL_ROOT)$(sbindir)
- 	if test -x pppoe-relay ; then $(install) -m 755 -s pppoe-relay $(RPM_INSTALL_ROOT)$(sbindir); fi
--	$(install) -m 755 -s pppoe-sniff $(RPM_INSTALL_ROOT)$(sbindir)
-+#	$(install) -m 755 -s pppoe-sniff $(RPM_INSTALL_ROOT)$(sbindir)
- 	$(install) -m 755 ../scripts/adsl-connect $(RPM_INSTALL_ROOT)$(sbindir)
- 	$(install) -m 755 ../scripts/adsl-start $(RPM_INSTALL_ROOT)$(sbindir)
- 	$(install) -m 755 ../scripts/adsl-status $(RPM_INSTALL_ROOT)$(sbindir)
-@@ -130,53 +130,53 @@
+@@ -139,7 +139,7 @@
  	$(install) -m 755 ../scripts/adsl-setup $(RPM_INSTALL_ROOT)$(sbindir)
  	-mkdir -p $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../doc/CHANGES $(RPM_INSTALL_ROOT)$(docdir)
@@ -44,25 +20,14 @@ $NetBSD: patch-aa,v 1.5 2001/03/18 18:55:29 tron Exp $
  	$(install) -m 644 ../doc/HOW-TO-CONNECT $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../doc/LICENSE $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../README $(RPM_INSTALL_ROOT)$(docdir)
- 	$(install) -m 644 ../configs/pap-secrets $(RPM_INSTALL_ROOT)$(docdir)
- 	-mkdir -p $(RPM_INSTALL_ROOT)$(mandir)/man8
- 	$(install) -m 644 ../man/pppoe.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
--	$(install) -m 644 ../man/pppoe-relay.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
-+#	$(install) -m 644 ../man/pppoe-relay.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
- 	$(install) -m 644 ../man/adsl-start.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
- 	$(install) -m 644 ../man/adsl-stop.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
- 	$(install) -m 644 ../man/adsl-status.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
- 	$(install) -m 644 ../man/adsl-connect.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
+@@ -158,39 +158,39 @@
  	$(install) -m 644 ../man/adsl-setup.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
- 	$(install) -m 644 ../man/pppoe-server.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
--	$(install) -m 644 ../man/pppoe-sniff.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
-+#	$(install) -m 644 ../man/pppoe-sniff.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
  	-mkdir -p $(RPM_INSTALL_ROOT)$(mandir)/man5
  	$(install) -m 644 ../man/pppoe.conf.5 $(RPM_INSTALL_ROOT)$(mandir)/man5
 -	-mkdir -p $(RPM_INSTALL_ROOT)/etc/ppp
 -	-mkdir -p $(RPM_INSTALL_ROOT)$(PLUGIN_DIR)
 -	-echo "# Directory created by rp-pppoe for kernel-mode plugin" > $(RPM_INSTALL_ROOT)$(PLUGIN_DIR)/README
--	if test -r rp-pppoe.so; then $(install) -m 755 rp-pppoe.so $(RPM_INSTALL_ROOT)$(PLUGIN_DIR); fi
+-	@if test -r rp-pppoe.so; then $(install) -m 755 rp-pppoe.so $(RPM_INSTALL_ROOT)$(PLUGIN_DIR); fi
 -	@for i in pppoe.conf firewall-standalone firewall-masq ; do \
 -		if [ ! -f $(RPM_INSTALL_ROOT)/etc/ppp/$$i ] ; then \
 -			$(install) -m 644 ../configs/$$i $(RPM_INSTALL_ROOT)/etc/ppp ; \
@@ -71,7 +36,12 @@ $NetBSD: patch-aa,v 1.5 2001/03/18 18:55:29 tron Exp $
 -			$(install) -m 644 ../configs/$$i $(RPM_INSTALL_ROOT)/etc/ppp/$$i-$(VERSION) ;\
 -		fi ;\
 -	done
--	$(install) -m 644 ../configs/pppoe-server-options $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS)
+-	@if [ ! -f $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS) ] ; then \
+-		$(install) -m 644 ../configs/pppoe-server-options $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS) ; \
+-	else \
+-		echo "NOT overwriting existing $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS)"; \
+-		$(install) -m 644 ../configs/pppoe-server-options $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS)-example ; \
+-	fi
 -	@if [ -f /etc/redhat-release ] ; then \
 -		echo "Looks like a Red Hat system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
 -		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
@@ -80,19 +50,17 @@ $NetBSD: patch-aa,v 1.5 2001/03/18 18:55:29 tron Exp $
 -	@if [ -f /etc/turbolinux-release ] ; then \
 -		echo "Looks like a TurboLinux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
 -		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
--		$(install) -m 755 adsl-init-turbolinux $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
+-		$(install) -m 755 ../scripts/adsl-init-turbolinux $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
 -	fi
 -	@if [ -f /etc/SuSE-release ] ; then \
 -		echo "Looks like a SuSE Linux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
 -		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
 -		$(install) -m 755 ../scripts/adsl-init-suse $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
 -	fi
--	@echo ""
--	@echo "Type 'adsl-setup' to configure the software."
 +#	-mkdir -p $(RPM_INSTALL_ROOT)/etc/ppp
 +#	-mkdir -p $(RPM_INSTALL_ROOT)$(PLUGIN_DIR)
 +#	-echo "# Directory created by rp-pppoe for kernel-mode plugin" > $(RPM_INSTALL_ROOT)$(PLUGIN_DIR)/README
-+#	if test -r rp-pppoe.so; then $(install) -m 755 rp-pppoe.so $(RPM_INSTALL_ROOT)$(PLUGIN_DIR); fi
++#	@if test -r rp-pppoe.so; then $(install) -m 755 rp-pppoe.so $(RPM_INSTALL_ROOT)$(PLUGIN_DIR); fi
 +#	@for i in pppoe.conf firewall-standalone firewall-masq ; do \
 +#		if [ ! -f $(RPM_INSTALL_ROOT)/etc/ppp/$$i ] ; then \
 +#			$(install) -m 644 ../configs/$$i $(RPM_INSTALL_ROOT)/etc/ppp ; \
@@ -101,7 +69,12 @@ $NetBSD: patch-aa,v 1.5 2001/03/18 18:55:29 tron Exp $
 +#			$(install) -m 644 ../configs/$$i $(RPM_INSTALL_ROOT)/etc/ppp/$$i-$(VERSION) ;\
 +#		fi ;\
 +#	done
-+#	$(install) -m 644 ../configs/pppoe-server-options $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS)
++#	@if [ ! -f $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS) ] ; then \
++#		$(install) -m 644 ../configs/pppoe-server-options $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS) ; \
++#	else \
++#		echo "NOT overwriting existing $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS)"; \
++#		$(install) -m 644 ../configs/pppoe-server-options $(RPM_INSTALL_ROOT)$(PPPOESERVER_PPPD_OPTIONS)-example ; \
++#	fi
 +#	@if [ -f /etc/redhat-release ] ; then \
 +#		echo "Looks like a Red Hat system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
 +#		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
@@ -110,24 +83,13 @@ $NetBSD: patch-aa,v 1.5 2001/03/18 18:55:29 tron Exp $
 +#	@if [ -f /etc/turbolinux-release ] ; then \
 +#		echo "Looks like a TurboLinux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
 +#		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
-+#		$(install) -m 755 adsl-init-turbolinux $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
++#		$(install) -m 755 ../scripts/adsl-init-turbolinux $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
 +#	fi
 +#	@if [ -f /etc/SuSE-release ] ; then \
 +#		echo "Looks like a SuSE Linux system; installing $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl" ; \
 +#		mkdir -p $(RPM_INSTALL_ROOT)/etc/rc.d/init.d ;\
 +#		$(install) -m 755 ../scripts/adsl-init-suse $(RPM_INSTALL_ROOT)/etc/rc.d/init.d/adsl ; \
 +#	fi
-+#	@echo ""
-+#	@echo "Type 'adsl-setup' to configure the software."
+ 	@echo ""
+ 	@echo "Type 'adsl-setup' to configure the software."
  
- distro:
- 	cd ..; \
-@@ -190,7 +190,7 @@
- 		cp configs/$$i rp-pppoe-$(VERSION)/configs || exit 1; \
- 	done ; \
- 	mkdir rp-pppoe-$(VERSION)/doc || exit 1; \
--	for i in CHANGES KERNEL-MODE-PPPOE HOW-TO-CONNECT LICENSE PROBLEMS ; do \
-+	for i in CHANGES HOW-TO-CONNECT LICENSE PROBLEMS ; do \
- 		cp doc/$$i rp-pppoe-$(VERSION)/doc || exit 1; \
- 	done; \
- 	mkdir rp-pppoe-$(VERSION)/man || exit 1; \
