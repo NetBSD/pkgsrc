@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/16 16:22:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/22 20:42:33 jmmv Exp $
 
 DISTNAME=	gnome-base-2.4.2
 PKGREVISION=	2
@@ -23,11 +23,11 @@ DEPENDS+=	xscreensaver>=4.14nb1:../../x11/xscreensaver
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
 
 USE_X11=	yes
-USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+NO_BUILDLINK=	yes
 
 do-install:	# empty
 
