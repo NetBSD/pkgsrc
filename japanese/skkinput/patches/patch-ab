@@ -1,17 +1,49 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/12/24 03:23:50 itohy Exp $
+$NetBSD: patch-ab,v 1.2 2000/11/09 03:54:07 itohy Exp $
 
 --- skkconfig.c.orig	Thu Nov 13 22:42:43 1997
-+++ skkconfig.c	Fri Dec 24 00:51:24 1999
-@@ -988,12 +988,43 @@
++++ skkconfig.c	Thu Nov  9 00:19:40 2000
+@@ -100,6 +100,7 @@
+  * skkinput の動作を決定する変数群。
+  */
+ extern int  skkserv_portnum ;
++extern char *skkserv_portstr ;
+ extern char *skkserv_host ;
+ extern char *skkinput_local_jisyo_name ;
+ extern char *skkinput_backup_jisyo_name ;
+@@ -980,6 +981,21 @@
+   return ;
+ }
+ 
++#ifdef SKK_CONF
++char *
++strsave(const char *str)
++{
++  char *p;
++
++  if ((p = malloc(strlen(str) + 1)) == NULL) {
++    fprintf(stderr, "Fatal: Memory Exhausted.\n");
++    exit(1);
++  }
++  strcpy(p, str);
++  return p;
++}
++#endif
++
+ /*
+  * skkinput の動作記述をする変数を初期化する関数。
+  *------
+@@ -987,30 +1003,54 @@
+  */
  void initSkkinputDousaketteiVariables( void )
  {
-   struct servent *servent ;
+-  struct servent *servent ;
 +#ifdef SKK_CONF		/* use skk.conf */
 +  FILE *conffp;
 +  char line[128];
-+  static char hostbuf[120];
++  char hostbuf[128];
++  char servbuf[128];
 +  char *confhost = NULL;
-+  int confport = 0;
++  char *confport = NULL;
 +
 +  if ((conffp = fopen(SKK_CONF, "r")) != NULL) {
 +    char *p, *data;
@@ -24,10 +56,11 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/12/24 03:23:50 itohy Exp $
 +      if ((data = strtok((char *) NULL, " \t\n")) == NULL)
 +	continue;
 +      if (!strcmp(p, "skkserv_host")) {
-+	  strcpy(hostbuf, data);
-+	  confhost = hostbuf;
++	strcpy(hostbuf, data);
++	confhost = hostbuf;
 +      } else if (!strcmp(p, "skkserv_port")) {
-+	  confport = atoi(data);
++	strcpy(servbuf, data);
++	confport = servbuf;
 +      }
 +    }
 +  }
@@ -38,34 +71,32 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/12/24 03:23:50 itohy Exp $
    skkinput_backup_jisyo_name = DEFAULT_SKKBJISYO ;
    skkinput_record_name       = DEFAULT_SKKRECORD ;
    skk_local_jisyo_name	     = DEFAULT_SKKLOCALJISYO ;
+-  /* "/etc/services" からポート番号を得ておく。*/
+-  servent = getservbyname( SKKSERV_SERVICE_NAME, SKKSERV_SERVICE_PROTO ) ;
+-  if( servent == NULL ){
+-    /* /etc/services に設定はなかったので、config.h の中のを使う。*/
+-    skkserv_portnum          = atoi( DEFAULT_SKKPORT ) ;
+-  } else {
+-    /* /etc/services に設定があった…。*/
+-    skkserv_portnum          = htons( servent->s_port ) ;
+-#if defined(DEBUG)
+-    fprintf
+-      ( stderr, "getservbyname: \"%s\", %d\n",
+-	servent->s_name, skkserv_portnum ) ;
 +#ifdef SKK_CONF
 +  if (confport)
-+    skkserv_portnum          = confport;
-+  else {
-+#endif
-   /* "/etc/services" からポート番号を得ておく。*/
-   servent = getservbyname( SKKSERV_SERVICE_NAME, SKKSERV_SERVICE_PROTO ) ;
-   if( servent == NULL ){
-@@ -1001,16 +1032,22 @@
-     skkserv_portnum          = atoi( DEFAULT_SKKPORT ) ;
-   } else {
-     /* /etc/services に設定があった…。*/
--    skkserv_portnum          = htons( servent->s_port ) ;
-+    skkserv_portnum          = ntohs( servent->s_port ) ;
- #if defined(DEBUG)
-     fprintf
-       ( stderr, "getservbyname: \"%s\", %d\n",
- 	servent->s_name, skkserv_portnum ) ;
++    skkserv_portstr          = strsave(confport);
++  else
  #endif
-   }
-+#ifdef SKK_CONF
-+  }
-+#endif
+-  }
++  skkserv_portstr = SKKSERV_SERVICE_NAME;
    /* 環境変数 SKKSERV が設定されていれば、それを DEFAULT の skkserv *
     * host とする。*/
    if( ( skkserv_host = getenv( "SKKSERVER" ) ) == NULL )
 +#ifdef SKK_CONF
-+    if ((skkserv_host = confhost) == NULL)
++    if (confhost)
++      skkserv_host = strsave(confhost);	/* XXX this may leak */
++    else
 +#endif
      skkserv_host        = DEFAULT_SKKSERVER ;
  
