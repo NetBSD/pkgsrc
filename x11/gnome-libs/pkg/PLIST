@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 1999/03/07 12:52:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 1999/03/14 20:41:36 tron Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -165,7 +165,6 @@ lib/libart_lgpl.a
 lib/libart_lgpl.so.2.0
 lib/libartConf.sh
 lib/libgnome.a
-lib/libgnome.so.34.2
 lib/libgnomesupport.a
 lib/libgnomesupport.so.0.0
 lib/libgnomeui.a
