@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/06/11 06:34:32 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/28 22:22:32 zuntum Exp $
 
 DISTNAME=	baduki-0.2.9
 CATEGORIES=	games
@@ -8,18 +8,14 @@ MAINTAINER=	bad@netbsd.org
 HOMEPAGE=	http://soback.kornet21.net/~artist/baduk/baduki.html
 COMMENT=	Go playing program based on xamigo
 
-BUILD_USES_MSGFMT=	yes
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
+USE_BUILDLINK_ONLY=	YES
+USE_CONFIG_WRAPPER=	YES
+USE_X11=		YES
+GNU_CONFIGURE=		YES
+BUILD_USES_MSGFMT=	YES
 
-USE_X11=	yes
-GNU_CONFIGURE=	yes
-USE_LIBINTL=	yes
-
-EVAL_PREFIX+=	GTKDIR=gtk+
-CONFIGURE_ARGS+=	--with-gtk-prefix=${GTKDIR}
 CONFIGURE_ARGS+=	--without-included-gettext
-CONFIGURE_ENV+=	GTK_CONFIG="${GTKDIR}/bin/gtk-config"
-LDFLAGS+=	-L${LOCALBASE}/lib
-CPPFLAGS+=	-I${LOCALBASE}/include
 
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
