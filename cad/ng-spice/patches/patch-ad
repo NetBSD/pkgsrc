@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/11/14 14:28:14 dmcmahill Exp $
+
+--- configure.in.orig	Wed Nov  1 17:18:01 2000
++++ configure.in	Sat Nov 11 18:25:41 2000
+@@ -174,5 +174,5 @@
+ 
+ AC_DEFINE_UNQUOTED(NGSPICEBINDIR, "`echo $dprefix/bin`" )
+-AC_DEFINE_UNQUOTED(NGSPICEDATADIR, "`echo $dprefix/share/ng-spice`" )
++AC_DEFINE_UNQUOTED(NGSPICEDATADIR, "`echo $dprefix/share/ng-spice-rework`" )
+ AC_DEFINE_UNQUOTED(NGSPICEBUILDDATE, "`date`" )
+ 
