@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/02/05 18:39:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/31 17:26:15 jwise Exp $
 #
 
 DISTNAME=		xblast-2.6.beta-sound
@@ -10,8 +10,7 @@ MASTER_SITES=		http://www.ikp.uni-koeln.de/~vogel/archive/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.ikp.uni-koeln.de/~vogel/xblast/xblast.html
 
-DEPENDS+=		tcl-8.0.5:../../lang/tcl80
-DEPENDS+=		tk-8.0.5:../../x11/tk80
+DEPENDS+=		tk-8.3.2:../../x11/tk
 
 USE_IMAKE=		yes
 
@@ -27,6 +26,9 @@ post-patch:
 			${RM} ${WRKSRC}/$$dir/$$sub/foo; \
 		done; \
 	done
+
+post-build:
+	cd ${WRKSRC}/tkXBlast && ${MAKE_ENV} ${MAKE}
 
 post-install:
 	${RM} ${PREFIX}/man/cat1/xbsndsrv.0
