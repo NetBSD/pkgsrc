@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7063 2004/09/01 07:58:12 recht Exp $
+$NetBSD: CHANGES,v 1.7064 2004/09/01 09:44:49 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4135,3 +4135,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated zlib to 1.2.1nb2 [reed 2004-08-31]
 	Updated nmap to 3.70 [salo 2004-09-01]
 	Updated xorg-fontsTruetype to 6.7.0nb1 [recht 2004-09-01]
+	Updated xmlcatmgr to 2.2 [jmmv 2004-09-01]
