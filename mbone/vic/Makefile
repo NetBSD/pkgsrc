@@ -1,17 +1,10 @@
-# $NetBSD: Makefile,v 1.2 1997/11/19 16:28:18 is Exp $
+# New ports collection makefile for:    vic
+# Version required:			2.8
+# Date created:				1997 Nov 19
+# Whom:					is
 #
-# NetBSD package for:	vic
-# Version required:	2.8
-# Date created:		1997 Nov 19
-# By:			is
-# 
-# based on:
-# New ports collection makefile for:	vic
-# Version required:	2.6
-# Date created:		14 December 1994
-# Whom:			wollman
-#
-# Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
+# $NetBSD: Makefile,v 1.3 1998/01/24 20:46:51 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
 #
 
 DISTNAME=	vic-2.8
