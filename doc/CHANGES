@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4070 2003/12/13 16:38:44 seb Exp $
+$NetBSD: CHANGES,v 1.4071 2003/12/13 17:21:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3363,3 +3363,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gftp to 2.0.16 [xtraeme 2003-12-13]
 	Updated nxtvepg to 2.6.0 [magick 2003-12-13]
 	Updated gsed to 4.0.8 [seb 2003-12-13]
+	Updated intltool to 0.28 [jmmv 2003-12-13]
