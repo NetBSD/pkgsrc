@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/03/17 22:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2005/03/17 23:17:06 wiz Exp $
 
 DISTNAME=	mc-4.6.1-pre2b
 PKGNAME=	mc-4.6.1rc2
@@ -42,6 +42,8 @@ CONFIGURE_ARGS+=	--without-gpm-mouse
 PLIST_SRC+=  	${PKGDIR}/PLIST
 
 .include "options.mk"
+
+PLIST_SRC+=	${PKGDIR}/PLIST.end
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
