@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2004/04/01 19:04:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2004/04/06 15:49:36 jmmv Exp $
 
 DISTNAME=		gnome-games-2.6.0
+PKGREVISION=		1
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +11,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 games collection
 
 DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
+DEPENDS+=		librsvg2-gtk2>=2.6.3:../../graphics/librsvg2-gtk2
 
 CONFLICTS=		xbill-[0-9]*
 
