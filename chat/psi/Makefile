@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/22 07:49:20 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/25 22:50:48 snj Exp $
 
 DISTNAME=	psi-0.9
 PKGREVISION=	3
@@ -12,7 +12,7 @@ COMMENT=	PSI Jabber Client
 
 DEPENDS+=	psi-ssl>=2.0:../../chat/psi-ssl
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 USE_X11=	yes
@@ -36,8 +36,8 @@ do-install:
 		${PREFIX}/share/psi/
 	cd ${WRKSRC} && ${CP} -f psi ${PREFIX}/bin/psi
 
-.include "../../x11/qt3-libs/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
 BUILDLINK_DEPENDS.qt3-tools=	qt3-tools>=3.1.2nb2	# need lrelease
-.include "../../x11/qt3-tools/buildlink2.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
