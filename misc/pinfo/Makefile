@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:49:46 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/03 00:46:22 seb Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -16,6 +16,9 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	pinfo.info
+
 CPPFLAGS=		-DDFLT_INFOPATH='\"/usr/share/info:${X11BASE}/info:${LOCALBASE}/info:/usr/local/info\"'
 
 post-install:
@@ -31,5 +34,4 @@ CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.ncurses}
 .endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
