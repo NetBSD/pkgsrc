@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/01 13:33:13 frueauf Exp $
+bin/tanked
+bin/tankedserv
+share/tanked/maps/README
+share/tanked/maps/archipelago.map
+share/tanked/maps/arena.map
+share/tanked/maps/blackforest.map
+share/tanked/maps/bloodbath.map
+share/tanked/maps/fortress.map
+share/tanked/maps/map-tools.el
+share/tanked/maps/map1.map
+share/tanked/maps/map2
+share/tanked/maps/new.map
+share/tanked/maps/tiny.map
+share/tanked/maps.list
+share/tanked/motd
+share/tanked/players
+@unexec rm -f share/tanked/logs/*
+@unexec rm -f %D/share/tanked/motd %D/share/tanked/players
+@dirrm share/tanked/maps
+@dirrm share/tanked/logs
+@dirrm share/tanked
