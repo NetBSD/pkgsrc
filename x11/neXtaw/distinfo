@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/08/02 20:10:47 jlam Exp $
+
+SHA1 (neXtaw-0.12.tar.gz) = 9ba55e6a002e70cab64e0b2a7715e5faba889f3c
+Size (neXtaw-0.12.tar.gz) = 566925 bytes
+SHA1 (patch-aa) = 38f5997f4c425a5967d37dd84025368081afd1a0
