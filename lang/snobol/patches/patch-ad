@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2003/03/10 08:15:56 jmc Exp $
+$NetBSD: patch-ad,v 1.3 2004/07/10 21:28:21 wiz Exp $
 
---- Makefile2.m4.orig	Thu Aug  7 05:34:47 1997
-+++ Makefile2.m4	Mon Mar 10 08:10:55 2003
-@@ -48,13 +48,13 @@
+--- Makefile2.m4.orig	1997-08-07 07:34:47.000000000 +0200
++++ Makefile2.m4
+@@ -48,13 +48,13 @@ SNOLIB_A=snolib.a
  SNOLIB_FILE=snolib.a
  
  # directory name for default SNOLIB (used by -INCLUDE and LOAD())
@@ -19,12 +19,12 @@ $NetBSD: patch-ad,v 1.2 2003/03/10 08:15:56 jmc Exp $
  
  ########
  # default lib source files
-@@ -154,7 +154,7 @@
- ################
- # compiler flags
+@@ -142,7 +142,7 @@ include(config.m4)
+ # after local config
  
--CFLAGS=$(COPT) $(MYCPPFLAGS)
-+CFLAGS=$(COPT) -DUSE_STDARG_H $(MYCPPFLAGS)
+ # NOTE: NOT named CPPFLAGS; some versions of make include CPPFLAGS in cc cmd
+-MYCPPFLAGS=-I./[include] -I. _CPPFLAGS
++MYCPPFLAGS=-DUSE_STDARG_H -I./[include] -I. _CPPFLAGS
  
- ################
- # snobol commands
+ COPT=[]_OPT
+ 
