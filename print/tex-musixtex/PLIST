@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/23 18:11:06 fredb Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/25 04:10:42 fredb Exp $
 bin/musixflx
 bin/musixtex
 man/man1/musixflx.1
@@ -16,7 +16,6 @@ share/texmf/doc/musixtex/musixdoc.lgi
 share/texmf/doc/musixtex/musixdoc.log
 share/texmf/doc/musixtex/musixdoc.mx1
 share/texmf/doc/musixtex/musixdoc.mx2
-share/texmf/doc/musixtex/musixdoc.pdf
 share/texmf/doc/musixtex/musixdoc.ps
 share/texmf/doc/musixtex/musixdoc.slg
 share/texmf/doc/musixtex/musixdoc.sty
