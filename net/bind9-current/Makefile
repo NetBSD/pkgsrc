@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/07/18 05:22:58 itojun Exp $
+# $NetBSD: Makefile,v 1.23 2001/08/03 05:59:57 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -14,7 +14,7 @@ COMMENT=	Version 9 of the Berkeley Internet Name Daemon, implementation of DNS
 BUILD_DEFS+=	USE_INET6
 
 # No need to set USE_INET6, will auto-detect.
-BIND_VERSION=	9.2.0b1
+BIND_VERSION=	9.2.0b2
 DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-threads	# Until we have real threads
