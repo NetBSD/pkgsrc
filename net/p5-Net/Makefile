@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2002/04/17 10:36:22 shell Exp $
+# $NetBSD: Makefile,v 1.27 2002/06/03 13:06:20 shell Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
 #
 
-DISTNAME=	libnet-1.11
-PKGNAME=	p5-Net-1.11
+DISTNAME=	libnet-1.12
+PKGNAME=	p5-Net-1.12
 SVR4_PKGNAME=	p5net
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
