@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3204 2005/03/06 16:49:45 chris Exp $
+$NetBSD: TODO,v 1.3205 2005/03/06 19:36:09 hira Exp $
 
 Suggested new packages
 ======================
@@ -656,7 +656,6 @@ Suggested package updates
 	o minivmac-2.5.0
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.4.0
-	o mlterm-2.9.1 [pkg/29061]
 	o mlview-0.7.1
 	o mmix-20041014
 	o mono-1.0.6
@@ -1108,7 +1107,6 @@ Suggested package updates
 	o weewm-0.01
 	o winbind-3.0.11
 	o windowlab-1.26
-	o wl-2.12.2 [pkg/29043]
 	o wmakerconf-2.11
 	o wmbiff-0.4.26
 	o wmctrl-1.07
