@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:36 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/06 19:16:58 tv Exp $
 bin/jwhois
 @unexec	${INSTALL_INFO} --delete %D/info/jwhois.info %D/info/dir
 info/jwhois.info
 @exec	${INSTALL_INFO} %D/info/jwhois.info %D/info/dir
 man/man1/jwhois.1
+man/sv/man1/jwhois.1
 share/examples/jwhois.conf
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/jwhois.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/jwhois.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/jwhois.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/jwhois.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/jwhois.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/jwhois.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/jwhois.mo
