@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/11/19 15:40:46 agc Exp $
+# $NetBSD: Makefile,v 1.15 1999/04/01 13:36:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -26,8 +26,8 @@ PATCH_DIST_ARGS= -d ${WRKSRC}/lib --forward --quiet -E ${PATCH_DIST_STRIP}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.beedub.com/exmh/
 
-DEPENDS+=	tcl-8.0p2:../../lang/tcl80
-DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	tcl-8.0.5:../../lang/tcl80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
 DEPENDS+=	nmh-0.27:../../mail/nmh
 DEPENDS+=	mm-2.7:../../mail/metamail
 
