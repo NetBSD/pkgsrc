@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2004/10/03 00:13:25 tv Exp $
+# $NetBSD: Makefile,v 1.34 2004/12/24 12:29:41 jmmv Exp $
 #
 
-DISTNAME=		atk-1.8.0
-PKGREVISION=		1
+DISTNAME=		atk-1.9.0
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.8/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.6/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.6/ \
+			${MASTER_SITE_GNOME:=sources/atk/1.9/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
