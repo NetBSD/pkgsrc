@@ -11,7 +11,7 @@ another carrying alt.*, and another carrying everything else) back
 together, allowing news-server administrators to spread their news
 feeds over multiple machines, or to out-source selected components.
 
-NNTPCache minimises the effects of news-server down time, by continuing
+NNTPCache minimizes the effects of news-server down time, by continuing
 to provide cached news-data in the face of news-server fall-over.
 
 NNTPCache natively supports a variety of AUTHINFO methods, including
