@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9110 2005/02/11 04:19:51 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.9111 2005/02/11 12:23:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -845,3 +845,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sendmail to 8.13.3 [adrianp 2005-02-10]
 	Updated pkg_install to 20050210 [grant 2005-02-10]
 	Updated vipec to 3.2.0 [dmcmahill 2005-02-10]
+	Updated gtk-send-pr to 0.4.4 [jmmv 2005-02-11]
