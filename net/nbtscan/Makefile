@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/30 16:55:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/16 14:22:06 cjep Exp $
 # FreeBSD Id: ports/net/nbtscan/Makefile,v 1.2 2001/08/25 10:53:28 kris Exp
 
 DISTNAME=	nbtscan-1.0.3
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.inetcat.org/software/nbtscan.html
 COMMENT=	NetBIOS name network scanner
 
 GNU_CONFIGURE=	yes
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
 ALL_TARGET=	nbtscan
 
