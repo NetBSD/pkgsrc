@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2002/05/12 10:16:49 abs Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/26 17:28:26 drochner Exp $
 #
 
-DISTNAME=	gimp-print-4.2.1
-PKGNAME=	gimp-print-cups-4.2.1
+DISTNAME=	gimp-print-4.2.2
+PKGNAME=	gimp-print-cups-4.2.2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://gimp-print.sourceforge.net/
 COMMENT=	GIMP print plugin
-
-DEPENDS+=	gimp-print-lib-*:../../print/gimp-print-lib
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+= --without-samples --without-user-guide
@@ -22,6 +20,8 @@ CONFIGURE_ARGS+= --enable-libgimpprint=no
 USE_LIBTOOL=	yes
 LIBTOOL_OVERRIDE= ${WRKSRC}/libtool
 USE_GMAKE=	yes
+USE_BUILDLINK2=	yes
 
-.include "../../print/cups/buildlink.mk"
+.include "../../print/gimp-print-lib/buildlink2.mk"
+.include "../../print/cups/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

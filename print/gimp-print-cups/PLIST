@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/03 12:45:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/26 17:28:26 drochner Exp $
 bin/cups-calibrate
 libexec/cups/backend/canon
 libexec/cups/backend/epson
@@ -40,6 +40,8 @@ share/cups/model/C/escp2-1290.ppd.gz
 share/cups/model/C/escp2-1500.ppd.gz
 share/cups/model/C/escp2-1520.ppd.gz
 share/cups/model/C/escp2-2000.ppd.gz
+share/cups/model/C/escp2-2100.ppd.gz
+share/cups/model/C/escp2-2200.ppd.gz
 share/cups/model/C/escp2-3000.ppd.gz
 share/cups/model/C/escp2-400.ppd.gz
 share/cups/model/C/escp2-440.ppd.gz
@@ -61,6 +63,7 @@ share/cups/model/C/escp2-740.ppd.gz
 share/cups/model/C/escp2-750.ppd.gz
 share/cups/model/C/escp2-7500.ppd.gz
 share/cups/model/C/escp2-760.ppd.gz
+share/cups/model/C/escp2-7600.ppd.gz
 share/cups/model/C/escp2-777.ppd.gz
 share/cups/model/C/escp2-780.ppd.gz
 share/cups/model/C/escp2-785.ppd.gz
@@ -69,6 +72,7 @@ share/cups/model/C/escp2-800.ppd.gz
 share/cups/model/C/escp2-810.ppd.gz
 share/cups/model/C/escp2-820.ppd.gz
 share/cups/model/C/escp2-83.ppd.gz
+share/cups/model/C/escp2-830.ppd.gz
 share/cups/model/C/escp2-850.ppd.gz
 share/cups/model/C/escp2-860.ppd.gz
 share/cups/model/C/escp2-870.ppd.gz
@@ -78,15 +82,27 @@ share/cups/model/C/escp2-890.ppd.gz
 share/cups/model/C/escp2-895.ppd.gz
 share/cups/model/C/escp2-900.ppd.gz
 share/cups/model/C/escp2-9000.ppd.gz
+share/cups/model/C/escp2-915.ppd.gz
+share/cups/model/C/escp2-925.ppd.gz
+share/cups/model/C/escp2-950.ppd.gz
 share/cups/model/C/escp2-9500.ppd.gz
+share/cups/model/C/escp2-960.ppd.gz
+share/cups/model/C/escp2-9600.ppd.gz
 share/cups/model/C/escp2-980.ppd.gz
 share/cups/model/C/escp2-c20sx.ppd.gz
 share/cups/model/C/escp2-c20ux.ppd.gz
 share/cups/model/C/escp2-c40sx.ppd.gz
 share/cups/model/C/escp2-c40ux.ppd.gz
+share/cups/model/C/escp2-c41sx.ppd.gz
+share/cups/model/C/escp2-c41ux.ppd.gz
+share/cups/model/C/escp2-c42sx.ppd.gz
+share/cups/model/C/escp2-c42ux.ppd.gz
 share/cups/model/C/escp2-c60.ppd.gz
+share/cups/model/C/escp2-c61.ppd.gz
+share/cups/model/C/escp2-c62.ppd.gz
 share/cups/model/C/escp2-c70.ppd.gz
 share/cups/model/C/escp2-c80.ppd.gz
+share/cups/model/C/escp2-c82.ppd.gz
 share/cups/model/C/escp2-ex.ppd.gz
 share/cups/model/C/escp2-photo.ppd.gz
 share/cups/model/C/escp2-pro-xl.ppd.gz
