@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.9 2004/11/15 21:58:17 jlam Exp $
+$NetBSD: patch-aa,v 1.10 2005/02/15 12:32:38 tv Exp $
 
---- configure.in.orig	2004-10-24 16:05:13.000000000 -0400
+--- configure.in.orig	2005-02-15 07:16:40.000000000 -0500
 +++ configure.in
-@@ -486,7 +486,6 @@ SASL_KERBEROS_V4_CHK
+@@ -44,12 +44,7 @@ dnl
+ AC_INIT(lib/saslint.h)
+ AC_PREREQ([2.54])
+ 
+-dnl use ./config.cache as the default cache file.
+-dnl we require a cache file to successfully configure our build.
+-if test $cache_file = "/dev/null"; then
+-cache_file="./config.cache"
+ AC_CACHE_LOAD
+-fi
+ 
+ AC_CONFIG_AUX_DIR(config)
+ AC_CANONICAL_HOST
+@@ -486,7 +481,6 @@ SASL_KERBEROS_V4_CHK
  SASL_GSSAPI_CHK
  
  if test "$gssapi" != "no"; then
