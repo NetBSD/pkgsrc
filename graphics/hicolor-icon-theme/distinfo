@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/01 18:27:48 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/11/28 14:48:36 wiz Exp $
 
-SHA1 (hicolor-icon-theme-0.4.tar.gz) = e0bbb9fd3b4b68a38bc7fe6daccc96266bff4401
-Size (hicolor-icon-theme-0.4.tar.gz) = 24734 bytes
+SHA1 (hicolor-icon-theme-0.5.tar.gz) = 154fe84ffc31821748978b2b8265fbbef93a1416
+Size (hicolor-icon-theme-0.5.tar.gz) = 31611 bytes
