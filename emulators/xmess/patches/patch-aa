@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.4 1998/08/07 10:40:37 agc Exp $
-
---- makefile.unix.orig	Fri Jun  5 09:49:04 1998
-+++ makefile.unix	Thu Jul 23 05:35:49 1998
-@@ -13,7 +13,7 @@
+--- makefile.unix.orig	Wed Aug 26 18:40:21 1998
++++ makefile.unix	Fri Aug 28 23:23:33 1998
+@@ -39,7 +39,7 @@
  # GNU MAKE is MANDATORY !!!
  # so please give me the path...
  # if GNU make is "native" use this
@@ -11,67 +9,53 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:37 agc Exp $
  # else ...
  # MAKE=/usr/people/jantonio/bin/gmake
  
-@@ -72,7 +72,9 @@
+@@ -99,18 +99,18 @@
+ # *** Select destination directory for your compiled program , manual page
+ # and binary distribution ( if you want to... )
+ # ( only needed to install, not to compile... )
+-DESTDIR = /usr/games
+-MANDIR  = /usr/local/man/man6
++DESTDIR = ${PREFIX}/bin
++MANDIR  = ${PREFIX}/man/man6
+ DISTDIR = /home/ftp/pub/emulators/$(NAME)
+ 
+ # *** Where the ROM source tree ?
+-ROMPATH = \"/usr/games/lib/$(NAME)\"
++ROMPATH = \"${PREFIX}/share/$(NAME)\"
+ 
+ # *** Where to store high scores ?
+-SDIR = \"/usr/games/lib/$(NAME)\"
++SDIR = \"${PREFIX}/share/$(NAME)\"
+ 
+ # *** Where resides global configuration file ?
+-MRC = \"/usr/games/lib/$(NAME)/$(NAME)rc\"
++MRC = \"${PREFIX}/share/$(NAME)/$(NAME)rc\"
+ 
+ 
+ ##############################################################################
+@@ -118,7 +118,9 @@
  ##############################################################################
  
  # *** To disable joystick support comment next line
 -# JOY		= -DUSE_JOYSTICK
-+ifeq (${MACHINE},i386)
++ifeq (${NETBSD_JOYSTICK},yes)
 +JOY		= -DUSE_JOYSTICK
 +endif
  
  # *** To disable  mouse support comment next line
  MOUSE		= -DUSE_MOUSE
-@@ -91,7 +93,9 @@
+@@ -137,7 +139,9 @@
  # JSLIB   = -lXi
  
  # On iX86 based OS's, if supported, you can use standard joystick driver
 -# JS	= -DI386_JOYSTICK
-+ifeq (${MACHINE},i386)
++ifeq (${NETBSD_JOYSTICK},yes)
 +JS	= -DI386_JOYSTICK
 +endif
  
  # Linux FM-TOWNS game PAD joystick emulation support
  # Thanks to Osamu Kurati for provided patch
-@@ -106,7 +110,7 @@
- # *** If you haven't  the MIT-Shared Memory X Extensions, comment the following:
- # ( Test if available by mean of xdpyinfo command )
- # Comment it if compiling for svgalib
--# MSHM	= -DUSE_MITSHM
-+MSHM	= -DUSE_MITSHM
- 
- # *** Does your system support gettimeofday() function? If do, we encourage you
- # to enable this feature . Else .... comment it :-(
-@@ -125,8 +129,8 @@
- # X11INC		= -I/usr/include/X11
- # X11LIB		= -L/usr/lib/X11
- # standard location for XFree86
--X11INC		= -I/usr/X11R6/include
--X11LIB		= -L/usr/X11R6/lib
-+X11INC		= -I${PREFIX}/include
-+X11LIB		= -L${PREFIX}/lib
- # for Sun systems 
- # X11INC		= -I/usr/openwin/include
- # X11LIB		= -L/usr/openwin/lib
-@@ -141,14 +145,14 @@
- # *** Select destination directory for your compiled program
- # and binary distribution ( if you want to... )
- # ( only needed to install, not to compile... )
--DESTDIR = /usr/games
-+DESTDIR = ${PREFIX}/bin
- DISTDIR = /home/ftp/pub/emulators/mess
- 
- # *** Where to store high scores ?
--SDIR = \"/usr/games/lib/mess\"
-+SDIR = \"${PREFIX}/share/mess\"
- 
- # *** Where resides global configuration file ?
--MRC = \"/usr/games/lib/mess/xmessrc\"
-+MRC = \"${PREFIX}/share/mess/xmessrc\"
- 
- # *** Use this definition as default X Display
- DP = \":0.0\"
-@@ -170,8 +174,8 @@
+@@ -158,8 +162,8 @@
  # you might decide to use these feature. Otherwise, you should use a 
  # timer based audio code and ajust in src/unix/sound.h AUDIO_TIMER_FREQ item
  #
@@ -82,51 +66,64 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:37 agc Exp $
  
  # *** When using timer, you should provide the frequency to generate audio sample
  # frames in your system. See readme.unix notes about these item
-@@ -193,7 +197,7 @@
- ######## Alpha/Linux/X11
+@@ -215,14 +219,14 @@
+ # *** If you haven't  the MIT-Shared Memory X Extensions, comment the following:
+ # ( Test if available by mean of xdpyinfo command )
+ # Comment it if not compiling  for normal x11
+-# MSHM	= -DUSE_MITSHM
++MSHM	= -DUSE_MITSHM
+ 
+ # standard location for X11 
+ # X11INC		= -I/usr/include/X11
+ # X11LIB		= -L/usr/lib/X11
+ # standard location for XFree86
+-X11INC		= -I/usr/X11R6/include
+-X11LIB		= -L/usr/X11R6/lib
++X11INC		= -I${PREFIX}/include
++X11LIB		= -L${PREFIX}/lib
+ # for Sun systems 
+ # X11INC		= -I/usr/openwin/include
+ # X11LIB		= -L/usr/openwin/lib
+@@ -243,11 +247,12 @@
+ ######## Alpha/Linux
  # ARCH  = linux_alpha
- ######## ix86/Linux/X11
--ARCH  = linux
-+# ARCH  = linux
- ######## ix86/Linux/SVGALIB
- # ARCH	= svgalib
- ######## ix86/Linux/GGI *New* *New* *New* Please test - no mouse or joy yet
-@@ -201,7 +205,8 @@
- ######## ix86/FreeBSD/X11 and ix86/BSDi/X11
+ ######## ix86/Linux
+-ARCH  = linux_i386
++# ARCH  = linux_i386
+ ######## ix86/FreeBSD and ix86/BSDi
  # ARCH  = FREEBSD
- ######## ix86/NetBSD/X11
+ ######## ix86/NetBSD
 -# ARCH  = netbsd_i386
 +ARCH  = netbsd
 +MACHINE  != uname -m
- ######## Sparc/SunOS/X11 ( no sound )
+ ######## Sparc/SunOS ( no sound )
  # ARCH  = sunos
- ######## ix86/Solaris/X11
-@@ -277,17 +282,22 @@
- 		-fomit-frame-pointer -Wall
- INST.FREEBSD   = doinstall
- 
--# netbsd_i386
-+# netbsd
- #####################
--#If you want sound add to DEFS.netbsd_i386  "-DUSE_AUDIO" and 
-+#If you want sound add to DEFS.netbsd  "-DUSE_AUDIO" and 
- #set STIM=-DUSE_TIMER above
- #
--DEFS.netbsd_i386   = -DX86_ASM -DLSB_FIRST -DUNIX -Dnetbsd_i386 -DNETBSD \
+ ######## ix86/Solaris
+@@ -282,7 +287,11 @@
+ DEFS.linux_alpha   = -Dlinux -DLSB_FIRST -DAXP_ASM -DACORN
+ DEFS.linux_i386    = -Dlinux -DLSB_FIRST -DX86_ASM
+ DEFS.FREEBSD       = -DLSB_FIRST -DX86_ASM -Dlinux -DFREEBSD_SOUND_WORKAROUND
+-DEFS.netbsd_i386   = -DLSB_FIRST -DX86_ASM -DNETBSD -DUSE_AUDIO
 +ifeq (${MACHINE},i386)
-+DEFS.netbsd   = -DX86_ASM -DLSB_FIRST -DUNIX -DNETBSD \
- 		-DHAVE_GETTIMEOFDAY -DUSE_AUDIO -DSIGNED_SAMPLES
--LIBS.netbsd_i386   = $(X11LIB) -lX11 -lXext -lm
--CFLAGS.netbsd_i386 = $(X11INC) -m486 -fstrength-reduce -funroll-loops \
++DEFS.netbsd        = -DLSB_FIRST -DX86_ASM -DNETBSD -DUSE_AUDIO
 +else
-+DEFS.netbsd   =	-DLSB_FIRST -DUNIX -DNETBSD \
-+		-DHAVE_GETTIMEOFDAY -DUSE_AUDIO -DSIGNED_SAMPLES
++DEFS.netbsd        = -DLSB_FIRST -DNETBSD -DUSE_AUDIO
 +endif
-+LIBS.netbsd   = $(X11LIB) -lX11 -lXext -lm
-+CFLAGS.netbsd = $(X11INC) -O3 -fstrength-reduce -funroll-loops \
- 		-fomit-frame-pointer -Wall
--INST.netbsd_i386   = doinstall
-+INST.netbsd   = doinstall
+ DEFS.sunos	   = -Dsun -DCLOCKS_PER_SEC=1000000 -DACORN
+ DEFS.solaris	   = -Dsun -DACORN 
+ DEFS.solaris_i386  = -DLSB_FIRST -Dsun -Dsolaris
+@@ -300,12 +309,14 @@
+ LIBS.solaris_i386  = -lm -lnsl -lsocket
+ LIBS.irix          = -lm -laudio
+ LIBS.aix           = -lm -lUMSobj
++LIBS.netbsd	   = -lm
  
- # SunOS
- #####################
+ ##############################################################################
+ # **** Architecture dependent cflags. Only change if you know what're you doing...
+ ##############################################################################
+ CFLAGS.linux_powerpc = -fsigned-char
+ CFLAGS.aix	     = -I/usr/include/UMS -I/usr/lpp/som/include 
++CFLAGS.netbsd	     = -fstrength-reduce -funroll-loops -fomit-frame-pointer
+ 
+ #############################################################################
+ # **** Display dependent libs. Only change if you know what're you doing...
