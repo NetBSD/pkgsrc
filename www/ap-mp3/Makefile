@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/02/17 13:50:25 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/02/17 17:35:23 grant Exp $
 #
 
 DISTNAME=	mod_mp3-0.35
@@ -11,29 +11,17 @@ MAINTAINER=	grant@netbsd.org
 HOMEPAGE=	http://software.tangent.org/media/
 COMMENT=	apache module for streaming mp3 files
 
-DEPENDS+=	apache{,6}-1.3.*:../../www/apache
-USE_PERL5=	build	# for "apxs"
-
 DOC_DIR=	${PREFIX}/share/httpd/htdocs/manual/mod/mod_mp3
 
-do-build:
-	@cd ${WRKSRC}/src && ${PREFIX}/sbin/apxs -c -o mod_mp3.so \
-		common.c \
-		directives.c \
-		encode.c \
-		ice.c \
-		id3.c \
-		internal_dispatch.c \
-		load.c \
-		log.c \
-		mod_mp3.c \
-		ogg.c \
-		shout.c \
-		utility.c
+APACHE_MODULE_NAME=	${DISTNAME:C|-.*||}.so
+APACHE_MODULE_SRCDIR=	${WRKSRC}/src
+APACHE_MODULE_SRC=	common.c directives.c encode.c ice.c id3.c
+APACHE_MODULE_SRC+=	internal_dispatch.c load.c log.c mod_mp3.c
+APACHE_MODULE_SRC+=	ogg.c shout.c utility.c
 
-do-install:
-	@cd ${WRKSRC}/src && ${PREFIX}/sbin/apxs -i mod_mp3.so
+post-install:
 	${INSTALL_DATA_DIR} ${DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/faq.html ${DOC_DIR}
 
+.include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"
