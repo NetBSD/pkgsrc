@@ -1,9 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/10/30 10:53:41 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/05/09 01:24:33 lukem Exp $
 
 Use the right signal handler type.
 
 --- xmeter.c	1998/10/30 10:41:09	1.1
 +++ xmeter.c	1998/10/30 10:41:51
+@@ -135,6 +135,8 @@
+ #define PORTMAP		/* Get right function declarations on Solaris 2	*/
+ #include <rpc/rpc.h>
+ #include <rpc/pmap_prot.h>
++#undef FSHIFT		/* Use protocol's shift and scale values */
++#undef FSCALE
+ #include <rpcsvc/rstat.h>
+ /*
+  * We need the definitions of CP_USER, CP_NICE and CP_SYS.  Some systems
 @@ -231,7 +228,7 @@
      char	*name;		/* Name of stat for menu widget		*/
  } STATDATA;
