@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.common,v 1.1 1999/11/03 23:50:08 hubertf Exp $
+#
+
+#
+# Common Makefile for lame and lame-gui
+#
+
+VERS=		3.50
+DISTNAME=	lame-${VERS}
+CATEGORIES=	audio
+MASTER_SITES=	http://hive.me.gu.edu.au/not_lame/
+DISTFILES=	dist10.tar.gz.a dist10.tar.gz.b
+PATCHFILES=	lame${VERS}.patch.gz
+PATCH_SITES=	${MASTER_SITES}
+
+WRKSRC=		${WRKDIR}/lame${VERS}
+DIST_SUBDIR=	notlame
+USE_GMAKE=	yes
+ALL_TARGET=	lame
+MIRROR_DISTFILE=no
+LICENSE=	fee-based-commercial-use
+EXTRACT_ONLY=
+PATCH_DIST_STRIP= -p1
+
+#.if !make(makepatchsum)
+#PATCHDIR=       ${WRKDIR}/.patches
+#.endif
+
+post-extract:
+	${CAT} ${_DISTDIR}/dist* | ( cd ${WRKDIR} ; ${GTAR} plzxf - )
+	${MV} ${WRKDIR}/dist10/lsf/encoder ${WRKSRC}
