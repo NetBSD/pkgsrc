@@ -1,25 +1,25 @@
-$NetBSD: patch-ab,v 1.10 2001/10/21 15:40:52 mycroft Exp $
+$NetBSD: patch-ab,v 1.11 2002/09/25 12:04:07 jlam Exp $
 
---- Imakefile.orig	Sun Mar 21 23:36:26 1999
-+++ Imakefile	Sun Oct 21 08:23:48 2001
-@@ -96,9 +96,9 @@
+--- Imakefile.orig	Sun Mar 21 14:36:26 1999
++++ Imakefile
+@@ -96,9 +96,10 @@ XCOMM   Specify any Linker flags needed 
  XCOMM   to link against symbols inside xanim.
  XCOMM 
  XCOMM ## Linux
 -LD_FLAGS = -rdynamic
 +XCOMM LD_FLAGS = -rdynamic
  XCOMM ## SunOS/Solaris use:
--XCOMM  LD_FLAGS =
+ XCOMM  LD_FLAGS =
 +LD_FLAGS =
  
  
  XCOMM #########################################################################
-@@ -111,17 +111,17 @@
+@@ -111,17 +112,17 @@ XCOMM
  XCOMM NOTE: not all machines need the XA_DLL_LIB define.
  XCOMM #########################################################################
  XCOMM 
 -XA_DLL_DEF = -DXA_DLL -DXA_PRINT
-+XA_DLL_DEF = -DXA_PRINT
++XCOMM XA_DLL_DEF = -DXA_DLL -DXA_PRINT
  XCOMM ### Use this only if the above doesn't work
  XCOMM XA_DLL_DEF = -DXA_DLL
  XCOMM
@@ -35,56 +35,7 @@ $NetBSD: patch-ab,v 1.10 2001/10/21 15:40:52 mycroft Exp $
  
  
  
-@@ -186,13 +186,41 @@
- XCOMM  
- XCOMM  Again don't use these if you are using the dynamically loadable modules.
- XCOMM 
--XCOMM XA_IV32_DEF = -DXA_IV32 
--XCOMM XA_CVID_DEF = -DXA_CVID
--XCOMM XA_CYUV_DEF = -DXA_CYUV
--XCOMM 
--XCOMM XA_IV32_LIB = mods/xa2.1_iv32_linuxELF.o
--XCOMM XA_CVID_LIB = mods/xa2.0_cvid_linuxELF.o
--XCOMM XA_CYUV_LIB = mods/xa1.0_cyuv_linuxELF.o
-+#include "objarch.tmpl"
-+
-+.if (${MACHINE_OBJ_ARCH} == "i386-a.out") || (${MACHINE_OBJ_ARCH} == "i386-ELF") || (${MACHINE_OBJ_ARCH} == "m68k-a.out") || (${MACHINE_OBJ_ARCH} == "sparc-a.out")
-+XA_IV32_DEF = -DXA_IV32 
-+XA_CVID_DEF = -DXA_CVID
-+XA_CYUV_DEF = -DXA_CYUV
-+.elif (${MACHINE_OBJ_ARCH} == "powerpc-ELF")
-+XA_CVID_DEF = -DXA_CVID
-+XA_CYUV_DEF = -DXA_CYUV
-+.endif
-+XCOMM
-+.if (${MACHINE_OBJ_ARCH} == "i386-a.out")
-+XA_IV32_LIB = mods/xa2.0_iv32_netbsd386.o
-+XA_CVID_LIB = mods/xa2.0_cvid_netbsd386.o
-+XA_CYUV_LIB = mods/xa1.0_cyuv_netbsd386.o
-+.elif (${MACHINE_OBJ_ARCH} == "i386-ELF")
-+XA_IV32_LIB = mods/xa2.0_iv32_linuxELF.o
-+XA_CVID_LIB = mods/xa2.0_cvid_linuxELF.o
-+XA_CYUV_LIB = mods/xa1.0_cyuv_linuxELF.o
-+.elif (${MACHINE_OBJ_ARCH} == "m68k-a.out")
-+XA_IV32_LIB = mods/xa2.0_iv32_netbsd68k.o
-+XA_CVID_LIB = mods/xa2.0_cvid_netbsd68k.o
-+XA_CYUV_LIB = mods/xa1.0_cyuv_netbsd68k.o
-+.elif (${MACHINE_OBJ_ARCH} == "sparc-a.out")
-+XA_IV32_LIB = mods/xa2.0_iv32_sparcCOFF.o
-+XA_CVID_LIB = mods/xa2.0_cvid_sparcCOFF.o
-+XA_CYUV_LIB = mods/xa1.0_cyuv_sparcAOUT.o
-+.elif (${MACHINE_OBJ_ARCH} == "powerpc-ELF")
-+XA_CVID_LIB = mods/xa2.0_cvid_linuxPPC.o
-+XA_CYUV_LIB = mods/xa1.0_cyuv_linuxPPC.o
-+.else
-+XA_IV32_DEF =
-+XA_CVID_DEF =
-+XA_CYUV_DEF =
-+.endif
- XCOMM 
- XCOMM ##########################
- XCOMM  NOTE: SGI Machines Only: 
-@@ -267,8 +295,8 @@
+@@ -267,8 +268,8 @@ XCOMM  -- NOTE_9 Since xanim doesn't yet
  XCOMM  XA_AUDIO_DEFS =
  XCOMM 
  XCOMM ## -- Linux PCs ---------------------------------------------------------
@@ -95,25 +46,12 @@ $NetBSD: patch-ab,v 1.10 2001/10/21 15:40:52 mycroft Exp $
  XCOMM 
  XCOMM  -- Linux PC's with OLD Rev sound drivers -------------------------------
  XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_LINUX_OLDER_SND
-@@ -307,7 +335,7 @@
- XCOMM  XA_AUDIO_DEFS = -DXA_SONY_AUDIO
- XCOMM 
- XCOMM  -- NetBSD-current (as of 30/April 1995)---------------------------------
--XCOMM  XA_AUDIO_DEFS = -DXA_NetBSD_AUDIO
-+XA_AUDIO_DEFS = -DXA_NetBSD_AUDIO
- XCOMM 
- XCOMM  -- QNX 4.2 PC's --------------------------------------------------------
- XCOMM  XA_AUDIO_DEFS = -DXA_LINUX_AUDIO -DXA_SELECT
-@@ -465,7 +493,11 @@
+@@ -465,7 +466,7 @@ DEFINES  = $(XA_DEFS)
  
  PROGRAMS = $(XANIM)
  
 -INCLUDES = -I$(INCDIR) $(XA_INCS)
-+.ifdef X11_ROOT
-+INCLUDES = -I$(X11_ROOT)/include/X11 $(XA_INCS)
-+.else
-+INCLUDES = -I$(INCDIR)/X11 $(XA_INCS)
-+.endif
++INCLUDES = -I$(INCDIR) -I$(X11BASE)/include/X11 $(XA_INCS)
  
     LIBS1 = $(XA_LIBS) $(EXTENSIONLIB) $(XTOOLLIB) $(XLIB) -lm
  DEPLIBS1 = $(DEPEXTENSIONLIB) $(DEPXTOOLLIB) $(DEPXLIB)
