@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/06 23:22:28 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/12/13 20:31:53 bad Exp $
 bin/msql2mysql
 bin/mysql
 bin/mysql_zap
+bin/mysql_find_rows
 bin/mysql_fix_privilege_tables
 bin/mysqlaccess
 bin/mysqladmin
@@ -28,7 +29,7 @@ lib/mysql/libmysqlclient.so.6.0
 share/mysql/binary-configure
 share/mysql/make_binary_distribution
 share/mysql/my-example.cnf
-share/mysql/mysql-3.22.22.spec
+share/mysql/mysql-3.22.27.spec
 share/mysql/mysql-log-rotate
 share/mysql/mysql.server
 man/man1/mysql.1

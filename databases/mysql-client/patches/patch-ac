@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 1999/11/15 17:16:22 rh Exp $
+$NetBSD: patch-ac,v 1.3 1999/12/13 20:31:52 bad Exp $
 
---- client/get_password.c.orig	Thu Nov 26 21:00:42 1998
-+++ client/get_password.c	Mon Nov 15 18:12:46 1999
-@@ -27,8 +27,8 @@
+--- client/get_password.c.orig	Sun Jun 14 16:26:27 1998
++++ client/get_password.c	Sun Jun 14 19:25:24 1998
+@@ -18,8 +18,8 @@
  #include	<termio.h>
  #define TERMIO	struct termio
  #else
@@ -11,9 +11,9 @@ $NetBSD: patch-ac,v 1.2 1999/11/15 17:16:22 rh Exp $
 +#include	<termios.h>
 +#define TERMIO	struct termios
  #endif
- #endif
  #ifdef alpha_linux_port
-@@ -130,13 +130,14 @@
+ #include <asm/ioctls.h>				/* QQ; Fix this in configure */
+@@ -92,13 +92,14 @@
    get_password(buff,sizeof(buff)-1,fileno(stdin),isatty(fileno(stdout)));
    ioctl(fileno(stdin),(int) TCSETA, &org);
  #else
