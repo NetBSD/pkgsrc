@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST-mi,v 1.1 1997/11/22 05:09:22 hubertf Exp $
+lib/perl5/site_perl/MD5.pm
+lib/perl5/man/man3/MD5.3.gz
+lib/perl5/site_perl/auto/MD5/autosplit.ix
+@dirrm lib/perl5/site_perl/auto/MD5
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/MD5/.packlist
