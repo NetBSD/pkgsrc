@@ -3,7 +3,7 @@
 # Date created:		7 October 1995
 # Whom:			torstenb@FreeBSD.ORG
 #
-# $NetBSD: Makefile,v 1.7 1998/01/25 00:40:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1998/02/01 01:22:33 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -21,7 +21,6 @@ RUN_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	M4=${PREFIX}/bin/gm4
-
 
 post-install:
 	@if [ ! -f ${PREFIX}/info/dir ]; then \
