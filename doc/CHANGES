@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6133 2004/06/05 07:46:36 hamajima Exp $
+$NetBSD: CHANGES,v 1.6134 2004/06/05 07:47:37 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2785,3 +2785,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tkined to 1.4.11nb1 [minskim 2004-06-05]
 	Updated pkgdepgraph to 2.6 [atatat 2004-06-05]
 	Added snx101util-0.2 [hamajima 2004-06-05]
+	Added dtcp-20030228 [hamajima 2004-06-05]
