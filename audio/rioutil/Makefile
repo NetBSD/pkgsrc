@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/08/31 02:06:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/10 23:33:20 schmonz Exp $
 #
 
-DISTNAME=	rioutil-1.1.2alpha
-PKGNAME=	rioutil-1.1.2.0.1
+DISTNAME=	rioutil-1.2a4
+PKGNAME=	rioutil-1.2.0.4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rioutil/}
 
@@ -15,10 +15,10 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-libusb
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config.sub
 
-# on NetBSD, we need a recent urio.c
-ONLY_FOR_PLATFORM=	NetBSD-1.5Z-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*-* \
-			Darwin-*-* Linux-*-*
+ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-1.[6-9]*-*
 
 .include "../../audio/id3lib/buildlink2.mk"
 .include "../../devel/libusb/buildlink2.mk"
