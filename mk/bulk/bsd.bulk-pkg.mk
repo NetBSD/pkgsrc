@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.55 2004/01/26 21:10:32 heinz Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.56 2004/01/26 21:24:41 agc Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -111,6 +111,8 @@ STARTFILE?=	${_PKGSRCDIR}/.start${BULK_ID}
 # and also for xpkgwedge.  Add pkgtools/xpkgwedge in /etc/mk.conf to do an xpkgwedged bulk build.
 BULK_PREREQ+=		pkgtools/digest
 
+# by default, clean up any broken packages
+_PRESERVE_WRKDIR?=	no
 
 # build the cache files used as part of a full bulk build
 # Note:  we have to install the BULK_PREREQ packages _before_
@@ -351,15 +353,18 @@ bulk-package:
 			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${_PKGSRCDIR}/${BROKENFILE} \
 			) 2>&1 | ${TEE} -a ${BROKENFILE}; \
 		fi ; \
-		${ECHO_MSG} "BULK> Cleaning packages and its depends" ;\
-		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
-			for pkgdir in ${PKGPATH} `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
-				${DO}       (cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
-			done ;\
-		else \
-			${ECHO_MSG} ${MAKE} clean CLEANDEPENDS=YES;\
-			${DO} ${MAKE} clean CLEANDEPENDS=YES;\
-		fi ;\
+		case ${_PRESERVE_WRKDIR} in				\
+		yes|YES)	;;					\
+		*)	${ECHO_MSG} "BULK> Cleaning packages and its depends"; \
+		 	if [ "${USE_BULK_CACHE}" = "yes" ]; then	\
+				for pkgdir in ${PKGPATH} `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
+					${DO}       (cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} clean) ; \
+				done;					\
+			else						\
+				${ECHO_MSG} ${MAKE} clean CLEANDEPENDS=YES;\
+				${DO} ${MAKE} clean CLEANDEPENDS=YES;	\
+			fi ;;						\
+		esac;							\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
 		${ECHO_MSG} "BULK> Build for ${PKGNAME} was not successful, aborting." | ${TEE} -a ${BROKENFILE} ; \
