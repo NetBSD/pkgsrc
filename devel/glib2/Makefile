@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/09/27 20:18:37 danw Exp $
+# $NetBSD: Makefile,v 1.31 2003/10/30 10:27:52 dmcmahill Exp $
 
 DISTNAME=		glib-2.2.3
 PKGREVISION=		1
@@ -31,6 +31,7 @@ CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-libiconv=yes
 
 TEST_TARGET=		check
 
