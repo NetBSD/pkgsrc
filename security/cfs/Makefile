@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/31 10:05:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/16 13:21:48 cube Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		1
@@ -11,6 +11,7 @@ COMMENT=		Encrypting file system, using NFS as its interface
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
+NO_EXPORT_CPP=		YES
 
 CRYPTO=			# defined
 
