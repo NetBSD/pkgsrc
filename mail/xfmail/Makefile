@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/05/24 20:39:44 tv Exp $
+# $NetBSD: Makefile,v 1.7 1999/06/20 21:06:20 tron Exp $
 #
 
 DISTNAME=		xfmail-1.3
@@ -12,7 +12,7 @@ DEPENDS+=		gdbm-1.7.3:../../databases/gdbm \
 			xpm-3.4k:../../graphics/xpm \
 			xforms-0.88:../../x11/xforms
 
-ONLY_FOR_PLATFORM=	*-*-{arm32,i386,m68k,sparc,ns32k}
+ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-sparc *-*-ns32k
 
 RESTRICTED=		"Selling this software requires permission of the authors."
 
