@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.15 2004/08/23 16:36:00 jlam Exp $
+# $NetBSD: subst.mk,v 1.16 2004/08/23 16:37:09 jlam Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a paricular
@@ -45,10 +45,10 @@ _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
 .  if defined(SUBST_SED.${_class_}) && !empty(SUBST_SED.${_class_})
 SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
-SUBST_POSTCMD.${_class_}?=	${RM} -f $$file${_SUBST_BACKUP_SUFFIX}
 .  else
 SUBST_FILTER_CMD.${_class_}?=	# empty
 .  endif
+SUBST_POSTCMD.${_class_}?=	${RM} -f $$file${_SUBST_BACKUP_SUFFIX}
 
 SUBST_TARGETS+=			subst-${_class_}
 _SUBST_TARGETS.${_class_}=	subst-${_class_}-message
