@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2810 2003/07/17 09:08:49 abs Exp $
+$NetBSD: CHANGES,v 1.2811 2003/07/17 14:20:58 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2843,3 +2843,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gcc3 to 3.3nb5 [abs 2003-07-17]
 	Updated gcc3-c to 3.3nb1 [abs 2003-07-17]
 	Updated gcc3-c++ to 3.3nb1 [abs 2003-07-17]
+	Added openpbs-2.3.16 [agc 2003-07-17]
