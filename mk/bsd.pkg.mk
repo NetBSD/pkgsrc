@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1074 2002/10/21 21:58:59 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1075 2002/10/22 22:54:07 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -146,7 +146,14 @@ BUILDLINK_DIR?=		${LOCALBASE}
 BUILDLINK_X11PKG_DIR?=	${X11BASE}
 BUILDLINK_X11_DIR?=	${X11BASE}
 
-.if defined(USE_IMAKE) || defined(USE_X11BASE)
+.if defined(USE_IMAKE)
+USE_X11BASE?=		implied
+.endif
+.if defined(USE_X11BASE)
+USE_X11?=		implied
+.endif
+
+.if defined(USE_X11BASE)
 .  if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
       exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
@@ -359,7 +366,7 @@ M4?=			/usr/bin/m4
 .endif
 
 .if !defined(X11_BUILDLINK_MK)
-.  if defined(USE_X11BASE) || defined(USE_X11)
+.  if defined(USE_X11)
 X11_LDFLAGS=		# empty
 .    if ${_USE_RPATH} == "yes"
 X11_LDFLAGS+=		-Wl,-R${X11BASE}/lib	
@@ -433,7 +440,7 @@ BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE)
-.  if defined(USE_IMAKE) || defined(USE_X11BASE)
+.  if defined(USE_X11BASE)
 MTREE_FILE=	${_PKGSRCDIR}/mk/${OPSYS}.x11.dist
 .  else
 MTREE_FILE=	${_PKGSRCDIR}/mk/${OPSYS}.pkg.dist
@@ -1075,8 +1082,7 @@ IGNORE+= "${PKGNAME} is restricted:" \
 IGNORE+= "${PKGNAME} may not be built, because it utilizes strong cryptography"
 .    endif
 .  endif
-.  if ((defined(USE_IMAKE) || defined(USE_X11BASE) || defined(USE_X11)) && \
-       !exists(${X11BASE}))
+.  if defined(USE_X11) && !exists(${X11BASE})
 IGNORE+= "${PKGNAME} uses X11, but ${X11BASE} not found"
 .  endif
 .  if defined(BROKEN)

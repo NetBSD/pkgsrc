@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.42 2002/10/18 15:41:08 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.43 2002/10/22 22:54:09 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -65,7 +65,7 @@ _BLNK_OPSYS=		${OPSYS}
 #
 CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 
-.if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
+.if defined(USE_X11)
 USE_X11_LINKS?=		YES
 .  if !empty(USE_X11_LINKS:M[nN][oO])
 .    include "../../mk/x11.buildlink2.mk"
@@ -284,7 +284,7 @@ _BUILDLINK_USE: .USE
 _BLNK_TRANSFORM+=	I:${LOCALBASE}:${BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	L:${LOCALBASE}:${BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
-.if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
+.if defined(USE_X11)
 .  if !empty(USE_X11_LINKS:M[nN][oO])
 _BLNK_TRANSFORM+=	I:${X11BASE}:${BUILDLINK_X11PKG_DIR}
 _BLNK_TRANSFORM+=	L:${X11BASE}:${BUILDLINK_X11PKG_DIR}
@@ -436,7 +436,7 @@ _BLNK_UNTRANSFORM_SED.3+=	${_BLNK_TRANSFORM_SED.l}
 #
 # Fix up references to the x11-links directory.
 #
-.if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
+.if defined(USE_X11)
 _BLNK_TRANSFORM_SED.4+= \
 	-e "s|${BUILDLINK_DIR}/\(${BUILDLINK_X11_DIR:S/^${LOCALBASE}\///}\)|${LOCALBASE}/\1|g"
 _BLNK_UNTRANSFORM_SED.4+= \
@@ -610,7 +610,7 @@ _BLNK_WRAPPEES+=	FC
 PKGLIBTOOL=		${BUILDLINK_LIBTOOL}
 .endif
 _BLNK_WRAPPEES+=	LIBTOOL
-.if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
+.if defined(USE_X11)
 IMAKE?=			${X11BASE}/bin/imake
 _BLNK_WRAPPEES+=	IMAKE
 .endif
@@ -716,7 +716,7 @@ _BLNK_WRAP_SPECIFIC_LOGIC.LD=	${BUILDLINK_DIR}/bin/.ld-logic
 # Don't transform the arguments for imake, which uses the C preprocessor
 # to generate Makefiles, so that imake will find its config files.
 #
-.if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
+.if defined(USE_X11)
 _BLNK_WRAP_PRE_CACHE.IMAKE=	${_BLNK_WRAP_PRE_CACHE}
 _BLNK_WRAP_POST_CACHE.IMAKE=	${_BLNK_WRAP_POST_CACHE}
 _BLNK_WRAP_CACHE.IMAKE=		${_BLNK_WRAP_CACHE}

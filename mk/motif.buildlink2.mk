@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink2.mk,v 1.2 2002/08/22 08:21:27 jlam Exp $
+# $NetBSD: motif.buildlink2.mk,v 1.3 2002/10/22 22:54:08 jlam Exp $
 #
 # USE_MOTIF12
 #	use a Motif-1.2-compatible installation, otherwise, assume
@@ -147,7 +147,7 @@ MOTIFBASE=		${_MOTIFBASE}
 .  endif
 .endif
 
-USE_X11=		# defined
+USE_X11?=		# defined
 MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
 MAKE_ENV+=		MOTIFBASE="${_MOTIFBASE}"
 LDFLAGS+=		-Wl,-R${_MOTIFBASE}/lib
