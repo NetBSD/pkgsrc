@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/21 06:13:36 tv Exp $
 
---- configure.in.orig	2002-11-14 03:59:18.000000000 +0900
+--- configure.in.orig	2002-11-13 13:59:18.000000000 -0500
 +++ configure.in
-@@ -324,7 +324,8 @@ AC_HEADER_STDC
+@@ -264,6 +264,8 @@ os2_emx*)	LIBS="-lm $LIBS"
+ 		ac_cv_lib_dir_opendir=no;;
+ msdosdjgpp*)	LIBS="-lm $LIBS"
+ 		ac_cv_func_getpgrp_void=yes;;
++interix3*)	LIBS="-lm $LIBS"
++		ac_cv_func_getpgrp_void=yes;;
+ freebsd*)	LIBS="-lm $LIBS"
+ 		AC_CACHE_CHECK([whether -lxpg4 has to be linked],
+ 		  rb_cv_lib_xpg4_needed,
+@@ -324,7 +326,8 @@ AC_HEADER_STDC
  AC_HEADER_SYS_WAIT
  AC_CHECK_HEADERS(stdlib.h string.h unistd.h limits.h sys/file.h sys/ioctl.h\
  		 fcntl.h sys/fcntl.h sys/select.h sys/time.h sys/times.h sys/param.h\
@@ -12,7 +21,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  
  dnl Checks for typedefs, structures, and compiler characteristics.
  AC_TYPE_UID_T
-@@ -456,6 +457,49 @@ else
+@@ -456,6 +459,49 @@ else
    AC_DEFINE_UNQUOTED(FILE_COUNT, $rb_cv_fcnt)
  fi
  
@@ -62,7 +71,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  dnl default value for $KANJI
  DEFAULT_KCODE="KCODE_NONE"
  
-@@ -563,7 +607,7 @@ if test "$with_dln_a_out" != yes; then
+@@ -549,6 +595,7 @@ if test "$with_dln_a_out" != yes; then
+     cygwin*)	;;
+     mingw*)	;;
+     netbsd*) CCDLFLAGS=-fPIC;;
++    interix3*)	;;
+     *) CCDLFLAGS=-fPIC;;
+     esac
+   else
+@@ -563,7 +610,7 @@ if test "$with_dln_a_out" != yes; then
  
    case "$target_os" in
  	hpux*)		DLDFLAGS="-E"
@@ -71,7 +88,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  			LDFLAGS="-Wl,-E"
  			rb_cv_dlopen=yes;;
  	solaris*) 	if test "$GCC" = yes; then
-@@ -578,7 +622,8 @@ if test "$with_dln_a_out" != yes; then
+@@ -578,7 +625,8 @@ if test "$with_dln_a_out" != yes; then
  			rb_cv_dlopen=yes;;
  	sunos*) 	LDSHARED='ld -assert nodefinitions'
  			rb_cv_dlopen=yes;;
@@ -81,7 +98,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  			rb_cv_dlopen=yes;;
  	sysv4*) 	LDSHARED='ld -G'
  			rb_cv_dlopen=yes;;
-@@ -589,6 +634,12 @@ if test "$with_dln_a_out" != yes; then
+@@ -589,6 +637,12 @@ if test "$with_dln_a_out" != yes; then
  	osf*) 		LDSHARED="$CC -shared"
  			rb_cv_dlopen=yes ;;
  	linux*) 	LDSHARED="$CC -shared"
@@ -94,7 +111,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  			rb_cv_dlopen=yes ;;
  	freebsd*)       LDSHARED="$CC -shared"
  			if test "$rb_cv_binary_elf" = yes; then
-@@ -601,6 +652,9 @@ if test "$with_dln_a_out" != yes; then
+@@ -601,8 +655,18 @@ if test "$with_dln_a_out" != yes; then
  	netbsd*)	LDSHARED='${CC} -shared'
  			if test "$rb_cv_binary_elf" = yes; then
  			    LDFLAGS="-Wl,-export-dynamic"
@@ -103,8 +120,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
 +			    RPATHFLAG=' -Wl,-R%1$-s'
  			fi
  			rb_cv_dlopen=yes ;;
++	interix3*)	LDSHARED='${CC} -shared'
++			LDFLAGS="-Wl,-E"
++			# use special random-slot linkage in 0x[56]XXXXXXX
++			DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET) -Wl,--image-base,$$(($$RANDOM %%4096/2*262144+1342177280))'
++			LIBPATHFLAG=' -L%1$-s'
++			RPATHFLAG=' -Wl,-R%1$-s'
++			rb_cv_dlopen=yes ;;
  	openbsd*) 	LDSHARED="ld -Bforcearchive -Bshareable"
-@@ -858,6 +912,7 @@ if test "$enable_shared" = 'yes'; then
+ 			rb_cv_dlopen=yes ;;
+ 	bsdi3*) 	case "$CC" in
+@@ -858,6 +922,7 @@ if test "$enable_shared" = 'yes'; then
  	;;
      linux*)
  	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR)'
@@ -112,7 +138,22 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
  	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_INSTALL_NAME).so'
  	;;
      freebsd*)
-@@ -1071,6 +1126,10 @@ if test "$search_path" != ""; then
+@@ -879,6 +944,14 @@ if test "$enable_shared" = 'yes'; then
+ 	   LIBRUBY_ALIASES=""
+ 	fi
+  	;;
++    interix3*)
++	SOLIBS='$(LIBS)'
++	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
++	# link explicitly to 0x48000000
++	LIBRUBY_DLDFLAGS='-Wl,-h,lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR) -Wl,--image-base,1207959552'
++	LIBRUBYARG='-Wl,-R -Wl,${prefix}/lib -L${prefix}/lib -L. -l$(RUBY_INSTALL_NAME)'
++	LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_INSTALL_NAME).so'
++ 	;;
+     openbsd*)
+ 	SOLIBS='$(LIBS)'
+  	;;
+@@ -1071,6 +1144,10 @@ if test "$search_path" != ""; then
      AC_DEFINE_UNQUOTED(RUBY_SEARCH_PATH,"$search_path")
  fi
  
