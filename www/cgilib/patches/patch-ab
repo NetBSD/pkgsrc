@@ -1,14 +1,12 @@
-$NetBSD: patch-ab,v 1.7 2002/12/27 14:36:02 cjep Exp $
+$NetBSD: patch-ab,v 1.8 2005/03/14 20:41:19 tv Exp $
 
---- Makefile.orig	Fri Aug 20 22:14:07 1999
+--- Makefile.orig	1999-08-20 17:14:07.000000000 -0400
 +++ Makefile
-@@ -14,30 +14,50 @@
+@@ -14,25 +14,29 @@
  #   along with this program; if not, write to the Free Software
  #   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111, USA.
  
 -CFLAGS = -I. -Wall -O2 -g
-+NROFF=	nroff -mandoc
-+
 +CFLAGS += -I. -Wall -O2
  LDFLAGS = -L.
 -LIBS = -lcgi
@@ -18,7 +16,7 @@ $NetBSD: patch-ab,v 1.7 2002/12/27 14:36:02 cjep Exp $
  
 -libcgi.a: $(OBJS)
 -	ar rc $@ $^
-+all: libcgi.la cgitest jumpto htmlman
++all: libcgi.la cgitest jumpto
  
 -cgitest: cgitest.o libcgi.a
 -	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)
@@ -39,31 +37,29 @@ $NetBSD: patch-ab,v 1.7 2002/12/27 14:36:02 cjep Exp $
 -	install -m 755 cgitest /usr/lib/cgi-bin
 +cgitest: cgitest.lo libcgi.la
 +	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@ cgitest.lo $(LIBS)
- 
--clean:
--	rm -f cgitest cgitest.o jumpto jumpto.o libcgi.a $(OBJS) *.[35].html
++
 +jumpto: jumpto.lo libcgi.la
 +	${LIBTOOL} --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@ jumpto.lo $(LIBS)
  
- htmlman:
+ clean:
+ 	rm -f cgitest cgitest.o jumpto jumpto.o libcgi.a $(OBJS) *.[35].html
+@@ -41,3 +45,19 @@ htmlman:
  	for f in *.[35]; do \
--	  man -l $$f|rman -f HTML --title $$f -r "%s.%s.html" > $$f.html; \
-+	${NROFF} $$f|rman -f HTML --title $$f -r "%s.%s.html" > $$f.html; \
+ 	  man -l $$f|rman -f HTML --title $$f -r "%s.%s.html" > $$f.html; \
  	done
 +
 +install:
-+	-mkdir -p ${PREFIX}/libexec/cgi-bin
-+	-mkdir -p ${PREFIX}/share/examples/cgilib
-+	${INSTALL} -c -m 444 cgitest.c ${PREFIX}/share/examples/cgilib
-+	${INSTALL} -c -m 444 jumpto.c ${PREFIX}/share/examples/cgilib
-+	${LIBTOOL} --mode=install ${INSTALL} -c -m 444 libcgi.la ${PREFIX}/lib
-+	${LIBTOOL} --mode=install ${INSTALL} -c -m 755 cgitest ${PREFIX}/libexec/cgi-bin
-+	${LIBTOOL} --mode=install ${INSTALL} -c -m 755 jumpto ${PREFIX}/libexec/cgi-bin
-+	${INSTALL} -c -m 444 cgi.h ${PREFIX}/include
-+	-mkdir -p ${PREFIX}/share/doc/html/cgilib
-+	for i in *.html; do \
-+          ${INSTALL} -c -m 444 $$i ${PREFIX}/share/doc/html/cgilib ; \
++	${BSD_INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/cgi-bin
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/cgilib
++	${BSD_INSTALL_DATA} cgitest.c ${PREFIX}/share/examples/cgilib
++	${BSD_INSTALL_DATA} jumpto.c ${PREFIX}/share/examples/cgilib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libcgi.la ${PREFIX}/lib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} cgitest ${PREFIX}/libexec/cgi-bin
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} jumpto ${PREFIX}/libexec/cgi-bin
++	${BSD_INSTALL_DATA} cgi.h ${PREFIX}/include
++	for i in *.3; do \
++          ${BSD_INSTALL_MAN} $$i ${PREFIX}/man/man3/; \
 +        done
-+
-+clean:
-+	rm -f cgitest cgitest.o jumpto jumpto.o libcgi.a $(OBJS) *.[35].html
++	for i in *.5; do \
++          ${BSD_INSTALL_MAN} $$i ${PREFIX}/man/man5/; \
++        done
