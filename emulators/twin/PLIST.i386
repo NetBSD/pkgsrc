@@ -1,0 +1,3 @@
+lib/libreadline.a
+lib/libdebug.so
+lib/libpe32.so

@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/15 09:46:37 agc Exp $
+$NetBSD: patch-aa,v 1.2 2003/03/08 03:15:51 jmc Exp $
 
---- configure.in.orig	Sun Jan 14 00:23:50 2001
-+++ configure.in	Sun May 13 09:37:19 2001
+--- configure.in.orig	Sun Jan 14 08:23:50 2001
++++ configure.in	Fri Apr  5 22:31:14 2002
 @@ -147,6 +147,10 @@
  	TARGET=freebsd
  	;;
  
-+   i*86-*-netbsd* )
++   *netbsd* )
 +	TARGET=netbsd
 +	;;
 +
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/15 09:46:37 agc Exp $
  	TWIN_CFLAGS=-g
 +	;;
 +
-+   i*86-*-netbsd* )
++   *netbsd* )
 +	LIBTWIN_LDFLAGS="$LDFLAGS $LIBTWIN_LDFLAGS"
 +	DLL_LDFLAGS="$LDFLAGS $DLL_LDFLAGS"
  	;;
