@@ -1,4 +1,4 @@
-# $Id: cpuflags.mk,v 1.6 2002/07/19 09:31:05 abs Exp $
+# $Id: cpuflags.mk,v 1.7 2002/08/05 13:17:11 abs Exp $
 # Makefile include fragment to simplify use of cpuflags in pkgsrc
 # abs@netbsd.org - freely distributable, no warrenties, stick no bills.
 
@@ -26,6 +26,7 @@ CXXFLAGS+=${CPU_FLAGS}
 MAKE_FLAGS+=CCOPTIONS="${CPU_FLAGS}"	# Override CCOPTIONS for imake
 
 .else					# Assume in base system, only COPTS
-COPTS+=${CPU_FLAGS}
+COPTS?=${CPU_FLAGS} ${DEFCOPTS}
+# Include ${DEFCOPTS} and set ?= to allow overriding in kernel builds
 
 .endif
