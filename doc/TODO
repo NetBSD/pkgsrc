@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2974 2005/01/29 10:54:16 minskim Exp $
+$NetBSD: TODO,v 1.2975 2005/01/29 21:55:45 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -1158,9 +1158,7 @@ Suggested package updates
 	o xlispstat-3.52.20
 	o xlog-1.0
 	o xm7-303
-	o xmame-0.90
 	o xmcd-3.3.0
-	o xmess-0.90
 	o xmlstarlet-0.9.5
 	o xmms-crossfade-0.3.7
 	o xmms-dspectogram-1.2.1
