@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2003/07/17 22:56:35 grant Exp $
+# $NetBSD: Makefile,v 1.65 2003/07/18 10:50:06 adam Exp $
 
-DISTNAME=		lesstif-0.93.36
+DISTNAME=		lesstif-0.93.46
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
 			ftp://ftp.unicamp.br/pub/X11/lesstif/srcdist/ \
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
 			ftp://linux.mathematik.tu-darmstadt.de/pub/linux/mirrors/misc/lesstif/srcdist/ \
 			http://gd.tuwien.ac.at/hci/lesstif/srcdist/ \
 			http://www.damtp.cam.ac.uk/mirror/ftp.hungry.com/pub/hungry/lesstif/srcdist/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.lesstif.org/

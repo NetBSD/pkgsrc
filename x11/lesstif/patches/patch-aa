@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.20 2002/12/05 19:10:43 drochner Exp $
+$NetBSD: patch-aa,v 1.21 2003/07/18 10:50:07 adam Exp $
 
---- Makefile.in.orig	Thu Dec  5 17:31:15 2002
-+++ Makefile.in	Thu Dec  5 17:41:49 2002
-@@ -153,12 +153,12 @@
+--- Makefile.in.orig	2003-07-18 01:04:22.000000000 +0200
++++ Makefile.in	2003-07-18 12:06:25.000000000 +0200
+@@ -164,12 +164,12 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
  #
