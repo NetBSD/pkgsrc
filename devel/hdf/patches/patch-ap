@@ -1,12 +1,12 @@
-$NetBSD: patch-ap,v 1.1 2001/03/25 01:09:52 jtb Exp $
+$NetBSD: patch-ap,v 1.2 2004/04/20 18:14:37 drochner Exp $
 
---- hdf/src/hconv.h.orig	Sat Mar 24 20:43:34 2001
-+++ hdf/src/hconv.h
+--- hdf/src/hconv.h.orig	2003-11-01 01:17:13.000000000 +0100
++++ hdf/src/hconv.h	2004-04-20 14:29:46.000000000 +0200
 @@ -63,7 +63,7 @@
  /* CONSTANT DEFINITIONS                                                      */
  /*****************************************************************************/
  /* Generally Big-Endian machines */
--#if !defined(VMS) && !defined(INTEL86) && !defined(MIPSEL) && !defined(DEC_ALPHA) && !defined(I860) && !defined(SUN386) && !defined(IA64)
+-#if !defined(VMS) && !defined(INTEL86) && !defined(MIPSEL) && !defined(DEC_ALPHA) && !defined(I860) && !defined(SUN386) && !defined(__ia64) && !defined(__x86_64__)
 +#if BYTE_ORDER == BIG_ENDIAN
  #   if !defined(UNICOS)
  #       define UI8_IN     DFKnb1b   /* Unsigned Integer, 8 bits */
