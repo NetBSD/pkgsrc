@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.163 2002/10/04 15:05:13 hubertf Exp $
+$NetBSD: CHANGES,v 1.164 2002/10/04 15:48:33 kei Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2856,7 +2856,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gnome2-pixmaps-2.0.8 [rh 2002-09-15]
 	Added gnome2-control-center-2.0.1.1 [rh 2002-09-15]
 	Added gnome-session-2.0.7 [rh 2002-09-15]
-	Added mule-ucs-0.84 [uebayasi 2002-09-15]
+	Added Mule-UCS-0.84 [uebayasi 2002-09-15]
 	Added tc-2.2.1 [uebayasi 2002-09-15]
 	Updated mlterm to 2.6.1 [uebayasi 2002-09-15]
 	Updated w3m to 0.3.1 [uebayasi 2002-09-15]
@@ -3109,3 +3109,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added dictd-1.8.0 [uebayasi 2002-10-04]
 	Updated x2vnc to 1.4 [hubertf 2002-10-04]
 	Added otpCalc-0.96 [hubertf 2002-10-04]
+	Updated Mule-UCS to 0.84nb1 [kei 2002-10-04]
