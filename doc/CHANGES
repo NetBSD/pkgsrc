@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4368 2004/01/06 00:36:28 grant Exp $
+$NetBSD: CHANGES,v 1.4369 2004/01/06 03:36:55 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -73,3 +73,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Moved cvsup-16.1h to cvsup-bin-16.1h [xtraeme 2004-01-06]
 	Moved cvsup-gui-16.1h to cvsup-gui-bin-16.1h [xtraeme 2004-01-06]
 	Added p5-SOAP-Lite-0.55 [grant 2004-01-06]
+	Delete kochi-cid [uebayasi 2004-01-06]
