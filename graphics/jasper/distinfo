@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/01 14:56:31 rh Exp $
+$NetBSD: distinfo,v 1.2 2002/04/08 12:25:55 wiz Exp $
 
-SHA1 (jasper-1.500.0.zip) = 9f4dcc7077eab0013c40bb149b03a9a875f6343e
-Size (jasper-1.500.0.zip) = 850771 bytes
+SHA1 (jasper-1.500.4.zip) = 603fa2b8da5934862771b1e3f1703ce4aa4acff4
+Size (jasper-1.500.4.zip) = 1109886 bytes
