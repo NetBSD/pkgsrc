@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7142 2004/09/12 02:37:24 uebayasi Exp $
+$NetBSD: CHANGES,v 1.7143 2004/09/12 06:04:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4239,3 +4239,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libnbcompat to 20040911 [jlam 2004-09-11]
 	Updated madman to 0.93nb1 [wiz 2004-09-11]
 	Updated semi to 1.14.6nb1 [uebayasi 2004-09-11]
+	Updated hre to 0.9.8a [minskim 2004-09-12]

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/08/25 18:51:08 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/12 06:04:45 minskim Exp $
 #
 
-DISTNAME=	hre-0.9.8
+DISTNAME=	hre-0.9.8a
 CATEGORIES=	textproc
-MASTER_SITES=	http://kldp.net/download.php/1466/
+MASTER_SITES=	http://kldp.net/download.php/1489/
 
 MAINTAINER=	pyrasis@chol.com
 HOMEPAGE=	http://hre.kldp.net/
