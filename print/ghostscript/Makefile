@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/12/20 22:31:09 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/03 21:27:19 jlam Exp $
 
 PKGNAME=	ghostscript-${GS_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Aladdin Postscript interpreter
 
 CONFLICTS=	ghostscript{,-x11,-nox11}-[0-9]*

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2001/12/20 22:31:09 jlam Exp $
+$NetBSD: distinfo,v 1.8 2002/02/03 21:27:20 jlam Exp $
 
 SHA1 (ghostscript/ghostscript-6.01.tar.bz2) = 405a8ab16453a8c3f846eae2aa4abbea6a093300
 Size (ghostscript/ghostscript-6.01.tar.bz2) = 2974476 bytes
@@ -8,8 +8,8 @@ SHA1 (ghostscript/pdf_sec.ps) = e185f12cb8764ce2d7d32931c6dbd5e05df8722f
 Size (ghostscript/pdf_sec.ps) = 11158 bytes
 SHA1 (ghostscript/gimp-print-4.2.0.tar.gz) = 3460b23a1c36c7f5dcfacc8dce5d0ee5f051a086
 Size (ghostscript/gimp-print-4.2.0.tar.gz) = 4501914 bytes
-SHA1 (ghostscript/hpijs0.97.tar.gz) = 5f0dd18c71d6b33d4ed6fe4924031257e78e8e06
-Size (ghostscript/hpijs0.97.tar.gz) = 386722 bytes
+SHA1 (ghostscript/hpijs-1.0.2.tar.gz) = 027cc3762737eb25c6c4dc303924de2b0945cd65
+Size (ghostscript/hpijs-1.0.2.tar.gz) = 284472 bytes
 SHA1 (ghostscript/hpdj-2.6.tar.gz) = 1767295652292ab00b6859cf6699939be44e49e7
 Size (ghostscript/hpdj-2.6.tar.gz) = 143944 bytes
 SHA1 (ghostscript/dmprt-2.01.tar.gz) = 179c7bf3d0fde128e1ad8c7142301efa7ccb8ab0
@@ -32,6 +32,7 @@ SHA1 (ghostscript/samsung-gdi-driver.tar.gz) = d9e29d5e018a27832e5d4681221387d35
 Size (ghostscript/samsung-gdi-driver.tar.gz) = 8909 bytes
 SHA1 (ghostscript/gs6.01-jpdf-exp.patch.gz) = 21f427a4c80871edab8c4d748b1fe1b7796cd876
 Size (ghostscript/gs6.01-jpdf-exp.patch.gz) = 59034 bytes
+SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6
 SHA1 (patch-ab) = 26cea522dbe2e2cc57a5fdc60130f309c76c6991
 SHA1 (patch-ac) = 576e0bc659d771f9d634921a0cc6752ab9739a92
 SHA1 (patch-ad) = 9b6e66132583a698ebef277caf343c6919f42f72
@@ -54,6 +55,5 @@ SHA1 (patch-at) = a627398bca6e9fbdc5f881d514de6b10d2c187dd
 SHA1 (patch-au) = 07c99b2988c34396901594ab635a209e08766303
 SHA1 (patch-av) = 87f3c9e01a4e2fa63c75c348b1a5ec2be07948a5
 SHA1 (patch-aw) = 9855cacc48db068f87aa37568b198e22e6c391a0
-SHA1 (patch-ax) = 8d563208807aff24ea502e56633da0950afa2835
 SHA1 (patch-ay) = a39a1e27a2f8437103a93ac06e5f857ec5e32fa3
 SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6

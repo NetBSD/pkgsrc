@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2002/01/11 17:00:27 fredb Exp $
+# $NetBSD: Makefile.common,v 1.29 2002/02/03 21:27:20 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -13,7 +13,8 @@ HOMEPAGE=		http://www.cs.wisc.edu/~ghost/index.html
 DEPENDS+=		ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 DEPENDS+=		watanabe-vfont-19930318:../../fonts/watanabe_vfont
 
-USE_GMAKE=		YES
+USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
 
 GS_SRCS=		${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/gs${GS_VERS}
@@ -46,15 +47,19 @@ GIMPPRINT_WRKSRC=	${WRKDIR}/${GIMPPRINT}
 SITES_${GIMPPRINT_SRCS}=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 DISTFILES+=			${GIMPPRINT_SRCS}
 EXTRACT_ONLY+=			${GIMPPRINT_SRCS}
-GIMPPRINT_CONFIGURE_ARGS=	--without-gimp --with-ghost
+GIMPPRINT_CONFIGURE_ARGS=	${CONFIGURE_ARGS} --without-gimp --with-ghost
 
 # Drivers from the HP Inkjet Project (IJS/HPIJS)
-HPIJS_DRV=		hpijs0.97
+HPIJS_DRV=		hpijs-1.0.2
 HPIJS_SRCS=		${HPIJS_DRV}.tar.gz
 HPIJS_WRKSRC=		${WRKDIR}/${HPIJS_DRV}
+HPIJS_GSFILES=		gdevijs.c gdevijs.h
+HPIJS_GSFILES+=		ijs.c ijs.h ijs_client.c ijs_client.h ijs_exec_unix.c
+HPIJS_GSFILES+=		unistd_.h
 SITES_${HPIJS_SRCS}=	${MASTER_SITE_SOURCEFORGE:=hpinkjet/}
 DISTFILES+=		${HPIJS_SRCS}
 EXTRACT_ONLY+=		${HPIJS_SRCS}
+HPIJS_CONFIGURE_ARGS=	${CONFIGURE_ARGS}
 
 # Additional driver for several HP deskjets
 HPDJ_DRV=		hpdj-2.6
@@ -154,43 +159,6 @@ LDFLAGS+=		-L${LOCALBASE}/bsd/lib -Wl,-R${LOCALBASE}/bsd/lib
 FPU_TYPE?=		1
 MAKE_FLAGS+=		FPU_TYPE=${FPU_TYPE}
 
-# Determine the endianness of the CPU by checking header files.
-.if !defined(MACHINE_ENDIAN)
-_ENDIAN_H_FILES=	/usr/include/sys/endian.h
-_ENDIAN_H_FILES+=	/usr/include/machine/endian.h
-_ENDIAN_H_FILES+=	/usr/include/endian.h
-_ENDIAN_H_FILES+=	/usr/include/sys/byteorder.h
-_ENDIAN_H_FILES+=	/dev/null
-.  for FILE in ${_ENDIAN_H_FILES}
-.    if exists(${FILE})
-_ENDIAN_H?=		${FILE:S/\/usr\/include\///}
-.    endif
-.  endfor
-MACHINE_ENDIAN!=							\
-	if (								\
-		${ECHO} "\#include <${_ENDIAN_H}>";			\
-		${ECHO} "\#ifndef BYTE_ORDER";				\
-		${ECHO} "\#ifdef _BIG_ENDIAN";				\
-		${ECHO} "\#define BYTE_ORDER 4321";			\
-		${ECHO} "\#else";					\
-		${ECHO} "\#define BYTE_ORDER 1234";			\
-		${ECHO} "\#endif";					\
-		${ECHO} "\#endif";					\
-		${ECHO} "BYTE_ORDER";					\
-	   ) | ${CC} -E - | ${GREP} "4321" >/dev/null 2>&1;		\
-	then								\
-		${ECHO} big;						\
-	else								\
-		${ECHO} little;						\
-	fi
-MAKEFLAGS+=	MACHINE_ENDIAN="${MACHINE_ENDIAN}"
-.  endif
-
-.if defined(MACHINE_ENDIAN) && (${MACHINE_ENDIAN} == "little")
-HPIJS_CFLAGS+=		-DIS_LITTLE_ENDIAN
-MAKE_ENV+=		HPIJS_CFLAGS="${HPIJS_CFLAGS}"
-.endif
-
 PLIST_SUBST+=		GS_VERS=${GS_VERS}vflib
 
 MAKEFRAGS=		${FILESDIR}/devs.nox11
@@ -233,33 +201,30 @@ post-patch:
 	${SED}	-e "s|epsimage\.src|${GSDATADIR}/lib/escp_24.src|g"	\
 		${WRKDIR}/dmp_site.ps.bak > ${WRKDIR}/dmp_site.ps
 
-GS_CONF_PREREQ+=	hpijs-driver
-hpijs-driver:
+GS_CONF_PREREQ+=	hpijs-configure
+hpijs-configure:
 	@cd ${HPIJS_WRKSRC} &&						\
-	${CP} gdevhpij.* ${WRKSRC}/src &&				\
-	${HEAD} -474 contrib.mak | ${TAIL} -31 |			\
-		${SED}	-e "s|\$$(GLSRC)\([^ ]*\.dev\)|\$$(DD)\1|g"	\
-			-e "s|\(\$$(SETPDEV) \)|\1\$$(DD)|g"		\
-		>> ${WRKSRC}/src/contrib.mak
-
-hpijs-server:
-	@cd ${HPIJS_WRKSRC} &&						\
-	for file in							\
-		aladdin.h compression.cpp				\
-		ernieplatform.h versioncode.cpp;			\
-	do								\
-		${SED}	-e "s|_LITTLE_ENDIAN|IS_LITTLE_ENDIAN|g"	\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
-	@cd ${HPIJS_WRKSRC} &&						\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} default
-
-GS_CONF_PREREQ+=	gimpprint-driver
-gimpprint-driver:
-	@cd ${GIMPPRINT_WRKSRC} &&					\
 	${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"	\
 		${CONFIGURE_ENV}					\
+		${CONFIGURE_SCRIPT} ${HPIJS_CONFIGURE_ARGS} &&		\
+	${CP} ${HPIJS_GSFILES} ${WRKSRC}/src &&				\
+	${HEAD} -518 contrib.mak | ${TAIL} -20				\
+		>> ${WRKSRC}/src/contrib.mak
+
+GS_BUILD_PREREQ+=	hpijs-build
+hpijs-build:
+	@cd ${HPIJS_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all
+
+GS_INSTALL_PREREQ+=	hpijs-install
+hpijs-install:
+	@cd ${HPIJS_WRKSRC} &&						\
+	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install docdir=${HTMLDIR}/hpijs
+
+GS_CONF_PREREQ+=	gimpprint-configure
+gimpprint-configure:
+	@cd ${GIMPPRINT_WRKSRC} &&					\
+	${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"	\
+		${GIMPPRINT_CONFIGURE_ENV}				\
 		${CONFIGURE_SCRIPT} ${GIMPPRINT_CONFIGURE_ARGS} &&	\
 	cd ${GIMPPRINT_WRKSRC}/src/ghost &&				\
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} all-local &&		\
@@ -296,11 +261,12 @@ do-configure: ${GS_CONF_PREREQ}
 	) > ${WRKDIR}/unix-gcc.mak
 	${MV} -f ${WRKDIR}/unix-gcc.mak ${WRKSRC}/src
 
-post-build: hpijs-server
+post-build: ${GS_BUILD_PREREQ}
+
+post-install: ${GS_INSTALL_PREREQ}
 
 post-install:
 	strip ${PREFIX}/bin/gs
-	${INSTALL_PROGRAM} ${HPIJS_WRKSRC}/hpijs ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${GIMPPRINT_WRKSRC}/src/ghost/README		\
 		${DOCDIR}/README.stp
@@ -318,11 +284,6 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/README.mje ${DOCDIR}/${MJC_DRV}
 	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/cpem.doc ${DOCDIR}/${MJC_DRV}
 	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/MJ700V2C.FAQ ${DOCDIR}/${MJC_DRV}
-	${INSTALL_DATA_DIR} ${HTMLDIR}/hpijs
-	${INSTALL_DATA} ${HPIJS_WRKSRC}/append_db.sh ${HTMLDIR}/hpijs
-	${INSTALL_DATA} ${HPIJS_WRKSRC}/printerdb_append ${HTMLDIR}/hpijs
-	${INSTALL_DATA} ${HPIJS_WRKSRC}/hpijs_readme.html ${HTMLDIR}/hpijs
-	${INSTALL_DATA} ${HPIJS_WRKSRC}/*.jpg ${HTMLDIR}/hpijs
 
 .include "../../graphics/png/buildlink.mk"
 .include "../../japanese/vflib-lib/buildlink.mk"
