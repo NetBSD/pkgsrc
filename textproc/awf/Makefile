@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/01/18 22:10:29 tv Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/18 22:20:08 tv Exp $
 #
 
 DISTNAME=	nroff-clone
 PKGNAME=	awf-19900907
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.scn.rain.com/pub/text/
 EXTRACT_SUFX=	.shar.Z
@@ -14,10 +15,15 @@ COMMENT=	Text formatter (nroff-clone) written in awk
 EXTRACT_CMD=	${DECOMPRESS_CMD.shar.Z} ${DOWNLOADED_DISTFILE} | ${SED} -e '1,/^\#!/d' | ${SH}
 WRKSRC=		${WRKDIR}
 
+NO_BUILDLINK=	# defined
+NO_TOOLS=	# defined
+NO_WRAPPER=	# defined
+
 SUBST_CLASSES+=		awflib
-SUBST_MESSAGE.awflib=	"Fixing awf library path."
+SUBST_MESSAGE.awflib=	"Fixing awf library path and awk pathname."
 SUBST_FILES.awflib=	Makefile awf awf.1
-SUBST_SED.awflib=	-e 's|/usr/lib/awf|${PREFIX}/share/awf|'
-SUBST_STAGE.awflib=	post-patch
+SUBST_SED.awflib+=	-e 's|/usr/lib/awf|${PREFIX}/share/awf|'
+SUBST_SED.awflib+=	-e 's|@AWK@|${AWK}|g'
+SUBST_STAGE.awflib=	pre-configure
 
 .include "../../mk/bsd.pkg.mk"

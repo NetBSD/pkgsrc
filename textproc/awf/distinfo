@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/04 08:33:59 agc Exp $
+$NetBSD: distinfo,v 1.2 2005/01/18 22:20:08 tv Exp $
 
 SHA1 (nroff-clone.shar.Z) = 4e4527234f97b16f62341b4b844d128b4cabd617
 Size (nroff-clone.shar.Z) = 26302 bytes
 SHA1 (patch-aa) = 486c404fcd90638c59fb3df01eb41ffeb2595982
+SHA1 (patch-ab) = c2574a55bb9a9ab3b79c3a59d639ef534015a45c
