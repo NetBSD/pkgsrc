@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:35:52 agc Exp $
+$NetBSD: patch-ab,v 1.3 2002/07/16 08:56:34 grant Exp $
 
---- unix/Makefile.orig	Wed Nov 19 18:47:29 1997
-+++ unix/Makefile	Wed Nov 19 18:47:43 1997
-@@ -560,7 +560,7 @@
+--- unix/Makefile.orig	Sun Feb 17 04:00:38 2002
++++ unix/Makefile	Wed Jul 17 04:50:03 2002
+@@ -42,7 +42,7 @@
+ # such as -DDOSWILD).
+ 
+ # UnZip flags
+-CC = cc#	try using "gcc" target rather than changing this (CC and LD
++#CC = cc#	try using "gcc" target rather than changing this (CC and LD
+ LD = $(CC)#	must match, else "unresolved symbol:  ___main" is possible)
+ AS = as
+ LOC = $(LOCAL_UNZIP)
+@@ -613,7 +613,7 @@
  bsd:		_bsd	# generic BSD (BSD 4.2 & Ultrix handled in unzip.h)
  
  _bsd:		unix_make
