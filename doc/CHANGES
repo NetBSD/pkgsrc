@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5601 2004/04/16 03:10:48 salo Exp $
+$NetBSD: CHANGES,v 1.5602 2004/04/16 03:44:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1992,3 +1992,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvs to 1.11.15 [wiz 2004-04-15]
 	Updated lftp to 3.0.2 [salo 2004-04-16]
 	Updated ogmtools to 1.4 [salo 2004-04-16]
+	Updated tkgate to 1.6inb2 [minskim 2004-04-16]

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/03/08 20:27:13 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/16 03:44:34 minskim Exp $
 #
 
 DISTNAME=	tkgate-1.6i
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	ftp://gadoid.ices.cmu.edu/pub/tkgate/
 EXTRACT_SUFX=	.tgz
@@ -33,5 +33,5 @@ do-configure:
 	${ECHO} "${TKGATE_SITENAME}" > ${WRKSRC}/sitename.txt
 	( cd ${WRKSRC} && ${CONFIGURE_ENV} ./configure )
 
-.include "../../x11/tk83/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
