@@ -1,0 +1,42 @@
+--- makefile.orig	Thu Jun 18 20:28:34 1998
++++ makefile	Thu Jul 23 07:31:00 1998
+@@ -13,5 +13,12 @@
+ 
++INSTALLROOT= $(PREFIX)
++INSTALLBIN= $(INSTALLROOT)/bin
++SOUNDS= $(INSTALLROOT)/share/xbomber/sounds
++PIXMAPS= $(INSTALLROOT)/share/xbomber/pixmap
++LEVELS= $(INSTALLROOT)/share/xbomber/level
++BITMAPS= $(INSTALLROOT)/share/xbomber/bitmaps
++
+ CC=gcc
+ MATHLIB=-lm
+-CFLAGS=-I/usr/X11/include
++CFLAGS=-I$(PREFIX)/include -DSOUNDS=\"$(SOUNDS)\" -DPIXMAPS=\"$(PIXMAPS)\" -DLEVELS=\"$(LEVELS)\" -DBITMAPS=\"$(BITMAPS)\"
+ 
+@@ -21,3 +28,3 @@
+ # adjust according to target
+-XLIB=-L/usr/X11/lib -lX11
++XLIB=-L$(PREFIX)/lib -lX11
+ 
+@@ -42,5 +49,19 @@
+ 	chmod 755 sounds bitmaps pixmaps sounds/numbers levels
+-	chmod 644 *.c *.h makefile sounds/*.au *.txt \
++	chmod 644 *.c *.h Makefile sounds/*.au *.txt \
+ 		bitmaps/*.xbm pixmaps/*.ppm \
+ 		sounds/numbers/*.au levels/*.dat
++
++install: xbomber
++	install -s -c -o bin -g bin xbomber $(INSTALLBIN)/xbomber
++	mkdir -p $(LEVELS)
++	mkdir -p $(SOUNDS)/numbers
++	mkdir -p $(PIXMAPS)/jungle
++	mkdir -p $(BITMAPS)
++	install -o bin -g bin -m 0644 pixmaps/* $(PIXMAPS)
++	install -o bin -g bin -m 0644 bitmaps/* $(BITMAPS)
++	install -o bin -g bin -m 0644 jungle/* $(PIXMAPS)/jungle
++	install -o bin -g bin -m 0644 sounds/numbers/* $(SOUNDS)/numbers
++	@rm -rf sounds/numbers
++	install -o bin -g bin -m 0644 sounds/* $(SOUNDS)
++	install -o bin -g bin -m 0644 levels/* $(LEVELS)
+ 
