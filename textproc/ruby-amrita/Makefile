@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/03/16 02:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/28 04:22:48 taca Exp $
 # FreeBSD: ports/textproc/ruby-amrita/Makefile,v 1.5 2003/02/18 05:38:23 knu Exp
 #
 
 DISTNAME=	amrita-1.0.2
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc ruby www
 MASTER_SITES=	http://www.brain-tokyo.jp/research/amrita/
 
@@ -11,20 +11,24 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.brain-tokyo.jp/research/amrita/
 COMMENT=	HTML/XHTML template library for Ruby
 
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}strscan>=0.6.5:../../devel/ruby-strscan
+CONFLICTS+=	ruby[1-9][0-9]-amrita-*
 
-NO_BUILD=	# defined
+NO_BUILD=	yes
+DOCS=		ChangeLog README README_ja
+REPLACE_RUBY=	bin/ams bin/amshandler bin/amx
 
-BINS=           bin/ams bin/amshandler bin/amx
-DOCS=           ChangeLog README README_ja
-REPLACE_RUBY=	${BINS}
+.include "../../lang/ruby/rubyversion.mk"
+
+.if ${RUBY_VER} == 16
+DEPENDS+=	${RUBY_PKGPREFIX}-strscan>=0.6.5:../../devel/ruby-strscan
+.endif
 
 post-patch:
 	@${FIND} ${WRKSRC} -name '.cvsignore' -exec ${RM} -f {} \;
 
 do-install:
 	cd ${WRKSRC}; ${RUBY} install.rb
-.for f in ${BINS}
+.for f in ${REPLACE_RUBY}
 	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${PREFIX}/bin
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/amrita
@@ -35,5 +39,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/amrita
 	${CP} -R ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}/amrita
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
