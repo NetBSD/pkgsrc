@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/11/23 08:34:25 martti Exp $
+
+--- doc/Makefile.in.orig	Sun Nov 11 02:52:38 2001
++++ doc/Makefile.in	Fri Nov 23 11:22:33 2001
+@@ -104,7 +104,7 @@
+ XSLT_LIBDIR = @XSLT_LIBDIR@
+ XSLT_LIBS = @XSLT_LIBS@
+ 
+-DOC_MODULE = libxslt-$(VERSION)
++DOC_MODULE = libxslt
+ 
+ # The top-level SGML file.
+ DOC_MAIN_SGML_FILE = libxslt.sgml
