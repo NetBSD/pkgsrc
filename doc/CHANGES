@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5926 2004/05/13 13:00:07 wiz Exp $
+$NetBSD: CHANGES,v 1.5927 2004/05/13 18:32:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2513,3 +2513,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ap-ssl to 2.8.17 [taca 2004-05-13]
 	Updated lha to 114.9nb2 [taca 2004-05-13]
 	Updated freeglut to 2.2.0nb1 [wiz 2004-05-13]
+	Updated imap-uw to 2004 [adam 2004-05-13]
+	Updated pico to 4.7 [adam 2004-05-13]
+	Updated pine to 4.60 [adam 2004-05-13]
