@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/11/25 23:58:25 tron Exp $
+
 --- doc/liboctave/liboctave.texi.orig	Tue May 20 21:42:48 1997
 +++ doc/liboctave/liboctave.texi	Sat Nov 21 00:58:49 1998
 @@ -5,6 +5,14 @@
