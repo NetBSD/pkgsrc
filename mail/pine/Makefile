@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/04/20 11:56:26 frueauf Exp $
+# $NetBSD: Makefile,v 1.12 1998/06/07 19:52:23 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 # Note: If you want to have pine's default behaviour of not allowing
@@ -13,6 +13,8 @@ CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 
 MAINTAINER=	packages@netbsd.org
+
+CONFLICTS=	pico-2.9
 
 MAN1= 		pine.1 pico.1 pilot.1
 
