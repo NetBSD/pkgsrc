@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6346 2004/06/27 08:30:25 grant Exp $
+$NetBSD: CHANGES,v 1.6347 2004/06/27 08:52:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3100,3 +3100,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ghostscript-esp to 7.07.1nb1 [recht 2004-06-27]
 	Added py-feedparser-3.0.1 [schmonz 2004-06-27]
 	Updated fvwm-devel to 2.5.10 [epg 2004-06-27]
+	Updated barcode to version 0.98 [seb 2004-06-27]
