@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/07 03:32:36 taca Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/07 04:10:04 taca Exp $
 # FreeBSD: ports/mail/ruby-tmail/Makefile,v 1.10 2001/01/27 09:46:32 knu Exp
 
 DISTNAME=	tmail-0.10.8
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.loveruby.net/archive/tmail/
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.loveruby.net/en/tmail.html
 COMMENT=	Mail manipulating library for Ruby including MIME multipart support
-
-DEPENDS+= 	${RUBY_PKGNAMEPREFIX}racc-runtime>=1.3.6:../../devel/ruby-racc-runtime
 
 DIST_SUBDIR=	ruby
 
