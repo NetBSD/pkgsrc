@@ -1,23 +1,17 @@
-$NetBSD: patch-an,v 1.1 2002/06/18 02:17:18 itojun Exp $
+$NetBSD: patch-an,v 1.2 2002/06/18 23:58:07 itojun Exp $
 
---- srclib/apr/configure.in-	Tue Jun 18 11:12:46 2002
-+++ srclib/apr/configure.in	Tue Jun 18 11:13:38 2002
-@@ -1450,13 +1450,13 @@
- dnl #----------------------------- Checking for /dev/random 
- AC_MSG_CHECKING(for /dev/random)
- 
--if test -r "/dev/random"; then
--    AC_DEFINE(DEV_RANDOM, [/dev/random])
--    AC_MSG_RESULT(/dev/random)
--    rand="1"
--elif test -r "/dev/urandom"; then
-+if test -r "/dev/urandom"; then
-     AC_DEFINE(DEV_RANDOM, [/dev/urandom])
-     AC_MSG_RESULT(/dev/urandom)
-+    rand="1"
-+elif test -r "/dev/random"; then
-+    AC_DEFINE(DEV_RANDOM, [/dev/random])
-+    AC_MSG_RESULT(/dev/random)
-     rand="1"
- else
-     case $host in
+--with-randomdev=foo does not work.
+
+--- srclib/apr/configure.in-	Wed Jun 19 08:23:52 2002
++++ srclib/apr/configure.in	Wed Jun 19 08:32:09 2002
+@@ -1561,8 +1561,8 @@
+     fi
+   elif test "$apr_devrandom" != "no"; then
+     if test -r "$apr_devrandom"; then
+-      AC_DEFINE(DEV_RANDOM, [$apr_devrandom])
+-      AC_MSG_RESULT($apr_devrandom)
++      AC_DEFINE(DEV_RANDOM, [/dev/urandom])
++      AC_MSG_RESULT([/dev/urandom])
+       rand="1"
+     else
+       AC_ERROR([$apr_devrandom not found or unreadable.])
