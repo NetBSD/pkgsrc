@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/21 01:00:37 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/28 22:44:16 jtb Exp $
 
 DISTNAME=		stalin
 PKGNAME=		stalin-0.8
@@ -25,7 +25,6 @@ post-patch:
 	benchmarks/make-hello benchmarks/make-xhello; do		 \
 	${SED} -e 's:@PREFIX@:'${PREFIX}':g'				 \
 		-e 's:@GC_PREFIX@:'${GC_PREFIX}':g'			 \
-		-e 's:@MESA_PREFIX@:'${MESA_PREFIX}':g'			 \
 		-e 's:@X11BASE@:'${X11BASE}':g' ${WRKSRC}/$$i >		 \
 	${WRKSRC}/$$i.tmp && ${MV} ${WRKSRC}/$$i.tmp ${WRKSRC}/$$i;	 \
 	done
