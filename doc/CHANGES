@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5040 2004/02/29 13:09:04 martti Exp $
+$NetBSD: CHANGES,v 1.5041 2004/02/29 16:42:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1093,3 +1093,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kdelibs to 3.2.0nb1 [markd 2004-02-29]
 	Updated ccgo to 0.3.4 [jmmv 2004-02-29]
 	Updated bins to 1.1.25 [martti 2004-02-29]
+	Updated rhythmbox to 0.6.7 [jmmv 2004-02-29]
