@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.18 2001/11/27 02:07:53 hubertf Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.19 2001/11/28 12:05:20 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1309,4 +1309,10 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_BACKUP=	ftp://sunsite.org.uk/packages/NetBSD/packages/distfiles/ \
 #	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
 
-.include "../../mk/bsd.pkg.obsolete.mk"
+.if exists(${.CURDIR}/../../mk/bsd.pkg.obsolete.mk)
+.include "${.CURDIR}/../../mk/bsd.pkg.obsolete.mk"
+.elif exists(${.CURDIR}/../mk/bsd.pkg.obsolete.mk)
+.include "${.CURDIR}/../mk/bsd.pkg.obsolete.mk"
+.elif exists(${.CURDIR}/mk/bsd.pkg.obsolete.mk)
+.include "${.CURDIR}/mk/bsd.pkg.obsolete.mk"
+.endif
