@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.67 2004/03/12 16:02:33 danw Exp $
+# $NetBSD: defs.Darwin.mk,v 1.68 2004/04/01 03:04:13 danw Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -81,7 +81,6 @@ CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
 DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
-GROUPADD?=		${FALSE}			# XXX - Fix me!
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		${FALSE}
@@ -93,9 +92,14 @@ SERIAL_DEVICES?=	/dev/null
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
-USERADD?=		${FALSE}			# XXX - Fix me!
 
-PKG_CREATE_USERGROUP?=	NO				# XXX - Until then
+GROUPADD?=		${LOCALBASE}/sbin/groupadd
+USERADD?=		${LOCALBASE}/sbin/useradd
+_PKG_USER_HOME?=	/var/empty	# to match other system accounts
+_PKG_USER_SHELL?=	/usr/bin/false	# to match other system accounts
+.if defined(USE_USERADD) || defined(USE_GROUPADD)
+DEPENDS+=	user>=20040331:../../sysutils/user_darwin
+.endif
 
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/Imake.tmpl
