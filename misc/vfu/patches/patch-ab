@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 1999/11/27 23:03:54 rh Exp $
+$NetBSD: patch-ab,v 1.5 2000/05/22 00:49:53 hubertf Exp $
 
---- vfu/vfu.h.orig	Sun Nov 28 00:01:30 1999
-+++ vfu/vfu.h	Sun Nov 28 00:01:31 1999
-@@ -33,6 +33,8 @@
+--- vslib/unicon.cpp.orig	Mon May 22 02:00:33 2000
++++ vslib/unicon.cpp	Mon May 22 02:01:57 2000
+@@ -192,8 +192,6 @@
+   {
+     delwin(conio_scr);
+     endwin();
+-    echo();
+-    nl();
+   };
  
-   #include <vslib.h>
- 
-+  #include "target.h"
-+
-   #ifdef _TARGET_NETBSD_
-     #include <sys/param.h>
-     #include <sys/mount.h>
+   void con_suspend()
