@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2000/12/07 16:56:39 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2000/12/07 16:57:54 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -87,7 +87,6 @@ post-install:
 
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g" \
 		-e "s|@PGUSER@|${PGUSER}|g" \
-		-e "s|@PGHOME@|${PGHOME}|g" \
 		< ${FILESDIR}/pgsql.sh.tmpl > ${WRKDIR}/pgsql.sh
 	${INSTALL} -c -o root -g ${PGGROUP} -m 554 \
 		${WRKDIR}/pgsql.sh ${PREFIX}/etc/rc.d/pgsql
