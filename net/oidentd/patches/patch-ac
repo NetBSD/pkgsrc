@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2004/01/04 11:48:44 tron Exp $
+$NetBSD: patch-ac,v 1.2 2004/01/04 11:53:20 tron Exp $
 
---- src/kernel/netbsd.c.orig	2004-01-04 12:27:05.000000000 +0100
-+++ src/kernel/netbsd.c	2004-01-04 12:46:17.000000000 +0100
+--- src/kernel/netbsd.c.orig	2003-02-12 03:15:59.000000000 +0100
++++ src/kernel/netbsd.c	2004-01-04 12:52:29.000000000 +0100
 @@ -162,7 +162,7 @@
  	if (tcbtablep == NULL)
  		return (NULL);
@@ -25,7 +25,7 @@ $NetBSD: patch-ac,v 1.1 2004/01/04 11:48:44 tron Exp $
  		}
  
 +#if defined(__NetBSD__) && __NetBSD_Version__ >= 106250000	/* 1.6Y */
-+		tcb6_cur = tcb6_temp.in6p_queue.cqe_next;
++		tcb6_cur = (struct in6pcb *) tcb6_temp.in6p_queue.cqe_next;
 +#else
  		tcb6_cur = tcb6_temp.in6p_next;
 +#endif

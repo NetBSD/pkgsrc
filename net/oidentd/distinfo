@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/01/04 11:48:44 tron Exp $
+$NetBSD: distinfo,v 1.3 2004/01/04 11:53:20 tron Exp $
 
 SHA1 (oidentd-2.0.7.tar.gz) = c973b436e6f8cab87b5e2f557e901722e27f1e79
 Size (oidentd-2.0.7.tar.gz) = 196027 bytes
 SHA1 (patch-aa) = b5c82f425fc9f5174dd4efb4c4d13bdf78486beb
 SHA1 (patch-ab) = 264178c5cc79c744354ab228678cb41bdc27b198
-SHA1 (patch-ac) = 20a1d998b98bfae08faf3578abd6fd186a921ee6
+SHA1 (patch-ac) = bf0559a3157af7ffe1a99e07d0c76705fb63f974
