@@ -1,17 +1,22 @@
 Opera is powerful If you use the web for work or for entertainment. Features:
-* specify which cookies you'd like to receive with new filtering and display
-  of third party cookies
-* full featured e-mail with contact database and multiple account functionality
-* open multiple windows without running out of memory
-* navigate entirely with the keyboard -- for more speed
-* open documents in the background without destroying your search engine result
-  listing
-* redirect the output from one window to another
-* toggle images online and per individual window
-* window tabs to track your windows
-* centralized interface for all your user preferences
-* toggle document and user settings
-* add all open documents with just two clicks
-* retrieve all documents in a hotlist folder with just two clicks
-* print preview
-* zoom in and out of the pages
+* Renders HTML 3.2 and 4.0 Pages 
+* Executes most EcmaScript 1.1 (Ecma-262 v.3) programs 
+* Renders CSS 1 and 2 extensions 
+* Browses FTP Sites 
+* Handles cookies 
+* Supports HTTP 1.0 and 1.1 
+* Displays GIF, PNG and JPEG 
+* Hot list, bookmarks and bookmark bar 
+* Imports Netscape, Konqueror and IE bookmarks/favorites 
+* Support for XML 
+* Support for WML (WAP) 
+* Proxy server support 
+* Communication through SSL and TLS 
+* HTTP Authorization 
+* Asynchronous DNS with threading 
+* Support for browsing local files 
+* File transfer 
+* File upload support 
+* Restore window settings 
+* Customizable toolbar icons 
+* Keyboard link navigation 
