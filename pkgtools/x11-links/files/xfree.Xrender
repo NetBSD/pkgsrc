@@ -1,0 +1,9 @@
+# $NetBSD: xfree.Xrender,v 1.1 2003/09/02 07:14:48 jlam Exp $
+#
+include/X11/extensions/Xrender.h
+include/X11/extensions/render.h
+include/X11/extensions/renderproto.h
+lib/libXrender.a
+lib/libXrender.so
+lib/libXrender.so.1
+lib/libXrender.so.1.1
