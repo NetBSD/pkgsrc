@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/03/29 16:15:34 bouyer Exp $
+# $NetBSD: Makefile,v 1.23 1999/04/07 09:18:18 agc Exp $
 
 DISTNAME=	samba-2.0.3
 CATEGORIES=	net
@@ -44,7 +44,7 @@ post-install:
 		${INSTALL_DATA} $$i ${PREFIX}/share/doc/samba/textdocs; \
 	done
 .endif
-	@${ECHO} "Installing ${STARTUP_SCRIPT} startup file.";           \
+	@${ECHO} "Installing ${STARTUP_SCRIPT} startup file.";          \
 	${ECHO} '#!/bin/sh' > ${STARTUP_SCRIPT};                        \
 	${ECHO} 'smbd=${PREFIX}/sbin/smbd' >> ${STARTUP_SCRIPT};        \
 	${ECHO} 'nmbd=${PREFIX}/sbin/nmbd' >> ${STARTUP_SCRIPT};        \
@@ -53,8 +53,8 @@ post-install:
 	${ECHO} '       $$smbd -D' >> ${STARTUP_SCRIPT};                \
 	${ECHO} '       $$nmbd -D' >> ${STARTUP_SCRIPT};                \
 	${ECHO} "fi" >> ${STARTUP_SCRIPT};                              \
-	chmod 755 ${STARTUP_SCRIPT};                                    \
-	chown bin:bin ${STARTUP_SCRIPT};
+	${CHMOD} 755 ${STARTUP_SCRIPT};                                 \
+	${CHOWN} bin:bin ${STARTUP_SCRIPT};
 	@if [ ! -f ${SAMPLE_CONFIG} ]; then                             \
 		${SED} -e 's:__LOGDIR__:${SAMBA_LOGDIR}:g'              \
 		-e 's:__ETCDIR__:${SAMBA_ETCDIR}:g'			\
@@ -65,13 +65,13 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh ${PREFIX}/bin
 	if [ ! -d ${SAMBA_PRIVATE} ] ; then				\
 		${MKDIR} ${SAMBA_PRIVATE} ;				\
-		chown root:wheel ${SAMBA_PRIVATE} ;			\
-		chmod 700 ${SAMBA_PRIVATE} ;				\
+		${CHOWN} ${BINOWN}:${BINGRP} ${SAMBA_PRIVATE} ;		\
+		${CHMOD} 700 ${SAMBA_PRIVATE} ;				\
 	fi
 	if [ ! -f ${SAMBA_PRIVATE}/smbpasswd ] ; then                   \
 		${CAT} /etc/passwd | ${PREFIX}/bin/mksmbpasswd.sh	\
 			> ${SAMBA_PRIVATE}/smbpasswd ;			\
-		chmod 600 ${SAMBA_PRIVATE}/smbpasswd ;                  \
+		${CHMOD} 600 ${SAMBA_PRIVATE}/smbpasswd ;                  \
 	fi
 	${SED} -e 's:__SAMBA_PRIVATE__:${SAMBA_PRIVATE}:g' ${PKGDIR}/PLIST \
 		> ${PLIST_SRC}
