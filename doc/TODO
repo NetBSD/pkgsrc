@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.292 2003/02/21 12:03:30 salo Exp $
+$NetBSD: TODO,v 1.293 2003/02/21 12:04:33 mycroft Exp $
 
 Suggested new packages
 ======================
@@ -144,7 +144,6 @@ Suggested package updates
 	o gtetrinet-0.6.2
 	o gtk---2.2.0
 	o gtk2-pan-0.13.3.93
-	o guile-1.6.3
 	o htmldoc-1.8.23
 	o horde-2.1 [pkg/19497]
 	o horde-2.2
