@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.5 2001/05/24 01:17:28 hubertf Exp $
+
+--- host.defs.orig	Thu May 24 02:50:19 2001
++++ host.defs	Thu May 24 03:04:11 2001
+@@ -477,8 +477,8 @@
+ vendor	: defined(m68k)					: "motorola"
+ vendor	: defined(mac68k)				: "apple"
+ vendor	: defined(pc532)				: "national-semi"
+-vendor	: defined(pmax)	|| defined(mips)		: "dec"
+-vendor	: defined(M_mipsel)				: "dec"
++vendor	: defined(pmax)					: "dec"
++vendor	: defined(mips)					: "mips"
+ vendor	: defined(sparc)				: "sun"
+ vendor	: defined(sun3)					: "sun"
+ vendor	: defined(vax)					: "digital"
