@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 1999/02/10 14:53:34 frueauf Exp $
+
 *** Makefile.old	Wed Jul 17 22:02:20 1991
 --- Makefile	Wed Dec 28 04:39:21 1994
 ***************
