@@ -1,15 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/20 09:55:09 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/21 08:42:34 salo Exp $
 lib/aspell/sk-extend.rws
+lib/aspell/sk-extended.multi
 lib/aspell/sk.multi
 lib/aspell/sk.rws
+lib/aspell/sk_SK-extended.alias
+lib/aspell/sk_SK.alias
+lib/aspell/slovak-extended.alias
 lib/aspell/slovak.alias
 share/aspell/sk.dat
-share/doc/aspell-slovak/AUTHORS
-share/doc/aspell-slovak/CHANGELOG
-share/doc/aspell-slovak/COPYING
-share/doc/aspell-slovak/Copyright
-share/doc/aspell-slovak/README
-share/doc/aspell-slovak/gnu.sk.txt
-share/examples/aspell-slovak/aspell.conf
-@dirrm share/examples/aspell-slovak
-@dirrm share/doc/aspell-slovak
