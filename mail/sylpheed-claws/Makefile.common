@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/03/11 12:23:19 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/06/02 07:56:19 adam Exp $
 #
 
 DISTNAME=	sylpheed-${SYLPHEED_VERSION}claws
@@ -21,4 +21,4 @@ GNU_CONFIGURE=		YES
 # Force gnome detection off to avoid installing some extra files
 CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="no"
 
-SYLPHEED_VERSION=	0.9.10
+SYLPHEED_VERSION=	0.9.11
