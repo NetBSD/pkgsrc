@@ -1,10 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2004/08/27 06:29:06 jlam Exp $
+$NetBSD: patch-ac,v 1.3 2004/10/05 03:53:15 ben Exp $
 
 --- Makefile.in.orig	Tue Feb 11 23:24:56 2003
 +++ Makefile.in
-@@ -7,12 +7,12 @@
+@@ -5,14 +5,14 @@
+ #
+ 
  PREFIX = @prefix@
- CC = @CC@
+-CC = @CC@
++CC = ${LIBTOOL} --mode=compile @CC@
  CFLAGS = @CFLAGS@ -Ipa_common
 -LIBS = @LIBS@
 +LIBS = ${LIBOSSAUDIO} -L@prefix@/lib ${COMPILER_RPATH_FLAG}@prefix@/lib @LIBS@
@@ -17,3 +20,30 @@ $NetBSD: patch-ac,v 1.2 2004/08/27 06:29:06 jlam Exp $
  
  OTHER_OBJS = @OTHER_OBJS@
  
+@@ -57,18 +57,20 @@ all: lib/$(PALIB) lib/$(PADLLV) tests
+ tests: bin/ $(TESTS)
+ 
+ lib/$(PALIB): lib/ $(OBJS) Makefile $(PAINC)
+-	$(AR) ruv lib/$(PALIB) $(OBJS)
+-	$(RANLIB) lib/$(PALIB)
++	${LIBTOOL} --mode=link @CC@ -o lib/${PALIB:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 0:18:0
++#	$(AR) ruv lib/$(PALIB) $(OBJS)
++#	$(RANLIB) lib/$(PALIB)
+ 
+ lib/$(PADLLV): lib/ $(OBJS) Makefile $(PAINC)
+-	$(CC) $(SHARED_FLAGS) -o lib/$(PADLLV) $(OBJS) $(DLL_LIBS)
++#	${LIBTOOL} --mode=link @CC@ $(SHARED_FLAGS) -o lib/$(PADLLV) ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 0:18:0 $(DLL_LIBS)
++#	$(CC) $(SHARED_FLAGS) -o lib/$(PADLLV) $(OBJS) $(DLL_LIBS)
+ 
+ $(TESTS): bin/%: lib/$(PALIB) Makefile $(PAINC) pa_tests/%.c
+-	$(CC) -o $@ $(CFLAGS) pa_tests/$*.c lib/$(PALIB) $(LIBS)
++	${LIBTOOL} --mode=link @CC@ -o $@ $(CFLAGS) pa_tests/$*.c lib/${PALIB:.a=.la} $(LIBS)
+ 
+ install: lib/$(PALIB) lib/$(PADLLV)
+-	$(INSTALL) -m 644 lib/$(PADLLV) $(PREFIX)/lib/$(PADLLV)
+-	$(INSTALL) -m 644 lib/$(PALIB) $(PREFIX)/lib/$(PALIB)
++#	${LIBTOOL} --mode=install $(INSTALL) -m 644 lib/$(PADLLV) $(PREFIX)/lib/$(PADLLV)
++	${LIBTOOL} --mode=install $(INSTALL) -m 644 lib/${PALIB:.a=.la} $(PREFIX)/lib/
+ 	cd $(PREFIX)/lib && rm -f $(PADLL) && ln -s $(PADLLV) $(PADLL)
+ 	$(INSTALL) -m 644 pa_common/portaudio.h $(PREFIX)/include/portaudio.h
+ 	@echo ""
