@@ -1,41 +1,41 @@
-*** js/src/prmjtime.c.orig	Wed Apr 29 20:54:26 1998
---- js/src/prmjtime.c	Sun May 24 22:04:50 1998
+*** js/src/prmjtime.c.orig	Wed Jun  3 09:49:29 1998
+--- js/src/prmjtime.c	Tue Jun 30 15:58:42 1998
 ***************
-*** 287,293 ****
-      PRInt32 diff;
+*** 289,295 ****
       PRInt64  maxtimet;
       struct tm tm;
-! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 )
+      PRMJTime prtm;
+! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined ( SNI )
       struct tm *ptm;
   #endif
-      PRMJTime prtm;
---- 287,293 ----
-      PRInt32 diff;
+  
+--- 289,295 ----
       PRInt64  maxtimet;
       struct tm tm;
-! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined(NETBSD)
+      PRMJTime prtm;
+! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined ( SNI ) || defined( NETBSD )
       struct tm *ptm;
   #endif
-      PRMJTime prtm;
+  
 ***************
-*** 307,313 ****
+*** 308,314 ****
       }
       LL_L2UI(local,time);
       PRMJ_basetime(time,&prtm);
-! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 )
+! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined ( SNI )
       ptm = localtime(&local);
       if(!ptm){
         return LL_ZERO;
---- 307,313 ----
+--- 308,314 ----
       }
       LL_L2UI(local,time);
       PRMJ_basetime(time,&prtm);
-! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined(NETBSD)
+! #if defined( XP_PC ) || defined( FREEBSD ) || defined ( HPUX9 ) || defined ( SNI ) || defined( NETBSD )
       ptm = localtime(&local);
       if(!ptm){
         return LL_ZERO;
-*** cmd/xfe/src/HTMLView.cpp.orig	Wed Apr 29 21:16:45 1998
---- cmd/xfe/src/HTMLView.cpp	Sun May 24 22:00:15 1998
+*** cmd/xfe/src/HTMLView.cpp.orig	Wed Jun  3 10:04:51 1998
+--- cmd/xfe/src/HTMLView.cpp	Tue Jun 30 15:54:55 1998
 ***************
 *** 345,351 ****
     scroller = fe_MakeScrolledWindow (m_contextData, pane, "scroller");
@@ -53,11 +53,11 @@
   				 // Allow for resolutions > 1000 pixels.
   				 // This causes the vertical scrollbar not to show
   				 // up on Solaris 2.4, bug in Motif (77998).  
-*** cmd/xfe/src/context_funcs.cpp.orig	Wed Apr 29 21:16:53 1998
---- cmd/xfe/src/context_funcs.cpp	Sun May 24 22:00:15 1998
+*** cmd/xfe/src/context_funcs.cpp.orig	Wed Jun  3 10:04:58 1998
+--- cmd/xfe/src/context_funcs.cpp	Tue Jun 30 15:54:56 1998
 ***************
-*** 67,72 ****
---- 67,74 ----
+*** 71,76 ****
+--- 71,78 ----
   #define STATFS statfs
   #elif defined(BSDI)
   #include <sys/mount.h>    /* for statfs() */
@@ -66,8 +66,8 @@
   #define STATFS statfs
   #else
   #include <sys/statfs.h>  /* for statfs() */
-*** cmd/xfe/Microline3.0/XmL/Grid.c.orig	Wed Apr 29 21:15:36 1998
---- cmd/xfe/Microline3.0/XmL/Grid.c	Sun May 24 22:00:15 1998
+*** cmd/xfe/Microline3.0/XmL/Grid.c.orig	Wed Jun  3 10:03:33 1998
+--- cmd/xfe/Microline3.0/XmL/Grid.c	Tue Jun 30 15:54:56 1998
 ***************
 *** 30,35 ****
 --- 30,38 ----
@@ -80,11 +80,11 @@
   #include <X11/StringDefs.h>
   #include <X11/cursorfont.h>
   #include <stdio.h>
-*** cmd/xfe/Makefile.orig	Wed Apr 29 21:15:29 1998
---- cmd/xfe/Makefile	Sun May 24 22:00:16 1998
+*** cmd/xfe/Makefile.orig	Wed Jun  3 10:03:22 1998
+--- cmd/xfe/Makefile	Tue Jun 30 15:54:56 1998
 ***************
-*** 488,493 ****
---- 488,507 ----
+*** 536,541 ****
+--- 536,555 ----
   endif
   
   ########################################
@@ -105,11 +105,11 @@
   # BSDI
   ifeq ($(OS_ARCH),BSD_OS)
   OTHER_LIBS	= $(MOTIF)/libXm.a $(LOC_LIB_DIR)/libXt.a $(X11R6LIBS) $(LOC_LIB_DIR)/libXmu.a \
-*** cmd/xfe/mozilla.c.orig	Wed Apr 29 21:15:32 1998
---- cmd/xfe/mozilla.c	Sun May 24 22:05:44 1998
+*** cmd/xfe/mozilla.c.orig	Wed Jun  3 10:03:26 1998
+--- cmd/xfe/mozilla.c	Tue Jun 30 15:54:57 1998
 ***************
-*** 1885,1890 ****
---- 1885,1892 ----
+*** 1890,1895 ****
+--- 1890,1897 ----
   	strcat (buf, "IRIX");
   #elif defined(__FreeBSD__)
   	strcat (buf, "FreeBSD");
@@ -119,7 +119,7 @@
   	strcat (buf, "BSD/386");
   #elif defined(__osf__)
 ***************
-*** 3476,3482 ****
+*** 3496,3502 ****
   
   #else  /* !OLD_UNIX_FILES */
   
@@ -127,7 +127,7 @@
   extern char *sys_errlist[];
   extern int sys_nerr;
   #endif
---- 3478,3484 ----
+--- 3498,3504 ----
   
   #else  /* !OLD_UNIX_FILES */
   
@@ -135,8 +135,8 @@
   extern char *sys_errlist[];
   extern int sys_nerr;
   #endif
-*** cmd/xfe/dialogs.c.orig	Wed Apr 29 21:15:30 1998
---- cmd/xfe/dialogs.c	Sun May 24 22:06:07 1998
+*** cmd/xfe/dialogs.c.orig	Wed Jun  3 10:03:23 1998
+--- cmd/xfe/dialogs.c	Tue Jun 30 15:54:57 1998
 ***************
 *** 239,245 ****
     (void) fe_dialog (parent, "error", message, FALSE, 0, FALSE, FALSE, 0);
@@ -154,8 +154,8 @@
   #include <sys/errno.h>
   extern char *sys_errlist[];
   extern int sys_nerr;
-*** cmd/xfe/movemail.c.orig	Wed Apr 29 21:15:32 1998
---- cmd/xfe/movemail.c	Sun May 24 22:00:16 1998
+*** cmd/xfe/movemail.c.orig	Wed Jun  3 10:03:26 1998
+--- cmd/xfe/movemail.c	Tue Jun 30 15:54:57 1998
 ***************
 *** 40,46 ****
   #include "xfe.h"
@@ -173,8 +173,8 @@
   extern char *sys_errlist[];
   extern int sys_nerr;
   #endif
-*** cmd/xfe/prefdialogs.c.orig	Wed Apr 29 21:15:32 1998
---- cmd/xfe/prefdialogs.c	Sun May 24 22:00:17 1998
+*** cmd/xfe/prefdialogs.c.orig	Wed Jun  3 10:03:26 1998
+--- cmd/xfe/prefdialogs.c	Tue Jun 30 15:54:58 1998
 ***************
 *** 75,81 ****
   
@@ -192,8 +192,8 @@
   extern char *sys_errlist[];
   extern int sys_nerr;
   #endif
-*** cmd/stubfe/Makefile.orig	Wed Apr 29 21:15:27 1998
---- cmd/stubfe/Makefile	Sun May 24 22:00:15 1998
+*** cmd/stubfe/Makefile.orig	Wed Jun  3 10:03:20 1998
+--- cmd/stubfe/Makefile	Tue Jun 30 15:54:58 1998
 ***************
 *** 542,547 ****
 --- 542,553 ----
@@ -209,8 +209,8 @@
   # BSDI
   ifeq ($(OS_ARCH),BSD_OS)
   OTHER_LIBS	= -lm $(OS_LIBS)
-*** dbm/include/mcom_db.h.orig	Wed Apr 29 20:59:11 1998
---- dbm/include/mcom_db.h	Sun May 24 22:00:15 1998
+*** dbm/include/mcom_db.h.orig	Wed Jun  3 09:54:50 1998
+--- dbm/include/mcom_db.h	Tue Jun 30 15:54:58 1998
 ***************
 *** 200,206 ****
   #define	RET_SUCCESS	 0
@@ -228,10 +228,10 @@
   #define	__BIT_TYPES_DEFINED__
   #endif
   
-*** lib/xp/xp_file.c.orig	Wed Apr 29 20:55:26 1998
---- lib/xp/xp_file.c	Sun May 24 22:00:13 1998
+*** lib/xp/xp_file.c.orig	Wed Jun  3 09:50:28 1998
+--- lib/xp/xp_file.c	Tue Jun 30 15:54:58 1998
 ***************
-*** 804,810 ****
+*** 836,842 ****
   	case xpMimeTypes:
   	case xpSocksConfig:
   	case xpMailFolder:
@@ -239,7 +239,7 @@
   	    /* In bsdi, mkdir fails if the directory name is terminated
   	     * with a '/'. - dp
   	     */
---- 804,810 ----
+--- 836,842 ----
   	case xpMimeTypes:
   	case xpSocksConfig:
   	case xpMailFolder:
@@ -247,84 +247,8 @@
   	    /* In bsdi, mkdir fails if the directory name is terminated
   	     * with a '/'. - dp
   	     */
-*** lib/libnet/mkftp.c.orig	Wed Apr 29 20:55:10 1998
---- lib/libnet/mkftp.c	Sun May 24 22:00:13 1998
-***************
-*** 53,59 ****
-  #endif /* XP_OS2 */
-  
-  #ifdef XP_UNIX
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
-  #include <sys/filio.h>
-  #endif
-  #endif /* XP_UNIX */ 
---- 53,59 ----
-  #endif /* XP_OS2 */
-  
-  #ifdef XP_UNIX
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) || defined(__NetBSD__)
-  #include <sys/filio.h>
-  #endif
-  #endif /* XP_UNIX */ 
-*** lib/libnet/mkconect.c.orig	Wed Apr 29 20:55:09 1998
---- lib/libnet/mkconect.c	Sun May 24 22:00:13 1998
-***************
-*** 77,83 ****
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
-  #include <sys/filio.h>
-  #endif
-  
---- 77,83 ----
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) && !defined(__NetBSD__)
-  #include <sys/filio.h>
-  #endif
-  
-*** lib/libnet/mksockrw.c.orig	Wed Apr 29 20:55:12 1998
---- lib/libnet/mksockrw.c	Sun May 24 22:00:13 1998
-***************
-*** 48,54 ****
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
-  #include <sys/filio.h>
-  #endif
-  
---- 48,54 ----
-  
-  #include <resolv.h>
-  
-! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) && !defined(__NetBSD__)
-  #include <sys/filio.h>
-  #endif
-  
-*** lib/libnet/prefetch.c.orig	Wed Apr 29 20:55:12 1998
---- lib/libnet/prefetch.c	Sun May 24 22:00:13 1998
-***************
-*** 177,183 ****
-        }
-  }
-  
-! PRIVATE void
-  pre_Finished(URL_Struct* url_struct, int status, MWContext* context)
-  {
-  	/* this should change to update the colors of 
---- 177,183 ----
-        }
-  }
-  
-! MODULE_PRIVATE void
-  pre_Finished(URL_Struct* url_struct, int status, MWContext* context)
-  {
-  	/* this should change to update the colors of 
-*** nsprpub/pr/src/md/unix/Makefile.orig	Wed Apr 29 20:58:18 1998
---- nsprpub/pr/src/md/unix/Makefile	Sun May 24 22:00:14 1998
+*** nsprpub/pr/src/md/unix/Makefile.orig	Wed Jun  3 09:54:11 1998
+--- nsprpub/pr/src/md/unix/Makefile	Tue Jun 30 15:55:21 1998
 ***************
 *** 57,62 ****
 --- 57,66 ----
@@ -339,8 +263,8 @@
   	bsdi.c \
   	$(NULL)
 ***************
-*** 118,123 ****
---- 122,130 ----
+*** 122,127 ****
+--- 126,134 ----
   endif
   ifeq ($(OS_ARCH),FreeBSD)
   CSRCS += $(FREEBSD_CSRCS)
@@ -350,8 +274,8 @@
   endif
   ifeq ($(OS_ARCH),BSD_OS)
   CSRCS += $(BSDI_CSRCS)
-*** nsprpub/pr/src/md/unix/objs.mk.orig	Wed Apr 29 20:58:18 1998
---- nsprpub/pr/src/md/unix/objs.mk	Sun May 24 22:00:14 1998
+*** nsprpub/pr/src/md/unix/objs.mk.orig	Wed Jun  3 09:54:11 1998
+--- nsprpub/pr/src/md/unix/objs.mk	Tue Jun 30 15:55:21 1998
 ***************
 *** 49,54 ****
 --- 49,58 ----
@@ -366,8 +290,8 @@
   	bsdi.c \
   	$(NULL)
 ***************
-*** 111,116 ****
---- 115,123 ----
+*** 115,120 ****
+--- 119,127 ----
   endif
   ifeq ($(OS_ARCH),FreeBSD)
   CSRCS += $(FREEBSD_CSRCS)
@@ -377,11 +301,11 @@
   endif
   ifeq ($(OS_ARCH),BSD_OS)
   CSRCS += $(BSDI_CSRCS)
-*** nsprpub/pr/src/md/unix/unix.c.orig	Wed Apr 29 20:58:19 1998
---- nsprpub/pr/src/md/unix/unix.c	Sun May 24 22:00:14 1998
+*** nsprpub/pr/src/md/unix/unix.c.orig	Wed Jun  3 09:54:11 1998
+--- nsprpub/pr/src/md/unix/unix.c	Tue Jun 30 15:55:22 1998
 ***************
 *** 48,54 ****
-      || defined(SUNOS4) || defined(NCR)
+      || defined(SUNOS4) || defined(NCR) || defined(RHAPSODY)
   #define _PRSockLen_t int
   #elif (defined(AIX) && !defined(AIX4_1)) || defined(FREEBSD) \
 !     || defined(UNIXWARE)
@@ -389,21 +313,21 @@
   #else
   #error "Cannot determine architecture"
 --- 48,54 ----
-      || defined(SUNOS4) || defined(NCR)
+      || defined(SUNOS4) || defined(NCR) || defined(RHAPSODY)
   #define _PRSockLen_t int
   #elif (defined(AIX) && !defined(AIX4_1)) || defined(FREEBSD) \
 !     || defined(UNIXWARE) || defined(NETBSD)
   #define _PRSockLen_t size_t
   #else
   #error "Cannot determine architecture"
-*** nsprpub/pr/src/md/unix/unix_errors.c.orig	Wed Apr 29 20:58:19 1998
---- nsprpub/pr/src/md/unix/unix_errors.c	Sun May 24 22:00:14 1998
+*** nsprpub/pr/src/md/unix/unix_errors.c.orig	Wed Jun  3 09:54:11 1998
+--- nsprpub/pr/src/md/unix/unix_errors.c	Tue Jun 30 16:10:32 1998
 ***************
 *** 160,166 ****
   		case EROFS:
   			PR_SetError(PR_READ_ONLY_FILESYSTEM_ERROR, err);
   			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY)
   		case EMULTIHOP:
   		case ENOLINK:
   			PR_SetError(PR_REMOTE_FILE_ERROR, err);
@@ -411,7 +335,7 @@
   		case EROFS:
   			PR_SetError(PR_READ_ONLY_FILESYSTEM_ERROR, err);
   			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY) && !defined(NETBSD)
   		case EMULTIHOP:
   		case ENOLINK:
   			PR_SetError(PR_REMOTE_FILE_ERROR, err);
@@ -420,7 +344,7 @@
   			PR_SetError(PR_PENDING_INTERRUPT_ERROR, err);
   			break;
   		case ETIMEDOUT:
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY)
   		case EMULTIHOP:
   		case ENOLINK:
   #endif
@@ -428,7 +352,7 @@
   			PR_SetError(PR_PENDING_INTERRUPT_ERROR, err);
   			break;
   		case ETIMEDOUT:
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY) && !defined(NETBSD)
   		case EMULTIHOP:
   		case ENOLINK:
   #endif
@@ -437,7 +361,7 @@
   		case ELOOP:
   			PR_SetError(PR_LOOP_ERROR, err);
   			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY)
   		case EMULTIHOP:
   		case ENOLINK:
   			PR_SetError(PR_REMOTE_FILE_ERROR, err);
@@ -445,7 +369,7 @@
   		case ELOOP:
   			PR_SetError(PR_LOOP_ERROR, err);
   			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY) && !defined(NETBSD)
   		case EMULTIHOP:
   		case ENOLINK:
   			PR_SetError(PR_REMOTE_FILE_ERROR, err);
@@ -454,7 +378,7 @@
   		case ELOOP:
   			PR_SetError(PR_LOOP_ERROR, err);
   			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY)
   		case EMULTIHOP:
   		case ENOLINK:
   #endif
@@ -462,7 +386,7 @@
   		case ELOOP:
   			PR_SetError(PR_LOOP_ERROR, err);
   			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY) && !defined(NETBSD)
   		case EMULTIHOP:
   		case ENOLINK:
   #endif
@@ -471,7 +395,7 @@
   		case EIO:
   			PR_SetError(PR_IO_ERROR, err);
   			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY)
   		case EMULTIHOP:
   		case ENOLINK:
   			PR_SetError(PR_REMOTE_FILE_ERROR, err);
@@ -479,7 +403,7 @@
   		case EIO:
   			PR_SetError(PR_IO_ERROR, err);
   			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY) && !defined(NETBSD)
   		case EMULTIHOP:
   		case ENOLINK:
   			PR_SetError(PR_REMOTE_FILE_ERROR, err);
@@ -488,7 +412,7 @@
   		case ELOOP:
   			PR_SetError(PR_LOOP_ERROR, err);
   			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY)
   		case EMULTIHOP:
   		case ENOLINK:
   #endif
@@ -496,7 +420,7 @@
   		case ELOOP:
   			PR_SetError(PR_LOOP_ERROR, err);
   			break;
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY) && !defined(NETBSD)
   		case EMULTIHOP:
   		case ENOLINK:
   #endif
@@ -505,7 +429,7 @@
   			PR_SetError(PR_NO_ACCESS_RIGHTS_ERROR, err);
   			break;
   		case ETIMEDOUT:
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY)
   		case EMULTIHOP:
   		case ENOLINK:
   #endif
@@ -513,12 +437,12 @@
   			PR_SetError(PR_NO_ACCESS_RIGHTS_ERROR, err);
   			break;
   		case ETIMEDOUT:
-! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(NETBSD)
+! #if !defined(OSF1) && !defined(FREEBSD) && !defined(BSDI) && !defined(RHAPSODY) && !defined(NETBSD)
   		case EMULTIHOP:
   		case ENOLINK:
   #endif
-*** nsprpub/pr/src/md/unix/uxwrap.c.orig	Wed Apr 29 20:58:19 1998
---- nsprpub/pr/src/md/unix/uxwrap.c	Sun May 24 22:00:14 1998
+*** nsprpub/pr/src/md/unix/uxwrap.c.orig	Wed Jun  3 09:54:11 1998
+--- nsprpub/pr/src/md/unix/uxwrap.c	Tue Jun 30 15:55:22 1998
 ***************
 *** 324,329 ****
 --- 324,331 ----
@@ -530,8 +454,8 @@
   #else
   int poll(struct pollfd *filedes, unsigned long nfds, int timeout)
   #endif
-*** nsprpub/pr/src/md/unix/netbsd.c.orig	Sun May 24 22:00:14 1998
---- nsprpub/pr/src/md/unix/netbsd.c	Sun May 24 22:00:14 1998
+*** nsprpub/pr/src/md/unix/netbsd.c.orig	Tue Jun 30 15:55:22 1998
+--- nsprpub/pr/src/md/unix/netbsd.c	Tue Jun 30 15:55:22 1998
 ***************
 *** 0 ****
 --- 1,102 ----
@@ -637,14 +561,14 @@
 + 	return PR_FAILURE;
 + }
 + #endif /* ! _PR_PTHREADS */
-*** nsprpub/pr/src/md/prosdep.c.orig	Wed Apr 29 20:58:15 1998
---- nsprpub/pr/src/md/prosdep.c	Sun May 24 22:00:14 1998
+*** nsprpub/pr/src/md/prosdep.c.orig	Wed Jun  3 09:54:08 1998
+--- nsprpub/pr/src/md/prosdep.c	Tue Jun 30 16:12:37 1998
 ***************
 *** 42,48 ****
       /* Get page size */
   #ifdef XP_UNIX
   #if defined SUNOS4 || defined LINUX || defined BSDI || defined AIX \
-! 	|| defined FREEBSD
+! 	|| defined FREEBSD || defined RHAPSODY
       _pr_pageSize = getpagesize();
   #elif defined(HPUX)
       /* I have no idea. Don't get me started. --Rob */
@@ -652,12 +576,12 @@
       /* Get page size */
   #ifdef XP_UNIX
   #if defined SUNOS4 || defined LINUX || defined BSDI || defined AIX \
-! 	|| defined FREEBSD || defined NETBSD
+! 	|| defined FREEBSD || defined RHAPSODY || defined(NETBSD)
       _pr_pageSize = getpagesize();
   #elif defined(HPUX)
       /* I have no idea. Don't get me started. --Rob */
-*** nsprpub/pr/src/pthreads/ptio.c.orig	Wed Apr 29 20:58:25 1998
---- nsprpub/pr/src/pthreads/ptio.c	Sun May 24 22:00:14 1998
+*** nsprpub/pr/src/pthreads/ptio.c.orig	Wed Jun  3 09:54:15 1998
+--- nsprpub/pr/src/pthreads/ptio.c	Tue Jun 30 15:55:22 1998
 ***************
 *** 75,81 ****
   #elif defined(IRIX) || (defined(AIX) && !defined(AIX4_1)) \
@@ -692,8 +616,8 @@
   #define _PR_FCNTL_FLAGS O_NONBLOCK
   #else
   #error "Can't determine architecture"
-*** nsprpub/pr/src/pthreads/ptthread.c.orig	Wed Apr 29 20:58:25 1998
---- nsprpub/pr/src/pthreads/ptthread.c	Sun May 24 22:07:22 1998
+*** nsprpub/pr/src/pthreads/ptthread.c.orig	Wed Jun  3 09:54:15 1998
+--- nsprpub/pr/src/pthreads/ptthread.c	Tue Jun 30 15:55:23 1998
 ***************
 *** 194,204 ****
   
@@ -787,27 +711,8 @@
           PRIntn rv;
   	    sigwait(&sigwait_set, &rv);
   #endif
-*** nsprpub/pr/src/linking/prlink.c.orig	Wed Apr 29 20:58:08 1998
---- nsprpub/pr/src/linking/prlink.c	Sun May 24 22:00:14 1998
-***************
-*** 75,81 ****
-  
-  /************************************************************************/
-  
-! #if ( !defined(USE_DLFCN) && !defined(HAVE_STRERROR) ) || defined(HPUX) || defined(BSDI) || defined(LINUX)
-  static char* errStrBuf = NULL;
-  #define ERR_STR_BUF_LENGTH	20
-  static char* errno_string(PRIntn oserr)
---- 75,81 ----
-  
-  /************************************************************************/
-  
-! #if ( !defined(USE_DLFCN) && !defined(HAVE_STRERROR) ) || defined(HPUX) || defined(BSDI) || defined(LINUX) || defined(NETBSD)
-  static char* errStrBuf = NULL;
-  #define ERR_STR_BUF_LENGTH	20
-  static char* errno_string(PRIntn oserr)
-*** nsprpub/pr/include/md/_pth.h.orig	Wed Apr 29 20:58:01 1998
---- nsprpub/pr/include/md/_pth.h	Sun May 24 22:07:59 1998
+*** nsprpub/pr/include/md/_pth.h.orig	Wed Jun  3 09:54:00 1998
+--- nsprpub/pr/include/md/_pth.h	Tue Jun 30 15:55:23 1998
 ***************
 *** 69,75 ****
   	(!memcmp(&(t), &pt_zero_tid, sizeof(pthread_t)))
@@ -895,8 +800,8 @@
   #define PTHREAD_YIELD()                 pthread_yield()
   #else
   #error "Need to define PTHREAD_YIELD for this platform"
-*** nsprpub/pr/include/md/prosdep.h.orig	Wed Apr 29 20:58:01 1998
---- nsprpub/pr/include/md/prosdep.h	Sun May 24 22:00:13 1998
+*** nsprpub/pr/include/md/prosdep.h.orig	Wed Jun  3 09:54:00 1998
+--- nsprpub/pr/include/md/prosdep.h	Tue Jun 30 15:55:23 1998
 ***************
 *** 59,64 ****
 --- 59,67 ----
@@ -909,8 +814,8 @@
   #elif defined(BSDI)
   #include "md/_bsdi.h"
   
-*** nsprpub/pr/include/md/_netbsd.cfg.orig	Sun May 24 23:32:44 1998
---- nsprpub/pr/include/md/_netbsd.cfg	Sun May 24 22:00:41 1998
+*** nsprpub/pr/include/md/_netbsd.cfg.orig	Tue Jun 30 15:55:23 1998
+--- nsprpub/pr/include/md/_netbsd.cfg	Tue Jun 30 15:55:23 1998
 ***************
 *** 0 ****
 --- 1,262 ----
@@ -1176,11 +1081,11 @@
 + #endif /* NO_NSPR_10_SUPPORT */
 + 
 + #endif /* nspr_cpucfg___ */
-*** nsprpub/pr/include/md/_netbsd.h.orig	Sun May 24 23:32:50 1998
---- nsprpub/pr/include/md/_netbsd.h	Sun May 24 22:00:41 1998
+*** nsprpub/pr/include/md/_netbsd.h.orig	Tue Jun 30 15:55:23 1998
+--- nsprpub/pr/include/md/_netbsd.h	Tue Jun 30 18:15:37 1998
 ***************
 *** 0 ****
---- 1,169 ----
+--- 1,168 ----
 + /* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
 + /*
 +  * The contents of this file are subject to the Netscape Public License
@@ -1346,12 +1251,11 @@
 + 
 + #if defined(NetBSD1_3) && NetBSD1_3 == 1
 + typedef unsigned int nfds_t;
-+ #define O_SYNC O_FSYNC
 + #endif
 + 
 + #endif /* nspr_netbsd_defs_h___ */
-*** nsprpub/pr/include/md/Makefile.orig	Wed Apr 29 20:58:01 1998
---- nsprpub/pr/include/md/Makefile	Sun May 24 22:00:13 1998
+*** nsprpub/pr/include/md/Makefile.orig	Wed Jun  3 09:53:59 1998
+--- nsprpub/pr/include/md/Makefile	Tue Jun 30 15:55:23 1998
 ***************
 *** 55,60 ****
 --- 55,64 ----
@@ -1365,14 +1269,14 @@
   ifeq ($(OS_ARCH),HP-UX)
   MDCPUCFG_H = _hpux.cfg
   endif
-*** nsprpub/pr/include/md/_unixos.h.orig	Wed Apr 29 20:58:01 1998
---- nsprpub/pr/include/md/_unixos.h	Sun May 24 22:00:13 1998
+*** nsprpub/pr/include/md/_unixos.h.orig	Wed Jun  3 09:54:00 1998
+--- nsprpub/pr/include/md/_unixos.h	Tue Jun 30 16:13:15 1998
 ***************
 *** 49,55 ****
           || defined(UNIXWARE) || defined(NCR) || defined(SNI) || defined(NEC) \
           || defined(BSDI) || defined(SONY)
   #include <sys/select.h>
-! #elif defined(SUNOS4) || defined(SCO) || defined(FREEBSD)
+! #elif defined(SUNOS4) || defined(SCO) || defined(FREEBSD) || defined(RHAPSODY)
   #include <sys/types.h>
   #elif defined(LINUX)
   #include <sys/time.h>
@@ -1380,12 +1284,12 @@
           || defined(UNIXWARE) || defined(NCR) || defined(SNI) || defined(NEC) \
           || defined(BSDI) || defined(SONY)
   #include <sys/select.h>
-! #elif defined(SUNOS4) || defined(SCO) || defined(FREEBSD) || defined(NETBSD)
+! #elif defined(SUNOS4) || defined(SCO) || defined(FREEBSD) || defined(RHAPSODY) || defined(NETBSD)
   #include <sys/types.h>
   #elif defined(LINUX)
   #include <sys/time.h>
-*** nsprpub/config/UNIX.mk.orig	Wed Apr 29 20:57:38 1998
---- nsprpub/config/UNIX.mk	Sun May 24 23:11:32 1998
+*** nsprpub/config/UNIX.mk.orig	Wed Jun  3 09:53:39 1998
+--- nsprpub/config/UNIX.mk	Sat Jul  4 14:17:59 1998
 ***************
 *** 32,38 ****
   endif
@@ -1399,12 +1303,12 @@
   endif
   
   # Name of the binary code directories
-! OBJDIR_NAME	= NetBSD1.3E_OPT.OBJ
+! OBJDIR_NAME	= NetBSD1.3.2_OPT.OBJ
   
   MKDEPEND_DIR    = $(DEPTH)/config/mkdepend
   MKDEPEND 	= $(MKDEPEND_DIR)/$(OBJDIR_NAME)/mkdepend
-*** nsprpub/config/NetBSD.mk.orig	Sun May 24 22:00:13 1998
---- nsprpub/config/NetBSD.mk	Sun May 24 22:00:13 1998
+*** nsprpub/config/NetBSD.mk.orig	Tue Jun 30 15:55:24 1998
+--- nsprpub/config/NetBSD.mk	Tue Jun 30 15:55:24 1998
 ***************
 *** 0 ****
 --- 1,58 ----
@@ -1466,8 +1370,8 @@
 + MKSHLIB			= $(LD) $(DSO_LDOPTS)
 + 
 + G++INCLUDES		= -I/usr/include/g++
-*** include/mcom_db.h.orig	Wed Apr 29 20:53:35 1998
---- include/mcom_db.h	Sun May 24 22:00:12 1998
+*** include/mcom_db.h.orig	Wed Jun  3 09:48:08 1998
+--- include/mcom_db.h	Tue Jun 30 15:55:24 1998
 ***************
 *** 224,230 ****
   #define	RET_SUCCESS	 0
@@ -1485,8 +1389,8 @@
   #define	__BIT_TYPES_DEFINED__
   #endif
   
-*** modules/schedulr/src/Makefile.orig	Wed Apr 29 20:56:51 1998
---- modules/schedulr/src/Makefile	Sun May 24 22:00:13 1998
+*** modules/schedulr/src/Makefile.orig	Wed Jun  3 09:52:16 1998
+--- modules/schedulr/src/Makefile	Tue Jun 30 15:55:24 1998
 ***************
 *** 17,24 ****
   
@@ -1506,8 +1410,8 @@
   
   REQUIRES	= nspr util
   
-*** modules/libreg/src/vr_stubs.h.orig	Wed Apr 29 20:56:24 1998
---- modules/libreg/src/vr_stubs.h	Sun May 24 22:00:13 1998
+*** modules/libreg/src/vr_stubs.h.orig	Wed Jun  3 09:51:45 1998
+--- modules/libreg/src/vr_stubs.h	Tue Jun 30 15:55:24 1998
 ***************
 *** 29,35 ****
   #ifdef XP_MAC
@@ -1525,27 +1429,103 @@
   #include <sys/types.h>
   #endif
   #include <sys/stat.h>
-*** sun-java/stubs/include/typedefs_md.h.orig	Wed Apr 29 21:03:22 1998
---- sun-java/stubs/include/typedefs_md.h	Sun May 24 22:11:50 1998
+*** network/main/mkconect.c.orig	Wed Jun  3 09:53:17 1998
+--- network/main/mkconect.c	Tue Jun 30 16:05:33 1998
 ***************
-*** 38,44 ****
+*** 80,86 ****
+  
+  #include <resolv.h>
+  
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
+  #include <sys/filio.h>
+  #endif
+  
+--- 80,86 ----
+  
+  #include <resolv.h>
+  
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) && !defined(__NetBSD__)
+  #include <sys/filio.h>
+  #endif
+  
+*** network/main/mksockrw.c.orig	Wed Jun  3 09:53:18 1998
+--- network/main/mksockrw.c	Tue Jun 30 16:06:17 1998
+***************
+*** 47,53 ****
+  
+  #include <resolv.h>
+  
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
+  #include <sys/filio.h>
+  #endif
+  
+--- 47,53 ----
+  
+  #include <resolv.h>
+  
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) && !defined(__NetBSD__)
+  #include <sys/filio.h>
+  #endif
+  
+*** network/main/prefetch.c.orig	Wed Jun  3 09:53:19 1998
+--- network/main/prefetch.c	Tue Jun 30 16:06:48 1998
+***************
+*** 177,183 ****
+        }
+  }
+  
+! PRIVATE void
+  pre_Finished(URL_Struct* url_struct, int status, MWContext* context)
+  {
+  	/* this should change to update the colors of 
+--- 177,183 ----
+        }
+  }
+  
+! MODULE_PRIVATE void
+  pre_Finished(URL_Struct* url_struct, int status, MWContext* context)
+  {
+  	/* this should change to update the colors of 
+*** network/protocol/ftp/mkftp.c.orig	Wed Jun  3 09:53:27 1998
+--- network/protocol/ftp/mkftp.c	Tue Jun 30 16:03:46 1998
+***************
+*** 60,66 ****
+  #endif /* XP_OS2 */
+  
+  #ifdef XP_UNIX
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV)
+  #include <sys/filio.h>
+  #endif
+  #endif /* XP_UNIX */ 
+--- 60,66 ----
+  #endif /* XP_OS2 */
+  
+  #ifdef XP_UNIX
+! #if !defined(__osf__) && !defined(AIXV3) && !defined(_HPUX_SOURCE) && !defined(__386BSD__) && !defined(__linux) && !defined(SCO_SV) || defined(__NetBSD__)
+  #include <sys/filio.h>
+  #endif
+  #endif /* XP_UNIX */ 
+*** sun-java/stubs/include/typedefs_md.h.orig	Wed Jun  3 09:58:37 1998
+--- sun-java/stubs/include/typedefs_md.h	Tue Jun 30 16:13:58 1998
+***************
+*** 43,49 ****
   
   typedef prword_t uintVP_t; /* unsigned that is same size as a void pointer */
   
-! #if !defined(BSDI) && !defined(IRIX6_2) && !defined(IRIX6_3) && !defined(LINUX2_0) && !defined(MKLINUX) && !defined(SOLARIS2_6) && !defined(HPUX10_20) && !defined(HPUX10_30) && !defined(HPUX11)
+! #if !defined(BSDI) && !defined(IRIX6_2) && !defined(IRIX6_3) && !defined(LINUX) && !defined(SOLARIS2_6) && !defined(HPUX10_20) && !defined(HPUX10_30) && !defined(HPUX11) && !defined(RHAPSODY)
   typedef int64 int64_t;
   #else
   /*
---- 38,44 ----
+--- 43,49 ----
   
   typedef prword_t uintVP_t; /* unsigned that is same size as a void pointer */
   
-! #if !defined(BSDI) && !defined(IRIX6_2) && !defined(IRIX6_3) && !defined(LINUX2_0) && !defined(MKLINUX) && !defined(SOLARIS2_6) && !defined(HPUX10_20) && !defined(HPUX10_30) && !defined(HPUX11) && !defined(NETBSD)
+! #if !defined(BSDI) && !defined(IRIX6_2) && !defined(IRIX6_3) && !defined(LINUX) && !defined(SOLARIS2_6) && !defined(HPUX10_20) && !defined(HPUX10_30) && !defined(HPUX11) && !defined(RHAPSODY) && !defined(NETBSD)
   typedef int64 int64_t;
   #else
   /*
-*** config/NetBSD.mk.orig	Sun May 24 23:33:28 1998
---- config/NetBSD.mk	Sun May 24 22:00:51 1998
+*** config/NetBSD.mk.orig	Tue Jun 30 15:55:25 1998
+--- config/NetBSD.mk	Sat Jul  4 14:05:18 1998
 ***************
 *** 0 ****
 --- 1,107 ----
@@ -1589,7 +1569,7 @@
 + MOTIFLIB		=
 + OS_LIBS			=
 + 
-+ OS_MINOR		= $(shell echo $(OS_VERSION) | cut -f2 -d.)
++ OS_MINOR		= $(shell uname -r | cut -f2 -d.)
 + 
 + # Don't define BSD, because it's already defined in /usr/include/sys/param.h.
 + PLATFORM_FLAGS		= -DNETBSD $(DSO_CFLAGS)
@@ -1656,8 +1636,8 @@
 + ifeq ($(OS_TEST),pmax)
 + DSO_LDOPTS		= -shared
 + endif
-*** config/rules.mk.orig	Wed Apr 29 21:02:19 1998
---- config/rules.mk	Sun May 24 22:00:17 1998
+*** config/rules.mk.orig	Wed Jun  3 09:57:41 1998
+--- config/rules.mk	Tue Jun 30 15:55:25 1998
 ***************
 *** 102,107 ****
 --- 102,110 ----
@@ -1680,8 +1660,8 @@
   endif
   endif
   endif
-*** config/config.mk.orig	Wed Apr 29 21:02:18 1998
---- config/config.mk	Sun May 24 22:00:17 1998
+*** config/config.mk.orig	Wed Jun  3 09:57:39 1998
+--- config/config.mk	Tue Jun 30 15:55:25 1998
 ***************
 *** 83,89 ****
   # but save the version to allow multiple versions of the same base
