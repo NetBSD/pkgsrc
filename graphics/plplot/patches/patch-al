@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2001/01/29 01:15:35 jtb Exp $
+$NetBSD: patch-al,v 1.2 2001/02/14 11:19:17 jtb Exp $
 
---- cf/pkg_tk.in.orig	Fri Jan 12 23:34:22 2001
+--- cf/pkg_tk.in.orig	Wed Feb 14 07:53:54 2001
 +++ cf/pkg_tk.in
 @@ -22,28 +22,27 @@
  # Targets
@@ -32,7 +32,7 @@ $NetBSD: patch-al,v 1.1 2001/01/29 01:15:35 jtb Exp $
  install_tk_demos:
 -	@-if test ! -d $(DEMOS_DIR)/tk; then mkdir -p $(DEMOS_DIR)/tk; fi; \
 +	-$(BSD_INSTALL_DATA_DIR) $(DEMOS_DIR)/tk; \
- 	  $(LN) $(DEMOS_DIR)/Makefile $(DEMOS_DIR)/tk; \
+ 	  $(LN) ../Makefile $(DEMOS_DIR)/tk; \
 -	  cd $(top_srcdir)/examples/tk; $(CP) $(TK_DEMOS) $(DEMOS_DIR)/tk ; \
 +	  cd $(top_srcdir)/examples/tk; $(BSD_INSTALL_DATA) $(TK_DEMOS) $(DEMOS_DIR)/tk ; \
  	  cd $(DEMOS_DIR)/tk ; \
