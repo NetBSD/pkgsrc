@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/22 16:44:18 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/22 16:46:51 jlam Exp $
 #
 # This Makefile fragment is included by packages that use mng.
 #
@@ -22,6 +22,10 @@ BUILDLINK_FILES.mng=	include/libmng.h
 BUILDLINK_FILES.mng+=	include/libmng_conf.h
 BUILDLINK_FILES.mng+=	include/libmng_types.h
 BUILDLINK_FILES.mng+=	lib/libmng.*
+
+.include "../../devel/zlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/lcms/buildlink.mk"
 
 BUILDLINK_TARGETS.mng=	mng-buildlink
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.mng}
