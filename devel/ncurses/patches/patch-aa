@@ -1,47 +1,75 @@
-$NetBSD: patch-aa,v 1.7 1999/07/06 07:51:04 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2000/01/15 18:39:29 jlam Exp $
 
---- progs/Makefile.in.orig	Wed Feb 11 07:14:03 1998
-+++ progs/Makefile.in	Tue Jun 29 08:59:34 1999
-@@ -84,7 +84,7 @@
- CFLAGS_DEFAULT	= $(CFLAGS_@DFT_UPR_MODEL@)
+--- c++/Makefile.in.orig	Sat Oct 23 16:13:02 1999
++++ c++/Makefile.in	Sat Jan 15 11:24:46 2000
+@@ -74,13 +74,13 @@
+ REL_VERSION     = @cf_cv_rel_version@
+ ABI_VERSION	= @cf_cv_abi_version@
  
- LD		= @LD@
--LINK		= $(CC)
-+LINK		= $(LIBTOOL) --mode=link $(CC)
- LDFLAGS		= @EXTRA_LDFLAGS@ \
- 		@PROG_ARGS@ @LDFLAGS@ @LD_MODEL@ @LIBS@ @EXTRA_LIBS@
+-LINK		= @LINK_PROGS@ $(CXX) @CXXLDFLAGS@
++LINK		= @LINK_PROGS@ --cplusplus $(CXX) @CXXLDFLAGS@
  
-@@ -102,7 +102,7 @@
- AUTO_SRC = \
- 	termsort.c
+ LIBROOT	= ncurses++
+-LIBNAME	= @LIB_PREFIX@$(LIBROOT).a
++LIBNAME	= @LIB_PREFIX@$(LIBROOT).la
  
--PROGS = tic$x toe$x infocmp$x clear$x tput$x tset$x
-+PROGS = tic$x toe$x infocmp$x
+-LDFLAGS		= @EXTRA_LDFLAGS@ -L../lib -L$(libdir) \
+-	-l$(LIBROOT) \
++LDFLAGS		= @EXTRA_LDFLAGS@ -L$(libdir) \
++	$(LIBNAME) \
+ 	@TEST_ARGS@ @LDFLAGS@ \
+ 	@LD_MODEL@ @LIBS@ @EXTRA_LIBS@ @LOCAL_LDFLAGS@ $(CXXLIBS)
  
- TESTPROGS = mvcur$x tctest$x hardscroll$x hashmap$x
+@@ -94,7 +94,7 @@
+ AUTO_SRC	= \
+ 		etip.h
  
-@@ -122,21 +122,15 @@
- uninstall.libs:
+-all:		$(AUTO_SRC) ../lib/$(LIBNAME) demo$x
++all:		$(AUTO_SRC) $(LIBNAME) demo$x
  
- install.progs: $(PROGS) $(INSTALL_PREFIX)$(bindir)
--	$(INSTALL_PROGRAM) tic$x     $(INSTALL_PREFIX)$(bindir)/tic$x
--	$(INSTALL_PROGRAM) toe$x     $(INSTALL_PREFIX)$(bindir)/toe$x
--	$(INSTALL_PROGRAM) infocmp$x $(INSTALL_PREFIX)$(bindir)/infocmp$x
--	$(INSTALL_PROGRAM) clear$x   $(INSTALL_PREFIX)$(bindir)/clear$x
--	$(INSTALL_PROGRAM) tput$x    $(INSTALL_PREFIX)$(bindir)/tput$x
--	$(INSTALL_PROGRAM) tset$x    $(INSTALL_PREFIX)$(bindir)/tset$x
-+	$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) tic$x     $(INSTALL_PREFIX)$(bindir)/tic$x
-+	$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) toe$x     $(INSTALL_PREFIX)$(bindir)/toe$x
-+	$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) infocmp$x $(INSTALL_PREFIX)$(bindir)/infocmp$x
- 	@echo "linking captoinfo to tic"
- 	-@rm -f $(INSTALL_PREFIX)$(bindir)/captoinfo$x
- 	(cd $(INSTALL_PREFIX)$(bindir) && $(LN_S) tic$x captoinfo$x)
- 	@echo "linking infotocap to tic"
- 	-@rm -f $(INSTALL_PREFIX)$(bindir)/infotocap$x
- 	(cd $(INSTALL_PREFIX)$(bindir) && $(LN_S) tic$x infotocap$x)
--	@echo "linking reset to tset"
--	-@rm -f $(INSTALL_PREFIX)$(bindir)/reset$x
--	(cd $(INSTALL_PREFIX)$(bindir) && $(LN_S) tset$x reset$x)
+ sources :	$(AUTO_SRC)
  
- uninstall.progs:
- 	-@rm -f $(INSTALL_PREFIX)$(bindir)/tic$x
+@@ -111,9 +111,8 @@
+ 	$(MODEL)/cursesapp.o \
+ 	$(MODEL)/cursesmain.o
+ 
+-../lib/$(LIBNAME) : $(LIB_OBJS)
+-	$(AR) $(AR_OPTS) $@ $?
+-	$(RANLIB) $@
++$(LIBNAME) : $(LIB_OBJS)
++	cd ../lib && $(LINK) -o lib$(LIBROOT).la $(LIB_OBJS:.o=.lo) -rpath $(INSTALL_PREFIX)$(libdir) -version-info $(NCURSES_MAJOR):$(NCURSES_MINOR)
+ 
+ OBJS_DEMO = $(MODEL)/demo.o
+ 
+@@ -121,7 +120,7 @@
+ 	$(cursesf_h) $(cursesm_h) $(cursesapp_h)
+ 
+ demo$x:	$(OBJS_DEMO) \
+-	../lib/$(LIBNAME)  \
++	$(LIBNAME)  \
+ 	@TEST_DEPS@
+ 	@ECHO_LINK@ $(LINK) -o $@ $(OBJS_DEMO) $(LDFLAGS_DEFAULT)
+ 
+@@ -133,18 +132,18 @@
+ 	$(srcdir)/../mkinstalldirs $@
+ 
+ install \
+-install.libs:: ../lib/$(LIBNAME) $(INSTALL_PREFIX)$(libdir)
+-	$(INSTALL) ../lib/$(LIBNAME) $(INSTALL_PREFIX)$(libdir)/$(LIBNAME)
++install.libs:: $(LIBNAME) $(INSTALL_PREFIX)$(libdir)
++	$(LIBTOOL) $(INSTALL_DATA) $(LIBNAME) $(INSTALL_PREFIX)$(libdir)/$(LIBNAME)
+ 
+ uninstall \
+ uninstall.libs::
+-	-rm -f $(INSTALL_PREFIX)$(libdir)/$(LIBNAME)
++	-$(LIBTOOL) rm -f $(INSTALL_PREFIX)$(libdir)/$(LIBNAME)
+ 
+ mostlyclean ::
+ 	-rm -f core tags TAGS *~ *.ln *.atac trace
+ 
+ clean :: mostlyclean
+-	-rm -f demo$x $(AUTO_SRC) ../lib/$(LIBNAME) $(LIB_OBJS) $(OBJS_DEMO)
++	-rm -f demo$x $(AUTO_SRC) $(LIBNAME) $(LIB_OBJS) $(OBJS_DEMO)
+ 
+ distclean :: clean
+ 	-rm -f Makefile
