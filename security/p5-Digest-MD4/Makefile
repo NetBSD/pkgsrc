@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/10 21:54:48 heinz Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/10 21:56:21 heinz Exp $
 #
 
 DISTNAME=		Digest-MD4-1.3
@@ -8,7 +8,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Digest/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-#HOMEPAGE=	
+HOMEPAGE=		http://search.cpan.org/dist/Digest-MD4/
 COMMENT=		Perl5 module for MD4 hash algorithm
 
 USE_BUILDLINK2=		YES
