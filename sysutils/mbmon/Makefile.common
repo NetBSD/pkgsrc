@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/08/23 16:41:59 recht Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/02/02 18:34:10 xtraeme Exp $
 #
 
 DISTNAME=		xmbmon203
@@ -17,4 +17,4 @@ GNU_CONFIGURE=		yes
 DISTINFO_FILE?=		${.CURDIR}/../../sysutils/mbmon/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/mbmon/patches
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386
