@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1 2003/02/15 22:39:50 is Exp $
+
+--- mini_sendmail.8.orig        Sat Feb 15 23:16:19 2003
++++ mini_sendmail.8
+@@ -4,6 +4,7 @@
+ .SH SYNOPSIS
+ .B mini_sendmail
+ .RB [ -f<name> ]
++.RB [ -i ]
+ .RB [ -t ]
+ .RB [ -s<server> ]
+ .RB [ -T<timeout> ]
+@@ -24,6 +25,11 @@
+ .TP
+ .B -f
+ Set the name of the "from" person (i.e. the sender of the mail).
++.TP
++.B -i
++Don't parse for a dot-line, but read input up to an end-of-file.
++Currently, this is always the case, but this option is needed for
++compatibility with sendmail.
+ .TP
+ .B -t
+ Read message for recipients.
