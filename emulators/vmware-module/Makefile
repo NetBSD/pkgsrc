@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/02 05:28:36 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/16 12:26:23 grant Exp $
 
 DISTNAME=	vmware-netbsd-1.0
 PKGNAME=	vmware-module-1.0
@@ -50,9 +50,9 @@ pre-extract:
 .endif
 
 do-build:
-	for dirs in linuxrtc vmmon vmnet; do \
-		cd ${WRKSRC}/source/$${dirs} && ${MAKE}; \
-	done
+.for dir in linuxrtc vmmon vmnet
+	cd ${WRKSRC}/source/${dir} && ${MAKE}
+.endfor
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lkm ${PREFIX}/etc/rc.conf.d
