@@ -1,5 +1,7 @@
 #!/bin/sh
 
+PATH=/bin:/usr/bin:$PATH
+
 homedir="/var/empty"
 shell="/usr/bin/false"
 
@@ -14,6 +16,37 @@ while [ $# -gt 1 ]; do
     esac
     shift; shift
 done
+
+getnextuid()
+{
+    # Find an unused UID. Constraints:
+    # * must be <500 (typical OS X user accounts are 500 and up)
+    # * must be <400 (Fink uses 400 and up)
+    # * must be from a reasonably sized range
+
+    used_uids=`nireport . /users uid`
+    low_uid=300; high_uid=399
+
+    # Try to use the GID as the UID.
+    maybe_uid=$1
+    if [ $maybe_uid -ge $low_uid ] && [ $maybe_uid -le $high_uid ] && \
+      ! echo $used_uids | grep -q $maybe_uid; then
+        echo $maybe_uid
+        return 0
+    fi
+
+    # Else, walk the pkgsrc-"allocated" range.
+    maybe_uid=$low_uid
+    while [ $maybe_uid -le $high_uid ]; do
+        if echo $used_uids | grep -q $maybe_uid; then
+            maybe_uid=`expr $maybe_uid + 1`
+        else
+            echo $maybe_uid
+            return 0
+        fi
+    done
+    return 1
+}
 
 user="$1"
 if [ -z "$user" ]; then
@@ -41,22 +74,10 @@ if [ -n "$uid" ]; then
 	exit 1
     fi
 else
-    # Find an unused uid, using the gid as the default value if it's
-    # not already being used. Assuming this is a system account, not
-    # a user account, we want a UID less than 500, so OS X won't
-    # display it in the login window or the Accounts preference pane.
-    # Apple seems to be using UIDs and GIDs below (but approaching) 100,
-    # and fink uses UIDs starting with 400, so we'll use the 300s.
-
-    uid=$gid
-    if [ $uid -lt 300 ]; then
-	uid=300
+    if ! uid=`getnextuid $gid`; then
+        echo "useradd: no UIDs available in pkgsrc range" 1>&2
+        exit 1
     fi
-    nireport . /users uid | sort -n | while read used_uid; do
-	if [ $uid = $used_uid ]; then
-	    uid=`expr $uid + 1`
-	fi
-    done
 fi
 
 echo "${user}:*:${uid}:${gid}::0:0:${comment}:${homedir}:${shell}" | niload passwd .
@@ -64,3 +85,5 @@ if ! nireport . /users/$user uid 2>/dev/null; then
     echo "useradd: Could not create user" 1>&2
     exit 1
 fi
+
+kill -HUP `cat /var/run/lookupd.pid`

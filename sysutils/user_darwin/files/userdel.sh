@@ -1,5 +1,7 @@
 #!/bin/sh
 
+PATH=/bin:/usr/bin:$PATH
+
 if [ $# -gt 1 ]; then
     echo "userdel: Unrecognized option $1" 1>&2
     exit 1
