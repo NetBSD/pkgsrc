@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/10/21 14:43:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/01 22:10:23 gson Exp $
 
-DISTNAME=	wavesurfer-1.4.3
-PKGREVISION=	1
+DISTNAME=	wavesurfer-1.4.6
 CATEGORIES=	audio
 MASTER_SITES=	http://www.speech.kth.se/wavesurfer/
 
