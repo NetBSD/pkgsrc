@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5576 2004/04/14 15:45:45 manu Exp $
+$NetBSD: CHANGES,v 1.5577 2004/04/14 21:05:04 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1951,3 +1951,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated timidity to 2.13.0 [adam 2004-04-14]
 	Added libspf-alt-0.4.0 [manu 2004-04-14]
 	Updated milter-greylist to 1.2 [manu 2004-04-14]
+	Updated xchat2 to 2.0.8nb2 [xtraeme 2004-04-14]
