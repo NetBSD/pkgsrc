@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/02/10 02:04:54 xtraeme Exp $
+# $NetBSD: Makefile,v 1.42 2004/02/14 17:21:56 jlam Exp $
 #
 
 DISTNAME=		gtk+-2.2.4
@@ -20,6 +20,7 @@ USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
+USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
@@ -31,8 +32,6 @@ CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 TEST_TARGET=		check
 
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gdk-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gtk+-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gdk-pixbuf-2.0.pc.in
