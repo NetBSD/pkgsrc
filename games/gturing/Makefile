@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/14 17:21:40 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/20 14:44:37 jmmv Exp $
 #
 
 DISTNAME=		gturing-0.1.1
@@ -14,13 +14,15 @@ COMMENT=		GNOME2 turing machine emulator
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
