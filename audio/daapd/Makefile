@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/11/20 15:08:23 mjl Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/28 02:47:41 reed Exp $
 
 DISTNAME=		daapd-0.2.3d
-# PKGREVISION=	1
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tgz

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2004/11/30 17:41:52 jlam Exp $
+# $NetBSD: Makefile,v 1.83 2004/12/28 02:47:48 reed Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -9,6 +9,7 @@ PKGNAME=	cups-${VERS}
 BASE_VERS=	1.1.22
 DIST_VERS=	${BASE_VERS}
 VERS=		${DIST_VERS:S/-/./g}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp2.easysw.com/pub/cups/${BASE_VERS}/ \

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/11 20:14:35 tv Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/28 02:47:43 reed Exp $
 #
 
 DISTNAME=		esound-0.2.35-1
 PKGNAME=		${DISTNAME:S/-/!/:S/-/./g:S/!/-/:S/^/cygwin_/}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_CYGWIN:=release/esound/} \
 			${MASTER_SITE_CYGWIN:=release/esound/libesound0/} \

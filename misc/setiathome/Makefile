@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2004/11/12 14:41:47 sketch Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/28 02:47:46 reed Exp $
 #
 
 DISTNAME=       ${PKGNAME_NOREV}
 PKGNAME=	setiathome-3.08
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	ftp://alien.ssl.berkeley.edu/pub/ \
 		ftp://setidata.ssl.berkeley.edu/pub/
