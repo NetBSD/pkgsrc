@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2003/08/05 23:48:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/23 12:18:56 recht Exp $
 #
 
 DISTNAME=	libbonoboui-2.2.4
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libbonoboui/2.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +22,7 @@ USE_X11=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	bonobo/libbonoboui-2.0.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
