@@ -1,4 +1,4 @@
-# $NetBSD: tw.conf.netbsd,v 1.2 2000/03/02 18:38:24 wiz Exp $
+# $NetBSD: tw.conf.netbsd,v 1.3 2001/11/05 14:29:23 hubertf Exp $
 # Original Id: tw.conf.386bsd,v 1.1 1993/11/22 06:38:01 genek Exp
 #
 # tripwire.config
@@ -98,7 +98,7 @@
 
 # /etc and exceptions
 /etc			R-2
-/etc/aliases	 	L
+/etc/mail/aliases	L
 /etc/daily		L
 /etc/disktab		L
 /etc/dumpdates		L
