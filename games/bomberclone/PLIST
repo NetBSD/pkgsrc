@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/07 00:08:40 snj Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/06/23 15:48:41 snj Exp $
 bin/bomberclone
 include/bomberclone/basic.h
+include/bomberclone/bomb.h
 include/bomberclone/bomberclone.h
 include/bomberclone/chat.h
 include/bomberclone/flyingitems.h
 include/bomberclone/font.h
 include/bomberclone/gfx.h
+include/bomberclone/keyb.h
 include/bomberclone/keybinput.h
 include/bomberclone/map.h
 include/bomberclone/menu.h
@@ -13,6 +15,8 @@ include/bomberclone/menugui.h
 include/bomberclone/network.h
 include/bomberclone/ogcache-client.h
 include/bomberclone/packets.h
+include/bomberclone/player.h
+include/bomberclone/single.h
 include/bomberclone/sound.h
 include/bomberclone/sysfunc.h
 include/bomberclone/udp.h
@@ -148,6 +152,10 @@ share/bomberclone/tileset/supermario/background.png
 share/bomberclone/tileset/supermario/block.png
 share/bomberclone/tileset/supermario/stone.png
 share/bomberclone/tileset/supermario/stonebackup.png
+share/bomberclone/tileset/tricked/background.png
+share/bomberclone/tileset/tricked/block.png
+share/bomberclone/tileset/tricked/dead.wav
+share/bomberclone/tileset/tricked/stone.png
 share/bomberclone/tileset/uccia_garbage/background.png
 share/bomberclone/tileset/uccia_garbage/block.png
 share/bomberclone/tileset/uccia_garbage/dead.wav
