@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/07/02 21:54:19 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/09/08 19:55:42 jlam Exp $
 
 DISTNAME=	nedit-5.1.1-src
 PKGNAME=	nedit-5.1.1
@@ -25,5 +25,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/nedit
 
 .include "../../graphics/xpm/buildlink.mk"
-.include "../../x11/lesstif/buildlink.mk"
+.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

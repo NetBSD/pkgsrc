@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/07/30 20:23:31 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/09/08 19:55:46 jlam Exp $
 #
 
 DISTNAME=	grace-5.1.4
@@ -37,5 +37,5 @@ post-install:
 .include "../../print/pdflib/buildlink.mk"
 .include "../../textproc/t1lib/buildlink.mk"
 .include "../../x11/Xbae/buildlink.mk"
-.include "../../x11/lesstif/buildlink.mk"
+.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

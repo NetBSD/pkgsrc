@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/07/03 20:54:15 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/09/08 19:55:41 jlam Exp $
 #
 
 DISTNAME=	dinotrace-9.1d
@@ -14,5 +14,5 @@ INFO_FILES=	dinotrace.info
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 
-.include "../../x11/lesstif/buildlink.mk"
+.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

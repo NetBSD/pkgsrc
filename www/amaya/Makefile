@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/08/09 19:03:18 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/09/08 19:55:47 jlam Exp $
 
 DISTNAME=	amaya-src-5.1
 PKGNAME=	amaya-5.1
@@ -49,6 +49,6 @@ pre-install:
 
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
-.include "../../x11/lesstif/buildlink.mk"
 .include "../../www/libwww/buildlink.mk"
+.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

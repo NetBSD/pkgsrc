@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/07/03 20:00:25 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2001/09/08 19:55:41 jlam Exp $
 #
 
 DISTNAME=	ddd-3.3
@@ -47,5 +47,5 @@ test:
 	(cd ${WRKSRC} ; ${MAKE_PROGRAM} check)
 
 .include "../../graphics/xpm/buildlink.mk"
-.include "../../x11/lesstif/buildlink.mk"
+.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

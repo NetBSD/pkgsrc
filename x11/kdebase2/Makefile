@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/09/07 14:34:33 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2001/09/08 19:55:48 jlam Exp $
 
 DISTNAME=	kdebase-2.1.1
 CATEGORIES=	x11 kde
@@ -104,5 +104,5 @@ post-install:
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
 .include "../../x11/kdelibs2/buildlink.mk"
-.include "../../x11/lesstif/buildlink.mk"
+.include "../../mk/motif.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
