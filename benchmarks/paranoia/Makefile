@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/30 19:38:57 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/06 21:12:41 garbled Exp $
 
 DISTNAME=		paranoia
 PKGNAME=		paranoia-960101
@@ -9,10 +9,9 @@ EXTRACT_SUFX=		.c
 MAINTAINER=		root@garbled.net
 
 NO_WRKSUBDIR=		yes
-
-do-extract:
-	${MKDIR} ${WRKSRC}
-	${CP} ${DISTDIR}/paranoia.c ${WRKSRC}/paranoia.c
+EXTRACT_CMD=		${CP}
+EXTRACT_BEFORE_ARGS=	#empty
+EXTRACT_AFTER_ARGS=	${WRKSRC}
 
 do-build:
 	(cd ${WRKSRC} ; cc -o paranoia paranoia.c -lm)
