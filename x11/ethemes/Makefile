@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/10/11 09:36:45 agc Exp $
+# $NetBSD: Makefile,v 1.9 2000/10/21 23:05:56 wiz Exp $
 
 DISTNAME=	ethemes-0.1
 CATEGORIES=	x11
@@ -16,7 +16,7 @@ NO_BUILD=	yes
 NO_CONFIGURE=	yes
 NO_PATCH=	yes
 NO_CHECKSUM=	yes
-EXTRACT_ONLY=	
+EXTRACT_ONLY=
 
 E_DATADIR=	share/enlightenment/themes
 
