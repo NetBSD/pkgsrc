@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2197 2003/05/09 09:37:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.2198 2003/05/09 10:05:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1913,3 +1913,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sudo to 1.6.7.5 [wiz 2003-05-09]
 	Updated distcc to 2.2 [martti 2003-05-09]
 	Updated lmule to 1.2.1 [jmmv 2003-05-09]
+	Updated pan to 0.14.0 [wiz 2003-05-09]
