@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/11/14 22:21:13 seb Exp $
 
 .if !defined(CYRUS_SASL_BUILDLINK2_MK)
 CYRUS_SASL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			cyrus-sasl
-BUILDLINK_DEPENDS.cyrus-sasl?=		cyrus-sasl>=2.1.9
+BUILDLINK_DEPENDS.cyrus-sasl?=		cyrus-sasl>=2.1.9nb1
 BUILDLINK_PKGSRCDIR.cyrus-sasl?=	../../security/cyrus-sasl2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.cyrus-sasl=cyrus-sasl

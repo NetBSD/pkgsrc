@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/11/13 10:44:26 chris Exp $
+# $NetBSD: Makefile,v 1.5 2002/11/14 22:21:13 seb Exp $
 
 DISTNAME=		cyrus-sasl-2.1.9
+PKGREVISION=		1
 SVR4_PKGNAME=		csasl
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
@@ -11,7 +12,6 @@ HOMEPAGE=		http://asg.web.cmu.edu/sasl/
 COMMENT=		Simple Authentication and Security Layer
 
 USE_BUILDLINK2=		YES
-AUTOMAKE_REQD=		1.4
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
@@ -32,14 +32,14 @@ PLIST_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR}
 
 BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 
-PLIST_SRC=		${.CURDIR}/PLIST.common
+PLIST_SRC=		${PKGDIR}/PLIST.common
 
 CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR}
 CONFIGURE_ARGS+=	--with-dblib=ndbm
 CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
 CONFIGURE_ARGS+=	--with-plugindir=${PREFIX}/lib/sasl2
-CONFIGURE_ARGS+=	--with-rc4=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-rc4
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 
 # Authentication mechanisms
 CONFIGURE_ARGS+=	--enable-anon		# ANONYMOUS
@@ -55,17 +55,21 @@ CONFIGURE_ARGS+=	--enable-otp		# OTP
 
 .if defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--enable-gssapi=/usr	# GSSAPI
-PLIST_SRC+=		${.CURDIR}/PLIST.krb5
+PLIST_SRC+=		${PKGDIR}/PLIST.krb5
+.  if exists(/usr/include/krb5/krb5-types.h)
+CPPFLAGS+=	-I/usr/include/krb5
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-gssapi	# --- no GSSAPI
 .endif
 
-PLIST_SRC+=		${.CURDIR}/PLIST.plugins
+PLIST_SRC+=		${PKGDIR}/PLIST.plugins
+PLIST_SRC+=		${PKGDIR}/PLIST.post
 
 .if defined(USE_PAM)
-.  include "../../security/PAM/buildlink.mk"
+.  include "../../security/PAM/buildlink2.mk"
 BUILD_DEFS+=		USE_PAM
-CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
 .else
 CONFIGURE_ARGS+=	--without-pam
 .endif
@@ -75,20 +79,23 @@ PKG_USERS=		${CYRUS_USER}:${CYRUS_GROUP}::::${SH}
 RCD_SCRIPTS=		saslauthd
 OWN_DIRS=		${PREFIX}/lib/sasl2
 
+# clean up a bit to help package maintainer produce patch files
 post-extract:
-	${CP} ${FILESDIR}/sasl-config.in ${WRKSRC}/plugins
+	${_PKG_SILENT}${_PKG_DEBUG}			\
+	${FIND} ${WRKSRC} -type f -name "*.orig" | ${XARGS} ${RM}
 
-pre-configure:
-	cd ${WRKSRC} && ${AUTOHEADER}
-	cd ${WRKSRC} && ${AUTOMAKE} --gnu -i
-	cd ${WRKSRC}/saslauthd && ${AUTOMAKE} --gnu -i
-	cd ${WRKSRC} && ${AUTOCONF}
+# Left here as reference for patch makers...
+#pre-configure:
+#	cd ${WRKSRC};					\
+#	${ACLOCAL} -I cmulocal -I config;		\
+#	${AUTOHEADER};					\
+#	${AUTOMAKE} -a --gnu -i ;			\
+#	${AUTOCONF}
 
 post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt ${HTMLDIR}
 
 .include "../../security/openssl/buildlink2.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

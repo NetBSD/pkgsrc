@@ -1,28 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+$NetBSD: patch-aa,v 1.2 2002/11/14 22:21:14 seb Exp $
 
---- configure.in.orig	Fri Oct 11 21:56:29 2002
-+++ configure.in	Sun Oct 27 14:06:01 2002
-@@ -86,13 +86,13 @@
-   dnl xxx we should add -W at some point (but that might scare people)
-   CFLAGS="-Wall ${CFLAGS}"
-   GCC_VERSION=`gcc -v 2>&1 | sed -n -e '/version/s/.*version \([[0-9]]\)\..*/\1/p'`
--  if test "$GCC_VERSION" != "3"; then
--    CPPFLAGS="${CPPFLAGS} -I/usr/local/include"
--  fi
--else
--  CPPFLAGS="${CPPFLAGS} -I/usr/local/include"
- fi 
--CMU_ADD_LIBPATH("/usr/local/lib")
+--- configure.in.orig	Fri Oct 11 22:56:29 2002
++++ configure.in
+@@ -114,6 +114,13 @@ target=$save_target
+ 
+ dnl ltconfig might not have found support for shared libs
+ dnl just do static libs if so.
 +
-+AC_PATH_PROG(SED, sed, no)
-+if test "$SED" = "no"; then
-+  AC_ERROR([sed is required to build sasl-config])
-+fi
-+AC_SUBST(SED)
- 
- AM_DISABLE_STATIC
- 
-@@ -832,6 +832,9 @@
++_build_libtool_libs=`${CONFIG_SHELL-/bin/sh} $srcdir/libtool --config | grep '^build_libtool_libs='`
++case "x$_build_libtool_libs" in
++       x*=yes) ac_cv_can_build_shared=yes;;
++       x*) ac_cv_can_build_shared=no;;
++esac
++
+ if test "$ac_cv_can_build_shared" = no; then
+ 	enable_shared=no
+ 	enable_static=yes
+@@ -832,6 +839,9 @@ AC_SUBST(LTGETNAMEINFOOBJS)
  LTLIBOBJS=`echo "$LIBOBJS" | sed 's/\.o/.lo/g'`
  AC_SUBST(LIBOBJS)
  AC_SUBST(LTLIBOBJS)
