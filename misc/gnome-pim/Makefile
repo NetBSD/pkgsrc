@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2003/01/10 07:40:55 cjep Exp $
+# $NetBSD: Makefile,v 1.36 2003/01/11 04:24:31 rh Exp $
 
-DISTNAME=		gnome-pim-1.4.0
-PKGREVISION=		3
+DISTNAME=		gnome-pim-1.4.6
 CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pim/1.4/}
 
@@ -20,19 +19,9 @@ BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 CPPFLAGS+=		-I${LOCALBASE}/include
-CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
+CONFIGURE_ENV+=		LOCALEDIR=${PKGLOCALEDIR}
+CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE}
 
-.include "../../mk/bsd.prefs.mk"
-
-# The directory in which locale files are found is:
-#
-#	${PREFIX}/${LOCALEDIR}/locale/<lang>/LC_MESSAGES
-#
-.if ${OPSYS} == "SunOS"
-LOCALEDIR=		lib
-.else
-LOCALEDIR=		share
-.endif
-
+.include "../../comms/gnome-pilot/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
