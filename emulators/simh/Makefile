@@ -1,16 +1,33 @@
-# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:22 agc Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/20 23:58:14 soren Exp $
 #
 
-DISTNAME=	sim_2.3d
-PKGNAME=	simh-2.3d
+DISTNAME=	simhv29-11
+PKGNAME=	simh-2.9.11
 CATEGORIES=	emulators
-MASTER_SITES=	ftp://minnie.cs.adfa.oz.au/pub/PDP-11/Sims/Supnik_2.3/sources/
+MASTER_SITES=	http://simh.trailing-edge.com/sources/
+EXTRACT_SUFX=	.zip
+EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
 
 MAINTAINER=	packages@netbsd.org
-COMMENT=	PDP, IBM 1401, and Nova CPU simulator
+HOMEPAGE=	http://simh.trailing-edge.com/
+COMMENT=	Bob Supnik's historical computer simulator
 
 WRKSRC=		${WRKDIR}
 
-MAKEFILE=	${FILESDIR}/Makefile
+pre-build:
+	${MKDIR} ${WRKSRC}/BIN
+	-${MV} ${WRKSRC}/AltairZ80/altairz80_defs.h \
+		${WRKSRC}/AltairZ80/altairZ80_defs.h
+
+do-install:
+	(cd ${WRKSRC}/BIN && for BIN in *; do				\
+		${INSTALL_PROGRAM} $$BIN ${PREFIX}/bin/simh-$$BIN;	\
+	done)
+	${INSTALL_DATA_DIR} ${PREFIX}/share/simh
+	${INSTALL_DATA} ${WRKSRC}/VAX/ka655.bin ${PREFIX}/share/simh
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/simh
+	(cd ${WRKSRC} && for TXT in *.txt */*.txt; do			\
+		${INSTALL_DATA} $$TXT ${PREFIX}/share/doc/simh;		\
+	done)
 
 .include "../../mk/bsd.pkg.mk"
