@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.20 2003/05/05 16:32:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2003/05/25 09:01:46 salo Exp $
+#
 
 DISTNAME=		fnlib-0.5
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11 graphics
-MASTER_SITES=		ftp://ftp.enlightenment.org/pub/e/enlightenment/libs/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
 MAINTAINER=		root@garbled.net
 COMMENT=		color font rendering library for X11R6
 
-USE_BUILDLINK2=		yes
-USE_PKGINSTALL=		yes
-USE_X11BASE=		yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+USE_X11=		YES
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
 
-USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
@@ -25,4 +26,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/fontinfo.README ${PREFIX}/share/doc/fnlib
 
 .include "../../graphics/imlib/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
