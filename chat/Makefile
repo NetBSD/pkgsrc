@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2005/02/22 14:35:21 minskim Exp $
+# $NetBSD: Makefile,v 1.108 2005/02/25 18:48:36 reed Exp $
 #
 
 COMMENT=	Communication programs
@@ -10,6 +10,7 @@ SUBDIR+=	bitchx
 SUBDIR+=	bitlbee
 SUBDIR+=	blackened
 SUBDIR+=	bnc
+SUBDIR+=	bsflite
 SUBDIR+=	centericq
 SUBDIR+=	cgiirc
 SUBDIR+=	dccserver
