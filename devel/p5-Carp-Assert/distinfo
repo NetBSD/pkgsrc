@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/20 03:56:38 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/11/29 14:54:05 wiz Exp $
 
-SHA1 (Carp-Assert-0.17.tar.gz) = 1892da09958a50da60b527ab627907ad4718c4cd
-Size (Carp-Assert-0.17.tar.gz) = 8815 bytes
+SHA1 (Carp-Assert-0.18.tar.gz) = 557bc90c3102823e9415d09a89ed35b545cd7913
+Size (Carp-Assert-0.18.tar.gz) = 9540 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/20 03:56:38 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/29 14:54:05 wiz Exp $
 #
 
-DISTNAME=		Carp-Assert-0.17
+DISTNAME=		Carp-Assert-0.18
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5cpa
 CATEGORIES=		devel perl5
