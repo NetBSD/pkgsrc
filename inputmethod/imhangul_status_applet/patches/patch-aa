@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/18 00:16:35 minskim Exp $
+
+--- src/Makefile.in.orig	2002-11-17 05:39:05.000000000 -0600
++++ src/Makefile.in
+@@ -116,7 +116,7 @@ SUBDIRS = themes
+ INCLUDES =  	-DGNOMELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\"			-DIMHANGUL_STATUS_THEMES_DIR=\"@IMHANGUL_STATUS_THEMES_DIR@\"
+ 
+ 
+-CFLAGS = -Wall -g @IMHANGUL_STATUS_CFLAGS@
++CFLAGS = @IMHANGUL_STATUS_CFLAGS@
+ 
+ libexec_PROGRAMS = imhangul-status-applet
+ 
+@@ -514,7 +514,7 @@ maintainer-clean-generic clean mostlycle
+ 
+ @INTLTOOL_SCHEMAS_RULE@
+ 
+-install-data-local:
++no-install-data-local:
+ 	if test -z "$(DESTDIR)" ; then \
+ 		GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA) ; \
+ 	fi
