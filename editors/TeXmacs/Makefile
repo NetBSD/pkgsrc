@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/01/07 03:56:23 uebayasi Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/30 00:08:57 jmmv Exp $
 
 DISTNAME=	TeXmacs-1.0.1-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.texmacs.org/pub/TeXmacs/targz/
 
@@ -25,11 +26,19 @@ PKG_CXXFLAGS=	-DPKG_DOCDIR=\"\\\"${PKG_DOCDIR}\\\"\"
 CONFIGURE_ENV+=	PKG_CXXFLAGS="${PKG_CXXFLAGS}"
 CONFIGURE_ENV+=	PKG_LDFLAGS="${LDFLAGS}"
 
-pre-configure:
+post-extract:
 	${RM} ${WRKSRC}/misc/scripts/tm_axiom
+	${MV} ${WRKSRC}/misc/scripts/texmacs.in \
+	      ${WRKSRC}/misc/scripts/texmacs.in.in
+
+pre-configure:
+	${SED} -e "s|@PKG_GUILE_PATH@|${GUILE14_PREFIX_DEFAULT}/bin|g" \
+		< ${WRKSRC}/misc/scripts/texmacs.in.in > \
+	          ${WRKSRC}/misc/scripts/texmacs.in
 
 post-install:
-	${LN} -s ${PREFIX}/share/doc/TeXmacs ${PREFIX}/share/${PKGNAME}/doc
+	${LN} -s ${PREFIX}/share/doc/TeXmacs \
+	         ${PREFIX}/share/${PKGNAME_NOREV}/doc
 
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../mk/texinfo.mk"
