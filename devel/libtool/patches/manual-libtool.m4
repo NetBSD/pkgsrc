@@ -1,6 +1,6 @@
-$NetBSD: manual-libtool.m4,v 1.3 2004/04/21 19:24:49 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
 
---- libtool.m4.orig	Fri Jan 23 01:07:04 2004
+--- libtool.m4.orig	Thu Apr  1 22:46:14 2004
 +++ libtool.m4
 @@ -1183,8 +1183,9 @@ beos*)
    ;;
@@ -182,7 +182,20 @@ $NetBSD: manual-libtool.m4,v 1.3 2004/04/21 19:24:49 tv Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -4839,6 +4879,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4808,9 +4848,11 @@ AC_MSG_CHECKING([for $compiler option to
+       ;;
+ 
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fno-common'
++      _LT_AC_TAGVAR(lt_prog_compiler_static, $1)=''
+       ;;
+ 
+     msdosdjgpp*)
+@@ -4839,6 +4881,11 @@ AC_MSG_CHECKING([for $compiler option to
        esac
        ;;
  
@@ -194,7 +207,7 @@ $NetBSD: manual-libtool.m4,v 1.3 2004/04/21 19:24:49 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -5131,6 +5176,17 @@ EOF
+@@ -5131,6 +5178,17 @@ EOF
        fi
        ;;
  
@@ -212,7 +225,7 @@ $NetBSD: manual-libtool.m4,v 1.3 2004/04/21 19:24:49 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5534,6 +5590,20 @@ $echo "local: *; };" >> $output_objdir/$
+@@ -5534,6 +5592,20 @@ $echo "local: *; };" >> $output_objdir/$
  	  ;;
  	esac
        fi

@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
+$NetBSD: patch-ab,v 1.38 2004/04/23 01:17:25 danw Exp $
 
---- configure.orig	Thu Apr 22 10:23:09 2004
+--- configure.orig	Sun Apr 11 01:35:42 2004
 +++ configure
 @@ -4440,10 +4440,13 @@ beos*)
    lt_cv_deplibs_check_method=pass_all
@@ -31,7 +31,20 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
  irix5* | irix6* | nonstopux*)
    case $LD in
    *-32|*"-32 ") libmagic=32-bit;;
-@@ -6888,6 +6895,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -6857,9 +6864,11 @@ echo $ECHO_N "checking for $compiler opt
+       ;;
+ 
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic='-fno-common'
++      lt_prog_compiler_static=''
+       ;;
+ 
+     msdosdjgpp*)
+@@ -6888,6 +6897,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -43,7 +56,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
      *)
        lt_prog_compiler_pic='-fPIC'
        ;;
-@@ -7263,6 +7275,17 @@ EOF
+@@ -7263,6 +7277,17 @@ EOF
        fi
        ;;
  
@@ -61,7 +74,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -7770,6 +7793,20 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -7770,6 +7795,20 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -82,7 +95,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -8158,8 +8195,9 @@ beos*)
+@@ -8158,8 +8197,9 @@ beos*)
    ;;
  
  bsdi4*)
@@ -93,7 +106,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -8275,15 +8313,15 @@ kfreebsd*-gnu)
+@@ -8275,15 +8315,15 @@ kfreebsd*-gnu)
  
  freebsd*)
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -115,7 +128,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -8359,15 +8397,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -8359,15 +8399,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -144,7 +157,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -8403,7 +8448,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -8403,7 +8450,7 @@ linux*oldld* | linux*aout* | linux*coff*
  
  # This must be Linux ELF.
  linux*)
@@ -153,7 +166,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -8527,7 +8572,7 @@ sco3.2v5*)
+@@ -8527,7 +8574,7 @@ sco3.2v5*)
    ;;
  
  solaris*)
@@ -162,7 +175,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -10777,6 +10822,8 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10777,6 +10824,8 @@ if test -z "$aix_libpath"; then aix_libp
  	;;
      esac
      ;;
@@ -171,7 +184,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    irix5* | irix6*)
      case $cc_basename in
        CC)
-@@ -10885,6 +10932,13 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10885,6 +10934,13 @@ if test -z "$aix_libpath"; then aix_libp
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
        archive_cmds_CXX='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
        wlarc=
@@ -185,7 +198,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
        hardcode_libdir_flag_spec_CXX='-R$libdir'
        hardcode_direct_CXX=yes
        hardcode_shlibpath_var_CXX=no
-@@ -11257,6 +11311,14 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -11257,6 +11313,14 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
      esac
    done
  
@@ -200,7 +213,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -11304,9 +11366,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11304,9 +11368,11 @@ echo $ECHO_N "checking for $compiler opt
        lt_prog_compiler_pic_CXX='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -213,7 +226,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -11328,6 +11392,10 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11328,6 +11394,10 @@ echo $ECHO_N "checking for $compiler opt
  	;;
        esac
        ;;
@@ -224,7 +237,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
      *)
        lt_prog_compiler_pic_CXX='-fPIC'
        ;;
-@@ -11392,6 +11460,8 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11392,6 +11462,8 @@ echo $ECHO_N "checking for $compiler opt
  	    ;;
  	esac
  	;;
@@ -233,7 +246,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -11860,8 +11930,9 @@ beos*)
+@@ -11860,8 +11932,9 @@ beos*)
    ;;
  
  bsdi4*)
@@ -244,7 +257,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -11977,15 +12048,15 @@ kfreebsd*-gnu)
+@@ -11977,15 +12050,15 @@ kfreebsd*-gnu)
  
  freebsd*)
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -266,7 +279,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -12061,15 +12132,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -12061,15 +12134,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -295,7 +308,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -12105,7 +12183,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -12105,7 +12185,7 @@ linux*oldld* | linux*aout* | linux*coff*
  
  # This must be Linux ELF.
  linux*)
@@ -304,7 +317,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -12229,7 +12307,7 @@ sco3.2v5*)
+@@ -12229,7 +12309,7 @@ sco3.2v5*)
    ;;
  
  solaris*)
@@ -313,7 +326,20 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -13759,6 +13837,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -13728,9 +13808,11 @@ echo $ECHO_N "checking for $compiler opt
+       ;;
+ 
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic_F77='-fno-common'
++      lt_prog_compiler_static_F77=''
+       ;;
+ 
+     msdosdjgpp*)
+@@ -13759,6 +13841,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -325,7 +351,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
      *)
        lt_prog_compiler_pic_F77='-fPIC'
        ;;
-@@ -14134,6 +14217,17 @@ EOF
+@@ -14134,6 +14221,17 @@ EOF
        fi
        ;;
  
@@ -343,7 +369,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds_F77='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -14621,6 +14715,20 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -14621,6 +14719,20 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -364,7 +390,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -15009,8 +15117,9 @@ beos*)
+@@ -15009,8 +15121,9 @@ beos*)
    ;;
  
  bsdi4*)
@@ -375,7 +401,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -15126,15 +15235,15 @@ kfreebsd*-gnu)
+@@ -15126,15 +15239,15 @@ kfreebsd*-gnu)
  
  freebsd*)
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -397,7 +423,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -15210,15 +15319,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -15210,15 +15323,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -426,7 +452,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -15254,7 +15370,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -15254,7 +15374,7 @@ linux*oldld* | linux*aout* | linux*coff*
  
  # This must be Linux ELF.
  linux*)
@@ -435,7 +461,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -15378,7 +15494,7 @@ sco3.2v5*)
+@@ -15378,7 +15498,7 @@ sco3.2v5*)
    ;;
  
  solaris*)
@@ -444,7 +470,20 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -16090,6 +16206,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -16059,9 +16179,11 @@ echo $ECHO_N "checking for $compiler opt
+       ;;
+ 
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic_GCJ='-fno-common'
++      lt_prog_compiler_static_GCJ=''
+       ;;
+ 
+     msdosdjgpp*)
+@@ -16090,6 +16212,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -456,7 +495,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
      *)
        lt_prog_compiler_pic_GCJ='-fPIC'
        ;;
-@@ -16465,6 +16586,17 @@ EOF
+@@ -16465,6 +16592,17 @@ EOF
        fi
        ;;
  
@@ -474,7 +513,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds_GCJ='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -16972,6 +17104,20 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -16972,6 +17110,20 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -495,7 +534,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -17360,8 +17506,9 @@ beos*)
+@@ -17360,8 +17512,9 @@ beos*)
    ;;
  
  bsdi4*)
@@ -506,7 +545,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -17477,15 +17624,15 @@ kfreebsd*-gnu)
+@@ -17477,15 +17630,15 @@ kfreebsd*-gnu)
  
  freebsd*)
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -528,7 +567,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -17561,15 +17708,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -17561,15 +17714,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -557,7 +596,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -17605,7 +17759,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -17605,7 +17765,7 @@ linux*oldld* | linux*aout* | linux*coff*
  
  # This must be Linux ELF.
  linux*)
@@ -566,7 +605,7 @@ $NetBSD: patch-ab,v 1.37 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -17729,7 +17883,7 @@ sco3.2v5*)
+@@ -17729,7 +17889,7 @@ sco3.2v5*)
    ;;
  
  solaris*)
