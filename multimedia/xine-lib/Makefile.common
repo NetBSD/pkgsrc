@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.15 2004/12/23 03:05:53 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.16 2005/01/06 17:04:42 drochner Exp $
 #
 
-DISTNAME=		xine-lib-1-rc8
-XINE_PKGNAME=		xine-lib-1rc8
+DISTNAME=		xine-lib-1.0
+XINE_PKGNAME=		xine-lib-1.0
 PKGNAME?=		${XINE_PKGNAME}
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
@@ -27,7 +27,6 @@ USE_GNU_TOOLS+=		make
 
 CONFIGURE_ARGS+=	--with-w32-path='${PREFIX}/lib/win32'
 CONFIGURE_ARGS+=	--without-external-ffmpeg --disable-ffmpegtest
-CONFIGURE_ARGS+=	--enable-shared-xv
 CONFIGURE_ENV+=		have_libpng="yes"
 CONFIGURE_ENV+=		PNG_CFLAGS="-I${PREFIX}/include"
 CONFIGURE_ENV+=		PNG_LIBS="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lpng"
