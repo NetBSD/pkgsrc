@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/21 18:50:36 tv Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/24 20:43:55 tv Exp $
 #
 
 DISTNAME=	ifcico-3.0.cm.alpha-4.1
@@ -18,6 +18,8 @@ post-build:
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/ifcico
 	${INSTALL_DATA} ${WRKDIR}/config* ${PREFIX}/etc/ifcico/
-	cd ${WRKSRC}/ifcico && ${INSTALL_MAN} *.8 ${PREFIX}/man/man8/
+	cd ${WRKSRC}/ifcico && for f in *.8; do \
+		tbl <$$f >$$f.t && ${INSTALL_DATA} $$f.t ${PREFIX}/man/man8/$$f; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
