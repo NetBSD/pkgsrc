@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/11/27 21:58:18 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/04/02 11:33:10 jdolecek Exp $
 bin/psi
 share/psi/iconsets/emoticons/default/hugleft.png
 share/psi/iconsets/emoticons/default/devil.png
@@ -197,18 +197,19 @@ share/psi/certs/rootcert.xml
 share/psi/certs/README
 share/psi/README
 share/psi/COPYING
-share/psi/psi_sw.qm
+share/psi/psi_zh.qm
+share/psi/psi_vi.qm
 share/psi/psi_sk.qm
 share/psi/psi_ru.qm
 share/psi/psi_pl.qm
 share/psi/psi_nl.qm
 share/psi/psi_mk.qm
-share/psi/psi_fi.qm
+share/psi/psi_fr.qm
+share/psi/psi_et.qm
 share/psi/psi_es.qm
 share/psi/psi_el.qm
 share/psi/psi_de.qm
-share/psi/psi_fr.qm
-share/psi/psi_zh.qm
+share/psi/psi_cs.qm
 @dirrm share/psi/sound
 @dirrm share/psi/iconsets/system/default
 @dirrm share/psi/iconsets/system
