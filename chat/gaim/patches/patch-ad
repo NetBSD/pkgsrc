@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5 2004/11/16 19:49:42 ben Exp $
+
+--- configure.orig	Thu Nov 11 20:54:53 2004
++++ configure
+@@ -27815,7 +27815,7 @@ fi
+ 	if test "$ac_silc_libs" != "no"; then
+ 		SILC_LIBS="-L$ac_silc_libs"
+ 	fi
+-	SILC_LIBS="$SILC_LIBS -lsilc -lsilcclient -lpthread -ldl"
++	SILC_LIBS="$SILC_LIBS -lsilc -lsilcclient -lpthread"
+ 	echo "$as_me:$LINENO: checking for silc_client_init in -lsilcclient" >&5
+ echo $ECHO_N "checking for silc_client_init in -lsilcclient... $ECHO_C" >&6
+ if test "${ac_cv_lib_silcclient_silc_client_init+set}" = set; then
