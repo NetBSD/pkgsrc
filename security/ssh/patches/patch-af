@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.4 1998/08/07 11:13:50 agc Exp $
+$NetBSD: patch-af,v 1.5 1999/05/10 21:34:46 tron Exp $
 
---- sshd.c.orig	Wed Aug  5 21:35:31 1998
-+++ sshd.c	Wed Aug  5 23:52:17 1998
+--- sshd.c.orig	Mon May 10 23:26:51 1999
++++ sshd.c	Mon May 10 23:27:53 1999
 @@ -1736,55 +1736,59 @@
      endspent();
    }
@@ -109,6 +109,15 @@ $NetBSD: patch-af,v 1.4 1998/08/07 11:13:50 agc Exp $
    pwcopy.pw_dir = xstrdup(pw->pw_dir);
    pwcopy.pw_shell = xstrdup(pw->pw_shell);
    pw = &pwcopy;
+@@ -2506,7 +2510,7 @@
+ 	    
+ 	    if (!strncmp(buf, "challenge ", 10) ||
+ 		!strncmp(buf, "chalnecho ", 10)) {
+-	      sprintf(prompt,"Challenge \"%.100s\": ",&buf[10]);
++	      sprintf(prompt,"%.100s" ,&buf[10]);
+ 	      debug("TIS challenge %s", buf);
+ 	      packet_start(SSH_SMSG_AUTH_TIS_CHALLENGE);
+ 	      packet_put_string(prompt, strlen(prompt));
 @@ -3200,9 +3204,6 @@
  #if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
    login_cap_t *lc;
@@ -150,4 +159,3 @@ $NetBSD: patch-af,v 1.4 1998/08/07 11:13:50 agc Exp $
  	}
  
  #if defined (__FreeBSD__) && defined HAVE_LOGIN_CAP_H
-
