@@ -1,0 +1,108 @@
+$NetBSD: patch-ab,v 1.1 2004/06/28 01:12:09 kristerw Exp $
+
+--- panel-plugin/xkb.c.orig	Mon Jun 28 02:50:20 2004
++++ panel-plugin/xkb.c	Mon Jun 28 02:57:50 2004
+@@ -105,16 +105,16 @@
+   const Atom *group_source;
+   Bool status;
+   int major, minor, oppcode;
++  XkbStateRec xkb_state;
++  XkbDescRec *kbd_desc_ptr = NULL;
++  int i;
+ 
+   // Initialize the Xkb extension
+   status = XkbQueryExtension(dsp, &oppcode,
+     &base_event_code, &base_error_code, &major, &minor);
+ 
+-  XkbStateRec xkb_state;
+   device_id = XkbUseCoreKbd;
+ 
+-  XkbDescRec *kbd_desc_ptr = NULL;
+-
+   kbd_desc_ptr = XkbAllocKeyboard();
+   if (kbd_desc_ptr == NULL) {
+     fprintf(stderr, "Failed to get keyboard description\n");
+@@ -146,12 +146,12 @@
+ 
+   if (group_count == 0) group_count=1;
+ 
+-  int i;
+   for (i = 0; i < group_count; i++) {
+     group_names[i] = NULL;
+     symbol_names[i] = NULL;
+   }
+ 
++  {
+   const Atom *tmp_group_source = kbd_desc_ptr->names->groups;
+   Atom cur_group_atom;
+   char *ptr;
+@@ -163,6 +163,7 @@
+         *ptr = '\0';
+     }
+   }
++  {
+   Atom sym_name_atom = kbd_desc_ptr->names->symbols;
+   char *sym_name;
+   char *ptr1;
+@@ -251,7 +252,8 @@
+   current_group_xkb_no = xkb_state.group;
+ 
+   status = True;
+-
++  }
++  }
+ HastaLaVista:
+   if (kbd_desc_ptr) XkbFreeKeyboard(kbd_desc_ptr, 0, True);
+   return status;
+@@ -286,13 +288,14 @@
+ void set_new_locale(t_xkb *ctrl) {
+   t_xkb *plugin = (t_xkb *) ctrl;
+   char filename[255];
++  GdkPixbuf *pixbuf, *tmp;
++  int size;
+ 
+   // Set the label  
+   gtk_label_set_label((GtkLabel *) plugin->label, get_symbol_name_by_res_no(current_group_xkb_no));
+   
+   // Set the image
+-  GdkPixbuf *pixbuf, *tmp;
+-  int size = plugin->size - 4;
++  size = plugin->size - 4;
+   tmp = gdk_pixbuf_new_from_file(get_current_gourp_flag_name(filename), NULL);
+   if (tmp == NULL) { // could not be loaded for some reason
+     printf("in set_new_locale: tmp is NULL\n");
+@@ -335,10 +338,10 @@
+ char * initialize_xkb(t_xkb *ctrl) {
+   XkbEvent evnt;
+   int event_code, error_rtrn, major, minor, reason_rtrn;
++  char * display_name;
+   major = XkbMajorVersion;
+   minor = XkbMinorVersion;
+ 
+-  char * display_name;
+   display_name = "";
+   XkbIgnoreExtension(False);
+   dsp = XkbOpenDisplay(display_name, &event_code, &error_rtrn, &major, &minor, &reason_rtrn);
+@@ -362,12 +365,12 @@
+ 
+   if (do_init_xkb() != True) return "N/A";
+ 
++  {
+   char *group = get_symbol_name_by_res_no(current_group_xkb_no);
+-
++  XkbStateRec state;
+   XkbSelectEventDetails(dsp, XkbUseCoreKbd, XkbStateNotify,
+                         XkbAllStateComponentsMask, XkbGroupStateMask);
+ 
+-  XkbStateRec state;
+   XkbGetState(dsp, device_id, &state);
+   current_group_xkb_no = (current_group_xkb_no != state.group) ? state.group : current_group_xkb_no;
+   accomodate_group_xkb();
+@@ -375,6 +378,7 @@
+   if (ctrl != NULL) set_new_locale(ctrl);
+ 
+   return group;
++  }
+ }
+ 
+ static void deinit_group_names() {
