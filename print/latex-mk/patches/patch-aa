@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/05/22 11:27:02 dmcmahill Exp $
+
+--- latex-mk.in.orig	Sat Feb 22 09:28:47 2003
++++ latex-mk.in
+@@ -141,7 +141,7 @@ while test $cnt -lt $MAXITERS ; do
+ 	# wants to keep running latex and viewing/printing the results with these
+ 	# errors present, provide a way to override this.
+ 	#
+-	needbib=`grep "Citation.*on page.*undefined" $LATEX_MK_LOG`
++	needbib=`grep "Citation.*undefined" $LATEX_MK_LOG`
+ 	if test -n "$needbib" ; then
+ 		if test $bibcnt -eq 0 ; then
+ 			echo "$sep"
