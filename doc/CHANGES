@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.52 2002/09/25 04:57:09 rh Exp $
+$NetBSD: CHANGES,v 1.53 2002/09/25 04:59:49 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2959,3 +2959,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated msudir to 0.12 [abs 2002-09-24]
 	Added pvs-3.0 [jschauma 2002-09-24]
 	Added gtkspell-2.0.2 [rh 2002-09-25]
+	Updated pan to 0.13.0 [rh 2002-09-25]
