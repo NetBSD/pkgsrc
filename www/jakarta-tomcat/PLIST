@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/09/09 07:14:16 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.12.2.1 2004/11/10 21:03:12 salo Exp $
 tomcat/LICENSE
 tomcat/NOTICE
 tomcat/RELEASE-NOTES
@@ -545,7 +545,6 @@ tomcat/webapps/tomcat-docs/architecture/startup/serverStartup.txt
 tomcat/webapps/tomcat-docs/balancer-howto.html
 tomcat/webapps/tomcat-docs/build.xml
 tomcat/webapps/tomcat-docs/building.html
-tomcat/webapps/tomcat-docs/catalina/d
 tomcat/webapps/tomcat-docs/catalina/docs/api/allclasses-frame.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/allclasses-noframe.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/constant-values.html
@@ -578,6 +577,7 @@ tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/BaseJ
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/IISConfig.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/NSConfig.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/package-frame.html
+tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/package-summary.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/config/package-tree.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/package-frame.html
 tomcat/webapps/tomcat-docs/catalina/docs/api/org/apache/ajp/tomcat4/package-summary.html
