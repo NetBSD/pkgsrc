@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: tomcat.sh,v 1.3 2001/04/02 18:50:50 jwise Exp $
+# $NetBSD: tomcat.sh,v 1.4 2001/04/13 07:47:43 jwise Exp $
 #
 # PROVIDE: tomcat
 # REQUIRE: DAEMON
@@ -24,8 +24,13 @@ cmd=${1:-start}
 if [ -x ${command} ]
 then
 	case ${cmd} in
-	run|start|stop)
+	run|start)
 		echo "Starting ${name}."
+		(cd ${PREFIX}/tomcat && ${command} ${cmd})
+		;;
+
+	stop)
+		echo "Stopping ${name}."
 		(cd ${PREFIX}/tomcat && ${command} ${cmd})
 		;;
 
