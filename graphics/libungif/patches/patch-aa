@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.5 2003/08/02 05:20:38 mrg Exp $
+
+--- lib/qprintf.c.orig	2000-02-07 03:45:07.000000000 +1100
++++ lib/qprintf.c	2003-07-29 10:16:23.000000000 +1000
+@@ -16,6 +16,7 @@
+ 
+ #include <stdio.h>
+ 
++#undef HAVE_VARARGS_H
+ #ifdef HAVE_VARARGS_H
+ #include <varargs.h>
+ #else
