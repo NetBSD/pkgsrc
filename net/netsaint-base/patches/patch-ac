@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/01/16 15:39:43 rh Exp $
+
+--- Makefile.in.orig	Sun Oct 29 23:43:54 2000
++++ Makefile.in
+@@ -94,25 +94,22 @@
+ 	cd $(SRC_BASE); $(MAKE) $@ ; cd ..
+ 	cd $(SRC_CGI); $(MAKE) $@ ; cd ..
+ 	cd $(SRC_HTM); $(MAKE) $@ ; cd ..
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LOGDIR)
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LOGDIR)/archives
+ 
+ install-config:
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CFGDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) netsaint.cfg $(DESTDIR)$(CFGDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) hosts.cfg $(DESTDIR)$(CFGDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) commands.cfg $(DESTDIR)$(CFGDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) nscgi.cfg $(DESTDIR)$(CFGDIR)
+-	$(INSTALL) -m 660 $(INSTALL_OPTS) resource.cfg $(DESTDIR)$(CFGDIR)
++	[ -d ${DESTDIR}${CFGDIR} ] || ${BSD_INSTALL_DATA_DIR} ${DESTDIR}${CFGDIR} 
++	${BSD_INSTALL_DATA} netsaint.cfg $(DESTDIR)$(CFGDIR)/netsaint.cfg.sample
++	${BSD_INSTALL_DATA} hosts.cfg $(DESTDIR)$(CFGDIR)/hosts.cfg.sample
++	${BSD_INSTALL_DATA} commands.cfg $(DESTDIR)$(CFGDIR)/commands.cfg.sample
++	${BSD_INSTALL_DATA} nscgi.cfg $(DESTDIR)$(CFGDIR)/nscgi.cfg.sample
++	${BSD_INSTALL_DATA} resource.cfg $(DESTDIR)$(CFGDIR)/resource.cfg.sample
+ 
+ install-init:
+-	$(INSTALL) -m 774 $(INIT_OPTS) init-script $(DESTDIR)$(INIT_DIR)/netsaint
++	${BSD_INSTALL_SCRIPT} init-script $(DESTDIR)$(INIT_DIR)/netsaint
+ 
+ install-daemoninit:
+-	$(INSTALL) -m 774 $(INIT_OPTS) daemon-init $(DESTDIR)$(INIT_DIR)/netsaint
++	${BSD_INSTALL_SCRIPT} daemon-init $(DESTDIR)$(INIT_DIR)/netsaint
+ 
+ install-commandmode:
+-	$(INSTALL) -m 775 $(COMMAND_OPTS) -d $(DESTDIR)$(LOGDIR)/rw
+ 
+ uninstall:
+ 	rm -rf $(DESTDIR)$(BINDIR)/netsaint $(DESTDIR)$(CGIDIR)/*.cgi $(DESTDIR)$(CFGDIR)/*.cfg $(DESTDIR)$(HTMLDIR)

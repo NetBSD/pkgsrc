@@ -1,0 +1,66 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/01/16 15:39:43 rh Exp $
+
+--- netsaint.cfg.in.orig	Tue Jan 16 11:05:53 2001
++++ netsaint.cfg.in
+@@ -16,7 +16,7 @@
+ # for historical purposes.  This should be the first option specified 
+ # in the config file!!!
+ 
+-log_file=@localstatedir@/netsaint.log
++log_file=@localstatedir@/log/netsaint/netsaint.log
+ 
+ 
+ # OBJECT CONFIGURATION FILE (A.K.A "HOST" CONFIG FILE)
+@@ -64,7 +64,7 @@
+ # The contentsof the status file are deleted every time NetSaint
+ #  restarts.
+ 
+-status_file=@localstatedir@/status.log
++status_file=@localstatedir@/log/netsaint/status.log
+ 
+ 
+ # NETSAINT USER
+@@ -124,14 +124,14 @@
+ # directory level instead of on the file, as the file is deleted every
+ # time its contents are processed.
+ 
+-command_file=@localstatedir@/rw/netsaint.cmd
++command_file=@localstatedir@/run/netsaint/rw/netsaint.cmd
+ 
+ 
+ # COMMENT FILE
+ # This is the file that NetSaint will use for storing host and service
+ # comments.
+ 
+-comment_file=@localstatedir@/comment.log
++comment_file=@localstatedir@/log/netsaint/comment.log
+ 
+ 
+ # LOCK FILE
+@@ -149,7 +149,7 @@
+ # the other files (status log, comment file, main log file) are
+ # located on.  This limitation will likely disappear in future versions.
+ 
+-temp_file=@localstatedir@/netsaint.tmp
++temp_file=@localstatedir@/run/netsaint/netsaint.tmp
+ 
+ 
+ # LOG ROTATION METHOD
+@@ -168,7 +168,7 @@
+ # This is the directory where archived (rotated) log files should be 
+ # placed (assuming you've chosen to do log rotation).
+ 
+-log_archive_path=@localstatedir@/archives
++log_archive_path=@localstatedir@/log/netsaint/archives
+ 
+ 
+ # LOG SEVERITY LEVEL
+@@ -370,7 +370,7 @@
+ # This file is used only if the preserve_state_information
+ # variable is set to 1.
+ 
+-state_retention_file=@localstatedir@/status.sav
++state_retention_file=@localstatedir@/log/netsaint/status.sav
+ 
+ 
+ # INTERVAL LENGTH
