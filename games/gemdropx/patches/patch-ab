@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:41 agc Exp $
+$NetBSD: patch-ab,v 1.3 1998/08/27 14:06:09 garbled Exp $
 
 --- makefile.orig	Fri Nov 21 23:56:59 1997
 +++ makefile	Sat Jul 25 06:50:05 1998
@@ -16,8 +16,8 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 10:40:41 agc Exp $
 +GFX=$(PREFIX)/share/gemdropx/gfx
 +SOUNDS=$(PREFIX)/share/gemdropx/sounds
 +
-+XLIB= $(RPATH) -L$(PREFIX)/lib -lX11 -lm -lcompat
-+XINC= -I$(PREFIX)/include
++XLIB= -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lX11 -lm -lcompat
++XINC= -I$(X11BASE)/include
 +CFLAGS= $(XINC) -DSOUNDS=\"$(SOUNDS)\" -DGFX=\"$(GFX)\"
  
 @@ -29,11 +30,15 @@

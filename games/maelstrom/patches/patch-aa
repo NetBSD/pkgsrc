@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:42 agc Exp $
+$NetBSD: patch-aa,v 1.4 1998/08/27 14:06:09 garbled Exp $
 
 --- Makeflags.orig	Mon Jul 14 20:32:13 1997
 +++ Makeflags	Mon Aug  3 00:50:27 1998
@@ -14,8 +14,8 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 10:40:42 agc Exp $
 -INSTALL = install
 +LOGIC = netlogic
  
-+XPMINCLUDE = -I$(PREFIX)/include
-+XPMLINKDIR = -Wl,-R$(PREFIX)/lib -L$(PREFIX)/lib
++XPMINCLUDE = -I$(X11BASE)/include
++XPMLINKDIR = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib
 +
 +BINDIR = $(PREFIX)/bin
 +LIBDIR = $(PREFIX)/share/maelstrom
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 10:40:42 agc Exp $
 +CFLAGS = $(OPTIMIZE) $(INCLUDES) $(FEATURES) \
 +                              -DSYSTEM=\"$(SYSTEM)\" -DLIBDIR=\"$(LIBDIR)\"
 +EXTRALIBS =
-+X11LINKDIR = $(RPATH) -L$(X11BASE)/lib
++X11LINKDIR = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib
 +X11LIBS = -lX11 -lXext -lXpm
 +CSUMLIB =
 +LIBS = $(EXTRALIBS) $(XPMLINKDIR) $(X11LINKDIR) $(X11LIBS) $(CSUMLIB)

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:44 agc Exp $
+$NetBSD: patch-aa,v 1.3 1998/08/27 14:06:10 garbled Exp $
 
 --- Makefile.orig	Tue Oct  1 19:50:59 1996
 +++ Makefile	Fri Jul 31 09:49:41 1998
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:40:44 agc Exp $
 -DEBUG_OPT	=	-g#  #-DPRINT_ERRORS  
 -LINK_OPT	=	#-O
 +DEBUG_OPT	=	-O#  #-DPRINT_ERRORS  
-+LINK_OPT	=	$(RPATH)#-O
++LINK_OPT	=	-Wl,-R$(X11BASE)/lib #-O
  
  #SRC_DIR and WORK_DIR are only used for `make workdir`
  SRC_DIR		= 	/mit/hardts/src/X/xevil1.4.9
@@ -50,7 +50,7 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:40:44 agc Exp $
 +netbsd:
 +	@$(MAKE) CC="c++" \
 +CFLAGS="-DUSE_RANDOM -DPROTECTED_IS_PUBLIC -DMSEC_PER_CLOCK=8" \
-+INCL_DIRS=-I$(PREFIX)/include LIBS_DIRS=-L$(PREFIX)/lib \
++INCL_DIRS=-I$(X11BASE)/include LIBS_DIRS=-L$(X11BASE)/lib \
 +LIBS="-lX11 -lm" $(TARGETS)
  
  hp700:

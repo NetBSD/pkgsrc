@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:41 agc Exp $
+$NetBSD: patch-aa,v 1.3 1998/08/27 14:06:09 garbled Exp $
 
 --- Makefile.orig	Tue Feb  8 21:11:37 1994
 +++ Makefile	Sun Jul 26 07:39:28 1998
@@ -17,11 +17,11 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:40:41 agc Exp $
 @@ -30,6 +30,6 @@
  #CFLAGS = -O
 -CFLAGS = -O2 -W -Wreturn-type -Wunused -finline-functions -D__USE_BSD_SIGNAL 
-+CFLAGS = -O2 -W -Wreturn-type -Wunused -finline-functions -D__USE_BSD_SIGNAL -I$(PREFIX)/include
++CFLAGS = -O2 -W -Wreturn-type -Wunused -finline-functions -D__USE_BSD_SIGNAL -I$(X11BASE)/include
  #CFLAGS = -g
  #LDFLAGS = -L /usr/X11/lib -lbsd -s
 -LDFLAGS = -L /usr/X11/lib -s
-+LDFLAGS = $(RPATH) -L$(PREFIX)/lib
++LDFLAGS = -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib
  
 @@ -38,13 +38,12 @@
  install: all
