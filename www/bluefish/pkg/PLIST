@@ -1,20 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2000/05/21 11:39:45 wulf Exp $
-
+@comment $NetBSD: PLIST,v 1.3 2000/08/16 05:38:36 jlam Exp $
 bin/bluefish
 man/man1/bluefish.1
-share/bluefish/bluefish_icon.xpm
 share/bluefish/php3_functions
-share/bluefish/ssi_functions
 share/bluefish/rxml_functions
-share/locale/de/LC_MESSAGES/bluefish.mo
-share/locale/da/LC_MESSAGES/bluefish.mo
-share/locale/fr/LC_MESSAGES/bluefish.mo
-share/locale/ru/LC_MESSAGES/bluefish.mo
-share/locale/es/LC_MESSAGES/bluefish.mo
-share/locale/ro/LC_MESSAGES/bluefish.mo
+share/bluefish/ssi_functions
 share/locale/cs/LC_MESSAGES/bluefish.mo
+share/locale/da/LC_MESSAGES/bluefish.mo
+share/locale/de/LC_MESSAGES/bluefish.mo
 share/locale/el/LC_MESSAGES/bluefish.mo
 share/locale/en/LC_MESSAGES/bluefish.mo
-share/locale/ja/LC_MESSAGES/bluefish.mo
+share/locale/es/LC_MESSAGES/bluefish.mo
+share/locale/fr/LC_MESSAGES/bluefish.mo
 share/locale/it/LC_MESSAGES/bluefish.mo
+share/locale/ja/LC_MESSAGES/bluefish.mo
+share/locale/ro/LC_MESSAGES/bluefish.mo
+share/locale/ru/LC_MESSAGES/bluefish.mo
+share/pixmaps/bluefish_icon.xpm
+@unexec rmdir -p %D/share/pixmaps 2>/dev/null || true
 @dirrm share/bluefish
