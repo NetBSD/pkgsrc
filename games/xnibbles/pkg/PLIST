@@ -1,0 +1,42 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/23 09:55:27 garbled Exp $
+bin/xnibbles
+bin/xnleditor
+man/man6/xnibbles.6
+share/xnibbles/levels/level001.xnl
+share/xnibbles/levels/level002.xnl
+share/xnibbles/levels/level003.xnl
+share/xnibbles/levels/level004.xnl
+share/xnibbles/levels/level005.xnl
+share/xnibbles/levels/level006.xnl
+share/xnibbles/levels/level007.xnl
+share/xnibbles/levels/level008.xnl
+share/xnibbles/levels/level009.xnl
+share/xnibbles/levels/level010.xnl
+share/xnibbles/levels/level011.xnl
+share/xnibbles/levels/level012.xnl
+share/xnibbles/levels/level013.xnl
+share/xnibbles/levels/level014.xnl
+share/xnibbles/levels/level015.xnl
+share/xnibbles/levels/level016.xnl
+share/xnibbles/levels/level017.xnl
+share/xnibbles/levels/level018.xnl
+share/xnibbles/levels/level019.xnl
+share/xnibbles/levels/level020.xnl
+share/xnibbles/levels/template.xnl
+share/xnibbles/levels/README
+share/xnibbles/levels/LEVELS
+share/xnibbles/sounds/appear.ub
+share/xnibbles/sounds/break.ub
+share/xnibbles/sounds/destroy.ub
+share/xnibbles/sounds/double.ub
+share/xnibbles/sounds/gotdiamond.ub
+share/xnibbles/sounds/half.ub
+share/xnibbles/sounds/laughter.ub
+share/xnibbles/sounds/life.ub
+share/xnibbles/sounds/pop.ub
+share/xnibbles/sounds/spring.ub
+share/xnibbles/sounds/start.ub
+share/xnibbles/sounds/teleport.ub
+@dirrm share/xnibbles/levels
+@dirrm share/xnibbles/sounds
+@dirrm share/xnibbles

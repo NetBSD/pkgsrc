@@ -1,0 +1,4 @@
+XNibbles is a game for X11R6.  It is conceptually based on nibbles, which was a
+program that came with qbasic for MS-DOS.  XNibbles is actually written in C++,
+and shares no code with qbasic nibbles.  For those of you who have played the
+game before, you can attest to the fact that it is extremely fun and addictive.
