@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1228 2003/08/02 03:46:34 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1229 2003/08/02 13:17:05 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -32,8 +32,8 @@ MAKE_ENV+=	USETOOLS="${USETOOLS}"
 
 # This has to come first to avoid showing all BUILD_DEFS added by this
 # Makefile, which are usually not customizable.
-.PHONY: pre-fetch build-defs-message
-pre-fetch: build-defs-message
+.PHONY: pre-extract build-defs-message
+pre-extract: build-defs-message
 .if !target(build-defs-message)
 build-defs-message: ${WRKDIR}
 .if defined(BUILD_DEFS) && !empty(BUILD_DEFS)
