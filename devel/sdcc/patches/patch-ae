@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2001/04/29 16:15:15 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.5 2001/11/28 04:49:02 jlam Exp $
 
 --- support/cpp/Makefile.in.orig	Thu May  6 20:29:32 1999
 +++ support/cpp/Makefile.in	Fri Aug 25 23:17:26 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.4 2001/04/29 16:15:15 dmcmahill Exp $
  
  STD_INC		= @sdcc_include_dir@
 -CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -D_FORASXXXX_
-+CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -I$(LOCALBASE)/include -D_FORASXXXX_ -Dunix
++CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -I$(BUILDLINK_DIR)/include -D_FORASXXXX_ -Dunix
  CFLAGS		= @CFLAGS@
  M_OR_MM		= @M_OR_MM@
  LDFLAGS		= @LDFLAGS@

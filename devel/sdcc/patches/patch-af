@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2001/04/29 16:15:16 dmcmahill Exp $
+$NetBSD: patch-af,v 1.5 2001/11/28 04:49:02 jlam Exp $
 
 --- support/gc/Makefile.in.orig	Tue May 11 17:14:06 1999
 +++ support/gc/Makefile.in	Fri Aug 25 23:17:26 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.4 2001/04/29 16:15:16 dmcmahill Exp $
  #  it for the C compiler.
  
 -CFLAGS= -O2 -DATOMIC_UNCOLLECTABLE -DNO_SIGNALS -DALL_INTERIOR_POINTERS -DNO_EXECUTE_PERMISSION -DSILENT -I /usr/local/include
-+CFLAGS= -O2 -DATOMIC_UNCOLLECTABLE -DNO_SIGNALS -DALL_INTERIOR_POINTERS -DNO_EXECUTE_PERMISSION -DSILENT -I$(LOCALBASE)/include -Dunix
++CFLAGS= -O2 -DATOMIC_UNCOLLECTABLE -DNO_SIGNALS -DALL_INTERIOR_POINTERS -DNO_EXECUTE_PERMISSION -DSILENT -I$(BUILDLINK_DIR)/include -Dunix
  
  # For dynamic library builds, it may be necessary to add flags to generate
  # PIC code, e.g. -fPIC on Linux.

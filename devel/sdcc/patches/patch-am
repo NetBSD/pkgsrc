@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.3 2001/04/29 16:15:16 dmcmahill Exp $
+$NetBSD: patch-am,v 1.4 2001/11/28 04:49:02 jlam Exp $
 
 --- device/include/Makefile.in.orig	Mon Apr  9 21:50:32 2001
 +++ device/include/Makefile.in	Mon Apr  9 21:50:47 2001
@@ -7,7 +7,7 @@ $NetBSD: patch-am,v 1.3 2001/04/29 16:15:16 dmcmahill Exp $
  srcdir          = @srcdir@
  
 -CPPFLAGS        = @CPPFLAGS@ -I$(PRJDIR)
-+CPPFLAGS        = @CPPFLAGS@ -I$(PRJDIR) -I$(LOCALBASE)/include -Dunix
++CPPFLAGS        = @CPPFLAGS@ -I$(PRJDIR) -I$(BUILDLINK_DIR)/include -Dunix
  
  
  # Compiling entire program or any subproject
