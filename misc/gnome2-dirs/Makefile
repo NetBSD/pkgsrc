@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/04 13:25:43 markd Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/15 12:12:32 jlam Exp $
 #
 
 DISTNAME=	gnome2-dirs-${GNOME_DIRS_VERSION}
@@ -12,6 +12,7 @@ HOMEPAGE=	# empty
 COMMENT=	Shared GTK/GNOME (v2) directories
 
 WRKSRC=		${WRKDIR}
+USE_LANGUAGES=	# empty
 NO_EXTRACT=	# defined
 NO_CHECKSUM=	# defined
 NO_BUILDLINK=	# defined
