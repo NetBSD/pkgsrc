@@ -1,0 +1,11 @@
+--- config/Makefile.in.orig	Tue Mar 20 03:07:31 2001
++++ config/Makefile.in	Tue Mar 20 03:08:13 2001
+@@ -315,7 +315,7 @@
+ 
+ 	if test '!' -d $(authdir); then \
+ 		$(mkinstalldirs) $(authdir); \
+-		chown gdm.gdm $(authdir); \
++		chown ${GDMOWN}.${GDMGRP} $(authdir); \
+ 		chmod 750 $(authdir); \
+ 	fi
+ 

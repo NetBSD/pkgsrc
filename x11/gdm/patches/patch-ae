@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/11/10 23:15:28 tron Exp $
+$NetBSD: patch-ae,v 1.2 2001/03/20 02:42:15 mjl Exp $
 
---- po/Makefile.in.in.orig	Thu Sep 30 01:14:23 1999
-+++ po/Makefile.in.in	Tue Nov  9 23:30:28 1999
+--- po/Makefile.in.in.orig	Tue Mar 20 02:30:22 2001
++++ po/Makefile.in.in	Tue Mar 20 02:30:39 2001
 @@ -19,7 +19,7 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
