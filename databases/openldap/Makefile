@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.90 2004/11/26 03:00:24 jlam Exp $
+# $NetBSD: Makefile,v 1.91 2004/12/14 09:08:37 adam Exp $
 
-DISTNAME=		openldap-2.2.18
-SVR4_PKGNAME=		oldap
-PKGREVISION=		3
-CATEGORIES=		databases
-MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
-EXTRACT_SUFX=		.tgz
+DISTNAME=	openldap-2.2.18
+PKGREVISION=	3
+SVR4_PKGNAME=	oldap
+CATEGORIES=	databases
+MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		jlam@NetBSD.org
-HOMEPAGE=		http://www.OpenLDAP.org/
-COMMENT=		Lightweight directory access protocol server and client package
+MAINTAINER=	jlam@NetBSD.org
+HOMEPAGE=	http://www.OpenLDAP.org/
+COMMENT=	Lightweight directory access protocol server and client package
 
 CONFLICTS+=		ldapsdk-[0-9]*
 
