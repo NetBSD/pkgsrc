@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.24 2004/05/04 08:08:19 wiz Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -14,7 +14,7 @@ CONFLICTS+=		mc-[0-9]* gmc-[0-9]*
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/mc/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/mc/patches
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 
@@ -43,6 +43,6 @@ CPPFLAGS+=		-Dunix
 CFLAGS+= -DSunOS
 .endif
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
