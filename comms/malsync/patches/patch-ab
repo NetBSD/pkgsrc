@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/06/15 14:04:47 rh Exp $
+
+--- ../../../mal/common/AGNet.h.orig	Sun May 14 23:17:36 2000
++++ ../../../mal/common/AGNet.h	Thu Jun 15 14:20:07 2000
+@@ -54,6 +54,7 @@
+ #       else /* defined(macintosh) */
+ #           include <netdb.h>
+ #           include <sys/types.h>
++#           include <sys/param.h>
+ #           include <sys/socket.h>
+ #           include <unistd.h>
+ #           include <netinet/in.h>
+@@ -61,7 +62,7 @@
+ #               include <sys/filio.h>
+ #               include <arpa/inet.h>
+ #           else
+-#               ifdef __FreeBSD__
++#               if (defined(BSD) && BSD >= 199306)
+ #                   include <sys/ioctl.h>
+ #                   include <arpa/inet.h>
+ #               else
