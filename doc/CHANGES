@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1267 2003/01/28 23:15:23 jmmv Exp $
+$NetBSD: CHANGES,v 1.1268 2003/01/29 03:45:06 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -464,4 +464,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.46 [abs 2003-01-28]
 	Updated gimageview to 0.2.13nb1 [jmmv 2003-01-28]
 	Updated gphoto to 0.4.3nb3 [jmmv 2003-01-28]
-	Updated scigraphica-0.8.0nb2 [jmmv 2003-01-28]
+	Updated scigraphica to 0.8.0nb2 [jmmv 2003-01-28]
+	Updated kile to 1.32 [markd 2003-01-29]
