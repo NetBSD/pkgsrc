@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2568 2003/06/23 19:07:10 kristerw Exp $
+$NetBSD: CHANGES,v 1.2569 2003/06/23 20:07:44 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2549,3 +2549,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added bomberclone-data-0.7 [wiz 2003-06-23]
 	Added bomberclone-0.9.9 [wiz 2003-06-23]
 	Updated vice to 1.12 [kristerw 2003-06-23]
+	Updated vm to 7.16 [jtb 2003-06-23]
