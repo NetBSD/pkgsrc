@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/08 16:07:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/07/16 18:19:36 drochner Exp $
 ${GCC_SUBPREFIX}/bin/gnat
 ${GCC_SUBPREFIX}/bin/gnatbind
 ${GCC_SUBPREFIX}/bin/gnatbl
@@ -10,7 +10,6 @@ ${GCC_SUBPREFIX}/bin/gnatls
 ${GCC_SUBPREFIX}/bin/gnatmake
 ${GCC_SUBPREFIX}/bin/gnatname
 ${GCC_SUBPREFIX}/bin/gnatprep
-${GCC_SUBPREFIX}/bin/gnatpsta
 ${GCC_SUBPREFIX}/bin/gnatxref
 ${GCC_SUBPREFIX}/info/gnat_rm.info
 ${GCC_SUBPREFIX}/info/gnat_ug_unx.info
