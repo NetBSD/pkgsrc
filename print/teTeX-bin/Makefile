@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/01/15 18:46:33 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2000/02/05 20:03:01 wiz Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -26,6 +26,7 @@ USE_GMAKE=	yes
 USE_X11=	yes
 CFLAGS+=	-Dunix
 GNU_CONFIGURE=	yes
+INFO_FILES=	latex.info dvips.info web2c.info kpathsea.info
 CONFIGURE_ARGS+=--without-texinfo \
 		--without-dialog \
 		--disable-multiplatform \

@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 1999/08/17 21:20:41 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/02/05 20:03:01 wiz Exp $
 @comment There are three files in this package that teTeX-share installs
 @comment and that teTeX-bin modifies. Take care of this:
 lib/libkpathsea.a
+@unexec install-info --delete %D/info/latex.info %D/info/dir
+@unexec install-info --delete %D/info/dvips.info %D/info/dir
+@unexec install-info --delete %D/info/web2c.info %D/info/dir
+@unexec install-info --delete %D/info/kpathsea.info %D/info/dir
 info/latex.info-3
 info/latex.info-2
 info/latex.info-1
@@ -17,6 +21,10 @@ info/web2c.info-2
 info/web2c.info-1
 info/web2c.info
 info/kpathsea.info
+@exec install-info %D/info/latex.info %D/info/dir
+@exec install-info %D/info/dvips.info %D/info/dir
+@exec install-info %D/info/web2c.info %D/info/dir
+@exec install-info %D/info/kpathsea.info %D/info/dir
 include/kpathsea/xstat.h
 include/kpathsea/xopendir.h
 include/kpathsea/win32lib.h
