@@ -1,12 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/12 17:09:58 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2002/09/21 06:49:24 jlam Exp $
 
-${PCB_CONFDIR}, $HOME/.pcb and the current working directory are
-all included in the search path for m4 files.  In addition, the
-files "site-config.inc" (which would normally live in ${PCB_CONFDIR}),
-"user-config.inc" (which would normally live $HOME/.pcb) and
-"proj-config.inc" (in the working directory) are included if they
-exist.  This provides a mechanism for per-site, per-user,
-and per-project libraries.
+The following directories are all included in the search path for m4 files:
 
+	${PKG_SYSCONFDIR}
+	${HOME}/.pcb
+	the current working directory
+
+In addition, the files are included if they exist:
+
+	site-config.inc (normally in ${PKG_SYSCONFDIR})
+	user-config.inc (normally in $HOME/.pcb)
+	proj-config.inc (normally in the working directory)
+
+This provides a mechanism for per-site, per-user, and per-project
+libraries.
 ===========================================================================
