@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2002/01/21 13:19:08 martti Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/17 03:37:56 jmc Exp $
 #
 
-DISTNAME=	citrix_ica-client
+# A default so lintpkgsrc is happy
+PKGNAME=	citrix_ica-6.20
+DISTNAME=	citrix
 .if (${MACHINE_ARCH} == "i386")
 DISTNAME=	linuxx86
 PKGNAME=	citrix_ica-6.20.973
