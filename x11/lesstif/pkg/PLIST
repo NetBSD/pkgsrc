@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2001/01/04 15:11:02 agc Exp $
+@comment $NetBSD: PLIST,v 1.30 2001/03/28 14:57:56 drochner Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
@@ -197,7 +197,20 @@ man/man1/uil.1
 man/man1/xbae.1
 man/man1/xlt.1
 man/man1/xmbind.1
+man/man3/ApplicationShell.3
+man/man3/Composite.3
+man/man3/Constraint.3
+man/man3/Core.3
+man/man3/Object.3
+man/man3/OverrideShell.3
 man/man3/LessTifInternals.3
+man/man3/Rect.3
+man/man3/Shell.3
+man/man3/TopLevelShell.3
+man/man3/TransientShell.3
+man/man3/UnNamedObj.3
+man/man3/VendorShell.3
+man/man3/WmShell.3
 man/man3/XmArrowButton.3
 man/man3/XmArrowButtonGadget.3
 man/man3/XmBulletinBoard.3
@@ -246,6 +259,7 @@ man/man3/XmSelectionBox.3
 man/man3/XmSeparator.3
 man/man3/XmSeparatorGadget.3
 man/man3/XmSpinBox.3
+man/man3/XmString.3
 man/man3/XmTearOffButton.3
 man/man3/XmText.3
 man/man3/XmTextField.3
@@ -253,12 +267,18 @@ man/man3/XmToggleButton.3
 man/man3/XmToggleButtonGadget.3
 man/man3/XmVendorShell.3
 man/man3/XmWorld.3
+man/man5/VirtualBindings.5
 man/man5/mwmrc.5
 share/aclocal/ac_find_motif.m4
 share/doc/html/lesstif/Advocacy.html
 share/doc/html/lesstif/All.html
+share/doc/html/lesstif/ApplicationShell.html
+share/doc/html/lesstif/BUG-HUNTING.html
 share/doc/html/lesstif/COPYING.LIB.html
 share/doc/html/lesstif/Clipboard.txt
+share/doc/html/lesstif/Composite.html
+share/doc/html/lesstif/Constraint.html
+share/doc/html/lesstif/Core.html
 share/doc/html/lesstif/DragAndDrop.txt
 share/doc/html/lesstif/FAQ.html
 share/doc/html/lesstif/Form.txt
@@ -266,8 +286,19 @@ share/doc/html/lesstif/GeoUtils.txt
 share/doc/html/lesstif/Geometry.html
 share/doc/html/lesstif/INSTALL.html
 share/doc/html/lesstif/LessTifInternals.html
+share/doc/html/lesstif/Object.html
+share/doc/html/lesstif/OverrideShell.html
+share/doc/html/lesstif/PROGRAMMING_TIPS.html
+share/doc/html/lesstif/Rect.html
+share/doc/html/lesstif/Shell.html
 share/doc/html/lesstif/SyntheticResources.txt
+share/doc/html/lesstif/TopLevelShell.html
+share/doc/html/lesstif/TransientShell.html
 share/doc/html/lesstif/UIL.txt
+share/doc/html/lesstif/UnNamedObj.html
+share/doc/html/lesstif/VendorShell.html
+share/doc/html/lesstif/VirtualBindings.html
+share/doc/html/lesstif/WmShell.html
 share/doc/html/lesstif/Xbae.html
 share/doc/html/lesstif/Xlt.html
 share/doc/html/lesstif/XmArrowButton.html
@@ -318,6 +349,7 @@ share/doc/html/lesstif/XmSelectionBox.html
 share/doc/html/lesstif/XmSeparator.html
 share/doc/html/lesstif/XmSeparatorGadget.html
 share/doc/html/lesstif/XmSpinBox.html
+share/doc/html/lesstif/XmString.html
 share/doc/html/lesstif/XmStrings.txt
 share/doc/html/lesstif/XmTearOffButton.html
 share/doc/html/lesstif/XmText.html
@@ -330,10 +362,10 @@ share/doc/html/lesstif/apps.html
 share/doc/html/lesstif/bugs.html
 share/doc/html/lesstif/cdrom.html
 share/doc/html/lesstif/core.html
-share/doc/html/lesstif/current.html
 share/doc/html/lesstif/cvs.html
 share/doc/html/lesstif/download.html
 share/doc/html/lesstif/feedback.html
+share/doc/html/lesstif/future.html
 share/doc/html/lesstif/help.html
 share/doc/html/lesstif/images/hungry.png
 share/doc/html/lesstif/images/lesstif-realsmall.png
