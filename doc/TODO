@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.253 2003/02/14 21:23:05 wiz Exp $
+$NetBSD: TODO,v 1.254 2003/02/14 22:00:55 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -309,9 +309,7 @@ Suggested package updates
 	o xchat-2.0.0 [pkg/20298]
 	o xerces-c-2.1.0 [heinz]
 	o xfstt-1.4
-	o xmame-0.65.1
 	o xmcd-3.2.0
-	o xmess-0.65.1
 	o xosview-1.8.0 [pkg/20265]
 	o xpaint-2.6.8
 	o xpuyopuyo-0.9.5
