@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/03/10 04:09:04 jmc Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/02 17:48:28 jtb Exp $
 
-DISTNAME=		mercury-compiler-0.10.1
-PKGNAME=		mercury-0.10.1
+DISTNAME=		mercury-compiler-0.11.0
+PKGNAME=		mercury-0.11.0
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/ \
 			${MASTER_SITE_SUNSITE:=devel/lang/mercury/}
@@ -10,31 +10,32 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.mu.oz.au/mercury/
 COMMENT=		modern logic/functional programming language
 
-DEPENDS+=		boehm-gc>=5.3:../../devel/boehm-gc
-
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
+USE_GNU_READLINE=	yes	# rl_prep_term_function
 
 INFO_FILES=		mercury.info
 
-BOEHM_GC_DIR_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX=		BOEHM_GC_DIR=boehm-gc
-CONFIGURE_ENV+=		BOEHM_GC_DIR=${BOEHM_GC_DIR}
-
 # Some of the scripts test CC and use special settings for gcc.
 CONFIGURE_ENV+=		CC=gcc
-MAKE_ENV+=		_OPSYS_RPATH_NAME=${_OPSYS_RPATH_NAME}
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/mercury/lib/${MACHINE_GNU_PLATFORM}
-	${LN} -sf ${PREFIX}/lib/libgc.a \
-		${PREFIX}/lib/mercury/lib/${MACHINE_GNU_PLATFORM}/libgc.a
-	${LN} -sf ${PREFIX}/include/gc.h ${PREFIX}/lib/mercury/inc/gc.h
+MAKE_ENV+=		READLINE_PREFIX=${BUILDLINK_PREFIX.readline}
+
+do-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${MAKE} INSTALL_PREFIX=${WRKSRC}/tmp \
+			MERCURY_COMPILER=${WRKSRC}/tmp/lib/mercury/bin/${MACHINE_GNU_PLATFORM}/mercury_compile \
+		install
+
+do-install:
+	cd ${WRKSRC}/tmp && ${PAX} -rw . ${PREFIX}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mercury
 	${FIND} ${WRKSRC} -type d -name "CVS" | ${XARGS} ${RM} -fr
 	${FIND} ${WRKSRC} -type f -name ".cvsignore" | ${XARGS} ${RM} -f
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mercury
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/samples
 	cd ${WRKSRC}/samples && ${PAX} -rw . ${PREFIX}/share/examples/mercury
 
+.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
