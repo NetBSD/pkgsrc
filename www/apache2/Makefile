@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44.2.1 2004/11/02 10:47:01 agc Exp $
+# $NetBSD: Makefile,v 1.44.2.2 2004/11/26 19:59:05 snj Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		1
