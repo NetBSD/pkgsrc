@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/03/22 03:47:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.21 2004/05/24 08:25:33 kristerw Exp $
 
 DISTNAME=		linuxppc_lib-2000.4.6
 CATEGORIES=		emulators
@@ -23,7 +23,7 @@ BUILD_DEPENDS+=		rpm2pkg-1.2:../../pkgtools/rpm2pkg
 CONFLICTS=		suse_base-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5[U-Z]-powerpc NetBSD-1.5Z[A-Z]-powerpc \
-			NetBSD-1.[6-9]*-powerpc NetBSD-[2-9]*-*
+			NetBSD-1.[6-9]*-powerpc NetBSD-[2-9]*-powerpc
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 SHLIB_HANDLING=		NO
