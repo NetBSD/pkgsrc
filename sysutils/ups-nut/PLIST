@@ -1,18 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2001/11/21 03:22:05 simonb Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/11/21 15:50:55 jlam Exp $
 bin/upsc
 bin/upscmd
 bin/upsct
 bin/upsct2
 bin/upslog
-etc/nut/hosts.conf.sample
-etc/nut/multimon.conf.sample
-etc/nut/ups.conf.sample
-etc/nut/upsd.conf.sample
-etc/nut/upsd.users.sample
-etc/nut/upsmon.conf.sample
-etc/nut/upssched.conf.sample
-etc/nut/upsset.conf.sample
+etc/rc.d/ups
 etc/rc.d/upsd
+etc/rc.d/upsdriver
+etc/rc.d/upslog
+etc/rc.d/upsmon
 man/man5/ups.conf.5
 man/man5/upssched.conf.5
 man/man8/apcsmart.8
@@ -90,6 +86,15 @@ share/doc/nut/tips.txt
 share/doc/nut/todo.txt
 share/doc/nut/ups-trust425+625.txt
 share/doc/nut/upssched.txt
-@dirrm sbin/ups-drivers
+share/examples/nut/hosts.conf.sample
+share/examples/nut/multimon.conf.sample
+share/examples/nut/ups.conf.sample
+share/examples/nut/upsd.conf.sample
+share/examples/nut/upsd.users.sample
+share/examples/nut/upsmon.conf.sample
+share/examples/nut/upssched.conf.sample
+share/examples/nut/upsset.conf.sample
+@dirrm share/examples/nut
 @dirrm share/doc/nut/cables
 @dirrm share/doc/nut
+@dirrm sbin/ups-drivers
