@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/30 10:41:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/14 11:45:09 dillo Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.1
@@ -13,6 +13,7 @@ COMMENT=		Check for files not owned by any package
 
 USE_PERL5=	run
 USE_PKGINSTALL=	yes
+USE_DB185=	yes
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
@@ -30,7 +31,9 @@ do-build:
 		< ${FILESDIR}/${f} \
 		> ${WRKSRC}/${f}
 .endfor
-	cd ${WRKSRC} && ${MAKE} pkg_filecheck
+	cd ${WRKSRC} \
+	    && ${CC} ${CFLAGS} ${LDFLAGS} -o pkg_filecheck pkg_filecheck.c \
+		${BUILDLINK_LIBS.db}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/builddb.pl ${PREFIX}/bin/builddb
@@ -42,4 +45,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pkg_filecheck.conf \
 		${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf
 
+.include "../../databases/db/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
