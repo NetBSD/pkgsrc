@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.20 1999/11/10 08:01:29 soren Exp $
+$NetBSD: patch-aa,v 1.21 2000/01/20 18:54:50 soren Exp $
 
---- makefile.unix.orig	Fri Nov  5 18:26:11 1999
-+++ makefile.unix	Wed Nov 10 08:42:32 1999
+--- makefile.unix.orig	Wed Jan 12 00:13:10 2000
++++ makefile.unix	Thu Jan 20 19:24:51 2000
 @@ -131,14 +131,14 @@
  # *** Select destination directory for your compiled program , manual page
  # and binary distribution ( if you want to... )
@@ -85,18 +85,18 @@ $NetBSD: patch-aa,v 1.20 1999/11/10 08:01:29 soren Exp $
  # ARCH  = sunos
  ######## ix86/Solaris
 @@ -362,8 +365,15 @@
- DEFS.linux_alpha   = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__
- DEFS.linux_i386    = -DLSB_FIRST -DX86_ASM
- DEFS.FREEBSD       = -DLSB_FIRST -DX86_ASM
--DEFS.netbsd_i386   = -DLSB_FIRST -DX86_ASM
--DEFS.netbsd_alpha  = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__
+ DEFS.linux_alpha   = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__ -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
+ DEFS.linux_i386    = -DLSB_FIRST -DX86_ASM  -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
+ DEFS.FREEBSD       = -DLSB_FIRST -DX86_ASM  -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
+-DEFS.netbsd_i386   = -DLSB_FIRST -DX86_ASM  -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
+-DEFS.netbsd_alpha  = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__  -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
 +ifeq (${MACHINE},i386)
-+DEFS.netbsd	   = -DLSB_FIRST -DX86_ASM -DNETBSD
++DEFS.netbsd	   = -DLSB_FIRST -DX86_ASM -DNETBSD -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
 +else
 +ifeq (${MACHINE},alpha)
-+DEFS.netbsd	   = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__
++DEFS.netbsd	   = -DLSB_FIRST -DAXP_ASM -DALIGN_INTS -DALIGN_SHORTS -D__LP64__ -DNETBSD -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
 +else
-+DEFS.netbsd	   = -DLSB_FIRST -DDALIGN_INTS -DALIGN_SHORTS -DNETBSD
++DEFS.netbsd	   = -DLSB_FIRST -DDALIGN_INTS -DALIGN_SHORTS -DNETBSD -DHAVE_SNPRINTF -DHAVE_VSNPRINTF
 +endif
 +endif
  DEFS.sunos	   = -DCLOCKS_PER_SEC=1000000 -DALIGN_INTS -DALIGN_SHORTS
