@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6091 2004/06/02 07:58:01 adam Exp $
+$NetBSD: CHANGES,v 1.6092 2004/06/02 11:07:14 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2718,7 +2718,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libsoup-devel to 2.1.10 [recht 2004-06-01]
 	Updated evolution-data-server to 0.0.93 [recht 2004-06-01]
 	Updated sylpheed-gtk2 to 0.9.9nb3 [recht 2004-06-01]
-	Added gccAda-3.4 [shannonjr 2004-06-01]
+	Added gccAda-3.4.0 [shannonjr 2004-06-01]
 	Added gcc-3.4 [shannonjr 2004-06-01]
 	Added gdb6 [shannonjr 2004-06-01]
 	Updated gaim to 0.78 [jmmv 2004-06-01]
