@@ -1,0 +1,4 @@
+The pkgsrc installs X11 fonts for KSC 5601 Korean character set standard.
+
+Caveat: some of the font files seem to have incorrect font metric
+(font metric does not meet the actual font glyph).
