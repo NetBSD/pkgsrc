@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/10/03 14:06:17 martti Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/10/29 11:37:40 martti Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -14,6 +14,7 @@ include/libxslt/namespaces.h
 include/libxslt/numbersInternals.h
 include/libxslt/pattern.h
 include/libxslt/preproc.h
+include/libxslt/security.h
 include/libxslt/templates.h
 include/libxslt/transform.h
 include/libxslt/variables.h
@@ -25,12 +26,12 @@ lib/libexslt.a
 lib/libexslt.la
 lib/libexslt.so
 lib/libexslt.so.7
-lib/libexslt.so.7.12
+lib/libexslt.so.7.13
 lib/libxslt.a
 lib/libxslt.la
 lib/libxslt.so
 lib/libxslt.so.1
-lib/libxslt.so.1.21
+lib/libxslt.so.1.22
 lib/libxsltbreakpoint.a
 lib/libxsltbreakpoint.la
 lib/libxsltbreakpoint.so

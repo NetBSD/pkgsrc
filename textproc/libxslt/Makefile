@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2002/10/03 14:06:17 martti Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/29 11:37:40 martti Exp $
 
-DISTNAME=	libxslt-1.0.21
+DISTNAME=	libxslt-1.0.22
 PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.0/}
