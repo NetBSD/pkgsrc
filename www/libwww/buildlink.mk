@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:31 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/02 05:34:00 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libwww.
 #
@@ -59,7 +59,8 @@ BUILDLINK_CONFIG.libwww=		${LOCALBASE}/bin/libwww-config
 BUILDLINK_CONFIG_WRAPPER.libwww=	${BUILDLINK_DIR}/bin/libwww-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
-CONFIGURE_ENV+=		LIBWWW_CONFIG="${BUILDLINK_CONFIG_WRAPPER.libwww}"
+LIBWWW_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libwww}
+CONFIGURE_ENV+=		LIBWWW_CONFIG="${LIBWWW_CONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.libwww}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:22 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/02 05:33:59 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ClanLib.
 #
@@ -41,13 +41,14 @@ BUILDLINK_FILES.ClanLib+=	include/ClanLib/png/*
 
 BUILDLINK_TARGETS.ClanLib=	ClanLib-buildlink
 BUILDLINK_TARGETS.ClanLib+=	ClanLib-buildlink-config-wrapper
-BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.ClanLib}
+BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.ClanLib}
 
 BUILDLINK_CONFIG.ClanLib=	${LOCALBASE}/bin/clanlib-config
 BUILDLINK_CONFIG_WRAPPER.ClanLib=${BUILDLINK_DIR}/bin/clanlib-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
-CONFIGURE_ENV+=			CLANLIB_CONFIG="${BUILDLINK_CONFIG_WRAPPER.ClanLib}"
+CLANLIB_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.ClanLib}
+CONFIGURE_ENV+=			CLANLIB_CONFIG="${CLANLIB_CONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.ClanLib}
