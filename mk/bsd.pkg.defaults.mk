@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.270 2004/08/02 04:01:38 schmonz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.271 2004/08/04 02:56:01 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -990,6 +990,16 @@ FREEWNN_GROUP?=	jserver
 # Used in the ja-freewnn-server-bin package to specify the Free wnn group.
 # Possible: any group name
 # Default: jserver
+
+.if !empty(SETGIDGAME:M[yY][eE][sS])
+GAMEDATAMODE?=	664
+.else
+GAMEDATAMODE?=	${SHAREMODE}
+.endif
+# Used for various games to allow writing to a group-owned score file.
+# See also:	GAMEMODE, GAMEOWN, SETGIDGAME
+# Possible:	any file ownership
+# Default:	${SHAREMODE} if SETGIDGAME is not set to 'yes', 644 otherwise
 
 GAMEGRP?=	${BINGRP}
 # Used for various games to allow writing to a group-owned score file.
