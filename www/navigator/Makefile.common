@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2003/08/08 10:02:02 grant Exp $
+# $NetBSD: Makefile.common,v 1.66 2003/09/30 09:06:01 dmcmahill Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -231,7 +231,17 @@ do-install:
 
 .endif
 
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386" && !defined(NS_USE_BSDI)
+NS_NEED_LINUX=	yes
+.elif ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc"
+NS_NEED_LINUX=	yes
+.elif ${OPSYS} == "Linux"
+NS_NEED_LINUX=	yes
+.endif
+
 .if ${BINNAME} != "netscape"
 USE_BUILDLINK2=	# defined
-.  include "../../emulators/suse_linux/Makefile.application"
+.  if defined(NS_NEED_LINUX)
+.    include "../../emulators/suse_linux/Makefile.application"
+.  endif
 .endif
