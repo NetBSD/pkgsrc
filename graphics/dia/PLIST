@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/14 17:04:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/17 21:42:11 xtraeme Exp $
 bin/dia
 lib/dia/libbondgraph_objects.la
 lib/dia/libcairo_filter.la
@@ -20,7 +20,7 @@ lib/dia/libmisc_objects.la
 lib/dia/libnetwork_objects.la
 lib/dia/libpixbuf_filter.la
 lib/dia/libpstricks_filter.la
-lib/dia/libpython_plugin.la
+${PYTHON_OPTION}lib/dia/libpython_plugin.la
 lib/dia/libsadt_objects.la
 lib/dia/libshape_filter.la
 lib/dia/libstandard_objects.la
@@ -43,15 +43,15 @@ share/dia/images/selectable.png
 share/dia/images/unbroken-chain.xpm
 share/dia/images/visible-empty.png
 share/dia/images/visible.png
-share/dia/python-startup.py
-share/dia/python/diasvg.py
-share/dia/python/diasvg_import.py
-share/dia/python/group_props.py
-share/dia/python/gtkcons.py
-share/dia/python/otypes.py
-share/dia/python/pydiadoc.py
-share/dia/python/scascale.py
-share/dia/python/select_by.py
+${PYTHON_OPTION}share/dia/python-startup.py
+${PYTHON_OPTION}share/dia/python/diasvg.py
+${PYTHON_OPTION}share/dia/python/diasvg_import.py
+${PYTHON_OPTION}share/dia/python/group_props.py
+${PYTHON_OPTION}share/dia/python/gtkcons.py
+${PYTHON_OPTION}share/dia/python/otypes.py
+${PYTHON_OPTION}share/dia/python/pydiadoc.py
+${PYTHON_OPTION}share/dia/python/scascale.py
+${PYTHON_OPTION}share/dia/python/select_by.py
 share/dia/shapes/Assorted/arrow-chevron.png
 share/dia/shapes/Assorted/arrow-chevron.shape
 share/dia/shapes/Assorted/arrow-down.png
@@ -1321,16 +1321,16 @@ share/dia/xslt/dia-uml2java.xsl
 share/dia/xslt/dia-uml2owl.xsl
 share/dia/xslt/dia-uml2python.xsl
 share/dia/xslt/stylesheets.xml
-share/gnome/help/dia/C
-share/gnome/help/dia/en/dia.xml
-share/gnome/help/dia/en/graphics/greendots.png
-share/gnome/help/dia/en/graphics/home_network.png
-share/gnome/help/dia/en/graphics/line_icon.png
-share/gnome/help/dia/en/graphics/line_props.png
-share/gnome/help/dia/pl/dia.xml
-share/gnome/help/dia/pl/graphics/greendots.png
-share/gnome/help/dia/pl/graphics/home_network.png
-share/gnome/help/dia/pl/graphics/line_props.png
+${GNOME_OPTION}share/gnome/help/dia/C
+${GNOME_OPTION}share/gnome/help/dia/en/dia.xml
+${GNOME_OPTION}share/gnome/help/dia/en/graphics/greendots.png
+${GNOME_OPTION}share/gnome/help/dia/en/graphics/home_network.png
+${GNOME_OPTION}share/gnome/help/dia/en/graphics/line_icon.png
+${GNOME_OPTION}share/gnome/help/dia/en/graphics/line_props.png
+${GNOME_OPTION}share/gnome/help/dia/pl/dia.xml
+${GNOME_OPTION}share/gnome/help/dia/pl/graphics/greendots.png
+${GNOME_OPTION}share/gnome/help/dia/pl/graphics/home_network.png
+${GNOME_OPTION}share/gnome/help/dia/pl/graphics/line_props.png
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/dia.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/dia.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/dia.mo
@@ -1386,12 +1386,12 @@ share/pixmaps/dia_gnome_icon.png
 @exec ${MKDIR} %D/share/oaf
 @dirrm share/oaf
 @comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/gnome/help/dia/pl/graphics
-@dirrm share/gnome/help/dia/pl
-@dirrm share/gnome/help/dia/en/graphics
-@dirrm share/gnome/help/dia/en
-@dirrm share/gnome/help/dia
-@comment in gnome2-dirs: @dirrm share/gnome/help
+${GNOME_OPTION}@dirrm share/gnome/help/dia/pl/graphics
+${GNOME_OPTION}@dirrm share/gnome/help/dia/pl
+${GNOME_OPTION}@dirrm share/gnome/help/dia/en/graphics
+${GNOME_OPTION}@dirrm share/gnome/help/dia/en
+${GNOME_OPTION}@dirrm share/gnome/help/dia
+${GNOME_OPTION}@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/dia/xslt
 @dirrm share/dia/sheets/UML
 @dirrm share/dia/sheets/KAOS
@@ -1421,7 +1421,7 @@ share/pixmaps/dia_gnome_icon.png
 @dirrm share/dia/shapes/ChemEng
 @dirrm share/dia/shapes/Assorted
 @dirrm share/dia/shapes
-@dirrm share/dia/python
+${PYTHON_OPTION}@dirrm share/dia/python
 @dirrm share/dia/images
 @dirrm share/dia
 @comment in xdg-dirs: @dirrm share/applications
