@@ -1,8 +1,8 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsend.sh,v 1.1.1.1 2004/08/02 03:59:21 schmonz Exp $
+# $NetBSD: qmailsend.sh,v 1.2 2004/08/03 08:59:24 schmonz Exp $
 #
-# Script to control qmail-send (local and outgoing mail).
+# @PKGNAME@ script to control qmail-send (local and outgoing mail).
 #
 
 # PROVIDE: qmailsend mail
