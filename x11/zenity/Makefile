@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 15:30:34 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/06 22:07:00 jmmv Exp $
 #
 
-DISTNAME=	zenity-1.6
-PKGREVISION=	3
+DISTNAME=	zenity-1.8
 CATEGORIES=	x11 gnome2
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/1.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/1.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
@@ -23,6 +22,7 @@ USE_X11=		yes
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../graphics/libgnomecanvas/buildlink2.mk"
 .include "../../textproc/intltool/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
