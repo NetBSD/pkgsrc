@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/02/01 04:34:23 jtb Exp $
+
+--- lolevels/pgtek.c.orig	Wed Jan 31 10:14:12 2001
++++ lolevels/pgtek.c
+@@ -168,7 +168,7 @@
+ {
+   char dummy[82];
+   char gs,us,esc,ff,ctlx;
+-  gets(dummy);
++  fgets(dummy, 82, stdin);
+   gs = 29;
+   us = 31;
+   esc = 27;
