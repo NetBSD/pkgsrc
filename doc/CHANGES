@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9770 2005/04/06 04:16:11 schmonz Exp $
+$NetBSD: CHANGES,v 1.9771 2005/04/06 05:30:59 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1918,3 +1918,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sr to 2.3.3nb5 [is 2005-04-05]
 	Updated sr to 2.3.3nb6 [is 2005-04-05]
 	Updated getmail to 4.3.5 [schmonz 2005-04-06]
+	Updated clearsilver to 0.9.14 [epg 2005-04-06]
