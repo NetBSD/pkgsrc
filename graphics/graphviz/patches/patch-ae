@@ -1,49 +1,40 @@
-$NetBSD: patch-ae,v 1.3 2002/04/19 18:42:34 seb Exp $
+$NetBSD: patch-ae,v 1.4 2002/08/28 13:49:36 seb Exp $
 
---- gdtclft/Makefile.in.orig	Fri Apr 19 14:31:38 2002
+--- gdtclft/Makefile.in.orig	Mon Aug  5 05:11:26 2002
 +++ gdtclft/Makefile.in
-@@ -183,17 +183,10 @@
+@@ -185,9 +185,7 @@ Z_LIBS = @Z_LIBS@
  
  AUTOMAKE_OPTIONS = 1.4
  
--INCLUDES = @TCL_CFLAGS@ \
+-INCLUDES = @TCL_CFLAGS@ @TCL_INCLUDES@ \
 -	-I$(top_srcdir)/tclhandle \
--	-I$(top_srcdir)/gd \
--	-I@TCLSH_EXEC_PREFIX@/include
-+INCLUDES = @TCL_CFLAGS@ 	-I$(top_srcdir)/tclhandle 	-I$(top_srcdir)/gd
+-	-I$(top_srcdir)/gd
++INCLUDES = @TCL_CFLAGS@ @TCL_INCLUDES@ 	-I$(top_srcdir)/tclhandle 	-I$(top_srcdir)/gd
  
  
--LIBS = ${FT_LIBS} \
--	${PNG_LIBS} \
--	${JPEG_LIBS} \
--	${XPM_LIBS} \
--	${Z_LIBS} -lc
-+LIBS = ${FT_LIBS} 	${PNG_LIBS} 	${JPEG_LIBS} 	${XPM_LIBS} 	${Z_LIBS} -lc
- 
- 
- SUBDIRS = demo
-@@ -203,10 +196,7 @@
+ LIBS = @LIBS@ -lc
+@@ -199,10 +197,7 @@ man_MANS = gdtclft.n
  
  libgdtclft_la_SOURCES = gdtclft.c
  
 -libgdtclft_la_LIBADD = \
 -	../tclhandle/libtclhandle.la \
--	../gd/libgd.la \
+-	../gd/libgdconvenience.la \
 -	../tclstubs/libtclstubs.la
-+libgdtclft_la_LIBADD =  	../tclhandle/libtclhandle.la 	../gd/libgd.la 	${TCL_STUB_LIB_SPEC}
++libgdtclft_la_LIBADD =  	../tclhandle/libtclhandle.la 	../gd/libgdconvenience.la 	${TCL_STUB_LIB_SPEC}
  
  
  CLEANFILES = pkgIndex.tcl
-@@ -227,7 +217,7 @@
+@@ -223,7 +218,7 @@ X_EXTRA_LIBS = @X_EXTRA_LIBS@
  X_PRE_LIBS = @X_PRE_LIBS@
  libgdtclft_la_LDFLAGS = 
  libgdtclft_la_DEPENDENCIES =  ../tclhandle/libtclhandle.la \
--../gd/libgd.la ../tclstubs/libtclstubs.la
-+../gd/libgd.la
+-../gd/libgdconvenience.la ../tclstubs/libtclstubs.la
++../gd/libgdconvenience.la
  libgdtclft_la_OBJECTS =  gdtclft.lo
  CFLAGS = @CFLAGS@
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -243,7 +233,7 @@
+@@ -239,7 +234,7 @@ DIST_COMMON =  Makefile.am Makefile.in
  
  DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
  
@@ -52,7 +43,7 @@ $NetBSD: patch-ae,v 1.3 2002/04/19 18:42:34 seb Exp $
  GZIP_ENV = --best
  SOURCES = $(libgdtclft_la_SOURCES)
  OBJECTS = $(libgdtclft_la_OBJECTS)
-@@ -484,7 +474,6 @@
+@@ -480,7 +475,6 @@ distdir: $(DISTFILES)
  	      || exit 1; \
  	  fi; \
  	done
