@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/03 10:23:19 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/27 16:38:32 recht Exp $
 lib/java/postgresql.jar
-share/examples/java/jdbc-postgresql/postgresql-examples.jar
+share/doc/java/jdbc-postgresql/README
 share/examples/java/jdbc-postgresql/ImageViewer.java
 share/examples/java/jdbc-postgresql/Unicode.java
 share/examples/java/jdbc-postgresql/basic.java
 share/examples/java/jdbc-postgresql/blobtest.java
 share/examples/java/jdbc-postgresql/datestyle.java
 share/examples/java/jdbc-postgresql/metadata.java
+share/examples/java/jdbc-postgresql/postgresql-examples.jar
 share/examples/java/jdbc-postgresql/psql.java
 share/examples/java/jdbc-postgresql/threadsafe.java
-share/doc/java/jdbc-postgresql/README
 @dirrm share/examples/java/jdbc-postgresql
 @dirrm share/doc/java/jdbc-postgresql
