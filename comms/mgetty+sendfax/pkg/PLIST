@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/05/07 19:35:28 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/05/17 03:43:49 fredb Exp $
 bin/autopvf
 bin/basictopvf
 bin/faxspool
@@ -36,6 +36,7 @@ bin/wavtopvf
 etc/mgetty+sendfax/dialin.config
 etc/mgetty+sendfax/faxheader
 etc/mgetty+sendfax/faxrunq.config
+etc/mgetty+sendfax/faxspool.rules.sample
 etc/mgetty+sendfax/login.config
 etc/mgetty+sendfax/mgetty.config
 etc/mgetty+sendfax/sendfax.config
