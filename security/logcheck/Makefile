@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:52:58 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/22 10:11:49 agc Exp $
 
 DISTNAME=	logcheck-1.1.1
 PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	http://www.psionic.com/tools/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sentrytools/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.psionic.com/
+HOMEPAGE=	http://sourceforge.net/projects/sentrytools/
 COMMENT=	Auditing tool for system logs on Unix boxes
 
 USE_BUILDLINK2=	YES
