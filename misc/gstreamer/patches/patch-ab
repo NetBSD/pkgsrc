@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/04/25 04:39:55 rh Exp $
+$NetBSD: patch-ab,v 1.2 2003/05/11 21:03:37 jmc Exp $
 
---- tools/gst-launch.c.orig	2003-02-02 10:05:42.000000000 +1000
-+++ tools/gst-launch.c
+--- tools/gst-launch.c.orig	Sun Feb  2 00:05:42 2003
++++ tools/gst-launch.c	Sun May 11 15:35:14 2003
 @@ -1,7 +1,9 @@
 +#include <errno.h>
  #include <string.h>
@@ -12,7 +12,23 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/25 04:39:55 rh Exp $
  #include <gst/gst.h>
  
  static guint64 iterations = 0;
-@@ -158,6 +160,19 @@ fault_handler (int signum, siginfo_t *si
+@@ -10,6 +12,15 @@
+ static guint64 max = 0;
+ static GstClock *s_clock;
+ 
++#ifndef SA_SIGINFO
++typedef struct {
++	char *si_addr;
++	int si_signo;
++	int si_errno;
++	int si_code;
++} siginfo_t;
++#endif
++
+ gboolean
+ idle_func (gpointer data)
+ {
+@@ -158,6 +169,20 @@
  
  }
  
@@ -21,6 +37,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/25 04:39:55 rh Exp $
 +{
 +	siginfo_t si;
 +
++	si.si_addr = NULL;
 +	si.si_signo = sig;
 +	si.si_errno = errno;
 +	si.si_code = code;
@@ -32,7 +49,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/25 04:39:55 rh Exp $
  static void 
  fault_restore (void)
  {
-@@ -176,8 +191,13 @@ fault_setup (void)
+@@ -176,8 +201,13 @@
    struct sigaction action;
  
    memset (&action, 0, sizeof (action));
@@ -40,7 +57,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/04/25 04:39:55 rh Exp $
    action.sa_sigaction = fault_handler;
    action.sa_flags = SA_SIGINFO;
 +#else
-+  action.sa_sigaction = (void (*)(int))si_handler;
++  action.sa_handler = (void (*)(int))si_handler;
 +  action.sa_flags = 0;
 +#endif
  
