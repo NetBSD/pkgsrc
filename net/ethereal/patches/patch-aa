@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.9 2003/11/04 12:49:25 adam Exp $
+
+--- tethereal.c.orig	2003-11-04 13:30:48.000000000 +0100
++++ tethereal.c
+@@ -1394,7 +1394,7 @@ main(int argc, char *argv[])
+       fprintf(stderr, "tethereal: %s\n", dfilter_error_msg);
+       epan_cleanup();
+ #ifdef HAVE_PCAP_COMPILE_NOPCAP
+-      if (pcap_compile_nopcap(DLT_EN10MB, 0, &fcode, rfilter, 0, 0) != -1) {
++      if (pcap_compile_nopcap(DLT_EN10MB, 0, &fcode, rfilter, 0, 0, err_str) != -1) {
+         fprintf(stderr,
+           "  Note: This display filter code looks like a valid capture filter;\n"
+           "        maybe you mixed them up?\n");
