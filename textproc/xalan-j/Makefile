@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/30 16:14:33 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/30 20:38:07 jwise Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xalan-J,
 # because although Xalan runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -22,9 +22,9 @@ NO_BUILD=
 WRKSRC=		${WRKDIR}/xalan_1_0_1
 
 do-install:
-	${INSTALL} -c ${WRKSRC}/xalan.jar ${PREFIX}/lib/java
-	${INSTALL} -c ${WRKSRC}/bsf.jar ${PREFIX}/lib/java
-	${INSTALL} -c ${WRKSRC}/bsfengines.jar ${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/xalan.jar ${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/bsf.jar ${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/bsfengines.jar ${PREFIX}/lib/java
 	${MKDIR} ${PREFIX}/share/doc/java/xalan
 	cd ${WRKSRC}/docs ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/xalan ; ${GTAR} pvxf - )
 	${MKDIR} ${PREFIX}/share/examples/java/xalan
