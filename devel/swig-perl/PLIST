@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 15:11:23 epg Exp $
+lib/libswigpl.a
+lib/libswigpl.la
+lib/libswigpl.so
