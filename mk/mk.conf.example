@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.94 1999/10/31 17:47:44 jdolecek Exp $
+# $NetBSD: mk.conf.example,v 1.95 1999/11/10 10:37:12 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -57,6 +57,10 @@
 
 #X11BASE=	/usr/X11R6	# Where X11 is installed on the system.
                                 # (and the default install path of X11 pkgs)
+                                # Possible: any path
+                                # Default: /usr/X11R6
+
+#MOTIFBASE=	/usr/X11R6	# Where Motif is installed on the system.
                                 # Possible: any path
                                 # Default: /usr/X11R6
 
