@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 1998/06/23 21:35:57 tron Exp $
+bin/magicfilter
+man/man8/magicfilter.8
