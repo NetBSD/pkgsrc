@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/12 17:33:14 wiz Exp $
+
+--- doc/Makefile.in.orig	Tue Jul  2 19:06:37 2002
++++ doc/Makefile.in	Tue Jul  2 19:06:41 2002
+@@ -341,8 +341,6 @@
+ 	    echo '-- Installing '$$i ; \
+ 	    $(INSTALL_DATA) $$i $(DESTDIR)$(TARGET_DIR); \
+ 	  done; \
+-	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
+-	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(TARGET_DIR); \
+ 	  echo '-- Fixing Crossreferences' ; \
+ 	  gtkdoc-fixxref --module=$(DOC_MODULE) --html-dir=$(HTML_DIR) || true; \
+ 	fi)
