@@ -12,8 +12,8 @@ SSYYNNOOPPSSIISS
 
 DDEESSCCRRIIPPTTIIOONN
      The ccppiioo command copies files to and from a ccppiioo archive.  If the archive
-     is of the form: _[_[_u_s_e_r_@_]_h_o_s_t_:_]_f_i_l_e then the archive will be processed us-
-     ing rmt(8).
+     is of the form: _[_[_u_s_e_r_@_]_h_o_s_t_:_]_f_i_l_e then the archive will be processed
+     using rmt(8).
 
      The options are as follows:
 
@@ -78,16 +78,16 @@ DDEESSCCRRIIPPTTIIOONN
                      Read archive written with a block size of _b_y_t_e_s.
 
              --dd, ----mmaakkee--ddiirreeccttoorriieess
-                     Create any intermediate directories as needed during re-
-                     store.
+                     Create any intermediate directories as needed during
+                     restore.
 
              --EE _f_i_l_e, ----ppaatttteerrnn--ffiillee _f_i_l_e
                      Read list of file name patterns to extract or list from
                      _f_i_l_e.
 
              --ff, ----nnoonnmmaatthhiinngg
-                     Restore all files except those matching the _p_a_t_t_e_r_n_s giv-
-                     en on the command line.
+                     Restore all files except those matching the _p_a_t_t_e_r_n_s
+                     given on the command line.
 
              --FF _a_r_c_h_i_v_e, ----ffiillee _a_r_c_h_i_v_e
 
@@ -119,8 +119,8 @@ DDEESSCCRRIIPPTTIIOONN
                      tories will be created.
 
              --uu, ----uunnccoonnddiittiioonnaall
-                     Overwrite files even when the file in the archive is old-
-                     er than the one that will be overwritten.
+                     Overwrite files even when the file in the archive is
+                     older than the one that will be overwritten.
 
              --vv, ----vveerrbboossee
                      Be verbose about operations.  List filenames as they are
