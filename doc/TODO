@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2484 2004/11/26 20:44:55 snj Exp $
+$NetBSD: TODO,v 1.2485 2004/11/26 20:51:15 snj Exp $
 
 Suggested new packages
 ======================
@@ -1317,7 +1317,6 @@ Suggested package updates
 	o windowlab-1.24
 	o wine-20041019
 	o wmbiff-0.4.26
-	o wmfishtime-1.24
 	o wmmemmon-1.0.1
 	o wmpload-0.9.5
 	o wmweather-2.4.3
