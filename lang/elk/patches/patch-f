@@ -1,0 +1,130 @@
+--- include/build	1998/03/31 09:49:53	1.1
++++ include/build	1998/03/31 09:53:47
+@@ -21,18 +21,17 @@
+        stkmem.h\\
+        type.h
+ 
++INCDIR=	\${PREFIX}/include/elk
++
+ config.h:	../config/system ../config/site
+ 	\$(SHELL) ./build-config
+ 
+ install:	\$(FILES)
+-	-@if [ ! -d $install_dir/include ]; then \\
+-	    echo mkdir $install_dir/include; \\
+-	    mkdir $install_dir/include; \\
+-	fi
++	-@mkdir -p \${INCDIR} \${PREFIX}/share/elk
+ 	@for i in \$(FILES) ;\\
+ 	do \\
+-	    echo cp \$\$i $install_dir/include; \\
+-	    cp \$\$i $install_dir/include; \\
++	    echo \${BSD_INSTALL_DATA} \$\$i \${INCDIR}; \\
++	    \${BSD_INSTALL_DATA} \$\$i \${INCDIR}; \\
+ 	done
+ 
+ localize:	config.h
+--- src/build	1998/03/31 09:58:17	1.1
++++ src/build	1998/03/31 10:00:03
+@@ -181,11 +181,7 @@
+ 	rm main3.c
+ 
+ install: scheme standalone.o module.o
+-	-@if [ ! -d $install_dir/bin ]; then \\
+-	    echo mkdir $install_dir/bin; \\
+-	    mkdir $install_dir/bin; \\
+-	fi
+-	cp scheme $install_dir/bin
++	\${BSD_INSTALL_PROGRAM} scheme \${PREFIX}/bin/elk
+ 	-@if [ ! -d $install_dir/lib ]; then \\
+ 	    echo mkdir $install_dir/lib; \\
+ 	    mkdir $install_dir/lib; \\
+--- lib/xlib/build	1998/03/31 10:24:34	1.1
++++ lib/xlib/build	1998/03/31 10:26:57
+@@ -117,15 +117,8 @@
+ 	    mkdir $install_dir/runtime/obj; \\
+ 	fi
+ 	cp xlib.pre $install_dir/runtime/obj/xlib.o
+-	-@if [ ! -d $install_dir/include ]; then \\
+-	    echo mkdir $install_dir/include; \\
+-	    mkdir $install_dir/include; \\
+-	fi
+-	-@if [ ! -d $install_dir/include/extensions ]; then \\
+-	    echo mkdir $install_dir/include/extensions; \\
+-	    mkdir $install_dir/include/extensions; \\
+-	fi
+-	cp xlib.h $install_dir/include/extensions
++	-@mkdir -p \${PREFIX}/include/elk/extensions
++	\${BSD_INSTALL_DATA} xlib.h \${PREFIX}/include/elk/extensions
+ 
+ lint:
+ 	lint \$(LINTFLAGS) -I\$(INC) $x11_incl \$(C)
+--- lib/unix/build	1998/03/31 10:28:09	1.1
++++ lib/unix/build	1998/03/31 10:28:42
+@@ -87,15 +87,9 @@
+ 	    mkdir $install_dir/runtime/obj; \\
+ 	fi
+ 	cp unix.pre $install_dir/runtime/obj/unix.o
+-	-@if [ ! -d $install_dir/include ]; then \\
+-	    echo mkdir $install_dir/include; \\
+-	    mkdir $install_dir/include; \\
+-	fi
+-	-@if [ ! -d $install_dir/include/extensions ]; then \\
+-	    echo mkdir $install_dir/include/extensions; \\
+-	    mkdir $install_dir/include/extensions; \\
+-	fi
+-	cp unix.h $install_dir/include/extensions
++	-@mkdir -p \${PREFIX}/include/elk/extensions
++	\${BSD_INSTALL_DATA} unix.h \${PREFIX}/include/elk/extensions
++
+ 
+ lint:
+ 	lint \$(LINTFLAGS) -I\$(INC) \$(C)
+--- lib/xt/build	1998/03/31 10:29:31	1.1
++++ lib/xt/build	1998/03/31 10:30:02
+@@ -97,15 +97,9 @@
+ 	    mkdir $install_dir/runtime/obj; \\
+ 	fi
+ 	cp xt.pre $install_dir/runtime/obj/xt.o
+-	-@if [ ! -d $install_dir/include ]; then \\
+-	    echo mkdir $install_dir/include; \\
+-	    mkdir $install_dir/include; \\
+-	fi
+-	-@if [ ! -d $install_dir/include/extensions ]; then \\
+-	    echo mkdir $install_dir/include/extensions; \\
+-	    mkdir $install_dir/include/extensions; \\
+-	fi
+-	cp xt.h $install_dir/include/extensions
++	-@mkdir -p \${PREFIX}/include/elk/extensions
++	\${BSD_INSTALL_DATA} xt.h \${PREFIX}/include/elk/extensions
++
+ 
+ lint:
+ 	lint \$(LINTFLAGS) -I\$(INC) -I../xlib $x11_incl \$(C)
+--- doc/man/Makefile	1998/03/31 10:42:41	1.1
++++ doc/man/Makefile	1998/03/31 10:43:33
+@@ -7,5 +7,10 @@
+ elk.1.html: elk.1
+ 	$(UNROFF) $?
+ 
++default: elk.1
++
+ clean:
+ 	rm -f elk.ps elk.1.html
++
++install: elk.1
++	${BSD_INSTALL_MAN} elk.1 ${PREFIX}/man/man1
+--- scripts/build	1998/03/31 11:15:29	1.1
++++ scripts/build	1998/03/31 11:16:06
+@@ -30,10 +30,7 @@
+ 	chmod +x \$@
+ 
+ install: \$(FILES)
+-	-@if [ ! -d $install_dir/lib ]; then \\
+-	    echo mkdir $install_dir/lib; \\
+-	    mkdir $install_dir/lib; \\
+-	fi
++	-@mkdir -p $install_dir/lib
+ 	cp linkscheme $install_dir/lib
+ 	cp makedl $install_dir/lib
+ 	cp ldflags $install_dir/lib
