@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2002/12/24 21:00:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/04 17:29:04 jmmv Exp $
 #
 
 DISTNAME=		gtk+-2.2.0
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
@@ -22,6 +22,7 @@ USE_GMAKE=		yes
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
+CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFBASE}"
 CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
 CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
@@ -36,6 +37,12 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/demos/gtk-demo
 
+PKG_SYSCONFSUBDIR=	gtk-2.0
+EGDIR=			${PREFIX}/share/examples/gtk2
+CONF_FILES=		${EGDIR}/gdk-pixbuf.loaders \
+			${PKG_SYSCONFDIR}/gdk-pixbuf.loaders
+CONF_FILES+=		${EGDIR}/gtk.immodules ${PKG_SYSCONFDIR}/gtk.immodules
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/modules
 
@@ -49,4 +56,5 @@ post-install:
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
