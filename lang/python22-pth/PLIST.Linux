@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux,v 1.1.1.1 2002/10/25 10:48:48 drochner Exp $
+@comment $NetBSD: PLIST.Linux,v 1.1 2002/12/25 16:57:43 grant Exp $
 lib/python2p2/plat-linux2/CDROM.py
 lib/python2p2/plat-linux2/CDROM.pyc
 lib/python2p2/plat-linux2/CDROM.pyo
