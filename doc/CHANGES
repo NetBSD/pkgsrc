@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5974 2004/05/16 11:52:50 heinz Exp $
+$NetBSD: CHANGES,v 1.5975 2004/05/16 23:19:03 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2579,3 +2579,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added faac-1.24 [xtraeme 2004-05-16]
 	Added dirac-0.2.0 [xtraeme 2004-05-16]
 	Added wmi-7 [xtraeme 2004-05-16]
+	Updated p5-SOAP-Lite to 0.60a [grant 2004-05-16]
