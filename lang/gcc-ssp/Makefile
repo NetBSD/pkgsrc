@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/04/10 20:10:17 grant Exp $
+# $NetBSD: Makefile,v 1.22 2003/04/27 11:53:56 cjep Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -68,8 +68,8 @@ post-extract:
 	${CP} ${GCC_FILESDIR}/xm-netbsd.h .; \
 	${CP} ${GCC_FILESDIR}/xm-target64.h .; \
 	for FILE in ${GCC_FILESDIR}/*_* ; do \
-	  ARCH=`basename $${FILE} | cut -d_ -f1`; \
-	  DEST=`basename $${FILE} | sed -e "s/$${ARCH}_//"`; \
+	  ARCH=`basename $${FILE} | ${CAT} -d_ -f1`; \
+	  DEST=`basename $${FILE} | ${SED} -e "s/$${ARCH}_//"`; \
 	  ${MKDIR} $${ARCH}; \
 	  ${CP} $${FILE} $${ARCH}/$${DEST}; \
 	done; \
@@ -94,14 +94,14 @@ post-build:
 		 -e 's#@@PREFIX@@#${PREFIX}#g' \
 	   <$$FILE >${WRKDIR}/`basename $$FILE`; \
 	done
-	@echo "===> Check whether stack protection works or not"
+	@${ECHO} "===> Check whether stack protection works or not"
 	${WRKSRC}/gcc/xgcc -B${WRKSRC}/gcc/ -O2 -o ${WRKDIR}/buffer ${FILESDIR}/buffer.c
-	ulimit -c 0 && ${WRKDIR}/buffer abcdefghijklmnopqrstuvwxyz  2> ${WRKDIR}/output || true
-	@if [ x"`/bin/cat ${WRKDIR}/output`" = "x: stack smashing attack in function main" ]; then \
-	    echo "===> Stack protection succeeded."; \
+	ulimit -c 0 && ${WRKDIR}/buffer abcdefghijklmnopqrstuvwxyz  2> ${WRKDIR}/output || ${TRUE}
+	@if [ x"`${CAT} ${WRKDIR}/output`" = "x: stack smashing attack in function main" ]; then \
+	    ${ECHO} "===> Stack protection succeeded."; \
 	    exit 0; \
 	else \
-	    echo "**** Stack protection failed."; \
+	    ${ECHO} "**** Stack protection failed."; \
 	    exit 1; \
 	fi
 .endif
