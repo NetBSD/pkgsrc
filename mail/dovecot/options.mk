@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/08/01 07:04:45 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2004/08/04 17:12:46 salo Exp $
 
 # Global and legacy options
 .if defined(DOVECOT_USE_GNUTLS) || defined(DOVECOT_USE_MYSQL) || \
@@ -18,7 +18,7 @@ PKG_OPTIONS.dovecot+=	pgsql
 PKG_OPTIONS.dovecot+=	inet6
 .    endif
 .    if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[Yy][Ee][Ss])
-PKG_OPTIONS.dovecot+=	openldap
+PKG_OPTIONS.dovecot+=	ldap
 .    endif
 .    if defined(USE_SASL2) && !empty(USE_SASL2:M[Yy][Ee][Ss])
 PKG_OPTIONS.dovecot+=	sasl
