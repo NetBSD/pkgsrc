@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/19 05:58:51 garbled Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/01 16:26:56 wiz Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -18,6 +18,7 @@ EXTRACT_ONLY=	${CF_SRC}
 CF_SRC=		crossfire-1.0.0.tar.bz2
 CF_MAPS=	crossfire-1.0.0-maps.tar.bz2
 
+USE_XAW=	yes
 USE_XPM=	yes
 USE_X11=	yes
 USE_GMAKE=	yes
