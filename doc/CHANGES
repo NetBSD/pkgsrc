@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3716 2003/10/20 15:30:04 agc Exp $
+$NetBSD: CHANGES,v 1.3717 2003/10/20 16:11:35 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4229,3 +4229,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added dmesg2gif-1.0 [hubertf 2003-10-20]
 	Updated gsharutils to 4.2.1nb2 [agc 2003-10-20]
 	Updated db3 to db3-3.11.2nb1 [agc 2003-10-20]
+	Updated x11-links to 0.18 [tron 2003-10-20]
