@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.794 2001/07/30 05:04:32 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.795 2001/08/01 16:18:18 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -812,7 +812,7 @@ MASTER_SITE_GNU+=	\
 	ftp://ftp.progsoc.uts.edu.au/pub/gnu/
 
 MASTER_SITE_PERL_CPAN+=	\
-	ftp://ftp.digital.com/pub/plan/perl/CPAN/modules/by-module/ \
+	ftp://ftp.loaded.net/pub/CPAN/modules/by-module/ \
 	ftp://ftp.freesoftware.com/pub/perl/CPAN/modules/by-module/ \
 	ftp://ftp.gmd.de/mirrors/CPAN/modules/by-module/ \
 	ftp://cpan.perl.org/CPAN/modules/by-module/
