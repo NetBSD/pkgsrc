@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/02/21 02:58:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 1999/03/02 03:53:07 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -18,7 +18,8 @@ DISTFILES=      bash-${V}.tar.gz bash-doc-${DV}.tar.gz
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 
-GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--host=${MACHINE_GNU_ARCH}-unknown-netbsd --prefix=${PREFIX}
+HAS_CONFIGURE=	yes
 USE_GTEXINFO=	yes
 
 pre-install:
