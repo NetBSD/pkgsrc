@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2001/10/15 17:26:41 tron Exp $
+
+--- src/mozilla/TOCProtocolHandler.cpp.orig	Fri Oct  5 18:59:43 2001
++++ src/mozilla/TOCProtocolHandler.cpp	Mon Oct 15 19:22:27 2001
+@@ -21,7 +21,7 @@
+ #include "outputbuffer.h"
+ 
+ #include <algorithm>
+-#if (GCC_VERSION < VERSION2(3,0)) && (GCC_VERSION >= VERSION2(2,95))
++#if !defined(__NetBSD__) && (GCC_VERSION < VERSION2(3,0)) && (GCC_VERSION >= VERSION2(2,95))
+ #include <g++-3/string>
+ #else
+ #include <string>
