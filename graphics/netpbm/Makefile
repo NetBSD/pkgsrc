@@ -1,30 +1,29 @@
-# $NetBSD: Makefile,v 1.7 1997/12/15 00:52:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1997/12/31 03:34:45 hubertf Exp $
 # New ports collection makefile for:	netpbm
 # Version required:	1mar1994
-# Date created:		?
-# Whom:			jmz (original)
+# Date created:		20 December 1997
+# Whom:			jmz (original), asami@FreeBSD.ORG, tron
 #
-# FreeBSD Id: Makefile,v 1.8 1996/11/18 11:28:55 asami Exp
 #
 
 DISTNAME=	netpbm
 PKGNAME=	netpbm-94.3.1
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.x.org/R5contrib/
-DISTFILES=	netpbm-1mar1994.tar.gz
+MASTER_SITES=	ftp://ftp.wustl.edu//graphics/graphics/packages/NetPBM/ \
+		ftp://ftp.informatik.uni-oldenburg.de/pub/netpbm/ \
+		ftp://ftp.informatik.uni-oldenburg.de/pub/grafik/png/applications/
+DISTFILES=	netpbm-1mar1994.tar.gz \
+		pcxtoppm.tar.gz \
+		rletopnm.tar.gz \
+		pnmtopng-2.36.tar.gz
 
-MAINTAINER=	asami@FreeBSD.ORG
+LIB_DEPENDS=	jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
+		png\\.0\\.96:${PORTSDIR}/graphics/png \
+		tiff\\.3\\.:${PORTSDIR}/graphics/tiff
 
-LIB_DEPENDS=	tiff\\.3\\.:${PORTSDIR}/graphics/tiff
+WRKSRC=		${WRKDIR}/netpbm
+MAKE_ENV +=	PREFIX=${PREFIX}
 
-USE_IMAKE=	yes
-
-OPSYS!=		uname -s
-
-.if (${OPSYS} == "NetBSD")
-
-MAKE_ENV +=	COMPRESSMANCMD="${GZIP_CMD}"
-MANCOMPRESSED=	yes
 MAN1=	atktopbm.1 g3topbm.1 brushtopbm.1 cmuwmtopbm.1 \
 	icontopbm.1 gemtopbm.1 macptopbm.1 mgrtopbm.1 \
 	pbmclean.1 pbmlife.1 pbmmake.1 pbmmask.1 \
@@ -63,9 +62,10 @@ MAN1=	atktopbm.1 g3topbm.1 brushtopbm.1 cmuwmtopbm.1 \
 	pnmcrop.1 pnmcut.1 pnmdepth.1 pnmenlarge.1 \
 	pnmfile.1 pnmflip.1 pnmhistmap.1 pnminvert.1 \
 	pnmnlfilt.1 pnmnoraw.1 pnmpad.1 pnmpaste.1 \
-	pnmscale.1 pnmtile.1 pnmtoddif.1 pnmtofits.1 \
-	pnmtops.1 pnmtorast.1 pnmtosgi.1 pnmtosir.1 \
-	pnmtoxwd.1 rasttopnm.1 sgitopnm.1 sirtopnm.1 \
+	pnmscale.1 pnmtile.1 pngtopnm.1 pnmtoddif.1 \
+	pnmtofits.1 pnmtopng.1 pnmtops.1 pnmtorast.1 \
+	pnmtorle.1 pnmtosgi.1 pnmtosir.1 pnmtoxwd.1 \
+	rasttopnm.1 rletopnm.1 sgitopnm.1 sirtopnm.1 \
 	xwdtopnm.1 zeisstopnm.1 pnmgamma.1 pnmrotate.1 \
 	pnmshear.1 anytopnm.1 pnmindex.1 pnmmargin.1 \
 	pnmsmooth.1 tifftopnm.1 pnmtotiff.1
@@ -73,12 +73,11 @@ MAN3=	libpbm.3 libpgm.3 libppm.3 libpnm.3
 MAN5=	pbm.5 pgm.5 ppm.5 pnm.5
 
 post-extract:
-	chmod -R +w ${WRKSRC}
-
-pre-configure:
-	for f in `find ${WRKSRC} -type f -print|xargs grep -l '/usr/local'`; do \
-		${SED} -e 's:/usr/local:'${LOCALBASE}':g' < $$f > $$f.pdone && mv $$f.pdone $$f; \
-	done
-.endif
+# make sure our TIFF library is used
+	rm -rf ${WRKSRC}/libtiff
+# move updates into source tree
+	cd ${WRKSRC};\
+	${MV} ../*pcx*.? ppm;\
+	${MV} ../*rle*.? ../*png*.? pnm
 
 .include <bsd.port.mk>
