@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.2 2001/09/26 23:22:17 jlam Exp $
+$NetBSD: patch-ac,v 1.3 2002/01/29 07:40:11 martti Exp $
 
---- libxml-2.0.pc.in.orig	Thu Sep 13 22:35:09 2001
-+++ libxml-2.0.pc.in
+--- libxml-2.0.pc.in.orig	Mon Dec 10 04:35:05 2001
++++ libxml-2.0.pc.in	Mon Jan 28 15:45:49 2002
 @@ -8,5 +8,5 @@
  Version: @VERSION@
  Description: libXML library version2.
  Requires:
--Libs: -L${libdir} -lxml2 @Z_LIBS@ @M_LIBS@ @LIBS@
+-Libs: -L${libdir} -lxml2 @THREAD_LIBS@ @Z_LIBS@ @M_LIBS@ @LIBS@
 -Cflags: -I${includedir}/libxml2 @XML_CFLAGS@
 +Libs: @XML_LIBDIR@ -lxml2 @Z_LIBS@ @M_LIBS@ @LIBS@
 +Cflags: @XML_INCLUDEDIR@ @XML_CFLAGS@
