@@ -1,0 +1,47 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/23 22:08:02 itojun Exp $
+sbin/ser
+sbin/serctl
+sbin/ser_mysql.sh
+sbin/gen_ha1
+lib/ser/modules/acc.so
+lib/ser/modules/auth.so
+lib/ser/modules/exec.so
+lib/ser/modules/im.so
+lib/ser/modules/jabber.so
+lib/ser/modules/maxfwd.so
+lib/ser/modules/msilo.so
+lib/ser/modules/mysql.so
+lib/ser/modules/pike.so
+lib/ser/modules/print.so
+lib/ser/modules/registrar.so
+lib/ser/modules/rr.so
+lib/ser/modules/sl.so
+lib/ser/modules/sms.so
+lib/ser/modules/textops.so
+lib/ser/modules/tm.so
+lib/ser/modules/usrloc.so
+doc/ser/README
+doc/ser/README.cfg
+doc/ser/INSTALL
+doc/ser/README-MODULES
+doc/ser/AUTHORS
+doc/ser/README.acc
+doc/ser/README.auth
+doc/ser/README.exec
+doc/ser/README.im
+doc/ser/README.jabber
+doc/ser/README.maxfwd
+doc/ser/README.pike
+doc/ser/README.print
+doc/ser/README.registrar
+doc/ser/README.rr
+doc/ser/README.sl
+doc/ser/README.sms
+doc/ser/README.textops
+doc/ser/README.tm
+doc/ser/README.usrloc
+man/man8/ser.8
+man/man5/ser.cfg.5
+@dirrm doc/ser
+@dirrm lib/ser/modules
+@dirrm lib/ser
