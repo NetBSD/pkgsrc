@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt.h,v 1.1 2003/06/23 11:33:10 grant Exp $	*/
+/*	$NetBSD: getopt.h,v 1.2 2003/09/01 15:31:17 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -39,12 +39,10 @@
 #ifndef _GETOPT_H_
 #define _GETOPT_H_
 
-#ifdef HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
-#endif
+#include <nbconfig.h>
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
+#if HAVE_SYS_CDEFS_H
+#include <sys/cdefs.h>
 #endif
 
 #include <unistd.h>
