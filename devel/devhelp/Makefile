@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/27 11:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/14 19:53:48 minskim Exp $
 
 DISTNAME=		devhelp-0.7
 PKGREVISION=		10
@@ -24,6 +24,11 @@ CONFIGURE_ARGS+=	--with-html-widget=gtkhtml2
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/devhelp
 	${INSTALL_DATA} ${WRKSRC}/misc/devhelp.el ${WRKSRC}/misc/devhelp.vim \
@@ -32,6 +37,4 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS COPYING ChangeLog README TODO \
 		${PREFIX}/share/doc/devhelp
 
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
