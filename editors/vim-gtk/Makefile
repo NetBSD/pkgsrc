@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/12/21 17:25:18 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/12/21 18:14:25 tron Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=		vim-gtk-${VIM_VERSION}
 
 DEPENDS+=		vim-share-${VIM_VERSION}:../vim-share \
 			gtk+-1.2.*:../../x11/gtk
-CONFLICTS=		vim-[0-9]* vim-gtk-*
+CONFLICTS=		vim-[0-9]* vim-xaw-*
 
 DISTFILES+=		${DISTNAME}-rt${EXTRACT_SUFX}
 
