@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:18:37 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/12/29 11:10:56 recht Exp $
 #
 
-DISTNAME=	gnome-python-2.0.2
+DISTNAME=	gnome-python-2.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
-PKGREVISION=	1
 CATEGORIES=	x11 python
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python/2.0/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
@@ -19,18 +18,25 @@ PKGCONFIG_OVERRIDE+=	gnome-python-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 
-PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
+PYTHON_VERSIONS_ACCEPTED=	24pth 23pth 22pth
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 
+.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../net/py-ORBit/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"
-.include "../../x11/libzvt/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 
