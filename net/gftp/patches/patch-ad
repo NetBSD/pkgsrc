@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.2.2 2005/03/02 22:15:42 salo Exp $
+
+--- src/gtk/options_dialog.c.orig	2005-01-04 13:32:20.000000000 +0000
++++ src/gtk/options_dialog.c	2005-03-02 20:38:59.000000000 +0000
+@@ -1002,7 +1002,7 @@
+   gtk_widget_show (box);
+   
+ #if GTK_MAJOR_VERSION == 1
+-  tempwid = gtk_label_new (_("Type:"))
++  tempwid = gtk_label_new (_("Type:"));
+ #else
+   tempwid = gtk_label_new_with_mnemonic (_("_Type:"));
+ #endif
