@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 1999/03/14 15:44:56 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/06/27 14:17:59 drochner Exp $
 share/sgml/docbook/2.4.1/241chg.txt
+share/sgml/docbook/2.4.1/announce.txt
 share/sgml/docbook/2.4.1/calstbl.mod
 share/sgml/docbook/2.4.1/dbgenent.mod
 share/sgml/docbook/2.4.1/dbhier.mod
@@ -19,7 +20,23 @@ share/sgml/docbook/3.0/docbook.cat
 share/sgml/docbook/3.0/docbook.dcl
 share/sgml/docbook/3.0/docbook.dtd
 share/sgml/docbook/3.0/catalog
+share/sgml/docbook/3.1/31chg.txt
+share/sgml/docbook/3.1/40issues.txt
+share/sgml/docbook/3.1/50issues.txt
+share/sgml/docbook/3.1/cals-tbl.dtd
+share/sgml/docbook/3.1/ChangeLog
+share/sgml/docbook/3.1/dbcent.mod
+share/sgml/docbook/3.1/dbgenent.mod
+share/sgml/docbook/3.1/dbhier.mod
+share/sgml/docbook/3.1/dbnotn.mod
+share/sgml/docbook/3.1/dbpool.mod
+share/sgml/docbook/3.1/docbook.cat
+share/sgml/docbook/3.1/docbook.dcl
+share/sgml/docbook/3.1/docbook.dtd
+share/sgml/docbook/3.1/readme.txt
+share/sgml/docbook/3.1/catalog
 @dirrm share/sgml/docbook/2.4.1
 @dirrm share/sgml/docbook/3.0
+@dirrm share/sgml/docbook/3.1
 @dirrm share/sgml/docbook
 @unexec rmdir %D/share/sgml 2>/dev/null || true
