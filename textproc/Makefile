@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2001/04/16 19:04:38 jtb Exp $
+# $NetBSD: Makefile,v 1.89 2001/04/16 19:15:16 jtb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -49,6 +49,7 @@ SUBDIR+=	p5-Text-Wrapper
 SUBDIR+=	p5-XML-Node
 SUBDIR+=	p5-XML-Parser
 SUBDIR+=	p5-XML-RSS
+SUBDIR+=	p5-XML-XPath
 SUBDIR+=	par
 SUBDIR+=	py-dtml
 SUBDIR+=	pyxml
