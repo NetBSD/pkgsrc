@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2000/06/02 13:18:43 tron Exp $
+# $NetBSD: Makefile,v 1.45 2000/06/21 00:47:44 jlam Exp $
 
 DISTNAME=		gnome-core-1.2.0
 CATEGORIES=		x11 gnome
@@ -12,10 +12,11 @@ DEPENDS+=		gdk-pixbuf>=0.7.0:../../graphics/gdk-pixbuf
 DEPENDS+=		libghttp>=1.0.4:../../www/libghttp
 DEPENDS+=		libxml-*:../../textproc/libxml
 
-GNU_CONFIGURE=		yes
-USE_X11BASE=		yes
-USE_GMAKE=		yes
-USE_PKGLIBTOOL=		yes
+GNU_CONFIGURE=		# defined
+USE_X11BASE=		# defined
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 LOCALSTATEDIR=		/var/gnome
 
@@ -42,7 +43,7 @@ post-install:
 	  ${CP} ${PKGDIR}/PLIST.${OPSYS} ${PLIST_SRC}; \
 	else \
 	  ${EGREP} -v '/((cpumem|disk)usage|(cpu|mem|multi|swap)load)_applet' \
-	  <${PKGDIR}/PLIST.${OPSYS} >${PLIST_SRC}; \
+		< ${PKGDIR}/PLIST.${OPSYS} > ${PLIST_SRC}; \
 	fi
 
 .include "../../mk/bsd.pkg.mk"
