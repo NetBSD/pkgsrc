@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2003/09/28 14:40:06 tron Exp $
+$NetBSD: distinfo,v 1.7 2005/02/22 21:16:36 agc Exp $
 
 SHA1 (netio114.zip) = 992f8e2d4cee6a268231e8d9aa296d48e687abc7
+RMD160 (netio114.zip) = 53f66c6ae0e2c9d2f1333ac419af0f2b57140d3c
 Size (netio114.zip) = 210744 bytes
 SHA1 (patch-aa) = 50760bf1e3737a878cfb713a31ee682612128e22
