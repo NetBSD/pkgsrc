@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 13:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/19 04:48:35 jlam Exp $
 
 DISTNAME=	estic-1.61
 CATEGORIES=	comms
@@ -16,6 +16,8 @@ USE_X11=	YES
 RESTRICTED=	"Only free distribution permitted"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
+
+USE_BUILDLINK_ONLY=	YES
 
 ALL_TARGET=	depend all
 ESTICPATCH=	${DISTNAME}-patch-from-1.60${EXTRACT_SUFX}
