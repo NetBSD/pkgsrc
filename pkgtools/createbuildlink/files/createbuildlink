@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.25 2004/07/21 22:27:35 jmmv Exp $
+#	$NetBSD: createbuildlink,v 1.26 2004/09/26 23:48:09 rh Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,22 +39,26 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.25 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.26 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
 PLIST=PLIST
+CREATEPLSUBST=false
 
-args=`getopt 3 $*`
+args=`getopt 3p $*`
 if [ $? != 0 ]; then
-	echo "Usage: $0 > buildlink3.mk"
+	echo "Usage: $0 [-p] > buildlink3.mk"
 	exit 2
 fi
 set -- $args
 while [ $# -gt 0 ]; do
 	case "$1" in
 	-3)
+		shift;;
+	-p)
+		CREATEPLSUBST=true
 		shift;;
 	--)
 		shift; break
@@ -157,6 +161,12 @@ EOF
 sed -f $sedrules <<EOF
 BUILDLINK_PKGSRCDIR.$PKGNOVER?=	../../$CURDIR
 EOF
+
+if [ $CREATEPLSUBST = "true" ]; then
+	echo ""
+	substplistbasedirs
+	echo ""
+fi
 
 sed -f $sedrules <<EOF
 .endif	# ${PKGUPPER}_BUILDLINK3_MK

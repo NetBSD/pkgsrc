@@ -1,4 +1,4 @@
-.\"	$NetBSD: createbuildlink.8,v 1.9 2004/07/06 23:40:11 wiz Exp $
+.\"	$NetBSD: createbuildlink.8,v 1.10 2004/09/26 23:48:09 rh Exp $
 .\"
 .\" Copyright (c) 2002,2004 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -34,7 +34,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd July 6, 2004
+.Dd September 27, 2004
 .Dt CREATEBUILDLINK 8
 .Os
 .Sh NAME
@@ -42,7 +42,7 @@
 .Nd automatic pkgsrc buildlink3.mk generator
 .Sh SYNOPSIS
 .Nm
-.Op Fl 3
+.Op Fl p
 .Sh DESCRIPTION
 .Nm
 reads in the
@@ -56,8 +56,11 @@ file on stdout.
 .Pp
 The following options are available:
 .Bl -tag -width indent
-.It Fl 3
-Create buildlink3.mk style output. (default)
+.It Fl p
+Create PRINT_PLIST_AWK subsitution patterns for directories created
+and removed by this package.
+This is useful for base packages that create a directory structure
+for a number of dependent packages.
 .El
 .Pp
 While
