@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6420 2004/07/02 08:18:06 martti Exp $
+$NetBSD: CHANGES,v 1.6421 2004/07/02 13:16:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3207,3 +3207,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.84 [abs 2004-07-01]
 	Updated xchat2 to 2.0.10 [minskim 2004-07-02]
 	Updated postfix to 2.2-20040628 [martti 2004-07-02]
+	Updated libgcrypt to 1.2.0nb1 [jmmv 2004-07-02]
