@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/09 11:51:36 agc Exp $
 # New ports collection makefile for:    swisswatch
 # Version required:     0.0.6
 # Date created:         16 December 1995
