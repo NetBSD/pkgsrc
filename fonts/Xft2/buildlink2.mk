@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/11/02 00:58:18 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2003/11/07 20:19:46 jdolecek Exp $
 #
 # This Makefile fragment is included by packages that use Xft2.
 #
@@ -19,7 +19,7 @@ BUILDLINK_FILES.Xft2+=	include/X11/Xft/*
 BUILDLINK_FILES.Xft2+=	lib/libXft.*
 BUILDLINK_FILES.Xft2+=	lib/pkgconfig/xft.pc
 
-BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
+BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8
 
 .include "../../fonts/fontconfig/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
