@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/09/07 00:34:04 jwise Exp $
+--- scripts/xfhelp.in.orig	Wed Aug 25 08:07:42 1999
++++ scripts/xfhelp.in	Mon Sep  6 19:27:21 1999
+@@ -21,7 +21,7 @@
+ 
+ if [ "x$BROWSER" = "x" ]
+ then
+-  BROWSER=netscape
++  BROWSER=communicator
+ fi
+ 
+ if [ -d $XFCE_DATA/help/ ]
+@@ -31,7 +31,7 @@
+   HELP_FILE=XFCE_DIR/help/help.html
+ fi
+ 
+-if [ "x$BROWSER" = "xnetscape" ]
++if [ "x$BROWSER" = "xnavigator" -o "x$BROWSER" = "xcommunicator" ]
+ then
+   $BROWSER -remote openurl\(file:///$HELP_FILE\) || $BROWSER $HELP_FILE
+ else

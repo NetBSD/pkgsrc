@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/07 00:34:04 jwise Exp $
+--- configure.orig	Mon Sep  6 16:56:09 1999
++++ configure	Mon Sep  6 16:56:29 1999
+@@ -5222,7 +5222,7 @@
+   XFCE_DIR="$datadir/XFCE"
+ fi
+ 
+-XFCE_LOCALE_DIR="$XFCE_DIR/locale"
++XFCE_LOCALE_DIR="$datadir/locale"
+ 
+ echo "$ac_t""XFCE_DIR set to $XFCE_DIR" 1>&6
+ echo "$ac_t""XFCE_LOCALE_DIR set to $XFCE_LOCALE_DIR" 1>&6
