@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/12/01 03:15:34 itojun Exp $
+# $NetBSD: Makefile,v 1.7 2000/12/15 03:27:04 itojun Exp $
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-server-3.5b2
@@ -22,7 +22,7 @@ PATCHDIR=	${MASTERDIR}/patches
 BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
-.if ${USE_INET6} == "YES"
+.if 0	# ${USE_INET6} == "YES"
 INET6=		-DINET6
 .else
 INET6=		# empty
