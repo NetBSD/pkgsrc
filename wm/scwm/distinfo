@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/09 12:37:45 wiz Exp $
-
-SHA1 (scwm-0.9.tar.gz) = fe5dabc30b2013fd3edf6965f212bad225d3b325
-Size (scwm-0.9.tar.gz) = 906608 bytes
-SHA1 (patch-aa) = ba380975d6d6cbed8c05ce9c2b33920fa4d222e3
-SHA1 (patch-ab) = 19b266b033a8ea751b0354c41282c40abfcad1f6

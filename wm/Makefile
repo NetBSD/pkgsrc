@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/07/28 18:26:06 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/11/09 00:43:12 wiz Exp $
 #
 
 COMMENT=	window managers (for X)
@@ -29,7 +29,6 @@ SUBDIR+=	qvwm
 SUBDIR+=	ratpoison
 SUBDIR+=	sawfish
 SUBDIR+=	sawfish-replibs
-SUBDIR+=	scwm
 SUBDIR+=	tvtwm
 SUBDIR+=	uwm
 SUBDIR+=	windowmaker
