@@ -1,0 +1,29 @@
+$NetBSD: patch-ag,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
+
+--- src/runtime/objs/mk.sparc-netbsd.orig	Thu Sep 19 03:54:01 2002
++++ src/runtime/objs/mk.sparc-netbsd
+@@ -0,0 +1,24 @@
++# mk.sparc-netbsd
++#
++
++SHELL		= /bin/sh
++
++MAKE =		gmake
++GCC =		gcc
++ARFLAGS =	Trcv
++CFLAGS =	-O2 -Wall 
++LDFLAGS=
++CPP =		$(GCC) -x c -E -P
++
++#XOBJS =	xmonitor.o
++#LD_LIBS =	-lX11
++#BASE_DEFS =	-DHEAP_MONITOR -DPOLL_DEBUG
++XOBJS =
++XLIBS =
++DEFS =		$(BASE_DEFS) -DHOST_SPARC -DTARGET_SPARC -DOPSYS_UNIX -DOPSYS_NETBSD -DCALLEESAVE=3 -DUNBOXEDFLOAT=1 
++TARGET =	SPARC
++VERSION =	v-sparc-netbsd
++RUNTIME =	run.sparc-netbsd
++
++all:
++	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
