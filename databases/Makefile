@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2005/02/11 16:43:25 minskim Exp $
+# $NetBSD: Makefile,v 1.162 2005/02/16 11:14:14 wiz Exp $
 #
 
 COMMENT=	Databases
@@ -113,6 +113,11 @@ SUBDIR+=	postgresql74-lib
 SUBDIR+=	postgresql74-plperl
 SUBDIR+=	postgresql74-plpython
 SUBDIR+=	postgresql74-server
+SUBDIR+=	postgresql80
+SUBDIR+=	postgresql80-client
+SUBDIR+=	postgresql80-docs
+SUBDIR+=	postgresql80-lib
+SUBDIR+=	postgresql80-server
 SUBDIR+=	pxtools
 SUBDIR+=	py-IndexedCatalog
 SUBDIR+=	py-PgSQL
