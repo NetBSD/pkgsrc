@@ -1,0 +1,24 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2000/05/12 20:39:12 sakamoto Exp $
+#
+
+PKGNAME=	acroread-${DISTNAME}-4.0
+MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/
+
+MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
+
+DEPENDS+=	acroread-4.*:../../print/acroread
+
+RESTRICTED=	Redistribution not permitted
+NO_CDROM=	${RESTRICTED}
+MIRROR_DISTFILE=no
+IS_INTERACTIVE=	yes
+
+NO_PATCH=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
+do-install:
+	@${GTAR} xf ${TAR_FILE} -C ${PREFIX}/Acrobat4/Resource
+
+.include "../../mk/bsd.pkg.mk"
