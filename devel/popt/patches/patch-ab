@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 2001/04/24 12:29:03 wulf Exp $
+
+--- popt.h.orig	Mon Apr 23 23:13:20 2001
++++ popt.h	Mon Apr 23 23:15:20 2001
+@@ -76,6 +76,9 @@
+ 			         const struct poptOption * opt,
+ 				 const char * arg, void * data);
+ 
++#ifdef __cplusplus
++extern "C" {
++#endif
+ poptContext poptGetContext(char * name, int argc, char ** argv, 
+ 			   const struct poptOption * options, int flags);
+ void poptResetContext(poptContext con);
+@@ -106,5 +109,8 @@
+ void poptPrintUsage(poptContext con, FILE * f, int flags);
+ void poptSetOtherOptionHelp(poptContext con, const char * text);
+ const char * poptGetInvocationName(poptContext con);
++#ifdef __cplusplus
++}
++#endif
+ 
+ #endif
