@@ -1,31 +1,31 @@
-$NetBSD: patch-ab,v 1.5 1999/03/01 01:38:45 hubertf Exp $
+$NetBSD: patch-ab,v 1.6 2000/02/02 04:02:00 wiz Exp $
 
---- configure.orig	Sun Dec 27 15:53:35 1998
-+++ configure	Sun Jan 10 23:46:33 1999
-@@ -648,7 +648,7 @@
- test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
- 
+--- ./configure.orig	Fri May 28 17:15:29 1999
++++ ./configure	Wed Feb  2 03:39:39 2000
+@@ -654,7 +654,7 @@
+ # It thinks the first close brace ends the variable substitution.
+ test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
  
 -test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
 +test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM:S/-s//g}'
  
- echo $ac_n "checking whether build environment is sane""... $ac_c" 1>&6
- echo "configure:655: checking whether build environment is sane" >&5
-@@ -735,7 +735,7 @@
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
+ 
+@@ -743,7 +743,7 @@
  fi
  
  
 -PACKAGE=fvwm
 +PACKAGE=fvwm2
  
- VERSION=2.1.7
+ VERSION=2.2.2
  
-@@ -3341,7 +3341,7 @@
- 
- 
+@@ -2984,7 +2984,7 @@
+ # It thinks the first close brace ends the variable substitution.
+ test -z "$INSTALL_PROGRAM" && INSTALL_PROGRAM='${INSTALL}'
  
 -test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
 +test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM:S/-s//g}'
  
- echo $ac_n "checking whether ln -s works""... $ac_c" 1>&6
- echo "configure:3348: checking whether ln -s works" >&5
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
+ 

@@ -1,9 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2000/01/26 23:15:19 jlam Exp $
+$NetBSD: patch-ai,v 1.2 2000/02/02 04:03:00 wiz Exp $
 
 --- configure.in.tk.orig	Thu May 16 04:06:05 1996
 +++ configure.in.tk	Wed Jan 26 16:03:04 2000
-@@ -2,6 +2,8 @@
- dnl $Header: /cvsroot/pkgsrc/mbone/vic/patches/patch-ai,v 1.1 2000/01/26 23:15:19 jlam Exp $ (LBL)
+@@ -3,5 +3,7 @@
  
  AC_ARG_WITH(tcl,	--with-tcl=path	specify a pathname for tcl, d=$withval, d="")
 +tcldir=tcl8.0
