@@ -1,44 +1,14 @@
-$NetBSD: patch-ad,v 1.5 2001/06/04 16:18:21 abs Exp $
+$NetBSD: patch-ad,v 1.6 2003/06/19 11:45:02 seb Exp $
 
---- contrib/vicf.in.orig	Mon Jun  4 16:46:23 2001
-+++ contrib/vicf.in
-@@ -4,7 +4,7 @@
- exec_prefix=@exec_prefix@
- sbindir=@sbindir@
- EDITOR="${EDITOR-vi}"
--CFINPUTS="${CFINPUTS-"@pkgdata@"}
-+CFINPUTS="${CFINPUTS-"@pkgdata@"}"
- export EDITOR CFINPUTS
- NOPARSE="cf.preconf|cfd.conf"
+--- src/Makefile.am.orig	2002-06-20 13:38:34.000000000 +0000
++++ src/Makefile.am
+@@ -5,8 +5,7 @@ LEXLIB = @LEXLIB@
+ LDADD = -L../pub -lpub
  
-@@ -20,7 +20,7 @@
- 	echo "File not found: ${file}"
- 	echo "Only these files are eligible for editing:"
- 	\ls $CFINPUTS
--	/usr/ucb/echo -n "Create new file? (Y/n) "
-+	echo -n "Create new file? (Y/n) "
- 	read answer
- 	if [ "$answer" = "n" ]
- 	then
-@@ -32,10 +32,10 @@
-     if [ -f ${CFINPUTS}/.${file}.lock -a "$force" = "n" ]
-     then
- 	i=30
--	/usr/ucb/echo -n "File ${file} is busy -- waiting up to $i seconds..."
-+	echo -n "File ${file} is busy -- waiting up to $i seconds..."
- 	while [ -f ${CFINPUTS}/.${file}.lock ]
- 	do
--		/usr/ucb/echo -n .
-+		echo -n .
- 		i=`expr $i - 1`
- 		if [ $i = 0 ]
- 		then
-@@ -62,7 +62,7 @@
- 	then
- 		echo PARSE ERROR IN NEW INPUT-FILE:
- 		cat /tmp/cfparse.$$
--		/usr/ucb/echo -n "Re-edit file? (Y/n) "
-+		echo -n "Re-edit file? (Y/n) "
- 		read answer
- 		if [ "$answer" = "n" ]
- 		then
+ 
+-sbin_PROGRAMS = cfd cfrun cfkey
+-bin_PROGRAMS = cfengine
++sbin_PROGRAMS = cfd cfrun cfkey cfengine
+ 
+ cfengine_SOURCES =							\
+ 	cfengine.c							\
