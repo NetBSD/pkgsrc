@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/07 02:06:36 snj Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/10/07 14:54:40 wiz Exp $
+share/tuxpaint/stamps/auto/sedan.dat
+share/tuxpaint/stamps/auto/sedan.png
+share/tuxpaint/stamps/auto/sedan_police.dat
+share/tuxpaint/stamps/auto/sedan_police.png
+share/tuxpaint/stamps/auto/sedan_police_mirror.png
+share/tuxpaint/stamps/auto/sportscar2.dat
+share/tuxpaint/stamps/auto/sportscar2.png
+share/tuxpaint/stamps/auto/truck.dat
+share/tuxpaint/stamps/auto/truck.png
 share/tuxpaint/stamps/cartoon/bugs/butterfly.dat
 share/tuxpaint/stamps/cartoon/bugs/butterfly.png
 share/tuxpaint/stamps/cartoon/bugs/butterfly.txt
@@ -12,7 +21,6 @@ share/tuxpaint/stamps/cartoon/bugs/snail.png
 share/tuxpaint/stamps/cartoon/bugs/snail.txt
 share/tuxpaint/stamps/misc/flags/blue-and-yellowflag.png
 share/tuxpaint/stamps/misc/flags/blue-and-yellowflag.txt
-share/tuxpaint/stamps/misc/flags/blue-and-yellowflag.txt-bak
 share/tuxpaint/stamps/misc/flags/checkeredflag.png
 share/tuxpaint/stamps/misc/flags/checkeredflag.txt
 share/tuxpaint/stamps/misc/flags/checkeredflag.wav
@@ -48,8 +56,10 @@ share/tuxpaint/stamps/misc/symbols/math/0_el.wav
 share/tuxpaint/stamps/misc/symbols/math/0_es.wav
 share/tuxpaint/stamps/misc/symbols/math/0_fr.wav
 share/tuxpaint/stamps/misc/symbols/math/0_ja.wav
+share/tuxpaint/stamps/misc/symbols/math/0_ko.wav
 share/tuxpaint/stamps/misc/symbols/math/0_nl.wav
 share/tuxpaint/stamps/misc/symbols/math/0_nn.wav
+share/tuxpaint/stamps/misc/symbols/math/0_zh_tw.wav
 share/tuxpaint/stamps/misc/symbols/math/1.dat
 share/tuxpaint/stamps/misc/symbols/math/1.png
 share/tuxpaint/stamps/misc/symbols/math/1.txt
@@ -58,8 +68,10 @@ share/tuxpaint/stamps/misc/symbols/math/1_el.wav
 share/tuxpaint/stamps/misc/symbols/math/1_es.wav
 share/tuxpaint/stamps/misc/symbols/math/1_fr.wav
 share/tuxpaint/stamps/misc/symbols/math/1_ja.wav
+share/tuxpaint/stamps/misc/symbols/math/1_ko.wav
 share/tuxpaint/stamps/misc/symbols/math/1_nl.wav
 share/tuxpaint/stamps/misc/symbols/math/1_nn.wav
+share/tuxpaint/stamps/misc/symbols/math/1_zh_tw.wav
 share/tuxpaint/stamps/misc/symbols/math/2.dat
 share/tuxpaint/stamps/misc/symbols/math/2.png
 share/tuxpaint/stamps/misc/symbols/math/2.txt
@@ -68,8 +80,10 @@ share/tuxpaint/stamps/misc/symbols/math/2_el.wav
 share/tuxpaint/stamps/misc/symbols/math/2_es.wav
 share/tuxpaint/stamps/misc/symbols/math/2_fr.wav
 share/tuxpaint/stamps/misc/symbols/math/2_ja.wav
+share/tuxpaint/stamps/misc/symbols/math/2_ko.wav
 share/tuxpaint/stamps/misc/symbols/math/2_nl.wav
 share/tuxpaint/stamps/misc/symbols/math/2_nn.wav
+share/tuxpaint/stamps/misc/symbols/math/2_zh_tw.wav
 share/tuxpaint/stamps/misc/symbols/math/3.dat
 share/tuxpaint/stamps/misc/symbols/math/3.png
 share/tuxpaint/stamps/misc/symbols/math/3.txt
@@ -78,8 +92,10 @@ share/tuxpaint/stamps/misc/symbols/math/3_el.wav
 share/tuxpaint/stamps/misc/symbols/math/3_es.wav
 share/tuxpaint/stamps/misc/symbols/math/3_fr.wav
 share/tuxpaint/stamps/misc/symbols/math/3_ja.wav
+share/tuxpaint/stamps/misc/symbols/math/3_ko.wav
 share/tuxpaint/stamps/misc/symbols/math/3_nl.wav
 share/tuxpaint/stamps/misc/symbols/math/3_nn.wav
+share/tuxpaint/stamps/misc/symbols/math/3_zh_tw.wav
 share/tuxpaint/stamps/misc/symbols/math/4.dat
 share/tuxpaint/stamps/misc/symbols/math/4.png
 share/tuxpaint/stamps/misc/symbols/math/4.txt
@@ -88,8 +104,10 @@ share/tuxpaint/stamps/misc/symbols/math/4_el.wav
 share/tuxpaint/stamps/misc/symbols/math/4_es.wav
 share/tuxpaint/stamps/misc/symbols/math/4_fr.wav
 share/tuxpaint/stamps/misc/symbols/math/4_ja.wav
+share/tuxpaint/stamps/misc/symbols/math/4_ko.wav
 share/tuxpaint/stamps/misc/symbols/math/4_nl.wav
 share/tuxpaint/stamps/misc/symbols/math/4_nn.wav
+share/tuxpaint/stamps/misc/symbols/math/4_zh_tw.wav
 share/tuxpaint/stamps/misc/symbols/math/5.dat
 share/tuxpaint/stamps/misc/symbols/math/5.png
 share/tuxpaint/stamps/misc/symbols/math/5.txt
@@ -98,8 +116,10 @@ share/tuxpaint/stamps/misc/symbols/math/5_el.wav
 share/tuxpaint/stamps/misc/symbols/math/5_es.wav
 share/tuxpaint/stamps/misc/symbols/math/5_fr.wav
 share/tuxpaint/stamps/misc/symbols/math/5_ja.wav
+share/tuxpaint/stamps/misc/symbols/math/5_ko.wav
 share/tuxpaint/stamps/misc/symbols/math/5_nl.wav
 share/tuxpaint/stamps/misc/symbols/math/5_nn.wav
+share/tuxpaint/stamps/misc/symbols/math/5_zh_tw.wav
 share/tuxpaint/stamps/misc/symbols/math/6.dat
 share/tuxpaint/stamps/misc/symbols/math/6.png
 share/tuxpaint/stamps/misc/symbols/math/6.txt
@@ -108,8 +128,10 @@ share/tuxpaint/stamps/misc/symbols/math/6_el.wav
 share/tuxpaint/stamps/misc/symbols/math/6_es.wav
 share/tuxpaint/stamps/misc/symbols/math/6_fr.wav
 share/tuxpaint/stamps/misc/symbols/math/6_ja.wav
+share/tuxpaint/stamps/misc/symbols/math/6_ko.wav
 share/tuxpaint/stamps/misc/symbols/math/6_nl.wav
 share/tuxpaint/stamps/misc/symbols/math/6_nn.wav
+share/tuxpaint/stamps/misc/symbols/math/6_zh_tw.wav
 share/tuxpaint/stamps/misc/symbols/math/7.dat
 share/tuxpaint/stamps/misc/symbols/math/7.png
 share/tuxpaint/stamps/misc/symbols/math/7.txt
@@ -118,8 +140,10 @@ share/tuxpaint/stamps/misc/symbols/math/7_el.wav
 share/tuxpaint/stamps/misc/symbols/math/7_es.wav
 share/tuxpaint/stamps/misc/symbols/math/7_fr.wav
 share/tuxpaint/stamps/misc/symbols/math/7_ja.wav
+share/tuxpaint/stamps/misc/symbols/math/7_ko.wav
 share/tuxpaint/stamps/misc/symbols/math/7_nl.wav
 share/tuxpaint/stamps/misc/symbols/math/7_nn.wav
+share/tuxpaint/stamps/misc/symbols/math/7_zh_tw.wav
 share/tuxpaint/stamps/misc/symbols/math/8.dat
 share/tuxpaint/stamps/misc/symbols/math/8.png
 share/tuxpaint/stamps/misc/symbols/math/8.txt
@@ -128,8 +152,10 @@ share/tuxpaint/stamps/misc/symbols/math/8_el.wav
 share/tuxpaint/stamps/misc/symbols/math/8_es.wav
 share/tuxpaint/stamps/misc/symbols/math/8_fr.wav
 share/tuxpaint/stamps/misc/symbols/math/8_ja.wav
+share/tuxpaint/stamps/misc/symbols/math/8_ko.wav
 share/tuxpaint/stamps/misc/symbols/math/8_nl.wav
 share/tuxpaint/stamps/misc/symbols/math/8_nn.wav
+share/tuxpaint/stamps/misc/symbols/math/8_zh_tw.wav
 share/tuxpaint/stamps/misc/symbols/math/9.dat
 share/tuxpaint/stamps/misc/symbols/math/9.png
 share/tuxpaint/stamps/misc/symbols/math/9.txt
@@ -138,8 +164,10 @@ share/tuxpaint/stamps/misc/symbols/math/9_el.wav
 share/tuxpaint/stamps/misc/symbols/math/9_es.wav
 share/tuxpaint/stamps/misc/symbols/math/9_fr.wav
 share/tuxpaint/stamps/misc/symbols/math/9_ja.wav
+share/tuxpaint/stamps/misc/symbols/math/9_ko.wav
 share/tuxpaint/stamps/misc/symbols/math/9_nl.wav
 share/tuxpaint/stamps/misc/symbols/math/9_nn.wav
+share/tuxpaint/stamps/misc/symbols/math/9_zh_tw.wav
 share/tuxpaint/stamps/misc/symbols/math/op0_plus.dat
 share/tuxpaint/stamps/misc/symbols/math/op0_plus.png
 share/tuxpaint/stamps/misc/symbols/math/op0_plus.txt
@@ -243,8 +271,17 @@ share/tuxpaint/stamps/photo/animals/fish/dolphinfish.png
 share/tuxpaint/stamps/photo/animals/fish/dolphinfish.txt
 share/tuxpaint/stamps/photo/animals/fish/lionfish.png
 share/tuxpaint/stamps/photo/animals/fish/lionfish.txt
+share/tuxpaint/stamps/photo/animals/fish/lobster.dat
+share/tuxpaint/stamps/photo/animals/fish/lobster.png
+share/tuxpaint/stamps/photo/animals/fish/lobster.txt
 share/tuxpaint/stamps/photo/animals/fish/moonwrasse.png
 share/tuxpaint/stamps/photo/animals/fish/moonwrasse.txt
+share/tuxpaint/stamps/photo/animals/fish/seahorse.dat
+share/tuxpaint/stamps/photo/animals/fish/seahorse.png
+share/tuxpaint/stamps/photo/animals/fish/seahorse.txt
+share/tuxpaint/stamps/photo/animals/fish/shrimp.dat
+share/tuxpaint/stamps/photo/animals/fish/shrimp.png
+share/tuxpaint/stamps/photo/animals/fish/shrimp.txt
 share/tuxpaint/stamps/photo/animals/fish/stripedfish.png
 share/tuxpaint/stamps/photo/animals/fish/stripedfish.txt
 share/tuxpaint/stamps/photo/arttools/pen_dryerase.dat
@@ -274,6 +311,9 @@ share/tuxpaint/stamps/photo/food/fruit/apple_sierra_beauty.png
 share/tuxpaint/stamps/photo/food/fruit/apple_sierra_beauty.txt
 share/tuxpaint/stamps/photo/food/fruit/banana.png
 share/tuxpaint/stamps/photo/food/fruit/banana.txt
+share/tuxpaint/stamps/photo/food/fruit/grapes.dat
+share/tuxpaint/stamps/photo/food/fruit/grapes.png
+share/tuxpaint/stamps/photo/food/fruit/grapes.txt
 share/tuxpaint/stamps/photo/food/fruit/lemon.png
 share/tuxpaint/stamps/photo/food/fruit/lemon.txt
 share/tuxpaint/stamps/photo/food/fruit/mango.png
@@ -282,12 +322,40 @@ share/tuxpaint/stamps/photo/food/fruit/orange.png
 share/tuxpaint/stamps/photo/food/fruit/orange.txt
 share/tuxpaint/stamps/photo/food/fruit/pear.png
 share/tuxpaint/stamps/photo/food/fruit/pear.txt
+share/tuxpaint/stamps/photo/food/fruit/pineapple.png
+share/tuxpaint/stamps/photo/food/fruit/pineapple.txt
 share/tuxpaint/stamps/photo/food/fruit/pomegranate.png
 share/tuxpaint/stamps/photo/food/fruit/pomegranate.txt
 share/tuxpaint/stamps/photo/food/fruit/raspberry.png
 share/tuxpaint/stamps/photo/food/fruit/raspberry.txt
+share/tuxpaint/stamps/photo/food/fruit/sliced_lime.png
+share/tuxpaint/stamps/photo/food/fruit/sliced_lime.txt
+share/tuxpaint/stamps/photo/food/fruit/sliced_orange.png
+share/tuxpaint/stamps/photo/food/fruit/sliced_orange.txt
 share/tuxpaint/stamps/photo/food/fruit/strawberry.png
 share/tuxpaint/stamps/photo/food/fruit/strawberry.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/apple.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/apple.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/banana.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/banana.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/cherries.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/cherries.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/grapes.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/grapes.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/lemon.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/lemon.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/lemon_slice.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/lemon_slice.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/orange.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/orange.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/pear.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/pear.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/pineapple.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/pineapple.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/prune.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/prune.txt
+share/tuxpaint/stamps/photo/food/fruit_cartoon/strawberry.png
+share/tuxpaint/stamps/photo/food/fruit_cartoon/strawberry.txt
 share/tuxpaint/stamps/photo/food/nuts/almond.png
 share/tuxpaint/stamps/photo/food/nuts/almond.txt
 share/tuxpaint/stamps/photo/food/nuts/pecan.png
@@ -323,8 +391,6 @@ share/tuxpaint/stamps/photo/food/vegetables/pepper.png
 share/tuxpaint/stamps/photo/food/vegetables/pepper.txt
 share/tuxpaint/stamps/photo/food/vegetables/potato.png
 share/tuxpaint/stamps/photo/food/vegetables/potato.txt
-share/tuxpaint/stamps/photo/food/vegetables/pumpkin.png
-share/tuxpaint/stamps/photo/food/vegetables/pumpkin.txt
 share/tuxpaint/stamps/photo/food/vegetables/pumpkin_small.png
 share/tuxpaint/stamps/photo/food/vegetables/pumpkin_small.txt
 share/tuxpaint/stamps/photo/food/vegetables/redlettuce.png
@@ -338,6 +404,18 @@ share/tuxpaint/stamps/photo/food/vegetables/yellowpepper.txt
 share/tuxpaint/stamps/photo/household/garbagecan.dat
 share/tuxpaint/stamps/photo/household/garbagecan.png
 share/tuxpaint/stamps/photo/household/garbagecan.txt
+share/tuxpaint/stamps/photo/money/canadian/coins/001penny.png
+share/tuxpaint/stamps/photo/money/canadian/coins/001penny.txt
+share/tuxpaint/stamps/photo/money/canadian/coins/005nickel.png
+share/tuxpaint/stamps/photo/money/canadian/coins/005nickel.txt
+share/tuxpaint/stamps/photo/money/canadian/coins/010dime.png
+share/tuxpaint/stamps/photo/money/canadian/coins/010dime.txt
+share/tuxpaint/stamps/photo/money/canadian/coins/025quarter.png
+share/tuxpaint/stamps/photo/money/canadian/coins/025quarter.txt
+share/tuxpaint/stamps/photo/money/canadian/coins/100loonie.png
+share/tuxpaint/stamps/photo/money/canadian/coins/100loonie.txt
+share/tuxpaint/stamps/photo/money/canadian/coins/200toonie.png
+share/tuxpaint/stamps/photo/money/canadian/coins/200toonie.txt
 share/tuxpaint/stamps/photo/money/euro/coins/001.dat
 share/tuxpaint/stamps/photo/money/euro/coins/001.png
 share/tuxpaint/stamps/photo/money/euro/coins/001.txt
@@ -519,6 +597,33 @@ share/tuxpaint/stamps/seasonal/christmas/xmas_tp_bulb.txt
 share/tuxpaint/stamps/seasonal/christmas/xmaswreath.dat
 share/tuxpaint/stamps/seasonal/christmas/xmaswreath.png
 share/tuxpaint/stamps/seasonal/christmas/xmaswreath.txt
+share/tuxpaint/stamps/seasonal/easter/bluebird.dat
+share/tuxpaint/stamps/seasonal/easter/bluebird.png
+share/tuxpaint/stamps/seasonal/easter/bluebird.txt
+share/tuxpaint/stamps/seasonal/easter/bunny-egg.dat
+share/tuxpaint/stamps/seasonal/easter/bunny-egg.png
+share/tuxpaint/stamps/seasonal/easter/bunny-egg.txt
+share/tuxpaint/stamps/seasonal/easter/bunny-head.dat
+share/tuxpaint/stamps/seasonal/easter/bunny-head.png
+share/tuxpaint/stamps/seasonal/easter/bunny-head.txt
+share/tuxpaint/stamps/seasonal/easter/bunny.dat
+share/tuxpaint/stamps/seasonal/easter/bunny.png
+share/tuxpaint/stamps/seasonal/easter/bunny.txt
+share/tuxpaint/stamps/seasonal/easter/butterfly.dat
+share/tuxpaint/stamps/seasonal/easter/butterfly.png
+share/tuxpaint/stamps/seasonal/easter/butterfly.txt
+share/tuxpaint/stamps/seasonal/easter/chick-hatched.dat
+share/tuxpaint/stamps/seasonal/easter/chick-hatched.png
+share/tuxpaint/stamps/seasonal/easter/chick-hatched.txt
+share/tuxpaint/stamps/seasonal/easter/chick-in-egg.dat
+share/tuxpaint/stamps/seasonal/easter/chick-in-egg.png
+share/tuxpaint/stamps/seasonal/easter/chick-in-egg.txt
+share/tuxpaint/stamps/seasonal/easter/chick.dat
+share/tuxpaint/stamps/seasonal/easter/chick.png
+share/tuxpaint/stamps/seasonal/easter/chick.txt
+share/tuxpaint/stamps/seasonal/easter/daffodil.dat
+share/tuxpaint/stamps/seasonal/easter/daffodil.png
+share/tuxpaint/stamps/seasonal/easter/daffodil.txt
 share/tuxpaint/stamps/seasonal/halloween/bat_left.png
 share/tuxpaint/stamps/seasonal/halloween/bat_left.txt
 share/tuxpaint/stamps/seasonal/halloween/bat_left.wav
@@ -572,15 +677,21 @@ share/tuxpaint/stamps/seasonal/newyears/fireworks.dat
 share/tuxpaint/stamps/seasonal/newyears/fireworks.png
 share/tuxpaint/stamps/seasonal/newyears/fireworks.txt
 share/tuxpaint/stamps/seasonal/newyears/fireworks.wav
+share/tuxpaint/stamps/seasonal/newyears/fireworks2.dat
+share/tuxpaint/stamps/seasonal/newyears/fireworks2.png
+share/tuxpaint/stamps/seasonal/newyears/fireworks2.txt
 share/tuxpaint/stamps/seasonal/newyears/party-hat.png
 share/tuxpaint/stamps/seasonal/newyears/party-hat.txt
 share/tuxpaint/stamps/seasonal/newyears/party-horn-in.dat
 share/tuxpaint/stamps/seasonal/newyears/party-horn-in.png
+share/tuxpaint/stamps/seasonal/newyears/party-horn-in.txt
 share/tuxpaint/stamps/seasonal/newyears/party-horn-out.dat
 share/tuxpaint/stamps/seasonal/newyears/party-horn-out.png
+share/tuxpaint/stamps/seasonal/newyears/party-horn-out.txt
 @dirrm share/tuxpaint/stamps/seasonal/newyears
 @dirrm share/tuxpaint/stamps/seasonal/hanukkah
 @dirrm share/tuxpaint/stamps/seasonal/halloween
+@dirrm share/tuxpaint/stamps/seasonal/easter
 @dirrm share/tuxpaint/stamps/seasonal/christmas
 @dirrm share/tuxpaint/stamps/seasonal
 @dirrm share/tuxpaint/stamps/photo/zzz_SORT
@@ -595,11 +706,14 @@ share/tuxpaint/stamps/seasonal/newyears/party-horn-out.png
 @dirrm share/tuxpaint/stamps/photo/money/us
 @dirrm share/tuxpaint/stamps/photo/money/euro/coins
 @dirrm share/tuxpaint/stamps/photo/money/euro
+@dirrm share/tuxpaint/stamps/photo/money/canadian/coins
+@dirrm share/tuxpaint/stamps/photo/money/canadian
 @dirrm share/tuxpaint/stamps/photo/money
 @dirrm share/tuxpaint/stamps/photo/household
 @dirrm share/tuxpaint/stamps/photo/food/vegetables
 @dirrm share/tuxpaint/stamps/photo/food/utensils
 @dirrm share/tuxpaint/stamps/photo/food/nuts
+@dirrm share/tuxpaint/stamps/photo/food/fruit_cartoon
 @dirrm share/tuxpaint/stamps/photo/food/fruit
 @dirrm share/tuxpaint/stamps/photo/food/dishes
 @dirrm share/tuxpaint/stamps/photo/food
@@ -616,3 +730,4 @@ share/tuxpaint/stamps/seasonal/newyears/party-horn-out.png
 @dirrm share/tuxpaint/stamps/misc/flags
 @dirrm share/tuxpaint/stamps/misc
 @dirrm share/tuxpaint/stamps/cartoon/bugs
+@dirrm share/tuxpaint/stamps/auto
