@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8101 2004/11/28 14:43:07 taca Exp $
+$NetBSD: CHANGES,v 1.8102 2004/11/28 14:49:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5578,3 +5578,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated monotone to 0.15 [jmmv 2004-11-28]
 	Updated libdv to 0.103nb1 [wiz 2004-11-28]
 	Updated ruby-uconv to 0.4.12 [taca 2004-11-28]
+	Updated hicolor-icon-theme to 0.5 [wiz 2004-11-28]
