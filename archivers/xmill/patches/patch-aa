@@ -1,0 +1,64 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/17 09:20:26 grant Exp $
+
+--- makefile.orig	Mon Nov 29 16:37:20 1999
++++ makefile
+@@ -34,20 +34,17 @@ TMP = ./tmp
+ SRC = ./src
+ 
+ CPP = g++
+-CPPFLAGS_XMILL = -O3 -c -Izlib -DXMILL
+-CPPFLAGS_XDEMILL = -O3 -c -Izlib -DXDEMILL
++CPPFLAGS_XMILL = -c -DXMILL
++CPPFLAGS_XDEMILL = -c -DXDEMILL
+ 
+ CC = gcc
+-CFLAGS = -O3 -c
++CFLAGS = -c
+ LINK=g++
+ # LINK_FLAGS = -L.
+ 
+-ZLIB_OBJS = $(TMP)/adler32.o $(TMP)/crc32.o $(TMP)/deflate.o $(TMP)/trees.o $(TMP)/uncompr.o \
+-            $(TMP)/inffast.o $(TMP)/inflate.o $(TMP)/inftrees.o $(TMP)/infutil.o $(TMP)/infblock.o \
+-            $(TMP)/infcodes.o $(TMP)/zutil.o
++ZLIB_OBJS = -lz
+ 
+-BZLIB_OBJS= $(TMP)/blocksort.o $(TMP)/bzlib.o $(TMP)/compress_b.o $(TMP)/crctable.o $(TMP)/decompress.o \
+-            $(TMP)/huffman.o $(TMP)/randtable.o
++BZLIB_OBJS = -lbz2
+ 
+ XMILL_OBJSPART  =  $(TMP)/CompressMan.o $(TMP)/ContMan.o $(TMP)/PathDict.o $(TMP)/PathTree.o \
+                    $(TMP)/RepeatCompress.o $(TMP)/RunLenCompress.o $(TMP)/SAXClient.o \
+@@ -61,11 +58,11 @@ XDEMILL_OBJSPART = $(TMP)/CompressMan_u.
+                    $(TMP)/DivCompress_u.o $(TMP)/EnumCompress_u.o $(TMP)/Error_u.o \
+                    $(TMP)/Options_u.o $(TMP)/MemStreamer_u.o
+ 
+-XMILLOBJS    = $(ZLIB_OBJS)  $(XMILL_OBJSPART) $(TMP)/ZLib.o
+-XBMILLOBJS   = $(BZLIB_OBJS) $(XMILL_OBJSPART) $(TMP)/ZLib_b.o
++XMILLOBJS    = $(XMILL_OBJSPART) $(TMP)/ZLib.o $(ZLIB_OBJS)
++XBMILLOBJS   = $(XMILL_OBJSPART) $(TMP)/ZLib_b.o $(BZLIB_OBJS)
+ 
+-XDEMILLOBJS  = $(ZLIB_OBJS)  $(XDEMILL_OBJSPART) $(TMP)/ZLib_u.o
+-XBDEMILLOBJS = $(BZLIB_OBJS) $(XDEMILL_OBJSPART) $(TMP)/ZLib_bu.o
++XDEMILLOBJS  = $(XDEMILL_OBJSPART) $(TMP)/ZLib_u.o $(ZLIB_OBJS)
++XBDEMILLOBJS = $(XDEMILL_OBJSPART) $(TMP)/ZLib_bu.o $(BZLIB_OBJS)
+ 
+ $(BIN)/xmill : $(XMILLOBJS)
+ 	$(LINK) -o $(BIN)/xmill $(LINK_FLAGS) $(XMILLOBJS)
+@@ -146,7 +143,7 @@ $(TMP)/ZLib.o           : $(SRC)/ZLib.cp
+ 	$(CPP) -o $*.o $(CPPFLAGS_XMILL) $(SRC)/ZLib.cpp
+ 
+ $(TMP)/ZLib_b.o         : $(SRC)/ZLib.cpp
+-	$(CPP) -o $*.o -I./bzlib $(CPPFLAGS_XMILL) -DUSE_BZIP $(SRC)/ZLib.cpp
++	$(CPP) -o $*.o $(CPPFLAGS_XMILL) -DUSE_BZIP $(SRC)/ZLib.cpp
+ 
+ #********************************************************************
+ 
+@@ -199,7 +196,7 @@ $(TMP)/ZLib_u.o           : $(SRC)/ZLib.
+ 	$(CPP) -o $*.o $(CPPFLAGS_XDEMILL) $(SRC)/ZLib.cpp
+ 
+ $(TMP)/ZLib_bu.o          : $(SRC)/ZLib.cpp
+-	$(CPP) -o $*.o -I./bzlib $(CPPFLAGS_XDEMILL) -DUSE_BZIP $(SRC)/ZLib.cpp
++	$(CPP) -o $*.o $(CPPFLAGS_XDEMILL) -DUSE_BZIP $(SRC)/ZLib.cpp
+ 
+ #********************************************************************
+ 
