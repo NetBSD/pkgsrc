@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2000/12/13 08:31:01 garbled Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/14 08:20:47 garbled Exp $
 #
 
 DISTNAME=	crossfire-client-0.95.8
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/crossfire/
-DISTFILES=	${CF_SRC} ${CF_SND}
+DISTFILES=	${CF_SRC} ${CF_SND} ${CF_RAW}
 
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://crossfire.real-time.com/
@@ -16,6 +16,7 @@ EXTRACT_ONLY=	${CF_SRC}
 
 CF_SRC=		crossfire-client-0.95.8.tar.gz
 CF_SND=		client-0.95.2-au-sounds.tgz
+CF_RAW=		client-0.95.2-raw-sounds.tgz
 
 USE_XPM=	yes
 USE_PERL5=	yes
@@ -34,6 +35,9 @@ post-install:
 	@${MKDIR} ${LOCALBASE}/share/cfclient
 	cd ${LOCALBASE}/share/cfclient && \
 	    ${GZCAT} ${DISTDIR}/${CF_SND} | ${GTAR} xmf -
+	cd ${LOCALBASE}/share/cfclient && \
+	    ${GZCAT} ${DISTDIR}/${CF_RAW} | ${GTAR} xmf -
+	${INSTALL_DATA} ${WRKSRC}/def_keys ${LOCALBASE}/share/cfclient
 	@chown -R root:games ${LOCALBASE}/share/cfclient
 
 .include "../../mk/bsd.pkg.mk"
