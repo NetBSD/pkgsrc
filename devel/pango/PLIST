@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2004/09/22 08:09:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.20 2004/12/24 10:03:54 jmmv Exp $
 bin/pango-querymodules
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
@@ -15,6 +15,7 @@ include/pango-1.0/pango/pango-item.h
 include/pango-1.0/pango/pango-layout.h
 include/pango-1.0/pango/pango-modules.h
 include/pango-1.0/pango/pango-ot.h
+include/pango-1.0/pango/pango-renderer.h
 include/pango-1.0/pango/pango-script.h
 include/pango-1.0/pango/pango-tabs.h
 include/pango-1.0/pango/pango-types.h
@@ -25,6 +26,7 @@ include/pango-1.0/pango/pangofc-font.h
 include/pango-1.0/pango/pangofc-fontmap.h
 include/pango-1.0/pango/pangoft2.h
 include/pango-1.0/pango/pangox.h
+include/pango-1.0/pango/pangoxft-render.h
 include/pango-1.0/pango/pangoxft.h
 lib/libpango-1.0.la
 lib/libpangoft2-1.0.la
@@ -36,7 +38,9 @@ lib/pango/1.4.0/modules/pango-basic-x.la
 lib/pango/1.4.0/modules/pango-hangul-fc.la
 lib/pango/1.4.0/modules/pango-hebrew-fc.la
 lib/pango/1.4.0/modules/pango-indic-fc.la
+lib/pango/1.4.0/modules/pango-syriac-fc.la
 lib/pango/1.4.0/modules/pango-thai-fc.la
+lib/pango/1.4.0/modules/pango-tibetan-fc.la
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangoft2.pc
 lib/pkgconfig/pangox.pc
@@ -77,6 +81,7 @@ share/doc/pango/pango.devhelp
 share/doc/pango/pango.html
 share/doc/pango/rendering.html
 share/doc/pango/right.png
+share/doc/pango/style.css
 share/doc/pango/tools.html
 share/doc/pango/up.png
 @dirrm share/doc/pango
