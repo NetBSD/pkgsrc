@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/06/29 23:15:49 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/06/30 00:11:28 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.3
@@ -8,12 +8,11 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.1/ \
 		ftp://ftp.usyd.edu.au/pub/Xemacs/xemacs-21.1/ \
 		ftp://ftp.lab.kdd.co.jp/xemacs/xemacs-21.1/ \
 		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/xemacs-21.1/
-DISTFILES=	xemacs-21.1.3.tar.gz xemacs-21.1.3-info.tar.gz
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}-elc${EXTRACT_SUFX} ${DISTNAME}-info${EXTRACT_SUFX}
+
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
-
-IGNORE=		is still broken
 
 DEPENDS+=	Xaw3d-1.5:../../x11/Xaw3d
 DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
@@ -45,6 +44,7 @@ CONFIGURE_ARGS+=	${MACHINE_GNU_ARCH}--netbsd --prefix=${PREFIX} \
 			--site-includes=${PREFIX}/include \
 			--site-libraries=${PREFIX}/lib
 
+CFLAGS+=		-Dunix
 MAKE_ENV+=		INSTALL_MAN="${INSTALL_MAN}" \
 			INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 PLIST_SRC=		${WRKDIR}/PLIST.tmp
@@ -56,7 +56,8 @@ pre-configure:
 	@${ECHO} "To compile in the support for xface, set the environment variable USE_XFACE."
 
 post-install:
-	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/xemacs-21.1-p3
+	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/xemacs-21.1-p3
+	@${MKDIR} -p ${PREFIX}/lib/xemacs
 	@if [ "X${MANZ}" != X"" ]; then \
 		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/xemacs-21.1-p3; \
 		GZSUFFIX=.gz; \
