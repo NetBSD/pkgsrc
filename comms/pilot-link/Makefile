@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2000/12/14 19:45:09 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/07 16:15:53 jlam Exp $
 #
 
 DISTNAME=		pilot-link.0.9.3
 PKGNAME=		pilot-link-0.9.3
 CATEGORIES=		comms
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pilot-link/}
+MASTER_SITES=		http://www.gnu-designs.com/pilot-link/source/
 
 MAINTAINER=		sommerfeld@alum.mit.edu
-HOMEPAGE=		http://www.sourceforge.net/projects/pilot-link/
+HOMEPAGE=		http://www.gnu-designs.com/pilot-link/
 
 USE_PERL5=		# defined
 GNU_CONFIGURE=		# defined
