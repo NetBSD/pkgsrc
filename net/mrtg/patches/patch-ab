@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 1999/05/22 10:45:33 rh Exp $
+$NetBSD: patch-ab,v 1.5 2000/10/20 16:06:17 bouyer Exp $
 
---- run/mrtg.orig	Tue Apr 27 10:04:06 1999
-+++ run/mrtg	Sat May 22 10:59:57 1999
-@@ -52,7 +52,7 @@
-   }
-   die "ERROR: Can\'t find location of mrtg executable\n" 
-     unless $main::binpath; 
--  unshift (@INC,$main::binpath);
-+  $main::binpath .= "/../libexec"
+--- contrib/NSI/Mrtg_nsi.orig	Thu Oct 19 14:20:46 2000
++++ contrib/NSI/Mrtg_nsi	Thu Oct 19 14:21:08 2000
+@@ -59,7 +59,7 @@
+ 	}
+ 	die "ERROR: Can\'t find location of mrtg executable\n" 
+ 	  unless $main::binpath; 
+-	unshift (@INC,$main::binpath);
++	$main::binpath .= "/../libexec"
  }
  
- ###
+ # There older perls tend to behave peculiar with

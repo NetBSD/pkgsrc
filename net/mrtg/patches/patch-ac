@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2000/10/20 16:06:17 bouyer Exp $
+
+--- Makefile.in.orig	Fri Oct 20 11:18:50 2000
++++ Makefile.in	Fri Oct 20 11:20:39 2000
+@@ -29,6 +29,7 @@
+ subst:
+ 	$(PERL) -0777 -pi -e 's@^#!\s*/\S*perl@#! $(PERL)@' bin/cfgmaker bin/indexmaker bin/mrtg
+ 	$(PERL) -0777 -pi -e 's@GRAPHFMT="...";@GRAPHFMT="$(GDFORM_EXT)";@' bin/mrtg bin/indexmaker
++	$(PERL) -0777 -pi -e "s@__PREFIX__@${prefix}@g" bin/cfgmaker bin/mrtg bin/indexmaker
+ 
+ clean:
+ 	-rm bin/rateup
