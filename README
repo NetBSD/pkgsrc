@@ -1,92 +1,15 @@
-$NetBSD: README,v 1.15 2003/05/06 17:40:18 jmmv Exp $
+$NetBSD: README,v 1.16 2003/06/23 07:48:01 grant Exp $
 
-Welcome to the NetBSD Packages Collection
-=========================================
+The pkgsrc documentation now lives on the NetBSD web site.
 
-In brief, the NetBSD Packages Collection is a set of software
-utilities and libraries which have been ported to NetBSD.
+Full documentation, one file per chapter:
+	http://www.NetBSD.org/Documentation/pkgsrc/
 
-The packages collection software can retrieve the software from its
-home site, assuming you are connected in some way to the Internet,
-verify its integrity, apply any patches, configure the software for
-NetBSD, and build it.  Any prerequisite software will also be built
-and installed for you.  Installation and de-installation of software
-is managed by the packaging utilities.
+Full documentation in a single file:
+	http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.html
 
-The packages collection is made into a tar_file every week:
+Full documentation in a single plain-text file:
+	http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.txt
 
-	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-current/tar_files/pkgsrc.tar.gz
-
-and you can sup the pkgsrc tree using the `pkgsrc' name for the
-collection.
-
-The pkgsrc tree is laid out in various categories, and, within that,
-the various packages themselves.
-
-You need to have root privileges to install packages.  We are looking
-at ways to remove this restriction.
-
-+ To install a package on your system, you need to change into the
-directory of the package, and type "make install".
-
-+ If you've made a mistake, and decided that you don't want that
-package on your system, then type "pkg_delete <pkg-name>", or "make
-deinstall" while in the directory for the package.
-
-+ To find out all the packages that you have installed on your system,
-type "pkg_info".
-
-+ To remove the work directory, type "make clean", and "make
-clean-depends" will clean up any working directories for other
-packages that are built in the process of making your package.
-
-+ Optionally, you can periodically run "make clean" from the top
-level pkgsrc directory. This will delete extracted and built files,
-but will not affect the retreived source sets in pkgsrc/distfiles.
-
-+ You can set variables to customise the behaviour (where packages are
-installed, various options for individual packages etc), by setting
-variables in /etc/mk.conf.  The pkgsrc/mk/bsd.pkg.defaults.mk gives
-the defaults which are used in pkgsrc.  This file can be used as a
-guide to set values in /etc/mk.conf - it is only necessary to set
-values where they differ from the defaults.
-
-The best way to find out what packages are in the collection is to
-move to the top-level pkgsrc directory (this will usually be
-/usr/pkgsrc), and type "make readme".  This will create a file called
-README.html in the top-level pkgsrc directory, and also in all
-category and package directories.  You can then see what packages are
-available, along with a short (one-line) comment about the function of
-the package, and a pointer to a fuller description, by using a browser
-like lynx (see pkgsrc/www/lynx) or Mozilla (pkgsrc/www/mozilla), or
-Communicator.  This is also available online as
-ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/README.html.
-
-Another way to find out what packages are in the collection is to
-move to the top-level pkgsrc directory and type "make index". This
-will create pkgsrc/INDEX which can be viewed via "make print-index | more".
-You can also search for particular packages or keywords via
-"make search key=<somekeyword>".
-
-It is also possible to use the packaging software to install
-pre-compiled binary packages by typing "pkg_add <URL-of-binary-pkg>".
-To see what binary packages are available, see:
-
-	ftp://ftp.netbsd.org/pub/NetBSD/packages/<release>/<arch>/All/
-
-where <release> is the NetBSD release, and <arch> is the hardware
-architecture.
-
-One limitation of using binary packages provided from ftp.netbsd.org
-is that all mk.conf options were set to the defaults at compile time.
-LOCALBASE, in particular, defaults to /usr/pkg, so non-X binaries
-will be installed in /usr/pkg/bin, man pages will be installed in
-/usr/pkg/man...
-
-When a packaged tool has major compile time choices, such as support
-for multiple graphic toolkit libraries, the different options may
-be available as separate packages.
-
-For more information on the packages collection see the file
-Packages.txt file in the same place where you found this README,
-usually in the top-level pkgsrc directory.
+pkgsrc.txt and pkgsrc.html are also provided in the top level pkgsrc
+directory (this directory).
