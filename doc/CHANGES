@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9494 2005/03/16 21:27:35 jmmv Exp $
+$NetBSD: CHANGES,v 1.9495 2005/03/17 12:30:47 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1374,3 +1374,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dbh to 1.0.22 [martti 2005-03-16]
 	Updated bind to 9.3.0pl1nb1 [tron 2005-03-16]
 	Updated bmp to 0.9.7nb1 [jmmv 2005-03-16]
+	Updated enscript to 1.6.3nb1 [salo 2005-03-17]
