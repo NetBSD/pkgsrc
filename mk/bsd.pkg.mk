@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.447 2000/05/31 21:25:48 jwise Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.448 2000/05/31 22:16:16 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -2420,7 +2420,8 @@ binpkg-list:
 		for pkg in ${PKGREPOSITORYSUBDIR}/${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX} ; \
 		do 							\
 			if [ -f "$$pkg" ] ; then			\
-				${ECHO} "<TR><TD> ${MACHINE_ARCH}: <TD><a href=\"${PKG_URL}/$$pkg\"> <TD>(${OPSYS} ${OS_VERSION}) </a>)"; \
+				pkgname=`${ECHO} $$pkg | ${SED} 's@.*/@@'`; \
+				${ECHO} "<TR><TD>${MACHINE_ARCH}:<TD><a href=\"${PKG_URL}/$$pkg\">$$pkgname</a> (${OPSYS} ${OS_VERSION})"; \
 			fi ;						\
 		done ; 							\
 		;;							\
@@ -2456,7 +2457,7 @@ binpkg-list:
 					arch=ava[1];			\
 					pkg=ava[2];			\
 					release=ava[3];			\
-					print "<TR><TD><LI> " arch ": <TD>" urls[av] " <TD>(${OPSYS} " release ")"; \
+					print "<TR><TD>" arch ":<TD>" urls[av] "<TD>(${OPSYS} " release ")"; \
 				}					\
 			} ' | sort					\
 		;;							\
@@ -2566,7 +2567,7 @@ README.html: .PRECIOUS
 	@[ -s $@.tmp2 ] || ${ECHO} "<I>(none)</I>" >> $@.tmp2
 	@${ECHO} ${PKGNAME} | ${HTMLIFY} >> $@.tmp3
 	@${MAKE} binpkg-list  >> $@.tmp4
-	@[ -s $@.tmp4 ] || ${ECHO} "<I>(no precompiled binaries available)</I>" >> $@.tmp4
+	@[ -s $@.tmp4 ] || ${ECHO} "<TR><TD><I>(no precompiled binaries available)</I>" >> $@.tmp4
 	@${SED} -e 's|%%PORT%%|'"`${MAKE} package-path | ${HTMLIFY}`"'|g' \
 		-e '/%%PKG%%/r $@.tmp3'					\
 		-e '/%%PKG%%/d'						\
