@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/07/15 04:38:17 adrianp Exp $
+# $NetBSD: Makefile,v 1.42 2004/07/17 00:18:31 xtraeme Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 CATEGORIES=		www
@@ -32,6 +32,13 @@ CONFIGURE_ARGS+=	--with-apr-util=${LOCALBASE}
 DFLT_APACHE_MODULES=	all
 DFLT_APACHE_MODULES+=	proxy proxy_connect proxy_ftp proxy_http
 DFLT_APACHE_MODULES+=	ssl
+
+# OpenLDAP support
+.if !empty(APR_USE_OPENLDAP:M[Yy][Ee][Ss])
+DFLT_APACHE_MODULES+=	ldap auth_ldap
+.include "../../databases/openldap/buildlink3.mk"
+.endif
+
 APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 CONFIGURE_ARGS+=	--enable-modules="${APACHE_MODULES}"
 CONFIGURE_ARGS+=	--enable-so
