@@ -1,5 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/14 12:37:03 zuntum Exp $
-bin/mytop
-share/doc/mytop/README
-share/doc/mytop/mytop.html
-@dirrm share/doc/mytop
+@comment $NetBSD: PLIST,v 1.2 2001/07/08 13:07:45 zuntum Exp $
