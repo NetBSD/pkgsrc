@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2000/01/09 23:49:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2000/03/02 00:02:49 kim Exp $
 
-DISTNAME=	remind-03.00.19
+DISTNAME=	remind-03.00.20
 PKGNAME=	${DISTNAME:C/0([0-9])/\1/g}
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.doe.carleton.ca/pub/remind-3.0/
