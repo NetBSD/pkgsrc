@@ -1,5 +1,5 @@
---- Makefile.in.orig	Fri Aug 15 21:17:28 1997
-+++ Makefile.in	Wed Oct  1 17:19:36 1997
+--- Makefile.in.orig	Fri Aug 15 22:17:28 1997
++++ Makefile.in	Mon Oct 13 02:53:28 1997
 @@ -55,7 +55,9 @@
  BIN_INSTALL_DIR =	$(INSTALL_ROOT)$(exec_prefix)/bin
  
@@ -96,41 +96,8 @@
  	@for i in $(TOP_DIR)/library/*.tcl $(TOP_DIR)/library/tclIndex $(UNIX_DIR)/tclAppInit.c $(UNIX_DIR)/ldAix; \
  	    do \
  	    echo "Installing $$i"; \
-@@ -483,30 +502,37 @@
- 	@cd $(TOP_DIR)/doc; for i in *.1; \
- 	    do \
- 	    echo "Installing doc/$$i"; \
--	    rm -f $(MAN1_INSTALL_DIR)/$$i; \
-+	    rm -f $(MAN1_INSTALL_DIR)/$$i $(MAN1_INSTALL_DIR)/$$i.gz ; \
- 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
--		    $$i > $(MAN1_INSTALL_DIR)/$$i; \
--	    chmod 444 $(MAN1_INSTALL_DIR)/$$i; \
-+		    $$i | gzip -c > $(MAN1_INSTALL_DIR)/$$i.gz; \
-+	    chmod 444 $(MAN1_INSTALL_DIR)/$$i.gz; \
- 	    done;
- 	$(UNIX_DIR)/mkLinks $(MAN1_INSTALL_DIR)
- 	@cd $(TOP_DIR)/doc; for i in *.3; \
- 	    do \
- 	    echo "Installing doc/$$i"; \
--	    rm -f $(MAN3_INSTALL_DIR)/$$i; \
-+	    rm -f $(MAN3_INSTALL_DIR)/$$i $(MAN3_INSTALL_DIR)/$$i.gz ; \
- 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
--		    $$i > $(MAN3_INSTALL_DIR)/$$i; \
--	    chmod 444 $(MAN3_INSTALL_DIR)/$$i; \
-+		    $$i | gzip -c > $(MAN3_INSTALL_DIR)/$$i.gz; \
-+	    chmod 444 $(MAN3_INSTALL_DIR)/$$i.gz; \
- 	    done;
- 	$(UNIX_DIR)/mkLinks $(MAN3_INSTALL_DIR)
- 	@cd $(TOP_DIR)/doc; for i in *.n; \
- 	    do \
- 	    echo "Installing doc/$$i"; \
--	    rm -f $(MANN_INSTALL_DIR)/$$i; \
-+	    rm -f $(MANN_INSTALL_DIR)/$$i $(MANN_INSTALL_DIR)/$$i.gz; \
- 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
--		    $$i > $(MANN_INSTALL_DIR)/$$i; \
--	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
-+		    $$i | gzip -c > $(MANN_INSTALL_DIR)/$$i.gz; \
-+	    chmod 444 $(MANN_INSTALL_DIR)/$$i.gz; \
+@@ -507,6 +526,13 @@
+ 	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
  	    done;
  	$(UNIX_DIR)/mkLinks $(MANN_INSTALL_DIR)
 +	@echo "**********"
