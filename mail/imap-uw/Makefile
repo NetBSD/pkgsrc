@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/03/01 18:29:26 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/03/13 20:22:10 jlam Exp $
 
 DISTNAME=       imap-2000c
 PKGNAME=        imap-uw-2000.0.3nb1
@@ -90,26 +90,21 @@ post-extract:
 			$${file} > $${f};				\
 	done
 
+# Generate _pic.a library from shared objects.
+#
 post-build:
-	${MKDIR} ${WRKDIR}/piclib
-	cd ${WRKDIR}/piclib;						\
-	for file in ${WRKSRC}/c-client/.libs/*.o; do			\
-		${LN} -sf $${file} .;					\
-	done;								\
-	${RM} -f ${CCLIENT_PICLIB};					\
-	${AR} cru ${CCLIENT_PICLIB} *.o;				\
-	${RANLIB} ${CCLIENT_PICLIB}
+	cd ${WRKSRC}/c-client; ${LIBTOOL} ${CC} -o ${CCLIENT_PICLIB:.a=.la} *.lo
 
 do-install:
 	${INSTALL_DATA_DIR} ${INC_DIR}
 	cd ${WRKSRC}/c-client; ${INSTALL_DATA} ${CCLIENT_INCS} ${INC_DIR}
 	${INST_LIB} ${WRKSRC}/c-client/${CCLIENT_LIB} ${LIB_DIR}
+	${INSTALL_DATA} ${WRKSRC}/c-client/.libs/${CCLIENT_PICLIB} ${LIB_DIR}
+	${RANLIB} ${LIB_DIR}/${CCLIENT_PICLIB}
 	cd ${LIB_DIR}; for file in ${CCLIENT_LIBS}; do			\
 		f=`echo $${file} | ${SED} "s|libc-client|libimapuw|g"`;	\
 		[ -f $${file} ] && ${LN} -sf $${file} $${f};		\
 	done
-	${INSTALL_DATA} ${WRKDIR}/piclib/${CCLIENT_PICLIB} ${LIB_DIR}
-	${RANLIB} ${LIB_DIR}/${CCLIENT_PICLIB}
 	${INST_PROG} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop3d ${PREFIX}/libexec
