@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8051 2004/11/27 04:41:15 jlam Exp $
+$NetBSD: CHANGES,v 1.8052 2004/11/27 07:21:49 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5487,3 +5487,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvsweb to 3.0.4 [lukem 2004-11-27]
 	Updated verilog-current to 20041004 [dmcmahill 2004-11-27]
 	Updated openslp to 1.2.0 [jlam 2004-11-27]
+	Updated jamjar to 0.7.1 [skrll 2004-11-27]
