@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 1999/04/19 06:33:20 abs Exp $
+# $NetBSD: Makefile,v 1.43 1999/05/10 22:12:42 tron Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -86,7 +86,9 @@ CONFIGURE_ARGS+=	--disable-asm
 CFLAGS+=		-m68060
 .endif
 
-PKGDIR=		${WRKDIR}/pkg
+DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
+PLIST_SRC=	${WRKDIR}/PLIST
 
 pre-patch:
 	@${MV} -f ${WRKSRC}/make-ssh-known-hosts.pl \
@@ -108,21 +110,14 @@ fetch-depends:
 .endif
 
 post-extract:
-	@${MKDIR} ${PKGDIR}
-.for FILE in COMMENT DEINSTALL DESCR MESSAGE PLIST
-	@${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
-	  -e 's#@PREFIX@#${PREFIX}#g' \
-	  <${.CURDIR}/pkg/${FILE} >${PKGDIR}/${FILE}
-.endfor
-	@if [ -f ${X11BASE}/include/X11/X.h ]; then \
-		${ECHO} bin/ssh-askpass >>${PKGDIR}/PLIST; \
-		${ECHO} bin/ssh-askpass1 >>${PKGDIR}/PLIST; \
-	fi
 
 post-build:
-	@${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
-	  -e 's#@PREFIX@#${PREFIX}#g' \
-	  <${FILESDIR}/sshd.sh >${WRKDIR}/sshd.sh
+	@cd ${PKGDIR}; \
+	for FILE in DEINSTALL MESSAGE PLIST ${FILESDIR}/sshd.sh; do \
+	  ${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
+	    -e 's#@PREFIX@#${PREFIX}#g' \
+	    <$${FILE} >${WRKDIR}/`basename $${FILE}`; \
+	done
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/ssh
@@ -138,6 +133,7 @@ post-install:
 			-f ${SSH_CONF_DIR}/ssh_host_key -N ""; \
 	fi
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd.sh
+	@cd ${PREFIX}; find bin -name 'ssh-askpass*' >>${PLIST_SRC}
 
 # Include <bsd.pkg.mk> here.  It is essential to have all the override
 # targets precede inclusion of this.
