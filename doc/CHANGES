@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.814 2002/12/17 10:55:22 jmmv Exp $
+$NetBSD: CHANGES,v 1.815 2002/12/17 19:41:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3982,3 +3982,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated star to 1.4.2 [grant 2002-12-17]
 	Updated whiteBOX to 0.5 [jmmv 2002-12-17]
 	Added pekwm-0.1.2 [jmmv 2002-12-17]
+	Updated dctc to 0.83.9 [wiz 2002-12-17]
+	Updated dc_gui to 0.66 [wiz 2002-12-17]
+	Updated easytag to 0.25.0.2 [wiz 2002-12-17]
