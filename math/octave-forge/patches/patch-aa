@@ -1,12 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/08/14 13:29:56 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/19 20:47:46 dmcmahill Exp $
 
---- main/gsl/replace_template.sh.orig	Tue May  4 15:49:42 2004
-+++ main/gsl/replace_template.sh
-@@ -1,8 +1,8 @@
+--- main/gsl/replace_template.sh.orig	2004-05-04 15:49:42.000000000 +0000
++++ main/gsl/replace_template.sh	2005-03-18 20:26:03.000000000 +0000
+@@ -1,8 +1,11 @@
  #!/bin/sh
  
 -csplit -f tmp_gsl $1 /DEFUN/ /GSL_FUNC_DOCSTRING/ /./ > /dev/null
-+${CSPLIT} -f tmp_gsl $1 /DEFUN/ /GSL_FUNC_DOCSTRING/ /./ > /dev/null
++awk '/DEFUN/ {exit} {print}' $1 > tmp_gsl00
++awk '/DEFUN/ {state=1} /GSL_FUNC_DOCSTRING/ {if(state==1){exit}} state==1{print}' $1 > tmp_gsl01
++awk '/DEFUN/ {state=1} /GSL_FUNC_DOCSTRING/ {if(state==1){print ; exit}}' $1 > tmp_gsl02
++awk 'state==2{print} /DEFUN/ {state=1} /GSL_FUNC_DOCSTRING/ {if(state==1){state=2}}' $1 > tmp_gsl03
  cat tmp_gsl01 | sed "s/GSL_OCTAVE_NAME/$octave_name/g"
  cat docstring.txt | sed 's/\\/\\\\/g' | sed 's/$/\\n\\/g' 
  cat tmp_gsl03 | sed "s/GSL_OCTAVE_NAME/$octave_name/g" | sed "s/GSL_FUNC_NAME/$funcname/g" 
