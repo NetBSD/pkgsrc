@@ -1,0 +1,81 @@
+$NetBSD: patch-ab,v 1.1 1999/01/19 00:59:33 hubertf Exp $
+
+--- asclock.man.orig	Sun Aug 25 17:35:49 1996
++++ asclock.man	Sat Dec  5 03:21:54 1998
+@@ -1,4 +1,4 @@
+-.TH asclock 0.99 "23 July 1996" asclock
++.TH asclock 1.1 "11 April 1998" asclock
+ .UC
+ .SH NAME
+ \fBasclock\fP \- the AfterStep clock
+@@ -8,7 +8,9 @@
+         [-position \fI[+|-]x[+|-]y\fP] 
+         [-exe \fIprogram\fP]
+         [-led \fIcolor\fP]
+-        [-noblink] [-iconic]
++        [-monthxpm \fIxpm\fP] [-clockxpm \fIxpm\fP]
++        [-weekdayxpm \fIxpm\fP]
++        [-noblink] [-iconic] [-withdrawn]
+ .SH DESCRIPTION
+ The \fBasclock\fP is a clock written to emulate the date/time application on 
+ the NEXTSTEP(tm) operating system.  \fBasclock\fP supports multiple languages, 
+@@ -25,10 +27,14 @@
+             -24                     24 hour format
+             -exe <program>          program to start on click
+             -led <color>            color of the led
++            -monthxpm <xpm>         month xpm
++            -clockxpm <xpm>         clock xpm
++            -weekdayxpm <xpm>       weekday xpm
+             -position [+|-]x[+|-]y  position of asclock
+             -shape                  without groundplate
+             -noblink                don't blink
+             -iconic                 start up as icon
++            -withdrawn              start up in withdrawn mode
+ .fi
+ .RE
+ .IP "-12 or -24"
+@@ -50,6 +56,18 @@
+ .I showrgb
+ .P (part of X11).
+ .RE
++.IP "-monthxpm <xpm>"
++.RS
++specifies the XPM file for the month pages.
++.RE
++.IP "-clockxpm <xpm>"
++.RS
++specifies the XPM file for the clock and calendar display.
++.RE
++.IP "-weekdayxpm <xpm>"
++.RS
++specifies the XPM file for the weekday pages.
++.RE
+ .IP "-position [+|-]x[+|-]y "
+ .RS
+ specifies the starting position of \fBasclock\fP. The [+|-] works like the standard X-Windows x/y geometry option.
+@@ -66,6 +84,10 @@
+ .RS
+ This gives weird output with AfterStep, so don't bother. It's for mwm and other wm's with no hint functionality.
+ .RE
++.IP "-withdrawn"
++.RS
++starts \fBasclock\fP in withdrawn mode.  This option is necessary to dock \fBasclock\fP in the Window Maker dock.  \fBasclock\fP ignores the -iconic option when started in withdrawn mode.
++.RE
+ .SH INVOCATION
+ \fBasclock\fP can be called from one of many ways.  The most common invocation
+ is the command line:
+@@ -86,6 +108,14 @@
+ will cause \fBasclock\fP to use the shape extensions so that it will be a
+ button on the \fBWharf (1)\fP button bar under the \fBafterstep (1)\fP 
+ window manager.
++
++If you run Window Maker then you should use the "-withdrawn" option:
++.nf
++
++	[user@host] ~% asclock -shape -12 -withdrawn &
++
++.fi
++and then drag the icon to the dock.
+ .SH BUGS
+ we don't have bugs :)
+ .SH COPYRIGHTS

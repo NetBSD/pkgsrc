@@ -1,0 +1,63 @@
+$NetBSD: patch-aa,v 1.1 1999/01/19 00:59:33 hubertf Exp $
+
+--- asclock.c.orig	Sat Apr 11 07:12:23 1998
++++ asclock.c	Sat Dec  5 02:57:12 1998
+@@ -19,6 +19,7 @@
+ int ONLYSHAPE=0; /* default value is noshape */
+ int ITBLINKS=1;  /* default is blinking */
+ int ICONIFIED=0; /* default is not iconified */
++int WITHDRAWN=0; /* default is not withdrawn */
+ /* led positions *************************************************************/
+ int twelve[5]  = {5, 14, 24, 28, 37};
+ int twfour[5]  = {4,  8, 17, 22, 31};
+@@ -91,6 +92,7 @@
+ "    -shape                  without groundplate",
+ "    -noblink                don't blink",
+ "    -iconic                 start up as icon",
++"    -withdrawn              start up in withdrawn mode",
+ NULL
+ };
+ 
+@@ -150,10 +152,18 @@
+ 	readmonthxpm = 1;
+ 	continue;
+       case 'w':
+-	if(++i >=argc) usage();
+-	strcpy(&weekxpm[0], argv[i]);
+-	readweekxpm = 1;
+-	continue;
++	switch(arg[2]) {
++	case 'e':
++	  if(++i >=argc) usage();
++	  strcpy(&weekxpm[0], argv[i]);
++	  readweekxpm = 1;
++	  continue;
++	case 'i':
++          WITHDRAWN=1;
++	  continue;
++	default:
++	  usage();
++	}
+       case 's':
+ 	ONLYSHAPE=1;
+ 	continue;
+@@ -251,13 +261,17 @@
+     XShapeCombineMask(dpy, iconwin, ShapeBounding, 0, 0, pixmask, ShapeSet);
+   }
+   
+-  mywmhints.initial_state = (ICONIFIED ? IconicState : NormalState);
++  mywmhints.initial_state = WITHDRAWN ? WithdrawnState :
++	(ICONIFIED ? IconicState : NormalState);
+   mywmhints.icon_window = iconwin;
+   mywmhints.icon_x = mysizehints.x;
+   mywmhints.icon_y = mysizehints.y;
+-  mywmhints.flags = StateHint | IconWindowHint | IconPositionHint;
++  mywmhints.window_group = win;
++  mywmhints.flags = StateHint | IconWindowHint | IconPositionHint
++	| WindowGroupHint;
+   XSetWMHints(dpy, win, &mywmhints); 
+ 
++  XSetCommand(dpy, win, argv, argc);
+   XMapWindow(dpy,win);
+ 
+   InsertTime();
