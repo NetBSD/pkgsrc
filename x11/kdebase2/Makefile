@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/07/16 11:02:01 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/07/18 22:44:30 jlam Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -22,7 +22,9 @@ CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_DIR}"
 CONFIGURE_ARGS+=	--disable-greet-lib
 CONFIGURE_ARGS+=	--without-pam
 LIBS+=			-Wl,--export-dynamic
-USER_LDFLAGS=		-L${BUILDLINK_DIR}/lib -Wl,-R${LOCALBASE}/lib
+USER_LDFLAGS=		-L${BUILDLINK_DIR}/lib
+USER_LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
+USER_LDFLAGS+=		-Wl,-R${X11BASE}/lib
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 IMAKEDIR=	${WRKDIR}/imake
