@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.8 2005/01/12 15:32:01 jlam Exp $
+# $NetBSD: xlc.mk,v 1.9 2005/01/12 17:27:50 jlam Exp $
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -25,9 +25,6 @@ _XLC_CC=	${_XLC_DIR}/bin/xlc
 _ALIASES.CC=	cc xlc
 CCPATH=		${XLCBASE}/bin/xlc
 PKG_CC:=	${_XLC_CC}
-.  if !empty(CC:M*gcc)
-CC:=		${PKG_CC:T}	# ${CC} should be named "xlc".
-.  endif
 .endif
 .if exists(${XLCBASE}/bin/xlc++)
 _XLC_VARS+=	CXX
@@ -35,9 +32,6 @@ _XLC_CXX=	${_XLC_DIR}/bin/xlc++
 _ALIASES.CXX=	c++ xlc++
 CXXPATH=	${XLCBASE}/bin/xlc++
 PKG_CXX:=	${_XLC_CXX}
-.  if !empty(CXX:M*g++)
-CXX:=		${PKG_CXX:T}	# ${CXX} should be named "xlc++".
-.  endif
 .endif
 _COMPILER_STRIP_VARS+=	${_XLC_VARS}
 
