@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.22 2002/09/18 00:46:58 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.23 2002/09/18 02:14:35 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -427,6 +427,9 @@ _BUILDLINK_SUBST_USE: .USE
 				for file in $${files}; do		\
 					if ${_BLNK_CHECK_IS_TEXT_FILE}; then \
 						${SED}  ${BUILDLINK_SUBST_SED.${.TARGET:S/-buildlink-subst//}} \
+							${BUILDLINK_SUBST_SED.1.${.TARGET:S/-buildlink-subst//}} \
+							${BUILDLINK_SUBST_SED.2.${.TARGET:S/-buildlink-subst//}} \
+							${BUILDLINK_SUBST_SED.3.${.TARGET:S/-buildlink-subst//}} \
 							$${file} > $${file}.modified; \
 						if [ -x $${file} ]; then \
 							${CHMOD} +x $${file}.modified; \
@@ -462,14 +465,14 @@ _REPLACE_BUILDLINK= \
 REPLACE_BUILDLINK_SED?=		# empty
 _REPLACE_BUILDLINK_SED=		${REPLACE_BUILDLINK_SED}
 _REPLACE_BUILDLINK_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
-_REPLACE_BUILDLINK_SED+=	${_BLNK_UNTRANSFORM_SED.1}
-_REPLACE_BUILDLINK_SED+=	${_BLNK_UNTRANSFORM_SED.2}
-_REPLACE_BUILDLINK_SED+=	${_BLNK_UNTRANSFORM_SED.3}
 
 BUILDLINK_SUBST_MESSAGE.unbuildlink= \
 	"Fixing buildlink references in files-to-be-installed."
 BUILDLINK_SUBST_FILES.unbuildlink=	${_REPLACE_BUILDLINK}
 BUILDLINK_SUBST_SED.unbuildlink=	${_REPLACE_BUILDLINK_SED}
+BUILDLINK_SUBST_SED.1.unbuildlink=	${_BLNK_UNTRANSFORM_SED.1}
+BUILDLINK_SUBST_SED.2.unbuildlink=	${_BLNK_UNTRANSFORM_SED.2}
+BUILDLINK_SUBST_SED.3.unbuildlink=	${_BLNK_UNTRANSFORM_SED.3}
 
 post-build: unbuildlink-buildlink-subst
 unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
@@ -598,7 +601,7 @@ _BLNK_WRAPPER_SH.LIBTOOL=	${.CURDIR}/../../mk/buildlink2/libtool.sh
 _BLNK_WRAP_SANITIZE_PATH.LIBTOOL=	# empty
 
 # We need to "unbuildlinkify" any libtool archives.
-_BLNK_WRAP_LT_UNTRANSFORM_SED=	${_REPLACE_BUILDLINK_SED}
+_BLNK_WRAP_LT_UNTRANSFORM_SED=		${_REPLACE_BUILDLINK_SED}
 
 # Don't transform the arguments for imake, which uses the C preprocessor
 # to generate Makefiles, so that imake will find its config files.
@@ -789,6 +792,9 @@ ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 		-e "s|@SED@|${SED:Q}|g"					\
 		-e "s|@TOUCH@|${TOUCH:Q}|g"				\
 		-e 's|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g' \
+		-e 's|@_BLNK_UNTRANSFORM_SED.1@|${_BLNK_UNTRANSFORM_SED.1:Q}|g' \
+		-e 's|@_BLNK_UNTRANSFORM_SED.2@|${_BLNK_UNTRANSFORM_SED.2:Q}|g' \
+		-e 's|@_BLNK_UNTRANSFORM_SED.3@|${_BLNK_UNTRANSFORM_SED.3:Q}|g' \
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
