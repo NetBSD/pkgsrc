@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.4 2005/01/05 14:16:59 agc Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.5 2005/01/05 14:21:16 agc Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -241,7 +241,7 @@ fi</programlisting>
 	This can be done by using null mounts, or manually.</para>
 
       <para>There is a shell script
-	called <filename>pkgsrc/bulk/mksandbox</filename> which will set up the sandbox
+	called <filename>pkgsrc/mk/bulk/mksandbox</filename> which will set up the sandbox
 	environment using null mounts. It will also create a script
 	called <filename>sandbox</filename> in the root of the sandbox
 	environment, which will allow the null mounts to be activated
