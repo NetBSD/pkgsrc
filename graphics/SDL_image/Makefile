@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/03 18:49:41 reed Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/05 22:44:04 jlam Exp $
 #
 
 DISTNAME=		SDL_image-1.2.3
@@ -12,20 +12,24 @@ COMMENT=		Load images as SDL surfaces
 
 CONFLICTS=		SDL-image-[0-9]*
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--enable-tif
 
+INSTALLATION_DIRS=	bin
+
 post-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/showimage \
 		${PREFIX}/bin
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

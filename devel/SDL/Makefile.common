@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2003/10/29 20:54:58 heinz Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/01/05 22:44:04 jlam Exp $
 #
 
 DISTNAME=	SDL-1.2.6
@@ -12,7 +12,7 @@ COMMENT=	Simple DirectMedia Layer, a cross-platform multimedia library
 DISTINFO_FILE=		${.CURDIR}/../../devel/SDL/distinfo
 PATCHDIR=		${.CURDIR}/../../devel/SDL/patches
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
@@ -44,16 +44,16 @@ MAKE_ENV+=		NASMFLAGS="${NASMFLAGS_${OBJECT_FMT}}"
 #
 CONFIGURE_ENV+=		SYSTEM_LIBS="${LDFLAGS}"
 
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .if defined(HAVE_OSS) && (${HAVE_OSS} == "YES")
 AM_CFLAGS=		-D_PATH_DEV_DSP=\\\"${DEVOSSAUDIO}\\\"
 MAKE_ENV+=		AM_CFLAGS="${AM_CFLAGS}"
 .endif
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glut/buildlink2.mk"
-.include "../../graphics/aalib-x11/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/aalib-x11/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
 # Let SDL know that we do not have native pthreads and are using GNU pth.
