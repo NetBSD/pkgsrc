@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2005/02/04 11:21:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.66 2005/02/13 19:12:14 recht Exp $
 
 DISTNAME=		glib-2.6.2
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -43,9 +43,9 @@ CONFIGURE_ENV+=		F77=${FALSE}
 CONFIGURE_ENV+=		PERL=${PERL5}
 CONFIGURE_ENV+=		PERL_PATH=${PERL5}
 
-CPPFLAGS+=		-DPREFIX=\"\\\"${PREFIX}\\\"\"
-CPPFLAGS+=		-DPKGLOCALEDIR=\"\\\"${PKGLOCALEDIR}\\\"\"
-CPPFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
+CPPFLAGS+=		-DPKGLOCALEDIR="\"${PKGLOCALEDIR}\""
+CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 .include "../../mk/bsd.prefs.mk"
 
