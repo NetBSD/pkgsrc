@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/15 23:48:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/16 00:13:17 jmmv Exp $
 bin/charmap
 bin/gnome-character-map
 bin/gucharmap
@@ -65,7 +65,11 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gucharmap.mo
 share/omf/gucharmap/gucharmap-C.omf
 share/pixmaps/gucharmap.png
 @dirrm share/omf/gucharmap
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/gucharmap/C/figures
 @dirrm share/gnome/help/gucharmap/C
 @dirrm share/gnome/help/gucharmap
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/applications
+@comment in gtk2: @dirrm lib/gtk-2.0/2.2.0/immodules
 @dirrm include/gucharmap
