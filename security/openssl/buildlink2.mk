@@ -1,18 +1,12 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:49 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:39 jlam Exp $
 #
-# This Makefile fragment is included by packages that use OpenSSL.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define USE_OPENSSL_VERSION to the mininum OpenSSL version
-#     number in <openssl/opensslv.h>, i.e. 0x0090600fL, etc.
-# (2) Include this Makefile fragment in the package Makefile.
+# Optionally define USE_OPENSSL_VERSION to the mininum OpenSSL version
+# number in <openssl/opensslv.h>, i.e. 0x0090600fL, etc.
 
 .if !defined(OPENSSL_BUILDLINK2_MK)
 OPENSSL_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.buildlink2.mk"
 
 # OpenSSL version numbers from <openssl/opensslv.h>
 OPENSSL_VERSION_095A=		0x0090581fL
@@ -32,6 +26,7 @@ BUILDLINK_DEPENDS.openssl=	{openssl-0.9.5a,openssl>=0.9.6}
 .else
 BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6
 .endif
+BUILDLINK_PKGSRCDIR.openssl=	../../security/openssl
 
 _NEED_OPENSSL=		YES
 .if ${OPSYS} == "Darwin"
@@ -71,7 +66,7 @@ _NEED_OPENSSL=		NO
 .endif	# exists(${_OPENSSLV_H})
 
 .if ${_NEED_OPENSSL} == "YES"
-DEPENDS+=	${BUILDLINK_DEPENDS.openssl}:../../security/openssl
+BUILDLINK_PACKAGES+=		openssl
 EVAL_PREFIX+=	BUILDLINK_PREFIX.openssl=openssl
 BUILDLINK_PREFIX.openssl_DEFAULT=	${LOCALBASE}
 SSLBASE=			${BUILDLINK_PREFIX.openssl}

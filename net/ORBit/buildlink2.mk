@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/06 06:54:44 jlam Exp $
-#
-# This Makefile fragment is included by packages that use ORBit.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.ORBit to the dependency pattern
-#     for the version of ORBit desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:36 jlam Exp $
 
 .if !defined(ORBIT_BUILDLINK2_MK)
 ORBIT_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		ORBit
 BUILDLINK_DEPENDS.ORBit?=	ORBit>=0.5.12
-DEPENDS+=	${BUILDLINK_DEPENDS.ORBit}:../../net/ORBit
+BUILDLINK_PKGSRCDIR.ORBit?=	../../net/ORBit
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.ORBit=ORBit
 BUILDLINK_PREFIX.ORBit_DEFAULT=	${LOCALBASE}

@@ -1,15 +1,9 @@
-# $NetBSD: ossaudio.buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:18 jlam Exp $
-#
-# This Makefile fragment is included by packages that use OSS audio.
-#
-# To use this Makefile fragment, simply include this Makefile fragment in the
-# package Makefile.
+# $NetBSD: ossaudio.buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:35 jlam Exp $
 
 .if !defined(OSSAUDIO_BUILDLINK2_MK)
 OSSAUDIO_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.buildlink2.mk"
 
 .if ${_OPSYS_HAS_OSSAUDIO} == "yes"
 BUILDLINK_PREFIX.ossaudio=	/usr

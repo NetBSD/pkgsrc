@@ -1,15 +1,8 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:21 jlam Exp $
-#
-# This Makefile fragment is included by packages that use X11.
-#
-# To use this Makefile fragment, simply include this Makefile fragment in the
-# package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:37 jlam Exp $
 
 .if defined(_FOR_X11_LINKS_ONLY)
 .if !defined(X11_LINKS_BUILDLINK_MK)
 X11_LINKS_BUILDLINK_MK=	# defined
-
-.include "../../mk/bsd.buildlink2.mk"
 
 BUILDLINK_PREFIX.X11=	${X11BASE}
 
@@ -1537,10 +1530,8 @@ BUILDLINK_FILES.X11+=	lib/libxview.so
 BUILDLINK_FILES.X11+=	lib/libxview.so.3
 .endif
 
-BUILDLINK_TARGETS.X11=	X11-buildlink
-BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.X11}
+BUILDLINK_TARGETS+=	X11-buildlink
 
-pre-configure: ${BUILDLINK_TARGETS.X11}
 X11-buildlink: _BUILDLINK_USE
 
 .endif	# X11_LINKS_BUILDLINK_MK

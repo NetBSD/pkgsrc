@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:52 jlam Exp $
-#
-# This Makefile fragment is included by packages that use libxslt.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.libxslt to the dependency pattern
-#     for the version of libxslt desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:40 jlam Exp $
 
 .if !defined(LIBXSLT_BUILDLINK2_MK)
 LIBXSLT_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		libxslt
 BUILDLINK_DEPENDS.libxslt?=	libxslt>=1.0.7
-DEPENDS+=	${BUILDLINK_DEPENDS.libxslt}:../../textproc/libxslt
+BUILDLINK_PKGSRCDIR.libxslt?=	../../textproc/libxslt
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libxslt=libxslt
 BUILDLINK_PREFIX.libxslt_DEFAULT=	${LOCALBASE}

@@ -1,20 +1,12 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:35 jlam Exp $
-#
-# This Makefile fragment is included by packages that use gettext.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.gettext to the dependency pattern
-#     for the version of gettext desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:27 jlam Exp $
 
 .if !defined(GETTEXT_BUILDLINK2_MK)
 GETTEXT_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.buildlink2.mk"
 
 BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.10.35nb1
+BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 
 .if defined(USE_GNU_GETTEXT)
 _NEED_GNU_GETTEXT=	YES
@@ -25,7 +17,7 @@ _NEED_GNU_GETTEXT=	YES
 .endif
 
 .if ${_NEED_GNU_GETTEXT} == "YES"
-DEPENDS+=	${BUILDLINK_DEPENDS.gettext}:../../devel/gettext-lib
+BUILDLINK_PACKAGES+=			gettext
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gettext=gettext-lib
 BUILDLINK_PREFIX.gettext_DEFAULT=	${LOCALBASE}
 .else

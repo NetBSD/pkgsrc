@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:32 jlam Exp $
-#
-# This Makefile fragment is included by packages that use liblzo.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.liblzo to the dependency pattern
-#     for the version of liblzo desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:24 jlam Exp $
 
 .if !defined(LIBLZO_BUILDLINK2_MK)
 LIBLZO_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		liblzo
 BUILDLINK_DEPENDS.liblzo?=	liblzo>=1.06
-DEPENDS+=	${BUILDLINK_DEPENDS.liblzo}:../../archivers/liblzo
+BUILDLINK_PKGSRCDIR.liblzo?=	../../archivers/liblzo
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.liblzo=liblzo
 BUILDLINK_PREFIX.liblzo_DEFAULT=	${LOCALBASE}

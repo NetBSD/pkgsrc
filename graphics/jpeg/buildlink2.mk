@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:40 jlam Exp $
-#
-# This Makefile fragment is included by packages that use libjpeg.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.jpeg to the dependency pattern
-#     for the version of libjpeg desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:31 jlam Exp $
 
 .if !defined(JPEG_BUILDLINK2_MK)
 JPEG_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		jpeg
 BUILDLINK_DEPENDS.jpeg?=	jpeg-6b
-DEPENDS+=	${BUILDLINK_DEPENDS.jpeg}:../../graphics/jpeg
+BUILDLINK_PKGSRCDIR.jpeg?=	../../graphics/jpeg
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.jpeg=jpeg
 BUILDLINK_PREFIX.jpeg_DEFAULT=	${LOCALBASE}

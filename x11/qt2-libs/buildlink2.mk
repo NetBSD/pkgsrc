@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:32 jlam Exp $
-#
-# This Makefile fragment is included by packages that use qt2-libs.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.qt2-libs to the dependency pattern
-#     for the version of qt2-libs desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:43 jlam Exp $
 
 .if !defined(QT2_LIBS_BUILDLINK2_MK)
 QT2_LIBS_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		qt2-libs
 BUILDLINK_DEPENDS.qt2-libs?=	qt2-libs>=2.3.1nb2
-DEPENDS+=	${BUILDLINK_DEPENDS.qt2-libs}:../../x11/qt2-libs
+BUILDLINK_PKGSRCDIR.qt2-libs?=	../../x11/qt2-libs
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.qt2-libs=qt2-libs
 BUILDLINK_PREFIX.qt2-libs_DEFAULT=	${X11PREFIX}

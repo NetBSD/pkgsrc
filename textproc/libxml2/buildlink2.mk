@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:52 jlam Exp $
-#
-# This Makefile fragment is included by packages that use libxml2.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.libxml2 to the dependency pattern
-#     for the version of libxml2 desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:40 jlam Exp $
 
 .if !defined(LIBXML2_BUILDLINK2_MK)
 LIBXML2_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		libxml2
 BUILDLINK_DEPENDS.libxml2?=	libxml2>=2.4.2
-DEPENDS+=	${BUILDLINK_DEPENDS.libxml2}:../../textproc/libxml2
+BUILDLINK_PKGSRCDIR.libxml2?=	../../textproc/libxml2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libxml2=libxml2
 BUILDLINK_PREFIX.libxml2_DEFAULT=	${LOCALBASE}

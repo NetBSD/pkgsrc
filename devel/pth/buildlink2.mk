@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:37 jlam Exp $
-#
-# This Makefile fragment is included by packages that use pth.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.pth to the dependency pattern
-#     for the version of pth desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:29 jlam Exp $
 
 .if !defined(PTH_BUILDLINK2_MK)
 PTH_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
-BUILDLINK_DEPENDS.pth?=	pth>=1.3.2
-DEPENDS+=		${BUILDLINK_DEPENDS.pth}:../../devel/pth
+BUILDLINK_PACKAGES+=		pth
+BUILDLINK_DEPENDS.pth?=		pth>=1.3.2
+BUILDLINK_PKGSRCDIR.pth?=	../../devel/pth
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.pth=pth
 BUILDLINK_PREFIX.pth_DEFAULT=	${LOCALBASE}

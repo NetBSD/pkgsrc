@@ -1,17 +1,12 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:09 jlam Exp $
-#
-# This Makefile fragment is included by packages that use MesaLib.
-#
-# To use this Makefile fragment, simply include this Makefile fragment in the
-# package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:30 jlam Exp $
 
 .if !defined(MESALIB_BUILDLINK2_MK)
 MESALIB_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.buildlink2.mk"
 
 BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=3.4.2
+BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 
 # Check if we got Mesa distributed with XFree86 4.x or if we need to
 # depend on the Mesa package.
@@ -28,7 +23,7 @@ _NEED_MESALIB=		NO
 .endif
 
 .if ${_NEED_MESALIB} == "YES"
-DEPENDS+=	${BUILDLINK_DEPENDS.MesaLib}:../../graphics/MesaLib
+BUILDLINK_PACKAGES+=		MesaLib
 EVAL_PREFIX+=	BUILDLINK_PREFIX.MesaLib=MesaLib
 BUILDLINK_PREFIX.MesaLib_DEFAULT=	${X11PREFIX}
 .else

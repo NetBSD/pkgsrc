@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:49 jlam Exp $
-#
-# This Makefile fragment is included by packages that use libmcrypt22.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.libmcrypt22 to the dependency pattern
-#     for the version of GNU libmcrypt22 desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:38 jlam Exp $
 
 .if !defined(LIBMCRYPT22_BUILDLINK2_MK)
 LIBMCRYPT22_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
-BUILDLINK_DEPENDS.libmcrypt22?=	libmcrypt22>=2.2.7
-DEPENDS+=	${BUILDLINK_DEPENDS.libmcrypt22}:../../security/libmcrypt22
+BUILDLINK_PACKAGES+=			libmcrypt22
+BUILDLINK_DEPENDS.libmcrypt22?=		libmcrypt22>=2.2.7
+BUILDLINK_PKGSRCDIR.libmcrypt22?=	../../security/libmcrypt22
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libmcrypt22=libmcrypt22
 BUILDLINK_PREFIX.libmcrypt22_DEFAULT=	${LOCALBASE}

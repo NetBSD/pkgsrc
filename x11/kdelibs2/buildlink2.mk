@@ -1,22 +1,13 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/05/11 02:09:30 jlam Exp $
-#
-# This Makefile fragment is included by packages that use kdelibs2.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.kdelibs2 to the dependency pattern
-#     for the version of kdelibs2 desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:41 jlam Exp $
 
 .if !defined(KDELIBS2_BUILDLINK2_MK)
 KDELIBS2_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
-BUILDLINK_DEPENDS.kdelibs2?=	kdelibs>=2.2.2nb1
-DEPENDS+=	${BUILDLINK_DEPENDS.kdelibs2}:../../x11/kdelibs2
-
 .include "../../mk/bsd.prefs.mk"
+
+BUILDLINK_PACKAGES+=		kdelibs2
+BUILDLINK_DEPENDS.kdelibs2?=	kdelibs>=2.2.2nb1
+BUILDLINK_PKGSRCDIR.kdelibs2?=	../../x11/kdelibs2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdelibs2=kdelibs
 BUILDLINK_PREFIX.kdelibs2_DEFAULT=	${X11PREFIX}

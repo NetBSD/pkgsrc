@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/06 06:54:43 jlam Exp $
-#
-# This Makefile fragment is included by packages that use VFlib.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.vflib to the dependency pattern
-#     for the version of VFlib desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:34 jlam Exp $
 
 .if !defined(VFLIB_BUILDLINK2_MK)
 VFLIB_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		vflib
 BUILDLINK_DEPENDS.vflib?=	ja-vflib-lib>=2.24.2
-DEPENDS+=	${BUILDLINK_DEPENDS.vflib}:../../japanese/vflib-lib
+BUILDLINK_PKGSRCDIR.vflib?=	../../japanese/vflib-lib
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.vflib=ja-vflib-lib
 BUILDLINK_PREFIX.vflib_DEFAULT=	${LOCALBASE}

@@ -1,11 +1,4 @@
-# $NetBSD: xaw.buildlink2.mk,v 1.1.2.1 2002/06/06 06:54:44 jlam Exp $
-#
-# This Makefile fragment is included by packages that use Xaw.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally set XAW_TYPE to the Xaw library desired, and
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: xaw.buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:35 jlam Exp $
 
 .if !defined(XAW_BUILDLINK2_MK)
 XAW_BUILDLINK2_MK=	# defined

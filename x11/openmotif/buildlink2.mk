@@ -1,20 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/06 06:54:55 jlam Exp $
-#
-# This Makefile fragment is included by packages that use openmotif.
-#
-# To use this Makefile fragment, simply:
-#
-# (1) Optionally define BUILDLINK_DEPENDS.openmotif to the dependency pattern
-#     for the version of openmotif desired.
-# (2) Include this Makefile fragment in the package Makefile.
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/21 23:00:42 jlam Exp $
 
 .if !defined(OPENMOTIF_BUILDLINK2_MK)
 OPENMOTIF_BUILDLINK2_MK=	# defined
 
-.include "../../mk/bsd.buildlink2.mk"
-
+BUILDLINK_PACKAGES+=		openmotif
 BUILDLINK_DEPENDS.openmotif?=	openmotif>=2.1.30
-DEPENDS+=	${BUILDLINK_DEPENDS.openmotif}:../../x11/openmotif
+BUILDLINK_PKGSRCDIR.openmotif?=	../../x11/openmotif
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.openmotif=openmotif
 BUILDLINK_PREFIX.openmotif_DEFAULT=	${X11PREFIX}
