@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/27 23:53:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 18:19:36 wiz Exp $
 #
 
 DISTNAME=	sftp-0.5
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.xbill.org/pub/sftp/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.xbill.org/sftp/
+COMMENT=	Ftp replacement that runs over an ssh tunnel
 
 GNU_CONFIGURE=		YES
 

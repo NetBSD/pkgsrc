@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/13 10:26:17 abs Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:53 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=	 	abs@netbsd.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
+COMMENT=		Viewer for remote X and Win32 VNC servers
 
 CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes

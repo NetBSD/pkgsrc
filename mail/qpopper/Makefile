@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/12/14 19:46:03 itojun Exp $
+# $NetBSD: Makefile,v 1.26 2001/02/17 18:25:03 wiz Exp $
 #
 
 DISTNAME=		qpopper3.1.2
@@ -12,6 +12,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		http://eudora.qualcomm.com/freeware/qpop.html
+COMMENT=		Qualcomm's POP server for Eudora
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec \

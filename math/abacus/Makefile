@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/01/29 11:34:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 18:22:11 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/09/25 10:07:44 asami Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/abacus.html
+COMMENT=	Spread sheet for X Window System
 
 DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 DEPENDS+=	tk-8.3.2:../../x11/tk

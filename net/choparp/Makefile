@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/12 18:54:27 dbj Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:18:39 wiz Exp $
 # New ports collection makefile for:	choparp
 # Version required:	971007
 # Date created:		7 October 1997
@@ -13,6 +13,7 @@ MASTER_SITES=	http://delegate.uec.ac.jp:8081/club/mma/~tree/soft/choparp/
 
 MAINTAINER=	dbj@netbsd.org
 HOMEPAGE=	http://delegate.uec.ac.jp:8081/club/mma/~tree/soft/\#CHOPARP
+COMMENT=	Simple proxy arp daemon
 
 MANCOMPRESSED_IF_MANZ=	yes
 

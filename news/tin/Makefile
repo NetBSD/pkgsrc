@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/10/15 07:20:42 veego Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 17:54:52 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 
 DISTNAME=	tin-1.4.4
@@ -14,6 +14,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	udo@keks.franken.de
 HOMEPAGE=	http://www.tin.org/
+COMMENT=	TIN newsreader (termcap based)
 
 GNU_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/13 22:03:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:08:54 wiz Exp $
 #
 
 DISTNAME=	cksfv-1.1
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.fodder.org/cksfv/
 
 MAINTAINER=	dillo@giga.or.at
 HOMEPAGE=	http://www.fodder.org/cksfv/
+COMMENT=	check and create simple file verification (SFV) listings
 
 do-install:
 	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cksfv

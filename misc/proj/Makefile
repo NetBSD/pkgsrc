@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/20 02:18:02 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:09:19 wiz Exp $
 
 DISTNAME=		PROJ.4.3.3
 PKGNAME=		proj-4.3.3
@@ -9,6 +9,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} PROJ.4.3.ps.gz \
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://kai.er.usgs.gov/intro/MAPGENdetails.html
+COMMENT=		Cartesian cartographic projection library and programs
 
 WRKSRC=			${WRKDIR}/PROJ.4
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}

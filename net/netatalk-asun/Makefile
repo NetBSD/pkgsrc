@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/10/19 03:45:47 briggs Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 18:19:12 wiz Exp $
 
 DISTNAME=	netatalk-1.4b2+asun2.1.3
 PKGNAME=	netatalk-asun-2.1.3nb4
@@ -8,6 +8,7 @@ MASTER_SITES=   ftp://ftp.cobaltnet.com/pub/users/asun/release/ \
 
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://www.umich.edu/~rsug/netatalk/
+COMMENT=	Netatalk appletalk file and print services, enhanced by Adrian Sun
 
 CONFLICTS=	netatalk-[0-9]*
 

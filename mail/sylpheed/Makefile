@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/11 02:23:26 kei Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:25:07 wiz Exp $
 
 DISTNAME=	sylpheed-0.3.23
 CATEGORIES=	mail x11
@@ -7,6 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://sylpheed.good-day.net/index.cgi.en
+COMMENT=	an X based e-mail client
 
 DEPENDS+=	gtk+>=1.2.6:../../x11/gtk
 

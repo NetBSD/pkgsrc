@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/01/30 20:33:25 tron Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 18:19:33 wiz Exp $
 
 DISTNAME=	rp-pppoe-2.6
 CATEGORIES=	net
@@ -6,6 +6,7 @@ MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.roaringpenguin.com/pppoe/
+COMMENT=	BSD port of Roaring Penguin's PPPoE client
 
 CONFLICTS+=	mouse_pppoe-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/08/18 22:46:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/17 18:19:39 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ambrisko@ambrisko.roble.com
 HOMEPAGE=	http://www.socks.nec.com/
+COMMENT=	SOCKS v5 application layer gateway and clients
 
 CONFLICTS=	socks4-*
 

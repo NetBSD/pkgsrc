@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:33 agc Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 18:09:11 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/08/15 16:47:08 jmz Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.inria.fr/system/user/
 EXTRACT_SUFX=	.tar.z
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Input Line Editor that wraps itself around programs
 
 do-configure:
 	@(cd ${WRKSRC}; ${MV} Makefile Makefile.old; \

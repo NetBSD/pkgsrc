@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/01/30 19:36:04 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 18:19:24 wiz Exp $
 #
 
 DISTNAME=		Socket6-0.08
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Socket6/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/libnet/FAQ.html
+COMMENT=		perl5 module to support getaddrinfo() and getnameinfo()
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Socket6/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/05 00:06:42 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:22:28 wiz Exp $
 
 DISTNAME=		mesch12b
 PKGNAME=		meschach-1.2b
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftpmaths.anu.edu.au/pub/meschach/
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		ftp://ftpmaths.anu.edu/pub/meschach/meschach.html
+COMMENT=		Library of C Routines for Matrix Computations
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=		YES
