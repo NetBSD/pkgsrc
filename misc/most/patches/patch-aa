@@ -1,0 +1,10 @@
+--- configure.BAK	Sun Oct 26 02:19:26 1997
++++ configure	Sun Oct 26 02:20:57 1997
+@@ -1934,6 +1934,7 @@
+ # version.
+ 
+ JD_Search_Dirs="$JD_Search_Dirs \
++		$prefix/include,${prefix}/lib \
+                 /usr/local/include,/usr/local/lib \
+ 		/usr/include,/usr/lib \
+ 		/usr/include/slang,/usr/lib \
