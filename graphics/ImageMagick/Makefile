@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 1999/09/11 00:52:32 tron Exp $
+# $NetBSD: Makefile,v 1.48 1999/09/11 14:25:44 tron Exp $
 #
 
-DISTNAME=	ImageMagick-4.2.9
+DISTNAME=	ImageMagick-4.2.8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,11 +19,15 @@ USE_LIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
+# Avoid compiler bug on "arm32"
+.if (${MACHINE_ARCH} == arm32)
+CFLAGS=		-O
+.endif
+
 # For things for which we do not specify an explicit dependency above, disable
 # so that we don't cause implicit "hidden" dependencies.  Users may reenable
 # any of these manually as desired (PerlMagick should probably be a separate
 # pkg, however).
-
 CONFIGURE_ARGS=	--without-perl \
 		--without-dps --without-fpx --without-hdf --without-jbig \
 		--without-ttf
