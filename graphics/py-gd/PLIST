@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:33 zuntum Exp $
-lib/python2.0/site-packages/gdmodule.so
+@comment $NetBSD: PLIST,v 1.2 2002/01/19 17:49:14 drochner Exp $
+${PYSITELIB}/gdmodule.so
