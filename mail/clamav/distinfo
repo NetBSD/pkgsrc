@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2004/02/11 10:55:49 recht Exp $
+$NetBSD: distinfo,v 1.8 2004/02/29 03:46:22 toshii Exp $
 
 SHA1 (clamav-0.66.tar.gz) = 1a008d33f8e2caf54708b952747e5a5266610cfc
 Size (clamav-0.66.tar.gz) = 2275692 bytes
 SHA1 (patch-aa) = 779aef1a73f78749e1e6b9ed5e5fd6eb0d537a41
 SHA1 (patch-ab) = 49f80b512704fec57c6b920d2625c083c756f957
+SHA1 (patch-ac) = cab02632217fe4d75c0b48d0fd962d7822c3617d
 SHA1 (patch-ad) = 6f2bfa05bb3421280272719c03260784a7826e91
