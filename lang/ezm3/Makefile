@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/05 23:54:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/06 06:43:31 xtraeme Exp $
 
 DISTNAME=	ezm3-1.1
 CATEGORIES=	lang
@@ -36,6 +36,8 @@ BOOTSTRAP=      ${DISTNAME}-NetBSDi386-boot.tar.bz2
 TARGET=         NetBSDi386
 TARGETDIR=      netbsd-1
 .endif
+
+PROGS=		bin/m3build bin/m3bundle bin/m3ship
 
 do-configure:
 	cd ${WRKSRC}/m3config/src && \
