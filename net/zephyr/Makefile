@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/05/10 10:15:06 mycroft Exp $
+# $NetBSD: Makefile,v 1.9 1998/05/10 10:30:14 mycroft Exp $
 #
 
 DISTNAME=	zephyr-2.0.4
@@ -7,7 +7,9 @@ MASTER_SITES=	ftp://athena-dist.mit.edu/pub/ATHENA/zephyr/dist/
 
 MAINTAINER=	mycroft@NetBSD.ORG
 
+.if exists(/etc/mk.conf)
 .include </etc/mk.conf>
+.endif
 .if exists(/usr/lib/libkrb.a) && (defined(MAKE_EBONES) || defined(MAKE_KERBEROS4))
 CONFIGURE_ARGS+="--with-krb4"
 CONFIGURE_ENV+=CPPFLAGS=-I/usr/include/kerberosIV

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/05/10 10:15:40 mycroft Exp $
+# $NetBSD: Makefile,v 1.7 1998/05/10 10:30:15 mycroft Exp $
 # $FreeBSD Id: Makefile,v 1.55 1998/01/29 17:13:07 ache Exp
 #
 
@@ -12,7 +12,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
 MAN1=		fetchmail.1
 
+.if exists(/etc/mk.conf)
 .include </etc/mk.conf>
+.endif
 .if exists(/usr/lib/libkrb.a) && (defined(MAKE_EBONES) || defined(MAKE_KERBEROS4))
 CONFIGURE_ARGS += --with-kerberos=/usr
 .endif
