@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2001/01/19 21:16:51 tron Exp $
+# $NetBSD: Makefile,v 1.75 2001/01/25 08:45:46 tron Exp $
 #
 
 DISTNAME=		pkglint-2.34
@@ -31,18 +31,18 @@ NROFF=		nroff -mandoc
 .endif
 
 do-build:
-.for file in pkglint lintpkgsrc plist-clash
+.for FILE in pkglint lintpkgsrc plist-clash
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
-		< ${FILESDIR}/${file}.pl 		\
-		> ${WRKSRC}/${file}
+		< ${FILESDIR}/${FILE}.pl 		\
+		> ${WRKSRC}/${FILE}
 .endfor
-.for file in pkglint lintpkgsrc
+.for FILE in pkglint lintpkgsrc
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
-		< ${FILESDIR}/${file}.1			\
-		> ${WRKSRC}/${file}.1
-	${NROFF} ${WRKSRC}/${file}.1 >${WRKSRC}/${file}.0
+		< ${FILESDIR}/${FILE}.1			\
+		> ${WRKSRC}/${FILE}.1
+	${NROFF} ${WRKSRC}/${FILE}.1 >${WRKSRC}/${FILE}.0
 .endfor
 
 do-install:
