@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/06/06 22:50:26 jmmv Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 08:45:08 agc Exp $
 
 SHA1 (imp1.1b9.tar.gz) = 73d3ce69d2d31af0b8e6bfb3825ebcd2f519024c
+RMD160 (imp1.1b9.tar.gz) = 2f0d49d90baa1c92edf564bf163147679c4cbaf4
 Size (imp1.1b9.tar.gz) = 1334533 bytes
 SHA1 (patch-aa) = c363bd1aef67cdc5f7ba8134e12bf4a0a6e5ab1a
 SHA1 (patch-ab) = 0804194a9cb433ec6a8c352b1b96615b4e722c04

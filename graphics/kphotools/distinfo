@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/07/31 22:30:12 markd Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 08:45:08 agc Exp $
 
 SHA1 (kphotools-0.2.1.tar.bz2) = 51769be5e6d3533e409b4c24bfcc94fc46c9e169
+RMD160 (kphotools-0.2.1.tar.bz2) = 80d342fd45d0f1f19fc6a951f2127ee0542d4d3e
 Size (kphotools-0.2.1.tar.bz2) = 703387 bytes
 SHA1 (patch-aa) = 3818e56a0fffb7f9439a8e6b2049c46c66b2f96d
 SHA1 (patch-ab) = ef9ff406ff7fded74b82edcc67e7f684dfe8a227

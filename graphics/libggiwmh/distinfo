@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/07/21 12:27:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 08:45:09 agc Exp $
 
 SHA1 (libggiwmh-0.1.0.src.tar.bz2) = ef16742e1a614da7e9dc1c4e9ee87b978db67302
+RMD160 (libggiwmh-0.1.0.src.tar.bz2) = f606e7fa71b1ffe68ea353e118fcca1239262204
 Size (libggiwmh-0.1.0.src.tar.bz2) = 197043 bytes
 SHA1 (patch-aa) = 4ffb4660b3870ba2adf76a1dbb7b8f4fcededa7c
 SHA1 (patch-ab) = 8e955b2e869cfbb2cb1297e71a00481f73358537

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2005/01/25 04:58:01 tv Exp $
+$NetBSD: distinfo,v 1.15 2005/02/24 08:45:05 agc Exp $
 
 SHA1 (gdk-pixbuf-0.22.0.tar.bz2) = 495324afb5abebc14567ffd5a6cd72333bcc7f5b
+RMD160 (gdk-pixbuf-0.22.0.tar.bz2) = 0e56a0f883fd8e3fb4d49b9a38f984b95cd96ece
 Size (gdk-pixbuf-0.22.0.tar.bz2) = 398208 bytes
 SHA1 (patch-aa) = 484feb3482c6832a33f428ce0db26719452dd274
 SHA1 (patch-ab) = 2edd8fdd72d5dfaecc92974c6930e5d175e3b69f

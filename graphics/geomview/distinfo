@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/07/03 17:38:27 jschauma Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 08:45:05 agc Exp $
 
 SHA1 (geomview-1.8.1.tar.gz) = 026a22ecba471f7d55c407de4fc409213d166477
+RMD160 (geomview-1.8.1.tar.gz) = 4c42b928376517115e1bba16c978b80ff41b7b45
 Size (geomview-1.8.1.tar.gz) = 2766832 bytes
 SHA1 (patch-aa) = 46f609f1fcb2f9a58348f9fa8033a4b7c8954461
 SHA1 (patch-ab) = 706b10ccfb3ba02baa48b461123707cdd9cbfdff

@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.2 2005/02/01 13:03:31 hamajima Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 08:45:10 agc Exp $
 
 SHA1 (ov51x-1.65-1.11-mark.tar.bz2) = 137354923edac4409358ddee3317576081b3b3da
+RMD160 (ov51x-1.65-1.11-mark.tar.bz2) = b554436a24d887cd39daea88946ad49d29ca8afe
 Size (ov51x-1.65-1.11-mark.tar.bz2) = 108501 bytes
 SHA1 (ov51x-1.65-1.11-mark-bsd-0.00.patch.gz) = f07161fb5d8dbd82235b42e76bcbb6d1f3ccf20f
+RMD160 (ov51x-1.65-1.11-mark-bsd-0.00.patch.gz) = dc78609d86a32a040804af9c4d2162ff34ff2d4b
 Size (ov51x-1.65-1.11-mark-bsd-0.00.patch.gz) = 18664 bytes
 SHA1 (patch-aa) = 9aaf3096fa9fdd4530004a41daa7a21a4f858ba7

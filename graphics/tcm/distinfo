@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2003/01/01 22:02:01 jmmv Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 08:45:13 agc Exp $
 
 SHA1 (tcm-2.01.src.tar.gz) = ce63d4310f43c89984cfcf2fc3da38eb55907c0f
+RMD160 (tcm-2.01.src.tar.gz) = fc0ab993ddc5ca6ad5db9f2e52bad84691ea9474
 Size (tcm-2.01.src.tar.gz) = 3624778 bytes
 SHA1 (patch-aa) = d5d18f58ebc7a4d11839c38d47b1ace338cce592
 SHA1 (patch-ab) = 68d58e4fcba032a3385c181878fab6452527a13a

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2004/11/08 10:28:15 adam Exp $
+$NetBSD: distinfo,v 1.16 2005/02/24 08:45:13 agc Exp $
 
 SHA1 (sane-backends-1.0.15.tar.gz) = 521bdeacbab389a6fd67f16123e09b9f86752169
+RMD160 (sane-backends-1.0.15.tar.gz) = 0e42007ff24d0a5f94c7c901982619cf4d1a7068
 Size (sane-backends-1.0.15.tar.gz) = 3231759 bytes
 SHA1 (patch-aa) = b782bc8ee2e6d68e667706659998a6c82ce1d5e6

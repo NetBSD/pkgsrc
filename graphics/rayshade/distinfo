@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:26 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 08:45:12 agc Exp $
 
 SHA1 (rayshade.4.0.tar.Z) = 5fd1ce05e7ba3bc8e8b337c212eccb6b53b5b4ca
+RMD160 (rayshade.4.0.tar.Z) = a19bf35aa3f66de9ce406a1a98cf7edbde60f356
 Size (rayshade.4.0.tar.Z) = 369527 bytes
 SHA1 (patch-aa) = 13ffaabe7dc670b6e3945f548770190f0a0e86c7
 SHA1 (patch-ab) = 13b48848c4a40d86ee5ceef8dddf10988b59e088

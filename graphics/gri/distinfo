@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/07/10 08:27:38 jtb Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 08:45:07 agc Exp $
 
 SHA1 (gri-2.12.5.tgz) = edd4f4a98eb391a30f084699c4e47ff173e5766b
+RMD160 (gri-2.12.5.tgz) = dc4d2bb530ba6f4c758e01e0fed6cb06ab32e1b6
 Size (gri-2.12.5.tgz) = 1250379 bytes
 SHA1 (patch-aa) = b86bce9c8fd91aac20cabaebec4960f7d9cbfc4c
 SHA1 (patch-ab) = 5302c06072690224b05c3a80162cb7b81e4a43bf

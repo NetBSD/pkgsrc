@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/04 22:07:24 adrianp Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 08:45:03 agc Exp $
 
 SHA1 (camlimages-2.2.0.tgz) = bc0062739be5ca9236f28145f17f840bf3f295ee
+RMD160 (camlimages-2.2.0.tgz) = 0f108ef3da565aeb0ab10d00e45819399af36d8c
 Size (camlimages-2.2.0.tgz) = 1385525 bytes

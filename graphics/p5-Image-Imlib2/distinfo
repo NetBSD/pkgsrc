@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/07/25 04:23:36 kim Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 08:45:11 agc Exp $
 
 SHA1 (Image-Imlib2-1.03.tar.gz) = 6c8647fb9c77c8efd952c872ee0d9b6d174a4170
+RMD160 (Image-Imlib2-1.03.tar.gz) = 479aa661f6628ddd10555fbeb3bd263061dd0a9c
 Size (Image-Imlib2-1.03.tar.gz) = 16420 bytes
 SHA1 (patch-aa) = d296df4af5e66b498bbc9c7f85d54439c600247f

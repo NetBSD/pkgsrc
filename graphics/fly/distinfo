@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/06/23 10:39:51 adam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 08:45:05 agc Exp $
 
 SHA1 (fly-1.6.5.tar.gz) = 7a76046aedf84478d0670c2dbd2d05849cc0035e
+RMD160 (fly-1.6.5.tar.gz) = 77a14e28bbcadaac67e5e7a009d4d1142b22c268
 Size (fly-1.6.5.tar.gz) = 127349 bytes
 SHA1 (patch-aa) = ab57432c5b5ccf257c600da880e0024ec68f7457
 SHA1 (patch-ab) = 1076212f3e917c752ba6777e40df1399a7ff586c

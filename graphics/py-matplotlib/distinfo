@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/21 01:39:48 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 08:45:12 agc Exp $
 
 SHA1 (matplotlib-0.32.tar.gz) = d700acd8b10d046918fd0c1e64e1de651a034a46
+RMD160 (matplotlib-0.32.tar.gz) = 951035ad665937a1f53c7dea60b4036e9b5b8d3d
 Size (matplotlib-0.32.tar.gz) = 769706 bytes

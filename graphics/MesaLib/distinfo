@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.24 2005/02/24 06:24:03 veego Exp $
+$NetBSD: distinfo,v 1.25 2005/02/24 08:45:02 agc Exp $
 
 SHA1 (Mesa-6.2.1/MesaLib-6.2.1.tar.bz2) = 7c4fb46ae17b066e85e90592ace496ac6b36c189
+RMD160 (Mesa-6.2.1/MesaLib-6.2.1.tar.bz2) = cfc5e8db61289c017ff20dd6b4c6db5c7b66855b
 Size (Mesa-6.2.1/MesaLib-6.2.1.tar.bz2) = 1627520 bytes
 SHA1 (Mesa-6.2.1/MesaDemos-6.2.1.tar.bz2) = f8da791e365eec633a70c4b5a76d96d27838e20b
+RMD160 (Mesa-6.2.1/MesaDemos-6.2.1.tar.bz2) = 62b3ebc47e822c4704b69c9888e74bae12a1391b
 Size (Mesa-6.2.1/MesaDemos-6.2.1.tar.bz2) = 1004511 bytes
 SHA1 (patch-aa) = 90457ea124a42150e3a37b48e1e0691597668606
 SHA1 (patch-ab) = 8de78b793e384578d8821a4ef487bb2b39ebfcb6
