@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/10/07 17:41:52 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/23 19:51:57 soren Exp $
 
 DISTNAME=	uae-0.8.8
 CATEGORIES=	emulators
@@ -23,6 +23,9 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 post-extract:
 	@${MKDIR} ${WRKSRC}/src/include/machine
 	@${LN} -sf /usr/include/soundcard.h ${WRKSRC}/src/include/machine
+
+post-configure:
+	(cd ${WRKSRC}/src; ${MAKE} .SECONDARY)
 
 do-install:
 .for FILE in readdisk uae
