@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2004/01/01 12:30:56 recht Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/20 14:44:13 recht Exp $
 
-DISTNAME=	TeXmacs-1.0.2.11-src
+DISTNAME=	TeXmacs-1.0.3.1-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.texmacs.org/pub/TeXmacs/targz/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.texmacs.org/
 COMMENT=	GNU TeXmacs (free scientific text editor)
 
@@ -18,26 +18,10 @@ USE_GMAKE=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-LDFLAGS+=	-Wl,${RPATH_FLAG}${PREFIX}/libexec/${PKGNAME}/lib
-
-PKG_DOCDIR=	${PREFIX}/share/doc/TeXmacs
-PKG_CXXFLAGS=	-DPKG_DOCDIR=\"\\\"${PKG_DOCDIR}\\\"\"
 CONFIGURE_ENV+=	PKG_CXXFLAGS="${PKG_CXXFLAGS}"
 CONFIGURE_ENV+=	PKG_LDFLAGS="${LDFLAGS}"
 
-post-extract:
-	${MV} ${WRKSRC}/misc/scripts/texmacs.in \
-	      ${WRKSRC}/misc/scripts/texmacs.in.in
-
-pre-configure:
-	${SED} -e "s|@PKG_GUILE_PATH@|${GUILE14_PREFIX_DEFAULT}/bin|g" \
-		< ${WRKSRC}/misc/scripts/texmacs.in.in > \
-	          ${WRKSRC}/misc/scripts/texmacs.in
-
-post-install:
-	${LN} -s ${PREFIX}/share/doc/TeXmacs \
-	         ${PREFIX}/share/TeXmacs/doc
-
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../lang/guile/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
