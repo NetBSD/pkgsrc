@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/01 08:20:45 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/09 19:28:58 wiz Exp $
 
 DISTNAME=	kmysqladmin-0.5.1
 CATEGORIES=	databases kde
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 DEPENDS+=       kdebase>=2.1:../../x11/kdebase2
 DEPENDS+=       kdelibs>=2.1:../../x11/kdelibs2
 DEPENDS+=       qt2-libs>=2.3.0:../../x11/qt2-libs
-DEPENDS+=       mysql-client>=2.22*:../../databases/mysql-client
+DEPENDS+=       mysql-client>=2.22:../../databases/mysql-client
 
 .include "../../x11/kde2/Makefile.part2"
 
