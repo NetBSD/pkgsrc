@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9646 2005/03/27 12:30:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.9647 2005/03/27 13:09:57 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1773,3 +1773,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added sparsehash-0.1 [jschauma 2005-03-26]
 	Updated imp to 4.0.2 [adrianp 2005-03-27]
 	Updated gedit to 2.10.1 [jmmv 2005-03-27]
+	Added arka-0.11 [jmmv 2005-03-27]
