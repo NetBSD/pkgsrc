@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.4 2001/06/25 18:29:21 jtb Exp $
+$NetBSD: distinfo,v 1.5 2001/06/25 19:28:42 jtb Exp $
 
 SHA1 (icon.v940src.tgz) = 8e1a1a13567fdbeb458f284ad313493e1e9aa96b
 Size (icon.v940src.tgz) = 3209202 bytes
 SHA1 (patch-aa) = 77fafa66e144a5654fb086ce53a8e198ca126d6a
 SHA1 (patch-ab) = 097027fec8d879622e6e29556fb39607ad7f3b01
-SHA1 (patch-ae) = f2452d3188e58312c241cb4ad9fc73122c6e8ceb
-SHA1 (patch-af) = 3a67dcfe5d045c68bcd19b2b297cb027a63ac606
-SHA1 (patch-ag) = 3a34e272ff57fe70c4bb5ad08626b7be77967e67
+SHA1 (patch-ae) = df3653f8b958970af8ced3b40adb6d13d64cb9f6
+SHA1 (patch-af) = 97eeba0e240529d005872c647177dcb251cbd56d
+SHA1 (patch-ag) = ffae555d665df1aa77a4189b2e8b8b54c3025a52
 SHA1 (patch-ah) = 4d04fb330fd6a3436729c087374285f6320f7bf1
 SHA1 (patch-ai) = 37fffe999deb7fd560dda056f2edc1972726fe91
-SHA1 (patch-aj) = ea79925c974c8c36993a16f68b2f366f27f91de4
+SHA1 (patch-aj) = 4173a2417a2d61d8e30209cca2d63ae023d7b145
 SHA1 (patch-ak) = cd66608d05ffc9f953bad63781632c6c416b4bc7
 SHA1 (patch-al) = 3c2b05206fe404ac3987eaac3d35fb91172b580d
 SHA1 (patch-am) = a4e23ccd481508e2b2fb139e4d1d6414b7e243c6
 SHA1 (patch-an) = 0ec847f7ad002a9f471ee4dc8dfa46a8b300983a
 SHA1 (patch-ao) = c6c0b0e524b2274ba3551323da1b6d0f21e37ac4
-SHA1 (patch-ap) = 7da7f2f7f04cfc45f08bb5711f2bb9173a8231d6
+SHA1 (patch-ap) = c90cb7df8e6d6c7f871eba603e8f561d64384a29
 SHA1 (patch-aq) = 07ad177de29dc6498b921c0ede43a4ea36c0815e
 SHA1 (patch-ar) = 6a6fcb68461e1d1a0e0e86f65be610170a4cf890
 SHA1 (patch-as) = baff3d1b011b9e6b1d3bc033f8aa25336ff7afd7
