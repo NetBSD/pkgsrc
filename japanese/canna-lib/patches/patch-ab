@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/08/02 04:37:09 sakamoto Exp $
+
+--- ./Imakefile.orig	Wed Nov 27 16:01:34 1996
++++ ./Imakefile	Fri Jul 30 19:17:44 1999
+@@ -61,5 +61,5 @@
+ 	do \
+ 		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
+-		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install); \
++		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install install.man); \
+ 	done
+ 
+@@ -69,5 +69,5 @@
+ 	do \
+ 		(cd $$i ; echo "installing" "in $(CURRENT_DIR)/$$i..."; \
+-		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install); \
++		$(MAKE) $(MFLAGS) DESTDIR='$(DESTDIR)' install install.man); \
+ 	done
+ 

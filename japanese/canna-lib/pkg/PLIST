@@ -1,0 +1,112 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/02 04:37:09 sakamoto Exp $
+@cwd ${DICT_DIR}
+@cwd ${DICT_DIR}
+canna/default.cbp
+canna/english.cbp
+canna/jdaemon.cbp
+canna/just.cbp
+canna/kaisoku.cbp
+canna/kana.cbp
+canna/lan5.cbp
+canna/matsu.cbp
+canna/newjis.cbp
+canna/romaji.cbp
+canna/sokuon.cbp
+canna/tut.cbp
+canna/vje.cbp
+canna/wx2+.cbp
+@cwd ${PREFIX}
+include/canna/RK.h
+include/canna/jrkanji.h
+include/canna/keydef.h
+include/canna/mfdef.h
+lib/libRKC.a
+lib/libRKC.so.1.0
+lib/libRKC16.a
+lib/libRKC16.so.1.0
+lib/libcanna.a
+lib/libcanna.so.1.0
+lib/libcanna16.a
+lib/libcanna16.so.1.0
+man/man3/RkCloseRoma.3
+man/man3/RkCvtEuc.3
+man/man3/RkCvtHan.3
+man/man3/RkCvtHira.3
+man/man3/RkCvtKana.3
+man/man3/RkCvtRoma.3
+man/man3/RkCvtZen.3
+man/man3/RkDefineDic.3
+man/man3/RkDeleteDic.3
+man/man3/RkEndBun.3
+man/man3/RkEnlarge.3
+man/man3/RkFinalize.3
+man/man3/RkGetDicList.3
+man/man3/RkGetKanji.3
+man/man3/RkGetLex.3
+man/man3/RkGetStat.3
+man/man3/RkGetYomi.3
+man/man3/RkGoto.3
+man/man3/RkInitialize.3
+man/man3/RkIntro.3
+man/man3/RkLeft.3
+man/man3/RkMapPhonogram.3
+man/man3/RkMapRoma.3
+man/man3/RkMountD.3
+man/man3/RkNext.3
+man/man3/RkNfer.3
+man/man3/RkOpenRoma.3
+man/man3/RkPrev.3
+man/man3/RkRemountDic.3
+man/man3/RkResize.3
+man/man3/RkRgnBun.3
+man/man3/RkRight.3
+man/man3/RkShorten.3
+man/man3/RkStoreYomi.3
+man/man3/RkUnmountDic.3
+man/man3/RkXfer.3
+man/man3/XKanjiControl.3
+man/man3/XLookupKanjiString.3
+man/man3/cannalib.3
+man/man3/jrKanjiControl.3
+man/man3/jrKanjiString.3
+man/man3/uilib.3
+share/canna/default.canna
+share/canna/engine.cf
+share/canna/sample/1.1.canna
+share/canna/sample/1.2.canna
+share/canna/sample/default.canna
+share/canna/sample/fixer.canna
+share/canna/sample/jdemon.canna
+share/canna/sample/just.canna
+share/canna/sample/lan5.canna
+share/canna/sample/matsu.canna
+share/canna/sample/modes.canna
+share/canna/sample/sample.canna
+share/canna/sample/skk.canna
+share/canna/sample/src/Makefile
+share/canna/sample/src/is.c
+share/canna/sample/src/default.ctd
+share/canna/sample/src/english.ctd
+share/canna/sample/src/jdaemon.ctd
+share/canna/sample/src/just.ctd
+share/canna/sample/src/kaisoku.ctd
+share/canna/sample/src/kana.ctd
+share/canna/sample/src/lan5.ctd
+share/canna/sample/src/matsu.ctd
+share/canna/sample/src/newjis.ctd
+share/canna/sample/src/romaji.ctd
+share/canna/sample/src/sokuon.ctd
+share/canna/sample/src/tut.ctd
+share/canna/sample/src/vje.ctd
+share/canna/sample/src/wx2+.ctd
+share/canna/sample/tut.canna
+share/canna/sample/unix.canna
+share/canna/sample/vje.canna
+share/canna/sample/wx2+.canna
+@exec ln -s ${DICT_DIR}/canna ${PREFIX}/share/canna/dic
+@unexec rm ${PREFIX}/share/canna/dic
+@dirrm share/canna/sample/src
+@dirrm share/canna/sample
+@dirrm share/canna
+@dirrm include/canna
+@unexec rmdir ${DICT_DIR}/canna
