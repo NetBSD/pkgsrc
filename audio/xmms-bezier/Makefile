@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/01 09:38:40 jmc Exp $
 #
 
 DISTNAME=	bezier-0.0.3
@@ -14,6 +14,7 @@ USE_X11=	yes
 CPPFLAGS+=	-I${X11BASE}/include -I${LOCALBASE}/include
 CFLAGS+=	-I${LOCALBASE}/include
 USE_LIBTOOL=	yes
+USE_BUILDLINK2= yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 
