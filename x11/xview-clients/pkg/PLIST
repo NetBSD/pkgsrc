@@ -1,14 +1,15 @@
+@comment $NetBSD: PLIST,v 1.2 1998/07/04 15:07:39 tron Exp $
 bin/clock
 bin/cmdtool
 bin/olwm
 bin/olwmslave
 bin/shelltool
+lib/openwin-menu
 lib/help/clock.info
 lib/help/olwm.info
 lib/help/workspace.info
-lib/openwin-menu
-man/man1/clock.1.gz
-man/man1/cmdtool.1.gz
-man/man1/olwm.1.gz
-man/man1/olwmslave.1.gz
-man/man1/shelltool.1.gz
+man/cat1/clock.0
+man/cat1/cmdtool.0
+man/cat1/olwm.0
+man/cat1/olwmslave.0
+man/cat1/shelltool.0
