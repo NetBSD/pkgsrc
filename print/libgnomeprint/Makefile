@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/12 04:19:50 rh Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/16 03:14:44 rh Exp $
 #
 
 DISTNAME=		libgnomeprint-1.116.0
+PKGREVISION=		1
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=2.0.0/sources/libgnomeprint/}
 
@@ -26,7 +27,7 @@ pre-configure:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/pango/buildlink2.mk"
-.include "../../devel/ptl2/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

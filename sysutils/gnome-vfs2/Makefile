@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2002/09/11 23:07:50 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/16 03:14:44 rh Exp $
 #
 
 DISTNAME=		gnome-vfs-2.0.4
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=2.0.1/sources/gnome-vfs/}
 EXTRACT_SUFX=		.tar.bz2
@@ -33,7 +33,6 @@ CONFIGURE_ARGS+=	--enable-platform-gnome-2
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/bonobo-activation/buildlink2.mk"
-.include "../../devel/ptl2/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../net/ORBit2/buildlink2.mk"

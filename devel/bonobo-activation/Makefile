@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/09/10 16:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/16 03:14:42 rh Exp $
 #
 
 DISTNAME=		bonobo-activation-1.0.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=2.0.0/sources/bonobo-activation/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,6 +21,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
 .include "../../textproc/libxml2/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
 .include "../../net/ORBit2/buildlink2.mk"
-.include "../../devel/ptl2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
