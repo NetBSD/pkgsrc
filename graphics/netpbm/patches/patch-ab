@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2000/06/05 00:36:31 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2000/06/05 01:13:35 hubertf Exp $
 
 --- Makefile.common.orig	Thu Jun  1 19:38:14 2000
 +++ Makefile.common	Mon Jun  5 01:38:40 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.6 2000/06/05 00:36:31 wiz Exp $
  	$(CC) -c $(CFLAGS) $(INCLUDE) -o $@ $<
  
 -LIBOPT = $(SRCDIR)/libopt
-+LIBOPT = $(ECHO)
++LIBOPT = /bin/echo		# XXX must exist, can't be ${ECHO} (shell builtin)
  
  # Rules for conventional single-object file executables
  $(PORTBINARIES): %: %.o $(NETPBMLIBS) $(LIBOPT)
