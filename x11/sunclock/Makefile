@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/04/15 20:39:49 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/12/21 11:52:42 agc Exp $
 #
 
 DISTNAME=	sunclock-1.4
@@ -8,5 +8,11 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 MAINTAINER=	perry@netbsd.org
 
 USE_IMAKE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=	CPPFLAGS=-DUSE_PUTENV
+.endif
 
 .include "../../mk/bsd.pkg.mk"
