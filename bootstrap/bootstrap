@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.22 2004/10/08 17:29:00 tv Exp $
+# $NetBSD: bootstrap,v 1.23 2004/10/31 22:04:26 wiz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -198,6 +198,15 @@ Darwin)
 	need_sed=no
 	set_opsys=no
 	check_prog mtreeprog mtree
+	machine_arch=`uname -p`
+	;;
+DragonFly)
+	root_group=wheel
+	need_pax=no
+	need_mtree=no
+	need_bsd_install=no
+	need_sed=no
+	set_opsys=no
 	machine_arch=`uname -p`
 	;;
 FreeBSD)
