@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/03/22 12:27:19 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2004/04/04 08:53:48 mason Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/09/14 04:00:00 jfitz Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=	x11 tk perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tk/}
 
 MAINTAINER=	shell@NetBSD.org
-HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Tk/pod/overview.html
+HOMEPAGE=	http://cpan.uwinnipeg.ca/htdocs/Tk/Tk.html
 COMMENT=	Perl5 interface to Tk
 
 BUILD_DEPENDS= 	p5-HTML-Parser>=3.19:../../www/p5-HTML-Parser
