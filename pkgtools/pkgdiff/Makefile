@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.51 2004/10/27 01:27:31 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2004/11/23 22:00:48 hubertf Exp $
 #
 
-DISTNAME=	pkgdiff-0.115
+DISTNAME=	pkgdiff-0.116
 CATEGORIES=	pkgtools devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
-COMMENT=	Tools to ease creating and maintaining patches for pkgsrc
+COMMENT=	Tools to create, maintain and send back patches for pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -57,8 +57,9 @@ do-build:
 		< ${FILESDIR}/pkgdiff			\
 		> ${WRKSRC}/pkgdiff
 	${CP} ${FILESDIR}/pkgvi ${WRKSRC}
+	${CP} ${FILESDIR}/feedback-patches ${WRKSRC}
 .if !empty(MANINSTALL:Mcatinstall)
-.  for FILE in mkpatches patchdiff pkgdiff pkgvi
+.  for FILE in mkpatches patchdiff pkgdiff pkgvi feedback-patches
 .    if ${OPSYS} == "SunOS" || ${OPSYS} == "AIX"
 	nroff -man ${FILESDIR}/${FILE}.1 >${WRKSRC}/${FILE}.0
 .    else
@@ -68,7 +69,7 @@ do-build:
 .endif
 
 do-install:
-.for FILE in mkpatches patchdiff pkgdiff pkgvi
+.for FILE in mkpatches patchdiff pkgdiff pkgvi feedback-patches
 	${INSTALL_SCRIPT} ${WRKSRC}/${FILE} ${PREFIX}/bin
 .   if !empty(MANINSTALL:Mcatinstall)
 	${INSTALL_MAN} ${WRKSRC}/${FILE}.0 ${PREFIX}/man/cat1
