@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/13 21:19:18 xtraeme Exp $
-share/xml/docbook-simple/catalog
+@comment $NetBSD: PLIST,v 1.2 2004/05/28 16:40:34 minskim Exp $
 share/xml/docbook-simple/sdbcent.mod
 share/xml/docbook-simple/sdbhier.mod
 share/xml/docbook-simple/sdbpool.mod
