@@ -1,4 +1,4 @@
-/* $NetBSD: verify.c,v 1.1.1.1 2002/12/20 18:13:57 schmonz Exp $ */
+/* $NetBSD: verify.c,v 1.2 2003/09/01 16:27:11 jlam Exp $ */
 
 /*
  * Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
@@ -30,38 +30,42 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 1999 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: verify.c,v 1.1.1.1 2002/12/20 18:13:57 schmonz Exp $");
-#endif
-#endif
-
-#ifdef HAVE_CONFIG_H
-#include "config.h"
+__RCSID("$NetBSD: verify.c,v 1.2 2003/09/01 16:27:11 jlam Exp $");
 #endif
 
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
-
-#ifdef HAVE_SYS_PARAM_H
+#endif
+#if HAVE_SYS_PARAM_H
 #include <sys/param.h>
 #endif
-
-#ifdef HAVE_SYS_STAT_H
+#if HAVE_SYS_STAT_H
 #include <sys/stat.h>
 #endif
 
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STDLIB_H
 #include <stdlib.h>
-
-#ifdef HAVE_STRING_H
+#endif
+#if HAVE_STRING_H
 #include <string.h>
 #endif
-
+#if HAVE_UNISTD_H
 #include <unistd.h>
+#endif
 
 #include "verify.h"
 #include "lib.h"

@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h.in,v 1.6 2003/04/11 21:27:43 grant Exp $ */
+/* $NetBSD: lib.h,v 1.1 2003/09/01 16:27:15 jlam Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -25,43 +25,46 @@
 #ifndef _INST_LIB_LIB_H_
 #define _INST_LIB_LIB_H_
 
-#ifdef HAVE_CONFIG_H
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
 #include "config.h"
 #endif
-
-#include <sys/types.h>
-
-#if defined(HAVE_SYS_PARAM_H)
+#if HAVE_SYS_PARAM_H
 #include <sys/param.h>
 #endif
-
-#if defined(HAVE_SYS_STAT_H)
+#if HAVE_SYS_STAT_H
 #include <sys/stat.h>
 #endif
-
-#if defined(HAVE_SYS_FILE_H)
+#if HAVE_SYS_FILE_H
 #include <sys/file.h>
 #endif
-
-#if defined(HAVE_SYS_QUEUE_H)
+#if HAVE_SYS_QUEUE_H
 #include <sys/queue.h>
 #endif
 
+#if HAVE_CTYPE_H
 #include <ctype.h>
-
-#if defined(HAVE_DIRENT_H)
+#endif
+#if HAVE_DIRENT_H
 #include <dirent.h>
 #endif
-
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STDLIB_H
 #include <stdlib.h>
+#endif
+#if HAVE_STDARG_H
 #include <stdarg.h>
-
-#if defined(HAVE_STRING_H)
+#endif
+#if HAVE_STRING_H
 #include <string.h>
 #endif
-
+#if HAVE_UNISTD_H
 #include <unistd.h>
+#endif
+
+#include "path.h"
 
 /* Macros */
 #define SUCCESS	(0)
@@ -75,8 +78,24 @@
 #define FALSE	(0)
 #endif
 
-#ifndef TAR_FULLPATHNAME
-#define TAR_FULLPATHNAME	"@TAR_FULLPATHNAME@"
+/* Usually "rm", but often "echo" during debugging! */
+#define REMOVE_CMD	"rm"
+
+/* Usually "rm", but often "echo" during debugging! */
+#define RMDIR_CMD	"rmdir"
+
+/* Define tar as a string, in case it's called gtar or something */
+#ifndef TAR_CMD
+#define TAR_CMD	"tar"
+#endif
+
+/* Define gzip and bzip2, used to unpack binary packages */
+#ifndef GZIP_CMD
+#define GZIP_CMD "gzip"
+#endif
+
+#ifndef BZIP2_CMD
+#define BZIP2_CMD "bzip2"
 #endif
 
 /* Define ftp as a string, in case the ftp client is called something else */
@@ -84,63 +103,17 @@
 #define FTP_CMD "ftp"
 #endif
 
-/* Define gzip and bzip2, used to unpack binary packages */
-#ifndef GZIP_CMD
-#define GZIP_CMD	"gzip"
-#endif
-
-#ifndef BZIP2_CMD
-#define BZIP2_CMD	"bzip2"
-#endif
-
-#ifndef ADD_CMD
-#define ADD_CMD		"@prefix@/sbin/pkg_add"
-#endif
-#ifndef CHMOD_CMD
-#define CHMOD_CMD	"@CHMOD@"
-#endif
 #ifndef CHOWN_CMD
-#define CHOWN_CMD	"@CHOWN@"
+#define CHOWN_CMD "chown"
 #endif
+
+#ifndef CHMOD_CMD
+#define CHMOD_CMD "chmod"
+#endif
+
 #ifndef CHGRP_CMD
-#define CHGRP_CMD	"@CHGRP@"
+#define CHGRP_CMD "chgrp"
 #endif
-#ifndef DIGEST
-#define DIGEST	"@DIGEST@"
-#endif
-#ifndef MKDIR
-#define MKDIR	"@MKDIR@"
-#endif
-#ifndef MTREE
-#define MTREE	"@MTREE@"
-#endif
-#ifndef PREFIX
-#define PREFIX	"@prefix@"
-#endif
-#ifndef RM
-#define RM	"@RM@"
-#endif
-#ifndef RMDIR_CMD
-#define RMDIR_CMD	"@RMDIR@"
-#endif
-
-#if defined(BSD4_4)
-/* the BSD derivatives have added --fast-read to their tar(1) commands */
-#define HAVE_TAR__FAST_READ	1
-#endif
-
-enum {
-	ReadWrite,
-	ReadOnly
-};
-
-
-/* Where we put logging information by default, else ${PKG_DBDIR} if set */
-#ifndef DEF_LOG_DIR
-#define DEF_LOG_DIR		"@pkgdbdir@"
-#endif
-/* just in case we change the environment variable name */
-#define PKG_DBDIR		"PKG_DBDIR"
 
 /* The names of our "special" files */
 #define CONTENTS_FNAME		"+CONTENTS"
@@ -157,121 +130,27 @@ enum {
 #define SIZE_PKG_FNAME		"+SIZE_PKG"
 #define SIZE_ALL_FNAME		"+SIZE_ALL"
 #define PRESERVE_FNAME		"+PRESERVE"
+#define VIEWS_FNAME		"+VIEWS"
+#define DEPOT_FNAME		"+DEPOT"
 
 #define CMD_CHAR		'@'	/* prefix for extended PLIST cmd */
 
 /* The name of the "prefix" environment variable given to scripts */
 #define PKG_PREFIX_VNAME	"PKG_PREFIX"
 
-#define        PKG_PATTERN_MAX FILENAME_MAX    /* max length of pattern, including nul */
-#define        PKG_SUFFIX_MAX  10      /* max length of suffix, including nul */
-
+#define	PKG_PATTERN_MAX	FILENAME_MAX	/* max length of pattern, including nul */
+#define	PKG_SUFFIX_MAX	10	/* max length of suffix, including nul */
 
 /* This should only happen on 1.3 and 1.3.1, not 1.3.2 and up */
 #ifndef TAILQ_FIRST
 #define TAILQ_FIRST(head)               ((head)->tqh_first)
-#endif
-
-#ifndef TAILQ_NEXT
 #define TAILQ_NEXT(elm, field)          ((elm)->field.tqe_next)
 #endif
 
-/*
- * Tail queue definitions.
- */
-#ifndef QUEUEDEBUG_TAILQ_INSERT_HEAD
-#define QUEUEDEBUG_TAILQ_INSERT_HEAD(head, elm, field)
-#endif
-
-#ifndef QUEUEDEBUG_TAILQ_INSERT_TAIL
-#define QUEUEDEBUG_TAILQ_INSERT_TAIL(head, elm, field)
-#endif
-
-#ifndef QUEUEDEBUG_TAILQ_OP
-#define QUEUEDEBUG_TAILQ_OP(elm, field)
-#endif
-
-#ifndef QUEUEDEBUG_TAILQ_POSTREMOVE
-#define QUEUEDEBUG_TAILQ_POSTREMOVE(elm, field)
-#endif
-
-#ifndef	TAILQ_INIT
-#define	TAILQ_INIT(head) do {						\
-	(head)->tqh_first = NULL;					\
-	(head)->tqh_last = &(head)->tqh_first;				\
-} while (/*CONSTCOND*/0)
-#endif
-
-#ifndef TAILQ_HEAD
-#define TAILQ_HEAD(name, type)						\
-struct name {								\
-	struct type *tqh_first;	/* first element */			\
-	struct type **tqh_last;	/* addr of last next element */		\
-}
-#endif
-
-#ifndef TAILQ_HEAD_INITIALIZER
-#define TAILQ_HEAD_INITIALIZER(head)					\
-	{ NULL, &(head).tqh_first }
-#endif
-
-#ifndef TAILQ_ENTRY
-#define TAILQ_ENTRY(type)						\
-struct {								\
-	struct type *tqe_next;	/* next element */			\
-	struct type **tqe_prev;	/* address of previous next element */	\
-}
-#endif
-
-#ifndef TAILQ_INSERT_HEAD
-#define TAILQ_INSERT_HEAD(head, elm, field) do {			\
-	QUEUEDEBUG_TAILQ_INSERT_HEAD((head), (elm), field)		\
-	if (((elm)->field.tqe_next = (head)->tqh_first) != NULL)	\
-		(head)->tqh_first->field.tqe_prev =			\
-		    &(elm)->field.tqe_next;				\
-	else								\
-		(head)->tqh_last = &(elm)->field.tqe_next;		\
-	(head)->tqh_first = (elm);					\
-	(elm)->field.tqe_prev = &(head)->tqh_first;			\
-} while (/*CONSTCOND*/0)
-#endif
-
-#ifndef TAILQ_INSERT_TAIL
-#define TAILQ_INSERT_TAIL(head, elm, field) do {			\
-	QUEUEDEBUG_TAILQ_INSERT_TAIL((head), (elm), field)		\
-	(elm)->field.tqe_next = NULL;					\
-	(elm)->field.tqe_prev = (head)->tqh_last;			\
-	*(head)->tqh_last = (elm);					\
-	(head)->tqh_last = &(elm)->field.tqe_next;			\
-} while (/*CONSTCOND*/0)
-#endif /* !TAILQ_INSERT_TAIL */
-
-#ifndef TAILQ_REMOVE
-#define TAILQ_REMOVE(head, elm, field) do {				\
-	QUEUEDEBUG_TAILQ_OP((elm), field)				\
-	if (((elm)->field.tqe_next) != NULL)				\
-		(elm)->field.tqe_next->field.tqe_prev = 		\
-		    (elm)->field.tqe_prev;				\
-	else								\
-		(head)->tqh_last = (elm)->field.tqe_prev;		\
-	*(elm)->field.tqe_prev = (elm)->field.tqe_next;			\
-	QUEUEDEBUG_TAILQ_POSTREMOVE((elm), field);			\
-} while (/*CONSTCOND*/0)
-#endif
-
-#ifndef TAILQ_FOREACH
-#define TAILQ_FOREACH(var, head, field)					\
-	for ((var) = ((head)->tqh_first);				\
-		(var);							\
-		(var) = ((var)->field.tqe_next))
-#endif
-
-#ifndef TAILQ_FOREACH_REVERSE
-#define TAILQ_FOREACH_REVERSE(var, head, headname, field)		\
-	for ((var) = (*(((struct headname *)((head)->tqh_last))->tqh_last)); \
-		(var);							\
-		(var) = (*(((struct headname *)((var)->field.tqe_prev))->tqh_last)))
-#endif
+enum {
+	ReadWrite,
+	ReadOnly
+};
 
 
 /* Enumerated constants for plist entry types */
@@ -339,8 +218,9 @@ typedef int (*matchfn) (const char *, void *);
 /* If URLlength()>0, then there is a ftp:// or http:// in the string,
  * and this must be an URL. Hide this behind a more obvious name. */
 #define IS_URL(str)	(URLlength(str) > 0)
-#define IS_STDIN(str)  ((str) != NULL && !strcmp((str), "-"))
-#define IS_FULLPATH(str)       ((str) != NULL && (str)[0] == '/')
+
+#define IS_STDIN(str)	((str) != NULL && !strcmp((str), "-"))
+#define IS_FULLPATH(str)	((str) != NULL && (str)[0] == '/')
 
 /* Prototypes */
 /* Misc */
@@ -350,66 +230,52 @@ void    cleanup(int);
 char   *make_playpen(char *, size_t, size_t);
 char   *where_playpen(void);
 void    leave_playpen(char *);
-int64_t min_free(char *);
+uint64_t min_free(char *);
 void    save_dirs(char **c, char **p);
 void    restore_dirs(char *c, char *p);
 void    show_version(void);
-
-#ifndef HAVE_MD5FILE
-char *MD5File(char *, char *);
-#endif
-
-#ifndef HAVE_FGETLN
-char *fgetln(FILE *, size_t *);
-#endif
+int	fexec(const char *, ...);
+int	fcexec(const char *, const char *, ...);
 
 /* String */
 char   *get_dash_string(char **);
 void    str_lowercase(char *);
-const char   *basename_of(const char *);
-const char   *dirname_of(const char *);
+const char *basename_of(const char *);
+const char *dirname_of(const char *);
 const char *suffix_of(const char *);
 int     pmatch(const char *, const char *);
-int	findmatchingname(const char *, const char *, matchfn, void *); /* doesn't really belong to "strings" */
+int     findmatchingname(const char *, const char *, matchfn, void *); /* doesn't really belong to "strings" */
 char   *findbestmatchingname(const char *, const char *);	/* neither */
 int     ispkgpattern(const char *);
 char   *strnncpy(char *to, size_t tosize, char *from, size_t cc);
 void	strip_txz(char *buf, char *sfx, const char *fname);
 
 /* callback functions for findmatchingname */
-int	findbestmatchingname_fn(const char *, void *); /* neither */
-int	note_whats_installed(const char *, void *);
-int	add_to_list_fn(const char *, void *);
+int     findbestmatchingname_fn(const char *, void *);	/* neither */
+int     note_whats_installed(const char *, void *);
+int     add_to_list_fn(const char *, void *);
 
-
-#ifndef HAVE_STRSEP
-char *strsep(char **, const char *);
-#endif
-
-#ifndef HAVE_STRLCPY
-size_t  strlcpy(char *, const char *, size_t);
-#endif
 
 /* File */
 Boolean fexists(const char *);
 Boolean isdir(const char *);
 Boolean islinktodir(const char *);
-Boolean isemptydir(const char *fname);
-Boolean isemptyfile(const char *fname);
+Boolean isemptydir(const char *);
+Boolean isemptyfile(const char *);
 Boolean isfile(const char *);
 Boolean isempty(const char *);
 int     URLlength(const char *);
 char   *fileGetURL(const char *);
-const char   *fileURLFilename(const char *, char *, int);
-char	*fileFindByPath(const char *);
-const char   *fileURLHost(const char *, char *, int);
+const char *fileURLFilename(const char *, char *, int);
+const char *fileURLHost(const char *, char *, int);
+char   *fileFindByPath(const char *);
 char   *fileGetContents(char *);
 Boolean make_preserve_name(char *, size_t, char *, char *);
 void    write_file(char *, char *);
 void    copy_file(char *, char *, char *);
 void    move_file(char *, char *, char *);
 int     delete_hierarchy(char *, Boolean, Boolean);
-int     unpack(const char *,const  char *);
+int     unpack(const char *, const char *);
 void    format_cmd(char *, size_t, char *, char *, char *);
 
 /* ftpio.c: FTP handling */
@@ -446,6 +312,7 @@ int     pkgdb_remove(const char *);
 int	pkgdb_remove_pkg(const char *);
 char   *_pkgdb_getPKGDB_FILE(char *, unsigned);
 char   *_pkgdb_getPKGDB_DIR(void);
+void	_pkgdb_setPKGDB_DIR(const char *);
 
 /* List of packages functions */
 lpkg_t *alloc_lpkg(const char *);
@@ -459,8 +326,6 @@ int     pkg_perform(lpkg_head_t *);
 extern Boolean Verbose;
 extern Boolean Fake;
 extern Boolean Force;
-extern int upgrade;
+extern Boolean Replace;
 
-/* We include it at the end, because it uses TAILQ_* */
-#include "path.h"
 #endif				/* _INST_LIB_LIB_H_ */

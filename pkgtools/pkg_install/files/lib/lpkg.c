@@ -1,4 +1,4 @@
-/*	$NetBSD: lpkg.c,v 1.2 2003/01/06 04:34:17 jschauma Exp $	*/
+/*	$NetBSD: lpkg.c,v 1.3 2003/09/01 16:27:15 jlam Exp $	*/
 
 /*
  * Copyright (c) 1999 Christian E. Hopps
@@ -28,14 +28,14 @@
  *
  * Package-list auxiliary functions
  */
-#ifdef HAVE_CONFIG_H
+
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
 #include "config.h"
 #endif
-
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
 #include "lib.h"
 
 /*

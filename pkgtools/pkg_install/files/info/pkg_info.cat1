@@ -4,7 +4,8 @@ NNAAMMEE
      ppkkgg__iinnffoo - a utility for displaying information on software packages
 
 SSYYNNOOPPSSIISS
-     ppkkgg__iinnffoo [--BBbbccDDddFFffhhIIiikkLLmmnnppqqRRrrSSssVVvv] [--ee _p_a_c_k_a_g_e] [--ll _p_r_e_f_i_x] _p_k_g_-_n_a_m_e _._._.
+     ppkkgg__iinnffoo [--BBbbccDDddFFffhhIIiikkLLmmNNnnppqqRRrrSSssVVvv] [--ee _p_a_c_k_a_g_e] [--KK _p_k_g___d_b_d_i_r]
+              [--ll _p_r_e_f_i_x] _p_k_g_-_n_a_m_e _._._.
      ppkkgg__iinnffoo [--aa _f_l_a_g_s]
 
 DDEESSCCRRIIPPTTIIOONN
@@ -51,13 +52,17 @@ DDEESSCCRRIIPPTTIIOONN
              _p_k_g___i_n_f_o _-_e _'_n_a_m_e_>_=_1_._3_' will match versions 1.3 and later of the
              _n_a_m_e package.  The collating sequence of the various package ver-
              sion numbers is unusual, but strives to be consistent.  The magic
-             string ``rc'' equates to _r_e_l_e_a_s_e _c_a_n_d_i_d_a_t_e and sorts before a re-
-             lease.  For example, _n_a_m_e_-_1_._3_r_c_3 will sort before _n_a_m_e_-_1_._3 and
-             after _n_a_m_e_-_1_._2_._9 In addition, alphabetic characters sort in the
-             same place as their numeric counterparts, so that _n_a_m_e_-_1_._2_e has
-             the same sorting value as _n_a_m_e_-_1_._2_._5 The magic string ``pl''
-             equates to a _p_a_t_c_h _l_e_v_e_l and has the same value as a dot in the
-             dewey-decimal ordering schemes.
+             string ``alpha'' equates to _a_l_p_h_a _v_e_r_s_i_o_n and sorts before a beta
+             version.  The magic string ``beta'' equates to _b_e_t_a _v_e_r_s_i_o_n and
+             sorts before a release candidate.  The magic string ``rc''
+             equates to _r_e_l_e_a_s_e _c_a_n_d_i_d_a_t_e and sorts before a release.  For ex-
+             ample, _n_a_m_e_-_1_._3_r_c_3 will sort before _n_a_m_e_-_1_._3 and after _n_a_m_e_-_1_._2_._9
+             Similarily _n_a_m_e_-_1_._3_a_l_p_h_a_2 will sort before _n_a_m_e_-_1_._3_b_e_t_a_1 and they
+             both sort before _n_a_m_e_-_1_._3_r_c_1 In addition, alphabetic characters
+             sort in the same place as their numeric counterparts, so that
+             _n_a_m_e_-_1_._2_e has the same sorting value as _n_a_m_e_-_1_._2_._5 The magic
+             string ``pl'' equates to a _p_a_t_c_h _l_e_v_e_l and has the same value as
+             a dot in the dewey-decimal ordering schemes.
 
      --FF      Interpret any pkg-name given as filename, and translate it to a
              package name using the Package Database.  This can be used to
@@ -69,6 +74,12 @@ DDEESSCCRRIIPPTTIIOONN
      --II      Show the index entry for each package.
 
      --ii      Show the install script (if any) for each package.
+
+     --KK _p_k_g___d_b_d_i_r
+             Set _p_k_g___d_b_d_i_r as the package database directory.  If this option
+             isn't specified, then the package database directory is taken
+             from the value of the environment variable PKG_DBDIR if it's set,
+             otherwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
 
      --kk      Show the de-install script (if any) for each package.
 
@@ -84,6 +95,9 @@ DDEESSCCRRIIPPTTIIOONN
              ken to the start of each field.
 
      --mm      Show the mtree file (if any) for each package.
+
+     --NN      Show which packages each package was built with (exact dependen-
+             cies), if any.
 
      --nn      Show which packages each package needs (depends upon), if any.
 
@@ -107,9 +121,9 @@ DDEESSCCRRIIPPTTIIOONN
      --vv      Turn on verbose output.
 
 EENNVVIIRROONNMMEENNTT
-     PKG_DBDIR  The standard package database directory, _/_v_a_r_/_d_b_/_p_k_g, can be
-                overridden by specifying an alternative directory in the
-                PKG_DBDIR environment variable.
+     PKG_DBDIR  If the --KK flag isn't given, then PKG_DBDIR is the location of
+                the package database directory.  The default package database
+                directory is _/_v_a_r_/_d_b_/_p_k_g.
 
      PKG_PATH   This can be used to specify a semicolon-separated list of
                 paths and URLs to search for package files.  If PKG_PATH is
@@ -154,4 +168,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, depends displaying,
              pkg size display etc.
 
-NetBSD 1.6                       March 4, 1999                               3
+NetBSD 1.6.1_STABLE              March 4, 1999                               3

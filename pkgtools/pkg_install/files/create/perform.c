@@ -1,13 +1,17 @@
-/*	$NetBSD: perform.c,v 1.3 2003/04/11 19:58:50 grant Exp $	*/
+/*	$NetBSD: perform.c,v 1.4 2003/09/01 16:27:12 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.3 2003/04/11 19:58:50 grant Exp $");
-#endif
+__RCSID("$NetBSD: perform.c,v 1.4 2003/09/01 16:27:12 jlam Exp $");
 #endif
 #endif
 
@@ -34,17 +38,18 @@ __RCSID("$NetBSD: perform.c,v 1.3 2003/04/11 19:58:50 grant Exp $");
 #include "lib.h"
 #include "create.h"
 
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
+#if HAVE_SIGNAL_H
 #include <signal.h>
-
-#ifdef HAVE_SYS_WAIT_H
+#endif
+#if HAVE_SYS_WAIT_H
 #include <sys/wait.h>
 #endif
-
+#if HAVE_UNISTD_H
 #include <unistd.h>
+#endif
 
 static char *Home;
 
@@ -60,8 +65,8 @@ make_dist(const char *home, const char *pkg, const char *suffix, const package_t
 	FILE   *totar;
 	pid_t   pid;
 
-	if ((args[0] = strrchr(TAR_FULLPATHNAME, '/')) == NULL)
-		args[0] = TAR_FULLPATHNAME;
+	if ((args[0] = strrchr(TAR_CMD, '/')) == NULL)
+		args[0] = TAR_CMD;
 	else
 		args[0]++;
 
@@ -88,9 +93,6 @@ make_dist(const char *home, const char *pkg, const char *suffix, const package_t
 	args[nargs++] = "-";	/* Use stdin for the file. */
 	args[nargs] = NULL;
 
-	if (Verbose)
-		printf("Creating binary pkg '%s'\n", tball);
-
 	/* Set up a pipe for passing the filenames, and fork off a tar process. */
 	if (pipe(pipefds) == -1) {
 		cleanup(0);
@@ -98,15 +100,15 @@ make_dist(const char *home, const char *pkg, const char *suffix, const package_t
 	}
 	if ((pid = fork()) == -1) {
 		cleanup(0);
-		errx(2, "cannot fork process for %s", TAR_FULLPATHNAME);
+		errx(2, "cannot fork process for %s", TAR_CMD);
 	}
 	if (pid == 0) {		/* The child */
 		dup2(pipefds[0], 0);
 		close(pipefds[0]);
 		close(pipefds[1]);
-		execvp(TAR_FULLPATHNAME, args);
+		execvp(TAR_CMD, args);
 		cleanup(0);
-		errx(2, "failed to execute %s command", TAR_FULLPATHNAME);
+		errx(2, "failed to execute %s command", TAR_CMD);
 	}
 
 	/* Meanwhile, back in the parent process ... */
@@ -150,6 +152,9 @@ make_dist(const char *home, const char *pkg, const char *suffix, const package_t
 	if (Preserve) {
 		(void) fprintf(totar, "%s\n", PRESERVE_FNAME);
 	}
+	if (create_views) {
+		(void) fprintf(totar, "%s\n", VIEWS_FNAME);
+	}
 
 	for (p = plist->head; p; p = p->next) {
 		if (p->type == PLIST_FILE) {
@@ -173,7 +178,7 @@ make_dist(const char *home, const char *pkg, const char *suffix, const package_t
 	/* assume either signal or bad exit is enough for us */
 	if (ret) {
 		cleanup(0);
-		errx(2, "%s command failed with code %d", TAR_FULLPATHNAME, ret);
+		errx(2, "%s command failed with code %d", TAR_CMD, ret);
 	}
 }
 
@@ -398,6 +403,11 @@ pkg_perform(lpkg_head_t *pkgs)
 		copy_file(Home, Preserve, PRESERVE_FNAME);
 		add_plist(&plist, PLIST_IGNORE, NULL);
 		add_plist(&plist, PLIST_FILE, PRESERVE_FNAME);
+	}
+	if (create_views) {
+		write_file(VIEWS_FNAME, "");
+		add_plist(&plist, PLIST_IGNORE, NULL);
+		add_plist(&plist, PLIST_FILE, VIEWS_FNAME);
 	}
 
 	/* Finally, write out the packing list */

@@ -1,0 +1,47 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_PREREQ(2.52)
+AC_INIT([pkg_install], [20030823], [grant@NetBSD.org])
+AC_CONFIG_SRCDIR([lib/plist.c])
+AC_CONFIG_HEADER(lib/config.h)
+
+AC_CANONICAL_HOST
+CANONICAL_HOST=$host
+AC_SUBST(CANONICAL_HOST)
+AC_SUBST(INCLUDES)
+
+# Checks for programs.
+AC_PROG_MAKE_SET
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_RANLIB
+AC_CHECK_PROG(AR, ar, ar)
+
+AUTOCONF=${AUTOCONF-"$srcdir/missing --run autoconf"}
+AC_SUBST(AUTOCONF)
+AUTOHEADER=${AUTOHEADER-"$srcdir/missing --run autoheader"}
+AC_SUBST(AUTOHEADER)
+
+dnl Set the default pkg dbdir
+AC_ARG_WITH(pkgdbdir,
+[  --with-pkgdbdir=DIR   Where to put the pkg database (/var/db/pkg)],
+[ pkgdbdir="$with_pkgdbdir" ],
+[ pkgdbdir="/var/db/pkg" ])
+AC_SUBST(pkgdbdir)
+
+dnl Checks for libraries.
+AC_CHECK_LIB(db1, dbopen)
+AC_SEARCH_LIBS(tgetent, [termcap termlib curses ncurses])
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS([db1/db.h db.h])
+AC_CHECK_HEADERS([fnmatch.h md5.h regex.h])
+AC_CHECK_HEADERS([sys/ioctl.h sys/resource.h sys/wait.h])
+
+# Checks for library functions.
+AC_CHECK_FUNCS([chflags dbopen tgetent])
+AC_CHECK_FUNCS([getrlimit setrlimit])
+
+AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile create/Makefile delete/Makefile info/Makefile lib/Makefile view/Makefile])
+AC_OUTPUT

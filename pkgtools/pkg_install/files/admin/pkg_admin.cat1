@@ -4,13 +4,24 @@ NNAAMMEE
      ppkkgg__aaddmmiinn - perform various administrative tasks to the pkg system
 
 SSYYNNOOPPSSIISS
-     ppkkgg__aaddmmiinn [--VV] _c_o_m_m_a_n_d [args ...]
+     ppkkgg__aaddmmiinn [--VV] [--KK _p_k_g___d_b_d_i_r] [--ss _s_f_x___p_a_t_t_e_r_n] _c_o_m_m_a_n_d [args ...]
 
 DDEESSCCRRIIPPTTIIOONN
      This command performs various administrative tasks around the NetBSD
      Packages System.  Available commands are:
 
+     --KK _p_k_g___d_b_d_i_r
+            Set _p_k_g___d_b_d_i_r as the package database directory.  If this option
+            isn't specified, then the package database directory is taken from
+            the value of the environment variable PKG_DBDIR if it's set, oth-
+            erwise it defaults to _/_v_a_r_/_d_b_/_p_k_g.
+
      --VV     Print version number and exit.
+
+     --ss _s_f_x___p_a_t_t_e_r_n
+            Set the shell glob pattern for package suffices when matching
+            package names for llssaallll and llssbbeesstt.  The default pattern is
+            ".t[bg]z".
 
      cchheecckk [_p_k_g _._._.]
             Use this command to check the files belonging to some or all of
@@ -44,15 +55,15 @@ DDEESSCCRRIIPPTTIIOONN
             yui# ls unzip*
             unzip-5.40.tgz  unzip-5.41.tgz
             yui# pkg_admin lsall 'unzip*'
-            unzip-5.40.tgz
-            unzip-5.41.tgz
+            /usr/pkgsrc/packages/i386ELF/All/unzip-5.40.tgz
+            /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
             yui# pkg_admin lsall 'unzip>=5.40'
-            unzip-5.40.tgz
-            unzip-5.41.tgz
+            /usr/pkgsrc/packages/i386ELF/All/unzip-5.40.tgz
+            /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
             yui# pkg_admin lsall 'unzip>=5.41'
-            unzip-5.41.tgz
+            /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
             yui# pkg_admin lsbest 'unzip>=5.40'
-            unzip-5.41.tgz
+            /usr/pkgsrc/packages/i386ELF/All/unzip-5.41.tgz
             yui# pkg_admin lsall /usr/pkgsrc/packages/i386ELF/All/'{mit,unproven}-pthread*'
             /usr/pkgsrc/packages/i386ELF/All/mit-pthreads-1.60b6.tgz
             /usr/pkgsrc/packages/i386ELF/All/unproven-pthreads-0.15.tgz
@@ -74,7 +85,10 @@ DDEESSCCRRIIPPTTIIOONN
             Needs to be run as root.
 
 EENNVVIIRROONNMMEENNTT
-     PKG_DBDIR  Where to register packages instead of _/_v_a_r_/_d_b_/_p_k_g.
+     PKG_DBDIR
+             If the --KK flag isn't given, then PKG_DBDIR is the location of the
+             package database directory.  The default package database direc-
+             tory is _/_v_a_r_/_d_b_/_p_k_g.
 
 FFIILLEESS
      /var/db/pkg/pkgdb.byfile.db
@@ -89,4 +103,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-NetBSD 1.6                      August 4, 2002                               2
+NetBSD 1.6.1_STABLE             August 4, 2002                               2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2003/08/31 11:55:09 jlam Exp $
+# $NetBSD: Makefile,v 1.78 2003/09/01 16:27:09 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -33,8 +33,10 @@ PKG_PRESERVE=		# defined
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
 
+CPPFLAGS+=		${BUILDLINK_CPPFLAGS.libnbcompat}
+
 PKG_DBDIR?=		/var/db/pkg
-PKG_ADMIN=		${SETENV} PKG_DBDIR=${PKG_DBDIR} ${PKG_ADMIN_CMD}
+PKG_INFO=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
 
 .if ${OPSYS} == "NetBSD" && !exists(/usr/share/tmac/tmac.andoc)
 PKG_FAIL_REASON+= "You need to have the 'text' set installed to build this package!"
@@ -51,6 +53,7 @@ post-install:
 		${PKG_ADMIN} rebuild;					\
 	fi
 
+.include "../../pkgtools/libnbcompat/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}

@@ -1,13 +1,17 @@
-/*	$NetBSD: futil.c,v 1.1.1.1 2002/12/20 18:13:55 schmonz Exp $	*/
+/*	$NetBSD: futil.c,v 1.2 2003/09/01 16:27:11 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static const char *rcsid = "from FreeBSD Id: futil.c,v 1.7 1997/10/08 07:45:39 charnier Exp";
 #else
-__RCSID("$NetBSD: futil.c,v 1.1.1.1 2002/12/20 18:13:55 schmonz Exp $");
-#endif
+__RCSID("$NetBSD: futil.c,v 1.2 2003/09/01 16:27:11 jlam Exp $");
 #endif
 #endif
 
@@ -30,14 +34,10 @@ __RCSID("$NetBSD: futil.c,v 1.1.1.1 2002/12/20 18:13:55 schmonz Exp $");
  * Miscellaneous file access utilities.
  *
  */
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
 
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
 #include "lib.h"
 #include "add.h"
 
@@ -61,9 +61,8 @@ make_hierarchy(char *dir)
 			if (!(isdir(dir) || islinktodir(dir)))
 				return FAIL;
 		} else {
-			if (mkdir(dir, 0755) < 0) {
+			if (fexec("mkdir", dir, NULL))
 				return FAIL;
-			}
 			apply_perms(NULL, dir);
 		}
 		/* Put it back */
@@ -89,19 +88,25 @@ apply_perms(char *dir, char *arg)
 		cd_to = dir;
 
 	if (Mode)
-		if (vsystem("cd %s && %s -R %s %s", cd_to, CHMOD_CMD, Mode, arg))
-			warnx("couldn't change modes of '%s' to '%s'", arg, Mode);
-	if (Owner && Group) {
-		if (vsystem("cd %s && %s -R %s.%s %s", cd_to, CHOWN_CMD, Owner, Group, arg))
+		if (fcexec(cd_to, CHMOD_CMD, "-R", Mode, arg, NULL))
+			warnx("couldn't change modes of '%s' to '%s'", arg,
+			    Mode);
+	if (Owner != NULL && Group != NULL) {
+		if (vsystem("cd %s && %s -R %s.%s %s", cd_to, CHOWN_CMD, Owner,
+		    Group, arg))
 			warnx("couldn't change owner/group of '%s' to '%s.%s'",
 			    arg, Owner, Group);
 		return;
 	}
-	if (Owner) {
-		if (vsystem("cd %s && %s -R %s %s", cd_to, CHOWN_CMD, Owner, arg))
-			warnx("couldn't change owner of '%s' to '%s'", arg, Owner);
+	if (Owner != NULL) {
+		if (fcexec(cd_to, CHOWN_CMD, "-R", Owner, arg, NULL))
+			warnx("couldn't change owner of '%s' to '%s'", arg,
+			    Owner);
 		return;
-	} else if (Group)
-		if (vsystem("cd %s && %s -R %s %s", cd_to, CHGRP_CMD, Group, arg))
-			warnx("couldn't change group of '%s' to '%s'", arg, Group);
+	}
+	if (Group != NULL) {
+		if (fcexec(cd_to, CHGRP_CMD, "-R", Group, arg, NULL))
+			warnx("couldn't change group of '%s' to '%s'", arg,
+			    Group);
+	}
 }

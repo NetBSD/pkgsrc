@@ -1,13 +1,17 @@
-/*	$NetBSD: perform.c,v 1.7 2003/04/23 10:27:39 seb Exp $	*/
+/*	$NetBSD: perform.c,v 1.8 2003/09/01 16:27:11 jlam Exp $	*/
 
-#if 0
+#include <nbcompat.h>
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
+#endif
 #ifndef lint
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.7 2003/04/23 10:27:39 seb Exp $");
-#endif
+__RCSID("$NetBSD: perform.c,v 1.8 2003/09/01 16:27:11 jlam Exp $");
 #endif
 #endif
 
@@ -30,30 +34,22 @@ __RCSID("$NetBSD: perform.c,v 1.7 2003/04/23 10:27:39 seb Exp $");
  * This is the main body of the add module.
  *
  */
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
 
-#ifdef HAVE_ASSERT_H
+#if HAVE_ASSERT_H
 #include <assert.h>
 #endif
-
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h>
 #endif
-
 #include "lib.h"
 #include "add.h"
 #include "verify.h"
 
+#if HAVE_SIGNAL_H
 #include <signal.h>
-
-#ifdef HAVE_STRING_H
-#include <string.h>
 #endif
-
-#ifdef HAVE_SYS_WAIT_H
-#include <sys/wait.h>
+#if HAVE_STRING_H
+#include <string.h>
 #endif
 
 static char LogDir[FILENAME_MAX];
@@ -90,9 +86,14 @@ installprereq(const char *name, int *errc)
 	if (Verbose)
 		printf("Loading it from %s.\n", name);
 	path_setenv("PKG_PATH");
-	if (vsystem("%s -s %s %s%s%s %s%s",
-			ADD_CMD,
+	if (vsystem("%s/pkg_add -s %s %s%s%s %s%s %s%s%s %s%s",
+			BINDIR,
 			get_verification(),
+			NoView ? "-L " : "",
+			View ? "-w " : "",
+			View ? View : "",
+			Viewbase ? "-W " : "",
+			Viewbase ? Viewbase : "",
 			Force ? "-f " : "",
 			Prefix ? "-p " : "",
 			Prefix ? Prefix : "",
@@ -118,11 +119,11 @@ pkg_do(const char *pkg)
 {
 	char    playpen[FILENAME_MAX];
 	char    extract_contents[FILENAME_MAX];
-	char    upgrade_from[FILENAME_MAX];
-	char    upgrade_via[FILENAME_MAX];
-	char    upgrade_to[FILENAME_MAX];
-	int	upgrading = 0;
-	char   *where_to, *tmp, *extract;
+	char    replace_from[FILENAME_MAX];
+	char    replace_via[FILENAME_MAX];
+	char    replace_to[FILENAME_MAX];
+	int	replacing = 0;
+	char   *where_to, *extract;
 	char   *dbdir;
 	const char *exact;
 	FILE   *cfile;
@@ -131,21 +132,13 @@ pkg_do(const char *pkg)
 	struct stat sb;
 	int     inPlace;
 	int	rc;
+	Boolean	is_depoted_pkg = FALSE;
 
 	errc = 0;
 	zapLogDir = 0;
 	LogDir[0] = '\0';
-	strcpy(playpen, FirstPen);
+	strlcpy(playpen, FirstPen, sizeof(playpen));
 	inPlace = 0;
-	dbdir = (tmp = getenv(PKG_DBDIR)) ? tmp : DEF_LOG_DIR;
-
-	/* make sure dbdir actually exists! */
-	if (!(isdir(dbdir) || islinktodir(dbdir))) {
-		if (vsystem("%s -p -m 755 %s", MKDIR, dbdir)) {
-			errx(EXIT_FAILURE, "Database-dir %s cannot be generated, aborting.",
-			    dbdir);
-		}
-	}
 
 	/* Are we coming in for a second pass, everything already extracted?
 	 * (Slave mode) */
@@ -183,8 +176,7 @@ pkg_do(const char *pkg)
 				warnx("Package %s will not be extracted", pkg);
 				goto bomb;
 			}
-		}
-		else { /* local */
+		} else { /* local */
 			if (!IS_STDIN(pkg)) {
 			        /* not stdin */
 				if (!ispkgpattern(pkg)) {
@@ -198,11 +190,7 @@ pkg_do(const char *pkg)
 						goto bomb;
 					}
 				}
-#if defined(HAVE_TAR__FAST_READ)
 				(void) snprintf(extract_contents, sizeof(extract_contents), "--fast-read %s", CONTENTS_FNAME);
-#else
-				(void) snprintf(extract_contents, sizeof(extract_contents), "%s", CONTENTS_FNAME);
-#endif
 				extract = extract_contents;
 			} else {
 			        /* some values for stdin */
@@ -240,7 +228,7 @@ pkg_do(const char *pkg)
 					if (!(isdir(p->name) || islinktodir(p->name)) && !Fake) {
 						if (Verbose)
 							printf("Desired prefix of %s does not exist, creating.\n", p->name);
-						(void) vsystem("%s -p %s", MKDIR, p->name);
+						(void) fexec("mkdir", "-p", p->name, NULL);
 					}
 					if (chdir(p->name) == -1) {
 						warn("unable to change directory to `%s'", p->name);
@@ -306,8 +294,33 @@ pkg_do(const char *pkg)
 	/* Protect against old packages with bogus @name fields */
 	PkgName = (p = find_plist(&Plist, PLIST_NAME)) ? p->name : "anonymous";
 
-	/* See if this package (exact version) is already registered */
+	if (fexists(VIEWS_FNAME))
+		is_depoted_pkg = TRUE;
+	
+	dbdir = _pkgdb_getPKGDB_DIR();
 	(void) snprintf(LogDir, sizeof(LogDir), "%s/%s", dbdir, PkgName);
+
+	/* check if the dbdir is wrong because this is a depoted package */
+	if (is_depoted_pkg) {
+		if ((p = find_plist(&Plist, PLIST_CWD))) {
+			if (strcmp(p->name, LogDir) != 0) {
+				warnx("%s is not the depot directory for %s.",
+					dbdir, PkgName);
+				goto success;
+			}
+		}
+	}
+
+	/* make sure dbdir actually exists! */
+	if (!(isdir(dbdir) || islinktodir(dbdir))) {
+		if (fexec("mkdir", "-m", "755", "-p", dbdir, NULL)) {
+			errx(EXIT_FAILURE,
+			    "Database-dir %s cannot be generated, aborting.",
+			    dbdir);
+		}
+	}
+
+	/* See if this package (exact version) is already registered */
 	if ((isdir(LogDir) || islinktodir(LogDir)) && !Force) {
 		warnx("package `%s' already recorded as installed", PkgName);
 		goto success;	/* close enough for government work */
@@ -323,23 +336,23 @@ pkg_do(const char *pkg)
 
 			/*
 			 * See if the pkg is already installed. If so, we might
-			 * want to upgrade it. 
+			 * want to upgrade/replace it. 
 			 */
 			(void) snprintf(buf, sizeof(buf), "%.*s[0-9]*",
 				(int)(s - PkgName) + 1, PkgName);
 			if (findmatchingname(dbdir, buf, note_whats_installed, installed) > 0) {
-				if (upgrade) {
-					snprintf(upgrade_from, sizeof(upgrade_from), "%s/%s/" REQUIRED_BY_FNAME,
+				if (Replace) {
+					snprintf(replace_from, sizeof(replace_from), "%s/%s/" REQUIRED_BY_FNAME,
 						 dbdir, installed);
-					snprintf(upgrade_via, sizeof(upgrade_via), "%s/.%s." REQUIRED_BY_FNAME,
+					snprintf(replace_via, sizeof(replace_via), "%s/.%s." REQUIRED_BY_FNAME,
 						 dbdir, installed);
-					snprintf(upgrade_to, sizeof(upgrade_to), "%s/%s/" REQUIRED_BY_FNAME,
+					snprintf(replace_to, sizeof(replace_to), "%s/%s/" REQUIRED_BY_FNAME,
 						 dbdir, PkgName);
 
 					if (Verbose)
 						printf("Upgrading %s to %s.\n", installed, PkgName);
 
-					if (fexists(upgrade_from)) {  /* Are there any dependencies? */
+					if (fexists(replace_from)) {  /* Are there any dependencies? */
 					  	/*
 						 * Upgrade step 1/4: Check if the new version is ok with all pkgs
 						 * (from +REQUIRED_BY) that require this pkg
@@ -347,12 +360,12 @@ pkg_do(const char *pkg)
 						FILE *rb;                     /* +REQUIRED_BY file */
 						char pkg2chk[FILENAME_MAX];
 
-						rb = fopen(upgrade_from, "r");
+						rb = fopen(replace_from, "r");
 						if (! rb) {
-							warnx("Cannot open '%s' for reading%s", upgrade_from,
+							warnx("Cannot open '%s' for reading%s", replace_from,
 							      Force ? " (proceeding anyways)" : "");
 							if (Force)
-								goto ignore_upgrade_depends_check;
+								goto ignore_replace_depends_check;
 							else
 								goto bomb;
 						}
@@ -376,7 +389,7 @@ pkg_do(const char *pkg)
 								warnx("Cannot check depends in '%s'%s", depC, 
 								      Force ? " (proceeding anyways)" : "!" );
 								if (Force)
-									goto ignore_upgrade_depends_check;
+									goto ignore_replace_depends_check;
 								else
 									goto bomb;
 							}
@@ -395,7 +408,7 @@ pkg_do(const char *pkg)
 								 *  to see if we want to compare against that
 								 *  one at all. 
 								 */
-								strcpy(base_new, PkgName);
+								strlcpy(base_new, PkgName, sizeof(base_new));
 								s2 = strpbrk(base_new, "<>[]?*{");
 								if (s2)
 									*s2 = '\0';
@@ -404,7 +417,7 @@ pkg_do(const char *pkg)
 									if (s2)
 										*s2 = '\0';
 								}
-								strcpy(base_exist, depp->name);
+								strlcpy(base_exist, depp->name, sizeof(base_exist));
 								s2 = strpbrk(base_exist, "<>[]?*{");
 								if (s2)
 									*s2 = '\0';
@@ -420,7 +433,7 @@ pkg_do(const char *pkg)
 											printf("@pkgdep check: %s is ok for %s (in %s pkg)\n",
 											       PkgName, depp->name, pkg2chk);
 									} else {
-										printf("Package %s requires %s, \n\tCannot perform upgrade to %s%s\n",
+										printf("Package %s requires %s, \n\tCannot replace with %s%s\n",
 										       pkg2chk, depp->name, PkgName,
 										       Force? " (proceeding anyways)" : "!");
 										if (! Force)
@@ -431,7 +444,7 @@ pkg_do(const char *pkg)
 						}
 						fclose(rb);
 						
-ignore_upgrade_depends_check:
+ignore_replace_depends_check:
 						/*
 						 * Upgrade step 2/4: Do the actual update by moving aside
 						 * the +REQUIRED_BY file, deinstalling the old pkg, adding
@@ -439,17 +452,24 @@ ignore_upgrade_depends_check:
 						 * into place (finished in step 3/4)
 						 */
 						if (Verbose)
-							printf("mv %s %s\n", upgrade_from, upgrade_via);
-						rc = rename(upgrade_from, upgrade_via);
+							printf("mv %s %s\n", replace_from, replace_via);						
+						rc = rename(replace_from, replace_via);
 						assert(rc == 0);
 						
-						upgrading = 1;
+						replacing = 1;
 					}
 
-					if (Verbose)
-						printf("pkg_delete '%s'\n", installed);
-					vsystem("%s/sbin/pkg_delete '%s'\n", PREFIX, installed);
-					
+					if (Verbose) {
+						printf("%s/pkg_delete -K %s '%s'\n",
+							BINDIR,
+							dbdir,
+							installed);
+					}
+					vsystem("%s/pkg_delete -K %s '%s'\n",
+						BINDIR,
+						dbdir,
+						installed);
+
 				} else {
 					warnx("other version '%s' already installed", installed);
 
@@ -468,9 +488,6 @@ ignore_upgrade_depends_check:
 			continue;
 		if (Verbose)
 			printf("Package `%s' conflicts with `%s'.\n", PkgName, p->name);
-
-		/* was: */
-		/* if (!vsystem("/usr/sbin/pkg_info -qe '%s'", p->name)) { */
 		if (findmatchingname(dbdir, p->name, note_whats_installed, installed) > 0) {
 			warnx("Conflicting package `%s'installed, please use\n"
 			      "\t\"pkg_delete %s\" first to remove it!", installed, installed);
@@ -488,7 +505,6 @@ ignore_upgrade_depends_check:
 			continue;
 		if (Verbose)
 			printf("Depends pre-scan: `%s' required.\n", p->name);
-		/* if (vsystem("/usr/sbin/pkg_info -qe '%s'", p->name)) { */
 		if (findmatchingname(dbdir, p->name, note_whats_installed, installed) <= 0) {
 			/* 
 			 * required pkg not found. look if it's available with a more liberal
@@ -525,15 +541,15 @@ ignore_upgrade_depends_check:
 					warnx("pkg `%s' required, but `%s' found installed.",
 					      p->name, installed);
 
-					if (upgrading) {
-						printf("HF: upgrade note -- could 'pkg_delete %s', and let the normal\n"
-						       "dependency handling reinstall the updated package, assuming one IS\n"
+					if (replacing) {
+						printf("HF: replace note -- could 'pkg_delete %s', and let the normal\n"
+						       "dependency handling reinstall the replaced package, assuming one IS\n"
 						       "available. But then I'd expect proper binary pkgs being available for\n"
-						       "the upgrade case.\n", installed);
+						       "the replace case.\n", installed);
 					}
 
 					if (Force) {
-						warnx("Proceeding anyways.");
+						warnx("Proceeding anyway.");
 					} else {	
 						warnx("Please resolve this conflict!");
 						errc = 1;
@@ -559,11 +575,12 @@ ignore_upgrade_depends_check:
 		}
 		if (Verbose)
 			printf("Package `%s' depends on `%s'.\n", PkgName, p->name);
-		
+
 		if (findmatchingname(dbdir, p->name, note_whats_installed, installed) != 1) {
 			/* required pkg not found - need to pull in */
+
 			if (Fake) {
-				/* fake install (???) */
+			        /* fake install (???) */
 				if (Verbose)
 					printf("Package dependency %s for %s not installed%s\n", p->name, pkg,
 					    Force ? " (proceeding anyway)" : "!");
@@ -582,7 +599,7 @@ ignore_upgrade_depends_check:
 					errc += errc0;
 				}
 			}
-		} else if (Verbose) { 
+		} else if (Verbose) {
 			printf(" - %s already installed.\n", installed);
 		}
 	}
@@ -592,7 +609,7 @@ ignore_upgrade_depends_check:
 
 	/* Look for the requirements file */
 	if (fexists(REQUIRE_FNAME)) {
-		vsystem("%s +x %s", CHMOD_CMD, REQUIRE_FNAME);  /* be sure */
+		(void) fexec(CHMOD_CMD, "+x", REQUIRE_FNAME, NULL);	/* be sure */
 		if (Verbose)
 			printf("Running requirements file first for %s.\n", PkgName);
 		if (!Fake && vsystem("./%s %s INSTALL", REQUIRE_FNAME, PkgName)) {
@@ -607,7 +624,7 @@ ignore_upgrade_depends_check:
 	
 	/* If we're really installing, and have an installation file, run it */
 	if (!NoInstall && fexists(INSTALL_FNAME)) {
-		vsystem("%s +x %s", CHMOD_CMD, INSTALL_FNAME);	/* make sure */
+		(void) fexec(CHMOD_CMD, "+x", INSTALL_FNAME, NULL);	/* make sure */
 		if (Verbose)
 			printf("Running install with PRE-INSTALL for %s.\n", PkgName);
 		if (!Fake && vsystem("./%s %s PRE-INSTALL", INSTALL_FNAME, PkgName)) {
@@ -629,9 +646,9 @@ ignore_upgrade_depends_check:
 			printf("Running mtree for %s.\n", PkgName);
 		p = find_plist(&Plist, PLIST_CWD);
 		if (Verbose)
-			printf("%s -U -f %s -d -e -p %s\n", MTREE, MTREE_FNAME, p ? p->name : "/");
+			printf("mtree -U -f %s -d -e -p %s\n", MTREE_FNAME, p ? p->name : "/");
 		if (!Fake) {
-			if (vsystem("%s -U -f %s -d -e -p %s", MTREE, MTREE_FNAME, p ? p->name : "/"))
+			if (vsystem("%s/mtree -U -f %s -d -e -p %s", BINDIR, MTREE_FNAME, p ? p->name : "/"))
 				warnx("mtree returned a non-zero status - continuing");
 		}
 		unlink(MTREE_FNAME); /* remove this line to tar up pkg later  - HF */
@@ -672,7 +689,9 @@ ignore_upgrade_depends_check:
 			goto success;	/* close enough for government work */
 		}
 		/* Make sure pkg_info can read the entry */
-		vsystem("%s a+rx %s", CHMOD_CMD, LogDir);
+		(void) fexec(CHMOD_CMD, "a+rx", LogDir, NULL);
+		if (fexists(INSTALL_FNAME))
+			move_file(".", INSTALL_FNAME, LogDir);
 		if (fexists(DEINSTALL_FNAME))
 			move_file(".", DEINSTALL_FNAME, LogDir);
 		if (fexists(REQUIRE_FNAME))
@@ -700,6 +719,10 @@ ignore_upgrade_depends_check:
 			move_file(".", DISPLAY_FNAME, LogDir);
 		if (fexists(PRESERVE_FNAME))
 			move_file(".", PRESERVE_FNAME, LogDir);
+		if (fexists(VIEWS_FNAME)) {
+			is_depoted_pkg = TRUE;
+			move_file(".", VIEWS_FNAME, LogDir);
+		}
 
 		/* register dependencies */
 		/* we could save some cycles here if we remembered what we
@@ -726,8 +749,8 @@ ignore_upgrade_depends_check:
 					/* this shouldn't happen... X-) */
 				}
 			}
-			strcat(contents, "/");
-			strcat(contents, REQUIRED_BY_FNAME);
+			strlcat(contents, "/", sizeof(contents));
+			strlcat(contents, REQUIRED_BY_FNAME, sizeof(contents));
 
 			cfile = fopen(contents, "a");
 			if (!cfile)
@@ -759,6 +782,28 @@ ignore_upgrade_depends_check:
 			warnx("cannot open %s as display file", buf);
 	}
 
+	/* Add the package to a default view. */
+	if (!Fake && !NoView && is_depoted_pkg) {
+		if (Verbose) {
+			printf("%s/pkg_view %s%s %s%s %sadd %s\n",
+				BINDIR,
+				View ? "-w " : "",
+				View ? View : "",
+				Viewbase ? "-W " : "",
+				Viewbase ? Viewbase : "",
+				Verbose ? "-v " : "",
+				PkgName);
+		}
+		vsystem("%s/pkg_view %s%s %s%s %sadd %s",
+				BINDIR,
+				View ? "-w " : "",
+				View ? View : "",
+				Viewbase ? "-W " : "",
+				Viewbase ? Viewbase : "",
+				Verbose ? "-v " : "",
+				PkgName);
+	}
+
 	goto success;
 
 bomb:
@@ -775,12 +820,12 @@ success:
 	free_plist(&Plist);
 	leave_playpen(Home);
 
-	if (upgrading) {
+	if (replacing) {
 		/*
 		 * Upgrade step 3/4: move back +REQUIRED_BY file
 		 * (see also step 2/4)
 		 */
-		rc = rename(upgrade_via, upgrade_to);
+		rc = rename(replace_via, replace_to);
 		assert(rc == 0);
 		
 		/*
@@ -808,7 +853,7 @@ cleanup(int signo)
 		if (signo)
 			printf("Signal %d received, cleaning up.\n", signo);
 		if (!Fake && zapLogDir && LogDir[0])
-			vsystem("%s -rf %s", RM, LogDir);
+			(void) fexec(REMOVE_CMD, "-fr", LogDir, NULL);
 		leave_playpen(Home);
 		if (signo)
 			exit(1);
