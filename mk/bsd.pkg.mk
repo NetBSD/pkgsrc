@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.527 2000/08/01 00:47:00 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.528 2000/08/01 01:00:16 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -728,7 +728,10 @@ LESSTIF_DEPENDS=	lesstif12-*:../../x11/lesstif12
 LESSTIF_DEPENDS=	lesstif-*:../../x11/lesstif
 .endif
 .if exists(${MOTIFBASE}/include/Xm/Xm.h)
+.if !defined(IS_LESSTIF)
 IS_LESSTIF!=	${EGREP} -c LESSTIF ${MOTIFBASE}/include/Xm/Xm.h || ${TRUE}
+MAKEFLAGS+=	IS_LESSTIF=${IS_LESSTIF}
+.endif	# !IS_LESSTIF
 .if (${IS_LESSTIF} != "0") || \
 	(defined(USE_MOTIF12) && exists(${MOTIFBASE}/include/Xm/Gadget.h))
 DEPENDS+=		${LESSTIF_DEPENDS}
