@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/02/10 04:30:48 jtb Exp $
+
+--- ../test/makefile.orig	Fri Feb  9 21:45:48 2001
++++ ../test/makefile
+@@ -1,6 +1,6 @@
+ default: small
+ 
+-TN="../src/tochnog"
++TN=tochnog
+ 
+ all: small large very_large 
+ 
