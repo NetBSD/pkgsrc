@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2004/02/17 03:34:07 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/03 00:54:07 minskim Exp $
 #
 
-DISTNAME=	GeoIP-1.3.1
+DISTNAME=	GeoIP-1.3.4
 CATEGORIES=	net
 MASTER_SITES=	http://www.maxmind.com/download/geoip/api/c/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.maxmind.com/download/geoip/api/c/
 COMMENT=	Find the country from any IP address
 
@@ -18,7 +18,7 @@ USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-EGDIR=			${PREFIX}/share/examples/GeoIP
-CONF_FILES=		${EGDIR}/GeoIP.conf.default ${PKG_SYSCONFDIR}/GeoIP.conf
+EGDIR=		${PREFIX}/share/examples/GeoIP
+CONF_FILES=	${EGDIR}/GeoIP.conf.default ${PKG_SYSCONFDIR}/GeoIP.conf
 
 .include "../../mk/bsd.pkg.mk"

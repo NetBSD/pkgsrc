@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6425 2004/07/02 21:42:14 jmmv Exp $
+$NetBSD: CHANGES,v 1.6426 2004/07/03 00:54:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3216,3 +3216,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated drivel to 1.0.2 [jmmv 2004-07-02]
 	Updated GConf2 to 2.6.3 [jmmv 2004-07-02]
 	Updated GConf2-ui to 2.6.3 [jmmv 2004-07-02]
+	Updated GeoIP to 1.3.4 [minskim 2004-07-03]
