@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/14 21:43:51 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/15 18:26:45 jmmv Exp $
 
 DISTNAME=	gnome-spell-1.0.5
 CATEGORIES=	textproc gnome
@@ -15,12 +15,14 @@ USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 
-.include "../../net/ORBit2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
