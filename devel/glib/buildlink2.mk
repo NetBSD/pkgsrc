@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/05/02 11:54:27 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/05/02 13:18:53 wiz Exp $
 
 .if !defined(GLIB_BUILDLINK2_MK)
 GLIB_BUILDLINK2_MK=	# defined
@@ -21,22 +21,7 @@ PTHREAD_OPTS+=		require
 .include "../../mk/pthread.buildlink2.mk"
 
 BUILDLINK_TARGETS+=	glib-buildlink
-BUILDLINK_TARGETS+=	glib-fix-glib-h
 
 glib-buildlink: _BUILDLINK_USE
-
-glib-fix-glib-h:
-.if exists(/usr/include/sys/null.h)
-	@cd ${BUILDLINK_DIR}/include/glib/glib-1.2;			\
-	if ${GREP} "^\#define.NULL" glib.h > /dev/null; then		\
-		${ECHO} WARNING\!;					\
-		${ECHO} The installed glib package is broken, please rebuild it from source.;\
-		${ECHO} For more information, see PR 14150.;		\
-		${SED}  -e "s|^#define.NULL.*|#include <sys/null.h>|"	\
-			glib.h > glib.h.fixed;				\
-		${RM} glib.h;						\
-		${MV} glib.h.fixed glib.h;				\
-	fi
-.endif
 
 .endif	# GLIB_BUILDLINK2_MK
