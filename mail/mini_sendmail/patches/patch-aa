@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2003/02/15 22:11:28 is Exp $
+$NetBSD: patch-aa,v 1.2 2003/02/15 22:39:50 is Exp $
 
 --- mini_sendmail.c.orig	Thu Nov 21 21:27:55 2002
 +++ mini_sendmail.c
-@@ -575,14 +575,16 @@
+@@ -129,6 +129,8 @@
+ 	    timeout = atoi( &(argv[argn][2]) );
+ 	else if ( strcmp( argv[argn], "-v" ) == 0 )
+ 	    verbose = 1;
++	else if ( strcmp( argv[argn], "-i" ) == 0 )
++	    /* do nothing */ ;
+ 	else
+ 	    usage();
+ 	++argn;
+@@ -575,14 +577,16 @@
      sock_family = PF_INET6;
  
  #ifdef DO_MINUS_S
