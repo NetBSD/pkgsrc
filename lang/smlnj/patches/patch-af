@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
+$NetBSD: patch-af,v 1.2 2003/07/01 23:10:34 jtb Exp $
 
---- src/runtime/mach-dep/signal-sysdep.h.orig	Fri Apr 20 09:26:45 2001
+--- src/runtime/mach-dep/signal-sysdep.h.orig
 +++ src/runtime/mach-dep/signal-sysdep.h
-@@ -151,7 +151,7 @@ extern void SetFSR(int);
+@@ -147,7 +147,7 @@
    /* disable all FP exceptions */
  #  define SIG_InitFPE()    SetFSR(0)
  
@@ -11,3 +11,27 @@ $NetBSD: patch-af,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
      /** SPARC, SUNOS **/
  #    define USE_ZERO_LIMIT_PTR_FN
  #    define SIG_FAULT1		SIGFPE
+@@ -318,6 +318,23 @@
+ 
+ #    define SIG_Flags           0
+ 
++#  elif (defined(TARGET_PPC) && defined(OPSYS_NETBSD))
++    /* PPC, NetBSD */
++#    include <signal.h>
++     typedef struct sigcontext_t SigContext_t;
++
++#    define SIG_FAULT1          SIGTRAP
++
++#    define INT_DIVZERO(s, c)           ((s) == SIGTRAP)
++#    define INT_OVFLW(s, c)             ((s) == SIGTRAP)
++#    define SIG_GetPC(scp)              ((scp)->sc_frame.srr0)
++#    define SIG_SetPC(scp, addr)        { (scp)->sc_frame.srr0 = (long)(addr); }
++#    define SIG_ZeroLimitPtr(scp)       { ((scp)->sc_frame.fixreg[15] = 0); } /* limitptr = 15 (see src/runtime/mach-dep/PPC.prim.asm) */
++#    define SIG_GetCode(info,scp)       (info)
++     typedef void SigReturn_t;
++
++#    define SIG_Flags           0
++
+ 
+ #  endif /* HOST_RS6000/HOST_PPC */
+ 
