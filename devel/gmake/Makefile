@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/11/28 16:56:14 drochner Exp $
+# $NetBSD: Makefile,v 1.39 2002/11/30 14:08:30 grant Exp $
 
 DISTNAME=       make-3.80
 PKGNAME=        gmake-3.80
@@ -11,6 +11,7 @@ COMMENT=	GNU version of 'make' utility
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
+USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--program-prefix="g"
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
