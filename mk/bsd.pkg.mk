@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1599 2005/03/16 02:09:54 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1600 2005/03/18 18:16:34 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -154,6 +154,10 @@ SVR4_PKGNAME?=		${PKGNAME}
 USE_DIGEST?=		YES
 USE_GNU_TOOLS?=		# empty
 WRKSRC?=		${WRKDIR}/${DISTNAME}
+
+.if (defined(INSTALL_UNSTRIPPED) && !empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) || defined(DEBUG_FLAGS)
+_INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
+.endif
 
 ##### Non-overridable constants
 
