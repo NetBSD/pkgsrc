@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:13:25 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/09/19 18:16:41 wiz Exp $
 
 SHA1 (hint_unix_serial.tar) = b590c036638050c116b12d09a80ed910f68af271
 Size (hint_unix_serial.tar) = 71680 bytes
 SHA1 (patch-aa) = ed3d3e4cc76df2e092627b4b4d6ff68419a94b07
 SHA1 (patch-ab) = 64be507d80018a95bbb615d1db83b3331633efa3
+SHA1 (patch-ac) = aca05bc3024cd42dbb8b6dc9006c771948b04838
