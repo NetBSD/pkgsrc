@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.23 2003/09/18 23:02:33 grant Exp $
+# $NetBSD: deinstall,v 1.24 2003/11/21 10:54:14 jlam Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -35,7 +35,6 @@ if [ "${_PKG_RCD_SCRIPTS}" = "YES" ]; then
 		file="${RCD_SCRIPTS_DIR}/${script}"
 		shift
 		ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""
-		VIEW_FILES="${VIEW_FILES} \"${file}\""
 	done
 fi
 eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
