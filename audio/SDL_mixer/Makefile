@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/03 08:17:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/05 19:04:38 wiz Exp $
 #
 
 DISTNAME=		SDL_mixer-1.2.4
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.libsdl.org/projects/SDL_mixer/release/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.libsdl.org/projects/SDL_mixer/
 COMMENT=		multi-channel audio mixer library
+
+CONFLICTS=		SDL-mixer-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_X11=		YES
