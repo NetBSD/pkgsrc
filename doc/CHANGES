@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2981 2003/08/04 07:52:18 wiz Exp $
+$NetBSD: CHANGES,v 1.2982 2003/08/04 08:22:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3190,3 +3190,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gputils-0.11.6 [wulf 2003-08-04]
 	Removed gpasm [wulf 2003-08-04]
 	Updated gnugo to 3.4 [wiz 2003-08-04]
+	Updated scummvm to 0.5.0 [adam 2003-08-04]
