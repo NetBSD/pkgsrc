@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1200 2003/06/17 14:33:17 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1201 2003/06/19 21:41:14 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -494,6 +494,12 @@ PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}
 .endif
 .if defined(PERL5_ARCHLIB)
 PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
+.endif
+
+.if defined(USE_NEW_TEXINFO)
+.  if defined(INFO_FILES)
+.    include "../../mk/texinfo.mk"
+.  endif
 .endif
 
 .if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
@@ -2317,11 +2323,13 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
-.for f in ${INFO_FILES}
+.if !defined(USE_NEW_TEXINFO)
+.  for f in ${INFO_FILES}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}"; \
 	${INSTALL_INFO} --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
 	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
-.endfor
+.  endfor
+.endif # !USE_NEW_TEXINFO
 	@# PLIST must be generated at this late point (instead of
 	@# depending on it somewhere earlier), as the
 	@# pre/do/post-install aren't run then yet:
@@ -4096,11 +4104,7 @@ print-PLIST:
 			next;						\
 		}							\
 		{ 							\
-		  if (/\.info$$/) {					\
-		    print "\@unexec $${INSTALL_INFO} --delete --info-dir=%D/info %D/" $$0; \
-		    print $$0;						\
-		    print "\@exec $${INSTALL_INFO} --info-dir=%D/info %D/" $$0; \
-		  } else if (!/^info\/dir$$/) {				\
+		  if (!/^info\/dir$$/) {				\
 		    print $$0;						\
 		  }							\
 		}'

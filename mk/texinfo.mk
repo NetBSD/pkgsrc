@@ -1,10 +1,137 @@
-# $NetBSD: texinfo.mk,v 1.10 2003/05/06 23:43:53 seb Exp $
+# $NetBSD: texinfo.mk,v 1.11 2003/06/19 21:41:15 seb Exp $
 #
-# This Makefile fragment is included by packages that provide info files.
+# This Makefile fragment is included by bsd.pkg.mk when INFO_FILES and
+# USE_NEW_TEXINFO are defined.
+#
+# Or...
+#
+# This Makefile fragment is included by packages that provide info files
+# and do not _yet_ use the new framework.
 #
 
 .if !defined(TEXINFO_MK)
 TEXINFO_MK=	# defined
+
+#
+# This switch is here only until all packages are converted to use
+# the new framework.
+#
+.if defined(USE_NEW_TEXINFO)
+#
+# Handle install-info.
+# 
+
+# Use bsd.pkg.install.mk framework i.e. INSTALL/DEINSTALL scripts
+# to handle install-info execution.
+USE_PKGINSTALL=		YES
+
+# Pathname relative to ${PREFIX} of directory holding the info
+# files and the Info dir file.
+INFO_DIR?=	info
+
+# Does the system have the install-info command?
+# Any version will fit (really?).
+_INSTALL_INFO=
+.for _i_ in /usr/bin/install-info /sbin/install-info
+.  if exists(${_i_})
+_INSTALL_INFO=			${_i_}
+.  endif
+.endfor
+
+# If no install-info was found provide one with the pkg_install-info package.
+# And set INSTALL_INFO to the install-info command it provides.
+.if empty(_INSTALL_INFO)
+_PKG_INSTALL_INFO_PREFIX_DEFAULT=	${LOCALBASE}
+DEPENDS+=	pkg_install-info-[0-9]*:../../pkgtools/pkg_install-info
+EVAL_PREFIX+=	_PKG_INSTALL_INFO_PREFIX=pkg_install-info
+INSTALL_INFO=	${_PKG_INSTALL_INFO_PREFIX}/bin/pkg_install-info
+.else
+INSTALL_INFO=	${_INSTALL_INFO}
+.endif
+
+# Generate INSTALL/DEINSTALL scripts code for handling install-info.
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../mk/install/install-info
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/../../mk/install/install-info
+FILES_SUBST+=		INFO_FILES=${INFO_FILES:Q}
+FILES_SUBST+=		INSTALL_INFO=${INSTALL_INFO:Q}
+FILES_SUBST+=		INFO_DIR=${INFO_DIR:Q}
+
+# When not using buildlink2 set INSTALL_INFO in environment to ${ECHO}
+# so the package build/install step does not register itself the info
+# files as this is the job of the INSTALL script.
+# WARNING: this is far from being failsafe.
+# When not using buildlink2 patch files so that install-info is _not_
+# run are likely to be needed.
+.if !empty(USE_BUILDLINK2:M[nN][oO])
+CONFIGURE_ENV+=		INSTALL_INFO="${TRUE}"
+MAKE_ENV+=		INSTALL_INFO="${TRUE}"
+.endif
+
+#
+# Handle makeinfo if requested.
+#
+
+# Minimum required version for the GNU makeinfo command.
+TEXINFO_REQD?=	3.12
+
+# By default makeinfo is not needed for building.
+USE_MAKEINFO?=		NO
+
+.if empty(USE_MAKEINFO:M[nN][oO])
+
+# Does the system has a makeinfo command?
+_MAKEINFO=
+.  for _i_ in /usr/bin/makeinfo
+.    if exists(${_i_})
+_MAKEINFO=	${_i_}
+.    endif
+.  endfor
+
+# Record makeinfo's version.
+# If makeinfo's version contains useful information outside [0-9].[0-9],
+# the following would have to be changed as well as the comparison below.
+.  if !empty(_MAKEINFO) && !defined(MAKEINFO_VERSION)
+MAKEINFO_VERSION_OUTPUT!=	${_MAKEINFO} --version 2>/dev/null || ${ECHO}
+MAKEINFO_VERSION=${MAKEINFO_VERSION_OUTPUT:M[0-9]*.[0-9]*:C/[^0-9.]//}
+MAKEFLAGS+=			MAKEINFO_VERSION=${MAKEINFO_VERSION}
+.  endif
+
+# Sort out if the version provided by devel/gtexinfo is needed.
+# If it is add it as build time dependency and set MAKEINFO
+# to the makeinfo it provides.
+# Here it is assumed devel/gtexinfo's makeinfo version will be
+# superior or equal to TEXINFO_REQD.
+_NEED_TEXINFO=		YES
+.  if defined(MAKEINFO_VERSION) && ${MAKEINFO_VERSION} >= ${TEXINFO_REQD}
+_NEED_TEXINFO=		NO
+.  endif
+.  if !empty(_NEED_TEXINFO:M[yY][eE][sS])
+BUILD_DEPENDS+=		gtexinfo>=${TEXINFO_REQD}:../../devel/gtexinfo
+_GTEXINFO_PREFIX_DEFAULT=	${LOCALBASE}
+EVAL_PREFIX+=		_GTEXINFO_PREFIX=gtexinfo
+MAKEINFO=		${_GTEXINFO_PREFIX}/bin/makeinfo
+.  else
+MAKEINFO=		${_MAKEINFO}
+.  endif
+
+# When not using buildlink2 set MAKEINFO in environment to the pathname
+# of the right makeinfo command.
+.  if !empty(USE_BUILDLINK2:M[nN][oO])
+CONFIGURE_ENV+=		MAKEINFO="${MAKEINFO}"
+MAKE_ENV+=		MAKEINFO="${MAKEINFO}"
+.  endif
+
+.else # !USE_MAKEINFO
+# When not using buildlink2 set MAKEINFO in environment to ${FALSE}
+.  if !empty(USE_BUILDLINK2:M[nN][oO])
+CONFIGURE_ENV+=		MAKEINFO="${FALSE}"
+MAKE_ENV+=		MAKEINFO="${FALSE}"
+.  endif
+.endif # USE_MAKEINFO
+
+##############################################################
+.else # !USE_NEW_TEXINFO
+# Obsolete handling below... Will go away ASAP.
 
 # Does the system have the GNU texinfo tools and if yes, what version are they?
 _INSTALL_INFO=
@@ -15,7 +142,7 @@ _INSTALL_INFO=	${_i_}
 .endfor
 .if !empty(_INSTALL_INFO)
 .  if !defined(INSTALL_INFO_VERSION)
-_INSTALL_INFO_VERSION_OUTPUT!=  ${_INSTALL_INFO} --version 2>/dev/null
+_INSTALL_INFO_VERSION_OUTPUT!=  ${_INSTALL_INFO} --version 2>/dev/null || ${ECHO}
 # If the install-info version contains useful information outside [0-9].[0-9],
 # the following would have to be changed as well as the comparison below
 INSTALL_INFO_VERSION=${_INSTALL_INFO_VERSION_OUTPUT:M[0-9]*.[0-9]*:C/[^0-9.]//}
@@ -86,5 +213,7 @@ texinfo-override:
 		${MV} "$$_F.new" "$$_F";				\
 	done )
 .endif # TEXINFO_OVERRIDE
+
+.endif # USE_NEW_TEXINFO
 
 .endif # TEXINFO_MK

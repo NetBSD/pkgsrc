@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.85 2003/06/19 17:20:41 jschauma Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.86 2003/06/19 21:41:15 seb Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -1019,3 +1019,54 @@ ${BUILDLINK_DIR}/${_prog_}: ${_GNU_MISSING}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .  endfor
 .endfor
+
+.if defined(USE_NEW_TEXINFO)
+# install-info and makeinfo handling.
+#
+.if defined(INFO_FILES)
+# Create an install-info script that is a "no operation" command
+# as registration of info files is handled by the INSTALL script.
+CONFIGURE_ENV+=	INSTALL_INFO="${BUILDLINK_DIR}/bin/install-info"
+MAKE_ENV+=	INSTALL_INFO="${BUILDLINK_DIR}/bin/install-info"
+
+do-buildlink: hide-install-info
+
+hide-install-info: ${BUILDLINK_DIR}/bin/install-info
+${BUILDLINK_DIR}/bin/install-info:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "#!${BUILDLINK_SHELL}" > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} '${ECHO} "==> Noop install-info $$*" >> ${_BLNK_WRAP_LOG}' >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+
+# Create a makeinfo script that will invoke the right makeinfo
+# command if USE_MAKEINFO is 'yes' or invoke the GNU missing script if not.
+CONFIGURE_ENV+=	MAKEINFO="${BUILDLINK_DIR}/bin/makeinfo"
+MAKE_ENV+=	MAKEINFO="${BUILDLINK_DIR}/bin/makeinfo"
+
+.  if empty(USE_MAKEINFO:M[nN][oO])
+do-buildlink: makeinfo-wrapper
+makeinfo-wrapper: ${BUILDLINK_DIR}/bin/makeinfo
+${BUILDLINK_DIR}/bin/makeinfo:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "#!${BUILDLINK_SHELL}" > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} 'echo "${MAKEINFO} $$*" >> ${_BLNK_WRAP_LOG}' >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} 'exec ${MAKEINFO} $$*' >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+.  else # !USE_MAKEINFO
+do-buildlink: hide-makeinfo
+hide-makeinfo: ${BUILDLINK_DIR}/bin/makeinfo
+${BUILDLINK_DIR}/bin/makeinfo: ${_GNU_MISSING}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "#!${BUILDLINK_SHELL}" > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} 'exec ${_GNU_MISSING} makeinfo "$$*"' >>  ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+.  endif # USE_MAKEINFO
+.endif # INFO_FILES
+.endif # USE_NEW_TEXINFO
