@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/20 12:18:17 agc Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/27 00:53:11 heinz Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
@@ -43,7 +43,7 @@ do-configure:
 		-e "s|@X11BASE@|${X11BASE}|g"				\
 		-e "s|@LOCALBASE@|${LOCALBASE}|g"			\
 	${WRKSRC}/gl/system.c.dist > ${WRKSRC}/gl/system.c
-	for f in `${FIND} ${WRKSRC} -name \*.c`; do			\
+	for f in `${FIND} ${WRKSRC} -name \*.c -print`; do		\
 		${MV} -f $$f $$f`${ECHO} c`;				\
 	done
 	${MV} -f ${WRKSRC}/gl/text2ps.cc ${WRKSRC}/gl/text2ps.c
