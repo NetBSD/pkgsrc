@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/10/02 19:02:34 dillo Exp $
+# $NetBSD: Makefile,v 1.24 2003/03/08 20:23:20 jmc Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -24,7 +24,7 @@ GNU_CONFIGURE=		# defined
 AUTOMAKE_REQD=		1.4
 
 pre-configure:
-	cd ${WRKSRC} && ${AUTOMAKE} --gnu --no-force && ${AUTOCONF}
+	cd ${WRKSRC} && ${AUTOMAKE} --gnu && ${AUTOCONF}
 
 pre-patch:
 .for perlfile in blender2track/xracer-blender2track.pl \
