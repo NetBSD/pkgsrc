@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.228 2003/01/30 13:47:15 agc Exp $
+$NetBSD: TODO,v 1.229 2003/01/30 14:00:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -103,7 +103,6 @@ Suggested package updates
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl100
-	o ettercap-0.6.9
 	o exim-4.12 [pkg/19850]
 	o fetchmail-6.2.1
 	o file-roller-2.2.0
@@ -134,7 +133,7 @@ Suggested package updates
 	o gnomeicu-0.99beta
 	o gnuboy-1.0.3 [pkg/19580]
 	o gnuplot-3.7.3 [pkg/19663]
-	o gpa-0.6.0
+	o gpa-0.6.1
 	o gpgme-0.4.0
 	o gsed-4.0.5
 	o gtetrinet-0.5.2
@@ -153,6 +152,7 @@ Suggested package updates
 	o ircu-2.10.11.04
 	o iozone-3.147
 	o jakarta-ant-1.5 [pkg/18322]
+	o jakarta-tomcat-3.3.1a
 	o jed-0.99.16 [pkg/18937]
 	o jikes-1.18 [pkg/19979]
 	o joe-2.9 [pkg/18022]
@@ -192,7 +192,6 @@ Suggested package updates
 	o mrproject-0.8
 	o mysql-3.23.54
 	o napshare-1.2
-	o neon-0.23.6
 	o net-snmp-5.0.7 [pkg/19939]
 	o netatalk-1.6.0
 	o netpbm-10.8
@@ -214,9 +213,8 @@ Suggested package updates
 	o povray-3.5
 	o pureftpd-0.13a [pkg/19233]
 	o pv-0.4.5 [pkg/19884]
-	o py-wxWindows-2.4.0.1
+	o py-wxWindows-2.4.0.2
 	o pygtk-0.6.11
-	o pyxml-0.8.2
 	o qt3-3.1.1 [skrll]
 	o rep-gtk-0.16
 	o rocksndiamonds-2.2.0rc2
@@ -234,6 +232,7 @@ Suggested package updates
 	o sendfile-20010424
 	o sendmail-8.12.7
 	o siag-3.5.5
+	o slang-1.4.8
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
