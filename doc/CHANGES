@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3792 2003/11/08 06:23:26 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3793 2003/11/08 06:33:45 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4315,3 +4315,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated speedtouch to 1.2-beta2nb1 [abs 2003-11-06]
 	Updated speedtouch to 1.2-beta2nb2 [abs 2003-11-06]
 	Updated wmweather to 2.4.2 [xtraeme 2003-11-08]
+	Updated lftp to 2.6.8 [xtraeme 2003-11-08]

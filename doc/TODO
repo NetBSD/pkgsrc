@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1004 2003/11/08 06:23:26 xtraeme Exp $
+$NetBSD: TODO,v 1.1005 2003/11/08 06:33:45 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -236,7 +236,6 @@ Suggested package updates
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.46
-	o lftp-2.6.8 [pkg/23383]
 	o libao-0.8.4
 	o libgcrypt-1.1.43 [pkg/23322]
 	o libgtop-2.0.6
