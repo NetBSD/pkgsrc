@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/04/27 14:57:56 cjep Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/05/03 16:38:15 jmmv Exp $
 bin/genpref
 bin/icehelp
 bin/icesh
@@ -299,9 +299,8 @@ ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/locale/zh_CN.gb2312/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
-@dirrm etc/X11/icewm
 @dirrm lib/X11/icewm/icons
 @dirrm lib/X11/icewm/ledclock
 @dirrm lib/X11/icewm/mailbox

@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.5 2002/03/10 22:08:15 wiz Exp $
+$NetBSD: patch-ag,v 1.6 2003/05/03 16:38:14 jmmv Exp $
 
---- configure.orig	Tue Oct  9 16:54:09 2001
-+++ configure
+--- configure.orig	2002-06-30 18:05:20.000000000 +0200
++++ configure	2003-05-03 18:24:42.000000000 +0200
 @@ -701,6 +701,7 @@
    --enable-movesize-fx    Move/Resize FX (experimental bloat)
    --disable-x86-asm       Don't use optimized x86 assembly code
@@ -41,3 +41,12 @@ $NetBSD: patch-ag,v 1.5 2002/03/10 22:08:15 wiz Exp $
  #define CONFIG_ADDRESSBAR 1
  EOF
  
+@@ -8770,7 +8780,7 @@
+       cfgdatadir=$with_cfgdir
+     fi
+ else
+-   cfgdatadir='${sysconfdir}/X11/icewm'
++   cfgdatadir='${sysconfdir}'
+ fi;
+ 
+ # Check whether --with-docdir or --without-docdir was given.
