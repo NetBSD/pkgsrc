@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.319 2004/06/26 18:10:20 grant Exp $
+# $NetBSD: Makefile,v 1.320 2004/06/26 18:27:23 grant Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -154,7 +154,6 @@ SUBDIR+=	ljpeg
 SUBDIR+=	magicpoint
 SUBDIR+=	mgl
 SUBDIR+=	mng
-SUBDIR+=	mpeg-lib
 SUBDIR+=	mpeg2codec
 SUBDIR+=	mpgtx
 SUBDIR+=	mtv

@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.7 2004/04/24 00:49:45 wiz Exp $
+$NetBSD: patch-ap,v 1.1 2004/06/26 18:27:23 grant Exp $
 
 --- Makefile.in.orig	Thu Nov 26 17:03:29 1998
 +++ Makefile.in	Mon Aug  6 16:54:52 2001

@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2003/10/04 15:54:39 danw Exp $
+$NetBSD: patch-af,v 1.1 2004/06/26 18:27:23 grant Exp $
 
 --- fs2fast.c.orig	Fri Jul 23 23:59:24 1999
 +++ fs2fast.c	Mon Sep 15 22:49:44 2003

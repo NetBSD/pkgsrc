@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2004/04/24 00:49:45 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2004/06/26 18:27:23 grant Exp $
 #
 
 DISTNAME=	mpeg_lib-1.3.1
 PKGNAME=	mpeg-1.3.1
-CATEGORIES=	graphics
+CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.mni.mcgill.ca/pub/mpeg/ \
 		ftp://ftp.fu-berlin.de/unix/X11/graphics/gimp/libs/ \
 		ftp://ftp.gimp.org/pub/gimp/libs/

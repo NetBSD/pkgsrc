@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.4 2003/10/04 15:54:39 danw Exp $
+$NetBSD: patch-ai,v 1.1 2004/06/26 18:27:23 grant Exp $
 
 --- hybriderr.c.orig	Sat Jul 31 20:05:24 1999
 +++ hybriderr.c	Mon Sep 15 22:50:05 2003

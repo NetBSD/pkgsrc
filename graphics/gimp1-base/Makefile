@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/05 02:26:41 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/26 18:27:23 grant Exp $
 #
 
 DISTNAME=		gimp-1.2.5
@@ -71,7 +71,7 @@ post-install:
 			${LOCALBASE}/share/aclocal/gimp.m4
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/mpeg-lib/buildlink3.mk"
+.include "../../multimedia/mpeg-lib/buildlink3.mk"
 .if defined(GIMP_WITH_HELPBROWSER) && ${GIMP_WITH_HELPBROWSER} != "no"
 PLIST_SUBST+=	HELPBROWSER=""
 .include "../../x11/gnome-libs/buildlink3.mk"
