@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/22 14:22:44 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/22 12:39:47 agc Exp $
 # FreeBSD: Makefile,v 1.3 1997/08/26 07:12:20 tg Exp
 #
 
@@ -14,7 +14,5 @@ DEPENDS+=		xpm-3.4j:../../graphics/xpm
 
 USE_IMAKE=		yes
 USE_GMAKE=		yes
-
-CAT1=			xbmbrowser.0
 
 .include "../../mk/bsd.pkg.mk"

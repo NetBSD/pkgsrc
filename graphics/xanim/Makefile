@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/26 16:21:27 mycroft Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/22 12:39:47 agc Exp $
 #
 
 DISTNAME=       xanim27070
@@ -29,7 +29,6 @@ EXTRA_FILES=    xa2.0_cvid_sparcCOFF.o.Z \
 MIRROR_DISTFILE=	no
 
 USE_IMAKE=	yes
-CAT1=		xanim.0
 
 post-extract:
 	ln -s docs/xanim.man ${WRKSRC}

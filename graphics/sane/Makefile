@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/05/06 08:49:12 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/06/22 12:39:46 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
 #
 
@@ -13,11 +13,6 @@ DEPENDS+=	gtk+-1.0.0:../../x11/gtk
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_X11=	yes
-
-MAN1=		scanimage.1 xscanimage.1 saned.1
-MAN5=		sane-dll.5 sane-hp.5 sane-mustek.5 sane-net.5 sane-pnm.5 \
-		sane-pint.5 sane-qcam.5 sane-umax.5 sane-scsi.5 sane-dmc.5 \
-		sane-epson.5 sane-microtek.5
 
 post-install:
 	${LDCONFIG} || ${TRUE}
