@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde2,v 1.7 2002/09/20 02:39:59 jlam Exp $
+# $NetBSD: Makefile.kde2,v 1.8 2003/04/28 07:48:28 skrll Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE2-distributed packages (they all share common configure and build
@@ -11,7 +11,6 @@ MASTER_SITES?=	ftp://ftp.kde.org/pub/kde/Attic/${_KDE_VERSION}/src/ \
 		ftp://ftp.de.kde.org/pub/kde/Attic/${_KDE_VERSION}/src/
 EXTRACT_SUFX?=	.tar.bz2
 
-MAINTAINER?=	skrll@netbsd.org
 HOMEPAGE?=	http://www.kde.org/
 
 USE_GMAKE=		YES
