@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2001/07/29 14:18:09 tron Exp $
+# $NetBSD: Makefile,v 1.71 2001/07/29 14:54:56 tron Exp $
 
 DISTNAME=		gimp-1.2.2
 CATEGORIES=		graphics
@@ -16,7 +16,6 @@ COMMENT=		Image manipulation program similar to Photoshop[tm]
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		gnome-libs>=1.2.0:../../x11/gnome-libs
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-DEPENDS+=		mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=		png>=1.0.11:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 
