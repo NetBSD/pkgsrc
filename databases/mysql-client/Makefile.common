@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2004/10/28 01:08:15 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.27 2004/10/28 01:34:27 xtraeme Exp $
 
 DISTNAME=		mysql-4.0.21
 CATEGORIES=		databases
@@ -71,20 +71,17 @@ USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
-post-extract:
-	cd ${WRKSRC};							\
-	for dir in dbug heap isam merge mysys strings; do		\
-		${MV} $${dir}/Makefile.in $${dir}/Makefile.in.orig;	\
-		${SED} -e "/^install-exec:/s/install-pkglibLIBRARIES//"	\
-			$${dir}/Makefile.in.orig > $${dir}/Makefile.in;	\
-	done
-	cd ${WRKSRC}/scripts;						\
-	for file in mysql_install_db.sh mysqld_safe.sh; do		\
-		${MV} $${file} $${file}.orig;				\
-		${SED} -e "s,chown,${CHOWN},g"				\
-			$${file}.orig > $${file};			\
-		${RM} $${file}.orig;					\
-	done
+SUBST_CLASSES+=		mk scripts
+SUBST_STAGE.mk=		post-extract
+SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in isam/Makefile.in \
+			merge/Makefile.in mysys/Makefile.in \
+			strings/Makefile.in
+SUBST_SED.mk=		-e "/^install-exec:/s/install-pkglibLIBRARIES//"
+SUBST_MESSAGE.mk=	"Fixing Makefiles."
+SUBST_STAGE.scripts=	post-extract
+SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh
+SUBST_SED.scripts=	-e "s,chown,${CHOWN},g"
+SUBST_MESSAGE.scripts=	"Fixing scripts."
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
