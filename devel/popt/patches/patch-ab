@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2002/10/19 18:08:59 martti Exp $
+$NetBSD: patch-ab,v 1.4 2002/11/26 06:50:22 jlam Exp $
 
 --- Makefile.in.orig	Sat Oct 19 18:32:02 2002
 +++ Makefile.in	Sat Oct 19 19:07:20 2002
@@ -7,15 +7,15 @@ $NetBSD: patch-ab,v 1.3 2002/10/19 18:08:59 martti Exp $
  test1_SOURCES = test1.c
  test1_LDFLAGS = -all-static
 -test1_LDADD = $(lib_LTLIBRARIES)
-+test1_LDADD = $(lib_LTLIBRARIES) -lintl
++test1_LDADD = $(lib_LTLIBRARIES) $(LIBINTL)
  test2_SOURCES = test2.c
  test2_LDFLAGS = -all-static
 -test2_LDADD = $(lib_LTLIBRARIES)
-+test2_LDADD = $(lib_LTLIBRARIES) -lintl
++test2_LDADD = $(lib_LTLIBRARIES) $(LIBINTL)
  test3_SOURCES = test3.c
  test3_LDFLAGS = -all-static
 -test3_LDADD = $(lib_LTLIBRARIES)
-+test3_LDADD = $(lib_LTLIBRARIES) -lintl
++test3_LDADD = $(lib_LTLIBRARIES) $(LIBINTL)
  
  noinst_SCRIPTS = testit.sh
  
