@@ -1,4 +1,4 @@
-$NetBSD: patch-bc,v 1.1 1999/12/25 05:28:37 kim Exp $
+$NetBSD: patch-bc,v 1.1 2000/03/20 02:25:42 itojun Exp $
 
 --- match.c.orig	Wed May 12 07:19:27 1999
 +++ match.c	Fri Dec 24 21:50:42 1999

@@ -1,0 +1,77 @@
+$NetBSD: patch-au,v 1.1 2000/03/20 02:25:40 itojun Exp $
+
+--- login.c.orig	Wed May 12 07:19:26 1999
++++ login.c	Fri Dec 24 22:01:25 1999
+@@ -255,7 +255,7 @@
+    were more standardized. */
+ 
+ void record_login(int pid, const char *ttyname, const char *user, uid_t uid,
+-                  const char *host, struct sockaddr_in *addr)
++		  const char *host, struct sockaddr *addr)
+ {
+   int fd;
+ 
+@@ -271,7 +271,22 @@
+   struct utmp u, u2;
+   off_t offset;
+   const char *utmp, *wtmp;
++#endif
++#if defined(HAVE_HOST_IN_UTMP) || defined(HAVE_LASTLOG_H) || defined(HAVE_LASTLOG)
++  char myname[MAXHOSTNAMELEN];
++  char shost[MAXHOSTNAMELEN];
++  char *p = NULL, *q = NULL;
++
++  memset(shost, 0, sizeof(shost));
++  gethostname(myname, MAXHOSTNAMELEN);
++  if (((p = memchr(myname, '.', MAXHOSTNAMELEN)) != NULL)
++    && ((q = strchr(host, '.')) != NULL)
++    && (strncmp(p, q, MAXHOSTNAMELEN - (p - myname)) == 0)) {
++    strncpy(shost, host, q - host);
++  }
++#endif
+ 
++#if defined(HAVE_UTMP_H) && !defined(HAVE_UTMPX_H)
+   /* Construct an utmp/wtmp entry. */
+   memset(&u, 0, sizeof(u));
+ #ifdef DEAD_PROCESS
+@@ -301,17 +316,21 @@
+   strncpy(u.ut_user, user, sizeof(u.ut_user));
+ #endif /* HAVE_NAME_IN_UTMP */
+ #ifdef HAVE_HOST_IN_UTMP
+-  strncpy(u.ut_host, host, sizeof(u.ut_host));
+-#ifdef __FreeBSD__
+-  if (strlen(host) > sizeof(u.ut_host)) {
++  if ((*shost != '\0') && (strlen(shost) <= sizeof(u.ut_host)))
++    strncpy(u.ut_host, shost, sizeof(u.ut_host));
++#ifndef HAVE_ADDR_IN_UTMP
++  else if (strlen(host) > sizeof(u.ut_host))
+     strncpy(u.ut_host, get_remote_ipaddr(), sizeof(u.ut_host));
+-  }
+-#endif /* __FreeBSD__ */
++#endif /* HAVE_ADDR_IN_UTMP */
++  else
++    strncpy(u.ut_host, host, sizeof(u.ut_host));
+ #endif /* HAVE_HOST_IN_UTMP */
+ #ifdef HAVE_ADDR_IN_UTMP
++#if 0 /* XXX */
+   if (addr)
+     memcpy(&u.ut_addr, &addr->sin_addr, sizeof(u.ut_addr));
+   else
++#endif /* XXX */
+     memset(&u.ut_addr, 0, sizeof(u.ut_addr));
+ #endif
+ 
+@@ -490,7 +509,12 @@
+       /* Update lastlog. */
+       ll.ll_time = time(NULL);
+       strncpy(ll.ll_line, ttyname + 5, sizeof(ll.ll_line));
+-      strncpy(ll.ll_host, host, sizeof(ll.ll_host));
++      if ((*shost != '\0') && (strlen(shost) <= sizeof(ll.ll_host)))
++        strncpy(ll.ll_host, shost, sizeof(ll.ll_host));
++      else if (strlen(host) > sizeof(ll.ll_host))
++        strncpy(ll.ll_host, get_remote_ipaddr(), sizeof(ll.ll_host));
++      else
++        strncpy(ll.ll_host, host, sizeof(ll.ll_host));
+ #ifdef LASTLOG_IS_DIR
+       snprintf(lastlogfile, sizeof(lastlogfile),
+                "%.100s/%.100s", lastlog, user);

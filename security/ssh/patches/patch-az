@@ -1,7 +1,7 @@
-$NetBSD: patch-az,v 1.1 1999/12/25 05:28:36 kim Exp $
+$NetBSD: patch-az,v 1.2 2000/03/20 02:25:53 itojun Exp $
 
---- config.h.in.orig	Wed May 12 07:20:04 1999
-+++ config.h.in	Fri Dec 24 21:50:38 1999
+--- config.h.in-	Wed May 12 20:20:04 1999
++++ config.h.in	Mon Mar 20 09:47:20 2000
 @@ -244,12 +244,6 @@
  /* Support for Secure RPC */
  #undef SECURE_RPC
@@ -46,51 +46,7 @@ $NetBSD: patch-az,v 1.1 1999/12/25 05:28:36 kim Exp $
  
  /* Define this if you dont have SIGINFO as signal but some other macro */
  #undef HAVE_INCOMPATIBLE_SIGINFO
-@@ -323,6 +324,24 @@
-    /etc/nologin.allow. */
- #undef NOLOGIN_ALLOW
- 
-+/* Define this if you have struct sockaddr_storage. */
-+#undef HAVE_SOCKADDR_STORAGE
-+
-+/* Define this if you have __sa_family in struct sockaddr_storage. */
-+#undef HAVE_NEW_SS_FAMILY
-+
-+/* Define this if you have ss_len in struct sockaddr. */
-+#undef HAVE_SOCKADDR_LEN
-+
-+/* Define this if you want to enable IPv6 support. */
-+#undef ENABLE_IPV6
-+ 
-+/* Define this if you want to enable another port try support. */
-+#undef ENABLE_ANOTHER_PORT_TRY
-+
-+/* Define this if you want to enable logging auth info support. */
-+#undef ENABLE_LOG_AUTH
-+
- /* Where to find the X11 socket */
- #undef X11_DIR
- 
-@@ -375,12 +394,18 @@
- /* Define if you have the ftruncate function.  */
- #undef HAVE_FTRUNCATE
- 
-+/* Define if you have the getaddrinfo function.  */
-+#undef HAVE_GETADDRINFO
-+
- /* Define if you have the getdtablesize function.  */
- #undef HAVE_GETDTABLESIZE
- 
- /* Define if you have the gethostname function.  */
- #undef HAVE_GETHOSTNAME
- 
-+/* Define if you have the getnameinfo function.  */
-+#undef HAVE_GETNAMEINFO
-+
- /* Define if you have the getpseudotty function.  */
- #undef HAVE_GETPSEUDOTTY
- 
-@@ -518,6 +543,9 @@
+@@ -518,6 +519,9 @@
  
  /* Define if you have the <sys/dir.h> header file.  */
  #undef HAVE_SYS_DIR_H
