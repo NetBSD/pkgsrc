@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/02/10 05:44:49 taya Exp $
+# $NetBSD: Makefile,v 1.25 2002/02/20 22:50:52 wiz Exp $
 
 DISTNAME=	galeon-1.0.3
 CATEGORIES=	www
@@ -11,6 +11,7 @@ COMMENT=	GNOME web browser based on gecko (mozilla rendering engine)
 CONFLICTS=	galeon-current-[0-9]*
 
 BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
+DEPENDS+=	scrollkeeper>=0.2:../../textproc/scrollkeeper
 DEPENDS+=	mozilla>=0.9.8:../mozilla
 
 USE_X11BASE=	yes
