@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3378 2003/09/14 22:25:29 jlam Exp $
+$NetBSD: CHANGES,v 1.3379 2003/09/15 00:20:59 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3693,3 +3693,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated horde to 2.2.4 [bouyer 2003-09-14]
 	Updated imp to 3.2.2 [bouyer 2003-09-14]
 	Updated samba to 2.2.8nb4 [jlam 2003-09-14]
+	Updated gsl to 1.4nb2 [dmcmahill 2003-09-14]
+	Added ruby-gsl-0.1.9 [dmcmahill 2003-09-14]
