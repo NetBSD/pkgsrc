@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/10/12 00:11:10 heinz Exp $
+# $NetBSD: Makefile,v 1.50 2004/11/08 17:07:23 mjl Exp $
 
 DISTNAME=	Mail-SpamAssassin-${SPAMASSASSIN_VERSION}
 PKGNAME=	spamassassin-${SPAMASSASSIN_VERSION}
@@ -27,7 +27,7 @@ CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-SPAMASSASSIN_VERSION=	3.0.0
+SPAMASSASSIN_VERSION=	3.0.1
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
