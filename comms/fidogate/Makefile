@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/08/01 02:31:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2002/11/14 23:55:33 jlam Exp $
 #
 
 DISTNAME=	fidogate-4.4.5
@@ -9,14 +9,15 @@ MAINTAINER=	tv@pobox.com
 HOMEPAGE=	http://www.fidogate.org/
 COMMENT=	FidoNet (FTN) <-> Internet mail and news gateway
 
-USE_BUILDLINK_ONLY=	yes
-USE_GMAKE=		yes
+USE_BUILDLINK2=		# defined
+USE_GMAKE=		# defined
+MAKE_ENV=		DEBUG="${CFLAGS} -Werror"
+BUILDLINK_SETENV.CC=	CC="cc ${_STRIPFLAG_CC}"
 
 INFO_FILES=	fidogate.info
-MAKE_ENV=	DEBUG="${CFLAGS} -Werror" CC="${CC} ${_STRIPFLAG_CC}"
 
-EGDIR=		${PREFIX}/share/examples
-CONF_FILES=	${EGDIR}/fidogate/fidogate.conf ${PKG_SYSCONFDIR}/fidogate/fidogate.conf
+EGDIR=		${PREFIX}/share/examples/fidogate
+CONF_FILES=	${EGDIR}/fidogate.conf ${PKG_SYSCONFDIR}/fidogate/fidogate.conf
 RCD_SCRIPTS=	fidogate
 
 post-extract:
@@ -40,7 +41,7 @@ pre-build:
 pre-install:
 	${INSTALL_DATA_DIR} \
 		${PKG_SYSCONFDIR}/fidogate \
-		${EGDIR}/fidogate \
+		${EGDIR} \
 		${PREFIX}/lib/fidogate \
 		${PREFIX}/lib/fidogate/bin \
 		${PREFIX}/share/doc/fidogate \
@@ -58,9 +59,9 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/maintenance/rc.fidogate \
 		${PREFIX}/etc/rc.d/fidogate
 	${INSTALL_DATA} ${WRKSRC}/doc/fidogate.txt ${PREFIX}/share/doc/fidogate/
-	${INSTALL_DATA} ${WRKSRC}/fidogate.conf ${EGDIR}/fidogate/
+	${INSTALL_DATA} ${WRKSRC}/fidogate.conf ${EGDIR}
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
