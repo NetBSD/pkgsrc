@@ -1,0 +1,8 @@
+--- sources/picbuf.c.orig	Thu Jul  9 11:36:03 1998
++++ sources/picbuf.c	Thu Jul  9 11:36:56 1998
+@@ -44,4 +44,5 @@
+ #include <stdlib.h>
+ #include <string.h>
++#include <unistd.h>
+ #include <math.h>
+ #include "bresnham.h"

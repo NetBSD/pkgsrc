@@ -1,0 +1,9 @@
+--- sources/getopt.c.orig	Thu Jul  9 11:38:13 1998
++++ sources/getopt.c	Thu Jul  9 11:39:08 1998
+@@ -41,4 +41,6 @@
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ 
+ /* This needs to come after some library #include

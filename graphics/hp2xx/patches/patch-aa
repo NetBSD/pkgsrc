@@ -1,0 +1,31 @@
+--- Makefile.orig	Thu Jul  9 10:33:50 1998
++++ Makefile	Thu Jul  9 10:44:38 1998
+@@ -0,0 +1,28 @@
++all:
++	cd sources; make all
++
++check:
++	cd sources; make check
++
++clean:
++	cd sources; make clean
++
++install:
++	cd sources; make install
++
++install-bin:
++	cd sources; make install-bin
++
++install-man:
++	cd sources; make install-man
++
++install-info:
++	cd sources; make install-info
++
++mostlyclean:
++	cd sources; make mostlyclean
++
++realclean:
++	cd sources; make realclean
++
++
