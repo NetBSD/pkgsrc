@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/24 23:04:41 kim Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/25 04:23:05 tv Exp $
 #
 
 DISTNAME=	remind-03.00.22
@@ -26,21 +26,21 @@ post-build:
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/remind
 	(cd ${WRKSRC}; \
-		${INSTALL_DATA} -p examples/defs.rem \
+		${INSTALL_DATA} examples/defs.rem \
 			${PREFIX}/share/examples/remind; \
-		${INSTALL_DATA} -p examples/remind.vim \
+		${INSTALL_DATA} examples/remind.vim \
 			${PREFIX}/share/examples/remind; \
-		${INSTALL_DATA} -p scripts/remind-all.csh \
+		${INSTALL_DATA} scripts/remind-all.csh \
 			${PREFIX}/share/examples/remind; \
-		${INSTALL_DATA} -p scripts/remind-all.sh \
+		${INSTALL_DATA} scripts/remind-all.sh \
 			${PREFIX}/share/examples/remind)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/remind
 	(cd ${WRKSRC}; \
-		${INSTALL_DATA} -p docs/README.UNIX \
+		${INSTALL_DATA} docs/README.UNIX \
 			${PREFIX}/share/doc/remind; \
-		${INSTALL_DATA} -p docs/WHATSNEW.30 \
+		${INSTALL_DATA} docs/WHATSNEW.30 \
 			${PREFIX}/share/doc/remind; \
-		${INSTALL_DATA} -p COPYRIGHT \
+		${INSTALL_DATA} COPYRIGHT \
 			${PREFIX}/share/doc/remind)
 
 .include "../../mk/bsd.pkg.mk"
