@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/03/22 03:15:09 kim Exp $
+
+--- src/mit_stringtokey.c.orig	Tue May 12 15:37:17 1998
++++ src/mit_stringtokey.c	Fri Mar 19 21:14:12 1999
+@@ -63,7 +63,6 @@
+ 	register char  *p_char;
+ 	static char     k_char[64];
+ 	static des_key_schedule key_sked;
+-	extern unsigned long des_cbc_cksum ();
+ 
+ 	in_str = str;
+ 	forward = 1;
