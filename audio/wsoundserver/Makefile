@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/07/07 17:17:58 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/07/22 16:54:22 wiz Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://shadowmere.student.utwente.nl/
 COMMENT=	sound server for windowmaker
-
-DEPENDS+=	windowmaker>=0.64.0:../../wm/windowmaker
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
@@ -44,4 +42,5 @@ post-install:
 .include "../../audio/libaudiofile/buildlink.mk"
 .include "../../devel/libdockapp/buildlink.mk"
 .include "../../devel/libproplist/buildlink.mk"
+.include "../../wm/windowmaker/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
