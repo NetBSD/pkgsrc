@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/10/17 17:24:18 rh Exp $
+# $NetBSD: Makefile,v 1.23 2000/10/22 07:37:09 rh Exp $
 #
 
 DISTNAME=		gnumeric-0.57
@@ -12,6 +12,7 @@ BUILD_DEPENDS+=		${LOCALBASE}/bin/python:../../lang/python
 DEPENDS+=		gal>=0.1:../../devel/gal
 DEPENDS+=		gb>=0.0.12:../../lang/gb
 DEPENDS+=		libole2>=0.1.5:../../devel/libole2
+DEPENDS+=		oaf>=0.6.0:../../devel/oaf
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
