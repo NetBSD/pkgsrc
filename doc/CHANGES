@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9092 2005/02/09 15:31:34 ben Exp $
+$NetBSD: CHANGES,v 1.9093 2005/02/09 20:25:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -817,3 +817,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated apr to 0.9.6.2.0.53 [tron 2005-02-09]
 	Updated apache2 to 2.0.53 [tron 2005-02-09]
 	Updated fprot-workstation-bin to 4.5.3 [ben 2005-02-09]
+	Updated mng to 1.0.9 [wiz 2005-02-09]
+	Updated allegro to 4.1.18 [wiz 2005-02-09]
+	Updated gnome-print to 0.37 [wiz 2005-02-09]
+	Updated gal to 0.24 [wiz 2005-02-09]
+	Updated gnucash to 1.8.11 [wiz 2005-02-09]
+	Updated gnucash-docs to 1.8.5 [wiz 2005-02-09]
