@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:37:30 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/29 15:00:42 uebayasi Exp $
 
-DISTNAME=	monafont-2.22
-PKGREVISION=	1
+DISTNAME=	monafont-2.90
 PKGNAME=	${DISTNAME:S/font/fonts/}
 CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=monafont/}
@@ -19,8 +18,6 @@ MAKE_FLAGS+=	SED_CMD=${SED:Q}
 MAKE_FLAGS+=	PERL_CMD=${PERL5:Q}
 MAKE_FLAGS+=	GZIP_CMD=${GZIP_CMD:Q}
 
-INSTALL_TMPL=	${FILESDIR}/install
-DEINSTALL_TMPL=	${FILESDIR}/deinstall
 FILES_SUBST+=	X11FONTSSUBDIR=local
 
 post-extract:
