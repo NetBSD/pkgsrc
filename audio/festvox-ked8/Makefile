@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/14 04:50:23 proff Exp $
+# $NetBSD: Makefile,v 1.4 1999/06/09 17:05:35 agc Exp $
 
 DISTNAME=	festvox-ked8-1.3.1
 WRKSRC=		${WRKDIR}/festival
@@ -15,7 +15,7 @@ DEPENDS+=	festival-1.3.1:../festival \
 
 CONFLICTS=	festvox-ked16-*
 
-LICENSE=	non-commercial-use
+LICENSE=	no-commercial-use
 
 NO_BUILD=	yes
 
