@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/01/18 14:21:18 tron Exp $
+
+--- icbirc.c.orig	2003-08-20 23:55:59.000000000 +0200
++++ icbirc.c	2004-01-18 15:12:29.000000000 +0100
+@@ -318,8 +318,8 @@
+ done:
+ 	if (server_fd >= 0)
+ 		close(server_fd);
+-	printf("(%u seconds, %lu:%lu bytes)\n",
+-	    time(NULL) - t, bytes_out, bytes_in);
++	printf("(%lu seconds, %lu:%lu bytes)\n",
++	    (unsigned long)(time(NULL) - t), bytes_out, bytes_in);
+ 	if (terminate_client)
+ 		irc_send_notice(client_fd, "Closing connection "
+ 		    "(%u seconds, %lu:%lu bytes)",
