@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/09/12 00:25:17 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/10/31 15:49:26 wiz Exp $
 #
 # This Makefile fragment is included by packages that use pccts.
 #
@@ -11,7 +11,7 @@ PCCTS_BUILDLINK2_MK=	# defined
 BUILDLINK_PACKAGES+=			pccts
 BUILDLINK_DEPENDS.pccts?=		pccts>=1.33.22
 BUILDLINK_PKGSRCDIR.pccts?=		../../devel/pccts
-BUILDLINK_DEPMETHOD.pccts?=		"build"
+BUILDLINK_DEPMETHOD.pccts?=		build
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.pccts=pccts
 BUILDLINK_PREFIX.pccts_DEFAULT=	${LOCALBASE}
