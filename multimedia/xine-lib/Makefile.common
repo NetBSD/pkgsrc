@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.12 2004/10/27 20:31:33 drochner Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/11/23 03:04:56 tv Exp $
 #
 
 DISTNAME=		xine-lib-1-rc6a
-PKGNAME=		xine-lib-1rc6a
+XINE_PKGNAME=		xine-lib-1rc6a
+PKGNAME?=		${XINE_PKGNAME}
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
@@ -39,7 +40,7 @@ CONFIGURE_ARGS+=	--with-xv-path='${X11BASE}/lib'
 PLIST_SUBST+=		HAVE_XV=
 .endif
 
-pre-configure::
+pre-configure:
 	cd ${WRKSRC} && ${AUTOCONF}
 
 .include "../../converters/libiconv/buildlink3.mk"
