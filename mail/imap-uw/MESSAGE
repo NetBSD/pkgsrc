@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:00:12 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2003/09/16 19:16:44 jmmv Exp $
 
 Add the following to /etc/services (if not already there):
 
@@ -17,6 +17,11 @@ Add the following to /etc/inetd.conf:
  pop2   stream  tcp     nowait  root    ${PREFIX}/libexec/ipop2d   ipop2d
  pop3   stream  tcp     nowait  root    ${PREFIX}/libexec/ipop3d   ipop3d
  pop3s  stream  tcp     nowait  root    ${PREFIX}/libexec/ipop3d   ipop3d
+
+In order to use SSL, you will need to configure a certificate and store it
+in the ${SSLCERTS} directory, using the imapd.pem name.
+If you want to use an existing certificate, say from Apache, just copy it
+there (you may need to concatenate .key and .crt files together).
 
 To put the changes into effect, make inetd reload its configuration:
 On NetBSD 1.5 or later:
