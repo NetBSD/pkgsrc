@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.84 2002/12/19 00:55:10 wiz Exp $
+$NetBSD: TODO,v 1.85 2002/12/19 07:43:58 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -114,6 +114,7 @@ Suggested package updates
 	o gcvs-1.0b4
 	o gd-2.0.4
 	o gdb-5.3
+	o gdk-pixbuf-0.22.0
 	o gftp-2.0.14
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.3
