@@ -1,0 +1,31 @@
+$NetBSD: patch-ah,v 1.3 2002/07/17 22:34:46 itojun Exp $
+
+diff -u -r1.3 src/dns/dns_lookup.c
+--- src/dns/dns_lookup.c	2001/11/11 05:26:51	1.3
++++ src/dns/dns_lookup.c	2002/07/17 21:20:30
+@@ -132,6 +132,7 @@
+ } DNS_REPLY;
+ 
+ #define INET_ADDR_LEN	4		/* XXX */
++#define INET6_ADDR_LEN	16		/* XXX */
+ 
+ /* dns_query - query name server and pre-parse the reply */
+ 
+@@ -328,6 +329,17 @@
+ 	break;
+     case T_A:
+ 	if (fixed->length != INET_ADDR_LEN) {
++	    msg_warn("extract_answer: bad address length: %d", fixed->length);
++	    return (0);
++	}
++	if (fixed->length > sizeof(temp))
++	    msg_panic("dns_get_rr: length %d > DNS_NAME_LEN",
++		      fixed->length);
++	memcpy(temp, pos, fixed->length);
++	data_len = fixed->length;
++	break;
++    case T_AAAA:
++	if (fixed->length != INET6_ADDR_LEN) {
+ 	    msg_warn("extract_answer: bad address length: %d", fixed->length);
+ 	    return (0);
+ 	}
