@@ -1,20 +1,23 @@
-$NetBSD: patch-ab,v 1.2 2002/02/24 22:36:49 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2005/03/02 17:50:18 rxg Exp $
 
---- cmp3.h.orig	Fri Mar 17 02:14:10 2000
+--- cmp3.h.orig	2001-07-01 12:38:08.000000000 +0800
 +++ cmp3.h
-@@ -1,10 +1,11 @@
+@@ -1,7 +1,7 @@
  #ifndef _CMP3_H
  #define _CMP3_H
  
--#include<curses.h>
--
--#ifndef NCURSES_VERSION
--  #error "This program requires ncurses to function"
+-#if defined(__FreeBSD__)
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
-+#include <ncurses.h>
-+#include <termios.h>
-+#else
-+#include <curses.h>
+ #include <ncurses.h>
+ #include <termios.h>
+ #else
+@@ -9,9 +9,6 @@
  #endif
  
+ 
+-#ifndef NCURSES_VERSION
+-  #error "This program requires ncurses to function"
+-#endif
+ 
  #include <signal.h>
+ #include <dirent.h>
