@@ -1,4 +1,39 @@
-# $NetBSD: xlc.mk,v 1.2.2.3 2004/11/30 15:06:35 tv Exp $
+# $NetBSD: xlc.mk,v 1.2.2.4 2005/01/13 20:11:55 tv Exp $
+#
+# Copyright (c) 2005 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Grant Beattie.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+# 3. All advertising materials mentioning features or use of this software
+#    must display the following acknowledgement:
+#        This product includes software developed by the NetBSD
+#        Foundation, Inc. and its contributors.
+# 4. Neither the name of The NetBSD Foundation nor the names of its
+#    contributors may be used to endorse or promote products derived
+#    from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -7,37 +42,28 @@ COMPILER_XLC_MK=	defined
 
 XLCBASE?=	/opt/ibmcmp/vacpp/6.0
 
-# LANGUAGES.<compiler> is the list of supported languages by the compiler.
-# _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
-# requested by the package in USE_LANGUAGES.
+# LANGUAGES.<compiler> is the list of supported languages by the
+# compiler.
 #
-LANGUAGES.xlc=		c c++
-_LANGUAGES.xlc=		# empty
-.for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.xlc+=	${LANGUAGES.xlc:M${_lang_}}
-.endfor
+LANGUAGES.xlc=		# empty
 
-_XLC_DIR=	${WRKDIR}/.xlc
-_XLC_VARS=	# empty
+_XLC_DIR=		${WRKDIR}/.xlc
+_XLC_VARS=		# empty
 .if exists(${XLCBASE}/bin/xlc)
-_XLC_VARS+=	CC
-_XLC_CC=	${_XLC_DIR}/bin/xlc
-_ALIASES.CC=	cc xlc
-CCPATH=		${XLCBASE}/bin/xlc
-PKG_CC:=	${_XLC_CC}
-.  if !empty(CC:M*gcc)
-CC:=		${PKG_CC:T}	# ${CC} should be named "xlc".
-.  endif
+LANGUAGES.xlc+=		c
+_XLC_VARS+=		CC
+_XLC_CC=		${_XLC_DIR}/bin/xlc
+_ALIASES.CC=		cc xlc
+CCPATH=			${XLCBASE}/bin/xlc
+PKG_CC:=		${_XLC_CC}
 .endif
 .if exists(${XLCBASE}/bin/xlc++)
-_XLC_VARS+=	CXX
-_XLC_CXX=	${_XLC_DIR}/bin/xlc++
-_ALIASES.CXX=	c++ xlc++
-CXXPATH=	${XLCBASE}/bin/xlc++
-PKG_CXX:=	${_XLC_CXX}
-.  if !empty(CXX:M*g++)
-CXX:=		${PKG_CXX:T}	# ${CXX} should be named "xlc++".
-.  endif
+LANGUAGES.xlc+=		c++
+_XLC_VARS+=		CXX
+_XLC_CXX=		${_XLC_DIR}/bin/xlc++
+_ALIASES.CXX=		c++ xlc++
+CXXPATH=		${XLCBASE}/bin/xlc++
+PKG_CXX:=		${_XLC_CXX}
 .endif
 _COMPILER_STRIP_VARS+=	${_XLC_VARS}
 
@@ -49,14 +75,22 @@ CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		IBM XL C
 .endif
 
+# Most packages assume alloca is available without #pragma alloca, so
+# make it the default.
+CFLAGS+=	-ma
+
+# _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
+# ones requested by the package in USE_LANGUAGES.
+#
+_LANGUAGES.xlc=		# empty
+.for _lang_ in ${USE_LANGUAGES}
+_LANGUAGES.xlc+=	${LANGUAGES.xlc:M${_lang_}}
+.endfor
+
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.xlc)
 PREPEND_PATH+=	${_XLC_DIR}/bin
 .endif
-
-# Most packages assume alloca is available without #pragma alloca, so
-# make it the default.
-CFLAGS+=-ma
 
 # Create compiler driver scripts in ${WRKDIR}.
 .for _var_ in ${_XLC_VARS}
@@ -77,5 +111,15 @@ ${_XLC_${_var_}}:
 .    endfor
 .  endif
 .endfor
+
+# Force the use of f2c-f77 for compiling Fortran.
+_XLC_USE_F2C=	no
+FCPATH=		/nonexistent
+.if !exists(${FCPATH})
+_XLC_USE_F2C=	yes
+.endif
+.if !empty(_XLC_USE_F2C:M[yY][eE][sS])
+.  include "../../mk/compiler/f2c.mk"
+.endif
 
 .endif	# COMPILER_XLC_MK

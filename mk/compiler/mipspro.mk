@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.26.2.2 2004/11/30 15:06:35 tv Exp $
+# $NetBSD: mipspro.mk,v 1.26.2.3 2005/01/13 20:11:55 tv Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
@@ -7,37 +7,28 @@ COMPILER_MIPSPRO_MK=	defined
 
 MIPSPROBASE?=	/usr
 
-# LANGUAGES.<compiler> is the list of supported languages by the compiler.
-# _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
-# requested by the package in USE_LANGUAGES.
-# 
-LANGUAGES.mipspro=	c c++
-_LANGUAGES.mipspro=	# empty
-.for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.mipspro+=	${LANGUAGES.mipspro:M${_lang_}}
-.endfor
+# LANGUAGES.<compiler> is the list of supported languages by the
+# compiler.
+#
+LANGUAGES.mipspro=	# empty
 
 _MIPSPRO_DIR=		${WRKDIR}/.mipspro
 _MIPSPRO_VARS=		# empty
 .if exists(${MIPSPROBASE}/bin/cc)
+LANGUAGES.mipspro+=	c
 _MIPSPRO_VARS+=		CC
 _MIPSPRO_CC=		${_MIPSPRO_DIR}/bin/cc
 _ALIASES.CC=		cc
 CCPATH=			${MIPSPROBASE}/bin/cc
 PKG_CC:=		${_MIPSPRO_CC}
-.  if !empty(CC:M*gcc)
-CC:=			${PKG_CC:T}	# ${CC} should be named "cc".
-.  endif
 .endif
 .if exists(${MIPSPROBASE}/bin/CC)
+LANGUAGES.mipspro+=	c++
 _MIPSPRO_VARS+=		CXX
 _MIPSPRO_CXX=		${_MIPSPRO_DIR}/bin/CC
 _ALIASES.CXX=		CC c++
 CXXPATH=		${MIPSPROBASE}/bin/CC
 PKG_CXX:=		${_MIPSPRO_CXX}
-.  if !empty(CXX:M*g++)
-CXX:=			${PKG_CXX:T}	 # ${CXX} should be named "CC"
-.  endif
 .endif
 _COMPILER_STRIP_VARS+=	${_MIPSPRO_VARS}
 
@@ -63,6 +54,14 @@ _COMPILER_ABI_FLAG.32=	-n32	# ABI == "32" is an alias for ABI == "n32"
 _COMPILER_ABI_FLAG.o32=	# empty
 _COMPILER_ABI_FLAG.n32=	-n32
 _COMPILER_ABI_FLAG.64=	-64
+
+# _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
+# ones requested by the package in USE_LANGUAGES.
+# 
+_LANGUAGES.mipspro=	# empty
+.for _lang_ in ${USE_LANGUAGES}
+_LANGUAGES.mipspro+=	${LANGUAGES.mipspro:M${_lang_}}
+.endfor
 
 # Prepend the path to the compiler to the PATH.
 .if !empty(_LANGUAGES.mipspro)
@@ -93,6 +92,16 @@ ${_MIPSPRO_${_var_}}:
 MABIFLAG=       -${ABI:C/^32$/n&/}
 CFLAGS+=        ${MABIFLAG}
 LDFLAGS+=       ${MABIFLAG}
+.endif
+
+# Force the use of f2c-f77 for compiling Fortran.
+_MIPSPRO_USE_F2C=	no
+FCPATH=			/nonexistent
+.if !exists(${FCPATH})
+_MIPSPRO_USE_F2C=	yes
+.endif
+.if !empty(_MIPSPRO_USE_F2C:M[yY][eE][sS])
+.  include "../../mk/compiler/f2c.mk"
 .endif
 
 .endif	# COMPILER_MIPSPRO_MK
