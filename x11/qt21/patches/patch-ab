@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/04/28 17:18:23 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2000/05/11 12:15:18 drochner Exp $
 
---- src/Makefile.in.orig	Tue Jul 20 04:45:37 1999
-+++ src/Makefile.in	Thu Oct 21 19:23:16 1999
+--- src/Makefile.in.orig	Wed Apr 12 15:27:06 2000
++++ src/Makefile.in	Thu May 11 10:32:08 2000
 @@ -2,7 +2,7 @@
  
  ####### Compiler, tools and options
@@ -16,11 +16,11 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/04/28 17:18:23 drochner Exp $
  ####### Target
  
 -DESTDIR = ../lib/
-+DESTDIR = 
++DESTDIR =
  VER_MAJ = 2
- VER_MIN = 0
- VER_PATCH = 2
-@@ -694,22 +694,10 @@
+ VER_MIN = 1
+ VER_PATCH = 0
+@@ -760,22 +760,10 @@
  
  ####### Implicit rules
  
