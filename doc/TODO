@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2735 2004/12/21 17:28:42 minskim Exp $
+$NetBSD: TODO,v 1.2736 2004/12/21 18:00:25 salo Exp $
 
 Suggested new packages
 ======================
@@ -638,7 +638,6 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.10.7
 	o lesstif-0.94.0
-	o lftp-3.0.13
 	o libast-0.6
 	o libcdio-0.71
 	o libcomprex-0.3.3
