@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:31 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/22 12:58:40 agc Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -83,6 +83,9 @@ include/gsl/gsl_odeiv.h
 include/gsl/gsl_permutation.h
 include/gsl/gsl_permute.h
 include/gsl/gsl_permute_char.h
+include/gsl/gsl_permute_complex_double.h
+include/gsl/gsl_permute_complex_float.h
+include/gsl/gsl_permute_complex_long_double.h
 include/gsl/gsl_permute_double.h
 include/gsl/gsl_permute_float.h
 include/gsl/gsl_permute_int.h
@@ -95,6 +98,9 @@ include/gsl/gsl_permute_ulong.h
 include/gsl/gsl_permute_ushort.h
 include/gsl/gsl_permute_vector.h
 include/gsl/gsl_permute_vector_char.h
+include/gsl/gsl_permute_vector_complex_double.h
+include/gsl/gsl_permute_vector_complex_float.h
+include/gsl/gsl_permute_vector_complex_long_double.h
 include/gsl/gsl_permute_vector_double.h
 include/gsl/gsl_permute_vector_float.h
 include/gsl/gsl_permute_vector_int.h
@@ -132,6 +138,7 @@ include/gsl/gsl_sf_gamma.h
 include/gsl/gsl_sf_gegenbauer.h
 include/gsl/gsl_sf_hyperg.h
 include/gsl/gsl_sf_laguerre.h
+include/gsl/gsl_sf_lambert.h
 include/gsl/gsl_sf_legendre.h
 include/gsl/gsl_sf_log.h
 include/gsl/gsl_sf_pow_int.h
@@ -216,6 +223,7 @@ info/gsl-ref.info-19
 info/gsl-ref.info-2
 info/gsl-ref.info-20
 info/gsl-ref.info-21
+info/gsl-ref.info-22
 info/gsl-ref.info-3
 info/gsl-ref.info-4
 info/gsl-ref.info-5
@@ -234,7 +242,10 @@ lib/libgslcblas.la
 lib/libgslcblas.so
 lib/libgslcblas.so.0
 lib/libgslcblas.so.0.0
+lib/pkgconfig/gsl.pc
 man/man1/gsl-config.1
+man/man1/gsl-histogram.1
+man/man1/gsl-randist.1
 man/man3/gsl.3
 share/aclocal/gsl.m4
 @dirrm include/gsl
