@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 1999/07/12 02:36:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.51 1999/07/21 22:59:22 garbled Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -8,6 +8,7 @@
 #    SUBDIR += aero
 #    SUBDIR += camediaplay
     SUBDIR += cdlabelgen
+    SUBDIR += clanlib
     SUBDIR += cqcam
 #    SUBDIR += dc3play
 #    SUBDIR += dore
