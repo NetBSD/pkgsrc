@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.44 2001/04/17 17:08:50 abs Exp $
+# $NetBSD: pkglint.pl,v 1.45 2001/04/19 13:25:42 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -693,7 +693,7 @@ sub checkmakefile {
 	$scriptdir =~ s/\$\{.CURDIR\}/./;
 
 	$distinfo = "distinfo";
-	$distinfo = $1 if ($whole =~ /\nDIGEST_FILE[+?]?=[ \t]*([^\n]+)\n/);
+	$distinfo = $1 if ($whole =~ /\nDISTINFO_FILE[+?]?=[ \t]*([^\n]+)\n/);
 	$distinfo =~ s/\$\{.CURDIR\}/./;
 	$distinfo =~ s/\${PKGSRCDIR}/..\/../;
 
