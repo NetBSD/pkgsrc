@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/11/19 09:16:49 cjep Exp $
+# $NetBSD: Makefile,v 1.25 2004/12/24 12:53:47 cjep Exp $
 
 DISTNAME=	nail-11.17
 CATEGORIES=	mail
@@ -23,7 +23,7 @@ MAKE_ENV+=	"SYSCONFDIR=${PKG_SYSCONFDIR}"
 MAKE_ENV+=	"IPv6=-DHAVE_IPv6_FUNCS"
 .endif
 
-.if (${OPSYS} == "SunOS")
+.if (${OPSYS} == "SunOS" || ${OPSYS} == "IRIX")
 MAKE_ENV+=	"SENDMAIL=/usr/lib/sendmail"
 .endif
 
