@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3141 2005/02/28 04:54:20 ben Exp $
+$NetBSD: TODO,v 1.3142 2005/02/28 09:14:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -330,6 +330,7 @@ Suggested package updates
 	o bonobo-conf-0.16
 	o boson-0.10
 	o browser-bookmarks-menu-0.4
+	o bsflite-0.73 [pkg/29548]
 	o btparse-0.34
 	o bugzilla-2.19.2
 	o bzflag-2.0.0
