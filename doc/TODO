@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3102 2005/02/23 18:14:43 wiz Exp $
+$NetBSD: TODO,v 1.3103 2005/02/23 18:15:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -700,7 +700,6 @@ Suggested package updates
 	o open2300-1.8
 	o opencobol-0.30
 	o openmotif-2.2.4
-	o opera7-7.54u1
 	o oregano-0.40.3
 	o oroborus-2.0.13.1
 	o osh-041231 [pkg/29506]
