@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:35:59 agc Exp $
+$NetBSD: patch-ab,v 1.3 1999/07/18 19:23:55 tron Exp $
 
---- mpg123.c	Wed Feb 11 23:15:08 1998
-+++ mpg123.c	Mon Apr 27 16:40:40 1998
-@@ -161,6 +161,9 @@
+--- mpg123.c.orig	Tue Jun 15 22:21:36 1999
++++ mpg123.c	Sun Jul 18 21:20:19 1999
+@@ -177,6 +177,9 @@
          _exit(0);
        default: /* parent */
          xfermem_init_writer (buffermem);
@@ -12,4 +12,12 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 10:35:59 agc Exp $
          param.outmode = DECODE_BUFFER;
      }
    }
-
+@@ -918,7 +921,7 @@
+ {
+      const char *term_type;
+          term_type = getenv("TERM");
+-         if (!strcmp(term_type,"xterm"))
++         if (term_type && !strcmp(term_type,"xterm"))
+          {
+            fprintf(stderr, "\033]0;%s\007", filename);
+          }
