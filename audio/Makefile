@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2004/05/10 01:49:24 minskim Exp $
+# $NetBSD: Makefile,v 1.236 2004/05/16 00:56:18 xtraeme Exp $
 #
 
 COMMENT=	Audio tools
@@ -61,6 +61,7 @@ SUBDIR+=	festvox-us1
 SUBDIR+=	festvox-us2
 SUBDIR+=	festvox-us3
 SUBDIR+=	flac
+SUBDIR+=	flac123
 SUBDIR+=	freezetag
 SUBDIR+=	gdcd
 SUBDIR+=	gkrellm-volume
