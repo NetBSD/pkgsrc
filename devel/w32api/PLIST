@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:16 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/18 03:25:46 kent Exp $
+cross/i386-netbsdpe/include/accctrl.h
+cross/i386-netbsdpe/include/aclapi.h
 cross/i386-netbsdpe/include/basetsd.h
 cross/i386-netbsdpe/include/basetyps.h
 cross/i386-netbsdpe/include/cderr.h
