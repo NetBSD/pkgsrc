@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/09/11 23:31:16 rh Exp $
+$NetBSD: patch-ac,v 1.2 2003/02/14 20:11:51 jmmv Exp $
 
---- libgnome/gnome-init.h.orig	Fri Sep  6 23:02:37 2002
-+++ libgnome/gnome-init.h	Fri Sep  6 23:02:47 2002
-@@ -32,8 +32,8 @@
- G_BEGIN_DECLS
- 
- /* This is where the user specific files are stored under $HOME */
+--- libgnome/gnome-init.h.orig	Fri Nov 22 14:47:27 2002
++++ libgnome/gnome-init.h
+@@ -36,8 +36,8 @@ G_BEGIN_DECLS
+  * to override .gnome2 via environment variable and this is
+  * an important feature for environments that mix GNOME versions)
+  */
 -#define GNOME_DOT_GNOME		".gnome2/"
 -#define GNOME_DOT_GNOME_PRIVATE	".gnome2_private/"
 +#define GNOME_DOT_GNOME		".gnome2"
