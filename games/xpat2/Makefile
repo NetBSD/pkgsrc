@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/09/03 10:09:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/11/30 17:48:05 agc Exp $
 # FreeBSD: ports/games/xpat2/Makefile,v 1.11 2000/04/14 12:27:59 asami Exp
 
 DISTNAME=	xpat2-1.06
@@ -11,7 +11,7 @@ USE_X11BASE=	YES
 USE_XPM=	YES
 
 EVAL_PREFIX=	XPMDIR=xpm
-MAKE_ENV+=	XPMDIR="${XPMDIR}"
+MAKE_ENV+=	XPMDIR="${XPMDIR}" XMKMF="${XMKMF}"
 
 post-install:
 	${CHOWN} root.games ${PREFIX}/bin/xpat2
