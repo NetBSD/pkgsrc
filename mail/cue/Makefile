@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/04/04 16:09:54 uebayasi Exp $
+# $NetBSD: Makefile,v 1.9 2002/04/05 23:44:40 wiz Exp $
 
 DISTNAME=	cue-snap-20010917
 PKGNAME=	cue-20010917
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=--enable-ipv6
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
 # require Canna, for now, cue assumes Japanese encoding anyways
-DEPENDS+=	Canna-lib>=3.5b2:../../japanese/canna-lib
+DEPENDS+=	Canna-lib>=3.5.2:../../japanese/canna-lib
 CONFIGURE_ARGS+=--with-canna=${LOCALBASE}
 
 do-install:
