@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2003/07/06 12:31:57 grant Exp $
+# $NetBSD: Makefile,v 1.64 2003/07/06 14:23:31 seb Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGREVISION=		3
@@ -37,7 +37,6 @@ INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
 GCC_PREFIX=		${PREFIX}/${PKGNAME_NOREV}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
-CONFIGURE_ARGS+=	--infodir=${GCC_PREFIX}/info
 
 .if ${OPSYS} == "SunOS"
 CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
@@ -92,19 +91,17 @@ post-build:
 #	make install; make deinstall; make install
 #
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${DISTNAME}
-	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/${DISTNAME}/mk.conf
 	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
 .else
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${DISTNAME}
-	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/${DISTNAME}/mk.conf
 .  if exists(/usr/include/g++/FlexLexer.h)
 	${LN} -fs /usr/include/g++/FlexLexer.h				\
 		${GCC_PREFIX}/include/g++-3/FlexLexer.h
 .  endif
 	${RM} -f ${GCC_ARCHDIR}/include/curses.h ${GCC_PREFIX}/bin/cc
 .endif
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${DISTNAME}
+	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/share/examples/${DISTNAME}/mk.conf
 	${LN} -s gcc ${GCC_PREFIX}/bin/cc
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
