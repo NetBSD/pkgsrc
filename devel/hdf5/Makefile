@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2001/03/22 13:28:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/14 21:43:42 jtb Exp $
 
 DISTNAME=		hdf5-1.4.0
 CATEGORIES=		devel
 MASTER_SITES=		ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.4.0/src/ \
 			ftp://sunsite.doc.ic.ac.uk/packages/HDF/HDF5/hdf5-1.4.0/src/
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://hdf.ncsa.uiuc.edu/HDF5/
 COMMENT=		Hierarchical Data Format (version 5)
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:40 jtb Exp $
 
 DISTNAME=		haskell-mode-20001129
 CATEGORIES=		devel editors
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.haskell.org/haskell-mode/
 COMMENT=		Haskell mode for Emacs
 

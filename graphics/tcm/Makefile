@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2001/04/11 21:31:59 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:45 jtb Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.cs.utwente.nl/pub/tcm/
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://wwwhome.cs.utwente.nl/~tcm/index.html
 COMMENT=		TCM - Toolkit for Conceptual Modeling
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:22:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:54 jtb Exp $
 
 DISTNAME=		odepack-20001130
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 COMMENT=		Systematized Collection of ODE Solvers
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL

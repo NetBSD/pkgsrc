@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/14 21:43:57 jtb Exp $
 
 DISTNAME=	tochnog-20010210
 CATEGORIES=	math
 MASTER_SITES=	ftp://tochnog.sourceforge.net/pub/tochnog/
 DISTFILES=	tn.tar.gz tnu.ps.gz tnp.ps.gz
 
-MAINTAINER=	jtb@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://tochnog.sourceforge.net
 COMMENT=	Finite Element Analysis Program
 

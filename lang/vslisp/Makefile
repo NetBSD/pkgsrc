@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2001/03/25 21:56:22 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/14 21:43:48 jtb Exp $
 
 DISTNAME=		vslisp-4.0-1
 PKGNAME=		vslisp-4.0.1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.sourceforge.net/pub/sourceforge/vslisp/
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://vslisp.sourceforge.net
 COMMENT=		Embeddable Lisp library and standalone interpreter
 

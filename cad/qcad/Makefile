@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/26 20:53:47 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/14 21:43:39 jtb Exp $
 
 DISTNAME=	qcad-1.4.7-src
 PKGNAME=	qcad-1.4.7
 CATEGORIES=	cad
 MASTER_SITES=	http://www.qcad.org/archives/
 
-MAINTAINER=	jtb@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.qcad.org/
 COMMENT=	2D CAD System
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2001/03/27 03:20:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/14 21:43:55 jtb Exp $
 
 DISTNAME=		pari-2.1.0
 CATEGORIES=		math
 MASTER_SITES=		ftp://www.gn-50uma.de/gn/gn-50uma.de/pari-2.1/ \
 			http://www.gn-50uma.de/ftp/pari-2.1/
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.parigp-home.de
 COMMENT=		PARI-GP is a software package for computer-aided number theory
 

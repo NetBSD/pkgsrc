@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:08:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/14 21:43:58 jtb Exp $
 #
 
 DISTNAME=	ascii-3.0
 CATEGORIES=	misc
 MASTER_SITES=	http://www.tuxedo.org/~esr/
 
-MAINTAINER=	jtb@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.tuxedo.org/~esr/software.html
 COMMENT=	ASCII character table program
 

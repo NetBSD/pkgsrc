@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/14 21:43:57 jtb Exp $
 
 DISTNAME=		superlu_2.0
 PKGNAME=		superlu-2.0
 CATEGORIES=		math
 MASTER_SITES=		http://www.nersc.gov/~xiaoye/SuperLU/
 
-MAINTAINER=		jtb@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.nersc.gov/~xiaoye/SuperLU/
 COMMENT=		ANSI C routine library for the solution of sparse linear systems
 

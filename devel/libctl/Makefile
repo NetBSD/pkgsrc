@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2001/02/24 13:42:06 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/14 21:43:40 jtb Exp $
 
 DISTNAME=	libctl-1.4
 CATEGORIES=	devel
 MASTER_SITES=	http://superjdj.mit.edu/libctl/
 
-MAINTAINER=	jtb@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://ab-initio.mit.edu/libctl/
 COMMENT=	Guile-based flexible control file library for scientific simulations
 
