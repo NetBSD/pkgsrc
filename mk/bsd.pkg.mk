@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1076 2002/10/22 22:57:56 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1077 2002/10/23 12:21:29 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -298,25 +298,6 @@ _ULIMIT_CMD=
 _ULIMIT_CMD+=	${ULIMIT_CMD_${__tmp__}} ;
 .    endif
 .  endfor
-.endif
-
-# -lintl in CONFIGURE_ENV is to workaround broken gettext.m4
-# (gettext.m4 does not add -lintl where it should, and fails to detect
-# if libintl.a is genuine GNU gettext or not).
-.if ${_DO_LIBINTL_CHECKS} == "yes"
-.  if defined(USE_LIBINTL)
-.    if exists(/usr/include/libintl.h)
-.      if defined(GNU_CONFIGURE)
-LIBS+=		-lintl
-.      endif
-.    else
-DEPENDS+=	gettext-lib>=0.10.35nb1:../../devel/gettext-lib
-.      if defined(GNU_CONFIGURE)
-CPPFLAGS+=	-I${LOCALBASE}/include
-LIBS+=		-L${LOCALBASE}/lib -lintl
-.      endif
-.    endif
-.  endif
 .endif
 
 CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
