@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2000/01/16 01:29:32 jlam Exp $
+# $NetBSD: Makefile,v 1.138 2000/01/16 23:28:04 jwise Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -59,6 +59,7 @@
 #    SUBDIR += gwm
     SUBDIR += intlfonts
 #    SUBDIR += iv
+    SUBDIR += jmk-fonts
     SUBDIR += kde
     SUBDIR += kdebase
     SUBDIR += kdelibs
