@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/09/23 20:37:35 tron Exp $
+
+SHA1 (mplex-1.1.tar.gz) = 7ec708cc6b00d6e8e8f897bce964588132ec14ad
+Size (mplex-1.1.tar.gz) = 34902 bytes
+SHA1 (patch-ab) = 5e0e2f25d101bb746cb06e3e17e7c8e63611cc84
+SHA1 (patch-ac) = 11af0e69112c8090db4d0c31b8dc55c2381b0c05
+SHA1 (patch-ad) = efc9107ddb55e610d4f1207a9cf3e4e4b7b86e99
+SHA1 (patch-ae) = 599b4ad7fbd01db6ab2b4f79dfdd5e450b8f02de
+SHA1 (patch-af) = 61736884ba8d487baf8606e639d95c22642d4395
