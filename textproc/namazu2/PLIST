@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/02/13 09:52:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/02/13 16:19:08 taca Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz
@@ -63,8 +63,8 @@ share/namazu/etc/README-es
 share/namazu/etc/README-ja
 share/namazu/etc/THANKS
 share/namazu/etc/TODO
-@dirrm share/namazu/etc
 share/namazu/etc/namazu.png
+@dirrm share/namazu/etc
 share/namazu/filter/apachecache.pl
 share/namazu/filter/bzip2.pl
 share/namazu/filter/compress.pl
