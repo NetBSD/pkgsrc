@@ -1,9 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
+$NetBSD: patch-af,v 1.2 1999/12/06 02:19:27 sakamoto Exp $
 
---- Makefile.orig	Sun Apr 11 21:15:17 1999
-+++ Makefile	Mon Apr 19 15:35:32 1999
-@@ -17,17 +17,11 @@
- # Compiler & flags
+--- ./Makefile.orig	Wed Nov  3 06:05:02 1999
++++ ./Makefile	Mon Dec  6 11:04:20 1999
+@@ -18,15 +18,9 @@
  INCLUDE=-I../utils
  CFLAGS= -Wall -g -O2
 -CC=g++ $(CFLAGS) $(INCLUDE)
@@ -22,9 +21,7 @@ $NetBSD: patch-af,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
 +LD=$(LIBTOOL) --mode=link g++
  
  #######################################
- # You shouldn't need to look any further..
-@@ -38,20 +32,23 @@
- export LD
+@@ -39,18 +33,21 @@
  export LIBS
  
 -all: bin/ncp bin/rfsv
@@ -55,13 +52,10 @@ $NetBSD: patch-af,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
 +	cp ncp/ncp /usr/local/bin/ncp
  
  clean:
- 	cd utils; $(MAKE) clean
-@@ -59,7 +56,7 @@
- 	cd rfsv; $(MAKE) clean
+@@ -60,5 +57,5 @@
  	rm -f ncp.log *~ core
  
 -test: bin/ncp bin/rfsv
 +test: all
  	PATH=`pwd`/bin:$${PATH}; export PATH;\
  		rfsv dir "C:/documents/"
- 	@echo

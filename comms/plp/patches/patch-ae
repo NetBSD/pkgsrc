@@ -1,9 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
+$NetBSD: patch-ae,v 1.2 1999/12/06 02:19:26 sakamoto Exp $
 
---- utils/Makefile.orig	Mon Jan 18 01:22:40 1999
-+++ utils/Makefile	Mon Apr 19 12:56:10 1999
-@@ -3,14 +3,14 @@
- 
+--- ./utils/Makefile.orig	Mon Jan 18 01:22:40 1999
++++ ./utils/Makefile	Mon Dec  6 11:04:20 1999
+@@ -4,13 +4,13 @@
  OBJ=$(CCSOURCE:%.cc=%.o) $(CSOURCE:%.c=%.o)
  
 -libutils.a : $(OBJ)

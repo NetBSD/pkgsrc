@@ -1,9 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
+$NetBSD: patch-ab,v 1.2 1999/12/06 02:19:26 sakamoto Exp $
 
---- ncp/mp_serial.c.orig	Mon Feb  1 19:14:31 1999
-+++ ncp/mp_serial.c	Mon Apr 19 10:51:46 1999
-@@ -223,8 +223,8 @@
- void ser_exit(int fd)
+--- ./ncp/mp_serial.c.orig	Wed Nov  3 05:47:06 1999
++++ ./ncp/mp_serial.c	Mon Dec  6 11:04:20 1999
+@@ -224,6 +224,6 @@
  {
    struct termios ti;
 -  if(ioctl(fd, TCGETS, (caddr_t)&ti) < 0) {
@@ -12,4 +11,3 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/05/06 07:39:08 sakamoto Exp $
 +    perror("TIOCGETA");
    }
    ti.c_cflag &= ~CRTSCTS;
-   if(tcsetattr(fd, TCSANOW, &ti) < 0) {
