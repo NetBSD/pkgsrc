@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/11/13 21:28:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/15 18:42:04 jlam Exp $
 
 DISTNAME=	DB_File-1.806
 PKGNAME=	p5-${DISTNAME}
@@ -10,21 +10,15 @@ MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Perl5 module to use Berkeley DB version 1 API
 
 USE_BUILDLINK3=	yes
-USE_DB185=	yes
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DB_File/.packlist
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bdb.buildlink3.mk"
 
-# XXX This is a bit ugly...
-DB_NAME=		${BUILDLINK_TRANSFORM:Ml\:db\:*:S/l:db:/-l/}
-MAKE_ENV+=		DB_NAME=${DB_NAME}
-PERL5_LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.db}/lib
-PERL5_LDFLAGS+=		-L${BUILDLINK_PREFIX.db}/lib
-MAKE_ENV+=		DB_CPPFLAGS=${BUILDLINK_CPPFLAGS.db}
-.if ${BDB_TYPE} == "db2"
-MAKE_ENV+=		DB_FILE_COMPAT185=1
-.endif
+MAKE_ENV+=	DB_NAME="${BDB_LIBS}"
+MAKE_ENV+=	DB_FILE_INCLUDE="${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}"
+MAKE_ENV+=	DB_FILE_LIB="${BDBBASE}/lib"
+MAKE_ENV+=	DB_FILE_COMPAT185=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
