@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/05 01:17:48 hubertf Exp $
+
+--- Makefile.orig	Thu Dec 10 21:33:10 1998
++++ Makefile	Fri Jan  1 19:43:28 1999
+@@ -4,17 +4,17 @@
+ 
+ ####### Installation directory
+ 
+-XGLOBE_DIR     = /usr/local
+-XGLOBE_LIB_DIR = $(XGLOBE_DIR)/lib/xglobe
++XGLOBE_DIR     = ${PREFIX}
++XGLOBE_LIB_DIR = $(XGLOBE_DIR)/lib/X11/xglobe
+ XGLOBE_BIN_DIR = $(XGLOBE_DIR)/bin
+ 
+ ####### Library directories - you may need to modify these
+ 
+-X11_INCLUDE_DIR = /usr/X11R6/include
+-QT_INCLUDE_DIR  = $(QTDIR)/include
++X11_INCLUDE_DIR = ${X11BASE}/include
++QT_INCLUDE_DIR  = $(QTDIR)/include/qt
+ 
+ QT_LIB_DIR      = $(QTDIR)/lib
+-X11_LIB_DIR     = /usr/X11R6/lib
++X11_LIB_DIR     = ${X11BASE}/lib
+ 
+ 
+ ####### Compiler and tools
+@@ -22,7 +22,7 @@
+ CPP     = g++
+ LINK    = g++
+ MOC     = moc
+-INSTALL = install
++INSTALL = install -c
+ 
+ ####### compile and link options
+ 
