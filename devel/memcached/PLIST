@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/09 05:37:30 xtraeme Exp $
+man/man1/memcached.1
+sbin/memcached
+share/doc/memcached/memory_management.txt
+share/doc/memcached/protocol.txt
+@dirrm share/doc/memcached
