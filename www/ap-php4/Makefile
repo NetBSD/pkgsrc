@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/17 21:04:20 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/19 07:49:41 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
@@ -9,6 +9,9 @@ HOMEPAGE=		http://www.php.net/
 
 DEPENDS+=		php-${PHP_VERS}:../../www/php4
 DEPENDS+=		apache>=1.3:../../www/apache
+
+# For "apxs":
+BUILD_DEPENDS+=		${PERL5}:../../lang/perl5-base
 
 CONFIGURE_ARGS+=	--with-apxs=${LOCALBASE}/sbin/apxs
 
