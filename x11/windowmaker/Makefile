@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2000/08/23 23:14:34 tron Exp $
+# $NetBSD: Makefile,v 1.55 2000/11/30 00:02:19 tron Exp $
 
 DISTNAME=		WindowMaker-0.62.1
 PKGNAME=		windowmaker-0.62.1
@@ -11,7 +11,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		gettextize:../../devel/gettext
 DEPENDS+=		libproplist-0.10.*:../../devel/libproplist
 DEPENDS+=		libungif-*:../../graphics/libungif
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
@@ -19,6 +19,7 @@ DEPENDS+=		png>=1.0.6:../../graphics/png
 DEPENDS+=		tiff-*:../../graphics/tiff
 
 USE_LIBTOOL=		YES
+USE_LIBINTL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		YES
 USE_XPM=		YES
