@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2000/07/04 21:52:01 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2000/07/05 13:56:13 rh Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
+    SUBDIR += antiword
     SUBDIR += catdoc
     SUBDIR += cdif
     SUBDIR += dict-client
