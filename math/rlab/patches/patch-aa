@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2001/02/01 04:44:51 jtb Exp $
+$NetBSD: patch-aa,v 1.4 2001/02/11 23:06:03 jtb Exp $
 
 --- configure.in.orig	Fri Dec 17 16:01:06 1999
 +++ configure.in
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.3 2001/02/01 04:44:51 jtb Exp $
  fi
  
  X11LIB="$xlibdir -lX11"
-@@ -551,16 +551,20 @@
+@@ -551,12 +551,6 @@
    PLOT_PROG="gnuplot"
  ])
  
@@ -60,21 +60,7 @@ $NetBSD: patch-aa,v 1.3 2001/02/01 04:44:51 jtb Exp $
  dnl ------------------------------------------------------------------
  dnl Check for specification of Plplot directory root
  dnl
- 
-+AC_ARG_WITH(tcl, [   --with-tcl           location of Tcl],
-+[
-+  TCLLIB="-Wl,-R$withval/lib -L$withval/lib -ltcl83"
-+])
-+
-+AC_ARG_WITH(tk, [   --with-tk           location of Tk],
-+[
-+  TKLIB="-Wl,-R$withval/lib -L$withval/lib -ltk83"
-+])
-+
- AC_ARG_WITH(plplot, [   --with-plplot           use Plplot],
- [
-   if test -n "$PLOT_PROG" ; then
-@@ -572,11 +576,12 @@
+@@ -572,11 +566,12 @@
      exit 1;
    fi
  
@@ -86,11 +72,11 @@ $NetBSD: patch-aa,v 1.3 2001/02/01 04:44:51 jtb Exp $
 -  PLIB_INC_DIR="-I$withval"
 -  PLIBS="-L$withval -lplplotdX $X11LIB"
 +  PLIB_INC_DIR=-I$withval/include
-+  PLIBS="-L$withval/lib/plplot -lplplotd -lplmatrix $TKLIB $TCLLIB $X11LIB"
++  PLIBS=`plplot_linkage`
  ])
  
  dnl ------------------------------------------------------------------
-@@ -593,12 +598,6 @@
+@@ -593,12 +588,6 @@
    PLOT_PROG="plotmtv"
  ])
  
@@ -103,7 +89,7 @@ $NetBSD: patch-aa,v 1.3 2001/02/01 04:44:51 jtb Exp $
  dnl ------------------------------------------------------------------
  dnl Use the Pgraf interface.
  dnl
-@@ -613,12 +612,6 @@
+@@ -613,12 +602,6 @@
    PLOT_PROG="pgraf"
  ])
  
@@ -116,7 +102,7 @@ $NetBSD: patch-aa,v 1.3 2001/02/01 04:44:51 jtb Exp $
  dnl ------------------------------------------------------------------
  dnl Check for specification of PGplot directory root
  dnl
-@@ -648,14 +641,13 @@
+@@ -648,14 +631,13 @@
  dnl then setup for GC. The default action (nothing is specified) is to
  dnl configure for GC.
  
@@ -138,7 +124,7 @@ $NetBSD: patch-aa,v 1.3 2001/02/01 04:44:51 jtb Exp $
  dnl ------------------------------------------------------------------
  
  AC_TRY_LINK([#include <stdio.h>],
-@@ -738,6 +730,7 @@
+@@ -738,6 +720,7 @@
  AC_SUBST(PAGER)
  AC_SUBST(CFLAGS)
  AC_SUBST(FFLAGS)
