@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 1999/05/31 22:22:08 tron Exp $
+# $NetBSD: Makefile,v 1.16 1999/06/02 20:09:02 christos Exp $
 #
 
-DISTNAME=	mtools-3.9.1
+DISTNAME=	mtools-3.9.5
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.tux.org/pub/tux/knaff/mtools/
 
 PATCH_SITES=	ftp://ftp.tux.org/pub/tux/knaff/mtools/
-PATCHFILES=	mtools-3.9.1-0907b.diff.gz
+PATCHFILES=	mtools-3.9.5-0905.diff.gz
 
 MAINTAINER=	is@netbsd.org
 HOMEPAGE=	http://www.tux.org/pub/knaff/mtools/
