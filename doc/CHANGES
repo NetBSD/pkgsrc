@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1497 2003/02/27 13:03:34 wulf Exp $
+$NetBSD: CHANGES,v 1.1498 2003/02/27 13:26:14 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -854,3 +854,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed lukemftpd [lukem 2003-02-27]
 	Added tnftpd-2.0rc3 [lukem 2003-02-27]
 	Updated swi-prolog to 5.0.10 [wulf 2003-02-28]
+	Updated cyrus-imapd to 2.1.12 [seb 2003-02-27]
+	Updated cyrus-sasl to 2.1.12 [seb 2003-02-27]
