@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/11/13 01:50:21 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/11/23 15:01:39 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -21,8 +21,10 @@ USE_X11=	yes
 USE_MOTIF=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
-		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
+
+LDFLAGS+=	-L${X11BASE}/lib
+
+CONFIGURE_ENV= CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
 CONFIGURE_ARGS=	--with-zdir=/usr --with-jpegdir=${LOCALBASE} --with-pngdir=${LOCALBASE}
 
 do-install:
