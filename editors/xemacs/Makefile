@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/06/30 00:11:28 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/07/03 15:43:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
 DISTNAME=	xemacs-21.1.3
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	${MACHINE_GNU_ARCH}--netbsd --prefix=${PREFIX} \
 			${WITH_DIALOGS} ${WITH_XFACE} \
 			--infopath="${PREFIX}/info:${X11BASE}/info:/usr/local/info" \
 			--lockdir=/var/tmp/xemacs.lock \
-			--site-includes=${PREFIX}/include \
+			--site-includes=${PREFIX}/include:${WRKDIR} \
 			--site-libraries=${PREFIX}/lib
 
 CFLAGS+=		-Dunix
@@ -54,6 +54,8 @@ post-patch:
 
 pre-configure:
 	@${ECHO} "To compile in the support for xface, set the environment variable USE_XFACE."
+	@${MKDIR} ${WRKDIR}/sys
+	@${LN} -s /usr/include/soundcard.h ${WRKDIR}/sys
 
 post-install:
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/xemacs-21.1-p3
