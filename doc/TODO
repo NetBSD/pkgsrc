@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2638 2004/12/03 13:29:20 wiz Exp $
+$NetBSD: TODO,v 1.2639 2004/12/03 13:31:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -570,7 +570,6 @@ Suggested package updates
 	o idesk-0.5.6
 	o ijs-0.35
 	o imlib-1.9.15
-	o imp-3.2.6
 	o inform-6.30 [pkg/24631]
 	o inform-6.30.2
 	o inkscape-0.40
@@ -578,7 +577,6 @@ Suggested package updates
 	o intltool-0.32.1
 	o ion3-devel-20041104
 	o ipcheck-0.219
-	o iperf-2.0.1
 	o ircd-hybrid-7.0.4
 	o ircservices-5.0.42
 	o iroffer-1.309
