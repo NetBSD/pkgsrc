@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/08/09 10:44:39 seb Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/11 01:46:30 abs Exp $
 
 DISTNAME=		dmalloc-5.2.1
 CATEGORIES=		devel
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.dmalloc.com/
 COMMENT=		Run-time configurable debugging malloc library
 
 USE_BUILDLINK2=		yes
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shlib
 CFLAGS+=		-fPIC -DPIC
