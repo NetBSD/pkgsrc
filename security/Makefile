@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2004/10/19 16:42:03 adrianp Exp $
+# $NetBSD: Makefile,v 1.201 2004/10/23 13:31:57 shannonjr Exp $
 #
 
 COMMENT=	Security tools
@@ -73,6 +73,7 @@ SUBDIR+=	john
 SUBDIR+=	keychain
 SUBDIR+=	kssh
 SUBDIR+=	kth-krb4
+SUBDIR+=	libassuan
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
 SUBDIR+=	libdes
@@ -155,6 +156,7 @@ SUBDIR+=	pgpdump
 SUBDIR+=	php4-mcrypt
 SUBDIR+=	php4-mhash
 SUBDIR+=	php4-openssl
+SUBDIR+=	pinentry
 SUBDIR+=	pinepgp
 SUBDIR+=	pks
 SUBDIR+=	portsentry
