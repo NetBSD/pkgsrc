@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.11 2004/11/11 22:29:03 tv Exp $
 
 --- libtool.m4.orig	2004-09-19 08:15:08.000000000 -0400
 +++ libtool.m4
@@ -175,8 +175,11 @@ $NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
    irix5* | irix6*)
      case $cc_basename in
        CC)
-@@ -3210,6 +3220,13 @@ case $host_os in
+@@ -3208,14 +3218,29 @@ case $host_os in
+     ;;
+   netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++      # a.out is quite broken and goes directly to ld
        _LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
        wlarc=
 +      # Determine if we need to override the c++rt0 that is
@@ -189,7 +192,22 @@ $NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
        _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
        _LT_AC_TAGVAR(hardcode_direct, $1)=yes
        _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-@@ -3651,6 +3668,21 @@ if AC_TRY_EVAL(ac_compile); then
++      output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | grep conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
++    elif $CC -dumpspecs | grep -- '-lgcc -lc -lgcc' >/dev/null; then
++      # Workaround some broken pre-1.5 ELF toolchains
++      output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | grep conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
++    else
++      # Modern ELF works sanely as-is
++      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      output_verbose_link_cmd='echo'
+     fi
+-    # Workaround some broken pre-1.5 toolchains
+-    output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | grep conftest.$objext | $SED -e "s:-lgcc -lc -lgcc::"'
+     ;;
+   openbsd2*)
+     # C++ shared libraries are fairly broken
+@@ -3651,6 +3676,21 @@ if AC_TRY_EVAL(ac_compile); then
      esac
    done
  
@@ -211,7 +229,7 @@ $NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -4591,9 +4623,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4591,9 +4631,11 @@ AC_MSG_CHECKING([for $compiler option to
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -224,7 +242,7 @@ $NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -4615,6 +4649,10 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4615,6 +4657,10 @@ AC_MSG_CHECKING([for $compiler option to
  	;;
        esac
        ;;
@@ -235,7 +253,7 @@ $NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -4689,6 +4727,8 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4689,6 +4735,8 @@ AC_MSG_CHECKING([for $compiler option to
  	    ;;
  	esac
  	;;
@@ -244,7 +262,7 @@ $NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -4854,9 +4894,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4854,9 +4902,11 @@ AC_MSG_CHECKING([for $compiler option to
        ;;
  
      darwin* | rhapsody*)
@@ -257,7 +275,7 @@ $NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
        ;;
  
      msdosdjgpp*)
-@@ -4885,6 +4927,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4885,6 +4935,11 @@ AC_MSG_CHECKING([for $compiler option to
        esac
        ;;
  
@@ -269,7 +287,7 @@ $NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -5187,6 +5234,17 @@ EOF
+@@ -5187,6 +5242,17 @@ EOF
        fi
        ;;
  
@@ -287,7 +305,7 @@ $NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5592,6 +5650,21 @@ $echo "local: *; };" >> $output_objdir/$
+@@ -5592,6 +5658,21 @@ $echo "local: *; };" >> $output_objdir/$
        fi
        ;;
  
