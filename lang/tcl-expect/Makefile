@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2001/10/24 23:40:02 jwise Exp $
+# $NetBSD: Makefile,v 1.9 2001/10/25 22:21:52 jwise Exp $
 #
 
-DISTNAME=	expect
-PKGNAME=	tcl-expect-5.33
+DISTNAME=	expect-5.33.0
+PKGNAME=	tcl-expect-5.33.0
 CATEGORIES=	lang
-MASTER_SITES=	http://expect.nist.gov/
+MASTER_SITES=	http://expect.nist.gov/src/
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://expect.nist.gov/
@@ -12,10 +12,8 @@ COMMENT=	extensions to Tcl to support scripting of interactive programs
 
 DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 
-CONFLICTS+=	expect-[0-9]*
-
 WRKSRC=		${WRKDIR}/expect-5.33
-DIST_SUBDIR=	expect-5.33
+CONFLICTS+=	expect-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
