@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:18:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/11 20:50:57 abs Exp $
 
 DISTNAME=	${DISTNAME_${OPSYS}_${MACHINE_ARCH}}
 PKGNAME=	dnetc-2.8015.469
@@ -10,15 +10,16 @@ MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.distributed.net/
 COMMENT=	official distributed.net client
 
-ONLY_FOR_PLATFORM=	Darwin-*-powerpc NetBSD-*-alpha NetBSD-*-arm32 \
-			NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-sparc \
-			SunOS-*-sparc
+ONLY_FOR_PLATFORM=	Darwin-*-powerpc NetBSD-*-alpha NetBSD-*-arm	\
+			NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k	\
+			NetBSD-*-sparc SunOS-*-sparc
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES
 
 DISTNAME_Darwin_powerpc=	dnetc-darwin-ppc
 DISTNAME_NetBSD_m68k=		dnetc-netbsd-68k
 DISTNAME_NetBSD_alpha=		dnetc-netbsd-alpha
+DISTNAME_NetBSD_arm=		dnetc-netbsd-arm32
 DISTNAME_NetBSD_arm32=		dnetc-netbsd-arm32
 DISTNAME_NetBSD_i386=		dnetc-netbsd-i386-elf
 DISTNAME_NetBSD_sparc=		dnetc-netbsd-sparc-elf
