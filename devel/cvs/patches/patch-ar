@@ -1,24 +1,24 @@
-$NetBSD: patch-ar,v 1.5 2002/11/24 21:31:25 hubertf Exp $
+$NetBSD: patch-ar,v 1.6 2003/01/15 22:49:38 wiz Exp $
 
---- src/server.c.orig	Tue Mar 19 20:15:45 2002
+--- src/server.c.orig	Wed Jan 15 23:00:31 2003
 +++ src/server.c
-@@ -782,6 +782,7 @@
+@@ -772,6 +772,7 @@ E Protocol error: Root says \"%s\" but p
         nothing.  But for rsh, we need to do it now.  */
      parse_config (current_parsed_root->directory);
  
 +    if (!nolock) {
-     path = malloc (strlen (current_parsed_root->directory)
+     path = xmalloc (strlen (current_parsed_root->directory)
  		   + sizeof (CVSROOTADM)
  		   + 2);
-@@ -799,6 +800,7 @@
+@@ -789,6 +790,7 @@ E Protocol error: Root says \"%s\" but p
  	pending_error = save_errno;
      }
      free (path);
 +    }
  
  #ifdef HAVE_PUTENV
-     env = malloc (strlen (CVSROOT_ENV) + strlen (current_parsed_root->directory) + 2);
-@@ -2181,6 +2183,8 @@
+     env = xmalloc (strlen (CVSROOT_ENV) + strlen (current_parsed_root->directory) + 2);
+@@ -2174,6 +2176,8 @@ serve_global_option (arg)
      {
  	case 'n':
  	    noexec = 1;
@@ -27,7 +27,7 @@ $NetBSD: patch-ar,v 1.5 2002/11/24 21:31:25 hubertf Exp $
  	    break;
  	case 'q':
  	    quiet = 1;
-@@ -5283,6 +5287,7 @@
+@@ -5237,6 +5241,7 @@ switch_to_user (username)
      const char *username;
  {
      struct passwd *pw;
@@ -35,7 +35,7 @@ $NetBSD: patch-ar,v 1.5 2002/11/24 21:31:25 hubertf Exp $
  
      pw = getpwnam (username);
      if (pw == NULL)
-@@ -5342,7 +5347,15 @@
+@@ -5296,7 +5301,15 @@ error 0 %s: no such user\n", username);
  	}
      }
  

@@ -1,30 +1,8 @@
-$NetBSD: patch-av,v 1.6 2002/11/24 21:31:25 hubertf Exp $
+$NetBSD: patch-av,v 1.7 2003/01/15 22:49:38 wiz Exp $
 
---- configure.in.orig	Tue Mar 26 17:16:02 2002
+--- configure.in.orig	Wed Jan 15 23:00:31 2003
 +++ configure.in
-@@ -223,16 +223,19 @@
- dnl libkrb in the system libraries, so --with-krb4=value needs to
- dnl override the system -lkrb.
- dnl
--KRB4=/usr/kerberos
-+KRB4=
- define(WITH_KRB4,[
- AC_ARG_WITH([krb4],
-   [  --with-krb4=value       set default \$(KRB4) from value],
--  [KRB4=$withval],
-+  [if test X"$withval" != X"no"; then KRB4=$withval; fi],
- )dnl
-+if test X"$KRB4" != X""; then
- echo "default place for krb4 is $KRB4"
-+fi
- AC_SUBST(KRB4)])dnl
- WITH_KRB4
- 
-+if test X"$KRB4" != X""; then
- krb_h=
- AC_MSG_CHECKING([for krb.h])
- if test "$cross_compiling" != yes && test -r $KRB4/include/krb.h; then
-@@ -272,7 +275,7 @@
+@@ -345,7 +345,7 @@ if test -n "$krb_h"; then
             [LDFLAGS=$hold_ldflags
              # Using open here instead of printf so we don't
              # get confused by the cached value for printf from above.
@@ -33,9 +11,9 @@ $NetBSD: patch-av,v 1.6 2002/11/24 21:31:25 hubertf Exp $
         LDFLAGS=$hold_ldflags
    else
         AC_CHECK_LIB(krb,printf,[krb_lib=yes krb_libdir=])
-@@ -280,7 +283,7 @@
-   if test -n "$krb_lib"; then
-     AC_DEFINE(HAVE_KERBEROS)
+@@ -354,7 +354,7 @@ if test -n "$krb_h"; then
+     AC_DEFINE([HAVE_KERBEROS], 1,
+ 	      [Define if you have MIT Kerberos version 4 available.])
      test -n "${krb_libdir}" && LIBS="${LIBS} -L${krb_libdir}"
 -    LIBS="${LIBS} -lkrb"
 +    LIBS="${LIBS} -lkrb -ldes -lcom_err -lroken -lcrypt"
