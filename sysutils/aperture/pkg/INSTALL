@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2000/01/05 18:02:19 jlam Exp $
+
+case $2 in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	/bin/cat << EOF
+===========================================================================
+Add the following line to /etc/lkm.conf:
+
+    ${PKG_PREFIX}/lkm/xf86.o    - -  ${PKG_PREFIX}/lkm/xf86_mod_install - -
+
+and set:
+
+    lkm=YES
+
+in /etc/rc.conf.  Then, reboot your system.
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0

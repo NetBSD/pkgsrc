@@ -1,0 +1,16 @@
+This module was originally written to help work around the security
+feature of NetBSD that prevents read/write access to /dev/mem. It also
+provide Pentium II and AMD K6 MTRR control in order to control
+write-combining to the framebuffer memory.
+
+XFree86 can take advantage of having direct access to video
+memory (especially with VLB and PCI cards) and even requires it for
+the most recent PCI or AGP video boards.
+
+This driver works like the standard /dev/mem driver. It just allows
+mapping of the VGA framebuffer and BIOS even if kernel security level
+is > 0.  The driver only implements the open(), close(), ioctl() and
+mmap()  calls. In order not to defeat kernel security, only one open()
+at a  time is allowed and only a process with effective user id of 0 can
+perform it. So while you're running XFree86, no other process will be
+allowed to open /dev/xf86.
