@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9375 2005/03/01 15:37:28 wiz Exp $
+$NetBSD: CHANGES,v 1.9376 2005/03/01 16:07:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1216,3 +1216,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wesnoth to 0.8.11 [wiz 2005-03-01]
 	Updated unace to 1.2.2nb1 [wiz 2005-03-01]
 	Updated cvs to 1.11.19 [wiz 2005-03-01]
+	Updated wu-ftpd to 2.6.2nb3 [wiz 2005-03-01]
