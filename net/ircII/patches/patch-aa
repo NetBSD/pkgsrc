@@ -1,14 +1,8 @@
-$NetBSD: patch-aa,v 1.5 1999/08/28 08:30:08 mrg Exp $
+$NetBSD: patch-aa,v 1.6 1999/11/29 11:45:14 frueauf Exp $
 
-Index: configure.in
-===================================================================
-RCS file: /home/cvs/ircii/configure.in,v
-retrieving revision 1.114
-retrieving revision 1.115
-diff -p -u -r1.114 -r1.115
---- configure.in	1999/08/23 12:05:58	1.114
-+++ configure.in	1999/08/24 14:16:02	1.115
-@@ -734,7 +734,7 @@ AC_ARG_WITH(cast,
+--- configure.in.orig	Mon Aug 23 14:06:36 1999
++++ configure.in	Mon Nov 29 01:26:53 1999
+@@ -734,7 +734,7 @@
        CAST_SRC=cast.c
        ;;
    esac ],
@@ -17,3 +11,24 @@ diff -p -u -r1.114 -r1.115
      AC_MSG_RESULT(yes)
      AC_DEFINE_UNQUOTED(USE_CAST, 1)
      CAST_SRC=cast.c
+@@ -809,11 +809,15 @@
+ 	      withval="-lsocks5"
+ 	    else
+ 	      if test -d "$withval"; then
+-		if test -d "$withval/include"; then
+-		  CFLAGS="$CFLAGS -I$withval/include"
+-		else
+-		  CFLAGS="$CFLAGS -I$withval"
+-		fi
++#
++# On NetBSD avoid problems if the ncurses package is installed. $withval/include
++# should be after the local includes in the include path.
++#
++#		if test -d "$withval/include"; then
++#		  CFLAGS="$CFLAGS -I$withval/include"
++#		else
++#		  CFLAGS="$CFLAGS -I$withval"
++#		fi
+ 	        if test -d "$withval/lib"; then
+ 		  withval="-L$withval/lib -lsocks5"
+ 		else
