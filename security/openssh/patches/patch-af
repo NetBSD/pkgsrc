@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.6 2004/08/04 06:43:52 minskim Exp $
+
+--- dns.c.orig	Fri Nov 21 06:48:55 2003
++++ dns.c
+@@ -28,6 +28,7 @@
+ 
+ #include "includes.h"
+ 
++#ifndef __INTERIX
+ #include <openssl/bn.h>
+ #ifdef LWRES
+ #include <lwres/netdb.h>
+@@ -273,3 +274,4 @@ export_dns_rr(const char *hostname, cons
+ 
+ 	return success;
+ }
++#endif /* __INTERIX */
