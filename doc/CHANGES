@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3154 2003/08/30 21:02:40 jtb Exp $
+$NetBSD: CHANGES,v 1.3155 2003/08/30 21:12:21 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3404,3 +3404,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-Scalar-List-Utils-1.12 [he 2003-08-30]
 	Updated aribas to 1.40 [jtb 2003-08-30]
 	Updated oo2c to 2.0.11 [jtb 2003-08-30]
+	Updated chemtool to 1.6 [jtb 2003-08-30]
