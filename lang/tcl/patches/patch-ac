@@ -1,0 +1,44 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/08/24 19:53:33 jwise Exp $
+--- tclUnixInit.c.orig	Mon Aug  7 17:31:12 2000
++++ tclUnixInit.c	Thu Aug 24 14:24:13 2000
+@@ -22,6 +22,11 @@
+ #	include <dlfcn.h>
+ #   endif
+ #endif
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#include <sys/sysctl.h>
++#include <sys/utsname.h>
++#endif
+ 
+ /*
+  * The Init script (common to Windows and Unix platforms) is
+@@ -531,6 +536,11 @@
+     int unameOK;
+     char *user;
+     Tcl_DString ds;
++#if defined(__NetBSD__)
++    char machine_arch[SYS_NMLN];
++    int mib[2] = { CTL_HW, HW_MACHINE_ARCH };
++    size_t len = sizeof(machine_arch);
++#endif
+ 
+     Tcl_SetVar(interp, "tclDefaultLibrary", defaultLibraryDir, TCL_GLOBAL_ONLY);
+     Tcl_SetVar(interp, "tcl_pkgPath", pkgPath, TCL_GLOBAL_ONLY);
+@@ -566,8 +576,16 @@
+ 	    Tcl_SetVar2(interp, "tcl_platform", "osVersion", name.release,
+ 		    TCL_GLOBAL_ONLY|TCL_APPEND_VALUE);
+ 	}
++#if defined(__NetBSD__)
++	if (sysctl(mib, sizeof(mib) / sizeof(int), machine_arch, &len, NULL, 0) < 0)
++	    unameOK = 0;
++	else
++	    Tcl_SetVar2(interp, "tcl_platform", "machine", machine_arch,
++		    TCL_GLOBAL_ONLY);
++#else
+ 	Tcl_SetVar2(interp, "tcl_platform", "machine", name.machine,
+ 		TCL_GLOBAL_ONLY);
++#endif
+     }
+ #endif
+     if (!unameOK) {
