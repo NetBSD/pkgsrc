@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/08/18 08:49:23 agc Exp $
+# $NetBSD: Makefile,v 1.28 1999/08/24 18:12:12 tron Exp $
 
 DISTNAME=	mutt-${MUTT_VERSION}
 CATEGORIES=	mail
@@ -26,7 +26,7 @@ BUILD_DEFS+=	MUTT_INTERNATIONAL MUTT_VERSION
 
 .include "../../mk/bsd.pkg.mk"
 
-MUTT_BASE_VERSION=	0.95.7
+MUTT_BASE_VERSION=	1.0pre1
 .if defined(MUTT_INTERNATIONAL) && ${MUTT_INTERNATIONAL} == YES
 MUTT_VERSION=		${MUTT_BASE_VERSION}i
 
