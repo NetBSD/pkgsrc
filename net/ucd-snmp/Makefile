@@ -1,34 +1,56 @@
-# $NetBSD: Makefile,v 1.9 1999/03/07 04:02:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/05 00:59:07 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
-DISTNAME=	ucd-snmp-3.6
+DISTNAME=	ucd-snmp-3.6.1
 CATEGORIES=	net
 MASTER_SITES= 	ftp://ucd-snmp.ucdavis.edu/ \
-		ftp://sunsite.cnlab-switch.ch/mirror/ucd-snmp/ \
-		ftp://ftp.win.or.jp/pub/network/snmp/ucd-snmp/
+		ftp://sunsite.cnlab-switch.ch/mirror/ucd-snmp/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ece.ucdavis.edu/ucd-snmp/
 
+BUILD_DEPENDS+=	autoconf:../../devel/autoconf
+
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-defaults
+CONFIGURE_ARGS+= --with-defaults
+CONFIGURE_ARGS+= --with-libwrap
+# note the default appends a redundant and silly ".log"
+CONFIGURE_ARGS+= --with-logfile="/var/log/snmpd"
+# this might make it easier to use scotty's mibs, and local ones too
+CONFIGURE_ARGS+= --with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tnm2.1.8/mibs:/usr/local/share/snmp/mibs"
 
-BIN=		snmpbulkwalk snmpget snmpgetnext snmpnetstat snmpset \
-		snmpstatus snmptest snmptranslate snmptrap snmpwalk
-SBIN=		snmpd snmptrapd
+# pass down PKG_PREFIX to simulate pkg_add's environment
+MAKE_ENV+=	PKG_PREFIX="${PREFIX}"
 
+.include "../../mk/bsd.prefs.mk"
+
+# XXX This most horrible hack is necessary because of the stupid linker's
+# insistence on requiring that all externals referenced from a shared library
+# be defined, even if nothing elese from the library is ever used.  In this
+# case the libwrap.so library is at fault as it references 'deny_severity' and
+# 'allow_severity', but none of the configure tests will include this, nor
+# indeed will any product binary except for snmpd (which is the only one that
+# actualy uses tcp_wrappers).
+#
+# /usr/libexec/ld.so: Undefined symbol "_deny_severity" in conftest:/usr/lib/libwrap.so.0.0
+#
+CFLAGS+=	-static
+
+pre-configure:
+	(cd ${WRKSRC}; autoreconf --force)
+
+# Need to run INSTALL script as this doesn't happen automagically from pkgsrc.
 post-install:
-	( cd ${PREFIX}/bin; strip ${BIN} )
-	( cd ${PREFIX}/sbin; strip ${SBIN} )
 	@${MKDIR} ${PREFIX}/share/examples/ucd-snmp
 	@for F in ${WRKSRC}/etc/* ; do \
-		${INSTALL_DATA} $$F ${PREFIX}/share/examples/ucd-snmp ; done
-	@if [ ! -f ${PREFIX}/etc/rc.d/snmpd.sh ]; then \
-		${ECHO} "Creating ${PREFIX}/etc/rc.d/snmpd.sh startup file."; \
-		${ECHO} "#!/bin/sh" > ${PREFIX}/etc/rc.d/snmpd.sh; \
-		${ECHO} "[ -x ${PREFIX}/sbin/snmpd ] && ${PREFIX}/sbin/snmpd && ${ECHO} -n ' snmpd'" >> ${PREFIX}/etc/rc.d/snmpd.sh; \
-		chmod 751 ${PREFIX}/etc/rc.d/snmpd.sh; \
-	 fi
+		${INSTALL_DATA} $$F ${PREFIX}/share/examples/ucd-snmp ; \
+	done
+	${ECHO} "Creating ${PREFIX}/etc/rc.d/snmpd.sh startup file."; \
+	${ECHO} "#!/bin/sh" > ${PREFIX}/etc/rc.d/snmpd.sh; \
+	${ECHO} "[ -x ${PREFIX}/sbin/snmpd ] && ${PREFIX}/sbin/snmpd && ${ECHO} -n ' snmpd'" >> ${PREFIX}/etc/rc.d/snmpd.sh
+	${CHMOD} 755 ${PREFIX}/etc/rc.d/snmpd.sh
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/snmp/dlmod
+	${TOUCH} ${PREFIX}/lib/snmp/dlmod/.keepme
 
 .include "../../mk/bsd.pkg.mk"
