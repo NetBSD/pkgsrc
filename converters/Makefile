@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2004/01/19 09:13:29 agc Exp $
+# $NetBSD: Makefile,v 1.65 2004/01/22 11:31:32 markd Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -54,6 +54,7 @@ SUBDIR+=	unix2dos
 SUBDIR+=	uudeview
 SUBDIR+=	uulib
 SUBDIR+=	wv
+SUBDIR+=	wv2
 SUBDIR+=	xdeview
 SUBDIR+=	xlhtml
 SUBDIR+=	xlreader
