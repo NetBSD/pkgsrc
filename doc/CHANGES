@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5036 2004/02/29 03:33:07 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5037 2004/02/29 06:00:23 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1089,3 +1089,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated prayer to to 1.0.8nb2 [heinz 2004-02-28]
 	Updated cairo to 0.1.17nb1 [recht 2004-02-29]
 	Added iftop-0.16 [xtraeme 2004-02-29]
+	Added acpidump-20020711 [uebayasi 2004-02-29]
