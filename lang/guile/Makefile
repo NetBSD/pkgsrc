@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2004/11/30 18:17:31 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2004/12/01 14:59:48 wiz Exp $
 
-DISTNAME=		guile-1.6.5
-PKGREVISION=		2
+DISTNAME=		guile-1.6.6
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
