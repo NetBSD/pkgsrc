@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 03:04:28 xtraeme Exp $
-#
-# This Makefile fragment is included by packages that use gal2.
-#
-# This file was created automatically using createbuildlink-3.1.
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:10 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GAL2_BUILDLINK3_MK:=	${GAL2_BUILDLINK3_MK}+
@@ -12,14 +7,16 @@ GAL2_BUILDLINK3_MK:=	${GAL2_BUILDLINK3_MK}+
 BUILDLINK_DEPENDS+=	gal2
 .endif
 
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngal2}
+BUILDLINK_PACKAGES+=	gal2
+
 .if !empty(GAL2_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			gal2
-BUILDLINK_DEPENDS.gal2+=		gal2>=1.99.10nb3
-BUILDLINK_PKGSRCDIR.gal2?=		../../devel/gal2
+BUILDLINK_DEPENDS.gal2+=	gal2>=1.99.10nb3
+BUILDLINK_PKGSRCDIR.gal2?=	../../devel/gal2
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 
-.endif # GAL2_BUILDLINK3_MK
+.endif	# GAL2_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
