@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/03/11 13:38:50 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/28 21:29:39 wiz Exp $
 # FreeBSD Id: ports/irc/bnc/Makefile,v 1.9 2000/05/22 06:38:58 will Exp
 
 DISTNAME=	bnc2.8.6
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/bnc/&-/}
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.gotbnc.com/files/ \
 		ftp://ftp.ircadmin.net/bnc/
