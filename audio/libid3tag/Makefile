@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/01 15:55:33 adam Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/20 02:30:03 snj Exp $
 #
 
 DISTNAME=	libid3tag-0.15.1b
@@ -15,6 +15,9 @@ CONFLICTS=	mad<0.15
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 post-build:
 	${SED}	-e 's,@PREFIX@,${PREFIX},g'			\
