@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8246 2004/12/04 04:10:28 taca Exp $
+$NetBSD: CHANGES,v 1.8247 2004/12/04 04:33:25 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5747,3 +5747,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla-stable to 1.7.3 [taya 2004-12-04]
 	Added anthy-5900 [taya 2004-12-04]
 	Updated p5-Jcode to 0.88 [taca 2004-12-04]
+	Removed sp [uebayasi 2004-12-04]
