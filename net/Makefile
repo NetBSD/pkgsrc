@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.546 2005/03/25 23:22:21 kristerw Exp $
+# $NetBSD: Makefile,v 1.547 2005/03/27 17:55:13 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -344,6 +344,7 @@ SUBDIR+=	snort
 SUBDIR+=	snort-mysql
 SUBDIR+=	snort-pgsql
 SUBDIR+=	socat
+SUBDIR+=	socket++
 SUBDIR+=	socks4
 SUBDIR+=	socks5
 SUBDIR+=	soup
