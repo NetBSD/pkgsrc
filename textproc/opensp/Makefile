@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/02/21 20:26:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2005/03/01 23:14:35 dmcmahill Exp $
 #
 
 DISTNAME=	OpenSP-1.5.1
@@ -17,6 +17,7 @@ USE_BUILDLINK3=		yes
 USE_PERL5=		build
 USE_LIBTOOL=		yes
 PTHREAD_OPTS+=		require
+USE_PKGLOCALEDIR=	yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-http \
