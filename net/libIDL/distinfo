@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/09/02 10:58:33 jmmv Exp $
+$NetBSD: distinfo,v 1.8 2005/02/06 15:09:23 jmmv Exp $
 
-SHA1 (libIDL-0.8.4.tar.bz2) = e09153fdc6c1fd7c8520df7d551bf1e760b79667
-Size (libIDL-0.8.4.tar.bz2) = 326519 bytes
+SHA1 (libIDL-0.8.5.tar.bz2) = e48f4935bc15c0c342068169f088af0efc709943
+Size (libIDL-0.8.5.tar.bz2) = 339015 bytes
