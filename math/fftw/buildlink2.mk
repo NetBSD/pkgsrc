@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/04/29 22:48:46 jtb Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/06/05 18:06:57 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use fftw.
 #
@@ -17,7 +17,6 @@ BUILDLINK_PREFIX.fftw_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.fftw+=	include/fftw3.f
 BUILDLINK_FILES.fftw+=	include/fftw3.h
 BUILDLINK_FILES.fftw+=	lib/libfftw3.*
-BUILDLINK_FILES.fftw+=	lib/librfftw.*
 
 BUILDLINK_TARGETS+=	fftw-buildlink
 
