@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.29 2003/11/20 00:04:12 hubertf Exp $
+# $NetBSD: build,v 1.30 2004/01/17 09:38:18 grant Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -111,6 +111,10 @@ if [ -d pkgtools/pkglint ]; then
 	BROKENFILE=`${BMAKE} show-var VARNAME=BROKENFILE` || fail=yes
 	BUILDLOG=`${BMAKE} show-var VARNAME=BUILDLOG` || fail=yes
 	STARTFILE=`${BMAKE} show-var VARNAME=STARTFILE` || fail=yes
+	AWK=`${BMAKE} show-var VARNAME=AWK` || fail=yes
+	GREP=`${BMAKE} show-var VARNAME=GREP` || fail=yes
+	SED=`${BMAKE} show-var VARNAME=SED` || fail=yes
+	MAIL=`${BMAKE} show-var VARNAME=MAIL` || fail=yes
 else
 	echo "The pkgtools/pkglint directory does not exist.  Please update"
 	echo "your pkgsrc tree in ${USR_PKGSRC}"
@@ -140,7 +144,11 @@ if [ $fail = "yes" -o \
 	-z "$ORDERFILE" -o \
 	-z "$BROKENFILE" -o \
 	-z "$BUILDLOG" -o \
-	-z "$STARTFILE" \
+	-z "$STARTFILE" -o \
+	-z "$AWK" -o \
+	-z "$GREP" -o \
+	-z "$SED" -o \
+	-z "$MAIL" \
 	]; then
 	echo "ERROR:  build failed to extract certain key variables."
 	echo "        please examine the above list and correct the"
@@ -191,13 +199,14 @@ touch $BUILDLOG
 # (usually '.make' or '.make.${MACHINE}').  As a side benefit, this
 # can make a progress-meter very simple to add!
 
-tot=`wc -l $ORDERFILE | awk '{print $1}'`
+tot=`wc -l $ORDERFILE | ${AWK} '{print $1}'`
 for pkgdir in `cat $ORDERFILE`
 do
-        if ! grep -q "^${pkgdir}\$" $BUILDLOG ; then
-		built=`wc -l $BUILDLOG | awk '{print $1}'`
-		percent=`echo $built $tot | awk '{printf("%4.1f%%",$1*100/$2);}'`
-		(cd $pkgdir && nice -n 20 ${BMAKE} USE_BULK_CACHE=yes bulk-package </dev/null | sed "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ `uname -p`> ;g")
+	${GREP} -q "^${pkgdir}\$" $BUILDLOG
+	if [ $? -ne 0 ]; then
+		built=`wc -l $BUILDLOG | ${AWK} '{print $1}'`
+		percent=`echo $built $tot | ${AWK} '{printf("%4.1f%%",$1*100/$2);}'`
+		(cd $pkgdir && nice -n 20 ${BMAKE} USE_BULK_CACHE=yes bulk-package </dev/null | ${SED} "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ `uname -p`> ;g")
 		echo "$pkgdir" >> $BUILDLOG
 	fi
 done
@@ -206,8 +215,9 @@ echo "Build finished.  Removing all installed packages left over from build..."
 
 for pkgname in `pkg_info -e \*`
 do
-	if `pkg_info -qe $pkgname`; then
-		pkgdir=`grep " $pkgname " $INDEXFILE | awk '{print $1}'`	
+	pkg_info -qe $pkgname
+	if [ $? -eq 0 ]; then
+		pkgdir=`${GREP} " $pkgname " $INDEXFILE | ${AWK} '{print $1}'`	
 		case "${BULK_PREREQ}" in
 			*$pkgdir* )
 				echo "Keeping BULK_PREREQ: $pkgname ($pkgdir)" ;
@@ -215,7 +225,8 @@ do
 			* )
 				echo pkg_delete -r $pkgname
 				pkg_delete -r $pkgname
-				if `pkg_info -qe $pkgname` ; then
+				pkg_info -qe $pkgname
+				if [ $? -eq 0 ]; then
 					echo "$pkgname ($pkgdir) did not deinstall nicely.  Forcing the deinstall"
 					pkg_delete -f $pkgname || true
 				fi
@@ -230,7 +241,7 @@ echo "Post processing bulk build results..."
 
 # Perl was wiped, reinstall it!
 ( cd lang/perl5 && ${BMAKE} bulk-install )
-perl mk/bulk/post-build | mail -s "pkgsrc/`uname -p` bulk build results `date +%F`" $ADMIN
+perl mk/bulk/post-build | ${MAIL} -s "pkgsrc/`uname -p` bulk build results `date +%F`" $ADMIN
 
 # Done!
 echo ""
