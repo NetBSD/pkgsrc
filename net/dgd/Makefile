@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:22:19 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/08 01:56:53 minskim Exp $
 
-DISTNAME=	dgd-1.2p3
-PKGNAME=	dgd-1.2.0.3
+DISTNAME=	dgd-1.2p4
+PKGNAME=	dgd-1.2.0.4
 CATEGORIES=	net games
 MASTER_SITES=	ftp://ftp.dworkin.nl/pub/dgd/
 
@@ -9,9 +9,20 @@ MAINTAINER=     sco@openface.ca
 HOMEPAGE=	http://www.dworkin.nl/dgd/
 COMMENT=	Object-oriented programmable server
 
-LICENSE=	no-commercial-use
+LICENSE=	fee-based-commercial-use
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/dgd/src
+USE_BUILDLINK3=	yes
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths and command names."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	../mud.dgd
+SUBST_SED.paths=	-e 's,/home/dworkin/,${PREFIX}/libdata/,g'
+
+INSTALLATION_DIRS=	libexec
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/a.out ${PREFIX}/libexec/dgd
@@ -25,7 +36,6 @@ do-install:
 	${GTAR} cCf ${WRKDIR}/dgd - mud | ${GTAR} xCf ${PREFIX}/libdata/dgd -
 	${CHOWN} -R ${BINOWN}:${BINGRP}  ${PREFIX}/libdata/dgd \
 		${PREFIX}/share/doc/dgd
-	${SED} -e "s#@PREFIX@#${PREFIX}#" ${WRKSRC}/../mud.dgd > \
-		${PREFIX}/share/examples/dgd/mud.dgd
+	${INSTALL_DATA} ${WRKSRC}/../mud.dgd ${PREFIX}/share/examples/dgd
 
 .include "../../mk/bsd.pkg.mk"
