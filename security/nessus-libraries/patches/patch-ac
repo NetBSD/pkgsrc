@@ -1,14 +1,25 @@
-$NetBSD: patch-ac,v 1.2 2001/01/28 18:52:34 frueauf Exp $
+$NetBSD: patch-ac,v 1.2.2.1 2002/06/23 18:59:08 jlam Exp $
 
---- Makefile.orig	Tue Dec 26 17:20:05 2000
-+++ Makefile	Sun Jan 28 13:53:27 2001
-@@ -46,7 +46,8 @@
+--- Makefile.orig	Fri Oct 26 07:54:10 2001
++++ Makefile	Fri May 10 13:11:04 2002
+@@ -51,15 +51,17 @@
  	cd libhosts_gatherer && ${MAKE} install
- 	cd libpcap-nessus && ${MAKE} install 
+ 
  
 -	$(INSTALL) -m 0444 include/includes.h ${includedir}/nessus
-+# Use the includes.h from nessus-core:
-+#	$(INSTALL) -m 0444 include/includes.h ${includedir}/nessus
++	# Use the includes.h from nessus-core:
++	#$(INSTALL) -m 0444 include/includes.h ${includedir}/nessus
  	$(INSTALL) -m 0444 include/libnessus.h ${includedir}/nessus
  	$(INSTALL) -m 0444 include/harglists.h ${includedir}/nessus
  	$(INSTALL) -m 0444 include/libvers.h   ${includedir}/nessus
+ 	$(INSTALL) -m 0444 include/getopt.h    ${includedir}/nessus
+ 	test -d ${bindir} || ${INSTALL_DIR} -m 755 ${bindir}
+-	test -d ${sbindir} || ${INSTALL_DIR} -m 755 ${sbindir}
++	#test -d ${sbindir} || ${INSTALL_DIR} -m 755 ${sbindir}
+ 	$(INSTALL) -m 0755 nessus-config ${bindir}/nessus-config
+-	$(INSTALL) -m 0755 uninstall-nessus ${sbindir}/uninstall-nessus
++	# we use pkg_* tools to deinstall nessus
++	#$(INSTALL) -m 0755 uninstall-nessus ${sbindir}/uninstall-nessus
+ 	test -d ${mandir} || ${INSTALL_DIR} -m 755 ${mandir}
+ 	test -d ${mandir}/man1 || ${INSTALL_DIR} -m 755 ${mandir}/man1
+ 	$(INSTALL) -m 0644 nessus-config.1 ${mandir}/man1

@@ -1,0 +1,22 @@
+$NetBSD: patch-dt,v 1.1.1.1.2.2 2002/06/23 19:05:56 jlam Exp $
+
+--- kwin/clients/kwmtheme/Makefile.in.orig	Mon May 13 23:57:56 2002
++++ kwin/clients/kwmtheme/Makefile.in
+@@ -293,7 +293,7 @@
+ kde_module_LTLIBRARIES = kwin_kwmtheme.la
+ 
+ kwin_kwmtheme_la_SOURCES = kwmthemeclient.cpp
+-kwin_kwmtheme_la_LIBADD = ../../kwin.la
++kwin_kwmtheme_la_LIBADD = ../../libkwin.la
+ kwin_kwmtheme_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
+ 
+ #>- METASOURCES = AUTO
+@@ -304,7 +304,7 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+-kwin_kwmtheme_la_DEPENDENCIES = ../../kwin.la
++kwin_kwmtheme_la_DEPENDENCIES = ../../libkwin.la
+ am_kwin_kwmtheme_la_OBJECTS = kwmthemeclient.lo
+ #>- kwin_kwmtheme_la_OBJECTS = $(am_kwin_kwmtheme_la_OBJECTS)
+ #>+ 5

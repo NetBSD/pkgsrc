@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-a.out,v 1.7 2002/04/25 15:52:45 taya Exp $
+@comment $NetBSD: PLIST-a.out,v 1.7.2.1 2002/06/23 19:04:17 jlam Exp $
 bin/mozilla
 @comment begin PROGRAMS
 lib/mozilla/dirver
@@ -258,6 +258,7 @@ lib/mozilla/components/nsDictionary.js
 lib/mozilla/components/nsDownloadProgressListener.js
 lib/mozilla/components/nsFilePicker.js
 lib/mozilla/components/nsHelperAppDlg.js
+lib/mozilla/components/nsKillAll.js
 lib/mozilla/components/nsLDAPPrefsService.js
 lib/mozilla/components/nsProgressDialog.js
 lib/mozilla/components/nsProxyAutoConfig.js
@@ -849,6 +850,7 @@ include/mozilla/docshell/nsIWebPageDescriptor.h
 include/mozilla/dom/domstubs.h
 include/mozilla/dom/nsDOMCID.h
 include/mozilla/dom/nsDOMError.h
+include/mozilla/dom/nsIBaseDOMException.h
 include/mozilla/dom/nsIDOM3Node.h
 include/mozilla/dom/nsIDOMAbstractView.h
 include/mozilla/dom/nsIDOMAttr.h
@@ -1006,6 +1008,7 @@ include/mozilla/dom/nsIDOMPluginArray.h
 include/mozilla/dom/nsIDOMProcessingInstruction.h
 include/mozilla/dom/nsIDOMRGBColor.h
 include/mozilla/dom/nsIDOMRange.h
+include/mozilla/dom/nsIDOMRangeException.h
 include/mozilla/dom/nsIDOMRect.h
 include/mozilla/dom/nsIDOMSVGAnimPresAspRatio.h
 include/mozilla/dom/nsIDOMSVGAnimTransformList.h
@@ -1816,6 +1819,7 @@ include/mozilla/msgsmime/nsSMimeJSHelper.h
 include/mozilla/necko/mozITXTToHTMLConv.h
 include/mozilla/necko/netCore.h
 include/mozilla/necko/nsCPasswordManager.h
+include/mozilla/necko/nsCPasswordManagerInternal.h
 include/mozilla/necko/nsHTTPChunkConv.h
 include/mozilla/necko/nsIAboutModule.h
 include/mozilla/necko/nsIAuthPrompt.h
@@ -1879,6 +1883,8 @@ include/mozilla/necko/nsISecretDecoderRing.h
 include/mozilla/necko/nsISecureBrowserUI.h
 include/mozilla/necko/nsISecurityEventSink.h
 include/mozilla/necko/nsISecurityManagerComponent.h
+include/mozilla/necko/nsISimpleStreamListener.h
+include/mozilla/necko/nsISimpleStreamProvider.h
 include/mozilla/necko/nsISocketProvider.h
 include/mozilla/necko/nsISocketProviderService.h
 include/mozilla/necko/nsISocketTransport.h
@@ -1889,8 +1895,11 @@ include/mozilla/necko/nsIStreamConverterService.h
 include/mozilla/necko/nsIStreamIO.h
 include/mozilla/necko/nsIStreamIOChannel.h
 include/mozilla/necko/nsIStreamListener.h
+include/mozilla/necko/nsIStreamListenerProxy.h
+include/mozilla/necko/nsIStreamListenerTee.h
 include/mozilla/necko/nsIStreamLoader.h
 include/mozilla/necko/nsIStreamProvider.h
+include/mozilla/necko/nsIStreamProviderProxy.h
 include/mozilla/necko/nsITXTToHTMLConv.h
 include/mozilla/necko/nsITransport.h
 include/mozilla/necko/nsITransportSecurityInfo.h
@@ -2083,6 +2092,7 @@ include/mozilla/pippki/nsIASN1Tree.h
 include/mozilla/pippki/nsIPKIParamBlock.h
 include/mozilla/plugin/npapi.h
 include/mozilla/plugin/npupp.h
+include/mozilla/plugin/nsDefaultPlugin.h
 include/mozilla/plugin/nsICookieStorage.h
 include/mozilla/plugin/nsIEventHandler.h
 include/mozilla/plugin/nsIFileUtilities.h
@@ -2169,7 +2179,6 @@ include/mozilla/shistory/nsISHistoryInternal.h
 include/mozilla/shistory/nsISHistoryListener.h
 include/mozilla/sidebar/nsISidebar.h
 include/mozilla/string/nsAFlatString.h
-include/mozilla/string/nsAPromiseString.h
 include/mozilla/string/nsASingleFragmentString.h
 include/mozilla/string/nsAString.h
 include/mozilla/string/nsAStringGenerator.h
@@ -2500,6 +2509,7 @@ include/mozilla/xpcom/nsIThreadPool.h
 include/mozilla/xpcom/nsITimelineService.h
 include/mozilla/xpcom/nsITimer.h
 include/mozilla/xpcom/nsITimerCallback.h
+include/mozilla/xpcom/nsITimerManager.h
 include/mozilla/xpcom/nsIUnicharBuffer.h
 include/mozilla/xpcom/nsIUnicharInputStream.h
 include/mozilla/xpcom/nsIVariant.h
@@ -2596,6 +2606,7 @@ include/mozilla/zlib/zlib.h
 @unexec rm %D/lib/mozilla/component.reg
 @unexec rm %D/lib/mozilla/chrome/chrome.rdf
 @unexec rm %D/lib/mozilla/chrome/overlayinfo/communicator/content/overlays.rdf
+@unexec rm %D/lib/mozilla/chrome/overlayinfo/cookie/content/overlays.rdf
 @unexec rm %D/lib/mozilla/chrome/overlayinfo/editor/content/overlays.rdf
 @unexec rm %D/lib/mozilla/chrome/overlayinfo/messenger/content/overlays.rdf
 @unexec rm %D/lib/mozilla/chrome/overlayinfo/navigator/content/overlays.rdf
@@ -2609,6 +2620,8 @@ include/mozilla/zlib/zlib.h
 @dirrm lib/mozilla/chrome/overlayinfo/inspector
 @dirrm lib/mozilla/chrome/overlayinfo/editor/content
 @dirrm lib/mozilla/chrome/overlayinfo/editor
+@dirrm lib/mozilla/chrome/overlayinfo/cookie/content
+@dirrm lib/mozilla/chrome/overlayinfo/cookie
 @dirrm lib/mozilla/chrome/overlayinfo/communicator/content
 @dirrm lib/mozilla/chrome/overlayinfo/communicator
 @dirrm lib/mozilla/chrome/overlayinfo

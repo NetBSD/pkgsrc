@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6.2.2 2002/06/21 23:05:46 jlam Exp $
+# $NetBSD: Makefile,v 1.6.2.3 2002/06/23 19:03:28 jlam Exp $
 
-DISTNAME=		httpd-2.0.35
-PKGNAME=		apache-2.0.35
+DISTNAME=		httpd-2.0.39
+PKGNAME=		apache-2.0.39
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://httpd.apache.org/dist/httpd/old/ \
+			ftp://ftp.fu-berlin.de/unix/network/www/apache/httpd/ \
 			http://www.netbsd.org/images/logos/
 
 MAINTAINER=		jlam@netbsd.org
@@ -29,7 +30,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-port=80
 
 # Apache Portable Runtime library configure options
-CONFIGURE_ARGS+=	--with-mpm=prefork
+CONFIGURE_ARGS+=	--with-mpm=prefork --with-devrandom=/dev/urandom
 
 # Apache Portable Runtime Utility library configure options
 CONFIGURE_ARGS+=	--with-dbm=sdbm

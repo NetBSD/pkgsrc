@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.22 2002/04/23 13:32:57 martti Exp $
+$NetBSD: patch-aa,v 1.22.2.1 2002/06/23 18:59:13 jlam Exp $
 
---- configure.orig	Thu Mar  7 02:22:29 2002
-+++ configure	Mon Apr 22 20:17:03 2002
-@@ -3594,8 +3594,6 @@
+--- configure.orig	Thu May 16 08:42:51 2002
++++ configure	Sun May 19 16:36:33 2002
+@@ -3941,8 +3941,6 @@
  	CFLAGS="$CFLAGS"
  	;;
  *-*-solaris*)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.22 2002/04/23 13:32:57 martti Exp $
  	need_dash_r=1
  	cat >>confdefs.h <<\_ACEOF
  #define PAM_SUN_CODEBASE 1
-@@ -4062,6 +4060,9 @@
+@@ -4393,6 +4391,9 @@
  	;;
  esac
  
@@ -21,8 +21,8 @@ $NetBSD: patch-aa,v 1.22 2002/04/23 13:32:57 martti Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags or --without-cflags was given.
-@@ -5893,6 +5894,10 @@
- #line 5893 "configure"
+@@ -6306,6 +6307,10 @@
+ #line $LINENO "configure"
  #include "confdefs.h"
  
 +#ifdef HAVE_SYS_CDEFS_H
@@ -32,12 +32,12 @@ $NetBSD: patch-aa,v 1.22 2002/04/23 13:32:57 martti Exp $
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
  
-@@ -16007,7 +16012,7 @@
- echo "                 User binaries: $B"
- echo "               System binaries: $C"
- echo "           Configuration files: $D"
--echo "               Askpass program: $E"
-+echo "               Askpass program: ${ASKPASS_PROGRAM}"
- echo "                  Manual pages: $F"
- echo "                      PID file: $G"
- echo "        sshd default user PATH: $H"
+@@ -17642,7 +17647,7 @@
+ echo "                     User binaries: $B"
+ echo "                   System binaries: $C"
+ echo "               Configuration files: $D"
+-echo "                   Askpass program: $E"
++echo "                   Askpass program: ${ASKPASS_PROGRAM}"
+ echo "                      Manual pages: $F"
+ echo "                          PID file: $G"
+ echo "  Privilege separation chroot path: $H"

@@ -1,30 +1,33 @@
-$NetBSD: patch-aa,v 1.3 2002/01/03 14:49:00 lukem Exp $
+$NetBSD: patch-aa,v 1.3.2.1 2002/06/23 19:01:16 jlam Exp $
 
---- Makefile.in.orig	Fri Oct 26 17:16:27 2001
+--- Makefile.in.orig	Fri Mar  8 23:21:11 2002
 +++ Makefile.in
-@@ -8,7 +8,7 @@
+@@ -9,9 +9,10 @@
  INSTALLDIRS = $(CONFPATH) $(MODELPATH) $(BASEPATH)/@bindir@ $(BASEPATH)/@sbindir@
  STATEPATH   = $(INSTALLROOT)@STATEPATH@
  
--SUBDIRS	= common models server clients man
+-SUBDIRS	= common models server clients
 +SUBDIRS	= common
  CFLAGS	= -I../include @CFLAGS@
  
++
  # these are here so they can be overridden during a make install
-@@ -60,7 +60,7 @@
- 		|| echo "Unable to set ownership of $(STATEPATH)"; \
- 	fi
+ RUNUID=@RUN_AS_USER@
+ RUNGID=@RUN_AS_GROUP@
+@@ -64,7 +65,7 @@
+ install-man:
+ 	@cd man; $(MAKE) install; cd ..;
  
 -cgi:
 +cgi: build
  	@cd clients; $(MAKE) cgi; cd ..;
  
  install-cgi: install-dirs 
-@@ -68,7 +68,6 @@
+@@ -72,7 +73,6 @@
  		./install-sh -d $(CGIPATH) || exit 1; \
  	fi \
  
 -	@cd conf; $(MAKE) install; cd ..;
  	@cd clients; $(MAKE) install-cgi; cd ..;
  
- install-misc: install-dirs
+ install-cgi-man:

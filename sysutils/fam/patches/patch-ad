@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1.2.2 2002/06/23 18:59:55 jlam Exp $
+
+--- fam/Client.h.orig	Tue Dec 18 11:03:36 2001
++++ fam/Client.h
+@@ -23,6 +23,7 @@
+ #ifndef Client_included
+ #define Client_included
+ 
++#include <sys/types.h>
+ #include <netinet/in.h>  // for in_addr
+ 
+ #include "Activity.h"

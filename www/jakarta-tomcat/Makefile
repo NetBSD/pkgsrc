@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2002/04/19 15:54:21 jwise Exp $
+# $NetBSD: Makefile,v 1.28.2.1 2002/06/23 19:03:54 jlam Exp $
 
 DISTNAME=	jakarta-tomcat-3.2.4-src
 PKGNAME=	jakarta-tomcat-3.2.4
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://jakarta.apache.org/builds/jakarta-tomcat/release/v3.2.4/src/
 
@@ -10,7 +11,7 @@ HOMEPAGE=	http://jakarta.apache.org/
 COMMENT=	the Apache Project's Java Servlet 2.2 and JSP 1.1 server
 
 DEPENDS+=	jakarta-servletapi-[0-9]*:../../www/jakarta-servletapi
-BUILD_DEPENDS+=	jakarta-ant>=1.4.1:../../devel/jakarta-ant
+DEPENDS+=	jakarta-ant>=1.4.1:../../devel/jakarta-ant
 
 USE_JAVA=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}

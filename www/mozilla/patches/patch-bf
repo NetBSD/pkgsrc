@@ -1,11 +1,9 @@
-$NetBSD: patch-bf,v 1.4 2002/04/25 15:52:46 taya Exp $
+$NetBSD: patch-bf,v 1.4.2.1 2002/06/23 19:04:22 jlam Exp $
 
-diff -ru ../mozilla-current.orig/mozilla/xpfe/browser/resources/locale/en-US/navigator.dtd ./xpfe/browser/resources/locale/en-US/navigator.dtd
---- ../mozilla-current.orig/mozilla/xpfe/browser/resources/locale/en-US/navigator.dtd	Thu Apr  4 20:28:58 2002
-+++ ./xpfe/browser/resources/locale/en-US/navigator.dtd	Sun Apr  7 01:18:57 2002
-@@ -4,9 +4,9 @@
- <!-- LOCALIZATION NOTE : FILE Do not translate accesskey and commandkey --> 
- 
+diff -ru ../Orig/mozilla/xpfe/browser/resources/locale/en-US/navigator-title.dtd ./xpfe/browser/resources/locale/en-US/navigator-title.dtd
+--- ../Orig/mozilla/xpfe/browser/resources/locale/en-US/navigator-title.dtd	Wed May  8 08:43:59 2002
++++ ./xpfe/browser/resources/locale/en-US/navigator-title.dtd	Thu Jun  6 09:13:39 2002
+@@ -1,6 +1,6 @@
  <!-- LOCALIZATION NOTE (mainWindow.title): DONT_TRANSLATE --> 
 -<!ENTITY mainWindow.title "&brandShortName; {&buildId.label;}"> 
 +<!ENTITY mainWindow.title "&brandShortName;"> 
@@ -14,4 +12,3 @@ diff -ru ../mozilla-current.orig/mozilla/xpfe/browser/resources/locale/en-US/nav
 +<!ENTITY mainWindow.titlemodifier "&brandShortName;"> 
  <!-- LOCALIZATION NOTE (mainWindow.titlemodifiermenuseparator): DONT_TRANSLATE -->
  <!ENTITY mainWindow.titlemodifiermenuseparator " - ">
- <!ENTITY viewsourcetitle.preface "Source for: ">

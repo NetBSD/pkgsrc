@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2001/10/02 11:07:15 seb Exp $
+$NetBSD: patch-aa,v 1.6.2.1 2002/06/23 18:59:35 jlam Exp $
 
---- Makefile.in.orig	Mon Jun  4 07:18:51 2001
+--- Makefile.in.orig	Mon Jun  4 06:18:51 2001
 +++ Makefile.in
 @@ -148,7 +148,7 @@
  
@@ -60,8 +60,9 @@ $NetBSD: patch-aa,v 1.6 2001/10/02 11:07:15 seb Exp $
 +	$(INSTALL_SCRIPT) $(srcdir)/scsh/scsh$(EXEEXT) \
  	    $(bindir)/$(RUNNABLE)$(EXEEXT)
 -	$(INSTALL_PROGRAM) $(srcdir)/scsh/scsh.image $(LIB)/scsh.image
+-	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSH) $(libdir)/$(LIBSCSH)
 +	$(INSTALL_DATA) $(srcdir)/scsh/scsh.image $(LIB)/scsh.image
- 	$(INSTALL_PROGRAM) $(srcdir)/$(LIBSCSH) $(libdir)/$(LIBSCSH)
++	$(INSTALL_DATA) $(srcdir)/$(LIBSCSH) $(libdir)/$(LIBSCSH)
  	$(RANLIB) $(libdir)/$(LIBSCSH)
  	for f in $(srcdir)/scsh/*.scm; \
  	    do $(INSTALL_DATA) $$f $(LIB)/scsh/; done

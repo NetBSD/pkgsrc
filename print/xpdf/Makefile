@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/04/10 12:17:39 joda Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2002/06/23 18:58:45 jlam Exp $
 # 
 
 DISTNAME=	xpdf-1.00
@@ -30,11 +30,6 @@ MAKE_ENV+=		SED="${SED}" ECHO="${ECHO}"
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
 CONFIGURE_ARGS+=	--enable-a4-paper
 .endif
-
-post-install:
-	${SED}	-e "s|@@LOCALBASE@@|${LOCALBASE}|g"			\
-		${FILESDIR}/xpdf-app-defaults				\
-		> ${X11PREFIX}/lib/X11/app-defaults/Xpdf
 
 .include "../../graphics/freetype2/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/03/19 08:52:24 skrll Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2002/06/23 19:03:38 jlam Exp $
 
 DISTNAME=	bluefish-0.7
 PKGREVISION=	1
@@ -22,7 +22,7 @@ DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png>=1.2.1:../../graphics/png
 DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 DEPENDS+=	gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
-DEPENDS+=	gdk-pixbuf-0.11.0nb1:../../graphics/gdk-pixbuf
+DEPENDS+=	gdk-pixbuf>=0.11.0nb1:../../graphics/gdk-pixbuf
 
 BUILD_USES_MSGFMT=	YES
 

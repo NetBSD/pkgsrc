@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3.2.2 2002/06/23 18:59:44 jlam Exp $
+
+--- scripts/Makefile.orig	Wed Dec 19 07:57:31 2001
++++ scripts/Makefile
+@@ -64,6 +64,8 @@
+ 		-e 's|%%device%%|${DEFAULT_DEVICE}|g' \
+ 		${.CURDIR}/${.ALLSRC} > ${.TARGET}
+ 
++scriptsinstall:
++
+ install:
+ 	@test -d ${FILESDIR} || mkdir -p ${FILESDIR}
+ 	@test -d ${RCDIR} || mkdir -p ${RCDIR}

@@ -1,0 +1,22 @@
+$NetBSD: patch-be,v 1.1.1.1.2.2 2002/06/23 19:06:29 jlam Exp $
+
+--- kio/kssl/ksslcertificate.cc.orig	Sat Dec  1 03:30:25 2001
++++ kio/kssl/ksslcertificate.cc
+@@ -90,7 +90,7 @@
+ KSSLCertificate::KSSLCertificate() {
+   d = new KSSLCertificatePrivate;
+   d->m_stateCached = false;
+-  KGlobal::dirs()->addResourceType("kssl", "share/apps/kssl");
++  KGlobal::dirs()->addResourceType("kssl", KStandardDirs::kde_default("data") + "kssl");
+ #ifdef HAVE_SSL
+   d->m_cert = NULL;
+ #endif
+@@ -100,7 +100,7 @@
+ KSSLCertificate::KSSLCertificate(const KSSLCertificate& x) {
+   d = new KSSLCertificatePrivate;
+   d->m_stateCached = false;
+-  KGlobal::dirs()->addResourceType("kssl", "share/apps/kssl");
++  KGlobal::dirs()->addResourceType("kssl", KStandardDirs::kde_default("data") + "kssl");
+ #ifdef HAVE_SSL
+   d->m_cert = NULL;
+   setCert(KOSSL::self()->X509_dup(const_cast<KSSLCertificate&>(x).getCert()));

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1.20.2 2002/06/23 19:00:50 jlam Exp $
+
+--- ../AppRun.orig	Sun May 26 13:02:42 2002
++++ ../AppRun
+@@ -40,7 +40,7 @@
+ 		exit 1
+ esac
+ 
+-BIN="$APP_DIR/$PLATFORM/$PROG"
++BIN="@PREFIX@/libexec/rox/$PROG"
+ 
+ if [ -x "$BIN" ]; then
+   exec $DEBUGGER "$BIN" "$@"

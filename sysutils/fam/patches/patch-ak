@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1.2.2 2002/06/23 19:00:01 jlam Exp $
+
+--- fam/Log.c++.orig	Tue Dec 18 11:03:37 2001
++++ fam/Log.c++
+@@ -28,6 +28,8 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <syslog.h>
++#include <sys/time.h>
++#include <sys/types.h>
+ #include <sys/resource.h>
+ #include <sys/stat.h>
+ #include <unistd.h>

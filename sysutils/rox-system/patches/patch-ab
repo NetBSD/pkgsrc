@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1.2.2 2002/06/23 19:00:54 jlam Exp $
+
+--- configure.orig	Tue May 28 10:54:40 2002
++++ configure
+@@ -784,9 +784,6 @@
+   esac
+ fi
+ 
+-if test -z "$PKG_CONFIG"; then
+-  PKG_CONFIG=pkg-config
+-fi
+ 
+ 
+ echo $ac_n "checking for Gtk+-2.0""... $ac_c" 1>&6
+@@ -811,7 +808,7 @@
+     
+ echo $ac_n "checking for $GTK_CONFIG""... $ac_c" 1>&6
+ echo "configure:814: checking for $GTK_CONFIG" >&5
+-if [ -x "`which \"$GTK_CONFIG\" 2> /dev/null`" ]; then
++if [ -x "$GTK_CONFIG" ]; then
+   echo "$ac_t""yes" 1>&6
+ else
+   echo "$ac_t""no" 1>&6

@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2002/05/04 08:42:05 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2002/06/23 19:06:41 jlam Exp $
 
-DISTNAME=	mlterm-2.4.0
+DISTNAME=	mlterm-2.5.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
-MAINTAINER=	uebayasi@soum.co.jp
+MAINTAINER=	uebayasi@netbsd.org
 HOMEPAGE=	http://mlterm.sourceforge.net/
 COMMENT=	Multingual terminal emulator
 
 # CODESET is only supported on NetBSD in 1.5T and later - see <langinfo.h>
-ONLY_FOR_PLATFORM=	NetBSD-1.5[T-Z]-* NetBSD-1.5Z[A-Z]-*
+ONLY_FOR_PLATFORM=	NetBSD-1.5[T-Z]-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*
 
 USE_BUILDLINK_ONLY=	yes
 

@@ -1,0 +1,42 @@
+$NetBSD: patch-de,v 1.1.1.1.2.2 2002/06/23 19:05:49 jlam Exp $
+
+--- ksysguard/ksysguardd/FreeBSD/apm.c.orig	Tue Sep 18 15:03:53 2001
++++ ksysguard/ksysguardd/FreeBSD/apm.c
+@@ -20,7 +20,13 @@
+ */
+ 
+ #include <fcntl.h>
++#if defined(__NetBSD__)
++#include <machine/apmvar.h>
++#include <sys/ioctl.h>
++#include <unistd.h>
++#else
+ #include <machine/apm_bios.h>
++#endif
+ #include <stdio.h>
+ 
+ #include "Command.h"
+@@ -62,13 +68,22 @@
+ int
+ updateApm(void)
+ {
+-	struct apm_info info;
+ 	int retval;
++#if defined(__NetBSD__)
++	struct apm_power_info info;
++
++	retval = ioctl(ApmFD, APM_IOC_GETPOWER, &info);
++
++	BattFill = info.battery_life;
++	BattTime = info.minutes_left;
++#else
++	struct apm_info info;
+ 
+ 	retval = ioctl(ApmFD, APMIO_GETINFO, &info);
+ 
+ 	BattFill = info.ai_batt_life;
+ 	BattTime = info.ai_batt_time;
++#endif
+ 
+ 	return retval;
+ }

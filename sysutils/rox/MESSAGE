@@ -1,0 +1,9 @@
+$NetBSD: MESSAGE,v 1.1.2.2 2002/06/23 19:00:29 jlam Exp $
+
+Please note the following when running the rox(1) command that comes with 
+this package. If the environment variable CHOICESPATH is unset, then the 
+package will automatically set up a directory called .RoxChoices in your 
+home directory containing defaults from ${PREFIX}/share/rox/Choices and 
+will set CHOICESPATH appropriately.
+
+Rox applications can be found in ${PREFIX}/share/rox.

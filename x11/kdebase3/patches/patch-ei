@@ -1,0 +1,42 @@
+$NetBSD: patch-ei,v 1.1.1.1.2.2 2002/06/23 19:06:02 jlam Exp $
+
+--- kxkb/Makefile.am.orig	Wed May  8 19:23:13 2002
++++ kxkb/Makefile.am
+@@ -3,11 +3,11 @@
+ 
+ bin_PROGRAMS = kxkb
+ 
+-kxkb_SOURCES = dummy.cpp
++kxkb_SOURCES = kxkb_main.cpp
+ kxkb_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+-kxkb_LDADD = kxkb.la
++kxkb_LDADD = libkxkb_main.la
+ 
+-lib_LTLIBRARIES = kxkb.la
++lib_LTLIBRARIES = libkxkb_main.la kxkb.la
+ kde_module_LTLIBRARIES = kcm_keyboard.la
+ 
+ kcm_keyboard_la_SOURCES = rules.cpp kcmlayout.cpp pixmap.cpp kcmmisc.cpp
+@@ -15,9 +15,13 @@
+ kcm_keyboard_la_LDFLAGS  = $(all_libraries) -module -avoid-version -no-undefined
+ kcm_keyboard_la_LIBADD = @XTESTLIB@ $(LIB_KFILE)
+ 
+-kxkb_la_SOURCES = rules.cpp kxkb.cpp extension.cpp pixmap.cpp
++libkxkb_main_la_SOURCES = rules.cpp kxkb.cpp extension.cpp pixmap.cpp
++libkxkb_main_la_LDFLAGS = $(all_libraries)
++libkxkb_main_la_LIBADD = -lX11 -lXext $(LIB_KDEUI)
++
++kxkb_la_SOURCES = kxkb_main.cpp
+ kxkb_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-kxkb_la_LIBADD = -lX11 -lXext $(LIB_KDEUI)
++kxkb_la_LIBADD = libkxkb_main.la
+ 
+ data_DATA = keyboard.desktop
+ datadir = $(kde_appsdir)/Settings/Peripherals
+@@ -32,6 +36,3 @@
+ messages: 
+ 	$(XGETTEXT) $(kxkb_la_SOURCES) kxkbbindings.cpp -o $(podir)/kxkb.pot
+ 	$(XGETTEXT) $(kcm_keyboard_la_SOURCES) kxkbbindings.cpp -o $(podir)/kcmlayout.pot 
+-
+-dummy.cpp:
+-	echo > dummy.cpp

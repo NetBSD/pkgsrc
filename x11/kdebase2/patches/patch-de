@@ -1,3 +1,4 @@
+$NetBSD: patch-de,v 1.2.2.1 2002/06/23 19:05:06 jlam Exp $
 --- ksysguard/ksysguardd/FreeBSD/CPU.c.orig	Mon Nov 26 01:14:58 2001
 +++ ksysguard/ksysguardd/FreeBSD/CPU.c	Mon Nov 26 01:15:11 2001
 @@ -19,7 +19,11 @@

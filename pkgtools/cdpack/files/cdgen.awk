@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: cdgen.awk,v 1.2 2001/06/02 02:03:52 dmcmahill Exp $
+# $NetBSD: cdgen.awk,v 1.2.2.1 2002/06/23 18:57:37 jlam Exp $
 #
 # Copyright (c) 2001 Dan McMahill, All rights reserved.
 #
@@ -37,13 +37,14 @@ BEGIN {
 # ARGV[1] = packages directory (/usr/pkgsrc/packages/All)
 # ARGV[2] = output directory
 # ARGV[3] = Depends tree file.  Has packages in tsort(1) input format.
-# ARGV[4] = Depends order file.  Has packages in tsort(1) output format.
-# ARGV[5] = CD list.  This script leaves a list of the CD directories in this file
-# ARGV[6] = dup flag.  "dup=yes" for package duplication, "dup=no" for no duplication. 
-# ARGV[7] = verbose flag.  "verbose=yes" for verbose output
-# ARGV[8] = xtra_size.  How many kB are needed per CD for common files
+# ARGV[4] = Exclude file.  Packages listed here are excluded.
+# ARGV[5] = Depends order file.  Has packages in tsort(1) output format.
+# ARGV[6] = CD list.  This script leaves a list of the CD directories in this file
+# ARGV[7] = dup flag.  "dup=yes" for package duplication, "dup=no" for no duplication. 
+# ARGV[8] = verbose flag.  "verbose=yes" for verbose output
+# ARGV[9] = xtra_size.  How many kB are needed per CD for common files
 
-    if (ARGC != 10){
+    if (ARGC != 11){
 	printf("%s:  wrong number of arguments\n",ARGV[0]);
 	usage();
 	exit(1);
@@ -53,18 +54,19 @@ BEGIN {
     packages = ARGV[1];
     cddir    = ARGV[2];
     deptree  = ARGV[3];
-    order    = ARGV[4];
-    cdlist   = ARGV[5];
-    xtra_size= ARGV[8];
-    other_size= ARGV[9];
+    exclude  = ARGV[4];
+    order    = ARGV[5];
+    cdlist   = ARGV[6];
+    xtra_size= ARGV[9];
+    other_size= ARGV[10];
 
-    if (ARGV[6] ~ "dup=yes"){
+    if (ARGV[7] ~ "dup=yes"){
 	dup=1;
     }
     else{
 	dup=0;
     }
-    if (ARGV[7] ~ "verbose=yes"){
+    if (ARGV[8] ~ "verbose=yes"){
 	verbose=1;
     }
     else{
@@ -94,18 +96,25 @@ BEGIN {
 	usage();
 	exit(1);
     }
-
+    
+    cmd="test -f " exclude ;
+    if(system(cmd) != 0){
+	printf("%s:  exclude file \"%s\" does not exist\n",prog,exclude);
+	usage();
+	exit(1);
+    }
+    
     cmd="test -f " order ;
     if(system(cmd) != 0){
 	printf("%s:  build order file \"%s\" does not exist\n",prog,order);
 	usage();
 	exit(1);
     }
-
-
+    
+    
     now = strftime("%a %b %d %H:%M:%S %Z %Y");
     printf("%s starting %28s\n",prog,now);
-
+    
 #
 # Read in the build order.  This gives the list of all possible 
 # packages (note that some may actually not be available as binary
@@ -123,6 +132,14 @@ BEGIN {
     npkgs = n-1;
     printf("%d packages to go on CD-ROM!\n",npkgs);
 
+#
+# Read in the list of excluded packages
+#
+    printf("Reading list of packages to be excluded\n");
+    while(getline < exclude > 0){
+	excludes[$1] = 1 ;
+    }
+    close(exclude);
 
 #
 # Read in the depends tree and flatten it.
@@ -183,30 +200,36 @@ BEGIN {
 	pkgn=0;
 	cdtot[cdn]=xtra_size;
 	cdpkgs[cdn]=0;
-
+	
 	for (n=1; n<=npkgs ; n=n+1){
+	    if (verbose) printf("Processing: %s\n",pkgorder[n]);
+	    if (pkgorder[n] in excludes) {
+		if (verbose) printf("Skipping excluded package: %s\n",pkgorder[n]);
+	    }
+	    else {
 # only process the package if it exists.
-	    if (pkgsize[pkgorder[n]] > 0){
-		if (cdtot[cdn] < (maxcd-pkgsize[pkgorder[n]]) ){
-		    cdtot[cdn] = cdtot[cdn] +pkgsize[pkgorder[n]];
-		    cdcontents[cdn":"pkgorder[n]] = 1;
-		    pkgn = pkgn + 1;
-		}
-		else{
+		if (pkgsize[pkgorder[n]] > 0){
+		    if (cdtot[cdn] < (maxcd-pkgsize[pkgorder[n]]) ){
+			cdtot[cdn] = cdtot[cdn] +pkgsize[pkgorder[n]];
+			cdcontents[cdn":"pkgorder[n]] = 1;
+			pkgn = pkgn + 1;
+		    }
+		    else{
 # the CD is full
-		    printf("cd number %d is full (%g Mb)\n",cdn,
-			   cdtot[cdn]/1024);
-		    cdpkgs[cdn] = pkgn;
+			printf("cd number %d is full (%g Mb)\n",cdn,
+			       cdtot[cdn]/1024);
+			cdpkgs[cdn] = pkgn;
 # increment the CD counter
-		    cdn = cdn + 1;
-		    pkgn = 1;
-		    cdtot[cdn] = xtra_size + pkgsize[pkgorder[n]];
-		    cdcontents[cdn":"pkgorder[n]] = 1;
+			cdn = cdn + 1;
+			pkgn = 1;
+			cdtot[cdn] = xtra_size + pkgsize[pkgorder[n]];
+			cdcontents[cdn":"pkgorder[n]] = 1;
+		    }
 		}
 	    }
 	}
 	cdpkgs[cdn] = pkgn;
-
+	
 # see if the extra files will fit on the last CD
 	if ( (cdtot[cdn] + other_size) < maxcd ){
 	    printf("cd number %d is partially full (%g Mb)\n",cdn,
@@ -221,39 +244,69 @@ BEGIN {
 	    printf("cd number %d is partially full (%g Mb)\n",cdn,
 		   cdtot[cdn]/1024);
 	}
-	    
+	
     }
-
+    
 #
 # We will duplicate some packages to eliminate inter-CD dependencies.
 #
     else{
 	cdn=1;
 	pkgn=0;
+# initialize the size count for the current CD with the extras that we
+# are putting on all CD's
 	cdtot[cdn]=xtra_size;
 	cdpkgs[cdn]=0;
 	n=npkgs;
 	while (n > 0){
+	    if (verbose) printf("Begin processing %s\n",pkgorder[n]);
 	    if ( !pkg_done[pkgorder[n]]){
 		size_needed = pkgsize[pkgorder[n]];
 		deps_needed = 0;
 		split(alldepends[pkgorder[n]],pkgdeps);
 		for (dep in pkgdeps){
-		    if(!cdcontents[cdn":"pkgdeps[dep]]){
-			size_needed = size_needed + pkgsize[pkgdeps[dep]];
-			deps_needed++;
+		    if (verbose) printf("   Examining dependency: %s\n",pkgdeps[dep]);
+		    if (pkgdeps[dep] in excludes) {
+			if (verbose) printf("   Skipping excluded dependency in count: %s\n",pkgdeps[dep]);
+		    }
+		    else {
+			if(!cdcontents[cdn":"pkgdeps[dep]]){
+			    size_needed = size_needed + pkgsize[pkgdeps[dep]];
+			    deps_needed++;
+			}
 		    }
 		}
 		if (cdtot[cdn] + size_needed < maxcd){
-		    cdcontents[cdn":"pkgorder[n]] = 1;
+		    if (verbose) printf("   Processing %s\n",pkgorder[n]);
+		    if (pkgorder[n] in excludes) {
+			if (verbose) printf("   Skipping excluded package in packing: %s\n",pkgorder[n]);
+		    }
+		    else {
+			cdcontents[cdn":"pkgorder[n]] = 1;
+		    }
 		    pkg_done[pkgorder[n]] = 1;
+		    if (verbose) printf("   Marked %s as processed\n",pkgorder[n]);
 		    for (dep in pkgdeps){
-			cdcontents[cdn":"pkgdeps[dep]] = 1;
-			pkg_done[pkgdeps[dep]] = 1;
+			if (pkgdeps[dep] in excludes) {
+			    if (verbose) printf("   Skipping excluded dependency in packing: %s\n",pkgdeps[dep]);
+			}
+			else {
+			    cdcontents[cdn":"pkgdeps[dep]] = 1;
+			    pkg_done[pkgdeps[dep]] = 1;
+			    if (verbose) printf("   Marked dependency pkg %s as processed\n",pkgdeps[dep]);
+			}
 		    }
 		    cdtot[cdn] = cdtot[cdn] + size_needed;
+		    if (pkgorder[n] in excludes) {
+# don't include this one in the count if its excluded
+			if (verbose) printf("   Added  %d dependencies to the image\n",deps_needed);
+			pkgn = pkgn + deps_needed;
+		    }
+		    else {
+			if (verbose) printf("   Added %s plus %d dependencies to the image\n",pkgorder[n],deps_needed);
+			pkgn = pkgn + 1 + deps_needed;
+		    }
 		    n--;
-		    pkgn = pkgn + 1 + deps_needed;
 		}
 		else{
 # the CD is full
@@ -267,9 +320,10 @@ BEGIN {
 	    }
 	    else{
 # we've already done this pkg
+		if (verbose) printf("   %s has already been processed\n",pkgorder[n]);
 		n--;
 	    }
-
+	    
 	}
 	cdpkgs[cdn] = pkgn;
 
@@ -293,15 +347,20 @@ BEGIN {
     ncd=cdn;
 
 # print some stats
+    tot_ex=0;
+    for (ex in excludes){
+	tot_ex++;
+    }
     if (dup){
 	tot_cdpkgs=0;
 	for (cdn=1; cdn<=ncd; cdn=cdn+1){
 	    tot_cdpkgs = tot_cdpkgs + cdpkgs[cdn];
 	}
 	printf("CD images with package duplication resulted in %d packages total\n",tot_cdpkgs);
-	printf("This is an increase of %d over the base %d packages\n",tot_cdpkgs-npkgs,npkgs);
+	printf("This is an increase of %d over the base %d packages\n",tot_cdpkgs-(npkgs-tot_ex),npkgs-tot_ex);
     }
 	
+    printf("%d packages out of %d have been excluded due to redistribution restrictions\n",tot_ex,npkgs);
 #
 # Next, create a subdirectory for each CD and populate the directory
 # with links to the actual binary pkgs

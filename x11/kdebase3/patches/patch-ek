@@ -1,0 +1,15 @@
+$NetBSD: patch-ek,v 1.1.1.1.2.2 2002/06/23 19:06:02 jlam Exp $
+
+--- kxkb/kxkb.cpp.orig	Sat Mar  2 22:03:52 2002
++++ kxkb/kxkb.cpp
+@@ -483,7 +483,9 @@
+ const char * DESCRIPTION =
+   I18N_NOOP("A utility to switch keyboard maps.");
+ 
+-int main(int argc, char *argv[])
++extern "C" int kdemain(int argc, char *argv[]);
++
++int kdemain(int argc, char *argv[])
+ {
+     KAboutData about("kxkb", I18N_NOOP("KDE Keyboard Tool"), "0.6",
+                      DESCRIPTION, KAboutData::License_LGPL,

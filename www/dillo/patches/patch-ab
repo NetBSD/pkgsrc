@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.4.2.2 2002/06/23 19:03:43 jlam Exp $
+
+--- Makefile.in.orig	Tue May 21 12:53:53 2002
++++ Makefile.in
+@@ -359,9 +359,9 @@
+ 
+ install-data-local: dillorc
+ 	-if [ -d $(DESTDIR)$(sysconfdir) ]; then \
+-		$(INSTALL_DATA) --backup=t $(srcdir)/dillorc $(DESTDIR)$(sysconfdir)/; \
++		$(INSTALL_DATA) $(srcdir)/dillorc $(DESTDIR)$(sysconfdir)/; \
+ 	elif [ -d /etc/ ]; then \
+-		$(INSTALL_DATA) --backup=t $(srcdir)/dillorc /etc/; \
++		$(INSTALL_DATA) $(srcdir)/dillorc /etc/; \
+ 	fi
+ 
+ uninstall-local:

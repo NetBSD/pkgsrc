@@ -1,0 +1,16 @@
+$NetBSD: patch-dc,v 1.1.1.1.2.2 2002/06/23 19:05:48 jlam Exp $
+
+--- ksysguard/ksysguardd/FreeBSD/CPU.c.orig	Fri Dec 28 09:48:05 2001
++++ ksysguard/ksysguardd/FreeBSD/CPU.c
+@@ -19,7 +19,11 @@
+ */
+ 
+ #include <sys/dkstat.h>
++#ifdef __NetBSD__
++#include <sys/sched.h>		/* CPUSTATES */
++#else
+ #include <devstat.h>
++#endif
+ #include <fcntl.h>
+ #include <kvm.h>
+ #include <nlist.h>

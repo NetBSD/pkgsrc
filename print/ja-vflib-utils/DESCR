@@ -1,0 +1,7 @@
+This packages includes several test programs to test various features
+of the VFlib2 library, including:
+
+	disol	dissassembler of vector font files
+	kban	banner-like program
+	ktest	displays all characters in a font file on an X window
+	vfperf	performance test program

@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2001/12/27 22:10:15 agc Exp $
+$NetBSD: patch-ab,v 1.4.2.1 2002/06/23 18:57:43 jlam Exp $
 
 --- Makefile.inc	2001/12/17 21:10:41	1.1
 +++ Makefile.inc	2001/12/17 21:13:54
@@ -20,8 +20,8 @@ $NetBSD: patch-ab,v 1.4 2001/12/27 22:10:15 agc Exp $
 +CHMOD?= /bin/chmod
 +CHOWN?= /usr/sbin/chown
 +CHGRP?= /usr/bin/chgrp
-+TAR_CMD?= gtar
-+TAR_FULLPATHNAME?= ${LOCALBASE}/bin/${TAR_CMD}
++TAR_CMD?= gnutar
++TAR_FULLPATHNAME?= /usr/bin/${TAR_CMD}
 +CPPFLAGS+=-DTAR_CMD='"${TAR_CMD}"' -DTAR_FULLPATHNAME='"${TAR_FULLPATHNAME}"'
 +.PATH: ${DIGESTDIR}
 +CPPFLAGS+= -I${DIGESTDIR}

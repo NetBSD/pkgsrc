@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1.2.2 2002/06/23 19:04:08 jlam Exp $
+#
+
+DISTNAME=	links-2.0
+CATEGORIES=	www
+MASTER_SITES= \
+	http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/download/ \
+	http://artax.karlin.mff.cuni.cz/~mikulas/links/download/ \
+	ftp://atrey.karlin.mff.cuni.cz/pub/local/clock/links/
+EXTRACT_SUFX=  .tar.bz2
+
+MAINTAINER=	jschauma@netbsd.org
+HOMEPAGE=	http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/
+
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--enable-javascript
+
+PLIST_SRC=		${.CURDIR}/../../www/links/PLIST
+
+.include "../../security/openssl/buildlink2.mk"

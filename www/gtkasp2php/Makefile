@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2001/12/21 10:52:30 agc Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2002/06/23 19:03:50 jlam Exp $
 
-DISTNAME=	asp2php-0.75.25
+DISTNAME=	asp2php-0.76.10
 PKGNAME=	gtk${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://home.swbell.net/mikekohn/asp2php/
+MASTER_SITES=	http://65.108.58.129/asp2php/
 
-MAINTAINER=	shell@shellhung.org
+MAINTAINER=	shell@netbsd.org
 HOMEPAGE=	http://asp2php.naken.cc/
 COMMENT=	gtk+ version of utility to convert asp pages to php pages
 
-WRKSRC=		${WRKDIR}/asp2php
-
-ALL_TARGET=	all gtkasp2php
+ALL_TARGET=	all gui
 
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/12/04 13:38:25 hubertf Exp $
+$NetBSD: patch-ad,v 1.1.1.1.2.1 2002/06/23 19:00:28 jlam Exp $
 
---- fed/fed.h.orig	Mon Dec  4 13:46:17 2000
+--- fed/fed.h.orig	Sat Oct  7 22:44:48 1995
 +++ fed/fed.h
 @@ -32,7 +32,11 @@
   * 	fed.h, 3.00, last edit-date: [Sun Jan  2 20:10:31 1994]
@@ -14,3 +14,12 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/04 13:38:25 hubertf Exp $
  #include <stdlib.h>
  #include <string.h>
  #include <unistd.h>
+@@ -109,7 +113,7 @@
+ void setchr ( char type );
+ void setrow ( char type );
+ void setcol ( char type );
+-void main ( int argc, char *argv[] );
++int main ( int argc, char *argv[] );
+ void readfont ( char *filename );
+ void dis_cmd ( char *strg );
+ void clr_cmd ( void );

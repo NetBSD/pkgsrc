@@ -1,41 +1,20 @@
-$NetBSD: patch-bf,v 1.2 2002/05/06 13:16:58 bouyer Exp $
+$NetBSD: patch-bf,v 1.2.2.1 2002/06/23 18:59:40 jlam Exp $
 
---- changer-src/chg-scsi.c.orig	24 Mar 2002 19:04:12 -0000
-+++ changer-src/chg-scsi.c	3 May 2002 16:15:24 -0000
-@@ -1037,6 +1037,7 @@
-   char *clean_file=NULL;
-   char *time_file=NULL;
+--- changer-src/scsi-changer-driver.c.orig	Sun Feb 10 13:49:51 2002
++++ changer-src/scsi-changer-driver.c	Mon Jun  3 22:31:54 2002
+@@ -1318,13 +1318,14 @@
+ {
+   int ret = 0;
+   extern OpenFiles_T *pDev;
++  extern changer_t chg;         /* Needed for the infos about havebarcode */
  
-+  char *ptr;         /* a public pointer .... */
-   /*
-    * For the emubarcode stuff
-    */
-@@ -1065,6 +1066,7 @@
-   chg.device = NULL;
-   chg.labelfile = NULL;
-   chg.conf = NULL;
-+  chg.debuglevel = NULL;
- #ifdef CHG_SCSI_STANDALONE
-   printf("Ups standalone\n");
- #else
-@@ -1085,6 +1087,11 @@
-   memset(pDev, 0, sizeof(OpenFiles_T) * CHG_MAXDEV );
+   DebugPrint(DEBUG_INFO, SECTION_BARCODE,"##### START BarCode\n");
+   DebugPrint(DEBUG_INFO, SECTION_BARCODE,"%-20s : fd %d\n", "BarCode", fd);
  
- 
-+  if ((ptr=getenv("CHG_DEBUG")) != NULL)
-+    {
-+      chg.debuglevel = strdup(ptr);
-+    }
-+
-   switch(com.command_code) 
-     {
-     case COM_SCAN:
-@@ -1588,7 +1595,7 @@
-       
-     printf("%d %d 1", loaded, use_slots);
- 
--    if (BarCode(fd) == 1 || emubarcode == 1)
-+    if (BarCode(fd) == 1 || emubarcode == 1 || chg.havebarcode == 1)
-       {
-         printf(" 1\n");
-       } else {
+   DebugPrint(DEBUG_INFO, SECTION_BARCODE,"Ident = [%s], function = [%s]\n", pDev[fd].ident,
+ 	     pDev[fd].functions->ident);
+-  ret = pDev[fd].functions->function_barcode(fd);
++  ret = (pDev[fd].functions->function_barcode(fd) | chg.havebarcode);
+   DebugPrint(DEBUG_INFO, SECTION_BARCODE,"##### STOP BarCode (%d)\n",ret);
+   return(ret);
+ }

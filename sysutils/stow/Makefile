@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:41 seb Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2002/06/23 19:01:01 jlam Exp $
 #
 
-DISTNAME=	stow-1.3.2
+DISTNAME=	stow-1.3.3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_GNU:=stow/}
 

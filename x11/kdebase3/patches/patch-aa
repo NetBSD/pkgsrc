@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1.1.1.2.2 2002/06/23 19:05:11 jlam Exp $
+
+--- configure.orig	Mon May 13 23:58:21 2002
++++ configure
+@@ -25606,7 +25606,24 @@
+   (exit $ac_status); }; }; then
+ 
+                   ac_cv_have_dpms="-lXdpms"
+-
++  
++        lib=Xdpms
++        shared_lib_found=no
++        for i in ${LDFLAGS}; do
++                case "$i" in
++                -L*)
++                        dir=`echo $i | sed "s,^-L,,"`
++                        if [ -e $dir/lib${lib}.so ] ||
++                           [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++                                shared_lib_found=yes
++                                break;
++                        fi
++                esac
++        done
++        if [ "$shared_lib_found" = "no" ]; then
++                eval "ac_cv_have_dpms=no"
++        fi
++ 
+ else
+   echo "$as_me: failed program was:" >&5
+ cat conftest.$ac_ext >&5
+@@ -28793,6 +28810,7 @@
+ case "$host" in
+   *-*-linux*) ksysguardd_compile=yes; UNAME='Linux' ;;
+   *-*-freebsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;
++  *-*-netbsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;
+   *-*-solaris*) ksysguardd_compile=yes; UNAME='Solaris' ;;
+   *-*-osf*) ksysguardd_compile=yes; UNAME='Tru64' ;;
+   *) ksysguardd_compile=no; UNAME='' ;;

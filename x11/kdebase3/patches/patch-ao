@@ -1,0 +1,489 @@
+$NetBSD: patch-ao,v 1.1.1.1.2.2 2002/06/23 19:05:19 jlam Exp $
+
+--- kcontrol/kcontrol/Makefile.in.orig	Mon May 13 23:57:39 2002
++++ kcontrol/kcontrol/Makefile.in
+@@ -311,52 +311,65 @@
+ 
+ SUBDIRS = . pics
+ 
+-CLEANFILES = dummy.cpp
+-
+ bin_PROGRAMS = kcontrol kcmshell kcminit
+-lib_LTLIBRARIES = kcontrol.la kcmshell.la kcminit.la
++lib_LTLIBRARIES = libkcontrol_main.la kcontrol.la \
++	libkcmshell_main.la kcmshell.la \
++	libkcminit_main.la kcminit.la
++
+ 
+-#>- kcontrol_la_SOURCES = main.cpp toplevel.cpp indexwidget.cpp searchwidget.cpp \
+-#>- helpwidget.cpp moduleinfo.cpp modules.cpp proxywidget.cpp \
+-#>- modloader.cpp dockcontainer.cpp aboutwidget.cpp global.cpp \
+-#>- quickhelp.cpp moduletreeview.cpp moduleiconview.cpp \
++#>- libkcontrol_main_la_SOURCES = main.cpp toplevel.cpp indexwidget.cpp \
++#>- searchwidget.cpp helpwidget.cpp moduleinfo.cpp modules.cpp \
++#>- proxywidget.cpp modloader.cpp dockcontainer.cpp aboutwidget.cpp \
++#>- global.cpp quickhelp.cpp moduletreeview.cpp moduleiconview.cpp \
+ #>- kecdialog.cpp kcrootonly.cpp moduleIface.cpp moduleIface.skel
+ #>+ 5
+-kcontrol_la_SOURCES=main.cpp toplevel.cpp indexwidget.cpp searchwidget.cpp \
+-	helpwidget.cpp moduleinfo.cpp modules.cpp proxywidget.cpp \
+-	modloader.cpp dockcontainer.cpp aboutwidget.cpp global.cpp \
+-	quickhelp.cpp moduletreeview.cpp moduleiconview.cpp \
++libkcontrol_main_la_SOURCES=main.cpp toplevel.cpp indexwidget.cpp \
++	searchwidget.cpp helpwidget.cpp moduleinfo.cpp modules.cpp \
++	proxywidget.cpp modloader.cpp dockcontainer.cpp aboutwidget.cpp \
++	global.cpp quickhelp.cpp moduletreeview.cpp moduleiconview.cpp \
+ 	kecdialog.cpp kcrootonly.cpp moduleIface.cpp  moduleIface_skel.cpp
+ 
+ 
+-kcontrol_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA)
++libkcontrol_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA)
++libkcontrol_main_la_LDFLAGS = $(all_libraries)
++
++kcontrol_la_SOURCES = kcontrol_main.cpp
++kcontrol_la_LIBADD = libkcontrol_main.la
+ kcontrol_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+-#>- kcmshell_la_SOURCES = kcmshell.cpp moduleinfo.cpp modloader.cpp kecdialog.cpp \
+-#>- proxywidget.cpp kcdialog.cpp global.cpp \
++#>- libkcmshell_main_la_SOURCES = kcmshell.cpp moduleinfo.cpp modloader.cpp \
++#>- kecdialog.cpp proxywidget.cpp kcdialog.cpp global.cpp \
+ #>- kcdialog.skel
+ #>+ 3
+-kcmshell_la_SOURCES=kcmshell.cpp moduleinfo.cpp modloader.cpp kecdialog.cpp \
+-	proxywidget.cpp kcdialog.cpp global.cpp \
++libkcmshell_main_la_SOURCES=kcmshell.cpp moduleinfo.cpp modloader.cpp \
++	kecdialog.cpp proxywidget.cpp kcdialog.cpp global.cpp \
+ 	 kcdialog_skel.cpp
+ 
+-kcmshell_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA)
++libkcmshell_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA)
++libkcmshell_main_la_LDFLAGS = $(all_libraries)
++
++kcmshell_la_SOURCES = kcmshell_main.cpp
++kcmshell_la_LIBADD = libkcmshell_main.la
+ kcmshell_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
++libkcminit_main_la_SOURCES = kcminit.cpp global.cpp
++libkcminit_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA)
++libkcminit_main_la_LDFLAGS = $(all_libraries)
++
+ kcminit_la_SOURCES = kcminit.cpp global.cpp
+-kcminit_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA)
++kcminit_la_LIBADD = libkcminit_main.la
+ kcminit_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+-kcontrol_SOURCES = dummy.cpp
+-kcontrol_LDADD = kcontrol.la
++kcontrol_SOURCES = kcontrol_main.cpp
++kcontrol_LDADD = libkcontrol_main.la
+ kcontrol_LDFLAGS = $(all_libraries) $(KDE_RPATH) -export-dynamic
+ 
+-kcmshell_SOURCES = dummy.cpp
+-kcmshell_LDADD = kcmshell.la
++kcmshell_SOURCES = kcmshell_main.cpp
++kcmshell_LDADD = libkcmshell_main.la
+ kcmshell_LDFLAGS = $(all_libraries) $(KDE_RPATH) -export-dynamic
+ 
+-kcminit_SOURCES = dummy.cpp
+-kcminit_LDADD = kcminit.la
++kcminit_SOURCES = kcminit_main.cpp
++kcminit_LDADD = libkcminit_main.la
+ kcminit_LDFLAGS = $(all_libraries) $(KDE_RPATH) -export-dynamic
+ 
+ rcdir = $(kde_datadir)/kcontrol
+@@ -373,7 +386,7 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-kcminit_la_DEPENDENCIES =
++kcminit_la_DEPENDENCIES = libkcminit_main.la
+ am_kcminit_la_OBJECTS = kcminit.lo global.lo
+ #>- kcminit_la_OBJECTS = $(am_kcminit_la_OBJECTS)
+ #>+ 4
+@@ -381,52 +394,70 @@
+ kcminit_la_nofinal_OBJECTS = kcminit.lo global.lo
+ @KDE_USE_FINAL_FALSE@kcminit_la_OBJECTS = $(kcminit_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@kcminit_la_OBJECTS = $(kcminit_la_final_OBJECTS)
+-kcmshell_la_DEPENDENCIES =
+-am_kcmshell_la_OBJECTS = kcmshell.lo moduleinfo.lo modloader.lo \
+-	kecdialog.lo proxywidget.lo kcdialog.lo global.lo
++kcmshell_la_DEPENDENCIES = libkcmshell_main.la
++am_kcmshell_la_OBJECTS = kcmshell_main.lo
+ #>- kcmshell_la_OBJECTS = $(am_kcmshell_la_OBJECTS)
++#>+ 1
++kcmshell_la_OBJECTS = kcmshell_main.lo
++kcontrol_la_DEPENDENCIES = libkcontrol_main.la
++am_kcontrol_la_OBJECTS = kcontrol_main.lo
++#>- kcontrol_la_OBJECTS = $(am_kcontrol_la_OBJECTS)
++#>+ 1
++kcontrol_la_OBJECTS = kcontrol_main.lo
++libkcminit_main_la_DEPENDENCIES =
++am_libkcminit_main_la_OBJECTS = kcminit.lo global.lo
++#>- libkcminit_main_la_OBJECTS = $(am_libkcminit_main_la_OBJECTS)
++#>+ 4
++libkcminit_main_la_final_OBJECTS = libkcminit_main_la.all_cpp.lo 
++libkcminit_main_la_nofinal_OBJECTS = kcminit.lo global.lo
++@KDE_USE_FINAL_FALSE@libkcminit_main_la_OBJECTS = $(libkcminit_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkcminit_main_la_OBJECTS = $(libkcminit_main_la_final_OBJECTS)
++libkcmshell_main_la_DEPENDENCIES =
++am_libkcmshell_main_la_OBJECTS = kcmshell.lo moduleinfo.lo modloader.lo \
++	kecdialog.lo proxywidget.lo kcdialog.lo global.lo
++#>- libkcmshell_main_la_OBJECTS = $(am_libkcmshell_main_la_OBJECTS)
+ #>+ 6
+-kcmshell_la_final_OBJECTS = kcmshell_la.all_cpp.lo 
+-kcmshell_la_nofinal_OBJECTS = kcmshell.lo moduleinfo.lo modloader.lo \
++libkcmshell_main_la_final_OBJECTS = libkcmshell_main_la.all_cpp.lo 
++libkcmshell_main_la_nofinal_OBJECTS = kcmshell.lo moduleinfo.lo modloader.lo \
+ 	kecdialog.lo proxywidget.lo kcdialog.lo global.lo kcdialog_skel.lo \
+-	kcmshell_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@kcmshell_la_OBJECTS = $(kcmshell_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kcmshell_la_OBJECTS = $(kcmshell_la_final_OBJECTS)
+-kcontrol_la_DEPENDENCIES =
+-am_kcontrol_la_OBJECTS = main.lo toplevel.lo indexwidget.lo \
++	libkcmshell_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkcmshell_main_la_OBJECTS = $(libkcmshell_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkcmshell_main_la_OBJECTS = $(libkcmshell_main_la_final_OBJECTS)
++libkcontrol_main_la_DEPENDENCIES =
++am_libkcontrol_main_la_OBJECTS = main.lo toplevel.lo indexwidget.lo \
+ 	searchwidget.lo helpwidget.lo moduleinfo.lo modules.lo \
+ 	proxywidget.lo modloader.lo dockcontainer.lo aboutwidget.lo \
+ 	global.lo quickhelp.lo moduletreeview.lo moduleiconview.lo \
+ 	kecdialog.lo kcrootonly.lo moduleIface.lo
+-#>- kcontrol_la_OBJECTS = $(am_kcontrol_la_OBJECTS)
++#>- libkcontrol_main_la_OBJECTS = $(am_libkcontrol_main_la_OBJECTS)
+ #>+ 9
+-kcontrol_la_final_OBJECTS = kcontrol_la.all_cpp.lo 
+-kcontrol_la_nofinal_OBJECTS = main.lo toplevel.lo indexwidget.lo \
++libkcontrol_main_la_final_OBJECTS = libkcontrol_main_la.all_cpp.lo 
++libkcontrol_main_la_nofinal_OBJECTS = main.lo toplevel.lo indexwidget.lo \
+ 	searchwidget.lo helpwidget.lo moduleinfo.lo modules.lo \
+ 	proxywidget.lo modloader.lo dockcontainer.lo aboutwidget.lo \
+ 	global.lo quickhelp.lo moduletreeview.lo moduleiconview.lo \
+ 	kecdialog.lo kcrootonly.lo moduleIface.lo moduleIface_skel.lo \
+-	kcontrol_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@kcontrol_la_OBJECTS = $(kcontrol_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kcontrol_la_OBJECTS = $(kcontrol_la_final_OBJECTS)
++	libkcontrol_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkcontrol_main_la_OBJECTS = $(libkcontrol_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkcontrol_main_la_OBJECTS = $(libkcontrol_main_la_final_OBJECTS)
+ bin_PROGRAMS = kcontrol$(EXEEXT) kcmshell$(EXEEXT) kcminit$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_kcminit_OBJECTS = dummy.$(OBJEXT)
++am_kcminit_OBJECTS = kcminit_main.$(OBJEXT)
+ #>- kcminit_OBJECTS = $(am_kcminit_OBJECTS)
+ #>+ 1
+-kcminit_OBJECTS = dummy.$(OBJEXT)
+-kcminit_DEPENDENCIES = kcminit.la
+-am_kcmshell_OBJECTS = dummy.$(OBJEXT)
++kcminit_OBJECTS = kcminit_main.$(OBJEXT)
++kcminit_DEPENDENCIES = libkcminit_main.la
++am_kcmshell_OBJECTS = kcmshell_main.$(OBJEXT)
+ #>- kcmshell_OBJECTS = $(am_kcmshell_OBJECTS)
+ #>+ 1
+-kcmshell_OBJECTS = dummy.$(OBJEXT)
+-kcmshell_DEPENDENCIES = kcmshell.la
+-am_kcontrol_OBJECTS = dummy.$(OBJEXT)
++kcmshell_OBJECTS = kcmshell_main.$(OBJEXT)
++kcmshell_DEPENDENCIES = libkcmshell_main.la
++am_kcontrol_OBJECTS = kcontrol_main.$(OBJEXT)
+ #>- kcontrol_OBJECTS = $(am_kcontrol_OBJECTS)
+ #>+ 1
+-kcontrol_OBJECTS = dummy.$(OBJEXT)
+-kcontrol_DEPENDENCIES = kcontrol.la
++kcontrol_OBJECTS = kcontrol_main.$(OBJEXT)
++kcontrol_DEPENDENCIES = libkcontrol_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -435,13 +466,16 @@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+ @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/aboutwidget.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/dockcontainer.Plo $(DEPDIR)/dummy.Po \
+-	@AMDEP_TRUE@	$(DEPDIR)/global.Plo $(DEPDIR)/helpwidget.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/indexwidget.Plo $(DEPDIR)/kcdialog.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/kcminit.Plo $(DEPDIR)/kcmshell.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/kcrootonly.Plo $(DEPDIR)/kecdialog.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/modloader.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/moduleIface.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/dockcontainer.Plo $(DEPDIR)/global.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/helpwidget.Plo $(DEPDIR)/indexwidget.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kcdialog.Plo $(DEPDIR)/kcminit.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kcminit_main.Po $(DEPDIR)/kcmshell.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kcmshell_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kcmshell_main.Po \
++	@AMDEP_TRUE@	$(DEPDIR)/kcontrol_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kcontrol_main.Po $(DEPDIR)/kcrootonly.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kecdialog.Plo $(DEPDIR)/main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/modloader.Plo $(DEPDIR)/moduleIface.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/moduleiconview.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/moduleinfo.Plo $(DEPDIR)/modules.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/moduletreeview.Plo \
+@@ -467,8 +501,9 @@
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+ DIST_SOURCES = $(kcminit_la_SOURCES) $(kcmshell_la_SOURCES) \
+-	$(kcontrol_la_SOURCES) $(kcminit_SOURCES) $(kcmshell_SOURCES) \
+-	$(kcontrol_SOURCES)
++	$(kcontrol_la_SOURCES) $(libkcminit_main_la_SOURCES) \
++	$(libkcmshell_main_la_SOURCES) $(libkcontrol_main_la_SOURCES) \
++	$(kcminit_SOURCES) $(kcmshell_SOURCES) $(kcontrol_SOURCES)
+ DATA = $(data_DATA) $(rc_DATA)
+ 
+ 
+@@ -478,7 +513,7 @@
+ 	uninstall-recursive check-recursive installcheck-recursive
+ DIST_COMMON = Makefile.am Makefile.in
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(kcminit_la_SOURCES) $(kcmshell_la_SOURCES) $(kcontrol_la_SOURCES) $(kcminit_SOURCES) $(kcmshell_SOURCES) $(kcontrol_SOURCES)
++SOURCES = $(kcminit_la_SOURCES) $(kcmshell_la_SOURCES) $(kcontrol_la_SOURCES) $(libkcminit_main_la_SOURCES) $(libkcmshell_main_la_SOURCES) $(libkcontrol_main_la_SOURCES) $(kcminit_SOURCES) $(kcmshell_SOURCES) $(kcontrol_SOURCES)
+ 
+ #>- all: all-recursive
+ #>+ 1
+@@ -531,6 +566,12 @@
+ 	$(CXXLINK) -rpath $(libdir) $(kcmshell_la_LDFLAGS) $(kcmshell_la_OBJECTS) $(kcmshell_la_LIBADD) $(LIBS)
+ kcontrol.la: $(kcontrol_la_OBJECTS) $(kcontrol_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(kcontrol_la_LDFLAGS) $(kcontrol_la_OBJECTS) $(kcontrol_la_LIBADD) $(LIBS)
++libkcminit_main.la: $(libkcminit_main_la_OBJECTS) $(libkcminit_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkcminit_main_la_LDFLAGS) $(libkcminit_main_la_OBJECTS) $(libkcminit_main_la_LIBADD) $(LIBS)
++libkcmshell_main.la: $(libkcmshell_main_la_OBJECTS) $(libkcmshell_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkcmshell_main_la_LDFLAGS) $(libkcmshell_main_la_OBJECTS) $(libkcmshell_main_la_LIBADD) $(LIBS)
++libkcontrol_main.la: $(libkcontrol_main_la_OBJECTS) $(libkcontrol_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkcontrol_main_la_LDFLAGS) $(libkcontrol_main_la_OBJECTS) $(libkcontrol_main_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+@@ -573,13 +614,17 @@
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/aboutwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dockcontainer.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/global.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/helpwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/indexwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcdialog.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcminit.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcminit_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcmshell.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcmshell_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcmshell_main.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcontrol_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcontrol_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcrootonly.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kecdialog.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
+@@ -745,7 +790,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kcontrolui.rc indexwidget.h proxywidget.h dockcontainer.h aboutwidget.cpp modules.cpp main.h moduletreeview.h kecdialog.h moduleIface.h aboutwidget.h kcrootonly.cpp hi16-app-kcontrol.png toplevel.h kcdialog.cpp proxywidget.cpp modules.h moduleinfo.h kcmshell.h modulemenu.cpp modloader.h hi32-app-kcontrol.png modulemenu.h quickhelp.h searchwidget.h moduleiconview.cpp kcdialog.h hi48-app-kcontrol.png kcrootonly.h dockcontainer.cpp helpwidget.h moduleIface.cpp KControl.desktop moduletreeview.cpp version.h quickhelp.cpp moduleiconview.h global.h helpwidget.cpp 
++KDE_DIST=kcontrolui.rc indexwidget.h hi32-app-kcontrol.png proxywidget.h dockcontainer.h modulemenu.h aboutwidget.cpp quickhelp.h searchwidget.h modules.cpp main.h kecdialog.cpp moduletreeview.h moduleiconview.cpp kcdialog.h kecdialog.h moduleIface.h searchwidget.cpp aboutwidget.h hi48-app-kcontrol.png hi16-app-kcontrol.png kcrootonly.cpp kcrootonly.h dockcontainer.cpp toplevel.h helpwidget.h moduleIface.cpp kcdialog.cpp KControl.desktop moduletreeview.cpp proxywidget.cpp modules.h version.h quickhelp.cpp moduleiconview.h moduleinfo.h global.h kcmshell.h helpwidget.cpp modulemenu.cpp modloader.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -807,7 +852,6 @@
+ mostlyclean-generic:
+ 
+ clean-generic:
+-	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
+ 
+ distclean-generic:
+ 	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
+@@ -890,9 +934,6 @@
+ 
+ messages: rc.cpp
+ 	$(XGETTEXT) *.cpp -o $(podir)/kcontrol.pot
+-
+-dummy.cpp:
+-	echo > dummy.cpp
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -1016,34 +1057,34 @@
+ 
+ 
+ #>+ 12
+-kcmshell_la_meta_unload.cpp:  kcmshell.moc moduleinfo.moc kecdialog.moc kcdialog.moc proxywidget.moc
+-	@echo 'creating kcmshell_la_meta_unload.cpp'
+-	@-rm -f kcmshell_la_meta_unload.cpp
++libkcmshell_main_la_meta_unload.cpp:  kcmshell.moc moduleinfo.moc kecdialog.moc kcdialog.moc proxywidget.moc
++	@echo 'creating libkcmshell_main_la_meta_unload.cpp'
++	@-rm -f libkcmshell_main_la_meta_unload.cpp
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kcmshell_la[] = {' > kcmshell_la_meta_unload.cpp ;\
+-		cat  kcmshell.moc moduleinfo.moc kecdialog.moc kcdialog.moc proxywidget.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kcmshell_la_meta_unload.cpp ;\
+-		echo '0};' >> kcmshell_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kcmshell_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kcmshell_la)' >> kcmshell_la_meta_unload.cpp ;\
+-	else echo > kcmshell_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkcmshell_main_la[] = {' > libkcmshell_main_la_meta_unload.cpp ;\
++		cat  kcmshell.moc moduleinfo.moc kecdialog.moc kcdialog.moc proxywidget.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkcmshell_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkcmshell_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkcmshell_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkcmshell_main_la)' >> libkcmshell_main_la_meta_unload.cpp ;\
++	else echo > libkcmshell_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 12
+-kcontrol_la_meta_unload.cpp:  indexwidget.moc main.moc moduleinfo.moc helpwidget.moc toplevel.moc moduletreeview.moc kecdialog.moc modules.moc moduleiconview.moc searchwidget.moc moduleIface.moc aboutwidget.moc proxywidget.moc quickhelp.moc dockcontainer.moc
+-	@echo 'creating kcontrol_la_meta_unload.cpp'
+-	@-rm -f kcontrol_la_meta_unload.cpp
++libkcontrol_main_la_meta_unload.cpp:  indexwidget.moc main.moc moduleinfo.moc helpwidget.moc toplevel.moc moduletreeview.moc kecdialog.moc modules.moc moduleiconview.moc searchwidget.moc moduleIface.moc aboutwidget.moc proxywidget.moc quickhelp.moc dockcontainer.moc
++	@echo 'creating libkcontrol_main_la_meta_unload.cpp'
++	@-rm -f libkcontrol_main_la_meta_unload.cpp
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kcontrol_la[] = {' > kcontrol_la_meta_unload.cpp ;\
+-		cat  indexwidget.moc main.moc moduleinfo.moc helpwidget.moc toplevel.moc moduletreeview.moc kecdialog.moc modules.moc moduleiconview.moc searchwidget.moc moduleIface.moc aboutwidget.moc proxywidget.moc quickhelp.moc dockcontainer.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kcontrol_la_meta_unload.cpp ;\
+-		echo '0};' >> kcontrol_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kcontrol_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kcontrol_la)' >> kcontrol_la_meta_unload.cpp ;\
+-	else echo > kcontrol_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkcontrol_main_la[] = {' > libkcontrol_main_la_meta_unload.cpp ;\
++		cat  indexwidget.moc main.moc moduleinfo.moc helpwidget.moc toplevel.moc moduletreeview.moc kecdialog.moc modules.moc moduleiconview.moc searchwidget.moc moduleIface.moc aboutwidget.moc proxywidget.moc quickhelp.moc dockcontainer.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkcontrol_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkcontrol_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkcontrol_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkcontrol_main_la)' >> libkcontrol_main_la_meta_unload.cpp ;\
++	else echo > libkcontrol_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
+-	-rm -f  kcmshell_la_meta_unload.cpp kcontrol_la_meta_unload.cpp
++	-rm -f  libkcmshell_main_la_meta_unload.cpp libkcontrol_main_la_meta_unload.cpp
+ 
+ #>+ 11
+ kcminit_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcminit.cpp $(srcdir)/global.cpp   indexwidget.moc main.moc moduleinfo.moc kcmshell.moc helpwidget.moc toplevel.moc moduletreeview.moc kecdialog.moc modulemenu.moc modules.moc moduleiconview.moc kcdialog.moc searchwidget.moc moduleIface.moc aboutwidget.moc proxywidget.moc dockcontainer.moc quickhelp.moc 
+@@ -1058,11 +1099,11 @@
+ 	rm -f kcminit_la.all_cpp.final kcminit_la.all_cpp.files
+ 
+ #>+ 11
+-kcmshell_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcmshell.cpp $(srcdir)/moduleinfo.cpp $(srcdir)/modloader.cpp $(srcdir)/kecdialog.cpp $(srcdir)/proxywidget.cpp $(srcdir)/kcdialog.cpp $(srcdir)/global.cpp kcdialog_skel.cpp kcmshell_la_meta_unload.cpp  
++kcmshell_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcmshell_main.cpp  
+ 	@echo 'creating kcmshell_la.all_cpp.cpp ...'; \
+ 	rm -f kcmshell_la.all_cpp.files kcmshell_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kcmshell_la.all_cpp.final; \
+-	for file in kcmshell.cpp moduleinfo.cpp modloader.cpp kecdialog.cpp proxywidget.cpp kcdialog.cpp global.cpp kcdialog_skel.cpp kcmshell_la_meta_unload.cpp ; do \
++	for file in kcmshell_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kcmshell_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kcmshell_la.all_cpp.final; \
+ 	done; \
+@@ -1070,11 +1111,11 @@
+ 	rm -f kcmshell_la.all_cpp.final kcmshell_la.all_cpp.files
+ 
+ #>+ 11
+-kcontrol_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/toplevel.cpp $(srcdir)/indexwidget.cpp $(srcdir)/searchwidget.cpp $(srcdir)/helpwidget.cpp $(srcdir)/moduleinfo.cpp $(srcdir)/modules.cpp $(srcdir)/proxywidget.cpp $(srcdir)/modloader.cpp $(srcdir)/dockcontainer.cpp $(srcdir)/aboutwidget.cpp $(srcdir)/global.cpp $(srcdir)/quickhelp.cpp $(srcdir)/moduletreeview.cpp $(srcdir)/moduleiconview.cpp $(srcdir)/kecdialog.cpp $(srcdir)/kcrootonly.cpp $(srcdir)/moduleIface.cpp moduleIface_skel.cpp kcontrol_la_meta_unload.cpp  
++kcontrol_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcontrol_main.cpp  
+ 	@echo 'creating kcontrol_la.all_cpp.cpp ...'; \
+ 	rm -f kcontrol_la.all_cpp.files kcontrol_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kcontrol_la.all_cpp.final; \
+-	for file in main.cpp toplevel.cpp indexwidget.cpp searchwidget.cpp helpwidget.cpp moduleinfo.cpp modules.cpp proxywidget.cpp modloader.cpp dockcontainer.cpp aboutwidget.cpp global.cpp quickhelp.cpp moduletreeview.cpp moduleiconview.cpp kecdialog.cpp kcrootonly.cpp moduleIface.cpp moduleIface_skel.cpp kcontrol_la_meta_unload.cpp ; do \
++	for file in kcontrol_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kcontrol_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kcontrol_la.all_cpp.final; \
+ 	done; \
+@@ -1082,11 +1123,47 @@
+ 	rm -f kcontrol_la.all_cpp.final kcontrol_la.all_cpp.files
+ 
+ #>+ 11
+-kcminit.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++libkcminit_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcminit.cpp $(srcdir)/global.cpp  
++	@echo 'creating libkcminit_main_la.all_cpp.cpp ...'; \
++	rm -f libkcminit_main_la.all_cpp.files libkcminit_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkcminit_main_la.all_cpp.final; \
++	for file in kcminit.cpp global.cpp ; do \
++	  echo "#include \"$$file\"" >> libkcminit_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkcminit_main_la.all_cpp.final; \
++	done; \
++	cat libkcminit_main_la.all_cpp.final libkcminit_main_la.all_cpp.files  > libkcminit_main_la.all_cpp.cpp; \
++	rm -f libkcminit_main_la.all_cpp.final libkcminit_main_la.all_cpp.files
++
++#>+ 11
++libkcmshell_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcmshell.cpp $(srcdir)/moduleinfo.cpp $(srcdir)/modloader.cpp $(srcdir)/kecdialog.cpp $(srcdir)/proxywidget.cpp $(srcdir)/kcdialog.cpp $(srcdir)/global.cpp kcdialog_skel.cpp libkcmshell_main_la_meta_unload.cpp  
++	@echo 'creating libkcmshell_main_la.all_cpp.cpp ...'; \
++	rm -f libkcmshell_main_la.all_cpp.files libkcmshell_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkcmshell_main_la.all_cpp.final; \
++	for file in kcmshell.cpp moduleinfo.cpp modloader.cpp kecdialog.cpp proxywidget.cpp kcdialog.cpp global.cpp kcdialog_skel.cpp libkcmshell_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libkcmshell_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkcmshell_main_la.all_cpp.final; \
++	done; \
++	cat libkcmshell_main_la.all_cpp.final libkcmshell_main_la.all_cpp.files  > libkcmshell_main_la.all_cpp.cpp; \
++	rm -f libkcmshell_main_la.all_cpp.final libkcmshell_main_la.all_cpp.files
++
++#>+ 11
++libkcontrol_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/toplevel.cpp $(srcdir)/indexwidget.cpp $(srcdir)/searchwidget.cpp $(srcdir)/helpwidget.cpp $(srcdir)/moduleinfo.cpp $(srcdir)/modules.cpp $(srcdir)/proxywidget.cpp $(srcdir)/modloader.cpp $(srcdir)/dockcontainer.cpp $(srcdir)/aboutwidget.cpp $(srcdir)/global.cpp $(srcdir)/quickhelp.cpp $(srcdir)/moduletreeview.cpp $(srcdir)/moduleiconview.cpp $(srcdir)/kecdialog.cpp $(srcdir)/kcrootonly.cpp $(srcdir)/moduleIface.cpp moduleIface_skel.cpp libkcontrol_main_la_meta_unload.cpp  
++	@echo 'creating libkcontrol_main_la.all_cpp.cpp ...'; \
++	rm -f libkcontrol_main_la.all_cpp.files libkcontrol_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkcontrol_main_la.all_cpp.final; \
++	for file in main.cpp toplevel.cpp indexwidget.cpp searchwidget.cpp helpwidget.cpp moduleinfo.cpp modules.cpp proxywidget.cpp modloader.cpp dockcontainer.cpp aboutwidget.cpp global.cpp quickhelp.cpp moduletreeview.cpp moduleiconview.cpp kecdialog.cpp kcrootonly.cpp moduleIface.cpp moduleIface_skel.cpp libkcontrol_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libkcontrol_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkcontrol_main_la.all_cpp.final; \
++	done; \
++	cat libkcontrol_main_la.all_cpp.final libkcontrol_main_la.all_cpp.files  > libkcontrol_main_la.all_cpp.cpp; \
++	rm -f libkcontrol_main_la.all_cpp.final libkcontrol_main_la.all_cpp.files
++
++#>+ 11
++kcminit.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcminit_main.cpp  
+ 	@echo 'creating kcminit.all_cpp.cpp ...'; \
+ 	rm -f kcminit.all_cpp.files kcminit.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kcminit.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kcminit_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kcminit.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kcminit.all_cpp.final; \
+ 	done; \
+@@ -1094,11 +1171,11 @@
+ 	rm -f kcminit.all_cpp.final kcminit.all_cpp.files
+ 
+ #>+ 11
+-kcmshell.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++kcmshell.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcmshell_main.cpp  
+ 	@echo 'creating kcmshell.all_cpp.cpp ...'; \
+ 	rm -f kcmshell.all_cpp.files kcmshell.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kcmshell.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kcmshell_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kcmshell.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kcmshell.all_cpp.final; \
+ 	done; \
+@@ -1106,11 +1183,11 @@
+ 	rm -f kcmshell.all_cpp.final kcmshell.all_cpp.files
+ 
+ #>+ 11
+-kcontrol.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++kcontrol.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kcontrol_main.cpp  
+ 	@echo 'creating kcontrol.all_cpp.cpp ...'; \
+ 	rm -f kcontrol.all_cpp.files kcontrol.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kcontrol.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kcontrol_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kcontrol.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kcontrol.all_cpp.final; \
+ 	done; \
+@@ -1119,20 +1196,20 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kcminit_la.all_cpp.cpp kcmshell_la.all_cpp.cpp kcontrol_la.all_cpp.cpp kcminit.all_cpp.cpp kcmshell.all_cpp.cpp kcontrol.all_cpp.cpp
++	-rm -f kcminit_la.all_cpp.cpp kcmshell_la.all_cpp.cpp kcontrol_la.all_cpp.cpp libkcminit_main_la.all_cpp.cpp libkcmshell_main_la.all_cpp.cpp libkcontrol_main_la.all_cpp.cpp kcminit.all_cpp.cpp kcmshell.all_cpp.cpp kcontrol.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) kcminit_la_OBJECTS="$(kcminit_la_final_OBJECTS)" kcmshell_la_OBJECTS="$(kcmshell_la_final_OBJECTS)" kcontrol_la_OBJECTS="$(kcontrol_la_final_OBJECTS)" all-am
++	$(MAKE) kcminit_la_OBJECTS="$(kcminit_la_final_OBJECTS)" libkcminit_main_la_OBJECTS="$(libkcminit_main_la_final_OBJECTS)" libkcmshell_main_la_OBJECTS="$(libkcmshell_main_la_final_OBJECTS)" libkcontrol_main_la_OBJECTS="$(libkcontrol_main_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) kcminit_la_OBJECTS="$(kcminit_la_final_OBJECTS)" kcmshell_la_OBJECTS="$(kcmshell_la_final_OBJECTS)" kcontrol_la_OBJECTS="$(kcontrol_la_final_OBJECTS)" install-am
++	$(MAKE) kcminit_la_OBJECTS="$(kcminit_la_final_OBJECTS)" libkcminit_main_la_OBJECTS="$(libkcminit_main_la_final_OBJECTS)" libkcmshell_main_la_OBJECTS="$(libkcmshell_main_la_final_OBJECTS)" libkcontrol_main_la_OBJECTS="$(libkcontrol_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) kcminit_la_OBJECTS="$(kcminit_la_nofinal_OBJECTS)" kcmshell_la_OBJECTS="$(kcmshell_la_nofinal_OBJECTS)" kcontrol_la_OBJECTS="$(kcontrol_la_nofinal_OBJECTS)" all-am
++	$(MAKE) kcminit_la_OBJECTS="$(kcminit_la_nofinal_OBJECTS)" libkcminit_main_la_OBJECTS="$(libkcminit_main_la_nofinal_OBJECTS)" libkcmshell_main_la_OBJECTS="$(libkcmshell_main_la_nofinal_OBJECTS)" libkcontrol_main_la_OBJECTS="$(libkcontrol_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kcminit_la_OBJECTS="$(kcminit_la_nofinal_OBJECTS)" kcmshell_la_OBJECTS="$(kcmshell_la_nofinal_OBJECTS)" kcontrol_la_OBJECTS="$(kcontrol_la_nofinal_OBJECTS)" install-am
++	$(MAKE) kcminit_la_OBJECTS="$(kcminit_la_nofinal_OBJECTS)" libkcminit_main_la_OBJECTS="$(libkcminit_main_la_nofinal_OBJECTS)" libkcmshell_main_la_OBJECTS="$(libkcmshell_main_la_nofinal_OBJECTS)" libkcontrol_main_la_OBJECTS="$(libkcontrol_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

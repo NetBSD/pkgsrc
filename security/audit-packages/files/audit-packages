@@ -1,5 +1,5 @@
 #! ${SH}
-# $NetBSD: audit-packages,v 1.8 2002/04/26 12:45:24 lukem Exp $
+# $NetBSD: audit-packages,v 1.8.2.1 2002/06/23 18:58:56 jlam Exp $
 
 if [ ! -f ${PKGVULNDIR}/vulnerabilities ] ;then
     echo "** Missing ${PKGVULNDIR}/vulnerabilities" 1>&2
@@ -17,7 +17,7 @@ fi
 ${AWK} '
 	/^#.*/ { next }
 	NF == 0 { next }
-	{ cmd = sprintf("${PKG_TOOLS_BIN}/pkg_info -qe \"%s\" && echo Package \"`${PKG_TOOLS_BIN}/pkg_info -e '\''%s\'\''`\" has a %s vulnerability, see %s", $1, $1, $2, $3);
+	{ cmd = sprintf("${PKG_TOOLS_BIN}/pkg_info -qe \"%s\" && echo Package \"`${PKG_TOOLS_BIN}/pkg_info -e '\''%s\'\''`\" has a %s vulnerability, see %s ; wait", $1, $1, $2, $3);
 	  system(cmd); }
 ' ${PKGVULNDIR}/vulnerabilities
 

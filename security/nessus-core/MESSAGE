@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:16:59 zuntum Exp $
+$NetBSD: MESSAGE,v 1.1.2.1 2002/06/23 18:59:03 jlam Exp $
 
 Nessus may have placed some files in /var/nessus, ${PREFIX}/etc/nessus
 and ${PREFIX}/lib/nessus/reports. If you do not need these files any more,
@@ -10,7 +10,7 @@ be sure to remove them:
 	rm -fr ${PREFIX}/lib/nessus/reports
 
 Before you can start scanning, you need to create one or more user-accounts
-using "nessus-adduser", then start the nessus daemon, nessusd, and use the
-"nessus" GUI program to direct the daemon.
+using "nessus-adduser", generate key using "nessus-mkcert" then start the
+nessus daemon, nessusd, and use the "nessus" GUI program to direct the daemon.
 
 ===========================================================================

@@ -1,0 +1,31 @@
+$NetBSD: patch-ed,v 1.1.1.1.2.2 2002/06/23 19:06:00 jlam Exp $
+
+--- kwin/clients/riscos/Makefile.in.orig	Mon May 13 23:57:57 2002
++++ kwin/clients/riscos/Makefile.in
+@@ -302,7 +302,7 @@
+ 	HelpButton.cpp \
+ 	Static.cpp
+ 
+-kwin_riscos_la_LIBADD = ../../kwin.la
++kwin_riscos_la_LIBADD = ../../libkwin.la
+ kwin_riscos_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
+ 
+ #>- METASOURCES = AUTO
+@@ -328,7 +328,7 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+-kwin_riscos_la_DEPENDENCIES = ../../kwin.la
++kwin_riscos_la_DEPENDENCIES = ../../libkwin.la
+ am_kwin_riscos_la_OBJECTS = Button.lo CloseButton.lo IconifyButton.lo \
+ 	LowerButton.lo Manager.lo MaximiseButton.lo StickyButton.lo \
+ 	HelpButton.lo Static.lo
+@@ -522,7 +522,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=Palette.h riscos.desktop 
++KDE_DIST=riscos.desktop Palette.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 

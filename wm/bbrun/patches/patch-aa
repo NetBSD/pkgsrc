@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.2.2.2 2002/06/23 19:03:04 jlam Exp $
+
+--- Makefile.orig	Wed Feb  6 20:05:51 2002
++++ Makefile	Mon Jun 17 07:16:33 2002
+@@ -1,6 +1,6 @@
+ CC     = gcc
+-LIBS   = -lXpm `gtk-config --libs`
+-CFLAGS = `gtk-config --cflags`
++LIBS   += -lXpm `${GTK_CONFIG} --libs`
++CFLAGS += `${GTK_CONFIG} --cflags`
+ OBJS   = bbrun.o \
+          ../wmgeneral/wmgeneral.o \
+          ../wmgeneral/misc.o \

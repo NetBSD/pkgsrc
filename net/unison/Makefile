@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/01/17 13:19:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/23 18:57:15 jlam Exp $
 #
 
 DISTNAME=	src
-PKGNAME=	unison-2.7.7
+PKGNAME=	unison-2.9.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/stable/latest/
 
@@ -18,6 +18,7 @@ DIST_SUBDIR=	${PKGNAME}
 WRKSRC=		${WRKDIR}/${PKGNAME}
 USE_GMAKE=	yes
 MAKE_FLAGS+=	CFLAGS="" UISTYLE=text
+MAKE_ENV+=	HOME=${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 

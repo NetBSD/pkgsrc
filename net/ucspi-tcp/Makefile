@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/04/18 16:19:17 yyamano Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2002/06/23 18:57:15 jlam Exp $
 # FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
 
 DISTNAME=	ucspi-tcp-0.88
@@ -20,8 +20,10 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 ALL_TARGET=	it
 INSTALL_TARGET=	setup check
 
-.if (${MACHINE_ARCH} == "arm32" && ${CFLAGS:M-O2} == "-O2")
+.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm") 
+.if (${CFLAGS:M-O2} == "-O2")
 CFLAGS:=	${CFLAGS:S/-O2/-O0/}
+.endif
 .endif
 	
 post-configure:

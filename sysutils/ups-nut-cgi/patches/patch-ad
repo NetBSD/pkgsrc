@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2001/11/18 00:57:50 lukem Exp $
+$NetBSD: patch-ad,v 1.4.2.1 2002/06/23 19:01:16 jlam Exp $
 
---- configure.in.orig	Mon Sep 10 07:52:14 2001
+--- configure.in.orig	Tue Feb 26 05:46:25 2002
 +++ configure.in
 @@ -16,6 +16,7 @@
  STATEPATH="/var/state/ups"
@@ -10,7 +10,7 @@ $NetBSD: patch-ad,v 1.4 2001/11/18 00:57:50 lukem Exp $
  RUN_AS_USER="nobody"
  RUN_AS_GROUP="nogroup"
  PIDPATH="/var/run"
-@@ -124,9 +125,45 @@
+@@ -120,9 +121,43 @@
  	], [], [])
  fi
  
@@ -51,12 +51,10 @@ $NetBSD: patch-ad,v 1.4 2001/11/18 00:57:50 lukem Exp $
 +dnl Include in case GD was compiled with jpeg support
 +AC_CHECK_LIB(jpeg, jpeg_abort,
 +[ LIBJPEG="-ljpeg"],[ LIBJPEG=""] )
-+GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBJPEG"
-+CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
  
  dnl Include in case GD was compiled with Xpm support
  AC_CHECK_LIB(X11, XBell,
-@@ -135,70 +172,43 @@
+@@ -131,13 +166,16 @@
  	       echo "Retrying with -L /usr/X11R6/lib"
                 unset ac_cv_lib_X11_XBell
  		AC_CHECK_LIB(X11, XBell,
@@ -68,28 +66,36 @@ $NetBSD: patch-ad,v 1.4 2001/11/18 00:57:50 lukem Exp $
                  )
          ],
  )
-+GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBX"
-+CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
  
- dnl Include in case GD was compiled with Xpm support
- AC_CHECK_LIB(Xpm, XpmReadFileToXpmImage,
--	[ LIBXPM="-lXpm"],
--	[ 
--		echo "Retrying with $LIBX"
--		unset ac_cv_lib_Xpm_XpmReadFileToXpmImage
--		AC_CHECK_LIB(Xpm, XpmReadFileToXpmImage,
--			[ LIBXPM="-lXpm $LIBX" ],
--			[ LIBXPM="" ],
--			[ -lXpm $LIBX ],
--		)
--	],
--	[ -lXpm ],
-+	[ LIBXPM="-lXpm $LIBX"],
-+	[ LIBXPM="" ],
-+	[ -lXpm $LIBX ],
- )
-+GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBXPM"
++GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBJPEG"
 +CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
++
+ dnl   Skip this chunk if there's no LIBX to use
+ 
+ if test "$LIBX" != "" 
+@@ -145,69 +183,34 @@
+ 
+ 	dnl Include in case GD was compiled with Xpm support
+ 	AC_CHECK_LIB(Xpm, XpmReadFileToXpmImage,
+-		[ LIBXPM="-lXpm"],
+-		[ 
+-			echo "Retrying with $LIBX"
+-			unset ac_cv_lib_Xpm_XpmReadFileToXpmImage
+-			AC_CHECK_LIB(Xpm, XpmReadFileToXpmImage,
+-				[ LIBXPM="-lXpm $LIBX" ],
+-				[ LIBXPM="" ],
+-				[ -lXpm $LIBX ],
+-			)
+-		],
+-		[ -lXpm ],
++		[ LIBXPM="-lXpm $LIBX"],
++		[ LIBXPM="" ],
++		[ -lXpm $LIBX ],
+ 	)
++
++	GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBXPM"
++	CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
+ fi
  
  AC_CHECK_LIB(gd, gdImagePng,
  [
@@ -115,24 +121,31 @@ $NetBSD: patch-ad,v 1.4 2001/11/18 00:57:50 lukem Exp $
 +[$GRAPHICS_LIBS -lm -lpng -lz],
  )
 -
--if test "$GFXLIBS" = "" ; then
--        echo "Trying again - using $LIBTTF"
--        unset ac_cv_lib_gd_gdImagePng
--        AC_CHECK_LIB(gd, gdImagePng,
--        [
--                GFXLIBS="-lgd -lpng -lz $LIBTTF"
--        ],,
--        [-lm -lpng -lz $LIBTTF])
--fi
+-dnl  Don't run the ttf/xpm tests against gd unless
+-dnl  we actually have something to test!
+-dnl 
+-if test "$LIBTTF" != "" 
+-then
 -
--if test "$GFXLIBS" = "" ; then
--        echo "Trying again - using $LIBTTF $LIBXPM"
--        unset ac_cv_lib_gd_gdImagePng
--        AC_CHECK_LIB(gd, gdImagePng,
--        [
--                GFXLIBS="-lgd -lpng -lz $LIBTTF $LIBXPM"
--        ],,
+-	if test "$GFXLIBS" = "" ; then
+-	        echo "Trying again - using $LIBTTF"
+-	        unset ac_cv_lib_gd_gdImagePng
+-	        AC_CHECK_LIB(gd, gdImagePng,
+-	        [
+-	                GFXLIBS="-lgd -lpng -lz $LIBTTF"
+-	        ],,
+-	        [-lm -lpng -lz $LIBTTF])
+-	fi
+-
+-	if test "$GFXLIBS" = "" ; then
+-	        echo "Trying again - using $LIBTTF $LIBXPM"
+-	        unset ac_cv_lib_gd_gdImagePng
+-	        AC_CHECK_LIB(gd, gdImagePng,
+-	        [
+-			GFXLIBS="-lgd -lpng -lz $LIBTTF $LIBXPM"
+-	        ],,
 -        [-lm -lpng -lz $LIBTTF $LIBXPM])
+-	fi
 -fi
 -
 -test "$GFXLIBS" = ""  && echo "** You will not be able to build the CGI programs without gd."
@@ -147,7 +160,7 @@ $NetBSD: patch-ad,v 1.4 2001/11/18 00:57:50 lukem Exp $
  
  AC_HEADER_TIME
  AC_CHECK_HEADERS(sys/time.h)
-@@ -211,7 +221,7 @@
+@@ -220,7 +223,7 @@
     for lib in `echo $LD_LIBRARY_PATH | $AWK -F: '{ for (i = NF; i > 0; --i) print $i }' | sort | uniq`; do
        if test -f ${lib}/libpng.so; then
           AC_CHECK_LIB(png, png_info_init,
@@ -156,7 +169,7 @@ $NetBSD: patch-ad,v 1.4 2001/11/18 00:57:50 lukem Exp $
  	 ],
  	 [],
  	 [-lm -R${lib}],)
-@@ -481,7 +491,8 @@
+@@ -524,7 +527,8 @@
  AC_SUBST(LIBOBJ)
  AC_SUBST(BUILDOBJ)
  AC_SUBST(NETLIBS)

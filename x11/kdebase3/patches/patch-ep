@@ -1,0 +1,53 @@
+$NetBSD: patch-ep,v 1.1.1.1.2.2 2002/06/23 19:06:04 jlam Exp $
+
+--- startkde.orig	Wed May  8 22:08:15 2002
++++ startkde
+@@ -17,7 +17,7 @@
+ #
+ # * Then ksmserver is started which in turn starts 
+ #   1) the window manager (kwin)
+-#   2) everything in $KDEDIR/share/autostart (kdesktop, kicker, etc.)
++#   2) everything in $KDEDIR/share/kde/autostart (kdesktop, kicker, etc.)
+ #   3) the rest of the session.
+ 
+ # Set a left cursor instead of the standard X11 "X" cursor, since I've heard
+@@ -56,15 +56,15 @@
+ # Where X is the original font database that was set up before this script
+ # runs.
+ 
+-usr_odir=$kdehome/share/fonts/override
+-usr_fdir=$kdehome/share/fonts
++usr_odir=$kdehome/share/kde/fonts/override
++usr_fdir=$kdehome/share/kde/fonts
+ if test -n "$KDEDIRS"; then
+   kdedirs_first=`echo $KDEDIRS|sed -e 's/:.*//'`
+-  sys_odir=$kdedirs_first/share/fonts/override
+-  sys_fdir=$kdedirs_first/share/fonts
++  sys_odir=$kdedirs_first/share/kde/fonts/override
++  sys_fdir=$kdedirs_first/share/kde/fonts
+ else
+-  sys_odir=$KDEDIR/share/fonts/override
+-  sys_fdir=$KDEDIR/share/fonts
++  sys_odir=$KDEDIR/share/kde/fonts/override
++  sys_fdir=$KDEDIR/share/kde/fonts
+ fi
+ 
+ # We run mkfontdir on the user's font dirs (if we have permission) to pick
+@@ -79,7 +79,7 @@
+ 
+ #
+ # Add any user-installed font directories to the X font path
+-kde_fontsdir=$kdehome/share/fonts
++kde_fontsdir=$kdehome/share/kde/fonts
+ kde_fontpaths=$kde_fontsdir/fontpaths
+  
+ if test -r $kde_fontpaths ; then
+@@ -115,7 +115,7 @@
+ dcopserver_shutdown
+ 
+ # run KPersonalizer before the session, if this is the first login
+-grep 'FirstLogin=false' $kdehome/share/config/kpersonalizerrc >/dev/null 2>/dev/null
++grep 'FirstLogin=false' $kdehome/share/kde/config/kpersonalizerrc >/dev/null 2>/dev/null
+ if test $? -ne 0; then
+     # start only dcopserver, don't start whole kdeinit (takes too long)
+     dcopserver

@@ -1,4 +1,4 @@
-.\" $NetBSD: cdpack.1,v 1.6 2001/12/03 19:03:22 wiz Exp $
+.\" $NetBSD: cdpack.1,v 1.6.2.1 2002/06/23 18:57:39 jlam Exp $
 .\"
 .\" Copyright (c) 2001 Dan McMahill, All rights reserved.
 .\"
@@ -37,8 +37,9 @@
 .Nd produce multi-CD binary package images
 .Sh SYNOPSIS
 .Nm ""
+.Op -ef
 .Op -l logfile
-.Op -nRvV
+.Op -adnRvV
 .Op -x common_directory
 .Op -X extras_directory
 .Ar packages_directory
@@ -64,6 +65,24 @@ that directory.  A file,
 which lists the contents of each CD will be left in the root
 directory of each CD image.
 .Bl -tag -width "-x directory "
+.It Fl ac
+Include binary packages marked as NO_BIN_ON_CDROM on the CD set.
+The default is to omit any
+packages which were marked as NO_BIN_ON_CDROM.  This option should
+only be used when making a CD set for personal use and not for
+distribution unless you are sure you have not violated any licenses.
+.It Fl af
+Include binary packages marked as NO_BIN_ON_FTP on the CD set.
+This option is enabled by default.
+.It Fl d
+Enable debugging by not deleting temporary files at the end of the
+run.  These files are left in TMPDIR.
+.It Fl ec
+Exclude packages marked as NO_BIN_ON_CDROM from the CD set.  This is
+the default.
+.It Fl ef
+Exclude packages marked as NO_BIN_ON_FTP from the CD set.  The default
+is to allow packages which are NO_BIN_ON_FTP.
 .It Fl l Ar logfile
 Log the output of mkisofs -v -v to the file
 .Ar logfile .

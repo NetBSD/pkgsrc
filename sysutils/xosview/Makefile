@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/10/24 22:11:07 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.38.2.1 2002/06/23 19:01:23 jlam Exp $
 
 DISTNAME=       xosview-1.7.0.b
 PKGNAME=	xosview-1.7.0b
@@ -23,6 +22,11 @@ USE_BUILDLINK_ONLY=	YES
 
 .if ${OPSYS} == "NetBSD"
 BUILD_DEFS=	UVM
+
+.if !defined(UVM) && exists(/usr/include/uvm/uvm.h)
+UVM=		# defined
+CFLAGS+=	-DUVM
+.endif
 .elif ${OPSYS} == "SunOS"
 BUILD_DEPENDS+=	egcs-1.1.2:../../lang/egcs
 CONFIGURE_ENV+=	CXX=${LOCALBASE}/egcs/bin/g++

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2002/03/25 00:34:12 jmc Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2002/06/23 18:59:34 jlam Exp $
 #
 
 DISTNAME=		zebedee-2.3.1
 CATEGORIES=		security
 MASTER_SITES=		http://www.winton.org.uk/zebedee/ \
-			http://prdownloads.sourceforge.net/zebedee/
+			${MASTER_SITE_SOURCEFORGE:=zebedee/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.winton.org.uk/zebedee/

@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.12 2002/03/17 22:47:40 abs Exp $
+.\"	$NetBSD: pkgchk.8,v 1.12.2.1 2002/06/23 18:57:44 jlam Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -150,9 +150,18 @@ uses the following environment variables.
 .Bl -tag -width xxxx
 .It Ev PKGSRCDIR
 Base of pkgsrc tree. If not set in environment then read from
+.Pa ${MAKECONF}
+or
 .Pa /etc/mk.conf .
 Defaults to
 .Pa /usr/pkgsrc
+.It Ev PKG_DBDIR
+pkgsrc database directory. If not set in environment then read from
+.Pa ${MAKECONF}
+or
+.Pa /etc/mk.conf .
+Defaults to
+.Pa /var/db/pkg
 .It Ev PACKAGES
 Location of binary packages. If not set in environment then read from
 .Pa /etc/mk.conf .

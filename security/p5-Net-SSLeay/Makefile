@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2002/04/24 05:40:49 martti Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2002/06/23 18:59:17 jlam Exp $
 
-DISTNAME=	Net_SSLeay.pm-1.15
+DISTNAME=	Net_SSLeay.pm-1.17
 PKGNAME=	p5-${DISTNAME:S/Net_/Net-/:S/.pm//}
 SVR4_PKGNAME=	p5nsl
 CATEGORIES=	security perl5
@@ -14,7 +14,7 @@ USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/SSLeay/.packlist
 MAKE_PARAMS=		${BUILDLINK_DIR}
 
-USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096A}
+USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096B}
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}

@@ -1,0 +1,5 @@
+SWILL (Simple Web Interface Link Library) is a web server library
+that makes it easy to add a web interface capability to existing
+programs.  Its intended use is to provide web access to applications
+that don't normally fit the standard model of a standard "Internet"
+application.

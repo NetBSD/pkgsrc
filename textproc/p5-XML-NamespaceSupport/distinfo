@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/01/30 22:03:34 mjl Exp $
+$NetBSD: distinfo,v 1.1.1.1.2.1 2002/06/23 19:02:40 jlam Exp $
 
-SHA1 (XML-NamespaceSupport-1.04.tar.gz) = 1c24e51f4ef9eaf15db42c5c8ab0f3ad7e4953f7
-Size (XML-NamespaceSupport-1.04.tar.gz) = 6606 bytes
+SHA1 (XML-NamespaceSupport-1.07.tar.gz) = 469a5d148cf7f40bd78e2692976bb980dee9f7f8
+Size (XML-NamespaceSupport-1.07.tar.gz) = 7466 bytes

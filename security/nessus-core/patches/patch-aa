@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/07/30 11:13:09 frueauf Exp $
+$NetBSD: patch-aa,v 1.1.1.1.2.1 2002/06/23 18:59:04 jlam Exp $
 
---- nessusd/Makefile-orig	Sat Jul 29 20:59:43 2000
-+++ nessusd/Makefile	Sat Jul 29 21:00:10 2000
-@@ -42,7 +42,7 @@
+--- nessusd/Makefile.orig	Mon Dec 17 16:11:41 2001
++++ nessusd/Makefile	Fri May 10 13:44:13 2002
+@@ -52,7 +52,7 @@
  	cp nessusd ${make_bindir}/nessusd
  
  nessusd : cflags $(OBJS)
--	$(CC) $(CFLAGS) $(NESSUS_INCLUDE) $(OBJS)  -o nessusd $(LIBS)
-+	$(CC) $(CFLAGS) $(NESSUS_INCLUDE) $(OBJS)  -o nessusd $(LIBS) $(RUN_LIBS)
+-	$(CC) $(LDFLAGS) $(NESSUS_INCLUDE) $(OBJS)  -o nessusd $(LIBS)
++	$(CC) $(LDFLAGS) $(NESSUS_INCLUDE) $(OBJS)  -o nessusd $(LIBS) $(RUN_LIBS)
  
- users.o : users.c users.h
+ users.o : cflags users.c users.h
  	$(CC) $(CFLAGS) $(NESSUS_INCLUDE) -c users.c 

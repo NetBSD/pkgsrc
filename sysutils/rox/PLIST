@@ -1,48 +1,47 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/21 11:28:17 rh Exp $
-apps/ROX-Filer/Action.png
-apps/ROX-Filer/AppIcon.xpm
-apps/ROX-Filer/AppInfo.xml
-apps/ROX-Filer/AppRun
-apps/ROX-Filer/Help/COPYING
-apps/ROX-Filer/Help/Changes
-apps/ROX-Filer/Help/Manual-fr.html
-apps/ROX-Filer/Help/Manual.html
-apps/ROX-Filer/Help/README
-apps/ROX-Filer/Help/README-es
-apps/ROX-Filer/Help/TODO
-apps/ROX-Filer/Messages/README
-apps/ROX-Filer/Messages/de.gmo
-apps/ROX-Filer/Messages/fr.gmo
-apps/ROX-Filer/Messages/hu.gmo
-apps/ROX-Filer/Messages/it.gmo
-apps/ROX-Filer/Messages/nl.gmo
-apps/ROX-Filer/Messages/pl.gmo
-apps/ROX-Filer/Messages/ru.gmo
-apps/ROX-Filer/Messages/sp.gmo
-apps/ROX-Filer/Options.xml
-apps/ROX-Filer/ROX-Filer
-apps/ROX-Filer/Styles
-apps/ROX-Filer/pixmaps/application.xpm
-apps/ROX-Filer/pixmaps/close.xpm
-apps/ROX-Filer/pixmaps/details.xpm
-apps/ROX-Filer/pixmaps/dirs.xpm
-apps/ROX-Filer/pixmaps/error.xpm
-apps/ROX-Filer/pixmaps/help.xpm
-apps/ROX-Filer/pixmaps/hidden.xpm
-apps/ROX-Filer/pixmaps/home.xpm
-apps/ROX-Filer/pixmaps/mount.xpm
-apps/ROX-Filer/pixmaps/mounted.xpm
-apps/ROX-Filer/pixmaps/multiple.xpm
-apps/ROX-Filer/pixmaps/refresh.xpm
-apps/ROX-Filer/pixmaps/symlink.xpm
-apps/ROX-Filer/pixmaps/unknown.xpm
-apps/ROX-Filer/pixmaps/up.xpm
-apps/ROX-Filer/pixmaps/zoom.xpm
-apps/ROX-Filer/style.css
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2002/06/23 19:00:30 jlam Exp $
 bin/rox
 man/man1/rox.1
-@dirrm apps/ROX-Filer/pixmaps
-@dirrm apps/ROX-Filer/Messages
-@dirrm apps/ROX-Filer/Help
-@dirrm apps/ROX-Filer
-@dirrm apps
+libexec/rox/ROX-Filer
+share/rox/ROX-Filer/Action.png
+share/rox/ROX-Filer/AppIcon.xpm
+share/rox/ROX-Filer/AppInfo.xml
+share/rox/ROX-Filer/AppRun
+share/rox/ROX-Filer/Help/COPYING
+share/rox/ROX-Filer/Help/Changes
+share/rox/ROX-Filer/Help/Manual-fr.html
+share/rox/ROX-Filer/Help/Manual.html
+share/rox/ROX-Filer/Help/README
+share/rox/ROX-Filer/Help/README-es
+share/rox/ROX-Filer/Help/TODO
+share/rox/ROX-Filer/Messages/README
+share/rox/ROX-Filer/Messages/de.gmo
+share/rox/ROX-Filer/Messages/fr.gmo
+share/rox/ROX-Filer/Messages/hu.gmo
+share/rox/ROX-Filer/Messages/it.gmo
+share/rox/ROX-Filer/Messages/nl.gmo
+share/rox/ROX-Filer/Messages/pl.gmo
+share/rox/ROX-Filer/Messages/ru.gmo
+share/rox/ROX-Filer/Messages/sp.gmo
+share/rox/ROX-Filer/Options.xml
+share/rox/ROX-Filer/Styles
+share/rox/ROX-Filer/pixmaps/application.xpm
+share/rox/ROX-Filer/pixmaps/close.xpm
+share/rox/ROX-Filer/pixmaps/details.xpm
+share/rox/ROX-Filer/pixmaps/dirs.xpm
+share/rox/ROX-Filer/pixmaps/error.xpm
+share/rox/ROX-Filer/pixmaps/help.xpm
+share/rox/ROX-Filer/pixmaps/hidden.xpm
+share/rox/ROX-Filer/pixmaps/home.xpm
+share/rox/ROX-Filer/pixmaps/mount.xpm
+share/rox/ROX-Filer/pixmaps/mounted.xpm
+share/rox/ROX-Filer/pixmaps/multiple.xpm
+share/rox/ROX-Filer/pixmaps/refresh.xpm
+share/rox/ROX-Filer/pixmaps/symlink.xpm
+share/rox/ROX-Filer/pixmaps/unknown.xpm
+share/rox/ROX-Filer/pixmaps/up.xpm
+share/rox/ROX-Filer/pixmaps/zoom.xpm
+share/rox/ROX-Filer/style.css
+@dirrm share/rox/ROX-Filer/pixmaps
+@dirrm share/rox/ROX-Filer/Messages
+@dirrm share/rox/ROX-Filer/Help
+@dirrm share/rox/ROX-Filer

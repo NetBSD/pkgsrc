@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/19 11:39:43 drochner Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2002/06/23 19:07:11 jlam Exp $
 
 DISTNAME=	xephem-3.5.2
 CATEGORIES=	x11
@@ -13,9 +13,15 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 LIBSRC1=		${WRKDIR}/${DISTNAME}/libastro
 LIBSRC2=	${WRKDIR}/${DISTNAME}/libip
 USE_PERL5=	yes
-USE_IMAKE=	yes
 
 LICENSE=	no-commercial-use
+
+.if (${MACHINE_ARCH} == "arm32")
+. include "../../lang/gcc/Makefile.gcc"
+MAKE_FLAGS+=	CC=${CC}
+.endif
+
+USE_IMAKE=	yes
 
 pre-build:
 	(cd ${LIBSRC1}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS})

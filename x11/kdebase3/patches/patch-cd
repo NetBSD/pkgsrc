@@ -1,0 +1,240 @@
+$NetBSD: patch-cd,v 1.1.1.1.2.2 2002/06/23 19:05:38 jlam Exp $
+
+--- kmenuedit/Makefile.in.orig	Mon May 13 23:57:48 2002
++++ kmenuedit/Makefile.in
+@@ -290,17 +290,18 @@
+ INCLUDES = $(all_includes)
+ 
+ bin_PROGRAMS = kmenuedit
+-lib_LTLIBRARIES = kmenuedit.la
++lib_LTLIBRARIES = libkmenuedit_main.la kmenuedit.la
+ 
+-CLEANFILES = dummy.cpp
++libkmenuedit_main_la_SOURCES = namedlg.cpp basictab.cpp treeview.cpp desktopfileeditor.cpp menueditview.cpp kmenuedit.cpp main.cpp khotkeys.cpp
++libkmenuedit_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KFILE)
++libkmenuedit_main_la_LDFLAGS = $(all_libraries)
+ 
+-kmenuedit_la_SOURCES = namedlg.cpp basictab.cpp treeview.cpp desktopfileeditor.cpp menueditview.cpp kmenuedit.cpp main.cpp khotkeys.cpp
+-
+-kmenuedit_la_LIBADD = $(LIB_KDEUI) $(LIB_KFILE)
++kmenuedit_la_SOURCES = kmenuedit_main.cpp
++kmenuedit_la_LIBADD = libkmenuedit_main.la
+ kmenuedit_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+-kmenuedit_SOURCES = dummy.cpp
+-kmenuedit_LDADD = kmenuedit.la
++kmenuedit_SOURCES = kmenuedit_main.cpp
++kmenuedit_LDADD = libkmenuedit_main.la
+ kmenuedit_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ noinst_HEADERS = kmenuedit.h menueditview.h treeview.h desktopfileeditor.h basictab.h namedlg.h khotkeys.h
+@@ -324,27 +325,32 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-kmenuedit_la_DEPENDENCIES =
+-am_kmenuedit_la_OBJECTS = namedlg.lo basictab.lo treeview.lo \
++kmenuedit_la_DEPENDENCIES = libkmenuedit_main.la
++am_kmenuedit_la_OBJECTS = kmenuedit_main.lo
++#>- kmenuedit_la_OBJECTS = $(am_kmenuedit_la_OBJECTS)
++#>+ 1
++kmenuedit_la_OBJECTS = kmenuedit_main.lo
++libkmenuedit_main_la_DEPENDENCIES =
++am_libkmenuedit_main_la_OBJECTS = namedlg.lo basictab.lo treeview.lo \
+ 	desktopfileeditor.lo menueditview.lo kmenuedit.lo main.lo \
+ 	khotkeys.lo
+-#>- kmenuedit_la_OBJECTS = $(am_kmenuedit_la_OBJECTS)
++#>- libkmenuedit_main_la_OBJECTS = $(am_libkmenuedit_main_la_OBJECTS)
+ #>+ 7
+-kmenuedit_la_final_OBJECTS = kmenuedit_la.all_cpp.lo 
+-kmenuedit_la_nofinal_OBJECTS = namedlg.lo basictab.lo treeview.lo \
++libkmenuedit_main_la_final_OBJECTS = libkmenuedit_main_la.all_cpp.lo 
++libkmenuedit_main_la_nofinal_OBJECTS = namedlg.lo basictab.lo treeview.lo \
+ 	desktopfileeditor.lo menueditview.lo kmenuedit.lo main.lo \
+ 	khotkeys.lo \
+-	kmenuedit_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@kmenuedit_la_OBJECTS = $(kmenuedit_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kmenuedit_la_OBJECTS = $(kmenuedit_la_final_OBJECTS)
++	libkmenuedit_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkmenuedit_main_la_OBJECTS = $(libkmenuedit_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkmenuedit_main_la_OBJECTS = $(libkmenuedit_main_la_final_OBJECTS)
+ bin_PROGRAMS = kmenuedit$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_kmenuedit_OBJECTS = dummy.$(OBJEXT)
++am_kmenuedit_OBJECTS = kmenuedit_main.$(OBJEXT)
+ #>- kmenuedit_OBJECTS = $(am_kmenuedit_OBJECTS)
+ #>+ 1
+-kmenuedit_OBJECTS = dummy.$(OBJEXT)
+-kmenuedit_DEPENDENCIES = kmenuedit.la
++kmenuedit_OBJECTS = kmenuedit_main.$(OBJEXT)
++kmenuedit_DEPENDENCIES = libkmenuedit_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -353,10 +359,12 @@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+ @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/basictab.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/desktopfileeditor.Plo $(DEPDIR)/dummy.Po \
++	@AMDEP_TRUE@	$(DEPDIR)/desktopfileeditor.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/khotkeys.Plo $(DEPDIR)/kmenuedit.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/menueditview.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/namedlg.Plo $(DEPDIR)/treeview.Plo
++	@AMDEP_TRUE@	$(DEPDIR)/kmenuedit_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kmenuedit_main.Po $(DEPDIR)/main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/menueditview.Plo $(DEPDIR)/namedlg.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/treeview.Plo
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ #>- $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 2
+@@ -376,7 +384,8 @@
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+-DIST_SOURCES = $(kmenuedit_la_SOURCES) $(kmenuedit_SOURCES)
++DIST_SOURCES = $(kmenuedit_la_SOURCES) $(libkmenuedit_main_la_SOURCES) \
++	$(kmenuedit_SOURCES)
+ DATA = $(apps_DATA) $(rc_DATA)
+ 
+ HEADERS = $(noinst_HEADERS)
+@@ -388,7 +397,7 @@
+ 	uninstall-recursive check-recursive installcheck-recursive
+ DIST_COMMON = $(noinst_HEADERS) Makefile.am Makefile.in
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(kmenuedit_la_SOURCES) $(kmenuedit_SOURCES)
++SOURCES = $(kmenuedit_la_SOURCES) $(libkmenuedit_main_la_SOURCES) $(kmenuedit_SOURCES)
+ 
+ #>- all: all-recursive
+ #>+ 1
+@@ -437,6 +446,8 @@
+ 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+ kmenuedit.la: $(kmenuedit_la_OBJECTS) $(kmenuedit_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(kmenuedit_la_LDFLAGS) $(kmenuedit_la_OBJECTS) $(kmenuedit_la_LIBADD) $(LIBS)
++libkmenuedit_main.la: $(libkmenuedit_main_la_OBJECTS) $(libkmenuedit_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkmenuedit_main_la_LDFLAGS) $(libkmenuedit_main_la_OBJECTS) $(libkmenuedit_main_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+@@ -473,9 +484,10 @@
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/basictab.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/desktopfileeditor.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/khotkeys.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmenuedit.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmenuedit_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmenuedit_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/menueditview.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/namedlg.Plo@am__quote@
+@@ -632,7 +644,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kmenueditui.rc hi32-app-kmenuedit.png hi16-app-kmenuedit.png kmenuedit.desktop hi48-app-kmenuedit.png 
++KDE_DIST=hi32-app-kmenuedit.png kmenuedit.desktop hi16-app-kmenuedit.png kmenueditui.rc hi48-app-kmenuedit.png 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -694,7 +706,6 @@
+ mostlyclean-generic:
+ 
+ clean-generic:
+-	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
+ 
+ distclean-generic:
+ 	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
+@@ -833,28 +844,28 @@
+ 
+ 
+ #>+ 12
+-kmenuedit_la_meta_unload.cpp:  basictab.moc treeview.moc desktopfileeditor.moc menueditview.moc kmenuedit.moc
+-	@echo 'creating kmenuedit_la_meta_unload.cpp'
+-	@-rm -f kmenuedit_la_meta_unload.cpp
++libkmenuedit_main_la_meta_unload.cpp:  basictab.moc treeview.moc desktopfileeditor.moc menueditview.moc kmenuedit.moc
++	@echo 'creating libkmenuedit_main_la_meta_unload.cpp'
++	@-rm -f libkmenuedit_main_la_meta_unload.cpp
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kmenuedit_la[] = {' > kmenuedit_la_meta_unload.cpp ;\
+-		cat  basictab.moc treeview.moc desktopfileeditor.moc menueditview.moc kmenuedit.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kmenuedit_la_meta_unload.cpp ;\
+-		echo '0};' >> kmenuedit_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kmenuedit_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kmenuedit_la)' >> kmenuedit_la_meta_unload.cpp ;\
+-	else echo > kmenuedit_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkmenuedit_main_la[] = {' > libkmenuedit_main_la_meta_unload.cpp ;\
++		cat  basictab.moc treeview.moc desktopfileeditor.moc menueditview.moc kmenuedit.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkmenuedit_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkmenuedit_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkmenuedit_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkmenuedit_main_la)' >> libkmenuedit_main_la_meta_unload.cpp ;\
++	else echo > libkmenuedit_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
+-	-rm -f  kmenuedit_la_meta_unload.cpp
++	-rm -f  libkmenuedit_main_la_meta_unload.cpp
+ 
+ #>+ 11
+-kmenuedit_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/namedlg.cpp $(srcdir)/basictab.cpp $(srcdir)/treeview.cpp $(srcdir)/desktopfileeditor.cpp $(srcdir)/menueditview.cpp $(srcdir)/kmenuedit.cpp $(srcdir)/main.cpp $(srcdir)/khotkeys.cpp kmenuedit_la_meta_unload.cpp   basictab.moc treeview.moc menueditview.moc desktopfileeditor.moc kmenuedit.moc 
++kmenuedit_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmenuedit_main.cpp   basictab.moc treeview.moc menueditview.moc desktopfileeditor.moc kmenuedit.moc 
+ 	@echo 'creating kmenuedit_la.all_cpp.cpp ...'; \
+ 	rm -f kmenuedit_la.all_cpp.files kmenuedit_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kmenuedit_la.all_cpp.final; \
+-	for file in namedlg.cpp basictab.cpp treeview.cpp desktopfileeditor.cpp menueditview.cpp kmenuedit.cpp main.cpp khotkeys.cpp kmenuedit_la_meta_unload.cpp ; do \
++	for file in kmenuedit_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kmenuedit_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kmenuedit_la.all_cpp.final; \
+ 	done; \
+@@ -862,11 +873,23 @@
+ 	rm -f kmenuedit_la.all_cpp.final kmenuedit_la.all_cpp.files
+ 
+ #>+ 11
+-kmenuedit.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++libkmenuedit_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/namedlg.cpp $(srcdir)/basictab.cpp $(srcdir)/treeview.cpp $(srcdir)/desktopfileeditor.cpp $(srcdir)/menueditview.cpp $(srcdir)/kmenuedit.cpp $(srcdir)/main.cpp $(srcdir)/khotkeys.cpp libkmenuedit_main_la_meta_unload.cpp  
++	@echo 'creating libkmenuedit_main_la.all_cpp.cpp ...'; \
++	rm -f libkmenuedit_main_la.all_cpp.files libkmenuedit_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkmenuedit_main_la.all_cpp.final; \
++	for file in namedlg.cpp basictab.cpp treeview.cpp desktopfileeditor.cpp menueditview.cpp kmenuedit.cpp main.cpp khotkeys.cpp libkmenuedit_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libkmenuedit_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkmenuedit_main_la.all_cpp.final; \
++	done; \
++	cat libkmenuedit_main_la.all_cpp.final libkmenuedit_main_la.all_cpp.files  > libkmenuedit_main_la.all_cpp.cpp; \
++	rm -f libkmenuedit_main_la.all_cpp.final libkmenuedit_main_la.all_cpp.files
++
++#>+ 11
++kmenuedit.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmenuedit_main.cpp  
+ 	@echo 'creating kmenuedit.all_cpp.cpp ...'; \
+ 	rm -f kmenuedit.all_cpp.files kmenuedit.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kmenuedit.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kmenuedit_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kmenuedit.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kmenuedit.all_cpp.final; \
+ 	done; \
+@@ -875,20 +898,20 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kmenuedit_la.all_cpp.cpp kmenuedit.all_cpp.cpp
++	-rm -f kmenuedit_la.all_cpp.cpp libkmenuedit_main_la.all_cpp.cpp kmenuedit.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) kmenuedit_la_OBJECTS="$(kmenuedit_la_final_OBJECTS)" all-am
++	$(MAKE) libkmenuedit_main_la_OBJECTS="$(libkmenuedit_main_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) kmenuedit_la_OBJECTS="$(kmenuedit_la_final_OBJECTS)" install-am
++	$(MAKE) libkmenuedit_main_la_OBJECTS="$(libkmenuedit_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) kmenuedit_la_OBJECTS="$(kmenuedit_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libkmenuedit_main_la_OBJECTS="$(libkmenuedit_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kmenuedit_la_OBJECTS="$(kmenuedit_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkmenuedit_main_la_OBJECTS="$(libkmenuedit_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

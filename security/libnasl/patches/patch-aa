@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.2.2 2002/06/23 18:59:01 jlam Exp $
+
+--- nasl-config.in-orig	Sun Sep 12 12:08:45 1999
++++ nasl-config.in	Fri May 10 13:54:17 2002
+@@ -40,7 +40,7 @@
+ 		exit 0
+ 		;;
+ 	--libs)
+-		echo $Xn "-L$LIBDIR -lnasl $Xc"
++		echo $Xn "-Wl,-R$LIBDIR -L$LIBDIR -lnasl $Xc"
+ 		;;
+ 	--cflags)
+ 		echo $Xn "-I$INCLUDEDIR $Xc"

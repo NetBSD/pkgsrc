@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/01/03 14:42:43 lukem Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2002/06/23 19:01:11 jlam Exp $
 bin/upsc
 bin/upscmd
 bin/upsct
@@ -18,6 +18,8 @@ man/man8/apcsmart.8
 man/man8/belkin.8
 man/man8/bestups.8
 man/man8/fentonups.8
+man/man8/newapc.8
+man/man8/newvictron.8
 man/man8/nutupsdrv.8
 man/man8/powercom.8
 man/man8/upsc.8
@@ -32,6 +34,7 @@ man/man8/upssched.8
 sbin/ups-drivers/aeg
 sbin/ups-drivers/apcsmart
 sbin/ups-drivers/belkin
+sbin/ups-drivers/bestferrups801-807
 sbin/ups-drivers/bestfort
 sbin/ups-drivers/bestuferrups
 sbin/ups-drivers/bestups
@@ -40,6 +43,7 @@ sbin/ups-drivers/engetron
 sbin/ups-drivers/everups
 sbin/ups-drivers/fentonups
 sbin/ups-drivers/genericups
+sbin/ups-drivers/hp
 sbin/ups-drivers/ipt-anzen
 sbin/ups-drivers/masterguard
 sbin/ups-drivers/mge-ellipse
@@ -48,11 +52,13 @@ sbin/ups-drivers/multilink
 sbin/ups-drivers/mustekups
 sbin/ups-drivers/newapc
 sbin/ups-drivers/newpowercom
+sbin/ups-drivers/newvictron
 sbin/ups-drivers/optiups
 sbin/ups-drivers/powercom
 sbin/ups-drivers/sec
 sbin/ups-drivers/sms
 sbin/ups-drivers/toshiba1500
+sbin/ups-drivers/tripplite
 sbin/ups-drivers/ups-trust425+625
 sbin/ups-drivers/upseyeux
 sbin/ups-drivers/victronups
@@ -65,6 +71,7 @@ share/doc/nut/FAQ
 share/doc/nut/README
 share/doc/nut/access.txt
 share/doc/nut/belkin.txt
+share/doc/nut/bestferrups801-807.txt
 share/doc/nut/big-servers.txt
 share/doc/nut/cables/powerware.txt
 share/doc/nut/cables/repotec.txt

@@ -1,0 +1,10 @@
+$NetBSD: patch-af,v 1.1.1.1.2.2 2002/06/23 18:58:24 jlam Exp $
+
+--- texk/xdvik/xdvi-sh.orig	Wed May 30 21:56:50 2001
++++ texk/xdvik/xdvi-sh	Wed May 30 21:56:30 2001
+@@ -45,4 +45,4 @@
+   XFILESEARCHPATH="$xdviapppath:${XFILESEARCHPATH-%D}"; export XFILESEARCHPATH
+ fi
+ 
+-exec xdvi.bin $NAMEOPT ${1+"$@"}
++exec vfxdvi.bin $NAMEOPT ${1+"$@"}

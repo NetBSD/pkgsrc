@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2002/04/01 20:20:05 abs Exp $
+# $NetBSD: Makefile,v 1.29.2.1 2002/06/23 18:57:44 jlam Exp $
 
-DISTNAME=	pkgchk-1.28
+DISTNAME=	pkgchk-1.30
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,9 +13,14 @@ EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
 WRKSRC=		${WRKDIR}
 
+.include "../../mk/bsd.prefs.mk"
+
+MAKECONF?=	/etc/mk.conf
+
 do-build:
-	${SED} -e 's#@MAKE@#${MAKE}#g' ${FILESDIR}/pkgchk.sh \
-	  >${WRKSRC}/pkgchk.sh
+	${SED} -e 's#@MAKE@#${MAKE}#g' \
+	  -e 's#@MAKECONF@#${MAKECONF}#g' \
+	  ${FILESDIR}/pkgchk.sh >${WRKSRC}/pkgchk.sh
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgchk.sh ${PREFIX}/sbin/pkg_chk

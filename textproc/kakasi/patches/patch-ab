@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1.2.2 2002/06/23 19:02:07 jlam Exp $
+
+--- lib/libkakasi.h.orig	Mon Aug 27 11:11:56 2001
++++ lib/libkakasi.h
+@@ -31,7 +31,7 @@
+ #endif
+ 
+ int kakasi_getopt_argv PARAMS((int argc, char **argv));
+-char *kakasi_do PARAMS((char *str));
++char *kakasi_do PARAMS((unsigned char *str));
+ int kakasi_close_kanwadict PARAMS((void));
+ int kakasi_free PARAMS((char *p));
+ 

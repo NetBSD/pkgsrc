@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.92 2002/04/02 14:13:01 jlam Exp $
+# $NetBSD: Makefile,v 1.92.2.1 2002/06/23 19:03:25 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
-DISTNAME=		apache_1.3.24
-PKGNAME=		apache-1.3.24
-PKGREVISION=		# empty
+DISTNAME=		apache_1.3.26
+PKGNAME=		apache-1.3.26
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/
+# This must be defined, before it may be referred to on the LHS.
+EXTRACT_SUFX=		.tar.gz
 
 APACHE_DIST=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=		${APACHE_DIST}
@@ -17,11 +19,12 @@ NETBSD_LOGO=		sitedrivenby.gif
 SITES_${NETBSD_LOGO}=	http://www.netbsd.org/images/logos/
 DISTFILES+=		${NETBSD_LOGO}
 
-MODSSL_DISTNAME=	mod_ssl-2.8.8-1.3.24
+MODSSL_DISTNAME=	mod_ssl-2.8.9-1.3.26
 MODSSL_DIST=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 SITES_${MODSSL_DIST}=	http://www.modssl.org/source/ \
-			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/
+			ftp://ftp.pca.dfn.de/pub/tools/net/mod_ssl/source/ \
+			ftp://ftp.funet.fi/pub/crypt/cryptography/libs/modssl/source/
 DISTFILES+=		${MODSSL_DIST}
 
 MAINTAINER=		jlam@netbsd.org
@@ -43,6 +46,7 @@ CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM="${APACHE_CUSTOM_CFLAGS}"
 CONFIGURE_ENV+=		EAPI_MM="${BUILDLINK_DIR}"
+CONFIGURE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -166,7 +170,6 @@ post-install:
 	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
-	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/httpd
 
 .include "../../devel/libmm/buildlink.mk"
 .include "../../textproc/expat/buildlink.mk"

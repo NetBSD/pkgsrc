@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/04/27 19:07:35 shell Exp $
+$NetBSD: distinfo,v 1.4.2.1 2002/06/23 18:59:17 jlam Exp $
 
-SHA1 (Digest-MD5-2.17.tar.gz) = 84edd6600bf0e5a11433e4817ef1bab7a2b1a2d9
-Size (Digest-MD5-2.17.tar.gz) = 33893 bytes
+SHA1 (Digest-MD5-2.20.tar.gz) = a19489b8c88d50bf4d6b045e71b47781eb115e52
+Size (Digest-MD5-2.20.tar.gz) = 41113 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2002/02/23 18:34:13 tron Exp $#
+# $NetBSD: Makefile,v 1.6.2.1 2002/06/23 19:07:27 jlam Exp $#
 
-DISTNAME=	xservers-3.3.6.2
+DISTNAME=	xservers-3.3.6.3
 CATEGORIES=	x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -26,8 +26,8 @@ IGNORE=		"The X11 servers are included in your X11 distribution."
 
 X11_SUBDIR=	X11R6.3
 X11_SRCS=	Imakefile Makefile config fonts include lib nls \
-		programs/Imakefile programs/Xserver programs/mkfontdir \
-		programs/xkbcomp
+		programs/Imakefile programs/Xserver programs/bdftopcf \
+		programs/mkfontdir programs/xkbcomp
 
 MESSAGE_SUBST+=	X11_SUBDIR=${X11_SUBDIR}
 

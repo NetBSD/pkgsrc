@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2002/03/14 03:13:36 lukem Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2002/06/23 18:58:31 jlam Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0.2
 PKGNAME=	teTeX-share-1.0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
@@ -36,5 +36,6 @@ do-install:
 	@cd ${PREFIX}/share/texmf/tex/latex/base && \
 	  ${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${EXTRA_PATCH} && \
 	  ${RM} latex.ltx.orig
+	${CP} ${FILESDIR}/dvipdfm.def ${PREFIX}/share/texmf/tex/latex/graphics
 
 .include "../../mk/bsd.pkg.mk"

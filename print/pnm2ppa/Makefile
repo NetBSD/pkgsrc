@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2001/05/04 07:51:35 zuntum Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2002/06/23 18:58:30 jlam Exp $
 #
 
 DISTNAME=	pnm2ppa-1.04
 CATEGORIES=	print converters graphics
-MASTER_SITES=	http://prdownloads.sourceforge.net/pnm2ppa/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pnm2ppa/}
 
 MAINTAINER=	kei@netbsd.org
 HOMEPAGE=	http://pnm2ppa.sourceforge.net/

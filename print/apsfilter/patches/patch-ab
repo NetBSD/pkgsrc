@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.2.2 2002/06/23 18:57:54 jlam Exp $
+
+--- bin/apsfilter.in.orig	Tue May 14 19:23:24 2002
++++ bin/apsfilter.in	Tue May 14 19:25:02 2002
+@@ -1028,9 +1028,9 @@
+ 
+     cat > "$APS_TMPDIR/pdf"
+     if find_filter acroread4; then
+-	eval acroread4 $ACROREAD_OPTS -pairs "$APS_TMPDIR/pdf" /dev/stdout
++	eval acroread4 $ACROREAD_OPTS -pairs "$APS_TMPDIR/pdf" /dev/fd/1
+     elif find_filter acroread; then
+-	eval acroread $ACROREAD_OPTS -pairs "$APS_TMPDIR/pdf" /dev/stdout
++	eval acroread $ACROREAD_OPTS -pairs "$APS_TMPDIR/pdf" /dev/fd/1
+     elif find_filter pdftops; then
+ 	pdftops ${PDFTOPS_OPTS:--q} -paperw $WIDTH_POINTS \
+ 	    -paperh $HEIGHT_POINTS "$APS_TMPDIR/pdf" -

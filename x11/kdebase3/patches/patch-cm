@@ -1,0 +1,39 @@
+$NetBSD: patch-cm,v 1.1.1.1.2.2 2002/06/23 19:05:42 jlam Exp $
+
+--- konqueror/keditbookmarks/Makefile.am.orig	Sun Mar  3 04:35:00 2002
++++ konqueror/keditbookmarks/Makefile.am
+@@ -2,23 +2,25 @@
+ 
+ METASOURCES = AUTO
+ 
+-lib_LTLIBRARIES = keditbookmarks.la
++lib_LTLIBRARIES = libkeditbookmarks_main.la keditbookmarks.la
+ 
+-keditbookmarks_la_SOURCES = main.cpp toplevel.cpp toplevel.skel commands.cpp
++libkeditbookmarks_main_la_SOURCES = main.cpp toplevel.cpp toplevel.skel commands.cpp
++
++keditbookmarks_la_SOURCES = keditbookmarks_main.cpp
+ kbookmarklistener_DIR = $(top_srcdir)/libkonq
+ 
+-keditbookmarks_la_LIBADD  = $(top_builddir)/libkonq/libkonq.la
++libkeditbookmarks_main_la_LIBADD  = $(top_builddir)/libkonq/libkonq.la
++libkeditbookmarks_main_la_LDFLAGS = $(all_libraries)
++libkeditbookmarks_main_la_METASOURCES = AUTO
++
++keditbookmarks_la_LIBADD  = libkeditbookmarks_main.la
+ keditbookmarks_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-keditbookmarks_la_METASOURCES = AUTO
+ 
+ bin_PROGRAMS = keditbookmarks
+ 
+-keditbookmarks_SOURCES = dummy.cpp
+-keditbookmarks_LDADD = keditbookmarks.la
++keditbookmarks_SOURCES = keditbookmarks_main.cpp
++keditbookmarks_LDADD = libkeditbookmarks_main.la
+ keditbookmarks_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+-
+-dummy.cpp:
+-	echo > dummy.cpp
+ 
+ rcdir = $(kde_datadir)/keditbookmarks
+ rc_DATA = keditbookmarksui.rc  

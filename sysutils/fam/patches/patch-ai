@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1.1.1.2.2 2002/06/23 18:59:59 jlam Exp $
+
+--- fam/InternalClient.c++.orig	Tue Dec 18 11:03:37 2001
++++ fam/InternalClient.c++
+@@ -35,8 +35,8 @@
+ {
+     assert(filename);
+     assert(h);
+-    assert(filename[0] == '/');
+     Log::debug("%s watching %s", name(), filename);
++    assert(filename[0] == '/');
+     interest = new File(filename, this, Request(0), Cred::SuperUser);
+ }
+ 

@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2001/10/09 19:16:21 jlam Exp $
+$NetBSD: patch-aa,v 1.1.2.1 2002/06/23 18:58:59 jlam Exp $
 
---- configure.orig	Thu Sep 27 03:41:28 2001
+--- configure.orig	Fri Feb  1 12:23:43 2002
 +++ configure
-@@ -4382,8 +4382,6 @@
-     INCLTDL=
-   fi
+@@ -4529,8 +4529,6 @@
+   # For backwards non-gettext consistent compatibility...
+   INCLTDL="$LTDLINCL"
  
 -LIBLTDL_DIR=libltdl
 -

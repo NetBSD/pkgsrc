@@ -1,0 +1,21 @@
+$NetBSD: patch-ao,v 1.2.2.2 2002/06/23 19:03:33 jlam Exp $
+
+--with-randomdev=foo does not work.
+
+--- srclib/apr/configure-	Wed Jun 19 08:23:54 2002
++++ srclib/apr/configure	Wed Jun 19 08:34:18 2002
+@@ -25347,11 +25347,11 @@
+   elif test "$apr_devrandom" != "no"; then
+     if test -r "$apr_devrandom"; then
+       cat >>confdefs.h <<\_ACEOF
+-#define DEV_RANDOM $apr_devrandom
++#define DEV_RANDOM /dev/urandom
+ _ACEOF
+ 
+-      echo "$as_me:$LINENO: result: $apr_devrandom" >&5
+-echo "${ECHO_T}$apr_devrandom" >&6
++      echo "$as_me:$LINENO: result: /dev/urandom" >&5
++echo "${ECHO_T}/dev/urandom" >&6
+       rand="1"
+     else
+       { { echo "$as_me:$LINENO: error: $apr_devrandom not found or unreadable." >&5

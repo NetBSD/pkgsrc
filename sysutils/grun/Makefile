@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/18 22:41:40 agc Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2002/06/23 19:00:15 jlam Exp $
 
 DISTNAME=	grun-0.9.2
 CATEGORIES=	misc
@@ -11,6 +11,7 @@ COMMENT=	GTK+ based Run dialog
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
+USE_PTHREAD=		native pth-syscall pth
 
 post-install:
 	${MV} ${LOCALBASE}/man/man1/grun.1x ${LOCALBASE}/man/man1/grun.1

@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/07/30 11:14:32 frueauf Exp $
+$NetBSD: patch-aa,v 1.1.1.1.2.1 2002/06/23 18:59:07 jlam Exp $
 
---- libpeks/us_export_wizard.c.orig	Sat Jul 22 01:22:08 2000
-+++ libpeks/us_export_wizard.c	Fri Jul 21 20:10:36 2000
-@@ -25,6 +25,7 @@
- 
- #include "common-stuff.h"
- 
-+#include <stdlib.h>
- #ifndef HAVE_RAND
- #define  rand()  random ()
- #define srand() srandom ()
+--- nessus-config.pre.in-orig	Wed Nov 14 17:18:04 2001
++++ nessus-config.pre.in	Fri May 10 13:27:27 2002
+@@ -48,7 +48,7 @@
+ 		;;
+ 	--libs)
+ 	
+-		echo $Xn "-lc -L$LIBDIR -lnessus -lhosts_gatherer @pcap_flag@ $CIPHER $EXTRA $Xc"
++		echo $Xn "-lc -Wl,-R$LIBDIR -L$LIBDIR -lnessus -lhosts_gatherer @pcap_flag@ $CIPHER $EXTRA $Xc"
+ 		;;
+ 	--cflags)
+ 		echo $Xn "-I$INCLUDEDIR $DEFS -I$INCLUDEDIR/nessus $CIPHER_CFLAGS $SSL_CFLAGS $Xc"

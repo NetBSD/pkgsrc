@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2002/03/21 05:39:19 fredb Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2002/06/23 19:06:49 jlam Exp $
 #
 
 DISTNAME=		rep-gtk-0.15
 PKGREVISION=		2
 CATEGORIES=		x11 lang
-MASTER_SITES=		http://prdownloads.sourceforge.net/rep-gtk/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rep-gtk/}
 
 MAINTAINER=		danw@netbsd.org
 HOMEPAGE=		http://rep-gtk.sourceforge.net/

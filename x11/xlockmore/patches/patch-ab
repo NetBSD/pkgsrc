@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.15.2.2 2002/06/23 19:07:20 jlam Exp $
+--- configure.orig	Thu May 16 17:35:54 2002
++++ configure	Thu May 16 17:37:02 2002
+@@ -7092,7 +7092,7 @@
+ #define USE_GL 1
+ _ACEOF
+ 
+-    XLOCKLIBS="${XLOCKLIBS} -lMesaGL -lMesaGLU"
++    XLOCKLIBS="${XLOCKLIBS} -lGL -lGLU"
+     test "x$mesa_includes" = xNONE && mesa_includes=$ac_mesa_includes
+     test "x$mesa_libraries" = xNONE && mesa_libraries=$ac_mesa_libraries
+     case "${canonical}" in

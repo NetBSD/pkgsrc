@@ -1,2 +1,20 @@
 #!/bin/sh
-exec APPDIR/ROX-Filer/AppRun "$@"
+#
+# $NetBSD: rox,v 1.1.1.1.2.1 2002/06/23 19:00:31 jlam Exp $
+#
+
+# The user's Choices directory  
+ROX_CHOICES_DIR="$HOME/.RoxChoices"
+
+#
+# If CHOICESPATH is not set, then check to see whether the user has
+# a $ROX_CHOICES_DIR directory. If they haven't, set one up.
+#
+if [ -z "$CHOICESPATH" ]; then
+	[ ! -d "$ROX_CHOICES_DIR" ] && 					\
+			cp -R @PREFIX@/share/rox/Choices "$ROX_CHOICES_DIR";
+	export CHOICESPATH="$ROX_CHOICES_DIR";
+fi
+
+# Run the ROX-Filer application
+exec @PREFIX@/share/rox/ROX-Filer/AppRun "$@"
