@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/12/13 00:29:20 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 2000/09/05 17:46:25 jwise Exp $
 
 --- Makefile.orig	Sat Dec 12 14:34:20 1998
 +++ Makefile	Sat Dec 12 14:37:14 1998
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/12/13 00:29:20 frueauf Exp $
  TARDIRS = $(DIRS) RCS regressive doc canvas-tcl8.0.0 canvas-tcl8.0.3
  TARFILES = Makefile  $(TARDIRS) VERSIONS awk_file abacus doc INSTALL COPYING \
  	Makefile.options
-+CCFLAGS= ${CFLAGS} -I${X11BASE}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/tcl8.0 -I${LOCALBASE}/include/tk8.0
++CCFLAGS= ${CFLAGS} -I${X11BASE}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/tcl -I${LOCALBASE}/include/tk
  
  all: $(TARGET)
  
