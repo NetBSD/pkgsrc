@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/04 03:48:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/25 21:41:29 hubertf Exp $
 
-DISTNAME=       siag-3.1.0
+DISTNAME=       siag-3.1.2
 CATEGORIES=     misc textproc math
 MASTER_SITES=   ftp://ftp.edu.stockholm.se/pub/siag/
 
