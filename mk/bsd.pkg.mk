@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1442 2004/04/14 20:15:59 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1443 2004/04/15 15:37:39 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -3592,7 +3592,7 @@ ${DDIR}: ${DLIST}
 
 ${DLIST}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	{ ${PKG_INFO} -qR "${PKGWILDCARD}" || ${TRUE}; } > ${DLIST}
+	{ ${PKG_DELETE} -n "${PKGWILDCARD}" 2>&1 | grep '^	' || ${TRUE}; } > ${DLIST}
 
 # The 'info' target can be used to display information about a package.
 .PHONY: info
