@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/14 13:29:49 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2000/06/26 22:12:35 dmcmahill Exp $
 #
 
 DISTNAME=	jisx0208fonts-20000614
@@ -48,6 +48,9 @@ post-extract:
 	${CP} ${DISTDIR}/clR5x8.bdf ${WRKDIR}
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 	(cd ${WRKSRC}; ${MAKE} prepare)
+
+pre-install:
+	[ -d ${FONTDIR} ] || ${MKDIR} -p ${FONTDIR}
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/jisx0208fonts
