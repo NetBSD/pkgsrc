@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/20 12:18:17 agc Exp $
+# $NetBSD: Makefile,v 1.20 2004/04/15 22:55:56 snj Exp $
 
 DISTNAME=	pstoedit_3_31
 PKGNAME=	pstoedit-3.31
@@ -18,7 +18,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 WRKSRC=		${WRKDIR}/pstoedit_3.31/src
 USE_X11=	yes
 USE_LIBTOOL=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GCC_SHLIB=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	LIBTOOL="${LIBTOOL}" LIBPLOTTERLA="${X11PREFIX}/lib/libplotter.la"
@@ -27,8 +27,6 @@ CONFIGURE_ENV+=	LDLIBS="${X11_LDFLAGS}"
 CONFIGURE_ENV+=	AWK=${AWK} GS=${LOCALBASE}/bin/gs
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=--libdir=${PREFIX}/lib/pstoedit	# plugin dir -- unused for now
-LDFLAGS+=	-L${BUILDLINK_PREFIX.plotutils}/lib
-CXXFLAGS+=	-I${BUILDLINK_PREFIX.plotutils}/include
 ALL_TARGET=
 
 post-extract:
@@ -46,6 +44,6 @@ post-install:
 	done
 	${INSTALL_DATA} ${DOCSRC}/readme.txt	${DOCDIR}
 
-.include "../../graphics/plotutils/buildlink2.mk"
+.include "../../graphics/plotutils/buildlink3.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
