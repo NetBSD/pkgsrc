@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/08/16 01:33:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 2000/08/29 17:10:35 tron Exp $
 
 DISTNAME=	kdevelop-1.2
 CATEGORIES=	devel kde
@@ -25,8 +25,9 @@ EVAL_PREFIX+=	QT1DIR=qt1 KDEBASEDIR=kdebase
 CONFIGURE_ARGS=	--with-extra-includes=${LOCALBASE}/include \
 		--with-extra-libs=${LOCALBASE}/lib \
 		--with-qt-dir=${QT1DIR}/qt1
+CONFIGURE_ENV=	"KDEDIR=${KDEBASEDIR} QTDIR=${QT1DIR}/qt1"
 
 CFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	"KDEDIR=${KDEBASEDIR} QTDIR=${QT1DIR}/qt1"
+LDFLAGS+=	-Wl,-R${QT1DIR}/qt1/lib
 
 .include "../../mk/bsd.pkg.mk"
