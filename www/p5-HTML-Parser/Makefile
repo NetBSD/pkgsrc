@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2002/10/20 15:06:34 seb Exp $
+# $NetBSD: Makefile,v 1.19 2003/04/12 15:40:38 martti Exp $
 #
 
-DISTNAME=		HTML-Parser-3.26
+DISTNAME=		HTML-Parser-3.27
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5hpa
 CATEGORIES=		www perl5
