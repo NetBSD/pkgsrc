@@ -1,12 +1,14 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/01/13 16:38:27 skrll Exp $
+$NetBSD: patch-af,v 1.2 2003/06/23 07:52:42 jlam Exp $
 
---- parsers/Makefile.in.orig	Sat Sep 30 18:37:28 2000
-+++ parsers/Makefile.in
-@@ -112,5 +112,5 @@
- 	$(RM2) $(addprefix $(XML_INC_DIR)/$(MODULE)/,$(PARSERS_CPP_PUBHEADERS))
+--- util/Platforms/Makefile.in.orig	Thu Mar  7 14:45:28 2002
++++ util/Platforms/Makefile.in
+@@ -176,6 +176,9 @@ endif
+ ifeq (${PLATFORM}, MACOSX)
+     SUBMODULE = MacOS
+ endif
++ifeq (${PLATFORM}, NETBSD)
++    SUBMODULE = NetBSD
++endif
  
- install::
--	-mkdir -p $(PREFIX)/$(MODULE)
--	$(CP) $(PARSERS_CPP_PUBHEADERS) $(PARSERS_C_FILES) $(PREFIX)/$(MODULE)
-+	-mkdir -p $(PREFIX)/include/$(MODULE)
-+	$(CP) $(PARSERS_CPP_PUBHEADERS) $(PARSERS_C_FILES) $(PREFIX)/include/$(MODULE)
+ includes::
+ 	${MAKE} -C $(SUBMODULE) $@
