@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:42:49 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:51:51 martti Exp $
 #
 
 DISTNAME=		swfdec-0.2.1
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swfdec/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://swfdec.sourceforge.net/
-COMMENT=		library for rendering Flash(R) animations and games
+COMMENT=		Library for rendering Flash(R) animations and games
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:44:05 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/21 16:54:01 martti Exp $
 
 DISTNAME=		cilk-5.3.1
 PKGREVISION=		2
@@ -8,7 +8,7 @@ MASTER_SITES=		http://supertech.lcs.mit.edu/cilk/ \
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://supertech.lcs.mit.edu/cilk/
-COMMENT=		multithreaded parallel programming language based on ANSI C
+COMMENT=		Multithreaded parallel programming language based on ANSI C
 
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 -*-*mipse[bl] *-*-powerpc *-*-sparc
 

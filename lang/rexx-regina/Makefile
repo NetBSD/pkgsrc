@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:45:18 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:54:06 martti Exp $
 #
 
 DISTNAME=	regina301
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://regina-rexx.sourceforge.net/
-COMMENT=	implementation of the REXX language
+COMMENT=	Implementation of the REXX language
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes

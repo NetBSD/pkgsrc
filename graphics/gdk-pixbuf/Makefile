@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2003/07/13 13:52:01 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/21 16:51:41 martti Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME}
 PKGREVISION=	1
-COMMENT=	the GNOME image loading library
+COMMENT=	The GNOME image loading library
 
 # XXX hopefully there is no x.gnome-config.x in PATH
 post-patch:

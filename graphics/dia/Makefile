@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/13 13:51:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/21 16:51:38 martti Exp $
 
 DISTNAME=	dia-0.91
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.91/}
 
 MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://www.lysator.liu.se/~alla/dia/
-COMMENT=	program for creating diagrams of all kinds
+COMMENT=	Program for creating diagrams of all kinds
 
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 

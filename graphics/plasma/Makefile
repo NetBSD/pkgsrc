@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:42:12 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:51:49 martti Exp $
 #
 
 DISTNAME=	plasma-1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.libsdl.org/projects/plasma/src/
 
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/plasma/
-COMMENT=	warping plasma demo
+COMMENT=	Warping plasma demo
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
