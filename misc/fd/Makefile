@@ -3,7 +3,7 @@
 # Date created:         20 Feb 1996
 # Whom:                 Nobuhiro Yasutomi <nobu@psrc.isac.co.jp>
 #
-# $NetBSD: Makefile,v 1.2 1997/10/24 01:08:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/24 21:01:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/01/06 06:38:33 max Exp
 #
 
@@ -17,8 +17,8 @@ CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.hipecs.hokudai.ac.jp/pub/unix/FD/ \
 		ftp://ftp.cc.saga-u.ac.jp/pub/fj.sources/FD/
 
-PATCHFILES=	FD-1.01g.patch.gz FD-1.01h.patch.gz
 PATCH_SITES=	${MASTER_SITES}
+PATCHFILES=	FD-1.01g.patch.gz FD-1.01h.patch.gz
 
 MAINTAINER=	nobu@psrc.isac.co.jp
 
@@ -32,6 +32,6 @@ do-configure:
 
 post-install:
 	@strip ${PREFIX}/bin/fd
-	cd ${WRKSRC} ; [ -f .fdrc ] && cp .fdrc ${PREFIX}/etc/fdrc
+	cd ${WRKSRC} ; [ -f .fdrc ] && ${CP} .fdrc ${PREFIX}/etc/fdrc
 
 .include <bsd.port.mk>
