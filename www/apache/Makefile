@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2001/02/17 17:21:54 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2001/03/13 20:52:26 jlam Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -7,8 +7,8 @@
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
-DISTNAME=		apache_1.3.17
-PKGNAME=		apache-1.3.17.1
+DISTNAME=		apache_1.3.19
+PKGNAME=		apache-1.3.19
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/ \
 			http://www.apache.de/dist/ \
@@ -16,11 +16,8 @@ MASTER_SITES=		http://httpd.apache.org/dist/ \
 			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/ \
 			http://www.netbsd.org/images/logos/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			${SSL_DISTNAME}${EXTRACT_SUFX} \
+			${MODSSL_DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
-
-PATCH_SITES=		http://httpd.apache.org/dist/
-PATCHFILES=		apache_1.3.17-fix.diff
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
@@ -28,25 +25,17 @@ COMMENT=		HTTP (Web) server
 
 CONFLICTS=		apache-*modssl-* apache6-*
 
-SSL_DISTNAME=		mod_ssl-2.8.0-1.3.17
+MODSSL_DISTNAME=	mod_ssl-2.8.1-1.3.19
+MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
 HAS_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--prefix=${PREFIX}				\
-			--sbindir=${PREFIX}/sbin			\
-			--libexecdir=${PREFIX}/lib/httpd		\
-			--sysconfdir=${PREFIX}/etc/httpd		\
-			--datadir=${PREFIX}/share/httpd			\
-			--cgidir=${PREFIX}/libexec/cgi-bin		\
-			--includedir=${PREFIX}/include/httpd		\
-			--runtimedir=/var/run				\
-			--logfiledir=/var/log/httpd			\
-			--proxycachedir=/var/spool/httpd/proxy
-CONFIGURE_ARGS+=	--enable-rule=EAPI				\
-			--enable-module=most				\
-			--disable-module=ssl				\
+CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
+CONFIGURE_ARGS+=	--enable-module=most				\
 			--enable-module=auth_db				\
 			--disable-module=auth_dbm
+CONFIGURE_ARGS+=	--enable-rule=EAPI				\
+			--disable-module=ssl
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM="${OPTIM}"
@@ -66,9 +55,11 @@ BUILD_DEFS+=		APACHE_USER
 .if !defined(NOPIC)
 CONFIGURE_ARGS+=	--enable-module=so	# requires dlopen()
 CONFIGURE_ARGS+=	--enable-shared=proxy
+CONFIGURE_ARGS+=	--enable-shared=define	# from mod_ssl pkg.addon
 PLIST_SRC+=		${PKGDIR}/PLIST.shared
 .else
 CONFIGURE_ARGS+=	--disable-module=proxy
+CONFIGURE_ARGS+=	--disable-shared=define
 .endif
 
 PLIST_SRC+=		${PKGDIR}/PLIST
@@ -97,25 +88,30 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 
 post-extract:
 	${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
-	${CP} ${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/*.c ${WRKSRC}/src/ap
-	${CP} ${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/*.h ${WRKSRC}/src/include
-	${CHMOD} a-x ${WRKSRC}/htdocs/README.rus ${WRKSRC}/htdocs/index.* \
-	    ${WRKSRC}/htdocs/apache_pb.gif
+	${CP} ${MODSSL_SRC}/pkg.addon/*.c ${WRKSRC}/src/modules/extra
+	${CP} ${MODSSL_SRC}/pkg.addon/*.html ${WRKSRC}/htdocs/manual/mod
+	${CP} ${MODSSL_SRC}/pkg.eapi/*.c ${WRKSRC}/src/ap
+	${CP} ${MODSSL_SRC}/pkg.eapi/*.h ${WRKSRC}/src/include
 
 pre-patch:
 	cd ${WRKSRC} && ${CAT}						\
-		${WRKDIR}/${SSL_DISTNAME}/pkg.eapi/eapi.patch		\
-		${WRKDIR}/${SSL_DISTNAME}/pkg.sslcfg/sslcfg.patch	\
-		${WRKDIR}/${SSL_DISTNAME}/pkg.sslmod/sslmod.patch	\
-		${WRKDIR}/${SSL_DISTNAME}/pkg.sslsup/sslsup.patch	\
+		${MODSSL_SRC}/pkg.addon/addon.patch			\
+		${MODSSL_SRC}/pkg.eapi/eapi.patch			\
+		${MODSSL_SRC}/pkg.sslcfg/sslcfg.patch			\
+		${MODSSL_SRC}/pkg.sslmod/sslmod.patch			\
+		${MODSSL_SRC}/pkg.sslsup/sslsup.patch			\
 		| ${PATCH} ${PATCH_ARGS}
 	cd ${WRKSRC} && ${TAIL} +154					\
-		${WRKDIR}/${SSL_DISTNAME}/pkg.ssldoc/ssldoc.patch	\
+		${MODSSL_SRC}/pkg.ssldoc/ssldoc.patch			\
 		| ${PATCH} ${PATCH_ARGS}
 	${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
 
+pre-configure:
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
+
 post-build:
-	${SED}	-e "s,@PREFIX@,${PREFIX},g"				\
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
 		${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
 
 pre-install:

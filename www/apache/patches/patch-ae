@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.4 2001/02/02 16:39:57 jlam Exp $
+$NetBSD: patch-ae,v 1.5 2001/03/13 20:52:28 jlam Exp $
 
---- src/modules/standard/mod_include.c.orig	Mon Jan 15 12:05:42 2001
+--- src/modules/standard/mod_include.c.orig	Fri Feb 23 11:37:26 2001
 +++ src/modules/standard/mod_include.c
 @@ -93,7 +93,11 @@
  #include "http_log.h"
@@ -54,7 +54,7 @@ $NetBSD: patch-ae,v 1.4 2001/02/02 16:39:57 jlam Exp $
              rr = ap_sub_req_lookup_file(tag_val, r);
  
              if (rr->status == HTTP_OK && rr->finfo.st_mode != 0) {
-@@ -2160,6 +2168,16 @@
+@@ -2162,6 +2170,16 @@
      }
  }
  
@@ -71,7 +71,7 @@ $NetBSD: patch-ae,v 1.4 2001/02/02 16:39:57 jlam Exp $
  
  
  /* -------------------------- The main function --------------------------- */
-@@ -2284,6 +2302,13 @@
+@@ -2286,6 +2304,13 @@
              }
  #endif
              else {
