@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/03/26 02:27:35 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2004/03/29 07:28:51 xtraeme Exp $
 #
 
 DISTNAME=	ircii-pana-1.0c19
@@ -13,16 +13,16 @@ HOMEPAGE=	http://www.bitchx.org/
 COMMENT=	IRC client based on ircII
 
 WRKSRC=		${WRKDIR}/BitchX
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS=	--with-ssl
 
 .if defined(BITCHX_WITH_GTK) && !empty(BITCHX_WITH_GTK:M[Yy][Ee][Ss])
-.include "../../graphics/imlib/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/imlib/buildlink3.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gtk
 CFLAGS+=		-I${PREFIX}/include/gnome-1.0
 PLIST_SUBST+=		GTK="gtk"
@@ -37,8 +37,8 @@ post-patch:
 	@${SED} ${FILES_SUBST_SED} \
 		${WRKSRC}/doc/BitchX.1.orig > ${WRKSRC}/doc/BitchX.1
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
