@@ -1,0 +1,4 @@
+$NetBSD: md5,v 1.1.1.1 1999/10/08 04:34:43 dbj Exp $
+
+MD5 (ppp-2.3.9.tar.gz) = 3bda111ae5391ac8b875c14a49514fd1
+MD5 (ppp-2.3.8-mppe-others-norc4_TH7.diff.gz) = 07480c9f47268d66fe93cf42b3a7ed9a
