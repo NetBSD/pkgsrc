@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2003/07/13 13:32:30 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2004/03/02 05:01:38 snj Exp $
 
 --- Makefile.in.orig	Wed Apr 23 13:29:22 2003
 +++ Makefile.in
@@ -8,8 +8,8 @@ $NetBSD: patch-ab,v 1.6 2003/07/13 13:32:30 wiz Exp $
  lib/localcharset.h :
 -	builddir="`pwd`"; cd libcharset && $(MAKE) all && $(MAKE) install-lib libdir="$$builddir/lib" includedir="$$builddir/lib"
 +	builddir="`pwd`"; cd libcharset && $(MAKE) all &&	\
-+	cp -R lib/libcharset.la lib/.libs "$$builddir/lib" &&	\
-+	cp -R include/*.h "$$builddir/include"
++	${CP} -R lib/libcharset.la lib/.libs "$$builddir/lib" &&	\
++	${CP} -R include/*.h "$$builddir/include"
  
  # Installs the library and include files only. Typically called with only
  # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
