@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2618 2004/12/01 15:00:32 wiz Exp $
+$NetBSD: TODO,v 1.2619 2004/12/01 16:44:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -285,7 +285,6 @@ Suggested package updates
 	o acpi-iasl-20040715
 	o adzap-20041124
 	o afterstep-2.00.00
-	o aide-0.9
 	o aiksaurus-1.2.1
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
@@ -419,6 +418,7 @@ Suggested package updates
 	o diction-1.06
 	o diffstat-1.35
 	o dirdiff-2.0
+	o distcc-2.18.3
 	o dmalloc-5.4.2
 	o dnstop-20040309
 	o dnstracer-1.8
@@ -635,6 +635,9 @@ Suggested package updates
 	o libdnet-1.8
 	o libetpan-0.34b
 	o libfwbuilder-2.0.3
+	o libggi-2.1
+	o libggiwmh-0.2.0
+	o libgii-0.9.0
 	o libgnomecanvasmm20-2.0.2
 	o libgnomecanvasmm26-2.8.0?
 	o libgnomecups-0.1.13
