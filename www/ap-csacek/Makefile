@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:21:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/27 03:20:21 hubertf Exp $
 #
 
 DISTNAME=	csacek-2.1.4
@@ -14,7 +14,7 @@ COMMENT=	on-fly code set recoder
 
 DEPENDS+=	apache*-1.3*:../../www/apache
 # For "apxs":
-BUILD_DEPENDS=	${PERL5}:../../lang/perl5-base
+BUILD_DEPENDS=	perl-5.*:../../lang/perl5
 
 HAS_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 14:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/03/27 03:19:50 hubertf Exp $
 #
 
 DISTNAME=		bonobo-0.30
@@ -9,7 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Architecture for creating reusable software components
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
+BUILD_DEPENDS+=		bison-*:../../devel/bison
 DEPENDS+=		ORBit>=0.5.6:../../net/ORBit
 DEPENDS+=		gdk-pixbuf>=0.6.0:../../graphics/gdk-pixbuf
 DEPENDS+=		oaf>=0.6.1:../../devel/oaf

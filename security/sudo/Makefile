@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/03/04 03:26:52 assar Exp $
+# $NetBSD: Makefile,v 1.34 2001/03/27 03:20:16 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
@@ -14,7 +14,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.courtesan.com/sudo/
 COMMENT=		Allow others to run commands as root
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/03/13 15:44:21 tron Exp $
+# $NetBSD: Makefile,v 1.44 2001/03/27 03:20:09 hubertf Exp $
 #
 
 ETHEREAL_VERSION=	0.8.16
@@ -13,7 +13,7 @@ COMMENT=		Network protocol analyzer
 
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		ucd-snmp>=4.1.2:../../net/ucd-snmp
-BUILD_DEPENDS+=		${PERL5}:../../lang/perl5-base
+BUILD_DEPENDS+=		perl-5.*:../../lang/perl5
 
 USE_X11=		YES
 USE_SSL=		YES

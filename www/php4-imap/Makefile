@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/14 00:10:00 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/27 03:20:25 hubertf Exp $
 
 .include "../../www/php4/Makefile.module"
 
@@ -8,10 +8,7 @@ PHP_PKG_VERS=		nb2
 
 COMMENT=		PHP4 extension for IMAP (Internet Mailbox Access Protocol)
 
-# We want something like:
-# BUILD_DEPENDS+=	imap-uw>=2000.0.3nb1:../../mail/imap-uw
-#
-BUILD_DEPENDS+=		${CCLIENT_PIC_LIB}:../../mail/imap-uw
+BUILD_DEPENDS+=		imap-uw>=2000.0.3nb1:../../mail/imap-uw
 
 CCLIENT_PIC_LIB=	${LOCALBASE}/lib/libc-client_pic.a
 

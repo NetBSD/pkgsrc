@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/03/17 16:49:38 jun Exp $
+# $NetBSD: Makefile,v 1.15 2001/03/27 03:19:56 hubertf Exp $
 #
 
 DISTNAME=	jisx0208fonts-20010112
@@ -12,7 +12,7 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 COMMENT=	X11 fonts for JIS X0208 standard
 
 # not USE_GMAKE
-BUILD_DEPENDS+=	gmake:../../devel/gmake
+BUILD_DEPENDS+=	gmake-3.79.1:../../devel/gmake
 
 USE_NON_RECTANGULAR?= NO
 USE_SHINONOME?=	YES
@@ -53,7 +53,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST.shinonome
 SHINONOME_CONFIGURE_ENV=${CONFIGURE_ENV} PERL="${PERL5}"
 SHINONOME_CONFIGURE_ARGS=${CONFIGURE_ARGS} --with-fontdir=${FONTDIR} --disable-progressbar
 
-BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
+BUILD_DEPENDS+=	perl-5.*:../../lang/perl5
 .endif
 
 MASTER_SITES+=	ftp://ftp.jaist.ac.jp/pub/misc/character/fonts/kappa/

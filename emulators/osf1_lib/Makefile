@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/11 23:22:50 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/27 03:19:55 hubertf Exp $
 
 DISTNAME=	netscape-4.7-3.alpha
 PKGNAME=	osf1_lib-1.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.support.compaq.com/alpha-tools/software/index.html
 COMMENT=	DEC/Compaq OSF-1/Tru64 compatibility package for netscape
 
 RPM2PKG=	${LOCALBASE}/sbin/rpm2pkg
-BUILD_DEPENDS+=	${RPM2PKG}:../../pkgtools/rpm2pkg
+BUILD_DEPENDS+=	rpm2pkg-1.2:../../pkgtools/rpm2pkg
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha
 

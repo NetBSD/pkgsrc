@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/27 03:19:53 hubertf Exp $
 #
 
 DISTNAME=	popt-1.2
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.redhat.com/redhat/code/popt/
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Command line option parsing library
 
-BUILD_DEPENDS+=	xgettext:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
 
 CONFLICTS=	ORBit<=0.5.3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/04 08:45:14 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/27 03:20:27 hubertf Exp $
 #
 
 DISTNAME=	kdelibdocs_kdoc2-1.1
@@ -10,7 +10,8 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www.kdevelop.org/
 COMMENT=	KDE library documentation
 
-BUILD_DEPENDS+= ${LOCALBASE}/bin/msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
+
 DEPENDS+=       kdelibs-1.*:../../x11/kdelibs
 
 USE_X11BASE=	yes

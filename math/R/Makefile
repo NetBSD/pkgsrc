@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/03/04 09:06:16 tron Exp $
+# $NetBSD: Makefile,v 1.21 2001/03/27 03:20:05 hubertf Exp $
 #
 
 DISTNAME=		R-1.1.1
@@ -20,7 +20,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.R-project.org/
 COMMENT=		Statistical language for data analysis and graphics
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 DEPENDS+=		readline>=4.0:../../devel/readline
 DEPENDS+=		jpeg-*:../../graphics/jpeg
 DEPENDS+=		png>1.0.9:../../graphics/png

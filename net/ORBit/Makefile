@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2001/03/10 23:36:22 tron Exp $
+# $NetBSD: Makefile,v 1.51 2001/03/27 03:20:09 hubertf Exp $
 #
 
 DISTNAME=		ORBit-0.5.6
@@ -11,9 +11,8 @@ COMMENT=		high-performance CORBA ORB with support for the C language
 
 DEPENDS+=		glib>=1.2.7:../../devel/glib
 DEPENDS+=		gindent-*:../../devel/gindent
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
-BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
-BUILD_DEPENDS+=		${LOCALBASE}/share/aclocal/gettext.m4:../../devel/gettext
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=		automake-1.4:../../devel/automake
 
 USE_LIBINTL=		YES
 USE_GMAKE=		YES
@@ -31,6 +30,10 @@ CPPFLAGS+=		-I${LOCALBASE}/include		# libintl.h
 INFO_FILES=		libIDL.info
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !exists(${LOCALBASE}/share/aclocal/gettext.m4)
+BUILD_DEPENDS+=		gettext-0.10.35nb1:../../devel/gettext
+.endif
 
 .if (${OPSYS} == SunOS)
 DEPENDS+=		tcp_wrappers>=7.6.1nb1:../../security/tcp_wrappers

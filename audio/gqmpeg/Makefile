@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/03/25 16:21:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.33 2001/03/27 03:19:46 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 
 DISTNAME=		gqmpeg-0.8.3
@@ -10,8 +10,9 @@ MAINTAINER=		rxg@ms25.url.com.tw
 HOMEPAGE=		http://gqmpeg.sourceforge.net/
 COMMENT=		GTK+ front end to mpg123
 
+BUILD_USES_MSGFMT=	yes
+
 DEPENDS+=		gdk-pixbuf>=0.8.0nb1:../../graphics/gdk-pixbuf
-BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		mpg123-0.59r:../../audio/mpg123
 

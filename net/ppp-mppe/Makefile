@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 18:19:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/27 03:20:11 hubertf Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
@@ -11,8 +11,6 @@ COMMENT=	PPP daemon and LKM with MPPE - Microsoft Point-to-Point Encryption
 
 OPENSSL_VERS=	0.9.5a
 OPENSSL_SRC=	${BUILD_ROOT}/security/openssl/${WRKDIR:T}/openssl-${OPENSSL_VERS}
-
-BUILD_DEPENDS= ${OPENSSL_SRC}/crypto/rc4:../../security/openssl:extract
 
 HAS_CONFIGURE=  yes
 MANCOMPRESSED_IF_MANZ=	yes
@@ -35,8 +33,17 @@ post-extract:
 	@${CP} ${OPENSSL_SRC}/crypto/sha/sha_locl.h ${WRKSRC}/netbsd-1.4/sha_locl.h
 	@${CP} ${OPENSSL_SRC}/crypto/sha/sha.h ${WRKSRC}/netbsd-1.4/sha.h
 
+
+pre-configure:
+	if [ ! -e ${OPENSSL_SRC}/crypto/rc4 ]; then			\
+		cd ../../security/openssl && ${MAKE} extract;		\
+	fi
+
 pre-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/lkm
+
+pre-clean:
+	cd ../../security/openssl && ${MAKE} clean
 
 SYSDIR?=	/sys
 MAKE_ENV+=	SYSDIR="${SYSDIR}"

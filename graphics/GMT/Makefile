@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 15:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/03/27 03:19:59 hubertf Exp $
 
 DISTNAME=	GMT3.3.6
 PKGNAME=	GMT-3.3.6
@@ -18,7 +18,7 @@ HOMEPAGE=	http://imina.soest.hawaii.edu/gmt/
 COMMENT=	Generic Mapping Tools
 
 DEPENDS+=	netcdf>=3.0:../../devel/netcdf
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
 EXTRACT_SUFFIX= .tar.bz2
 WRKSRC=		${WRKDIR}/${DISTNAME}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:06:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/27 03:20:25 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -11,9 +11,6 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
 COMMENT=		X11 program which emulates a plan9 window
 
-# needs library and private header, but not during runtime
-BUILD_DEPENDS=		${BUILD_ROOT}/editors/sam/${WRKDIR:T}/libframe/libframe.a:../../editors/sam:all
-
 USE_X11=		yes
 
 NOT_FOR_PLATFORM=	*-*-alpha	#LP64 Problems
@@ -21,5 +18,14 @@ NOT_FOR_PLATFORM=	*-*-alpha	#LP64 Problems
 MANCOMPRESSED=		yes
 NO_WRKSUBDIR=		yes
 MAKE_ENV+=		WRKDIR=${WRKDIR} PKGSRCDIR=${PKGSRCDIR}
+
+pre-configure:
+	if [ ! -e ${BUILD_ROOT}/editors/sam/${WRKDIR:T}/libframe/libframe.a ]; then \
+		cd ../../editors/sam && ${MAKE} all;			\
+	fi
+
+pre-clean:
+	cd ../../editors/sam && ${MAKE} clean
+
 
 .include "../../mk/bsd.pkg.mk"

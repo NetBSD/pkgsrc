@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/27 03:19:56 hubertf Exp $
 #
 
 DISTNAME=	ksc5601fonts-20001029
@@ -52,7 +52,7 @@ HANYANG_PCF=	hgm10.pcf hgm12.pcf hgm14.pcf hgm16.pcf hgm18.pcf hgm20.pcf \
 #EXTRACT_ONLY+=	pinetree.precomposed-1.01-bdf.tar.gz
 
 .if defined(MIZI)
-BUILD_DEPENDS+=	rpm2cpio:../../misc/rpm
+BUILD_DEPENDS+=	rpm-*:../../misc/rpm
 .endif
 
 FONTDIR=${PREFIX}/lib/X11/fonts/local

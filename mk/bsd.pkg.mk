@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.700 2001/03/26 21:36:02 manu Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.701 2001/03/27 03:20:08 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -124,11 +124,7 @@ MOTIFBASE?=		${X11PREFIX}
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
-# XXX: actually, here we would need something like
-# BUILD_DEPENDS+=xpkgwedge>=1.0:../../pkgtools/xpkgwedge
-.if make(install-run-depends)
-DEPENDS+=		xpkgwedge>=1.0:../../pkgtools/xpkgwedge
-.endif
+BUILD_DEPENDS+=		xpkgwedge>=1.0:../../pkgtools/xpkgwedge
 .endif
 PREFIX=			${X11PREFIX}
 .elif defined(USE_CROSSBASE)
@@ -139,7 +135,7 @@ PREFIX=			${LOCALBASE}
 .endif
 
 .if defined(USE_GMAKE)
-BUILD_DEPENDS+=		${GMAKE}:../../devel/gmake
+BUILD_DEPENDS+=		gmake>=3.78:../../devel/gmake
 MAKE_PROGRAM=		${GMAKE}
 GMAKE?=			gmake
 .else
@@ -155,7 +151,7 @@ PERL5?=			${LOCALBASE}/bin/perl
 .if defined(USE_PERL5)
 DEPENDS+=		perl-5.*:../../lang/perl5
 .if exists(${PERL5})
-BUILD_DEPENDS+=		${LOCALBASE}/share/mk/bsd.perl.mk:../../pkgtools/perl-mk
+BUILD_DEPENDS+=		perl-mk-1.0:../../pkgtools/perl-mk
 .if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
 .include "${LOCALBASE}/share/mk/bsd.perl.mk"
 .elif !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
@@ -181,7 +177,7 @@ PKG_FC?=		f2c-f77
 # /usr/bin/f77, the default will remain as f2c-f77.
 PKG_FC?=		f2c-f77
 .if  (${PKG_FC} == "f2c-f77")
-BUILD_DEPENDS+=       f2c-f77:../../lang/f2c
+BUILD_DEPENDS+=       f2c-20001205:../../lang/f2c
 .endif
 FC=             ${PKG_FC}
 F77=            ${PKG_FC}
@@ -223,14 +219,9 @@ CONFIGURE_ENV+=	LIBS="${LIBS} -L${LOCALBASE}/lib -lintl"
 
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/libtool
-# XXX Here we really need the following, but BUILD_DEPENDS doesn't
-# XXX support it at the moment.
-# BUILD_DEPENDS+=libtool>=1.4.20010219nb4:../../devel/libtool
-.if make(install-run-depends) || make(fetch-list-recursive) || make(show-depends-dirs)
-DEPENDS+=		libtool>=1.4.20010219nb2:../../devel/libtool
-.endif
+BUILD_DEPENDS+=		libtool>=1.4.20010219nb2:../../devel/libtool
 .if defined(USE_LTDL)
-DEPENDS+=		libtool>=1.4.20010219nb4:../../devel/libtool
+BUILD_DEPENDS+=		libtool>=1.4.20010219nb4:../../devel/libtool
 .endif
 .endif
 
@@ -258,6 +249,10 @@ DEPENDS+=		Xaw-Xpm-1.1:../../x11/Xaw-Xpm
 .elif ${XAW_TYPE} == "3d"
 DEPENDS+=		Xaw3d-1.5:../../x11/Xaw3d
 .endif
+.endif
+
+.if defined(BUILD_USES_MSGFMT) && !exists(/usr/bin/msgfmt)
+BUILD_DEPENDS+=		gettext-0.10.35nb1:../../devel/gettext
 .endif
 
 # Don't change these!!!  These names are built into the _TARGET_USE macro,
@@ -340,16 +335,16 @@ EXTRACT_SUFX?=		.tar.gz
 BZCAT=			/usr/bin/bzcat <
 .else
 BZCAT=			${LOCALBASE}/bin/bzcat
-BUILD_DEPENDS+=		${BZCAT}:../../archivers/bzip2
+BUILD_DEPENDS+=		bzip2-0.9.0b:../../archivers/bzip2
 .endif # !exists bzcat
 DECOMPRESS_CMD?=	${BZCAT}
 .elif ${EXTRACT_SUFX} == ".tar"
 DECOMPRESS_CMD?=	${CAT}
 .elif ${EXTRACT_SUFX} == ".zip"
-BUILD_DEPENDS+=		unzip:../../archivers/unzip
+BUILD_DEPENDS+=		unzip-5.42:../../archivers/unzip
 EXTRACT_CMD?=		unzip -Laq ${DOWNLOADED_DISTFILE}
 .elif ${EXTRACT_SUFX} == ".lzh"
-BUILD_DEPENDS+=		lha:../../archivers/lha
+BUILD_DEPENDS+=		lha-114f:../../archivers/lha
 EXTRACT_CMD?=		lha xq ${DOWNLOADED_DISTFILE}
 .else
 DECOMPRESS_CMD?=	${GZCAT}
@@ -362,7 +357,7 @@ DECOMPRESS_CMD?=	${GZCAT}
 BZCAT=			/usr/bin/bzcat
 .else
 BZCAT=			${LOCALBASE}/bin/bzcat
-BUILD_DEPENDS+=		${BZCAT}:../../archivers/bzip2
+BUILD_DEPENDS+=		bzip2-0.9.0b:../../archivers/bzip2
 .endif # !exists bzcat
 .endif
 .endif # defined(PATCHFILES)
@@ -1666,7 +1661,7 @@ delete-package:
 
 _PORT_USE: .USE
 .if make(real-extract)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} install-build-depends install-run-depends DEPENDS_TARGET=${DEPENDS_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} install-depends DEPENDS_TARGET=${DEPENDS_TARGET}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/pre-/}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/pre-/} ]; then		\
@@ -2695,64 +2690,17 @@ package-noinstall:
 ################################################################
 
 .if !target(install-depends)
-install-depends: install-run-depends install-build-depends
-
-install-build-depends:
-.if defined(BUILD_DEPENDS)
-.if !defined(NO_DEPENDS)
-.for dep in ${BUILD_DEPENDS}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	prog="${dep:C/:.*//}";						\
-	dir="${dep:C/^[^:]*://:C/:.*$//}";				\
-	if [ "${_DEPENDS_TARGET_OVERRIDE}" != "" ]; then		\
-		target=${DEPENDS_TARGET};				\
-	elif [ "${dep:M*\:*\:*}" != "" ]; then				\
-		target="${dep:C/^[^:]*:[^:]*://}";			\
-	else								\
-		target=${DEPENDS_TARGET};				\
-	fi;								\
-	found=not;							\
-	if expr "$$prog" : '.*/' >/dev/null; then			\
-		if ${TEST} -e "$$prog" ; then				\
-			${ECHO_MSG} "${_PKGSRC_IN}> Required file $$prog: found"; \
-			found="";					\
-		else							\
-			${ECHO_MSG} "${_PKGSRC_IN}> Required file $$prog: NOT found"; \
-		fi;							\
-	else								\
-		for d in ${PATH:S/:/ /g}; do				\
-			if [ -x $$d/$$prog ]; then			\
-				found="$$d/$$prog";			\
-				break;					\
-			fi						\
-		done;							\
-		${ECHO_MSG} "${_PKGSRC_IN}> Required executable $$prog: $$found found"; \
-	fi;								\
-	if [ "$$found" = "not" ]; then					\
-		${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$prog in $$dir"; \
-		if [ ! -d "$$dir" ]; then				\
-			${ECHO_MSG} "=> No directory for $$prog.  Skipping.."; \
-		else							\
-			cd $$dir ;					\
-			${MAKE} ${MAKEFLAGS} $$target DEPENDS_TARGET=${DEPENDS_TARGET} ;	\
-			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
-		fi;							\
-	fi
-.endfor	# BUILD_DEPENDS
-.endif	# !NO_DEPENDS
-.else	# !BUILD_DEPENDS
-	@${DO_NADA}
-.endif	# BUILD_DEPENDS
-
 # Tells whether to halt execution if the object formats differ
 FATAL_OBJECT_FMT_SKEW?= yes
 WARN_NO_OBJECT_FMT?= yes
 
-install-run-depends: uptodate-pkgtools
-.if defined(DEPENDS)
-.if !defined(NO_DEPENDS)
-.for dep in ${DEPENDS}
-	${_PKG_SILENT}${_PKG_DEBUG}\
+install-depends: uptodate-pkgtools
+.if defined(DEPENDS) || defined(BUILD_DEPENDS)
+.if defined(NO_DEPENDS)
+	@${DO_NADA}
+.else	# !DEPENDS
+.for dep in ${DEPENDS} ${BUILD_DEPENDS}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://:C/:.*$//}";				\
 	found="`${PKG_INFO} -e \"$$pkg\" || ${TRUE}`";			\
@@ -2791,8 +2739,6 @@ install-run-depends: uptodate-pkgtools
 	fi
 .endfor	# DEPENDS
 .endif	# !NO_DEPENDS
-.else	# !DEPENDS
-	@${DO_NADA}
 .endif	# DEPENDS
 
 .endif

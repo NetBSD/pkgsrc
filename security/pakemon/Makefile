@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:50:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/27 03:20:15 hubertf Exp $
 
 DISTNAME=	pakemon-0.3.1
 CATEGORIES=	security
@@ -12,8 +12,8 @@ DEPENDS+=	libnet-*:../../devel/libnet
 # libnids provides static library only, thus it isn't necessary at run-time,
 # only at compile-time.
 #
-BUILD_DEPENDS+=	${LOCALBASE}/lib/libnids.a:../../net/libnids
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=	libnids-1.14:../../net/libnids
+BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
 GNU_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2000/09/04 16:37:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2001/03/27 03:20:13 hubertf Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -18,8 +18,6 @@ DEPENDS+=		png>=1.0.6:../../graphics/png
 # Adobe's JPEG implementation in their PDF/PS documents is non-standard,
 # so we can't use an already installed libjpeg.so.
 #
-BUILD_DEPENDS+=		${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract
-
 GS_SOURCES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${GS_SOURCES}
 
@@ -174,6 +172,9 @@ post-patch:
 		< ${WRKDIR}/dmp_site.ps.bak > ${WRKDIR}/dmp_site.ps
 
 do-configure:
+	if [ ! -e ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
+		cd ../../graphics/jpeg && ${MAKE} extract;		\
+	fi
 	#
 	# Append build rules for extra drivers to contrib.mak
 	#

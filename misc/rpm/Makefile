@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/03/07 07:07:11 kei Exp $
+# $NetBSD: Makefile,v 1.28 2001/03/27 03:20:08 hubertf Exp $
 #
 
 DISTNAME=	rpm-2.5.4
@@ -10,7 +10,7 @@ MAINTAINER=	mycroft@netbsd.org
 HOMEPAGE=	http://www.rpm.org/
 COMMENT=	The Red Hat Package Manager
 
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
 
 CONFLICTS+=	rpm2cpio-*
 

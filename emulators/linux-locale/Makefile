@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 18:38:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/03/27 03:19:54 hubertf Exp $
 #
 
 DISTNAME=	locales-2.1-1mdk
@@ -12,7 +12,7 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.linuxi18n.org/locales/
 COMMENT=	Locales for Linux
 
-BUILD_DEPENDS+=	rpm2cpio:../../misc/rpm
+BUILD_DEPENDS+=	rpm-*:../../misc/rpm
 
 .include "../../mk/bsd.prefs.mk"
 .if !defined(LINUX_LOCALES)

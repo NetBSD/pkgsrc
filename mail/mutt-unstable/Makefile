@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/26 20:19:46 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/27 03:20:05 hubertf Exp $
 
 DISTNAME=	mutt-unstable-20010212
 PKGNAME=	mutt-1.3.14.20010212i
@@ -9,9 +9,9 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.mutt.org/
 COMMENT=	text-based MIME mail client with PGP support
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
-BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	automake-1.4:../../devel/automake
+BUILD_USES_MSGFMT=	yes
 DEPENDS+=	libiconv>=1.5:../../converters/libiconv
 
 USE_LIBINTL=		YES

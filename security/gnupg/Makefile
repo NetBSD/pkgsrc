@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/17 17:49:45 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/03/27 03:20:15 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -17,7 +17,7 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	Privacy Guard, a public-Key encryption and digital signature utility
 
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
 
 CRYPTO=		yes
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/27 03:20:12 hubertf Exp $
 #
 
 DISTNAME=	src
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	file-synchronization tool
 
-BUILD_DEPENDS=	ocamlc:../../lang/ocaml
+BUILD_DEPENDS=	ocaml-3.00:../../lang/ocaml
 
 DIST_SUBDIR=	unison
 

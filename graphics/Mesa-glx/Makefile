@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/03/14 10:20:32 tron Exp $
+# $NetBSD: Makefile,v 1.18 2001/03/27 03:19:59 hubertf Exp $
 
 DISTNAME=	glx-20000813
 PKGNAME=	Mesa-${DISTNAME}
@@ -15,9 +15,9 @@ COMMENT=	OpenGL like graphics library with GLX hardware acceleration
 
 BROKEN=		Package is outdated and has security problems.
 
-BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
-BUILD_DEPENDS+=	${AUTOCONF}:../../devel/autoconf
-BUILD_DEPENDS+=	${TCLSH}:../../lang/tcl
+BUILD_DEPENDS+=	perl-5.*:../../lang/perl5
+BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=	tcl-8.3.2nb1:../../lang/tcl
 
 CONFLICTS+=		Mesa-*
 CONFLICTS+=		MesaLib-*

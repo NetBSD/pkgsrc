@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/16 13:15:43 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/03/27 03:19:44 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp 
 #
 
@@ -13,7 +13,7 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/Zip.html
 COMMENT=	Create/update ZIP files compatible with pkzip
 
-BUILD_DEPENDS=	unzip:../../archivers/unzip
+BUILD_DEPENDS=	unzip-*:../../archivers/unzip
 
 EXTRACT_ONLY=	zip23.tar.gz
 MAKEFILE=	unix/Makefile

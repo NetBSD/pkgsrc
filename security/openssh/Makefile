@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/03/22 08:49:28 itojun Exp $
+# $NetBSD: Makefile,v 1.44 2001/03/27 03:20:15 hubertf Exp $
 
 DISTNAME=		openssh-2.5.2p2
 CATEGORIES=		security
@@ -12,8 +12,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssh.com/
 COMMENT=		Open Source Secure shell client and server (remote login program)
 
-BUILD_DEPENDS+=		${PERL5}:../../lang/perl5-base
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		perl-5.*:../../lang/perl5
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 CRYPTO=			yes
 

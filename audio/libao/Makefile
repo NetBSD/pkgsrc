@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/03/20 09:57:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/27 03:19:46 hubertf Exp $
 
 DISTNAME=	libao-0.6.0
 PKGNAME=	${DISTNAME}nb1
@@ -8,8 +8,8 @@ MASTER_SITES=	http://www.vorbis.com/files/beta4/unix/
 MAINTAINER=	reed@reedmedia.net
 COMMENT=	cross-platform audio library
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=	automake-1.4:../../devel/automake
+BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes

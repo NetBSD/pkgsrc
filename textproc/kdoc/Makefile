@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:37:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/27 03:20:19 hubertf Exp $
 #
 
 DISTNAME=	kdoc-2.0.1b
@@ -13,7 +13,7 @@ MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	C++ and IDL Class Documentation Tool
 
-BUILD_DEPENDS+= ${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+= autoconf-2.13:../../devel/autoconf
 
 USE_PERL5=	yes
 USE_GMAKE=	yes

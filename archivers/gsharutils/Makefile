@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 13:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/27 03:19:44 hubertf Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/sharutils/sharutils.html
 COMMENT=	Allow packing and unpacking of shell archives
 
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
 
 USE_LIBINTL=	yes
 GNU_CONFIGURE=  yes

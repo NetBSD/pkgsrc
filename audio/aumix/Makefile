@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 13:30:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/27 03:19:45 hubertf Exp $
 
 DISTNAME=	aumix-2.7
 CATEGORIES=	audio
@@ -12,7 +12,8 @@ MAINTAINER=	trevor@jpj.net
 HOMEPAGE=	http://jpj.net/~trevor/aumix.html
 COMMENT=	Set mix levels
 
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
+
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 USE_CURSES=	yes

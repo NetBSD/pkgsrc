@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2000/11/04 07:05:09 itojun Exp $
+# $NetBSD: Makefile.common,v 1.8 2001/03/27 03:19:59 hubertf Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -10,7 +10,7 @@ MASTER_SITES=		http://download.sourceforge.net/freetype/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.freetype.org/
 
-BUILD_DEPENDS+=		msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
 
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/26 20:19:44 tron Exp $
+# $NetBSD: Makefile,v 1.23 2001/03/27 03:19:57 hubertf Exp $
 
 DISTNAME=		gnome-games-1.2.0
 CATEGORIES=		games gnome
@@ -8,9 +8,9 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME games collection
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
-BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
-BUILD_DEPENDS+=		gettextize:../../devel/gettext
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=		automake-1.4:../../devel/automake
+BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gnome-core-*:../../x11/gnome-core
 # Required for ports which don't build "libgtop".
 DEPENDS+=		guile-[0-9]*:../../lang/guile

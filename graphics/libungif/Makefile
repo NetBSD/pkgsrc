@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/16 15:22:26 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/03/27 03:20:01 hubertf Exp $
 #
 
 DISTNAME=		libungif-4.1.0
@@ -11,7 +11,7 @@ COMMENT=		Tools and library routines for working with GIF images
 
 CONFLICTS=		giflib-*
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=      ${WRKSRC}/ltconfig

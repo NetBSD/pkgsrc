@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/17 17:42:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/03/27 03:20:17 hubertf Exp $
 #
 
 DISTNAME=	kdf-0.5.1
@@ -10,7 +10,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.edu.uni-klu.ac.at/~mkropfbe
 COMMENT=	Shows disk usage graphically and lets you mount/umount devices
 
-BUILD_DEPENDS+=	msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
 DEPENDS+=	kde-1.1.2:../../x11/kde
 
 USE_LIBINTL=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/17 17:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/03/27 03:20:27 hubertf Exp $
 #
 
 DISTNAME=	khostchooser-0.3
@@ -9,7 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	root@garbled.net
 COMMENT=	KDE Chooser replacement for X
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
+BUILD_USES_MSGFMT=	yes
+
 DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs
 DEPENDS+=	libungif-*:../../graphics/libungif
 

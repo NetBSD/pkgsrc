@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2001/02/26 17:01:59 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2001/03/27 03:19:57 hubertf Exp $
 
 DISTNAME=		freeciv-${FC_VERS}
 FC_VERS=		1.11.4
@@ -10,8 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.freeciv.org/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
-BUILD_DEPENDS+=		msgfmt:../../devel/gettext
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_USES_MSGFMT=	yes
 
 FILESDIR=		${.CURDIR}/../../games/freeciv-share/files
 PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches
