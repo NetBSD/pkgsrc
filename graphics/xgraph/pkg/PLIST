@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/13 11:10:00 frueauf Exp $
+bin/xgraph
+man/cat1/xgraph.0
