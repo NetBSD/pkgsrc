@@ -1,0 +1,9 @@
+Adobe's linux port of their framemaker document processor
+
+The demo version will run out of the box, and a free licence until
+the end of 2000 is available from Adobe at:
+
+	http://www.adobe.com/products/framemaker/fmlinux.html
+
+(Might we also suggest you mention to Adobe that you are running
+the linux version of FrameMaker under NetBSD :)
