@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:57:59 agc Exp $
+
+MD5 (bvi-1.2.0.src.tar.gz) = 9508763dcb62f25b7b20016faf426d89
+SHA1 (patch-aa) = 40097e5a57a5b91e40a257682e15d8c544685009

@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:58:28 agc Exp $
+
+MD5 (xemacs/xemacs-21.1.14.tar.bz2) = a1aa60c98319c60720f23dc1a9d1deaa
+MD5 (xemacs/xemacs-21.1.14-elc.tar.gz) = e103c8143a92aca750d502da88a2ace5
+MD5 (xemacs/xemacs-21.1.14-info.tar.gz) = 76b23d75e67de550ee51fc92e83a6b02
+SHA1 (patch-aa) = 25a050e10a6e4853e27d2b4a268b445fd5277192
+SHA1 (patch-ab) = 7d8f6b362337a7279900c28bc078091980f5e369
+SHA1 (patch-ac) = 5d03243c475f0980d6e202baf8490084f566c876
+SHA1 (patch-ad) = e2a70a64f0659ffda6dd27b37512e4dc5bd4ecf4
+SHA1 (patch-af) = 9a6dc52819dfa1cf85802f6cc99db30e8ba363fc
+SHA1 (patch-ah) = 61a430e027a47ce321721737d42d09ca71ecd7ec
+SHA1 (patch-ai) = ea752473a56d20907201763966ecdeaaeffac84a
+SHA1 (patch-ak) = a36367fdb87781bcaf2e4c52023262d0344f6a2d
+SHA1 (patch-al) = 247826009110453a868525e711e084b7dee49664

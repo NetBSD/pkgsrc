@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:08:34 agc Exp $
+
+SHA1 (sml-mode-3.9.5.tar.gz) = 5c4eee321e64ac3fea4f37ec93e51b3251b60c3c
+SHA1 (patch-aa) = 233a16a580167aae82c023c48cdb802572afa935

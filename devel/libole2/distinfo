@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:07:24 agc Exp $
+
+SHA1 (libole2-0.2.1.tar.gz) = dd8e3a81006dfb71649e7a1e9736a5293ce6b69d
+SHA1 (patch-aa) = 4ca5adb36c42c7f492dc6a1505978388bed9399a
