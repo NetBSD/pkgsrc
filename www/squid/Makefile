@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2002/10/13 16:43:20 taca Exp $
+# $NetBSD: Makefile,v 1.70 2002/11/12 16:07:17 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE1
 PKGNAME=	squid-2.5.1
@@ -67,8 +67,8 @@ SQUID_CONFIGURE_ARGS?=	--disable-internal-dns \
 OPTIONAL_FILES+= libexec/diskd libexec/dnsserver libexec/pinger libexec/unlinkd
 OPTIONAL_FILES+= libexec/digest_pw_auth libexec/getpwname_auth
 OPTIONAL_FILES+= libexec/ip_user_check libexec/smb_auth libexec/smb_auth.sh
-OPTIONAL_FILES+= libexec/wb_auth libexec/wb_group
-OPTIONAL_FILES+= libexec/wb_ntlmauth
+OPTIONAL_FILES+= libexec/squid_unix_group libexec/wb_auth libexec/wb_group
+OPTIONAL_FILES+= libexec/wb_ntlmauth man/man8/squid_unix_group.8
 
 pre-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/squid
