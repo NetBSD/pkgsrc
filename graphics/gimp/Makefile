@@ -3,7 +3,7 @@
 # Date created:         29 January 1998
 # Whom:                 Bernd Sieker <bsieker@techfak.uni-bielefeld.de>
 #
-# $NetBSD: Makefile,v 1.1 1998/02/03 10:17:01 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/02/05 10:23:54 tron Exp $
 
 DISTNAME=	gimp-0.99.18
 CATEGORIES=	graphics
@@ -37,8 +37,6 @@ LIB_DEPENDS=	jpeg.7.:${PORTSDIR}/graphics/jpeg \
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LDFLAGS="-L${PREFIX}/lib -L${X11BASE}/lib"
-
-USE_GMAKE=	yes
 
 CFLAGS=		-pipe -O2 -I${PREFIX}/include -I${X11BASE}/include
 
