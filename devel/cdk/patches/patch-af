@@ -1,6 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 1998/12/01 23:27:36 garbled Exp $
---- cdk/curdefs.h.orig	Tue Dec  1 14:11:18 1998
-+++ cdk/curdefs.h	Tue Dec  1 14:11:41 1998
+$NetBSD: patch-af,v 1.2 1999/07/06 07:57:23 jlam Exp $
+
+--- include/curdefs.h.orig	Thu Dec 10 23:24:06 1998
++++ include/curdefs.h	Tue Jul  6 01:00:28 1999
 @@ -518,4 +518,7 @@
  #ifndef ACS_S2
  #define ACS_S2		'2'

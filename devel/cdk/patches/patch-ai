@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 1999/07/06 07:57:26 jlam Exp $
+
+--- configure.orig	Fri Dec 11 11:44:04 1998
++++ configure	Tue Jun 29 21:37:18 1999
+@@ -1344,7 +1344,7 @@
+   cat > conftest.$ac_ext <<EOF
+ #line 1346 "configure"
+ #include "confdefs.h"
+-#include <ncurses>
++#include <ncurses.h>
+ EOF
+ ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+ { (eval echo configure:1351: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+@@ -1447,7 +1447,7 @@
+ 	   value=
+ 	fi
+ 
+-	for dir in /usr/include /usr/local/include /opt/include; do
++	for dir in /usr/include /usr/local/include /opt/include ${LOCALBASE}/include/ncurses; do
+ 	   if test -f ${dir}/curses.h; then
+ 	      count=`grep 'chtype;$' ${dir}/curses.h | grep -c '^typedef'`
+ 	   fi
