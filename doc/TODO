@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3354 2005/04/04 09:31:42 wiz Exp $
+$NetBSD: TODO,v 1.3355 2005/04/04 09:33:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -665,7 +665,6 @@ Suggested package updates
 	o navi2ch-1.7.5
 	o nawk-20041222
 	o ncview-1.92e
-	o nessus-2.2.4
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
 	o netio-1.23
