@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/25 21:50:34 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/23 21:47:50 jlam Exp $
 
 .include "../pdflib/Makefile.common"
 
@@ -8,7 +8,6 @@ COMMENT=		Tcl interface to PDFlib for generating PDF files
 
 BUILDLINK_DEPENDS.pdflib=	pdflib>=${PDFLIB_BASE_VERS}
 
-USE_BUILDLINK2=		YES
 CONFIGURE_ARGS+=	--with-tcl=${TCLSH}
 CONFIGURE_ARGS+=        --with-tclincl="${BUILDLINK_PREFIX.tcl}/include"
 TCLSH=                  ${BUILDLINK_PREFIX.tcl}/bin/tclsh
