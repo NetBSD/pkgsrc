@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2002/10/25 14:18:44 drochner Exp $
+# $NetBSD: Makefile,v 1.84 2002/10/27 01:17:34 cjones Exp $
 #
 
 COMMENT=	Databases
@@ -17,6 +17,7 @@ SUBDIR+=	gnome-mime-data
 SUBDIR+=	gq
 SUBDIR+=	gtksql
 SUBDIR+=	gtranscript
+SUBDIR+=	guile-pg
 SUBDIR+=	iodbc
 SUBDIR+=	java-db3
 SUBDIR+=	jdb
