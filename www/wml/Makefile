@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/25 18:07:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/24 13:36:21 wiz Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -24,8 +24,7 @@ CONFIGURE_ARGS=	--with-perl=${PERL5} \
 
 USE_BUILDLINK2=	yes
 
-# redrawwin()
-USE_NCURSES=	yes
+USE_NCURSES=	# redrawwin()
 
 post-install:
 	cd ${PREFIX}/man/cat1 ; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/25 17:17:29 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/24 13:36:17 wiz Exp $
 #
 
 DISTNAME=	cmp3-2.0pre5
@@ -16,8 +16,7 @@ WRKSRC=		${WRKDIR}/cmp3
 
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
-# missing: newpad, prefresh, pnoutrefresh, wredrawln, redrawwin
-USE_NCURSES=		YES
+USE_NCURSES=		# MAX_FORM_COMMAND
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cmp3 ${PREFIX}/bin
