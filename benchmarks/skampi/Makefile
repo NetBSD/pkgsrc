@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/26 02:27:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/30 19:52:42 wiz Exp $
 #
 
 DISTNAME=	skampi4
@@ -13,7 +13,6 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://liinwww.ira.uka.de/~skampi/
 COMMENT=	MPI (Message Passing Interface) benchmarks
 
-DEPENDS=	mpich>=1.2.1:../../parallel/mpi-ch
 DEPENDS+=	gnuplot>=3.7.1:../../graphics/gnuplot
 DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
 
@@ -51,4 +50,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/.skampi-dt-short 		\
 		${PREFIX}/share/examples/skampi/dot.skampi-dt-short
 
+.include "../../parallel/mpi-ch/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
