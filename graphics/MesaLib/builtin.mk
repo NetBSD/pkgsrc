@@ -1,33 +1,10 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/15 16:48:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/03/15 17:38:10 jlam Exp $
 
 _GL_GLX_H=	${X11BASE}/include/GL/glx.h
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
 
-# Distill the MESA_REQD list into a single _MESA_REQD value that is the
-# highest version of MESA required.
-#
-_MESA_STRICTEST_REQD?=	none
-.  for _version_ in ${MESA_REQD}
-.    for _pkg_ in MesaLib-${_version_}
-.      if ${_MESA_STRICTEST_REQD} == "none"
-_MESA_PKG_SATISFIES_DEP=	yes
-.        for _vers_ in ${MESA_REQD}
-.          if !empty(_MESA_PKG_SATISFIES_DEP:M[yY][eE][sS])
-_MESA_PKG_SATISFIES_DEP!=	\
-	if ${PKG_ADMIN} pmatch 'MesaLib>=${_vers_}' ${_pkg_}; then	\
-		${ECHO} "yes";						\
-	else								\
-		${ECHO} "no";						\
-	fi
-.          endif
-.        endfor
-.        if !empty(_MESA_PKG_SATISFIES_DEP:M[yY][eE][sS])
-_MESA_STRICTEST_REQD=	${_version_}
-.        endif
-.      endif
-.    endfor
-.  endfor
-_MESA_REQD=	${_MESA_STRICTEST_REQD}
+.include "../../graphics/Mesa/version.mk"
+BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=${_MESA_REQD}
 
 .if !defined(IS_BUILTIN.MesaLib)
 IS_BUILTIN.MesaLib=	no
@@ -40,12 +17,9 @@ IS_BUILTIN.MesaLib!=							\
 	fi
 .    if !empty(IS_BUILTIN.MesaLib:M[yY][eE][sS])
 #
-# Create an appropriate package name for the built-in Mesa/GLX distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
-# or if the built-in one is sufficient.
+# _MESA_VERSION is defined by Mesa/version.mk to be the version of the
+# Mesa software distributed with the built-in XFree86.
 #
-.      include "../../graphics/Mesa/version.mk"
 BUILTIN_PKG.MesaLib=	MesaLib-${_MESA_VERSION}
 MAKEFLAGS+=		BUILTIN_PKG.MesaLib=${BUILTIN_PKG.MesaLib}
 .    endif
@@ -62,7 +36,7 @@ USE_BUILTIN.MesaLib=	yes
 USE_BUILTIN.MesaLib?=	${IS_BUILTIN.MesaLib}
 
 .  if defined(BUILTIN_PKG.MesaLib)
-USE_BUILTIN.MesaLib=	yes
+USE_BUILTIN.MesaLib=		yes
 .    for _depend_ in ${BUILDLINK_DEPENDS.MesaLib}
 .      if !empty(USE_BUILTIN.MesaLib:M[yY][eE][sS])
 USE_BUILTIN.MesaLib!=	\

@@ -1,7 +1,10 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/15 17:38:10 jlam Exp $
 
 _GL_GLU_H=	${X11BASE}/include/GL/glu.h
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
+
+.include "../../graphics/Mesa/version.mk"
+BUILDLINK_DEPENDS.glu+=	glu>=${_MESA_REQD}
 
 .if !defined(IS_BUILTIN.glu)
 IS_BUILTIN.glu=	no
@@ -14,12 +17,9 @@ IS_BUILTIN.glu!=							\
 	fi
 .    if !empty(IS_BUILTIN.glu:M[yY][eE][sS])
 #
-# Create an appropriate package name for the built-in Mesa/GLU distributed
-# with the system.  This package name can be used to check against
-# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
-# or if the built-in one is sufficient.
+# _MESA_VERSION is defined by Mesa/version.mk to be the version of the
+# Mesa software distributed with the built-in XFree86.
 #
-.      include "../../graphics/Mesa/version.mk"
 BUILTIN_PKG.glu=	glu-${_MESA_VERSION}
 MAKEFLAGS+=		BUILTIN_PKG.glu=${BUILTIN_PKG.glu}
 .    endif
