@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.5 2003/07/24 23:45:06 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.6 2003/07/25 12:04:39 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -621,7 +621,7 @@ uptodate-digest:
 .if defined(_OPSYS_PKGTOOLS_REQD)
 PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD}
 .else
-PKGTOOLS_REQD=		20030724
+PKGTOOLS_REQD=		20030725
 .endif
 
 # Check that we are using up-to-date pkg_* tools with this file.
@@ -692,7 +692,8 @@ PKG_ARGS_BINPKG=	-p ${PREFIX:S/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
 .endif # !PKG_ARGS_COMMON
 
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PKG_ARGS_INSTALL+=	-U
+PKG_ARGS_INSTALL+=	-U	# don't update the pkgdb.byfile.db
+PKG_ARGS_BINPKG+=	-E	# create an empty views file in the binpkg
 .endif
 
 PKG_SUFX?=		.tgz
@@ -4481,6 +4482,9 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		if ${TEST} -e ${PRESERVE_FILE}; then 			\
 			${CP} ${PRESERVE_FILE} ${PKG_DBDIR}/${PKGNAME}/+PRESERVE; \
 		fi ; 							\
+		if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" ]; then	\
+			${TOUCH} ${PKG_DBDIR}/${PKGNAME}/+VIEWS;	\
+		fi ;							\
 		if [ -n "${INSTALL_FILE}" ]; then			\
 			if ${TEST} -e ${INSTALL_FILE}; then		\
 				${CP} ${INSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+INSTALL; \
