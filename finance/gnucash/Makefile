@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/01/24 04:28:52 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2003/02/23 13:03:06 jmmv Exp $
 
 DISTNAME=		gnucash-1.6.8
 PKGREVISION=		3
@@ -52,6 +52,7 @@ post-buildlink:
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../devel/swig/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../math/guppi/buildlink2.mk"
