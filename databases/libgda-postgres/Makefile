@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/02/05 17:01:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/25 17:22:43 drochner Exp $
 #
 
 LIBGDA_PROVIDER=	postgres
-
-PKGREVISION=		2
 
 .include "../../databases/libgda/Makefile.common"
 
