@@ -1,0 +1,38 @@
+$NetBSD: README.Interix,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+
+Please read the general README file as well.
+
+NOTE:  Currently, Interix support in pkgsrc is unstable, so errors and
+problems are expected.  Known caveats are listed at the bottom of this
+document.
+
+Interix is a POSIX compatible subsystem for the Windows NT kernel, providing
+a Unix-like environment with a tighter kernel integration than available
+with Cygwin.  It is part of the Windows Services for Unix package, available
+for Windows 2000, XP, and 2003.  SFU can be downloaded from:
+
+    http://www.microsoft.com/windows/sfu/
+
+At an absolute minimum, the following packages must be installed from the
+Windows Services for Unix 3.5 distribution in order to use bootstrap-pkgsrc:
+
+    Utilities -> Base Utilities
+    Interix GNU Components -> (all)
+    Remote Connectivity
+    Interix SDK
+
+The Remote Connectivity subcomponent, Windows Remote Shell Service, does not
+need to be installed, but Remote Connectivity itself should be installed in
+order to have a working inetd.
+
+=====
+
+KNOWN CAVEATS
+
+* As of this writing, the necessary Interix support stubs have not yet been
+  added to pkgsrc/mk.
+
+* On Windows under Interix, the "root" user is actually named
+  "+Administrator".  This may require some modification to pkgsrc to
+  introduce a parameterized root user for installation purposes.  
+  (Likewise, the bootstrap script sets the root group to "+Administrators".)
