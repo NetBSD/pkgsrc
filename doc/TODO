@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2101 2004/09/07 16:55:09 reed Exp $
+$NetBSD: TODO,v 1.2102 2004/09/08 04:03:08 salo Exp $
 
 Suggested new packages
 ======================
@@ -201,6 +201,7 @@ Suggested package updates
 	o blender-2.34
 	o boson-0.10
 	o calc-2.11.10
+	o celestia-1.3.2
 	o centericq-4.11.0
 	o cervisia-2.1.2
 	o checkbot-1.75 [pkg/26371]
