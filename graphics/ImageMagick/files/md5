@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.17 1998/11/01 22:34:11 tron Exp $
+$NetBSD: md5,v 1.18 1998/12/15 00:21:09 tron Exp $
 
-MD5 (ImageMagick-4.1.3.tar.gz) = 3da6a8496904b370f278b7873a50e3bf
+MD5 (ImageMagick-4.1.6.tar.gz) = db3194e83e34b5fc68b1095c7c5a8a6a
