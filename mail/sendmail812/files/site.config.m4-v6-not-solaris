@@ -1,0 +1,3 @@
+# $NetBSD: site.config.m4-v6-not-solaris,v 1.1.1.1 2004/08/30 19:56:46 adrianp Exp $
+
+APPENDDEF(`confENVDEF', `-DNEEDSGETIPNODE')
