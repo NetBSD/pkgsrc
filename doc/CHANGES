@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9007 2005/02/02 17:30:48 jlam Exp $
+$NetBSD: CHANGES,v 1.9008 2005/02/02 18:02:39 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -718,3 +718,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Kwiki-Revisions to 0.14 [jlam 2005-02-02]
 	Updated p5-Kwiki-UserName to 0.14 [jlam 2005-02-02]
 	Updated p5-Kwiki-UserPreferences to 0.13 [jlam 2005-02-02]
+	Added libarchive-102.002 [xtraeme 2005-02-02]
