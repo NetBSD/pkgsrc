@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2003/04/02 04:25:24 jschauma Exp $
+$NetBSD: patch-aa,v 1.8 2003/10/08 03:13:21 jschauma Exp $
 
---- Makefile.in.orig	Sat Oct 20 02:24:15 2001
-+++ Makefile.in
+--- Makefile.in.orig	Fri Oct 19 20:24:15 2001
++++ Makefile.in	Tue Oct  7 21:57:52 2003
 @@ -87,7 +87,7 @@
  #CFLAGS			= $(CFLAGS_DEBUG)
  #CFLAGS			= $(CFLAGS_OPTIMIZE)
@@ -33,15 +33,6 @@ $NetBSD: patch-aa,v 1.7 2003/04/02 04:25:24 jschauma Exp $
  SHLIB_CFLAGS		= @SHLIB_CFLAGS@
  
  SHLIB_SUFFIX		= @SHLIB_SUFFIX@
-@@ -207,7 +207,7 @@
- TCL_LIB_FILE		= @TCL_LIB_FILE@
- #TCL_LIB_FILE		= libtcl.a
- 
--TCL_LIB_FLAG		= @TCL_LIB_FLAG@
-+TCL_LIB_FLAG		= libtcl83.la
- #TCL_LIB_FLAG		= -ltcl
- 
- TCL_EXP_FILE		= @TCL_EXP_FILE@
 @@ -235,8 +235,9 @@
  # Must be absolute to so the corresponding tcltest's tcl_library is absolute.
  TCL_BUILDTIME_LIBRARY	= @TCL_SRC_DIR@/library
@@ -49,7 +40,7 @@ $NetBSD: patch-aa,v 1.7 2003/04/02 04:25:24 jschauma Exp $
 -CC			= @CC@
  #CC			= purify -best-effort @CC@ -DPURIFY
 +CC                      = ${LIBTOOL} --mode=compile @CC@
-+LD                      = ${LIBTOOL} --mode=link @CC@ -Wl,${RPATH_FLAG}${PREFIX}/lib
++LD                      = ${LIBTOOL} --mode=link @CC@ ${LDFLAGS}
  
  #----------------------------------------------------------------
  # The information below should be usable as is.  The configure
@@ -66,12 +57,12 @@ $NetBSD: patch-aa,v 1.7 2003/04/02 04:25:24 jschauma Exp $
  
  tclsh: ${TCLSH_OBJS} ${TCL_LIB_FILE}
 -	${CC} ${LDFLAGS} ${TCLSH_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
-+	${LD} ${LDFLAGS} ${TCLSH_OBJS} libtcl83.la ${LIBS} \
++	${LD} ${LDFLAGS} ${TCLSH_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
  		@TCL_LD_SEARCH_FLAGS@ -o tclsh
  
  tcltest: ${TCLTEST_OBJS} ${TCL_LIB_FILE} ${BUILD_DLTEST}
 -	${CC} ${LDFLAGS} ${TCLTEST_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
-+	${LD} ${LDFLAGS} ${TCLTEST_OBJS} libtcl83.la ${LIBS} \
++	${LD} ${LDFLAGS} ${TCLTEST_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
  		@TCL_LD_SEARCH_FLAGS@ -o tcltest
  
  # Note, in the target below TCL_LIBRARY needs to be set or else
