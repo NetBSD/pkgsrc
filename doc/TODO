@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.950 2003/10/15 02:25:38 taca Exp $
+$NetBSD: TODO,v 1.951 2003/10/17 12:07:44 salo Exp $
 
 Suggested new packages
 ======================
@@ -412,3 +412,6 @@ Suggested cleanups in pkgsrc
 
 	o Set USE_GCC_SHLIB in packages that link against any GCC library but
 	  are missing to define this variable.
+
+	o G/C pkgconfig buildlink2.mk includes and .pc files from all
+          buildlink2.mk files
