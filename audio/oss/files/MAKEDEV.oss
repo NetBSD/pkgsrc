@@ -1,6 +1,6 @@
 #!/bin/sh -
 #
-#	$NetBSD: MAKEDEV.oss,v 1.1.1.1 2002/10/02 20:33:31 jlam Exp $
+#	$NetBSD: MAKEDEV.oss,v 1.2 2002/10/03 08:09:05 jlam Exp $
 #
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
@@ -37,8 +37,12 @@ dsp)
 	makedev dsp10 dsp11 dsp12 dsp13 dsp14 dsp15
 	makedev dspW0 dspW1 dspW2 dspW3 dspW4 dspW5 dspW6 dspW7 dspW8 dspW9
 	makedev dspW10 dspW11 dspW12 dspW13 dspW14 dspW15
+	rm -f dsp
 	ln -fs dsp0 dsp
+	rm -f dspW
 	ln -fs dspW0 dspW
+	rm -f sound
+	ln -fs dsp sound
 	;;
 
 midi)

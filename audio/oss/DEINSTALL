@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.2 2002/10/02 21:06:53 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.3 2002/10/03 08:09:04 jlam Exp $
 
 OSSLIBDIR="@OSSLIBDIR@"
 SFILES="@SFILES@"
@@ -35,7 +35,7 @@ POST-DEINSTALL)
 	#
 	# Remove the OSS devices.
 	#
-	${RM} -f /dev/dsp* /dev/audio* /dev/mixer* /dev/midi*
+	${RM} -f /dev/dsp* /dev/sound /dev/audio* /dev/mixer* /dev/midi*
 	${RM} -f /dev/sequencer /dev/music /dev/sndstat
 
 	${CAT} << EOF
