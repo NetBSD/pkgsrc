@@ -1,31 +1,7 @@
-$NetBSD: patch-ai,v 1.5 2002/03/21 18:52:31 drochner Exp $
+$NetBSD: patch-ai,v 1.6 2002/10/25 08:59:05 skrll Exp $
 
 --- xmms/main.c.orig	Wed Feb 27 15:30:28 2002
 +++ xmms/main.c	Thu Mar 21 12:58:10 2002
-@@ -37,6 +37,23 @@
- #include "libxmms/dirbrowser.h"
- #include "xmms_mini.xpm"
- 
-+#ifdef __NetBSD__
-+#include <gtk/gtk.h>
-+#include <pthread.h>
-+
-+/*
-+ * NetBSD uses non-preemptive pth, so we yield the processor periodically
-+ */
-+
-+gint
-+pth_nbschedule (gpointer data)
-+{
-+	pthread_yield_np();
-+
-+	return TRUE;
-+}
-+#endif
-+
- GtkWidget *mainwin, *mainwin_url_window = NULL, *mainwin_dir_browser = NULL;
- GtkWidget *mainwin_jtt = NULL, *mainwin_jtf = NULL;
- GtkItemFactory *mainwin_options_menu, *mainwin_songname_menu, *mainwin_vis_menu;
 @@ -3377,7 +3394,7 @@
  {
  	gchar *filename;
@@ -44,13 +20,3 @@ $NetBSD: patch-ai,v 1.5 2002/03/21 18:52:31 drochner Exp $
  		if (cfg.use_realtime)
  		{
  			sparam.sched_priority = sched_get_priority_max(SCHED_RR);
-@@ -3501,6 +3518,9 @@
- 	/* enable_x11r5_session_management(argc, argv); */
- 	sm_init(argc, argv);
- 	GDK_THREADS_LEAVE();
-+#ifdef __NetBSD__
-+	gtk_timeout_add (150, pth_nbschedule, NULL);
-+#endif
- 	gtk_main();
- 
- 	return 0;
