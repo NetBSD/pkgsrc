@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.61 2001/10/30 13:53:15 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.62 2001/11/04 13:42:01 frueauf Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -126,7 +126,7 @@ OBJECT_FMT?=a.out
 .endif
 .endif
 
-.if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS") || (${OPSYS} == "Linux")
+.if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS") || (${OPSYS} == "Linux") || (${OPSYS} == "Darwin")
 SHAREOWN?=		${DOCOWN}
 SHAREGRP?=		${DOCGRP}
 SHAREMODE?=		${DOCMODE}
