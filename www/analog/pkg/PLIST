@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2001/06/25 06:16:07 tron Exp $
+@comment $NetBSD: PLIST,v 1.20 2001/07/08 20:01:13 tron Exp $
 bin/analog
 etc/analog.cfg.default
 @exec test -f %D/etc/analog.cfg || cp -p %F %D/etc/analog.cfg
@@ -145,7 +145,9 @@ lib/analog/lang/dk.lng
 lib/analog/lang/dka.lng
 lib/analog/lang/es.lng
 lib/analog/lang/esa.lng
+lib/analog/lang/esadesc.txt
 lib/analog/lang/esadom.tab
+lib/analog/lang/esdesc.txt
 lib/analog/lang/esdom.tab
 lib/analog/lang/esform.html
 lib/analog/lang/fi.lng
