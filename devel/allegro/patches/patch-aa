@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/05 05:02:42 xtraeme Exp $
+
+--- makefile.in.orig	Sun Jun 29 16:27:00 2003
++++ makefile.in	Wed Jul  2 13:50:49 2003
+@@ -59,7 +59,7 @@
+ 
+ INCLUDES =
+ DEFS = @DEFS@ -Iinclude -Iinclude/allegro -I$(srcdir)/include -I$(srcdir)/include/allegro -I.
+-CPPFLAGS = @CPPFLAGS@
++CPPFLAGS = @CPPFLAGS@ -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
+ LDFLAGS = @LDFLAGS@
+ PROG_LDFLAGS = @PROG_LDFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+@@ -82,7 +82,7 @@
+ COMPILE_S_PROGRAM = $(@COMPILE_S_PROGRAM@)
+ 
+ LIBALLEG = @LIBALLEG@
+-LINK_LIBALLEG = @LINK_LIBALLEG@
++LINK_LIBALLEG = @LINK_LIBALLEG@ ${LIBOSSAUDIO}
+ ALLEGRO_LIB_TARGETS = @ALLEGRO_LIB_TARGETS@
+ ALLEGRO_MODULE_TARGETS = @ALLEGRO_MODULE_TARGETS@
+ 
+@@ -417,17 +417,7 @@
+ 	fi
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@echo Installing allegro-config to $(DESTDIR)$(bindir)
+-	@$(INSTALL_PROGRAM) allegro-config $(DESTDIR)$(bindir)
+-	@if test -n "$(LIBDIR)/liball*-$(shared_version).so"; then \
+-		(cat /etc/ld.so.conf | grep $(libdir) >/dev/null || \
+-		 test $(libdir) = /lib || test $(libdir) = /usr/lib) \
+-		&& ($(LDCONFIG) $(libdir) || true) || (\
+-			echo "" ; \
+-			echo "Warning: shared library destination $(libdir) is not in ldd search path." ; \
+-			echo "Unless you add it to /etc/ld.so.conf, you must set LD_LIBRARY_PATH to include"; \
+-			echo "$(libdir) each time you want to run an Allegro program." ; \
+-		) ; \
+-	fi
++	@$(BSD_INSTALL_SCRIPT) allegro-config $(DESTDIR)$(bindir)
+ 	@for l in alleg alld allp; do \
+ 	  if test -f $(DESTDIR)$(libdir)/lib$${l}-$(shared_version).so -a \! -h $(DESTDIR)$(libdir)/lib$${l}.so.${shared_major_minor}; then \
+ 	    (cd $(DESTDIR)$(libdir); ln -s lib$${l}-$(shared_version).so lib$${l}.so.${shared_major_minor}); \
