@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.18 2001/11/26 00:55:45 hubertf Exp $
+# $NetBSD: build,v 1.19 2001/12/01 12:40:52 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -152,7 +152,10 @@ if [ "$1" != "restart" ]; then
 
 	echo "Generating package name <=> package directory cross reference file (this may take a while)..."
 	sh mk/bulk/printindex $BROKENFILE > $INDEXFILE
-
+	if [ $? != 0 ]; then
+		echo "ERROR while creating $INDEXFILE"
+		exit 1
+	fi
 fi
 
 echo "Starting actual build using the order specified in $ORDERFILE..."
