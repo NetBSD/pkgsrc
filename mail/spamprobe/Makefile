@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2003/12/01 12:16:14 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/05 22:11:15 hubertf Exp $
 
-DISTNAME=	spamprobe-0.8b
-PKGREVISION=	1
+DISTNAME=	spamprobe-0.9e
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=spamprobe/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	oherrala@ee.oulu.fi
 HOMEPAGE=	http://spamprobe.sourceforge.net/
 COMMENT=	Spam detector using Bayesian analysis of word counts
 
-USE_BUILDLINK2=	YES
+PKG_INSTALLATION_TYPES= overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+= --with-db=${BUILDLINK_PREFIX.db4}/include/db4
 
-.include "../../databases/db4/buildlink2.mk"
+.include "../../databases/db4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
