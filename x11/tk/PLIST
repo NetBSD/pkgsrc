@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:10:07 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/11/26 10:31:08 adam Exp $
 bin/wish
 bin/wish8.4
 include/tk.h
@@ -311,6 +311,7 @@ man/man3/Tk_HandleEvent.3
 man/man3/Tk_Height.3
 man/man3/Tk_IdToWindow.3
 man/man3/Tk_ImageChanged.3
+man/man3/Tk_Init.3
 man/man3/Tk_InitImageArgs.3
 man/man3/Tk_InitOptions.3
 man/man3/Tk_InitStubs.3
@@ -417,21 +418,16 @@ man/mann/bitmap.n
 man/mann/button.n
 man/mann/canvas.n
 man/mann/checkbutton.n
-man/mann/chooseColor.n
-man/mann/chooseDirectory.n
 man/mann/clipboard.n
 man/mann/colors.n
 man/mann/console.n
 man/mann/cursors.n
 man/mann/destroy.n
-man/mann/dialog.n
 man/mann/entry.n
 man/mann/event.n
 man/mann/focus.n
-man/mann/focusNext.n
 man/mann/font.n
 man/mann/frame.n
-man/mann/getOpenFile.n
 man/mann/grab.n
 man/mann/grid.n
 man/mann/image.n
@@ -442,20 +438,15 @@ man/mann/listbox.n
 man/mann/loadTk.n
 man/mann/lower.n
 man/mann/menu.n
-man/mann/menubar.n
 man/mann/menubutton.n
 man/mann/message.n
-man/mann/messageBox.n
 man/mann/option.n
-man/mann/optionMenu.n
 man/mann/options.n
 man/mann/pack-old.n
 man/mann/pack.n
-man/mann/palette.n
 man/mann/panedwindow.n
 man/mann/photo.n
 man/mann/place.n
-man/mann/popup.n
 man/mann/radiobutton.n
 man/mann/raise.n
 man/mann/scale.n
