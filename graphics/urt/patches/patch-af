@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 1999/02/10 15:10:47 frueauf Exp $
+
 --- cnv/xbmtorle.c~	Thu Apr 30 07:01:54 1992
 +++ cnv/xbmtorle.c	Wed Nov 25 23:56:38 1998
 @@ -206,7 +206,7 @@
