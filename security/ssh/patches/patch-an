@@ -1,0 +1,43 @@
+$NetBSD: patch-an,v 1.1 1999/03/04 09:25:44 tron Exp $
+
+--- gmp-2.0.2-ssh-2/gmp-impl.h.orig	Fri Mar 27 18:06:09 1998
++++ gmp-2.0.2-ssh-2/gmp-impl.h	Thu Mar  4 10:20:02 1999
+@@ -281,7 +281,6 @@
+ 
+ #if SIZEOF_INT >= 4 /* otherwise fails on 16-bit machines */
+ #if defined (__alpha)							\
+- || (defined (__arm__) && defined (__ARMWEL__))				\
+  || defined (__clipper__)						\
+  || defined (__cris)							\
+  || defined (__i386__)							\
+@@ -304,7 +303,7 @@
+ };
+ #else /* Need this as an #else since the tests aren't made exclusive.  */
+ #if defined (__a29k__) || defined (_AM29K)				\
+- || defined (__arm__)							\
++ || (defined (__arm__) && defined (__ARMEB__))				\
+  || (defined (__convex__) && defined (_IEEE_FLOAT_))			\
+  || defined (__i370__) || defined (__mvs__)				\
+  || defined (__mc68000__) || defined (__mc68020__) || defined (__NeXT__)\
+@@ -330,6 +329,21 @@
+     } s;
+   double d;
+ };
++#define _GMP_IEEE_FLOATS 1
++#else
++#if defined (__arm__)
++union ieee_double_extract
++{
++  struct
++    {
++      unsigned int manh:20;
++      unsigned int exp:11;
++      unsigned int sig:1;
++      unsigned int manl:32;
++    } s;
++  double d;
++};
++#endif
+ #endif
+ #endif
+ #endif /* SIZEOF_INT >= 4 */
