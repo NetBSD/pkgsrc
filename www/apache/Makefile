@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:34 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/05/09 15:24:45 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.45 1998/02/25 06:23:55 asami Exp
 #
 
 DISTNAME=       apache_1.3b5
 PKGNAME=        apache-1.3b5
-WRKROOT=	${WRKDIR}/apache_1.3b5
 WRKSRC=         ${WRKROOT}/src
 CATEGORIES=	www
 MASTER_SITES=   http://www.apache.org/dist/
 
 MAINTAINER=	cjs@netbsd.org
+
+WRKROOT=	${WRKDIR}/apache_1.3b5
 
 CONFIGURE_SCRIPT=Configure
 HAS_CONFIGURE=	YES
@@ -42,7 +43,7 @@ post-patch:
 	    ${MV} httpd.conf-dist.new httpd.conf-dist
 	@cd ${WRKSRC}/support && \
 	    ${SED} -e 's#/usr/local/apache/logs/#/var/run/#' \
-		-e 's#/usr/local/apache/src/#/usr/pkg/sbin/#' \
+		-e 's#/usr/local/apache/src/#${PREFIX}/sbin/#' \
 		< apachectl >apachectl.new && \
 	    ${MV} apachectl.new apachectl
 .if defined(VERS_ID)

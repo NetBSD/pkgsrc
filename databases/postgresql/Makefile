@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/22 14:22:40 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/05/09 15:24:42 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.2.1
@@ -8,7 +8,6 @@ MASTER_SITES=	ftp://ftp.PostgreSQL.org/pub/ \
 
 MAINTAINER=	packages@netbsd.org
 
-MAKE_ENV+=	USE_TCL=true
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 DEPENDS+=	tcl-8.0p2:../../lang/tcl80
 
@@ -21,6 +20,7 @@ PGUSER?=	pgsql
 USE_GMAKE=	YES
 USE_PERL5=	yes
 MAKEFILE=	GNUmakefile
+MAKE_ENV+=	USE_TCL=true
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS= --prefix=${PREFIX}/pgsql \
 		--enable-locale \
