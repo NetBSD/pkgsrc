@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.665 2003/06/29 07:37:55 hubertf Exp $
+$NetBSD: TODO,v 1.666 2003/06/29 08:51:23 jlam Exp $
 
 Suggested new packages
 ======================
@@ -82,7 +82,6 @@ Suggested package updates
 	o binutils-2.14
 	o bogofilter-0.11.2
 	o bzflag-1.7g0
-	o centericq-4.9.4
 	o cervisia-2.0
 	o clisp-2.30
 	o courier-0.42.2
