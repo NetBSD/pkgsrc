@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:15 agc Exp $
+# $NetBSD: Makefile,v 1.7 2003/02/25 03:34:57 jschauma Exp $
 # FreeBSD Id: ports/benchmarks/xengine/Makefile,v 1.9 2000/02/02 22:31:24 mharo Exp
 
 DISTNAME=	xengine-1.0.1
+PKGREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.lab.kdd.co.jp/Usenet/comp.sources.x/volume09/xengine/
 DISTFILES=	part01.z patch1.z
