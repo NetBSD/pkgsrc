@@ -1,0 +1,13 @@
+$NetBSD: patch-eq,v 1.1.2.2 2003/03/02 10:51:00 agc Exp $
+
+--- ../xmloff/source/text/makefile.mk.orig	2001-07-25 09:09:04.000000000 +0200
++++ ../xmloff/source/text/makefile.mk
+@@ -78,6 +78,8 @@ CDEFS += -DCONV_STAR_FONTS
+ # --- Files --------------------------------------------------------
+ 
+ 
++NOOPTFILES=	$(SLO)$/txtimp.obj 
++
+ SLOFILES =	\
+ 		$(SLO)$/txtdrope.obj \
+ 		$(SLO)$/txtdropi.obj \
