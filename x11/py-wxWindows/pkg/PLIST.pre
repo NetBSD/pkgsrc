@@ -1,7 +1,1 @@
-@comment $NetBSD: PLIST.pre,v 1.3 2000/10/26 16:44:59 tsarna Exp $
-lib/libwxPyHelpers.so.1.0.0
-lib/libwxPyHelpers.so.1.0
-lib/libwxPyHelpers.so.1
-lib/libwxPyHelpers.so
-lib/libwxPyHelpers.2.2.so.1
-lib/libwxPyHelpers.2.2.so
+@comment $NetBSD: PLIST.pre,v 1.4 2000/11/12 20:38:41 tsarna Exp $
