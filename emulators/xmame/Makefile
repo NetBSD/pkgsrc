@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2002/01/03 00:08:35 kristerw Exp $
+# $NetBSD: Makefile,v 1.61 2002/01/04 12:04:22 tron Exp $
 #
 
 DISTNAME=		xmame-0.56.2
@@ -19,6 +19,7 @@ USE_X11BASE=		YES
 USE_GMAKE=		YES
 MAKEFILE=		makefile.unix
 TARGET=			${PKGBASE}
+UNLIMIT_RESOURCES=	d
 
 .include "../../mk/bsd.prefs.mk"
 
