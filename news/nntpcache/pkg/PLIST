@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/02/23 00:38:05 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/02/20 06:54:01 proff Exp $
 etc/nntpcache/VERSION
 etc/nntpcache/innreport.conf-dist
 etc/nntpcache/innreport.pl
@@ -21,6 +21,9 @@ etc/rc.d/nntpcached.sh
 sbin/innreport.sh
 sbin/newshound
 sbin/nntpcached
+libexec/unixauth
+libexec/nntpcache-gdb.sh
+libexec/nntpcache.gdb
 man/man8/newshound.8
 man/man8/nntpcached.8
 @unexec rmdir etc/nntpcache 2>/dev/null || true
@@ -29,6 +32,8 @@ man/man8/nntpcached.8
 @exec chown -R news:news /var/spool/nntpcache
 @exec chmod 700 /var/spool/nntpcache
 @unexec rm -rf /var/spool/nntpcache
+share/doc/nntpcache/INSTALL
+share/doc/nntpcache/README
 share/doc/nntpcache/FAQ
 share/doc/nntpcache/FAQ.html
 share/doc/nntpcache/LICENSING
