@@ -1,7 +1,7 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/10/01 17:21:39 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/10/24 13:05:34 drochner Exp $
 
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_PACKAGES+=		pysoappy
-BUILDLINK_DEPENDS.pytk?=	${PYPKGPREFIX}-SOAPpy-*
-BUILDLINK_PKGSRCDIR.pytk?=	../../net/py-soappy
+BUILDLINK_DEPENDS.pysoappy?=	${PYPKGPREFIX}-SOAPpy-*
+BUILDLINK_PKGSRCDIR.pysoappy?=	../../net/py-soappy
