@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:57:03 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/23 18:31:27 danw Exp $
 
 DISTNAME=	xscribble
 PKGNAME=	xscribble-20000616
@@ -12,6 +12,13 @@ COMMENT=	Handwriting recognition (like graffiti)
 
 USE_IMAKE=	YES
 NO_INSTALL_MANPAGES=	YES
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+SYS_LIBRARIES=	-lmx
+MAKE_ENV+=	SYS_LIBRARIES="${SYS_LIBRARIES}"
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xscribble
