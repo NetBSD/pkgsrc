@@ -1,5 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/01/24 13:51:14 grant Exp $
-#
+# $NetBSD: Makefile.common,v 1.9 2004/02/01 14:05:47 jlam Exp $
 
 GCC_VERSION=	3.3.2
 DISTNAME=	gcc-${GCC_VERSION}
@@ -12,15 +11,15 @@ HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 
-USE_BUILDLINK2=		YES
-USE_PKGINSTALL=		YES
+USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
-HAS_CONFIGURE=		YES
+HAS_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
 # Make location overridable, to allow ping-pong bootstraps.
-GCC3_DEFAULT_SUBPREFIX=	gcc3
+GCC3_DEFAULT_SUBPREFIX=		gcc3
 GCC3_INSTALLTO_SUBPREFIX?=	${GCC3_DEFAULT_SUBPREFIX}
 .if ${GCC3_INSTALLTO_SUBPREFIX} != ${GCC3_DEFAULT_SUBPREFIX}
 GCC3_PKGMODIF=		_${GCC3_INSTALLTO_SUBPREFIX}
@@ -43,9 +42,7 @@ INFO_DIR=	${GCC_SUBPREFIX}/info
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/pthread.h)
 GCC_PLATFORM=		${MACHINE_GNU_ARCH}--netbsdelf2.0
 PTHREAD_OPTS+=		require native
-.include "../../mk/pthread.buildlink2.mk"
-CPPFLAGS+=	-I${BUILDLINK_DIR}/include
-CFLAGS+=	-I${BUILDLINK_DIR}/include
+.  include "../../mk/pthread.buildlink3.mk"
 .else
 GCC_PLATFORM=		${MACHINE_GNU_PLATFORM}
 .endif
@@ -53,31 +50,23 @@ CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 PLIST_SUBST+=		GCC_PLATFORM=${GCC_PLATFORM}
 
 .if ${OPSYS} == "NetBSD" && !defined(USE_BINUTILS)
-AS_VERSION!=		${AS} --version | ${AWK} '{				\
-			    split($$3, v, /[.]/);				\
-			    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
-			    exit;						\
-			}'
-USE_BINUTILS!=		${TEST} ${AS_VERSION} -lt 02130201 && echo YES || echo NO
+AS_VERSION!=	${AS} --version | ${AWK} '{				\
+		    split($$3, v, /[.]/);				\
+		    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
+		    exit;						\
+		}'
+USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && echo YES || echo NO
 .endif
 
-.if defined(USE_BINUTILS) && ${USE_BINUTILS} == "YES"
+.if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
 DEPENDS=		binutils>=2.13.2.1:../../devel/binutils
 CONFIGURE_ARGS+=	--with-as=${PREFIX}/${MACHINE_GNU_PLATFORM}/bin/as
-#.  include "../../devel/binutils/buildlink2.mk"
 .endif
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--enable-shared
 .else
-.  if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--enable-shared
-.  else
 CONFIGURE_ARGS+=	--disable-shared
-.  endif
-.  if ${CC:M*gcc*} == ""
-ALL_TARGET=		bootstrap
-.  endif
 .endif
 
 GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${GCC_VERSION}
