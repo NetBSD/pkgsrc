@@ -1,13 +1,21 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 11:14:27 agc Exp $
+$NetBSD: patch-ad,v 1.3 1998/12/06 12:42:00 tron Exp $
 
---- src/redirect.c.dist	Wed Apr 16 07:26:02 1997
-+++ src/redirect.c	Sun Jul  6 01:01:21 1997
-@@ -154,7 +154,7 @@
-     fclose(debug_log);
-     close(fd);
-     close(cfd);
--    execlp(command, "(redirector)", NULL);
-+    execlp(command, command, NULL);
-     debug(50, 0, "redirect_create_redirector: %s: %s\n", command, xstrerror());
-     _exit(1);
-     return 0;
+--- errors/Makefile.in.orig	Fri Apr 24 01:26:39 1998
++++ errors/Makefile.in	Thu Oct  1 16:25:32 1998
+@@ -4,6 +4,7 @@
+ exec_prefix	= @exec_prefix@
+ top_srcdir	= @top_srcdir@
+ bindir		= @bindir@
++datadir		= @datadir@
+ libexecdir      = @libexecdir@
+ sysconfdir	= @sysconfdir@
+ localstatedir   = @localstatedir@
+@@ -15,7 +16,7 @@
+ 
+ INSTALL         	= @INSTALL@
+ INSTALL_FILE    	= @INSTALL_DATA@
+-DEFAULT_ERROR_DIR	= $(sysconfdir)/errors
++DEFAULT_ERROR_DIR	= $(datadir)/squid/errors
+ 
+ LANGUAGE		= @ERR_LANGUAGE@
+ 

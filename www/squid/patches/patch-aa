@@ -1,49 +1,54 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:14:26 agc Exp $
+$NetBSD: patch-aa,v 1.4 1998/12/06 12:42:00 tron Exp $
 
---- src/Makefile.in.orig	Fri Oct 24 19:57:11 1997
-+++ src/Makefile.in	Sun May 24 12:01:18 1998
-@@ -5,19 +5,19 @@
- #
- #  Uncomment and customize the following to suit your needs:
- #
--HOST_OPT	= # -DCACHEMGR_HOSTNAME="getfullhostname()"
--AUTH_OPT	= # -DUSE_PROXY_AUTH=1
--LOG_HDRS_OPT	= # -DLOG_FULL_HEADERS=1
--ICMP_OPT	= # -DUSE_ICMP=1
--DELAY_HACK      = # -DDELAY_HACK=1
--USERAGENT_OPT	= # -DUSE_USERAGENT_LOG=1
--KILL_PARENT_OPT	= # -DKILL_PARENT_OPT
--USE_POLL_OPT    = # -DUSE_POLL
-+#HOST_OPT	= # -DCACHEMGR_HOSTNAME="getfullhostname()"
-+#AUTH_OPT	= # -DUSE_PROXY_AUTH=1
-+#LOG_HDRS_OPT	= # -DLOG_FULL_HEADERS=1
-+#ICMP_OPT	= # -DUSE_ICMP=1
-+#DELAY_HACK      = # -DDELAY_HACK=1
-+#USERAGENT_OPT	= # -DUSE_USERAGENT_LOG=1
-+#KILL_PARENT_OPT	= # -DKILL_PARENT_OPT
-+#USE_POLL_OPT    = # -DUSE_POLL
- # do NOT define both USE_SPLAY_TREE and USE_BIN_TREE at the same time!
--USE_SPLAY_TREE  = # -DUSE_SPLAY_TREE
--USE_BIN_TREE    = # -DUSE_BIN_TREE
--RELOAD_INTO_IMS	= # -DRELOAD_INTO_IMS
--UNDERSCORES_OPT = # -DALLOW_HOSTNAME_UNDERSCORES
-+#USE_SPLAY_TREE  = # -DUSE_SPLAY_TREE
-+#USE_BIN_TREE    = # -DUSE_BIN_TREE
-+#RELOAD_INTO_IMS	= # -DRELOAD_INTO_IMS
-+#UNDERSCORES_OPT = # -DALLOW_HOSTNAME_UNDERSCORES
+--- src/Makefile.in.orig	Mon Aug 17 19:27:15 1998
++++ src/Makefile.in	Thu Oct  1 17:00:53 1998
+@@ -12,6 +12,8 @@
+ cgi_suffix	= @cgi_suffix@
+ top_srcdir	= @top_srcdir@
+ bindir		= @bindir@
++sbindir		= @sbindir@
++datadir		= @datadir@
+ libexecdir      = @libexecdir@
+ sysconfdir	= @sysconfdir@
+ localstatedir   = @localstatedir@
+@@ -29,18 +31,18 @@
  
- DEFINES         = $(HOST_OPT) $(AUTH_OPT) $(LOG_HDRS_OPT) \
-                   $(ICMP_OPT) $(DELAY_HACK) $(USERAGENT_OPT) \
-@@ -41,7 +41,7 @@
+ DEFAULT_PREFIX		= $(prefix)
+ DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
+-DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf
++DEFAULT_MIME_TABLE	= $(datadir)/squid/mime.conf
+ DEFAULT_DNSSERVER       = $(libexecdir)/$(DNSSERVER_EXE)
  DEFAULT_CACHE_LOG       = $(localstatedir)/logs/cache.log
  DEFAULT_ACCESS_LOG      = $(localstatedir)/logs/access.log
  DEFAULT_STORE_LOG       = $(localstatedir)/logs/store.log
 -DEFAULT_PID_FILE        = $(localstatedir)/logs/squid.pid
 +DEFAULT_PID_FILE        = /var/run/squid.pid
  DEFAULT_SWAP_DIR        = $(localstatedir)/cache
- DEFAULT_PINGER		= $(libexecdir)/pinger
- DEFAULT_UNLINKD		= $(libexecdir)/unlinkd
-@@ -199,14 +199,14 @@
+ DEFAULT_PINGER		= $(libexecdir)/$(PINGER_EXE)
+ DEFAULT_UNLINKD		= $(libexecdir)/$(UNLINKD_EXE)
+-DEFAULT_ICON_DIR	= $(sysconfdir)/icons
+-DEFAULT_ERROR_DIR	= $(sysconfdir)/errors
+-DEFAULT_MIB_PATH	= $(sysconfdir)/mib.txt
++DEFAULT_ICON_DIR	= $(datadir)/squid/icons
++DEFAULT_ERROR_DIR	= $(datadir)/squid/errors
++DEFAULT_MIB_PATH	= $(datadir)/squid/mib.txt
+ 
+ CC		= @CC@
+ MAKEDEPEND	= @MAKEDEPEND@
+@@ -264,9 +266,9 @@
+ 		echo "mkdir $(exec_prefix)"; \
+ 		mkdir $(exec_prefix); \
+ 	fi
+-	-@if test ! -d $(bindir); then \
+-		echo "mkdir $(bindir)"; \
+-		mkdir $(bindir); \
++	-@if test ! -d $(sbindir); then \
++		echo "mkdir $(sbindir)"; \
++		mkdir $(sbindir); \
+ 	fi
+ 	-@if test ! -d $(libexecdir); then \
+ 		echo "mkdir $(libexecdir)"; \
+@@ -276,28 +278,28 @@
  		echo "mkdir $(sysconfdir)"; \
  		mkdir $(sysconfdir); \
  	fi
@@ -66,3 +71,59 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 11:14:26 agc Exp $
  
  # Michael Lupp <mike@nemesis.saar.de> wants to know about additions
  # to the install target.
+ install: all install-mkdirs
+ 	@for f in $(PROGS); do \
+-		if test -f $(bindir)/$$f; then \
+-			echo $(MV) $(bindir)/$$f $(bindir)/-$$f; \
+-			$(MV) $(bindir)/$$f $(bindir)/-$$f; \
++		if test -f $(sbindir)/$$f; then \
++			echo $(MV) $(sbindir)/$$f $(sbindir)/-$$f; \
++			$(MV) $(sbindir)/$$f $(sbindir)/-$$f; \
+ 		fi; \
+-		echo $(INSTALL_BIN) $$f $(bindir); \
+-		$(INSTALL_BIN) $$f $(bindir); \
+-		if test -f $(bindir)/-$$f; then \
+-			echo $(RM) -f $(bindir)/-$$f; \
+-			$(RM) -f $(bindir)/-$$f; \
++		echo $(INSTALL_BIN) $$f $(sbindir); \
++		$(INSTALL_BIN) $$f $(sbindir); \
++		if test -f $(sbindir)/-$$f; then \
++			echo $(RM) -f $(sbindir)/-$$f; \
++			$(RM) -f $(sbindir)/-$$f; \
+ 		fi; \
+ 	done
+ 	@for f in $(UTILS); do \
+@@ -325,20 +327,20 @@
+ 		fi; \
+ 	done
+ 	$(INSTALL_FILE) $(srcdir)/mib.txt $(DEFAULT_MIB_PATH)
+-	$(INSTALL_FILE) squid.conf $(sysconfdir)/squid.conf.default
+-	@if test -f $(sysconfdir)/squid.conf ; then \
+-		echo "$@ will not overwrite existing $(sysconfdir)/squid.conf" ; \
+-	else \
+-		echo "$(INSTALL_FILE) squid.conf $(sysconfdir)"; \
+-		$(INSTALL_FILE) squid.conf $(sysconfdir); \
+-	fi
+-
+-	$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir)/mime.conf.default
+-	@if test -f $(sysconfdir)/mime.conf ; then \
+-		echo "$@ will not overwrite existing $(sysconfdir)/mime.conf" ; \
++	$(INSTALL_FILE) squid.conf $(datadir)/squid/squid.conf.default
++#	@if test -f $(DEFAULT_CONFIG_FILE) ; then \
++#		echo "$@ will not overwrite existing $(DEFAULT_CONFIG_FILE)" ; \
++#	else \
++#		echo "$(INSTALL_FILE) squid.conf $(DEFAULT_CONFIG_FILE)"; \
++#		$(INSTALL_FILE) squid.conf $(DEFAULT_CONFIG_FILE); \
++#	fi
++
++	$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE).default
++	@if test -f $(DEFAULT_MIME_TABLE) ; then \
++		echo "$@ will not overwrite existing $(DEFAULT_MIME_TABLE)" ; \
+ 	else \
+-		echo "$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir)"; \
+-		$(INSTALL_FILE) $(srcdir)/mime.conf $(sysconfdir); \
++		echo "$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE)"; \
++		$(INSTALL_FILE) $(srcdir)/mime.conf $(DEFAULT_MIME_TABLE); \
+ 	fi
+ 
+ install-pinger:

@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 1998/08/07 11:14:28 agc Exp $
+# $NetBSD: INSTALL,v 1.3 1998/12/06 12:42:01 tron Exp $
 #
 
 PKGNAME=$1
+DEFCONF=$2
 
-case $2 in
+case $3 in
     PRE-INSTALL)
 	;;
     POST-INSTALL)
@@ -16,13 +17,14 @@ case $2 in
 	echo "      configuring your WWW Navigator (Netscape, Mosaic,...)"
 	echo "      to use it as a proxy server."
 	echo ""
-	echo "    o copy \"squid.conf.default\" to \"squid.conf\" and edit it"
-	echo "      as required. You should pay attention to the ACTUAL"
-	echo "      locations of the cache \"spool\" logfiles and pidfile."
+	echo "    o copy \"${DEFCONF}\" to \"/etc/squid.conf\""
+	echo "      and edit it as required. You should pay attention to"
+	echo "      the ACTUAL locations of the cache \"spool\" logfiles"
+	echo "      and pidfile."
 	echo ""
 	;;
     *)
-	echo "Unexpected Argument $2!!!"
+	echo "Unexpected Argument $3!!!"
 	exit 1
 	;;
 esac
