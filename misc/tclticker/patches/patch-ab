@@ -1,13 +1,20 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/12/21 12:47:30 agc Exp $
-
---- mailquote	1999/12/21 12:37:01	1.1
-+++ mailquote	1999/12/21 12:37:52
+$NetBSD: patch-ab,v 1.2 2000/08/31 01:13:59 jwise Exp $
+--- mailquote.orig	Mon Dec 20 15:10:24 1999
++++ mailquote	Wed Aug 30 21:00:30 2000
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ # restart using wish \
+-  exec tclsh8.0 "$0" ${1+"$@"}
++  exec tclsh "$0" ${1+"$@"}
+ 
+ # mailquote
+ # copyright 1999 tom poindexter <tpoindex@nyx.net>
 @@ -46,6 +46,9 @@
  # permission to use and distribute the software in accordance with the
  # terms specified in this license. 
   
 +# set this explicitly
-+set env(TCLTICKER_LIB) "@PREFIX@/share/tclticker"
++set env(TCLTICKER_LIB) "/usr/pkg/share/tclticker"
 +
  
  if {! [info exists env(TCLTICKER_LIB)]} {
