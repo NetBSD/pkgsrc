@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.12 2003/09/23 07:13:51 grant Exp $	*/
+/*	$NetBSD: perform.c,v 1.13 2003/09/23 13:22:40 grant Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.12 2003/09/23 07:13:51 grant Exp $");
+__RCSID("$NetBSD: perform.c,v 1.13 2003/09/23 13:22:40 grant Exp $");
 #endif
 #endif
 
@@ -124,7 +124,7 @@ pkg_do(char *pkg)
 					goto bail;
 				}
 				Home = make_playpen(PlayPen, PlayPenSize, sb.st_size / 2);
-				if (unpack(fname, "+*")) {
+				if (unpack(fname, "+*", NULL)) {
 					warnx("error during unpacking, no info for '%s' available", pkg);
 					code = 1;
 					goto bail;
@@ -179,7 +179,7 @@ pkg_do(char *pkg)
 		plist.head = plist.tail = NULL;
 		fp = fopen(CONTENTS_FNAME, "r");
 		if (!fp) {
-			warnx("unable to open %s file", CONTENTS_FNAME);
+			warn("unable to open %s file", CONTENTS_FNAME);
 			code = 1;
 			goto bail;
 		}

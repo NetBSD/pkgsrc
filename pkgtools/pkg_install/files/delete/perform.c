@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.8 2003/09/23 07:13:50 grant Exp $	*/
+/*	$NetBSD: perform.c,v 1.9 2003/09/23 13:22:39 grant Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.8 2003/09/23 07:13:50 grant Exp $");
+__RCSID("$NetBSD: perform.c,v 1.9 2003/09/23 13:22:39 grant Exp $");
 #endif
 #endif
 
@@ -321,16 +321,15 @@ require_delete(char *home, int tryall)
 		if (Fake)
 			rv = 0;
 		else
-			rv = vsystem("%s -K %s %s %s %s %s %s %s %s %s", ProgramPath,
-			    _pkgdb_getPKGDB_DIR(),
-			    Prefix ? "-p" : "",
-			    Prefix ? Prefix : "",
-			    Verbose ? "-v" : "",
-			    (Force > 1) ? "-f -f" : (Force == 1) ? "-f" : "",
-			    NoDeInstall ? "-D" : "",
-			    CleanDirs ? "-d" : "",
-			    Fake ? "-n" : "",
-			    rm_installed?installed:lpp->lp_name);
+			rv = fexec_skipempty(ProgramPath, "-K",
+					     _pkgdb_getPKGDB_DIR(),
+					     Prefix ? "-p" : "", Prefix ? Prefix : "",
+					     Verbose ? "-v" : "",
+					     (Force > 1) ? "-f -f" : (Force == 1) ? "-f" : "",
+					     NoDeInstall ? "-D" : "",
+					     CleanDirs ? "-d" : "",
+					     Fake ? "-n" : "",
+					     rm_installed ? installed : lpp->lp_name, NULL);
 
 		/* check for delete failure */
 		if (rv && !tryall) {
@@ -710,9 +709,9 @@ pkg_do(char *pkg)
 			if (Verbose) {
 				printf("Deleting package %s instance from `%s' view\n", pkg, view);
 			}
-			if (vsystem("%s -K %s %s%s", ProgramPath, view,
-					(Force > 1) ? "-f -f " : (Force == 1) ? "-f " : "",
-					pkg) != 0) {
+			if (fexec_skipempty(ProgramPath, "-K", view,
+					    (Force > 1) ? "-f -f " : (Force == 1) ? "-f " : "",
+					    pkg, NULL) != 0) {
 				warnx("unable to delete package %s from view %s", pkg, view);
 				(void) fclose(fp);
 				return 1;
@@ -741,7 +740,7 @@ pkg_do(char *pkg)
 		if (Verbose)
 			printf("Executing 'require' script.\n");
 		(void) fexec(CHMOD_CMD, "+x", REQUIRE_FNAME, NULL);	/* be sure */
-		if (vsystem("./%s %s DEINSTALL", REQUIRE_FNAME, pkg)) {
+		if (fexec("./" REQUIRE_FNAME, pkg, "DEINSTALL", NULL)) {
 			warnx("package %s fails requirements %s", pkg,
 			    Force ? "" : "- not deleted");
 			if (!Force)
@@ -756,8 +755,8 @@ pkg_do(char *pkg)
 		if (Fake) {
 			printf("Would execute view de-install script at this point (arg: VIEW-DEINSTALL).\n");
 		} else {
-			vsystem("%s +x %s", CHMOD_CMD, DEINSTALL_FNAME);	/* make sure */
-			if (vsystem("./%s %s VIEW-DEINSTALL", DEINSTALL_FNAME, pkg)) {
+			(void) fexec(CHMOD_CMD, "+x", DEINSTALL_FNAME, NULL);	/* make sure */
+			if (fexec("./" DEINSTALL_FNAME, pkg, "VIEW-DEINSTALL", NULL)) {
 				warnx("view deinstall script returned error status");
 				if (!Force) {
 					return 1;
@@ -769,8 +768,8 @@ pkg_do(char *pkg)
 		if (Fake)
 			printf("Would execute de-install script at this point (arg: DEINSTALL).\n");
 		else {
-			(void ) fexec(CHMOD_CMD, "+x", DEINSTALL_FNAME, NULL);	/* make sure */
-			if (vsystem("./%s %s DEINSTALL", DEINSTALL_FNAME, pkg)) {
+			(void) fexec(CHMOD_CMD, "+x", DEINSTALL_FNAME, NULL);	/* make sure */
+			if (fexec("./" DEINSTALL_FNAME, pkg, "DEINSTALL", NULL)) {
 				warnx("deinstall script returned error status");
 				if (!Force)
 					return 1;
@@ -819,8 +818,8 @@ pkg_do(char *pkg)
 		if (Fake)
 			printf("Would execute post-de-install script at this point (arg: POST-DEINSTALL).\n");
 		else {
-			(void ) fexec(CHMOD_CMD, "+x", DEINSTALL_FNAME, NULL);	/* make sure */
-			if (vsystem("./%s %s POST-DEINSTALL", DEINSTALL_FNAME, pkg)) {
+			(void) fexec(CHMOD_CMD, "+x", DEINSTALL_FNAME, NULL);	/* make sure */
+			if (fexec("./" DEINSTALL_FNAME, pkg, "POST-DEINSTALL", NULL)) {
 				warnx("post-deinstall script returned error status");
 				if (!Force)
 					return 1;
