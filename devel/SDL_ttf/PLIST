@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/05 20:14:05 skrll Exp $
 bin/showfont
 include/SDL/SDL_ttf.h
-lib/libSDL_ttf-2.0.so
 lib/libSDL_ttf-2.0.so.0
 lib/libSDL_ttf-2.0.so.0.3
 lib/libSDL_ttf.a

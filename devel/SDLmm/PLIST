@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/07 13:52:21 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/05 20:14:05 skrll Exp $
 bin/sdlmm-config
 include/SDLmm/sdlmm.h
 include/SDLmm/sdlmm_audio.h
@@ -18,7 +18,6 @@ include/SDLmm/sdlmm_srect.h
 include/SDLmm/sdlmm_surface.h
 include/SDLmm/sdlmm_timer.h
 include/SDLmm/sdlmm_videoinfo.h
-lib/libSDLmm-0.1.so
 lib/libSDLmm-0.1.so.8
 lib/libSDLmm-0.1.so.8.0
 lib/libSDLmm.a
