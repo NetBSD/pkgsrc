@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2000/02/02 04:05:07 wiz Exp $
+
+--- common/docs/Makefile.in.orig	Tue Jul  6 03:08:46 1999
++++ common/docs/Makefile.in	Wed Feb  2 04:18:12 2000
+@@ -83,7 +83,7 @@
+ VERSION = @VERSION@
+ XAWLIB = @XAWLIB@
+ 
+-docdir = $(prefix)/doc/siag/common
++docdir = $(prefix)/share/doc/siag/common
+ 
+ doc_DATA = COPYING COPYING.LIB Copyright \
+ 	credits.html embedding.html form.html interpreters.html \

@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2000/02/02 04:05:15 wiz Exp $
+
+--- siod/docs/Makefile.in.orig	Tue Jul  6 03:08:41 1999
++++ siod/docs/Makefile.in	Wed Feb  2 04:24:17 2000
+@@ -83,7 +83,7 @@
+ VERSION = @VERSION@
+ XAWLIB = @XAWLIB@
+ 
+-docdir = $(prefix)/doc/siag/siod
++docdir = $(prefix)/share/doc/siag/siod
+ 
+ doc_DATA = siod.html
+ 
