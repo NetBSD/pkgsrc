@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2001/09/27 23:18:35 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/10/08 15:59:52 seb Exp $
 #
 
-DISTNAME=		pkgdiff-0.101
+DISTNAME=		pkgdiff-0.102
 CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -24,10 +24,13 @@ MAKE_ENV=	PKGSRCDIR=${PKGSRCDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
+DEPENDS+=	diffutils-[0-9]*:../../devel/diffutils
 BUILD_DEPENDS+=	groff-[0-9]*:../../textproc/groff
 NROFF=		gnroff
+DIFF?=		gdiff
 .else
 NROFF=		nroff
+DIFF?=		diff
 .endif
 
 do-build:
@@ -37,7 +40,9 @@ do-build:
 		< ${FILESDIR}/${FILE}.pl 		\
 		> ${WRKSRC}/${FILE}
 .endfor
-	${CP} ${FILESDIR}/pkgdiff ${WRKSRC}
+	${SED} -e 's|@DIFF@|${DIFF}|g'			\
+		< ${FILESDIR}/pkgdiff			\
+		> ${WRKSRC}/pkgdiff
 	${CP} ${FILESDIR}/pkgvi ${WRKSRC}
 .for FILE in mkpatches patchdiff pkgdiff pkgvi
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
