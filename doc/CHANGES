@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.567 2002/11/21 10:10:59 grant Exp $
+$NetBSD: CHANGES,v 1.568 2002/11/21 11:06:35 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3676,3 +3676,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated samba to 2.2.7 [martti 2002-11-21]
 	Updated bpalogin to 2.0.1nb1 [grant 2002-11-21]
 	Updated icewm to 1.2.0nb1 [grant 2002-11-21]
+	Updated wget to 1.7nb2 [grant 2002-11-21]
