@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/10/03 00:13:13 tv Exp $
+# $NetBSD: Makefile,v 1.27 2004/12/03 13:37:48 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
@@ -12,8 +12,6 @@ EXTRACT_SUFX=   .tar.Z
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://bwrc.eecs.berkeley.edu/Classes/IcBook/SPICE/
 COMMENT=	General-purpose circuit simulation program
-
-CONFLICTS=	ng-spice-[0-9]*
 
 BUILDLINK_DEPENDS.readline=	readline>=4.0
 
