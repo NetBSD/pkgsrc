@@ -1,10 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sqwebmaild.sh,v 1.2 2004/02/24 01:18:52 jlam Exp $
+# $NetBSD: sqwebmaild.sh,v 1.3 2004/02/24 01:20:54 jlam Exp $
 #
 # Courier SqWebMail services daemon
 #
-# PROVIDE: sqwebmail
+# PROVIDE: sqwebmaild
 # REQUIRE: authdaemond
 
 if [ -f /etc/rc.subr ]; then
