@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:29:27 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/18 13:12:47 minoura Exp $
 
 DISTNAME=	apel-10.4
 CATEGORIES=	devel
@@ -11,13 +11,13 @@ COMMENT=	Portable Emacs Library
 #CONFLICTS+=	apel-*
 #CONFLICTS+=	xemacs-apel-*
 
-.include "../../mk/emacs.mk"
-
 MAKE_FLAGS+=	EMACS=${EMACS_FLAVOR}
 MAKE_FLAGS+=	LISPDIR=${EMACS_LISPPREFIX}
 MAKE_FLAGS+=	VERSION_SPECIFIC_LISPDIR=${EMACS_LISPPREFIX}
 
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20 xemacs211 xemacs215
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20 xemacs214 xemacs215
+
+.include "../../mk/emacs.mk"
 
 .if ${EMACS_FLAVOR} == "emacs"
 ALL_TARGET=	elc
