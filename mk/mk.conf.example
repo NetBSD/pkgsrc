@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.89 1999/10/21 18:42:18 agc Exp $
+# $NetBSD: mk.conf.example,v 1.90 1999/10/22 14:43:59 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -261,6 +261,39 @@
 #ISPELL_LANG=			# Used by ispell to specify national dictionary
                                 # Possible: not defined, british
                                 # Default: not defined
+
+#JB_PACKAGE= test		# Used by jitterbug to determine the type of
+                                # package to be installed.
+                                # Possible: test, production
+                                # Default: test
+
+#JB_USER=jitter			# Used by jitterbug package for username
+                                # Possible: any valid username
+                                # Default: jitter
+
+#JB_USERID=509			# Used by jitterbug package for uid of
+                                # JB_USER.
+                                # Possible: any valid uid
+                                # Default: 509
+
+#JB_GROUP=jitter		# Used by jitterbug package for groupname
+                                # Possible: any valid groupname
+                                # Default: jitter
+
+#JB_GROUPID=509			# Used by jitterbug package for gid of
+                                # JB_USER.
+                                # Possible: any valid gid
+                                # Default: 509
+
+#JB_FQHOSTNAME=			# Used by jitterbug package to include the
+                                # fully-qualified domain name of the host.
+                                # Possible: defined, not defined
+                                # default: not defined
+
+#JB_LOCALMAIL=			# Used by jitterbug package as the mail
+                                # alias to receive mail from jitterbug 
+                                # Possible: any valid mail alias
+                                # default: none
 
 #KERBEROS=			# Used in many packages to specify use of
                                 # a Kerberos (or compatible) subsystem.
