@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/19 18:50:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/18 07:21:49 snj Exp $
 #
 
 DISTNAME=	waste-source
@@ -24,7 +24,7 @@ NO_BIN_ON_FTP=          ${RESTRICTED}
 NO_SRC_ON_CDROM=        ${RESTRICTED}
 NO_BIN_ON_CDROM=        ${RESTRICTED}
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 MAKE_ENV+=	LDFLAGS="-L${BUILDLINK_PREFIX.pthread}/lib -Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.pthread}/lib"
 
@@ -33,5 +33,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/waste
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/waste
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
