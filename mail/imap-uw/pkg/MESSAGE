@@ -10,6 +10,6 @@ Add the following to /etc/inetd.conf:
  pop3    stream  tcp     nowait  root    @PREFIX@/bin/pop3d   pop3d
 
 To put the changes into effect, reboot the machine or "kill -HUP"
-your identd.
+your inetd.
 
 ===========================================================================
