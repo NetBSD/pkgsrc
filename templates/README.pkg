@@ -1,31 +1,43 @@
-<!-- $NetBSD: README.pkg,v 1.2 1997/11/21 15:56:51 agc Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.3 1997/11/21 17:41:50 agc Exp $ -->
 <html>
 <title> The NetBSD Packages Collection (%%PORT%%)</title>
 <head><h1> The NetBSD Packages Collection ("%%PORT%%")</h1> </head> <hr>
 <body>
 
-<p>You are now in the directory for the port "%%PORT%%" (package name "%%PKG%%").
+<p>You are now in the directory for the
+"%%PORT%%"
+package. It can be manipulated using the packaging tools,
+working on the
+"%%PKG%%"
+package.</p>
 
-<p>This is the one-line description for this port:
+<p>A brief description of the package follows:</p>
 
-<p><hr><p>
+<p>
+<hr>
 %%COMMENT%%
-<p><hr>
+<hr>
+</p>
 
 <p>Please read the file "<a href="pkg/DESCR">pkg/DESCR</a>" for a
 longer description.
+</p>
 
 <p>Go to the <a href="../../README.html">top of the packages tree</a> for
 a summary on how to use the packages collection.
+</p>
 
 <p>
 %%BUILD_DEPENDS%%
+</p>
 <p>
 %%RUN_DEPENDS%%
+</p>
 
-<p><hr><p>
+<p><hr></p>
 <a href="../README.html"> Go up one level</a>
 |
 <a href="../../README.html"> Go to top of packages tree</a>
+</p>
 </body>
 </html>
