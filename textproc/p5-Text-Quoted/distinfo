@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/29 23:57:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/12/09 18:06:21 wiz Exp $
 
-SHA1 (Text-Quoted-1.5.tar.gz) = a7bd13813bb580c084faca8425edd599f2d5a36b
-Size (Text-Quoted-1.5.tar.gz) = 6100 bytes
+SHA1 (Text-Quoted-1.8.tar.gz) = ad778701b394336502a91f3c3f3adde940935c89
+Size (Text-Quoted-1.8.tar.gz) = 16800 bytes
