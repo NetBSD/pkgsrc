@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.2 1998/09/22 06:11:37 garbled Exp $
+# $NetBSD: Makefile,v 1.3 1998/11/13 01:15:16 frueauf Exp $
 
 DISTNAME=	clispsrc-1998-08-29
 PKGNAME=	clisp-19980829
+WRKSRC=		${WRKDIR}/clisp-1998-08-29
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp2.cons.org/pub/lisp/clisp/snapshots/
-
-NOT_FOR_ARCHS=	alpha	# severe LP64 problems
 
 MAINTAINER=	mjl@emsi.priv.at
 HOMEPAGE=	http://clisp.cons.org/~haible/clisp.html
 
+NOT_FOR_ARCHS=	alpha	# severe LP64 problems
+
 GNU_CONFIGURE=	YES
-WRKSRC=		${WRKDIR}/clisp-1998-08-29
 
 post-configure:
 	( cd ${WRKSRC}/src; \
