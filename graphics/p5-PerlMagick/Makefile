@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2002/12/29 21:33:17 tron Exp $
+# $NetBSD: Makefile,v 1.24 2003/01/03 23:04:39 wiz Exp $
 
-DISTNAME=		ImageMagick-5.5.1-6
-PKGNAME=		p5-PerlMagick-5.5.1.6
-PKGREVISION=		2
+DISTNAME=		ImageMagick-${IM_MAJOR_VER}-${IM_MINOR_VER}
+PKGNAME=		p5-PerlMagick-${IM_MAJOR_VER}.${IM_MINOR_VER}
 SVR4_PKGNAME=		p5pma
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
@@ -18,6 +17,9 @@ DISTINFO_FILE=		${.CURDIR}/../../graphics/ImageMagick/distinfo
 FILESDIR=		${.CURDIR}/../../graphics/ImageMagick/files
 PATCHDIR=		${.CURDIR}/../../graphics/ImageMagick/patches
 
+IM_MAJOR_VER=		5.5.3
+IM_MINOR_VER=		2
+
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
@@ -30,7 +32,7 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Image/Magick/.packlist
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/-6//}
+WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/PerlMagick
 BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
 
