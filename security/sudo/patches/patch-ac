@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.8 2002/06/16 20:20:19 wiz Exp $
+
 --- config.sub.old	Mon Dec 31 14:02:47 2001
 +++ config.sub	Sun Jun 16 12:48:45 2002
 @@ -235,7 +235,7 @@
