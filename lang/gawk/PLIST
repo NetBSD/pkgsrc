@@ -1,24 +1,35 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:24 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/04/04 13:58:26 seb Exp $
 bin/gawk
+bin/${PKGNAME}
 bin/igawk
-@unexec ${INSTALL_INFO} --delete %D/info/gawk.info %D/info/dir
+bin/pgawk
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gawk.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gawkinet.info
 info/gawk.info
-@exec ${INSTALL_INFO} %D/info/gawk.info %D/info/dir
+info/gawkinet.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gawk.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gawkinet.info
 libexec/awk/grcat
 libexec/awk/pwcat
 man/man1/gawk.1
 man/man1/igawk.1
 share/awk/assert.awk
+share/awk/bits2str.awk
+share/awk/cliff_rand.awk
 share/awk/ctime.awk
 share/awk/ftrans.awk
 share/awk/getopt.awk
 share/awk/gettime.awk
 share/awk/group.awk
 share/awk/join.awk
-share/awk/mktime.awk
+share/awk/libintl.awk
 share/awk/nextfile.awk
+share/awk/noassign.awk
 share/awk/ord.awk
 share/awk/passwd.awk
+share/awk/readable.awk
+share/awk/rewind.awk
 share/awk/round.awk
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gawk.mo
 @dirrm share/awk
 @dirrm libexec/awk

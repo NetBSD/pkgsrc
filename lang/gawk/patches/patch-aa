@@ -1,15 +1,27 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/10 17:33:39 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 2002/04/04 13:58:27 seb Exp $
 
---- Makefile.in.old	Thu Dec  9 12:39:13 1999
-+++ Makefile.in	Thu Dec  9 12:40:18 1999
-@@ -179,10 +179,6 @@
- 	fullname=gawk-$(REL).`./gawk '{print $$3}' $(srcdir)/patchlevel.h` ; \
- 	$(INSTALL_PROGRAM) gawk $(bindir)/$$fullname ; \
- 	(cd $(bindir); $(LN) $$fullname gawk)
--	(cd $(bindir); \
+--- Makefile.in.orig	Tue May 15 19:09:12 2001
++++ Makefile.in
+@@ -212,9 +212,9 @@
+ # stuff for compiling gawk/pgawk
+ DEFPATH = "\".:$(datadir)\""
+ 
+-DEFS = -DDEFPATH=$(DEFPATH) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR="\"$(datadir)/locale\""
++DEFS = -DDEFPATH=$(DEFPATH) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR="\"$(prefix)/${PKGLOCALEDIR}/locale\""
+ 
+-INCLUDES = -I. -I$(srcdir) -I$(srcdir)/intl
++INCLUDES = -I. -I$(srcdir)
+ 
+ # We want hard links for install-exec-hook, below
+ LN = ln
+@@ -755,9 +755,7 @@
+ 	(fullname=gawk-`./gawk --version | sed 1q | awk '{print $$3}'` ; \
+ 	cd $(DESTDIR)$(bindir); \
+ 	$(LN) gawk $$fullname ; \
 -	if [ ! -f awk ]; \
 -	then	$(LN_S) gawk awk; \
 -	fi; exit 0)
- 	cd doc && $(MAKE) install
- 	cd awklib && $(MAKE) install
++	exit 0)
  
+ # Undo the above when uninstalling
+ uninstall-links:
