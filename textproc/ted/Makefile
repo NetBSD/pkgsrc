@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/02/09 20:20:57 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/03/21 22:40:57 tron Exp $
 
 DISTNAME=	ted-2.6.src
 PKGNAME=	ted-2.6
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.nllgg.nl/Ted/
 
 DEPENDS+=	libungif-*:../../graphics/libungif
 DEPENDS+=       jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.3:../../graphics/png
+DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=       tiff-*:../../graphics/tiff
 DEPENDS+=       xpm-3.4k:../../graphics/xpm
 

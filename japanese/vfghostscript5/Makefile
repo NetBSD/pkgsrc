@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/02/15 09:26:21 agc Exp $
+# $NetBSD: Makefile,v 1.7 2000/03/21 22:40:55 tron Exp $
 #
 
 DISTNAME=	ja-vfghostscript-5.50
@@ -30,7 +30,7 @@ HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
 
 BUILD_DEPENDS=	${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract
 BUILD_DEPENDS+=	unzip:../../archivers/unzip
-DEPENDS=	png>=1.0.3:../../graphics/png
+DEPENDS=	png>=1.0.6:../../graphics/png
 DEPENDS+=	ja-vflib-2.24.2:../../japanese/vflib
 DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
 
