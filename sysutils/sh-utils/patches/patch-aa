@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/01 20:29:40 kim Exp $
+
+--- src/Makefile.in.orig	Sat Aug 14 11:42:37 1999
++++ src/Makefile.in	Fri Oct  1 15:59:37 1999
+@@ -803,8 +803,7 @@
+ check: check-am
+ installcheck-am:
+ installcheck: installcheck-am
+-install-exec-am: install-binPROGRAMS install-binSCRIPTS \
+-		install-exec-local
++install-exec-am: install-binPROGRAMS install-binSCRIPTS
+ install-exec: install-exec-am
+ 
+ install-data-am:
