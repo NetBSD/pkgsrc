@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2234 2003/05/15 08:11:56 wiz Exp $
+$NetBSD: CHANGES,v 1.2235 2003/05/15 11:22:21 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1959,3 +1959,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xdialog to 2.1.1 [salo 2003-05-14]
 	Updated bitchx to 1.0.3.19nb2 [salo 2003-05-14]
 	Updated groff to 1.19nb1 [wiz 2003-05-15]
+	Added golem-0.0.5 [salo 2003-05-15]
