@@ -1,19 +1,15 @@
-$NetBSD: patch-ac,v 1.13 2001/10/11 15:35:01 martti Exp $
+$NetBSD: patch-ac,v 1.14 2001/11/06 20:04:46 tv Exp $
 
 --- pine/makefile.neb.orig	Tue Jul  3 19:03:58 2001
 +++ pine/makefile.neb	Mon Oct  8 10:05:52 2001
-@@ -45,11 +45,16 @@
+@@ -45,11 +45,13 @@
  RM=          rm -f
  LN=          ln -s
  MAKE=        make
--OPTIMIZE=    # -O
-+.if (${MACHINE_ARCH} != "arm32")
-+# XXX broken arm32 compiler can't optimize several of these source files
-+OPTIMIZE=    -O
-+.endif
+ OPTIMIZE=    # -O
  PROFILE=     # -pg
 -DEBUG=       -g -DDEBUG
-+DEBUG=       -DDEBUG # -g -DDEBUG	# crashes on 'c'ompose w/o -DDEBUG
++DEBUG=       -DDEBUG # -g	# XXX crashes on 'c'ompose w/o -DDEBUG
  
 -CCLIENTDIR=  ../c-client
 +CCLIENTDIR=  ${LOCALBASE}
@@ -31,7 +27,7 @@ $NetBSD: patch-ac,v 1.13 2001/10/11 15:35:01 martti Exp $
 -LIBS=        $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
 -             `cat $(CCLIENTDIR)/LDFLAGS`
 +STDLIBS=     -ltermlib -lssl -lcrypto -lcrypt
-+LOCLIBS=     -lpico $(CCLIENTLIB)/libimapuw.la
++LOCLIBS=     -lpico -lc-client
 +LIBS=        -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib/ $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS)
  
  STDCFLAGS=   -DNETBSD -DSYSTYPE=\"NEB\" -DMOUSE

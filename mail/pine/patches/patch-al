@@ -1,16 +1,7 @@
-$NetBSD: patch-al,v 1.10 2001/10/11 15:35:01 martti Exp $
+$NetBSD: patch-al,v 1.11 2001/11/06 20:04:47 tv Exp $
 
 --- build.orig	Thu Aug  2 03:35:02 2001
 +++ build	Mon Oct  8 10:11:41 2001
-@@ -209,7 +209,7 @@
-      bs3) makeargs="CC=shlicc $makeargs" ;;
-      nto) makeargs="CC=qcc $makeargs" ;;
-      lyn) [ -f /CYGNUS.bash ] && . /CYGNUS.bash; makeargs="CC=gcc $makeargs" ;;
--       *) makeargs="CC=cc $makeargs" ;;
-+       *) makeargs="CC=${LT}\ cc\ -g $makeargs" ;;
-   esac
- fi
- 
 @@ -344,27 +344,6 @@
  	  esac
  	  echo "Including SSL functionality"
