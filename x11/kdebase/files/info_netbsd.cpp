@@ -1,5 +1,5 @@
 /*
- * $NetBSD: info_netbsd.cpp,v 1.2 1999/07/19 21:05:16 tron Exp $
+ * $NetBSD: info_netbsd.cpp,v 1.3 1999/07/19 21:57:29 hubertf Exp $
  *
  * info_netbsd.cpp is part of the KDE program kcminfo.  This displays
  * various information about the NetBSD system it's running on.
@@ -220,8 +220,30 @@ bool GetInfo_IO_Ports (KTabListBox *lbox)
 
 bool GetInfo_Sound (KTabListBox *lbox)
 {
+	int row;
+
 	if (!GetDmesgInfo(lbox, "audio", NULL))
 		lbox->insertItem(i18n("No audio devices found."));
+
+	// append information on any audio devices found
+	row = lbox->numRows();
+	while (row>=0) {
+		char *s, *t, dev[20];;
+
+		s = strstr(lbox->text(row), "at ");
+		if (s) {
+			t=dev;
+			s+=3;		// skip "at "
+			while((*s!=':') && (*s!='\n'))
+				*t++ = *s++; 
+			*t='\0';
+
+			GetDmesgInfo(lbox, dev, NULL);
+		}
+
+		row--;
+	}
+	
 	return true;
 }
 
