@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/09 17:55:22 agc Exp $
+bin/getpapersize
+bin/setpapersize
+man/man1/getpapersize.1
+man/man1/setpapersize.1
