@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/20 19:33:45 jmmv Exp $
+bin/z80-asm
+bin/z80-dis
+man/man1/z80-asm.1
+man/man1/z80-dis.1
+man/man5/z80-asm.5
+man/man5/z80-file.5
