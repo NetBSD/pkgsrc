@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2001/09/14 23:01:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/10/31 14:34:57 tv Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0nb1
 CATEGORIES=	net
-MASTER_SITES=	# empty
+MASTER_SITES=	http://docs.real.com/docs/proxykit/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://service.real.com/firewall/fdev.html
 COMMENT=	Proxy server for the RealAudio RTSP protocol
-
-IS_INTERACTIVE=	yes
 
 LICENSE=		no-commercial-use
 RESTRICTED=		${LICENSE}
@@ -27,16 +25,6 @@ WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=	LOCAL_LIBS="-lsocket -lnsl"
 .endif
-
-do-fetch:
-	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "  The RTSP Proxy Kit must be fetched into \"${DISTDIR}\""; \
-	    ${ECHO_MSG} "  via the Web formular available under this URL:"; \
-	    ${ECHO_MSG} "  ${DOWNLOAD}"; \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${FALSE}; \
-	fi
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/rtspd.sh >${WRKDIR}/rtspd.sh
