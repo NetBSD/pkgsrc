@@ -1,10 +1,7 @@
-# New ports collection makefile for:	xanim
+# Makefile for:		xanim
 # Version required:     2.70.6.4
-# Date created:         Sat Nov 5 11:43:03 PST 1994
-# Whom:                 piero
 #
-# $NetBSD: Makefile,v 1.7 1998/02/15 21:47:47 tron Exp $
-# FreeBSD Id: Makefile,v 1.12 1997/06/09 22:27:11 max Exp
+# $NetBSD: Makefile,v 1.8 1998/03/20 06:15:38 mycroft Exp $
 #
 
 DISTNAME=       xanim27064
@@ -18,7 +15,6 @@ MAINTAINER=	packages@netbsd.org
 
 EXTRACT_ONLY=   ${DISTNAME}.tar.gz
 
-ONLY_FOR_ARCHS=	i386 m68k sparc
 .if (${MACHINE_ARCH} == "i386")
 EXTRA_FILES=    xa2.0_cvid_netbsd386.o.Z \
 		xa2.0_iv32_netbsd386.o.Z \
