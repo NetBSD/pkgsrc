@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/17 16:27:25 agc Exp $
+
+Miscellaneous Makefile settings.
+
+--- Makefile	1994/07/25 15:59:41	1.16
++++ Makefile	1998/11/17 13:44:39
+@@ -12,10 +12,10 @@
+ ###
+ 
+ # destination directory for final executables
+-DESTDIR = /secureplace/bin
++DESTDIR = ${PREFIX}/sbin
+ 
+ # destination for man pages
+-MANDIR  = /usr/man
++MANDIR  = ${PREFIX}/man
+ 
+ # system utilities
+ LEX	= lex
+@@ -48,7 +48,7 @@
+ #CFLAGS = -systype bsd43	# ETA/10 (SVR3)
+ #CFLAGS = -systype bsd43	# MIPS RISC/OS 4.5x
+ #CFLAGS = -O -ansi		# gnu CC
+-#CFLAGS = -O -ansi -W -Wreturn-type -Wswitch -Wshadow # gnu CC w/all warnings
++CFLAGS = -O -ansi -W -Wreturn-type -Wswitch -Wshadow # gnu CC w/all warnings
+ #CFLAGS = -OG			# Pyramid OSx
+ #CFLAGS = -O -Kold		# Pyramid DC/OSx (SVR4)
+ #CFLAGS = -DTW_TYPE32='int'	# DEC OSF/1 Alpha (or any other architecture

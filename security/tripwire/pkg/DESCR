@@ -1,0 +1,10 @@
+Tripwire is a file and directory integrity checker, a utility that
+compares a designated set of files and directories against information
+stored in a previously generated database.  Any differences are
+flagged and logged, including added or deleted entries.  When run
+against system files on a regular basis, any changes in critical
+system files will be spotted -- and appropriate damage control
+measures can be taken immediately.  With Tripwire, system
+administrators can conclude with a high degree of certainty that a
+given set of files remain free of unauthorized modifications if
+Tripwire reports no changes.

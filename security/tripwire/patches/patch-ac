@@ -1,0 +1,65 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/11/17 16:27:25 agc Exp $
+
+NetBSD defines both LITTLE_ENDIAN and BIG_ENDIAN, and sets the
+definition of BYTE_ORDER accordingly.  So check the value of
+BYTE_ORDER in this file.
+
+--- sigs/sha/sha.c	1994/07/25 15:46:45	1.5
++++ sigs/sha/sha.c	1998/11/17 15:59:20
+@@ -46,10 +46,7 @@
+ 
+ #include "sha.h"
+ 
+-#if BYTEORDER == 0x1234
+-#define LITTLE_ENDIAN
+-#endif
+-
++#include <machine/endian.h>
+ 
+ /* The SHS f()-functions */
+ 
+@@ -214,7 +211,7 @@
+     shsInfo->digest[ 4 ] += E;
+     }
+ 
+-#ifdef LITTLE_ENDIAN
++#if BYTE_ORDER == LITTLE_ENDIAN
+ 
+ /* When run on a little-endian CPU we need to perform byte reversal on an
+    array of longwords.  It is possible to make the code endianness-
+@@ -258,7 +255,7 @@
+     while( count >= SHS_BLOCKSIZE )
+ 	{
+ 	memcpy( (char *) shsInfo->data, (char *) buffer, SHS_BLOCKSIZE );
+-#ifdef LITTLE_ENDIAN
++#if BYTE_ORDER == LITTLE_ENDIAN
+ 	byteReverse( shsInfo->data, SHS_BLOCKSIZE );
+ #endif /* LITTLE_ENDIAN */
+ 	shsTransform( shsInfo );
+@@ -289,7 +286,7 @@
+ 	{
+ 	/* Two lots of padding:  Pad the first block to 64 bytes */
+ 	memset( ( char * ) shsInfo->data + count, 0, 64 - count );
+-#ifdef LITTLE_ENDIAN
++#if BYTE_ORDER == LITTLE_ENDIAN
+ 	byteReverse( shsInfo->data, SHS_BLOCKSIZE );
+ #endif /* LITTLE_ENDIAN */
+ 	shsTransform( shsInfo );
+@@ -300,7 +297,7 @@
+     else
+ 	/* Pad block to 56 bytes */
+ 	memset( ( char * ) shsInfo->data + count, 0, 56 - count );
+-#ifdef LITTLE_ENDIAN
++#if BYTE_ORDER == LITTLE_ENDIAN
+     byteReverse( shsInfo->data, SHS_BLOCKSIZE );
+ #endif /* LITTLE_ENDIAN */
+ 
+@@ -309,7 +306,7 @@
+     shsInfo->data[ 15 ] = lowBitcount;
+ 
+     shsTransform( shsInfo );
+-#ifdef LITTLE_ENDIAN
++#if BYTE_ORDER == LITTLE_ENDIAN
+     byteReverse( shsInfo->data, SHS_DIGESTSIZE );
+ #endif /* LITTLE_ENDIAN */
+     }
