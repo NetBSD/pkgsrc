@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 1999/04/13 15:31:06 agc Exp $
+# $NetBSD: Makefile,v 1.27 1999/08/10 16:38:08 bouyer Exp $
 
-DISTNAME=	samba-2.0.3
+DISTNAME=	samba-2.0.5a
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.samba.org/pub/samba/
 
