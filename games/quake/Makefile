@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2003/07/21 16:49:59 martti Exp $
+# $NetBSD: Makefile,v 1.26 2003/11/18 14:13:47 xtraeme Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.fu-berlin.de/pc/msdos/games/idgames/idstuff/source/ \
@@ -21,7 +21,7 @@ USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 MAKE_ENV+=	MAINDIR=${WRKSRC}
 
-USE_X11BASE=	yes
+USE_X11=	yes
 
 MAKE_ENV+=	MESA_DIR=${BUILDLINK_PREFIX.Mesa}
 MAKE_ENV+=	X11BASE=${X11BASE}
@@ -47,14 +47,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qw/release_version/glqwcl.glx ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/winquake/release_version/bin/glquake.glx ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/winquake/release_version/bin/quake.x11 ${PREFIX}/bin
-
-post-install:
-	@ ${ECHO}
-	@ ${ECHO} =====================================================================
-	@ ${ECHO} For running quake you need data files. Look for quakesw-1.0.6.tar.gz.
-	@ ${ECHO} Extract it somewhere, and start quake from the same directory, e.g.
-	@ ${ECHO} by running \'quake.x11\'.
-	@ ${ECHO} =====================================================================
 
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"
