@@ -1,4 +1,30 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/08 01:54:18 minskim Exp $
+$NetBSD: distinfo,v 1.2 2004/08/04 22:56:02 minskim Exp $
 
-SHA1 (UnFonts-ttf-20030907.tar.bz2) = 939ecd326bf54489a1b7185b62a2f5c0dea50d6f
-Size (UnFonts-ttf-20030907.tar.bz2) = 15326624 bytes
+SHA1 (un-ttf-20040804/UnBatang.ttf) = 7a22b856ca90a0642efef1cd5d67f2f5dcea6dc7
+Size (un-ttf-20040804/UnBatang.ttf) = 3678918 bytes
+SHA1 (un-ttf-20040804/UnBatangBold.ttf) = d23af19711d0f2ffed9b13c9a8da5e6eaf543370
+Size (un-ttf-20040804/UnBatangBold.ttf) = 3862978 bytes
+SHA1 (un-ttf-20040804/UnBom.ttf) = 695f68075647d3232e30d16feacae26c31897e13
+Size (un-ttf-20040804/UnBom.ttf) = 650038 bytes
+SHA1 (un-ttf-20040804/UnDotum.ttf) = 4a82f320467232b6e79bbf5eaa2ad6c84024ec8b
+Size (un-ttf-20040804/UnDotum.ttf) = 2209362 bytes
+SHA1 (un-ttf-20040804/UnDotumBold.ttf) = b17c356ec163796c3a6b394c77bb900869c0629e
+Size (un-ttf-20040804/UnDotumBold.ttf) = 2603762 bytes
+SHA1 (un-ttf-20040804/UnGraphic.ttf) = e9dba5f539cd0983ca52605f2b5bb53c573ca17c
+Size (un-ttf-20040804/UnGraphic.ttf) = 751942 bytes
+SHA1 (un-ttf-20040804/UnGungseo.ttf) = b99bdc1f5b1127ea2591060b054198c5a33b868b
+Size (un-ttf-20040804/UnGungseo.ttf) = 4149814 bytes
+SHA1 (un-ttf-20040804/UnPen.ttf) = 146e4a7f522d74e63bdf7aa1d01903561f61b94e
+Size (un-ttf-20040804/UnPen.ttf) = 859410 bytes
+SHA1 (un-ttf-20040804/UnPenheulim.ttf) = 789eb1bb56c71e5fd6a020b5608ab4ff8ff86348
+Size (un-ttf-20040804/UnPenheulim.ttf) = 817974 bytes
+SHA1 (un-ttf-20040804/UnPilgi.ttf) = 00f31ca9a8a2a2ec7f392fa9da421751e95353c6
+Size (un-ttf-20040804/UnPilgi.ttf) = 660494 bytes
+SHA1 (un-ttf-20040804/UnPilgiBold.ttf) = f5aab7fb478e7dd5d2f0d1e8a23601432d09d6cf
+Size (un-ttf-20040804/UnPilgiBold.ttf) = 514334 bytes
+SHA1 (un-ttf-20040804/UnShinmun.ttf) = 7d361f8bf4665d2d68fb94f236284c59023d5210
+Size (un-ttf-20040804/UnShinmun.ttf) = 3551910 bytes
+SHA1 (un-ttf-20040804/UnTaza.ttf) = 7b13e64d33a21da9bd08bf2346e19d07bed5baa7
+Size (un-ttf-20040804/UnTaza.ttf) = 595434 bytes
+SHA1 (un-ttf-20040804/UnYetgul.ttf) = 6b65d8bc11d9e03552835837f068cc756e574e44
+Size (un-ttf-20040804/UnYetgul.ttf) = 3783050 bytes
