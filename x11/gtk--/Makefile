@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 1999/11/14 23:36:24 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/01/02 18:02:42 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/12 16:50:43 vanilla Exp
 #
 
 DISTNAME=	Gtk---1.0.3
 PKGNAME=	gtk---1.0.3
 CATEGORIES=	x11 devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=gnome-1.0.53/sources/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=stable/releases/gnome-1.0.53/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://lazy.ton.tut.fi/gtk--/gtk--.html
