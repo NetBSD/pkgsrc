@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/09/01 16:05:19 abs Exp $
+# $NetBSD: Makefile,v 1.5 2000/09/02 23:18:27 abs Exp $
 
 DISTNAME=	ns-remote
 PKGNAME=	ns-remote-1.3
@@ -9,8 +9,6 @@ DISTFILES=	remote.c vroot.h
 MAINTAINER=	norm@mono.org
 HOMEPAGE=	http://home.netscape.com/newsref/std/x-remote.html
 
-# fill in when done...
-# DEPENDS+=	../communicator
 DIST_SUBDIR=    netscape
 USE_X11=	yes
 
