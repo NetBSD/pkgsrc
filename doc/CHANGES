@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9589 2005/03/23 22:34:35 is Exp $
+$NetBSD: CHANGES,v 1.9590 2005/03/23 22:59:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1603,3 +1603,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added sqlite3-tcl-3.1.3 [jmmv 2005-03-23]
 	Updated gnet to 2.0.7 [wiz 2005-03-23]
 	Updated lmclock to 1.2 [is 2005-03-23]
+	Updated bomberclone to 0.11.5 [wiz 2005-03-23]
