@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/01/24 16:58:06 tv Exp $
+$NetBSD: distinfo,v 1.5 2005/01/24 17:51:57 tv Exp $
 
 SHA1 (dar-2.1.5.tar.gz) = 992836c05c685933e56e8035e00313008567948a
 Size (dar-2.1.5.tar.gz) = 652534 bytes
@@ -11,3 +11,5 @@ SHA1 (patch-af) = 967783c3d53fb975d436662121dd8f9db285b9aa
 SHA1 (patch-ag) = c99b58ae072c22ec2e4b85a6fc9a35edb7968385
 SHA1 (patch-ah) = 01916f19ad0e14d0840de5223d8625e610b83f51
 SHA1 (patch-ai) = a22efc4a16f79ab80a74a3bae21f403d128f54ae
+SHA1 (patch-aj) = 87aad964117f53b56acad9f9ba902a48adc01c24
+SHA1 (patch-ak) = e0d95bb0ff987cc7b6e32c38d3d47f693f7f8d93
