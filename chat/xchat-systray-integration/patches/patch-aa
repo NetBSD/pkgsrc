@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1 2004/06/07 06:12:16 minskim Exp $
+
+--- Makefile.orig	2004-04-30 07:38:10.000000000 -0500
++++ Makefile
+@@ -1,10 +1,10 @@
+ #UNIX VARS
+-CFLAGS = -Os -Wall
+-GTKFLAGS =`pkg-config gtk+-2.0 --cflags`
+-LIBS = `pkg-config gtk+-2.0 --libs`
++CFLAGS += -Os
++GTKFLAGS =`${PKG_CONFIG} gtk+-2.0 --cflags`
++LIBS = `${PKG_CONFIG} gtk+-2.0 --libs`
+ install = cp
+ mkdir = mkdir
+-CC = gcc
++#CC = gcc
+ ifndef prefix
+     prefix=/usr/
+ endif
+@@ -94,11 +94,11 @@ systray.so: $(Objects)
+ 	$(CC) $(CFLAGS) $(LIBS) $(Objects) -shared -o $(plugin)
+ 
+ install: all
+-	$(mkdir) -p $(plugindir)
+-	$(install) $(plugin) $(plugindir)/$(plugin)
+-	$(install) src/images/Win32Tray $(plugindir)/ -r -f
+-	$(install) src/images/GTKTray $(plugindir)/ -r -f
+-	$(install) src/images/Menu $(plugindir)/ -r -f
++	${BSD_INSTALL_LIB_DIR} $(plugindir)
++	${BSD_INSTALL_LIB} $(plugin) $(plugindir)/$(plugin)
++	for d in Win32Tray GTKTray Menu; do \
++		${BSD_INSTALL_DATA_DIR} ${plugindir}/$${d}; \
++		${BSD_INSTALL_DATA} src/images/$${d}/* ${plugindir}/$${d}; done
+ 	
+ win-install:
+ 	@echo 'Copy "Systray.dll" and "images" directory where you want. Set images directory in the settings tab'

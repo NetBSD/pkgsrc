@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6178 2004/06/07 05:56:00 minskim Exp $
+$NetBSD: CHANGES,v 1.6179 2004/06/07 06:12:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2838,3 +2838,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bzflag to 1.10.6 [snj 2004-06-07]
 	Updated grepmail to 5.23 [snj 2004-06-07]
 	Updated xchat2 to 2.0.9 [minskim 2004-06-07]
+	Updated xchat-systray-integration to 2.4.5 [minskim 2004-06-07]
