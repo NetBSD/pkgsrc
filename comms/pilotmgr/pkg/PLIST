@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/24 18:09:46 tron Exp $
+bin/PilotManager
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/Backup.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/Installer.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/PilotMgr.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/SendMail.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/SyncAB.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/SyncFood.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/SyncMemo.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/SyncPlan.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/SyncTime.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/images/pilotmgr.gif
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/images/hotsync.gif
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/images/pilotmgr.icon
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/images/pilotmgr.xpm2
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/perl5/TkUtils.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/perl5/PilotSync.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/perl5/MultiFileSelect.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/test/SyncPlan.t
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/test/SyncCM.t
+share/doc/pilotmgr/AnncAlias.txt
+share/doc/pilotmgr/Conduit.api
+share/doc/pilotmgr/DiscAlias.txt
+share/doc/pilotmgr/SyncPlan.help
+share/doc/pilotmgr/WelcomeMessage
+@exec ln -s %D/share/doc/pilotmgr %D/lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/docs
+@unexec rm -f %D/lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/docs
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/test
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/perl5
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib/images
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr/lib
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/pilotmgr
+@dirrm share/doc/pilotmgr
