@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/28 22:29:49 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/21 23:42:04 schmonz Exp $
 bin/autorespond
-share/doc/autorespond.README
+man/man1/autorespond.1
+share/doc/autorespond/README
+share/doc/autorespond/qmail-auto
+@dirrm share/doc/autorespond
