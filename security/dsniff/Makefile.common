@@ -1,0 +1,21 @@
+# $NetBSD: Makefile.common,v 1.1 2005/03/22 01:07:07 wiz Exp $
+
+DISTNAME=	dsniff-${VERS}
+VERS=		2.3
+CATEGORIES=	security
+MASTER_SITES+=	http://monkey.org/~dugsong/dsniff/
+
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://monkey.org/~dugsong/dsniff/
+
+USE_BUILDLINK3=	yes
+GNU_CONFIGURE=	yes
+
+BUILDLINK_DEPENDS.libnet+=	libnet-1.0.*
+
+PATCHDIR=	${.CURDIR}/../dsniff/patches
+DISTINFO_FILE=	${.CURDIR}/../dsniff/distinfo
+
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../devel/libnet/buildlink3.mk"
+.include "../../net/libnids/buildlink3.mk"
