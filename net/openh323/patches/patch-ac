@@ -1,5 +1,7 @@
+$NetBSD: patch-ac,v 1.4 2004/10/09 06:50:43 mjl Exp $
+
 --- openh323u.mak.in.orig	2003-08-04 02:03:09.000000000 +0200
-+++ openh323u.mak.in	2004-10-08 23:59:36.000000000 +0200
++++ openh323u.mak.in	2004-10-09 04:36:34.000000000 +0200
 @@ -126,7 +126,7 @@
  # Added auto inclusion of ptlib make rules
  #
@@ -24,19 +26,17 @@
  endif
  
  
-@@ -149,11 +149,11 @@
- 
+@@ -150,10 +150,10 @@
  
  OH323_SRCDIR = $(OPENH323DIR)/src
--ifdef PREFIX
+ ifdef PREFIX
 -OH323_INCDIR = $(PREFIX)/include/openh323
--else
-+#ifdef PREFIX
-+#OH323_INCDIR = $(PREFIX)/include/openh323
-+#else
- OH323_INCDIR = $(OPENH323DIR)/include
++OH323_INCDIR = $(OPENH323DIR)/include/openh323
+ else
+-OH323_INCDIR = $(OPENH323DIR)/include
 -endif
-+#endif
++OH323_INCDIR = $(OPENH323DIR)/include/openh323
++endif
  OH323_LIBDIR = $(OPENH323DIR)/lib
  
  
