@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/05/06 21:01:46 tv Exp $
+# $NetBSD: Makefile,v 1.8 1999/05/06 22:38:08 tv Exp $
 
 DISTNAME=	PTL2-current-990325
 PKGNAME=	ptl2-990325
@@ -16,6 +16,8 @@ USE_GMAKE=	YES
 
 MAKE_ENV=	INSTALL_PROGRAM="${INSTALL_SCRIPT}"
 PLIST_SRC=	${WRKDIR}/PLIST
+
+NOT_FOR_ARCHS=	alpha
 
 post-install:
 	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/PTL/include
