@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3225 2003/09/03 15:08:01 tron Exp $
+$NetBSD: CHANGES,v 1.3226 2003/09/03 16:39:37 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3510,3 +3510,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_install to 20030824 [jlam 2003-09-03]
 	Added xslide-0.2.2 [wiz 2003-09-03]
 	Updated audit-packages to 1.19 [tron 2003-09-03]
+	Updated libnbcompat to 20030827 [jlam 2003-09-03]
