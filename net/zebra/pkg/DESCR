@@ -12,6 +12,7 @@ Zebra is intended to be used as a Route Server and a Route Reflector.
 Zebra is not a toolkit, it provides full routing power under a new
 architecture.
 
-Homepage:
+If you want to build with IPv6 support, install with:
+	# make USE_INET6=YES install
 
-	http://www.zebra.org/
+Homepage: http://www.zebra.org/
