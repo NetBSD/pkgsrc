@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.61 2002/04/25 00:03:32 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.62 2002/08/04 17:03:58 jdolecek Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -237,7 +237,7 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 		${ECHO} '';						\
 		${ECHO} 'output=`${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} $$*`'; \
 		${ECHO} 'exitcode=$$?';					\
-		${ECHO} '${ECHO} "$${output}" | ${SED} \';		\
+		${ECHO} '${ECHO} "$${output}" | ${SED} \\';		\
 		${ECHO} '	${_BUILDLINK_CONFIG_WRAPPER_SED}';	\
 		${ECHO} 'exit $${exitcode}';				\
 		) > ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
