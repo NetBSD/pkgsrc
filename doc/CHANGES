@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2226 2003/05/13 23:39:49 salo Exp $
+$NetBSD: CHANGES,v 1.2227 2003/05/14 03:52:17 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1948,3 +1948,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated inn to 2.3.5 [tron 2003-05-13]
 	Updated scummvm to 0.4.0 [wiz 2003-05-13]
 	Updated xdialog to 2.0.6 [salo 2003-05-13]
+	Added opencdk-0.4.5 [salo 2003-05-14]
+	Added libtasn1-0.2.4 [salo 2003-05-14]
+	Added gnutls-0.8.7 [salo 2003-05-14]
