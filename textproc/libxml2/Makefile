@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/29 11:47:12 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/24 16:59:01 wiz Exp $
 
-DISTNAME=	libxml2-2.3.12
+DISTNAME=	libxml2-2.4.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/libxml/}
 

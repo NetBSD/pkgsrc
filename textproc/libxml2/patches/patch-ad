@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/06/29 11:47:12 rh Exp $
+$NetBSD: patch-ad,v 1.2 2001/08/24 16:59:03 wiz Exp $
 
---- doc/Makefile.in.orig	Sat Mar 31 17:53:38 2001
-+++ doc/Makefile.in	Sat Mar 31 17:54:08 2001
-@@ -112,7 +112,7 @@
+--- doc/Makefile.in.orig	Wed Aug 15 14:26:43 2001
++++ doc/Makefile.in
+@@ -121,7 +121,7 @@
  Z_CFLAGS = @Z_CFLAGS@
  Z_LIBS = @Z_LIBS@
  

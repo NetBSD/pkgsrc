@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/29 11:47:12 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/08/24 16:59:03 wiz Exp $
 bin/xml2-config
 bin/xmllint
 include/libxml2/libxml/DOCBparser.h
@@ -29,8 +29,8 @@ include/libxml2/libxml/xpath.h
 include/libxml2/libxml/xpathInternals.h
 include/libxml2/libxml/xpointer.h
 lib/pkgconfig/libxml-2.0.pc
-lib/libxml2.so.5.12
-lib/libxml2.so.5
+lib/libxml2.so.6.2
+lib/libxml2.so.6
 lib/libxml2.so
 lib/libxml2.la
 lib/libxml2.a
