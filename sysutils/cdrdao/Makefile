@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/06/20 19:05:25 dillo Exp $
+# $NetBSD: Makefile,v 1.18 2004/06/27 19:15:37 wiz Exp $
 #
 
 DISTNAME=		cdrdao-1.1.9
@@ -48,7 +48,6 @@ post-install:
 		${INSTALL_MAN_DIR} ${PREFIX}/share/examples/cdrdao/psxcopy
 		${INSTALL_MAN} ${WRKSRC}/contrib/psxcopy-0.2/Makefile \
 			${WRKSRC}/contrib/psxcopy-0.2/README \
-			${WRKSRC}/contrib/psxcopy-0.2/cdjob.c \
 			${WRKSRC}/contrib/psxcopy-0.2/cdjob.c \
 			${WRKSRC}/contrib/psxcopy-0.2/psxdump.c \
 			${WRKSRC}/contrib/psxcopy-0.2/read-psx \
