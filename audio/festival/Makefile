@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/02/09 19:57:54 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2004/02/18 13:33:40 jlam Exp $
 
 DISTNAME=	festival-1.4.1
 PKGREVISION=	1
@@ -27,7 +27,7 @@ FESTIVAL=	${WRKSRC}/festival
 
 FHOME=		${PREFIX}/share/festival
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
 PKG_COMPILER?=	suncc
