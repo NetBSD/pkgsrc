@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/03/05 14:24:30 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/04/09 11:50:59 grant Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -16,6 +16,8 @@ DIST_SUBDIR=	mpg123
 PATCHDIR=	${.CURDIR}/../../audio/mpg123/patches
 FILESDIR=	${.CURDIR}/../../audio/mpg123/files
 DISTINFO_FILE=	${.CURDIR}/../../audio/mpg123/distinfo
+
+LICENSE=	no-commercial-use
 
 USE_BUILDLINK2=	# defined
 
