@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4690 2004/02/06 02:50:57 markd Exp $
+$NetBSD: CHANGES,v 1.4691 2004/02/06 08:39:37 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -628,3 +628,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kde3-i18n-fi to 3.2.0 [markd 2004-02-06]
 	Updated kde3-i18n-fr to 3.2.0 [markd 2004-02-06]
 	Added kde3-i18n-gl-3.2.0 [markd 2004-02-06]
+	Renamed p5-expect to p5-Expect [grant 2004-02-06]
