@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/12/11 00:21:53 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2004/12/11 00:26:45 minskim Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 PKGREVISION=		2
@@ -17,6 +17,7 @@ BUILD_DEFS+=		USE_INET6 IRSSI_USE_PERL IRSSI_USE_SSL
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 
 CONFIGURE_ARGS+=	--with-terminfo \
