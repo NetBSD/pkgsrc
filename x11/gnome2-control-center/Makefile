@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2004/05/15 15:00:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2004/06/26 15:46:52 jmmv Exp $
 #
 
 DISTNAME=	control-center-2.6.1
 PKGNAME=	gnome2-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -62,6 +63,7 @@ post-install:
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
+.include "../../multimedia/gst-plugins/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"

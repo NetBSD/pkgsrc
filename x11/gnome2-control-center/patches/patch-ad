@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2004/05/17 00:10:49 danw Exp $
+$NetBSD: patch-ad,v 1.2 2004/06/26 15:46:52 jmmv Exp $
 
---- configure.orig	Tue Apr 13 22:49:27 2004
+--- configure.orig	2004-04-15 18:59:14.000000000 +0200
 +++ configure
-@@ -23063,7 +23063,7 @@ if test `eval echo '${'$as_ac_Header'}'`
+@@ -23220,7 +23220,7 @@ if test `eval echo '${'$as_ac_Header'}'`
    cat >>confdefs.h <<_ACEOF
  #define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
  _ACEOF
@@ -11,3 +11,12 @@ $NetBSD: patch-ad,v 1.1 2004/05/17 00:10:49 danw Exp $
  fi
  
  done
+@@ -25958,6 +25958,8 @@ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
+ 	#ifdef __NetBSD__
++	#include <sys/param.h>
++	#include <sys/sysctl.h>
+ 	#include <soundcard.h>
+ 	#else
+ 	#include <sys/soundcard.h>
