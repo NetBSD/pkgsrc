@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9327 2005/02/26 20:38:17 reinoud Exp $
+$NetBSD: CHANGES,v 1.9328 2005/02/26 22:38:22 is Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1109,6 +1109,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gliv to 1.9.1 [drochner 2005-02-25]
 	Updated py-METAR to 0.12 [drochner 2005-02-25]
 	Added p5-Net-LMTP-0.02 [adrianp 2005-02-25]
+	Added sr-2.3.2 [is 2005-02-25]
+	Added sr-examples-2.3.2 [is 2005-02-25]
 	Added writer2latex-0.4b2 [rh 2005-02-26]
 	Updated ap2-auth-ldap to 3.3 [adrianp 2005-02-26]
 	Updated p5-DateTime to 0.27 [wiz 2005-02-26]
@@ -1152,6 +1154,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnome-devel to 2.8.3 [jmmv 2005-02-26]
 	Updated p5-WWW-Mechanize to 1.12 [wiz 2005-02-26]
 	Updated p5-File-Temp to 0.16 [wiz 2005-02-26]
-	Added sr-2.3.2 [is 2005-02-26]
-	Added sr-examples-2.3.2 [is 2005-02-26]
 	Updated blender to 2.36 [reinoud 2005-02-26]
+	Updated sr to 2.3.3 [is 2005-02-26]
