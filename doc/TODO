@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3217 2005/03/13 02:11:22 wiz Exp $
+$NetBSD: TODO,v 1.3218 2005/03/13 02:57:26 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -445,6 +445,7 @@ Suggested package updates
 	o exiftags-1.00
 	o exim-4.50
 	o exmh-2.7.2
+	o ezmlm-idx-0.435 [schmonz]
 	o f2c-20031025
 	o fakeroot-1.2.4
 	o fd-2.06b
