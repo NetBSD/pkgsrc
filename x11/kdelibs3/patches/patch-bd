@@ -1,9 +1,9 @@
-$NetBSD: patch-bd,v 1.7 2003/05/22 02:42:42 markd Exp $
+$NetBSD: patch-bd,v 1.8 2004/02/04 13:58:39 markd Exp $
 
---- kio/kssl/kopenssl.cc.orig	Wed May  7 23:46:34 2003
+--- kio/kssl/kopenssl.cc.orig	2003-11-30 22:47:08.000000000 +1300
 +++ kio/kssl/kopenssl.cc
-@@ -182,7 +182,7 @@ void KOpenSSLProxy::destroy() {
-   _me = NULL;
+@@ -207,7 +207,7 @@ void KOpenSSLProxy::destroy() {
+   _me = 0L;
  }
  
 -#ifdef __OpenBSD__
@@ -11,7 +11,7 @@ $NetBSD: patch-bd,v 1.7 2003/05/22 02:42:42 markd Exp $
  #include <qdir.h>
  #include <qstring.h>
  #include <qstringlist.h>
-@@ -245,26 +245,23 @@ KConfig *cfg;
+@@ -270,26 +270,23 @@ KConfig *cfg;
  
     delete cfg;
  
@@ -22,7 +22,7 @@ $NetBSD: patch-bd,v 1.7 2003/05/22 02:42:42 markd Exp $
 -         _cryptoLib = ll->globalLibrary(libname.latin1());
 -   }
 -#else
-    libpaths 
+    libpaths
 -            #ifdef _AIX
 +#ifdef _AIX
              << "/opt/freeware/lib/"
@@ -42,9 +42,9 @@ $NetBSD: patch-bd,v 1.7 2003/05/22 02:42:42 markd Exp $
  
 +#if !defined(__NetBSD__) && !defined(__OpenBSD__)
  // FIXME: #define here for the various OS types to optimize
-    libnamess 
+    libnamess
  	     #ifdef hpux
-@@ -299,10 +296,16 @@ KConfig *cfg;
+@@ -324,10 +321,16 @@ KConfig *cfg;
  	     << "libcrypto.so.0"
               #endif
  	     ;
@@ -61,7 +61,7 @@ $NetBSD: patch-bd,v 1.7 2003/05/22 02:42:42 markd Exp $
        for (QStringList::Iterator shit = libnamesc.begin();
                                   shit != libnamesc.end();
                                   ++shit) {
-@@ -316,9 +319,9 @@ KConfig *cfg;
+@@ -341,9 +344,9 @@ KConfig *cfg;
              _cryptoLib = ll->globalLibrary(alib.latin1());
           if (_cryptoLib) break;
        }
@@ -71,8 +71,8 @@ $NetBSD: patch-bd,v 1.7 2003/05/22 02:42:42 markd Exp $
 -#endif
  
     if (_cryptoLib) {
- #ifdef KSSL_HAVE_SSL 
-@@ -418,16 +421,14 @@ KConfig *cfg;
+ #ifdef KSSL_HAVE_SSL
+@@ -462,16 +465,14 @@ KConfig *cfg;
  #endif
     }
  
@@ -94,7 +94,7 @@ $NetBSD: patch-bd,v 1.7 2003/05/22 02:42:42 markd Exp $
        for (QStringList::Iterator shit = libnamess.begin();
                                   shit != libnamess.end();
                                   ++shit) {
-@@ -441,9 +442,9 @@ KConfig *cfg;
+@@ -485,9 +486,9 @@ KConfig *cfg;
           	_sslLib = ll->globalLibrary(alib.latin1());
           if (_sslLib) break;
        }
@@ -104,4 +104,4 @@ $NetBSD: patch-bd,v 1.7 2003/05/22 02:42:42 markd Exp $
 -#endif
  
     if (_sslLib) {
- #ifdef KSSL_HAVE_SSL 
+ #ifdef KSSL_HAVE_SSL
