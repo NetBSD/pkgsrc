@@ -1,0 +1,8 @@
+--- /dev/null	Fri Nov 21 14:47:55 1997
++++ src/plugins/sdr2.plugin.S53.image.imm	Fri Nov 21 14:42:48 1997
+@@ -0,0 +1,5 @@
++media:image
++proto:MDP
++tool:imm
++fmt:imm
++flags:-p $(PORT) -i $(ADDRESS) -t $(TTL)
