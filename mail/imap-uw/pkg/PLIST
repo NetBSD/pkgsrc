@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2000/04/10 03:21:02 simonb Exp $
-lib/libimapuw.so.3.0
+@comment $NetBSD: PLIST,v 1.6 2000/05/19 03:58:58 jlam Exp $
+lib/libimapuw.so.4.0
 libexec/imapd
 libexec/ipop2d
 libexec/ipop3d
@@ -9,3 +9,15 @@ man/man8/ipop2d.8
 man/man8/ipop3d.8
 sbin/mtest
 sbin/rimapd
+share/doc/imap-uw/FAQ
+share/doc/imap-uw/RELNOTES
+share/doc/imap-uw/bugs.txt
+share/doc/imap-uw/calendar.txt
+share/doc/imap-uw/drivers.txt
+share/doc/imap-uw/formats.txt
+share/doc/imap-uw/imaprc.txt
+share/doc/imap-uw/internal.txt
+share/doc/imap-uw/locking.txt
+share/doc/imap-uw/md5.txt
+share/doc/imap-uw/naming.txt
+@dirrm share/doc/imap-uw
