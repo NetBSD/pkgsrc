@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.514 2003/05/04 02:38:45 fredb Exp $
+$NetBSD: TODO,v 1.515 2003/05/05 12:12:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -73,6 +73,7 @@ Suggested package updates
 	o angband-3.0.3
 	o anjuta-1.0.2
 	o arch-1.0pre17 [pkg/20776]
+	o arch-1.0pre18
 	o asm2html-1.4 [pkg/21319]
 	o asp2php-0.76.15 [pkg/20506]
 	o atari800-1.3
@@ -81,6 +82,7 @@ Suggested package updates
 	o binutils-2.13.2.1
 	o blender-2.26
 	o bogofilter-0.11.2
+	o boolean-6.4
 	o bzflag-1.7g0
 	o canna-3.6p3 [pkg/20208]
 	o cervisia-2.0
@@ -92,23 +94,29 @@ Suggested package updates
 	o crafty-19.1
 	o crossfire-1.5.0
 	o ctwm-3.6 [pkg/20648]
+	o cyrus-imapd21-2.1.13
 	o cyrus-sasl-2.1.13
 	o db4-4.1.25 [pkg/20289]
-	o dctc-0.85.1
+	o dctc-0.85.2
+	o ddd-3.3.5
 	o dia-0.91 [pkg/20750,21308]
+	o dillo-0.7.2
 	o disc-cover-1.5.0
-	o distcc-2.0.1
+	o distcc-2.1
 	o doxygen-1.3
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o easytag-0.27.1
+	o eggdrop-1.6.14
 	o elm-me-2.4pl101b
+	o ethereal-0.9.12 [pkg/21431]
 	o exim-4.12 [pkg/19850]
 	o exim-4.14
 	o exmh-2.6.2
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.34
+	o freetds-0.61 [pkg/21395]
 	o fsviewer-0.2.5
 	o gauche-0.6.7 [kei]
 	o gawk-3.1.2
@@ -123,6 +131,7 @@ Suggested package updates
 	o giram-0.3.5
 	o gkrellm-2.1.8 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
+	o gnet-2.0.2
 	o gnome-python-1.99.13
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99
@@ -133,6 +142,7 @@ Suggested package updates
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
 	o graphopt-0.4
+	o groff-1.19
 	o gsed-4.0.7
 	o gtetrinet-0.7.1
 	o guile-1.6.4
@@ -149,9 +159,11 @@ Suggested package updates
 	o joe-2.9 [pkg/18022]
 	o jove-4.16.0.58 [pkg/19924]
 	o jove-4.16.0.61
-	o larswm-7.2.9
+	o larswm-7.2.10
 	o lcms-1.0.9
+	o leafnode-1.9.39
 	o lesstif-0.93.41
+	o libaudiofile-1.0.5
 	o libole2-2.2.8
 	o librsvg-2.2.2.1
 	o libtool-1.5 [skrll]
@@ -162,6 +174,7 @@ Suggested package updates
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
 	o lyx-1.3.1 [pkg/20805]
+	o lzop-1.01
 	o maildrop-1.5.2
 	o mailsync-5.1.0
 	o memtest86-3.0
@@ -178,15 +191,14 @@ Suggested package updates
 	o napshare-1.2
 	o neon-0.23.9 [pkg/20987]
 	o nessus-2.0.1 [pkg/20796]
-	o nessus-2.0.3
+	o nessus-2.0.4
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
 	o netatalk-1.6.2 [pkg/21341]
-	o netpbm-10.14 [pkg/21271]
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
 	o ntop2-2.2
-	o nut-7.22
+	o nut-8.3
 	o nxtvepg-2.5.1
 	o openbox-2.3.1 [devel]
 	o openh323-1.11.2
@@ -194,8 +206,8 @@ Suggested package updates
 	o openoffice-1.0.3.1 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openslp-1.0.11
+	o openssh-3.6.1p2
 	o openssl-0.9.7a
-	o opera-7.10
 	o oss-3.9.7i
 	o p0f-1.8.3
 	o php4-4.3.1
@@ -217,6 +229,7 @@ Suggested package updates
 	o sawfish-1.3
 	o scribus-0.8
 	o scsh-0.6.4
+	o seahorse-0.7.3
 	o sendfile-20010424
 	o sketch-0.6.15
 	o smalltalk-2.1.1
@@ -236,6 +249,7 @@ Suggested package updates
 	o swig-1.3.17
 	o t1lib-5.0.0
 	o tcl/tk-8.4.2 [bjoern]
+	o tcpreplay-1.3.3
 	o texmacs-1.0.1.12
 	o tightvnc-1.2.8
 	o tkman-2.2
@@ -243,14 +257,16 @@ Suggested package updates
 	o unrar-3.2.1
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
+	o vsftp-1.1.3 [pkg/21410]
 	o vttest-20030301
 	o wdm-1.23
 	o wine-20030408
 	o wmbiff-0.4.15
+	o wmweather-2.4.0
 	o wwwoffle-2.7h
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
-	o xdialog-2.1.0
+	o xdialog-2.1.1
 	o xerces-c-2.1.0 [heinz]
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.0
