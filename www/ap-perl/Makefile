@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/07/02 13:00:52 grant Exp $
+# $NetBSD: Makefile,v 1.21 2002/07/22 22:00:54 jlam Exp $
 #
 
 DISTNAME=		mod_perl-1.27
@@ -12,7 +12,7 @@ HOMEPAGE=		http://perl.apache.org/
 COMMENT=		Module that embeds a Perl interpreter into Apache
 
 DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
-DEPENDS+=		libperl>=${LIBPERL5_REQD}:../../lang/libperl
+DEPENDS+=		{libperl>=${LIBPERL5_REQD},perl>=5.8.0}:../../lang/libperl
 DEPENDS+=		p5-BSD-Resource>=1.10:../../devel/p5-BSD-Resource
 
 USE_BUILDLINK_ONLY=	YES
