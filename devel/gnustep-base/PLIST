@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/01/03 04:04:36 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/04/01 08:33:34 rh Exp $
 bin/openapp
 share/GNUstep/System/Headers/Foundation/Foundation.h
 share/GNUstep/System/Headers/Foundation/GSMime.h
@@ -73,14 +73,15 @@ share/GNUstep/System/Headers/Foundation/NSZone.h
 share/GNUstep/System/Headers/Foundation/objc-load.h
 share/GNUstep/System/Headers/gnustep/base/DistributedObjects.h
 share/GNUstep/System/Headers/gnustep/base/GCObject.h
+share/GNUstep/System/Headers/gnustep/base/GSCategories.h
 share/GNUstep/System/Headers/gnustep/base/GSFileHandle.h
 share/GNUstep/System/Headers/gnustep/base/GSIArray.h
 share/GNUstep/System/Headers/gnustep/base/GSIMap.h
 share/GNUstep/System/Headers/gnustep/base/GSLocale.h
+share/GNUstep/System/Headers/gnustep/base/GSObjCRuntime.h
 share/GNUstep/System/Headers/gnustep/base/GSUnion.h
 share/GNUstep/System/Headers/gnustep/base/Unicode.h
 share/GNUstep/System/Headers/gnustep/base/behavior.h
-share/GNUstep/System/Headers/gnustep/base/numbers.h
 share/GNUstep/System/Headers/gnustep/base/objc-gnu2next.h
 share/GNUstep/System/Headers/gnustep/base/preface.h
 share/GNUstep/System/Headers/gnustep/unicode/caseconv.h
@@ -701,6 +702,7 @@ share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/g
 share/GNUstep/System/Libraries/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/libgnustep-base.so.${PKGVERSION}
 share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/SSL.bundle/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/SSL
+share/GNUstep/System/Library/Bundles/SSL.bundle/stamp.make
 share/GNUstep/System/Makefiles/Additional/base.make
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gdomap
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/HTMLLinker
@@ -708,7 +710,6 @@ share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-g
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/cvtenc
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/defaults
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/gdnc
-share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/gsdoc
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/make_strings
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/pl2link
 share/GNUstep/System/Tools/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}${APPEND_ELF}/gnu-gnu-gnu/pldes
