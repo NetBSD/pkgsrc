@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9701 2005/03/31 11:41:51 wiz Exp $
+$NetBSD: CHANGES,v 1.9702 2005/03/31 16:32:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1838,3 +1838,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cssc to 1.0.1 [seb 2005-03-31]
 	Updated xpaint to 2.7.6 [adam 2005-03-31]
 	Updated bomberclone to 0.11.6 [wiz 2005-03-31]
+	Updated ruby18-base to 1.8.2nb1 [taca 2005-03-31]
