@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink.mk,v 1.1 2001/12/24 19:29:32 jlam Exp $
+# $NetBSD: pthread.buildlink.mk,v 1.2 2001/12/26 19:18:40 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pthreads.
 # This Makefile fragment is also included directly by bsd.prefs.mk.
@@ -57,17 +57,14 @@ PTHREAD_TYPE?=		${_PKG_PTHREAD_TYPE}
 #
 ###########################################################################
 #
-# Only allow the following section to be seen _after_ the first time this
-# file is included.  This allows this file to be included by bsd.prefs.mk
+# Only allow the following section to be seen if this file isn't included
+# from bsd.prefs.mk. This allows this file to be included by bsd.prefs.mk
 # and also to be included in a package Makefile as is done normally, and
 # allows us to consolidate the pthread Makefile logic in one place.  We
 # want this, as we'd like for PTHREAD_TYPE to be available to package
 # Makefiles after they pull in bsd.prefs.mk.
 #
-_PTHREAD_BUILDLINK_MK_NPASSES?=	# empty
-_PTHREAD_BUILDLINK_MK_NPASSES:=	${_PTHREAD_BUILDLINK_MK_NPASSES}.
-
-.if !empty(_PTHREAD_BUILDLINK_MK_NPASSES:M..)
+.if !defined(BSD_PREFS_MK)
 .if !defined(PTHREAD_BUILDLINK_MK)
 PTHREAD_BUILDLINK_MK=	# defined
 
@@ -102,4 +99,4 @@ DEPENDS+=		unproven-threads>=0.17:../../devel/unproven-pthreads
 .endif
 
 .endif	# PTHREAD_BUILDLINK_MK
-.endif	# _PTHREAD_BUILDLINK_MK_NPASSES
+.endif	# BSD_PREFS_MK
