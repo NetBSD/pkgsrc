@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/06/20 21:06:19 tron Exp $
+# $NetBSD: Makefile,v 1.14 2000/04/05 14:57:26 pooka Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
@@ -11,8 +11,15 @@ ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-i386
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.cs.virginia.edu/~nr/noweb/
 
-DEPENDS=		icon-9.3.1:../../lang/icon
+DEPENDS=		icon-9.3.*:../../lang/icon
 
 WRKSRC=			${WRKDIR}/src
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "SunOS"
+do-configure:
+	(cd ${WRKSRC} ; ./awkname awk)
+.endif
 
 .include "../../mk/bsd.pkg.mk"
