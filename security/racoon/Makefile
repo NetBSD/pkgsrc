@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2003/03/22 11:00:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.58 2003/07/12 10:01:44 itojun Exp $
 #
 
-DISTNAME=	racoon-20021120a
-PKGREVISION=	1
+DISTNAME=	racoon-20030711a
 WRKSRC=		${WRKDIR}/${DISTNAME}/racoon
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
