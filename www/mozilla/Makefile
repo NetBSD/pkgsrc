@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2002/08/29 15:11:06 taya Exp $
+# $NetBSD: Makefile,v 1.103 2002/09/11 11:34:21 jlam Exp $
 
 MOZ_VER=	1.1
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -16,29 +16,30 @@ COMMENT=	Open-source version of the Netscape browser
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
+USE_BUILDLINK2=	yes
 USE_PERL5=	build
 USE_GMAKE=	yes
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tests \
 		--disable-debug \
-		--with-system-jpeg=${BUILDLINK_DIR} \
-		--with-system-png=${BUILDLINK_DIR} \
+		--with-system-jpeg=${BUILDLINK_PREFIX.jpeg} \
+		--with-system-png=${BUILDLINK_PREFIX.png} \
 		--enable-mathml \
 		--enable-crypto \
 		--enable-svg
 
 SHAREMODE?=	644
-ALL_TARGET=
+ALL_TARGET=	# empty
 
 UNLIMIT_RESOURCES=	datasize memorysize stacksize
 
-.include	"../../x11/gtk/buildlink.mk"
-.include	"../../graphics/gdk-pixbuf/buildlink.mk"
-.include	"../../net/ORBit/buildlink.mk"
-.include	"../../graphics/jpeg/buildlink.mk"
-.include	"../../graphics/png/buildlink.mk"
-.include	"../../graphics/freetype2/buildlink.mk"
+.include	"../../graphics/freetype2/buildlink2.mk"
+.include	"../../graphics/gdk-pixbuf/buildlink2.mk"
+.include	"../../graphics/jpeg/buildlink2.mk"
+.include	"../../graphics/png/buildlink2.mk"
+.include	"../../net/ORBit/buildlink2.mk"
+.include	"../../x11/gtk/buildlink2.mk"
 
 # NetBSD-*-m68k builds, but "regchrome" dumps core.
 NOT_FOR_PLATFORM=	NetBSD-1.4.*-* NetBSD-*-m68k
@@ -101,7 +102,7 @@ post-build:
 do-install:
 	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/moz-install
 
-.include "../../mk/pthread.buildlink.mk"
+.include "../../mk/pthread.buildlink2.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
 CONFIGURE_ARGS+= --without-pthreads
