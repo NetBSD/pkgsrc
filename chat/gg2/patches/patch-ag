@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2005/01/17 20:15:28 kristerw Exp $
+
+--- src/plugins/jabber/jabber_plugin.c.orig	Mon Jan 17 20:56:36 2005
++++ src/plugins/jabber/jabber_plugin.c	Mon Jan 17 20:57:09 2005
+@@ -1443,8 +1443,9 @@
+ 
+ 	if (ggadu_config_var_get(jabber_handler, "autoconnect"))
+ 	{
++		GGaduStatusPrototype *sp;
+ 		print_debug("jabber: autoconneting");
+-		GGaduStatusPrototype *sp = ggadu_find_status_prototype(p,JABBER_STATUS_AVAILABLE);
++		sp = ggadu_find_status_prototype(p,JABBER_STATUS_AVAILABLE);
+ 		jabber_change_status(sp);
+ 	}
+ 
