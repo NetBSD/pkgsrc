@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/20 09:09:06 jun Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/06 02:00:11 jun Exp $
 
-DISTNAME=	flim-1.14.2
+DISTNAME=	flim-1.14.3
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/flim/flim-1.14/
 
