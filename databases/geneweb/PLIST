@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/20 15:42:09 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/01/02 09:34:50 wulf Exp $
 bin/consang
 bin/ged2gwb
 bin/gwb2ged
@@ -70,9 +70,29 @@ share/doc/geneweb/images/gwlogo.gif
 share/doc/geneweb/images/l-de.jpg
 share/doc/geneweb/images/l-en.jpg
 share/doc/geneweb/images/l-fr.jpg
+share/doc/geneweb/images/l-it.jpg
 share/doc/geneweb/images/l-nl.jpg
-share/doc/geneweb/images/l-se.jpg
+share/doc/geneweb/images/l-sv.jpg
 share/doc/geneweb/index.htm
+share/doc/geneweb/it/access.htm
+share/doc/geneweb/it/cdrom.htm
+share/doc/geneweb/it/consang.htm
+share/doc/geneweb/it/diruse.htm
+share/doc/geneweb/it/divide.htm
+share/doc/geneweb/it/faq.htm
+share/doc/geneweb/it/gwformat.htm
+share/doc/geneweb/it/gwsetup.htm
+share/doc/geneweb/it/initial.htm
+share/doc/geneweb/it/links.htm
+share/doc/geneweb/it/maint.htm
+share/doc/geneweb/it/merge.htm
+share/doc/geneweb/it/pcustom.htm
+share/doc/geneweb/it/problem.htm
+share/doc/geneweb/it/recover.htm
+share/doc/geneweb/it/report.htm
+share/doc/geneweb/it/server.htm
+share/doc/geneweb/it/start.htm
+share/doc/geneweb/it/update.htm
 share/doc/geneweb/nl/consang.htm
 share/doc/geneweb/nl/diruse.htm
 share/doc/geneweb/nl/faq.htm
@@ -127,12 +147,12 @@ share/geneweb/images/female.gif
 share/geneweb/images/gwback.jpg
 share/geneweb/images/gwlogo.gif
 share/geneweb/images/l-af.jpg
+share/geneweb/images/l-bg.jpg
 share/geneweb/images/l-br.jpg
-share/geneweb/images/l-cn.jpg
+share/geneweb/images/l-ca.jpg
 share/geneweb/images/l-cs.jpg
-share/geneweb/images/l-ct.jpg
+share/geneweb/images/l-da.jpg
 share/geneweb/images/l-de.jpg
-share/geneweb/images/l-dk.jpg
 share/geneweb/images/l-en.jpg
 share/geneweb/images/l-eo.jpg
 share/geneweb/images/l-es.jpg
@@ -147,11 +167,15 @@ share/geneweb/images/l-nl.jpg
 share/geneweb/images/l-no.jpg
 share/geneweb/images/l-pl.jpg
 share/geneweb/images/l-pt.jpg
+share/geneweb/images/l-ro.jpg
 share/geneweb/images/l-ru.jpg
-share/geneweb/images/l-se.jpg
+share/geneweb/images/l-sl.jpg
+share/geneweb/images/l-sv.jpg
+share/geneweb/images/l-zh.jpg
 share/geneweb/images/left.jpg
 share/geneweb/images/male.gif
 share/geneweb/images/t-af.gif
+share/geneweb/images/t-bg.gif
 share/geneweb/images/t-br.gif
 share/geneweb/images/t-ca.gif
 share/geneweb/images/t-cs.gif
@@ -171,7 +195,9 @@ share/geneweb/images/t-nl.gif
 share/geneweb/images/t-no.gif
 share/geneweb/images/t-pl.gif
 share/geneweb/images/t-pt.gif
+share/geneweb/images/t-ro.gif
 share/geneweb/images/t-ru.gif
+share/geneweb/images/t-sl.gif
 share/geneweb/images/t-sv.gif
 share/geneweb/images/t-zh.gif
 share/geneweb/images/up.jpg
@@ -218,6 +244,7 @@ share/geneweb/setup/lang/gwf_ok.htm
 share/geneweb/setup/lang/gwu.htm
 share/geneweb/setup/lang/gwu_ok.htm
 share/geneweb/setup/lang/intro.txt
+share/geneweb/setup/lang/lexicon.txt
 share/geneweb/setup/lang/list.htm
 share/geneweb/setup/lang/main.htm
 share/geneweb/setup/lang/merge.htm
@@ -242,6 +269,7 @@ share/geneweb/setup/lang/welcome.htm
 @dirrm share/examples/geneweb
 @dirrm share/doc/geneweb/sv
 @dirrm share/doc/geneweb/nl
+@dirrm share/doc/geneweb/it
 @dirrm share/doc/geneweb/images
 @dirrm share/doc/geneweb/fr
 @dirrm share/doc/geneweb/en
