@@ -1,0 +1,54 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/05/14 15:42:14 dillo Exp $
+
+This includes sound-20040508.diff from the master site.
+
+--- logic.h.orig	Sun Apr 18 19:30:48 2004
++++ logic.h
+@@ -21,6 +21,7 @@
+ 
+ #include "intern.h"
+ 
++struct Mixer;
+ struct Resource;
+ struct Serializer;
+ struct SystemStub;
+@@ -46,7 +47,9 @@ struct Logic {
+ 	};
+ 	
+ 	static const OpcodeStub _opTable[];
++	static const uint16 _freqTable[];
+ 
++	Mixer *_mix;
+ 	Resource *_res;
+ 	Video *_vid;
+ 	SystemStub *_stub;
+@@ -61,7 +64,7 @@ struct Logic {
+ 	bool _scriptHalted;
+ 	bool _fastMode;
+ 
+-	Logic(Resource *res, Video *vid, SystemStub *stub);
++	Logic(Mixer *mix, Resource *res, Video *vid, SystemStub *stub);
+ 	void init();
+ 	
+ 	void op_movConst();
+@@ -88,9 +91,9 @@ struct Logic {
+ 	void op_or();
+ 	void op_shl();
+ 	void op_shr();
+-	void op_soundUnk1();
++	void op_playSound();
+ 	void op_updateMemList();
+-	void op_soundUnk2();
++	void op_playMusic();
+ 
+ 	void restartAt(uint16 ptrId);
+ 	void setupPtrs(uint16 ptrId);
+@@ -100,6 +103,8 @@ struct Logic {
+ 
+ 	void inp_updatePlayer();
+ 	void inp_handleSpecialKeys();
++	
++	void snd_playSound(uint16 resNum, uint8 freq, uint8 vol, uint8 channel);
+ 	
+ 	void saveOrLoad(Serializer &ser);
+ };
