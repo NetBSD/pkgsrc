@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2003/08/09 11:11:37 seb Exp $
+# $NetBSD: Makefile,v 1.29 2004/03/08 21:13:55 seb Exp $
 #
 
 DISTNAME=	pspp-0.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	ftp://franz.stat.wisc.edu/pub/PSPP/ \
 		ftp://alpha.gnu.org/gnu/pspp/ \
@@ -19,7 +19,7 @@ COMMENT=	Program for statistical analysis of sampled data
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-Dunix=1
@@ -34,5 +34,6 @@ CONF_FILES+=	${EGDIR}/html-prologue ${PKG_SYSCONFDIR}/html-prologue
 CONF_FILES+=	${EGDIR}/papersize ${PKG_SYSCONFDIR}/papersize
 CONF_FILES+=	${EGDIR}/ps-prologue ${PKG_SYSCONFDIR}/ps-prologue
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
