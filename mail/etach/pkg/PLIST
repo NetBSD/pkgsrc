@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/26 21:45:00 jtb Exp $
+
+${LISPDIR}/etach.el
+share/doc/etach/FAQ.txt
+share/doc/etach/LICENSE.txt
+share/doc/etach/README.txt
+@dirrm share/doc/etach
