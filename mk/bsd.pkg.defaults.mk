@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.73 2002/07/22 17:20:06 cjep Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.74 2002/07/23 19:10:27 cjep Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -334,6 +334,11 @@ SU_CMD?= ${ROOT_CMD}
 # an effective uid of 0.  A possible substitute is "sudo sh -c"
 # Possible: su, sudo, or priv, with appropriate arguments
 # Default: dependent on operating system. For NetBSD: ${SU} - root -c
+
+SU_CMD_PATH_APPEND?=/sbin:/usr/sbin
+# Additional directories (in a colon separated list) to be added to the 
+# PATH environment variable when running ${SU_CMD}.
+# Default: /sbin:/usr/sbin
 
 FATAL_OBJECT_FMT_SKEW?=yes
 # If there is a pre-requisite package, which has a different object format
