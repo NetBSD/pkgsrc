@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2001/03/04 09:06:12 tron Exp $
+# $NetBSD: Makefile,v 1.66 2001/04/28 00:50:35 hubertf Exp $
 
 DISTNAME=		gimp-1.2.1
 CATEGORIES=		graphics
@@ -28,6 +28,7 @@ USE_GMAKE=		yes
 USE_LIBINTL=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+BUILD_USES_MSGFMT=	yes
 
 EVAL_PREFIX+=		GTKDIR=gtk+
 GNU_CONFIGURE=		yes
