@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.344 2003/03/05 14:02:55 wiz Exp $
+$NetBSD: TODO,v 1.345 2003/03/05 14:31:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -223,7 +223,6 @@ Suggested package updates
 	o scribus-0.8
 	o scsh-0.6.3
 	o sendfile-20010424
-	o siag-3.5.7
 	o sketch-0.6.15
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
