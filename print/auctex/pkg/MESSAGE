@@ -1,0 +1,16 @@
+===================================================================
+
+To customize AUC TeX you will need to edit the file `tex-site.el' in
+the site-lisp directory (${PREFIX}/share/emacs/site-lisp).  Add the
+parts of `tex.el' (in the `auctex' subdirectory) which need to be
+changed to `tex-site.el'. This way you can keep your customizations
+and they will not get deleted when you update to a newer version of
+AUC TeX.
+
+You may then put
+
+	(require 'tex-site)
+
+in you .emacs.el file.
+
+===================================================================

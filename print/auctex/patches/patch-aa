@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/02 07:49:27 jtb Exp $
+
+--- Makefile.orig	Sun Nov  5 20:54:41 2000
++++ Makefile
+@@ -10,7 +10,7 @@
+ ##----------------------------------------------------------------------
+ 
+ # Where local software is found
+-prefix=/usr/local
++prefix=${PREFIX}
+ 
+ # Where info files go.
+ infodir = $(prefix)/info
+@@ -109,7 +109,7 @@
+ 
+ some:	$(AUCELC) $(STYLESRC:.el=.elc)
+ 
+-install:	install-lisp
++install:	install-lisp install-info
+ 
+ contrib:
+ 	$(ELC) bib-cite.el
