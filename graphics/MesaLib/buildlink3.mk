@@ -1,10 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.7 2003/09/30 00:42:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2003/09/30 10:18:57 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
 
-.if !defined(MESALIB_BUILDLINK3_MK)
-MESALIB_BUILDLINK3_MK=	YES
-
+.if !empty(MESALIB_BUILDLINK3_MK:M\+)
 .  include "../../mk/bsd.prefs.mk"
 
 MESA_REQD?=		3.4.2
@@ -69,7 +68,7 @@ BUILDLINK_DEPENDS+=		MesaLib
 .  endif
 .endif
 
-.if !defined(MESALIB_BUILDLINK3_MK)
+.if !empty(MESALIB_BUILDLINK3_MK:M\+)
 .  if ${_NEED_MESALIB} == "YES"
 BUILDLINK_PACKAGES+=		MesaLib
 BUILDLINK_CPPFLAGS.MesaLib=	-DGLX_GLXEXT_LEGACY
