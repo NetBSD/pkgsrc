@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1172 2003/12/13 10:42:57 wiz Exp $
+$NetBSD: TODO,v 1.1173 2003/12/13 10:44:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -264,7 +264,6 @@ Suggested package updates
 	o ngrep-1.41
 	o ns-flash-6.0.79
 	o nsd-1.2.3
-	o nut-9.3
 	o nxtvepg-2.6.0
 	o openbox-3.0 [pkgsrc-wip]
 	o openh323-1.11.2
