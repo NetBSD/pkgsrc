@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2005/01/25 13:47:03 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/02/18 18:23:30 wiz Exp $
 #
 
-DISTNAME=		scmxx-0.7.4
+DISTNAME=		scmxx-0.7.5
 CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scmxx/}
 EXTRACT_SUFX=		.tar.bz2

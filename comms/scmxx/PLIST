@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/05 21:19:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/02/18 18:23:31 wiz Exp $
 bin/scmxx
 man/man1/scmxx.1
 man/de/man1/scmxx.1
+man/it/man1/scmxx.1
 man/ru/man1/scmxx.1
 share/doc/scmxx/doc_sources.txt
 share/doc/scmxx/gsmcharset.txt
@@ -11,5 +12,7 @@ share/examples/scmxx/vCalendar.vcs
 share/examples/scmxx/vCard.vcf
 @dirrm share/doc/scmxx
 @dirrm share/examples/scmxx
+@dirrm man/it/man1
+@dirrm man/it
 @dirrm man/ru/man1
 @dirrm man/ru
