@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 1999/03/14 15:07:21 tron Exp $
+$NetBSD: patch-ab,v 1.5 1999/04/23 21:47:13 tron Exp $
 
 --- knews.tmpl.orig	Tue Dec 29 05:14:55 1998
 +++ knews.tmpl	Tue Mar  9 06:30:33 1999
@@ -25,11 +25,9 @@ $NetBSD: patch-ab,v 1.4 1999/03/14 15:07:21 tron Exp $
   */
  
 -JPEG_LIB	= -ljpeg
--PNG_LIB		= -lpng -lz -lm
--COMPFACE_LIB	= -lcompface
-+JPEG_LIB	= -L${LOCALBASE}/lib -ljpeg
-+PNG_LIB		= -L${LOCALBASE}/lib -lpng -lz -lm
-+COMPFACE_LIB	= -L${LOCALBASE}/lib -lcompface
++JPEG_LIB	= -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -ljpeg
+ PNG_LIB		= -lpng -lz -lm
+ COMPFACE_LIB	= -lcompface
  
  
  /*
