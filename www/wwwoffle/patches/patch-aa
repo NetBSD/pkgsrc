@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 1999/12/07 08:50:50 agc Exp $
+$NetBSD: patch-aa,v 1.7 2000/02/16 00:24:41 itohy Exp $
 
---- Makefile.orig	Sun Oct 10 15:31:50 1999
-+++ Makefile	Tue Nov 30 14:24:28 1999
+--- Makefile.orig	Sat Dec 18 21:27:03 1999
++++ Makefile	Wed Feb 16 07:46:20 2000
 @@ -16,9 +16,9 @@
  
  LOCALHOST=localhost:8080
@@ -42,12 +42,12 @@ $NetBSD: patch-aa,v 1.6 1999/12/07 08:50:50 agc Exp $
  
  # For Solaris you need the following instead.
  #LIBRARY=-lnsl -lsocket
-@@ -272,13 +272,13 @@
+@@ -273,13 +273,13 @@
  	$(INSTALL) -c -m 644 wwwoffle.conf.man.install $(INSTDIR)/man/man5/wwwoffle.conf.5
- 	[ -x $(INSTDIR)/man/man8 ] || $(INSTALL) -d $(INSTDIR)/man/man8
+ 	[ -x $(INSTDIR)/man/man8 ] || $(INSTALL) -d -m 755 $(INSTDIR)/man/man8
  	$(INSTALL) -c -m 644 wwwoffled.man $(INSTDIR)/man/man8/wwwoffled.8
--	[ -x $(INSTDIR)/doc/wwwoffle ] || $(INSTALL) -d $(INSTDIR)/doc/wwwoffle
-+	[ -x $(INSTDIR)/share/doc/wwwoffle ] || $(INSTALL) -d $(INSTDIR)/share/doc/wwwoffle
+-	[ -x $(INSTDIR)/doc/wwwoffle ] || $(INSTALL) -d -m 755 $(INSTDIR)/doc/wwwoffle
++	[ -x $(INSTDIR)/share/doc/wwwoffle ] || $(INSTALL) -d -m 755 $(INSTDIR)/share/doc/wwwoffle
  	for file in CHANGES.CONF CONVERT COPYING FAQ INSTALL NEWS README* UPGRADE ; do \
 -	  $(INSTALL) -c -m 644 $$file $(INSTDIR)/doc/wwwoffle/$$file ;\
 +	  $(INSTALL) -c -m 644 $$file $(INSTDIR)/share/doc/wwwoffle/$$file ;\
@@ -59,7 +59,7 @@ $NetBSD: patch-aa,v 1.6 1999/12/07 08:50:50 agc Exp $
  	  done )
  
  
-@@ -348,7 +348,7 @@
+@@ -354,7 +354,7 @@
  	[    -f $(CONFDIR)/wwwoffle.conf ] || $(INSTALL) -c -m 640 wwwoffle.conf.install $(CONFDIR)/wwwoffle.conf
  
  install_fixup-win32:
@@ -67,4 +67,4 @@ $NetBSD: patch-aa,v 1.6 1999/12/07 08:50:50 agc Exp $
 +	for file in $(INSTDIR)/share/doc/* $(CONFDIR)/README.win32 ; do \
  	  [ -f $$file ] && awk '{print $$0 "\r";}' < $$file > $$file.txt && rm -f $$file ;\
  	done
- #	for file in $(CONFDIR)/wwwoffle.conf ; do \
+ 	rm -f $(SPOOLDIR)/html/index.html && ln $(SPOOLDIR)/html/Welcome.html $(SPOOLDIR)/html/index.html
