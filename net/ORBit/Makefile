@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/07/10 21:33:32 tron Exp $
+# $NetBSD: Makefile,v 1.35 2000/07/25 04:50:37 jlam Exp $
 #
 
 DISTNAME=		ORBit-0.5.2
@@ -13,11 +13,14 @@ DEPENDS+=		gindent-*:../../devel/gindent
 DEPENDS+=		gettext-0.10.*:../../devel/gettext
 
 USE_GMAKE=		# defined
-GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig \
 			${WRKSRC}/popt/ltconfig \
 			${WRKSRC}/libIDL/ltconfig
+
+GNU_CONFIGURE=		# defined
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CPPFLAGS+=		-I${LOCALBASE}/include		# libintl.h
 
 INFO_FILES=		libIDL.info
 
