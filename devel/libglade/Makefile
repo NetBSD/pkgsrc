@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/10/27 11:05:19 tron Exp $
+# $NetBSD: Makefile,v 1.13 1999/10/27 17:14:07 agc Exp $
 #
 
 DISTNAME=	libglade-0.7
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libglade/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.daa.com.au/~james/gnome/
+
+BROKEN=		broken link phase
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
 DEPENDS+=	gnome-libs-*:../../x11/gnome-libs

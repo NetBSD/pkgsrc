@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/10/11 10:54:41 proff Exp $
+# $NetBSD: Makefile,v 1.6 1999/10/27 17:14:03 agc Exp $
 
 DISTNAME=	festvox-tll-2.0
 WRKSRC=		${WRKDIR}/festival
@@ -8,6 +8,8 @@ DISTFILES=	voice_tll_di-2.0.tar.gz
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts
+
+BROKEN=		PLIST errors
 
 DEPENDS+=	festival-1.4.0:../festival \
 		festlex-ogi-2.0:../festlex-ogi
