@@ -1,0 +1,20 @@
+$NetBSD: patch-ce,v 1.1 2004/04/26 07:46:11 agc Exp $
+
+--- libschily/stdio/fgetstr.c	2004/04/26 07:42:03	1.1
++++ libschily/stdio/fgetstr.c	2004/04/26 07:42:22
+@@ -26,7 +26,7 @@
+  */
+ 
+ EXPORT int
+-fgetstr(f, buf, len)
++schily_fgetstr(f, buf, len)
+ 	register	FILE	*f;
+ 			char	*buf;
+ 	register	int	len;
+@@ -60,5 +60,5 @@
+ 	char	*buf;
+ 	int	len;
+ {
+-	return (fgetstr(stdin, buf, len));
++	return (schily_fgetstr(stdin, buf, len));
+ }
