@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1998/02/02 08:59:52 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/06/21 04:29:07 tv Exp $
 bin/tic
 bin/toe
 bin/infocmp
@@ -1881,4 +1881,3 @@ share/terminfo/8/8510
 @dirrm share/terminfo/2
 @dirrm share/terminfo/1
 @dirrm share/terminfo
-@unexec rm -f %D/lib/terminfo
