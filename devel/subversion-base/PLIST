@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/09/29 22:39:50 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/11/29 16:25:17 junyoung Exp $
 bin/svn
 bin/svnadmin
 bin/svndumpfilter
@@ -96,6 +96,10 @@ lib/libsvn_wc-1.so.0
 lib/libsvn_wc-1.so.0.0
 man/man1/svn.1
 man/man1/svnadmin.1
+man/man1/svndumpfilter.1
+man/man1/svnlook.1
+man/man1/svnserve.1
+man/man1/svnversion.1
 share/doc/subversion/INSTALL
 share/examples/subversion/backup/hot-backup.py
 share/examples/subversion/cgi/tweak-log.cgi
