@@ -1,14 +1,14 @@
-# Makefile for:		Mesa
-# Version required:     2.6
+# New packages collection makefile for:	Mesa
+# Version required:     		2.6
 #
-# $NetBSD: Makefile,v 1.12 1998/03/24 22:55:45 tron Exp $
+# $NetBSD: Makefile,v 1.13 1998/03/26 22:54:40 frueauf Exp $
 #
 
 DISTNAME=       MesaLib-2.6
 PKGNAME=	Mesa-2.6
 CATEGORIES=	graphics
 MASTER_SITES= 	ftp://iris.ssec.wisc.edu/pub/Mesa/ \
-		ftp://ftp.fu-berlin.de/unix/X11/graphics/Mesa \
+		ftp://ftp.fu-berlin.de/unix/X11/graphics/Mesa/ \
 		ftp://iris.ssec.wisc.edu/pub/Mesa/old-versions/
 DISTFILES=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX} \
 		MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
