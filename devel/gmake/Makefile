@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/08/19 18:39:16 seb Exp $
+# $NetBSD: Makefile,v 1.31 2002/08/25 21:49:40 jlam Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/make/make.html
 COMMENT=	GNU version of 'make' utility
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--program-prefix="g"
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
@@ -36,6 +36,6 @@ post-install:
 	${CHMOD} g-s ${PREFIX}/bin/gmake
 	${CHGRP} ${BINGRP} ${PREFIX}/bin/gmake
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-bd,v 1.1 2002/08/03 12:27:21 itojun Exp $
+$NetBSD: patch-bd,v 1.2 2002/08/25 21:50:24 jlam Exp $
 
 diff -u1 bgpd/bgp_vty.c /home/itojun/work/zebra/zebra/bgpd/bgp_vty.c
 --- bgpd/bgp_vty.c	Mon Jul  8 22:31:01 2002

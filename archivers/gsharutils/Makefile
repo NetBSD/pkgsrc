@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/02/18 15:14:01 seb Exp $
+# $NetBSD: Makefile,v 1.10 2002/08/25 21:49:04 jlam Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=	http://www.gnu.org/software/sharutils/sharutils.html
 COMMENT=	Allow packing and unpacking of shell archives
 
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK_ONLY=	yes
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS= --program-prefix=g --disable-uucode
 CONFIGURE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}
@@ -22,6 +22,6 @@ TEXINFO_OVERRIDE=	YES
 post-patch:
 	@${TOUCH} ${TOUCH_FLAGS} ${WRKSRC}/po/sharutils.pot
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

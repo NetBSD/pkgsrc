@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2002/05/31 15:19:59 seb Exp $
+# $NetBSD: Makefile.common,v 1.34 2002/08/25 21:50:29 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -285,5 +285,5 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/cpem.doc ${DOCDIR}/${MJC_DRV}
 	${INSTALL_DATA} ${WRKDIR}/${MJC_DRV}/MJ700V2C.FAQ ${DOCDIR}/${MJC_DRV}
 
-.include "../../graphics/png/buildlink.mk"
-.include "../../print/ja-vflib-lib/buildlink.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../print/ja-vflib-lib/buildlink2.mk"
