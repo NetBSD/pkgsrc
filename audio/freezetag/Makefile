@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 13:30:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/15 19:50:01 zuntum Exp $
 #
 
 DISTNAME=	freezetag-0.9.2
@@ -9,8 +9,8 @@ MAINTAINER=	kleink@netbsd.org
 HOMEPAGE=	http://katz.linuxpower.org/freezetag/
 COMMENT=	Id3 tag editor for GTK+-1.2.0 and higher
 
-DEPENDS=	gtk+-1.2.*:../../x11/gtk
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
 
-GNU_CONFIGURE=	yes
-
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
