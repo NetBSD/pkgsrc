@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/17 20:21:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/21 07:06:58 snj Exp $
 #
 
 DISTNAME=	faad2-1.1
@@ -22,6 +22,9 @@ USE_LIBTOOL=		YES
 AUTOMAKE_REQD=		1.4
 AUTOCONF_REQD=		2.50
 GNU_CONFIGURE=		YES
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 pre-configure:
 	for dir in . common/mp4v2 ; do					\
