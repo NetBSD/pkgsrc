@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/01/01 17:11:27 mjl Exp $
+# $NetBSD: Makefile,v 1.24 2000/01/15 17:37:53 hubertf Exp $
 #
 
 DISTNAME=       lynx2-8-2
@@ -24,8 +24,25 @@ CONFIGURE_ENV+=	LIBS="-lm -ltermcap" CPPFLAGS="-Dunix -DNOPORT"
 CONFIGURE_ENV+=	LIBS="-lm -ltermcap" CPPFLAGS=-Dunix
 .endif
 
+# The patches for this code are from the KAME project:
+# ftp://ftp.kame.net/pub/kame/misc/lynx-282-v6-19991008b.diff.gz
+.include "../../mk/bsd.prefs.mk"
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CC+=		-DINET6
+PATCHDIR=	${WRKDIR}/.patches
+.endif
+
+BUILD_DEFS+=	USE_INET6
+
 INSTALL_TARGET= install install-help
 MAKEFILE=       makefile
+
+pre-patch:
+.if defined(USE_INET6) && ${USE_INET6} == YES
+	${MKDIR} ${WRKDIR}/.patches
+	${CP} ${.CURDIR}/patches/patch-* ${WRKDIR}/.patches
+	${CP} ${.CURDIR}/patches.v6/patch-* ${WRKDIR}/.patches
+.endif
 
 post-install:
 	${RM} -rf ${PREFIX}/etc/lynx_doc
