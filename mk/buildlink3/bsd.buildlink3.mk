@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.146 2004/07/29 05:09:29 xtraeme Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.147 2004/08/10 15:16:29 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -867,6 +867,19 @@ BUILDLINK_VARS+=	_BLNK_PHYSICAL_PATH.${_var_}
 .  endif
 .endfor
 
+# Remove -Wl,-R* and *-rpath* if _USE_RPATH == "no".
+# Transform -Wl,-R* and *-rpath* if Sun compilers are used.
+#
+.if defined(_USE_RPATH) && !empty(_USE_RPATH:M[nN][oO])
+_BLNK_TRANSFORM+=       no-rpath
+.endif
+#
+# Remove rpath options that try to add relative paths to the runtime
+# library search path.  This basically partly cleans up after lazy
+# programmers.
+#
+_BLNK_TRANSFORM+=	abs-rpath
+#
 # Transform all references to the physical paths to some important
 # directories into their given names.
 #
@@ -965,19 +978,6 @@ _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 # already protected the ones we care about.
 #
 _BLNK_TRANSFORM+=       r:/
-#
-# Remove -Wl,-R* and *-rpath* if _USE_RPATH == "no".
-# Transform -Wl,-R* and *-rpath* if Sun compilers are used.
-#
-.if defined(_USE_RPATH) && !empty(_USE_RPATH:M[nN][oO])
-_BLNK_TRANSFORM+=       no-rpath
-.endif
-#
-# Remove rpath options that try to add relative paths to the runtime
-# library search path.  This basically partly cleans up after lazy
-# programmers.
-#
-_BLNK_TRANSFORM+=	abs-rpath
 #
 # Undo the protection for the directories that we allow to be specified
 # for the runtime library search path.
