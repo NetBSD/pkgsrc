@@ -1,2 +1,7 @@
-To start the Uptime Client, run the @PREFIX@/etc/rc.d/upclient.sh
+======================================================================
+$NetBSD: MESSAGE,v 1.4 2001/01/29 11:34:38 wiz Exp $
+
+To start the Uptime Client, run the ${PREFIX}/etc/rc.d/upclient
 script either manually or via /etc/rc.local.
+
+======================================================================

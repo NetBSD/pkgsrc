@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2000/09/26 19:59:54 fredb Exp $
+# $NetBSD: Makefile,v 1.85 2001/01/29 11:34:42 wiz Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -147,9 +147,10 @@ ROOT_GROUP?=	wheel
 .endif
 
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 PLIST_SRC=	${WRKDIR}/PLIST
-PLIST_SUBST+=	INSTALL="${INSTALL}" ROOT_GROUP="${ROOT_GROUP}"
+PLIST_SUBST+=	INSTALL="${INSTALL}"		\
+		ROOT_GROUP="${ROOT_GROUP}"
+MESSAGE_SUBST+=	SSH_CONF_DIR="${SSH_CONF_DIR}"
 
 pre-patch:
 	@${MV} -f ${WRKSRC}/make-ssh-known-hosts.pl \
@@ -178,7 +179,7 @@ post-patch:
 
 post-build:
 	@cd ${PKGDIR}; \
-	for FILE in DEINSTALL MESSAGE PLIST ${FILESDIR}/sshd.sh; do \
+	for FILE in DEINSTALL PLIST ${FILESDIR}/sshd.sh; do \
 	  ${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
 	    -e 's#@PREFIX@#${PREFIX}#g' \
 	    <$${FILE} >${WRKDIR}/`basename $${FILE}`; \

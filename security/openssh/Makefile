@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/01/10 16:05:52 tron Exp $
+# $NetBSD: Makefile,v 1.35 2001/01/29 11:34:41 wiz Exp $
 
 DISTNAME=		openssh-2.3.0p1
 CATEGORIES=		security
@@ -48,7 +48,6 @@ BUILD_DEFS+=		SSH_CONF_DIR
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
 
 # matches what's in `Configure' (except sparc64 and alpha, see PR 10984)
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 \
@@ -59,6 +58,8 @@ ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 \
 .include "../../mk/bsd.prefs.mk"
 
 SSH_CONF_DIR?=		/etc
+
+MESSAGE_SUBST+=		SSH_CONF_DIR=${SSH_CONF_DIR}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${SSH_CONF_DIR}
@@ -87,7 +88,6 @@ post-build:
 		${PKGDIR}/DEINSTALL	\
 		${PKGDIR}/INSTALL	\
 		${PKGDIR}/INSTALL.SunOS	\
-		${PKGDIR}/MESSAGE	\
 		${FILESDIR}/sshd.sh;	\
 	do \
 		${SED}	-e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \

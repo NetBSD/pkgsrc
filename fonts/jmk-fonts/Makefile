@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/27 14:52:07 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/29 11:34:27 wiz Exp $
 #
 
 DISTNAME=	jmk-x11-fonts-3.0
@@ -10,10 +10,5 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.ntrnet.net/~jmknoble/fonts/
 
 USE_IMAKE=	yes
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-
-post-build:
-	${SED} -e 's,@PREFIX@,${PREFIX},g' \
-		< ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 .include "../../mk/bsd.pkg.mk"

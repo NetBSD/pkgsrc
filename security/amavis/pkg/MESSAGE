@@ -1,9 +1,9 @@
-$NetBSD: MESSAGE,v 1.3 2000/10/23 14:57:16 rh Exp $
-
 ==========================================================================
+$NetBSD: MESSAGE,v 1.4 2001/01/29 11:34:40 wiz Exp $
+
   AMaViS has now been installed on your system.  In order to integrate
   the virus scanner with sendmail, copy
-  @PREFIX@/share/examples/amavis/amavis.m4 to the 'mailer' sendmail
+  ${PREFIX}/share/examples/amavis/amavis.m4 to the 'mailer' sendmail
   configuration directory.  Then use 'amavis' instead of 'local' for
   local mail delivery.  Alternatively, you can simply replace
 
@@ -16,7 +16,8 @@ Mlocal, P=/usr/libexec/mail.local, F=lsDFMAw5:/|@qrmn9, S=10/30, R=20/40,
   in your installed "sendmail.cf" by
 
 
-Mlocal, P=@PREFIX@/sbin/scanmails, F=lsDFMAw5:/|@qrmn9, S=10/30, R=20/40,
+Mlocal, P=${PREFIX}/sbin/scanmails, F=lsDFMAw5:/|@qrmn9, S=10/30, R=20/40,
 	T=DNS/RFC822/X-Unix,
 	A=scanmails -d $u
+
 ==========================================================================
