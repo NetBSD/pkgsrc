@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/10/30 18:22:35 minskim Exp $
+# $NetBSD: Makefile,v 1.40 2004/10/30 18:28:00 minskim Exp $
 #
 
 .include "Makefile.common"
@@ -24,24 +24,7 @@ LDFLAGS.IRIX+=		-lX11
 LDFLAGS.Darwin+=	-lX11
 
 .include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=            USE_INET6 USE_SOCKS XCHAT_USE_SSL
-
-# IPv6 support
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=        --enable-ipv6
-.endif
-
-# Socks support
-.if defined(USE_SOCKS) && !empty(USE_SOCKS:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=        --enable-socks
-.endif
-
-# SSL support
-.if defined(XCHAT_USE_SSL) && !empty(XCHAT_USE_SSL:M[Yy][Ee][Ss])
-.  include "../../security/openssl/buildlink3.mk"
-CONFIGURE_ARGS+=        --enable-openssl=${SSLBASE}
-.endif
+.include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
