@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:51:16 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/15 17:02:22 agc Exp $
 #
 
 DISTNAME=	ipw-3.3a
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_LOCAL}
