@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/04/01 05:40:52 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2000/04/01 18:53:59 dmcmahill Exp $
 #
 
 DISTNAME=	vipec-2.0.1
@@ -14,7 +14,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes
 
-CONFIGURE_ENV+=		"QTDIR=${X11BASE}/qt2"
+CONFIGURE_ENV+=	"QTDIR=${X11BASE}/qt2" \
+		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
 CONFIGURE_ARGS+=	"--with-qt-dir=${X11BASE}/qt2"
 
 post-extract:
