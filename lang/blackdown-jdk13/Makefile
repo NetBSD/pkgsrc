@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/04/16 12:27:07 manu Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/11 09:15:43 wiz Exp $
 #
 
 DISTNAME=       blackdown-jdk-1.3.0.nb2
@@ -11,7 +11,7 @@ MAINTAINER=     manu@netbsd.org
 HOMEPAGE=       http://linuxppc.org/software/java/j2sdk_files.html
 COMMENT=        Blackdown's Java(tm) Development Kit 1.3.0
 
-DEPENDS+=		 linuxppc_lib>=2000.q4.2:../../emulators/linuxppc_lib
+DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
 
 CONFLICTS=      jdk-* blackdown-j*
 
