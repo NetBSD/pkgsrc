@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tinydns.sh,v 1.2 2004/09/02 08:23:02 schmonz Exp $
+# $NetBSD: tinydns.sh,v 1.3 2004/12/29 16:35:41 schmonz Exp $
 #
 # @PKGNAME@ script to control tinydns (authoritative DNS service)
 #
@@ -9,22 +9,23 @@
 # REQUIRE: SERVERS
 # BEFORE:  DAEMON
 
+name="tinydns"
+
+# User-settable rc.conf variables and their default values:
+tinydns_ip=${tinydns_ip-"127.0.0.2"}
+tinydns_datalimit=${tinydns_datalimit-"300000"}
+tinydns_logcmd=${tinydns_logcmd-"@LOCALBASE@/bin/setuidgid dnslog logger -t nb${name} -p daemon.info"}
+
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
-name="tinydns"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/tinydns/data.cdb"
 command="@LOCALBASE@/bin/${name}"
 start_precmd="tinydns_precmd"
 extra_commands="cdb"
 cdb_cmd="tinydns_cdb"
-
-# User-settable rc.conf variables and their default values:
-tinydns_ip=${tinydns_ip-"127.0.0.2"}
-tinydns_datalimit=${tinydns_datalimit-"300000"}
-tinydns_logcmd=${tinydns_logcmd-"@LOCALBASE@/bin/setuidgid dnslog logger -t nb${name} -p daemon.info"}
 
 tinydns_precmd()
 {
