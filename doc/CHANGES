@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3910 2003/12/03 03:51:49 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3911 2003/12/03 04:59:24 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4730,3 +4730,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libart2 to 2.3.16 [xtraeme 2003-12-03]
 	Updated nautilus to 2.2.3.1nb7 [xtraeme 2003-12-03]
 	Updated bluefish to 0.12 [xtraeme 2003-12-03]
+	Updated etcupdate to 20031112 [martti 2003-12-03]
+	Updated audit-packages to 1.26 [martti 2003-12-03]
