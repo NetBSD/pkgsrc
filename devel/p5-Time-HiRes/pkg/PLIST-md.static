@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST-md.static,v 1.1.1.1 1998/11/26 18:19:50 bad Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Time/HiRes/HiRes.a
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Time/HiRes/extralibs.ld
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Time/HiRes
