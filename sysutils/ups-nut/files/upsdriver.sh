@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: upsdriver.sh,v 1.2 2001/11/21 20:39:40 jlam Exp $
+# $NetBSD: upsdriver.sh,v 1.3 2001/11/21 21:38:55 jlam Exp $
 #
 # PROVIDE: upsdriver
 # REQUIRE: NETWORK syslogd mountcritremote
@@ -16,7 +16,7 @@
 # drivers.  Please refer to nutupsdrv(8) for more information about the
 # arguments to pass to the UPS drivers.
 
-if [ -d /etc/rc.d -a -f /etc/rc.subr ]
+if [ -e /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -24,7 +24,7 @@ fi
 name="upsdriver"
 rcvar=$name
 
-if [ -d /etc/rc.d ]
+if [ -e /etc/rc.subr ]
 then
 	load_rc_config $name
 fi
@@ -44,8 +44,10 @@ else
 	#pidfile="@NUT_STATEDIR@/${upsdriver_type}-${tty}.pid"
 fi
 
-if [ ! -d /etc/rc.d ]
+if [ -e /etc/rc.subr ]
 then
+	run_rc_command "$1"
+else
 	@ECHO@ -n " ${name}"
 	if [ -n "${start_cmd}" ]
 	then
@@ -53,6 +55,4 @@ then
 	else
 		${command} ${upsdriver_flags} ${command_args}
 	fi
-else
-	run_rc_command "$1"
 fi
