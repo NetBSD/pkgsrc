@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.8 2001/05/03 14:31:01 jlam Exp $
+# $NetBSD: Makefile.module,v 1.9 2001/06/21 22:44:03 kim Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
@@ -19,12 +19,12 @@ PHP_MODULE_VERS=	${PHP_BASE_VERS}${PHP_PKG_VERS}
 
 DEPENDS+=		php-${PHP_VERS}:../../www/php4
 
-EXTDIR=			${WRKSRC}/ext/${MODNAME}
+EXTDIR=			${WRKSRC}/ext/${MODNAME:S/-/_/}
 MODULESDIR=		${WRKSRC}/modules
-PLIST_SUBST+=		MODNAME=${MODNAME}
+PLIST_SUBST+=		MODNAME=${MODNAME:S/-/_/}
 
 MESSAGE_SRC=		${.CURDIR}/../../www/php4/pkg/MESSAGE.module
-MESSAGE_SUBST+=		MODNAME=${MODNAME}
+MESSAGE_SUBST+=		MODNAME=${MODNAME:S/-/_/}
 MESSAGE_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
 PLIST_SRC=		${.CURDIR}/../../www/php4/pkg/PLIST.module
@@ -39,5 +39,5 @@ do-install: do-module-install
 
 do-module-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${PHP_EXTENSION_DIR}
-	${INSTALL_DATA} ${MODULESDIR}/${MODNAME}.so			\
+	${INSTALL_DATA} ${MODULESDIR}/${MODNAME:S/-/_/}.so \
 		${PREFIX}/${PHP_EXTENSION_DIR}
