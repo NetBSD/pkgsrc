@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.4 2003/06/04 06:08:44 jlam Exp $
+$NetBSD: patch-an,v 1.5 2004/11/08 16:30:59 adam Exp $
 
 --- config-scripts/cups-directories.m4.orig	Tue Dec 17 10:56:39 2002
 +++ config-scripts/cups-directories.m4
@@ -62,7 +62,7 @@ $NetBSD: patch-an,v 1.4 2003/06/04 06:08:44 jlam Exp $
  
  dnl Set the CUPS_LOCALE directory...
 -case "$uname" in
--	Linux* | *BSD* | Darwin*)
+-	Linux | GNU | *BSD* | Darwin*)
 -		CUPS_LOCALEDIR="$datadir/locale"
 -		AC_DEFINE_UNQUOTED(CUPS_LOCALEDIR, "$datadir/locale")
 -		;;
