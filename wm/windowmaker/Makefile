@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.47 2004/10/03 00:18:23 tv Exp $
+# $NetBSD: Makefile,v 1.48 2004/11/05 11:51:35 adam Exp $
 
-DISTNAME=		WindowMaker-0.80.2
-PKGNAME=		${DISTNAME:S/WindowMaker/windowmaker/}
-PKGREVISION=		4
-CATEGORIES=		x11 wm windowmaker
-MASTER_SITES=		ftp://ftp.windowmaker.org/pub/source/release/ \
-			ftp://ftp.ics.es.osaka-u.ac.jp/mirrors/WindowMaker/source/release/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	WindowMaker-0.91.0
+PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
+CATEGORIES=	x11 wm windowmaker
+MASTER_SITES=	ftp://ftp.windowmaker.org/pub/source/release/ \
+		ftp://ftp.ics.es.osaka-u.ac.jp/mirrors/WindowMaker/source/release/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.windowmaker.org/
-COMMENT=		GNUStep-compliant NEXTSTEP(tm) window manager clone
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.windowmaker.org/
+COMMENT=	GNUStep-compliant NEXTSTEP(tm) window manager clone
 
 BUILD_USES_MSGFMT=	YES
 
@@ -48,10 +47,9 @@ CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 #	kde		enable support for kde/kwm window manager hints
 #	gnome		enable support for GNOME window manager hints
 #	openlook	enable support for OPEN LOOK(tm) window manager hints
-#	lite		remove Window Maker redundancies with KDE and GNOME
-#			(this option is broken in WindowMaker 0.65.x)
-#
-WINDOWMAKER_OPTIONS?=	gnome kde openlook
+#	vdesktop	enable support for virtual desktop.
+
+WINDOWMAKER_OPTIONS?=	gnome kde openlook vdesktop
 
 BUILD_DEFS+=		WINDOWMAKER_OPTIONS
 
@@ -82,11 +80,11 @@ post-install:
 	${TOUCH} ${PREFIX}/share/WindowMaker/Sounds/.directory
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/WindowMaker
 	cd ${WRKSRC}; ${INSTALL_DATA} \
-		README README.GNOME README.KDE README.definable-cursor \
-		FAQ FAQ.I18N \
+		README README.definable-cursor FAQ FAQ.I18N \
 		${PREFIX}/share/doc/WindowMaker
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/hermes/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
