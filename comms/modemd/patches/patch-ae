@@ -1,0 +1,13 @@
+--- incoming/modemd.8.orig	Mon Sep  9 09:02:45 1996
++++ incoming/modemd.8	Tue Mar  3 17:19:07 1998
+@@ -16,7 +16,9 @@
+ modem.  Each instance of
+ .Xr modemd 8
+ initializes its modem to a known
+-state, and then waits either for the modem to report that the
++state, runs ttyaction(3) on the line with the action
++``modemd'', user ``root''
++and then waits either for the modem to report that the
+ telephone line to which it is attached is ringing, or for some process
+ which understands uucico-style tty locking to take the modem for its
+ own use.

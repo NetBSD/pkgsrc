@@ -1,0 +1,14 @@
+--- outgoing/mpoold.8.orig	Tue Sep 10 02:27:44 1996
++++ outgoing/mpoold.8	Tue Mar  3 17:19:07 1998
+@@ -40,6 +40,11 @@
+ .Xr getty 8
+ or similar programs, since it would be easy for an unscrupulous user
+ to set up a trojan horse to answer the modem and collect passwords.
++.Sh BUGS
++.Xr mpoold 8
++should not run
++.Xr ttyaction 3
++on the tty with action ``modemd'', user ``root'', but it does anyway.
+ .Sh DIAGNOSTICS
+ See the documentation for
+ .Xr Mpoold 8
