@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2004/03/26 02:27:38 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2004/04/01 18:25:54 jmmv Exp $
 #
 
-DISTNAME=	libgnomeui-2.4.0.1
-PKGREVISION=	6
+DISTNAME=	libgnomeui-2.6.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -24,7 +23,6 @@ USE_PERL5=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
 
-CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
@@ -47,4 +45,5 @@ post-configure:
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
