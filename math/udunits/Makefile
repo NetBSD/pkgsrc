@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/12/24 17:21:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/24 18:56:08 jmmv Exp $
 
 DISTNAME=		udunits
 PKGNAME=		udunits-1.11.7
@@ -11,9 +11,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.unidata.ucar.edu/packages/udunits/
 COMMENT=		Library and program for manipulating units of physical quantities
 
-UDUNITS_PKGNAME:=	${PKGNAME}
-WRKSRC=			${WRKDIR}/${UDUNITS_PKGNAME}/src
-DIST_SUBDIR=		${UDUNITS_PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
