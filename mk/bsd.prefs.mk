@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.167 2004/09/27 12:00:56 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.168 2004/09/27 12:05:53 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -510,5 +510,10 @@ WRKLOG?=		${WRKDIR}/.work.log
 
 PKG_DEFAULT_OPTIONS?=	# empty
 PKG_OPTIONS?=		# empty
+
+# Wrapper framework definitions
+.if exists(${PKGSRC_TOPDIR}/mk/wrapper/wrapper-defs.mk)
+.  include "${PKGSRC_TOPDIR}/mk/wrapper/wrapper-defs.mk"
+.endif
 
 .endif	# BSD_PKG_MK
