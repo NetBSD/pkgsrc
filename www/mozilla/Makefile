@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2002/07/24 19:45:31 jlam Exp $
+# $NetBSD: Makefile,v 1.94 2002/08/01 06:40:55 jlam Exp $
 
 MOZ_VER=	1.0
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -67,14 +67,9 @@ SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
 SCRIPTS_ENV+=	SETENV=${SETENV}
 
-# mozilla could be built with nathanw's pthread, but doesn't work now
-# so explicity disable pthread support now.
-# if you want to try pthread version of mozilla, remove # before !exists(...)
-.if (${OPSYS} == "NetBSD") # && !exists(/usr/include/pthread.h)
-CONFIGURE_ARGS+= --without-pthreads
-.endif
+PTHREAD_OPTS+=	native
 
-.if  ${MACHINE_ARCH} == "m68k"
+.if ${MACHINE_ARCH} == "m68k"
 DBG=
 .else
 CONFIGURE_ARGS+= --enable-optimize
@@ -97,5 +92,11 @@ post-build:
 
 do-install:
 	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/moz-install
+
+.include "../../mk/pthread.buildlink.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+CONFIGURE_ARGS+= --without-pthreads
+.endif
 
 .include "../../mk/bsd.pkg.mk"
