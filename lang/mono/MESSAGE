@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/02/03 12:30:11 recht Exp $
+
+If you want to use the System.Drawing APIs then you have to install
+graphics/libgdiplus as well.
+
+===========================================================================

@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.2 2003/12/03 17:08:24 recht Exp $
+$NetBSD: patch-ai,v 1.3 2004/02/03 12:30:11 recht Exp $
 
---- configure.orig	2003-11-27 18:35:28.000000000 +0100
-+++ configure	2003-11-27 18:39:04.000000000 +0100
-@@ -1914,7 +1914,7 @@
+--- configure.orig	2004-02-02 23:02:43.000000000 +0100
++++ configure	2004-02-03 11:54:24.000000000 +0100
+@@ -1991,7 +1991,7 @@
  _ACEOF
  
  		libdl=
@@ -11,7 +11,7 @@ $NetBSD: patch-ai,v 1.2 2003/12/03 17:08:24 recht Exp $
  		;;
  	*-*-*freebsd*|*-*-*openbsd*)
  		platform_win32=no
-@@ -1931,7 +1931,7 @@
+@@ -2008,7 +2008,7 @@
  _ACEOF
  
  		libdl=
