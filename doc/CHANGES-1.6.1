@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.34 2003/06/19 01:06:30 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.35 2003/06/19 01:12:01 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -692,3 +692,18 @@ sysutils/mc/patches/patch-aj			1.1 (new)
 	  or TERM=xterm in xterm).  From Pavel Arnost via PR pkg/21539.
 	- add patch from devel/libslang
 	[salo, ticket #1293]
+
+sysutils/mtools/Makefile			1.27
+sysutils/mtools/PLIST				1.3
+sysutils/mtools/distinfo			1.3
+sysutils/mtools/patches/patch-aa		1.6
+sysutils/mtools/patches/patch-ab		1.5
+sysutils/mtools/patches/patch-ad		1.1 (new)
+
+	PKGREVISION++
+	- fix device handling on NetBSD ELF (from Pavel Arnost via PR
+	  pkg/21530)
+	- fix floppyd handling in better and simpler way
+	- don't hardcode -R, use RPATH_FLAG instead
+	- remove unused cruft, style nits
+	[salo, ticket #1294]
