@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2404 2004/11/20 16:25:27 taca Exp $
+$NetBSD: TODO,v 1.2405 2004/11/20 22:46:55 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -1124,9 +1124,6 @@ Suggested package updates
 	o xanalyser-1.24
 	o xanim-2.92.0 [pkg/19934]
 	o xbeeb-0.4.1
-	o xbindkeys-1.7.1
-	o xbindkeys-config-1.7.1
-	o xbindkeys-tk-1.7.1
 	o xblast-2.9.22
 	o xboard-4.2.7
 	o xcb-2.4
