@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/06/05 16:21:44 taca Exp $
+# $NetBSD: Makefile,v 1.37 2004/06/27 16:34:25 adrianp Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		2
@@ -43,7 +43,7 @@ APACHE_GROUP?=	www
 
 SUEXEC_COMMENT?=	"@comment "
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
-APACHE_SUEXEC_DOCROOT?= ${PREFIX}/share/apache/htdocs
+APACHE_SUEXEC_DOCROOT?= ${PREFIX}/share/httpd/htdocs
 APACHE_SUEXEC_PATH=     /bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 			--with-suexec-bin=${PREFIX}/sbin/suexec		\
