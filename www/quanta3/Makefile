@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2004/03/26 02:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/05 11:52:31 markd Exp $
 
 DISTNAME=	quanta-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 COMMENT= 	HTML editor suitable for experienced web developers
 
@@ -13,6 +13,9 @@ USE_PERL5=		build
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=          YES
 USE_LIBTOOL=            YES
+
+REPLACE_PERL=		quanta/data/scripts/TemplateMagic.pl \
+			quanta/data/scripts/dwt.pl
 
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/04/05 11:52:31 markd Exp $
+
+--- kommander/widgets/execbutton.cpp.orig	2004-04-05 13:21:34.000000000 +1200
++++ kommander/widgets/execbutton.cpp
+@@ -83,7 +83,7 @@ void ExecButton::startProcess()
+ 
+ 	if(!at.isEmpty())
+ 	{
+-		KShellProcess *process = new KShellProcess;
++		KShellProcess *process = new KShellProcess ("/bin/sh");
+ 
+ 		*process << at;
+ 
