@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/12/03 16:50:22 wiz Exp $
+
+SHA1 (guile-lib-0.1.2.tar.gz) = 79551b4b78c3deb5ae82d60f1b3ed1f9e32a25ea
+Size (guile-lib-0.1.2.tar.gz) = 404372 bytes
+SHA1 (patch-aa) = 0a7d3eaf4c28e48d338fc9979cf5f3e45b109778
