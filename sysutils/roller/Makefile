@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/04/18 19:02:54 kim Exp $
+# $NetBSD: Makefile,v 1.24 2004/12/03 15:15:10 wiz Exp $
 #
 
 DISTNAME=		roller-1.18
@@ -22,7 +22,7 @@ MAKE_PARAMS+=		GAWK=${AWK}
 MAKE_PARAMS+=		PERL=${PERL5}
 MAKE_PARAMS+=		SH=${SH}
 
-ALL_TARGET=		all ${MAKE_PARAMS}
+BUILD_TARGET=		all ${MAKE_PARAMS}
 INSTALL_TARGET=		install ${MAKE_PARAMS}
 
 .include "../../mk/bsd.pkg.mk"

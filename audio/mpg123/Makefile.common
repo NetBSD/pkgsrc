@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/04/11 17:33:14 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.17 2004/12/03 15:14:51 wiz Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -25,40 +25,40 @@ USE_BUILDLINK3=	yes
 .include "../../mk/compiler.mk"
 .if ${OPSYS} == "SunOS"
 .  if !empty(PKGSRC_COMPILER:Msunpro)
-ALL_TARGET=	solaris
+BUILD_TARGET=	solaris
 .  else
-ALL_TARGET=	solaris-gcc${TARGET_SUFFIX}
+BUILD_TARGET=	solaris-gcc${TARGET_SUFFIX}
 .  endif
 .elif ${OPSYS} == "IRIX"
-ALL_TARGET=	sgi
+BUILD_TARGET=	sgi
 .elif ${OPSYS} == "Linux"
 .  if ${MACHINE_ARCH} == "i386"
-ALL_TARGET=	linux
+BUILD_TARGET=	linux
 .  elif ${MACHINE_ARCH} == "powerpc"
-ALL_TARGET=	linux-ppc
+BUILD_TARGET=	linux-ppc
 .  else
-ALL_TARGET=	${LOWER_OPSYS}-${MACHINE_ARCH}
+BUILD_TARGET=	${LOWER_OPSYS}-${MACHINE_ARCH}
 .  endif
 .elif ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "i386"
 .    if ${OBJECT_FMT} == "ELF"
-ALL_TARGET=	netbsd-i386-elf${TARGET_SUFFIX}
+BUILD_TARGET=	netbsd-i386-elf${TARGET_SUFFIX}
 .    else
-ALL_TARGET=	netbsd-i386${TARGET_SUFFIX}
+BUILD_TARGET=	netbsd-i386${TARGET_SUFFIX}
 .    endif # ELF
 .  elif ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 .    if defined(MPG123_ARM_FIXED64) && ${MPG123_ARM_FIXED64} == "YES"
-ALL_TARGET=	netbsd-arm-64${TARGET_SUFFIX}
+BUILD_TARGET=	netbsd-arm-64${TARGET_SUFFIX}
 .    else
-ALL_TARGET=	netbsd-arm${TARGET_SUFFIX}
+BUILD_TARGET=	netbsd-arm${TARGET_SUFFIX}
 .    endif # MPG123_ARM_FIXED64
 .  elif ${MACHINE_ARCH} == "m68k"
-ALL_TARGET=	netbsd-m68k${TARGET_SUFFIX}
+BUILD_TARGET=	netbsd-m68k${TARGET_SUFFIX}
 .  else
-ALL_TARGET=	netbsd
+BUILD_TARGET=	netbsd
 .  endif
 .else
-ALL_TARGET=	${LOWER_OPSYS}${TARGET_SUFFIX}
+BUILD_TARGET=	${LOWER_OPSYS}${TARGET_SUFFIX}
 .endif
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"

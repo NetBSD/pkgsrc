@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/06/05 23:31:38 recht Exp $
+# $NetBSD: Makefile,v 1.16 2004/12/03 15:14:50 wiz Exp $
 
 DISTNAME=       freeze-2.5
 PKGREVISION=	2
@@ -12,7 +12,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
-ALL_TARGET=	prog
+BUILD_TARGET=	prog
 
 # Allow "melting" freeze-1.0-format archives.
 CFLAGS+=	-DCOMPAT=1

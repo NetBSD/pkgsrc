@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/07 11:53:04 rh Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/03 15:15:06 wiz Exp $
 #
 
 DISTNAME=	nslint-2.0.2
@@ -10,7 +10,7 @@ HOMEPAGE=	http://ee.lbl.gov/ftp.html
 COMMENT=	Perform consistency checks on DNS zone files
 
 GNU_CONFIGURE=	YES
-ALL_TARGET=	nslint
+BUILD_TARGET=	nslint
 INSTALL_TARGET=	install install-man
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:18:22 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/12/03 15:15:11 wiz Exp $
 
 DISTNAME=	plan-1.8.4
 PKGREVISION=	1
@@ -12,12 +12,12 @@ COMMENT=	Schedule planner based on X/Motif
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
-ALL_TARGET=	${LOWER_OPSYS}
+BUILD_TARGET=	${LOWER_OPSYS}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "IRIX"
-ALL_TARGET=	${LOWER_VENDOR}${OS_VERSION:C/.[0-9]//}
+BUILD_TARGET=	${LOWER_VENDOR}${OS_VERSION:C/.[0-9]//}
 .endif
 
 .include "../../mk/compiler.mk"

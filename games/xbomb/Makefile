@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/14 12:28:02 adam Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/03 15:14:58 wiz Exp $
 
 DISTNAME=	xbomb-2.1a
 CATEGORIES=	games x11
@@ -14,7 +14,7 @@ COMMENT=	Square, hexagonal, and triangual minesweeper clone
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
-ALL_TARGET=		xbomb
+BUILD_TARGET=		xbomb
 MAKE_ENV+=		SCORE_PATH="${SCORE_PATH}"
 
 SCORE_PATH=	${VARBASE}/games/xbomb

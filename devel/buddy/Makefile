@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/31 00:04:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/03 15:14:54 wiz Exp $
 #
 
 DISTNAME=	buddy22
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.itu.dk/research/buddy/
 COMMENT=	Library for binary decision diagrams
 
 MAKEFILE=	makefile
-ALL_TARGET=	buddy
+BUILD_TARGET=	buddy
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/libbdd.a ${PREFIX}/lib

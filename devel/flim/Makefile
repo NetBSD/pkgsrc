@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/09/12 19:03:15 kristerw Exp $
+# $NetBSD: Makefile,v 1.16 2004/12/03 15:14:54 wiz Exp $
 
 DISTNAME=	flim-1.14.6
 PKGREVISION=	1
@@ -16,10 +16,10 @@ DEPENDS+=	${PKGNAME_PREFIX}apel>=9.22:../../devel/apel
 BUILD_DEPENDS+=	qkc-*:../../converters/qkc
 
 .if ${EMACS_FLAVOR} == "emacs"
-ALL_TARGET=     elc
+BUILD_TARGET=     elc
 INSTALL_TARGET= install
 .else   # ${EMACS_FLAVOR} == "xemacs"
-ALL_TARGET=     package
+BUILD_TARGET=     package
 INSTALL_TARGET= install-package
 MAKEFLAGS+=     PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 .endif

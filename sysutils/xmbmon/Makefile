@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/11/22 20:15:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:10 wiz Exp $
 #
 
 .include "../../sysutils/mbmon/Makefile.common"
@@ -9,7 +9,7 @@ COMMENT=	X11-based motherboard monitoring utility
 
 USE_X11=	yes
 
-ALL_TARGET=	xmbmon
+BUILD_TARGET=	xmbmon
 
 LDFLAGS+=	-Wl,-R${X11BASE}/lib
 

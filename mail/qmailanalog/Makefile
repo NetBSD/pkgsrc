@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/22 00:28:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:02 wiz Exp $
 #
 
 DISTNAME=		qmailanalog-0.70
@@ -11,7 +11,7 @@ COMMENT=		Collection of tools to help analyze qmail's activity
 
 USE_BUILDLINK3=		yes
 
-ALL_TARGET=		it
+BUILD_TARGET=		it
 INSTALL_TARGET=		setup check
 
 RESTRICTED=		"modified source and binaries may not be distributed"

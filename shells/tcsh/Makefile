@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/05/19 17:42:35 kim Exp $
+# $NetBSD: Makefile,v 1.47 2004/12/03 15:15:09 wiz Exp $
 #
 
 DISTNAME=	tcsh-6.13.00
@@ -16,7 +16,7 @@ CONFLICTS=	static-tcsh-[0-9]*
 USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 GNU_CONFIGURE=	yes
-ALL_TARGET=	all catalogs
+BUILD_TARGET=	all catalogs
 INSTALL_TARGET=	install install.man
 
 NLSDIR=		share/nls

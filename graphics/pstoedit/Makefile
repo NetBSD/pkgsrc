@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/11/13 22:04:53 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/12/03 15:14:59 wiz Exp $
 
 DISTNAME=	pstoedit_3_31
 PKGNAME=	pstoedit-3.31
@@ -27,7 +27,7 @@ CONFIGURE_ENV+=	LDLIBS="${X11_LDFLAGS}"
 CONFIGURE_ENV+=	AWK=${AWK} GS=${LOCALBASE}/bin/gs
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=--libdir=${PREFIX}/lib/pstoedit	# plugin dir -- unused for now
-ALL_TARGET=
+BUILD_TARGET=
 
 LIBS.SunOS+=	-ldl
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/11/19 11:05:54 adam Exp $
+# $NetBSD: Makefile,v 1.25 2004/12/03 15:14:59 wiz Exp $
 
 DISTNAME=	pl230src
 PKGNAME=	ploticus-2.30
@@ -14,7 +14,7 @@ NO_CONFIGURE=		yes
 USE_X11=		yes
 USE_BUILDLINK3=		yes
 
-ALL_TARGET=	ploticus
+BUILD_TARGET=	ploticus
 MANSRC=		${WRKDIR}/${DISTNAME}/man
 PREFABSRC=	${WRKDIR}/${DISTNAME}/prefabs
 

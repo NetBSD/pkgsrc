@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2004/12/03 15:15:09 wiz Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -25,7 +25,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 WRKSRC=			${WRKDIR}
-ALL_TARGET=		cleandir depend all
+BUILD_TARGET=		cleandir depend all
 DIST_SUBDIR=		${PKGNAME}
 INSTALL_TARGET=		dirs includes install
 MANCOMPRESSED_IF_MANZ=	YES

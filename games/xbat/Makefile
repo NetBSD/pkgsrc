@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/03 15:14:58 wiz Exp $
 # FreeBSD Id: ports/games/xbat/Makefile,v 1.5 1999/08/25 06:04:41 obrien Exp
 
 DISTNAME=	xev111
@@ -18,6 +18,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/Xev111
 USE_IMAKE=	yes
-ALL_TARGET=	xbat
+BUILD_TARGET=	xbat
 
 .include "../../mk/bsd.pkg.mk"

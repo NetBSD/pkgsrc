@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/11/28 15:15:30 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/03 15:15:01 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME:S/smalleiffel/se/}
@@ -14,7 +14,7 @@ HOMEPAGE=	http://smalleiffel.loria.fr/
 COMMENT=	GNU Eiffel compiler
 
 MAKE_ENV+=	SmallEiffel=${WRKSRC}/sys/system.se
-ALL_TARGET=	./bin/compile_to_c
+BUILD_TARGET=	./bin/compile_to_c
 
 WRKSRC=		${WRKDIR}/SmallEiffel
 DOCDIR=		${PREFIX}/share/doc/html/smalleiffel

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/04/12 04:39:59 snj Exp $
+# $NetBSD: Makefile,v 1.24 2004/12/03 15:14:57 wiz Exp $
 #
 
 DISTNAME=		angband-283
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK3=		yes
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 MAKEFILE=		Makefile.std
-ALL_TARGET=		angband
+BUILD_TARGET=		angband
 
 SPOILERFILE=		angband-spoilers.tar.gz
 

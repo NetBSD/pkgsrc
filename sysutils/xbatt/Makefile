@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/04/18 23:03:03 snj Exp $
+# $NetBSD: Makefile,v 1.16 2004/12/03 15:15:10 wiz Exp $
 #
 
 DISTNAME=	xbatt-1.3pr1
@@ -18,7 +18,7 @@ PKG_SKIP_REASON=	"APM is not available for ${MACHINE_PLATFORM}"
 WRKSRC=		${WRKDIR}/xbatt-1.3
 USE_BUILDLINK3=	YES
 USE_IMAKE=	YES
-ALL_TARGET=	xbatt
+BUILD_TARGET=	xbatt
 
 post-install:
 		${INSTALL_DATA} ${FILESDIR}/XBatt ${X11PREFIX}/lib/X11/app-defaults/XBatt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/29 12:55:35 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/03 15:14:50 wiz Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/08/10 22:31:19 fenner Exp
 #
 
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	yes
 
 MAKEFILE=       makefile.nix
-ALL_TARGET=     ha
+BUILD_TARGET=     ha
 USE_GNU_TOOLS+=	make
 
 do-install:

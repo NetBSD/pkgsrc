@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/11 17:31:50 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/03 15:15:04 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/02 08:39:12 obrien Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/console/}
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Run two shells in a split window/terminal
 
-ALL_TARGET=
+BUILD_TARGET=
 CONFIGURE_SCRIPT=	./Configure
 HAS_CONFIGURE=		yes
 USE_BUILDLINK3=		yes

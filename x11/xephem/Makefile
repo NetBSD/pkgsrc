@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/10/03 00:18:39 tv Exp $
+# $NetBSD: Makefile,v 1.28 2004/12/03 15:15:13 wiz Exp $
 
 DISTNAME=	xephem-3.5.2
 PKGREVISION=	2
@@ -19,7 +19,7 @@ PERL_SCRIPTS=	astorb2edb.pl mpcorb2edb.pl
 
 LIBSRC1=	${WRKDIR}/${DISTNAME}/libastro
 LIBSRC2=	${WRKDIR}/${DISTNAME}/libip
-ALL_TARGET=	# empty
+BUILD_TARGET=	# empty
 BUILD_DIRS=	${LIBSRC1} ${LIBSRC2} ${WRKSRC}
 INSTALL_DIRS=	${WRKSRC}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/05/29 12:00:28 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2004/12/03 15:14:51 wiz Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/08/10 22:31:36 fenner Exp
 #
 
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 
-ALL_TARGET=     bsdansi
+BUILD_TARGET=     bsdansi
 MAKEFILE=       makefile
 
 INSTALLATION_DIRS=	bin man/man1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/18 07:17:27 snj Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/03 15:15:06 wiz Exp $
 #
 
 DISTNAME=	upclient-4.2.1.23
@@ -13,7 +13,7 @@ COMMENT=	Keeps track of your server uptime, and compares it to other hosts
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
-ALL_TARGET=	bsd
+BUILD_TARGET=	bsd
 
 EGDIR=		${PREFIX}/share/examples/upclient
 CONF_FILES=	${EGDIR}/upclient.conf ${PKG_SYSCONFDIR}/upclient.conf

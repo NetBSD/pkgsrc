@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/29 18:59:25 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 15:14:54 wiz Exp $
 #
 
 DISTNAME=	nbitools-R6.3
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 
-ALL_TARGET=	World
+BUILD_TARGET=	World
 MAKE_ENV+=	GCCCMD=gcc
 
 post-patch:

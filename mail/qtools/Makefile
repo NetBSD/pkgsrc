@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/08/22 00:23:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/03 15:15:02 wiz Exp $
 #
 
 DISTNAME=	qtools-0.56
@@ -14,7 +14,7 @@ DEPENDS+=	qmail>=1.03:../../mail/qmail
 
 USE_BUILDLINK3=	yes
 
-ALL_TARGET=	it
+BUILD_TARGET=	it
 INSTALL_TARGET=	setup check
 
 do-configure:

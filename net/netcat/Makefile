@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/26 04:47:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2004/12/03 15:15:05 wiz Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -28,7 +28,7 @@ NC_TARGET.${OPSYS}?=	${LOWER_OPSYS}
 NC_TARGET.IRIX=		irix
 NC_TARGET.Interix=	netbsd
 NC_TARGET.OpenBSD=	netbsd
-ALL_TARGET=		${NC_TARGET.${OPSYS}}
+BUILD_TARGET=		${NC_TARGET.${OPSYS}}
 
 EXTRA_PROGS=	data rservice xor
 EXAMPLE_DIR=	share/examples/nc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2004/11/13 22:04:53 jlam Exp $
+# $NetBSD: Makefile.common,v 1.48 2004/12/03 15:15:12 wiz Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+= --disable-tests \
 		--enable-crypto
 
 SHAREMODE?=	644
-ALL_TARGET=	# empty
+BUILD_TARGET=	# empty
 
 AUTOCONF_REQD= 2.13
 

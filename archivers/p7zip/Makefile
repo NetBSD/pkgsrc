@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/11/23 14:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:50 wiz Exp $
 #
 
 DISTNAME=		p7zip_4.12_src
@@ -23,7 +23,7 @@ PTHREAD_OPTS+=		require
 # compiles, but does not recognize any archives as supported
 DYNAMIC_7Z=		NO
 .if !empty(DYNAMIC_7Z:MYES)
-ALL_TARGET=		all2
+BUILD_TARGET=		all2
 PLIST_SUBST+=		DYNAMIC_7Z=""
 .else
 PLIST_SUBST+=		DYNAMIC_7Z="@comment "

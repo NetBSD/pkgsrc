@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/26 02:27:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/03 15:14:56 wiz Exp $
 
 DISTNAME=	mmix-20030622
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Simulators for Knuth's MMIX RISC architecture
 BUILD_DEPENDS+= cweb-[0-9]*:../../devel/cweb
 
 WRKSRC=		${WRKDIR}
-ALL_TARGET=	all doc
+BUILD_TARGET=	all doc
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} abstime mmix mmixal 		\

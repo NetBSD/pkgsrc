@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/11/23 02:42:10 tv Exp $
+# $NetBSD: Makefile,v 1.31 2004/12/03 15:14:51 wiz Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -20,7 +20,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
-ALL_TARGET=	zip zipcloak
+BUILD_TARGET=	zip zipcloak
 
 USE_BUILDLINK3=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/11/25 05:01:21 kim Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:06 wiz Exp $
 #
 
 DISTNAME=	netname-1.7
@@ -11,9 +11,9 @@ COMMENT=	Return the canonical network name of a host
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-ALL_TARGET=	svr4
+BUILD_TARGET=	svr4
 .else
-ALL_TARGET=	netname
+BUILD_TARGET=	netname
 .endif
 INSTALL_TARGET=	inst-all
 

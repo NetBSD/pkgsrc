@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/11/13 22:04:53 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/12/03 15:15:07 wiz Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -19,7 +19,7 @@ CONFLICTS+=	omega<0.90.4nb1
 
 WRKSRC=			${WRKDIR}/teTeX-1.0
 DIST_SUBDIR=		teTeX
-ALL_TARGET=		all
+BUILD_TARGET=		all
 INSTALL_TARGET=		install strip
 
 USE_BUILDLINK3=		yes

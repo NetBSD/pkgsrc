@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 00:13:17 tv Exp $
+# $NetBSD: Makefile,v 1.31 2004/12/03 15:14:52 wiz Exp $
 #
 
 DISTNAME=       uudeview-0.5.20
@@ -19,7 +19,7 @@ USE_BUILDLINK3= yes
 GNU_CONFIGURE=	# defined
 USE_LIBTOOL=	# defined
 
-ALL_TARGET=	libuu.la
+BUILD_TARGET=	libuu.la
 
 DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 		doc/library.ltx doc/structure.fig doc/td-v1.c doc/td-v2.c \

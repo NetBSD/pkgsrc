@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:12:57 tv Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/03 15:15:03 wiz Exp $
 # FreeBSD Id: ports/math/eukleides/Makefile,v 1.1 2002/06/04 18:40:20 ijliao Exp
 
 DISTNAME=	xeukleides.0.9.0
@@ -17,7 +17,7 @@ DEPENDS+=	eukleides>=0.9.0:../../math/eukleides
 USE_BUILDLINK3=	yes
 USE_MAKEINFO=	yes
 USE_X11BASE=	yes
-ALL_TARGET=	xeukleides
+BUILD_TARGET=	xeukleides
 USE_GNU_TOOLS+=	make
 
 .include "../../x11/gtk/buildlink3.mk"

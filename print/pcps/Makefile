@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/07/24 22:40:49 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/12/03 15:15:07 wiz Exp $
 #
 
 DISTNAME=	pcps840
@@ -12,7 +12,7 @@ COMMENT=	Converts text files to PostScript(tm)
 
 WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
-ALL_TARGET=
+BUILD_TARGET=
 MAKE_ENV+=	"CC=${CC} ${CFLAGS} -DUNIX"
 NO_CONFIGURE=	yes
 

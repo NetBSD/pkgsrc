@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/08/03 04:35:42 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/12/03 15:15:07 wiz Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		3
@@ -15,7 +15,7 @@ NO_EXPORT_CPP=		YES
 
 CRYPTO=			# defined
 
-ALL_TARGET=		cfs
+BUILD_TARGET=		cfs
 INSTALL_TARGET=		install_cfs
 
 # Avoid conflicts with coda-client's cpasswd by consistently renaming
@@ -100,7 +100,7 @@ pre-build:
 
 do-build:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
-		${SH} ${CFS_BUILD_SCRIPT} ${ALL_TARGET}
+		${SH} ${CFS_BUILD_SCRIPT} ${BUILD_TARGET}
 
 post-install:
 	cd ${WRKSRC}; for file in *.1; do				\

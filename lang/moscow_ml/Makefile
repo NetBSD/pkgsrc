@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/04/24 22:46:10 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/12/03 15:15:01 wiz Exp $
 
 DISTNAME=       mos20src
 PKGNAME=        moscow_ml-2.00
@@ -14,7 +14,7 @@ COMMENT=	Moscow ML, a version of Standard ML
 WRKSRC=		${WRKDIR}/mosml/src
 USE_PERL5=	build
 
-ALL_TARGET=	clean world
+BUILD_TARGET=	clean world
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/moscow_ml

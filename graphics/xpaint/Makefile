@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/11/03 15:54:31 adam Exp $
+# $NetBSD: Makefile,v 1.42 2004/12/03 15:14:59 wiz Exp $
 
 DISTNAME=       xpaint-2.7.2
 CATEGORIES=	graphics x11
@@ -13,7 +13,7 @@ USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 USE_IMAKE=      YES
 
-ALL_TARGET=	xaw95static
+BUILD_TARGET=	xaw95static
 MAKE_ENV+=	XMKMF="${XMKMF}"
 
 SUBST_CLASSES=	    foo

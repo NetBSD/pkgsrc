@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/11/13 21:28:27 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/03 15:14:52 wiz Exp $
 
 DISTNAME=	estic-1.61
 CATEGORIES=	comms
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
 USE_BUILDLINK3=	yes
 USE_X11=	# defined
 
-ALL_TARGET=	depend all
+BUILD_TARGET=	depend all
 ESTICPATCH=	${DISTNAME}-patch-from-1.60${EXTRACT_SUFX}
 LIB_TARGET=	depend lib
 LIBSRC=		${WRKDIR}/spunk

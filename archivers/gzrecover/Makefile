@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:04 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/03 15:14:50 wiz Exp $
 #
 
 DISTNAME=		gzrt-0.2
@@ -13,7 +13,7 @@ COMMENT=		GZip Recovery Toolkit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-ALL_TARGET=		gzrecover
+BUILD_TARGET=		gzrecover
 USE_BUILDLINK3=		yes
 
 INSTALLATION_DIRS=	bin

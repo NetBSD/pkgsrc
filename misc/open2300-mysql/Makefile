@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/10 08:21:21 martin Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/03 15:15:04 wiz Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-mysql-/}
@@ -7,7 +7,7 @@ COMMENT=	WS 23xx weather station MySQL support
 PATCHDIR=	${.CURDIR}/../open2300/patches
 DISTINFO_FILE=	${.CURDIR}/../open2300/distinfo
 
-ALL_TARGET=	mysql2300
+BUILD_TARGET=	mysql2300
 INSTALL_TARGET=	install-mysql
 
 USE_BUILDLINK3=yes

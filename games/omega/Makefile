@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/10/03 00:14:46 tv Exp $
+# $NetBSD: Makefile,v 1.25 2004/12/03 15:14:57 wiz Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -12,7 +12,7 @@ COMMENT=	Complex rogue-like game of exploration with a sense of humor
 
 WRKSRC=			${WRKDIR}/omega
 USE_BUILDLINK3=		yes
-ALL_TARGET=		# empty
+BUILD_TARGET=		# empty
 
 .include "../../mk/bsd.prefs.mk"
 

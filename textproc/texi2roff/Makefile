@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/12/24 09:53:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:11 wiz Exp $
 
 DISTNAME=		texi2roff-2.0
 CATEGORIES=		textproc
@@ -8,7 +8,7 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://texinfo.org/texi2roff/
 COMMENT=		Texinfo-to-ROFF direct translator
 
-ALL_TARGET=
+BUILD_TARGET=
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/texi2roff ${PREFIX}/bin

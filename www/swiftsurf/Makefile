@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/03 15:15:12 wiz Exp $
 
 DISTNAME=		swiftsurf-1.2.5
 PKGREVISION=	1
@@ -13,10 +13,10 @@ USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
-ALL_TARGET=	nat
+BUILD_TARGET=	nat
 SWIFT=		swift.opt
 .else
-ALL_TARGET=	byte
+BUILD_TARGET=	byte
 SWIFT=		swift
 .endif
 
@@ -27,7 +27,7 @@ do-configure:
 	done
 
 do-build:
-	cd ${WRKSRC}/src && ${GMAKE} ${ALL_TARGET}
+	cd ${WRKSRC}/src && ${GMAKE} ${BUILD_TARGET}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${SWIFT} ${PREFIX}/bin/swiftsurf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/23 04:41:00 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/03 15:14:59 wiz Exp $
 
 PKGNAME=	aalib-x11-${BASE_VERS}
 CATEGORIES+=	x11
@@ -11,7 +11,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 USE_X11=		# defined
 
-ALL_TARGET=		libaa-x11.la
+BUILD_TARGET=		libaa-x11.la
 INSTALL_TARGET=		install-libLTLIBRARIES
 
 INSTALLATION_DIRS=	bin include lib
@@ -35,7 +35,7 @@ post-patch:
 
 do-build:
 	cd ${WRKSRC}/src; ${SETENV} ${MAKE_ENV}				\
-		${MAKE_PROGRAM} -f ${MAKEFILE} ${ALL_TARGET}
+		${MAKE_PROGRAM} -f ${MAKEFILE} ${BUILD_TARGET}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/aalib-config ${PREFIX}/bin/aalib-x11-config

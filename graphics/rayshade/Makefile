@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:42:39 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/03 15:14:59 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/05/26 04:04:11 mph Exp
 #
 
@@ -18,7 +18,7 @@ DEPENDS+=	urt>=3.1b1nb1:../../graphics/urt
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	< ${WRKDIR}/config.ans
-ALL_TARGET=
+BUILD_TARGET=
 
 pre-configure:
 	${SED} -e 's|@CFLAGS@|${CFLAGS}|g' 			\

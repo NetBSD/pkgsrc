@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/07/22 17:04:28 drochner Exp $
+# $NetBSD: Makefile,v 1.29 2004/12/03 15:15:12 wiz Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp
 
@@ -27,7 +27,7 @@ DIST_SUBDIR=		openmotif
 USE_X11BASE=		yes
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
-ALL_TARGET=		World
+BUILD_TARGET=		World
 USE_TBL=		yes
 
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:19:16 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/12/03 15:15:00 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 2000/04/12 06:18:03 obrien Exp
 
 DISTNAME=	cu-prolog-3.94
@@ -12,7 +12,7 @@ COMMENT=	Experimental constraint logic programming language
 WRKSRC=		${WRKDIR}/src
 DIST_SUBDIR=	${DISTNAME}
 MAKEFILE=	makefile
-ALL_TARGET=	cup
+BUILD_TARGET=	cup
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cup3 ${PREFIX}/bin/cuprolog

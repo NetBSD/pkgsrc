@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/05/23 20:58:42 danw Exp $
+# $NetBSD: Makefile,v 1.15 2004/12/03 15:15:13 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}
 USE_X11BASE=	yes
 USE_BUILDLINK3=	yes
 MAKEFILE=	makefile
-ALL_TARGET=	pns
+BUILD_TARGET=	pns
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/xpns

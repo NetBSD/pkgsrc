@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:22:18 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:05 wiz Exp $
 #
 
 DISTNAME=		bounce-0.0
@@ -12,7 +12,7 @@ WRKSRC=			${WRKDIR}/bounce
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-ALL_TARGET=		bounce
+BUILD_TARGET=		bounce
 
 post-install:
 	strip ${PREFIX}/bin/bounce

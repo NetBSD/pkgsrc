@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/10/28 10:32:23 gavan Exp $
+# $NetBSD: Makefile,v 1.31 2004/12/03 15:15:13 wiz Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -12,7 +12,7 @@ CONFIGURE_ARGS+=	-I${QTDIR}/include \
 
 BUILD_QT3=		yes
 UNLIMIT_RESOURCES=	datasize
-ALL_TARGET=		sub-tools
+BUILD_TARGET=		sub-tools
 
 do-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/bin/uic ${QTPREFIX}/bin

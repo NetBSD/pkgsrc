@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/26 15:32:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/03 15:15:12 wiz Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -22,7 +22,7 @@ QTPREFIX=${PREFIX}/qt1
 
 MAKE_ENV=	QTDIR=${WRKSRC} QTPREFIX=${QTPREFIX}
 MAKE_ENV+=	CXXOPTS="${CFLAGS}"
-ALL_TARGET=	src
+BUILD_TARGET=	src
 
 .include "../../mk/bsd.prefs.mk"
 

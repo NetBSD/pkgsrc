@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:12:53 tv Exp $
+# $NetBSD: Makefile,v 1.12 2004/12/03 15:15:02 wiz Exp $
 
 DISTNAME=	milter-greylist-1.4
 PKGREVISION=	1
@@ -17,7 +17,7 @@ HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-user=smmsp
 CONFIGURE_ARGS+=--with-libspf_alt=${PREFIX}
 CONFIGURE_ARGS+=--prefix=${PREFIX}
-ALL_TARGET=	milter-greylist
+BUILD_TARGET=	milter-greylist
 
 PKG_GROUPS=	smmsp
 PKG_USERS=	smmsp:smmsp::Sendmail\\ Message\\ Submission\\ Program

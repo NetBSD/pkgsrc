@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/21 17:24:11 martti Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/03 15:15:09 wiz Exp $
 #
 
 DISTNAME=		cpogm-1.0
@@ -11,7 +11,7 @@ COMMENT=		Copy owner, group and mode of a file
 USE_PERL5=		yes
 
 NO_CONFIGURE=		yes
-ALL_TARGET=		all PREFIX=${PREFIX}
+BUILD_TARGET=		all PREFIX=${PREFIX}
 INSTALL_TARGET=		install PREFIX=${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/06/26 19:17:33 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/03 15:15:08 wiz Exp $
 #
 
 DISTNAME=	john-1.6
@@ -20,17 +20,17 @@ NO_CONFIGURE=	# defined
 .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
 .  if !empty(CC_VERSION:MSun)
 .    if defined(SPARC_TARGET_ARCH) && ${SPARC_TARGET_ARCH} == "sparcv9"
-ALL_TARGET=	solaris-sparc-v9-cc
+BUILD_TARGET=	solaris-sparc-v9-cc
 .    else
-ALL_TARGET=	solaris-sparc-v8-cc
+BUILD_TARGET=	solaris-sparc-v8-cc
 .    endif
 .  else
-ALL_TARGET=	solaris-sparc-gcc
+BUILD_TARGET=	solaris-sparc-gcc
 .  endif
 .elif ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "i386"
-ALL_TARGET=	solaris-x86-any
+BUILD_TARGET=	solaris-x86-any
 .else
-ALL_TARGET=	generic
+BUILD_TARGET=	generic
 .endif
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:14:41 tv Exp $
+# $NetBSD: Makefile,v 1.22 2004/12/03 15:14:56 wiz Exp $
 #
 
 DISTNAME=		zsnes136src
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-ALL_TARGET=		zsnes
+BUILD_TARGET=		zsnes
 
 WRKSRC=			${WRKDIR}/zsnes-1.36/src
 GNU_CONFIGURE=		# defined

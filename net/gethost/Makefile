@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/16 20:26:10 reed Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/03 15:15:05 wiz Exp $
 
 DISTNAME=	gethost-0.03
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	Hostname and IP resolver for testing /etc/hosts and nsswitch.conf
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 INSTALLATION_DIRS=	bin man/man1
-ALL_TARGET=	gethost
+BUILD_TARGET=	gethost
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gethost ${PREFIX}/bin

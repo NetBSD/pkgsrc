@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/12 19:54:51 recht Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:11 wiz Exp $
 #
 
 DISTNAME=	igerman98-20030222
@@ -13,7 +13,7 @@ COMMENT=	German dictionary for interactive spelling checker
 
 DEPENDS+=	ispell-base>=3.1.20nb1:../../textproc/ispell-base
 
-ALL_TARGET=	german.hash
+BUILD_TARGET=	german.hash
 USE_GNU_TOOLS+=	make
 USE_PERL5=	build
 REPLACE_PERL=	bin/dic2iso.pl bin/grepl bin/sq.pl bin/myspellfixprefix.pl \

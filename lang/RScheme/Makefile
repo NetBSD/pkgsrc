@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/10/03 00:14:59 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/12/03 15:15:00 wiz Exp $
 
 DISTNAME=		rs-0.7.3.2
 PKGNAME=		RScheme-0.7.3.2
@@ -12,7 +12,7 @@ COMMENT=		Object-oriented Scheme implementation
 
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
-ALL_TARGET=		base
+BUILD_TARGET=		base
 AUTOMAKE_OVERRIDE=	NO
 
 NOT_FOR_PLATFORM=       *-*-alpha
@@ -51,7 +51,7 @@ do-configure:
 				--enable-readline --enable-dynamic-linking
 
 do-build:
-	@cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE} ${ALL_TARGET}
+	@cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE} ${BUILD_TARGET}
 
 do-install:
 	cd ${WRKSRC}/src && \
