@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2004/02/14 17:21:40 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/06 23:43:47 snj Exp $
 #
 
 DISTNAME=		asc-source-1.13.8.0
 PKGNAME=		${DISTNAME:S/-source//}
-PKGREVISION=				2
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=asc-hq/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${AUDIO_FILES}
@@ -16,11 +16,12 @@ AUDIO_FILES=		frontiers.mp3 machine_wars.mp3 time_to_strike.mp3
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
+CPPFLAGS.NetBSD+=		-D_UNICODE_BROKEN_
 
 # ../weaponguide.cpp:1205: virtual memory exhausted
 UNLIMIT_RESOURCES=	datasize
@@ -30,9 +31,10 @@ post-extract:
 	${CP} ${DISTDIR}/${fil} ${WRKSRC}/data/music
 .endfor
 
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../devel/SDLmm/buildlink2.mk"
-.include "../../devel/smpeg/buildlink2.mk"
-.include "../../graphics/SDL_image/buildlink2.mk"
-.include "../../x11/paragui/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/SDLmm/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../devel/smpeg/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../x11/paragui/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
