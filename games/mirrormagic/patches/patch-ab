@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 1998/11/09 21:20:18 garbled Exp $
+$NetBSD: patch-ab,v 1.2 2000/12/05 00:34:33 wiz Exp $
 --- sound.h.orig	Mon Nov  9 12:36:49 1998
 +++ sound.h	Mon Nov  9 12:35:46 1998
 @@ -29,6 +29,14 @@
@@ -8,8 +8,8 @@ $NetBSD: patch-ab,v 1.1 1998/11/09 21:20:18 garbled Exp $
 +#ifdef __NetBSD__
 +#include <sys/ioctl.h>
 +#include <soundcard.h>
-+#ifndef VOXWARE
-+#define VOXWARE
++#ifdef VOXWARE
++#undef VOXWARE
 +#endif
 +#endif
 +
