@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 10:49:59 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/09/14 22:18:22 wiz Exp $
 
-SHA1 (swarm-0.26.tar.gz) = 9ed423fcfddab14bc6850b6d790a243d4ff074a8
-Size (swarm-0.26.tar.gz) = 338683 bytes
-SHA1 (patch-aa) = 15e7a7c41a7b0598bb201428c57d3a86b4829733
-SHA1 (patch-ab) = 175f6788406c45f869739ce5af41eadd77787a8d
+SHA1 (swarm-0.57.tar.gz) = 63868d16472e4dcca2a595ea6c993abd5220c933
+Size (swarm-0.57.tar.gz) = 386019 bytes
+SHA1 (patch-ab) = 10279324142fdbe50a4525bd7285c7cd328f3875
