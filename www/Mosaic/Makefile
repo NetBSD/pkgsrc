@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/01/30 23:18:54 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/13 01:00:46 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/
 
 DEPENDS=	jpeg-6b:../../graphics/jpeg \
-		png-1.0.2:../../graphics/png \
+		png-1.0.3:../../graphics/png \
 		xpm-3.4k:../../graphics/xpm
 
 NOT_FOR_ARCHS=	alpha	#LP64 problems
