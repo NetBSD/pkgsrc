@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.339 2002/10/24 08:30:26 jlam Exp $
+# $NetBSD: Makefile,v 1.340 2002/10/24 09:43:45 jlam Exp $
 #
 
 COMMENT=	Networking tools
@@ -132,7 +132,6 @@ SUBDIR+=	ncftp3
 SUBDIR+=	neat
 SUBDIR+=	nemesis
 SUBDIR+=	net-snmp
-SUBDIR+=	net-snmp-current
 SUBDIR+=	netatalk
 SUBDIR+=	netatalk-asun
 SUBDIR+=	netatalk-umich
