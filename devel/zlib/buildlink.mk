@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2002/08/07 13:25:37 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.10 2002/08/25 18:38:51 jlam Exp $
 #
 # This Makefile fragment is included by packages that use zlib. 
 #

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2002/08/01 05:53:28 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2002/08/25 18:38:23 jlam Exp $
 #
 # This Makefile fragment is included by packages that use openldap.
 #

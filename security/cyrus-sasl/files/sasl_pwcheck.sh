@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: sasl_pwcheck.sh,v 1.8 2002/07/31 03:23:07 jlam Exp $
+# $NetBSD: sasl_pwcheck.sh,v 1.9 2002/08/25 18:39:51 jlam Exp $
 #
 # The pwcheck daemon allows UNIX password authentication with Cyrus SASL.
 #

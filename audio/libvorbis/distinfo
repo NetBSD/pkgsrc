@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/08/05 13:11:22 lukem Exp $
+$NetBSD: distinfo,v 1.8 2002/08/25 18:38:17 jlam Exp $
 
 SHA1 (libvorbis-1.0.tar.gz) = 2b414cb4cf7d022d39b7be7049f2c84a287a4fc7
 Size (libvorbis-1.0.tar.gz) = 749064 bytes

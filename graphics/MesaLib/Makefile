@@ -1,31 +1,27 @@
-# $NetBSD: Makefile,v 1.9 2001/05/31 05:54:45 tron Exp $
-#
+# $NetBSD: Makefile,v 1.10 2002/08/25 18:38:55 jlam Exp $
+
+PKGNAME=		MesaLib-${MESA_VERSION}
+WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
+MAINTAINER=		rh@netbsd.org
+COMMENT=		Graphics library similar to SGI's OpenGL
 
 .include "../Mesa/Makefile.common"
 
-DISTNAME=		MesaLib-${MESA_VERSION}
-WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
-CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mesa3d/}
-EXTRACT_SUFX=		.tar.bz2
-
-MAINTAINER=		rh@netbsd.org
-HOMEPAGE=		http://www.mesa3d.org/
-COMMENT=		Graphics library similar to SGI's OpenGL
-
-CHECK_MESA=		yes
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
-USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-USE_GMAKE=	yes
-
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--enable-static --without-glut
+CONFIGURE_ARGS+=	--without-glut
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${HAVE_BUILTIN_MESA} != "NO"
-IGNORE=			"MesaLib/GLX has already been installed as part of XFree-4.x"
+# Check if we got Mesa distributed with XFree86 4.x.
+.if exists(${X11BASE}/include/GL/glx.h)
+_IS_BUILTIN_MESA!=	${EGREP} -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
+.else
+_IS_BUILTIN_MESA=	0
+.endif
+
+.if ${_IS_BUILTIN_MESA} != "0"
+IGNORE=		"MesaLib/GLX has already been installed as part of XFree-4.x"
 .endif
 
 do-build:
@@ -37,10 +33,12 @@ do-install:
 	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
 post-install:
-	${INSTALL_DATA_DIR} ${X11PREFIX}/include/GL
-.for hdr in gl.h gl_mangle.h glext.h glx.h glx_mangle.h osmesa.h \
-		xmesa.h xmesa_x.h xmesa_xf86.h
-	${INSTALL_DATA} ${WRKSRC}/include/GL/${hdr} ${X11PREFIX}/include/GL
-.endfor
+	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
+	cd ${WRKSRC}/include/GL; for hdr in				\
+		gl.h gl_mangle.h glext.h glx.h glx_mangle.h osmesa.h	\
+		xmesa.h xmesa_x.h xmesa_xf86.h;				\
+	do								\
+		${INSTALL_DATA} $${hdr} ${PREFIX}/include/GL;		\
+	done
 
 .include "../../mk/bsd.pkg.mk"

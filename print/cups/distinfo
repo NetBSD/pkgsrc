@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2002/06/09 20:59:34 jlam Exp $
+$NetBSD: distinfo,v 1.15 2002/08/25 18:39:42 jlam Exp $
 
 SHA1 (cups-1.1.14-source.tar.bz2) = b1a940af5f27cebb8bef340aa6a3552c887ad67d
 Size (cups-1.1.14-source.tar.bz2) = 5408714 bytes

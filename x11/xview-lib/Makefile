@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/04/10 04:49:58 seb Exp $
+# $NetBSD: Makefile,v 1.20 2002/08/25 18:40:50 jlam Exp $
 # $FreeBSD Id: Makefile,v 1.13 1997/07/17 15:13:03 max Exp
 #
 
@@ -17,6 +17,7 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 # builds, but binaries in../xview-clients all crash
 NOT_FOR_PLATFORM=       *-*-alpha
 
+USE_BUILDLINK2=		# defined
 USE_IMAKE=		# defined
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2002/08/01 00:53:20 mycroft Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/08/25 18:38:30 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libmm.
 #
