@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/06/04 15:29:32 drochner Exp $
+# $NetBSD: Makefile,v 1.26 1999/07/07 17:34:51 agc Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -18,8 +18,18 @@ USE_LIBTOOL=	yes
 MAKE_ENV=	QTDIR=${WRKSRC}
 ALL_TARGET=	src
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=	egcs-1.1.2:../../lang/egcs
+REAL_OPSYS=	solaris
+CXX=		${LOCALBASE}/egcs/bin/g++
+.else
+REAL_OPSYS=	${LOWER_OPSYS}
+.endif
+
 do-configure:
-	@cd ${WRKSRC} && ${MAKE} QTDIR=${WRKSRC} netbsd-g++-static
+	@cd ${WRKSRC} && ${MAKE} QTDIR=${WRKSRC} ${REAL_OPSYS}-g++-static
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${PREFIX}/bin/
@@ -32,7 +42,8 @@ do-install:
 	    ${ECHO} installing ${PREFIX}/man/man3/$${PAGE}; \
 	    set - X `head -1 $${PAGE}qt`; \
 	    if [ $$# -eq 3 ] && [ "$$2" = .so ]; then \
-		${LN} -sf `basename $$3 | ${SED} s/qt$$//` \
+		${RM} -f ${PREFIX}/man/man3/$${PAGE}; \
+		${LN} -s `basename $$3 | ${SED} s/qt$$//` \
 		${PREFIX}/man/man3/$${PAGE}; \
 	    else \
 		${INSTALL_MAN} $${PAGE}qt \
