@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.1 2004/12/24 17:16:04 jmmv Exp $
+
+DISTNAME=	ocaml-3.06
+CATEGORIES=	lang
+MASTER_SITES=	ftp://ftp.inria.fr/INRIA/cristal/ocaml/${DISTNAME}/
+
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://caml.inria.fr/ocaml/
+COMMENT=	The latest implementation of the Caml dialect of ML
+
+DISTINFO_FILE=		${.CURDIR}/../../lang/ocaml/distinfo
+PATCHDIR=		${.CURDIR}/../../lang/ocaml/patches
+
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	-prefix ${PREFIX}
+CONFIGURE_ARGS+=	-libs "${LDFLAGS}"
+CONFIGURE_ARGS+=	-with-pthread
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=	yes
+.endif
+
+post-extract: cp-power-bsd
+
+cp-power-bsd:
+	${CP} ${WRKSRC}/asmrun/power-elf.S ${WRKSRC}/asmrun/power-bsd.S
+
+.include "../../mk/pthread.buildlink3.mk"
