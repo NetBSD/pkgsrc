@@ -1,4 +1,6 @@
-$NetBSD: patch-am,v 1.6 2004/04/29 14:18:34 xtraeme Exp $
+$NetBSD: patch-am,v 1.7 2004/05/03 15:39:47 jmmv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=141739
 
 --- libgnomevfs/gnome-vfs-unix-mounts.c.orig	2004-04-29 16:11:52.000000000 +0200
 +++ libgnomevfs/gnome-vfs-unix-mounts.c	2004-04-29 16:13:57.000000000 +0200
