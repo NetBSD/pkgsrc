@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.104 2004/03/06 14:38:01 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.105 2004/03/10 17:49:26 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -87,24 +87,31 @@ _BLNK_X11_LINKS_PACKAGE=	# empty
 # is required to define USE_BUILTIN.<pkg> to be either "yes" or "no".
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
-USE_BUILTIN.${_pkg_}?=	no
+PREFER.${_pkg_}?=	pkgsrc
 .  if !empty(PREFER_NATIVE:M[yY][eE][sS])
-USE_BUILTIN.${_pkg_}=	yes
+PREFER.${_pkg_}=	native
 .  endif
 .  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-USE_BUILTIN.${_pkg_}=	no
+PREFER.${_pkg_}=	pkgsrc
 .  endif
 .  if !empty(PREFER_NATIVE:M${_pkg_})
-USE_BUILTIN.${_pkg_}=	yes
+PREFER.${_pkg_}=	native
 .  endif
 .  if !empty(PREFER_PKGSRC:M${_pkg_})
-USE_BUILTIN.${_pkg_}=	no
+PREFER.${_pkg_}=	pkgsrc
 .  endif
-.  if exists(${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk)
-.     include "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
+.endfor
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+.  if ${PREFER.${_pkg_}} == "pkgsrc"
+USE_BUILTIN.${_pkg_}?=	no
+.  endif
+.  if defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+.    if exists(${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk)
+.       include "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
+.    endif
 .  endif
 .  if !defined(IS_BUILTIN.${_pkg_})
-USE_BUILTIN.${_pkg_}=	no
+USE_BUILTIN.${_pkg_}?=	no
 .  endif
 .endfor
 
@@ -152,7 +159,7 @@ _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.DEPENDS
 _BLNK_RECMETHOD.${_pkg_}=	_BLNK_ADD_TO.RECOMMENDED
 .    elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
 _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
-.  endif
+.    endif
 .    if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
         defined(BUILDLINK_PKGSRCDIR.${_pkg_})
 #
@@ -233,18 +240,6 @@ ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 .if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE})
 # Generate default values for:
 #
-# BUILDLINK_IS_BUILTIN.<pkg>	"yes" or "no" for whether <pkg> is provided
-#				in the base system.  This check is only
-#				relevant for buildlink3.mk files that
-#				provide a setting for this variable.  Where
-#				this variable is set by a buildlink3.mk file,
-#				you can typically force _only_ the check to
-#				run by setting BUILDLINK_CHECK_BUILTIN.<pkg>
-#				to "yes".
-#
-# BUILDLINK_USE_BUILTIN.<pkg>	"yes" or "no" for whether <pkg> from the
-#				base system is used.
-#
 # _BLNK_PKG_DBDIR.<pkg>		contains all of the package metadata
 #				files for <pkg>
 #
@@ -275,27 +270,11 @@ ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 #				paths.
 #
 .for _pkg_ in ${_BLNK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
-BUILDLINK_IS_BUILTIN.${_pkg_}?=		no
-#
-# If we prefer the pkgsrc version, then don't use the built-in package.
-#
-.  if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-      !empty(PREFER_PKGSRC:M${_pkg_})
-BUILDLINK_USE_BUILTIN.${_pkg_}?=	no
-.  endif
-#
-# If the "built-in" package (the software supplied by the base operating
-# system) is available, then use it by default.
-#
-.  if !empty(BUILDLINK_IS_BUILTIN.${_pkg_}:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.${_pkg_}?=	yes
-.  else
-BUILDLINK_USE_BUILTIN.${_pkg_}?=	no
-.  endif
 #
 # If we're using the built-in package, then provide sensible defaults.
 #
-.  if !empty(BUILDLINK_USE_BUILTIN.${_pkg_}:M[yY][eE][sS])
+USE_BUILTIN.${_pkg_}?=		no
+.  if !empty(USE_BUILTIN.${_pkg_}:M[yY][eE][sS])
 _BLNK_PKG_DBDIR.${_pkg_}?=	_BLNK_PKG_DBDIR.${_pkg_}_not_found
 _BLNK_PKG_INFO.${_pkg_}?=	${TRUE}
 BUILDLINK_PKGNAME.${_pkg_}?=	${_pkg_}
