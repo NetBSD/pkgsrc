@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/08/25 21:52:45 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2002/10/26 18:02:16 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -18,8 +18,6 @@ USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--enable-utmp \
-			--enable-wtmp \
-			--enable-lastlog \
 			--enable-xpm-background \
 			--enable-transparency \
 			--enable-menubar \
@@ -30,8 +28,7 @@ CONFIGURE_ARGS+=	--enable-utmp \
 			--enable-frills \
 			--enable-keepscrolling \
 			--enable-mousewheel \
-			--enable-languages \
-			--with-encoding=noenc
+			--enable-languages
 
 # Note: greek support could not be enabled, as the resource file handling
 # to disable it at runtime is documented but not implemented in the current
@@ -51,6 +48,16 @@ pre-install:
 	if [ ! -f ${X11PREFIX}/lib/X11/app-defaults/Rxvt ]; then \
 		${INSTALL_DATA} ${FILESDIR}/Rxvt ${X11PREFIX}/lib/X11/app-defaults; \
 	fi
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CFLAGS+= -DSunOS
+.else
+CONFIGURE_ARGS+=	--enable-wtmp \
+			--enable-lastlog \
+			--with-encoding=noenc
+.endif
 
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
