@@ -1,20 +1,20 @@
 # New ports collection makefile for:   kde
-# Version required:    Beta2
+# Version required:    Beta3
 # Date created:        4 November 1997
 # Whom:                Satoshi Asami <asami@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.3 1998/01/30 13:57:49 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/21 01:55:28 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
 #
 
-DISTNAME=	kde-2.1b
+DISTNAME=	kde-3.1b
 CATEGORIES=	x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	se@freebsd.org
 
-LIB_DEPENDS=	kdecore.0.11:${PORTSDIR}/x11/kdelibs
+LIB_DEPENDS=	kdecore.0.90:${PORTSDIR}/x11/kdelibs
 RUN_DEPENDS=	kwm:${PORTSDIR}/x11/kdebase \
 		kcalc:${PORTSDIR}/misc/kdeutils \
 		kmahjongg:${PORTSDIR}/games/kdegames \

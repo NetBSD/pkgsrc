@@ -1,28 +1,11 @@
-*** configure~	Sun Oct 26 01:04:56 1997
---- configure	Sat Nov  1 23:03:17 1997
-***************
-*** 913,917 ****
-  
-  
-! test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
-  
-  
---- 913,917 ----
-  
-  
-! test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL} -m 555'
-  
-  
-***************
-*** 2039,2043 ****
-  do
-    for ac_extension in a so sl; do
-!     if test -r $ac_dir/lib${x_direct_test_library}.$ac_extension; then
-        ac_x_libraries=$ac_dir
-        break 2
---- 2039,2043 ----
-  do
-    for ac_extension in a so sl; do
-!     if test -r $ac_dir/lib${x_direct_test_library}.*$ac_extension; then
-        ac_x_libraries=$ac_dir
-        break 2
+--- configure.orig	Sat Jan 31 01:36:21 1998
++++ configure	Sat Mar 21 00:06:16 1998
+@@ -1664,7 +1664,7 @@
+ 
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++LIBTOOL='$(top_builddir)/libtool'
+ 
+ 
+ libtool_enable_shared=no
