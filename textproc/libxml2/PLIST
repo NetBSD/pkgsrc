@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2003/12/04 19:33:38 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.24 2003/12/26 21:49:08 jmmv Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -21,6 +21,7 @@ include/libxml2/libxml/nanoftp.h
 include/libxml2/libxml/nanohttp.h
 include/libxml2/libxml/parser.h
 include/libxml2/libxml/parserInternals.h
+include/libxml2/libxml/pattern.h
 include/libxml2/libxml/relaxng.h
 include/libxml2/libxml/schemasInternals.h
 include/libxml2/libxml/threads.h
@@ -48,7 +49,7 @@ lib/libxml2.a
 lib/libxml2.la
 lib/libxml2.so
 lib/libxml2.so.8
-lib/libxml2.so.8.2
+lib/libxml2.so.8.4
 lib/pkgconfig/libxml-2.0.pc
 lib/xml2Conf.sh
 man/man1/xml2-config.1
@@ -69,19 +70,23 @@ share/doc/html/libxml2/html/libxml-DOCBparser.html
 share/doc/html/libxml2/html/libxml-HTMLparser.html
 share/doc/html/libxml2/html/libxml-HTMLtree.html
 share/doc/html/libxml2/html/libxml-SAX.html
+share/doc/html/libxml2/html/libxml-SAX2.html
 share/doc/html/libxml2/html/libxml-c14n.html
 share/doc/html/libxml2/html/libxml-catalog.html
+share/doc/html/libxml2/html/libxml-chvalid.html
 share/doc/html/libxml2/html/libxml-debugXML.html
+share/doc/html/libxml2/html/libxml-dict.html
 share/doc/html/libxml2/html/libxml-encoding.html
 share/doc/html/libxml2/html/libxml-entities.html
 share/doc/html/libxml2/html/libxml-globals.html
 share/doc/html/libxml2/html/libxml-hash.html
 share/doc/html/libxml2/html/libxml-lib.html
+share/doc/html/libxml2/html/libxml-list.html
 share/doc/html/libxml2/html/libxml-nanoftp.html
 share/doc/html/libxml2/html/libxml-nanohttp.html
-share/doc/html/libxml2/html/libxml-notes.html
 share/doc/html/libxml2/html/libxml-parser.html
 share/doc/html/libxml2/html/libxml-parserInternals.html
+share/doc/html/libxml2/html/libxml-pattern.html
 share/doc/html/libxml2/html/libxml-relaxng.html
 share/doc/html/libxml2/html/libxml-schemasInternals.html
 share/doc/html/libxml2/html/libxml-threads.html
@@ -89,15 +94,19 @@ share/doc/html/libxml2/html/libxml-tree.html
 share/doc/html/libxml2/html/libxml-uri.html
 share/doc/html/libxml2/html/libxml-valid.html
 share/doc/html/libxml2/html/libxml-xinclude.html
+share/doc/html/libxml2/html/libxml-xlink.html
 share/doc/html/libxml2/html/libxml-xmlIO.html
 share/doc/html/libxml2/html/libxml-xmlautomata.html
 share/doc/html/libxml2/html/libxml-xmlerror.html
+share/doc/html/libxml2/html/libxml-xmlexports.html
 share/doc/html/libxml2/html/libxml-xmlmemory.html
 share/doc/html/libxml2/html/libxml-xmlreader.html
 share/doc/html/libxml2/html/libxml-xmlregexp.html
 share/doc/html/libxml2/html/libxml-xmlschemas.html
 share/doc/html/libxml2/html/libxml-xmlschemastypes.html
 share/doc/html/libxml2/html/libxml-xmlunicode.html
+share/doc/html/libxml2/html/libxml-xmlversion.html
+share/doc/html/libxml2/html/libxml-xmlwriter.html
 share/doc/html/libxml2/html/libxml-xpath.html
 share/doc/html/libxml2/html/libxml-xpathInternals.html
 share/doc/html/libxml2/html/libxml-xpointer.html
