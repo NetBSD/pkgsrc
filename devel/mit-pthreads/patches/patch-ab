@@ -1,0 +1,11 @@
+--- stdio/vfprintf.c-orig	Wed Oct 18 11:57:52 1995
++++ stdio/vfprintf.c	Sat Apr 18 18:20:10 1998
+@@ -730,7 +730,7 @@
+ 	} else
+ 		*sign = '\000';
+ /* #if !defined(__alpha__) && !defined(hpux) */
+-#ifndef 0
++#if !0
+ 	digits = __dtoa(value, mode, ndigits, decpt, &dsgn, &rve);
+ #else
+ 	{ char *ecvt(double,int,int*,int*);
