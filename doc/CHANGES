@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9667 2005/03/29 10:39:12 wiz Exp $
+$NetBSD: CHANGES,v 1.9668 2005/03/29 12:29:07 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1800,3 +1800,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libgii to 0.9.0nb1 [wiz 2005-03-28]
 	Updated scummvm to 0.7.1 [adam 2005-03-29]
 	Updated ROMBuild to 2.6 [wiz 2005-03-29]
+	Updated sylpheed-devel to 1.9.7 [xtraeme 2005-03-29]
