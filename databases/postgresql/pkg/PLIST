@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2000/05/20 19:33:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2000/07/14 04:44:13 jlam Exp $
 ${PGUSER}/.profile.pgsql
 ${PGUSER}/post-install-notes
 bin/createdb
@@ -1018,18 +1018,15 @@ share/doc/postgresql/README.locale
 share/doc/postgresql/README.mb
 share/doc/postgresql/README.mb.jp
 share/doc/postgresql/TODO
-share/doc/postgresql/admin.ps.gz
 share/doc/postgresql/bug.template
 share/doc/postgresql/internals.ps
-share/doc/postgresql/programmer.ps.gz
-share/doc/postgresql/tutorial.ps.gz
-share/doc/postgresql/user.ps.gz
 share/postgresql/global1.bki.source
 share/postgresql/global1.description
 share/postgresql/local1_template1.bki.source
 share/postgresql/local1_template1.description
 share/postgresql/pg_geqo.sample
 share/postgresql/pg_hba.conf.sample
+share/postgresql/pg_ident.conf.sample
 share/postgresql/pg_options.sample
 share/postgresql/postmaster.opts.default.sample
 @dirrm share/postgresql
