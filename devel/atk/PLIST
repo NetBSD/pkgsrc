@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/04/19 16:44:42 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/09/21 16:43:25 jmmv Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -28,46 +28,47 @@ include/atk-1.0/atk/atkvalue.h
 lib/libatk-1.0.a
 lib/libatk-1.0.la
 lib/libatk-1.0.so
-lib/libatk-1.0.so.600
-lib/libatk-1.0.so.600.1
+lib/libatk-1.0.so.800
+lib/libatk-1.0.so.800.0
 lib/pkgconfig/atk.pc
-share/doc/html/atk/AtkAction.html
-share/doc/html/atk/AtkComponent.html
-share/doc/html/atk/AtkDocument.html
-share/doc/html/atk/AtkEditableText.html
-share/doc/html/atk/AtkGObjectAccessible.html
-share/doc/html/atk/AtkHyperlink.html
-share/doc/html/atk/AtkHypertext.html
-share/doc/html/atk/AtkImage.html
-share/doc/html/atk/AtkNoOpObject.html
-share/doc/html/atk/AtkNoOpObjectFactory.html
-share/doc/html/atk/AtkObject.html
-share/doc/html/atk/AtkObjectFactory.html
-share/doc/html/atk/AtkRegistry.html
-share/doc/html/atk/AtkRelation.html
-share/doc/html/atk/AtkRelationSet.html
-share/doc/html/atk/AtkSelection.html
-share/doc/html/atk/AtkStateSet.html
-share/doc/html/atk/AtkStreamableContent.html
-share/doc/html/atk/AtkTable.html
-share/doc/html/atk/AtkText.html
-share/doc/html/atk/AtkUtil.html
-share/doc/html/atk/AtkValue.html
-share/doc/html/atk/atk-AtkState.html
-share/doc/html/atk/atk.devhelp
-share/doc/html/atk/atk.html
-share/doc/html/atk/home.png
-share/doc/html/atk/index.html
-share/doc/html/atk/index.sgml
-share/doc/html/atk/left.png
-share/doc/html/atk/right.png
-share/doc/html/atk/up.png
+share/doc/atk/AtkAction.html
+share/doc/atk/AtkComponent.html
+share/doc/atk/AtkDocument.html
+share/doc/atk/AtkEditableText.html
+share/doc/atk/AtkGObjectAccessible.html
+share/doc/atk/AtkHyperlink.html
+share/doc/atk/AtkHypertext.html
+share/doc/atk/AtkImage.html
+share/doc/atk/AtkNoOpObject.html
+share/doc/atk/AtkNoOpObjectFactory.html
+share/doc/atk/AtkObject.html
+share/doc/atk/AtkObjectFactory.html
+share/doc/atk/AtkRegistry.html
+share/doc/atk/AtkRelation.html
+share/doc/atk/AtkRelationSet.html
+share/doc/atk/AtkSelection.html
+share/doc/atk/AtkStateSet.html
+share/doc/atk/AtkStreamableContent.html
+share/doc/atk/AtkTable.html
+share/doc/atk/AtkText.html
+share/doc/atk/AtkUtil.html
+share/doc/atk/AtkValue.html
+share/doc/atk/atk-AtkState.html
+share/doc/atk/atk.devhelp
+share/doc/atk/atk.html
+share/doc/atk/home.png
+share/doc/atk/index.html
+share/doc/atk/index.sgml
+share/doc/atk/left.png
+share/doc/atk/right.png
+share/doc/atk/up.png
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/atk10.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/atk10.mo
@@ -103,6 +104,7 @@ ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/mr/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/atk10.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/atk10.mo
@@ -121,6 +123,7 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/sr@ije/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/atk10.mo
+${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/atk10.mo
@@ -128,6 +131,6 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/atk10.mo
-@dirrm share/doc/html/atk
+@dirrm share/doc/atk
 @dirrm include/atk-1.0/atk
 @dirrm include/atk-1.0

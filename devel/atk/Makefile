@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2004/08/31 11:53:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2004/09/21 16:43:25 jmmv Exp $
 #
 
-DISTNAME=		atk-1.6.1
+DISTNAME=		atk-1.8.0
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -20,7 +20,7 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	atk.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc/html"
+CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc"
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE}
