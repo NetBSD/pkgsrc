@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/30 13:57:02 pooka Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/11/21 11:05:56 grant Exp $
 bin/wget
-etc/wgetrc
 man/man1/wget.1
 @unexec ${INSTALL_INFO} --delete %D/info/wget.info %D/info/dir
 info/wget.info
@@ -31,3 +30,5 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/zh/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/wget.mo
+share/examples/wget/wgetrc
+@dirrm share/examples/wget

@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.3 2002/11/21 11:05:57 grant Exp $
+
+--- doc/Makefile.in.orig	Thu Apr 12 14:25:22 2001
++++ doc/Makefile.in
+@@ -40,6 +40,7 @@ prefix     = @prefix@
+ infodir    = @infodir@
+ mandir     = @mandir@
+ manext     = 1
++datadir    = @datadir@
+ sysconfdir = @sysconfdir@
+ 
+ DESTDIR    =
+@@ -51,7 +52,7 @@ RM = rm -f
+ TEXI2POD     = ./texi2pod.pl
+ POD2MAN      = @POD2MAN@
+ MAN          = wget.$(manext)
+-WGETRC       = $(sysconfdir)/wgetrc
++WGETRC       = $(datadir)/examples/@PACKAGE@/wgetrc
+ SAMPLERCTEXI = sample.wgetrc.munged_for_texi_inclusion
+ 
+ #
+@@ -119,7 +120,7 @@ install.man: $(MAN)
+ 
+ # install sample.wgetrc
+ install.wgetrc: $(srcdir)/sample.wgetrc
+-	$(top_srcdir)/mkinstalldirs $(sysconfdir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(datadir)/examples/@PACKAGE@
+ 	@if test -f $(WGETRC); then \
+ 	  if cmp -s $(srcdir)/sample.wgetrc $(DESTDIR)$(WGETRC); then echo ""; \
+ 	     else \
