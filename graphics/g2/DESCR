@@ -4,7 +4,7 @@ written in Ansi-C.
 This library provides a comprehensive set of functions for
 simultaneous generation of graphical output on different types of
 devices. Presently, following devices are currently supported by g2:
-X11, GIF, PostScript (xfig and Win32 are in developement).
+X11, GIF, PostScript (xfig and Win32 are in development).
 
 One major feature of the g2_library is the concept of virtual
 devices. An arbitrary number of physical devices (such as GIF, or X11)
