@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:21 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/31 04:07:59 jlam Exp $
 bin/pwm
 man/man1/pwm.1
 share/doc/pwm/config.txt
 share/doc/pwm/LICENSE
-etc/pwm/buttons-default.conf
-etc/pwm/keys-default.conf
-etc/pwm/look-beoslike.conf
-etc/pwm/look-brownsteel.conf
-etc/pwm/menus-default.conf
-etc/pwm/pwm.conf
-etc/pwm/sample.conf
-@dirrm etc/pwm
+share/examples/pwm/buttons-default.conf
+share/examples/pwm/keys-default.conf
+share/examples/pwm/look-beoslike.conf
+share/examples/pwm/look-brownsteel.conf
+share/examples/pwm/menus-default.conf
+share/examples/pwm/pwm.conf
+@dirrm share/examples/pwm
 @dirrm share/doc/pwm
