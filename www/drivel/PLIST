@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/10/24 20:33:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/01/26 23:51:42 jmmv Exp $
 bin/drivel
 share/application-registry/drivel.applications
 share/applications/drivel.desktop
@@ -7,6 +7,7 @@ share/drivel/languages/livejournal.lang
 share/gconf/schemas/drivel.schemas
 share/gnome/help/drivel/C/drivel.xml
 share/gnome/help/drivel/C/legal.xml
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-drivel.png
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/drivel.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/drivel.mo
@@ -47,7 +48,6 @@ share/pixmaps/drivel/radiobutton.xpm
 share/pixmaps/drivel/rightarrow.png
 share/pixmaps/drivel/user.png
 share/pixmaps/drivel/xmms.xpm
-share/pixmaps/gnome-application-x-drivel.png
 share/pixmaps/livejournal.png
 @dirrm share/pixmaps/drivel
 @comment in xdg-dirs: @dirrm share/pixmaps
@@ -55,8 +55,10 @@ share/pixmaps/livejournal.png
 @comment in scrollkeeper: @dirrm share/omf
 @comment in shared-mime-info: @dirrm share/mime/packages
 @comment in xdg-dirs: @dirrm share/mime-info
+@comment in gnome-icon-theme: @dirrm share/icons/gnome/48x48/mimetypes
 @dirrm share/gnome/help/drivel/C
 @dirrm share/gnome/help/drivel
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/drivel/languages
 @dirrm share/drivel/glade
