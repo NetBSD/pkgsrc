@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.ldap,v 1.2 2004/01/13 08:13:42 jlam Exp $
-share/doc/cyrus-saslauthd/LDAP_SASLAUTHD
-@dirrm share/doc/cyrus-saslauthd

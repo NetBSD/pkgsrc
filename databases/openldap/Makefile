@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2004/07/24 03:32:24 jlam Exp $
+# $NetBSD: Makefile,v 1.80 2004/07/30 21:05:41 jlam Exp $
 
 DISTNAME=		openldap-2.2.13
 SVR4_PKGNAME=		oldap
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--with-tls=openssl
 
 # SLAPD options
 CONFIGURE_ARGS+=	--enable-crypt
-.if !empty(_OPENLDAP_OPTIONS:Msasl)
+.if !empty(PKG_OPTIONS:Msasl)
 CONFIGURE_ARGS+=	--enable-spasswd
 .endif
 CONFIGURE_ARGS+=	--enable-wrappers
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--enable-wrappers
 SLAPD_BACKEND_MODULES=	bdb:static dnnsrv hdb ldap ldbm meta		\
 			monitor:static null passwd shell
 .for _mod_ in ${SLAPD_BACKEND_MODULES}
-.  if !empty(_OPENLDAP_OPTIONS:Mdynamic)
+.  if !empty(PKG_OPTIONS:Mdynamic)
 CONFIGURE_ARGS+=	--enable-${_mod_:C/\:.*//}${_mod_:N*\:static:C/.*/=mod/}
 .  else
 CONFIGURE_ARGS+=	--enable-${_mod_:C/\:.*//}

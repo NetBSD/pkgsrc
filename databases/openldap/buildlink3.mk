@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/07/24 17:24:29 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/07/30 21:05:41 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENLDAP_BUILDLINK3_MK:=	${OPENLDAP_BUILDLINK3_MK}+
@@ -18,10 +18,16 @@ BUILDLINK_RECOMMENDED.openldap?=	openldap>=2.2.13
 BUILDLINK_PKGSRCDIR.openldap?=		../../databases/openldap
 .endif	# OPENLDAP_BUILDLINK3_MK
 
-.if defined(USE_SASL2) && (${USE_SASL2} == "YES")
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
-.elif defined(USE_SASL) && (${USE_SASL} == "YES")
-.  include "../../security/cyrus-sasl/buildlink3.mk"
+PKG_OPTIONS.openldap?=	${PKG_DEFAULT_OPTIONS}
+
+.if !empty(PKG_OPTIONS.openldap:Msasl)
+.  if !defined(USE_SASL2) && !defined(USE_SASL)
+.    include "../../security/cyrus-sasl2/buildlink3.mk"
+.  elif defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
+.    include "../../security/cyrus-sasl2/buildlink3.mk"
+.  elif defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
+.    include "../../security/cyrus-sasl/buildlink3.mk"
+.  endif
 .endif
 .include "../../security/openssl/buildlink3.mk"
 

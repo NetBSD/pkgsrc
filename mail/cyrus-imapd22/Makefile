@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/07/29 20:04:02 recht Exp $
+# $NetBSD: Makefile,v 1.18 2004/07/30 21:05:41 jlam Exp $
 
 DISTNAME=	cyrus-imapd-2.2.8
 CATEGORIES=	mail
@@ -49,12 +49,35 @@ CONFIGURE_ARGS+=	--without-zephyr
 CONFIGURE_ARGS+=	--without-ucdsnmp
 
 .if defined(KERBEROS)
-.  if (${KERBEROS} == 4) && exists(/usr/include/kerberosIV/krb.h)
-PKG_USE_KERBEROS=	yes
+.  if !defined(PKG_OPTIONS.cyrus-imapd)
+.    if defined(KERBEROS)
+.      if ${KERBEROS} == "4"
+PKG_OPTIONS.cyrus-imapd+=	kerberos4
+.      else
+PKG_OPTIONS.cyrus-imapd+=	kerberos
+.      endif
+.    endif
+.  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
+PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mkerberos)
+.  if empty(PKG_OPTIONS:Mgssapi)
+PKG_OPTIONS+=	gssapi
+.  endif
+.endif
+
+.if !empty(PKG_OPTIONS:Mkerberos4)
+.  if exists(/usr/include/kerberosIV/krb.h)
+CRYPTO+=		uses Kerberos encryption code
 CONFIGURE_ARGS+=	--with-auth=krb
 CONFIGURE_ARGS+=	--with-krb=/usr
-.  else
-.    include "../../mk/krb5.buildlink3.mk"
+.  endif
+.elif !empty(PKG_OPTIONS:Mgssapi)
+.  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-auth=krb5
 CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
 CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
@@ -62,7 +85,6 @@ GSSIMPL.heimdal=	heimdal
 GSSIMPL.mit-krb5=	mit
 CONFIGURE_ENV+=		COMPILE_ET=${KRB5BASE}/bin/compile_et
 COMERRBASE=		${KRB5BASE}
-.  endif
 .else
 CONFIGURE_ARGS+=	--with-auth=unix
 CONFIGURE_ARGS+=	--without-krb

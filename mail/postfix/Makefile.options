@@ -1,29 +1,65 @@
-# $NetBSD: Makefile.options,v 1.4 2004/07/24 22:45:15 recht Exp $
-#
-# POSTFIX_ALL_OPTIONS lists all of the currently-supported optional modules
-# that may be built into Postfix.
-#
-# POSTFIX_OPTIONS is a list of the modules that will be built into Postfix.
-#
-POSTFIX_ALL_OPTIONS=	inet6 ldap mysql mysql4 pcre sasl tls
-POSTFIX_OPTIONS?=	# empty
-BUILD_DEFS+=		POSTFIX_OPTIONS
+# $NetBSD: Makefile.options,v 1.5 2004/07/30 21:05:41 jlam Exp $
 
-_POSTFIX_OPTIONS=	# empty
-.for _opt_ in ${POSTFIX_OPTIONS}
-.  if empty(_POSTFIX_OPTIONS:M${_opt_})
-.    if !empty(POSTFIX_ALL_OPTIONS:M${_opt_})
-_POSTFIX_OPTIONS+=	${_opt_}
-.    else
-PKG_FAIL_REASON+=	"\"${_opt_}\" is not a supported Postfix build option."
+# Global and legacy options
+#
+# XXX Support for the following variables will be removed after the
+# XXX pkgsrc-2004Q3 branch is released:
+# XXX
+# XXX	POSTFIX_USE_INET6	POSTFIX_USE_TLS
+# XXX	POSTFIX_USE_PCRE	POSTFIX_USE_MYSQL
+# XXX	POSTFIX_USE_PGSQL	POSTFIX_USE_VERP
+# XXX	POSTFIX_USE_SASL_AUTH	POSTFIX_OPTIONS
+#
+.if defined(USE_SASL) || defined(USE_SASL2) || defined(USE_OPENLDAP) || \
+    defined(POSTFIX_USE_INET6) || defined(POSTFIX_USE_TLS) || \
+    defined(POSTFIX_USE_PCRE) || defined(POSTFIX_USE_MYSQL) || \
+    defined(POSTFIX_USE_PGSQL) || defined(POSTFIX_USE_VERP) || \
+    defined(POSTFIX_USE_SASL_AUTH)
+.  if !defined(PKG_OPTIONS.postfix)
+.    if defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
+PKG_OPTIONS.postfix+=	sasl
+.    endif
+.    if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
+PKG_OPTIONS.postfix+=	sasl
+.    endif
+.    if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
+PKG_OPTIONS.postfix+=	ldap
+.    endif
+.    if defined(POSTFIX_USE_INET6) && !empty(POSTFIX_USE_INET6:M[yY][eE][sS])
+PKG_OPTIONS.postfix+=	inet6
+.    endif
+.    if defined(POSTFIX_USE_TLS) && !empty(POSTFIX_USE_TLS:M[yY][eE][sS])
+PKG_OPTIONS.postfix+=	tls
+.    endif
+.    if defined(POSTFIX_USE_PCRE) && !empty(POSTFIX_USE_PCRE:M[yY][eE][sS])
+PKG_OPTIONS.postfix+=	pcre 
+.    endif
+.    if defined(POSTFIX_USE_MYSQL) && !empty(POSTFIX_USE_MYSQL:M[yY][eE][sS])
+PKG_OPTIONS.postfix+=	mysql
+.    endif
+.    if defined(POSTFIX_USE_PGSQL) && !empty(POSTFIX_USE_PGSQL:M[yY][eE][sS])
+PKG_OPTIONS.postfix+=	pgsql
+.    endif
+.    if defined(POSTFIX_USE_VERP) && !empty(POSTFIX_USE_VERP:M[yY][eE][sS])
+PKG_OPTIONS.postfix+=	verp
+.    endif
+.    if defined(POSTFIX_USE_SASL_AUTH) && defined(POSTFIX_USE_SASL_AUTH)
+PKG_OPTIONS.postfix+=	sasl
+.    endif
+.    if defined(POSTFIX_OPTIONS)
+PKG_OPTIONS.postfix=	${POSTFIX_OPTIONS}
 .    endif
 .  endif
-.endfor
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
+PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql mysql4 pcre sasl tls
+.include "../../mk/bsd.options.mk"
 
 ###
 ### IPv6 and STARTTLS support (http://www.ipnet6.org/postfix/)
 ###
-.if !empty(_POSTFIX_OPTIONS:Minet6) || !empty(_POSTFIX_OPTIONS:Mtls)
+.if !empty(PKG_OPTIONS:Minet6) || !empty(PKG_OPTIONS:Mtls)
 .  include "../../security/openssl/buildlink3.mk"
 PATCHFILES+=		tls+ipv6-1.25-pf-2.1.3.patch.gz
 PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
@@ -41,7 +77,7 @@ MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
 ###
 ### Support "pcre" map type for regular expressions.
 ###
-.if !empty(_POSTFIX_OPTIONS:Mpcre)
+.if !empty(PKG_OPTIONS:Mpcre)
 .  include "../../devel/pcre/buildlink3.mk"
 CCARGS+=	-DHAS_PCRE
 AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib				\
@@ -54,7 +90,7 @@ CCARGS+=	-DNO_PCRE
 ###
 ### Support LDAP directories for table lookups.
 ###
-.if !empty(_POSTFIX_OPTIONS:Mldap)
+.if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap/buildlink3.mk"
 CCARGS+=	-DHAS_LDAP
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
@@ -72,12 +108,12 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.db4}/lib				\
 ###
 ### Support using a MySQL database server for table lookups.
 ###
-.if !empty(_POSTFIX_OPTIONS:Mmysql4)
+.if !empty(PKG_OPTIONS:Mmysql4)
 .  include "../../databases/mysql4-client/buildlink3.mk"
 CCARGS+=	-DHAS_MYSQL
 CCARGS+=	`${BUILDLINK_PREFIX.mysql-client}/bin/mysql_config --include`
 AUXLIBS+=	`${BUILDLINK_PREFIX.mysql-client}/bin/mysql_config --libs`
-.elif !empty(_POSTFIX_OPTIONS:Mmysql)
+.elif !empty(PKG_OPTIONS:Mmysql)
 .  include "../../databases/mysql-client/buildlink3.mk"
 CCARGS+=	-DHAS_MYSQL -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
 AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
@@ -88,7 +124,7 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 ## ###
 ## ### Support using a PostgreSQL database server for table lookups.
 ## ###
-## .if !empty(_POSTFIX_OPTIONS:Mpgsql)
+## .if !empty(PKG_OPTIONS:Mpgsql)
 ## .  include "../../mk/pgsql.buildlink3.mk"
 ## .  include "../../security/openssl/buildlink3.mk"
 ## PATCHFILES+=		postfix-pg.postfix-2.0.0.2.patch
@@ -104,7 +140,7 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 ### SASL support for SMTP authentication.  If neither SASLv1 or SASLv2 is
 ### explicitly specified, then build with SASLv2.
 ###
-.if !empty(_POSTFIX_OPTIONS:Msasl)
+.if !empty(PKG_OPTIONS:Msasl)
 .  if !defined(USE_SASL2) && !defined(USE_SASL)
 .    include "../../security/cyrus-sasl2/buildlink3.mk"
 SASLLIBDIR=	${PREFIX}/lib/sasl2
@@ -130,7 +166,6 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl
 .  endif
-
 PLIST_SRC+=	${PKGDIR}/PLIST.sasl
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}

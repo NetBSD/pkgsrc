@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2004/05/13 06:44:56 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.22 2004/07/30 21:05:41 jlam Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -52,6 +52,8 @@ lib/samba/vfs/netatalk.so
 lib/samba/vfs/readonly.so
 lib/samba/vfs/recycle.so
 lib/samba/vfs/shadow_copy.so
+${PAM}lib/security/pam_smbpass.so
+${PAM}lib/security/pam_winbind.so
 man/man1/editreg.1
 man/man1/findsmb.1
 man/man1/log2pcap.1
@@ -97,6 +99,7 @@ sbin/swat
 sbin/winbindd
 share/doc/samba/NT4-Locking.reg
 share/doc/samba/NT4_PlainPassword.reg
+${PAM}share/doc/samba/README.pam_smbpass
 share/doc/samba/Win-2Kx-XPP-DeleteCachedProfiles.reg
 share/doc/samba/Win-2Kx-XPP-ForceLocalProfile.reg
 share/doc/samba/Win-NT-DeleteRoamingProfile.reg
@@ -113,6 +116,10 @@ share/examples/samba/deluser.sh
 share/examples/samba/mknissmbpasswd.sh
 share/examples/samba/mknissmbpwdtbl.sh
 share/examples/samba/mksmbpasswd.sh
+${PAM}share/examples/samba/pam_smbpass/kdc-pdc
+${PAM}share/examples/samba/pam_smbpass/password-mature
+${PAM}share/examples/samba/pam_smbpass/password-migration
+${PAM}share/examples/samba/pam_smbpass/password-sync
 share/examples/samba/samba.schema
 share/examples/samba/smb.conf.default
 share/examples/samba/updatesmbpasswd.sh
@@ -556,6 +563,7 @@ share/samba/swat/using_samba/toc.html
 @dirrm share/samba/swat/help
 @dirrm share/samba/swat
 @dirrm share/samba
+${PAM}@dirrm share/examples/samba/pam_smbpass
 @dirrm share/examples/samba
 @dirrm share/doc/samba
 @dirrm lib/samba/vfs

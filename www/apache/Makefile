@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2004/07/17 12:44:28 tron Exp $
+# $NetBSD: Makefile,v 1.148 2004/07/30 21:05:42 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -60,7 +60,23 @@ BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 CONFIGURE_ARGS+=	--server-uid=${APACHE_USER}
 CONFIGURE_ARGS+=	--server-gid=${APACHE_GROUP}
 
-.if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
+# Global and legacy options
+.if defined(APACHE_PERF_TUNING) || defined(APACHE_SUEXEC)
+.  if !defined(PKG_OPTIONS.apache)
+.    if defined(APACHE_PERF_TUNING) && !empty(APACHE_PERF_TUNING:M[yY][eE][sS])
+PKG_OPTIONS.apache+=	perf-tuning
+.    endif
+.    if defined(APACHE_SUEXEC) && !empty(APACHE_SUEXEC:M[yY][eE][sS])
+PKG_OPTIONS.apache+=	suexec
+.    endif
+.  endif
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.apache
+PKG_SUPPORTED_OPTIONS=	perf-tuning suexec
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Msuexec)
 APACHE_SUEXEC_DOCROOT?=	${PREFIX}/share/httpd/htdocs
 APACHE_SUEXEC_PATH=	/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 APACHE_SUEXEC_CONFIGURE_ARGS+=						\
@@ -91,7 +107,7 @@ CONFIGURE_ARGS+=	${_ENABLE_MOD}=define	# from mod_ssl pkg.addon
 
 APACHE_CUSTOM_CFLAGS?=	# empty
 
-.if defined(APACHE_PERF_TUNING) && ${APACHE_PERF_TUNING} == "YES"
+.if !empty(PKG_OPTIONS:Mperf-tuning)
 APACHE_CUSTOM_CFLAGS+=	-DBUFFERED_LOGS
 APACHE_CUSTOM_CFLAGS+=	${COMPILER_PERFTUNE_FLAGS}
 LDFLAGS+=		${COMPILER_PERFTUNE_FLAGS}

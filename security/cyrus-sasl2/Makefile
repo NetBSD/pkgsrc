@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2004/07/08 21:11:25 recht Exp $
+# $NetBSD: Makefile,v 1.33 2004/07/30 21:05:41 jlam Exp $
 
 .include "Makefile.common"
 
 PKGREVISION=	3
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
-
-PLIST_SRC+=		${PKGDIR}/PLIST.common
 
 .if exists(/usr/include/ndbm.h)
 SASL_DBTYPE?=		ndbm
@@ -42,6 +40,8 @@ AUTHDAEMONVAR?=		${VARBASE}/authdaemon
 CONFIGURE_ARGS+=        --with-authdaemond=${AUTHDAEMONVAR}
 BUILD_DEFS+=		AUTHDAEMONVAR
 
+.include "Makefile.options"
+
 .if exists(/dev/urandom)
 SASL_ENTROPY_SOURCE?=	/dev/urandom
 .endif
@@ -49,21 +49,6 @@ SASL_ENTROPY_SOURCE?=	/dev/urandom
 CONFIGURE_ARGS+=	--with-devrandom=${SASL_ENTROPY_SOURCE}
 .endif
 BUILD_DEFS+=		SASL_ENTROPY_SOURCE
-
-.if defined(KERBEROS)
-SASL_USE_GSSAPI=	yes
-.endif
-.if (defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS]))
-.  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}	# GSSAPI
-CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
-GSSIMPL.heimdal=	heimdal
-GSSIMPL.mit-krb5=	mit
-PLIST_SRC+=		${PKGDIR}/PLIST.krb5
-.endif
-BUILD_DEFS+=		SASL_USE_GSSAPI
-
-PLIST_SRC+=		${PKGDIR}/PLIST.plugins
 
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
