@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST-md.shared,v 1.1.1.1 1998/11/26 18:02:49 bad Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Devel/DProf/DProf.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Devel/DProf/DProf.so
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Devel/DProf
