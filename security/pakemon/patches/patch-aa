@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/09 06:32:42 itojun Exp $
+
+--- configure.in-	Tue Jan  9 15:20:19 2001
++++ configure.in	Tue Jan  9 15:20:25 2001
+@@ -151,7 +151,7 @@
+ AC_SUBST(LNIDSINC)
+ AC_SUBST(LNIDSLIB)
+ 
+-AC_OUTPUT(Makefile)
++AC_OUTPUT(Makefile pakemon.h)
+ 
+ 
+ 
