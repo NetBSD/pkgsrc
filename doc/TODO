@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2033 2004/08/14 20:39:42 ben Exp $
+$NetBSD: TODO,v 1.2034 2004/08/14 20:55:59 ben Exp $
 
 Suggested new packages
 ======================
@@ -323,6 +323,7 @@ Suggested package updates
 	o moz-mplayer-2.65
 	o mozilla-bin-1.7.2
 	o mozilla-stable-1.4.2
+	o mpi-ch-1.2.6
 	o mrproject-0.9.1
 	o mrtg-2.10.15
 	o msmtp-1.2.0 [pkg/26425]
