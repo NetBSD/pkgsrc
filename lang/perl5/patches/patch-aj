@@ -1,8 +1,25 @@
-$NetBSD: patch-aj,v 1.5 2002/12/24 00:56:54 jschauma Exp $
+$NetBSD: patch-aj,v 1.6 2003/02/21 14:42:14 grant Exp $
 
---- makedepend.SH.orig	Mon Dec 23 19:33:45 2002
-+++ makedepend.SH	Mon Dec 23 19:34:27 2002
-@@ -196,7 +196,8 @@
+--- makedepend.SH.orig	Mon Mar 19 18:33:17 2001
++++ makedepend.SH
+@@ -68,6 +68,7 @@ if test -f Makefile; then
+     case "$osname" in
+     os2) ;;
+     netbsd) ;;
++    freebsd) ;;
+     *) $touch $firstmakefile ;;
+     esac
+ fi
+@@ -141,6 +142,8 @@ for file in `$cat .clist`; do
+         $cppstdin $finc -I. $cppflags $cppminus <UU/$file.c |
+         $sed \
+     	    -e '/^#.*<stdin>/d' \
++    	    -e '/^#.*<built-in>/d' \
++    	    -e '/^#.*<command line>/d' \
+ 	    -e '/^#.*"-"/d' \
+ 	    -e 's#\.[0-9][0-9]*\.c#'"$file.c#" \
+ 	    -e 's/^[	 ]*#[	 ]*line/#/' \
+@@ -196,7 +199,8 @@ if $test -s .deptmp; then
      $echo "Updating $mf..."
      $echo "# If this runs make out of memory, delete /usr/include lines." \
  	>> $mf.new
