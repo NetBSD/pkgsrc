@@ -2,3 +2,5 @@
 
 SHA1 (chasen-2.2.6.tar.gz) = caacad4c695d66985624ace52c3d9984416efe52
 Size (chasen-2.2.6.tar.gz) = 466986 bytes
+SHA1 (chasen-2.2.6-nmz.diff) = 9a4d683d0d77643356968ff58a8e72f21820310b
+Size (chasen-2.2.6-nmz.diff) = 2075 bytes
