@@ -1,0 +1,76 @@
+--- audioIO.c.old	Sun Oct 26 10:55:27 1997
++++ audioIO.c	Sun Oct 26 10:56:03 1997
+@@ -18,7 +18,7 @@
+   #include "audioIO_HPUX.c"
+ #endif
+ 
+-#ifdef OS_SunOS
++#if defined(OS_SunOS) || defined(OS_NetBSD)
+   #include "audioIO_SunOS.c"
+ #endif
+ 
+--- audioIO.h.old	Sun Oct 26 10:57:10 1997
++++ audioIO.h	Sun Oct 26 10:57:44 1997
+@@ -24,6 +24,6 @@
+   #define AUSIZ 4096
+ #endif
+ 
+-#ifdef OS_SunOS
++#if defined(OS_SunOS) || defined(OS_NetBSD)
+   #define AUSIZ 4096
+ #endif
+--- audioIO_SunOS.c.old	Sun Oct 26 10:58:36 1997
++++ audioIO_SunOS.c	Sun Oct 26 11:13:51 1997
+@@ -8,7 +8,11 @@
+ 
+ #include "amp.h"
+ #include <sys/types.h>
++#ifndef OS_NetBSD
+ #include <sys/stropts.h>
++#else
++#include <sys/ioctl.h>
++#endif
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <stdio.h>
+@@ -36,8 +40,7 @@
+ 	}
+ 	DB(audio, msg("Audio device opened on %d\n",audio_fd) );
+ 
+-	if (ioctl(audio_fd,AUDIO_GETINFO,&auinfo)<0)
+-		die("Unable to get audio info\n");
++	AUDIO_INITINFO(&auinfo);
+ 
+ 	auinfo.play.precision=16;
+ 	auinfo.play.encoding=AUDIO_ENCODING_LINEAR;
+--- configure.in.old	Sun Oct 26 10:53:03 1997
++++ configure.in	Sun Oct 26 10:54:32 1997
+@@ -58,7 +58,7 @@
+     DEFINES="-DOS_$OS_TYPE -DARCH_$ARCH_TYPE"
+     ;;
+ 
+-  Linux|FreeBSD)
++  Linux|FreeBSD|NetBSD)
+     CC="gcc"
+     if test "$ARCH_TYPE" = "i486" ; then
+       CFLAGS_ARCH="-m486"
+--- configure.old	Sun Oct 26 11:18:18 1997
++++ configure	Sun Oct 26 11:18:45 1997
+@@ -1398,7 +1398,7 @@
+     DEFINES="-DOS_$OS_TYPE -DARCH_$ARCH_TYPE"
+     ;;
+ 
+-  Linux|FreeBSD)
++  Linux|FreeBSD|NetBSD)
+     CC="gcc"
+     if test "$ARCH_TYPE" = "i486" ; then
+       CFLAGS_ARCH="-m486"
+@@ -1409,7 +1409,7 @@
+     if test "$OS_TYPE" = "FreeBSD" ; then
+       OS_TYPE="BSD"
+     fi
+-    CFLAGS="-O2 -m486 -pipe -ffast-math -fomit-frame-pointer ${CFLAGS_ARCH}"
++    CFLAGS="-O6 -ffast-math -fomit-frame-pointer ${CFLAGS_ARCH}"
+     DEFINES="-DNO_BYTE_SWAPPING -DOS_$OS_TYPE -DARCH_$ARCH_TYPE" 
+     ;;
+ 
