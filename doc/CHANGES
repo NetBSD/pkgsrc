@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5603 2004/04/16 03:49:23 salo Exp $
+$NetBSD: CHANGES,v 1.5604 2004/04/16 11:41:48 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1993,3 +1993,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lftp to 3.0.2 [salo 2004-04-16]
 	Updated ogmtools to 1.4 [salo 2004-04-16]
 	Updated tkgate to 1.6inb2 [minskim 2004-04-16]
+	Updated cadaver to 0.22.1 [recht 2004-04-16]
