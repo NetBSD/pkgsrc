@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.13 2004/01/10 03:32:09 jlam Exp $
+$NetBSD: patch-af,v 1.14 2004/05/17 10:40:45 jlam Exp $
 
 --- cups/Makefile.orig	Fri Aug 29 17:26:40 2003
 +++ cups/Makefile
@@ -12,66 +12,12 @@ $NetBSD: patch-af,v 1.13 2004/01/10 03:32:09 jlam Exp $
  
  installhdrs:
  	$(INSTALL_DIR) $(INCLUDEDIR)/cups
-@@ -109,7 +109,7 @@ installhdrs:
- 
- libcups.so.2 libcups.sl.2:	$(LIBOBJS) ../Makedefs
- 	echo Linking $@...
--	$(DSO) $(DSOFLAGS) -o $@ $(LIBOBJS) $(SSLLIBS) $(COMMONLIBS)
-+	$(DSO) $(DSOFLAGS) -o $@ $(LIBOBJS) $(LIBCRYPT) $(SSLLIBS) $(COMMONLIBS)
- 	$(RM) `basename $@ .2`
- 	$(LN) $@ `basename $@ .2`
- 
-@@ -124,7 +124,7 @@ libcups.2.dylib:	$(LIBOBJS) ../Makedefs
- 		-install_name $(libdir)/$@ \
- 		-current_version 2.5.0 \
- 		-compatibility_version 2.0.0 \
--		$(LIBOBJS) $(SSLLIBS) $(COMMONLIBS)
-+		$(LIBOBJS) $(LIBCRYPT) $(SSLLIBS) $(COMMONLIBS)
- 	$(RM) libcups.dylib
- 	$(LN) $@ libcups.dylib
- 
-@@ -137,7 +137,7 @@ libcups_s.a:	$(LIBOBJS) ../Makedefs
- 	echo Creating $@...
- 	$(RM) libcups_s.exp
- 	(echo _ipp_add_attr; echo _ipp_free_attr) >libcups_s.exp
--	$(DSO) $(DSOFLAGS) -Wl,-bexport:libcups_s.exp -o libcups_s.o $(LIBOBJS) $(SSLLIBS) $(COMMONLIBS) -lm
-+	$(DSO) $(DSOFLAGS) -Wl,-bexport:libcups_s.exp -o libcups_s.o $(LIBOBJS) $(LIBCRYPT) $(SSLLIBS) $(COMMONLIBS) -lm
- 	$(RM) $@
- 	$(AR) $(ARFLAGS) $@ libcups_s.o
- 
 @@ -149,7 +149,7 @@ libcups_s.a:	$(LIBOBJS) ../Makedefs
  libcups.la:    $(LIBOBJS) ../Makedefs
  	echo Linking $@...
  	$(DSO) $(DSOFLAGS) -o $@ $(LIBOBJS:.o=.lo) -rpath $(LIBDIR) \
 -		-version-info 2:5 $(SSLLIBS) $(COMMONLIBS)
-+		-version-info 2:6 $(LIBCRYPT) $(SSLLIBS) $(COMMONLIBS)
- 
- 
- #
-@@ -179,7 +179,7 @@ cups_C.h:	../locale/C/cups_C
- 
- testhttp:	testhttp.o libcups.a
- 	echo Linking $@...
--	$(CC) $(LDFLAGS) -o $@ testhttp.o libcups.a $(NETLIBS) $(SSLLIBS) $(COMMONLIBS)
-+	$(CC) $(LDFLAGS) -o $@ testhttp.o libcups.a $(NETLIBS) $(LIBCRYPT) $(SSLLIBS) $(COMMONLIBS)
- 
- 
- #
-@@ -188,7 +188,7 @@ testhttp:	testhttp.o libcups.a
- 
- testipp:	testipp.o libcups.a
- 	echo Linking $@...
--	$(CC) $(LDFLAGS) -o $@ testipp.o libcups.a $(NETLIBS) $(SSLLIBS) $(COMMONLIBS)
-+	$(CC) $(LDFLAGS) -o $@ testipp.o libcups.a $(NETLIBS) $(LIBCRYPT) $(SSLLIBS) $(COMMONLIBS)
- 
- 
- #
-@@ -197,7 +197,7 @@ testipp:	testipp.o libcups.a
- 
- testlang:	testlang.o libcups.a
- 	echo Linking $@...
--	$(CC) $(LDFLAGS) -o $@ testlang.o libcups.a $(NETLIBS) $(SSLLIBS) $(COMMONLIBS)
-+	$(CC) $(LDFLAGS) -o $@ testlang.o libcups.a $(NETLIBS) $(LIBCRYPT) $(SSLLIBS) $(COMMONLIBS)
++		-version-info 2:6 $(SSLLIBS) $(COMMONLIBS)
  
  
  #
