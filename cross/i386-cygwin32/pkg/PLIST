@@ -1,1 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2000/05/31 17:54:28 oki Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/11/06 05:31:44 minoura Exp $
+bin/${TARGET_ARCH}-dlltool
+bin/${TARGET_ARCH}-windres
+${TARGET_ARCH}/bin/dlltool
+${TARGET_ARCH}/bin/windres
+${TARGET_ARCH}/include/assert.h
