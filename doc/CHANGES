@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5586 2004/04/15 11:12:04 grant Exp $
+$NetBSD: CHANGES,v 1.5587 2004/04/15 11:45:50 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -328,6 +328,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kmplayer to 0.8.2rc5 [jmmv 2004-01-18]
 	Updated xpdf-chinese-simplified to 20040116 [wiz 2004-01-18]
 	Added libebml-0.6.3 [kristerw 2004-01-18]
+	Added p5-palm-1.3.0 [mjl 2004-01-18]
 	Updated p5-HTML-Tree to 3.18 [heinz 2004-01-18]
 	Updated p5-HTML-Format to 2.03 [heinz 2004-01-18]
 	Updated p5-Test-Harness to 2.40 [heinz 2004-01-18]
@@ -1961,3 +1962,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gtk2-engines-bluecurve-1.0 [jmmv 2004-04-15]
 	Added p5-DBD-Oracle-1.14 [grant 2004-04-15]
 	Added yasql-1.81 [grant 2004-04-15]
+	Updated p5-Config-General to 2.26 [mjl 2004-04-15]
