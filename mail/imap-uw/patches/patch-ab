@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2000/09/19 13:13:30 hubertf Exp $
+$NetBSD: patch-ab,v 1.7 2000/11/09 03:35:34 hubertf Exp $
 
---- src/imapd/Makefile.orig	Wed Aug 30 22:47:54 2000
+--- src/imapd/Makefile.orig	Wed Oct 25 01:54:32 2000
 +++ src/imapd/Makefile
-@@ -40,7 +40,7 @@
+@@ -27,7 +27,7 @@
  # Get local definitions from c-client directory
  
  C = ../c-client
