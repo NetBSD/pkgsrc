@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1241 2003/01/27 07:54:27 martti Exp $
+$NetBSD: CHANGES,v 1.1242 2003/01/27 09:38:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -422,3 +422,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated links to 2.1.0.7nb1 [salo 2003-01-26]
 	Updated links-gui to 2.1.0.7nb2 [salo 2003-01-26]
 	Updated etcupdate to 20030124 [martti 2003-01-27]
+	Added gnome-dirs-1.0 [jmmv 2003-01-27]
+	Added gnome1-dirs-1.0 [jmmv 2003-01-27]
+	Added gnome2-dirs-1.0 [jmmv 2003-01-27]
