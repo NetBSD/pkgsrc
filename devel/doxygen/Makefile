@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.25 2004/10/26 20:36:22 groo Exp $
+# $NetBSD: Makefile,v 1.26 2004/11/09 14:31:51 adam Exp $
 
-DISTNAME=		doxygen-1.3.8.src
-PKGNAME=		doxygen-1.3.8
-PKGREVISION=	1
-CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.stack.nl/pub/users/dimitri/
+DISTNAME=	doxygen-1.3.9.1.src
+PKGNAME=	doxygen-1.3.9.1
+CATEGORIES=	devel
+MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.doxygen.org/
-COMMENT=		Documentation system for C++, Java, IDL and C
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.doxygen.org/
+COMMENT=	Documentation system for C++, Java, IDL and C
 
-DEPENDS+=		teTeX-[0-9]*:../../print/teTeX
+DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_GNU_TOOLS+=		make
@@ -24,6 +23,7 @@ CONFIGURE_ARGS+=	--install ${INSTALL}
 CONFIGURE_ARGS+=	--dot ${PREFIX}/bin/dot
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
 CONFIGURE_ARGS+=	--docdir ${PREFIX}/share/doc
+MAKE_ENV+=		PKGSRC_CFLAGS="${CFLAGS}"
 
 SUBST_CLASSES+=		pybin
 SUBST_STAGE.pybin=	pre-configure
