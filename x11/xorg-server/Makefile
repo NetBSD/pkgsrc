@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/03/22 14:01:20 adam Exp $
+# $NetBSD: Makefile,v 1.20 2005/03/30 20:29:20 hira Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
@@ -25,6 +25,9 @@ XINSTALL_DIRS=		lib/font/FreeType \
 			lib/font/Type1 \
 			lib/font/bitmap programs/Xserver
 XINSTALL_MAN_DIRS=	programs/Xserver
+
+PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+XORG_PLIST_ENTRY=	${OPSYS}
 
 REPLACE_PERL=		exports/lib/modules/getconfig*
 
@@ -53,14 +56,10 @@ USE_PERL5=	build # Yeah, we need this :-)
 BUILDLINK_PASSTHRU_DIRS+=	/System
 .else
 .include "options.mk"
-
-PLIST_SRC+=	PLIST.${OPSYS}
-PLIST_SRC+=	PLIST.common_cards
-PLIST_SRC+=	PLIST.common
-PLIST_SRC+=	PLIST.common_end
 .endif
 
 post-install:
+	@${SED} ${XORG_PLIST_SED} ${PKGDIR}/PLIST > ${PLIST_SRC}
 .if ${OPSYS} == "Darwin"
 	${CHMOD} a+r ${X11ROOT}/bin/XDarwin
 .else
