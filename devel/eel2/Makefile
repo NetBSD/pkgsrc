@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/11 04:54:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/13 23:19:27 jmmv Exp $
 #
 
 DISTNAME=		eel-2.4.1
@@ -24,9 +24,10 @@ GNU_CONFIGURE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/eel-2.0.pc.in
 
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../devel/gail/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../devel/gail/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
