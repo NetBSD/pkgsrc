@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.761 2003/07/31 21:29:47 wiz Exp $
+$NetBSD: TODO,v 1.762 2003/08/01 00:01:48 seb Exp $
 
 Suggested new packages
 ======================
@@ -77,7 +77,6 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
 	o balsa2-2.0.13
-	o bind-8.4.1 [seb]
 	o bzflag-1.7g0
 	o calc-2.11.8
 	o centericq-4.9.5
