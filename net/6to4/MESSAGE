@@ -1,8 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/05/06 17:42:05 jmmv Exp $
+$NetBSD: MESSAGE,v 1.3 2003/08/08 08:11:05 grant Exp $
 
-To configure this package, adjust ${PREFIX}/etc/6to4.conf from
-${PREFIX}/etc/6to4.conf-example, then start "6to4 -v start".
-You should be able to "ping6 www.kame.net" after that.
+To configure a 6to4 tunnel, modify the configuration file
+${PKG_SYSCONFDIR}/6to4.conf for your system, then run
+
+	${RCD_SCRIPTS_DIR}/6to4 -v start
+
+You should then be able to ping6 www.kame.net.
 
 ===========================================================================
