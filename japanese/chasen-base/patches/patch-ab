@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/01/10 14:45:03 taca Exp $
+$NetBSD: patch-ab,v 1.2 2001/02/23 15:03:47 taca Exp $
 
---- lib/print.c.orig	Tue Dec 19 05:08:31 2000
+--- lib/print.c.orig	Wed Feb 14 09:20:53 2001
 +++ lib/print.c
-@@ -166,14 +166,6 @@
+@@ -167,14 +167,6 @@
  void cha_set_fput(server_mode)
      int server_mode;
  {
