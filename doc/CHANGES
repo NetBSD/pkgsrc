@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2356 2003/05/29 20:09:58 salo Exp $
+$NetBSD: CHANGES,v 1.2357 2003/05/29 21:10:02 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2197,3 +2197,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cpuflags to 0.42 [abs 2003-05-29]
 	Added ja-dvi2tty-5.0 [itohy 2003-05-29]
 	Updated vsftpd to 1.2.0 [salo 2003-05-29]
+	Updated cfengine2 to 2.0.7p3 [seb 2003-05-29]
+	Updated cfengine2-doc to 2.0.7p3 [seb 2003-05-29]
