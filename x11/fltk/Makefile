@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/01/20 12:28:26 agc Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/02 13:02:49 jlam Exp $
 #
 
 DISTNAME=	fltk-1.0.11-source
@@ -20,7 +20,7 @@ COMMENT=	Fast Light Tool Kit for graphical user interfaces
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_BUILDLINK2=		# defined
-USE_GCC_SHLIB=		# defined
+USE_LANGUAGES=		c c++
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		# defined
 USE_X11BASE=		# defined
