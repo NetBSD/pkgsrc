@@ -9,24 +9,10 @@ experts in their language to provide a parser for those tool
 authors, without knowing anything about those tools.
 
 The Semantic Bovinator is made up of these important pieces:
-
-    1. lexer: Converts a language into a token stream
-
-    2. parser: Converts a token stream into a stream of nonterminals
-       defined by the language.
-
-    3. parser-generator: Converts a language definition into a table
-       usable by the parser. (Written using the Semantic Bovinator)
-
-    4. language definitions: Parsers already existing for the parser
-       generator language (Bovine Normal Form), Emacs Lisp, and C.
-
-    5. navigator: Senator is a navigator that permits simple
-       navigation through the parsed language.
-
-    6. speedbar browser: Code for browsing a generated nonterminal
-       list with Speedbar.
-
-    7. Documentation generator: Identifies inline documentation in
-       source code, and can convert it to texinfo. It can also create
-       inline documenation.
+    1. lexer
+    2. parser
+    3. parser-generator
+    4. language definitions
+    5. navigator
+    6. speedbar browser
+    7. Documentation generator
