@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2004/03/20 00:40:15 snj Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/10 13:40:02 adam Exp $
 
---- compface.h.orig     2000-11-22 13:38:39.000000000 +0000
+--- compface.h.orig	2005-01-10 14:12:29.000000000 +0000
 +++ compface.h
 @@ -17,6 +17,7 @@
  #define COMPFACE_H
@@ -9,3 +9,4 @@ $NetBSD: patch-aa,v 1.1 2004/03/20 00:40:15 snj Exp $
 +#include <errno.h>
  
  /* For all function declarations, if ANSI then use a prototype. */
+ 
