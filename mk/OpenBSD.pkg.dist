@@ -1,4 +1,4 @@
-#	$NetBSD: OpenBSD.pkg.dist,v 1.14 2003/05/15 20:34:18 salo Exp $
+#	$NetBSD: OpenBSD.pkg.dist,v 1.15 2003/05/15 20:47:01 salo Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -73,6 +73,7 @@
             ..
             mann
             ..
+        ..
         cat1           
         ..
         cat2            
@@ -140,6 +141,7 @@
             ..
             mann
             ..
+        ..
         de 
             cat1            
             ..
@@ -185,6 +187,7 @@
             ..
             mann
             ..
+        ..
         es 
             cat1            
             ..
@@ -230,6 +233,7 @@
             ..
             mann
             ..
+        ..
         fr 
             cat1            
             ..
@@ -275,6 +279,7 @@
             ..
             mann
             ..
+        ..
         ja_JP.EUC
             cat1            
             ..
@@ -320,6 +325,7 @@
             ..
             mann
             ..
+        ..
         pl 
             cat1            
             ..
