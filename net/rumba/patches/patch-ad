@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.3 2000/08/25 21:00:14 tron Exp $
+
+--- proc.c.orig        Wed Dec 31 00:28:48 1997
++++ proc.c     Wed May 17 12:51:36 2000
+@@ -878,12 +878,13 @@
+         char *p;
+         char *buf = server->packet;
+         int result;
++        const word o_attr = aSYSTEM | aHIDDEN;
+
+         smb_lock_server(server);
+
+  retry:
+         p = smb_setup_header(server, SMBunlink, 1, 2 + len);
+-        WSET(buf, smb_vwv0, 0);
++        WSET(buf, smb_vwv0, o_attr);
+         smb_encode_ascii(p, path, len);
+
+         if ((result = smb_request_ok(server, SMBunlink, 0, 0)) < 0) {
