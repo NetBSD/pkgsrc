@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.1 1999/11/30 01:30:50 hubertf Exp $
+
+--- kodak/kodak_dc2x.c.orig	Tue Nov 30 01:34:40 1999
++++ kodak/kodak_dc2x.c	Tue Nov 30 01:37:07 1999
+@@ -31,7 +31,11 @@
+   
+   /* Open the camera for reading/writing */
+ 
++#ifdef __NetBSD__
++  char *serial_port = "/dev/tty00"; 
++#else
+   char *serial_port = "/dev/ttyS0"; 
++#endif
+  
+   int tfd;
+ 

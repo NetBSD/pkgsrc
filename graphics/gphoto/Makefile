@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/30 00:01:37 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/30 01:30:48 hubertf Exp $
 
 DISTNAME=	gphoto-0.4.1
 CATEGORIES=	graphics
@@ -8,9 +8,9 @@ MAINTAINER=	jmcm@cs.cmu.edu
 HOMEPAGE=	http://www.gphoto.org/
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	gtk+-1.2.6:../../x11/gtk
-DEPENDS+=	glib-1.2.6:../../devel/glib
-DEPENDS+=	imlib-1.9.8:../../graphics/imlib
+DEPENDS+=	gtk+-1.2.?:../../x11/gtk
+DEPENDS+=	glib-1.2.?:../../devel/glib
+DEPENDS+=	imlib-1.9.?:../../graphics/imlib
 
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
