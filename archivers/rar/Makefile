@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/04/01 14:07:52 agc Exp $
+# $NetBSD: Makefile,v 1.14 1999/05/22 21:35:59 tv Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=   ftp://ftp.inetpros.net/pub/rar/ \
 		ftp://ftp.kiarchive.ru/pub/unix/arcers/
 EXTRACT_SUFX=   .exe
 ONLY_FOR_ARCHS=	i386
+ONLY_FOR_OPSYS=	NetBSD
 
 MAINTAINER=     packages@netbsd.org
 
@@ -31,8 +32,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rar ${PREFIX}/share/rar
 	cd ${WRKSRC} && \
 		${INSTALL_SCRIPT} RAR ${PREFIX}/bin/rar && \
-		${INSTALL_MAN} Rar.Txt ${PREFIX}/man/cat1/rar.1 && \
-		${INSTALL_MAN} Rar_FAQ.Txt TechNote.Txt License.Txt Internet.Txt \
+		${INSTALL_MAN} Rar.Txt Rar_FAQ.Txt TechNote.Txt License.Txt Internet.Txt \
 			${PREFIX}/share/doc/rar && \
 		${INSTALL_DATA} RarFiles.Lst \
 			${PREFIX}/share/rar/rarfiles.lst && \
