@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2401 2004/11/19 19:44:15 wiz Exp $
+$NetBSD: TODO,v 1.2402 2004/11/20 00:32:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1013,7 +1013,6 @@ Suggested package updates
 	o smokeping-1.31
 	o snd-7.8
 	o snes9x-1.42
-	o snownews-1.5.5
 	o spamass-milter-0.2.0
 	o spiralsynth-2.0.0
 	o splint-3.1.1
