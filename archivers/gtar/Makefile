@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/04/07 18:59:00 tron Exp $
+# $NetBSD: Makefile,v 1.25 2004/05/18 11:58:04 recht Exp $
 
 DISTNAME=	gtar-1.13.25
 PKGREVISION=	2
@@ -12,6 +12,8 @@ COMMENT=	The "meta-package" for the GNU tape archiver (tar)
 
 DEPENDS+=	gtar-base-1.13.25nb2:../../archivers/gtar-base
 DEPENDS+=	gtar-info-1.13.25:../../archivers/gtar-info
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 
