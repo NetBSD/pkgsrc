@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:34:25 agc Exp $
+
+MD5 (mush/mush-7.2.5.tar.Z) = ecf3ba537e9936d765e0113361052f75
+MD5 (mush/patch-7.2.6-alpha-1) = 97fa466431171051bed08f5e5165137e
+MD5 (mush/patch-7.2.6-alpha-2) = c7763ae91d3e469c34a1c77e60583a60
+MD5 (mush/patch-7.2.6-alpha-3) = 5510ba98c510a09fca844f0cf0a48f9e
+MD5 (mush/patch-7.2.6-beta-1) = 61627bba6aac5e5d6781205370649e35
+MD5 (mush/patch-7.2.6-beta-2) = a864a84e515e0d38628049ce5160b46b
+MD5 (mush/patch-7.2.6-beta-3) = a46a60543a46ab2ae76cd70c373b0b68
+MD5 (mush/patch-7.2.6-beta-4) = 3f80887b12860b3a28cc1edf465f86bd
+SHA1 (patch-aa) = dd38a31a1e048471013df7a167fdf5582445ce2b
+SHA1 (patch-ab) = e1482baca81fe09889f8316d96f9afb1a7a6bbb0
+SHA1 (patch-ac) = 963ce2cc9e30a2cd5e7e63edbe09692a880d8d5b
+SHA1 (patch-ad) = 2c2a20548c7faefb8c6aba91c0f4d75d6de9557d
+SHA1 (patch-ae) = 2923fa751a0e3dba13bc711694285973225e21b6
+SHA1 (patch-af) = 1df2f9fb0b536cc30f94ba357a5de9fe11bbf941
+SHA1 (patch-ag) = 29f4e9ca85bfbdaa53aa99ba077a4b657fea8c87
+SHA1 (patch-ah) = 8ba748a25f82f519af6ecf53d0ad623f5f2c753e
+SHA1 (patch-ai) = 5659b2d975f86e856d1bf6efb8909bc08ec2acf4
+SHA1 (patch-aj) = fee38b6e855a6494ecef0e41e2602850d1b58746
+SHA1 (patch-ak) = 47a3a7dc405a654db3a7d76f80d71af98e9501cb
+SHA1 (patch-al) = 3cb93e1606afbe472faf2b737bc05076adcb3574
+SHA1 (patch-am) = 2af4636ebd0168d06711abff5f05ffbf0e1868a8

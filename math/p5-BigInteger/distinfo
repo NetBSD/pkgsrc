@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:32 agc Exp $
+
+MD5 (Math-BigInteger-1.0.tar.gz) = a92ffa6d66491c83ebe416ac86825da6
+SHA1 (patch-aa) = 3a3d3792e499dc1cd5104c9db5e0e9c4aa03e35e

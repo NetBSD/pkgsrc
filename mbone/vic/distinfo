@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:34:05 agc Exp $
+
+MD5 (vicsrc-2.8.tar.gz) = 1f9ae3fbf8e9e47e6539c0621964542d
+SHA1 (patch-ab) = 8a9f5fbacc8e90b62cbb4dc7335fab2c23512ef4
+SHA1 (patch-ac) = e95936892d83876c90edb5e81963350c60e56866
+SHA1 (patch-ad) = ae4b9b349017a163d3c7632c10e6aa62433a3ede
+SHA1 (patch-ae) = 05b45b8ac88a0c86d39b53cc1f2c4499411745da
+SHA1 (patch-af) = 5263cff868b12a54b51760b605fdc91180554371
+SHA1 (patch-ag) = d3458b0a01cea09b55795574c54cd8b6007e75a6
+SHA1 (patch-ah) = b5ed0c03955ee1f60c18ea71a142a365947a4962
+SHA1 (patch-ai) = 2d651ec7bb05115ae655239716bde8856bab7ff2
+SHA1 (patch-aj) = 148d183345c159e4f02a0ea10648406eb733545a

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:39:35 agc Exp $
+
+MD5 (screen-3.9.8.tar.gz) = 8ddfebe32c2d45410ce89ea9779bb1cf
+SHA1 (patch-aa) = 996ca04a1218bc477742cd9df15a2a899a66bc0a
+SHA1 (patch-ab) = 11c75244a3f00d5cf46feb00a45cfd2eb3303daa
+SHA1 (patch-ac) = dfd1ca3973f7b85a77d4ad87e82e2dbc9baa0d2c
+SHA1 (patch-ae) = 296709d031fe4c55e2c2e23d3090d98954178db4
+SHA1 (patch-ag) = 296102be5e5fc520e0e1a346347d2bb5972f90e4

@@ -1,5 +1,0 @@
-$NetBSD: patch-sum,v 1.5 2000/04/15 07:56:16 simonb Exp $
-
-MD5 (patch-ca) = 299c57e2c3b0e834f960983683643049
-MD5 (patch-cb) = fc9191568dbc10ee6d1f079a317e7313
-MD5 (patch-cc) = 14aab99374bf88d3d661ca795fdd2af8

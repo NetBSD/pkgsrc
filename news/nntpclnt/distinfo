@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:09 agc Exp $
+
+MD5 (nntpclnt-1.6.1.tar.gz) = 9426d67d9b1838594351225901769f74
+SHA1 (patch-aa) = 166c73c3f551ea5e80d91feceb88176234369bb3
+SHA1 (patch-ab) = 2cffb1a1eb68c7520bef6b81d41c924e5aa5be2c
