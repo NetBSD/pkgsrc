@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2004/02/06 19:43:53 jmmv Exp $
+
+--- shell/gpdf.c.orig	2004-01-17 22:09:01.000000000 +0100
++++ shell/gpdf.c
+@@ -121,6 +121,7 @@ open_request_logger (GPdfURIInput *in, c
+ static void
+ set_window_icon_default (void)
+ {
++/* *** REQUIRES DEVELOPMENT BRANCH OF GTK2 (2.3.X) ***
+ 	GdkPixbuf *pixbuf;
+ 
+ 	pixbuf = gdk_pixbuf_new_from_file (GNOMEICONDIR "/gnome-pdf.png", NULL);
+@@ -131,6 +132,7 @@ set_window_icon_default (void)
+ 	gtk_window_set_default_icon (pixbuf);
+ 
+ 	g_object_unref (pixbuf);
++*/
+ }
+ 
+ int
