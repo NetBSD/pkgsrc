@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2002/09/01 13:52:45 tron Exp $
+# $NetBSD: Makefile,v 1.49 2002/09/18 19:51:55 tron Exp $
 
 DISTNAME=	wget-1.7
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 
@@ -34,6 +35,15 @@ CONFIGURE_ARGS+=        --enable-ipv6
 .else
 CONFIGURE_ARGS+=        --disable-ipv6
 .endif
+
+WGET_USE_SSL?=	YES
+
+.if ${WGET_USE_SSL} == YES
+.include "../../security/openssl/buildlink2.mk"
+CONFIGURE_ARGS+=--with-ssl=${SSLBASE}
+.endif
+
+CONFIGURE_ARGS+=--with-ssl=${SSLBASE}
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 

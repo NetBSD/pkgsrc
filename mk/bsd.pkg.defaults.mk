@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.86 2002/09/01 04:59:05 schmonz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.87 2002/09/18 19:51:53 tron Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1478,6 +1478,11 @@ USERPPP_GROUP?=	network
 # Used in vim package to build with non-gui extra options
 # Possible: not defined, see "configure --help"
 # Default: not defined
+
+WGET_USE_SSL?=	YES
+# Enable SSL in wget (for https connections)
+# Possible: YES, NO
+# Default: YES
 
 WINDOWMAKER_OPTIONS?= gnome kde openlook
 # Options for building windowmaker package. Used to add support for
