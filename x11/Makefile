@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.357 2004/07/11 06:22:56 martti Exp $
+# $NetBSD: Makefile,v 1.358 2004/07/29 04:53:55 xtraeme Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -282,6 +282,10 @@ SUBDIR+=	xmove
 SUBDIR+=	xmx
 SUBDIR+=	xneko
 SUBDIR+=	xnodecor
+SUBDIR+=	xorg-clients
+SUBDIR+=	xorg-imake
+SUBDIR+=	xorg-libs
+SUBDIR+=	xorg-server
 SUBDIR+=	xosd
 SUBDIR+=	xp
 SUBDIR+=	xpad
