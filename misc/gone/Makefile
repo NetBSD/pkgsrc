@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/03/16 20:53:03 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/08 21:12:07 zuntum Exp $
 # FreeBSD Id: ports/misc/gone/Makefile,v 1.8 2001/01/16 17:31:40 sobomax Exp
 
-DISTNAME=	gone-1.3.1
+DISTNAME=	gone-1.3.2b
 CATEGORIES=	misc
 MASTER_SITES=	http://jaguar.ir.miami.edu/~marcus/
 
