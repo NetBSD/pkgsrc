@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/11/27 01:14:32 hamajima Exp $
+$NetBSD: distinfo,v 1.3 2004/11/28 04:10:36 taca Exp $
 
-SHA1 (dtcp-20040611.tar.gz) = ca70a697c33c989b62724ba96debf1c0c06e9d9d
-Size (dtcp-20040611.tar.gz) = 17981 bytes
+SHA1 (ruby/dtcp-20040611.tar.gz) = ca70a697c33c989b62724ba96debf1c0c06e9d9d
+Size (ruby/dtcp-20040611.tar.gz) = 17981 bytes
+SHA1 (patch-aa) = 869893b85cb86abf150fa9745b16e4f2aae9ebac
