@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2003/06/04 09:02:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.63 2003/06/11 21:31:13 grant Exp $
 
 DISTNAME=	wget-1.8.2
 CATEGORIES=	net
@@ -20,7 +20,7 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 OPENSSL_LDFLAGS=	${LDFLAGS} -L${BUILDLINK_PREFIX.openssl}/lib \
-			${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+			-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 FIX_RPATH+=		OPENSSL_LDFLAGS
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
