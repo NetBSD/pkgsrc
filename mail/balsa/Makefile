@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2004/10/03 00:12:52 tv Exp $
+# $NetBSD: Makefile,v 1.49 2004/10/15 11:59:38 tv Exp $
 #
 
 DISTNAME=		balsa-1.4.3
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		mail gnome
 MASTER_SITES=		http://www.theochem.kth.se/~pawsa/balsa/ \
 			ftp://ftp.newton.cx/pub/balsa/
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=	--enable-pcre
 CONFIGURE_ARGS+=        --with-ssl=${BUILDLINK_PREFIX.openssl}
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/libtool/buildlink3.mk"
 .include "../../devel/libproplist/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
