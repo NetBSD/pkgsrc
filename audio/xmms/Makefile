@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/06/25 08:17:33 abs Exp $
+# $NetBSD: Makefile,v 1.29 2002/08/01 06:40:51 jlam Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.2.7
@@ -44,7 +44,3 @@ post-patch:
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if (${PTHREAD_TYPE} == pth)	# XXX Remove after pth-syscall becomes pth
-CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
-.endif
