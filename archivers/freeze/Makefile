@@ -1,9 +1,4 @@
-# New ports collection makefile for:    freeze
-# Version required:     2.5
-# Date created:         20 Jul 1996
-# Whom:                 lukin@okbmei.msk.su
-#
-# $NetBSD: Makefile,v 1.2 1997/10/27 03:22:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:07 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/18 11:20:59 asami Exp 
 #
 
@@ -17,4 +12,4 @@ GNU_CONFIGURE=	yes
 ALL_TARGET=	prog
 MAN1=		freeze.1 melt.1 unfreeze.1 fcat.1 statist.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

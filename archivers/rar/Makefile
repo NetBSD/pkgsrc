@@ -1,10 +1,4 @@
-# New ports collection makefile for:    rar
-# http://www.inetpros.net/rar.htm
-# Version required:     2.01
-# Date created:         15 May 1996
-# Whom:                 ache
-#
-# $NetBSD: Makefile,v 1.8 1998/03/07 21:23:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:08 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -49,4 +43,4 @@ do-install:
 		${INSTALL_DATA} Dos.SFX \
 			${PREFIX}/share/rar/dos.sfx
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

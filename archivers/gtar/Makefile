@@ -1,9 +1,4 @@
-# New ports collection makefile for:	gtar
-# Version required:     1.12
-# Date created:		1 March 1998
-# Whom:			tv@netbsd.org
-#
-# $NetBSD: Makefile,v 1.4 1998/03/10 11:57:27 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:08 agc Exp $
 #
 
 DISTNAME=       tar-1.12
@@ -26,4 +21,4 @@ MAN1=	gtar.1
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/gtar.1 ${PREFIX}/man/man1/
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
