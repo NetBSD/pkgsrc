@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/10/13 07:57:43 tron Exp $
+# $NetBSD: Makefile,v 1.40 2003/01/28 22:03:58 jlam Exp $
 
 DISTNAME=		inn-2.3.3
 CATEGORIES=		news
@@ -22,6 +22,7 @@ BUILD_DEFS+=		INN_DATA_DIR
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/inn
 CONFIGURE_ARGS+=	--enable-setgid-inews \
@@ -111,5 +112,4 @@ post-install:
 	done
 
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

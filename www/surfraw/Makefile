@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/08/25 21:52:22 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2003/01/28 22:04:32 jlam Exp $
 #
 
 DISTNAME=	surfraw-1.0.7
@@ -12,6 +12,7 @@ COMMENT=	Shell Users' Revolutionary Front Rage Against the Web
 CONFLICTS+=	surfaw-[0-9]*
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -31,5 +32,4 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

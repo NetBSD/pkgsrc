@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/21 10:12:30 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/28 22:03:08 jlam Exp $
 # FreeBSD Id: ports/comms/conserver-com/Makefile,v 1.1 2001/12/09 14:40:12 kur iyama Exp
 
 DISTNAME=      conserver-7.2.1
@@ -10,6 +10,7 @@ HOMEPAGE=      http://www.conserver.com/
 COMMENT=       Application that allows multiple users to watch serial consoles
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -31,6 +32,4 @@ pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
 .include "../../security/tcp_wrappers/buildlink2.mk"
-
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/10 12:56:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:21 jlam Exp $
 # FreeBSD: ports/games/xpat2/Makefile,v 1.11 2000/04/14 12:27:59 asami Exp
 
 DISTNAME=	xpat2-1.06
@@ -9,6 +9,7 @@ MAINTAINER=	kuebart@mathematik.uni-ulm.de
 COMMENT=	X11 solitaire game with 14 variations
 
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 USE_X11BASE=	YES
 
 # This package uses imake, but invokes it directly as part of the build
@@ -26,5 +27,4 @@ post-install:
 	${CHMOD} 2555 ${PREFIX}/bin/xpat2
 
 .include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/22 18:14:51 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/28 22:03:57 jlam Exp $
 #
 
 DISTNAME=	freenet6-0.9.6
@@ -11,6 +11,7 @@ MAINTAINER=	grant@netbsd.org
 HOMEPAGE=	http://www.freenet6.net/
 COMMENT=	freenet6 IPv6 tunnel server protocol client
 
+USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 INTERACTIVE_STAGE=	fetch
 ONLY_FOR_PLATFORM=	NetBSD-*-* Linux-*-* SunOS-5.[8-9]-*
@@ -63,5 +64,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/template/${template} ${PREFIX}/share/tspc/template
 .endfor
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1132 2003/01/21 22:48:57 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1133 2003/01/28 22:03:46 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -939,6 +939,10 @@ NO_BUILDLINK=		# defined
 
 .if !defined(NO_BUILDLINK)
 .  include "../../mk/buildlink2/bsd.buildlink2.mk"
+.endif
+
+.if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
+.  include "../../mk/bsd.pkg.install.mk"
 .endif
 
 .MAIN: all

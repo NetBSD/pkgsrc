@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/01/19 12:54:32 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/01/28 22:03:15 jlam Exp $
 #
 
 DISTNAME=	isect-1.6.2
@@ -11,6 +11,7 @@ COMMENT=	open source middleware daemon
 
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 PTHREAD_OPTS+=	require
@@ -32,5 +33,4 @@ post-install:
 .include "../../www/libwww/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

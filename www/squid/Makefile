@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2002/12/02 03:09:01 grant Exp $
+# $NetBSD: Makefile,v 1.75 2003/01/28 22:04:31 jlam Exp $
 
 DISTNAME=	squid-2.5.STABLE1
 PKGNAME=	squid-2.5.1
@@ -46,8 +46,9 @@ PKG_SYSCONFSUBDIR?=	squid
 
 .include "../../mk/bsd.prefs.mk"
 
-GNU_CONFIGURE=		# defined
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--localstatedir=/var/squid \
 			${SQUID_CONFIGURE_ARGS}
@@ -118,6 +119,4 @@ post-install:
 	) >>${PLIST_SRC}
 
 .include "../../security/openssl/buildlink2.mk"
-
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

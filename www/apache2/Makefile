@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/01/28 14:21:56 martti Exp $
+# $NetBSD: Makefile,v 1.19 2003/01/28 22:04:27 jlam Exp $
 
 DISTNAME=		httpd-${APACHE_VERSION}
 PKGNAME=		apache-${APACHE_VERSION}
@@ -20,6 +20,7 @@ CONFLICTS+=		apr-[0-9]*	# devel/apr-devel package
 BUILD_DEFS+=		USE_INET6
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
 
 USE_LIBTOOL=		YES
@@ -155,5 +156,4 @@ post-install:
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

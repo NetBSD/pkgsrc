@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/01/10 20:20:53 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2003/01/28 22:03:03 jlam Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -29,8 +29,9 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-USE_BUILDLINK2=		# defined
-NO_CONFIGURE=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+NO_CONFIGURE=		yes
 
 .if ${OPSYS} == "NetBSD"
 MODSTAT=		/usr/bin/modstat
@@ -103,5 +104,4 @@ do-install: chroot
 	${RM} -f ${WRKSRC}/etc/*.o3 ${WRKSRC}/etc/*.sb
 	${RM} -f ${WRKSRC}/*.core
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

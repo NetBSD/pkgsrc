@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/05 03:10:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/28 22:04:21 jlam Exp $
 
 DISTNAME=	ndtpd-3.1.1
 PKGREVISION=	1
@@ -12,9 +12,10 @@ MAINTAINER=	uebayasi@soum.co.jp
 HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/ndtpd/
 COMMENT=	Server for accessing CD-ROM books with NDTP
 
-USE_BUILDLINK2=	# Defined
-USE_LIBTOOL=	# Defined
-GNU_CONFIGURE=	# Defined
+USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--localstatedir=${NDTPD_RUNDIR}
 CONFIGURE_ARGS+=--with-logdir=${NDTPD_LOGDIR}
 CONFIGURE_ARGS+=--with-eb
@@ -42,5 +43,4 @@ post-install:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../textproc/eb/buildlink2.mk"
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

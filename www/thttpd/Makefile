@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/09/19 09:04:34 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2003/01/28 22:04:32 jlam Exp $
 
 DISTNAME=	thttpd-2.23beta1
 PKGNAME=	thttpd-2.23.0.1
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	# defined
 # Note: this pkg auto-detects IPv6 without regarding USE_INET6.
 BUILD_DEFS+=	USE_INET6
 
+USE_PKGINSTALL=	yes
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/thttpd.conf ${PKG_SYSCONFDIR}/thttpd.conf
 RCD_SCRIPTS=	thttpd
@@ -44,5 +45,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/index.html ${PREFIX}/share/thttpd
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/thttpd
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

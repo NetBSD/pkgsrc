@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/01/19 23:08:19 chris Exp $
+# $NetBSD: Makefile,v 1.32 2003/01/28 22:03:41 jlam Exp $
 
 DISTNAME=	sylpheed-0.8.9
 CATEGORIES=	mail news x11
@@ -14,6 +14,7 @@ BUILD_USES_MSGFMT=	yes
 CONFLICTS=	sylpheed-claws-[0-9]*
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
@@ -61,5 +62,4 @@ post-install:
 .include "../../security/openssl/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
