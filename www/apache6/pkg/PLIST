@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2001/05/02 22:22:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2001/10/08 13:23:38 martti Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -8,6 +8,7 @@ include/httpd/ap_alloc.h
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
+include/httpd/ap_ebcdic.h
 include/httpd/sa_len.h
 include/httpd/sockaddr_storage.h
 include/httpd/ap_ctype.h
@@ -98,11 +99,12 @@ share/httpd/htdocs/index.html.ru.ucs2
 share/httpd/htdocs/index.html.ru.ucs4
 share/httpd/htdocs/index.html.ru.utf8
 share/httpd/htdocs/index.html.se
-share/httpd/htdocs/index.html.tw.Big5
+share/httpd/htdocs/index.html.zh.Big5
 share/httpd/htdocs/manual/LICENSE
 share/httpd/htdocs/manual/bind.html
 share/httpd/htdocs/manual/cgi_path.html
 share/httpd/htdocs/manual/configuring.html.en
+share/httpd/htdocs/manual/configuring.html.fr
 share/httpd/htdocs/manual/configuring.html.html
 share/httpd/htdocs/manual/configuring.html.ja.jis
 share/httpd/htdocs/manual/content-negotiation.html
@@ -142,11 +144,13 @@ share/httpd/htdocs/manual/index.html.html
 share/httpd/htdocs/manual/index.html.ja.jis
 share/httpd/htdocs/manual/install-tpf.html
 share/httpd/htdocs/manual/install.html.en
+share/httpd/htdocs/manual/install.html.es
 share/httpd/htdocs/manual/install.html.fr
 share/httpd/htdocs/manual/install.html.html
 share/httpd/htdocs/manual/install.html.ja.jis
 share/httpd/htdocs/manual/invoking.html
 share/httpd/htdocs/manual/invoking.html.fr
+share/httpd/htdocs/manual/invoking.html.html
 share/httpd/htdocs/manual/keepalive.html
 share/httpd/htdocs/manual/location.html
 share/httpd/htdocs/manual/man-template.html
@@ -182,7 +186,9 @@ share/httpd/htdocs/manual/mod/directives.html
 share/httpd/htdocs/manual/mod/footer.html
 share/httpd/htdocs/manual/mod/header.html
 share/httpd/htdocs/manual/mod/index-bytype.html
+share/httpd/htdocs/manual/mod/index-bytype.html.fr
 share/httpd/htdocs/manual/mod/index.html
+share/httpd/htdocs/manual/mod/index.html.fr
 share/httpd/htdocs/manual/mod/mod_access.html
 share/httpd/htdocs/manual/mod/mod_actions.html
 share/httpd/htdocs/manual/mod/mod_alias.html
@@ -200,7 +206,9 @@ share/httpd/htdocs/manual/mod/mod_cookies.html
 share/httpd/htdocs/manual/mod/mod_digest.html
 share/httpd/htdocs/manual/mod/mod_dir.html
 share/httpd/htdocs/manual/mod/mod_dld.html
-share/httpd/htdocs/manual/mod/mod_env.html
+share/httpd/htdocs/manual/mod/mod_env.html.en
+share/httpd/htdocs/manual/mod/mod_env.html.html
+share/httpd/htdocs/manual/mod/mod_env.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_example.html
 share/httpd/htdocs/manual/mod/mod_expires.html
 share/httpd/htdocs/manual/mod/mod_headers.html
@@ -212,7 +220,9 @@ share/httpd/htdocs/manual/mod/mod_log_agent.html
 share/httpd/htdocs/manual/mod/mod_log_common.html
 share/httpd/htdocs/manual/mod/mod_log_config.html
 share/httpd/htdocs/manual/mod/mod_log_referer.html
-share/httpd/htdocs/manual/mod/mod_mime.html
+share/httpd/htdocs/manual/mod/mod_mime.html.en
+share/httpd/htdocs/manual/mod/mod_mime.html.html
+share/httpd/htdocs/manual/mod/mod_mime.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_mime_magic.html
 share/httpd/htdocs/manual/mod/mod_mmap_static.html
 share/httpd/htdocs/manual/mod/mod_negotiation.html.en
@@ -220,7 +230,9 @@ share/httpd/htdocs/manual/mod/mod_negotiation.html.html
 share/httpd/htdocs/manual/mod/mod_negotiation.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_proxy.html
 share/httpd/htdocs/manual/mod/mod_rewrite.html
-share/httpd/htdocs/manual/mod/mod_setenvif.html
+share/httpd/htdocs/manual/mod/mod_setenvif.html.en
+share/httpd/htdocs/manual/mod/mod_setenvif.html.html
+share/httpd/htdocs/manual/mod/mod_setenvif.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_so.html
 share/httpd/htdocs/manual/mod/mod_speling.html
 share/httpd/htdocs/manual/mod/mod_status.html
@@ -251,7 +263,9 @@ share/httpd/htdocs/manual/programs/header.html
 share/httpd/htdocs/manual/programs/htdigest.html
 share/httpd/htdocs/manual/programs/htpasswd.html
 share/httpd/htdocs/manual/programs/httpd.html
-share/httpd/htdocs/manual/programs/index.html
+share/httpd/htdocs/manual/programs/index.html.en
+share/httpd/htdocs/manual/programs/index.html.html
+share/httpd/htdocs/manual/programs/index.html.ja.jis
 share/httpd/htdocs/manual/programs/logresolve.html
 share/httpd/htdocs/manual/programs/other.html
 share/httpd/htdocs/manual/programs/rotatelogs.html
@@ -265,7 +279,11 @@ share/httpd/htdocs/manual/server-wide.html.html
 share/httpd/htdocs/manual/server-wide.html.ja.jis
 share/httpd/htdocs/manual/sourcereorg.html
 share/httpd/htdocs/manual/stopping.html
-share/httpd/htdocs/manual/suexec.html
+share/httpd/htdocs/manual/stopping.html.fr
+share/httpd/htdocs/manual/stopping.html.html
+share/httpd/htdocs/manual/suexec.html.en
+share/httpd/htdocs/manual/suexec.html.html
+share/httpd/htdocs/manual/suexec.html.ja.jis
 share/httpd/htdocs/manual/suexec_1_2.html
 share/httpd/htdocs/manual/unixware.html
 share/httpd/htdocs/manual/upgrading_to_1_3.html
