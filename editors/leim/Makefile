@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/01/12 02:29:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/05 12:01:49 wiz Exp $
 
 DISTNAME=	leim-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 DISTFILES=	emacs-${VERSION}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	Libraries of Emacs Input Methods
 
-DEPENDS+=	emacs-${VERSION}nb1:../emacs
+DEPENDS+=	emacs-${VERSION}nb2:../emacs
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
