@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/18 19:17:24 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/18 20:25:59 veego Exp $
 
 DISTNAME=	nxtvepg-0.4.3
 CATEGORIES=	misc
@@ -18,6 +18,8 @@ NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 USE_X11BASE=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
+
+MAKE_ENV+=	X11PREFIX=${X11PREFIX}
 
 pre-configure:
 	@${SED} -e 's|@localbase@|'${LOCALBASE}/bin'|' < ${WRKSRC}/pod2help.pl > ${WRKSRC}/pod2help.pl.new && \

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/18 19:17:24 tron Exp $
+$NetBSD: patch-aa,v 1.2 2001/02/18 20:26:00 veego Exp $
 
 --- Makefile.orig	Wed Feb 14 22:34:35 2001
 +++ Makefile	Sun Feb 18 20:10:13 2001
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/18 19:17:24 tron Exp $
  else
  
 -IROOT   = /usr/local
-+IROOT   = $(X11BASE)
++IROOT   = $(X11PREFIX)
  BINDIR  = $(IROOT)/bin
  MANDIR  = $(IROOT)/man/man1
  
