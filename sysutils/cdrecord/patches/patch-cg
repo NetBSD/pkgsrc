@@ -1,0 +1,27 @@
+$NetBSD: patch-cg,v 1.1 2004/06/20 21:37:14 martin Exp $
+
+--- mkisofs/write.c.orig	2002-12-23 15:16:45.000000000 +0100
++++ mkisofs/write.c	2004-06-20 23:16:24.000000000 +0200
+@@ -383,8 +383,8 @@
+ 	 */
+ static	char		buffer[SECTOR_SIZE * NSECT];
+ 	FILE		*infile;
+-	int		remain;
+-	int	use;
++	unsigned int	remain;
++	unsigned int	use;
+ 
+ 
+ 	if ((infile = fopen(filename, "rb")) == NULL) {
+@@ -449,7 +449,10 @@
+ 			fflush(stderr);
+ 		}
+ #endif
+-		remain -= use;
++		if (use > remain)
++			remain = 0;
++		else
++			remain -= use;
+ 	}
+ 	fclose(infile);
+ }/* write_one_file(... */
