@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/13 09:03:35 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/15 11:31:48 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EET_BUILDLINK3_MK:=	${EET_BUILDLINK3_MK}+
@@ -15,7 +15,6 @@ BUILDLINK_DEPENDS.eet+=	eet>=0.9.9
 BUILDLINK_PKGSRCDIR.eet?=	../../devel/eet
 .endif	# EET_BUILDLINK3_MK
 
-.include "../../devel/libtool/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 
