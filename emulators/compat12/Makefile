@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 1998/08/13 02:17:39 tv Exp $
+# $NetBSD: Makefile,v 1.9 1998/08/17 18:35:34 tv Exp $
 #
 
-DISTNAME=	compat12-1.2.1
+DISTNAME=	compat12-${MACHINE_ARCH}
+PKGNAME=	compat12-1.2.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	-${MACHINE_ARCH}.tar.gz
 
 MAINTAINER=	tv@netbsd.org
 
