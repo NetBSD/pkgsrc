@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.5 2004/07/30 21:05:41 jlam Exp $
+# $NetBSD: Makefile.options,v 1.6 2004/08/04 19:45:02 jlam Exp $
 
 # Global and legacy options
 .if defined(KERBEROS) || defined(USE_SASL) || defined(USE_SASL2)
@@ -24,6 +24,7 @@ PKG_SUPPORTED_OPTIONS=	dynamic kerberos sasl slp
 ### specified, then link the backend modules statically into slapd.
 ###
 .if !empty(PKG_OPTIONS:Mdynamic)
+.  include "../../devel/libtool/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-modules
 PLIST_SUBST+=		DYNAMIC_MOD=
 .else

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2004/07/30 21:05:41 jlam Exp $
+# $NetBSD: Makefile,v 1.81 2004/08/04 19:45:02 jlam Exp $
 
 DISTNAME=		openldap-2.2.13
 SVR4_PKGNAME=		oldap
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=		.tgz
@@ -95,7 +96,6 @@ OPENLDAP_PTHREAD_OPTS?=	native
 OPENLDAP_PTHREAD_OPTS?=	require
 PTHREAD_OPTS+=		${OPENLDAP_PTHREAD_OPTS}
 
-.include "../../devel/libtool/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
