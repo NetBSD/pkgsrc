@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 2000/10/15 01:53:40 jlam Exp $
+
+--- cmd.c.orig	Sat Oct 23 06:07:32 1999
++++ cmd.c
+@@ -154,7 +154,7 @@
+ printf("inputstr = %s\n",inputstr);
+       if (strncmp (inputstr, "compile", 7) == 0) {
+ printf("calling genbook.\n");
+-        genbook ();
++        genbook (booksrc, bookbin);
+       } else if (strcmp (inputstr, "on") == 0) {
+ 	bookmode = BOOKBEST;
+ 	printf("book now on.\n");
