@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/30 20:33:25 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/02/20 07:43:23 tron Exp $
 man/man5/pppoe.conf.5
 man/man8/adsl-connect.8
 man/man8/adsl-setup.8
@@ -21,6 +21,7 @@ share/doc/rp-pppoe/HOW-TO-CONNECT
 share/doc/rp-pppoe/LICENSE
 share/doc/rp-pppoe/README
 share/doc/rp-pppoe/pap-secrets
-share/doc/rp-pppoe/pppoe.conf
-share/doc/rp-pppoe/pppoe-server-options
+share/examples/rp-pppoe/pppoe.conf
+share/examples/rp-pppoe/pppoe-server-options
+@dirrm share/examples/rp-pppoe
 @dirrm share/doc/rp-pppoe
