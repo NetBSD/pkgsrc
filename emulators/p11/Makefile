@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:56 wiz Exp $
 #
 
 DISTNAME=	p11-2.10a
@@ -18,7 +18,7 @@ USE_GNU_TOOLS+=		make
 
 # override MAKEFLAGS in the build and install stages
 do-build:
-	cd ${WRKSRC} && ${GMAKE} ${ALL_TARGET} MAKEFLAGS=
+	cd ${WRKSRC} && ${GMAKE} ${BUILD_TARGET} MAKEFLAGS=
 
 do-install:
 	cd ${WRKSRC} && ${GMAKE} ${INSTALL_TARGET} MAKEFLAGS=

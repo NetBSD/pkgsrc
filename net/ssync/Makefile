@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 17:11:19 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:06 wiz Exp $
 #
 
 DISTNAME=		ssync-1.6
@@ -18,7 +18,7 @@ DEPENDS+=		srsh-[0-9]*:../../net/srsh
 SSYNC_PAWD?=		pwd
 
 NO_CONFIGURE=		yes
-ALL_TARGET=		all PREFIX=${PREFIX} PAWD=${SSYNC_PAWD}
+BUILD_TARGET=		all PREFIX=${PREFIX} PAWD=${SSYNC_PAWD}
 INSTALL_TARGET=		install PREFIX=${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"

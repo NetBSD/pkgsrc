@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 00:13:17 tv Exp $
+# $NetBSD: Makefile,v 1.31 2004/12/03 15:14:53 wiz Exp $
 
 DISTNAME=	uudeview-0.5.20
 PKGNAME=	xdeview-0.5.20
@@ -16,7 +16,7 @@ CONFIGURE_ARGS=	--enable-tcl="${LOCALBASE}" --enable-tk="${LOCALBASE}"
 LDFLAGS+=	-s -lX11
 USE_BUILDLINK3=	yes
 
-ALL_TARGET=	xdeview
+BUILD_TARGET=	xdeview
 INSTALL_TARGET=	install-tcl
 
 post-install:

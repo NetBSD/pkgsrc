@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:39:33 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:58 wiz Exp $
 # FreeBSD Id: ports/games/xemeraldia/Makefile,v 1.17 1999/12/10 19:24:55 steve Exp
 
 DISTNAME=	xemeraldia-0.3
@@ -14,7 +14,7 @@ MAINTAINER=	sakamoto@NetBSD.org
 COMMENT=	Game of breaking blocks
 
 USE_IMAKE=	yes
-ALL_TARGET=	xemeraldia
+BUILD_TARGET=	xemeraldia
 
 GAMES_DIR=	share/games
 MAKE_ENV+=	GAMES_DIR="${GAMES_DIR}"

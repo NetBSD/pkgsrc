@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:14:44 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/03 15:14:57 wiz Exp $
 #
 
 DISTNAME=	glaxium_0.5
@@ -17,7 +17,7 @@ USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 
-ALL_TARGET=		glaxium
+BUILD_TARGET=		glaxium
 
 SUBST_CLASSES=		bill
 SUBST_STAGE.bill=	post-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:55:03 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:11 wiz Exp $
 #
 
 DISTNAME=	pcal-4.7
@@ -20,7 +20,7 @@ WWWSERVER!=	hostname
 MAKE_ENV+=	PAPERSIZE="${PAPERSIZE}"
 MAKE_ENV+=	CC="${CC}" HOST_CC="${HOST_CC}"
 
-ALL_TARGET=	pcal
+BUILD_TARGET=	pcal
 
 pre-install:
 	${MV} ${WRKSRC}/pcal.cgi ${WRKSRC}/pcal.cgi.tmp

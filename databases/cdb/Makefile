@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/07/26 19:29:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2004/12/03 15:14:53 wiz Exp $
 
 DISTNAME=	cdb-0.75
 CATEGORIES=	databases
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 
-ALL_TARGET=	it
+BUILD_TARGET=	it
 INSTALL_TARGET=	setup check
 
 INSTALLATION_DIRS=	bin include lib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:11:09 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/03 15:15:06 wiz Exp $
 #
 
 DISTNAME=		publicfile-0.52
@@ -12,7 +12,7 @@ COMMENT=		Secure read-only HTTP and FTP servers
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
-ALL_TARGET=		it
+BUILD_TARGET=		it
 INSTALL_TARGET=		setup check
 
 RESTRICTED=		"unsure of djb's license"

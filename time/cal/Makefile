@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:27:16 agc Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/03 15:15:11 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/05/12 06:33:23 max Exp
 #
 
@@ -12,7 +12,7 @@ COMMENT=		Enhanced color version of standard calendar utility
 
 WRKSRC=			${WRKDIR}/cal-3.5/source
 MAKEFILE=		makefile.unx
-ALL_TARGET=		cal
+BUILD_TARGET=		cal
 
 PKG_SYSCONFSUBDIR=	cal
 CFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\"\\\"

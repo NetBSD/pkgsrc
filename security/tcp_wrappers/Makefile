@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/10/03 00:18:13 tv Exp $
+# $NetBSD: Makefile,v 1.22 2004/12/03 15:15:09 wiz Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -19,16 +19,16 @@ BUILD_DEFS+=		USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
 
-ALL_TARGET.${OPSYS}?=	generic		# good luck!
-ALL_TARGET.Darwin=	netbsd
-ALL_TARGET.Interix=	netbsd
-ALL_TARGET.Linux=	${LOWER_OPSYS}
+BUILD_TARGET.${OPSYS}?=	generic		# good luck!
+BUILD_TARGET.Darwin=	netbsd
+BUILD_TARGET.Interix=	netbsd
+BUILD_TARGET.Linux=	${LOWER_OPSYS}
 .if !empty(OPSYS:M*BSD)
-ALL_TARGET.${OPSYS}=	netbsd
+BUILD_TARGET.${OPSYS}=	netbsd
 .endif
-ALL_TARGET.SunOS=	sunos5
-ALL_TARGET.IRIX=	${LOWER_OPSYS:C|\..*||}
-ALL_TARGET=		${ALL_TARGET.${OPSYS}}
+BUILD_TARGET.SunOS=	sunos5
+BUILD_TARGET.IRIX=	${LOWER_OPSYS:C|\..*||}
+BUILD_TARGET=		${ALL_TARGET.${OPSYS}}
 
 .if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
 .  if !empty(OPSYS:M*BSD)
