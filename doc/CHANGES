@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5258 2004/03/15 17:17:08 kleink Exp $
+$NetBSD: CHANGES,v 1.5259 2004/03/15 18:04:36 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1470,3 +1470,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated postfix to 2.0.19 [martti 2004-03-14]
 	Updated fprot-workstation-bin to 4.4.0 [wiz 2004-03-15]
 	Updated jwhois to 3.2.2nb3 [kleink 2004-03-15]
+	Updated MesaDemos to 6.0nb1 [jlam 2004-03-15]
