@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/23 23:14:25 tron Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/03 10:22:44 wiz Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-2.0.6
@@ -22,9 +22,6 @@ USE_X11BASE=		YES
 USE_XPM=		YES
 EVAL_PREFIX+=		XPMDIR=xpm
 MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP} XPMDIR=${XPMDIR}
-
-jlam:	
-	@echo ${MAKE_ENV}
 
 post-install:
 	cd ${PREFIX}/share/maelstrom && \
