@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/22 12:32:17 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/07/04 09:18:58 mycroft Exp $
 #
 
 DISTNAME=       xdemineur-2.1
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=	games
 
 MAINTAINER= bouyer@netbsd.org
 
-DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 USE_IMAKE=	yes
 

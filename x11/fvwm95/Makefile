@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/22 13:20:58 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/07/04 09:19:09 mycroft Exp $
 # FreeBSD: Makefile,v 1.17 1997/12/24 01:21:18 alex Exp
 #
 
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
 BUILD_DEPENDS=	${LOCALBASE}/lib/librplay.a:../../audio/rplay
 RUN_DEPENDS=	xpmroot:../../x11/xpmroot
 

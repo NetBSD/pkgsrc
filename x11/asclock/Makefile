@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/06/22 13:20:57 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/07/04 09:19:06 mycroft Exp $
 #
 
 DISTNAME=		asclock
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		hubertf@netbsd.org
 
-DEPENDS+=		xpm-3.4j:../../graphics/xpm
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 # Choose language from:
 # 1) english [DEFAULT]

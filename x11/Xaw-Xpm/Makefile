@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/07/04 05:53:00 mycroft Exp $
+# $NetBSD: Makefile,v 1.4 1998/07/04 09:19:06 mycroft Exp $
 #
 
 DISTNAME=			Xaw-Xpm-1.1
@@ -9,7 +9,7 @@ MASTER_SITE_SUBDIR=		libs/X
 
 MAINTAINER=			root@garbled.futureone.com
 
-DEPENDS+=			xpm-3.4j:../../graphics/xpm
+DEPENDS+=			xpm-3.4k:../../graphics/xpm
 
 CONFLICTS=			Xaw3d-1.3 Xaw3d-1.5
 
