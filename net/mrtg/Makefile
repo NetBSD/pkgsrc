@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/05/22 10:45:32 rh Exp $
+# $NetBSD: Makefile,v 1.8 1999/05/22 14:23:42 explorer Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -20,7 +20,7 @@ DEPENDS=	gd-1.3p1:../../graphics/gd
 
 USE_PERL5=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS=	--with-gd-inc=${PREFIX}/include/gd
+CONFIGURE_ARGS=	--with-gd-inc=${PREFIX}/include/gd --with-gd-lib=${PREFIX}/lib
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/mrtg.conf.example \
