@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/27 06:46:45 kim Exp $
+bin/pscal
+bin/xcal
+bin/xcal_cal
+bin/xcalev
+bin/xcalpr
+lib/X11/app-defaults/XCal
+lib/X11/app-defaults/XCal.help
+man/cat1/pscal.0
+man/cat1/xcal.0
+man/cat1/xcal_cal.0
+man/cat1/xcalev.0
+man/cat1/xcalpr.0

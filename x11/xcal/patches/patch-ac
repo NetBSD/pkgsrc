@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/04/27 06:46:47 kim Exp $
+
+--- xcal_cal/Imakefile.orig	Thu Apr 27 02:24:25 2000
++++ xcal_cal/Imakefile	Thu Apr 27 02:26:38 2000
+@@ -1,4 +1,4 @@
+-BINDIR=/usr/local/bin
++#BINDIR=/usr/local/bin
+ 
+ INSTPGMFLAGS=$(INSTBINFLAGS)
+ 

@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/04/27 06:46:47 kim Exp $
+
+--- xcalev/Imakefile.orig	Thu Apr 27 02:24:25 2000
++++ xcalev/Imakefile	Thu Apr 27 02:26:46 2000
+@@ -1,6 +1,6 @@
+ DEFINES=-DVER_VEC
+ 
+-BINDIR=/usr/local/bin
++#BINDIR=/usr/local/bin
+ INSTPGMFLAGS=$(INSTBINFLAGS)
+ 
+ AllTarget(xcalev)
