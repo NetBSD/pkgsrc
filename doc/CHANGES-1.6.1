@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.25 2003/04/20 11:28:25 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.26 2003/04/20 11:38:58 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -569,3 +569,11 @@ games/nethack-qt/patches/patch-aj		1.1 (new)
 
 	initial patch which cvs missed the first time.
 	[pooka, ticket #1267]
+
+sysutils/apcupsd/Makefile			1.21
+sysutils/apcupsd/distinfo			1.6
+
+	Update to 3.8.6.
+	Changelog: Fixed root exploit of slave machines
+	If you use the network features of apcupsd, you probably want to upgrade.
+	[bouyer, ticket #1235]
