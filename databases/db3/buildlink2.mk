@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:22:04 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/26 22:34:09 jlam Exp $
 
 .if !defined(DB3_BUILDLINK2_MK)
 DB3_BUILDLINK2_MK=	# defined
@@ -13,6 +13,8 @@ BUILDLINK_FILES.db3=	include/db3/db_cxx.h
 BUILDLINK_FILES.db3+=	include/db3/db.h
 BUILDLINK_FILES.db3+=	lib/libdb3.*
 BUILDLINK_FILES.db3+=	lib/libdb3_cxx.*
+
+BUILDLINK_CPPFLAGS.db3=	-I${BUILDLINK_PREFIX.db3}/include/db3
 
 BUILDLINK_TARGETS+=	db3-buildlink
 
