@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/09/11 23:43:41 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/12 00:21:35 wiz Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.1
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.artsoft.org/RELEASES/unix/mirrormagic/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.artsoft.org/mirrormagic/
 COMMENT=		Nice little puzzle game with color graphics and sound
+
+CONFLICTS=		mirrormagic-sdl-[1-9]*
 
 USE_GMAKE=		YES
 PLIST_SRC=		${WRKDIR}/PLIST PLIST
