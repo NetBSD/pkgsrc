@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2004/02/21 07:09:50 xtraeme Exp $
+$NetBSD: patch-ah,v 1.2 2005/04/05 15:22:11 minskim Exp $
 
 --- config/imake/imakemdep.h.orig	2004-02-21 08:06:05.000000000 +0100
 +++ config/imake/imakemdep.h	2004-02-21 08:06:50.000000000 +0100
@@ -7,7 +7,7 @@ $NetBSD: patch-ah,v 1.1 2004/02/21 07:09:50 xtraeme Exp $
  #define DEFAULT_CPP "/usr/ccs/lib/cpp"
  #endif
 -#ifdef __bsdi__
-+#ifdef __bsdi__ || defined(__APPLE__)
++#if defined(__bsdi__) || defined(__APPLE__)
  #define DEFAULT_CPP "/usr/bin/cpp"
  #endif
  #ifdef __uxp__
