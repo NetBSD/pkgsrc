@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 1998/07/04 09:14:54 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.9 1998/07/15 11:26:21 agc Exp $
 bin/cxpm
 bin/sxpm
 lib/libXpm.a
 lib/libXpm.so.4.11
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 include/X11/xpm.h
 man/cat1/cxpm.0.gz
 man/cat1/sxpm.0.gz

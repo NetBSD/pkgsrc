@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/06/22 13:51:34 agc Exp $
+# $NetBSD: Makefile,v 1.14 1998/07/15 10:54:03 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/30 05:15:19 jkh Exp
 #
 
@@ -100,7 +100,6 @@ do-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTDIR}/bin
 	${INSTALL_DATA} ${WRKSRC}/lib/libqt.so.1.33 ${QTDIR}/lib
-	${LDCONFIG} || ${TRUE}
 	${MKDIR} ${QTDIR}/include/qt
 	${INSTALL_DATA} ${WRKSRC}/include/* ${QTDIR}/include/qt
 	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${QTDIR}/man/man1

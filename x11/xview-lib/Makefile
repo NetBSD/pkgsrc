@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/07/03 23:30:10 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/07/15 11:08:55 agc Exp $
 # $FreeBSD Id: Makefile,v 1.13 1997/07/17 15:13:03 max Exp
 #
 
@@ -14,7 +14,4 @@ DEPENDS=        xview-config-3.2.1:../../x11/xview-config
 MIRROR_DISTFILE= no
 USE_IMAKE=	yes
 
-post-install:
-	${LDCONFIG} || ${TRUE}
-
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"

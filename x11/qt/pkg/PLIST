@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 1998/04/14 20:17:03 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/07/15 10:54:03 agc Exp $
 lib/libqt.so.1.33
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 man/man1/moc.1
 man/man3/QApplication.3
 man/man3/QArray.3

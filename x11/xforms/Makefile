@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/22 13:21:04 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/07/15 11:06:45 agc Exp $
 #
 
 DISTNAME=		bxform-088
@@ -33,6 +33,7 @@ post-patch:
 	${CP} ${FILESDIR}/mkconfig.h ${WRKSRC}
 
 post-install:
-	${LDCONFIG} || ${TRUE}
+	${LN} -fs ${PREFIX}/lib/libforms.a ${PREFIX}/lib/libxforms.a
+	${LN} -fs ${PREFIX}/lib/libforms.so.0.88 ${PREFIX}/lib/libxforms.so.0.88
 
 .include "../../mk/bsd.pkg.mk"
