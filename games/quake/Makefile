@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/05 18:36:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/08 12:07:15 jdolecek Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -16,14 +16,6 @@ DEPENDS+=	Mesa-*:../../graphics/Mesa
 
 ONLY_FOR_PLATFORMS=	NetBSD-1.4.[1-9]-i386
 USE_GMAKE=	yes
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OBJECT_FMT} == "ELF")
-CFLAGS+=-DELF
-.else
-CFLAGS+=-DAOUT
-.endif
-
 EXTRACT_CMD=	${UNZIP} -q ${DISTDIR}/${EXTRACT_ONLY}
 MAKE_ENV+=	MAINDIR=${WRKSRC}
 UNZIP=		${LOCALBASE}/bin/unzip
