@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.347 2002/10/24 06:21:28 martti Exp $
+$NetBSD: CHANGES,v 1.348 2002/10/24 08:31:50 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3371,3 +3371,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added zope25-BTreeFolder-0.2 [drochner 2002-10-23]
 	Added zope25-DocumentLibrary-1.0rc1 [drochner 2002-10-23]
 	Updated doxygen to 1.2.18 [martti 2002-10-24]
+	Added net-snmp-5.0.6 [jlam 2002-10-24]
