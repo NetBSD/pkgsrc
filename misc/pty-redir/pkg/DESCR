@@ -1,0 +1,2 @@
+This is a very simple application which allocates a pty and redirects
+stdio to that pty.

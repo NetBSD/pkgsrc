@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/04/08 20:04:16 tron Exp $
+*** Makefile.orig	Sat Feb 20 18:44:40 1999
+--- Makefile	Sat Feb 20 18:55:40 1999
+***************
+*** 1,10 ****
+--- 1,14 ----
+  CFLAGS= -Wall
+  PROG= pty-redir
++ DEST=/usr/pkg/bin/
+  
+  all: $(PROG)
+  
+  clean:
+  	rm -f *.o *~
++ 
++ install: $(PROG)
++ 	install -c -g wheel -m 0755 -o root -s $(PROG) $(DEST)
+  
+  distclean: clean
+  	rm -f $(PROG)
