@@ -1,7 +1,7 @@
-$NetBSD: patch-cb,v 1.2 2002/03/04 14:45:14 itohy Exp $
+$NetBSD: patch-cb,v 1.3 2003/10/20 12:07:23 grant Exp $
 
---- interface/low_interface.h.orig	Mon Mar 26 15:12:11 2001
-+++ interface/low_interface.h	Mon Mar  4 22:47:22 2002
+--- interface/low_interface.h.orig	2001-03-26 16:12:11.000000000 +1000
++++ interface/low_interface.h
 @@ -25,6 +25,7 @@
  #include <sys/time.h>
  #include <sys/types.h>
@@ -10,17 +10,24 @@ $NetBSD: patch-cb,v 1.2 2002/03/04 14:45:14 itohy Exp $
  #include <linux/major.h>
  #include <linux/version.h>
  
-@@ -47,13 +48,24 @@
- 
+@@ -48,12 +49,32 @@
  #include <linux/cdrom.h>
  #include <linux/major.h>
-+#endif
+ 
++#elif defined(__FreeBSD__)
 +
-+#ifdef __NetBSD__
++#include <sys/cdio.h>
++#include <sys/cdrio.h>
++
++#include <cam/scsi/scsi_message.h>
++#include <camlib.h>
++
++#elif defined(__NetBSD__)
++
 +#include <sys/scsiio.h>
 +#include <sys/cdio.h>
 +#endif
- 
++
  #include "cdda_interface.h"
  
  #define MAX_RETRIES 8
@@ -28,10 +35,21 @@ $NetBSD: patch-cb,v 1.2 2002/03/04 14:45:14 itohy Exp $
  #define MIN_BIG_BUFF_SIZE 4096
 +#ifdef __linux__
  #define SG_OFF sizeof(struct sg_header)
-+#endif
-+#ifdef __NetBSD__
++#elif defined(__FreeBSD__)
++#define SG_OFF (0)
++#elif defined(__NetBSD__)
 +#define SG_OFF sizeof(scsireq_t)
 +#endif
  
  #ifndef SG_EMULATED_HOST
  /* old kernel version; the check for the ioctl is still runtime, this
+@@ -64,7 +85,9 @@
+ #endif
+ 
+ extern int  cooked_init_drive (cdrom_drive *d);
++#ifndef __FreeBSD__
+ extern unsigned char *scsi_inquiry (cdrom_drive *d);
++#endif
+ extern int  scsi_init_drive (cdrom_drive *d);
+ #ifdef CDDA_TEST
+ extern int  test_init_drive (cdrom_drive *d);
