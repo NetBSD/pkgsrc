@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/03/11 05:16:49 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2004/05/15 13:57:12 heinz Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in mk/buildlink[23]/bsd.buildlink[23].mk
@@ -61,7 +61,7 @@ do-build:
 	${RM} -f ${PLIST_SRC.files}
 	${FILES_LIST_CMD} | ${SORT} -u |				\
 	while read file; do						\
-		if ${TEST} -e ${X11BASE}/$$file; then			\
+		if ${TEST} -r ${X11BASE}/$$file; then			\
 			${LN} -fs ${X11BASE}/$$file			\
 				${X11_LINKS_BUILD_DIR}/$$file;		\
 			${ECHO} "${X11_LINKS_SUBDIR}/$$file"		\

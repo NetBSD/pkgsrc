@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/24 00:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/15 13:57:12 heinz Exp $
 #
 
 DISTNAME=       mgl2-alpha-020
@@ -64,7 +64,7 @@ post-install:
 .endfor
 	${LN} -s mglcons.sh ${PREFIX}/bin/start_mgl.sh
 
-	@if ${TEST} -e ${PREFIX}/bin/mglsvrcons; \
+	@if ${TEST} -r ${PREFIX}/bin/mglsvrcons; \
 		then ${MV} -f ${PREFIX}/bin/mglsvrcons ${PREFIX}/sbin/; \
 	fi
 	# The following three commands are only present on hpcmips:
