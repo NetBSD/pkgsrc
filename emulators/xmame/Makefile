@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.85 2002/12/14 14:59:38 kristerw Exp $
+# $NetBSD: Makefile,v 1.86 2002/12/21 21:35:17 kristerw Exp $
 #
 
 DISTNAME=		xmame-0.62.1-rc3
 PKGNAME=		xmame-0.62.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -37,6 +37,7 @@ MAKE_FLAGS+=		TARGET="${TARGET:S/x//}"
 MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
 MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		X11INC= X11LIB=
+MAKE_FLAGS+=		SOUND_ESOUND=1
 
 MAME_DISP_METHOD?=	x11
 
@@ -66,6 +67,9 @@ MAKE_FLAGS+=		ARCH="${MAME_ARCH.${OPSYS}}"
 
 .if exists(${X11BASE}/include/X11/extensions/xf86dga.h)
 MAKE_FLAGS+=		X11_DGA=1
+.endif
+.if exists(${X11BASE}/include/X11/extensions/Xv.h)
+MAKE_FLAGS+=		X11_XV=1
 .endif
 
 # If supported, add appropriate definitions to build joystick drivers.
@@ -101,6 +105,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${ROMPATH}
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
 
+.include "../../audio/esound/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
