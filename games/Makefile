@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2003/12/03 18:53:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.190 2003/12/03 23:09:37 xtraeme Exp $
 #
 
 COMMENT=	Games
@@ -31,6 +31,7 @@ SUBDIR+=	colchess-book-colchess
 SUBDIR+=	colchess-book-large
 SUBDIR+=	copter-commander
 SUBDIR+=	corewars
+SUBDIR+=	crack-attack
 SUBDIR+=	craft
 SUBDIR+=	crafty
 SUBDIR+=	crafty-book-enormous
