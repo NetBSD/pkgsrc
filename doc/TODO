@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2795 2004/12/29 10:24:28 minskim Exp $
+$NetBSD: TODO,v 1.2796 2004/12/29 11:16:45 recht Exp $
 
 Suggested new packages
 ======================
@@ -902,7 +902,6 @@ Suggested package updates
 	o py-HappyDoc-3.0
 	o py-METAR-0.9
 	o py-Numeric-23.6
-	o py-ORBit-2.0.1
 	o py-Optik-1.4.1
 	o py-Pmw-1.2
 	o py-Scientific-2.4.9
@@ -912,7 +911,6 @@ Suggested package updates
 	o py-ZODB-3.2.3
 	o py-amkCrypto-2.0
 	o py-gnuplot-1.7
-	o py-gtk2-2.4.1
 	o py-ldap-2.0.6
 	o py-logging-0.4.9.5
 	o py-m2crypto-0.13
