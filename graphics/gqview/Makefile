@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.4 1999/12/20 18:20:02 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/05/25 10:16:45 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1998/12/09 06:59:39 vanilla Exp
 #
 
-DISTNAME=	gqview-0.7.0
+DISTNAME=	gqview-0.8.1
 CATEGORIES=	graphics x11
-MASTER_SITES=	http://gqview.netpedia.net/
-EXTRACT_SUFX=	.src.tar.gz
+MASTER_SITES=	http://download.sourceforge.net/gqview/
 
-MAINTAINER=	rxg@ms25.url.com.tw
-HOMEPAGE=	http://gqview.netpedia.net/view-over.html
+MAINTAINER=	wiz@netbsd.org
+HOMEPAGE=	http://gqview.sourceforge.net/index.html
 
-DEPENDS=	imlib-*:../../graphics/imlib
+DEPENDS+=	imlib-*:../../graphics/imlib
+DEPENDS+=	gettext-0.10.*:../../devel/gettext
 
 USE_X11BASE=	yes
-ALL_TARGET=	gqview
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gqview ${PREFIX}/bin
+GNU_CONFIGURE=	yes
+# for libintl detection in configure script
+CFLAGS+=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"
