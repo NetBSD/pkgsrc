@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/11/02 21:54:47 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 1999/11/11 01:16:59 hubertf Exp $
 
 --- kapm/kapm.cpp.orig	Tue Nov  2 06:26:59 1999
 +++ kapm/kapm.cpp	Tue Nov  2 06:27:36 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/11/02 21:54:47 hubertf Exp $
  
  void Kapm::slotSuspend() {
 +#ifdef __NetBSD__
-+	suApp("apm -z", i18n("suspend"));
++	suApp("/usr/sbin/apm -z", i18n("suspend"));
 +#else /* !__NetBSD__ */
  	suApp("apm -s", i18n("suspend"));
 +#endif /* __NetBSD__ */
@@ -15,12 +15,12 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/11/02 21:54:47 hubertf Exp $
  
  void Kapm::slotStandby() {
 -	suApp("apm -S", i18n("standby"));
-+        suApp("apm -S", i18n("standby")); /* -S is for NetBSD and Linux */
++        suApp("/usr/sbin/apm -S", i18n("standby")); /* -S is for NetBSD and Linux */
  }
  
  void Kapm::slotPowerOff() {
 +#ifdef __NetBSD__
-+	suApp("halt -p", i18n("power off"), true);
++	suApp("/sbin/halt -p", i18n("power off"), true);
 +#else /* !__NetBSD__ */
  	suApp("poweroff", i18n("power off"), true);
 +#endif /* __NetBSD__ */
