@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/06/18 22:40:05 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/06/19 17:37:37 xtraeme Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -124,14 +124,6 @@ lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
 ${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.${SO_SUFFIX}
 ${SUNOSLIB}lib/${MOZILLA}/libfreebl_pure32_3.${SO_SUFFIX}
 @comment end DSO
-@comment begin PKGCONFIG
-lib/pkgconfig/mozilla-gtkmozembed.pc
-lib/pkgconfig/mozilla-js.pc
-lib/pkgconfig/mozilla-nspr.pc
-lib/pkgconfig/mozilla-nss.pc
-lib/pkgconfig/mozilla-plugin.pc
-lib/pkgconfig/mozilla-xpcom.pc
-@comment end PKGCONFIG
 @comment begin DATA
 lib/${MOZILLA}/LICENSE
 lib/${MOZILLA}/README.txt
