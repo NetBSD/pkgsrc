@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8474 2004/12/27 21:38:39 wiz Exp $
+$NetBSD: CHANGES,v 1.8475 2004/12/27 21:59:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6592,3 +6592,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Kwiki-PreformattedBlocks-0.11 [jlam 2004-12-27]
 	Updated osh to 041028 [wiz 2004-12-27]
 	Updated normalize to 0.7.6nb5 [wiz 2004-12-27]
+	Updated knights to 0.6 [markd 2004-12-27]
