@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/03/28 21:14:26 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2003/07/12 13:24:27 dillo Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -30,7 +30,7 @@ do-extract:
 pre-install:
 	-@${MKDIR} ${PKG_DBDIR}
 
-test:
+do-test:
 	@${ECHO} "No news is good news"
 	@cd ${WRKSRC} && ${SETENV} DIGESTDIR=${WRKSRC} ${SH} ./regress.sh
 	@${ECHO} "All tests completed"
