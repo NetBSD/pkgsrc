@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/05/09 11:59:40 abs Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/08 09:38:39 grant Exp $
 #
 
-COMMENT=	Open new window using netscape like browser
+COMMENT=	Open new window using netscape-like browser
 
 BINNAME=	netscape
 
