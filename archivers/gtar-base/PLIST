@@ -1,13 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:25 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.1.8.1 2002/12/22 08:29:19 agc Exp $
 bin/gtar
 man/man1/gtar.1
-share/locale/de/LC_MESSAGES/tar.cat
-share/locale/fr/LC_MESSAGES/tar.cat
-share/locale/it/LC_MESSAGES/tar.cat
-share/locale/ko/LC_MESSAGES/tar.cat
-share/locale/nl/LC_MESSAGES/tar.cat
-share/locale/no/LC_MESSAGES/tar.cat
-share/locale/pl/LC_MESSAGES/tar.cat
-share/locale/pt/LC_MESSAGES/tar.cat
-share/locale/sl/LC_MESSAGES/tar.cat
-share/locale/sv/LC_MESSAGES/tar.cat
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/tar.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/tar.mo
