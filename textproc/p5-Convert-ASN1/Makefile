@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/27 07:11:21 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/29 00:32:03 jlam Exp $
 #
 
 DISTNAME=	Convert-ASN1-0.07
@@ -10,6 +10,9 @@ MAINTAINER=	packages@netbsd.org
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Convert/ASN1/.packlist
+
+post-patch:
+	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
