@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8010 2004/11/26 09:52:17 adam Exp $
+$NetBSD: CHANGES,v 1.8011 2004/11/26 10:05:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5445,3 +5445,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fsviewer to 0.2.5 [adam 2004-11-26]
 	Updated nmap to 3.77 [adam 2004-11-26]
 	Updated glade2 to 2.6.5 [adam 2004-11-26]
+	Updated lincity to 1.12.1 [adam 2004-11-26]
