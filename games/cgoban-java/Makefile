@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/07 00:27:03 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/31 15:44:29 jlam Exp $
 #
 
 DISTNAME=	cgoban-unix-2.4.55
@@ -25,4 +25,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/cgoban.sh ${PREFIX}/bin/cgoban-java
 	${INSTALL_DATA} ${WRKSRC}/cgoban.jar ${PREFIX}/libexec
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

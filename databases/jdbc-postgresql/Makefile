@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/09/26 10:07:15 abs Exp $
+# $NetBSD: Makefile,v 1.16 2002/12/31 15:44:28 jlam Exp $
 #
 
 DISTNAME=		postgresql-${VERSION}
@@ -22,9 +22,7 @@ EXTRACT_ELEMENTS=	${DISTNAME}/src/interfaces/jdbc
 .include "../../mk/bsd.prefs.mk"
 
 USE_GMAKE=
-USE_JAVA=
 NO_CONFIGURE=
-CLASSPATH:=		${CLASSPATH}:.
 
 HELP_FILES=		README Implementation CHANGELOG
 
@@ -45,4 +43,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${X} ${PREFIX}/share/doc/java/jdbc-postgresql
 .endfor
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
