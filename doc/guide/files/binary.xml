@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.7 2005/01/18 23:25:04 heinz Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.8 2005/01/24 14:44:39 jschauma Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -437,7 +437,22 @@ fi</programlisting>
       </para>
 
       <para>
-        First, make sure that you have <varname>RSYNC_DST</varname>
+	If you would like to automatically create checksum files for the
+	binary packages you intend to upload, remember to set
+	<varname>MKSUMS=yes</varname> in your
+	<filename>mk/bulk/build.conf</filename>.
+      </para>
+
+      <para>
+	If you would like to PGP sign the checksum files (highly
+	recommended!), remember to set
+	<varname>SIGN_AS=username@NetBSD.org</varname> in your
+	<filename>mk/bulk/build.conf</filename>.  This will prompt you for
+	your gpg password to sign the files before uploading everything.
+      </para>
+
+      <para>
+        Then, make sure that you have <varname>RSYNC_DST</varname>
         set properly in your <filename>mk/bulk/build.conf</filename>
         file, i.e. adjust it to something like one of the following:
       </para>
