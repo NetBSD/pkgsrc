@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/05/27 15:59:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/06/04 16:25:33 taca Exp $
 bin/findsmb
 bin/make_nftable
 bin/make_printerdef
@@ -80,22 +80,6 @@ sbin/mksmbpasswd
 sbin/nmbd
 sbin/smbd
 sbin/swat
-share/doc/html/samba/Samba-Server-FAQ-1.html
-share/doc/html/samba/Samba-Server-FAQ-2.html
-share/doc/html/samba/Samba-Server-FAQ.html
-share/doc/html/samba/Samba-meta-FAQ-1.html
-share/doc/html/samba/Samba-meta-FAQ-2.html
-share/doc/html/samba/Samba-meta-FAQ-3.html
-share/doc/html/samba/Samba-meta-FAQ-4.html
-share/doc/html/samba/Samba-meta-FAQ-5.html
-share/doc/html/samba/Samba-meta-FAQ-6.html
-share/doc/html/samba/Samba-meta-FAQ.html
-share/doc/html/samba/sambafaq-1.html
-share/doc/html/samba/sambafaq-2.html
-share/doc/html/samba/sambafaq-3.html
-share/doc/html/samba/sambafaq-4.html
-share/doc/html/samba/sambafaq-5.html
-share/doc/html/samba/sambafaq.html
 share/doc/samba/Application_Serving.txt
 share/doc/samba/BROWSING-Config.txt
 share/doc/samba/BROWSING.txt
@@ -872,7 +856,6 @@ share/samba/swat/using_samba/ja/status.html
 share/samba/swat/using_samba/ja/this_edition.html
 share/samba/swat/using_samba/licenseinfo.html
 share/samba/swat/using_samba/this_edition.html
-@dirrm share/doc/html/samba
 @dirrm share/doc/samba
 @dirrm share/examples/samba/LDAP/smbldap-tools/mkntpwd
 @dirrm share/examples/samba/LDAP/smbldap-tools/cgi
