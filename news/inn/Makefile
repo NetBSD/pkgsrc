@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/07/29 16:30:06 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2003/09/12 20:07:25 grant Exp $
 
 DISTNAME=		inn-${INN_VERSION}
 PKGREVISION=		1
@@ -85,7 +85,7 @@ CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-.  include "../../mk/gcc.buildlink2.mk"
+USE_GCC2=	# defined
 .endif
 
 post-patch:

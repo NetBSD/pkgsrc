@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/08/05 13:39:53 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2003/09/12 20:07:23 grant Exp $
 
 DISTNAME=	koffice-1.2.1
 PKGREVISION=	4
@@ -24,8 +24,9 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+USE_GCC2=		# defined
+
 PTHREAD_OPTS+=		require
-GCC_REQD=		2.95.3
 
 REPLACE_PERL=		kpresenter/kprconverter.pl
 
@@ -43,7 +44,6 @@ post-install:
 .include "../../graphics/libart2/buildlink2.mk"
 .include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
-.include "../../mk/gcc.buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
