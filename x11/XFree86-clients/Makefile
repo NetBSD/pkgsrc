@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.16 2004/11/28 19:19:52 jlam Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-clients-${XF_VER}
@@ -21,7 +21,7 @@ XBUILD_DIRS=		lib/xtrans lib/lbxutil programs fonts/util
 XINSTALL_DIRS=		programs fonts/util
 XINSTALL_MAN_DIRS=	programs
 
-post-buildlink:
+post-wrapper:
 	@${MKDIR} ${WRKSRC}/exports/include
 	@${CP} ${X11ROOT}/include/X11/fonts/*.h ${BUILDLINK_DIR}/include
 
