@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 17:40:02 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/10 15:58:09 recht Exp $
 bin/pyrexc
 ${PYSITELIB}/Plex/Actions.py
 ${PYSITELIB}/Plex/Actions.pyc
@@ -94,6 +94,12 @@ ${PYSITELIB}/Pyrex/Distutils/__init__.pyo
 ${PYSITELIB}/Pyrex/Distutils/build_ext.py
 ${PYSITELIB}/Pyrex/Distutils/build_ext.pyc
 ${PYSITELIB}/Pyrex/Distutils/build_ext.pyo
+${PYSITELIB}/Pyrex/Mac/DarwinSystem.py
+${PYSITELIB}/Pyrex/Mac/DarwinSystem.pyc
+${PYSITELIB}/Pyrex/Mac/DarwinSystem.pyo
+${PYSITELIB}/Pyrex/Mac/DarwinTesting.py
+${PYSITELIB}/Pyrex/Mac/DarwinTesting.pyc
+${PYSITELIB}/Pyrex/Mac/DarwinTesting.pyo
 ${PYSITELIB}/Pyrex/Mac/FileMarking.py
 ${PYSITELIB}/Pyrex/Mac/FileMarking.pyc
 ${PYSITELIB}/Pyrex/Mac/FileMarking.pyo
