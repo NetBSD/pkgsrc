@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1665 2004/04/23 12:05:12 wiz Exp $
+$NetBSD: TODO,v 1.1666 2004/04/24 14:35:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -143,7 +143,7 @@ Suggested package updates
 	o aqsis-0.9.1
 	o avidemux-2.0.20
 	o balsa-1.4.4
-	o bidwatcher-1.3.14
+	o bidwatcher-1.3.15
 	o bind-9.3
 	o bluefish-0.13
 	o boehm-gc-6.3alpha2
@@ -232,6 +232,7 @@ Suggested package updates
 	o jakarta-tomcat-3.3.1a
 	o jam-2.5
 	o joe-2.9.8 [pkg/18022, incomplete]
+	o joe-3.0
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
 	o larswm-7.3.2
@@ -255,10 +256,12 @@ Suggested package updates
 	o maradns-1.0.21
 	o marbles-1.0.6
 	o matchbox-0.8
+	o mathomatic-11.0d
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o mimedefang-2.42
 	o minicom-2.1
+	o mkvtoolnix-0.8.8
 	o mono-0.31
 	o mowitz-0.3.0
 	o moz-bin-plugger-1.5.1
@@ -272,9 +275,8 @@ Suggested package updates
 	o net-snmp-5.1.1
 	o netatalk-1.6.3 [pkg/21930]
 	o netcdf-3.5.1
-	o nosefart-2.0-mls
+	o nosefart-2.1
 	o ns-flash-6.0.79
-	o nsd-2.0.2
 	o nslint-2.1a3
 	o nut-9.12
 	o nxtvepg-2.7.0
@@ -334,7 +336,7 @@ Suggested package updates
 	o stella-1.3
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
-	o tcpreplay-2.0.3
+	o tcpreplay-2.1.0
 	o tct-1.14
 	o teapop-0.3.8
 	o ted-2.15 [do not update per tech-pkg mail from Jonathan on 20040404]
