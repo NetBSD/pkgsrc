@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 13:45:39 hubertf Exp $
+include/dbh.h
+include/dbh_config.h
+include/dbh_functions.h
+lib/libdbh-1.0.so
+lib/libdbh-1.0.so.1
+lib/libdbh-1.0.so.1.0
+lib/libdbh.a
+lib/libdbh.la
+lib/libdbh.so
+lib/pkgconfig/dbh-1.0.pc
+share/doc/dbh/AUTHORS
+share/doc/dbh/COPYING
+share/doc/dbh/ChangeLog
+share/doc/dbh/html/dbh-hash-tables.html
+@dirrm share/doc/dbh/html
+@dirrm share/doc/dbh

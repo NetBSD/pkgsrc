@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 13:45:39 hubertf Exp $
+
+--- src/dbh-1.0.pc.in.orig	Mon Mar 17 04:08:31 2003
++++ src/dbh-1.0.pc.in
+@@ -7,5 +7,5 @@ Name: dbh
+ Description: Diskbased Hashtables
+ Requires:
+ Version: @DBH_VERSION@
+-Libs: -Wl,-R${libdir} -L${libdir} -ldbh -lm
++Libs: -L${libdir} -ldbh -lm
+ Cflags: -I${includedir}

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/04/06 13:45:39 hubertf Exp $
+
+SHA1 (dbh_1.0-14.tgz) = 93fec5cb5a53bed93c51f222ac59d4179ffbd4b9
+Size (dbh_1.0-14.tgz) = 410289 bytes
+SHA1 (patch-aa) = 84a3465117fbfd59bcc2b816cac89ab078b5f6ae
