@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2004/03/19 01:26:58 dmcmahill Exp $
+$NetBSD: distinfo,v 1.13 2004/03/28 17:26:21 dmcmahill Exp $
 
 SHA1 (scilab-2.7/scilab-2.7.src.tar.gz) = ce1ab6cb06d938239590e31ac3701ced6f9b3505
 Size (scilab-2.7/scilab-2.7.src.tar.gz) = 9510676 bytes
@@ -7,7 +7,7 @@ Size (scilab-2.7/scicos.tar.gz) = 82793 bytes
 SHA1 (scilab-2.7/scicos_blocks.tar.gz) = bdf4eef1a47417a8f816ae213fc4e262e2605b79
 Size (scilab-2.7/scicos_blocks.tar.gz) = 3219 bytes
 SHA1 (patch-aa) = beff3639c05a493be2f4ca677ce7116b46447c20
-SHA1 (patch-ab) = 9ae2f21964a26cf881790314d9f5db12a640794a
+SHA1 (patch-ab) = 65f64acb3e4f506e1a11554956ecc80ce03cb6a1
 SHA1 (patch-ac) = 8d8e2352815b4c1ad61545ccb7e430169eae876e
 SHA1 (patch-ad) = 3554377aa2188f55355218408a9e12b5faef177b
 SHA1 (patch-ae) = f6517a89612cf3acf38cdfc8e9ea5f1d03476308
@@ -16,3 +16,4 @@ SHA1 (patch-ag) = 0716d6b284d79f3220adf9af8363eb56ba59f1f8
 SHA1 (patch-ah) = c8b5b418c9dd6d809ccfe2ebbd72514c2243a898
 SHA1 (patch-ai) = a99bd6b3cd27a6328343ae9247e291eea635402c
 SHA1 (patch-aj) = 231a10acd752c8dc8039cae8c011f78dbbfa56fa
+SHA1 (patch-ak) = 67cf702688a819ee0641f7a887b6c68f13cd855d
