@@ -1,21 +1,38 @@
-$NetBSD: patch-aq,v 1.6 2000/05/25 15:25:44 drochner Exp $
+$NetBSD: patch-aq,v 1.7 2000/07/25 14:42:09 jlam Exp $
 
---- lib/Xm-2.0/Makefile.in.orig	Mon May 15 02:47:09 2000
-+++ lib/Xm-2.0/Makefile.in	Thu May 18 20:38:34 2000
-@@ -186,7 +186,7 @@
+--- lib/Xm-2.0/Makefile.am.orig	Tue Feb 15 18:52:24 2000
++++ lib/Xm-2.0/Makefile.am	Tue Jul 25 08:18:13 2000
+@@ -68,8 +68,6 @@
+ # Lets put the headers in a sub directory to avoid
  # poluting /usr/local with more directories for default installs.
  #
- @Version_2_0_TRUE@libdir = \
--@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/lib
-+@Version_2_0_TRUE@$(prefix)/lib
+-libdir = $(prefix)/LessTif/Motif2.0/lib
+-
+ lib_LTLIBRARIES=	libXm.la
  
- @Version_2_0_TRUE@lib_LTLIBRARIES = \
- @Version_2_0_TRUE@libXm.la
-@@ -390,7 +390,6 @@
- 
- install-data-am:
- 	@$(NORMAL_INSTALL)
--	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
- install-data: install-data-am
- 
- install-am: all-am
+ libXm_la_SOURCES= ${SRCS_1_2:%=../Xm/%} ${SRCS_2_0}
+@@ -86,24 +84,4 @@
+ 	      rm $$i; \
+ 	   fi ; \
+ 	  done
+-endif
+-
+-install-data-hook:
+-if Version_2_0
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so.2*
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.so.2* .)
+-endif
+-if DefaultVersion20
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.la
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.la .)
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.so .)
+-endif
+-if LibtoolStatic
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.a
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.a .)
+-endif
+-endif
+ endif

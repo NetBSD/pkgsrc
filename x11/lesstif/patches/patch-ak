@@ -1,21 +1,15 @@
-$NetBSD: patch-ak,v 1.8 2000/05/25 15:25:44 drochner Exp $
+$NetBSD: patch-ak,v 1.9 2000/07/25 14:42:07 jlam Exp $
 
---- include/Motif-2.0/Mrm/Makefile.in.orig	Mon May 15 02:47:11 2000
-+++ include/Motif-2.0/Mrm/Makefile.in	Thu May 18 20:23:29 2000
-@@ -127,7 +127,7 @@
- # poluting /usr/local with more directories for default installs.
- #
- @Version_2_0_TRUE@mrmdir = \
--@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/include/Mrm
-+@Version_2_0_TRUE@$(prefix)/include/Mrm
+--- include/Motif-1.2/Xm/Makefile.am.orig	Sun Apr 11 08:28:42 1999
++++ include/Motif-1.2/Xm/Makefile.am	Tue Jul 25 08:20:43 2000
+@@ -46,10 +46,3 @@
+ xm_DATA = Xm.h
  
- @Version_2_0_TRUE@HEADERS1_2 = \
- @Version_2_0_TRUE@MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
-@@ -230,7 +230,6 @@
- 
- install-data-am: install-mrmHEADERS
- 	@$(NORMAL_INSTALL)
--	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
- install-data: install-data-am
- 
- install-am: all-am
+ endif
+-install-data-hook:
+-if Version_1_2
+-if DefaultVersion12
+-	if [ -d $(DESTDIR)$(prefix)/include/Xm ]; then rm -rf $(DESTDIR)$(prefix)/include/Xm; else rm -f $(DESTDIR)$(prefix)/include/Xm; fi
+-	(mkdir -p $(DESTDIR)$(prefix)/include && cd $(DESTDIR)$(prefix)/include && $(LN_S) ../LessTif/Motif1.2/include/Xm Xm)
+-endif
+-endif

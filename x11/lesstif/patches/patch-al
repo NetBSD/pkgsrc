@@ -1,21 +1,25 @@
-$NetBSD: patch-al,v 1.7 2000/05/25 15:25:44 drochner Exp $
+$NetBSD: patch-al,v 1.8 2000/07/25 14:42:08 jlam Exp $
 
---- include/Motif-2.0/Xm/Makefile.in.orig	Mon May 15 02:47:11 2000
-+++ include/Motif-2.0/Xm/Makefile.in	Thu May 18 20:26:48 2000
-@@ -127,7 +127,7 @@
+--- include/Motif-2.0/Mrm/Makefile.am.orig	Sun Jan  2 08:22:55 2000
++++ include/Motif-2.0/Mrm/Makefile.am	Tue Jul 25 08:18:13 2000
+@@ -11,7 +11,7 @@
+ # Lets put the headers in a sub directory to avoid
  # poluting /usr/local with more directories for default installs.
  #
- @Version_2_0_TRUE@xmdir = \
--@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/include/Xm
-+@Version_2_0_TRUE@$(prefix)/include/Xm
+-mrmdir =	$(prefix)/LessTif/Motif2.0/include/Mrm
++mrmdir =	$(includedir)/Mrm
  
- @Version_2_0_TRUE@HEADERS1_2 = \
- @Version_2_0_TRUE@\
-@@ -296,7 +296,6 @@
+ HEADERS1_2 =	MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
  
- install-data-am: install-xmDATA install-xmHEADERS
- 	@$(NORMAL_INSTALL)
--	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
- install-data: install-data-am
+@@ -30,11 +30,3 @@
+ 	  done
  
- install-am: all-am
+ endif
+-install-data-hook:
+-if Version_2_0
+-if DefaultVersion20
+-	if [ -d $(DESTDIR)$(prefix)/include/Mrm ]; then rm -rf $(DESTDIR)$(prefix)/include/Mrm; else rm -f $(DESTDIR)$(prefix)/include/Mrm; fi
+-	(mkdir -p $(DESTDIR)$(prefix)/include && cd $(DESTDIR)$(prefix)/include && $(LN_S) ../LessTif/Motif2.0/include/Mrm Mrm)
+-endif
+-endif
+-

@@ -1,12 +1,25 @@
-$NetBSD: patch-am,v 1.6 2000/04/27 13:14:53 tron Exp $
+$NetBSD: patch-am,v 1.7 2000/07/25 14:42:08 jlam Exp $
 
---- lib/Mrm/Makefile.in.orig	Fri Nov  5 21:14:37 1999
-+++ lib/Mrm/Makefile.in	Wed Nov 24 17:30:53 1999
-@@ -297,7 +297,6 @@
+--- include/Motif-2.0/Xm/Makefile.am.orig	Wed Mar 22 16:43:44 2000
++++ include/Motif-2.0/Xm/Makefile.am	Tue Jul 25 08:18:13 2000
+@@ -11,7 +11,7 @@
+ # Lets put the headers in a sub directory to avoid
+ # poluting /usr/local with more directories for default installs.
+ #
+-xmdir=	$(prefix)/LessTif/Motif2.0/include/Xm
++xmdir=	$(includedir)/Xm
  
- install-data-am:
- 	@$(NORMAL_INSTALL)
--	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
- install-data: install-data-am
+ HEADERS1_2 = \
+ 	ArrowB.h ArrowBG.h AtomMgr.h \
+@@ -72,11 +72,4 @@
+ 	   fi ; \
+ 	  done
  
- install-am: all-am
+-endif   
+-install-data-hook:
+-if Version_2_0
+-if DefaultVersion20
+-	if [ -d $(DESTDIR)$(prefix)/include/Xm ]; then rm -rf $(DESTDIR)$(prefix)/include/Xm; else rm -f $(DESTDIR)$(prefix)/include/Xm; fi
+-	(mkdir -p $(DESTDIR)$(prefix)/include && cd $(DESTDIR)$(prefix)/include && $(LN_S) ../LessTif/Motif2.0/include/Xm Xm)
+-endif   
+ endif   

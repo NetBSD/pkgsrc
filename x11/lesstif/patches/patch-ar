@@ -1,13 +1,27 @@
-$NetBSD: patch-ar,v 1.4 2000/04/27 13:14:55 tron Exp $
+$NetBSD: patch-ar,v 1.5 2000/07/25 14:42:10 jlam Exp $
 
---- lib/config/Makefile.in.orig	Fri Nov  5 21:14:33 1999
-+++ lib/config/Makefile.in	Wed Nov 24 17:30:54 1999
-@@ -120,7 +120,7 @@
- MAINTAINERCLEANFILES = Makefile.in
- bin_SCRIPTS = mxmkmf
+--- lib/Xm/Makefile.am.orig	Thu Jun 22 15:37:11 2000
++++ lib/Xm/Makefile.am	Tue Jul 25 08:18:13 2000
+@@ -54,22 +54,3 @@
+ 	Xmos.c alloca.c misc.c $(XDND_SRCS)
  
--configdir = $(libdir)/X11/config
-+configdir = $(libdir)/X11/lesstif
- config_DATA = Imake.tmpl Motif.rules Motif.tmpl
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../../include/LTconfig.h
+ endif
+-install-data-hook:
+-if Version_1_2
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so.1*
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libXm.so.1* .)
+-endif
+-if DefaultVersion12
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.la
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libXm.la .)
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libXm.so .)
+-endif
+-if LibtoolStatic
+-	-rm -f $(DESTDIR)$(prefix)/lib/libXm.a
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libXm.a .)
+-endif
+-endif
+-endif

@@ -1,12 +1,27 @@
-$NetBSD: patch-ap,v 1.5 2000/04/27 13:14:54 tron Exp $
+$NetBSD: patch-ap,v 1.6 2000/07/25 14:42:09 jlam Exp $
 
---- lib/Xm/Makefile.in.orig	Fri Nov  5 21:14:36 1999
-+++ lib/Xm/Makefile.in	Wed Nov 24 17:30:54 1999
-@@ -444,7 +444,6 @@
+--- lib/Mrm/Makefile.am.orig	Fri Oct 22 08:49:34 1999
++++ lib/Mrm/Makefile.am	Tue Jul 25 08:18:13 2000
+@@ -24,22 +24,3 @@
+ 			lookup.h misc.h uil.h
  
- install-data-am:
- 	@$(NORMAL_INSTALL)
--	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
- install-data: install-data-am
- 
- install-am: all-am
+ endif
+-install-data-hook:
+-if Version_1_2
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.so.1*
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libMrm.so.1* .)
+-endif
+-if DefaultVersion12
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.la
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libMrm.la .)
+-if LibtoolShared
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.so
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libMrm.so .)
+-endif
+-if LibtoolStatic
+-	-rm -f $(DESTDIR)$(prefix)/lib/libMrm.a
+-	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif1.2/lib/libMrm.a .)
+-endif
+-endif
+-endif
