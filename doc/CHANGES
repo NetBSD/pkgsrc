@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7767 2004/11/08 14:36:32 adam Exp $
+$NetBSD: CHANGES,v 1.7768 2004/11/08 14:52:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5162,3 +5162,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cdl3 to 1.2.5 [adam 2004-11-08]
 	Updated rar-linux to 3.4.1 [wiz 2004-11-08]
 	Updated gtkballs to 3.1.4 [adam 2004-11-08]
+	Updated ImageViewer to 0.6.3 [adam 2004-11-08]
