@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4152 2003/12/17 00:28:05 grant Exp $
+$NetBSD: CHANGES,v 1.4153 2003/12/17 03:27:26 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5203,3 +5203,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmlcatmgr to 1.2 [jmmv 2003-12-16]
 	Updated docsis to 0.9.0 [grant 2003-12-16]
 	Updated p5-MailTools to 1.60 [grant 2003-12-16]
+	Updated xmms-mad to 0.5.5 [simonb 2003-12-17]
