@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2022 2003/04/24 09:16:23 drochner Exp $
+$NetBSD: CHANGES,v 1.2023 2003/04/24 11:17:59 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1716,3 +1716,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated zope25-ZWeatherApplet to 1.51 [drochner 2003-04-23]
 	Updated zope25-Squshdot to 1.5.0 [drochner 2003-04-23]
 	Updated gimp-print to 4.2.5 [drochner 2003-04-23]
+	Updated p5-FCGI to 0.67 [mjl 2003-04-24]
