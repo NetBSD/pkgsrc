@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.22 2001/12/31 23:54:24 jlam Exp $
-
-.include "Makefile.php"
+# $NetBSD: Makefile,v 1.23 2002/02/28 06:14:46 jlam Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION?=		# empty
+PKGREVISION=		# empty
 CATEGORIES+=		lang
 COMMENT=		HTML-embedded scripting language
 
 CONFLICTS+=		ap-php-4.0.3pl1
 
 USE_BUILDLINK_ONLY=	YES
+
+.include "Makefile.php"
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		-Wl,--export-dynamic
@@ -30,11 +30,14 @@ MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
 CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
+OWN_DIRS=	${PREFIX}/${PHP_EXTENSION_DIR}
 
 post-install:
+	${RMDIR} ${PREFIX}/include/php/ext/xml/expat/xmltok
+	${RMDIR} ${PREFIX}/include/php/ext/xml/expat/xmlparse
+	${RMDIR} ${PREFIX}/include/php/ext/xml/expat
 	${INSTALL_DATA_DIR} ${CGIDIR}
 	${LN} -sf ../../bin/php ${CGIDIR}/php
-	${TOUCH} ${PREFIX}/${PHP_EXTENSION_DIR}/.directory
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php

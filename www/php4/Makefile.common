@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2002/01/06 19:57:13 jlam Exp $
+# $NetBSD: Makefile.common,v 1.23 2002/02/28 06:14:46 jlam Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 CATEGORIES+=		www php4
@@ -14,7 +14,7 @@ HOMEPAGE=		http://www.php.net/
 # PHP_DIST_VERS		version number on the php distfile
 # PHP_BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
-PHP_DIST_VERS=		4.1.1
+PHP_DIST_VERS=		4.1.2
 PHP_BASE_VERS=		${PHP_DIST_VERS}
 
 # Location of installed PHP4 loadable modules under ${PREFIX}.
@@ -24,5 +24,7 @@ PHP_BASE_VERS=		${PHP_DIST_VERS}
 #
 PHP_EXTENSION_DIR=	lib/php/20010901
 PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
+
+PKG_SYSCONFVAR?=	php
 
 .include "../../mk/bsd.prefs.mk"

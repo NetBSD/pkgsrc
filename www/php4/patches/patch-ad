@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2001/12/31 23:54:26 jlam Exp $
+$NetBSD: patch-ad,v 1.7 2002/02/28 06:14:47 jlam Exp $
 
---- configure.orig	Sat Dec  8 14:40:35 2001
+--- configure.orig	Wed Feb 27 04:18:32 2002
 +++ configure
-@@ -5132,11 +5132,6 @@
+@@ -5138,11 +5138,6 @@
    fi
  
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ad,v 1.6 2001/12/31 23:54:26 jlam Exp $
  INCLUDES="$INCLUDES -I\$(top_builddir)/Zend"
  
  
-@@ -16142,10 +16137,6 @@
+@@ -16148,10 +16143,6 @@
  
  else
    echo "$ac_t""no" 1>&6
@@ -25,7 +25,7 @@ $NetBSD: patch-ad,v 1.6 2001/12/31 23:54:26 jlam Exp $
  fi
  
  
-@@ -23549,19 +23540,10 @@
+@@ -23572,19 +23563,10 @@
  
  
    else
@@ -45,7 +45,7 @@ $NetBSD: patch-ad,v 1.6 2001/12/31 23:54:26 jlam Exp $
    echo "$ac_t""no" 1>&6
  
  fi
-@@ -63204,7 +63186,7 @@
+@@ -63418,7 +63400,7 @@
  
  if test "$enable_debug" != "yes"; then
    

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/12/31 23:54:37 jlam Exp $
-
-.include "../../www/php4/Makefile.php"
+# $NetBSD: Makefile,v 1.20 2002/02/28 06:14:46 jlam Exp $
 
 PKGNAME=		ap-php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
@@ -9,11 +7,9 @@ COMMENT=		Apache module for PHP4
 DEPENDS+=		php>=${PHP_BASE_VERS}:../../www/php4
 DEPENDS+=		apache{,6}>=1.3:../../www/apache
 
-# For "apxs":
-BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
-
 USE_BUILDLINK_ONLY=	YES
-CONFIGURE_ARGS+=	--with-apxs=${LOCALBASE}/sbin/apxs
+
+.include "../../www/php4/Makefile.php"
 
 # Ensure we export symbols in the linked shared object.
 .if ${OPSYS} != "SunOS"
@@ -24,4 +20,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/.libs/libphp4.so	\
 		${PREFIX}/lib/httpd/mod_php4.so
 
+.include "../../www/apache/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

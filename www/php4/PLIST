@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/15 10:13:04 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/02/28 06:14:46 jlam Exp $
 bin/pear
 bin/pearize
 bin/php
@@ -144,7 +144,6 @@ include/php/regex/regex.h
 include/php/regex/regex2.h
 include/php/regex/regex_extra.h
 include/php/regex/utils.h
-${PHP_EXTENSION_DIR}/.directory
 lib/php/Archive/Tar.php
 lib/php/Benchmark/Iterate.php
 lib/php/Benchmark/Timer.php
@@ -185,8 +184,8 @@ lib/php/File/SearchReplace.php
 lib/php/HTML/Common.php
 lib/php/HTML/Form.php
 lib/php/HTML/IT.php
-lib/php/HTML/IT_Error.php
 lib/php/HTML/ITX.php
+lib/php/HTML/IT_Error.php
 lib/php/HTML/Page.php
 lib/php/HTML/Processor.php
 lib/php/HTML/Select.php
@@ -266,12 +265,8 @@ share/php/php4.gif
 @dirrm lib/php/Cache
 @dirrm lib/php/Benchmark
 @dirrm lib/php/Archive
-@unexec ${RMDIR} -p %D/${PHP_EXTENSION_DIR} 2>/dev/null || true
 @dirrm include/php/regex
 @dirrm include/php/main
-@dirrm include/php/ext/xml/expat/xmltok
-@dirrm include/php/ext/xml/expat/xmlparse
-@dirrm include/php/ext/xml/expat
 @dirrm include/php/ext/xml
 @dirrm include/php/ext/standard
 @dirrm include/php/ext/session
