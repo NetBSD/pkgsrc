@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/17 14:37:48 taca Exp $
+$NetBSD: distinfo,v 1.2 2004/11/28 05:51:59 taca Exp $
 
-SHA1 (ruby/webunit-20030121.tar.gz) = 5e128bf0553f17d2966d6c28b8a92b773fedc633
-Size (ruby/webunit-20030121.tar.gz) = 58368 bytes
+SHA1 (ruby/webunit-20040429++.tar.gz) = dfc317b7318731e56dadfe4f7d11acc66f54fa29
+Size (ruby/webunit-20040429++.tar.gz) = 59312 bytes

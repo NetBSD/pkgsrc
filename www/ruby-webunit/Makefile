@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/03/16 02:01:11 taca Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/28 05:51:59 taca Exp $
 
 DISTNAME=	webunit-${VERSION}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	www textproc ruby
 MASTER_SITES=	http://www.xpenguin.biz/download/webunit/
 
@@ -9,18 +9,27 @@ MAINTAINER=	rasputin@idoru.mine.nu
 HOMEPAGE=	http://www.xpenguin.biz/download/webunit/index-en.html
 COMMENT=	HTTP unit testing framework for Ruby
 
-WRKSRC=		${WRKDIR}/webunit
-VERSION=	20030121
-DIST_SUBDIR=	ruby
 USE_RUBY_SETUP=	yes
 RUBY_SETUP=	install.rb
+WRKSRC=		${WRKDIR}/webunit
+VERSION=	20040429++
 
-DEPENDS+=	ruby-testunit>=0.1:../../devel/ruby-testunit
-DEPENDS+=	ruby-rexml>=2.4.8:../../textproc/ruby-rexml
+.include "../../lang/ruby/rubyversion.mk"
+
+DEPENDS+= ${RUBY_PKGPREFIX}-html-parser>=19990912p1:../../textproc/ruby-html-parser
+DEPENDS+= ${RUBY_PKGPREFIX}-htmlsplit>=1.0.2:../../www/ruby-htmlsplit
+.if ${RUBY_VER} == 16
+DEPENDS+= ${RUBY_PKGPREFIX}-testunit>=0.1:../../devel/ruby-testunit
+DEPENDS+= ${RUBY_PKGPREFIX}-rexml>=2.4.8:../../textproc/ruby-rexml
+.endif
+
+pre-patch:
+	cd ${WRKSRC}/lib; \
+		${RM} formatter.rb html-parser.rb sgml-parser.rb htmlsplit.rb
 
 post-install:
 	${CP} -R ${WRKSRC}/doc ${RUBY_DOCDIR}/webunit
 	${CP} -R ${WRKSRC}/sample ${RUBY_EXAMPLESDIR}/webunit
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
