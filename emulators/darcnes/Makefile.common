@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/03/07 09:48:36 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.7 2005/03/13 16:29:51 uebayasi Exp $
 
 DISTNAME=	dn9b0401
 CATEGORIES=	emulators
@@ -26,7 +26,7 @@ MAKE_FLAGS+=	NO_MULTIPLE_COMMON_WARNING=-DNO_MULTIPLE_COMMON_WARNING
 .endif
 
 .if ( ${MACHINE_ARCH} == "i386" )
-MAKE_FLAGS+=	MACH_TYPES=-DMACH_TYPES="\"types-i386.h\""
+MAKE_FLAGS+=	MACH_TYPES=-DMACH_TYPES=\\\"types-i386.h\\\"
 .else
 MAKE_FLAGS+=	C_ONLY=-DC_ONLY
 .endif
