@@ -1,9 +1,5 @@
 NapShare is a GUI based Gnutella Client.
 
-It's a fully featured Gnutella Client designed to share any type of file
-the user wishes to share.
-
-It's a Unix clone, and it needs GTK+ (1.2 or above). Gnome is not needed. It
-is currently developed and tested under Linux (Redhat 6). It is known to run
-at least on Linux and FreeBSD (on 80x86 machines). It is released under the
-GNU Public License (GPL).
+It's a fully automated GUI based gnutella client with a automation
+"brain" that attempts to simulate searching and downloading the way
+humans do. It's made to run 24/7.
