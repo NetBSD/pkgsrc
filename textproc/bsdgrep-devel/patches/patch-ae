@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
+
+--- util.c.orig	Wed Aug 27 13:01:54 2003
++++ util.c	Wed Aug 27 13:02:02 2003
+@@ -36,6 +36,7 @@
+ #include <sys/stat.h>
+ 
+ #include <ctype.h>
++#include <zlib.h>
+ #include <err.h>
+ #include <errno.h>
+ #include <fts.h>
+@@ -44,7 +45,6 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
+-#include <zlib.h>
+ 
+ #include "grep.h"
+ 

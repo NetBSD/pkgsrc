@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
+
+--- file.c.orig	Wed Aug 27 12:59:52 2003
++++ file.c	Wed Aug 27 13:00:09 2003
+@@ -34,10 +34,10 @@
+ 
+ #include <sys/param.h>
+ 
++#include <zlib.h>
+ #include <err.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <zlib.h>
+ 
+ #include "grep.h"
+ 

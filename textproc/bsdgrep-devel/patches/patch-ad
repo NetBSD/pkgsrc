@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
+
+--- mmfile.c.orig	Wed Aug 27 13:01:21 2003
++++ mmfile.c	Wed Aug 27 13:01:42 2003
+@@ -36,6 +36,7 @@
+ #include <sys/mman.h>
+ #include <sys/stat.h>
+ 
++#include <zlib.h>
+ #include <err.h>
+ #include <fcntl.h>
+ #include <stdlib.h>
