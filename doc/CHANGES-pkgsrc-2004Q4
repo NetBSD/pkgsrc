@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.103 2005/03/10 13:25:00 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.104 2005/03/11 06:09:01 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -217,3 +217,5 @@ Pullup ticket 347 - requested by Matthias Scheler
 security fix for ethereal
 Pullip ticket 333 - requested by Adrian Portelli
 security fix for imap-uw
+Pullup ticket 349 - requested by Lubomir Sedlacik
+security fix for libexif
