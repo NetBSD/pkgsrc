@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2084 2004/08/29 15:31:18 wiz Exp $
+$NetBSD: TODO,v 1.2085 2004/08/29 16:53:16 recht Exp $
 
 Suggested new packages
 ======================
@@ -274,6 +274,7 @@ Suggested package updates
 	o hmmer-2.3.2
 	o host-20040812 [cjep,talking to greg woods about this]
 	o hp2xx-3.4.4
+	o hylafax-4.2.0
 	o icepref-2.3
 	o icewm-1.2.16
 	o idesk-0.5.6
