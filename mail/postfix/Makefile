@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2002/11/26 07:20:06 martti Exp $
+# $NetBSD: Makefile,v 1.72 2003/01/06 09:15:49 martti Exp $
 
-DISTNAME=	postfix-1.1.12
+DISTNAME=	postfix-2.0.0.2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 
