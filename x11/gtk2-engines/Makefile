@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/12/24 10:07:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/12/28 22:41:53 jmmv Exp $
 
 DISTNAME=		gtk-engines-2.6.0
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -12,6 +12,7 @@ COMMENT=		Theme engines for GTK+ version 2
 
 CONFLICTS+=		gtk-engines-*
 CONFLICTS+=		gtk2-engines-industrial-*
+CONFLICTS+=		gnome-themes-extras<0.8
 
 BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
