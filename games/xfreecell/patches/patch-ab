@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/12/22 21:17:25 hubertf Exp $
+
+*** widget/makefile.orig	Sun Aug  5 11:10:13 2001
+--- widget/makefile	Sun Aug  5 10:49:28 2001
+***************
+*** 1,7 ****
+  OBJECTS=window.o plate.o string.o button.o label.o textfield.o container.o frame.o util.o scrollbar.o font.o main.o
+  #C=/usr/local/gcc-2.8.1/bin/g++
+  CC=g++
+! CFLAGS=-g -Wall
+  LIBS=-L/usr/X11R6/lib -lX11
+  LIBNAME=libns.a
+  
+--- 1,7 ----
+  OBJECTS=window.o plate.o string.o button.o label.o textfield.o container.o frame.o util.o scrollbar.o font.o main.o
+  #C=/usr/local/gcc-2.8.1/bin/g++
+  CC=g++
+! CFLAGS=-g -Wall -I/usr/X11R6/include
+  LIBS=-L/usr/X11R6/lib -lX11
+  LIBNAME=libns.a
+  
