@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/15 04:20:17 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/01 08:37:07 shell Exp $
 bin/micq
 man/man1/micq.1
 man/man5/micqrc.5
 man/man7/micq.7
 share/micq/C.i18n
 share/micq/bg.i18n
-share/micq/br.i18n
 share/micq/de.i18n
 share/micq/de@fun.i18n
 share/micq/de_CH.i18n
@@ -21,6 +20,7 @@ share/micq/ja.UTF-8.i18n
 share/micq/ja.i18n
 share/micq/nl.i18n
 share/micq/pl.i18n
+share/micq/pt.i18n
 share/micq/ro.i18n
 share/micq/ru.i18n
 share/micq/se.i18n
