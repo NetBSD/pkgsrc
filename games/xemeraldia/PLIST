@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:40 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/13 22:32:43 skrll Exp $
 bin/xemeraldia
 lib/X11/app-defaults/XEmeraldia
-@exec mkdir -p %D/${GAMES_DIR}/xemeraldia
+@exec ${MKDIR} -p %D/${GAMES_DIR}/xemeraldia
 @exec touch -f %D/${GAMES_DIR}/xemeraldia/xemeraldia.scores
-@exec chmod 666 %D/${GAMES_DIR}/xemeraldia/xemeraldia.scores
+@exec ${CHMOD} 666 %D/${GAMES_DIR}/xemeraldia/xemeraldia.scores
 @unexec rm -f %D/${GAMES_DIR}/xemeraldia/xemeraldia.scores
 @unexec rmdir %D/${GAMES_DIR}/xemeraldia
