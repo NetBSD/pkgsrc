@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.122 2004/05/13 06:44:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.122.2.1 2004/07/26 07:29:30 agc Exp $
 
-DISTNAME=		samba-3.0.4
+DISTNAME=		samba-3.0.5
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
 			ftp://samba.anu.edu.au/pub/samba/ \
 			ftp://ftp.sunet.se/pub/unix/utilities/samba/
-COUNTRY_MIRRORS=	au1 ca fi fr de it pl ru sg se us1 us6
+COUNTRY_MIRRORS=	au1 ca fi fr it pl ru sg se us1 us6
 .for COUNTRY in ${COUNTRY_MIRRORS}
 MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/
 .endfor
