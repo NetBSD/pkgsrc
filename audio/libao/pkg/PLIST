@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/15 20:35:58 wiz Exp $
-lib/ao/libesd.la
-lib/ao/libesd.so
-lib/ao/libesd.so.0
-lib/ao/libesd.so.0.0
-lib/ao/liboss.la
-lib/ao/liboss.so
-lib/ao/liboss.so.0
-lib/ao/liboss.so.0.0
+@comment $NetBSD: PLIST,v 1.2 2001/03/20 09:57:37 wiz Exp $
+lib/ao/libsun.a
+lib/ao/libsun.la
+lib/ao/libsun.so
+lib/libao.a
 lib/libao.la
 lib/libao.so
 lib/libao.so.1
