@@ -1,6 +1,6 @@
 Excerpts from the README:
 
-  This is release 1.5 of rc.
+  This is release 1.6 of rc.
 
   A unix version of the Plan-9 Shell.
 
@@ -19,4 +19,3 @@ Excerpts from the README:
   certain bits and pieces to rc (notably the limits code, print.c,
   most of which.c and the backquote redirection code).
 
-eric.
