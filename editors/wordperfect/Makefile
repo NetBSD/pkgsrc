@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/28 10:40:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/17 18:38:12 jlam Exp $
 
 DISTNAME=		wordperfect-personal-8
 CATEGORIES=		editors
@@ -34,14 +34,14 @@ post-extract:
 	${CHMOD} +x ${WRKDIR}/uname
 
 # Extract all the archives and set the defaults for the installation process.
-#
 pre-build:
-	cd ${WRKDIR}; for file in *_*; do \
-		${GTAR} -xf $$file; \
+	cd ${WRKDIR}; for file in *_*; do				\
+		${GTAR} -xf $$file;					\
 	done
 	${RM} -f ${WRKDIR}/shared/wpdata
-	${SED} -e "s,@WRKDIR@,${WRKDIR},g" -e "s,@WPDIR@,${WPDIR},g" \
-		< ${FILESDIR}/wpdata > ${WRKDIR}/shared/wpdata
+	${SED}	-e "s|@WRKDIR@|${WRKDIR}|g"				\
+		-e "s|@WPDIR@|${WPDIR}|g"				\
+		${FILESDIR}/wpdata > ${WRKDIR}/shared/wpdata
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "-------------------------------------------------------"
 	@${ECHO_MSG} " Now running the WordPerfect(R) installation script.   "
@@ -56,24 +56,28 @@ pre-build:
 	@${ECHO_MSG} " package installation.                                 "
 	@${ECHO_MSG} "-------------------------------------------------------"
 	@${ECHO_MSG} ""
+	@sleep 5
 
 # Always accept the defaults during installation.
-#
 do-build:
-	cd ${WRKDIR}; \
-	DISPLAY=""; export DISPLAY; \
-	PATH="${WRKDIR}:${PATH}"; export PATH; \
+	cd ${WRKDIR};							\
+	DISPLAY=""; export DISPLAY;					\
+	PATH="${WRKDIR}:${PATH}"; export PATH;				\
 	yes o | ./Runme
-	([ ! -d ${HOME}/.wprc ] || ${MV} ${HOME}/.wprc ${HOME}/.wprc.$$$$; \
-	 ${WRKDIR}/${WPDIR}/wpbin/xwp; \
-	 ${RM} -rf ${HOME}/.wprc; \
-	 [ ! -d ${HOME}/.wprc.$$$$ ] || ${MV} ${HOME}/.wprc.$$$$ ${HOME}/.wprc)
+	( [ ! -d ${HOME}/.wprc ] ||					\
+		${MV} ${HOME}/.wprc ${HOME}/.wprc.$$$$;			\
+	  ${WRKDIR}/${WPDIR}/wpbin/xwp;					\
+	  ${RM} -rf ${HOME}/.wprc;					\
+	  [ ! -d ${HOME}/.wprc.$$$$ ] ||				\
+		${MV} ${HOME}/.wprc.$$$$ ${HOME}/.wprc;			\
+	)
 
 post-build:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@WPDIR@,${WPDIR},g" \
-		< ${FILESDIR}/xwp > ${WRKDIR}/xwp
-	${SED} -e "s,@WPDIR@,${WPDIR},g" \
-		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+		-e "s|@WPDIR@|${WPDIR}|g"				\
+		${FILESDIR}/xwp > ${WRKDIR}/xwp
+	${SED}	-e "s|@WPDIR@|${WPDIR}|g"				\
+		${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/xwp ${PREFIX}/bin/xwp
