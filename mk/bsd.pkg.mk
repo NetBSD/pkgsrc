@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.22 2005/02/11 17:00:21 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.23 2005/02/15 16:25:22 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1285,14 +1285,14 @@ init-install:
 	fi
 .  if defined(PKG_DEVELOPER) && (${CHECK_FILES} == "YES")
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Generating pre-install file lists"
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.prefix.pre \
 		|| ${TRUE}
 .    if ${CHECK_FILES_STRICT} == "YES"
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PKG_SYSCONFDIR} \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PKG_SYSCONFDIR} -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.sysconfdir.pre \
 		|| ${TRUE}
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${VARBASE} \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${VARBASE} -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.varbase.pre \
 		|| ${TRUE}
 .    endif
@@ -1388,14 +1388,14 @@ _REAL_TARGETS.su-install+=	post-install-check-files
 .PHONY: post-install-check-files
 post-install-check-files:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Generating post-install file lists"
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PREFIX} -type f -or -type l -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.prefix.post \
 		|| ${TRUE}
 .  if ${CHECK_FILES_STRICT} == "YES"
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PKG_SYSCONFDIR} \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${PKG_SYSCONFDIR} -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.sysconfdir.post\
 		|| ${TRUE}
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${VARBASE} \
+	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${VARBASE} -print \
 		2>/dev/null ${CHECK_FILES_SKIP_CMD} >${WRKDIR}/.varbase.post \
 		|| ${TRUE}
 .  endif
@@ -2834,10 +2834,13 @@ acquire-${targ}-lock:
 		${FALSE};						\
 	fi;								\
 	while true; do							\
-		if ${TEST} -f /var/run/dmesg.boot -a -f ${LOCKFILE} -a	\
-		     /var/run/dmesg.boot -nt ${LOCKFILE}; then		\
-			${ECHO} "=> Removing stale ${LOCKFILE}";	\
-			${RM} ${LOCKFILE};				\
+		: "Remove lock files older than the last reboot";	\
+		if ${TEST} -f /var/run/dmesg.boot -a -f ${LOCKFILE}; then \
+			rebooted=`${FIND} /var/run/dmesg.boot -newer ${LOCKFILE} -print`; \
+			if ${TEST} x"$$rebooted" != x; then		\
+				${ECHO} "=> Removing stale ${LOCKFILE}"; \
+				${RM} ${LOCKFILE};			\
+			fi;						\
 		fi;							\
 		${SHLOCK} -f ${LOCKFILE} -p $$ppid && break;		\
 		${ECHO} "=> Lock is held by pid `cat ${LOCKFILE}`";	\

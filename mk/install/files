@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: files,v 1.1.2.2 2005/02/11 15:27:57 tv Exp $
+# $NetBSD: files,v 1.1.2.3 2005/02/15 16:25:23 tv Exp $
 #
 # +FILES - reference-counted configuration file management script
 #
@@ -162,8 +162,7 @@ REMOVE)
 			"")
 				if ${TEST} -f "$preexist"; then
 					:
-				elif ${TEST} -f "$file" -a -f "$f_eg" -a \
-					     ! "$file" -ef "$f_eg" && \
+				elif ${TEST} -f "$file" -a -f "$f_eg" && \
 					     ${CMP} -s "$file" "$f_eg"; then
 					${RM} -f "$file"
 				fi

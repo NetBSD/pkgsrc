@@ -1,10 +1,10 @@
-# $NetBSD: arg-pp-darwin-gcc,v 1.1.2.3 2005/02/15 16:25:23 tv Exp $
+# $NetBSD: transform-icc-cc,v 1.2.2.2 2005/02/15 16:25:23 tv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
-# by Johnny C. Lam.
+# by Grant Beattie.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -36,41 +36,33 @@
 
 case $arg in
 ######################################################################
-# Split direct paths to Darwin "dylib" shared libraries into the
-# "-Ldir -llib" equivalent.
+# ignore flags that icc doesn't understand.
 ######################################################################
-/*/lib*.dylib)
-	dir="${arg%/lib*.dylib}"
-	lib="${arg#$dir/lib}"
-	case $lib in
-	*/*)		argok=yes; argmatch=yes ;;
-	*.dylib)	lib="${lib%.dylib}" ;;
-	esac
-	case $argmatch in
-	yes)	;;
-	*)	prepend_queue argbuf "-l$lib"
-		$debug_log $wrapperlog "    (arg-pp-darwin-gcc) pre:  -l$lib"
-		prepend_queue argbuf "-L$dir"
-		$debug_log $wrapperlog "    (arg-pp-darwin-gcc) pre:  -L$dir"
-		argmatch=yes
-		;;
-	esac
+-ffast-math|-fomit-frame-pointer|-pedantic|-pipe|-s|-MP|-OPT:*)
+	arg=
+	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
+	addtocache=yes
 	;;
-######################################################################
-# Darwin's linker uses:
-#
-#	-dylib_file /path/shlib:/path2/shlib
-#	-dylib_install_name /path/shlib
-#	-install_name /path/shlib
-#
-# to pass the installed locations for the shared libraries to the
-# linker, and we need to pass the extra argument unmodified.  The
-# purpose of -seg_addr_table_filename is more obscure, but Darwin's
-# imake rules use it.
-######################################################################
--dylib_file|-dylib_install_name|-install_name|-seg_addr_table_filename)
-	skipargs=1
-	argok=yes
-	argmatch=yes
+-finline-functions)
+	arg=-Ob2
+	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
+	addtocache=yes
+	;;
+-funroll-all-loops|-funroll-loops)
+	arg=-unroll
+	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
+	addtocache=yes
+	;;
+-O[4-9]|-O[12][0-9])
+	arg=-O3
+	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
+	addtocache=yes
+	;;
+-Wall|-Wl,*)
+	;;
+-W*)
+	arg=
+	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
+	addtocache=yes
 	;;
 esac
