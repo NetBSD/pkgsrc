@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/27 00:38:56 jmc Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/21 00:52:29 wiz Exp $
 
 DISTNAME=		stalin-0.9
 CATEGORIES=		lang
@@ -12,9 +12,7 @@ COMMENT=		Aggressively optimizing Scheme compiler
 # Only ported to these 4 archs
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-alpha *-*-mips
 
-DEPENDS+=		boehm-gc-[0-9]*:../../devel/boehm-gc
-
-USE_MESA=		yes
+USE_BUILDLINK2=		yes
 
 post-patch:
 	${SED} -e 's:@PREFIX@:${PREFIX}:g'			\
@@ -33,4 +31,6 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ANNOUNCEMENT COPYING README	\
 		stalin.el ${PREFIX}/share/doc/stalin/
 
+.include "../../devel/boehm-gc/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
