@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/01/28 02:05:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/02/08 19:05:02 jlam Exp $
 bin/cancel
 bin/disable
 bin/enable
@@ -21,7 +21,7 @@ lib/libcups.a
 lib/libcups.la
 lib/libcups.so
 lib/libcups.so.2
-lib/libcups.so.2.0
+lib/libcups.so.2.1
 lib/libcupsimage.a
 lib/libcupsimage.la
 lib/libcupsimage.so

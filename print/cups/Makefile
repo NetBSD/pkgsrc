@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2001/02/05 09:01:02 tron Exp $
+# $NetBSD: Makefile,v 1.21 2001/02/08 19:05:00 jlam Exp $
 #
 
-DISTNAME=		cups-${VERS}-1-source
-PKGNAME=		cups-${VERS}.1
+DISTNAME=		cups-${VERS}-2-source
+PKGNAME=		cups-${VERS}.2nb1
 VERS=			1.1.6
 WRKSRC=			${WRKDIR}/cups-${VERS}
 CATEGORIES=		print
@@ -78,43 +78,37 @@ EGDIR=			${PREFIX}/share/examples/cups
 post-extract:
 	cd ${WRKSRC}/conf; ${MV} cupsd.conf cupsd.conf.in
 
-pre-patch:
-	${MKDIR} ${WRKSRC}/scripts
-
-post-patch:
-	cd ${WRKSRC}/scripts; ${CHMOD} +x netbsd sysv
-
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 post-build:
-	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g"			\
-		-e "s,@CUPS_GROUP@,${CUPS_GROUP},g"			\
+	${SED}	-e "s|@CUPS_USER@|${CUPS_USER}|g"			\
+		-e "s|@CUPS_GROUP@|${CUPS_GROUP}|g"			\
 		${WRKSRC}/conf/cupsd.conf.in > ${WRKSRC}/conf/cupsd.conf
-	${SED}	-e "s,@PREFIX@,${PREFIX},g"				\
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
 		${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
 
 pre-install:
-	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g"			\
-		-e "s,@CUPS_GROUP@,${CUPS_GROUP},g"			\
-		-e "s,@CAT@,${CAT},g"					\
-		-e "s,@RM@,${RM},g"					\
-		-e "s,@RMDIR@,${RMDIR},g"				\
-		-e "s,@TRUE@,${TRUE},g"					\
+	${SED}	-e "s|@CUPS_USER@|${CUPS_USER}|g"			\
+		-e "s|@CUPS_GROUP@|${CUPS_GROUP}|g"			\
+		-e "s|@CAT@|${CAT}|g"					\
+		-e "s|@RM@|${RM}|g"					\
+		-e "s|@RMDIR@|${RMDIR}|g"				\
+		-e "s|@TRUE@|${TRUE}|g"					\
 		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g"			\
-		-e "s,@CUPS_GROUP@,${CUPS_GROUP},g"			\
-		-e "s,@ADDUSER@,${ADDUSER},g"				\
-		-e "s,@ADDGROUP@,${ADDGROUP},g"				\
-		-e "s,@CAT@,${CAT},g"					\
-		-e "s,@CHGRP@,${CHGRP},g"				\
-		-e "s,@CHMOD@,${CHMOD},g"				\
-		-e "s,@CHOWN@,${CHOWN},g"				\
-		-e "s,@CP@,${CP},g"					\
-		-e "s,@GREP@,${GREP},g"					\
-		-e "s,@MKDIR@,${MKDIR},g"				\
-		-e "s,@RM@,${RM},g"					\
-		-e "s,@TOUCH@,${TOUCH},g"				\
+	${SED}	-e "s|@CUPS_USER@|${CUPS_USER}|g"			\
+		-e "s|@CUPS_GROUP@|${CUPS_GROUP}|g"			\
+		-e "s|@ADDUSER@|${ADDUSER}|g"				\
+		-e "s|@ADDGROUP@|${ADDGROUP}|g"				\
+		-e "s|@CAT@|${CAT}|g"					\
+		-e "s|@CHGRP@|${CHGRP}|g"				\
+		-e "s|@CHMOD@|${CHMOD}|g"				\
+		-e "s|@CHOWN@|${CHOWN}|g"				\
+		-e "s|@CP@|${CP}|g"					\
+		-e "s|@GREP@|${GREP}|g"					\
+		-e "s|@MKDIR@|${MKDIR}|g"				\
+		-e "s|@RM@|${RM}|g"					\
+		-e "s|@TOUCH@|${TOUCH}|g"				\
 		${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
