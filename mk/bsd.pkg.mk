@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1496 2004/09/10 19:51:50 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1497 2004/09/11 07:26:03 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2997,6 +2997,7 @@ show-shlib-type:
 
 .PHONY: acquire-extract-lock acquire-patch-lock acquire-tools-lock
 .PHONY: acquire-buildlink-lock acquire-configure-lock acquire-build-lock
+.PHONY: acquire-install-lock acquire-package-lock
 acquire-extract-lock:
 	${_ACQUIRE_LOCK}
 acquire-patch-lock:
@@ -3009,9 +3010,14 @@ acquire-configure-lock:
 	${_ACQUIRE_LOCK}
 acquire-build-lock:
 	${_ACQUIRE_LOCK}
+acquire-install-lock:
+	${_ACQUIRE_LOCK}
+acquire-package-lock:
+	${_ACQUIRE_LOCK}
 
 .PHONY: release-extract-lock release-patch-lock release-tools-lock
 .PHONY: release-buildlink-lock release-configure-lock release-build-lock
+.PHONY: release-install-lock release-package-lock
 release-extract-lock:
 	${_RELEASE_LOCK}
 release-patch-lock:
@@ -3023,6 +3029,10 @@ release-buildlink-lock:
 release-configure-lock:
 	${_RELEASE_LOCK}
 release-build-lock:
+	${_RELEASE_LOCK}
+release-install-lock:
+	${_RELEASE_LOCK}
+release-package-lock:
 	${_RELEASE_LOCK}
 
 ################################################################
@@ -3077,12 +3087,12 @@ test: build ${TEST_COOKIE}
 
 .PHONY: install
 .if !target(install)
-install: uptodate-pkgtools ${_PKGSRC_BUILD_TARGETS} ${INSTALL_COOKIE}
+install: uptodate-pkgtools ${_PKGSRC_BUILD_TARGETS} acquire-install-lock ${INSTALL_COOKIE} release-install-lock
 .endif
 
 .PHONY: package
 .if !target(package)
-package: uptodate-pkgtools install ${PACKAGE_COOKIE}
+package: uptodate-pkgtools install acquire-package-lock ${PACKAGE_COOKIE} release-package-lock
 .endif
 
 .PHONY: replace
