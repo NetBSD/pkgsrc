@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/09/24 16:42:05 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2000/03/07 01:37:22 wiz Exp $
 # FreeBSD Id: Makefile,v 1.1 1996/11/16 01:51:25 jdp Exp
 #
 
@@ -15,6 +15,7 @@ ALL_TARGET=		BSD-pkg-all
 INSTALL_TARGET=		BSD-pkg-install
 MAKE_ENV+=		CP="${CP}" INSTALL_DATA="${INSTALL_DATA}" \
 			INSTALL_MAN="${INSTALL_MAN}"
+USE_GMAKE=		yes
 
 post-extract:
 	${MV} ${WRKSRC}/gc.man ${WRKSRC}/gc.man.in
