@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.7 1998/05/29 09:21:43 agc Exp $
+# $NetBSD: mk.conf.example,v 1.8 1998/06/04 12:30:25 agc Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection
@@ -52,9 +52,9 @@ MANZ=		1		# gzip manual pages at installation time
                                 # Default: backup
 
 #DOMAIN_NAME=			# Used in the knews package to set the domain
-				# name.
+                                # name.
                                 # Possible: almost anything really, usually a
-				#           FQDN.
+                                #           FQDN.
                                 # Default: none
 
 #DONT_USE_IDEA=			# Used in ssh package to stop IDEA encryption
@@ -139,14 +139,14 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Default: none
 
 #SSH_CONF_DIR=			# Used in ssh to set the configuration
-				# directory.
+                                # directory.
                                 # Possible: any valid directory
                                 # Default: none, package defaults to /etc
 
 #SSH_NO_SUID=			# Used in ssh to disable setuid installation
-				# of "ssh" binary.
-				# Possible: YES, or NO.
-				# Default: NO
+                                # of "ssh" binary.
+                                # Possible: YES, or NO.
+                                # Default: NO
 
 #USE_MENUS=			# Used in xvile package to build in support for
                                 # menus.
@@ -154,7 +154,7 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Default: undefined
 
 #USE_MULE=			# Used in emacs package to build MULE
-				# extensions
+                                # extensions
                                 # Possible: defined, not defined
                                 # Default: not defined
 
@@ -167,6 +167,6 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Default: not defined
 
 #VERS_ID=			# Used by the apache package to specify its
-				# version
+                                # version
                                 # Possible: almost anything
                                 # Default: not defined
