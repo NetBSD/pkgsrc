@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4284 2003/12/29 12:22:33 grant Exp $
+$NetBSD: CHANGES,v 1.4285 2003/12/29 12:47:05 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5473,3 +5473,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Params-Validate to 0.72 [grant 2003-12-29]
 	Updated gnome2-applets to 2.4.1 [xtraeme 2003-12-29]
 	Updated p5-Log-Dispatch to 2.08 [grant 2003-12-29]
+	Removed metacity-setup [recht 2003-12-29]
