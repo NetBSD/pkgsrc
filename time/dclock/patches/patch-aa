@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2001/06/15 22:46:27 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2005/01/25 04:13:57 tv Exp $
 
---- Makefile.orig	Wed Oct 20 11:40:45 1999
-+++ Makefile	Wed Oct 20 11:43:33 1999
-@@ -3,12 +3,25 @@
+--- Makefile.orig	2005-01-24 22:41:08.000000000 -0500
++++ Makefile
+@@ -3,12 +3,27 @@ SRCS= Dclock.c dclock.c
  OBJS= Dclock.o dclock.o
  HFILES= Dclock.h DclockP.h patchlevel.h
  
@@ -17,13 +17,15 @@ $NetBSD: patch-aa,v 1.2 2001/06/15 22:46:27 wiz Exp $
 +
 +.if ${OPSYS} == "SunOS"
 +LIBS+= -lSM -lICE -lsocket -lnsl
++.elif ${OPSYS} == "Interix"
++LIBS+= -lSM -lICE
 +.endif
 +
 +all: dclock
 +
  dclock: ${OBJS}
 -	cc ${LDFLAGS} ${OBJS} ${LIBS} -o dclock
-+	${CC} ${LDFLAGS} ${OBJS} ${LIBS} -o dclock
++	${LINK.c} -o dclock ${OBJS} ${LIBS}
 +
 +install: dclock
 +	${BSD_INSTALL_PROGRAM} dclock $(PREFIX)/bin
