@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/09/01 09:14:01 martin Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/09/30 14:39:33 epg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUBVERSION_BASE_BUILDLINK3_MK:=	${SUBVERSION_BASE_BUILDLINK3_MK}+
@@ -20,7 +20,11 @@ BUILDLINK_PKGSRCDIR.subversion-base?=	../../devel/subversion-base
 BUILDLINK_FILES.subversion-base+=	bin/svn-config
 .endif	# SUBVERSION_BASE_BUILDLINK3_MK
 
-.include "../../databases/db4/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+.if !empty(APR_USE_DB4:M[yY][eE][sS])
+.  include "../../databases/db4/buildlink3.mk"
+.endif
+
 .include "../../devel/apr/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
 
