@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.3 2004/03/11 14:00:29 jmmv Exp $
+$NetBSD: patch-ac,v 1.4 2005/02/24 19:17:10 drochner Exp $
 
---- libgda/Makefile.in.orig	2004-01-17 00:23:36.000000000 +0100
+--- libgda/Makefile.in.orig	2004-10-10 00:26:50.000000000 +0200
 +++ libgda/Makefile.in
-@@ -277,7 +277,7 @@ INCLUDES = \
+@@ -374,7 +374,7 @@ INCLUDES = \
  	$(LIBGDA_CFLAGS) \
- 	-DLIBGDA_PLUGINDIR=\""$(libdir)/libgda/providers"\" \
+ 	-DLIBGDA_PLUGINDIR=\""$(prefix)/lib/libgda/providers"\" \
  	-DLIBGDA_LOCALEDIR=\""$(datadir)/locale"\" \
 -	-DLIBGDA_GLOBAL_CONFIG_FILE=\""$(sysconfdir)/libgda/config"\"
 +	-DLIBGDA_GLOBAL_CONFIG_FILE=\""$(sysconfdir)/config"\"
  
- 
  gda_marshal_built_files = gda-marshal.h gda-marshal.c
+ gda_headers = \

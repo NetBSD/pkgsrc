@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.24 2005/02/05 17:01:29 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.25 2005/02/24 19:17:10 drochner Exp $
 #
 
-DISTNAME=		libgda-1.0.4
+DISTNAME=		libgda-1.2.0
 CATEGORIES=		databases gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/1.0/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/1.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		sab@posix.org.uk
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc/html"
 CONFIGURE_ARGS+=	--without-ldap
+CONFIGURE_ARGS+=	--without-mysql
 
 .if defined(LIBGDA_PROVIDER) && !empty(LIBGDA_PROVIDER)
 PKGNAME=		${DISTNAME:S/libgda-/libgda-${LIBGDA_PROVIDER}-/}
