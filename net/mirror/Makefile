@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/03/26 22:33:17 kim Exp $
+# $NetBSD: Makefile,v 1.10 2000/04/19 16:16:51 kim Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/12/01 01:22:54 obrien Exp 
 #
 
@@ -18,5 +18,12 @@ MAKEFILE=	makefile
 
 pre-install:
 	${MKDIR} ${PREFIX}/lib/mirror
+
+post-install:
+	@if [ ! -f ${PREFIX}/lib/mirror/mirror.defaults ]; then \
+	    ${CP} -p \
+		${PREFIX}/lib/mirror/mirror.defaults.dist \
+		${PREFIX}/lib/mirror/mirror.defaults; \
+	fi
 
 .include "../../mk/bsd.pkg.mk"
