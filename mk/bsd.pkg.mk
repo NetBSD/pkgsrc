@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1332 2003/12/31 12:29:16 salo Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1333 2004/01/02 12:28:05 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -4440,6 +4440,11 @@ _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^info\/dir$$/)
 .if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
 _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/dir$$/)
 .endif
+.if !empty(INFO_FILES)
+.  for _f_ in ${INFO_FILES}
+_PRINT_PLIST_AWK_IGNORE+=      || ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/${_f_}(-[0-9]+)?$$/)
+.  endfor
+.endif
 
 # Common (system) directories not to generate @dirrm statements for
 # Reads MTREE_FILE and generate awk statements that will
@@ -4871,6 +4876,36 @@ _PLIST_AWK_IMAKE_MAN=							\
 	sub("\\.0$$", sect);						\
 }
 
+# plist awk pattern-action statement to handle info files:
+# generate list of files matching ${PREFIX}/${INFO_DIR}/filename(-[0-9]+)?
+# for `filename' being each word of INFO_FILES in turn.
+# Notes:
+# - first the filenames matching ${PREFIX}/${INFO_DIR}/filename*
+# are generated with ls then they are filtered by the exact pattern.
+# - ${PREFIX}/${INFO_DIR}/filename is single quoted and single quote
+# escaped
+# XXX When all info file entries will be removed from PLIST files
+# the non-BEGIN pattern-action statements generated below will be retired.
+_PLIST_AWK_INFO=
+.if !empty(INFO_FILES)
+.  for _f_ in ${INFO_FILES}
+_PLIST_AWK_INFO+=							\
+BEGIN {									\
+	cmd="${_f_}"; gsub("'\''", "\\'\''", cmd);			\
+	sub("^", "${LS} '\''${PREFIX}/${INFO_DIR}/", cmd);		\
+	sub("$$", "'\''*", cmd);					\
+	while ((cmd | getline l) > 0) {					\
+		if (match(l, ".*/${_f_}(-[0-9]+)?$$")) {		\
+			sub("^${PREFIX}/", "", l);			\
+			print l;					\
+		}							\
+	}								\
+	close(cmd);							\
+}									\
+/^${INFO_DIR:S|/|\\/|g}\/${_f_}(-[0-9]+)?$$/ { next; }
+.  endfor
+.endif
+
 # _PLIST_AWK_SCRIPT hold the complete awk script for plist target.
 #
 _PLIST_AWK_SCRIPT=	'
@@ -4878,6 +4913,10 @@ _PLIST_AWK_SCRIPT=	'
 # See comments above about _PLIST_AWK_SUBST: it contains single quotes!
 # So _PLIST_AWK_SCRIPT is intended to be single quoted.
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_SUBST}
+# Generated entries for info files 
+.if !empty(INFO_FILES) 
+_PLIST_AWK_SCRIPT+=    ${_PLIST_AWK_INFO}
+.endif 
 # Strip the '.gz' suffixes on man entries
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_STRIP_MANZ}
 # Deal with MANINSTALL and man entries
