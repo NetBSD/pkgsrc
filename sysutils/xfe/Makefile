@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/01/24 15:06:58 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/08 19:40:42 jmmv Exp $
 #
 
 DISTNAME=	xfe-0.54.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xfe/}
 
@@ -11,6 +11,7 @@ HOMEPAGE=	http://xfe.sourceforge.net/
 COMMENT=	Fast MS-Explorer like filemanager for X
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes

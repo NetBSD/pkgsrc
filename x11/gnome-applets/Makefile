@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2004/03/07 12:09:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2004/03/08 19:40:43 jmmv Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.4
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/1.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Applets for GNOME
 
 BUILD_DEPENDS+=		xml-i18n-tools-[0-9]*:../../textproc/xml-i18n-tools
+DEPENDS+=		xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 BUILDLINK_DEPENDS.gnome-panel=	gnome-panel<2.0
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2004/02/14 17:21:35 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/03/08 19:40:36 jmmv Exp $
 #
 
 DISTNAME=	xchat-2.0.7
+PKGREVISION=	1
 CATEGORIES=	chat gnome
 MASTER_SITES=	http://www.xchat.org/files/source/2.0/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +12,7 @@ HOMEPAGE=	http://www.xchat.org/
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 CONFLICTS=		xchat-gnome-[0-9]*
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2004/01/24 15:06:57 grant Exp $
+# $NetBSD: Makefile,v 1.31 2004/03/08 19:40:42 jmmv Exp $
 
 DISTNAME=		gtop-1.0.13
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtop/1.0/}
 
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME system monitor - top like, memory graphs, process viewer
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS+=		xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
 OSVERSION_SPECIFIC=	YES
 USE_BUILDLINK2=		YES

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2004/02/19 09:31:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/08 19:40:42 jmmv Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.4.0
 PKGNAME=	${DISTNAME:S/gnome/gnome2/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.4/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME 2 system monitor program
 
-DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
+DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK3=		yes
