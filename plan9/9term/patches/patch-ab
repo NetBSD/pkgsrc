@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 1998/08/07 11:11:15 agc Exp $
+$NetBSD: patch-ab,v 1.6 1999/10/04 23:16:02 simonb Exp $
 
 --- 9term/9term.c.orig	Fri Jun  3 09:35:39 1994
 +++ 9term/9term.c	Fri Sep 26 16:45:48 1997
@@ -105,7 +105,7 @@ $NetBSD: patch-ab,v 1.5 1998/08/07 11:11:15 agc Exp $
 -LDFLAGS=-g -R/usr/openwin/lib -L/usr/openwin/lib -R/usr/ucblib -L/usr/ucblib
 +INCLUDES=-I. -I../libtext -I$(SAMPATH)/include -I/usr/X11R6/include
 +CFLAGS= -O2 $(OS) $(INCLUDES)
-+LDFLAGS=
++LDFLAGS?=
  CC=gcc
  
  # change this if your X11 libraries are in different places
