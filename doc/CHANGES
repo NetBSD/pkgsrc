@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5420 2004/04/02 12:34:18 adam Exp $
+$NetBSD: CHANGES,v 1.5421 2004/04/02 13:41:47 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1748,3 +1748,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libsndfile to 1.0.9 [adam 2004-04-02]
 	Renamed gnome-themes-extra to gnome-themes-extras [jmmv 2004-04-02]
 	Updated gtkmm to 2.2.10 [adam 2004-04-02]
+	Updated p5-Text-CSV-Hash to 0.18 [abs 2004-04-01]
+
