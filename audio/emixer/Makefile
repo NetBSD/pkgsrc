@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/13 02:48:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/15 18:46:23 jlam Exp $
 #
 
 DISTNAME=	emixer-0.05.3
@@ -10,7 +10,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://emixer.linuxbox.com/
 
 DEPENDS+=	libslang-1.*:../../devel/libslang
-DEPENDS+=	ncurses-4.*:../../devel/ncurses
+DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	mpg123-0.59*:../../audio/mpg123
 
 post-extract:

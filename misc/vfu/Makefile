@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/07/06 08:05:51 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2000/01/15 18:46:31 jlam Exp $
 #
 
 DISTNAME=	vfu-1.51
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	-source.tgz
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.biscom.net/~cade/vfu/
 
-DEPENDS=	ncurses-4.2:../../devel/ncurses
+DEPENDS=	ncurses>=4.2:../../devel/ncurses
 
 MAKE_FLAGS+=	CCDEF="-DVFU_RCPATH1=\\\"${PREFIX}/etc/\\\" -DVFU_RCPATH2=\\\"${PREFIX}/\\\" -D__unix__" \
 		LDDEF="${LDFLAGS}"
