@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/14 16:15:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/26 22:34:17 snj Exp $
 #
 
 DISTNAME=	gtm-0.4.12
@@ -12,14 +12,14 @@ COMMENT=	Gnome Transfer Manager
 
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../x11/gnome-core/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../x11/gnome-core/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
