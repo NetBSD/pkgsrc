@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/11/25 19:22:19 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/12/21 21:04:23 jlam Exp $
 
 DISTNAME=	vtun-2.4
 CATEGORIES=	net
@@ -8,52 +8,47 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://vtun.sourceforge.net/
 COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
 
-DEPENDS+=	liblzo-1.*:../../archivers/liblzo
-
-GNU_CONFIGURE=	YES
-USE_SSL=	YES
-CONFIGURE_ARGS+=--with-ssl-headers=${SSLBASE}/include/openssl \
-		--with-ssl-lib=${SSLBASE}/lib \
-		--with-lzo-headers=${LOCALBASE}/include \
-		--with-lzo-lib=${LOCALBASE}/lib
-LIBS+=		${LDFLAGS}
-
-ALL_TARGET=	vtund
-PLIST_SUBST+=	PREFIX=${PREFIX}
-
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
-INSTALL_FILE=	${WRKDIR}/INSTALL
-
-.include "../../mk/bsd.prefs.mk"
-
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-ssl-headers=${BUILDLINK_DIR}/include/openssl
+CONFIGURE_ARGS+=	--with-ssl-lib=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	--with-lzo-headers=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	--with-lzo-lib=${BUILDLINK_DIR}/lib
+ALL_TARGET=		vtund
 
-FILES_SUBST=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		MKDIR=${MKDIR:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}  
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+DOCDIR=			${PREFIX}/share/doc/vtun
+EGDIR=			${PREFIX}/share/examples/vtun
+LOCKDIR=		/var/run/vtund
+LOGDIR=			/var/log/vtund
 
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+CONF_FILES_PERMS=	${EGDIR}/vtund.conf ${PKG_SYSCONFDIR}/vtund.conf \
+			${ROOT_USER} ${ROOT_GROUP} 0600
+OWN_DIRS=		${LOCKDIR} ${LOGDIR}
+
+post-build:
+	@cd ${WRKSRC}; for file in vtund.8; do				\
+		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
+	${SED}	-e "/^[^#]/s|^|#|" -e "s|^$$|#|" ${WRKSRC}/vtund.conf	\
+		> ${WRKDIR}/vtund.conf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vtund ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/vtun
-	${INSTALL_DATA} ${WRKSRC}/vtund.conf \
-		${PREFIX}/share/examples/vtun/vtund.conf.example
+	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.Setup ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.Shaper ${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/vtund.conf ${EGDIR}/vtund.conf
 	${INSTALL_MAN} ${WRKSRC}/vtund.conf.5 ${PREFIX}/man/man5
 	${INSTALL_MAN} ${WRKSRC}/vtund.8 ${PREFIX}/man/man8
 	${RM} -f ${PREFIX}/man/man8/vtun.8
 	${LN} -s vtund.8 ${PREFIX}/man/man8/vtun.8
 
-post-install:
-	@PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
-
+.include "../../archivers/liblzo/buildlink.mk"
+.include "../../devel/zlib/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

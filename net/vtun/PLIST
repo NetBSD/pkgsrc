@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:45 zuntum Exp $
-sbin/vtund
-share/examples/vtun/vtund.conf.example
+@comment $NetBSD: PLIST,v 1.2 2001/12/21 21:04:23 jlam Exp $
 man/man5/vtund.conf.5
-man/man8/vtund.8
 man/man8/vtun.8
+man/man8/vtund.8
+sbin/vtund
+share/doc/vtun/README.Setup
+share/doc/vtun/README.Shaper
+share/examples/vtun/vtund.conf
 @dirrm share/examples/vtun
+@dirrm share/doc/vtun
