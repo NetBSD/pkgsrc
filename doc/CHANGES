@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2159 2003/05/06 16:12:15 salo Exp $
+$NetBSD: CHANGES,v 1.2160 2003/05/06 16:22:38 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1867,3 +1867,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnustep-preferences to 1.2.0nb4 [rh 2003-05-06]
 	Added ProjectCenter-0.3.2 [rh 2003-05-06]
 	Updated dillo to 0.7.2 [salo 2003-05-06]
+	Updated wmakerconf to 2.8.1nb3 [jmmv 2003-05-06]
