@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2000/01/05 15:43:34 abs Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/01/09 19:29:37 tsarna Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -83,11 +83,11 @@ ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 # *-*-sparc
 DOWNLOAD=		http://www.netscape.com/download/
 
 do-fetch:
-	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
+	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
 	    ${ECHO_MSG} "==============================================================="; \
 	    ${ECHO_MSG} "    The 128-bit key strong encryption version of"; \
 	    ${ECHO_MSG} "    Netscape for ${VENDOR_NAME} must be fetched"; \
-	    ${ECHO_MSG} "    into \"${DISTDIR}\" from the following URL:"; \
+	    ${ECHO_MSG} "    into \"${DISTDIR}/${DIST_SUBDIR}\" from the following URL:"; \
 	    ${ECHO_MSG} "    ${DOWNLOAD}"; \
 	    ${ECHO_MSG} "==============================================================="; \
 	    ${FALSE}; \
