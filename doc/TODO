@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.516 2003/05/05 12:23:29 cjep Exp $
+$NetBSD: TODO,v 1.517 2003/05/05 16:52:02 salo Exp $
 
 Suggested new packages
 ======================
@@ -109,7 +109,6 @@ Suggested package updates
 	o easytag-0.27.1
 	o eggdrop-1.6.14
 	o elm-me-2.4pl101b
-	o ethereal-0.9.12 [pkg/21431]
 	o exim-4.12 [pkg/19850]
 	o exim-4.14
 	o exmh-2.6.2
