@@ -1,26 +1,25 @@
-$NetBSD: patch-ad,v 1.10 2000/05/02 18:48:38 danw Exp $
+$NetBSD: patch-ad,v 1.11 2000/05/26 05:37:01 rh Exp $
 
---- configure.orig	Wed Feb 16 12:14:08 2000
-+++ configure	Sun Mar 12 22:26:00 2000
+--- configure.orig	Thu May 25 02:30:06 2000
++++ configure	Thu May 25 18:24:08 2000
 @@ -26,7 +26,7 @@
  #
  GLIB_MAJOR_VERSION=1
  GLIB_MINOR_VERSION=2
--GLIB_MICRO_VERSION=7
-+GLIB_MICRO_VERSION=20
- GLIB_INTERFACE_AGE=7
- GLIB_BINARY_AGE=7
+-GLIB_MICRO_VERSION=8
++GLIB_MICRO_VERSION=21
+ GLIB_INTERFACE_AGE=8
+ GLIB_BINARY_AGE=8
  GLIB_VERSION=$GLIB_MAJOR_VERSION.$GLIB_MINOR_VERSION.$GLIB_MICRO_VERSION
-@@ -1540,9 +1540,12 @@
+@@ -1540,8 +1540,11 @@
  # This can be used to rebuild libtool when needed
  LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
  
 +if false; then
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-+fi
 +
++fi
+ 
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
- exec 5>>./config.log

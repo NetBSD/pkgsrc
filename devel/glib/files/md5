@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.11 2000/03/12 22:24:07 tron Exp $
+$NetBSD: md5,v 1.12 2000/05/26 05:37:01 rh Exp $
 
-MD5 (glib-1.2.7.tar.gz) = 1d0990f88759ddd48dc04160fbba4a04
+MD5 (glib-1.2.8.tar.gz) = 5965aeb7894f3ab3b9b7c5833418bfe9
