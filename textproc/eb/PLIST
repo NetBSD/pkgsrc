@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/03/10 01:42:39 seb Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/03/19 15:59:16 uebayasi Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -18,7 +18,7 @@ lib/libeb.a
 lib/libeb.la
 lib/libeb.so
 lib/libeb.so.7
-lib/libeb.so.7.2
+lib/libeb.so.7.4
 share/aclocal/eb3.m4
 share/eb/appendix/LIST
 share/eb/appendix/LIST-ja
