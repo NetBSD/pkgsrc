@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 13:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/26 19:31:04 rh Exp $
 #
 
-DISTNAME=		${PKGNAME}-beta-lin
-PKGNAME=		eagle-3.92r0
+DISTNAME=		eagle-4.01e
+WRKSRC=			${WRKDIR}/${DISTNAME:C/.$//}
 CATEGORIES=		cad
-MASTER_SITES=		ftp://ftp.cadsoft.de/pub/betatest/
+MASTER_SITES=		ftp://ftp.cadsoft.de/pub/program/4.01/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		rh@netbsd.org
