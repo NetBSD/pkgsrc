@@ -58,7 +58,7 @@
 #    SUBDIR += tkdesk
 #    SUBDIR += tkgoodstuff
     SUBDIR += tkirc
-    SUBDIR += tkinfoc
+    SUBDIR += tkinfo
     SUBDIR += tkman
 #    SUBDIR += tvtwm
     SUBDIR += unclutter
