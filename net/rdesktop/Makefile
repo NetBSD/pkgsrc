@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2004/03/26 02:27:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/09/26 15:05:36 seb Exp $
 #
 
 DISTNAME=		rdesktop-1.3.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rdesktop/}
+
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCHFILES=		rdesktop.patch
+PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.rdesktop.org/
