@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4009 2003/12/07 13:53:56 martti Exp $
+$NetBSD: CHANGES,v 1.4010 2003/12/07 15:17:20 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5008,3 +5008,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated curl to 7.10.8 [wiz 2003-12-07]
 	Updated mrtg to 2.10.11 [martti 2003-12-07]
 	Updated proftpd to 1.2.9 [martti 2003-12-07]
+	Updated bins to 1.1.24 [martti 2003-12-07]
