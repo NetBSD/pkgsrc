@@ -1,0 +1,44 @@
+# $NetBSD: Makefile,v 1.1.1.1 2003/07/22 17:27:05 drochner Exp $
+#
+
+DISTNAME=		PyQt-x11-gpl-3.7
+PKGNAME=		${PYPKGPREFIX}-qt3-qscintilla-3.7
+CATEGORIES=		x11
+MASTER_SITES=		http://www.river-bank.demon.co.uk/download/PyQt/
+
+MAINTAINER=		tech-pkg@netbsd.org
+HOMEPAGE=		http://www.riverbankcomputing.co.uk/pyqt/
+COMMENT=		Python binding for qt3
+
+USE_BUILDLINK2=		yes
+USE_X11=		yes
+USE_LIBTOOL=		yes
+USE_GMAKE=		yes
+
+CONFIGURE_ARGS=		-q ${QTDIR} -m ${GMAKE} -p ${SIPBIN}
+
+PYTHON_VERSIONS_ACCEPTED=	22pth 21pth
+PY_PATCHPLIST=	yes
+
+MAKE_ENV+=	QTPREFIX=${QTDIR}
+
+do-configure:
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${PYTHONBIN} build.py ${CONFIGURE_ARGS})
+
+PYQTMODULES=	qtext
+
+do-install:
+	(for f in ${PYQTMODULES}; do \
+		(cd ${WRKSRC}/$${f} && ( \
+			${INSTALL_DATA} $${f}.py ${PREFIX}/${PYSITELIB}; \
+			${LIBTOOL} --mode=install ${INSTALL_DATA} \
+				lib$${f}cmodule.la ${PREFIX}/${PYSITELIB} \
+			) \
+		); \
+	 done)
+
+.include "../../lang/python/extension.mk"
+.include "../../x11/py-qt3-base/buildlink2.mk"
+.include "../../x11/qt3-qscintilla/buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"

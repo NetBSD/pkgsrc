@@ -1,0 +1,125 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/22 17:27:05 drochner Exp $
+
+--- build.py.orig	2003-07-05 12:52:49.000000000 +0200
++++ build.py	2003-07-22 17:45:49.000000000 +0200
+@@ -50,7 +50,7 @@
+ pyVersNr = None
+ makefileGen = None
+ makeBin = None
+-buildModules = ["qt"]
++buildModules = []
+ proPatches = {}
+ makefilePatches = {}
+ tempBuildDir = None
+@@ -162,12 +162,13 @@
+     global pyFullVers, pyVersNr
+ 
+     pyFullVers = string.split(sys.version)[0]
++    pyFullVersn = string.replace(pyFullVers, 'p', '.');
+ 
+-    vl = string.split(re.findall("[0-9.]*",pyFullVers)[0],".")
++    vl = string.split(re.findall("[0-9.]*",pyFullVersn)[0],".")
+     major = vl[0]
+     minor = vl[1]
+ 
+-    pyVers = major + "." + minor
++    pyVers = sys.version[0:3]
+     pyVersNr = int(major) * 10 + int(minor)
+ 
+     global platMake, platCopy, platMkdir, platRmdir
+@@ -717,7 +718,7 @@
+     print "Type 'no' to decline the terms of the license."
+     print
+ 
+-    while 1:
++    while 0:
+         try:
+             resp = raw_input("Do you accept the terms of the license? ")
+         except:
+@@ -962,26 +963,26 @@
+     if qtVersion >= 0x020000:
+         inform("Checking which additional PyQt modules to build.");
+ 
+-        tryModule("qtcanvas","qcanvas.h","QCanvas()")
+-        tryModule("qtnetwork","qsocket.h","QSocket()")
+-        tryModule("qttable","qtable.h","QTable()")
+-        tryModule("qtxml","qdom.h","QDomImplementation()")
++#        tryModule("qtcanvas","qcanvas.h","QCanvas()")
++#        tryModule("qtnetwork","qsocket.h","QSocket()")
++#        tryModule("qttable","qtable.h","QTable()")
++#        tryModule("qtxml","qdom.h","QDomImplementation()")
+ 
+-        if qtVersion >= 0x030000:
++        if 0:
+             tryModule("qtsql","qsql.h","QSql()")
+ 
+         # We need a different Makefile for the qtgl module.
+-        proPatches["TOPENGL"] = [re.compile("@TEST_OPENGL@",re.M), "opengl"]
+-        buildMakefile("qttest.pro")
++#        proPatches["TOPENGL"] = [re.compile("@TEST_OPENGL@",re.M), "opengl"]
++#        buildMakefile("qttest.pro")
+ 
+-        tryModule("qtgl","qgl.h","QGLWidget()")
++#        tryModule("qtgl","qgl.h","QGLWidget()")
+ 
+         # Put things back.
+-        proPatches["TOPENGL"] = [re.compile("@TEST_OPENGL@",re.M), ""]
+-        buildMakefile("qttest.pro")
++#        proPatches["TOPENGL"] = [re.compile("@TEST_OPENGL@",re.M), ""]
++#        buildMakefile("qttest.pro")
+ 
+         # Check for the qui library.
+-        if qtVersion >= 0x030000:
++        if 0:
+             if sys.platform == "win32":
+                 quilib = "$(QTDIR)\\lib\\qui.lib"
+             else:
+@@ -993,8 +994,8 @@
+             tryModule("qtui","qwidgetfactory.h","QWidgetFactory()")
+ 
+         # Put things back.
+-        proPatches["TQUILIB"] = [re.compile("@TEST_QUILIB@",re.M), ""]
+-        buildMakefile("qttest.pro")
++#        proPatches["TQUILIB"] = [re.compile("@TEST_QUILIB@",re.M), ""]
++#        buildMakefile("qttest.pro")
+ 
+         # Check the location of the QScintilla library.
+         if sciVersion >= 0:
+@@ -1551,23 +1552,23 @@
+         subdirs = subdirs + " qtpe"
+ 
+     # See which version of pyuic to build.
+-    proPatches["BINDIR"] = [re.compile("@BL_BINDIR@",re.M), escape(platBinDir)]
++#    proPatches["BINDIR"] = [re.compile("@BL_BINDIR@",re.M), escape(platBinDir)]
+ 
+-    if qtVersion >= 0x030000:
+-        inform("Creating Makefile for pyuic3.")
+-        subdirs = subdirs + " pyuic3"
+-        olddir = pushDir("pyuic3")
+-    elif qtVersion >= 0x020000:
+-        inform("Creating Makefile for pyuic2.")
+-        subdirs = subdirs + " pyuic2"
+-        olddir = pushDir("pyuic2")
+-
+-    buildMakefile("pyuic.pro")
+-    fixInstallTarget()
+-    popDir(olddir)
++#    if qtVersion >= 0x030000:
++#        inform("Creating Makefile for pyuic3.")
++#        subdirs = subdirs + " pyuic3"
++#        olddir = pushDir("pyuic3")
++#    elif qtVersion >= 0x020000:
++#        inform("Creating Makefile for pyuic2.")
++#        subdirs = subdirs + " pyuic2"
++#        olddir = pushDir("pyuic2")
++
++#    buildMakefile("pyuic.pro")
++#    fixInstallTarget()
++#    popDir(olddir)
+ 
+     # Build pylupdate if Qt v3.0 or later.
+-    if qtVersion >= 0x030000:
++    if 0:
+         inform("Creating Makefile for pylupdate3.")
+         subdirs = subdirs + " pylupdate3"
+         olddir = pushDir("pylupdate3")
