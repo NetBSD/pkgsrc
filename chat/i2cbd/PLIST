@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2003/07/29 16:25:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/29 16:57:46 jmmv Exp $
 etc/rc.d/icbd
 man/man8/icbd.8
 man/man8/icbdb.8
 sbin/icbd
 sbin/icbdb
-share/examples/i2cbd/empty.log
 share/examples/i2cbd/icbd.deny
 share/examples/i2cbd/icbd_help
 share/examples/i2cbd/motd
