@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST-md.static,v 1.1.1.1 2000/02/19 23:43:24 jwise Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBD/Pg/Pg.a
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBD/Pg/extralibs.ld
+lib/perl5/site_perl/i386-netbsd/auto/DBD/Pg/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBD/Pg
