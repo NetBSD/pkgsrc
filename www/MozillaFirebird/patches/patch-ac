@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/08/16 14:19:36 taya Exp $
+$NetBSD: patch-ac,v 1.2 2003/11/27 00:10:55 taya Exp $
 
 diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/reflect/xptcall/src/md/unix/Makefile.in
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-06-19 11:58:43.000000000 +0900
-+++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-07-31 23:04:04.000000000 +0900
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-08-15 13:00:23.000000000 +0900
++++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-10-20 10:17:16.000000000 +0900
 @@ -135,7 +135,7 @@
  # NetBSD/ARM
  #
@@ -21,7 +21,7 @@ diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/r
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -293,6 +293,13 @@
+@@ -295,6 +295,13 @@
  CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
  ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
  endif
