@@ -1,4 +1,4 @@
-@comment $Netbsd:$
+@comment $NetBSD: PLIST.english,v 1.2 2002/09/30 13:47:26 jschauma Exp $
 lib/netscape/netscape7/chrome/US.jar
 lib/netscape/netscape7/chrome/en-US.jar
 lib/netscape/netscape7/chrome/en-mac.jar
