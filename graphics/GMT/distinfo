@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2002/07/02 12:43:57 wiz Exp $
+$NetBSD: distinfo,v 1.7.4.1 2003/04/20 08:29:48 grant Exp $
 
 SHA1 (GMT3.4/GMT3.4_progs.tar.bz2) = b9fa8f60fe20ff9509ef3ebdf15fcc74e01d3f95
 Size (GMT3.4/GMT3.4_progs.tar.bz2) = 551406 bytes
 SHA1 (GMT3.4/GMT3.4_suppl.tar.bz2) = 9e961d24d804e71c9b4f32bce729899c56dde360
 Size (GMT3.4/GMT3.4_suppl.tar.bz2) = 534636 bytes
-SHA1 (GMT3.4/GMT_share.tar.bz2) = da4496d09010d9a562da6bfa303e6c5942bb6bc5
-Size (GMT3.4/GMT_share.tar.bz2) = 3662173 bytes
+SHA1 (GMT3.4/GMT_share.tar.bz2) = 3d3d5cfd75ad3499454dcc902f63099ff1b2cc2c
+Size (GMT3.4/GMT_share.tar.bz2) = 3662062 bytes
 SHA1 (GMT3.4/GMT3.4_ps.tar.bz2) = 5490ad074e8801c1b1dc85108d3ebf3c0d2b1746
 Size (GMT3.4/GMT3.4_ps.tar.bz2) = 3140145 bytes
 SHA1 (GMT3.4/GMT3.4_man.tar.bz2) = 3f33b1eee6c47faf3f8d2d6c7efb27b57b88c303
