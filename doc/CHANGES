@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.831 2002/12/19 03:48:12 itojun Exp $
+$NetBSD: CHANGES,v 1.832 2002/12/19 11:32:00 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4003,3 +4003,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated lame to 3.93.1 [wiz 2002-12-19]
 	Updated bind9-current to 9.2.99.20021217, for 9.3.0s20021217
 		[itojun 2002-12-19]
+	Added xmountains-2.6 [grant 2002-12-19]
