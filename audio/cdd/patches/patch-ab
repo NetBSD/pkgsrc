@@ -1,0 +1,161 @@
+$NetBSD: patch-ab,v 1.1 1998/11/04 08:27:38 garbled Exp $
+--- cdd.c.orig	Wed Nov  4 01:14:06 1998
++++ cdd.c	Wed Nov  4 01:14:11 1998
+@@ -56,8 +56,10 @@
+ #include <sys/stat.h>
+ #include <sys/uio.h>
+ #include <unistd.h>
++#include <ctype.h>
+ #include <fcntl.h>
+ #include <scsi.h>
++#include <util.h>
+ #include "cdd.h"
+ #include "cdd_cdcmds.h"
+ #include "cdd_util.h"
+@@ -68,11 +70,13 @@
+ OPTS G_opts;
+ 
+ int F_cdctlfd;
++char cd_raw_partition[11];
+ 
+ int main(int argc, char *argv[])
+ {
+ CDTOC cdtoc;
+ int count;
++char ctldev[MAXPATHLEN];
+ 
+ strcpy(G_opts.workdir, "/tmp");
+ G_opts.onlyaudio = FALSE;
+@@ -83,27 +87,12 @@
+ G_opts.bequiet = FALSE;
+ G_opts.dostdout = FALSE;
+ G_opts.cddb = FALSE;
++strcpy(G_opts.cddev, "cd0");
+ 
+ signal(SIGINT, resetcd);
+ signal(SIGBUS, resetcd);
+ signal(SIGSEGV, resetcd);
+ 
+-#ifdef __NetBSD__
+-F_cdctlfd=scsi_open("/dev/rcd0d", O_RDWR);
+-#else
+-F_cdctlfd=scsi_open("/dev/rcd0.ctl", O_RDWR);
+-#endif
+-
+-if(F_cdctlfd < 0)
+-    {
+-#ifdef __NetBSD__
+-    fprintf(stderr,"Unable to open /dev/rcd0d [%d]\n", errno);
+-#else
+-    fprintf(stderr,"Unable to open /dev/rcd0.ctl [%d]\n", errno);
+-#endif
+-    exit(0);
+-    }
+-
+ for(count=1;count<argc;count++)
+     {
+     if(argv[count][0] != '-') strcpy(G_opts.workdir, argv[count]);
+@@ -126,7 +115,6 @@
+         if(count+1 == argc)
+             {
+             fprintf(stderr,"Copy what track ?\n");
+-            close(F_cdctlfd);
+             exit(0);
+             }
+ 
+@@ -134,14 +122,27 @@
+         count++;
+         }
+ 
++    if(strncasecmp(argv[count],"-c", 2) == 0)
++        {
++        if(count+1 == argc)
++            {
++            fprintf(stderr,"Use which device ?\n");
++            exit(0);
++            }
++
++        strncpy(G_opts.cddev, argv[count+1], sizeof(G_opts.cddev)-1);
++        count++;
++        }
++
+     if(strncasecmp(argv[count],"-h", 2) == 0) 
+         {
+         fprintf(stderr,"\nCDD v%s, Copyright (C) 1996, ", VERSION);
+         fprintf(stderr,"Charles R. Henrich, All Rights Reserved.\n\n");
+ 
+-        fprintf(stderr,"Usage: %s [-t #][-a][-d][-r][-n][-noed][-h]", argv[0]);
++        fprintf(stderr,"Usage: %s [-t #][-c <dev>][-a][-d][-r][-n][-noed][-h]", argv[0]);
+         fprintf(stderr,"[-p][-q][destdir|-]\n\n");
+         fprintf(stderr,"    -h      This help\n");
++        fprintf(stderr,"    -c dev  Use CD-ROM drive <dev> (default: %s)\n", G_opts.cddev);
+         fprintf(stderr,"    -t #    Copy only Track #\n");
+         fprintf(stderr,"    -a      Copy only AUDIO tracks\n");
+         fprintf(stderr,"    -p      Play AUDIO during Copy\n");
+@@ -155,11 +156,27 @@
+         fprintf(stderr,"any error checking\n\n");
+         fprintf(stderr,"Running CDD with no options will show the table of ");
+         fprintf(stderr,"contents of the CD in the \ndrive\n\n");
+-        close(F_cdctlfd);
+         exit(0);
+         }
+     }
+ 
++#ifdef __NetBSD__
++if (G_opts.cddev[0] == '/')
++  strcpy(ctldev, G_opts.cddev);
++else
++  sprintf(ctldev, "/dev/r%s%c", G_opts.cddev, getrawpartition() + 'a');
++#else
++sprintf(ctldev, "/dev/r%s.ctl", G_opts.cddev);
++#endif
++
++F_cdctlfd=scsi_open(ctldev, O_RDWR);
++
++if(F_cdctlfd < 0)
++    {
++    fprintf(stderr,"Unable to open %s [%d]\n", ctldev, errno);
++    exit(0);
++    }
++
+ cdd_printf("\nCDD v%s, Copyright (C) 1996, ", VERSION);
+ cdd_printf("Charles R. Henrich, All Rights Reserved.\n\n");
+ 
+@@ -367,7 +384,8 @@
+ #ifdef __NetBSD__
+ ifd=dup(F_cdctlfd);
+ #else
+-ifd=open("/dev/rcd0c", O_RDONLY, 0600);
++sprintf(buffer, "/dev/r%sc", G_opts.cddev);
++ifd=open(buffer, O_RDONLY, 0600);
+ #endif
+ 
+ if(ifd < 0)
+@@ -375,7 +393,7 @@
+ #ifdef __NetBSD__
+     fprintf(stderr,"Unable to dup descriptor\n");
+ #else
+-    fprintf(stderr,"Unable to open /dev/rcd0c\n");
++    fprintf(stderr,"Unable to open %s\n", buffer);
+ #endif
+     close(F_cdctlfd);
+     exit(0);
+@@ -435,7 +453,8 @@
+ #ifdef __NetBSD__
+ ifd=dup(F_cdctlfd);
+ #else
+-ifd=open("/dev/rcd0c", O_RDONLY);
++sprintf(buffer, "/dev/r%sc", G_opts.cddev);
++ifd=open(buffer, O_RDONLY);
+ #endif
+ 
+ if(ifd < 0)
+@@ -443,7 +462,7 @@
+ #ifdef __NetBSD__
+     fprintf(stderr,"Unable to dup descriptor\n");
+ #else
+-    fprintf(stderr,"Unable to open /dev/rcd0c\n");
++    fprintf(stderr,"Unable to open %s\n", buffer);
+ #endif
+     close(F_cdctlfd);
+     exit(0);
