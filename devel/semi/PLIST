@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/16 18:02:06 seb Exp $
-${FOR_xemacs214} ${EMACS_LISPPREFIX}/semi/auto-autoloads.el
-${FOR_xemacs214} ${EMACS_LISPPREFIX}/semi/auto-autoloads.elc
-${FOR_xemacs214} ${EMACS_LISPPREFIX}/semi/custom-load.el
-${FOR_xemacs214} ${EMACS_LISPPREFIX}/semi/custom-load.elc
-${FOR_xemacs215} ${EMACS_LISPPREFIX}/semi/auto-autoloads.el
-${FOR_xemacs215} ${EMACS_LISPPREFIX}/semi/auto-autoloads.elc
-${FOR_xemacs215} ${EMACS_LISPPREFIX}/semi/custom-load.el
-${FOR_xemacs215} ${EMACS_LISPPREFIX}/semi/custom-load.elc
+@comment $NetBSD: PLIST,v 1.6 2005/03/05 16:05:49 minskim Exp $
+${FOR_xemacs214}${EMACS_LISPPREFIX}/semi/auto-autoloads.el
+${FOR_xemacs214}${EMACS_LISPPREFIX}/semi/auto-autoloads.elc
+${FOR_xemacs214}${EMACS_LISPPREFIX}/semi/custom-load.el
+${FOR_xemacs214}${EMACS_LISPPREFIX}/semi/custom-load.elc
+${FOR_xemacs215}${EMACS_LISPPREFIX}/semi/auto-autoloads.el
+${FOR_xemacs215}${EMACS_LISPPREFIX}/semi/auto-autoloads.elc
+${FOR_xemacs215}${EMACS_LISPPREFIX}/semi/custom-load.el
+${FOR_xemacs215}${EMACS_LISPPREFIX}/semi/custom-load.elc
 ${EMACS_LISPPREFIX}/semi/mail-mime-setup.el
 ${EMACS_LISPPREFIX}/semi/mail-mime-setup.elc
 ${EMACS_LISPPREFIX}/semi/mime-bbdb.el
