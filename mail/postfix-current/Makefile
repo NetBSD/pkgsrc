@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/10/15 14:10:19 itojun Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/29 05:40:33 kim Exp $
 
 DISTNAME=	snapshot-20001005
 PKGNAME=	postfix-20001005
@@ -23,7 +23,7 @@ BUILD_DEFS+=	USE_INET6
 .if defined(POSTFIX_PCRE) && ${POSTFIX_PCRE} == YES
 DEPENDS+=	pcre-2.08:../../devel/pcre
 CFLAGS+=	-DHAS_PCRE -I${LOCALBASE}/include
-AUXLIBS=	-lpcre
+AUXLIBS=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lpcre
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}"
 .endif
 
