@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/02 17:51:16 dmcmahill Exp $
+bin/Ted
+share/Ted/afm/Courier-Bold.afm
+share/Ted/afm/Courier-BoldOblique.afm
+share/Ted/afm/Courier-Oblique.afm
+share/Ted/afm/Courier.afm
+share/Ted/afm/Helvetica-Bold.afm
+share/Ted/afm/Helvetica-BoldOblique.afm
+share/Ted/afm/Helvetica-Oblique.afm
+share/Ted/afm/Helvetica.afm
+share/Ted/afm/Symbol.afm
+share/Ted/afm/Times-Bold.afm
+share/Ted/afm/Times-BoldItalic.afm
+share/Ted/afm/Times-Italic.afm
+share/Ted/afm/Times-Roman.afm
+lib/X11/app-defaults/Ted
+share/doc/Ted/TedDocument.rtf
+share/Ted/ind/README.ind
+@dirrm share/Ted/afm
+@dirrm share/Ted/ind
+@dirrm share/Ted
+@dirrm share/doc/Ted
