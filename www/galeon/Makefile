@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/10/06 16:48:24 taya Exp $
+# $NetBSD: Makefile,v 1.15 2001/10/17 06:10:08 tron Exp $
 
 DISTNAME=	galeon-0.12.3
 CATEGORIES=	www
@@ -33,6 +33,12 @@ CONFIGURE_ARGS+= --with-mozilla-includes=${PREFIX}/include/mozilla \
 MOZ_LIBDIR=     ${PREFIX}/lib/mozilla
 LDFLAGS+=       -Wl,-R${MOZ_LIBDIR}
 LDFLAGS+=	-export-dynamic
+
+.if (${OPSYS} == NetBSD)
+post-configure:
+	@${LN} -fs /usr/include/g++/string ${WRKSRC}/src
+	@${LN} -fs /usr/include/g++ ${WRKSRC}/src/g++-3
+.endif
 
 pre-install:
 	${X11PREFIX}/bin/gconftool --shutdown
