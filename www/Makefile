@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.330 2004/07/08 19:43:44 erh Exp $
+# $NetBSD: Makefile,v 1.331 2004/07/16 11:31:42 jdolecek Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -12,6 +12,7 @@ SUBDIR+=	ap-access-referer
 SUBDIR+=	ap-aolserver
 SUBDIR+=	ap-auth-cookie
 SUBDIR+=	ap-auth-ldap
+SUBDIR+=	ap-auth-mysql
 SUBDIR+=	ap-auth-pam
 SUBDIR+=	ap-auth-pgsql
 SUBDIR+=	ap-auth-postgresql
