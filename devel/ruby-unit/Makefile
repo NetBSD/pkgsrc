@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/07/04 16:02:36 taca Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/04 00:36:54 taca Exp $
 # FreeBSD: ports/devel/ruby-runit/Makefile,v 1.10 2001/01/19 09:41:15 knu Exp
 
-DISTNAME=	rubyunit-0.3.9.03a
-PKGNAME=	${RUBY_PKGNAMEPREFIX}unit-0.3.9.3
+DISTNAME=	rubyunit-${VERSION}
+PKGNAME=	${RUBY_PKGNAMEPREFIX}unit-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	http://homepage1.nifty.com/markey/ruby/rubyunit/
 
@@ -10,15 +10,16 @@ MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://homepage1.nifty.com/markey/ruby/rubyunit/rubyunit_e.html
 COMMENT=	Ruby implementation of eXtreme Programming
 
+VERSION=	0.5.2
 DIST_SUBDIR=	ruby
 USE_RUBY_RD=	yes
 
 REPLACE_RUBY=	bin/c2t.rb bin/runtest.rb
 
 BINS=		c2t runtest
-DOCS=		ChangeLog README ToDo
-EXAMPLE=	simpletest.rb testall.rb testarray.rb testrepeatedtest.rb \
-		testtestsetup.rb
+DOCS=		ChangeLog README README.ja ToDo
+EXAMPLE=	sample01.rb sampletestsetup.rb simpletest.rb \
+		testall.rb testarray.rb testrepeatedtest.rb testtestsetup.rb
 
 do-build:
 	@cd ${WRKSRC}; \
