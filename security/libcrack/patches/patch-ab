@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/10/21 09:26:21 rh Exp $
+$NetBSD: patch-ab,v 1.2 2003/05/22 07:30:15 wiz Exp $
 
---- cracklib/Makefile.orig	Sun Dec 14 23:49:21 1997
-+++ cracklib/Makefile
+--- cracklib/Makefile.orig	Sun Dec 14 14:49:21 1997
++++ cracklib/Makefile	Mon Mar 24 19:18:40 2003
 @@ -7,12 +7,16 @@
  ###
  
@@ -17,10 +17,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/10/21 09:26:21 rh Exp $
 +all:	${LIB}
 +
 +.c.o:
-+	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} ${.IMPSRC} -c -o ${.TARGET}
++	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} $< -c -o ${.TARGET}
 +
 +${LIB}:	${OBJS}
-+	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 2:7
++	${LIBTOOL} --mode=link ${CC} -o ${@:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 2:7
  
  clean:
  	-rm -f $(OBJ) $(LIB) *~
