@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/18 14:29:11 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/18 14:32:01 grant Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.1
@@ -20,6 +20,7 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 FILES_SUBST+=	X11PREFIX=${X11PREFIX}
+FILES_SUBST+=	PKG_DBDIR=${PKG_DBDIR}
 CONF_FILES=	${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf \
 		${PKG_SYSCONFDIR}/pkg_filecheck.conf
 
