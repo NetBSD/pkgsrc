@@ -1,33 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2001/05/30 07:53:03 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2002/12/05 15:11:50 jschauma Exp $
 
---- configure.orig	Thu May 17 00:28:58 2001
-+++ configure	Fri May 18 14:16:44 2001
-@@ -823,8 +823,8 @@
- MESA_MAJOR=3
- MESA_MINOR=4
- MESA_TINY=2
--LIBGL_VERSION=1:2:0${MESA_MAJOR}0${MESA_MINOR}0${MESA_TINY}
--LIBGLU_VERSION=1:1:0${MESA_MAJOR}0${MESA_MINOR}0${MESA_TINY}
-+LIBGL_VERSION=${MESA_MAJOR}:${MESA_MINOR}:${MESA_TINY}
-+LIBGLU_VERSION=${MESA_MAJOR}:${MESA_MINOR}:${MESA_TINY}
- LIBGLUT_VERSION=3:7:0
- 
- 
-@@ -4635,7 +4635,7 @@
- if test -d $srcdir/src-glut; then
-   have_glut_source=yes
- else
--  { echo "configure: error: GLUT sources missing; that is not supported at this point." 1>&2; exit 1; }
-+  { echo "configure: error: GLUT sources missing; that is not supported at this point." 1>&2; }
+--- configure.orig	Wed Nov 13 22:18:19 2002
++++ configure	Tue Nov 19 15:52:05 2002
+@@ -1532,7 +1532,7 @@
  fi
- echo "$ac_t""$have_glut_source" 1>&6
- need_glut=no
-@@ -4673,7 +4673,7 @@
- done
- echo "$ac_t""$have_demo_source" 1>&6
- if test "x$have_demo_source" != xyes; then
--  { echo "configure: error: Demo sources missing; that is not supported at this point." 1>&2; exit 1; }
-+  { echo "configure: error: Demo sources missing; that is not supported at this point." 1>&2; }
- fi
+   MAINT=$MAINTAINER_MODE_TRUE
  
+-ac_config_files="$ac_config_files Makefile include/Makefile include/GL/Makefile src/Makefile src/array_cache/Makefile src/math/Makefile src/swrast/Makefile src/swrast_setup/Makefile src/tnl/Makefile src/Trace/Makefile src/FX/Makefile src/FX/X86/Makefile src/GGI/Makefile src/GGI/include/Makefile src/GGI/include/ggi/Makefile src/GGI/include/ggi/mesa/Makefile src/GGI/ggimesa.conf src/GGI/default/Makefile src/GGI/default/genkgi.conf src/GGI/display/Makefile src/GGI/display/fbdev.conf src/OSmesa/Makefile src/SVGA/Makefile src/X/Makefile src/X86/Makefile src/SPARC/Makefile util/Makefile ggi/demos/Makefile ggi/ggiglut/Makefile src-glu/Makefile si-glu/Makefile si-glu/include/Makefile si-glu/libnurbs/Makefile si-glu/libnurbs/interface/Makefile si-glu/libnurbs/internals/Makefile si-glu/libnurbs/nurbtess/Makefile si-glu/libtess/Makefile si-glu/libutil/Makefile"
++ac_config_files="$ac_config_files Makefile include/Makefile include/GL/Makefile src/Makefile src/array_cache/Makefile src/math/Makefile src/swrast/Makefile src/swrast_setup/Makefile src/tnl/Makefile src/Trace/Makefile src/FX/Makefile src/FX/X86/Makefile src/GGI/Makefile src/GGI/include/Makefile src/GGI/include/ggi/Makefile src/GGI/include/ggi/mesa/Makefile src/GGI/ggimesa.conf src/GGI/default/Makefile src/GGI/default/genkgi.conf src/GGI/display/Makefile src/GGI/display/fbdev.conf src/OSmesa/Makefile src/SVGA/Makefile src/X/Makefile src/X86/Makefile src/SPARC/Makefile util/Makefile src-glu/Makefile si-glu/Makefile si-glu/include/Makefile si-glu/libnurbs/Makefile si-glu/libnurbs/interface/Makefile si-glu/libnurbs/internals/Makefile si-glu/libnurbs/nurbtess/Makefile si-glu/libtess/Makefile si-glu/libutil/Makefile"
  
+ ac_ext=c
+ ac_cpp='$CPP $CPPFLAGS'

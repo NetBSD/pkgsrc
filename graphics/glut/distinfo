@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2001/05/30 10:53:07 drochner Exp $
+$NetBSD: distinfo,v 1.5 2002/12/05 15:11:51 jschauma Exp $
 
-SHA1 (MesaLib-3.4.2.tar.bz2) = 1a41b61a29538127dbb0ab2882ac69554a0e9e37
-Size (MesaLib-3.4.2.tar.bz2) = 1380805 bytes
-SHA1 (MesaDemos-3.4.2.tar.bz2) = b291eb70c07ad2e12122e53039bf6d36c061a914
-Size (MesaDemos-3.4.2.tar.bz2) = 854130 bytes
+SHA1 (MesaLib-5.0.tar.bz2) = 098260c89c4109a8823c76a2c4d75cef8484819d
+Size (MesaLib-5.0.tar.bz2) = 1645037 bytes
+SHA1 (MesaDemos-5.0.tar.bz2) = b487c94daa2d19060c40b0ae46869c28c883b6e8
+Size (MesaDemos-5.0.tar.bz2) = 894069 bytes

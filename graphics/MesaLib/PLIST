@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/25 18:38:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/05 15:11:49 jschauma Exp $
 etc/mesa.conf
 include/GL/gl.h
 include/GL/gl_mangle.h
@@ -9,9 +9,14 @@ include/GL/osmesa.h
 include/GL/xmesa.h
 include/GL/xmesa_x.h
 include/GL/xmesa_xf86.h
-lib/libGL.so
-lib/libGL.so.3
-lib/libGL.so.3.4
 lib/libGL.a
 lib/libGL.la
+lib/libGL.so
+lib/libGL.so.5
+lib/libGL.so.5.500
+lib/libOSMesa.a
+lib/libOSMesa.la
+lib/libOSMesa.so
+lib/libOSMesa.so.4
+lib/libOSMesa.so.4.500
 @unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}
