@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/01/02 05:41:56 grant Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/02/02 08:08:04 taya Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -98,6 +98,7 @@ post-extract:
 
 pre-configure:
 	cd ${WRKSRC} && ${AUTOCONF}
+	cd ${WRKSRC}/nsprpub && ${AUTOCONF}
 
 post-build:
 	${ECHO} skin,install,select,classic/1.0 >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
