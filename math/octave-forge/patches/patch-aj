@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.2 2004/10/30 06:56:04 dmcmahill Exp $
+$NetBSD: patch-aj,v 1.1 2004/10/30 06:56:04 dmcmahill Exp $
 
---- Makeconf.base.orig	Thu Sep  9 11:53:24 2004
-+++ Makeconf.base
+--- Makeconf.in.orig	Thu Sep  9 16:04:09 2004
++++ Makeconf.in
 @@ -27,6 +27,8 @@ RANLIB = @RANLIB@
  STRIP = @STRIP@
  LN_S = @LN_S@
