@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2003/08/20 12:23:49 tron Exp $
+# $NetBSD: Makefile,v 1.42 2003/08/26 13:02:15 tron Exp $
 
 DISTNAME=	unzip550
 PKGNAME=	unzip-5.50
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
 		ftp://ftp.fu-berlin.de/pub/unix/tools/archivers/unzip/
 
 PATCH_SITES=		http://security.debian.org/pool/updates/main/u/unzip/
-PATCHFILES=		unzip_5.50-1woody1.diff.gz
+PATCHFILES=		unzip_5.50-1woody2.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tech-pkg@NetBSD.org
