@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/31 21:41:31 cjep Exp $
-bin/armul-arc
-share/arcem/ROM
+@comment $NetBSD: PLIST,v 1.2 2004/12/03 15:15:23 skrll Exp $
+bin/arcem
+@comment share/arcem/dot.arcemrc
 share/arcem/HardImage1
-share/arcem/dot.arcemrc
+share/arcem/ROM
 share/arcem/hexcmos
-share/arcem/hexcmos.2
-share/arcem/README
-share/arcem/README.OrElse
+@comment share/arcem/hexcmos.2
+@comment share/arcem/README
+@comment share/arcem/README.OrElse
 @dirrm share/arcem
