@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.956 2002/04/02 15:58:20 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.957 2002/04/05 11:39:25 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -1528,7 +1528,7 @@ ${WRKDIR}:
 	fi
 .endif # WRKOBJDIR
 
-_EXTRACT_SUFFICES=	.tar.gz .tgz .tar.bz2 .tbz .tar.Z .tar
+_EXTRACT_SUFFICES=	.tar.gz .tgz .tar.bz2 .tbz .tar.Z .tar _tar.gz
 _EXTRACT_SUFFICES+=	.shar.gz .shar.bz2 .shar.Z .shar
 _EXTRACT_SUFFICES+=	.zip
 _EXTRACT_SUFFICES+=	.lha .lzh
