@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.9 2004/01/29 07:14:30 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.10 2004/01/30 10:56:11 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -19,11 +19,13 @@ cache="@_BLNK_WRAP_CACHE@"
 post_cache="@_BLNK_WRAP_POST_CACHE@"
 logic="@_BLNK_WRAP_LOGIC@"
 post_logic="@_BLNK_WRAP_POST_LOGIC@"
+reorderlibs="@_BLNK_REORDERLIBS@"
 
 wrapperlog="${BUILDLINK_WRAPPER_LOG-@_BLNK_WRAP_LOG@}"
 
 updatecache="${BUILDLINK_UPDATE_CACHE-yes}"
 cacheall="${BUILDLINK_CACHE_ALL-no}"
+reorder="${BUILDLINK_REORDER-no}"
 
 cat="@CAT@"
 echo="@ECHO@"
@@ -74,6 +76,14 @@ while $test $# -gt 0 -o -n "$depth"; do
 	#
 	. $buildcmd
 done
+
+# Reorder the libraries so that the library dependencies are correct.
+case $reorder in
+yes)
+	. $reorderlibs
+	;;
+esac
+
 cmd="$cmd $ldflags $libs"
 
 @_BLNK_WRAP_ENV@

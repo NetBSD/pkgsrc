@@ -1,9 +1,10 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.17 2004/01/21 08:04:29 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.18 2004/01/30 10:56:11 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
+reorderlibs="@_BLNK_REORDERLIBS@"
 
 # Mini-language for translating wrapper arguments into their buildlink
 # equivalents:
@@ -17,6 +18,7 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 #	abs-rpath		removes all rpath options that try to add
 #					relative paths
 #	no-rpath		removes "-R*", "-Wl,-R", and "-Wl,-rpath,*"
+#	reorder:l:foo:bar	reorders libs to ensure that "-lfoo"
 #	depot:src:dst		translates "src/<dir>/" into "dst/"
 #	I:src:dst		translates "-Isrc" into "-Idst"
 #	L:src:dst		translates "-Lsrc" into "-Ldst"
@@ -28,6 +30,7 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 #	r:dir			removes "dir" and "dir/*"
 #	S:foo:bar		translates word "foo" into "bar"
 #	s:foo:bar		translates "foo" into "bar"
+#				occurs before "-lbar"
 #
 # Some transformations only make sense in one direction, so if a command
 # is prefixed with either "transform:" or "untransform:", then the
@@ -115,6 +118,33 @@ EOF
 		gen $action _r:-Wl,-rpath,
 		gen $action _r:-Wl,-R
 		gen $action _r:-R
+		;;
+	reorder)
+		case "$action" in
+		transform)
+			shift
+			case $1 in
+			l)
+				@CAT@ >> $reorderlibs << EOF
+		# -l$2 comes before -l$3
+		-l$2)
+			case "\${_libs}" in
+			-l$3" "*|*" "-l$3" "*)
+				_libs="\${_libs%%-l$3 *}-l$2 -l$3 \${_libs#*-lb }"
+				;;
+			-l$3|*" "-l$3)
+				_libs="\${_libs%%-l$3}-l$2 -l$3"
+				;;
+			*)
+				_libs="\${_libs} \$l"
+				;;
+			esac
+			;;
+EOF
+				;;
+			esac
+			;;
+		esac
 		;;
 	depot)
 		case "$action" in
@@ -276,6 +306,16 @@ EOF
 	esac
 }
 
+# Write out header for reorderlibs 
+@CAT@ > $reorderlibs << EOF
+prevlibs=
+while \$test "\$libs" != "\$prevlibs" -a -n "\$libs"; do
+	_libs=
+	for l in \$libs; do
+		case \$l in
+EOF
+
+# Parse arguments
 for arg do
 	case $arg in
 	transform:*)
@@ -290,3 +330,30 @@ for arg do
 		;;
 	esac
 done
+
+# Write out footer for reorderlibs 
+@CAT@ >> $reorderlibs << EOF
+		*)
+			_libs="\${_libs} \$l"
+			;;
+		esac
+		_libs="\${_libs# }"
+		_libs="\${_libs% }"
+	done
+	prevlibs="\$libs"
+	libs="\${_libs}"
+	echo "==> reorderlibs (\$libs) <<==" 1>&2	# !!!
+done
+
+# This section suppress duplicate libraries in sequence.
+_libs=
+for l in \$libs; do
+        case "\${_libs}" in
+        \$l|*" "\$l) ;;
+        *) _libs="\${_libs} \$l" ;;
+        esac
+done
+_libs="\${_libs# }"
+_libs="\${_libs% }"
+libs="\${_libs}"
+EOF
