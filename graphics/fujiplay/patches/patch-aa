@@ -1,15 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2005/03/10 14:07:29 tv Exp $
+$NetBSD: patch-aa,v 1.4 2005/03/20 12:51:34 jmmv Exp $
 
---- fujiplay.c.orig	1999-02-23 04:30:31.000000000 -0500
-+++ fujiplay.c
-@@ -36,5 +36,5 @@
+--- fujiplay.c.orig	1999-02-23 10:30:31.000000000 +0100
++++ fujiplay.c	2005-03-20 13:49:59.000000000 +0100
+@@ -35,7 +35,7 @@
+ #define B115200 EXTB
  #endif
  
 -#define DEFAULT_DEVICE	"/dev/fujifilm"
 +#define DEFAULT_DEVICE	"/dev/tty00"
  #define TMP_PIC_FILE	".dsc_temp"
  
-@@ -633,6 +633,6 @@ void download_picture(int n)
+ struct pict_info {
+@@ -632,8 +632,8 @@
+ 	cmd2(0, 0x02, n, fd);
  	t2 = times(&stms);
  	if (t1==t2) t2++; /* paranoia */
 -	printf("%3d seconds, ", (int)(t2-t1) / CLK_TCK);
@@ -18,7 +21,9 @@ $NetBSD: patch-aa,v 1.3 2005/03/10 14:07:29 tv Exp $
 +	printf("%4d bytes/s\n", (int)(size * CLK_TCK / (int)(t2-t1)));
  	fclose(fd);
  	if (stat(TMP_PIC_FILE, &st) < 0 || st.st_size != size) {
-@@ -760,32 +760,31 @@ again:
+ 		/* Truncated file */
+@@ -759,40 +759,38 @@
+ 	return 1;
  }
  
 -const char *Usage = "\
@@ -49,6 +54,12 @@ $NetBSD: patch-aa,v 1.3 2005/03/10 14:07:29 tv Exp $
 -Files:
 -  DSCxxxxx.JPG	Files to delete or to upload into the camera
 -";
+-
+-const char *Copyright = "\
+-Fujiplay, $Id: patch-aa,v 1.4 2005/03/20 12:51:34 jmmv Exp $
+-Written by Thierry Bousch <bousch@topo.math.u-psud.fr>
+-Public domain. Absolutely no warranty.
+-";
 +const char *Usage = 
 +"Usage: fujiplay [OPTIONS] PICTURES...          (download)\n"
 +"                          charge NUMBER        (recharge the flash)\n"
@@ -76,11 +87,19 @@ $NetBSD: patch-aa,v 1.3 2005/03/10 14:07:29 tv Exp $
 +"  2-10		Pictures between 2 and 10\n"
 +"Files:\n"
 +"  DSCxxxxx.JPG	Files to delete or to upload into the camera\n";
++
++const char *Copyright =
++"Fujiplay, $Id: patch-aa,v 1.4 2005/03/20 12:51:34 jmmv Exp $\n"
++"Written by Thierry Bousch <bousch@topo.math.u-psud.fr>\n"
++"Public domain. Absolutely no warranty.\n";
  
- const char *Copyright = "\
-@@ -985,5 +984,4 @@ set_date_from_arg:
+ static void sigint_handler (int sig)
+ {
+@@ -984,7 +982,6 @@
+ 		  download_range(atoi(arg), atoi(arg), picnums, force);
  	}
  	if (delete_after) {
 -		sync();
  		deleted = 0;
  		for (c = pictures; c > 0; c--)
+ 			if (pinfo[c].transferred)
