@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.22 2005/02/15 07:43:43 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.23 2005/02/16 10:59:03 grant Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -239,8 +239,13 @@ _WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
 .endif
 
 .if !empty(PKGSRC_COMPILER:Micc)
+.  if !empty(CC_VERSION:M8.1)
+_WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-icc81-cc
+_WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+.  else
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-icc-cc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+.  endif
 _WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-icc-cc
 _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-icc-cc
@@ -495,6 +500,12 @@ ${WRAPPER_TMPDIR}/transform-ccc-cc:					\
 
 ${WRAPPER_TMPDIR}/cmd-sink-icc-cc:					\
 		${WRAPPER_SRCDIR}/cmd-sink-icc-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/cmd-sink-icc81-cc:					\
+		${WRAPPER_SRCDIR}/cmd-sink-icc81-cc
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
