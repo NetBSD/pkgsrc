@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/07/16 15:29:22 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2002/10/14 17:48:14 tsarna Exp $
 #
 
 COMMENT=	document format and character code converters
@@ -28,6 +28,7 @@ SUBDIR+=	p5-Text-Iconv
 SUBDIR+=	p5-jcode
 SUBDIR+=	p5-nkf
 SUBDIR+=	psiconv
+SUBDIR+=	py-jpCodecs
 SUBDIR+=	py-koCodecs
 SUBDIR+=	py-zhCodecs
 SUBDIR+=	qkc
