@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/21 07:58:30 martti Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 16:48:44 cjep Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
@@ -26,7 +26,7 @@ pre-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mysqlcc ${PREFIX}/bin/
-	
+
 .include "../../mk/autoconf.mk"
 .include "../../mk/automake.mk"
 .include "../../databases/mysql4-client/buildlink2.mk"

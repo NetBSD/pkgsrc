@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/13 00:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/30 16:53:35 cjep Exp $
 #
 
 DISTNAME=		gtk-theme-switch-2.0.0rc2
@@ -19,6 +19,6 @@ do-install:
 		${PREFIX}/bin/gtk2-theme-switch
 	${INSTALL_MAN} ${WRKSRC}/switch.1 \
 		${PREFIX}/man/man1/gtk2-theme-switch.1
-	
+
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
