@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2003/12/10 04:03:02 taca Exp $
+$NetBSD: distinfo,v 1.44 2003/12/17 16:48:27 taca Exp $
 
 SHA1 (squid-2.5.4/squid-2.5.STABLE4.tar.bz2) = 470a2697625cf6edb83ad6fe59af2e147f557e24
 Size (squid-2.5.4/squid-2.5.STABLE4.tar.bz2) = 1036704 bytes
@@ -38,6 +38,18 @@ SHA1 (squid-2.5.4/squid-2.5.STABLE4-fqdn.patch) = fc0113ebef713234ec9905359a57c1
 Size (squid-2.5.4/squid-2.5.STABLE4-fqdn.patch) = 713 bytes
 SHA1 (squid-2.5.4/squid-2.5.STABLE4-connect_cleanup.patch) = 20eba739b2fd16a6149c942ff9ca54607dd1b547
 Size (squid-2.5.4/squid-2.5.STABLE4-connect_cleanup.patch) = 32516 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-pconn_post.patch) = ded777e72f4c0a96569751b23a0da18f651277e3
+Size (squid-2.5.4/squid-2.5.STABLE4-pconn_post.patch) = 1231 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-ftp_put.patch) = 1fdaeaedee29ca7093441044dc53802cd02423cb
+Size (squid-2.5.4/squid-2.5.STABLE4-ftp_put.patch) = 584 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-pconn-load.patch) = f11a89722d4808dc30c131854a9b7e80d2df95c8
+Size (squid-2.5.4/squid-2.5.STABLE4-pconn-load.patch) = 2397 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-icon_urls.patch) = 3a4e3cfe9f1678c5dd4ed6a1e474bb4da89a2a74
+Size (squid-2.5.4/squid-2.5.STABLE4-icon_urls.patch) = 2399 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-redirector_access.patch) = ffb18533c312f35b8ac1bc2ce615b0bfd6a7f3c8
+Size (squid-2.5.4/squid-2.5.STABLE4-redirector_access.patch) = 3498 bytes
+SHA1 (squid-2.5.4/squid-2.5.STABLE4-pconn-lifo.patch) = 0cb1ea50d42a08c4e852367924ad8cb0f8ee6b6e
+Size (squid-2.5.4/squid-2.5.STABLE4-pconn-lifo.patch) = 1350 bytes
 SHA1 (patch-aa) = 2e0d96f6ccb9d0c42db2da49e76846edad09624f
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
