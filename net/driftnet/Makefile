@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/09 08:29:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/09 11:17:03 cjep Exp $
 #
 
 DISTNAME=	driftnet-0.1.6
@@ -11,6 +11,7 @@ COMMENT=	Real-time image sniffer
 
 ALL_TARGET=	default
 USE_GMAKE=	yes
+USE_BUILDLINK2=	yes
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/driftnet ${PREFIX}/bin
