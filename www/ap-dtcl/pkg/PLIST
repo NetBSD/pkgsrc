@@ -1,23 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2000/08/30 00:22:22 jwise Exp $
-bin/testdtcl
+@comment $NetBSD: PLIST,v 1.4 2000/12/27 23:04:28 jwise Exp $
 lib/httpd/mod_dtcl.so
-libexec/mod_dtcl/dtcl.tcl
-libexec/mod_dtcl/globalscript.tcl
-libexec/mod_dtcl/infodebug.tcl
-libexec/mod_dtcl/testdtcl.tcl
-man/man1/testdtcl.1
-share/doc/mod_dtcl/INSTALL.html
-share/doc/mod_dtcl/TODO.html
-share/doc/mod_dtcl/benchmark.html
-share/doc/mod_dtcl/browse-source.html
-share/doc/mod_dtcl/dtcl-tcl.html
-share/doc/mod_dtcl/readme.hpux.html
-share/doc/mod_dtcl/readme.html
-share/doc/mod_dtcl/table.html
-share/doc/mod_dtcl/use.html
+share/doc/mod_dtcl/asf_logo.gif
+share/doc/mod_dtcl/documentation.html
+share/doc/mod_dtcl/documentation.txt
 share/doc/mod_dtcl/dtcl.gif
+share/doc/mod_dtcl/logoLarge.gif
 share/examples/mod_dtcl/examples.ttml
 share/examples/mod_dtcl/clocks.ttml
-@dirrm libexec/mod_dtcl
+share/examples/mod_dtcl/tcl_include.tcl
+share/examples/mod_dtcl/tests/README
+share/examples/mod_dtcl/tests/dtcl-test.ttml
+share/examples/mod_dtcl/tests/dtcl.test
 @dirrm share/doc/mod_dtcl
+@dirrm share/examples/mod_dtcl/tests
 @dirrm share/examples/mod_dtcl
