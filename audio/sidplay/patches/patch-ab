@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.4 1999/08/22 20:32:34 frueauf Exp $
+
+--- configure.in-orig	Sun Apr 11 20:01:39 1999
++++ configure.in	Sun Aug 22 22:23:47 1999
+@@ -69,7 +69,11 @@
+ 
+ AC_CHECK_PROG(MAKEDEP,makedepend,makedepend,nomakedep)
+ if test "$MAKEDEP" = "nomakedep"; then
+-  AC_MSG_ERROR(No ``makedepend'' found.)
++  AC_CHECK_PROG(MKDEP,mkdep,mkdep,nomkdep)
++  if test "$MKDEP" = "nomkdep"; then
++    AC_MSG_ERROR(No ``makedepend'' or ``mkdep'' found.)
++  fi;
++  MAKEDEP=$MKDEP
+ fi;
+ AC_SUBST(MAKEDEP)
+ 
