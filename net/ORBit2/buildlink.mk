@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/04/27 08:49:40 rh Exp $
+# $NetBSD: buildlink.mk,v 1.4 2002/07/12 15:33:13 wiz Exp $
 #
 # This Makefile fragment is included by packages that use orbit2.
 #
@@ -17,7 +17,7 @@ ORBIT2_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.orbit2?=	ORBit2>=2.3.108nb1
+BUILDLINK_DEPENDS.orbit2?=	ORBit2>=2.4.0
 DEPENDS+=	${BUILDLINK_DEPENDS.orbit2}:../../net/ORBit2
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.orbit2=orbit2
