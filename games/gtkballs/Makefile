@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/10 16:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/01 02:00:14 salo Exp $
 #
 
 DISTNAME=	gtkballs-3.0.1
@@ -13,6 +13,7 @@ COMMENT=	GTK+ clone of "Color Lines"
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_GMAKE=		yes
 CONFIGURE_ARGS+=	--without-included-gettext
 

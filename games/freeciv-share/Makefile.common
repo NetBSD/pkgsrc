@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2002/09/23 10:02:50 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2002/12/01 02:00:13 salo Exp $
 
 DISTNAME=		freeciv-${FC_VERS}
 FC_VERS=		1.12.0
@@ -13,7 +13,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.freeciv.org/
 
 BUILD_USES_MSGFMT=	# defined
+
 USE_BUILDLINK2=		# defined
+USE_PKGLOCALEDIR=	# defined
 GNU_CONFIGURE=		# defined
 
 DISTINFO_FILE=		${.CURDIR}/../../games/freeciv-share/distinfo
