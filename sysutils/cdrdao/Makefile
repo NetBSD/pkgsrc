@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/04 22:23:47 abs Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/16 21:27:36 snj Exp $
 #
 
 DISTNAME=		${PKGNAME}.src
@@ -24,7 +24,7 @@ LDFLAGS+=		-L../paranoia
 #override ARCH to avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=      ARCH=""
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 post-configure:
 	cd ${WRKSRC}/scsilib/RULES ; \
@@ -62,5 +62,5 @@ post-install:
 		${INSTALL_MAN} ${WRKSRC}/contrib/wav2dao/wav2dao.pl \
 			${PREFIX}/share/examples/cdrdao
 
-.include "../../devel/pccts/buildlink2.mk"
+.include "../../devel/pccts/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
