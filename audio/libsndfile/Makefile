@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/23 11:39:27 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/31 14:11:45 wiz Exp $
 #
 
 DISTNAME=	libsndfile-1.0.0
@@ -12,6 +12,6 @@ COMMENT=	library for reading and writing audio files
 USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=	YES
-USE_BUILDLINK_ONLY=YES
+USE_BUILDLINK2=	YES
 
 .include "../../mk/bsd.pkg.mk"
