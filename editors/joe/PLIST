@@ -1,12 +1,37 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:22:55 zuntum Exp $
-bin/joe
+@comment $NetBSD: PLIST,v 1.2 2004/06/03 08:52:23 adam Exp $
 bin/jmacs
+bin/joe
+bin/jpico
 bin/jstar
 bin/rjoe
-bin/jpico
-lib/joerc
-lib/jmacsrc
-lib/jstarrc
-lib/rjoerc
-lib/jpicorc
-man/man1/joe.1.gz
+bin/termidx
+man/man1/joe.1
+share/examples/joe/charmaps/klingon
+share/examples/joe/jmacsrc
+share/examples/joe/joerc
+share/examples/joe/jpicorc
+share/examples/joe/jstarrc
+share/examples/joe/rjoerc
+share/examples/joe/syntax/asm.jsf
+share/examples/joe/syntax/c.jsf
+share/examples/joe/syntax/conf.jsf
+share/examples/joe/syntax/csh.jsf
+share/examples/joe/syntax/diff.jsf
+share/examples/joe/syntax/fortran.jsf
+share/examples/joe/syntax/html.jsf
+share/examples/joe/syntax/java.jsf
+share/examples/joe/syntax/lisp.jsf
+share/examples/joe/syntax/mail.jsf
+share/examples/joe/syntax/mason.jsf
+share/examples/joe/syntax/pascal.jsf
+share/examples/joe/syntax/perl.jsf
+share/examples/joe/syntax/php.jsf
+share/examples/joe/syntax/python.jsf
+share/examples/joe/syntax/sh.jsf
+share/examples/joe/syntax/tcl.jsf
+share/examples/joe/syntax/verilog.jsf
+share/examples/joe/syntax/vhdl.jsf
+share/examples/joe/syntax/xml.jsf
+@dirrm share/examples/joe/syntax
+@dirrm share/examples/joe/charmaps
+@dirrm share/examples/joe
