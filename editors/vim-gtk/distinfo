@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2001/10/04 10:18:11 martti Exp $
-
-SHA1 (vim-6.0.tar.bz2) = 65f3a54e2d04c20b7ffb0ae59741f97021dac49a
-Size (vim-6.0.tar.bz2) = 2776551 bytes
-SHA1 (patch-aa) = 1cae1dd34074204c2d673a5013a2e3b0a11c663b
-SHA1 (patch-zb) = 466456c472aa62785e81724aae4646650330da9c
