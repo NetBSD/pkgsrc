@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.136 2004/05/02 17:30:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.137 2004/05/10 18:12:23 wiz Exp $
 
-DISTNAME=		openssh-3.8p1
-PKGNAME=		openssh-3.8.1
-PKGREVISION=		3
+DISTNAME=		openssh-3.8.1p1
+PKGNAME=		openssh-3.8.1.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -78,12 +77,6 @@ CONFIGURE_ENV+=		LD=${CC:Q}
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "Darwin") || (${OPSYS} == "SunOS")
 .  include "../../security/skey/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
-#
-# NetBSD's skeychallenge() takes 4 args (int: sslen) instead of 3.
-#
-.  if ${OPSYS} == "NetBSD"
-CPPFLAGS+=		-DSKEYCHALLENGE=SKEYCHALLENGE4
-.  endif
 .else
 CONFIGURE_ARGS+=	--without-skey
 .endif
