@@ -1,13 +1,13 @@
-$NetBSD: patch-at,v 1.4 2003/07/28 10:06:50 seb Exp $
+$NetBSD: patch-at,v 1.5 2004/04/17 16:56:10 seb Exp $
 
---- tclpathplan/Makefile.am.orig	2003-06-04 17:12:53.000000000 +0000
-+++ tclpathplan/Makefile.am
-@@ -21,7 +21,7 @@ libtclplan_la_SOURCES = find_ints.c inte
- libtclplan_la_LIBADD = \
- 	$(top_builddir)/tclhandle/libtclhandle.la \
- 	$(top_builddir)/pathplan/libpathplanconvenience.la \
--	$(top_builddir)/tclstubs/libtclstubs.la
-+	${TCL_STUB_LIB_SPEC}
+--- tkspline/demo/Makefile.am.orig	2003-11-08 11:38:11.000000000 +0000
++++ tkspline/demo/Makefile.am
+@@ -2,7 +2,7 @@
  
- all-local: pkgIndex.tcl
+ AUTOMAKE_OPTIONS = 1.4
  
+-demodir = $(datadir)/@PACKAGE@/demo
++demodir = $(prefix)/share/examples/@PACKAGE@
+ if WITH_TK
+ demo_SCRIPTS = spline
+ demo_DATA = spline.README

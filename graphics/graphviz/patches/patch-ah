@@ -1,11 +1,11 @@
-$NetBSD: patch-ah,v 1.4 2003/07/28 10:06:48 seb Exp $
+$NetBSD: patch-ah,v 1.5 2004/04/17 16:56:10 seb Exp $
 
---- tcldgl/Makefile.am.orig	2003-06-04 17:12:53.000000000 +0000
-+++ tcldgl/Makefile.am
-@@ -34,7 +34,7 @@ libtcldgl_la_LIBADD = \
- 	$(top_builddir)/agutil/libagutil.la \
- 	$(top_builddir)/shape/libshape.la \
- 	$(top_builddir)/ns/libns.la \
+--- tcldot/Makefile.am.orig	2004-02-27 13:01:48.000000000 +0000
++++ tcldot/Makefile.am
+@@ -46,7 +46,7 @@ libtcldot_la_LIBADD = \
+ 	$(top_builddir)/cdt/libcdtconvenience.la \
+ 	$(top_builddir)/gd/libgdconvenience.la \
+ 	$(top_builddir)/gdtclft/gdtclft.lo \
 -	$(top_builddir)/tclstubs/libtclstubs.la
 +	${TCL_STUB_LIB_SPEC}
  
