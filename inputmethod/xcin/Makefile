@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/10 16:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/23 03:07:40 jlam Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
@@ -11,32 +11,28 @@ MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://xcin.linux.org.tw/
 COMMENT=	Chinese XIM server
 
-USE_PERL5=	yes
-USE_X11BASE=	yes
-USE_LIBTOOL=	yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/script/ltmain.sh
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_DIR}/lib
-CONFIGURE_ARGS+=	--with-db-inc=${BUILDLINK_DIR}/include/db3
+USE_BUILDLINK2=		yes
+USE_X11BASE=		yes
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-USE_BUILDLINK_ONLY=	yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_PREFIX.db3}/lib
+CONFIGURE_ARGS+=	--with-db-inc=${BUILDLINK_PREFIX.db3}/include/db3
 
 WRKSRC=		${WRKDIR}/xcin
 
 post-extract:
 	${MV} ${WRKSRC}/doc/man ${WRKSRC}
 
-post-configure:
-	# this pkg generates libtool script from configure file
-	cd ${WRKSRC} && script/ltmain.sh
-
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xcin
 	cd ${WRKSRC}/doc; ${PAX} -rw * ${PREFIX}/share/doc/xcin
 
-.include "../../converters/libiconv/buildlink.mk"
-.include "../../databases/db3/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../inputmethod/libtabe/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../databases/db3/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../inputmethod/libtabe/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
