@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.in,v 1.2 2003/06/24 08:06:19 grant Exp $
+#	$NetBSD: Makefile.in,v 1.3 2003/06/30 11:47:27 grant Exp $
 
 srcdir	= @srcdir@
 prefix	= @prefix@
@@ -41,13 +41,12 @@ distclean: clean
 	rm -f Makefile config.cache config.h config.status
 	rm -f configure.lineno config.log
 
+# most systems we are aiming this at don't have the macros to format
+# mandoc pages, so only install the catman versions.
 install:
 	$(INSTALL) $(PROG) $(PREFIX)/sbin
-
-# don't install man pages for now
-#	$(INSTALL) -m 444 $(PROG).1 $(mandirman1)
-#	$(INSTALL) -m 444 $(PROG).cat1 $(mandircat1)/$(PROG).0
-#	$(INSTALL) -m 444 cpio.1 $(mandirman1)
-#	$(INSTALL) -m 444 cpio.cat1 $(mandircat1)/cpio.0
-#	$(INSTALL) -m 444 tar.1 $(mandirman1)
-#	$(INSTALL) -m 444 tar.cat1 $(mandircat1)/tar.0
+	ln -f $(PREFIX)/bin/$(PROG) $(PREFIX)/bin/tar
+	ln -f $(PREFIX)/bin/$(PROG) $(PREFIX)/bin/cpio
+	$(INSTALL) -m 444 $(PROG).cat1 $(mandircat1)/$(PROG).0
+	$(INSTALL) -m 444 cpio.cat1 $(mandircat1)/cpio.0
+	$(INSTALL) -m 444 tar.cat1 $(mandircat1)/tar.0
