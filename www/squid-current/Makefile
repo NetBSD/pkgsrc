@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.7 1999/01/29 19:26:37 bad Exp $
+# $NetBSD: Makefile,v 1.8 1999/02/19 16:08:45 christos Exp $
 #
 
 DISTNAME=	squid-2.1.PATCH2
 CATEGORIES=	www
 MASTER_SITES=  \
-	ftp://squid.nlanr.net/pub/squid-2/ \
-	ftp://ftp.gw.com/pub/unix/squid/squid-2/ \
-	ftp://ftp.funet.fi/pub/mirrors/squid.nlanr.net/pub/squid-2/ \
-	ftp://www.unimelb.edu.au/pub/cwis/servers/unix/squid/squid-2/ \
-	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/ \
-	ftp://ftp.net.lut.ac.uk/squid/squid-2/
+	ftp://squid.nlanr.net/pub/squid-2/STABLE/ \
+	ftp://ftp.gw.com/pub/unix/squid/squid-2/STABLE/ \
+	ftp://ftp.funet.fi/pub/mirrors/squid.nlanr.net/pub/squid-2/STABLE/ \
+	ftp://www.unimelb.edu.au/pub/cwis/servers/unix/squid/squid-2/STABLE/ \
+	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/STABLE/ \
+	ftp://ftp.net.lut.ac.uk/squid/squid-2/STABLE/
 EXTRACT_SUFX=	-src.tar.gz
 
 PATCH_SITES= \
