@@ -1,0 +1,7 @@
+This is the GNOME Virtual File System.
+
+This is still a development version, the APIs are still undergoing
+incompatible changes.
+
+GNOME VFS is currently used as one of the foundations of the Nautilus
+file manager.
