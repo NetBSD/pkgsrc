@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3195 2003/09/02 00:33:16 pooka Exp $
+$NetBSD: CHANGES,v 1.3196 2003/09/02 06:16:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3458,3 +3458,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nethack-tty to 3.4.2 [pooka 2003-09-02]
 	Updated nethack-x11 to 3.4.2 [pooka 2003-09-02]
 	Updated nethack-qt to 3.4.2 [pooka 2003-09-02]
+	Updated ruby-rd-mode to 0.6.13 [taca 2003-09-02]
