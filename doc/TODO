@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1856 2004/06/23 14:45:28 snj Exp $
+$NetBSD: TODO,v 1.1857 2004/06/23 16:25:29 snj Exp $
 
 Suggested new packages
 ======================
@@ -179,7 +179,6 @@ Suggested package updates
 	o bk_edit-0.6.23
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
-	o bomberclone-0.11.3
 	o boson-0.10
 	o capc-calc-2.11.9.3
 	o centericq-4.9.12
@@ -227,7 +226,6 @@ Suggested package updates
 	o firefox-bin-0.9 (+ gtk2, etc..) [grant]
 	o firewalk-5.0
 	o firewalk-gtk-5.0
-	o flawfinder-1.26
 	o foomatic-2.9.1 [jlam]
 	o fop-0.20.5
 	o fox-1.2.4
@@ -254,7 +252,6 @@ Suggested package updates
 	o gogo-3.11p1
 	o gqmpeg-0.91.1
 	o grace-5.1.15
-	o grepmail-5.30
 	o grhino-0.12.0
 	o groff-1.19.1
 	o gsasl-0.1.0
