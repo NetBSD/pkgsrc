@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/10/05 10:28:42 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2003/10/16 04:23:29 kim Exp $
 
 DISTNAME=	libxslt-1.0.33
 PKGNAME=	${DISTNAME}
@@ -15,6 +15,7 @@ USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libxslt.pc.in
+PTHREAD_OPTS+=		require
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}
@@ -25,4 +26,5 @@ TEST_TARGET=		check
 
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
