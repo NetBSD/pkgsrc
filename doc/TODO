@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.999 2003/11/05 14:37:36 wiz Exp $
+$NetBSD: TODO,v 1.1000 2003/11/05 22:03:59 markd Exp $
 
 Suggested new packages
 ======================
@@ -120,7 +120,7 @@ Suggested package updates
 	o MozillaFirebird-0.7
 	o MozillaFirebird-bin-0.7 [grant]
 	o Ngraph-6.3.20 [pkg/22800]
-	o R-1.8.0
+	o R-1.8.0 [markd]
 	o SDL_gfx-2.0.9
 	o TeXmacs-1.0.2.6
 	o Xaw3d-1.5E
@@ -232,6 +232,7 @@ Suggested package updates
 	o jwhois-3.2.2 [pkg/22741]
 	o kaffe-1.1.2
 	o kbiff-3.7
+	o kile-1.6 [markd]
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.45
@@ -262,7 +263,7 @@ Suggested package updates
 	o memtest86-3.0
 	o micq-0.4.10.5
 	o midnight-commander-4.6.0
-	o mimedefang-2.38
+	o mimedefang-2.38 [markd]
 	o minicom-2.1
 	o mowitz-0.3.0
 	o mozilla-1.5
