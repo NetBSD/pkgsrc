@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/09/28 09:13:57 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/24 13:51:14 grant Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
@@ -12,7 +12,7 @@ COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 NO_MTREE=		YES
 
 USE_LIBTOOL=		YES
