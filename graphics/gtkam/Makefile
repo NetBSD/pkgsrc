@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2004/10/03 00:14:52 tv Exp $
+# $NetBSD: Makefile,v 1.24 2004/10/27 20:03:45 drochner Exp $
 #
 
-DISTNAME=	gtkam-0.1.11
-PKGREVISION=	1
+DISTNAME=	gtkam-0.1.12
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 
@@ -19,6 +18,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-bonobo
 CONFIGURE_ARGS+=	--without-bonobo-activation
 CONFIGURE_ARGS+=	--without-gnome
+CONFIGURE_ARGS+=	--without-gimp
 
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/libexif-gtk/buildlink3.mk"
