@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/24 11:25:16 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2004/06/03 12:37:40 uebayasi Exp $
 
 DISTNAME=	nkf204
 PKGNAME=	nkf-2.04
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.jazzdisco.org/bsdi/software/nkf/
 COMMENT=	Convert between various Japanese character encodings
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+INSTALLATION_DIRS=	bin man/man1
 
 ALL_TARGET=	nkf
 
