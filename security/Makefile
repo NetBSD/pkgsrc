@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2001/06/05 10:30:39 agc Exp $
+# $NetBSD: Makefile,v 1.79 2001/06/24 05:52:03 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -79,5 +79,6 @@ SUBDIR+=	tripwire
 SUBDIR+=	uvscan
 SUBDIR+=	uvscan-dat
 SUBDIR+=	xdm-krb4
+SUBDIR+=	zebedee
 
 .include "../mk/bsd.pkg.subdir.mk"
