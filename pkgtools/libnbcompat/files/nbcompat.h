@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.17 2003/09/06 06:13:48 jlam Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.18 2003/09/06 12:45:48 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -339,7 +339,7 @@ void	 tputs(const char *, int, int (*)(int));
 #endif
 
 #if HAVE_NBCOMPAT_VIS
-# ifdef HAVE_VIS_H
+# if HAVE_VIS_H
 #  undef HAVE_VIS_H
 # endif
 #endif
@@ -508,6 +508,9 @@ int gid_from_group(const char *, gid_t *);
 #endif
 
 #if HAVE_NBCOMPAT_STATFS
+# if HAVE_SYS_STATFS_H
+#  undef HAVE_SYS_STATFS_H
+# endif
 # include <nbcompat/statfs.h>
 #endif
 
