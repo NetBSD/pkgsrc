@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/04/23 04:19:25 mycroft Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/26 18:56:15 garbled Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.13
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	tex:../../print/teTeX
 BUILD_DEPENDS+=	dvips:../../print/teTeX
 DEPENDS+=	gnuplot-3.7:../../graphics/gnuplot
 
+USE_X11=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_GMAKE=		yes
