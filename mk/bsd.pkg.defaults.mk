@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.221 2004/03/06 12:06:55 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.222 2004/03/06 13:45:37 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1393,6 +1393,7 @@ MAJORDOMO_USER?= majordom
 
 MOZILLA_USE_XFT?=	NO
 # Used by mozilla packages to enable Xft support where available.
+# The mozilla-gtk2 package sets this value to YES unconditionally.
 # Possible: YES, NO
 # Default: NO
 
