@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:26 zuntum Exp $
-${RUBY_SITELIBDIR}/racc/parser.rb
-${RUBY_SITEARCHLIBDIR}/racc/cparse.so
-@dirrm ${RUBY_SITELIBDIR}/racc
-@dirrm ${RUBY_SITEARCHLIBDIR}/racc
