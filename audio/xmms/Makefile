@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/06/29 04:25:43 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/08/23 14:16:25 jlam Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.2.5
@@ -23,8 +23,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == NetBSD)
-CONFIGURE_ARGS+=--with-dev-dsp=/dev/sound
-CPPFLAGS+=	-I${WRKDIR} -DHAVE_NANOSLEEP=1
+CONFIGURE_ARGS+=	--with-dev-dsp=/dev/sound
+CPPFLAGS+=		-DHAVE_NANOSLEEP=1
 
 .if (${MACHINE_ARCH} == i386)
 post-patch:
@@ -35,10 +35,6 @@ post-patch:
 	${MV} decode_i586.s decode_i586.s.orig && \
 	${SED} -e 's@^/@#/@g' <decode_i586.s.orig >decode_i586.s
 .endif
-
-pre-configure:
-	${MKDIR} ${WRKDIR}/sys
-	${LN} -fs /usr/include/soundcard.h ${WRKDIR}/sys/soundcard.h
 .endif
 
 .include "../../audio/esound/buildlink.mk"
@@ -47,4 +43,5 @@ pre-configure:
 .include "../../graphics/Mesa/buildlink.mk"
 .include "../../textproc/libxml/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
