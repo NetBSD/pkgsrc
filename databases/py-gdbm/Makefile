@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:44 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/06 20:57:20 frueauf Exp $
 #
 
 DISTNAME=	pyth151
@@ -6,6 +6,7 @@ PKGNAME=	py-gdbm-1.5.1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
+DIST_SUBDIR=	python
 
 MAINTAINER=	dolecek@ics.muni.cz
 HOMEPAGE=	http://www.python.org/doc/lib/module-gdbm.html
