@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.44 2002/03/18 17:11:04 fredb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.45 2002/03/22 09:01:14 martti Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1025,6 +1025,11 @@ PILRC_USE_GTK?=	YES
 
 #POSTFIX_USE_INET6=YES
 # Add support for IPv6.
+# Possible: YES, not defined
+# Default: not defined
+
+#POSTFIX_USE_MYSQL=YES
+# Add support for MySQL maps.
 # Possible: YES, not defined
 # Default: not defined
 
