@@ -1,13 +1,15 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/06/12 20:22:53 kleink Exp $
+$NetBSD: patch-ad,v 1.2 2000/08/31 07:26:24 kleink Exp $
 
---- curses/Makefile.in.orig	Tue Apr 21 05:21:47 1998
-+++ curses/Makefile.in	Tue Jun  8 22:33:16 1999
-@@ -29,7 +29,7 @@
- SHELL = /bin/sh
+--- doc/xcdesign.texi.orig	Thu Jun  8 14:28:31 2000
++++ doc/xcdesign.texi	Wed Aug 30 21:59:48 2000
+@@ -8,6 +8,10 @@
+ @setchapternewpage odd
  
- INSTALL = install -c
--INSTALL_PROGRAM = $(INSTALL)
-+INSTALL_PROGRAM = $(INSTALL) -s
- INSTALL_DATA = $(INSTALL)
+ @ifinfo
++@dircategory Games
++@direntry
++* Xcdesign: (xcdesign.info).	Designing Games with Xconq.
++@end direntry
+ This file documents the design of games for @i{Xconq}.
  
- CC = cc
+ Copyright (C) 1987-1989, 1991-2000 Stanley T. Shebs
