@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.2 2003/12/14 04:13:01 grant Exp $
+$NetBSD: MESSAGE.compat_linux,v 1.1 2003/12/17 03:10:42 grant Exp $
 
 	Mozilla Firebird requires your kernel to include 'COMPAT_LINUX'
 	(plus in NetBSD systems before 1.5 'EXEC_ELF32').
