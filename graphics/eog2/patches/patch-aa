@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2003/02/14 21:11:26 jmmv Exp $
+
+--- Makefile.in.orig	2003-01-28 09:35:03.000000000 +0100
++++ Makefile.in
+@@ -133,7 +133,7 @@ Graphics_DATA = $(Graphics_in_files:.des
+ Gladedir = $(datadir)/eog/glade
+ Glade_DATA = eog.glade
+ 
+-schemasdir = $(sysconfdir)/gconf/schemas
++schemasdir = $(datadir)/gconf/schemas
+ schemas_in_files = eog.schemas.in
+ schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
+ 
+@@ -512,7 +512,6 @@ mostlyclean distclean maintainer-clean
+ @INTLTOOL_SCHEMAS_RULE@
+ 
+ install-data-local:
+-	GCONF_CONFIG_SOURCE=$(GCONF_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_builddir)/eog.schemas
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
