@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 13:15:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/18 15:20:01 veego Exp $
 #
 
 DISTNAME=       tar-1.12
 PKGNAME=	gtar-info-1.12
+SVR4_PKGNAME=	gtari
 CATEGORIES=	archivers
 MASTER_SITES=   ${MASTER_SITE_GNU:=tar/}
 EXTRACT_SUFX=	.shar.gz

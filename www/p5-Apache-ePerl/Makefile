@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:22:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/10/18 15:20:47 veego Exp $
 #
 
 DISTNAME=		eperl-2.2.14
 PKGNAME=		p5-Apache-ePerl-2.2.14
+SVR4_PKGNAME=		p5aep
 CATEGORIES=		perl5 textproc www
 MASTER_SITES=		http://www.engelschall.com/sw/eperl/distrib/
 

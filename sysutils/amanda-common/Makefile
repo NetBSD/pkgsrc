@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2001/06/26 03:15:16 christos Exp $
+# $NetBSD: Makefile,v 1.18 2001/10/18 15:20:39 veego Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
 DISTNAME=		amanda-2.4.2p2
 PKGNAME=		amanda-common-2.4.2p2
+SVR4_PKGNAME=		amaco
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 

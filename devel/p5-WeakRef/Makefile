@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2001/06/10 05:41:25 explorer Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:20 veego Exp $
 
 DISTNAME=	WeakRef-0.01
 PKGNAME=	p5-${DISTNAME}
+SVR4_PKGNAME=	p5wre
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/LUKKA/}
 

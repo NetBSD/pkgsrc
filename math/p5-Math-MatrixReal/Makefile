@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 23:18:11 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:28 veego Exp $
 
 DISTNAME=	Math-MatrixReal-1.3a5
 PKGNAME=	p5-${DISTNAME}
+SVR4_PKGNAME=	p5mmr
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 

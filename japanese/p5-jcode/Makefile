@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:31 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/10/18 15:20:24 veego Exp $
 # FreeBSD Id: Makefile,v 1.2 1999/01/17 10:56:40 vanilla Exp $
 
 DISTNAME=	jcode.pl-2.13
 PKGNAME=	p5-jcode-2.13
+SVR4_PKGNAME=	p5jc2
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/ \
 		ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/

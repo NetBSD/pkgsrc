@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 13:15:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/10/18 15:20:02 veego Exp $
 
 DISTNAME=	gzip-1.2.4a
 PKGNAME=	gzip-info-1.2.4a
+SVR4_PKGNAME=	gzipi
 CATEGORIES=	archivers
 MASTER_SITES=   ${MASTER_SITE_GNU:=gzip/}
 EXTRACT_SUFX=	.shar

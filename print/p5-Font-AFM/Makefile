@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/10/18 15:20:33 veego Exp $
 
 DISTNAME=		Font-AFM-1.18
 PKGNAME=		p5-${DISTNAME}
+SVR4_PKGNAME=		p5fon
 CATEGORIES=		print perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Font/}
 
