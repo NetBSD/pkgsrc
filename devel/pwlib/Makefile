@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/10/08 22:09:55 mjl Exp $
+# $NetBSD: Makefile,v 1.32 2004/10/08 22:49:56 mjl Exp $
 #
 
 DISTNAME=		pwlib_1.5.2
@@ -48,9 +48,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptclib
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptlib/unix/ptlib
 	${INSTALL_DATA} ${WRKSRC}/version.h ${PREFIX}/include/ptlib
-	cd ${WRKSRC}/include;						\
-	for f in `${FIND} . -name CVS -prune -o -type f -print | ${GREP} -v 'ptbuildopts'`; do	\
-		${INSTALL_DATA} $$f ${PREFIX}/include/`${DIRNAME} $$f`;	\
+	cd ${WRKSRC};						\
+	for f in `${FIND} include -name CVS -prune -o -type f -print`; do	\
+		${INSTALL_DATA} $$f ${PREFIX}/$$f;	\
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pwlib/make
 	cd ${WRKSRC}/make;						\
