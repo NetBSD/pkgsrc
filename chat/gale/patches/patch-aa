@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2001/02/28 10:26:02 wiz Exp $
 --- lib/term.c.orig	Wed Feb  7 10:32:09 2001
 +++ lib/term.c	Wed Feb  7 10:32:43 2001
 @@ -10,9 +10,11 @@
