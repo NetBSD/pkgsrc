@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/03 02:01:42 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/25 20:09:50 wiz Exp $
 bin/svn
 bin/svn-config
 bin/svnadmin
@@ -15,8 +15,11 @@ include/subversion-1/svn_error_codes.h
 include/subversion-1/svn_fs.h
 include/subversion-1/svn_hash.h
 include/subversion-1/svn_io.h
+include/subversion-1/svn_opt.h
 include/subversion-1/svn_path.h
+include/subversion-1/svn_pipe.h
 include/subversion-1/svn_pools.h
+include/subversion-1/svn_props.h
 include/subversion-1/svn_quoprint.h
 include/subversion-1/svn_ra.h
 include/subversion-1/svn_repos.h
@@ -30,13 +33,10 @@ include/subversion-1/svn_version.h
 include/subversion-1/svn_wc.h
 include/subversion-1/svn_xml.h
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/svn-design.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/svn-handbook.info
 info/svn-design.info
 info/svn-design.info-1
 info/svn-design.info-2
 info/svn-design.info-3
-info/svn-handbook.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/svn-handbook.info
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/svn-design.info
 lib/libsvn_auth-1.a
 lib/libsvn_auth-1.la
