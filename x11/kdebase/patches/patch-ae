@@ -1,33 +1,28 @@
---- kvt/command.c.orig	Tue Dec 30 23:47:02 1997
-+++ kvt/command.c	Tue Dec 30 23:47:37 1997
-@@ -169,10 +169,12 @@
-  */
- static struct termios ttmode;
- #ifndef __FreeBSD__
-+#ifndef __NetBSD__
- #ifndef CINTR
- #ifndef _POSIX_VDISABLE
- #define _POSIX_VDISABLE 0
- #endif
-+#endif
+--- kvt/command.c.orig	Tue Mar 24 01:42:51 1998
++++ kvt/command.c	Wed Mar 25 11:06:38 1998
+@@ -160,8 +160,6 @@
+ extern int console;
  
- #undef CTRL
- #define CTRL(c) ((c) - '@')
-@@ -404,7 +406,7 @@
-       }
+ KeySym SecureKeysym = XK_s;
+-KeySym BigFontKeysym = XK_greater;
+-KeySym SmallFontKeysym = XK_less;
+ KeySym PageUpKeysym = XK_Prior;
+ KeySym PageDownKeysym = XK_Next;
+ #ifdef GREEK_KBD
+@@ -630,16 +628,6 @@
+       count = 0;
+     }
  
-       /* init of termios structure		*/
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
-       ioctl(0,TIOCGETA,(char *)&ttmode);
- #else
- #   ifdef _HPUX_SOURCE
-@@ -472,7 +474,7 @@
+-  else if((keysym == BigFontKeysym)&&((ev->xkey.state &Mod1Mask) == Mod1Mask))
+-    {
+-/*       NewFont(BIGGER); */
+-      count = 0;
+-    }
+-  else if((keysym==SmallFontKeysym)&&((ev->xkey.state &Mod1Mask) == Mod1Mask))
+-    {
+-/*       NewFont(SMALLER); */
+-      count = 0;
+-    }
+   else
  
-       if(mask == 0x7f)
- 	ttmode.c_cflag = B9600 | PARENB | CS7 | CREAD;
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
-       ioctl(0,TIOCSETA,(char *)&ttmode);
- #else
- #   ifdef _HPUX_SOURCE
+   if((keysym == PageUpKeysym)&&((ev->xkey.state &Mod1Mask) == Mod1Mask))
