@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1353 2004/01/23 17:04:55 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1354 2004/01/23 17:55:17 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -169,28 +169,6 @@ PLIST_SUBST+=          IMAKE_MAN_SOURCE_PATH=${IMAKE_MAN_SOURCE_PATH}  \
 USE_X11?=		implied
 .endif
 
-# If xpkgwedge.def is found, then we need to require xpkgwedge as
-# a build dependency for X11 packages.
-#
-.if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) ||		\
-    exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
-USE_XPKGWEDGE=	yes
-.else
-USE_XPKGWEDGE?=	no
-.endif
-
-.if defined(_OPSYS_NEEDS_XPKGWEDGE) &&					\
-    !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
-USE_XPKGWEDGE=	yes
-.endif
-
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-USE_XPKGWEDGE=		yes
-_XPKGWEDGE_REQD=	1.9
-.else
-_XPKGWEDGE_REQD=	1.5
-.endif
-
 # Set the PREFIX appropriately.
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
 .  if defined(USE_X11BASE)
@@ -206,6 +184,9 @@ PREFIX=			${DEPOTBASE}/${PKGNAME}
 NO_MTREE=		yes
 .endif
 
+# If USE_XPKGWEDGE is set, then add a build dependency on xpkgwedge for
+# X11 packages.
+#
 .if defined(USE_X11BASE)
 .  if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
 BUILD_DEPENDS+=		xpkgwedge>=${_XPKGWEDGE_REQD}:../../pkgtools/xpkgwedge
