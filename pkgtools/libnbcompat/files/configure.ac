@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.42 2004/04/20 12:13:05 grant Exp $
+dnl $NetBSD: configure.ac,v 1.43 2004/04/23 11:42:46 grant Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -194,15 +194,11 @@ if test $ac_cv_header_poll_h = no && test $ac_cv_header_sys_poll_h = no; then
 fi
 
 if test $pkg_use_nbcompat_poll = yes; then
-	AC_DEFINE(HAVE_NBCOMPAT_POLL, 1)
-	AH_TEMPLATE([HAVE_NBCOMPAT_POLL], [
-		Define to 1 if the `poll' function is built into the library.
-	])
-	AC_LIBOBJ(poll)
+	pkg_cv_POLL_NATIVE=no
 else
 	AC_CHECK_FUNC(poll, [
         	AC_MSG_TRY_COMPILE([if poll() is implemented natively],
-                pkg_cv_POLL_COMPAT,
+                pkg_cv_POLL_NATIVE,
 		[ #if HAVE_POLL_H
 		  #include <poll.h>
 		  #endif
@@ -214,8 +210,21 @@ else
 		  #error "poll() is emulated"
 	 	  #endif
 		],
-                [:], [AC_LIBOBJ(poll)])
-])
+                [:], [:])
+	])
+fi
+
+if test $pkg_cv_POLL_NATIVE = yes; then
+	AC_DEFINE(HAVE_POLL, 1)
+	AH_TEMPLATE([HAVE_POLL], [
+		Define to 1 if you have the `poll' function.
+	])
+else
+	AC_LIBOBJ(poll)
+	AC_DEFINE(HAVE_NBCOMPAT_POLL, 1)
+	AH_TEMPLATE([HAVE_NBCOMPAT_POLL], [
+		Define to 1 if the `poll' function is built into the library.
+	])
 fi
 
 AC_CHECK_FUNCS([strunvis strvis strsvis])
