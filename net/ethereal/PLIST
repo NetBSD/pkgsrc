@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.10 2003/09/16 21:01:08 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/11/04 12:49:25 adam Exp $
 bin/editcap
 bin/ethereal
 bin/idl2eth
 bin/mergecap
 bin/tethereal
 bin/text2pcap
+lib/ethereal/plugins/${PKGVERSION}/acn.la
+lib/ethereal/plugins/${PKGVERSION}/acn.so
+lib/ethereal/plugins/${PKGVERSION}/asn1.la
+lib/ethereal/plugins/${PKGVERSION}/asn1.so
 lib/ethereal/plugins/${PKGVERSION}/artnet.la
 lib/ethereal/plugins/${PKGVERSION}/artnet.so
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.la
@@ -31,6 +35,7 @@ man/man1/idl2eth.1
 man/man1/mergecap.1
 man/man1/tethereal.1
 man/man1/text2pcap.1
+man/man4/ethereal-filter.4
 share/ethereal/diameter/dictionary.dtd
 share/ethereal/diameter/dictionary.xml
 share/ethereal/diameter/mobileipv4.xml
