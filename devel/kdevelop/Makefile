@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2004/12/10 06:31:25 markd Exp $
+# $NetBSD: Makefile,v 1.49 2005/03/23 22:40:17 markd Exp $
 
-DISTNAME=	kdevelop-3.1.2
+DISTNAME=	kdevelop-3.2.0
 CATEGORIES=	devel kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
