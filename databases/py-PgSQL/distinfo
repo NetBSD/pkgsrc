@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/09/09 13:46:24 recht Exp $
+$NetBSD: distinfo,v 1.2 2004/01/17 13:16:06 recht Exp $
 
 SHA1 (pyPgSQL-2.4.tar.gz) = 478135830e0bf4fc9496452ee3b88de4c218488f
 Size (pyPgSQL-2.4.tar.gz) = 152139 bytes
 SHA1 (patch-aa) = f8db2a753eb76bece779936fae69be60794c0327
+SHA1 (patch-ab) = 3d387e7d20db3024a0761570f1bbbeeb3fc8f674
