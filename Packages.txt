@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.36 1998/06/18 15:12:22 agc Exp $
+# $NetBSD: Packages.txt,v 1.37 1998/07/03 06:51:37 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -521,12 +521,14 @@ of when dealing with the PLIST file (or files, see below!).
    platforms NetBSD runs on, e.g. alpha. For this, change the ldconfig call
    to "ldconfig || /usr/bin/true".
 
- * ${MACHINE_ARCH}:
+ * ${MACHINE_ARCH}, ${MACHINE_GNU_ARCH}:
    Some packages like emacs and perl embed information about which
    architecture they were built on into the pathnames where they install
    their file. To handle this case, PLIST will be preprocessed before
    actually used, and the symbol "${MACHINE_ARCH}" will be replaced by
-   what "sysctl -n hw.machine_arch" gives. 
+   what "sysctl -n hw.machine_arch" gives. The same is done if the string
+   ${MACHINE_GNU_ARCH} is embedded in PLIST somewhere - use this on
+   packages that use GNU autoconfigure.
 
    Legacy note: There used to be a symbol "<$ARCH>" that was replaced by
    the output of "uname -m", but that's no longer supported and will be
