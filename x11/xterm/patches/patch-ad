@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2004/10/16 21:47:37 minskim Exp $
+
+--- main.c.orig	Sun Aug 15 16:07:59 2004
++++ main.c
+@@ -283,6 +283,10 @@ ttyslot()
+ 
+ #else
+ 
++#ifndef HAVE_SETPGRP
++#define setpgrp setpgid
++#endif
++
+ #ifndef linux
+ #ifndef VMS
+ #ifndef USE_POSIX_TERMIOS
