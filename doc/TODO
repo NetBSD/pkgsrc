@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.355 2003/03/09 18:12:42 wiz Exp $
+$NetBSD: TODO,v 1.356 2003/03/10 09:45:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -255,7 +255,7 @@ Suggested package updates
 	o vttest-20030301
 	o webalizer-2.01-10 [pkg/20445]
 	o wwwoffle-2.7h
-	o wxGTK-2.4.0
+	o wxGTK-2.4.0 [pkg/20640]
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
 	o xerces-c-2.1.0 [heinz]
