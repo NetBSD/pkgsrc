@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/20 13:41:06 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/01/22 09:16:59 jmmv Exp $
 bin/gdm
 bin/gdm-binary
 bin/gdmXnest
@@ -158,14 +158,5 @@ share/xsessions/gnome.desktop
 @dirrm share/examples/dm/Sessions
 @dirrm share/examples/dm
 @dirrm share/doc/gdm
-@comment @dirrm share/doc
-@comment @dirrm share/applications
-@comment @dirrm lib/gtk-2.0/modules
-@unexec ${RM} -rf ${LOCALSTATEDIR}/gdm
-@comment unexec ${RMDIR} ${PKG_SYSCONFDIR}/gdm/modules 2>/dev/null || ${TRUE}
-@comment unexec ${RMDIR} ${PKG_SYSCONFDIR}/gdm/PreSession 2>/dev/null || ${TRUE}
-@comment unexec ${RMDIR} ${PKG_SYSCONFDIR}/gdm/PostSession 2>/dev/null || ${TRUE}
-@comment unexec ${RMDIR} ${PKG_SYSCONFDIR}/gdm/Init 2>/dev/null || ${TRUE}
-@comment unexec ${RMDIR} ${PKG_SYSCONFDIR}/gdm 2>/dev/null || ${TRUE}
-@comment unexec ${RMDIR} ${PKG_SYSCONFDIR}/dm/Session 2>/dev/null || ${TRUE}
-@comment unexec ${RMDIR} ${PKG_SYSCONFDIR}/dm 2>/dev/null || ${TRUE}
+@comment in gnome2-dirs: @dirrm share/applications
+@comment in gtk2: @dirrm lib/gtk-2.0/modules
