@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/10/12 19:07:06 skrll Exp $
+# $NetBSD: Makefile,v 1.22 2000/10/14 16:11:35 hubertf Exp $
 #
 
 DISTNAME=	libtool-1.3.5
@@ -11,6 +11,13 @@ HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
 
 CONFLICTS=	glibtool-*
 GNU_CONFIGURE=	yes
+
+# It seems the info-files distributed with libtool 1.3.5 are broken.
+# To test, type "info libtool|" and hold down space. See it stop with a
+# ``Cannot find the node "(/usr/pkg/info/libtool.info)Linking executables"''
+# error. Simply making sure the info-files get re-done works here.
+post-extract:
+	rm -f ${WRKSRC}/doc/libtool.info*
 
 test check: build
 	cd ${WRKSRC} && ${MAKE} check
