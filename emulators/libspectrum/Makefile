@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2003/10/14 10:10:46 salo Exp $
+# $NetBSD: Makefile,v 1.5 2003/10/14 10:12:02 salo Exp $
+#
 
 DISTNAME=	libspectrum-0.2.0.1
 CATEGORIES=	emulators
@@ -9,12 +10,13 @@ HOMEPAGE=	http://www.srcf.ucam.org/~pak21/spectrum/libspectrum.html
 COMMENT=	ZX Spectrum emulator file format library
 
 USE_PERL5=	build
-USE_BUILDLINK2=	yes
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
-LIBTOOL_OVERRIDE=${WRKSRC}/libtool
+USE_BUILDLINK2=	YES
+USE_LIBTOOL=	YES
+GNU_CONFIGURE=	YES
 
-CONFIGURE_ENV+=	PERL=${PERL5}
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ENV+=		PERL=${PERL5}
 
 DOCDIR=		${PREFIX}/share/doc/libspectrum
 
@@ -24,4 +26,5 @@ post-install:
 
 .include "../../devel/glib/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
