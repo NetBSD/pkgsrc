@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7569 2004/10/25 21:43:20 minskim Exp $
+$NetBSD: CHANGES,v 1.7570 2004/10/26 01:28:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4861,7 +4861,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated liferea to 0.6.0 [minskim 2004-10-25]
 	Updated drivel to 1.2.2nb1 [jmmv 2004-10-25]
 	Updated samba2 to 2.2.12 [jdolecek 2004-10-25]
-	Updated winbond to 2.2.12 [jdolecek 2004-10-25]
+	Updated winbind to 2.2.12 [jdolecek 2004-10-25]
 	Updated pam-smbpass to 2.2.12 [jdolecek 2004-10-25]
 	Updated postgresql74 to 7.4.6 [jdolecek 2004-10-25]
 	Updated socat to 1.4.0.3 [adrianp 2004-10-25]
@@ -4869,4 +4869,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla to 1.7.3nb1 [jmmv 2004-10-25]
 	Updated mozilla-gtk2 to 1.7.3nb1 [jmmv 2004-10-25]
 	Added gthumb-2.6.0.1 [minskim 2004-10-25]
-	updated lcms to 1.13 [minskim 2004-10-25]
+	Updated lcms to 1.13 [minskim 2004-10-25]
