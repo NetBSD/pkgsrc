@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/15 21:57:42 jlam Exp $
+
+--- pint-gtk/pkey-gtk.c.orig	Mon Jan  3 00:51:41 2000
++++ pint-gtk/pkey-gtk.c	Sat Jan 15 16:18:13 2000
+@@ -133,7 +133,9 @@
+             if(*p == '\n') *p = '\0';
+             else p++;
+          }
+-         if(!(peq = p_config_break(buf, '='))) {
++	 if(*buf == '#') {
++	    continue;
++         } else if (!(peq = p_config_break(buf, '='))) {
+             printf("key_load:  Invalid line found, \"%s\"\n", buf);
+          } else {
+             if(!(pcol = p_config_break(buf, ':'))) {
