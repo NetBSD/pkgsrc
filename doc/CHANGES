@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7384 2004/10/09 20:49:36 mjl Exp $
+$NetBSD: CHANGES,v 1.7385 2004/10/10 03:16:08 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4594,3 +4594,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openh323 to 1.15.1 [mjl 2004-10-09]
 	Updated phppgadmin to 3.4.1 [jdolecek 2004-10-09]
 	Added gnugk-2.0.8 [mjl 2004-10-09]
+	Added strace-4.5.7 [reed 2004-10-10]
