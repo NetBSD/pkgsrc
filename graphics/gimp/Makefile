@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1998/11/07 17:21:29 mycroft Exp $
+# $NetBSD: Makefile,v 1.27 1998/11/07 17:29:54 mycroft Exp $
 
 DISTNAME=	gimp-1.0.2
 CATEGORIES=	graphics
@@ -12,6 +12,7 @@ NOT_FOR_ARCHS=	alpha	#illegal instruction, core dumped.
 MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 HOMEPAGE=	http://www.gimp.org/
 
+BUILD_DEPENDS=	emacs:../../editors/emacs
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	gtk+-1.0.6:../../x11/gtk10
 DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
@@ -28,8 +29,7 @@ IS_INTERACTIVE=	yes
 .endif
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
-		CPPFLAGS="-I${LOCALBASE}/include"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include"
 CFLAGS=		-pipe -O2 -I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 
