@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/04/23 01:34:06 markd Exp $
+$NetBSD: distinfo,v 1.2 2002/09/09 01:19:35 markd Exp $
 
-SHA1 (R/foreign_0.4-9.tar.gz) = d96663d9c0d5de9ce03139cc8758ead26b9d208c
-Size (R/foreign_0.4-9.tar.gz) = 178983 bytes
+SHA1 (R/foreign_0.5-5.tar.gz) = e03ca6fb0b7621fe175f8d1c02e5eddd3cbfdc66
+Size (R/foreign_0.5-5.tar.gz) = 184549 bytes

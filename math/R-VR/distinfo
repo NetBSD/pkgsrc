@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/04/23 01:29:20 markd Exp $
+$NetBSD: distinfo,v 1.2 2002/09/09 01:19:33 markd Exp $
 
-SHA1 (R/VR_6.3-2.tar.gz) = 8d4920b039d7fb54b49595cf00958cbf826826cb
-Size (R/VR_6.3-2.tar.gz) = 418054 bytes
+SHA1 (R/VR_7.0-3.tar.gz) = 424070048aa3ea463d8f6040732a16685e83a5ff
+Size (R/VR_7.0-3.tar.gz) = 467714 bytes
