@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/01/19 06:52:55 salo Exp $
+# $NetBSD: Makefile,v 1.16 2003/02/25 09:07:10 wiz Exp $
 
 DISTNAME=	xemacs-21.5.10
 CATEGORIES=	editors
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.5/ \
 
 MAINTAINER=	magick@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
-COMMENT=	*BETA* XEmacs text editor version 21.5.9
+COMMENT=	*BETA* XEmacs text editor version 21.5.10
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES
