@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/01/22 22:41:23 kristerw Exp $
+
+SHA1 (twelf-1-4.tar.gz) = 3476fc18b7d0596df2c9847102d239de3eae813b
+Size (twelf-1-4.tar.gz) = 1463158 bytes
+SHA1 (patch-aa) = f209e39ddc4d8d2099d6562429b51fea829b2bc8
+SHA1 (patch-ab) = 4e2fb0068dbae4dee50faaf376c6942e485b9612

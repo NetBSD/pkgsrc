@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/01/22 22:41:23 kristerw Exp $
+
+Twelf is largely intended to be used through an Emacs interface.  It
+is therefore recommended that you add
+
+	(load "twelf-init")
+
+to your .emacs file.  This will arrange for Emacs to enter twelf-mode
+automatically upon opening a *.elf, *.quy, *.thm, or *.cfg file.
+===========================================================================

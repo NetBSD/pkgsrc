@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/01/22 22:41:23 kristerw Exp $
+
+--- bin/.mkexec.orig	Tue Jan 21 00:42:00 2003
++++ bin/.mkexec
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#! /bin/sh
+ #
+ # Twelf Batch File Creator
+ #
+@@ -7,6 +7,8 @@
+ # $2 = Twelf root directory
+ # $3 = Type of executable (e.g. twelf-server, twelf-sml)
+ # $4 = Name of executable (e.g. twelf-server, twelf-sml)
+-echo "\"$1\" @SMLload=\"$2/bin/.heap/$3\" \\" > "$2/bin/$4"
+-echo "   @SMLdebug=/dev/null" >> "$2/bin/$4"
++cat > "$2/bin/$4" <<EOF
++#! /bin/sh
++exec "$1" @SMLload="@TWELF_LIBDIR@/bin/.heap/$3" @SMLdebug=/dev/null
++EOF
+ chmod a+x "$2/bin/$4"
