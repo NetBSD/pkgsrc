@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 18:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/02 11:54:54 wiz Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
+PKGREVISION=	1
 PKGNAME=		falcons-eye-1.9.3
 WRKSRC=			${WRKDIR}
 CATEGORIES=		games

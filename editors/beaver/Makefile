@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/19 08:36:38 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:54:43 wiz Exp $
 #
 
 DISTNAME=	beaver-0.2.6
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	editors
 MASTER_SITES=	http://savannah.nongnu.org/download/beaver/

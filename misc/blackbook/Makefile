@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/02 21:18:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:55:47 wiz Exp $
 #
 
 DISTNAME=	blackbook-3
+PKGREVISION=	1
 PKGNAME=	${DISTNAME}.0
 CATEGORIES=	misc x11
 MASTER_SITES=  	${MASTER_SITE_SOURCEFORGE:=blackbook/}

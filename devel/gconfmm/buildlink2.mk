@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/03/01 21:58:40 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/02 11:54:25 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gconfmm.
 #
@@ -9,7 +9,7 @@
 GCONFMM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gconfmm
-BUILDLINK_DEPENDS.gconfmm?=		gconfmm>=2.0.1
+BUILDLINK_DEPENDS.gconfmm?=		gconfmm>=2.0.1nb1
 BUILDLINK_PKGSRCDIR.gconfmm?=		../../devel/gconfmm
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gconfmm=gconfmm

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/07/13 21:35:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/02 11:56:19 wiz Exp $
 #
 
 DISTNAME=	pam_ldap-150
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.padl.com/pub/
@@ -10,7 +11,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.padl.com/pam_ldap.html
 COMMENT=	pluggable authentication module for LDAP directories
 
-DEPENDS+=	openldap-[0-9]*:../../databases/openldap
+DEPENDS+=	openldap>=2.0.27nb3:../../databases/openldap
 DEPENDS+=	PAM-[0-9]*:../../security/PAM
 
 GNU_CONFIGURE=	YES

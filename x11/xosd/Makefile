@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/04/22 19:06:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/02 11:57:34 wiz Exp $
 #
 
 .include "Makefile.common"
+PKGREVISION=		1
 
 COMMENT=		Library to display shaped text on your X display
 

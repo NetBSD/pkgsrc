@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/12/24 06:10:12 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:55:45 wiz Exp $
 
 .if !defined(GUPPI_BUILDLINK2_MK)
 GUPPI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		guppi
-BUILDLINK_DEPENDS.guppi?=	guppi>=0.40.3nb2
+BUILDLINK_DEPENDS.guppi?=	guppi>=0.40.3nb3
 BUILDLINK_PKGSRCDIR.guppi?=	../../math/guppi
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.guppi=guppi
