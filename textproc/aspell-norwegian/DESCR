@@ -1,0 +1,1 @@
+Norwegian language support for aspell, e.g. `aspell -d norwegian -c $myfile'.
