@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/28 09:13:56 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/17 19:14:38 snj Exp $
 #
 
 DISTNAME=	abook-0.5.0
@@ -9,10 +9,10 @@ MAINTAINER=	vincent.derrien@ahoup.net
 HOMEPAGE=	http://abook.sourceforge.net/
 COMMENT=	Text-based addressbook program
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_READLINE=	yes
 GNU_CONFIGURE=		yes
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
