@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/26 03:54:38 ben Exp $
+
+--- Main/Source/game.cpp.orig	Tue Aug  5 11:31:09 2003
++++ Main/Source/game.cpp
+@@ -82,7 +82,7 @@ bool game::Loading = false;
+ bool game::InGetCommand = false;
+ character* game::Petrus = 0;
+ 
+-festring game::AutoSaveFileName = game::GetSaveDir() + "AutoSave";
++festring game::AutoSaveFileName = game::GetSaveDir() + "/AutoSave";
+ const char* const game::Alignment[] = { "L++", "L+", "L", "L-", "N+", "N=", "N-", "C+", "C", "C-", "C--" };
+ god** game::God;
+ 
+@@ -595,9 +595,9 @@ festring game::SaveName(const festring& 
+   festring SaveName = GetSaveDir();
+ 
+   if(!Base.GetSize())
+-    SaveName << PLAYER->GetAssignedName();
++    SaveName << "/" << PLAYER->GetAssignedName();
+   else
+-    SaveName << Base;
++    SaveName << "/" << Base;
+ 
+   for(ushort c = 0; c < SaveName.GetSize(); ++c)
+     if(SaveName[c] == ' ')
+@@ -1911,7 +1911,7 @@ festring game::GetSaveDir()
+ {
+ #ifdef LINUX
+   festring Dir;
+-  Dir << getenv("HOME") << "/IvanSave/";
++  Dir << getenv("HOME") << "/IvanSave";
+   return Dir;
+ #endif
+ 
