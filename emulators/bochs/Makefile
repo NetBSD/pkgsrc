@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2004/11/13 22:04:52 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2005/02/11 22:28:42 reed Exp $
 
 DISTNAME=		bochs-2.1.1
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -56,10 +57,6 @@ MAKE_ENV+=		GZIP_CMD=${GZIP_CMD:Q} \
 BOCHS_MAINDIR=		${PREFIX}/share/bochs
 BOCHS_BIOSDIR=		${BOCHS_MAINDIR}/bios
 BOCHS_FONTDIR=		${BOCHS_MAINDIR}/xfonts
-BOCHS_DOCDIR=		${PREFIX}/share/doc/html/bochs
-MESSAGE_SUBST+=		BOCHS_MAINDIR=${BOCHS_MAINDIR} \
-			BOCHS_FONTDIR=${BOCHS_FONTDIR} \
-			BOCHS_DOCDIR=${BOCHS_DOCDIR}
 
 post-configure:
 	${MV} ${WRKSRC}/.bochsrc ${WRKSRC}/.bochsrc.BAK
