@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3106 2005/02/24 11:37:22 bad Exp $
+$NetBSD: TODO,v 1.3107 2005/02/24 11:53:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -697,6 +697,7 @@ Suggested package updates
 	o ogre-0.12.3
 	o oo2c-2.1.7
 	o open2300-1.8
+	o openacs-5.1.4
 	o opencobol-0.30
 	o openmotif-2.2.4
 	o oregano-0.40.3
