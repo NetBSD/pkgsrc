@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/11 16:42:04 kim Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/24 14:11:09 grant Exp $
 # FreeBSD Id: ports/misc/bottlerocket/Makefile,v 1.4 2000/04/14 08:45:23 asami Exp
 
 DISTNAME=	bottlerocket-0.04c
@@ -9,7 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mlug.missouri.edu/~tymm/
 COMMENT=	Home Automation Software for the X10 FireCracker kit
 
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
 ALL_TARGET=	br
 
