@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2004/04/10 23:41:01 rh Exp $
-#
+# $NetBSD: Makefile,v 1.16 2004/08/18 13:59:19 adam Exp $
 
-DISTNAME=		gnustep-base-1.9.1
-CATEGORIES=		devel gnustep
-MASTER_SITES=		ftp://ftp.gnustep.org/pub/gnustep/core/
+DISTNAME=	gnustep-base-1.9.2
+CATEGORIES=	devel gnustep
+MASTER_SITES=	ftp://ftp.gnustep.org/pub/gnustep/core/
 
-MAINTAINER=		rh@NetBSD.org
-HOMEPAGE=		http://www.gnustep.org/
-COMMENT=		GNUstep foundation classes
+MAINTAINER=	rh@NetBSD.org
+HOMEPAGE=	http://www.gnustep.org/
+COMMENT=	GNUstep foundation classes
 
 PTHREAD_LIBS=		-lpthread
 
