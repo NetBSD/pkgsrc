@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.838 2001/10/29 19:21:18 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.839 2001/10/30 13:53:15 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -334,7 +334,9 @@ LDFLAGS+=		-Wl,-R${X11BASE}/lib
 LDFLAGS+=		-L${X11BASE}/lib
 .  endif
 .endif
+.if ${OPSYS} != "Darwin"
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
+.endif
 .if !defined(USE_BUILDLINK_ONLY)
 LDFLAGS+=		-L${LOCALBASE}/lib
 .endif
@@ -368,7 +370,7 @@ PATCH_DIST_ARGS?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP}
 PATCH_ARGS+=		--batch
 PATCH_DIST_ARGS+=	--batch
 .endif
-.if (${OPSYS} == "SunOS" || ${OPSYS} == "Linux")
+.if (${OPSYS} == "SunOS" || ${OPSYS} == "Linux" || ${OPSYS} == "Darwin")
 PATCH_ARGS+=		-V simple -z .orig
 .else
 PATCH_ARGS+=		-V simple -b .orig
@@ -3362,7 +3364,7 @@ MAKE_ENV+=	MANZ="${MANZ}"
 #   PERL5_PACKLIST is defined
 # - adding symlinks for shared libs (ELF) or ldconfig calls (a.out).
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
 IMAKE_MAN_CMD=
 .  ifdef MANZ
 MANZ_EXPRESSION= -e 's|\(^\([^@/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \

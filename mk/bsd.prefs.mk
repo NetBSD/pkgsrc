@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.60 2001/09/21 15:28:35 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.61 2001/10/30 13:53:15 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -80,6 +80,13 @@ LOWER_VENDOR?=		pc
 LOWER_VENDOR?=		unknown
 .  endif
 . endif
+
+.elif ${OPSYS} == "Darwin"
+LOWER_OPSYS?=		darwin
+LOWER_ARCH!=		${UNAME} -p
+MACHINE_ARCH=		${LOWER_ARCH}
+MAKEFLAGS+=		LOWER_ARCH=${LOWER_ARCH}
+LOWER_VENDOR?=		apple
 
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
@@ -287,7 +294,7 @@ SERIAL_DEVICES?=	/dev/null
 PKG_TOOLS_BIN?=		/usr/sbin
 .elif (${OPSYS} == "SunOS")
 # Migration aid for old /usr/local LOCALBASE on Solaris
-.if !defined(LOCALBASE) && exists(${DESTDIR}/usr/local/libexec/cgi-bin) && \
+.  if !defined(LOCALBASE) && exists(${DESTDIR}/usr/local/libexec/cgi-bin) && \
 	!exists(${DESTDIR}/usr/pkg/libexec/cgi-bin)
 .BEGIN:
 	@echo "On Solaris and /usr/local/libexec/cgi-bin found:"
@@ -296,25 +303,29 @@ PKG_TOOLS_BIN?=		/usr/sbin
 	@echo "- Otherwise set LOCALBASE=/usr/pkg in your environment for the"
 	@echo "  first package install."
 	@false
-.endif
+.  endif
 # end of migration aid
 LOCALBASE?=             ${DESTDIR}/usr/pkg
-.if !defined(ZOULARISBASE)
-.  if exists(${LOCALBASE}/bsd)
+.  if !defined(ZOULARISBASE)
+.    if exists(${LOCALBASE}/bsd)
 ZOULARISBASE:=		${LOCALBASE}/bsd
-.  else
+.    else
 ZOULARISBASE:=		${LOCALBASE}
+.    endif
 .  endif
-.endif
 PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
 
-.if (${X11BASE} == "/usr/openwin")
+.  if (${X11BASE} == "/usr/openwin")
 HAVE_OPENWINDOWS=	YES
-.endif
+.  endif
 
 .elif (${OPSYS} == "Linux")
 ZOULARISBASE?=		${DESTDIR}/usr/local/bsd
 PKG_TOOLS_BIN?=		${ZOULARISBASE}/bin
+
+.elif (${OPSYS} == "Darwin")
+ZOULARISBASE?=		${DESTDIR}/usr/pkg
+PKG_TOOLS_BIN?=		${ZOULARISBASE}/sbin
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
