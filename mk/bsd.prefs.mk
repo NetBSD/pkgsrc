@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.113 2003/06/05 00:23:29 jschauma Exp $
+# $NetBSD: bsd.prefs.mk,v 1.114 2003/07/09 08:22:22 salo Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -334,5 +334,19 @@ WRKDIR_BASENAME?=	work
 .endif
 
 WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
+
+# Set the default compiler to GCC 2.x if different compiler is not selected.
+#
+# Valid compilers are:
+#
+#	USE_GCC2    - GNU Compiler Collection 2.x
+# 	USE_GCC3    - GNU Compiler Collection 3.x
+#	USE_MIPSPRO - Silicon Graphics, Inc. MIPSpro Compiler
+#	USE_SUNPRO  - Sun Microsystems, Inc. WorkShop/Forte/Sun ONE Studio
+#	              Compiler Collection
+#
+.if !defined(USE_GCC3) && !defined(USE_MIPSPRO) && !defined(USE_SUNPRO)
+USE_GCC2=		YES
+.endif
 
 .endif	# BSD_PKG_MK
