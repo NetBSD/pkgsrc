@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/20 06:27:19 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/28 20:11:49 jlam Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 
 DISTNAME=	eb-3.0
@@ -44,11 +44,12 @@ APPENDIXFILES=	cencro-1.0.tar.gz \
 EXTRACT_ONLY=	${EBFILES}
 
 DIST_SUBDIR=		eb
+USE_BUILDLINK_ONLY=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-zlib
 USE_GMAKE=		yes
-USE_LIBINTL=	yes
+#USE_LIBINTL=		yes
 
 APPENDIXDIR=	${PREFIX}/share/eb/appendix
 
@@ -63,4 +64,6 @@ post-install:
 		${GTAR} -C ${APPENDIXDIR} -zxmf ${DISTDIR}/${DIST_SUBDIR}/$$f; \
 	done
 
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/zlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
