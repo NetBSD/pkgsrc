@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2004/10/03 00:12:52 tv Exp $
+# $NetBSD: Makefile,v 1.26 2004/10/19 00:02:44 grant Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
-PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
@@ -12,7 +11,7 @@ COMMENT=	Anti-virus toolkit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-CLAMAV_VERSION=		0.75.1
+CLAMAV_VERSION=		0.80
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
@@ -45,7 +44,7 @@ FILES_SUBST+=	VIRUSDBDIR=${VIRUSDBDIR}
 OWN_DIRS_PERMS=		${VIRUSDBDIR} ${CLAMAV_USER} ${CLAMAV_GROUP} 0775
 CONF_FILES=		# empty
 CONF_FILES_PERMS=	# empty
-.for _file_ in clamav.conf freshclam.conf
+.for _file_ in clamd.conf freshclam.conf
 CONF_FILES+=		${EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_}
 .endfor
 .for _file_ in daily.cvd main.cvd
