@@ -1,21 +1,12 @@
-$NetBSD: patch-aa,v 1.3 1999/05/18 22:01:36 mjl Exp $
+$NetBSD: patch-aa,v 1.4 2000/01/01 18:24:32 mjl Exp $
 
---- configure.orig	Mon May 17 07:26:54 1999
-+++ configure	Tue May 18 23:40:36 1999
-@@ -2401,6 +2401,8 @@
+--- configure.orig	Sat Jan  1 18:35:22 2000
++++ configure	Sat Jan  1 18:37:45 2000
+@@ -2554,6 +2554,7 @@
  
- fi
- 
-+slrn_cv_domain=no
-+
- echo "$ac_t""$slrn_cv_domain" 1>&6
- 
- if test "$slrn_cv_domain" != no; then
-@@ -2487,6 +2489,7 @@
- 
- JD_Search_Dirs="$JD_Search_Dirs \
-                 $includedir,$libdir \
+ # This list consists of "include,lib include,lib ..."
+ JD_Search_Dirs="$JD_Above_Dir2/slang/libsrc,$JD_Above_Dir2/slang/libsrc/"$ARCH"objs \
 +					 $prefix/include,$prefix/lib \
-                 /usr/local/include,/usr/local/lib \
- 		/usr/include,/usr/lib \
- 		/usr/include/slang,/usr/lib \
+                 $JD_Above_Dir/slang/libsrc,$JD_Above_Dir/slang/libsrc/"$ARCH"objs \
+ 		$JD_Above_Dir2/slang/src,$JD_Above_Dir2/slang/src/"$ARCH"objs \
+                 $JD_Above_Dir/slang/src,$JD_Above_Dir/slang/src/"$ARCH"objs \
