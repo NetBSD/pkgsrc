@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6268 2004/06/21 20:32:13 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6269 2004/06/21 21:58:06 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3012,3 +3012,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mhonarc to 2.6.10 [adrianp 2004-06-21]
 	Updated gnome-themes-extras to 0.7 [xtraeme 2004-06-21]
 	Added mips64emul-20040619 [xtraeme 2004-06-21]
+	Updated xmame to 0.83.1 [kristerw 2004-06-21]
+	Updated xmess to 0.83.1 [kristerw 2004-06-21]
