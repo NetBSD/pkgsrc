@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/03/29 18:43:47 tv Exp $
+
+SHA1 (ft-0.2.21.tgz) = 6cbb427a51bc05340987713de5bbaf03cbace027
+Size (ft-0.2.21.tgz) = 40132 bytes
+SHA1 (patch-aa) = 12fb2c63b24a06f43f03466f16f994e911367189
