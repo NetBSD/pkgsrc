@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5547 2004/04/12 00:00:38 minskim Exp $
+$NetBSD: CHANGES,v 1.5548 2004/04/12 01:04:06 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1919,3 +1919,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gpdf to 0.131nb1 [jmmv 2004-04-11]
 	Updated afio to 2.5 [minskim 2004-04-12]
 	Added ishell-0.2 [minskim 2004-04-12]
+	Updated pkglint to 3.69 [salo 2004-04-12]
