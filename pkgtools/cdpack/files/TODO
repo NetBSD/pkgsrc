@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1 2001/04/28 13:49:43 dmcmahill Exp $
+$NetBSD: TODO,v 1.2 2001/05/03 00:30:52 dmcmahill Exp $
 
 To-Do List for cdpack
 ---------------------
@@ -17,4 +17,6 @@ To-Do List for cdpack
   the selection of packages, select some subset of them and then do
   a batch install.
 
+- have a flag which perhaps interacts with lintpkgsrc to exclude
+  NO_BIN_ON_CDROM packages for those who are making commercial CD's.
 
