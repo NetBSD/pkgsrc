@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2004/05/26 13:20:53 markd Exp $
+# $NetBSD: Makefile,v 1.53 2004/05/31 12:21:06 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -34,6 +34,9 @@ REPLACE_PERL= \
 			kwin/pluginlibFix.pl \
 			konsole/schemaStrip.pl
 
+CONF_FILES=		${PREFIX}/share/kde/config/kdm/kdmrc \
+			${PKG_SYSCONFDIR}/kdm/kdmrc
+OWN_DIRS=		${PKG_SYSCONFDIR}/kdm
 RCD_SCRIPTS=		kdm
 
 .include "../../mk/bsd.prefs.mk"
@@ -105,16 +108,7 @@ SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${ROOT_USER} kmem 2755
 
 pre-configure:
 	cd ${WRKSRC};							\
-	files="kioslave/info/kde-info2html.conf";			\
-	for file in $${files}; do					\
-		${SED} -e 's|@LOCALBASE@|${LOCALBASE}|' $${file} >	\
-			$${file}.new;					\
-		${MV} -f $${file}.new $${file};				\
-	done
-
-post-build:
-	cd ${WRKSRC};							\
-	files="kioslave/info/kde-info2html.conf";			\
+	files="kcontrol/kdm/main.cpp kioslave/info/kde-info2html.conf";	\
 	for file in $${files}; do					\
 		${SED} ${FILES_SUBST_SED} $${file} > $${file}.new;	\
 		${MV} -f $${file}.new $${file};				\
