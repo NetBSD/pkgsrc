@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/15 11:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/07/15 11:25:57 wiz Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/pub/gcrypt/gnupg/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} gpg.1.gz
 
-MAINTAINER=	packages@NetBSD.ORG
+MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.gnupg.org/
 
 DEPENDS+=	gettext-0.10.*:../../devel/gettext
