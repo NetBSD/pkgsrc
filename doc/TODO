@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1834 2004/06/15 08:48:03 grant Exp $
+$NetBSD: TODO,v 1.1835 2004/06/16 16:54:11 reed Exp $
 
 Suggested new packages
 ======================
@@ -268,6 +268,7 @@ Suggested package updates
 	o gtksee-0.5.5.1
 	o gtranslator-1.0.1
 	o guile-pg-0.16 [pkg/24039]
+	o guile-gtk-0.40.90 [in wip]
 	o host-20031203 [cjep, in wip, awaiting greg woods response on 1 issue]
 	o hp2xx-3.4.4
 	o icepref-2.3
