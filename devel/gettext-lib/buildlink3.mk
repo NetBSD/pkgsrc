@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
 
-.if !empty(GETTEXT_BUILDLINK3_MK:M\+)
+.if !empty(GETTEXT_BUILDLINK3_MK:M+)
 .  include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.10.35nb1
@@ -64,12 +64,12 @@ MAKEFLAGS+=	_BLNK_LIBINTL_FOUND=${_BLNK_LIBINTL_FOUND}
 .endif
 
 .if ${_NEED_GNU_GETTEXT} == "YES"
-.  if !empty(BUILDLINK_DEPTH:M\+)
+.  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	gettext
 .  endif
 .endif
 
-.if !empty(GETTEXT_BUILDLINK3_MK:M\+)
+.if !empty(GETTEXT_BUILDLINK3_MK:M+)
 .  if ${_NEED_GNU_GETTEXT} == "YES"
 BUILDLINK_PACKAGES+=	gettext
 _BLNK_LIBINTL=		-lintl

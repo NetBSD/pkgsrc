@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:04 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BZIP2_BUILDLINK3_MK:=	${BZIP2_BUILDLINK3_MK}+
 
-.if !empty(BZIP2_BUILDLINK3_MK:M\+)
+.if !empty(BZIP2_BUILDLINK3_MK:M+)
 .  include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.bzip2?=	bzip2>=1.0.1
@@ -54,12 +54,12 @@ MAKEFLAGS+=	_NEED_BZIP2="${_NEED_BZIP2}"
 .endif
 
 .if ${_NEED_BZIP2} == "YES"
-.  if !empty(BUILDLINK_DEPTH:M\+)
+.  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	bzip2
 .  endif
 .endif
 
-.if !empty(BZIP2_BUILDLINK3_MK:M\+)
+.if !empty(BZIP2_BUILDLINK3_MK:M+)
 .  if ${_NEED_BZIP2} == "YES"
 BUILDLINK_PACKAGES+=		bzip2
 .  else

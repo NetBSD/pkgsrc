@@ -1,19 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:06 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AALIB_X11_BUILDLINK3_MK:=	${AALIB_X11_BUILDLINK3_MK}+
 
-.if !empty(AALIB_X11_BUILDLINK3_MK:M\+)
-BUILDLINK_DEPENDS.aalib-x11?=	aalib-x11>=1.4.0.4nb1
-BUILDLINK_PKGSRCDIR.aalib-x11?=	../../graphics/aalib-x11
-.endif # AALIB_X11_BUILDLINK3_MK
-
-.if !empty(BUILDLINK_DEPTH:M\+)
+.if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=		aalib-x11
 .endif
 
-.if !empty(AALIB_X11_BUILDLINK3_MK:M\+)
+.if !empty(AALIB_X11_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		aalib-x11
+BUILDLINK_DEPENDS.aalib-x11?=	aalib-x11>=1.4.0.4nb1
+BUILDLINK_PKGSRCDIR.aalib-x11?=	../../graphics/aalib-x11
 
 BUILDLINK_FILES.aalib-x11=	include/aalib-x11.h
 BUILDLINK_TRANSFORM.aalib-x11+=	-e "s|/aalib-x11.h|/aalib.h|g"
