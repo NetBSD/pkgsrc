@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/22 08:24:29 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/18 22:51:02 snj Exp $
 #
 
 DISTNAME=		eel-1.0.1
@@ -14,7 +14,7 @@ COMMENT=		Eazel Extensions Library
 BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
@@ -24,9 +24,9 @@ USE_GNU_TOOLS+=		make
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/oaf/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../graphics/librsvg/buildlink2.mk"
-.include "../../sysutils/gnome-vfs/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/oaf/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
