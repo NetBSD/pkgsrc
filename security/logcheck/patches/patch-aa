@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/17 15:00:48 nra Exp $
+$NetBSD: patch-aa,v 1.2 2003/05/01 20:43:41 jmmv Exp $
 
---- Makefile.orig	Sun Oct 31 16:07:29 1999
-+++ Makefile	Thu Jun 21 09:19:45 2001
+--- Makefile.orig	1999-10-31 16:07:29.000000000 +0100
++++ Makefile
 @@ -5,13 +5,15 @@
  # Thanks to rbulling@obscure.org for cleaning this Makefile up..
  #
@@ -20,8 +20,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/07/17 15:00:48 nra Exp $
  # Braindead HPUX compiler flags
  #CFLAGS = -O -Aa
  
-@@ -30,24 +32,12 @@
- INSTALLDIR_SH = /usr/local/etc
+@@ -19,35 +21,22 @@ CFLAGS = -O
+ # the new paths!!
+ 
+ # This is where keyword files go.
+-INSTALLDIR = /usr/local/etc
++INSTALLDIR = /usr/local/share/examples/logcheck
+ 
+ # This is where logtail will go
+ INSTALLDIR_BIN = /usr/local/bin
+ 
+ # Some people want the logcheck.sh in /usr/local/bin. Uncomment this
+ # if you want this. /usr/local/etc was kept for compatibility reasons.
+-#INSTALLDIR_SH = /usr/local/bin
+-INSTALLDIR_SH = /usr/local/etc
++INSTALLDIR_SH = /usr/local/bin
  
  # The scratch directory for logcheck files.
 -TMPDIR = /usr/local/etc/tmp
@@ -47,7 +60,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/07/17 15:00:48 nra Exp $
  
  clean:		
  		/bin/rm ./src/logtail ./src/logtail.o
-@@ -60,27 +50,29 @@
+@@ -60,19 +49,21 @@ uninstall:	
  		/bin/rm $(INSTALLDIR)/logcheck.violations.ignore
  		/bin/rm $(INSTALLDIR_BIN)/logtail
  
@@ -68,23 +81,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/07/17 15:00:48 nra Exp $
 -		cp ./systems/$(SYSTYPE)/logcheck.violations.ignore $(INSTALLDIR)
 -		cp ./systems/$(SYSTYPE)/logcheck.ignore $(INSTALLDIR)
 -		cp ./systems/$(SYSTYPE)/logcheck.sh $(INSTALLDIR_SH)
-+		cp ./systems/$(SYSTYPE)/logcheck.hacking $(INSTALLDIR)/logcheck.hacking.sample
-+		cp ./systems/$(SYSTYPE)/logcheck.violations $(INSTALLDIR)/logcheck.violations.sample
-+		cp ./systems/$(SYSTYPE)/logcheck.violations.ignore $(INSTALLDIR)/logcheck.violations.ignore.sample
-+		cp ./systems/$(SYSTYPE)/logcheck.ignore $(INSTALLDIR)/logcheck.ignore.sample
++		cp ./systems/$(SYSTYPE)/logcheck.hacking $(INSTALLDIR)/logcheck.hacking
++		cp ./systems/$(SYSTYPE)/logcheck.violations $(INSTALLDIR)/logcheck.violations
++		cp ./systems/$(SYSTYPE)/logcheck.violations.ignore $(INSTALLDIR)/logcheck.violations.ignore
++		cp ./systems/$(SYSTYPE)/logcheck.ignore $(INSTALLDIR)/logcheck.ignore
 +		cp ./systems/$(SYSTYPE)/logcheck.sh $(INSTALLDIR_SH)/logcheck.sh
  		cp ./src/logtail $(INSTALLDIR_BIN)
  		@echo "Setting permissions"
  		chmod 700 $(INSTALLDIR_SH)/logcheck.sh
- 		chmod 700 $(INSTALLDIR_BIN)/logtail
--		chmod 600 $(INSTALLDIR)/logcheck.violations.ignore
--		chmod 600 $(INSTALLDIR)/logcheck.violations
--		chmod 600 $(INSTALLDIR)/logcheck.hacking
--		chmod 600 $(INSTALLDIR)/logcheck.ignore
-+		chmod 600 $(INSTALLDIR)/logcheck.violations.ignore.sample
-+		chmod 600 $(INSTALLDIR)/logcheck.violations.sample
-+		chmod 600 $(INSTALLDIR)/logcheck.hacking.sample
-+		chmod 600 $(INSTALLDIR)/logcheck.ignore.sample
- 		@echo "Done. Don't forget to set your crontab."		
- 
- generic:		
