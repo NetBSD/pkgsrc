@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2001/02/17 17:54:47 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2001/02/23 22:19:41 tron Exp $
 
 DISTNAME=	knews-1.0b.1
-PKGNAME=	knews-1.0b1
+PKGNAME=	knews-1.0nb2
 CATEGORIES=	news x11
 MASTER_SITES=	http://www.matematik.su.se/~kjj/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.matematik.su.se/~kjj/
 COMMENT=	X11 newsreader with support for threading and MIME
 
@@ -35,11 +35,14 @@ post-extract:
 
 post-patch:
 .if defined(KNEWS_DOMAIN_FILE)
-	${ECHO_MSG} >>${WRKSRC}/configure.h \
+	${ECHO} >>${WRKSRC}/configure.h \
 	"#define DOMAIN_FILE \"${KNEWS_DOMAIN_FILE}\""
 .elif defined(KNEWS_DOMAIN_NAME)
-	${ECHO_MSG} >>${WRKSRC}/configure.h \
+	${ECHO} >>${WRKSRC}/configure.h \
 	"#define DOMAIN_NAME \"${KNEWS_DOMAIN_NAME}\""
+.endif
+.if defined(USE_INET6) && ${USE_INET6} == YES
+	${ECHO} >>${WRKSRC}/configure.h "#define USE_INET6 YES"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
