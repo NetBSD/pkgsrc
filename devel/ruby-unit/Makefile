@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:33:50 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/30 08:36:53 taca Exp $
 # FreeBSD: ports/devel/ruby-runit/Makefile,v 1.10 2001/01/19 09:41:15 knu Exp
 
 DISTNAME=	rubyunit-${VERSION}
@@ -7,10 +7,10 @@ CATEGORIES=	devel
 MASTER_SITES=	http://homepage1.nifty.com/markey/ruby/rubyunit/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://homepage1.nifty.com/markey/ruby/rubyunit/rubyunit_e.html
+HOMEPAGE=	http://homepage1.nifty.com/markey/ruby/rubyunit/index_e.html
 COMMENT=	Ruby implementation of eXtreme Programming
 
-VERSION=	0.5.4
+VERSION=	0.5.6
 DIST_SUBDIR=	ruby
 USE_RUBY_RD=	yes
 
