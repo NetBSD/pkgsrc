@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.5 2000/12/07 15:53:10 itojun Exp $
+
+--- sendmail/conf.c.orig	Sun Sep 24 01:54:01 2000
++++ sendmail/conf.c	Thu Dec  7 17:12:14 2000
+@@ -4911,3 +4911,3 @@
+ 			ia6 = sa->sin6.sin6_addr;
+-			if (ia6.s6_addr == in6addr_any.s6_addr)
++			if (IN6_IS_ADDR_UNSPECIFIED(&ia6))
+ 			{
+@@ -5094,3 +5094,13 @@
+ 			ia6 = sa->sin6.sin6_addr;
+-			if (ia6.s6_addr == in6addr_any.s6_addr)
++#    ifdef __KAME__
++			/* convert into proper scoped address - */
++			if ((IN6_IS_ADDR_LINKLOCAL(&ia6) ||
++			     IN6_IS_ADDR_SITELOCAL(&ia6)) &&
++			    sa->sin6.sin6_scope_id == 0) {
++				sa->sin6.sin6_scope_id = ntohs(ia6.s6_addr[3] |
++				     ((unsigned int)ia6.s6_addr[2] << 8));
++				ia6.s6_addr[2] = ia6.s6_addr[3] = 0;
++			}
++#    endif
++			if (IN6_IS_ADDR_UNSPECIFIED(&ia6))
+ 			{
