@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/12/19 14:44:07 agc Exp $
+
+--- pam/Makefile.in	2001/12/19 13:54:20	1.1
++++ pam/Makefile.in	2001/12/19 13:54:39
+@@ -75,9 +75,9 @@
+ system = @system@
+ 
+ pkgdata_DATA = secure-mcserv
+-pkgdatadir = /etc/pam.d
++pkgdatadir = ${PKG_SYSCONFDIR}/pam.d
+ sysconf_DATA = secure-mcservusers
+-sysconfdir = /etc
++sysconfdir = ${prefix}/share/examples/mirrordir
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
