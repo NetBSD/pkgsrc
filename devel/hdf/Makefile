@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/03/02 19:40:51 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/08 21:15:45 jtb Exp $
 
 DISTNAME=	HDF4.1r4
 PKGNAME=	hdf-4.1r4
@@ -20,7 +20,7 @@ EVAL_PREFIX+=	JPEGBASE=jpeg F2CBASE=f2c
 post-patch:
 	for i in fortran/config/jackets-fbsd.c			\
 	fortran/fort_ps/mfhdfp.h fortran/jackets.src		\
-	libsrc/cdftest.cmf libsrc/globdef.c libsrc/local_nc.h	\
+	libsrc/cdftest.c libsrc/globdef.c libsrc/local_nc.h	\
 	libsrc/xdrposix.c libsrc/xdrstdio.c ncdump/dumplib.c	\
 	ncdump/vardata.c ncgen/generate.c ncgen/ncgen.h		\
 	libsrc/mfhdf.h; do					\
