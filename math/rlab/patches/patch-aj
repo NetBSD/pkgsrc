@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2001/01/31 07:30:54 jtb Exp $
+
+--- main.c.orig	Wed Jan 31 02:08:34 2001
++++ main.c
+@@ -239,7 +239,7 @@
+  * ************************************************************** */
+ 
+ #ifdef HAVE_GC
+-#include "gc_private.h"
++#include "gc_priv.h"
+ 
+ int real_main (int argc, char *argv[]);
+ 

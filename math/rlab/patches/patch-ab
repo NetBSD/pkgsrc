@@ -1,0 +1,372 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/01/31 07:30:37 jtb Exp $
+
+--- Makefile.in.orig	Fri Apr 30 14:32:04 1999
++++ Makefile.in
+@@ -99,14 +99,14 @@
+ # -lfftpack	FFTPACK library (double precision version)
+ # -lranlib	RANLIB (random number generation)
+ #
+-LAPACK = ./flibs/lapack/liblapack.a
+-LAPACK_LIB  = -L./flibs/lapack -llapack
++LAPACK = ./flibs/lapack/liblapackrlab.a
++LAPACK_LIB  = -L./flibs/lapack -llapackrlab
+ 
+-BLAS = ./flibs/blas/libblas.a
+-BLAS_LIB    = -L./flibs/blas -lblas
++BLAS = ./flibs/blas/libblasrlab.a
++BLAS_LIB    = -L./flibs/blas -lblasrlab
+ 
+-FFTPACK = ./flibs/fftpack/libfftpack.a
+-FFTPACK_LIB = -L./flibs/fftpack -lfftpack
++FFTPACK = ./flibs/fftpack/libfftpackrlab.a
++FFTPACK_LIB = -L./flibs/fftpack -lfftpackrlab
+ 
+ Ranlib = ./flibs/ranlib/src/libranlib.a
+ RANLIB_LIB  = -L./flibs/ranlib/src -lranlib
+@@ -236,7 +236,7 @@
+ SRC = 		$(R_SRC) $(F_SRC) $(EXTRA_SRC) $(GNU_SRC) $(CMD_SRC)
+ OBJ = 		$(R_OBJ) $(F_OBJ) $(EXTRA_OBJ) $(GNU_OBJ) $(CMD_OBJ)
+ 
+-all:		gc libs rlab
++all:		libs rlab
+ 
+ libs:		$(LAPACK) $(BLAS) $(FFTPACK) $(Ranlib) $(Minpack)
+ 
+@@ -268,7 +268,7 @@
+ 
+ rlab:		$(OBJ)
+ 		$(F77) $(EXFLAGS) $(CFLAGS) $(DEFS) $(SPECIAL_FLAGS) \
+-		$(OBJ) $(R_LIBS) $(PLOT_LIBS) -o rlab
++		$(OBJ) $(LDFLAGS) $(R_LIBS) $(PLOT_LIBS) -o rlab
+ 
+ #
+ # Ignore these unless you know what CodeTEST Native for Solaris is.
+@@ -301,51 +301,72 @@
+ COPYDIR =	rlib toolbox controls-toolbox doc examples .rlab config.h test.r \
+ 		test.getline test.input Makefile
+ 
+-install:	rlab mkdir
+-		-if [ `/bin/pwd` != `(cd ${TOPDIR}; /bin/pwd)` ] ; then \
+-		tar cf - ${COPYDIR} [A-Z]* | (cd ${TOPDIR}; umask 022; tar xf - ) ;\
+-		fi
+-		if test "$(PLOT_PROG)" = "plplot" ; then\
+-		  cp misc/plplot.r ${TOPDIR}/rlib/plot.r;\
+-		  cd misc/plhelp; tar cf - . | (cd ${RHELPDIR}; umask 022; tar xf - ) ;\
+-		fi
+-		if test "$(PLOT_PROG)" = "pgplot" ; then\
+-		  cp misc/pgplot.r ${TOPDIR}/rlib/plot.r;\
+-		  cd misc/pghelp; tar cf - . | (cd ${RHELPDIR}; umask 022; tar xf - ) ;\
++install:	rlab
++		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab
++		$(BSD_INSTALL_DATA) $(buildir)/.rlab $(prefix)/share/rlab
++		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab/rlib
++		@for f in $(buildir)/rlib/*; do \
++			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/rlib/"; \
++			echo $$i; $$i; \
++		done
++		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab/toolbox
++		@for f in $(buildir)/toolbox/*; do \
++			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/toolbox/"; \
++			echo $$i; $$i; \
++		done
++		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab/controls-toolbox
++		@for f in $(buildir)/controls-toolbox/*; do \
++			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/controls-toolbox/"; \
++			echo $$i; $$i; \
++		done
++		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab/help
++		@for f in $(buildir)/doc/help/*; do \
++			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/help/"; \
++			echo $$i; $$i; \
++		done
++		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/rlab/examples
++		@for f in $(buildir)/examples/* $(buildir)/test.*; do \
++			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/examples/"; \
++			echo $$i; $$i; \
++		done
++		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/doc/rlab
++		$(BSD_INSTALL_DATA) $(buildir)/doc/rlab-ref.ps $(prefix)/share/doc/rlab
++		@for f in BUGS PROBLEMS README.Metis README.PGRAF \
++		README.PLPLOT README.SPARSE TODO WHATS.NEW; do \
++			i="$(BSD_INSTALL_DATA) $(buildir)/$$f $(prefix)/share/doc/rlab/"; \
++			echo $$i; $$i; \
++		done
++		$(BSD_INSTALL_DATA_DIR) $(prefix)/share/doc/html/rlab
++		@for f in $(buildir)/doc/html/*; do \
++			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/doc/html/rlab/"; \
++			echo $$i; $$i; \
++		done
++		if test "$(PLOT_PROG)" = "plplot" ; then \
++		  $(BSD_INSTALL_DATA) $(buildir)/misc/plplot.r $(prefix)/share/rlab/rlib/plot.r;\
++		  for f in $(buildir)/misc/plhelp/*; do \
++			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/help/"; \
++			echo $$i; $$i; \
++		  done \
+ 		fi
+ 		if test "$(PLOT_PROG)" = "gnuplot" ; then\
+-		  cp misc/gnuplot.r ${TOPDIR}/rlib/plot.r;\
+-		  cp misc/gp-compat.r ${TOPDIR}/rlib/gp-compat.r;\
+-		  cd misc/gnuplothelp; tar cf - . | (cd ${RHELPDIR}; umask 022; tar xf - ) ;\
++		  $(BSD_INSTALL_DATA) $(buildir)/misc/gnuplot.r $(prefix)/share/rlab/rlib/plot.r;\
++		  $(BSD_INSTALL_DATA) $(buildir)/misc/gp-compat.r $(prefix)/share/rlab/rlib/gp-compat.r;\
++		  for f in $(buildir)/misc/gnuplothelp/*; do \
++			i="$(BSD_INSTALL_DATA) $$f $(prefix)/share/rlab/help/"; \
++			echo $$i; $$i; \
++		  done \
+ 		fi
+ 		if test "$(PLOT_PROG)" = "plotmtv" ; then\
+-		  cp misc/plotmtv.r ${TOPDIR}/rlib/plotmtv.r;\
+-		fi
+-		$(INSTALL_PROGRAM) rlab $(bindir)/rlab-$(VER)
+-		if test -x "$(bindir)/rlab2" ; then\
+-		  rm -f $(bindir)/rlab2;\
++		  $(BSD_INSTALL_DATA) $(buildir)/misc/plotmtv.r $(prefix)/share/rlab/rlib/;\
+ 		fi
++		$(BSD_INSTALL_PROGRAM) $(buildir)/rlab $(bindir)/rlab-$(VER)
+ 		sed 's@rlab_exec_prefix@$(exec_prefix)@' ./misc/rlab > ./misc/rlab.tmp.0
+ 		sed 's@rlab_ver_string@$(VER)@' ./misc/rlab.tmp.0 > ./misc/rlab.tmp.1
+ 		sed 's@plot_dir@$(PLOT_DIR)@' ./misc/rlab.tmp.1 > ./misc/rlab.tmp.2
+ 		sed 's@plot_prog@$(PLOT_PROG)@' ./misc/rlab.tmp.2 > ./misc/rlab2
+ 		rm -f ./misc/rlab.tmp.0 ./misc/rlab.tmp.1 ./misc/rlab.tmp.2
+-		$(INSTALL_PROGRAM) ./misc/rlab2 $(bindir)/rlab2
+-		if test "$(LN)" = "ln" ; then\
+-		  @echo "RECOMMENDED YOU MV $(TOPDIR) to $(libdir)/rlab2";\
+-		fi
+-		if test "$(LN)" = "ln -s" ; then\
+-		  if test -r "$(libdir)/rlab2" ; then\
+-		    mv $(libdir)/rlab2 $(libdir)/rlab2.old;\
+-		  fi;\
+-		  cd $(libdir); $(LN) ./rlab-$(VER) ./rlab2;\
+-		fi
+-		cd $(buildir); $(INSTALL) doc/rlab2.1 $(mandir)/rlab2.1
+-
+-mkdir:		
+-		-mkdir $(exec_prefix) $(bindir) $(libdir) $(mand) \
+-			$(mandir) $(TOPDIR) $(RLIBDIR) $(DOCDIR) \
+-			$(RHELPDIR) $(TOOLBOX) $(CTOOLBOX)
++		$(BSD_INSTALL_SCRIPT) $(buildir)/misc/rlab2 $(bindir)/rlab2
++		$(BSD_INSTALL_MAN) $(buildir)/doc/rlab2.1 $(mandir)
+ 
+ FRC:		
+ 
+@@ -526,22 +547,23 @@
+ #
+ 
+ main.o: main.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h code.h list.h symbol.h util.h rfile.h rfileio.h mdc.h \
+- complex.h bltin.h version.h getopt.h class.h bltin1.h bltin2.h \
+- bltin3.h msr.h rfft.h gc/gc_private.h gc/gc_priv.h gc/config.h \
++ mem.h /usr/pkg/include/gc.h code.h list.h symbol.h util.h rfile.h \
++ rfileio.h mdc.h complex.h bltin.h version.h getopt.h class.h bltin1.h \
++ bltin2.h bltin3.h msr.h rfft.h gc/gc_priv.h gc/gcconfig.h \
+  gc/gc_hdrs.h fpe.h mathl.h
+ init.o: init.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+  symbol.h list.h util.h print.h bltin.h bltin1.h bltin2.h bltin3.h \
+  msr.h rfft.h rfileio.h mdc.h complex.h rdl.h msrf2.h
+ code.o: code.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- code.h list.h symbol.h class.h mem.h gc/gc.h y.tab.h bltin.h \
+- function.h util.h rfile.h mdc.h complex.h
++ code.h list.h symbol.h class.h mem.h /usr/pkg/include/gc.h y.tab.h \
++ bltin.h function.h util.h rfile.h mdc.h complex.h
+ symbol.o: symbol.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h symbol.h list.h mem.h gc/gc.h function.h util.h
++ listnode.h symbol.h list.h mem.h /usr/pkg/include/gc.h function.h \
++ util.h
+ list.o: list.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- util.h list.h mem.h gc/gc.h
++ util.h list.h mem.h /usr/pkg/include/gc.h
+ listnode.o: listnode.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h mem.h gc/gc.h util.h list.h
++ listnode.h mem.h /usr/pkg/include/gc.h util.h list.h
+ op.o: op.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h code.h \
+  list.h symbol.h class.h util.h
+ opapp.o: opapp.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+@@ -551,118 +573,124 @@
+ complex.o: complex.c complex.h rlab.h config.h ent.h mds.h mdr.h \
+  btree.h listnode.h util.h list.h mathl.h
+ function.o: function.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h code.h list.h symbol.h function.h util.h mem.h gc/gc.h
++ listnode.h code.h list.h symbol.h function.h util.h mem.h \
++ /usr/pkg/include/gc.h
+ rel.o: rel.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+  code.h list.h symbol.h class.h util.h
+ util.o: util.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- code.h list.h symbol.h mem.h gc/gc.h bltin.h mdc.h complex.h \
+- function.h sort.h fpe.h
++ code.h list.h symbol.h mem.h /usr/pkg/include/gc.h bltin.h mdc.h \
++ complex.h function.h sort.h fpe.h
+ btree.o: btree.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- class.h symbol.h list.h function.h util.h mem.h gc/gc.h
++ class.h symbol.h list.h function.h util.h mem.h /usr/pkg/include/gc.h
+ mm.o: mm.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+  complex.h
+ misc.o: misc.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h
+ fpe.o: fpe.c config.h
+ ent.o: ent.c ent.h mds.h rlab.h config.h listnode.h mdr.h btree.h \
+- class.h mem.h gc/gc.h util.h list.h
++ class.h mem.h /usr/pkg/include/gc.h util.h list.h
+ mathl.o: mathl.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+  mathl.h complex.h util.h list.h
+ rfileio.o: rfileio.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h class.h symbol.h list.h bltin.h mem.h gc/gc.h util.h mdc.h \
+- complex.h msr.h msc.h mathl.h
++ listnode.h class.h symbol.h list.h bltin.h mem.h \
++ /usr/pkg/include/gc.h util.h mdc.h complex.h msr.h msc.h mathl.h
+ mdr.o: mdr.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h mdrf2.h mdrf1.h mdc.h complex.h util.h list.h bltin1.h \
+- bltin.h mathl.h fi.h bl.h
++ mem.h /usr/pkg/include/gc.h mdrf2.h mdrf1.h mdc.h complex.h util.h \
++ list.h bltin1.h bltin.h mathl.h fi.h bl.h
+ class.o: class.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- util.h list.h class.h mem.h gc/gc.h bltin.h function.h mdrf1.h mdc.h \
+- complex.h mdcf1.h mdr_mdc.h mdsf1.h mdr_mds.h msr.h msrf1.h msrf2.h \
+- msc.h mscf1.h mscf2.h
++ util.h list.h class.h mem.h /usr/pkg/include/gc.h bltin.h function.h \
++ mdrf1.h mdc.h complex.h mdcf1.h mdr_mdc.h mdsf1.h mdr_mds.h msr.h \
++ msrf1.h msrf2.h msc.h mscf1.h mscf2.h
+ diss.o: diss.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+  code.h list.h symbol.h bltin.h print.h util.h
+ mdc.o: mdc.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h mdc.h complex.h mdcf2.h mdcf1.h mdr_mdc.h util.h list.h \
+- bltin1.h bltin.h bl.h fi.h
++ mem.h /usr/pkg/include/gc.h mdc.h complex.h mdcf2.h mdcf1.h mdr_mdc.h \
++ util.h list.h bltin1.h bltin.h bl.h fi.h
+ mdr_mdc.o: mdr_mdc.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h mem.h gc/gc.h mdrf1.h mdrf2.h mdc.h complex.h mdcf1.h \
+- mdcf2.h util.h list.h
++ listnode.h mem.h /usr/pkg/include/gc.h mdrf1.h mdrf2.h mdc.h \
++ complex.h mdcf1.h mdcf2.h util.h list.h
+ mds.o: mds.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h util.h list.h bltin1.h bltin.h
++ mem.h /usr/pkg/include/gc.h util.h list.h bltin1.h bltin.h
+ mdr_mds.o: mdr_mds.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h mem.h gc/gc.h util.h list.h
++ listnode.h mem.h /usr/pkg/include/gc.h util.h list.h
+ rfile.o: rfile.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- symbol.h list.h mem.h gc/gc.h util.h
++ symbol.h list.h mem.h /usr/pkg/include/gc.h util.h rfile.h
+ bltin.o: bltin.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- symbol.h list.h mem.h gc/gc.h bltin.h util.h mathl.h complex.h \
+- class.h rfileio.h mdc.h
++ symbol.h list.h mem.h /usr/pkg/include/gc.h bltin.h util.h mathl.h \
++ complex.h class.h rfileio.h mdc.h
+ bltin1.o: bltin1.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h mem.h gc/gc.h bltin.h list.h util.h class.h rfileio.h \
+- mdc.h complex.h mathl.h btreef1.h function.h mdrf1.h mdcf1.h \
+- mdr_mdc.h mdsf1.h mdr_mds.h msr.h msrf1.h msc.h mscf1.h
++ listnode.h mem.h /usr/pkg/include/gc.h bltin.h list.h util.h class.h \
++ rfileio.h mdc.h complex.h mathl.h btreef1.h function.h mdrf1.h \
++ mdcf1.h mdr_mdc.h mdsf1.h mdr_mds.h msr.h msrf1.h msc.h mscf1.h
+ mdrf1.o: mdrf1.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h mdc.h complex.h util.h list.h mdrf1.h mathl.h symbol.h \
+- sort.h
++ mem.h /usr/pkg/include/gc.h mdc.h complex.h util.h list.h mdrf1.h \
++ mathl.h symbol.h sort.h
+ print.o: print.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- symbol.h list.h bltin.h mem.h gc/gc.h util.h rfileio.h mdc.h \
+- complex.h class.h scan.h
++ symbol.h list.h bltin.h mem.h /usr/pkg/include/gc.h util.h rfileio.h \
++ mdc.h complex.h class.h scan.h
+ getline.o: getline.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h symbol.h list.h mem.h gc/gc.h bltin.h util.h scan.h \
+- print.h class.h rfileio.h mdc.h complex.h
++ listnode.h symbol.h list.h mem.h /usr/pkg/include/gc.h bltin.h util.h \
++ scan.h print.h class.h rfileio.h mdc.h complex.h
+ random.o: random.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+  listnode.h bltin.h list.h util.h class.h symbol.h random.h fi.h \
+  mdrf1.h
+ mdcf1.o: mdcf1.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h mdc.h complex.h util.h list.h symbol.h mathl.h sort.h
++ mem.h /usr/pkg/include/gc.h mdc.h complex.h util.h list.h symbol.h \
++ mathl.h sort.h
+ mdsf1.o: mdsf1.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h util.h list.h symbol.h mathl.h complex.h sort.h
++ mem.h /usr/pkg/include/gc.h util.h list.h symbol.h mathl.h complex.h \
++ sort.h
+ bltin2.o: bltin2.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h mem.h gc/gc.h bltin.h list.h util.h class.h rfileio.h \
+- mdc.h complex.h mathl.h function.h mdrf1.h mdrf2.h mdcf1.h mdcf2.h \
+- mdr_mdc.h mdsf1.h mdr_mds.h msr.h msrf1.h msrf2.h msc.h mscf1.h \
+- mscf2.h
++ listnode.h mem.h /usr/pkg/include/gc.h bltin.h list.h util.h class.h \
++ rfileio.h mdc.h complex.h mathl.h function.h mdrf1.h mdrf2.h mdcf1.h \
++ mdcf2.h mdr_mdc.h mdsf1.h mdr_mds.h msr.h msrf1.h msrf2.h msc.h \
++ mscf1.h mscf2.h
+ mdrf2.o: mdrf2.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h symbol.h list.h mdrf1.h mdc.h complex.h util.h mathl.h \
+- fi.h lp.h bl.h
++ mem.h /usr/pkg/include/gc.h symbol.h list.h mdrf1.h mdc.h complex.h \
++ util.h mathl.h fi.h lp.h bl.h
+ mdcf2.o: mdcf2.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h symbol.h list.h mdc.h complex.h mdcf1.h util.h mathl.h \
+- fi.h lp.h bl.h
++ mem.h /usr/pkg/include/gc.h symbol.h list.h mdc.h complex.h mdcf1.h \
++ util.h mathl.h fi.h lp.h bl.h
+ rfft.o: rfft.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h symbol.h list.h bltin.h mdc.h complex.h util.h class.h \
+- rfileio.h function.h mdrf1.h mdrf2.h mdcf1.h mdcf2.h mdr_mdc.h \
+- mdsf1.h mdr_mds.h msr.h msrf1.h msc.h mscf1.h fftp.h fi.h
++ mem.h /usr/pkg/include/gc.h symbol.h list.h bltin.h mdc.h complex.h \
++ util.h class.h rfileio.h function.h mdrf1.h mdrf2.h mdcf1.h mdcf2.h \
++ mdr_mdc.h mdsf1.h mdr_mds.h msr.h msrf1.h msc.h mscf1.h fftp.h fi.h
+ sort.o: sort.c
+ r_plot.o: r_plot.c config.h
+ rstring.o: rstring.c
+ rdl.o: rdl.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- symbol.h list.h bltin.h class.h util.h mem.h gc/gc.h
++ symbol.h list.h bltin.h class.h util.h mem.h /usr/pkg/include/gc.h
+ odei.o: odei.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- class.h symbol.h list.h mem.h gc/gc.h mdrf1.h bltin.h util.h mathl.h \
+- complex.h function.h lp.h fi.h odei.h
++ class.h symbol.h list.h mem.h /usr/pkg/include/gc.h mdrf1.h bltin.h \
++ util.h mathl.h complex.h function.h lp.h fi.h odei.h
+ btreef1.o: btreef1.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h class.h symbol.h list.h function.h util.h mem.h gc/gc.h
++ listnode.h class.h symbol.h list.h function.h util.h mem.h \
++ /usr/pkg/include/gc.h
+ msr.o: msr.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h msr.h util.h list.h bltin1.h bltin.h mathl.h complex.h \
+- fi.h sparse.h
++ mem.h /usr/pkg/include/gc.h msr.h util.h list.h bltin1.h bltin.h \
++ mathl.h complex.h fi.h sparse.h
+ msrf1.o: msrf1.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h msr.h msc.h mdc.h complex.h mscf1.h mdrf1.h util.h \
+- list.h symbol.h sort.h mathl.h fi.h sparse.h
++ mem.h /usr/pkg/include/gc.h msr.h msc.h mdc.h complex.h mscf1.h \
++ mdrf1.h util.h list.h symbol.h sort.h mathl.h fi.h sparse.h
+ bltin3.o: bltin3.c rlab.h config.h ent.h mds.h mdr.h btree.h \
+- listnode.h mem.h gc/gc.h bltin.h list.h util.h class.h rfileio.h \
+- mdc.h complex.h function.h mdrf1.h mdrf2.h mdcf1.h mdcf2.h mdr_mdc.h \
+- mdsf1.h mdr_mds.h msr.h msrf1.h msrf2.h msc.h mscf1.h mscf2.h
++ listnode.h mem.h /usr/pkg/include/gc.h bltin.h list.h util.h class.h \
++ rfileio.h mdc.h complex.h function.h mdrf1.h mdrf2.h mdcf1.h mdcf2.h \
++ mdr_mdc.h mdsf1.h mdr_mds.h msr.h msrf1.h msrf2.h msc.h mscf1.h \
++ mscf2.h
+ msc.o: msc.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h msr.h msrf1.h mdc.h complex.h msc.h mdr_mdc.h util.h \
+- list.h bltin1.h bltin.h mathl.h fi.h sparse.h
++ mem.h /usr/pkg/include/gc.h msr.h msrf1.h mdc.h complex.h msc.h \
++ mdr_mdc.h util.h list.h bltin1.h bltin.h mathl.h fi.h sparse.h
+ mscf1.o: mscf1.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h msr.h msrf1.h mdc.h complex.h msc.h mdr_mdc.h util.h \
+- list.h symbol.h sort.h mathl.h fi.h sparse.h
++ mem.h /usr/pkg/include/gc.h msr.h msrf1.h mdc.h complex.h msc.h \
++ mdr_mdc.h util.h list.h symbol.h sort.h mathl.h fi.h sparse.h
+ msrf2.o: msrf2.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- mem.h gc/gc.h msr.h msrf1.h mdc.h complex.h msc.h mscf1.h mscf2.h \
+- mdrf1.h util.h list.h symbol.h sort.h mathl.h class.h fi.h sparse.h \
+- mdrf2.h
++ mem.h /usr/pkg/include/gc.h msr.h msrf1.h mdc.h complex.h msc.h \
++ mscf1.h mscf2.h mdrf1.h util.h list.h symbol.h sort.h mathl.h class.h \
++ fi.h sparse.h mdrf2.h
+ mscf2.o: mscf2.c rlab.h config.h ent.h mds.h mdr.h btree.h listnode.h \
+- class.h mem.h gc/gc.h msr.h msc.h mdc.h complex.h mscf1.h mdr_mdc.h \
+- mdcf1.h util.h list.h symbol.h sort.h fi.h sparse.h mdcf2.h
++ class.h mem.h /usr/pkg/include/gc.h msr.h msc.h mdc.h complex.h \
++ mscf1.h mdr_mdc.h mdcf1.h util.h list.h symbol.h sort.h fi.h sparse.h \
++ mdcf2.h
+ r_pgplot.o: r_pgplot.c config.h
+-getopt.o: getopt.c
++getopt.o: getopt.c getopt.h
+ getopt1.o: getopt1.c getopt.h
+ alloca.o: alloca.c

@@ -1,0 +1,20 @@
+Rlab is a very high level language intended to provide fast
+prototyping and program development, as well as easy
+data-visualization, and processing.
+
+The fundamental data type is a floating point matrix (either real or
+complex), though RLab also includes string matrices, and sparse
+numerical matrices (both real and complex).  A heterogeneous
+associative array has been added to allow users to create and operate
+on arbitrary data structures.
+   
+Rlab offers simple access to the most popular linear algebra
+libraries, BLAS, and LAPACK. Furthermore, Rlab's basic data structures
+are matrix oriented, with the vector dot-product an integral part of
+the built-in operations.  Due to the array oriented operations, and
+the high-level interface to FFTPACK, and a discrete IIR filtering
+function, Rlab servers well as an environment for signal analysis and
+exploration.
+
+Rlab is copyrighted with the GNU General Public License, and is free
+(in the GNU sense) for all to use.

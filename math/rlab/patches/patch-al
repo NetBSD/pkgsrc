@@ -1,0 +1,28 @@
+$NetBSD: patch-al,v 1.1.1.1 2001/01/31 07:30:55 jtb Exp $
+
+--- fpe.c.orig	Sat Jan  6 18:22:42 2001
++++ fpe.c
+@@ -184,22 +184,5 @@
+ }
+ 
+ /*****************************************************************************/
+-#else  /* HAVE_IEEE_HANDLER */
+-
+-void
+-setup_fpe_handling ()
+-{
+-  ; /* Do nothing */
+-}
+-
+ #endif
+-
+-#else  /* SETUP_FPE */
+-
+-void
+-setup_fpe_handling ()
+-{
+-  ; /* Do nothing. */
+-}
+-
+-#endif  /* SETUP_FPE */
++#endif

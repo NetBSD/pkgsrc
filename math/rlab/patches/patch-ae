@@ -1,0 +1,10 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/01/31 07:30:38 jtb Exp $
+
+--- flibs/blas/Makefile.in.orig	Tue Jan 30 02:25:50 2001
++++ flibs/blas/Makefile.in
+@@ -1,4 +1,4 @@
+-LIBRARY = libblas.a
++LIBRARY = libblasrlab.a
+ 
+ SHELL = 	@MSHELL@
+ F77 =		@F77@

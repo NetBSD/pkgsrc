@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1.1.1 2001/01/31 07:30:55 jtb Exp $
+
+--- misc/rlab~	Wed Apr 21 14:02:13 1999
++++ misc/rlab
+@@ -21,7 +21,7 @@
+ # (unless you are sure of what you are doing).
+ #
+ 
+-RD="$RROOT/lib/rlab2"		       # The parent rlab library directory.
++RD="$RROOT/share/rlab"		       # The parent rlab library directory.
+ RLABEXE="$RROOT/bin/rlab-$RLAB_VER"    # The rlab executable.
+ 
+ #
+@@ -50,7 +50,7 @@
+ # The RLaB2 help directory
+ #
+ 
+-RLAB2_HELP_DIR="$RD/doc/help"
++RLAB2_HELP_DIR="$RD/help"
+ 
+ #
+ # The pager to use.
