@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.4 2003/10/20 20:23:49 mrauch Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.5 2004/01/25 16:57:57 mrauch Exp $
 
 DEPENDS+=               suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=               suse_libc5>=7.3:../../emulators/${SUSE_DIR_PREFIX}_libc5
 DEPENDS+=               suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 .if !exists(/emul/linux/proc/curproc/cmdline) && !exists(/proc/curproc/cmdline)
