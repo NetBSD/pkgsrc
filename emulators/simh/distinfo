@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.8 2003/03/22 11:58:16 cjep Exp $
+$NetBSD: distinfo,v 1.9 2003/05/31 16:10:52 thorpej Exp $
 
-SHA1 (simhv210-0b2.zip) = 841669853d24f7b2b608442806eeaa083f2dd7ab
-Size (simhv210-0b2.zip) = 1555874 bytes
-SHA1 (xq_beta5.zip) = a66fe7fecb76737632e262ae40c3d59147071a7e
-Size (xq_beta5.zip) = 24582 bytes
-SHA1 (patch-aa) = e14a00127c162fcaf626f251722d5aaf9d439f09
-SHA1 (patch-ab) = 516740338b0648a7503b2cbac00ff6bbec086c9e
+SHA1 (simhv210-4.zip) = 889e4a61eb8ed3eec768700920f69022f81c2fe2
+Size (simhv210-4.zip) = 1678424 bytes
+SHA1 (patch-aa) = caa25e4f265d03f65347a2e873e0e736baa43750
+SHA1 (patch-ab) = 97d66b3fcf79c51feb54a6cba3cdc3f58d15eb3f

@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2003/03/29 12:40:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/05/31 16:10:52 thorpej Exp $
 #
 
-DISTNAME=	simhv210-0b2
-PKGNAME=	simh-2.10.0b2
-PKGREVISION=	2
+DISTNAME=	simhv210-4
+PKGNAME=	simh-2.10.4
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	emulators
 MASTER_SITES=	http://simh.trailing-edge.com/sources/
 EXTRACT_SUFX=	.zip
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		xq_beta5${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://simh.trailing-edge.com/
@@ -28,8 +27,6 @@ CFLAGS:=	${CFLAGS:S/-O2//}
 post-extract:
 	${MKDIR} ${WRKSRC}/BIN
 	${MV} ${WRKSRC}/makefile ${WRKSRC}/Makefile
-	${MV} ${WRKSRC}/AltairZ80/altairZ80_defs.h \
-	    ${WRKSRC}/AltairZ80/altairz80_defs.h
 
 do-install:
 	(cd ${WRKSRC}/BIN && for BIN in *; do				\
