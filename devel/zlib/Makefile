@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/09/01 18:45:47 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2003/02/28 23:25:21 grant Exp $
 
 DISTNAME=	zlib-1.1.4
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gzip.org/zlib/
 COMMENT=	General purpose data compression library
 
-BUILD_DEPENDS+=	libtool-base>=${LIBTOOL_VERSION}:../../devel/libtool-base
+BUILD_DEPENDS+=	libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 
 USE_BUILDLINK2=		# defined
 #NOT_FOR_PLATFORM=	NetBSD-1.[4-9]*-* # in base NetBSD system
