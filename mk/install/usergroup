@@ -54,9 +54,9 @@ USERADD="@USERADD@"
 SELF=$0
 ACTION=$1
 PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
-PKG_REFCOUNT_DBDIR="@PKG_REFCOUNT_DBDIR@"
 : ${PKGNAME=${PKG_METADATA_DIR##*/}}
-: ${PKGBASE=${PKGNAME%-[0-9]*}}
+: ${PKG_DBDIR=${PKG_METADATA_DIR%/*}}
+: ${PKG_REFCOUNT_DBDIR=${PKG_DBDIR}.refcount}
 
 PKG_REFCOUNT_USERS_DBDIR="${PKG_REFCOUNT_DBDIR}/users"
 PKG_REFCOUNT_GROUPS_DBDIR="${PKG_REFCOUNT_DBDIR}/groups"
@@ -158,7 +158,7 @@ ADD)
 		case $user in
 		"")	continue ;;
 		esac
-		: ${descr:="${PKGBASE} $user user"}
+		: ${descr:="${PKGNAME%-[0-9]*} $user user"}
 		: ${home:="${PKG_USER_HOME}"}
 		: ${shell:="${PKG_USER_SHELL}"}
 		shadow_dir="${PKG_REFCOUNT_USERS_DBDIR}/$user"
