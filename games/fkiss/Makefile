@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/12/04 00:28:02 ben Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/04 03:22:49 ben Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -23,6 +23,15 @@ GNU_CONFIGURE=		yes
 CFLAGS+=		-DUSE_STDARG -DHAVE_STDARG_H
 CFLAGS+=		-DDEV_SOUND=\"\\\"${DEVOSSSOUND}\\\"\"
 ALL_TARGET=		fkiss
+
+post-patch:
+	${MV} ${WRKSRC}/sound.c ${WRKSRC}/sound.c.bak
+	${SED} -e "s,XXXPREFIXXXX,${PREFIX},g" \
+		<${WRKSRC}/sound.c.bak >${WRKSRC}/sound.c
+	${MV} ${WRKSRC}/fkiss.man ${WRKSRC}/fkiss.man.bak
+	${SED} -e "s,XXXPREFIXXXX,${PREFIX},g" \
+		<${WRKSRC}/fkiss.man.bak >${WRKSRC}/fkiss.man
+
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fkiss ${PREFIX}/bin
