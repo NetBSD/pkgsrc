@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 1999/09/13 10:05:58 tron Exp $
+$NetBSD: patch-aa,v 1.3 1999/09/20 09:30:19 agc Exp $
 
---- Makefile.orig	Fri Jul 23 23:50:33 1999
-+++ Makefile	Mon Sep 13 11:58:06 1999
+--- Makefile.orig	Fri Jul 23 22:50:33 1999
++++ Makefile	Mon Sep 20 10:23:16 1999
 @@ -4,7 +4,7 @@
  # Modified a number of times by Tord Jansson <tord.jansson@swipnet.se>
  
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.2 1999/09/13 10:05:58 tron Exp $
 +
  bladeenc: $(OBJS)
 -	gcc -o $@ $^ $(LIBS)
-+	gcc -g -o $@ $> $(LIBS)
++	gcc -g -o $@ ${OBJS} $(LIBS)
  
  %.o: %.c
 -	gcc $(CFLAGS) -c -o $@ $^
