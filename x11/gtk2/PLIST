@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2004/06/20 20:12:20 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.29 2004/07/10 09:36:22 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -289,22 +289,22 @@ lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.la
 lib/libgdk-x11-2.0.so
 lib/libgdk-x11-2.0.so.400
-lib/libgdk-x11-2.0.so.400.3
+lib/libgdk-x11-2.0.so.400.4
 lib/libgdk_pixbuf-2.0.a
 lib/libgdk_pixbuf-2.0.la
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.400
-lib/libgdk_pixbuf-2.0.so.400.3
+lib/libgdk_pixbuf-2.0.so.400.4
 lib/libgdk_pixbuf_xlib-2.0.a
 lib/libgdk_pixbuf_xlib-2.0.la
 lib/libgdk_pixbuf_xlib-2.0.so
 lib/libgdk_pixbuf_xlib-2.0.so.400
-lib/libgdk_pixbuf_xlib-2.0.so.400.3
+lib/libgdk_pixbuf_xlib-2.0.so.400.4
 lib/libgtk-x11-2.0.a
 lib/libgtk-x11-2.0.la
 lib/libgtk-x11-2.0.so
 lib/libgtk-x11-2.0.so.400
-lib/libgtk-x11-2.0.so.400.3
+lib/libgtk-x11-2.0.so.400.4
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
@@ -319,6 +319,7 @@ share/doc/gdk-pixbuf/GdkPixbufLoader.html
 share/doc/gdk-pixbuf/apa.html
 share/doc/gdk-pixbuf/apas02.html
 share/doc/gdk-pixbuf/apas03.html
+share/doc/gdk-pixbuf/composite.png
 share/doc/gdk-pixbuf/gdk-pixbuf-Module-Interface.html
 share/doc/gdk-pixbuf/gdk-pixbuf-Versioning.html
 share/doc/gdk-pixbuf/gdk-pixbuf-animation.html
@@ -348,7 +349,6 @@ share/doc/gdk-pixbuf/license.html
 share/doc/gdk-pixbuf/right.png
 share/doc/gdk-pixbuf/rn01.html
 share/doc/gdk-pixbuf/rn02.html
-share/doc/gdk-pixbuf/style.css
 share/doc/gdk-pixbuf/up.png
 share/doc/gdk/GdkDisplay.html
 share/doc/gdk/GdkDisplayManager.html
@@ -450,7 +450,6 @@ share/doc/gdk/sizing.png
 share/doc/gdk/spider.png
 share/doc/gdk/spraycan.png
 share/doc/gdk/star.png
-share/doc/gdk/style.css
 share/doc/gdk/target.png
 share/doc/gdk/tcross.png
 share/doc/gdk/top_left_arrow.png
@@ -758,7 +757,6 @@ share/doc/gtk/stock_zoom_1_24.png
 share/doc/gtk/stock_zoom_fit_24.png
 share/doc/gtk/stock_zoom_in_24.png
 share/doc/gtk/stock_zoom_out_24.png
-share/doc/gtk/style.css
 share/doc/gtk/ui-manager.html
 share/doc/gtk/up.png
 share/gtk-2.0/demo/alphatest.png
