@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 1999/12/31 21:20:25 agc Exp $
+# $NetBSD: Makefile,v 1.53 2000/01/06 04:05:35 abs Exp $
 #
 
+    SUBDIR += ac3dec
     SUBDIR += amp
     SUBDIR += bladeenc
     SUBDIR += cam
