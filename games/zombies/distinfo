@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2004/05/12 01:39:00 jschauma Exp $
+$NetBSD: distinfo,v 1.5 2004/08/04 02:57:56 jschauma Exp $
 
 SHA1 (zombies-1.0.tar.gz) = 5bc4c87211b5aa29edffb7df74ee12c0bbdc408a
 Size (zombies-1.0.tar.gz) = 9482 bytes
-SHA1 (patch-aa) = 81c556808201263cd20c2ed7b5464e64ba11dbd7
+SHA1 (patch-aa) = 8677087f846ebe32844c94ec1b3d601377f8ee62
 SHA1 (patch-ab) = c17689d0b97e48e8d75c696809a77cf9664bcc4e
