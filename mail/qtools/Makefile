@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/07/22 00:18:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/22 00:23:55 schmonz Exp $
 #
 
 DISTNAME=	qtools-0.56
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.superscript.com/qtools/intro.html
 COMMENT=	Utilities for filtering via .qmail
 
 DEPENDS+=	{ezmlm>=0.53,ezmlm-idx-[0-9]*}:../../mail/ezmlm
-DEPENDS+=	{qmail>=1.03,netqmail>=1.05}:../../mail/qmail
+DEPENDS+=	qmail>=1.03:../../mail/qmail
 
 USE_BUILDLINK3=	yes
 
