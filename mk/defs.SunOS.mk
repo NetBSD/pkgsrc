@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.43 2002/12/09 05:38:57 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.44 2002/12/15 02:12:32 salo Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -17,6 +17,7 @@ ECHO?=		/usr/ucb/echo
 EGREP?=		/usr/xpg4/bin/egrep
 EXPR?=		/usr/bin/expr
 FALSE?=		/usr/bin/false
+FGREP?=		/usr/xpg4/bin/fgrep
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		${LOCALBASE}/bin/gmake
