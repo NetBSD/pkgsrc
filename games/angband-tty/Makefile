@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/27 13:39:49 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/12/31 15:19:13 tv Exp $
 #
 
 DISTNAME=		angband-283
@@ -8,8 +8,9 @@ MASTER_SITES=		ftp://export.andrew.cmu.edu/angband/Source/
 
 MAINTAINER=		root@garbled.net
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
+CONFLICTS=		angband-x11-*
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
 MAKEFILE=		Makefile.std
 ALL_TARGET=		angband
 
