@@ -1,24 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/09/15 18:56:22 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2000/08/15 21:25:39 wiz Exp $
 
 --- configure.orig	Fri Aug 20 06:16:18 1999
 +++ configure	Tue Sep 14 23:56:02 1999
-@@ -1623,6 +1623,8 @@
- fi
- 
- 
-+# Use NetBSD's pkglibtool.
-+if false; then
- # Check for any special flags to pass to ltconfig.
- libtool_flags="--cache-file=$cache_file"
- test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -1780,6 +1782,7 @@
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
- exec 5>>./config.log
-+fi
- 
- echo $ac_n "checking for AIX""... $ac_c" 1>&6
- echo "configure:1786: checking for AIX" >&5
 @@ -2379,7 +2382,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
