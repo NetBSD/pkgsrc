@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2002/09/25 23:17:26 jwise Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/27 05:09:11 grant Exp $
 
 DISTNAME=		Sablot-0.96
 PKGNAME=		sablotron-0.96
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		http://download-2.gingerall.cz/download/sablot/
 
@@ -10,11 +11,20 @@ HOMEPAGE=		http://www.gingerall.com/charlie/ga/xml/p_sab.xml
 COMMENT=		XML toolkit implementing XSLT, DOM, and XPath
 
 USE_BUILDLINK2=		YES
+USE_CXX=		YES
 GNU_CONFIGURE=  	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LDFLAGS+=		-liconv
+
+# this is required for gcc 2.95.x, where libstdc++ doesn't include the
+# math functions. only libstdc++ is required for gcc 3.3.
+LDFLAGS+=               -lstdc++ -lm
+
 .include "../../converters/libiconv/buildlink2.mk"
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
