@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@BUILDLINK_WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.1.2.4 2002/06/29 20:02:42 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.1.2.5 2002/06/30 04:44:01 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'

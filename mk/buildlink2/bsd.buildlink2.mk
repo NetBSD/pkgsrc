@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.6 2002/06/29 20:02:40 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.7 2002/06/30 04:44:00 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -347,6 +347,8 @@ _ALIASES.CPP=		cpp
 _ALIASES.FC=		f77 g77
 _ALIASES.LD=		ld
 
+BUILDLINK_WRAPPER_SHELL?=	${SH}
+
 # _BLNK_WRAP_*.<wrappee> variables represent "template methods" of the
 
 # wrapper script that may be customized per wrapper:
@@ -480,6 +482,7 @@ ${BUILDLINK_${_wrappee_}}:						\
 	${MKDIR} ${.TARGET:H};						\
 	${CAT} ${_BLNK_WRAPPER_SH.${_wrappee_}}	|			\
 		${SED}	-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
+			-e "s|@BUILDLINK_WRAPPER_SHELL@|${BUILDLINK_WRAPPER_SHELL}|g" \
 			-e "s|@CAT@|${CAT:Q}|g"				\
 			-e "s|@ECHO@|${ECHO:Q}|g"			\
 			-e "s|@SED@|${SED:Q}|g"				\
