@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/07 16:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/06 10:08:38 wiz Exp $
 #
 
 DISTNAME=	kanjidic2
-PKGNAME=	kanjidic2-2003.3
+PKGNAME=	kanjidic2-2004.1
 CATEGORIES=	japanese misc
 MASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/ \
 		http://japanology.arts.kuleuven.ac.be/mirrors/monash/ \
@@ -16,7 +16,7 @@ EXTRACT_SUFX=	.gz
 DISTFILES=	kanjidic2.xml.gz kanjidic_doc.html kanjidic2_ov.html kanjidic2_dtd.gz kanjidic2_xsd.gz
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/edict.html
+HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/kanjidic.html
 COMMENT=	Japanese Kanji information
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
