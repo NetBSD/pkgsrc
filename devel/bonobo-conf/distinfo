@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/08/11 13:45:43 rh Exp $
+$NetBSD: distinfo,v 1.2 2001/09/25 05:23:35 tron Exp $
 
-SHA1 (bonobo-conf-0.10.tar.bz2) = f3692d62a72b0e85b5ff3052c1df128a05f01477
-Size (bonobo-conf-0.10.tar.bz2) = 327195 bytes
+SHA1 (bonobo-conf-0.11.tar.gz) = cec714d0c097eada65a5301ee2bbb5814763a1bd
+Size (bonobo-conf-0.11.tar.gz) = 434857 bytes
