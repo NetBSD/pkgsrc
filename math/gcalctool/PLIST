@@ -1,5 +1,30 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/02 10:26:00 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/06 18:26:50 drochner Exp $
 bin/gcalctool
-man/man1/calctool.1
-share/gcalctool/calctool.gif
-@dirrm share/gcalctool
+etc/share/gconf/schemas/gcalctool.schemas
+share/applications/gcalctool.desktop
+share/gnome/help/gcalctool/C/figures/gcalctool_basic_window.png
+share/gnome/help/gcalctool/C/figures/gcalctool_financial_window.png
+share/gnome/help/gcalctool/C/figures/gcalctool_menu_symbol.png
+share/gnome/help/gcalctool/C/figures/gcalctool_scientific_window.png
+share/gnome/help/gcalctool/C/gcalctool.xml
+share/gnome/help/gcalctool/C/legal.xml
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gcalctool.mo
+share/omf/gcalctool/gcalctool-C.omf
+share/pixmaps/gcalctool.png
+@dirrm share/gnome/help/gcalctool/C/figures
+@dirrm share/gnome/help/gcalctool/C
+@dirrm share/gnome/help/gcalctool
+@dirrm share/omf/gcalctool
