@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/06/26 16:02:17 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/07 14:42:27 zuntum Exp $
 #
 
-DISTNAME=	getmail-2.1.0
+DISTNAME=	getmail-2.1.3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.qcc.sk.ca/~charlesc/software/getmail-2.0/
 
@@ -15,7 +15,7 @@ NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
 post-patch:
-	${SED} "s,/usr/local,${PREFIX}," ${WRKSRC}/getmail		\
+	${SED} "s,/usr/lib,${PREFIX}/libexec," ${WRKSRC}/getmail	\
 		> ${WRKSRC}/getmail.done
 	${MV} ${WRKSRC}/getmail.done ${WRKSRC}/getmail
 
