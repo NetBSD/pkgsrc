@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/17 17:54:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/03/13 23:07:29 jmc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
@@ -45,6 +45,7 @@ post-patch:
 	    s#@SFILE@#${SFILE}#' \
 	    <${WRKSRC}/config.h-dist >${WRKSRC}/config.h
 	@${CP} ${FILESDIR}/s-netbsd.h ${WRKSRC}/conf/s-netbsd.h
+	@${CP} ${FILESDIR}/m-powerpc.h ${WRKSRC}/conf/m-powerpc.h
 	@${CP} ${WRKSRC}/conf/m-m680x0.h ${WRKSRC}/conf/m-m68k.h
 
 .include "../../mk/bsd.pkg.mk"
