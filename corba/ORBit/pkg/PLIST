@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/04/04 19:20:10 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/04/15 21:33:04 tron Exp $
 bin/libIDL-config
 bin/name-client
 bin/old-name-server
@@ -11,16 +11,16 @@ lib/libIDL-0.6.so.0.0
 lib/libIDL.la
 lib/libIDL.a
 lib/libIDLConf.sh
-lib/libORBitCosNaming.so.4.2
+lib/libORBitCosNaming.so.4.3
 lib/libORBitCosNaming.la
 lib/libORBitCosNaming.a
-lib/libORBitutil.so.4.2
+lib/libORBitutil.so.4.3
 lib/libORBitutil.la
 lib/libORBitutil.a
-lib/libIIOP.so.4.2
+lib/libIIOP.so.4.3
 lib/libIIOP.la
 lib/libIIOP.a
-lib/libORBit.so.4.2
+lib/libORBit.so.4.3
 lib/libORBit.la
 lib/libORBit.a
 lib/libname-server.a
