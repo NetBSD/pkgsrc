@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/01/02 15:36:33 mjl Exp $
+# $NetBSD: Makefile,v 1.11 2003/04/21 18:14:53 mjl Exp $
 #
 
-DISTNAME=	DBIx-SearchBuilder-0.76
+DISTNAME=	DBIx-SearchBuilder-0.80
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5dxs
 CATEGORIES=	databases perl5
