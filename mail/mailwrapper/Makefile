@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/07/23 23:01:23 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2004/07/24 09:19:15 jlam Exp $
 
 DISTNAME=	mailwrapper-19990412
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -18,10 +18,13 @@ DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 EGDIR=			${PREFIX}/share/examples/mailwrapper
 
+MAILWRAPPER_BACKUP_SFX=	.pkgsrc.mailwrapper
+FILES_SUBST+=	MAILWRAPPER_BACKUP_SFX=${MAILWRAPPER_BACKUP_SFX}
+
 MAILWRAPPEES=	/usr/bin/mailq						\
 		/usr/bin/newaliases	/usr/sbin/newaliases		\
 		/usr/sbin/sendmail	/usr/lib/sendmail
-FILES_SUBST=	MAILWRAPPEES=${MAILWRAPPEES:Q}
+FILES_SUBST+=	MAILWRAPPEES=${MAILWRAPPEES:Q}
 
 do-configure:
 	cd ${WRKSRC};							\
