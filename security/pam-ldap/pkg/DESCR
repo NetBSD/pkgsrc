@@ -1,0 +1,15 @@
+  The pam_ldap module provides the means for workstations to authenticate
+against LDAP directories, and to change their passwords in the directory.
+Key Benefits are:
+
+ * Uses the Pluggable Authentication Module API defined in OSF DCE RFC 86.0.
+ * Can utilize transport layer security (such as SSL or TLS) to encrypt
+   transactions between the workstation and the LDAP server and provide
+   strongly authenticated sign-on.
+ * Shares configuration information with nss_ldap module
+ * Supports ypldapd locator for finding LDAP servers
+ * Supports Netscape Directory Server's password policies and directory-based
+   access authorization.
+
+  The software is distributed under the terms of the GNU General Library
+Public License.
