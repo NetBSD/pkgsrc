@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/07/25 12:44:34 wulf Exp $
+$NetBSD: patch-ac,v 1.2 2005/02/19 15:40:54 wiz Exp $
 
---- interp/random.c.orig	Mon Jul 24 00:23:32 2000
-+++ interp/random.c	Mon Jul 24 00:23:39 2000
-@@ -65,7 +65,7 @@
+--- interp/random.c.orig	1999-08-31 18:19:18.000000000 +0200
++++ interp/random.c
+@@ -65,7 +65,7 @@ long int temp;
     useed = temp+seed;   /* start user somewhere else */
  }
  
