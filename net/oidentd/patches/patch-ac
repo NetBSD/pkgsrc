@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.3 2004/01/04 12:59:40 tron Exp $
+$NetBSD: patch-ac,v 1.4 2005/02/24 15:49:26 tron Exp $
 
---- src/kernel/netbsd.c.orig	2003-02-12 03:15:59.000000000 +0100
-+++ src/kernel/netbsd.c	2004-01-04 13:57:58.000000000 +0100
+--- src/kernel/netbsd.c.orig	2003-02-12 02:15:59.000000000 +0000
++++ src/kernel/netbsd.c	2005-02-24 15:40:54.000000000 +0000
 @@ -29,6 +29,7 @@
  #include <errno.h>
  #include <string.h>
@@ -10,7 +10,19 @@ $NetBSD: patch-ac,v 1.3 2004/01/04 12:59:40 tron Exp $
  #include <sys/socket.h>
  #include <sys/socketvar.h>
  #include <netinet/in.h>
-@@ -162,7 +163,7 @@
+@@ -99,7 +100,11 @@
+ 	kinfo->nl[N_TCB].n_name = "_tcbtable";
+ 
+ #ifdef WANT_IPV6
++#if __NetBSD_Version__ >= 106250000	/* 1.6Y */
++	kinfo->nl[N_TCB6].n_name = "_tcbtable";
++#else
+ 	kinfo->nl[N_TCB6].n_name = "_tcb6";
++#endif
+ #else
+ 	kinfo->nl[N_TCB6].n_name = "_oidentd_nonexistent";
+ #endif
+@@ -162,7 +167,7 @@
  	if (tcbtablep == NULL)
  		return (NULL);
  
@@ -19,7 +31,7 @@ $NetBSD: patch-ac,v 1.3 2004/01/04 12:59:40 tron Exp $
  	while (kpcbp != (struct inpcb *) ktcbtablep) {
  		if (getbuf((u_long) kpcbp, &pcb, sizeof(struct inpcb)) == -1)
  			break;
-@@ -185,7 +186,7 @@
+@@ -185,7 +190,7 @@
  			return (pcb.inp_socket);
  		}
  
@@ -28,15 +40,79 @@ $NetBSD: patch-ac,v 1.3 2004/01/04 12:59:40 tron Exp $
  	}
  
  	return (NULL);
-@@ -351,7 +352,11 @@
- 			return (tcb6_temp.in6p_socket);
- 		}
+@@ -327,12 +332,38 @@
+ ** Returns NULL if no match.
+ */
  
-+#if defined(__NetBSD__) && __NetBSD_Version__ >= 106250000	/* 1.6Y */
-+		tcb6_cur = (struct in6pcb *) tcb6_temp.in6p_queue.cqe_next;
++#if __NetBSD_Version__ >= 106250000
++static struct socket *getlist6(	struct inpcbtable *tcbtablep,
++								struct inpcbtable *ktcbtablep,
 +#else
- 		tcb6_cur = tcb6_temp.in6p_next;
+ static struct socket *getlist6(	struct in6pcb *tcb6,
 +#endif
+ 								in_port_t lport,
+ 								in_port_t fport,
+ 								const struct in6_addr *laddr,
+ 								const struct in6_addr *faddr)
+ {
++#if __NetBSD_Version__ >= 106250000
++	struct in6pcb *kpcbp, pcb;
++
++	if (tcbtablep == NULL)
++		return (NULL);
++
++	kpcbp = (struct in6pcb *) tcbtablep->inpt_queue.cqh_first;
++	while (kpcbp != (struct in6pcb *) ktcbtablep) {
++		if (getbuf((u_long) kpcbp, &pcb, sizeof(struct in6pcb)) == -1)
++			break;
++		if (pcb.in6p_fport == fport &&
++			pcb.in6p_lport == lport &&
++			IN6_ARE_ADDR_EQUAL(&pcb.in6p_laddr, laddr) &&
++			IN6_ARE_ADDR_EQUAL(&pcb.in6p_faddr, faddr))
++		{
++			return (pcb.in6p_socket);
++		}
++
++		kpcbp = (struct in6pcb *) pcb.in6p_queue.cqe_next;
++	}
++#else
+ 	struct in6pcb *tcb6_cur, tcb6_temp;
+ 
+ 	if (tcb6 == NULL)
+@@ -355,7 +386,7 @@
  		if (getbuf((u_long) tcb6_cur, &tcb6_temp, sizeof(tcb6_temp)) == -1)
  			break;
  	} while ((u_long) tcb6_cur != kinfo->nl[N_TCB6].n_value);
+-
++#endif
+ 	return (NULL);
+ }
+ 
+@@ -368,6 +399,19 @@
+ 				struct sockaddr_storage *laddr,
+ 				struct sockaddr_storage *faddr)
+ {
++#if __NetBSD_Version__ >= 106250000	/* 1.6Y */
++	struct socket *sockp, sock;
++	struct inpcbtable tcbtable;
++	int ret;
++
++	ret = getbuf(kinfo->nl[N_TCB6].n_value, &tcbtable, sizeof(tcbtable));
++	if (ret == -1)
++		return (-1);
++
++	sockp = getlist6(&tcbtable,
++				(struct inpcbtable *) kinfo->nl[N_TCB6].n_value,
++				lport, fport, &SIN6(laddr)->sin6_addr, &SIN6(faddr)->sin6_addr);
++#else
+ 	struct socket *sockp, sock;
+ 	struct in6pcb tcb6;
+ 	int ret;
+@@ -378,6 +422,7 @@
+ 
+ 	sockp = getlist6(&tcb6, lport, fport,
+ 				&SIN6(laddr)->sin6_addr, &SIN6(faddr)->sin6_addr);
++#endif
+ 
+ 	if (sockp == NULL)
+ 		return (-1);
