@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/05/02 11:56:15 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/07/13 13:53:08 wiz Exp $
 
 .if !defined(GNOME_PRINT_BUILDLINK2_MK)
 GNOME_PRINT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-print
-BUILDLINK_DEPENDS.gnome-print?=		gnome-print>=0.36nb2
+BUILDLINK_DEPENDS.gnome-print?=		gnome-print>=0.36nb3
 BUILDLINK_PKGSRCDIR.gnome-print?=	../../print/gnome-print
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gnome-print=gnome-print

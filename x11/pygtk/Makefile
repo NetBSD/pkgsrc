@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:15:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/13 13:54:28 wiz Exp $
 #
 
 DISTNAME=	pygtk-0.6.9
 PKGNAME=	${PYPKGPREFIX}-gtk-0.6.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/python/
 

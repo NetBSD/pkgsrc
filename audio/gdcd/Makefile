@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2003/06/02 01:21:39 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/13 13:50:23 wiz Exp $
 #
 
 DISTNAME=	gdcd-0.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://gdcd.undergrid.net/source_archive/
 

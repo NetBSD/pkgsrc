@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/03/10 03:27:59 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/07/13 13:51:22 wiz Exp $
 #
 # Optionally define:
 #
@@ -11,7 +11,7 @@ NCURSES_BUILDLINK2_MK=     # defined
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.ncurses?=	ncurses>=5.0
+BUILDLINK_DEPENDS.ncurses?=	ncurses>=5.3nb1
 BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
 
 .if defined(USE_NCURSES)

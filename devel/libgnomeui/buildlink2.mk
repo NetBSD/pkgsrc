@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/05/02 11:54:36 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/07/13 13:51:19 wiz Exp $
 
 .if !defined(LIBGNOMEUI_BUILDLINK2_MK)
 LIBGNOMEUI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libgnomeui
-BUILDLINK_DEPENDS.libgnomeui?=	libgnomeui>=2.2.0.1nb1
+BUILDLINK_DEPENDS.libgnomeui?=	libgnomeui>=2.2.2nb1
 BUILDLINK_PKGSRCDIR.libgnomeui?=	../../devel/libgnomeui
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libgnomeui=libgnomeui

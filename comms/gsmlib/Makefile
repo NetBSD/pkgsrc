@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:21:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/13 13:50:50 wiz Exp $
 #
 
 DISTNAME=	gsmlib-1.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	comms devel
 MASTER_SITES=	http://www.pxh.de/fs/gsmlib/download/
 
