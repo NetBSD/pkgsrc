@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/12/21 11:09:59 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/10 01:27:42 mjl Exp $
 
 DISTNAME=	fxtv-1.03
 PKGREVISION=	2
@@ -10,8 +10,8 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://people.freebsd.org/~rhh/fxtv/
 COMMENT=	TV display application for Brooktree 848 compatible TV cards
 
-ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-arm32 NetBSD-1.[5-9]*-atari \
-			NetBSD-1.[5-9]*-i386
+#ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-arm32 NetBSD-1.[5-9]*-atari \
+#			NetBSD-1.[5-9]*-i386
 
 USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
@@ -38,6 +38,11 @@ post-patch:
 			$${file} > $${file}.fixed;			\
 		${MV} -f $${file}.fixed $${file};			\
 	done
+	if [ -e /usr/include/machine/mouse.h ] ; then \
+		echo '#define HAVE_MOUSE_H 1' > ${WRKSRC}/netbsdconf.h; \
+	else \
+		echo '#define HAVE_MOUSE_H 0' > ${WRKSRC}/netbsdconf.h; \
+	fi
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
