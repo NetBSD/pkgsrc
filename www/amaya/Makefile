@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2003/10/11 13:39:06 grant Exp $
+# $NetBSD: Makefile,v 1.28 2003/11/17 15:28:31 wiz Exp $
 #
 
 DISTNAME=	amaya-src-8.0
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/Amaya/work
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
@@ -43,6 +43,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/Amaya
 
 .include "../../graphics/imlib/buildlink2.mk"
+.include "../../textproc/expat/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
