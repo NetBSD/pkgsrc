@@ -1,40 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:00:58 seb Exp $
-@cwd ${DICT_DIR}
-@cwd ${DICT_DIR}
-canna/default.cbp
-canna/english.cbp
-canna/jdaemon.cbp
-canna/just.cbp
-canna/kaisoku.cbp
-canna/kana.cbp
-canna/lan5.cbp
-canna/matsu.cbp
-canna/newjis.cbp
-canna/romaji.cbp
-canna/sokuon.cbp
-canna/tut.cbp
-canna/vje.cbp
-canna/wx2+.cbp
-@cwd ${PREFIX}
+@comment $NetBSD: PLIST,v 1.2 2002/06/10 09:47:26 sakamoto Exp $
 include/canna/RK.h
 include/canna/jrkanji.h
 include/canna/keydef.h
 include/canna/mfdef.h
 lib/libRKC.a
-lib/libRKC.so
-lib/libRKC.so.1
 lib/libRKC.so.1.0
 lib/libRKC16.a
-lib/libRKC16.so
-lib/libRKC16.so.1
 lib/libRKC16.so.1.0
 lib/libcanna.a
-lib/libcanna.so
-lib/libcanna.so.1
 lib/libcanna.so.1.0
 lib/libcanna16.a
-lib/libcanna16.so
-lib/libcanna16.so.1
 lib/libcanna16.so.1.0
 man/ja_JP.EUC/man3/RkCloseRoma.3
 man/ja_JP.EUC/man3/RkCvtEuc.3
@@ -79,6 +54,34 @@ man/ja_JP.EUC/man3/jrKanjiControl.3
 man/ja_JP.EUC/man3/jrKanjiString.3
 man/ja_JP.EUC/man3/uilib.3
 share/canna/default.canna
+share/canna/dic/default.cbp
+share/canna/dic/english.cbp
+share/canna/dic/jdaemon.cbp
+share/canna/dic/just.cbp
+share/canna/dic/kaisoku.cbp
+share/canna/dic/kana.cbp
+share/canna/dic/lan5.cbp
+share/canna/dic/matsu.cbp
+share/canna/dic/newjis.cbp
+share/canna/dic/romaji.cbp
+share/canna/dic/sample/src/default.ctd
+share/canna/dic/sample/src/english.ctd
+share/canna/dic/sample/src/jdaemon.ctd
+share/canna/dic/sample/src/just.ctd
+share/canna/dic/sample/src/kaisoku.ctd
+share/canna/dic/sample/src/kana.ctd
+share/canna/dic/sample/src/lan5.ctd
+share/canna/dic/sample/src/matsu.ctd
+share/canna/dic/sample/src/newjis.ctd
+share/canna/dic/sample/src/romaji.ctd
+share/canna/dic/sample/src/sokuon.ctd
+share/canna/dic/sample/src/tut.ctd
+share/canna/dic/sample/src/vje.ctd
+share/canna/dic/sample/src/wx2+.ctd
+share/canna/dic/sokuon.cbp
+share/canna/dic/tut.cbp
+share/canna/dic/vje.cbp
+share/canna/dic/wx2+.cbp
 share/canna/engine.cf
 share/canna/sample/1.1.canna
 share/canna/sample/1.2.canna
@@ -93,29 +96,14 @@ share/canna/sample/sample.canna
 share/canna/sample/skk.canna
 share/canna/sample/src/Makefile
 share/canna/sample/src/is.c
-share/canna/sample/src/default.ctd
-share/canna/sample/src/english.ctd
-share/canna/sample/src/jdaemon.ctd
-share/canna/sample/src/just.ctd
-share/canna/sample/src/kaisoku.ctd
-share/canna/sample/src/kana.ctd
-share/canna/sample/src/lan5.ctd
-share/canna/sample/src/matsu.ctd
-share/canna/sample/src/newjis.ctd
-share/canna/sample/src/romaji.ctd
-share/canna/sample/src/sokuon.ctd
-share/canna/sample/src/tut.ctd
-share/canna/sample/src/vje.ctd
-share/canna/sample/src/wx2+.ctd
 share/canna/sample/tut.canna
 share/canna/sample/unix.canna
 share/canna/sample/vje.canna
 share/canna/sample/wx2+.canna
-@exec ln -s ${DICT_DIR}/canna ${PREFIX}/share/canna/dic
-@exec ${CHOWN} ${CANNAOWNER}:${CANNAGROUP} ${DICT_DIR}/canna
-@unexec ${RM} ${PREFIX}/share/canna/dic
 @dirrm share/canna/sample/src
 @dirrm share/canna/sample
+@dirrm share/canna/dic/sample/src
+@dirrm share/canna/dic/sample
+@dirrm share/canna/dic
 @dirrm share/canna
 @dirrm include/canna
-@unexec ${RMDIR} ${DICT_DIR}/canna

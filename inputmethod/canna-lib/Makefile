@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:00:58 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/10 09:47:26 sakamoto Exp $
 #
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-lib-3.5.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.nec.co.jp/pub/Canna/Canna35/
 
@@ -18,9 +18,6 @@ COMMENT=	Kana-Kanji conversion system (library)
 
 INSTALL_TARGET=	install install.man
 
-# XXX USE_IMAKE can't pass MAKE_FLAGS to XMKMF.
-#USE_IMAKE=	# defined
-USE_X11BASE=	# defined
 BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
@@ -31,18 +28,11 @@ INET6=		# empty
 .endif
 CANNAOWNER?=    daemon
 CANNAGROUP?=    daemon
-DICT_DIR?=	${DESTDIR}/var/dict
 MAKE_ENV+=      CANNAOWNER=${CANNAOWNER} CANNAGROUP=${CANNAGROUP} \
-		DICT_DIR=${DICT_DIR} INET6=${INET6}
-PLIST_SUBST=	CANNAOWNER=${CANNAOWNER}	\
-		CANNAGROUP=${CANNAGROUP}	\
-		DICT_DIR=${DICT_DIR}		\
-		PREFIX=${PREFIX}
+		INET6=${INET6}
 
 # (1) Change SUBDIRS.
 # (2) Don't install `forcpp', `kpdic'.
-# (3) Include ${FILESDIR}/LinkFileList.rules just after including Canna.conf
-#     in Imakefiles.
 post-patch:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
 	@${SED}	-e 's|\(SUBDIRS = lib canna\).*\( misc\)|\1 cmd/forcpp cmd/kpdic dic/phono\2|' \
@@ -53,25 +43,14 @@ post-patch:
 	@${SED} -e '/InstallProgram/d' ${WRKSRC}/cmd/${f}/Imakefile.orig \
 		> ${WRKSRC}/cmd/${f}/Imakefile
 .endfor
-	@${FIND} ${WRKSRC} -name Imakefile -print | \
-	while read f; do \
-		${CP} $$f $${f}.orig; \
-		( \
-			${ECHO} '/#include ".*\/Canna.conf"$$/a\'; \
-			${ECHO} '#include "${FILESDIR}/LinkFileList.rules"'; \
-		) | ${SED} -f /dev/stdin $${f}.orig >$$f; \
-	done
 
 # We need to pass ${MAKE_ENV} to ${XMKMF}
 do-configure:
 	@cd ${WRKSRC} && \
-	    ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${MAKE_ENV} ${XMKMF}
+	    ${SETENV} ${SCRIPTS_ENV} ${MAKE_ENV} ${XMKMF}
 
 post-configure:
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
 
-post-install:
-	@${LN} -s ${DICT_DIR}/canna ${PREFIX}/share/canna/dic
-	@${CHOWN} ${CANNAOWNER}:${CANNAGROUP} ${DICT_DIR}/canna
-
+.include "../../devel/nbitools/nbitools.mk"
 .include "../../mk/bsd.pkg.mk"
