@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.7 2004/07/12 08:25:11 martti Exp $
-bin/xfce-mcs-manager
-bin/xfce-setting-show
-include/xfce4/xfce-mcs-manager/manager-plugin.h
-lib/pkgconfig/xfce-mcs-manager.pc
+@comment $NetBSD: PLIST,v 1.8 2005/01/17 12:56:13 martti Exp $
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/xfce-mcs-manager.mo
-${PKGLOCALEDIR}/locale/fa_IR/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce-mcs-manager.mo
@@ -23,12 +23,15 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce-mcs-manager.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/nb_NO/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce-mcs-manager.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce-mcs-manager.mo
@@ -36,19 +39,17 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce-mcs-manager.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce-mcs-manager.mo
+bin/xfce-mcs-manager
+bin/xfce-setting-show
+include/xfce4/xfce-mcs-manager/manager-plugin.h
+lib/pkgconfig/xfce-mcs-manager.pc
+share/applications/xfce-settings-manager.desktop
+share/icons/hicolor/48x48/apps/xfce4-settings.png
 share/xfce4/doc/C/images/settings_manager.png
-share/xfce4/doc/C/images/smgr_from_panel.png
 share/xfce4/doc/C/images/smgr_from_root_menu.png
 share/xfce4/doc/C/images/smgr_from_setup_button.png
-share/xfce4/doc/fr/images/settings_manager.png
-share/xfce4/doc/fr/images/smgr_from_panel.png
-share/xfce4/doc/fr/images/smgr_from_root_menu.png
-share/xfce4/doc/fr/images/smgr_from_setup_button.png
-share/xfce4/doc/fr/xfce-mcs-manager.html
 share/xfce4/doc/C/xfce-mcs-manager.html
 @dirrm share/xfce4/doc/C/images
 @dirrm share/xfce4/doc/C
-@dirrm share/xfce4/doc/fr/images
-@dirrm share/xfce4/doc/fr
 @dirrm share/xfce4/doc
 @dirrm include/xfce4/xfce-mcs-manager
