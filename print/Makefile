@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/07/31 01:56:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.39 2000/09/01 12:35:07 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -26,6 +26,7 @@
     SUBDIR += pdflib
     SUBDIR += psify
     SUBDIR += psutils
+    SUBDIR += py-reportlab
     SUBDIR += rtf2latex
     SUBDIR += stylewriter
     SUBDIR += teTeX
