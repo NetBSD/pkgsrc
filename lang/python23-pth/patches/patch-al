@@ -1,47 +1,44 @@
-$NetBSD: patch-al,v 1.2 2003/08/18 17:16:55 recht Exp $
+$NetBSD: patch-al,v 1.3 2003/09/10 00:11:04 recht Exp $
 
 --- pyconfig.h.in.orig	2003-07-22 17:20:49.000000000 +0200
-+++ pyconfig.h.in	2003-08-18 18:24:43.000000000 +0200
-@@ -835,6 +835,12 @@
++++ pyconfig.h.in	2003-09-10 01:01:29.000000000 +0200
+@@ -835,6 +835,13 @@
  /* Define _OSF_SOURCE to get the makedev macro. */
  #undef _OSF_SOURCE
  
 +/* These defines disable needed library functions on NetBSD < 1.6T */
 +/* ( _NETBSD_SOURCE doesn't exist prior to 1.6T ) */
-+#ifdef __NetBSD__
++#if defined(__NetBSD__)
 +#include <sys/param.h>
-+#if !defined(__NetBSD_Version__) || (__NetBSD_Version__ < 106200000)
++#endif
++#if !defined(__NetBSD__) || __NetBSD_Version__ > 106200000
 +
  /* Define to 2 if the system does not provide POSIX.1 features except with
     this defined. */
  #undef _POSIX_1_SOURCE
-@@ -845,18 +851,30 @@
+@@ -845,18 +852,20 @@
  /* Define to 1 if you need to in order for `stat' and other things to work. */
  #undef _POSIX_SOURCE
  
-+#endif
-+#endif /* __NetBSD__ */
-+
- /* Define if you have POSIX threads, and your system does not define that. */
- #undef _POSIX_THREADS
- 
- /* Define to force use of thread-safe errno, h_errno, and other functions */
- #undef _REENTRANT
- 
-+/* These defines disable needed library functions on NetBSD < 1.6T */
-+/* ( _NETBSD_SOURCE doesn't exists prior to 1.6T ) */
-+#ifdef __NetBSD__
-+#include <sys/param.h>
-+#if !defined(__NetBSD_Version__) || (__NetBSD_Version__ < 106200000)
-+
+-/* Define if you have POSIX threads, and your system does not define that. */
+-#undef _POSIX_THREADS
+-
+-/* Define to force use of thread-safe errno, h_errno, and other functions */
+-#undef _REENTRANT
+-
  /* Define to the level of X/Open that your system supports */
  #undef _XOPEN_SOURCE
  
  /* Define to activate Unix95-and-earlier features */
  #undef _XOPEN_SOURCE_EXTENDED
  
-+#endif
-+#endif /* __NetBSD__ */
++#endif /* __NetBSD_Version__ */
++
++/* Define if you have POSIX threads, and your system does not define that. */
++#undef _POSIX_THREADS
++
++/* Define to force use of thread-safe errno, h_errno, and other functions */
++#undef _REENTRANT
 +
  /* Define on FreeBSD to activate all library features */
  #undef __BSD_VISIBLE
