@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.241 2003/02/04 20:01:57 chris Exp $
+$NetBSD: TODO,v 1.242 2003/02/07 18:38:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -75,16 +75,18 @@ Suggested package updates
 
 	o Xbae-4.50.0
 	o adobe-cmaps-1.5 [pkg/19646]
+	o amaya-7.2
 	o angband-3.0.3
 	o aim-1.5.277
 	o amaya-7.0
+	o atk-1.2.1 [pkg/20235]
 	o aumix-2.8
 	o balsa-1.4.2
 	o binutils-2.13.2.1
 	o bluefish-0.8
-	o bochs-2.0.2
 	o bonnie++-1.03c
 	o bzflag-1.7g0
+	o canna-3.6p3 [pkg/20208]
 	o cdlabelgen-2.5.0
 	o centericq-4.9.2
 	o cfengine-1.6.5 [pkg/19459|seb]
@@ -102,6 +104,7 @@ Suggested package updates
 	o db4-4.1.25
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
+	o easytag-0.27
 	o elm-me-2.4pl100
 	o exim-4.12 [pkg/19850]
 	o fetchmail-6.2.1 [pkg/20143,pkg/20144]
@@ -113,9 +116,10 @@ Suggested package updates
 	o freeciv-1.14.0
 	o fsviewer-0.2.5
 	o g-wrap-1.3.4
-	o gauche-0.6.6 [kei]
+	o gauche-0.6.7 [kei]
+	o gcc3-3.2.2
 	o gcombust-0.1.54
-	o gcvs-1.0b4
+	o gcvs-1.0
 	o gd-2.0.4
 	o gdb-5.3
 	o gdm-2.4.1.1
@@ -124,8 +128,10 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o gimp-print-4.2.5
 	o gkrellm-2.1.7
+	o gkrellm-volume-2.1.7
 	o glade-0.6.4
 	o glade2-1.1.3 [pkg/19154]
+	o glib2-2.2.1 [pkg/20234]
 	o gmp-4.1.2
 	o gnome-applets-2.0.0
 	o gnome-python-1.4.4
@@ -133,14 +139,18 @@ Suggested package updates
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99beta
 	o gnuboy-1.0.3 [pkg/19580]
+	o gnucash-1.8.0
 	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.1
 	o gpgme-0.4.0
+	o gqmpeg-0.20.0
+	o gqview-1.3.0
 	o gsed-4.0.5
-	o gtetrinet-0.5.2
+	o gtetrinet-0.6.0
 	o gtk---2.2.0
+	o gtk2-2.2.1 [pkg/20237]
 	o gtk2-pan-0.13.3.90
-	o guile-1.6.2
+	o guile-1.6.3
 	o htmldoc-1.8.23
 	o horde-2.1 [pkg/19497]
 	o horde-2.2
@@ -161,30 +171,38 @@ Suggested package updates
 	o jpilot-0.99.4
 	o jpilot-syncmal-0.71.2
 	o jwhois-3.2.1
+	o kdbg-1.2.7
 	o kde-3.1 [skrll]
 	o kdevelop-2.1.5
-	o koth-0.7.7 [http://www.nongnu.org/koth/]
+	o koth-0.8.0 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4
 	o lcms-1.0.9
+	o leafnode-1.9.33
+	o lesstif-0.93.40
 	o libbonobo-2.0.1
+	o libdvdcss-1.2.5
 	o libgii-0.8.2
 	o libggi-2.0.2
 	o libole2-2.2.8
 	o libmcrypt-2.5.5
 	o librep-0.16.1
+	o librsvg-2.2.2.1
 	o libslang-1.4.7
-	o libxml-2.5.1 [problems with kde2(?)|pkg/20060]
-	o libxslt-1.0.24 [problems with kde2(?)]
+	o libsndfile-1.0.4
+	o libxml-2.5.2 [problems with kde2(?)|pkg/20229]
+	o libxslt-1.0.25 [problems with kde2(?)|pkg/20230]
 	o lilypond-1.6.6
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
+	o lyx-1.3.0
 	o maildrop-1.5.2
 	o mcrypt-2.6.3
 	o memtest86-3.0
 	o metacity-2.4.13
 	o mhonarc-2.5.13 [pkg/19366]
 	o micq-0.4.10.1
+	o midnight-commander-4.6.0
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
 	o mng-1.0.5rc2
@@ -203,10 +221,13 @@ Suggested package updates
 	o openoffice-1.0.2 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openssl-0.9.7
-	o opensp-1.5
-	o oss-3.9.7g
+	o opensp-1.5 [pkg/20220]
+	o oss-3.9.7h
+	o p0f-1.8.3
+	o pango-1.2.1
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
+	o pkgconfig-0.15.0 [pkg/20236]
 	o plib-1.6.0
 	o pnm2ppa-1.12
 	o povray-3.5
@@ -225,6 +246,8 @@ Suggested package updates
 	o ruby-1.6.8
 	o rxvt-2.7.9
 	o sablotron-0.97
+	o sane-backends-1.0.10
+	o sane-frontends-1.0.10
 	o scmxx-0.6.3.5 [pkg/20017]
 	o scribus-0.8
 	o scsh-0.6.3
@@ -233,6 +256,7 @@ Suggested package updates
 	o sendfile-20010424
 	o sendmail-8.12.7
 	o siag-3.5.5
+	o sketch-0.6.15
 	o slang-1.4.8
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
@@ -246,17 +270,20 @@ Suggested package updates
 	o suck-4.3.1
 	o sun-jdk14-1.4.1_01 [pkg/19853]
 	o sun-jre14-1.4.1_01 [pkg/19853]
+	o sweep-0.8.1
 	o swig-1.3.17
 	o sylpheed-claws-0.8.9
 	o tcl/tk-8.4.1 [bjoern]
 	o tcpreplay-1.3.2
 	o ted-2.12
 	o teTeX-2.0
-	o texmacs-1.0.1.2
+	o texinfo-4.5
+	o texmacs-1.0.1.3
 	o tightvnc-1.2.7
+	o tscp-0.9.7 [pkg/20166]
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.7
-	o tuxpaint-stamps-2002.12.03
+	o tuxpaint-stamps-2003.01.28
 	o vfu-4.00
 	o vice-1.11
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
@@ -270,6 +297,7 @@ Suggested package updates
 	o xfstt-1.4
 	o xmcd-3.2.0
 	o xpuyopuyo-0.9.5
+	o xscreensaver-4.07
 	o xsidplay-1.6.5pre20
 	o yudit-2.7.2
 
