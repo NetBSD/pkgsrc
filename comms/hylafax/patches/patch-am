@@ -1,75 +1,31 @@
-$NetBSD: patch-am,v 1.2 2000/08/29 17:08:38 abs Exp $
+$NetBSD: patch-am,v 1.3 2000/08/30 09:50:46 abs Exp $
 
---- faxd/tif_fax3.h.orig	Mon Oct 12 21:47:49 1998
-+++ faxd/tif_fax3.h
-@@ -327,6 +327,10 @@
- 		goto doneWhite1d;					\
- 	    case S_MakeUpW:						\
- 	    case S_MakeUp:						\
-+		if (!TabEnt->Param) {					\
-+		    unexpected("WhiteTable Zero-length", a0);		\
-+		    goto done1d;					\
-+		}							\
- 		a0 += TabEnt->Param;					\
- 		RunLength += TabEnt->Param;				\
- 		break;							\
-@@ -349,6 +353,10 @@
- 		goto doneBlack1d;					\
- 	    case S_MakeUpB:						\
- 	    case S_MakeUp:						\
-+		if (!TabEnt->Param) {					\
-+		    unexpected("BlackTable Zero-length", a0);		\
-+		    goto done1d;					\
-+		}							\
- 		a0 += TabEnt->Param;					\
- 		RunLength += TabEnt->Param;				\
- 		break;							\
-@@ -404,6 +412,8 @@
- 			goto doneWhite2da;				\
- 		    case S_MakeUpB:					\
- 		    case S_MakeUp:					\
-+			if (!TabEnt->Param)				\
-+			    goto zeroBlack2d;				\
- 			a0 += TabEnt->Param;				\
- 			RunLength += TabEnt->Param;			\
- 			break;						\
-@@ -420,6 +430,8 @@
- 			goto doneBlack2da;				\
- 		    case S_MakeUpW:					\
- 		    case S_MakeUp:					\
-+			if (!TabEnt->Param)				\
-+			    goto zeroWhite2d;				\
- 			a0 += TabEnt->Param;				\
- 			RunLength += TabEnt->Param;			\
- 			break;						\
-@@ -437,6 +449,8 @@
- 			goto doneWhite2db;				\
- 		    case S_MakeUpW:					\
- 		    case S_MakeUp:					\
-+			if (!TabEnt->Param)				\
-+			    goto zeroWhite2d;				\
- 			a0 += TabEnt->Param;				\
- 			RunLength += TabEnt->Param;			\
- 			break;						\
-@@ -453,6 +467,8 @@
- 			goto doneBlack2db;				\
- 		    case S_MakeUpB:					\
- 		    case S_MakeUp:					\
-+			if (!TabEnt->Param)				\
-+			    goto zeroBlack2d;				\
- 			a0 += TabEnt->Param;				\
- 			RunLength += TabEnt->Param;			\
- 			break;						\
-@@ -493,6 +509,12 @@
- 	default:							\
- 	badMain2d:							\
- 	    unexpected("MainTable", a0);				\
-+	    goto eol2d;							\
-+	zeroBlack2d:							\
-+	    unexpected("BlackTable Zero length", a0);			\
-+	    goto eol2d;							\
-+	zeroWhite2d:							\
-+	    unexpected("WhiteTable Zero length", a0);			\
- 	    goto eol2d;							\
- 	badBlack2d:							\
- 	    unexpected("BlackTable", a0);				\
+--- hfaxd/User.c++.orig	Sun Jun 13 08:41:16 1999
++++ hfaxd/User.c++
+@@ -218,7 +218,7 @@
+     if (id == uid)				// user currently logged in
+ 	return (const char*) the_user;
+     if (id == FAXUID_ANON)			// anonymous user
+-	return "fax";
++	return FAX_USER;
+     if (idcache == NULL)			// load cache from file
+ 	fillIDCache();
+     const fxStr* hit = idcache->find(id);	// check cache
+@@ -237,7 +237,7 @@
+ {
+     if (name == the_user)
+ 	id = uid;
+-    else if (strcmp(name, "fax") == 0)
++    else if (strcmp(name, FAX_USER) == 0)
+ 	id = FAXUID_ANON;
+     else {
+ 	if (idcache == NULL)
+@@ -324,7 +324,7 @@
+     if (faxuid < FAXUID_MAX)
+ 	SetBit(FAXUID_RESV);			// reserved uid
+     else
+-	logError("Internal error, \"fax\" UID (%u) too large.", faxuid);
++	logError("Internal error, \"" FAX_USER "\" UID (%u) too large.", faxuid);
+     SetBit(FAXUID_ANON);			// anonymous uid is reserved
+     while (nextRecord(db, line, sizeof (line))) {
+ 	if (line[0] == '!')
