@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.855 2002/12/21 04:16:27 schmonz Exp $
+$NetBSD: CHANGES,v 1.856 2002/12/21 10:57:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4032,3 +4032,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated waimea to 0.4.0nb1 [jmmv 2002-12-20]
 	Updated pvs to 3.0nb1 [jschauma 2002-12-20]
 	Updated digest to 20021220 [schmonz 2002-12-21]
+	Added avi-xmms-1.2.2 [jmmv 2002-12-21]
