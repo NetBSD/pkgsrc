@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:19:05 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/07/27 22:45:09 jschauma Exp $
 
-SHA1 (j2sdk-1.3.0beta-b02-linux-ppc.tar.bz2) = ab28cbe6f388f6210455bba08c193a90a8dd334a
-Size (j2sdk-1.3.0beta-b02-linux-ppc.tar.bz2) = 20378697 bytes
-SHA1 (powerpc-jdk-addon.tgz) = a99d1f010fbc6018b4b28b7a6212d91694790653
-Size (powerpc-jdk-addon.tgz) = 29764 bytes
-SHA1 (patch-aa) = eaa3e9c9bd46eeb24f59b4e1d6b6752d9feb7809
+SHA1 (j2sdk-1.3.1-02b-FCS-linux-i386.bin) = 0df68ad1f11f2c76e1e0a937101852dbc7e43da3
+Size (j2sdk-1.3.1-02b-FCS-linux-i386.bin) = 24773119 bytes
+SHA1 (j2sdk-1.3.1-02b-FCS-linux-ppc.bin) = 40fe739b2ee0b1c88d90bacca7416432141fadff
+Size (j2sdk-1.3.1-02b-FCS-linux-ppc.bin) = 21380823 bytes
+SHA1 (j2sdk-1.3.1-02b-FCS-linux-sparc.bin) = 002d9b25e3f85b024ec88b79921d76ef2c9b1a43
+Size (j2sdk-1.3.1-02b-FCS-linux-sparc.bin) = 21154081 bytes
