@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.7 2004/04/26 17:28:58 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.8 2004/04/27 01:18:08 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -91,9 +91,9 @@ do_conf()
 	BASE_VARS="SOURCEDIR PKGSRCDIR SHAREDIR BASEDIR WORKDIR ISODIR \
 		   BASE_SETS_DIR X11_SETS_DIR BASE_SETS X11_SETS"
 
-	MISC_VARS="ENABLE_X11 CDRECORD_ARGS BLANK_BEFORE_BURN CDROM_DEVICE \
-		   PERSONAL_CONFIG BOOTKERN KERNEL_NAME IMAGE_NAME \
-		   PKG_SYSCONFDIR REMOVE_DIRS"
+	MISC_VARS="ENABLE_X11 MKISOFS_ARGS CDRECORD_ARGS BLANK_BEFORE_BURN \
+		   CDROM_DEVICE PERSONAL_CONFIG BOOTKERN KERNEL_NAME \
+		   IMAGE_NAME PKG_SYSCONFDIR REMOVE_DIRS"
 
 	MNT_VARS="MNT_DEV_ARGS MNT_ETC_ARGS MNT_VAR_ARGS \
 		  MNT_ROOT_ARGS MNT_TMP_ARGS MNT_HOME_ARGS \
@@ -341,7 +341,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.7 2004/04/26 17:28:58 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.8 2004/04/27 01:18:08 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -530,11 +530,7 @@ _EOF_
 		showmsg "Done."
 	;;
 	iso)
-		if [ ! -f $ISODIR/netbsd ]; then
-			showmsg "Target iso failed!"
-			showmsg "Can't find NetBSD kernel."
-			bye 1
-		elif [ ! -f $ISODIR/stand/mfs_etc.tbz ]; then
+		if [ ! -f $ISODIR/stand/mfs_etc.tbz ]; then
 			showmsg "Target iso failed!"
 			showmsg "Can't find mfs_etc.tbz file."
 			bye 1
