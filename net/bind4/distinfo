@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/06/26 06:00:50 itojun Exp $
+$NetBSD: distinfo,v 1.4 2002/06/28 05:49:09 itojun Exp $
 
-SHA1 (bind-4.9.8-REL.tar.gz) = bc690813c8e8bb3569ceee3c10ebfeb52b47ad00
-Size (bind-4.9.8-REL.tar.gz) = 1972069 bytes
-SHA1 (patch-aa) = ffa75c8725508b858b65021e93af113cea795ffd
-SHA1 (patch-ab) = 2c0fd4ff56bf9087f4f70f3196e31e1217c282f5
+SHA1 (bind-4.9.9-REL.tar.gz) = 5cdc7adbeb734202293bc21f642e20d8fc211908
+Size (bind-4.9.9-REL.tar.gz) = 1969930 bytes
