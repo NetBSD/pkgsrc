@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2002/07/30 23:05:12 jlam Exp $
+# $NetBSD: Makefile,v 1.86 2002/08/01 02:40:05 jlam Exp $
 
 USE_BUILDLINK_ONLY=	# defined
 
@@ -42,6 +42,10 @@ SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
 MESSAGE_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
 MESSAGE_SUBST+=		ROOT_USER=${ROOT_USER}
+
+DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
+HTMLDIR=		${PREFIX}/share/doc/html/${PKGBASE}
+EXAMPLESDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=		${EXAMPLESDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 SUPPORT_FILES_PERMS=	${SMBPASSWD_FILE}
