@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/12/22 17:27:28 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/09 17:07:55 cjep Exp $
 #
 
 DISTNAME=	textutils-2.0
@@ -9,9 +9,11 @@ MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/textutils/textutils.html
 COMMENT=	GNU text utilities
 
-USE_PERL5=	build
-USE_GMAKE=	YES
-GNU_CONFIGURE=	YES
+USE_PERL5=		build
+USE_GMAKE=		YES
+USE_PKGLOCALEDIR=	YES
+USE_BUILDLINK2=		YES
+GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
