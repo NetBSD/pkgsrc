@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2000/09/01 17:58:05 jwise Exp $
+# $NetBSD: Makefile,v 1.33 2000/09/08 00:39:02 jwise Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -7,13 +7,11 @@ WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		mbone
 MASTER_SITES=		ftp://ftp.ee.lbl.gov/conferencing/vat/alpha-test/
 
-BROKEN=			This package has not yet been updated to work with tcl-8.3.2.
-
 MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www-nrg.ee.lbl.gov/vat/
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
-DEPENDS+=		tk-8.0.5:../../x11/tk80
+DEPENDS+=		tk-8.3.2:../../x11/tk
 DEPENDS+=		gsm-1.0.10:../../audio/gsm
 
 NOT_FOR_PLATFORM=	*-*-alpha	# filter.cc compiler error
@@ -21,6 +19,7 @@ NOT_FOR_PLATFORM=	*-*-alpha	# filter.cc compiler error
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ARGS+=	--with-tcl=${PREFIX} --with-tk=${PREFIX}
 
 CPPFLAGS+=		-I${LOCALBASE}/include -I${LOCALBASE}/include/gsm
 
