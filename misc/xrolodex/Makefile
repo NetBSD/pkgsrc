@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:09:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/03 01:28:45 jlam Exp $
 
 DISTNAME=		xrolodex.1.5.motif
 PKGNAME=		xrolodex-1.5
@@ -11,7 +11,8 @@ COMMENT=		Motif/X11 rolodex application
 
 WRKSRC=			${WRKDIR}/xrolodex.15
 MAKE_ENV+=		XMLIB='-lXm'
-USE_MOTIF=		yes
+USE_BUILDLINK_ONLY=	yes
 USE_IMAKE=		yes
 
+.include "../../x11/lesstif/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
