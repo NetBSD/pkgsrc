@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2000/09/01 16:22:00 jwise Exp $
---- Makefile.in.orig	Mon Aug 28 23:29:09 2000
-+++ Makefile.in	Mon Aug 28 23:34:09 2000
+$NetBSD: patch-aa,v 1.3 2000/12/11 16:40:43 jlam Exp $
+
+--- Makefile.in.orig	Tue Aug  8 15:19:31 2000
++++ Makefile.in
 @@ -76,7 +76,7 @@
  # The directory containing the Tcl sources and headers appropriate
  # for this version of Tk ("srcdir" will be replaced or has already
@@ -10,6 +11,15 @@ $NetBSD: patch-aa,v 1.2 2000/09/01 16:22:00 jwise Exp $
  
  # The directory containing the Tcl library archive file appropriate
  # for this version of Tk:
+@@ -100,7 +100,7 @@
+ #CFLAGS			= $(CFLAGS_DEBUG)
+ #CFLAGS			= $(CFLAGS_OPTIMIZE)
+ #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
+-CFLAGS			= @CFLAGS@
++CFLAGS			+= @CFLAGS@
+ 
+ # A "-I" switch that can be used when compiling to make all of the
+ # X11 include files accessible (the configure script will try to
 @@ -154,8 +154,8 @@
  # "install" around;  better to use the install-sh script that comes
  # with the distribution, which is slower but guaranteed to work.
