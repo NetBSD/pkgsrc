@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/06/23 13:55:24 agc Exp $
+
+    WARNING - this package contains a setuid root executable called
+    untcx, which was written in 1994, and contained calls to getwd(3),
+    sprintf(3), strcpy(3) and strcat(3).  I've done a minor audit of
+    the code, and have fixed the above functions with calls to safer
+    alternatives, but you may wish to delete this package from your
+    own systems until you have carried out your own audit.
+
+===========================================================================

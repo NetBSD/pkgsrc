@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/23 13:55:24 agc Exp $
+
+SHA1 (tcx-linux.tar.gz) = 73c112fc39cbfb794fe0f6b0d2e15739ee1c9f5a
+Size (tcx-linux.tar.gz) = 21028 bytes
+SHA1 (patch-aa) = 2e03b68d4c4ed05757fe788649eede461a11a4e5
+SHA1 (patch-ab) = 5e7e7247783090e3029504f80440b6faebe1d1dd
+SHA1 (patch-ac) = 9a285e8365a3e0151fd37e2bf86ee8c346599e3b
+SHA1 (patch-ad) = 5ba81fcec1e674054c532fc3c70a8a6d8f17c350

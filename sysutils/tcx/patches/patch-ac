@@ -1,0 +1,172 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/06/23 13:55:24 agc Exp $
+
+Minor security audit - the world has moved on since 1994.
+
+--- untcx.c	2003/06/20 07:59:56	1.1
++++ untcx.c	2003/06/20 08:09:26
+@@ -166,9 +166,9 @@
+ 
+ 	/* Set global paths */
+ 
+-	(void)sprintf(logpath, "%s/log", ENFSDIR);
+-	(void)sprintf(logtmppath, "%s/logtmp", ENFSDIR);
+-	(void)sprintf(lockpath, "%s/.lock", ENFSDIR);
++	(void)snprintf(logpath, sizeof(logpath), "%s/log", ENFSDIR);
++	(void)snprintf(logtmppath, sizeof(logtmppath), "%s/logtmp", ENFSDIR);
++	(void)snprintf(lockpath, sizeof(lockpath), "%s/.lock", ENFSDIR);
+ 
+ 	/* Check and start tcxd as required */
+ 
+@@ -185,16 +185,16 @@
+ 
+ 	/* Grab argv[0] and resolve to full path name via getwd() */
+ 
+-	if(getwd(cwd) == NULL)
++	if(getcwd(cwd, sizeof(cwd)) == NULL)
+ 	{
+ 		(void)fprintf(stderr, "Get Working Directory Error: %s\n", cwd);
+ 		exit(-1);
+ 	}
+ 
+ 	if(*argv[0] == '/')
+-		(void)strcpy(realdir, argv[0]);
++		(void)strlcpy(realdir, argv[0], sizeof(realdir));
+ 	else
+-		(void)sprintf(realdir, "%s/%s", cwd, argv[0]);
++		(void)snprintf(realdir, sizeof(realdir), "%s/%s", cwd, argv[0]);
+ 	for(;;)
+ 	{
+ 		if((c = strrchr(realdir, '/')) == NULL)
+@@ -203,7 +203,7 @@
+ 			exit(-1);
+ 		}
+ 		c++;
+-		(void)strcpy(execname, c);
++		(void)strlcpy(execname, c, sizeof(execname));
+ 		*c = '\0';
+ 
+ 		if(chdir(realdir) < 0)	/* Oops. Failed. Report and quit. */
+@@ -212,7 +212,7 @@
+ 			exit(-1);
+ 		}
+ 
+-		if(getwd(realdir) == NULL)
++		if(getcwd(realdir, sizeof(realdir)) == NULL)
+ 		{
+ 			(void)fprintf(stderr, "Get Working Directory Error: %s\n", cwd);
+ 			exit(-1);
+@@ -238,11 +238,11 @@
+ 			}
+ 			execpath[len] = '\0';
+ 			if(execpath[0] == '/')
+-				(void)strcpy(realdir, execpath);
++				(void)strlcpy(realdir, execpath, sizeof(realdir));
+ 			else
+ 			{
+-				(void)strcat(realdir, "/");
+-				(void)strcat(realdir, execpath);
++				(void)strlcat(realdir, "/", sizeof(realdir));
++				(void)strlcat(realdir, execpath, sizeof(realdir));
+ 			}
+ 			continue;
+ 		}
+@@ -291,8 +291,8 @@
+ #else
+ 		if(setreuid(getuid(), getuid()) < 0) { perror("setreuid"); exit(-1); }
+ #endif
+-		(void)sprintf(tcxtarg, "%s/%s", realdir, execname);
+-		(void)sprintf(untcxtmp, "%s/.untcx.%s", realdir, execname);
++		(void)snprintf(tcxtarg, sizeof(tcxtarg), "%s/%s", realdir, execname);
++		(void)snprintf(untcxtmp, sizeof(untcxtmp), "%s/.untcx.%s", realdir, execname);
+ 		just_untcx(tcxtarg, untcxtmp);
+ 		exit(0);
+ 	}
+@@ -302,8 +302,8 @@
+ 
+ 	if(local)
+ 	{
+-		(void)sprintf(tcxtarg, "%s/%s", realdir, execname);
+-		(void)sprintf(untcxtmp, "%s/.untcx.%s", realdir, execname);
++		(void)snprintf(tcxtarg, sizeof(tcxtarg), "%s/%s", realdir, execname);
++		(void)snprintf(untcxtmp, sizeof(untcxtmp), "%s/.untcx.%s", realdir, execname);
+ 		untcx_and_exec_local(tcxtarg, untcxtmp, &(argv[1]));
+ 	}
+ #endif
+@@ -315,7 +315,7 @@
+ 	for(c = realdir; *c ; c++)
+ 		if(*c == '/')
+ 			*c = '=';
+-	(void)sprintf(tcxtarg, "%s/%s", ENFSDIR, realdir);
++	(void)snprintf(tcxtarg, sizeof(tcxtarg), "%s/%s", ENFSDIR, realdir);
+ 	if(mkdir(tcxtarg, 0777) < 0)
+ 		if(errno != EEXIST)
+ 		{
+@@ -323,9 +323,9 @@
+ 			exit(-1);
+ 		}
+ 	(void)chmod(tcxtarg, 0777);
+-	(void)strcat(tcxtarg,"/");
+-	(void)strcat(tcxtarg, execname);
+-	(void)sprintf(untcxtmp, "%s/%s/.untcx.%s", ENFSDIR, realdir, execname);
++	(void)strlcat(tcxtarg,"/", sizeof(tcxtarg));
++	(void)strlcat(tcxtarg, execname, sizeof(tcxtarg));
++	(void)snprintf(untcxtmp, sizeof(untcxtmp), "%s/%s/.untcx.%s", ENFSDIR, realdir, execname);
+ 
+ 	untcx_and_exec_nfs(argv[0], untcxtmp, tcxtarg, &(argv[1]));
+ 
+@@ -415,7 +415,7 @@
+ 
+ 	/* Write our process id to the lock file. Don't really care if fails. */
+ 
+-	(void)sprintf(spid, "%d\n", getpid());
++	(void)snprintf(spid, sizeof(spid), "%d\n", getpid());
+ 	(void)write(lkfd, spid, strlen(spid));
+ 
+ #ifdef UNPACK_IN_PLACE
+@@ -810,30 +810,30 @@
+ 
+ 	/* resolve first stage of argv[0] */
+ 
+-	if(getwd(cwd) == NULL) { (void)fprintf(stderr, "Get Working Directory Error: %s\n", cwd); exit(-1); }
++	if(getcwd(cwd, sizeof(cwd)) == NULL) { (void)fprintf(stderr, "Get Working Directory Error: %s\n", cwd); exit(-1); }
+ 
+-	if(*argv[0] == '/') (void)strcpy(realdir, argv[0]); else (void)sprintf(realdir, "%s/%s", cwd, argv[0]);
++	if(*argv[0] == '/') (void)strlcpy(realdir, argv[0], sizeof(realdir)); else (void)snprintf(realdir, sizeof(realdir), "%s/%s", cwd, argv[0]);
+ 
+ 	if((c = strrchr(realdir, '/')) == NULL) { (void)fprintf(stderr, "Help! Internal corruption of variables!\n"); exit(-1); }
+ 
+-	c++; (void)strcpy(execname, c); *c = '\0';
++	c++; (void)strlcpy(execname, c, sizeof(execname)); *c = '\0';
+ 
+ 	if(chdir(realdir) < 0) { perror(realdir); exit(-1); }
+ 
+-	if(getwd(realdir) == NULL) { (void)fprintf(stderr, "Get Working Directory Error: %s\n", cwd); exit(-1); }
++	if(getcwd(realdir, sizeof(realdir)) == NULL) { (void)fprintf(stderr, "Get Working Directory Error: %s\n", cwd); exit(-1); }
+ 
+ 	for(c = realdir; *c; c++)
+ 		if(*c == '/')
+ 			*c = '=';
+-	(void)sprintf(linkpath, "%s/%s", ENFSDIR, realdir);
++	(void)snprintf(linkpath, sizeof(linkpath), "%s/%s", ENFSDIR, realdir);
+ 	if(mkdir(linkpath, 0777) < 0)
+ 	{
+ 		if(errno != EEXIST) { perror(linkpath); exit(-1); }
+ 	}
+ 	else
+ 		(void)chmod(linkpath, 0777);
+-	(void)strcat(linkpath,"/");
+-	(void)strcat(linkpath, execname);
++	(void)strlcat(linkpath,"/", sizeof(linkpath));
++	(void)strlcat(linkpath, execname, sizeof(linkpath));
+ 
+ 	if(chdir(cwd) < 0) { perror(cwd); exit(-1); }
+ 	
+@@ -1244,7 +1244,7 @@
+ 			if((curr = (path *)malloc(sizeof(path))) == NULL)
+ 				continue;
+ 
+-		(void)strcpy(curr->path, newpath);
++		(void)strlcpy(curr->path, newpath, sizeof(curr->path));
+ #ifdef UNPACK_IN_PLACE
+ 		curr->pid = -1;
+ 		(strstr(newpath, ENFSDIR) == newpath) ? (curr->local = 0) : (curr->local = 1);
