@@ -1,12 +1,48 @@
-$NetBSD: patch-ab,v 1.3 2000/03/26 08:29:25 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2000/10/15 01:53:40 jlam Exp $
 
---- book.h.orig	Fri Oct 15 23:41:03 1999
-+++ book.h	Thu Feb 17 23:11:33 2000
-@@ -23,5 +23,5 @@
-      bug-gnu-chess@gnu.org
-      cracraft@ai.mit.edu, cracraft@stanfordalumni.org, cracraft@earthlink.net
- */
--#define BOOKSRC "book.pgn"
--#define BOOKBIN	"book.dat"
-+#define BOOKSRC LIBDIR "book.pgn"
-+#define BOOKBIN	LIBDIR "book.dat"
+--- book.c.orig	Sat Oct 23 06:07:21 1999
++++ book.c
+@@ -85,7 +85,7 @@
+   mcnt = -1;
+   side = board.side;
+   xside = 1^side;
+-  rfp = fopen(BOOKBIN,"r+b");
++  rfp = fopen(BOOKBIN,"rb");	/* don't need to open read/write */
+   if (rfp == NULL) {
+     if (!(flags & XBOARD))
+       fprintf(ofp," no book (%s).\n",BOOKBIN);
+@@ -215,8 +215,13 @@
+   return(1);
+ }
+ 
+-int genbook(void);
+-int genbook()
++/*
++ * Change genbook() to accept source (pgn book) and target (bin book)
++ * paths.  This lets us generate a book from a pgn file different from
++ * the ones in BOOKSRC and BOOKBIN.
++ */
++int genbook(char *, char *);
++int genbook(char *src, char *tgt)
+ {
+   int i,j;
+   short found, epsilon;
+@@ -225,13 +230,13 @@
+   leaf *ptr;
+   FILE *wfp,*rfp;
+ 
+-  printf("Trying to generate book %s from %s...\n",BOOKBIN,BOOKSRC);
+-  if ((wfp = fopen(BOOKBIN,"w+b"))==NULL) {
+-      printf("Couldn't open the bin book (%s) for write.\n",BOOKBIN);
++  printf("Trying to generate book %s from %s...\n",tgt,src);
++  if ((wfp = fopen(tgt,"w+b"))==NULL) {
++      printf("Couldn't open the bin book (%s) for write.\n",tgt);
+       return(0);
+   }
+-  if ((rfp = fopen(BOOKSRC,"r"))==NULL) {
+-	  printf("Couldn't open the pgn book (%s) for read.\n",BOOKSRC);
++  if ((rfp = fopen(src,"r"))==NULL) {
++	  printf("Couldn't open the pgn book (%s) for read.\n",src);
+ 	  fclose(wfp);
+ 	  return(0);
+   }
