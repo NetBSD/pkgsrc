@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/11 13:22:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/04/01 12:27:09 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kbouboule.kss
@@ -2903,6 +2903,7 @@ share/kde/icons/kdeclassic/22x22/actions/kdeprint_testprinter.png
 share/kde/icons/kdeclassic/22x22/actions/kdeprint_uploadsmb.png
 share/kde/icons/kdeclassic/22x22/actions/key_enter.png
 share/kde/icons/kdeclassic/22x22/actions/khtml_kget.png
+share/kde/icons/kdeclassic/22x22/actions/klipper.png
 share/kde/icons/kdeclassic/22x22/actions/krec_record.png
 share/kde/icons/kdeclassic/22x22/actions/kwsearch.png
 share/kde/icons/kdeclassic/22x22/actions/launch.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:07:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:21 markd Exp $
 share/kde/locale/nso/LC_MESSAGES/aktion.mo
 share/kde/locale/nso/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/nso/LC_MESSAGES/alsaplayerui.mo
@@ -7,6 +7,7 @@ share/kde/locale/nso/LC_MESSAGES/appletproxy.mo
 share/kde/locale/nso/LC_MESSAGES/ark.mo
 share/kde/locale/nso/LC_MESSAGES/artsbuilder.mo
 share/kde/locale/nso/LC_MESSAGES/artscontrol.mo
+share/kde/locale/nso/LC_MESSAGES/artsmodules.mo
 share/kde/locale/nso/LC_MESSAGES/atlantik.mo
 share/kde/locale/nso/LC_MESSAGES/atlantikdesigner.mo
 share/kde/locale/nso/LC_MESSAGES/babelfish.mo
@@ -266,6 +267,7 @@ share/kde/locale/nso/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/nso/LC_MESSAGES/kmix.mo
 share/kde/locale/nso/LC_MESSAGES/kmoon.mo
 share/kde/locale/nso/LC_MESSAGES/kmplot.mo
+share/kde/locale/nso/LC_MESSAGES/kmrml.mo
 share/kde/locale/nso/LC_MESSAGES/knewsticker.mo
 share/kde/locale/nso/LC_MESSAGES/knode.mo
 share/kde/locale/nso/LC_MESSAGES/knorskverbs.mo

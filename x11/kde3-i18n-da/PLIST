@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 10:55:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:16 markd Exp $
 share/doc/kde/HTML/da/KRegExpEditor/altntool.png
 share/doc/kde/HTML/da/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/da/KRegExpEditor/boundarytools.png
@@ -599,6 +599,7 @@ share/doc/kde/HTML/da/klipper/common
 share/doc/kde/HTML/da/klipper/index.cache.bz2
 share/doc/kde/HTML/da/klipper/index.docbook
 share/doc/kde/HTML/da/kmail/common
+share/doc/kde/HTML/da/kmail/credits-and-licenses.docbook
 share/doc/kde/HTML/da/kmail/index.cache.bz2
 share/doc/kde/HTML/da/kmail/index.docbook
 share/doc/kde/HTML/da/kmenuedit/common
@@ -651,17 +652,27 @@ share/doc/kde/HTML/da/kolf/index.docbook
 share/doc/kde/HTML/da/konq-plugins/common
 share/doc/kde/HTML/da/konq-plugins/index.cache.bz2
 share/doc/kde/HTML/da/konq-plugins/index.docbook
+share/doc/kde/HTML/da/konqueror/basics.docbook
+share/doc/kde/HTML/da/konqueror/bookmarks.docbook
+share/doc/kde/HTML/da/konqueror/browser.docbook
 share/doc/kde/HTML/da/konqueror/cmndline.png
+share/doc/kde/HTML/da/konqueror/commands.docbook
 share/doc/kde/HTML/da/konqueror/common
+share/doc/kde/HTML/da/konqueror/config.docbook
+share/doc/kde/HTML/da/konqueror/credits.docbook
 share/doc/kde/HTML/da/konqueror/dirtree.png
 share/doc/kde/HTML/da/konqueror/dragdrop.png
+share/doc/kde/HTML/da/konqueror/faq.docbook
 share/doc/kde/HTML/da/konqueror/filetype1.png
 share/doc/kde/HTML/da/konqueror/filetype3.png
 share/doc/kde/HTML/da/konqueror/filetype4.png
 share/doc/kde/HTML/da/konqueror/index.cache.bz2
 share/doc/kde/HTML/da/konqueror/index.docbook
+share/doc/kde/HTML/da/konqueror/introduction.docbook
 share/doc/kde/HTML/da/konqueror/konqorg.png
 share/doc/kde/HTML/da/konqueror/parts.png
+share/doc/kde/HTML/da/konqueror/path-complete.docbook
+share/doc/kde/HTML/da/konqueror/save-settings.docbook
 share/doc/kde/HTML/da/konqueror/shortcut1.png
 share/doc/kde/HTML/da/konqueror/shortcut2.png
 share/doc/kde/HTML/da/konquest/common
