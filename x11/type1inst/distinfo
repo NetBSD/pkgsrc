@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:46 skrll Exp $
+$NetBSD: distinfo,v 1.3 2002/07/19 12:33:21 wiz Exp $
 
 SHA1 (type1inst-0.6.1.tar.gz) = 17a445cfee17ac3c8268666639b3164867ae3dc5
 Size (type1inst-0.6.1.tar.gz) = 27966 bytes
-SHA1 (patch-aa) = 3adaa6167280a4f9fd43a83886f0141996be6a08
-SHA1 (patch-ab) = ea1561db39a02801d3eefe6621da02d548e4c32c
