@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2005/02/24 08:45:14 agc Exp $
+$NetBSD: distinfo,v 1.12 2005/03/05 20:09:44 fredb Exp $
 
-SHA1 (xli-1.17.0.tar.gz) = 49ff899602510dda5c701af4104ea7d334ac883a
-RMD160 (xli-1.17.0.tar.gz) = 98cf062424693008feafdd2d2a2a9c33a00eef2f
-Size (xli-1.17.0.tar.gz) = 200069 bytes
+SHA1 (xli-2005-02-27.tar.gz) = 977d8ece0edd41f3ec606310496cf3231f046d88
+RMD160 (xli-2005-02-27.tar.gz) = fc83fa5173befa73a0eeb56ad323dad148ef1426
+Size (xli-2005-02-27.tar.gz) = 201011 bytes
 SHA1 (patch-aa) = 94b5c639175e55562bfdf3413486726246418310
-SHA1 (patch-ac) = fc3a9f5b78391f95ef30adcf9aaacaba3019a4ac
