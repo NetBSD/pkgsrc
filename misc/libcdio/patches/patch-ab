@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2004/04/19 18:08:27 drochner Exp $
+
+--- src/cd-info.c.orig	2004-03-20 22:46:57.000000000 +0000
++++ src/cd-info.c	2004-04-18 17:50:54.000000000 +0000
+@@ -123,7 +123,7 @@
+   int opt;
+ 
+   struct poptOption optionsTable[] = {
+-    {"access-mode",       'a', POPT_ARG_STRING, &opts.access_mode, 0,
++    {"access-mode",       'm', POPT_ARG_STRING, &opts.access_mode, 0,
+      "Set CD access methed"},
+     
+     {"debug",       'd', POPT_ARG_INT, &opts.debug_level, 0,
+@@ -426,7 +426,7 @@
+   matches = cddb_query(conn, disc);
+ 
+   if (-1 == matches) 
+-    printf("%s: %s\n", program_name, cddb_error_str(errno));
++    printf("%s: %s\n", program_name, cddb_error_str(cddb_errno(conn)));
+   else {
+     printf("%s: Found %d matches in CDDB\n", program_name, matches);
+     for (i=1; i<=matches; i++) {
