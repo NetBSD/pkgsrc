@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.6 2004/04/30 20:29:40 tv Exp $
+$NetBSD: patch-aa,v 1.7 2004/05/24 10:16:52 kristerw Exp $
 
---- Imakefile.orig	Thu Jan 23 11:38:35 1997
-+++ Imakefile
+--- Imakefile.orig	1997-01-23 17:38:35.000000000 +0100
++++ Imakefile	2004-05-24 12:13:39.000000000 +0200
 @@ -1,4 +1,4 @@
 -XBILL_DIR = /var/lib/games/xbill/
 +XBILL_DIR = $(PREFIX)/share/xbill/
  XCOMM XBILL_DIR = $(HOME)/.xbill/
  
  XCOMM Which widget set?  Motif looks slightly better; Athena is free.
-@@ -10,7 +10,7 @@ XCOMM If you do not have libXpm installe
+@@ -10,7 +10,7 @@
  XCOMM the statement below and insert the correct path.
  XCOMM Make sure xpm.h can be referenced as <X11/xpm.h>
  
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.6 2004/04/30 20:29:40 tv Exp $
  XPMLIB = -lXpm
  
  XCOMM You shouldn't have to change anything below this line.
-@@ -18,10 +18,7 @@ XCOMM You shouldn't have to change anyth
+@@ -18,12 +18,10 @@
  XBILL_DEF = -DXBILL_HOME=\"$(XBILL_DIR)\"
  
  INCLUDES = -I. $(XPMINC)
@@ -27,8 +27,11 @@ $NetBSD: patch-aa,v 1.6 2004/04/30 20:29:40 tv Exp $
 -CXX = g++ $(CCFLAGS)
  CCC = $(CXX)
  CC = $(CXX)
++CCLINK = $(CXXLINK)
  
-@@ -35,7 +32,7 @@ CC = $(CXX)
+ #ifdef Use_Motif
+   WIDGET = motif
+@@ -35,7 +33,7 @@
  #endif
  
  LOCAL_LIBRARIES = $(WIDGETLIB) $(XTOOLLIB) $(XPMLIB) $(XLIB)
@@ -37,7 +40,7 @@ $NetBSD: patch-aa,v 1.6 2004/04/30 20:29:40 tv Exp $
  
  TARGET = xbill
  
-@@ -136,6 +133,9 @@ XBMS =	bitmaps/apple.xbm \
+@@ -136,6 +134,9 @@
  
  ComplexProgramTarget($(TARGET))
  
