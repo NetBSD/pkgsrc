@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2001/11/29 15:22:53 augustss Exp $
+# $NetBSD: Makefile,v 1.112 2001/12/10 20:27:23 veego Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -51,6 +51,7 @@ SUBDIR+=	koffice
 SUBDIR+=	kp
 SUBDIR+=	ktail
 SUBDIR+=	less
+SUBDIR+=	libdvdread
 SUBDIR+=	libutf
 SUBDIR+=	lile
 SUBDIR+=	linuxls
