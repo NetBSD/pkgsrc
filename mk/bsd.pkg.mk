@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1495 2004/09/01 00:10:58 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1496 2004/09/10 19:51:50 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -407,12 +407,7 @@ BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
-.if defined(LIBTOOL_LA_FILES)
-_DUMP_LIBTOOL_LA_FILES=	${SH} ../../mk/scripts/transform-la ${PREFIX} ${LIBTOOL_LA_FILES}
-_FILTER_LIBTOOL_LA_FILES=| ${GREP} -vxF `${_DUMP_LIBTOOL_LA_FILES} | ${SED} -e 's,^,-e ,'`
 .endif
-.endif
-_DUMP_LIBTOOL_LA_FILES?=${TRUE}
 
 .if defined(BUILD_USES_MSGFMT) && \
     (!exists(/usr/bin/msgfmt) || ${_USE_GNU_GETTEXT} == "yes")
@@ -4494,6 +4489,37 @@ _PRINT_PLIST_COMMON_DIRS!= 	${AWK} 'BEGIN  {			\
 # XXX will fail for data files that were copied using tar (e.g. emacs)!
 # XXX should check $LOCALBASE and $X11BASE, and add @cwd statements
 
+_PRINT_PLIST_FILES_CMD=	\
+	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d -print
+_PRINT_PLIST_DIRS_CMD=	\
+	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} -type d -print
+_PRINT_LA_LIBNAMES=	${.CURDIR}/../../mk/scripts/print-la-libnames
+
+.if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
+_PRINT_PLIST_LIBTOOLIZE_FILTER?=					\
+	(								\
+	  if ${TEST} -d ${WRKDIR}; then					\
+	  	tmpdir="${WRKDIR}";					\
+	  else								\
+	  	tmpdir="$${TMPDIR-/tmp}";				\
+	  fi;								\
+	  fileslist="$$tmpdir/print.plist.files.$$$$";			\
+	  libslist="$$tmpdir/print.plist.libs.$$$$";			\
+	  while read file; do						\
+		case $$file in						\
+		*.la)							\
+			${SH} ${_PRINT_LA_LIBNAMES} $$file >> $$libslist; \
+			;;						\
+		esac;							\
+		${ECHO} "$$file";					\
+	  done > $$fileslist;						\
+	  ${GREP} -hvxF "`${SORT} -u $$libslist`" "$$fileslist";	\
+	  ${RM} -f "$$fileslist" "$$libslist";				\
+	)
+.else
+_PRINT_PLIST_LIBTOOLIZE_FILTER?=	${CAT}
+.endif
+
 .PHONY: print-PLIST
 .if !target(print-PLIST)
 print-PLIST:
@@ -4505,8 +4531,8 @@ print-PLIST:
 	"a.out")	genlinks=1 ;;					\
 	*)		genlinks=0 ;;					\
 	esac;								\
-	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d -print\
-	 ${_FILTER_LIBTOOL_LA_FILES}					\
+	${_PRINT_PLIST_FILES_CMD}					\
+	 | ${_PRINT_PLIST_LIBTOOLIZE_FILTER}				\
 	 | ${SORT}							\
 	 | ${AWK} '							\
 		{ sub("${PREFIX}/\\./", ""); }				\
@@ -4534,7 +4560,7 @@ print-PLIST:
 		${PRINT_PLIST_AWK}					\
 		{ print $$0; }'
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	for i in `${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} -type d -print\
+	for i in `${_PRINT_PLIST_DIRS_CMD}				\
 			| ${SORT} -r					\
 			| ${AWK} '					\
 				/emul\/linux\/proc/ { next; }		\
@@ -4925,6 +4951,20 @@ BEGIN {									\
 .  endif
 .endif
 
+# plist awk pattern-action statement to expand libtool archives into
+# shared and/or static libraries.
+#
+.if ${PLIST_TYPE} == "dynamic"
+_PLIST_AWK_LIBTOOL?=	# empty
+.else
+.  if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
+_PLIST_AWK_LIBTOOL?=							\
+/\.la$$/ {								\
+	system("cd ${PREFIX} && ${SH} ${_PRINT_LA_LIBNAMES} " $$0)	\
+}
+.  endif
+.endif
+
 # _PLIST_AWK_SCRIPT hold the complete awk script for plist target.
 #
 _PLIST_AWK_SCRIPT=	'
@@ -4934,8 +4974,10 @@ _PLIST_AWK_SCRIPT=	'
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_SUBST}
 # Generated entries for info files
 .if !empty(INFO_FILES)
-_PLIST_AWK_SCRIPT+=    ${_PLIST_AWK_INFO}
+_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_INFO}
 .endif
+# Expand libtool archives
+_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_LIBTOOL}
 # Strip the '.gz' suffixes on man entries
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_STRIP_MANZ}
 # Deal with MANINSTALL and man entries
@@ -4979,9 +5021,7 @@ _GENERATE_PLIST=							\
 		${SED} -e "s|^${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
 		       -e "s,$$, 2>/dev/null || ${TRUE},";
 .else
-_GENERATE_PLIST=	${_DUMP_LIBTOOL_LA_FILES}; \
-			${CAT} ${_PLIST_SRC}; \
-			${GENERATE_PLIST}
+_GENERATE_PLIST=	${CAT} ${_PLIST_SRC}; ${GENERATE_PLIST}
 .endif
 
 .PHONY: plist
