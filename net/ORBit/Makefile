@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2000/11/27 10:30:45 itojun Exp $
+# $NetBSD: Makefile,v 1.42 2000/12/31 12:19:45 rh Exp $
 #
 
-DISTNAME=		ORBit-0.5.4
+DISTNAME=		ORBit-0.5.6
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/ORBit/}
 
@@ -12,14 +12,14 @@ DEPENDS+=		glib>=1.2.7:../../devel/glib
 DEPENDS+=		gindent-*:../../devel/gindent
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
-USE_LIBINTL=		# defined
-USE_GMAKE=		# defined
-USE_LIBTOOL=		# defined
+USE_LIBINTL=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig \
 			${WRKSRC}/popt/ltconfig \
 			${WRKSRC}/libIDL/ltconfig
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=		-I${LOCALBASE}/include		# libintl.h
 
