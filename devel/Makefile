@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2001/03/26 23:52:17 mjl Exp $
+# $NetBSD: Makefile,v 1.190 2001/03/29 15:32:28 drochner Exp $
 #
 
 COMMENT=	Development utilities
@@ -98,6 +98,7 @@ SUBDIR+=	libstroke
 SUBDIR+=	libtool
 SUBDIR+=	libtool-base
 SUBDIR+=	libtool-info
+SUBDIR+=	libusb
 SUBDIR+=	lwp
 SUBDIR+=	m4
 SUBDIR+=	maketool
