@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/27 15:18:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/27 15:45:12 wiz Exp $
 #
 
 DISTNAME=		rarlinux-3.3.0
@@ -27,8 +27,8 @@ NO_CONFIGURE=	YES
 CHECK_SHLIBS=	NO
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rar ${PREFIX}/bin/rar-linux
-	${INSTALL_PROGRAM} ${WRKSRC}/unrar ${PREFIX}/bin/unrar-linux
+	${INSTALL_PROGRAM} ${WRKSRC}/rar_static ${PREFIX}/bin/rar-linux
+#	${INSTALL_PROGRAM} ${WRKSRC}/unrar ${PREFIX}/bin/unrar-linux
 	${INSTALL_DATA} ${WRKSRC}/default.sfx ${PREFIX}/lib
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rar-linux
 	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/rar-linux

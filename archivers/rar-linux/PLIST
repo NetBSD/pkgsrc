@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/27 15:10:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/27 15:45:12 wiz Exp $
 bin/rar-linux
-bin/unrar-linux
 lib/default.sfx
 share/doc/rar-linux/license.txt
 share/doc/rar-linux/rar.txt
