@@ -1,38 +1,47 @@
-@comment $NetBSD: PLIST,v 1.3 2004/05/06 13:41:45 wulf Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/01/23 09:02:54 wulf Exp $
 bin/xlog
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xlog.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xlog.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xlog.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xlog.mo
-share/xlog/pixmaps/book.xpm
-share/xlog/pixmaps/mini-clock.xpm
-share/xlog/pixmaps/mini-trx.xpm
-share/xlog/pixmaps/mini-xlog.xpm
-share/xlog/pixmaps/s-meter.xpm
-share/xlog/pixmaps/s.xpm
-share/xlog/pixmaps/s0.xpm
-share/xlog/pixmaps/s1.xpm
-share/xlog/pixmaps/s2.xpm
-share/xlog/pixmaps/s3.xpm
-share/xlog/pixmaps/s4.xpm
-share/xlog/pixmaps/s5.xpm
-share/xlog/pixmaps/s6.xpm
-share/xlog/pixmaps/s7.xpm
-share/xlog/pixmaps/s8.xpm
-share/xlog/pixmaps/s9.xpm
-share/xlog/pixmaps/xlog-logo.png
-share/xlog/pixmaps/xlog.png
-share/xlog/pixmaps/xlog.xpm
+share/applications/xlog.desktop
+share/applnk/Applications/xlog.desktop
+share/application-registry/xlog.applications
+share/mime-info/xlog.keys
+share/mime-info/xlog.mime
+share/mime/packages/xlog.xml
+share/mimelnk/text/x-xlog.desktop
+share/pixmaps/gnome-mime-text-x-xlog.png
+share/pixmaps/xlog/gnome-mime-text-x-xlog.png
+share/pixmaps/xlog/mini-clock.xpm
+share/pixmaps/xlog/mini-trx.xpm
+share/pixmaps/xlog/mini-xlog.xpm
+share/pixmaps/xlog/s-meter.xpm
+share/pixmaps/xlog/s.xpm
+share/pixmaps/xlog/s0.xpm
+share/pixmaps/xlog/s1.xpm
+share/pixmaps/xlog/s2.xpm
+share/pixmaps/xlog/s3.xpm
+share/pixmaps/xlog/s4.xpm
+share/pixmaps/xlog/s5.xpm
+share/pixmaps/xlog/s6.xpm
+share/pixmaps/xlog/s7.xpm
+share/pixmaps/xlog/s8.xpm
+share/pixmaps/xlog/s9.xpm
+share/pixmaps/xlog/xlog-icon.png
+share/pixmaps/xlog/xlog-logo.png
+share/pixmaps/xlog/xlog.png
+share/pixmaps/xlog/xlog.xpm
 share/xlog/dxcc/cty.dat
 share/xlog/dxcc/xlog.dat
 share/xlog/AUTHORS
+share/xlog/ChangeLog
 share/xlog/FAQ
 share/xlog/MANUAL
-share/xlog/README
 share/xlog/THANKS
 share/xlog/TODO
 share/xlog/qsllabels.glabels
 man/man1/xlog.1
+@dirrm share/pixmaps/xlog
 @dirrm share/xlog/dxcc
-@dirrm share/xlog/pixmaps
 @dirrm share/xlog
