@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/23 22:08:02 itojun Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/16 14:51:17 agc Exp $
 sbin/ser
 sbin/serctl
 sbin/ser_mysql.sh
 sbin/gen_ha1
+ser/ser.cfg
 lib/ser/modules/acc.so
 lib/ser/modules/auth.so
 lib/ser/modules/exec.so
@@ -42,6 +43,7 @@ doc/ser/README.tm
 doc/ser/README.usrloc
 man/man8/ser.8
 man/man5/ser.cfg.5
+@dirrm ser
 @dirrm doc/ser
 @dirrm lib/ser/modules
 @dirrm lib/ser
