@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2001/10/24 00:29:31 kei Exp $
+$NetBSD: distinfo,v 1.6 2001/12/08 01:02:48 kei Exp $
 
 SHA1 (TeXfamily/texfam-1.2.tar.gz) = 510ef7048c1353a75d84d548738e8e2a94d83be9
 Size (TeXfamily/texfam-1.2.tar.gz) = 154286 bytes
@@ -26,7 +26,7 @@ SHA1 (patch-aa) = dfc441babfff2fefee43dd38a6f1393859f1d370
 SHA1 (patch-ab) = 6dc92be09afbce61d62468873c21add1564ac02c
 SHA1 (patch-ac) = eeb266e3fc5a6b646ffc498c08107a9dd76c6660
 SHA1 (patch-ad) = 3292baba0f31f191c13a12dd3cd39e8bd2e091f7
-SHA1 (patch-ae) = 2f21e4c6fbe327159d3abd65e501ee440f0c3657
+SHA1 (patch-ae) = c514732c9cf21f62fe1d6cee21b1b80f178fb65e
 SHA1 (patch-af) = 999a897d77004503253e7f443e9108d969a4ad11
 SHA1 (patch-ag) = fcd691409227e6025ffc52c23df5a82ab23bf0c3
 SHA1 (patch-ah) = 08b0d94c7347693da7fe024eb0ab81916a598529
