@@ -1,0 +1,6 @@
+GNU Nana is a free library providing improved support for assertion
+checking and loggin in C and C++. It also provides some support for
+``Design by Contract''. The library, source code, and documentation are
+available under a Free license. It also provides some support for
+statement/function call tracing, performance measurement, and shortform
+generation.
