@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2000/10/30 00:01:17 mycroft Exp $
+# $NetBSD: Makefile,v 1.47 2000/10/30 20:32:04 martin Exp $
 
 DISTNAME=	mozilla-source-M18
 PKGNAME=	mozilla-0.m18nb1
@@ -17,6 +17,10 @@ DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	ORBit>=0.5.1:../../net/ORBit
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png>=1.0.6:../../graphics/png
+
+ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
+			NetBSD-1.5_ALPHA-i386 NetBSD-1.5_BETA-* \
+			NetBSD-1.[5-9]*-*
 
 USE_GMAKE=	yes
 USE_X11BASE=	yes
