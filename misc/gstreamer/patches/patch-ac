@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2003/09/17 11:18:47 jmmv Exp $
+
+--- libs/ext/cothreads/cothreads/cothreads.c.orig	2003-02-02 01:05:38.000000000 +0100
++++ libs/ext/cothreads/cothreads/cothreads.c
+@@ -422,7 +422,7 @@ cothreads_alloc_thread_stack (void** sta
+   *stack = malloc (_cothreads_chunk_size * (1.0 + 1.0/_cothreads_count));
+   if (!stack)
+     return FALSE;
+-  *stack = (void*)((int)*stack &~ (int)(_cothreads_chunk_size / _cothreads_count - 1));
++  *stack = (void*)((intptr_t)*stack &~ (intptr_t)(_cothreads_chunk_size / _cothreads_count - 1));
+   *stack += 1;
+ #endif
+ 
