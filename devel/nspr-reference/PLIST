@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/24 19:57:53 jschauma Exp $
+share/doc/html/nspr/Prtyp.html
+share/doc/html/nspr/graphics/prlonga.gif
+share/doc/html/nspr/index.html
+share/doc/html/nspr/layer.html
+share/doc/html/nspr/plhash.html
+share/doc/html/nspr/plstr.html
+share/doc/html/nspr/pratom.html
+share/doc/html/nspr/prbit.html
+share/doc/html/nspr/prclist.html
+share/doc/html/nspr/prcmon.html
+share/doc/html/nspr/prcountr.html
+share/doc/html/nspr/prcvar.html
+share/doc/html/nspr/prdtoa.html
+share/doc/html/nspr/prerr.html
+share/doc/html/nspr/prinit.html
+share/doc/html/nspr/prinrvl.html
+share/doc/html/nspr/printro.html
+share/doc/html/nspr/priofnc.html
+share/doc/html/nspr/priotyp.html
+share/doc/html/nspr/pripcsem.html
+share/doc/html/nspr/prlayer.html
+share/doc/html/nspr/prlink.html
+share/doc/html/nspr/prlock.html
+share/doc/html/nspr/prlog.html
+share/doc/html/nspr/prlong.html
+share/doc/html/nspr/prmem2.html
+share/doc/html/nspr/prmon.html
+share/doc/html/nspr/prmwait.html
+share/doc/html/nspr/prntdb.html
+share/doc/html/nspr/prprf.html
+share/doc/html/nspr/prprocess.html
+share/doc/html/nspr/prrng.html
+share/doc/html/nspr/prshm.html
+share/doc/html/nspr/prshma.html
+share/doc/html/nspr/prswitch.html
+share/doc/html/nspr/prsystem.html
+share/doc/html/nspr/prthrd.html
+share/doc/html/nspr/prtime.html
+share/doc/html/nspr/prtpool.html
+share/doc/html/nspr/samples/layer.c
+share/doc/html/nspr/samples/switch.c
+share/doc/html/nspr/switch.html
+@dirrm share/doc/html/nspr/samples
+@dirrm share/doc/html/nspr/graphics
+@dirrm share/doc/html/nspr
