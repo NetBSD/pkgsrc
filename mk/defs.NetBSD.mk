@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.31 2002/10/23 12:21:30 wiz Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.32 2002/11/24 09:17:44 jdolecek Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -135,3 +135,8 @@ CFLAGS+=	-mieee
 FFLAGS+=	-mieee
 .  endif    # MACHINE_PLATFORM
 .endfor     # __tmp__
+
+# check for kqueue(2) support, added in NetBSD-1.6J
+.if exists(/usr/include/sys/event.h)
+PKG_HAVE_KQUEUE=	# defined
+.endif
