@@ -9,4 +9,5 @@ Ethiopic -- Ethiopic fonts
 European -- European normal size fonts (suitable with the other fonts)
 European-BIG -- European big fonts
 Japanese -- Japanese normal size fonts excluding what distributed with X
+Korean -- Hangul normal size fonts (X/display quality fonts only)
 Misc -- fonts for the other regions
