@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/30 17:49:36 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/31 17:21:58 dmcmahill Exp $
 #
 
 DISTNAME=	gwave-20000809
@@ -12,5 +12,8 @@ DEPENDS+=	guile-gtk>=0.19:../../devel/guile-gtk
 DEPENDS+=	plotutils-*:../../graphics/plotutils
 
 GNU_CONFIGURE=	YES
+
+post-extract:
+	${CP} ${FILESDIR}/sp2sp.1 ${WRKSRC}/doc/sp2sp.1
 
 .include "../../mk/bsd.pkg.mk"
