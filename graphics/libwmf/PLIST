@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/11/15 17:50:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/20 21:46:48 drochner Exp $
 bin/libwmf-config
 bin/libwmf-fontmap
 bin/wmf2eps
@@ -31,14 +31,14 @@ include/libwmf/libwmf/svg.h
 include/libwmf/libwmf/types.h
 include/libwmf/libwmf/x.h
 lib/libwmf-0.2.so
-lib/libwmf-0.2.so.7
-lib/libwmf-0.2.so.7.0
+lib/libwmf-0.2.so.8
+lib/libwmf-0.2.so.8.0
 lib/libwmf.a
 lib/libwmf.la
 lib/libwmf.so
 lib/libwmflite-0.2.so
 lib/libwmflite-0.2.so.7
-lib/libwmflite-0.2.so.7.0
+lib/libwmflite-0.2.so.7.1
 lib/libwmflite.a
 lib/libwmflite.la
 lib/libwmflite.so
@@ -154,6 +154,7 @@ share/doc/html/libwmf/html/globals.html
 share/doc/html/libwmf/html/include_2libwmf_2color_8h.html
 share/doc/html/libwmf/html/include_2libwmf_2font_8h.html
 share/doc/html/libwmf/html/index.html
+share/doc/html/libwmf/html/io-wmf_8c.html
 share/doc/html/libwmf/html/ipa_2bmp_8h.html
 share/doc/html/libwmf/html/ipa_2eps_2region_8h.html
 share/doc/html/libwmf/html/ipa_2fig_2region_8h.html
@@ -256,6 +257,7 @@ share/doc/html/libwmf/html/struct__wmf__svg__t.html
 share/doc/html/libwmf/html/struct__wmf__svg__t_1_1__wmf__svg__image.html
 share/doc/html/libwmf/html/struct__wmf__template__t.html
 share/doc/html/libwmf/html/struct__wmf__x__t.html
+share/doc/html/libwmf/html/structWmfContext.html
 share/doc/html/libwmf/html/svg_2bmp_8h.html
 share/doc/html/libwmf/html/svg_2device_8h.html
 share/doc/html/libwmf/html/svg_2draw_8h.html
