@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:43:47 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/29 21:35:46 jmmv Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
 PKGNAME=	sj3-server-bin-2.0.1.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.sony.co.jp/pub/unsupported/src/	\
 		ftp://ftp.cs.titech.ac.jp/pub/japanese/sj3/
@@ -16,16 +16,17 @@ DISTINFO_FILE=	${.CURDIR}/../sj3-lib/distinfo
 PATCHDIR=	${.CURDIR}/../sj3-lib/patches
 
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILD_DEFS+=	SJ3OWNER SJ3GROUP
 SJ3OWNER?=	daemon
 SJ3GROUP?=	daemon
 MAKE_ENV+=	SJ3OWNER=${SJ3OWNER} SJ3GROUP=${SJ3GROUP} \
 		IMDICTDIR=${IMDICTDIR} LOCAL_LDFLAGS="${LDFLAGS}"
 
-STARTUP_SCRIPT=	etc/rc.d/sj3
-STARTUP_SCRIPT_SRC=${WRKDIR}/STARTUP
+RCD_SCRIPTS=		sj3
 
 pre-configure:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
@@ -44,15 +45,15 @@ do-configure:
 	@(cd ${WRKSRC}; ${XMKMF_CMD}; ${MAKE} Makefiles)
 
 post-build:
-	@${ECHO} '#!/bin/sh'				 > ${STARTUP_SCRIPT_SRC}
-	@${ECHO} 'sj3=${PREFIX}/bin/sj3serv'		>> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} 'if [ -f $$sj3 ]; then'		>> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} "    echo -n ' sj3'"			>> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} '	$$sj3'				>> ${STARTUP_SCRIPT_SRC}
-	@${ECHO} 'fi'					>> ${STARTUP_SCRIPT_SRC}
+	@${ECHO} '#!${RCD_SCRIPTS_SHELL}'		 > ${WRKDIR}/sj3
+	@${ECHO} 'sj3=${PREFIX}/bin/sj3serv'		>> ${WRKDIR}/sj3
+	@${ECHO} 'if [ -f $$sj3 ]; then'		>> ${WRKDIR}/sj3
+	@${ECHO} "    echo -n ' sj3'"			>> ${WRKDIR}/sj3
+	@${ECHO} '	$$sj3'				>> ${WRKDIR}/sj3
+	@${ECHO} 'fi'					>> ${WRKDIR}/sj3
 
 post-install:
-	@${INSTALL_SCRIPT} ${STARTUP_SCRIPT_SRC} ${PREFIX}/${STARTUP_SCRIPT}
+	@${INSTALL_SCRIPT} ${WRKDIR}/sj3 ${PREFIX}/etc/rc.d/sj3
 
 .include "../../devel/nbitools/nbitools.mk"
 .include "../../inputmethod/sj3-lib/buildlink2.mk"
