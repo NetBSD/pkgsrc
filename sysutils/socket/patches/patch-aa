@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 1999/02/02 23:00:40 tron Exp $
+$NetBSD: patch-aa,v 1.5 1999/09/17 18:23:55 tron Exp $
 
 --- Makefile.orig	Thu Sep 10 16:59:31 1992
 +++ Makefile	Tue Feb  2 23:52:02 1999
@@ -11,13 +11,3 @@ $NetBSD: patch-aa,v 1.4 1999/02/02 23:00:40 tron Exp $
  INSTALLBINPATH = $(INSTALLBASE)/bin
  INSTALLBINMODE = 755
  INSTALLMANPATH = $(INSTALLBASE)/man
-@@ -43,7 +43,8 @@
- ### CDC 4680 EP/IX: (I know it *has* setsid(2), but not with bsd43)
- # SWITCHES = -systype bsd43 -DNOSETSID
- 
--
-+# FreeBSD 2.x (4.4BSD)
-+SWITCHES=-DHAVE_SYS_PARAM_H -Wall
- 
- ### It should not be necessary to change anything below this line.
- ##################################################################
