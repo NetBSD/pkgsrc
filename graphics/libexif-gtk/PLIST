@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/10/27 19:46:47 drochner Exp $
 include/libexif-gtk/gtk-exif-browser.h
 include/libexif-gtk/gtk-exif-content-list.h
 include/libexif-gtk/gtk-exif-entry-ascii.h
 include/libexif-gtk/gtk-exif-entry-copyright.h
 include/libexif-gtk/gtk-exif-entry-date.h
-include/libexif-gtk/gtk-exif-entry-exposure.h
 include/libexif-gtk/gtk-exif-entry-flash.h
 include/libexif-gtk/gtk-exif-entry-generic.h
 include/libexif-gtk/gtk-exif-entry-number.h
@@ -14,9 +13,9 @@ include/libexif-gtk/gtk-exif-entry-resolution.h
 include/libexif-gtk/gtk-exif-entry-user-comment.h
 include/libexif-gtk/gtk-exif-entry-version.h
 include/libexif-gtk/gtk-exif-entry.h
-include/libexif-gtk/gtk-exif-tag-menu.h
 lib/libexif-gtk.la
 lib/pkgconfig/libexif-gtk.pc
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libexif-gtk.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libexif-gtk.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libexif-gtk.mo
 @dirrm include/libexif-gtk
