@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:15 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 20:20:41 wiz Exp $
 
-MD5 (pam_ldap.tgz) = 071b4921e71e868274e71db08578ed46
+SHA1 (pam_ldap.tgz) = 95687def83c7613c53a159309b6d6a82d1173397
+Size (pam_ldap.tgz) = 85035 bytes
 SHA1 (patch-aa) = 32dbe52f0a7e98948209fa351c897b34919650b7
 SHA1 (patch-ab) = 72942ca6e3c11ad682f39e4a5cb456e7e4b22aef
