@@ -1,7 +1,5 @@
-$NetBSD: patch-ac,v 1.10 2000/12/18 18:09:11 jwise Exp $
-
---- pine/makefile.neb.orig	Thu Aug 27 18:50:02 1998
-+++ pine/makefile.neb
+--- pine/makefile.neb.orig	Fri Nov 10 02:57:03 2000
++++ pine/makefile.neb	Fri Feb 16 10:04:20 2001
 @@ -45,11 +45,16 @@
  RM=          rm -f
  LN=          ln -s
@@ -24,7 +22,7 @@ $NetBSD: patch-ac,v 1.10 2000/12/18 18:09:11 jwise Exp $
  # Only need to uncomment next two lines if you run make from this directory
 @@ -60,14 +65,13 @@
  LDAPOFILES=   addrbook.o adrbkcmd.o args.o bldaddr.o init.o \
- 	      other.o pine.o takeaddr.o
+ 	      mailview.o other.o pine.o strings.o takeaddr.o
  
 -STDLIBS=     -ltermlib
 -LOCLIBS=     $(PICODIR)/libpico.a $(CCLIENTDIR)/c-client.a
@@ -69,6 +67,6 @@ $NetBSD: patch-ac,v 1.10 2000/12/18 18:09:11 jwise Exp $
 -send.o:							$(CCLIENTDIR)/smtp.h
 +context.o:						$(CCLIENTINC)/misc.h
 +send.o:							$(CCLIENTINC)/smtp.h
- $(LDAPOFILES):						$(LDAPLIBS)
+ #$(LDAPOFILES):						$(LDAPLIBS)
  
  helptext.c:	pine.hlp
