@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/12/17 13:06:24 tron Exp $
+# $NetBSD: Makefile,v 1.16 2000/12/17 21:18:30 wiz Exp $
 
 DISTNAME=		suse_linux-6.4
 CATEGORIES=		emulators
@@ -12,7 +12,7 @@ DEPENDS+=		suse_audio-6.4:../suse_audio
 DEPENDS+=		suse_libc5-6.4:../suse_libc5
 DEPENDS+=		suse_libjpeg-6.4:../suse_libjpeg
 DEPENDS+=		suse_libpng-6.4:../suse_libpng
-DEPENDS+=		suse_glx-6.4:../suse_gtk
+DEPENDS+=		suse_glx-6.4:../suse_glx
 DEPENDS+=		suse_gtk-6.4:../suse_gtk
 DEPENDS+=		suse_xforms-6.4:../suse_xforms
 
