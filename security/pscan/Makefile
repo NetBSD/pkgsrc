@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 15:15:08 wiz Exp $
-# FreeBSD Id: ports/security/pscan/Makefile,v 1.4 2001/08/23 09:07:29 kris Exp
+# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:00 wiz Exp $
 
 DISTNAME=	pscan
 PKGNAME=	pscan-1.3

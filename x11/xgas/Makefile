@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/03/03 04:17:36 jschauma Exp $
-# FreeBSD Id: Makefile,v 1.1.1.1 1996/11/15 09:55:44 asami Exp
-#
+# $NetBSD: Makefile,v 1.11 2005/03/24 21:13:04 wiz Exp $
 
 DISTNAME=	xgas
 PKGNAME=        xgas-1.0

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/11/13 21:28:27 jlam Exp $
-# FreeBSD Id: Makefile,v 1.7 1997/04/26 23:55:23 asami Exp
-#
+# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:52 wiz Exp $
 
 DISTNAME=	mpack-1.5-src
 PKGNAME=	mpack-1.5

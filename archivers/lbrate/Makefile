@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/28 00:08:20 minskim Exp $
-# FreeBSD Id: ports/archivers/lbrate/Makefile,v 1.4 2002/06/19 08:18:05 sobomax Exp
+# $NetBSD: Makefile,v 1.7 2005/03/24 21:12:50 wiz Exp $
 
 DISTNAME=	lbrate-1.1
 PKGREVISION=	1

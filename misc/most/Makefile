@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/09/27 23:18:25 jlam Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/06/03 21:52:01 asami Exp
-#
+# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:58 wiz Exp $
 
 DISTNAME=	most-4.9.0
 CATEGORIES=	misc

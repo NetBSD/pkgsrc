@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/12/03 15:15:03 wiz Exp $
-# FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
-#
+# $NetBSD: Makefile,v 1.24 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=       ast54unx
 PKGNAME=        astrolog-5.40

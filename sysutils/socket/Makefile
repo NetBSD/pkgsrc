@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 17:24:34 martti Exp $
-# FreeBSD Id: Makefile,v 1.7 1997/08/16 10:14:56 wosch Exp
-#
+# $NetBSD: Makefile,v 1.11 2005/03/24 21:13:01 wiz Exp $
 
 DISTNAME=	socket-1.1
 CATEGORIES=	sysutils net

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/12/29 00:48:37 xtraeme Exp $
-# FreeBSD Id: ports/converters/unix2dos/Makefile,v 1.5 2000/07/04 10:31:42 sobomax Exp
+# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:52 wiz Exp $
 
 DISTNAME=	unix2dos-1.2
 CATEGORIES=	converters

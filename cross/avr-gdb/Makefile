@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/08/06 16:31:09 uebayasi Exp $
-# FreeBSD Id: ports/devel/avr-gdb/Makefile,v 1.2 2003/03/07 06:00:08 ade Exp
+# $NetBSD: Makefile,v 1.8 2005/03/24 21:12:52 wiz Exp $
 
 DISTNAME=	gdb-5.3
 PKGNAME=	avr-gdb-5.3

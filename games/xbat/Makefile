@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:14:58 wiz Exp $
-# FreeBSD Id: ports/games/xbat/Makefile,v 1.5 1999/08/25 06:04:41 obrien Exp
+# $NetBSD: Makefile,v 1.9 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=	xev111
 PKGNAME=	xbat-1.11
