@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/11/25 02:14:07 heinz Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/25 19:12:31 heinz Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 PKGREVISION=	# empty
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.panix.com/opera/files/${OPERA_DIR}/ \
 		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/ \
 		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/ \
 		http://opera.online.no/${OPERA_DIR}/ \
+		ftp://ftp.task.gda.pl/pub/opera/${OPERA_DIR}/ \
 		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/ \
 		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
 DISTFILES=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
@@ -15,7 +16,7 @@ MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://www.opera.com/
 COMMENT=	Small, fast and customizable WWW client
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc FreeBSD-*-i386
 
 LICENSE=	opera-license
 
@@ -26,7 +27,7 @@ USE_BUILDLINK2=	# defined
 # A default so lintpkgsrc is happy
 OPERA_PKG_VERSION=	7.0
 
-.if (${MACHINE_ARCH} == i386)
+.if (${OPSYS} == NetBSD)
 DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_freetype2>=7.3:../../emulators/${SUSE_DIR_PREFIX}_freetype2
 DEPENDS+=	suse_libjpeg>=7.3:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
@@ -42,11 +43,23 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 EXTRACT_SUFX=		.rpm
 OPERA_ARCH=		.i386
 OPERA_LANG=		en
+OPERA_VER_DATE=		20031119
 OPERA_PKG_VERSION=	7.23
 OPERA_DIR=		linux/${OPERA_PKG_VERSION:S/.//g:C/beta.*//}/final/${OPERA_LANG}/${OPERA_ARCH:S/.//}/static
-OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//}-20031119.1-static-qt
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//}-${OPERA_VER_DATE}.1-static-qt
 
 RPMFILES=	${DISTFILES}
+
+.elif (${OPSYS} == FreeBSD)
+EXTRACT_SUFX=		.tar.bz2
+OPERA_ARCH=		.i386.freebsd
+OPERA_LANG=		en
+OPERA_VER_DATE=		20031119
+OPERA_PKG_VERSION=	7.23
+OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION:S/.//g:}/final/${OPERA_LANG}/
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION}-${OPERA_VER_DATE}.1-static-qt
+
+WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 
 .elif (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
 EXTRACT_SUFX=		.tar.bz2
@@ -79,8 +92,8 @@ SUBST_SED.opera7=	-e 's,/usr/,${PREFIX}/,g'
 .endif
 
 do-build:
-.if (${MACHINE_ARCH} == i386)
-	${SED} -e 's#@EMULDIR@#${EMULDIR}#g' ${FILESDIR}/opera.sh > \
+.if (${OPSYS} == NetBSD)
+	@ ${SED} -e 's#@EMULDIR@#${EMULDIR}#g' ${FILESDIR}/opera.sh > \
 		${WRKDIR}/opera
 
 post-install: post-install-manpage
@@ -100,7 +113,7 @@ post-install-manpage:
 .  endif
 .endif
 
-.if (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
+.if (((${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)) || (${OPSYS} == FreeBSD))
 USE_PKGINSTALL=		YES
 
 do-install:
