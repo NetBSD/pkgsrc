@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/04/03 17:37:51 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/26 21:10:07 tron Exp $
 #
 
 DISTNAME=	stunnel-3.8
@@ -10,15 +10,9 @@ HOMEPAGE=	http://mike.daewoo.com.pl/computer/stunnel
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 
-.if exists(/usr/include/openssl/ssl.h)
-OPENSSL_DIR=    /usr
-.else
-OPENSSL_DIR=    ${LOCALBASE}
-DEPENDS+=       openssl>=0.9.4:../openssl
-.endif
-
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=-with-ssl=${OPENSSL_DIR}
+USE_SSL=	YES
+CONFIGURE_ARGS+=-with-ssl=${SSL_DIR}
 
 BUILD_DEFS+=	OPENSSL_DIR
 
