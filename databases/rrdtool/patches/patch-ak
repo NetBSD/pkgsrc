@@ -1,26 +1,11 @@
-$NetBSD: patch-ak,v 1.8 2002/11/27 19:33:09 bouyer Exp $
+$NetBSD: patch-ak,v 1.9 2003/02/16 23:08:58 seb Exp $
 
---- perl-shared/Makefile.PL.orig	Thu Jul 13 22:22:17 2000
-+++ perl-shared/Makefile.PL
-@@ -4,16 +4,18 @@ use Config;
- # the contents of the Makefile that is written.
+--- examples/Makefile.am.orig	Tue Feb 26 10:21:25 2002
++++ examples/Makefile.am
+@@ -6,5 +6,5 @@
  
- # Specify the location of the archive containing PIC compiled object files.
-+# This is a cheat.
- my $librrd = "-L../src/.libs/ -lrrd_private"  ;
+ EXTRA_DIST =  cgi-demo.cgi.in    piped-demo.pl.in   shared-demo.pl.in stripes.pl.in bigtops.pl.in minmax.pl.in
  
- WriteMakefile(
-     'NAME'         => 'RRDs',
-     'VERSION_FROM' => 'RRDs.pm', # finds $VERSION
-     'DEFINE'	   => "-DPERLPATCHLEVEL=$Config{PATCHLEVEL}",
--    'INC'          => '-I../src -I../gd1.3',
-+    'INC'          => '-I../src -I${PREFIX}/include',
-+    'LIBS'         => "-L@X11BASE@/lib -L@LOCALBASE@/lib -lcgi -lm -lgd -lpng -lz -ljpeg -lttf -lXpm -lX11 -lintl",
-     # where to look for the necessary libraries 
-     # Perl will figure out which one is valid
--    'depend'	   => {'RRDs.c' => "../src/.libs/librrd_private.a"},
--    'dynamic_lib'  => {'OTHERLDFLAGS' => "$librrd -lm"},
-+    'depend'	   => {'RRDs.c' => "../src/librrd_private.la"},
-+    'dynamic_lib'  => {'OTHERLDFLAGS' => "$librrd -Wl,-R@X11BASE@/lib"},
-     'realclean'    => {FILES => 't/demo?.rrd t/demo?.gif' }
- );
+-examplesdir = $(prefix)/examples
++examplesdir = $(prefix)/share/examples/rrdtool
+ examples_SCRIPTS = cgi-demo.cgi piped-demo.pl shared-demo.pl stripes.pl bigtops.pl minmax.pl

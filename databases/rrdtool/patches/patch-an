@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.2 2000/05/07 12:50:52 wulf Exp $
+$NetBSD: patch-an,v 1.3 2003/02/16 23:08:59 seb Exp $
 
---- examples/piped-demo.pl.in.orig	Sun Nov 14 13:09:23 1999
-+++ examples/piped-demo.pl.in	Sun Nov 14 13:10:27 1999
-@@ -16,7 +16,6 @@
+--- examples/piped-demo.pl.in.orig	Tue Feb 26 10:21:25 2002
++++ examples/piped-demo.pl.in
+@@ -16,7 +16,6 @@ $STEP = 300;
  $RUNS = 12*24*30*6;
  $GRUNS = 20;
  $RRD = "piped-demo.rrd";
@@ -10,7 +10,7 @@ $NetBSD: patch-an,v 1.2 2000/05/07 12:50:52 wulf Exp $
  $PNG = "piped-demo.png";
  
  # some magic to find the correct rrdtol executable
-@@ -66,42 +65,6 @@
+@@ -66,42 +65,6 @@ printf "-- performance analysis Update t
    ($real1-$real)/($RUNS), ($RUNS)/($real1-$real);
  print "\n";
  # creating some graphs
