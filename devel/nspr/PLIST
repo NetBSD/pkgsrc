@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/24 19:40:59 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/25 14:50:39 jschauma Exp $
 bin/nspr-config
 include/nspr/md/_aix.h
 include/nspr/md/_aix32.cfg
@@ -26,8 +26,8 @@ include/nspr/md/_ncr.cfg
 include/nspr/md/_ncr.h
 include/nspr/md/_nec.cfg
 include/nspr/md/_nec.h
-include/nspr/md/_${LOWER_OPSYS}.cfg
-include/nspr/md/_${LOWER_OPSYS}.h
+include/nspr/md/_netbsd.cfg
+include/nspr/md/_netbsd.h
 include/nspr/md/_nextstep.cfg
 include/nspr/md/_nextstep.h
 include/nspr/md/_nspr_pthread.h
@@ -129,12 +129,9 @@ include/nspr/prtrace.h
 include/nspr/prtypes.h
 include/nspr/prvrsion.h
 include/nspr/prwin16.h
-lib/libnspr4.a
-lib/libnspr4.so
-lib/libplc4.a
-lib/libplc4.so
-lib/libplds4.a
-lib/libplds4.so
+lib/libnspr4.${SO_SUFFIX}
+lib/libplc4.${SO_SUFFIX}
+lib/libplds4.${SO_SUFFIX}
 @dirrm include/nspr/private
 @dirrm include/nspr/obsolete
 @dirrm include/nspr/md
