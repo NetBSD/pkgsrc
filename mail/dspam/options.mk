@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/08/06 21:24:13 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2004/08/09 07:02:59 jlam Exp $
 
 # Global and legacy options
 .if defined(DSPAM_HOMEDIR_DOTFILES) || defined(DSPAM_USE_WEBMAIL) || \
@@ -44,7 +44,8 @@ DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dspam
 PKG_SUPPORTED_OPTIONS=	compress dotfiles graphs largescale		\
-			sig-attachment sig-headers virtualusers webmail
+			long-usernames sig-attachment sig-headers	\
+			spam-subject virtualusers webmail
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -122,14 +123,30 @@ CONFIGURE_ARGS+=	--enable-homedir-dotfiles
 .endif
 
 ###
-### This option will cause DSPAM to cease all writing of signatures
-### and DSPAM headers to the message, and deliver the message in as
-### pristine format as possible.  DO NOT use this switch unless the
-### original message can be presented for retraining with the ORIGINAL
-### HEADERS and NO MODIFICATIONS.
+### Enable DSPAM's graph.cgi to produce graphs of spam statistics.
 ###
-.if !empty(PKG_OPTIONS:Mwebmail)
-CONFIGURE_ARGS+=	--enable-webmail
+.if !empty(PKG_OPTIONS:Mgraphs)
+DEPENDS+=	p5-GDGraph3d-[0-9]*:../../graphics/p5-GDGraph3d
+.endif
+
+###
+### Switch for large-scale implementation.  User data will be stored as
+### $DSPAM_HOME/data/u/s/user instead of $DSPAM_HOME/data/user
+###
+.if !empty(PKG_OPTIONS:Mlargescale)
+CONFIGURE_ARGS+=	--enable-large-scale
+SUBST_STAGE.large=	pre-configure
+SUBST_FILES.large=	cgi/dspam.cgi cgi/admin.cgi
+SUBST_SED.large=	\
+	-e "s|CONFIG{'LARGE_SCALE'}.*=.*0|CONFIG{'LARGE_SCALE'}	= 1|"
+SUBST_MESSAGE.large=	"Enabling large-scale options in DSPAM."
+.endif
+
+###
+### Support long usernames.
+###
+.if !empty(PKG_OPTIONS:Mlong-usernames)
+CONFIGURE_ARGS+=	--enable-long-usernames
 .endif
 
 ###
@@ -152,16 +169,10 @@ CONFIGURE_ARGS+=        --enable-signature-headers
 .endif
 
 ###
-### Switch for large-scale implementation.  User data will be stored as
-### $DSPAM_HOME/data/u/s/user instead of $DSPAM_HOME/data/user
+### Prepend "[SPAM]" to the Subject: header of messages classified as spam.
 ###
-.if !empty(PKG_OPTIONS:Mlargescale)
-CONFIGURE_ARGS+=	--enable-large-scale
-SUBST_STAGE.large=	pre-configure
-SUBST_FILES.large=	cgi/dspam.cgi cgi/admin.cgi
-SUBST_SED.large=	\
-	-e "s|CONFIG{'LARGE_SCALE'}.*=.*0|CONFIG{'LARGE_SCALE'}	= 1|"
-SUBST_MESSAGE.large=	"Enabling large-scale options in DSPAM."
+.if !empty(PKG_OPTIONS:Mspam-subject)
+CONFIGURE_ARGS+=	--enable-spam-subject
 .endif
 
 ###
@@ -173,10 +184,14 @@ CONFIGURE_ARGS+=	--enable-virtual-users
 .endif
 
 ###
-### Enable DSPAM's graph.cgi to produce graphs of spam statistics.
+### This option will cause DSPAM to cease all writing of signatures
+### and DSPAM headers to the message, and deliver the message in as
+### pristine format as possible.  DO NOT use this switch unless the
+### original message can be presented for retraining with the ORIGINAL
+### HEADERS and NO MODIFICATIONS.
 ###
-.if !empty(PKG_OPTIONS:Mgraphs)
-DEPENDS+=	p5-GDGraph3d-[0-9]*:../../graphics/p5-GDGraph3d
+.if !empty(PKG_OPTIONS:Mwebmail)
+CONFIGURE_ARGS+=	--enable-webmail
 .endif
 
 ###
