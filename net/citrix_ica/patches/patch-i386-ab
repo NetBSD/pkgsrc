@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2001/05/05 17:24:12 dmcmahill Exp $
+$NetBSD: patch-i386-ab,v 1.1 2001/05/08 23:58:45 dmcmahill Exp $
 
 --- setupwfc.orig	Tue Aug  8 20:24:35 2000
 +++ setupwfc
