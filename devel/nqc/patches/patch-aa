@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/11 20:25:19 nathanw Exp $
+
+--- Makefile.orig	Wed Oct  6 18:11:51 1999
++++ Makefile	Mon Oct 11 16:17:16 1999
+@@ -33,8 +33,8 @@
+ #
+ # Pick your YACC processor
+ #
+-YACC = bison -y
+-# YACC = yacc
++# YACC = bison -y
++YACC = yacc
+ 
+ #
+ # Define the FLEX processor
+@@ -46,7 +46,7 @@
+ # Use this to define the default device driver name
+ # for serial port connections.
+ #
+-DEFAULT_SERIAL_NAME = "/dev/ttyS0"
++DEFAULT_SERIAL_NAME = "/dev/tty00"
+ 
+ 
+ # other commands
