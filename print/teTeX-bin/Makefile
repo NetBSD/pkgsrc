@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/04/15 15:54:13 mycroft Exp $
+# $NetBSD: Makefile,v 1.20 2000/04/15 22:30:45 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -35,9 +35,6 @@ CONFIGURE_ARGS+=--without-texinfo \
 		--with-mftalkwin \
 		--with-x11 \
 		--with-libwww-config=${LOCALBASE}/bin/libwww-config \
-		--with-system-ncurses \
-		--with-ncurses-libdir=${LOCALBASE}/lib \
-		--with-ncurses-include=${LOCALBASE}/include \
 		--with-system-pnglib \
 		--with-pnglib-libdir=${LOCALBASE}/lib \
 		--with-pnglib-include=${LOCALBASE}/include \
