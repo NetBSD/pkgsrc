@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/26 20:53:50 wiz Exp $
 
-DISTNAME=	nap-1.4.3
+DISTNAME=	nap-1.4.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nap/}
 
