@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2005/02/05 00:00:11 cube Exp $
+
+--- pwm/pwm-bindings.lua.orig	2003-12-29 21:26:52.000000000 +0100
++++ pwm/pwm-bindings.lua
+@@ -48,7 +48,7 @@ global_bindings{
+                                   -- Display PWM manual page
+                                   local m=lookup_script("ion-man")
+                                   if m then
+-                                      exec_in(scr, m.." pwm")
++                                      exec_in(scr, m.." pwm2")
+                                   end
+                               end),
+     kpress("F2", make_exec_fn("xterm")),
