@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/03/09 19:04:53 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/03/13 07:01:01 tron Exp $
 
 .if !defined(MESALIB_BUILDLINK2_MK)
 MESALIB_BUILDLINK2_MK=	# defined
@@ -63,6 +63,13 @@ BUILDLINK_PREFIX.MesaLib_DEFAULT=	${LOCALBASE}
 BUILDLINK_PREFIX.MesaLib=	${X11BASE}
 .endif
 
+.if ${_NEED_MESALIB} == "NO"
+_BLNK_MESALIB_LDFLAGS=		-L${BUILDLINK_PREFIX.MesaLib}/lib -lGL
+LIBTOOL_ARCHIVE_UNTRANSFORM_SED+=	\
+	-e "s|${BUILDLINK_PREFIX.MesaLib}/lib/libGL.la|${_BLNK_MESALIB_LDFLAGS}|g" \
+	-e "s|${LOCALBASE}/lib/libGL.la|${_BLNK_MESALIB_LDFLAGS}|g"
+.endif
+
 BUILDLINK_FILES.MesaLib+=	include/GL/GL*.h
 BUILDLINK_FILES.MesaLib+=	include/GL/gl.h
 BUILDLINK_FILES.MesaLib+=	include/GL/glext.h
@@ -77,7 +84,14 @@ BUILDLINK_FILES.MesaLib+=	lib/libGL.*
 USE_X11=			# defined
 
 BUILDLINK_TARGETS+=		MesaLib-buildlink
+BUILDLINK_TARGETS+=		MesaLib-libGL-la
 
 MesaLib-buildlink: _BUILDLINK_USE
+
+MesaLib-libGL-la:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	lafile="${BUILDLINK_DIR}/lib/libGL.la";				\
+	libpattern="${BUILDLINK_PREFIX.MesaLib}/lib/libGL.*";		\
+	${BUILDLINK_FAKE_LA}
 
 .endif	# MESALIB_BUILDLINK2_MK
