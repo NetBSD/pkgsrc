@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2003/07/13 13:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2003/07/30 13:16:56 markd Exp $
 
-DISTNAME=	kdelibs-3.1.2
-PKGREVISION=	1
+DISTNAME=	kdelibs-3.1.3
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
-.include "../../x11/kde3/Makefile.kde3"
+.include "../../meta-pkgs/kde3/Makefile.kde3"
 
 CONFLICTS+=	koffice3<=1.1.1
 
@@ -43,7 +42,7 @@ FOO_MAIN_FILES= \
 	kioslave/http/http_cache_cleaner_main.cpp \
 	kioslave/http/kcookiejar/kcookiejar_main.cpp
 
-.include "../../x11/kde3/Makefile.foo_main"
+.include "../../meta-pkgs/kde3/Makefile.foo_main"
 
 FIXUP_FILES= \
 	kspell/ksconfig.cpp \
@@ -119,10 +118,10 @@ post-install:
 .include "../../graphics/libart2/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
-.include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/qt3-libs/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 
