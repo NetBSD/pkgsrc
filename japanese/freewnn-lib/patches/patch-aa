@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1999/09/03 04:24:10 sakamoto Exp $
+$NetBSD: patch-aa,v 1.1 2002/02/28 17:45:45 wiz Exp $
 
 --- ./Wnn/Makefile.in.orig	Tue Mar 23 21:10:52 1999
 +++ ./Wnn/Makefile.in	Thu Sep  2 19:21:52 1999
