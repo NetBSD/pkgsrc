@@ -1,9 +1,9 @@
-$NetBSD: patch-aj,v 1.1 1999/05/30 18:18:32 tron Exp $
+$NetBSD: patch-aj,v 1.2 1999/06/27 00:11:03 christos Exp $
 
 --- local/Makefile.orig	Sun May 30 18:49:13 1999
 +++ local/Makefile	Sun May 30 18:49:13 1999
-@@ -0,0 +1,17 @@
-+#	$NetBSD: patch-aj,v 1.1 1999/05/30 18:18:32 tron Exp $
+@@ -0,0 +1,18 @@
++#	$NetBSD: patch-aj,v 1.2 1999/06/27 00:11:03 christos Exp $
 +
 +.include "../conf/main.cf"
 +PROG=	local
@@ -11,7 +11,8 @@ $NetBSD: patch-aj,v 1.1 1999/05/30 18:18:32 tron Exp $
 +
 +SRCS	= alias.c command.c delivered.c dotforward.c file.c forward.c \
 +	include.c indirect.c local.c mailbox.c recipient.c resolve.c token.c \
-+	deliver_attr.c feature.c maildir.c biff_notify.c unknown.c
++	deliver_attr.c feature.c maildir.c biff_notify.c unknown.c \
++	local_expand.c
 +
 +DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
 +LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
