@@ -7,6 +7,7 @@ lib/X11/tcpillust/zoomout.xbm
 share/doc/tcpillust/sample/tcpclient.log
 share/doc/tcpillust/sample/tcpserver.log
 share/doc/tcpillust/README
+man/cat1/tcpillust.0
 @dirrm lib/X11/tcpillust
 @dirrm share/doc/tcpillust/sample
 @dirrm share/doc/tcpillust
