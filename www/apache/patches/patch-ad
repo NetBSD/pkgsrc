@@ -1,10 +1,16 @@
-$NetBSD: patch-ad,v 1.2 1998/11/12 23:54:33 frueauf Exp $
+$NetBSD: patch-ad,v 1.3 1998/12/03 17:23:52 tv Exp $
 
-This patch is necessary for listening on multiple ports safely. It has
-been submitted to the apache group, the gnats ID is os-netbsd/3120.
-
---- src/include/ap_config.h~	Thu Sep 17 23:49:12 1998
-+++ src/include/ap_config.h	Mon Oct  5 09:41:28 1998
+--- src/include/ap_config.h.orig	Sat Oct  3 11:33:35 1998
++++ src/include/ap_config.h	Wed Dec  2 11:18:59 1998
+@@ -398,7 +398,7 @@
+ #define DEFAULT_USER_DIR        "Library/Web Documents"
+ #define DEFAULT_USER            "nobody"
+ #define DEFAULT_GROUP           "nogroup"
+-#define DEFAULT_PATH            "/bin:/usr/bin:/usr/local/bin"
++#define DEFAULT_PATH            "/bin:/usr/bin:@@PREFIX@@/bin:/usr/local/bin"
+ #endif
+ 
+ #elif defined(LINUX)
 @@ -592,6 +592,7 @@
  #define HAVE_MMAP 1
  #define USE_MMAP_SCOREBOARD
