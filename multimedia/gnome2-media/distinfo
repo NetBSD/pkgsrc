@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/05/15 16:34:10 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2004/09/21 17:13:35 jmmv Exp $
 
-SHA1 (gnome-media-2.6.2.tar.bz2) = 06dfe66ecbb462bd07930d706fd897aa532bccf2
-Size (gnome-media-2.6.2.tar.bz2) = 2970530 bytes
-SHA1 (patch-ag) = 114ddd8d95bf4b2e471d3bc13308aa03cef7dd1a
-SHA1 (patch-ai) = 5eb11da18015ac4d4c3a85bc38b75e59f1890a7e
+SHA1 (gnome-media-2.8.0.tar.bz2) = 7984f31d661801156b2d2b14141cfc45d8e727c7
+Size (gnome-media-2.8.0.tar.bz2) = 3171171 bytes
