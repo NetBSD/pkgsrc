@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/05/14 00:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2002/10/08 13:09:51 jlam Exp $
 
 DISTNAME=	fxtv-1.03
 PKGREVISION=	1
@@ -13,6 +13,7 @@ COMMENT=	TV display application for Brooktree 848 compatible TV cards
 ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-arm32 NetBSD-1.[5-9]*-atari \
 			NetBSD-1.[5-9]*-i386
 
+USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 USE_GMAKE=	YES
 XAW_TYPE?=	3d
@@ -31,7 +32,16 @@ XAW_TYPE=	3d
 post-extract:
 	@${RM} -f ${WRKSRC}/videolib/videolib.o
 
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/xaw.buildlink.mk"
+post-patch:
+	cd ${WRKSRC}; for file in app_rsrc.h Fxtv; do			\
+		${SED}	-e "s,/dev/dsp,${DEVOSSAUDIO},g"		\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
+
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
