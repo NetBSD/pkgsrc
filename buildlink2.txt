@@ -1,8 +1,8 @@
-$NetBSD: buildlink2.txt,v 1.1.2.2 2002/05/11 02:08:46 jlam Exp $
+$NetBSD: buildlink2.txt,v 1.1.2.3 2002/06/06 06:37:50 jlam Exp $
 
 The buildlink2 framework is a departure from the original buildlink
 framework, which tries to do its work up-front before the configure
-process, and fix things up after the build process.  Over time, the
+process and fix things up after the build process.  Over time, the
 buildlink framework grew overly complex to deal with software that stored
 build-time information in the installed files, e.g. GNOME packages.  The
 new framework actually does its work as the software is being configured
@@ -27,8 +27,8 @@ A: There are several reasons:
 	is not possible to create weakly buildlinked packages.  This
 	deprecates the need for x11.buildlink.mk.
 
-    (3) We no longer care if the configure or build process adds
-	-I${PREFIX}/include or -L${PREFIX}/lib to the compiler or link
+    (3) We no longer care if the configure or build processes add
+	-I${PREFIX}/include or -L${PREFIX}/lib to the compiler or linker
 	lines.  We _want_ them to do so (and we actually add them
 	ourselves) since they are munged into references to
 	${BUILDLINK_DIR) by the wrapper scripts.
@@ -41,6 +41,10 @@ A: There are several reasons:
     (6) We no longer mess around with configure scripts or Makefiles before
 	the build process, so we don't accidentally trigger rebuilds of
 	those files if the software uses GNU autoconf/automake.
+
+    (7)	We no longer mess around with libtool archives after the build
+	process, so we don't accidentally trigger rebuilds of those files
+	during the install process.
 
 Q: How does this affect packages that use the existing buildlink framework?
 A: The buildlink and buildlink2 frameworks can coexist within pkgsrc, but
@@ -65,12 +69,12 @@ Q: So what's bad about the new buildlink2 framework?
 A: The full build now takes longer than it used to.  Since we are using
    wrapper scripts in place of the compilers, we bear the cost of the extra
    shell processes invoked as a result.  The increased build times on the
-   two platforms on which I was able to test are roughly:
+   platforms on which I was able to test are roughly:
 
-	NetBSD-1.5ZC/i386	+3% (non-USE_LIBTOOL)
-				+5% (USE_LIBTOOL)
+	NetBSD-1.5ZC/i386	~1% (non-USE_LIBTOOL)
+				~3% (USE_LIBTOOL)
 
-	NetBSD-1.5.1/mac68k	+9% (USE_LIBTOOL)
+	NetBSD-1.5.1/mac68k	+?% (USE_LIBTOOL)
 
    The i386 box is an Intel P3 850MHz + UDMA IDE HD + 512MB SDRAM.
    The mac68k box is a Quadra 650 (68040) + SCSI2 HD + 48MB RAM.
