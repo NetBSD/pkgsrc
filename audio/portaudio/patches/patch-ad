@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/04/20 17:52:48 ben Exp $
+
+--- pa_tests/patest_record.c.orig	Sat Nov 22 17:26:48 2003
++++ pa_tests/patest_record.c	Sat Nov 22 17:27:12 2003
+@@ -133,6 +133,7 @@
+                          unsigned long framesPerBuffer,
+                          PaTimestamp outTime, void *userData )
+ {
++    int framesToPlay, samplesToPlay, samplesPerBuffer;
+     paTestData *data = (paTestData*)userData;
+     SAMPLE *rptr = &data->recordedSamples[data->frameIndex * NUM_CHANNELS];
+     SAMPLE *wptr = (SAMPLE*)outputBuffer;
+@@ -141,7 +142,6 @@
+     unsigned int framesLeft = data->maxFrameIndex - data->frameIndex;
+     (void) inputBuffer; /* Prevent unused variable warnings. */
+     (void) outTime;
+-    int framesToPlay, samplesToPlay, samplesPerBuffer;
+ 
+     if( framesLeft < framesPerBuffer )
+     {
