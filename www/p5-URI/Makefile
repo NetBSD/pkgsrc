@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/18 22:21:14 heinz Exp $
+# $NetBSD: Makefile,v 1.25 2004/03/21 01:20:44 heinz Exp $
 #
 
 DISTNAME=	URI-1.30
@@ -18,6 +18,7 @@ CONFLICTS+=	p5-libwww-5.36	# URI used to be part of that package
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
+USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/URI/.packlist
 
 .include "../../lang/perl5/module.mk"
