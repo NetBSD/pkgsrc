@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2003/01/30 11:14:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.84 2003/02/05 05:06:37 jlam Exp $
 
 DISTNAME=		gnome-libs-1.4.1.4
 PKGREVISION=		3
@@ -9,6 +9,7 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Libraries for the GNU Network Object Model Environment
 
+DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 BUILD_USES_MSGFMT=	YES
 
 USE_X11BASE=		YES
@@ -65,7 +66,6 @@ post-install:
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/imlib/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../net/ORBit/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 

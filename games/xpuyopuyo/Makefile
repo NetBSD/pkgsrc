@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/01/27 23:45:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2003/02/05 05:06:35 jlam Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		1
@@ -9,6 +9,8 @@ MASTER_SITES=		http://chaos2.org/xpuyopuyo/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
+
+DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
 AUTOMAKE_REQD=		1.4
 USE_BUILDLINK2=		YES
@@ -32,7 +34,6 @@ pre-configure:
 
 .include "../../audio/libmikmod/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
