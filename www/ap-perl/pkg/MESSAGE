@@ -1,9 +1,13 @@
 =============================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 1998/12/04 00:10:57 tv Exp $
+$NetBSD: MESSAGE,v 1.2 1998/12/04 13:21:35 tv Exp $
 
 In order to enable mod_perl in your Apache installation, you need to refer
 to $PREFIX/share/doc/mod_perl/httpd.conf.add ($PREFIX is typically
 /usr/pkg), which must be added to your httpd.conf.  The directives in that
 file load and set up the Perl shared library and mod_perl module.
+
+If switching to/from a server with and without mod_perl enabled, you
+should NOT use "apachectl restart" - instead, fully stop and then start
+the server.  This prevents problems with libperl spinning on the CPU.
 
 =============================================================================
