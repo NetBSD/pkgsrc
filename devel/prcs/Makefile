@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/03/06 04:28:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2000/03/20 15:42:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/10/13 05:11:40 jmacd Exp
 #
 
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.XCF.Berkeley.EDU/~jmacd/prcs.html
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-mips* NetBSD-*-pc532 NetBSD-*-powerpc \
-			NetBSD-*-sparc NetBSD-*-vax
+			NetBSD-*-sparc NetBSD-*-vax SunOS-*-*
 
 GNU_CONFIGURE=		yes
 USE_GTEXINFO=		yes
