@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 14:50:05 grant Exp $
+# $NetBSD: Makefile,v 1.6.4.1 2004/07/30 16:03:44 agc Exp $
 #
 
 DISTNAME=	gopher_3.0.6
@@ -11,8 +11,9 @@ HOMEPAGE=	gopher://quux.org/1/devel/gopher/
 COMMENT=	Distributed document delivery client and server
 
 WRKSRC=		${WRKDIR}/gopher
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
-CONFIGURE_ARGS+= --disable-auth
+CONFIGURE_ARGS+=--disable-auth
 
 .include "../../mk/bsd.pkg.mk"
