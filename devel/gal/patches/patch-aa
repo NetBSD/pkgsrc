@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2002/04/10 15:56:13 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2002/04/10 16:05:19 jlam Exp $
 
 --- configure.orig	Tue Dec 18 17:36:11 2001
 +++ configure
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.6 2002/04/10 15:56:13 jlam Exp $
  echo "configure:4861: checking for libxml (aka gnome-xml) libraries 1.8.8 <= version < 2.0.0" >&5
 -if xml-config --libs > /dev/null 2>&1; then 
 -    vers=`xml-config --version | sed -e "s/libxml //" | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
-+if test -n "$XML_CONFIG"; then
++if test -z "$XML_CONFIG"; then
 +  XML_CONFIG=xml-config
 +fi
 +if $XML_CONFIG --libs > /dev/null 2>&1; then 
