@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.6 2002/08/25 18:38:24 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/19 03:03:50 jlam Exp $
 
 PKGNAME=		postgresql-lib-${BASE_VERS}
 COMMENT=		PostgreSQL database headers and libraries
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK2=		# defined
 
 .include "../../databases/postgresql/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-DIRS_TO_BUILD=		src/include src/interfaces src/pl
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+BUILD_DIRS=		${WRKSRC}/src/include
+BUILD_DIRS+=		${WRKSRC}/src/interfaces
+BUILD_DIRS+=		${WRKSRC}/src/pl
 
 .include "../../mk/bsd.prefs.mk"
 
-do-build:
+post-buildlink:
 #
 # Avoid conflict between "${LOCALBASE}/include/openssl/des.h" and
 # "/usr/include/crypt.h" -- we want the definitions in the former.
@@ -20,20 +22,10 @@ do-build:
 .if (${OPSYS} == "SunOS")
 	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
 .endif
-.for DIR in ${DIRS_TO_BUILD}
-	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${ALL_TARGET}
-.endfor
-
-do-install:
-.for DIR in ${DIRS_TO_BUILD}
-	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${INSTALL_TARGET}
-.endfor
-	cd ${WRKSRC}/src/include && ${SETENV} ${MAKE_ENV}		\
-		${MAKE_PROGRAM} install-all-headers
 
 post-install:
+	cd ${WRKSRC}/src/include && ${SETENV} ${MAKE_ENV}		\
+		${MAKE_PROGRAM} install-all-headers
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz             \
 		`${SED} -e "s|^#.*||" ${FILESDIR}/man.lib`
 
