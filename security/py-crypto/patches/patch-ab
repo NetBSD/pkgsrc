@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 1998/08/07 14:51:56 tsarna Exp $
+
+Make this work with more recent (post Great Renaming) Pythons.
+
+--- simple/ufcrypt.c.orig	Thu Aug  6 10:56:35 1998
++++ simple/ufcrypt.c	Thu Aug  6 10:56:53 1998
+@@ -1,8 +1,9 @@
+ /* cryptmodule.c - by Steve Majewski
+  */
+ 
+-#include "allobjects.h"
++#include "Python.h"
+ #include "modsupport.h"
++#include "rename2.h"
+ 
+ #include <sys/types.h>
+

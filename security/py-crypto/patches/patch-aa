@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 1998/08/07 14:51:56 tsarna Exp $
+
+Some of these things are now included with Python
+
+--- Setup.in.orig	Thu Aug  6 11:00:18 1998
++++ Setup.in	Thu Aug  6 11:02:11 1998
+@@ -5,7 +5,7 @@
+ 
+ md2 md2module.c		# MD4
+ md4 md4module.c		# MD4
+-md5 md5module.c		# MD5
++#md5 md5module.c		# MD5
+ sha shamodule.c		# SHA
+ haval havalmodule.c     # HAVAL
+ 
+@@ -25,8 +25,8 @@
+ 
+ # "Simple" modules
+ 
+-rotor rotormodule.c
+-crypt cryptmodule.c
++#rotor rotormodule.c
++#crypt cryptmodule.c
+ ufcrypt ufcryptmodule.c
+ 
+ 

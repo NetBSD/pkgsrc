@@ -1,0 +1,18 @@
+This is version 1.0.0 of the Python Cryptography Toolkit, a
+collection of cryptographic routines for the Python programming
+language, written by Andrew Kuchling <andrewk@cst.ca>
+
+The PCT is a collection of secure hash functions (such as MD5
+and SHA), and various encryption algorithms (IDEA, DES, RSA, ElGamal,
+etc.). The package is structured to make adding new modules easy.
+
+One possible application of the PCT is writing secure administration
+tools. Another application is in writing daemons and servers. Clients
+and servers can encrypt the data being exchanged and mutually
+authenticate themselves; daemons can encrypt private data for added
+security. Python also provides a pleasant framework for prototyping and
+experimentation with cryptographic algorithms; thanks to its
+arbitrary-length integers, public key algorithms based on number theory
+are easily implemented. 
+
+See pct.info for more information.
