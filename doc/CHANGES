@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6095 2004/06/02 12:09:13 adam Exp $
+$NetBSD: CHANGES,v 1.6096 2004/06/02 12:21:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2750,3 +2750,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libiberty-1.0 [shannonjr 2004-06-02]
 	Updated inn to 2.4.1 [tron 2004-06-02]
 	Updated curl to 7.12.0 [adam 2004-06-02]
+	Updated lftp to 3.0.5 [adam 2004-06-02]
