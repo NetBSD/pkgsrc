@@ -1,28 +1,13 @@
-$NetBSD: patch-ae,v 1.1 1999/10/09 20:51:41 mycroft Exp $
+$NetBSD: patch-ae,v 1.2 2000/03/03 15:22:19 scw Exp $
 
---- include/vadefs.h.orig	Sun Mar  1 15:38:45 1998
-+++ include/vadefs.h	Sat Oct  9 13:47:40 1999
-@@ -37,8 +37,8 @@
- #	include <varargs.h>
+--- include/vadefs.h.orig	Sat Nov 27 19:25:44 1999
++++ include/vadefs.h	Fri Mar  3 14:41:00 2000
+@@ -51,7 +51,7 @@
+ #	endif
  #endif
  
 -#if (defined(__linux__) || defined(__linux) || defined(sun)) && \
--			(defined(__ppc) || defined(__PPC) || defined(powerpc))
 +#if (defined(__linux__) || defined(__linux) || defined(sun) || defined(__NetBSD__)) && \
-+	(defined(__ppc) || defined(__PPC) || defined(powerpc) || defined(__powerpc__))
+ 		(defined(__ppc) || defined(__PPC) || defined(powerpc) || defined(__powerpc__))
  
  #	ifndef	VA_LIST_IS_ARRAY
- #	define	VA_LIST_IS_ARRAY
-@@ -63,7 +63,11 @@
-  * compatibility.
-  */
- #if !defined(va_copy) && !defined(HAVE_VA_COPY)
--#	define	va_copy(to, from)	((to) = (from))
-+#	ifdef	VA_LIST_IS_ARRAY
-+#		define	va_copy(to, from)	((to)[0] = (from)[0])
-+#	else
-+#		define	va_copy(to, from)	((to) = (from))
-+#	endif
- #endif
- 
- /*
