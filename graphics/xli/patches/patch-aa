@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1998/08/27 11:18:05 frueauf Exp $
+
+--- Imakefile.orig	Thu Jul 28 20:45:10 1994
++++ Imakefile	Sun Aug 23 09:01:23 1998
+@@ -14,7 +14,7 @@
+         DEPLIBS = $(DEPXLIB)
+ LOCAL_LIBRARIES = $(XLIB)
+ SYS_LIBRARIES   = -lm
+-        DEFINES =  
++        DEFINES = -DHAVE_GUNZIP
+ 
+ SRCS1 = bright.c clip.c cmuwmrast.c compress.c dither.c faces.c fbm.c  fill.c  g3.c gif.c halftone.c imagetypes.c img.c mac.c mcidas.c  mc_tables.c merge.c misc.c new.c options.c path.c pbm.c pcx.c  reduce.c jpeg.c jpeglib.c rle.c rlelib.c root.c rotate.c send.c smooth.c  sunraster.c  value.c window.c xbitmap.c xli.c  xpixmap.c xwd.c zio.c zoom.c ddxli.c doslib.c tga.c bmp.c pcd.c
+ OBJS1 = bright.o clip.o cmuwmrast.o compress.o dither.o faces.o fbm.o  fill.o  g3.o gif.o halftone.o imagetypes.o img.o mac.o mcidas.o  mc_tables.o merge.o misc.o new.o options.o path.o pbm.o pcx.o  reduce.o jpeg.o jpeglib.o rle.o rlelib.o root.o rotate.o send.o smooth.o  sunraster.o  value.o window.o xbitmap.o xli.o  xpixmap.o xwd.o zio.o zoom.o ddxli.o doslib.o tga.o bmp.o pcd.o
