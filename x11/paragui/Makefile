@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2004/03/06 23:28:23 snj Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/12 19:44:59 wiz Exp $
 #
 
 DISTNAME=		paragui-1.0.4
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11
-MASTER_SITES=		http://savannah.nongnu.org/download/paragui/stable.pkg/1.0.4/
+MASTER_SITES=		http://savannah.nongnu.org/download/paragui/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.paragui.org/
@@ -20,6 +20,7 @@ PTHREAD_OPTS+=		require native
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
