@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/14 18:26:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2004/02/26 14:07:23 minskim Exp $
 #
 
 .include "Makefile.common"
@@ -32,8 +32,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6 USE_OPENLDAP
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
