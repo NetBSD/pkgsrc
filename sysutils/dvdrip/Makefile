@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/26 12:32:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/26 12:48:47 jmmv Exp $
 #
 
 VERS=		0.50.16
@@ -34,6 +34,6 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Video/DVDRip/.packlist
 # XXX fping support
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/ImageMagick/buildlink2.mk"
-.include "../../graphics/mjpegtools/buildlink2.mk"
+.include "../../multimedia/mjpegtools/buildlink2.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
