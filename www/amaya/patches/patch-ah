@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2004/06/12 14:23:10 cube Exp $
+$NetBSD: patch-ah,v 1.2 2005/01/18 16:35:18 adam Exp $
 
---- ../thotlib/presentation/presvariables.c.orig	2004-01-29 17:06:46.000000000 +0100
+--- ../thotlib/presentation/presvariables.c.orig	2004-09-30 12:24:44.000000000 +0000
 +++ ../thotlib/presentation/presvariables.c
-@@ -909,8 +909,8 @@ ThotBool NewVariable (int varNum, PtrSSc
+@@ -1113,8 +1113,8 @@ ThotBool NewVariable (int varNum, PtrSSc
  {
     int                 f, l;
     int                 i;

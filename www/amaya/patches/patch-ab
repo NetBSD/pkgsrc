@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2003/12/03 01:36:12 xtraeme Exp $
+$NetBSD: patch-ab,v 1.10 2005/01/18 16:35:18 adam Exp $
 
---- ../configure.orig	Tue Nov  4 09:01:02 2003
+--- ../configure.orig	2004-11-04 16:11:59.000000000 +0000
 +++ ../configure
-@@ -5577,7 +5577,7 @@
+@@ -4941,7 +4941,7 @@ done
  
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.9 2003/12/03 01:36:12 xtraeme Exp $
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
  if eval "test \"\${$as_ac_Header+set}\" = set"; then
-@@ -14772,6 +14772,8 @@
+@@ -14776,6 +14776,8 @@ fi
  if test "$with_dav" = "yes" ; then
  
      dav_frag=$srcdir/davlib/Makefile.dav
