@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.948 2002/12/30 18:47:52 chris Exp $
+$NetBSD: CHANGES,v 1.949 2002/12/30 20:47:56 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4318,3 +4318,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added zephyr-mode-2.5.20 [sommerfeld 2002-12-30]
 	Updated leafnode to 1.9.31 [cjep 2002-12-30]
 	Updated sylpheed-claws to 0.8.8nb1 [chris 2002-12-30]
+	Updated gmp3info to 0.8.4 [tron 2002-12-30]
