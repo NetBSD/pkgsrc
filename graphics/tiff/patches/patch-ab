@@ -1,0 +1,58 @@
+$NetBSD: patch-ab,v 1.16 2005/03/24 17:46:29 recht Exp $
+
+--- libtiff/Makefile.in.orig	Wed Mar  9 10:49:43 2005
++++ libtiff/Makefile.in	Thu Mar 24 01:25:26 2005
+@@ -103,7 +103,8 @@
+ 	tif_warning.lo tif_write.lo tif_zip.lo
+ am_libtiff_la_OBJECTS = $(am__objects_1)
+ libtiff_la_OBJECTS = $(am_libtiff_la_OBJECTS)
+-libtiffxx_la_LIBADD =
++am__DEPENDENCIES_1 = $(top_builddir)/libtiff/libtiff.la
++libtiffxx_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
+ am__objects_2 = tif_stream.lo
+ am_libtiffxx_la_OBJECTS = $(am__objects_2)
+ libtiffxx_la_OBJECTS = $(am_libtiffxx_la_OBJECTS)
+@@ -111,8 +112,8 @@
+ PROGRAMS = $(noinst_PROGRAMS)
+ am_mkg3states_OBJECTS = mkg3states.$(OBJEXT)
+ mkg3states_OBJECTS = $(am_mkg3states_OBJECTS)
+-am__DEPENDENCIES_1 =
+-mkg3states_DEPENDENCIES = $(am__DEPENDENCIES_1)
++am__DEPENDENCIES_2 = $(top_builddir)/port/libport.la
++mkg3states_DEPENDENCIES = $(am__DEPENDENCIES_2)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I. -I.
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+@@ -271,7 +272,8 @@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
+-LIBPORT = -L$(top_builddir)/port -lport
++LIBPORT = $(top_builddir)/port/libport.la
++LIBTIFF = $(top_builddir)/libtiff/libtiff.la
+ EXTRA_DIST = Makefile.vc tif_config.h.vc tiffconf.h.vc libtiff.def \
+ 	     $(EXTRA_SRCS)
+ 
+@@ -338,15 +340,14 @@
+ noinst_HEADERS = $(EXTRA_HDRS)
+ lib_LTLIBRARIES = libtiff.la $(am__append_2)
+ libtiff_la_SOURCES = $(SRCS)
+-libtiff_la_LDFLAGS = \
+-	-no-undefined \
+-	-version-number $(LIBTIFF_MAJOR_VERSION):$(LIBTIFF_MINOR_VERSION):$(LIBTIFF_MICRO_VERSION)
+-
++libtiff_la_LDFLAGS = -no-undefined -version-number \
++	$(LIBTIFF_MAJOR_VERSION):$(LIBTIFF_MINOR_VERSION):$(LIBTIFF_MICRO_VERSION) \
++	$(am__append_3)
+ libtiffxx_la_SOURCES = $(SRCSXX)
+-libtiffxx_la_LDFLAGS = \
+-	-no-undefined \
+-	-version-number $(LIBTIFF_MAJOR_VERSION):$(LIBTIFF_MINOR_VERSION):$(LIBTIFF_MICRO_VERSION)
+-
++libtiffxx_la_LDFLAGS = -no-undefined -version-number \
++	$(LIBTIFF_MAJOR_VERSION):$(LIBTIFF_MINOR_VERSION):$(LIBTIFF_MICRO_VERSION) \
++	$(am__append_4)
++libtiffxx_la_LIBADD = $(LIBTIFF)
+ mkg3states_SOURCES = mkg3states.c tif_fax3.h
+ mkg3states_LDADD = $(LIBPORT)
+ all: tif_config.h tiffconf.h
