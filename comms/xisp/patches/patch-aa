@@ -1,161 +1,100 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/12/03 15:08:53 frueauf Exp $
+$NetBSD: patch-aa,v 1.2 1999/08/26 19:01:45 jlam Exp $
 
---- Makefile.orig	Mon Oct 26 11:35:01 1998
-+++ Makefile	Thu Dec  3 15:25:01 1998
-@@ -8,10 +8,13 @@
+--- Makefile.orig	Thu Aug 26 08:08:51 1999
++++ Makefile	Thu Aug 26 14:53:57 1999
+@@ -8,8 +8,8 @@
  #  Compilation/installation vars (global for all following sections) |
  #=====================================================================
  #
--INCX11    = /usr/X11R6/include
--LIBX11    = /usr/X11R6/lib
--INCFORMS  = /usr/X11R6/include/X11
--LIBFORMS  = /usr/X11R6/lib
-+X11PREFIX != echo ${X11BASE} | sed "s,^/,,"
-+BASEPREFIX!= echo ${PREFIX} | sed "s,^/,,"
-+#
-+INCX11    = ${X11BASE}/include
-+LIBX11    = ${X11BASE}/lib
-+INCFORMS  = ${X11BASE}/include/X11
-+LIBFORMS  = ${X11BASE}/lib
- MODEMDEV  = modem
+-PREFIX     = /usr/local
+-X11PREFIX  = /usr/X11R6
++#PREFIX     = /usr/local
++X11PREFIX  = ${X11BASE}
+ INCX11     = $(X11PREFIX)/include
+ LIBX11     = $(X11PREFIX)/lib
+ INCFORMS   = $(X11PREFIX)/include
+@@ -24,25 +24,25 @@
+ # Normal (i.e. SuSE-6.x) vars; for SuSE-5.x use the lines which
+ # DO NOT include -lcrypt in EXTRALIBS and -DGLIBC2 in EXTRADEFS.
+ #----------------------------------------------------------------
+-BINX11     = $(X11PREFIX)/bin
+-USRLOCAL   = $(PREFIX)/bin
+-SBINDIR    = /usr/sbin
+-VARRUN     = /var/run
+-USRLIBPPP  = /etc/ppp
+-OPTSDIR    = /etc/ppp
+-MANDIR     = $(X11PREFIX)/man/man1
+-ETCPPP     = /etc/ppp
+-INSTPPPDIR = $(ETCPPP)
+-DESTDIR    = 
+-GROUP      = uucp
+-GCCFLAGS   = -Wall -O
+-EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DGLIBC2
++#BINX11     = $(X11PREFIX)/bin
++#USRLOCAL   = $(PREFIX)/bin
++#SBINDIR    = /usr/sbin
++#VARRUN     = /var/run
++#USRLIBPPP  = /etc/ppp
++#OPTSDIR    = /etc/ppp
++#MANDIR     = $(X11PREFIX)/man/man1
++#ETCPPP     = /etc/ppp
++#INSTPPPDIR = $(ETCPPP)
++#DESTDIR    = 
++#GROUP      = uucp
++#GCCFLAGS   = -Wall -O
++#EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DGLIBC2
+ #EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\"
+-EXTRALIBS  = -lcrypt
++#EXTRALIBS  = -lcrypt
+ #EXTRALIBS  = 
+-LINKX11    = 
+-LINKFORMS  = -L$(LIBFORMS) -lforms
+-INSTALL    = install
++#LINKX11    = 
++#LINKFORMS  = -L$(LIBFORMS) -lforms
++#INSTALL    = install
  #
- #=====================================================================
-@@ -20,20 +23,20 @@
+ # Debian vars (if your Debian distribution is relatively
+ # old and does not use glibc2, use the lines which DO NOT
+@@ -166,24 +166,24 @@
  #
- # Normal vars (e.g. Slackware)
- #------------------------------
--BINX11    = usr/X11R6/bin
--USRLOCAL  = usr/local/bin
--SBINDIR   = usr/sbin
--VARRUN    = var/run
--USRLIBPPP = usr/lib/ppp
--OPTSDIR   = usr/lib/ppp
--MANDIR    = usr/X11R6/man/man1
--ETCPPP    = etc/ppp
--DESTDIR   = 
--GROUP     = uucp
--GCCFLAGS  = -Wall -O
--EXTRADEFS =
--EXTRALIBS =
--INSTALL   = install
-+#BINX11    = usr/X11R6/bin
-+#USRLOCAL  = usr/local/bin
-+#SBINDIR   = usr/sbin
-+#VARRUN    = var/run
-+#USRLIBPPP = usr/lib/ppp
-+#OPTSDIR   = usr/lib/ppp
-+#MANDIR    = usr/X11R6/man/man1
-+#ETCPPP    = etc/ppp
-+#DESTDIR   = 
-+#GROUP     = uucp
-+#GCCFLAGS  = -Wall -O
-+#EXTRADEFS =
-+#EXTRALIBS =
-+#INSTALL   = install
+ # NetBSD vars
+ #-------------
+-#BINX11     = $(X11PREFIX)/bin
+-#USRLOCAL   = $(BINX11)
+-#SBINDIR    = /usr/sbin
+-#VARRUN     = /var/run
+-#USRLIBPPP  = $(PREFIX)/libexec
+-#MANDIR     = $(PREFIX)/man/man1
+-#ETCPPP     = /etc/ppp
+-#OPTSDIR    = $(ETCPPP)
++BINX11     = $(X11PREFIX)/bin
++USRLOCAL   = $(BINX11)
++SBINDIR    = /usr/sbin
++VARRUN     = /var/run
++USRLIBPPP  = $(PREFIX)/libexec
++MANDIR     = $(PREFIX)/man/man1
++ETCPPP     = /etc/ppp
++OPTSDIR    = $(ETCPPP)
+ #INSTPPPDIR = $(ETCPPP)
+-##INSTPPPDIR = $(PREFIX)/share/examples/xisp
+-#DESTDIR    = 
+-#GROUP      = dialer
+-#GCCFLAGS   = -Wall -O
+-#EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DHAVE_STRERROR
+-#EXTRALIBS  = -lcrypt
+-#LINKX11    = -Wl,-R$(LIBX11)
+-#LINKFORMS  = -L$(LIBFORMS) -lforms
+-#INSTALL    = /usr/bin/install
++INSTPPPDIR = $(PREFIX)/share/examples/xisp
++DESTDIR    = 
++GROUP      = dialer
++GCCFLAGS   = -Wall -O
++EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DHAVE_STRERROR
++EXTRALIBS  = -lcrypt
++LINKX11    = -Wl,-R$(LIBX11)
++LINKFORMS  = -L$(LIBFORMS) -lforms
++INSTALL    = /usr/bin/install
  #
- # Linux on the Alpha
- #--------------------
-@@ -112,7 +115,7 @@
- #DESTDIR   = 
- #GROUP     = uucp
- #GCCFLAGS  = -Wall -O
--#EXTRADEFS = -DSUNOS41x
-+#EXTRADEFS = -DSUNOS41x -DBROKEN_VSPRINTF=1
- #EXTRALIBS = -L./SunOS/ufc-crypt -lufc
- #INSTALL   = install
- #
-@@ -129,11 +132,34 @@
- #DESTDIR   = 
- #GROUP     = uucp
- #GCCFLAGS  = -Wall -O
--#EXTRADEFS = -DSUNOS5x
-+#EXTRADEFS = -DSUNOS5x -DHAVE_STRERROR=1
- #EXTRALIBS = -lcrypt -lsocket -lnsl
- #INSTALL   = /usr/ucb/install
- #
- #=====================================================================
-+#                           NetBSD Section                           |
-+#=====================================================================
-+#
-+# NetBSD vars
-+#-----------
-+BINX11    = ${BASEPREFIX}/bin
-+USRLOCAL  = ${BINX11}
-+SBINDIR   = usr/sbin
-+VARRUN    = var/run
-+USRLIBPPP = ${BASEPREFIX}/libexec
-+OPTSDIR   = ${BASEPREFIX}/etc
-+MANDIR    = ${BASEPREFIX}/man/man1
-+ETCPPP    = etc/ppp
-+EGDIR     = ${BASEPREFIX}/share/examples/xisp
-+DESTDIR   = 
-+GROUP     = dialer
-+GCCFLAGS  = -Wall -O
-+EXTRADEFS = -DHAVE_STRERROR=1
-+EXTRALIBS = -lcrypt
-+LINKX11   = -Wl,-R${LIBX11}
-+INSTALL   = /usr/bin/install
-+#
-+#=====================================================================
- #                    Program configuration options                   |
- #=====================================================================
- #
-@@ -170,7 +196,7 @@
- all: xisp xispdial xisprccv xispterm xispid
- 
- xisp: xisp.o pcode.o network.o rcio.o logs.o
--	gcc -o xisp xisp.o pcode.o network.o rcio.o logs.o $(EXTRALIBS) -L$(LIBX11) -L$(LIBFORMS) -lforms -lXpm -lX11 -lm
-+	gcc $(LINKX11) -o xisp xisp.o pcode.o network.o rcio.o logs.o $(EXTRALIBS) -L$(LIBX11) -L$(LIBFORMS) -lforms -lXpm -lX11 -lm
- 
- xisp.o: xisp.h xisp.c xisp.xpm version.h common.h pcode.h network.h rcio.h logs.h help.c peHelp.c excl.xpm
- 	gcc $(GCCOPTS) -I$(INCX11) -I$(INCFORMS) -c xisp.c
-@@ -188,7 +214,7 @@
- 	gcc $(GCCOPTS) -o xispdial xispdial.c
- 
- xisprccv: xisprccv.o pcode.o
--	gcc -o xisprccv xisprccv.o pcode.o $(EXTRALIBS) -lm
-+	gcc $(LINKX11) -o xisprccv xisprccv.o pcode.o $(EXTRALIBS) -lm
- 
- xisprccv.o: xisprccv.c common.h version.h pcode.h logs.h
- 	gcc $(GCCOPTS) -c xisprccv.c
-@@ -216,29 +242,25 @@
- 	$(INSTALL) -g $(GROUP) -m 750 -o root -s xispid $(DESTDIR)/$(USRLOCAL)/xispid
- #	if [ ! -d $(DESTDIR)/$(OPTSDIR) ]; then $(INSTALL) -d $(DESTDIR)/$(OPTSDIR); fi
- #	$(INSTALL) -g $(GROUP) -m 640 -o root options.xisp $(DESTDIR)/$(OPTSDIR)/options.xisp
-+	sed -e s,@ETCPPP@,${DESTDIR}/${ETCPPP},g \
-+		-e s,@USRLIBPPP@,${DESTDIR}/${USRLIBPPP},g \
-+		-e s,@USRLOCAL@,${DESTDIR}/${USRLOCAL},g \
-+		< xisp.man > xisp.1
- 	if [ ! -d $(DESTDIR)/$(MANDIR) ]; then $(INSTALL) -d $(DESTDIR)/$(MANDIR); fi
--	$(INSTALL) -g $(GROUP) -m 644 -o root xisp.man $(DESTDIR)/$(MANDIR)/xisp.1
-+	$(INSTALL) -g $(GROUP) -m 644 -o root xisp.1 $(DESTDIR)/$(MANDIR)/xisp.1
- 	sed -e s/__XISPGROUP/$(GROUP)/ \
- 		-e sM__XISPIDM/$(DESTDIR)/$(USRLOCAL)/xispidM < ip-up.xisp > ip-up.install
- 	sed -e s/__XISPGROUP/$(GROUP)/ \
- 		-e sM__XISPIDM/$(DESTDIR)/$(USRLOCAL)/xispidM < ip-down.xisp > ip-down.install
--	if [ ! -d $(DESTDIR)/$(ETCPPP) ]; then $(INSTALL) -d $(DESTDIR)/$(ETCPPP); fi
--	if [ -f $(DESTDIR)/$(ETCPPP)/ip-up ]; then \
--		mv -f $(DESTDIR)/$(ETCPPP)/ip-up $(DESTDIR)/$(ETCPPP)/ip-up.bak; fi
--	$(INSTALL) -g $(GROUP) -m 750 -o root ip-up.install $(DESTDIR)/$(ETCPPP)/ip-up
--	if [ -f $(DESTDIR)/$(ETCPPP)/ip-down ]; then \
--		mv -f $(DESTDIR)/$(ETCPPP)/ip-down $(DESTDIR)/$(ETCPPP)/ip-down.bak; fi
--	$(INSTALL) -g $(GROUP) -m 750 -o root ip-down.install $(DESTDIR)/$(ETCPPP)/ip-down
-+	if [ ! -d $(DESTDIR)/$(EGDIR) ]; then $(INSTALL) -d $(DESTDIR)/$(EGDIR); fi
-+	$(INSTALL) -g $(GROUP) -m 750 -o root ip-up.install $(DESTDIR)/$(EGDIR)/ip-up
-+	$(INSTALL) -g $(GROUP) -m 750 -o root ip-down.install $(DESTDIR)/$(EGDIR)/ip-down
- 	rm -f ip-up.install ip-down.install
- 	sed -e s/__DEVICE/$(MODEMDEV)/ < xisp.peers.device > xisp_$(MODEMDEV)
- 	sed -e sM__DIALER_PATHM$(DESTDIR)/$(USRLIBPPP)M < xisp.peers.dialer > xisp_dialer
--	if [ ! -d $(DESTDIR)/$(ETCPPP)/peers ]; then $(INSTALL) -d $(DESTDIR)/$(ETCPPP)/peers; fi
--	if [ -f $(DESTDIR)/$(ETCPPP)/peers/xisp_$(MODEMDEV) ]; then \
--		mv -f $(DESTDIR)/$(ETCPPP)/peers/xisp_$(MODEMDEV) $(DESTDIR)/$(ETCPPP)/peers/xisp_$(MODEMDEV).bak; fi
--	$(INSTALL) -g $(GROUP) -m 640 -o root xisp_$(MODEMDEV) $(DESTDIR)/$(ETCPPP)/peers/xisp_$(MODEMDEV)
--	if [ -f $(DESTDIR)/$(ETCPPP)/peers/xisp_dialer ]; then \
--		mv -f $(DESTDIR)/$(ETCPPP)/peers/xisp_dialer $(DESTDIR)/$(ETCPPP)/peers/xisp_dialer.bak; fi
--	$(INSTALL) -g $(GROUP) -m 640 -o root xisp_dialer $(DESTDIR)/$(ETCPPP)/peers/xisp_dialer
-+	if [ ! -d $(DESTDIR)/$(EGDIR)/peers ]; then $(INSTALL) -d $(DESTDIR)/$(EGDIR)/peers; fi
-+	$(INSTALL) -g $(GROUP) -m 640 -o root xisp_$(MODEMDEV) $(DESTDIR)/$(EGDIR)/peers/xisp_$(MODEMDEV)
-+	$(INSTALL) -g $(GROUP) -m 640 -o root xisp_dialer $(DESTDIR)/$(EGDIR)/peers/xisp_dialer
- 	rm -f xisp_$(MODEMDEV) xisp_dialer
- 
- clean:
+ # FreeBSD vars
+ #-------------
