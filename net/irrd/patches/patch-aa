@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.5 2004/12/31 21:38:52 kristerw Exp $
+
+--- configure.orig	Fri Dec 31 21:48:06 2004
++++ configure	Fri Dec 31 21:48:59 2004
+@@ -1036,12 +1036,6 @@
+   disable_thread=yes
+ fi;
+ 
+-# Check whether --enable-thread or --disable-thread was given.
+-if test "${enable_thread+set}" = set; then
+-  enableval="$enable_thread"
+-  disable_thread=no
+-fi;
+-
+ # Check whether --enable-wall or --disable-wall was given.
+ if test "${enable_wall+set}" = set; then
+   enableval="$enable_wall"
