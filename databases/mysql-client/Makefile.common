@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2003/07/17 21:28:22 grant Exp $
+# $NetBSD: Makefile.common,v 1.17 2003/08/24 01:57:50 taca Exp $
 
 DISTNAME=		mysql-3.23.49
 CATEGORIES=		databases
@@ -21,6 +21,12 @@ MYSQL_USER?=		mysql
 MYSQL_GROUP?=		mysql
 MYSQL_DATADIR?=		/var/mysql
 
+# MYSQL_CHARSET		default character set
+# MYSQL_EXTRA_CHARSET	additonal character set to be compiled in.
+#
+MYSQL_CHARSET?=		latin1
+MYSQL_EXTRA_CHARSET?=	all
+
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
@@ -37,6 +43,9 @@ CONFIGURE_ARGS+=	--without-docs
 CONFIGURE_ARGS+=	--without-debug
 CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
+
+CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET}
+CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET}
 
 CPPFLAGS+=		-Dunix
 
