@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5380 2004/03/30 21:04:52 tron Exp $
+$NetBSD: CHANGES,v 1.5381 2004/03/30 22:44:44 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1618,3 +1618,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mplex to 1.6.2 [ben 2004-03-30]
 	Updated mit-krb5 to 1.3.2 [jlam 2004-03-30]
 	Updated kermit to 8.0.209nb4 [tron 2004-03-30]
+	Updated streamtuner to 0.12.1 [xtraeme 2004-03-30]
+	Updated streamtuner-live365 to 0.3.4 [xtraeme 2004-03-30]
+	Updated streamtuner-local to 0.4.0 [xtraeme 2004-03-30]
