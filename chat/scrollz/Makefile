@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 20:05:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/29 08:05:07 xtraeme Exp $
 #
 
 DISTNAME=	ScrollZ-1.9
@@ -12,12 +12,12 @@ COMMENT=        Advanced IRC client based on ircII client
 
 BUILD_DEFS+=	USE_INET6
 
-GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+GNU_CONFIGURE=	yes
+USE_BUILDLINK3=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
