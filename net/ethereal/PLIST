@@ -1,16 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2003/01/26 06:56:23 grant Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2003/03/10 18:26:52 grant Exp $
 bin/editcap
 bin/ethereal
 bin/idl2eth
 bin/mergecap
 bin/tethereal
 bin/text2pcap
-etc/diameter/dictionary.dtd
-etc/diameter/dictionary.xml
-etc/diameter/mobileipv4.xml
-etc/diameter/nasreq.xml
-etc/diameter/sunping.xml
-etc/manuf
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.a
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.la
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.so
@@ -38,7 +32,14 @@ man/man1/idl2eth.1
 man/man1/mergecap.1
 man/man1/tethereal.1
 man/man1/text2pcap.1
-@dirrm etc/diameter
+share/ethereal/diameter/dictionary.dtd
+share/ethereal/diameter/dictionary.xml
+share/ethereal/diameter/mobileipv4.xml
+share/ethereal/diameter/nasreq.xml
+share/ethereal/diameter/sunping.xml
+share/ethereal/manuf
+@dirrm share/ethereal/diameter
+@dirrm share/ethereal
 @dirrm lib/ethereal/plugins/${PKGVERSION}
 @dirrm lib/ethereal/plugins
 @dirrm lib/ethereal
