@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1765 2004/05/19 16:34:11 epg Exp $
+$NetBSD: TODO,v 1.1766 2004/05/20 21:05:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -221,7 +221,7 @@ Suggested package updates
 	o firewalk-gtk-5.0
 	o foomatic-2.9.1 [jlam]
 	o fop-0.20.5
-	o fox-1.2.0
+	o fox-1.2.1
 	o freetds-0.62.3
 	o fsviewer-0.2.5
 	o gcc-3.4.0 [pkgsrc-wip]
@@ -307,7 +307,7 @@ Suggested package updates
 	o mozilla-stable-1.4.2
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-3.1.9
+	o multitail-3.2.0
 	o namazu-2.0.13
 	o nano-1.2.3
 	o nap-1.5.2
