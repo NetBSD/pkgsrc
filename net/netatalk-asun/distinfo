@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/05/24 17:00:57 abs Exp $
+$NetBSD: distinfo,v 1.5 2003/01/14 02:02:01 markd Exp $
 
 SHA1 (netatalk-1.4b2+asun2.1.3.tar.gz) = 2b6d73125515867eb042bd30cb792ed41aea2013
 Size (netatalk-1.4b2+asun2.1.3.tar.gz) = 338362 bytes
@@ -42,3 +42,4 @@ SHA1 (patch-bk) = f74a19dda06750042318c4dacaf539c28aab9982
 SHA1 (patch-bl) = 3a3871343a8c9a6734671c4469465cb45a1fc38f
 SHA1 (patch-bm) = 315ef875b2e260a486d400455aa57b167e29e183
 SHA1 (patch-bn) = 450e378e582d8055c244562b3475fc8c067fbea8
+SHA1 (patch-bo) = 5415b61083e5c1ddc1f6d6c4dc2f24c0723d4280
