@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.523 2000/07/29 00:06:26 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.524 2000/07/30 08:52:41 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2065,6 +2065,11 @@ ${DLIST}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(${PKG_INFO} -R "${PKGWILDCARD}" || ${TRUE}) |	\
 		${TAIL} -n +4 >${DLIST}
+
+# The 'info' target can be used to display information about a package.
+
+info: uptodate-pkgtools
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} ${PKGWILDCARD}
 
 # This is for the use of sites which store distfiles which others may
 # fetch - only fetch the distfile if it is allowed to be
