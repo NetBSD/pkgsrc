@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 2000/12/09 09:29:08 tron Exp $
+$NetBSD: md5,v 1.5 2001/01/30 20:33:25 tron Exp $
 
-MD5 (rp-pppoe-2.4.tar.gz) = b4e066d72618af3efe0bfc28bff085ea
+MD5 (rp-pppoe-2.6.tar.gz) = b0979be9408850acf2d94d6d448efaea
