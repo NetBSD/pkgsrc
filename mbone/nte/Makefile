@@ -3,7 +3,7 @@
 # Date created:		5 September 1996
 # Whom:	      		mycroft
 #
-# $NetBSD: Makefile,v 1.1 1998/03/06 02:18:07 mycroft Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/20 07:22:05 mycroft Exp $
 #
 
 DISTNAME=	nt.1.5a23
@@ -16,7 +16,7 @@ MAINTAINER=	mycroft@NetBSD.ORG
 TK_DIR=         ${PORTSDIR}/x11/tk80
 TK_SRC=		${TK_DIR}/work/tk8.0
 
-DEPENDS=	${TK_DIR}
+DEPENDS=	${TK_DIR}:configure
 LIB_DEPENDS=	tk80:${TK_DIR}
 
 RESTRICTED=	"Contains DES encryption"
