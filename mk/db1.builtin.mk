@@ -1,14 +1,14 @@
-# $NetBSD: db1.builtin.mk,v 1.5 2004/11/17 15:12:08 jlam Exp $
+# $NetBSD: db1.builtin.mk,v 1.5.2.1 2004/11/28 20:11:32 tv Exp $
 
 .for _lib_ in db db1
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
 _BLNK_LIB_FOUND.${_lib_}!=	\
-	if ${TEST} `${ECHO} /usr/lib/lib${_lib_}.*` = "/usr/lib/lib${_lib_}.*"; then \
-		${ECHO} "no";						\
-	elif ${TEST} `${ECHO} /lib/lib${_lib_}.*` = "/lib/lib${_lib_}.*"; then \
-		${ECHO} "no";						\
-	else								\
+	if ${TEST} "`${ECHO} /usr/lib/lib${_lib_}.*`" != "/usr/lib/lib${_lib_}.*"; then \
 		${ECHO} "yes";						\
+	elif ${TEST} "`${ECHO} /lib/lib${_lib_}.*`" != "/lib/lib${_lib_}.*"; then \
+		${ECHO} "yes";						\
+	else								\
+		${ECHO} "no";						\
 	fi
 BUILDLINK_VARS+=	_BLNK_LIB_FOUND.${_lib_}
 .  endif
