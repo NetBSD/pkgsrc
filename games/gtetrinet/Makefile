@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/26 02:27:40 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/14 16:15:23 jmmv Exp $
 #
 
 DISTNAME=	gtetrinet-0.7.1
@@ -11,10 +11,10 @@ HOMEPAGE=	http://gtetrinet.sourceforge.net/
 COMMENT=	Multiplayer tetris game for GNOME2
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
 

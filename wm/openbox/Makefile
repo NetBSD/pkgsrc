@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/15 15:17:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/14 16:15:28 jmmv Exp $
 
 DISTNAME=	openbox-3.1
 PKGREVISION=	3
@@ -10,11 +10,11 @@ HOMEPAGE=	http://icculus.org/openbox/
 COMMENT=	Standards compliant, light-weight and extensible window manager
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		vera-ttf>=1.10:../../fonts/vera-ttf
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES

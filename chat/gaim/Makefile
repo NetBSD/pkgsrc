@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2004/04/02 16:08:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.58 2004/04/14 16:15:21 jmmv Exp $
 #
 
 DISTNAME=	gaim-0.76
@@ -11,12 +11,12 @@ HOMEPAGE=	http://gaim.sourceforge.net/
 COMMENT=	GTK2 based client for the AOL Instant Messenger chat system
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 CONFLICTS+=	gaim-gnome-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		xdg-1.1
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/26 02:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/14 16:15:28 jmmv Exp $
 #
 
 DISTNAME=	gtodo-applet-0.1
@@ -10,11 +10,11 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://qballcow.nl/index.php?s=4
 COMMENT=	GNOME applet for the gtodo application
 
-DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		gtodo>=0.14:../../time/gtodo
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		YES
 
 .include "../../devel/GConf2/schemas.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/12 05:12:01 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/14 16:15:22 jmmv Exp $
 #
 
 DISTNAME=		ccgo-0.3.4
@@ -10,12 +10,12 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ccdw.org/~cjj/prog/ccgo/
 COMMENT=		Go board with IGS and gnugo interface
 
-DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		gnugo>=3.4:../../games/gnugo
 
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 

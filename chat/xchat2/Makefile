@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/03/26 02:27:35 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/14 16:15:21 jmmv Exp $
 #
 
 DISTNAME=	xchat-2.0.8
@@ -12,12 +12,12 @@ HOMEPAGE=	http://www.xchat.org/
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 
 CONFLICTS=		xchat-gnome-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES

@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2004/03/26 02:27:42 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2004/04/14 16:15:24 jmmv Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
 PKGREVISION=	2
 CATEGORIES=	graphics
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
-
-DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
@@ -13,6 +11,7 @@ DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 #DEPENDS+=	gpio
 
 USE_BUILDLINK2=		YES
+USE_DIRS+=		xdg-1.1
 
 BUILDLINK_DEPENDS.lcms=	lcms>=1.12
 

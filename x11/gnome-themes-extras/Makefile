@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/02 11:52:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/14 16:15:29 jmmv Exp $
 #
 
 DISTNAME=	gnome-themes-extras-0.6
@@ -10,11 +10,11 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Collection of metathemes for the GNOME desktop environment
 
-DEPENDS=		xdg-dirs>=1.1:../../misc/gnome2-dirs
 DEPENDS+=		librsvg2-gtk2>=2.6.1:../../graphics/librsvg2-gtk2
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK3=		yes
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/04/01 18:40:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2004/04/14 16:15:29 jmmv Exp $
 #
 
 DISTNAME=	control-center-2.6.0
@@ -12,12 +12,12 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 configuration utility
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=		gnome-icon-theme>=1.1.7:../../graphics/gnome-icon-theme
 
 USE_MSGFMT_PLURALS=	yes
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
+USE_DIRS+=		gnome2-1.5
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make

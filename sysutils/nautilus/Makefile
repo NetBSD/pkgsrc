@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/04/01 18:38:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2004/04/14 16:15:28 jmmv Exp $
 #
 
 DISTNAME=		nautilus-2.6.0
@@ -11,10 +11,10 @@ HOMEPAGE=		http://www.gnome.org/projects/nautilus/
 COMMENT=		Nautilus file manager for GNOME2
 
 DEPENDS+=		hicolor-icon-theme>=0.4:../../graphics/hicolor-icon-theme
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 USE_PKGLOCALEDIR=	yes
 USE_BUILDLINK3=		yes
+USE_DIRS+=		xdg-1.1
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/26 02:27:47 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/14 16:15:26 jmmv Exp $
 #
 
 DISTNAME=	dc_gui2-0.75
@@ -12,10 +12,10 @@ HOMEPAGE=	http://www.ac2i.tzo.com/dctc/
 COMMENT=	Graphical user interface for DCTC
 
 DEPENDS+=	dctc>=0.85.4:../../net/dctc
-DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
 USE_GNU_TOOLS+=		make

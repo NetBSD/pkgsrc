@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/05 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/14 16:15:25 jmmv Exp $
 #
 
 DISTNAME=	gmencoder-0.1.0
@@ -12,12 +12,12 @@ HOMEPAGE=	http://gmencoder.sourceforge.net/
 COMMENT=	GNOME2 frontend to mencoder
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=       	gnome2-dirs>=1.5:../../misc/gnome2-dirs
 DEPENDS+=       	mencoder>=0.90:../../multimedia/mencoder
 DEPENDS+=       	mplayer>=0.90:../../multimedia/mplayer
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
+USE_DIRS+=       	gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes

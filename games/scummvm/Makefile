@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/04/14 12:11:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/14 16:15:23 jmmv Exp $
 
 DISTNAME=	scummvm-0.6.0
 CATEGORIES=	games
@@ -9,9 +9,8 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://scummvm.sourceforge.net/
 COMMENT=	LucasArts Script Creation Utility for Maniac Mansion
 
-DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
-
 USE_BUILDLINK3=	yes
+USE_DIRS+=	xdg-1.1
 USE_GNU_TOOLS+=	make
 USE_X11=	yes
 HAS_CONFIGURE=	yes

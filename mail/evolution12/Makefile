@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/14 16:15:24 jmmv Exp $
 
 DISTNAME=		evolution-1.2.4
 PKGREVISION=		10
@@ -21,7 +21,6 @@ HOMEPAGE=		http://ximian.com/products/evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
@@ -35,6 +34,7 @@ USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK2=		YES
+USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
 YACC=			${PREFIX}/bin/bison -y
 

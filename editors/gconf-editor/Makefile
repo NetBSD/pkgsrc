@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/04/01 18:51:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/14 16:15:22 jmmv Exp $
 #
 
 DISTNAME=		gconf-editor-2.6.0
@@ -11,10 +11,10 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Editor for the GConf configuration system
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES

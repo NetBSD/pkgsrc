@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/04/14 01:17:19 snj Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/14 16:15:24 jmmv Exp $
 #
 
 DISTNAME=		gnome-core-1.4.2
@@ -12,8 +12,6 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Pixmaps for gnome-core
 
-DEPENDS+=		xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
-
 .include "../../mk/bsd.prefs.mk"
 
 CONFLICTS=		gnome-core<1.4.2
@@ -22,6 +20,7 @@ CONFLICTS+=		gnome2-pixmaps-[0-9]*
 .endif
 
 USE_BUILDLINK3=		YES
+USE_DIRS+=		xdg-x11-1.1
 USE_X11BASE=		YES
 NO_CONFIGURE=		YES
 NO_BUILD=		YES

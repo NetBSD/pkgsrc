@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/26 02:27:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/14 16:15:26 jmmv Exp $
 #
 
 DISTNAME=		tsclient-0.132
@@ -12,10 +12,10 @@ COMMENT=		GNOME2 Frontend for rdesktop
 
 DEPENDS+=       	rdesktop-[0-9]*:../../net/rdesktop
 DEPENDS+=       	vncviewer-[0-9]*:../../net/vncviewer
-DEPENDS+=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK3=		yes
+USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_PERL5=		run

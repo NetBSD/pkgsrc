@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/03/22 08:12:28 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/14 16:15:20 jmmv Exp $
 #
 
 DISTNAME=	gnome-audio-2.0.0
@@ -11,10 +11,10 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Set of audio files for GNOME
 
-DEPENDS+=	xdg-dirs>=1.1:../../misc/xdg-dirs
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
+USE_DIRS+=	xdg-1.1
 USE_X11=	YES
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/04/01 19:05:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/14 16:15:30 jmmv Exp $
 #
 
 DISTNAME=	zenity-2.6.0
@@ -10,10 +10,10 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Display GNOME dialogs from the command line
 
-DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK3=		yes
+USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make

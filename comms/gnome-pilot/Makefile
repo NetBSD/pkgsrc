@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/26 02:27:35 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/14 16:15:21 jmmv Exp $
 #
 
 DISTNAME=		gnome-pilot-0.1.71
@@ -11,7 +11,6 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Palm Pilot synchronisation for GNOME
 
-DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
 DEPENDS+=		gob-[0-9]*:../../devel/gob
 BUILD_USES_MSGFMT=	YES
 
@@ -20,6 +19,7 @@ BUILDLINK_DEPENDS.gnome-panel=	gnome-panel<2.0
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
 USE_BUILDLINK2=		YES
+USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBINTL=		YES
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/08 19:40:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/14 16:15:21 jmmv Exp $
 #
 
 DISTNAME=	sweep-0.8.2
@@ -10,11 +10,10 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://sweep.sourceforge.net/
 COMMENT=	Full-featured digital sound editor
 
-DEPENDS+=	gnome1-dirs>=1.5:../../misc/gnome1-dirs
-
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK3=		YES
+USE_DIRS+=		gnome1-1.5
 USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	YES
