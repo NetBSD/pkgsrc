@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: clamsmtpd.sh,v 1.1.1.1 2004/07/21 03:54:25 xtraeme Exp $
+# $NetBSD: clamsmtpd.sh,v 1.2 2004/08/03 08:24:56 jlam Exp $
 #
 # PROVIDE: clamsmtpd
 # REQUIRE: LOGIN clamd
@@ -14,11 +14,26 @@ fi
 name="clamsmtpd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
-pidfile="/tmp/${name}.pid"
 clamsmtpd_user="@CLAMAV_USER@"
-clamav_conf="@PKG_SYSCONFDIR@/clamav.conf"
-socket=$(@AWK@ '/^#/ {next}; /LocalSocket/ {print $2}' ${clamav_conf})
-command_args="-c ${socket} -p ${pidfile} 127.0.0.1:10026"
 
-load_rc_config $name
-run_rc_command "$1"
+clamav_conffile="@PKG_SYSCONFDIR@/clamav.conf"
+if [ -f "${clamav_conffile}" ]; then
+	socket=`@AWK@ 'BEGIN {r = "/tmp/clamd"};
+			/^#/ {next}; /^LocalSocket[ 	]/ {r = $2};
+			END {print r}' ${clamav_conffile}`
+	clamsmtpd_user=`@AWK@ 'BEGIN {r = "@CLAMAV_USER@"};
+			/^#/ {next}; /^User[ 	]/ {r = $2};
+			END {print r}' ${clamav_conffile}`
+	: ${clamsmtpd_flags="-c ${socket} localhost:10026"}
+else
+	: ${clamsmtpd_flags="localhost:10026"}
+fi
+
+if [ -f /etc/rc.subr -a -f /etc/rc.conf \
+     -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	@ECHO@ -n " ${name}"
+	${command} ${clamsmtpd_flags} ${command_args}
+fi
