@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5053 2004/03/02 05:03:47 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5054 2004/03/02 09:04:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1110,3 +1110,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added enigma-0.81 [heinz 2004-03-01]
 	Updated gqview to 1.4.1 [snj 2004-03-01]
 	Updated esound to 0.2.33 [xtraeme 2004-03-02]
+	Updated libwmf to 0.2.8.2 [adam 2004-03-02]
