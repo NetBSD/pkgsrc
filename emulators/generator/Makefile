@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/07 08:47:06 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/07 08:59:48 wiz Exp $
 #
 
 DISTNAME=	generator-0.34
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		# defined
 .if (${MACHINE_ARCH} == "i386")
 CONFIGURE_ARGS+=	--with-gtk --with-raze
 .else
-CONFIGURE_ARGS+=        --with-gtk --with-cmz80
+CONFIGURE_ARGS+=	--with-gtk --with-cmz80
 .endif
 
 .include "../../mk/endian.mk"
@@ -25,7 +25,6 @@ CONFIGURE_ARGS+=        --with-gtk --with-cmz80
 .if ${MACHINE_ENDIAN} == "big"
 CFLAGS+=	-DBYTES_HIGHFIRST
 .endif
-
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
