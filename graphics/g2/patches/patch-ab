@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2001/05/03 20:56:33 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2003/04/29 22:02:10 jtb Exp $
 
---- Makefile.in.orig	Thu May  3 19:25:15 2001
+--- Makefile.in.orig
 +++ Makefile.in
-@@ -58,42 +58,35 @@
- INS =  $(BASE_INS) $(PS_INS) $(X11_INS) $(GIF_INS)
+@@ -68,31 +68,22 @@
  
- .c.o:  
+ INS =  $(BASE_INS) $(PS_INS) $(X11_INS) $(GIF_INS) $(GD_INS)
+ 
+-.c.o:  
 -	$(CC) $(CFLAGS) -c $< -o $@
-+	$(LIBTOOL) --tag=CC $(CC) $(CFLAGS) -c $< -o $@
++.c.o:
++	$(LIBTOOL) $(CC) $(CFLAGS) -c $< -o $@
  
  
 -all: libg2.a
@@ -15,43 +17,42 @@ $NetBSD: patch-ab,v 1.1 2001/05/03 20:56:33 jtb Exp $
  	test -d ./include || mkdir ./include
  	cp $(INS) ./include/
  
--shared: libg2.so
+-shared: libg2.@LD_SHARED_EXT@
 -	@echo
-+libg2.la: $(OBJ)
-+	${LIBTOOL} --tag=CC $(CC) -o $@ $(OBJ:.o=.lo) -Wl,-R${X11BASE}/lib \
-+	-L${X11BASE}/lib -lX11 -lm --version-info 0:0 -rpath ${LIBDIR}
- 
+-
+-
 -libg2.a: $(OBJ)
 -	$(AR) $(ARFLAGS) libg2.a $(OBJ)
--	ln -s libg2.a libg2.0.40.a
--
--libg2.so: $(OBJ)
--	$(CC) -shared -o libg2.so $(OBJ) -lc -lm
+-	test ! -n "$(RANLIB)" || $(RANLIB) $@
+-	test ! -f ./libg2.$(G2_VERSION).a || rm ./libg2.$(G2_VERSION).a
+-	ln -s libg2.a libg2.$(G2_VERSION).a
++libg2.la: $(OBJ)
++	$(LIBTOOL) $(CC) -o $@ $(OBJ:.o=.lo) -Wl,-R$(X11BASE)/lib \
++	-L$(X11BASE)/lib -lX11 -lm --version-info 0:0 -rpath $(LIBDIR)
+ 
+-libg2.@LD_SHARED_EXT@: $(OBJ)
+-	@LD_SHARED@ @LD_SHARED_FLAGS@ -o $@ $(OBJ) @LD_SHARED_OPT@
 -
 -install: libg2.a
 +install: libg2.la
  	test -d $(LIBDIR) || mkdir -p $(LIBDIR)
  	test -d $(INCDIR) || mkdir -p $(INCDIR)
 -	$(INSTALL_DATA) libg2.a $(LIBDIR)
-+	${LIBTOOL} $(INSTALL_DATA) libg2.la $(LIBDIR)
++	$(LIBTOOL) $(INSTALL_DATA) libg2.la $(LIBDIR)
  	for IFILE in $(INS); do \
  		$(INSTALL_DATA) $$IFILE  $(INCDIR); \
  	done
- 
- clean:
- 	-(cd ./demo ; make clean)
--	-rm -f $(OBJ)
--	-rm -f libg2.a config.cache config.log Makefile.bak config.status
-+	-rm -f $(OBJ) $(OBJ:.o=.lo)
-+	-rm -fr libg2.* .libs config.cache config.log Makefile.bak config.status
- 	-rm -f ./include/*.h
- 	-$(FIND) . -name "*~" -exec rm -f {} \;
- 	-(cd ./g2_perl ; make clean)
- 	-rm -f ./g2_perl/test.ps ./g2_perl/test.gif
--	-rm -f ./libg2.0.40.a
+@@ -108,7 +99,7 @@
+ 	-rm -f ./libg2.@LD_SHARED_EXT@
+ 	-rm -f libg2.$(G2_VERSION).a
  
 -demo:	libg2.a
 +demo:	libg2.la
  	(cd ./demo ; make)
  
  depend:
+@@ -119,4 +110,3 @@
+ 
+ 
+ # DO NOT DELETE THIS LINE -- make  depend  depends  on it.
+-
