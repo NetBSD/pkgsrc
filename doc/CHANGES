@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2381 2003/06/01 08:59:03 shell Exp $
+$NetBSD: CHANGES,v 1.2382 2003/06/01 10:26:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2258,3 +2258,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated micq to 0.4.10.3 [shell 2003-06-01]
 	Updated p5-Test-Harness to 2.28 [shell 2003-06-01]
 	Updated p5-Font-TTF to 0.34 [shell 2003-06-01]
+	Added GeoIP-1.1.9 [jmmv 2003-06-01]
