@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/12/03 15:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/14 05:37:55 uebayasi Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/05/12 06:33:23 max Exp
 #
 
@@ -15,7 +15,7 @@ MAKEFILE=		makefile.unx
 BUILD_TARGET=		cal
 
 PKG_SYSCONFSUBDIR=	cal
-CFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\"\\\"
+CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 EGDIR=			${PREFIX}/share/examples/cal
 # CONF_FILES not used as calcol and caldat are optional.
 
