@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2001/09/09 03:37:01 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2001/09/09 04:06:10 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1999/05/03 01:58:33 steve Exp $
 
 DISTNAME=		VFlib2-${VFLIB_VERSION}
@@ -34,4 +34,3 @@ PATCHDIR=		${.CURDIR}/../../japanese/vflib-lib/patches
 EXTRACT_ONLY=		${VFLIB_SRC}
 
 .include "../../graphics/freetype-lib/buildlink.mk"
-.include "../../mk/bsd.pkg.mk"
