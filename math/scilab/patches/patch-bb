@@ -1,0 +1,10 @@
+$NetBSD: patch-bb,v 1.1 1998/08/25 12:53:10 agc Exp $
+
+--- ./pvm3/src/waitc.c.orig	Sat Jul 18 22:31:53 1998
++++ ./pvm3/src/waitc.c	Sat Jul 18 22:31:53 1998
+@@ -83,4 +83,5 @@
+ 
+ #include <stdio.h>
++#include <sys/types.h>
+ #ifdef NEEDMENDIAN
+ #include <machine/endian.h>

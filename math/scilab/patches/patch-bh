@@ -1,0 +1,12 @@
+$NetBSD: patch-bh,v 1.1 1998/08/25 12:53:11 agc Exp $
+
+--- ./xmetanet/graphics.c.orig	Sat Aug  8 13:28:35 1998
++++ ./xmetanet/graphics.c	Sat Aug  8 14:17:55 1998
+@@ -2,5 +2,7 @@
+ #include <X11/Intrinsic.h>
+ #include <math.h>
++#ifndef __FreeBSD__
+ #include <malloc.h>
++#endif
+ #include <string.h>
+ #include <stdio.h>

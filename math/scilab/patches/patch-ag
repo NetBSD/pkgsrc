@@ -1,0 +1,43 @@
+$NetBSD: patch-ag,v 1.1 1998/08/25 12:53:08 agc Exp $
+
+--- ./routines/sun/link_SYSV.c.orig	Wed Aug  5 14:54:57 1998
++++ ./routines/sun/link_SYSV.c	Sat Aug  8 13:25:44 1998
+@@ -34,17 +34,21 @@
+ #endif
+ 
+-#ifdef linux 
++#if defined(linux) || defined(netbsd) || defined(freebsd)
+ #include <unistd.h>
+ #include <sys/wait.h>
+-#endif 
++#endif
+ 
+ #ifndef linux
+ #ifndef hppa
++#ifndef netbsd
++#ifndef freebsd
+ #if (defined(sun) && ! defined(SYSV)) 
+ #else 
+ #include <sys/mode.h>
+-#endif 
+ #endif
+-#endif 
++#endif
++#endif
++#endif
++#endif
+ 
+ #ifdef __alpha
+@@ -261,8 +265,12 @@
+        "/usr/bin/ld", "-shared", "-o", 0, 0  
+ #else
++#if defined(netbsd) || defined(freebsd)
++	"/usr/bin/ld", "-Bshareable", "-o", 0, 0
++#else
+ #ifdef hppa
+        "/bin/ld", "-b", "-o", 0, 0
+ #else
+        "/bin/ld", "-shared", "-o", 0, 0  
++#endif
+ #endif
+ #endif

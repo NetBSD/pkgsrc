@@ -1,0 +1,11 @@
+$NetBSD: patch-cj,v 1.1 1998/08/25 12:53:14 agc Exp $
+
+--- examples/misc-examples/zlink.dia.ref.orig	Mon Aug 24 12:07:41 1998
++++ examples/misc-examples/zlink.dia.ref	Mon Aug 24 12:07:58 1998
+@@ -231,5 +231,5 @@
+ yy2=dassl([y0,y0d],t0,t,'dres1',info);   //=yy0
+  
+-if norm(dres1(yy2(1,:),yy2(2:3,:),yy2(4:5,:)),1)>1.d-6 then bugmes();quit;end
++if norm(dres1(yy2(1,:),yy2(2:3,:),yy2(4:5,:)),1)>1.4d-6 then bugmes();quit;end
+  
+ // fortran routines dres1 and djac1 in dir. routines/default, with jacobian

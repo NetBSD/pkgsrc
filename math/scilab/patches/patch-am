@@ -1,0 +1,16 @@
+$NetBSD: patch-am,v 1.1 1998/08/25 12:53:09 agc Exp $
+
+--- ./pvm3/src/ddpro.c.orig	Sat Jul 18 22:31:41 1998
++++ ./pvm3/src/ddpro.c	Sat Jul 18 22:31:41 1998
+@@ -232,4 +232,5 @@
+ 
+ 
++#include <sys/types.h>
+ #ifdef NEEDMENDIAN
+ #include <machine/endian.h>
+@@ -255,5 +256,4 @@
+ #include <errno.h>
+ #endif
+-#include <sys/types.h>
+ #ifdef	SYSVSTR
+ #include <string.h>
