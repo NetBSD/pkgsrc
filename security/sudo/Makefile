@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/11/19 17:27:23 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2001/11/25 18:59:47 jlam Exp $
 #
 
 DISTNAME=		sudo-1.6.3p7
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--sysconfdir=${CONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-skey
@@ -40,7 +40,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.${LOWER_OPSYS}
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES_PERMS=	${EGDIR}/sudoers ${CONFDIR}/sudoers 0 0 0440
+CONF_FILES_PERMS=	${EGDIR}/sudoers ${PKG_SYSCONFDIR}/sudoers 0 0 0440
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

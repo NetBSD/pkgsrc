@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/11/19 16:23:09 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/25 18:59:46 jlam Exp $
 
 PKGNAME=		unixodbc-${ODBC_VERS}
 ODBC_PKG_VERS=		# empty
@@ -16,9 +16,9 @@ FILES_SUBST+=		UNIXODBC_DRIVERS_DIR=${UNIXODBC_DRIVERS_DIR}
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
-CONF_FILES=		${EGDIR}/odbcinst.ini ${CONFDIR}/odbcinst.ini
-CONF_FILES+=		/dev/null ${CONFDIR}/odbc.ini
-OWN_DIRS=		${CONFDIR}/ODBCDataSources
+CONF_FILES=		${EGDIR}/odbcinst.ini ${PKG_SYSCONFDIR}/odbcinst.ini
+CONF_FILES+=		/dev/null ${PKG_SYSCONFDIR}/odbc.ini
+OWN_DIRS=		${PKG_SYSCONFDIR}/ODBCDataSources
 
 post-patch: fix-driver-installation
 

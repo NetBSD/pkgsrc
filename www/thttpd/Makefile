@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/11/21 15:44:24 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/25 18:59:50 jlam Exp $
 
 DISTNAME=	thttpd-2.21b
 CATEGORIES=	www
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	# defined
 BUILD_DEFS+=	USE_INET6
 
 EGDIR=		${PREFIX}/share/examples
-CONF_FILES=	${EGDIR}/thttpd.conf ${CONFDIR}/thttpd.conf
+CONF_FILES=	${EGDIR}/thttpd.conf ${PKG_SYSCONFDIR}/thttpd.conf
 RCD_SCRIPTS=	thttpd
 
 pre-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/11/19 16:23:10 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/11/25 18:59:46 jlam Exp $
 
 DISTNAME=	imp-2.2.7
 CATEGORIES=	mail www
@@ -17,14 +17,13 @@ HORDEDIR=	${PREFIX}/share/horde
 IMPDIR=		${HORDEDIR}/imp
 
 MESSAGE_SUBST+=	IMPDIR=${IMPDIR}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
-BUILD_DEFS+=		APACHE_SYSCONFDIR
-MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+PKG_SYSCONFSUBDIR?=	httpd
 
-CONF_FILES=	${EGDIR}/imp.conf ${APACHE_SYSCONFDIR}/imp.conf
+CONF_FILES=	${EGDIR}/imp.conf ${PKG_SYSCONFDIR}/imp.conf
 CONF_FILES+=	${IMPDIR}/config/defaults.php3.dist			\
 		${IMPDIR}/config/defaults.php3
 CONF_FILES+=	${IMPDIR}/config/ldap.php3.dist				\
@@ -51,7 +50,6 @@ SUPPORT_FILES+=	${IMPDIR}/config/prefs.php3.dist			\
 		${IMPDIR}/config/prefs.php3
 SUPPORT_FILES+=	${IMPDIR}/config/trailer.txt.dist			\
 		${IMPDIR}/config/trailer.txt
-MAKE_DIRS=	${APACHE_SYSCONFDIR}
 
 post-extract:
 	cd ${WRKSRC};							\

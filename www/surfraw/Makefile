@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/11/19 16:23:16 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/25 18:59:50 jlam Exp $
 #
 
 DISTNAME=	surfraw-1.0.5
@@ -14,7 +14,7 @@ CONFLICTS+=	surfaw-[0-9]*
 USE_BUILDLINK_ONLY=	YES
 AUTOMAKE_OVERRIDE=	YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--sysconfdir=${CONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 # Override sysconfdir so that the installation puts the example config file
 # in ${EGDIR}.
@@ -25,8 +25,8 @@ MAKE_ENV+=		AM_MAKEFLAGS="${MAKE_FLAGS}"
 DOCDIR=		${PREFIX}/share/doc/surfraw
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
-CONF_FILES=	${EGDIR}/surfraw.conf ${CONFDIR}/surfraw.conf
-SUPPORT_FILES=	${EGDIR}/surfraw_elvi.list ${CONFDIR}/surfraw_elvi.list
+CONF_FILES=	${EGDIR}/surfraw.conf ${PKG_SYSCONFDIR}/surfraw.conf
+SUPPORT_FILES=	${EGDIR}/surfraw_elvi.list ${PKG_SYSCONFDIR}/surfraw_elvi.list
 
 PLIST_SUBST+=	PKGBASE=${PKGBASE}
 

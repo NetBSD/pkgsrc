@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/11/21 15:50:55 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/11/25 18:59:48 jlam Exp $
 #
 
 DISTNAME=		nut-0.45.2
@@ -20,7 +20,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
 			--with-statepath=${NUT_STATEDIR}		\
 			--with-modelpath=${LOCALBASE}/sbin/ups-drivers
 
-NUT_CONFDIR=		${CONFDIR}/nut
+PKG_SYSCONFSUBDIR?=	nut
+NUT_CONFDIR=		${PKG_SYSCONFDIR}
 NUT_DOCDIR=		${PREFIX}/share/doc/nut
 NUT_EGDIR=		${PREFIX}/share/examples/nut
 NUT_STATEDIR=		/var/db/nut

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/11/19 16:23:15 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/11/25 18:59:49 jlam Exp $
 
 .include "Makefile.php"
 
@@ -29,7 +29,7 @@ LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -Wl,-lgcc -Wl,--no-whole-archive
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
-CONF_FILES=	${EGDIR}/php.ini-dist ${CONFDIR}/php.ini
+CONF_FILES=	${EGDIR}/php.ini-dist ${PKG_SYSCONFDIR}/php.ini
 
 pre-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL

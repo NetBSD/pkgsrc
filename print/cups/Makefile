@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/11/21 15:44:23 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2001/11/25 18:59:47 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
@@ -25,7 +25,7 @@ USE_BUILDLINK_ONLY=	# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--sysconfdir=${CONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
@@ -65,20 +65,21 @@ PKG_USER=		${CUPS_USER}
 PKG_USER_DESCR=		Common UNIX Printing System user
 PKG_GROUP=		${CUPS_GROUP}
 
-CONF_FILES=		${EGDIR}/client.conf ${CONFDIR}/cups/client.conf
-CONF_FILES+=		${EGDIR}/cupsd.conf ${CONFDIR}/cups/cupsd.conf
-SUPPORT_FILES=		${EGDIR}/classes.conf ${CONFDIR}/cups/classes.conf
-SUPPORT_FILES+=		${EGDIR}/mime.convs ${CONFDIR}/cups/mime.convs
-SUPPORT_FILES+=		${EGDIR}/mime.types ${CONFDIR}/cups/mime.types
-SUPPORT_FILES+=		${EGDIR}/printers.conf ${CONFDIR}/cups/printers.conf
-RCD_SCRIPTS=		cupsd
+CONF_FILES=	${EGDIR}/client.conf ${PKG_SYSCONFDIR}/cups/client.conf
+CONF_FILES+=	${EGDIR}/cupsd.conf ${PKG_SYSCONFDIR}/cups/cupsd.conf
+SUPPORT_FILES=	${EGDIR}/classes.conf ${PKG_SYSCONFDIR}/cups/classes.conf
+SUPPORT_FILES+=	${EGDIR}/mime.convs ${PKG_SYSCONFDIR}/cups/mime.convs
+SUPPORT_FILES+=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/cups/mime.types
+SUPPORT_FILES+=	${EGDIR}/printers.conf ${PKG_SYSCONFDIR}/cups/printers.conf
+RCD_SCRIPTS=	cupsd
 
-OWN_DIRS+=		${CONFDIR}/cups
-OWN_DIRS+=		${CONFDIR}/cups/interfaces
-OWN_DIRS+=		${CONFDIR}/cups/ppd
+OWN_DIRS+=		${PKG_SYSCONFDIR}/cups
+OWN_DIRS+=		${PKG_SYSCONFDIR}/cups/interfaces
+OWN_DIRS+=		${PKG_SYSCONFDIR}/cups/ppd
 OWN_DIRS+=		/var/log/cups
 OWN_DIRS+=		/var/spool/cups
-OWN_DIRS_PERMS=		${CONFDIR}/cups/certs ${CUPS_USER} ${CUPS_GROUP} 0711
+OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/cups/certs			\
+			${CUPS_USER} ${CUPS_GROUP} 0711
 OWN_DIRS_PERMS+=	/var/spool/cups/tmp ${CUPS_USER} ${CUPS_GROUP} 1700
 
 pre-install:

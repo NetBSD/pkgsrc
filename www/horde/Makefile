@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/11/19 16:23:15 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/25 18:59:49 jlam Exp $
 
 DISTNAME=	horde-1.2.7
 CATEGORIES=	www
@@ -21,11 +21,9 @@ MESSAGE_SUBST+=	PHPLIBDIR=${PHPLIBDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
-BUILD_DEFS+=		APACHE_SYSCONFDIR
-MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+PKG_SYSCONFSUBDIR?=	httpd
 
-CONF_FILES=	${EGDIR}/horde.conf ${APACHE_SYSCONFDIR}/horde.conf
+CONF_FILES=	${EGDIR}/horde.conf ${PKG_SYSCONFDIR}/horde.conf
 CONF_FILES+=	${PHPLIBDIR}/local.inc.dist ${PHPLIBDIR}/local.inc
 CONF_FILES+=	${PHPLIBDIR}/prepend.php3.dist ${PHPLIBDIR}/prepend.php3
 CONF_FILES+=	${HORDEDIR}/config/horde.php3.dist ${HORDEDIR}/config/horde.php3
@@ -35,7 +33,6 @@ SUPPORT_FILES+=	${HORDEDIR}/config/html.php3.dist ${HORDEDIR}/config/html.php3
 SUPPORT_FILES+=	${HORDEDIR}/config/lang.php3.dist ${HORDEDIR}/config/lang.php3
 SUPPORT_FILES+=	${HORDEDIR}/config/menu.txt.dist ${HORDEDIR}/config/menu.txt
 SUPPORT_FILES+=	${HORDEDIR}/config/mime.php3.dist ${HORDEDIR}/config/mime.php3
-MAKE_DIRS=	${APACHE_SYSCONFDIR}
 
 post-extract:
 	cd ${WRKSRC}/phplib;						\

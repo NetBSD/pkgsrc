@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.859 2001/11/21 18:32:01 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.860 2001/11/25 18:59:50 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -51,10 +51,27 @@ SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}
 
-.if defined(CONFDIR.${PKGBASE})
-CONFDIR=		${CONFDIR.${PKGBASE}}
+# PKG_SYSCONFDIR is where the configuration files for a package may be found.
+# This value may be customized in various ways:
+#
+# PKG_SYSCONFBASE is the main config directory under which all package
+#	configuration files are to be found.
+#
+# PKG_SYSCONFSUBDIR is the subdirectory of PKG_SYSCONFBASE under which the
+#	configuration files for a particular package may be found.
+#
+# PKG_SYSCONFDIR.${PKGBASE} overrides the value of ${PKG_SYSCONFDIR} for a
+#	particular package.
+#
+# Users will typically want to set PKG_SYSCONFBASE to /etc, or accept the
+# default location of ${PREFIX}/etc.
+#
+.if defined(PKG_SYSCONFDIR.${PKGBASE})
+PKG_SYSCONFDIR=		${PKG_SYSCONFDIR.${PKGBASE}}
 .else
-CONFDIR?=		${PREFIX}/etc
+PKG_SYSCONFSUBDIR?=	# empty
+PKG_SYSCONFBASE?=	${PREFIX}/etc
+PKG_SYSCONFDIR?=	${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
 .endif
 
 .if defined(USE_JAVA)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/11/19 16:23:10 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/11/25 18:59:46 jlam Exp $
 
 DISTNAME=	squirrelmail-1.0.6
 CATEGORIES=	mail www
@@ -19,10 +19,8 @@ NO_BUILD=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
-BUILD_DEFS+=		APACHE_SYSCONFDIR
-MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
-FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+PKG_SYSCONFSUBDIR?=	httpd
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/squirrelmail
 SMDIR=			${PREFIX}/share/squirrelmail
@@ -32,8 +30,7 @@ FILES_SUBST+=		SMDIR=${SMDIR}
 
 CONF_FILES=	${SMDIR}/config/config_default.php ${SMDIR}/config/config.php
 CONF_FILES+=	${SMDIR}/data/default_pref ${DATADIR}/data/default_pref
-CONF_FILES+=	${EGDIR}/squirrelmail.conf ${APACHE_SYSCONFDIR}/squirrelmail.conf
-MAKE_DIRS=		${APACHE_SYSCONFDIR}
+CONF_FILES+=	${EGDIR}/squirrelmail.conf ${PKG_SYSCONFDIR}/squirrelmail.conf
 OWN_DIRS=		${DATADIR}
 OWN_DIRS+=		${SMDIR} ${SMDIR}/config
 OWN_DIRS_PERMS=		${DATADIR}/attachments root nobody 730

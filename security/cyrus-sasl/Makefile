@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/11/21 22:22:10 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/11/25 18:59:47 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
 PKGNAME=		${DISTNAME}nb3
@@ -38,7 +38,7 @@ PLIST_SRC=		${PKGDIR}/PLIST.common
 
 CONFIGURE_ARGS+=	--with-pwcheck=${PWCHECKDIR}
 CONFIGURE_ARGS+=	--with-dblib=ndbm
-CONFIGURE_ARGS+=	--with-dbpath=${CONFDIR}/sasldb
+CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
 CONFIGURE_ARGS+=	--with-plugindir=${PREFIX}/lib/sasl
 CONFIGURE_ARGS+=	--with-rc4=${BUILDLINK_DIR}
 
