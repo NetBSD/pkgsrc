@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/06/06 11:47:30 salo Exp $
+# $NetBSD: Makefile,v 1.34 2004/06/06 12:21:16 salo Exp $
 #
 
 DISTNAME=		silc-server-0.9.18
@@ -84,7 +84,5 @@ CONFIGURE_ARGS+=	--disable-asm
 post-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/motd.txt \
 		> ${EGDIR}/motd.txt.default
-
-.include "../../devel/glib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
