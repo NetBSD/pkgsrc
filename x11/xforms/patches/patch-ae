@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2002/04/17 04:40:43 fredb Exp $
+
+--- lib/Imakefile.orig	Tue Apr  2 11:27:04 2002
++++ lib/Imakefile
+@@ -167,7 +167,7 @@
+ 		  -Ibitmaps \
+ 		  -I. \
+ 		  -Ifd \
+-		  -I/usr/local/include \
++		  -I${BUILDLINK_DIR}/include \
+ 		  /* Do not remove this line */
+ 
+ EXTRA_DEFINES	= \
