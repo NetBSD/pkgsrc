@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/17 14:42:10 zuntum Exp $
+bin/pxinfo
+bin/pxsqldump
+bin/pxcsvdump
+bin/pxxmldump
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/pxtools.mo
