@@ -1,17 +1,17 @@
-$NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
+$NetBSD: patch-am,v 1.15 2005/01/05 12:05:19 adam Exp $
 
---- configure.orig	Sun Feb 22 22:32:33 2004
-+++ configure	Tue Jul 13 22:33:55 2004
-@@ -463,7 +463,7 @@
+--- configure.orig	2004-12-13 09:04:51.000000000 +0000
++++ configure
+@@ -463,7 +463,7 @@ ac_includes_default="\
  # include <unistd.h>
  #endif"
  
--ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS SDL_MAJOR_VERSION SDL_MINOR_VERSION SDL_MICRO_VERSION SDL_INTERFACE_AGE SDL_BINARY_AGE SDL_VERSION LT_RELEASE LT_CURRENT LT_REVISION LT_AGE build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE EGREP LN_S ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB DLLTOOL ac_ct_DLLTOOL AS ac_ct_AS OBJDUMP ac_ct_OBJDUMP CPP CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL ALLOCA ASFLAGS CCAS CCASFLAGS am__fastdepOBJC_TRUE am__fastdepOBJC_FALSE ESD_CONFIG ESD_CFLAGS ESD_LIBS esd_lib ARTSCCONFIG arts_lib NASM NASMFLAGS X_CFLAGS X_PRE_LIBS X_LIBS X_EXTRA_LIBS PKG_CONFIG DIRECTFB_CFLAGS DIRECTFB_LIBS PTH_CONFIG ARCH TARGET_LINUX_TRUE TARGET_LINUX_FALSE TARGET_QTOPIA_TRUE TARGET_QTOPIA_FALSE TARGET_SOLARIS_TRUE TARGET_SOLARIS_FALSE TARGET_IRIX_TRUE TARGET_IRIX_FALSE TARGET_BSDI_TRUE TARGET_BSDI_FALSE TARGET_FREEBSD_TRUE TARGET_FREEBSD_FALSE TARGET_NETBSD_TRUE TARGET_NETBSD_FALSE TARGET_OPENBSD_TRUE TARGET_OPENBSD_FALSE TARGET_AIX_TRUE TARGET_AIX_FALSE TARGET_WIN32_TRUE TARGET_WIN32_FALSE TARGET_BEOS_TRUE TARGET_BEOS_FALSE TARGET_MACOS_TRUE TARGET_MACOS_FALSE TARGET_MACOSX_TRUE TARGET_MACOSX_FALSE TARGET_QNX_TRUE TARGET_QNX_FALSE TARGET_MINT_TRUE TARGET_MINT_FALSE USE_DIRECTX_TRUE USE_DIRECTX_FALSE USE_CLONE_TRUE USE_CLONE_FALSE HAVE_NASM_TRUE HAVE_NASM_FALSE ENABLE_SHARED_TRUE ENABLE_SHARED_FALSE ENABLE_STATIC_TRUE ENABLE_STATIC_FALSE AUDIO_SUBDIRS AUDIO_DRIVERS VIDEO_SUBDIRS VIDEO_DRIVERS JOYSTICK_SUBDIRS JOYSTICK_DRIVERS CDROM_SUBDIRS CDROM_DRIVERS SDL_EXTRADIRS SDL_EXTRALIBS SDL_CFLAGS SDL_LIBS SDL_STATIC_LIBS SDL_RLD_FLAGS STATIC_SYSTEM_LIBS SHARED_SYSTEM_LIBS SYSTEM_LIBS OBJC OBJCFLAGS OBJCDEPMODE LIBOBJS LTLIBOBJS'
-+ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS SDL_MAJOR_VERSION SDL_MINOR_VERSION SDL_MICRO_VERSION SDL_INTERFACE_AGE SDL_BINARY_AGE SDL_VERSION LT_RELEASE LT_CURRENT LT_REVISION LT_AGE build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE EGREP LN_S ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB DLLTOOL ac_ct_DLLTOOL AS ac_ct_AS OBJDUMP ac_ct_OBJDUMP CPP CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL ALLOCA ASFLAGS CCAS CCASFLAGS am__fastdepOBJC_TRUE am__fastdepOBJC_FALSE ESD_CONFIG ESD_CFLAGS ESD_LIBS esd_lib ARTSCCONFIG arts_lib NASM NASMFLAGS X_CFLAGS X_PRE_LIBS X_LIBS X_EXTRA_LIBS PKG_CONFIG DIRECTFB_CFLAGS DIRECTFB_LIBS AALIB_CONFIG PTHREAD_CONFIG ARCH TARGET_LINUX_TRUE TARGET_LINUX_FALSE TARGET_QTOPIA_TRUE TARGET_QTOPIA_FALSE TARGET_SOLARIS_TRUE TARGET_SOLARIS_FALSE TARGET_IRIX_TRUE TARGET_IRIX_FALSE TARGET_BSDI_TRUE TARGET_BSDI_FALSE TARGET_FREEBSD_TRUE TARGET_FREEBSD_FALSE TARGET_NETBSD_TRUE TARGET_NETBSD_FALSE TARGET_OPENBSD_TRUE TARGET_OPENBSD_FALSE TARGET_AIX_TRUE TARGET_AIX_FALSE TARGET_WIN32_TRUE TARGET_WIN32_FALSE TARGET_BEOS_TRUE TARGET_BEOS_FALSE TARGET_MACOS_TRUE TARGET_MACOS_FALSE TARGET_MACOSX_TRUE TARGET_MACOSX_FALSE TARGET_QNX_TRUE TARGET_QNX_FALSE TARGET_MINT_TRUE TARGET_MINT_FALSE USE_DIRECTX_TRUE USE_DIRECTX_FALSE USE_CLONE_TRUE USE_CLONE_FALSE HAVE_NASM_TRUE HAVE_NASM_FALSE ENABLE_SHARED_TRUE ENABLE_SHARED_FALSE ENABLE_STATIC_TRUE ENABLE_STATIC_FALSE AUDIO_SUBDIRS AUDIO_DRIVERS VIDEO_SUBDIRS VIDEO_DRIVERS JOYSTICK_SUBDIRS JOYSTICK_DRIVERS CDROM_SUBDIRS CDROM_DRIVERS SDL_EXTRADIRS SDL_EXTRALIBS SDL_CFLAGS SDL_LIBS SDL_STATIC_LIBS SDL_RLD_FLAGS STATIC_SYSTEM_LIBS SHARED_SYSTEM_LIBS SYSTEM_LIBS OBJC OBJCFLAGS OBJCDEPMODE LIBOBJS LTLIBOBJS'
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS SDL_MAJOR_VERSION SDL_MINOR_VERSION SDL_MICRO_VERSION SDL_INTERFACE_AGE SDL_BINARY_AGE SDL_VERSION LT_RELEASE LT_CURRENT LT_REVISION LT_AGE build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE EGREP LN_S ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB DLLTOOL ac_ct_DLLTOOL AS ac_ct_AS OBJDUMP ac_ct_OBJDUMP CPP CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL ALLOCA ASFLAGS CCAS CCASFLAGS am__fastdepOBJC_TRUE am__fastdepOBJC_FALSE ALSA_CFLAGS ALSA_LIBS alsa_lib ESD_CONFIG ESD_CFLAGS ESD_LIBS esd_lib ARTSCCONFIG arts_lib NASM NASMFLAGS X_CFLAGS X_PRE_LIBS X_LIBS X_EXTRA_LIBS PKG_CONFIG DIRECTFB_CFLAGS DIRECTFB_LIBS OSMESA_CONFIG PTH_CONFIG ARCH TARGET_LINUX_TRUE TARGET_LINUX_FALSE TARGET_QTOPIA_TRUE TARGET_QTOPIA_FALSE TARGET_SOLARIS_TRUE TARGET_SOLARIS_FALSE TARGET_IRIX_TRUE TARGET_IRIX_FALSE TARGET_BSDI_TRUE TARGET_BSDI_FALSE TARGET_FREEBSD_TRUE TARGET_FREEBSD_FALSE TARGET_NETBSD_TRUE TARGET_NETBSD_FALSE TARGET_OPENBSD_TRUE TARGET_OPENBSD_FALSE TARGET_AIX_TRUE TARGET_AIX_FALSE TARGET_WIN32_TRUE TARGET_WIN32_FALSE TARGET_BEOS_TRUE TARGET_BEOS_FALSE TARGET_MACOS_TRUE TARGET_MACOS_FALSE TARGET_MACOSX_TRUE TARGET_MACOSX_FALSE TARGET_QNX_TRUE TARGET_QNX_FALSE TARGET_MINT_TRUE TARGET_MINT_FALSE USE_DIRECTX_TRUE USE_DIRECTX_FALSE USE_CLONE_TRUE USE_CLONE_FALSE HAVE_NASM_TRUE HAVE_NASM_FALSE ENABLE_SHARED_TRUE ENABLE_SHARED_FALSE ENABLE_STATIC_TRUE ENABLE_STATIC_FALSE AUDIO_SUBDIRS AUDIO_DRIVERS VIDEO_SUBDIRS VIDEO_DRIVERS JOYSTICK_SUBDIRS JOYSTICK_DRIVERS CDROM_SUBDIRS CDROM_DRIVERS SDL_EXTRADIRS SDL_EXTRALIBS SDL_CFLAGS SDL_LIBS SDL_STATIC_LIBS SDL_RLD_FLAGS STATIC_SYSTEM_LIBS SHARED_SYSTEM_LIBS SYSTEM_LIBS OBJC OBJCFLAGS OBJCDEPMODE LIBOBJS LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS SDL_MAJOR_VERSION SDL_MINOR_VERSION SDL_MICRO_VERSION SDL_INTERFACE_AGE SDL_BINARY_AGE SDL_VERSION LT_RELEASE LT_CURRENT LT_REVISION LT_AGE build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO AMTAR install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE EGREP LN_S ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB DLLTOOL ac_ct_DLLTOOL AS ac_ct_AS OBJDUMP ac_ct_OBJDUMP CPP CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL ALLOCA ASFLAGS CCAS CCASFLAGS am__fastdepOBJC_TRUE am__fastdepOBJC_FALSE ALSA_CFLAGS ALSA_LIBS alsa_lib ESD_CONFIG ESD_CFLAGS ESD_LIBS esd_lib ARTSCCONFIG arts_lib NASM NASMFLAGS X_CFLAGS X_PRE_LIBS X_LIBS X_EXTRA_LIBS PKG_CONFIG DIRECTFB_CFLAGS DIRECTFB_LIBS AALIB_CONFIG OSMESA_CONFIG PTHREAD_CONFIG ARCH TARGET_LINUX_TRUE TARGET_LINUX_FALSE TARGET_QTOPIA_TRUE TARGET_QTOPIA_FALSE TARGET_SOLARIS_TRUE TARGET_SOLARIS_FALSE TARGET_IRIX_TRUE TARGET_IRIX_FALSE TARGET_BSDI_TRUE TARGET_BSDI_FALSE TARGET_FREEBSD_TRUE TARGET_FREEBSD_FALSE TARGET_NETBSD_TRUE TARGET_NETBSD_FALSE TARGET_OPENBSD_TRUE TARGET_OPENBSD_FALSE TARGET_AIX_TRUE TARGET_AIX_FALSE TARGET_WIN32_TRUE TARGET_WIN32_FALSE TARGET_BEOS_TRUE TARGET_BEOS_FALSE TARGET_MACOS_TRUE TARGET_MACOS_FALSE TARGET_MACOSX_TRUE TARGET_MACOSX_FALSE TARGET_QNX_TRUE TARGET_QNX_FALSE TARGET_MINT_TRUE TARGET_MINT_FALSE USE_DIRECTX_TRUE USE_DIRECTX_FALSE USE_CLONE_TRUE USE_CLONE_FALSE HAVE_NASM_TRUE HAVE_NASM_FALSE ENABLE_SHARED_TRUE ENABLE_SHARED_FALSE ENABLE_STATIC_TRUE ENABLE_STATIC_FALSE AUDIO_SUBDIRS AUDIO_DRIVERS VIDEO_SUBDIRS VIDEO_DRIVERS JOYSTICK_SUBDIRS JOYSTICK_DRIVERS CDROM_SUBDIRS CDROM_DRIVERS SDL_EXTRADIRS SDL_EXTRALIBS SDL_CFLAGS SDL_LIBS SDL_STATIC_LIBS SDL_RLD_FLAGS STATIC_SYSTEM_LIBS SHARED_SYSTEM_LIBS SYSTEM_LIBS OBJC OBJCFLAGS OBJCDEPMODE LIBOBJS LTLIBOBJS'
  ac_subst_files=''
  
  # Initialize some variables set by options.
-@@ -1587,9 +1587,9 @@
+@@ -1592,9 +1592,9 @@ SDL_VERSION=$SDL_MAJOR_VERSION.$SDL_MINO
  
  # libtool versioning
  LT_RELEASE=$SDL_MAJOR_VERSION.$SDL_MINOR_VERSION
@@ -24,7 +24,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  
  
  
-@@ -21563,6 +21563,8 @@
+@@ -21907,6 +21907,8 @@ rm -f conftest.err conftest.$ac_objext c
  echo "${ECHO_T}$have_oss" >&6
          if test x$have_oss = xyes; then
              CFLAGS="$CFLAGS -DOSS_SUPPORT"
@@ -33,7 +33,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
              AUDIO_SUBDIRS="$AUDIO_SUBDIRS dsp"
              AUDIO_DRIVERS="$AUDIO_DRIVERS dsp/libaudio_dsp.la"
              AUDIO_SUBDIRS="$AUDIO_SUBDIRS dma"
-@@ -22262,9 +22264,9 @@
+@@ -22844,9 +22846,9 @@ fi;
          echo "$as_me:$LINENO: checking for NAS audio support" >&5
  echo $ECHO_N "checking for NAS audio support... $ECHO_C" >&6
          have_nas=no
@@ -45,7 +45,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
              SYSTEM_LIBS="$SYSTEM_LIBS -laudio -lXt"
              AUDIO_SUBDIRS="$AUDIO_SUBDIRS nas"
              AUDIO_DRIVERS="$AUDIO_DRIVERS nas/libaudio_nas.la"
-@@ -22530,7 +22532,7 @@
+@@ -23112,7 +23114,7 @@ fi
                    NASMFLAGS="-f aoutb"
                    ;;
                *)
@@ -54,7 +54,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
                    ;;
              esac
  
-@@ -25053,63 +25055,58 @@
+@@ -25643,63 +25645,58 @@ else
    enable_video_aalib=no
  fi;
      if test x$enable_video = xyes -a x$enable_video_aalib = xyes; then
@@ -148,10 +148,10 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
 +        echo "$as_me:$LINENO: checking for AAlib support" >&5
 +echo $ECHO_N "checking for AAlib support... $ECHO_C" >&6
 +        if test x$AALIB_CONFIG = x; then
-+            video_aalib=no
++        video_aalib=no
 +	else
 +            AALIB_LIBS=`$AALIB_CONFIG --libs`
-+            video_aalib=yes
++        video_aalib=yes
 +        fi
          echo "$as_me:$LINENO: result: $video_aalib" >&5
  echo "${ECHO_T}$video_aalib" >&6
@@ -162,7 +162,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  
              VIDEO_SUBDIRS="$VIDEO_SUBDIRS aalib"
              VIDEO_DRIVERS="$VIDEO_DRIVERS aalib/libvideo_aa.la"
-@@ -25837,16 +25834,17 @@
+@@ -26714,16 +26711,17 @@ else
    enable_pth=yes
  fi;
      if test x$enable_threads = xyes -a x$enable_pth = xyes; then
@@ -185,7 +185,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
    ;;
    *)
    as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
-@@ -25856,32 +25854,32 @@
+@@ -26733,32 +26731,32 @@ do
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
    if $as_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
@@ -227,7 +227,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
              SDL_CFLAGS="$SDL_CFLAGS $PTH_CFLAGS"
              SDL_LIBS="$SDL_LIBS $PTH_LIBS"
              CFLAGS="$CFLAGS -DENABLE_PTH"
-@@ -25930,8 +25928,8 @@
+@@ -26807,8 +26805,8 @@ fi;
              pthread_lib="-pthread"
              ;;
          *-*-netbsd*)
@@ -238,7 +238,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -27751,93 +27749,21 @@
+@@ -28637,93 +28635,21 @@ if test $ac_cv_lib_usbhid_hid_init = yes
    have_libusbhid=yes
  fi
  
@@ -340,7 +340,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -27845,7 +27771,7 @@
+@@ -28731,7 +28657,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -349,7 +349,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -27881,15 +27807,15 @@
+@@ -28767,15 +28693,15 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_compiler" >&6
  
  # Is the header present?
@@ -368,7 +368,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -27923,25 +27849,25 @@
+@@ -28809,25 +28735,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -410,7 +410,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------------ ##
-@@ -27952,34 +27878,34 @@
+@@ -28838,34 +28764,34 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
  esac
@@ -461,7 +461,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -27987,7 +27913,7 @@
+@@ -28873,7 +28799,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -470,7 +470,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -28023,15 +27949,15 @@
+@@ -28909,15 +28835,15 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_compiler" >&6
  
  # Is the header present?
@@ -489,7 +489,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -28065,25 +27991,25 @@
+@@ -28951,25 +28877,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -497,9 +497,13 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
 -echo "$as_me: WARNING: usbhid.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
 -    { echo "$as_me:$LINENO: WARNING: usbhid.h: proceeding with the compiler's result" >&5
 -echo "$as_me: WARNING: usbhid.h: proceeding with the compiler's result" >&2;}
--    ac_header_preproc=yes
--    ;;
--  no:yes:* )
++    { echo "$as_me:$LINENO: WARNING: libusbhid.h: accepted by the compiler, rejected by the preprocessor!" >&5
++echo "$as_me: WARNING: libusbhid.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libusbhid.h: proceeding with the compiler's result" >&5
++echo "$as_me: WARNING: libusbhid.h: proceeding with the compiler's result" >&2;}
+     ac_header_preproc=yes
+     ;;
+   no:yes:* )
 -    { echo "$as_me:$LINENO: WARNING: usbhid.h: present but cannot be compiled" >&5
 -echo "$as_me: WARNING: usbhid.h: present but cannot be compiled" >&2;}
 -    { echo "$as_me:$LINENO: WARNING: usbhid.h:     check for missing prerequisite headers?" >&5
@@ -512,13 +516,6 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
 -echo "$as_me: WARNING: usbhid.h: proceeding with the preprocessor's result" >&2;}
 -    { echo "$as_me:$LINENO: WARNING: usbhid.h: in the future, the compiler will take precedence" >&5
 -echo "$as_me: WARNING: usbhid.h: in the future, the compiler will take precedence" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: libusbhid.h: accepted by the compiler, rejected by the preprocessor!" >&5
-+echo "$as_me: WARNING: libusbhid.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: libusbhid.h: proceeding with the compiler's result" >&5
-+echo "$as_me: WARNING: libusbhid.h: proceeding with the compiler's result" >&2;}
-+    ac_header_preproc=yes
-+    ;;
-+  no:yes:* )
 +    { echo "$as_me:$LINENO: WARNING: libusbhid.h: present but cannot be compiled" >&5
 +echo "$as_me: WARNING: libusbhid.h: present but cannot be compiled" >&2;}
 +    { echo "$as_me:$LINENO: WARNING: libusbhid.h:     check for missing prerequisite headers?" >&5
@@ -534,7 +531,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------------ ##
-@@ -28094,34 +28020,112 @@
+@@ -28980,34 +28906,112 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
  esac
@@ -576,7 +573,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
 +            echo "$as_me:$LINENO: checking for hid_init in -lusb" >&5
 +echo $ECHO_N "checking for hid_init in -lusb... $ECHO_C" >&6
 +if test "${ac_cv_lib_usb_hid_init+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
++  echo $ECHO_N "(cached) $ECHO_C" >&6
 +else
 +  ac_check_lib_save_LIBS=$LIBS
 +LIBS="-lusb  $LIBS"
@@ -630,9 +627,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
 +sed 's/^/| /' conftest.$ac_ext >&5
 +
 +ac_cv_lib_usb_hid_init=no
- fi
--echo "$as_me:$LINENO: result: $ac_cv_header_libusb_h" >&5
--echo "${ECHO_T}$ac_cv_header_libusb_h" >&6
++fi
 +rm -f conftest.err conftest.$ac_objext \
 +      conftest$ac_exeext conftest.$ac_ext
 +LIBS=$ac_check_lib_save_LIBS
@@ -650,8 +645,10 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
 +  echo "$as_me:$LINENO: checking for usb.h" >&5
 +echo $ECHO_N "checking for usb.h... $ECHO_C" >&6
 +if test "${ac_cv_header_usb_h+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
-+fi
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_header_libusb_h" >&5
+-echo "${ECHO_T}$ac_cv_header_libusb_h" >&6
 +echo "$as_me:$LINENO: result: $ac_cv_header_usb_h" >&5
 +echo "${ECHO_T}$ac_cv_header_usb_h" >&6
  else
@@ -663,7 +660,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -28129,7 +28133,7 @@
+@@ -29015,7 +29019,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -672,7 +669,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -28165,15 +28169,15 @@
+@@ -29051,15 +29055,15 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_compiler" >&6
  
  # Is the header present?
@@ -691,7 +688,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -28207,25 +28211,25 @@
+@@ -29093,25 +29097,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -733,7 +730,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------------ ##
-@@ -28236,34 +28240,34 @@
+@@ -29122,34 +29126,34 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
  esac
@@ -784,7 +781,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -28271,7 +28275,7 @@
+@@ -29157,7 +29161,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -793,7 +790,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -28307,15 +28311,15 @@
+@@ -29193,15 +29197,15 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_compiler" >&6
  
  # Is the header present?
@@ -812,7 +809,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -28349,25 +28353,25 @@
+@@ -29235,25 +29239,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -854,7 +851,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------------ ##
-@@ -28378,33 +28382,29 @@
+@@ -29264,33 +29268,29 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
  esac
@@ -897,7 +894,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
          fi
  
          echo "$as_me:$LINENO: checking for usbhid" >&5
-@@ -28628,6 +28628,70 @@
+@@ -29514,6 +29514,70 @@ echo "${ECHO_T}$have_usbhid_new" >&6
      fi
  }
  
@@ -968,7 +965,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
  CheckAltivec()
  {
      echo "$as_me:$LINENO: checking for GCC Altivec instruction support" >&5
-@@ -28922,16 +28986,18 @@
+@@ -29808,16 +29872,18 @@ __EOF__
          CheckESD
          CheckNAS
          CheckX11
@@ -978,7 +975,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
          CheckPTHREAD
          CheckSIGACTION
          CheckUSBHID
-+	CheckMachineJoystick
++        CheckMachineJoystick
          # Set up files for the audio library
          if test x$enable_audio = xyes; then
 -            CFLAGS="$CFLAGS -DSUNAUDIO_SUPPORT"
@@ -990,7 +987,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
          fi
          # Set up files for the cdrom library
          if test x$enable_cdrom = xyes; then
-@@ -28940,9 +29006,6 @@
+@@ -29826,9 +29892,6 @@ __EOF__
          fi
          # Set up files for the thread library
          if test x$enable_threads = xyes; then
@@ -1000,7 +997,7 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
              CopyUnixThreadSource
          fi
          # Set up files for the timer library
-@@ -30425,7 +30488,7 @@
+@@ -31455,7 +31518,7 @@ fi
  
  # Set runtime shared library paths as needed
  
@@ -1009,12 +1006,13 @@ $NetBSD: patch-am,v 1.14 2004/07/13 20:51:58 kristerw Exp $
    SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib"
  fi
  if test $ARCH = solaris; then
-@@ -31564,7 +31627,8 @@
+@@ -32598,8 +32661,9 @@ s,@X_EXTRA_LIBS@,$X_EXTRA_LIBS,;t t
  s,@PKG_CONFIG@,$PKG_CONFIG,;t t
  s,@DIRECTFB_CFLAGS@,$DIRECTFB_CFLAGS,;t t
  s,@DIRECTFB_LIBS@,$DIRECTFB_LIBS,;t t
--s,@PTH_CONFIG@,$PTH_CONFIG,;t t
 +s,@AALIB_CONFIG@,$AALIB_CONFIG,;t t
+ s,@OSMESA_CONFIG@,$OSMESA_CONFIG,;t t
+-s,@PTH_CONFIG@,$PTH_CONFIG,;t t
 +s,@PTHREAD_CONFIG@,$PTHREAD_CONFIG,;t t
  s,@ARCH@,$ARCH,;t t
  s,@TARGET_LINUX_TRUE@,$TARGET_LINUX_TRUE,;t t

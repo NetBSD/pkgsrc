@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.16 2004/08/24 21:07:04 hubertf Exp $
-#
+# $NetBSD: Makefile.common,v 1.17 2005/01/05 12:05:19 adam Exp $
 
-DISTNAME=	SDL-1.2.7
+DISTNAME=	SDL-1.2.8
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 

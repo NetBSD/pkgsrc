@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
+$NetBSD: patch-aj,v 1.20 2005/01/05 12:05:19 adam Exp $
 
---- configure.in.orig	Sun Feb 22 22:31:47 2004
-+++ configure.in	Tue Jul 13 22:28:09 2004
-@@ -28,9 +28,9 @@
+--- configure.in.orig	2004-12-13 09:02:08.000000000 +0000
++++ configure.in
+@@ -28,9 +28,9 @@ AC_SUBST(SDL_VERSION)
  
  # libtool versioning
  LT_RELEASE=$SDL_MAJOR_VERSION.$SDL_MINOR_VERSION
@@ -15,7 +15,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
  
  AC_SUBST(LT_RELEASE)
  AC_SUBST(LT_CURRENT)
-@@ -267,6 +267,8 @@
+@@ -267,6 +267,8 @@ CheckOSS()
          AC_MSG_RESULT($have_oss)
          if test x$have_oss = xyes; then
              CFLAGS="$CFLAGS -DOSS_SUPPORT"
@@ -24,7 +24,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
              AUDIO_SUBDIRS="$AUDIO_SUBDIRS dsp"
              AUDIO_DRIVERS="$AUDIO_DRIVERS dsp/libaudio_dsp.la"
              AUDIO_SUBDIRS="$AUDIO_SUBDIRS dma"
-@@ -422,9 +424,9 @@
+@@ -456,9 +458,9 @@ CheckNAS()
      if test x$enable_audio = xyes -a x$enable_nas = xyes; then
          AC_MSG_CHECKING(for NAS audio support)
          have_nas=no
@@ -36,7 +36,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
              SYSTEM_LIBS="$SYSTEM_LIBS -laudio -lXt"
              AUDIO_SUBDIRS="$AUDIO_SUBDIRS nas"
              AUDIO_DRIVERS="$AUDIO_DRIVERS nas/libaudio_nas.la"
-@@ -505,7 +507,7 @@
+@@ -539,7 +541,7 @@ CheckNASM()
                    NASMFLAGS="-f aoutb"
                    ;;
                *)
@@ -45,7 +45,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
                    ;;
              esac
              AC_SUBST(NASMFLAGS)
-@@ -943,18 +945,18 @@
+@@ -985,18 +987,18 @@ CheckAAlib()
  [  --enable-video-aalib    use AAlib video driver [default=no]],
                    , enable_video_aalib=no)
      if test x$enable_video = xyes -a x$enable_video_aalib = xyes; then
@@ -70,7 +70,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
  
              VIDEO_SUBDIRS="$VIDEO_SUBDIRS aalib"
              VIDEO_DRIVERS="$VIDEO_DRIVERS aalib/libvideo_aa.la"
-@@ -1125,12 +1127,13 @@
+@@ -1202,12 +1204,13 @@ CheckPTH()
  [  --enable-pth            use GNU pth library for multi-threading [default=yes]],
                    , enable_pth=yes)
      if test x$enable_threads = xyes -a x$enable_pth = xyes; then
@@ -88,7 +88,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
              SDL_CFLAGS="$SDL_CFLAGS $PTH_CFLAGS"
              SDL_LIBS="$SDL_LIBS $PTH_LIBS"
              CFLAGS="$CFLAGS -DENABLE_PTH"
-@@ -1171,8 +1174,8 @@
+@@ -1248,8 +1251,8 @@ CheckPTHREAD()
              pthread_lib="-pthread"
              ;;
          *-*-netbsd*)
@@ -99,7 +99,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1638,29 +1641,31 @@
+@@ -1724,29 +1727,31 @@ CheckUSBHID()
          have_libusbhid=no
          have_libusb=no
          AC_CHECK_LIB(usbhid, hid_init, have_libusbhid=yes)
@@ -140,7 +140,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
          fi
  
          AC_MSG_CHECKING(for usbhid)
-@@ -1749,6 +1754,26 @@
+@@ -1835,6 +1840,26 @@ CheckUSBHID()
      fi
  }
  
@@ -167,7 +167,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
  dnl Check for altivec instruction support using gas syntax
  CheckAltivec()
  {
-@@ -1957,16 +1982,18 @@
+@@ -2043,16 +2068,18 @@ case "$target" in
          CheckESD
          CheckNAS
          CheckX11
@@ -189,7 +189,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
          fi
          # Set up files for the cdrom library
          if test x$enable_cdrom = xyes; then
-@@ -1975,9 +2002,6 @@
+@@ -2061,9 +2088,6 @@ case "$target" in
          fi
          # Set up files for the thread library
          if test x$enable_threads = xyes; then
@@ -199,7 +199,7 @@ $NetBSD: patch-aj,v 1.19 2004/07/13 20:51:58 kristerw Exp $
              CopyUnixThreadSource
          fi
          # Set up files for the timer library
-@@ -2606,7 +2630,7 @@
+@@ -2724,7 +2748,7 @@ AM_CONDITIONAL([ENABLE_STATIC], [test "$
  
  # Set runtime shared library paths as needed
  
