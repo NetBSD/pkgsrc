@@ -1,0 +1,29 @@
+--- buffy.c.orig	Mon Mar 25 12:30:23 2002
++++ buffy.c	Mon Feb  2 08:17:26 2004
+@@ -440,7 +440,7 @@
+   {
+   case 0:
+ 
+-    s = '\0';
++    *s = '\0';
+     break;
+ 
+   case 1:
+@@ -449,7 +449,7 @@
+       tmp = tmp->next;
+     if (!tmp)
+     {
+-      s = '\0';
++      *s = '\0';
+       mutt_buffy_check (1); /* buffy was wrong - resync things */
+       break;
+     }
+@@ -475,7 +475,7 @@
+     }
+     if (count >= 3)
+     {
+-      s = '\0';
++      *s = '\0';
+       mutt_buffy_check (1); /* buffy was wrong - resync things */
+       break;
+     }
