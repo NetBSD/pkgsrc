@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.1 2004/04/20 18:29:34 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.2 2004/04/21 14:55:32 tv Exp $
 
 --- libtool.m4.orig	Fri Jan 23 01:07:04 2004
 +++ libtool.m4
@@ -39,13 +39,13 @@ $NetBSD: manual-libtool.m4,v 1.1 2004/04/20 18:29:34 tv Exp $
    postinstall_cmds='chmod 555 $lib'
    ;;
  
-+interix*)
++interix3*)
 +  version_type=sunos
 +  need_lib_prefix=no
 +  need_version=no
 +  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
 +  soname_spec='${libname}${release}${shared_ext}$major'
-+  dynamic_linker='Interix ld.so'
++  dynamic_linker='Interix 3.x ld.so'
 +  shlibpath_var=LD_LIBRARY_PATH
 +  shlibpath_overrides_runpath=yes
 +  hardcode_into_libs=yes
@@ -104,7 +104,7 @@ $NetBSD: manual-libtool.m4,v 1.1 2004/04/20 18:29:34 tv Exp $
    esac
    ;;
  
-+interix*)
++interix3*)
 +  lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so|_pic\.a)$'
 +  ;;
 +
@@ -115,7 +115,7 @@ $NetBSD: manual-libtool.m4,v 1.1 2004/04/20 18:29:34 tv Exp $
  	;;
      esac
      ;;
-+  interix*)
++  interix3*)
 +    ;;
    irix5* | irix6*)
      case $cc_basename in
@@ -162,20 +162,43 @@ $NetBSD: manual-libtool.m4,v 1.1 2004/04/20 18:29:34 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -4643,6 +4677,8 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4579,6 +4613,10 @@ AC_MSG_CHECKING([for $compiler option to
+ 	;;
+       esac
+       ;;
++    interix3*)
++      # Interix 3.0-3.5 -fPIC option generates borked code.
++      # (Instead, shlibs are relocated at runtime.)
++      ;;
+     *)
+       _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
+       ;;
+@@ -4643,6 +4681,8 @@ AC_MSG_CHECKING([for $compiler option to
  	    ;;
  	esac
  	;;
-+      interix*)
++      interix3*)
 +	;;
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -5131,6 +5167,11 @@ EOF
+@@ -4839,6 +4879,11 @@ AC_MSG_CHECKING([for $compiler option to
+       esac
+       ;;
+ 
++    interix3*)
++      # Interix 3.0-3.5 -fPIC option generates borked code.
++      # (Instead, shlibs are relocated at runtime.)
++      ;;
++
+     *)
+       _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
+       ;;
+@@ -5131,6 +5176,11 @@ EOF
        fi
        ;;
  
-+    interix*)
++    interix3*)
 +      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname -o $lib'
 +      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$export_symbols -o $lib'
 +      ;;
@@ -183,13 +206,13 @@ $NetBSD: manual-libtool.m4,v 1.1 2004/04/20 18:29:34 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5534,6 +5575,14 @@ $echo "local: *; };" >> $output_objdir/$
+@@ -5534,6 +5584,14 @@ $echo "local: *; };" >> $output_objdir/$
  	  ;;
  	esac
        fi
 +      ;;
 +
-+    interix*)
++    interix3*)
 +      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
 +      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
 +      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
