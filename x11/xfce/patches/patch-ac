@@ -1,10 +1,11 @@
-$NetBSD: patch-ac,v 1.7 2001/02/28 10:26:03 wiz Exp $
---- other/xfsoundrc.in.orig	Thu Jan 18 17:47:13 2001
-+++ other/xfsoundrc.in	Thu Jan 18 17:47:37 2001
+$NetBSD: patch-ac,v 1.8 2001/09/14 16:11:57 wiz Exp $
+
+--- other/xfsoundrc.in.orig	Fri Aug  3 21:56:38 2001
++++ other/xfsoundrc.in
 @@ -1,5 +1,5 @@
  Play
 -xfplay
 +/usr/bin/audioplay
- XFCE_DIR/sounds/beep03.wav
- XFCE_DIR/sounds/pop02.wav
+ 
+ 
  
