@@ -1,20 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/11/25 20:49:30 xtraeme Exp $
-#
-# XXX Support for the following variables will be removed after the
-# XXX pkgsrc-2004Q4 branch is released:
-# XXX
-# XXX POP_WITH_DRAC
-# XXX TEAPOP_WITH_MYSQL
-# XXX TEAPOP_WITHOUT_APOP
-# XXX TEAPOP_WITHOUT_VPOP
-
-.if defined(POP_WITH_DRAC) && !empty(POP_WITH_DRAC:M[Yy][Ee][Ss])
-PKG_SUPPORTED_OPTIONS+=	drac
-.endif
-
-.if defined(TEAPOP_WITH_MYSQL) && !empty(TEAPOP_WITH_MYSQL:M[Yy][Ee][Ss])
-PKG_SUPPORTED_OPTIONS+=	mysql
-.endif
+# $NetBSD: options.mk,v 1.2 2004/12/22 21:46:25 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.teapop
 PKG_SUPPORTED_OPTIONS=	drac mysql apop vpop tcpd pgsql ldap inet6
@@ -71,4 +55,3 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
-
