@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/13 15:41:59 frueauf Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/15 10:38:06 agc Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
@@ -39,7 +39,7 @@ SUBDIR += x11
 
 PORTSTOP=	yes
 
-.include <bsd.port.subdir.mk>
+.include "mk/bsd.pkg.subdir.mk"
 
 index:
 	@rm -f ${.CURDIR}/INDEX

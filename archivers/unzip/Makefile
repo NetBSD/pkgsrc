@@ -1,9 +1,4 @@
-# New ports collection makefile for:    unzip
-# Version required:     5.3.2
-# Date created:         17 October 1994
-# Whom:                 jmz
-#
-# $NetBSD: Makefile,v 1.5 1998/03/07 21:24:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -31,4 +26,4 @@ do-install:
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} README WHERE COPYING ${PREFIX}/share/doc/unzip
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
