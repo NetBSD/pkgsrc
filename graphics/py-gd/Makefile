@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/26 02:27:42 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/25 07:17:31 snj Exp $
 
 DISTNAME=	gdmodule.c
 PKGNAME=	${PYPKGPREFIX}-gd-1.3
@@ -15,7 +15,7 @@ EXTRACT_CMD=	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
 WRKSRC=		${WRKDIR}
 ALL_TARGET=	default
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 # this pkg uses Makefile.pre.in
 PYTHON_VERSIONS_ACCEPTED=	20 21
@@ -33,7 +33,7 @@ do-configure:
 	${CP} ${PREFIX}/${PYLIB}/config/Makefile.pre.in ${WRKSRC}
 	cd ${WRKSRC}; ${MAKE} -f Makefile.pre.in boot
 
-.include "../../graphics/freetype-lib/buildlink2.mk"
-.include "../../graphics/gd/buildlink2.mk"
+.include "../../graphics/freetype-lib/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
