@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/04/22 09:06:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/02 09:19:32 jmmv Exp $
 #
 
-DISTNAME=	rhythmbox-0.8.1
+DISTNAME=	rhythmbox-0.8.2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,10 +11,13 @@ HOMEPAGE=	http://www.rhythmbox.org/
 COMMENT=	Music management application for GNOME
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=		gst-plugins-esound>=0.8.0:../../audio/gst-plugins-esound
-DEPENDS+=		gst-plugins-gnomevfs>=0.8.0:../../sysutils/gst-plugins-gnomevfs
-DEPENDS+=		gst-plugins-mad>=0.8.0:../../audio/gst-plugins-mad
-DEPENDS+=		gst-plugins-vorbis>=0.8.0:../../audio/gst-plugins-vorbis
+DEPENDS+=		gst-plugins-esound>=0.8.1:../../audio/gst-plugins-esound
+DEPENDS+=		gst-plugins-gnomevfs>=0.8.1:../../sysutils/gst-plugins-gnomevfs
+DEPENDS+=		gst-plugins-mad>=0.8.1:../../audio/gst-plugins-mad
+DEPENDS+=		gst-plugins-vorbis>=0.8.1:../../audio/gst-plugins-vorbis
+
+BUILDLINK_DEPENDS.gstreamer+=	gstreamer>=0.8.1
+BUILDLINK_DEPENDS.gst-plugins+=	gst-plugins>=0.8.1
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
