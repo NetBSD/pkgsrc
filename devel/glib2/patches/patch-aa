@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.9 2003/11/11 13:39:09 fvdl Exp $
+$NetBSD: patch-aa,v 1.10 2004/03/31 19:41:21 tron Exp $
 
 --- configure.orig	2003-08-26 18:42:14.000000000 +0200
-+++ configure
-@@ -31199,7 +31199,7 @@ fi
++++ configure	2004-03-31 21:33:30.000000000 +0200
+@@ -28920,7 +28920,7 @@
+     # both CPPFLAG and LIBS.
+     # One of them does for most gcc versions and some other platforms/compilers
+     # too and could be considered as the canonical way to go.
+-    for flag in pthread pthreads; do
++    for flag in pthreads pthread; do
+       glib_save_CFLAGS="$CFLAGS"
+       CFLAGS="$CFLAGS -$flag"
+       if test "$cross_compiling" = yes; then
+@@ -31199,7 +31199,7 @@
  #  b) libtool doesn't recognize -pthread as a library dependency.
  #
  case $host in
