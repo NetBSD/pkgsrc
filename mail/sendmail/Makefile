@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/10 17:22:43 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/30 17:07:11 tv Exp $
 
 DISTNAME=	sendmail.8.9.3
 PKGNAME=	sendmail-8.9.3
@@ -35,5 +35,6 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.sendmail ${PREFIX}/etc
 	${CP} -pr ${WRKSRC}/cf ${PREFIX}/share/sendmail
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
+	${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 
 .include "../../mk/bsd.pkg.mk"
