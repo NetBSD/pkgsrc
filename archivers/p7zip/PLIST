@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/25 13:56:12 wiz Exp $
+bin/7z
+share/doc/p7zip/README
+@dirrm share/doc/p7zip

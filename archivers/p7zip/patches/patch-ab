@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/06/25 13:56:12 wiz Exp $
+
+--- include_windows/winnt.h.orig	2004-06-10 21:44:46.000000000 +0200
++++ include_windows/winnt.h
+@@ -32,6 +32,7 @@ extern "C" {
+ #include <winerror.h>
+ 
+ #include <string.h>
++#include <wchar.h>
+ 
+ #ifndef VOID
+ #define VOID void
