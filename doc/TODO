@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1152 2003/12/09 04:57:50 junyoung Exp $
+$NetBSD: TODO,v 1.1153 2003/12/09 06:55:46 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -237,7 +237,6 @@ Suggested package updates
 	o libtool-1.5 [skrll]
 	o licq-1.2.7
 	o lilypond-2.0.0
-	o linc-1.0.3 [pkg/23673]
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lwm-1.01
