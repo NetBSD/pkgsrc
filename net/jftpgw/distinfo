@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/23 01:32:33 xtraeme Exp $
+
+SHA1 (jftpgw-0.13.4.tar.gz) = 9bc043bafc2be73b29a446429b76b58345ae55e8
+Size (jftpgw-0.13.4.tar.gz) = 255160 bytes
+SHA1 (patch-aa) = 8af643cbdd2e6c4f620cd8f7a0d51419ce7f6769
