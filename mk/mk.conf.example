@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.63 1999/07/19 00:14:34 tron Exp $
+# $NetBSD: mk.conf.example,v 1.64 1999/07/26 19:47:37 tron Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -315,6 +315,12 @@ PAPERSIZE=	A4		# Default paper size for packages.
                                 # Kerberos 4 (or a compatible) subsystem.
                                 # Requires Kerberos libraries in /usr/lib.
                                 # Possible: defined, not defined
+                                # Default: not defined
+
+#USE_INN=			# Used in many packages to specify use of
+                                # "inn" instead of "nntpclnt" package to
+                                # provide "inews" binary.
+                                # Possible: not defined, YES
                                 # Default: not defined
 
 #USE_MENUS=			# Used in xvile package to build in support for
