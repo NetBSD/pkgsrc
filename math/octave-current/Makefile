@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/10/03 00:12:57 tv Exp $
+# $NetBSD: Makefile,v 1.36 2004/11/24 00:54:10 dmcmahill Exp $
 #
 
 DISTNAME=	octave-${OCTAVE_VER}
@@ -56,6 +56,18 @@ UNWRAP_FILES+=	mkoctfile octave-bug src/oct-conf.h
 post-extract:
 	${FIND} ${WRKSRC}/doc -type f -name '*.info*' -exec ${RM} -f {} \;
 	${MKDIR} ${WRKSRC}/src/pic
+
+# substitute in the real path to various bits of the toolchain because
+# mkoctfile will be used potentially by users and it needs to point
+# at the same compilers as were used in building octave
+post-build:
+	${MV} ${WRKSRC}/mkoctfile ${WRKSRC}/mkoctfile.bak
+	${SED} \
+		-e 's;"${CC}";"${CCPATH}";g' \
+		-e 's;"${CXX}";"${CXXPATH}";g' \
+		-e 's;"${FC}";"${FCPATH}";g' \
+		${WRKSRC}/mkoctfile.bak > ${WRKSRC}/mkoctfile
+	${CHMOD} a+x ${WRKSRC}/mkoctfile
 
 post-install:
 .for f in ${LIBOCTAVE_INFO}
