@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 1998/08/24 11:47:34 frueauf Exp $
+$NetBSD: patch-aa,v 1.3 2000/06/20 22:25:58 hubertf Exp $
 
---- Makefile.orig	Mon Oct 27 15:07:06 1997
-+++ Makefile	Sun Aug 23 20:39:57 1998
+--- Makefile.orig	Tue Oct 28 00:07:06 1997
++++ Makefile	Wed Jun 21 00:20:49 2000
 @@ -13,9 +13,9 @@
  # OS-specific stuff: uncomment all of the lines for your OS of choice
  
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.2 1998/08/24 11:47:34 frueauf Exp $
  
 +# NetBSD
 +CFLAGS = -O2 -I${X11BASE}/include -I${PREFIX}/include
-+LDFLAGS = -L${PREFIX}/lib -L${X11BASE}/lib
++LDFLAGS = -L${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib
 +DEFS += -DNETBSD
 +# XXX Until we work out a way to use this on non-x86
 +LDLIBS += -li386
@@ -35,16 +35,17 @@ $NetBSD: patch-aa,v 1.2 1998/08/24 11:47:34 frueauf Exp $
  # BSDI 3.0
  #CFLAGS = -O2 -I/usr/X11R6/include -I/usr/local/include
  #LDFLAGS = -L/usr/local/lib -L/usr/X11R6/lib
-@@ -44,7 +51,7 @@
+@@ -44,15 +51,15 @@
  # JPEG stuff: do you want JPEG support?  Where is your JPEG library?
  
  LDLIBS += -ljpeg
 -#LDFLAGS +=  # -L/usr/local/lib
-+LDFLAGS +=  # -L/usr/local/lib
++LDFLAGS +=  -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
  DEFS += -DJPEG 
- #CFLAGS += -I/usr/local/include
+-#CFLAGS += -I/usr/local/include
++CFLAGS += -I${LOCALBASE}/include
  ######################################################################
-@@ -52,7 +59,7 @@
+ 
  ######################################################################
  # X11 stuff: where are your X11 .h and .a files?
  
