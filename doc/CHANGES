@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6562 2004/07/15 04:08:00 atatat Exp $
+$NetBSD: CHANGES,v 1.6563 2004/07/15 09:30:53 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3401,3 +3401,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated XaoS to 3.1 [ben 2004-07-14]
 	Updated scilab to 3.0 [dmcmahill 2004-07-15]
 	Updated screen to 4.0.2nb1 [atatat 2004-07-15]
+	Added fixelfprot-20040714 [agc 2004-07-15]
