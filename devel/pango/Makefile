@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/02/14 18:26:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2004/02/14 20:43:47 minskim Exp $
 #
 
 DISTNAME=		pango-1.2.5
@@ -38,5 +38,6 @@ CONFIGURE_ARGS+=	--with-qt=no
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/Xrender/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
