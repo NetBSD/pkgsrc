@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3120 2003/08/28 14:45:41 abs Exp $
+$NetBSD: CHANGES,v 1.3121 2003/08/28 15:26:53 kent Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3359,4 +3359,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated librsync to 0.9.6nb1 [abs 2003-08-27]
 	Updated gtkmm to 2.2.7 [adam 2003-08-27]
 	Updated pkglint to 3.59 [abs 2003-08-27]
-
+	Updated peace to 0.0.20030828 [kent 2003-08-28]
