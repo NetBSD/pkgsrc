@@ -1,7 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/03 12:31:35 recht Exp $
-lib/libgdiplus.a
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:35 jlam Exp $
 lib/libgdiplus.la
-lib/libgdiplus.so
-lib/libgdiplus.so.0
-lib/libgdiplus.so.0.0
 lib/pkgconfig/libgdiplus.pc

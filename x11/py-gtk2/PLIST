@@ -1,35 +1,25 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/12 10:48:23 recht Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:10:06 jlam Exp $
 bin/pygtk-codegen-2.0
 include/pygtk-2.0/pygobject.h
 include/pygtk-2.0/pygtk/pygtk.h
 lib/pkgconfig/pygtk-2.0.pc
-${PYSITELIB}/gtk-2.0/atk.a
 ${PYSITELIB}/gtk-2.0/atk.la
-${PYSITELIB}/gtk-2.0/atk.so
 ${PYSITELIB}/gtk-2.0/dsextras.py
 ${PYSITELIB}/gtk-2.0/dsextras.pyc
 ${PYSITELIB}/gtk-2.0/dsextras.pyo
-${PYSITELIB}/gtk-2.0/gobject.a
 ${PYSITELIB}/gtk-2.0/gobject.la
-${PYSITELIB}/gtk-2.0/gobject.so
 ${PYSITELIB}/gtk-2.0/gtk/__init__.py
 ${PYSITELIB}/gtk-2.0/gtk/__init__.pyc
 ${PYSITELIB}/gtk-2.0/gtk/__init__.pyo
-${PYSITELIB}/gtk-2.0/gtk/_gtk.a
 ${PYSITELIB}/gtk-2.0/gtk/_gtk.la
-${PYSITELIB}/gtk-2.0/gtk/_gtk.so
 ${PYSITELIB}/gtk-2.0/gtk/compat.py
 ${PYSITELIB}/gtk-2.0/gtk/compat.pyc
 ${PYSITELIB}/gtk-2.0/gtk/compat.pyo
-${PYSITELIB}/gtk-2.0/gtk/glade.a
 ${PYSITELIB}/gtk-2.0/gtk/glade.la
-${PYSITELIB}/gtk-2.0/gtk/glade.so
 ${PYSITELIB}/gtk-2.0/gtk/keysyms.py
 ${PYSITELIB}/gtk-2.0/gtk/keysyms.pyc
 ${PYSITELIB}/gtk-2.0/gtk/keysyms.pyo
-${PYSITELIB}/gtk-2.0/pango.a
 ${PYSITELIB}/gtk-2.0/pango.la
-${PYSITELIB}/gtk-2.0/pango.so
 ${PYSITELIB}/pygtk.pth
 ${PYSITELIB}/pygtk.py
 ${PYSITELIB}/pygtk.pyc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/09/21 16:47:10 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/09/22 08:09:26 jlam Exp $
 bin/test-moniker
 include/libbonoboui-2.0/bonobo.h
 include/libbonoboui-2.0/bonobo/bonobo-canvas-component.h
@@ -36,14 +36,8 @@ include/libbonoboui-2.0/libbonoboui.h
 lib/bonobo-2.0/samples/bonobo-sample-controls-2
 lib/bonobo/servers/Bonobo_Sample_Controls.server
 lib/bonobo/servers/CanvDemo.server
-lib/libbonoboui-2.a
 lib/libbonoboui-2.la
-lib/libbonoboui-2.so
-lib/libbonoboui-2.so.0
-lib/libbonoboui-2.so.0.0
-lib/libglade/2.0/libbonobo.a
 lib/libglade/2.0/libbonobo.la
-lib/libglade/2.0/libbonobo.so
 lib/pkgconfig/libbonoboui-2.0.pc
 share/doc/libbonoboui/bonobo-controls.html
 share/doc/libbonoboui/bonobo-support-utilities.html

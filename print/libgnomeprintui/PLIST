@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/21 16:49:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/09/22 08:09:51 jlam Exp $
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-font-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-config-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-dialog.h
@@ -6,11 +6,7 @@ include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-job-preview.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-paper-selector.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-preview.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-unit-selector.h
-lib/libgnomeprintui-2-2.a
 lib/libgnomeprintui-2-2.la
-lib/libgnomeprintui-2-2.so
-lib/libgnomeprintui-2-2.so.1
-lib/libgnomeprintui-2-2.so.1.0
 lib/pkgconfig/libgnomeprintui-2.2.pc
 share/doc/libgnomeprintui/ch02.html
 share/doc/libgnomeprintui/home.png

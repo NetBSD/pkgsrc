@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/04/15 20:05:52 tron Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/09/22 08:09:47 jlam Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -168,36 +168,12 @@ include/lwres/net.h
 include/lwres/netdb.h
 include/lwres/platform.h
 include/lwres/result.h
-lib/libbind.a
 lib/libbind.la
-lib/libbind.so
-lib/libbind.so.2
-lib/libbind.so.2.0
-lib/libdns.a
 lib/libdns.la
-lib/libdns.so
-lib/libdns.so.11
-lib/libdns.so.11.2
-lib/libisc.a
 lib/libisc.la
-lib/libisc.so
-lib/libisc.so.7
-lib/libisc.so.7.1
-lib/libisccc.a
 lib/libisccc.la
-lib/libisccc.so
-lib/libisccc.so.1
-lib/libisccc.so.1.0
-lib/libisccfg.a
 lib/libisccfg.la
-lib/libisccfg.so
-lib/libisccfg.so.0
-lib/libisccfg.so.0.7
-lib/liblwres.a
 lib/liblwres.la
-lib/liblwres.so
-lib/liblwres.so.2
-lib/liblwres.so.2.1
 sbin/dnssec-keygen
 sbin/dnssec-makekeyset
 sbin/dnssec-signkey

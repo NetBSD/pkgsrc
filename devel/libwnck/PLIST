@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/21 16:52:05 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:28 jlam Exp $
 include/libwnck-1.0/libwnck/application.h
 include/libwnck-1.0/libwnck/class-group.h
 include/libwnck-1.0/libwnck/libwnck.h
@@ -11,11 +11,7 @@ include/libwnck-1.0/libwnck/window-menu.h
 include/libwnck-1.0/libwnck/window.h
 include/libwnck-1.0/libwnck/wnck-enum-types.h
 include/libwnck-1.0/libwnck/workspace.h
-lib/libwnck-1.a
 lib/libwnck-1.la
-lib/libwnck-1.so
-lib/libwnck-1.so.13
-lib/libwnck-1.so.13.0
 lib/pkgconfig/libwnck-1.0.pc
 share/doc/libwnck/ch01.html
 share/doc/libwnck/home.png

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/05/06 13:40:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:55 jlam Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz
@@ -31,11 +31,7 @@ include/namazu/util.h
 include/namazu/var.h
 include/namazu/wakati.h
 @dirrm include/namazu
-lib/libnmz.a
 lib/libnmz.la
-lib/libnmz.so
-lib/libnmz.so.7
-lib/libnmz.so.7.0
 @exec ${MKDIR} %D/libdata/namazu 2>/dev/null|| /usr/bin/true
 @exec ${MKDIR} %D/libdata/namazu/index 2>/dev/null || /usr/bin/true
 @dirrm libdata/namazu/index

@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/21 16:54:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:58 jlam Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnomeui/gnome-ditem-edit.h
 include/gnome-desktop-2.0/libgnomeui/gnome-hint.h
-lib/libgnome-desktop-2.a
 lib/libgnome-desktop-2.la
-lib/libgnome-desktop-2.so
-lib/libgnome-desktop-2.so.3
-lib/libgnome-desktop-2.so.3.12
 lib/pkgconfig/gnome-desktop-2.0.pc
 man/man1/gnome-about.1
 share/gnome-about/gnome-64.gif

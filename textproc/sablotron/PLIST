@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/05 19:11:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:55 jlam Exp $
 bin/sabcmd
 bin/sablot-config
 include/sabcfg.h
@@ -7,11 +7,7 @@ include/sablot.h
 include/sdom.h
 include/shandler.h
 include/sxpath.h
-lib/libsablot.a
 lib/libsablot.la
-lib/libsablot.so
-lib/libsablot.so.100
-lib/libsablot.so.100.1
 man/man1/sabcmd.1
 share/doc/html/jsdom-ref/apidocs/api-.Conversions.html
 share/doc/html/jsdom-ref/apidocs/api-.Debugging.html

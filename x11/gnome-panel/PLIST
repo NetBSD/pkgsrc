@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/09/21 16:57:02 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/09/22 08:09:58 jlam Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/gnome-panel-screenshot
@@ -12,11 +12,7 @@ lib/bonobo/servers/GNOME_FishApplet_Factory.server
 lib/bonobo/servers/GNOME_NotificationAreaApplet.server
 lib/bonobo/servers/GNOME_Panel.server
 lib/bonobo/servers/GNOME_Wncklet_Factory.server
-lib/libpanel-applet-2.a
 lib/libpanel-applet-2.la
-lib/libpanel-applet-2.so
-lib/libpanel-applet-2.so.0
-lib/libpanel-applet-2.so.0.19
 lib/pkgconfig/libpanelapplet-2.0.pc
 libexec/clock-applet
 libexec/fish-applet-2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/02/14 23:25:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:15 jlam Exp $
 bin/flac
 bin/metaflac
 include/FLAC++/all.h
@@ -26,26 +26,10 @@ include/OggFLAC/all.h
 include/OggFLAC/export.h
 include/OggFLAC/stream_decoder.h
 include/OggFLAC/stream_encoder.h
-lib/libFLAC++.a
 lib/libFLAC++.la
-lib/libFLAC++.so
-lib/libFLAC++.so.3
-lib/libFLAC++.so.3.2
-lib/libFLAC.a
 lib/libFLAC.la
-lib/libFLAC.so
-lib/libFLAC.so.5
-lib/libFLAC.so.5.2
-lib/libOggFLAC++.a
 lib/libOggFLAC++.la
-lib/libOggFLAC++.so
-lib/libOggFLAC++.so.0
-lib/libOggFLAC++.so.0.4
-lib/libOggFLAC.a
 lib/libOggFLAC.la
-lib/libOggFLAC.so
-lib/libOggFLAC.so.1
-lib/libOggFLAC.so.1.2
 man/man1/flac.1
 man/man1/metaflac.1
 share/aclocal/libFLAC++.m4

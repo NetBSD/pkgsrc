@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:28 jlam Exp $
 bin/smidump
 bin/smilint
 bin/smiquery
 include/smi.h
-lib/libsmi.a
 lib/libsmi.la
-lib/libsmi.so
-lib/libsmi.so.1
-lib/libsmi.so.1.1
 man/man1/smidump.1
 man/man1/smilint.1
 man/man1/smiquery.1

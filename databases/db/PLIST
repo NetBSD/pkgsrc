@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/11/19 09:59:18 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:22 jlam Exp $
 bin/db_archive
 bin/db_checkpoint
 bin/db_deadlock
@@ -10,11 +10,7 @@ bin/db_stat
 include/db2/db.h
 include/db2/db_185.h
 include/db2/db_cxx.h
-lib/libdb2.a
 lib/libdb2.la
-lib/libdb2.so
-lib/libdb2.so.2
-lib/libdb2.so.2.7
 share/doc/html/db/api_c/Db/close.html
 share/doc/html/db/api_c/Db/cursor.html
 share/doc/html/db/api_c/Db/del.html

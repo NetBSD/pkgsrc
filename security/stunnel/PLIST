@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/16 11:48:38 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:53 jlam Exp $
 lib/libstunnel.la
-lib/libstunnel.so
 man/man8/stunnel.8
 man/man8/stunnel.fr.8
 man/man8/stunnel.pl.8

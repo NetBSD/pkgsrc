@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/24 19:32:08 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:56 jlam Exp $
 bin/cgi-fcgi
 include/fastcgi.h
 include/fcgi_stdio.h
@@ -7,13 +7,5 @@ include/fcgios.h
 include/fcgiapp.h
 include/fcgimisc.h
 include/fcgi_config.h
-lib/libfcgi.a
 lib/libfcgi.la
-lib/libfcgi.so
-lib/libfcgi.so.0
-lib/libfcgi.so.0.0
-lib/libfcgi++.a
 lib/libfcgi++.la
-lib/libfcgi++.so
-lib/libfcgi++.so.0
-lib/libfcgi++.so.0.0

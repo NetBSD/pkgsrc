@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/13 18:14:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:52 jlam Exp $
 lib/sasl2/libotp.la
-lib/sasl2/libotp.so
-lib/sasl2/libotp.so.2
-lib/sasl2/libotp.so.2.19

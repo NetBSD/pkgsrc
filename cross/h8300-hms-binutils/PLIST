@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/13 17:48:37 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:21 jlam Exp $
 bin/h8300-hms-addr2line
 bin/h8300-hms-ar
 bin/h8300-hms-as
@@ -58,10 +58,8 @@ libexec/cross-h8300-hms/include/ansidecl.h
 libexec/cross-h8300-hms/include/bfd.h
 libexec/cross-h8300-hms/include/bfdlink.h
 libexec/cross-h8300-hms/include/symcat.h
-libexec/cross-h8300-hms/lib/libbfd.a
 libexec/cross-h8300-hms/lib/libbfd.la
 libexec/cross-h8300-hms/lib/libiberty_binutils.a
-libexec/cross-h8300-hms/lib/libopcodes.a
 libexec/cross-h8300-hms/lib/libopcodes.la
 libexec/cross-h8300-hms/man/man1/h8300-hms-addr2line.1
 libexec/cross-h8300-hms/man/man1/h8300-hms-ar.1

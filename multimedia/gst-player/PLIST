@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/06 13:55:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:44 jlam Exp $
 bin/gst-player
 include/${PKGNAME}/gst/gstvideowidget.h
 include/${PKGNAME}/gst/gtk-playlist.h
 lib/bonobo/servers/Gst-Player-Control.server
 lib/bonobo/servers/Gst-Player-View.server
-lib/libgstplayer.a
 lib/libgstplayer.la
-lib/libgstplayer.so
-lib/libgstplayer.so.0
-lib/libgstplayer.so.0.0
 libexec/gst-player-control
 libexec/gst-player-view
 man/man1/gst-player.1

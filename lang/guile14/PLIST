@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/03 15:57:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:39 jlam Exp $
 guile/1.4/bin/guile
 guile/1.4/bin/guile-config
 guile/1.4/bin/guile-snarf
@@ -89,16 +89,8 @@ guile/1.4/include/libguile/vectors.h
 guile/1.4/include/libguile/version.h
 guile/1.4/include/libguile/vports.h
 guile/1.4/include/libguile/weaks.h
-guile/1.4/lib/libguile.a
 guile/1.4/lib/libguile.la
-guile/1.4/lib/libguile.so
-guile/1.4/lib/libguile.so.10
-guile/1.4/lib/libguile.so.10.0
-guile/1.4/lib/libguilereadline.a
 guile/1.4/lib/libguilereadline.la
-guile/1.4/lib/libguilereadline.so
-guile/1.4/lib/libguilereadline.so.0
-guile/1.4/lib/libguilereadline.so.0.1
 guile/1.4/share/aclocal/guile.m4
 guile/1.4/share/guile/${PKGVERSION}/ice-9/and-let*.scm
 guile/1.4/share/guile/${PKGVERSION}/ice-9/and-let-star.scm

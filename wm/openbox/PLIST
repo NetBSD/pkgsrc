@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/20 21:49:00 snj Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:56 jlam Exp $
 bin/gnome-panel-control
 bin/kdetrayproxy
 bin/openbox
@@ -6,16 +6,8 @@ include/openbox/3.0/openbox/parse.h
 include/openbox/3.0/openbox/render.h
 include/openbox/3.0/openbox/theme.h
 include/openbox/3.0/openbox/version.h
-lib/libobparser.a
 lib/libobparser.la
-lib/libobparser.so
-lib/libobparser.so.2
-lib/libobparser.so.2.0
-lib/libobrender.a
 lib/libobrender.la
-lib/libobrender.so
-lib/libobrender.so.2
-lib/libobrender.so.2.0
 lib/pkgconfig/obparser-3.0.pc
 lib/pkgconfig/obrender-3.0.pc
 share/examples/openbox/menu.xml

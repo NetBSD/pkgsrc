@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:58 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:53 jlam Exp $
 bin/dirsearch
 bin/newaid
 bin/rex
@@ -130,15 +130,10 @@ lib/libsfs.a
 lib/sfs
 lib/${PKGNAME}/aiod
 lib/${PKGNAME}/connect
-lib/${PKGNAME}/libarpc.a
 lib/${PKGNAME}/libarpc.la
-lib/${PKGNAME}/libasync.a
 lib/${PKGNAME}/libasync.la
-lib/${PKGNAME}/libsfscrypt.a
 lib/${PKGNAME}/libsfscrypt.la
-lib/${PKGNAME}/libsfsmisc.a
 lib/${PKGNAME}/libsfsmisc.la
-lib/${PKGNAME}/libsvc.a
 lib/${PKGNAME}/libsvc.la
 lib/${PKGNAME}/listen
 lib/${PKGNAME}/mallock.o

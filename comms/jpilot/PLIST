@@ -1,25 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/04 16:29:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:20 jlam Exp $
 bin/jpilot
 bin/jpilot-dump
 bin/jpilot-sync
 include/jpilot/libplugin.h
 include/jpilot/prefs.h
 lib/jpilot/plugins/.directory
-lib/jpilot/plugins/libexpense.a
 lib/jpilot/plugins/libexpense.la
-lib/jpilot/plugins/libexpense.so
-lib/jpilot/plugins/libexpense.so.0
-lib/jpilot/plugins/libexpense.so.0.0
-lib/jpilot/plugins/libkeyring.a
 lib/jpilot/plugins/libkeyring.la
-lib/jpilot/plugins/libkeyring.so
-lib/jpilot/plugins/libkeyring.so.0
-lib/jpilot/plugins/libkeyring.so.0.0
-lib/jpilot/plugins/libsynctime.a
 lib/jpilot/plugins/libsynctime.la
-lib/jpilot/plugins/libsynctime.so
-lib/jpilot/plugins/libsynctime.so.0
-lib/jpilot/plugins/libsynctime.so.0.0
 man/man1/jpilot-dump.1
 man/man1/jpilot-sync.1
 man/man1/jpilot-upgrade-99.1

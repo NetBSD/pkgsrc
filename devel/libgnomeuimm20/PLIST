@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/06 20:44:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:27 jlam Exp $
 include/libgnomeuimm-2.0/libgnomeuimm.h
 include/libgnomeuimm-2.0/libgnomeuimm/about.h
 include/libgnomeuimm-2.0/libgnomeuimm/app-callback.h
@@ -47,11 +47,7 @@ include/libgnomeuimm-2.0/libgnomeuimm/ui-items-derived.h
 include/libgnomeuimm-2.0/libgnomeuimm/ui-items-icon.h
 include/libgnomeuimm-2.0/libgnomeuimm/ui-items-stock.h
 include/libgnomeuimm-2.0/libgnomeuimm/wrap_init.h
-lib/libgnomeuimm-2.0.a
 lib/libgnomeuimm-2.0.la
-lib/libgnomeuimm-2.0.so
-lib/libgnomeuimm-2.0.so.1
-lib/libgnomeuimm-2.0.so.1.0
 lib/libgnomeuimm-2.0/include/libgnomeuimmconfig.h
 lib/libgnomeuimm-2.0/proc/m4/convert.m4
 lib/libgnomeuimm-2.0/proc/m4/convert_libgnomeuimm.m4

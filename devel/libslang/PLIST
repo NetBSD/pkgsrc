@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:42 zuntum Exp $
-lib/libslang.a
-lib/libslang.la
-lib/libslang.so
-lib/libslang.so.1
-lib/libslang.so.1.4
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:28 jlam Exp $
 include/slcurses.h
 include/slang.h
+lib/libslang.la
 share/doc/html/slang/slangdoc.html
 share/doc/slang/COPYING
 share/doc/slang/COPYING.ART

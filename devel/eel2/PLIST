@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/09/21 16:54:32 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/09/22 08:09:24 jlam Exp $
 include/eel-2/eel/eel-accessibility.h
 include/eel-2/eel/eel-alert-dialog.h
 include/eel-2/eel/eel-art-extensions.h
@@ -45,11 +45,7 @@ include/eel-2/eel/eel-vfs-extensions.h
 include/eel-2/eel/eel-wrap-table.h
 include/eel-2/eel/eel-xml-extensions.h
 include/eel-2/eel/eel.h
-lib/libeel-2.a
 lib/libeel-2.la
-lib/libeel-2.so
-lib/libeel-2.so.10
-lib/libeel-2.so.10.0
 lib/pkgconfig/eel-2.0.pc
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/ang/LC_MESSAGES/eel-2.0.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/15 17:51:43 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:14 jlam Exp $
 bin/dar
 bin/dar_cp
 bin/dar_manager
@@ -23,11 +23,7 @@ include/dar/tools.hpp
 include/dar/tuyau.hpp
 include/dar/user_interaction.hpp
 include/dar/wrapperlib.hpp
-lib/libdar.a
 lib/libdar.la
-lib/libdar.so
-lib/libdar.so.1
-lib/libdar.so.1.2
 man/man1/dar.1
 man/man1/dar_cp.1
 man/man1/dar_manager.1

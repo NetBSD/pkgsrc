@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/05/03 16:03:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:42 jlam Exp $
 bin/cassowary-config
 include/Cl.h
 include/ClC.h
@@ -43,16 +43,8 @@ include/cassowary_scm.h
 include/cassowary_scm.hpp
 include/cl-snarf.h
 lib/cassowary/tests/ClTests
-${GUILE14_SUBDIR}/lib/guile/site/cassowary/libconstraints.a
 ${GUILE14_SUBDIR}/lib/guile/site/cassowary/libconstraints.la
-${GUILE14_SUBDIR}/lib/guile/site/cassowary/libconstraints.so
-${GUILE14_SUBDIR}/lib/guile/site/cassowary/libconstraints.so.0
-${GUILE14_SUBDIR}/lib/guile/site/cassowary/libconstraints.so.0.0
-lib/libcassowary.a
 lib/libcassowary.la
-lib/libcassowary.so
-lib/libcassowary.so.0
-lib/libcassowary.so.0.1
 lib/libconstraints.a
 share/doc/cassowary/cassowary-tr.pdf
 share/doc/cassowary/cassowary-tr.ps.gz

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.8 2004/08/13 18:57:16 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.9 2004/09/22 08:09:24 jlam Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -66,10 +66,8 @@ include/bfd.h
 include/bfdlink.h
 include/dis-asm.h
 include/symcat.h
-lib/libbfd.a
 lib/libbfd.la
 lib/libiberty.a
-lib/libopcodes.a
 lib/libopcodes.la
 man/man1/addr2line.1
 man/man1/ar.1

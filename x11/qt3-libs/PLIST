@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/04/16 14:30:44 recht Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/09/22 08:10:07 jlam Exp $
 qt3/bin/moc
 qt3/include/jri.h
 qt3/include/jri_md.h
@@ -396,17 +396,9 @@ qt3/include/qwizard.h
 qt3/include/qwmatrix.h
 qt3/include/qworkspace.h
 qt3/include/qxml.h
-qt3/lib/libqt-mt.a
 qt3/lib/libqt-mt.la
-qt3/lib/libqt-mt.so
-qt3/lib/libqt-mt.so.3
-qt3/lib/libqt-mt.so.3.3
-qt3/plugins/imageformats/libqjpeg.a
 qt3/plugins/imageformats/libqjpeg.la
-qt3/plugins/imageformats/libqjpeg.so
-qt3/plugins/imageformats/libqmng.a
 qt3/plugins/imageformats/libqmng.la
-qt3/plugins/imageformats/libqmng.so
 @dirrm qt3/plugins/imageformats
 @dirrm qt3/plugins
 @dirrm qt3/lib

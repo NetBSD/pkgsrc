@@ -1,18 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2004/01/22 22:52:10 grant Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:16 jlam Exp $
 include/ao/ao.h
 include/ao/os_types.h
 include/ao/plugin.h
-${LIBOSS}lib/ao/plugins-2/liboss.a
 ${LIBOSS}lib/ao/plugins-2/liboss.la
-${LIBOSS}lib/ao/plugins-2/liboss.so
-${LIBSUN}lib/ao/plugins-2/libsun.a
 ${LIBSUN}lib/ao/plugins-2/libsun.la
-${LIBSUN}lib/ao/plugins-2/libsun.so
-lib/libao.a
 lib/libao.la
-lib/libao.so
-lib/libao.so.3
-lib/libao.so.3.2
 lib/pkgconfig/ao.pc
 man/man5/libao.conf.5
 share/aclocal/ao.m4

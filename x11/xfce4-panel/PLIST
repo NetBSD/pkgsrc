@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/07/12 08:25:11 martti Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:10:08 jlam Exp $
 bin/xfce4-panel
 etc/xfce4/xfce4rc
 etc/xfce4/xfce4rc.ar
@@ -20,27 +20,13 @@ include/xfce4/panel/plugins.h
 include/xfce4/panel/xfce.h
 include/xfce4/panel/xfce_support.h
 lib/pkgconfig/xfce4-panel-1.0.pc
-lib/xfce4/mcs-plugins/libxfce4settings.a
 lib/xfce4/mcs-plugins/libxfce4settings.la
-lib/xfce4/mcs-plugins/libxfce4settings.so
-lib/xfce4/panel-plugins/libclock.a
 lib/xfce4/panel-plugins/libclock.la
-lib/xfce4/panel-plugins/libclock.so
-lib/xfce4/panel-plugins/libmailcheck.a
 lib/xfce4/panel-plugins/libmailcheck.la
-lib/xfce4/panel-plugins/libmailcheck.so
-lib/xfce4/panel-plugins/libpager.a
 lib/xfce4/panel-plugins/libpager.la
-lib/xfce4/panel-plugins/libpager.so
-lib/xfce4/panel-plugins/libseparator.a
 lib/xfce4/panel-plugins/libseparator.la
-lib/xfce4/panel-plugins/libseparator.so
-lib/xfce4/panel-plugins/libswitcher.a
 lib/xfce4/panel-plugins/libswitcher.la
-lib/xfce4/panel-plugins/libswitcher.so
-lib/xfce4/panel-plugins/libsystembuttons.a
 lib/xfce4/panel-plugins/libsystembuttons.la
-lib/xfce4/panel-plugins/libsystembuttons.so
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-panel.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfce4-panel.mo

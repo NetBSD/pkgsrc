@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/08/27 22:02:47 recht Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/09/22 08:09:40 jlam Exp $
 bin/MakeCert.exe
 bin/al
 bin/al.exe
@@ -110,26 +110,10 @@ include/mono/utils/mono-logger.h
 include/mono/utils/mono-math.h
 include/mono/utils/mono-uri.h
 include/mono/utils/monobitset.h
-lib/libMonoPosixHelper.a
 lib/libMonoPosixHelper.la
-lib/libMonoPosixHelper.so
-lib/libMonoPosixHelper.so.0
-lib/libMonoPosixHelper.so.0.0
-lib/libmint.a
 lib/libmint.la
-lib/libmint.so
-lib/libmint.so.0
-lib/libmint.so.0.0
-lib/libmono-profiler-cov.a
 lib/libmono-profiler-cov.la
-lib/libmono-profiler-cov.so
-lib/libmono-profiler-cov.so.0
-lib/libmono-profiler-cov.so.0.0
-lib/libmono.a
 lib/libmono.la
-lib/libmono.so
-lib/libmono.so.0
-lib/libmono.so.0.0
 lib/mono/1.0/Accessibility.dll
 lib/mono/1.0/ByteFX.Data.dll
 lib/mono/1.0/Commons.Xml.Relaxng.dll

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/29 12:20:17 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:40 jlam Exp $
 bin/al
 bin/cli-unknown-ar
 bin/cli-unknown-cpp
@@ -99,15 +99,8 @@ lib/libILEngine.a
 lib/libILImage.a
 lib/libILLink.a
 lib/libILSupport.a
-lib/pnet/libffi-2.00-beta.so
-lib/pnet/libffi.a
 lib/pnet/libffi.la
-lib/pnet/libffi.so
-lib/pnet/libgc.a
 lib/pnet/libgc.la
-lib/pnet/libgc.so
-lib/pnet/libgc.so.1
-lib/pnet/libgc.so.1.2
 man/man1/clrwrap.1
 man/man1/csant.1
 man/man1/cscc-cpp.1

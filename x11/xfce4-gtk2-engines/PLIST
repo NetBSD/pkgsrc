@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/01 19:36:58 jmmv Exp $
-lib/gtk-2.0/2.4.0/engines/libxfce.a
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:10:07 jlam Exp $
 lib/gtk-2.0/2.4.0/engines/libxfce.la
-lib/gtk-2.0/2.4.0/engines/libxfce.so
 share/themes/Xfce-b5/ICON.png
 share/themes/Xfce-b5/README.html
 share/themes/Xfce-b5/gtk-2.0/gtkrc

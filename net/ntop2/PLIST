@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/06/23 13:23:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:48 jlam Exp $
 bin/ntop
 etc/ntop/ntop-cert.pem
 etc/ntop/p2c.opt.table
@@ -17,14 +17,8 @@ lib/libnetflowPlugin.so
 lib/libnfsPlugin-${PKGVERSION}.so
 lib/libnfsPlugin.a
 lib/libnfsPlugin.so
-lib/libntop-${PKGVERSION}.so
-lib/libntop.a
 lib/libntop.la
-lib/libntop.so
-lib/libntopreport-${PKGVERSION}.so
-lib/libntopreport.a
 lib/libntopreport.la
-lib/libntopreport.so
 lib/libpdaPlugin-${PKGVERSION}.so
 lib/libpdaPlugin.a
 lib/libpdaPlugin.so

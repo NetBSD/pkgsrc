@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:41 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:24 jlam Exp $
 include/cdk/alphalist.h
 include/cdk/binding.h
 include/cdk/buttonbox.h
@@ -27,11 +27,7 @@ include/cdk/slider.h
 include/cdk/swindow.h
 include/cdk/template.h
 include/cdk/viewer.h
-lib/libcdk.a
 lib/libcdk.la
-lib/libcdk.so
-lib/libcdk.so.4
-lib/libcdk.so.4.10
 man/man3/cdk_alphalist.3
 man/man3/cdk_binding.3
 man/man3/cdk_buttonbox.3

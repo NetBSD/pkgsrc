@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/08/13 18:08:02 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:52 jlam Exp $
 include/sasl/hmac-md5.h
 include/sasl/md5.h
 include/sasl/md5global.h
@@ -7,13 +7,7 @@ include/sasl/sasl.h
 include/sasl/saslplug.h
 include/sasl/saslutil.h
 lib/libsasl2.la
-lib/libsasl2.so
-lib/libsasl2.so.2
-lib/libsasl2.so.2.19
 lib/sasl2/libsasldb.la
-lib/sasl2/libsasldb.so
-lib/sasl2/libsasldb.so.2
-lib/sasl2/libsasldb.so.2.19
 man/man3/sasl.3
 man/man3/sasl_authorize_t.3
 man/man3/sasl_auxprop.3

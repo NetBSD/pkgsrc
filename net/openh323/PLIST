@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/03 21:48:17 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:48 jlam Exp $
 lib/libh323.la
-lib/libh323.a
-lib/libh323.so
-lib/libh323.so.1
-lib/libh323.so.1.10
 bin/simph323
 include/openh323/QTIoctl.h
 include/openh323/channels.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/06 02:56:07 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:34 jlam Exp $
 bin/bumpmaptest
 bin/color_spaces
 bin/imconvert
@@ -8,56 +8,22 @@ bin/imlib2_test
 bin/imlib2_view
 bin/polytest
 include/Imlib2.h
-lib/imlib2_loaders/filter/bump_map.a
 lib/imlib2_loaders/filter/bump_map.la
-lib/imlib2_loaders/filter/bump_map.so
-lib/imlib2_loaders/filter/colormod.a
 lib/imlib2_loaders/filter/colormod.la
-lib/imlib2_loaders/filter/colormod.so
-lib/imlib2_loaders/filter/testfilter.a
 lib/imlib2_loaders/filter/testfilter.la
-lib/imlib2_loaders/filter/testfilter.so
-lib/imlib2_loaders/image/argb.a
 lib/imlib2_loaders/image/argb.la
-lib/imlib2_loaders/image/argb.so
-lib/imlib2_loaders/image/bmp.a
 lib/imlib2_loaders/image/bmp.la
-lib/imlib2_loaders/image/bmp.so
-lib/imlib2_loaders/image/bz2.a
 lib/imlib2_loaders/image/bz2.la
-lib/imlib2_loaders/image/bz2.so
-lib/imlib2_loaders/image/gif.a
 lib/imlib2_loaders/image/gif.la
-lib/imlib2_loaders/image/gif.so
-lib/imlib2_loaders/image/jpeg.a
 lib/imlib2_loaders/image/jpeg.la
-lib/imlib2_loaders/image/jpeg.so
-lib/imlib2_loaders/image/lbm.a
 lib/imlib2_loaders/image/lbm.la
-lib/imlib2_loaders/image/lbm.so
-lib/imlib2_loaders/image/png.a
 lib/imlib2_loaders/image/png.la
-lib/imlib2_loaders/image/png.so
-lib/imlib2_loaders/image/pnm.a
 lib/imlib2_loaders/image/pnm.la
-lib/imlib2_loaders/image/pnm.so
-lib/imlib2_loaders/image/tga.a
 lib/imlib2_loaders/image/tga.la
-lib/imlib2_loaders/image/tga.so
-lib/imlib2_loaders/image/tiff.a
 lib/imlib2_loaders/image/tiff.la
-lib/imlib2_loaders/image/tiff.so
-lib/imlib2_loaders/image/xpm.a
 lib/imlib2_loaders/image/xpm.la
-lib/imlib2_loaders/image/xpm.so
-lib/imlib2_loaders/image/zlib.a
 lib/imlib2_loaders/image/zlib.la
-lib/imlib2_loaders/image/zlib.so
-lib/libImlib2.a
 lib/libImlib2.la
-lib/libImlib2.so
-lib/libImlib2.so.2
-lib/libImlib2.so.2.2
 lib/pkgconfig/imlib2.pc
 @dirrm lib/imlib2_loaders/image
 @dirrm lib/imlib2_loaders/filter

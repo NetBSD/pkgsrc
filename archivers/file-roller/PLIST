@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2004/09/21 17:09:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/09/22 08:09:14 jlam Exp $
 bin/file-roller
-lib/bonobo/libfile-roller-component.a
 lib/bonobo/libfile-roller-component.la
-lib/bonobo/libfile-roller-component.so
 lib/bonobo/servers/File_Roller_Component.server
 share/application-registry/file-roller.applications
 share/applications/file-roller.desktop

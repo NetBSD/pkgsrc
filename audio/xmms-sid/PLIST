@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2001/12/24 15:20:02 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:19 jlam Exp $
 lib/xmms/Input/libsid.la
-lib/xmms/Input/libsid.so

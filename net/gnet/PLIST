@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/03/03 15:59:56 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/09/22 08:09:47 jlam Exp $
 include/gnet-2.0/base64.h
 include/gnet-2.0/conn.h
 include/gnet-2.0/gnet.h
@@ -16,11 +16,7 @@ include/gnet-2.0/udp.h
 include/gnet-2.0/unix.h
 include/gnet-2.0/uri.h
 lib/gnet-2.0/include/gnetconfig.h
-lib/libgnet-2.0.a
 lib/libgnet-2.0.la
-lib/libgnet-2.0.so
-lib/libgnet-2.0.so.0
-lib/libgnet-2.0.so.0.5
 lib/pkgconfig/gnet-2.0.pc
 share/aclocal/gnet-2.0.m4
 share/doc/libgnet2.0-dev/html/gnet/book1.html

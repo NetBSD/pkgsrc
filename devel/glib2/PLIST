@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2004/08/14 11:24:13 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.19 2004/09/22 08:09:25 jlam Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -71,26 +71,10 @@ include/glib/glib-2.0/gobject/gvaluearray.h
 include/glib/glib-2.0/gobject/gvaluecollector.h
 include/glib/glib-2.0/gobject/gvaluetypes.h
 lib/glib-2.0/include/glibconfig.h
-lib/libglib-2.0.a
 lib/libglib-2.0.la
-lib/libglib-2.0.so
-lib/libglib-2.0.so.400
-lib/libglib-2.0.so.400.6
-lib/libgmodule-2.0.a
 lib/libgmodule-2.0.la
-lib/libgmodule-2.0.so
-lib/libgmodule-2.0.so.400
-lib/libgmodule-2.0.so.400.6
-lib/libgobject-2.0.a
 lib/libgobject-2.0.la
-lib/libgobject-2.0.so
-lib/libgobject-2.0.so.400
-lib/libgobject-2.0.so.400.6
-lib/libgthread-2.0.a
 lib/libgthread-2.0.la
-lib/libgthread-2.0.so
-lib/libgthread-2.0.so.400
-lib/libgthread-2.0.so.400.6
 lib/pkgconfig/glib-2.0.pc
 lib/pkgconfig/gmodule-2.0.pc
 lib/pkgconfig/gobject-2.0.pc

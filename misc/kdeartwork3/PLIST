@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/08/25 12:25:55 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/09/22 08:09:43 jlam Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -23,35 +23,20 @@ bin/kwave.kss
 bin/kxsconfig
 bin/kxsrun
 lib/kde3/kstyle_plastik_config.la
-lib/kde3/kstyle_plastik_config.so
 lib/kde3/kwin3_cde.la
-lib/kde3/kwin3_cde.so
 lib/kde3/kwin3_glow.la
-lib/kde3/kwin3_glow.so
 lib/kde3/kwin3_icewm.la
-lib/kde3/kwin3_icewm.so
 lib/kde3/kwin3_kde1.la
-lib/kde3/kwin3_kde1.so
 lib/kde3/kwin3_kstep.la
-lib/kde3/kwin3_kstep.so
 lib/kde3/kwin3_openlook.la
-lib/kde3/kwin3_openlook.so
 lib/kde3/kwin3_plastik.la
-lib/kde3/kwin3_plastik.so
 lib/kde3/kwin3_system.la
-lib/kde3/kwin3_system.so
 lib/kde3/kwin_cde_config.la
-lib/kde3/kwin_cde_config.so
 lib/kde3/kwin_glow_config.la
-lib/kde3/kwin_glow_config.so
 lib/kde3/kwin_icewm_config.la
-lib/kde3/kwin_icewm_config.so
 lib/kde3/kwin_plastik_config.la
-lib/kde3/kwin_plastik_config.so
 lib/kde3/plugins/styles/dotnet.la
-lib/kde3/plugins/styles/dotnet.so
 lib/kde3/plugins/styles/plastik.la
-lib/kde3/plugins/styles/plastik.so
 share/kde/applnk/System/ScreenSavers/KBanner.desktop
 share/kde/applnk/System/ScreenSavers/KBlob.desktop
 share/kde/applnk/System/ScreenSavers/KClock.desktop

@@ -1,27 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/15 09:29:15 shell Exp $
-lib/libimm_server.a
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:38 jlam Exp $
 lib/libimm_server.la
-lib/libimm_server.so
-lib/libimm_server.so.1
-lib/libimm_server.so.${PKGVERSION}
-lib/libimmclient.a
 lib/libimmclient.la
-lib/libimmclient.so
-lib/libimmclient.so.1
-lib/libimmclient.so.${PKGVERSION}
-lib/unicon/TL_hzinput.a
 lib/unicon/TL_hzinput.la
-lib/unicon/TL_hzinput.so
 lib/unicon/big5/cantonese.tab
 lib/unicon/big5/cj.tab
 lib/unicon/big5/pinyin.tab
 lib/unicon/big5/simplex.tab
-lib/unicon/cce_hzinput.a
 lib/unicon/cce_hzinput.la
-lib/unicon/cce_hzinput.so
-lib/unicon/cce_pinyin.a
 lib/unicon/cce_pinyin.la
-lib/unicon/cce_pinyin.so
 lib/unicon/freepy/pinyin.cin
 lib/unicon/freepy/pinyin.imm
 lib/unicon/freepy/pinyin.map

@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/29 19:19:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:23 jlam Exp $
 bin/tdbdump
 bin/tdbtool
 include/tdb.h
-lib/libtdb.a
 lib/libtdb.la
-lib/libtdb.so
-lib/libtdb.so.1
-lib/libtdb.so.1.0
 man/man3/tdb.3
 man/man3/tdb_chainlock.3
 man/man3/tdb_close.3

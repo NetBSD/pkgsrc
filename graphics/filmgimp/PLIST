@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/29 06:17:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:32 jlam Exp $
 bin/filmgimp
 bin/filmgimptool
 include/${PKGNAME}/libgimp/config.h
@@ -37,16 +37,8 @@ lib/filmgimp/${PKGVERSION}/plug-ins/sobel
 lib/filmgimp/${PKGVERSION}/plug-ins/spread
 lib/filmgimp/${PKGVERSION}/plug-ins/tga
 lib/filmgimp/${PKGVERSION}/plug-ins/tiff
-lib/libfilmgimp.a
 lib/libfilmgimp.la
-lib/libfilmgimp.so
-lib/libfilmgimp.so.0
-lib/libfilmgimp.so.0.15
-lib/libfilmgimpui.a
 lib/libfilmgimpui.la
-lib/libfilmgimpui.so
-lib/libfilmgimpui.so.0
-lib/libfilmgimpui.so.0.15
 man/man1/filmgimp.1
 man/man1/filmgimptool.1
 share/aclocal/filmgimp.m4

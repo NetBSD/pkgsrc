@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/23 21:58:56 snj Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:54 jlam Exp $
 bin/aspell
 bin/aspell-import
 bin/pspell-config
@@ -6,16 +6,8 @@ bin/run-with-aspell
 bin/word-list-compress
 include/aspell.h
 include/pspell/pspell.h
-lib/libaspell.a
 lib/libaspell.la
-lib/libaspell.so
-lib/libaspell.so.15
-lib/libaspell.so.15.3
-lib/libpspell.a
 lib/libpspell.la
-lib/libpspell.so
-lib/libpspell.so.15
-lib/libpspell.so.15.3
 share/aspell/ASCII.dat
 share/aspell/cp1250.dat
 share/aspell/cp1251.dat

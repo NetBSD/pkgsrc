@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:06 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:48 jlam Exp $
 include/libsscript/sscript.h
-lib/libsscript.a
 lib/libsscript.la
-lib/libsscript.so
-lib/libsscript.so.2
-lib/libsscript.so.2.0
 share/doc/libsscript/sscript-lib.doc
 @dirrm share/doc/libsscript
 @dirrm include/libsscript

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2003/12/10 23:07:41 grant Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/09/22 08:09:57 jlam Exp $
 bin/background-properties-capplet
 bin/file-types-capplet
 bin/gnome-edit-properties-capplet
@@ -13,11 +13,7 @@ bin/wm-properties-capplet
 etc/CORBA/servers/gnomecc.gnorba
 include/libcapplet1/capplet-widget.h
 lib/cappletConf.sh
-lib/libcapplet.a
 lib/libcapplet.la
-lib/libcapplet.so
-lib/libcapplet.so.0
-lib/libcapplet.so.0.0
 man/man1/background-properties-capplet.1
 man/man1/file-types-capplet.1
 man/man1/gnomecc.1

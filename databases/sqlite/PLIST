@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2004/06/30 08:37:11 pooka Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:23 jlam Exp $
 bin/sqlite
 include/sqlite.h
-lib/libsqlite.a
 lib/libsqlite.la
-lib/libsqlite.so
-lib/libsqlite.so.8
-lib/libsqlite.so.8.6
 lib/pkgconfig/sqlite.pc
 man/man1/sqlite.1

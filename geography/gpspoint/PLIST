@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/04 20:51:18 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:32 jlam Exp $
 bin/gpspoint
 bin/mgpspoint
 include/gpspoint2/constants.h
@@ -44,11 +44,7 @@ include/gpspoint2/trk_point_type.h
 include/gpspoint2/waypointlist.h
 include/gpspoint2/win32serial.h
 include/gpspoint2/wpt_type.h
-lib/libgpspoint2.a
 lib/libgpspoint2.la
-lib/libgpspoint2.so
-lib/libgpspoint2.so.1
-lib/libgpspoint2.so.1.0
 man/man1/gpspoint.1
 man/man1/mgpspoint.1
 @dirrm include/gpspoint2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/13 08:26:04 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:24 jlam Exp $
 bin/g-wrap-config
 guile/1.4/share/guile/g-wrap.scm
 guile/1.4/share/guile/g-wrap/enumeration.scm
@@ -19,36 +19,12 @@ guile/1.4/share/guile/g-wrap/sorting.scm
 include/g-wrap/g-wrap-compatibility.h
 include/g-wrap/g-wrap-glib.h
 include/g-wrap/g-wrap-wct.h
-lib/libgw-glib.a
 lib/libgw-glib.la
-lib/libgw-glib.so
-lib/libgw-glib.so.0
-lib/libgw-glib.so.0.0
-lib/libgw-gtk.a
 lib/libgw-gtk.la
-lib/libgw-gtk.so
-lib/libgw-gtk.so.0
-lib/libgw-gtk.so.0.0
-lib/libgw-standard.a
 lib/libgw-standard.la
-lib/libgw-standard.so
-lib/libgw-standard.so.0
-lib/libgw-standard.so.0.0
-lib/libgw-wct.a
 lib/libgw-wct.la
-lib/libgw-wct.so
-lib/libgw-wct.so.0
-lib/libgw-wct.so.0.0
-lib/libgwrap-glib.a
 lib/libgwrap-glib.la
-lib/libgwrap-glib.so
-lib/libgwrap-glib.so.1
-lib/libgwrap-glib.so.1.0
-lib/libgwrap-wct.a
 lib/libgwrap-wct.la
-lib/libgwrap-wct.so
-lib/libgwrap-wct.so.1
-lib/libgwrap-wct.so.1.0
 share/aclocal/g-wrap.m4
 @dirrm include/g-wrap
 @dirrm guile/1.4/share/guile/g-wrap

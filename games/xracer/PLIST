@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:57:36 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:31 jlam Exp $
 bin/xracer
 bin/xracer-blenderexport.py
 bin/xracer-blender2track.pl
@@ -9,11 +9,7 @@ bin/xracer-mkcraft.pl
 bin/xracer-mkmeshnotex.pl
 man/man6/xracer.6
 share/xracer/tracks/libtracksimple2.la
-share/xracer/tracks/libtracksimple2.a
-share/xracer/tracks/libtracksimple2.so
 share/xracer/craft/libcraftsimple.la
-share/xracer/craft/libcraftsimple.a
-share/xracer/craft/libcraftsimple.so
 share/xracer/backdrops/mountains4-alpha.jpg
 share/xracer/backdrops/mountains4.jpg
 share/xracer/fonts/crillee14.jpg
