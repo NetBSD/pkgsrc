@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/02/14 17:21:54 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2004/02/17 22:28:47 kristerw Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -19,6 +19,7 @@ SITES_libwww-configure-5.4.0.gz=	${MASTER_SITE_LOCAL}
 USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
+USE_PERL5=		build
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
