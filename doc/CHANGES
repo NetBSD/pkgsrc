@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3942 2003/12/03 21:23:32 reed Exp $
+$NetBSD: CHANGES,v 1.3943 2003/12/03 23:04:49 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4806,3 +4806,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libtool to 1.4.20010614nb17 [reed 2003-12-03]
 	Updated libtool-base to 1.4.20010614nb17 [reed 2003-12-03]
 	Updated libtool-info to 1.4.20010614nb17 [reed 2003-12-03]
+	Updated conglomerate to 0.7.6 [xtraeme 2003-12-03]
