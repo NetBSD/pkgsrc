@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/22 09:08:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/07 15:25:13 cjep Exp $
 
 DISTNAME=	ra3-1.65
 PKGNAME=	quake3server-ra3-1.65
@@ -26,7 +26,7 @@ do-install:
 .for datafile in *.pk3 qagame* *.cfg
 	${INSTALL_DATA} ${WRKSRC}/${datafile} ${Q3MODDIR}
 .endfor
-	
+
 .for docfile in readme.txt readsrv.txt
 	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DOCDIR}
 .endfor

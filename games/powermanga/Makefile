@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/07 01:14:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/07 15:25:13 cjep Exp $
 #
 
 DISTNAME=	powermanga
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.tlk.fr/lesjeux/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.tlk.fr/lesjeux/
-COMMENT=	Arcade 2D shoot-em-up game	
+COMMENT=	Arcade 2D shoot-em-up game
 
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
