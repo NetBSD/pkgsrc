@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/19 01:18:52 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/27 23:35:54 minskim Exp $
 ${PYSITELIB}/OpenSSL/SSL.so
 ${PYSITELIB}/OpenSSL/__init__.py
 ${PYSITELIB}/OpenSSL/__init__.pyc
@@ -8,4 +8,7 @@ ${PYSITELIB}/OpenSSL/rand.so
 ${PYSITELIB}/OpenSSL/tsafe.py
 ${PYSITELIB}/OpenSSL/tsafe.pyc
 ${PYSITELIB}/OpenSSL/tsafe.pyo
+${PYSITELIB}/OpenSSL/version.py
+${PYSITELIB}/OpenSSL/version.pyc
+${PYSITELIB}/OpenSSL/version.pyo
 @dirrm ${PYSITELIB}/OpenSSL
