@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 1998/12/01 02:47:19 tv Exp $
+
+--- Makefile.SH.orig	Wed Oct 15 05:33:16 1997
++++ Makefile.SH	Mon Nov 30 21:02:40 1998
+@@ -37,7 +37,7 @@
+ 		-prebind -seg1addr 0x27000000 -install_name \$(shrpdir)/\$@"
+ 		;;
+ 	sunos*|freebsd[23]*|netbsd*)
+-		linklibperl="-lperl"
++		linklibperl="-L. -lperl"
+ 		;;
+ 	aix*)
+ 		shrpldflags="-H512 -T512 -bhalt:4 -bM:SRE -bE:perl.exp"
