@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/22 18:20:55 kristerw Exp $
+
+--- Makefile.orig	Mon Feb  3 05:11:32 2003
++++ Makefile
+@@ -368,7 +368,10 @@ COQTOPBYTE=bin/coqtop.byte$(EXE)
+ COQTOPOPT=bin/coqtop.opt$(EXE)
+ BESTCOQTOP=bin/coqtop.$(BEST)$(EXE)
+ COQTOP=bin/coqtop$(EXE)
+-COQINTERFACE=bin/coq-interface$(EXE) bin/coq-interface.opt$(EXE) bin/parser$(EXE)
++COQINTERFACE=bin/coq-interface$(EXE)
++ifeq ($(BEST),opt)
++COQINTERFACE+=bin/coq-interface.opt$(EXE) bin/parser$(EXE)
++endif
+ 
+ COQBINARIES= $(COQMKTOP) $(COQC) $(COQTOPBYTE) $(BESTCOQTOP) $(COQTOP) \
+              $(COQINTERFACE) 
+@@ -877,9 +880,12 @@ install-library-light:
+ 	cp tools/coq.el tools/coq-inferior.el $(FULLEMACSLIB)
+ 
+ MANPAGES=man/coq-tex.1 man/coqdep.1 man/gallina.1 \
+-	man/coqc.1 man/coqtop.1 man/coqtop.byte.1 man/coqtop.opt.1 \
++	man/coqc.1 man/coqtop.1 man/coqtop.byte.1 \
+ 	man/coq_makefile.1 man/coqmktop.1 \
+-	man/coq-interface.1 man/parser.1 man/coq_vo2xml.1
++	man/coq-interface.1 man/coq_vo2xml.1
++ifeq ($(BEST),opt)
++MANPAGES+=man/coqtop.opt.1 man/parser.1
++endif
+ 
+ install-manpages:
+ 	$(MKDIR) $(FULLMANDIR)/man1
