@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/02/17 17:53:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2005/02/18 04:13:04 jschauma Exp $
 #
 
 DISTNAME=		tor-0.0.9.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
 
@@ -67,5 +67,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/tor.pkgsrc.rc ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/tor
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
