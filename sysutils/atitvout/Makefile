@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:26:15 agc Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/18 13:18:13 xtraeme Exp $
 
 DISTNAME=       atitvout-0.4
+PKGREVISION=	1
 CATEGORIES=	sysutils graphics
 MASTER_SITES=	http://www.stud.uni-hamburg.de/users/lennart/projects/atitvout/
 
@@ -23,6 +24,12 @@ MAKEFILE=	Makefile.bsd
 do-configure:
 	${CP} ${FILESDIR}/Makefile.bsd ${WRKSRC}
 .endif
+
+SUBST_CLASSES+=	sh
+SUBST_STAGE.sh=	post-patch
+SUBST_FILES.sh=	test.sh
+SUBST_SED.sh=	-e "s,@PREFIX@,${PREFIX},"
+SUBST_MESSAGE.sh=	"Fixing stupid bash scripts."
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/atitvout ${PREFIX}/sbin
