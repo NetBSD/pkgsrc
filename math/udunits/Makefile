@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/06/11 06:34:43 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/29 06:56:18 jlam Exp $
 
 DISTNAME=		udunits
 PKGNAME=		udunits-1.11.7
@@ -12,9 +12,11 @@ COMMENT=		Library and program for manipulating units of physical quantities
 
 WRKSRC=			${WRKDIR}/${PKGNAME}/src
 DIST_SUBDIR=		${PKGNAME}
+
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-Df2cFortran -Dunix
-USE_PERL5=		yes
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/UDUNITS/.packlist
 
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
