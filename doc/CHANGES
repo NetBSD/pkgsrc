@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3944 2003/12/03 23:10:33 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3945 2003/12/03 23:14:31 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4808,3 +4808,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libtool-info to 1.4.20010614nb17 [reed 2003-12-03]
 	Updated conglomerate to 0.7.6 [xtraeme 2003-12-03]
 	Added crack-attack-1.1.10 [xtraeme 2003-12-03]
+	Added fisg-0.2.0 [xtraeme 2003-12-03]
