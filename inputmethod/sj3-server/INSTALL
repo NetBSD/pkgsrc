@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case $2 in
+    POST-INSTALL)
+	dic="${PKG_PREFIX}/libdata/sj3/dict/user"
+	mkdir -p $dic
+	chown ${SJ3OWNER}.${SJ3GROUP} $dic
+	;;
+esac
