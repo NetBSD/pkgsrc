@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/01/05 18:42:55 tron Exp $
+# $NetBSD: Makefile,v 1.27 2002/04/04 11:10:21 seb Exp $
 #
 
 DISTNAME=		texinfo-4.0
@@ -18,6 +18,8 @@ MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../devel/zlib/buildlink.mk"
 
+INSTALL_INFO=	${PREFIX}/bin/install-info
+
 post-patch:
 	${MV} -f ${WRKSRC}/info/filesys.h ${WRKSRC}/info/filesys.h.orig
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
@@ -27,8 +29,8 @@ post-patch:
 		> ${WRKSRC}/info/filesys.h
 
 post-install:
-	${PREFIX}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/texinfo
-	${PREFIX}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/info.info
-	${PREFIX}/bin/install-info --info-dir=${PREFIX}/info ${PREFIX}/info/info-stnd.info
+	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/texinfo
+	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/info.info
+	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/info-stnd.info
 
 .include "../../mk/bsd.pkg.mk"
