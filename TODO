@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.56 2001/06/11 21:57:57 zuntum Exp $
+$NetBSD: TODO,v 1.57 2001/07/04 17:16:25 jlam Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -52,6 +52,7 @@ package update TODO (Suggested package updates)
 		database upgrade)
 	o update/add openldap 2.0.8
 		(skrll has a new package)
+	o update print/ghostscript to 6.51 (jlam)
 
 
 pksgrc TODO (Suggested pkgsrc features and enhancements)
