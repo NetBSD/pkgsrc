@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 1999/07/18 23:34:14 tron Exp $
+# $NetBSD: INSTALL,v 1.2 2000/07/03 13:45:54 veego Exp $
 
 if [ "$2" != "POST-INSTALL" ]; then
   exit 0
@@ -29,7 +29,7 @@ done
 ETC="actsync.cfg actsync.ign control.ctl cycbuff.conf distrib.pats expire.ctl incoming.conf inn.conf innfeed.conf innreport.conf innwatch.ctl moderators motd.news news2mail.cf newsfeeds nnrp.access nnrpd.track nntpsend.ctl overview.ctl overview.fmt passwd.nntp storage.conf"
 
 for FILE in $ETC; do 
-	if [ ! -e @@INN_DATA_DIR@@/etc/$FILE ]; then
+	if [ ! -f @@INN_DATA_DIR@@/etc/$FILE ]; then
 		install -c -o news -g news -m 664 @@PREFIX@@/share/examples/inn/$FILE @@INN_DATA_DIR@@/etc
 	fi
 done
