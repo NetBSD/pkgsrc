@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-a.out,v 1.16 2001/10/16 15:52:11 taya Exp $
+@comment $NetBSD: PLIST-a.out,v 1.1 2001/11/01 02:25:37 zuntum Exp $
 bin/mozilla
 @comment begin PROGRAMS
 lib/mozilla/mozilla-bin
