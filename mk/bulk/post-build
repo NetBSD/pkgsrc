@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.41 2004/03/28 20:35:29 agc Exp $
+# $NetBSD: post-build,v 1.42 2004/04/07 22:56:34 dmcmahill Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -48,6 +48,7 @@ chomp($BROKENFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VA
 
 # also extract the names of the cache files used during the bulk build.  We'll save a copy of
 # those to help debug if the build messed up.
+chomp($BULK_DBFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=BULK_DBFILE )`);
 chomp($DEPENDSTREEFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=DEPENDSTREEFILE )`);
 chomp($DEPENDSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=DEPENDSFILE )`);
 chomp($SUPPORTSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=SUPPORTSFILE )`);
@@ -58,6 +59,7 @@ chomp($LOCALBASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VAR
 chomp($X11BASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=X11BASE )`);
 chomp($FIND=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=FIND )`);
 chomp($GTAR=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=GTAR )`);
+$bulkdbfile=basename($BULK_DBFILE);
 $dtfile=basename($DEPENDSTREEFILE);
 $depfile=basename($DEPENDSFILE);
 $supfile=basename($SUPPORTSFILE);
@@ -92,7 +94,7 @@ chdir($USR_PKGSRC);
 system("find . -name $BROKENFILE -print | $GTAR -T - -plcf - | (cd $FTP; $GTAR -plxf -)");
 
 # Copy over the cache files used during the build
-foreach my $f ($DEPENDSTREEFILE, $DEPENDSFILE, $SUPPORTSFILE, $INDEXFILE, $ORDERFILE) {
+foreach my $f ($BULK_DBFILE, $DEPENDSTREEFILE, $DEPENDSFILE, $SUPPORTSFILE, $INDEXFILE, $ORDERFILE) {
 	system("cp ${f} ${FTP}") if -f ${f};
 }
 
@@ -442,6 +444,7 @@ EOHTML
 The following cache files were used during the build:
 </p>
 <ul>
+<li>The <a href="$bulkdbfile">SPECIFIC_PKGS bulk database file</a>.</li>
 <li>The <a href="$dtfile">depends tree file</a>.</li>
 <li>The <a href="$depfile">depends file</a>.</li>
 <li>The <a href="$supfile">supports file</a>.</li>

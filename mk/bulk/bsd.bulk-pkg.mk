@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.57 2004/02/25 09:20:59 grant Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.58 2004/04/07 22:56:34 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -107,6 +107,13 @@ ORDERFILE?=	${_PKGSRCDIR}/.order${BULK_ID}
 # for looking for leftover files (files not properly deinstalled)
 STARTFILE?=	${_PKGSRCDIR}/.start${BULK_ID}
 
+# file which is used as a database for bulk builds in which SPECIFIC_PKGS is
+# defined.  This database is used to hold all the dependency and index information
+# for the specific packages as well as their dependencies.  In a SPECIFIC_PKGS
+# bulk build, this file is created and then used to create the INDEXFILE and
+# DEPENDSTREEFILE.
+BULK_DBFILE?=	${_PKGSRCDIR}/.bulk_db${BULK_ID}
+
 # a list of pkgs which we should _never_ delete during a build.  The primary use is for digest
 # and also for xpkgwedge.  Add pkgtools/xpkgwedge in /etc/mk.conf to do an xpkgwedged bulk build.
 BULK_PREREQ+=		pkgtools/digest
@@ -123,20 +130,46 @@ bulk-cache:
 .for __prereq in ${BULK_PREREQ}
 	cd ${_PKGSRCDIR}/${__prereq} && ${MAKE} bulk-install
 .endfor
+	${RM} -f ${BULK_DBFILE}
+	${TOUCH} ${BULK_DBFILE}
+.if !defined(SPECIFIC_PKGS)
+	@${ECHO} "This file is unused for a full pkgsrc bulk build" >> ${BULK_DBFILE}
+	@${ECHO} "It is only used for a SPECIFIC_PKGS bulk build" >> ${BULK_DBFILE}
 	@${ECHO_MSG} "BULK> Building complete pkgsrc dependency tree (this may take a while)."
 	cd ${_PKGSRCDIR} && ${SH} mk/bulk/printdepends ${BROKENFILE} > ${DEPENDSTREEFILE}
+	@${ECHO_MSG} "BULK> Generating package name <=> package directory cross reference file"
+	@${ECHO_MSG} "      (this may take a while)."
+	cd ${_PKGSRCDIR} && ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
+.else
+	@${ECHO_MSG} "BULK> Extracting database for SPECIFIC_PKGS subset of pkgsrc"
+	@${ECHO_MSG} "      along with their dependencies"
+.for __tmp__ in ${SUBDIR} ${BULK_PREREQ} lang/perl5 pkgtools/pkglint
+	cd ${_PKGSRCDIR}/${__tmp__} && ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE}
+.endfor
+	@${ECHO_MSG} "BULK> Extracting dependency tree file"
+	${AWK} '/^(build_)?depends/ {pkgs[$$2] = 1; cat=$$2; sub(/\/.*/, "", cat); \
+		for(i=3; i<=NF; i=i+1){ \
+			listed[$$2] = 1; \
+			sub(/[^:]*:\.\.\/\.\.\//, "", $$i); \
+			sub(/[^:]*:\.\./, cat , $$i); \
+			print $$i " " $$2; \
+		}} END{ \
+		for(pkg in pkgs) {if( pkg in listed ) {} else{ print pkg " " pkg;}} \
+		}' \
+		${BULK_DBFILE} | ${SORT} -u > ${DEPENDSTREEFILE}
+	@${ECHO_MSG} "BULK> Extracting package name <=> package directory cross reference file"
+	${AWK} '/^index/ {print $$2 " " $$3 " "}' ${BULK_DBFILE} > ${INDEXFILE}
+.endif
 	@${ECHO_MSG} "BULK> Sorting build order."
 	${TSORT} ${DEPENDSTREEFILE} > ${ORDERFILE}
 	@${ECHO_MSG} "BULK> Generating up and down dependency files."
 	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
 	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
-	@${ECHO_MSG} "BULK> Generating package name <=> package directory cross reference file"
-	@${ECHO_MSG} "      (this may take a while)."
-	cd ${_PKGSRCDIR} && ${SH} mk/bulk/printindex ${BROKENFILE} > ${INDEXFILE}
 
 # remove the bulk cache files
 clean-bulk-cache:
-	${RM} -f ${DEPENDSTREEFILE} \
+	${RM} -f ${BULK_DBFILE} \
+		${DEPENDSTREEFILE} \
 		${DEPENDSFILE} \
 		${SUPPORTSFILE} \
 		${INDEXFILE} \
