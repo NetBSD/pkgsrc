@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/24 02:16:38 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/24 02:22:25 zuntum Exp $
 
 DISTNAME=	avifile-0.53.5
 CATEGORIES=	graphics
@@ -15,7 +15,6 @@ DEPENDS+=	SDL>=1.1.2:../../devel/SDL
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386
 USE_GMAKE=	yes
-USE_AUTOCONF=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
