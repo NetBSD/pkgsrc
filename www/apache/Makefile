@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.76 2001/09/27 23:18:51 jlam Exp $
+# $NetBSD: Makefile,v 1.77 2001/10/16 04:11:06 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
 DISTNAME=		apache_1.3.20
-PKGNAME=		apache-1.3.20
+PKGNAME=		apache-1.3.20nb1
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/ \
@@ -74,6 +74,15 @@ APACHE_CUSTOM_CFLAGS?=	# empty
 .if defined(APACHE_PERF_TUNING) && ${APACHE_PERF_TUNING} == YES
 APACHE_CUSTOM_CFLAGS+=	-DBUFFERED_LOGS
 APACHE_CUSTOM_CFLAGS+=	-O6 -fomit-frame-pointer -fexpensive-optimizations
+.endif
+
+# On NetBSD, we need to link libgcc.a whole-archive so that certain symbols
+# from the C++ implementation (__get_eh_context, etc.) referenced by DSOs
+# written in C++ will resolve correctly.
+#
+.if (${OPSYS} == "NetBSD")
+LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
+MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
 .if (${OPSYS} == "SunOS")
