@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/09/21 23:47:01 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2002/10/05 11:22:40 wiz Exp $
 
 DISTNAME=		gnome-python-1.4.0
 PKGNAME=		${PYPKGPREFIX}-gnome-1.4.0
@@ -10,15 +10,12 @@ MAINTAINER=		drochner@netbsd.org
 HOMEPAGE=		http://www.daa.com.au/~james/gnome/
 COMMENT=		Python Bindings for the GNU Network Object Model Environment
 
-DEPENDS+=		gnome-core>=1.4.0.4nb1:../../x11/gnome-core
-DEPENDS+=		gtkglarea-[0-9]*:../../x11/gtkglarea
-DEPENDS+=		libglade-0.17nb1:../../devel/libglade
-
 CONFLICTS+=		py-gtk-[0-9]*
 CONFLICTS+=		gnome-python-*
 
 GNU_CONFIGURE=		yes
 USE_X11=		yes
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -38,6 +35,9 @@ post-configure:
 .endfor
 .endif
 
+.include "../../devel/libglade/buildlink2.mk"
+.include "../../x11/gtkglarea/buildlink2.mk"
 .include "../../lang/python/extension.mk"
-.include "../../x11/gnome-core/buildlink.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
+.include "../../x11/gtkglarea/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
