@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1350 2004/01/20 22:15:21 snj Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1351 2004/01/21 18:13:27 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -3135,17 +3135,17 @@ ${EXTRACT_COOKIE}:
 	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET} PKG_PHASE=extract
 .endif
 
 ${PATCH_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch PKG_PHASE=patch
 
 ${TOOLS_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-tools
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-tools PKG_PHASE=tools
 
 ${BUILDLINK_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-buildlink
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-buildlink PKG_PHASE=buildlink
 
 ${CONFIGURE_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
@@ -3154,7 +3154,7 @@ ${CONFIGURE_COOKIE}:
 	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-configure
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-configure PKG_PHASE=configure
 .endif
 
 ${BUILD_COOKIE}:
@@ -3164,11 +3164,11 @@ ${BUILD_COOKIE}:
 	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-build
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-build PKG_PHASE=build
 .endif
 
 ${TEST_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-test
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-test PKG_PHASE=test
 
 ${INSTALL_COOKIE}:
 .if ${INTERACTIVE_STAGE:Minstall} == "install" && defined(BATCH)
@@ -3177,11 +3177,11 @@ ${INSTALL_COOKIE}:
 	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-install PKG_PHASE=install
 .endif
 
 ${PACKAGE_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-package
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-package PKG_PHASE=package
 
 .PHONY: extract-message patch-message tools-message buildlink-message
 .PHONY: configure-message build-message test-message
