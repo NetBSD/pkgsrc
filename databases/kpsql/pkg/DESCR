@@ -1,0 +1,17 @@
+KPSQL is a tool similar to Oracle's Server Manager motif worksheet and
+Microsoft's Windows based SQL Server iSQL query tool featuring:
+
+	Color syntax highlighting for the editor 
+	HTML table output for query results 
+	PostgreSQL and SQL references through online help 
+	Execute multiple SQL statements or one of many by highlighting
+	Cut/copy/paste
+	Search and replace
+	Bookmarks
+	Drag and drop support
+	Ability to cancel executing queries
+	Complete control over fonts and colors
+	Spool query output to a file
+	Spool data in fixed length, comma, tab or custom delimited format 
+	Printing
+	KDE desktop integration
