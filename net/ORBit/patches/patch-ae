@@ -1,8 +1,16 @@
-$NetBSD: patch-ae,v 1.3 1999/04/07 10:45:43 agc Exp $
-
---- src/services/name/Makefile.in.orig	Wed Dec 16 03:41:47 1998
-+++ src/services/name/Makefile.in	Sat Dec 19 12:55:42 1998
-@@ -768,7 +771,7 @@
+$NetBSD: patch-ae,v 1.4 1999/04/14 20:34:38 garbled Exp $
+--- src/services/name/Makefile.in.orig	Thu Mar 25 12:15:25 1999
++++ src/services/name/Makefile.in	Wed Apr 14 13:20:07 1999
+@@ -118,7 +118,7 @@
+ DEPS = $(top_builddir)/src/orb/libORBit.la				$(top_builddir)/src/ORBitutil/libORBitutil.la 			$(top_builddir)/src/IIOP/libIIOP.la				libORBitCosNaming.la
+ 
+ 
+-LDADDS =  	$(top_builddir)/src/orb/libORBit.la				$(top_builddir)/src/IIOP/libIIOP.la				$(top_builddir)/src/ORBitutil/libORBitutil.la 			libORBitCosNaming.la						@GLIB_LIBS@ 							-lm
++LDADDS =  	$(top_builddir)/src/orb/libORBit.la				$(top_builddir)/src/IIOP/libIIOP.la				$(top_builddir)/src/ORBitutil/libORBitutil.la 			libORBitCosNaming.la						@GLIB_LIBS@ 							-lm -lwrap
+ 
+ 
+ name_client_SOURCES = name-client.c
+@@ -781,7 +781,7 @@
  
  
  $(CosNaming_built): CosNaming.idl $(srcdir)/LName.h $(IDL)
@@ -10,4 +18,4 @@ $NetBSD: patch-ae,v 1.3 1999/04/07 10:45:43 agc Exp $
 +	$(IDL) CosNaming.idl
  	cat $(srcdir)/LName.h >>CosNaming.h
  
- dist-hook:
+ $(srcdir)/name-client.c $(srcdir)/orbit-name-server.c $(srcdir)/new-name-server.c: CosNaming.h
