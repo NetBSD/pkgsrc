@@ -1,11 +1,34 @@
---- doc/libtool.texi.orig	Wed Mar 11 02:04:36 1998
-+++ doc/libtool.texi	Mon Apr 27 16:57:24 1998
-@@ -10,7 +10,7 @@
- @set BUGADDR the libtool mailing list @email{<bug-libtool@@gnu.org>}
- @set objdir .libs
+--- ltconfig.orig	Sun Jul 12 17:50:17 1998
++++ ltconfig	Sun Jul 12 18:23:58 1998
+@@ -808,7 +808,11 @@
  
--@dircategory GNU programming tools
-+@dircategory Programming & development tools
- @direntry
- * Libtool: (libtool).           Generic shared library support script.
- @end direntry
+   netbsd*)
+     # Tested with NetBSD 1.2 ld
+-    archive_cmds='$LD -Bshareable -o $lib$libobjs'
++    if [ -f /usr/lib/libc.so ]; then
++      archive_cmds='$LD -shared -o $lib$libobjs'	# ELF
++    else
++      archive_cmds='$LD -Bshareable -o $lib$libobjs'	# a.out
++    fi
+     hardcode_libdir_flag_spec='-R$libdir'
+     hardcode_direct=yes
+     hardcode_shlibpath_var=no
+@@ -1180,9 +1184,15 @@
+   ;;
+ 
+ netbsd* | openbsd*)
+-  version_type=sunos
+-  library_names_spec='${libname}${release}.so.$versuffix'
+-  finish_cmds='PATH="$PATH:/sbin" ldconfig -m $libdir'
++  if [ -f /usr/lib/libc.so ]; then
++    version_type=linux		# ELF libraries (SVR4 style)
++    library_names_spec='${libname}${release}.so.$versuffix ${libname}${release}.so.$major ${libname}${release}.so'
++    soname_spec='${libname}${release}.so.$major'
++  else
++    version_type=sunos		# a.out libraries
++    library_names_spec='${libname}${release}.so.$versuffix'
++    finish_cmds='PATH="$PATH:/sbin" ldconfig -m $libdir'
++  fi
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
