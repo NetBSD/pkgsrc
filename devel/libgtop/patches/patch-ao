@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2000/05/30 19:35:41 drochner Exp $
+
+--- src/daemon/Makefile.in.orig	Sat May 27 14:55:42 2000
++++ src/daemon/Makefile.in	Sat May 27 15:04:12 2000
+@@ -194,7 +194,7 @@
+ @ENABLE_STATIC_TRUE@libgtop_daemon_LDFLAGS = -static
+ 
+ libgtop_server_SOURCES = server.c slave.c io.c version.c daemon.h
+-libgtop_server_LDADD = $(top_builddir)/sysdeps/@sysdeps_dir@/libgtop_sysdeps_suid.la 				  $(top_builddir)/sysdeps/common/libgtop_suid_common.la 				  @LIBSUPPORT@
++libgtop_server_LDADD = $(top_builddir)/sysdeps/@sysdeps_dir@/libgtop_sysdeps_suid.la 				  $(top_builddir)/sysdeps/common/libgtop_suid_common.la 				  @LIBSUPPORT@ -lintl
+ 
+ 
+ @ENABLE_STATIC_TRUE@libgtop_server_LDFLAGS = -static
