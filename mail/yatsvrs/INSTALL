@@ -1,33 +1,13 @@
 #!/bin/sh
-# $Id: INSTALL,v 1.3 2003/08/30 20:22:58 jlam Exp $
-
-PKGNAME=$1
-STAGE=$2
-
-AWK="@AWK@"
-CHMOD="@CHMOD@"
-MKDIR="@MKDIR@"
-INSTALL_DATA="@YATSVR_INSTALL_DATA@"
+# $Id: INSTALL,v 1.4 2004/12/15 13:18:02 taca Exp $
 
 YAT_CONF_DIR="@PKG_SYSCONFDIR@"
-YAT_EXAMPLES_DIR="@EXAMPLESDIR@"
 DEFAULT_ADMIN="@DEFAULT_ADMIN@"
-EXAMPLES="@EXAMPLES@"
 MIN="@YATSVR_MINGID@"
 MAX="@YATSVR_MAXGID@"
 
 case ${STAGE} in
 POST-INSTALL)
-
-	if [ ! -d ${YAT_CONF_DIR} ]; then
-		${MKDIR} -p ${YAT_CONF_DIR}
-	fi
-	for f in ${EXAMPLES}; do
-		if [ ! -f ${YAT_CONF_DIR}/$f ]; then
-			${INSTALL_DATA} ${YAT_EXAMPLES_DIR}/$f.example \
-				${YAT_CONF_DIR}/$f
-		fi
-	done
 	if [ ! -f ${YAT_CONF_DIR}/.admin ]; then
 		echo ${DEFAULT_ADMIN} > ${YAT_CONF_DIR}/.admin
 		${CHMOD} 0600 ${YAT_CONF_DIR}/.admin
@@ -38,4 +18,3 @@ POST-INSTALL)
 	${CHMOD} 0600 ${YAT_CONF_DIR}/.hidden-group
 	;;
 esac
-exit 0
