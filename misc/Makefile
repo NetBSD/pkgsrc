@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.9 1997/10/27 02:04:00 hubertf Exp $
+#	$NetBSD: Makefile,v 1.10 1997/12/01 15:11:11 mrg Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
-#
 
     SUBDIR += amanda
     SUBDIR += astrolog
@@ -39,19 +38,12 @@
     SUBDIR += screen
     SUBDIR += splitvt
     SUBDIR += team
-    SUBDIR += tkcron
-    SUBDIR += tkinfo
-#    SUBDIR += tkman		# needs rman, glimpse - HF
-    SUBDIR += unclutter
     SUBDIR += viz
+# These programs shouldbe in ../x11
 #    SUBDIR += xcalendar
-    SUBDIR += xgas
-    SUBDIR += xless
 #    SUBDIR += xmaddressbook	# needs Motif/Lesstif - HF
 #    SUBDIR += xopps		# needs Motif/Lesstif - HF
-    SUBDIR += xpns
 #    SUBDIR += xtar		# needs Motif/Lesstif - HF
-    SUBDIR += xtimer
     SUBDIR += zorro
 
 .include <bsd.port.subdir.mk>
