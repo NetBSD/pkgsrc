@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.513 2000/07/20 17:46:45 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.514 2000/07/20 18:13:51 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -2597,7 +2597,7 @@ binpkg-list:
 				arch = $$2; 				\
 				pkg = $$3;				\
 				gsub("\.tgz","", pkg);			\
-				if (arch != "m68k") {			\
+				if (arch != "m68k" && arch != "mipsel") {			\
 					if (arch in urls)		\
 						urls[arch "/" pkg "/" release] = "<a href=\"${PKG_URL}/" release "/" arch "/${PKGREPOSITORYSUBDIR}/" pkg "${PKG_SUFX}\">" pkg "</a>, " urls[arch]; \
 					else				\
