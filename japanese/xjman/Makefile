@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/02 11:19:12 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/02 11:50:32 agc Exp $
 # FreeBSD Id: ports/japanese/xjman/Makefile,v 1.10 1999/10/30 15:34:24 sada Exp
 
 DISTNAME=	xjman-0.4
@@ -19,10 +19,9 @@ MAKE_ENV+=	XJMANDIR=${XJMANDIR}
 
 NO_CONFIGURE=	yes
 
+MANCOMPRESSED_IF_MANZ=	yes
+
 .include "../../mk/bsd.prefs.mk"
-.ifdef MANZ
-MANCOMPRESSED=	yes
-.endif
 
 post-extract:
 .for f in Makefile Makefile.inc
