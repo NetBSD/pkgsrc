@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/04/16 18:20:29 jmc Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/12 05:23:29 jmc Exp $
 #
 
 DISTNAME=	hiawatha
@@ -44,7 +44,7 @@ do-install:
 		${INSTALL_DATA} ${WRKDIR}/hiawatha.cfg ${PREFIX}/etc \
 	; fi
 	${INSTALL_DATA} ${WRKDIR}/hiawatha.cfg ${PREFIX}/share/examples/hiawatha
-	cd ${WRKSRC} && ${PAX} -rw WEBROOT ${PREFIX}/share/examples/hiawatha -s '/^WEBROOT/pault.com/'
+	cd ${WRKSRC} && ${PAX} -s '/^WEBROOT/pault.com/' -rw WEBROOT ${PREFIX}/share/examples/hiawatha
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/hiawatha/WEBROOT
 	${INSTALL_DATA} ${FILESDIR}/index.xml ${PREFIX}/share/examples/hiawatha/WEBROOT
 	${INSTALL_DATA} ${FILESDIR}/index.xsl ${PREFIX}/share/examples/hiawatha/WEBROOT
