@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.3 2003/04/10 15:25:46 kent Exp $
+$NetBSD: patch-ah,v 1.4 2003/09/21 16:03:40 kent Exp $
 
---- include/winnt.h~	2002-06-14 20:42:27.000000000 +0900
+--- include/winnt.h.orig	2003-09-12 22:24:45.000000000 +0900
 +++ include/winnt.h
-@@ -55,6 +55,10 @@ typedef unsigned short USHORT,*PUSHORT;
- typedef unsigned long ULONG,*PULONG;
- typedef char *PSZ;
+@@ -63,6 +63,10 @@
+ #endif
+ typedef void* __ptr64 PVOID64;
  
 +#ifdef __NetBSDPE__
 +#include <stdint.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.3 2003/04/10 15:25:46 kent Exp $
  #ifndef _WCHAR_T_DEFINED
  #define _WCHAR_T_DEFINED
  #ifndef _WCHAR_T_
-@@ -67,6 +71,7 @@ typedef unsigned short wchar_t;
+@@ -75,6 +79,7 @@
  #endif
  
  typedef wchar_t WCHAR;
@@ -21,3 +21,26 @@ $NetBSD: patch-ah,v 1.3 2003/04/10 15:25:46 kent Exp $
  typedef WCHAR *PWCHAR,*LPWCH,*PWCH,*NWPSTR,*LPWSTR,*PWSTR;
  typedef CONST WCHAR *LPCWCH,*PCWCH,*LPCWSTR,*PCWSTR;
  typedef CHAR *PCHAR,*LPCH,*PCH,*NPSTR,*LPSTR,*PSTR;
+@@ -2178,13 +2183,21 @@
+ 
+ #ifndef _SLIST_HEADER_
+ #define _SLIST_HEADER_
+-#define SLIST_ENTRY SINGLE_LIST_ENTRY
++#ifdef __NetBSDPE__
++# define W32_SLIST_ENTRY SINGLE_LIST_ENTRY
++#else
++# define SLIST_ENTRY SINGLE_LIST_ENTRY
++#endif
+ #define _SLIST_ENTRY _SINGLE_LIST_ENTRY
+ #define PSLIST_ENTRY PSINGLE_LIST_ENTRY
+ typedef union _SLIST_HEADER {
+ 	ULONGLONG Alignment;
+ 	_ANONYMOUS_STRUCT struct {
++#ifdef __NetBSDPE__
++		W32_SLIST_ENTRY Next;
++#else
+ 		SLIST_ENTRY Next;
++#endif
+ 		WORD Depth;
+ 		WORD Sequence;
+ 	} DUMMYSTRUCTNAME;
