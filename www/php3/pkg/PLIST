@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/05/03 19:45:45 tv Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/05/03 21:32:46 tv Exp $
 bin/dbfadd
 bin/dbfcreat
 bin/dbfdel
@@ -10,7 +10,8 @@ bin/dbfscan
 bin/dbftst
 bin/php
 bin/php2convert
-include/php3/config.h
+etc/php3.ini.example
+@exec [ -f %D/etc/php3.ini ] || cp %D/etc/php3.ini.example %D/etc/php3.ini
 libexec/cgi-bin/php
 share/examples/php3/README.logging
 share/examples/php3/date.php3
@@ -25,7 +26,6 @@ share/php3/php3.gif
 share/php3/phpi.gif
 share/php3/phps.gif
 @exec mkdir -p %D/lib/php3
-@dirrm include/php3
 @dirrm lib/php3
 @dirrm share/examples/php3
 @dirrm share/php3
