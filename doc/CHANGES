@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3187 2003/09/01 14:53:47 minoura Exp $
+$NetBSD: CHANGES,v 1.3188 2003/09/01 15:32:18 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3445,3 +3445,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postfix to 2.0.14 [martti 2003-09-01]
 	Updated squirrelmail to 1.4.1 [martti 2003-09-01]
 	Updated apel to 10.6 [minoura 2003-09-01]
+	Updated libnbcompat to 20020823 [jlam 2003-09-01]
