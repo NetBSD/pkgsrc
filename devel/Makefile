@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.506 2004/06/10 07:11:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.507 2004/06/24 03:47:34 xtraeme Exp $
 #
 
 COMMENT=	Development utilities
@@ -279,6 +279,7 @@ SUBDIR+=	p5-Class-MethodMaker
 SUBDIR+=	p5-Class-ObjectTemplate
 SUBDIR+=	p5-Class-ReturnValue
 SUBDIR+=	p5-Class-Trigger
+SUBDIR+=	p5-Class-XPath
 SUBDIR+=	p5-Compress-Zlib
 SUBDIR+=	p5-Config-General
 SUBDIR+=	p5-Config-IniFiles
