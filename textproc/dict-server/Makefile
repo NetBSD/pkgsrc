@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/12 10:51:51 simonb Exp $
 
-DISTNAME=       dictd-1.4.9
-PKGNAME=	dict-server-1.4.9
+DISTNAME=       dictd-1.5.5
+PKGNAME=	dict-server-1.5.5
 CATEGORIES=	textproc
-MASTER_SITES=   ftp://ftp.cs.unc.edu/pub/users/faith/dict/ \
-		ftp://ftp.cs.unc.edu/pub/users/faith/dict/pre/ \
-		ftp://ftp.dict.org/pub/dict/ \
+MASTER_SITES=	ftp://ftp.dict.org/pub/dict/ \
 		ftp://ftp.dict.org/pub/dict/pre/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		dict-gazetteer-1.2-pre.tar.gz \
