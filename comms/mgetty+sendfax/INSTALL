@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.4 2003/08/30 20:22:50 jlam Exp $
+# $NetBSD: INSTALL,v 1.4.2.1 2003/12/30 16:19:32 agc Exp $
 
 case ${STAGE} in
 POST-INSTALL)
@@ -15,11 +15,8 @@ POST-INSTALL)
 	fi
 	if [ ! -d /var/spool/fax/outgoing ]; then
 		${MKDIR} /var/spool/fax/outgoing
-		${CHMOD} 1777 /var/spool/fax/outgoing
 	fi
-	if [ ! -d /var/spool/fax/outgoing/locks ]; then
-		${MKDIR} /var/spool/fax/outgoing/locks
-		${CHMOD} 777 /var/spool/fax/outgoing/locks
-	fi
+	${CHMOD} 755 /var/spool/fax/outgoing
+	${CHOWN} fax /var/spool/fax/outgoing
 	;;
 esac
