@@ -1,18 +1,24 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/28 09:27:50 skrll Exp $
 #
 
 .include "../qt2-libs/Makefile.common"
 
-PKGNAME=	qt2-designer-${QTVERSION}
+PKGNAME=		qt2-designer-${QTVERSION}
 
-COMMENT=	Visual (WYSIWYG) QT GUI builder
+COMMENT=		Visual (WYSIWYG) QT GUI builder
 
-DEPENDS+=	qt2-libs-${QTVERSION}:../../x11/qt2-libs
+DEPENDS+=		qt2-libs-${QTVERSION}:../../x11/qt2-libs
+DEPENDS+=		kdelibs-2.1:../../x11/kdelibs2
 
-ALL_TARGET=	sub-tools
+ALL_TARGET=		sub-tools
 
-CONFIGURE_ENV+=	QTDIR=${QTPREFIX}
-MAKE_ENV+=	QTDIR=${QTPREFIX}
+EVAL_PREFIX+=           KDEBASEDIR=kdelibs
+
+CONFIGURE_ARGS+=	-kde
+CONFIGURE_ENV+=		QTDIR="${QTPREFIX}" \
+			KDEDIR="${KDEBASEDIR}"
+MAKE_ENV+=		QTDIR=${QTPREFIX} \
+			KDEDIR="${KDEBASEDIR}"
 
 do-install:
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/tools/designer/util/libqutil.la ${QTPREFIX}/lib
