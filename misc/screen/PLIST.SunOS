@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.3 2002/02/16 11:18:35 wiz Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.4 2002/02/18 11:09:47 seb Exp $
 bin/screen
 bin/${DISTNAME}
 man/man1/screen.1
@@ -32,4 +32,5 @@ share/screen/utf8encodings/cd
 share/screen/utf8encodings/d6
 @dirrm share/screen/utf8encodings
 @dirrm share/screen
+@dirrm share/lib/terminfo/s
 @dirrm share/examples/screen
