@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2584 2003/06/25 09:17:32 cjs Exp $
+$NetBSD: CHANGES,v 1.2585 2003/06/25 10:11:20 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2566,3 +2566,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lablgtk to 1.2.5nb2 [tron 2003-06-24]
 	Updated transcode to 0.6.7 [mrg 2003-06-25]
 	Updated postgresql to 7.3.3 [cjs 2003-06-25]
+	Updated vic to 2.8nb1 [uebayasi 2003-06-25]
