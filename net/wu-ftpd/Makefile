@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2001/09/27 23:18:33 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/11/30 11:39:58 abs Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/12/24 17:45:28 ache Exp
 #
 
 DISTNAME=	wu-ftpd-2.6.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=   ftp://ftp.wu-ftpd.org/pub/wu-ftpd/ \
 		ftp://ftp.landfield.com/wu-ftpd/wu-ftpd.org/wu-ftpd/ \
@@ -36,6 +37,13 @@ CONFLICTS+=	lukemftpd-[0-9]*
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--enable-quota --enable-noop --enable-skey
+
+PATCH_SITES=	ftp://ftp.wu-ftpd.org/pub/wu-ftpd/patches/apply-to-2.6.1/
+PATCHFILES=	ftpglob.patch missing_format_strings.patch
+PATCHFILES+=	nlst-shows-dirs.patch pasv-port-allow-correction.patch
+PATCH_DIST_STRIP=-p0 -F3	# Distribution patches have fuzz
+
+DIST_SUBDIR=		wu-ftpd
 
 .include "../../mk/bsd.prefs.mk"
 
