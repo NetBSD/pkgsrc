@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/05/20 13:47:04 wiz Exp $
+$NetBSD: distinfo,v 1.5 2004/12/30 05:11:57 dmcmahill Exp $
 
-SHA1 (lilypond-1.4.13.tar.gz) = 4b3be741f10f1cfc5d74ce361d4b66f862fedea7
-Size (lilypond-1.4.13.tar.gz) = 1360034 bytes
+SHA1 (lilypond-2.4.3.tar.gz) = 3b4d13d53b6a8a87ed34aabf254d479bebe7c9e0
+Size (lilypond-2.4.3.tar.gz) = 2018104 bytes
