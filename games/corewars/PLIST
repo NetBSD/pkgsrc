@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:51:22 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/14 09:16:04 adam Exp $
 bin/corewars
 man/man6/corewars.6
+man/man6/corewars-cmd.6
 share/corewars/abez.cw
 share/corewars/agent.cw
 share/corewars/backspawner.cw
