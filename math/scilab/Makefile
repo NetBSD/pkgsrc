@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.2 1998/09/22 06:11:38 garbled Exp $
+# $NetBSD: Makefile,v 1.3 1998/11/13 01:25:12 frueauf Exp $
 #
 
 DISTNAME=	scilab-2.4-src
 PKGNAME=	scilab-2.4
+WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/
-
-NOT_FOR_ARCHS=	alpha #LP64 problems
 
 MAINTAINER=	mcmahill@alum.mit.edu
 HOMEPAGE=	http://www-rocq.inria.fr/scilab/
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
-
 DEPENDS+=	f2c-19980516p1:../../lang/f2c
 DEPENDS+=	xless-1.7:../../x11/xless
+
+NOT_FOR_ARCHS=	alpha #LP64 problems
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
@@ -24,8 +23,8 @@ PLIST_SRC=	${WRKDIR}/PLIST-src
 MAKE_ENV+=	HOME=${WRKSRC}
 
 post-install:
-	@bigopsys=`${ECHO} ${OPSYS} | tr '[a-z]' '[A-Z]'`;	\
-	bigarch=`${ECHO} ${MACHINE_ARCH} | tr '[a-z]' '[A-Z]'`;	\
+	@bigopsys=`${ECHO} ${OPSYS} | {TR} '[a-z]' '[A-Z]'`;	\
+	bigarch=`${ECHO} ${MACHINE_ARCH} | {TR} '[a-z]' '[A-Z]'`;	\
 	${SED} -e 's|\$${OPSYS}|'$$bigopsys'|g' 		\
 		-e 's|\$${MACHINE_ARCH}|'$$bigarch'|g'		\
 		${PKGDIR}/PLIST > ${PLIST_SRC}
