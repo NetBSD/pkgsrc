@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2004/10/05 12:07:31 adam Exp $
+# $NetBSD: Makefile,v 1.122 2004/10/10 11:20:08 kristerw Exp $
 
 .include "Makefile.common"
 
@@ -20,6 +20,7 @@ USE_X11=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
+USE_GNU_TOOLS+=		make
 PKGCONFIG_OVERRIDE=	Magick++/lib/ImageMagick++.pc.in
 PKGCONFIG_OVERRIDE+=	magick/ImageMagick.pc.in
 
