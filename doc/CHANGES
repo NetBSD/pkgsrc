@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.82 2002/09/27 11:04:42 martti Exp $
+$NetBSD: CHANGES,v 1.83 2002/09/27 11:31:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2994,3 +2994,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gnustep-objc-1.2.2 [rh 2002-09-27]
 	Added gnustep-base-1.5.0 [rh 2002-09-27]
 	Updated pcre to 3.9 [martti 2002-09-27]
+	Added tuxpaint-2002.09.25 [wiz 2002-09-27]
+	Added tuxpaint-stamps-2002-09.26 [wiz 2002-09-27]
