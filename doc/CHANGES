@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8525 2004/12/30 05:01:59 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.8526 2004/12/30 05:12:41 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6704,3 +6704,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ezmlm-idx to 0.431 [schmonz 2004-12-29]
 	Updated opera7 to 7.54pl1 [tron 2004-12-29]
 	Added ec-fonts-mftraced-1.0.8 [dmcmahill 2004-12-30]
+	Updated lilypond to 2.4.3 [dmcmahill 2004-12-30]
