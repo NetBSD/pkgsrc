@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/26 03:52:47 jschauma Exp $
+
+SHA1 (hmmer-2.3.1.tar.gz) = bf6a3ec56c24332d7e66d6ce8865de1d72dce01f
+Size (hmmer-2.3.1.tar.gz) = 1023122 bytes
+SHA1 (patch-aa) = c5aa41137bb339a584948b6dc88317c98b4ff6fd

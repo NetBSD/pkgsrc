@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/26 03:52:47 jschauma Exp $
+
+--- Makefile.in.orig	2003-06-13 17:05:13.000000000 -0400
++++ Makefile.in	2003-09-25 23:47:27.000000000 -0400
+@@ -30,11 +30,12 @@
+ exec_prefix = @exec_prefix@
+ BINDIR      = @bindir@
+ MANDIR      = @mandir@
++INSTBIN     = ${BSD_INSTALL_PROGRAM}
+ 
+ # how to install the man pages; 
+ # cp is generally fine, unless you preformat your pages.
+ #
+-INSTMAN   = cp
++INSTMAN   = ${BSD_INSTALL_MAN}
+ MANSUFFIX = 1
+ 
+ # your compiler and compiler flags
+@@ -112,7 +113,7 @@
+ 	mkdir -p ${BINDIR}
+ 	-mkdir -p ${MANDIR}/man${MANSUFFIX}
+ 	for file in $(PROGS) $(PVMPROGS); do\
+-	   cp src/$$file $(BINDIR)/;\
++	   $(INSTBIN) src/$$file $(BINDIR)/;\
+ 	done
+ 	-for file in hmmer $(PROGS); do\
+ 	   $(INSTMAN) documentation/man/$$file.man $(MANDIR)/man$(MANSUFFIX)/$$file.$(MANSUFFIX);\
