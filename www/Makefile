@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2002/09/19 22:34:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.212 2002/09/21 01:26:54 rh Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -79,6 +79,7 @@ SUBDIR+=	jssi
 SUBDIR+=	kannel
 SUBDIR+=	lhs
 SUBDIR+=	libghttp
+SUBDIR+=	libgtkhtml
 SUBDIR+=	libwww
 SUBDIR+=	links
 SUBDIR+=	links-gui
