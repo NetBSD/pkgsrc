@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2003/02/22 12:05:54 skrll Exp $
+# $NetBSD: Makefile,v 1.22 2003/06/18 09:22:19 agc Exp $
 #
 
 DISTNAME=		jpegsrc.v6b
 PKGNAME=		jpeg-6b
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.uu.net/graphics/jpeg/
 
