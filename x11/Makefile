@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.313 2003/10/02 09:22:34 wiz Exp $
+# $NetBSD: Makefile,v 1.314 2003/12/03 05:22:16 martti Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -226,10 +226,12 @@ SUBDIR+=	xdm3d
 SUBDIR+=	xearth
 SUBDIR+=	xephem
 SUBDIR+=	xfce
+SUBDIR+=	xfce4-clipman-plugin
 SUBDIR+=	xfce4-desktop
 SUBDIR+=	xfce4-gtk2-engines
 SUBDIR+=	xfce4-mcs-manager
 SUBDIR+=	xfce4-mcs-plugins
+SUBDIR+=	xfce4-notes-plugin
 SUBDIR+=	xfce4-panel
 SUBDIR+=	xfce4-themes
 SUBDIR+=	xfce4-toys
