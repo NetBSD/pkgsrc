@@ -1,8 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/02 21:51:58 tron Exp $
+$NetBSD: patch-aa,v 1.2 2000/12/08 21:22:14 jtb Exp $
 
---- Makefile.orig	Thu Apr 22 09:31:43 1999
+--- Makefile.orig	Thu Apr 22 08:31:43 1999
 +++ Makefile
-@@ -7,11 +7,11 @@
+@@ -1,17 +1,17 @@
+ 
+ # Your C compiler.
+ 
+-CC=gcc
++#CC=gcc
+ 
+ # Where your readline library is.
  # You can compile with a hacked replacement of readline instead by
  # doing this:
  
