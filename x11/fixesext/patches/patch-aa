@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/16 08:39:24 recht Exp $
+
+--- configure.orig	2003-12-04 17:04:52.000000000 +0100
++++ configure
+@@ -1724,9 +1724,8 @@ echo "${ECHO_T}$XEXTENSIONS_LIBS" >&6
+   if test $succeeded = yes; then
+      :
+   else
+-     { { echo "$as_me:$LINENO: error: Library requirements (xextensions) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
+-echo "$as_me: error: Library requirements (xextensions) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
+-   { (exit 1); exit 1; }; }
++            XEXTENSIONS_CFLAGS="$CFLAGS"
++            XEXTENSIONS_LIBS="$LDFLAGS"
+   fi
+ 
+ 
