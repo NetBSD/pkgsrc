@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2863 2005/01/08 22:03:08 schmonz Exp $
+$NetBSD: TODO,v 1.2864 2005/01/08 22:56:58 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1026,7 +1026,6 @@ Suggested package updates
 	o rep-gtk-0.18
 	o resize_image-0.7
 	o rio500-0.8.1
-	o rioutil-1.4.6.1
 	o ripmime-1.4.0.3
 	o rman-3.2
 	o robodoc-4.99.6
