@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/24 15:30:32 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/06 00:02:11 cube Exp $
 
 DISTNAME=	gkrellm-gnome
 PKGNAME=	gnome-gkrellm-0.1
@@ -16,6 +16,6 @@ USE_GNU_TOOLS+=	make
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 
-.include "../../sysutils/gkrellm/buildlink2.mk"
+.include "../../sysutils/gkrellm1/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
