@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/01/18 13:51:15 cube Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 20:39:42 agc Exp $
 
 SHA1 (SDL_sound-1.0.1.tar.gz) = 9cb8550facf64f941179ba5767f763d1d52ddd6b
+RMD160 (SDL_sound-1.0.1.tar.gz) = 28d934d604e5db9b3b0b681785406587323ea765
 Size (SDL_sound-1.0.1.tar.gz) = 1019056 bytes
 SHA1 (patch-aa) = b65a1ff2fc5f75dfb5e1e05c6aa74318836792fd
