@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.308 2003/09/18 08:06:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.309 2003/09/18 11:16:41 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -87,10 +87,13 @@ SUBDIR+=	kde3-i18n-fa
 SUBDIR+=	kde3-i18n-fi
 SUBDIR+=	kde3-i18n-fr
 SUBDIR+=	kde3-i18n-he
+SUBDIR+=	kde3-i18n-hr
 SUBDIR+=	kde3-i18n-hu
+SUBDIR+=	kde3-i18n-is
 SUBDIR+=	kde3-i18n-it
 SUBDIR+=	kde3-i18n-ja
 SUBDIR+=	kde3-i18n-lt
+SUBDIR+=	kde3-i18n-mk
 SUBDIR+=	kde3-i18n-mt
 SUBDIR+=	kde3-i18n-nb
 SUBDIR+=	kde3-i18n-nl
@@ -102,8 +105,10 @@ SUBDIR+=	kde3-i18n-pt_BR
 SUBDIR+=	kde3-i18n-ro
 SUBDIR+=	kde3-i18n-ru
 SUBDIR+=	kde3-i18n-sk
+SUBDIR+=	kde3-i18n-se
 SUBDIR+=	kde3-i18n-sl
 SUBDIR+=	kde3-i18n-sr
+SUBDIR+=	kde3-i18n-ss
 SUBDIR+=	kde3-i18n-sv
 SUBDIR+=	kde3-i18n-ta
 SUBDIR+=	kde3-i18n-th
