@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.8 2002/12/08 13:09:47 kristerw Exp $
+--- src/unix/video-drivers/x11.c.orig	2002-12-01 15:12:12.000000000 -0700
++++ src/unix/video-drivers/x11.c	2002-12-07 15:08:56.000000000 -0700
+@@ -16,9 +16,6 @@
+ #include "input.h"
+ #include "keyboard.h"
+ 
+-#ifdef USE_XV
+-int use_xv = 0;  /* use xv extension if available */
+-#endif
+ #ifdef USE_HWSCALE
+ long hwscale_redmask;
+ long hwscale_greenmask;
+@@ -175,7 +172,7 @@
+          return OSD_NOT_OK;
+       }
+ #ifdef USE_HWSCALE
+-      if(use_xv)
++      if(use_hwscale)
+       {
+          display_palette_info.red_mask   = hwscale_redmask;
+          display_palette_info.green_mask = hwscale_greenmask;
