@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:13:29 agc Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/08 19:52:51 minskim Exp $
 
 DISTNAME=       swig1.1p5
 PKGNAME=	swig-1.1p5
@@ -16,6 +16,6 @@ GNU_CONFIGURE=	YES
 .include "../../lang/python/pyversion.mk"
 
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

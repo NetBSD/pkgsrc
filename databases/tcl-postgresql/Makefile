@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 14:11:50 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/08 19:52:50 minskim Exp $
 
 PKGNAME=		tcl-postgresql-${BASE_VERS}
 PKGREVISION=		1
@@ -23,6 +23,6 @@ post-install:
 		`${SED} -e "s|#.*||" ${FILESDIR}/man.tcl`
 
 .include "../postgresql-lib/buildlink2.mk"
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
