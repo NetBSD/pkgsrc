@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2003/01/28 22:03:07 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2003/03/17 20:12:18 salo Exp $
+#
 
-DISTNAME=		silc-client-0.9.11
+DISTNAME=		silc-client-0.9.12
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
@@ -15,7 +16,6 @@ COMMENT=                Client for the Secure Internet Live Conferencing (SILC) 
 
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
-
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_GNU_ICONV=		YES
