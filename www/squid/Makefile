@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/10/07 17:41:59 tron Exp $
+# $NetBSD: Makefile,v 1.19 1999/11/12 16:25:30 rh Exp $
 
 DISTNAME=	squid-2.2.STABLE4-src
 PKGNAME=	squid-2.2s4
@@ -23,7 +23,7 @@ CONFIGURE_ARGS=	--sysconfdir=/etc \
 CONFIGURE_ARGS+=	--enable-cachemgr-hostname=localhost
 CONFIGURE_ARGS+=	--enable-icmp
 CONFIGURE_ARGS+=	--enable-ipf-transparent
-#CONFIGURE_ARGS+=	--enable-snmp
+CONFIGURE_ARGS+=	--enable-snmp
 
 CPPFLAGS=		-I/usr/include/netinet
 CFLAGS+=		${CPPFLAGS}
