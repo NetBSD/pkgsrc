@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2000/01/06 01:25:25 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2001/02/27 09:45:12 skrll Exp $
 
---- ./man/Makefile.in.orig	Mon Jan  3 17:34:03 2000
-+++ ./man/Makefile.in	Mon Jan  3 17:34:04 2000
+--- man/Makefile.in.orig	Mon Jan  3 17:34:03 2000
++++ man/Makefile.in	Mon Jan  3 17:34:04 2000
 @@ -336,8 +336,7 @@
  	 ${ECHO} 'install:';						\
  	 for i in *.1; do						\
