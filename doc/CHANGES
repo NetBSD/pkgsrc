@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6481 2004/07/07 11:39:27 seb Exp $
+$NetBSD: CHANGES,v 1.6482 2004/07/07 11:48:46 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3293,3 +3293,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-diskperf-plugin to 1.4.1 [martti 2004-07-07]
 	Updated xfce4-xkb-plugin to 0.3.2 [martti 2004-07-07]
 	Updated gsed to 4.1.1 [seb 2004-07-07]
+	Updated distcc to 2.15 [martti 2004-07-07]
