@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2000/11/29 17:25:40 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2001/02/13 11:47:07 tron Exp $
 
 DISTNAME=		gnome-core-1.2.4
 CATEGORIES=		x11 gnome
@@ -28,6 +28,7 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 USE_PERL5=		YES
 PERL_SCRIPTS=		help-browser/gnome-convert help-browser/gnome-download
+PLIST_SUBST+=		LOCALEDIR=${LOCALEDIR}
 
 post-patch:
 	cd ${WRKSRC}; \

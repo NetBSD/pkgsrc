@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2000/11/09 20:14:48 mycroft Exp $
+$NetBSD: patch-ab,v 1.5 2001/02/13 11:47:03 tron Exp $
 
 --- aclocal.m4.orig	Sun May 21 01:50:15 2000
 +++ aclocal.m4	Thu Nov  9 19:49:00 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.4 2000/11/09 20:14:48 mycroft Exp $
  		   DATADIRNAME=share],
  		  [CATOBJEXT=.mo
 -		   DATADIRNAME=lib])
-+		   DATADIRNAME=${LOCALEBASE}])
++		   DATADIRNAME=${LOCALEDIR}])
  		INSTOBJEXT=.mo
  	      fi
  	    fi
