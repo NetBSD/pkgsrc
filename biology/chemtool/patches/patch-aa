@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2002/05/20 17:25:43 cjep Exp $
---- Makefile.orig	Sat Sep  8 15:56:18 2001
-+++ Makefile	Mon Apr 29 10:27:24 2002
-@@ -1,22 +1,12 @@
+$NetBSD: patch-aa,v 1.7 2002/09/21 01:23:57 jlam Exp $
+
+--- Makefile.orig	Sat Sep  8 07:56:18 2001
++++ Makefile
+@@ -1,16 +1,6 @@
 -PREFIX=/usr/local
 -LOCALEDIR=/usr/share/locale
 +LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
@@ -16,18 +17,11 @@ $NetBSD: patch-aa,v 1.6 2002/05/20 17:25:43 cjep Exp $
 -CP=/bin/cp
 -RM=/bin/rm -f
 -MAKE=make
-+CFLAGS+= -Wall `${GTK_CONFIG} --cflags` -DMENU -DLOCALEDIR=\"${LOCALEDIR}\" 
++CFLAGS+= -Wall `gtk-config --cflags` -DMENU -DLOCALEDIR=\"${LOCALEDIR}\" 
  
  SRCS = main.c chemproc.c graph.c draw.c inout.c 
  OBJS = main.o chemproc.o graph.o draw.o inout.o 
- 
- 
--SYS_LIBRARIES = `gtk-config --libs` -lm
-+SYS_LIBRARIES = `${GTK_CONFIG} --libs` -lm
- 
- all: chemtool cht
- 
-@@ -25,17 +15,15 @@
+@@ -25,17 +15,15 @@ default:	all
  chemtool: ${OBJS}
  	${CC} ${OBJS} ${SYS_LIBRARIES} -o chemtool
  
