@@ -1,15 +1,7 @@
-$NetBSD: patch-aa,v 1.4 1999/10/08 01:45:38 fredb Exp $
+$NetBSD: patch-aa,v 1.5 2000/08/30 23:35:42 jwise Exp $
 
 --- tkinfo.orig	Wed Apr 29 17:53:41 1998
 +++ tkinfo	Fri Oct  1 14:39:53 1999
-@@ -1,6 +1,6 @@
- #!/bin/sh
- # This is a Tcl/Tk script to be interpreted by wish (Tk4.0 or better): \
--exec wish "$0" "$@"
-+exec wish8.0 "$0" "$@"
- 
- 
- ##########################################################################
 @@ -509,11 +509,9 @@
  proc tkiInit { } {
      global tki env auto_path tkiEmbed geometry
