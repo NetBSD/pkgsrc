@@ -1,10 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/01 15:26:20 agc Exp $
+$NetBSD: patch-aa,v 1.2 2002/08/07 14:18:28 jschauma Exp $
 
-Don't install readline.
-
---- Makefile.in	Wed Apr  7 22:40:04 1999
-+++ Makefile.in	Thu Jul  1 15:15:36 1999
-@@ -699,7 +699,6 @@
+--- Makefile.in.orig	Sat Jul 27 19:25:33 2002
++++ Makefile.in	Sat Jul 27 19:25:41 2002
+@@ -712,7 +712,6 @@
  	install-perl \
  	install-prms \
  	install-rcs \
