@@ -1,19 +1,17 @@
-$NetBSD: patch-aj,v 1.15 2002/10/31 22:19:50 jlam Exp $
+$NetBSD: patch-aj,v 1.16 2003/09/03 19:30:57 drochner Exp $
 
---- configure.in.orig	Sun Oct  6 16:34:53 2002
+--- configure.in.orig	2003-08-30 21:13:18.000000000 +0200
 +++ configure.in
-@@ -412,10 +412,7 @@ CheckNAS()
-                   , enable_nas=yes)
+@@ -413,7 +413,7 @@ CheckNAS()
      if test x$enable_audio = xyes -a x$enable_nas = xyes; then
          AC_MSG_CHECKING(for NAS audio support)
--        have_nas=no
+         have_nas=no
 -        if test -r /usr/X11R6/include/audio/audiolib.h; then
++        if true; then
              have_nas=yes
--        fi
-         AC_MSG_RESULT($have_nas)
-         if test x$have_nas = xyes; then
              CFLAGS="$CFLAGS -DNAS_SUPPORT"
-@@ -488,7 +485,7 @@ CheckNASM()
+             SYSTEM_LIBS="$SYSTEM_LIBS -laudio -lXt"
+@@ -496,7 +496,7 @@ CheckNASM()
                    NASMFLAGS="-f aoutb"
                    ;;
                *)
@@ -22,7 +20,7 @@ $NetBSD: patch-aj,v 1.15 2002/10/31 22:19:50 jlam Exp $
                    ;;
              esac
              AC_SUBST(NASMFLAGS)
-@@ -925,18 +922,18 @@ CheckAAlib()
+@@ -933,18 +933,18 @@ CheckAAlib()
  [  --enable-video-aalib    use AAlib video driver [default=no]],
                    , enable_video_aalib=no)
      if test x$enable_video = xyes -a x$enable_video_aalib = xyes; then
@@ -49,7 +47,7 @@ $NetBSD: patch-aj,v 1.15 2002/10/31 22:19:50 jlam Exp $
  
              VIDEO_SUBDIRS="$VIDEO_SUBDIRS aalib"
              VIDEO_DRIVERS="$VIDEO_DRIVERS aalib/libvideo_aa.la"
-@@ -1104,12 +1101,13 @@ CheckPTH()
+@@ -1115,12 +1115,13 @@ CheckPTH()
  [  --enable-pth            use GNU pth library for multi-threading [default=yes]],
                    , enable_pth=yes)
      if test x$enable_threads = xyes -a x$enable_pth = xyes; then
@@ -67,7 +65,7 @@ $NetBSD: patch-aj,v 1.15 2002/10/31 22:19:50 jlam Exp $
              SDL_CFLAGS="$SDL_CFLAGS $PTH_CFLAGS"
              SDL_LIBS="$SDL_LIBS $PTH_LIBS"
              CFLAGS="$CFLAGS -DENABLE_PTH"
-@@ -1150,8 +1148,8 @@ CheckPTHREAD()
+@@ -1161,8 +1162,8 @@ CheckPTHREAD()
              pthread_lib="-pthread"
              ;;
          *-*-netbsd*)
@@ -78,7 +76,7 @@ $NetBSD: patch-aj,v 1.15 2002/10/31 22:19:50 jlam Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1566,29 +1564,31 @@ CheckUSBHID()
+@@ -1600,29 +1601,31 @@ CheckUSBHID()
          have_libusbhid=no
          have_libusb=no
          AC_CHECK_LIB(usbhid, hid_init, have_libusbhid=yes)
@@ -119,7 +117,7 @@ $NetBSD: patch-aj,v 1.15 2002/10/31 22:19:50 jlam Exp $
          fi
  
          AC_MSG_CHECKING(for usbhid)
-@@ -1834,6 +1834,7 @@ case "$target" in
+@@ -1868,6 +1871,7 @@ case "$target" in
          CheckESD
          CheckNAS
          CheckX11
@@ -127,7 +125,7 @@ $NetBSD: patch-aj,v 1.15 2002/10/31 22:19:50 jlam Exp $
          CheckAAlib
          CheckOpenGL
          CheckPTHREAD
-@@ -1842,9 +1843,9 @@ case "$target" in
+@@ -1876,9 +1880,9 @@ case "$target" in
          COPY_ARCH_SRC(src/main, linux, SDL_main.c)
          # Set up files for the audio library
          if test x$enable_audio = xyes; then
@@ -140,7 +138,7 @@ $NetBSD: patch-aj,v 1.15 2002/10/31 22:19:50 jlam Exp $
          fi
          # Set up files for the cdrom library
          if test x$enable_cdrom = xyes; then
-@@ -1853,9 +1854,6 @@ case "$target" in
+@@ -1887,9 +1891,6 @@ case "$target" in
          fi
          # Set up files for the thread library
          if test x$enable_threads = xyes; then
@@ -150,7 +148,7 @@ $NetBSD: patch-aj,v 1.15 2002/10/31 22:19:50 jlam Exp $
              CopyUnixThreadSource
          fi
          # Set up files for the timer library
-@@ -2478,7 +2476,7 @@ AM_CONDITIONAL([ENABLE_STATIC], [test "$
+@@ -2543,7 +2544,7 @@ AM_CONDITIONAL([ENABLE_STATIC], [test "$
  
  # Set runtime shared library paths as needed
  

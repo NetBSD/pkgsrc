@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.4 2001/04/28 14:27:35 rh Exp $
+$NetBSD: patch-ag,v 1.5 2003/09/03 19:30:56 drochner Exp $
 
---- src/hermes/Makefile.am.orig	Thu Apr 26 07:11:23 2001
+--- src/hermes/Makefile.am.orig	2003-08-30 21:13:04.000000000 +0200
 +++ src/hermes/Makefile.am
-@@ -7,7 +7,7 @@
+@@ -7,7 +7,7 @@ STRIP_FPIC = sh $(top_srcdir)/strip_fPIC
  SUFFIXES = .asm
  
  .asm.lo:
--	$(LIBTOOL) --mode=compile $(STRIP_FPIC) $(NASM) @NASMFLAGS@ $<
-+	$(LIBTOOL) --tag=CC --mode=compile $(STRIP_FPIC) $(NASM) @NASMFLAGS@ $<
+-	$(LIBTOOL) --mode=compile $(STRIP_FPIC) $(NASM) @NASMFLAGS@ $< -o $*.o
++	$(LIBTOOL) --tag=CC --mode=compile $(STRIP_FPIC) $(NASM) @NASMFLAGS@ $< -o $*.o
  
  ###########################################################################
  
