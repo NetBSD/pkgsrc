@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2003/07/17 22:55:16 grant Exp $
+# $NetBSD: Makefile.common,v 1.17 2003/08/06 19:57:23 seb Exp $
 
 DISTNAME=		sawfish-${SF_VERS}-gtk1
 SF_VERS=		1.2
@@ -22,5 +22,4 @@ PATCHDIR=		${.CURDIR}/../../wm/sawfish/patches
 .include "../../graphics/imlib/buildlink2.mk"
 .include "../../lang/librep/buildlink2.mk"
 .include "../../x11/controlcenter/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
