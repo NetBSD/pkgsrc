@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/03 03:50:12 jwise Exp $
+--- src/bin/ant.orig	Thu Jan 13 05:41:40 2000
++++ src/bin/ant	Sun Jul  2 17:13:06 2000
+@@ -6,35 +6,18 @@
+ 
+ if [ "$ANT_HOME" = "" ] ; then
+   # try to find ANT
+-  if [ -d /opt/ant ] ; then
+-    ANT_HOME=/opt/ant
++  if [ -d @PREFIX@ ] ; then
++    ANT_HOME=@PREFIX@
+   fi
+ 
+-  if [ -d ${HOME}/opt/ant ] ; then
+-    ANT_HOME=${HOME}/opt/ant
++  if [ -d ${HOME}/ant ] ; then
++    ANT_HOME=${HOME}/ant
+   fi
+-
+-  ## resolve links - $0 may be a link to ant's home
+-  PRG=$0
+-  progname=`basename $0`
+-
+-  while [ -h "$PRG" ] ; do
+-    ls=`ls -ld "$PRG"`
+-    link=`expr "$ls" : '.*-> \(.*\)$'`
+-    if expr "$link" : '.*/.*' > /dev/null; then
+-	PRG="$link"
+-    else
+-	PRG="`dirname $PRG`/$link"
+-    fi
+-  done
+-
+-  ANT_HOME=`dirname "$PRG"`/..
+-
+ fi
+ 
+ # Allow .antrc to specifiy flags to java cmd
+ if [ "$JAVACMD" = "" ] ; then
+-  JAVACMD=java
++  JAVACMD=@JAVA_HOME@/bin/java
+ fi
+ 
+ # Use the original tools.jar if available
+@@ -43,10 +26,9 @@
+    CLASSPATH=${JAVA_HOME}/lib/classes.zip:$CLASSPATH
+ fi
+ 
+-
+-CLASSPATH=${ANT_HOME}/lib/xml.jar:$CLASSPATH
+-CLASSPATH=${ANT_HOME}/lib/ant.jar:$CLASSPATH
+-CLASSPATH=${ANT_HOME}/lib/moo.jar:$CLASSPATH
++CLASSPATH=${ANT_HOME}/lib/java/xml.jar:$CLASSPATH
++CLASSPATH=${ANT_HOME}/lib/java/ant.jar:$CLASSPATH
++#CLASSPATH=${ANT_HOME}/lib/java/moo.jar:$CLASSPATH
+ export CLASSPATH
+ 
+ $JAVACMD -Dant.home=${ANT_HOME} org.apache.tools.ant.Main $@
