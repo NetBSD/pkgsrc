@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/09 00:08:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/12/05 15:00:45 agc Exp $
 #
 
 DISTNAME=		nighthawk-2.1
@@ -36,6 +36,6 @@ do-install:
 	${CHGRP} games ${PREFIX}/bin/nighthawk
 	${CHMOD} g+s ${PREFIX}/bin/nighthawk
 	${INSTALL_MAN} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/nighthawk/README
-	${INSTALL} -o root -g games -m 664 /dev/null /var/games/nighthawk.scores
+	${INSTALL} -o ${ROOT_USER} -g games -m 664 /dev/null /var/games/nighthawk.scores
 
 .include "../../mk/bsd.pkg.mk"

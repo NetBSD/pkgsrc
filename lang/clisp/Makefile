@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/11/29 01:12:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 2001/12/05 15:00:46 agc Exp $
 
 DISTNAME=		clisp-2000-03-06
 PKGNAME=		clisp-20000306
@@ -32,7 +32,7 @@ do-configure:
 	  --with-dynamic-ffi --fsstnd=netbsd >Makefile
 
 post-install:
-	${CHOWN} -R root:wheel ${PREFIX}/lib/clisp
+	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/lib/clisp
 	${CHMOD} -R a-w ${PREFIX}/lib/clisp
 
 .include "../../mk/bsd.pkg.mk"
