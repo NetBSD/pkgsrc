@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 11:18:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/15 11:38:09 markd Exp $
 share/doc/kde/HTML/zh_TW/common/1.png
 share/doc/kde/HTML/zh_TW/common/10.png
 share/doc/kde/HTML/zh_TW/common/2.png
@@ -255,7 +255,6 @@ share/kde/locale/zh_TW/LC_MESSAGES/kfind.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kfindpart.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kfloppy.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kfmclient.mo
-share/kde/locale/zh_TW/LC_MESSAGES/kfmexec.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kfortune.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kgantt.mo
@@ -286,6 +285,7 @@ share/kde/locale/zh_TW/LC_MESSAGES/kio_sftp.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kio_smb.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kio_smbro.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kio_smtp.mo
+share/kde/locale/zh_TW/LC_MESSAGES/kioexec.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kit.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kjobviewer.mo
 share/kde/locale/zh_TW/LC_MESSAGES/kjots.mo

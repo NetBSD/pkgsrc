@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/30 15:13:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/01/15 11:38:07 markd Exp $
 share/doc/kde/HTML/cs/common/1.png
 share/doc/kde/HTML/cs/common/10.png
 share/doc/kde/HTML/cs/common/2.png
@@ -191,6 +191,7 @@ share/kde/locale/cs/LC_MESSAGES/desktop_kdepim.mo
 share/kde/locale/cs/LC_MESSAGES/desktop_kdesdk.mo
 share/kde/locale/cs/LC_MESSAGES/desktop_kdetoys.mo
 share/kde/locale/cs/LC_MESSAGES/desktop_kdeutils.mo
+share/kde/locale/cs/LC_MESSAGES/desktop_quanta.mo
 share/kde/locale/cs/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/cs/LC_MESSAGES/domtreeviewer.mo
 share/kde/locale/cs/LC_MESSAGES/drkonqi.mo
@@ -238,6 +239,7 @@ share/kde/locale/cs/LC_MESSAGES/katexmltools.mo
 share/kde/locale/cs/LC_MESSAGES/katomic.mo
 share/kde/locale/cs/LC_MESSAGES/kaudiocreator.mo
 share/kde/locale/cs/LC_MESSAGES/kbabel.mo
+share/kde/locale/cs/LC_MESSAGES/kbackgammon.mo
 share/kde/locale/cs/LC_MESSAGES/kbattleship.mo
 share/kde/locale/cs/LC_MESSAGES/kblackbox.mo
 share/kde/locale/cs/LC_MESSAGES/kbounce.mo
@@ -365,7 +367,6 @@ share/kde/locale/cs/LC_MESSAGES/kfind.mo
 share/kde/locale/cs/LC_MESSAGES/kfindpart.mo
 share/kde/locale/cs/LC_MESSAGES/kfloppy.mo
 share/kde/locale/cs/LC_MESSAGES/kfmclient.mo
-share/kde/locale/cs/LC_MESSAGES/kfmexec.mo
 share/kde/locale/cs/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/cs/LC_MESSAGES/kfouleggs.mo
 share/kde/locale/cs/LC_MESSAGES/kgantt.mo
@@ -397,6 +398,7 @@ share/kde/locale/cs/LC_MESSAGES/kio_sftp.mo
 share/kde/locale/cs/LC_MESSAGES/kio_smb.mo
 share/kde/locale/cs/LC_MESSAGES/kio_smbro.mo
 share/kde/locale/cs/LC_MESSAGES/kio_smtp.mo
+share/kde/locale/cs/LC_MESSAGES/kioexec.mo
 share/kde/locale/cs/LC_MESSAGES/kit.mo
 share/kde/locale/cs/LC_MESSAGES/kjobviewer.mo
 share/kde/locale/cs/LC_MESSAGES/kjots.mo

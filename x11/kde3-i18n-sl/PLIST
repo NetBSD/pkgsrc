@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/15 11:38:09 markd Exp $
 share/doc/kde/HTML/sl/common/1.png
 share/doc/kde/HTML/sl/common/10.png
 share/doc/kde/HTML/sl/common/2.png
@@ -154,15 +154,11 @@ share/doc/kde/HTML/sl/khelpcenter/common
 share/doc/kde/HTML/sl/khelpcenter/contact.docbook
 share/doc/kde/HTML/sl/khelpcenter/exec.xpm
 share/doc/kde/HTML/sl/khelpcenter/faq/about.docbook
-share/doc/kde/HTML/sl/khelpcenter/faq/common
 share/doc/kde/HTML/sl/khelpcenter/faq/configkde.docbook
 share/doc/kde/HTML/sl/khelpcenter/faq/contrib.docbook
 share/doc/kde/HTML/sl/khelpcenter/faq/desktop.docbook
 share/doc/kde/HTML/sl/khelpcenter/faq/filemng.docbook
 share/doc/kde/HTML/sl/khelpcenter/faq/getkde.docbook
-share/doc/kde/HTML/sl/khelpcenter/faq/index.cache.bz2
-share/doc/kde/HTML/sl/khelpcenter/faq/index.docbook
-share/doc/kde/HTML/sl/khelpcenter/faq/install.docbook
 share/doc/kde/HTML/sl/khelpcenter/faq/intro.docbook
 share/doc/kde/HTML/sl/khelpcenter/faq/kdeapps.docbook
 share/doc/kde/HTML/sl/khelpcenter/faq/misc.docbook
@@ -613,7 +609,6 @@ share/kde/locale/sl/LC_MESSAGES/kfile_xbm.mo
 share/kde/locale/sl/LC_MESSAGES/kfindpart.mo
 share/kde/locale/sl/LC_MESSAGES/kfloppy.mo
 share/kde/locale/sl/LC_MESSAGES/kfmclient.mo
-share/kde/locale/sl/LC_MESSAGES/kfmexec.mo
 share/kde/locale/sl/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/sl/LC_MESSAGES/kfouleggs.mo
 share/kde/locale/sl/LC_MESSAGES/kgantt.mo
@@ -645,6 +640,7 @@ share/kde/locale/sl/LC_MESSAGES/kio_sftp.mo
 share/kde/locale/sl/LC_MESSAGES/kio_smb.mo
 share/kde/locale/sl/LC_MESSAGES/kio_smbro.mo
 share/kde/locale/sl/LC_MESSAGES/kio_smtp.mo
+share/kde/locale/sl/LC_MESSAGES/kioexec.mo
 share/kde/locale/sl/LC_MESSAGES/kit.mo
 share/kde/locale/sl/LC_MESSAGES/kiten.mo
 share/kde/locale/sl/LC_MESSAGES/kjobviewer.mo

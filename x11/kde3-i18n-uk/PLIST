@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/18 01:43:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/01/15 11:38:09 markd Exp $
 share/doc/kde/HTML/uk/common/1.png
 share/doc/kde/HTML/uk/common/10.png
 share/doc/kde/HTML/uk/common/2.png
@@ -310,7 +310,6 @@ share/kde/locale/uk/LC_MESSAGES/kfile_xbm.mo
 share/kde/locale/uk/LC_MESSAGES/kfindpart.mo
 share/kde/locale/uk/LC_MESSAGES/kfloppy.mo
 share/kde/locale/uk/LC_MESSAGES/kfmclient.mo
-share/kde/locale/uk/LC_MESSAGES/kfmexec.mo
 share/kde/locale/uk/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/uk/LC_MESSAGES/kfouleggs.mo
 share/kde/locale/uk/LC_MESSAGES/kgantt.mo
@@ -341,6 +340,7 @@ share/kde/locale/uk/LC_MESSAGES/kio_sftp.mo
 share/kde/locale/uk/LC_MESSAGES/kio_smb.mo
 share/kde/locale/uk/LC_MESSAGES/kio_smbro.mo
 share/kde/locale/uk/LC_MESSAGES/kio_smtp.mo
+share/kde/locale/uk/LC_MESSAGES/kioexec.mo
 share/kde/locale/uk/LC_MESSAGES/kit.mo
 share/kde/locale/uk/LC_MESSAGES/kjobviewer.mo
 share/kde/locale/uk/LC_MESSAGES/kjots.mo
@@ -384,7 +384,6 @@ share/kde/locale/uk/LC_MESSAGES/kpartsaver.mo
 share/kde/locale/uk/LC_MESSAGES/kpat.mo
 share/kde/locale/uk/LC_MESSAGES/kpersonalizer.mo
 share/kde/locale/uk/LC_MESSAGES/kpf.mo
-share/kde/locale/uk/LC_MESSAGES/kpovmodeler.mo
 share/kde/locale/uk/LC_MESSAGES/kppp.mo
 share/kde/locale/uk/LC_MESSAGES/kppplogview.mo
 share/kde/locale/uk/LC_MESSAGES/kprinter.mo
@@ -456,7 +455,6 @@ share/kde/locale/uk/LC_MESSAGES/kwuftpd.mo
 share/kde/locale/uk/LC_MESSAGES/kxconfig.mo
 share/kde/locale/uk/LC_MESSAGES/kxkb.mo
 share/kde/locale/uk/LC_MESSAGES/kxmlrpcd.mo
-share/kde/locale/uk/LC_MESSAGES/kxsconfig.mo
 share/kde/locale/uk/LC_MESSAGES/libkcalsystem.mo
 share/kde/locale/uk/LC_MESSAGES/libkdehighscores.mo
 share/kde/locale/uk/LC_MESSAGES/libkdenetwork.mo
