@@ -1,5 +1,7 @@
---- Makefile.inc.orig	Wed Aug  4 17:40:24 1999
-+++ Makefile.inc	Wed Apr  5 10:05:09 2000
+$NetBSD: patch-aa,v 1.5 2000/08/23 21:57:58 tron Exp $
+
+--- Makefile.inc.orig	Thu Jun 29 02:28:14 2000
++++ Makefile.inc	Wed Aug 23 23:39:29 2000
 @@ -2,20 +2,20 @@
  
  # Where to install stuff
@@ -24,10 +26,10 @@
  ADDRUNCFLAGS=
  ADDDYNLIBCFLAGS=
  
-@@ -26,13 +26,13 @@ LD=gcc -rdynamic
- DYNLD=ld -shared
+@@ -45,13 +45,13 @@
  
- # For NetBSD, use instead:
+ # For NetBSD, use:
+ # ------------------------
 -# CPP=/usr/bin/cpp -P -traditional -Dunix -Umsdos
 -# STRIP=/usr/bin/strip
 -# ADDRUNCFLAGS=-fPIC
@@ -43,18 +45,22 @@
 +INSTALL_SCRIPT=${BSD_INSTALL_SCRIPT}
 +INSTALL_DATA=${BSD_INSTALL_DATA}
  
- # For Solaris 2 (not SunOS 4), use instead:
- # CPP=/usr/ccs/lib/cpp -P -Dunix -Umsdos
-@@ -68,10 +68,10 @@ SHELL=/bin/sh
- # LIBDIR contains bytecode files (such as mosmlcmp and library units)
+ # For Solaris 2 (not SunOS 4), use:
+ # ---------------------------------
+@@ -114,12 +114,12 @@
+ # DOCDIR contains documentation
  
  BINDIR=${MOSMLHOME}/bin
 -LIBDIR=${MOSMLHOME}/lib
+-INCDIR=${MOSMLHOME}/include
+-DOCDIR=${MOSMLHOME}/doc
 -TOOLDIR=${MOSMLHOME}/tools
 -# LIBDIR=${MOSMLHOME}/lib/moscow_ml
 -# TOOLDIR=${MOSMLHOME}/libexec/moscow_ml
-+# LIBDIR=${MOSMLHOME}/lib
-+# TOOLDIR=${MOSMLHOME}/tools
++#LIBDIR=${MOSMLHOME}/lib
++INCDIR=${MOSMLHOME}/include/moscow_ml
++DOCDIR=${MOSMLHOME}/share/doc/moscow_ml
++#TOOLDIR=${MOSMLHOME}/tools
 +LIBDIR=${MOSMLHOME}/lib/moscow_ml
 +TOOLDIR=${MOSMLHOME}/libexec/moscow_ml
  
