@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 1999/08/18 10:19:40 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/12/18 13:35:54 abs Exp $
 
 DISTNAME=	Hugs98-May1999
+PKGNAME=	Hugs98-199905
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cse.ogi.edu/~mpj/Hugs98/
 
