@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.8 1999/06/17 08:00:31 itojun Exp $
+# $NetBSD: Makefile,v 1.9 1999/06/17 13:20:38 itojun Exp $
 
 DISTNAME=		magicpoint-1.05a
-# question is for localized (i.e. Japanese) version
-PKGNAME?=		magicpoint-1.05a
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://ftp.mew.org/pub/MagicPoint/
 
@@ -11,12 +9,11 @@ HOMEPAGE=		http://www.Mew.org/mgp/
 
 DEPENDS=		freetype-1.1:${.CURDIR}/../../print/freetype
 
-CONFLICTS=		mgp-*
+CONFLICTS=		mgp-* magicpoint-1.04a
 
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes
-# question is for localized (i.e. Japanese) version
-CONFIGURE_ARGS?=	--disable-vflib
+CONFIGURE_ARGS=		--disable-vflib --enable-freetype-charset16
 
 post-configure:
 	(cd ${WRKSRC}/contrib/xmindpath; ./configure --prefix=${PREFIX})
