@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:42 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/24 14:29:34 grant Exp $
 #
 
 DISTNAME=	graphviz-1.10
@@ -17,6 +17,14 @@ USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 USE_X11=		yes
 XAW_TYPE=		standard
+
+.include "../../mk/bsd.prefs.mk"
+
+# sysutils/coreutils installs a 'gpr' program, so conflict with it if
+# GNU_PROGRAM_PREFIX == 'g'
+.if ${GNU_PROGRAM_PREFIX} == "g"
+CONFLICTS+=		coreutils-[0-9]*
+.endif
 
 CONFIGURE_ENV+=		TCLCONFIG=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ENV+=		TKCONFIG=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
