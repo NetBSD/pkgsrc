@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6302 2004/06/24 18:31:51 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6303 2004/06/24 21:07:09 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3048,3 +3048,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated postgresql to 7.3.6 [darcy 2004-06-24]
 	Updated icecast to 2.0.1 [xtraeme 2004-06-24]
 	Added ccd2iso-0.9 [xtraeme 2004-06-24]
+	Updated roundup to 0.7.5 [recht 2004-06-24]
