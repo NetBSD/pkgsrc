@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.439 2003/04/02 12:08:12 wiz Exp $
+$NetBSD: TODO,v 1.440 2003/04/02 12:20:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -152,7 +152,6 @@ Suggested package updates
 	o joe-2.9 [pkg/18022]
 	o jove-4.16.0.58 [pkg/19924]
 	o jove-4.16.0.61
-	o koth-0.8.0 [http://www.nongnu.org/koth/]
 	o lcms-1.0.9
 	o leim-21.3
 	o lesstif-0.93.41
