@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.5 1997/12/27 04:13:29 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.6 1997/12/27 04:27:10 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -489,11 +489,8 @@ of when dealing with the PLIST file (or files, see below!).
    bsd.own.mk), and uncompressed otherwise. To handle this in the PLIST
    file, the suffix ".gz" is appended/removed automatically for manpages
    according to MANZ and MANCOMPRESSED being set or not, see above for
-   details. (We don't regard any .gz suffix on manpages set in pkg/PLIST,
-   as many FreeBSD ports seem to have .gz pages in PLIST even when they
-   install manpages without compressing them; rather, we set it on our
-   own here, if needed). This modification of the PLIST file is done on
-   a copy of it, not pkg/PLIST itself.
+   details. This modification of the PLIST file is done on a copy of it,
+   not pkg/PLIST itself.
 
 
  5.2 MD/MI vs. general PLIST
@@ -618,6 +615,11 @@ $f.pdone $$f; \
 This is taken from the sysutils/rtty packagel; be sure this works for your
 package - it may actually make sense to look for some things in /usr/local,
 for example. So don't blindly replace all occurences of /usr/local!
+
+Side note on manpages in PLIST: we don't regard any .gz suffix there, as
+many FreeBSD ports seem to have .gz pages in PLIST even when they install
+manpages without compressing them; rather, we add our own .gz suffix there
+according to MANZ.
 
 
  6.3 Feedback to the author
