@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/02 13:04:46 hubertf Exp $
+
+--- Makefile.orig	Fri Jan  1 20:57:16 1999
++++ Makefile	Sat Jan  2 13:36:26 1999
+@@ -1,10 +1,10 @@
+ CC=gcc
+ CFLAGS=-O2 -Wall
+ INSTALL=/usr/bin/install -c
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ 
+ all: xtermset.o
+-	${CC} -o xtermset $<
++	${CC} -o xtermset ${.ALLSRC}
+ 
+ clean:
+ 	rm -f *.o xtermset core *~
+@@ -13,4 +13,3 @@
+ 	${INSTALL} -m 0755 xtermset ${PREFIX}/bin
+ 	strip ${PREFIX}/bin/xtermset
+ 	${INSTALL} -m 0644 xtermset.1 ${PREFIX}/man/man1
+-	gzip ${PREFIX}/man/man1/xtermset.1
