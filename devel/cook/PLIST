@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/11 06:17:54 mrg Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/03/04 17:36:16 wiz Exp $
 bin/c_incl
 bin/cook
 bin/cook_bom
@@ -31,6 +31,7 @@ man/man1/roffpp.1
 share/cook/as
 share/cook/bison
 share/cook/c
+share/cook/c++
 share/cook/en/building.dvi
 share/cook/en/building.ps
 share/cook/en/building.txt
@@ -56,6 +57,9 @@ share/cook/en/refman.txt
 share/cook/en/release.dvi
 share/cook/en/release.ps
 share/cook/en/release.txt
+share/cook/en/tutorial.dvi
+share/cook/en/tutorial.ps
+share/cook/en/tutorial.txt
 share/cook/en/user-guide.dvi
 share/cook/en/user-guide.ps
 share/cook/en/user-guide.txt
