@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/26 23:33:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/26 23:38:19 wiz Exp $
 
 DISTNAME=	gpsdrive-1.31
 PKGREVISION=	5
@@ -14,6 +14,8 @@ DEPENDS+=	gpsd>=1.07:../../geography/gpsd
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
+
+USE_LANGUAGE=	c c++
 
 # XXX make this an option
 CONFIGURE_ARGS+=	--disable-mysql
