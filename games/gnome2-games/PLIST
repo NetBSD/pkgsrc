@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/21 02:28:57 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/01 11:21:25 jmmv Exp $
 bin/ctali
 bin/freecell
 bin/gataxx
@@ -17,11 +17,6 @@ bin/iagno
 bin/mahjongg
 bin/same-gnome
 bin/sol
-etc/sound/events/gataxx.soundlist
-etc/sound/events/gnect.soundlist
-etc/sound/events/gnibbles.soundlist
-etc/sound/events/gnobots2.soundlist
-etc/sound/events/iagno.soundlist
 include/gdkcardimage/gdk-card-image.h
 lib/gnome-stones/objects/libgnome-stones.a
 lib/gnome-stones/objects/libgnome-stones.la
@@ -51,6 +46,11 @@ share/applications/mahjongg.desktop
 share/applications/same-gnome.desktop
 share/applications/sol.desktop
 share/applications/xbill.desktop
+share/examples/gnome2-games/sound/events/gataxx.soundlist
+share/examples/gnome2-games/sound/events/gnect.soundlist
+share/examples/gnome2-games/sound/events/gnibbles.soundlist
+share/examples/gnome2-games/sound/events/gnobots2.soundlist
+share/examples/gnome2-games/sound/events/iagno.soundlist
 share/gconf/schemas/freecell.schemas
 share/gconf/schemas/gataxx.schemas
 share/gconf/schemas/gnect.schemas
@@ -767,6 +767,9 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/gnobots2
 @dirrm share/gnibbles
 @dirrm share/gnect
+@dirrm share/examples/gnome2-games/sound/events
+@dirrm share/examples/gnome2-games/sound
+@dirrm share/examples/gnome2-games
 @dirrm lib/gnome-stones/objects
 @dirrm lib/gnome-stones
 @dirrm include/gdkcardimage
