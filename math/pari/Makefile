@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/03/13 17:37:24 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/23 22:24:16 jlam Exp $
 
 DISTNAME=		pari-2.1.1
 PKGREVISION=		1
@@ -13,23 +13,19 @@ COMMENT=		software package for computer-aided number theory
 BUILD_DEPENDS+= 	teTeX-[0-9]*:../../print/teTeX
 BUILD_DEPENDS+= 	emacs-[0-9]*:../../editors/emacs
 
-USE_PERL5=		yes
+USE_BUILDLINK2=		yes
+USE_X11=		yes
+USE_GNU_READLINE=	# rl_save_prompt
 
-USE_BUILDLINK_ONLY=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/Configure
-
-# rl_save_prompt
-USE_GNU_READLINE=	yes
-
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --share-prefix=${PREFIX}/share
-
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
-CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
-
 CONFIGURE_ARGS+=	--graphic=X11
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
+CONFIGURE_ENV+=		X11BASE=${X11BASE}
 
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
