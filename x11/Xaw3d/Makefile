@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 1999/04/15 20:39:48 tron Exp $
+# $NetBSD: Makefile,v 1.20 1999/10/07 17:41:59 tron Exp $
 #
 
 DISTNAME=	Xaw3d-1.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=widgets/Xaw3d/R6.3/}
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 
 CONFLICTS=	Xaw-Xpm-*
 

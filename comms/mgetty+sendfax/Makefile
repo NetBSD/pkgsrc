@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/09/28 20:40:02 soren Exp $
+# $NetBSD: Makefile,v 1.8 1999/10/07 17:41:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	mgetty-1.1.19
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.leo.org/~doering/mgetty/index.html
 
 CONFLICTS=	hylafax-*

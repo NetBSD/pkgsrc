@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 1999/07/02 08:37:23 agc Exp $
+# $NetBSD: Makefile,v 1.5 1999/10/07 17:41:55 tron Exp $
 
 DISTNAME=	mailwrapper-19990412
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 
 MIRROR_DISTFILE=	no
 NO_CONFIGURE=		yes

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.31 1999/09/03 07:19:24 rh Exp $
+# $NetBSD: Makefile,v 1.32 1999/10/07 17:42:00 tron Exp $
 #
 
 DISTNAME=		gnome-libs-1.0.16
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=gnome-1.0/sources/}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
 DEPENDS+=		ORBit-0.4.3:../../corba/ORBit

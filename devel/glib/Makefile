@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/08/28 09:34:45 rh Exp $
+# $NetBSD: Makefile,v 1.19 1999/10/07 17:41:48 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 		http://www.ameth.org/gimp/pub/gtk/v1.2/ \
 		ftp://infosoc.uni-koeln.de/pub/ftp.gimp.org/pub/gtk/v1.2/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gtk.org/docs/glib_toc.html
 
 CONFLICTS=	gtk+-1.0.*

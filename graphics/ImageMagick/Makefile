@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.49 1999/09/11 15:04:14 tron Exp $
+# $NetBSD: Makefile,v 1.50 1999/10/07 17:41:53 tron Exp $
 
 DISTNAME=	ImageMagick-4.2.9
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.wizards.dupont.com/cristy/ImageMagick.html
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg

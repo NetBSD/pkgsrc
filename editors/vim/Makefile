@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/08/08 09:31:18 rh Exp $
+# $NetBSD: Makefile,v 1.20 1999/10/07 17:41:49 tron Exp $
 
 DISTNAME=		vim-5.4
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.oce.nl/pub/vim/unix/ \
 DISTFILES=		${DISTNAME}-src${EXTRACT_SUFX} \
 			${DISTNAME}-rt${EXTRACT_SUFX}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.vim.org/
 
 DEPENDS=		ncurses-4.2:../../devel/ncurses

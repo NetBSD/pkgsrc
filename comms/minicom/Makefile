@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/10/07 01:09:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 1999/10/07 17:41:47 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/dialout/} \
 		http://www.pp.clinet.fi/~walker/
 
-MAINTAINER=     tron@netbsd.org
+MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.clinet.fi/~walker/minicom.html
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext

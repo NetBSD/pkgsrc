@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 1999/09/17 19:01:11 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/07 17:41:58 tron Exp $
 
 DISTNAME=	cdrecord-1.8a28
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/alpha/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fokus.gmd.de/nthp/employees/schilling/cdrecord.html
 
 USE_GMAKE=	yes

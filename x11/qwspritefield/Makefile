@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 1999/06/04 15:39:10 drochner Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/07 17:42:01 tron Exp $
 
 DISTNAME=	QwSpriteField1.6
 PKGNAME=	qwspritefield-1.6
 CATEGORIES=	x11 graphics
 MASTER_SITES=	ftp://ftp.troll.no/contrib/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 
 DEPENDS+=	qt-1.44:../../x11/qt
 

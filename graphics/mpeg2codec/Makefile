@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 1999/01/30 23:18:50 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/07 17:41:54 tron Exp $
 
 DISTNAME=	mpeg2vidcodec_v12
 PKGNAME=	mpeg2codec-1.2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.mpeg.org/pub/mpeg/mssg/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mpeg.org/MSSG/
 
 USE_X11BASE=	yes

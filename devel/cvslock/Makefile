@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/08 18:28:02 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/10/07 17:41:48 tron Exp $
 
 DISTNAME=	cvslock-0.1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://riemann.iam.uni-bonn.de/pub/users/roessler/cvslock/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	yes
 
