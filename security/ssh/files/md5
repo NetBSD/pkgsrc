@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.8 1999/05/15 13:46:58 bouyer Exp $
+$NetBSD: md5,v 1.9 1999/07/08 17:10:58 itojun Exp $
 
 MD5 (ssh-1.2.27.tar.gz) = c22bc000bee0f7d6f4845eab72a81395
+MD5 (ssh-1.2.27-IPv6-1.5-patch.gz) = b854131fe8aa025abeef32cecfe1b037
