@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/02/17 17:51:53 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/07/10 17:27:18 tron Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -18,11 +18,10 @@ USE_PERL5=	yes
 .include "../../mk/bsd.prefs.mk"
 
 PAPERSIZE?=	A4
-MAKE_FLAGS+=	PAPER=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`
 
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	CPPFLAGS=
-.endif
+MAKE_ENV+=	CC="${CC}" PERL5="${PERL5}"
+MAKE_FLAGS+=	PAPER=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`
+MAKEFILE=	Makefile.unix
 
 pre-configure:
 	@case "X${PAPERSIZE}" in					\
