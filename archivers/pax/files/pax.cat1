@@ -5,16 +5,17 @@ NNAAMMEE
 
 SSYYNNOOPPSSIISS
      ppaaxx [--ccddjjnnvvzzOO] [--EE _l_i_m_i_t] [--ff _a_r_c_h_i_v_e] [--NN _d_b_d_i_r] [--ss _r_e_p_l_s_t_r] _._._.
-     [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e]] _._._. [_p_a_t_t_e_r_n _._._.]
+         [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e]] _._._. [_p_a_t_t_e_r_n
+         _._._.]
      ppaaxx --rr [--ccddiijjkknnuuvvzzAADDOOYYZZ] [--EE _l_i_m_i_t] [--ff _a_r_c_h_i_v_e] [--NN _d_b_d_i_r] [--oo _o_p_t_i_o_n_s]
-     _._._. [--pp _s_t_r_i_n_g] _._._. [--ss _r_e_p_l_s_t_r] _._._. [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT
-     [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e]] _._._. [_p_a_t_t_e_r_n _._._.] ppaaxx --ww [--ddiijjttuuvvzzAAHHLLMMOOPPXX]
-     [--bb _b_l_o_c_k_s_i_z_e] [[--aa] [--ff _a_r_c_h_i_v_e]] [--xx _f_o_r_m_a_t] [--BB _b_y_t_e_s] [--NN _d_b_d_i_r]
-     [--oo _o_p_t_i_o_n_s] _._._. [--ss _r_e_p_l_s_t_r] _._._. [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT
-     [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e][/[cc][mm]]] _._._. [_f_i_l_e _._._.] ppaaxx --rr --ww
-     [--ddiijjkkllnnttuuvvzzAADDHHLLMMOOPPXXYYZZ] [--NN _d_b_d_i_r] [--pp _s_t_r_i_n_g] _._._. [--ss _r_e_p_l_s_t_r] _._._.
-     [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e][/[cc][mm]]] _._._.
-     [_f_i_l_e _._._.] _d_i_r_e_c_t_o_r_y
+         _._._. [--pp _s_t_r_i_n_g] _._._. [--ss _r_e_p_l_s_t_r] _._._. [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT
+         [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e]] _._._. [_p_a_t_t_e_r_n _._._.]
+     ppaaxx --ww [--ddiijjttuuvvzzAAHHLLMMOOPPXX] [--bb _b_l_o_c_k_s_i_z_e] [[--aa] [--ff _a_r_c_h_i_v_e]] [--xx _f_o_r_m_a_t]
+         [--BB _b_y_t_e_s] [--NN _d_b_d_i_r] [--oo _o_p_t_i_o_n_s] _._._. [--ss _r_e_p_l_s_t_r] _._._. [--UU _u_s_e_r] _._._.
+         [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e][/[cc][mm]]] _._._. [_f_i_l_e _._._.]
+     ppaaxx --rr --ww [--ddiijjkkllnnttuuvvzzAADDHHLLMMOOPPXXYYZZ] [--NN _d_b_d_i_r] [--pp _s_t_r_i_n_g] _._._. [--ss _r_e_p_l_s_t_r]
+         _._._. [--UU _u_s_e_r] _._._. [--GG _g_r_o_u_p] _._._. [--TT [_f_r_o_m___d_a_t_e][,_t_o___d_a_t_e][/[cc][mm]]]
+         _._._. [_f_i_l_e _._._.] _d_i_r_e_c_t_o_r_y
 
 DDEESSCCRRIIPPTTIIOONN
      ppaaxx will read, write, and list the members of an archive file, and will
@@ -235,10 +236,10 @@ OOPPTTIIOONNSS
            mat of these regular expressions are:
                  /old/new/[gp]
            As in ed(1), oolldd is a basic regular expression and nneeww can contain
-           an ampersand (), \n (where n is a digit) back-references, or subex-
-           pression matching.  The oolldd string may also contain <newline> char-
-           acters.  Any non-null character can be used as a delimiter (/ is
-           shown here).  Multiple --ss expressions can be specified.  The ex-
+           an ampersand (&), \n (where n is a digit) back-references, or
+           subexpression matching.  The oolldd string may also contain <newline>
+           characters.  Any non-null character can be used as a delimiter (/
+           is shown here).  Multiple --ss expressions can be specified.  The ex-
            pressions are applied in the order they are specified on the com-
            mand line, terminating with the first successful substitution.  The
            optional trailing gg continues to apply the substitution expression
@@ -253,8 +254,9 @@ OOPPTTIIOONNSS
            are not selected and will be skipped.
 
      --tt    Reset the access times of any file or directory read or accessed by
-           ppaaxx to be the same as they were before being read or accessed by ,
-           if the user has the appropriate permissions required by utime(3).
+           ppaaxx to be the same as they were before being read or accessed by
+           ppaaxx, if the user has the appropriate permissions required by
+           utime(3).
 
      --uu    Ignore files that are older (having a less recent file modification
            time) than a pre-existing file or archive member with the same
@@ -586,12 +588,12 @@ SSEEEE AALLSSOO
 SSTTAANNDDAARRDDSS
      The ppaaxx utility is a superset of the IEEE Std 1003.2 (``POSIX.2'') stan-
      dard.  The options --BB, --DD, --EE, --GG, --HH, --LL, --MM, --OO, --PP, --TT, --UU, --YY, --ZZ,
-     the archive formats _b_c_p_i_o, _s_v_4_c_p_i_o, _s_v_4_c_r_c, _t_a_r, and the flawed archive
-     handling during _l_i_s_t and _r_e_a_d operations are extensions to the POSIX
-     standard.
+     --zz, the archive formats _b_c_p_i_o, _s_v_4_c_p_i_o, _s_v_4_c_r_c, _t_a_r, and the flawed
+     archive handling during _l_i_s_t and _r_e_a_d operations are extensions to the
+     POSIX standard.
 
 AAUUTTHHOORRSS
      Keith Muller at the University of California, San Diego.  Luke Mewburn
      implemented --MM.
 
-NetBSD 1.6                      March 31, 2003                              10
+NetBSD 1.6.1_STABLE             March 31, 2003                              10
