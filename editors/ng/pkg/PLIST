@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/19 23:54:37 hubertf Exp $
+bin/ng
+share/doc/ng/CHANGES.doc.euc-jp
+share/doc/ng/CHANGES.new.euc-jp
+share/doc/ng/Ng.FAQ.euc-jp
+share/doc/ng/Ng.doc.euc-jp
+share/doc/ng/Ng.ref.euc-jp
+share/doc/ng/Ng.tut.euc-jp
+share/doc/ng/README.Ng.euc-jp
+share/doc/ng/README.SKG.euc-jp
+@dirrm share/doc/ng

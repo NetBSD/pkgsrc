@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/19 23:54:37 hubertf Exp $
+
+--- sys/bsd/Makefile.orig	Tue Jun 27 10:48:02 2000
++++ sys/bsd/Makefile	Thu Sep  7 06:02:02 2000
+@@ -8,14 +8,17 @@
+ # Modified for Ng 1.0	by Shigeki Yoshida (shige@csk.CO.JP)	1990.01.29
+ 
+ SYS	= bsd
+-LIBS	= -L/usr/pkg/lib -lcanna -ltermcap
++LIBS	= -L${PREFIX}/lib -ltermcap
++.if ${USE_CANNA} == "YES"
++LIBS	+=	-lcanna
++.endif
+ # CDEFS gets defines, and gets passed to lint. CFLAGS gets flags, and doesn't
+ # get passed to lint.
+ #
+ # Now, compile time options are defined in a "config.h".
+ #
+ CDEFS	= 
+-CFLAGS	= -O2 -I/usr/pkg/include $(CDEFS)
++CFLAGS	= -O2 -I${PREFIX}/include $(CDEFS)
+ 
+ # If your machine don't have an alloca(), please define ALLOCA.
+ #ALLOCA	= alloca.o
