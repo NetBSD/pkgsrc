@@ -1,0 +1,99 @@
+$NetBSD: patch-ad,v 1.1 2001/11/13 21:26:58 jlam Exp $
+
+--- configure.orig	Sat Mar 31 08:57:25 2001
++++ configure
+@@ -6954,6 +6954,86 @@
+ #MIN_CONFIG
+ 
+ 
++ac_safe=`echo "util.h" | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for util.h""... $ac_c" 1>&6
++echo "configure:6960: checking for util.h" >&5
++if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 6965 "configure"
++#include "confdefs.h"
++#include <util.h>
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:6970: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=yes"
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=no"
++fi
++rm -f conftest*
++fi
++if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  echo $ac_n "checking for getrawpartition in -lutil""... $ac_c" 1>&6
++echo "configure:6987: checking for getrawpartition in -lutil" >&5
++ac_lib_var=`echo util'_'getrawpartition | sed 'y%./+-%__p_%'`
++if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  ac_save_LIBS="$LIBS"
++LIBS="-lutil  $LIBS"
++cat > conftest.$ac_ext <<EOF
++#line 6995 "configure"
++#include "confdefs.h"
++/* Override any gcc2 internal prototype to avoid an error.  */
++/* We use char because int might match the return type of a gcc2
++    builtin and then its argument prototype would still apply.  */
++char getrawpartition();
++
++int main() {
++getrawpartition()
++; return 0; }
++EOF
++if { (eval echo configure:7006: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=no"
++fi
++rm -f conftest*
++LIBS="$ac_save_LIBS"
++
++fi
++if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  
++    cat >> confdefs.h <<\EOF
++#define HAVE_GETRAWPARTITION 1
++EOF
++
++    LIBUTIL="-lutil"
++  
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++
+ 
+ 
+ DO_NOT_COMPILE="$DO_NOT_COMPILE CVS debian bsd-port admin"
+@@ -7259,6 +7339,7 @@
+ s%@LIB_KPARTS@%$LIB_KPARTS%g
+ s%@LIB_KWRITE@%$LIB_KWRITE%g
+ s%@LIB_KFM@%$LIB_KFM%g
++s%@LIBUTIL@%$LIBUTIL%g
+ s%@TOPSUBDIRS@%$TOPSUBDIRS%g
+ 
+ CEOF
