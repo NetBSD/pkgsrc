@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6412 2004/07/01 10:31:54 adam Exp $
+$NetBSD: CHANGES,v 1.6413 2004/07/01 15:23:00 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3198,3 +3198,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sqlite to 2.8.13nb1 [pooka 2004-06-30]
 	Updated mips64emul to 0.1 [xtraeme 2004-07-01]
 	Updated gd to 2.0.26 [adam 2004-07-01]
+	Updated libxml2 to 2.6.10 [recht 2004-07-01]
+	Updated libxslt to 1.1.7 [recht 2004-07-01]
+	Updated db4 to 4.2.52nb4 [recht 2004-07-01]
