@@ -1,0 +1,7 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2002/01/30 11:56:08 agc Exp $
+
+This package is built without X11 support.  If you want X11 support
+included, use the graphics/aalib-x11 package instead.
+
+======================================================================
