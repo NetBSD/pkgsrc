@@ -1,0 +1,12 @@
+$NetSBD$
+
+--- share/sh/help-links.sh.orig	Wed May 23 02:46:18 2001
++++ share/sh/help-links.sh
+@@ -35,6 +35,7 @@
+ rm -f ${PKGLIST}
+ rm -f ${SEARCHINDEX}
+ cp ${R_HOME}/doc/html/packages-head.html ${PKGLIST}
++chmod 644 ${PKGLIST}
+ 
+ get_unique () {
+   if test -r ${1}; then
