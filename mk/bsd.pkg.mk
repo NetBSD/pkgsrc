@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.330 1999/08/31 21:45:45 christos Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.331 1999/09/02 21:40:14 christos Exp $
 #
 # This file is in the public domain.
 #
@@ -119,8 +119,13 @@ BUILD_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
 .endif
 
 .if defined(USE_LIBTOOL)
+.if ${OS} == "NetBSD"
 LIBTOOL=		${LOCALBASE}/bin/pkglibtool-${OBJECT_FMT}-1.2p2
 BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/pkgtools/pkglibtool
+.else
+LIBTOOL=		${LOCALBASE}/bin/libtool
+BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/devel/libtool
+.endif
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
@@ -1335,6 +1340,7 @@ root-install:
 		done;							\
 	fi)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} ${PLIST}
+.if ${OS} == "NetBSD"
 	${_PKG_SILENT}(${_PKG_DEBUG}sos=`${EGREP} -h 			\
 		'.*/lib[^/]+\.so\.[0-9]+\.[0-9]+$$'			\
 		${PLIST} || ${TRUE}`;					\
@@ -1391,6 +1397,7 @@ root-install:
 			;;						\
 		esac;							\
 	fi)
+.endif
 .ifdef MESSAGE_FILE
 	@${ECHO_MSG} "===>   Please note the following:"
 	@${ECHO_MSG} ""
