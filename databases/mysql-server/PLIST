@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/21 06:02:41 lukem Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/21 08:13:19 lukem Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -6,6 +6,7 @@ bin/my_print_defaults
 bin/myisamchk
 bin/myisamlog
 bin/myisampack
+bin/mysql.server
 bin/mysql_install_db
 bin/pack_isam
 bin/perror

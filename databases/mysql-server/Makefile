@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2003/01/21 06:02:41 lukem Exp $
+# $NetBSD: Makefile,v 1.34 2003/01/21 08:13:18 lukem Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		mysqs
 COMMENT=		MySQL, a free SQL database (server)
 
@@ -59,6 +59,7 @@ pre-install:
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/safe_mysqld ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_install_db ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/support-files/mysql.server ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/man/safe_mysqld.1 ${PREFIX}/man/man1
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
