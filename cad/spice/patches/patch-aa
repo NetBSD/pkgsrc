@@ -113,7 +113,7 @@
   	long x;
   	SIGNAL_TYPE	(*orig_signal)( );
   
-+ #ifndef __FreeBSD__
++ #if !(defined(__FreeBSD__) || defined(__NetBSD__))
   	if (getenv("SPICE_NO_DATASEG_CHECK"))
 + #endif
   		return 0;
@@ -127,7 +127,7 @@
   extern char *realloc();
   extern char *getenv();
   extern int errno;
-+ #ifndef __FreeBSD__
++ #if !(defined(__FreeBSD__) || defined(__NetBSD__))
   extern char *sys_errlist[];
 + #endif
   extern char *getenv();
@@ -139,14 +139,14 @@
   #    endif /* clearerr */
   #  endif /* HAS_CLEARERR */
   
-+ #ifndef __FreeBSD__
++ #if !(defined(__FreeBSD__) || defined(__NetBSD__))
   #  ifndef bzero
   extern int bzero();
   #  endif
   #  ifndef bcopy
   extern void bcopy();
   #  endif
-+ #endif /* __FreeBSD__ */
++ #endif /* defined(__FreeBSD__) || defined(__NetBSD__) */
   
   #  ifndef index
   #    ifdef HAS_INDEX
@@ -170,7 +170,7 @@
   
   #include "os_unix.h"
   
-+ #ifndef __FreeBSD__
++ #if !(defined(__FreeBSD__) || defined(__NetBSD__))
   #define HAS_NO_ATRIGH_DECL	/* if asinh( ) is not in math.h		*/
   #define HAS_FTIME		/* ftime( ), <times.h>			*/
 + #define HAS_INDEX		/* index( ) instead of strchr( )	*/
@@ -194,7 +194,7 @@
   #define HAS_DUP2
   #define HAS_GETWD		/* getwd(buf)				*/
 ! 
-! #ifdef __FreeBSD__
+! #if defined(__FreeBSD__) || defined(__NetBSD__)
 ! #define HAS_BSDSOCKETS		/* <net/inet.h>, socket( ), etc.	*/
 ! #define HAS_BSDTIME		/* gettimeofday( ) return time		*/
 ! #define HAS_FLOAT_H		/* float.h				*/
