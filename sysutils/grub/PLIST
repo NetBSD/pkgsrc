@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/24 23:49:54 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/13 17:35:04 wiz Exp $
 bin/mbchk
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/grub.info
 info/grub.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/grub.info
 info/grub.info-1
 info/grub.info-2
 info/grub.info-3
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/multiboot.info
 info/multiboot.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/multiboot.info
 man/man1/mbchk.1
 man/man8/grub-install.8
 man/man8/grub-md5-crypt.8
