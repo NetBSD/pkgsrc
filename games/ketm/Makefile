@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/24 13:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/06 21:06:12 snj Exp $
 #
 
 DISTNAME=	ketm-0.0.6
@@ -13,7 +13,7 @@ COMMENT=	Old-school 2d-scrolling shooter
 
 ALL_TARGET=	ketm
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 USE_GNU_TOOLS+=	make
 
@@ -37,5 +37,5 @@ do-install:
 	cd ${WRKSRC}/data && 						\
 		${INSTALL_DATA} *.bmp *.dat ${PREFIX}/share/ketm/data
 
-.include "../../devel/SDL/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
