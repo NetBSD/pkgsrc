@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2003/10/18 11:51:09 grant Exp $
+# $NetBSD: Makefile.common,v 1.42 2003/10/18 11:54:33 grant Exp $
 #
 
 MPLAYER_DIST_VERSION=	1.0pre1
@@ -34,7 +34,6 @@ PTHREAD_OPTS+=		require
 
 CONFIGURE_ARGS+=	--prefix="${PREFIX}"
 CONFIGURE_ARGS+=	--with-extraincdir="${LOCALBASE}/include"
-CONFIGURE_ARGS+=	--with-cdparanoiaincdir="${LOCALBASE}/include/cdparanoia"
 CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--with-extralibdir="${X11BASE}/lib"
 CONFIGURE_ARGS+=	--disable-mpdvdkit
@@ -56,6 +55,10 @@ BUILD_DEFS+=		MPLAYER_ENABLE_RUNTIME_CPU_DETECTION
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "alpha"
 CONFIGURE_ARGS+=	--with-reallibdir="${LOCALBASE}/lib/RealPlayer8-Codecs"
+.endif
+
+.if defined(BUILDLINK_PREFIX.cdparanoia)
+CONFIGURE_ARGS+=	--with-cdparanoiaincdir="${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia"
 .endif
 
 .if ${OPSYS} == "SunOS" && !empty(MPLAYER_USE_MEDIALIB:M[Yy][Ee][Ss])
