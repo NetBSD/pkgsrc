@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/03/14 19:37:47 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/25 01:08:41 wiz Exp $
 
 DISTNAME=	teapop-0.3.5
 CATEGORIES=	mail
@@ -9,7 +9,7 @@ MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://www.toontown.org/teapop/
 COMMENT=	Yet another RFC1939 compliant POP3 server
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 
@@ -24,7 +24,7 @@ RCD_SCRIPTS=	teapop
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(POP_WITH_DRAC)
-.include "../../mail/drac/buildlink2.mk"
+.include "../../mail/drac/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-drac=${BUILDLINK_PREFIX.drac}/lib
 CONFIGURE_ARGS+=	--with-dracinc=${BUILDLINK_PREFIX.drac}/include
 .endif
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=--disable-vpop
 .endif
 
 .if defined(TEAPOP_WITH_MYSQL)
-.include "../../databases/mysql-client/buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 LDFLAGS+=	${BUILDLINK_LDFLAGS.mysql-client}
 .endif
