@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2001/09/14 02:39:07 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/10/01 16:42:30 kleink Exp $
 #
 
-DISTNAME=	openldap-1.2.12
+DISTNAME=	openldap-1.2.13
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=	.tgz
