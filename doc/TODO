@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2065 2004/08/19 16:47:58 ben Exp $
+$NetBSD: TODO,v 1.2066 2004/08/20 01:42:36 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -339,6 +339,7 @@ Suggested package updates
 	o openal-20040215
 	o openh323-1.12.2
 	o openoffice-1.1.2
+	o openssh-3.9p1
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o oss-3.99.1f
 	o p5-CGI-3.05
