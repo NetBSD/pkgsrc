@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.3 2001/06/11 03:33:47 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.4 2001/06/13 16:00:52 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -80,7 +80,7 @@ _BUILDLINK_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink//}_buildlink_done; \
 	if [ ! -f $${cookie} ]; then					\
-		${ECHO} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
+		${ECHO_MSG} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
 		for file in ${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}; do \
 			if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
 				dest=${BUILDLINK_DIR}/$${file##${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/}; \
