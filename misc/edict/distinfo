@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/02 03:13:35 wiz Exp $
+
+SHA1 (edict-2003.005/edict.gz) = 72ad2ba4c4fd82c9cf989af8f626ce2c16258350
+Size (edict-2003.005/edict.gz) = 1911548 bytes
+SHA1 (edict-2003.005/edict_doc.txt) = 1b4cc496a1e7763010db6e94f0e6ffbf0581134c
+Size (edict-2003.005/edict_doc.txt) = 24000 bytes
