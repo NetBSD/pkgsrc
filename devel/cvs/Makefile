@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.4 1998/01/15 10:08:45 agc Exp $
 # New ports collection makefile for:	cvs
 # Version required:     1.9
 # Date created:		15 November 1997
