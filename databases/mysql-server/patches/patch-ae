@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.10 2002/03/18 14:17:44 martti Exp $
+$NetBSD: patch-ae,v 1.11 2003/10/05 17:55:34 martti Exp $
 
---- configure.in.orig	Thu Feb 14 18:30:15 2002
-+++ configure.in	Mon Mar 18 14:49:20 2002
-@@ -1743,7 +1743,6 @@
+--- configure.in.orig	Thu Aug 28 13:20:55 2003
++++ configure.in	Thu Aug 28 13:23:04 2003
+@@ -1846,7 +1846,6 @@
  else
    bench_dirs=""
  fi
