@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.117 2002/12/31 11:29:38 uebayasi Exp $
+$NetBSD: TODO,v 1.118 2002/12/31 15:15:24 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -178,7 +178,6 @@ Suggested package updates
 	o mhonarc-2.5.13 [pkg/19366]
 	o mixer.app-1.8.0
 	o mkfontscale-20020618 (needs freetype-2.1.1)
-	o mlterm-2.6.2 [pkg/19457]
 	o mrproject-0.7
 	o multi-gnome-terminal-1.6.1
 	o mysql-3.23.54 [security fix]
