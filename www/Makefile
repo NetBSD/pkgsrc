@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2000/01/16 04:17:47 tsarna Exp $
+# $NetBSD: Makefile,v 1.67 2000/01/17 14:14:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -19,6 +19,7 @@
 #    SUBDIR += apache-current
     SUBDIR += arena
 #    SUBDIR += ashe           # requires Motif
+    SUBDIR += asp2php
 #    SUBDIR += aswedit
     SUBDIR += bozohttpd
     SUBDIR += cgilib
