@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/04/03 11:18:00 jmmv Exp $
+
+--- galeon.desktop.in.orig	2003-09-17 23:16:18.000000000 +0200
++++ galeon.desktop.in
+@@ -7,7 +7,7 @@ _Comment=Browse the web
+ Exec=galeon
+ Terminal=false
+ Type=Application
+-Icon=galeon
++Icon=galeon.png
+ Categories=Application;Network;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=galeon
