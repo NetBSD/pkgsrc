@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/12/02 06:56:47 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/12/04 06:15:01 jlam Exp $
 #
 
 DISTNAME=	surfraw-1.0.5
@@ -12,7 +12,6 @@ COMMENT=	Shell Users' Revolutionary Front Rage Against the Web
 CONFLICTS+=	surfaw-[0-9]*
 
 USE_BUILDLINK_ONLY=	YES
-AUTOMAKE_OVERRIDE=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 

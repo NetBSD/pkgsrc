@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.873 2001/12/02 21:29:21 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.874 2001/12/04 06:14:57 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1558,15 +1558,17 @@ do-ltconfig-override:
 	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
 .endif
 
+# By default, prevent invocation of GNU "auto*" driven by the generated
+# Makefiles during the build process by touching various auto{conf,make}
+# source files to make them up-to-date.  Packages that require regenerating
+# the configure script and Makefile.in files should make the appropriate
+# calls to auto{conf,make} in a pre-configure target.
+#
+AUTOMAKE_OVERRIDE?=	YES
 .if defined(AUTOMAKE_OVERRIDE) && (${AUTOMAKE_OVERRIDE} == "YES")
-#
-# Prevent invocation of GNU "auto*" during the build process driven by the
-# generated Makefiles by touching various auto{conf,make} source files to
-# make them up-to-date.
-#
 AUTOMAKE_PATTERNS+=	*.m4
 AUTOMAKE_PATTERNS+=	*.in
-AUTOMAKE_PATTERNS+=	configure
+AUTOMAKE_PATTERNS+=	${CONFIGURE_SCRIPT:T}*
 _AUTOMAKE_PATTERNS_FIND=	\
 	\( ${AUTOMAKE_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 

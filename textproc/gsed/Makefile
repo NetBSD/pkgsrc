@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/10/29 12:30:06 seb Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/04 06:15:01 jlam Exp $
 #
 
 DISTNAME=	sed-3.02
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gnu.org/software/sed/sed.html
 COMMENT=	GNU version of sed
 
 GNU_CONFIGURE=	YES
-AUTOMAKE_OVERRIDE=	YES
 CONFIGURE_ARGS= --program-prefix=g
 INFO_FILES=	sed.info
 AUTOMAKE_PATTERNS+=	sed.info version.texi stamp-vti

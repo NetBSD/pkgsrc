@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/11/29 01:12:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.22 2001/12/04 06:15:00 jlam Exp $
 #
 
 DISTNAME=	mtr-0.42
@@ -11,7 +11,6 @@ MAINTAINER=	sommerfeld@netbsd.org
 HOMEPAGE=	http://www.bitwizard.nl/mtr/
 COMMENT=	Traceroute and ping in a single graphical network diagnostic tool
 
-AUTOMAKE_OVERRIDE=	YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_BUILDLINK_ONLY=	YES
