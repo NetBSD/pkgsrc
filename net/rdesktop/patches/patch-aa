@@ -1,19 +1,25 @@
-$NetBSD: patch-aa,v 1.4 2002/07/25 02:47:46 grant Exp $
+$NetBSD: patch-aa,v 1.5 2003/02/13 23:25:07 grant Exp $
 
---- Makefile.orig	Sat Sep 15 22:34:32 2001
+--- Makefile.orig	Thu Jan 30 21:54:23 2003
 +++ Makefile
-@@ -6,12 +6,9 @@
+@@ -6,18 +6,15 @@
  
  # Configuration defaults
  
--CC       = cc
--CFLAGS   = -O2
--INCLUDES = -I/usr/X11R6/include
--LDLIBS   = -L/usr/X11R6/lib -lX11
-+INCLUDES = -I$(X11BASE)/include
-+LDLIBS   = $(LDFLAGS) -lX11
+-prefix      = /usr/local
++prefix      = $(PREFIX)
+ exec_prefix = $(prefix)
+ bindir      = $(exec_prefix)/bin
+ mandir      = $(prefix)/man
+-datadir     = $(prefix)/share/rdesktop
+-
+-KEYMAP_PATH = $(datadir)/keymaps/
++datadir     = $(DATADIR)
  
--PREFIX   = /usr/local
- EPREFIX  = $(PREFIX)
- BINDIR   = $(EPREFIX)/bin
- MANDIR   = $(PREFIX)/man
+ RDPOBJ   = rdesktop.o tcp.o iso.o mcs.o secure.o licence.o rdp.o orders.o bitmap.o cache.o xwin.o xkeymap.o ewmhints.c
+ CRYPTOBJ = crypto/rc4_enc.o crypto/rc4_skey.o crypto/md5_dgst.o crypto/sha1dgst.o crypto/bn_exp.o crypto/bn_mul.o crypto/bn_div.o crypto/bn_sqr.o crypto/bn_add.o crypto/bn_shift.o crypto/bn_asm.o crypto/bn_ctx.o crypto/bn_lib.o
+ 
+-include Makeconf  # configure-generated
+ 
+ 
+ rdesktop: $(RDPOBJ) $(CRYPTOBJ)
