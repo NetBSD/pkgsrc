@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/07/04 15:07:39 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/07/06 22:19:58 tron Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -11,6 +11,7 @@ MAINTAINER=	packages@netbsd.org
 
 DEPENDS=        xview-lib-3.2.1:../../x11/xview-lib
 
+MIRROR_DISTFILE= no
 EXTRACT_AFTER_ARGS=	xview3.2p1-X11R6/clients xview3.2p1-X11R6/images
 WRKSRC=      	${WRKDIR}/xview3.2p1-X11R6/clients
 USE_IMAKE=	yes
