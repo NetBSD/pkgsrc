@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/06/23 11:46:03 tron Exp $
+# $NetBSD: Makefile,v 1.51 2002/06/23 12:15:03 tron Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -32,7 +32,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_WIDEPATCH USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \
-		USE_STARTTLS
+		USE_SASL USE_STARTTLS
 MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
@@ -68,35 +68,39 @@ post-patch:
 	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
 	${CHMOD} +w ${SITECONFIG}
 	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
-	${ECHO} '---' >> ${DESCR_SRC}
-	${ECHO} -n 'compiled features:' >> ${DESCR_SRC}
+	${ECHO} '---' >>${DESCR_SRC}
+	${ECHO} -n 'compiled features:' >>${DESCR_SRC}
 .if ${USE_WIDEPATCH} == YES
-	${ECHO} -n ' WIDE' >> ${DESCR_SRC}
+	${ECHO} -n ' WIDE' >>${DESCR_SRC}
 .endif
 .if defined(USE_INET6) && ${USE_INET6} == YES
-	${CAT} ${FILESDIR}/site.config.m4-v6 >> ${SITECONFIG}
-	${ECHO} -n ' INET6' >> ${DESCR_SRC}
+	${CAT} ${FILESDIR}/site.config.m4-v6 >>${SITECONFIG}
+	${ECHO} -n ' INET6' >>${DESCR_SRC}
 .endif
 .if ${USE_TCPWRAPPERS} == YES
-	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >> ${SITECONFIG}
-	${ECHO} -n ' TCPWRAPPERS' >> ${DESCR_SRC}
+	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
+	${ECHO} -n ' TCPWRAPPERS' >>${DESCR_SRC}
 .endif
 .if ${OPSYS} == "SunOS"
-	${CAT} ${FILESDIR}/site.config.m4-solaris >> ${SITECONFIG}
+	${CAT} ${FILESDIR}/site.config.m4-solaris >>${SITECONFIG}
 .endif
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
-	${CAT} ${FILESDIR}/site.config.m4-ldap >> ${SITECONFIG}
-	${ECHO} -n ' LDAP' >> ${DESCR_SRC}
+	${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
+	${ECHO} -n ' LDAP' >>${DESCR_SRC}
 .endif
 .if ${USE_DB2} == YES
-	${CAT} ${FILESDIR}/site.config.m4-db2 >> ${SITECONFIG}
-	${ECHO} -n ' DB2' >> ${DESCR_SRC}
+	${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
+	${ECHO} -n ' DB2' >>${DESCR_SRC}
 .endif
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-	${CAT} ${FILESDIR}/site.config.m4-starttls >> ${SITECONFIG}
-	${ECHO} -n ' STARTTLS' >> ${DESCR_SRC}
+	${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
+	${ECHO} -n ' STARTTLS' >>${DESCR_SRC}
 .endif
-	${ECHO} >> ${DESCR_SRC}
+.if defined(USE_SASL) && ${USE_SASL} == YES
+	${CAT} ${FILESDIR}/site.config.m4-sasl >>${SITECONFIG}
+	${ECHO} -n ' SASL' >>${DESCR_SRC}
+.endif
+	${ECHO} >>${DESCR_SRC}
 
 do-build:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
@@ -107,9 +111,9 @@ post-build:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 .if ${USE_DB2} == YES
-	${ECHO} "" >> ${MESSAGE_SRC}
-	${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >> ${MESSAGE_SRC}
-	${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >> ${MESSAGE_SRC}
+	${ECHO} "" >>${MESSAGE_SRC}
+	${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >>${MESSAGE_SRC}
+	${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >>${MESSAGE_SRC}
 	${ECHO} >>${PLIST_SRC} "@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true"
 	${ECHO} >>${PLIST_SRC} "@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true"
 .endif
