@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2004/02/13 14:57:20 adam Exp $
+
+--- src/Makefile.in.orig	2004-02-13 15:47:17.000000000 +0000
++++ src/Makefile.in
+@@ -849,7 +849,7 @@ Symbols: create_symbols_file.sh
+ 
+ # Dependancies.
+ 
+-sndfile.c : Symbols
++sndfile.c:
+ 
+ aiff.c au.c au_g72x.c ircam.c mat4.c mat5.c nist.c paf.c pvf.c : sndfile.h common.h
+ raw.c svx.c voc.c w64.c wav.c wav_w64.c htk.c sd2.c rx2.c txw.c : sndfile.h common.h

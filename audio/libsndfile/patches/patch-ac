@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2002/10/18 13:26:12 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2004/02/13 14:57:20 adam Exp $
 
---- examples/sndfile-play.c.orig	Mon Aug  5 18:50:55 2002
+--- examples/sndfile-play.c.orig	2004-02-05 09:35:42.000000000 +0000
 +++ examples/sndfile-play.c
-@@ -20,16 +20,21 @@
- #include 	<unistd.h>
- #include 	<errno.h>
+@@ -27,16 +27,21 @@
+ #include <unistd.h>
+ #endif
  
 -#if defined (__linux__)
 +#if defined (__linux__) || defined(USE_OSS)
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.1 2002/10/18 13:26:12 jlam Exp $
  	#include <fcntl.h>
  	#include <sys/ioctl.h>
  	#include <sys/audioio.h>
-@@ -49,7 +54,7 @@
+@@ -57,7 +62,7 @@
  **	Linux/OSS functions for playing a sound.
  */
  
@@ -35,16 +35,16 @@ $NetBSD: patch-ac,v 1.1 2002/10/18 13:26:12 jlam Exp $
  
  static	int	linux_open_dsp_device (int channels, int srate) ;
  
-@@ -110,7 +115,7 @@ static int
+@@ -120,7 +125,7 @@ static int
  linux_open_dsp_device (int channels, int srate)
  {	int fd, stereo, temp, error ;
  
--	if ((fd = open ("/dev/dsp", O_WRONLY, 0)) == -1)
-+	if ((fd = open (DEV_DSP, O_WRONLY, 0)) == -1)
+-	if ((fd = open ("/dev/dsp", O_WRONLY, 0)) == -1 &&
++	if ((fd = open (DEV_DSP, O_WRONLY, 0)) == -1 &&
+ 		(fd = open ("/dev/sound/dsp", O_WRONLY, 0)) == -1)
  	{	perror("linux_open_dsp_device : open ") ;
  		exit (1) ;
- 		} ;
-@@ -468,7 +473,8 @@ win32_play (int argc, char *argv [])
+@@ -486,7 +491,8 @@ win32_play (int argc, char *argv [])
  **	Solaris.
  */
  
@@ -54,13 +54,17 @@ $NetBSD: patch-ac,v 1.1 2002/10/18 13:26:12 jlam Exp $
  
  static void
  solaris_play (int argc, char *argv [])
-@@ -562,11 +568,12 @@ main (int argc, char *argv [])
+@@ -593,7 +599,7 @@ main (int argc, char *argv [])
  		return 1 ;
  		} ;
  
 -#if defined (__linux__)
 +#if defined (__linux__) || defined(USE_OSS)
- 	linux_play (argc, argv) ;
+ 	#if (defined (HAVE_ALSA) && HAVE_ALSA)
+ 		if (access ("/proc/asound/cards", R_OK) == 0)
+ 			alsa_play (argc, argv) ;
+@@ -602,7 +608,8 @@ main (int argc, char *argv [])
+ 	#endif
  #elif (defined (__MACH__) && defined (__APPLE__))
  	macosx_play (argc, argv) ;
 -#elif (defined (sun) && defined (unix))
