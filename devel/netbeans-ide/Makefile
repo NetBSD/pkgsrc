@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/06/03 20:13:03 abs Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/28 11:47:35 abs Exp $
 #
 
 DISTNAME=	NetBeansIDE-release351
@@ -13,7 +13,7 @@ COMMENT=	NetBeans Java IDE
 
 USE_JAVA=	run
 PKG_JVMS_ACCEPTED=  sun-jdk13 sun-jdk14 jdk13 jdk14
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_X11=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
