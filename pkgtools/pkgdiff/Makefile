@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2004/01/05 11:32:40 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2004/01/06 08:29:59 jlam Exp $
 #
 
 DISTNAME=	pkgdiff-0.113
@@ -36,7 +36,13 @@ NROFF=		nroff
 DIFF?=		diff
 .endif
 
-INSTALLATION_DIRS=	bin man/cat1 man/man1
+INSTALLATION_DIRS=	bin
+.if !empty(MANINSTALL:Mcatinstall)
+INSTALLATION_DIRS+=	man/cat1
+.endif
+.if !empty(MANINSTALL:Mmaninstall)
+INSTALLATION_DIRS+=	man/man1
+.endif
 
 do-build:
 .for FILE in mkpatches patchdiff
