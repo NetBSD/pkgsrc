@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.17 2002/11/17 08:58:50 salo Exp $
+# $NetBSD: header,v 1.17.4.1 2003/07/24 23:45:09 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -33,6 +33,7 @@ PERL5="@PERL5@"
 RM="@RM@"
 RMDIR="@RMDIR@"
 SED="@SED@"
+SETENV="@SETENV@"
 SH="@SH@"
 SORT="@SORT@"
 SU="@SU@"
@@ -73,6 +74,8 @@ ALL_GROUPS=
 ALL_FILES=
 ALL_MAKE_DIRS=
 ALL_DIRS=
+
+PKG_INSTALLATION_TYPE="@PKG_INSTALLATION_TYPE@"
 
 case "${PKG_CREATE_USERGROUP:-@PKG_CREATE_USERGROUP@}" in
 [Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
