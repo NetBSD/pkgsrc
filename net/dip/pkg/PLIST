@@ -1,5 +1,17 @@
+@comment $NetBSD: PLIST,v 1.2 1998/04/16 16:50:34 tron Exp $
 sbin/dip
 sbin/diplogin
-man/man8/dip.8.gz
-man/man8/diplogin.8.gz
-lib/dip
+lib/dip/dialout.dip.sample
+lib/dip/ReadMe.HowTo
+lib/dip/sample2.dip
+lib/dip/diphosts
+lib/dip/sample.dip
+lib/dip/setup.sh.sample
+lib/dip/ReadMe
+lib/dip/sample1.dip
+lib/dip/startup.sh.sample
+man/cat8/dip.0
+man/cat8/diplogin.0
+man/man8/dip.8
+man/man8/diplogin.8
+@dirrm lib/dip
