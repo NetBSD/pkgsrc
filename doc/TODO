@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2722 2004/12/17 02:28:55 taca Exp $
+$NetBSD: TODO,v 1.2723 2004/12/17 18:39:39 salo Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,6 @@ Suggested package updates
 	o esh-0.8.5
 	o etach-1.4.0
 	o eterm-0.9.3
-	o ethereal-0.10.8
 	o ettercap-0.7.1 [wip/ettercap-NG|adrianp]
 	o eukleides-1.0.1
 	o everybuddy-0.4.3
