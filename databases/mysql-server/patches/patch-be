@@ -1,7 +1,7 @@
 $NetBSD$
 
---- mit-pthreads/machdep/engine-m68000-netbsd.h.orig	Tue Nov  8 16:39:15 1994
-+++ mit-pthreads/machdep/engine-m68000-netbsd.h	Wed Jul  7 04:29:09 1999
+--- mit-pthreads/machdep/engine-m68000-netbsd.h.orig	Sun Oct 12 14:07:37 1997
++++ mit-pthreads/machdep/engine-m68000-netbsd.h	Mon Nov 15 18:25:36 1999
 @@ -3,6 +3,9 @@
   *
   * $Id: engine-m68000-netbsd.h,v 1.51 1994/11/08 15:39:15 proven Exp $
@@ -12,24 +12,19 @@ $NetBSD$
   */
  
  #include <unistd.h>
-@@ -16,14 +19,14 @@
- #define SEMAPHORE_CLEAR 0
- #define SEMAPHORE_SET   0x80;
+@@ -18,12 +21,12 @@
  
--#define SEMAPHORE_TEST_AND_SET(lock)    \
--({										\
+ #define SEMAPHORE_TEST_AND_SET(lock)    \
+ ({										\
 -volatile long temp = SEMAPHORE_CLEAR;   \
 -										\
 -__asm__ volatile("tas (%2);	bpl 0f; movl #1,%0; 0:" \
--        :"=r" (temp)                    \
--        :"0" (temp),"r" (lock));        \
--temp;                                   \
-+#define SEMAPHORE_TEST_AND_SET(lock)            \
-+({                                              \
 +        volatile long temp = SEMAPHORE_CLEAR;   \
 +        __asm__ volatile(                       \
 +          "tas %2; bpl 0f; movl #1,%0; 0:"      \
-+          :"=r" (temp)                          \
+         :"=r" (temp)                    \
+-        :"0" (temp),"r" (lock));        \
+-temp;                                   \
 +          :"0" (temp),"m" (*lock));             \
 +        temp;                                   \
  })
@@ -56,11 +51,10 @@ $NetBSD$
   * Static machdep_pthread initialization values.
   * For initial thread only.
   */
-@@ -70,7 +80,27 @@
+@@ -70,6 +80,26 @@
  
  #if defined(PTHREAD_KERNEL)
  
--int machdep_save_state      __P_((void));
 +
 +#ifndef __machdep_stack_get
 +#define __machdep_stack_get(x)      (x)->machdep_stack
@@ -81,7 +75,6 @@ $NetBSD$
 +void *  __machdep_stack_alloc       __P_((size_t));
 +void    __machdep_stack_free        __P_((void *));
 +    
-+int machdep_save_state      __P_((void));
+ int machdep_save_state      __P_((void));
  
  #endif
- 
