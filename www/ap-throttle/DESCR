@@ -1,0 +1,3 @@
+mod_throttle allows throttling of connections to the Apache web
+server. It uses System V shared memory and semaphores to implement the
+state information.
