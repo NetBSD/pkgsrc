@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/09/15 11:59:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/06/23 11:02:02 cjep Exp $
 bin/hoststat
 bin/mailq
 bin/newaliases
@@ -210,6 +210,6 @@ share/sendmail/siteconfig/uucp.ucbvax.m4
 @dirrm share/sendmail/hack
 @dirrm share/sendmail/feature
 @dirrm share/sendmail/domain
-@unexec ${RM} -rf %D/share/sendmail/cf
+@dirrm share/sendmail/cf
 @dirrm share/sendmail
 @dirrm share/examples/sendmail
