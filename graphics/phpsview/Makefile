@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/03 18:49:44 reed Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/25 00:27:56 xtraeme Exp $
 #
 
 DISTNAME=	pwc-8.12
@@ -15,7 +15,7 @@ MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://www2.starcat.ne.jp/~takam/bsd/NetBSD.html#qcamPro
 COMMENT=	Philips USB Cameras Utilities
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=	    yes
 
 do-build:
 	for f in phpsshot phpsview ; do				\
@@ -29,7 +29,7 @@ do-install:
 		${INSTALL_PROGRAM} $$f ${PREFIX}/bin ;	\
 	done
 
-.include "../../graphics/imlib/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/imlib/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
