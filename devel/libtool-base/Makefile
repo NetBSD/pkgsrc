@@ -1,8 +1,16 @@
-# $NetBSD: Makefile,v 1.50 2004/12/21 13:50:25 grant Exp $
+# $NetBSD: Makefile,v 1.51 2004/12/22 02:44:02 tv Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
 
+#
+# HEADS UP!  Before changing PKGREVISION:  Did you remember to merge
+# any changes into the m4 manual diffs?  Updating patch-a* is not enough!
+#
+# See devel/libtool/patches/README.manual for instructions on how to make
+# these patch files properly, so that your changes won't be lost completely
+# on the next libtool update.
+#
 PKGNAME=	${DISTNAME:S/-/-base-/}
 PKGREVISION=	9
 SVR4_PKGNAME=	ltoob
