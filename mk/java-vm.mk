@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.28 2004/07/02 22:10:51 wiz Exp $
+# $NetBSD: java-vm.mk,v 1.29 2004/07/07 11:25:09 xtraeme Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -190,19 +190,6 @@ _PKG_JVM=	${_PKG_JVM_FIRSTACCEPTED}
 PKG_FAIL_REASON=	"no acceptable JVM found"
 _PKG_JVM=		"none"
 .endif
-
-BUILDLINK_DEPENDS.jdk?=			jdk-[0-9]*
-BUILDLINK_DEPENDS.jdk12?=		jdk12-[0-9]*
-BUILDLINK_DEPENDS.jdk13?=		jdk13-[0-9]*
-BUILDLINK_DEPENDS.jdk14?=		jdk14-[0-9]*
-BUILDLINK_DEPENDS.sun-jdk13?=		sun-jdk13-[0-9]*
-BUILDLINK_DEPENDS.sun-jre13?=		sun-jre13-[0-9]*
-BUILDLINK_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
-BUILDLINK_DEPENDS.sun-jre14?=		sun-jre14-[0-9]*
-BUILDLINK_DEPENDS.blackdown-jdk13?=	blackdown-jdk13-[0-9]*
-BUILDLINK_DEPENDS.blackdown-jre13?=	blackdown-jre13-[0-9]*
-BUILDLINK_DEPENDS.kaffe?=		kaffe>=1.1.4
-BUILDLINK_DEPENDS.wonka?=		wonka-[0-9]*
 
 _JRE.jdk=		jdk
 _JRE.jdk12=		jdk12
