@@ -1,9 +1,16 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:36:27 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:36:24 skrll Exp $
 
-MD5 (libc-5.3.12-18.i386.rpm) = 0f14dc6e43739d10148af57423a14c53
-MD5 (libc-devel-5.3.12-18.i386.rpm) = c03ad5d961928d56cf90be35e827ef6e
-MD5 (libc-static-5.3.12-18.i386.rpm) = 0662b25878f2c4bb3c10ded7fcb79c92
-MD5 (kernel-headers-2.0.30-2.i386.rpm) = cc3a5ce8114f7885b483e057180eabee
-MD5 (binutils-2.9.1.tar.gz) = 8f9ad1a6e96742fd3069479171a63c22
-MD5 (egcs-1.1.1.tar.gz) = 0b3f0e856dcbb2241c183081fc7271af
-MD5 (egcs-1.1.1-NetBSD-19980104.diff.gz) = 8c4d952d999ead62f6604948c65c2454
+SHA1 (libc-5.3.12-18.i386.rpm) = da75ab31a38640dbaffe7ea76d11aed731aa879a
+Size (libc-5.3.12-18.i386.rpm) = 310258 bytes
+SHA1 (libc-devel-5.3.12-18.i386.rpm) = 6078f2c66683c184506b2daaa25e065bc9c6b101
+Size (libc-devel-5.3.12-18.i386.rpm) = 230213 bytes
+SHA1 (libc-static-5.3.12-18.i386.rpm) = 4b50d0c4c46b4b3cab9d90ea278848b491e99a61
+Size (libc-static-5.3.12-18.i386.rpm) = 314096 bytes
+SHA1 (kernel-headers-2.0.30-2.i386.rpm) = f481e5318a8eb174adf4b00a535ec7e79c4a9ab5
+Size (kernel-headers-2.0.30-2.i386.rpm) = 429959 bytes
+SHA1 (binutils-2.9.1.tar.gz) = 9df3cdcd34f81118ee403f8794b277ad28a57e14
+Size (binutils-2.9.1.tar.gz) = 5694541 bytes
+SHA1 (egcs-1.1.1.tar.gz) = 381f6c15ab042a4d3605490c29620ea5ad5592a6
+Size (egcs-1.1.1.tar.gz) = 11604853 bytes
+SHA1 (egcs-1.1.1-NetBSD-19980104.diff.gz) = 85ebc334bf9472b9595c4348a6bc440e836b922a
+Size (egcs-1.1.1-NetBSD-19980104.diff.gz) = 59770 bytes

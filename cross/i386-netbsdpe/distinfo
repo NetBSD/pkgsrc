@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:36:30 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:36:24 skrll Exp $
 
-MD5 (gcc-2.95.2-x86-win32-patches.tar.gz) = d7a4cf0082a222bd4ee780fb6ef94b82
-MD5 (unproven-pthreads-0.17.tar.gz) = caa913b1dc1991386b391c6964a60f5f
-MD5 (binutils-2.9.1.tar.gz) = 8f9ad1a6e96742fd3069479171a63c22
-MD5 (gcc-2.95.2.tar.gz) = 0e36957d734286e242e9697fd2806c4f
+SHA1 (gcc-2.95.2-x86-win32-patches.tar.gz) = 8018d7a1c32211fc7a2f413cd49c422f7ccfd2ec
+Size (gcc-2.95.2-x86-win32-patches.tar.gz) = 217965 bytes
+SHA1 (unproven-pthreads-0.17.tar.gz) = 9f50e31da916b341e0c1ce21012bbd95b1a08a7d
+Size (unproven-pthreads-0.17.tar.gz) = 234180 bytes
+SHA1 (binutils-2.9.1.tar.gz) = 9df3cdcd34f81118ee403f8794b277ad28a57e14
+Size (binutils-2.9.1.tar.gz) = 5694541 bytes
+SHA1 (gcc-2.95.2.tar.gz) = c3da103de3fa97c78ccc1b4fdc29fa25bf26a6c8
+Size (gcc-2.95.2.tar.gz) = 12885815 bytes
 SHA1 (patch-aa) = cd270eb18e0b65641a416c1215388dc9fb91f33d
 SHA1 (patch-co) = 8a6ca102d76ebda1dc4edf5d65da2a5d4cedb183
 SHA1 (patch-cp) = f94a5dfdb13cf00cc06854617defa56e8370d3b8
