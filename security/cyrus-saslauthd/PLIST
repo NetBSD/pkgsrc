@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/09 19:44:10 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/10 01:27:00 jlam Exp $
 etc/rc.d/saslauthd
 man/man8/saslauthd.8
 sbin/saslauthd
-share/examples/cyrus-saslauthd/LDAP_SASLAUTHD
-@dirrm share/examples/cyrus-saslauthd
