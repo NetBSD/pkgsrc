@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/08/28 23:54:21 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/25 22:05:46 jlam Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -22,6 +22,11 @@ NO_PACKAGE=	yes
 
 # Remove GCC optimization options.
 BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
+
+# Remove /opt/schily.
+.if ${LOCALBASE} != "/opt/schily"
+BUILDLINK_TRANSFORM+=	rmdir:/opt/schily 
+.endif 
 
 # Convert "-lreadline" into "-ledit -ltermcap -lm".
 BUILDLINK_TRANSFORM+=	l:readline:edit:termcap:m
