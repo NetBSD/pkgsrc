@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.10 2004/04/19 20:19:46 jmmv Exp $
+# $NetBSD: defs.Interix.mk,v 1.11 2004/04/20 18:43:17 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -121,6 +121,7 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
+_OPSYS_LIBTOOL_REQD=	1.5.2nb6 # base version of libtool required
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PKGTOOLS_REQD=	20040330
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
@@ -151,8 +152,6 @@ CPPFLAGS+=		-D_ALL_SOURCE
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-# FIXME: Adjust to work on this system and enable the lines below.
-#.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
-#_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
-#CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
-#.endif
+.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
+CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=262144
+.endif
