@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/09/30 21:47:14 seb Exp $
+# $NetBSD: Makefile,v 1.13 2003/11/11 16:10:36 abs Exp $
 #
 
 DISTNAME=       mawk-1.3.3
@@ -13,6 +13,9 @@ GNU_CONFIGURE=	yes
 TEST_TARGET=	mawk_test fpe_test
 
 .include "../../mk/bsd.prefs.mk"
+
+# mawk configure fails with -ffast-math
+CFLAGS:=	${CFLAGS:S/-ffast-math//}
 
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=              CPPFLAGS=
