@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2003/06/04 16:37:25 magick Exp $
+@comment $NetBSD: PLIST,v 1.12 2003/09/06 17:01:42 magick Exp $
 bin/${EMACSVER}
 bin/ellcc
 bin/gnuattach
@@ -1001,7 +1001,6 @@ lib/${EMACSVER}/info/xemacs.info-20
 lib/${EMACSVER}/info/xemacs.info-21
 lib/${EMACSVER}/info/xemacs.info-22
 lib/${EMACSVER}/info/xemacs.info-23
-lib/${EMACSVER}/info/xemacs.info-24
 lib/${EMACSVER}/info/xemacs.info-3
 lib/${EMACSVER}/info/xemacs.info-4
 lib/${EMACSVER}/info/xemacs.info-5
@@ -1009,6 +1008,7 @@ lib/${EMACSVER}/info/xemacs.info-6
 lib/${EMACSVER}/info/xemacs.info-7
 lib/${EMACSVER}/info/xemacs.info-8
 lib/${EMACSVER}/info/xemacs.info-9
+lib/${EMACSVER}/lisp/.cvsignore
 lib/${EMACSVER}/lisp/ChangeLog
 lib/${EMACSVER}/lisp/ChangeLog.GTK
 lib/${EMACSVER}/lisp/README
@@ -1280,6 +1280,7 @@ lib/${EMACSVER}/lisp/msw-mouse.el
 lib/${EMACSVER}/lisp/msw-mouse.elc
 lib/${EMACSVER}/lisp/msw-select.el
 lib/${EMACSVER}/lisp/msw-select.elc
+lib/${EMACSVER}/lisp/mule/.cvsignore
 lib/${EMACSVER}/lisp/mule/arabic.el
 lib/${EMACSVER}/lisp/mule/arabic.elc
 lib/${EMACSVER}/lisp/mule/auto-autoloads.el
