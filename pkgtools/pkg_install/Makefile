@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2003/09/11 07:14:42 reed Exp $
+# $NetBSD: Makefile,v 1.83 2003/09/13 04:08:12 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -22,11 +22,19 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
+NO_BUILDLINK=		# defined
 NO_CHECKSUM=		# defined
 NO_MTREE=		# defined
 NO_PKG_REGISTER=	# defined
 NO_PACKAGE=		Deinstallation is not permitted
 PKG_PRESERVE=		# defined
+
+LIBNBCOMPAT_FILESDIR=	${.CURDIR}/../../pkgtools/libnbcompat/files
+LIBNBCOMPAT_SRCDIR=	${WRKDIR}/libnbcompat
+
+CFLAGS+=		-I${LIBNBCOMPAT_SRCDIR}
+LDFLAGS+=		-L${LIBNBCOMPAT_SRCDIR}
+LIBS+=			-lnbcompat
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,7 +45,11 @@ PKG_DBDIR?=		/var/db/pkg
 PKG_INFO=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
 
 do-extract:
+	@${CP} -Rp ${LIBNBCOMPAT_FILESDIR} ${LIBNBCOMPAT_SRCDIR}
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
+
+pre-configure:
+	cd ${LIBNBCOMPAT_SRCDIR} && ./configure && ${MAKE_PROGRAM}
 
 post-install:
 	if [ ! -f ${PKG_DBDIR}/pkgdb.byfile.db ]; then			\
@@ -47,7 +59,6 @@ post-install:
 		${PKG_ADMIN} rebuild;					\
 	fi
 
-.include "../../pkgtools/libnbcompat/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
