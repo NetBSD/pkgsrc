@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/07/16 13:36:48 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/05/26 15:33:17 tv Exp $
 include/rsaref/des.h
 include/rsaref/global.h
 include/rsaref/md2.h
@@ -7,7 +7,7 @@ include/rsaref/rsa.h
 include/rsaref/rsaref.h
 @dirrm include/rsaref
 lib/librsaref.a
-lib/librsaref.so.2.0
+lib/librsaref.so.3.0
 share/doc/rsaref/info.txt
 share/doc/rsaref/rsaref.txt
 @dirrm share/doc/rsaref
