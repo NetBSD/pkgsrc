@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.23 2004/07/28 15:17:42 wiz Exp $
+$NetBSD: patch-ab,v 1.24 2004/12/25 02:54:13 wiz Exp $
 
---- mpi/config.links.orig	2004-01-13 12:21:39.000000000 +0100
+--- mpi/config.links.orig	2004-10-26 19:06:47.000000000 +0200
 +++ mpi/config.links
-@@ -197,6 +197,14 @@ case "${target}" in
+@@ -197,6 +197,14 @@ case "${host}" in
  	cat  $srcdir/mpi/m68k/syntax.h	    >>./mpi/asm-syntax.h
  	path="m68k"
  	;;

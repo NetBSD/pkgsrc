@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.71 2004/11/08 21:17:01 tv Exp $
+# $NetBSD: Makefile,v 1.72 2004/12/25 02:54:13 wiz Exp $
 
-DISTNAME=	gnupg-1.2.6
-PKGREVISION=	1
+DISTNAME=	gnupg-1.4.0
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
-		ftp://ftp.planetmirror.com/pub/gnupg/gnupg/ \
+		ftp://ftp.planetmirror.com/pub/gnupg/ \
 		ftp://gd.tuwien.ac.at/privacy/gnupg/gnupg/ \
 		ftp://ftp.jyu.fi/pub/crypt/gcrypt/gnupg/ \
-		ftp://ftp.freenet.de/pub/ftp.gnupg.org/gcrypt/gnupg/
+		ftp://ftp.cert.dfn.de/pub/tools/crypt/gcrypt/gnupg/ \
+		ftp://ftp.ring.gr.jp/pub/net/gnupg/gnupg/
 EXTRACT_SUFX=	.tar.bz2
-# don't remove this -- we may add idea.c.gz to it below
+# don't remove this -- we may add idea.c.gz to it in options.mk
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	wiz@NetBSD.org
@@ -24,7 +24,7 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
-CONFIGURE_ARGS+=	--enable-tiger --with-static-rnd=auto
+CONFIGURE_ARGS+=	--with-static-rnd=auto
 CONFIGURE_ARGS+=	--with-mailprog=/usr/sbin/sendmail
 TEST_TARGET=		check
 
@@ -32,45 +32,12 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 INFO_FILES=	gpg.info gpgv.info
 
-.include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=	USE_I586 USE_IDEA USE_OPENLDAP M68060
-
-.if defined(USE_I586) && ${USE_I586} == YES
-# use assembler routines optimized for i586
-ONLY_FOR_PLATFORM=	*-*-i386
-MACHINE_GNU_ARCH=	i586
-.endif
-
-.if defined(M68060) && ${M68060} == YES
-# be more efficient on M68060 machines
-CONFIGURE_ENV+=                M68060=${M68060}
-CFLAGS+=                       -m68060
-.endif
-
-.if defined(USE_IDEA) && ${USE_IDEA} == YES
-# use of IDEA as crypto function
-LICENCE=	fee-based-commercial-use
-DISTFILES+=	idea.c.gz
-SITES_idea.c.gz=ftp://ftp.gnupg.dk/pub/contrib-dk/ \
-		http://www.gnupg.dk/contrib-dk/
+.include "options.mk"
 
 INSTALLATION_DIRS=	bin libexec/gnupg man/man1 man/man7 share/gnupg
 
-pre-configure:
-	${GZCAT} ${DISTDIR}/idea.c.gz > ${WRKSRC}/cipher/idea.c
-.endif
-
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-.include "../../databases/openldap/buildlink3.mk"
-PLIST_SUBST+=	OPENLDAP=""
-.else
-CONFIGURE_ARGS+=--disable-ldap
-PLIST_SUBST+=	OPENLDAP="@comment "
-.endif
-
+# XXX: still needed?
 .if ${OPSYS} == "FreeBSD"
-
 SUBST_CLASSES=	    fixme
 SUBST_STAGE.fixme=  post-configure
 SUBST_FILES.fixme=  mpi/i386/mpih-add1.S mpi/i386/mpih-lshift.S \
@@ -78,7 +45,6 @@ SUBST_FILES.fixme=  mpi/i386/mpih-add1.S mpi/i386/mpih-lshift.S \
 		    mpi/i386/mpih-mul3.S mpi/i386/mpih-rshift.S \
 		    mpi/i386/mpih-sub1.S
 SUBST_SED.fixme=    -e "s,ALIGN (3),ALIGN (4),g"
-
 .endif
 
 post-install:

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2003/08/25 21:25:25 itojun Exp $
+$NetBSD: patch-aa,v 1.10 2004/12/25 02:54:13 wiz Exp $
 
---- cipher/idea-stub.c.orig	2003-07-31 00:15:51.000000000 +0900
-+++ cipher/idea-stub.c	2003-08-26 06:19:38.000000000 +0900
-@@ -131,9 +131,9 @@
+--- cipher/idea-stub.c.orig	2004-11-17 16:50:56.000000000 +0100
++++ cipher/idea-stub.c
+@@ -132,9 +132,9 @@ load_module (const char *name)
      }
  
    sym = dlsym (handle, "idea_get_info");
