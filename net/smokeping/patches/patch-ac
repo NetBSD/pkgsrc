@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2005/01/22 21:50:54 adrianp Exp $
+$NetBSD: patch-ac,v 1.4 2005/01/22 21:53:28 adrianp Exp $
 
 --- etc/config.dist.orig	2005-01-22 19:52:46.000000000 +0000
 +++ etc/config.dist	2005-01-22 19:59:21.000000000 +0000
@@ -44,7 +44,7 @@ $NetBSD: patch-ac,v 1.3 2005/01/22 21:50:54 adrianp Exp $
  + FPing
  
 -binary = /usr/sepp/bin/fping
-+binary = @PREFIX@/bin/fping
++binary = @PREFIX@/sbin/fping
  
  *** Targets ***
  
