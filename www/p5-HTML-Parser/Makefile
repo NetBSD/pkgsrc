@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.26 2004/04/24 22:46:13 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/12/05 18:38:58 he Exp $
 #
 
-DISTNAME=		HTML-Parser-3.35
+DISTNAME=		HTML-Parser-3.42
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5hpa
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/author/GAAS/HTML-Parser/
+HOMEPAGE=		http://search.cpan.org/dist/HTML-Parser/
 COMMENT=		Perl5 module to parse HTML text documents
 
 DEPENDS+=		p5-HTML-Tagset>=3.0:../../www/p5-HTML-Tagset
