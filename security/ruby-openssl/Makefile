@@ -1,0 +1,33 @@
+# $NetBSD: Makefile,v 1.1.1.1 2002/01/04 16:35:49 taca Exp $
+
+DISTNAME=		ossl-${VERSION}
+PKGNAME=		${RUBY_PKGNAMEPREFIX}openssl-${VERSION}
+CATEGORIES=		security
+MASTER_SITES=		http://freesoftware.fsf.org/download/rubypki/
+EXTRACT_SUFX=		.tgz
+
+MAINTAINER=		taca@netbsd.org
+HOMEPAGE=		http://www.freesoftware.fsf.org/rubypki/
+COMMENT=		OpenSSL interface module for Ruby
+
+VERSION=		0.0.9
+DIST_SUBDIR=		ruby
+USE_RUBY_EXTCONF=	yes
+RUBY_REQD=		1.6.4
+USE_BUILDLINK_ONLY=	# defined
+USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
+
+CONFIGURE_ARGS=		--with-ssl-include="${BUILDLINK_DIR}/include" \
+			--with-ssl-lib="${BUILDLINK_DIR}/lib"
+INSTALL_TARGET=		site-install
+DOCS=			ChangeLog README
+
+post-install:
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/openssl
+.for f in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_DOCDIR}/openssl
+.endfor
+
+.include "../../lang/ruby-base/Makefile.common"
+.include "../../security/openssl/buildlink.mk"
+.include "../../mk/bsd.pkg.mk"
