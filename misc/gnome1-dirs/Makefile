@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/27 09:36:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/27 14:14:13 jmmv Exp $
 #
 
 DISTNAME=	gnome1-dirs-${GNOME_DIRS_VERSION}
@@ -19,8 +19,12 @@ NO_EXTRACT=	# defined
 USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 
-# No GNOME 1 specific directories yet.
-GNOME_DIRS=
+GNOME_DIRS=	share/applets/Amusements
+GNOME_DIRS+=	share/applets/Clocks
+GNOME_DIRS+=	share/applets/Monitors
+GNOME_DIRS+=	share/applets/Multimedia
+GNOME_DIRS+=	share/applets/Network
+GNOME_DIRS+=	share/applets/Utility
 
 .include "../../misc/gnome-dirs/Makefile.common"
 .include "../../misc/gnome-dirs/buildlink2.mk"
