@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/03/29 12:40:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2003/04/10 01:28:13 grant Exp $
 
 DISTNAME=	oss-${OSS_VERSION}	# Overridden below
 PKGNAME=	oss-${OSS_VERSION}
@@ -86,7 +86,7 @@ chroot:
 	${RM} ${WRKSRC}/usr/lib/oss/*.log
 
 do-install: chroot
-	cd ${WRKSRC}/usr; ${PAX} -rwpe lib/oss ${PREFIX}
+	cd ${WRKSRC}/usr && ${PAX} -rw -pe lib/oss ${PREFIX}
 	${INSTALL_DATA} ${FILESDIR}/MAKEDEV.oss ${OSSLIBDIR}
 	${LN} -sf ../lib/oss/mixer ${PREFIX}/bin/ossmixer
 	${LN} -sf ../lib/oss/mplay ${PREFIX}/bin/ossmplay
