@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.77 2005/01/28 18:32:40 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.78 2005/01/28 19:06:07 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -77,14 +77,6 @@ FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 FILES_SUBST+=		CONF_DEPENDS=${CONF_DEPENDS:C/:.*//:Q}
 FILES_SUBST+=		PKGBASE=${PKGBASE}
 FILES_SUBST+=		PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}
-
-# Database directory for reference-counted package objects.  Subdirectories
-# represent different classes of package objects, e.g. dirs, users,
-# group, etc.  The default value is ${PKG_DBDIR} with ".refcount"
-# appended to the name.
-#
-PKG_REFCOUNT_DBDIR?=	${PKG_DBDIR}.refcount
-FILES_SUBST+=		PKG_REFCOUNT_DBDIR=${PKG_REFCOUNT_DBDIR:Q}
 
 # PKG_USERS represents the users to create for the package.  It is a
 #	space-separated list of elements of the form
