@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/02/17 01:01:38 jtb Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/02 22:28:05 jtb Exp $
 
 DISTNAME=		gsl-1.3
 CATEGORIES=		math devel
@@ -10,7 +10,9 @@ COMMENT=		The GNU Scientific Library
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+TEST_TARGET=		check
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
