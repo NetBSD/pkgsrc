@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2002/10/02 19:36:55 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2003/08/04 14:45:26 seb Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 #CFLAGS+=	-g
 
 PLIST_SRC=		# empty
+
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	zebra.info
 
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
 USE_GNU_READLINE=	# uses rl_pending_input
@@ -60,5 +63,4 @@ post-install:
 	@${CHMOD} a+r ${PREFIX}/share/examples/zebra/*
 
 .include "../../mk/automake.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
