@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:38:10 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/12 20:07:10 grant Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -32,6 +32,8 @@ CONFIGURE_SCRIPT=	${SRCDIR}/configure
 SRCDIR=			${WRKDIR}/gcc-3.1
 ALL_TARGET=		CFLAGS="-O2 -fomit-frame-pointer" all
 
+USE_GCC2=		# defined
+
 post-extract:
 	${LN} -s ${WRKDIR}/newlib-1.10.0/newlib ${SRCDIR}/newlib
 	${MKDIR} ${WRKSRC}
@@ -42,5 +44,4 @@ post-install:
 		${LN} -s ${H8300_PREFIX}/bin/$$f ${PREFIX}/bin/$$f ; \
 	done
 
-.include "../../mk/gcc.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

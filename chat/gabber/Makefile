@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 21:25:43 grant Exp $
+# $NetBSD: Makefile,v 1.22 2003/09/12 20:07:09 grant Exp $
 
 DISTNAME=	gabber-0.8.8
 PKGREVISION=	1
@@ -16,13 +16,14 @@ USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
+USE_GCC2=		# defined
+
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-xmms --disable-sigctest
 
 .include "../../devel/gal/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../devel/libsigc++10/buildlink2.mk"
-.include "../../mk/gcc.buildlink2.mk"
 .include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk--/buildlink2.mk"

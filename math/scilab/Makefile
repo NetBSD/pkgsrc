@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/07/17 21:48:08 grant Exp $
+# $NetBSD: Makefile,v 1.41 2003/09/12 20:07:23 grant Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -63,7 +63,7 @@ post-install:
 	${RM} -f ${PREFIX}/lib/${PKGNAME}/macros/util/scipad.sci.orig
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-.  include "../../mk/gcc.buildlink2.mk"
+USE_GCC2=	# defined
 .endif
 
 # the "SCI=0 && unset SCI" is done because some of the tests really will

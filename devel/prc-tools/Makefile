@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/08/09 10:44:48 seb Exp $
+# $NetBSD: Makefile,v 1.12 2003/09/12 20:07:13 grant Exp $
 #
 
 DISTNAME=	prc-tools-2.2
@@ -37,6 +37,8 @@ AUTOCONF_REQD=	2.50
 USE_MAKEINFO=	YES
 INFO_FILES=	prc-tools.info
 
+USE_GCC2=	# defined
+
 #CONFIGURE_ARGS+=--target=m68k-palmos
 CONFIGURE_ARGS+=--enable-targets=m68k-palmos,arm-palmos
 CONFIGURE_ARGS+=--enable-languages=c,c++
@@ -60,6 +62,5 @@ pre-patch:
 		&& ${PATCH} --quiet -p0 < ${WRKSRC}/${DIST_GDB}.palmos.diff
 
 .include "../../mk/autoconf.mk"
-.include "../../mk/gcc.buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

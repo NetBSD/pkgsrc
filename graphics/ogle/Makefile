@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 21:41:59 grant Exp $
+# $NetBSD: Makefile,v 1.25 2003/09/12 20:07:20 grant Exp $
 
 DISTNAME=	ogle-0.9.1
 PKGREVISION=	3
@@ -25,6 +25,8 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 #CONFIGURE_ARGS+=	--enable-obsdaudio
 #CONFIGURE_ARGS+=	--disable-sunaudio
 
+USE_GCC2=		# defined
+
 .include "../../audio/liba52/buildlink2.mk"
 .include "../../audio/libmad/buildlink2.mk"
 .include "../../devel/binutils/buildlink2.mk"
@@ -32,5 +34,4 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../misc/libdvdread/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
-.include "../../mk/gcc.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

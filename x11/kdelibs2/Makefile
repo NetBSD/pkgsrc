@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2003/09/11 04:13:04 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2003/09/12 20:07:31 grant Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	6
@@ -96,12 +96,11 @@ post-install:
 
 # XXX See below for NetBSD/alpha issues.
 .if ${MACHINE_ARCH} == "alpha"
-.  include "../../mk/gcc.buildlink2.mk"
+USE_GCC2=	# defined
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC3=YES
-.  include "../../mk/gcc.buildlink2.mk"
+USE_GCC3=	# defined
 .endif
 
 .include "../../archivers/bzip2/buildlink2.mk"

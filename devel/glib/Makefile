@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2003/08/09 10:44:41 seb Exp $
+# $NetBSD: Makefile,v 1.62 2003/09/12 20:07:12 grant Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -39,8 +39,7 @@ CONFIGURE_ENV+=		glib_cv_rtldglobal_broken=no
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC3=YES
-.  include "../../mk/gcc.buildlink2.mk"
+USE_GCC3=		# defined
 .endif
 
 GLIB_VERSION=		${DISTNAME:S/glib-//}
