@@ -1,20 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2001/07/08 13:59:16 bad Exp $
+$NetBSD: patch-ae,v 1.7 2001/10/08 17:24:17 veego Exp $
 
---- configure.in.orig	Tue Jun 12 21:07:23 2001
-+++ configure.in	Sat Jul  7 23:37:11 2001
-@@ -629,7 +629,10 @@
-         AC_MSG_RESULT(yes)
-         AC_DEFINE(LIBWRAP)
-         AC_DEFINE(HAVE_LIBWRAP)
--        WRAPLIBS="-L$with_libwrap/lib -lwrap",
-+	if test "$with_libwrap" != "yes"; then
-+	    WRAPLIBS="-L${with_libwrap}/lib"
-+	fi
-+	WRAPLIBS="${WRAPLIBS} -lwrap",
-         AC_MSG_RESULT(no)
-         CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags}),
-       CPPFLAGS=${_cppflags} LDFLAGS=${_ldflags})
-@@ -1653,7 +1656,6 @@
+--- configure.in-orig	Wed Oct  3 18:08:31 2001
++++ configure.in	Sun Oct  7 19:56:24 2001
+@@ -1710,7 +1710,6 @@
  else
    bench_dirs=""
  fi
@@ -22,7 +10,7 @@ $NetBSD: patch-ae,v 1.6 2001/07/08 13:59:16 bad Exp $
  AC_SUBST(bench_dirs)
  
  # Don't build readline, i have it already
-@@ -1670,7 +1672,11 @@
+@@ -1727,7 +1726,11 @@
    # This requires readline to be in a standard place. Mosty for linux
    # there readline may be a shared library.
    readline_dir=""
@@ -35,21 +23,3 @@ $NetBSD: patch-ae,v 1.6 2001/07/08 13:59:16 bad Exp $
  fi
  AC_SUBST(readline_dir)
  AC_SUBST(readline_link)
-@@ -2043,15 +2049,15 @@
-     AC_DEFINE(HAVE_mit_thread)
-     MT_INCLUDES="-I\$(top_srcdir)/mit-pthreads/include"
-     AC_SUBST(MT_INCLUDES)
--    MT_LD_ADD="-L \$(top_srcdir)/mit-pthreads/obj/ -lpthread"
-+    MT_LD_ADD="\$(top_srcdir)/mit-pthreads/obj/libpthread.a"
-     AC_SUBST(MT_LD_ADD)
--    LIBS="$MT_LD_ADD $LIBS"
-     echo ""
-     echo "Configuring MIT Pthreads"
-     # We will never install so installation paths are not needed.
-     (cd mit-pthreads; sh ./configure)
-     echo "End of MIT Pthreads configuration"
-     echo ""
-+    LIBS="$MT_LD_ADD $LIBS"
-   fi
- fi
- AC_SUBST(sql_server_dirs)
