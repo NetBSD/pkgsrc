@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2002/05/17 13:21:30 abs Exp $
+# $NetBSD: Makefile,v 1.75 2002/05/20 13:14:19 cjep Exp $
 #
 
 DISTNAME=		xmame-0.60.1
@@ -22,6 +22,10 @@ TARGET=			${PKGBASE}
 UNLIMIT_RESOURCES=	datasize
 
 .include "../../mk/bsd.prefs.mk"
+
+.if (${MACHINE_ARCH} == "arm32" && ${CFLAGS} == "-O2")
+CFLAGS=			-O0
+.endif
 
 ROMPATH=		${PREFIX}/share/${TARGET}
 SPOOLDIR=		/var/games/${TARGET}
