@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.589 2002/11/24 13:37:22 chris Exp $
+$NetBSD: CHANGES,v 1.590 2002/11/24 13:56:14 chris Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3704,3 +3704,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xchat-gnome to 1.8.0nb1 [tron 2002-11-24]
 	Updated gnupg to 1.2.1nb1 [chris 2002-11-24]
 	Updated sylpheed to 0.8.6nb1 [chris 2002-11-24]
+	Updated gpgme to 0.3.13 [chris 2002-11-24]
