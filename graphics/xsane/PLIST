@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/19 19:36:48 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/18 12:43:31 tron Exp $
 bin/xsane
 man/man1/xsane.1
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xsane.mo
@@ -8,7 +8,10 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xsane.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/xsane.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xsane.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/xsane.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xsane.mo
@@ -21,6 +24,7 @@ share/sane/xsane/doc/sane-pnm-doc.html
 share/sane/xsane/doc/sane-problems-doc.html
 share/sane/xsane/doc/sane-scantips-doc.html
 share/sane/xsane/doc/sane-xsane-advanced-doc.html
+share/sane/xsane/doc/sane-xsane-batch-scan-doc.html
 share/sane/xsane/doc/sane-xsane-color-correction-doc.html
 share/sane/xsane/doc/sane-xsane-copy-doc.html
 share/sane/xsane/doc/sane-xsane-doc.html
@@ -45,6 +49,9 @@ share/sane/xsane/doc/xsane-advanced.jpg
 share/sane/xsane/doc/xsane-autoenhance.jpg
 share/sane/xsane/doc/xsane-autoraise_scanarea.jpg
 share/sane/xsane/doc/xsane-autoselect.jpg
+share/sane/xsane/doc/xsane-batch-scan-add.jpg
+share/sane/xsane/doc/xsane-batch-scan-delete.jpg
+share/sane/xsane/doc/xsane-batch-scan.jpg
 share/sane/xsane/doc/xsane-blur.jpg
 share/sane/xsane/doc/xsane-brightness.jpg
 share/sane/xsane/doc/xsane-clone.jpg
@@ -67,7 +74,19 @@ share/sane/xsane/doc/xsane-medium.jpg
 share/sane/xsane/doc/xsane-mirror-x.jpg
 share/sane/xsane/doc/xsane-mirror-y.jpg
 share/sane/xsane/doc/xsane-negative.jpg
+share/sane/xsane/doc/xsane-new.jpg
 share/sane/xsane/doc/xsane-ocr.jpg
+share/sane/xsane/doc/xsane-open.jpg
+share/sane/xsane/doc/xsane-paper-landscape-bottom-left.jpg
+share/sane/xsane/doc/xsane-paper-landscape-bottom-right.jpg
+share/sane/xsane/doc/xsane-paper-landscape-center.jpg
+share/sane/xsane/doc/xsane-paper-landscape-top-left.jpg
+share/sane/xsane/doc/xsane-paper-landscape-top-right.jpg
+share/sane/xsane/doc/xsane-paper-portrait-bottom-left.jpg
+share/sane/xsane/doc/xsane-paper-portrait-bottom-right.jpg
+share/sane/xsane/doc/xsane-paper-portrait-center.jpg
+share/sane/xsane/doc/xsane-paper-portrait-top-left.jpg
+share/sane/xsane/doc/xsane-paper-portrait-top-right.jpg
 share/sane/xsane/doc/xsane-pipette-black.jpg
 share/sane/xsane/doc/xsane-pipette-gray.jpg
 share/sane/xsane/doc/xsane-pipette-white.jpg
@@ -75,6 +94,7 @@ share/sane/xsane/doc/xsane-preferences.jpg
 share/sane/xsane/doc/xsane-preset-area.jpg
 share/sane/xsane/doc/xsane-preview.jpg
 share/sane/xsane/doc/xsane-printer.jpg
+share/sane/xsane/doc/xsane-rename.jpg
 share/sane/xsane/doc/xsane-resolution.jpg
 share/sane/xsane/doc/xsane-restore.jpg
 share/sane/xsane/doc/xsane-rgb-default.jpg
@@ -83,6 +103,7 @@ share/sane/xsane/doc/xsane-rotate-270.jpg
 share/sane/xsane/doc/xsane-rotate-90.jpg
 share/sane/xsane/doc/xsane-rotation.jpg
 share/sane/xsane/doc/xsane-save.jpg
+share/sane/xsane/doc/xsane-save2.jpg
 share/sane/xsane/doc/xsane-scale.jpg
 share/sane/xsane/doc/xsane-scansource.jpg
 share/sane/xsane/doc/xsane-setup-copy.jpg
