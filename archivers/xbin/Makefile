@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/10 11:49:59 pooka Exp $
+# $NetBSD: Makefile,v 1.3 2000/10/10 11:50:42 pooka Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -14,8 +14,8 @@ PRGNAME=	xbin
 EXTRACT_ONLY=	# blank
 
 post-extract:
-.for file in ${DISTFILES}
-	${CP} ${DISTDIR}/${file} ${WRKSRC}
+.for dfile in ${DISTFILES}
+	${CP} ${DISTDIR}/${dfile} ${WRKSRC}
 .endfor
 
 do-build:
