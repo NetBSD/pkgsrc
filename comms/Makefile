@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/05/06 07:41:48 sakamoto Exp $
+# $NetBSD: Makefile,v 1.17 1999/05/12 06:10:15 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/10/13 04:41:06 max Exp
 #
 
@@ -18,7 +18,7 @@
 #    SUBDIR += qpage
 #    SUBDIR += rzsz
 #    SUBDIR += seyon
-#    SUBDIR += snooper
+    SUBDIR += snooper
 #    SUBDIR += tkhylafax
 #    SUBDIR += xcept
     SUBDIR += xisp
