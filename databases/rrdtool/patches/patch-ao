@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1 2000/05/07 13:36:49 wulf Exp $
+$NetBSD: patch-ao,v 1.2 2000/12/05 11:15:42 wulf Exp $
 
---- contrib/rrdproc/Makefile.in.orig	Tue May  2 21:22:49 2000
-+++ contrib/rrdproc/Makefile.in	Sat May  6 00:52:17 2000
-@@ -84,7 +84,7 @@
+--- contrib/rrdproc/Makefile.in.orig	Thu Sep 14 15:34:35 2000
++++ contrib/rrdproc/Makefile.in	Tue Dec  5 20:57:56 2000
+@@ -86,7 +86,7 @@
  ZLIB_LIB_DIR = @ZLIB_LIB_DIR@
  
  EXTRA_DIST = rrdproc.c
