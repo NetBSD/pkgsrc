@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/23 14:24:04 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/03/11 16:11:36 hubertf Exp $
 GNUstep/Apps/WMMail.app/WMMail
-share/WindowMaker/Defaults/WWMail
+share/WindowMaker/Defaults/WMMail
 @dirrm GNUstep/Apps/WMMail.app

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/02/22 01:53:15 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/03/11 16:11:36 hubertf Exp $
 
 DISTNAME=	WMMail.app-0.62
 PKGNAME=	wmmail-0.62
@@ -22,6 +22,6 @@ post-install:
 		${SED} -e 's#@@X11BASE@@#${X11BASE}#g' \
 		       -e 's#@@LOCALBASE@@#${LOCALBASE}#g' \
 		       <${WRKSRC}/WMMail.defaults \
-		       >${PREFIX}/share/WindowMaker/Defaults/WWMail
+		       >${PREFIX}/share/WindowMaker/Defaults/WMMail
 
 .include "../../mk/bsd.pkg.mk"
