@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/10/18 09:56:57 agc Exp $
+# $NetBSD: Makefile,v 1.40 2001/10/22 06:14:31 martti Exp $
 #
 
 COMMENT=	Archivers
@@ -27,6 +27,8 @@ SUBDIR+=	lzop
 SUBDIR+=	macutil
 SUBDIR+=	mscompress
 SUBDIR+=	nulib2
+SUBDIR+=	p5-Archive-Tar
+SUBDIR+=	p5-Archive-Zip
 SUBDIR+=	php4-bz2
 SUBDIR+=	php4-zlib
 SUBDIR+=	ppunpack

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/10/18 11:23:27 skrll Exp $
+# $NetBSD: Makefile,v 1.37 2001/10/22 06:14:32 martti Exp $
 #
 
 COMMENT=	Character code converters
@@ -14,6 +14,8 @@ SUBDIR+=	latex2rtf
 SUBDIR+=	libiconv
 SUBDIR+=	macfork
 SUBDIR+=	mpack
+SUBDIR+=	p5-Convert-TNEF
+SUBDIR+=	p5-Convert-UUlib
 SUBDIR+=	p5-MIME-Base64
 SUBDIR+=	p5-Text-Iconv
 SUBDIR+=	psiconv
