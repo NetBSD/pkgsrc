@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.3 2003/09/18 19:13:54 wiz Exp $
+
+--- src/Makefile.in.orig	2002-03-26 17:09:36.000000000 +0100
++++ src/Makefile.in
+@@ -379,12 +379,12 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 
+ egrep:
+ 	echo '#!/bin/sh' >$@
+-	echo 'exec grep -E $${1+"$$@"}' >>$@
++	echo 'exec $(bindir)/'`echo grep|sed '$(transform)'`' -E $${1+"$$@"}' >>$@
+ 	chmod a+x $@
+ 
+ fgrep:
+ 	echo '#!/bin/sh' >$@
+-	echo 'exec grep -F $${1+"$$@"}' >>$@
++	echo 'exec $(bindir)/'`echo grep|sed '$(transform)'`' -F $${1+"$$@"}' >>$@
+ 	chmod a+x $@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
