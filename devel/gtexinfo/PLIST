@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/03 02:06:31 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/11/17 01:17:31 seb Exp $
 bin/info
 bin/infokey
 @unexec %D/bin/install-info --delete --info-dir=%D/info %D/info/info-stnd.info
@@ -20,6 +20,7 @@ info/texinfo-11
 info/texinfo-12
 info/texinfo-13
 info/texinfo-14
+info/texinfo-15
 info/texinfo-2
 info/texinfo-3
 info/texinfo-4
@@ -51,6 +52,8 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/texinfo.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/texinfo.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/texinfo.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/texinfo.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/texinfo.mo
 share/texinfo/texinfo.dtd
 share/texinfo/texinfo.xsl
