@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2000/07/06 15:36:04 tron Exp $
+
+--- gdk-pixbuf-config.in.orig	Tue Apr 11 03:56:56 2000
++++ gdk-pixbuf-config.in	Thu Jul  6 15:32:03 2000
+@@ -46,7 +46,7 @@
+       ;;
+     --libs)
+       libdirs=-L@libdir@
+-      echo $libdirs -lgdk_pixbuf `gtk-config --libs`
++      echo $libdirs -lgdk_pixbuf `gtk-config --libs` -ltiff -ljpeg
+       ;;
+     *)
+       echo "${usage}" 1>&2
