@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2545 2003/06/19 22:44:54 seb Exp $
+$NetBSD: CHANGES,v 1.2546 2003/06/20 06:00:52 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2504,3 +2504,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated galeon to 1.2.11 [taya 2003-06-19]
 	Added ssmtp-2.60.3 [jlam 2003-06-19]
 	Updated abcde to 2.1.4nb1 [seb 2003-06-19]
+	Updated zsh to 4.0.7 [uebayasi 2003-06-20]
