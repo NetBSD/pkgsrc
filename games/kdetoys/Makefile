@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2002/03/13 17:37:01 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/01 04:26:10 hubertf Exp $
 
 DISTNAME=	kdetoys-1.1.2
 PKGREVISION=	1
 CATEGORIES=	games kde
-MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/ \
-		ftp://ftp.de.kde.org/pub/kde/Attic/old/1.1.2/distribution/tar/generic/source/bz2/
+MASTER_SITES=	${MASTER_SITE_LOCAL}/kde1
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
