@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2000/03/24 14:46:47 ad Exp $
+
+--- termcap.c.orig	Fri Mar 24 14:36:38 2000
++++ termcap.c	Fri Mar 24 14:37:22 2000
+@@ -191,7 +191,11 @@
+    namebuf=0;
+   namebuf=vsncpy(sv(namebuf),sc(".termcap "));
+   namebuf=vsncpy(sv(namebuf),sc(JOERC));
++#ifdef __NetBSD__
++  namebuf=vsncpy(sv(namebuf),sc("termcap /usr/share/misc/termcap"));
++#else
+   namebuf=vsncpy(sv(namebuf),sc("termcap /etc/termcap"));
++#endif
+   }
+  }
+ 
