@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/18 03:01:16 fredb Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/18 16:01:17 fredb Exp $
 #
 
 DISTNAME=	xmountains_2.5
@@ -6,7 +6,7 @@ PKGNAME=	xmountains-2.5
 CATEGORIES=	x11
 MASTER_SITES=	http://www.epcc.ed.ac.uk/~spb/xmountains/
 
-PATCH_SITES=	${MASTER_SITES}/current_source/
+PATCH_SITES=	http://www.epcc.ed.ac.uk/~spb/xmountains/current_source/
 PATCHFILES=	vroot.h
 
 MAINTAINER=	fredb@netsd.org
