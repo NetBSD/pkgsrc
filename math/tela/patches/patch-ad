@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.7 2001/04/09 03:55:20 jtb Exp $
+$NetBSD: patch-ad,v 1.8 2002/05/03 23:32:13 jtb Exp $
 
 --- Makefile.orig	Tue Mar  6 18:25:25 2001
 +++ Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.7 2001/04/09 03:55:20 jtb Exp $
  GNUZIP = gzip -9
  
 -READLINEINCLUDE = -I/usr/local/include
-+READLINEINCLUDE = -I${READLINE_PREFIX}/include
++READLINEINCLUDE = 
  SGML2PS = sgml2latex
  #HDFLIBS = /usr/local/lib/libdf.a
  #DLDINCLUDE =

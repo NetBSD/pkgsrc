@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2001/04/09 04:09:48 jtb Exp $
+$NetBSD: patch-ab,v 1.5 2002/05/03 23:32:13 jtb Exp $
 
 --- makeinc.in.orig	Thu Mar  8 23:55:48 2001
 +++ makeinc.in
@@ -30,12 +30,12 @@ $NetBSD: patch-ab,v 1.4 2001/04/09 04:09:48 jtb Exp $
 -HDFINCLUDE = @HDFDEF@
 -HDFLIBS = @HDFLIBS@
 -FLIBS = @FLIBS@
-+READLINELIB = -Wl,-R${READLINE_PREFIX}/lib -L${READLINE_PREFIX}/lib -lreadline -ltermcap
-+BLASLIB = -Wl,-R${BLAS_PREFIX}/lib -L${BLAS_PREFIX}/lib -lblas
-+LAPACKLIB = -Wl,-R${LAPACK_PREFIX}/lib -L${LAPACK_PREFIX}/lib -llapack
++READLINELIB = -Wl,-R${BUILDLINK_PREFIX.readline}/lib -lreadline -ltermcap
++BLASLIB = -Wl,-R${BUILDLINK_PREFIX.blas}/lib -lblas
++LAPACKLIB = -Wl,-R${BUILDLINK_PREFIX.lapack}/lib -llapack
 +DLDLIB = 
-+HDFINCLUDE = -I${HDF_PREFIX}/include/hdf -Dunix @HDFDEF@
-+HDFLIBS = -Wl,-R${HDF_PREFIX}/lib -L${HDF_PREFIX}/lib -lmfhdf -ldf -R${JPEG_PREFIX}/lib -L${JPEG_PREFIX}/lib -ljpeg -lz -lm
++HDFINCLUDE = -Dunix @HDFDEF@
++HDFLIBS = -Wl,-R${BUILDLINK_PREFIX.hdf}/lib -lmfhdf -ldf -R${BUILDLINK_PREFIX.jpeg}/lib -ljpeg -lz -lm
 +FLIBS = -lg2c
  EXTRALIBS = @EXTRALIBS@
  EXTRA_TARGETS = @EXTRA_TARGETS@
