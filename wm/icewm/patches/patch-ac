@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.5 2004/06/26 23:58:02 xtraeme Exp $
+
+Get icewm to look in the right place for START_PIXMAP
+
+--- src/wmtaskbar.cc.orig	Sun May 23 07:18:19 2004
++++ src/wmtaskbar.cc	Tue Jun 22 23:03:48 2004
+@@ -86,7 +86,8 @@
+     YResourcePaths subdirs(paths, base);
+ 
+     if ((icewmImage = themedirs.loadImage(base, ICEWM_PIXMAP)) == null &&
+-        (icewmImage = themedirs.loadImage(base, START_PIXMAP)) == null)
++        (icewmImage = themedirs.loadImage(base, START_PIXMAP)) == null &&
++        (icewmImage = subdirs.loadImage(base, START_PIXMAP)) == null)
+         icewmImage = subdirs.loadImage(base, ICEWM_PIXMAP);
+ 
+     windowsImage = subdirs.loadImage(base, "windows.xpm");
