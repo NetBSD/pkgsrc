@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 1999/11/12 15:29:16 rh Exp $
+$NetBSD: patch-ad,v 1.3 2000/03/08 17:02:05 pooka Exp $
 
---- Makefile.orig	Fri Nov  5 08:42:28 1999
-+++ Makefile	Fri Nov 12 16:24:44 1999
+--- Makefile.orig	Fri Nov  5 09:42:28 1999
++++ Makefile	Wed Mar  8 18:14:30 2000
 @@ -21,8 +21,8 @@
  
  FILES = $(FILEC) $(MIME)
@@ -13,15 +13,17 @@ $NetBSD: patch-ad,v 1.2 1999/11/12 15:29:16 rh Exp $
  
  HDRDIRS = -I../include $(CFLAGS)
  LIBDIRS = -L../lib
-@@ -33,11 +33,6 @@
+@@ -32,12 +32,7 @@
+ 		SHELL="$(SHELL)" HDRDIRS="$(HDRDIRS)" LIBDIRS="$(LIBDIRS)"
  
  $(MKMAKE): Makefile mkmkmk.c maker/mkmake.c
- 	$(CC) -DMKMKMK -DDEFCC=\"$(CC)\" $(HDRDIRS) $(LIBDIRS) mkmkmk.c -o $(MKMKMK)
+-	$(CC) -DMKMKMK -DDEFCC=\"$(CC)\" $(HDRDIRS) $(LIBDIRS) mkmkmk.c -o $(MKMKMK)
 -	@echo "-----------------------------------------------------------------"
 -	@echo "This Makefile assumes '.' is included in your PATH environment."
 -	@echo "If the following rule failed in '$(MKMKMK): not found'"
 -	@echo "retry like this >>>>>>>>   $(MAKE) "PATH=\".:\$$PATH\"
 -	@echo "-----------------------------------------------------------------"
++	$(CC) -DMKMKMK -DDEFCC='"$(CC)"' $(HDRDIRS) $(LIBDIRS) mkmkmk.c -o $(MKMKMK)
  	$(MKMKMK) -mkmkmk "$(CC)" $(HDRDIRS) $(LIBDIRS) maker/mkmake.c -o $@
  
  files:;	@echo $(FILES)
