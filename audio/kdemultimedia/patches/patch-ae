@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 1999/11/11 01:08:23 hubertf Exp $
+
+--- kscd/config.h.std.orig	Wed Nov 10 22:16:15 1999
++++ kscd/config.h.std	Wed Nov 10 22:18:53 1999
+@@ -123,13 +123,13 @@
+ 
+ #if defined(__FreeBSD__) || defined(__NetBSD__)
+ 
++#ifdef __FreeBSD__
+ /* Is this the most commonly used cd device on FreeBSD ? */
+-
+ #define DEFAULT_CD_DEVICE       "/dev/rmatcd0c"
+ 
+-/*
++#else /* __NetBSD__ */
+ #define DEFAULT_CD_DEVICE       "/dev/rcd0d"
+-*/
++#endif /* __FreeBSD__ */
+ 
+ /* Please have a look at void KSCD::playClicked() in kscd.cpp. You will find there
+    the following code:
