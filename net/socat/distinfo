@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/14 22:43:38 minskim Exp $
+
+SHA1 (socat-1.3.2.2.tar.gz) = 5026fdc2f65af4a7c711d08fc3cbace5123465ec
+Size (socat-1.3.2.2.tar.gz) = 285280 bytes
+SHA1 (patch-aa) = fae16d2affc6d821f51675cd8f456d41efb0cff9
