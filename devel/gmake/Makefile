@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2004/03/25 23:31:22 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2004/03/31 05:19:46 jlam Exp $
 
 DISTNAME=	make-3.80
 PKGNAME=	gmake-3.80
@@ -40,6 +40,7 @@ PLIST_SRC=		${PKGDIR}/PLIST
 
 GMAKE_LOCALE?=		yes
 BUILD_DEFS+=		GMAKE_LOCALE
+MAKEFLAGS+=		GMAKE_LOCALE=${GMAKE_LOCALE}
 .if !empty(GMAKE_LOCALE:M[yY][eE][sS])
 USE_PKGLOCALEDIR=	yes
 PLIST_SRC+=		${PKGDIR}/PLIST.locale
