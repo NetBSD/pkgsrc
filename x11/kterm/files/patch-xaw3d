@@ -1,4 +1,4 @@
-$NetBSD: patch-xaw3d,v 1.1.1.1 1999/06/09 11:34:01 sakamoto Exp $
+$NetBSD: patch-xaw3d,v 1.2 2001/08/23 04:26:55 jlam Exp $
 
 --- kterm.h.orig	Fri Jul 12 14:01:37 1996
 +++ kterm.h	Wed Jun  9 10:07:50 1999
@@ -17,7 +17,7 @@ $NetBSD: patch-xaw3d,v 1.1.1.1 1999/06/09 11:34:01 sakamoto Exp $
          TEKOBJS = TekPrsTbl.o Tekproc.o
  #endif
 +#ifdef KTERM_XAW3D
-+        XAWLIB = -lXaw3d
++        XAWLIB = ${LIBXAW}
 +#endif
            SRCS1 = button.c charproc.c cursor.c data.c input.c \
  		  main.c menu.c misc.c screen.c scrollbar.c tabs.c \

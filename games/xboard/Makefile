@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/11 06:34:34 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/08/23 04:26:53 jlam Exp $
 
 DISTNAME=		xboard-4.2.3
 CATEGORIES=		games
@@ -11,15 +11,12 @@ COMMENT=		graphical frontend for GNU Chess, Crafty, ICS or e-mail chess
 
 USE_PERL5=		# defined
 USE_X11=		# defined
-USE_XAW=		# defined
-USE_XPM=		# defined
 
 INFO_FILES=		xboard.info
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-xpm
 CONFIGURE_ARGS+=	--enable-zippy		# interface to ICS
-CPPFLAGS+=		-I${X11PREFIX}/include
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,4 +24,6 @@ CPPFLAGS+=		-I${X11PREFIX}/include
 CONFIGURE_ARGS+=	--with-Xaw3d
 .endif
 
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/xaw.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
