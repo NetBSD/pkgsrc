@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2001/05/29 03:31:26 itojun Exp $
+# $NetBSD: Makefile,v 1.38 2001/08/01 02:39:38 itojun Exp $
 
-DISTNAME=	sendmail.8.11.4
-PKGNAME=	sendmail-8.11.4
+DISTNAME=	sendmail.8.11.5
+PKGNAME=	sendmail-8.11.5
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
