@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/12 00:50:02 mjl Exp $
+share/texmf/doc/fonts/ocrb/ocrbinfo
+share/texmf/fonts/source/ocrb/ocrb10.mf
+share/texmf/fonts/source/ocrb/ocrb10e.mf
+share/texmf/fonts/source/ocrb/ocrb10f.mf
+share/texmf/fonts/source/ocrb/ocrb10g.mf
+share/texmf/fonts/source/ocrb/ocrb10l.mf
+share/texmf/fonts/source/ocrb/ocrb10s.mf
+share/texmf/fonts/source/ocrb/ocrb10x.mf
+share/texmf/fonts/source/ocrb/ocrb5.mf
+share/texmf/fonts/source/ocrb/ocrb6.mf
+share/texmf/fonts/source/ocrb/ocrb7.mf
+share/texmf/fonts/source/ocrb/ocrb8.mf
+share/texmf/fonts/source/ocrb/ocrb9.mf
+share/texmf/fonts/source/ocrb/ocrbdef.mf
+share/texmf/fonts/source/ocrb/ocrbmac.mf
+@unexec ${RM} -rf %D/share/texmf/fonts/tfm/ocrb || ${TRUE}
+@exec %D/bin/texconfig rehash
+@unexec %D/bin/texconfig rehash
+@dirrm share/texmf/fonts/source/ocrb
+@dirrm share/texmf/doc/fonts/ocrb
