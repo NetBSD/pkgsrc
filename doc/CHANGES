@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9629 2005/03/25 17:54:38 adrianp Exp $
+$NetBSD: CHANGES,v 1.9630 2005/03/25 18:31:09 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1750,3 +1750,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libgnomeprint to 2.10.2 [jmmv 2005-03-25]
 	Updated libgnomeprintui to 2.10.2 [jmmv 2005-03-25]
 	Updated libnet to 1.0.1nb5 [adrianp 2005-03-25]
+	Updated snort to 2.3.2 [adrianp 2005-03-25]
