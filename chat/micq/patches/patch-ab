@@ -1,13 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2001/01/31 19:10:12 tron Exp $
+$NetBSD: patch-ab,v 1.2 2001/11/28 17:30:39 wiz Exp $
 
---- mreadline.c.orig	Tue Jan 23 11:49:05 2001
-+++ mreadline.c	Wed Jan 24 22:01:31 2001
-@@ -359,7 +359,7 @@
-               break;
-            }
-         }
--	sprintf (s, "%s %s/", message_cmd,
-+	snprintf (s, sizeof(s), "%s %s/", message_cmd,
- 		tab_array[tab_pointer]);
- 	clen = cpos = strlen (s);
- 	R_undraw();
+--- src/mreadline.c.orig	Thu Nov 22 00:29:15 2001
++++ src/mreadline.c
+@@ -166,9 +166,10 @@
+     }
+ 
+     if ((uin = TabGetNext ()))
+-        sprintf (s, "%s %s/", message_cmd, UIN2Name (uin));
++        snprintf (s, sizeof(s), "%s %s/", message_cmd, UIN2Name (uin));
+     else
+-        sprintf (s, "%s ", message_cmd);
++        snprintf (s, sizeof(2), "%s ", message_cmd);
++
+ 
+     clen = cpos = strlen (s);
+     R_undraw ();
