@@ -1,4 +1,0 @@
-#!/bin/sh
-PATH=/bin:/sbin:/usr/bin:${PREFIX}/bsd/bin; export PATH
-
-exec md5
