@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2000/12/19 07:49:41 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/15 16:46:01 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
-PKGNAME=		ap-${DISTNAME}nb1
+PKGNAME=		ap-php-${PHP_VERS}
 
 MAINTAINER=		jdolecek@netbsd.org
 HOMEPAGE=		http://www.php.net/
