@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/03/15 20:43:09 kei Exp $
+
+--- 6x12B.bdf.orig	Fri Feb 20 23:42:53 1998
++++ 6x12B.bdf	Sun Jan 12 10:24:14 2003
+@@ -2,12 +2,12 @@
+ COMMENT 
+ COMMENT Font from bitmap
+ COMMENT 
+-FONT -Misc-Fixed-Bold-R-Normal--12-110-75-75-C-60-iso8859-1
++FONT -Naga-Fixed-Bold-R-Normal--12-110-75-75-C-60-iso8859-1
+ SIZE 12 75 75
+ FONTBOUNDINGBOX 6 12 0 -2
+ STARTPROPERTIES 20
+ FONTNAME_REGISTRY ""
+-FOUNDRY "Misc"
++FOUNDRY "Naga"
+ FAMILY_NAME "Fixed"
+ WEIGHT_NAME "Bold"
+ SLANT "R"
