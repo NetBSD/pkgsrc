@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/21 09:26:21 rh Exp $
+bin/libcrack_mkdict
+bin/libcrack_packer
+bin/libcrack_testlib
+bin/libcrack_testnum
+bin/libcrack_teststr
+bin/libcrack_unpacker
+include/cracklib/packer.h
+lib/libcrack.a
+lib/libcrack.la
+lib/libcrack.so.2.7
+libdata/pw_dict.pwd
+libdata/pw_dict.pwi
+libdata/pw_dict.hwm
+@dirrm include/cracklib
