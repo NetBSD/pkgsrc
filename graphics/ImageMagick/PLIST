@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2004/09/22 08:09:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.22 2004/09/27 11:04:24 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -89,6 +89,7 @@ include/magick/transform.h
 include/magick/type.h
 include/magick/utility.h
 include/magick/version.h
+include/magick/widget.h
 include/magick/xwindow.h
 include/wand/drawing_wand.h
 include/wand/magick_wand.h
@@ -111,7 +112,6 @@ lib/libWand.la
 lib/pkgconfig/ImageMagick++.pc
 lib/pkgconfig/ImageMagick.pc
 lib/pkgconfig/Wand.pc
-man/man1/ImageMagick.1
 man/man1/Magick++-config.1
 man/man1/Magick-config.1
 man/man1/Wand-config.1
@@ -127,9 +127,9 @@ man/man1/mogrify.1
 man/man1/montage.1
 man/man4/miff.4
 man/man5/quantize.5
+share/ImageMagick-${IM_MAJOR_LIB_VER}/ChangeLog
 share/ImageMagick-${IM_MAJOR_LIB_VER}/LICENSE
-share/ImageMagick-${IM_MAJOR_LIB_VER}/Magick.pdf
-share/ImageMagick-${IM_MAJOR_LIB_VER}/NOTICE
+share/ImageMagick-${IM_MAJOR_LIB_VER}/NEWS
 share/ImageMagick-${IM_MAJOR_LIB_VER}/config/coder.mgk
 share/ImageMagick-${IM_MAJOR_LIB_VER}/config/log.mgk
 share/ImageMagick-${IM_MAJOR_LIB_VER}/config/magic.mgk
@@ -152,7 +152,6 @@ share/ImageMagick-${IM_MAJOR_LIB_VER}/www/api/profile.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/compare.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/download.html
 share/ImageMagick-${IM_MAJOR_LIB_VER}/www/index.html
-share/ImageMagick-${IM_MAJOR_VER}/QuickStart.txt
 share/ImageMagick-${IM_MAJOR_VER}/images/ImageMagick.jpg
 share/ImageMagick-${IM_MAJOR_VER}/images/background.gif
 share/ImageMagick-${IM_MAJOR_VER}/images/devlib.gif
@@ -162,56 +161,6 @@ share/ImageMagick-${IM_MAJOR_VER}/images/logo.png
 share/ImageMagick-${IM_MAJOR_VER}/images/magick.png
 share/ImageMagick-${IM_MAJOR_VER}/images/networkeleven.png
 share/ImageMagick-${IM_MAJOR_VER}/images/pair.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/bricks.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/checkerboard.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/circles.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/crosshatch.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/crosshatch30.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/crosshatch45.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/fishscales.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray0.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray10.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray100.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray15.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray20.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray25.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray30.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray35.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray40.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray45.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray5.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray50.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray55.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray60.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray65.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray70.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray75.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray80.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray85.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray90.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/gray95.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/hexagons.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/horizontal.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/horizontalsaw.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/hs_bdiagonal.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/hs_cross.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/hs_diagcross.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/hs_fdiagonal.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/hs_horizontal.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/hs_vertical.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/left30.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/left45.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/leftshingle.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/octagons.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/right30.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/right45.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/rightshingle.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/smallfishscales.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/vertical.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/verticalbricks.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/verticalleftshingle.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/verticalrightshingle.png
-share/ImageMagick-${IM_MAJOR_VER}/images/patterns/verticalsaw.png
 share/ImageMagick-${IM_MAJOR_VER}/images/promote.png
 share/ImageMagick-${IM_MAJOR_VER}/images/right_triangle.png
 share/ImageMagick-${IM_MAJOR_VER}/images/right_triangle_option.png
@@ -336,7 +285,6 @@ share/ImageMagick-${IM_MAJOR_VER}/www/windows.html
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/www/api
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/www/Magick++
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/www
-@dirrm share/ImageMagick-${IM_MAJOR_VER}/images/patterns
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/images
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/config
 @dirrm share/ImageMagick-${IM_MAJOR_VER}
