@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.580 2003/05/24 11:24:48 salo Exp $
+$NetBSD: TODO,v 1.581 2003/05/24 11:31:16 martin Exp $
 
 Suggested new packages
 ======================
@@ -284,6 +284,7 @@ Suggested package updates
 	o xsidplay-1.6.5pre20
 	o yacas-1.0.55
 	o ysm-2.9.0
+	o zenicb 1.31 (needs merge with lots of local changes)
 
 Infrastructure problems which need addressing
 ========================================
