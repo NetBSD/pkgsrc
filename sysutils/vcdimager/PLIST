@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/11/25 12:30:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/08/05 21:22:36 seb Exp $
 bin/vcdimager
 bin/vcdrip
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/vcdimager.info
 info/vcdimager.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/vcdimager.info
 man/man1/vcdimager.1
 man/man1/vcdrip.1
