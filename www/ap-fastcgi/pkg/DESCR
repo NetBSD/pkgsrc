@@ -1,0 +1,6 @@
+FastCGI provides a high-performance alternative to CGI for writing Web
+server applications in a variety of languages, including Perl, C, C++,
+Java, and Python.  FastCGI gets its speed by having keeping application
+processes running between requests.  So, unlike CGI, you do not have the
+overhead of starting up a new process and doing application initialization
+(e.g. connecting to a database) each time somebody requests a document.
