@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 1999/10/29 13:58:38 agc Exp $
+# $NetBSD: Makefile,v 1.35 1999/11/17 14:51:57 drochner Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -7,6 +7,7 @@
 #    SUBDIR += Sather
 #    SUBDIR += bwbasic
 #    SUBDIR += cim
+    SUBDIR += cint
     SUBDIR += clisp
 #    SUBDIR += cmucl
 #    SUBDIR += eiffel
