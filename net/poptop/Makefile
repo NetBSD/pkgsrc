@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/08 04:32:23 dbj Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/24 10:33:01 agc Exp $
 
 DISTNAME=	pptpd-1.0.0
 PKGNAME=	poptop-1.0.0
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+= --with-libwrap
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(POPTOP_USE_MPPE)
-RUN_DEPENDS+=	${PREFIX}/sbin/pppd:../ppp-mppe
+DEPENDS+=	ppp-mppe-2.3.9:../../net/ppp-mppe
 CONFIGURE_ARGS+= --with-pppd=${PREFIX}/sbin/pppd
 .endif
 
