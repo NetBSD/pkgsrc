@@ -1,0 +1,25 @@
+$NetBSD: patch-aj,v 1.1.1.1 1998/10/07 13:11:35 agc Exp $
+
+--- sysdeps/bsd/prockernel.c	1998/10/07 11:54:44	1.1
++++ sysdeps/bsd/prockernel.c	1998/10/07 12:01:57
+@@ -31,7 +31,9 @@
+ #include <sys/proc.h>
+ #include <sys/user.h>
+ #include <machine/pcb.h>
++#ifdef __FreeBSD__
+ #include <machine/tss.h>
++#endif
+ 
+ #include <unistd.h>
+ #include <fcntl.h>
+@@ -120,8 +122,10 @@
+ 		{
+ 			/* Same like with pstats above. */
+ 			
++#ifdef __FreeBSD__
+ 			buf->kstk_esp = (u_int64_t) pcb.pcb_ksp;
+ 			buf->kstk_eip = (u_int64_t) pcb.pcb_pc;
++#endif
+ 			
+ 			buf->flags |= _glibtop_sysdeps_proc_kernel_pcb;
+ 		}

@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1.1.1 1998/10/07 13:11:35 agc Exp $
+
+--- sysdeps/bsd/shm_limits.c	1998/10/06 17:04:40	1.1
++++ sysdeps/bsd/shm_limits.c	1998/10/06 17:08:48
+@@ -27,7 +27,12 @@
+ 
+ /* #define KERNEL to get declaration of `struct shminfo'. */
+ 
++/* Tut, tut, tut - what about those namespaces? */
++#ifdef __NetBSD__
++#define _KERNEL
++#else
+ #define KERNEL
++#endif
+ 
+ #include <sys/ipc.h>
+ #include <sys/shm.h>
