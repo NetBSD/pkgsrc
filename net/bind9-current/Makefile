@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/15 18:41:50 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/15 19:25:50 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -8,11 +8,18 @@ MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
 
-DEPENDS+=	unproven-pthreads>=0.17:../../devel/unproven-pthreads
-
 # IPv6 ready, automatically detected
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=	USE_INET6
+
+# we cannot disable pthreads at this moment, it looks to be a a bug in
+# BIND9 configure.in
+.if 1	# defined(USE_UNPROVEN_PTHREADS) && ${USE_UNPROVEN_PTHREADS} == "YES"
+DEPENDS+=	unproven-pthreads>=0.17:../../devel/unproven-pthreads
+CONFIGURE_ARGS+=--enable-threads
+.else
+CONFIGURE_ARGS+=--disable-threads
+.endif
 
 # Sync these with devel/unproven-pthreads:
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
@@ -21,8 +28,7 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
 BIND_VERSION=	9.1.0b1
 DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-mit-pthreads \
-		--with-libtool=yes \
+CONFIGURE_ARGS+=--with-libtool=yes \
 		--sysconfdir=/etc \
 		--localstatedir=/var
 LDFLAGS+=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
