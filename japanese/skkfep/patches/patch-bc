@@ -1,0 +1,38 @@
+$NetBSD: patch-bc,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
+
+--- connsh.c.orig	Tue Sep 22 01:50:12 1998
++++ connsh.c	Sun Sep 27 13:41:53 1998
+@@ -21,6 +21,10 @@
+ #define vfork fork
+ #endif
+ 
++#ifdef USE_SERVER
++extern int skkservsock;
++#endif
++
+ #define	DEVICELEN	16
+ #define DEFAULT_SHELL	"/bin/csh"
+ 
+@@ -171,8 +175,9 @@
+ #endif /* not HPUX */
+ 
+ 	if((i = vfork()) < 0) {
+-		fprintf(stderr,"fork error\n");
+-		abort();
++		perror("fork");
++		reset_tty();
++		Exit(1);
+ 	}
+ 
+ 	if(i == 0) {	/* child */
+@@ -226,6 +231,10 @@
+ 		dup2(slave,1);
+ 		dup2(slave,2);
+ 		close(slave);
++#ifdef USE_SERVER
++		if (skkservsock >= 0)
++			close(skkservsock);
++#endif
+ 
+ 		seteuid(getuid());
+ 		p = &ShellName[strlen(ShellName)];

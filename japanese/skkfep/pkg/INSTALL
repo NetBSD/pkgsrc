@@ -1,0 +1,34 @@
+#! /bin/sh
+#	$NetBSD: INSTALL,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
+
+case "$2" in
+POST-INSTALL)
+	# install skkserv port number
+	if egrep '^skkserv[ 	]' /etc/services >/dev/null; then
+		:
+	else
+		echo '
+skkserv		1178/tcp		# SKK server' >>/etc/services
+	fi
+
+	# install skk.cf
+	if [ ! -f @PKGBASE@/etc/skk.conf ]; then
+		cat <<'END' >@PKGBASE@/etc/skk.conf
+# skk.conf - configuration file for SKK client programs
+
+# Syntax
+# Lines start with '#' are comments.
+#
+# skkserv_host:	<hostnme>	# Host which skkserv is running on.
+#				# default: localhost
+#
+# skkserv_port:	<port_number>	# TCP port number of skkserv.
+#				# default: lookup "skkserv" in services
+#
+
+# skkserv_host:	localhost
+# skkserv_port:	1178		
+END
+	fi
+	;;
+esac
