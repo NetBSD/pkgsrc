@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7770 2004/11/08 15:49:39 adam Exp $
+$NetBSD: CHANGES,v 1.7771 2004/11/08 16:31:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5165,3 +5165,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ImageViewer to 0.6.3 [adam 2004-11-08]
 	Updated allegro to 4.1.14nb2 [wiz 2004-11-08]
 	Updated cooledit to 3.17.11 [adam 2004-11-08]
+	Updated cups to 1.1.22 [adam 2004-11-08]
