@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/03 23:21:44 tron Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/13 20:20:57 snj Exp $
 
 DISTNAME=	oidentd-2.0.7
 CATEGORIES=	net
@@ -20,7 +20,7 @@ BUILD_DEFS+=	USE_INET6
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
-post-configure:
-	${ECHO} >>${WRKSRC}/config.h "#define PKG_SYSCONFDIR \"${PKG_SYSCONFDIR}\""
+post-patch:
+	${ECHO} >>${WRKSRC}/config.h.in "#define PKG_SYSCONFDIR \"${PKG_SYSCONFDIR}\""
 
 .include "../../mk/bsd.pkg.mk"
