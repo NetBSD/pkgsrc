@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/06/02 01:18:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/12 13:23:05 dillo Exp $
 #
 
 DISTNAME=	yacas-1.0.48
@@ -11,13 +11,11 @@ COMMENT=	Yet Another Computer Algebra System
 
 GNU_CONFIGURE=	YES
 
+TEST_TARGET=	test
+
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/yacas.sh ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/yacas.el ${PREFIX}/share/emacs/site-lisp
-
-test: build
-	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} test 2>&1 | \
-		tee ${WRKDIR}/tests.log
 
 .include "../../mk/bsd.pkg.mk"
