@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 1999/09/07 00:35:09 jwise Exp $
+# $NetBSD: Makefile,v 1.109 1999/09/07 22:18:28 tron Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -48,6 +48,7 @@
     SUBDIR += gtkglarea
     SUBDIR += gtkstep
 #    SUBDIR += gwm
+    SUBDIR += intlfonts
 #    SUBDIR += iv
     SUBDIR += kde
     SUBDIR += kdebase
