@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.18 2004/11/07 18:16:27 kim Exp $
+$NetBSD: patch-ac,v 1.19 2004/11/12 05:41:36 erh Exp $
 
---- Configure.orig	2004-10-19 15:36:21.000000000 -0400
-+++ Configure	2004-11-07 13:13:33.000000000 -0500
-@@ -2298,7 +2298,11 @@
+--- Configure.orig	2004-10-19 19:36:21.000000000 +0000
++++ Configure	2004-11-12 05:35:16.000000000 +0000
+@@ -2298,7 +2298,15 @@
  	;;
        2.99.9)
  	LSOF_TSTBIGF=" "
@@ -11,11 +11,15 @@ $NetBSD: patch-ac,v 1.18 2004/11/07 18:16:27 kim Exp $
 +	;;
 +      2.99.1[0-9])
 +	LSOF_TSTBIGF=" "
-+	LSOF_VERS="2991"
++	LSOF_VERS="2990"
++	if test -r ${LSOF_INCLUDE}/sys/bufq.h
++	then
++		LSOF_VERS="2991"
++	fi
  	;;
        2*)
  	LSOF_VERS=2000
-@@ -2316,7 +2320,7 @@
+@@ -2316,7 +2324,7 @@
      # Test for legal NetBSD version.
  
      case $LSOF_VERS in	# {
