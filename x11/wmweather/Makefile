@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/08/25 21:52:50 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/27 13:41:25 bouyer Exp $
 #
 
 DISTNAME=	wmWeather-1.31
@@ -13,6 +13,14 @@ COMMENT=	WindowMaker DockApp showing local weather conditions
 USE_BUILDLINK2=	# defined
 USE_X11BASE=	# defined
 REPLACE_PERL=	GrabWeather
+
+MAKE_FLAGS+=    EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+EXTRA_LOCAL_LIBS=       -lsocket
+.endif
 
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
