@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2002/08/31 04:04:36 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2002/09/23 15:02:26 wiz Exp $
 
-DISTNAME=		esound-0.2.28
+DISTNAME=		esound-0.2.29
 CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/esound/}
+MASTER_SITES=		ftp://ftp.gnome.org/pub/GNOME/sources/esound/0.2/ \
+			ftp://gd.tuwien.ac.at/hci/GNOME/gnome.org/sources/esound/0.2/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.tux.org/~ricdude/EsounD.html
