@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2000/01/21 05:11:22 itojun Exp $
+$NetBSD: patch-aa,v 1.4 2001/02/14 06:02:44 itojun Exp $
 
---- rblcheck.c.orig	Thu Aug 20 00:47:03 1998
-+++ rblcheck.c	Sun May  2 12:39:29 1999
+--- rblcheck.c.orig	Thu Aug 20 14:47:03 1998
++++ rblcheck.c	Wed Feb 14 15:01:20 2001
 @@ -79,6 +79,7 @@
  #include <sys/types.h>
  #include <netinet/in.h>
@@ -73,7 +73,7 @@ $NetBSD: patch-aa,v 1.3 2000/01/21 05:11:22 itojun Exp $
  			{
  				if( *cp == '\n' || *cp == '"' ||
  				  *cp == '\\' )
-@@ -308,23 +312,29 @@
+@@ -308,23 +312,30 @@
  	char **argv;
  {
  	extern int optind;
@@ -92,10 +92,12 @@ $NetBSD: patch-aa,v 1.3 2000/01/21 05:11:22 itojun Exp $
  
  	/* Add more sites you want in the default list of RBL-alike
  	   systems here. ### An easier way to change this is needed. ### */
- 	rblsites = togglesite( "rbl.maps.vix.com", rblsites );
+-	rblsites = togglesite( "rbl.maps.vix.com", rblsites );
 -	rblsites = togglesite( "rbl.dorkslayers.com", rblsites );
-+	rblsites = togglesite( "relays.orbs.org", rblsites );
-+	rblsites = togglesite( "dul.maps.vix.com", rblsites );
++	rblsites = togglesite( "blackholes.mail-abuse.org", rblsites );
++	rblsites = togglesite( "inputs.orbs.org", rblsites );
++	rblsites = togglesite( "outputs.orbs.org", rblsites );
++	rblsites = togglesite( "dialups.mail-abuse.org", rblsites );
 +	rblsites = togglesite( "relays.mail-abuse.org", rblsites );
  
  	progname = argv[ 0 ];
@@ -107,7 +109,7 @@ $NetBSD: patch-aa,v 1.3 2000/01/21 05:11:22 itojun Exp $
  		{
  			case 'q':
  				/* Quiet */
-@@ -372,10 +381,20 @@
+@@ -372,10 +383,20 @@
  		return -1;
  	}
  
@@ -132,7 +134,7 @@ $NetBSD: patch-aa,v 1.3 2000/01/21 05:11:22 itojun Exp $
  		fprintf( stderr, "%s: invalid IP address\n", progname );
  		usage();	
  		return -1;
-@@ -383,7 +402,7 @@
+@@ -383,7 +404,7 @@
  
  	for( ptr = rblsites; ptr != NULL; ptr = ptr->next )
  	{
