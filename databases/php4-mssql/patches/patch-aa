@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2004/07/14 08:03:16 jdolecek Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/29 19:03:57 wiz Exp $
 
 ===================================================================
 RCS file: /repository/php-src/ext/mssql/php_mssql.h,v
@@ -7,15 +7,6 @@ retrieving revision 1.23.4.11
 diff -p --unified=3 -r1.23.4.10 -r1.23.4.11
 --- php_mssql.h	2004/04/20 23:37:26	1.23.4.10
 +++ php_mssql.h	2004/06/04 01:02:21	1.23.4.11
-@@ -17,7 +17,7 @@
-  */
-
-
--/* $Id: patch-aa,v 1.1 2004/07/14 08:03:16 jdolecek Exp $ */
-+/* $Id: patch-aa,v 1.1 2004/07/14 08:03:16 jdolecek Exp $ */
-
- #ifndef PHP_MSSQL_H
- #define PHP_MSSQL_H
 @@ -37,9 +37,7 @@
  #include "sqldb.h"
 
