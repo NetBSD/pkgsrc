@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2002/03/14 16:21:57 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2002/03/14 20:44:21 tron Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -79,11 +79,12 @@ post-install:
 	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
 .else
-# remove empy file and directory that show up when one
+# remove empy file and directories that show up when one
 # does make install; make deinstall; make install
 post-install:
-	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/fixed
-	-${RMDIR} ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/v7
+	-cd ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include && \
+	${RM} -f fixed && \
+	${RMDIR} v7 v9
 .endif
 
 .include "../../mk/texinfo.mk"
