@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1998/10/07 19:45:26 agc Exp $
+$NetBSD: md5,v 1.2 1999/01/03 00:49:12 tron Exp $
 
-MD5 (gnome-core-0.30.tar.gz) = 93fcc3d40d5d8d1fb79f4ac026f83ca8
+MD5 (gnome-core-0.99.0.tar.gz) = 7458616e40bc2a5ab958c00e5a8d3804
