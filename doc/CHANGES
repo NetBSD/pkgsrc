@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8418 2004/12/24 00:44:51 wiz Exp $
+$NetBSD: CHANGES,v 1.8419 2004/12/24 03:21:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6484,3 +6484,17 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated speedtouch to 1.3.1 [skrll 2004-12-23]
 	Updated skype to 0.93.0.3 [rh 2004-12-24]
 	Removed pan-gnome [wiz 2004-12-24]
+	Updated aspell to 0.60.2 [wiz 2004-12-24]
+	Updated aspell-catalan to 20040130.1 [wiz 2004-12-24]
+	Updated aspell-czech to 20040614.1 [wiz 2004-12-24]
+	Updated aspell-danish to 1.4.42.1 [wiz 2004-12-24]
+	Updated aspell-english to 6.0.0 [wiz 2004-12-24]
+	Updated aspell-faroese to 0.2.16.1 [wiz 2004-12-24]
+	Updated aspell-gaeilge to 3.5.0 [wiz 2004-12-24]
+	Updated aspell-german to 20030222.1 [wiz 2004-12-24]
+	Updated aspell-italian to 0.53.0 [wiz 2004-12-24]
+	Updated aspell-norwegian to 0.50.1.0 [wiz 2004-12-24]
+	Updated aspell-polish to 0.51.0 [wiz 2004-12-24]
+	Updated aspell-russian to 0.99f7.1 [wiz 2004-12-24]
+	Updated aspell-svenska to 0.51.0 [wiz 2004-12-24]
+	Updated aspell-ukrainian to 0.51.0 [wiz 2004-12-24]
