@@ -4,5 +4,6 @@ and shares many features with Quintus and SICStus Prolog, including a
 compatible module system. Very fast compiler, garbage collection (also
 on atoms), fast and powerful C/C++ interface, autoloading,
 GNU-readline interface.  SWI-Prolog supports architectures with 32-bit
-or greater (64-bit) word-length.  Packages for process management,
-TCP/IP, XML/SGML, RDF, and the GUI toolkit XPCE, are also available.
+or greater (64-bit) word-length. 
+
+This is a meta-package that pulls in the interpreter and packages.
