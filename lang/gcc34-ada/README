@@ -1,0 +1,22 @@
+The Ada compiler front-end of gcc is itself written
+in Ada. Consequently, an Ada compiler must be used
+to build this pkg. In pkgsrc, lang/gcc33-ada is version
+3.3 of the gcc Ada compiler; it also requires an Ada
+compiler to build. This pkg may also be built using
+lang/gcc3 (which contains Ada).
+
+You can download a pre-built version this package
+(suitable for bootstrapping lang/gcc3) from: 
+
+http://www.johnrshannon.com/NetBSD/ix86/gcc-adaAda-3.4.0.tgz
+http://www.johnrshannon.com/NetBSD/pentium4/gccAda-3.4.0.tgz
+http://www.johnrshannon.com/NetBSD/x86_64/gccAda-3.4.0.tgz
+
+The first two pkgs were built on NetBSD 2.0-BETA. The AMD64
+pkg was built under NetBSD 1.6ZL.
+
+Full Ada language support is provided for:
+  Intel Ix86 on NetBSD with native pthread support
+  AMD 64 on NetBSD with native pthread support
+
+See comments in Makefile on selecting a bootstrap compiler.
