@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2002/11/19 09:35:27 martti Exp $
+# $NetBSD: Makefile,v 1.64 2002/12/07 02:39:06 schmonz Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -49,7 +49,7 @@ BUILD_DEFS+=		USE_INET6
 .include "../../mk/bsd.prefs.mk"
 
 .if !defined(USE_INET6) || ${USE_INET6} != YES
-IGNORE=			"IPv6 only build"
+PKG_FAIL_REASON=	"IPv6 only build"
 .endif
 
 .if empty(STRIPFLAG)

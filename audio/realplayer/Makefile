@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/09/28 23:52:42 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/12/07 02:38:52 schmonz Exp $
 
 PKGNAME=		realplayer-8.0.1
 WRKSRC=			${WRKDIR}/RealPlayer8
@@ -24,7 +24,7 @@ COMMENT=		RealAudio and RealVideo player
 DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 . elif ${MACHINE} == "sparc"
 .  if !exists(/emul/svr4/usr/lib/ld.so)
-IGNORE=	"${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
+PKG_FAIL_REASON= "${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
 .  endif
 . endif
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/23 23:15:14 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/07 02:39:08 schmonz Exp $
 
 DISTNAME=	xvattr-1.3
 CATEGORIES=	x11
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		# defined
 .include "../../mk/bsd.prefs.mk"
 
 .if !exists(${X11BASE}/include/X11/extensions/Xvlib.h)
-IGNORE=			"${PKGNAME} requires libXv.a."
+PKG_FAIL_REASON=	"${PKGNAME} requires libXv.a"
 .endif
 
 .include "../../x11/gtk/buildlink2.mk"

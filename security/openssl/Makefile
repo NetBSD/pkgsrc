@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2002/11/30 05:13:23 uebayasi Exp $
+# $NetBSD: Makefile,v 1.63 2002/12/07 02:39:03 schmonz Exp $
 
 DISTNAME=		openssl-0.9.6g
 SVR4_PKGNAME=		ossl
@@ -54,7 +54,7 @@ PATCHFILES=		openssl-0.9.6g-20020810-netbsd.patch.gz
 PKG_SYSCONFDIR.${PKGBASE}?=	/etc/openssl
 
 . if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
-IGNORE=			${PKGNAME} requires shared object support
+PKG_FAIL_REASON=	${PKGNAME} requires shared object support
 . endif
 
 # This hack goes away, once we formally de-support NetBSD-1.4.x.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 09:07:11 agc Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/07 02:38:57 schmonz Exp $
 #
 
 DISTNAME=	guavac-1.2
@@ -33,5 +33,5 @@ post-install:
 
 HAVE_GCC27!=	${CXX} -v 2>&1 | ${GREP} '2\.7\.'; ${ECHO}
 .if !empty(HAVE_GCC27)
-IGNORE=		"${PKGNAME} requires gcc 2.8 or egcs or better for ANSI C++"
+PKG_FAIL_REASON= "${PKGNAME} requires gcc 2.8 or egcs or better for ANSI C++"
 .endif

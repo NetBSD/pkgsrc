@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2002/10/20 00:39:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2002/12/07 02:38:58 schmonz Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -242,7 +242,7 @@ _RUBY_PROVIDED!= case `expr ${_RUBY_VERMAJOR} ">" ${_RUBY_REQMAJOR}` in \
 		esac ;; \
 	esac; ${ECHO} "no"
 .if ${_RUBY_PROVIDED} == "no"
-IGNORE+=		"This package requires ruby ${RUBY_REQD} or later."
+PKG_FAIL_REASON+=	"This package requires ruby ${RUBY_REQD} or later."
 .endif
 .else
 RUBY_REQD?=		${RUBY_VERSION}
