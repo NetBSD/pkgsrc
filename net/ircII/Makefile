@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2000/01/31 23:00:45 mrg Exp $
+# $NetBSD: Makefile,v 1.25 2000/02/09 18:21:11 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -16,6 +16,9 @@ GNU_CONFIGURE=		yes
 .if defined(DEFAULT_IRC_SERVER)
 CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER}
 .endif
+
+# Note: this pkg auto-detects IPv6 without regarding USE_INET6.
+# (Leave the above line in to still get it into the README-IPv6.html!)
 
 PLIST_SRC=		${WRKDIR}/PLIST.tmp
 BUILD_DEFS+=		USE_SOCKS
