@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/07/18 12:16:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2002/07/19 02:34:34 hubertf Exp $
 
 DISTNAME=		sylpheed-0.8.0
 CATEGORIES=		mail news x11
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-gpgme
-CONFIGURE_ARGS+=	--disable-compface
+CONFIGURE_ARGS+=	--enable-compface
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6
@@ -29,6 +29,7 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
+.include "../../graphics/compface/buildlink.mk"
 .include "../../security/gpgme/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
