@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/02/20 22:48:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1999/02/22 01:53:15 tron Exp $
 
 DISTNAME=	WMMail.app-0.62
 PKGNAME=	wmmail-0.62
@@ -16,7 +16,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+CONFIGURE_ENV+=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" SHELL="/bin/sh"
 
 post-install:
 		${SED} -e 's#@@X11BASE@@#${X11BASE}#g' \
