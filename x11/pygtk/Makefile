@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/25 04:16:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/01 17:57:21 snj Exp $
 #
 
 DISTNAME=	pygtk-0.6.9
@@ -17,12 +17,13 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 PY_PATCHPLIST=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
-.include "../../graphics/imlib/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../devel/libglade/buildlink2.mk"
+.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../x11/gtkglarea/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtkglarea/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
