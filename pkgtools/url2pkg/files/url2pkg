@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.14 2001/01/28 17:30:20 hubertf Exp $
+# $NetBSD: url2pkg,v 1.15 2001/02/16 13:06:20 wiz Exp $
 #
 # url2pkg
 # (c) 1999 Hubert Feyrer
@@ -74,6 +74,7 @@ if [ ! -f w*/.extract_done ]; then
 	echo ""
 	echo "MAINTAINER=	$email_maintainer"
 	echo "HOMEPAGE=	"
+	echo "COMMENT=	<SHORT_DESCRIPTION_OF_THE_PACKAGE>"
 	echo ""
 	echo '.include "../../mk/bsd.pkg.mk"'
 	) >Makefile
@@ -133,13 +134,10 @@ echo ""
 echo "Contents of "`echo w*`"/${wrksrc}:"
 ls -la w*/$wrksrc
 
-if [ ! -f pkg/COMMENT ]; then
-	touch pkg/COMMENT
-fi
 if [ ! -f pkg/DESCR ]; then
 	touch pkg/DESCR
 fi
 echo ""
-echo "Don't forget to fill in pkg/COMMENT and pkg/DESCR when you're done."
+echo "Don't forget to fill in the COMMENT variable and pkg/DESCR when you're done."
 echo ""
 echo "Good luck! (See pkgsrc/Packages.txt for some more help :-)"

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.40 2001/01/13 15:35:53 tv Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.41 2001/02/16 13:06:19 wiz Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -49,6 +49,7 @@ STRIPFLAG?=	-s
 .endif
 
 AWK?=		/usr/bin/awk
+CAT?=		/bin/cat
 BASENAME?=	/usr/bin/basename
 ECHO?=		echo
 ECHO_MSG?=	${ECHO}
@@ -143,13 +144,9 @@ README.html: .PRECIOUS
 .for entry in ${SUBDIR}
 .if defined(PKGSRCTOP)
 	@${ECHO} -n '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`${ECHO} ${entry} | ${HTMLIFY}`"'</a>: <TD>' >> $@.tmp
+	@${ECHO} `cd ${entry} && ${MAKE} ${MAKEFLAGS} show-comment | ${HTMLIFY}` >> $@.tmp
 .else
-	@${ECHO} -n '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} ${MAKEFLAGS} package-name | ${HTMLIFY}`</a>: <TD>" >> $@.tmp
-.endif
-.if exists(${entry}/pkg/COMMENT)
-	@${HTMLIFY} ${entry}/pkg/COMMENT >> $@.tmp
-.else
-	@${ECHO} "(no description)" >> $@.tmp
+	@${ECHO} '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} ${MAKEFLAGS} make-readme-html-help`" >> $@.tmp
 .endif
 .endfor
 	@${SORT} -t '>' +3 -4 $@.tmp > $@.tmp2
@@ -159,7 +156,7 @@ README.html: .PRECIOUS
 .else
 	@> $@.tmp3
 .endif
-	@cat ${README} | \
+	@${CAT} ${README} | \
 		${SED} -e 's/%%CATEGORY%%/'"`${BASENAME} ${.CURDIR}`"'/g' \
 			-e '/%%NUMITEMS%%/r$@.tmp4' \
 			-e '/%%NUMITEMS%%/d' \
@@ -180,6 +177,15 @@ README.html: .PRECIOUS
 .for subdir in ${SUBDIR}
 	@cd ${subdir} && ${MAKE} ${MAKEFLAGS} "_THISDIR_=${_THISDIR_}${.CURDIR:T}/" ${_README_TYPE}
 .endfor
+
+show-comment:
+	@if [ "${COMMENT}" ]; then					\
+		${ECHO} "${COMMENT:S/"/''/}";				\
+	elif [ -f pkg/COMMENT ] ; then					\
+		${CAT} pkg/COMMENT;					\
+	else								\
+		${ECHO} '(no description)';				\
+	fi
 
 .if !target(show-distfiles)
 show-distfiles:
