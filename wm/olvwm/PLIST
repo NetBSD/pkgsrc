@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:20 zuntum Exp $
+bin/olvwm
+lib/help/olvwm.info
+man/cat1/olvwm.0
+man/cat5/olvwmrc.0

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:08 zuntum Exp $
+share/control-center/Workspace/Enlightenment.desktop
+bin/e-conf
+@dirrm share/control-center/Workspace
