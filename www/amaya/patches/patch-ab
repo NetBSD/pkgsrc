@@ -1,13 +1,22 @@
-$NetBSD: patch-ab,v 1.7 2002/11/19 20:58:04 reinoud Exp $
+$NetBSD: patch-ab,v 1.8 2003/03/22 06:46:21 wiz Exp $
 
---- ../Makefile.in.orig	Fri Jul  5 17:49:48 2002
-+++ ../Makefile.in
-@@ -186,7 +186,7 @@ libwww_config :
- 	  	$$libwwwdir/configure \
- 			--disable-shared \
- 			@WITHDAV@ \
--			--with-zlib="$$localdir/libz.a"; \
-+			--with-zlib; \
- 		$(ECHO) "libwww is configured" ; \
- 	  fi)
+--- ../configure.orig	Mon Feb  3 09:43:57 2003
++++ ../configure
+@@ -3008,7 +3008,7 @@ EOF
+ fi
+ 
+ 
+-for ac_hdr in stdio.h
++for ac_hdr in stdio.h wchar.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
+@@ -7019,6 +7019,8 @@ fi
+ if test "$with_dav" = "yes" ; then
+     
+     dav_frag=$srcdir/davlib/Makefile.dav
++else
++    dav_frag=/dev/null
+ fi
+ 
  
