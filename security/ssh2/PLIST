@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/10 10:02:34 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/08/12 19:08:55 seb Exp $
 bin/scp
 bin/scp2
 bin/sftp
@@ -12,13 +12,11 @@ bin/ssh-agent
 bin/ssh-agent2
 ${X11_SUPPORT}bin/ssh-askpass
 ${X11_SUPPORT}bin/ssh-askpass2
-bin/ssh-chrootmgr
 bin/ssh-dummy-shell
 bin/ssh-keygen
 bin/ssh-keygen2
 bin/ssh-probe
 bin/ssh-probe2
-bin/ssh-pubkeymgr
 bin/ssh-signer
 bin/ssh-signer2
 bin/ssh2
@@ -31,13 +29,11 @@ man/man1/ssh-add.1
 man/man1/ssh-add2.1
 man/man1/ssh-agent.1
 man/man1/ssh-agent2.1
-man/man1/ssh-chrootmgr.1
 man/man1/ssh-dummy-shell.1
 man/man1/ssh-keygen.1
 man/man1/ssh-keygen2.1
 man/man1/ssh-probe.1
 man/man1/ssh-probe2.1
-man/man1/ssh-pubkeymgr.1
 man/man1/ssh.1
 man/man1/ssh2.1
 man/man1/sshregex.1
