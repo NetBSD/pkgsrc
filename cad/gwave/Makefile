@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/28 16:59:44 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/31 18:09:54 dmcmahill Exp $
 #
 
 DISTNAME=	gwave-20001123
@@ -12,6 +12,10 @@ DEPENDS+=	guile-gtk>=0.19:../../devel/guile-gtk
 DEPENDS+=	plotutils-*:../../graphics/plotutils
 
 GNU_CONFIGURE=	YES
+# LDFLAGS to get -lreadline
+# CPPFLAGS to get -I${LOCALBASE}/include for readline/readline.h
+CPPFLAGS+=	-I${LOCALBASE}/include
+CONFIGURE_ENV+=	LDFLAGS+="${LDFLAGS}" CPPFLAGS="${CPPFLAGS}"
 
 post-extract:
 	${CP} ${FILESDIR}/sp2sp.1 ${WRKSRC}/doc/sp2sp.1
