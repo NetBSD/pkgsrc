@@ -1,4 +1,4 @@
-$NetBSD: buildlink2.txt,v 1.1.2.1 2002/08/21 22:58:36 jlam Exp $
+$NetBSD: buildlink2.txt,v 1.1.2.2 2002/08/25 18:44:41 jlam Exp $
 
 The buildlink2 framework is a departure from the original buildlink
 framework, which tries to do its work up-front before the configure
@@ -25,8 +25,8 @@ A: There are several reasons:
 
     (1) The new framework makes it simpler to buildinkify a package because
 	we just convert dependencies into including the equivalent
-	buildlink2.mk files and define USE_BUILDLINK2_ONLY.  We don't need
-	to lie about where libraries or headers we use are installed.
+	buildlink2.mk files and define USE_BUILDLINK2.  We don't need to
+	lie about where libraries or headers we use are installed.
 
     (2) All packages using the new framework are strongly buildlinked; it
 	is not possible to create weakly buildlinked packages.  This
