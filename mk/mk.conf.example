@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.143 2000/07/06 15:12:04 hubertf Exp $
+# $NetBSD: mk.conf.example,v 1.144 2000/07/14 12:39:53 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -551,6 +551,12 @@ PAPERSIZE=	A4
 # Add support for Variable Envelope Return Paths.
 # Possible: YES, not defined
 # Default: not defined
+
+#PRIV_CONF_DIR=${LOCALBASE}/etc
+# Specify the parent of the directory for pkgsrc/security/priv
+# package's configuration data.
+# Possible: Any valid directory
+# Default: ${LOCALBASE}/etc
 
 #QPOPPER_SERVERMODE=
 # Used in qpopper package to enable server mode.
