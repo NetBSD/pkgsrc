@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.35 1998/06/10 09:01:12 agc Exp $
+# $NetBSD: Packages.txt,v 1.36 1998/06/18 15:12:22 agc Exp $
 ###########################################################################
 
 			==========================
@@ -299,9 +299,9 @@ and variables.
 Please pay attention to the following gotchas, especially when preparing a
 package from the FreeBSD ports collection:
 
- - Update MANx (where x is 1-9, N or L); important for manpages being
-   compressed correctly if MANZ is set
- - Do the same for CATx, if the package installs any formatted manpages.
+ - Remove all MANx and CATx definitions from the package Makefile -
+   NetBSD has implemented automatic manual page handling, and these
+   definitions are now obsolete.
  - Add MANCOMPRESSED (if not already there) if manpages are installed in
    compressed form by the package; see comment in bsd.pkg.mk
  - Replace /usr/local by ${PREFIX} in all files  (see patches below)
@@ -1121,7 +1121,6 @@ The file contents in this section must be used without the "> " prefix.
 > BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
 >  
 > GNU_CONFIGURE=  yes
-> MAN1=           bison.1
 >
 > post-install:
 >                 @install-info ${PREFIX}/info/bison.info ${PREFIX}/info/dir
