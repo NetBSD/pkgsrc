@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/05/17 12:03:22 tron Exp $
+# $NetBSD: Makefile,v 1.22 1999/05/17 22:14:26 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/31 07:23:58 max Exp
 #
 
@@ -26,6 +26,7 @@
 #    SUBDIR += stella
     SUBDIR += suse_base
     SUBDIR += suse_libc5
+    SUBDIR += suse_linux
     SUBDIR += suse_x11
     SUBDIR += suse_xforms
 #    SUBDIR += tkhfs
