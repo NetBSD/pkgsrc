@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/01/10 00:57:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/17 10:36:55 wiz Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.epita.fr/~lse/xipdump/
 
-DEPENDS+=	libnet-1.0:../../devel/libnet
+DEPENDS+=	libnet>=1.0:../../devel/libnet
 
 LIBNET_CONFIG=	${LOCALBASE}/bin/libnet-config
 
