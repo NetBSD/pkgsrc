@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:39:51 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 15:08:00 agc Exp $
 
-MD5 (vfu-3.01.src.tar.gz) = 1675c0ab0ef751935001b4717784d6a2
+SHA1 (vfu-3.01.src.tar.gz) = d605b22d410fcf5e44cf2179ebe7fe2104535826
+Size (vfu-3.01.src.tar.gz) = 264831 bytes
 SHA1 (patch-aa) = efeb077be123e5ded8833d1e64d9f051f84bd794

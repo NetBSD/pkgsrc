@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2001/02/28 11:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/05/09 15:08:00 agc Exp $
 #
 
 DISTNAME=	vfu-3.01
 CATEGORIES=	misc
-MASTER_SITES=	http://www.biscom.net/~cade/away/vfu/ \
-		${MASTER_SITE_SUNSITE:=utils/file/managers/}
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=utils/file/managers/} \
+		http://www.biscom.net/~cade/away/vfu/
 EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	hubertf@netbsd.org
