@@ -1,0 +1,45 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/04/27 12:18:33 agc Exp $
+
+--- lib/reader.c.orig	Sun Apr  8 14:53:30 2001
++++ lib/reader.c	Sun Apr  8 14:54:58 2001
+@@ -1194,6 +1194,7 @@
+ char	buf[rtfBufSiz], *bp;
+ int	old = -1;
+ char	*fn = "ReadFontTbl";
++int	i;
+ 
+ 	for (;;)
+ 	{
+@@ -1311,11 +1312,30 @@
+ 				RTFPanic ("%s: missing \"}\"", fn);
+ 		}
+ 	}
+-	if (fp->rtfFNum == -1)
+-		RTFPanic ("%s: missing font number", fn);
++
+ /*
+  * Could check other pieces of structure here, too, I suppose.
+  */
++
++/*
++ * I think that would be a good idea because I ran across a program that
++ * generates incorrect RTF that specifies a font family but not a font
++ * name.  This was ignored and caused rtf2xxx to coredump when it tried
++ * to strncmp() the NULL name.
++ *
++ * Better to leave no doubt about who's at fault.  -Ben
++ */
++	i = 0;
++	fp = fontList;
++	while (fp != (RTFFont *)NULL) {
++		if (fp->rtfFNum == -1)
++			RTFPanic ("%s: missing font number, entry %d in font table", fn, i);
++		if (fp->rtfFName == (char *) NULL)
++			RTFPanic ("%s: missing font name, font number %d", fn, fp->rtfFNum);
++		fp = fp->rtfNextFont;
++		i++;
++	}
++
+ 	RTFRouteToken ();	/* feed "}" back to router */
+ }
+ 
