@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/05 22:07:10 rh Exp $
+$NetBSD: distinfo,v 1.2 2002/07/02 16:26:31 wiz Exp $
 
 SHA1 (http_load-04jan2002.tar.gz) = 7b21fd2cfeb4bf6705ef6bd3f194a6a2f01ff976
 Size (http_load-04jan2002.tar.gz) = 16710 bytes
-SHA1 (patch-aa) = 600cc971a1d7c748c02322b8717f7718276a6599
+SHA1 (patch-aa) = 8283eff2ea39dc7dd57d0346d39a6c812cc6bbb6
