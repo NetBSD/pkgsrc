@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2003/12/05 05:40:32 ben Exp $
+$NetBSD: patch-af,v 1.2 2003/12/09 19:17:37 ben Exp $
 
 --- src/dbase.build.c.orig	1994-07-25 08:24:09.000000000 -0700
 +++ src/dbase.build.c
@@ -61,3 +61,21 @@ $NetBSD: patch-af,v 1.1 2003/12/05 05:40:32 ben Exp $
  	rewind(fptempdbase);
      } else {
  	fclose(fpw);
+@@ -413,7 +419,7 @@ database_record_write (fpw, filename, fl
+     /* filename, entrynum, ignore, mode, inode, nlinks, uid, gid, size,
+      *		access, modify, ctime, {sig0, sig1, ..., sig9}
+      */
+-    static char *format = "%s %ld %s %lo %ld %ld %ld %ld %ld %s %s %s %s\n";
++    static char *format = "%s %d %s %o %u %u %u %u %lld %s %s %s %s\n";
+ 
+     /* initialize our temporary file */
+     if (fdsymlink == -1) {
+@@ -541,7 +547,7 @@ SKIPPED_SIGS:
+ 	fprintf(fpw, format, filename_escape(filename), (int32)entrynum, ignorevec,
+ 	    (int32)statbuf->st_mode, (int32)statbuf->st_ino,
+ 	    (int32)statbuf->st_nlink, (int32)statbuf->st_uid,
+-	    (int32)statbuf->st_gid, (int32)statbuf->st_size,
++	    (int32)statbuf->st_gid, (long long)statbuf->st_size,
+ 	    pltob64((uint32 *) &va, (char *) vec64_a, 1),
+ 	    pltob64((uint32 *) &vm, (char *) vec64_m, 1),
+ 	    pltob64((uint32 *) &vc, (char *) vec64_c, 1),
