@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/11/05 16:03:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/08 22:19:37 wiz Exp $
 #
 
 DISTNAME=	skampi4
@@ -14,7 +14,7 @@ COMMENT=	MPI (Message Passing Interface) benchmarks
 
 DEPENDS=	mpich>=1.2.1:../../parallel/mpi-ch
 DEPENDS+=	gnuplot>=3.7.1:../../graphics/gnuplot
-DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
+DEPENDS+=	teTeX{,2}>=1.0.7:../../print/teTeX2
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
