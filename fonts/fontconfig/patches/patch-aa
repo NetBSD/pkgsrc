@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2005/02/26 16:39:51 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2005/03/22 14:05:54 wiz Exp $
 
---- Makefile.in.orig	2005-01-29 01:43:07.000000000 +0100
+--- Makefile.in.orig	2005-03-09 00:42:10.000000000 +0100
 +++ Makefile.in
-@@ -213,11 +213,12 @@ EXTRA_DIST = \
+@@ -248,11 +248,12 @@ EXTRA_DIST = \
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = fontconfig.pc
  
