@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2003/12/07 01:06:05 epg Exp $
+# $NetBSD: Makefile.common,v 1.10 2003/12/07 01:21:03 epg Exp $
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel
@@ -25,15 +25,3 @@ CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
 CONFIGURE_ARGS+=	--with-ssl
-
-pre-configure:
-	${SED} -e 's|@BUILDLINK_PREFIX.db4@|${BUILDLINK_PREFIX.db4}|g' \
-		< ${WRKSRC}/tools/backup/hot-backup.py.in \
-		> ${WRKSRC}/tools/backup/hot-backup.py.in.new
-	${MV} ${WRKSRC}/tools/backup/hot-backup.py.in.new \
-		${WRKSRC}/tools/backup/hot-backup.py.in
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
-		< ${WRKSRC}/contrib/cgi/tweak-log.cgi \
-		> ${WRKSRC}/contrib/cgi/tweak-log.cgi.new
-	${MV} ${WRKSRC}/contrib/cgi/tweak-log.cgi.new \
-		${WRKSRC}/contrib/cgi/tweak-log.cgi
