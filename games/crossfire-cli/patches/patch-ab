@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2000/12/14 08:21:53 garbled Exp $
+--- Makefile.in.orig	Thu Dec 14 00:49:29 2000
++++ Makefile.in	Thu Dec 14 00:50:50 2000
+@@ -4,7 +4,7 @@
+ TAR = @TAR@
+ RM = @RM@
+ TARGET = @TARGET@
+-CFLAGS = @CFLAGS@ @CPPFLAGS@ -I.
++CFLAGS = @CFLAGS@ @CPPFLAGS@ -DCLIENT_LIBDIR=\"@prefix@/share/cfclient\" -I.
+ LDFLAGS = @LDFLAGS@
+ CC = @CC@
+ LIBS = @LIBS@ @LIBXPM_LIB@
