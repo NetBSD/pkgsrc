@@ -1,23 +1,26 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/10 20:00:43 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2001/06/26 21:02:00 jlam Exp $
 
---- Makefile.orig	Thu Sep 28 22:30:22 2000
+--- Makefile.orig	Tue Jun 26 16:48:09 2001
 +++ Makefile
-@@ -1,11 +1,9 @@
+@@ -1,11 +1,11 @@
 -CXX=		/usr/bin/g++
 -QTDIR =		/usr/lib/qt2
 -MOC =		/usr/bin/moc
 -LIBS =		-L$(QTDIR)/lib -L/usr/lib -L/usr/X11R6/lib -lqt -lX11
-+QTDIR =		$(X11BASE)/qt2
+-CXXFLAGS =	-g -I/usr/include -I$(QTDIR)/include -I/usr/X11R6/include
++#CXX=		/usr/bin/g++
++#QTDIR =		/usr/lib/qt2
 +MOC =		$(QTDIR)/bin/moc
-+LIBS =		-L$(QTDIR)/lib -L/usr/lib -L$(LOCALBASE)/lib -L$(X11BASE)/lib -lqt -lX11 -ljpeg -Wl,-R${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${QTDIR}/lib
- CXXFLAGS =	-g -I/usr/include -I$(QTDIR)/include -I/usr/X11R6/include
++LIBS =		${LDFLAGS} -L$(QTDIR)/lib -L${X11BASE}/lib -lqt -lX11 -ljpeg
++CXXFLAGS +=	-g -I$(QTDIR)/include -I${X11BASE}/include
  
  TARGET =	bbkeysconf
 -PREFIX = /usr/local/bin
++#PREFIX = /usr/local/bin
  OBJECTS =	gui.o main.o myapplication.o
  SOURCES = 	gui.cc main.cc myapplication.cc
  MOCSRC = 	gui.hh
-@@ -37,13 +35,13 @@
+@@ -37,13 +37,13 @@
      if ! test -x $(TARGET) ; then \
         exit; \
      fi; \
