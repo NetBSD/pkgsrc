@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.7 1999/05/24 20:39:49 tv Exp $
+# $NetBSD: Makefile,v 1.8 1999/05/25 01:34:24 jlam Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
 
 BINNAME=	communicator
+NS_VERS=	4.6
+NS_VERS_SHORT=	46
 #
 .if (${MACHINE_ARCH} == "i386")
 UNAME=		x86-bsdi-bsd2
@@ -16,14 +18,14 @@ UNAME=		sparc-sun-sunos4.1.3_U1
 UNAME_SHORT=	sunos413
 .endif
 #
-DISTNAME=	${BINNAME}-v451-export.${UNAME}
-PKGNAME=	${BINNAME}-4.51
+DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-export.${UNAME}
+PKGNAME=	${BINNAME}-${NS_VERS}
 CATEGORIES=	www
 SUB=		english/unix/unsupported/${UNAME_SHORT}/complete_install
-MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/4.51/${SUB}/ \
-		ftp://sunsite.utk.edu/pub/netscape/communicator/4.51/${SUB}/ \
-		ftp://ftp-uk.netscape.com/pub/communicator/4.51/${SUB}/ \
-		ftp.informatik.rwth-aachen.de:/pub/mirror/ftp.netscape.com/pub/communicator/4.51/${SUB}/
+MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${NS_VERS}/${SUB}/ \
+		ftp://sunsite.utk.edu/pub/netscape/communicator/${NS_VERS}/${SUB}/ \
+		ftp://ftp-uk.netscape.com/pub/communicator/${NS_VERS}/${SUB}/ \
+		ftp.informatik.rwth-aachen.de:/pub/mirror/ftp.netscape.com/pub/communicator/${NS_VERS}/${SUB}/
 ONLY_FOR_PLATFORM=	*-*-{i386,sparc}
 
 MAINTAINER=	packages@netbsd.org
@@ -31,21 +33,22 @@ HOMEPAGE=	http://home.netscape.com/browsers/index.html
 
 NO_BUILD=	yes
 
-WRKSRC=         ${WRKDIR}/${BINNAME}-v451.${UNAME}
+WRKSRC=         ${WRKDIR}/${BINNAME}-v${NS_VERS_SHORT}.${UNAME}
 MOZILLA_HOME=	${PREFIX}/lib/netscape/${PKGNAME}
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+NS_PLIST_SED=	"s,\$${NS_VERS},${NS_VERS},g"
 
 do-install:
-	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
+	${SED} -e ${NS_PLIST_SED} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	${MKDIR} ${MOZILLA_HOME}/java/classes
 	${INSTALL_SCRIPT} ${WRKSRC}/vreg ${MOZILLA_HOME}
 .for file in ifc11.jar iiop10.jar jae40.jar java40.jar jio40.jar jsd10.jar \
-    ldap10.jar resource.jar scd10.jar
+    ldap30.jar resource.jar scd10.jar
 	${INSTALL_DATA} ${WRKSRC}/${file} ${MOZILLA_HOME}/java/classes
 .endfor
-	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/nethelp-v451.nif
-	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/netscape-v451.nif
-	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/spellchk-v451.nif
+	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/nethelp-v${NS_VERS_SHORT}.nif
+	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/netscape-v${NS_VERS_SHORT}.nif
+	cd ${MOZILLA_HOME} ; tar xpzf ${WRKSRC}/spellchk-v${NS_VERS_SHORT}.nif
 
 	${SED} -e 's#@@MOZILLA_HOME@@#${MOZILLA_HOME}#g' \
 	    <${FILESDIR}/${BINNAME}.sh >${WRKDIR}/${BINNAME}.sh
@@ -61,11 +64,11 @@ do-install:
 	${LN} -sf ${PKGNAME}_nis ${PREFIX}/bin/netscape_nis
 	${MV} ${MOZILLA_HOME}/netscape ${MOZILLA_HOME}/netscape_nis
 	${MV} ${MOZILLA_HOME}/netscape_dns ${MOZILLA_HOME}/netscape
-	${CAT} ${PKGDIR}/PLIST.sparc >>${PLIST_SRC}
+	${SED} -e ${NS_PLIST_SED} ${PKGDIR}/PLIST.sparc >>${PLIST_SRC}
 .endif
 	${CHOWN} -R 0:0 ${MOZILLA_HOME}
 	${CHMOD} -R go-w ${MOZILLA_HOME}
 
-	${CAT} ${PKGDIR}/PLIST.post >>${PLIST_SRC}
+	${SED} -e ${NS_PLIST_SED} ${PKGDIR}/PLIST.post >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
