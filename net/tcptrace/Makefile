@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/14 00:54:45 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/25 07:38:44 snj Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/07/19 19:43:36 fenner Exp
 #
 
@@ -11,17 +11,13 @@ HOMEPAGE=	http://www.tcptrace.org/
 COMMENT=	TCP dump file analysis tool
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 ALL_TARGET=	tcptrace
 
 DOCFILES=	COPYRIGHT FAQ README README.tput_graphs
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=	-lnsl -lsocket -lm
-.endif
+LDFLAGS.SunOS+=	-lnsl -lsocket -lm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcptrace ${PREFIX}/bin
@@ -31,6 +27,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/tcptrace
 .endfor
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../net/libpcap/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
