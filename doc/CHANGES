@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1930 2003/04/14 12:34:22 gehenna Exp $
+$NetBSD: CHANGES,v 1.1931 2003/04/14 17:36:41 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1587,3 +1587,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmame to 0.67.2 [kristerw 2003-04-13]
 	Updated xmess to 0.67.2 [kristerw 2003-04-13]
 	Updated cvsync to 0.19.3 [gehenna 2003-04-14]
+	Added xlreader-0.9.0 [zuntum 2003-04-14]
