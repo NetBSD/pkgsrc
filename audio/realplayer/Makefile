@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/03/04 19:41:06 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2002/04/04 12:29:46 tron Exp $
 
 DISTNAME=		rp8_linux20_libc6_i386_cs2
 PKGNAME=		realplayer-8.0.1
@@ -11,7 +11,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.real.com/products/player/
 COMMENT=		RealAudio and RealVideo player
 
-DEPENDS+=		suse_x11>=6.1:../../emulators/suse_x11
+DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -78,4 +78,4 @@ post-install:
 	${INSTALL_DATA} ${REALPLAYER_HOME}/raclass.zip ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${REALPLAYER_HOME}/rpnp.so ${NS_PLUGINS_DIR}
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../emulators/suse_linux/Makefile.application"
