@@ -1,8 +1,14 @@
-$NetBSD: patch-ac,v 1.3 1998/08/07 11:14:05 agc Exp $
-
---- name.c.orig	Thu Apr 10 04:41:48 1997
-+++ name.c	Wed Oct 29 12:11:01 1997
-@@ -58,6 +58,7 @@
+--- name.c.orig	Fri May  7 00:57:30 1999
++++ name.c	Fri May  7 00:58:04 1999
+@@ -25,6 +25,7 @@
+ 
+ #include "mkisofs.h"
+ 
++#include <stdlib.h>
+ #include <ctype.h>
+ 
+ extern int allow_leading_dots;
+@@ -58,6 +59,7 @@
    const char	* pnt;
    int		  priority	   = 32767;
    char		* result;
@@ -10,7 +16,7 @@ $NetBSD: patch-ac,v 1.3 1998/08/07 11:14:05 agc Exp $
    int		  seen_dot	   = 0;
    int		  seen_semic	   = 0;
    int		  tildes	   = 0;
-@@ -105,13 +106,17 @@
+@@ -105,13 +107,17 @@
    last_dot = strrchr (pnt,'.');
    if(    (last_dot != NULL)
        && (    (last_dot[1] == '~')
