@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/07/04 09:18:55 mycroft Exp $
+# $NetBSD: Makefile,v 1.12 1998/07/20 13:03:43 frueauf Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
@@ -21,7 +21,7 @@ USE_GMAKE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 post-patch:
-	@case ${PAPERSIZE} in					\
+	@case "${PAPERSIZE}" in					\
 	A4)	${ECHO} "Using A4 paper size" ;;		\
 	Letter*)	${ECHO} "Using US Letter paper size";	\
 		${MV} ${WRKSRC}/ddd/Ddd.in ${WRKSRC}/ddd/Ddd.in.orig; \
