@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2000/01/04 17:49:43 bouyer Exp $
+
+--- floppyd_installtest.c.old	Mon Dec 13 19:18:09 1999
++++ floppyd_installtest.c	Mon Dec 13 19:18:45 1999
+@@ -24,8 +24,9 @@
+ #include <netdb.h>
+ 
+ /* ######################################################################## */
+-
++#ifndef OS_solaris2
+ typedef unsigned long   ipaddr_t;
++#endif
+ typedef unsigned char Byte;
+ typedef unsigned long Dword;
+ 

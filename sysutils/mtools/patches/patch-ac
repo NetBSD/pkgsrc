@@ -1,8 +1,18 @@
-$NetBSD: patch-ac,v 1.3 1999/06/03 14:22:09 tron Exp $
+$NetBSD: patch-ac,v 1.4 2000/01/04 17:49:43 bouyer Exp $
 
---- floppyd.c.orig	Thu Jun  3 15:12:56 1999
-+++ floppyd.c	Thu Jun  3 15:19:46 1999
-@@ -758,8 +758,8 @@
+--- floppyd.c.old	Mon Dec 13 18:11:58 1999
++++ floppyd.c	Mon Dec 13 18:16:52 1999
+@@ -85,7 +85,9 @@
+ 
+ typedef unsigned char Byte;
+ typedef unsigned long Dword;
++#ifndef OS_solaris2
+ typedef unsigned long ipaddr_t;
++#endif
+ 
+ enum Opcodes {
+ 	OP_READ,
+@@ -758,8 +760,8 @@
  	int			run_as_server = 0;
  	ipaddr_t		bind_ip = INADDR_ANY;
  	short			bind_port = FLOPPYD_DEFAULT_PORT;
