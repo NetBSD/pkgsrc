@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/09/09 14:52:57 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/05 03:30:35 minskim Exp $
 bin/gdeskcal
 lib/gdeskcal/AUTHORS
 lib/gdeskcal/LICENSE
@@ -116,6 +116,7 @@ lib/gdeskcal/locale/sk/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/sr/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/sv/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/tr/LC_MESSAGES/gdeskcal.mo
+lib/gdeskcal/locale/uk/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/locale/zh_CN/LC_MESSAGES/gdeskcal.mo
 lib/gdeskcal/po/Makefile
 lib/gdeskcal/po/ar.po
@@ -143,6 +144,7 @@ lib/gdeskcal/po/sk.po
 lib/gdeskcal/po/sr.po
 lib/gdeskcal/po/sv.po
 lib/gdeskcal/po/tr.po
+lib/gdeskcal/po/uk.po
 lib/gdeskcal/po/zh_CN.po
 lib/gdeskcal/skins/big_and_simple/skin.xml
 lib/gdeskcal/skins/default/bg.png
@@ -166,6 +168,8 @@ lib/gdeskcal/skins/miderat/today.png
 @dirrm lib/gdeskcal/po
 @dirrm lib/gdeskcal/locale/zh_CN/LC_MESSAGES
 @dirrm lib/gdeskcal/locale/zh_CN
+@dirrm lib/gdeskcal/locale/uk/LC_MESSAGES
+@dirrm lib/gdeskcal/locale/uk
 @dirrm lib/gdeskcal/locale/tr/LC_MESSAGES
 @dirrm lib/gdeskcal/locale/tr
 @dirrm lib/gdeskcal/locale/sv/LC_MESSAGES
