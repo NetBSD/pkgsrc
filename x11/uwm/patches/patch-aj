@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2000/01/19 07:24:07 itohy Exp $
+$NetBSD: patch-aj,v 1.2 2000/10/13 01:40:59 itohy Exp $
 
 --- Menu.c.orig	Sat Oct  1 18:41:13 1988
 +++ Menu.c	Mon Jan 17 22:09:10 2000
@@ -8,7 +8,7 @@ $NetBSD: patch-aj,v 1.1 2000/01/19 07:24:07 itohy Exp $
  
 +#ifdef SIGCHLD
 +	/*
-+	 * Children are now handled in uvm.c, but make sure
++	 * Children are now handled in uwm.c, but make sure
 +	 * uwm blocks :-) for compatibility with other systems.
 +	 */
 +
