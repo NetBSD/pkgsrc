@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/03/06 00:00:28 tron Exp $
+# $NetBSD: Makefile,v 1.30 1999/03/22 08:41:48 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -24,11 +24,11 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 LIBTOOL_FLAGS=	--cplusplus --install-la
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--x-inc=${X11BASE}/include -I${LOCALBASE}/include" \
-		"--x-lib=${X11BASE}/lib -L${LOCALBASE}/lib" \
-		"--datadir=${PREFIX}/share/kde" \
+CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
+CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}"
 
 pre-patch:
