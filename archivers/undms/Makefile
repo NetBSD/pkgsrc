@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 12:07:07 agc Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/08 04:03:15 jlam Exp $
 
 DISTNAME=	undms-1.3.c
 PKGNAME=	undms-1.3
@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}
 USE_BUILDLINK2=	# defined
 
 do-build:
-	cd ${WRKSRC} && ${BUILDLINK_CC} ${CFLAGS} -o undms undms-1.3.c
+	cd ${WRKSRC} && ${CC} ${CFLAGS} -o undms undms-1.3.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/undms ${PREFIX}/bin/
