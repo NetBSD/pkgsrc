@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/08/17 05:18:43 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 1999/08/28 09:43:10 rh Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/19 17:38:24 cpiazza Exp $
 
 DISTNAME=	Giram-0.1.1
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.minet.net/pub/giram/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.minet.net/giram/
 
-DEPENDS+=	gtk+-1.2.2:../../x11/gtk
+DEPENDS+=	gtk+-1.2.4:../../x11/gtk
 DEPENDS+=	Mesa-3.0:../../graphics/Mesa
 RUN_DEPENDS=	povray:../../graphics/povray
 

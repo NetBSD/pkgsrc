@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/23 14:17:03 agc Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/28 09:43:16 rh Exp $
 #
 
 DISTNAME=	scwm-0.9
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://scwm.mit.edu/
 
 DEPENDS+=	guile-1.3:../../lang/guile
-DEPENDS+=	gtk+-1.2.2:../../x11/gtk
+DEPENDS+=	gtk+-1.2.4:../../x11/gtk
 
 CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}	\
 			--with-gtk-prefix=${X11BASE}		\
