@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/29 00:49:49 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/01 19:08:26 jmmv Exp $
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
 share/gconf/schemas/gnome-system-monitor.schemas
@@ -6,6 +6,7 @@ share/gnome/help/gnome-system-monitor/C/figures/addColumn.png
 share/gnome/help/gnome-system-monitor/C/figures/changePriority.png
 share/gnome/help/gnome-system-monitor/C/figures/colorPanel.png
 share/gnome/help/gnome-system-monitor/C/figures/columnContextMenu.png
+share/gnome/help/gnome-system-monitor/C/figures/gnome-system-monitor_window.png
 share/gnome/help/gnome-system-monitor/C/figures/memoryMaps.png
 share/gnome/help/gnome-system-monitor/C/figures/moreInfo.png
 share/gnome/help/gnome-system-monitor/C/figures/processListing.png
@@ -28,6 +29,7 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-system-monitor.mo
@@ -36,12 +38,14 @@ ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-system-monitor.mo
@@ -60,6 +64,7 @@ ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-system-monitor.mo
@@ -67,7 +72,12 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-system-monitor.mo
 share/omf/gnome-system-monitor/gnome-system-monitor-C.omf
 share/pixmaps/procman.png
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gnome-system-monitor
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/gnome-system-monitor/C/figures
 @dirrm share/gnome/help/gnome-system-monitor/C
 @dirrm share/gnome/help/gnome-system-monitor
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
