@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2003/12/07 15:17:08 martti Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/29 13:08:55 martti Exp $
 #
 
-DISTNAME=	bins-1.1.24
+DISTNAME=	bins-1.1.25
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -54,7 +54,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/binsrc ${PREFIX}/share/examples/bins/
 	# template: default
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.default
-	${INSTALL_DATA} ${WRKSRC}/templates/*.html			\
+	${INSTALL_DATA} ${WRKSRC}/templates.default/*.html		\
 		${PREFIX}/share/examples/bins/templates.default/
 	# template: jab
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.jab
