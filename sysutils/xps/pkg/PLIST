@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/27 17:00:08 sakamoto Exp $
+bin/xps
+lib/X11/app-defaults/Xps
+man/man1/xps.1
