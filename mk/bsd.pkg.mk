@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.546 2000/08/18 22:43:19 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.547 2000/08/19 15:32:15 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -941,73 +941,83 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 
 .if !defined(NO_IGNORE)
 .if (defined(IS_INTERACTIVE) && defined(BATCH))
-IGNORE=	"is an interactive package"
-.elif (!defined(IS_INTERACTIVE) && defined(INTERACTIVE))
-IGNORE=	"is not an interactive package"
-.elif (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
-IGNORE=	"may not be placed in binary form on a CDROM: ${NO_BIN_ON_CDROM}"
-.elif (defined(NO_SRC_ON_CDROM) && defined(FOR_CDROM))
-IGNORE=	"may not be placed in source form on a CDROM: ${NO_SRC_ON_CDROM}"
-.elif (defined(RESTRICTED) && defined(NO_RESTRICTED))
-IGNORE=	"is restricted: ${RESTRICTED}"
-.elif ((defined(USE_IMAKE) || defined(USE_MOTIF) || \
+IGNORE+= "${PKGNAME} is an interactive package"
+.endif
+.if (!defined(IS_INTERACTIVE) && defined(INTERACTIVE))
+IGNORE+= "${PKGNAME} is not an interactive package"
+.endif
+.if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
+IGNORE+= "${PKGNAME} may not be placed in binary form on a CDROM:" \
+         "    "${NO_BIN_ON_CDROM:Q}
+.endif
+.if (defined(NO_SRC_ON_CDROM) && defined(FOR_CDROM))
+IGNORE+= "${PKGNAME} may not be placed in source form on a CDROM:" \
+         "    "${NO_SRC_ON_CDROM:Q}
+.endif
+.if (defined(RESTRICTED) && defined(NO_RESTRICTED))
+IGNORE+= "${PKGNAME} is restricted:" \
+	 "    "${RESTRICTED:Q}
+.endif
+.if ((defined(USE_IMAKE) || defined(USE_MOTIF) || \
 	defined(USE_X11BASE) || defined(USE_X11)) && \
        !exists(${X11BASE}))
-IGNORE=	"uses X11, but ${X11BASE} not found"
-.elif defined(BROKEN)
-IGNORE=	"is marked as broken: ${BROKEN}"
-.else
+IGNORE+= "${PKGNAME} uses X11, but ${X11BASE} not found"
+.endif
+.if defined(BROKEN)
+IGNORE+= "${PKGNAME} is marked as broken:" ${BROKEN:Q}
+.endif
+
 .if defined(LICENSE)
-.ifdef ACCEPTABLE_LICENSES
-.for _lic in ${ACCEPTABLE_LICENSES}
-.if ${LICENSE} == "${_lic}"
+.  ifdef ACCEPTABLE_LICENSES
+.    for _lic in ${ACCEPTABLE_LICENSES}
+.      if ${LICENSE} == "${_lic}"
 _ACCEPTABLE=	yes
+.      endif	# LICENSE == _lic
+.    endfor	# _lic
+.  endif	# ACCEPTABLE_LICENSES
+.  ifndef _ACCEPTABLE
+IGNORE+= "${PKGNAME} has unacceptable license: ${LICENSE}." \
+	 "    To build this package, add this line to your /etc/mk.conf:" \
+	 "    ACCEPTABLE_LICENSES+=${LICENSE}"
+.  endif	# _ACCEPTABLE
 .endif	# LICENSE
-.endfor	# _lic
-.endif	# ACCEPTABLE_LICENSES
-.ifndef _ACCEPTABLE
-IGNORE=	"Unacceptable license: ${LICENSE}." \
-	"	To build this package, add this line to your /etc/mk.conf:" \
-	"	ACCEPTABLE_LICENSES+=${LICENSE}"
-.endif	# _ACCEPTABLE
-.endif	# LICENSE
+
 # Define __PLATFORM_OK only if the OS matches the pkg's allowed list.
-.if !defined(IGNORE)
 .if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
-.for __tmp__ in ${ONLY_FOR_PLATFORM}
-.if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+.  for __tmp__ in ${ONLY_FOR_PLATFORM}
+.    if ${MACHINE_PLATFORM:M${__tmp__}} != ""
 __PLATFORM_OK?=	yes
-.endif	# MACHINE_PLATFORM
-.endfor	# __tmp__
+.    endif	# MACHINE_PLATFORM
+.  endfor	# __tmp__
 .else	# !ONLY_FOR_PLATFORM
 __PLATFORM_OK?=	yes
 .endif	# ONLY_FOR_PLATFORM
 .for __tmp__ in ${NOT_FOR_PLATFORM}
-.if ${MACHINE_PLATFORM:M${__tmp__}} != ""
-.undef __PLATFORM_OK
-.endif	# MACHINE_PLATFORM
+.  if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+.    undef __PLATFORM_OK
+.  endif	# MACHINE_PLATFORM
 .endfor	# __tmp__
 .if !defined(__PLATFORM_OK)
-IGNORE=			"is not available for ${MACHINE_PLATFORM}"
+IGNORE+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 .endif	# !__PLATFORM_OK
-.endif	# IGNORE
-.endif	# IGNORE
 
+#
+# Now print some error messages that we know we should ignore the pkg
+#
 .if defined(IGNORE)
-.if defined(IGNORE_SILENT)
-IGNORECMD?=	${DO_NADA}
-.endif
-IGNORECMD?=	${ECHO} -n "${_PKGSRC_IN}> ${PKGNAME} " ; \
-		for str in ${IGNORE} ; \
-		do \
-			${ECHO} "$$str" ; \
-		done
-.if defined(IGNORE_FAIL)
-IGNORECMD+=	&& ${FALSE}
-.endif
 fetch checksum extract patch configure all build install deinstall package \
-depends check-depends:
-	@${IGNORECMD}
+install-depends check-depends:
+.if defined(IGNORE_SILENT)
+	@${DO_NADA}
+.else
+	@for str in ${IGNORE} ; \
+	do \
+		${ECHO} "${_PKGSRC_IN}> $$str" ; \
+	done
+.endif
+.if defined(IGNORE_FAIL)
+	${FALSE}
+.endif
 .endif # IGNORE
 .endif # !NO_IGNORE
 
@@ -1437,11 +1447,11 @@ do-package: ${PLIST} ${DESCR}
 	fi
 .if defined(NO_BIN_ON_CDROM)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be put on a CD-ROM:"
-	@${ECHO_MSG} "${_PKGSRC_IN}>          ${NO_BIN_ON_CDROM}."
+	@${ECHO_MSG} "${_PKGSRC_IN}>         " ${NO_BIN_ON_CDROM:Q}
 .endif
 .if defined(NO_BIN_ON_FTP)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be made available through FTP:"
-	@${ECHO_MSG} "${_PKGSRC_IN}>          ${NO_BIN_ON_FTP}."
+	@${ECHO_MSG} "${_PKGSRC_IN}>         " ${NO_BIN_ON_FTP:Q}
 .endif
 .endif
 
@@ -2065,14 +2075,7 @@ info: uptodate-pkgtools
 # fetch - only fetch the distfile if it is allowed to be
 # re-distributed freely
 mirror-distfiles:
-.if defined(NO_SRC_ON_CDROM)
-	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} distfile may not be put on a CD-ROM:"
-	@${ECHO_MSG} "${_PKGSRC_IN}>          ${NO_SRC_ON_CDROM}."
-.endif
-.if defined(NO_SRC_ON_FTP)
-	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} distfile may not be made available through FTP:"
-	@${ECHO_MSG} "${_PKGSRC_IN}>          ${NO_SRC_ON_FTP}."
-.else
+.if !defined(NO_SRC_ON_FTP)
 	@${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} fetch NO_IGNORE=yes NO_CHECK_DEPENDS=yes
 .endif
 
