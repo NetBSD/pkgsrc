@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3757 2003/10/29 21:03:01 reed Exp $
+$NetBSD: CHANGES,v 1.3758 2003/10/29 21:58:55 reed Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4275,3 +4275,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.24.10 [gehenna 2003-10-29]
 	Updated libnet to 1.0.1bnb3 [cube 2003-10-29]
 	Updated scribus to 1.1.1 [reed 2003-10-29]
+	Added scribus-doc-1.0 [reed 2003-10-29]
