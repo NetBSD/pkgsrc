@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1414 2003/02/17 09:24:48 grant Exp $
+$NetBSD: CHANGES,v 1.1415 2003/02/17 11:53:34 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -718,3 +718,4 @@ Changes to the packages collection and infrastructure in 2003:
         Updated gsl to 1.3 [jtb 2003-02-17]
         Updated nullmailer to 1.0.0rc7 [jtb 2003-02-17]
         Added xmill-0.7 [grant 2003-02-17]
+	Added proxycheck-0.41 [zuntum 2003-02-17]
