@@ -1,7 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/04/27 12:27:06 agc Exp $
+$NetBSD: patch-ab,v 1.2 2003/03/21 20:04:25 jmmv Exp $
 
 --- troffcvt/Makefile.orig	Fri May 23 12:28:06 1997
-+++ troffcvt/Makefile	Sun Apr  8 20:19:16 2001
++++ troffcvt/Makefile
+@@ -41,8 +41,8 @@
+ 
+            LIBDIR = $(LOCALUSRLIBDIR)/troffcvt
+        PROJLIBDIR = $(LIBDIR)
+-      MACROLIBDIR = $(USRLIBDIR)/tmac
+-  MACROFILEPREFIX =
++      MACROLIBDIR = /usr/share/tmac
++  MACROFILEPREFIX = tmac.
+ 
+          STRING_H = <string.h>
+  STRING_H_DEFINES = -D'STRING_H=$(STRING_H)'
 @@ -469,7 +469,8 @@
  runtest:: runtest.pl
  	$(RM) $@
