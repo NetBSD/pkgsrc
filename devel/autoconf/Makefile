@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/12/16 21:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2004/01/05 23:20:29 jlam Exp $
 
 DISTNAME=		autoconf-2.59
 CATEGORIES=		devel
@@ -15,12 +15,13 @@ DEPENDS=		m4>=1.4:../../devel/m4
 # which had autoconf-devel as PKGNAME.
 CONFLICTS=		autoconf-devel-[0-9]*
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-lispdir
 CONFIGURE_ENV+=		AWK="${AWK}"
-M4=			${PREFIX}/bin/gm4
+M4=			${LOCALBASE}/bin/gm4
 
 INFO_FILES=		autoconf.info standards.info
 
@@ -35,5 +36,5 @@ TEST_TARGET=		check
 post-install:
 	${RM} -rf ${WRKSRC}/lib/emacs/no
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

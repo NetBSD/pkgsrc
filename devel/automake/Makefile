@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/12/11 16:32:34 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2004/01/05 23:20:29 jlam Exp $
 #
 
 DISTNAME=	automake-1.8
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.gnu.org/software/automake/automake.html
 COMMENT=	GNU Standards-compliant Makefile generator
 
 DEPENDS=	autoconf>=2.58:../../devel/autoconf
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PLIST_SUBST+=		PKG_DIR_VERSION=1.8
 USE_BUILDLINK2=		YES
@@ -31,5 +33,5 @@ PERL5_REQD=		5.5
 
 TEST_TARGET=		check
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
