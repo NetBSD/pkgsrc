@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.3 2004/11/23 00:46:26 dmcmahill Exp $
+# $NetBSD: xlc.mk,v 1.4 2004/11/23 05:24:28 jlam Exp $
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -11,8 +11,8 @@ XLCBASE?=	/opt/ibmcmp/vacpp/6.0
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
 # requested by the package in USE_LANGUAGES.
 #
-LANGUAGES.xlc=	c c++
-_LANGUAGES.xlc=	# empty
+LANGUAGES.xlc=		c c++
+_LANGUAGES.xlc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.xlc+=	${LANGUAGES.xlc:M${_lang_}}
 .endfor
