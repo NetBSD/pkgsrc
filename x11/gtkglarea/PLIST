@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:57 zuntum Exp $
+include/gtkgl/gdkgl.h
+include/gtkgl/gtkglarea.h
+@dirrm include/gtkgl
+lib/libgtkgl.a
+lib/libgtkgl.la
+lib/libgtkgl.so
+lib/libgtkgl.so.5
+lib/libgtkgl.so.5.0
+share/aclocal/gtkgl.m4
+share/doc/gtkglarea/HOWTO.txt
+share/doc/gtkglarea/gdkgl.txt
+share/doc/gtkglarea/gtkglarea.txt
+@exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/gtkgl.m4 ${LOCALBASE}/share/aclocal/gtkgl.m4
+@unexec test %D = ${LOCALBASE} || rm ${LOCALBASE}/share/aclocal/gtkgl.m4
+@dirrm share/doc/gtkglarea

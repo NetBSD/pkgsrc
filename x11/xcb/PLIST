@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:59 zuntum Exp $
+bin/xcb
+lib/X11/app-defaults/Xcb
+man/cat1/xcb.0

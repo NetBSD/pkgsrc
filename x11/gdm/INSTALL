@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2001/10/31 22:10:43 zuntum Exp $
+
+if [ "$2" = POST-INSTALL ]
+then
+	cd @@GDMCFGDIR@@
+	for SOURCE in @@GDMCFGFILES@@
+	do
+		TARGET=${SOURCE%.default*}${SOURCE##*.default}
+		if [ ! -f $TARGET ]
+		then
+			@@MKDIR@@ `dirname $TARGET`
+			@@CP@@ -p $SOURCE $TARGET
+		fi
+	done
+	@@LN@@ -fs Gnome Sessions/Default
+fi
+
+exit 0

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 1999/12/06 01:34:53 hubertf Exp $
-bin/xhangglider
-share/xhangglider/hg_standard.dat
-share/xhangglider/pg_standard.dat
-share/xhangglider/glider.def
-@dirrm share/xhangglider

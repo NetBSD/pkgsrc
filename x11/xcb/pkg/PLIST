@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/19 10:31:03 frueauf Exp $
-bin/xcb
-lib/X11/app-defaults/Xcb
-man/cat1/xcb.0

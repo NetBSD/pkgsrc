@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:16 zuntum Exp $
+bin/xlock
+lib/X11/app-defaults/XLock
+lib/X11/xlockmore/complete.au
+lib/X11/xlockmore/identify-please.au
+lib/X11/xlockmore/not-programmed.au
+lib/X11/xlockmore/thank-you.au
+man/man1/xlock.1
+@dirrm lib/X11/xlockmore

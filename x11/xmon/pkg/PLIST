@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/23 07:42:24 rh Exp $
-bin/xmond
-bin/xmonui
-man/cat1/xmon.0
-man/cat1/xmond.0
-man/cat1/xmonui.0

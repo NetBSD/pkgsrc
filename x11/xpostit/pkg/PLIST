@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/03 08:16:14 agc Exp $
-bin/xpostit
-man/cat1/xpostit.0
-lib/X11/app-defaults/XPostit
-lib/X11/app-defaults/XPostit-color

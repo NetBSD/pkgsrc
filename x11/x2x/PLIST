@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:54 zuntum Exp $
+bin/x2x
+man/cat1/x2x.0
+man/man1/x2x.1

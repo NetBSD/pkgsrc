@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/16 14:15:53 wiz Exp $
-bin/xwit
-man/cat1/xwit.0
-man/man1/xwit.1

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1998/01/23 12:08:36 bouyer Exp $
-bin/xcolors
-lib/X11/app-defaults/Xcolors
-man/cat1/xcolors.0

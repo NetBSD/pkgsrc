@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 1997/11/06 10:03:28 agc Exp $
-bin/xless
-lib/X11/xless.help
-lib/X11/app-defaults/XLess
-lib/X11/app-defaults/XLess-color
-man/cat1/xless.0.gz

@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:03:43 zuntum Exp $
+${TARGET_ARCH}/include/assert.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/assert.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/stdlib.h
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/include/fixed
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/ml/libgcc.a
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/ml/m2/libgcc.a
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/ml/m3e/libgcc.a
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/m2/libgcc.a
+lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/m3e/libgcc.a
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/m3e
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/m2
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/ml/m3e
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/ml/m2
+@dirrm lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/ml
