@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 09:19:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/17 21:33:55 jlam Exp $
+bin/php
 etc/php.ini-dist
 etc/php.ini-optimized
+lib/libphp4.a
+lib/libphp4.la
+lib/libphp4.so.0.0
+libexec/cgi-bin/php
 share/php4/php4.gif
 @dirrm share/php4
+@unexec rmdir -p %D/libexec/cgi-bin 2>/dev/null || true
