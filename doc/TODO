@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.780 2003/08/11 12:01:19 recht Exp $
+$NetBSD: TODO,v 1.781 2003/08/11 22:15:17 recht Exp $
 
 Suggested new packages
 ======================
@@ -215,7 +215,6 @@ Suggested package updates
 	o povray-3.5
 	o proftpd-1.2.9rc1
 	o pxe-1.4 [pkg/22323]
-	o py-soappy-0.10.1 [pkg/21735]
 	o pygtk-0.6.11
 	o rdiff-backup-0.12.0 [pkg/22095]
 	o rdiff-backup-0.12.3
