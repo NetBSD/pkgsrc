@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/29 08:28:19 jlam Exp $
+# $NetBSD: Makefile,v 1.2 1999/08/30 08:43:03 jlam Exp $
 
 DISTNAME=	gtkstep-1.8
 CATEGORIES=	x11
 MASTER_SITES=	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/gtkstep/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/gtkstep/
