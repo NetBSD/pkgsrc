@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.100 2002/08/19 23:07:31 fredb Exp $
+# $NetBSD: Makefile,v 1.101 2002/08/29 07:07:47 itojun Exp $
 
-MOZ_VER=	1.0
+MOZ_VER=	1.1
 DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}
-PKGREVISION=	3
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_VER}/src/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	taya@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/

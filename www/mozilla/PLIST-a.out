@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-a.out,v 1.9 2002/05/25 23:33:11 taya Exp $
+@comment $NetBSD: PLIST-a.out,v 1.10 2002/08/29 07:07:48 itojun Exp $
 bin/mozilla
 @comment begin PROGRAMS
 lib/mozilla/dirver
@@ -65,7 +65,6 @@ lib/mozilla/components/libmork.so.1.0
 lib/mozilla/components/libmozbrwsr.so.1.0
 lib/mozilla/components/libmozfind.so.1.0
 lib/mozilla/components/libmozldap.so.1.0
-lib/mozilla/components/libmozxfer.so.1.0
 lib/mozilla/components/libmsgcompose.so.1.0
 lib/mozilla/components/libmsgdb.so.1.0
 lib/mozilla/components/libmsgimap.so.1.0
@@ -179,9 +178,9 @@ lib/mozilla/components/chrome.xpt
 lib/mozilla/components/commandhandler.xpt
 lib/mozilla/components/composer.xpt
 lib/mozilla/components/content.xpt
+lib/mozilla/components/compreg.dat
 lib/mozilla/components/content_base.xpt
 lib/mozilla/components/content_html.xpt
-lib/mozilla/components/content_xsl.xpt
 lib/mozilla/components/cookie.xpt
 lib/mozilla/components/directory.xpt
 lib/mozilla/components/docshell.xpt
@@ -231,7 +230,6 @@ lib/mozilla/components/mimetype.xpt
 lib/mozilla/components/mozbrwsr.xpt
 lib/mozilla/components/mozfind.xpt
 lib/mozilla/components/mozldap.xpt
-lib/mozilla/components/mozxfer.xpt
 lib/mozilla/components/msgbase.xpt
 lib/mozilla/components/msgcompose.xpt
 lib/mozilla/components/msgdb.xpt
@@ -287,7 +285,6 @@ lib/mozilla/components/smime-service.js
 lib/mozilla/components/timebomb.xpt
 lib/mozilla/components/transformiix.xpt
 lib/mozilla/components/txmgr.xpt
-lib/mozilla/components/txtsvc.xpt
 lib/mozilla/components/uconv.xpt
 lib/mozilla/components/unicharutil.xpt
 lib/mozilla/components/uriloader.xpt
@@ -319,9 +316,7 @@ lib/mozilla/components/xuldoc.xpt
 lib/mozilla/components/xultmpl.xpt
 lib/mozilla/defaults/autoconfig/prefcalls.js
 lib/mozilla/defaults/pref/all.js
-lib/mozilla/defaults/pref/config.js
 lib/mozilla/defaults/pref/editor.js
-lib/mozilla/defaults/pref/initpref.js
 lib/mozilla/defaults/pref/inspector.js
 lib/mozilla/defaults/pref/mailnews.js
 lib/mozilla/defaults/pref/mdn.js
@@ -358,7 +353,6 @@ lib/mozilla/res/arrowd.gif
 lib/mozilla/res/broken-image.gif
 lib/mozilla/res/builtin/htmlBindings.xml
 lib/mozilla/res/builtin/platformHTMLBindings.xml
-lib/mozilla/res/builtin/xbl-forms.css
 lib/mozilla/res/charsetData.properties
 lib/mozilla/res/charsetalias.properties
 lib/mozilla/res/cmessage.txt
@@ -625,7 +619,6 @@ include/mozilla/appcomps/nsIAutoCompleteResults.h
 include/mozilla/appcomps/nsIAutoCompleteSession.h
 include/mozilla/appcomps/nsIBookmarksService.h
 include/mozilla/appcomps/nsIBrowserHistory.h
-include/mozilla/appcomps/nsIFindComponent.h
 include/mozilla/appcomps/nsIFindService.h
 include/mozilla/appcomps/nsIGlobalHistory.h
 include/mozilla/appcomps/nsIHTTPIndex.h
@@ -813,8 +806,6 @@ include/mozilla/content/nsXBLAtomList.h
 include/mozilla/content/nsXBLAtoms.h
 include/mozilla/content/nsXULAtomList.h
 include/mozilla/content/nsXULAtoms.h
-include/mozilla/content_xsl/nsIDocumentTransformer.h
-include/mozilla/content_xsl/nsITransformMediator.h
 include/mozilla/cookie/nsCCookie.h
 include/mozilla/cookie/nsCCookieManager.h
 include/mozilla/cookie/nsCookieHTTPNotify.h
@@ -1261,12 +1252,6 @@ include/mozilla/java/jri.h
 include/mozilla/java/jri_md.h
 include/mozilla/java/jriext.h
 include/mozilla/java/jritypes.h
-include/mozilla/java/jsjava.h
-include/mozilla/java/netscape_javascript_JSException.h
-include/mozilla/java/netscape_javascript_JSObject.h
-include/mozilla/java/nsILiveconnect.h
-include/mozilla/java/nsISecureLiveconnect.h
-include/mozilla/java/nsISecurityContext.h
 include/mozilla/java/nspr_md.h
 include/mozilla/java/oobj.h
 include/mozilla/java/sysmacros_md.h
@@ -1352,7 +1337,6 @@ include/mozilla/layout/nsIComboboxControlFrame.h
 include/mozilla/layout/nsIEditorBoxObject.h
 include/mozilla/layout/nsIFocusTracker.h
 include/mozilla/layout/nsIFormControlFrame.h
-include/mozilla/layout/nsIFormManager.h
 include/mozilla/layout/nsIFormProcessor.h
 include/mozilla/layout/nsIFormSubmitObserver.h
 include/mozilla/layout/nsIFrame.h
@@ -1361,9 +1345,7 @@ include/mozilla/layout/nsIFrameManager.h
 include/mozilla/layout/nsIFrameSelection.h
 include/mozilla/layout/nsIFrameTraversal.h
 include/mozilla/layout/nsIFrameUtil.h
-include/mozilla/layout/nsIGfxTextControlFrame.h
 include/mozilla/layout/nsIGridPart.h
-include/mozilla/layout/nsIHTMLContent.h
 include/mozilla/layout/nsIHTMLStyleSheet.h
 include/mozilla/layout/nsIIFrameBoxObject.h
 include/mozilla/layout/nsIImageControlFrame.h
@@ -1545,8 +1527,6 @@ include/mozilla/mozldap/nsILDAPServer.h
 include/mozilla/mozldap/nsILDAPService.h
 include/mozilla/mozldap/nsILDAPURL.h
 include/mozilla/mozldap/nsLDAP.h
-include/mozilla/mozxfer/nsIStreamTransfer.h
-include/mozilla/mozxfer/nsIStreamTransferOperation.h
 include/mozilla/mpfilelocprovider/nsMPFileLocProvider.h
 include/mozilla/msgbase/msgCore.h
 include/mozilla/msgbase/nsCopyMessageStreamListener.h
@@ -1926,7 +1906,6 @@ include/mozilla/nkcache/nsICacheVisitor.h
 include/mozilla/nsBuildID.h
 include/mozilla/nspr/md/_aix.h
 include/mozilla/nspr/md/_aix32.cfg
-include/mozilla/nspr/md/_aix32in6.cfg
 include/mozilla/nspr/md/_aix64.cfg
 include/mozilla/nspr/md/_beos.cfg
 include/mozilla/nspr/md/_beos.h
@@ -2214,7 +2193,6 @@ include/mozilla/txmgr/nsITransactionList.h
 include/mozilla/txmgr/nsITransactionListener.h
 include/mozilla/txmgr/nsITransactionManager.h
 include/mozilla/txmgr/nsTransactionManagerCID.h
-include/mozilla/txtsvc/nsIFindAndReplace.h
 include/mozilla/txtsvc/nsISpellChecker.h
 include/mozilla/txtsvc/nsITextService.h
 include/mozilla/txtsvc/nsITextServicesDocument.h
@@ -2428,7 +2406,6 @@ include/mozilla/xpcom/nsIBinaryInputStream.h
 include/mozilla/xpcom/nsIBinaryOutputStream.h
 include/mozilla/xpcom/nsIByteArrayInputStream.h
 include/mozilla/xpcom/nsIByteBuffer.h
-include/mozilla/xpcom/nsICategoryHandler.h
 include/mozilla/xpcom/nsICategoryManager.h
 include/mozilla/xpcom/nsIClassInfo.h
 include/mozilla/xpcom/nsICollection.h
@@ -2603,7 +2580,6 @@ include/mozilla/zlib/zlib.h
 @comment end INCLUDE
 @exec env LD_LIBRARY_PATH=%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regxpcom
 @exec env LD_LIBRARY_PATH=%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regchrome
-@unexec rm %D/lib/mozilla/component.reg
 @unexec rm %D/lib/mozilla/chrome/chrome.rdf
 @unexec rm %D/lib/mozilla/chrome/overlayinfo/communicator/content/overlays.rdf
 @unexec rm %D/lib/mozilla/chrome/overlayinfo/cookie/content/overlays.rdf
@@ -2718,7 +2694,6 @@ include/mozilla/zlib/zlib.h
 @dirrm include/mozilla/msgbaseutil
 @dirrm include/mozilla/msgbase
 @dirrm include/mozilla/mpfilelocprovider
-@dirrm include/mozilla/mozxfer
 @dirrm include/mozilla/mozldap
 @dirrm include/mozilla/mork
 @dirrm include/mozilla/mng
@@ -2760,7 +2735,6 @@ include/mozilla/zlib/zlib.h
 @dirrm include/mozilla/docshell
 @dirrm include/mozilla/dbm
 @dirrm include/mozilla/cookie
-@dirrm include/mozilla/content_xsl
 @dirrm include/mozilla/content
 @dirrm include/mozilla/composer
 @dirrm include/mozilla/commandhandler
