@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7563 2004/10/25 17:05:41 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7564 2004/10/25 17:12:09 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4863,3 +4863,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated samba2 to 2.2.12 [jdolecek 2004-10-25]
 	Updated winbond to 2.2.12 [jdolecek 2004-10-25]
 	Updated pam-smbpass to 2.2.12 [jdolecek 2004-10-25]
+	Updated postgresql74 to 7.4.6 [jdolecek 2004-10-25]
