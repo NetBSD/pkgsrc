@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 11:51:11 markd Exp $
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/${INFODIR} %D/${INFODIR}/ess.info
+@comment $NetBSD: PLIST,v 1.2 2003/07/31 23:41:11 seb Exp $
 ${INFODIR}/ess.info
 ${INFODIR}/ess.info-1
 ${INFODIR}/ess.info-2
 ${INFODIR}/ess.info-3
 ${INFODIR}/ess.info-4
-@exec ${INSTALL_INFO} --info-dir=%D/${INFODIR} %D/${INFODIR}/ess.info
 ${EMACS_LISPPREFIX}/ess/ess-batch.el
 ${EMACS_LISPPREFIX}/ess/ess-comp.el
 ${EMACS_LISPPREFIX}/ess/ess-comp.elc
