@@ -1,11 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2002/09/15 06:51:38 kim Exp $
+$NetBSD: patch-ak,v 1.2 2002/11/04 22:39:19 hubertf Exp $
 
-The configure.in patch manually applied to configure, as
-our autoreconf produces an extensively different result.
-
---- configure.orig	Thu Feb 14 08:11:21 2002
-+++ configure	Sat Sep 14 23:44:07 2002
-@@ -4077,9 +4077,15 @@
+--- configure.orig	Mon Aug 12 16:34:23 2002
++++ configure
+@@ -4984,9 +4984,15 @@
  
  #include <time.h> /* to get time_t on SCO */
  #include <sys/types.h>
