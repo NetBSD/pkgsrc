@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/21 14:37:06 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/21 23:28:57 hubertf Exp $
 #
 
 DISTNAME=		htdocs-share-20041021
@@ -58,6 +58,10 @@ GHOSTSCRIPT_REQD=	7.05
 
 pre-extract:
 	@cd ${FILESDIR} && ${PAX} -rw . ${WRKSRC}
+	${RM} -f ${WRKSRC}/share/netbsd.dsl \
+	&& ${LN} -s ../../htdocs/share/xml/netbsd.dsl ${WRKSRC}/share/netbsd.dsl
+	${RM} -f ${WRKSRC}/share/default.dsl \
+	&& ${LN} -s ../../htdocs/share/xml/default.dsl ${WRKSRC}/share/default.dsl
 
 do-build:
 .for _output_ in ${OUTPUTS}
