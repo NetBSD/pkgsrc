@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2005/02/26 17:26:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2005/03/22 16:35:35 jmmv Exp $
 #
 
-DISTNAME=	gnome-system-monitor-2.8.3
+DISTNAME=	gnome-system-monitor-2.10.0
 PKGNAME=	${DISTNAME:S/gnome/gnome2/}
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -33,6 +33,7 @@ pre-configure:
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/libgtop2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
