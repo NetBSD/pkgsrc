@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2004/06/13 09:02:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/11/30 02:42:11 uebayasi Exp $
 bin/incm
 bin/mewcat
 bin/mewdecode
 bin/mewencode
-bin/mewls
+bin/mewl
 share/mew/Mew.img
 share/mew/Mew.png
 share/mew/Mew.xbm
@@ -30,6 +30,7 @@ share/mew/mew-cite.xpm
 share/mew/mew-comp.xpm
 share/mew/mew-forward.xpm
 share/mew/mew-inc.xpm
+share/mew/mew-lock.xpm
 share/mew/mew-next.xpm
 share/mew/mew-pgp-enc.xpm
 share/mew/mew-pgp-sigenc.xpm
@@ -47,16 +48,17 @@ man/man1/incm.1
 man/man1/mewcat.1
 man/man1/mewdecode.1
 man/man1/mewencode.1
-man/man1/mewls.1
+man/man1/mewl.1
 ${EMACS_LISPPREFIX}/mew/contrib/00readme
 ${EMACS_LISPPREFIX}/mew/contrib/00readme-namazu.jis
 ${EMACS_LISPPREFIX}/mew/contrib/mew-browse.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-caesar.el
+${EMACS_LISPPREFIX}/mew/contrib/mew-edebug.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-fancy-summary.el
-${EMACS_LISPPREFIX}/mew/contrib/mew-gnus.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-nmz-fixer.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-nmz.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-refile-view.el
+${EMACS_LISPPREFIX}/mew/contrib/mew-smime-ja.texi
 ${EMACS_LISPPREFIX}/mew/contrib/mew-toolbar-frame.el
 ${EMACS_LISPPREFIX}/mew/mew-addrbook.el
 ${EMACS_LISPPREFIX}/mew/mew-addrbook.elc
@@ -76,6 +78,7 @@ ${EMACS_LISPPREFIX}/mew/mew-config.el
 ${EMACS_LISPPREFIX}/mew/mew-config.elc
 ${EMACS_LISPPREFIX}/mew/mew-const.el
 ${EMACS_LISPPREFIX}/mew/mew-const.elc
+${EMACS_LISPPREFIX}/mew/mew-darwin.el
 ${EMACS_LISPPREFIX}/mew/mew-decode.el
 ${EMACS_LISPPREFIX}/mew/mew-decode.elc
 ${EMACS_LISPPREFIX}/mew/mew-demo.el
@@ -88,6 +91,8 @@ ${EMACS_LISPPREFIX}/mew/mew-encode.el
 ${EMACS_LISPPREFIX}/mew/mew-encode.elc
 ${EMACS_LISPPREFIX}/mew/mew-env.el
 ${EMACS_LISPPREFIX}/mew/mew-env.elc
+${EMACS_LISPPREFIX}/mew/mew-exec.el
+${EMACS_LISPPREFIX}/mew/mew-exec.elc
 ${EMACS_LISPPREFIX}/mew/mew-ext.el
 ${EMACS_LISPPREFIX}/mew/mew-ext.elc
 ${EMACS_LISPPREFIX}/mew/mew-fib.el
@@ -99,9 +104,17 @@ ${EMACS_LISPPREFIX}/mew/mew-header.el
 ${EMACS_LISPPREFIX}/mew/mew-header.elc
 ${EMACS_LISPPREFIX}/mew/mew-highlight.el
 ${EMACS_LISPPREFIX}/mew/mew-highlight.elc
+${EMACS_LISPPREFIX}/mew/mew-imap.el
+${EMACS_LISPPREFIX}/mew/mew-imap.elc
+${EMACS_LISPPREFIX}/mew/mew-imap2.el
+${EMACS_LISPPREFIX}/mew/mew-imap2.elc
 ${EMACS_LISPPREFIX}/mew/mew-key.el
 ${EMACS_LISPPREFIX}/mew/mew-key.elc
 ${EMACS_LISPPREFIX}/mew/mew-lang-jp.el
+${EMACS_LISPPREFIX}/mew/mew-lang-kr.el
+${EMACS_LISPPREFIX}/mew/mew-lang-latin.el
+${EMACS_LISPPREFIX}/mew/mew-local.el
+${EMACS_LISPPREFIX}/mew/mew-local.elc
 ${EMACS_LISPPREFIX}/mew/mew-mark.el
 ${EMACS_LISPPREFIX}/mew/mew-mark.elc
 ${EMACS_LISPPREFIX}/mew/mew-md5.el
@@ -115,8 +128,12 @@ ${EMACS_LISPPREFIX}/mew/mew-minibuf.elc
 ${EMACS_LISPPREFIX}/mew/mew-mule.el
 ${EMACS_LISPPREFIX}/mew/mew-mule0.el
 ${EMACS_LISPPREFIX}/mew/mew-mule3.el
+${EMACS_LISPPREFIX}/mew/mew-net.el
+${EMACS_LISPPREFIX}/mew/mew-net.elc
 ${EMACS_LISPPREFIX}/mew/mew-nntp.el
 ${EMACS_LISPPREFIX}/mew/mew-nntp.elc
+${EMACS_LISPPREFIX}/mew/mew-nntp2.el
+${EMACS_LISPPREFIX}/mew/mew-nntp2.elc
 ${EMACS_LISPPREFIX}/mew/mew-pgp.el
 ${EMACS_LISPPREFIX}/mew/mew-pgp.elc
 ${EMACS_LISPPREFIX}/mew/mew-pick.el
@@ -135,8 +152,16 @@ ${EMACS_LISPPREFIX}/mew/mew-sort.el
 ${EMACS_LISPPREFIX}/mew/mew-sort.elc
 ${EMACS_LISPPREFIX}/mew/mew-ssh.el
 ${EMACS_LISPPREFIX}/mew/mew-ssh.elc
+${EMACS_LISPPREFIX}/mew/mew-ssl.el
+${EMACS_LISPPREFIX}/mew/mew-ssl.elc
 ${EMACS_LISPPREFIX}/mew/mew-summary.el
 ${EMACS_LISPPREFIX}/mew/mew-summary.elc
+${EMACS_LISPPREFIX}/mew/mew-summary2.el
+${EMACS_LISPPREFIX}/mew/mew-summary2.elc
+${EMACS_LISPPREFIX}/mew/mew-summary3.el
+${EMACS_LISPPREFIX}/mew/mew-summary3.elc
+${EMACS_LISPPREFIX}/mew/mew-summary4.el
+${EMACS_LISPPREFIX}/mew/mew-summary4.elc
 ${EMACS_LISPPREFIX}/mew/mew-syntax.el
 ${EMACS_LISPPREFIX}/mew/mew-syntax.elc
 ${EMACS_LISPPREFIX}/mew/mew-temacs.el
