@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/07/08 23:14:59 erh Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/03/20 17:52:20 jmmv Exp $
 bin/hsml
 lib/screws/BasicExec.so
 lib/screws/CleanLog.so
@@ -7,6 +7,10 @@ lib/screws/HsmlExec.so
 lib/screws/LoadBalancing.so
 lib/screws/Mime.so
 lib/screws/MyReq.so
+lib/screws/lang_brainfuck.so
+lib/screws/lang_c.so
+lib/screws/lang_perl.so
+lib/screws/lang_python.so
 lib/screws/noupdir.so
 lib/screws/unicode.so
 libexec/screws/README
