@@ -1,0 +1,2 @@
+A module for the Apache web server which enables HTTP authentication
+against information stored in a MySQL database.
