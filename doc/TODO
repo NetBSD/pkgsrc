@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1202 2003/12/14 20:01:26 jmmv Exp $
+$NetBSD: TODO,v 1.1203 2003/12/14 22:18:51 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -179,7 +179,6 @@ Suggested package updates
 	o glpk-4.3
 	o gnats-4.0 [pkgsrc-wip]
 	o gnome-core-2.4
-	o gnome-mime-data-2.4.0 [pkg/23714]
 	o gnome-utils-2.4.1
 	o gnomeicu-0.99
 	o gnuchess-5.06
