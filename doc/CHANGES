@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9511 2005/03/19 14:33:29 wiz Exp $
+$NetBSD: CHANGES,v 1.9512 2005/03/19 14:39:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1413,3 +1413,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-IO-Util to 1.43 [wiz 2005-03-19]
 	Updated graphviz to 2.2 [seb 2005-03-19]
 	Updated spamass-milter to 0.3.0 [wiz 2005-03-19]
+	Updated nrg2iso to 0.4 [wiz 2005-03-19]
