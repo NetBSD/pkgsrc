@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/03/04 17:38:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/04 20:47:38 hubertf Exp $
 #
 
-DISTNAME=	ipv6calc-0.11
+DISTNAME=	ipv6calc-0.12
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
 
