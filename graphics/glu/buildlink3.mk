@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2004/02/10 22:22:05 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
@@ -72,7 +72,7 @@ MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.glu=${BUILDLINK_USE_BUILTIN.glu}
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
 #
-BUILDLINK_DEPENDS.glu+=	glu>=5.0.2nb3
+BUILDLINK_DEPENDS.glu+=	glu>=6.0
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	glu
 .  endif
