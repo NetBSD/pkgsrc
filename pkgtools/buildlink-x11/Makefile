@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2001/07/05 04:47:28 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/05 17:23:00 jlam Exp $
 
-DISTNAME=	buildlink-x11-0.5
+DISTNAME=	buildlink-x11-0.6
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
