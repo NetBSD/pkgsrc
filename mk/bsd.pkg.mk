@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.512 2000/07/20 12:33:43 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.513 2000/07/20 17:46:45 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -1933,7 +1933,7 @@ update:
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ ! -s ${DDIR} ] || for dep in `${CAT} ${DDIR}` ; do		\
-		(if cd "../../$${dep}" ; then				\
+		(if cd ../.. && cd "$${dep}" ; then				\
 			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" &&	\
 			if [ "${RESUMEUPDATE}" = "NO" ] ; then		\
 				${MAKE} ${MAKEFLAGS} deinstall;	\
@@ -1958,7 +1958,7 @@ clean-update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -s ${DDIR} ] ; then					\
 		for dep in `${CAT} ${DDIR}` ; do			\
-			(if cd "../../$${dep}" ; then			\
+			(if cd ../.. && cd "$${dep}" ; then			\
 				${MAKE} ${MAKEFLAGS} clean ;		\
 			else						\
 				${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
