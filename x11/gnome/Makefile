@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2000/04/22 10:46:32 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/06/03 19:16:59 fredb Exp $
 
-DISTNAME=	gnome-1.0.53.4
+DISTNAME=	gnome-1.2.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,6 +25,7 @@ DEPENDS+=	gnumeric>=0.52:../../math/gnumeric
 DEPENDS+=	gtk-->=1.0.3:../gtk--
 DEPENDS+=	gtk-engines>=0.8:../gtk-engines
 DEPENDS+=	xchat>=1.4.1:../../net/xchat
+DEPENDS+=	xscreensaver-gnome>=3.24:../xscreensaver-gnome
 
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
