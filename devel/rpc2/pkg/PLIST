@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/27 18:08:08 phil Exp $
+include/rpc2/errors.h
+include/rpc2/errorsdefs.h
+include/rpc2/fail.h
+include/rpc2/fcon.h
+include/rpc2/multi.h
+include/rpc2/rpc2.h
+include/rpc2/se.h
+include/rpc2/sftp.h
+@dirrm include/rpc2
+lib/librpc2.a
+lib/librpc2.la
+lib/librpc2.so.2.1
+lib/libse.a
+lib/libse.la
+lib/libse.so.1.0
+lib/libfail.a
+lib/libfail.la
+lib/libfail.so.1.0
+bin/rp2gen
+bin/filcon
