@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/01 11:43:29 grant Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/26 09:02:35 grant Exp $
 bin/sylpheed
+lib/charset.alias
+man/man1/sylpheed.1
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/sylpheed.mo
@@ -10,6 +12,7 @@ ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/sylpheed.mo
+${PKGLOCALEDIR}/locale/locale.alias
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/sylpheed.mo
@@ -150,3 +153,4 @@ share/sylpheed/manual/ja/sylpheed.sgml
 @dirrm share/sylpheed/faq/en
 @dirrm share/sylpheed/faq/de
 @dirrm share/sylpheed/faq
+@dirrm share/sylpheed
