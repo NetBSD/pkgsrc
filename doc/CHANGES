@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8773 2005/01/16 18:00:24 cube Exp $
+$NetBSD: CHANGES,v 1.8774 2005/01/16 19:20:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -337,3 +337,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chicken to 1.89 [jmmv 2005-01-16]
 	Updated squid to 2.5.7nb6 [taca 2005-01-16]
 	Added rubber-0.99.8 [cube 2005-01-16]
+	Updated nmh to 1.0.4nb6 [jmmv 2005-01-16]
