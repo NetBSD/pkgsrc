@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1265 2003/09/08 01:13:02 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1266 2003/09/09 11:00:30 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1888,6 +1888,11 @@ _ACQUIRE_LOCK=								\
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
 	while true; do							\
+		if [ -f /var/run/dmesg.boot -a -f ${LOCKFILE} -a	\
+		     /var/run/dmesg.boot -nt ${LOCKFILE} ]; then	\
+			${ECHO} "=> Removing stale ${LOCKFILE}";	\
+			${RM} ${LOCKFILE};				\
+		fi;							\
 		${SHLOCK} -f ${LOCKFILE} -p $$ppid && break;		\
 		${ECHO} "=> Lock is held by pid `cat ${LOCKFILE}`";	\
 		case "${PKGSRC_LOCKTYPE}" in				\
