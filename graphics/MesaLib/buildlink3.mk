@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2004/02/06 19:04:24 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2004/02/10 22:22:05 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -73,7 +73,7 @@ MAKEFLAGS+=	\
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
 #
-BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=5.0
+BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=6.0
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=		MesaLib
 .  endif
