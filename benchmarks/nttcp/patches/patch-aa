@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/04/17 21:51:35 thorpej Exp $
+
+--- Makefile.orig	Mon Dec 18 02:17:20 2000
++++ Makefile	Wed Apr 17 14:42:49 2002
+@@ -151,9 +151,12 @@
+ VERSION=	1.47
+ #prefix=		/usr/local/dist/DIR/nttcp-$(VERSION)
+ #prefix=		/usr/local
+-prefix=		/usr/local/opt/nttcp-$(VERSION)
++#prefix=		/usr/local/opt/nttcp-$(VERSION)
++prefix=		${PREFIX}
+ CFLAGS =	$(ARCH) $(DBG) $(DEF) $(INC) $(OPT) -DVERSION=\"$(VERSION)\"
+ LFLAGS = 	$(DBG) 
++
++all:		nttcp
+ 
+ nttcp:		nttcp.o support.o
+ 		$(CC) $(LFLAGS) nttcp.o -o nttcp support.o $(LIB)
