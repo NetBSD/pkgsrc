@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/06/20 20:22:12 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/07/01 17:06:27 minskim Exp $
 bin/liferea
 bin/liferea-bin
 lib/liferea/liblihtmlg.la
@@ -18,6 +18,7 @@ share/liferea/pixmaps/online.png
 share/liferea/pixmaps/read.xpm
 share/liferea/pixmaps/unavailable.png
 share/liferea/pixmaps/unread.png
+share/liferea/pixmaps/updating.png
 share/liferea/pixmaps/vfolder.png
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/liferea.mo
@@ -29,6 +30,7 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/liferea.mo
 share/pixmaps/liferea.png
 @comment in xdg-dirs: @dirrm share/pixmaps
