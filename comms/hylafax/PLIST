@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:53 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/05/22 11:59:15 wiz Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -32,6 +32,7 @@ libexec/lockname
 libexec/ondelay
 libexec/pagesend
 libexec/textfmt
+man/cat1/edit-faxcover.0
 man/cat1/faxalter.0
 man/cat1/faxcover.0
 man/cat1/faxmail.0
@@ -99,6 +100,7 @@ man/cat8/xferfaxstats.0
 sbin/choptest
 sbin/cqtest
 sbin/dialtest
+sbin/edit-faxcover
 sbin/faxabort
 sbin/faxaddmodem
 sbin/faxadduser
@@ -119,6 +121,7 @@ sbin/faxsetup.irix
 sbin/faxsetup.linux
 sbin/faxstate
 sbin/faxwatch
+sbin/hylafax
 sbin/probemodem
 sbin/recvstats
 sbin/tagtest
