@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/25 18:19:21 jtb Exp $
+
+--- Makefile.orig	Mon Nov 13 23:57:18 2000
++++ Makefile
+@@ -80,7 +80,7 @@
+ # Specify the C compiler.  I recommend gcc (GNU C Compiler) if you have it.
+ # In many Linux environments, cc is just a symlink to gcc.
+ 
+-CC = cc
++#CC = cc
+ 
+ #############################################################################
+ #
