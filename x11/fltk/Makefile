@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/02/18 05:07:34 ben Exp $
+# $NetBSD: Makefile,v 1.37 2004/02/18 10:21:15 jlam Exp $
 #
 
 DISTNAME=	fltk-1.1.4-source
@@ -18,16 +18,16 @@ HOMEPAGE=	http://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 USE_GNU_TOOLS+=		make
-USE_LIBTOOL=		# defined
-USE_X11BASE=		# defined
+USE_LIBTOOL=		yes
+USE_X11BASE=		yes
 TEST_TARGET=		test
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL}
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
