@@ -1,0 +1,58 @@
+$NetBSD: patch-ap,v 1.1 2003/11/18 21:09:18 markd Exp $
+
+--- src/OverlayUnidraw/ovprecise.c.orig	2003-10-23 07:16:21.000000000 +1300
++++ src/OverlayUnidraw/ovprecise.c
+@@ -39,7 +39,7 @@
+ #include <InterViews/window.h>
+ #include <stdio.h>
+ #include <string.h>
+-#include <strstream.h>
++#include <strstream>
+ 
+ /*****************************************************************************/
+ 
+@@ -90,7 +90,7 @@ void OvPreciseMoveCmd::Execute () {
+     _default_enumval = cur_unit;
+ 
+     if (movestr) {
+-      istrstream in(movestr);
++      std::istrstream in(movestr);
+       float xmove = 0, ymove = 0;
+       in >> xmove >> ymove;
+ 
+@@ -135,7 +135,7 @@ void OvPreciseScaleCmd::Execute () {
+ 			  "Enter X and Y scaling:",
+ 			  default_scalestr);
+     if (scalestr) {
+-      istrstream in(scalestr);
++      std::istrstream in(scalestr);
+       float xscale = 0.0, yscale = 0.0;
+       in >> xscale >> yscale;
+       if (xscale !=0.0 && yscale != 0.0) {
+@@ -173,7 +173,7 @@ void OvPreciseRotateCmd::Execute () {
+ 			  "Enter rotation in degrees:",
+ 			  default_rotatestr);
+     if (rotatestr) {
+-      istrstream in(rotatestr);
++      std::istrstream in(rotatestr);
+       float angle = 0.0;
+       in >> angle;
+       if (angle!=0.0) {
+@@ -218,7 +218,7 @@ void OvPrecisePageCmd::Execute () {
+ 			  "Enter width and height of page:",
+ 			  default_pagestr);
+     if (pagestr) {
+-      istrstream in(pagestr);
++      std::istrstream in(pagestr);
+       int xpage = 0, ypage = 0;
+       in >> xpage >> ypage;
+       if (xpage !=0 && ypage != 0) {
+@@ -256,7 +256,7 @@ void OvPreciseBrushCmd::Execute () {
+ 			  "Enter brush width in pixels:",
+ 			  default_widthstr);
+     if (widthstr) {
+-      istrstream in(widthstr);
++      std::istrstream in(widthstr);
+       float width = 0;
+       in >> width;
+       if (width>=0.0) {
