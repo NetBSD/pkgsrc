@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1998/11/25 23:58:25 tron Exp $
+
 --- configure.orig	Thu May 21 20:16:26 1998
 +++ configure	Fri Nov 20 17:02:39 1998
 @@ -6100,7 +6100,6 @@
