@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2002/03/12 11:08:39 martti Exp $
+# $NetBSD: Makefile,v 1.29 2002/04/04 09:46:54 tron Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
-PKGREVISION=		5
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a1/} \
 			ftp://ftp.suse.com/pub/suse/i386/update/${SUSE_VERSION}/a1/
@@ -12,14 +11,14 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package
 
 CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.5Z[C-Z]-i386 NetBSD-1.6*-i386
 
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		aaa_dir.rpm shlibs-2.1.3-204.i386.rpm \
-			libz-1.1.3-575.i386.rpm \
-			bash.rpm gppshare.rpm ncurses.rpm sh_utils.rpm
+RPMFILES=		aaa_dir.rpm glibc-2.2.4-64.i386.rpm \
+			gppshare.rpm libz-1.1.3-597.i386.rpm ncurses.rpm \
+			readline.rpm bash.rpm sh-utils.rpm
 RPMIGNOREPATH=		tmp usr/tmp var
 
 LINUX_LDD=		${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
