@@ -1,10 +1,15 @@
-$NetBSD: patch-ab,v 1.5 2001/07/14 18:22:35 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2001/08/18 18:13:28 tron Exp $
 
---- configure.in.orig	Sun Apr 29 17:21:39 2001
-+++ configure.in
-@@ -223,29 +223,11 @@
- supported_locales="cs de es et fr gl it ja ko nl no pt ru sv tr fi hr el pl ro da zh_TW.Big5 zh_CN sk bg hu"
+--- configure.in.orig	Mon Jul 23 21:43:34 2001
++++ configure.in	Sat Aug 18 19:57:49 2001
+@@ -220,43 +220,18 @@
+ 
+ dnl List of supported locales
+ dnl -------------------------
+-supported_locales="cs de es et fr gl it ja ko nl no pt ru sv tr fi hr el pl ro da zh_TW.Big5 zh_CN sk bg hu"
++supported_locales="cs de es et fr gl it ja ko nl no pt ru sv tr fi hr el pl ro da zh_CN sk bg hu"
  supported_wprefs_locales="pt hr fr ko ja cs zh_TW.Big5 es zh_CN fi it ru de bg hu sk"
+ supported_wings_locales="sk"
  
 -for lang in $LINGUAS; do
 -	ok=0
@@ -29,15 +34,28 @@ $NetBSD: patch-ab,v 1.5 2001/07/14 18:22:35 jlam Exp $
 -	if test "$ok" = 1; then
 -		WPMOFILES="$WPMOFILES $lang.mo"
 -	fi
+-	ok=0
+-	for l in $supported_wings_locales; do
+-		if test "$l" = "$lang"; then
+-			ok=1
+-			break
+-		fi
+-	done
+-	if test "$ok" = 1; then
+-		WINGSMOFILES="$WINGSMOFILES $lang.mo"
+-	fi
 +for lang in $supported_locales; do
 +	MOFILES="$MOFILES $lang.mo"
 +done
 +for lang in $supported_wprefs_locales; do
 +	WPMOFILES="$WPMOFILES $lang.mo"
++done
++for lang in $supported_wings_locales; do
++	WINGSMOFILES="$WINGSMOFILES $lang.mo"
  done
  
  
-@@ -720,8 +702,8 @@
+@@ -732,8 +707,8 @@
      fi
  fi
  
