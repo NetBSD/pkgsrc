@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2000/01/08 22:46:31 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/15 01:25:45 tsarna Exp $
 #
 
-DISTNAME=	Zope-2.1.2-src
-PKGNAME=	py-dtml-2.1.2
+DISTNAME=	Zope-2.1.4-src
+PKGNAME=	py-dtml-2.1.4
 CATEGORIES=	textproc
-MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.2/
+MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.4/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
