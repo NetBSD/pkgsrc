@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/12/14 16:48:01 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/15 00:36:29 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -19,7 +19,7 @@
 #    SUBDIR += pidentd
 #    SUBDIR += rsaref
     SUBDIR += ssh
-#    SUBDIR += sudo
+    SUBDIR += sudo
 #    SUBDIR += super
 #    SUBDIR += swatch
 #    SUBDIR += tcp_wrapper
