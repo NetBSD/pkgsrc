@@ -196,8 +196,6 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimp-print-4.2.6
-	o gkrellm-2.1.22 [pkgsrc-wip]
-	o gkrellm-volume-2.1.9 [pkgsrc-wip]
 	o global-4.6
 	o glpk-4.3
 	o gnats-4.0 [pkgsrc-wip]
