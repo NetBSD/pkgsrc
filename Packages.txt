@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.68 1999/09/12 01:40:02 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.69 1999/09/29 15:23:54 agc Exp $
 ###########################################################################
 
 			==========================
@@ -468,6 +468,10 @@ attention to the following things in pkg/PLIST:
    ldconfig ...", delete them. NetBSD works out automatically whether to
    call ldconfig, since some NetBSD architectures do not have ldconfig.
  - Add any missing @dirrm statements
+ - Any MAN definitions in the package Makefile
+
+You could also investigate the port2pkg package (pkgsrc/pkgtools/port2pkg),
+which does a lot of the donkey work for you.
 
 
  4.4.2 Optional files
