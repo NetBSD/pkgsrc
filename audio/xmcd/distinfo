@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2001/07/02 21:10:37 jlam Exp $
+$NetBSD: distinfo,v 1.5 2001/07/24 16:00:01 nra Exp $
 
-SHA1 (xmcd-2.6.tar.gz) = 486e48381d1f24a173815a9283d89e40fe73c90e
-Size (xmcd-2.6.tar.gz) = 553934 bytes
-SHA1 (patch-aa) = 868ecceae5e48a320161c21bbf4db4301fd9467e
-SHA1 (patch-ab) = 3567259b92085480c0c5ea46d3aee57c7982e65b
-SHA1 (patch-ac) = b0748c7be1a1f9d8f40c970b3a00414ffcc9f0b4
-SHA1 (patch-ad) = d748cce51bf0efc6cf7290dd020ab05f4a76ea96
-SHA1 (patch-ae) = 215f60cff3a2f42e8f7106799780d02c946bd952
-SHA1 (patch-af) = 9dae4544584a6af075675ad7cee347eb8fe4eb42
+SHA1 (xmcd-3.0.1.tar.gz) = 936363e5cd984666cba3494b2aa3d3cc845c58ac
+Size (xmcd-3.0.1.tar.gz) = 689345 bytes
+SHA1 (patch-aa) = 0a446d2943dd9ac9d66938674daa16d1d629e470
+SHA1 (patch-ab) = 5cb710c688caf4db56f0d04f366bedcc94dcde5d
+SHA1 (patch-ac) = 19440a72fda657bf73811c20aabab5c955369516
+SHA1 (patch-ad) = b62086c7f1801cf500cb8bc93e262e97f015b540
+SHA1 (patch-ae) = 3de0e9fd004fcb6012f033739ff1b66bd059d655
+SHA1 (patch-af) = 276e4f5ad9041f977be602165334efd0a5895571
