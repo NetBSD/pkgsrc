@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.9 2000/03/12 22:24:07 tron Exp $
+$NetBSD: patch-ad,v 1.10 2000/05/02 18:48:38 danw Exp $
 
 --- configure.orig	Wed Feb 16 12:14:08 2000
 +++ configure	Sun Mar 12 22:26:00 2000
@@ -24,16 +24,3 @@ $NetBSD: patch-ad,v 1.9 2000/03/12 22:24:07 tron Exp $
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
  exec 5>>./config.log
-@@ -5796,10 +5799,12 @@
-     top_srcdir="$ac_dots$ac_given_srcdir" ;;
-   esac
- 
-+if false; then
-   case "$ac_given_INSTALL" in
-   [/$]*) INSTALL="$ac_given_INSTALL" ;;
-   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
-   esac
-+fi
- 
-   echo creating "$ac_file"
-   rm -f "$ac_file"

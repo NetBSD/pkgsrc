@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2000/03/13 22:25:47 tron Exp $
+$NetBSD: patch-aa,v 1.9 2000/05/02 18:48:43 danw Exp $
 
 --- configure.orig	Tue Feb 22 15:29:37 2000
 +++ configure	Mon Mar 13 23:08:16 2000
@@ -30,33 +30,3 @@ $NetBSD: patch-aa,v 1.8 2000/03/13 22:25:47 tron Exp $
  GNOME_INCLUDEDIR='-I${includedir} -DNEED_GNOMESUPPORT_H -I${pkglibdir}/include'
  GNOME_IDLDIR='-I${datadir}/idl'
  
-@@ -11093,10 +11095,10 @@
-     top_srcdir="$ac_dots$ac_given_srcdir" ;;
-   esac
- 
--  case "$ac_given_INSTALL" in
--  [/$]*) INSTALL="$ac_given_INSTALL" ;;
--  *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
--  esac
-+#  case "$ac_given_INSTALL" in
-+#  [/$]*) INSTALL="$ac_given_INSTALL" ;;
-+#  *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
-+#  esac
- 
-   echo creating "$ac_file"
-   rm -f "$ac_file"
-@@ -11366,10 +11368,10 @@
-       *) # Relative path.
-         ac_sub_cache_file="$ac_dots$cache_file" ;;
-       esac
--  case "$ac_given_INSTALL" in
--        [/$]*) INSTALL="$ac_given_INSTALL" ;;
--        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
--        esac
-+#  case "$ac_given_INSTALL" in
-+#        [/$]*) INSTALL="$ac_given_INSTALL" ;;
-+#        *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
-+#        esac
- 
-       echo "running ${CONFIG_SHELL-/bin/sh} $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
-       # The eval makes quoting arguments work.
