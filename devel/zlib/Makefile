@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2001/04/17 11:14:05 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/10 13:24:50 hubertf Exp $
 
 DISTNAME=	zlib-1.1.3
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.freesoftware.com/pub/infozip/zlib/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	ftp://ftp.freesoftware.com/pub/infozip/zlib/index.html
+HOMEPAGE=	http://www.gzip.org/zlib/
 COMMENT=	General purpose data compression library
 
 BUILD_DEPENDS+=	libtool-base>=${LIBTOOL_VERSION}:../../devel/libtool-base
