@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/31 20:58:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/16 14:54:42 jmmv Exp $
 #
 
 DISTNAME=	lmule-1.1.13
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmule/}
 
@@ -11,6 +12,7 @@ COMMENT=	eDonkey2000 client based on eMule
 
 BUILD_USES_MSGFMT=	YES
 DEPENDS=		gnome2-dirs>=1.1:../../misc/gnome2-dirs
+DEPENDS+=		wget>=1.8.2:../../net/wget
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
@@ -20,6 +22,7 @@ USE_X11=		YES
 
 CONFIGURE_ARGS+=	--without-included-gettext
 
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 .include "../../x11/wxGTK/buildlink2.mk"
