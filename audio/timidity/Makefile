@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/08/18 22:46:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.26 2000/08/31 16:07:43 jwise Exp $
 #
 
 DISTNAME=       timidity-0.2i
@@ -11,7 +11,7 @@ MAINTAINER=     mycroft@NetBSD.ORG
 HOMEPAGE=	http://www.cgs.fi/~tt/timidity/
 
 BUILD_DEPENDS=  unzip:../../archivers/unzip
-DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	tk-8.3.2:../../x11/tk
 
 USE_CURSES=	# defined
 
@@ -28,7 +28,7 @@ do-configure:
 	${MV} gravis.cfg.new gravis.cfg
 
 post-install:
-	cd ${PREFIX}/lib/timidity/patch && \
+	cd ${PREFIX}/share/timidity/patch && \
 	unzip -o -q -L ${DISTDIR}/${TIINS}
 
 .include "../../mk/bsd.pkg.mk"
