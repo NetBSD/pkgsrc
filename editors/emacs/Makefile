@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2003/04/14 07:38:42 uebayasi Exp $
+# $NetBSD: Makefile,v 1.56 2003/04/15 02:46:27 uebayasi Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.3
@@ -36,8 +36,13 @@ CONFIGURE_ARGS+=	--with-png
 
 .include "../../mk/bsd.prefs.mk"
 
+# This matches NetBSD <1.7 releases and 1.6A-1.6P, where ld is <2.13.2.1.
 .if ${OPSYS} == "NetBSD" && \
-    (empty(OS_VERSION:M[0-1].[0-5]*) && empty(OS_VERSION:M1.6[A-P]*))
+    (empty(OS_VERSION:M1.[0-5]*) && \
+     empty(OS_VERSION:M1.6_*) && \
+     empty(OS_VERSION:M1.6) && \
+     empty(OS_VERSION:M1.6.[0-9]*) && \
+     empty(OS_VERSION:M1.6[A-P]*))
 # If using GNU ld 2.13.2.1 or later, avoid creating combined reloc
 # sections and .data reloc sections, both of which Emacs can't handle
 # properly.  Analyzed by Stephen Ma.
