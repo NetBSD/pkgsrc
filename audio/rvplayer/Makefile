@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/08/29 01:32:27 jlam Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/01 18:33:34 tron Exp $
 #
 
 DISTNAME=	rv50_linux20
@@ -31,6 +31,7 @@ do-fetch:
 	    ${ECHO_MSG} "  ${DISTDIR} from"; \
 	    ${ECHO_MSG} "  http://www.real.com/products/player/downloadrealplayer.html."; \
 	    ${ECHO_MSG} "==============================================================="; \
+	    ${FALSE}; \
 	fi
 
 do-build:
