@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3272 2005/03/23 13:32:28 wiz Exp $
+$NetBSD: TODO,v 1.3273 2005/03/23 15:05:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1003,6 +1003,7 @@ Suggested package updates
 	o spim-7.1
 	o splint-3.1.1
 	o spruce-0.6.5
+	o sqlite3-3.2.0
 	o sqlitemanager-1.0.5
 	o sqlrelay-0.35
 	o srp_client-1.7.5 [jlam]
