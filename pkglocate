@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-#	$NetBSD: pkglocate,v 1.5 2001/03/08 11:46:52 drochner Exp $
+#	$NetBSD: pkglocate,v 1.6 2001/04/03 09:28:32 agc Exp $
 #
 #-
 # Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -39,10 +39,10 @@
 #
 # Locate words in description, or files in the PLISTs
 #
-# [-i] == ignore case when searching
-# [-f] == look for a file, rather than a word or phrase
-# [-p] == use approximate matching
-# [-v] == be verbose
+# [-i] ignore case when searching
+# [-f] look for a file, rather than a word or phrase
+# [-p] use approximate matching
+# [-v] be verbose
 #
 # Usage: pkglocate [-i] [-p] [-f] [-v] word
 
@@ -75,7 +75,15 @@ if [ "$verbose" = "yes" ]; then
 fi
 
 if [ $# -lt 1 ]; then
-	echo "Usage: pkglocate [-i] [-f] [-p] word"
+	echo "Usage: pkglocate [-i] [-f] [-p] [-v] word"
+	echo "       [-i] ignore case when searching"
+	echo "       [-f] look for a file, rather than a word or phrase"
+	echo -n "       [-p]"
+	if [ "$grepname" != "agrep" ]; then
+		echo -n " (NOT AVAILABLE - needs glimpse package installed)"
+	fi
+	echo " use approximate matching"
+	echo "       [-v] be verbose"
 	exit 1
 fi
 
