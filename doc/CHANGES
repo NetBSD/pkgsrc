@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4114 2003/12/14 22:55:08 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4115 2003/12/14 23:02:56 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5162,3 +5162,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-mime-data to 2.4.0 [xtraeme 2003-12-14]
 	Updated gnome-desktop to 2.4.1.1 [jmmv 2003-12-14]
 	Updated glade to 2.0.1 [xtraeme 2003-12-14]
+	Updated yelp to 2.4.2 [xtraeme 2003-12-14]
