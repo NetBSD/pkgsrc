@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2004/02/10 23:23:02 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2004/02/11 02:03:41 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -6,7 +6,33 @@ MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MESALIB_BUILDLINK3_MK:M+)
-_MESA_REQD?=		3.4.2
+MESA_REQD+=	3.4.2
+
+# Distill the MESA_REQD list into a single _MESA_REQD value that is the
+# highest version of MESA required.
+#
+_MESA_STRICTEST_REQD?=	none
+.  for _version_ in ${MESA_REQD}
+.    for _pkg_ in gcc-${_version_}
+.      if ${_MESA_STRICTEST_REQD} == "none"
+_MESA_PKG_SATISFIES_DEP=	YES
+.        for _vers_ in ${MESA_REQD}
+.          if !empty(_MESA_PKG_SATISFIES_DEP:M[yY][eE][sS])
+_MESA_PKG_SATISFIES_DEP!=	\
+	if ${PKG_ADMIN} pmatch 'gcc>=${_vers_}' ${_pkg_}; then		\
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
+.          endif
+.        endfor
+.        if !empty(_MESA_PKG_SATISFIES_DEP:M[yY][eE][sS])
+_MESA_STRICTEST_REQD=	${_version_}
+.        endif
+.      endif
+.    endfor
+.  endfor
+_MESA_REQD=	${_MESA_STRICTEST_REQD}
 
 BUILDLINK_PACKAGES+=		MesaLib
 BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=${_MESA_REQD}
