@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/11/10 10:38:18 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2004/11/11 19:41:46 martin Exp $
 
 Before you can use this program, you need to configure the MySQL
 connection in the open2300.conf file. The mysql user used by the
@@ -35,29 +35,29 @@ needs to be compatible. This alternative structure (for newer MySQL
 versions) works as well:
 
    CREATE TABLE `weather` (
-     `id` datetime NOT NULL default '0000-00-00 00:00:00',
-     `day` date NOT NULL default '0000-00-00',
-     `clock` time NOT NULL default '00:00:00',
-     `tempin` float NOT NULL default '0',
-     `tempout` float NOT NULL default '0',
+     `timestamp` datetime NOT NULL default '0000-00-00 00:00:00',
+     `rec_date` date NOT NULL default '0000-00-00',
+     `rec_time` time NOT NULL default '00:00:00',
+     `temp_in` float NOT NULL default '0',
+     `temp_out` float NOT NULL default '0',
      `dewpoint` float NOT NULL default '0',
-     `humin` int(11) NOT NULL default '0',
-     `humout` int(11) NOT NULL default '0',
+     `rel_hum_in` int(11) NOT NULL default '0',
+     `rel_hum_out` int(11) NOT NULL default '0',
      `windspeed` float NOT NULL default '0',
-     `winddir` float NOT NULL default '0',
-     `windcode` enum('N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW') character set ascii NOT NULL default 'N',
-     `windchill` float NOT NULL default '0',
-     `rain1` float NOT NULL default '0',
-     `rain24` float NOT NULL default '0',
-     `raintotal` float NOT NULL default '0',
-     `pressure` float NOT NULL default '0',
-     `tendency` enum('Steady','Rising','Falling') character set ascii NOT NULL default 'Steady',
-     `forecast` enum('Rainy','Cloudy','Sunny') character set ascii NOT NULL default 'Rainy',
-     PRIMARY KEY  (`id`)
+     `wind_angle` float NOT NULL default '0',
+     `wind_direction` enum('N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW') NOT NULL default 'N',
+     `wind_chill` float NOT NULL default '0',
+     `rain_1h` float NOT NULL default '0',
+     `rain_24h` float NOT NULL default '0',
+     `rain_total` float NOT NULL default '0',
+     `rel_pressure` float NOT NULL default '0',
+     `tendency` enum('Steady','Rising','Falling') NOT NULL default 'Steady',
+     `forecast` enum('Rainy','Cloudy','Sunny') NOT NULL default 'Rainy',
+     PRIMARY KEY  (`timestamp`)
    ) 
    ENGINE=MyISAM DEFAULT CHARSET=latin1 
    COMMENT='Weather as reported by WS 2300';
-
+   
 The program will not output anything, unless errors occur. This
 makes it easy to use it in cron jobs.
 
