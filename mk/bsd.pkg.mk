@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1002 2002/07/03 06:58:31 cjep Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1003 2002/07/03 16:30:18 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1314,17 +1314,21 @@ SITES_${fetchfile:T}?= ${PATCH_SITES}
 .  endfor
 .endif
 
-.if !target(do-fetch)
-do-fetch:
-.  if !empty(_ALLFILES)
+# This code is only called in a batch case, to check for the presence of
+# the distfiles
+batch-check-distfiles:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}
-.    if (${INTERACTIVE_STAGE:Mfetch} == "fetch")
-.      for fetchfile in ${_ALLFILES}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	file="${fetchfile}";						\
-	if [ ! -f ${DISTDIR}/$$file ]; then				\
-		${ECHO} "*** This package requires user intervention to download the distfiles"; \
+	gotfiles=yes;							\
+	for file in "" ${_ALLFILES}; do					\
+		case "$$file" in					\
+		"")	continue ;;					\
+		*)	if [ ! -f ${DISTDIR}/$$file ]; then		\
+				gotfiles=no;				\
+			fi ;;						\
+		esac;							\
+	done;								\
+	case "$$gotfiles" in						\
+	no)	${ECHO} "*** This package requires user intervention to download the distfiles"; \
 		${ECHO} "*** Please fetch the distfiles manually and place them in"; \
 		${ECHO} "*** ${DISTDIR}";				\
 		[ ! -z "${MASTER_SITES}" ] &&				\
@@ -1332,9 +1336,17 @@ do-fetch:
 		[ ! -z "${HOMEPAGE}" ] && 				\
 			${ECHO} "*** See ${HOMEPAGE} for more details";	\
 		${ECHO};						\
-		${FALSE};						\
-	fi
-.      endfor
+		${FALSE} ;;						\
+	esac
+
+.if !target(do-fetch)
+do-fetch:
+.  if !empty(_ALLFILES)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}
+.    if ${INTERACTIVE_STAGE:Mfetch} == "fetch" && defined(BATCH)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${MAKE} ${MAKEFLAGS} batch-check-distfiles
 .    else
 .      for fetchfile in ${_ALLFILES}
 .        if defined(_FETCH_MESSAGE) 
