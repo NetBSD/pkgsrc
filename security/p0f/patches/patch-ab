@@ -1,23 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/26 05:12:56 zuntum Exp $
+$NetBSD: patch-ab,v 1.1.1.2 2001/03/26 11:59:15 hubertf Exp $
 
---- Makefile.orig	Tue Jun 13 20:45:06 2000
+--- Makefile.orig	Mon Mar 26 06:21:15 2001
 +++ Makefile
-@@ -3,20 +3,19 @@
- # (c) <lcamtuf@tpi.pl>
- #
- 
--CC      = gcc
- CLIBS	= -lpcap
- SUNLIBS	= -lsocket -lnsl -D_SUN_=1
- STRIP	= strip
--CFLAGS  = -O3 -Wall
- FILE	= p0f
- VERSION = 1.7
- 
- DISTRO  = p0f.c Makefile README COPYING tcp.h p0f.fp
- 
--all: $(FILE) strip	
-+all: $(FILE)
+@@ -16,7 +16,8 @@
+ all: $(FILE) strip	
  
  $(FILE): p0f.c
 -	$(CC) $(CFLAGS) -DVER=\"$(VERSION)\" -o $@ $< $(CLIBS) \
