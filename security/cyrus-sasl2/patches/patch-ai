@@ -1,8 +1,26 @@
-$NetBSD: patch-ai,v 1.10 2004/11/15 21:58:17 jlam Exp $
+$NetBSD: patch-ai,v 1.11 2005/02/15 12:32:38 tv Exp $
 
 --- configure.orig	2004-10-24 16:21:08.000000000 -0400
 +++ configure
-@@ -5160,7 +5160,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -1326,8 +1326,6 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+ 
+-if test $cache_file = "/dev/null"; then
+-cache_file="./config.cache"
+ if test -r "$cache_file"; then
+   # Some versions of bash will fail to source /dev/null (special
+   # files actually), so we avoid doing that.
+@@ -1345,8 +1343,6 @@ echo "$as_me: creating cache $cache_file
+   >$cache_file
+ fi
+ 
+-fi
+-
+ ac_aux_dir=
+ for ac_dir in config $srcdir/config; do
+   if test -f $ac_dir/install-sh; then
+@@ -5160,7 +5156,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -11,7 +29,7 @@ $NetBSD: patch-ai,v 1.10 2004/11/15 21:58:17 jlam Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -5916,7 +5916,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -5916,7 +5912,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -20,7 +38,7 @@ $NetBSD: patch-ai,v 1.10 2004/11/15 21:58:17 jlam Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -10680,7 +10680,14 @@ if test $ac_cv_lib_resolv_res_search = y
+@@ -10680,7 +10676,14 @@ if test $ac_cv_lib_resolv_res_search = y
  fi
  
    SASL_MECHS="$SASL_MECHS libgssapiv2.la"
@@ -36,7 +54,7 @@ $NetBSD: patch-ai,v 1.10 2004/11/15 21:58:17 jlam Exp $
  
    cmu_save_LIBS="$LIBS"
    LIBS="$LIBS $GSSAPIBASE_LIBS"
-@@ -10778,11 +10785,6 @@ fi
+@@ -10778,11 +10781,6 @@ fi
  
  
  if test "$gssapi" != "no"; then
