@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.475 2004/06/05 19:04:42 nathanw Exp $
+# $NetBSD: Makefile,v 1.475.2.1 2004/07/14 12:49:18 agc Exp $
 #
 
 COMMENT=	Networking tools
@@ -374,6 +374,7 @@ SUBDIR+=	wmpload
 SUBDIR+=	wol
 SUBDIR+=	wu-ftpd
 SUBDIR+=	x2vnc
+SUBDIR+=	xfce4-wavelan-plugin
 SUBDIR+=	xipdump
 SUBDIR+=	xmftp
 SUBDIR+=	xnap
