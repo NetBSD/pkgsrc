@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/04/21 14:14:32 agc Exp $
+# $NetBSD: Makefile,v 1.5 1999/05/20 20:09:51 tron Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -38,7 +38,6 @@ CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
 			--with-dump-honor-nodump \
 			--without-server --without-restore --without-client
 
-CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 CPPFLAGS=		
 
 pre-install:

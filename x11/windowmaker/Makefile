@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1999/05/02 17:59:21 rh Exp $
+# $NetBSD: Makefile,v 1.29 1999/05/20 20:09:53 tron Exp $
 
 DISTNAME=		WindowMaker-0.53.0
 PKGNAME=		windowmaker-0.53.0
@@ -25,9 +25,6 @@ CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/share/locale \
 			--with-incs-from="-I${LOCALBASE}/include \
 				-I${LOCALBASE}/include/giflib"
 LDFLAGS+=		-L${LOCALBASE}/lib	# for libintl.a
-CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-			INSTALL_DATA="${INSTALL_DATA}" \
-			INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 # WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
 # to support.  Currently supported options:
