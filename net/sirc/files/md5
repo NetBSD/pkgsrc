@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.5 1998/10/04 01:59:53 hubertf Exp $
+$NetBSD: md5,v 1.6 1998/11/01 13:51:09 hubertf Exp $
 
 MD5 (sirc/sirc-2.211.tar.gz) = deff882465928be699a6324a5f788469
 MD5 (sirc/adcc.pl) = 7c41343ab4d5d7605c72bff91a9139e0
@@ -15,6 +15,4 @@ MD5 (sirc/patattack.pl) = 53327309665c08fba7e5d08afffcb94a
 MD5 (sirc/prefix.pl) = a85ded4b047cd0a2fb02c9a331914545
 MD5 (sirc/quit.pl) = c7f50ffbf4c51c7d0512d0ae2a36a333
 MD5 (sirc/ssfe.diff) = fe2f16ef6cbfca11fe0fbdf0c0f6798d
-MD5 (sirc/winnuke.pl) = 80627a4f56b334b33e09c1ce99df3ce0
 MD5 (sirc/www.pl) = 9ae8735476bb32e643f7473f46825ee4
-MD5 (sirc/yiff.pl) = e0d8f765a183669126b3cecbde279257
