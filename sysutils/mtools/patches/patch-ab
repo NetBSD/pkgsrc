@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2001/02/28 10:26:02 wiz Exp $
---- configure.orig	Sun May 28 13:22:06 2000
-+++ configure	Wed Feb 14 13:47:25 2001
+$NetBSD: patch-ab,v 1.4.6.1 2003/06/19 01:09:33 grant Exp $
+
+--- configure.orig	2000-05-28 12:22:06.000000000 +0200
++++ configure	2003-05-22 17:57:40.000000000 +0200
 @@ -2626,7 +2626,7 @@
  fi
  
@@ -15,7 +16,7 @@ $NetBSD: patch-ab,v 1.4 2001/02/28 10:26:02 wiz Exp $
    # It would also be nice to do this for all -L options, not just this one.
    if test -n "$x_libraries"; then
 -    X_LIBS="$X_LIBS -L$x_libraries"
-+    X_LIBS="$X_LIBS -Wl,-R$x_libraries -L$x_libraries"
++    X_LIBS="$X_LIBS -Wl,${RPATH_FLAG}$x_libraries -L$x_libraries"
      # For Solaris; some versions of Sun CC require a space after -R and
      # others require no space.  Words are not sufficient . . . .
      case "`(uname -sr) 2>/dev/null`" in
@@ -24,7 +25,31 @@ $NetBSD: patch-ab,v 1.4 2001/02/28 10:26:02 wiz Exp $
    # Check for libraries that X11R6 Xt/Xaw programs need.
    ac_save_LDFLAGS="$LDFLAGS"
 -  test -n "$x_libraries" && LDFLAGS="$LDFLAGS -L$x_libraries"
-+  test -n "$x_libraries" && LDFLAGS="$LDFLAGS -Wl,-R$x_libraries -L$x_libraries"
++  test -n "$x_libraries" && LDFLAGS="$LDFLAGS -Wl,${RPATH_FLAG}$x_libraries -L$x_libraries"
    # SM needs ICE to (dynamically) link under SunOS 4.x (so we have to
    # check for ICE first), but we must link in the order -lSM -lICE or
    # we get undefined symbols.  So assume we have SM if we have ICE.
+@@ -3644,6 +3644,7 @@
+     fi
+     FLOPPYD="floppyd floppyd_installtest"
+     BINFLOPPYD="\$(bindir)/floppyd \$(bindir)/floppyd_installtest"
++    MANFLOPPYD="floppyd.1"
+     cat >> confdefs.h <<\EOF
+ #define USE_FLOPPYD 1
+ EOF
+@@ -3651,6 +3652,7 @@
+ else
+     FLOPPYD=
+     BINFLOPPYD=
++    MANFLOPPYD=
+ fi
+ 
+ 
+@@ -3823,6 +3825,7 @@
+ s%@X_EXTRA_LIBS@%$X_EXTRA_LIBS%g
+ s%@FLOPPYD@%$FLOPPYD%g
+ s%@BINFLOPPYD@%$BINFLOPPYD%g
++s%@MANFLOPPYD@%$MANFLOPPYD%g
+ s%@extraincludedir@%$extraincludedir%g
+ s%@extralibdir@%$extralibdir%g
+ s%@MACHDEPLIBS@%$MACHDEPLIBS%g
