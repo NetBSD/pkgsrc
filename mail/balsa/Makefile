@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/10/15 11:59:38 tv Exp $
+# $NetBSD: Makefile,v 1.50 2004/10/15 12:03:53 tv Exp $
 #
 
 DISTNAME=		balsa-1.4.3
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--enable-pcre
 CONFIGURE_ARGS+=        --with-ssl=${BUILDLINK_PREFIX.openssl}
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/libproplist/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

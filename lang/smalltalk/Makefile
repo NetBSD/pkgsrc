@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2004/10/03 00:15:02 tv Exp $
+# $NetBSD: Makefile,v 1.29 2004/10/15 12:03:53 tv Exp $
 
 DISTNAME=		smalltalk-2.1.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=smalltalk/}
 
@@ -31,7 +31,7 @@ CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
 TEST_TARGET=		check
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/libtool/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
