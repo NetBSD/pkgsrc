@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 1998/08/24 16:55:36 agc Exp $
+$NetBSD: patch-ac,v 1.2 2000/11/08 21:55:22 tron Exp $
 
 Extensive hacking around - instead of installing manual pages which
 simply source other man pages, make a symbolic link to the target.
@@ -52,8 +52,8 @@ simply source other man pages, make a symbolic link to the target.
 +	@for i in ${SOPAGES3}; do \
 +		dpgm=`echo $$i | sed -e 's|.*/||'` ; \
 +		tgt=`awk '/^\.so/ { print \$$2; exit}' < \$$i`; \
-+		echo "ln -fs ${DEST3}/$$tgt ${DEST3}/$$dpgm"; \
-+		ln -fs ${DEST3}/$$tgt ${DEST3}/$$dpgm; \
++		echo "ln -fs ../$$tgt ${DEST3}/$$dpgm"; \
++		ln -fs ../$$tgt ${DEST3}/$$dpgm; \
 +	done
 +
 +install-5: ${MANPAGES5} 5links
@@ -73,8 +73,8 @@ simply source other man pages, make a symbolic link to the target.
 +	@for i in ${SOPAGES5}; do \
 +		dpgm=`echo $$i | sed -e 's|.*/||'` ; \
 +		tgt=`awk '/^\.so/ { print \$$2; exit}' < \$$i`; \
-+		echo "ln -fs ${DEST5}/$$tgt ${DEST5}/$$dpgm"; \
-+		ln -fs ${DEST5}/$$tgt ${DEST5}/$$dpgm; \
++		echo "ln -fs ../$$tgt ${DEST5}/$$dpgm"; \
++		ln -fs .../$$tgt ${DEST5}/$$dpgm; \
 +	done
 +
 +
