@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2003/09/23 17:52:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.116 2003/09/23 19:33:14 jschauma Exp $
 
 DISTNAME=		openssh-3.7.1p2
 PKGNAME=		openssh-3.7.1.2
@@ -75,9 +75,6 @@ LIBS+=			-lc
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 .  include "../../security/skey/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
-.elif ${OPSYS} == "IRIX"
-CFLAGS+=	-DSETEUID_BREAKS_SETUID -DBROKEN_SETREUID -DBROKEN_SETREGID
-.elif ${OPSYS} == "NetBSD"
 # XXX: NetBSD has 4 args (4: sslen) to skeychallenge instead of 3
 #CONFIGURE_ARGS+=	--with-skey=/usr
 CONFIGURE_ARGS+=	--without-skey
