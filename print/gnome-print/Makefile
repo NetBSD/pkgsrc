@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2004/01/03 18:49:51 reed Exp $
+# $NetBSD: Makefile,v 1.60 2004/02/14 17:21:50 jlam Exp $
 #
 
 DISTNAME=		gnome-print-0.36
@@ -14,7 +14,6 @@ USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-admin		# currently unstable

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/07 23:22:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/14 17:21:53 jlam Exp $
 
 DISTNAME=	openbox-3.1
 PKGREVISION=	2
@@ -20,7 +20,6 @@ USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/parser/obparser-3.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/render/obrender-3.0.pc.in
 

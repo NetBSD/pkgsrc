@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/09 20:28:16 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:52 jlam Exp $
 #
 
 DISTNAME=	libgpg-error-0.6
@@ -15,8 +15,5 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
 .include "../../devel/gettext-lib/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/02/14 14:43:51 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2004/02/14 17:21:50 jlam Exp $
 #
 # This file is currently included by:
 #
@@ -37,7 +37,6 @@ USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 MAKE_ENV+=		SHLIBTOOL=${SHLIBTOOL:Q}
 
 # CYRUS_USER		username of the Cyrus administrator
