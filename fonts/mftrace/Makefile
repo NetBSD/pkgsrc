@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/11/29 10:14:17 adam Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/31 17:01:12 wiz Exp $
 
-DISTNAME=	mftrace-1.0.35
-PKGREVISION=	1
+DISTNAME=	mftrace-1.1.1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.xs4all.nl/~hanwen/mftrace/
 

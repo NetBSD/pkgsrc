@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/26 13:03:59 adam Exp $
+$NetBSD: distinfo,v 1.2 2004/12/31 17:01:12 wiz Exp $
 
-SHA1 (mftrace-1.0.35.tar.gz) = 9118e1c300c81881b7911dcdee2b39fd6f76b595
-Size (mftrace-1.0.35.tar.gz) = 53773 bytes
+SHA1 (mftrace-1.1.1.tar.gz) = 5a8878809ef0e26ea5f64365009da031811e2884
+Size (mftrace-1.1.1.tar.gz) = 53749 bytes
 SHA1 (patch-aa) = e4fff5da8371efc7660539f2520a09cd802b9e81
