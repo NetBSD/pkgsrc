@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/11 20:08:11 tv Exp $
+$NetBSD: distinfo,v 1.2 2004/11/29 02:10:48 tv Exp $
 
-SHA1 (cygwin/cygwin-1.5.11-1.tar.bz2) = 0e708eadb6d2507a0e42309b7e0abbb433b1f4e2
-Size (cygwin/cygwin-1.5.11-1.tar.bz2) = 1179700 bytes
+SHA1 (cygwin/cygwin-1.5.12-1.tar.bz2) = 8a99e404e92c0d02bf550b0b9c9aeea7ec0a708c
+Size (cygwin/cygwin-1.5.12-1.tar.bz2) = 1187032 bytes
