@@ -1,0 +1,43 @@
+--- src/Makefile.in.orig	Sun Jul 19 14:30:55 1998
++++ src/Makefile.in	Sun Jul 19 16:51:42 1998
+@@ -14,7 +14,7 @@
+ 
+ ####### Compiler, tools and options
+ 
+-CC	=	$(SYSCONF_CC)
++CC	=	$(LOCALBASE)/bin/libtool $(SYSCONF_CC)
+ CFLAGS	=	$(SYSCONF_CFLAGS_QT) $(SYSCONF_CFLAGS_X11) $(SYSCONF_CFLAGS) $(SYSCONF_CFLAGS_LIB)
+ LFLAGS	=	$(SYSCONF_LFLAGS_X11) $(SYSCONF_LFLAGS)
+ LIBS	=	$(SYSCONF_LIBS_X11)
+@@ -23,7 +23,7 @@
+ ####### Target
+ 
+ TARGET	= qt
+-DESTDIR = ../lib/
++DESTDIR = 
+ VER_MAJ = 1
+ VER_MIN = 40
+ 
+@@ -506,20 +506,8 @@
+ 
+ .SUFFIXES: .cpp .cxx .cc .C .c
+ 
+-.cpp.o:
+-	$(CC) -c $(CFLAGS) -o $@ $<
+-
+-.cxx.o:
+-	$(CC) -c $(CFLAGS) -o $@ $<
+-
+-.cc.o:
+-	$(CC) -c $(CFLAGS) -o $@ $<
+-
+-.C.o:
+-	$(CC) -c $(CFLAGS) -o $@ $<
+-
+-.c.o:
+-	$(CC) -c $(CFLAGS) -o $@ $<
++.cpp.o .cxx.o .cc.o .C.o .c.o:
++	@cd `dirname $@` && $(CC) -c $(CFLAGS) `basename $<`
+ 
+ ####### Build rules
+ 
