@@ -1,0 +1,27 @@
+--- util_d/Imakefile.orig	Sat May 23 08:31:58 1998
++++ util_d/Imakefile	Tue Jun  2 23:19:11 1998
+@@ -34,8 +34,12 @@
+ /*
+  * Source files
+  */
+-SRCS=	cddbcmd.c wm2xmcd.c
+ 
++SRCS1=	cddbcmd.c
++OBJS1=	cddbcmd.o
++
++SRCS2=	wm2xmcd.c
++OBJS2=	wm2xmcd.o
+ 
+ /*
+  * No X11 libraries needed for utilities in this directory
+@@ -47,8 +51,8 @@
+  * Build rule
+  */
+ AllTarget(cddbcmd wm2xmcd)
+-NormalProgramTarget(cddbcmd,cddbcmd.o,,,)
+-NormalProgramTarget(wm2xmcd,wm2xmcd.o,,,)
++ComplexProgramTarget_1(cddbcmd,,)
++ComplexProgramTarget_2(wm2xmcd,,)
+ DependTarget()
+ LintTarget()
+ 
