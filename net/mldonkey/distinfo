@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2004/02/07 20:39:43 wiz Exp $
+$NetBSD: distinfo,v 1.7 2004/02/10 15:49:56 wiz Exp $
 
-SHA1 (mldonkey-source-2-5-8.tar.gz) = 4e99bddd113fe5f6b5834761a3d01b30b5231ad6
-Size (mldonkey-source-2-5-8.tar.gz) = 3168222 bytes
-SHA1 (patch-aa) = a28be0c6cbd4e89f1d1d9331db228b068a31a53c
+SHA1 (mldonkey-2.5.10.tar.gz) = 5318cc2d90c72fc82e58717c7405f7570063fa77
+Size (mldonkey-2.5.10.tar.gz) = 3190624 bytes
+SHA1 (patch-aa) = 45b5393d06e53d0fc9383ae9aabcf3b09c447e3d
+SHA1 (patch-ab) = 93e6f19e9e03cfd44a670c553b998cd8fd904de7
