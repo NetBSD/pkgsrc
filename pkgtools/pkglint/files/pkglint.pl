@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.129 2005/02/12 21:34:47 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.130 2005/02/15 21:07:01 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1139,7 +1139,7 @@ sub readmakefile($) {
 	return $contents;
 }
 
-sub check_make_variable_definition($) {
+sub check_Makefile_vartype($) {
 	my ($line) = @_;
 	if ($line->text =~ qr"([A-Z_a-z0-9.]+)\s*(=|\?=|\+=)\s*(.*)") {
 		my ($varname, $op, $value) = ($1, $2, $3);
@@ -1171,23 +1171,31 @@ sub check_make_variable_definition($) {
 	return true;
 }
 
-sub check_Makefile_variable_definitions($) {
-	my ($fname) = @_;
-	my ($lines) = load_file($fname);
-	if (!$lines) {
-		log_error($fname, NO_LINE_NUMBER, "Could not open");
-		return false;
-	} else {
-		foreach my $line (@$lines) {
-			check_make_variable_definition($line);
+sub check_Makefile_variables($) {
+	my ($lines) = @_;
+
+	# Check variable name quoting
+	foreach my $line (@$lines) {
+		if ($line->text =~ qr"^[^#]*[^\$]\$(\w+)") {
+			my ($varname) = ($1);
+			log_warning($line->file, $line->lineno, "please write either \${$varname} or \$\$$varname instead of \$$varname.");
 		}
 	}
+
+	# Check variable types
+	if ($opt_warn_types) {
+		foreach my $line (@$lines) {
+			check_Makefile_vartype($line);
+		}
+	}
+
 	return true;
 }
 
 sub checkfile_Makefile($) {
 	my ($file) = @_;
 	my ($fname) = ("$opt_packagedir/$file");
+	my ($lines) = load_file($fname);
 	my ($tmp, $rawwhole, $whole, $idx, @sections);
 	my (@varnames) = ();
 	my ($distfiles, $svrpkgname, $distname, $extractsufx) = ('', '', '', '', '');
@@ -1195,6 +1203,11 @@ sub checkfile_Makefile($) {
 	my ($realwrksrc, $wrksrc, $nowrksubdir) = ('', '', '');
 	my ($includefile);
 	my ($category);
+
+	if (!defined($lines)) {
+		log_error($fname, NO_LINE_NUMBER, "read error");
+		return false;
+	}
 
 	if ($opt_packagedir eq ".") {
 		$category = basename(dirname(cwd()));
@@ -1976,11 +1989,7 @@ EOF
 			"discouraged. redefine \"do-$1\" instead.");
 	}
 
-	if ($opt_warn_types) {
-		return check_Makefile_variable_definitions($fname);
-	} else {
-		return true;
-	}
+	return check_Makefile_variables($lines);
 }
 
 sub checkextra($$) {
