@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2000/09/14 22:51:26 wiz Exp $
+
+--- pppoe.c.orig	Wed Sep 13 02:11:53 2000
++++ pppoe.c
+@@ -5,6 +5,7 @@
+ #include <stdarg.h>
+ #include <unistd.h>
+ #include <signal.h>
++#include <sys/socket.h>
+ #include <net/if.h>
+ #include <termios.h>
+ #include <strings.h>
