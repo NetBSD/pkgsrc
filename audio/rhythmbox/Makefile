@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/06/25 08:37:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/09/21 17:22:39 jmmv Exp $
 #
 
-DISTNAME=	rhythmbox-0.8.5
+DISTNAME=	rhythmbox-0.8.6
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -42,6 +42,7 @@ GCONF2_SCHEMAS=		rhythmbox.schemas
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../multimedia/gst-plugins/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

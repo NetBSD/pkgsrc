@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/06/25 08:37:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/21 17:22:39 jmmv Exp $
 bin/rhythmbox
 lib/bonobo/librb-nautilus-context-menu.a
 lib/bonobo/librb-nautilus-context-menu.la
@@ -21,6 +21,7 @@ share/gnome/help/rhythmbox/C/figures/rb-browser.png
 share/gnome/help/rhythmbox/C/figures/rb-context-menu.png
 share/gnome/help/rhythmbox/C/figures/rb-empty.png
 share/gnome/help/rhythmbox/C/figures/rb-full-play.png
+share/gnome/help/rhythmbox/C/figures/rb-group-auto.png
 share/gnome/help/rhythmbox/C/figures/rb-group-create.png
 share/gnome/help/rhythmbox/C/figures/rb-group.png
 share/gnome/help/rhythmbox/C/figures/rb-imported.png
@@ -31,16 +32,21 @@ share/gnome/help/rhythmbox/C/figures/rb-nobrowse-play.png
 share/gnome/help/rhythmbox/C/figures/rb-notification-area-menu.png
 share/gnome/help/rhythmbox/C/figures/rb-notification-area.png
 share/gnome/help/rhythmbox/C/figures/rb-player.png
+share/gnome/help/rhythmbox/C/figures/rb-prefs-general.png
+share/gnome/help/rhythmbox/C/figures/rb-prefs-ipod.png
+share/gnome/help/rhythmbox/C/figures/rb-prefs-library.png
 share/gnome/help/rhythmbox/C/figures/rb-prefs.png
 share/gnome/help/rhythmbox/C/figures/rb-repeat.png
 share/gnome/help/rhythmbox/C/figures/rb-search.png
 share/gnome/help/rhythmbox/C/figures/rb-shuffle.png
 share/gnome/help/rhythmbox/C/figures/rb-sidebar.png
 share/gnome/help/rhythmbox/C/figures/rb-stats.png
+share/gnome/help/rhythmbox/C/figures/rb-statusbar.png
 share/gnome/help/rhythmbox/C/figures/rb-toolbar-editor.png
 share/gnome/help/rhythmbox/C/figures/rb-toolbar.png
 share/gnome/help/rhythmbox/C/figures/rb-volume-changer.png
 share/gnome/help/rhythmbox/C/figures/rb-volume-mute.png
+share/gnome/help/rhythmbox/C/figures/rb-window-small.png
 share/gnome/help/rhythmbox/C/figures/rb-window.png
 share/gnome/help/rhythmbox/C/figures/rhythmbox-group.png
 share/gnome/help/rhythmbox/C/figures/rhythmbox-tray-icon.png
@@ -48,6 +54,31 @@ share/gnome/help/rhythmbox/C/legal.xml
 share/gnome/help/rhythmbox/C/quick-reference.xml
 share/gnome/help/rhythmbox/C/rhythmbox.xml
 share/gnome/help/rhythmbox/C/user-guide.xml
+share/gnome/help/rhythmbox/ja/authors.xml
+share/gnome/help/rhythmbox/ja/fdl-appendix.xml
+share/gnome/help/rhythmbox/ja/figures/rb-adv.png
+share/gnome/help/rhythmbox/ja/figures/rb-basic.png
+share/gnome/help/rhythmbox/ja/figures/rb-browser.png
+share/gnome/help/rhythmbox/ja/figures/rb-context-menu.png
+share/gnome/help/rhythmbox/ja/figures/rb-iradio-add.png
+share/gnome/help/rhythmbox/ja/figures/rb-iradio.png
+share/gnome/help/rhythmbox/ja/figures/rb-nextprev.png
+share/gnome/help/rhythmbox/ja/figures/rb-notification-area-menu.png
+share/gnome/help/rhythmbox/ja/figures/rb-notification-area.png
+share/gnome/help/rhythmbox/ja/figures/rb-player.png
+share/gnome/help/rhythmbox/ja/figures/rb-prefs-general.png
+share/gnome/help/rhythmbox/ja/figures/rb-prefs-library.png
+share/gnome/help/rhythmbox/ja/figures/rb-repeat.png
+share/gnome/help/rhythmbox/ja/figures/rb-search.png
+share/gnome/help/rhythmbox/ja/figures/rb-shuffle.png
+share/gnome/help/rhythmbox/ja/figures/rb-sidebar.png
+share/gnome/help/rhythmbox/ja/figures/rb-stats.png
+share/gnome/help/rhythmbox/ja/figures/rb-volume-changer.png
+share/gnome/help/rhythmbox/ja/figures/rb-window.png
+share/gnome/help/rhythmbox/ja/legal.xml
+share/gnome/help/rhythmbox/ja/quick-reference.xml
+share/gnome/help/rhythmbox/ja/rhythmbox.xml
+share/gnome/help/rhythmbox/ja/user-guide.xml
 share/idl/Rhythmbox.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/rhythmbox.mo
@@ -64,9 +95,11 @@ ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/rhythmbox.mo
@@ -78,6 +111,7 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/rhythmbox.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/rhythmbox.mo
@@ -97,6 +131,7 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/rhythmbox.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/rhythmbox.mo
 share/mime-info/rhythmbox.keys
 share/omf/rhythmbox/rhythmbox-C.omf
+share/omf/rhythmbox/rhythmbox-ja.omf
 share/pixmaps/rhythmbox.png
 share/rhythmbox/art/about-logo.png
 share/rhythmbox/art/rhythmbox-album.png
@@ -147,6 +182,8 @@ share/rhythmbox/iradio-initial.pls
 @comment in scrollkeeper: @dirrm share/omf
 @comment in xdg-dirs: @dirrm share/mime-info
 @comment in ORBit2: @dirrm share/idl
+@dirrm share/gnome/help/rhythmbox/ja/figures
+@dirrm share/gnome/help/rhythmbox/ja
 @dirrm share/gnome/help/rhythmbox/C/figures
 @dirrm share/gnome/help/rhythmbox/C
 @dirrm share/gnome/help/rhythmbox
