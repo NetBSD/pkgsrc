@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2004/09/06 08:20:54 cjep Exp $
+$NetBSD: patch-aa,v 1.8 2005/02/24 16:35:37 wiz Exp $
 
---- Makefile.orig	2004-09-05 11:48:39.000000000 +0100
+--- Makefile.orig	2005-02-19 15:02:59.000000000 +0100
 +++ Makefile
 @@ -6,14 +6,14 @@
  # See the file INSTALL if you need help.
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.7 2004/09/06 08:20:54 cjep Exp $
  
  DESTDIR		=
  
-@@ -43,7 +43,8 @@ SHELL		= /bin/sh
+@@ -59,7 +59,8 @@ SHELL		= /bin/sh
  ###########################################################################
  
  FEATURES	= -DMAILRC='"$(MAILRC)"' -DMAILSPOOL='"$(MAILSPOOL)"' \
