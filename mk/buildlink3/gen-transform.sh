@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.25 2004/03/12 15:45:43 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.26 2004/03/13 03:41:13 uebayasi Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -342,10 +342,10 @@ done
 # This section suppress duplicate libraries in sequence.
 _libs=
 for l in \$libs; do
-        case "\${_libs}" in
-        \$l|*" "\$l) ;;
-        *) _libs="\${_libs} \$l" ;;
-        esac
+	case "\${_libs}" in
+	\$l|*" "\$l) ;;
+	*) _libs="\${_libs} \$l" ;;
+	esac
 done
 _libs="\${_libs# }"
 _libs="\${_libs% }"

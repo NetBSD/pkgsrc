@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.2 2003/09/02 06:59:57 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.3 2004/03/13 03:41:13 uebayasi Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -123,7 +123,7 @@ if $test -f $lafile; then
 			fi
 			relink="${relink} $i"
 			;;
-                # Everything else Just Belongs in the relink_command line.
+		# Everything else Just Belongs in the relink_command line.
 		*)
 			relink="${relink} $i"
 			;;
