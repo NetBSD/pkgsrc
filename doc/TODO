@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2189 2004/10/01 13:18:58 adam Exp $
+$NetBSD: TODO,v 1.2190 2004/10/01 13:36:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -431,7 +431,6 @@ Suggested package updates
 	o sweep-0.8.3
 	o sylpheed-claws-0.9.12b
 	o taglib-1.3 [pkg/27061]
-	o tcl-8.4.7
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
 	o tcm-2.20
@@ -441,7 +440,6 @@ Suggested package updates
 	o texi2html-1.70
 	o tfmxplay-1.1.6
 	o tinyproxy-1.6.3
-	o tk-8.4.7
 	o tkdesk-2.0
 	o tkgate-1.8.5
 	o tkman-2.2
