@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.49 2003/09/02 07:00:04 jlam Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.50 2003/10/10 21:45:55 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -160,9 +160,7 @@ bulk-check-uptodate:
 	fi ; \
 	if [ "$$uptodate" = "1" ]; then \
 		${SHCOMMENT} "Check required binary packages" ; \
-		deps=`${PKG_INFO} -qf ${REF} \
-		      | ${GREP} '^@pkgdep' \
-		      | ${SED} 's,@pkgdep.,,g'`; \
+		deps=${DEPENDS:C/:.*//:Q} ; \
 		for dep in $$deps ; do \
 			${SHCOMMENT} "check against the binary pkg that pkg_add would pick, too:" ; \
 			${SHCOMMENT} "(Only one should be returned here, really...)" ; \
@@ -170,7 +168,7 @@ bulk-check-uptodate:
 			if [ -z "$$pkg" ]; then \
 				${ECHO_MSG} >&2 "BULK> Required binary package $$dep does not exist, rebuilding... " ; \
 				uptodate=0 ; \
-			elif [ -n "$$(find \"$$pkg\" -prune -newer \"${REF}\")" ]; then \
+			elif [ -n "$$(${FIND} $$pkg -prune -newer ${REF})" ]; then \
 				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding... " ; \
 				uptodate=0 ; \
 			else \
