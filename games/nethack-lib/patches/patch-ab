@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2000/08/21 19:57:08 pooka Exp $
+$NetBSD: patch-ab,v 1.6 2000/11/27 22:31:03 pooka Exp $
 
 --- sys/unix/Makefile.top.orig	Tue Jul  4 03:42:05 2000
-+++ sys/unix/Makefile.top	Mon Aug 21 22:48:26 2000
++++ sys/unix/Makefile.top	Mon Nov 27 23:14:25 2000
 @@ -14,18 +14,17 @@
  # MAKE = make
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ab,v 1.5 2000/08/21 19:57:08 pooka Exp $
  
  # GAMEDIR also appears in config.h as "HACKDIR".
  # VARDIR may also appear in unixconf.h as "VAR_PLAYGROUND" else GAMEDIR
-@@ -35,14 +34,13 @@
+@@ -35,12 +34,12 @@
  # therefore there should not be anything in GAMEDIR that you want to keep
  # (if there is, you'll have to do the installation by hand or modify the
  # instructions)
@@ -38,13 +38,11 @@ $NetBSD: patch-ab,v 1.5 2000/08/21 19:57:08 pooka Exp $
  
  # per discussion in Install.X11 and Install.Qt
 -VARDATND = 
++VARDATND = pet_mark.xbm rip.xpm
  # VARDATND = x11tiles pet_mark.xbm
--# VARDATND = x11tiles pet_mark.xbm rip.xpm
-+VARDATND = x11tiles pet_mark.xbm rip.xpm
+ # VARDATND = x11tiles pet_mark.xbm rip.xpm
  # for Atari/Gem
- # VARDATND = nh16.img title.img GEM_RSC.RSC
- # for BeOS
-@@ -87,9 +85,12 @@
+@@ -87,9 +86,12 @@
  $(GAME):
  	( cd src ; $(MAKE) )
  
@@ -58,7 +56,7 @@ $NetBSD: patch-ab,v 1.5 2000/08/21 19:57:08 pooka Exp $
  Guidebook:
  	( cd doc ; $(MAKE) Guidebook )
  
-@@ -99,6 +100,9 @@
+@@ -99,6 +101,9 @@
  data:
  	( cd dat ; $(MAKE) data )
  
@@ -68,7 +66,7 @@ $NetBSD: patch-ab,v 1.5 2000/08/21 19:57:08 pooka Exp $
  rumors:
  	( cd dat ; $(MAKE) rumors )
  
-@@ -156,6 +160,11 @@
+@@ -156,6 +161,11 @@
  	( cd util ; $(MAKE) dlb )
  	( cd dat ; ../util/dlb cf nhdat $(DATDLB) )
  
@@ -80,7 +78,7 @@ $NetBSD: patch-ab,v 1.5 2000/08/21 19:57:08 pooka Exp $
  
  dofiles:
  	target=`sed -n					\
-@@ -165,16 +174,13 @@
+@@ -165,16 +175,13 @@
  		-e '}' 					\
  	  	-e '$$s/.*/nodlb/p' < dat/options` ;	\
  	$(MAKE) dofiles-$${target-nodlb}
@@ -98,7 +96,7 @@ $NetBSD: patch-ab,v 1.5 2000/08/21 19:57:08 pooka Exp $
  	-$(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)
  	$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)
  	chmod $(EXEPERM) $(SHELLDIR)/$(GAME)
-@@ -210,16 +216,16 @@
+@@ -210,16 +217,16 @@
  # and a reminder
  	@echo You may also want to install the man pages via the doc Makefile.
  
@@ -118,7 +116,7 @@ $NetBSD: patch-ab,v 1.5 2000/08/21 19:57:08 pooka Exp $
  # set up the game files
  	( $(MAKE) dofiles )
  # set up some additional files
-@@ -227,6 +233,14 @@
+@@ -227,6 +234,14 @@
  	-( cd $(VARDIR) ; $(CHOWN) $(GAMEUID) perm record logfile ; \
  			$(CHGRP) $(GAMEGRP) perm record logfile ; \
  			chmod $(FILEPERM) perm record logfile )
