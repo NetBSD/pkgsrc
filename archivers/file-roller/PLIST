@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.12 2004/10/28 19:09:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/03/22 16:29:09 jmmv Exp $
 bin/file-roller
 lib/bonobo/libfile-roller-component.la
 lib/bonobo/servers/File_Roller_Component.server
+lib/nautilus/extensions-1.0/libnautilus-fileroller.la
 share/application-registry/file-roller.applications
 share/applications/file-roller.desktop
 share/file-roller/glade/file_roller.glade
@@ -44,10 +45,11 @@ share/gnome/help/file-roller/ru/legal.xml
 share/gnome/help/file-roller/sv/figures/file-roller_main_window.png
 share/gnome/help/file-roller/sv/file-roller.xml
 share/gnome/help/file-roller/sv/legal.xml
-share/gnome/help/file-roller/uk/figures/fr-add-dialog.png
-share/gnome/help/file-roller/uk/figures/fr-extract.png
-share/gnome/help/file-roller/uk/figures/fr-mainwindow.png
-share/gnome/help/file-roller/uk/figures/fr-prefs.png
+share/gnome/help/file-roller/uk/figures/file-roller_home.png
+share/gnome/help/file-roller/uk/figures/file-roller_leftarrow.png
+share/gnome/help/file-roller/uk/figures/file-roller_main_window.png
+share/gnome/help/file-roller/uk/figures/file-roller_rightarrow.png
+share/gnome/help/file-roller/uk/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/uk/file-roller.xml
 share/gnome/help/file-roller/uk/legal.xml
 share/gnome/help/file-roller/zh_CN/figures/file-roller_main_window.png
@@ -122,6 +124,7 @@ ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/file-roller.mo
 share/mime-info/file-roller.keys
@@ -177,4 +180,5 @@ share/pixmaps/file-roller.png
 @dirrm share/file-roller
 @comment in xdg-dirs: @dirrm share/applications
 @comment in xdg-dirs: @dirrm share/application-registry
+@comment in nautilus: @dirrm lib/nautilus/extensions-1.0
 @comment in libbonobo: @dirrm lib/bonobo/servers
