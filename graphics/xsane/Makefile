@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2004/03/29 22:32:33 snj Exp $
+# $NetBSD: Makefile,v 1.45 2004/03/31 10:50:19 tron Exp $
 
 DISTNAME=	xsane-0.90
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.xsane.org/download/ \
 		http://gd.tuwien.ac.at/hci/sane/xsane/ \
@@ -21,7 +21,7 @@ BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
-USE_X11BASE=		YES
+USE_X11=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 

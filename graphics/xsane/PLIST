@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/09 15:43:09 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/31 10:50:19 tron Exp $
 bin/xsane
 man/man1/xsane.1
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xsane.mo
@@ -143,4 +143,3 @@ share/sane/xsane/xsane-startimage.pnm
 share/sane/xsane/xsane-style.rc
 @dirrm share/sane/xsane/doc
 @dirrm share/sane/xsane
-@dirrm share/sane
