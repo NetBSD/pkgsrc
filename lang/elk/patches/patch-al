@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 2000/07/07 17:52:04 dmcmahill Exp $
+$NetBSD: patch-al,v 1.2 2000/07/09 02:55:42 dmcmahill Exp $
 
 --- /dev/null	Fri Jul  7 13:36:28 2000
-+++ work.i386/elk-3.0/config/untested/elf-netbsd-cc	Fri Jul  7 13:47:43 2000
++++ config/untested/elf-netbsd-cc	Fri Jul  7 13:47:43 2000
 @@ -0,0 +1,370 @@
 +# This is a shell script.  It is sourced by the build scripts in the
 +# various subdirectories to gather system-, compiler-, and OS-specific
