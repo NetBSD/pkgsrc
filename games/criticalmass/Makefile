@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:43 tv Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/28 20:26:35 snj Exp $
 #
 
-DISTNAME=	CriticalMass-0.98
+DISTNAME=	CriticalMass-0.99
 PKGNAME=	${DISTNAME:S/CM/cm/}
-PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=criticalmass/}
 EXTRACT_SUFX=	.tar.bz2
