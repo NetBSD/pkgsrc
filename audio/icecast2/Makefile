@@ -1,0 +1,68 @@
+# $NetBSD: Makefile,v 1.1.1.1 2004/01/08 19:39:42 xtraeme Exp $
+#
+
+DISTNAME=		icecast-2.0.0
+PKGNAME=		${DISTNAME:S/-/2-/}
+CATEGORIES=		audio
+MASTER_SITES=		http://www.icecast.org/files/
+
+MAINTAINER=		pancake@phreaker.net
+HOMEPAGE=		http://www.icecast.org/
+COMMENT=		Live streaming audio server
+
+CONFLICTS+=		icecast-[0-9]*:../../audio/icecast
+
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
+
+LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
+
+BUILD_DEFS+=		ICECAST_CHROOTDIR
+
+PKG_SYSCONFSUBDIR=	icecast
+RCD_SCRIPTS=		icecast
+
+ICECAST_LOGDIR?=	${ICECAST_CHROOTDIR}/log
+
+ICECAST_USER?=		icecast
+ICECAST_GROUP?=		icecast
+
+PKG_GROUPS=		${ICECAST_GROUP}
+PKG_USERS=		${ICECAST_USER}:${ICECAST_GROUP}::Icecast2\\ user
+
+EGDIR=			${PREFIX}/share/examples/icecast
+CONF_FILES=		${EGDIR}/icecast.xml ${PKG_SYSCONFDIR}/icecast.xml
+
+.for D in ${ICECAST_CHROOTDIR} ${ICECAST_LOGDIR}
+OWN_DIRS_PERMS+=	${D} ${ICECAST_USER} ${ICECAST_GROUP} 770
+.endfor
+.undef D
+
+post-extract:
+	@${MV} ${WRKSRC}/conf/icecast.xml.in ${WRKSRC}/conf/icecast.fixme
+
+post-install:
+	@( \
+	${SED} \
+		-e "s,@BASEDIR@,${ICECAST_CHROOTDIR},g" \
+		-e "s,@LOGDIR@,log/,g" \
+		-e "s,@WEBROOT@,${PREFIX}/share/icecast/web,g" \
+		-e "s,@ADMINROOT@,${PREFIX}/share/icecast/admin,g" \
+		-e "s,@PIDDIR@,${ICECAST_CHROOTDIR},g" \
+		-e "s,@ICECAST_USER@,${ICECAST_USER},g" \
+		-e "s,@ICECAST_GROUP@,${ICECAST_GROUP},g" \
+		${WRKSRC}/conf/icecast.fixme > ${WRKSRC}/conf/icecast.xml; \
+	${INSTALL_DATA_DIR} ${EGDIR}; \
+	${INSTALL_DATA} ${WRKSRC}/conf/icecast.xml ${EGDIR} \
+	)
+
+.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../textproc/libxslt/buildlink2.mk"
+.include "../../www/curl/buildlink2.mk"
+
+.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"
