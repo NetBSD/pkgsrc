@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/08/08 09:40:38 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.24 2002/09/30 22:18:55 jlam Exp $
 
 DISTNAME=		pvm3.4.3
 PKGNAME=		pvm-3.4.3
@@ -17,15 +17,19 @@ DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/ssh
 PVM_SSH?=		${LOCALBASE}/bin/ssh
 .endif
 
+USE_BUILDLINK2=		yes
 USE_FORTRAN=		yes
 USE_X11=		yes
+
 WRKSRC=			${WRKDIR}/pvm3
 PVM_ROOT=		${WRKSRC}
 MAKE_ENV+=		PVM_ROOT=${WRKSRC}
 MAKE_ENV+=		PVM_ARCH=
 MAKE_ENV+=		SSH=${PVM_SSH}
 ALL_TARGET=		all install
-PLIST_SRC=		${WRKDIR}/PLIST-src
+
+# Set PVM_ARCH to the correct value for this machine platform.
+.include "arch.mk"
 
 PVM_DIR=		${PREFIX}/pvm3
 
@@ -34,41 +38,45 @@ post-patch:
 	${RM} -f ${WRKSRC}/lib/pvmgetarch.orig
 
 do-install:
-	PVM_ARCH=`${PVM_ROOT}/lib/pvmgetarch` ; export PVM_ARCH ;\
-	${INSTALL_PROGRAM_DIR} ${PVM_DIR}/bin/$$PVM_ARCH ;\
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/$$PVM_ARCH/* ${PVM_DIR}/bin/$$PVM_ARCH  ;\
-	${INSTALL_DATA_DIR} ${PVM_DIR}/conf ;\
-	${INSTALL_DATA} ${WRKSRC}/conf/$$PVM_ARCH.def  ${PVM_DIR}/conf ;\
-	${INSTALL_DATA} ${WRKSRC}/conf/$$PVM_ARCH.m4  ${PVM_DIR}/conf ;\
-	${INSTALL_DATA_DIR} ${PVM_DIR}/examples ;\
-	${INSTALL_DATA} ${WRKSRC}/examples/*.c  ${PVM_DIR}/examples ;\
-	${INSTALL_DATA} ${WRKSRC}/examples/*.f  ${PVM_DIR}/examples ;\
-	${INSTALL_DATA} ${WRKSRC}/examples/Readme  ${PVM_DIR}/examples ;\
-	${INSTALL_DATA} ${WRKSRC}/examples/Makefile.aimk  ${PVM_DIR}/examples ;\
-	${INSTALL_DATA_DIR} ${PVM_DIR}/gexamples ;\
-	${INSTALL_DATA} ${WRKSRC}/gexamples/*.c  ${PVM_DIR}/gexamples ;\
-	${INSTALL_DATA} ${WRKSRC}/gexamples/*.f  ${PVM_DIR}/gexamples ;\
-	${INSTALL_DATA} ${WRKSRC}/gexamples/Readme  ${PVM_DIR}/gexamples ;\
-	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile.aimk  ${PVM_DIR}/gexamples ;\
-	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile  ${PVM_DIR}/gexamples ;\
-	${INSTALL_DATA_DIR} ${PVM_DIR}/include ;\
-	${INSTALL_DATA} ${WRKSRC}/include/* ${PVM_DIR}/include ;\
-	${INSTALL_PROGRAM_DIR} ${PVM_DIR}/lib/$$PVM_ARCH ;\
-	${INSTALL_PROGRAM} ${WRKSRC}/lib/$$PVM_ARCH/pvm* ${PVM_DIR}/lib/$$PVM_ARCH ;\
-	${INSTALL_DATA} ${WRKSRC}/lib/$$PVM_ARCH/*.a ${PVM_DIR}/lib/$$PVM_ARCH ;\
-	for f in `ls ${WRKSRC}/lib` ; do \
-	  if [ -f ${WRKSRC}/lib/$$f ]; then \
-	    ${INSTALL_SCRIPT} ${WRKSRC}/lib/$$f ${PVM_DIR}/lib ;\
-	  fi ;\
-	done ;\
-	${INSTALL_MAN_DIR}  ${PREFIX}/man/man1 ;\
-	${INSTALL_MAN_DIR}  ${PREFIX}/man/man3 ;\
-	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/man/man1 ;\
-	${INSTALL_MAN} ${WRKSRC}/man/man3/* ${PREFIX}/man/man3 ;\
-	${RM} ${PREFIX}/man/man1/PVM.1 ;\
-	${LN} -s ${PREFIX}/man/man1/pvm_intro.1 ${PREFIX}/man/man1/PVM.1
+	${INSTALL_PROGRAM_DIR} ${PVM_DIR}/bin/${PVM_ARCH}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PVM_ARCH}/*			\
+		${PVM_DIR}/bin/${PVM_ARCH}
 
-post-install:
-	${SED} "s/@pvmarch@/`${PVM_ROOT}/lib/pvmgetarch`/g" < ${PKGDIR}/PLIST > ${PLIST_SRC}
+	${INSTALL_DATA_DIR} ${PVM_DIR}/conf
+	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.def  ${PVM_DIR}/conf
+	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.m4  ${PVM_DIR}/conf
+
+	${INSTALL_DATA_DIR} ${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/*.c  ${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/*.f  ${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/Readme  ${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/Makefile.aimk  ${PVM_DIR}/examples
+
+	${INSTALL_DATA_DIR} ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/*.c  ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/*.f  ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/Readme  ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile.aimk  ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile  ${PVM_DIR}/gexamples
+
+	${INSTALL_DATA_DIR} ${PVM_DIR}/include
+	${INSTALL_DATA} ${WRKSRC}/include/* ${PVM_DIR}/include
+
+	${INSTALL_PROGRAM_DIR} ${PVM_DIR}/lib/${PVM_ARCH}
+	${INSTALL_PROGRAM} ${WRKSRC}/lib/${PVM_ARCH}/pvm*		\
+		${PVM_DIR}/lib/${PVM_ARCH}
+	${INSTALL_DATA} ${WRKSRC}/lib/${PVM_ARCH}/*.a ${PVM_DIR}/lib/${PVM_ARCH}
+	for f in `${LS} -1 ${WRKSRC}/lib`; do				\
+		if [ -f ${WRKSRC}/lib/$$f ]; then			\
+			${INSTALL_SCRIPT} ${WRKSRC}/lib/$$f ${PVM_DIR}/lib; \
+		fi;							\
+	done
+
+	${INSTALL_MAN_DIR}  ${PREFIX}/man/man1
+	${INSTALL_MAN_DIR}  ${PREFIX}/man/man3
+	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/man3/* ${PREFIX}/man/man3
+	${RM} ${PREFIX}/man/man1/PVM.1
+	${LN} -s ${PREFIX}/man/man1/pvm_intro.1 ${PREFIX}/man/man1/PVM.1
 
 .include "../../mk/bsd.pkg.mk"
