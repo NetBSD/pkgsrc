@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.12 2003/02/14 20:04:06 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.13 2003/02/18 15:53:10 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use GConf2.
 #
@@ -34,7 +34,20 @@ BUILDLINK_FILES.GConf2+=	lib/libgconf-2.*
 .include "../../textproc/libxml2/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	GConf2-buildlink
+BUILDLINK_TARGETS+=	GConf2-buildlink-fake
+
+_GCONF2_FAKE=		${BUILDLINK_DIR}/bin/gconftool-2
 
 GConf2-buildlink: _BUILDLINK_USE
+
+GConf2-buildlink-fake:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -f ${_GCONF2_FAKE} ]; then				\
+		${ECHO_BUILDLINK_MSG} "Creating ${_GCONF2_FAKE}";	\
+		${MKDIR} ${_GCONF2_FAKE:H};				\
+		${ECHO} "#!/bin/sh" > ${_GCONF2_FAKE};			\
+		${ECHO} "echo '[pkgsrc] Doing nothing for gconftool-2' \$$*" >> ${_GCONF2_FAKE};		\
+		${CHMOD} +x ${_GCONF2_FAKE};				\
+	fi
 
 .endif	# GCONF2_BUILDLINK2_MK
