@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/22 07:52:43 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/11 07:52:41 snj Exp $
 #
 
 DISTNAME=		xlhtml.0.5.1
@@ -12,7 +12,7 @@ HOMEPAGE=		http://chicago.sourceforge.net/xlhtml/
 COMMENT=		Microsoft xls/ppt to HTML converter
 
 WRKSRC=			${WRKDIR}/xlhtml
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 

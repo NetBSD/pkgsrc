@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/20 12:10:29 agc Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/11 07:42:53 snj Exp $
 # FreeBSD Id: ports/misc/rpm2cpio/Makefile,v 1.2 1999/08/25 07:22:29 obrien Exp
 
 DISTNAME=	rpm2cpio
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.iagora.com/~espel/index.html
 COMMENT=	Convert .rpm files for extraction with cpio, needs just perl
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 DIST_SUBDIR=	${PKGNAME}
 REPLACE_PERL=	rpm2cpio
@@ -24,5 +24,5 @@ NO_BUILD=	YES
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/rpm2cpio ${PREFIX}/bin/rpm2cpio.pl
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
