@@ -1,11 +1,21 @@
-$NetBSD: patch-ao,v 1.2.2.2 2003/03/02 10:13:07 agc Exp $
+$NetBSD: patch-ao,v 1.2.2.3 2003/03/02 10:40:41 agc Exp $
 
---- configure.orig	Tue Dec 17 10:55:09 2002
+--- configure.orig	Tue Dec 17 05:55:09 2002
 +++ configure
-@@ -22223,57 +22223,6 @@ cat >>confdefs.h <<EOF
+@@ -21610,7 +21610,7 @@ main ()
+ 
+  char buf[20];
+   buf[0]='\0';
+-  strlat(buf, "KDE function test", sizeof(buf));
++  strlcat(buf, "KDE function test", sizeof(buf));
+ 
+   ;
+   return 0;
+@@ -22222,57 +22222,6 @@ echo "${ECHO_T}$ac_cv_sizeof_unsigned_in
+ cat >>confdefs.h <<EOF
  #define SIZEOF_UNSIGNED_INT $ac_cv_sizeof_unsigned_int
  EOF
- 
+-
 -  echo "$as_me:22226: checking sizeof(size_t) == sizeof(unsigned int)" >&5
 -echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned int)... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
@@ -56,7 +66,6 @@ $NetBSD: patch-ao,v 1.2.2.2 2003/03/02 10:13:07 agc Exp $
 -
 -fi
 -rm -f conftest.$ac_objext conftest.$ac_ext
--
+ 
  CXXFLAGS="$CXXFLAGS -DQT_CLEAN_NAMESPACE  -DQT_NO_ASCII_CAST"
  
- echo "$as_me:22279: checking for MAXPATHLEN" >&5
