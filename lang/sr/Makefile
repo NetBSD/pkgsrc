@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/26 18:26:04 is Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/26 18:48:19 is Exp $
 #
 
 DISTNAME=		sr232
@@ -17,6 +17,8 @@ ONLY_FOR_PLATFORM=     NetBSD-[2-9]*-*
 
 USE_X11=		yes
 USE_BUILDLINK3=		yes
+
+TEST_TARGET=		verify
 
 pre-configure:
 			${MV} ${WRKSRC}/Configuration ${WRKSRC}/Configuration.template
