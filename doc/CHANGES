@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.434 2002/11/01 10:54:58 skrll Exp $
+$NetBSD: CHANGES,v 1.435 2002/11/01 11:40:58 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3478,3 +3478,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added btparse-0.33 [rh 2002-11-01]
 	Added bib2xml-20021006 [rh 2002-11-01]
 	Added wonka-0.9.4 [skrll 2002-11-01]
+	Updated grepmail to 4.80nb1 [seb 2002-11-01]
