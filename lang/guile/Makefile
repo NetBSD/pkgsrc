@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/08/26 19:58:30 tron Exp $
+# $NetBSD: Makefile,v 1.31 2002/08/26 20:28:14 tron Exp $
 
 DISTNAME=		guile-1.4.1
 CATEGORIES=		lang
@@ -13,7 +13,7 @@ GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/guile-readline/libtool
 
 USE_GNU_READLINE=	YES
 
@@ -25,6 +25,14 @@ INFO_FILES=		guile.info
 USE_NCURSES=	# termlib not in libtermcap on Solaris, use the ncurses one
 .include "../../devel/ncurses/buildlink.mk"
 .endif
+
+post-configure:
+	${RM} -rf ${WRKSRC}/libltdl
+	${MKDIR} ${WRKSRC}/libltdl
+	for FILE in ${LOCALBASE}/lib/libltdl.* 			\
+	  ${LOCALBASE}/share/libtool/libltdl/*; do		\
+	  ${LN} -s $$FILE ${WRKSRC}/libltdl;			\
+	done
 
 .include "../../devel/readline/buildlink.mk"
 .include "../../mk/texinfo.mk"
