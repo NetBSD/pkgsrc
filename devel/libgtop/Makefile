@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/06/24 16:40:57 danw Exp $
+# $NetBSD: Makefile,v 1.38 2000/06/26 18:05:44 dmcmahill Exp $
 
 DISTNAME=		libgtop-1.0.9
 CATEGORIES=		devel gnome
@@ -17,7 +17,8 @@ NOT_FOR_PLATFORM=	SunOS
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == NetBSD
 .if (${MACHINE_ARCH} != arm32) && (${MACHINE_ARCH} != i386) && \
-    (${MACHINE_ARCH} != m68k) && (${MACHINE_ARCH} != powerpc)
+    (${MACHINE_ARCH} != m68k) && (${MACHINE_ARCH} != mipsel) && \
+    (${MACHINE_ARCH} != powerpc) && (${MACHINE_ARCH} != sparc)
 IGNORE=			"has not yet been ported to ${MACHINE_ARCH}."
 IGNORE+=		"Please look at /usr/include/${MACHINE_ARCH}/pcb.h"
 IGNORE+=		"and update patches/patch-al appropriately."
