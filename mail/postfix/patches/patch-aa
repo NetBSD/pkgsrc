@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2001/05/03 00:24:12 itojun Exp $
+$NetBSD: patch-aa,v 1.9 2001/06/07 09:23:20 itojun Exp $
 
---- INSTALL.sh.orig	Sat Apr 28 02:47:23 2001
-+++ INSTALL.sh	Thu May  3 09:10:27 2001
+--- INSTALL.sh.orig	Tue May  1 23:21:22 2001
++++ INSTALL.sh	Thu Jun  7 17:50:31 2001
 @@ -7,39 +7,39 @@
  umask 022
  
@@ -132,7 +132,7 @@ $NetBSD: patch-aa,v 1.8 2001/05/03 00:24:12 itojun Exp $
  
  # Sanity checks
  
-@@ -159,40 +156,40 @@
+@@ -159,42 +156,42 @@
  
  CONFIG_DIRECTORY=$install_root$config_directory
  
@@ -143,15 +143,17 @@ $NetBSD: patch-aa,v 1.8 2001/05/03 00:24:12 itojun Exp $
 -    done
 -}
 -
--test -f $CONFIG_DIRECTORY/install.cf && . $CONFIG_DIRECTORY/install.cf || {
--    test -t 0 || {
--	echo Non-interactive install needs the $CONFIG_DIRECTORY/install.cf 1>&2
--	echo file from a previous Postfix installation. 1>&2
--	echo 1>&2
--	echo Use interactive installation instead. 1>&2
--	exit 1
--    }
--}
+-if [ -f $CONFIG_DIRECTORY/install.cf ]
+-then
+-    . $CONFIG_DIRECTORY/install.cf
+-elif [ ! -t 0 -a -z "$install_root" ]
+-then
+-    echo Non-interactive install needs the $CONFIG_DIRECTORY/install.cf 1>&2
+-    echo file from a previous Postfix installation. 1>&2
+-    echo 1>&2
+-    echo Use interactive installation instead. 1>&2
+-    exit 1
+-fi
 +#test -f $CONFIG_DIRECTORY/main.cf && {
 +#    for name in daemon_directory command_directory queue_directory mail_owner 
 +#    do
@@ -159,15 +161,17 @@ $NetBSD: patch-aa,v 1.8 2001/05/03 00:24:12 itojun Exp $
 +#    done
 +#}
 +
-+#test -f $CONFIG_DIRECTORY/install.cf && . $CONFIG_DIRECTORY/install.cf || {
-+#    test -t 0 || {
-+#	echo Non-interactive install needs the $CONFIG_DIRECTORY/install.cf 1>&2
-+#	echo file from a previous Postfix installation. 1>&2
-+#	echo 1>&2
-+#	echo Use interactive installation instead. 1>&2
-+#	exit 1
-+#    }
-+#}
++#if [ -f $CONFIG_DIRECTORY/install.cf ]
++#then
++#    . $CONFIG_DIRECTORY/install.cf
++#elif [ ! -t 0 -a -z "$install_root" ]
++#then
++#    echo Non-interactive install needs the $CONFIG_DIRECTORY/install.cf 1>&2
++#    echo file from a previous Postfix installation. 1>&2
++#    echo 1>&2
++#    echo Use interactive installation instead. 1>&2
++#    exit 1
++#fi
  
  # Override default settings.
  
@@ -204,7 +208,7 @@ $NetBSD: patch-aa,v 1.8 2001/05/03 00:24:12 itojun Exp $
  
  # Sanity checks
  
-@@ -240,10 +237,10 @@
+@@ -242,10 +239,10 @@
  
  DAEMON_DIRECTORY=$install_root$daemon_directory
  COMMAND_DIRECTORY=$install_root$command_directory
@@ -218,7 +222,7 @@ $NetBSD: patch-aa,v 1.8 2001/05/03 00:24:12 itojun Exp $
  MANPAGES=$install_root$manpages
  
  # Create any missing directories.
-@@ -252,7 +249,7 @@
+@@ -254,7 +251,7 @@
  test -d $DAEMON_DIRECTORY || mkdir -p $DAEMON_DIRECTORY || exit 1
  test -d $COMMAND_DIRECTORY || mkdir -p $COMMAND_DIRECTORY || exit 1
  test -d $QUEUE_DIRECTORY || mkdir -p $QUEUE_DIRECTORY || exit 1
@@ -227,7 +231,7 @@ $NetBSD: patch-aa,v 1.8 2001/05/03 00:24:12 itojun Exp $
  do
      dir=`echo $path|sed -e 's/[/][/]*[^/]*$//' -e 's/^$/\//'`
      test -d $dir || mkdir -p $dir || exit 1
-@@ -272,8 +269,8 @@
+@@ -274,8 +271,8 @@
  
  test -f bin/sendmail && {
      compare_or_replace a+x,go-w bin/sendmail $SENDMAIL_PATH || exit 1
@@ -238,7 +242,7 @@ $NetBSD: patch-aa,v 1.8 2001/05/03 00:24:12 itojun Exp $
  }
  
  if [ -f $CONFIG_DIRECTORY/main.cf ]
-@@ -298,13 +295,13 @@
+@@ -300,13 +297,13 @@
      "mail_owner = $mail_owner" \
  || exit 1
  
