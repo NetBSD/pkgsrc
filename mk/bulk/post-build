@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.16 2001/10/15 23:29:54 hubertf Exp $
+# $NetBSD: post-build,v 1.17 2001/10/16 20:50:54 hubertf Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -145,7 +145,7 @@ while (<BF>) {
     print HTML "<TR><TD><A HREF=\"$bf\">$pkg</A>";
     print HTML "    <TD><FONT COLOR=$color>$state</FONT>";
     if ($nbrokenby > 0){ 
-        print HTML "    <TD ALIGN="right"><FONT COLOR=$color>$nbrokenby</FONT>";
+        print HTML "    <TD ALIGN=\"right\"><FONT COLOR=$color>$nbrokenby</FONT>";
     }
     else {
         print HTML "    <TD> ";
