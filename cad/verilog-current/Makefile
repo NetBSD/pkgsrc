@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/02/04 00:46:07 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.33 2003/07/14 09:51:48 drochner Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -17,7 +17,8 @@ BUILD_DEPENDS+=	gperf-2.7.2:../../devel/gperf
 
 CONFLICTS+=	verilog-[0-9]*
 
-SNAPDATE=	20030202
+SNAPDATE=	20030705
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=      yes
 #
@@ -29,4 +30,7 @@ YACC=			${LOCALBASE}/bin/bison
 TEST_DIRS=	${WRKSRC}
 TEST_TARGET=	check
 
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../archivers/bzip2/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
