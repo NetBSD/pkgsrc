@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/03 14:10:33 darcy Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/19 20:59:58 hubertf Exp $
 
 DISTNAME=	PyGreSQL-3.0
 PKGNAME=	py-postgresql-3.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.druid.net/pygresql/
 
 DEPENDS+=	python-1.5.2:../../lang/python
 DEPENDS+=	postgresql-7.*:../../databases/postgresql
-DEPENDS+=	mxDateTime-1.3.0:../../misc/py-mxDateTime
+DEPENDS+=	py-mxDateTime-1.3.0:../../misc/py-mxDateTime
 
 ALL_TARGET=	default
 
