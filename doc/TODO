@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2045 2004/08/15 22:13:55 recht Exp $
+$NetBSD: TODO,v 1.2046 2004/08/15 22:53:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -196,7 +196,6 @@ Suggested package updates
 	o conserver-8.1.8
 	o cooledit-3.17.8
 	o crafty-19.5
-	o crimsonfields-0.4.3
 	o crossfire-1.5.0
 	o cscope-15.5
 	o curl-7.12.1
