@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/10/09 01:15:57 mjl Exp $
+$NetBSD: patch-aa,v 1.6 2004/10/09 16:01:23 mjl Exp $
 
---- src/Makefile.orig	2003-08-04 02:03:29.000000000 +0200
-+++ src/Makefile	2004-10-08 23:20:53.000000000 +0200
-@@ -837,7 +837,7 @@
+--- src/Makefile.orig	2004-06-10 15:16:31.000000000 +0200
++++ src/Makefile	2004-10-09 15:48:09.000000000 +0200
+@@ -336,7 +336,7 @@
  
  ####################################################
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2004/10/09 01:15:57 mjl Exp $
  
  ####################################################
  
-@@ -849,7 +849,7 @@
+@@ -348,7 +348,7 @@
  LIB_BASENAME=$(OH323_BASE)
  LIB_FILENAME=$(OH323_FILE)
  
@@ -20,10 +20,13 @@ $NetBSD: patch-aa,v 1.5 2004/10/09 01:15:57 mjl Exp $
  
  ####################################################
  
-@@ -878,15 +878,7 @@
+@@ -374,86 +374,25 @@
+ endif
+ export LD_LIBRARY_PATH
  
- # If we're cross compiling, we want the host's asnparser
- # otherwise use the one for the current platform
+-
+-# If we're cross compiling, we want the host's asnparser
+-# otherwise use the one for the current platform
 -ASNPARSE_DIR = $(HOSTPWLIBDIR)/tools/asnparser
 -ASNPARSER = $(ASNPARSE_DIR)/obj_$(HOST_PLATFORM_TYPE)_r/asnparser
 -
@@ -33,101 +36,78 @@ $NetBSD: patch-aa,v 1.5 2004/10/09 01:15:57 mjl Exp $
 -$(ASNPARSER):
 -	$(MAKE) -C $(ASNPARSE_DIR) opt
 -endif
-+ASNPARSER = $(PREFIX)/bin/asnparser
- 
- 
- ifdef ASN_EXCLUDE
-@@ -1107,79 +1099,79 @@
+-
+-
+-asnparser.version: $(ASNPARSER)
+-	$(ASNPARSER) --version | awk '{print $$1,$$2,$$3}' > asnparser.version.new
+-	if test -f asnparser.version && diff asnparser.version.new asnparser.version >/dev/null 2>&1 ; \
+-		then rm asnparser.version.new ; \
+-		else mv asnparser.version.new asnparser.version ; \
+-	fi
+-
+-asnfiles: $(ASNPARSER)
+-	$(ASNPARSER) -s3 -m H245 -c --classheader "H245_AudioCapability=#ifndef PASN_NOPRINTON\nvoid PrintOn(ostream & strm) const;\n#endif" h245.asn
+-	mv $(OH323_SRCDIR)/h245.h $(OH323_INCDIR)/h245.h
+-	$(ASNPARSER) -m H235 -c h235.asn
+-	mv $(OH323_SRCDIR)/h235.h $(OH323_INCDIR)/h235.h
+-	$(ASNPARSER) -s2 -m H225 -r MULTIMEDIA-SYSTEM-CONTROL=H245 -c h225.asn
+-	mv $(OH323_SRCDIR)/h225.h $(OH323_INCDIR)/h225.h
+-	$(ASNPARSER) -m H248 -c h248.asn
+-	mv $(OH323_SRCDIR)/h248.h $(OH323_INCDIR)/h248.h
+-	$(ASNPARSER) -m H4501 -c h4501.asn
+-	mv $(OH323_SRCDIR)/h4501.h $(OH323_INCDIR)/h4501.h
+-	$(ASNPARSER) -m H4502 -c h4502.asn
+-	mv $(OH323_SRCDIR)/h4502.h $(OH323_INCDIR)/h4502.h
+-	$(ASNPARSER) -m H4504 -c h4504.asn
+-	mv $(OH323_SRCDIR)/h4504.h $(OH323_INCDIR)/h4504.h
+-	$(ASNPARSER) -m H4505 -c h4505.asn
+-	mv $(OH323_SRCDIR)/h4505.h $(OH323_INCDIR)/h4505.h
+-	$(ASNPARSER) -m H4506 -c h4506.asn
+-	mv $(OH323_SRCDIR)/h4506.h $(OH323_INCDIR)/h4506.h
+-	$(ASNPARSER) -m H4507 -c h4507.asn
+-	mv $(OH323_SRCDIR)/h4507.h $(OH323_INCDIR)/h4507.h
+-	$(ASNPARSER) -m H4508 -c h4508.asn
+-	mv $(OH323_SRCDIR)/h4508.h $(OH323_INCDIR)/h4508.h
+-	$(ASNPARSER) -m H4509 -c h4509.asn
+-	mv $(OH323_SRCDIR)/h4509.h $(OH323_INCDIR)/h4509.h
+-	$(ASNPARSER) -m H45010 -c h45010.asn
+-	mv $(OH323_SRCDIR)/h45010.h $(OH323_INCDIR)/h45010.h
+-	$(ASNPARSER) -m H45011 -c h45011.asn
+-	mv $(OH323_SRCDIR)/h45011.h $(OH323_INCDIR)/h45011.h
+-	$(ASNPARSER) -m X880 -c x880.asn
+-	mv $(OH323_SRCDIR)/x880.h $(OH323_INCDIR)/x880.h
+-	$(ASNPARSER) -m H501 -c h501.asn
+-	mv $(OH323_SRCDIR)/h501.h $(OH323_INCDIR)/h501.h
+-	$(ASNPARSER) -m T38 -c t38.asn
+-	mv $(OH323_SRCDIR)/t38.h $(OH323_INCDIR)/t38.h
+-	$(ASNPARSER) -m MCS -c mcspdu.asn
+-	mv $(OH323_SRCDIR)/mcspdu.h $(OH323_INCDIR)/mcspdu.h
+-	$(ASNPARSER) -m GCC -c gccpdu.asn
+-	mv $(OH323_SRCDIR)/gccpdu.h $(OH323_INCDIR)/gccpdu.h
+-
+ # Build rules for VIC codecs
  
  $(OH323_OBJDIR)/%.o : $(VIC_DIR)/%.cxx
  	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
--	$(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -c $< -o $@
-+	$(LIBTOOL) --tag=CXX --mode=compile $(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -c $< -o $@
+-	$(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CXX $(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
  
  $(OH323_OBJDIR)/%.o : $(VIC_DIR)/%.c
  	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
--	$(CC) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -c $< -o $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -c $< -o $@
+-	$(CC) -I$(VIC_DIR) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) -I$(VIC_DIR) $(STDCCFLAGS) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
  
  $(DEPDIR)/%.dep : $(VIC_DIR)/%.c
  	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
  	@printf %s $(OH323_OBJDIR)/ > $@
--	$(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -M $< >> $@
-+	$(LIBTOOL) --tag=CXX --mode=compile $(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -c $< -o $@
+-	$(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS:-g=) $(CFLAGS) -M $< >> $@
++	$(LIBTOOL) --mode=compile --tag=CXX $(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS:-g=) $(CFLAGS) -M $< >> $@
  
  $(DEPDIR)/%.dep : $(VIC_DIR)/%.cxx
  	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
  	@printf %s $(OH323_OBJDIR)/ > $@
--	$(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -M $< >> $@
-+	$(LIBTOOL) --tag=CXX --mode=compile $(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS) $(CFLAGS) -M $< >> $@
- 
- 
- # Build rules for the GSM codec
- 
- $(OH323_OBJDIR)/%.o : $(GSM_SRCDIR)/%.c
- 	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
--	$(CC) -ansi -I$(GSM_INCDIR) -DWAV49 -DNeedFunctionPrototypes=1 $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) -ansi -I$(GSM_INCDIR) -DWAV49 -DNeedFunctionPrototypes=1 $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
- 
- $(DEPDIR)/%.dep : $(GSM_SRCDIR)/%.c
- 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
- 	@printf %s $(OH323_OBJDIR)/ > $@
--	$(CC) -ansi -I$(GSM_INCDIR) -DWAV49 -DNeedFunctionPrototypes=1 $(CFLAGS) -M $< >> $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) -ansi -I$(GSM_INCDIR) -DWAV49 -DNeedFunctionPrototypes=1 $(CFLAGS) -M $< >> $@
- 
- 
- # Build rules for the G.726 codec
- 
- $(OH323_OBJDIR)/%.o : $(G726_DIR)/%.c
- 	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
--	$(CC) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
- 
- $(DEPDIR)/%.dep : $(G726_DIR)/%.c
- 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
- 	@printf %s $(OH323_OBJDIR)/ > $@
--	$(CC) $(OPTCCFLAGS) $(CFLAGS) -M $< >> $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(OPTCCFLAGS) $(CFLAGS) -M $< >> $@
- 
- 
- # Build rules for the LPC10 codec
- 
- $(OH323_OBJDIR)/%.o : $(LPC10_SRCDIR)/%.c
- 	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
--	$(CC) -I$(LPC10_INCDIR) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) -I$(LPC10_INCDIR) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
- 
- $(DEPDIR)/%.dep : $(LPC10_SRCDIR)/%.c
- 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
- 	@printf %s $(OH323_OBJDIR)/ > $@
--	$(CC) -I$(LPC10_INCDIR) $(CFLAGS) -M $< >> $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) -I$(LPC10_INCDIR) $(CFLAGS) -M $< >> $@
- 
- # Build rules for the iLBC codec
- 
- $(OH323_OBJDIR)/%.o : $(ILBC_DIR)/%.c
- 	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
--	$(CC) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
- 
- $(DEPDIR)/%.dep : $(ILBC_DIR)/%.c
- 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
- 	@printf %s $(OH323_OBJDIR)/ > $@
--	$(CC) $(CFLAGS) -M $< >> $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(CFLAGS) -M $< >> $@
- 
- # Build rules for the Speex codec
- 
- $(OH323_OBJDIR)/%.o : $(SPEEX_SRCDIR)/%.c
- 	@if [ ! -d $(OH323_OBJDIR) ] ; then mkdir -p $(OH323_OBJDIR) ; fi
--	$(CC) $(SPEEX_FLAGS) -I$(SPEEX_INCDIR) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(SPEEX_FLAGS) -I$(SPEEX_INCDIR) $(OPTCCFLAGS) $(CFLAGS) -c $< -o $@
- 
- $(DEPDIR)/%.dep : $(SPEEX_SRCDIR)/%.c
- 	@if [ ! -d $(DEPDIR) ] ; then mkdir -p $(DEPDIR) ; fi
- 	@printf %s $(OH323_OBJDIR)/ > $@
--	$(CC) $(SPEEX_FLAGS) -I$(SPEEX_INCDIR) $(CFLAGS) -M $< >> $@
-+	$(LIBTOOL) --tag=CC --mode=compile $(CC) $(SPEEX_FLAGS) -I$(SPEEX_INCDIR) $(CFLAGS) -M $< >> $@
- 
+-	$(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS:-g=) $(CFLAGS) -M $< >> $@
++	$(LIBTOOL) --mode=compile --tag=CXX $(CPLUS) -I$(VIC_DIR) $(STDCCFLAGS:-g=) $(CFLAGS) -M $< >> $@
  
  notrace::
+ 	$(MAKE) NOTRACE=1 opt
