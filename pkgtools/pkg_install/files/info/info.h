@@ -1,4 +1,4 @@
-/* $NetBSD: info.h,v 1.6 2004/08/20 20:09:53 jlam Exp $ */
+/* $NetBSD: info.h,v 1.7 2005/02/10 23:51:18 grant Exp $ */
 
 /* from FreeBSD Id: info.h,v 1.10 1997/02/22 16:09:40 peter Exp */
 
@@ -64,7 +64,6 @@ extern size_t PlayPenSize;
 extern char *CheckPkg;
 extern size_t termwidth;
 extern lpkg_head_t pkgs;
-extern int usedot;
 
 extern void show_file(char *, char *);
 extern void show_var(const char *, const char *);
