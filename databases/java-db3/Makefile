@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/24 22:46:09 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/02 12:52:52 wiz Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
@@ -21,7 +21,7 @@ JAR=			${PKG_JAVA_HOME}/bin/jar
 JAVACABS=		${JAVAC}
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
@@ -39,6 +39,6 @@ CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PKG_JVM}}
 ALL_TARGET=		libdb3_java.la java
 INSTALL_TARGET=		install_java
 
-.include "../../databases/db3/buildlink2.mk"
+.include "../../databases/db3/buildlink3.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
