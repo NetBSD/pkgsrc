@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1942 2003/04/15 09:25:14 martti Exp $
+$NetBSD: CHANGES,v 1.1943 2003/04/15 11:13:37 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1605,3 +1605,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated iozone to 3.167 [wiz 2003-04-15]
 	Updated apsfilter to 7.2.5 [martti 2003-04-15]
 	Updated squirrelmail to 1.4.0 [martti 2003-04-15]
+	Updated ImageMagick to 5.5.6 [mjl 2003-04-15]
+	Updated p5-PerlMagick to 5.5.6 [mjl 2003-04-15]
