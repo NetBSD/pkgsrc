@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/15 08:30:26 martti Exp $
 include/c-client/c-client.h
 include/c-client/env.h
 include/c-client/env_unix.h
@@ -48,6 +48,7 @@ share/doc/imap-uw/SSLBUILD
 share/doc/imap-uw/Y2K
 share/doc/imap-uw/bugs.txt
 share/doc/imap-uw/calendar.txt
+share/doc/imap-uw/commndmt.txt
 share/doc/imap-uw/drivers.txt
 share/doc/imap-uw/formats.txt
 share/doc/imap-uw/imaprc.txt
