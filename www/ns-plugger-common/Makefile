@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/17 09:26:03 tron Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/17 14:32:33 tron Exp $
 #
 
 DISTNAME=		plugger-3.2-linux-x86-glibc
@@ -20,7 +20,7 @@ NS_VERS=		${NSNAME:C/.*-//}
 
 PLIST_SUBST+=		NS_VERS=${NS_VERS} BINNAME=${BINNAME}
 .else
-DEPENDS+=		suse_base-6.3:../../emulators/suse_base
+DEPENDS+=		suse_base>=6.3:../../emulators/suse_base
 .endif
 
 CONFLICTS+=		plugger-*	# obsolete all-in-one plugger package
