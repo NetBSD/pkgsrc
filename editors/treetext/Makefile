@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/13 17:36:55 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/09 14:35:34 wiz Exp $
 #
 
 DISTNAME=	TreeText-0.3.3-src
@@ -12,7 +12,8 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.ab.wakwak.com/~tino/fox/treetext/
 COMMENT=	multi documents editor
 
-USE_X11BASE=	#defined
+USE_BUILDLINK2=	# defined
+USE_X11BASE=	# defined
 
 WRKSRC=		${WRKDIR}/treetext/treetext
 
@@ -21,5 +22,5 @@ post-extract:
 	@${SED} -e 's|$${X11BASE}|${X11BASE}|' ${FILESDIR}/MakeInclude \
 		> ${WRKSRC}/MakeInclude
 
-.include "../../x11/fox/buildlink.mk"
+.include "../../x11/fox/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/09/21 23:47:02 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/09 14:35:38 wiz Exp $
 #
 
 DISTNAME=	wxPython-2.2.2
@@ -13,6 +13,7 @@ COMMENT=	wxPython: Python bindings for wxWindows
 
 PLIST_SRC=      ${WRKDIR}/.PLIST_SRC
 
+USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 
 PYTHON_VERSIONS_ACCEPTED=	20 # distutils problem with 21 and 22
@@ -30,6 +31,6 @@ post-install:
 	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/wxPython \
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
-.include "../../x11/wxGTK/buildlink.mk"
+.include "../../x11/wxGTK/buildlink2.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
