@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2000/04/07 23:44:37 jlam Exp $
+
+--- texk/xdvik/xdvi.c.orig	Sun Jun 20 06:29:24 1999
++++ texk/xdvik/xdvi.c	Fri Apr  7 16:34:27 2000
+@@ -118,7 +118,7 @@
+ #define MKTEXPK MAKEPK
+ 
+ #if	defined(PS_GS) && !defined(GS_PATH)
+-#define	GS_PATH	"gs"
++#define	GS_PATH	"gsx11"
+ #endif
+ 
+ #if A4
