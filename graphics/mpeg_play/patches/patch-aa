@@ -1,5 +1,7 @@
---- ./Imakefile.org	Tue Feb  6 23:37:51 1996
-+++ ./Imakefile	Wed Feb  7 00:05:59 1996
+$NetBSD: patch-aa,v 1.2 1998/10/07 02:13:10 tv Exp $
+
+--- ./Imakefile.proto.orig	Tue Feb  6 23:37:51 1996
++++ ./Imakefile.proto	Wed Feb  7 00:05:59 1996
 @@ -1,5 +1,5 @@
  /* See Makefile.proto for flags to define */
 -        DESTDIR = /usr/pkg/video
