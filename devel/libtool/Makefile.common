@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2004/02/05 20:14:06 skrll Exp $
+# $NetBSD: Makefile.common,v 1.42 2004/02/05 21:30:00 jlam Exp $
 #
 
 DISTNAME=	libtool-1.5.2
@@ -12,8 +12,8 @@ CONFLICTS=	glibtool-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=	# defined
-USE_BUILDLINK3=	# defined
+GNU_CONFIGURE=	yes
+USE_BUILDLINK3=	yes
 
 DISTINFO_FILE=	${.CURDIR}/../libtool/distinfo
 FILESDIR=	${.CURDIR}/../libtool/files
