@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.11 2000/08/17 16:16:02 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.12 2000/10/12 15:07:44 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -12,8 +12,8 @@
 .Nm
 .Op Fl LRdhilmor
 .Op Fl D Ar paths
-.Op Fl K Ar binpkgdir
-.Op Fl P Ar pkgsrcdir
+.Op Fl K Ar PACKAGES
+.Op Fl P Ar PKGSRCDIR
 .Sh DESCRIPTION
 .Nm
 tries to verify the entire contents of the pkgsrc tree.
@@ -26,24 +26,32 @@ Note that it does NOT implement complete Makefile parser.
 .Bl -tag -width xxxxxxxxxxxx
 .It Fl D Ar paths
 Parse Makefiles and output contents (Useful for debugging).
-.It Fl K Ar binpkgdir
-Set basedir for binary packages, otherwise PKGSRCDIR/packages is used.
+.It Fl K Ar PACKAGES
+Override binary packages base directory, normally set from
+.Pa /etc/mk.conf
+or defaulted to PKGSRCDIR/packages.
 .It Fl L
 List the filenames of Makefiles as they are parsed (for debugging).
 .It Fl M Ar distdir
-Set basedir for distfiles, otherwise PKGSRCDIR/distfiles is used.
-.It Fl P Ar pkgsrcdir
-Set pkgsrcdir - otherwise
+Set directory for distfiles, otherwise PKGSRCDIR/distfiles is used.
+.It Fl P Ar PKGSRCDIR
+Set base of pkgsrc tree, normally set from
 .Pa /etc/mk.conf
-is parsed for
-.Em PKGSRCDIR .
+or defaulted to
+.Pa /usr/pkgsrc .
 .It Fl R
-Report any binary packages in any subdirs of PKGSRCDIR/packages,
+Report any binary packages in any subdirs of
+.Em PACKAGES ,
 for whom the source Makefile lists
 .Em NO_BIN_ON_FTP
 or
 .Em RESTRICTED .
 This is intended to help those making binary packages available for ftp.
+.It Fl V
+List any prebuilt packages in any subdirs of
+.Em PACKAGES
+with known vulnerabilities, based on the data in
+PKGSRCDIR/distfiles/vulnerabilities .
 .It Fl d
 Extract the 'DEPENDS' listing from each pkgsrc package Makefile, then
 verify the version specified in each DEPEND correctly matches a current
@@ -62,7 +70,8 @@ the same distfile with a different md5 checksum.
 .It Fl o
 Report any old distfile (not referenced by any package's md5 file).
 .It Fl p
-Report any old binary packages (in any subdirs of PKGSRCDIR/packages).
+Report any old binary packages in any subdirs of
+.Em PACKAGES .
 .It Fl r
 Remove distfiles which are not referenced from any package's md5 file,
 or have an incorrect checksum (usually due to an interrupted download),
@@ -71,6 +80,25 @@ specify the -o, -m, or -p flags respectively.
 .El
 .Sh AUTHOR
 David Brownlee <abs@netbsd.org>
+.Sh CAVEATS
+The
+.Fl R ,
+.Fl V ,
+and
+.Fl p
+options default to using
+.Em PACKAGES
+as the base directory from which to
+search for binary packages. If this includes OS or architecture information
+then packages for other OS/architecture combinations will be missed. 
+In this case
+.Em PACKAGES
+can be overridden with 
+.Fl K
+or set conditionally in
+.Pa /etc/mk.conf
+based on the value of
+.Em LINTPKGSRC .
 .Sh BUGS
 The 'Makefile parsing' algorithym used to obtain package versions
 and DEPENDS information is geared towards speed rather than
