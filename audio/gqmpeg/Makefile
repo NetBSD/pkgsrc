@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/03/01 17:09:03 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2001/03/01 17:12:28 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 #
 
@@ -23,13 +23,9 @@ CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--enable-japanese
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-
 # in case gnome isn't installed, we need to create the directories
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gnome/apps/Multimedia
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps
-	${SED}	-e 's|@PREFIX@|${PREFIX}|g'				\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
 .include "../../mk/bsd.pkg.mk"
