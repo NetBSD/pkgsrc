@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.327 2004/06/21 16:12:53 darcy Exp $
+# $NetBSD: Makefile,v 1.328 2004/06/22 21:42:35 adrianp Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
 
+SUBDIR+=	SpeedyCGI
 SUBDIR+=	adzap
 SUBDIR+=	amaya
 SUBDIR+=	analog
