@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6242 2004/06/20 20:16:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.6243 2004/06/20 20:18:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2975,3 +2975,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added dspam-3.0.0 [xtraeme 2004-06-20]
 	Updated gtk2 to 2.4.3 [jmmv 2004-06-20]
 	Updated epiphany to 1.2.6 [jmmv 2004-06-20]
+	Updated ap2-perl to 1.99.14 [minskim 2004-06-20]
