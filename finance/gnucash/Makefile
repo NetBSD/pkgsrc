@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/11/26 23:18:14 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/11/30 23:44:11 salo Exp $
 #
 
 DISTNAME=		gnucash-1.6.8
@@ -22,6 +22,7 @@ USE_X11=		YES
 USE_LIBTOOL=		YES
 #LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-included-gettext
