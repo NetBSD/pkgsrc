@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2003/05/10 10:07:12 seb Exp $
+# $NetBSD: Makefile,v 1.132 2003/05/14 03:49:59 salo Exp $
 #
 
 COMMENT=	Security tools
@@ -28,6 +28,7 @@ SUBDIR+=	fortify
 SUBDIR+=	fressh
 SUBDIR+=	fsh
 SUBDIR+=	gnupg
+SUBDIR+=	gnutls
 SUBDIR+=	gpa
 SUBDIR+=	gpgme
 SUBDIR+=	gtk-systrace
@@ -45,6 +46,7 @@ SUBDIR+=	libidea
 SUBDIR+=	libident
 SUBDIR+=	libmcrypt
 SUBDIR+=	libnasl
+SUBDIR+=	libtasn1
 SUBDIR+=	logcheck
 SUBDIR+=	mcrypt
 SUBDIR+=	mhash
@@ -57,6 +59,7 @@ SUBDIR+=	nessus-libraries
 SUBDIR+=	nessus-plugins
 SUBDIR+=	netramet
 SUBDIR+=	nfsbug
+SUBDIR+=	opencdk
 SUBDIR+=	openssh
 SUBDIR+=	openssl
 SUBDIR+=	otpcalc
