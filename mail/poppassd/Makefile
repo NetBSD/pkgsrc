@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/07/16 15:01:49 taca Exp $
+# $NetBSD: Makefile,v 1.7 2002/09/09 19:25:26 jlam Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -15,21 +15,25 @@ MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		http://www.eudora.com/qpopper/
 COMMENT=		Qualcomm's password change server mainly for Eudora
 
-USE_BUILDLINK_ONLY=	# defined
-CONFIGURE_ARGS+=	--enable-poppassd
-CONFIGURE_ENV+=	CDEFS='-DSMBPASSWD_BINARY=\"${LOCALBASE}/bin/smbpasswd\"'
-
 .include "../qpopper/Makefile.common"
 
+USE_BUILDLINK2=		# defined
+CONFIGURE_ARGS+=	--enable-poppassd
+CONFIGURE_ENV+=	CDEFS='-DSMBPASSWD_BINARY=\"${LOCALBASE}/bin/smbpasswd\"'
+MAKE_ENV+=	ROOT_USER=${ROOT_USER} ROOT_GROUP=${ROOT_GROUP}
+
 do-build:
-	cd ${WRKSRC}/common; ${MAKE} ${ALL_TARGET}
-	cd ${WRKSRC}/password; ${MAKE} ${ALL_TARGET}
+.for DIR in common password
+	cd ${WRKSRC}/${DIR}; ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${ALL_TARGET}
+.endfor
 
 # popper makefile doesn't have an install target...
 do-install:
-	cd ${WRKSRC}/password; ${MAKE} ${INSTALL_TARGET}
-	${INSTALL_MAN} ${WRKSRC}/man/poppassd.8 ${LOCALBASE}/man/man8
-	${INSTALL_DATA} ${WRKSRC}/License.txt \
-		${LOCALBASE}/share/doc/poppassd.License;
+	cd ${WRKSRC}/password; ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
+	${INSTALL_MAN} ${WRKSRC}/man/poppassd.8 ${PREFIX}/man/man8
+	${INSTALL_DATA} ${WRKSRC}/License.txt				\
+		${PREFIX}/share/doc/poppassd.License;
 
 .include "../../mk/bsd.pkg.mk"
