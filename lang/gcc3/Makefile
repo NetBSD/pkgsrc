@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2004/02/14 13:47:00 tron Exp $
+# $NetBSD: Makefile,v 1.52 2004/02/14 13:49:25 tron Exp $
 
 GCC_VERSION=	3.3.2
 DISTNAME=	gcc3-${GCC_VERSION}
@@ -13,11 +13,11 @@ COMMENT=	GNU Compiler Collection, v3
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 
-DEPENDS+=	gcc3-c-${GCC_VERSION}:../../lang/gcc3-c
-DEPENDS+=	gcc3-c++-${GCC_VERSION}nb1:../../lang/gcc3-c++
-DEPENDS+=	gcc3-f77-${GCC_VERSION}:../../lang/gcc3-f77
-DEPENDS+=	gcc3-java-${GCC_VERSION}:../../lang/gcc3-java
-DEPENDS+=	gcc3-objc-${GCC_VERSION}:../../lang/gcc3-objc
+DEPENDS+=	gcc3-c-${GCC_VERSION}{,nb*}:../../lang/gcc3-c
+DEPENDS+=	gcc3-c++-${GCC_VERSION}{,nb*}:../../lang/gcc3-c++
+DEPENDS+=	gcc3-f77-${GCC_VERSION}{,nb*}:../../lang/gcc3-f77
+DEPENDS+=	gcc3-java-${GCC_VERSION}{,nb*}:../../lang/gcc3-java
+DEPENDS+=	gcc3-objc-${GCC_VERSION}{,nb*}:../../lang/gcc3-objc
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
