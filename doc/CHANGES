@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3104 2003/08/26 09:55:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.3105 2003/08/26 10:22:33 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3340,3 +3340,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated parchive to 1.1nb1 [fredb 2003-08-25]
 	Updated gnupg to 1.2.3 [itojun 2003-08-25]
 	Updated xmule to 1.4.3 [jmmv 2003-08-26]
+	Added utilisp-1.13 [itojun 2003-08-26]
