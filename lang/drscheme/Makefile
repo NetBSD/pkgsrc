@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.7 2001/11/09 03:03:03 dogcow Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/31 20:27:48 jschauma Exp $
 #
 
 DISTNAME=		plt.src.x
-PKGNAME=		drscheme-103p1
+PKGNAME=		drscheme-202
 CATEGORIES=		lang
-MASTER_SITES=		http://www.cs.rice.edu/CS/PLT/packages/download/103p1/plt/
+MASTER_SITES=		http://download.plt-scheme.org/bundles/202/plt/ \
+			http://www.cs.utah.edu/plt/download/202/plt/ \
+			ftp://ftp.pasteur.fr/pub/computing/Scheme/plt-scheme/202/plt/ \
+			ftp://archive.informatik.uni-tuebingen.de/unix/language/plt/202/plt/ \
+			ftp://morpheus.wish.com.mx/pub/plt/202/plt/
 
 MAINTAINER=		groo@netbsd.org
-HOMEPAGE=		http://www.cs.rice.edu/CS/PLT/packages/drscheme/
+HOMEPAGE=		http://www.drscheme.org
 COMMENT=		R4RS-compilant and nearly R5RS-compliant scheme tailored for teaching
 
-CONFLICTS+=		mzscheme-[0-9]*:../mzscheme
+CONFLICTS+=		mzscheme-[0-9]*:../../lang/mzscheme
 
 USE_GMAKE=		yes
 USE_PERL5=		yes
@@ -18,56 +22,51 @@ GNU_CONFIGURE=		yes
 LDFLAGS=		-L${LOCALBASE}/lib
 CFLAGS=			-I${LOCALBASE}/include
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-*
 
 WRKSRC=                 ${WRKDIR}/plt/src
-DIST_SUBDIR=		drscheme/103p1
 
 post-patch:
-	@for patchee in ${WRKDIR}/plt/man/man1/mzscheme.1 \
-	${WRKDIR}/plt/man/man1/drscheme.1 ${WRKDIR}/plt/man/man1/mred.1 \
-	${WRKDIR}/plt/man/man1/drscheme-jr.1 \
-	${WRKSRC}/mzscheme/cmdline.inc \
-	${WRKDIR}/plt/collects/mzlib/restartr.ss \
-	${WRKDIR}/plt/collects/slibinit/init.ss \
-	${WRKSRC}/mzscheme/src/makeexn \
-	${WRKSRC}/../bin/drscheme \
-	${WRKSRC}/../bin/drscheme-jr \
-	${WRKSRC}/../bin/help-desk \
-	${WRKSRC}/../bin/mred \
-	${WRKSRC}/../bin/mzc \
-	${WRKSRC}/../bin/mzscheme \
-	${WRKDIR}/plt/collects/launcher/launcherr.ss; do \
-		${MV} -f $$patchee ${WRKSRC}/foo ; \
-		${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g' <${WRKSRC}/foo \
-			> $$patchee ; \
-	done
+	@for patchee in \
+		${WRKDIR}/plt/bin/background-help-desk \
+		${WRKDIR}/plt/bin/drscheme \
+		${WRKDIR}/plt/bin/help-desk \
+		${WRKDIR}/plt/bin/mzc \
+		${WRKDIR}/plt/bin/setup-plt \
+		${WRKDIR}/plt/bin/tex2page \
+		${WRKDIR}/plt/man/man1/mzscheme.1 \
+		${WRKDIR}/plt/collects/slibinit/init.ss \
+		${WRKSRC}/mzscheme/src/makeexn \
+		${WRKDIR}/plt/man/man1/drscheme.1 \
+		${WRKDIR}/plt/man/man1/mred.1; do \
+			${MV} -f $$patchee ${WRKSRC}/foo ; \
+			${SED} -e 's|@PREFIX@|${PREFIX}|' <${WRKSRC}/foo \
+				 > $$patchee ; \
+	done;
+	@${MV} -f ${WRKSRC}/mred/Makefile.in ${WRKSRC}/foo
+	@${SED} -e 's|@X11PREFIX@|${X11PREFIX}|' < ${WRKSRC}/foo > ${WRKSRC}/mred/Makefile.in
 	@${RM} -f ${WRKSRC}/foo
-
-post-build:
-	@(cd ${WRKSRC} ; ${MAKE} install)
+	@${RM} -f ${WRKSRC}/../bin/*.orig
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/drscheme ${PREFIX}/bin
-	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/drscheme-jr ${PREFIX}/bin
-	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/help-desk ${PREFIX}/bin
-	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/mred ${PREFIX}/bin
-	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/mzscheme ${PREFIX}/bin
-	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/mzc ${PREFIX}/bin
-	@${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/plt/bin
-	@${INSTALL_PROGRAM} ${WRKDIR}/plt/src/mred/mred \
-		${PREFIX}/lib/plt/bin
-	@${INSTALL_PROGRAM} ${WRKDIR}/plt/src/mzscheme/mzscheme \
-		${PREFIX}/lib/plt/bin
-	@${INSTALL_MAN} ${WRKDIR}/plt/man/man1/drscheme.1 \
-		${PREFIX}/man/man1
-	@${INSTALL_MAN} ${WRKDIR}/plt/man/man1/drscheme-jr.1 \
-		${PREFIX}/man/man1
-	@${INSTALL_MAN} ${WRKDIR}/plt/man/man1/mred.1 \
-		${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/plt/collects
-	${CP} -R ${WRKDIR}/plt/collects/* ${PREFIX}/lib/plt/collects
-	${CP} -R ${WRKDIR}/plt/teachpack ${PREFIX}/lib/plt
-	${CP} -R ${WRKDIR}/plt/notes ${PREFIX}/lib/plt
+	${CP} -p -r ${WRKSRC}/../collects/* ${PREFIX}/lib/plt/collects
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/plt/teachpack
+	${CP} -p -r ${WRKSRC}/../teachpack/* ${PREFIX}/lib/plt/teachpack
+	${INSTALL_DATA_DIR} ${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/../include/* ${PREFIX}/include
+	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/../man/man1/*.1 ${PREFIX}/man/man1/
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/../bin/* ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/mzscheme/mzdyn.o ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/mzscheme/libmzgc.a ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/mzscheme/libmzscheme.a ${PREFIX}/lib
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/plt/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mzscheme/mzscheme ${PREFIX}/lib/plt/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mred/mred ${PREFIX}/lib/plt/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/../install ${PREFIX}/lib/plt
+	@cd ${PREFIX}/lib/plt && ${ECHO} y | ${SH} install
 
 .include "../../mk/bsd.pkg.mk"
