@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2002/10/02 23:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2002/10/14 06:21:18 martti Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		1
 CATEGORIES+=		lang
 COMMENT=		HTML-embedded scripting language
 
@@ -34,15 +33,12 @@ CONF_FILES=	${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=	${PREFIX}/${PHP_EXTENSION_DIR}
 
 post-install:
-	${RMDIR} ${PREFIX}/include/php/ext/xml/expat/xmltok
-	${RMDIR} ${PREFIX}/include/php/ext/xml/expat/xmlparse
-	${RMDIR} ${PREFIX}/include/php/ext/xml/expat
 	${INSTALL_DATA_DIR} ${CGIDIR}
 	${LN} -sf ../../bin/php ${CGIDIR}/php
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-dist php.ini-recommended ${EGDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php
-	${INSTALL_DATA} ${WRKSRC}/php4.gif ${PREFIX}/share/php
+	${INSTALL_DATA} ${WRKSRC}/php.gif ${PREFIX}/share/php
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
