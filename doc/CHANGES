@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2879 2003/07/24 18:42:46 jtb Exp $
+$NetBSD: CHANGES,v 1.2880 2003/07/24 20:18:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2928,3 +2928,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmms-osd to 2.2.2nb2 [jmmv 2003-07-24]
 	Added spider-1.1 [jschauma 2003-07-24]
 	Updated oo2c to 2.0.10 [jtb 2003-07-24]
+	Added bkedit-0.6.21 [wiz 2003-07-24]
