@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.61 2003/11/21 00:14:00 grant Exp $
+# $NetBSD: defs.Darwin.mk,v 1.62 2003/12/04 06:07:49 grant Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -120,7 +120,7 @@ _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_LIBTOOL_REQD=	1.4.20010614nb16 # base version of libtool required
 _OPSYS_PERL_REQD=	5.8.0	# base version of perl required
 _OPSYS_PTHREAD_AUTO=	yes	# -lpthread not needed for pthreads
-_OPSYS_RPATH_NAME=	darwin_has_no_rpath
+_OPSYS_RPATH_NAME=	-L	# darwin has no rpath, use -L instead
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG=	-V simple -b -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
