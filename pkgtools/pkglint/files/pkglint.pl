@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.57 2001/10/30 18:53:02 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.58 2001/10/31 18:39:27 zuntum Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -201,7 +201,7 @@ if (-e <$portdir/$filesdir/patch-sum> ) {
 	&perror("FATAL: $filesdir/patch-sum is deprecated -- run 'make mps' to generate distinfo.");
 }
 if (-e <$pkgdir/COMMENT> ) {
-	&perror("FATAL: pkg/COMMENT is deprecated -- please use a COMMENT variable instead.");
+	&perror("FATAL: $pkgdir/COMMENT is deprecated -- please use a COMMENT variable instead.");
 }
 if (! -f "$portdir/$pkgdir/PLIST"
     and ! -f "$portdir/$pkgdir/PLIST-mi"
@@ -232,7 +232,7 @@ if ($err || $warn) {
 exit $err;
 
 #
-# pkg/DESCR
+# DESCR
 #
 sub checkdescr {
 	local($file) = @_;
@@ -315,7 +315,7 @@ sub checkdistinfo {
 }
 
 #
-# pkg/PLIST
+# PLIST
 #
 sub checkplist {
 	local($file) = @_;
