@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2000/07/06 16:52:18 tron Exp $
+# $NetBSD: Makefile,v 1.131 2000/07/07 13:30:11 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -32,6 +32,7 @@
     SUBDIR += gaim
     SUBDIR += gated
     SUBDIR += gnapster
+    SUBDIR += gnomeicu
 #   SUBDIR += gnut		# broken
     SUBDIR += gtk-gnutella
     SUBDIR += gtksamba
