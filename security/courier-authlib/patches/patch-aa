@@ -1,0 +1,98 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/02/10 03:21:31 jlam Exp $
+
+--- Makefile.in.orig	2005-01-11 21:42:54.000000000 -0500
++++ Makefile.in
+@@ -608,8 +608,8 @@ authdaemondprog_SOURCES = authdaemond.c
+ authdaemondprog_DEPENDENCIES = libcourierauthcommon.la \
+ 	liblock/liblock.la $(modules)
+ 
+-authdaemondprog_LDADD = $(LIBLTDL) libcourierauthcommon.la liblock/liblock.la
+-authdaemondprog_LDFLAGS = -export-dynamic $(modules:%=-dlopen %) @NETLIBS@
++authdaemondprog_LDADD = $(LIBLTDL) libcourierauthcommon.la liblock/liblock.la $(DL_LIBS)
++authdaemondprog_LDFLAGS = -export-dynamic $(modules:%=-dlopen %) $(DL_LDFLAGS) @NETLIBS@
+ authdaemontest_SOURCES = authdaemontest.c
+ authdaemontest_DEPENDENCIES = libcourierauthcommon.la
+ authdaemontest_LDADD = libcourierauthcommon.la @NETLIBS@
+@@ -1437,14 +1437,12 @@ vpopmail_config.h:
+ authpgsqllib.lo: authpgsqllib.c authpgsqlrc.h
+ 
+ @HAVE_AUTHPGSQL_TRUE@install-authpgsqlrc:
+-@HAVE_AUTHPGSQL_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname @authpgsqlrc@`
+-@HAVE_AUTHPGSQL_TRUE@	$(INSTALL_DATA) -m 660 $(srcdir)/authpgsqlrc \
+-@HAVE_AUTHPGSQL_TRUE@		$(DESTDIR)@authpgsqlrc@.dist
+-@HAVE_AUTHPGSQL_TRUE@	-chown @mailuser@ $(DESTDIR)@authpgsqlrc@.dist
+-@HAVE_AUTHPGSQL_TRUE@	-chgrp @mailgroup@ $(DESTDIR)@authpgsqlrc@.dist
++@HAVE_AUTHPGSQL_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname $(authpgsqlrc)`
++@HAVE_AUTHPGSQL_TRUE@	$(INSTALL_DATA) $(srcdir)/authpgsqlrc \
++@HAVE_AUTHPGSQL_TRUE@		$(DESTDIR)$(authpgsqlrc).dist
+ 
+ @HAVE_AUTHPGSQL_TRUE@uninstall-authpgsqlrc:
+-@HAVE_AUTHPGSQL_TRUE@	rm -f $(DESTDIR)@authpgsqlrc@.dist
++@HAVE_AUTHPGSQL_TRUE@	rm -f $(DESTDIR)$(authpgsqlrc).dist
+ 
+ @HAVE_AUTHPGSQL_FALSE@install-authpgsqlrc:
+ @HAVE_AUTHPGSQL_FALSE@	@:
+@@ -1458,14 +1456,12 @@ authpgsqlrc.h:
+ authldaplib.lo: authldaplib.c authldaprc.h
+ 
+ @HAVE_LDAP_TRUE@install-authldaprc:
+-@HAVE_LDAP_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname @authldaprc@` 
+-@HAVE_LDAP_TRUE@	$(INSTALL_DATA) -m 660 $(srcdir)/authldaprc \
+-@HAVE_LDAP_TRUE@		$(DESTDIR)@authldaprc@.dist
+-@HAVE_LDAP_TRUE@	-chown @mailuser@ $(DESTDIR)@authldaprc@.dist
+-@HAVE_LDAP_TRUE@	-chgrp @mailgroup@ $(DESTDIR)@authldaprc@.dist
++@HAVE_LDAP_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname $(authldaprc)` 
++@HAVE_LDAP_TRUE@	$(INSTALL_DATA) $(srcdir)/authldaprc \
++@HAVE_LDAP_TRUE@		$(DESTDIR)$(authldaprc).dist
+ 
+ @HAVE_LDAP_TRUE@uninstall-authldaprc:
+-@HAVE_LDAP_TRUE@	rm -f $(DESTDIR)@authldaprc@.dist
++@HAVE_LDAP_TRUE@	rm -f $(DESTDIR)$(authldaprc).dist
+ 
+ @HAVE_LDAP_FALSE@install-authldaprc:
+ @HAVE_LDAP_FALSE@	@:
+@@ -1479,14 +1475,12 @@ authldaprc.h:
+ authmysqllib.lo: authmysqllib.c authmysqlrc.h
+ 
+ @HAVE_AUTHMYSQL_TRUE@install-authmysqlrc:
+-@HAVE_AUTHMYSQL_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname @authmysqlrc@`
+-@HAVE_AUTHMYSQL_TRUE@	$(INSTALL_DATA) -m 660 $(srcdir)/authmysqlrc \
+-@HAVE_AUTHMYSQL_TRUE@		$(DESTDIR)@authmysqlrc@.dist
+-@HAVE_AUTHMYSQL_TRUE@	-chown @mailuser@ $(DESTDIR)@authmysqlrc@.dist
+-@HAVE_AUTHMYSQL_TRUE@	-chgrp @mailgroup@ $(DESTDIR)@authmysqlrc@.dist
++@HAVE_AUTHMYSQL_TRUE@	$(mkinstalldirs) $(DESTDIR)`dirname $(authmysqlrc)`
++@HAVE_AUTHMYSQL_TRUE@	$(INSTALL_DATA) $(srcdir)/authmysqlrc \
++@HAVE_AUTHMYSQL_TRUE@		$(DESTDIR)$(authmysqlrc).dist
+ 
+ @HAVE_AUTHMYSQL_TRUE@uninstall-authmysqlrc:
+-@HAVE_AUTHMYSQL_TRUE@	rm -f $(DESTDIR)@authmysqlrc@.dist
++@HAVE_AUTHMYSQL_TRUE@	rm -f $(DESTDIR)$(authmysqlrc).dist
+ 
+ @HAVE_AUTHMYSQL_FALSE@install-authmysqlrc:
+ @HAVE_AUTHMYSQL_FALSE@	@:
+@@ -1498,12 +1492,10 @@ authmysqlrc.h:
+ 	echo "#define AUTHMYSQLRC \"@authmysqlrc@\"" >authmysqlrc.h
+ 
+ install-authdaemonrc:
+-	$(mkinstalldirs) $(DESTDIR)`dirname @authdaemonrc@`
++	$(mkinstalldirs) $(DESTDIR)`dirname $(authdaemonrc)`
+ 	sed 's/@ALLMODULES@/$(modules:lib%.la=%)/' <authdaemonrc >authdaemonrc.tmp
+-	$(INSTALL_DATA) -m 660 authdaemonrc.tmp $(DESTDIR)@authdaemonrc@.dist
++	$(INSTALL_DATA) authdaemonrc.tmp $(DESTDIR)$(authdaemonrc).dist
+ 	rm -f authdaemonrc.tmp
+-	-chown @mailuser@ $(DESTDIR)@authdaemonrc@.dist
+-	-chgrp @mailgroup@ $(DESTDIR)@authdaemonrc@.dist
+ 
+ uninstall-authdaemonrc:
+ 	rm -f $(DESTDIR)@authdaemonrc@.dist
+@@ -1557,10 +1549,6 @@ install-exec-hook:
+ 	$(mkinstalldirs) $(DESTDIR)$(sbindir)
+ 	$(mkinstalldirs) $(DESTDIR)$(pkglibexecdir)
+ 	$(INSTALL_PROGRAM_ENV) $(LIBTOOL) --mode=install $(INSTALL_PROGRAM) authdaemondprog $(DESTDIR)$(pkglibexecdir)/authdaemond
+-	$(mkinstalldirs) $(DESTDIR)@authdaemonvar@
+-	chmod 750 $(DESTDIR)@authdaemonvar@
+-	-chown @mailuser@ $(DESTDIR)@authdaemonvar@
+-	-chgrp @mailgroup@ $(DESTDIR)@authdaemonvar@
+ 	test "@LIBAUTHUSERDB@" = "" && exit 0 ;\
+ 		$(INSTALL_PROGRAM_ENV) $(INSTALL_PROGRAM) makedat/makedatprog \
+ 				$(DESTDIR)$(pkglibexecdir)/makedatprog ; \
