@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/12/05 08:12:42 tron Exp $
+# $NetBSD: Makefile,v 1.19 2003/03/26 04:05:38 jschauma Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 CATEGORIES=	www
@@ -65,3 +65,5 @@ post-install-manpage:
 	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera \
 	  ${PREFIX}/man/man1
 .endif
+
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/07/03 12:07:53 agc Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/26 04:05:40 jschauma Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -86,4 +86,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/dptelog ${PREFIX}/etc/rc.d/dptelog
 
 .include "../../emulators/suse_linux/Makefile.application"
-
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/04 10:07:58 tron Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/26 04:05:50 jschauma Exp $
 
 DISTNAME=		suse_libpng-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -20,3 +20,4 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 RPMFILES=		libpng.rpm
 
 .include "../suse64_linux/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

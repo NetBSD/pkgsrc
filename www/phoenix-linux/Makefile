@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/17 11:33:50 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/26 04:05:37 jschauma Exp $
 #
 
 DISTNAME=		phoenix-0.5-i686-pc-linux-gnu
@@ -46,7 +46,6 @@ ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
 
 .if exists(Makefile.${OPSYS}.${ARCH})
 .  include "Makefile.${OPSYS}.${ARCH}"
-.else
-.  include "../../mk/bsd.pkg.mk"
 .endif
 
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/09/23 10:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2003/03/26 04:05:43 jschauma Exp $
 
 DISTNAME=		flash_${DISTUNAME}
 CATEGORIES=		graphics www
@@ -57,3 +57,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${NS_PLUGINS_DIR}
 
 .include "../../emulators/suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"

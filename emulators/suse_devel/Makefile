@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/11/25 11:01:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2003/03/26 04:05:48 jschauma Exp $
 
 DISTNAME=		suse_devel-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -34,3 +34,4 @@ RPMFILES+=      glibc.rpm
 .endif
 
 .include "../suse_linux/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

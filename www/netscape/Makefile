@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/13 15:24:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/26 04:05:40 jschauma Exp $
 #
 
 COMMENT=	Open new communicator, navigator, or mozilla window
@@ -38,3 +38,4 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/netscape ${PREFIX}/bin/netscape
 
 .include "../../emulators/suse_linux/Makefile.application"
+.include "../../mk/bsd.pkg.mk"
