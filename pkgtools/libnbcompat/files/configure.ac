@@ -40,7 +40,7 @@ AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
 	sys/stat.h sys/statvfs.h sys/vfs.h sys/types.h sys/vfs.h termcap.h \
 	termios.h time.h tzfile.h unistd.h util.h utmp.h])
 
-AC_CHECK_HEADERS([md5.h rmd160.h sha1.h sha2.h])
+AC_CHECK_HEADERS([md5.h rmd160.h sha1.h])
 
 dnl Check that this vis.h has *vis()-related functions because Solaris'
 dnl vis.h doesn't.  Also, only consider the header found if it defines
@@ -119,10 +119,6 @@ AC_CHECK_FUNC(RMD160File, [:], [
 AC_CHECK_FUNC(SHA1File, [:], [
 	AC_LIBOBJ(sha1)
 	AC_LIBOBJ(sha1hl)
-])
-AC_CHECK_FUNC(SHA256_File, [:], [
-	AC_LIBOBJ(sha2)
-	AC_LIBOBJ(sha2hl)
 ])
 
 AC_CHECK_FUNCS([strunvis strvis strsvis],
