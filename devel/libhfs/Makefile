@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/17 18:36:33 fredb Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/02 19:05:05 fredb Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -15,6 +15,12 @@ CONFIGURE_ENV=	CPPFLAGS=-I./
 USE_LIBTOOL=	yes
 
 ALL_TARGET=	all_lib
+
+pre-patch:
+	for f in librsrc/librsrc.h libhfs/libhfs.h; do \
+	  ${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f-prepatch; \
+	  ${SED} -e '/Id/s|\$$||g' ${WRKSRC}/$$f-prepatch > ${WRKSRC}/$$f; \
+	done
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/libhfs
