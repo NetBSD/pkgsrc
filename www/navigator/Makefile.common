@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2001/05/01 21:37:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2001/05/11 09:15:43 wiz Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -78,7 +78,7 @@ IGNORE=		"There is no navigator-only package for PowerPC"
 IGNORE+=	"platform.  Please cd to ../communicator and"
 IGNORE+=	"install communicator package instead."
 .endif
-DEPENDS+=	linuxppc_lib>=2000.q4.2:../../emulators/linuxppc_lib
+DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
 NS_VERS=	4.73
 DISTNAME=	netscape-4.7-3.ppc
 PKGNAME=	${BINNAME}-${NS_VERS}
