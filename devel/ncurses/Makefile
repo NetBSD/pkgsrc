@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2004/07/09 13:51:20 drochner Exp $
+# $NetBSD: Makefile,v 1.61 2004/07/21 19:58:57 jlam Exp $
 
 DISTNAME=	ncurses-${NC_VERS}
 NC_VERS=	5.4
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--with-manpage-format=normal
 CONFIGURE_ARGS+=	--with-manpage-tbl
 
 USE_GNU_TOOLS+=		awk
+USE_TBL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -67,5 +68,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/c++/demo.cc \
 		${PREFIX}/share/examples/ncurses++demo.cc
 
-.include "../../textproc/groff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
