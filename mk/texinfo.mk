@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.6 2002/11/14 04:04:13 wiz Exp $
+# $NetBSD: texinfo.mk,v 1.7 2003/01/28 00:08:29 seb Exp $
 #
 # This Makefile fragment is included by packages that provide info files.
 #
@@ -19,32 +19,32 @@ MAKEFLAGS+=		INSTALL_INFO_VERSION=${INSTALL_INFO_VERSION}
 .endif
 
 # Minimum required version for the GNU texinfo tools.
-TEXINFO_REQD?= 3.12
+TEXINFO_REQD?=	3.12
 
 # Sort out if we need the version provided by devel/gtexinfo.
 .if defined(INSTALL_INFO_VERSION)
 .  if ${INSTALL_INFO_VERSION} < ${TEXINFO_REQD}
-_NEED_TEXINFO=         # defined
+_NEED_TEXINFO=	# defined
 .  endif
 .else
-_NEED_TEXINFO=         # defined
+_NEED_TEXINFO=	# defined
 .endif
 
 .if defined(_NEED_TEXINFO)
-DEPENDS+=               gtexinfo>=${TEXINFO_REQD}:../../devel/gtexinfo
+DEPENDS+=		gtexinfo>=${TEXINFO_REQD}:../../devel/gtexinfo
 _GTEXINFO_PREFIX_DEFAULT=${LOCALBASE}
-EVAL_PREFIX+=            _GTEXINFO_PREFIX=gtexinfo
+EVAL_PREFIX+=		_GTEXINFO_PREFIX=gtexinfo
 .else
-_GTEXINFO_PREFIX=       ${_INSTALL_INFO:C|/bin/install-info$||}
+_GTEXINFO_PREFIX=	${_INSTALL_INFO:C|/bin/install-info$||}
 .endif
 
 #
 # Advertise in environment which install-info and makeinfo should be used.
 #
-INSTALL_INFO=   ${_GTEXINFO_PREFIX}/bin/install-info
-MAKEINFO=       ${_GTEXINFO_PREFIX}/bin/makeinfo
-CONFIGURE_ENV+= MAKEINFO="${MAKEINFO}" INSTALL_INFO="${INSTALL_INFO}"
-MAKE_ENV+=      MAKEINFO="${MAKEINFO}" INSTALL_INFO="${INSTALL_INFO}"
+INSTALL_INFO=	${_GTEXINFO_PREFIX}/bin/install-info
+MAKEINFO=	${_GTEXINFO_PREFIX}/bin/makeinfo
+CONFIGURE_ENV+=	MAKEINFO="${MAKEINFO}" INSTALL_INFO="${INSTALL_INFO}"
+MAKE_ENV+=	MAKEINFO="${MAKEINFO}" INSTALL_INFO="${INSTALL_INFO}"
 
 #
 # Another way would be to use ${SED} to substitute @MAKEINFO@, @INSTALL_INFO@
@@ -70,7 +70,7 @@ TEXINFO_SUBST_SED+=	-e 's!^INSTALL_INFO[ 	]*=[ 	]*install-info[ 	]*\(.*\)$$!INST
 TEXINFO_SUBST_SED+=	-e "s!^\(	.*\)\([ 	]\)makeinfo\([ 	]\)!\1\2${MAKEINFO}\3!g"
 TEXINFO_SUBST_SED+=	-e "s!^\(	.*\)\([ 	']\)install-info\([ 	]\)!\1\2${INSTALL_INFO}\3!g"
 
-_CONFIGURE_PREREQ+=     texinfo-override
+_CONFIGURE_PREREQ+=	texinfo-override
 texinfo-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(for _PATTERN in ${TEXINFO_PATTERNS}; do			\
