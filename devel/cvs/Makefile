@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.55 2002/12/24 23:00:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.56 2003/01/15 22:49:37 wiz Exp $
 #
 
-DISTNAME=	cvs-1.11.2
+DISTNAME=	cvs-1.11.4
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.cvshome.org/${DISTNAME}/ \
 		${MASTER_SITE_GNU:=non-gnu/cvs/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cvshome.org/
@@ -19,7 +20,7 @@ USE_BUILDLINK2=		yes
 
 .if ${OPSYS} == "NetBSD"
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=		cvs-1.11.2-v6-20020709.diff.gz
+PATCHFILES=		cvs-1.11.4-v6-20030102.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
@@ -37,6 +38,7 @@ LDFLAGS+=		-framework Kerberos
 .if defined(KERBEROS)
 CONFIGURE_ARGS+=	--with-krb4=/usr --enable-encryption
 CONFIGURE_ARGS+=	--with-gssapi=/usr
+CPPFLAGS+=		-I/usr/include/krb5
 .endif
 
 .if defined(RCS_LOCALID)
@@ -47,7 +49,7 @@ pre-fetch:
 CONFIGURE_ENV+=	perl_path=${PERL5}
 
 INFO_FILES=	cvs.info cvsclient.info
-TEXINFO_REQD?=		4.2
+TEXINFO_REQD?=		4.0
 TEXINFO_OVERRIDE=	YES
 
 .include "../../devel/zlib/buildlink2.mk"
