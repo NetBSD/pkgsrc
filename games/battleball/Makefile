@@ -1,20 +1,33 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:54 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/06 08:36:07 fredb Exp $
 
-DISTNAME=		battleball.20.src
-PKGNAME=		battleball-2.0
-CATEGORIES=		games x11
-MASTER_SITES=		http://www.cs.utexas.edu/users/pahardin/
+DISTNAME=	battleball.21.src
+PKGNAME=	battleball-2.1
+CATEGORIES=	games x11
+MASTER_SITES=	http://linuxberg.prover.com.br/files/x11/entertain/
 
-MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.cs.utexas.edu/users/pahardin/bb.html
+MAINTAINER=	root@garbled.net
+HOMEPAGE=	http://www.cs.utexas.edu/users/pahardin/bb.html
 
-WRKSRC=			${WRKDIR}/bb-2.0
+USE_X11=	YES
+WRKSRC=		${WRKDIR}/battleball-2.1-src
 
-NO_INSTALL_MANPAGES=	yes
-USE_GMAKE=		yes
-USE_IMAKE=		yes
+CPPFLAGS+=	-I${X11BASE}/include
+SED_CMDS=	-e '/^INCS/s|$$|${CPPFLAGS}|' -e '/^LIBS/s|$$|${LDFLAGS}|'
 
-post-patch:
-	${TOUCH} ${WRKSRC}/battleball.man
+do-configure:
+	${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.orig; \
+	${SED} ${SED_CMDS} < ${WRKSRC}/Makefile.orig > ${WRKSRC}/Makefile
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/battleball ${PREFIX}/bin/
 
 .include "../../mk/bsd.pkg.mk"
+
+.if !defined(USE_MESA)
+CPPFLAGS+=	-DNO_OPENGL
+SED_CMDS+=	-e '/^GLINCS/s|^|\#|' -e '/^GLLIBS/s|^|\#|'
+.else
+# Note to Maintainers: Wildcard needs to match all possible Mesa-glx
+# variations so the build doesn't fail if Mesa-glx is already installed.
+DEPENDS+=	Mesa-*:../../graphics/Mesa
+.endif
