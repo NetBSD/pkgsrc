@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/18 04:58:18 tsarna Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/08/23 21:03:07 frueauf Exp $
 bin/doscmd
 man/man1/doscmd.1
 man/cat1/doscmd.0
 libexec/doscmd.kernel
 libexec/instbsdi.exe
-
