@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/09/05 21:03:49 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/09/16 14:43:15 uebayasi Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	vorbis-tools-1.0.0.8
@@ -29,6 +29,7 @@ PTHREAD_OPTS+=	require
 .include "../../audio/libao/buildlink2.mk"
 .include "../../audio/libogg/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../www/curl/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 
