@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8681 2005/01/10 16:15:20 adam Exp $
+$NetBSD: CHANGES,v 1.8682 2005/01/10 16:27:54 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mysql4-client to 4.1.8a [xtraeme 2005-01-10]
 	Updated mysql4-server to 4.1.8a [xtraeme 2005-01-10]
 	Updated wv to 1.0.3 [adam 2005-01-10]
+	Updated wxhugo to 3.1.01 [dillo 2005-01-10]
