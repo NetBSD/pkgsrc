@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/09/30 10:30:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2003/09/30 14:43:52 jmmv Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -29,11 +29,12 @@ LIBS+=			-lutil
 PTHREAD_OPTS+=		native
 
 EGDIR=			${PREFIX}/share/examples/icecast
-FILES=			groups.aut mounts.aut users.aut icecast.conf
+EGFILES=		groups.aut mounts.aut users.aut icecast.conf
 
-.for F in ${FILES}
-CONF_FILES+=		${EGDIR}/${F}.dist ${PKG_SYSCONFDIR}/${F}
+.for f in ${EGFILES}
+CONF_FILES+=		${EGDIR}/${f}.dist ${PKG_SYSCONFDIR}/${f}
 .endfor
+.undef f
 			
 .include "../../devel/readline/buildlink2.mk"
 .include "../../lang/python/application.mk"
