@@ -1,5 +1,5 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
-/* $Id: config.h.in,v 1.1.1.1 2003/03/31 08:51:31 grant Exp $ */
+/* $Id: config.h.in,v 1.2 2003/06/30 15:54:19 grant Exp $ */
 
 /* Define if *printf() uses %qd to print `long long' (otherwise uses %lld) */
 #undef HAVE_PRINTF_QD
@@ -63,6 +63,9 @@
 /* Define to 1 if you have the `getenv' function. */
 #undef HAVE_GETENV
 
+/* Define to 1 if you have the `getmode' function. */
+#undef HAVE_GETMODE
+
 /* Define to 1 if you have the `getpassphrase' function. */
 #undef HAVE_GETPASSPHRASE
 
@@ -98,6 +101,9 @@
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have the `isblank' function. */
+#undef HAVE_ISBLANK
 
 /* Define to 1 if you have the `lchflags' function. */
 #undef HAVE_LCHFLAGS
@@ -190,6 +196,9 @@
 /* Define to 1 if you have the `setlocale' function. */
 #undef HAVE_SETLOCALE
 
+/* Define to 1 if you have the `setmode' function. */
+#undef HAVE_SETMODE
+
 /* Define to 1 if you have the `setpassent' function. */
 #undef HAVE_SETPASSENT
 
@@ -243,6 +252,9 @@
 
 /* Define to 1 if you have the `strlcpy' function. */
 #undef HAVE_STRLCPY
+
+/* Define to 1 if you have the `strmode' function. */
+#undef HAVE_STRMODE
 
 /* Define to 1 if you have the `strptime' function. */
 #undef HAVE_STRPTIME
@@ -309,6 +321,9 @@
 
 /* Define to 1 if you have the `timegm' function. */
 #undef HAVE_TIMEGM
+
+/* Define to 1 if you have the <tzfile.h> header file. */
+#undef HAVE_TZFILE_H
 
 /* Define to 1 if you have the `uid_from_user' function. */
 #undef HAVE_UID_FROM_USER
