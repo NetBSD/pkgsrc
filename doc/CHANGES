@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3096 2003/08/25 00:02:58 heinz Exp $
+$NetBSD: CHANGES,v 1.3097 2003/08/25 11:19:57 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3329,3 +3329,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added level9-3.0 [dillo 2003-08-24]
 	Updated nbgrep to 20030825 [cjep 2003-08-25]
 	Updated p5-HTML-Parser to 3.31 [heinz 2003-08-25]
+	Deleted nbgrep, renamed to bgrep [cjep 2003-08-25]
