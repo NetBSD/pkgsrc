@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/05/19 13:02:23 drochner Exp $
+
+--- xdao/Makefile.in.orig	Sat May 19 13:04:18 2001
++++ xdao/Makefile.in	Sat May 19 13:04:58 2001
+@@ -57,7 +57,7 @@
+       RecordHDTarget.cc AudioCDView.cc TocEditView.cc GenericChild.cc \
+       GenericView.cc CdTextDialog.cc \
+       gcdmaster.cc Project.cc ProjectChooser.cc ViewSwitcher.cc \
+-      @sound_if_src@
++      SoundIF-linux.cc
+ 
+ OBJ = $(SRC:%.cc=%.o)
+ 
