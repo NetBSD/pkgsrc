@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/08/24 21:00:29 recht Exp $
+# $NetBSD: Makefile,v 1.12 2004/09/02 11:54:56 recht Exp $
 #
 
 DISTNAME=	tla-1.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gnu-arch/}		\
 		http://regexps.srparish.net/src/tla/	\
@@ -23,11 +23,11 @@ USE_GNU_TOOLS+=	make
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-gnu-diff=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff
-CONFIGURE_ARGS+=	--with-gnu-diff3=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff
-CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
-CONFIGURE_ARGS+=	--with-gnu-tar=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
+CONFIGURE_ARGS+= --prefix=${PREFIX}
+CONFIGURE_ARGS+= --with-gnu-diff=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff
+CONFIGURE_ARGS+= --with-gnu-diff3=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff3
+CONFIGURE_ARGS+= --with-gnu-patch=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}patch
+CONFIGURE_ARGS+= --with-gnu-tar=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
 
 HTMLDIR=	${PREFIX}/share/doc/html/arch
 
