@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pkgvi,v 1.4 2001/01/19 13:02:14 hubertf Exp $
+# $NetBSD: pkgvi,v 1.5 2001/01/21 15:09:41 hubertf Exp $
 #
 # Copyright (c) 2001 Tomasz Luchowski. All rights reserved.
 #
@@ -43,7 +43,7 @@ progname=`basename $0`
 
 if [ $# -eq 0 ]
 then
-	echo echo Usage: $progname file >&2
+	echo Usage: $progname file >&2
 	exit 1
 fi
 
