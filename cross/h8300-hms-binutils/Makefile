@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/30 11:15:29 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/30 11:17:55 jlam Exp $
 
 DISTNAME=		binutils-2.12.1
 PKGNAME=		cross-h8300-hms-binutils-2.12.1
@@ -36,7 +36,7 @@ post-install:
 		 h8300-hms-addr2line h8300-hms-readelf h8300-hms-nm \
 		 h8300-hms-strip     h8300-hms-c++filt h8300-hms-as \
 		 h8300-hms-gasp      h8300-hms-ld ; do \
-		${LN} -s ${H8300_PREFIX}/bin/$$f ${LOCALBASE}/bin/$$f; \
+		${LN} -s ${H8300_PREFIX}/bin/$$f ${PREFIX}/bin/$$f; \
 	done
 	${MV} ${H8300_PREFIX}/lib/libiberty.a \
 	      ${H8300_PREFIX}/lib/libiberty_binutils.a
