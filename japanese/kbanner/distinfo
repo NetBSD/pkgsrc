@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:26:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 10:13:33 wiz Exp $
 
-MD5 (kbanner2.tar.Z) = 8df878b22780ac62ea2473e6c0b9a89e
+SHA1 (kbanner2.tar.Z) = a557fd49ef76797513894ac8f7e218be52efb219
+Size (kbanner2.tar.Z) = 240221 bytes
 SHA1 (patch-aa) = 0b30d5b1af326e28fe581486931336b27dd26124
 SHA1 (patch-ab) = a85c604703743047147e15a48705ad5f517e5273
 SHA1 (patch-ac) = 1f6964b8c936199e408ab5aceb06ddeb1a249751

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:23:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:11 wiz Exp $
 
-MD5 (fnlib-0.5.tar.gz) = 42093ed5b684da01e7a674b2adac52c7
+SHA1 (fnlib-0.5.tar.gz) = fd1ace80c3069d3ccb7b3aa7943e6688b61988f2
+Size (fnlib-0.5.tar.gz) = 431588 bytes

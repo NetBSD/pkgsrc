@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:27 wiz Exp $
 
-MD5 (urt-3.1b.tar.Z) = c9a377284d00c102c1a8af53d95a6b39
-MD5 (urt-doc.tar) = cc547e9b7ed77196e14c9897b1655ead
-MD5 (urt-img.tar) = 7ef7a295350dd2fa7d5aa580545f9ba4
-MD5 (urt-3.1b-3.1b1.patch) = ff90c5d85cda7736536a5db67f216be7
+SHA1 (urt-3.1b.tar.Z) = 370b19c9e7019a7258754e7494b7ae2d7fe138ac
+Size (urt-3.1b.tar.Z) = 1016405 bytes
+SHA1 (urt-doc.tar) = d5ffb511309c95ea75937c3c779e7a4d3b1d60f3
+Size (urt-doc.tar) = 548864 bytes
+SHA1 (urt-img.tar) = 0bdca907616ccee15ae1915af40fb370a705954f
+Size (urt-img.tar) = 1851392 bytes
+SHA1 (urt-3.1b-3.1b1.patch) = 27aefd80b480af298fe4f9542a2efbddba8a174b
+Size (urt-3.1b-3.1b1.patch) = 18264 bytes
 SHA1 (patch-aa) = c68b1a9e4ca38c829819119f684ab032b384a740
 SHA1 (patch-ab) = 8f8e50f6ccdd80afaa034af998e47284e7788398
 SHA1 (patch-ac) = 5b4d6c910f282e1cb16fd29c7956b40a335491b1

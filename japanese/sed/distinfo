@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 10:13:36 wiz Exp $
 
-MD5 (sed-3.02.tar.gz) = 74db866f052b47fa8ec1c2b8f967bc69
-MD5 (sedmb108.diff.gz) = 8ad0b4c5a9f93a0499378c610a6d062f
+SHA1 (sed-3.02.tar.gz) = 049d525abe926a7eec9d210d49181f5bf046f7b7
+Size (sed-3.02.tar.gz) = 264236 bytes
+SHA1 (sedmb108.diff.gz) = 6d89db379071b777c1706a03f9412067ca1282db
+Size (sedmb108.diff.gz) = 59516 bytes
 SHA1 (patch-aa) = 232eadc7bf171af0a05ef931b391e47787cafce2

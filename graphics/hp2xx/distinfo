@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:24:01 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 09:54:16 wiz Exp $
 
-MD5 (hp2xx-3.3.2.tar.gz) = 24ac90814cca453fb84ff45de40b8f76
+SHA1 (hp2xx-3.3.2.tar.gz) = 722edd179a7966efa73cc78b9c60507a6455252a
+Size (hp2xx-3.3.2.tar.gz) = 247487 bytes
 SHA1 (patch-aa) = ffabfa541a27b413c7f6331477f51542e304be80
 SHA1 (patch-ab) = 574ab1554935f51f2f9dd217552c65a523e76980
 SHA1 (patch-ac) = f4bc4d6cdc07ecf2fb5b4863b65db9d245e4d25c
