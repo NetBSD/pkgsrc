@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/19 10:54:48 rh Exp $
+# $NetBSD: Makefile,v 1.11 2002/11/30 23:21:36 salo Exp $
 #
 
 DISTNAME=	gnome-objc-1.0.40
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Objective C API for gnome and gtk
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 PTHREAD_OPTS+=		require
 
