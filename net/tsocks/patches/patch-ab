@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
+$NetBSD: patch-ab,v 1.2 2005/02/27 22:06:10 jschauma Exp $
 
---- configure.orig	2001-03-12 13:47:41.000000000 +0100
-+++ configure
-@@ -536,7 +536,6 @@ fi
+--- configure.orig	Mon Mar 12 07:47:41 2001
++++ configure	Sun Feb 27 16:08:19 2005
+@@ -536,7 +536,6 @@
  
  
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
  
  # Check whether --enable-socksdns or --disable-socksdns was given.
  if test "${enable_socksdns+set}" = set; then
-@@ -1272,7 +1271,7 @@ fi
+@@ -1272,7 +1271,7 @@
  done
  
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
  do
  echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
  echo "configure:1279: checking for $ac_func" >&5
-@@ -1323,9 +1322,11 @@ if eval "test \"`echo '$ac_cv_func_'$ac_
+@@ -1323,9 +1322,11 @@
  EOF
   
  else
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
  done
  
  
-@@ -1733,6 +1734,7 @@ fi
+@@ -1733,6 +1734,7 @@
  SIMPLELIBS=${LIBS}
  LIBS=
  
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
  echo $ac_n "checking for dlsym in -ldl""... $ac_c" 1>&6
  echo "configure:1738: checking for dlsym in -ldl" >&5
  ac_lib_var=`echo dl'_'dlsym | sed 'y%./+-%__p_%'`
-@@ -1780,6 +1782,7 @@ else
+@@ -1780,6 +1782,7 @@
    echo "$ac_t""no" 1>&6
  { echo "configure: error: "libdl is required"" 1>&2; exit 1; }
  fi
@@ -47,3 +47,61 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
  
  
  echo $ac_n "checking for RTLD_NEXT from dlfcn.h""... $ac_c" 1>&6
+@@ -1977,7 +1980,11 @@
+ 
+     echo $ac_n "checking location of libc""... $ac_c" 1>&6
+ echo "configure:1980: checking location of libc" >&5
++  if test "$OPSYS" != "IRIX"; then
+   LIBC=`$LDD /bin/ls | $GREP "libc" | $AWK ' { print $3 } '`
++  else
++    LIBC=/usr/lib$ABI/libc.so
++  fi
+ 
+   cat >> confdefs.h <<EOF
+ #define LIBC "${LIBC}"
+@@ -1992,6 +1999,8 @@
+ imp2='(int __fd, struct sockaddr * __addr, int __len) {'
+ proto3='(int, const struct sockaddr *, socklen_t);'
+ imp3='(int __fd, const struct sockaddr * __addr, socklen_t __len) {'
++proto4='(int, const void *, socklen_t);'
++imp4='(int __fd, const void * __addr, socklen_t __len) {'
+ echo $ac_n "checking for correct connect prototype""... $ac_c" 1>&6
+ echo "configure:1997: checking for correct connect prototype" >&5
+ if test "$cross_compiling" = yes; then
+@@ -2056,6 +2065,26 @@
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+   rm -fr conftest*
++  
++    if test "$cross_compiling" = yes; then
++  PROTO=""
++else
++  cat > conftest.$ac_ext <<EOF
++#line 2045 "configure"
++#include "confdefs.h"
++
++      #include <sys/socket.h>
++      int connect$proto4
++      int main() {return(0);}
++    
++EOF
++if { (eval echo configure:2053: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext} && (./conftest; exit) 2>/dev/null
++then
++  PROTO="$proto4"; IMP="$imp4"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -fr conftest*
+   PROTO=""
+ fi
+ rm -fr conftest*
+@@ -2066,6 +2095,9 @@
+ rm -fr conftest*
+ fi
+ 
++fi
++rm -fr conftest*
++fi
+ 
+ fi
+ rm -fr conftest*
