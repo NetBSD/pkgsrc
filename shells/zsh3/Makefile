@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/05 16:30:14 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/23 21:01:30 tron Exp $
 
 DISTNAME=       zsh-3.0.8
 CATEGORIES=	shells
@@ -22,8 +22,9 @@ LDFLAGS+=	-static
 .endif
 
 post-install:
+	${TOUCH} /etc/shells
 	${CP} /etc/shells /etc/shells.bak
-	(${GREP} -v ${PREFIX}/bin/zsh /etc/shells.bak; ${ECHO} ${PREFIX}/bin/zsh) >/etc/shells
+	(${GREP} -v ${PREFIX}/bin/zsh /etc/shells.bak || ${TRUE}; ${ECHO} ${PREFIX}/bin/zsh) >/etc/shells
 	${RM} /etc/shells.bak
 
 .include "../../mk/bsd.pkg.mk"
