@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/04/21 21:06:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2002/05/05 11:37:28 tron Exp $
 #
 
 DISTNAME=	ipv6calc-0.40
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.bieringer.de/linux/IPv6/tools/index.html#ipv6calc
+HOMEPAGE=	http://www.bieringer.de/linux/IPv6/ipv6calc/index.html
 COMMENT=	Manipulates IPv6 adresses
 
 
