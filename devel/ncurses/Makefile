@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2004/01/05 12:53:10 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2004/01/07 01:16:04 jlam Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
 NC_VERS=		5.3
@@ -46,6 +46,8 @@ PLIST_SUBST+=	TERMINFODIR="${TERMINFODIR}"
 
 CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
+
+INSTALLATION_DIRS=	share/examples
 
 post-configure:
 	cd ${WRKSRC}/man;					\
