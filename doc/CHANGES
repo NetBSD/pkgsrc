@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1335 2003/02/11 11:29:12 markd Exp $
+$NetBSD: CHANGES,v 1.1336 2003/02/11 11:41:01 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -579,3 +579,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sun-jdk14 to 1.0.1 [jlam 2003-02-10]
 	Updated xscreensaver to 4.06nb3 [markd 2003-02-11]
 	Updated xscreensaver-gnome to 4.06nb2 [markd 2003-02-11]
+	Updated openoffice-linux to 1.0.2nb2 [jlam 2003-02-11]
