@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2720 2003/07/10 12:02:44 adam Exp $
+$NetBSD: CHANGES,v 1.2721 2003/07/10 12:47:47 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2735,3 +2735,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated scummvm to 0.4.1nb1 [adam 2003-07-10]
 	Updated ogle to 0.9.1nb2 [adam 2003-07-10]
 	Updated gst-plugins to 0.6.1nb2 [adam 2003-07-10]
+	Updated tasp-vsipl to 20030710 [jtb 2003-07-10]
