@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/01/02 12:33:08 abs Exp $
+$NetBSD: distinfo,v 1.6 2003/06/06 17:09:05 abs Exp $
 
-SHA1 (msudir-0.12.tar.gz) = 5c3bb00d5428306e5ec74708f90bab8389c4b5fd
-Size (msudir-0.12.tar.gz) = 5184 bytes
+SHA1 (msudir-0.13.tar.gz) = a2697e00fdc156e416371009e5942418a4215bc5
+Size (msudir-0.13.tar.gz) = 5177 bytes

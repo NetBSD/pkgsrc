@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2003/04/04 17:19:59 abs Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/06 17:09:05 abs Exp $
 #
 
-DISTNAME=	mrstat-1.18
+DISTNAME=	mrstat-1.19
 CATEGORIES=	net
 MASTER_SITES=	http://www.mono.org/abs/tools/mrstat/
 
