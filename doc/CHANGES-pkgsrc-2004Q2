@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.21 2004/07/13 14:24:32 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.22 2004/07/14 11:17:19 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -38,3 +38,5 @@ Pullup ticket 53, requested by Lubomir Sedlacik [agc 2004-07-13]
 	Solaris arj build fix
 Pullup ticket 54, requested by Lubomir Sedlacik [agc 2004-07-13]
 	Solaris afio build fix
+Pullup ticket 56, requested by Martti Kuparinen [agc 2004-07-14]
+	Update xfce4 to 4.0.6 - bugfix release
