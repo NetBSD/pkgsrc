@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2003/07/02 11:32:36 jmmv Exp $
+$NetBSD: patch-af,v 1.3 2004/05/28 01:09:01 wiz Exp $
 
---- /dev/null	Sat Jan 29 20:16:40 2000
-+++ conf/os-netbsd.h	Sat Jan 29 20:47:21 2000
-@@ -0,0 +1,27 @@
+--- /dev/null	2003-03-15 16:33:11.000000000 -0700
++++ conf/os-netbsd.h
+@@ -0,0 +1,33 @@
 +/*
 + * Deliver configuration for NetBSD.
 + *
@@ -15,7 +15,7 @@ $NetBSD: patch-af,v 1.2 2003/07/02 11:32:36 jmmv Exp $
 +/* Then again... */
 +
 +#undef  SAFEPATH
-+#define SAFEPATH    "/bin:/usr/bin:@PREFIX@/bin"  /* Safe dirs for PATH		*/
++#define SAFEPATH    "/bin:/usr/bin:@PREFIX@/bin"  /* Safe dirs for PATH	*/
 +
 +#undef  SYSV_USRMAIL		/* Mailboxes in /usr/mail, as per SysV	*/
 +#define MBX_DIR     "/var/mail"
@@ -23,7 +23,13 @@ $NetBSD: patch-af,v 1.2 2003/07/02 11:32:36 jmmv Exp $
 +#undef  HAS_TIMEZONE		/* Has global variable timezone (SVID)	*/
 +#define HAS_MKTIME		/* Has mktime()           		*/
 +
-+#define HAS_BASENAME		/* Has basename()			*/
++/* We avoid defining HAS_BASENAME because NetBSD's basename(3), as of
++ * revision 1.5 of basename.c (October 17, 2002), returns a pointer to
++ * a copy of the base name in static storage, and uses of basename in
++ * the code are incompatible with that behavior.  So we rely instead on
++ * the basename replacement included here.
++ */
++#undef  HAS_BASENAME		/* Has basename()			*/
 +#define HAS_LONGNAMES		/* Long filenames (>14) supported	*/
 +
 +/* Note that we don't define HAS_USLEEP, since deliver wants to use it

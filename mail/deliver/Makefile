@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:45:51 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/28 01:09:01 wiz Exp $
 
 DISTNAME=	deliver-2.1.14
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=deliver/}
 
@@ -33,7 +34,7 @@ post-install:
 	cd ${WRKSRC};							\
 	for FILE in deliver.1 header.1; do				\
 		CATFILE=`${BASENAME} $${FILE} .1`.0;			\
-		${NROFF} -man $${FILE} > $${CATFILE};			\
+		nroff -man $${FILE} > $${CATFILE};			\
 		${INSTALL_MAN} $${FILE} ${PREFIX}/man/man1;		\
 		${INSTALL_MAN} $${CATFILE} ${PREFIX}/man/cat1;		\
 	done
