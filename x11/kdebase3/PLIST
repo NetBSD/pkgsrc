@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/02/04 14:25:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/02/12 04:57:07 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -46,7 +46,7 @@ bin/kpersonalizer
 bin/kpm
 bin/kprinter
 bin/krandom.kss
-bin/krandrtray
+${HAVE_RANDR}bin/krandrtray
 bin/krdb
 bin/kreadconfig
 bin/krootimage
@@ -141,8 +141,8 @@ lib/kde3/childpanel_panelextension.so.0
 lib/kde3/childpanel_panelextension.so.0.0
 lib/kde3/clock_panelapplet.la
 lib/kde3/clock_panelapplet.so
-lib/kde3/cursorthumbnail.la
-lib/kde3/cursorthumbnail.so
+${HAVE_XCURSOR}lib/kde3/cursorthumbnail.la
+${HAVE_XCURSOR}lib/kde3/cursorthumbnail.so
 lib/kde3/djvuthumbnail.la
 lib/kde3/djvuthumbnail.so
 lib/kde3/dockbar_panelextension.la
@@ -194,7 +194,7 @@ lib/kde3/kcm_fileshare.so
 lib/kde3/kcm_filetypes.la
 lib/kde3/kcm_filetypes.so
 lib/kde3/kcm_fontinst.la
-lib/kde3/kcm_fontinst.so
+lib/kde3/kcm_fontinst.${FONTENC_SUFFIX}
 lib/kde3/kcm_fonts.la
 lib/kde3/kcm_fonts.so
 lib/kde3/kcm_history.la
@@ -251,8 +251,8 @@ lib/kde3/kcm_printmgr.la
 lib/kde3/kcm_printmgr.so
 lib/kde3/kcm_privacy.la
 lib/kde3/kcm_privacy.so
-lib/kde3/kcm_randr.la
-lib/kde3/kcm_randr.so
+${HAVE_RANDR}lib/kde3/kcm_randr.la
+${HAVE_RANDR}lib/kde3/kcm_randr.so
 lib/kde3/kcm_samba.la
 lib/kde3/kcm_samba.so
 lib/kde3/kcm_screensaver.la
@@ -282,7 +282,7 @@ lib/kde3/kdesktop.so
 lib/kde3/keditbookmarks.la
 lib/kde3/keditbookmarks.so
 lib/kde3/kfile_font.la
-lib/kde3/kfile_font.so
+lib/kde3/kfile_font.${FONTENC_SUFFIX}
 lib/kde3/kfmclient.la
 lib/kde3/kfmclient.so
 lib/kde3/kgreet_classic.la
@@ -316,7 +316,7 @@ lib/kde3/kio_fish.so
 lib/kde3/kio_floppy.la
 lib/kde3/kio_floppy.so
 lib/kde3/kio_fonts.la
-lib/kde3/kio_fonts.so
+lib/kde3/kio_fonts.${FONTENC_SUFFIX}
 lib/kde3/kio_imap4.la
 lib/kde3/kio_imap4.so
 lib/kde3/kio_info.la
@@ -471,8 +471,8 @@ lib/kde3/taskbar_panelextension.la
 lib/kde3/taskbar_panelextension.so
 lib/kde3/textthumbnail.la
 lib/kde3/textthumbnail.so
-lib/krandrinithack.la
-lib/krandrinithack.so
+${HAVE_RANDR}lib/krandrinithack.la
+${HAVE_RANDR}lib/krandrinithack.so
 lib/libkateinterfaces.la
 lib/libkateinterfaces.so
 lib/libkateinterfaces.so.0
@@ -629,7 +629,7 @@ share/applications/kde/konsole.desktop
 share/applications/kde/konsolesu.desktop
 share/applications/kde/kpager.desktop
 share/applications/kde/kpersonalizer.desktop
-share/applications/kde/krandrtray.desktop
+${HAVE_RANDR}share/applications/kde/krandrtray.desktop
 share/applications/kde/ksplashthememgr.desktop
 share/applications/kde/ksysguard.desktop
 share/applications/kde/ktip.desktop
@@ -1211,7 +1211,7 @@ share/kde/applnk/.hidden/kwinadvanced.desktop
 share/kde/applnk/.hidden/kwinfocus.desktop
 share/kde/applnk/.hidden/kwinmoving.desktop
 share/kde/applnk/.hidden/power.desktop
-share/kde/applnk/.hidden/randr.desktop
+${HAVE_RANDR}share/kde/applnk/.hidden/randr.desktop
 share/kde/applnk/.hidden/smb.desktop
 share/kde/applnk/.hidden/socks.desktop
 share/kde/applnk/.hidden/virtualdesktops.desktop
@@ -3208,7 +3208,7 @@ share/kde/services/ar.protocol
 share/kde/services/bzip.protocol
 share/kde/services/bzip2.protocol
 share/kde/services/cgi.protocol
-share/kde/services/cursorthumbnail.desktop
+${HAVE_XCURSOR}share/kde/services/cursorthumbnail.desktop
 share/kde/services/djvuthumbnail.desktop
 share/kde/services/finger.protocol
 share/kde/services/fish.protocol
