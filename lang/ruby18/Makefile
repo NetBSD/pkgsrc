@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/01/23 17:33:19 taca Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/21 15:29:15 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -10,7 +11,9 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby programming language 1.8 based release
 
-CONFLICTS+=		ruby-base-[1-9]*
+CONFLICTS+=	ruby-base-[1-9]*
+CONFLICTS+=	ruby${RUBY_VER}-dbm-* ruby${RUBY_VER}-digest-*
+CONFLICTS+=	ruby${RUBY_VER}-openssl-* ruby${RUBY_VER}-zlib-* 
 
 RUBY_VERSION=		${RUBY18_VERSION}
 USE_BUILDLINK3=		yes
@@ -30,24 +33,6 @@ CONFIG_STATUS_OVERRIDE=	# empty
 CONFIGURE_ARGS+= --program-suffix="${RUBY_SUFFIX}"
 .endif
 
-.if ${OPSYS} == "NetBSD"
-.if empty(OS_VERSION:M1.[0-9].*)
-PTHREAD_OPTS+=  native
-.include "../../mk/pthread.buildlink3.mk"
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
-CONFIGURE_ARGS+=	--disable-pthread
-.else
-CONFIGURE_ARGS+=	--enable-pthread
-.endif
-.endif
-.endif
-
-.if ${OPSYS} == "IRIX"
-# X11BASE, *not* X11PREFIX:  X11PREFIX == PREFIX, but we need to point
-# to the ABI-specific libraries
-CONFIGURE_ENV+=	X11BASE="${X11BASE}"
-.endif
-
 DOCS=		COPYING COPYING.ja ChangeLog README \
 		README.EXT README.EXT.ja README.ja ToDo \
 		doc/ChangeLog-1.8.0 doc/NEWS \
@@ -55,8 +40,9 @@ DOCS=		COPYING COPYING.ja ChangeLog README \
 		doc/shell.rd doc/shell.rd.ja doc/irb/irb-tools.rd.ja \
 		doc/irb/irb.rd doc/irb/irb.rd.ja
 EXT_DOCS=	bigdecimal/bigdecimal_en.html bigdecimal/bigdecimal_ja.html \
-		dl/doc/dl.txt enumerator/enumerator.txt \
-		etc/etc.txt etc/etc.txt.ja syslog/syslog.txt
+		digest/digest.txt digest/digest.txt.ja dl/doc/dl.txt \
+		enumerator/enumerator.txt etc/etc.txt etc/etc.txt.ja \
+		syslog/syslog.txt zlib/doc/zlib.rd
 
 BIGDECIMAL_EXAMPLES=	linear.rb nlsolve.rb pi.rb
 DL_EXAMPLES=		c++sample.C c++sample.rb drives.rb getch.rb libc.rb \
@@ -66,13 +52,20 @@ PTY_EXAMPLES=		expect_sample.rb script.rb shl.rb
 REPLACE_RUBY=	bin/erb bin/irb bin/rdoc bin/ri bin/testrb \
 		ext/bigdecimal/sample/linear.rb \
 		ext/bigdecimal/sample/nlsolve.rb \
-		ext/bigdecimal/sample/pi.rb \
+		ext/bigdecimal/sample/pi.rb ext/dl/h2rb \
 		lib/rdoc/markup/sample/rdoc2latex.rb \
 		sample/biorhythm.rb sample/cal.rb sample/exyacc.rb \
 		sample/fullpath.rb sample/less.rb sample/from.rb \
 		sample/goodfriday.rb sample/logger/shifting.rb \
 		sample/logger/app.rb sample/logger/log.rb sample/mine.rb \
 		sample/mpart.rb sample/observ.rb sample/optparse/opttest.rb \
+		sample/openssl/c_rehash.rb sample/openssl/cert2text.rb \
+		sample/openssl/cert_store_view.rb \
+		sample/openssl/certstore.rb sample/openssl/cipher.rb \
+		sample/openssl/crlstore.rb sample/openssl/echo_cli.rb \
+		sample/openssl/echo_svr.rb sample/openssl/gen_csr.rb \
+		sample/openssl/smime_read.rb sample/openssl/smime_write.rb \
+		sample/openssl/wget.rb \
 		sample/soap/calc/httpd.rb sample/soap/calc/server.rb \
 		sample/soap/calc/server2.rb sample/soap/icd/icd.rb \
 		sample/soap/babelfish.rb sample/soap/exchange/client.rb \
@@ -87,21 +80,11 @@ REPLACE_RUBY=	bin/erb bin/irb bin/rdoc bin/ri bin/testrb \
 
 pre-configure:
 	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
-	${RM} -f ${WRKSRC}/ext/dbm/extconf.rb
 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
-	${RM} -f ${WRKSRC}/ext/digest/extconf.rb
-	${RM} -f ${WRKSRC}/ext/digest/md5/extconf.rb
-	${RM} -f ${WRKSRC}/ext/digest/rmd160/extconf.rb
-	${RM} -f ${WRKSRC}/ext/digest/sha1/extconf.rb
-	${RM} -f ${WRKSRC}/ext/digest/sha2/extconf.rb
 	${RM} -f ${WRKSRC}/ext/iconv/extconf.rb
-	${RM} -f ${WRKSRC}/ext/openssl/extconf.rb
 	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
 	${RM} -f ${WRKSRC}/ext/tcltklib/extconf.rb
 	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
-	${RM} -f ${WRKSRC}/ext/zlib/extconf.rb
-	${RM} -f ${WRKSRC}/sample/dbmtest.rb
-	${RM} -rf ${WRKSRC}/sample/openssl
 
 pre-build:
 	@${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
@@ -113,6 +96,7 @@ post-install:
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/${f:C/^doc\///}
 .endfor
+	${INSTALL_SCRIPT} ${WRKSRC}/ext/dl/h2rb ${PREFIX}/bin/h2rb${RUBY_VER}
 .for f in ${EXT_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/ext/${f} ${RUBY_DOCDIR}
 .endfor
@@ -134,4 +118,7 @@ post-install:
 .endfor
 
 .include "../../lang/ruby/Makefile.common"
+.include "../../mk/bdb.buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2005/01/23 17:33:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/02/21 15:29:15 taca Exp $
 bin/erb${RUBY_VER}
+bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
 bin/rdoc${RUBY_VER}
 bin/ri${RUBY_VER}
@@ -17,6 +18,8 @@ ${RUBY_DOCDIR}/README.ja
 ${RUBY_DOCDIR}/ToDo
 ${RUBY_DOCDIR}/bigdecimal_en.html
 ${RUBY_DOCDIR}/bigdecimal_ja.html
+${RUBY_DOCDIR}/digest.txt
+${RUBY_DOCDIR}/digest.txt.ja
 ${RUBY_DOCDIR}/dl.txt
 ${RUBY_DOCDIR}/enumerator.txt
 ${RUBY_DOCDIR}/etc.txt
@@ -34,6 +37,7 @@ ${RUBY_DOCDIR}/pty/README.ja
 ${RUBY_DOCDIR}/shell.rd
 ${RUBY_DOCDIR}/shell.rd.ja
 ${RUBY_DOCDIR}/syslog.txt
+${RUBY_DOCDIR}/zlib.rd
 @dirrm ${RUBY_DOCDIR}
 ${RUBY_EXAMPLESDIR}/README
 ${RUBY_EXAMPLESDIR}/bigdecimal/linear.rb
@@ -44,6 +48,7 @@ ${RUBY_EXAMPLESDIR}/biorhythm.rb
 ${RUBY_EXAMPLESDIR}/cal.rb
 ${RUBY_EXAMPLESDIR}/cbreak.rb
 ${RUBY_EXAMPLESDIR}/clnt.rb
+${RUBY_EXAMPLESDIR}/dbmtest.rb
 ${RUBY_EXAMPLESDIR}/dir.rb
 ${RUBY_EXAMPLESDIR}/dl/c++sample.C
 ${RUBY_EXAMPLESDIR}/dl/c++sample.rb
@@ -134,6 +139,19 @@ ${RUBY_EXAMPLESDIR}/occur2.rb
 ${RUBY_EXAMPLESDIR}/optparse/opttest.rb
 ${RUBY_EXAMPLESDIR}/optparse/subcommand.rb
 @dirrm ${RUBY_EXAMPLESDIR}/optparse
+${RUBY_EXAMPLESDIR}/openssl/c_rehash.rb
+${RUBY_EXAMPLESDIR}/openssl/cert2text.rb
+${RUBY_EXAMPLESDIR}/openssl/cert_store_view.rb
+${RUBY_EXAMPLESDIR}/openssl/certstore.rb
+${RUBY_EXAMPLESDIR}/openssl/cipher.rb
+${RUBY_EXAMPLESDIR}/openssl/crlstore.rb
+${RUBY_EXAMPLESDIR}/openssl/echo_cli.rb
+${RUBY_EXAMPLESDIR}/openssl/echo_svr.rb
+${RUBY_EXAMPLESDIR}/openssl/gen_csr.rb
+${RUBY_EXAMPLESDIR}/openssl/smime_read.rb
+${RUBY_EXAMPLESDIR}/openssl/smime_write.rb
+${RUBY_EXAMPLESDIR}/openssl/wget.rb
+@dirrm ${RUBY_EXAMPLESDIR}/openssl
 ${RUBY_EXAMPLESDIR}/philos.rb
 ${RUBY_EXAMPLESDIR}/pi.rb
 ${RUBY_EXAMPLESDIR}/pty/expect_sample.rb
@@ -336,7 +354,14 @@ ${RUBY_LIBDIR}/getopts.rb
 ${RUBY_LIBDIR}/gserver.rb
 ${RUBY_ARCHLIBDIR}/bigdecimal.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/config.h
+${RUBY_ARCHLIBDIR}/dbm.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/defines.h
+${RUBY_ARCHLIBDIR}/digest.${RUBY_DLEXT}
+${RUBY_ARCHLIBDIR}/digest/md5.${RUBY_DLEXT}
+${RUBY_ARCHLIBDIR}/digest/rmd160.${RUBY_DLEXT}
+${RUBY_ARCHLIBDIR}/digest/sha1.${RUBY_DLEXT}
+${RUBY_ARCHLIBDIR}/digest/sha2.${RUBY_DLEXT}
+@dirrm ${RUBY_ARCHLIBDIR}/digest
 ${RUBY_ARCHLIBDIR}/dl.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/dl.h
 ${RUBY_ARCHLIBDIR}/dlconfig.h
@@ -351,6 +376,7 @@ ${RUBY_ARCHLIBDIR}/io/wait.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/missing.h
 ${RUBY_ARCHLIBDIR}/nkf.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/node.h
+${RUBY_ARCHLIBDIR}/openssl.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/pty.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/racc/cparse.${RUBY_DLEXT}
 @dirrm ${RUBY_ARCHLIBDIR}/racc
@@ -369,6 +395,7 @@ ${RUBY_ARCHLIBDIR}/syck.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/syslog.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/util.h
 ${RUBY_ARCHLIBDIR}/version.h
+${RUBY_ARCHLIBDIR}/zlib.${RUBY_DLEXT}
 @dirrm ${RUBY_ARCHLIBDIR}
 @exec ${MKDIR} %D/${RUBY_SITEARCHLIBDIR}
 @dirrm ${RUBY_SITEARCHLIBDIR}
@@ -423,19 +450,32 @@ ${RUBY_LIBDIR}/logger.rb
 ${RUBY_LIBDIR}/mailread.rb
 ${RUBY_LIBDIR}/mathn.rb
 ${RUBY_LIBDIR}/matrix.rb
+${RUBY_LIBDIR}/md5.rb
 ${RUBY_LIBDIR}/mkmf.rb
 ${RUBY_LIBDIR}/monitor.rb
 ${RUBY_LIBDIR}/mutex_m.rb
 ${RUBY_LIBDIR}/net/ftp.rb
+${RUBY_LIBDIR}/net/ftptls.rb
 ${RUBY_LIBDIR}/net/http.rb
+${RUBY_LIBDIR}/net/https.rb
 ${RUBY_LIBDIR}/net/imap.rb
 ${RUBY_LIBDIR}/net/pop.rb
 ${RUBY_LIBDIR}/net/protocol.rb
+${RUBY_LIBDIR}/net/protocols.rb
 ${RUBY_LIBDIR}/net/smtp.rb
 ${RUBY_LIBDIR}/net/telnet.rb
+${RUBY_LIBDIR}/net/telnets.rb
 @dirrm ${RUBY_LIBDIR}/net
 ${RUBY_LIBDIR}/observer.rb
 ${RUBY_LIBDIR}/open-uri.rb
+${RUBY_LIBDIR}/openssl.rb
+${RUBY_LIBDIR}/openssl/bn.rb
+${RUBY_LIBDIR}/openssl/buffering.rb
+${RUBY_LIBDIR}/openssl/cipher.rb
+${RUBY_LIBDIR}/openssl/digest.rb
+${RUBY_LIBDIR}/openssl/ssl.rb
+${RUBY_LIBDIR}/openssl/x509.rb
+@dirrm ${RUBY_LIBDIR}/openssl
 ${RUBY_LIBDIR}/open3.rb
 ${RUBY_LIBDIR}/optparse/date.rb
 ${RUBY_LIBDIR}/optparse/shellwords.rb
@@ -625,6 +665,7 @@ ${RUBY_LIBDIR}/runit/topublic.rb
 @dirrm ${RUBY_LIBDIR}/runit
 ${RUBY_LIBDIR}/scanf.rb
 ${RUBY_LIBDIR}/set.rb
+${RUBY_LIBDIR}/sha1.rb
 ${RUBY_LIBDIR}/shell/builtin-command.rb
 ${RUBY_LIBDIR}/shell/command-processor.rb
 ${RUBY_LIBDIR}/shell/error.rb
