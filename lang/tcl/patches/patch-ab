@@ -1,38 +1,24 @@
 --- configure.orig	Tue Aug  8 15:17:11 2000
-+++ configure	Thu Aug 24 17:27:16 2000
-@@ -5070,8 +5071,8 @@
- 		SHLIB_SUFFIX=".so"
- 		DL_OBJS="tclLoadDl.o"
- 		DL_LIBS=""
--		LDFLAGS=""
--		LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
-+		LDFLAGS="-version-info 1:0"
-+		LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
- 		echo $ac_n "checking for ELF""... $ac_c" 1>&6
- echo "configure:5077: checking for ELF" >&5
- 		cat > conftest.$ac_ext <<EOF
-@@ -5789,7 +5790,7 @@
++++ configure	Tue Aug 29 10:10:05 2000
+@@ -5789,7 +5789,7 @@
      if test "x$DL_OBJS" = "xtclLoadAout.o"; then
  	MAKE_LIB="ar cr \${TCL_LIB_FILE} \${OBJS}"
      else
 -	MAKE_LIB="\${SHLIB_LD} -o \${TCL_LIB_FILE} \${OBJS} ${SHLIB_LD_LIBS}"
-+	MAKE_LIB="\${SHLIB_LD} -o \${TCL_LIB_FILE:.so=.la} \${OBJS:.o=.lo} ${SHLIB_LD_LIBS} -rpath ${PREFIX}/lib -version-info 1:0"
++	MAKE_LIB="\${SHLIB_LD} -o \${TCL_LIB_FILE:.so=.la} \${OBJS:.o=.lo} ${SHLIB_LD_LIBS} -version-info 1:0"
  	RANLIB=":"
      fi
  else
-@@ -5859,9 +5860,9 @@
- #--------------------------------------------------------------------
- 
- if test "$prefix" != "$exec_prefix"; then
--    TCL_PACKAGE_PATH="${exec_prefix}/lib ${prefix}/lib"
-+    TCL_PACKAGE_PATH="${exec_prefix}/lib/tcl ${prefix}/lib/tcl"
+@@ -5829,7 +5829,7 @@
+         TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
+     fi
+     TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
+-    TCL_LIB_SPEC="-L${exec_prefix}/lib ${TCL_LIB_FLAG}"
++    TCL_LIB_SPEC="-L${exec_prefix}/lib -Wl,-R${exec_prefix}/lib ${TCL_LIB_FLAG}"
  else
--    TCL_PACKAGE_PATH="${prefix}/lib"
-+    TCL_PACKAGE_PATH="${prefix}/lib/tcl"
- fi
- 
- #--------------------------------------------------------------------
-@@ -6097,6 +6098,8 @@
+     TCL_BUILD_EXP_FILE="lib.exp"
+     eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
+@@ -6097,6 +6097,8 @@
  s%@CFLAGS_DEBUG@%$CFLAGS_DEBUG%g
  s%@CFLAGS_OPTIMIZE@%$CFLAGS_OPTIMIZE%g
  s%@CFLAGS_WARNING@%$CFLAGS_WARNING%g
