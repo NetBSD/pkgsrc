@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/19 12:12:28 agc Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/09 17:14:27 agc Exp $
 
 DISTNAME=	tkpiechart-5.3
 CATEGORIES=	graphics
@@ -18,6 +18,9 @@ pre-patch:
 		${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f-prepatch;		\
 		${SED} -e '/Id/s|\$$||g' ${WRKSRC}/$$f-prepatch > ${WRKSRC}/$$f; \
 	done
+
+post-patch:
+	${CHMOD} a+x ${WRKSRC}/instapkg.tcl
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/tkpiechart
