@@ -1,15 +1,24 @@
-$NetBSD: patch-aa,v 1.4 1999/11/27 23:03:54 rh Exp $
+$NetBSD: patch-aa,v 1.5 2000/05/22 00:49:53 hubertf Exp $
 
---- vslib/makefile.orig	Sun Nov 28 00:01:29 1999
-+++ vslib/makefile	Sun Nov 28 00:01:29 1999
-@@ -3,8 +3,8 @@
- CC      = g++
- LD      = g++
- AR      = ar rvs
--CFLAGS  =  -I. -I/usr/include/ncurses -O2 $(CCDEF)
--CCFLAGS =  -I. -I/usr/include/ncurses -O2 $(CCDEF)
-+CFLAGS  =  -I. -I${LOCALBASE}/include -O2 $(CCDEF)
-+CCFLAGS =  -I. -I${LOCALBASE}/include -O2 $(CCDEF)
- LDFLAGS = $(LDDEF)
- ARFLAGS = 
- TARGET  = libvslib.a
+--- build.netbsd.orig	Mon May 22 01:48:50 2000
++++ build.netbsd	Mon May 22 01:58:16 2000
+@@ -4,7 +4,7 @@
+ 
+ echo Compiling VSLIB...
+ cd vslib
+-make CCDEF="-I${LOCALBASE}/include"
++make CCDEF="-I${LOCALBASE}/include" LDDEF="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib"
+ if [ -e libvslib.a ]; then
+   echo VSLIB compiled ok.
+ else
+@@ -26,10 +26,10 @@
+ 
+ echo Compiling ftparc...
+ cd ftparc
+-make
++make CCDEF="-I${LOCALBASE}/include -D__unix__" LDDEF="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib"
+ if [ -e ftparc ]; then
+   echo ftparc compiled ok.
+ else
+   echo ftparc compilation failed...
+ fi
