@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/11 14:25:25 tron Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/23 23:05:42 jlam Exp $
 
 DISTNAME=	xbindkeys_config-0.1.2
 PKGNAME=	xbindkeys-config-0.1.2
@@ -11,6 +11,8 @@ COMMENT=	Tool to configure xbindkeys graphically
 
 DEPENDS+=	xbindkeys-[0-9]*:../xbindkeys
 
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+USE_BUILDLINK2=		# defined
+USE_X11=		# defined
+
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
