@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/06/06 18:14:10 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/06 19:39:04 drochner Exp $
 #
 
 DISTNAME=	Python-2.0.1
@@ -27,7 +27,6 @@ INSTALL_TARGET=	altinstall
 # Make sure having environment variable OPT doesn't affect the
 # installed module-building Makefile
 MAKE_ENV+=	'OPT=${CFLAGS}'
-MAKE_ENV+=	LINK_ALL_LIBGCC_HACK=${LINK_ALL_LIBGCC_HACK:Q}
 CONFIGURE_ENV+=	'OPT=${CFLAGS}'
 SCRIPTS_ENV+=	'OPT=${CFLAGS}'
 
