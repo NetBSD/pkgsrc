@@ -1,0 +1,19 @@
+*** source/wserv.c.old	Mon Jan  1 19:10:40 1996
+--- source/wserv.c	Mon Jan  1 19:10:18 1996
+***************
+*** 79,85 ****
+  	strcpy(addr->sun_path, argv[1]);
+  	s = socket(AF_UNIX, SOCK_STREAM, 0);
+  	if (0 > connect(s, (struct sockaddr *) addr, sizeof(addr->sun_family) +
+! 						strlen(addr->sun_path)))
+  		exit(0);
+  
+  	/*
+--- 79,85 ----
+  	strcpy(addr->sun_path, argv[1]);
+  	s = socket(AF_UNIX, SOCK_STREAM, 0);
+  	if (0 > connect(s, (struct sockaddr *) addr, sizeof(addr->sun_family) +
+! 						2 + strlen(addr->sun_path)))
+  		exit(0);
+  
+  	/*
