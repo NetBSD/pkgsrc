@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/04 20:40:50 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/05 12:16:48 frueauf Exp $
 #
 
 DISTNAME=       imap-4.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	tv@netbsd.org
 
 BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
+
+CONFLICTS=	imap-uw-4.1
 
 INST_PROG=	${PREFIX}/bin/libtool --mode=install ${INSTALL_PROGRAM}
 INST_LIB=	${PREFIX}/bin/libtool --mode=install ${INSTALL_DATA}
