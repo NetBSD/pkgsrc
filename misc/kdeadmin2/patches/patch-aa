@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2004/06/13 22:53:22 kristerw Exp $
+
+--- kwuftpd/ftpaccess.cpp.orig	2004-06-13 23:58:33.000000000 +0200
++++ kwuftpd/ftpaccess.cpp	2004-06-14 00:11:00.000000000 +0200
+@@ -8,7 +8,7 @@
+ #ifdef __DECCXX
+ #define _RWSTD_NO_NAMESPACE
+ #endif
+-#include <strstream.h>
++#include <strstream>
+ #include <ctype.h>
+ #include <stdio.h>
+ 
+@@ -1010,7 +1010,7 @@
+ {
+ 	char *h=(char *) malloc(128);
+ 	memset(h,0,128);
+-	strstream id(h,128);
++	std::strstream id(h,128);
+ 	id.seekp(0);
+ 	if(isAny())
+ 		id << "Any";
