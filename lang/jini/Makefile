@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/25 20:20:14 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/15 02:23:18 jschauma Exp $
 #
 
 DISTNAME=		jini-${SUN_VERSION}-src
@@ -27,7 +27,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 VERSION=		1.2.1
 SUN_VERSION=		${VERSION:C/\./_/g}_001
 USE_JAVA=		run
-PKG_JVM=		sun-jdk
+PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,4 +58,5 @@ do-install:
 cleandir: clean
 	${RM} -fr ${JINI_HOME}
 
+.include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"
