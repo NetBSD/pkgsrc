@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 1999/10/23 11:01:45 tron Exp $
+@comment $NetBSD: PLIST,v 1.13 1999/11/01 20:28:45 tron Exp $
 bin/another_clock_applet
 bin/asclock_applet
 bin/battery_applet
@@ -599,7 +599,6 @@ share/pixmaps/gnome-tasklist.png
 @dirrm share/gnome/help/gnome-intro/C/pix
 @dirrm share/gnome/help/gnome-intro/C
 @dirrm share/gnome/help/gnome-intro
-@dirrm share/gnome/help
 @dirrm share/gnome/apps/Utilities
 @dirrm share/gnome/apps/System
 @dirrm share/gnome/apps/Settings
