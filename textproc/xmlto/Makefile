@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/26 15:57:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/30 14:22:56 wiz Exp $
 #
 
 DISTNAME=		xmlto-0.0.18
@@ -11,6 +11,7 @@ HOMEPAGE=		http://cyberelk.net/tim/xmlto/index.html
 COMMENT=		Tool to help transform XML documents into other formats
 
 DEPENDS+=		getopt-[0-9]*:../../misc/getopt
+DEPENDS+=		bash-[0-9]*:../../shells/bash
 DEPENDS+=		docbook-xsl>=1.67.0nb1:../../textproc/docbook-xsl
 
 USE_BUILDLINK3=		yes
