@@ -1,4 +1,4 @@
-.\"	$NetBSD: cpuflags.1,v 1.8 2002/07/16 10:42:45 abs Exp $
+.\"	$NetBSD: cpuflags.1,v 1.9 2002/10/17 11:36:44 abs Exp $
 .Dd May 31, 2001
 .Dt CPUFLAGS 1
 .Os
@@ -44,6 +44,13 @@ and recompiling the
 kernel or userland by adding the following to /etc/mk.conf.
 .Bd -literal -offset indent
  .sinclude "/usr/pkg/share/mk/cpuflags.mk"
+.Ed
+.Pp
+On all except low memory machines compliation can be speeded up by adding the
+following to /etc/mk.conf. (Note this will not affect the binaries produced)
+.Bd -literal -offset indent
+COPTS+=-pipe
+CFLAGS+=-pipe
 .Ed
 .Sh BUGS
 .Nm

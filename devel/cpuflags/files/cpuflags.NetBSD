@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.28 2002/09/25 15:14:04 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.29 2002/10/17 11:36:44 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -93,9 +93,10 @@ case $hw_machine_arch in
 	603ev\ *)		FLAGS='-mcpu=603e'	;; # PM 4400
 	604\ *)		   	FLAGS='-mcpu=604'	;; # Mac 8500
 	604ev\ *)		FLAGS='-mcpu=604e'	;; # upgr B&W G3
+	7450\ *)	   	FLAGS='-mcpu=740'	;; # tibook 550
 	750\ *)		   	FLAGS='-mcpu=750'	;; # Untested
-	740\ *)		   	FLAGS='-mcpu=750'	;; # Untested
-	620\ *)		   	FLAGS='-mcpu=750'	;; # Untested
+	740\ *)		   	FLAGS='-mcpu=740'	;; # Untested
+	620\ *)		   	FLAGS='-mcpu=620'	;; # Untested
     esac ;;
 
     sparc | sparc64) case $hw_model in				   # Examples
