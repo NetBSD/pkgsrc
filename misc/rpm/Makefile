@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/02/09 11:57:20 grant Exp $
+# $NetBSD: Makefile,v 1.47 2004/04/25 11:46:54 wiz Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	1
@@ -13,7 +13,7 @@ BUILD_USES_MSGFMT=	yes
 
 CONFLICTS+=		rpm2cpio<1.0nb1
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_DB185=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
@@ -37,8 +37,8 @@ post-configure:
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/rpm
 
-.include "../../databases/db/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
