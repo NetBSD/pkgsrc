@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/19 02:37:39 kei Exp $
-# FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
+# $NetBSD: Makefile,v 1.3 2002/10/25 19:36:08 wiz Exp $
 #
 
 PKGNAME=		amanda-plot-${VERS}
@@ -10,7 +9,7 @@ COMMENT=		Visualizes the behavior of Amanda, a network backup system
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=		amanda-server-${VERS}:../../sysutils/amanda-dev-server
 
-USE_X11=		yes
+USE_BUILDLINK2=		yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-dev-common/Makefile.common"
