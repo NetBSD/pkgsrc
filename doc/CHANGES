@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3744 2003/10/27 20:31:32 cube Exp $
+$NetBSD: CHANGES,v 1.3745 2003/10/27 20:33:25 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4259,3 +4259,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libsnert-1.23 [manu 2003-10-27]
 	Added milter-sender-0.41 [manu 2003-10-27]
 	Updated thttpd to 2.24 [cube 2003-10-27]
+	Updated libkver to 0.3 [seb 2003-10-27]
