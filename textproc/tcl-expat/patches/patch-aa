@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/09/28 23:37:09 jwise Exp $
+$NetBSD: patch-aa,v 1.2 2001/09/29 00:18:06 jwise Exp $
 --- Makefile.orig	Tue Aug 25 03:25:20 1998
 +++ Makefile	Fri Sep 28 18:57:36 2001
 @@ -18,12 +18,12 @@
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/09/28 23:37:09 jwise Exp $
 -${OBJS}:
 -	cd expat ; make CC=${CC} SHLIB_CFLAGS=${TCL_SHLIB_CFLAGS}
 +$(LIB):		tclexpat.o
-+	$(TCL_SHLIB_LD) -o $(LIB) $(OBJS) tclexpat.o -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lexpat
++	$(TCL_SHLIB_LD) -o $(LIB) $(OBJS) tclexpat.o -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lexpat -ltcl83
  
  tclexpat.o:	tclexpat.c
 -	$(TCL_CC) $(CFLAGS) -c $(TCL_DEFS) $(TCL_SHLIB_CFLAGS) -I$(TCL_PREFIX)/include -Iexpat/xmlparse tclexpat.c
