@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.22 2005/03/30 06:43:20 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.23 2005/03/31 14:55:58 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -45,3 +45,5 @@ Pullup ticket 399 - requested by Dan McMahill
 portability fix for gdb
 Pullup ticket 401 - requested by Min Sik Kim
 portability fix for w3m
+Pullup ticket 405 - requested by Juan Romero Pardines
+portability fix for cdparanoia
