@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5017 2004/02/27 03:01:03 snj Exp $
+$NetBSD: CHANGES,v 1.5018 2004/02/27 08:54:12 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1070,3 +1070,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-gtk2-engines to 2.1.8nb1 [snj 2004-02-27]
 	Added py-Reverend-0.2.4 [minskim 2004-02-27]
 	Added nosefart-1.92i [snj 2004-02-27]
+	Updated ImageMagick to 5.5.7.11nb2 [grant 2004-02-27]
