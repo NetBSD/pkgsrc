@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/28 09:03:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/01 19:24:19 jmmv Exp $
 bin/tuxpaint
 bin/tuxpaint-import
-etc/tuxpaint/tuxpaint.conf
 man/man1/tuxpaint-import.1
 man/man1/tuxpaint.1
 share/doc/tuxpaint/AUTHORS.txt
@@ -65,6 +64,7 @@ share/doc/tuxpaint/tr/FAQ.txt
 share/doc/tuxpaint/tr/INSTALL.txt
 share/doc/tuxpaint/tr/PNG.txt
 share/doc/tuxpaint/tr/README.txt
+share/examples/tuxpaint/tuxpaint.conf
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/tuxpaint.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tuxpaint.mo
@@ -218,6 +218,7 @@ share/tuxpaint/sounds/thin.wav
 @dirrm share/tuxpaint/fonts
 @dirrm share/tuxpaint/brushes
 @dirrm share/tuxpaint
+@dirrm share/examples/tuxpaint
 @dirrm share/doc/tuxpaint/tr
 @dirrm share/doc/tuxpaint/pt_br
 @dirrm share/doc/tuxpaint/nn
@@ -229,4 +230,3 @@ share/tuxpaint/sounds/thin.wav
 @dirrm share/doc/tuxpaint/de
 @dirrm share/doc/tuxpaint/da
 @dirrm share/doc/tuxpaint
-@dirrm etc/tuxpaint
