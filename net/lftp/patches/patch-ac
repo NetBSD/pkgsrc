@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2003/01/31 17:01:58 salo Exp $
+$NetBSD: patch-ac,v 1.2 2004/06/02 12:20:13 adam Exp $
 
---- Makefile.in.orig	Wed Dec 25 15:20:25 2002
-+++ Makefile.in	Fri Jan 31 17:17:26 2003
-@@ -431,7 +431,7 @@
+--- Makefile.in.orig	2004-05-31 12:58:54.000000000 +0000
++++ Makefile.in
+@@ -576,7 +576,7 @@ info: info-recursive
  
  info-am:
  
