@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 22:53:20 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/01 13:44:11 wiz Exp $
 #
 
 DISTNAME=		xdm-krb4-3.3.6.3
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://gutemine.geo.Uni-Koeln.DE/pub/xdm-krb4/
 MAINTAINER=		wennmach@NetBSD.org
 COMMENT=		Kerberos IV and AFS aware xdm
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_IMAKE=		yes
 
@@ -17,7 +17,7 @@ USE_IMAKE=		yes
 KRB4_INCLUDE=	-I/usr/include/kerberosIV
 KRB4_LIBS=	-L/usr/lib -lkafs -lkrb -ldes -lkrb5 -lroken -lasn1 -lcom_err
 .else
-.  include "../../security/kth-krb4/buildlink2.mk"
+.  include "../../security/kth-krb4/buildlink3.mk"
 KRB4_INCLUDE=	-I${BUILDLINK_PREFIX.kth-krb4}/include/kerberosIV
 KRB4_LIBS=	-L${BUILDLINK_PREFIX.kth-krb4}/lib -lkafs -lkrb -ldes
 .endif
