@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/13 19:23:43 jmmv Exp $
+bin/xscreensaver-demo
+share/pixmaps/xscreensaver.xpm
+share/xscreensaver/screensaver-cmndln.png
+share/xscreensaver/screensaver-colorselector.png
+share/xscreensaver/screensaver-diagnostic.png
+share/xscreensaver/screensaver-locking.png
+share/xscreensaver/screensaver-power.png
+share/xscreensaver/screensaver-snap.png
+share/xscreensaver/xscreensaver-demo.glade2
+@dirrm share/xscreensaver
