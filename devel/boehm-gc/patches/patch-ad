@@ -1,6 +1,7 @@
-$NetBSD: patch-ad,v 1.16 2004/05/07 12:06:47 cjep Exp $
---- include/private/gcconfig.h.orig	Tue Jun 17 04:01:23 2003
-+++ include/private/gcconfig.h	Fri Apr  2 23:43:18 2004
+$NetBSD: patch-ad,v 1.17 2004/06/28 15:45:18 toshii Exp $
+
+--- include/private/gcconfig.h.orig	2003-06-17 11:01:23.000000000 +0900
++++ include/private/gcconfig.h
 @@ -85,7 +85,7 @@
  #    define SPARC
  #    define mach_type_known
@@ -30,7 +31,18 @@ $NetBSD: patch-ad,v 1.16 2004/05/07 12:06:47 cjep Exp $
  # if defined(mips) || defined(__mips) || defined(_mips)
  #    define MIPS
  #    if defined(nec_ews) || defined(_nec_ews)
-@@ -601,8 +605,14 @@
+@@ -220,6 +224,10 @@
+ #    define X86_64
+ #    define mach_type_known
+ # endif
++# if defined(__NetBSD__) && defined(__x86_64__)
++#    define X86_64
++#    define mach_type_known
++# endif
+ # if defined(LINUX) && (defined(__ia64__) || defined(__ia64))
+ #    define IA64
+ #    define mach_type_known
+@@ -601,8 +609,14 @@
  #   ifdef NETBSD
  #	define OS_TYPE "NETBSD"
  #	define HEURISTIC2
@@ -47,3 +59,19 @@ $NetBSD: patch-ad,v 1.16 2004/05/07 12:06:47 cjep Exp $
  #   endif
  #   ifdef LINUX
  #       define OS_TYPE "LINUX"
+@@ -1794,6 +1808,15 @@
+ #	define PREFETCH_FOR_WRITE(x) \
+ 	  __asm__ __volatile__ ("	prefetchw	%0": : "m"(*(char *)(x)))
+ #   endif
++#   ifdef NETBSD
++#	define OS_TYPE "NETBSD"
++#	define HEURISTIC2
++#	define DATASTART GC_data_start
++#	define ELFCLASS32 32
++#	define ELFCLASS64 64
++#	define ELF_CLASS ELFCLASS64
++#       define DYNAMIC_LOADING
++#   endif
+ # endif
+ 
+ #if defined(LINUX) && defined(REDIRECT_MALLOC)
