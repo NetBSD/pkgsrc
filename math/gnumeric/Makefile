@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/08/13 17:42:37 rh Exp $
+# $NetBSD: Makefile,v 1.34 2001/08/13 19:55:51 rh Exp $
 #
 
 DISTNAME=		gnumeric-0.68
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=		python>=2.0:../../lang/python
 DEPENDS+=		libglade>=0.16:../../devel/libglade
 DEPENDS+=		gal>=0.10:../../devel/gal
 DEPENDS+=		gb>=0.0.20:../../lang/gb
-DEPENDS+=		libole2>=0.1.7:../../devel/libole2
+DEPENDS+=		libole2>=0.2.3:../../devel/libole2
 DEPENDS+=		oaf>=0.6.5:../../devel/oaf
 DEPENDS+=		libxml>=1.8.14:../../textproc/libxml
 
