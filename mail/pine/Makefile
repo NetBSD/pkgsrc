@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/11/09 03:37:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.40 2000/12/18 18:09:11 jwise Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -16,12 +16,13 @@ DEPENDS+=	pico-3.8:../../editors/pico
 DEPENDS+=	imap-uw>=2000:../../mail/imap-uw
 
 USE_LIBTOOL=	yes
+USE_SSL=	yes
 CONFIGURE_ENV+=	LT=${LIBTOOL}
 MAKE_ENV+=	LT=${LIBTOOL}
 #MAKE_ENV+=	STRIPFLAG=		# debug
 
 pre-patch:
-	# Make sure the imap lib that comes with pine4.21 isn't
+	# Make sure the imap lib that comes with pine isn't
 	# used (see http://www.securityfocus.com/advisories/2646)
 	${RM} -fr ${WRKSRC}/imap
 
