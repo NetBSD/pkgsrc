@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/03 22:16:51 jtb Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/02 20:56:34 dillo Exp $
 
 DISTNAME=		rlab-2.1.05
 CATEGORIES=		math
@@ -10,8 +10,6 @@ COMMENT=		Matrix oriented, interactive programming environment
 
 DEPENDS+=		boehm-gc>=5.3:../../devel/boehm-gc
 DEPENDS+=		readline>=4.0:../../devel/readline
-
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
 GNU_CONFIGURE=		yes
 USE_FORTRAN=		yes
@@ -56,9 +54,6 @@ CONFIGURE_ARGS+=	--enable-SUPERLU
 .if defined(RLAB_PAGER)
 CONFIGURE_ENV+=		PAGER=${RLAB_PAGER}
 .endif
-
-pre-configure:
-	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf)
 
 post-install:
 .if (${RLAB_PLOT_PKG} == "pgraf")
