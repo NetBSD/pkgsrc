@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3192 2003/09/01 16:59:38 jdolecek Exp $
+$NetBSD: CHANGES,v 1.3193 2003/09/01 18:23:06 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3450,3 +3450,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_install to 20020823 [jlam 2003-09-01]
 	Added php4-openssl 4.3.3 [jdolecek 2003-09-01]
 	Added php4-exif 4.3.3 [jdolecek 2003-09-01]
+	Updated ns to 2.26 [seb 2003-09-01]
