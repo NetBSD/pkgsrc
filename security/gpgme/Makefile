@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/08/05 09:50:59 seb Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/09 11:21:56 seb Exp $
 #
 
 DISTNAME=	gpgme-0.3.15
@@ -25,7 +25,6 @@ CONFIGURE_ARGS+=	--without-pth --without-pth-test
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=		gpgme.info
 
 .include "../../mk/bsd.pkg.mk"

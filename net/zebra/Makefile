@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2003/08/04 14:45:26 seb Exp $
+# $NetBSD: Makefile,v 1.57 2003/08/09 11:16:22 seb Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PLIST_SRC=		# empty
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	zebra.info
 
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"

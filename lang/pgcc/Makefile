@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/21 12:48:44 seb Exp $
+# $NetBSD: Makefile,v 1.23 2003/08/09 10:59:11 seb Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGNAME=		pgcc-2.95.2.1
@@ -32,7 +32,6 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_DIRS=		${WRKDIR}/objdir
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
-USE_NEW_TEXINFO=	YES
 INFO_DIR=		${GCC_PREFIX:S|^${PREFIX}/||}/info
 INFO_FILES=		chill.info cpp.info g77.info gcc.info
 

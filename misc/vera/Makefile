@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/08/03 08:26:21 seb Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/09 11:14:09 seb Exp $
 # FreeBSD Id: ports/misc/vera/Makefile,v 1.7 2000/11/13 12:44:18 demon Exp
 
 DISTNAME=	vera-1.6
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://userpage.fu-berlin.de/~oheiabbd/vera-e.html
 COMMENT=	Virtual Entity of Relevant Acronyms
 
-USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=	YES
 INFO_FILES=	vera.info
 
