@@ -12,6 +12,3 @@ necessitated by the expected demands of:
   The 9.0.0 release, and this release candidate, is aimed at
 early adopters and those who wish to make use of new 9.0
 features, such as IPv6 and DNSSEC secure resolution support.
-
-** Set "named9=yes" and "named=no" in /etc/rc.conf to use the
-** startup script!
