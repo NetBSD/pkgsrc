@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/11/27 18:17:22 wiz Exp $
 lib/awt/font.properties
 lib/classpath/libjavaio.la
 lib/classpath/libjavalang.la
@@ -7,7 +7,34 @@ lib/classpath/libjavanet.la
 lib/classpath/libjavanio.la
 lib/classpath/libjavautil.la
 lib/security/classpath.security
+share/classpath/examples/README
+share/classpath/examples/examples.zip
+share/classpath/examples/gnu/classpath/examples/awt/Demo.java
+share/classpath/examples/gnu/classpath/examples/icons/big-fullscreen.png
+share/classpath/examples/gnu/classpath/examples/icons/big-home.png
+share/classpath/examples/gnu/classpath/examples/icons/big-warning.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-copy.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-cut.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-go-back.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-go-down.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-go-forward.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-mic.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-new.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-open.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-paste.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-quit.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-save-as.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-save.png
+share/classpath/examples/gnu/classpath/examples/icons/stock-spell-check.png
+share/classpath/examples/gnu/classpath/examples/swing/Demo.java
 share/classpath/glibj.zip
+@dirrm share/classpath/examples/gnu/classpath/examples/swing
+@dirrm share/classpath/examples/gnu/classpath/examples/icons
+@dirrm share/classpath/examples/gnu/classpath/examples/awt
+@dirrm share/classpath/examples/gnu/classpath/examples
+@dirrm share/classpath/examples/gnu/classpath
+@dirrm share/classpath/examples/gnu
+@dirrm share/classpath/examples
 @exec ${MKDIR} %D/share/classpath/api
 @dirrm share/classpath/api
 @dirrm share/classpath

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2004/03/28 20:32:35 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/11/27 18:17:22 wiz Exp $
 
-DISTNAME=		classpath-0.07
+DISTNAME=		classpath-0.11
 CATEGORIES=		devel
-MASTER_SITES=		ftp://alpha.gnu.org/gnu/classpath/
+MASTER_SITES=		ftp://ftp.gnu.org/gnu/classpath/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/classpath
