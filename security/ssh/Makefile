@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2002/10/20 00:49:55 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2003/01/04 11:51:29 cjep Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -34,6 +34,7 @@ GNU_CONFIGURE=		YES
 SSH_CONF_DIR=		${PKG_SYSCONFDIR}
 
 CONFIGURE_ARGS+=	--with-etcdir=${SSH_CONF_DIR}
+MAKE_FLAGS+=		_OPSYS_RPATH_NAME=${_OPSYS_RPATH_NAME}
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-libwrap
