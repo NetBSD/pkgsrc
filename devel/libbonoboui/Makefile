@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2004/05/15 11:25:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2004/09/21 16:47:10 jmmv Exp $
 #
 
-DISTNAME=	libbonoboui-2.6.1
+DISTNAME=	libbonoboui-2.8.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libbonoboui/2.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libbonoboui/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -22,7 +22,7 @@ USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	bonobo/libbonoboui-2.0.pc.in
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
