@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9337 2005/02/27 12:54:41 jmmv Exp $
+$NetBSD: CHANGES,v 1.9338 2005/02/27 13:20:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1171,3 +1171,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated transcode to 0.6.12nb4 [veego 2005-02-27]
 	Updated ImageMagick to 6.2.0-2 [adam 2005-02-27]
 	Updated libgnomecups to 0.1.14 [jmmv 2005-02-27]
+	Updated g-wrap to 1.9.4 [wiz 2005-02-27]
