@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1151 2003/01/17 23:15:23 hubertf Exp $
+$NetBSD: CHANGES,v 1.1152 2003/01/18 05:46:54 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -316,3 +316,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-DBD-postgresql to 1.21 [mjl 2003-01-17]
 	Added py-bsddb3-4.1.1nb1 [gson 2003-01-17]
 	Updated p0f to 1.8.2 [hubertf 2002-01-18]
+	Updated xemacs-current to 21.5.10 [uebayasi 2002-01-18]
