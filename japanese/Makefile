@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/01/06 16:33:47 taca Exp $
+# $NetBSD: Makefile,v 1.32 2001/01/10 14:54:05 taca Exp $
 #
 
     SUBDIR += a2ps
@@ -7,11 +7,13 @@
     SUBDIR += canna-server
     SUBDIR += canuum
     SUBDIR += chasen
+    SUBDIR += chasen-base
     SUBDIR += freewnn-lib
     SUBDIR += freewnn-server
     SUBDIR += gawk
     SUBDIR += grep
     SUBDIR += groff
+    SUBDIR += ipadic
     SUBDIR += jhd
     SUBDIR += kakasi
     SUBDIR += kbanner
