@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/06 11:11:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/18 11:01:23 jmmv Exp $
 #
 
 DISTNAME=		gst-plugins-0.6.4
@@ -27,6 +27,7 @@ CPPFLAGS+=		-I${PREFIX}/include/cdparanoia
 CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ARGS+=	--disable-artsc
 CONFIGURE_ARGS+=	--disable-ffmpeg
+CONFIGURE_ARGS+=	--disable-mpeg2dec
 CONFIGURE_ARGS+=	--disable-qcam
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
