@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.140 2004/04/18 22:33:06 snj Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.141 2004/04/24 15:49:42 minskim Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -574,7 +574,7 @@ buildlink-${_pkg_}-cookie:
 .  if (${PKG_INSTALLATION_TYPE} == "pkgviews") &&			\
       !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[yY][eE][sS])
 BUILDLINK_CONTENTS_FILTER.${_pkg_}?=					\
-	${GREP} 'lib.*/lib[^/]*\.la$$'
+	${EGREP} 'lib(/pkgconfig/.*\.pc$$|.*/lib[^/]*\.la$$)'
 .  else
 BUILDLINK_CONTENTS_FILTER.${_pkg_}?=					\
 	${EGREP} '(include.*/|\.h$$|\.idl$$|\.pc$$|/lib[^/]*\.[^/]*$$)'
