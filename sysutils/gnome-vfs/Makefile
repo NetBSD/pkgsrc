@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/11/12 01:31:51 salo Exp $
+# $NetBSD: Makefile,v 1.34 2003/12/30 12:13:42 gavan Exp $
 
 DISTNAME=		gnome-vfs-1.0.5
 PKGREVISION=		4
@@ -23,8 +23,13 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
-.include "../../archivers/bzip2/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
+
+.if defined(ICONV_IS_GNU)
+CONFIGURE_ARGS+=	--with-libiconv=yes
+.endif
+
+.include "../../archivers/bzip2/buildlink2.mk"
 .include "../../databases/gnome-mime-data/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf/buildlink2.mk"
