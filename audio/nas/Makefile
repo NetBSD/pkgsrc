@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/02/09 12:19:45 grant Exp $
+# $NetBSD: Makefile,v 1.42 2004/02/11 07:03:16 grant Exp $
 
 DISTNAME=	nas-1.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -64,5 +64,4 @@ PLIST_SRC+=	${PKGDIR}/PLIST.voxware
 CONF_FILES=	${EGDIR}/nasd.conf.eg ${PKG_SYSCONFDIR}/nasd.conf
 .endif
 
-.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
