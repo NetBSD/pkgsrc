@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.360 2003/03/10 23:03:23 wiz Exp $
+$NetBSD: TODO,v 1.361 2003/03/11 00:06:57 seb Exp $
 
 Suggested new packages
 ======================
@@ -117,7 +117,6 @@ Suggested package updates
 	o gcc3-3.2.2 [pkg/20308|jlam]
 	o gcvs-1.0
 	o gd-2.0.4
-	o gdb-5.3
 	o gdm-2.4.1.1
 	o getmail-2.3.11 [pkg/19707]
 	o getmail-3.0.4 [pkg/19707]
