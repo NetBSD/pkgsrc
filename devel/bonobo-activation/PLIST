@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2003/01/05 14:07:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2003/02/24 17:17:51 jmmv Exp $
 bin/activation-client
 bin/bonobo-slay
 include/bonobo-activation-2.0/bonobo-activation/Bonobo_Activation_types.h
@@ -107,7 +107,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/bonobo-activation.mo
 @dirrm share/doc/html/bonobo-activation
 @dirrm lib/bonobo/servers
 @exec ${MKDIR} %D/lib/bonobo/monikers
-@dirrm lib/bonobo/monikers
+@unexec ${RMDIR} %D/lib/bonobo/monikers 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/bonobo 2>/dev/null || ${TRUE}
 @dirrm include/bonobo-activation-2.0/bonobo-activation
 @dirrm include/bonobo-activation-2.0
