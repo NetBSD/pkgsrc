@@ -8078,7 +8078,7 @@ _ACEOF
 	LIBOBJS="$LIBOBJS statfs.$ac_objext"
 fi
 
-if test $ac_cv_type_long_long = yes -a $ac_cv_sizeof_off_t -ge 8; then
+if test $ac_cv_type_long_long = yes; then
 
 
 	echo "$as_me:$LINENO: checking *printf() support for %lld" >&5
