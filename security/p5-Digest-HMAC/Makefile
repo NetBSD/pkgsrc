@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/30 15:17:03 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/30 15:20:45 mjl Exp $
 #
 
 DISTNAME=		Digest-HMAC-1.01
@@ -14,7 +14,7 @@ DEPENDS+=		p5-Digest-SHA1>=1.00:../p5-Digest-SHA1
 DEPENDS+=		p5-Digest-MD5>=2.00:../p5-Digest-MD5
 
 USE_PERL5=		# defined
-PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Digest/SHA1/.packlist
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Digest/HMAC/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
