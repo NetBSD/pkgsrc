@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2003/07/08 15:04:58 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2003/07/09 15:14:43 drochner Exp $
 
 --- gcc/Makefile.in.orig	Tue Jan 28 16:54:07 2003
 +++ gcc/Makefile.in	Sat May 24 13:01:38 2003
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.2 2003/07/08 15:04:58 drochner Exp $
  # Language-independent files.
  
  DRIVER_DEFINES = \
-+  -DLINK_LIBGCC_SPEC="\"%D $(RPATH_FLAG)$(GCC_PREFIX)/lib\"" \
++  -DLINK_LIBGCC_SPEC="\"%D $(RPATH_FLAG)$(prefix)/lib\"" \
    -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
    -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc-lib/\" \
    -DDEFAULT_TARGET_VERSION=\"$(version)\" \
