@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/26 02:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/25 08:31:32 snj Exp $
 #
 
 DISTNAME=		netsaint-plugins-1.2.9-4
@@ -16,7 +16,7 @@ DEPENDS+=		netsaint-base-[0-9]*:../../net/netsaint-base
 DEPENDS+=		{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/ssh
 .endif
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--with-pgsql=${BUILDLINK_PREFIX.postgresql-lib}
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
 
@@ -27,6 +27,6 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
 CONFIGURE_ARGS+=      --with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
 .endif
 
-.include "../../databases/postgresql-lib/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../databases/postgresql-lib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
