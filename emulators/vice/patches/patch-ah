@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 1998/09/06 23:47:33 garbled Exp $
+--- data/PET/Makefile.in.orig	Sun Sep  6 11:57:11 1998
++++ data/PET/Makefile.in	Sun Sep  6 11:57:23 1998
+@@ -113,7 +113,7 @@
+ 	graphics.vkm \
+ 	posg_de.vkm
+ 
+-petdir = $(prefix)/lib/vice/PET
++petdir = $(prefix)/share/vice/PET
+ 
+ pet_DATA = $(keymaps) $(roms) $(palettes)
+ 

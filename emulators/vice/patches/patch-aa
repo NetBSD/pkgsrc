@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 1998/09/06 23:47:27 garbled Exp $
+--- src/sounddrv/soundsun.c.orig	Sun Sep  6 11:01:10 1998
++++ src/sounddrv/soundsun.c	Sun Sep  6 11:05:09 1998
+@@ -32,7 +32,7 @@
+ #include <fcntl.h>
+ #include <sys/uio.h>
+ #include <unistd.h>
+-
++#include <sys/ioctl.h>
+ #include <sys/audioio.h>
+ 
+ #include "vice.h"

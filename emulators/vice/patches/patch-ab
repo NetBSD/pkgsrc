@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 1998/09/06 23:47:28 garbled Exp $
+--- src/vice.h.orig	Sun Sep  6 11:29:44 1998
++++ src/vice.h	Sun Sep  6 11:30:14 1998
+@@ -48,8 +48,8 @@
+ 
+ /* Define the default system directory (where the ROMs are). */
+ 
+-#define LIBDIR		PREFIX "/lib/vice"
+-#define DOCDIR          LIBDIR "/doc"
++#define LIBDIR		PREFIX "/share/vice"
++#define DOCDIR          PREFIX "/share/doc/vice"
+ 
+ /* Sound defaults.  */
+ #define SOUND_SAMPLE_RATE 22050
