@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/02/11 07:24:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 1998/02/24 00:45:08 tron Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -18,7 +18,7 @@
     SUBDIR += rtty
 #    SUBDIR += setquota
 #    SUBDIR += skill
-#    SUBDIR += socket
+    SUBDIR += socket
 #    SUBDIR += star
 #    SUBDIR += stat
 #    SUBDIR += su2
