@@ -1,0 +1,6 @@
+# $NetBSD: interix3.template,v 1.1 2005/01/21 03:15:52 tv Exp $
+
+THREAD_SUPPORT=yes
+THREAD_CPPFLAGS="-D_REENTRANT"
+THREAD_LIBS="-lpthread"
+NEED_REENTRANT_FUNCS=yes
