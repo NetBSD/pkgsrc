@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.18 2004/03/17 05:23:05 jlam Exp $
+# $NetBSD: distcc.mk,v 1.19 2004/03/17 06:07:06 jlam Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	defined
@@ -66,6 +66,9 @@ BUILD_ENV+=	DISTCC_HOSTS=${DISTCC_HOSTS:Q}
 .endif
 .if defined(DISTCC_SSH) && !empty(DISTCC_SSH)
 BUILD_ENV+=	DISTCC_SSH=${DISTCC_SSH:Q}
+.endif
+.if defined(DISTCC_VERBOSE) && !empty(DISTCC_VERBOSE)
+BUILD_ENV+=	DISTCC_VERBOSE=${DISTCC_VERBOSE:Q}
 .endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
