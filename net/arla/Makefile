@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/01 09:31:00 wennmach Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/02 13:08:32 wennmach Exp $
 #
 
 DISTNAME=		arla-0.33
@@ -10,11 +10,18 @@ HOMEPAGE=		http://www.stacken.kth.se/project/arla/
 
 DEPENDS+=		kth-krb4-1.0.1:../../security/kth-krb4
 
-.if !exists(/sys/lib/libkern/libkern.h)
-IGNORE=			"requires kernel sources available under /sys"
-.endif  
-
 GNU_CONFIGURE=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(/sys/lib/libkern/libkern.h)
+.if exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
+CONFIGURE_ARGS+=	--with-sys=${BSDSRCDIR}/sys
+.else
+IGNORE=			"requires kernel sources available under \$$BSDSRCDIR/sys (or /sys)"
+.endif
+.endif
+
 CONFIGURE_ARGS+=	--with-krb4=${PREFIX}
 .if defined(ARLA_CACHE)
 CONFIGURE_ARGS+=	--with-arlacachedir=${ARLA_CACHE}
@@ -22,8 +29,6 @@ CONFIGURE_ARGS+=	--with-arlacachedir=${ARLA_CACHE}
 
 PLIST_SRC=		${WRKDIR}/PLIST
 MESSAGE_FILE=		${WRKDIR}/MESSAGE
-
-.include "../../mk/bsd.prefs.mk"
 
 .if defined(ARLA_CACHE)
 CACHEDIR=		${ARLA_CACHE}
