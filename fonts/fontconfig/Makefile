@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/24 02:00:26 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/12 20:52:55 jlam Exp $
 #
 
 DISTNAME=	fontconfig-2.2.1
@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--with-expat-includes=${BUILDLINK_PREFIX.expat}/include
 CONFIGURE_ARGS+=	--with-expat-lib=${BUILDLINK_PREFIX.expat}/lib
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--disable-docs
 
 FONT_PATH=	${X11PREFIX}/lib/X11/fonts/TTF,${X11PREFIX}/lib/X11/fonts/Type1
 .if ${X11PREFIX} != ${X11BASE}
