@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/11 22:08:42 jmmv Exp $
 bin/nsgmls
 bin/sx
 bin/spam
@@ -45,7 +45,8 @@ share/sgml/dtd/html.dtd
 share/sgml/dtd/html.soc
 share/sgml/dtd/xml.dcl
 share/sgml/dtd/xml.soc
-share/sgml/catalog
+@exec ${LOCALBASE}/bin/xmlcatmgr -c %D/share/sgml/catalog add CATALOG %D/share/sgml/dtd/html.soc
+@unexec ${LOCALBASE}/bin/xmlcatmgr -c %D/share/sgml/catalog remove %D/share/sgml/dtd/html.soc
 @dirrm share/sgml/dtd
-@dirrm share/sgml
+@comment in xmlcatmgr: @dirrm share/sgml
 @dirrm share/doc/sp
