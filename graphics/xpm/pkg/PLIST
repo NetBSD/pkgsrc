@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 1998/01/24 05:30:47 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/02/02 09:00:14 hubertf Exp $
 bin/sxpm
 lib/libXpm.a
 lib/libXpm.so.4.10
-@exec /sbin/ldconfig -m %B || /usr/bin/true
-@unexec /sbin/ldconfig -m %B || /usr/bin/true
+@exec /sbin/ldconfig || /usr/bin/true
+@unexec /sbin/ldconfig || /usr/bin/true
 include/X11/xpm.h
 man/cat1/sxpm.0.gz
