@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/06/17 11:35:56 grant Exp $
+# $NetBSD: Makefile,v 1.9.4.1 2004/12/13 10:21:33 salo Exp $
 # FreeBSD Id: ports/mail/ssmtp/Makefile,v 1.10 2003/04/14 08:41:04 leeym Exp
 #
 # TLS functionality needs testing. Please let me know the result,
@@ -7,9 +7,8 @@
 # pkg@pop.707.to
 # Toru TAKAMIZU
 
-DISTNAME=	ssmtp_2.60.3
-PKGNAME=	ssmtp-2.60.3
-PKGREVISION=	2
+DISTNAME=	ssmtp_2.61.orig
+PKGNAME=	ssmtp-2.61
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/ssmtp/}
 
@@ -17,13 +16,18 @@ MAINTAINER=	pkg@pop.707.to
 HOMEPAGE=	http://packages.debian.org/testing/mail/ssmtp.html
 COMMENT=	Extremely simple MTA to forward mail to a mail hub
 
-WRKSRC=			${WRKDIR}/${PKGBASE}-${PKGVERSION:C/([0-9]+.[0-9]+)(.[0-9]+)(nb[0-9]+)?$/\1/}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/.orig$//}
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-ssl --enable-inet6
+CONFIGURE_ARGS+=	--enable-ssl
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(USE_INET6:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-inet6
+.endif
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
