@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/22 09:16:00 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/22 19:30:35 recht Exp $
 #
 
 DISTNAME=	pyPgSQL-2.4
@@ -20,5 +20,5 @@ PY_PATCHPLIST=	YES
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../time/py-mxDateTime/buildlink3.mk"
-.include "../../databases/postgresql-lib/pglib.mk"
+.include "../../databases/postgresql-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
