@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.492 2000/06/28 17:35:53 dmcmahill Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.493 2000/06/30 01:56:08 hubertf Exp $			\
 #
 # This file is in the public domain.
 #
@@ -2800,7 +2800,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.492 2000/06/28 17:35:53 dmcmahill Exp $$'
+	@${ECHO} '@comment $$'NetBSD'$$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
