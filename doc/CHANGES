@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4322 2004/01/02 03:22:04 wiz Exp $
+$NetBSD: CHANGES,v 1.4323 2004/01/02 09:19:06 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -21,3 +21,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added edict-2003.005 [wiz 2004-01-02]
 	Added kanjidic-20030901 [wiz 2004-01-02]
 	Updated xjdic to 2.4 [wiz 2004-01-02]
+	Added sylpheed-claws-ghostscript-viewer-0.6 [cube 2004-01-02]
