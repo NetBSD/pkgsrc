@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.846 2001/11/11 09:46:51 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.847 2001/11/14 12:38:51 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -546,6 +546,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM}		\
 		LOWER_VENDOR=${LOWER_VENDOR}				\
 		LOWER_OPSYS=${LOWER_OPSYS}				\
+		PKGBASE=${PKGBASE}					\
 		PKGNAME=${PKGNAME}					\
 		PKGLOCALEDIR=${PKGLOCALEDIR}				\
 		PKGVERSION=${PKGVERSION:C/nb[0-9]*$//}			\
