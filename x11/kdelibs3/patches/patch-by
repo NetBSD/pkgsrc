@@ -1,0 +1,40 @@
+$NetBSD: patch-by,v 1.1 2002/06/27 07:10:15 skrll Exp $
+
+--- kdeprint/Makefile.in.orig	Wed Jun 26 08:21:44 2002
++++ kdeprint/Makefile.in
+@@ -843,7 +843,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kprinter.cpp kmdbentry.cpp printerfilter.cpp kprintfilter.h kprinterimpl.cpp util.cpp kpqtpage.cpp kprintpreview.cpp configure.in.in kmthreadjob.cpp kpfilterpage.cpp maticparser.cpp.h kprintaction.cpp driveritem.cpp signal_proc.c kmspecialmanager.cpp kdeprintcheck.cpp kxmlcommand.cpp specials.desktop matic.cpp kpcopiespage.cpp kpreloadobject.cpp testprint.ps kprintdialog.cpp treecombobox.cpp kfilelist.cpp driver.cpp kdeprintd.desktop plugincombobox.cpp kpfileselectpage.cpp kmvirtualmanager.cpp kpdriverpage.cpp kmfiltermanager.cpp kdeprintrc kprintdialogpage.cpp kmfiltermanager.h kpipeprocess.cpp driverview.cpp maticscanner.cpp kprinterpropertydialog.cpp kmuimanager.cpp kpgeneralpage.cpp kprintfilter.cpp maticparser.cpp droptionview.cpp 
++KDE_DIST=kdeprintd.kidl kprinter.cpp testprint.ps kprintdialog.cpp treecombobox.cpp kfilelist.cpp driver.cpp kdeprintd.desktop kmdbentry.cpp libkdeprint.la.closure plugincombobox.cpp printerfilter.cpp kprintfilter.h kpfileselectpage.cpp kmvirtualmanager.cpp kpdriverpage.cpp libdriverparse.a kmfiltermanager.cpp kprinterimpl.cpp util.cpp kpqtpage.cpp kdeprintrc kmfactory.kidl kprintdialogpage.cpp kpipeprocess.cpp kmfiltermanager.h kprintpreview.cpp configure.in.in kmthreadjob.cpp driverview.cpp kmfactory_skel.cpp maticscanner.cpp kpfilterpage.cpp maticparser.cpp.h kprinterpropertydialog.cpp kprintaction.cpp kmuimanager.cpp driveritem.cpp signal_proc.c kpgeneralpage.cpp kmspecialmanager.cpp kprintfilter.cpp kdeprintcheck.cpp kxmlcommand.cpp maticparser.cpp specials.desktop matic.cpp kpcopiespage.cpp droptionview.cpp kpreloadobject.cpp 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -943,7 +943,7 @@
+ 
+ #>- install-exec-am: install-libLTLIBRARIES
+ #>+ 1
+-install-exec-am: install-kde_moduleLTLIBRARIES install-libLTLIBRARIES
++install-exec-am: install-libLTLIBRARIES install-kde_moduleLTLIBRARIES
+ 
+ install-info: install-info-recursive
+ 
+@@ -1161,7 +1161,7 @@
+ 	-rm -f  kded_kdeprintd_la_meta_unload.cpp libkdeprint_la_meta_unload.cpp
+ 
+ #>+ 11
+-kded_kdeprintd_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kdeprintd.cpp $(srcdir)/kprintprocess.cpp kdeprintd_skel.cpp kded_kdeprintd_la_meta_unload.cpp  
++kded_kdeprintd_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kdeprintd.cpp $(srcdir)/kprintprocess.cpp $(srcdir)/kdeprintd_skel.cpp $(srcdir)/kded_kdeprintd_la_meta_unload.cpp  
+ 	@echo 'creating kded_kdeprintd_la.all_cpp.cpp ...'; \
+ 	rm -f kded_kdeprintd_la.all_cpp.files kded_kdeprintd_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kded_kdeprintd_la.all_cpp.final; \
+@@ -1173,7 +1173,7 @@
+ 	rm -f kded_kdeprintd_la.all_cpp.final kded_kdeprintd_la.all_cpp.files
+ 
+ #>+ 11
+-libkdeprint_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmfactory.cpp $(srcdir)/kmjob.cpp $(srcdir)/kmjobmanager.cpp $(srcdir)/kmmanager.cpp $(srcdir)/kmprinter.cpp $(srcdir)/kmuimanager.cpp $(srcdir)/kmvirtualmanager.cpp $(srcdir)/driver.cpp $(srcdir)/driveritem.cpp $(srcdir)/droptionview.cpp $(srcdir)/driverview.cpp $(srcdir)/maticscanner.cpp $(srcdir)/maticparser.cpp $(srcdir)/matic.cpp $(srcdir)/kmdbentry.cpp $(srcdir)/kprintpreview.cpp $(srcdir)/kprintdialog.cpp $(srcdir)/kprinter.cpp $(srcdir)/kprinterimpl.cpp $(srcdir)/kprintdialogpage.cpp $(srcdir)/kpcopiespage.cpp $(srcdir)/kpdriverpage.cpp $(srcdir)/kprinterpropertydialog.cpp $(srcdir)/kpgeneralpage.cpp $(srcdir)/kpqtpage.cpp $(srcdir)/kmthreadjob.cpp $(srcdir)/kpipeprocess.cpp $(srcdir)/kpfilterpage.cpp $(srcdir)/kmspecialmanager.cpp $(srcdir)/kdeprintcheck.cpp $(srcdir)/plugincombobox.cpp $(srcdir)/kpreloadobject.cpp $(srcdir)/kfilelist.cpp $(srcdir)/kprintaction.cpp $(srcdir)/kpfileselectpage.cpp $(srcdir)/treecombobox.cpp $(srcdir)/kxmlcommand.cpp $(srcdir)/util.cpp $(srcdir)/printerfilter.cpp kmfactory_skel.cpp libkdeprint_la_meta_unload.cpp   kmjobmanager.moc kprinterpropertydialog.moc kmfactory.moc kprintpreview.moc kpfilterpage.moc kpcopiespage.moc kprintdialogpage.moc kpqtpage.moc kprintprocess.moc kpgeneralpage.moc kmmanager.moc kfilelist.moc droptionview.moc kdeprintd.moc kprintaction.moc driverview.moc plugincombobox.moc kprinterimpl.moc kprintdialog.moc 
++libkdeprint_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmfactory.cpp $(srcdir)/kmjob.cpp $(srcdir)/kmjobmanager.cpp $(srcdir)/kmmanager.cpp $(srcdir)/kmprinter.cpp $(srcdir)/kmuimanager.cpp $(srcdir)/kmvirtualmanager.cpp $(srcdir)/driver.cpp $(srcdir)/driveritem.cpp $(srcdir)/droptionview.cpp $(srcdir)/driverview.cpp $(srcdir)/maticscanner.cpp $(srcdir)/maticparser.cpp $(srcdir)/matic.cpp $(srcdir)/kmdbentry.cpp $(srcdir)/kprintpreview.cpp $(srcdir)/kprintdialog.cpp $(srcdir)/kprinter.cpp $(srcdir)/kprinterimpl.cpp $(srcdir)/kprintdialogpage.cpp $(srcdir)/kpcopiespage.cpp $(srcdir)/kpdriverpage.cpp $(srcdir)/kprinterpropertydialog.cpp $(srcdir)/kpgeneralpage.cpp $(srcdir)/kpqtpage.cpp $(srcdir)/kmthreadjob.cpp $(srcdir)/kpipeprocess.cpp $(srcdir)/kpfilterpage.cpp $(srcdir)/kmspecialmanager.cpp $(srcdir)/kdeprintcheck.cpp $(srcdir)/plugincombobox.cpp $(srcdir)/kpreloadobject.cpp $(srcdir)/kfilelist.cpp $(srcdir)/kprintaction.cpp $(srcdir)/kpfileselectpage.cpp $(srcdir)/treecombobox.cpp $(srcdir)/kxmlcommand.cpp $(srcdir)/util.cpp $(srcdir)/printerfilter.cpp $(srcdir)/kmfactory_skel.cpp $(srcdir)/libkdeprint_la_meta_unload.cpp   kmjobmanager.moc kprinterpropertydialog.moc kmfactory.moc kprintpreview.moc kpfilterpage.moc kpcopiespage.moc kprintdialogpage.moc kpqtpage.moc kprintprocess.moc kpgeneralpage.moc kmmanager.moc kfilelist.moc droptionview.moc kdeprintd.moc kprintaction.moc driverview.moc plugincombobox.moc kprinterimpl.moc kprintdialog.moc 
+ 	@echo 'creating libkdeprint_la.all_cpp.cpp ...'; \
+ 	rm -f libkdeprint_la.all_cpp.files libkdeprint_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> libkdeprint_la.all_cpp.final; \

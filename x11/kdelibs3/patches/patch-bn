@@ -1,6 +1,6 @@
-$NetBSD: patch-bn,v 1.1.1.1 2002/05/31 13:16:48 skrll Exp $
+$NetBSD: patch-bn,v 1.2 2002/06/27 07:10:14 skrll Exp $
 
---- kioslave/http/Makefile.in.orig	Tue May 21 15:42:15 2002
+--- kioslave/http/Makefile.in.orig	Wed Jun 26 08:21:42 2002
 +++ kioslave/http/Makefile.in
 @@ -273,19 +273,22 @@
  
@@ -120,9 +120,18 @@ $NetBSD: patch-bn,v 1.1.1.1 2002/05/31 13:16:48 skrll Exp $
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=README.http_cache_cleaner README.webdav THOUGHTS https.protocol rfc2616.txt rfc2617.txt http.protocol http_cache_cleaner.desktop webdavs.protocol webdav.protocol 
-+KDE_DIST=README.http_cache_cleaner http_cache_cleaner.desktop webdavs.protocol http.protocol webdav.protocol README.webdav https.protocol rfc2616.txt rfc2617.txt THOUGHTS 
++KDE_DIST=README.http_cache_cleaner http_cache_cleaner.desktop webdavs.protocol http.protocol webdav.protocol README.webdav https.protocol rfc2616.txt rfc2617.txt kio_http.la.closure THOUGHTS kio_http_cache_cleaner 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -729,7 +746,7 @@
+ 
+ #>- install-exec-am: install-binPROGRAMS install-libLTLIBRARIES
+ #>+ 1
+-install-exec-am: install-kde_moduleLTLIBRARIES install-binPROGRAMS install-libLTLIBRARIES
++install-exec-am: install-binPROGRAMS install-libLTLIBRARIES install-kde_moduleLTLIBRARIES
+ 
+ install-info: install-info-recursive
  
 @@ -774,9 +791,6 @@
  	uninstall-kdelnkDATA uninstall-libLTLIBRARIES \
