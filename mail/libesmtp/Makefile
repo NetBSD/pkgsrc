@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2003/07/28 18:05:52 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/24 09:12:19 xtraeme Exp $
 
-DISTNAME=	libesmtp-1.0
+DISTNAME=	libesmtp-1.0.1
 CATEGORIES=	mail devel
 MASTER_SITES=	http://www.stafford.uklinux.net/libesmtp/ \
 		http://www.tobez.org/download/port-mirrors/mail/libesmtp/ \
@@ -13,11 +13,13 @@ COMMENT=	Library to manage posting of electronic mail
 
 USE_BUILDLINK2=	yes
 USE_GMAKE=      yes
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable-all
-CONFIGURE_ARGS+=	--disable-isoc
 USE_LIBTOOL=	yes
-LIBTOOL_OVERRIDE= ${WRKSRC}/libtool
+GNU_CONFIGURE=	yes
+
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ARGS+=	--enable-all
+CONFIGURE_ARGS+=        --disable-isoc
 
 # XXX Evil hack to deal with the openssl/des.h interface change
 # between 0.96 and 0.97
