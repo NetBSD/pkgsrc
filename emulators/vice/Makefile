@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/11/23 16:26:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/12/29 01:41:01 wiz Exp $
 
 DISTNAME=		vice-1.0
 CATEGORIES=		emulators
@@ -8,7 +8,6 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			64gs.390852-01.bin \
 			kernal.4064.901246-01.bin \
 			kernal.sx.251104-04.bin
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.cs.cmu.edu/~dsladic/vice/vice.html
@@ -18,13 +17,15 @@ NO_CDROM=		${RESTRICTED}
 NO_PACKAGE=		${RESTRICTED}
 MIRROR_DISTFILE=	no
 
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+
 GNU_CONFIGURE=		yes
 USE_X11=		yes
 USE_GTEXINFO=		yes
 
 # These changes are rather common, so sed instead of patch:
 post-patch:
-	@for file in `find ${WRKSRC} -name Makefile.in -print` \
+	@for file in `${FIND} ${WRKSRC} -name Makefile.in -print` \
 			${WRKSRC}/src/arch/unix/archdep.h; do \
 		${MV} -f $$file $$file.orig && \
 		${SED}  -e s,/lib/vice/doc,/share/doc/vice, \

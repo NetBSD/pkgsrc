@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.6 1999/05/24 20:39:40 tv Exp $
+# $NetBSD: Makefile,v 1.7 1999/12/29 01:41:00 wiz Exp $
 #
 
 DISTNAME=		freebsd_lib-2.2.7
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.flame.org/NetBSD/
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 MAINTAINER=		packages@netbsd.org
+
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 #
 # The distfile is distributed under the GPL, so no re-distribution of
@@ -23,9 +24,9 @@ NO_WRKSUBDIR=		yes
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/emul/freebsd
-	@(cd ${WRKSRC} && find usr -type d -print) | \
+	@(cd ${WRKSRC} && ${FIND} usr -type d -print) | \
 		(cd ${PREFIX}/emul/freebsd && xargs ${INSTALL_DATA_DIR})
-	@cd ${WRKSRC} && for file in `find usr -name '*.*' -print`; do \
+	@cd ${WRKSRC} && for file in `${FIND} usr -name '*.*' -print`; do \
 		${INSTALL_DATA} $$file ${PREFIX}/emul/freebsd/$$file; \
 	done
 	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} - POST-INSTALL
