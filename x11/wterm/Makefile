@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/06/21 04:53:15 jlam Exp $
+# $NetBSD: Makefile,v 1.3 1999/06/21 07:53:49 tron Exp $
 #
 
 DISTNAME=	wterm-6.2.6
@@ -12,7 +12,9 @@ HOMEPAGE=	http://wm.current.nu/files.html\#wterm
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	windowmaker-0.60.0:../../x11/windowmaker
 
+USE_X11=	YES
 GNU_CONFIGURE=	YES
-USE_X11BASE=	YES
+
+CFLAGS+=	-I${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"
