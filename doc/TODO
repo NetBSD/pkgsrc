@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2425 2004/11/23 12:03:32 xtraeme Exp $
+$NetBSD: TODO,v 1.2426 2004/11/23 12:38:59 adam Exp $
 
 Suggested new packages
 ======================
@@ -634,7 +634,6 @@ Suggested package updates
 	o libetpan-0.34
 	o libfwbuilder-2.0.3
 	o libhydrogen-0.9.0
-	o libiconv-1.9.2
 	o libidn-0.5.11
 	o libjit-0.0.4
 	o libksba-0.9.9
