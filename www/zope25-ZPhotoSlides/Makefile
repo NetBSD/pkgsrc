@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/11/27 15:11:16 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/02 15:18:00 wiz Exp $
 
 DISTNAME=	ZPhotoSlides-0.6
 PKGNAME=	zope25-ZPhotoSlides-0.6
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/p3b/ZPhotoSlides/
 EXTRACT_SUFX=	.tar
 
-DEPENDS+=	zope25-LocalFS-*:../../www/zope25-LocalFS
+DEPENDS+=	zope25-LocalFS-[0-9]*:../../www/zope25-LocalFS
 BUILDLINK_DEPENDS.pyimaging= ${PYPKGPREFIX}-imaging>=1.1.3
 
 MAINTAINER=	packages@netbsd.org
