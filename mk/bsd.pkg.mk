@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.791 2001/07/25 23:49:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.792 2001/07/26 08:39:35 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1494,7 +1494,7 @@ do-patch: uptodate-digest
 		if [ -x ${f} ]; then					\
 			${CHMOD} a+x ${f}.new;				\
 		fi;							\
-		${MV} ${f}.new ${f};					\
+		${MV} -f ${f}.new ${f};					\
 	fi
 .    endfor
 .  endif
