@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/24 10:51:27 dbj Exp $
-bin/curl
-man/man1/curl.1
