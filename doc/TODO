@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.408 2003/03/22 05:21:12 wiz Exp $
+$NetBSD: TODO,v 1.409 2003/03/22 05:53:13 salo Exp $
 
 Suggested new packages
 ======================
@@ -174,7 +174,6 @@ Suggested package updates
 	o midnight-commander-4.6.0
 	o mixer.app-1.8.0
 	o mkfontscale-20020618
-	o molden-3.8 [pkg/20819]
 	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9.1
 	o mrtg-2.9.27
