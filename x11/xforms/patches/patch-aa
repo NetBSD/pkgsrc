@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2002/04/17 04:40:40 fredb Exp $
+$NetBSD: patch-aa,v 1.6 2002/08/08 10:37:12 wiz Exp $
 
---- Imakefile.orig	Tue Apr  2 11:05:09 2002
+--- Imakefile.orig	Tue Apr  2 19:05:09 2002
 +++ Imakefile
 @@ -4,12 +4,12 @@
  #define Optimize YES
@@ -19,3 +19,12 @@ $NetBSD: patch-aa,v 1.5 2002/04/17 04:40:40 fredb Exp $
  #define XFormsLibRev 0.9999
  
  #define OptimizationLevel -O4
+@@ -37,7 +37,7 @@ OPTIMIZER	= OptimizationLevel
+ OPTIMIZER	=
+ #endif
+ 
+-CDEBUGFLAGS	= -g $(OPTIMZER)
++CDEBUGFLAGS	= -g $(OPTIMIZER)
+ 
+ IMAKE_DEFINES	= \
+ 		  -DUseSystemXpm=UseSystemXpm \
