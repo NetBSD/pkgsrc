@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/17 00:38:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2005/02/17 17:54:12 jschauma Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -78,4 +78,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/ray.html ${PREFIX}/share/doc/radiance/index.html
 
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
