@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9210 2005/02/19 17:55:16 wiz Exp $
+$NetBSD: CHANGES,v 1.9211 2005/02/19 18:13:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -956,3 +956,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Sub-Uplevel-0.09 [wiz 2005-02-19]
 	Added p5-Test-Exception-0.20 [wiz 2005-02-19]
 	Added p5-Test-Taint-1.04 [wiz 2005-02-19]
+	Updated p5-WWW-Mechanize to 1.10 [wiz 2005-02-19]
