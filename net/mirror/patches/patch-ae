@@ -1,0 +1,20 @@
+--- ftp.pl.orig	Tue May 23 17:53:25 1995
++++ ftp.pl	Sat Aug 29 12:08:42 1998
+@@ -430,7 +430,7 @@
+ 		return 0;
+ 	}
+ 	if( $ret == 1 ) {
+-		$response =~ m/^227 Entering Passive Mode \((\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)$/;
++		$response =~ m/^227 .*\((\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)/;
+ 		$newhost = sprintf( "%d.%d.%d.%d", $1, $2, $3, $4 );
+ 		$newport = $5 * 256 + $6;
+ 	}
+@@ -443,7 +443,7 @@
+ 		}
+ 		else {
+ 			print $showfd "proxy connection failed " if $proxy;
+-			print $showfd "Cannot open ftp to $connect_site\n" if $ftp_show;
++			print $showfd "Cannot open ftp to $newhost:$newport\n" if $ftp_show;
+ 			return 0;
+ 		}
+ 	}
