@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.37 2001/10/05 00:21:58 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.38 2001/10/05 01:15:07 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -219,24 +219,22 @@ _CHECK_IS_TEXT_FILE=	${FILE_CMD} $${file} | ${GREP} "text" >/dev/null 2>&1
 #	message			message to display
 #
 _REPLACE_LIBNAMES_SCRIPT=						\
-	if [ ! -f $${cookie} ]; then					\
-		${MKDIR} ${BUILDLINK_DIR};				\
-		if [ -n "$${replace_files}" -a -n "${REPLACE_LIBNAMES_SED:Q}" ]; then \
-			${ECHO_MSG} "$${message}";			\
-			cd ${WRKSRC};					\
-			for file in $${replace_files}; do		\
-				if ${_CHECK_IS_TEXT_FILE}; then		\
-					${ECHO_MSG} "	$${file}";	\
-					${SED}	${REPLACE_LIBNAMES_SED}	\
-						$${file} > $${file}.fixed; \
-					if [ -x $${file} ]; then	\
-						${CHMOD} +x $${file}.fixed; \
-					fi;				\
-					${MV} -f $${file}.fixed $${file}; \
-					${ECHO} $${file} >> $${cookie};	\
+	${MKDIR} ${BUILDLINK_DIR};					\
+	if [ -n "$${replace_files}" -a -n "${REPLACE_LIBNAMES_SED:Q}" ]; then \
+		${ECHO_MSG} "$${message}";				\
+		cd ${WRKSRC};						\
+		for file in $${replace_files}; do			\
+			if ${_CHECK_IS_TEXT_FILE}; then			\
+				${ECHO_MSG} "	$${file}";		\
+				${SED}	${REPLACE_LIBNAMES_SED}		\
+					$${file} > $${file}.fixed;	\
+				if [ -x $${file} ]; then		\
+					${CHMOD} +x $${file}.fixed;	\
 				fi;					\
-			done;						\
-		fi;							\
+				${MV} -f $${file}.fixed $${file};	\
+				${ECHO} $${file} >> $${cookie};		\
+			fi;						\
+		done;							\
 	fi
 
 MAKEFILE_PATTERNS+=	Makefile
@@ -262,9 +260,11 @@ pre-configure: replace-libnames-configure
 replace-libnames-configure:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.replace_libnames_configure_done;	\
-	replace_files="${CONFIGURE_SCRIPT}";				\
-	message="Fixing library name references in configure scripts:";	\
-	${_REPLACE_LIBNAMES_SCRIPT}
+	if [ ! -f $${cookie} ]; then					\
+		replace_files="${CONFIGURE_SCRIPT}";			\
+		message="Fixing library name references in configure scripts:"; \
+		${_REPLACE_LIBNAMES_SCRIPT};				\
+	fi
 .endif	# HAS_CONFIGURE
 
 post-configure: replace-libnames-makefiles
@@ -275,9 +275,11 @@ post-configure: replace-libnames-makefiles
 replace-libnames-makefiles:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.replace_libnames_makefiles_done;	\
-	replace_files="${REPLACE_LIBNAMES}";				\
-	message="Fixing library name references in Makefiles:";		\
-	${_REPLACE_LIBNAMES_SCRIPT}
+	if [ ! -f $${cookie} ]; then					\
+		replace_files="${REPLACE_LIBNAMES}";			\
+		message="Fixing library name references in Makefiles:";	\
+		${_REPLACE_LIBNAMES_SCRIPT};				\
+	fi
 .endif	# REPLACE_LIBNAMES
 
 REPLACE_BUILDLINK_PATTERNS+=	*.lai
@@ -310,7 +312,7 @@ replace-buildlink:
 		if [ -n "$${replace_files}" ]; then			\
 			${ECHO_MSG} "Fixing directory references and library names:"; \
 			cd ${WRKSRC};					\
-			for file in ${REPLACE_BUILDLINK}; do		\
+			for file in ${replace_files}; do		\
 				if ${_CHECK_IS_TEXT_FILE}; then		\
 					${ECHO_MSG} "	$${file}";	\
 					${SED}	${REPLACE_BUILDLINK_SED} \
