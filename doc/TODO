@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2182 2004/09/30 12:48:48 adrianp Exp $
+$NetBSD: TODO,v 1.2183 2004/09/30 14:42:39 epg Exp $
 
 Suggested new packages
 ======================
@@ -428,7 +428,6 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o streamtuner-0.12.5
-	o subversion-1.1.0
 	o sun-jdk-1.5
 	o sweep-0.8.3
 	o sylpheed-claws-0.9.12b
