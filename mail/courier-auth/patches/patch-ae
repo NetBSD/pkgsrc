@@ -1,15 +1,25 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/01/22 22:00:22 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2004/02/21 14:43:16 jlam Exp $
 
---- makedat/Makefile.in.orig	Fri Jan 18 22:04:44 2002
+--- makedat/Makefile.in.orig	Sat Nov 15 12:54:52 2003
 +++ makedat/Makefile.in
-@@ -281,6 +281,10 @@
- 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+@@ -413,6 +413,11 @@ uninstall: uninstall-am
+ install-am: all-am
+ 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
  
- install-exec-am:
-+	$(mkinstalldirs) $(DESTDIR)$(libexecdir)
-+	rm -f $(DESTDIR)$(libexecdir)/makedatprog
-+	$(INSTALL_PROGRAM) makedatprog $(DESTDIR)$(libexecdir)/makedatprog
++install-exec-local:
++	$(mkinstalldirs) $(DESTDIR)`dirname $(makedatprogpath)`
++	rm -f $(DESTDIR)$(makedatprogpath)
++	$(INSTALL_PROGRAM) makedatprog $(DESTDIR)$(makedatprogpath)
 +
- install-exec: install-exec-am
+ installcheck: installcheck-am
+ install-strip:
+ 	$(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
+@@ -450,7 +455,7 @@ info-am:
  
  install-data-am:
+ 
+-install-exec-am:
++install-exec-am: install-exec-local
+ 
+ install-info: install-info-am
+ 
