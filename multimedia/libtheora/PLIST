@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/06 13:47:43 jmmv Exp $
+include/theora/theora.h
+lib/libtheora.a
+lib/libtheora.la
+lib/libtheora.so
+lib/libtheora.so.0
+lib/libtheora.so.0.0
+share/doc/${PKGNAME}/spec.html
+share/doc/${PKGNAME}/spec.py
+share/doc/${PKGNAME}/vp3-format.txt
+@dirrm share/doc/${PKGNAME}
+@dirrm include/theora
