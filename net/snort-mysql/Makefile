@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/10/29 05:59:24 jdolecek Exp $
+# $NetBSD: Makefile,v 1.12 2005/01/28 23:03:59 adrianp Exp $
 
 .include "../../net/snort/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-mysql-/}
-PKGREVISION=	1
 
 COMMENT=	Network Intrusion Detection System (with MySQL support)
 
@@ -19,5 +18,4 @@ CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 LDFLAGS+=		${BUILDLINK_LDFLAGS.mysql-client}
 
 .include "../../mk/mysql.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
