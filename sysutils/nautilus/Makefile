@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.35 2004/06/28 19:23:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2004/09/21 16:54:57 jmmv Exp $
 #
 
-DISTNAME=		nautilus-2.6.3
+DISTNAME=		nautilus-2.8.0
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/nautilus/
 COMMENT=		Nautilus file manager for GNOME2
-
-DEPENDS+=		hicolor-icon-theme>=0.4:../../graphics/hicolor-icon-theme
 
 USE_PKGLOCALEDIR=	yes
 USE_BUILDLINK3=		yes
@@ -27,22 +25,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 GCONF2_SCHEMAS=		apps_nautilus_preferences.schemas
 
-OWN_DIRS=		${PKG_SYSCONFDIR}/X11/serverconfig
-OWN_DIRS+=		${PKG_SYSCONFDIR}/X11/starthere
-OWN_DIRS+=		${PKG_SYSCONFDIR}/X11/sysconfig
-EGDIR=			${PREFIX}/share/examples/nautilus
-CONF_FILES=
-.for conffile in	X11/serverconfig/.directory \
-			X11/starthere/.directory \
-			X11/starthere/applications.desktop \
-			X11/starthere/preferences.desktop \
-			X11/starthere/serverconfig.desktop \
-			X11/starthere/sysconfig.desktop \
-			X11/sysconfig/.directory
-CONF_FILES+=		${EGDIR}/${conffile} ${PKG_SYSCONFDIR}/${conffile}
-.endfor
-.undef conffile
-
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/eel2/buildlink3.mk"
@@ -54,6 +36,7 @@ CONF_FILES+=		${EGDIR}/${conffile} ${PKG_SYSCONFDIR}/${conffile}
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
