@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/29 18:43:47 tv Exp $
+
+--- ftmain.c.orig	Wed Sep 24 22:56:49 2003
++++ ftmain.c
+@@ -248,8 +248,7 @@ int main(int argc, char **argv)
+ 	} else {
+ 		progname = strdup(argv[0]);
+ 		free(progpath);
+-		progpath = calloc(256, 1);
+-		getcwd(progpath, 256);
++		progpath = FT_BIN;
+ 	}
+ 	ext = strrchr(progname, '.');
+ 	if (NULL == ext) {
