@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2002/03/24 20:27:12 dmcmahill Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/03/24 22:21:26 dmcmahill Exp $
 #
 # This Makefile fragment is included by packages that use glib2.
 #
@@ -32,7 +32,7 @@ BUILDLINK_FILES.glib2+=	lib/libgthread-2.0.*
 
 .include "../../devel/pkgconfig/buildlink.mk"
 
-USE_PTHREAD=	native pth
+USE_PTHREAD=	native ptl2
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/pthread.buildlink.mk"
