@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.728 2002/12/09 00:07:16 cjep Exp $
+$NetBSD: CHANGES,v 1.729 2002/12/09 00:25:04 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3868,3 +3868,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xmame to 0.62.1nb2 [kristerw 2002-12-08]
 	Updated latex2html to 2002.2.1 [jschauma 2002-12-08]
 	Updated nawk to 20021129 [jschauma 2002-12-08]
+	Updated phoenix-linux to 0.5 [grant 2002-12-08]
