@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/04/22 20:16:58 dillo Exp $
+$NetBSD: distinfo,v 1.4 2004/04/27 17:16:28 tv Exp $
 
 SHA1 (arj-3.10.20.tar.gz) = ce818c8127d11efac469c65a9f65572be7e07a5a
 Size (arj-3.10.20.tar.gz) = 428054 bytes
-SHA1 (patch-aa) = 496e52f278c39c86e84247c42861958bbfa2f962
-SHA1 (patch-ab) = d16c31e610b2f06048b14d19a94792f5c9c60370
+SHA1 (patch-aa) = 627dfb018aad8c624c5c88e4f4fdb39bee159b36
+SHA1 (patch-ab) = f5bf9af0bc17ac0bda05d5884d5ef32863dc70ab
 SHA1 (patch-ac) = 4e557fa98bc92e033d11e2e9a8e34127275f7f72
