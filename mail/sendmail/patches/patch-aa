@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.17 2003/12/03 03:31:16 ben Exp $
+$NetBSD: patch-aa,v 1.18 2004/08/30 20:16:28 adrianp Exp $
 
---- devtools/OS/NetBSD.orig	2002-03-21 15:59:25.000000000 -0800
-+++ devtools/OS/NetBSD
-@@ -6,13 +6,15 @@ dnl	Place personal settings in devtools/
- define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX')
+--- devtools/OS/NetBSD.orig	Sun Jun 27 00:19:35 2004
++++ devtools/OS/NetBSD	Sun Jun 27 00:24:11 2004
+@@ -7,13 +7,14 @@
+ define(`confLIBS', `-lutil')
  define(`confENVDEF', ` -DNETISO')
  define(`confDEPEND_TYPE', `CC-M')
 -define(`confSBINGRP', `wheel')
@@ -11,7 +11,6 @@ $NetBSD: patch-aa,v 1.17 2003/12/03 03:31:16 ben Exp $
 -define(`confUBINGRP', `wheel')
 -define(`confMANOWN', `root')
 -define(`confMANGRP', `wheel')
-+define(`confSBINGRP', `${BSD_BINOWN}')
 +define(`confSBINGRP', `${BSD_BINGRP}')
 +define(`confUBINOWN', `${BSD_BINOWN}')
 +define(`confUBINGRP', `${BSD_BINGRP}')
