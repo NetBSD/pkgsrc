@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 1999/08/26 20:25:44 mjl Exp $
+
+--- Makefile.in.orig	Tue Jun 29 07:12:40 1999
++++ Makefile.in	Thu Aug 26 22:16:11 1999
+@@ -41,7 +41,7 @@
+ 	$(CC) ${LDFLAGS} -o webalizer webalizer.o graphs.o ${LIBS}
+ 
+ webalizer.o: webalizer.c webalizer.h webalizer_lang.h ctry.h
+-	$(CC) ${CFLAGS} ${DEFS} -c webalizer.c
++	$(CC) -DPREFIX=\"@prefix@\" ${CFLAGS} ${DEFS} -c webalizer.c
+ 
+ graphs.o: graphs.c graphs.h webalizer_lang.h
+ 	$(CC) ${CFLAGS} ${DEFS} -I${GDLIB} -c graphs.c
+@@ -58,7 +58,7 @@
+ install: all
+ 	$(INSTALL_PROGRAM) webalizer ${BINDIR}/webalizer
+ 	$(INSTALL_DATA) webalizer.1 ${MANDIR}/webalizer.1
+-	$(INSTALL_DATA) sample.conf /etc/webalizer.conf.sample
++	$(INSTALL_DATA) sample.conf @prefix@/etc/webalizer.conf.sample
+ 
+ uninstall:
+ 	rm -f ${MANDIR}/webalizer.1
