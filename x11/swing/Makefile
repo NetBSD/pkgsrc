@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/09/06 21:49:40 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2000/09/07 01:51:29 hubertf Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -32,10 +32,9 @@ ROOT_GROUP?=	wheel
 do-fetch:
 	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
 	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "    For licensing reasons, the Swing 1.1.1 distribution must be"; \
-	    ${ECHO_MSG} "    fetched manually into \"${DISTDIR}/${DIST_SUBDIR}\" from"; \
-	    ${ECHO_MSG} "    ${HOMEPAGE}download.html "; \
-	    ${ECHO_MSG} "    The required distribution file is \"${DISTNAME}${EXTRACT_SUFX}\""; \
+	    ${ECHO_MSG} "    For licensing reasons, the Swing distfile (${DISTNAME}${EXTRACT_SUFX})"; \
+	    ${ECHO_MSG} "    must be fetched manually into \"${DISTDIR}/${DIST_SUBDIR}\""; \
+	    ${ECHO_MSG} "    from ${HOMEPAGE}download.html "; \
 	    ${ECHO_MSG} "==============================================================="; \
 	    ${FALSE}; \
 	fi
