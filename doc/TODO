@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3026 2005/02/17 11:09:02 salo Exp $
+$NetBSD: TODO,v 1.3027 2005/02/17 19:33:58 peter Exp $
 
 Suggested new packages
 ======================
@@ -376,7 +376,6 @@ Suggested package updates
 	o cqcam-0.91
 	o crafty-19.5
 	o crimsonfields-0.4.6
-	o criticalmass-0.9.10
 	o crossfire-cli-1.5.0
 	o crossfire-srv-1.5.0
 	o crypto++-5.2.1 [pkg/28740]
