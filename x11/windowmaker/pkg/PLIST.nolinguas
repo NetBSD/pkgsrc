@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1998/12/05 21:38:43 tron Exp $
+@comment $NetBSD: PLIST.nolinguas,v 1.1 1999/01/16 12:38:50 tron Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -116,6 +116,7 @@ GNUstep/Apps/WPrefs.app/xpm/whandling.xpm
 GNUstep/Apps/WPrefs.app/xpm/windowfocus.xpm
 GNUstep/Apps/WPrefs.app/xpm/workspace.xpm
 GNUstep/Apps/WPrefs.app/xpm/xis.xpm
+bin/WINGs-flags
 bin/geticonset
 bin/getstyle
 bin/seticons
@@ -128,16 +129,18 @@ bin/wmsetbg
 bin/wsetfont
 bin/wxcopy
 bin/wxpaste
-include/WMaker.h
-include/proplist.h
-include/wraster.h
 include/WINGs.h
 include/WINGsP.h
+include/WMaker.h
 include/WUtil.h
+include/proplist.h
+include/wraster.h
 lib/libPropList.a
+lib/libPropList.so.1.1
 lib/libWINGs.a
 lib/libWMaker.a
 lib/libwraster.a
+lib/libwraster.so.1.1
 man/man1/geticonset.1
 man/man1/getstyle.1
 man/man1/seticons.1
@@ -152,14 +155,12 @@ share/WINGs/Images.xpm
 share/WINGs/defaultIcon.tiff
 share/WINGs/defaultIcon.xpm
 share/WindowMaker/Backgrounds/BlueImage.jpeg
-share/WindowMaker/Backgrounds/BlueWaves.jpeg
-share/WindowMaker/Backgrounds/SeaNight.jpeg
 share/WindowMaker/Defaults/WMGLOBAL
 share/WindowMaker/Defaults/WMRootMenu
 share/WindowMaker/Defaults/WMState
 share/WindowMaker/Defaults/WMWindowAttributes
 share/WindowMaker/Defaults/WindowMaker
-share/WindowMaker/IconSets/Default
+share/WindowMaker/IconSets/Default.iconset
 share/WindowMaker/Icons/GNUstep.tiff
 share/WindowMaker/Icons/GNUstep.xpm
 share/WindowMaker/Icons/GNUstep3D.tiff
@@ -234,43 +235,46 @@ share/WindowMaker/Pixmaps/tile.xpm
 share/WindowMaker/Pixmaps/tile2.xpm
 share/WindowMaker/Pixmaps/xv.xpm
 share/WindowMaker/README
+share/WindowMaker/README.GNOME
+share/WindowMaker/README.KDE
+share/WindowMaker/README.themes
 share/WindowMaker/Sounds/.keep_me
-share/WindowMaker/Styles/Autumn
-share/WindowMaker/Styles/Black
-share/WindowMaker/Styles/Blue
-share/WindowMaker/Styles/BlueAluminum
-share/WindowMaker/Styles/BlueDawn
-share/WindowMaker/Styles/BlueishGreen
-share/WindowMaker/Styles/Brown
-share/WindowMaker/Styles/Chumbo
-share/WindowMaker/Styles/Copper
-share/WindowMaker/Styles/DarkBlue
-share/WindowMaker/Styles/DarkRed
-share/WindowMaker/Styles/Fire
-share/WindowMaker/Styles/Food
-share/WindowMaker/Styles/Golden
-share/WindowMaker/Styles/Green
-share/WindowMaker/Styles/GreyBlue
-share/WindowMaker/Styles/Gtk
-share/WindowMaker/Styles/LightBlue
-share/WindowMaker/Styles/Pastel
-share/WindowMaker/Styles/Pink
-share/WindowMaker/Styles/Pumpkin
-share/WindowMaker/Styles/Purple
-share/WindowMaker/Styles/Red
-share/WindowMaker/Styles/RednBlue
-share/WindowMaker/Styles/ShinyBrown
-share/WindowMaker/Styles/Summer
-share/WindowMaker/Styles/Traditional
-share/WindowMaker/Styles/VioletBlue
-share/WindowMaker/Themes/BlueWaves
-share/WindowMaker/Themes/Default
-share/WindowMaker/Themes/Night
-share/WindowMaker/Themes/OpenStep
-share/WindowMaker/Themes/Pastel
+share/WindowMaker/Styles/Autumn.style
+share/WindowMaker/Styles/Black.style
+share/WindowMaker/Styles/BlackTexture.style
+share/WindowMaker/Styles/Blue.style
+share/WindowMaker/Styles/BlueDawn.style
+share/WindowMaker/Styles/BlueishGreen.style
+share/WindowMaker/Styles/Brown.style
+share/WindowMaker/Styles/Chumbo.style
+share/WindowMaker/Styles/Copper.style
+share/WindowMaker/Styles/DarkBlue.style
+share/WindowMaker/Styles/DarkRed.style
+share/WindowMaker/Styles/Fire.style
+share/WindowMaker/Styles/Food.style
+share/WindowMaker/Styles/Golden.style
+share/WindowMaker/Styles/Green.style
+share/WindowMaker/Styles/GreyBlue.style
+share/WindowMaker/Styles/Gtk.style
+share/WindowMaker/Styles/LightBlue.style
+share/WindowMaker/Styles/Pastel.style
+share/WindowMaker/Styles/Purple.style
+share/WindowMaker/Styles/Red.style
+share/WindowMaker/Styles/RednBlue.style
+share/WindowMaker/Styles/Summer.style
+share/WindowMaker/Styles/Traditional.style
+share/WindowMaker/Styles/VioletBlue.style
+share/WindowMaker/Themes/Checker.themed/checker.xpm
+share/WindowMaker/Themes/Checker.themed/style
+share/WindowMaker/Themes/Default.style
+share/WindowMaker/Themes/Night.themed/SeaNight.jpeg
+share/WindowMaker/Themes/Night.themed/style
+share/WindowMaker/Themes/OpenStep.style
+share/WindowMaker/Themes/Pastel.style
 share/WindowMaker/autostart.sh
 share/WindowMaker/exitscript.sh
 share/WindowMaker/menu
+share/WindowMaker/menu.ca
 share/WindowMaker/menu.cz
 share/WindowMaker/menu.de
 share/WindowMaker/menu.dk
@@ -281,6 +285,7 @@ share/WindowMaker/menu.fr
 share/WindowMaker/menu.gl
 share/WindowMaker/menu.he
 share/WindowMaker/menu.hr
+share/WindowMaker/menu.hu
 share/WindowMaker/menu.it
 share/WindowMaker/menu.ja
 share/WindowMaker/menu.ko
@@ -292,6 +297,8 @@ share/WindowMaker/menu.se
 share/WindowMaker/menu.sl
 share/WindowMaker/menu.tr
 share/WindowMaker/plmenu
+share/WindowMaker/plmenu.fr
+share/WindowMaker/plmenu.hr
 share/WindowMaker/wmmacros
 @dirrm GNUstep/Apps/WPrefs.app/tiff
 @dirrm GNUstep/Apps/WPrefs.app/xpm
@@ -306,5 +313,7 @@ share/WindowMaker/wmmacros
 @dirrm share/WindowMaker/Pixmaps
 @dirrm share/WindowMaker/Sounds
 @dirrm share/WindowMaker/Styles
+@dirrm share/WindowMaker/Themes/Checker.themed
+@dirrm share/WindowMaker/Themes/Night.themed
 @dirrm share/WindowMaker/Themes
 @dirrm share/WindowMaker
