@@ -1,4 +1,4 @@
-$NetBSD: NOTES,v 1.5 2002/12/23 17:09:17 jlam Exp $
+$NetBSD: NOTES,v 1.6 2002/12/23 17:17:32 jlam Exp $
 
  Caching
  =======
@@ -11,13 +11,13 @@ On certain platforms listed in _BLNK_CACHE_ALL in bsd.buildlink2.mk, we do
 full caching, which has enormous speed benefits since it avoids an extra
 sed invocation per "special" argument.
 
-The test process for buildlink2 consists of building:
+The test process for buildlink2 consists of building and installing:
 
 	shells/tcsh		tests handling of specially-quoted arguments
 	devel/gettext-lib	same as above, but uses libtool
 
 Full caching can be tested be adding ${OPSYS} to _BLNK_CACHE_ALL and
-performing the tests above.
+performing the tests above, but only building the packages is needed.
 
 Platform			Working?	Full caching?
 --------			--------	-------------
