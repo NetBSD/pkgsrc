@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:44 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/26 20:56:38 jtb Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -9,7 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://op.gfz-potsdam.de/igmt/
 COMMENT=		Interactive Mapping of Geoscientific Datasets
 
-DEPENDS+=		GMT-3.3.6:../../graphics/GMT
+DEPENDS+=		GMT>=3.3.6:../../graphics/GMT
 DEPENDS+=		tcl-[0-9]*:../../lang/tcl
 DEPENDS+=		tk-[0-9]*:../../x11/tk
 DEPENDS+=		ghostscript-[0-9]*:../../print/ghostscript
@@ -28,41 +28,26 @@ do-configure:
 		${SED} -e 's:@PREFIX@:'${PREFIX}':g'			\
 		       -e 's:@GMT_PREFIX@:'${GMT_PREFIX}':g'		\
 		       -e 's:@TK_PREFIX@:'${TK_PREFIX}':g'		\
-		< $$i > $$i.tmp && ${MV} -f $$i.tmp $$i;		\
+		$$i > $$i.tmp && ${MV} -f $$i.tmp $$i;			\
 	done
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/igmt ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/igmt
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/igmt
-	@for f in manual.ps README.TXT NOTES.TXT COPYING COPYRIGHT; do		\
-		i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/igmt/"; \
-		${ECHO} $$i; $$i; \
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} manual.ps README.TXT NOTES.TXT 	\
+		COPYING COPYRIGHT ${PREFIX}/share/doc/igmt/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/igmt/colormaps
-	@for f in ${WRKSRC}/colormaps/*; do				 \
-		i="${INSTALL_DATA} $$f ${PREFIX}/share/igmt/colormaps/"; \
-		${ECHO} $$i; $$i;					 \
-	done
-	@for f in ${WRKSRC}/igmt*.tcl ${WRKSRC}/*.awk; do \
-		i="${INSTALL_DATA} $$f ${PREFIX}/share/igmt/"; \
-		${ECHO} $$i; $$i; \
-	done
-	@for f in 01_02-98.cmt gps.vel hotspots.dat nuvel.yx		 \
-	igmt_def.gif allslabs_rum.gmt volcanoes.dat wcity.dat		 \
-	wcity_major.dat	igmt_gmtdefaults_3.0 igmt_gmtdefaults_3.1	 \
-	igmt_gmtdefaults_3.2 igmt_gmtdefaults_3.3; do			 \
-		i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/igmt/"; \
-		${ECHO} $$i; $$i;					 \
-	done
-	@for f in ${WRKSRC}/igmt_helper* ${WRKSRC}/*.batch; do		\
-		i="${INSTALL_SCRIPT} $$f ${PREFIX}/share/igmt/";	\
-		${ECHO} $$i; $$i;					\
-	done
+	${INSTALL_DATA} ${WRKSRC}/colormaps/* ${PREFIX}/share/igmt/colormaps/
+	cd ${WRKSRC} && ${INSTALL_DATA} igmt*.tcl *.awk 01_02-98.cmt	\
+		gps.vel hotspots.dat nuvel.yx igmt_def.gif		\
+		allslabs_rum.gmt volcanoes.dat wcity.dat		\
+		wcity_major.dat	igmt_gmtdefaults_3.0			\
+		igmt_gmtdefaults_3.1 igmt_gmtdefaults_3.2		\
+		igmt_gmtdefaults_3.3 igmt_helper* *.batch		\
+		${PREFIX}/share/igmt/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/igmt
-	@for f in ${WRKSRC}/example*.ps.gz ${WRKSRC}/example*.dat; do \
-		i="${INSTALL_DATA} $$f ${PREFIX}/share/examples/igmt/"; \
-		${ECHO} $$i; $$i; \
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} example*.ps.gz			\
+		${WRKSRC}/example*.dat ${PREFIX}/share/examples/igmt/	\
 
 .include "../../mk/bsd.pkg.mk"
