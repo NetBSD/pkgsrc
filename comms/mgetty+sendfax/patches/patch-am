@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2003/02/26 21:45:46 fredb Exp $
+$NetBSD: patch-am,v 1.2 2005/03/07 11:29:28 wiz Exp $
 
---- mgetty.c.orig	2002-12-05 05:54:03.000000000 -0600
+--- mgetty.c.orig	2003-11-17 20:09:41.000000000 +0100
 +++ mgetty.c
-@@ -512,7 +512,8 @@
+@@ -518,7 +518,8 @@ int main _P2((argc, argv), int argc, cha
  
      rmlocks();	
  
