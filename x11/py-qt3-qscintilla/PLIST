@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/22 17:27:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/19 04:35:05 jmc Exp $
 ${PYSITELIB}/libqtextcmodule.a
 ${PYSITELIB}/libqtextcmodule.la
 ${PYSITELIB}/libqtextcmodule.so
 ${PYSITELIB}/libqtextcmodule.so.1
 ${PYSITELIB}/libqtextcmodule.so.1.0
+${QTLIBDIR}/libqtextcmodule.a
+${QTLIBDIR}/libqtextcmodule.la
+${QTLIBDIR}/libqtextcmodule.so
+${QTLIBDIR}/libqtextcmodule.so.1
+${QTLIBDIR}/libqtextcmodule.so.1.0
 ${PYSITELIB}/qtext.py
