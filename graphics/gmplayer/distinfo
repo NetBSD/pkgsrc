@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2002/05/09 20:22:37 wiz Exp $
+$NetBSD: distinfo,v 1.9 2002/05/14 22:13:34 veego Exp $
 
-SHA1 (gmplayer/MPlayer-0.90pre3.tar.bz2) = 0ed1d70787488ce55699826752d492aed3425795
-Size (gmplayer/MPlayer-0.90pre3.tar.bz2) = 2322749 bytes
+SHA1 (gmplayer/MPlayer-0.90pre4.tar.bz2) = 54621d010d5fb28e1ad2f857135543c3bd466d50
+Size (gmplayer/MPlayer-0.90pre4.tar.bz2) = 2424843 bytes
 SHA1 (gmplayer/default.tar.bz2) = 40319dd1f8a8f2ff8b85d5efb1d4294d62530535
 Size (gmplayer/default.tar.bz2) = 167762 bytes
 SHA1 (gmplayer/MidnightLove.tar.bz2) = 7eaeb8acfef8a4584485083fd6659631a05fa0f8
@@ -38,5 +38,8 @@ SHA1 (gmplayer/AlienMind.tar.bz2) = 8bd483aa6b52c10ee826c458a2c509c90a57e0f7
 Size (gmplayer/AlienMind.tar.bz2) = 129515 bytes
 SHA1 (gmplayer/CornerMP.tar.bz2) = d46a59c33abcc27ddc24be3124d3f4d23361e836
 Size (gmplayer/CornerMP.tar.bz2) = 237492 bytes
-SHA1 (patch-aa) = f24f92892d3bfa2e4e45efbbb685b209b5e1ac3b
-SHA1 (patch-ab) = a90f1dda80a3208695e5435b63fa4f2b11689a63
+SHA1 (gmplayer/CornerMP-aqua.tar.bz2) = f46260401e036f5529cdb6f2be4a555f0fa0ae74
+Size (gmplayer/CornerMP-aqua.tar.bz2) = 247987 bytes
+SHA1 (gmplayer/hwswskin.tar.bz2) = 2b5b59d2e91bfa5c01011773c71db0ab2b48edec
+Size (gmplayer/hwswskin.tar.bz2) = 20275 bytes
+SHA1 (patch-aa) = 2c1c6f35caf047f188871ac223d672ce453c26ec
