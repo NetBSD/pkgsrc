@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/08/31 09:37:51 cjep Exp $
+
+--- grep.c.orig	Wed Aug 27 13:00:48 2003
++++ grep.c	Wed Aug 27 13:01:03 2003
+@@ -37,6 +37,7 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ 
++#include <zlib.h>
+ #include <err.h>
+ #include <errno.h>
+ #include <getopt.h>
