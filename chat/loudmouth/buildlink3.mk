@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/07 22:45:44 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LOUDMOUTH_BUILDLINK3_MK:=	${LOUDMOUTH_BUILDLINK3_MK}+
@@ -13,16 +13,12 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nloudmouth}
 BUILDLINK_PACKAGES+=	loudmouth
 
 .if !empty(LOUDMOUTH_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.loudmouth+=	loudmouth>=0.10.1
+BUILDLINK_DEPENDS.loudmouth+=	loudmouth>=0.15.1nb3
 BUILDLINK_PKGSRCDIR.loudmouth?=	../../chat/loudmouth
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-
-.if defined(LOUDMOUTH_USE_SSL) && !empty(LOUDMOUTH_USE_SSL:M[Yy][Ee][Ss])
-BUILDLINK_DEPENDS.gnutls+=	gnutls>=1.0.0
-.  include "../../security/gnutls/buildlink3.mk"
-.endif
+.include "../../security/gnutls/buildlink3.mk"
 
 .endif	# LOUDMOUTH_BUILDLINK3_MK
 
