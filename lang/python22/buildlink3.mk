@@ -1,7 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/25 14:13:17 recht Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/25 17:15:12 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYTHON22_BUILDLINK3_MK:=	${PYTHON22_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
@@ -9,21 +8,17 @@ BUILDLINK_DEPENDS+=	python22
 .endif
 
 .if !empty(PYTHON22_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			python22
-BUILDLINK_DEPENDS.python22?=		python22>=2.2.2
-BUILDLINK_PKGSRCDIR.python22?=		../../lang/python22
+BUILDLINK_PACKAGES+=		python22
+BUILDLINK_DEPENDS.python22+=	python22>=2.2.2
+BUILDLINK_PKGSRCDIR.python22?=	../../lang/python22
 
-.if defined(BUILDLINK_DEPMETHOD.python)
+.  if defined(BUILDLINK_DEPMETHOD.python)
 BUILDLINK_DEPMETHOD.python22?=	${BUILDLINK_DEPMETHOD.python}
-.endif
+.  endif
 
+BUILDLINK_INCDIRS.python22+=	include/python2.2
+BUILDLINK_LIBDIRS.python22+=	lib/python2.2/config
 BUILDLINK_TRANSFORM+=		l:python:python2.2
-
-BUILDLINK_CPPFLAGS.python22+= \
-	-I${BUILDLINK_PREFIX.python22}/include/python2.2
-BUILDLINK_LDFLAGS.python22+= \
-	-L${BUILDLINK_PREFIX.python22}/lib/python2.2/config		\
-	-Wl,-R${BUILDLINK_PREFIX.python22}/lib/python2.2/config
 
 .endif # PYTHON22_BUILDLINK3_MK
 
