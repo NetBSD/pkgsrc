@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.261 2003/02/15 05:22:27 salo Exp $
+$NetBSD: TODO,v 1.262 2003/02/15 05:58:26 salo Exp $
 
 Suggested new packages
 ======================
@@ -89,7 +89,6 @@ Suggested package updates
 	o bzflag-1.7g0
 	o canna-3.6p3 [pkg/20208]
 	o cdlabelgen-2.5.0
-	o centericq-4.9.2 [pkg/20243]
 	o cfengine-1.6.5 [pkg/19459|seb]
 	o citrix_ica-6.30.1052 [pkg/19210]
 	o clisp-2.30
