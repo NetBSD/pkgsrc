@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/01/03 18:49:52 reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/26 02:27:54 wiz Exp $
 #
 
 DISTNAME=		gtk-send-pr-0.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.energyhq.es.eu.org/files/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:45:52 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:43 wiz Exp $
 #
 
 DISTNAME=	demime-0.99d.1
 PKGNAME=	demime-0.99.4.1
+PKGREVISION=	1
 CATEGORIES=	mail textproc
 MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME}/}			\
 		http://scifi.squawk.com/

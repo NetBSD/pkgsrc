@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/08/31 19:55:37 jdolecek Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/26 02:27:36 wiz Exp $
 
 MODNAME=		pgsql
+PKGREVISION=		1
 CATEGORIES+=		databases
-PKGREVISION=		# empty
 COMMENT=		PHP4 extension for PostgreSQL databases
 
 USE_BUILDLINK2=		YES

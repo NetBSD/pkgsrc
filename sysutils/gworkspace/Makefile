@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/01/23 21:50:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:55 wiz Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=	4
+PKGREVISION=	5
 
 COMMENT=	GNUstep Workspace manager
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:24:28 agc Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/26 02:27:50 wiz Exp $
 
 DISTNAME=	cupsomatic
 PKGNAME=	${DISTNAME}-2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 EXTRACT_SUFX=	# empty
 

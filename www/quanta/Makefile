@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2004/02/20 23:45:43 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/26 02:27:58 wiz Exp $
 
 DISTNAME=	quanta-2.0-pr2
 PKGNAME=	quanta-1.9.9.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quanta/}
 EXTRACT_SUFX=	.tar.bz2

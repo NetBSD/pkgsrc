@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2004/02/05 07:53:58 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/03/26 02:27:40 wiz Exp $
 #
 # This Makefile fragment is included by packages that use kdegames.
 #
@@ -10,6 +10,7 @@ KDEGAMES_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			kdegames
 BUILDLINK_DEPENDS.kdegames?=		kdegames>=3.2.0
+BUILDLINK_RECOMMENDED.kdegames?=		kdegames>=3.2.1nb1
 BUILDLINK_PKGSRCDIR.kdegames?=		../../games/kdegames3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdegames=kdegames

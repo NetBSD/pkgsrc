@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2004/01/24 14:58:00 grant Exp $
+# $NetBSD: Makefile,v 1.39 2004/03/26 02:27:51 wiz Exp $
 
 DISTNAME=	magicfilter-1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/printing/}
 

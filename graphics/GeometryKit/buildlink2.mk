@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/01/03 18:49:41 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/03/26 02:27:40 wiz Exp $
 #
 # This Makefile fragment is included by packages that use GeometryKit.
 #
@@ -10,6 +10,7 @@ GEOMETRYKIT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			GeometryKit
 BUILDLINK_DEPENDS.GeometryKit?=		GeometryKit>=0.3.1r2nb3
+BUILDLINK_RECOMMENDED.GeometryKit?=		GeometryKit>=0.3.1r2nb5
 BUILDLINK_PKGSRCDIR.GeometryKit?=		../../graphics/GeometryKit
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.GeometryKit=GeometryKit

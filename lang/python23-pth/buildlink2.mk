@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2004/01/29 10:33:52 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/03/26 02:27:42 wiz Exp $
 
 .if !defined(PYTHON23_BUILDLINK2_MK)
 PYTHON23_BUILDLINK2_MK=	# defined
@@ -8,6 +8,7 @@ PYTHON23_BUILDLINK2_MK=	# defined
 BUILDLINK_PACKAGES+=		python23pth
 BUILDLINK_PKGBASE.python23pth?=	python23-pth
 BUILDLINK_DEPENDS.python23pth?=	python23-pth>=2.3
+BUILDLINK_RECOMMENDED.python23pth?=	python23-pth>=2.3.3nb2
 BUILDLINK_PKGSRCDIR.python23pth?=	../../lang/python23-pth
 
 .if defined(BUILDLINK_DEPMETHOD.python)

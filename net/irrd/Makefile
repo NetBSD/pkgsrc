@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2004/01/20 12:22:19 agc Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/26 02:27:48 wiz Exp $
 
 DISTNAME=	irrd2.1.5
 PKGNAME=	irrd-2.1.5
-EXTRACT_SUFX=	.tgz
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.irrd.net/ \
 		ftp://ftp.merit.edu/radb/irrd/ \
 		ftp://ftp.merit.edu/radb/irrd/old_releases/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.irrd.net/

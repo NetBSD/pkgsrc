@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/01/03 18:49:50 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/03/26 02:27:48 wiz Exp $
 #
 # This Makefile fragment is included by packages that use kdenetwork.
 #
@@ -10,6 +10,7 @@ KDENETWORK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			kdenetwork
 BUILDLINK_DEPENDS.kdenetwork?=		kdenetwork>=2.2.2nb7
+BUILDLINK_RECOMMENDED.kdenetwork?=		kdenetwork>=2.2.2nb9
 BUILDLINK_PKGSRCDIR.kdenetwork?=		../../net/kdenetwork2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdenetwork=kdenetwork

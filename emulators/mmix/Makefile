@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:14:41 agc Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/26 02:27:39 wiz Exp $
 
 DISTNAME=	mmix-20030622
+PKGREVISION=	1
 CATEGORIES=	emulators devel lang
 MASTER_SITES=	http://www-cs-faculty.stanford.edu/~knuth/programs/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/03/18 15:33:21 cube Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:48 wiz Exp $
 
 DISTNAME=		gkrellm_snmp-0.18
 PKGNAME=		gkrellm-snmp-0.18
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		net sysutils
 MASTER_SITES=		http://triq.net/gkrellm/
 

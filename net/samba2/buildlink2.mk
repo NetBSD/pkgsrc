@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/01/11 00:41:13 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/03/26 02:27:49 wiz Exp $
 #
 # This Makefile fragment is included by packages that use samba.
 #
@@ -10,6 +10,7 @@ SAMBA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			samba
 BUILDLINK_DEPENDS.samba?=		samba>=2.2.8anb6
+BUILDLINK_RECOMMENDED.samba?=		samba>=2.2.8anb7
 BUILDLINK_PKGSRCDIR.samba?=		../../net/samba2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.samba=samba

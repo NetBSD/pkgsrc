@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/09/25 06:17:22 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/03/26 02:27:55 wiz Exp $
 #
 # This Makefile fragment is included by packages that use raptor.
 #
@@ -10,6 +10,7 @@ RAPTOR_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			raptor
 BUILDLINK_DEPENDS.raptor?=		raptor>=1.0.0
+BUILDLINK_RECOMMENDED.raptor?=		raptor>=1.0.0nb3
 BUILDLINK_PKGSRCDIR.raptor?=		../../textproc/raptor
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.raptor=raptor

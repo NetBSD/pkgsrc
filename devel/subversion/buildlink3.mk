@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 09:12:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/26 02:27:39 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUBVERSION_BASE_BUILDLINK3_MK:=	${SUBVERSION_BASE_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=	subversion-base
 
 .if !empty(SUBVERSION_BASE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.subversion-base+=	subversion-base>=${SVNVER}
+BUILDLINK_RECOMMENDED.subversion-base?=	subversion>=1.0.0nb1
 BUILDLINK_PKGSRCDIR.subversion-base?=	../../devel/subversion-base
 
 BUILDLINK_FILES.subversion-base+=	bin/svn-config

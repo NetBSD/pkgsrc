@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/01/20 12:28:00 agc Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:58 wiz Exp $
 #
 
 DISTNAME=	psycopg-1.0.14
 PKGNAME=	zope25-ZPsycopgDA-1.0.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://initd.org/pub/software/psycopg/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/02/15 11:59:04 markd Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:37 wiz Exp $
 #
 
 DISTNAME=	c_cpp_reference-2.0.2
 PKGNAME=	${DISTNAME:S/_/-/g}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel kde
 MASTER_SITES=	ftp://ftp.e-technik.fh-muenchen.de/pub/unix/ide/KDevelop/
 

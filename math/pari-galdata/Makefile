@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:20:05 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:45 wiz Exp $
 
 DISTNAME=		galdata
 PKGNAME=		pari-galdata-2.1
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		ftp://www.gn-50uma.de/gn/gn-50uma.de/pari/ \
 			http://www.gn-50uma.de/ftp/pari/

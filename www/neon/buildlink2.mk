@@ -1,10 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/12/04 17:00:58 recht Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2004/03/26 02:27:57 wiz Exp $
 
 .if !defined(NEON_BUILDLINK2_MK)
 NEON_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		neon
 BUILDLINK_DEPENDS.neon?=	neon>=0.24.4
+BUILDLINK_RECOMMENDED.neon?=	neon>=0.24.4nb1
 BUILDLINK_PKGSRCDIR.neon?=	../../www/neon
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.neon=neon

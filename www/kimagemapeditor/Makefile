@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/02/25 22:16:23 markd Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/26 02:27:57 wiz Exp $
 
 DISTNAME=	kimagemapeditor-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www kde
 MASTER_SITES=	http://savannah.nongnu.org/download/kimagemap/
 EXTRACT_SUFX=	.tar.bz2

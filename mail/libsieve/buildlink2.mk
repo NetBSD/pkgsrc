@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/02/22 01:05:18 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/03/26 02:27:44 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libsieve.
 #
@@ -10,6 +10,7 @@ LIBSIEVE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libsieve
 BUILDLINK_DEPENDS.libsieve?=		libsieve>=2.1.12
+BUILDLINK_RECOMMENDED.libsieve?=		libsieve>=2.1.12nb1
 BUILDLINK_PKGSRCDIR.libsieve?=		../../mail/libsieve
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libsieve=libsieve

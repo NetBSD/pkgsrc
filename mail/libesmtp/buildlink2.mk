@@ -1,10 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:55:39 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/03/26 02:27:44 wiz Exp $
 
 .if !defined(LIBESMTP_BUILDLINK2_MK)
 LIBESMTP_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libesmtp
 BUILDLINK_DEPENDS.libesmtp?=	libesmtp>=1.0rc1nb1
+BUILDLINK_RECOMMENDED.libesmtp?=	libesmtp>=1.0.1nb2
 BUILDLINK_PKGSRCDIR.libesmtp?=	../../mail/libesmtp
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libesmtp=libesmtp

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:41 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/03/26 02:27:40 wiz Exp $
 #
 # This Makefile fragment is included by packages that use SDLKit.
 #
@@ -10,6 +10,7 @@ SDLKIT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			SDLKit
 BUILDLINK_DEPENDS.SDLKit?=		SDLKit>=0.3.1r2nb5
+BUILDLINK_RECOMMENDED.SDLKit?=		SDLKit>=0.3.1r2nb7
 BUILDLINK_PKGSRCDIR.SDLKit?=		../../graphics/SDLKit
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.SDLKit=SDLKit

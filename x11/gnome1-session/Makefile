@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2004/03/08 19:40:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:59 wiz Exp $
 #
 
 .include "../../x11/gnome-core/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-core/-session/}
-PKGREVISION=		7
+PKGREVISION=		8
 
 COMMENT=		Gnome-session component split out from gnome-core
 
