@@ -1,30 +1,30 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/05/10 13:41:10 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2004/05/25 21:49:26 wiz Exp $
 
---- libavcodec/Makefile.orig    Mon Aug 13 06:52:36 2001
+--- libavcodec/Makefile.orig	2003-09-28 17:26:39.000000000 +0200
 +++ libavcodec/Makefile
-@@ -1,5 +1,4 @@
- include ../config.mak
- 
--CFLAGS= $(OPTFLAGS) -Wall -g -DHAVE_AV_CONFIG_H
--LDFLAGS= -g
-+CFLAGS= $(OPTFLAGS) -Wall -DHAVE_AV_CONFIG_H
- 
-@@ -42,23 +41,26 @@
- LIB= libavcodec.a
- TESTS= imgresample-test dct-test
+@@ -145,6 +145,9 @@ SLIB= $(SLIBPREF)avcodec$(SLIBSUF)
+ endif
+ TESTS= imgresample-test dct-test motion-test fft-test
  
 +install: all
 +	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIB:.a=.la) $(prefix)/lib
 +
- all: $(LIB)
- tests: apiexample cpuid_test $(TESTS)
+ all: $(LIB) $(SLIB)
  
- $(LIB): $(OBJS) $(ASM_OBJS)
+ amrlibs:
+@@ -154,8 +157,8 @@ tests: apiexample cpuid_test $(TESTS)
+ 
+ $(LIB): $(OBJS) $(AMRLIBS)
  	rm -f $@
--	$(AR) rcs $@ $(OBJS) $(ASM_OBJS)
+-	$(AR) rc $@ $(OBJS) $(AMREXTRALIBS)
+-	$(RANLIB) $@
 +	$(LIBTOOL) --mode=link $(CC) -o $(LIB:.a=.la) $(OBJS:.o=.lo) -rpath $(prefix)/lib
++
  
- dsputil.o: dsputil.c dsputil.h
+ $(SLIB): $(OBJS)
+ ifeq ($(CONFIG_WIN32),yes)
+@@ -171,13 +174,10 @@ libpostproc/libpostproc.a:
+ 	$(MAKE) -C libpostproc
  
  %.o: %.c
 -	$(CC) $(CFLAGS) -c -o $@ $< 
@@ -32,11 +32,10 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/05/10 13:41:10 wiz Exp $
  
  %.o: %.S
 -	$(CC) $(CFLAGS) -c -o $@ $<
+-
+-depend: $(SRCS)
+-	$(CC) -MM $(CFLAGS) $^ 1>.depend
 +	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
  
- %.o: %.s
--	nasm -f elf -o $@ $<
-+	nasm -f $(FILEFORMAT) -o $@ $<
- 
- # depend only used by mplayer now
  dep:	depend
+ 
