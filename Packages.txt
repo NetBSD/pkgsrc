@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.159 2001/05/09 17:43:22 skrll Exp $
+# $NetBSD: Packages.txt,v 1.160 2001/05/20 01:58:19 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -273,10 +273,13 @@ LOCALBASE, and X11BASE can also be set in /etc/mk.conf to save having
 to remember to set them each time you want to use pkgsrc.
 
 If you want to deinstall and re-install a binary package that you've
-created (see next section) or that you put into pkgsrc/packages
-manually, you can use the the "bin-install" target, which will
-install a binary package - if available - via pkg_add, and do a "make
-package" else.
+created (see next section), that you put into pkgsrc/packages manually or
+that's located on a remote FTP server, you can use the the "bin-install"
+target. This target will install a binary package - if available - via
+pkg_add, and do a "make package" else. The list of remote FTP sites
+searched is kept in the variable BINPKG_SITE, which defaults to
+ftp.netbsd.org. Any flags that should be added to pkg_add(8) can be put
+into BIN_INSTALL_FLAGS. See pkgsrc/mk/mk.conf.example for more details. 
 
 A final word of warning: If you setup a system that has a non-standard
 setting for LOCALBASE (or X11BASE, for that matter), be sure to set that
