@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2002/01/10 20:56:25 tron Exp $
+$NetBSD: distinfo,v 1.9 2002/01/25 08:38:34 tron Exp $
 
 SHA1 (xmcd-3.0.2.tar.gz) = 10258f299f917c94780d3e6d9feb57535d4603b5
 Size (xmcd-3.0.2.tar.gz) = 690285 bytes
@@ -11,3 +11,4 @@ SHA1 (patch-ad) = b62086c7f1801cf500cb8bc93e262e97f015b540
 SHA1 (patch-ae) = 3de0e9fd004fcb6012f033739ff1b66bd059d655
 SHA1 (patch-af) = e8bc1a3b791f6df15f12f074712a55423fa3fadf
 SHA1 (patch-ag) = cdca79fa131a6b2e74c7cea377167f8d0290c162
+SHA1 (patch-ah) = bae28364d50709529cad5ce5ebf3362dd14cf99b
