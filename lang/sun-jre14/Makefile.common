@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.12 2003/08/13 03:29:55 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.13 2003/08/13 10:22:56 seb Exp $
 
 CATEGORIES=	lang
 EXTRACT_SUFX=	.bin
 
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://java.sun.com/
-DOWNLOAD=	http://java.sun.com/j2se/1.4.1/download.html
+DOWNLOAD=	http://java.sun.com/j2se/1.4.2/download.html
 
 EXTRACT_CMD=	${ECHO} yes | ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >/dev/null
 
