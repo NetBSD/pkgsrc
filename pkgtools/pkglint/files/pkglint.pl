@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.70 2002/09/24 12:34:22 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.71 2002/09/24 14:01:38 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -74,6 +74,12 @@ if ($verbose) {
 if (! -d $portdir) {
 	print STDERR "FATAL: invalid directory $portdir specified.\n";
 	exit 1;
+}
+
+if (-e <$portdir/../Packages.txt>) {
+	print "OK: checking category Makefile.\n" if ($verbose);
+	&category_check;
+	exit 0;
 }
 
 #
@@ -657,7 +663,7 @@ sub checkmakefile {
 	$i = "\n" x ($contblank + 2);
 	if ($whole =~ /$i/) {
 		&perror("FATAL: contiguous blank lines (> $contblank lines) found ".
-			"in $file at line " . int(split(/\n/, $`)) . ".");
+			"in $file at line " . int(@_ = split(/\n/, $`)) . ".");
 	}
 
 	#
@@ -1497,6 +1503,41 @@ sub is_predefined {
 		return &TRUE;
 	}
 	undef;
+}
+
+sub category_check {
+	local($file) = "Makefile";
+	local($first) = 1;
+	local($lastsub) = "";
+	local($sub) = "";
+	local($contents);
+
+	$contents = readmakefile($file) or
+		&perror("FATAL: can't read $portdir/$file") and return 0;
+	if ($contents !~ /#(\s+)\$$rcsidstr([^\$]*)\$/) {
+		&perror("FATAL: no \$$rcsidstr\$ line in $file");
+	}
+	if ($contents !~ /COMMENT=\s+\w/) {
+		&perror("FATAL: no COMMENT line in $file");
+	}
+	# remove comments
+	foreach $n (split "\n", $contents) {
+		if ($n =~ /SUBDIR(\+*)=\s*(\S+)(\s*#.*|\s*)$/) {
+			$sub = $2;
+			if ($first == 0) {
+				if ($1 ne "+") {
+					&perror("FATAL: use SUBDIR+=, not SUBDIR$1=");
+				}
+				if ($lastsub ge $sub) {
+					&perror("FATAL: $sub should come before $lastsub");
+				}
+			}
+			else {
+				$first = 0;
+			}
+			$lastsub = $sub;
+		}
+	}
 }
 
 sub TRUE {1;}
