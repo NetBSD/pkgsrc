@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.17 2003/09/13 03:50:12 jlam Exp $
+# $NetBSD: Makefile.in,v 1.18 2003/09/13 17:07:47 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -50,9 +50,9 @@ nbcompat/nbconfig.h: nbcompat/config.h
 				guard = $$0;				\
 				sub("^\#[ 	]*define[ 	]+", "", guard); \
 				sub("[ 	]+.*", "", guard);		\
-				print "\#ifndef " guard;		\
+				print "#ifndef " guard;			\
 				print $$0;				\
-				print "\#endif";			\
+				print "#endif";				\
 				next;					\
 			}						\
 		}							\
