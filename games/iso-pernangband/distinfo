@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/17 21:51:15 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2001/10/21 17:10:14 hubertf Exp $
 
 SHA1 (iso-pern_src-0_2_6.tar.gz) = f71a815e4942dbf59dc6611abf5b538c8a8d1519
 Size (iso-pern_src-0_2_6.tar.gz) = 2432783 bytes
-SHA1 (patch-aa) = 39dcd646fc56d2cfd8a178b52013f8d46c43bbb1
+SHA1 (patch-aa) = d4f09c254e71e1395e8f0968d7bc6478ad3f976c
