@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.142 2001/02/27 08:20:23 skrll Exp $
+# $NetBSD: Packages.txt,v 1.143 2001/03/12 11:23:01 skrll Exp $
 ###########################################################################
 
 			==========================
@@ -877,8 +877,10 @@ Here's how to use libtool in a pkg in seven simple steps:
    the -version-info especially when major and minor are zero, as libtool
    will otherwise strip off the shared library version.
 
-   The "-release" option has been disabled in the pkgsrc version of libtool
-   as it creates unnecessary differences between ELF and a.out platforms.
+   The "-release" option will produce different results for a.out and ELF 
+   (excluding symlinks) in only one case. An ELF library of the form
+   libfoo-release.so.x.y will have a symlink of libfoo.so.x.y on an a.out
+   platform. This will be handled automatically soon.
 
    The -rpath argument is the install directory of the library being built.
 

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.683 2001/03/11 09:51:59 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.684 2001/03/12 11:23:06 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -220,12 +220,12 @@ CONFIGURE_ENV+=	LIBS="${LIBS} -L${LOCALBASE}/lib -lintl"
 LIBTOOL=		${LOCALBASE}/bin/libtool
 # XXX Here we really need the following, but BUILD_DEPENDS doesn't
 # XXX support it at the moment.
-# BUILD_DEPENDS+=libtool>=1.4.20010219nb2:../../devel/libtool
+# BUILD_DEPENDS+=libtool>=1.4.20010219nb3:../../devel/libtool
 .if make(install-run-depends) || make(fetch-list-recursive) || make(show-depends-dirs)
 DEPENDS+=		libtool>=1.4.20010219nb2:../../devel/libtool
 .endif
 .if defined(USE_LTDL)
-DEPENDS+=		libtool>=1.4.20010219nb2:../../devel/libtool
+DEPENDS+=		libtool>=1.4.20010219nb3:../../devel/libtool
 .endif
 .endif
 

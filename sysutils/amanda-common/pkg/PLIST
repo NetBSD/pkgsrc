@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2001/01/16 21:59:32 cjones Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/03/12 11:23:07 skrll Exp $
+lib/libamanda-2.4.2.so
 lib/libamanda.a
 lib/libamanda.la
 lib/libamanda.so
-lib/libamanda-2.4.2.so
+lib/libamtape-2.4.2.so
 lib/libamtape.a
 lib/libamtape.la
 lib/libamtape.so
-lib/libamtape-2.4.2.so
 man/man8/amanda.8

@@ -1,16 +1,8 @@
-$NetBSD: patch-ab,v 1.18 2001/02/28 18:18:23 skrll Exp $
+$NetBSD: patch-ab,v 1.19 2001/03/12 11:23:04 skrll Exp $
 
---- ltmain.sh.orig	Wed Feb 28 17:56:25 2001
+--- ltmain.sh.orig	Mon Feb 19 05:05:23 2001
 +++ ltmain.sh
-@@ -946,7 +946,6 @@
- 	  continue
- 	  ;;
- 	release)
--	  release="-$arg"
- 	  prev=
- 	  continue
- 	  ;;
-@@ -2397,7 +2396,7 @@
+@@ -2397,7 +2397,7 @@
  
  	# Check that each of the things are valid numbers.
  	case "$current" in
@@ -19,7 +11,7 @@ $NetBSD: patch-ab,v 1.18 2001/02/28 18:18:23 skrll Exp $
  	*)
  	  $echo "$modename: CURRENT \`$current' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2406,7 +2405,7 @@
+@@ -2406,7 +2406,7 @@
  	esac
  
  	case "$revision" in
@@ -28,7 +20,7 @@ $NetBSD: patch-ab,v 1.18 2001/02/28 18:18:23 skrll Exp $
  	*)
  	  $echo "$modename: REVISION \`$revision' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2415,7 +2414,7 @@
+@@ -2415,7 +2415,7 @@
  	esac
  
  	case "$age" in
@@ -37,7 +29,7 @@ $NetBSD: patch-ab,v 1.18 2001/02/28 18:18:23 skrll Exp $
  	*)
  	  $echo "$modename: AGE \`$age' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2612,6 +2611,9 @@
+@@ -2612,6 +2612,9 @@
  	  *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-os2* | *-*-beos*)
  	    # these systems don't actually have a c library (as such)!
  	    ;;

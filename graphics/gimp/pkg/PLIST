@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2001/03/03 17:27:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.27 2001/03/12 11:23:04 skrll Exp $
 bin/escputil
 bin/gimp
 bin/gimp-config
@@ -255,21 +255,24 @@ lib/gimp/1.2/plug-ins/xjt
 lib/gimp/1.2/plug-ins/xpm
 lib/gimp/1.2/plug-ins/xwd
 lib/gimp/1.2/plug-ins/zealouscrop
-lib/libgck.so
-lib/libgck.so.0
-lib/libgck.so.0.1
+lib/libgck-1.2.so
+lib/libgck-1.2.so.0
+lib/libgck-1.2.so.0.1
 lib/libgck.a
 lib/libgck.la
-lib/libgimp.so
-lib/libgimp.so.0
-lib/libgimp.so.0.1
+lib/libgck.so
+lib/libgimp-1.2.so
+lib/libgimp-1.2.so.0
+lib/libgimp-1.2.so.0.1
 lib/libgimp.a
 lib/libgimp.la
-lib/libgimpui.so
-lib/libgimpui.so.0
-lib/libgimpui.so.0.1
+lib/libgimp.so
+lib/libgimpui-1.2.so
+lib/libgimpui-1.2.so.0
+lib/libgimpui-1.2.so.0.1
 lib/libgimpui.a
 lib/libgimpui.la
+lib/libgimpui.so
 man/man1/escputil.1
 man/man1/gimp-remote.1
 man/man1/gimp.1
@@ -1420,6 +1423,7 @@ share/locale/uk/LC_MESSAGES/gimp.mo
 @unexec rmdir %D/share/aclocal 2>/dev/null || true
 @dirrm lib/gimp/1.2/plug-ins
 @dirrm lib/gimp/1.2/modules
+@dirrm lib/gimp/1.2
 @dirrm include/libgimp
 @dirrm include/gck
 @dirrm etc/gimp/1.2
