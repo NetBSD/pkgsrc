@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:08 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/04/04 09:34:08 wiz Exp $
 
-DISTNAME=	Lchown-0.07
+DISTNAME=	Lchown-1.00
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5lc
-PKGREVISION=	1
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/N/NC/NCLEATON/
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN}
 
 MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/Lchown/
 COMMENT=	Perl5 module interface to the lchown() system call
 
 USE_BUILDLINK3=		YES
