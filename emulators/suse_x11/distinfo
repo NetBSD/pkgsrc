@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.6 2002/11/25 11:01:17 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2005/03/15 14:09:15 wiz Exp $
 
 SHA1 (suse73/i386/xshared.rpm) = 50ace1909bf0a39f509d6401d18cd375dbcf847d
+RMD160 (suse73/i386/xshared.rpm) = e6178794e5570081475d9c8bcc9531022b0a902c
 Size (suse73/i386/xshared.rpm) = 1728255 bytes
 SHA1 (suse73/i386/xf86.rpm) = d824c1323018100870fb42f08ec0e26c10ae8702
+RMD160 (suse73/i386/xf86.rpm) = ace5c555852aeddbba6b6d6af71ff647b557e182
 Size (suse73/i386/xf86.rpm) = 20347104 bytes
 SHA1 (suse73/ppc/xshared.rpm) = 0864b93f0e2e226d6c324fa0abc6805b9f63fbc1
 Size (suse73/ppc/xshared.rpm) = 1858947 bytes
