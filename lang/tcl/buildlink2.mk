@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2004/03/24 15:24:36 jwise Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/04/09 23:37:28 danw Exp $
 
 .if !defined(TCL_BUILDLINK2_MK)
 TCL_BUILDLINK2_MK=	# defined
@@ -17,10 +17,11 @@ BUILDLINK_FILES.tcl+=	include/tcl/*/*.h
 BUILDLINK_FILES.tcl+=	lib/libtcl84.*
 BUILDLINK_FILES.tcl+=	lib/libtclstub84.*
 
-# Make "-ltcl" resolve into "-ltcl84", so that we don't need to patch so
-# many Makefiles.
+# Make "-ltcl" and "-ltcl8.4" resolve into "-ltcl84", so that we don't
+# need to patch so many Makefiles.
 #
 BUILDLINK_TRANSFORM+=	l:tcl:tcl84
+BUILDLINK_TRANSFORM+=	l:tcl8.4:tcl84
 
 BUILDLINK_TARGETS+=	tcl-buildlink
 
