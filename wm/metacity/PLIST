@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/09/22 08:09:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/12/24 10:09:31 jmmv Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -171,20 +171,19 @@ share/themes/Simple/metacity-1/maximized.png
 share/themes/Simple/metacity-1/metacity-theme-1.xml
 share/themes/Simple/metacity-1/minimize.png
 @dirrm share/themes/Simple/metacity-1
-@dirrm share/themes/Simple
+@comment in theme-dirs: @dirrm share/themes/Simple
 @dirrm share/themes/Metabox/metacity-1
-@dirrm share/themes/Metabox
+@comment in theme-dirs: @dirrm share/themes/Metabox
 @dirrm share/themes/Esco/metacity-1
-@dirrm share/themes/Esco
+@comment in theme-dirs: @dirrm share/themes/Esco
 @dirrm share/themes/Crux/metacity-1
-@dirrm share/themes/Crux
+@comment in theme-dirs: @dirrm share/themes/Crux
 @dirrm share/themes/Bright/metacity-1
-@dirrm share/themes/Bright
+@comment in theme-dirs: @dirrm share/themes/Bright
 @dirrm share/themes/Atlanta/metacity-1
-@dirrm share/themes/Atlanta
+@comment in theme-dirs: @dirrm share/themes/Atlanta
 @dirrm share/themes/AgingGorilla/metacity-1
-@dirrm share/themes/AgingGorilla
-@comment in xdg-dirs: @dirrm share/themes
+@comment in theme-dirs: @dirrm share/themes/AgingGorilla
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/metacity/icons
 @dirrm share/metacity/glade
