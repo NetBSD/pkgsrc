@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2001/06/27 18:04:38 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/10/30 10:16:44 markd Exp $
 
 DISTNAME=		pilot-link.${PILOT_LINK_VERS}
 CATEGORIES=		comms
@@ -15,8 +15,14 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/scripts/ltconfig
 
 GNU_CONFIGURE=		# defined
 
-CONFIGURE_ARGS+=	--with-cpp
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--without-libiconv
+.else
 CONFIGURE_ARGS+=	--with-libiconv
+.endif
+CONFIGURE_ARGS+=	--with-cpp
 
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-itcl
