@@ -1,4 +1,4 @@
-# $NetBSD: product.mk,v 1.5 2003/04/23 16:25:16 drochner Exp $
+# $NetBSD: product.mk,v 1.6 2005/01/27 21:15:45 recht Exp $
 
 DIST_SUBDIR=	zope
 BUILDLINK_DEPENDS.zope?=	zope-2.*
@@ -8,7 +8,7 @@ BUILDLINK_PREFIX.zope_DEFAULT=	${LOCALBASE}
 WRKSRC?=	${WRKDIR}
 NO_BUILD=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	21pth
+PYTHON_VERSIONS_ACCEPTED=	21
 
 ZOPEDIR=	${BUILDLINK_PREFIX.zope}/lib/zope
 PRODNAMES?=	${PKGNAME:C/^zope25-(.*)-.*/\1/}
