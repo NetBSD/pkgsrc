@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.2 2004/01/04 11:53:20 tron Exp $
+$NetBSD: patch-ac,v 1.3 2004/01/04 12:59:40 tron Exp $
 
 --- src/kernel/netbsd.c.orig	2003-02-12 03:15:59.000000000 +0100
-+++ src/kernel/netbsd.c	2004-01-04 12:52:29.000000000 +0100
-@@ -162,7 +162,7 @@
++++ src/kernel/netbsd.c	2004-01-04 13:57:58.000000000 +0100
+@@ -29,6 +29,7 @@
+ #include <errno.h>
+ #include <string.h>
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <sys/socket.h>
+ #include <sys/socketvar.h>
+ #include <netinet/in.h>
+@@ -162,7 +163,7 @@
  	if (tcbtablep == NULL)
  		return (NULL);
  
@@ -11,7 +19,7 @@ $NetBSD: patch-ac,v 1.2 2004/01/04 11:53:20 tron Exp $
  	while (kpcbp != (struct inpcb *) ktcbtablep) {
  		if (getbuf((u_long) kpcbp, &pcb, sizeof(struct inpcb)) == -1)
  			break;
-@@ -185,7 +185,7 @@
+@@ -185,7 +186,7 @@
  			return (pcb.inp_socket);
  		}
  
@@ -20,7 +28,7 @@ $NetBSD: patch-ac,v 1.2 2004/01/04 11:53:20 tron Exp $
  	}
  
  	return (NULL);
-@@ -351,7 +351,11 @@
+@@ -351,7 +352,11 @@
  			return (tcb6_temp.in6p_socket);
  		}
  
