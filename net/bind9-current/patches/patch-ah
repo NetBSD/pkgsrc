@@ -1,0 +1,10 @@
+$NetBSD: patch-ah,v 1.1 2001/02/04 10:39:13 itojun Exp $
+
+--- bin/check/Makefile.in-	Sun Feb  4 19:09:29 2001
++++ bin/check/Makefile.in	Sun Feb  4 19:09:38 2001
+@@ -64,4 +64,4 @@
+ install:: named-checkconf named-checkzone installdirs
+ 	${LIBTOOL} ${INSTALL_PROGRAM} named-checkconf ${DESTDIR}${sbindir}
+ 	${LIBTOOL} ${INSTALL_PROGRAM} named-checkzone ${DESTDIR}${sbindir}
+-	for m in ${MANPAGES}; do ${INSTALL_PROGRAM} $$m ${DESTDIR}${mandir}/man8; done
++	for m in ${MANPAGES}; do ${INSTALL_DATA} $$m ${DESTDIR}${mandir}/man8; done

@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 2001/01/03 17:15:51 itojun Exp $
+$NetBSD: md5,v 1.3 2001/02/04 10:39:12 itojun Exp $
 
-MD5 (bind/9.1.0b2/bind-9.1.0b2.tar.gz) = 7a53d339e51b59ee2f1a4e663b3f2e2a
+MD5 (bind/9.2.0s20010119/bind-9.2.0s20010119.tar.gz) = 22b1ee9ce83a52aef4a4ee98ee72f504
