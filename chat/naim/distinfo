@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2002/01/25 22:45:51 simonb Exp $
+$NetBSD: distinfo,v 1.3 2002/02/06 14:40:38 tv Exp $
 
-SHA1 (naim-0.11.2-2002-01-25-0900.tar.gz) = 6ce21583773ee2a782179cc52d53bc68879c9181
-Size (naim-0.11.2-2002-01-25-0900.tar.gz) = 137030 bytes
-SHA1 (patch-aa) = 59e9042fe20710d2951142d25b69ba14e014d4a3
-SHA1 (patch-ab) = 43dc18114f4e13a1e95c5b655495b646c12f8a41
+SHA1 (naim-0.11.2-2002-02-04-0919.tar.gz) = 38c5138f00ab5b9cc14cb4a358573c70324b1cfa
+Size (naim-0.11.2-2002-02-04-0919.tar.gz) = 140410 bytes
+SHA1 (patch-aa) = d0f350a86c061e7fe99817533737fa1295aaa6de
+SHA1 (patch-ab) = 35d4694c7a3a98eec35842f816622eb10a24dea0
