@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.392 2002/10/28 15:15:04 agc Exp $
+$NetBSD: CHANGES,v 1.393 2002/10/28 16:32:59 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3425,3 +3425,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added libargparse-0.1.0000 [agc 2002-10-28]
 	Updated gnuplot to 3.7.1nb1 [wiz 2002-10-28]
 	Added aqsis-0.6.4 [agc 2002-10-28]
+	Updated hdf5 to 1.4.4 [drochner 2002-10-28]
