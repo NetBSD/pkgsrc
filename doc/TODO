@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2565 2004/11/29 01:01:54 tv Exp $
+$NetBSD: TODO,v 1.2566 2004/11/29 01:43:22 minskim Exp $
 
 Suggested new packages
 ======================
@@ -290,7 +290,6 @@ Suggested package updates
 	o YoSucker-63
 	o aap-0.144
 	o abiword1-1.0.7
-	o abook-0.5.3
 	o acpi-iasl-20040715
 	o adzap-20041124
 	o afterstep-2.00.00
