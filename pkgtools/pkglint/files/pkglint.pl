@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.127 2005/02/11 17:01:29 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.128 2005/02/12 10:59:21 rillig Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -232,6 +232,7 @@ my $conf_pkgsrcdir	= '@PKGSRCDIR@';
 my $conf_localbase	= '@PREFIX@';
 my $conf_distver	= '@DISTVER@';
 my $conf_make		= '@MAKE@';
+my $conf_datadir	= '@DATADIR@';
 
 # Command Line Options
 my $opt_committer	= true;
@@ -271,12 +272,14 @@ my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
 my $opt_warn_paren	= true;
 my $opt_warn_workdir	= true;
+my $opt_warn_types	= true;
 my (%warnings) = (
 	"patches"	=> [\$opt_warn_patches, "warn on non-optimal patch files"],
 	"exec"		=> [\$opt_warn_exec, "warn if source files are executable"],
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
 	"paren"		=> [\$opt_warn_paren, "warn about usa of \$(VAR) instead of \${VAR} in Makefiles"],
+	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 	"workdir"	=> [\$opt_warn_workdir, "warn that work* should not be committed into CVS"],
 );
 
@@ -284,6 +287,10 @@ my (%warnings) = (
 my $regex_rcsidstr	= qr"\$($conf_rcsidstr)(?::[^\$]*|)\$";
 my $regex_known_rcs_tag	= qr"\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$conf_rcsidstr)(?::[^\$]*?|)\$";
 my $regex_validchars	= qr"[\011\040-\176]";
+my $regex_boolean	= qr"^(?:YES|yes|NO|no)$";
+my $regex_yes_or_undef	= qr"^(?:YES|yes)$";
+my $regex_mail_address	= qr"^[-\w\d_.]+\@[-\w\d.]+$";
+my $regex_url		= qr"^(?:http://|ftp://|#)"; # allow empty URLs
 
 # Global variables that should be eliminated by the next refactoring.
 my %definesfound	= ();
@@ -301,6 +308,7 @@ my $seen_USE_BUILDLINK3 = false;
 my %seen_Makefile_include = ();
 my %predefined;
 my $pkgname		= "";
+my %make_vars_typemap	= ();
 
 # these subroutines return C<true> if the checking succeeded (that includes
 # errors in the file) and C<false> if the file could not be checked.
@@ -449,8 +457,28 @@ sub parse_command_line() {
 	return true;
 }
 
+sub load_make_vars_typemap() {
+	my ($lines) = (load_file("${conf_datadir}/makevars.map"));
+	if (!$lines) {
+		return false;
+	}
+	foreach my $line (@$lines) {
+		if ($line->text =~ qr"^(?:#.*|\s*)$") {
+			# ignore empty and comment lines
+		} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([\w_]+)$") {
+			$make_vars_typemap{$1} = $2;
+		} else {
+			log_error($line->file, $line->lineno, "unknown line format");
+		}
+	}
+	return true;
+}
+
 sub main() {
 	parse_command_line();
+	if ($opt_warn_types) {
+		load_make_vars_typemap();
+	}
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "pkgsrcdir: $conf_pkgsrcdir");
 	log_info(NO_FILE, NO_LINE_NUMBER, "rcsidstr: $conf_rcsidstr");
@@ -1100,6 +1128,52 @@ sub readmakefile($) {
 
 	$. = $savedln;
 	return $contents;
+}
+
+sub check_make_variable_definition($) {
+	my ($line) = @_;
+	if ($line->text =~ qr"([A-Z_a-z0-9.]+)\s*(=|\?=|\+=)\s*(.*)") {
+		my ($varname, $op, $value) = ($1, $2, $3);
+		if ($value =~ qr"\$") {
+			# ignore values that contain other variables
+		} elsif (exists($make_vars_typemap{$varname})) {
+			my ($type) = ($make_vars_typemap{$varname});
+			if ($type eq "Boolean") {
+				if ($value !~ $regex_boolean) {
+					log_warning($line->file, $line->lineno, "$varname should be set to YES, yes, NO, or no.");
+				}
+			} elsif ($type eq "Yes_Or_Undefined") {
+				if ($value !~ $regex_yes_or_undef) {
+					log_warning($line->file, $line->lineno, "$varname should be set to YES or yes");
+				}
+			} elsif ($type eq "Mail_Address") {
+				if ($value !~ $regex_mail_address) {
+					log_warning($line->file, $line->lineno, "\"$value\" is not a valid mail address");
+				}
+			} elsif ($type eq "URL") {
+				if ($value !~ $regex_url) {
+					log_warning($line->file, $line->lineno, "\"$value\" is not a valid URL");
+				}
+			} else {
+				log_error($line->file, $line->lineno, "internal error: type $type unknown");
+			}
+		}
+	}
+	return true;
+}
+
+sub check_Makefile_variable_definitions($) {
+	my ($fname) = @_;
+	my ($lines) = load_file($fname);
+	if (!$lines) {
+		log_error($fname, NO_LINE_NUMBER, "Could not open");
+		return false;
+	} else {
+		foreach my $line (@$lines) {
+			check_make_variable_definition($line);
+		}
+	}
+	return true;
 }
 
 sub checkfile_Makefile($) {
@@ -1893,7 +1967,11 @@ EOF
 			"discouraged. redefine \"do-$1\" instead.");
 	}
 
-	return true;
+	if ($opt_warn_types) {
+		return check_Makefile_variable_definitions($fname);
+	} else {
+		return true;
+	}
 }
 
 sub checkextra($$) {
