@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/25 15:31:34 taca Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/25 23:22:13 jlam Exp $
 
 DISTNAME=		samba-2.2.2-ja-1.1
 PKGNAME=		ja-samba-2.2.2.1.1
@@ -36,9 +36,6 @@ SAMBA_LOGDIR?=		${VARDIR}/log
 SAMBA_PIDDIR?=		${VARDIR}/run
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
 
-MAKE_ENV+=		ETCDIR=${SAMBA_ETCDIR}
-MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
-
 CONFIGURE_ARGS+=	--localstatedir=${VARDIR}
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
@@ -56,6 +53,11 @@ CONFIGURE_ARGS+=	--with-sslinc=${BUILDLINK_DIR}
 CFLAGS+=		-I${BUILDLINK_DIR}/include/openssl	# ssl.h, err.h
 
 CONFIGURE_ARGS+=	--with-i18n-swat
+
+# Force the use of the included gettext library this doesn't seem to link
+# with the gettext-lib package.
+#
+CONFIGURE_ARGS+=	--with-included-gettext
 
 CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 
@@ -104,7 +106,7 @@ MESSAGE_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
 MESSAGE_SUBST+=		ROOT_USER=${ROOT_USER}
 
-CONF_FILES=		${EXAMPLESDIR}/smb.conf.sample ${SAMBA_ETCDIR}/smb.conf
+CONF_FILES=		${EXAMPLESDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 SUPPORT_FILES_PERMS=	${SMBPASSWD_FILE}
 RCD_SCRIPTS=		samba nmbd smbd
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
@@ -112,6 +114,7 @@ OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0500
 
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 
+# Remove irrelevant files for this package.
 post-extract:
 	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -print |	\
 		${XARGS} ${RM} -f
@@ -121,8 +124,8 @@ post-extract:
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/autofs
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/dce-dfs
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/libsmbclient
-	${RM} -r ${WRKDIR}/${DISTNAME}/examples/svr4-startup
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/smbchartool
+	${RM} -r ${WRKDIR}/${DISTNAME}/examples/svr4-startup
 
 pre-install:
 	@for script in ${RCD_SCRIPTS}; do				\
@@ -149,7 +152,7 @@ post-install:
 			${PREFIX}/etc/rc.d/$${script};			\
 	done
 	${INSTALL_SCRIPT} ${WRKSRC}/script/convert_smbpasswd		\
-			${PREFIX}/sbin
+		${EXAMPLESDIR}/misc
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
 

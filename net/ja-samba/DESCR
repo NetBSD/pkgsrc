@@ -12,5 +12,6 @@ capability for these operating systems to behave much like a LAN
 Server or Windows NT Server machine, only with added functionality and
 flexibility designed to make life easier for administrators.
 
-And this is modified version deveopled by Samba Users Group Japan, and
-support I18N for SWAT and use of localized charcter encoding (Japanese).
+This package contains a modified version of Samba developed by the Samba
+Users Group Japan and supports I18N for SWAT and the use of localized
+(Japanese) character encoding.

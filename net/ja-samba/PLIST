@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/25 15:31:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/25 23:22:13 jlam Exp $
 bin/make_nftable
 bin/make_printerdef
 bin/make_smbcodepage
@@ -73,7 +73,6 @@ man/man8/smbspool.8
 man/man8/smbumount.8
 man/man8/swat.8
 man/man8/winbindd.8
-sbin/convert_smbpasswd
 sbin/mksmbpasswd
 sbin/nmbd
 sbin/smbd
@@ -150,6 +149,7 @@ share/examples/samba/LDAP/ldapchpasswd
 share/examples/samba/LDAP/ldapsync.pl
 share/examples/samba/LDAP/samba.schema
 share/examples/samba/README
+share/examples/samba/misc/convert_smbpasswd
 share/examples/samba/misc/extra_smbstatus
 share/examples/samba/misc/modify_samba_config.pl
 share/examples/samba/misc/swat.pl
