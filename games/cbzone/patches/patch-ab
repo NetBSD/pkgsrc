@@ -1,0 +1,11 @@
+--- cbzone.script.src.orig	Sat Jul 31 10:13:56 1993
++++ cbzone.script.src	Mon Jul 27 01:51:33 1998
+@@ -16,7 +16,7 @@
+ cbzone.exec -reports -nooutput $* | \
+ 	{
+ 		while read msg
+-		do play ${msg}.au 2>/dev/null
++		do cat ${msg}.au >/dev/audio
+ 		done
+ 	}
+ 
