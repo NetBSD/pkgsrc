@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/01/25 17:13:14 pooka Exp $
+# $NetBSD: Makefile,v 1.32 2000/02/18 14:37:43 pooka Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -8,7 +8,7 @@ DEPENDS+=		vim-share-${VIM_VERSION}:../vim-share
 
 CONFLICTS=		vim-xaw-* vim-gtk-*
 
-CONFIGURE_ARGS+=	--enable-gui=no --without-x --with-tlib=ncurses
+CONFIGURE_ARGS+=	--enable-gui=no --without-x
 CPPFLAGS+=              -I${LOCALBASE}/include  # for ncurses' termcap.h
 LDFLAGS+=               -L${LOCALBASE}/lib      # for -lncurses
 CONFIGURE_ENV+=         CPPFLAGS="${CPPFLAGS}"
@@ -20,10 +20,16 @@ INSTALL_TARGET=		installvimbin
 
 .if (${OPSYS} == "NetBSD")
 DEPENDS+=               ncurses>=4.2:../../devel/ncurses
+CONFIGURE_ARGS+=	--with-tlib=ncurses
+.elif ${OPSYS} == "SunOS"
+CPPFLAGS=
+CONFIGURE_ARGS+=	--with-tlib=curses
 .endif
 
 post-install:
-	${LN} -fs vim ${PREFIX}/bin/rvim
-	${LN} -fs vim ${PREFIX}/bin/rview
+	for f in rvim rview ; do				\
+		${RM} -f ${PREFIX}/bin/$$f;			\
+		${LN} -s vim ${PREFIX}/bin/$$f;			\
+	done
 
 .include "../../mk/bsd.pkg.mk"
