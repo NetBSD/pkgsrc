@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3023 2003/08/11 07:41:18 martin Exp $
+$NetBSD: CHANGES,v 1.3024 2003/08/11 10:52:34 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3234,3 +3234,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sun-jdk14 to 1.0.4 [jschauma 2003-08-10]
 	Updated nut to 9.0 [wiz 2003-08-11]
 	Updated xuvmstat to 20030810 [martin 2003-08-11]
+	Updated citrix_ica to 7.00.77757 [markd 2003-08-11]
