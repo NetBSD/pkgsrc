@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/19 21:53:29 kim Exp $
+
+--- configure.orig	Wed Jul  8 14:19:35 1998
++++ configure	Sun Sep 19 17:45:48 1999
+@@ -73,6 +73,7 @@
+   CFLAGS="$cflags"
+   case `(uname -s || echo unknown) 2>/dev/null` in
+   Linux | linux) LDSHARED=${LDSHARED-"gcc -shared -Wl,-soname,libz.so.1"};;
++  SunOS\ 5*)     LDSHARED=${LDSHARED-"gcc -G -Wl,-soname,libz.so.1"};;
+   *)             LDSHARED=${LDSHARED-"gcc -shared"};;
+   esac
+ else
