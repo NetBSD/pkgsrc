@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/21 03:54:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/27 02:30:29 xtraeme Exp $
 #
 
-DISTNAME=		clamsmtp-0.3
+DISTNAME=		clamsmtp-0.4
 CATEGORIES=		mail
 MASTER_SITES=		http://memberwebs.com/nielsen/software/clamsmtp/
 
@@ -11,7 +11,7 @@ COMMENT=		SMTP filter that allows you to check for viruses
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILD_DEPENDS+=		clamav-[0-9]*:../../mail/clamav
+#BUILD_DEPENDS+=		clamav-[0-9]*:../../mail/clamav
 
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
