@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/02/04 00:06:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/02/27 20:32:54 hubertf Exp $
 #
 
-DISTNAME=	xhippo
-PKGNAME=	xhippo-0.3
+DISTNAME=	xhippo-0.6
 CATEGORIES=	audio x11
 MASTER_SITES=	http://zenchaos.netpedia.net/software/
 
@@ -11,7 +10,6 @@ HOMEPAGE=	http://zenchaos.netpedia.net/
 
 DEPENDS=	gtk+-1.1.12:../../x11/gtk
 
-NO_WRKSUBDIR=	YES
 USE_X11=	YES
 
 post-install:
