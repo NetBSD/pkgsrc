@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: tflat,v 1.4 2001/02/11 17:07:34 dmcmahill Exp $
+# $NetBSD: tflat,v 1.5 2001/02/16 12:58:57 wiz Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -115,9 +115,9 @@ function find_all_depends(pkg,pkgreg,i,deps){
 
 	# if we find the package listed in its own depends list, then
 	# return an empty list if we're going down the depends tree.
-	# When a package lists its self in the depends tree file, it simply
+	# When a package lists itself in the depends tree file, it simply
 	# is a place holder and means the package has no depends.  However
-	# other pacakges may still depend upon it, so we need to keep looking.
+	# other packages may still depend upon it, so we need to keep looking.
 	if ( (!up) && (topdepends[pkg]~reg2str(pkg)) ){
 		alldepends[pkg] = " ";
 		return(alldepends[pkg]);	
@@ -142,7 +142,7 @@ function find_all_depends(pkg,pkgreg,i,deps){
 
 #
 # take a string which has special characters like '+' in it and
-# escape them.  Also put a space before and after since thats how
+# escape them.  Also put a space before and after since that's how
 # we'll distinguish things like gnome from gnome-libs
 #
 function reg2str(reg){
