@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/03/28 22:06:15 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 11:02:50 agc Exp $
 
 SHA1 (XFree86-4.4.0-src-1.tgz) = 44b38a7044c82d0b2f785b0e6a935349abcb5d79
+RMD160 (XFree86-4.4.0-src-1.tgz) = 40917951f1f661bfa28450771bbe86e8f0dd2549
 Size (XFree86-4.4.0-src-1.tgz) = 11760814 bytes
 SHA1 (patch-aa) = 821eb4eb70307f1b8072ccc8e6242e1edb9823f9

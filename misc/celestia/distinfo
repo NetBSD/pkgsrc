@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/11/16 14:34:39 adam Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 11:02:50 agc Exp $
 
 SHA1 (celestia-1.3.2.tar.gz) = 3407610f3844cd8aaf4f079e1ec5b0c236d3d547
+RMD160 (celestia-1.3.2.tar.gz) = 4f891866be70a2d918bdb75ad4fd7d4dddcef4ce
 Size (celestia-1.3.2.tar.gz) = 18091458 bytes
 SHA1 (patch-aa) = ec2d90e1a6211acf02e5fd89dcf0f7a100394fa0
 SHA1 (patch-ab) = 40c925ad12cc52b3034bcd15720b3c6483e2fdc1

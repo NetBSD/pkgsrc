@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/01/02 03:17:54 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 11:02:59 agc Exp $
 
 SHA1 (xjdic24.tgz) = 732b2922c3e7229baedfb8be958dc3b92a8a06b8
+RMD160 (xjdic24.tgz) = 25662aa7bd9538d00656983394e329a888ecfdf3
 Size (xjdic24.tgz) = 140091 bytes
 SHA1 (patch-aa) = 7e3dad15962b0ac69bf25c6f98cbbff8925aed8d
 SHA1 (patch-ab) = 26bfeffcb8d56d99922164410b9ffe98ec5e8412

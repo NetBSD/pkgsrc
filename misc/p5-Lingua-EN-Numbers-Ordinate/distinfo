@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/19 19:53:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 11:02:57 agc Exp $
 
 SHA1 (Lingua-EN-Numbers-Ordinate-1.02.tar.gz) = c4b24935f3b328055b6aa2cd7d33afe0eb71fb1b
+RMD160 (Lingua-EN-Numbers-Ordinate-1.02.tar.gz) = b70e6eeb3ab1906bdf8bfc3fc1821986be65f5c2
 Size (Lingua-EN-Numbers-Ordinate-1.02.tar.gz) = 5564 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/12/28 15:37:37 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 11:02:52 agc Exp $
 
 SHA1 (fooseti-0.6.6.tar.gz) = c4c2226ef5ae44cbf238aa9543ded908d013b4f9
+RMD160 (fooseti-0.6.6.tar.gz) = ea787d2d2a33105bdf0bf1f7624e5fed8f8ffffd
 Size (fooseti-0.6.6.tar.gz) = 61863 bytes
 SHA1 (patch-aa) = ed34c9e9939830610a6544b1536faf1b477c995b
 SHA1 (patch-ab) = b3cc6f7451efdd481f0c168dcbfb19561db20e23

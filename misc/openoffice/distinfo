@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.27 2005/01/06 15:52:20 mrauch Exp $
+$NetBSD: distinfo,v 1.28 2005/02/24 11:02:56 agc Exp $
 
 SHA1 (openoffice-1.1.4/OOo_1.1.4_source.tar.gz) = 3161dbe53f6ec0b0d5a65790a2b1dd3d7331b430
+RMD160 (openoffice-1.1.4/OOo_1.1.4_source.tar.gz) = 0e218792bb72106cd494532de373d0f40a5a9587
 Size (openoffice-1.1.4/OOo_1.1.4_source.tar.gz) = 219743530 bytes
 SHA1 (openoffice-1.1.4/gpc231.tar.Z) = dd70a665179a9eac23624a4fe9f22104aad9bb1d
+RMD160 (openoffice-1.1.4/gpc231.tar.Z) = e90f5f0f59433f1229117e01a5160669af58527d
 Size (openoffice-1.1.4/gpc231.tar.Z) = 27917 bytes
 SHA1 (openoffice-1.1.4/helpcontent_31_unix.tgz) = 1295c30cb3efd4bfa6bb3b4fd1f9ae66a1543f20
 Size (openoffice-1.1.4/helpcontent_31_unix.tgz) = 12073861 bytes
@@ -27,6 +29,7 @@ Size (openoffice-1.1.4/helpcontent_86_unix.tgz) = 12769280 bytes
 SHA1 (openoffice-1.1.4/helpcontent_88_unix.tgz) = ed03e5bdb574228580ed83dbf7a2095b5409918a
 Size (openoffice-1.1.4/helpcontent_88_unix.tgz) = 12953600 bytes
 SHA1 (openoffice-1.1.4/ooo_addons_114.tar.bz2) = 87920f3547cf7170bc99e39c3799c779fa3c625e
+RMD160 (openoffice-1.1.4/ooo_addons_114.tar.bz2) = 927829bff619bc42546d9b3c645a9bf4d4397a50
 Size (openoffice-1.1.4/ooo_addons_114.tar.bz2) = 11766494 bytes
 SHA1 (patch-aa) = 783e0cf32bc942cc6f8d31a0fb74a9d91205e0e7
 SHA1 (patch-ab) = 873131e69215c063edb9e65af0155ca1725ac552

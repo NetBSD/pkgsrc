@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/31 21:35:05 kim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 11:02:56 agc Exp $
 
 SHA1 (File-Tail-0.99.1.tar.gz) = bb00e67de8f4e7c9fc3a84ca9188704aa42d39e6
+RMD160 (File-Tail-0.99.1.tar.gz) = 708990e41dcf3306202a30591e2f8eb386574a46
 Size (File-Tail-0.99.1.tar.gz) = 21830 bytes

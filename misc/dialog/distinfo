@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2003/10/08 03:01:32 danw Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 11:02:51 agc Exp $
 
 SHA1 (dialog-0.6z.tar.gz) = 3c9483554bbb63bb8838e1f7b31f2600a33198ad
+RMD160 (dialog-0.6z.tar.gz) = 174a66402790388b3acdad1b49e624fefcf2dfb0
 Size (dialog-0.6z.tar.gz) = 50901 bytes
 SHA1 (patch-aa) = 39dddd7e772d2d0e796ba80eb9309db8b5c679f5
 SHA1 (patch-ab) = 39318c50019277ffa1cecdb33f16e16c11ad37af

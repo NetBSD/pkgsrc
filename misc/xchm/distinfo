@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.11 2005/02/22 01:08:37 minskim Exp $
+$NetBSD: distinfo,v 1.12 2005/02/24 11:02:58 agc Exp $
 
 SHA1 (xchm-0.9.8.tar.gz) = 4b8f696a6c74253d03159aa528ce69aa12d7ab2b
+RMD160 (xchm-0.9.8.tar.gz) = f7ebe7ec749f09c66fbc363da2ee90139e850ba1
 Size (xchm-0.9.8.tar.gz) = 325722 bytes

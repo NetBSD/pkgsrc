@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/01/25 12:45:08 markd Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 11:02:54 agc Exp $
 
 SHA1 (koffice-i18n-et-1.3.5.tar.bz2) = 9370a071f79de706255538f6a6d8da3c7e078e6e
+RMD160 (koffice-i18n-et-1.3.5.tar.bz2) = 73516bd156970c87e57fa02d6460ba91236373d1
 Size (koffice-i18n-et-1.3.5.tar.bz2) = 1205355 bytes
