@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/04/22 20:33:27 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/04/22 22:58:48 jtb Exp $
 bin/mkoctfile
 bin/mkoctfile-2.1.34
 bin/octave
@@ -491,6 +491,8 @@ share/octave/2.1.34/m/finance/pv.m
 share/octave/2.1.34/m/finance/pvl.m
 share/octave/2.1.34/m/finance/rate.m
 share/octave/2.1.34/m/finance/vol.m
+share/octave/2.1.34/m/general/cart2pol.m
+share/octave/2.1.34/m/general/cart2sph.m
 share/octave/2.1.34/m/general/columns.m
 share/octave/2.1.34/m/general/common_size.m
 share/octave/2.1.34/m/general/diff.m
@@ -508,6 +510,7 @@ share/octave/2.1.34/m/general/nargchk.m
 share/octave/2.1.34/m/general/nextpow2.m
 share/octave/2.1.34/m/general/num2str.m
 share/octave/2.1.34/m/general/perror.m
+share/octave/2.1.34/m/general/pol2cart.m
 share/octave/2.1.34/m/general/postpad.m
 share/octave/2.1.34/m/general/prepad.m
 share/octave/2.1.34/m/general/randperm.m
@@ -516,12 +519,14 @@ share/octave/2.1.34/m/general/reshape.m
 share/octave/2.1.34/m/general/rot90.m
 share/octave/2.1.34/m/general/rows.m
 share/octave/2.1.34/m/general/shift.m
+share/octave/2.1.34/m/general/sph2cart.m
 share/octave/2.1.34/m/general/strerror.m
 share/octave/2.1.34/m/general/tril.m
 share/octave/2.1.34/m/general/triu.m
 share/octave/2.1.34/m/image/colormap.m
 share/octave/2.1.34/m/image/gray.m
 share/octave/2.1.34/m/image/gray2ind.m
+share/octave/2.1.34/m/image/hsv2rgb.m
 share/octave/2.1.34/m/image/image.m
 share/octave/2.1.34/m/image/imagesc.m
 share/octave/2.1.34/m/image/imshow.m
@@ -530,6 +535,7 @@ share/octave/2.1.34/m/image/ind2rgb.m
 share/octave/2.1.34/m/image/loadimage.m
 share/octave/2.1.34/m/image/ntsc2rgb.m
 share/octave/2.1.34/m/image/ocean.m
+share/octave/2.1.34/m/image/rgb2hsv.m
 share/octave/2.1.34/m/image/rgb2ind.m
 share/octave/2.1.34/m/image/rgb2ntsc.m
 share/octave/2.1.34/m/image/saveimage.m
@@ -840,10 +846,12 @@ share/octave/2.1.34/m/statistics/tests/welch_test.m
 share/octave/2.1.34/m/statistics/tests/wilcoxon_test.m
 share/octave/2.1.34/m/statistics/tests/z_test.m
 share/octave/2.1.34/m/statistics/tests/z_test_2.m
+share/octave/2.1.34/m/strings/base2dec.m
 share/octave/2.1.34/m/strings/bin2dec.m
 share/octave/2.1.34/m/strings/blanks.m
 share/octave/2.1.34/m/strings/com2str.m
 share/octave/2.1.34/m/strings/deblank.m
+share/octave/2.1.34/m/strings/dec2base.m
 share/octave/2.1.34/m/strings/dec2bin.m
 share/octave/2.1.34/m/strings/dec2hex.m
 share/octave/2.1.34/m/strings/findstr.m
@@ -855,6 +863,7 @@ share/octave/2.1.34/m/strings/rindex.m
 share/octave/2.1.34/m/strings/split.m
 share/octave/2.1.34/m/strings/str2mat.m
 share/octave/2.1.34/m/strings/str2num.m
+share/octave/2.1.34/m/strings/strjust.m
 share/octave/2.1.34/m/strings/strcat.m
 share/octave/2.1.34/m/strings/strcmp.m
 share/octave/2.1.34/m/strings/strrep.m
@@ -916,7 +925,6 @@ share/doc/html/octave/octave_3.html
 share/doc/html/octave/octave_30.html
 share/doc/html/octave/octave_31.html
 share/doc/html/octave/octave_32.html
-share/doc/html/octave/octave_34.html
 share/doc/html/octave/octave_34.html
 share/doc/html/octave/octave_35.html
 share/doc/html/octave/octave_36.html
