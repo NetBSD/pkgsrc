@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/02/12 21:15:07 minskim Exp $
+# $NetBSD: Makefile,v 1.50 2004/02/12 21:22:35 minskim Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -16,7 +16,7 @@ COMMENT=		The W3C Reference Library
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES_libwww-configure-5.4.0.gz=	${MASTER_SITE_LOCAL}
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -52,17 +52,17 @@ PLIST_SUBST+=	MD5LIB=""
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
 .if ${USE_SOCKS} == 4
-.include "../../net/socks4/buildlink2.mk"
+.include "../../net/socks4/buildlink3.mk"
 CONFIGURE_ARGS+= 	--with-socks4=${BUILDLINK_PREFIX.socks4}/lib/libsocks4.a
 CONFIGURE_ARGS+=	--with-socks5=no
 .else
-.include "../../net/socks5/buildlink2.mk"
+.include "../../net/socks5/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-socks4=no
 CONFIGURE_ARGS+= 	--with-socks5=${BUILDLINK_prefix.socks5}/lib/libsocks5.a
 .endif
 .endif
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
