@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.416 2003/03/25 09:16:15 wiz Exp $
+$NetBSD: TODO,v 1.417 2003/03/25 10:38:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -262,7 +262,6 @@ Suggested package updates
 	o xpdf-2.02
 	o xplanet-1.0.0
 	o xpuyopuyo-0.9.5
-	o xscreensaver-4.09
 	o xsidplay-1.6.5pre20
 
 

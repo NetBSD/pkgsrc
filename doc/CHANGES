@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1765 2003/03/25 09:16:15 wiz Exp $
+$NetBSD: CHANGES,v 1.1766 2003/03/25 10:38:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1294,3 +1294,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.15.1 [gehenna 2003-03-25]
 	Added tuxracer-0.61 [salo 2003-03-25]
 	Updated sox to 12.17.4 [wiz 2003-03-25]
+	Updated xscreensaver to 4.09 [wiz 2003-03-25]
+	Updated xscreensaver-gnome to 4.09 [wiz 2003-03-25]
