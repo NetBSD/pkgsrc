@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.32 2004/01/13 08:02:12 jlam Exp $
+# $NetBSD: module.mk,v 1.33 2004/01/21 09:40:49 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -99,11 +99,11 @@ FIX_RPATH+=	PERL5_LDFLAGS
 LDFLAGS+=	${PERL5_LDFLAGS}
 .endif
 
-# MakeMaker provides two hooks, PASTHRU_INC and OTHERLDFLAGS, to
+# MakeMaker provides two hooks, OPTIMIZE and OTHERLDFLAGS, to
 # customize the arguments passed to the preprocessor and linker,
 # respectively.
 #
-PERL5_MAKE_FLAGS+=	PASTHRU_INC="${CPPFLAGS}"
+PERL5_MAKE_FLAGS+=	OPTIMIZE="${CFLAGS} ${CPPFLAGS}"
 .if ${OBJECT_FMT} == "a.out"
 PERL5_MAKE_FLAGS+=	OTHERLDFLAGS="${LDFLAGS:S/-Wl,//g}"
 .else
