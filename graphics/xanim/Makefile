@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2001/04/21 09:36:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2001/08/27 20:36:56 is Exp $
 
 DISTNAME=	xanim2801
-PKGNAME=	xanim-2.80.1
+PKGNAME=	xanim-2.80.1nb1
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://xanim.va.pubnix.com/\
 		ftp://xanim.va.pubnix.com/modules/ \
