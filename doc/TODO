@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.382 2003/03/18 09:20:46 wiz Exp $
+$NetBSD: TODO,v 1.383 2003/03/19 09:02:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -106,7 +106,7 @@ Suggested package updates
 	o exim-4.12 [pkg/19850]
 	o exim-4.14
 	o exmh-2.6.1
-	o fetchmail-6.2.2
+	o fetchmail-6.2.2 [pkg/20790]
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.34
@@ -115,7 +115,7 @@ Suggested package updates
 	o gaim-0.59.9
 	o gauche-0.6.7 [kei]
 	o gcc3-3.2.2 [pkg/20308|jlam]
-	o gcpio-2.5
+	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0
 	o gd-2.0.4
 	o gdm-2.4.1.1
@@ -136,7 +136,7 @@ Suggested package updates
 	o gpa-0.6.1
 	o gperiodic-2.0.2
 	o grace-5.1.12
-	o gsed-4.0.5
+	o gsed-4.0.6
 	o gtetrinet-0.7.0
 	o gtk2-pan-0.13.91
 	o hatari-0.30
@@ -155,7 +155,7 @@ Suggested package updates
 	o koth-0.8.0 [http://www.nongnu.org/koth/]
 	o lbreakout2-2.4.1 [pkg/20684]
 	o lcms-1.0.9
-	o lesstif-0.93.40
+	o lesstif-0.93.41
 	o libgii-0.8.2
 	o libggi-2.0.2
 	o libole2-2.2.8
@@ -180,8 +180,7 @@ Suggested package updates
 	o mysql-3.23.54
 	o napshare-1.2
 	o neon-0.23.8
-	o nessus-2.0.0 [pkg/20530]
-	o nessus-2.0.1
+	o nessus-2.0.1 [pkg/20796]
 	o net-snmp-5.0.7 [pkg/19939]
 	o netpbm-10.14
 	o netscape-7.02
@@ -193,7 +192,9 @@ Suggested package updates
 	o openldap-2.1.12
 	o openoffice-1.0.2 [skrll]
 	o openoffice-643 [post-1.0.1]
+	o openslp-1.0.11
 	o openssl-0.9.7a
+	o opera-6.12 [pkg/20789]
 	o oss-3.9.7h
 	o p0f-1.8.3
 	o pen-0.9.5 [pkg/19216]
@@ -223,11 +224,13 @@ Suggested package updates
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
+	o soappy-0.9.8 [pkg/20787]
 	o spamassassin-2.50 [heinz]
 	o sqlite-2.7.5 [pkg/19719]
 	o sqlite-2.7.6
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.4
+	o squid-2.5.2
 	o srp_client-1.7.5 [jlam]
 	o stella-1.3
 	o subversion-0.19.1 [pkg/20725]
@@ -237,7 +240,7 @@ Suggested package updates
 	o t1lib-5.0.0
 	o tcl/tk-8.4.2 [bjoern]
 	o tcpdump-3.7.2
-	o ted-2.13
+	o ted-2.13 [pkg/20785]
 	o texmacs-1.0.1.8
 	o tightvnc-1.2.8
 	o ttf2pt1-3.4.3
@@ -245,6 +248,7 @@ Suggested package updates
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o webalizer-2.01-10 [pkg/20445]
+	o wine-20030318
 	o wwwoffle-2.7h
 	o wxGTK-2.4.0 [pkg/20640]
 	o xalan-c-1.4
