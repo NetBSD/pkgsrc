@@ -1,0 +1,55 @@
+$NetBSD: patch-aj,v 1.1 2005/03/22 09:46:10 adam Exp $
+
+--- config/cf/darwin.cf.in.orig	Wed Dec 15 05:53:05 2004
++++ config/cf/darwin.cf.in
+@@ -88,7 +88,7 @@ XCOMM operating system:  OSName (OSMajor
+  * Turn off to build on raw Darwin systems.
+  */
+ #ifndef DarwinQuartzSupport
+-# define DarwinQuartzSupport    YES
++# define DarwinQuartzSupport    @@DARWIN_USE_QUARTZ@@
+ #endif
+ 
+ #if DarwinQuartzSupport
+@@ -161,10 +161,10 @@ XCOMM operating system:  OSName (OSMajor
+  * so we use the 3.1-based version.
+  */
+ #if OSMajorVersion >= 7
+-# define CppCmd                 /usr/bin/cpp3
++# define CppCmd                 /usr/bin/cpp
+ # define StandardCppOptions     -traditional -D__GNUC__
+ #else
+-# define CppCmd                 /usr/bin/cpp
++# define CppCmd                /usr/bin/cpp
+ #endif
+ #if HasGcc3
+ # define RawCppCmd              CppCmd -undef
+@@ -173,8 +173,8 @@ XCOMM operating system:  OSName (OSMajor
+ #endif
+ 
+ /* we have a gcc compatible compiler, but its not called gcc */
+-#define CcCmd                   /usr/bin/cc
+-#define CplusplusCmd            /usr/bin/c++
++#define CcCmd                   @@PKGSRC_CC@@
++#define CplusplusCmd            @@PKGSRC_CXX@@
+ 
+ /* default flags to pass to cc */
+ #ifndef DefaultCCOptions
+@@ -202,7 +202,7 @@ XCOMM operating system:  OSName (OSMajor
+ #ifdef PpcDarwinArchitecture
+ # define DarwinMachineDefines   -D__powerpc__
+ # if HasGcc3
+-#  define OptimizedCDebugFlags  -Os
++#  define OptimizedCDebugFlags  @@PKGSRC_CFLAGS@@
+ # else
+ #  define OptimizedCDebugFlags  -O2
+ # endif
+@@ -212,7 +212,7 @@ XCOMM operating system:  OSName (OSMajor
+ #ifdef i386DarwinArchitecture
+ # define DarwinMachineDefines   -D__i386__
+ # if HasGcc3
+-#  define OptimizedCDebugFlags  -Os
++#  define OptimizedCDebugFlags  @@PKGSRC_CFLAGS@@
+ # else
+ #  define OptimizedCDebugFlags  -O2 -fno-strength-reduce
+ # endif
