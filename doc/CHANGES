@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8405 2004/12/22 15:13:37 abs Exp $
+$NetBSD: CHANGES,v 1.8406 2004/12/22 16:41:24 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6471,4 +6471,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gnumeric-1.4.1 [drochner 2004-12-22]
 	Updated rconfig to 0.42 [abs 2004-12-22]
 	Updated cpuflags to 0.79 [abs 2004-12-22]
+	Added p5-IO-Multiplex-1.08 [kim 2004-12-22]
+	Added postgrey-1.17 [kim 2004-12-22]
 
