@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/30 14:10:43 rh Exp $
+include/libstash/libstash.h
+include/libstash/libstash_defs.h
+include/libstash/libstash_incs.h
+include/libstash/bhp.h
+include/libstash/buf.h
+include/libstash/dbg.h
+include/libstash/list.h
+include/libstash/log.h
+include/libstash/matrix.h
+include/libstash/mem.h
+include/libstash/mq.h
+include/libstash/oh.h
+include/libstash/out.h
+include/libstash/pezz.h
+include/libstash/res.h
+include/libstash/ring.h
+include/libstash/treen.h
+lib/libstash_d.a
+lib/libstash.a
+lib/libstash_p.a
+man/man3/libstash.3
+man/man3/libstash_buf.3
+man/man3/libstash_oh.3
+@dirrm include/libstash
