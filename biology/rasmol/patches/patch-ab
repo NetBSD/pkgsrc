@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/03/13 04:42:00 wiz Exp $
+
+--- cif_ctonum.c.orig	Thu Aug  5 23:11:05 1999
++++ cif_ctonum.c	Thu Aug  5 23:11:11 1999
+@@ -168,7 +168,6 @@
+ extern "C" {
+ #endif
+ 
+-#define _USE_RASMOL_H_
+ #ifdef _USE_RASMOL_H_
+ #include "rasmol.h"
+ #else

@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/03/13 04:42:00 wiz Exp $
+
+--- Imakefile.orig	Tue Jul  6 01:48:28 1999
++++ Imakefile	Mon Mar 13 04:25:00 2000
+@@ -60,11 +60,12 @@
+ 
+ # DEPTHDEF = -DTHIRTYTWOBIT
+ # DEPTHDEF = -DSIXTEENBIT
+-DEPTHDEF = -DEIGHTBIT
++# DEPTHDEF = -DEIGHTBIT
+ 
+ # RasMol's on-line help direcory
+ #   e.g. /usr/local/lib/rasmol/rasmol.hlp
+-RASMOLDIR = $(USRLIBDIR)/rasmol/
++RASMOLDIR = $(PREFIX)/share/doc/rasmol/
++RASMOLDATADIR = $(PREFIX)/share/examples/rasmol/
+ 
+ 
+ 
+@@ -104,8 +105,9 @@
+ ComplexProgramTarget(rasmol)
+ MakeDirectories(install,$(RASMOLDIR))
+ InstallNonExec(rasmol.hlp,$(RASMOLDIR))
+-InstallNonExec(data/1crn.pdb,$(RASMOLDIR))
+-InstallNonExec(data/3cro.pdb,$(RASMOLDIR))
++MakeDirectories(install,$(RASMOLDATADIR))
++InstallNonExec(data/1crn.pdb,$(RASMOLDATADIR))
++InstallNonExec(data/3cro.pdb,$(RASMOLDATADIR))
+ 
+ rasmol.man::	doc/rasmol.1
+ 		ln -s doc/rasmol.1 rasmol.man
