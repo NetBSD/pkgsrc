@@ -1,0 +1,4 @@
+DB_File is a module which allows Perl programs to make use of the
+facilities provided by Berkeley DB version 1. (DB_File can be built
+version 2, 3 or 4 of Berkeley DB, but it will only support the 1.x
+features).
