@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.160 2003/07/12 14:24:15 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.161 2003/07/17 09:09:58 uebayasi Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -620,6 +620,11 @@ CLAMAV_USER?=	clamav
 # Used in clamav to specify the user to run clamav
 # Possible: any user name
 # Default: clamav
+
+CUE_USE_CANNA?=	NO
+# Used by cue package to determine whether to enable Canna support.
+# Possible: YES, NO
+# Default: NO
 
 CUPS_GROUP?=	sys
 # Used in cups to specify the group to run CUPS commands as.
