@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/15 22:08:35 recht Exp $
+bin/tpg
+${PYSITELIB}/tpg/Release.py
+${PYSITELIB}/tpg/Release.pyc
+${PYSITELIB}/tpg/Release.pyo
+${PYSITELIB}/tpg/__init__.py
+${PYSITELIB}/tpg/__init__.pyc
+${PYSITELIB}/tpg/__init__.pyo
+${PYSITELIB}/tpg/base.py
+${PYSITELIB}/tpg/base.pyc
+${PYSITELIB}/tpg/base.pyo
+${PYSITELIB}/tpg/codegen.py
+${PYSITELIB}/tpg/codegen.pyc
+${PYSITELIB}/tpg/codegen.pyo
+${PYSITELIB}/tpg/parser.py
+${PYSITELIB}/tpg/parser.pyc
+${PYSITELIB}/tpg/parser.pyo
+@dirrm ${PYSITELIB}/tpg
