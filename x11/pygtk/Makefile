@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/21 23:47:02 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/07 11:33:06 wiz Exp $
 #
 
 DISTNAME=	pygtk-0.6.9
@@ -11,8 +11,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.daa.com.au/~james/pygtk/
 COMMENT=	Python Bindings for the GTK Widget Set
 
-DEPENDS+=	gtkglarea-*:../../x11/gtkglarea
-
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+= --disable-numpy
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
@@ -20,10 +18,12 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 LIBTOOL_OVERRIDE= ${WRKSRC}/libtool
 PY_PATCHPLIST=	yes
+USE_BUILDLINK2=	yes
 
-.include "../../graphics/imlib/buildlink.mk"
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-.include "../../devel/libglade/buildlink.mk"
+.include "../../graphics/imlib/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink2.mk"
+.include "../../devel/libglade/buildlink2.mk"
 .include "../../lang/python/extension.mk"
-.include "../../x11/gtk/buildlink.mk"
+.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtkglarea/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
