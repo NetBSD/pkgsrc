@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5535 2004/04/11 15:50:47 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5536 2004/04/11 16:15:46 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1907,3 +1907,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nabi to 0.13 [minskim 2004-04-11]
 	Updated openoffice-linux to 1.1.1 [mrauch 2004-04-11]
 	Updated dap to 2.1.2nb4 [xtraeme 2004-04-11]
+	Updated p5-DBIx-SearchBuilder to 0.99 [recht 2004-04-11]
