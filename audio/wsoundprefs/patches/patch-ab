@@ -1,32 +1,10 @@
-$NetBSD: patch-ab,v 1.3 2001/03/12 10:51:48 tron Exp $
+$NetBSD: patch-ab,v 1.4 2001/03/12 21:19:10 wiz Exp $
 
---- src/Imakefile.orig	Tue Mar  2 14:06:36 1999
-+++ src/Imakefile	Mon Mar 12 11:49:41 2001
-@@ -13,11 +13,18 @@
- XCOMM EFENCELIB = -lefence
- EFENCELIB =
- 
--WMSOUNDLIB = -lwmsnd
--WRASTERCFLAGS = `get-wraster-flags --cflags`
-+XCOMM NetBSD requires -lossaudio for Linux OSS interface compatibility.
-+#ifdef NetBSDArchitecture
-+  OSSLIB = -lossaudio
-+#else
-+  OSSLIB =
-+#endif
-+
-+WMSOUNDLIB = -lwmsnd $(OSSLIB)
-+WRASTERCFLAGS = `get-wraster-flags --cflags` -I${PREFIX}/include/WINGs
- WRASTERLFLAGS = `get-wraster-flags --lflags`
- WRASTERLIBS = `get-wraster-flags --libs`
--WINGSLIBS = -lWINGs -lPropList
-+WINGSLIBS = -lWINGs -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lPropList
- 
- STD_INCLUDES = $(WRASTERCFLAGS)
- DEPLIBS = $(DEPXLIB) 
-@@ -29,7 +36,7 @@
- SRCS = PLFunctions.c SoundEvents.c SoundPaths.c WSoundPrefs.c main.c
- OBJS = PLFunctions.o SoundEvents.o SoundPaths.o WSoundPrefs.o main.o
+--- src/Imakefile.orig	Mon Oct 18 10:35:58 1999
++++ src/Imakefile
+@@ -30,7 +30,7 @@
+ SRCS = PLFunctions.c SoundEvents.c SoundPaths.c SystemInfo.c WSoundPrefs.c main.c
+ OBJS = PLFunctions.o SoundEvents.o SoundPaths.o SystemInfo.o WSoundPrefs.o main.o
  
 -ComplexProgramTarget(WSoundPrefs)
 +ComplexProgramTargetNoMan(WSoundPrefs)
