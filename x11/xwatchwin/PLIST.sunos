@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.sunos,v 1.1 2001/10/31 22:29:25 zuntum Exp $
+bin/xwatchwin
+man/man1/xwatchwin.1x
