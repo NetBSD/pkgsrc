@@ -1,0 +1,23 @@
+  gdcd is a CD player for the X Window System which uses the GIMP Tool
+Kit (GTK) and libcdaudio.  It is in quite early development at this point,
+but should become quite a bit more functional as time goes on.
+
+There are currently 3 working parts of gdcd:
+
+Button Panel: 
+    The button panel provides 8 buttons for controlling CD-ROM operations.
+    Ideas for the cosmetic design of these buttons are quite obviously
+    borrowed from another excellent GTK-based X CD player, XfreeCD.  Every
+    single one of them is working in this release, though extended
+    functionality to them will appear in future releases (such as
+    customizable seek control with the forward/reverse buttons.)
+
+Status Bar: 
+    The status bar is gdcd's only method of output in this release.  It
+    displays the status of network and CD-ROM operations, as well as the
+    track being played when play is started.
+
+Cover Art Display: 
+    The cover art display shows the art from the cover of the album
+    currently in the CD-ROM, or if it can't be located, a splash screen
+    for the disc's genre. 
