@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2004/11/12 12:39:12 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.23 2004/11/16 18:01:58 xtraeme Exp $
 
 DISTNAME=		mysql-4.1.7
 CATEGORIES=		databases
@@ -70,7 +70,13 @@ CFLAGS+=		-DHAVE_CURSES_H
 CXXFLAGS+=		-DHAVE_CURSES_H
 .endif
 
+SAVE_CFLAGS:=		${CFLAGS}
+SAVE_CXXFLAGS:=		${CXXFLAGS}
+
 .include "../../mk/pthread.buildlink3.mk"
+  
+CFLAGS=		${SAVE_CFLAGS}
+CXXFLAGS=	${SAVE_CXXFLAGS}
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
 CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
@@ -85,7 +91,7 @@ USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
-SUBST_CLASSES+=		mk scripts
+SUBST_CLASSES+=		mk scripts thr
 SUBST_STAGE.mk=		post-extract
 SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in isam/Makefile.in \
 			merge/Makefile.in mysys/Makefile.in \
@@ -96,6 +102,11 @@ SUBST_STAGE.scripts=	post-extract
 SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh	
 SUBST_SED.scripts=	-e "s,chown,${CHOWN},g"
 SUBST_MESSAGE.scripts=	"Fixing scripts."
+SUBST_STAGE.thr=	post-configure
+SUBST_FILES.thr=	libmysql/Makefile
+SUBST_SED.thr=		-e "s,${PTHREAD_CFLAGS},,g"	\
+			-e "s,${PTHREAD_LDFLAGS},,g"	\
+			-e "s,${PTHREAD_LIBS},,g"
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
