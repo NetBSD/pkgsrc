@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.common,v 1.1 2005/03/07 12:19:16 tv Exp $
+bin/sox
+bin/soxmix
+man/man1/sox.1
+man/man1/soxexam.1
+man/man1/soxmix.1
