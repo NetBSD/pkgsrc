@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2004/01/22 17:34:48 recht Exp $
+# $NetBSD: Makefile,v 1.33 2004/01/28 12:13:02 xtraeme Exp $
 
 DISTNAME=	nedit-${VERS}-source
 PKGNAME=	nedit-${VERS}
+PKGREVISION=	1
 CATEGORIES=	editors
 #MASTER_SITES=	http://www.nedit.org/ftp/v${VERS:S/./_/g}/ \
 #		http://www.au.nedit.org/ftp/v${VERS:S/./_/g}/ \
@@ -19,7 +20,7 @@ VERS=		5.4
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		YES
-USE_X11BASE=		YES
+USE_X11=		YES
 ALL_TARGET=		netbsd
 
 do-install:
