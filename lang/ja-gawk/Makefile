@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:00:45 seb Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/05 15:06:09 seb Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/01/27 07:41:14 fenner Exp $
 
 DISTNAME=	gawk-3.0.4
@@ -14,6 +14,7 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/gawk/gawk.html
 COMMENT=	GNU awk + multi-byte extension
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	gawk.info
 
 GNU_CONFIGURE=	yes
@@ -23,5 +24,4 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC}/OREADME.MB ${PREFIX}/share/doc/ja-gawk
 	@${INSTALL_DATA} ${WRKSRC}/README.MB ${PREFIX}/share/doc/ja-gawk
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
