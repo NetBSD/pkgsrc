@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/12/21 09:57:14 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/02/25 18:10:49 minskim Exp $
 #
 # This Makefile fragment is included by packages that use libgcrypt.
 #
@@ -9,7 +9,7 @@
 LIBGCRYPT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgcrypt
-BUILDLINK_DEPENDS.libgcrypt?=		libgcrypt>=1.1.90
+BUILDLINK_DEPENDS.libgcrypt?=		libgcrypt>=1.1.92
 BUILDLINK_PKGSRCDIR.libgcrypt?=		../../security/libgcrypt
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgcrypt=libgcrypt
