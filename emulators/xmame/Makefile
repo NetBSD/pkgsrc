@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.42 2001/02/25 04:17:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.43 2001/03/24 19:52:33 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.37b6.1
+DISTNAME=		xmame-0.37b12.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		soren@netbsd.org
+MAINTAINER=		kristerw@netbsd.org
 HOMEPAGE=		http://x.mame.net/
 COMMENT=		X11 emulator for old arcade and console machines
 
@@ -46,7 +46,7 @@ MAME_CPU=		alpha
 MAME_CPU=		i386
 .else
 # Rather than enumerating all CPU types, check machine/endian.h
-ENDIAN!=		sh files/endian.sh
+ENDIAN!=		${SH} ${FILESDIR}/endian.sh
 .if ${ENDIAN} == "LITTLE_ENDIAN"
 MAME_CPU=		risc_lsb
 .else
