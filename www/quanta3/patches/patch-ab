@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/04/05 11:52:31 markd Exp $
+
+--- kommander/widgets/myprocess.cpp.orig	2004-04-05 12:38:35.000000000 +1200
++++ kommander/widgets/myprocess.cpp
+@@ -33,7 +33,7 @@ MyProcess::MyProcess(const AssocTextWidg
+ 
+ QString MyProcess::run(const QString & a_command)
+ {
+-	KShellProcess proc;
++	KShellProcess proc("/bin/sh");
+ 
+ 	proc << a_command;
+ 
