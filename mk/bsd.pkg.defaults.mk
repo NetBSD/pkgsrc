@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.264 2004/07/25 06:51:33 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.265 2004/07/27 03:59:26 xtraeme Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -211,6 +211,21 @@ DISTDIR?=	${_PKGSRCDIR}/distfiles
 DEFAULT_VIEW?= ""
 # This is the default view to which packages are added after installation.
 # Default: "" (the empty view)
+
+.if exists(${LOCALBASE}/bin/ftp)
+FETCH_CMD?=             ${LOCALBASE}/bin/ftp
+.else
+FETCH_CMD?=             /usr/bin/ftp
+.endif
+# Default program to fetch the files with pkgsrc.
+# Default: NetBSD's ftp(1).
+# Possible: any.
+
+FETCH_RESUME_ARGS?=	-R
+# Default argument to resume transferencies on pkgsrc, when using ftp(1)
+# from NetBSD/pkgsrc.
+# Default: -R
+# Possible: depends on your FETCH_CMD value.
 
 PKG_INSTALLATION_PREFS?= overwrite pkgviews
 # This is a whitespace-separated list of installation types to try when
