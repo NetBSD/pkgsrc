@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2001/05/29 12:23:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/10/24 23:40:03 jwise Exp $
 #
 
 DISTNAME=	expect
-PKGNAME=	tk-expect-5.32.1
+PKGNAME=	tk-expect-5.33
 CATEGORIES=	lang
 MASTER_SITES=	http://expect.nist.gov/
 
@@ -11,10 +11,10 @@ HOMEPAGE=	http://expect.nist.gov/
 COMMENT=	tcl interpreter with both the expect and tk extensions built in
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
-DEPENDS+=	tcl-expect-5.32.1:../../lang/tcl-expect
+DEPENDS+=	tcl-expect-5.33:../../lang/tcl-expect
 
-WRKSRC=		${WRKDIR}/expect-5.32
-DIST_SUBDIR=	expect-5.32.1
+WRKSRC=		${WRKDIR}/expect-5.33
+DIST_SUBDIR=	expect-5.33
 
 DISTINFO_FILE=	${.CURDIR}/../../lang/tcl-expect/distinfo
 PATCHDIR=	${.CURDIR}/../../lang/tcl-expect/patches
