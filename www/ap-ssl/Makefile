@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 1998/12/04 17:25:59 tv Exp $
+# $NetBSD: Makefile,v 1.4 1998/12/07 21:29:09 tv Exp $
 #
 
-DISTNAME=	mod_ssl-2.1.2-1.3.3
-PKGNAME=	ap-ssl-2.1.2
+DISTNAME=	mod_ssl-2.1.3-1.3.3
+PKGNAME=	ap-ssl-2.1.3
 CATEGORIES=	www
 MASTER_SITES=	http://www.engelschall.com/sw/mod_ssl/distrib/
 
