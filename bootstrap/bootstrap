@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.4 2004/03/11 17:47:18 sketch Exp $
+# $NetBSD: bootstrap,v 1.5 2004/03/11 19:45:09 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -290,7 +290,7 @@ Interix)
 	}
 	root_user=`id -un`
 	root_group=+Administrators
-	need_pax=no
+	need_pax=yes
 	need_mtree=yes
 	need_bsd_install=yes
 	need_sed=yes
