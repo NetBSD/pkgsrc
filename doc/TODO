@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.213 2003/01/23 21:27:10 markd Exp $
+$NetBSD: TODO,v 1.214 2003/01/24 10:54:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -70,7 +70,7 @@ Suggested package updates
 =========================
 
 	o Xbae-4.50.0
-	o abiword-1.0.4
+	o abiword-1.0.4 [pkg/20016]
 	o adobe-cmaps-1.5 [pkg/19646]
 	o apache-2.0.44
 	o aim-1.5.277
@@ -99,8 +99,9 @@ Suggested package updates
 	o dctc-0.84.0
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
-	o elinks-0.4.0
+	o elinks-0.4.1
 	o elm-me-2.4pl100
+	o ethereal-0.9.9
 	o exim-4.12 [pkg/19850]
 	o fetchmail-6.2.1
 	o file-roller-2.2.0
@@ -114,8 +115,7 @@ Suggested package updates
 	o gd-2.0.4
 	o gdb-5.3
 	o gdm-2.4.1.1
-	o getmail-2.3.10 [pkg/19707]
-	o getmail-2.3.11
+	o getmail-2.3.11 [pkg/19707]
 	o gftp-2.0.14
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.3
@@ -221,7 +221,7 @@ Suggested package updates
 	o ruby-1.6.8
 	o rxvt-2.7.9
 	o sablotron-0.97
-	o scmxx-0.6.3.5
+	o scmxx-0.6.3.5 [pkg/20017]
 	o scribus-0.8
 	o scsh-0.6.3
 	o scrollkeeper-0.3.11
@@ -248,7 +248,7 @@ Suggested package updates
 	o texmacs-1.0.1.1
 	o tightvnc-1.2.7
 	o ttf2pt1-3.4.3
-	o tuxpaint-0.9.3
+	o tuxpaint-0.9.6
 	o tuxpaint-stamps-2002.12.03
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
