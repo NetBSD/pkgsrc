@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2641 2004/12/03 13:43:53 adam Exp $
+$NetBSD: TODO,v 1.2642 2004/12/03 14:09:18 ben Exp $
 
 Suggested new packages
 ======================
@@ -220,10 +220,6 @@ Suggested new packages
 	GraphicsMagick
 	http://www.graphicsmagick.org/
 	Tools and libraries for manipulating images in over 88 formats.
-
-	FreePats
-	http://freepats.opensrc.org/
-	Free and open set of GUS patches (e.g. for timidity)
 
 	grip
 	http://nostatic.org/grip/
