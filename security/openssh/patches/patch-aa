@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.17 2001/09/27 05:12:54 itojun Exp $
+$NetBSD: patch-aa,v 1.18 2001/12/03 08:21:22 martti Exp $
 
---- configure.orig	Wed Sep 26 07:50:31 2001
-+++ configure	Thu Sep 27 13:50:35 2001
-@@ -1811,7 +1811,7 @@
+--- configure.orig	Sun Dec  2 00:38:55 2001
++++ configure	Mon Dec  3 08:41:49 2001
+@@ -3557,7 +3557,7 @@
  
  	;;
  *-*-netbsd*)
@@ -11,53 +11,53 @@ $NetBSD: patch-aa,v 1.17 2001/09/27 05:12:54 itojun Exp $
  	;;
  *-*-freebsd*)
  	check_for_libcrypt_later=1
-@@ -1843,7 +1843,7 @@
+@@ -3589,7 +3589,7 @@
  *-*-solaris*)
  	CPPFLAGS="$CPPFLAGS -I/usr/local/include"
- 	LDFLAGS="$LDFLAGS -L/usr/local/lib -R/usr/local/lib" 
+ 	LDFLAGS="$LDFLAGS -L/usr/local/lib -R/usr/local/lib"
 -	need_dash_r=1
 +	#need_dash_r=1		# buildlink.mk
- 	cat >> confdefs.h <<\EOF
+ 	cat >>confdefs.h <<\_ACEOF
  #define PAM_SUN_CODEBASE 1
- EOF
-@@ -3208,6 +3208,7 @@
+ _ACEOF
+@@ -6216,6 +6216,7 @@
  
  # Check whether user wants TCP wrappers support
- TCPW_MSG="no" 
+ TCPW_MSG="no"
 +TCPW_LIB=""
+ 
  # Check whether --with-tcp-wrappers or --without-tcp-wrappers was given.
  if test "${with_tcp_wrappers+set}" = set; then
-   withval="$with_tcp_wrappers"
-@@ -3221,6 +3222,8 @@
- #line 3222 "configure"
+@@ -6252,6 +6253,8 @@
+ #line 6252 "configure"
  #include "confdefs.h"
  
 +#include <sys/cdefs.h>
 +#include <stdio.h>
  #include <tcpd.h>
  					int deny_severity = 0, allow_severity = 0;
- 				
-@@ -3237,6 +3240,7 @@
- EOF
  
- 					TCPW_MSG="yes" 
-+					TCPW_LIB="-lwrap" 
- 				
+@@ -6289,6 +6292,7 @@
+ _ACEOF
+ 
+ 					TCPW_MSG="yes"
++					TCPW_LIB="-lwrap"
+ 
  else
-   echo "configure: failed program was:" >&5
-@@ -3248,6 +3252,7 @@
- 			
- fi
- rm -f conftest*
-+			LIBS="$saved_LIBS"
- 		fi
- 	
+   echo "$as_me: failed program was:" >&5
+@@ -6300,6 +6304,7 @@
  
-@@ -9370,6 +9375,7 @@
- s%@TEST_MINUS_S_SH@%$TEST_MINUS_S_SH%g
- s%@LOGIN_PROGRAM_FALLBACK@%$LOGIN_PROGRAM_FALLBACK%g
- s%@LD@%$LD%g
-+s%@TCPW_LIB@%$TCPW_LIB%g
- s%@NO_SFTP@%$NO_SFTP%g
- s%@rsh_path@%$rsh_path%g
- s%@xauth_path@%$xauth_path%g
+ fi
+ rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
++LIBS="$saved_LIBS"
+ 		fi
+ 
+ fi;
+@@ -15590,6 +15595,7 @@
+ s,@TEST_MINUS_S_SH@,$TEST_MINUS_S_SH,;t t
+ s,@LOGIN_PROGRAM_FALLBACK@,$LOGIN_PROGRAM_FALLBACK,;t t
+ s,@LD@,$LD,;t t
++s,@TCPW_LIB@,$TCPW_LIB,g
+ s,@NO_SFTP@,$NO_SFTP,;t t
+ s,@rsh_path@,$rsh_path,;t t
+ s,@xauth_path@,$xauth_path,;t t
