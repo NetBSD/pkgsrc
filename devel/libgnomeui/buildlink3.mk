@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:10 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEUI_BUILDLINK3_MK:=	${LIBGNOMEUI_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	libgnomeui
 .if !empty(LIBGNOMEUI_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libgnomeui+=		libgnomeui>=2.4.0.1nb2
 BUILDLINK_PKGSRCDIR.libgnomeui?=	../../devel/libgnomeui
+.endif	# LIBGNOMEUI_BUILDLINK3_MK
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
@@ -22,7 +23,5 @@ BUILDLINK_PKGSRCDIR.libgnomeui?=	../../devel/libgnomeui
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-
-.endif	# LIBGNOMEUI_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

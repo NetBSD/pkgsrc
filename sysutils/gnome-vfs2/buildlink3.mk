@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:40 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/03/18 09:12:14 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_VFS2_BUILDLINK3_MK:=	${GNOME_VFS2_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	gnome-vfs2
 .if !empty(GNOME_VFS2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gnome-vfs2+=		gnome-vfs2>=2.4.2nb2
 BUILDLINK_PKGSRCDIR.gnome-vfs2?=	../../sysutils/gnome-vfs2
+.endif	# GNOME_VFS2_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/cdparanoia/buildlink3.mk"
@@ -26,7 +27,5 @@ BUILDLINK_PKGSRCDIR.gnome-vfs2?=	../../sysutils/gnome-vfs2
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/fam/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-
-.endif	# GNOME_VFS2_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
