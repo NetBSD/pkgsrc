@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2004/01/14 20:16:39 manu Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/29 02:20:17 snj Exp $
 
---- gsl/gsl_math.h.orig	2003-09-25 01:13:12.000000000 +0000
-+++ gsl/gsl_math.h
+--- gsl/gsl_math.h.orig	2004-06-10 14:17:35.000000000 -0700
++++ gsl/gsl_math.h	2004-06-28 12:44:15.000000000 -0700
 @@ -129,44 +129,44 @@ double gsl_min (double a, double b);
  /* inline-friendly strongly typed versions */
- #if HAVE_INLINE
+ #if HAVE_EXTERN_INLINE
  
 -extern inline int GSL_MAX_INT (int a, int b);
 -extern inline int GSL_MIN_INT (int a, int b);
@@ -59,4 +59,3 @@ $NetBSD: patch-ab,v 1.1 2004/01/14 20:16:39 manu Exp $
  GSL_MIN_LDBL (long double a, long double b)
  {
    return GSL_MIN (a, b);
-
