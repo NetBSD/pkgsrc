@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 22:56:03 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/08/23 15:26:24 jschauma Exp $
 
 DISTNAME=	spfc-0.2.0
 WRKSRC=		${WRKDIR}/spfc-0.2.0/src/
-CATEGORIES=	www
+CATEGORIES=	www java
 MASTER_SITES=	http://java.apache.org/spfc/dist/
 
 MAINTAINER=	jwise@NetBSD.org

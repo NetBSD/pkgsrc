@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:28:14 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/23 15:16:36 jschauma Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
 WRKSRC=		${WRKDIR}/${DISTNAME}/build_unix
-CATEGORIES=	databases
+CATEGORIES=	databases java
 MASTER_SITES=	http://www.sleepycat.com/update/3.3.11/
 
 MAINTAINER=	jlam@NetBSD.org
