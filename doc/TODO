@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.648 2003/06/19 18:10:25 wiz Exp $
+$NetBSD: TODO,v 1.649 2003/06/20 09:58:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -148,6 +148,7 @@ Suggested package updates
 	o icepref-2.2
 	o icewm-1.2.8
 	o inform-6.21.3 [pkg/19298]
+	o inform-6.21.4 [pkg/21934]
 	o inn-2.4.0
 	o iozone-3.181
 	o jakarta-tomcat-3.3.1a
@@ -208,14 +209,16 @@ Suggested package updates
 	o polsms-1.9.2
 	o postgresql-7.3.3
 	o povray-3.5
+	o proftpd-1.2.9rc1
 	o pureftpd-1.0.15
 	o py-soappy-0.10.1 [pkg/21735]
 	o pygtk-0.6.11
+	o qvwm-1.1.12 [pkg/21935]
 	o ratpoison-1.2.2
 	o rep-gtk-0.17
 	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
-	o rox-session-0.1.19
+	o rox-session-0.1.20
 	o rt-3.0.2
 	o sablecc-2.18.1
 	o sablotron-0.97
@@ -279,7 +282,6 @@ Suggested package updates
 	o ysm-2.9.0
 	o yudit-2.7.5
 	o zenicb 1.31 (needs merge with lots of local changes)
-	o zsh-4.0.7
 
 Infrastructure problems which need addressing
 =============================================
