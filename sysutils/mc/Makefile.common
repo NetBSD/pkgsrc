@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2001/01/03 02:58:17 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.4 2001/01/03 14:45:27 hubertf Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -9,6 +9,8 @@ HOMEPAGE=		http://www.gnome.org/mc/
 
 DEPENDS+=		libslang-*:../../devel/libslang
 DEPENDS+=		glib>=1.2.0:../../devel/glib
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
+BUILD_DEPENDS+=		autoheader:../../devel/autoconf
 
 CONFLICTS+=		mc-* gmc-*
 
