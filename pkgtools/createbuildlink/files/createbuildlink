@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.15 2003/10/15 00:18:05 salo Exp $
+#	$NetBSD: createbuildlink,v 1.16 2003/12/22 01:15:50 uebayasi Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink2.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.15 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.16 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
@@ -140,7 +140,7 @@ EOF
 ##
 if [ "$join" = "YES" ]; then
 	for i in `egrep "^include/|/Headers/.*\.h" $PLIST \
-	| sed -e 's|[^/]*\.h\([Hhpx+]\)*$|*.h\1|' | sort | uniq`; do
+	| sed -e 's|[^/]*\.h\([Hhpx+]*\)$|*.h\1|' | sort -u`; do
 		echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
 	done
 else
@@ -155,7 +155,7 @@ fi
 for i in \
 `egrep '^lib/|/Libraries/.*/lib[^\.]*\.a$|/Libraries/.*/lib[^\.]*\.so' $PLIST \
 | egrep -v '\.pc$' | sed -e 's/\.a$/.*/' -e 's/\.la$/.*/' -e 's/\.so.*$/.*/'  \
-| sort | uniq`; do
+| sort -u`; do
 	echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
 done
 
