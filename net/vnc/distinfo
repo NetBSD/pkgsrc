@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/04/25 04:33:46 itojun Exp $
+$NetBSD: distinfo,v 1.6 2002/10/23 18:16:58 bouyer Exp $
 
 SHA1 (vnc-3.3.3r2_unixsrc.tgz) = 98e9d2e2c2d0f4f9cb9cafee22d21a868189b176
 Size (vnc-3.3.3r2_unixsrc.tgz) = 2072772 bytes
@@ -13,3 +13,5 @@ SHA1 (patch-ad) = a524db9a403428bd750819d25e6157d4c3cb96f7
 SHA1 (patch-ae) = 399ff1527ff75eee7d181dd4f90f95edab028bd7
 SHA1 (patch-af) = 369961aa3e089195653980da91e8fba53807fc53
 SHA1 (patch-ag) = 89ce8a6ac8d51ffd4d4be4588e59b7dd53366716
+SHA1 (patch-ah) = 0f9f3f3c9b167a2743e8dab2df430b0526346867
+SHA1 (patch-ai) = 0e8e49a44fbe2cf8f371a1224e0064b7cb28597c
