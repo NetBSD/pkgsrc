@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/03 20:43:04 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/11/18 07:57:45 salo Exp $
 #
 
 DISTNAME=	mad-0.14.2b
@@ -18,6 +18,8 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../mk/bsd.prefs.mk"
 
