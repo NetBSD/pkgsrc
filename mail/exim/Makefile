@@ -1,6 +1,7 @@
-# 	$NetBSD: Makefile,v 1.4 1999/09/22 08:29:39 ad Exp $
+# 	$NetBSD: Makefile,v 1.5 1999/09/22 08:52:05 ad Exp $
 
 DISTNAME=	exim-3.03
+DISTFILES=	exim-3.03.tar.gz exim-html-3.00.tar.gz
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/ \
 		ftp://ftp.cus.cam.ac.uk/pub/software/programs/exim/ \
@@ -44,6 +45,8 @@ post-install:
 	    < ${FILESDIR}/mailer.conf.exim \
 	    > ${PREFIX}/etc/mailer.conf.exim
 	${MKDIR} ${PREFIX}/man/man8
-	cp ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
+	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
+	${MKDIR} ${PREFIX}/share/doc/exim
+	${CP} -R ${WRKDIR}/exim-html-3.00/doc/html/* ${PREFIX}/share/doc/exim
 
 .include "../../mk/bsd.pkg.mk"
