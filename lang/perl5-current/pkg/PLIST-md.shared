@@ -1,16 +1,10 @@
-@comment $NetBSD: PLIST-md.shared,v 1.3 2000/08/15 00:38:41 jlam Exp $
+@comment $NetBSD: PLIST-md.shared,v 1.4 2000/08/27 20:56:00 jlam Exp $
 lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/B.bs
 lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/B.so
 lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/ByteLoader/ByteLoader.bs
 lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/ByteLoader/ByteLoader.so
 lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File/DB_File.bs
 lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File/DB_File.so
-lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data/Dumper/Dumper.bs
-lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data/Dumper/Dumper.so
-lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/DProf/DProf.bs
-lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/DProf/DProf.so
-lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/Peek/Peek.bs
-lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Devel/Peek/Peek.so
 lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Fcntl/Fcntl.bs
 lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Fcntl/Fcntl.so
 lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/File/Glob/Glob.bs
