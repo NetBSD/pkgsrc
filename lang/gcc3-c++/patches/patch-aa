@@ -1,24 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2003/07/06 12:15:09 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/08 15:05:00 drochner Exp $
 
 --- Makefile.in.orig	2003-05-14 02:18:14.000000000 +0200
 +++ Makefile.in	2003-07-03 23:14:35.000000000 +0200
-@@ -153,11 +153,11 @@
- 
- # For an installed makeinfo, we require it to be from texinfo 4.2 or
- # higher, else we use the "missing" dummy.
--MAKEINFO = `if [ -f $$r/texinfo/makeinfo/makeinfo ] ; \
--	then echo $$r/texinfo/makeinfo/makeinfo ; \
--	else if (makeinfo --version \
--	  | egrep 'texinfo[^0-9]*([1-3][0-9]|4\.[2-9]|[5-9])') >/dev/null 2>&1; \
--        then echo makeinfo; else echo $$s/missing makeinfo; fi; fi`
-+#MAKEINFO = `if [ -f $$r/texinfo/makeinfo/makeinfo ] ; \
-+#	then echo $$r/texinfo/makeinfo/makeinfo ; \
-+#	else if (makeinfo --version \
-+#	  | egrep 'texinfo[^0-9]*([1-3][0-9]|4\.[2-9]|[5-9])') >/dev/null 2>&1; \
-+#        then echo makeinfo; else echo $$s/missing makeinfo; fi; fi`
- 
- # This just becomes part of the MAKEINFO definition passed down to
- # sub-makes.  It lets flags be given on the command line while still
 @@ -1642,8 +1642,8 @@
  
  install-dosrel-fake:

@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2003/07/06 12:15:10 drochner Exp $
-gcc3/bin/g77
-gcc3/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/f771
-gcc3/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/include/g2c.h
-gcc3/lib/libfrtbegin.a
-gcc3/lib/libg2c.a
-gcc3/lib/libg2c.la
-gcc3/lib/libg2c.so
-gcc3/lib/libg2c.so.0
-gcc3/lib/libg2c.so.0.0
-gcc3/man/man1/g77.1
-info/g77.info
-share/examples/gcc/mk-g77.conf
+@comment $NetBSD: PLIST,v 1.2 2003/07/08 15:05:00 drochner Exp $
+${GCC_SUBPREFIX}/bin/g77
+${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/f771
+${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${PKGVERSION}/include/g2c.h
+${GCC_SUBPREFIX}/lib/libfrtbegin.a
+${GCC_SUBPREFIX}/lib/libg2c.a
+${GCC_SUBPREFIX}/lib/libg2c.la
+${GCC_SUBPREFIX}/lib/libg2c.so
+${GCC_SUBPREFIX}/lib/libg2c.so.0
+${GCC_SUBPREFIX}/lib/libg2c.so.0.0
+${GCC_SUBPREFIX}/man/man1/g77.1
+${GCC_SUBPREFIX}/mk/f77.mk
