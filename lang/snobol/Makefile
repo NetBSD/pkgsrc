@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2001/02/06 18:13:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/06 18:27:36 wiz Exp $
 #
 
 DISTNAME=	snobol-0.99.4
+PKGNAME=	snobol-0.99.4nb1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.snobol4.com/ \
 		ftp://alpha.gnu.org/budne/snobol/
-DISTFILES=	vanilla.zip snobol-0.99.4.tar.gz
+DISTFILES=	vanilla.zip ${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	refling@comet.lbl.gov
 HOMEPAGE=	http://people.ne.mediaone.net/philbudne/snobol.html
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 
-EXTRACT_ONLY=	snobol-0.99.4.tar.gz
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 ALL_TARGET=	it
 
