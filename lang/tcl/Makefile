@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/10/08 03:13:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/05 11:22:13 jlam Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -16,11 +16,13 @@ COMMENT=		Ousterhout's Tool Command Language, a scripting language
 
 CONFLICTS+=		tclman80-[0-9]*
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		TOUCH="${TOUCH}"
 TEST_TARGET=		test
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 INSTALL_TARGET=		install
@@ -31,6 +33,9 @@ PLIST_SUBST+=		SHLIB_SUFX="${SHLIB_SUFX}"
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
 #
 CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
+
+# Add ${VIEWBASE}/lib/tcl to the list of locations for Tcl packages.
+CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 
 .include "../../mk/bsd.prefs.mk"
 
