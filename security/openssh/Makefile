@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2003/07/24 20:59:03 jwise Exp $
+# $NetBSD: Makefile,v 1.104 2003/07/24 21:24:28 jwise Exp $
 
 DISTNAME=		openssh-3.6.1p2
 PKGNAME=		openssh-3.6.1.2
@@ -82,11 +82,15 @@ CONFIGURE_ARGS+=	--without-skey
 CONFIGURE_ARGS+=	--without-skey
 .endif
 
-# XXX: <krb.h>
-#.if defined(KERBEROS)
-#PKG_USE_KERBEROS=		yes
-#CONFIGURE_ARGS+=	--with-kerberos4=/usr
-#.endif
+.if defined(KERBEROS)
+PKG_USE_KERBEROS=		yes
+CONFIGURE_ARGS+=	--with-kerberos4=/usr
+CONFIGURE_ARGS+=	--with-kerberos5=/usr
+CPPFLAGS+=		-I/usr/include/krb5
+CPPFLAGS+=		-I/usr/include/kerberosIV
+# kerberos 5 dependencies are detected correctly.
+LDFLAGS+=		-lkrb -lcom_err -lroken -ldes
+.endif
 
 LD=	${CC}
 
