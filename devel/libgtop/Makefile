@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 1999/01/30 23:18:45 agc Exp $
+# $NetBSD: Makefile,v 1.11 1999/02/19 14:57:21 frueauf Exp $
 #
 
 DISTNAME=	libgtop-0.99.2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/libgtop/ \
-		ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/libgtop
+		ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/libgtop/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.gnome.org/
 DEPENDS+=	gnome-libs-0.99.3:../../x11/gnome-libs
 DEPENDS+=	guile-1.3:../../lang/guile
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
-
-CONFLICTS=	libgtop-*
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
