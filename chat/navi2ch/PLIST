@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/27 16:02:03 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/10/04 02:10:06 toshii Exp $
 info/navi2ch.info
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-article.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-article.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-articles.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-articles.elc
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-auto-modify.el
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-auto-modify.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-board-misc.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-board-misc.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-board.el
@@ -16,6 +18,8 @@ ${EMACS_LISPPREFIX}/navi2ch/navi2ch-e21.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-e21.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-face.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-face.elc
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-futaba.el
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-futaba.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-head.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-head.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-history.el
@@ -54,6 +58,8 @@ ${EMACS_LISPPREFIX}/navi2ch/navi2ch-vars.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-vars.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-version.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch-version.elc
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-xmas.el
+${EMACS_LISPPREFIX}/navi2ch/navi2ch-xmas.elc
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch.el
 ${EMACS_LISPPREFIX}/navi2ch/navi2ch.elc
 share/navi2ch/icons/navi2ch-logo.img
