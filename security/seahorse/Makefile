@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/10/20 20:45:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2004/10/20 21:30:13 jmmv Exp $
 
 DISTNAME=	seahorse-0.7.4
 CATEGORIES=	security
@@ -13,12 +13,12 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gnupg>=1.2.1:../../security/gnupg
 
 GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
 USE_DIRS+=		gnome2-1.5
 USE_GNU_TOOLS+=		make
-USE_X11=		yes
-USE_BUILDLINK3=		yes
-USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
 
 CONFIGURE_ARGS=		--disable-gedit
 
