@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/16 15:06:19 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/13 16:27:26 reed Exp $
 bin/gtkam
 man/man1/gtkam.1
 share/doc/gtkam/AUTHORS
 share/doc/gtkam/COPYING
+share/doc/gtkam/NEWS
+share/doc/gtkam/README
+share/doc/gtkam/TODO
 share/gtkam/pixmaps/camera.xpm
 share/gtkam/pixmaps/configure.xpm
 share/gtkam/pixmaps/delete_images.xpm
