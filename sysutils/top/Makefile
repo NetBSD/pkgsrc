@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/22 07:32:36 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/07/11 18:42:26 cube Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -13,6 +13,8 @@ COMMENT=	The ubiquitous system monitoring utility
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
+
+NOT_FOR_PLATFORM=	NetBSD-1.6*-* NetBSD-2.*-*
 
 .include "../../mk/bsd.prefs.mk"
 
