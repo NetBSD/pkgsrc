@@ -1,0 +1,44 @@
+$NetBSD: patch-ad,v 1.1.2.2 2003/06/19 00:51:56 grant Exp $
+
+CAN-2003-0107 - Buffer overflow in the gzprintf function in zlib 1.1.4, when
+                zlib is compiled without vsnprintf or when long inputs are
+                truncated using vsnprintf, allows attackers to cause a denial
+                of service or possibly execute arbitrary code.
+
+--- gzio.c.orig	2002-03-11 14:16:01.000000000 +0100
++++ gzio.c	2003-03-05 02:27:14.000000000 +0100
+@@ -530,13 +530,13 @@
+ 
+     va_start(va, format);
+ #ifdef HAS_vsnprintf
+-    (void)vsnprintf(buf, sizeof(buf), format, va);
++    len = vsnprintf(buf, sizeof(buf), format, va);
+ #else
+     (void)vsprintf(buf, format, va);
++    len = strlen(buf); /* some *sprintf don't return the nb of bytes written */
+ #endif
+     va_end(va);
+-    len = strlen(buf); /* some *sprintf don't return the nb of bytes written */
+-    if (len <= 0) return 0;
++    if (len <= 0 || len >= sizeof(buf)) return 0;
+ 
+     return gzwrite(file, buf, (unsigned)len);
+ }
+@@ -553,14 +553,14 @@
+     int len;
+ 
+ #ifdef HAS_snprintf
+-    snprintf(buf, sizeof(buf), format, a1, a2, a3, a4, a5, a6, a7, a8,
++    len = snprintf(buf, sizeof(buf), format, a1, a2, a3, a4, a5, a6, a7, a8,
+ 	     a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
+ #else
+     sprintf(buf, format, a1, a2, a3, a4, a5, a6, a7, a8,
+ 	    a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20);
+-#endif
+     len = strlen(buf); /* old sprintf doesn't return the nb of bytes written */
+-    if (len <= 0) return 0;
++#endif
++    if (len <= 0 || len >= sizeof(buf)) return 0;
+ 
+     return gzwrite(file, buf, len);
+ }
