@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2002/12/05 15:02:24 wiz Exp $
+
+Quickstart instructions: 
+   GutenMark --config=${PREFIX}/share/examples/GutenMark/GutenMark.cfg in > out.html
+
+For details, look at the --help output, the example config, or
+visit the website.
+
+===========================================================================
