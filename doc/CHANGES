@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4397 2004/01/08 20:59:22 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4398 2004/01/08 23:36:43 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -122,3 +122,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated icecast to 2.0.0 [xtraeme 2004-01-08]
 	Moved icecast to icecast1 [xtraeme 2004-01-08]
 	Updated gnome2-terminal to 2.4.1 [xtraeme 2004-01-08]
+	Updated gnome2 to 2.4.1 [xtraeme 2004-01-08]
