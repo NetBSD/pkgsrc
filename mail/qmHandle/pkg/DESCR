@@ -1,4 +1,4 @@
-qmHandle is a simple program which allows you to view and manage the qmail
+qmHandle is a simple perl script which allows you to view and manage the qmail
 message queue.
 
 The key features of qmHandle are:
