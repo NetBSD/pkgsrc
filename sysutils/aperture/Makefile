@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/01/27 18:32:34 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2002/01/27 19:31:59 jlam Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -28,7 +28,6 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 ALL_TARGET=		cleandir depend all
 DIST_SUBDIR=		${PKGNAME}
-INSTALL_FILE=		${WRKDIR}/INSTALL
 INSTALL_TARGET=		dirs includes install
 MANCOMPRESSED_IF_MANZ=	YES
 WRKSRC=			${WRKDIR}
@@ -53,10 +52,6 @@ pre-extract:
 	@${ECHO_MSG} "(Or set BSDSRCDIR correctly in /etc/mk.conf.)"
 	@${FALSE}
 .endif
-
-post-build:
-	${SED} -e 's#$${PREFIX}#${PREFIX}#g' <${PKGDIR}/INSTALL \
-	  >${INSTALL_FILE}
 
 .include "../../mk/bsd.pkg.mk"
 
