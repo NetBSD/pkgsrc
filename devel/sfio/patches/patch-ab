@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2001/02/05 13:54:19 agc Exp $
+$NetBSD: patch-ab,v 1.5 2002/09/10 23:39:44 schmonz Exp $
 
 Build and installation commands
 
@@ -6,8 +6,8 @@ Build and installation commands
 +++ Makefile	Mon Feb  5 13:44:36 2001
 @@ -0,0 +1,37 @@
 +all:
-+	cd src/lib/sfio; make -f sfio.mk
-+	cd src/lib/sfio/Stdio_b; make -f stdio.mk FEATURE/stdio must; make -f stdio.mk
++	cd src/lib/sfio; ${MAKE} -f sfio.mk
++	cd src/lib/sfio/Stdio_b; ${MAKE} -f stdio.mk FEATURE/stdio must; ${MAKE} -f stdio.mk
 +
 +install:
 +	${INSTALL} -c -m 0644 src/lib/sfio/libsfio.a ${PREFIX}/lib
