@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/12/15 04:55:25 garbled Exp $
+# $NetBSD: Makefile,v 1.8 2000/12/20 14:24:04 wiz Exp $
 
 DISTNAME=		Pacman-0.3-CVS-00-11-17
 PKGNAME=		Pacman-0.3
@@ -19,9 +19,21 @@ LDFLAGS+=		-L${LOCALBASE}/lib
 CFLAGS+=		-I${X11BASE}/include
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}" CPPFLAGS="${CFLAGS}"
 
+# needs a valid X display to compile its datafiles
+.ifndef DISPLAY
+IS_INTERACTIVE=		yes
+.endif
+
 pre-configure:
 	cd ${WRKSRC} && autoconf
 	${SED} -e 's@/usr/share@${PREFIX}/share@' < ${WRKSRC}/Sources/config.h.in > ${WRKSRC}/foo
 	${MV} ${WRKSRC}/foo ${WRKSRC}/Sources/config.h.in
+
+pre-build:
+	@if [ "${DISPLAY}" = "" ]; then \
+		${ECHO} Please set the DISPLAY variable to a valid display; \
+		${ECHO} before compiling ${PKGNAME}.;			    \
+		exit 1;							    \
+	fi;
 
 .include "../../mk/bsd.pkg.mk"
