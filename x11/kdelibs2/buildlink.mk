@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.14 2001/11/16 02:03:27 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.15 2001/11/19 17:48:08 jlam Exp $
 #
 # This Makefile fragment is included by packages that use kdelibs2.
 #
@@ -26,6 +26,11 @@ EVAL_PREFIX+=			BUILDLINK_PREFIX.kdelibs2=kdelibs
 BUILDLINK_PREFIX.kdelibs2_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.kdelibs2!=	${GREP} "^\(include\|lib\)" ${.CURDIR}/../../x11/kdelibs2/PLIST
 BUILDLINK_FILES.kdelibs2+=	bin/dcopserver
+
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|-I${BUILDLINK_DIR}/\(include/artsc\)|-I${BUILDLINK_PREFIX.kdelibs2}/\1|g"
+BUILDLINK_CONFIG_WRAPPER_SED+=  \
+	-e "s|-I${BUILDLINK_PREFIX.kdelibs2}/\(include/artsc\)|-I${BUILDLINK_DIR}/\1|g"
 
 BUILDLINK_KDEDIR=		${BUILDLINK_DIR}
 KDEDIR=				${BUILDLINK_PREFIX.kdelibs2}
