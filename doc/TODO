@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2979 2005/01/31 11:52:30 wiz Exp $
+$NetBSD: TODO,v 1.2980 2005/01/31 23:59:43 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -484,7 +484,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdeskcal-0.57.1
 	o gdm1-2.2.5.5
-	o generator-0.35
 	o geneweb-4.10
 	o gerbv-1.0.0
 	o gettext-0.14.1
