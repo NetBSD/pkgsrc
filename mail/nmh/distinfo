@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.8 2004/05/04 06:18:14 mrg Exp $
+$NetBSD: distinfo,v 1.9 2005/01/16 19:19:46 jmmv Exp $
 
 SHA1 (nmh-1.0.4.tar.gz) = 71441a884d898db2fd9184a92e663682536425f5
 Size (nmh-1.0.4.tar.gz) = 683215 bytes
 SHA1 (patch-aa) = 88e3e0445cb0102bb3748eb2c9503950ae631931
-SHA1 (patch-ca) = 43aaf15dc5d07de03ff912894d7128d03eb1889d
+SHA1 (patch-ca) = 126d53b3af216754c40b828d7c444a6ee077073f
 SHA1 (patch-cb) = 6e498988c08e393fdd4e8e27f2ff6ce457e2c803
 SHA1 (patch-cd) = 13901025ef3a1b7fc07d0c13f8e1aef3e9bee2d6
 SHA1 (patch-ce) = b93b07c3ee82e6ab8599f362e14ad2dbe1955325
 SHA1 (patch-ci) = 98f1c80281656d05c460bdb237de3efbf80b9e32
-SHA1 (patch-cj) = 1f8455ddeb9bf46cb8fd1663f904e8ae79d2b9da
+SHA1 (patch-cj) = cb6a8ca83a7a94651668a70c697c4ec5fa402b48
