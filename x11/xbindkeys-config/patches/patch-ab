@@ -1,0 +1,67 @@
+$NetBSD: patch-ab,v 1.1 2003/09/25 12:02:35 tron Exp $
+
+--- middle.c.orig	2002-06-04 11:07:06.000000000 +0200
++++ middle.c	2003-09-25 14:01:21.000000000 +0200
+@@ -546,34 +546,34 @@
+ 
+ /*****************************************************************************/
+ static char commentary[]={
+-"########################### \n\
+-# xbindkeys configuration #  \n\
+-###########################  \n\
+-# \n\
+-# Version: 1.2.0 \n\
+-#
+-# If you edit this, do not forget to uncomment any lines that you change.\n\
+-# The pound(#) symbol may be used anywhere for comments.\n\
+-# \n\
+-# A list of keys is in /usr/include/X11/keysym.h and in \n\
+-# /usr/include/X11/keysymdef.h \n\
+-# The XK_ is not needed. \n\
+-# \n\
+-# List of modifier (on my keyboard): \n\
+-#   Control, Shift, Mod1 (Alt), Mod2 (NumLock), \n\
+-#   Mod3 (CapsLock), Mod4, Mod5 (Scroll). \n\
+-# \n\
+-# Another way to specifie a key is to use 'xev' and set the \n\
+-# keycode with c:nnn or the modifier with m:nnn where nnn is \n\
+-# the keycode or the state returned by xev \n\
+-# \n\
+-# This file is created by xbindkey_config \n\
+-# The structure is : \n\
+-# # Remark \n\
+-# \"command\" \n\
+-# m:xxx + c:xxx \n\
+-# Shift+... \n\
+-# \n\n\n\n"
++"########################### \n"
++"# xbindkeys configuration #  \n"
++"###########################  \n"
++"# \n"
++"# Version: 1.2.0 \n"
++"# \n"
++"# If you edit this, do not forget to uncomment any lines that you change.\n"
++"# The pound(#) symbol may be used anywhere for comments.\n"
++"# \n"
++"# A list of keys is in /usr/include/X11/keysym.h and in \n"
++"# /usr/include/X11/keysymdef.h \n"
++"# The XK_ is not needed. \n"
++"# \n"
++"# List of modifier (on my keyboard): \n"
++"#   Control, Shift, Mod1 (Alt), Mod2 (NumLock), \n"
++"#   Mod3 (CapsLock), Mod4, Mod5 (Scroll). \n"
++"# \n"
++"# Another way to specifie a key is to use 'xev' and set the \n"
++"# keycode with c:nnn or the modifier with m:nnn where nnn is \n"
++"# the keycode or the state returned by xev \n"
++"# \n"
++"# This file is created by xbindkey_config \n"
++"# The structure is : \n"
++"# # Remark \n"
++"# \"command\" \n"
++"# m:xxx + c:xxx \n"
++"# Shift+... \n"
++"# \n\n\n\n"
+ };
+ 
+ static char commentary_end[]={
