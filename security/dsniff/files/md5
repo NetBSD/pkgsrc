@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/12/18 08:49:38 itojun Exp $
+$NetBSD: md5,v 1.4 2000/12/20 04:16:25 itojun Exp $
 
-MD5 (dsniff-2.3.tar.gz) = 43c0aa3fd57ba296e608b5475ec2cd76
+MD5 (dsniff-2.3.tar.gz) = 183e336a45e38013f3af840bddec44b4
