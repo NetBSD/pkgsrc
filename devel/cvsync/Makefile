@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2004/08/12 20:46:21 minskim Exp $
+# $NetBSD: Makefile,v 1.68 2004/08/15 04:20:59 minskim Exp $
 #
 
 DISTNAME=	cvsync-0.24.16
@@ -27,8 +27,29 @@ CONF_FILES+=	${EGDIR}/cvsync.conf ${PKG_SYSCONFDIR}/cvsync.conf
 
 .include "../../mk/bsd.prefs.mk"
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.cvsync
 .ifdef ${OPSYS} == "AIX" || ${OPSYS} == "BSDOS" || ${OPSYS} == "Darwin" || \
 	${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+PKG_OPTIONS.cvsync?=	openssl
+PKG_SUPPORTED_OPTIONS=	libgcrypt mhash openssl
+.else
+PKG_OPTIONS.cvsync?=	native
+PKG_SUPPORTED_OPTIONS=	libgcrypt mhash native openssl
+.endif
+.include "../../mk/bsd.options.mk"
+
+###
+### Hash type
+###
+.if !empty(PKG_OPTIONS:Mlibgcrypt)
+MAKE_ENV+=	HASH_TYPE="libgcyprt"
+.include "../../security/libgcrypt/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Mmhash)
+MAKE_ENV+=	HASH_TYPE="mhash"
+.include "../../security/mhash/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Mnative)
+MAKE_ENV+=	HASH_TYPE="native"
+.elif !empty(PKG_OPTIONS:Mopenssl)
 MAKE_ENV+=	HASH_TYPE="openssl"
 .include "../../security/openssl/buildlink3.mk"
 .endif
