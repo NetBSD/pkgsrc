@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/10/03 13:32:19 markd Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/03 21:10:43 markd Exp $
 
 DISTNAME=	kdevelop-2.1.3_for_KDE_3.0
 PKGNAME=	kdevelop-base-2.1.3
@@ -12,6 +12,7 @@ COMMENT=	Base modules for IDE for Unix/X11/KDE
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
 
+DEPENDS+=		automake>=1.7:../../devel/automake
 DEPENDS+=		kdoc>=3.0:../../textproc/kdoc
 DEPENDS+=		htdig>=3.1.6:../../www/htdig
 DEPENDS+=		a2ps>=4.12:../../print/a2ps
@@ -38,5 +39,4 @@ CONFIGURE_ARGS+= \
 
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
