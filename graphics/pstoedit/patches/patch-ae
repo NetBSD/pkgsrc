@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.3 2003/12/03 11:18:05 markd Exp $
+
+--- drvsk.cpp.orig	2003-11-18 23:30:30.000000000 +1300
++++ drvsk.cpp
+@@ -62,7 +62,7 @@ PERFORMANCE OF THIS SOFTWARE.
+ #include <ctype.h>
+ #include <iomanip.h>
+ #if (defined(unix) || defined(__unix__) || defined(_unix) || defined(__unix) || defined(__EMX__) || defined (NetBSD)  ) && !defined(DJGPP)
+-#include <strstream.h>
++#include <strstream>
+ #else
+ #include <strstrea.h>
+ #endif
+@@ -377,7 +377,7 @@ void drvSK::show_image(const Image & ima
+ 		return;
+ 	}
+ 
+-	ostrstream ppm;
++	std::ostrstream ppm;
+ 
+ 	switch (imageinfo.type) {
+ 	case colorimage:
