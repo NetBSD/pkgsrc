@@ -1,39 +1,63 @@
-# $NetBSD: bsd.prefs.mk,v 1.6 1999/05/24 11:17:05 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.7 1999/05/24 18:42:01 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
-# statements, to make sure any variables defined in /etc/mk.conf or
-# $MAKECONF are used.
+# statements or modifications to "passed" variables (CFLAGS, LDFLAGS, ...),
+# to make sure any variables defined in /etc/mk.conf, $MAKECONF, or
+# the system defaults (sys.mk and bsd.own.mk) are used.
 
 # Do not recursively include mk.conf, redefine OPSYS, include bsd.own.mk, etc.
 .ifndef BSD_PKG_MK
 
-# Let people know this is bsd.pkg.mk, so they can set up their
-# /etc/mk.conf accordingly  
+# Let mk.conf know that this is pkgsrc.
 BSD_PKG_MK=1 
+__PREFIX_SET__:=${PREFIX}
 
-.if !defined(OPSYS)
-OPSYS!= /usr/bin/uname -s
+.ifndef OPSYS
+OPSYS!=			/usr/bin/uname -s
+.endif
+.ifndef OS_VERSION
+OS_VERSION!=		/usr/bin/uname -r
 .endif
 
-# Don't complain about environment settings on recursive makes.
-__PREFIX_SET__=${PREFIX}
+# Preload these for architectures not in all variations of bsd.own.mk.
+GNU_ARCH.alpha?=	alpha
+GNU_ARCH.arm32?=	arm
+GNU_ARCH.i386?=		i386
+GNU_ARCH.m68k?=		m68k
+GNU_ARCH.mips?=		mipsel
+GNU_ARCH.ns32k?=	ns32k
+GNU_ARCH.sparc?=	sparc
+GNU_ARCH.vax?=		vax
+MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
 
 .if (${OPSYS} == "NetBSD")
-NEED_OWN_INSTALL_TARGET=	no
-.include <bsd.own.mk>
-SHAREOWN = ${DOCOWN}
-SHAREGRP = ${DOCGRP}
-SHAREMODE = ${DOCMODE}
+LOWER_OPSYS?=		netbsd
 .elif (${OPSYS} == "SunOS")
-NEED_OWN_INSTALL_TARGET=	no
+LOWER_OPSYS?=		solaris
+LOWER_VENDOR?=		sun
+.elif !defined(LOWER_OPSYS)
+LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
+.endif
+
+LOWER_VENDOR?=
+LOWER_ARCH?=		${MACHINE_GNU_ARCH}
+
+MACHINE_PLATFORM?=	${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
+MACHINE_GNU_PLATFORM?=	${LOWER_OPSYS}-${LOWER_VENDOR}-${LOWER_ARCH}
+
+# Needed on NetBSD and SunOS (zoularis) to prevent an "install:" target
+# from being created in bsd.own.mk.
+NEED_OWN_INSTALL_TARGET=no
+
 .include <bsd.own.mk>
-SHAREOWN = ${DOCOWN}
-SHAREGRP = ${DOCGRP}
-SHAREMODE = ${DOCMODE}
+
+.if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS")
+SHAREOWN?=		${DOCOWN}
+SHAREGRP?=		${DOCGRP}
+SHAREMODE?=		${DOCMODE}
 .elif (${OPSYS} == "OpenBSD")
-.include <bsd.own.mk>
-MAKE_ENV+=	EXTRA_SYS_MK_INCLUDES="<bsd.own.mk>"
+MAKE_ENV+=		EXTRA_SYS_MK_INCLUDES="<bsd.own.mk>"
 .endif
 
 .if defined(PREFIX) && (${PREFIX} != ${__PREFIX_SET__})
@@ -43,6 +67,8 @@ MAKE_ENV+=	EXTRA_SYS_MK_INCLUDES="<bsd.own.mk>"
 	@${FALSE}
 .endif
 
+# Preload all default values for CFLAGS, LDFLAGS, etc. before bsd.pkg.mk
+# or a pkg Makefile modifies them.
 .include <sys.mk>
 
 .endif
