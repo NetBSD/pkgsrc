@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.932 2002/02/28 11:08:55 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.933 2002/02/28 14:42:39 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -1273,7 +1273,7 @@ ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 .endif
 
 #
-# Complete macro for the do-fetch and fetch-list-one-package targets.
+# Complete macro for the do-fetch target.
 #
 .if !defined(_FETCH_ALLFILES)
 .  if !empty(_DISTFILES)
@@ -1334,6 +1334,72 @@ show-depends-dirs:
 	cd $$thisdir ;\
 	${ECHO} "$$dlist"
 .endif
+
+# Show all build and run depends, reverse-breadth first, with options.
+.if make(show-all-depends-dirs) || make(show-all-depends-dirs-excl) || make (show-root-dirs)
+.PHONY: show-all-depends-dirs show-all-depends-dirs-excl show-root-dirs
+
+# "awk" macro to recurse over the dependencies efficiently, never running in
+# the same same directory twice. You may set the following options via "-v":
+#
+#	NonSelf = 1	to not print own directory;
+#	RootsOnly = 1	to print only root directories (i.e. directories
+#			of packages with no dependencies), including possibly
+#			own directory
+#
+_RECURSE_DEPENDS_DIRS=							\
+	function append_dirs(dir) {					\
+		command = "cd ../../" dir " && make show-depends-dirs";	\
+		command | getline tmp_dirs;				\
+		close(command);						\
+		if (tmp_dirs ~ /^$$/)					\
+			root_dirs[p++] = dir;				\
+		for (i = 1; i <= split(tmp_dirs, tmp_r); i++)		\
+			if (!(tmp_r[i] in hash_all_dirs)) {		\
+				all_dirs[n++] = tmp_r[i];		\
+				hash_all_dirs[tmp_r[i]] = 1		\
+			}						\
+	}								\
+	BEGIN {								\
+		command = "pwd";					\
+		command | getline start_dir;				\
+		close(command);						\
+		i = split(start_dir, tmp_r, /\//);			\
+		all_dirs[n++] = tmp_r[i-1] "/" tmp_r[i];		\
+		for (; m < n; )						\
+			append_dirs(all_dirs[m++]);			\
+		if (RootsOnly) {					\
+			printf("%s", root_dirs[--p]);			\
+			for (; p > 0; )					\
+				printf(" %s", root_dirs[--p])		\
+		}							\
+		else {							\
+			if (m > NonSelf)				\
+				printf("%s", all_dirs[--m]);		\
+			for (; m > NonSelf; )				\
+				printf(" %s", all_dirs[--m])		\
+		}							\
+		print							\
+	}
+
+.if make(show-all-depends-dirs)
+show-all-depends-dirs:
+	${_PKG_SILENT}${_PKG_DEBUG}${AWK} '${_RECURSE_DEPENDS_DIRS}'
+.endif
+
+.if make(show-all-depends-dirs-excl)
+show-all-depends-dirs-excl:
+	${_PKG_SILENT}${_PKG_DEBUG}${AWK} -v NonSelf=1 \
+		'${_RECURSE_DEPENDS_DIRS}'
+.endif
+
+.if make(show-root-dirs)
+show-root-dirs:
+	${_PKG_SILENT}${_PKG_DEBUG}${AWK} -v RootsOnly=1 \
+		'${_RECURSE_DEPENDS_DIRS}'
+.endif
+
+.endif # make(show-{all-depends-dirs{,-excl},root-dirs})
 
 .if !target(show-distfiles)
 show-distfiles:
@@ -2688,37 +2754,70 @@ distclean: pre-distclean clean
 	-${_PKG_SILENT}${_PKG_DEBUG}${RM} -f README.html
 .endif
 
-# Prints out a list of files to fetch (useful to do a batch fetch)
-
-# are we called from bsd.pkg.subdir.mk (i.e. do we scan all dirs anyway)? XXX
-.ifdef(_THISDIR_)
-RECURSIVE_FETCH_LIST?=	NO
-.else
-RECURSIVE_FETCH_LIST?=	YES
-.endif
-
+# Prints out a script to fetch all needed files (no checksumming).
 .if !target(fetch-list)
+.PHONY: fetch-list
+
 fetch-list:
-	@${MAKE} ${MAKEFLAGS} fetch-list-recursive RECURSIVE_FETCH_LIST=${RECURSIVE_FETCH_LIST} | ${SORT} -u
+	@${ECHO} '#!/bin/sh'
+	@${ECHO} '#'
+	@${ECHO} '# This is an auto-generated script, the result of running'
+	@${ECHO} '# `make fetch-list'"'"' in directory "'"`pwd`"'"'
+	@${ECHO} '# on host "'"`${UNAME} -n`"'" on "'"`date`"'".'
+	@${ECHO} '#'
+	@${MAKE} ${MAKEFLAGS} fetch-list-recursive
 .endif # !target(fetch-list)
 
 .if !target(fetch-list-recursive)
+.PHONY: fetch-list-recursive
+
 fetch-list-recursive:
-	@${MAKE} ${MAKEFLAGS} fetch-list-one-pkg
-.  if ${RECURSIVE_FETCH_LIST} != "NO"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//}	\
-				  ${DEPENDS:C/^[^:]*://:C/:.*//} |	\
-		    ${TR} '\040' '\012' | ${SORT} -u` ; do		\
-		cd ${.CURDIR}/$$dir &&					\
-		${MAKE} ${MAKEFLAGS} fetch-list-recursive;		\
+	for dir in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs`; do	\
+		(cd ../../$$dir &&					\
+		${MAKE} ${MAKEFLAGS} fetch-list-one-pkg			\
+		| ${AWK} '						\
+		/^[^#]/ { FoundSomething = 1 }				\
+		/^unsorted/ { gsub(/[[:space:]]+/, " \\\n\t") }		\
+		{ block[line_c++] = $$0 }				\
+		END { if (FoundSomething)				\
+			for (line = 0; line < line_c; line++)		\
+				print block[line] }			\
+		')							\
 	done
-.  endif # ${RECURSIVE_FETCH_LIST} != "NO"
 .endif # !target(fetch-list-recursive)
 
 .if !target(fetch-list-one-pkg)
+.PHONY: fetch-list-one-pkg
+
 fetch-list-one-pkg:
-	@${ECHO} ${_FETCH_ALLFILES:Q}
+.  if !empty(_ALLFILES)
+	@${ECHO}
+	@${ECHO} '#'
+	@location=`pwd | ${AWK} -F / '{ print $$(NF-1) "/" $$NF }'`; \
+		${ECHO} '# Need additional files for ${PKGNAME} ('$$location')...'
+	@${ECHO} '#'
+	@${MKDIR} ${_DISTDIR}
+.    for fetchfile in ${_ALLFILES}
+	@(cd ${_DISTDIR};						\
+	if [ ! -f ${fetchfile} -a ! -f ${fetchfile:T} ]; then		\
+		${ECHO};						\
+		filesize=`${AWK} '					\
+			/^Size/ && $$2 == "(${fetchfile})" { print $$4 } \
+			' ${DISTINFO_FILE}` || true;			\
+		${ECHO} '# Fetch ${fetchfile} ('$${filesize-???}' bytes):'; \
+		${ECHO} '#';						\
+		${ECHO} 'unsorted_sites="${SITES_${fetchfile:T}} ${_MASTER_SITE_BACKUP}"'; \
+		${ECHO} sites='"'${ORDERED_SITES:Q}'"';			\
+		${ECHO} "${MKDIR} ${_DISTDIR}";				\
+		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
+		${ECHO}	'for site in $$sites; do';			\
+		${ECHO} '	${FETCH_CMD} ${FETCH_BEFORE_ARGS} "$${site}${fetchfile:T}" ${FETCH_AFTER_ARGS} && break ||'; \
+		${ECHO} '	${ECHO} ${fetchfile} not fetched';	\
+		${ECHO}	done;						\
+	fi)
+.    endfor
+.  endif # !empty(_ALLFILES)
 .endif # !target(fetch-list-one-pkg)
 
 # Checksumming utilities
