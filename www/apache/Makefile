@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.90 2002/02/05 05:35:11 jmc Exp $
+# $NetBSD: Makefile,v 1.91 2002/02/28 05:45:33 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
 DISTNAME=		apache_1.3.23
 PKGNAME=		apache-1.3.23
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/ \
@@ -15,7 +16,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 MASTER_SITES+=		http://www.modssl.org/source/ \
 			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/
 DISTFILES+=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
-MODSSL_DISTNAME=	mod_ssl-2.8.6-1.3.23
+MODSSL_DISTNAME=	mod_ssl-2.8.7-1.3.23
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 
 MAINTAINER=		jlam@netbsd.org
@@ -36,6 +37,7 @@ CONFIGURE_ARGS+=	--enable-rule=EAPI				\
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM="${APACHE_CUSTOM_CFLAGS}"
+CONFIGURE_ENV+=		EAPI_MM="${BUILDLINK_DIR}"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -159,6 +161,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/httpd
 
+.include "../../devel/libmm/buildlink.mk"
 .include "../../textproc/expat/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
