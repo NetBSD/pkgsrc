@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:14:05 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/25 19:45:52 snj Exp $
 #
 
-DISTNAME=	ee-1.4.5a.src
-PKGNAME=	easyedit-1.4.5a
+DISTNAME=	ee-1.4.6.src
+PKGNAME=	easyedit-1.4.6
 CATEGORIES=	editors
 MASTER_SITES=	http://mahon.cwx.net/sources/
 EXTRACT_SUFX=	.tgz
