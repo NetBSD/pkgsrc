@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.72 2005/01/13 16:19:10 taca Exp $
+$NetBSD: distinfo,v 1.73 2005/01/19 14:56:55 taca Exp $
 
 SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7.tar.bz2) = 24f29e28ec62d7ab5888cd594ac7a1975ee6aa36
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7.tar.bz2) = 1051830 bytes
@@ -30,6 +30,12 @@ SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-gopher_html_parsing.patch) = 5da5
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-gopher_html_parsing.patch) = 714 bytes
 SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-wccp_denial_of_service.patch) = e4bec66adbe369eaa91cd6db3a503eb0a6de40e1
 Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-wccp_denial_of_service.patch) = 1928 bytes
+SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-dns_memleak.patch) = ea04865af9edb1db650090a6f163c33cfff69a16
+Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-dns_memleak.patch) = 779 bytes
+SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-fqdn_truncated.patch) = de02ebf4455ce1d2e685d88cb372cb7d6423a9e8
+Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-fqdn_truncated.patch) = 4484 bytes
+SHA1 (squid-2.5.7-2005010100/squid-2.5.STABLE7-ldap_spaces.patch) = f0ae7e6dbb9580186f2e091d840ccf3bda348abc
+Size (squid-2.5.7-2005010100/squid-2.5.STABLE7-ldap_spaces.patch) = 1974 bytes
 SHA1 (patch-aa) = 3e6fb677125eec276fdfa62336c134f26e1e1edd
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
