@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2880 2003/07/24 20:18:24 wiz Exp $
+$NetBSD: CHANGES,v 1.2881 2003/07/24 21:00:40 jwise Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2929,3 +2929,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added spider-1.1 [jschauma 2003-07-24]
 	Updated oo2c to 2.0.10 [jtb 2003-07-24]
 	Added bkedit-0.6.21 [wiz 2003-07-24]
+	Added openssh+gssapi-3.6.1.2.20030430 [jwise 2003-07-24]
