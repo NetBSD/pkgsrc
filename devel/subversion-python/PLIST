@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/25 09:09:40 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/18 13:26:27 epg Exp $
 bin/cvs2svn
 lib/libsvn_swig_py-1.a
 lib/libsvn_swig_py-1.la
@@ -14,14 +14,16 @@ ${PYSITELIB}/rcsparse/texttools.py
 ${PYSITELIB}/svn/__init__.py
 ${PYSITELIB}/svn/__init__.pyc
 ${PYSITELIB}/svn/_client.so
+${PYSITELIB}/svn/_core.so
 ${PYSITELIB}/svn/_delta.so
 ${PYSITELIB}/svn/_fs.so
 ${PYSITELIB}/svn/_ra.so
 ${PYSITELIB}/svn/_repos.so
-${PYSITELIB}/svn/_util.so
 ${PYSITELIB}/svn/_wc.so
 ${PYSITELIB}/svn/client.py
 ${PYSITELIB}/svn/client.pyc
+${PYSITELIB}/svn/core.py
+${PYSITELIB}/svn/core.pyc
 ${PYSITELIB}/svn/delta.py
 ${PYSITELIB}/svn/delta.pyc
 ${PYSITELIB}/svn/fs.py
