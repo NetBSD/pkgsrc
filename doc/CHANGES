@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4603 2004/01/25 20:39:43 wiz Exp $
+$NetBSD: CHANGES,v 1.4604 2004/01/25 20:46:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -486,3 +486,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ms-ttf to 20020306nb3 [wiz 2004-01-25]
 	Updated vera-ttf to 1.10nb2 [wiz 2004-01-25]
 	Updated vfontcap-kochi to 0.0nb1 [wiz 2004-01-25]
+	Updated xfstt to 1.6nb1 [wiz 2004-01-25]
