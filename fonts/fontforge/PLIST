@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 10:03:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/14 10:13:45 adam Exp $
+bin/pfaedit
 bin/fontforge
 bin/sfddiff
 lib/libgdraw.la
 lib/libgunicode.la
+lib/pkgconfig/fontforge.pc
 man/man1/fontforge.1
 man/man1/sfddiff.1
 share/fontforge/pfaedit-de.ui
