@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.21 2002/06/23 08:45:09 kent Exp $
+$NetBSD: patch-aa,v 1.22 2002/09/06 11:51:59 wiz Exp $
 
 --- Makefile.orig	Sun Jun 23 16:56:17 2002
 +++ Makefile
@@ -83,27 +83,27 @@ $NetBSD: patch-aa,v 1.21 2002/06/23 08:45:09 kent Exp $
 +
 +netbsd-esd:
 +	$(MAKE) CC=cc LDFLAGS= \
-+		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		AUDIO_LIB="`esd-config --libs`" \
 +		OBJECTS='decode.o dct64.o audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O3 -fomit-frame-pointer \
 +			-funroll-all-loops -ffast-math -DREAD_MMAP \
 +			-DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD \
-+			`$(ESD_CONFIG) --cflags`' \
++			`esd-config --cflags`' \
 +		mpg123-make
 +
 +netbsd-i386-esd:
 +	$(MAKE) CC=cc LDFLAGS= \
-+		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		AUDIO_LIB="`esd-config --libs`" \
 +		OBJECTS='decode_i386.o dct64_i386.o audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
 +			-funroll-all-loops -ffast-math -DROT_I386 -DREAD_MMAP \
 +			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD \
-+			`$(ESD_CONFIG) --cflags`' \
++			`esd-config --cflags`' \
 +		mpg123-make
 +
 +netbsd-i386-elf-esd:
 +	$(MAKE) CC=cc LDFLAGS= \
-+		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		AUDIO_LIB="`esd-config --libs`" \
 +		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
 +			audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
@@ -111,39 +111,39 @@ $NetBSD: patch-aa,v 1.21 2002/06/23 08:45:09 kent Exp $
 -			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
 +			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
 +			-DREAD_MMAP -DNETBSD -DTERM_CONTROL \
-+			`$(ESD_CONFIG) --cflags`' \
++			`esd-config --cflags`' \
 +		mpg123-make
 +
 +netbsd-m68k-esd:
 +	$(MAKE) CC=cc LDFLAGS= \
-+		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		AUDIO_LIB="`esd-config --libs`" \
 +		OBJECTS='decode.o dct64.o audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O3 -fomit-frame-pointer \
 +			-ffast-math -DREAL_IS_FLOAT -DREAD_MMAP \
 +			-DUSE_MMAP -DNETBSD -DM68K_ASSEM -DTERM_CONTROL \
-+			`$(ESD_CONFIG) --cflags`' \
++			`esd-config --cflags`' \
 +		mpg123-make
 +
 +netbsd-arm-esd:
 +	$(MAKE) CC=cc LDFLAGS= \
-+		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		AUDIO_LIB="`esd-config --libs`" \
 +		OBJECTS='decode.o dct64.o audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -O6 -fomit-frame-pointer \
 +			-funroll-all-loops -finline-functions -ffast-math \
 +			-march=armv4 -mtune=strongarm -mcpu=strongarm \
 +			-DREAL_IS_FIXED -DUSE_MMAP -DREAD_MMAP -DTERM_CONTROL \
-+			-DNETBSD `$(ESD_CONFIG) --cflags`' \
++			-DNETBSD `esd-config --cflags`' \
 +		mpg123-make
 +
 +netbsd-arm-64-esd:
 +	$(MAKE) CC=cc LDFLAGS= \
-+		AUDIO_LIB="`$(ESD_CONFIG) --libs`" \
++		AUDIO_LIB="`esd-config --libs`" \
 +		OBJECTS='decode.o dct64.o audio_esd.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -O6 -fomit-frame-pointer \
 +			-funroll-all-loops -finline-functions -ffast-math \
 +			-march=armv4 -mtune=strongarm110 -mcpu=strongarm110 \
 +			-DREAL_IS_FIXED_ARMV4 -DUSE_MMAP -DREAD_MMAP \
-+			-DTERM_CONTROL -DNETBSD `$(ESD_CONFIG) --cflags`' \
++			-DTERM_CONTROL -DNETBSD `esd-config --cflags`' \
  		mpg123-make
  
  bsdos:

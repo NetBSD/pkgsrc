@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2002/06/23 08:45:09 kent Exp $ -*- Makefile -*-
+# $NetBSD: Makefile.common,v 1.2 2002/09/06 11:51:58 wiz Exp $ -*- Makefile -*-
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
 CATEGORIES=	audio
@@ -12,10 +12,11 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mpg123.de/
 BUILD_DEFS+=	USE_INET6
 DIST_SUBDIR=	mpg123
-PATCHDIR=	../mpg123/patches
-FILESDIR=	../mpg123/files
+PATCHDIR=	${.CURDIR}/../../audio/mpg123/patches
+FILESDIR=	${.CURDIR}/../../audio/mpg123/files
+DISTINFO_FILE=	${.CURDIR}/../../audio/mpg123/distinfo
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 # for OBJECT_FMT
 .include "../../mk/bsd.prefs.mk"
