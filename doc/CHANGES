@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4291 2003/12/30 04:32:33 grant Exp $
+$NetBSD: CHANGES,v 1.4292 2003/12/30 15:37:01 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5481,3 +5481,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gok-0.8.4 [xtraeme 2003-12-29]
 	Added p5-Net-Bind-0.05 [grant 2003-12-30]
 	Added p5-Devel-Profile-1.03 [grant 2003-12-30]
+	Update bsdgrep-devel to 20031230 [cjep 2003-12-30]
