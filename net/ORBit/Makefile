@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.109 2004/12/04 23:09:06 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.110 2005/01/13 09:58:57 adam Exp $
 
-DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
-PKGREVISION=		7
-CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ORBit/0.${ORBIT_MAJOR}/}
+DISTNAME=	ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ORBit/0.${ORBIT_MAJOR}/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
-COMMENT=		High-performance CORBA ORB with support for the C language
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/
+COMMENT=	High-performance CORBA ORB with support for the C language
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -33,7 +32,7 @@ PKGCONFIG_OVERRIDE+=	libIDL/libIDL.pc.in
 
 # for DISTNAME, PKGNAME
 ORBIT_MAJOR=		5
-ORBIT_MINOR=		15
+ORBIT_MINOR=		17
 
 INFO_FILES=		libIDL.info
 
