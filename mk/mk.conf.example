@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.108 1999/12/10 03:55:47 hubertf Exp $
+# $NetBSD: mk.conf.example,v 1.109 2000/01/04 01:51:44 fredb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -325,6 +325,13 @@
 # Used in many packages to specify use of a Kerberos (or compatible)
 # subsystem.  Requires Kerberos libraries in /usr/lib.
 # Possible: 4, 5, not defined
+# Default: not defined
+
+#KERMIT_SUID_UUCP
+# If set to YES or yes, install kermit binary set-uid uucp. Permits an 
+# unprivileged user to access the serial ports, with default permissions
+# on the /dev/tty0* special files.
+# Possible: YES, yes, not defined
 # Default: not defined
 
 #KNEWS_DOMAIN_FILE=
