@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/12/24 06:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/02/13 14:41:37 agc Exp $
 #
 
 DISTNAME=	apla-1.0.3
@@ -15,6 +15,8 @@ USE_X11=	YES
 MAKE_ENV+=	AVIFILE_CONFIG=avifile-config
 MAKE_ENV+=	SDL_CONFIG=sdl-config
 MAKE_ENV+=	FREETYPE_CONFIG=freetype-config
+
+BROKEN=		Xv compilation problems
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/apla ${PREFIX}/bin
