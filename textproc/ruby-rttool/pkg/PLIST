@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/01 14:00:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/07/11 16:37:10 taca Exp $
 bin/rt2
 bin/rdrt2
 ${RUBY_SITELIBDIR}/rt/rt2html-lib.rb
 ${RUBY_SITELIBDIR}/rt/rt2txt-lib.rb
+${RUBY_SITELIBDIR}/rt/rtparser-test.rb
 ${RUBY_SITELIBDIR}/rt/rtparser.rb
 ${RUBY_SITELIBDIR}/rt/rtvisitor.rb
 ${RUBY_SITELIBDIR}/rt/w3m.rb
