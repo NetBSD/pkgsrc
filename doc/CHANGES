@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7891 2004/11/17 18:09:42 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7892 2004/11/18 06:27:20 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5319,3 +5319,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtkballs to 3.1.5 [adam 2004-11-17]
 	Updated lbreakout2 to 2.5.1 [adam 2004-11-17]
 	Added openvpn-current-2.0beta15 [xtraeme 2004-11-17]
+	Updated xmms to 1.2.10nb2 [grant 2004-11-18]
