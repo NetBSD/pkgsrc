@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1667 2004/04/24 15:44:19 minskim Exp $
+$NetBSD: TODO,v 1.1668 2004/04/24 18:26:09 danw Exp $
 
 Suggested new packages
 ======================
@@ -346,6 +346,7 @@ Suggested package updates
 	o tmda-1.0.2
 	o top-3.5b12.10
 	o treecc-0.2.8
+	o tripwire-2.3.1 [see also pkg/22362]
 	o ttf2pt1-3.4.3
 	o txt2html-2.20 [wennmach]
 	o txt2html-2.23
