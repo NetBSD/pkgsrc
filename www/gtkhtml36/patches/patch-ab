@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/22 16:07:33 jmmv Exp $
+
+--- po/Makefile.in.in.orig	2005-03-07 19:35:22.000000000 +0100
++++ po/Makefile.in.in
+@@ -35,6 +35,7 @@ subdir = po
+ 
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
++mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ 
+ CC = @CC@
+ GENCAT = @GENCAT@
