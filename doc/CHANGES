@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8254 2004/12/04 20:38:49 jlam Exp $
+$NetBSD: CHANGES,v 1.8255 2004/12/04 20:41:08 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5758,3 +5758,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libmusepack-1.0.3 [wiz 2004-12-04]
 	Updated xmms-musepack to 1.1 [wiz 2004-12-04]
 	Updated proxsmtp to 1.0 [jlam 2004-12-04]
+	Added lablgtk2-2.4.0 [jmmv 2004-12-04]
