@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/24 03:10:58 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/31 13:59:24 toshii Exp $
 lib/X11/fonts/local/mona6x12a.pcf.gz
 lib/X11/fonts/local/mona6x12aB.pcf.gz
 lib/X11/fonts/local/mona6x12aBI.pcf.gz
@@ -35,3 +35,7 @@ lib/X11/fonts/local/monak16.pcf.gz
 lib/X11/fonts/local/monak16B.pcf.gz
 lib/X11/fonts/local/monak16BI.pcf.gz
 lib/X11/fonts/local/monak16I.pcf.gz
+lib/X11/fonts/local/monau16.pcf.gz
+lib/X11/fonts/local/monau16B.pcf.gz
+lib/X11/fonts/local/monau16BI.pcf.gz
+lib/X11/fonts/local/monau16I.pcf.gz
