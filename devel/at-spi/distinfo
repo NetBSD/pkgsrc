@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/02/15 18:14:51 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2004/02/26 17:43:41 jmmv Exp $
 
-SHA1 (at-spi-1.3.12.tar.bz2) = dbcfbc327a98715ce175671d59d6425d92395a40
-Size (at-spi-1.3.12.tar.bz2) = 428156 bytes
-SHA1 (patch-aa) = 8eb699cf040cd859f3af61b294cdce6b4fb97739
+SHA1 (at-spi-1.3.13.tar.bz2) = a09f034e3ca70d08f6bcf629e1190e00128123eb
+Size (at-spi-1.3.13.tar.bz2) = 457567 bytes
 SHA1 (patch-ab) = 0baa4a3cb335e912159990def28454bbc5ef1cf6
