@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2641 2003/06/30 15:35:29 gson Exp $
+$NetBSD: CHANGES,v 1.2642 2003/06/30 15:55:41 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2633,3 +2633,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pax to 20030630 [grant 2003-06-30]
 	Updated libnbcompat to 20030630 [grant 2003-06-30]
 	Updated py-dns to 1.0.0 [gson 2003-06-30]
+	Updated mtree to 20030630 [grant 2003-06-30]
