@@ -1,4 +1,4 @@
-/*	$NetBSD: options.h,v 1.3 2003/12/20 04:45:04 grant Exp $	*/
+/*	$NetBSD: options.h,v 1.4 2004/06/20 10:11:02 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
  * operation mode of pax, a set of illegal flags is defined. If any one of
  * those illegal flags are found set, we scream and exit
  */
-#define NONE	"none"
+#define none	"none"
 
 /*
  * flags (one for each option).

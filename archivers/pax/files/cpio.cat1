@@ -85,7 +85,7 @@ DDEESSCCRRIIPPTTIIOONN
                      Read list of file name patterns to extract or list from
                      _f_i_l_e.
 
-             --ff, ----nnoonnmmaatthhiinngg
+             --ff, ----nnoonnmmaattcchhiinngg
                      Restore all files except those matching the _p_a_t_t_e_r_n_s
                      given on the command line.
 
@@ -203,4 +203,4 @@ AAUUTTHHOORRSS
 BBUUGGSS
      The --ss and --SS options are currently not implemented.
 
-NetBSD 1.6                     February 16, 1997                    NetBSD 1.6
+NetBSD 2.0                     February 13, 2004                    NetBSD 2.0

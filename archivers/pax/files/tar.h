@@ -1,4 +1,4 @@
-/*	$NetBSD: tar.h,v 1.3 2003/12/20 04:45:04 grant Exp $	*/
+/*	$NetBSD: tar.h,v 1.4 2004/06/20 10:11:02 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -115,12 +115,12 @@ typedef struct {
 /*
  * default device names
  */
-#define	DEV_0		"/dev/rst0"
-#define	DEV_1		"/dev/rst1"
-#define	DEV_4		"/dev/rst4"
-#define	DEV_5		"/dev/rst5"
-#define	DEV_7		"/dev/rst7"
-#define	DEV_8		"/dev/rst8"
+extern char DEV_0[];
+extern char DEV_1[];
+extern char DEV_4[];
+extern char DEV_5[];
+extern char DEV_7[];
+extern char DEV_8[];
 #endif /* _PAX_ */
 
 /*
