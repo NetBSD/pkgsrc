@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/10/03 00:18:19 tv Exp $
+# $NetBSD: Makefile,v 1.36 2004/11/26 12:24:40 wiz Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	9
@@ -47,6 +47,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/*.htm ${PREFIX}/share/doc/jade
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
+# avoid installing files generated through distribution patches
+	${RM} -f ${PREFIX}/share/sgml/jade/FOT.tex.orig_dist
+	${RM} -f ${PREFIX}/share/sgml/jade/demoMaster.tex.orig_dist
 # Installed by print/tex-jadetex
 	${RM} ${PREFIX}/share/sgml/jade/*jadetex.*
 
