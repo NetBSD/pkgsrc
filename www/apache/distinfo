@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.12 2002/02/01 16:04:39 jlam Exp $
+$NetBSD: distinfo,v 1.13 2002/02/28 05:45:33 jlam Exp $
 
 SHA1 (apache_1.3.23.tar.gz) = 20aa246303be1948f240cd7c5c3cf50d97d06868
 Size (apache_1.3.23.tar.gz) = 2210130 bytes
 SHA1 (sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
 Size (sitedrivenby.gif) = 8519 bytes
-SHA1 (mod_ssl-2.8.6-1.3.23.tar.gz) = 74b2e35c69780b8de00a06ed7b7d0d1acf904d3b
-Size (mod_ssl-2.8.6-1.3.23.tar.gz) = 752025 bytes
+SHA1 (mod_ssl-2.8.7-1.3.23.tar.gz) = c8a2b838b6e54e2fb1ef0983c65996b1260bb2b0
+Size (mod_ssl-2.8.7-1.3.23.tar.gz) = 751993 bytes
 SHA1 (patch-aa) = 9ebfc626364271a60a4db4b1b0c28c92060a9f35
 SHA1 (patch-ab) = 71ea1f3a59e0f7bc37175b0eefd462a1f7ca4fb6
 SHA1 (patch-ac) = 12347c7a306d3e898b032c2b4b3b01670b62d4fd
@@ -17,3 +17,4 @@ SHA1 (patch-ah) = 553f8f2bf4bf7278adb46ff8749be154f10e39d3
 SHA1 (patch-ai) = 46d9a97fbc248a2bea97943b9f3b2f9f693f3695
 SHA1 (patch-aj) = 1cdd2f010d381ec9c13f59b31caab7d1f6f63100
 SHA1 (patch-ak) = 8f790a692ed9b2dd6943be43fa1cf7629c673955
+SHA1 (patch-al) = a27b9676998621229dc3a1d920ea44b8e622feb2
