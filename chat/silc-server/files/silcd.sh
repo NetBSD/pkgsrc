@@ -1,48 +1,54 @@
 #!/bin/sh
 #
-# $NetBSD: silcd.sh,v 1.1.1.1 2001/11/30 23:33:35 hubertf Exp $
+# $NetBSD: silcd.sh,v 1.2 2001/12/17 00:43:11 hubertf Exp $
 #
 # PROVIDE: silcd
 # REQUIRE: DAEMON
 
+. /etc/rc.subr
+
 name="silcd"
 pidfile="/var/run/${name}.pid"
+command="@PREFIX@/sbin/silcd"
+start_precmd="silcd_precmd"
+stop_cmd="silcd_stop"
+confdir="@SILCD_CONF_DIR@"
 
-command=${1:-start}
+silcd_precmd()
+{
+	if [ -f $confdir/silcd.conf ]; then
+		if [ ! -f $confdir/silcd.prv ]; then
+			$command -C $confdir
+		fi
+	else
+		warn "Cannot open $confdir/silcd.conf"
+	fi
+}
 
-case ${command} in
-start)
-	if [ ! -f @SILCD_CONF_DIR@/silcd.prv ]
-	then
-		@PREFIX@/sbin/silcd -C @SILCD_CONF_DIR@
+silcd_stop()
+{
+	if [ -z "$_pid" ]; then
+		if [ -n "$pidfile" ]; then
+			echo "${name} not running? (check $pidfile)."
+		else
+			echo "${name} not running?"
+		fi
+		exit 1
 	fi
-	if [ -x @PREFIX@/sbin/silcd -a -f @SILCD_CONF_DIR@/silcd.conf ]
-	then
-		echo "Starting ${name}."
-		@PREFIX@/sbin/silcd
+
+	if ! eval $_precmd && [ -z "$_rc_force_run" ]; then
+		return 1
+	fi      
+
+	echo "Stopping ${name}."
+	_doit=\
+"${_user:+su -m $_user -c '}kill -${sig_stop:-TERM} $_pid${_user:+'}"
+	eval $_doit
+
+	eval $_pidcmd
+	if [ ! $_pid ]; then
+		rm -f $pidfile
 	fi
-	;;
-stop)
-	if [ -f ${pidfile} ]; then
-		pid=`head -1 ${pidfile}`
-		echo "Stopping ${name}."
-		kill -TERM ${pid}
-	else
-		echo "${name} not running?"
-	fi
-	;;
-restart)
-	( $0 stop )
-	sleep 1
-	$0 start
-	;;
-status)
-	if [ -f ${pidfile} ]; then
-		pid=`head -1 ${pidfile}`
-		echo "${name} is running as pid ${pid}."
-	else
-		echo "${name} is not running."
-	fi
-	;;
-esac
-exit 0
+}
+
+run_rc_command "$1"

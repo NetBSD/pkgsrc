@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/30 23:33:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/17 00:43:10 hubertf Exp $
 
-DISTNAME=		silc-server-0.6.4
+DISTNAME=		silc-server-0.7.1
 CATEGORIES=		chat
 MASTER_SITES=		http://ftp.silcnet.org/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -49,12 +49,14 @@ FILES_SUBST+=		SILCD_CONF_DIR=${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
 FILES_SUBST+=		CONF_DIR=${PKG_SYSCONFBASE}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
 
-post-build:
+pre-install:
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/silcd.sh > ${WRKDIR}/silcd.sh
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/motd.txt > ${WRKDIR}/motd.txt
 
 post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/motd.txt ${PREFIX}/share/doc/silcd/motd.txt.default
 	@PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 	${INSTALL_SCRIPT} ${WRKDIR}/silcd.sh ${PKG_SYSCONFBASE}/rc.d/silcd
 
