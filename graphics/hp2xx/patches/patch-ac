@@ -1,12 +1,32 @@
-$NetBSD: patch-ac,v 1.4 2000/10/31 18:15:46 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.5 2000/11/15 23:05:06 dmcmahill Exp $
 
-fix a problem scaling tick marks.  it should be
-fixed in the next (not yet released version 3.4)
-hp2xx.
+-fix a problem scaling tick marks.
+
+- also fix a bug when plotting single points. (ie, 
+  commands like
+   ;PU;PA 50,200;PD;PU;
+  now actually put a single dot at 50,200
+
+both of these are fixed in the next
+(not yet released version 3.4) hp2xx.
 
 --- hpgl.c.orig	Sun Feb 13 18:19:28 2000
-+++ hpgl.c	Tue Oct 31 12:57:51 2000
-@@ -1521,19 +1521,23 @@
++++ hpgl.c	Wed Nov 15 14:10:36 2000
+@@ -1126,7 +1126,11 @@
+   for ( ; ; )
+   {
+-	if (read_float (&p.x, hd))	/* No number found	*/
++	if (read_float (&p.x, hd)){	/* No number found	*/
++		if(pen_down){  /*simulate dot created by 'real' pen */
++			Pen_action_to_tmpfile   (MOVE_TO, &p_last,scale_flag);
++			Pen_action_to_tmpfile   (DRAW_TO, &p_last,scale_flag);
++		}
+ 		return ;
+-
++	}
+ 	if (read_float (&p.y, hd))	/* x without y invalid! */
+ 		par_err_exit (2,PA);
+@@ -1521,19 +1525,23 @@
    if (mode == 0)	/* X tick	*/
    {
 -  	/* dividing by Q appears to be unnecessary - MK
