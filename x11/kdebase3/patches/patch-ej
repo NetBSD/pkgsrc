@@ -1,8 +1,8 @@
-$NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
+$NetBSD: patch-ej,v 1.6 2003/05/22 02:42:52 markd Exp $
 
---- kxkb/Makefile.in.orig	Fri Jan 17 09:03:12 2003
+--- kxkb/Makefile.in.orig	Tue May 13 23:08:03 2003
 +++ kxkb/Makefile.in
-@@ -293,11 +293,11 @@ KDE_OPTIONS = nofinal
+@@ -429,11 +429,11 @@ KDE_OPTIONS = nofinal
  
  bin_PROGRAMS = kxkb
  
@@ -17,7 +17,7 @@ $NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
  kde_module_LTLIBRARIES = kcm_keyboard.la
  
  #>- kcm_keyboard_la_SOURCES = rules.cpp kcmlayout.cpp pixmap.cpp kcmmisc.cpp kcmmiscwidget.ui
-@@ -306,9 +306,13 @@ kcm_keyboard_la_SOURCES=rules.cpp kcmlay
+@@ -442,9 +442,13 @@ kcm_keyboard_la_SOURCES=rules.cpp kcmlay
  kcm_keyboard_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
  kcm_keyboard_la_LIBADD = $(XTESTLIB) $(LIB_KIO) -lxkbfile
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
  
  data_DATA = keyboard.desktop
  data2_DATA = keyboard_layout.desktop
-@@ -327,19 +331,24 @@ am_kcm_keyboard_la_OBJECTS = rules.lo kc
+@@ -464,31 +468,38 @@ am_kcm_keyboard_la_OBJECTS = rules.lo kc
  #>- kcm_keyboard_la_OBJECTS = $(am_kcm_keyboard_la_OBJECTS)
  #>+ 1
  kcm_keyboard_la_OBJECTS = rules.lo kcmlayout.lo pixmap.lo kcmmisc.lo kcmmiscwidget.lo
@@ -62,10 +62,7 @@ $NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
 +kxkb_OBJECTS = kxkb_main.$(OBJEXT)
 +kxkb_DEPENDENCIES = libkxkb_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -348,14 +357,16 @@ LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
 -#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/extension.Plo \
@@ -86,17 +83,17 @@ $NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
  @AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/rules.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
-@@ -378,7 +389,7 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -510,7 +521,7 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kcm_keyboard_la_SOURCES) $(kxkb_la_SOURCES) \
 -	$(kxkb_SOURCES)
 +	$(libkxkb_main_la_SOURCES) $(kxkb_SOURCES)
  DATA = $(data_DATA) $(data2_DATA) $(services_DATA)
  
  
-@@ -388,7 +399,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
- 	uninstall-recursive check-recursive installcheck-recursive
+@@ -521,7 +532,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+ 	check-recursive installcheck-recursive
  DIST_COMMON = Makefile.am Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
 -SOURCES = $(kcm_keyboard_la_SOURCES) $(kxkb_la_SOURCES) $(kxkb_SOURCES)
@@ -104,7 +101,7 @@ $NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -468,6 +479,8 @@ clean-libLTLIBRARIES:
+@@ -601,6 +612,8 @@ clean-libLTLIBRARIES:
  	$(CXXLINK) -rpath $(kde_moduledir) $(kcm_keyboard_la_LDFLAGS) $(kcm_keyboard_la_OBJECTS) $(kcm_keyboard_la_LIBADD) $(LIBS)
  kxkb.la: $(kxkb_la_OBJECTS) $(kxkb_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kxkb_la_LDFLAGS) $(kxkb_la_OBJECTS) $(kxkb_la_LIBADD) $(LIBS)
@@ -113,7 +110,7 @@ $NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -507,11 +520,12 @@ mostlyclean-compile:
+@@ -640,11 +653,12 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -127,8 +124,8 @@ $NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pixmap.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rules.Plo@am__quote@
  
-@@ -698,7 +712,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -873,7 +887,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=extension.h rules.h keyboard.desktop pixmap.h kcmmisc.h uninstall.desktop kxkb.h kxkbbindings.cpp keyboard_layout.desktop LICENSE kcmlayout.h configure.in.in kcmmiscwidget.ui kxkb.desktop 
@@ -136,7 +133,7 @@ $NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -859,9 +873,6 @@ install-data-local: uninstall.desktop
+@@ -1049,9 +1063,6 @@ install-data-local: uninstall.desktop
  messages: rc.cpp
  	$(XGETTEXT) $(kxkb_la_SOURCES) kxkbbindings.cpp -o $(podir)/kxkb.pot
  	$(XGETTEXT) rules.cpp kcmlayout.cpp pixmap.cpp kcmmisc.cpp rc.cpp kxkbbindings.cpp -o $(podir)/kcmlayout.pot 
@@ -146,7 +143,7 @@ $NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -946,13 +957,13 @@ kde-rpo-clean:
+@@ -1136,13 +1147,13 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 11

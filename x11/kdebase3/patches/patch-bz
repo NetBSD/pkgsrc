@@ -1,8 +1,8 @@
-$NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
+$NetBSD: patch-bz,v 1.7 2003/05/22 02:42:49 markd Exp $
 
---- klipper/Makefile.in.orig	Fri Jan 17 09:03:09 2003
+--- klipper/Makefile.in.orig	Tue May 13 23:07:59 2003
 +++ klipper/Makefile.in
-@@ -287,27 +287,29 @@ x_libraries = @x_libraries@
+@@ -423,27 +423,29 @@ x_libraries = @x_libraries@
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = klipper
@@ -42,7 +42,7 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  #>- klipper_panelapplet_la_SOURCES = applet.cpp applet.skel
  #>+ 1
  klipper_panelapplet_la_SOURCES=applet.cpp  applet_skel.cpp
-@@ -333,17 +335,12 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -470,17 +472,12 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
  
@@ -65,7 +65,7 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  am_klipper_panelapplet_la_OBJECTS = applet.lo
  #>- klipper_panelapplet_la_OBJECTS = $(am_klipper_panelapplet_la_OBJECTS)
  #>+ 4
-@@ -351,14 +348,24 @@ klipper_panelapplet_la_final_OBJECTS = k
+@@ -488,31 +485,44 @@ klipper_panelapplet_la_final_OBJECTS = k
  klipper_panelapplet_la_nofinal_OBJECTS = applet.lo applet_skel.lo
  @KDE_USE_FINAL_FALSE@klipper_panelapplet_la_OBJECTS = $(klipper_panelapplet_la_nofinal_OBJECTS)
  @KDE_USE_FINAL_TRUE@klipper_panelapplet_la_OBJECTS = $(klipper_panelapplet_la_final_OBJECTS)
@@ -91,9 +91,7 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
 +klipper_OBJECTS = klipper_main.$(OBJEXT)
 +klipper_DEPENDENCIES = libklipper_main.la
  
- DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -368,18 +375,21 @@ LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
  am__depfiles_maybe = depfiles
  #>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/applet.Plo \
@@ -127,9 +125,9 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -401,11 +411,11 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -533,11 +543,11 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
- CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(klipper_la_SOURCES) $(klipper_panelapplet_la_SOURCES) \
 -	$(klipper_SOURCES)
 +	$(libklipper_main_la_SOURCES) $(klipper_SOURCES)
@@ -141,7 +139,7 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -482,6 +492,8 @@ klipper.la: $(klipper_la_OBJECTS) $(klip
+@@ -614,6 +624,8 @@ klipper.la: $(klipper_la_OBJECTS) $(klip
  	$(CXXLINK) -rpath $(libdir) $(klipper_la_LDFLAGS) $(klipper_la_OBJECTS) $(klipper_la_LIBADD) $(LIBS)
  klipper_panelapplet.la: $(klipper_panelapplet_la_OBJECTS) $(klipper_panelapplet_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(kde_moduledir) $(klipper_panelapplet_la_LDFLAGS) $(klipper_panelapplet_la_OBJECTS) $(klipper_panelapplet_la_LIBADD) $(LIBS)
@@ -150,7 +148,7 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
-@@ -523,7 +535,8 @@ distclean-compile:
+@@ -655,7 +667,8 @@ distclean-compile:
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/applet.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/configdialog.Plo@am__quote@
@@ -160,7 +158,16 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/toplevel.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/urlgrabber.Plo@am__quote@
-@@ -724,7 +737,6 @@ install-strip:
+@@ -833,7 +846,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=toplevel.h cr64-app-klipper.png klipperrc.desktop klipperbindings.cpp cr48-app-klipper.png klipper.desktop cr22-app-klipper.png cr32-app-klipper.png urlgrabber.h klipperrc.upd klipper-kde31.sh cr128-app-klipper.png configdialog.h cr16-app-klipper.png klipper-1-2.pl version.h klippershortcuts.upd applet.h 
++KDE_DIST=applet.h cr128-app-klipper.png cr22-app-klipper.png toplevel.h cr48-app-klipper.png cr64-app-klipper.png klipper-kde31.sh klipperbindings.cpp version.h configdialog.h cr32-app-klipper.png klipper-1-2.pl cr16-app-klipper.png klipper.desktop klipperrc.upd urlgrabber.h klipperrc.desktop klippershortcuts.upd 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -894,7 +907,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
@@ -168,7 +175,7 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  
  distclean-generic:
  	-rm -f Makefile $(CONFIG_CLEAN_FILES)
-@@ -825,16 +837,18 @@ dummy.cpp:
+@@ -1004,16 +1016,18 @@ dummy.cpp:
  .NOEXPORT:
  
  #>+ 5
@@ -191,7 +198,7 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  urlgrabber.moc: $(srcdir)/urlgrabber.h
  	$(MOC) $(srcdir)/urlgrabber.h -o urlgrabber.moc
  
-@@ -846,21 +860,19 @@ toplevel.moc: $(srcdir)/toplevel.h
+@@ -1025,21 +1039,19 @@ toplevel.moc: $(srcdir)/toplevel.h
  applet.moc: $(srcdir)/applet.h
  	$(MOC) $(srcdir)/applet.h -o applet.moc
  
@@ -219,7 +226,7 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  
  #>+ 2
  docs-am:
-@@ -893,18 +905,6 @@ force-reedit:
+@@ -1075,18 +1087,6 @@ force-reedit:
  
  
  #>+ 11
@@ -238,7 +245,7 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  klipper_panelapplet_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/applet.cpp applet_skel.cpp  applet.moc
  	@echo 'creating klipper_panelapplet_la.all_cpp.cpp ...'; \
  	rm -f klipper_panelapplet_la.all_cpp.files klipper_panelapplet_la.all_cpp.final; \
-@@ -916,22 +916,34 @@ klipper_panelapplet_la.all_cpp.cpp: $(sr
+@@ -1098,22 +1098,34 @@ klipper_panelapplet_la.all_cpp.cpp: $(sr
  	cat klipper_panelapplet_la.all_cpp.final klipper_panelapplet_la.all_cpp.files > klipper_panelapplet_la.all_cpp.cpp; \
  	rm -f klipper_panelapplet_la.all_cpp.final klipper_panelapplet_la.all_cpp.files
  
@@ -278,7 +285,7 @@ $NetBSD: patch-bz,v 1.6 2003/04/01 12:27:12 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -941,11 +953,11 @@ kde-rpo-clean:
+@@ -1123,11 +1135,11 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 9
