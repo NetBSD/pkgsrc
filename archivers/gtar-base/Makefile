@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/09/27 16:12:04 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2004/10/02 22:40:24 recht Exp $
 #
 
 DISTNAME=       tar-1.14
@@ -58,4 +58,5 @@ post-install:
 	${LN} -sf ${GTAR_PROGRAM_PREFIX}tar ${PREFIX}/bin/gtar
 .endif
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
