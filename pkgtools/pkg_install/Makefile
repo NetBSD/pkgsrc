@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2002/09/05 09:20:14 agc Exp $
+# $NetBSD: Makefile,v 1.54 2002/11/17 09:37:21 cjep Exp $
 
 # Note to package maintainers:
 # To update the distfile of this pkg, cd to /usr/src/usr.sbin,
@@ -43,6 +43,13 @@ MAKEFLAGS+=	NETBSD_COMPATIBLE=YES
 MANINSTALL=
 MAKE_ENV+=	MANINSTALL= MKMAN=no NOMAN=YES
 MAKE_ENV+=	ZOULARISBASE=${ZOULARISBASE}
+.endif
+
+.if ${OPSYS} == "OpenBSD"
+CPPFLAGS+=		-D__COPYRIGHT\(x\)=\; -D__RCSID\(x\)=\;
+MAKE_ENV+=		BINGRP=${BINGRP} BINOWN=${BINOWN}
+MAKE_ENV+=		BINDIR=${PKG_TOOLS_BIN}
+MAKE_ENV+=		MANDIR=${PKG_TOOLS_BIN}/../man
 .endif
 
 .if ${OPSYS} == "Linux"
