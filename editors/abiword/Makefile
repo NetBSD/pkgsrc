@@ -1,57 +1,49 @@
-# $NetBSD: Makefile,v 1.79 2004/10/03 00:14:37 tv Exp $
+# $NetBSD: Makefile,v 1.80 2004/10/21 06:30:39 xtraeme Exp $
 #
+.include "Makefile.common"
 
-DISTNAME=		abiword-2.0.5
-PKGREVISION=	1
-CATEGORIES=		editors
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
-EXTRACT_SUFX=		.tar.bz2
+PKGNAME=		abiword-${ABIWORD_DIST_VERSION}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.abisource.com/
 COMMENT=		Open Source cross-platform word processor
-
-BUILD_USES_MSGFMT=	yes
 
 # GTK1 version and previous name of the GTK2 version
 CONFLICTS=		abiword-personal-[0-9]* abiword2-[0-9]*
 
-MAKEFILE=		GNUmakefile
-GNU_CONFIGURE=		yes
-USE_BUILDLINK3=		yes
-USE_DIRS+=		xdg-1.1
-USE_GNU_TOOLS+=		make
-USE_PERL5=		run
-USE_X11=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/abi
-
-USE_BUILTIN.iconv=	no # Make sure we get libiconv dependency.
 
 REPLACE_PERL=		user/wp/scripts/abw2html.pl
 
-CONFIGURE_ARGS+=	--enable-gucharmap
-CONFIGURE_ARGS+=	--enable-threads
-CONFIGURE_ARGS+=	--with-sys-wv
-CONFIGURE_ARGS+=	--with-libxml2
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-CONFIGURE_ARGS+=	--with-popt=${BUILDLINK_PREFIX.popt}
-CONFIGURE_ARGS+=	--with-libjpeg-prefix=${BUILDLINK_PREFIX.jpeg}
-CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
+PKG_OPTIONS_VAR=	PKG_OPTIONS.abiword
+PKG_SUPPORTED_OPTIONS=	gucharmap
 
-.include "../../converters/fribidi/buildlink3.mk"
+.include "../../mk/bsd.options.mk"
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKG_OPTIONS:Mgucharmap)
+CONFIGURE_ARGS+=	--enable-gucharmap
+.endif
+CONFIGURE_ARGS+=	--with-sys-wv
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+
+post-install:
+	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/abiword-docs/man/abiword.8 \
+		${PREFIX}/man/man8/abiword.8
+	cd ${WRKDIR}/${DISTNAME}/abiword-docs/ && ${MAKE}
+
+SUBST_CLASSES+=		docs
+SUBST_STAGE.docs=	post-patch
+SUBST_FILES.docs=	${WRKDIR}/${DISTNAME}/abiword-docs/Makefile
+SUBST_SED.docs=		-e "s,prefix = /usr/local,prefix = ${PREFIX}," \
+			-e "s,SHELL = /bin/sh,SHELL = ${SH},"
+SUBST_MESSAGE.docs=	"Fixing docs Makefile."
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/wv/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/pkgconfig/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
-.include "../../fonts/gucharmap/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../textproc/enchant/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mgucharmap)
+.include "../../fonts/gucharmap/buildlink3.mk"
+.endif
+
+.include "../../textproc/enchant/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
