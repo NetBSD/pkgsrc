@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/28 20:01:13 mycroft Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/28 23:09:51 snj Exp $
 #
 
 DISTNAME=	xvidcore-1.0.0-rc3
@@ -16,5 +16,7 @@ BUILD_DEPENDS+=	nasm>=0.98.34:../../devel/nasm
 WRKSRC=		${WRKDIR}/${DISTNAME}/build/generic
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
+
+MAKE_ENV+=	MKDIR="${MKDIR}"
 
 .include "../../mk/bsd.pkg.mk"
