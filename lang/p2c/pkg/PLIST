@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/31 03:47:27 jwise Exp $
+bin/p2c
+lib/libp2c.a
+man/man1/p2c.1
+include/p2c/p2c.h
+libdata/p2c/p2crc
+libdata/p2c/loc.p2crc
+libdata/p2c/system.imp
+libdata/p2c/system.m2
+libdata/p2c/turbo.imp
+libdata/p2c/string.pas
+@dirrm include/p2c
+@dirrm libdata/p2c

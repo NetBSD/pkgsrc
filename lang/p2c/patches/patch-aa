@@ -1,0 +1,102 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/01/31 03:47:27 jwise Exp $
+--- Makefile.orig	Fri Jan 29 14:52:07 1999
++++ Makefile	Fri Jan 29 15:15:47 1999
+@@ -18,13 +18,13 @@
+ 
+ 
+ # Directories (private version)
+-HOMEDIR = ../home
+-INCDIR = ../home/p2c
+-BINDIR = ..
+-LIBDIR = ../home
+-MANDIR = ../home
+-MANFILE = p2c.cat          # human-readable manual (for cat.1)
+-#MANFILE = p2c.man.inst    # uncompressed nroff source (for man.1)
++HOMEDIR = ${PREFIX}/libdata/p2c
++INCDIR = ${PREFIX}/include/p2c
++BINDIR = ${PREFIX}/bin
++LIBDIR = ${PREFIX}/lib
++MANDIR = ${PREFIX}/man/man1
++#MANFILE = p2c.cat          # human-readable manual (for cat.1)
++MANFILE = p2c.man.inst    # uncompressed nroff source (for man.1)
+ #MANFILE = p2c.man.Z       # compressed nroff source (for man.1.Z)
+ 
+ # Directories (public version)
+@@ -39,7 +39,7 @@
+ CC = cc                    # you may wish to use gcc here instead
+ OPT = # -O		   # uncomment this for optimization
+ DEB = # -g		   # uncomment this for debugging
+-DEFS =			   # place other -D types of things here
++DEFS = -Dunix		   # place other -D types of things here
+ CFLAGS = $(OPT) $(DEB) $(DEFS)
+ LFLAGS =
+ 
+@@ -63,9 +63,9 @@
+ LIBOBJS = p2clib.o loc.p2clib.o
+ OTHERLIBOBJS =
+ 
+-ABSHOMEDIR = `cd $(HOMEDIR); pwd`
+-ABSINCDIR = `cd $(INCDIR); pwd`
+-ABSLIBDIR = `cd $(LIBDIR); pwd`
++ABSHOMEDIR = ${PREFIX}/libdata/p2c
++ABSINCDIR = ${PREFIX}/include/p2c
++ABSLIBDIR = ${PREFIX}/lib/p2c
+ 
+ MISCSRCS = makeproto.c
+ PROTOS = p2c.proto p2c.hdrs
+@@ -129,7 +129,8 @@
+ #  Third, execute "make install" to compile and set things up.
+ # (You may need to have a system operator do these steps for you.)
+ 
+-COPY = cp
++COPYDATA = ${INSTALL} -c -m 644
++COPYBIN = ${INSTALL} -c -m 755
+ 
+ newhome:
+ 	rm -f trans.o     # force trans.c to be recompiled (if HOMEDIR changes)
+@@ -156,35 +157,35 @@
+ 	if [ ! -d $(INCDIR) ]; then mkdir $(INCDIR); fi
+ 
+ $(BINDIR)/p2c: p2c
+-	$(COPY)  p2c          $(BINDIR)/p2c
++	$(COPYBIN)  p2c          $(BINDIR)/p2c
+ 
+ $(LIBDIR)/libp2c.a: libp2c.a
+-	$(COPY)  libp2c.a     $(LIBDIR)/libp2c.a
++	$(COPYDATA)  libp2c.a     $(LIBDIR)/libp2c.a
+ 	if [ -f /usr/bin/ranlib -o -f /bin/ranlib ]; then ranlib $(LIBDIR)/libp2c.a; fi
+ 
+ $(MANDIR)/p2c.1: $(MANFILE)
+-	$(COPY)  $(MANFILE)   $(MANDIR)/p2c.1
++	$(COPYDATA)  $(MANFILE)   $(MANDIR)/p2c.1
+ 
+ $(INCDIR)/p2c.h: p2c.h
+-	$(COPY)  p2c.h        $(INCDIR)/p2c.h
++	$(COPYDATA)  p2c.h        $(INCDIR)/p2c.h
+ 
+ $(HOMEDIR)/p2crc: sys.p2crc
+-	$(COPY)  sys.p2crc    $(HOMEDIR)/p2crc
++	$(COPYDATA)  sys.p2crc    $(HOMEDIR)/p2crc
+ 
+ $(HOMEDIR)/loc.p2crc: loc.p2crc
+-	$(COPY)  loc.p2crc    $(HOMEDIR)/loc.p2crc
++	$(COPYDATA)  loc.p2crc    $(HOMEDIR)/loc.p2crc
+ 
+ $(HOMEDIR)/system.imp: system.imp
+-	$(COPY)  system.imp   $(HOMEDIR)/system.imp
++	$(COPYDATA)  system.imp   $(HOMEDIR)/system.imp
+ 
+ $(HOMEDIR)/system.m2: system.m2
+-	$(COPY)  system.m2    $(HOMEDIR)/system.m2
++	$(COPYDATA)  system.m2    $(HOMEDIR)/system.m2
+ 
+ $(HOMEDIR)/turbo.imp: turbo.imp
+-	$(COPY)  turbo.imp    $(HOMEDIR)/turbo.imp
++	$(COPYDATA)  turbo.imp    $(HOMEDIR)/turbo.imp
+ 
+ $(HOMEDIR)/string.pas: string.pas
+-	$(COPY)  string.pas   $(HOMEDIR)/string.pas
++	$(COPYDATA)  string.pas   $(HOMEDIR)/string.pas
+ 
+ 
+ 
