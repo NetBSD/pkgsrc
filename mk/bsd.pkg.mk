@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1511 2004/10/09 03:47:13 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1512 2004/10/11 23:27:18 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -381,10 +381,11 @@ CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
 # If GNU_CONFIGURE is defined, then pass LIBS to the GNU configure script.
 # also pass in a CONFIG_SHELL to avoid picking up bash
 .if defined(GNU_CONFIGURE)
-CONFIGURE_ENV+=		LIBS="${LIBS}"
 CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
+CONFIGURE_ENV+=		LIBS=${LIBS:Q}
 CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
+CONFIGURE_ENV+=		SED=${SED:Q}
 .endif
 
 .if defined(_OPSYS_LIBTOOL_REQD)
