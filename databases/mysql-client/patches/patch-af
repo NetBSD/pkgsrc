@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2001/05/02 08:22:31 jlam Exp $
+$NetBSD: patch-af,v 1.1 2001/05/02 08:22:30 jlam Exp $
 
 --- configure.orig	Thu Mar 15 19:52:05 2001
 +++ configure
