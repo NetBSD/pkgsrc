@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:18:13 tv Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/28 02:47:49 reed Exp $
 #
 
 DISTNAME=		sfs-0.7.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net security
 MASTER_SITES=		http://www.fs.net/sfs/@new-york.lcs.mit.edu,u83s4uk49nt8rmp4uwmt2exvz6d3cavh/pub/sfswww/dist/
 

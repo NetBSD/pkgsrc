@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:27 tv Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/28 02:47:51 reed Exp $
 #
 
 DISTNAME=		thy-0.9.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=		www
 MASTER_SITES=		ftp://bonehunter.rulez.org/pub/thy/stable/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2004/10/03 00:12:54 tv Exp $
+# $NetBSD: Makefile,v 1.26 2004/12/28 02:47:45 reed Exp $
 
 DISTNAME=	sqwebmail-4.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 COMMENT=	webmail CGI for access to local maildir-style mailboxes
 HOMEPAGE=	http://www.inter7.com/sqwebmail/

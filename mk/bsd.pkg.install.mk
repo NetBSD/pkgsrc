@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.66 2004/12/27 06:41:50 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.67 2004/12/28 02:47:40 reed Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -170,7 +170,7 @@ SUPPORT_FILES_MODE?=	0644
 SUPPORT_FILES_PERMS?=	# empty
 RCD_SCRIPTS?=		# empty
 RCD_SCRIPTS_MODE?=	0755
-RCD_SCRIPTS_EXAMPLEDIR?=	etc/rc.d
+RCD_SCRIPTS_EXAMPLEDIR?=	share/examples/rc.d
 .if !empty(RCD_SCRIPTS_EXAMPLEDIR:M/*)
 PKG_FAIL_REASON+= \
 	"bsd.pkg.install.mk: RCD_SCRIPTS_EXAMPLEDIR can't be an absolute path."
@@ -339,6 +339,7 @@ ${INSTALL_FILE}: ${INSTALL_SRC}
 #
 # RCD_SCRIPTS_EXAMPLEDIR	the directory relative to ${PREFIX} in
 #				which to install the example rc.d scripts
+#				(defaults to share/examples/rc.d)
 #
 # If the source rc.d script is not present, then the automatic handling
 # doesn't occur.

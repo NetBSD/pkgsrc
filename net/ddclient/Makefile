@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/07/24 02:52:27 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/12/28 02:47:46 reed Exp $
 
 DISTNAME=	ddclient-3.6.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 
