@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2000/03/14 16:52:29 tron Exp $
+
+--- modules/Makefile.in.orig	Sat Mar  4 04:11:39 2000
++++ modules/Makefile.in	Tue Mar 14 10:03:09 2000
+@@ -181,7 +181,7 @@
+ 
+ libexecdir = $(gimpplugindir)/modules
+ 
+-CPPFLAGS =  	-DMODULE_COMPILATION
++CPPFLAGS =  	-DMODULE_COMPILATION @CPPFLAGS@
+ 
+ 
+ INCLUDES =          -I$(top_srcdir)                         -I$(top_srcdir)/intl                    $(GTK_CFLAGS)                           -I$(includedir)
