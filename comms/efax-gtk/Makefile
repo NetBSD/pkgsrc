@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/01/28 22:03:08 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/01 11:49:10 jmmv Exp $
 
 DISTNAME=		efax-gtk-1.0.1b.src
 PKGNAME=		efax-gtk-1.0.1b
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		comms
 MASTER_SITES=		http://www.cvine.freeserve.co.uk/efax-gtk/
 EXTRACT_SUFX=		.tgz
@@ -32,7 +32,7 @@ post-extract:
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/efax-gtk
 
-.include "../../devel/libsigc++/buildlink2.mk"
+.include "../../devel/libsigc++10/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../x11/gtk--/buildlink2.mk"
 
