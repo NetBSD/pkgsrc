@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2001/10/22 18:02:51 jlam Exp $
+# $NetBSD: Makefile,v 1.82 2001/11/19 16:23:12 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -39,8 +39,9 @@ CONFIGURE_ENV+=		OPTIM="${APACHE_CUSTOM_CFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
 BUILD_DEFS+=		APACHE_SYSCONFDIR
+FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
 
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
 APACHE_USER?=		www
@@ -98,23 +99,22 @@ BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
 BUILD_DEFS+=		APACHE_PERF_TUNING
 BUILD_DEFS+=		APACHE_SUEXEC
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
+EGDIR=		${PREFIX}/share/examples/httpd
 
-# Given foo=${bar}, replace @foo@ with ${bar}.
-#
-FILES_SUBST=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CHOWN=${CHOWN:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		MKDIR=${MKDIR:Q}
-FILES_SUBST+=		PREFIX=${PREFIX}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
+CONF_FILES=	${EGDIR}/httpd.conf.default ${APACHE_SYSCONFDIR}/httpd.conf
+SUPPORT_FILES=	${EGDIR}/magic.default ${APACHE_SYSCONFDIR}/magic
+SUPPORT_FILES+=	${EGDIR}/mime.types.default ${APACHE_SYSCONFDIR}/mime.types
+RCD_SCRIPTS=	${PREFIX}/etc/rc.d/apache /etc/rc.d/apache
+
+MAKE_DIRS=		${APACHE_SYSCONFDIR}
+OWN_DIRS=		${APACHE_SYSCONFDIR}/ssl.crl
+OWN_DIRS+=		${APACHE_SYSCONFDIR}/ssl.crt
+OWN_DIRS+=		${APACHE_SYSCONFDIR}/ssl.csr
+OWN_DIRS+=		${APACHE_SYSCONFDIR}/ssl.key
+OWN_DIRS+=		${APACHE_SYSCONFDIR}/ssl.prm
+OWN_DIRS+=		/var/log/httpd
+OWN_DIRS+=		/var/spool/httpd
+OWN_DIRS_PERMS+=	/var/spool/httpd/proxy nobody nobody 0755
 
 post-extract:
 	${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
@@ -149,8 +149,6 @@ pre-configure:
 pre-install:
 	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 .if !defined(NOPIC)
@@ -168,4 +166,5 @@ post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../textproc/expat/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

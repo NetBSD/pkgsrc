@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2001/10/16 04:54:24 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2001/11/19 16:23:15 jlam Exp $
 
 DISTNAME=		php-${PHP_DIST_VERS}
 CATEGORIES+=		www php4
@@ -31,5 +31,4 @@ PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-PHP_CONFDIR?=		${LOCALBASE}/etc
-MESSAGE_SUBST+=		PHP_CONFDIR=${PHP_CONFDIR}
+MESSAGE_SUBST+=		CONFDIR=${CONFDIR}

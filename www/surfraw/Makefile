@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/11/07 06:12:20 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/11/19 16:23:16 jlam Exp $
 #
 
 DISTNAME=	surfraw-1.0.5
@@ -14,7 +14,7 @@ CONFLICTS+=	surfaw-[0-9]*
 USE_BUILDLINK_ONLY=	YES
 AUTOMAKE_OVERRIDE=	YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--sysconfdir=${SURFRAW_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${CONFDIR}
 
 # Override sysconfdir so that the installation puts the example config file
 # in ${EGDIR}.
@@ -22,32 +22,15 @@ CONFIGURE_ARGS+=	--sysconfdir=${SURFRAW_SYSCONFDIR}
 MAKE_FLAGS+=		sysconfdir=${EGDIR}
 MAKE_ENV+=		AM_MAKEFLAGS="${MAKE_FLAGS}"
 
-SURFRAW_SYSCONFDIR?=	${PREFIX}/etc
-DOCDIR=			${PREFIX}/share/doc/surfraw
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+DOCDIR=		${PREFIX}/share/doc/surfraw
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
+CONF_FILES=	${EGDIR}/surfraw.conf ${CONFDIR}/surfraw.conf
+SUPPORT_FILES=	${EGDIR}/surfraw_elvi.list ${CONFDIR}/surfraw_elvi.list
 
-PLIST_SUBST+=           PKGBASE=${PKGBASE}
-
-FILES_SUBST+=           PKGBASE=${PKGBASE}
-FILES_SUBST+=           SURFRAW_SYSCONFDIR=${SURFRAW_SYSCONFDIR}
-FILES_SUBST+=           CAT=${CAT:Q}
-FILES_SUBST+=           CHMOD=${CHMOD:Q}
-FILES_SUBST+=           CMP=${CMP:Q}
-FILES_SUBST+=           CP=${CP:Q}
-FILES_SUBST+=           ECHO=${ECHO:Q}
-FILES_SUBST+=           MKDIR=${MKDIR:Q}
-FILES_SUBST+=           RM=${RM:Q}
-FILES_SUBST+=           RMDIR=${RMDIR:Q}
-FILES_SUBST+=           TR=${TR:Q}
-FILES_SUBST+=           TRUE=${TRUE:Q}
-FILES_SUBST_SED=        ${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+PLIST_SUBST+=	PKGBASE=${PKGBASE}
 
 pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
@@ -55,4 +38,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

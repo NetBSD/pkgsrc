@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/10/17 19:17:11 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2001/11/19 16:23:12 jlam Exp $
 
 DISTNAME=		mod_ssl-2.8.5-1.3.22
 PKGNAME=		ap-ssl-2.8.5
@@ -24,25 +24,29 @@ CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 MAKE_ENV+=		SSL_RPATH_LDFLAGS="-R${SSLBASE}/lib"
 
-APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
 BUILD_DEFS+=		APACHE_SYSCONFDIR
+FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
 
-SAMPLECONFDIR=		${PREFIX}/share/examples/mod_ssl
-
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-# Given foo=${bar}, replace @foo@ with ${bar}.
-#
-FILES_SUBST=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		MKDIR=${MKDIR:Q}
-FILES_SUBST+=		PREFIX=${PREFIX}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
+EGDIR=		${PREFIX}/share/examples/mod_ssl
+CONF_FILES=	${EGDIR}/apache_start.conf				\
+		${APACHE_SYSCONFDIR}/apache_start.conf
+SUPPORT_FILES=	${EGDIR}/ssl.crl/Makefile.crl				\
+		${APACHE_SYSCONFDIR}/ssl.crl/Makefile.crl
+SUPPORT_FILES+=	${EGDIR}/ssl.crl/README.CRL				\
+		${APACHE_SYSCONFDIR}/ssl.crl/README.CRL
+SUPPORT_FILES+=	${EGDIR}/ssl.crt/Makefile.crt				\
+		${APACHE_SYSCONFDIR}/ssl.crt/Makefile.crt
+SUPPORT_FILES+=	${EGDIR}/ssl.crt/README.CRT				\
+		${APACHE_SYSCONFDIR}/ssl.crt/README.CRT
+SUPPORT_FILES+=	${EGDIR}/ssl.crt/ca-bundle.crt				\
+		${APACHE_SYSCONFDIR}/ssl.crt/ca-bundle.crt
+SUPPORT_FILES+=	${EGDIR}/ssl.csr/README.CSR				\
+		${APACHE_SYSCONFDIR}/ssl.csr/README.CSR
+SUPPORT_FILES+=	${EGDIR}/ssl.key/README.KEY				\
+		${APACHE_SYSCONFDIR}/ssl.key/README.KEY
+SUPPORT_FILES+=	${EGDIR}/ssl.prm/README.PRM				\
+		${APACHE_SYSCONFDIR}/ssl.prm/README.PRM
 
 post-extract:
 	cd ${WRKSRC}/pkg.contrib; ${MV} -f loadcacert.cgi loadcacert.cgi.in
@@ -57,23 +61,21 @@ post-build:
 		> ${WRKSRC}/pkg.sslsup/mkcert.sh
 
 pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/README.mkcert > ${WRKDIR}/README.mkcert
 
 post-install:
-	${INSTALL_DATA_DIR} ${SAMPLECONFDIR}
-	${INSTALL_DATA_DIR} ${SAMPLECONFDIR}/ssl.crl
-	${INSTALL_DATA_DIR} ${SAMPLECONFDIR}/ssl.crt
-	${INSTALL_DATA_DIR} ${SAMPLECONFDIR}/ssl.csr
-	${INSTALL_DATA_DIR} ${SAMPLECONFDIR}/ssl.key
-	${INSTALL_DATA_DIR} ${SAMPLECONFDIR}/ssl.prm
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}/ssl.crl
+	${INSTALL_DATA_DIR} ${EGDIR}/ssl.crt
+	${INSTALL_DATA_DIR} ${EGDIR}/ssl.csr
+	${INSTALL_DATA_DIR} ${EGDIR}/ssl.key
+	${INSTALL_DATA_DIR} ${EGDIR}/ssl.prm
 
 	cd ${PREFIX}/lib/httpd; ${MV} -f libssl.so mod_ssl.so
 	cd ${WRKSRC}/pkg.sslsup; ${INSTALL_SCRIPT} mkcert.sh		\
 		${PREFIX}/sbin/mkcert
-	${INSTALL_DATA} ${FILESDIR}/apache_start.conf ${SAMPLECONFDIR}
+	${INSTALL_DATA} ${FILESDIR}/apache_start.conf ${EGDIR}
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/manual/mod/mod_ssl
 	cd ${WRKSRC}/pkg.ssldoc; ${INSTALL_DATA} *.html *.gif *.jpg	\
@@ -86,17 +88,18 @@ post-install:
 
 	cd ${WRKSRC}/pkg.sslcfg; ${RM} -f server.*
 	cd ${WRKSRC}/pkg.sslcfg; ${INSTALL_DATA} README.CRL *.crl	\
-		${SAMPLECONFDIR}/ssl.crl
+		${EGDIR}/ssl.crl
 	cd ${WRKSRC}/pkg.sslcfg; ${INSTALL_DATA} README.CRT *.crt	\
-		${SAMPLECONFDIR}/ssl.crt
+		${EGDIR}/ssl.crt
 	cd ${WRKSRC}/pkg.sslcfg; ${INSTALL_DATA} README.CSR		\
-		${SAMPLECONFDIR}/ssl.csr
+		${EGDIR}/ssl.csr
 	cd ${WRKSRC}/pkg.sslcfg; ${INSTALL_DATA} README.KEY *.key	\
-		${SAMPLECONFDIR}/ssl.key
+		${EGDIR}/ssl.key
 	cd ${WRKSRC}/pkg.sslcfg; ${INSTALL_DATA} README.PRM *.prm	\
-		${SAMPLECONFDIR}/ssl.prm
+		${EGDIR}/ssl.prm
 
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../security/openssl/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.4 2001/10/15 17:25:09 martti Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/19 16:23:14 jlam Exp $
 #
 
 DISTNAME=		cvsweb-1.112
@@ -22,15 +22,11 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
-FILES_SUBST=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+CONF_FILES=	${EGDIR}/cvsweb.conf.default ${APACHE_SYSCONFDIR}/cvsweb.conf
+MAKE_DIRS=	${APACHE_SYSCONFDIR}
 
 do-build:
 	${MV} ${WRKSRC}/cvsweb.cgi ${WRKSRC}/cvsweb.cgi.bak
@@ -38,16 +34,15 @@ do-build:
 		-e 's,/usr/local/web/apache/conf/,${APACHE_SYSCONFDIR}/,' \
 	    ${WRKSRC}/cvsweb.cgi.bak > ${WRKSRC}/cvsweb.cgi
 
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-
 do-install:
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/libexec/cgi-bin
 	${INSTALL_SCRIPT} ${WRKSRC}/cvsweb.cgi ${PREFIX}/libexec/cgi-bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cvsweb
 	${INSTALL_DATA} ${WRKSRC}/cvsweb.conf \
 		${PREFIX}/share/examples/cvsweb/cvsweb.conf.default
+
+post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

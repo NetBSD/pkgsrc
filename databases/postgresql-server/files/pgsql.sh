@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pgsql.sh,v 1.4 2001/05/14 21:19:42 jlam Exp $
+# $NetBSD: pgsql.sh,v 1.5 2001/11/19 16:23:08 jlam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -8,11 +8,11 @@
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 
-PGHOME=@PGHOME@
+PGHOME=@PKG_USER_HOME@
 
 name="pgsql"
 rcvar=$name
-pgsql_user="@PGUSER@"
+pgsql_user="@PKG_USER@"
 command="@PREFIX@/bin/pg_ctl"
 command_args="-s -D ${PGHOME}/data -l ${PGHOME}/errlog"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/08/18 04:41:45 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2001/11/19 16:23:11 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
@@ -25,7 +25,7 @@ USE_BUILDLINK_ONLY=	# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--sysconfdir=/etc
+CONFIGURE_ARGS+=	--sysconfdir=${CONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
@@ -42,8 +42,11 @@ CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
 CONFIGURE_ARGS+=	--enable-pam
 PLIST_SRC=		${PKGDIR}/PLIST.pam
 PLIST_SRC+=		${PKGDIR}/PLIST
+MESSAGE_SRC=		${PKGDIR}/MESSAGE
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.pam
 .else
 CONFIGURE_ARGS+=	--disable-pam
+MESSAGE_SRC=		${.CURDIR}/MESSAGE
 PLIST_SRC=		${PKGDIR}/PLIST
 .endif
 
@@ -55,51 +58,32 @@ CUPS_GROUP?=		sys
 
 BUILD_DEFS+=		CUPS_USER CUPS_GROUP
 
-.if ${OPSYS} == "NetBSD"
-.if exists(/usr/sbin/user)
-ADDUSER=		/usr/sbin/useradd
-ADDGROUP=		/usr/sbin/groupadd
-.else
-DEPENDS+=		user>=20000313:../../sysutils/user
-ADDUSER=		${LOCALBASE}/sbin/useradd
-ADDGROUP=		${LOCALBASE}/sbin/groupadd
-.endif
-.elif ${OPSYS} == "SunOS"
-ADDUSER=		useradd
-ADDGROUP=		groupadd
-.endif
-
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
 DOCDIR=			${PREFIX}/share/doc/cups
 EGDIR=			${PREFIX}/share/examples/cups
 
-FILES_SUBST=		CUPS_USER=${CUPS_USER}
-FILES_SUBST+=		CUPS_GROUP=${CUPS_GROUP}
-FILES_SUBST+=		PREFIX=${PREFIX}
-FILES_SUBST+=		ADDUSER=${ADDUSER:Q}
-FILES_SUBST+=		ADDGROUP=${ADDGROUP:Q}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHGRP=${CHGRP:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CHOWN=${CHOWN:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		ECHO=${ECHO:Q}
-FILES_SUBST+=		ID=${ID:Q}
-FILES_SUBST+=		MKDIR=${MKDIR:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TOUCH=${TOUCH:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+PKG_USER=		${CUPS_USER}
+PKG_USER_DESCR=		Common UNIX Printing System user
+PKG_GROUP=		${CUPS_GROUP}
+
+CONF_FILES=		${EGDIR}/client.conf ${CONFDIR}/cups/client.conf
+CONF_FILES+=		${EGDIR}/cupsd.conf ${CONFDIR}/cups/cupsd.conf
+SUPPORT_FILES=		${EGDIR}/classes.conf ${CONFDIR}/cups/classes.conf
+SUPPORT_FILES+=		${EGDIR}/mime.convs ${CONFDIR}/cups/mime.convs
+SUPPORT_FILES+=		${EGDIR}/mime.types ${CONFDIR}/cups/mime.types
+SUPPORT_FILES+=		${EGDIR}/printers.conf ${CONFDIR}/cups/printers.conf
+RCD_SCRIPTS=		${PREFIX}/etc/rc.d/cupsd /etc/rc.d/cupsd
+
+OWN_DIRS+=		${CONFDIR}/cups
+OWN_DIRS+=		${CONFDIR}/cups/interfaces
+OWN_DIRS+=		${CONFDIR}/cups/ppd
+OWN_DIRS+=		/var/log/cups
+OWN_DIRS+=		/var/spool/cups
+OWN_DIRS_PERMS=		${CONFDIR}/cups/certs ${CUPS_USER} ${CUPS_GROUP} 0711
+OWN_DIRS_PERMS+=	/var/spool/cups/tmp ${CUPS_USER} ${CUPS_GROUP} 1700
 
 pre-install:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/cupsd.sh > ${WRKDIR}/cupsd.sh
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cupsd.sh > ${WRKDIR}/cupsd.sh
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
@@ -121,4 +105,5 @@ post-install:
 .include "../../graphics/tiff/buildlink.mk"
 .include "../../net/openslp/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

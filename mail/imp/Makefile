@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/11/11 19:29:10 bouyer Exp $
+# $NetBSD: Makefile,v 1.14 2001/11/19 16:23:10 jlam Exp $
 
 DISTNAME=	imp-2.2.7
 CATEGORIES=	mail www
@@ -11,11 +11,6 @@ COMMENT=	Internet Messaging Program
 DEPENDS+=	horde-1.2.7:../../www/horde
 DEPENDS+=	php-imap>3.0.17:../../mail/php4-imap
 
-NO_CONFIGURE=	# defined
-
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
-INSTALL_FILE=	${WRKDIR}/INSTALL
-
 DOCDIR=		${PREFIX}/share/doc/imp
 EGDIR=		${PREFIX}/share/examples/imp
 HORDEDIR=	${PREFIX}/share/horde
@@ -25,26 +20,44 @@ MESSAGE_SUBST+=	IMPDIR=${IMPDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
 BUILD_DEFS+=		APACHE_SYSCONFDIR
 MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
 
-FILES_SUBST=		IMPDIR=${IMPDIR:S/^${PREFIX}\///}
-FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+CONF_FILES=	${EGDIR}/imp.conf ${APACHE_SYSCONFDIR}/imp.conf
+CONF_FILES+=	${IMPDIR}/config/defaults.php3.dist			\
+		${IMPDIR}/config/defaults.php3
+CONF_FILES+=	${IMPDIR}/config/ldap.php3.dist				\
+		${IMPDIR}/config/ldap.php3
+CONF_FILES+=	${IMPDIR}/config/servers.php3.dist			\
+		${IMPDIR}/config/servers.php3
+SUPPORT_FILES+=	${IMPDIR}/config/MOTD.html.dist				\
+		${IMPDIR}/config/MOTD.html
+SUPPORT_FILES+=	${IMPDIR}/config/header.txt.dist			\
+		${IMPDIR}/config/header.txt
+SUPPORT_FILES+=	${IMPDIR}/config/html.php3.dist				\
+		${IMPDIR}/config/html.php3
+SUPPORT_FILES+=	${IMPDIR}/config/imp_module_config.php3.dist		\
+		${IMPDIR}/config/imp_module_config.php3
+SUPPORT_FILES+=	${IMPDIR}/config/lang.php3.dist				\
+		${IMPDIR}/config/lang.php3
+SUPPORT_FILES+=	${IMPDIR}/config/mailbox.php3.dist			\
+		${IMPDIR}/config/mailbox.php3
+SUPPORT_FILES+=	${IMPDIR}/config/menu.txt.dist				\
+		${IMPDIR}/config/menu.txt
+SUPPORT_FILES+=	${IMPDIR}/config/mime.php3.dist				\
+		${IMPDIR}/config/mime.php3
+SUPPORT_FILES+=	${IMPDIR}/config/prefs.php3.dist			\
+		${IMPDIR}/config/prefs.php3
+SUPPORT_FILES+=	${IMPDIR}/config/trailer.txt.dist			\
+		${IMPDIR}/config/trailer.txt
+MAKE_DIRS=	${APACHE_SYSCONFDIR}
 
 post-extract:
-	cd ${WRKSRC};						\
+	cd ${WRKSRC};							\
 	for file in							\
-		config/MOTD.html config/header.txt config/html.php3  \
-		config/imp_module_config.php3	config/lang.php3  \
+		config/MOTD.html config/header.txt config/html.php3	\
+		config/imp_module_config.php3	config/lang.php3	\
 		config/mailbox.php3 config/menu.txt config/trailer.txt ; \
 	do								\
 		${MV} $${file} $${file}.dist;				\
@@ -77,8 +90,6 @@ do-build:
 pre-install:
 	${SED}	-e "s|@IMPDIR@|${IMPDIR}|g"				\
 		${FILESDIR}/imp.conf.dist > ${WRKDIR}/imp.conf.dist
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
@@ -95,4 +106,5 @@ do-install:
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

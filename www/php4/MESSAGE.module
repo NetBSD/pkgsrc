@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE.module,v 1.1 2001/11/01 19:34:52 jlam Exp $
+$NetBSD: MESSAGE.module,v 1.2 2001/11/19 16:23:15 jlam Exp $
 
-To enable this module, add the following to ${PHP_CONFDIR}/php.ini:
+To enable this module, add the following to ${CONFDIR}/php.ini:
 
     extension=${MODNAME}.so
 
