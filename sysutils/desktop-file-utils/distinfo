@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/21 17:03:54 jmmv Exp $
+
+SHA1 (desktop-file-utils-0.8.tar.gz) = 24eacdcb3b8fab024ed4382fc5d33f1fd2aaa3c1
+Size (desktop-file-utils-0.8.tar.gz) = 423341 bytes
+SHA1 (patch-aa) = c1735afe417865a755da948698f58e448230cf90
+SHA1 (patch-ab) = ebd5c0525c4e0894f2880682862aeeb76a528f04
