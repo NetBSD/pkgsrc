@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.1.1.1 2004/11/27 13:57:21 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.2 2004/11/28 15:38:35 taca Exp $
 #
 
 .ifndef _RUBYVERSION_MK
@@ -137,6 +137,8 @@ PLIST_RUBY_DIRS=	RUBY_LIBDIR="${RUBY_LIBDIR}" \
 			RUBY_EXAMPLESDIR="${RUBY_EXAMPLESDIR}"
 
 PLIST_SUBST+=		RUBY_VER="${RUBY_VER}" \
+			${PLIST_RUBY_DIRS:S,DIR="${LOCALBASE}/,DIR=",}
+MESSAGE_SUBST+=		RUBY_VER="${RUBY_VER}" \
 			${PLIST_RUBY_DIRS:S,DIR="${LOCALBASE}/,DIR=",}
 
 .endif # _RUBY_MK
