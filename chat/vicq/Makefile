@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/12/30 11:37:47 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/19 16:04:05 itojun Exp $
 
-DISTNAME=	vicq-0.3
+DISTNAME=	vicq-0.4
 CATEGORIES=	chat
 MASTER_SITES=	http://gonzo.kiev.ua/projects/vicq/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,8 +16,8 @@ REPLACE_PERL=	${WRKSRC}/vicq
 NO_BUILD=	YES
 
 do-install:
+	(cd ${WRKSRC}; perl ./install.pl --prefix=${PREFIX})
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/vicq
 	${INSTALL_DATA} ${WRKSRC}/vicqrc.example ${PREFIX}/share/examples/vicq
-	${INSTALL_SCRIPT} ${WRKSRC}/vicq ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
