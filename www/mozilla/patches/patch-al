@@ -1,0 +1,17 @@
+$NetBSD: patch-al,v 1.6 2000/11/15 04:53:35 martin Exp $
+
+--- rdf/base/src/nsRDFContentSink.cpp.orig	Sun Oct 29 23:19:05 2000
++++ rdf/base/src/nsRDFContentSink.cpp	Tue Nov 14 20:41:57 2000
+@@ -1198,11 +1198,11 @@
+ 
+ ContainerInfo gContainerInfo[] = {
+     { &RDFContentSinkImpl::kRDF_Alt, &nsIRDFContainerUtils::IsAlt, &nsIRDFContainerUtils::MakeAlt },
+     { &RDFContentSinkImpl::kRDF_Bag, &nsIRDFContainerUtils::IsBag, &nsIRDFContainerUtils::MakeBag },
+     { &RDFContentSinkImpl::kRDF_Seq, &nsIRDFContainerUtils::IsSeq, &nsIRDFContainerUtils::MakeSeq },
+-    { 0, 0, 0 },
++    { 0 }, // 0, 0 },
+ };
+ 
+ nsresult
+ RDFContentSinkImpl::InitContainer(nsIRDFResource* aContainerType, nsIRDFResource* aContainer)
+ {
