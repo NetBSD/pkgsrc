@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/27 03:20:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/02 18:46:38 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -26,6 +26,5 @@ pre-configure:
 
 pre-clean:
 	cd ../../editors/sam && ${MAKE} clean
-
 
 .include "../../mk/bsd.pkg.mk"
