@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2001/11/02 17:02:53 wiz Exp $
+# $NetBSD: Makefile.common,v 1.20 2001/12/19 13:08:25 tron Exp $
 #
 
 DISTNAME=		xscreensaver-3.33
@@ -33,10 +33,10 @@ CONFIGURE_ENV+=		ac_cv_x_app_defaults="${X11PREFIX}/lib/X11/app-defaults"
 CONFIGURE_ENV+=		PERL="${PERL}" ac_cv_perl_version="${PERL_VERSION}"
 MAKE_ENV+=		KDEDIR=${X11PREFIX}
 
-DISTINFO_FILE=		${.CURDIR}/../../x11/xscreensaver/distinfo
-FILESDIR=		${.CURDIR}/../../x11/xscreensaver/files
-PATCHDIR=		${.CURDIR}/../../x11/xscreensaver/patches
-PKGDIR=			${.CURDIR}/../../x11/xscreensaver
+DISTINFO_FILE=		${.CURDIR}/../xscreensaver/distinfo
+FILESDIR=		${.CURDIR}/../xscreensaver/files
+PATCHDIR=		${.CURDIR}/../xscreensaver/patches
+PKGDIR=			${.CURDIR}/../xscreensaver
 
 post-patch:
 	cd ${WRKSRC}/driver ; \
