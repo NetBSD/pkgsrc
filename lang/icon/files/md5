@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1998/08/07 13:24:57 agc Exp $
+$NetBSD: md5,v 1.4 2000/04/05 14:32:52 pooka Exp $
 
-MD5 (icon/unix.tgz) = 87b8628e24c1e7c14edbe593f46e06e4
+MD5 (icon-9.3.2/unix.tgz) = 3147586808024239962390cfa78a00a8

@@ -1,14 +1,13 @@
-$NetBSD: patch-bu,v 1.2 1998/08/07 11:09:17 agc Exp $
+$NetBSD: patch-bu,v 1.3 2000/04/05 14:32:53 pooka Exp $
 
---- config/unix/Config/icont.make.orig	Fri Jun 19 04:53:49 1998
-+++ config/unix/Config/icont.make	Fri Jun 19 04:54:09 1998
-@@ -27,3 +27,3 @@
+--- config/unix/Config/icont.make.orig	Thu Jul  1 20:36:41 1999
++++ config/unix/Config/icont.make	Wed Apr  5 16:24:37 2000
+@@ -21,7 +21,7 @@
+ icont:		$(OBJS) common
+ 		$(CC) $(CFLAGS) $(LDFLAGS) -o icont $(OBJS) $(COBJS) $(LIBS)
  		cp icont ../../bin
 -		strip ../../bin/icont
 +#		strip ../../bin/icont
  
-@@ -67,3 +67,3 @@
- 			-o iconx.hdr $(LIBS)
--		strip iconx.hdr
-+#		strip iconx.hdr
- ixhdr.o:	../h/path.h ../h/header.h
+ $(OBJS):	../h/define.h ../h/config.h ../h/cpuconf.h ../h/gsupport.h \
+ 		   ../h/proto.h ../h/mproto.h \

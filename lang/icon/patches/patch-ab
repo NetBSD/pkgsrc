@@ -1,23 +1,30 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 11:09:04 agc Exp $
+$NetBSD: patch-ab,v 1.5 2000/04/05 14:32:53 pooka Exp $
 
---- Makefile.orig	Fri Feb 13 07:18:30 1998
-+++ Makefile	Fri Jun 19 04:31:38 1998
-@@ -188 +188,18 @@
- ##################################################################
+--- Makefile.orig	Thu Jul  1 20:39:20 1999
++++ Makefile	Wed Apr  5 16:16:27 2000
+@@ -186,6 +186,25 @@
+ 		-cd src;		$(MAKE) Clean
+ 		-cd tests;		$(MAKE) Clean
+ 
++# Install
 +
 +install:
 +	@bin/patchstr bin/iconc ${PREFIX}/share/icon/
 +	@bin/patchstr bin/icont ${PREFIX}/bin/iconx
-+	install -c -s -g bin -o bin -m 755 bin/iconc ${PREFIX}/bin/iconc
-+	install -c -s -g bin -o bin -m 755 bin/icont ${PREFIX}/bin/icont
-+	install -c -s -g bin -o bin -m 755 bin/iconx ${PREFIX}/bin/iconx
-+	install -c -s -g bin -o bin -m 755 bin/patchstr ${PREFIX}/bin/patchstr
++	install -c -s -g wheel -o root -m 755 bin/iconc ${PREFIX}/bin/iconc
++	install -c -s -g wheel -o root -m 755 bin/icont ${PREFIX}/bin/icont
++	install -c -s -g wheel -o root -m 755 bin/iconx ${PREFIX}/bin/iconx
++	install -c -s -g wheel -o root -m 755 bin/patchstr ${PREFIX}/bin/patchstr
 +	@mkdir -p ${PREFIX}/share/icon
-+	install -c -g bin -o bin -m 644 bin/dlrgint.o ${PREFIX}/share/icon/dlrgint.o
-+	install -c -g bin -o bin -m 644 bin/rt.a ${PREFIX}/share/icon/rt.a
-+	install -c -g bin -o bin -m 644 bin/rt.db ${PREFIX}/share/icon/rt.db
-+	install -c -g bin -o bin -m 644 bin/rt.h ${PREFIX}/share/icon/rt.h
++	install -c -g wheel -o root -m 644 bin/dlrgint.o ${PREFIX}/share/icon/dlrgint.o
++	install -c -g wheel -o root -m 644 bin/rt.a ${PREFIX}/share/icon/rt.a
++	install -c -g wheel -o root -m 644 bin/rt.db ${PREFIX}/share/icon/rt.db
++	install -c -g wheel -o root -m 644 bin/rt.h ${PREFIX}/share/icon/rt.h
 +#	@mkdir -p ${PREFIX}/man/man1
-+#	install -c -g bin -o bin -m 444 docs/icon.1 ${PREFIX}/man/man1/icon.1
++#	install -c -g wheel -o root -m 444 docs/icon.1 ${PREFIX}/man/man1/icon.1
 +#	@gzip -9fn ${PREFIX}/man/man1/icon.1
 +# XXX (icon.1 missing from this distribution!)
++
+ ##################################################################
+ # Entries beyond this point are for use at Arizona only.
+ #   *** Do not delete the line above; it is used in trimming Makefiles
