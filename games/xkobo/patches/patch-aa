@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:44 agc Exp $
+$NetBSD: patch-aa,v 1.4 2001/10/18 19:12:40 abs Exp $
 
---- Imakefile.orig	Thu Jan  9 18:29:36 1997
-+++ Imakefile	Sat Mar 28 11:11:19 1998
+--- Imakefile.orig	Fri Jan 10 02:29:36 1997
++++ Imakefile
 @@ -6,7 +6,7 @@
  SHIPS       = 5
  
