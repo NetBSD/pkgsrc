@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/02/12 14:57:58 martti Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/25 09:01:41 martti Exp $
 
-DISTNAME=	libexif-0.4
+DISTNAME=	libexif-0.5.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libexif/}
 
