@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 1998/11/21 22:15:15 tron Exp $
+@comment $NetBSD: PLIST,v 1.15 1998/12/18 23:53:16 tron Exp $
 bin/gtk-config
 include/gdk/gdk.h
 include/gdk/gdkrgb.h
@@ -115,9 +115,15 @@ include/gtk/gtkvscrollbar.h
 include/gtk/gtkvseparator.h
 include/gtk/gtkwidget.h
 include/gtk/gtkwindow.h
-lib/libgdk.so.3.0
+include/gtk/gtkcompat.h
+include/gtk/gtklayout.h
+include/gtk/gtkplug.h
+include/gtk/gtksocket.h
+include/gtk/gtkthemes.h
+include/gtk/gtkintl.h
+lib/libgdk.so.9.0
 lib/libgdk.a
-lib/libgtk.so.3.0
+lib/libgtk.so.9.0
 lib/libgtk.a
 man/man1/gtk-config.1
 @unexec install-info --delete %D/info/gdk.info %D/info/dir
@@ -133,6 +139,10 @@ info/gtk.info-4
 info/gtk.info-5
 info/gtk.info-6
 share/aclocal/gtk.m4
+share/themes/Default/gtk/gtkrc
 @unexec rmdir %D/share/aclocal 2>/dev/null || true
 @dirrm include/gtk
 @dirrm include/gdk
+@dirrm share/themes/Default/gtk
+@dirrm share/themes/Default
+@dirrm share/themes
