@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2139 2003/05/04 13:15:40 gehenna Exp $
+$NetBSD: CHANGES,v 1.2140 2003/05/04 18:04:54 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1846,3 +1846,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated denemo to 0.5.4nb3 [wiz 2003-05-03]
 	Updated nautilus to 2.2.3.1nb3 [rh 2003-05-04]
 	Updated cvsync to 0.20.1 [gehenna 2003-05-04]
+	Updated acroread5 to 5.06nb1 [jmmv 2003-05-04]
