@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2004/10/09 14:01:03 mjl Exp $
+$NetBSD: patch-aa,v 1.7 2004/11/30 16:44:47 adam Exp $
 
---- make/unix.mak.orig	2004-09-01 01:52:31.000000000 +0200
-+++ make/unix.mak	2004-10-09 12:52:29.000000000 +0200
-@@ -122,13 +122,13 @@
+--- make/unix.mak.orig	2004-11-16 00:32:34.000000000 +0000
++++ make/unix.mak
+@@ -128,13 +128,13 @@
  #
  
  ifndef PWLIBDIR
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.6 2004/10/09 14:01:03 mjl Exp $
  
  ###############################################################################
  #
-@@ -427,9 +427,9 @@
+@@ -433,9 +433,9 @@ endif # FreeBSD
  
  ifeq ($(OSTYPE),OpenBSD)
  
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.6 2004/10/09 14:01:03 mjl Exp $
  
  LDLIBS		+= -lossaudio
  
-@@ -444,13 +444,9 @@
+@@ -450,13 +450,9 @@ endif # OpenBSD
  
  ifeq ($(OSTYPE),NetBSD)
  
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.6 2004/10/09 14:01:03 mjl Exp $
  
  # enable the USE_PTH line to compile using pth
  # enable the USE_NATIVE_THREADS line to compile using native threads
-@@ -832,13 +828,14 @@
+@@ -837,13 +833,14 @@ STATICLIBEXT = a
  endif
  
  ifeq ($(P_SHAREDLIB),1)
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.6 2004/10/09 14:01:03 mjl Exp $
  ifndef INSTALL_DIR
  INSTALL_DIR	= /usr/local
  endif
-@@ -865,11 +862,11 @@
+@@ -870,11 +867,11 @@ SHELL		:= /bin/sh
  
  # Directories
  
@@ -79,7 +79,7 @@ $NetBSD: patch-aa,v 1.6 2004/10/09 14:01:03 mjl Exp $
  
  ifndef UNIX_SRC_DIR
  UNIX_SRC_DIR	= $(PWLIBDIR)/src/ptlib/unix
-@@ -878,7 +875,7 @@
+@@ -883,7 +880,7 @@ endif
  PW_LIBDIR	= $(PWLIBDIR)/lib
  
  # set name of the PT library
@@ -88,7 +88,7 @@ $NetBSD: patch-aa,v 1.6 2004/10/09 14:01:03 mjl Exp $
  PTLIB_FILE	= lib$(PTLIB_BASE)$(LIB_TYPE).$(LIB_SUFFIX)
  PT_OBJBASE	= obj_$(PLATFORM_TYPE)_$(OBJDIR_SUFFIX)
  PT_OBJDIR	= $(PW_LIBDIR)/$(PT_OBJBASE)
-@@ -946,6 +943,6 @@
+@@ -951,6 +948,6 @@ endif
  # add library directory to library path and include the library
  LDFLAGS		+= -L$(PW_LIBDIR)
  
