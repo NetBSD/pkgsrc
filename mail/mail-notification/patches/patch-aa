@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/02 14:04:42 jmmv Exp $
+
+--- data/Makefile.in.orig	2004-09-09 01:41:25.000000000 +0200
++++ data/Makefile.in
+@@ -219,10 +219,10 @@ settings_DATA = mail-notification-proper
+ serverdir = $(libdir)/bonobo/servers
+ server_in_files = GNOME_MailNotification_Automation.server.in
+ server_DATA = GNOME_MailNotification_Automation.server
+-schemasdir = $(sysconfdir)/gconf/schemas
++schemasdir = $(GCONF_SCHEMA_FILE_DIR)
+ schemas_in_files = mail-notification.schemas.in
+ schemas_DATA = mail-notification.schemas
+-soundlistdir = $(sysconfdir)/sound/events
++soundlistdir = $(datadir)/examples/@PACKAGE@/sound/events
+ soundlist_in_files = mail-notification.soundlist.in
+ soundlist_DATA = mail-notification.soundlist
+ EXTRA_DIST = \
