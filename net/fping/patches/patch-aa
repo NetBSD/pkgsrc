@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/05/19 10:20:36 abs Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/28 04:03:25 hubertf Exp $
 
---- Makefile.orig	Tue Mar 25 01:18:00 1997
-+++ Makefile	Tue Mar 25 01:18:58 1997
+--- Makefile.orig	Sun Jan 28 04:58:52 2001
++++ Makefile
 @@ -2,10 +2,10 @@
  PROG= fping
  OBJS= fping.o
@@ -16,3 +16,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/05/19 10:20:36 abs Exp $
  
  #
  # Interval is the minimum amount of time between sending a ping packet to 
+@@ -43,8 +43,8 @@
+ #
+ 
+ install:
+-	install -c -m 4555 -o root -s $(PROG) $(BIN)/$(PROG)
+-	install -c -m 0444 -o root $(MANSRC) $(MAN)/$(MANDST)
++	${BSD_INSTALL_PROGRAM} $(PROG) $(BIN)/$(PROG)
++	${BSD_INSTALL_MAN} $(MANSRC) $(MAN)/$(MANDST)
+ 
+ clean:
+ 	rm -f a.out core *~  *.o $(PROG)
