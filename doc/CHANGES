@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7520 2004/10/22 10:36:06 adam Exp $
+$NetBSD: CHANGES,v 1.7521 2004/10/22 14:46:30 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4813,3 +4813,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated loudmouth to 0.17.1 [adam 2004-10-22]
 	Updated ekg to 1.5nb2 [adam 2004-10-22]
 	Added gg2-2.2.0 [adam 2004-10-22]
+	Updated ssmtp to 2.61 [tv 2004-10-22]
