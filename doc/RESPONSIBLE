@@ -1,0 +1,26 @@
+$NetBSD: RESPONSIBLE,v 1.1 2004/08/29 06:51:39 jlam Exp $
+
+List of sections of the system, and who is responsible for them (or
+at least considered an expert on them).
+
+Warning: this list is not considered definitive, and is necessarily
+incomplete!
+
+
+pkgsrc Infrastructure:
+
+buildlink3	jlam
+pkg_install	agc, hubertf
+pkgviews	jlam
+bulk build	hubertf, dmcmahill, grant
+README.html generation	dmcmahill
+
+
+pkgsrc platforms:
+
+bootstrap	grant, jlam
+Solaris		seb, salo, grant
+Darwin		grant, schmonz
+IRIX		jschauma
+Linux		jschauma, grant
+FreeBSD		grant
