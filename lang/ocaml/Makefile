@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/04/22 12:44:30 jschauma Exp $
+# $NetBSD: Makefile,v 1.31 2004/04/24 14:45:15 danw Exp $
 
 DISTNAME=	ocaml-3.06
 PKGREVISION=	6
@@ -26,6 +26,10 @@ ALL_TARGET=	world
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=	yes
+.endif
+
 post-extract:
 	${CP} ${WRKSRC}/asmrun/power-elf.S ${WRKSRC}/asmrun/power-bsd.S
 
@@ -40,6 +44,9 @@ post-build:
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     (${MACHINE_ARCH} == "sparc")
 PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
+.  if ${OPSYS} != "Darwin"
+PLIST_SRC+=	${PKGDIR}/PLIST.prof
+.  endif
 .else
 PLIST_SRC=	${PKGDIR}/PLIST
 .endif
