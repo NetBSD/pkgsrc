@@ -1,5 +1,5 @@
 #                                               -*- Autoconf -*-
-# $NetBSD: configure.ac,v 1.2 2003/06/10 20:20:40 seb Exp $
+# $NetBSD: configure.ac,v 1.3 2005/02/07 16:14:26 seb Exp $
 #
 # Process this file with autoconf to produce a configure script.
 
@@ -26,6 +26,7 @@ dnl AC_FUNC_ERROR_AT_LINE
 dnl AC_FUNC_MALLOC
 dnl AC_FUNC_REALLOC
 dnl AC_FUNC_STRCOLL
+AC_FUNC_VPRINTF
 AC_CHECK_FUNCS([setlocale])
 AC_REPLACE_FUNCS([strdup strerror strncasecmp])
 
