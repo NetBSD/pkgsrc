@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1118 2003/01/13 22:08:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.1119 2003/01/13 23:42:34 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -258,3 +258,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bochs to 2.0.1 [fredb 2003-01-13]
 	Added xemacs-nox11-21.1.14 [magick 2003-01-13]
 	Added asm2html-1.0 [jmmv 2003-01-13]
+	Updated nasm-devel to 0.98.35 [salo 2003-01-14]
