@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2003/05/26 06:53:07 martti Exp $
+$NetBSD: patch-ac,v 1.3 2003/08/16 09:23:59 recht Exp $
 
---- imap/imapd.c.orig	2003-04-22 19:02:06.000000000 +0300
-+++ imap/imapd.c	2003-05-21 10:19:38.000000000 +0300
-@@ -5837,7 +5837,7 @@
+--- imap/imapd.c.orig	2003-06-25 05:33:59.000000000 +0200
++++ imap/imapd.c	2003-07-26 14:26:27.000000000 +0200
+@@ -5839,7 +5839,7 @@
  {
      int i=0, j=0;
      char tagbuf[128];
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.2 2003/05/26 06:53:07 martti Exp $
      struct buf tag, cmd, tmp, user;
      int r = 0;
  
-@@ -5952,7 +5952,7 @@
+@@ -5954,7 +5954,7 @@
  		   char *mailbox, char *acl_in) 
  {
      int r = 0;
