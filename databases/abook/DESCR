@@ -6,7 +6,7 @@ Import filters for following formats:
  - mutt alias ( >= 0.4.10 )
  - Pine addressbook
 
-Export filters for folllowing formats:
+Export filters for following formats:
  - ldif / Netscape addressbook (.4ld)
  - Pine addressbook
  - HTML
