@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2914 2003/07/28 17:50:07 hubertf Exp $
+$NetBSD: CHANGES,v 1.2915 2003/07/28 22:39:18 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3048,3 +3048,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated prayer to 1.0.8 [adam 2003-07-28]
 	Updated falcons-eye to 1.9.3nb3 [wiz 2003-07-28]
 	Updated fluxbox to 0.9.4 [hubertf 2003-07-28]
+	Updated nsd to 1.2.2 [itojun 2003-07-28]
