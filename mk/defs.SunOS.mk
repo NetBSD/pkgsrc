@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.44 2002/12/15 02:12:32 salo Exp $
+# $NetBSD: defs.SunOS.mk,v 1.45 2002/12/15 13:03:03 salo Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -11,6 +11,7 @@ CHGRP?=		/usr/bin/chgrp
 CMP?=		cmp
 CP?=		/usr/bin/cp
 CUT?=		/usr/bin/cut
+DATE?=		/usr/xpg4/bin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		/usr/ucb/echo
@@ -51,6 +52,7 @@ MTREE?=		${LOCALBASE}/sbin/mtree
 .endif
 MTREE?=		${ZOULARISBASE}/bin/mtree
 MV?=		/usr/bin/mv
+NICE?=		/usr/xpg4/bin/nice
 .if exists(/usr/bin/gpatch)
 PATCH?=		/usr/bin/gpatch -b
 .else
