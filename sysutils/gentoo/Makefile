@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2004/11/08 10:39:14 adam Exp $
+# $NetBSD: Makefile,v 1.20 2005/01/11 11:22:05 adam Exp $
 
-DISTNAME=	gentoo-0.11.53
+DISTNAME=	gentoo-0.11.54
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gentoo/}
 
