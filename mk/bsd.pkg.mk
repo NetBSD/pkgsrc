@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.361 1999/10/22 14:14:22 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.362 1999/10/31 19:43:02 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -59,6 +59,7 @@ DEF_UMASK?=		0022
 CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
 REINSTALL?=		NO	# reinstall upon update
+NOCLEAN?=		NO	# don't clean up after update
 
 LOCALBASE?=		${DESTDIR}/usr/local
 X11BASE?=		${DESTDIR}/usr/X11R6
@@ -1620,19 +1621,28 @@ root-deinstall:
 	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
 .endif						# target(deinstall)
 
+
 ################################################################
 # Some more targets supplied for users' convenience
 ################################################################
 
 # The 'update' target can be used to update a package and all
 # currently installed packages that depend upon this package.
+
+.if exists(${DDIR})
+RESUMEUPDATE?=	YES
+
 update:
-.if (${REINSTALL} == "NO")
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} clean
-.endif
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
+		"===> Resuming update for ${PKGNAME}"
+.else
+RESUMEUPDATE?=	NO
+
+update:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${DDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} deinstall DEINSTALLDEPENDS=ALL
-.if (${REINSTALL} == "NO")
+.endif
+.if ${REINSTALL} == "NO"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${DEPENDS_TARGET} KEEP_WRKDIR=YES
 .else
@@ -1643,14 +1653,50 @@ update:
 		for dep in `${CAT} ${DDIR}` ; do			\
 			${ECHO_MSG} "===>  Installing in $${dep}" ;	\
 			(cd "../../$${dep}" && 				\
+			if [ "${RESUMEUPDATE}" = "NO" ] ; then		\
+			  ${MAKE} deinstall ;				\
+			fi &&						\
 			if [ "${REINSTALL}" = "NO" ] ; then		\
-				${MAKE} clean &&			\
 				${MAKE} ${DEPENDS_TARGET} ;		\
 			else						\
 				${MAKE} reinstall ;			\
 			fi) ;						\
 		done ;							\
 	fi
+.if ${NOCLEAN} == "NO"
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} clean-update CLEAR_DIRLIST=YES
+.endif
+
+
+clean-update:
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${DDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -s ${DDIR} ] ; then					\
+		for dep in `${CAT} ${DDIR}` ; do			\
+			(cd "../../$${dep}" && ${MAKE} clean) ;		\
+		done ;							\
+	fi
+.ifdef CLEAR_DIRLIST
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} clean
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} clean update-dirlist		\
+		DIRLIST="`${CAT} ${DDIR}`" PKGLIST="`${CAT} ${DLIST}`"
+.endif
+
+
+update-dirlist:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} -p ${WRKDIR}
+.ifdef PKGLIST
+.for __tmp__ in ${PKGLIST}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} >>${DLIST} "${__tmp__}"
+.endfor
+.endif
+.ifdef DIRLIST
+.for __tmp__ in ${DIRLIST}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} >>${DDIR} "${__tmp__}"
+.endfor
+.endif
+
 
 ${DDIR}: ${DLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
