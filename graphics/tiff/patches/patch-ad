@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.6 2001/02/27 09:49:25 skrll Exp $
+$NetBSD: patch-ad,v 1.7 2001/05/03 13:22:50 skrll Exp $
 
 --- configure.orig	Mon Mar 20 18:20:42 2000
-+++ configure
++++ configure	Thu May  3 14:15:41 2001
+@@ -486,7 +486,7 @@
+ 
+ checkCompiler()
+ {
+-    compiler=$1
++    compiler="$*"
+     if isGNU $compiler; then
+ 	ISGCC=yes
+     else
 @@ -512,7 +512,7 @@
      $RM dummy dummy.o
      capture $compiler -o dummy ${C_ANSI} dummy.c && {
