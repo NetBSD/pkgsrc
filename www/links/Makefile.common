@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.19 2004/01/05 23:46:42 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2004/04/29 09:28:21 wiz Exp $
 
-DISTNAME=	links-2.1pre14
+DISTNAME=	links-2.1pre15
 CATEGORIES=	www
 MASTER_SITES= \
 	http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/download/ \
@@ -19,5 +19,9 @@ CONFIGURE_ARGS+=	--enable-javascript
 PLIST_SRC=		${.CURDIR}/../../www/links/PLIST
 PATCHDIR=		${.CURDIR}/../../www/links/patches
 DISTINFO_FILE=		${.CURDIR}/../../www/links/distinfo
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/links
+	${INSTALL_DATA} ${WRKSRC}/KEYS ${PREFIX}/share/doc/links
 
 .include "../../security/openssl/buildlink3.mk"
