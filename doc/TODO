@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2929 2005/01/19 15:32:00 adam Exp $
+$NetBSD: TODO,v 1.2930 2005/01/19 16:09:23 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -909,6 +909,7 @@ Suggested package updates
 	o posh-0.3.14
 	o postgresql-8.0
 	o postgresql-autodoc-1.24
+	o powermanga-0.79
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o prc-tools-2.3
 	o proj-4.4.9
