@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/20 15:17:22 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 1998/10/19 11:23:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/07/31 06:36:03 asami Exp
 #
 
@@ -11,6 +11,8 @@ MASTER_SITES=		ftp://nntpcache.org/pub/nntpcache/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.nntpcache.org/
+
+LICENSE=		fee-based-commercial-use
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=/var/spool
