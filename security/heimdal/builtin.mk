@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:35 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/09/14 15:10:09 jlam Exp $
 
 _KRB5_KRB5_H=	/usr/include/krb5/krb5.h
 
@@ -24,6 +24,9 @@ IS_BUILTIN.heimdal!=							\
 #
 .      if !defined(_HEIMDAL_VERSION)
 _HEIMDAL_VERSIONS=	0.6  0.5  0.4e  0.3f  0.3e
+_HEIMDAL_0.6.3=		NetBSD-[2-9]*-*
+_HEIMDAL_0.6.2=		# empty
+_HEIMDAL_0.6.1=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
 _HEIMDAL_0.6=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-* NetBSD-[2-9]*-*
 _HEIMDAL_0.5=		NetBSD-1.6[I-T]-*
 _HEIMDAL_0.4e=		NetBSD-1.6[A-H]-*				\
