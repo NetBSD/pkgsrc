@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/08/09 10:29:55 seb Exp $
+# $NetBSD: Makefile,v 1.22 2003/09/14 18:00:30 jmmv Exp $
 
 DISTNAME=		libmikmod-3.1.10
 CATEGORIES=		audio
@@ -18,14 +18,20 @@ INFO_FILES=		mikmod.info
 CONFIGURE_ARGS+=	--disable-threads
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		USE_ESOUND
+.if defined(USE_ESOUND) && !empty(USE_ESOUND:M[Yy][Ee][Ss])
+.include "../../audio/esound/buildlink2.mk"
+.else
+CONFIGURE_ARGS+=	--disable-esd
+.endif
+
 pre-build:
 	${RM} -f ${WRKSRC}/docs/mikmod.info*
-
-.include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_OSS)
 .  include "../../mk/ossaudio.buildlink2.mk"
 .endif
 
-.include "../../audio/esound/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
