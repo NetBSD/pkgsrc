@@ -1,67 +1,252 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:08:58 agc Exp $
+$NetBSD: patch-ac,v 1.3 1998/08/25 08:54:07 agc Exp $
+
+Add various options to f2c, including PIC support
 
 --- fc.orig	Tue May 16 17:37:49 1995
-+++ fc	Thu Jul  9 08:36:49 1998
-@@ -1,4 +1,4 @@
++++ fc	Mon Aug 24 14:05:40 1998
+@@ -1,26 +1,51 @@
  #!/bin/sh
 -PATH=/v/bin:/bin:/usr/bin
 +PATH=/bin:/usr/bin:PREFIX/bin
++#USAGESTART
  # f77-style shell script to compile and load fortran, C, and assembly codes
- 
-@@ -21,4 +21,14 @@
- #		-w		omit all warning messages
- 
-+#		-Wall		turn on the -Wall flag to the c compiler
-+
+-
++#
+ #	usage:	f77 [options] files [-l library]
+-
++#
+ #	Options:
+-
+-#		-o objfile	Override default executable name a.out.
+-
++#
+ #		-c		Do not call linker, leave relocatables in *.o.
+-
++#
+ #		-C		Check that subscripts are in bounds.
+-
+-#		-S		leave assembler output on file.s
+-
++#
++#		-D def		passed to C compiler (for .c files)
++#				or to cpp (for .F files)
++#
++#		-fPIC		turn on the -fPIC flag to the c compiler
++#
++#		-I includepath	passed to C compiler (for .c files)
++#				or to cpp (for .F files), and to f2c
++#
+ #		-l library	(passed to ld).
+-
++#
++#		-L includepath	passed to ld.  Library include path
++#
++#		-Ntnnn		allow nnn entries in table t
++#
++#		-o objfile	Override default executable name a.out.
++#
 +#		-O		turn on the -O flag to the c compiler
-+
++#
 +#		-O1		turn on the -O1 flag to the c compiler
-+
++#
 +#		-O2		turn on the -O2 flag to the c compiler
-+
++#
 +#		-O3		turn on the -O3 flag to the c compiler
-+
++#
++#		-P		emit .P files
++#
++#		-S		leave assembler output on file.s
++#
+ #		-u		complain about undeclared variables
+-
++#
+ #		-w		omit all warning messages
+-
++#
  #		-w66		omit Fortran 66 compatibility warning messages
+-
++#
++#		-Wall		turn on the -Wall flag to the c compiler
++#
+ #		files		FORTRAN source files ending in .f .
+ #				FORTRAN with cpp preprocessor directives
+@@ -30,21 +55,18 @@
+ #				efl source files ending in .e .
+ #				RATFOR files ending in .r .
+-
++#
+ #				f2c prototype files ending in .P ; such
+ #				files only affect subsequent files.
  
-@@ -46,5 +56,5 @@
+-#		-D def		passed to C compiler (for .c files)
+-#				or to cpp (for .F files)
+-
+-#		-I includepath	passed to C compiler (for .c files)
+-#				or to cpp (for .F files), and to f2c
+-
+-#		-Ntnnn		allow nnn entries in table t
++# if no input arguments, then spit out the help stuff from the beginning
++# of this file.
++if [ $# = 0 ]; then
++ cat $0 | awk '$1 == "#USAGESTART", $1 == ""' | tail +2 | sed 's/#//g'
++fi
+ 
+-#		-P		emit .P files
+ 
  s=/tmp/stderr_$$
  t=/tmp/f77_$$.o
 -CC=${CC_f2c:-'cc -common'}
 +CC=${CC_f2c:-'cc '}
  EFL=${EFL:-efl}
  EFLFLAGS=${EFLFLAGS:-'system=portable deltastno=10'}
-@@ -58,7 +68,8 @@
+@@ -58,25 +80,29 @@
  OUTF=a.out
  cOPT=1
 -set -- `getopt cCD:gI:N:Oo:Suw6 "$@"`
-+set -- `getopt cCD:gI:N:W:O:o:Suw6 "$@"`
- case $? in 0);; *) rc=$?; exit;; esac
+-case $? in 0);; *) rc=$?; exit;; esac
++ARGS=
  CPPFLAGS=
 +CFLAGS=-IPREFIX/include 
++LIBS=
  while
- 	test X"$1" != X--
-@@ -90,5 +101,5 @@
+-	test X"$1" != X--
++	test -n "$1"
+ do
+ 	case "$1"
+ 	in
+-	-C)	F2CFLAGS="$F2CFLAGS -C"
+-		shift;;
+-
+ 	-c)	cOPT=0
+ 		shift
+ 		;;
+ 
+-	-D)	CPPFLAGS="$CPPFLAGS -D$2"
+-		shift 2
+-		;;
++	-C)	F2CFLAGS="$F2CFLAGS -C"
++		shift;;
++
++	-D*)	CPPFLAGS="$CPPFLAGS $1"
++		shift;;
++
++        -fPIC)  CFLAGS="$CFLAGS $1"
++                shift;;
+ 
+ 	-g)	CFLAGS="$CFLAGS -g"
+ 		F2CFLAGS="$F2CFLAGS -g"
++		G="-g"
+ 		shift;;
+ 
+@@ -86,45 +112,75 @@
+ 		;;
+ 
++        -I*)    CFLAGS="$CFLAGS $1"
++                shift 1
++                ;;
++
++        -l*)    LIBS="$LIBS $1"
++                shift 1
++                ;;
++
++        -L*)    LIBS="$LIBS $1"
++                shift 1
++                ;;
++
+ 	-o)	OUTF=$2
+ 		shift 2
  		;;
  
 -	-O)	case $2 in -1) O=-O1;; -2) O=-O2;; -3) O=-O3;; *) O=-O;; esac
-+	-O)	case $2 in 1) O=-O1;; 2) O=-O2;; 3) O=-O3;; *) O=-O;; esac
- 		case $O in -O);; *) shift;; esac
- 		CFLAGS="$CFLAGS $O"
-@@ -96,4 +107,10 @@
+-		case $O in -O);; *) shift;; esac
+-		CFLAGS="$CFLAGS $O"
++#	-N)	F2CFLAGS="$F2CFLAGS $1""$2"
++#		shift 2
++#		;;
++# can't seem to find out what -N is supposed to do.
++
++	-O|-O1|-O2|-O3)	
++		CFLAGS="$CFLAGS $1"
+ 		shift
  		;;
  
-+	-W)	case $2 in all) W=-Wall;; *) echo "don't understand -W$2";; esac
-+		case $O in -W);; *) shift;; esac
-+		CFLAGS="$CFLAGS $W"
+-	-u)	F2CFLAGS="$F2CFLAGS -u"
++	-P)	F2CFLAGS="$F2CFLAGS $1"
+ 		shift
+ 		;;
+ 
+-	-w)	F2CFLAGS="$F2CFLAGS -w"
+-		case $2 in -6) F2CFLAGS="$F2CFLAGS"66; shift
+-			case $2 in -6) shift;; esac;; esac
++
++	-S)	CFLAGS="$CFLAGS -S"
++		cOPT=0
+ 		shift
+ 		;;
+ 
+-	-N)	F2CFLAGS="$F2CFLAGS $1""$2"
+-		shift 2
++	-u)	F2CFLAGS="$F2CFLAGS -u"
++		shift
+ 		;;
+ 
+-	-P)	F2CFLAGS="$F2CFLAGS $1"
++	-w)	F2CFLAGS="$F2CFLAGS -w"
+ 		shift
+ 		;;
+ 
++	-w66)	F2CFLAGS="$F2CFLAGS -w66"
 +		shift
 +		;;
-+
- 	-u)	F2CFLAGS="$F2CFLAGS -u"
+ 
+-	-S)	CFLAGS="$CFLAGS -S"
+-		cOPT=0
++	-Wall)	CFLAGS="$CFLAGS -Wall"
  		shift
-@@ -232,5 +249,5 @@
+ 		;;
+ 
++	-*)	echo "ERROR:  $1 is not a valid option"
++		exit 1
++		;;
++
+ 	*)
+-		echo "invalid parameter $1" 1>&2
++		ARGS="$ARGS $1"
+ 		shift
+ 		;;
+ 	esac
+ done
+-shift
++
++if test $cOPT = 0; then
++  if test "$OUTF" != "a.out"; then
++    CFLAGS="$CFLAGS -o $OUTF"
++  fi
++fi
++set -- $ARGS
++
++
+ while
+ 	test -n "$1"
+@@ -232,5 +288,20 @@
  done
  
 -case $cOPT in 2) $CC -o $OUTF -u MAIN__ $OFILES -lf2c -lm;; esac
-+case $cOPT in 2) $CC -o $OUTF -u _MAIN__ $OFILES -LPREFIX/lib -lf2c -lm;; esac
++case $cOPT 
++in 
++  2) $CC $CFLAGS -o $OUTF -u _MAIN__ $OFILES $LIBS -LPREFIX/lib -lf2c -lm
++     ;; 
++esac
++
  rc=$?
  exit $rc
++
++
++
++
++
++
++
++
++
++

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: post-extract,v 1.2 1998/08/07 11:09:01 agc Exp $
+# $NetBSD: post-extract,v 1.3 1998/08/25 08:54:08 agc Exp $
 #
 
 echo "Running post-extract"
@@ -24,3 +24,5 @@ cd src
 rm index.html
 mv .depend depend.orig
 gunzip *.gz
+
+exit 0

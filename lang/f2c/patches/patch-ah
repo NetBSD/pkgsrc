@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.2 1998/08/07 11:08:59 agc Exp $
+$NetBSD: patch-ah,v 1.3 1998/08/25 08:54:08 agc Exp $
+
+Omit pkgsrc-modified files from distributed checksum
 
 --- libI77/libI77.xsum.orig	Thu Jul  9 08:26:43 1998
 +++ libI77/libI77.xsum	Thu Jul  9 08:27:14 1998
