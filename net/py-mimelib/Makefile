@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/10 19:14:18 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/05 08:11:07 recht Exp $
 #
 
 DISTNAME=	email-2.5
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mimelib.sourceforge.net/
 COMMENT=	Email package for Python
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	yes
 PYDISTUTILSPKG=	yes
 # This pkg (or an older version of it) comes with 2.2 and later;
 # 2.1 is the primary target (particulary for Zope).
