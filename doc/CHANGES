@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1181 2003/01/21 11:23:26 wiz Exp $
+$NetBSD: CHANGES,v 1.1182 2003/01/21 11:50:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -348,6 +348,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mysql-client to 3.23.49nb3 [lukem 2003-01-21]
 	Updated mysql-server to 3.23.49nb3 [lukem 2003-01-21]
 	Updated gtar-base to 1.13.25nb1 [jschauma 2003-01-21]
+	Updated gtar to 1.13.25nb1 [jschauma 2003-01-21]
 	Updated cvs to 1.11.5 [wiz 2003-01-21]
 	Updated libgtop to 1.0.13nb1 [tron 2003-01-21]
 	Updated ncurses to 5.3 [wiz 2003-01-21]
