@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/09/22 09:39:59 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/25 00:10:38 grant Exp $
 #
 
 DISTNAME=	totd-1.4
@@ -9,7 +9,8 @@ MAINTAINER=	feico@pasta.cs.uit.no
 HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
 COMMENT=	DNS proxy that supports IPv6 <==> IPv4 record translation
 
-GNU_CONFIGURE=	YES
+USE_BUILDLINK3=	yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
