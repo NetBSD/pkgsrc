@@ -1,20 +1,12 @@
-$NetBSD: patch-ac,v 1.4 2002/11/21 15:42:45 salo Exp $
+$NetBSD: patch-ac,v 1.5 2002/12/04 17:31:57 salo Exp $
 
---- lib/Makefile.in.orig	Thu Nov 21 07:34:37 2002
-+++ lib/Makefile.in	Thu Nov 21 07:43:54 2002
-@@ -529,12 +529,9 @@
- 	-rm -rf libsilc.a
- 	-rm -rf libsilcclient.a
- 
--@SILC_DIST_TOOLKIT_TRUE@install-exec-hook:
--@SILC_DIST_TOOLKIT_TRUE@	-mkdir -p $(libdir)
--@SILC_DIST_TOOLKIT_TRUE@	-$(LIBTOOL) $(INSTALL) libsilc.la $(libdir)/
--@SILC_DIST_TOOLKIT_TRUE@	-$(LIBTOOL) $(INSTALL) libsilcclient.la $(libdir)/
--@SILC_DIST_TOOLKIT_FALSE@install-exec-hook:
--@SILC_DIST_TOOLKIT_FALSE@	-cd
-+install-exec-hook:
-+	-mkdir -p $(libdir)
-+	-$(LIBTOOL) $(INSTALL) libsilc.la $(libdir)/
+--- lib/Makefile.in.orig	Fri Nov 29 08:58:20 2002
++++ lib/Makefile.in	Wed Dec  4 17:32:17 2002
+@@ -542,7 +542,6 @@
+ install-exec-hook:
+ 	-mkdir -p $(libdir)
+ 	-$(LIBTOOL) $(INSTALL) libsilc.la $(libdir)/
+-	-$(LIBTOOL) $(INSTALL) libsilcclient.la $(libdir)/
  
  # WIN32 DLL generation
  @SILC_DIST_WIN32DLL_TRUE@silc.dll: libsilc.a

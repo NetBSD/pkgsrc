@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2002/11/21 15:42:45 salo Exp $
+# $NetBSD: Makefile,v 1.17 2002/12/04 17:31:55 salo Exp $
 
-DISTNAME=		silc-server-0.9.8
+DISTNAME=		silc-server-0.9.9.1
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -74,12 +74,12 @@ CONFIGURE_ARGS+=	--disable-asm
 # Temporary hack which prevents installation of static libraries
 #
 post-build:
-	for file in \
+	for f in \
 	${WRKSRC}/lib/libsilc.la \
 	${WRKSRC}/lib/.libs/libsilc.la ; \
 	do \
-		${CP} $$file $$file.orig ; \
-		${SED} "s|^old_library|#&|" $$file.orig > $$file ; \
+		${CP} $$f $$f.orig ; \
+		${SED} "s|^old_library|#&|" $$f.orig > $$f ; \
 	done
 
 post-install:
