@@ -1,18 +1,18 @@
-$NetBSD: patch-ai,v 1.1 2001/06/21 17:02:24 fredb Exp $
+$NetBSD: patch-ai,v 1.2 2003/09/20 16:39:38 fredb Exp $
 
---- fax/Makefile.orig	Sat Jul 24 16:27:24 1999
+--- fax/Makefile.orig
 +++ fax/Makefile
-@@ -9,6 +9,9 @@
- 
- FAX_SCRIPTS=faxspool faxrunq faxq faxrm 
+@@ -12,6 +12,9 @@
+ zigzag: 
+ 	cd .. ; $(MAKE) subdirs
  
 +CONFDIR=${MGETTY_CONFDIR}
 +CONF_EXAMPLES_DIR=${PREFIX}/share/examples/mgetty+sendfax
 +
- all: $(FAX_SCRIPTS) faxrunqd faxheader
+ all: $(FAX_SCRIPTS) faxrunqd faxheader faxq-helper
  
  faxspool: faxspool.in ../sedscript
-@@ -53,8 +56,8 @@
+@@ -68,8 +71,8 @@ install: all
  #
  	$(INSTALL) -m 644 cour25.pbm $(LIBDIR)
  	$(INSTALL) -m 644 cour25n.pbm $(LIBDIR)

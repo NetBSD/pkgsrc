@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/27 17:19:21 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/20 16:39:34 fredb Exp $
 bin/autopvf
 bin/basictopvf
 bin/faxspool
@@ -40,6 +40,7 @@ info/mgetty.info-3
 info/mgetty.info-4
 lib/mgetty+sendfax/cour25.pbm
 lib/mgetty+sendfax/cour25n.pbm
+lib/mgetty+sendfax/faxq-helper
 man/man1/g3cat.1
 man/man1/sendfax.1
 man/man1/g32pbm.1
