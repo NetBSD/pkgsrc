@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/07/22 01:16:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/26 19:16:27 schmonz Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
 DISTNAME=	daemontools-0.76
@@ -17,6 +17,8 @@ RESTRICTED=	"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	yes
 
 ALL_TARGET=	it
@@ -27,6 +29,8 @@ CMDDIR=		${WRKSRC}/command
 
 PLIST_SUBST+=	SERVICEDIR=${SERVICEDIR}
 DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
+
+INSTALLATION_DIRS=	bin man man/man8 share/examples/daemontools
 
 do-configure:
 	@${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/src/conf-cc
