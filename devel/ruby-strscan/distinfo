@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/30 23:23:59 taca Exp $
+$NetBSD: distinfo,v 1.2 2001/12/30 17:03:36 taca Exp $
 
-SHA1 (ruby/strscan-0.6.3.tar.gz) = cf6b39935d43090e97647061a12da30434c7faa9
-Size (ruby/strscan-0.6.3.tar.gz) = 24773 bytes
+SHA1 (ruby/strscan-0.6.5.tar.gz) = 97bb2a40c6ade91f79ce0dbd9d2a43a96d561fac
+Size (ruby/strscan-0.6.5.tar.gz) = 25769 bytes
