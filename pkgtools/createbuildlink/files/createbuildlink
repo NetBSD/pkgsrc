@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.10 2002/10/16 08:53:15 rh Exp $
+#	$NetBSD: createbuildlink,v 1.11 2003/01/09 02:21:30 uebayasi Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink2.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.10 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.11 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
@@ -166,20 +166,21 @@ echo ""
 for i in $makefile $commons ; do
 	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink2.mk\"' $i
 done
+grep -l '^.include.*\.\.\/.*\/.*/buildlink2.mk\"' $makefile $commons \
+	>/dev/null 2>&1 && echo ""	# Be careful not to print duplicate \n
 
 ##
 ## main buildlink target for this package
 ##
-echo ""
 echo "BUILDLINK_TARGETS+=	${PKGNOVER}-buildlink"
+echo ""
 
 ##
 ## buildlink targets for this package
 ##
-echo ""
 echo "${PKGNOVER}-buildlink: _BUILDLINK_USE"
-
 echo ""
+
 echo ".endif	# ${PKGUPPER}_BUILDLINK2_MK"
 
 rm -f $sedrules
