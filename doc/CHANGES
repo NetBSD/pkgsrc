@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9622 2005/03/25 10:36:38 adam Exp $
+$NetBSD: CHANGES,v 1.9623 2005/03/25 12:00:58 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1737,3 +1737,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated urban to 1.5.3 [wiz 2005-03-25]
 	Updated mhash to 0.9.2 [adam 2005-03-25]
 	Updated netpbm to 10.26.6 [adam 2005-03-25]
+	Updated sylpheed-claws to 1.0.4 [chris 2005-03-25]
+	Updated sylpheed-claws-dillo-viewer to 1.0.4 [chris 2005-03-25]
+	Updated sylpheed-claws-image-viewer to 1.0.4 [chris 2005-03-25]
+	Updated sylpheed-claws-trayicon to 1.0.4 [chris 2005-03-25]
