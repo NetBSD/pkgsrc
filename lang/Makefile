@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2001/02/20 23:48:00 jlam Exp $
+# $NetBSD: Makefile,v 1.91 2001/02/23 20:37:21 jtb Exp $
 #
 
 COMMENT=	Programming languages
@@ -71,6 +71,7 @@ SUBDIR+=	sun-jre13
 SUBDIR+=	swi-prolog
 SUBDIR+=	tcl
 SUBDIR+=	tcl-expect
+SUBDIR+=	tcl-itcl
 SUBDIR+=	tcl-tclX
 SUBDIR+=	tk-expect
 SUBDIR+=	tk-tclX
