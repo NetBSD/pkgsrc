@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:32:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/01 18:58:52 jlam Exp $
 #
 
 DISTNAME=		xcal41
@@ -10,9 +10,8 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		calendar with alarms and a notebook for X11
 
+USE_BUILDLINK2=		yes
 USE_IMAKE=		yes
-#USE_XAW=		yes
-#XAW_TYPE=		standard
 
 post-extract:
 	@${MKDIR} ${WRKSRC}
