@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/02/17 21:25:43 tron Exp $
+# $NetBSD: Makefile,v 1.15 2002/02/17 21:40:31 tron Exp $
 
 DISTNAME=		pchar-1.4
 CATEGORIES=		net
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-ipv6
 
 # XXX Not fully integrated
 .if ${OPSYS} == "NetBSD"
-.include "..//ucd-snmp/buildlink.mk"
+.include "../ucd-snmp/buildlink.mk"
 
 CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_DIR}
 LIBS+=			-lsnmp -lcrypto
