@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.24 2000/01/06 01:34:22 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.25 2000/01/08 19:11:26 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -913,7 +913,7 @@ EOF
 				(($pkgname eq '')
 					? ', which is derived from DISTNAME, '
 					: ' ').
-				"looks illegal. should modify \"-$k\"" .
+				"looks illegal. You should modify \"-$k\"" .
                                 ($osname ne "NetBSD"?" to obey the handbook.":"."));
 		}
 	} else {
