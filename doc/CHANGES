@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3462 2003/09/20 00:48:28 kristerw Exp $
+$NetBSD: CHANGES,v 1.3463 2003/09/20 01:29:52 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3854,3 +3854,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgnomedb to 1.0.0 [jmmv 2003-09-19]
 	Updated xmame to 0.74.1 [kristerw 2003-09-20]
 	Updated xmess to 0.74.1 [kristerw 2003-09-20]
+	Updated clamav to 0.60 [chris 2003-09-20]
