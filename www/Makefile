@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.289 2004/01/17 06:44:28 taya Exp $
+# $NetBSD: Makefile,v 1.290 2004/01/22 11:11:11 recht Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -76,6 +76,7 @@ SUBDIR+=	curl
 SUBDIR+=	cvsweb
 SUBDIR+=	dillo
 SUBDIR+=	elinks
+SUBDIR+=	elinks04
 SUBDIR+=	emacs-w3m
 SUBDIR+=	fcgi
 SUBDIR+=	galeon
