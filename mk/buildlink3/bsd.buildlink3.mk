@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.2 2003/09/02 06:59:53 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.3 2003/09/04 05:40:25 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -107,6 +107,11 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 # BUILDLINK_IS_DEPOT.<pkg>	"yes" or "no" for whether <pkg> is a
 #				depoted package.
 #
+# BUILDLINK_IS_BUILTIN.<pkg>	"yes" or "no" for whether <pkg> is provided
+#				in the base system.  This check is only
+#				relevant for buildlink3.mk files that
+#				provide a setting for this variable.
+#
 # BUILDLINK_CPPFLAGS.<pkg>,
 # BUILDLINK_LDFLAGS.<pkg>	contain extra -D..., -I... and -L.../-Wl,-R
 #				options to be passed to the compiler/linker
@@ -123,8 +128,7 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 .for _pkg_ in ${BUILDLINK_PACKAGES} ${_BLNK_X11_LINKS_PACKAGE}
 .  if !defined(BUILDLINK_PKG_DBDIR.${_pkg_})
 BUILDLINK_PKG_DBDIR.${_pkg_}!=						\
-	cd ${_PKG_DBDIR};						\
-	dir=`${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}" || ${TRUE}`; \
+	dir=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}" || ${TRUE}`; \
 	case "$$dir" in							\
 	"")	dir="not_found" ;;					\
 	esac;								\
@@ -154,6 +158,7 @@ BUILDLINK_IS_DEPOT.${_pkg_}?=	yes
 .  else
 BUILDLINK_IS_DEPOT.${_pkg_}?=	no
 .  endif
+BUILDLINK_IS_BUILTIN.${_pkg_}?=	no
 BUILDLINK_CPPFLAGS.${_pkg_}?=	# empty
 BUILDLINK_LDFLAGS.${_pkg_}?=	# empty
 BUILDLINK_INCDIRS.${_pkg_}?=	include
