@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.202 2001/10/15 11:34:20 agc Exp $
+# $NetBSD: Packages.txt,v 1.203 2001/10/17 18:35:42 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1878,9 +1878,16 @@ first part of the "do-configure" target pkgsrc/print/ghostscript5 package
 (it relies on the jpeg sources being present in source form during the
 build):
 
-	if [ ! -e ${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
-		cd ../../graphics/jpeg && ${MAKE} extract;              \
+	if [ ! -e ${PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
+		cd ${PKGSRCDIR}/../../graphics/jpeg && ${MAKE} extract;              \
 	fi
+
+If you build any other packages that way, please make sure the working
+files are deleted too when this package's working files are cleaned up.
+The easiest way to do so is by adding a pre-clean target:
+
+	pre-clean:
+		cd ${PKGSRCDIR}/../../graphics/jpeg && ${MAKE} clean
 
 Please also note the BUILD_USES_MSGFMT and BUILD_USES_GETTEXT_M4 definitions,
 which are provided as convenience definitions.  The former works out whether
