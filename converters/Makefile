@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2004/06/28 05:39:35 minskim Exp $
+# $NetBSD: Makefile,v 1.72 2004/09/05 23:30:33 grant Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -27,6 +27,7 @@ SUBDIR+=	libiconv
 SUBDIR+=	macfork
 SUBDIR+=	mpack
 SUBDIR+=	nkf
+SUBDIR+=	p5-Convert-BinHex
 SUBDIR+=	p5-Convert-TNEF
 SUBDIR+=	p5-Convert-UUlib
 SUBDIR+=	p5-Jcode
