@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.227 1999/03/16 09:50:28 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.228 1999/03/16 15:28:37 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -274,18 +274,10 @@ BUILD_DEPENDS+=		${BZCAT}:${PKGSRCDIR}/archivers/bzip2
 EXTRACT_CMD?=		${BZCAT}
 EXTRACT_BEFORE_ARGS?=	<
 EXTRACT_AFTER_ARGS?=	| /usr/bin/tar -xf -
-.else # suffix == .tar.bz2
-.if (${OPSYS} == "NetBSD")
-EXTRACT_CMD?=		/usr/bin/tar
+.else # suffix != .tar.bz2
+EXTRACT_CMD?=		${GTAR}
 EXTRACT_BEFORE_ARGS?=	-xzf
-.elif (${OPSYS} == "SunOS")
-EXTRACT_CMD?=		${LOCALBASE}/bin/gtar
-EXTRACT_BEFORE_ARGS?=	-xzf
-.elif exists(/bin/pax)
-EXTRACT_CMD?=		/bin/pax
-EXTRACT_BEFORE_ARGS?=	-zrf
-.endif
-.endif
+.endif # suffix != .tar.bz2
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE)
@@ -484,6 +476,7 @@ EGREP?=		/usr/xpg4/bin/egrep
 FALSE?=		/usr/bin/false
 FILE?=		/usr/bin/file
 GREP?=		/usr/bin/grep
+GTAR?=		${LOCALBASE}/bin/gtar
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/gzcat
 GZIP?=		-9
@@ -516,6 +509,7 @@ EGREP?=		/usr/bin/egrep
 FALSE?=		/usr/bin/false
 FILE?=		/usr/bin/file
 GREP?=		/usr/bin/grep
+GTAR?=		/usr/bin/tar
 GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/usr/bin/gzcat
 GZIP?=		-9
