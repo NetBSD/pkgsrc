@@ -1,6 +1,8 @@
---- gcc/configure	Thu Jul  1 17:11:06 2004
-+++ gcc/configure.orig	Thu Jul  1 17:03:23 2004
-@@ -7693,7 +7693,7 @@
+$NetBSD: patch-ca,v 1.2 2004/07/21 16:03:33 shannonjr Exp $
+
+--- gcc/configure.orig	2004-04-18 17:45:10.000000000 -0600
++++ gcc/configure
+@@ -7693,7 +7693,7 @@ _ACEOF
    fi
    LIBICONV=
    if test "$am_cv_lib_iconv" = yes; then
