@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2002/08/26 06:42:12 grant Exp $
+# $NetBSD: Makefile,v 1.67 2002/09/15 14:39:51 grant Exp $
 
 DISTNAME=	squid-2.4.STABLE7-src
 PKGNAME=	squid-2.4.7
@@ -27,9 +27,14 @@ CONFIGURE_ENV+=	PERL=${PERL5}
 BUILD_DEFS+=	SQUID_CONFIGURE_ARGS
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
-INSTALL_FILE=	${WRKDIR}/INSTALL
 PLIST_SRC=	${WRKDIR}/PLIST
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
+RCD_SCRIPTS=	squid
+
+CONF_FILES+=	${PREFIX}/share/examples/squid/mime.conf \
+			${PKG_SYSCONFDIR}/mime.conf
+CONF_FILES+=	${PREFIX}/share/examples/squid/squid.conf \
+			${PKG_SYSCONFDIR}/squid.conf
 
 # Configuration options which can be overwritten by the user.
 SQUID_CONFIGURE_ARGS?=	--disable-internal-dns \
@@ -44,12 +49,9 @@ SQUID_CONFIGURE_ARGS?=	--disable-internal-dns \
 OPTIONAL_FILES=	libexec/diskd libexec/dnsserver libexec/pinger libexec/unlinkd
 
 post-build:
-	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
-	${SED} s#@SYSCONFDIR@#${PKG_SYSCONFDIR}#g <${PKGDIR}/INSTALL \
-	  >${WRKDIR}/INSTALL
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/squid.sh > ${WRKDIR}/squid
 
 pre-install:
-	@${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
@@ -57,8 +59,7 @@ pre-install:
 
 post-install:
 	cd ${WRKSRC}/src; ${TEST} ! -x pinger || ${MAKE} install-pinger
-	${INSTALL_SCRIPT} ${WRKDIR}/squid.sh ${PREFIX}/etc/rc.d/squid
-	@${SETENV} ${MAKE_ENV} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	${INSTALL_SCRIPT} ${WRKDIR}/squid ${RCD_SCRIPTS_EXAMPLEDIR}/squid
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(							\
 	for FILE in ${OPTIONAL_FILES}; do			\
@@ -74,4 +75,5 @@ post-install:
 	${ECHO} "@dirrm share/squid"				\
 	) >>${PLIST_SRC}
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
