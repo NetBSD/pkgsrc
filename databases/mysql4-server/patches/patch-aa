@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/20 16:00:42 martti Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/07 19:42:55 martti Exp $
 
---- Makefile.in.orig	2003-12-14 21:24:01.000000000 +0000
-+++ Makefile.in	2003-12-20 12:08:19.000000000 +0000
-@@ -210,11 +210,8 @@
+--- Makefile.in.orig	Tue Feb 10 20:16:48 2004
++++ Makefile.in	Sun Mar  7 20:20:06 2004
+@@ -277,11 +277,8 @@
  
  # These are built from source in the Docs directory
  EXTRA_DIST = INSTALL-SOURCE README COPYING 
