@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2001/03/28 21:49:40 wennmach Exp $
+$NetBSD: patch-aa,v 1.5 2001/07/19 19:16:45 jlam Exp $
 
---- ../dist/Makefile.in.orig	Thu Nov 30 23:07:33 2000
-+++ ../dist/Makefile.in	Thu Mar 22 18:34:56 2001
+--- ../dist/Makefile.in.orig	Thu Nov 30 15:07:33 2000
++++ ../dist/Makefile.in
 @@ -17,7 +17,7 @@
  INSTALLER=	@INSTALLER@
  
  LDFLAGS=	@LDFLAGS@
 -LIBDB_ARGS=	@LIBDB_ARGS@
-+LIBDB_ARGS=	-L. -Wl,-R/usr/pkg/lib libdb3.la
++LIBDB_ARGS=	$(libso_linkname)
  LIBJSO_LIBS=	@LIBJSO_LIBS@
  LIBS=		@LIBS@
  LIBSO_LIBS=	@LIBSO_LIBS@
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.4 2001/03/28 21:49:40 wennmach Exp $
  SOVERSION=	@DB_VERSION_MAJOR@.@DB_VERSION_MINOR@
  
 -libdb=		libdb.a
-+libdb=		libdb3.la
++libdb=		$(libso_base).la
  
 -libso_base=	libdb
 -libso_linkname=	$(libso_base)-$(SOVERSION).la
@@ -56,32 +56,45 @@ $NetBSD: patch-aa,v 1.4 2001/03/28 21:49:40 wennmach Exp $
  
  ##################################################
  # JAVA
-@@ -72,8 +72,8 @@
+@@ -72,13 +72,13 @@
  JAVA_DBDIR=	$(JAVA_SRCDIR)/$(JAVA_DBREL)
  JAVA_EXDIR=	$(JAVA_SRCDIR)/com/sleepycat/examples
  
 -libj_jarfile=	db.jar
 -libjso_base=	libdb_java
+-libjso=		$(libjso_base)-$(SOVERSION).@SOSUFFIX@
+-libjso_target=	$(libjso_base)-$(SOVERSION).la
 +libj_jarfile=	db3.jar
 +libjso_base=	libdb3_java
- libjso=		$(libjso_base)-$(SOVERSION).@SOSUFFIX@
- libjso_target=	$(libjso_base)-$(SOVERSION).la
++libjso=		$(libjso_base).@SOSUFFIX@.$(SOVERSION)
++libjso_target=	$(libjso_base).la
  libjso_default=	$(libjso_base).@SOSUFFIX@
-@@ -88,7 +88,7 @@
+-libjso_major=	$(libjso_base)-$(SOMAJOR).@SOSUFFIX@
+-libjso_g=	$(libjso_base)-$(SOVERSION)_g.@SOSUFFIX@
++libjso_major=	$(libjso_base).@SOSUFFIX@.$(SOMAJOR)
++libjso_g=	$(libjso_base)_g.@SOSUFFIX@.$(SOVERSION)
+ 
+ ##################################################
+ # TCL
+@@ -88,11 +88,11 @@
  #	--enable-tcl --with-tcl=DIR --enable-dynamic
  ##################################################
  TCFLAGS=	@TCFLAGS@
 -libtso_base=	libdb_tcl
+-libtso=		$(libtso_base)-$(SOVERSION).@SOSUFFIX@
+-libtso_target=	$(libtso_base)-$(SOVERSION).la
 +libtso_base=	libdb3_tcl
- libtso=		$(libtso_base)-$(SOVERSION).@SOSUFFIX@
- libtso_target=	$(libtso_base)-$(SOVERSION).la
++libtso=		$(libtso_base).@SOSUFFIX@.$(SOVERSION)
++libtso_target=	$(libtso_base).la
  libtso_default=	$(libtso_base).@SOSUFFIX@
-@@ -113,9 +113,9 @@
- prefix=	@prefix@
- exec_prefix=@exec_prefix@
+-libtso_major=	$(libtso_base)-$(SOMAJOR).@SOSUFFIX@
++libtso_major=	$(libtso_base).@SOSUFFIX@.$(SOMAJOR)
+ 
+ ##################################################
+ # DB_DUMP185 UTILITY
+@@ -115,7 +115,7 @@
  bindir=	@bindir@
--includedir=@includedir@
-+includedir=$(prefix)/include/db3
+ includedir=@includedir@
  libdir=	@libdir@
 -docdir=	$(prefix)/docs
 +docdir=	$(prefix)/share/doc/db3
