@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1707 2004/05/04 21:28:41 jmmv Exp $
+$NetBSD: TODO,v 1.1708 2004/05/05 14:37:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -198,6 +198,7 @@ Suggested package updates
 	o findutils-4.1.20
 	o firewalk-5.0
 	o firewalk-gtk-5.0
+	o fluxbox-0.9.9 [pkg/25468]
 	o foomatic-2.9.1 [jlam]
 	o fop-0.20.5
 	o fox-1.0.51
@@ -219,7 +220,7 @@ Suggested package updates
 	o glpk-4.3
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
-	o gnumeric-1.2.8
+	o gnumeric-1.2.12
 	o gnunet-0.6.2
 	o gnuplot-4.0.0 [pkg/25450]
 	o gnutls-1.0.10
@@ -281,11 +282,12 @@ Suggested package updates
 	o moz-bin-plugger-1.5.1
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-3.1.2
+	o multitail-3.1.9
 	o namazu-2.0.13
 	o nano-1.2.3
 	o nap-1.5.2
 	o napshare-1.2
+	o nessus-2.0.10a [pkg/25469]
 	o net-snmp-5.1.1
 	o netatalk-1.6.3 [pkg/21930]
 	o netcdf-3.5.1
