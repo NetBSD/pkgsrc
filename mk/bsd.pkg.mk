@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.8 2004/12/05 03:42:35 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.9 2004/12/31 20:25:30 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -350,8 +350,6 @@ ${var}+=	${${var}.*}
 .  endfor
 
 CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
-DEPENDS+=	${USE_USERADD:D${_USER_DEPENDS}}
-DEPENDS+=	${USE_GROUPADD:D${_USER_DEPENDS}}
 
 .if !empty(USE_BUILDLINK3:M[nN][oO])
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
@@ -526,6 +524,9 @@ SCRIPTS_ENV+=		${_INSTALL_MACROS}
 .  if defined(USE_GNU_TOOLS) && !empty(USE_GNU_TOOLS:Mmake)
 MAKE_PROGRAM=		${GMAKE}
 .  elif defined(USE_IMAKE)
+.    if ${_IMAKE_MAKE} == ${GMAKE}
+USE_GNU_TOOLS+=		make
+.    endif
 MAKE_PROGRAM=		${_IMAKE_MAKE}
 .  endif
 MAKE_PROGRAM?=		${MAKE}
@@ -1047,12 +1048,12 @@ PATCH_DIST_CAT.${i:S/=/--/}?=	{ patchfile=${i}; ${PATCH_DIST_CAT}; }
 .  if !empty(PKGSRC_SHOW_PATCH_ERRORMSG:M[yY][eE][sS])
 PKGSRC_PATCH_FAIL=							\
 if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
-	${ECHO} "==========================================================================";								\
+	${ECHO} "=========================================================================="; \
 	${ECHO};							\
-	${ECHO} "Some of the selected build options and/or local patches may be incompatible.";								\
+	${ECHO} "Some of the selected build options and/or local patches may be incompatible."; \
 	${ECHO} "Please try building with fewer options or patches.";	\
 	${ECHO};							\
-	${ECHO} "==========================================================================";								\
+	${ECHO} "=========================================================================="; \
 fi; exit 1
 .  endif
 PKGSRC_PATCH_FAIL?=	exit 1
@@ -1396,7 +1397,7 @@ post-install-man:
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
 			if [ -h ${PREFIX}/$$manpage ]; then		\
-				set - `${LS} -l ${PREFIX}/$$manpage`; \
+				set - `${LS} -l ${PREFIX}/$$manpage`;	\
 				shift `expr $$# - 1`;			\
 				${RM} -f ${PREFIX}/$$manpage.gz; 	\
 				${LN} -s $${1}.gz ${PREFIX}/$$manpage.gz; \
@@ -1570,9 +1571,8 @@ tags: .OPTIONAL
 		update
 ${targ}:
 .    if !defined(SKIP_SILENT)
-	@for str in ${PKG_FAIL_REASON} ${PKG_SKIP_REASON} ; \
-	do \
-		${ECHO} "${_PKGSRC_IN}> $$str" ; \
+	@for str in ${PKG_FAIL_REASON} ${PKG_SKIP_REASON}; do		\
+		${ECHO} "${_PKGSRC_IN}> $$str";				\
 	done
 .    endif
 .    if defined(PKG_FAIL_REASON)
@@ -1854,11 +1854,11 @@ _RESUME_TRANSFER=							\
 	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$file)\""' { print $$4 }' ${DISTINFO_FILE}` || ${TRUE}; \
 	if [ ! -f "${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp" ]; then	\
 		${CP} ${DISTDIR}/${DIST_SUBDIR}/$$bfile ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp; \
-	fi;	\
+	fi;								\
 	dsize=`${WC} -c < ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp`;	\
-	if [ "$$dsize" -eq "$$tsize" -a -f "${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp" ]; then	\
+	if [ "$$dsize" -eq "$$tsize" -a -f "${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp" ]; then \
 		${MV} ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp ${DISTDIR}/${DIST_SUBDIR}/$$bfile;	\
-	fi;	\
+	fi;								\
 	case "$$tsize" in						\
 	"")	${ECHO_MSG} "No size in distinfo file (${DISTINFO_FILE})"; \
 		break ;;						\
@@ -1867,33 +1867,33 @@ _RESUME_TRANSFER=							\
 		${ECHO_MSG} "===> Resume is not supported by ftp(1) using http/ftp proxies.";	\
 		break;							\
 	else								\
-		if [ "$$dsize" -lt "$$tsize" ]; then		\
+		if [ "$$dsize" -lt "$$tsize" ]; then			\
 			if [ "${FETCH_CMD:T}" != "ftp" -a -z "${FETCH_RESUME_ARGS}" ]; then \
 				${ECHO_MSG} "=> Resume transfers are not supported, FETCH_RESUME_ARGS is empty."; \
 				break;					\
 			else						\
-				for res_site in $$sites; do			\
-					if [ -z "${FETCH_OUTPUT_ARGS}" ]; then	\
-						${ECHO_MSG} "=> FETCH_OUTPUT_ARGS has to be defined.";	\
+				for res_site in $$sites; do		\
+					if [ -z "${FETCH_OUTPUT_ARGS}" ]; then \
+						${ECHO_MSG} "=> FETCH_OUTPUT_ARGS has to be defined."; \
 						break;			\
 					fi;				\
-					${ECHO_MSG} "=> $$bfile not completed, resuming:";	\
-					${ECHO_MSG} "=> Downloaded: $$dsize Total: $$tsize.";	\
+					${ECHO_MSG} "=> $$bfile not completed, resuming:"; \
+					${ECHO_MSG} "=> Downloaded: $$dsize Total: $$tsize."; \
 					${ECHO_MSG};			\
 					cd ${_DISTDIR};			\
-					${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS}	\
+					${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} \
 						${FETCH_OUTPUT_ARGS} $${bfile}.temp $${res_site}$${bfile}; \
 					if [ $$? -eq 0 ]; then		\
-						ndsize=`${WC} -c < ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp`;	\
-						if [ "$$tsize" -eq "$$ndsize" ]; then	\
-							${MV} ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp ${DISTDIR}/${DIST_SUBDIR}/$$bfile;						\
+						ndsize=`${WC} -c < ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp`; \
+						if [ "$$tsize" -eq "$$ndsize" ]; then \
+							${MV} ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp ${DISTDIR}/${DIST_SUBDIR}/$$bfile; \
 						fi;			\
 						break;			\
 					fi;				\
 				done;					\
 			fi;						\
 		elif [ "$$dsize" -gt "$$tsize" ]; then			\
-			${ECHO_MSG} "==> Downloaded file larger than the recorded size.";	\
+			${ECHO_MSG} "==> Downloaded file larger than the recorded size."; \
 			break;						\
 		fi;							\
 	fi
@@ -1933,7 +1933,7 @@ _FETCH_FILE=								\
 				fi;					\
 			fi						\
 		done;							\
-		if [ ! -f ${_DISTDIR}/$$bfile ]; then \
+		if [ ! -f ${_DISTDIR}/$$bfile ]; then			\
 			${ECHO_MSG} "=> Couldn't fetch $$bfile - please try to retrieve this";\
 			${ECHO_MSG} "=> file manually into ${_DISTDIR} and try again."; \
 			exit 1;						\
@@ -1942,7 +1942,7 @@ _FETCH_FILE=								\
 
 _CHECK_DIST_PATH=							\
 	if [ "X${DIST_PATH}" != "X" ]; then				\
-		for d in "" ${DIST_PATH:S/:/ /g}; do	\
+		for d in "" ${DIST_PATH:S/:/ /g}; do			\
 			if [ "X$$d" = "X" -o "X$$d" = "X${DISTDIR}" ]; then continue; fi; \
 			if [ -f $$d/${DIST_SUBDIR}/$$bfile ]; then	\
 				${ECHO} "Using $$d/${DIST_SUBDIR}/$$bfile"; \
@@ -2892,7 +2892,7 @@ ${DDIR}: ${DLIST}
 ${DLIST}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	{ ${PKG_DELETE} -n "${PKGWILDCARD}" 2>&1 | 			\
-		${GREP} '^	' |						\
+		${GREP} '^	' |					\
 		${AWK} '{ l[NR]=$$0 } END { for (i=NR;i>0;--i) print l[i] }' \
 	|| ${TRUE}; } > ${DLIST}
 
@@ -2902,7 +2902,7 @@ tarup:
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${PACKAGES}/All/${PKGNAME}${PKG_SUFX};			\
-	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}	\
+	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
 		PKGREPOSITORY=${PACKAGES}/All				\
 		${LOCALBASE}/bin/pkg_tarup ${PKGNAME};			\
 	for CATEGORY in ${CATEGORIES}; do				\
@@ -3077,7 +3077,7 @@ real-su-bin-install:
 bin-install:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Binary install for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	realtarget="real-su-bin-install";					\
+	realtarget="real-su-bin-install";				\
 	action="binary install";					\
 	${_SU_TARGET}
 

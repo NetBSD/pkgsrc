@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.data.mk,v 1.1.2.2 2004/11/23 20:39:19 tv Exp $
+#	$NetBSD: bsd.pkg.data.mk,v 1.1.2.3 2004/12/31 20:25:30 tv Exp $
 #
 # bsd.pkg.mk fragments for exporting data in human-readable or machine
 # parseable formats.
@@ -511,10 +511,10 @@ print-summary-data:
 	fi;
 	@${ECHO} "maintainer ${PKGPATH} ${MAINTAINER}"
 	@${ECHO} "categories ${PKGPATH} ${CATEGORIES}"
-	@if [ -f ${DESCR_SRC} ]; then						\
-		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC:S;${PKGSRCDIR}/;;g}";	\
-	else									\
-		${ECHO}  "descr ${PKGPATH} /dev/null";				\
+	@if [ -f ${DESCR_SRC} ]; then					\
+		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC:S;${PKGSRCDIR}/;;g}"; \
+	else								\
+		${ECHO}  "descr ${PKGPATH} /dev/null";			\
 	fi
 	@${ECHO} "prefix ${PKGPATH} ${PREFIX}"
 

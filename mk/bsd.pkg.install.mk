@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.65 2004/10/11 22:04:19 reed Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.65.2.1 2004/12/31 20:25:30 tv Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -118,11 +118,8 @@ BROKEN:=		"User and group '${user:C/:.*//}' cannot have the same name on Interix
 .  endfor
 .endif
 
-.if !empty(PKG_USERS)
-USE_USERADD=		YES
-.endif
-.if !empty(PKG_GROUPS)
-USE_GROUPADD=		YES
+.if !empty(PKG_USERS) || !empty(PKG_GROUPS)
+DEPENDS+=		${_USER_DEPENDS}
 .endif
 
 # SPECIAL_PERMS are lists that look like:
@@ -173,7 +170,7 @@ SUPPORT_FILES_MODE?=	0644
 SUPPORT_FILES_PERMS?=	# empty
 RCD_SCRIPTS?=		# empty
 RCD_SCRIPTS_MODE?=	0755
-RCD_SCRIPTS_EXAMPLEDIR?=	etc/rc.d
+RCD_SCRIPTS_EXAMPLEDIR?=	share/examples/rc.d
 .if !empty(RCD_SCRIPTS_EXAMPLEDIR:M/*)
 PKG_FAIL_REASON+= \
 	"bsd.pkg.install.mk: RCD_SCRIPTS_EXAMPLEDIR can't be an absolute path."
@@ -342,6 +339,7 @@ ${INSTALL_FILE}: ${INSTALL_SRC}
 #
 # RCD_SCRIPTS_EXAMPLEDIR	the directory relative to ${PREFIX} in
 #				which to install the example rc.d scripts
+#				(defaults to share/examples/rc.d)
 #
 # If the source rc.d script is not present, then the automatic handling
 # doesn't occur.

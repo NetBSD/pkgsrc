@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.5.2.3 2004/12/20 20:46:00 tv Exp $
+# $NetBSD: db1.builtin.mk,v 1.5.2.4 2004/12/31 20:25:30 tv Exp $
 
 .for _lib_ in db db1
 .  if !defined(_BLNK_LIB_FOUND.${_lib_})
@@ -70,7 +70,6 @@ BUILDLINK_LDADD.db1=	-ldb1
 BUILDLINK_TRANSFORM+=	l:db:db1
 .    else
 BUILDLINK_LDADD.db1=	# empty
-BUILDLINK_TRANSFORM+=	rm:-ldb
 .    endif
 BUILDLINK_LIBS.db1=	${BUILDLINK_LDADD.db1}
 

@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.5 2004/08/07 14:44:05 xtraeme Exp $
+# $NetBSD: dirs.mk,v 1.5.4.1 2004/12/31 20:25:30 tv Exp $
 #
 
 .if !defined(DIRS_MK)
@@ -6,6 +6,7 @@ DIRS_MK=		# defined
 
 _USE_GNOME1_DIRS=	# empty
 _USE_GNOME2_DIRS=	# empty
+_USE_THEME_DIRS=	# empty
 _USE_XDG_DIRS=		# empty
 _USE_XDG_X11_DIRS=	# empty
 _USE_XFREE86_DIRS=	# empty
@@ -19,6 +20,8 @@ ver:=			${dir:C/^.*-//}
 _USE_GNOME1_DIRS:=	${ver}
 .  elif ${pkg} == "gnome2" && ${_USE_GNOME2_DIRS} < ${ver}
 _USE_GNOME2_DIRS:=	${ver}
+.  elif ${pkg} == "theme" && ${_USE_THEME_DIRS} < ${ver}
+_USE_THEME_DIRS:=	${ver}
 .  elif ${pkg} == "xdg" && ${_USE_XDG_DIRS} < ${ver} && !defined(USE_X11BASE)
 _USE_XDG_DIRS:=		${ver}
 .  elif ${pkg} == "xdg-x11" && ${_USE_XDG_X11_DIRS} < ${ver} && \
@@ -41,6 +44,10 @@ _USE_XORG_DIRS:=	${ver}
 
 .if !empty(_USE_GNOME2_DIRS)
 .  include "../../misc/gnome2-dirs/dirs.mk"
+.endif
+
+.if !empty(_USE_THEME_DIRS)
+.  include "../../misc/theme-dirs/dirs.mk"
 .endif
 
 .if !empty(_USE_XDG_DIRS)
