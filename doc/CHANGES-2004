@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.9 2005/03/27 17:43:54 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.10 2005/04/01 11:36:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2192,7 +2192,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.0bnb1 [minskim 2004-04-20]
 	Added portaudio-18.1 [ben 2004-04-20]
 	Updated audacity to 1.2.0 [ben 2004-04-20]
-	Updated php4 to 4.3.6 [jdolecek 2003-04-20]
+	Updated php4 to 4.3.6 [jdolecek 2004-04-20]
 	Updated catclock to 0.0nb2 [minskim 2004-04-20]
 	Updated p5-XML-XSLT to 0.48 [minskim 2004-04-20]
 	Updated cpuflags to 0.66 [abs 2004-04-20]
@@ -2665,7 +2665,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cadaver to 0.22.2 [wiz 2004-05-27]
 	Updated gnome-icon-theme to 1.2.1nb2 [reed 2004-05-27]
 	Added gnutime-1.7 [reed 2004-05-27]
-	Updated Xft2 to 2.1.2nb2 [reed 2003-05-27]
+	Updated Xft2 to 2.1.2nb2 [reed 2004-05-27]
 	Updated deliver to 2.1.14nb1 [wiz 2004-05-28]
 	Updated cvsweb to 3.0.1 [lukem 2004-05-28]
 	Removed raw [dillo 2004-05-28]
