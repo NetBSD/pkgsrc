@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/12 20:27:17 explorer Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/07/10 20:12:18 explorer Exp $
 pthreads/bin/pgcc
 pthreads/bin/pg++
 pthreads/lib/libpthread.a
 pthreads/lib/libpthread.so.1.60
 pthreads/include/Makefile.inc
-pthreads/include/netdb.h
 pthreads/include/pthread.h
-pthreads/include/resolv.h
 pthreads/include/sched.h
-pthreads/include/arpa/nameser.h
 pthreads/include/pthread/cleanup.h
 pthreads/include/pthread/cond.h
 pthreads/include/pthread/debug_out.h
@@ -24,13 +21,13 @@ pthreads/include/pthread/queue.h
 pthreads/include/pthread/sleep.h
 pthreads/include/pthread/specific.h
 pthreads/include/pthread/state.def
+pthreads/include/pthread/sysfunc.h
 pthreads/include/pthread/unistd.h
 pthreads/include/pthread/util.h
 pthreads/include/pthread/version.h
 pthreads/include/pthread/machdep.h
 @dirrm pthreads/lib
 @dirrm pthreads/bin
-@dirrm pthreads/include/arpa
 @dirrm pthreads/include/pthread
 @dirrm pthreads/include
 @dirrm pthreads
