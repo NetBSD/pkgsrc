@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:37 skrll Exp $
+$NetBSD: distinfo,v 1.3 2001/07/21 14:16:53 wiz Exp $
 
-SHA1 (gateway-0.8.tar.gz) = c1450db551d2d343ed63fdacc9ad8dd312a4cfda
-Size (gateway-0.8.tar.gz) = 413633 bytes
-SHA1 (patch-aa) = 3e6d7ff5bee28542c3d7028e87ef5706a4508876
-SHA1 (patch-ab) = 0f164cb33bd378b9bd57ef1a2a915f327048a1ad
-SHA1 (patch-ac) = 999876706143fe7e02e753071a13920119134454
+SHA1 (gateway-1.0.3.tar.gz) = 5ee499460f9a98b11fdd9bc48ac7607e896206a6
+Size (gateway-1.0.3.tar.gz) = 656472 bytes
+SHA1 (patch-aa) = ebe7f7d88e57620e13c25bb85ff6af5446583417
+SHA1 (patch-ab) = 55cfc733d2cd278b710c5509016342266592ac14
+SHA1 (patch-ac) = bfde3bb30215f18be89c03923d6b2262feb4d060
