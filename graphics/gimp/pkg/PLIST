@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2001/01/04 15:10:38 agc Exp $
+@comment $NetBSD: PLIST,v 1.24 2001/02/16 11:33:24 abs Exp $
 bin/escputil
 bin/gimp
 bin/gimp-config
@@ -257,17 +257,17 @@ lib/gimp/1.2/plug-ins/xwd
 lib/gimp/1.2/plug-ins/zealouscrop
 lib/libgck-1.2.so
 lib/libgck-1.2.so.0
-lib/libgck-1.2.so.0.0
+lib/libgck-1.2.so.0.1
 lib/libgck.a
 lib/libgck.la
 lib/libgimp-1.2.so
 lib/libgimp-1.2.so.0
-lib/libgimp-1.2.so.0.0
+lib/libgimp-1.2.so.0.1
 lib/libgimp.a
 lib/libgimp.la
 lib/libgimpui-1.2.so
 lib/libgimpui-1.2.so.0
-lib/libgimpui-1.2.so.0.0
+lib/libgimpui-1.2.so.0.1
 lib/libgimpui.a
 lib/libgimpui.la
 man/man1/escputil.1
