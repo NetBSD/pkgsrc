@@ -1,5 +1,5 @@
---- backend/Makefile.in.orig	Thu Apr 30 05:54:27 1998
-+++ backend/Makefile.in	Thu Apr 30 05:55:10 1998
+--- backend/Makefile.in.orig	Fri Jul 24 07:06:49 1998
++++ backend/Makefile.in	Thu Aug  6 22:49:14 1998
 @@ -75,7 +75,7 @@
  
  %-s.c:	$(srcdir)/stubs.c
@@ -9,14 +9,14 @@
  
  # Don't delete any intermediate files.
  .PRECIOUS: %-s.c %-s.lo %.lo dll-preload.c
-@@ -92,8 +92,8 @@
- 	@$(LIBTOOL) $(MINST) --finish $(libdir)
+@@ -99,8 +99,8 @@
+ 	done
  	rm -f $(libdir)/libsane.a $(libdir)/libsane.so \
  		$(libdir)/libsane.so.$(V_MAJOR)*
--	ln -s libsane-dll.a $(libdir)/libsane.a
--	ln -s libsane-dll.so $(libdir)/libsane.so
-+	ln -sf libsane-dll.a $(libdir)/libsane.a
-+	ln -sf libsane-dll.so $(libdir)/libsane.so
- 	@cd $(libdir) && for n in libsane-dll.so.$(V_MAJOR)*; do \
+-	ln -s sane/libsane-dll.a $(libdir)/libsane.a
+-	ln -s sane/libsane-dll.so $(libdir)/libsane.so
++	ln -sf sane/libsane-dll.a $(libdir)/libsane.a
++	ln -sf sane/libsane-dll.so $(libdir)/libsane.so
+ 	@cd $(libsanedir) && for n in libsane-dll.so.$(V_MAJOR)*; do \
  	  nn=`echo $$n | sed 's,^libsane-dll,libsane,'`; \
- 	  ln -s $$n $$nn; \
+ 	  (cd ..; ln -s sane/$$n $$nn); \

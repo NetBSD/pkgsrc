@@ -1,11 +1,11 @@
---- frontend/Makefile.in-orig	Wed Nov  5 08:36:47 1997
-+++ frontend/Makefile.in	Sun May  3 19:56:31 1998
+--- frontend/Makefile.in.orig	Fri May 15 08:18:10 1998
++++ frontend/Makefile.in	Thu Aug  6 22:51:32 1998
 @@ -28,7 +28,7 @@
  
  CC = @CC@
  INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include \
--	-I/usr/local/include
-+	-I/usr/local/include -I${prefix}/lib/glib/include
+-	@INCLUDES@
++	@INCLUDES@ -I${prefix}/lib/glib/include
+ DEFS = @DEFS@
  CPPFLAGS = @CPPFLAGS@
- CFLAGS = @CFLAGS@
- LDFLAGS = @LDFLAGS@
+ CFLAGS = @CFLAGS@ @GTK_CFLAGS@
