@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2002/02/28 06:17:04 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/08 22:48:09 jlam Exp $
 
 MODNAME=		ldap
 CATEGORIES+=		databases
 PKGREVISION=		# empty
 COMMENT=		PHP4 extension for LDAP database access
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 .include "../../www/php4/Makefile.module"
 
-CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.openldap}
 CONFIGURE_ENV+=		PTHREAD_TYPE="${PTHREAD_TYPE}"
 
-.include "../../databases/openldap/buildlink.mk"
+.include "../../databases/openldap/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
