@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2004/03/07 03:33:45 taca Exp $
+# $NetBSD: Makefile.common,v 1.18 2004/03/12 04:59:20 taca Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -148,7 +148,7 @@ RUBY_DISTINFO?=		${.CURDIR}/../../lang/ruby${RUBY_SUFFIX}-base/distinfo
 pre-configure: replace-ruby
 
 replace-ruby:
-	@for s in ${REPLACE_RUBY}; do \
+	${_PKG_SILENT}${_PKG_DEBUG}for s in ${REPLACE_RUBY}; do \
 		case $${s} in \
 		/*)	f=$${s};; \
 		*)	f=${WRKSRC}/$${s};; \
@@ -177,7 +177,7 @@ do-configure:	ruby-extconf-configure
 ruby-extconf-configure:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} in ${d} to configure"
-	@cd ${WRKSRC}/${d}; \
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/${d}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}
 .endfor
 
@@ -187,7 +187,7 @@ do-build:	ruby-extconf-build
 ruby-extconf-build:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Building ${d}"
-	@cd ${WRKSRC}/${d}; ${SETENV} ${MAKE_ENV} ${MAKE} ${ALL_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/${d}; ${SETENV} ${MAKE_ENV} ${MAKE} ${ALL_TARGET}
 .endfor
 .endif
 
@@ -197,14 +197,14 @@ do-install:	ruby-extconf-install
 ruby-extconf-install:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Installing ${d}"
-	@cd ${WRKSRC}/${d}; ${SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/${d}; ${SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_TARGET}
 .endfor
 .endif
 
 .else
 ruby-extconf-configure:
 	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} to configure"
-	@cd ${WRKSRC}; \
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}
 .endif
 .endif
@@ -219,7 +219,7 @@ do-configure:	ruby-setup-configure
 
 ruby-setup-configure:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to configure"
-	@cd ${WRKSRC}; \
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_SETUP} config ${CONFIGURE_ARGS}
 .endif
 
@@ -228,7 +228,7 @@ do-build:	ruby-setup-build
 
 ruby-setup-build:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to build"
-	@cd ${WRKSRC}; \
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
 	${SETENV} ${MAKE_ENV} ${RUBY} ${RUBY_SETUP} setup
 .endif
 
@@ -237,7 +237,7 @@ do-install:	ruby-setup-install
 
 ruby-setup-install:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to ${INSTALL_TARGET}"
-	cd ${WRKSRC}; \
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
 	${SETENV} ${MAKE_ENV} ${RUBY} ${RUBY_SETUP} ${INSTALL_TARGET}
 .endif
 .endif
