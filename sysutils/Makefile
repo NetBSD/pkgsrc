@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 1999/07/05 05:02:18 kim Exp $
+# $NetBSD: Makefile,v 1.35 1999/07/05 05:14:55 kim Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -40,6 +40,7 @@
 #    SUBDIR += star
 #    SUBDIR += stat
 #    SUBDIR += su2
+    SUBDIR += sux
     SUBDIR += sysinfo
 #    SUBDIR += tcplist
     SUBDIR += top
