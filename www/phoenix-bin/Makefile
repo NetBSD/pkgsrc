@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/07/18 07:31:13 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/29 11:43:02 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
-PKGNAME=		phoenix-bin-0.6
+PKGNAME=		# see Makefile.${OPSYS}.${ARCH}
 WRKSRC=			${WRKDIR}/MozillaFirebird
 CATEGORIES=		www
 
