@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.1 1998/11/11 11:42:57 agc Exp $
+
+Read papersize from a config file, rather than using a compiled-in default.
+
+--- psresize.c	1998/11/11 09:37:52	1.1
++++ psresize.c	1998/11/11 10:31:11
+@@ -14,6 +14,8 @@
+  *              -H<dim> sets the input paper height
+  *              -Ppaper sets the input paper size (width and height) by name
+  */
++#include <sys/types.h>
++#include <sys/param.h>
+ 
+ #include "psutil.h"
+ #include "psspec.h"
+@@ -56,13 +58,21 @@
+    double inheight = -1;
+    Paper *paper;
+    PageSpec *specs;
++   char	papersize[BUFSIZ];
+ 
+ #ifdef PAPER
+-   if ( (paper = findpaper(PAPER)) != (Paper *)0 ) {
++#if (defined(BSD) && BSD >= 199306)
++   if (!readconfig(papersize, sizeof(papersize))) {
++	(void) strnncpy(papersize, sizeof(papersize), PAPER, strlen(PAPER));
++   }
++#else
++   (void) strnncpy(papersize, sizeof(papersize), PAPER, strlen(PAPER));
++#endif /* BSD */
++   if ( (paper = findpaper(papersize)) != (Paper *)0 ) {
+       inwidth = width = (double)PaperWidth(paper);
+       inheight = height = (double)PaperHeight(paper);
+    }
+-#endif
++#endif /* PAPER */
+ 
+    vshift = hshift = 0;
+    rotate = 0;

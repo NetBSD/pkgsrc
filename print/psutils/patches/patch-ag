@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 1998/11/11 11:42:58 agc Exp $
+
+Cross reference the setpapersize(1) utility.
+
+--- pstops.man	1998/11/11 10:17:17	1.1
++++ pstops.man	1998/11/11 11:00:10
+@@ -111,7 +111,9 @@
+ .B a3, a4, a5, b5, letter, legal, tabloid, statement, executive, folio, quarto
+ or
+ .B 10x14.
+-The default paper size is
++The default paper size can be configured using the
++setpapersize(1)
++utility, which takes precedence over the compiled-in default of
+ .B @PAPER@.
+ .PP
+ The
