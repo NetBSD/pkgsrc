@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2002/09/24 18:06:24 tsarna Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2002/10/15 16:16:35 tsarna Exp $
 bin/pydoc2.2
 bin/python2.2
 include/python2.2/Python.h
@@ -402,6 +402,12 @@ lib/python2.2/dospath.pyo
 lib/python2.2/dumbdbm.py
 lib/python2.2/dumbdbm.pyc
 lib/python2.2/dumbdbm.pyo
+
+
+
+lib/python2.2/email/Charset.py
+lib/python2.2/email/Charset.pyc
+lib/python2.2/email/Charset.pyo
 lib/python2.2/email/Encoders.py
 lib/python2.2/email/Encoders.pyc
 lib/python2.2/email/Encoders.pyo
@@ -411,6 +417,9 @@ lib/python2.2/email/Errors.pyo
 lib/python2.2/email/Generator.py
 lib/python2.2/email/Generator.pyc
 lib/python2.2/email/Generator.pyo
+lib/python2.2/email/Header.py
+lib/python2.2/email/Header.pyc
+lib/python2.2/email/Header.pyo
 lib/python2.2/email/Iterators.py
 lib/python2.2/email/Iterators.pyc
 lib/python2.2/email/Iterators.pyo
@@ -426,6 +435,12 @@ lib/python2.2/email/MIMEImage.pyo
 lib/python2.2/email/MIMEMessage.py
 lib/python2.2/email/MIMEMessage.pyc
 lib/python2.2/email/MIMEMessage.pyo
+lib/python2.2/email/MIMEMultipart.py
+lib/python2.2/email/MIMEMultipart.pyc
+lib/python2.2/email/MIMEMultipart.pyo
+lib/python2.2/email/MIMENonMultipart.py
+lib/python2.2/email/MIMENonMultipart.pyc
+lib/python2.2/email/MIMENonMultipart.pyo
 lib/python2.2/email/MIMEText.py
 lib/python2.2/email/MIMEText.pyc
 lib/python2.2/email/MIMEText.pyo
@@ -441,6 +456,18 @@ lib/python2.2/email/Utils.pyo
 lib/python2.2/email/__init__.py
 lib/python2.2/email/__init__.pyc
 lib/python2.2/email/__init__.pyo
+lib/python2.2/email/_compat21.py
+lib/python2.2/email/_compat21.pyc
+lib/python2.2/email/_compat21.pyo
+lib/python2.2/email/_compat22.py
+lib/python2.2/email/_compat22.pyc
+lib/python2.2/email/_compat22.pyo
+lib/python2.2/email/base64MIME.py
+lib/python2.2/email/base64MIME.pyc
+lib/python2.2/email/base64MIME.pyo
+lib/python2.2/email/quopriMIME.py
+lib/python2.2/email/quopriMIME.pyc
+lib/python2.2/email/quopriMIME.pyo
 lib/python2.2/encodings/__init__.py
 lib/python2.2/encodings/__init__.pyc
 lib/python2.2/encodings/__init__.pyo
@@ -753,9 +780,7 @@ lib/python2.2/lib-dynload/cStringIO.so
 lib/python2.2/lib-dynload/cmath.so
 lib/python2.2/lib-dynload/crypt.so
 lib/python2.2/lib-dynload/dbm.so
-lib/python2.2/lib-dynload/errno.so
 lib/python2.2/lib-dynload/fcntl.so
-lib/python2.2/lib-dynload/fpectl.so
 lib/python2.2/lib-dynload/grp.so
 lib/python2.2/lib-dynload/math.so
 lib/python2.2/lib-dynload/md5.so
@@ -1151,7 +1176,6 @@ lib/python2.2/test/double_const.pyo
 lib/python2.2/test/greyrgb.uue
 lib/python2.2/test/output/test_MimeWriter
 lib/python2.2/test/output/test_asynchat
-lib/python2.2/test/output/test_atexit
 lib/python2.2/test/output/test_augassign
 lib/python2.2/test/output/test_bastion
 lib/python2.2/test/output/test_binascii
@@ -1177,7 +1201,6 @@ lib/python2.2/test/output/test_longexp
 lib/python2.2/test/output/test_math
 lib/python2.2/test/output/test_md5
 lib/python2.2/test/output/test_mimetools
-lib/python2.2/test/output/test_minidom
 lib/python2.2/test/output/test_mmap
 lib/python2.2/test/output/test_new
 lib/python2.2/test/output/test_nis
@@ -1281,6 +1304,9 @@ lib/python2.2/test/test_b1.pyo
 lib/python2.2/test/test_b2.py
 lib/python2.2/test/test_b2.pyc
 lib/python2.2/test/test_b2.pyo
+lib/python2.2/test/test_base64.py
+lib/python2.2/test/test_base64.pyc
+lib/python2.2/test/test_base64.pyo
 lib/python2.2/test/test_bastion.py
 lib/python2.2/test/test_bastion.pyc
 lib/python2.2/test/test_bastion.pyo
@@ -1407,6 +1433,9 @@ lib/python2.2/test/test_dumbdbm.pyo
 lib/python2.2/test/test_email.py
 lib/python2.2/test/test_email.pyc
 lib/python2.2/test/test_email.pyo
+lib/python2.2/test/test_email_codecs.py
+lib/python2.2/test/test_email_codecs.pyc
+lib/python2.2/test/test_email_codecs.pyo
 lib/python2.2/test/test_errno.py
 lib/python2.2/test/test_errno.pyc
 lib/python2.2/test/test_errno.pyo
@@ -1569,6 +1598,9 @@ lib/python2.2/test/test_minidom.pyo
 lib/python2.2/test/test_mmap.py
 lib/python2.2/test/test_mmap.pyc
 lib/python2.2/test/test_mmap.pyo
+lib/python2.2/test/test_multifile.py
+lib/python2.2/test/test_multifile.pyc
+lib/python2.2/test/test_multifile.pyo
 lib/python2.2/test/test_mutants.py
 lib/python2.2/test/test_mutants.pyc
 lib/python2.2/test/test_mutants.pyo
@@ -1647,9 +1679,15 @@ lib/python2.2/test/test_pyclbr.pyo
 lib/python2.2/test/test_pyexpat.py
 lib/python2.2/test/test_pyexpat.pyc
 lib/python2.2/test/test_pyexpat.pyo
+lib/python2.2/test/test_queue.py
+lib/python2.2/test/test_queue.pyc
+lib/python2.2/test/test_queue.pyo
 lib/python2.2/test/test_quopri.py
 lib/python2.2/test/test_quopri.pyc
 lib/python2.2/test/test_quopri.pyo
+lib/python2.2/test/test_random.py
+lib/python2.2/test/test_random.pyc
+lib/python2.2/test/test_random.pyo
 lib/python2.2/test/test_re.py
 lib/python2.2/test/test_re.pyc
 lib/python2.2/test/test_re.pyo
@@ -1752,6 +1790,9 @@ lib/python2.2/test/test_timing.pyo
 lib/python2.2/test/test_tokenize.py
 lib/python2.2/test/test_tokenize.pyc
 lib/python2.2/test/test_tokenize.pyo
+lib/python2.2/test/test_trace.py
+lib/python2.2/test/test_trace.pyc
+lib/python2.2/test/test_trace.pyo
 lib/python2.2/test/test_traceback.py
 lib/python2.2/test/test_traceback.pyc
 lib/python2.2/test/test_traceback.pyo
