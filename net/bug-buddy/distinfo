@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2004/04/01 18:54:03 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2004/04/16 14:03:49 jmmv Exp $
 
-SHA1 (bug-buddy-2.6.0.tar.bz2) = 9ee116973629645cf87c8766534eef9e3a5527e7
-Size (bug-buddy-2.6.0.tar.bz2) = 833465 bytes
+SHA1 (bug-buddy-2.6.1.tar.bz2) = 2e231e100a42730ee82b87f0ead55604c62bc7f9
+Size (bug-buddy-2.6.1.tar.bz2) = 858940 bytes
