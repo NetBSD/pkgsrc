@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.5 2004/01/04 21:37:09 rh Exp $
+
+--- mail/Makefile.in.orig	2004-01-04 08:09:37.000000000 +1000
++++ mail/Makefile.in
+@@ -531,6 +531,7 @@ DIST_SUBDIRS = $(SUBDIRS)
+ SOURCES = $(libevolution_mail_la_SOURCES)
+ 
+ all: $(BUILT_SOURCES)
++	${MAKE} ${AM_MAKEFLAGS} ${component_LTLIBRARIES}
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
+ .SUFFIXES:

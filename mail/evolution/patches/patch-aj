@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.6 2002/09/05 23:25:27 rh Exp $
+$NetBSD: patch-aj,v 1.7 2004/01/04 21:37:09 rh Exp $
 
---- addressbook/backend/pas/pas-backend-file.c.orig	Sun Jun 16 08:54:02 2002
+--- addressbook/backend/pas/pas-backend-file.c.orig	2003-04-22 00:55:52.000000000 +1000
 +++ addressbook/backend/pas/pas-backend-file.c
-@@ -21,9 +21,9 @@
+@@ -20,9 +20,9 @@
  #include <e-util/e-db3-utils.h>
  
  #if DB_VERSION_MAJOR != 3 || \
@@ -14,8 +14,8 @@ $NetBSD: patch-aj,v 1.6 2002/09/05 23:25:27 rh Exp $
 +#error Including wrong DB3.  Need libdb 3.3.11.
  #endif
  
- #include <gtk/gtksignal.h>
-@@ -1244,9 +1244,9 @@
+ #include <gal/util/e-util.h>
+@@ -1382,9 +1382,9 @@ pas_backend_file_load_uri (PASBackend   
  
  	db_version (&major, &minor, &patch);
  
