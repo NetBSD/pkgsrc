@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.800 2001/08/23 04:21:02 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.801 2001/08/23 16:37:27 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -78,7 +78,7 @@ JAVA_HOME?=		${LOCALBASE}/java
 BUILD_DEPENDS+=		sun-jdk-*:../../lang/sun-jdk13
 DEPENDS+=		sun-jre-*:../../lang/sun-jre13
 
-JAVA_HOME?=		${LOCALBASE}/java/jre
+JAVA_HOME?=		${LOCALBASE}/java
 .  elif ${PKG_JVM} == "blackdown-jdk13"
 DEPENDS+=		blackdown-jdk-*:../../lang/blackdown-jdk13
 JAVA_HOME?=		${LOCALBASE}/java
@@ -378,7 +378,7 @@ PATCH_DIST_ARGS?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP}
 PATCH_ARGS+=		--batch
 PATCH_DIST_ARGS+=	--batch
 .endif
-.if (${OPSYS} == "SunOS")
+.if (${OPSYS} == "SunOS" || ${OPSYS} == "Linux")
 PATCH_ARGS+=		-V simple -z .orig
 .else
 PATCH_ARGS+=		-V simple -b .orig
