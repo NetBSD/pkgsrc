@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/10/26 06:50:10 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/05 20:38:34 jlam Exp $
 
 PKGNAME=	aalib-x11-${BASE_VERS}
 CATEGORIES+=	x11
@@ -6,11 +6,15 @@ PKGREVISION=	2
 
 COMMENT=	ASCII Art library with X11 support
 
-USE_BUILDLINK2=		# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		# defined
 USE_X11=		# defined
 
 ALL_TARGET=		libaa-x11.la
 INSTALL_TARGET=		install-libLTLIBRARIES
+
+INSTALLATION_DIRS=	bin include lib
 
 # We need to correct the aalib-config script to return "-laa-x11" instead
 # of "-laa".

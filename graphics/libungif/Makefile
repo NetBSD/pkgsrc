@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/12/02 06:57:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/05 20:38:35 jlam Exp $
 #
 
 DISTNAME=	libungif-4.1.0b1
@@ -13,13 +13,15 @@ COMMENT=	Tools and library routines for working with GIF images
 
 CONFLICTS=	giflib-[0-9]*
 
-USE_LIBTOOL=		# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--without-x
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 
 DOCDIR=			${PREFIX}/share/doc/libungif
 HTMLDIR=		${PREFIX}/share/doc/html/libungif
