@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2089 2003/04/29 23:35:26 jtb Exp $
+$NetBSD: CHANGES,v 1.2090 2003/04/29 23:41:34 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1793,3 +1793,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added lua4-4.0.1 [jtb 2003-04-29]
 	Updated elinks to 0.4.2nb1 [jtb 2003-04-29]
 	Updated lua to 5.0 [jtb 2003-04-29]
+	Updated sather to 1.2.1nb1 [jtb 2003-04-29]
