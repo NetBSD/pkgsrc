@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.5 2002/05/20 17:42:03 cjep Exp $
 --- build.xml.orig	Thu Oct 11 09:58:31 2001
 +++ build.xml	Fri Apr 19 13:18:12 2002
 @@ -247,7 +247,8 @@
