@@ -1,0 +1,38 @@
+$NetBSD: patch-ae,v 1.1 2001/11/19 03:47:42 lukem Exp $
+
+--- clients/upsstats.c.orig	Wed Aug 29 22:36:41 2001
++++ clients/upsstats.c
+@@ -73,6 +73,7 @@
+ 	double	tempf;
+ 	char	model[64], status[64], battpct[64], utility[64], loadpct[64],
+ 	        upstemp[64], acfreq[64], *stat, *ptr;
++	char	runtime[64];
+ 	int	i;
+ 
+ 	strcpy (monhost, MONHOST);	/* default host */
+@@ -149,6 +150,7 @@
+ 
+ 	printf ("</TR>\n");
+ 
++#if 0
+ 	printf ("<TR><TD BGCOLOR=\"#FFFFFF\"><PRE>\n");
+ 
+ 	/* TODO: handle self tests */
+@@ -156,6 +158,7 @@
+ /*	printf ("Last UPS Self Test: Not Available\n"); */
+ /*	printf ("    Last Test Date: Not Available\n"); */
+ 	printf ("</PRE></TD></TR>\n");
++#endif
+ 
+ 	printf ("<TR><TD BGCOLOR=\"#FFFFFF\"><PRE>\n");
+ 
+@@ -173,6 +176,9 @@
+ 
+ 	if (getupsvar (monhost, "acfreq", acfreq, sizeof(acfreq)) > 0)
+ 		printf (" Output Freq: %s Hz\n", acfreq);
++
++	if (getupsvar (monhost, "runtime", runtime, sizeof(runtime)) > 0)
++		printf ("     Runtime: %s\n", runtime);
+ 
+ 	printf ("</PRE><P>\n");
+ 	printf ("<CENTER>Network UPS Tools upsstats %s</CENTER>\n", UPS_VERSION);
