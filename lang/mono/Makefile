@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2004/06/26 20:19:16 recht Exp $
+# $NetBSD: Makefile,v 1.27 2004/07/03 23:02:50 recht Exp $
 #
 
-DISTNAME=	mono-0.97
+DISTNAME=	mono-1.0
 CATEGORIES=	lang
-MASTER_SITES=	http://www.go-mono.com/archive/rc/
+MASTER_SITES=	http://mono2.ximian.com/archive/1.0/
 
 MAINTAINER=	recht@NetBSD.org
-HOMEPAGE=	http://www.go-mono.com/
+HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 
 #BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
@@ -26,7 +26,7 @@ USE_PKGINSTALL=		yes
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-gc=included
+CONFIGURE_ARGS+=	--with-preview=yes
 CONFIGURE_ARGS+=	--with-ikvm-jni=no
 CONFIGURE_ARGS+=	--with-jdk=no
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
