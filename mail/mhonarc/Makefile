@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2003/07/31 14:50:11 jwise Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/16 13:17:45 xtraeme Exp $
 #
 
-DISTNAME=	MHonArc-2.6.6
-PKGNAME=	mhonarc-2.6.6
+DISTNAME=	MHonArc-2.6.8
+PKGNAME=	mhonarc-2.6.8
 CATEGORIES=	mail
 MASTER_SITES=	http://www.oac.uci.edu/indiv/ehood/tar/
 EXTRACT_SUFX=	.tar.bz2
