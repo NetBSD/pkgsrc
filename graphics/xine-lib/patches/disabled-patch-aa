@@ -1,0 +1,46 @@
+$NetBSD: disabled-patch-aa,v 1.1 2003/10/02 14:20:35 mycroft Exp $
+
+--- configure.ac.orig	2003-08-02 11:45:26.000000000 +0000
++++ configure.ac	2003-10-02 13:03:11.000000000 +0000
+@@ -301,6 +301,9 @@
+ AC_CHECK_LIB(nsl, gethostbyname, NET_LIBS="-lnsl $NET_LIBS",)
+ AC_SUBST(NET_LIBS)
+ 
++WINE_LIBS=""
++AC_CHECK_LIB(i386, i386_set_ldt, WINE_LIBS="-li386 $WINE_LIBS",)
++AC_SUBST(WINE_LIBS)
+ 
+ dnl ---------------------------------------------
+ dnl zlib
+@@ -330,7 +333,7 @@
+ AC_CHECK_LIB(GL, glBegin,
+ 	[AC_CHECK_HEADER(GL/gl.h,
+              [ ac_have_opengl="yes"
+-               OPENGL_LIBS="-lGL" 
++               OPENGL_LIBS="-lGL -lm" 
+ 	       AC_CHECK_LIB(glut, glutInit, dnl check for glut
+ 	                    [ ac_have_glut="yes"
+                               GLUT_LIBS="-lglut"
+@@ -348,7 +351,7 @@
+              ],
+ 	[])],
+    [],
+-   [$X_LIBS $X_PRE_LIBS -lGL $X_EXTRA_LIBS])
++   [$X_LIBS $X_PRE_LIBS -lGL -lm $X_EXTRA_LIBS])
+ AC_SUBST(OPENGL_LIBS)
+ AC_SUBST(GLUT_LIBS)
+ AC_SUBST(GLU_LIBS)
+@@ -761,9 +764,10 @@
+ dnl ---------------------------------------------
+ dnl gnome-vfs support
+ dnl ---------------------------------------------
+-PKG_CHECK_MODULES(GNOME_VFS, gnome-vfs-2.0,
+-                no_gnome_vfs=no,
+-		no_gnome_vfs=yes)
++dnl PKG_CHECK_MODULES(GNOME_VFS, gnome-vfs-2.0,
++dnl                 no_gnome_vfs=no,
++dnl 		no_gnome_vfs=yes)
++no_gnome_vfs=yes
+ AC_SUBST(GNOME_VFS_CFLAGS)
+ AC_SUBST(GNOME_VFS_LIBS)
+ if test x"$no_gnome_vfs" != "xyes"; then

@@ -1,0 +1,21 @@
+$NetBSD: patch-ao,v 1.1 2003/10/02 14:20:35 mycroft Exp $
+
+--- src/libw32dll/wine/Makefile.in.orig	2003-08-02 13:50:27.000000000 +0000
++++ src/libw32dll/wine/Makefile.in	2003-10-02 12:54:19.000000000 +0000
+@@ -194,6 +194,7 @@
+ VORBIS_LIBS = @VORBIS_LIBS@
+ W32DLL_DEP = @W32DLL_DEP@
+ W32_NO_OPTIMIZE = @W32_NO_OPTIMIZE@
++WINE_LIBS = @WINE_LIBS@
+ XINE_ACFLAGS = @XINE_ACFLAGS@
+ XINE_BIN_AGE = @XINE_BIN_AGE@
+ XINE_BUILD_CC = @XINE_BUILD_CC@
+@@ -258,7 +259,7 @@
+ 	win32.c 
+ 
+ 
+-libwine_la_LIBADD = stubs.lo wrapper.lo
++libwine_la_LIBADD = stubs.lo wrapper.lo ${WINE_LIBS}
+ 
+ noinst_HEADERS = \
+ 	avifmt.h \
