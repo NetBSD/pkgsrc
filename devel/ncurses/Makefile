@@ -1,11 +1,12 @@
 # New ports collection makefile for:	ncurses
-# Version required:     		1.9.9e
+# Version required:     		1.9.9g
 # Date created:				Tue Oct 28 00:12:41 CET 1997
 # Whom:					Hubert Feyrer (hubertf@netbsd.org)
 #
-# $NetBSD: Makefile,v 1.3 1997/10/28 11:35:46 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/11/26 14:50:45 agc Exp $
 
-DISTNAME=	ncurses-1.9.9e
+DISTNAME=	ncurses-1.9.9g
+WRKSRC=		${WRKDIR}/ncurses_1.9.9g
 CATEGORIES=	devel
 # XXX this should be moved to ftp.netcom.com:/pub/zm/zmbenhal/ncurses/
 # XXX once upgraded to the latest version - hubertf
@@ -16,6 +17,7 @@ MAINTAINER=	hubertf@netbsd.org
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-normal --with-shared --enable-bsdpad
 
+MANCOMPRESSED=	yes
 MAN1=		captoinfo.1 infocmp.1 tic.1 toe.1
 MAN3=		curs_addch.3 curs_addchstr.3 curs_addstr.3 curs_attr.3 \
 		curs_beep.3 curs_bkgd.3 curs_border.3 curs_clear.3 \
@@ -57,5 +59,6 @@ post-install:
 	( cd ${PREFIX}/include ; for i in form.h menu.h panel.h ; do \
 	  sed '/#include/s|curses.h|ncurses.h|g' $$i >$$i.BAK ; \
 	  mv $$i.BAK $$i ; done )
+	ldconfig -m ${PREFIX}/lib
 
 .include <bsd.port.mk>
