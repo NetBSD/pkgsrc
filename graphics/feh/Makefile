@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/09 02:23:44 rh Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/15 15:15:02 xtraeme Exp $
 #
 
 DISTNAME=	feh-1.2.6
@@ -13,11 +13,11 @@ COMMENT=	Advanced image viewer
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 
 CONFIGURE_ARGS+=--program-transform-name=s,cam,feh_cam,
 REPLACE_PERL=	${WRKSRC}/cam/cam
 
-.include "../../devel/giblib/buildlink2.mk"
+.include "../../devel/giblib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
