@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/06 22:41:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/08 17:24:45 tv Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(ABI) && ${ABI} == "64"
+.if defined(ABI) && ${ABI} == "64"
 CONFIGURE_ARGS+=	--enable-64bit
 .endif
 
