@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2001/07/13 16:08:40 taca Exp $
+# $NetBSD: Makefile,v 1.62 2001/07/14 12:37:54 jlam Exp $
 
 DISTNAME=		samba-2.2.1a
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -92,8 +92,8 @@ FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 MESSAGE_SUBST+=		ETCDIR=${SAMBA_ETCDIR}
 
 post-extract:
-	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -print0 |	\
-		${XARGS} -0 ${RM} -f
+	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -print |	\
+		${XARGS} ${RM} -f
 	${RM} -r ${WRKDIR}/${DISTNAME}/docs/textdocs/outdated
 
 pre-install:

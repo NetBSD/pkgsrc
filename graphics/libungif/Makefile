@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/06/19 04:08:42 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/07/14 12:37:54 jlam Exp $
 #
 
 DISTNAME=		libungif-4.1.0
@@ -36,7 +36,7 @@ post-patch:
 #
 pre-build:
 	${TOUCH} ${WRKSRC}/aclocal.m4
-	${FIND} ${WRKSRC} -name "Makefile.in" -print0 | ${XARGS} -0 ${TOUCH}
+	${FIND} ${WRKSRC} -name "Makefile.in" -print | ${XARGS} ${TOUCH}
 
 post-install:
 	cd ${PREFIX}; \

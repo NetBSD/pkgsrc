@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/23 19:26:49 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/07/14 12:37:53 jlam Exp $
 
 DISTNAME=	ircii-pana-1.0c18
 PKGNAME=	bitchx-1.0.3.18
@@ -29,8 +29,8 @@ DEPENDS+=		bzip2-0.9.0b:../../archivers/bzip2
 # installed later on; ignore error code, since we delete the directories
 # before find can descend into them.
 post-extract:
-	( ${FIND} ${WRKDIR}/BitchX/bitchx-docs -type d -name CVS -print0 \
-		| ${XARGS} -0 ${RM} -rf ) 2>/dev/null
+	( ${FIND} ${WRKDIR}/BitchX/bitchx-docs -type d -name CVS -print \
+		| ${XARGS} ${RM} -rf ) 2>/dev/null
 
 # The WANT_NOTIFY_BITCHX_COM message after configure is misleading, we
 # disable this by default.
