@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.2 2002/11/12 02:17:58 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.3 2002/11/12 13:45:36 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -112,6 +112,7 @@ prog=$0
 ftp_readme=no
 restart=no
 prune=no
+DEBUG=no
 
 while
     test -n "$1"
@@ -327,6 +328,7 @@ if [ "x$restart" = "xno" ] ; then
     echo " "
     echo "Extracting data.  This could take a while"
     echo " "
+    npkg=1
     cd ${PKGSRCDIR} 
     list=`grep '^[[:space:]]*'SUBDIR */Makefile | sed 's,/Makefile.*=[[:space:]]*,/,'`
     for pkgdir in $list
@@ -349,6 +351,12 @@ if [ "x$restart" = "xno" ] ; then
 			    echo "$l" >> $DATABASEFILE
 		    fi
 	    fi
+	    echo -n "."
+	    if [ `expr $npkg % 100 = 0` -eq 1 ]; then
+		echo " "
+		echo "$npkg"
+	    fi 
+	    npkg=`expr $npkg + 1`
 	    cd $PKGSRCDIR
     done
 else
