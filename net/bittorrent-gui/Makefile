@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/03 10:04:04 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/07 21:34:06 recht Exp $
 #
 
 .include "../../net/bittorrent/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=	${DISTNAME:S/BitTorrent/bittorrent-gui/}
 
 COMMENT+=	(wxGTK GUI)
 
-DEPENDS+=	bittorrent-3.3nb5:../../net/bittorrent
+DEPENDS+=	bittorrent>=3.4:../../net/bittorrent
 
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
