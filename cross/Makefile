@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/01/22 12:17:44 kent Exp $
+# $NetBSD: Makefile,v 1.26 2002/06/27 22:32:55 dmcmahill Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -8,6 +8,8 @@ SUBDIR+=	armv2-netbsd
 SUBDIR+=	bfd-crunchide
 SUBDIR+=	bfd-mdsetimage
 SUBDIR+=	binutils
+SUBDIR+=	h8300-hms-binutils
+SUBDIR+=	h8300-hms-gcc
 SUBDIR+=	i386-cygwin32
 SUBDIR+=	i386-linux
 SUBDIR+=	i386-linuxglibc1
