@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.7 1998/01/28 17:03:09 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/01/29 14:48:19 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -47,8 +47,6 @@ DISTFILES+=	xemacs-20.3-mule.tar.gz
 CONFIGURE_ARGS+=	${ARCH}--`echo ${OPSYS}|tr [A-Z] [a-z]` --prefix=${PREFIX} \
 		--site-includes=${PREFIX}/include \
 		${WITH_SOUND} \
-		--infodir=${PREFIX}/info \
-		--infopath=${PREFIX}/info \
 		--site-libraries=${PREFIX}/lib \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
 		${WITH_MULE} ${WITH_DIALOGS}
