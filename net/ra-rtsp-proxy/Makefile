@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2001/05/10 05:35:01 tron Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0nb1
@@ -18,7 +18,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-DOWNLOAD=	http://proforma.real.com/mario/devzone/rtspproxyform.html
+DOWNLOAD=	http://proforma.real.com/rn/misc/rtspproxy/index.html
 
 WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a
 
