@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 15:29:15 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/14 18:30:28 snj Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
@@ -30,8 +30,6 @@ USE_X11=		yes
 CFLAGS+=		-Dunix
 
 INFO_FILES=		latex.info dvips.info web2c.info kpathsea.info
-
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-texinfo
