@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3130 2005/02/27 12:38:27 adam Exp $
+$NetBSD: TODO,v 1.3131 2005/02/27 12:54:41 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ Suggested package updates
 	o libggiwmh-0.2.0
 	o libgii-0.9.0
 	o libgnomecanvasmm26-2.8.0?
-	o libgnomecups-0.1.14
 	o libgnomemm26-2.8.0?
 	o libgnomeuimm26-2.8.0?
 	o libhydrogen-0.9.0
