@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/04/02 16:40:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/09 04:00:35 jlam Exp $
 #
 
 PKGNAME=	php-pgsql-${PHP_VERSION}
@@ -11,8 +11,8 @@ BUILDING_EXTENSION_MODULE=yes
 
 do-build:
 	cd ${WRKSRC}/functions && \
-		${COMPILE.c} -I.. -I. -I${LOCALBASE}/include -fPIC -DPIC -DCOMPILE_DL pgsql.c && \
-		ld -Bshareable -o pgsql.so pgsql.o -L${LOCALBASE}/lib -R${LOCALBASE}/lib -lpq
+		${COMPILE.c} -I.. -I. -I${LOCALBASE}/include/pgsql -fPIC -DPIC -DCOMPILE_DL pgsql.c && \
+		ld -Bshareable -o pgsql.so pgsql.o -L${LOCALBASE}/lib -R${LOCALBASE}/lib -lpq -lcrypt
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/functions/pgsql.so ${PREFIX}/lib/php3/
