@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.738 2001/05/17 14:52:33 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.739 2001/05/17 15:01:43 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -58,7 +58,8 @@ PKGDIR?=		${.CURDIR}/pkg
 .if defined(USE_JAVA)
 BUILD_DEFS+=		PKG_JVM JAVA_HOME
 .if !defined(PKG_JVM)
-.if ${MACHINE_PLATFORM:MNetBSD-*-i386} != ""
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
+    ${MACHINE_PLATFORM:MLinux-*-i386} != ""
 PKG_JVM?=		jdk
 .elif ${MACHINE_PLATFORM:MNetBSD-*-powerpc} != ""
 PKG_JVM?=		blackdown-jdk13
