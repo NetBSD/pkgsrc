@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/10/07 20:21:49 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/11/01 23:28:33 tron Exp $
 #
 
 DISTNAME=	gnome-core-0.30
@@ -11,7 +11,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	gnome-libs-0.30.1:../../x11/gnome-libs
-DEPENDS+=	libgtop-0.26.0:../../sysutils/libgtop
+DEPENDS+=	libgtop-0.26.0:../../devel/libgtop
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
