@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8648 2005/01/07 12:37:26 markd Exp $
+$NetBSD: CHANGES,v 1.8649 2005/01/07 13:29:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -167,3 +167,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed ntop2 [adam 2005-01-07]
 	Updated pkg_install to 20050106 [agc 2005-01-07]
 	Updated gwenview to 1.1.7a [markd 2005-01-07]
+	Updated netpbm to 10.18.18 [adam 2005-01-07]

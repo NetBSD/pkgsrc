@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2857 2005/01/07 12:37:27 markd Exp $
+$NetBSD: TODO,v 1.2858 2005/01/07 13:29:12 adam Exp $
 
 Suggested new packages
 ======================
@@ -745,7 +745,6 @@ Suggested package updates
 	o netatalk1-1.6.4
 	o netcdf-3.6.0
 	o netio-123
-	o netpbm-1.18.18
 	o netpipe-3.6.2
 	o netramet-50
 	o netscape7-7.2
