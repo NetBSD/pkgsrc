@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2002/09/26 00:17:57 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.2 2002/09/26 05:46:11 dmcmahill Exp $
 
 --- lib/parser_inst.m4.orig	Fri Aug 20 03:05:33 1999
 +++ lib/parser_inst.m4
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1 2002/09/26 00:17:57 dmcmahill Exp $
  __instantiate(Vector<size_t>)
   // we really just want to test if size_t == unsigned int
 -#if !defined(SIZEOF_SIZE_T) || !defined(SIZEOF_UNSIGNED_INT) || (SIZEOF_SIZE_T != SIZEOF_UNSIGNED_INT)
-+#if !defined(_LP64)
++#if defined(__NetBSD__)
  __instantiate(Vector<unsigned int>)
  #endif
  
