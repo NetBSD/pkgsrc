@@ -1,4 +1,4 @@
-/*	$NetBSD: pwcache.c,v 1.4 2003/09/03 13:11:14 jlam Exp $	*/
+/*	$NetBSD: pwcache.c,v 1.5 2004/03/12 15:21:13 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -78,7 +78,7 @@
 #if 0
 static char sccsid[] = "@(#)cache.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: pwcache.c,v 1.4 2003/09/03 13:11:14 jlam Exp $");
+__RCSID("$NetBSD: pwcache.c,v 1.5 2004/03/12 15:21:13 grant Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -93,6 +93,7 @@ __RCSID("$NetBSD: pwcache.c,v 1.4 2003/09/03 13:11:14 jlam Exp $");
 #include <string.h>
 #include <unistd.h>
 
+#if 0
 #ifndef __ELF__
 #define _user_from_uid	user_from_uid
 #define _group_from_gid	group_from_gid
@@ -104,6 +105,7 @@ __weak_alias(user_from_uid,_user_from_uid)
 __weak_alias(group_from_gid,_group_from_gid)
 __weak_alias(pwcache_userdb,_pwcache_userdb)
 __weak_alias(pwcache_groupdb,_pwcache_groupdb)
+#endif
 #endif
 #endif
 

@@ -1,4 +1,4 @@
-/*	$NetBSD: __fts13.c,v 1.4 2003/09/03 13:11:13 jlam Exp $	*/
+/*	$NetBSD: __fts13.c,v 1.5 2004/03/12 15:21:13 grant Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993, 1994
@@ -41,7 +41,7 @@
 #if 0
 static char sccsid[] = "@(#)fts.c	8.6 (Berkeley) 8/14/94";
 #else
-__RCSID("$NetBSD: __fts13.c,v 1.4 2003/09/03 13:11:13 jlam Exp $");
+__RCSID("$NetBSD: __fts13.c,v 1.5 2004/03/12 15:21:13 grant Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -88,6 +88,7 @@ __RCSID("$NetBSD: __fts13.c,v 1.4 2003/09/03 13:11:13 jlam Exp $");
 #define HAVE_STRUCT_DIRENT_D_NAMLEN 1
 #endif
 
+#if 0
 #ifdef __weak_alias
 #ifdef __LIBC12_SOURCE__
 __weak_alias(fts_children,_fts_children)
@@ -97,6 +98,7 @@ __weak_alias(fts_read,_fts_read)
 __weak_alias(fts_set,_fts_set)
 #endif /* __LIBC12_SOURCE__ */
 #endif /* __weak_alias */
+#endif
 
 #ifdef __LIBC12_SOURCE__
 #define	STAT	stat12

@@ -1,4 +1,4 @@
-/*	$NetBSD: setmode.c,v 1.6 2003/09/05 22:19:30 jlam Exp $	*/
+/*	$NetBSD: setmode.c,v 1.7 2004/03/12 15:21:13 grant Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993, 1994
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)setmode.c	8.2 (Berkeley) 3/25/94";
 #else
-__RCSID("$NetBSD: setmode.c,v 1.6 2003/09/05 22:19:30 jlam Exp $");
+__RCSID("$NetBSD: setmode.c,v 1.7 2004/03/12 15:21:13 grant Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -71,6 +71,7 @@ __RCSID("$NetBSD: setmode.c,v 1.6 2003/09/05 22:19:30 jlam Exp $");
 #define _DIAGASSERT(cond)       assert(cond)
 #endif
 
+#if 0
 #ifndef __ELF__
 #define _getmode	getmode
 #define _setmode	setmode
@@ -78,6 +79,7 @@ __RCSID("$NetBSD: setmode.c,v 1.6 2003/09/05 22:19:30 jlam Exp $");
 #ifdef __weak_alias
 __weak_alias(getmode,_getmode)
 __weak_alias(setmode,_setmode)
+#endif
 #endif
 #endif
 
