@@ -1,32 +1,59 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.4 2000/05/17 09:22:28 veego Exp $
+# $NetBSD: INSTALL,v 1.5 2001/05/14 18:56:17 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
-SAMBA_PRIVATE=@SAMBA_PRIVATE@
-ROOT_GROUP=@ROOT_GROUP@
+CAT="@CAT@"
+CHMOD="@CHMOD@"
+CHOWN="@CHOWN@"
+CP="@CP@"
+MKDIR="@MKDIR@"
+RM="@RM@"
+
+SAMBA_PRIVATE="@SAMBA_PRIVATE@"
+SAMBA_LOCKDIR="@SAMBA_LOCKDIR@"
+SAMPLECONFDIR=${PKG_PREFIX}/share/examples/samba
+CONFDIR=@SAMBA_ETCDIR@
+CONFFILES="smb.conf"
 
 case ${STAGE} in
 PRE-INSTALL)
 	;;
+
 POST-INSTALL)
-	mkdir -p ${SAMBA_PRIVATE}
+	${MKDIR} -p ${CONFDIR} ${SAMBA_PRIVATE} ${SAMBA_LOCKDIR}
+	echo "Installing configuration files:"
+	for file in ${CONFFILES}
+	do
+		FILE=${CONFDIR}/${file}
+		SAMPLEFILE=${SAMPLECONFDIR}/${file}.sample
+		if [ -f ${FILE} ]
+		then
+			echo "    ${FILE} already exists"
+		else
+			echo "    ${FILE}"
+			${CP} ${SAMPLEFILE} ${FILE}
+			${CHMOD} 644 ${FILE}
+                fi
+	done
+
+	# Create SMB password file
 	if [ ! -f ${SAMBA_PRIVATE}/smbpasswd ]
 	then
 		echo -n "Creating ${SAMBA_PRIVATE}/smbpasswd..."
-		chown -R root ${SAMBA_PRIVATE}
-		chgrp -R ${ROOT_GROUP} ${SAMBA_PRIVATE}
-		cat /etc/passwd | ${PKG_PREFIX}/bin/mksmbpasswd.sh \
-			>${SAMBA_PRIVATE}/smbpasswd
-		chmod 500 ${SAMBA_PRIVATE}
-		chmod 600 ${SAMBA_PRIVATE}/smbpasswd
+		${CHOWN} -R 0:0 ${SAMBA_PRIVATE}
+		${CAT} /etc/passwd | ${PKG_PREFIX}/sbin/mksmbpasswd	\
+			> ${SAMBA_PRIVATE}/smbpasswd
+		${CHMOD} 600 ${SAMBA_PRIVATE}/smbpasswd
+		${CHMOD} 500 ${SAMBA_PRIVATE}
 		echo "done."
 	fi
 	;;
+
 *)
-	echo "Unexpected argument: $2"
+	echo "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac

@@ -1,90 +1,116 @@
-# $NetBSD: Makefile,v 1.48 2001/05/10 09:00:23 abs Exp $
+# $NetBSD: Makefile,v 1.49 2001/05/14 18:56:15 jlam Exp $
 
-DISTNAME=	samba-2.0.9
-WRKSRC=		${WRKDIR}/${DISTNAME}/source
-CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.samba.org/pub/samba/ \
-		ftp://ring.asahi-net.or.jp/pub/net/samba/ \
-		ftp://samba.anu.edu.au/pub/samba/ \
-		ftp://de.samba.org/pub/mirror/samba/ \
-		ftp://se.samba.org/pub/samba/ \
-		ftp://ftp.sunet.se/pub/unix/utilities/samba/
+DISTNAME=		samba-2.2.0
+WRKSRC=			${WRKDIR}/${DISTNAME}/source
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
+			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
+			ftp://samba.anu.edu.au/pub/samba/ \
+			ftp://de.samba.org/pub/mirror/samba/ \
+			ftp://se.samba.org/pub/samba/ \
+			ftp://ftp.sunet.se/pub/unix/utilities/samba/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.samba.org/
-COMMENT=	SMB/CIFS protocol server suite for UNIX
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.samba.org/
+COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
-BUILD_USES_MSGFMT= YES
+# Samba uses some GNU readline features (rl_event_hook).
+DEPENDS+=		readline>=2.2:../../devel/readline
 
-.if !exists(/usr/include/readline/readline.h)
-DEPENDS+=		readline>=4.0:../../devel/readline
-.endif
+USE_LIBINTL=		# defined
+USE_SSL=		# defined
 
-USE_LIBINTL=	YES
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.prefs.mk"
 
-SAMPLE_CONFIG=	${PREFIX}/share/examples/samba/smb.conf.sample
-SAMBA_LOGDIR=	/var/log
-SAMBA_LOCKDIR=	/var/run/samba
-SAMBA_ETCDIR?=	/etc/samba
-SAMBA_PRIVATE?=	${SAMBA_ETCDIR}/private
+SAMBA_LOGDIR=		/var/log
+SAMBA_LOCKDIR=		/var/run/samba
+SAMBA_ETCDIR?=		/etc/samba
+SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
 
-.if ${OPSYS} == "SunOS"
-ROOT_GROUP?=		root
-.else
-ROOT_GROUP?=		wheel
+MAKE_ENV+=		ETCDIR=${SAMBA_ETCDIR}
+MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
+
+CONFIGURE_ARGS+=	--localstatedir=${SAMBA_LOGDIR}
+CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
+CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
+CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
+CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
+CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/swat
+
+CONFIGURE_ARGS+=	--with-readline=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-ssl
+
+# The following should be ${SSLBASE}, but we don't want the configure script
+# to add -I/usr/include at the front of the compiler options, so force it to
+# be ${LOCALBASE} instead.  This is needed anyway for many of the
+# dependencies.
+#
+CONFIGURE_ARGS+=	--with-sslinc=${LOCALBASE}
+
+CPPFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
+
+.if defined(SAMBA_WITH_CUPS)
+CONFIGURE_ARGS+=	--with-cups
+DEPENDS+=		cups>=1.1.1:../../print/cups
 .endif
 
-MAKE_ENV+=	ETCDIR=${SAMBA_ETCDIR}
-MAKE_ENV+=	LOGDIR=${SAMBA_LOGDIR}
+.if defined(USE_PAM)
+CONFIGURE_ARGS+=	--with-pam
+DEPENDS+=		PAM-*:../../security/PAM
+.endif
 
-CONFIGURE_ARGS+=--with-lockdir=${SAMBA_LOCKDIR} \
-		--with-privatedir=${SAMBA_PRIVATE} \
-		--with-swatdir=${PREFIX}/share/swat \
-		--with-i18n-swat \
-		--with-sambabook=${PREFIX}/share/swat/using_samba
+# The following are Linux-only options.
+CONFIGURE_ARGS+=	--without-smbwrapper
+CONFIGURE_ARGS+=	--without-smbmount
 
-PLIST_SUBST+=	SAMBA_PRIVATE=${SAMBA_PRIVATE}
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
-INSTALL_FILE=	${WRKDIR}/INSTALL
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 
-pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
+DOCDIR=			${PREFIX}/share/doc/samba
+HTMLDIR=		${PREFIX}/share/doc/html/samba
 
-post-build:
-.for FILE in nmbd.sh smbd.sh
-	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
-		-e "s,@ECHO@,${ECHO},g" \
-		< ${FILESDIR}/${FILE} > ${WRKDIR}/${FILE}
-.endfor
+post-extract:
+	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -exec ${RM} -f {} \;
+
+pre-install:
+	for file in nmbd.sh smbd.sh; do					\
+		${SED}	-e "s,@PREFIX@,${PREFIX},g"			\
+			-e "s,@ECHO@,${ECHO},g"				\
+			${FILESDIR}/$${file} > ${WRKDIR}/$${file};	\
+	done
+	${SED}	-e "s|@SAMBA_PRIVATE@|${SAMBA_PRIVATE}|g"		\
+		-e "s|@SAMBA_LOCKDIR@|${SAMBA_LOCKDIR}|g"		\
+		-e "s|@SAMBA_ETCDIR@|${SAMBA_ETCDIR}|g"			\
+		-e "s|@CAT@|${CAT}|g"					\
+		-e "s|@CHMOD@|${CHMOD}|g"				\
+		-e "s|@CHOWN@|${CHOWN}|g"				\
+		-e "s|@CP@|${CP}|g"					\
+		-e "s|@MKDIR@|${MKDIR}|g"				\
+		-e "s|@RM@|${RM}|g"					\
+		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${SED}	-e "s|@SAMBA_PRIVATE@|${SAMBA_PRIVATE}|g"		\
+		-e "s|@SAMBA_LOCKDIR@|${SAMBA_LOCKDIR}|g"		\
+		-e "s|@SAMBA_ETCDIR@|${SAMBA_ETCDIR}|g"			\
+		-e "s|@CAT@|${CAT}|g"					\
+		-e "s|@RM@|${RM}|g"					\
+		-e "s|@RMDIR@|${RMDIR}|g"				\
+		-e "s|@TRUE@|${TRUE}|g"					\
+		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
 post-install:
 	# Install Samba documentation.
-	#
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/samba
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/samba/faq
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/samba/textdocs
-	cd ${WRKDIR}/${DISTNAME}/docs; \
-	for file in \
-	    NT4-Locking.reg NT4-Locking.txt NT4_PlainPassword.reg \
-	    THANKS Win2000_PlainPassword.reg Win95_PlainPassword.reg \
-	    Win98_PlainPassword.reg Win9X-CacheHandling.reg \
-	    WindowsTerminalServer.reg announce; do \
-		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/samba; \
-	done
-	for file in ${WRKDIR}/${DISTNAME}/docs/faq/*.html; do \
-		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/samba/faq; \
-	done
-	for file in ${WRKDIR}/${DISTNAME}/docs/textdocs/*; do \
-		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/samba/textdocs; \
-	done
+	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
+	cd ${WRKDIR}/${DISTNAME}/docs;					\
+		${INSTALL_DATA} announce *.reg textdocs/* ${DOCDIR};	\
+		${INSTALL_DATA} faq/*.html ${HTMLDIR}
 
 	# Install Samba examples.
-	#
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/samba
 	${CP} -R ${WRKDIR}/${DISTNAME}/examples/* ${PREFIX}/share/examples/samba
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/samba
@@ -92,19 +118,15 @@ post-install:
 
 	${INSTALL_SCRIPT} ${WRKDIR}/nmbd.sh ${PREFIX}/etc/rc.d/nmbd
 	${INSTALL_SCRIPT} ${WRKDIR}/smbd.sh ${PREFIX}/etc/rc.d/smbd
+	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
+		${PREFIX}/sbin/mksmbpasswd
 
-	${SED}	-e 's,@LOGDIR@,${SAMBA_LOGDIR},g' \
-		-e 's,@ETCDIR@,${SAMBA_ETCDIR},g' \
-		-e 's,@PREFIX@,{PREFIX},g' \
-		< ${FILESDIR}/smb.conf.sample > ${WRKDIR}/smb.conf.sample
-	${INSTALL_DATA} ${WRKDIR}/smb.conf.sample ${SAMPLE_CONFIG}
-	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh ${PREFIX}/bin
+	${SED}	-e "s|@SAMBA_LOGDIR@|${SAMBA_LOGDIR}|g"			\
+		-e "s|@SAMBA_ETCDIR@|${SAMBA_ETCDIR}|g"			\
+		-e "s|@PREFIX@|${PREFIX}|g"				\
+		${FILESDIR}/smb.conf.sample > ${WRKDIR}/smb.conf.sample
+	${INSTALL_DATA} ${WRKDIR}/smb.conf.sample ${PREFIX}/share/examples/samba
 
-	${SED}	-e "s,@SAMBA_PRIVATE@,${SAMBA_PRIVATE},g" \
-		-e "s,@ROOT_GROUP@,${ROOT_GROUP},g" \
-		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	${SED}	-e "s,@SAMBA_PRIVATE@,${SAMBA_PRIVATE},g" \
-		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
