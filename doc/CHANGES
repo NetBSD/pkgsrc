@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3502 2003/09/24 03:30:39 schmonz Exp $
+$NetBSD: CHANGES,v 1.3503 2003/09/24 03:53:50 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3908,4 +3908,10 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xchat2 to 2.0.5 [xtraeme 2003-09-23]
 	Updated libsndfile to 1.0.5nb1 [recht 2003-09-23]
 	Updated djbdns to 1.05nb3 [schmonz 2003-09-24]
-
+	Deleted Canna-server-bin, renamed to Canna-server [uebayasi 2003-09-23]
+	Deleted canuum, renamed to Canna-canuum [uebayasi 2003-09-23]
+	Updated Canna to 3.6p4 [uebayasi 2003-09-23]
+	Updated Canna-canuum to 3.6p4 [uebayasi 2003-09-23]
+	Updated Canna-dict to 3.6p4 [uebayasi 2003-09-23]
+	Updated Canna-lib to 3.6p4 [uebayasi 2003-09-23]
+	Updated Canna-server to 3.6p4 [uebayasi 2003-09-23]
