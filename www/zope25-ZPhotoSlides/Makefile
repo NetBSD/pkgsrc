@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/07/22 04:14:46 martti Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/26 15:57:34 drochner Exp $
 
-DISTNAME=	ZPhotoSlides-1.1
-PKGREVISION=	1
-PKGNAME=	zope25-ZPhotoSlides-1.1
+DISTNAME=	ZPhotoSlides-1.1b
+PKGNAME=	zope25-ZPhotoSlides-1.1b
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/p3b/ZPhotoSlides/
 
@@ -13,7 +12,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/p3b/ZPhotoSlides
 COMMENT=	Present your photos quickly in zope
 
-ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 USE_BUILDLINK2=	yes
 
 .include "../../www/zope25/product.mk"
