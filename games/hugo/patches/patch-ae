@@ -1,0 +1,35 @@
+$NetBSD: patch-ae,v 1.1 2004/05/28 14:24:04 dillo Exp $
+
+--- source/hdupdate.c.orig	2004-01-05 20:22:00.000000000 +0100
++++ source/hdupdate.c
+@@ -235,10 +235,10 @@ void Navigate(void)
+ 	{
+ 	  switch (event.object)
+ 	  {
+-		case UP:
++		case EV_UP:
+ 		case DOWN:
+ 		{
+-			if (event.object==UP && win->selected > 0)
++			if (event.object==EV_UP && win->selected > 0)
+ 			{
+ 				if (--new_selected < win->first)
+ 				{
+@@ -252,7 +252,7 @@ void Navigate(void)
+ 			{
+ 				if (++new_selected > win->first+win->height-1)
+ 				{
+-					debug_windowscroll(2, win->top, D_SCREENWIDTH-1, win->top+win->height-1, UP, 1);
++					debug_windowscroll(2, win->top, D_SCREENWIDTH-1, win->top+win->height-1, EV_UP, 1);
+ 					win->first++;
+ 				}
+ 			}
+@@ -828,7 +828,7 @@ void UpdateCodeWindow(void)
+ 			amount_to_scroll = buffered_code_lines;
+ 
+ 		debug_windowscroll(2, win->top, 
+-			D_SCREENWIDTH-1, win->top+win->height-1, UP, amount_to_scroll);
++			D_SCREENWIDTH-1, win->top+win->height-1, EV_UP, amount_to_scroll);
+ 
+ 		win->first += amount_to_scroll;
+ 	}
