@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/11/12 01:31:49 salo Exp $
 
 DISTNAME=		eog-0.6
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		gnome graphics x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eog/0.6/}
 
