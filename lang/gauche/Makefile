@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/03/29 09:34:26 kei Exp $
+# $NetBSD: Makefile,v 1.20 2004/05/09 14:23:55 grant Exp $
 #
 
 DISTNAME=	Gauche-0.7.4.2
@@ -25,7 +25,7 @@ BROKEN=Test required on NetBSD/i386 a.out
 .endif
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 CONFIGURE_ARGS+=	--with-slib=${PREFIX}/share/slib
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ENV+=		AS="${CC} -x assembler-with-cpp -c"
@@ -42,10 +42,10 @@ CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
 .endif
 
 .if ${OPSYS} == "Darwin"
-.  include "../../devel/dlcompat/buildlink2.mk"
+.  include "../../devel/dlcompat/buildlink3.mk"
 .endif
-.include "../../devel/boehm-gc/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if !empty(_WITH_ICONV_LIB)
