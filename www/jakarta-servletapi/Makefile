@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/04/03 21:16:30 jwise Exp $
+# $NetBSD: Makefile,v 1.8 2002/04/19 13:12:43 wiz Exp $
 
 DISTNAME=	jakarta-servletapi-3.2.3-src
 PKGNAME=	jakarta-servletapi-3.2.3
@@ -9,7 +9,7 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
 COMMENT=	the Apache project's implementation of the JSP and Java Servlet APIs
 
-DEPENDS+=	jakarta-ant-1.3:../../devel/jakarta-ant
+DEPENDS+=	jakarta-ant>=1.3:../../devel/jakarta-ant
 
 USE_JAVA=	yes
 
