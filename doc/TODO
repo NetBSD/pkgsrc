@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3029 2005/02/18 12:48:25 martti Exp $
+$NetBSD: TODO,v 1.3030 2005/02/18 12:54:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -853,7 +853,6 @@ Suggested package updates
 	o p5-XML-Writer-0.520
 	o p5-XML-Xerces-2.5.0
 	o p5-XML-XUpdate-LibXML-0.5.0
-	o p5-gettext-1.03
 	o p5-glib2-1.071
 	o p5-gtk2-1.073
 	o p5-ispman-1.1.1
