@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.31 2005/01/31 18:41:08 jlam Exp $
+# $NetBSD: header,v 1.32 2005/02/02 10:33:01 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -60,17 +60,6 @@ ${LOCALBASE}/*)	VIEW="${PKG_PREFIX#${LOCALBASE}/}" ;;
 *)		VIEW="" ;;
 esac
 
-SPECIAL_PERMS="@SPECIAL_PERMS@"
-
-CONF_FILES="@CONF_FILES@"
-CONF_FILES_MODE="@CONF_FILES_MODE@"
-CONF_FILES_PERMS="@CONF_FILES_PERMS@"
-SUPPORT_FILES="@SUPPORT_FILES@"
-SUPPORT_FILES_PERMS="@SUPPORT_FILES_PERMS@"
-RCD_SCRIPTS="@RCD_SCRIPTS@"
-RCD_SCRIPTS_DIR="@RCD_SCRIPTS_DIR@"
-RCD_SCRIPTS_EXAMPLEDIR="@RCD_SCRIPTS_EXAMPLEDIR@"
-
 PKG_SYSCONFBASE="@PKG_SYSCONFBASE@"
 PKG_SYSCONFDEPOTBASE="@PKG_SYSCONFDEPOTBASE@"
 PKG_SYSCONFBASEDIR="@PKG_SYSCONFBASEDIR@"
@@ -84,9 +73,6 @@ esac
 
 PKG_REGISTER_SHELLS="@PKG_REGISTER_SHELLS@"
 PKG_SHELL="@PKG_SHELL@"
-
-ALL_FILES=
-VIEW_FILES=
 
 CONF_IGNORE_FILES="*[~#] *.OLD *.orig *,v .pkgsrc */.pkgsrc"
 
@@ -118,41 +104,5 @@ case "${PKG_RCD_SCRIPTS:-@PKG_RCD_SCRIPTS@}" in
 	_PKG_RCD_SCRIPTS=NO
 	;;
 esac
-
-msginit()
-{
-	_msgn=0
-	_msgempty=1
-
-}
-
-msgempty()
-{
-	if [ $_msgempty -gt 0 ]; then
-		${TRUE}
-	else
-		${FALSE}
-	fi
-}
-
-msgadd()
-{
-        eval _msg$_msgn=\"$1\"
-        _msgn=`${EXPR} $_msgn + 1`
-	_msgempty=0
-}
-
-msgprint()
-{
-	i=0
-	while [ $i -lt $_msgn ]; do
-		eval _msg=_msg$i
-		eval ${ECHO} "\$$_msg" | ${SED} \
-			-e "s,^###,			," \
-			-e "s,^##,		," \
-			-e "s,^#,	,"
-                i=`${EXPR} $i + 1`
-        done
-}
 
 # end of header

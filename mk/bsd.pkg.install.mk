@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.78 2005/01/28 19:06:07 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.79 2005/02/02 10:33:01 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -173,7 +173,37 @@ ${INSTALL_USERGROUP_FILE}: ../../mk/install/usergroup
 #
 SPECIAL_PERMS?=		# empty
 SETUID_ROOT_PERMS?=	${ROOT_USER} ${ROOT_GROUP} 4711
-FILES_SUBST+=		SPECIAL_PERMS=${SPECIAL_PERMS:Q}
+
+INSTALL_PERMS_FILE=	${WRKDIR}/.install-perms
+INSTALL_UNPACK_TMPL+=	${INSTALL_PERMS_FILE}
+
+${INSTALL_PERMS_FILE}: ../../mk/install/perms
+	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${ECHO} "# start of install-perms";				\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +PERMS script that sets the special";	\
+	${ECHO} "# permissions on files and directories used by the";	\
+	${ECHO} "# package.";						\
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL)";						\
+	${ECHO} "	\$${CAT} > ./+PERMS << 'EOF_PERMS'";		\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/perms;		\
+	${ECHO} "";							\
+	eval set -- ${SPECIAL_PERMS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		file="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
+		shift; shift; shift; shift;				\
+		${ECHO} "# PERMS: $$file $$mode $$owner $$group";	\
+	done;								\
+	${ECHO} "EOF_PERMS";						\
+	${ECHO} "	\$${CHMOD} +x ./+PERMS";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-perms";				\
+	} > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # CONF_FILES are pairs of example and true config files, used much like
 #	MLINKS in the base system.  At post-install time, if the true config
@@ -211,19 +241,85 @@ PKG_FAIL_REASON+= \
 	"bsd.pkg.install.mk: RCD_SCRIPTS_EXAMPLEDIR can't be an absolute path."
 .endif
 RCD_SCRIPTS_SHELL?=	${SH}
-FILES_SUBST+=		CONF_FILES=${CONF_FILES:Q}
-FILES_SUBST+=		CONF_FILES_MODE=${CONF_FILES_MODE}
-FILES_SUBST+=		CONF_FILES_PERMS=${CONF_FILES_PERMS:Q}
-FILES_SUBST+=		SUPPORT_FILES=${SUPPORT_FILES:Q}
-FILES_SUBST+=		SUPPORT_FILES_MODE=${SUPPORT_FILES_MODE}
-FILES_SUBST+=		SUPPORT_FILES_PERMS=${SUPPORT_FILES_PERMS:Q}
-FILES_SUBST+=		RCD_SCRIPTS=${RCD_SCRIPTS:Q}
-FILES_SUBST+=		RCD_SCRIPTS_MODE=${RCD_SCRIPTS_MODE}
-FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
-FILES_SUBST+=		RCD_SCRIPTS_EXAMPLEDIR=${RCD_SCRIPTS_EXAMPLEDIR}
 FILES_SUBST+=		RCD_SCRIPTS_SHELL=${RCD_SCRIPTS_SHELL}
 MESSAGE_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 MESSAGE_SUBST+=		RCD_SCRIPTS_EXAMPLEDIR=${RCD_SCRIPTS_EXAMPLEDIR}
+
+INSTALL_FILES_FILE=	${WRKDIR}/.install-files
+INSTALL_UNPACK_TMPL+=	${INSTALL_FILES_FILE}
+
+${INSTALL_FILES_FILE}: ../../mk/install/files
+	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${ECHO} "# start of install-files";				\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +FILES script that reference counts config"; \
+	${ECHO} "# files that are required for the proper functioning"; \
+	${ECHO} "# of the package.";					\
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL)";						\
+	${ECHO} "	\$${CAT} > ./+FILES << 'EOF_FILES'";		\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/files;		\
+	${ECHO} "";							\
+	eval set -- ${CONF_FILES} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		egfile="$$1"; file="$$2";				\
+		shift; shift;						\
+		${ECHO} "# FILE: $$file c $$egfile ${CONF_FILES_MODE}"; \
+	done;								\
+	eval set -- ${SUPPORT_FILES} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		egfile="$$1"; file="$$2";				\
+		shift; shift;						\
+		${ECHO} "# FILE: $$file c $$egfile ${SUPPORT_FILES_MODE}"; \
+	done;								\
+	eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS} ;	\
+	while ${TEST} $$# -gt 0; do					\
+		egfile="$$1"; file="$$2";				\
+		owner="$$3"; group="$$4"; mode="$$5";			\
+		shift; shift; shift; shift; shift;			\
+		${ECHO} "# FILE: $$file c $$egfile $$mode $$owner $$group"; \
+	done;								\
+	${ECHO} "EOF_FILES";						\
+	${ECHO} "	\$${CHMOD} +x ./+FILES";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-files";				\
+	} > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+INSTALL_RCD_SCRIPTS_FILE=	${WRKDIR}/.install-rcd-scripts
+INSTALL_UNPACK_TMPL+=		${INSTALL_RCD_SCRIPTS_FILE}
+
+${INSTALL_RCD_SCRIPTS_FILE}: ../../mk/install/files
+	${_PKG_SILENT}${_PKG_DEBUG}{					\
+	${ECHO} "# start of install-rcd-scripts";			\
+	${ECHO} "#";							\
+	${ECHO} "# Generate a +RCD_SCRIPTS script that reference counts config"; \
+	${ECHO} "# files that are required for the proper functioning"; \
+	${ECHO} "# of the package.";					\
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL)";						\
+	${ECHO} "	\$${CAT} > ./+RCD_SCRIPTS << 'EOF_RCD_SCRIPTS'"; \
+	${SED} ${FILES_SUBST_SED} ../../mk/install/files;		\
+	${ECHO} "";							\
+	eval set -- ${RCD_SCRIPTS} ;					\
+	while ${TEST} $$# -gt 0; do					\
+		script="$$1"; shift;					\
+		file="${RCD_SCRIPTS_DIR}/$$script";			\
+		egfile="${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/$$script";	\
+		${ECHO} "# FILE: $$file c $$egfile ${RCD_SCRIPTS_MODE}"; \
+	done;								\
+	${ECHO} "EOF_RCD_SCRIPTS";					\
+	${ECHO} "	\$${CHMOD} +x ./+RCD_SCRIPTS";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-rcd-scripts";				\
+	} > ${.TARGET}.tmp;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 # OWN_DIRS contains a list of directories for this package that should be
 #       created and should attempt to be destroyed by the INSTALL/DEINSTALL

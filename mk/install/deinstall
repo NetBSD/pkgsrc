@@ -1,50 +1,24 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.31 2005/01/28 07:37:55 jlam Exp $
-
-eval set -- ${CONF_FILES} ${SUPPORT_FILES}
-while [ $# -gt 0 ]; do
-	samplefile="$1"; file="$2"
-	shift; shift
-	ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""
-	VIEW_FILES="${VIEW_FILES} \"${file}\""
-done
-if [ "${_PKG_RCD_SCRIPTS}" = "YES" ]; then
-	eval set -- ${RCD_SCRIPTS}
-	for script; do
-		samplefile="${PKG_PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/${script}"
-		file="${RCD_SCRIPTS_DIR}/${script}"
-		shift
-		ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""
-	done
-fi
-eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
-while [ $# -gt 0 ]; do
-	samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
-	shift; shift; shift; shift; shift
-	ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""
-	VIEW_FILES="${VIEW_FILES} \"${file}\""
-done
+# $NetBSD: deinstall,v 1.32 2005/02/02 10:33:01 jlam Exp $
 
 case ${STAGE} in
 VIEW-DEINSTALL)
-	if [ "${_PKG_CONFIG}" = "YES" -a -n "${VIEW_FILES}" ]; then
-		if [ -n "${PKG_SYSCONFDEPOTBASE}" ]; then
+	case ${_PKG_CONFIG} in
+	YES)
+		case ${PKG_SYSCONFDEPOTBASE} in
+		"")
+			${TEST} -x ./+FILES &&
+				./+FILES VIEW-REMOVE ${PREFIX} ${PKG_PREFIX}
+			;;
+		*)
 			${SETENV} PLIST_IGNORE_FILES="${CONF_IGNORE_FILES}" \
 				${LINKFARM} -D -t ${PKG_SYSCONFVIEWBASE} -d ${PKG_SYSCONFDEPOTBASE} ${PKGNAME}
 			${RMDIR} -p ${PKG_SYSCONFVIEWBASE} 2>/dev/null || ${TRUE}
-		else
-			eval set -- ${VIEW_FILES}
-			for file; do
-				link=`${ECHO} ${file} | ${SED} "s,^${PREFIX}/,${PKG_PREFIX}/,"`
-				dir=`${DIRNAME} ${link}`
-				if [ -h "${link}" ]; then
-					${RM} -f ${link}
-					${RMDIR} -p ${dir} 2>/dev/null || ${TRUE}
-				fi
-			done
-		fi
-	fi
+			;;
+		esac
+		;;
+	esac
 	if [ -n "${PKG_SHELL}" -a "${PKG_REGISTER_SHELLS}" = "YES" ]; then
 		${ECHO} "===> Updating /etc/shells"
 		${CP} /etc/shells /etc/shells.pkgsrc."$$"
@@ -57,34 +31,17 @@ DEINSTALL)
 	# Remove configuration files if they don't differ from the default
 	# config file.
 	#
-        if [ "${_PKG_CONFIG}" = "YES" ]; then
-		eval set -- ${ALL_FILES}
-		while [ $# -gt 0 ]; do
-			samplefile="$1"; file="$2"
-			shift; shift
-
-			if [ ! "${file}" -ef "${samplefile}" -a		\
-			     -f "${file}" -a -f "${samplefile}" ]; then
-				if ${CMP} -s "${file}" "${samplefile}"; then
-					${RM} -f "${file}"
-				fi
-			fi
-		done
-	fi
+	case ${_PKG_CONFIG} in
+	YES)	${TEST} -x ./+FILES &&
+			./+FILES REMOVE ${PKG_METADATA_DIR} ;;
+	esac
+	case ${_PKG_CONFIG}${_PKG_RCD_SCRIPTS} in
+	YESYES)	${TEST} -x ./+RCD_SCRIPTS &&
+			./+RCD_SCRIPTS REMOVE ${PKG_METADATA_DIR} ;;
+	esac
 	;;
 
 POST-DEINSTALL)
-	modified_files=''
-	eval set -- ${ALL_FILES}
-	while [ $# -gt 0 ]; do
-		samplefile="$1"; file="$2"
-		shift; shift
-
-		if [ -f "${file}" ]; then
-			modified_files="${modified_files} \"${file}\""
-		fi
-	done
-
 	if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" -a			\
 	     "${_PKG_CONFIG}" = "YES" -a -n "${CONF_DEPENDS}" ]; then
 		if [ -h ${PKG_SYSCONFDIR} ]; then
@@ -92,44 +49,28 @@ POST-DEINSTALL)
 		fi
 		${RMDIR} -p `${DIRNAME} ${PKG_SYSCONFDIR}` 2>/dev/null || ${TRUE}
 	fi
-
+	#
+	# Remove empty directories and unused users/groups.
+	#
 	case ${_PKG_CONFIG} in
-	YES)	${TEST} -x ./+DIRS && ./+DIRS REMOVE ${PKG_METADATA_DIR} ;;
+	YES)	${TEST} -x ./+DIRS &&
+			./+DIRS REMOVE ${PKG_METADATA_DIR} ;;
 	esac
 	case ${_PKG_CREATE_USERGROUP} in
-	YES)	${TEST} -x ./+USERGROUP && ./+USERGROUP REMOVE ${PKG_METADATA_DIR} ;;
+	YES)	${TEST} -x ./+USERGROUP &&
+			./+USERGROUP REMOVE ${PKG_METADATA_DIR} ;;
 	esac
-
-	if [ -n "${modified_files}" ]; then
-		${CAT} << EOF
-===========================================================================
-If you won't be using ${PKGNAME} any longer, you may want to remove
-EOF
-		if [ -n "${modified_files}" ]; then
-			${CAT} << EOF
-
-  * the following files:
-
-EOF
-			eval set -- ${modified_files}
-			for file; do
-				${ECHO} "	${file}"
-			done
-		fi
-		if [ -n "${RCD_SCRIPTS}" ]; then
-			${CAT} << EOF
-
-You may also want to remove any settings in rc.conf that you may have
-made in order to use ${PKGNAME}.
-EOF
-		fi
-		${CAT} << EOF
-===========================================================================
-EOF
-	fi
-
-	${TEST} -x ./+USERGROUP && ./+USERGROUP CHECK-REMOVE ${PKG_METADATA_DIR}
-	${TEST} -x ./+DIRS && ./+DIRS CHECK-REMOVE ${PKG_METADATA_DIR}
+	#
+	# Check for any existing bits after we're finished de-installing.
+	#
+	${TEST} -x ./+USERGROUP &&
+		./+USERGROUP CHECK-REMOVE ${PKG_METADATA_DIR}
+	${TEST} -x ./+FILES &&
+		./+FILES CHECK-REMOVE ${PKG_METADATA_DIR}
+	${TEST} -x ./+RCD_SCRIPTS &&
+		./+RCD_SCRIPTS CHECK-REMOVE ${PKG_METADATA_DIR}
+	${TEST} -x ./+DIRS &&
+		./+DIRS CHECK-REMOVE ${PKG_METADATA_DIR}
 	;;
 esac
 
