@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.498 2004/06/01 19:35:22 shannonjr Exp $
+# $NetBSD: Makefile,v 1.499 2004/06/01 21:39:19 kristerw Exp $
 #
 
 COMMENT=	Development utilities
@@ -59,7 +59,6 @@ SUBDIR+=	cervisia2
 SUBDIR+=	cfitsio
 SUBDIR+=	cgdb
 SUBDIR+=	check
-SUBDIR+=	chkpt
 SUBDIR+=	chmlib
 SUBDIR+=	cmake
 SUBDIR+=	cmdline
@@ -234,7 +233,6 @@ SUBDIR+=	ltsa
 SUBDIR+=	lwp
 SUBDIR+=	m4
 SUBDIR+=	maketool
-SUBDIR+=	mit-pthreads
 SUBDIR+=	mk-files
 SUBDIR+=	mph
 SUBDIR+=	mrproject
@@ -470,7 +468,6 @@ SUBDIR+=	tvision
 SUBDIR+=	ucl
 SUBDIR+=	uml
 SUBDIR+=	unidiff
-SUBDIR+=	unproven-pthreads
 SUBDIR+=	w32api
 SUBDIR+=	xdelta
 SUBDIR+=	xxgdb

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.313 2004/05/10 13:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.314 2004/06/01 21:40:41 kristerw Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -186,7 +186,6 @@ SUBDIR+=	php4-gd
 SUBDIR+=	phpsview
 SUBDIR+=	pixieplus
 SUBDIR+=	pixmap
-SUBDIR+=	plasma
 SUBDIR+=	ploticus
 SUBDIR+=	ploticus-examples
 SUBDIR+=	plotmtv
@@ -236,7 +235,6 @@ SUBDIR+=	urt
 SUBDIR+=	vcg
 SUBDIR+=	vid
 SUBDIR+=	viewfax
-SUBDIR+=	water
 SUBDIR+=	wmphoto
 SUBDIR+=	xart
 SUBDIR+=	xbmbrowser
