@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.436 2002/11/01 16:39:07 wiz Exp $
+$NetBSD: CHANGES,v 1.437 2002/11/01 21:28:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3482,8 +3482,8 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated rsynth to 2.0nb1 [wiz 2002-11-01]
 	Updated gnomeicu to 0.96nb3 [wiz 2002-11-01]
 	Updated p5-gdbm to 1.05nb1 [wiz 2002-11-01]
-	Updated php-dba to 4.2.3nb1 [wiz 2002-11-01]
-	Updated py21-gdbm to 0nb1 [wiz 2002-11-01]
+	Updated php4-dba to 4.2.3nb1 [wiz 2002-11-01]
+	Updated py-gdbm to 0nb1 [wiz 2002-11-01]
 	Updated ruby-gdbm to 1.6.7nb1 [wiz 2002-11-01]
 	Updated tcl-gdbm to 0.8nb1 [wiz 2002-11-01]
 	Updated gdbm_primitive to 1.15nb1 [wiz 2002-11-01]
