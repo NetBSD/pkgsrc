@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2000/02/02 04:05:10 wiz Exp $
+
+--- common/bitmaps/Makefile.in.orig	Tue Jul  6 03:08:48 1999
++++ common/bitmaps/Makefile.in	Wed Feb  2 04:19:18 2000
+@@ -98,7 +98,7 @@
+ 	center.xpm larger.xpm smaller.xpm portrait.xpm landscape.xpm \
+ 	editor.xpm SO3.xpm book-closed.xpm book-open.xpm handlebg.xpm
+ 
+-gifdir = $(prefix)/doc/siag/common/bitmaps
++gifdir = $(prefix)/share/doc/siag/common/bitmaps
+ gif_DATA = bold.gif borders.gif copyright.gif egon_fg.gif fld_open.gif \
+ 	floppy3.gif grid.gif hcenter.gif hleft.gif hright.gif info.gif \
+ 	italic.gif new.gif next.gif none.gif play.gif plotter.gif \
