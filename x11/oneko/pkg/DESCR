@@ -1,0 +1,7 @@
+Oneko  displays a cat that chases your ``mouse'' cursor around
+the desktop.  Command line options let you select an optional
+dog or tora (cat with stripes).
+
+The word ``neko'' means ``cat'' in Japanese.
+
+based on xneko by Masayuki Koba, modified by Tatsuya Kato
