@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:46 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/02/05 12:30:23 jmmv Exp $
 bin/ior-decode-2
 bin/linc-cleanup-sockets
 bin/orbit-idl-2
@@ -59,9 +59,21 @@ lib/pkgconfig/ORBit-CosNaming-2.0.pc
 lib/pkgconfig/ORBit-idl-2.0.pc
 lib/pkgconfig/ORBit-imodule-2.0.pc
 share/aclocal/ORBit2.m4
+share/doc/ORBit2/ORBit2-orbit2-allocators.html
+share/doc/ORBit2/ORBit2-orbit2-small.html
+share/doc/ORBit2/ORBit2.devhelp
+share/doc/ORBit2/general.html
+share/doc/ORBit2/home.png
+share/doc/ORBit2/index.html
+share/doc/ORBit2/index.sgml
+share/doc/ORBit2/left.png
+share/doc/ORBit2/right.png
+share/doc/ORBit2/style.css
+share/doc/ORBit2/up.png
 share/idl/orbit-2.0/CosNaming.idl
 @dirrm share/idl/orbit-2.0
 @unexec ${RMDIR} %D/share/idl 2>/dev/null || ${TRUE}
+@dirrm share/doc/ORBit2
 @dirrm lib/orbit-2.0
 @dirrm include/orbit-2.0/orbit/util
 @dirrm include/orbit-2.0/orbit/poa
