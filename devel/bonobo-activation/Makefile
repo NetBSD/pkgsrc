@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/08/25 19:22:23 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/09/10 13:04:35 wiz Exp $
 #
 
 DISTNAME=		bonobo-activation-1.0.2
@@ -15,10 +15,11 @@ BUILD_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 USE_X11=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 
-.include "../../textproc/libxml2/buildlink.mk"
-.include "../../net/ORBit2/buildlink.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../net/ORBit2/buildlink2.mk"
+.include "../../devel/ptl2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
