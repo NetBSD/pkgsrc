@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1105 2003/01/12 14:06:39 tron Exp $
+$NetBSD: CHANGES,v 1.1106 2003/01/12 15:18:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -241,3 +241,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnumeric to 1.0.12nb1 [rh 2003-01-12]
 	Updated gnome-utils to 1.4.1.2 [rh 2003-01-12]
 	Updated phpmyadmin to 2.3.3.1nb1 [tron 2003-01-12]
+	Updated ssh2 to 3.2.2 [seb 2003-01-12]
