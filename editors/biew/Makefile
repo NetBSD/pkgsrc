@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/27 23:17:59 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/05 17:27:48 grant Exp $
 #
 
 DISTNAME=	biew-520
@@ -18,11 +18,12 @@ USE_GMAKE=	YES
 MAKEFILE=	makefile
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/biew/ ${PREFIX}/share/doc/biew/
-	${INSTALL_PROGRAM} ${WRKSRC}/biew ${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/bin_rc/biew.hlp ${PREFIX}/share/biew/
-	${INSTALL_DATA} ${WRKSRC}/bin_rc/standard.skn ${PREFIX}/share/biew/
-	${INSTALL_DATA} ${WRKSRC}/bin_rc/assembly.skn ${PREFIX}/share/biew/
-	${INSTALL_DATA} ${WRKSRC}/doc/biew_en.txt ${PREFIX}/share/doc/biew/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/biew
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/biew
+	${INSTALL_PROGRAM} ${WRKSRC}/biew ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/bin_rc/biew.hlp ${PREFIX}/share/biew
+	${INSTALL_DATA} ${WRKSRC}/bin_rc/standard.skn ${PREFIX}/share/biew
+	${INSTALL_DATA} ${WRKSRC}/bin_rc/assembly.skn ${PREFIX}/share/biew
+	${INSTALL_DATA} ${WRKSRC}/doc/biew_en.txt ${PREFIX}/share/doc/biew
 
 .include "../../mk/bsd.pkg.mk"
