@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2000/02/04 03:59:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.109 2000/02/06 01:11:26 wiz Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -63,6 +63,7 @@
     SUBDIR += libpcap
 #    SUBDIR += libsocket++
     SUBDIR += lukemftp
+    SUBDIR += micq
     SUBDIR += mirror
     SUBDIR += mouse-pppoe
 #    SUBDIR += mpd
