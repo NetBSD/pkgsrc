@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8080 2004/11/27 16:30:15 taca Exp $
+$NetBSD: CHANGES,v 1.8081 2004/11/27 17:53:40 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5540,3 +5540,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-bigfloag to 1.2.1 [taca 2004-11-27]
 	Updated ruby-bitvector to 0.1.7 [taca 2004-11-27]
 	Updated ruby-gsl to 0.2.0 [taca 2004-11-27]
+	Updated covered-current to 20040325 [dmcmahill 2004-11-27]
