@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.14 2003/10/04 20:25:11 agc Exp $
+# $NetBSD: buildlink2.mk,v 1.15 2003/12/30 23:14:18 cjep Exp $
 #
 # Optionally define:
 #
@@ -19,7 +19,7 @@ _NEED_NCURSES=		YES
 .else
 _NEED_NCURSES=		NO
 
-#                
+#
 # Handle the base system not having (n)curses.
 #
 .  if !(exists(/usr/include/curses.h) || exists(/usr/include/ncurses.h))
