@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/06/15 07:59:32 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2001/06/18 20:33:09 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -29,6 +29,7 @@ CFLAGS=		-O0
 
 .include "../../mk/bsd.prefs.mk"
 
+# GLib needs a working pthreads implementation, and pth is proven to work.
 .if (${OPSYS} != SunOS)
 .include "../../devel/pth/buildlink.mk"
 .endif
