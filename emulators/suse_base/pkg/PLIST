@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/17 00:14:50 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/25 09:16:25 tron Exp $
 sbin/linux-mkpwd
-sbin/rpm2pkg
 @unexec rm -f %D/@@EMULSUBDIR@@/etc/ld.so.cache
 @@EMULSUBDIR@@/etc/ld.so.conf
 @unexec cd %D/@@EMULSUBDIR@@/etc && rm -f group gshadow passwd shadow
