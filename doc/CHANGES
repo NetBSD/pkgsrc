@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9758 2005/04/05 02:01:52 epg Exp $
+$NetBSD: CHANGES,v 1.9759 2005/04/05 08:10:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1907,3 +1907,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated postfix to 2.2.2 [martti 2005-04-04]
 	Updated udfclient to 0.4.3 [reinoud 2005-04-04]
 	Updated subversion to 1.1.4 [epg 2005-04-05]
+	Updated netpbm to 10.26.7 [adam 2005-04-05]
