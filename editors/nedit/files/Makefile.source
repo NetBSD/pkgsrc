@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.source,v 1.2 1998/08/07 10:40:32 agc Exp $
+# $NetBSD: Makefile.source,v 1.3 1999/10/04 23:04:46 hubertf Exp $
 #
 
 CC=cc
@@ -7,6 +7,6 @@ AR=ar
 # For editres, add -DEDITRES to CFLAGS and -lXmu to LIBS
 CFLAGS=-O -I/usr/X11R6/include -DUSE_DIRENT -DUSE_LPR_PRINT_CMD
 ARFLAGS=-ur
-LIBS= -L/usr/X11R6/lib -lm -lXm -lXpm -lXext -lXt -lSM -lICE -lX11
+LIBS= -L/usr/X11R6/lib -lm -lXm -lXext -lXt -lSM -lICE -lX11
 
 include Makefile.common
