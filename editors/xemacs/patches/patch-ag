@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 1999/06/29 23:13:41 tron Exp $
+
+--- src/s/netbsd.h.orig	Fri Jul 24 05:57:27 1998
++++ src/s/netbsd.h	Fri Jul 24 05:58:34 1998
+@@ -60,3 +60,7 @@
+ #define ORDINARY_LINK
++#ifdef __ELF__
++#define UNEXEC "unexelf.o" /* we're not in an a.out world anymore friends */
++#else
+ #define UNEXEC "unexfreebsd.o"  /* ironic, considering history of unexfreebsd */
++#endif
+ 
