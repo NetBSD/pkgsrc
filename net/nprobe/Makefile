@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/08/07 09:46:43 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/07 12:07:46 agc Exp $
 
 DISTNAME=	nProbe-source-1.3.1
 PKGNAME=	nprobe-1.3.1
 CATEGORIES=	net
 MASTER_SITES=	http://luca.ntop.org/nprobeDownload/
-# This program is not available anywhere else but the ntop site.
-MASTER_SITE_BACKUP=
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	cjs@netbsd.org
