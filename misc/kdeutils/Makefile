@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1999/05/20 20:09:51 tron Exp $
+# $NetBSD: Makefile,v 1.29 1999/06/04 00:11:36 tron Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
-DEPENDS+=	kdebase-1.1:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.1:../../x11/kdebase
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
