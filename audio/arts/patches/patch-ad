@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/05/31 15:02:58 skrll Exp $
+
+--- soundserver/Makefile.am.orig	Wed May  8 19:57:54 2002
++++ soundserver/Makefile.am
+@@ -45,7 +45,7 @@
+ bin_PROGRAMS = artsd artsplay artscat artswrapper artsshell artsrec
+ 
+ artsd_LDADD = libsoundserver_idl.la $(FLOWLIBS) \
+-              $(top_builddir)/mcop_mt/libmcop_mt.la $(USE_THREADS)
++              $(top_builddir)/mcop/libmcop.la $(USE_THREADS)
+ artsd_SOURCES = soundserverv2_impl.cc soundserver_impl.cc simplesoundserver_impl.cc artsd.cc cpuusage.cc samplestorage_impl.cc
+ 
+ artscat_LDADD = libsoundserver_idl.la $(FLOWLIBS)
