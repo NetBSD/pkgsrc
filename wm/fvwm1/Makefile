@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/06/17 09:28:59 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/03 03:32:32 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -45,8 +45,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/fvwm_icons/*.xbm \
 	  ${WRKSRC}/fvwm_icons/*.bitmap ${WRKSRC}/fvwm_icons/*.icon \
 	  ${PREFIX}/lib/X11/fvwm/bitmaps
-	${INSTALL_MAN} ${WRKSRC}/modules/GoodStuff/GoodStuff.man \
-	  ${PREFIX}/man/man1/GoodStuff.1
-	${INSTALL_MAN} ${WRKSRC}/fvwm/fvwm.man ${PREFIX}/man/man1/fvwm.1
 
 .include "../../mk/bsd.pkg.mk"

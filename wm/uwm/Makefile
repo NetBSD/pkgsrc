@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:21 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/03 03:32:36 jschauma Exp $
 
 DISTNAME=	X.V11R3uwm
 PKGNAME=	uwm-19881027
+PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
