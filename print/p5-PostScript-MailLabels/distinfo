@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/09/29 06:17:27 jlam Exp $
+$NetBSD: distinfo,v 1.2 2005/02/03 21:51:32 jlam Exp $
 
-SHA1 (PostScript-MailLabels-1.01.tar.gz) = e7d6d44409298d328a627440f92b4872a3a86095
-Size (PostScript-MailLabels-1.01.tar.gz) = 25087 bytes
+SHA1 (PostScript-MailLabels-2.10.tar.gz) = 3fbfb65599cd731bb244408f4ea4e3a81a9d9345
+Size (PostScript-MailLabels-2.10.tar.gz) = 37932 bytes
+SHA1 (patch-aa) = 39ab63574788d4ecaf0c8efd596ff5df86781b3d
