@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/19 19:17:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/23 19:58:42 xtraeme Exp $
 
 DISTNAME=		openntpd-20040719p
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.openntpd.org/dist/portable/
 
 MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://www.openntpd.org/
 COMMENT=                Free implementation of the Network Time Protocol
+
+PKG_INSTALLATYON_TYPES=	overwrite pkgviews
+
+CONFLICTS+=		ntp-[0-9]*
 
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
