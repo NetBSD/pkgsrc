@@ -1,4 +1,4 @@
-$NetBSD: patch-bw,v 1.1 2004/06/02 15:09:01 taya Exp $
+$NetBSD: patch-bw,v 1.2 2004/06/15 20:05:54 reinoud Exp $
 
 diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp
 --- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp	2001-09-29 05:12:52.000000000 +0900
@@ -34,7 +34,7 @@ diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha
 +"	.prologue 1\n"					\
 +"	lda $1,"#n"\n"					\
 +"	br $31,$SharedStub..ng\n"			\
-+"	.end _ZN14nsXPTCStubBase6Stub"#n"Ev"		\
++"	.end _ZN14nsXPTCStubBase6Stub"#n"Ev\n"		\
 +"	.elseif "#n" < 1000 \n"				\
 +"	.globl _ZN14nsXPTCStubBase7Stub"#n"Ev\n"	\
 +"	.ent _ZN14nsXPTCStubBase7Stub"#n"Ev\n"		\
