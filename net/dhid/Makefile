@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/07/25 15:27:02 tv Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 01:53:42 tv Exp $
 #
 
 DISTNAME=	dhid-5.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.dhis.org/pub/dhis/
 
@@ -9,8 +10,7 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.dhis.org/
 COMMENT=	Dynamic Host Information System client daemon
 
-DEPENDS+=	gmp-[0-9]*:../../devel/gmp
-
+USE_BUILDLINK3=	yes
 USE_PKGINSTALL=	yes
 RCD_SCRIPTS=	dhid
 
@@ -24,4 +24,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${PREFIX}/share/doc/dhid
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dhid
 
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
