@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/09/15 00:48:38 tv Exp $
+# $NetBSD: Makefile,v 1.15 1998/09/16 15:25:08 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/09/24 06:55:01 tg Exp
 #
 
@@ -16,6 +16,7 @@ post-extract:
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/doc/giflib
-	@${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/giflib
+	@${INSTALL_DATA} ${WRKSRC}/doc/*.html ${WRKSRC}/doc/*.txt \
+	  ${PREFIX}/share/doc/giflib
 
 .include "../../mk/bsd.pkg.mk"
