@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.847 2003/09/11 06:46:13 martti Exp $
+$NetBSD: TODO,v 1.848 2003/09/11 12:55:19 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -163,8 +163,6 @@ Suggested package updates
 	o lavaps-2.3
 	o lcms-1.0.9
 	o libgcrypt-1.1.42
-	o libgda-0.90.0
-	o libgnomedb-0.90.0
 	o libgphoto2-2.1.2
 	o licq-1.2.7
 	o libmpeg3-1.5.3
