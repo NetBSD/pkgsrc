@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2615 2003/06/29 10:24:39 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2616 2003/06/29 11:46:13 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2604,3 +2604,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sane-backends to 1.0.12 [rh 2003-06-29]
 	Updated sane-frontends to 1.0.11 [rh 2003-06-29]
 	Updated lftp to 2.6.6 [uebayasi 2003-06-29]
+	Updated xosd to 2.2.2 [jmmv 2003-06-29]
+	Updated xmms-osd to 2.2.2 [jmmv 2003-06-29]
