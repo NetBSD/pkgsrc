@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2002/01/20 09:25:51 tron Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/02 14:50:01 drochner Exp $
 
-DISTNAME=	napshare-1.0
+DISTNAME=	napshare-1.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=napshare/}
 
@@ -17,6 +17,5 @@ EVAL_PREFIX+=	GTKDIR=gtk+
 CONFIGURE_ARGS+=--with-gtk-prefix="${GTKDIR}"
 
 CFLAGS+=	`${GTKDIR}/bin/gtk-config --cflags`
-WRKSRC=		${WRKDIR}/napshare
 
 .include "../../mk/bsd.pkg.mk"
