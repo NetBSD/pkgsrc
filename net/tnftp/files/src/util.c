@@ -1,7 +1,7 @@
-/*	$NetBSD: util.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	$NetBSD: util.c,v 1.2 2004/07/27 10:25:09 grant Exp $	*/
 
 /*-
- * Copyright (c) 1997-2003 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997-2004 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -76,7 +76,7 @@
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.1 2004/03/11 13:01:01 grant Exp $");
+__RCSID("$NetBSD: util.c,v 1.2 2004/07/27 10:25:09 grant Exp $");
 #endif /* not lint */
 #endif
 
@@ -304,9 +304,10 @@ cleanuppeer(void)
  * Top-level signal handler for interrupted commands.
  */
 void
-intr(int dummy)
+intr(int signo)
 {
 
+	sigint_raised = 1;
 	alarmtimer(0);
 	if (fromatty)
 		write(fileno(ttyout), "\n", 1);
