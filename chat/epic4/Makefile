@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2001/03/23 09:48:09 zuntum Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/26 15:39:29 zuntum Exp $
 #
 
-DISTNAME=	epic4-0.9.17
+DISTNAME=	epic4-0.10.1
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.magenet.com/pub/epic/EPIC4-BETA/		\
 		ftp://ftp.icm.edu.pl/vol/rzm0/irc/EPIC/EPIC4-BETA/	\
 		ftp://ftp.archive.de.uu.net/pub/unix/irc/epic/EPIC4-BETA/ \
 		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-BETA/
-DISTFILES=	epic4-0.9.17.tar.gz					\
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}				\
 		epic4pre2-help.tar.gz
+EXTRACT_SUFX=	.tar.bz2
 
 # to get USE_INET6
 .include "../../mk/bsd.prefs.mk"
@@ -24,7 +25,7 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.epicsol.org/
 COMMENT=	The (E)nhanced (P)rogrammable (I)RC-II (C)lient
 
-EXTRACT_ONLY=	epic4-0.9.17.tar.gz
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 GNU_CONFIGURE=	YES
 
