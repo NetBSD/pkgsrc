@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.247 2002/05/30 22:55:21 schmonz Exp $
+# $NetBSD: Packages.txt,v 1.248 2002/06/17 09:51:27 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -533,6 +533,9 @@ items are present and properly configures:
  * adjust .../mk/bulk/build.conf
 
 !!! Don't forget to install X !!!
+If you are a developer and want to upload the resulting binary packages 
+to ftp.netbsd.org, make sure you are using the default X version for your
+architecture and release (up to 1.6, that is 3.3.6 for all architectures).
 
 Next thing you will want to is make sure /usr/sandbox/usr/pkgsrc contains a
 fresh checkout of pkgsrc (e.g. from anoncvs). Do not mount/link this to the
