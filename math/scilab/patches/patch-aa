@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 1999/03/05 11:22:34 frueauf Exp $
+$NetBSD: patch-aa,v 1.3 1999/10/20 13:16:59 dmcmahill Exp $
 
 --- configure.in.orig	Thu Sep 17 07:44:35 1998
-+++ configure.in	Fri Jan 15 22:15:57 1999
-@@ -684,4 +684,100 @@
++++ configure.in	Mon Oct  4 21:52:54 1999
+@@ -684,4 +684,108 @@
      MAKEFILE_TARGET=Makefile.gcwin32
      ;;
 +  *-*-freebsd*)
@@ -53,15 +53,23 @@ $NetBSD: patch-aa,v 1.2 1999/03/05 11:22:34 frueauf Exp $
 +   #
 +   # Fortran Compiler
 +   #
-+   AC_CHECK_PROGS(F77,f77 f2c-f77,no)
-+   if test "$F77" = no; then
-+     AC_MSG_ERROR([Unable to configure: Fortran, f77 or f2c-f77, compiler not found])
++   if test "$with_f2c" = yes; then
++     AC_CHECK_PROGS(F77,f2c-f77,no)
++     if test "$F77" = no; then
++       AC_MSG_ERROR([Unable to configure: Fortran compiler f2c-f77 not found])
++     fi
++   else         
++     AC_CHECK_PROGS(F77,f77 f2c-f77,no)
++     if test "$F77" = no; then
++       AC_MSG_ERROR([Unable to configure: Fortran, f77 or f2c-f77, compiler not found])
++     fi
 +   fi
 + 
 +   FC=$F77
 +   FC_OPTIONS='-O2'
 +   FC_LDFLAGS="-Wl,-R${X11BASE}/lib"
 +   FC_PICFLAGS='-fPIC'
++
 +
 +   # check for --export-dynamic
 +   ac_save_LDFLAGS="$LDFLAGS"
@@ -103,7 +111,7 @@ $NetBSD: patch-aa,v 1.2 1999/03/05 11:22:34 frueauf Exp $
 +
    *)
      AC_MSG_ERROR("Unable to configure for host $host")
-@@ -849,4 +945,9 @@
+@@ -849,4 +953,9 @@
  AC_CHECK_FUNCS(usleep)
  
 +########################
@@ -113,7 +121,7 @@ $NetBSD: patch-aa,v 1.2 1999/03/05 11:22:34 frueauf Exp $
 +
  ##################
  ## termcap library
-@@ -883,20 +984,38 @@
+@@ -883,20 +992,38 @@
  if test "$with_pvm" != no; then
  
 -AC_CACHE_CHECK("for PVM architecture",ac_cv_PVM_arch,
