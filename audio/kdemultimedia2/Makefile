@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/17 16:03:18 skrll Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/12 20:33:00 jlam Exp $
 
 DISTNAME=	kdemultimedia-2.1
 CATEGORIES=	audio kde
@@ -10,7 +10,7 @@ DEPENDS+=	pth>=1.3.7:../../devel/pth
 
 .include "../../x11/kde2/Makefile.part2"
 
-CONFIGURE_ENV+=	LIBS="-Wl,--export-dynamic"
+LIBS=		-Wl,--export-dynamic
 
 post-patch:
 	${CP} ${WRKSRC}/kscd/config.h.std ${WRKSRC}/kscd/config.h

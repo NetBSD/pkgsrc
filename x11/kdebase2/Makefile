@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/05/11 17:43:21 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2001/06/12 20:33:10 jlam Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -17,7 +17,7 @@ USE_MESA=	yes
 .include "../../x11/kde2/Makefile.part2"
 
 CONFIGURE_ARGS+=	--disable-greet-lib
-CONFIGURE_ENV+=	LIBS="-Wl,--export-dynamic"
+LIBS=			-Wl,--export-dynamic
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 IMAKEDIR=	${WRKDIR}/imake

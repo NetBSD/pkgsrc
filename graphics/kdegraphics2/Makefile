@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/14 16:10:41 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/12 20:33:03 jlam Exp $
 #
 
 DISTNAME=	kdegraphics-2.1
@@ -15,6 +15,6 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/kdvi/kpathsea/ltconfig
 
 .include "../../x11/kde2/Makefile.part2"
 
-CONFIGURE_ENV+=	LIBS="-Wl,--export-dynamic"
+LIBS=		-Wl,--export-dynamic
 
 .include "../../mk/bsd.pkg.mk"

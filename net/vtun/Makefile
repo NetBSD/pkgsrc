@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/13 19:02:47 kim Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/12 20:33:07 jlam Exp $
 
 DISTNAME=	vtun-2.4
 CATEGORIES=	net
@@ -17,7 +17,6 @@ CONFIGURE_ARGS+=--with-ssl-headers=${SSLBASE}/include/openssl \
 		--with-lzo-headers=${LOCALBASE}/include \
 		--with-lzo-lib=${LOCALBASE}/lib
 LIBS+=		${LDFLAGS}
-CONFIGURE_ENV+=	LIBS="${LIBS}"
 
 ALL_TARGET=	vtund
 PLIST_SUBST+=	PREFIX=${PREFIX}
