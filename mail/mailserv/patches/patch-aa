@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/08/01 13:54:10 rh Exp $
+
+--- mailserv.orig	Fri Nov  5 06:02:55 1999
++++ mailserv
+@@ -28,7 +28,7 @@
+ ## the include files are write-protected, otherwise someone
+ ## could add malicious code to them.
+ 
+-@INC = (".", "./config");
++@INC = (".", "./config", "@PREFIX@/etc/mailserv");
+ &cgiRequire("cgi-lib.pl");
+ &ReadParse();
+ 
+@@ -65,7 +65,7 @@
+  # Program into which mail is piped
+  # You can override this with $config::mailer.
+ 
+-$mailer = "/usr/lib/sendmail -t";
++$mailer = "/usr/sbin/sendmail -t";
+ 
+  # Use "-f address" for the mailer?
+  # Your sendmail must be configured correctly for this to work.
