@@ -300,6 +300,7 @@ Suggested package updates
 	o netcdf-3.5.1
 	o nosefart-2.1
 	o ns-flash-6.0.79
+	o nsd-2.1.0
 	o nslint-2.1a3
 	o nut-9.13
 	o nxtvepg-2.7.0
@@ -320,7 +321,7 @@ Suggested package updates
 	o pgplot-5.2 [grant]
 	o physfs-1.0.0
 	o plib-1.7.0
-	o ploticus-2.20
+	o ploticus-2.21
 	o postfix-2.1.1
 	o psi-0.9.1
 	o pwlib-1.5.2
