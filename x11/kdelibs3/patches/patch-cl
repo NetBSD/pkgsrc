@@ -1,0 +1,37 @@
+$NetBSD: patch-cl,v 1.1 2005/03/17 09:46:36 markd Exp $
+
+--- dcop/KDE-ICE/Xtranssock.c.orig	2004-06-23 05:36:31.000000000 +1200
++++ dcop/KDE-ICE/Xtranssock.c
+@@ -940,6 +940,7 @@ TRANS(SocketUNIXCreateListener) (XtransC
+ #endif
+ 
+     unlink (sockname.sun_path);
++    (void) umask (oldUmask);
+ 
+     if ((status = TRANS(SocketCreateListener) (ciptr,
+ 	(struct sockaddr *) &sockname, namelen)) < 0)
+@@ -947,7 +948,6 @@ TRANS(SocketUNIXCreateListener) (XtransC
+ 	PRMSG (1,
+     "SocketUNIXCreateListener: ...SocketCreateListener() failed\n",
+ 	    0, 0, 0);
+-	(void) umask (oldUmask);
+ 	return status;
+     }
+ 
+@@ -965,7 +965,6 @@ TRANS(SocketUNIXCreateListener) (XtransC
+         PRMSG (1,
+         "SocketUNIXCreateListener: Can't allocate space for the addr\n",
+ 	    0, 0, 0);
+-	(void) umask (oldUmask);
+         return TRANS_CREATE_LISTENER_FAILED;
+     }
+ 
+@@ -973,8 +972,6 @@ TRANS(SocketUNIXCreateListener) (XtransC
+     ciptr->addrlen = namelen;
+     memcpy (ciptr->addr, &sockname, ciptr->addrlen);
+ 
+-    (void) umask (oldUmask);
+-
+     return 0;
+ }
+ 
