@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8770 2005/01/16 08:59:55 kei Exp $
+$NetBSD: CHANGES,v 1.8771 2005/01/16 15:12:57 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -334,3 +334,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated galeon to 1.2.14nb4 [taya 2005-01-15]
 	Updated teTeX-bin to 2.0.2nb3 [kei 2005-01-16]
 	Updated Gauche to 0.8.3 [kei 2005-01-16]
+	Updated chicken to 1.89 [jmmv 2005-01-16]

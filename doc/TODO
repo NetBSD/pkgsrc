@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2909 2005/01/16 13:30:27 wiz Exp $
+$NetBSD: TODO,v 1.2910 2005/01/16 15:12:57 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,6 @@ Suggested package updates
 	o cgicc-3.2.3
 	o check-0.9.2
 	o chemtool-1.6.4
-	o chicken-1.86 [pkg/28980]
 	o chktex-1.6.2
 	o cilk-5.3.2
 	o cint-5.15
