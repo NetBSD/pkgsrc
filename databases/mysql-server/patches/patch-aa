@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2002/01/08 14:09:39 martti Exp $
+$NetBSD: patch-aa,v 1.6 2002/03/18 14:17:44 martti Exp $
 
---- Makefile.in.orig	Thu Dec 27 13:37:01 2001
-+++ Makefile.in	Tue Jan  8 13:55:38 2002
-@@ -182,7 +182,7 @@
+--- Makefile.in.orig	Thu Feb 14 18:50:36 2002
++++ Makefile.in	Mon Mar 18 14:48:56 2002
+@@ -184,7 +184,7 @@
  # These are built from source in the Docs directory
  EXTRA_DIST = INSTALL-SOURCE README 			COPYING COPYING.LIB MIRRORS
  
