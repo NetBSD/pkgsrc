@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/06/12 02:20:33 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/04 22:19:31 jmmv Exp $
 #
 
-DISTNAME=	buildtool-doc-0.15
+DISTNAME=	buildtool-doc-0.16
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buildtool/}
 
@@ -14,16 +14,13 @@ BUILD_DEPENDS+=	docbook-xsl>=1.61.3:../../textproc/docbook-xsl
 
 USE_BUILDLINK3=	yes
 
+CONFIGURE_ARGS+=	--dir-html=${PREFIX}/share/doc/buildtool-doc/html
 CONFIGURE_ENV+=	CATALOG_FILE="${XML_DEFAULT_CATALOG}"
 CONFIGURE_ENV+=	DOCBOOK_XSL="${PREFIX}/share/xsl/docbook"
 
 BUILDLINK_DEPMETHOD.libxml2?=	build
 BUILDLINK_DEPMETHOD.libxslt?=	build
 BUILDLINK_DEPMETHOD.xmlcatmgr?=	build
-
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${DISTNAME}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/buildtool
 
 .include "../../devel/buildtool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
