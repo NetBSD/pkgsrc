@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/10/15 12:18:39 rh Exp $
+# $NetBSD: Makefile,v 1.27 2000/11/02 14:02:04 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/11/17 10:53:52 tg Exp
 #
 
@@ -26,5 +26,6 @@
     SUBDIR += verilog-current
     SUBDIR += vipec
     SUBDIR += xchiplogo
+    SUBDIR += xcircuit
 
 .include "../mk/bsd.pkg.subdir.mk"
