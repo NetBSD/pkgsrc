@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/30 19:49:08 kristerw Exp $
+bin/simulavr
+bin/simulavr-disp
+bin/simulavr-vcd
+info/simulavr.info
+man/man1/simulavr-disp.1
+man/man1/simulavr.1
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/ChangeLog-2001
+share/doc/${PKGNAME}/ChangeLog-2002
+share/doc/${PKGNAME}/ChangeLog-2003
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/ProjSummary
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/README.gdb
+share/doc/${PKGNAME}/README.opcodes
+share/doc/${PKGNAME}/TODO
+share/doc/${PKGNAME}/simulavr.ps
+@exec ${MKDIR} %D/share/doc/${PKGNAME}/internals_html
+@dirrm share/doc/${PKGNAME}/internals_html
+@exec ${MKDIR} %D/share/doc/${PKGNAME}/html
+@dirrm share/doc/${PKGNAME}/html
+@dirrm share/doc/${PKGNAME}
