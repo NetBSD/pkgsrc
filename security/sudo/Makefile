@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2002/01/18 11:44:14 taca Exp $
+# $NetBSD: Makefile,v 1.44 2002/01/24 16:01:02 taca Exp $
 #
 
-DISTNAME=		sudo-1.6.5p1
-PKGNAME=		${DISTNAME:S/p1/.1/}
+DISTNAME=		sudo-1.6.5p2
+PKGNAME=		${DISTNAME:S/p1/.2/}
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--disable-root-mailer
+CONFIGURE_ARGS+=	--disable-root-mailer --disable-setreuid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .if ${OPSYS} == "NetBSD"
