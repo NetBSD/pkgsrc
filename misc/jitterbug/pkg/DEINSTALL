@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 1999/10/11 13:39:33 wennmach Exp $
+# $NetBSD: DEINSTALL,v 1.2 2000/09/12 17:23:02 wennmach Exp $
 
 JB_USER=@JB_USER@
 JB_GROUP=@JB_GROUP@
@@ -18,10 +18,9 @@ fi
 echo "If you are removing jitterbug permanently, you may wish to"
 echo "  - remove user ${JB_USER}"
 echo "  - remove group ${JB_GROUP}"
-echo "  - rm -rf ${PREFIX}/${JB_USER}"
-echo "  - rm -rf ${PREFIX}/etc/jitterbug"
-echo "  - remove entries in ${PREFIX}/etc/httpd/httpd.conf"
-echo "  - remove mail alias for ${JB_PACKAGE}-bugs in /etc/aliases"
-echo "           and run newaliases"
+echo "  - remove entries in your httpd.conf (usually ${PREFIX}/etc/httpd/httpd.conf)"
+echo "  - remove mail alias for ${JB_PACKAGE}-bugs in your mail aliases"
+echo "           (typically /etc/aliases or /etc/mail/aliases)"
+echo "           and run \`newaliases' (if you use sendmail)"
 
 exit 0
