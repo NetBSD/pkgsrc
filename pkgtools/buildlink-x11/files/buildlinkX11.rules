@@ -1,4 +1,6 @@
-/*	$NetBSD: buildlinkX11.rules,v 1.1.1.1 2001/07/02 21:00:44 jlam Exp $	*/
+/*	$NetBSD: buildlinkX11.rules,v 1.2 2001/07/05 17:23:00 jlam Exp $	*/
+
+#include <X11.rules>
 
 #ifdef UseInstalled
 # ifdef BuildLink
@@ -11,24 +13,6 @@
 #    undef TopXInclude
 #   endif
 #   define TopXInclude	-I$(BUILDLINK_DIR)/include
-#  else
-#   ifdef TopXInclude
-#    undef TopXInclude
-#   endif
-#   ifdef X11ProjectRoot
-#    define TopXInclude	-I$(XPROJECTROOT)/include
-#   else
-#    define TopXInclude	-I$(INCROOT)
-#   endif
-#  endif /* BuildLinkX11 */
-# endif /* BuildLink */
-#endif /* UseInstalled */
-
-#include <X11.rules>
-
-#ifdef UseInstalled
-# ifdef BuildLink
-#  ifdef BuildLinkX11
 #   ifdef XLdPreLibs
 #    undef XLdPreLibs
 #   endif
@@ -46,6 +30,14 @@
 #   endif
 #   define LdPostLibs	LdPostLib XLdPostLibs
 #  else
+#   ifdef TopXInclude
+#    undef TopXInclude
+#   endif
+#   ifdef X11ProjectRoot
+#    define TopXInclude	-I$(XPROJECTROOT)/include
+#   else
+#    define TopXInclude	-I$(INCROOT)
+#   endif
 #   ifdef XLdPreLibs
 #    undef XLdPreLibs
 #   endif
@@ -71,5 +63,9 @@
 #   endif
 #   define LdPostLibs	LdPostLib XLdPostLibs
 #  endif /* BuildLinkX11 */
+#  ifdef TopIncludes
+#   undef TopIncludes
+#  endif
+#  define TopIncludes	TopInclude $(TOP_X_INCLUDES)
 # endif /* BuildLink */
 #endif /* UseInstalled */
