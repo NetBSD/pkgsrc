@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.518 2003/05/05 20:27:41 jmmv Exp $
+$NetBSD: TODO,v 1.519 2003/05/06 16:12:16 salo Exp $
 
 Suggested new packages
 ======================
@@ -100,7 +100,6 @@ Suggested package updates
 	o dctc-0.85.2
 	o ddd-3.3.5
 	o dia-0.91 [pkg/20750,21308]
-	o dillo-0.7.2
 	o disc-cover-1.5.0
 	o distcc-2.1
 	o doxygen-1.3
