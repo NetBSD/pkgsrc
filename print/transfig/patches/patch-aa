@@ -1,0 +1,31 @@
+--- fig2dev/Imakefile.orig	Fri Aug 22 23:33:55 1997
++++ fig2dev/Imakefile	Sun Feb  8 15:57:10 1998
+@@ -54,7 +54,7 @@
+ XCOMM Finally, if your system doesn't have ndbm (the 'new' database subroutines)
+ XCOMM remove the -DNDBM from the XPMDBM definition.
+ 
+-XCOMM #define USEXPM
++#define USEXPM
+ 
+ XCOMM If you don't have the JPEG library or don't want to use JPEG, comment
+ XCOMM out the following line
+@@ -78,7 +78,7 @@
+ #ifdef USEXPM
+ DUSEXPM = -DUSE_XPM
+ XPMLIBDIR = $(USRLIBDIR)
+-XPMINC = -I$(INCDIR)
++XPMINC = -I$(INCDIR)/X11
+ XPMLIB = -L$(XPMLIBDIR) -lXpm -lX11
+ XPMRGB = XPMRGB=$(LIBDIR)/rgb
+ XPMDBM = -DNDBM
+@@ -137,8 +137,8 @@
+ #ifdef USEJPEG
+ 
+ #ifdef USEINSTALLEDJPEG
+-JPEGLIBDIR = /usr/local/lib
+-JPEGINCDIR = /usr/include/X11
++JPEGLIBDIR = $(LOCALBASE)/lib
++JPEGINCDIR = $(LOCALBASE)/include
+ JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
+ #else
+ JPEGLIBDIR = ../../jpeg
