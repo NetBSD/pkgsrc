@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/07/16 08:24:15 agc Exp $
+# $NetBSD: Makefile,v 1.8 2002/07/17 16:36:25 wiz Exp $
 #
 
 DISTNAME=		cheesetracker-0.5.5
@@ -9,6 +9,7 @@ MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.reduz.com.ar/cheesetracker/
 COMMENT=		impulse tracker clone
 
+BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 DEPENDS+=		gtk-->=1.2:../../x11/gtk--
 
 GCC_VERSION!=           gcc --version
