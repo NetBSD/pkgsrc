@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/09/12 02:30:23 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/08 12:39:28 jlam Exp $
 
 DISTNAME=		xrolodex.1.5.motif
 PKGNAME=		xrolodex-1.5
@@ -9,9 +9,11 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		root@garbled.net
 COMMENT=		Motif/X11 rolodex application
 
+USE_BUILDLINK2=		# defined
+USE_IMAKE=		# defined
+
 WRKSRC=			${WRKDIR}/xrolodex.15
 MAKE_ENV+=		XMLIB="${MOTIFLIB}"
-USE_IMAKE=		yes
 
-.include "../../mk/motif.buildlink.mk"
+.include "../../mk/motif.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
