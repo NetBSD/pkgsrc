@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1134 2003/12/06 00:53:47 xtraeme Exp $
+$NetBSD: TODO,v 1.1135 2003/12/06 17:21:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -119,14 +119,15 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o awstats-5.9
 	o balsa-1.4.4
+	o bins-1.1.24
 	o bkedit-0.6.22
-	o blender-2.30
+	o blender-2.31a
 	o bzflag-1.7g2
 	o centericq-4.9.9
 	o cervisia-2.0
 	o clisp-2.31
 	o clusterit-2.2
-	o conserver-8.0.7
+	o conserver-8.0.8
 	o courier-0.42.2 [pkg/22373]
 	o courier-0.44.2
 	o courier-auth-0.42.2 [pkg/22371]
@@ -138,7 +139,7 @@ Suggested package updates
 	o crossfire-1.5.0
 	o csound-4.24.1
 	o curl-7.10.8
-	o cvs-1.11.9
+	o cvs-1.12.3
 	o cvsup-16.1.h [pkg/22870]
 	o cxref-1.5e
 	o cxunzip-0.98 [pkg/23404]
@@ -159,7 +160,7 @@ Suggested package updates
 	o echoping-5.0.1
 	o eclipse-2.1.2
 	o elinks-0.4.3
-	o elk-3.99.5
+	o elk-3.99.6
 	o elm-me-2.4pl109a
 	o enlightenment-0.16.6
 	o epic4-1.1.15
@@ -180,7 +181,7 @@ Suggested package updates
 	o gdb-6.0
 	o gdm-2.4.4.4
 	o generator-0.35
-	o gentoo-0.11.44
+	o gentoo-0.11.45
 	o gettext-0.13
 	o gforth-0.6.2
 	o gftp-2.0.16
@@ -201,6 +202,7 @@ Suggested package updates
 	o gossip-0.6
 	o gpa-0.7.0
 	o gperiodic-2.0.7
+	o gpsim-0.21.0 [bouyer]
 	o grace-5.1.12
 	o grepmail-5.21
 	o gsed-4.0.8 [seb]
@@ -211,13 +213,12 @@ Suggested package updates
 	o gtksee-0.5.5.1
 	o guile-1.6.4
 	o hatari-0.45
-	o host-20030604
+	o host-20031203
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
 	o icepref-2.2
 	o inn-2.4.0
-	o iozone-3.203
-	o irssi-0.8.8 [pkg/23560]
+	o iozone-3.207
 	o isync-0.9.1 [pkg/22189]
 	o ivtools-1.1.1
 	o jakarta-tomcat-3.3.1a
@@ -242,6 +243,7 @@ Suggested package updates
 	o libvorbis-1.0.1
 	o licq-1.2.7
 	o lilypond-2.0.0
+	o linc-1.0.3 [pkg/23673]
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lwm-1.01
@@ -259,6 +261,7 @@ Suggested package updates
 	o mimedefang-2.39 [markd]
 	o minicom-2.1
 	o mowitz-0.3.0
+	o moz-mplayer-1.0
 	o mplayer-1.0pre2
 	o mrproject-0.9.1
 	o mrtg-2.10.6
@@ -324,7 +327,7 @@ Suggested package updates
 	o smarteiffel-1.1 [replacing smalleiffel]
 	o sml-nj-110.44
 	o snd-7.0
-	o snes9x-1.41
+	o snes9x-1.42
 	o snort-2.0.5
 	o sodipodi-0.33
 	o speex-1.0.3
@@ -333,11 +336,12 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7
 	o stella-1.3
+	o streamtuner-0.10.2
 	o sylpheed-claws-0.9.7
 	o t1lib-5.0.0
 	o tcl/tk-8.4.5
 	o tcl-expect-5.39.0
-	o tcpreplay-1.4.5
+	o tcpreplay-1.4.6
 	o tct-1.12
 	o teapop-0.3.8
 	o tin-1.6.1 [dillo]
@@ -374,6 +378,7 @@ Suggested package updates
 	o xmms-1.2.8
 	o xmms-crossfade-0.3.4
 	o xnc-5.0.2
+	o xorp-0.5
 	o xpad-1.13
 	o xps-4.2
 	o xpuyopuyo-0.9.5
@@ -387,7 +392,6 @@ Suggested package updates
 	o zenicb 1.31 (needs merge with lots of local changes)
 	o zlib-1.2.1
 	o zope-2.6.2
-	o gpsim-0.21.0 [bouyer]
 
 Infrastructure problems which need addressing
 =============================================
