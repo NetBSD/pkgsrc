@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/02/14 17:21:42 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/22 22:46:10 snj Exp $
 # FreeBSD: ports/graphics/lcms/Makefile,v 1.2 2000/12/19 15:36:26 sobomax Exp
 
 DISTNAME=	lcms-1.12
@@ -20,6 +20,9 @@ TEST_TARGET=		check
 CONFIGURE_ARGS+=	--without-jpeg
 CONFIGURE_ARGS+=	--without-tiff
 CONFIGURE_ARGS+=	--without-zlib
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 INSTALLATION_DIRS+=	share/doc/lcms
 
