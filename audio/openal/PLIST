@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/17 15:57:04 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/26 13:48:56 seb Exp $
 include/AL/al.h
 include/AL/alc.h
 include/AL/alctypes.h
@@ -9,9 +9,7 @@ include/AL/alu.h
 include/AL/alut.h
 include/AL/aluttypes.h
 include/AL/alutypes.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/openal.info
 info/openal.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/openal.info
 lib/libopenal.a
 lib/libopenal.so
 lib/libopenal.so.0
