@@ -1,30 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/05 05:53:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/30 09:56:44 markd Exp $
 bin/kile
 share/doc/kde/HTML/en/kile/index.html
 share/kde/applnk/Applications/kile.desktop
+share/kde/apps/kile/doc/doc1.png
+share/kde/apps/kile/doc/doc10.png
+share/kde/apps/kile/doc/doc11.png
+share/kde/apps/kile/doc/doc12.png
+share/kde/apps/kile/doc/doc2.png
+share/kde/apps/kile/doc/doc3.png
+share/kde/apps/kile/doc/doc4.png
+share/kde/apps/kile/doc/doc5.png
+share/kde/apps/kile/doc/doc6.png
+share/kde/apps/kile/doc/doc7.png
+share/kde/apps/kile/doc/doc8.png
+share/kde/apps/kile/doc/doc9.png
 share/kde/apps/kile/doc/latexhelp.html
 share/kde/apps/kile/doc/logo.png
-share/kde/apps/kile/doc/toolbar1.png
-share/kde/apps/kile/doc/toolbar2.png
-share/kde/apps/kile/doc/tutorial.html
-share/kde/apps/kile/doc/tutorial1.png
-share/kde/apps/kile/doc/tutorial10.png
-share/kde/apps/kile/doc/tutorial11.png
-share/kde/apps/kile/doc/tutorial12.png
-share/kde/apps/kile/doc/tutorial13.png
-share/kde/apps/kile/doc/tutorial14.png
-share/kde/apps/kile/doc/tutorial16.png
-share/kde/apps/kile/doc/tutorial17.png
-share/kde/apps/kile/doc/tutorial18.png
-share/kde/apps/kile/doc/tutorial19.png
-share/kde/apps/kile/doc/tutorial2.png
-share/kde/apps/kile/doc/tutorial20.png
-share/kde/apps/kile/doc/tutorial3.png
-share/kde/apps/kile/doc/tutorial5.png
-share/kde/apps/kile/doc/tutorial6.png
-share/kde/apps/kile/doc/tutorial7.png
-share/kde/apps/kile/doc/tutorial8.png
-share/kde/apps/kile/doc/tutorial9.png
 share/kde/apps/kile/doc/usermanual.html
 share/kde/apps/kile/kileui.rc
 share/kde/apps/kile/mathsymbols/img1.png
@@ -484,6 +475,7 @@ share/kde/apps/kile/pics/subsubsection.png
 share/kde/apps/kile/pics/tilde.png
 share/kde/apps/kile/pics/vec.png
 share/kde/apps/kile/pics/viewdvi.png
+share/kde/apps/kile/pics/viewhtml.png
 share/kde/apps/kile/pics/viewlog.png
 share/kde/apps/kile/pics/viewpdf.png
 share/kde/apps/kile/pics/viewps.png
@@ -493,17 +485,19 @@ share/kde/apps/kile/pics/xgfe.png
 share/kde/icons/hicolor/16x16/apps/kile.png
 share/kde/icons/hicolor/32x32/apps/kile.png
 share/kde/icons/hicolor/48x48/apps/kile.png
-share/kde/locale/ca/LC_MESSAGES/kile.mo
-share/kde/locale/cs/LC_MESSAGES/kile.mo
 share/kde/locale/de/LC_MESSAGES/kile.mo
+share/kde/locale/el/LC_MESSAGES/kile.mo
 share/kde/locale/es/LC_MESSAGES/kile.mo
 share/kde/locale/fr/LC_MESSAGES/kile.mo
-share/kde/locale/hu/LC_MESSAGES/kile.mo
-share/kde/locale/it/LC_MESSAGES/kile.mo
-share/kde/locale/nl/LC_MESSAGES/kile.mo
+share/kde/locale/ja/LC_MESSAGES/kile.mo
+share/kde/locale/pt_BR/LC_MESSAGES/kile.mo
 share/kde/locale/ru/LC_MESSAGES/kile.mo
+share/kde/locale/sk/LC_MESSAGES/kile.mo
+share/kde/locale/zh_TW.Big5/LC_MESSAGES/kile.mo
 @dirrm share/kde/apps/kile/pics
 @dirrm share/kde/apps/kile/mathsymbols
 @dirrm share/kde/apps/kile/doc
 @dirrm share/kde/apps/kile
 @dirrm share/doc/kde/HTML/en/kile
+
+
