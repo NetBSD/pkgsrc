@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2004/04/19 04:14:35 simonb Exp $
+
+--- lib/t1lib/t1base.c.orig	Sat Mar  6 12:58:04 2004
++++ lib/t1lib/t1base.c
+@@ -138,7 +138,11 @@ void *T1_InitLib( int log)
+   char *logfilepath=NULL;
+   char *envlogreq=NULL;
+   int  usrforcelog=0;
+-  
++  static int initdone;
++
++  if (initdone)
++    return (pFontBase);
++  initdone++;
+   
+   
+   /* Reset T1_errno */
