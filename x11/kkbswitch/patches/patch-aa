@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/08/23 11:44:20 markd Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/15 08:51:13 markd Exp $
 
---- kkbswitch/Makefile.in.orig	2004-08-22 16:20:43.000000000 +1200
+--- kkbswitch/Makefile.in.orig	2004-11-06 22:18:28.000000000 +0600
 +++ kkbswitch/Makefile.in
-@@ -282,7 +282,7 @@ applnkUtilitiesdir = $(kde_appsdir)/Util
+@@ -280,7 +280,7 @@ applnkUtilitiesdir = $(kde_appsdir)/Util
  @ENABLE_RU_UA_LAYOUT_TRUE@xkbsymbolsdir = $(x_libraries)/X11/xkb/symbols
  @ENABLE_RU_UA_LAYOUT_TRUE@xkbsymbols_DATA = ru_ua
  
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/08/23 11:44:20 markd Exp $
 +autostartdir = $(datadir)/autostart
  autostart_DATA = kkbswitch.desktop
  subdir = kkbswitch
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
