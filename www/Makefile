@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2000/09/26 08:54:45 soren Exp $
+# $NetBSD: Makefile,v 1.101 2000/10/15 02:54:35 jlam Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -56,10 +56,15 @@
     SUBDIR += p5-Apache-ASP
     SUBDIR += p5-Apache-ePerl
     SUBDIR += p5-CGI
+    SUBDIR += p5-CGI-Application
     SUBDIR += p5-CGI_Lite
     SUBDIR += p5-FCGI
     SUBDIR += p5-HTML-Parser
+    SUBDIR += p5-HTML-PrettyPrinter
+    SUBDIR += p5-HTML-Table
     SUBDIR += p5-HTML-Tagset
+    SUBDIR += p5-HTML-Template
+    SUBDIR += p5-HTML-Tree
     SUBDIR += p5-URI
     SUBDIR += p5-VRML
     SUBDIR += p5-libwww
