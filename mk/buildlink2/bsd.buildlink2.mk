@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.29 2002/09/23 22:32:07 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.30 2002/09/24 10:41:25 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -83,8 +83,10 @@ _BUILDLINK_DEPMETHOD.${_pkg_}=	BUILD_DEPENDS
 .  endif
 .  if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
       defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+.    for _depends_ in ${BUILDLINK_DEPENDS.${_pkg_}}
 ${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
-	${BUILDLINK_DEPENDS.${_pkg_}}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
+	${_depends_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
+.    endfor
 .  endif
 .endfor
 
