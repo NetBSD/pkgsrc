@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/01/05 20:51:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.41 2001/01/26 09:36:17 wiz Exp $
 #
 
     SUBDIR += abiword
@@ -12,6 +12,7 @@
     SUBDIR += joe
     SUBDIR += jove
     SUBDIR += leim
+    SUBDIR += manedit
     SUBDIR += mg2a
     SUBDIR += mule
     SUBDIR += ne
