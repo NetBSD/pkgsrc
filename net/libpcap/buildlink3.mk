@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBPCAP_BUILDLINK3_MK:=	${LIBPCAP_BUILDLINK3_MK}+
 
-.if !empty(LIBPCAP_BUILDLINK3_MK:M+)
-.  include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
+.if !empty(LIBPCAP_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		libpcap
 BUILDLINK_DEPENDS.libpcap?=	libpcap>=0.7.2
 BUILDLINK_PKGSRCDIR.libpcap?=	../../net/libpcap
 .endif	# LIBPCAP_BUILDLINK3_MK
@@ -20,30 +21,21 @@ BUILDLINK_IS_BUILTIN.libpcap=	YES
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.libpcap:M[yY][eE][sS])
-_NEED_LIBPCAP=	NO
+BUILDLINK_USE_BUILTIN.libpcap=	YES
 .endif
 
-.if !defined(_NEED_LIBPCAP)
+.if !defined(BUILDLINK_USE_BUILTIN.libpcap)
 .  if !empty(BUILDLINK_IS_BUILTIN.libpcap:M[nN][oO])
-_NEED_LIBPCAP=	YES
+BUILDLINK_USE_BUILTIN.libpcap=	NO
 .  else
-_NEED_LIBPCAP=	NO
+BUILDLINK_USE_BUILTIN.libpcap=	YES
 .  endif
-MAKEFLAGS+=	_NEED_LIBPCAP="${_NEED_LIBPCAP}"
 .endif
 
-.if ${_NEED_LIBPCAP} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.libpcap:M[nN][oO])
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	libpcap
 .  endif
 .endif
-
-.if !empty(LIBPCAP_BUILDLINK3_MK:M+)
-.  if ${_NEED_LIBPCAP} == "YES"
-BUILDLINK_PACKAGES+=		libpcap
-.  else
-BUILDLINK_PREFIX.libpcap=	/usr
-.  endif
-.endif	# LIBPCAP_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}

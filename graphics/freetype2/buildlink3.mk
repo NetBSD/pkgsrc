@@ -1,11 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/01/04 23:34:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/01/05 09:31:31 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREETYPE2_BUILDLINK3_MK:=	${FREETYPE2_BUILDLINK3_MK}+
 
-.if !empty(FREETYPE2_BUILDLINK3_MK:M+)
-.  include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
+.if !empty(FREETYPE2_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		freetype2
 BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.0.1
 BUILDLINK_PKGSRCDIR.freetype2?=	../../graphics/freetype2
 .endif	# FREETYPE2_BUILDLINK3_MK
@@ -20,21 +21,22 @@ BUILDLINK_IS_BUILTIN.freetype2=	NO
 .  if exists(${_FREETYPE2_FREETYPE_H}) && exists(${_X11_TMPL})
 BUILDLINK_IS_BUILTIN.freetype2!=					\
 	if ${GREP} -q BuildFreetype2Library ${_X11_TMPL}; then		\
-		${ECHO} YES;						\
+		${ECHO} "YES";						\
 	else								\
-		${ECHO} NO;						\
+		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.freetype2=${BUILDLINK_IS_BUILTIN.freetype2}
+MAKEFLAGS+=	\
+	BUILDLINK_IS_BUILTIN.freetype2="${BUILDLINK_IS_BUILTIN.freetype2}"
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.freetype2:M[yY][eE][sS])
-_NEED_FREETYPE2=	NO
+BUILDLINK_USE_BUILTIN.freetype2=	YES
 .endif
 
-.if !defined(_NEED_FREETYPE2)
+.if !defined(BUILDLINK_USE_BUILTIN.freetype2)
 .  if !empty(BUILDLINK_IS_BUILTIN.freetype2:M[nN][oO])
-_NEED_FREETYPE2=	YES
+BUILDLINK_USE_BUILTIN.freetype2=	NO
 .  else
 #
 # Create an appropriate package name for the built-in freetype2 distributed
@@ -51,17 +53,18 @@ _FREETYPE2_PATCH!=	\
 _FREETYPE2_VERSION=	${_FREETYPE2_MAJOR}${_FREETYPE2_MINOR}${_FREETYPE2_PATCH}
 _FREETYPE2_PKG=		freetype2-${_FREETYPE2_VERSION}
 _FREETYPE2_DEPENDS=	${BUILDLINK_DEPENDS.freetype2}
-_NEED_FREETYPE2!=	\
+BUILDLINK_USE_BUILTIN.freetype2!=	\
 	if ${PKG_ADMIN} pmatch '${_FREETYPE2_DEPENDS}' ${_FREETYPE2_PKG}; then \
-		${ECHO} "NO";						\
-	else								\
 		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	_NEED_FREETYPE2="${_NEED_FREETYPE2}"
+MAKEFLAGS+=	\
+	BUILDLINK_USE_BUILTIN.freetype2="${BUILDLINK_USE_BUILTIN.freetype2}"
 .endif
 
-.if ${_NEED_FREETYPE2} == "YES"
+.if !empty(BUILDLINK_USE_BUILTIN.freetype2:M[nN][oO])
 #
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
@@ -73,9 +76,7 @@ BUILDLINK_DEPENDS+=		freetype2
 .endif
 
 .if !empty(FREETYPE2_BUILDLINK3_MK:M+)
-.  if ${_NEED_FREETYPE2} == "YES"
-BUILDLINK_PACKAGES+=		freetype2
-.  else
+.  if !empty(BUILDLINK_USE_BUILTIN.freetype2:M[yY][eE][sS])
 BUILDLINK_PREFIX.freetype2=	${X11BASE}
 .  endif
 
