@@ -1,28 +1,24 @@
-# $NetBSD: Makefile,v 1.2 2003/03/08 03:33:42 jmc Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/14 14:07:54 kei Exp $
 
-DISTNAME=	kochi-cidfonts-0.0.0.20030101
-CATEGORIES=	fonts X11 japanese
+DISTNAME=	Kochi-CID-0.018
+PKGNAME=	kochi-cidfonts-0.018
+CATEGORIES=	fonts x11 japanese
 MASTER_SITES=	http://openlab.jp/efont/dist/Kochi-CID/current/
 MASTER_SITES+=	http://khdd.net/Kochi-CID/current/
-EXTRACT_SUFX=	.bz2
-DISTFILES=	Kochi-Gothic.afm${EXTRACT_SUFX} \
-		Kochi-Gothic${EXTRACT_SUFX} \
-		Kochi-Mincho.afm${EXTRACT_SUFX} \
-		Kochi-Mincho${EXTRACT_SUFX}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://khdd.net/Kochi-CID/
 COMMENT=	Kochi-Mincho/Gothic scalable font in CID-Keyed format
 
-EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
 FONTDIR=	${PREFIX}/share/ghostscript/Resource/CIDFont
 
 do-install:
-	${MKDIR} ${FONTDIR}; \
-	cd ${DISTDIR}; \
-	${INSTALL_DATA} ${DISTFILES} ${FONTDIR}; \
-	${GUNZIP_CMD} ${FONTDIR}/Kochi-*${EXTRACT_SUFX}
+	${INSTALL_DATA_DIR} ${FONTDIR} && \
+	${INSTALL_DATA} ${WRKSRC}/Kochi-* ${FONTDIR} && \
+	${INSTALL_DATA} ${WRKSRC}/README-CID.sjis \
+		${PREFIX}/share/doc/README.kochi-cidfonts
 
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
