@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
+
+--- clients/Makefile.in.orig	Fri Dec 22 19:40:24 2000
++++ clients/Makefile.in	Thu Dec 28 16:38:51 2000
+@@ -58,7 +58,7 @@
+ 	$(CC) $(CFLAGS) -o upsstats.cgi upsstats.c upsfetch.o cgilib.o $(LIBOBJ)
+ 
+ upsimage.cgi: upsimage.c upsfetch.o cgilib.o $(LIBOBJ)
+-	$(CC) $(CFLAGS) -o upsimage.cgi upsimage.c upsfetch.o cgilib.o @GFXLIBS@ -lm $(LIBOBJ)
++	$(CC) $(CFLAGS) @GRAPHICS_INCLUDES@ -o upsimage.cgi upsimage.c upsfetch.o cgilib.o @GRAPHICS_LIBS@ -lm $(LIBOBJ)
+ 
+ clean:
+ 	rm -f *~ *.o $(PROGS) $(SPROGS) $(CGIPROGS)
