@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/30 04:16:10 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/07/24 19:45:26 jlam Exp $
 
 DISTNAME=	whois_4.5.2
 PKGNAME=	md-whois-4.5.2
@@ -9,7 +9,7 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.linux.it/~md/software/
 COMMENT=	Improved whois client
 
-BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
+USE_PERL5=	build
 
 WRKSRC=		${WRKDIR}/whois-4.5.2
 

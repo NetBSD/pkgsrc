@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/05/12 10:16:46 abs Exp $
+# $NetBSD: Makefile,v 1.9 2002/07/24 19:45:22 jlam Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-1.2
 PKGREVISION=		3
@@ -25,7 +25,7 @@ MINGW_WRKSRC=		${WRKDIR}/mingw-runtime-1.2
 CROSS_DISTFILES+=	w32api-1.2-src.tar.gz
 W32_WRKSRC=		${WRKDIR}/w32api-1.2
 USE_GMAKE=		yes
-BUILD_DEPENDS+= 	perl-[0-9]*:../../lang/perl5
+USE_PERL5=		build
 
 AS_FOR_TARGET=		${BINUTILS_WRKSRC}/gas/as-new
 AR_FOR_TARGET=		${BINUTILS_WRKSRC}/binutils/ar

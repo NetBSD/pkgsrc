@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2002/07/18 02:19:33 rh Exp $
+# $NetBSD: Makefile,v 1.72 2002/07/24 19:45:32 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=	2
@@ -12,10 +12,10 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gtk.org/
 COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
 
-BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK_ONLY=	yes
+USE_PERL5=		build
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		yes
