@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/07 17:48:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/15 17:32:32 jmmv Exp $
 #
 
 DISTNAME=       cucipop-1.31
@@ -15,6 +15,9 @@ COMMENT=	The Cubic Circle POP3 mail server
 LICENSE=	shareware
 
 BUILD_DEFS+=	USE_INET6
+
+MAKE_ENV+=	ROOT_USER="${ROOT_USER}"
+MAKE_ENV+=	ROOT_GROUP="${ROOT_GROUP}"
 
 .include "../../mk/bsd.prefs.mk"
 
