@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1591 2005/02/19 04:25:31 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1592 2005/02/20 06:02:06 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -935,7 +935,7 @@ DEPENDS:=	${REDUCED_DEPENDS}
 .  for def in ${EVAL_PREFIX}
 .    if !defined(${def:C/=.*$//})
 ${def:C/=.*$//}_DEFAULT?=${LOCALBASE}
-_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | grep '' || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
+_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | ${GREP} . || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
 ${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
 MAKEFLAGS+=		${def:C/=.*//}=${_${def:C/=.*$//}_CMD:sh}
 .    endif
