@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2002/10/17 18:27:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/01/13 10:55:11 wiz Exp $
 
-DISTNAME=	unrarsrc-3.1.0
+DISTNAME=	unrarsrc-3.1.3
 PKGNAME=	${DISTNAME:S/src//}
 WRKSRC=		${WRKDIR}/unrar
 CATEGORIES=	archivers
@@ -10,8 +10,7 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.rarlab.com/
 COMMENT=	Extract, view & test RAR archives
 
-ALL_TARGET=	makeunrar
-MAKEFILE=	makefile.gcc
+MAKEFILE=	makefile.unix
 
 LICENSE=	unrar-license
 RESTRICTED=	"Do not modify. Do not charge a fee for redistribution."
