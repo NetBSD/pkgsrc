@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2004/02/10 17:59:24 jmmv Exp $
+$NetBSD: patch-ag,v 1.2 2004/04/01 18:38:03 jmmv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=134022
 
 --- src/nautilus-application.c.orig	2003-10-21 14:52:52.000000000 +0200
 +++ src/nautilus-application.c

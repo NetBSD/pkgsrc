@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/06 22:30:23 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/01 18:38:03 jmmv Exp $
 bin/nautilus
 bin/nautilus-file-management-properties
-bin/nautilus-server-connect
 include/libnautilus/libnautilus.h
 include/libnautilus/nautilus-bonobo-ui.h
 include/libnautilus/nautilus-clipboard.h
@@ -13,6 +12,15 @@ include/libnautilus/nautilus-undo.h
 include/libnautilus/nautilus-view-component.h
 include/libnautilus/nautilus-view-standard-main.h
 include/libnautilus/nautilus-view.h
+include/nautilus/libnautilus-extension/nautilus-column-provider.h
+include/nautilus/libnautilus-extension/nautilus-column.h
+include/nautilus/libnautilus-extension/nautilus-extension-types.h
+include/nautilus/libnautilus-extension/nautilus-file-info.h
+include/nautilus/libnautilus-extension/nautilus-info-provider.h
+include/nautilus/libnautilus-extension/nautilus-menu-item.h
+include/nautilus/libnautilus-extension/nautilus-menu-provider.h
+include/nautilus/libnautilus-extension/nautilus-property-page-provider.h
+include/nautilus/libnautilus-extension/nautilus-property-page.h
 lib/bonobo/libnautilus-emblem-view.a
 lib/bonobo/libnautilus-emblem-view.la
 lib/bonobo/libnautilus-emblem-view.so
@@ -25,9 +33,6 @@ lib/bonobo/libnautilus-image-properties-view.so
 lib/bonobo/libnautilus-notes-view.a
 lib/bonobo/libnautilus-notes-view.la
 lib/bonobo/libnautilus-notes-view.so
-lib/bonobo/libnautilus-tree-view.a
-lib/bonobo/libnautilus-tree-view.la
-lib/bonobo/libnautilus-tree-view.so
 lib/bonobo/servers/Nautilus_ComponentAdapterFactory_std.server
 lib/bonobo/servers/Nautilus_Control_throbber.server
 lib/bonobo/servers/Nautilus_View_emblem.server
@@ -35,13 +40,17 @@ lib/bonobo/servers/Nautilus_View_history.server
 lib/bonobo/servers/Nautilus_View_image_properties.server
 lib/bonobo/servers/Nautilus_View_notes.server
 lib/bonobo/servers/Nautilus_View_text.server
-lib/bonobo/servers/Nautilus_View_tree.server
 lib/bonobo/servers/Nautilus_shell.server
 lib/libnautilus-adapter.a
 lib/libnautilus-adapter.la
 lib/libnautilus-adapter.so
 lib/libnautilus-adapter.so.2
 lib/libnautilus-adapter.so.2.0
+lib/libnautilus-extension.a
+lib/libnautilus-extension.la
+lib/libnautilus-extension.so
+lib/libnautilus-extension.so.1
+lib/libnautilus-extension.so.1.0
 lib/libnautilus-private.a
 lib/libnautilus-private.la
 lib/libnautilus-private.so
@@ -52,10 +61,13 @@ lib/libnautilus.la
 lib/libnautilus.so
 lib/libnautilus.so.2
 lib/libnautilus.so.2.0
+lib/pkgconfig/libnautilus-extension.pc
 lib/pkgconfig/libnautilus.pc
 libexec/nautilus-adapter
 libexec/nautilus-text-view
 libexec/nautilus-throbber
+share/applications/nautilus-computer.desktop
+share/applications/nautilus-home.desktop
 share/applications/nautilus.desktop
 share/applications/network-scheme.desktop
 share/control-center-2.0/capplets/nautilus-file-management-properties.desktop
@@ -71,10 +83,12 @@ share/gnome-2.0/ui/nautilus-clipboard-ui.xml
 share/gnome-2.0/ui/nautilus-desktop-icon-view-ui.xml
 share/gnome-2.0/ui/nautilus-directory-view-ui.xml
 share/gnome-2.0/ui/nautilus-icon-view-ui.xml
+share/gnome-2.0/ui/nautilus-list-view-ui.xml
+share/gnome-2.0/ui/nautilus-navigation-window-ui.xml
 share/gnome-2.0/ui/nautilus-search-list-view-ui.xml
 share/gnome-2.0/ui/nautilus-shell-ui.xml
+share/gnome-2.0/ui/nautilus-spatial-window-ui.xml
 share/gnome-2.0/ui/nautilus-text-view-ui.xml
-share/gnome/network/nautilus-server-connect.desktop
 share/idl/nautilus-distributed-undo.idl
 share/idl/nautilus-view-component.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/nautilus.mo
@@ -89,6 +103,7 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/nautilus.mo
@@ -100,16 +115,17 @@ ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/nautilus.mo
-${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/mi/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/nautilus.mo
@@ -118,6 +134,7 @@ ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/nautilus.mo
@@ -128,8 +145,8 @@ ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/sr@ije/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/nautilus.mo
-${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/nautilus.mo
@@ -139,10 +156,8 @@ ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/nautilus.mo
 share/nautilus/browser.xml
-share/nautilus/filesystem-attributes.xml
 share/nautilus/glade/nautilus-bookmarks-window.glade
 share/nautilus/glade/nautilus-file-management-properties.glade
-share/nautilus/glade/nautilus-server-connect.glade
 share/nautilus/nautilus-extras.placeholder
 share/nautilus/nautilus-suggested.placeholder
 share/nautilus/patterns/.striated.png
@@ -177,19 +192,14 @@ share/nautilus/patterns/snow_ridge.png
 share/nautilus/patterns/stucco.jpg
 share/nautilus/patterns/terracotta.png
 share/nautilus/patterns/wavy_white.png
-share/nautilus/services/text/google.xml
-share/nautilus/services/text/webster.xml
 share/nautilus/starthere-link.desktop
 share/nautilus/starthere.desktop
 share/nautilus/static_bookmarks.xml
-share/pixmaps/nautilus/CD_drive.png
-share/pixmaps/nautilus/HD_drive.png
 share/pixmaps/nautilus/Search.png
 share/pixmaps/nautilus/audio.png
 share/pixmaps/nautilus/backgrounds.png
 share/pixmaps/nautilus/chit_frame.png
 share/pixmaps/nautilus/colors.png
-share/pixmaps/nautilus/cpu.png
 share/pixmaps/nautilus/crux_eggplant/Search.png
 share/pixmaps/nautilus/crux_eggplant/crux_eggplant.xml
 share/pixmaps/nautilus/crux_teal/Search.png
@@ -202,7 +212,6 @@ share/pixmaps/nautilus/erase.png
 share/pixmaps/nautilus/gnome/Services.png
 share/pixmaps/nautilus/gnome/gnome.xml
 share/pixmaps/nautilus/knob.png
-share/pixmaps/nautilus/memory_chip.gif
 share/pixmaps/nautilus/nautilus-desktop.png
 share/pixmaps/nautilus/nautilus-file-management-properties.png
 share/pixmaps/nautilus/nautilus-launch-icon.png
@@ -223,14 +232,22 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrm share/pixmaps/nautilus/crux_teal
 @dirrm share/pixmaps/nautilus/crux_eggplant
 @dirrm share/pixmaps/nautilus
-@dirrm share/nautilus/services/text
-@dirrm share/nautilus/services
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/nautilus/patterns
 @dirrm share/nautilus/glade
 @dirrm share/nautilus
+@comment in ORBit2: @dirrm share/idl
+@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
+@comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/examples/nautilus/X11/sysconfig
 @dirrm share/examples/nautilus/X11/starthere
 @dirrm share/examples/nautilus/X11/serverconfig
 @dirrm share/examples/nautilus/X11
 @dirrm share/examples/nautilus
+@comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
+@comment in gnome2-dirs: @dirrm share/applications
+@comment in libbonobo: @dirrm lib/bonobo/servers
+@comment in libbonobo: @dirrm lib/bonobo
+@dirrm include/nautilus/libnautilus-extension
+@dirrm include/nautilus
 @dirrm include/libnautilus

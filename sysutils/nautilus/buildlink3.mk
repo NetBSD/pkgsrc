@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/03/26 02:27:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/04/01 18:38:03 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NAUTILUS_BUILDLINK3_MK:=	${NAUTILUS_BUILDLINK3_MK}+
@@ -11,13 +11,12 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nnautilus}
 BUILDLINK_PACKAGES+=	nautilus
 
 .if !empty(NAUTILUS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.nautilus+=	nautilus>=2.4.2nb4
-BUILDLINK_RECOMMENDED.nautilus?=	nautilus>=2.4.2nb6
+BUILDLINK_DEPENDS.nautilus+=	nautilus>=2.6.0
 BUILDLINK_PKGSRCDIR.nautilus?=	../../sysutils/nautilus
 .endif	# NAUTILUS_BUILDLINK3_MK
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/eel2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
@@ -27,6 +26,7 @@ BUILDLINK_PKGSRCDIR.nautilus?=	../../sysutils/nautilus
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
