@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:28 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/27 12:01:15 drochner Exp $
 bin/xmgrace
 grace/bin/gracebat
 grace/bin/xmgrace
@@ -46,6 +46,7 @@ grace/fonts/enc/WinAnsi.enc
 grace/templates/Default.agr
 grace/doc/CHANGES.html
 grace/doc/GPL.html
+grace/doc/convcal.1
 grace/doc/philosophical-gnu-sm.jpg
 grace/doc/nohelp.html
 grace/doc/FAQ.html
@@ -74,9 +75,11 @@ grace/examples/boxplot.agr
 grace/examples/logit.agr
 grace/examples/logtest.par
 grace/examples/pie.agr
+grace/examples/reciprocal.agr
 grace/examples/times.agr
 grace/examples/txttrans.agr
 grace/examples/vmap.agr
+grace/examples/xycolor.agr
 grace/examples/xysize.agr
 grace/examples/au.agr
 grace/examples/manygraphs.agr
