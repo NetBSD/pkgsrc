@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2003/12/06 16:10:48 tron Exp $
+
+--- wmbiff/Pop3Client.c.orig	Sun Nov  9 00:43:50 2003
++++ wmbiff/Pop3Client.c	Sat Dec  6 16:57:51 2003
+@@ -281,7 +281,7 @@
+ 	strcat(buf, " ");
+ 
+ 
+-	gmh = gcry_md_open(GCRY_MD_MD5, GCRY_MD_FLAG_HMAC);
++	(void) gcry_md_open(&gmh, GCRY_MD_MD5, GCRY_MD_FLAG_HMAC);
+ 	gcry_md_setkey(gmh, PCU.password, strlen(PCU.password));
+ 	gcry_md_write(gmh, (unsigned char *) buf2, strlen(buf2));
+ 	gcry_md_final(gmh);
+@@ -323,7 +323,7 @@
+ 	POP_DM(pc, DEBUG_INFO, "APOP challenge: %s\n", apop_str);
+ 	strcat(apop_str, PCU.password);
+ 
+-	gmh = gcry_md_open(GCRY_MD_MD5, 0);
++	(void) gcry_md_open(&gmh, GCRY_MD_MD5, 0);
+ 	gcry_md_write(gmh, (unsigned char *) apop_str, strlen(apop_str));
+ 	gcry_md_final(gmh);
+ 	md5 = gcry_md_read(gmh, 0);
