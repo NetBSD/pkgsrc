@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5449 2004/04/05 12:42:16 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5450 2004/04/05 13:59:35 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1787,3 +1787,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated quanta3 to 3.2.1nb2 [markd 2004-04-05]
 	Updated kde3 to 3.2.1nb4 [markd 2004-04-05]
 	Added glaxium-0.5 [xtraeme 2004-04-05]
+	Added lua-expat-1.0a [xtraeme 2004-04-05]
