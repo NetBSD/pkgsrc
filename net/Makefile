@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 1999/04/27 20:43:08 rvb Exp $
+# $NetBSD: Makefile,v 1.67 1999/04/30 17:15:30 tv Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -9,15 +9,15 @@
 #    SUBDIR += ascend-radius
 #    SUBDIR += bb
     SUBDIR += beroftpd
-#    SUBDIR += bind4
+    SUBDIR += bind4
     SUBDIR += bing
 #    SUBDIR += cap
+    SUBDIR += coda5_client
+    SUBDIR += coda5_server
     SUBDIR += coda_client
     SUBDIR += coda_doc
     SUBDIR += coda_intro
     SUBDIR += coda_server
-    SUBDIR += coda5_client
-    SUBDIR += coda5_server
 #    SUBDIR += cvsup
 #    SUBDIR += cvsup-mirror
     SUBDIR += delegate
@@ -34,13 +34,14 @@
 #    SUBDIR += fspclient
 #    SUBDIR += ftpsearch
 #    SUBDIR += ftptool
-    SUBDIR += gated
     SUBDIR += gaim
+    SUBDIR += gated
 #    SUBDIR += gnu-finger
 #    SUBDIR += gopher
     SUBDIR += gtksamba
     SUBDIR += icb
 #    SUBDIR += icmpinfo
+    SUBDIR += icsi-finger
 #    SUBDIR += irc
     SUBDIR += ircII
 #    SUBDIR += ircii-epic
@@ -57,11 +58,11 @@
 #    SUBDIR += moxftp
 #    SUBDIR += ncftp
     SUBDIR += ncftp2
-    SUBDIR += nocol
     SUBDIR += netatalk
     SUBDIR += netcat
     SUBDIR += netname
     SUBDIR += nmap
+    SUBDIR += nocol
     SUBDIR += ntop
 #    SUBDIR += p5-Archie
     SUBDIR += p5-Net
@@ -86,11 +87,8 @@
     SUBDIR += sirc
     SUBDIR += sniffit
 #    SUBDIR += slirp
-.ifdef USE_SOCKS
-    SUBDIR += socks${USE_SOCKS}
-.else
+    SUBDIR += socks4
     SUBDIR += socks5
-.endif
     SUBDIR += spegla
 #    SUBDIR += strobe
 #    SUBDIR += sup
@@ -118,7 +116,7 @@
 #    SUBDIR += yale-tftpd
     SUBDIR += ytalk
     SUBDIR += zenicb
-    SUBDIR += zircon
     SUBDIR += zephyr
+    SUBDIR += zircon
 
 .include "../mk/bsd.pkg.subdir.mk"
