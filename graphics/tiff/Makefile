@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/07/08 13:01:44 tron Exp $
+# $NetBSD: Makefile,v 1.36 2002/01/05 22:30:12 tron Exp $
 
 DISTNAME=	tiff-v3.5.5
 PKGNAME=	tiff-3.5.5
@@ -30,6 +30,7 @@ LZWWRKDIR=	${WRKDIR}/libtiff-lzw-compression-kit
 
 post-patch:
 	${MV} ${LZWWRKDIR}/Makefile ${LZWWRKDIR}/Makefile.orig
+	${ECHO} >>${LZWWRKDIR}/Makefile.orig
 	${SED} "s@TIFF_SRC_DIR = /tmp/libtiff@TIFF_SRC_DIR = ../${DISTNAME}@" \
 		${LZWWRKDIR}/Makefile.orig > ${LZWWRKDIR}/Makefile
 	cd ${LZWWRKDIR} && make install
