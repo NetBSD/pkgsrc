@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:58 zuntum Exp $
-etc/pnm2ppa.conf.default
+@comment $NetBSD: PLIST,v 1.2 2003/01/19 08:45:38 salo Exp $
 bin/calibrate_ppa
 bin/pnm2ppa
 man/man1/pnm2ppa.1
+share/doc/pnm2ppa/CALIBRATION.txt
+share/doc/pnm2ppa/COLOR.txt
+share/examples/pnm2ppa/pnm2ppa.conf.default
+@dirrm share/examples/pnm2ppa
+@dirrm share/doc/pnm2ppa
