@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.361 2003/03/11 00:06:57 seb Exp $
+$NetBSD: TODO,v 1.362 2003/03/11 00:24:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -132,7 +132,6 @@ Suggested package updates
 	o gnomeicu-0.99
 	o gpa-0.6.1
 	o gperiodic-2.0.2
-	o gpgme-0.4.0
 	o grace-5.1.12
 	o gsed-4.0.5
 	o gtetrinet-0.6.2
