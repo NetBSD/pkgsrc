@@ -1,12 +1,10 @@
-# $NetBSD: mk.conf.example,v 1.180 2001/03/14 12:48:35 agc Exp $
+# $NetBSD: mk.conf.example,v 1.181 2001/03/14 12:58:52 wiz Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
 # See the NetBSD mk.conf(5) and packages(7) manual page for a full
 # description of all available options.
-#
-# Definitely not complete yet. - agc Fri Mar 27 16:42:38 GMT 1998
 #
 
 # ************************************************************************
@@ -805,7 +803,7 @@ PAPERSIZE=	A4
 # Options for building windowmaker package. Used to add support for
 # GNOME, KDE or OPEN LOOK(tm) and to avoid redundancies with KDE.
 # Possible: gnome, kde, openlook, lite
-# Default: gnome kde
+# Default: gnome kde openlook
 
 #WINDOWMAKER_THEMES=	...
 # Used in wm-themes package to specify the themes which will be
