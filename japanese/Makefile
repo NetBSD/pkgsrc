@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2001/10/09 18:44:11 nra Exp $
+# $NetBSD: Makefile,v 1.40 2002/01/10 13:38:57 wiz Exp $
 #
 
 COMMENT=	Packages with japanese language support
@@ -46,6 +46,7 @@ SUBDIR+=	vflib
 SUBDIR+=	vflib-lib
 SUBDIR+=	vflib-utils
 SUBDIR+=	vfxdvik
+SUBDIR+=	xjdic
 SUBDIR+=	xjman
 
 .include "../mk/bsd.pkg.subdir.mk"
