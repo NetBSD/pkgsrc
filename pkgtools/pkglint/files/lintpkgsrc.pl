@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.43 2001/03/15 15:10:23 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.44 2001/03/30 16:30:24 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -958,14 +958,14 @@ sub scan_pkgsrc_distfiles_vs_md5
     {
     my($pkgsrcdir, $pkgdistdir, $check_unref, $check_md5) = @_;
     my($cat, @categories, $pkgdir);
-    my(%distfiles, %md5, @distwarn, $file, $numpkg);
-    my(@distfiles, @bad_distfiles);
+    my(%distfiles, %sumfiles, @distwarn, $file, $numpkg);
+    my(@bad_distfiles);
 
     @categories = &list_pkgsrc_categories($pkgsrcdir);
 
     &verbose("Scanning pkgsrc md5s: ".'_'x@categories."\b"x@categories);
     $numpkg = 0;
-    foreach $cat ( sort @categories )
+    foreach $cat (sort @categories)
 	{
 	foreach $pkgdir (&list_pkgsrc_pkgdirs($pkgsrcdir, $cat))
 	    {
@@ -974,17 +974,19 @@ sub scan_pkgsrc_distfiles_vs_md5
 		++$numpkg;
 		while( <MD5> )
 		    {
-		    if (m/^MD5 \(([^\)]+)\) = (\S+)/)
+		    if (m/^(\w+) ?\(([^\)]+)\) = (\S+)/)
 			{
-			if (!defined($distfiles{$1}))
+			if (!defined($distfiles{$2}))
 			    {
-			    $distfiles{$1} = "$cat/$pkgdir";
-			    $md5{$1} = $2;
+			    $distfiles{$2}{'sumtype'} = $1;
+			    $distfiles{$2}{'sum'} = $3;
+			    $distfiles{$2}{'path'} = "$cat/$pkgdir";
 			    }
-			elsif( $md5{$1} ne $2 )
+			elsif ($distfiles{$2}{'sumtype'} eq $1 &&
+				$distfiles{$2}{'sum'} ne $3)
 			    {
-			    push(@distwarn, "md5 mismatch between '$1' in ".
-			    "$cat/$pkgdir and $distfiles{$1}\n");
+			    push(@distwarn, "checksum mismatch between '$1' ".
+			    "in $cat/$pkgdir and $distfiles{$1}{'path'}\n");
 			    }
 			}
 		    }
@@ -996,42 +998,52 @@ sub scan_pkgsrc_distfiles_vs_md5
     &verbose(" ($numpkg packages)\n");
 
     # Do not mark the vulnerabilities file as unknown
-    $distfiles{'vulnerabilities'} = 'vulnerabilities';
-    $md5{'vulnerabilities'} = 'IGNORE';
+    $distfiles{'vulnerabilities'} = { path => 'vulnerabilities',
+				      sum => 'IGNORE'};
 
     foreach $file (&listdir("$pkgdistdir"))
 	{
-	if (!defined($distfiles{$file}))
+	my($dist);
+	if (!defined($dist = $distfiles{$file}))
 	    { push(@bad_distfiles, $file); }
 	else
-	    { push(@distfiles, $file); }
+	    {
+	    if ($dist->{'sum'} ne 'IGNORE')
+		{ push(@{$sumfiles{$dist->{'sumtype'}}}, $file); }
+	    }
 	}
+
     if ($check_unref && @bad_distfiles)
 	{
 	&verbose(scalar(@bad_distfiles),
 			" unreferenced file(s) in '$pkgdistdir':\n");
 	print join("\n", sort @bad_distfiles), "\n";
 	}
+
     if ($check_md5)
 	{
+	my($sum);
 	if (@distwarn)
 	    { &verbose(@distwarn); }
-	&verbose("md5 mismatches\n");
-	@distfiles = sort @distfiles;
+	&verbose("checksum mismatches\n");
 	&safe_chdir("$pkgdistdir");
-	open(MD5, "md5 @distfiles|") || &fail("Unable to run md5: $!");
-	while (<MD5>)
+	foreach $sum (keys %sumfiles)
 	    {
-	    if (m/^MD5 \(([^\)]+)\) = (\S+)/)
+	    open(DIGEST, "digest $sum @{$sumfiles{$sum}}|") ||
+						&fail("Run digest: $!");
+	    while (<DIGEST>)
 		{
-		if ($md5{$1} ne 'IGNORE' && $md5{$1} ne $2)
+		if (m/^$sum ?\(([^\)]+)\) = (\S+)/)
 		    {
-		    print $1, "\n";
-		    push(@bad_distfiles, $1);
+		    if ($distfiles{$1}{'sum'} ne $2)
+			{
+			print $1, "\n";
+			push(@bad_distfiles, $1);
+			}
 		    }
 		}
+	    close(DIGEST);
 	    }
-	close(MD5);
 	}
     @bad_distfiles;
     }
