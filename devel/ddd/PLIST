@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/13 08:26:03 seb Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/06/04 11:19:32 shannonjr Exp $
 bin/ddd
 man/man1/ddd.1
 share/${PKGNAME}/COPYING
