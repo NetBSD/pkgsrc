@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2001/11/28 12:14:32 martti Exp $
+# $NetBSD: Makefile,v 1.129 2001/12/19 13:23:46 abs Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -62,6 +62,7 @@ SUBDIR+=	p5-Pod-POM
 SUBDIR+=	p5-Text-Autoformat
 SUBDIR+=	p5-Text-Balanced
 SUBDIR+=	p5-Text-BibTeX
+SUBDIR+=	p5-Text-CSV-Hash
 SUBDIR+=	p5-Text-CSV_XS
 SUBDIR+=	p5-Text-DelimMatch
 SUBDIR+=	p5-Text-Template
