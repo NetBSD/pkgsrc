@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1999/09/12 18:54:27 dbj Exp $
+
 --- /dev/null	Wed Oct  8 06:50:58 1997
 +++ choparp.8	Tue Oct  7 23:34:42 1997
 @@ -0,0 +1,77 @@
