@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/22 07:49:21 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/17 21:24:58 snj Exp $
 
 DISTNAME=	qssl-2.0
 PKGNAME=	psi-ssl-2.0
@@ -11,7 +11,7 @@ MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://psi.affinix.com/
 COMMENT=	PSI Jabber Client - SSL plugin
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 USE_X11=	yes
@@ -23,7 +23,7 @@ do-configure:
 do-install:
 	cd ${WRKSRC} && libtool --mode=install ${INSTALL_PROGRAM} libqssl.la ${QTDIR}/lib
 
-.include "../../x11/qt3-libs/buildlink2.mk"
-.include "../../x11/qt3-tools/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
