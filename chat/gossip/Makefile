@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/20 13:42:15 jmmv Exp $
 #
 
 DISTNAME=	gossip-0.7
@@ -15,7 +15,7 @@ DEPENDS=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 BUILD_DEPENDS=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=       yes
@@ -23,9 +23,11 @@ GNU_CONFIGURE=		yes
 
 GCONF2_SCHEMAS=		gossip.schemas
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/loudmouth/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/loudmouth/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
