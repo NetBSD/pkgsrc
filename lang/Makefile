@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2001/09/13 14:18:59 agc Exp $
+# $NetBSD: Makefile,v 1.107 2001/09/27 10:44:56 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -69,7 +69,7 @@ SUBDIR+=	python
 SUBDIR+=	python21
 SUBDIR+=	ruby
 SUBDIR+=	ruby-base
-#SUBDIR+=	ruby14-base
+SUBDIR+=	ruby14-base
 SUBDIR+=	scheme48
 SUBDIR+=	siod
 SUBDIR+=	smalleiffel
