@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.48 2000/10/31 09:59:21 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2000/12/15 07:16:21 martin Exp $
 
-DISTNAME=	mozilla-source-M18
-PKGNAME=	mozilla-0.m18nb1
+DISTNAME=	mozilla-source
+PKGNAME=	mozilla-0.6
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/m18/src/
+MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/releases/mozilla0.6/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
@@ -17,6 +17,8 @@ DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
 DEPENDS+=	ORBit>=0.5.1:../../net/ORBit
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png>=1.0.6:../../graphics/png
+
+DIST_SUBDIR=	${PKGNAME}
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
 			NetBSD-1.5_ALPHA-i386 NetBSD-1.5_BETA-* \
@@ -31,7 +33,8 @@ CONFIGURE_ARGS=	--disable-tests \
 		--with-jpeg=${LOCALBASE} \
 		--with-png=${LOCALBASE} \
 		--enable-mathml \
-		--enable-svg
+		--enable-svg \
+		--with-extensions=cookie,irc,wallet,xmlextras,psm-glue,xml-rpc
 
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
