@@ -3,7 +3,7 @@
 # Date created:		21 August 1994
 # Whom:			jkh
 #
-# $NetBSD: Makefile,v 1.1.1.1 1997/10/27 04:51:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/01 05:00:02 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -24,6 +24,7 @@ post-patch:
 	cp /usr/include/fnmatch.h ${WRKSRC}/lib/glob/fnmatch.h
 
 pre-install:
+	strip ${WRKSRC}/bash
 	if [ ! -s ${PREFIX}/info/dir ]; then \
 	  ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
 	fi
