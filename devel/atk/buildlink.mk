@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2002/03/24 20:28:05 dmcmahill Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/06/30 14:04:26 jschauma Exp $
 #
 # This Makefile fragment is included by packages that use atk.
 #
@@ -17,7 +17,7 @@ ATK_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.atk?=	atk>=1.0.0
+BUILDLINK_DEPENDS.atk?=	atk>=1.0.2
 DEPENDS+=	${BUILDLINK_DEPENDS.atk}:../../devel/atk
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.atk=atk
