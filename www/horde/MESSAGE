@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2003/03/14 20:41:30 mason Exp $
+$NetBSD: MESSAGE,v 1.6 2003/09/04 03:26:04 erh Exp $
 
 Please refer to the file:
 
@@ -15,9 +15,11 @@ in:
 
 	${HORDEDIR}/scripts/db
 
-to setup the horde database.  Horde is setup by default to access MySQL.
-It's recommended that you change the password of the 'hordemgr' user used
-to connect to the horde database.  For localhost security, the file
+to setup the horde database.  You will also need to install the appropriate
+php module, such as databases/php4-mysql or databases/php4-pgsql.  Horde is
+setup by default to access MySQL.  It's recommended that you change the
+password of the 'hordemgr' user used to connect to the horde database.  For
+localhost security, the file
 
 	${HORDEDIR}/config/horde.php
 
