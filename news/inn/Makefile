@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/05/13 11:56:44 tron Exp $
+# $NetBSD: Makefile,v 1.43 2003/06/02 14:05:07 abs Exp $
 
 DISTNAME=		inn-${INN_VERSION}
 CATEGORIES=		news
@@ -85,7 +85,7 @@ CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 .endif
 
 .if (${MACHINE_ARCH} == arm32)
-.  include "../../lang/gcc/buildlink2.mk"
+.  include "../../mk/gcc.buildlink2.mk"
 .endif
 
 post-patch:
