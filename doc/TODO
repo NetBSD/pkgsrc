@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2357 2004/11/10 16:48:27 minskim Exp $
+$NetBSD: TODO,v 1.2358 2004/11/11 10:38:33 cjep Exp $
 
 Suggested new packages
 ======================
@@ -436,7 +436,6 @@ Suggested package updates
 	o multitail-3.4.0
 	o mummer-3.15
 	o musicpd-0.11.5
-	o nail-11.14
 	o namazu-2.0.13
 	o nap-1.5.2
 	o napshare-1.2
