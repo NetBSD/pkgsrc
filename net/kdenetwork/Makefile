@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/07/19 21:09:23 tv Exp $
+# $NetBSD: Makefile,v 1.17 1998/07/20 15:08:29 tv Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -21,7 +21,7 @@ DEPENDS+=	kdebase-1.0:../../x11/kdebase
 CONFLICTS=	kdenetwork-2.1b kdenetwork-3.1b kdenetwork-4.1b
 
 USE_X11=	yes
-HAS_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
 		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
 		"--datadir=${PREFIX}/share/kde" \
