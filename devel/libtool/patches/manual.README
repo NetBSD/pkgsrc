@@ -1,4 +1,4 @@
-$NetBSD: manual.README,v 1.5 2004/10/04 19:48:09 tv Exp $
+$NetBSD: manual.README,v 1.6 2005/01/18 18:44:14 tv Exp $
 
 The "manual-*" patch files are used to maintain the pkgsrc version of
 libtool.  These files contain patches for the .m4 files in libtool which are
@@ -12,7 +12,7 @@ libtool, the following process should be used:
 =====
 
 cd /usr/pkgsrc/devel/libtool-base
-make extract
+make patch
 cd work*/libtool-*
 cat /usr/pkgsrc/devel/libtool/patches/manual-* | patch -s
 
