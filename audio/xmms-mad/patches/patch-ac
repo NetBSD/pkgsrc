@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2003/12/23 09:52:11 simonb Exp $
+
+--- src/input.c.orig	Thu Sep 25 04:01:50 2003
++++ src/input.c
+@@ -447,6 +447,9 @@ input_read_tag (struct mad_info_t *info)
+   if (title_input->genre)        g_free (title_input->genre);
+   if (title_input->comment)      g_free (title_input->comment);
+   g_free (title_input);
++
++  id3_file_close (info->id3file);
++  info->id3file = NULL;
+ }
+ 
+ /**
