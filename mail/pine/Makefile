@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 1998/11/13 01:21:40 frueauf Exp $
+# $NetBSD: Makefile,v 1.27 1998/11/13 16:32:37 tv Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
-DISTNAME=       pine4.02
-PKGNAME=        pine-4.02
+DISTNAME=       pine4.05
+PKGNAME=        pine-4.05
 CATEGORIES=     mail news
 MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 
@@ -11,17 +11,16 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
 
 # This pkg doesn't build pico or libpico; the pico pkg does that part.
-DEPENDS=	pico-3.2:../../editors/pico
+DEPENDS=	pico-3.4:../../editors/pico
 
-CONFLICTS=	pine-3.96 pine-4.00
-
-NOT_FOR_ARCHS=	alpha	#LP64 problems
+CONFLICTS=	pine-3.96 pine-4.00 pine-4.02
 
 do-configure:
 	${CP} -f ${WRKSRC}/pine/osdep/os-neb.h ${WRKSRC}/pine/osdep/os-neb.h.orig
 	${SED} -e 's@/usr/local/lib/@${PREFIX}/etc/@' \
 		<${WRKSRC}/pine/osdep/os-neb.h.orig >${WRKSRC}/pine/osdep/os-neb.h
-	cd ${WRKSRC}/pico && ${MAKE} -f makefile.neb os.h
+	@${RM} -rf ${WRKSRC}/pico
+	@${LN} -sf ${LOCALBASE}/include/pico ${WRKSRC}/pico
 
 do-build:
 	cd ${WRKSRC} && ./build neb PREFIX=${PREFIX}
