@@ -1,8 +1,20 @@
-$NetBSD: patch-aa,v 1.1 1998/08/22 13:40:38 garbled Exp $
---- configure.orig	Sat Aug 22 03:46:19 1998
-+++ configure	Sat Aug 22 03:51:53 1998
-@@ -2247,3 +2247,3 @@
- # Always use our own libtool.
--LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+LIBTOOL='$(SHELL) $(exec_prefix)/bin/libtool'
+$NetBSD: patch-aa,v 1.2 1998/10/02 14:55:03 tv Exp $
+
+--- configure.orig	Fri Oct  2 10:43:32 1998
++++ configure	Fri Oct  2 10:43:55 1998
+@@ -2244,6 +2244,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
  
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -2289,6 +2290,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ echo $ac_n "checking how to run the C preprocessor""... $ac_c" 1>&6
+ echo "configure:2295: checking how to run the C preprocessor" >&5
