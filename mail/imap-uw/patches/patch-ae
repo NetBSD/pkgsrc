@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.10 2000/09/27 08:29:04 toshii Exp $
+$NetBSD: patch-ae,v 1.11 2000/11/09 03:35:34 hubertf Exp $
 
---- src/osdep/unix/Makefile.orig	Thu Aug 31 06:28:56 2000
-+++ src/osdep/unix/Makefile	Mon Sep 25 19:50:28 2000
-@@ -100,7 +100,7 @@
+--- src/osdep/unix/Makefile.orig	Wed Oct 25 01:59:24 2000
++++ src/osdep/unix/Makefile
+@@ -87,7 +87,7 @@
  
  # Normally no need to change any of these
  
@@ -11,16 +11,16 @@ $NetBSD: patch-ae,v 1.10 2000/09/27 08:29:04 toshii Exp $
  BINARIES=mail.o misc.o newsrc.o smanager.o osdep.o utf8.o siglocal.o \
   dummy.o pseudo.o netmsg.o flstring.o fdstring.o \
   rfc822.o nntp.o smtp.o imap4r1.o pop3.o \
-@@ -123,7 +123,7 @@
+@@ -112,7 +112,7 @@
  # Here if no make argument established
  
  missing: osdep.h
--	$(MAKE) all CC=`cat CCTYPE` CFLAGS="`cat CFLAGS`" `cat EXTRASPECIALS`
-+	$(MAKE) all CC="`cat CCTYPE`" CFLAGS="`cat CFLAGS`" `cat EXTRASPECIALS`
+-	$(MAKE) all CC=`$(CAT) CCTYPE` CFLAGS="`$(CAT) CFLAGS`" `$(CAT) SPECIALS`
++	$(MAKE) all CC="`$(CAT) CCTYPE`" CFLAGS="`$(CAT) CFLAGS`" `$(CAT) SPECIALS`
  
  osdep.h:
  	@echo You must specify what type of system
-@@ -343,7 +343,7 @@
+@@ -332,7 +332,7 @@
  	 RSHPATH=/usr/bin/rsh \
  	 BASECFLAGS="-g -O2" \
  	 BASELDFLAGS="-lsocket -lnsl -lgen" \
@@ -28,11 +28,11 @@ $NetBSD: patch-ae,v 1.10 2000/09/27 08:29:04 toshii Exp $
 +	 RANLIB=true CC="$(CC)"
  
  gsu:	# GCC SUN-OS
- 	$(BUILD) `cat EXTRASPECIALS` OS=sun \
-@@ -431,11 +431,12 @@
+ 	$(BUILD) `$(CAT) SPECIALS` OS=sun \
+@@ -420,11 +420,12 @@
  
  neb:	# NetBSD
- 	$(BUILD) `cat EXTRASPECIALS` OS=bsi \
+ 	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
 +	 CC="$(CC)" \
  	 CRXTYPE=nfs \
  	 SPOOLDIR=/var \
@@ -44,12 +44,12 @@ $NetBSD: patch-ae,v 1.10 2000/09/27 08:29:04 toshii Exp $
  	 BASELDFLAGS="-lcrypt"
  
  nec:	# NEC UX
-@@ -813,7 +814,7 @@
+@@ -808,7 +809,7 @@
  	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
  	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
 -	echo "$(ARRC) $(ARCHIVE) $(BINARIES);$(RANLIB) $(ARCHIVE)" > ARCHIVE
-+	echo "$(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib -version-info 4:0" > ARCHIVE
++	echo "$(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib -version-info 4:1" > ARCHIVE
  	./drivers $(EXTRADRIVERS) $(DEFAULTDRIVERS) dummy
  	./mkauths $(EXTRAAUTHENTICATORS) $(DEFAULTAUTHENTICATORS)
  	$(LN) os_$(OS).h osdep.h
