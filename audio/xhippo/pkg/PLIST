@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/08/02 02:54:24 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/08/19 01:44:48 hubertf Exp $
 bin/xhippo
 share/doc/xhippo/BUGS
 share/doc/xhippo/ChangeLog
@@ -10,3 +10,4 @@ share/doc/xhippo/xhippo.sgml
 share/doc/xhippo/xhippo.gtkrc
 share/doc/xhippo/xhippo.config.example
 @exec if [ ! -f %D/etc/xhippo.config ]; then cp %D/%F %D/etc/xhippo.config ; fi
+@dirrm share/doc/xhippo
