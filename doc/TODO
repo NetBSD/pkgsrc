@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3293 2005/03/24 16:57:16 wiz Exp $
+$NetBSD: TODO,v 1.3294 2005/03/24 17:07:18 cube Exp $
 
 Suggested new packages
 ======================
@@ -702,7 +702,6 @@ Suggested package updates
 	o p5-Business-CreditCard-0.28
 	o p5-Business-ISBN-Data-1.09
 	o p5-CDDB-1.15
-	o p5-Cache-Simple-TimedExpiry-0.23
 	o p5-Class-Trigger-0.09
 	o p5-Compress-Bzip2-1.03
 	o p5-Convert-BER-1.3101
@@ -716,7 +715,6 @@ Suggested package updates
 	o p5-DBD-Sybase-1.04
 	o p5-DBI-1.48
 	o p5-DBIx-ContextualFetch-1.02
-	o p5-DBIx-SearchBuilder-1.22
 	o p5-DB_File-1.810
 	o p5-Data-TemporaryBag-0.08
 	o p5-Device-Gsm-1.36
