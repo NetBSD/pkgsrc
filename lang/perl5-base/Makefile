@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/08 08:28:00 martin Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/25 14:40:10 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -11,6 +11,8 @@ MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/maint/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
+
+CONFLICTS=		perl-5.00*
 
 HAS_CONFIGURE=		# defined
 CONFIGURE_ENV+=		PREFIX=${PREFIX}
