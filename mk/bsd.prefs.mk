@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.18 2000/10/15 11:31:42 rh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.19 2000/11/02 03:01:40 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -125,5 +125,20 @@ HAVE_BUILTIN_MESA=	YES
 .endif
 .undef __BUILTIN_MESA
 .endif	# CHECK_MESA
+
+.if defined(USE_CURSES) && !defined(NEED_NCURSES)
+NEED_NCURSES=		NO
+.if ${OPSYS} == "NetBSD"
+_INCOMPAT_CURSES=	0.* 1.[0123]* 1.4.* 1.4[A-X]
+.for PATTERN in ${_INCOMPAT_CURSES}
+.if ${OS_VERSION:M${PATTERN}} != ""
+NEED_NCURSES=   	YES
+.endif
+.endfor
+.endif
+# we can pass the flag down without recursive dependency of ncurses
+# on itself, because it's explicitly tested in bsd.pkg.mk
+MAKEFLAGS+=	NEED_NCURSES=${NEED_NCURSES}
+.endif # USE_CURSES
 
 .endif	# BSD_PKG_MK
