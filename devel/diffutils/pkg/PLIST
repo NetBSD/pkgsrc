@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/12 15:38:07 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/12/28 04:59:48 wiz Exp $
 bin/cmp
 bin/diff
 bin/diff3
@@ -9,4 +9,4 @@ info/diff.info-1
 info/diff.info-2
 info/diff.info-3
 info/diff.info-4
-@exec install-info %D/info/diff.info %D/info/dir 
+@exec install-info %D/info/diff.info %D/info/dir
