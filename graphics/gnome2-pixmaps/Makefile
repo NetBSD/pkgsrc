@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/09/21 16:54:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2004/10/26 21:05:46 jmmv Exp $
 #
 
-DISTNAME=		gnome-desktop-2.8.0
+DISTNAME=		gnome-desktop-2.8.1
 PKGNAME=		${DISTNAME:S/-desktop/2-pixmaps/}
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.8/}
