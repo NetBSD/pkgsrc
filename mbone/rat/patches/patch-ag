@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1 1998/09/13 17:06:10 garbled Exp $
+*** src/config.h~	Fri May 23 08:44:14 1997
+--- src/config.h	Thu Mar  5 16:39:40 1998
+***************
+*** 57,60 ****
+--- 57,71 ----
+  #endif /* FreeBSD */
+  
++ #ifdef __NetBSD__
++ #define OSNAME "NetBSD"
++ #define DEFINED_ERRLIST
++ #include <sys/stat.h>
++ #include <sys/time.h>
++ #include <errno.h>
++ #include <fcntl.h>
++ #include <unistd.h>
++ #include <sys/audioio.h>
++ #endif
++ 
+  #ifdef SunOS_5
+  #define OSNAME "Solaris"
