@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/26 02:27:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/04/01 18:25:54 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEUI_BUILDLINK3_MK:=	${LIBGNOMEUI_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgnomeui}
 BUILDLINK_PACKAGES+=	libgnomeui
 
 .if !empty(LIBGNOMEUI_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libgnomeui+=		libgnomeui>=2.4.0.1nb2
-BUILDLINK_RECOMMENDED.libgnomeui?=	libgnomeui>=2.4.0.1nb6
+BUILDLINK_DEPENDS.libgnomeui+=		libgnomeui>=2.6.0
 BUILDLINK_PKGSRCDIR.libgnomeui?=	../../devel/libgnomeui
 .endif	# LIBGNOMEUI_BUILDLINK3_MK
 
@@ -24,5 +23,6 @@ BUILDLINK_PKGSRCDIR.libgnomeui?=	../../devel/libgnomeui
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../security/gnome-keyring/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
