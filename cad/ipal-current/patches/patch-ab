@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/19 17:05:28 dmcmahill Exp $
+
+--- ipaledit/Makefile.in.orig	Sat Nov 18 17:35:08 2000
++++ ipaledit/Makefile.in	Sun Nov 19 11:14:31 2000
+@@ -72,5 +72,5 @@
+ 
+ $(bindir)/ipaledit: ./ipaledit
+-	$(INSTALL_PROGRAM ./ipaledit $(bindir)/ipaledit
++	$(INSTALL_PROGRAM) ./ipaledit $(bindir)/ipaledit
+ 
+ uninstall:

@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/11/19 17:05:28 dmcmahill Exp $
+
+--- ipalrev/Makefile.in.orig	Sat Nov 18 17:35:08 2000
++++ ipalrev/Makefile.in	Sun Nov 19 11:14:39 2000
+@@ -65,5 +65,5 @@
+ 
+ $(bindir)/ipalrev: ./ipalrev
+-	$(INSTALL_PROGRAM ./ipalrev $(bindir)/ipalrev
++	$(INSTALL_PROGRAM) ./ipalrev $(bindir)/ipalrev
+ 
+ uninstall:

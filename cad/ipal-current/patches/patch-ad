@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/11/19 17:05:28 dmcmahill Exp $
+
+--- ipaledit/main.c.orig	Sat Nov 18 00:18:31 2000
++++ ipaledit/main.c	Sun Nov 19 11:50:48 2000
+@@ -61,4 +61,6 @@
+ 	    }
+       }
++
++      return can;
+ }
+ 

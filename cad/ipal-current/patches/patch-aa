@@ -1,0 +1,63 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/19 17:05:28 dmcmahill Exp $
+
+need to be sure we can pass down MAKE=gmake
+
+--- Makefile.in.orig	Sat Nov 18 17:35:08 2000
++++ Makefile.in	Sun Nov 19 11:03:43 2000
+@@ -43,16 +43,16 @@
+ 
+ all:
+-	cd libjedec ; make all
+-	cd libipal  ; make all
+-	cd pa       ; make all
+-	cd ipaledit ; make all
+-	cd ipalrev  ; make all
++	cd libjedec ; ${MAKE} all
++	cd libipal  ; ${MAKE} all
++	cd pa       ; ${MAKE} all
++	cd ipaledit ; ${MAKE} all
++	cd ipalrev  ; ${MAKE} all
+ 
+ clean:
+-	cd ipalrev  ; make clean
+-	cd ipaledit ; make clean
+-	cd pa       ; make clean
+-	cd libjedec ; make clean
+-	cd libipal ; make clean
++	cd ipalrev  ; ${MAKE} clean
++	cd ipaledit ; ${MAKE} clean
++	cd pa       ; ${MAKE} clean
++	cd libjedec ; ${MAKE} clean
++	cd libipal ; ${MAKE} clean
+ 
+ distclean: clean
+@@ -63,9 +63,9 @@
+ 
+ install: installdirs $(includedir)/ipal.h $(includedir)/jedec.h
+-	cd libjedec ; make install
+-	cd libipal  ; make install
+-	cd pa       ; make install
+-	cd ipaledit ; make install
+-	cd ipalrev  ; make install
++	cd libjedec ; ${MAKE} install
++	cd libipal  ; ${MAKE} install
++	cd pa       ; ${MAKE} install
++	cd ipaledit ; ${MAKE} install
++	cd ipalrev  ; ${MAKE} install
+ 
+ installdirs: mkinstalldirs
+@@ -79,9 +79,9 @@
+ 
+ uninstall:
+-	cd libjedec ; make uninstall
+-	cd libipal  ; make uninstall
+-	cd pa       ; make uninstall
+-	cd ipaledit ; make uninstall
+-	cd ipalrev  ; make uninstall
++	cd libjedec ; ${MAKE} uninstall
++	cd libipal  ; ${MAKE} uninstall
++	cd pa       ; ${MAKE} uninstall
++	cd ipaledit ; ${MAKE} uninstall
++	cd ipalrev  ; ${MAKE} uninstall
+ 	rm -f $(includedir)/ipal.h
+ 	rm -f $(includedir)/jedec.h
