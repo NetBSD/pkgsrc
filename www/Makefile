@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2004/09/19 04:08:17 markd Exp $
+# $NetBSD: Makefile,v 1.344.2.1 2004/11/27 16:51:05 salo Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -43,7 +43,6 @@ SUBDIR+=	ap2-subversion
 SUBDIR+=	ap2-transform
 SUBDIR+=	apache
 SUBDIR+=	apache2
-SUBDIR+=	apache6
 SUBDIR+=	apachetop
 SUBDIR+=	apc-gui
 SUBDIR+=	asWedit
