@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/20 05:42:35 snj Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/07 15:12:40 jmmv Exp $
 
 DISTNAME=		db-4.2.52
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -60,4 +60,5 @@ CONFIGURE_ARGS+=	--enable-java
 post-install:
 	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/db4
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
