@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/11/07 13:55:02 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/07 23:24:12 dmcmahill Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGREVISION=	1
@@ -12,6 +12,7 @@ COMMENT=	DVI to PDF translator
 
 CONFLICTS+=	dvipdfmx-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
+CONFLICTS+=	teTeX2-bin-[2-9]*
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
@@ -33,10 +34,6 @@ post-install:
 	mktexlsr
 
 .include "../../graphics/png/buildlink2.mk"
-.if defined(USE_TETEX2)
-.include "../../print/teTeX2-bin/kpathsea.buildlink2.mk"
-.else
 .include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
-.endif
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
