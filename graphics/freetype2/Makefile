@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/14 18:26:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2004/03/29 10:17:49 recht Exp $
 #
 
 DISTNAME=	freetype-2.1.5
@@ -29,6 +29,12 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include
 PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(MKTTINTERP) &&	\
+  !empty(MKTTINTERP:M[yY][eE][sS])
+CFLAGS+= -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER
+.endif
+BUILD_DEFS+= MKTTINTERP
 
 post-configure:
 	cd ${WRKSRC} && ${LN} -s builds/unix/unix.mk config.mk
