@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/09/27 22:07:40 tsarna Exp $
+# $NetBSD: Makefile,v 1.11 1998/09/27 22:24:44 tsarna Exp $
 
 DISTNAME=	LLNLPython4
 PKGNAME=	py-Numeric-1.3
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.python.org/sigs/matrix-sig/
 
 DEPENDS+=	python-1.5.1:../../lang/python
 
-NOT_FOR_ARHCS=	alpha
+NOT_FOR_ARHCS=	alpha # broken, needs investigation
 
 WRKSRC=		${WRKDIR}/LLNLPython4/Numerical
 ALL_TARGET=	default
