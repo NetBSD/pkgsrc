@@ -1,13 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/07/31 22:48:50 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/02 22:19:40 jlam Exp $
 
---- configure.orig	Wed Jun 13 18:28:55 2001
-+++ configure
-@@ -1689,8 +1689,6 @@
- fi
+--- authlib/Makefile.in.orig	Wed Dec  5 08:26:53 2001
++++ authlib/Makefile.in
+@@ -2067,7 +2067,6 @@
+ 		for f in $(man_LINKS) "" ; do \
+ 			test "$$f" = "" && continue ; \
+ 			rm -f $$f; $(LN_S) authlib.7 $$f ; \
+-			test -w /etc && chown bin $$f && chgrp bin $$f ; \
+ 			done ; exit 0
  
- 
--INSTALL_DATA='${INSTALL} -m 0600'
--
- #
- # autoconf bug
- #
+ uninstall-local: uninstall-authldaprc uninstall-authdaemonrc uninstall-authmysqlrc uninstall-authpgsqlrc
