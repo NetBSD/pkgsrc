@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2001/12/30 13:38:07 wiz Exp $
+--- src/Makefile.sys.orig	Sat Dec 29 03:48:26 2001
++++ src/Makefile.sys	Sat Dec 29 03:48:37 2001
+@@ -47,8 +47,8 @@
+ DEBUGFLAGS = -DYYDEBUG=1 -DYYIMPURE=1 # don't change this
+ 
+ #BISON = /usr/bin/bison
+-BISON = /af10/evans/bison-1.28/bin/bison
+-FLEX = /usr/bin/flex
++#BISON = /af10/evans/bison-1.28/bin/bison
++#FLEX = /usr/bin/flex
+ 
+ ### bison flags
+ 
