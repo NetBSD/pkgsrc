@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/11 06:34:49 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/08/01 16:55:38 wiz Exp $
 #
 
 DISTNAME=		apcupsd-3.6.2
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	yes
 
 USE_GMAKE=		# defined
-USE_LIBINTL=		# defined
+#USE_LIBINTL=		# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-http		# include http support
@@ -62,4 +62,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${file} ${PREFIX}/share/doc/apcupsd
 .endfor
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
