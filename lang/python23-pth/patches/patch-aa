@@ -1,43 +1,54 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/08/04 08:29:32 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2003/08/18 20:57:14 recht Exp $
 
 --- setup.py.orig	2003-07-10 14:48:39.000000000 +0200
-+++ setup.py	2003-08-03 12:13:44.000000000 +0200
-@@ -240,9 +240,13 @@
++++ setup.py	2003-08-18 21:19:14.000000000 +0200
+@@ -15,7 +15,7 @@
+ from distutils.command.install_lib import install_lib
+ 
+ # This global variable is used to hold the list of modules to be disabled.
+-disabled_module_list = []
++disabled_module_list = ["_curses", "_curses_panel", "_tkinter", "gdbm", "mpz", "pyexpat", "readline"]
+ 
+ def add_dir_to_list(dirlist, dir):
+     """Add the directory 'dir' to the list 'dirlist' (at the front) if
+@@ -240,9 +240,15 @@
          return sys.platform
  
      def detect_modules(self):
 -        # Ensure that /usr/local is always used
 -        add_dir_to_list(self.compiler.library_dirs, '/usr/local/lib')
 -        add_dir_to_list(self.compiler.include_dirs, '/usr/local/include')
-+	# Add the buildlink directories for pkgsrc
-+	if os.environ.has_key('BUILDLINK_DIR'):
-+	    dir = os.environ['BUILDLINK_DIR']
-+	    libdir = dir + '/lib'
-+	    incdir = dir + '/include'
-+	    add_dir_to_list(self.compiler.library_dirs, libdir)
-+	    add_dir_to_list(self.compiler.include_dirs, incdir)
++        # Add the buildlink directories for pkgsrc
++        if os.environ.has_key('BUILDLINK_DIR'):
++            dir = os.environ['BUILDLINK_DIR']
++            libdir = dir + '/lib'
++            incdir = dir + '/include'
++            if libdir not in self.compiler.library_dirs:
++                self.compiler.library_dirs.insert(0, libdir)
++            if incdir not in self.compiler.include_dirs:
++                self.compiler.include_dirs.insert(0, incdir)
  
          # fink installs lots of goodies in /sw/... - make sure we
          # check there
-@@ -396,7 +400,7 @@
+@@ -396,13 +402,13 @@
          # These represent audio samples or images as strings:
  
          # Disabled on 64-bit platforms
 -        if sys.maxint != 9223372036854775807L:
-+        if 0 and sys.maxint != 9223372036854775807L:
++#        if sys.maxint != 9223372036854775807L:
              # Operations on audio samples
-             exts.append( Extension('audioop', ['audioop.c']) )
+-            exts.append( Extension('audioop', ['audioop.c']) )
++#            exts.append( Extension('audioop', ['audioop.c']) )
              # Operations on images
-@@ -405,7 +409,7 @@
-             exts.append( Extension('rgbimg', ['rgbimgmodule.c']) )
+-            exts.append( Extension('imageop', ['imageop.c']) )
++#            exts.append( Extension('imageop', ['imageop.c']) )
+             # Read SGI RGB image files (but coded portably)
+-            exts.append( Extension('rgbimg', ['rgbimgmodule.c']) )
++#            exts.append( Extension('rgbimg', ['rgbimgmodule.c']) )
  
          # readline
--        if self.compiler.find_library_file(lib_dirs, 'readline'):
-+        if 0 and self.compiler.find_library_file(lib_dirs, 'readline'):
-             readline_libs = ['readline']
-             if self.compiler.find_library_file(lib_dirs,
-                                                  'ncurses'):
-@@ -436,9 +440,7 @@
+         if self.compiler.find_library_file(lib_dirs, 'readline'):
+@@ -436,9 +442,7 @@
                                 depends = ['socketmodule.h']) )
          # Detect SSL support for the socket module (via _ssl)
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
@@ -48,7 +59,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/08/04 08:29:32 drochner Exp $
                               )
          if ssl_incs is not None:
              krb5_h = find_file('krb5.h', inc_dirs,
-@@ -446,9 +448,7 @@
+@@ -446,9 +450,7 @@
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -59,87 +70,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/08/04 08:29:32 drochner Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -608,7 +608,7 @@
-                                        libraries=dblibs))
- 
-         # Anthony Baxter's gdbm module.  GNU dbm(3) will require -lgdbm:
--        if (self.compiler.find_library_file(lib_dirs, 'gdbm')):
-+        if 0 and (self.compiler.find_library_file(lib_dirs, 'gdbm')):
-             exts.append( Extension('gdbm', ['gdbmmodule.c'],
-                                    libraries = ['gdbm'] ) )
- 
-@@ -626,7 +626,7 @@
-         # FTP archive sites. One URL for it is:
-         # ftp://gatekeeper.dec.com/.b/usenet/comp.sources.misc/volume40/fgmp/part01.Z
- 
--        if (self.compiler.find_library_file(lib_dirs, 'gmp')):
-+        if 0 and (self.compiler.find_library_file(lib_dirs, 'gmp')):
-             exts.append( Extension('mpz', ['mpzmodule.c'],
-                                    libraries = ['gmp'] ) )
- 
-@@ -658,7 +658,7 @@
-             curses_libs = ['ncurses']
-             exts.append( Extension('_curses', ['_cursesmodule.c'],
-                                    libraries = curses_libs) )
--        elif (self.compiler.find_library_file(lib_dirs, 'curses')
-+        elif 0 and (self.compiler.find_library_file(lib_dirs, 'curses')
-               and platform != 'darwin'):
-                 # OSX has an old Berkeley curses, not good enough for
-                 # the _curses module.
-@@ -730,21 +730,21 @@
-         else:
-             xmlbo = "4321"
-         expatinc = os.path.join(os.getcwd(), srcdir, 'Modules', 'expat')
--        exts.append(Extension('pyexpat',
--                              sources = [
--            'pyexpat.c',
--            'expat/xmlparse.c',
--            'expat/xmlrole.c',
--            'expat/xmltok.c',
--            ],
--                              define_macros = [
--            ('XML_NS', '1'),
--            ('XML_DTD', '1'),
--            ('BYTEORDER', xmlbo),
--            ('XML_CONTEXT_BYTES','1024'),
--            ],
--                              include_dirs = [expatinc]
--                               ))
-+#        exts.append(Extension('pyexpat',
-+#                              sources = [
-+#            'pyexpat.c',
-+#            'expat/xmlparse.c',
-+#            'expat/xmlrole.c',
-+#            'expat/xmltok.c',
-+#            ],
-+#                              define_macros = [
-+#            ('XML_NS', '1'),
-+#            ('XML_DTD', '1'),
-+#            ('BYTEORDER', xmlbo),
-+#            ('XML_CONTEXT_BYTES','1024'),
-+#            ],
-+#                              include_dirs = [expatinc]
-+#                               ))
- 
-         # Dynamic loading module
-         if sys.maxint == 0x7fffffff:
-@@ -867,7 +867,7 @@
-         self.extensions.extend(exts)
- 
-         # Call the method for detecting whether _tkinter can be compiled
--        self.detect_tkinter(inc_dirs, lib_dirs)
-+#        self.detect_tkinter(inc_dirs, lib_dirs)
- 
-     def detect_tkinter_darwin(self, inc_dirs, lib_dirs):
-         # The _tkinter module, using frameworks. Since frameworks are quite
-@@ -1128,7 +1128,9 @@
+@@ -1128,7 +1130,7 @@
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
            # Scripts to install
 -          scripts = ['Tools/scripts/pydoc', 'Tools/scripts/idle']
-+          scripts = ['Tools/scripts/pydoc2p3',
-+#'Tools/scripts/idle'
-+	  ]
++          scripts = ['Tools/scripts/pydoc2p3']
          )
  
  # --install-platlib
