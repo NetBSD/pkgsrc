@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/07/19 13:30:49 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:35 agc Exp $
 
 SHA1 (tmake-1.11.tar.gz) = 163283e922158f13760ce7855f8422b92f3c57a5
+RMD160 (tmake-1.11.tar.gz) = 29357d749feb166db0b55ce68ba03603226c0fce
 Size (tmake-1.11.tar.gz) = 65982 bytes
 SHA1 (patch-aa) = daa9e10c3ae1dce66620657919e06b2db07049d1
 SHA1 (patch-ab) = b81f6022a9103a9ae0fe3d9adddbf57d374d51d9

@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.2 2004/09/10 19:32:44 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:35 agc Exp $
 
 SHA1 (tvision-0.8.tar.gz) = c3a9948052289f77534de7a05a5d90d3ce770fff
+RMD160 (tvision-0.8.tar.gz) = d6bc5b690d95eb50dea167d30de66daeb267baf3
 Size (tvision-0.8.tar.gz) = 1296058 bytes
 SHA1 (tvision-0.8-freebsd-patches-20040910.diff.bz2) = 74b8a0a4fd0cecc28e40b1f9844b7361d31d5519
+RMD160 (tvision-0.8-freebsd-patches-20040910.diff.bz2) = 85bcee3e5bfc64ab8744818783a1732f94909896
 Size (tvision-0.8-freebsd-patches-20040910.diff.bz2) = 22368 bytes
 SHA1 (patch-aa) = 949a270f748c4b5f20a7a0fe555cfff19da978ed

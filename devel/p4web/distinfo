@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/01 05:29:12 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:22 agc Exp $
 
 SHA1 (perforce/darwinppc/p4web) = ccb0ffbd70f0b0c96fdfe6e3b3cab23d6cee16d3
 Size (perforce/darwinppc/p4web) = 1406196 bytes
 SHA1 (perforce/freebsd22/p4web) = 213d7ea4f6c84b72944741b3036348caa382ca2c
+RMD160 (perforce/freebsd22/p4web) = 1b67de3439c3922f3f822b7236354cae831e70c9
 Size (perforce/freebsd22/p4web) = 1260996 bytes
 SHA1 (perforce/linux24x86/p4web) = 21fa01cc816816f45ed3abc674c1f839f2d27224
 Size (perforce/linux24x86/p4web) = 1579861 bytes

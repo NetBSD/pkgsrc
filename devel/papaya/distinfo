@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/10/16 04:46:31 rh Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:30 agc Exp $
 
 SHA1 (papaya-0.1.7.tar.gz) = 4dad7d302a774666207216d8fadae92faf42918d
+RMD160 (papaya-0.1.7.tar.gz) = cef643b2370c020aeebca8b424620e46bdfe1642
 Size (papaya-0.1.7.tar.gz) = 200514 bytes
 SHA1 (patch-aa) = 2b1c1f0abe375dd37870347891df97e127163b6f
 SHA1 (patch-ab) = 5dc68a8598665d11f4484c2ce490681b07dea721

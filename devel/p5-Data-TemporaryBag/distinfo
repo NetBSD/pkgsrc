@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/09 05:39:00 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:24 agc Exp $
 
 SHA1 (Data-TemporaryBag-0.04.tar.gz) = 37caea61c157eb7babc049f98192720977d35696
+RMD160 (Data-TemporaryBag-0.04.tar.gz) = 24c70abb21d78f51aae3c7d487ea4187183380a3
 Size (Data-TemporaryBag-0.04.tar.gz) = 3895 bytes

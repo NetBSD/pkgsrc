@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/01/29 11:49:50 grant Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 22:24:30 agc Exp $
 
 SHA1 (pccts-1.33.22/pccts133mr22.zip) = ccdfaf8f69ddc59ad6d7e3f05922c693db0cf987
+RMD160 (pccts-1.33.22/pccts133mr22.zip) = 12bc6fba37be2f1f691c6caf257fc00bd0cdb6fc
 Size (pccts-1.33.22/pccts133mr22.zip) = 717522 bytes
 SHA1 (patch-aa) = b6037043b1841575fd98c1f011e7e22a8ecd5b99
 SHA1 (patch-ab) = 43a05786923583efeadde34eb775f45862315865

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/05/24 09:36:48 kristerw Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 22:24:32 agc Exp $
 
 SHA1 (rdp1_5.zip) = 05a450d95aa306231a5762ddc292894f8b0c63f8
+RMD160 (rdp1_5.zip) = 723f4860490169aea64a26bf3efaf2c5ff98f97a
 Size (rdp1_5.zip) = 1234919 bytes
 SHA1 (patch-aa) = b424b87f71057c81a9d125cd063568ace051ec30
 SHA1 (patch-ab) = e4a44c122221196147b9dd16d59fac6da09f2e67

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/02/11 23:29:56 mjl Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:26 agc Exp $
 
 SHA1 (Log-Agent-0.303.tar.gz) = 270d81a3a6d8fc8c73e938662e98a4083e1f3848
+RMD160 (Log-Agent-0.303.tar.gz) = 06ad7b25a2731f75593e383f9d873fbf7b2c2d49
 Size (Log-Agent-0.303.tar.gz) = 52852 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/08/02 21:36:48 jlam Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 22:24:26 agc Exp $
 
 SHA1 (IO-stringy-2.109.tar.gz) = eadac3900958a56f6582f285c48e7313fdeae0f0
+RMD160 (IO-stringy-2.109.tar.gz) = 42f11bd9adfb722165ba0cecb860c3786f7c7b21
 Size (IO-stringy-2.109.tar.gz) = 66377 bytes

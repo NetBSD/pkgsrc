@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/09 04:53:57 grant Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:27 agc Exp $
 
 SHA1 (Net-CIDR-0.09.tar.gz) = bde26e53148ecaf45cdee3ebcb4da01b739b1594
+RMD160 (Net-CIDR-0.09.tar.gz) = 6db5b851bccd7629a2215af28d7219adb9473091
 Size (Net-CIDR-0.09.tar.gz) = 8773 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/06/07 04:45:11 tv Exp $
+$NetBSD: distinfo,v 1.9 2005/02/23 22:24:10 agc Exp $
 
 SHA1 (boost_1_31_0.tar.bz2) = 381159c432f209b3a9f25cb14140aa52d003122d
+RMD160 (boost_1_31_0.tar.bz2) = c9785b2cfdd44ff6edd0b0e8436b129c7e57f944
 Size (boost_1_31_0.tar.bz2) = 6979482 bytes
 SHA1 (patch-aa) = 3d38799ed178661b8803958cd12c2161a475ff05
 SHA1 (patch-ab) = b70c955e7719690325ab8f9fd86aeaa40d8aebc0

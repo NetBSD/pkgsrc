@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/01/27 12:27:47 drochner Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 22:24:18 agc Exp $
 
 SHA1 (libextractor-0.3.11.tar.gz) = 8b4e04121764f2221d162a7bf9c751fd15c7a5da
+RMD160 (libextractor-0.3.11.tar.gz) = 8e567b085cc81346750a577890aa9ed6eabecda8
 Size (libextractor-0.3.11.tar.gz) = 5766585 bytes
 SHA1 (patch-aa) = e3c770fd3a0cc918cf1f05f79cb1a148dd928533
 SHA1 (patch-ab) = 3d8cf383a9edf340b6289cb2b4fa98e3029efdef

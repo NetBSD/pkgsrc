@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/10/05 09:29:53 taca Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:33 agc Exp $
 
 SHA1 (ruby/testunit-0.1.8.tar.gz) = b6651b363897f645f29f856542b6188e5d652555
+RMD160 (ruby/testunit-0.1.8.tar.gz) = be06f0fe124d7ddba5c7bf25ef13167aaff35b3b
 Size (ruby/testunit-0.1.8.tar.gz) = 64279 bytes

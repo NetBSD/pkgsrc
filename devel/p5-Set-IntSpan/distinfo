@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/11/27 11:13:23 gson Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:28 agc Exp $
 
 SHA1 (Set-IntSpan-1.08.tar.gz) = c8332bafae1c8b49302ae0fc264e2544bb697128
+RMD160 (Set-IntSpan-1.08.tar.gz) = 5a87f3d83645cf06c3dbe6a0e6050df5c7301c8c
 Size (Set-IntSpan-1.08.tar.gz) = 14148 bytes

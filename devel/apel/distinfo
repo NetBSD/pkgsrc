@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2003/09/01 14:51:00 minoura Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:09 agc Exp $
 
 SHA1 (apel-10.6.tar.gz) = 47db5ec3bdbb822571714b8dc60c3ba9eb12211b
+RMD160 (apel-10.6.tar.gz) = 846cc960dec111da195ad7cb38d513cc8b18cdd7
 Size (apel-10.6.tar.gz) = 131279 bytes
 SHA1 (patch-aa) = fcbbad6b59177b2e8532da2cc665a9271fca0830

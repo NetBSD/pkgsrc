@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/06/15 17:19:23 kristerw Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:33 agc Exp $
 
 SHA1 (sfio_1999.src.unix.cpio) = 6fd3a711ca8f95190c0859934f57a66d02c842a4
+RMD160 (sfio_1999.src.unix.cpio) = 379148273c9979f7a5a921a338465b7579a6ac5e
 Size (sfio_1999.src.unix.cpio) = 647168 bytes
 SHA1 (patch-aa) = 514aafe5eb5f97150742efa6a5b51644bf485bda
 SHA1 (patch-ab) = 5d18fef1b1c2f4a3ce6071a4ab3ebe2d10af5261

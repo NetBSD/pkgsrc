@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/09 05:37:30 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:21 agc Exp $
 
 SHA1 (memcached-1.1.11.tar.gz) = 2aae771cfa79db39e797c8fa5ee0ebff3ddfed56
+RMD160 (memcached-1.1.11.tar.gz) = 368029eb8751a8483846bb0a66d3bf12f157634d
 Size (memcached-1.1.11.tar.gz) = 112954 bytes
 SHA1 (patch-aa) = efcfc94c2dc9342acea4c4c5cc9195c34abf2b97

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/25 22:17:30 rh Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:30 agc Exp $
 
 SHA1 (palmpower-1.0.2.tar.gz) = fc0884bd74c5e5fbf3698ac0a82abba3d6a556c6
+RMD160 (palmpower-1.0.2.tar.gz) = 91dda6fb43e120fae05edfe706243890a88d3a46
 Size (palmpower-1.0.2.tar.gz) = 184976 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/07/22 18:09:01 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:34 agc Exp $
 
 SHA1 (tet3.3h-unsup.src.tgz) = bfd582f272735a7da53c32e0e2289f8b4993bf9f
+RMD160 (tet3.3h-unsup.src.tgz) = 041b1e65a8f18775171944a7d245290af97d9437
 Size (tet3.3h-unsup.src.tgz) = 779995 bytes
 SHA1 (patch-aa) = 68cc1beed72dade766b73d69a971ad60e445d840
 SHA1 (patch-ab) = fd0086d4b3138f5a6c157feacdafce1ffbb8a998

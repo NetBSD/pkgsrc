@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/31 00:04:19 kristerw Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:10 agc Exp $
 
 SHA1 (buddy22.tar.gz) = 1edef74161825b004872f7a148df4ecfe7efadb5
+RMD160 (buddy22.tar.gz) = a9aa36b909a31967957b98325ab40f73a1c0b942
 Size (buddy22.tar.gz) = 448103 bytes
 SHA1 (patch-aa) = 81241aa7fddf07629cf2cf1a88d3254612db49a3
 SHA1 (patch-ab) = 7c7e356cf1ea7bfdb2e2493c12088fcef1acf936

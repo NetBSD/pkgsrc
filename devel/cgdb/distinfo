@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/19 18:12:27 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:11 agc Exp $
 
 SHA1 (cgdb-0.4.0.tar.gz) = 900105c73e8c16dec9f3e37343abbba120d36df6
+RMD160 (cgdb-0.4.0.tar.gz) = f79e567ccf96d5d473e1cd4859ac97bc17619f67
 Size (cgdb-0.4.0.tar.gz) = 471395 bytes

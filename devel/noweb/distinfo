@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:32 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 22:24:22 agc Exp $
 
 SHA1 (noweb-2.9a.tgz) = 0ee5f97c56fa7898be9815ad817036f8aee0193b
+RMD160 (noweb-2.9a.tgz) = ee61f44091d2634550d33528b426af508ffad729
 Size (noweb-2.9a.tgz) = 728608 bytes
 SHA1 (patch-aa) = 0c0c446173c1ee13eeb0b80041cb8cf98e3c7325

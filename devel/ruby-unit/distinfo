@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2003/08/30 08:36:53 taca Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:33 agc Exp $
 
 SHA1 (ruby/rubyunit-0.5.6.tar.gz) = 76fc87a72b70cab5f13d0ca280f6df530c49680d
+RMD160 (ruby/rubyunit-0.5.6.tar.gz) = cad89f588922d13f5f61257a84e9c08535cb279a
 Size (ruby/rubyunit-0.5.6.tar.gz) = 31216 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/04/09 11:27:15 grant Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 22:24:24 agc Exp $
 
 SHA1 (Devel-Symdump-2.03.tar.gz) = c8489a73c9dcabe194a6cf3539a2cde531cf5f12
+RMD160 (Devel-Symdump-2.03.tar.gz) = ad5a15cac117e16af075730998838d795f6d2c9c
 Size (Devel-Symdump-2.03.tar.gz) = 9834 bytes

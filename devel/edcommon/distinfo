@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/30 11:56:01 rh Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:13 agc Exp $
 
 SHA1 (edcommon-32-s.tar.gz) = b189c4ff52ea4ef1cf5bcd65b5f0e7fd7da3e1a0
+RMD160 (edcommon-32-s.tar.gz) = 3a55a14d3ea353fa1802852539535612c48f43db
 Size (edcommon-32-s.tar.gz) = 188718 bytes
 SHA1 (patch-aa) = d6dc8e945e23eaf2c8d67649e611fdff79f56f42
 SHA1 (patch-ab) = b020a7f62739015624f3b267d680cd55b2d29fb1

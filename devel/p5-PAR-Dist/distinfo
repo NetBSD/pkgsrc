@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/11 14:16:53 seb Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 22:24:27 agc Exp $
 
 SHA1 (PAR-Dist-0.07.tar.gz) = 1908227fdd1a086ce26e5126df128fa3227755a8
+RMD160 (PAR-Dist-0.07.tar.gz) = f6dfd61e5c1f276b445f3781728a57a0e2272ee7
 Size (PAR-Dist-0.07.tar.gz) = 13853 bytes

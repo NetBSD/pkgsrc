@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/10/26 17:00:44 gavan Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 22:24:21 agc Exp $
 
 SHA1 (m4-1.4.2.tar.gz) = 60353e84a9d534dcc43aea3bb6370ed8c1164cd4
+RMD160 (m4-1.4.2.tar.gz) = a17fbdcfd91f6229e77bdff52ea8b2ff77c545c8
 Size (m4-1.4.2.tar.gz) = 345199 bytes
 SHA1 (patch-aa) = 1cadcd91fcda6131bc1a8ab723a2cc199532ed07
 SHA1 (patch-ab) = 217c506243100c7396045a3aab3c352dd9972403

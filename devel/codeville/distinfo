@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 15:35:56 adam Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 22:24:11 agc Exp $
 
 SHA1 (Codeville-0.1.10.tar.gz) = 028b3353c8afcc1492a6e83042bfab9db40a0a85
+RMD160 (Codeville-0.1.10.tar.gz) = b8ddb79756a36b1b123febe42e3e6a1fe7cd9f75
 Size (Codeville-0.1.10.tar.gz) = 70188 bytes

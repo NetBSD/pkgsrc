@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2005/02/17 10:52:02 salo Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 22:24:17 agc Exp $
 
 SHA1 (libebml-0.7.3.tar.bz2) = a7da238f926665c586ea3684eb34a1f5190fc0de
+RMD160 (libebml-0.7.3.tar.bz2) = 0e0b298e5e039b4c1d69ae60599c7e990ef2a0d6
 Size (libebml-0.7.3.tar.bz2) = 52827 bytes
 SHA1 (patch-aa) = 97ae2bfb8554556d5389ec02aee84e7162282d73

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/09/24 19:25:38 abs Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 22:24:15 agc Exp $
 
 SHA1 (global-4.8.tar.gz) = 4117c62cdb26c65bd5c8d115a02dd4e1dfaca54a
+RMD160 (global-4.8.tar.gz) = 84d41886e29c9dd10fc378691b0e168b5632b3a9
 Size (global-4.8.tar.gz) = 591811 bytes
