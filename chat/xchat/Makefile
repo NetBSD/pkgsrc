@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/01/16 14:59:38 tron Exp $
+# $NetBSD: Makefile,v 1.16 2002/01/18 14:37:20 drochner Exp $
 
 DISTNAME=	xchat-1.8.7
 CATEGORIES=	chat x11 gnome
@@ -9,13 +9,12 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://xchat.org/
 COMMENT=	X11 (X Window System) IRC client, using the GTK+ toolkit
 
-DEPENDS+=	python>=2.0:../../lang/python
-
 USE_GMAKE=	YES
 USE_PERL5=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	ac_cv_lib_intl_bindtextdomain='yes'
+CONFIGURE_ENV+=	pythonpath=${PYTHONBIN}
 MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 BUILD_DEFS+=	USE_INET6
@@ -47,5 +46,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xchat
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/xchat
 
+.include "../../lang/python/application.buildlink.mk"
 .include "../../x11/gnome-core/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
