@@ -1,9 +1,8 @@
-$NetBSD: patch-ac,v 1.3 1998/08/07 11:10:57 agc Exp $
+$NetBSD: patch-ac,v 1.4 2000/10/11 01:59:08 dmcmahill Exp $
 
---- sn_data.h.BAK	Mon Mar 30 09:33:53 1998
-+++ sn_data.h	Mon Mar 30 09:33:57 1998
-@@ -25,6 +25,21 @@
- char *ETH_DEV[]={"ed"};
+--- sn_data.h.orig	Fri Apr 18 05:33:58 1997
++++ sn_data.h	Tue Oct 10 21:56:57 2000
+@@ -26,4 +26,22 @@
  #endif
  
 +#ifdef NETBSD
@@ -14,8 +13,11 @@ $NetBSD: patch-ac,v 1.3 1998/08/07 11:10:57 agc Exp $
 +#define ETH_DEV_NR      2
 +char *ETH_DEV[]={"le","ie"};
 +#elif defined(m68k)
-+#define ETH_DEV_NR      5
-+char *ETH_DEV[]={"bah","ed","es","le","qn"};
++#define ETH_DEV_NR      9
++char *ETH_DEV[]={"ae","bah","ed","es","le","mc","qn","sm","sn"};
++#elif defined(mips)
++#define ETH_DEV_NR      8
++char *ETH_DEV[]={"awi","ep","mbe","le","ne","sm","tlp","wi"};
 +#else
 +#error Unknown network devices for this NetBSD architecture.
 +#endif
@@ -23,4 +25,3 @@ $NetBSD: patch-ac,v 1.3 1998/08/07 11:10:57 agc Exp $
 +
  #ifdef BSDI
  #define ETH_DEV_NR      1
- char *ETH_DEV[]={"ef"};
