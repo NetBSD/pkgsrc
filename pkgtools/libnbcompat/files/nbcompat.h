@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.34 2004/05/12 21:50:43 grant Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.35 2004/08/06 16:55:09 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -66,6 +66,12 @@
 #include <termios.h>
 #include <unistd.h>
 
+/* Augment <sys/queue.h> with any needed macros that are missing. */
+#if HAVE_SYS_QUEUE_H
+# include <sys/queue.h>
+#endif
+#include <nbcompat/queue.h>
+
 #if !HAVE_POLL
 # undef HAVE_POLL_H
 # undef HAVE_SYS_POLL_H
@@ -87,9 +93,10 @@
 # endif
 #endif
 
-#if HAVE_FTS_H
-# include <fts.h>
-#else
+#if HAVE_NBCOMPAT_FTS
+# if HAVE_FTS_H
+#  undef HAVE_FTS_H
+# endif
 # include <nbcompat/fts.h>
 #endif
 
@@ -104,115 +111,6 @@
 # endif
 #endif
 
-#if HAVE_SYS_QUEUE_H
-# include <sys/queue.h>
-#else
-#define LIST_HEAD(name, type)						\
-struct name {								\
-	struct type *lh_first;	/* first element */			\
-}
-
-#define LIST_HEAD_INITIALIZER(head)					\
-	{ NULL }
-
-#define LIST_ENTRY(type)						\
-struct {								\
-	struct type *le_next;	/* next element */			\
-	struct type **le_prev;	/* address of previous next element */	\
-}
-
-#define LIST_INSERT_HEAD(head, elm, field) do {				\
-	if (((elm)->field.le_next = (head)->lh_first) != NULL)		\
-		(head)->lh_first->field.le_prev = &(elm)->field.le_next;\
-	(head)->lh_first = (elm);					\
-	(elm)->field.le_prev = &(head)->lh_first;			\
-} while (/*CONSTCOND*/0)
-
-#define	LIST_INIT(head) do {						\
-	(head)->lh_first = NULL;					\
-} while (/*CONSTCOND*/0)
-#endif /* HAVE_SYS_QUEUE_H */
-
-#ifndef LIST_EMPTY
-#define	LIST_EMPTY(head)		((head)->lh_first == NULL)
-#endif
-#ifndef LIST_FIRST
-#define	LIST_FIRST(head)		((head)->lh_first)
-#endif
-#ifndef LIST_NEXT
-#define	LIST_NEXT(elm, field)		((elm)->field.le_next)
-#endif
-
-#if HAVE_SYS_QUEUE_H
-# include <sys/queue.h>
-#else
-#define TAILQ_HEAD(name, type)						\
-struct name {								\
-	struct type *tqh_first;	/* first element */			\
-	struct type **tqh_last;	/* addr of last next element */		\
-}
-
-#define TAILQ_HEAD_INITIALIZER(head)					\
-	{ NULL, &(head).tqh_first }
-
-#define TAILQ_ENTRY(type)						\
-struct {								\
-	struct type *tqe_next;	/* next element */			\
-	struct type **tqe_prev;	/* address of previous next element */	\
-}
-
-#define	TAILQ_INIT(head) do {						\
-	(head)->tqh_first = NULL;					\
-	(head)->tqh_last = &(head)->tqh_first;				\
-} while (/*CONSTCOND*/0)
-
-#define TAILQ_INSERT_HEAD(head, elm, field) do {			\
-	if (((elm)->field.tqe_next = (head)->tqh_first) != NULL)	\
-		(head)->tqh_first->field.tqe_prev =			\
-		    &(elm)->field.tqe_next;				\
-	else								\
-		(head)->tqh_last = &(elm)->field.tqe_next;		\
-	(head)->tqh_first = (elm);					\
-	(elm)->field.tqe_prev = &(head)->tqh_first;			\
-} while (/*CONSTCOND*/0)
-
-#define TAILQ_INSERT_TAIL(head, elm, field) do {			\
-	(elm)->field.tqe_next = NULL;					\
-	(elm)->field.tqe_prev = (head)->tqh_last;			\
-	*(head)->tqh_last = (elm);					\
-	(head)->tqh_last = &(elm)->field.tqe_next;			\
-} while (/*CONSTCOND*/0)
-
-#define TAILQ_REMOVE(head, elm, field) do {				\
-	if (((elm)->field.tqe_next) != NULL)				\
-		(elm)->field.tqe_next->field.tqe_prev = 		\
-		    (elm)->field.tqe_prev;				\
-	else								\
-		(head)->tqh_last = (elm)->field.tqe_prev;		\
-	*(elm)->field.tqe_prev = (elm)->field.tqe_next;			\
-} while (/*CONSTCOND*/0)
-#endif /* HAVE_SYS_QUEUE_H */
-
-#ifndef TAILQ_HEAD_INITIALIZER
-#define TAILQ_HEAD_INITIALIZER(head)					\
-	{ NULL, &(head).tqh_first }
-#endif
-#ifndef TAILQ_EMPTY
-#define	TAILQ_EMPTY(head)		((head)->tqh_first == NULL)
-#endif
-#ifndef TAILQ_FIRST
-#define	TAILQ_FIRST(head)		((head)->tqh_first)
-#endif
-#ifndef TAILQ_NEXT
-#define	TAILQ_NEXT(elm, field)		((elm)->field.tqe_next)
-#endif
-#ifndef TAILQ_FOREACH
-#define TAILQ_FOREACH(var, head, field)					\
-	for ((var) = ((head)->tqh_first);				\
-		(var);							\
-		(var) = ((var)->field.tqe_next))
-#endif
-
 #if HAVE_ASSERT_H
 # include <assert.h>
 #endif
@@ -223,21 +121,18 @@ struct {								\
 # include <nbcompat/err.h>
 #endif
 
-/* always use our glob.h */
-#if HAVE_GLOB_H
-# undef HAVE_GLOB_H
+#if HAVE_NBCOMPAT_GLOB
+# if HAVE_GLOB_H
+#  undef HAVE_GLOB_H
+# endif
+# include <nbcompat/glob.h>
 #endif
-#include <nbcompat/glob.h>
 
 #if HAVE_SYS_MKDEV_H
 # include <sys/mkdev.h>
 # if !defined(makedev) && defined(mkdev)
 #  define makedev mkdev
 # endif
-#endif
-
-#if HAVE_SYS_MOUNT_H
-# include <sys/mount.h>
 #endif
 
 #if HAVE_PATHS_H
@@ -257,17 +152,6 @@ struct {								\
 #  define _PATH_DEFTAPE "/dev/tape"
 # endif /* DEFTAPE */
 #endif /* _PATH_DEFTAPE */
-
-typedef struct _stringlist {
-	char	**sl_str;
-	size_t	  sl_max;
-	size_t	  sl_cur;
-} StringList;
-
-StringList *sl_init(void);
-int	 sl_add(StringList *, char *);
-void	 sl_free(StringList *, int);
-char	*sl_find(StringList *, char *);
 
 #if HAVE_TERMCAP_H
 # include <termcap.h>
@@ -331,21 +215,24 @@ void	 tputs(const char *, int, int (*)(int));
 # endif
 #endif
 
-#if HAVE_MD5_H
-# include <md5.h>
-#else
+#if HAVE_NBCOMPAT_MD5
+# if HAVE_MD5_H
+#  undef HAVE_MD5_H
+# endif
 # include <nbcompat/md5.h>
 #endif
 
-#if HAVE_RMD160_H
-# include <rmd160.h>
-#else
+#if HAVE_NBCOMPAT_RMD160
+# if HAVE_RMD160_H
+#  undef HAVE_RMD160_H
+# endif
 # include <nbcompat/rmd160.h>
 #endif
 
-#if HAVE_SHA1_H
-# include <sha1.h>
-#else
+#if HAVE_NBCOMPAT_SHA1
+# if HAVE_SHA1_H
+#  undef HAVE_SHA1_H
+# endif
 # include <nbcompat/sha1.h>
 #endif
 
@@ -353,19 +240,13 @@ void	 tputs(const char *, int, int (*)(int));
 # if HAVE_VIS_H
 #  undef HAVE_VIS_H
 # endif
-#endif
-
-#if HAVE_VIS_H
-# include <vis.h>
-#else
 # include <nbcompat/vis.h>
 #endif
 
-#if HAVE_GETOPT_H
-# include <getopt.h>
-#endif
-
 #if HAVE_NBCOMPAT_GETOPT_LONG
+# if HAVE_GETOPT_H
+#  undef HAVE_GETOPT_H
+# endif
 # include <nbcompat/getopt.h>
 #endif
 
@@ -408,10 +289,6 @@ int	pclose(FILE *);
 char   *fgetln(FILE *, size_t *);
 #endif
 
-#if !HAVE_FSEEKO
-int	fseeko(FILE *, off_t, int);
-#endif
-
 #if !HAVE_FPARSELN
 # define FPARSELN_UNESCESC	0x01
 # define FPARSELN_UNESCCONT	0x02
@@ -419,14 +296,6 @@ int	fseeko(FILE *, off_t, int);
 # define FPARSELN_UNESCREST	0x08
 # define FPARSELN_UNESCALL	0x0f
 char   *fparseln(FILE *, size_t *, size_t *, const char[3], int);
-#endif
-
-#if !HAVE_INET_NTOP
-const char *inet_ntop(int, const void *, char *, size_t);
-#endif
-
-#if !HAVE_INET_PTON
-int inet_pton(int, const char *, void *);
 #endif
 
 #if !HAVE_MKSTEMP
@@ -466,10 +335,6 @@ char   *strerror(int);
 void strmode(mode_t, char *);
 #endif
 
-#if !HAVE_STRPTIME || !HAVE_STRPTIME_D
-char   *strptime(const char *, const char *, struct tm *);
-#endif
-
 #if HAVE_WORKING_LONG_LONG
 # if !defined(HAVE_STRTOLL) && defined(HAVE_LONG_LONG)
 long long strtoll(const char *, char **, int);
@@ -498,10 +363,6 @@ long long strtoll(const char *, char **, int);
 
 #if ! defined(ULLONG_MAX)
 # define ULLONG_MAX	0xffffffffffffffffULL	/* max unsigned long long */
-#endif
-
-#if !HAVE_TIMEGM
-time_t	timegm(struct tm *);
 #endif
 
 #if !HAVE_HSTRERROR
@@ -536,11 +397,15 @@ int uid_from_user(const char *, uid_t *);
 int gid_from_group(const char *, gid_t *);
 #endif
 
-#if HAVE_NBCOMPAT_STATFS
-# if HAVE_SYS_STATFS_H
-#  undef HAVE_SYS_STATFS_H
+#if !HAVE_FNMATCH
+# include <nbcompat/fnmatch.h>
+#endif
+
+#if HAVE_NBCOMPAT_STATVFS
+# if HAVE_SYS_STATVFS_H
+#  undef HAVE_SYS_STATVFS_H
 # endif
-# include <nbcompat/statfs.h>
+# include <nbcompat/statvfs.h>
 #endif
 
 #if !HAVE_MEMMOVE
@@ -593,16 +458,16 @@ int gid_from_group(const char *, gid_t *);
 # define UID_MAX	2147483647U  /* max value for a uid_t (2^31-2) */
 #endif
 
-#ifndef HAVE_SETMODE
+#if !HAVE_SETMODE
 void *setmode(const char *);
 #endif
 
-#ifndef HAVE_GETMODE
+#if !HAVE_GETMODE
 mode_t getmode(const void *, mode_t);
 #endif
 
-#ifndef HAVE_UTIMES
+#if !HAVE_UTIMES
 int utimes(const char *, const struct timeval *);
 #endif
 
-#endif /* _NBCOMPAT_H */
+#endif /* !_NBCOMPAT_H */
