@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/10/16 22:08:58 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2002/10/20 16:45:05 seb Exp $
 
 DISTNAME=       make-3.80
 PKGNAME=        gmake-3.80
@@ -16,14 +16,6 @@ CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 TEXINFO_OVERRIDE=	YES
 TEXINFO_REQD=		4.0
-
-.include "../../mk/bsd.prefs.mk"
-
-.if (${GMAKE_NSEC_TIMESTAMPS} == "NO")
-CONFIGURE_ARGS+=	--disable-nsec-timestamps
-.endif
-
-BUILD_DEFS+=	GMAKE_NSEC_TIMESTAMPS
 
 post-extract:
 	${MV} ${WRKSRC}/doc/make.texi ${WRKSRC}/doc/make.texi.orig
