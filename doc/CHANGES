@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8785 2005/01/17 12:12:43 adam Exp $
+$NetBSD: CHANGES,v 1.8786 2005/01/17 12:38:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -348,3 +348,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated svk to 0.28 [epg 2005-01-16]
 	Added amarok-1.1.1 [seb 2005-01-17]
 	Updated lcms to 1.14 [adam 2005-01-17]
+	Removed everybuddy [jmmv 2005-01-17]
+	Removed everybuddy-gnome [jmmv 2005-01-17]
