@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2003/02/14 21:05:28 jmmv Exp $
+
+--- gnome-panel/Makefile.in.orig	2003-02-04 00:29:51.000000000 +0100
++++ gnome-panel/Makefile.in
+@@ -256,7 +256,7 @@ server_DATA = $(server_in_files:.server.
+ rcdir = $(datadir)
+ rc_DATA = gnome-panelrc
+ 
+-schemasdir = $(sysconfdir)/gconf/schemas
++schemasdir = $(datadir)/gconf/schemas
+ schemas_in_files =  	panel-global-config.schemas.in			panel-per-panel-config.schemas.in		gnome-panel-screenshot.schemas.in		$(NULL)
+ 
+ schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
+@@ -959,7 +959,7 @@ panel-typebuiltins.h: @REBUILD@ $(panel_
+ @INTLTOOL_SCHEMAS_RULE@
+ 
+ install-data-local:
+-	if test -z "$(DESTDIR)" ; then \
++	if false; then \
+ 		for p in $(schemas_DATA) ; do \
+ 			GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_builddir)/gnome-panel/$$p ; \
+ 		done \

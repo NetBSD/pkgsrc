@@ -1,30 +1,44 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/11/04 08:28:00 rh Exp $
+$NetBSD: patch-ad,v 1.2 2003/02/14 21:05:28 jmmv Exp $
 
---- applets/fish/Makefile.in.orig	Sun Sep 15 16:18:36 2002
+--- applets/fish/Makefile.in.orig	2003-02-04 00:29:54.000000000 +0100
 +++ applets/fish/Makefile.in
-@@ -166,7 +166,7 @@ FISH_BITMAPS =  	fishanim.png		oldwanda.
- EXTRA_DIST =  	$(FISH_BITMAPS)					GNOME_FishApplet_Factory.server.in.in		gnome-fish.png					fish.schemas.in					$(ui_DATA)
- 
+@@ -174,7 +174,7 @@ EXTRA_DIST =  	$(FISH_BITMAPS)					GNOME
+ gladedir = $(datadir)/fish
+ glade_DATA = fish.glade
  
 -fishbitmapsdir = $(datadir)/pixmaps/fish
 +fishbitmapsdir = $(datadir)/pixmaps/fish2
  fishbitmaps_DATA = $(FISH_BITMAPS)
  
  pixmapdir = $(datadir)/pixmaps
-@@ -321,12 +321,13 @@ install-pixmapDATA: $(pixmap_DATA)
+@@ -187,7 +187,7 @@ serverdir = $(libdir)/bonobo/servers
+ server_in_files = GNOME_FishApplet_Factory.server.in
+ server_DATA = $(server_in_files:.server.in=.server)
+ 
+-schemasdir = $(sysconfdir)/gconf/schemas
++schemasdir = $(datadir)/gconf/schemas
+ schemas_in_files = fish.schemas.in
+ schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
+ 
+@@ -249,9 +249,10 @@ install-libexecPROGRAMS: $(libexec_PROGR
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(pixmapdir)
- 	@list='$(pixmap_DATA)'; for p in $$list; do \
-+	inst=`echo $$p | sed s/gnome/gnome2/` ; \
- 	  if test -f $(srcdir)/$$p; then \
- 	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pixmapdir)/$$p"; \
--	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pixmapdir)/$$p; \
-+	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(pixmapdir)/$$inst; \
- 	  else if test -f $$p; then \
--	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(pixmapdir)/$$p"; \
--	    $(INSTALL_DATA) $$p $(DESTDIR)$(pixmapdir)/$$p; \
-+	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(pixmapdir)/$$inst"; \
-+	    $(INSTALL_DATA) $$p $(DESTDIR)$(pixmapdir)/$$inst; \
- 	  fi; fi; \
+ 	$(mkinstalldirs) $(DESTDIR)$(libexecdir)
+ 	@list='$(libexec_PROGRAMS)'; for p in $$list; do \
++	  inst=`echo $$p | sed 's/gnome/gnome2/`; \
+ 	  if test -f $$p; then \
+-	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(libexecdir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+-	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(libexecdir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
++	    echo " $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(libexecdir)/`echo $$inst|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
++	    $(LIBTOOL)  --mode=install $(INSTALL_PROGRAM) $$p $(DESTDIR)$(libexecdir)/`echo $$inst|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+ 	  else :; fi; \
  	done
  
+@@ -574,7 +575,7 @@ $(server_in_files): $(server_in_files).i
+ 
+ # don't do this if we are building in eg. rpm
+ install-data-local:
+-	if test -z "$(DESTDIR)" ; then \
++	if false; then \
+ 		for p in $(schemas_DATA) ; do \
+ 			GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_builddir)/applets/fish/$$p ; \
+ 	done \

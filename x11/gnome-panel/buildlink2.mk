@@ -1,22 +1,25 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/12/24 06:10:31 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/02/14 21:05:27 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use gnome-panel.
 #
-# This file was created automatically using createbuildlink 2.2.
+# This file was created automatically using createbuildlink 2.4.
 #
 
 .if !defined(GNOME_PANEL_BUILDLINK2_MK)
 GNOME_PANEL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-panel
-BUILDLINK_DEPENDS.gnome-panel?=		gnome-panel>=2.0.11nb1
+BUILDLINK_DEPENDS.gnome-panel?=		gnome-panel>=2.2.0.1
 BUILDLINK_PKGSRCDIR.gnome-panel?=		../../x11/gnome-panel
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-panel=gnome-panel
 BUILDLINK_PREFIX.gnome-panel_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.gnome-panel+=	include/panel-2.0/*.h
+BUILDLINK_FILES.gnome-panel+=	include/panel-2.0/GNOME_Panel.h
+BUILDLINK_FILES.gnome-panel+=	include/panel-2.0/panel-applet-gconf.h
+BUILDLINK_FILES.gnome-panel+=	include/panel-2.0/panel-applet.h
 BUILDLINK_FILES.gnome-panel+=	lib/bonobo/servers/GNOME_FishApplet_Factory.server
 BUILDLINK_FILES.gnome-panel+=	lib/bonobo/servers/GNOME_GenUtilApplet_Factory.server
+BUILDLINK_FILES.gnome-panel+=	lib/bonobo/servers/GNOME_NotificationAreaApplet.server
 BUILDLINK_FILES.gnome-panel+=	lib/bonobo/servers/GNOME_Panel.server
 BUILDLINK_FILES.gnome-panel+=	lib/libgen_util_applet-2.*
 BUILDLINK_FILES.gnome-panel+=	lib/libpanel-applet-2.*
@@ -29,8 +32,6 @@ BUILDLINK_FILES.gnome-panel+=	lib/pkgconfig/libpanelapplet-2.0.pc
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
 .include "../../textproc/scrollkeeper/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
-.include "../../textproc/gtk-doc/buildlink2.mk"
 .include "../../x11/gnome-desktop/buildlink2.mk"
 .include "../../x11/gnome2-control-center/buildlink2.mk"
 
