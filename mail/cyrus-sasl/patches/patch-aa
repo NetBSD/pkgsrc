@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/25 12:32:50 veego Exp $
+
+--- include/Makefile.in	Fri Jul 21 04:36:01 2000
++++ include/Makefile.in	Fri Aug  4 12:12:16 2000
+@@ -246,17 +246,17 @@
+ 
+ install-includeHEADERS: $(include_HEADERS)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(includedir)
++	$(mkinstalldirs) $(DESTDIR)$(pkgincludedir)
+ 	@list='$(include_HEADERS)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d= ; else d="$(srcdir)/"; fi; \
+-	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(includedir)/$$p"; \
+-	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(includedir)/$$p; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(pkgincludedir)/$$p"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(pkgincludedir)/$$p; \
+ 	done
+ 
+ uninstall-includeHEADERS:
+ 	@$(NORMAL_UNINSTALL)
+ 	list='$(include_HEADERS)'; for p in $$list; do \
+-	  rm -f $(DESTDIR)$(includedir)/$$p; \
++	  rm -f $(DESTDIR)$(pkgincludedir)/$$p; \
+ 	done
+ 
+ tags: TAGS
+@@ -327,7 +327,7 @@
+ install-strip:
+ 	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
+ installdirs:
+-	$(mkinstalldirs)  $(DESTDIR)$(includedir)
++	$(mkinstalldirs)  $(DESTDIR)$(pkgincludedir)
+ 
+ 
+ mostlyclean-generic:
