@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2002/08/15 21:33:07 tron Exp $
+# $NetBSD: Makefile,v 1.17 2002/11/01 16:34:40 wiz Exp $
 #
 
 DISTNAME=		coda-4.6.6
 PKGNAME=		coda-server-4.6.6.1
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.coda.cs.cmu.edu/pub/coda/src/
 EXTRACT_SUFX=		.tgz
@@ -11,7 +12,7 @@ MAINTAINER=		rvb@cs.cmu.edu
 HOMEPAGE=		http://www.coda.cs.cmu.edu/
 COMMENT=		server for a replicated high-performance network file system
 
-DEPENDS+=		gdbm>=1.7.3:../../databases/gdbm
+DEPENDS+=		gdbm>=1.8.3:../../databases/gdbm
 DEPENDS+=		readline>=4.0:../../devel/readline
 
 # Only enable platforms that can build "lwp".
