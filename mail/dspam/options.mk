@@ -1,42 +1,32 @@
-# $NetBSD: options.mk,v 1.2 2004/08/09 07:02:59 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2004/08/22 19:32:51 jlam Exp $
 
-# Global and legacy options
-.if defined(DSPAM_HOMEDIR_DOTFILES) || defined(DSPAM_USE_WEBMAIL) || \
-    defined(DSPAM_SIGNATURE_ATTACHMENTS) || \
-    defined(DSPAM_SIGNATURE_HEADERS) || defined(DSPAM_LARGESCALE) || \
-    defined(DSPAM_VIRTUAL_USERS) || defined(DSPAM_CGI_GRAPHS) || \
-    defined(DSPAM_CLIENT_COMPRESSION)
-.  if !defined(PKG_OPTIONS.dspam)
-.    if defined(DSPAM_HOMEDIR_DOTFILES) && \
-        !empty(DSPAM_HOMEDIR_DOTFILES:M[Yy][Ee][Ss])
-PKG_OPTIONS.dspam+=	dotfiles
-.    endif
-.    if defined(DSPAM_USE_WEBMAIL) && !empty(DSPAM_USE_WEBMAIL:M[Yy][Ee][Ss])
-PKG_OPTIONS.dspam+=	webmail
-.    endif
-.    if defined(DSPAM_SIGNATURE_ATTACHMENTS) && \
-        !empty(DSPAM_SIGNATURE_ATTACHMENTS:M[Yy][Ee][Ss])
-PKG_OPTIONS.dspam+=	sig-attachment
-.    endif
-.    if defined(DSPAM_SIGNATURE_HEADERS) && \
-        !empty(DSPAM_SIGNATURE_HEADERS:M[Yy][Ee][Ss])
-PKG_OPTIONS.dspam+=	sig-headers
-.    endif
-.    if defined(DSPAM_LARGESCALE) && !empty(DSPAM_LARGESCALE:M[Yy][Ee][Ss])
-PKG_OPTIONS.dspam+=	largescale
-.    endif
-.    if defined(DSPAM_VIRTUAL_USERS) && \
-        !empty(DSPAM_VIRTUAL_USERS:M[Yy][Ee][Ss])
-PKG_OPTIONS.dspam+=	virtualusers
-.    endif
-.    if defined(DSPAM_CGI_GRAPHS) && !empty(DSPAM_CGI_GRAPHS:M[Yy][Ee][Ss])
-PKG_OPTIONS.dspam+=	graphs
-.    endif
-.    if defined(DSPAM_CLIENT_COMPRESSION) && \
-        !empty(DSPAM_CLIENT_COMPRESSION:M[Yy][Ee][Ss])
-PKG_OPTIONS.dspam+=	compress
-.    endif
-.  endif
+.if defined(DSPAM_HOMEDIR_DOTFILES) && \
+    !empty(DSPAM_HOMEDIR_DOTFILES:M[Yy][Ee][Ss])
+PKG_DEFAULT_OPTIONS+=	dotfiles
+.endif
+.if defined(DSPAM_USE_WEBMAIL) && !empty(DSPAM_USE_WEBMAIL:M[Yy][Ee][Ss])
+PKG_DEFAULT_OPTIONS+=	webmail
+.endif
+.if defined(DSPAM_SIGNATURE_ATTACHMENTS) && \
+    !empty(DSPAM_SIGNATURE_ATTACHMENTS:M[Yy][Ee][Ss])
+PKG_DEFAULT_OPTIONS+=	sig-attachment
+.endif
+.if defined(DSPAM_SIGNATURE_HEADERS) && \
+    !empty(DSPAM_SIGNATURE_HEADERS:M[Yy][Ee][Ss])
+PKG_DEFAULT_OPTIONS+=	sig-headers
+.endif
+.if defined(DSPAM_LARGESCALE) && !empty(DSPAM_LARGESCALE:M[Yy][Ee][Ss])
+PKG_DEFAULT_OPTIONS+=	largescale
+.endif
+.if defined(DSPAM_VIRTUAL_USERS) && !empty(DSPAM_VIRTUAL_USERS:M[Yy][Ee][Ss])
+PKG_DEFAULT_OPTIONS+=	virtualusers
+.endif
+.if defined(DSPAM_CGI_GRAPHS) && !empty(DSPAM_CGI_GRAPHS:M[Yy][Ee][Ss])
+PKG_DEFAULT_OPTIONS+=	graphs
+.endif
+.if defined(DSPAM_CLIENT_COMPRESSION) && \
+    !empty(DSPAM_CLIENT_COMPRESSION:M[Yy][Ee][Ss])
+PKG_DEFAULT_OPTIONS+=	compress
 .endif
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}

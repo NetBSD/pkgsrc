@@ -1,22 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2004/08/05 03:04:34 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:52 jlam Exp $
 
-# Global and legacy options
-.if defined(KERBEROS) || defined(USE_PAM) || defined(USE_OPENLDAP) || \
-    defined(SASL_USE_GSSAPI)
-.  if !defined(PKG_OPTIONS.cyrus-saslauthd)
-.    if defined(KERBEROS)
-PKG_OPTIONS.cyrus-saslauthd+=	kerberos
-.    endif
-.    if defined(USE_PAM) && !empty(USE_PAM:M[yY][eE][sS])
-PKG_OPTIONS.cyrus-saslauthd+=	PAM
-.    endif
-.    if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
-PKG_OPTIONS.cyrus-saslauthd+=	ldap
-.    endif
-.    if defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS])
-PKG_OPTIONS.cyrus-saslauthd+=	gssapi
-.    endif
-.  endif
+.if defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	gssapi
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-saslauthd

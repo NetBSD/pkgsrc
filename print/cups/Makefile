@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2004/07/30 21:05:41 jlam Exp $
+# $NetBSD: Makefile,v 1.79 2004/08/22 19:32:52 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -54,11 +54,8 @@ CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
 
-# Global and legacy options
 .if defined(USE_PAM)
-.  if !defined(PKG_OPTIONS.cups)
-PKG_OPTIONS.cups+=	PAM
-.  endif
+PKG_DEFAULT_OPTIONS+=	PAM
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups

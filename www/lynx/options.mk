@@ -1,27 +1,16 @@
-# $NetBSD: options.mk,v 1.1 2004/08/05 03:04:34 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:52 jlam Exp $
 
-# Global and legacy options
-.if defined(LYNX_SCREEN_LIB) || defined(USE_SOCKS) || defined(USE_INET6)
-.  if !defined(PKG_OPTIONS.lynx)
-.    if defined(LYNX_SCREEN_LIB) && !empty(LYNX_SCREEN_LIB:Mslang)
-PKG_OPTIONS.lynx+=	slang
-.    endif
-.    if defined(LYNX_SCREEN_LIB) && !empty(LYNX_SCREEN_LIB:Mncurses)
-PKG_OPTIONS.lynx+=	ncurses
-.    endif
-.    if defined(LYNX_SCREEN_LIB) && !empty(LYNX_SCREEN_LIB:Mcurses)
-PKG_OPTIONS.lynx+=	curses
-.    endif
-.    if defined(USE_SOCKS) && (${USE_SOCKS} == 4)
-PKG_OPTIONS.lynx+=	socks4
-.    endif
-.    if defined(USE_SOCKS) && (${USE_SOCKS} == 5)
-PKG_OPTIONS.lynx+=	socks5
-.    endif
-.    if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
-PKG_OPTIONS.lynx+=	inet6
-.    endif
-.  endif
+.if defined(LYNX_SCREEN_LIB) && !empty(LYNX_SCREEN_LIB:Mslang)
+PKG_DEFAULT_OPTIONS+=	slang
+.endif
+.if defined(LYNX_SCREEN_LIB) && !empty(LYNX_SCREEN_LIB:Mncurses)
+PKG_DEFAULT_OPTIONS+=	ncurses
+.endif
+.if defined(LYNX_SCREEN_LIB) && !empty(LYNX_SCREEN_LIB:Mcurses)
+PKG_DEFAULT_OPTIONS+=	curses
+.endif
+.if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	inet6
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx

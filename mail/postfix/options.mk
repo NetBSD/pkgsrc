@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2004/08/11 06:51:31 jlam Exp $
+# $NetBSD: options.mk,v 1.7 2004/08/22 19:32:52 jlam Exp $
 
 # Global and legacy options
 #
@@ -10,43 +10,26 @@
 # XXX	POSTFIX_USE_PGSQL	POSTFIX_OPTIONS
 # XXX	POSTFIX_USE_SASL_AUTH
 #
-.if defined(USE_SASL) || defined(USE_SASL2) || defined(USE_OPENLDAP) || \
-    defined(POSTFIX_USE_INET6) || defined(POSTFIX_USE_TLS) || \
-    defined(POSTFIX_USE_PCRE) || defined(POSTFIX_USE_MYSQL) || \
-    defined(POSTFIX_USE_PGSQL) || defined(POSTFIX_USE_SASL_AUTH) || \
-    defined(POSTFIX_OPTIONS)
-.  if !defined(PKG_OPTIONS.postfix)
-.    if defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
-PKG_OPTIONS.postfix+=	sasl
-.    endif
-.    if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-PKG_OPTIONS.postfix+=	sasl
-.    endif
-.    if defined(USE_OPENLDAP) && !empty(USE_OPENLDAP:M[yY][eE][sS])
-PKG_OPTIONS.postfix+=	ldap
-.    endif
-.    if defined(POSTFIX_USE_INET6) && !empty(POSTFIX_USE_INET6:M[yY][eE][sS])
-PKG_OPTIONS.postfix+=	inet6
-.    endif
-.    if defined(POSTFIX_USE_TLS) && !empty(POSTFIX_USE_TLS:M[yY][eE][sS])
-PKG_OPTIONS.postfix+=	tls
-.    endif
-.    if defined(POSTFIX_USE_PCRE) && !empty(POSTFIX_USE_PCRE:M[yY][eE][sS])
-PKG_OPTIONS.postfix+=	pcre 
-.    endif
-.    if defined(POSTFIX_USE_MYSQL) && !empty(POSTFIX_USE_MYSQL:M[yY][eE][sS])
-PKG_OPTIONS.postfix+=	mysql
-.    endif
-.    if defined(POSTFIX_USE_PGSQL) && !empty(POSTFIX_USE_PGSQL:M[yY][eE][sS])
-PKG_OPTIONS.postfix+=	pgsql
-.    endif
-.    if defined(POSTFIX_USE_SASL_AUTH) && defined(POSTFIX_USE_SASL_AUTH)
-PKG_OPTIONS.postfix+=	sasl
-.    endif
-.    if defined(POSTFIX_OPTIONS)
-PKG_OPTIONS.postfix=	${POSTFIX_OPTIONS}
-.    endif
-.  endif
+.if defined(POSTFIX_USE_INET6) && !empty(POSTFIX_USE_INET6:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	inet6
+.endif
+.if defined(POSTFIX_USE_TLS) && !empty(POSTFIX_USE_TLS:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	tls
+.endif
+.if defined(POSTFIX_USE_PCRE) && !empty(POSTFIX_USE_PCRE:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	pcre 
+.endif
+.if defined(POSTFIX_USE_MYSQL) && !empty(POSTFIX_USE_MYSQL:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	mysql
+.endif
+.if defined(POSTFIX_USE_PGSQL) && !empty(POSTFIX_USE_PGSQL:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	pgsql
+.endif
+.if defined(POSTFIX_USE_SASL_AUTH) && defined(POSTFIX_USE_SASL_AUTH)
+PKG_DEFAULT_OPTIONS+=	sasl
+.endif
+.if defined(POSTFIX_OPTIONS)
+PKG_DEFAULT_OPTIONS=	${POSTFIX_OPTIONS}
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
