@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.375 2005/03/25 02:53:02 wiz Exp $
+# $NetBSD: Makefile,v 1.376 2005/03/29 14:19:32 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -251,6 +251,7 @@ SUBDIR+=	rayshade
 SUBDIR+=	refocus-it
 SUBDIR+=	resize_image
 SUBDIR+=	ruby-gd
+SUBDIR+=	ruby-imlib2
 SUBDIR+=	ruby-opengl
 SUBDIR+=	s10sh
 SUBDIR+=	sane-backends

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9672 2005/03/29 14:16:22 wiz Exp $
+$NetBSD: CHANGES,v 1.9673 2005/03/29 14:19:32 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1807,3 +1807,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libggiwmh to 0.2.0nb1 [wiz 2005-03-29]
 	Added ggiterm-0.7.0 [wiz 2005-03-29]
 	Updated shared-mime-info to 0.16 [wiz 2005-03-29]
+	Added ruby-imlib2-0.5.0 [minskim 2005-03-29]
