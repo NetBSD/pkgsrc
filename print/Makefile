@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2000/12/04 02:14:07 tv Exp $
+# $NetBSD: Makefile,v 1.46 2000/12/08 16:36:53 jlam Exp $
 # FreeBSD Id: Makefile,v 1.52 1997/12/14 00:58:08 asami Exp
 #
 
@@ -40,5 +40,6 @@
     SUBDIR += teTeX-share
     SUBDIR += teTeX-sharesrc
     SUBDIR += transfig
+    SUBDIR += xpp
 
 .include "../mk/bsd.pkg.subdir.mk"
