@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/08/28 12:26:50 agc Exp $
+# $NetBSD: Makefile,v 1.17 1998/10/13 23:37:03 garbled Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
@@ -30,6 +30,7 @@ SUBDIR += meta-pkgs
 SUBDIR += misc
 SUBDIR += net
 SUBDIR += news
+SUBDIR += parallel
 SUBDIR += pkgtools
 SUBDIR += plan9
 SUBDIR += print
