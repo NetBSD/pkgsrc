@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/19 12:34:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/22 07:54:07 grant Exp $
 # FreeBSD Id: ports/devel/avr-binutils/Makefile,v 1.9 2003/03/07 06:00:08 ade Exp
 
 DISTNAME=		binutils-2.13.2.1
@@ -12,7 +12,7 @@ COMMENT=		GNU binutils for Atmel AVR 8-bit RISC microcontrollers
 
 USE_BZIP2=		yes
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_MAKEINFO=		YES

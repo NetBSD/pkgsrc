@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/01/11 20:54:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2004/01/22 07:49:20 grant Exp $
 #
 
 DISTNAME=	gaim-0.75
@@ -17,7 +17,7 @@ CONFLICTS+=	gaim-gnome-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES

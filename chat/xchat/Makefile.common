@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2004/01/03 18:49:35 reed Exp $
+# $NetBSD: Makefile.common,v 1.23 2004/01/22 07:49:21 grant Exp $
 
 DISTNAME=	xchat-1.8.11
 PKGREVISION=	4
@@ -22,7 +22,7 @@ PLIST_SRC=	${.CURDIR}/../xchat/PLIST
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_PERL5=		YES
 USE_GNU_TOOLS+=		grep
 CONFIGURE_ARGS+=	--enable-python

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/01/20 12:10:01 agc Exp $
+# $NetBSD: Makefile,v 1.38 2004/01/22 07:51:12 grant Exp $
 
 DISTNAME=	minicom-1.83.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -20,7 +20,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 NO_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	minicom

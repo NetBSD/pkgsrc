@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/03 18:49:35 reed Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/22 07:49:20 grant Exp $
 
 DISTNAME=	kyim-1.0
 PKGREVISION=	3
@@ -11,7 +11,7 @@ HOMEPAGE=	http://kyim.sourceforge.net/
 COMMENT=	KDE Yahoo! client
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=              YES
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=          YES
 CPPFLAGS+=		-DHAVE_STDARG_H=1
 
