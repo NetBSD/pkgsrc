@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/09 13:40:27 markd Exp $
+share/kde/locale/bn/LC_MESSAGES/clockapplet.mo
+share/kde/locale/bn/LC_MESSAGES/desktop_kde-i18n.mo
+share/kde/locale/bn/LC_MESSAGES/desktop_kdebase.mo
+share/kde/locale/bn/LC_MESSAGES/desktop_kdegames.mo
+share/kde/locale/bn/LC_MESSAGES/desktop_kdelibs.mo
+share/kde/locale/bn/LC_MESSAGES/display.mo
+share/kde/locale/bn/LC_MESSAGES/filetypes.mo
+share/kde/locale/bn/LC_MESSAGES/kaccess.mo
+share/kde/locale/bn/LC_MESSAGES/kappfinder.mo
+share/kde/locale/bn/LC_MESSAGES/kate.mo
+share/kde/locale/bn/LC_MESSAGES/kbounce.mo
+share/kde/locale/bn/LC_MESSAGES/kcmkio.mo
+share/kde/locale/bn/LC_MESSAGES/kcontrol.mo
+share/kde/locale/bn/LC_MESSAGES/kdcop.mo
+share/kde/locale/bn/LC_MESSAGES/kdebugdialog.mo
+share/kde/locale/bn/LC_MESSAGES/kdelibs.mo
+share/kde/locale/bn/LC_MESSAGES/kdmgreet.mo
+share/kde/locale/bn/LC_MESSAGES/kfile_font.mo
+share/kde/locale/bn/LC_MESSAGES/kfindpart.mo
+share/kde/locale/bn/LC_MESSAGES/kfouleggs.mo
+share/kde/locale/bn/LC_MESSAGES/kicker.mo
+share/kde/locale/bn/LC_MESSAGES/kio.mo
+share/kde/locale/bn/LC_MESSAGES/knotify.mo
+share/kde/locale/bn/LC_MESSAGES/konqueror.mo
+share/kde/locale/bn/LC_MESSAGES/konsole.mo
+share/kde/locale/bn/LC_MESSAGES/ksplash.mo
+share/kde/locale/bn/LC_MESSAGES/timezones.mo
+share/kde/locale/bn/charset
+share/kde/locale/bn/entry.desktop
+@comment dirrm share/kde/locale/bn/LC_MESSAGES
+@comment dirrm share/kde/locale/bn
+@comment dirrm share/kde/locale
