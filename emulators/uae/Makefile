@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/02 22:17:20 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/04 21:33:11 tron Exp $
 
 DISTNAME=	uae-0.8.15
 CATEGORIES=	emulators
@@ -18,12 +18,9 @@ CONFIGURE_ARGS+=	--enable-dga --enable-vidmode \
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 do-install:
-.for FILE in readdisk uae
-	${INSTALL_PROGRAM} ${WRKSRC}/${FILE} ${PREFIX}/bin
-.endfor
-	${MKDIR} ${PREFIX}/share/doc/uae
-.for FILE in FAQ README
-	${INSTALL_DATA} ${WRKSRC}/docs/${FILE} ${PREFIX}/share/doc/uae
-.endfor
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} readdisk uae ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uae
+	cd ${WRKSRC}/docs && ${INSTALL_DATA} FAQ README \
+		${PREFIX}/share/doc/uae
 
 .include "../../mk/bsd.pkg.mk"
