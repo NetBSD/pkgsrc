@@ -1,20 +1,13 @@
-diff -c -r ../sdcc218Ma.orig/cpp/cpplib.c cpp/cpplib.c
-*** ../sdcc218Ma.orig/cpp/cpplib.c	Wed May 26 15:06:08 1999
---- cpp/cpplib.c	Wed Aug 25 12:51:57 1999
-***************
-*** 7452,7458 ****
-  #if defined(bsd4_4)
-  extern const char *const sys_errlist[];
-  #else
-! #if !defined(linux)
-  extern char *sys_errlist[];
-  #endif
-  #endif
---- 7452,7458 ----
-  #if defined(bsd4_4)
-  extern const char *const sys_errlist[];
-  #else
-! #if !defined(linux) && !defined(__FreeBSD__)
-  extern char *sys_errlist[];
-  #endif
-  #endif
+$NetBSD: patch-aa,v 1.2 2000/08/25 21:49:29 tron Exp $
+
+--- asxxxx/Makefile.in.orig	Thu May 27 00:31:32 1999
++++ asxxxx/Makefile.in	Fri Aug 25 23:17:26 2000
+@@ -26,7 +26,7 @@
+ man2dir         = $(mandir)/man2
+ infodir         = ${prefix}/info
+ 
+-CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR)
++CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -Dunix
+ CFLAGS		= @CFLAGS@ -Wall
+ M_OR_MM		= @M_OR_MM@
+ LDFLAGS		= @LDFLAGS@
