@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: rplayd.sh,v 1.4 2001/11/26 07:30:44 jlam Exp $
+# $NetBSD: rplayd.sh,v 1.5 2002/02/05 06:04:36 jlam Exp $
 #
 # PROVIDE: rplayd
 # REQUIRE: DAEMON
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -15,7 +15,7 @@ rcvar=$name
 command="@PREFIX@/sbin/${name}"
 required_files="@PKG_SYSCONFDIR@/rplay.conf"
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
 	run_rc_command "$1"

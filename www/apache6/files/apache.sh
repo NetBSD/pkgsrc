@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: apache.sh,v 1.11 2001/12/26 22:03:38 jlam Exp $
+# $NetBSD: apache.sh,v 1.12 2002/02/05 06:04:42 jlam Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -9,7 +9,7 @@
 # To start apache at startup, copy this script to /etc/rc.d and set
 # apache=YES in /etc/rc.conf.
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -31,7 +31,7 @@ start_cmd="${ctl_command} ${apache_start}"
 stop_cmd="${ctl_command} stop"
 restart_cmd="${ctl_command} restart"
 
-if [ -e /etc/rc.subr ]
+if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
 	run_rc_command "$1"
