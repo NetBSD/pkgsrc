@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:29:57 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/27 17:07:35 grant Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -27,7 +27,7 @@ pre-configure:
 .include "../../graphics/gtkglext/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../devel/papaya/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../net/gnet1/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/13 13:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/09/27 17:07:36 grant Exp $
 #
 
 DISTNAME=	pag-0.91
@@ -16,6 +16,6 @@ USE_NCURSES=	yes # missing function stdscr
 
 ALL_TARGET=	compile
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../graphics/aalib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

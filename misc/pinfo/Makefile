@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/08/09 11:14:07 seb Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/27 17:07:37 grant Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -34,7 +34,7 @@ post-install:
 .if defined(PINFO_USE_NATIVE_CURSES) && ${PINFO_USE_NATIVE_CURSES} == "YES"
 CONFIGURE_ARGS+=	--with-vcurses
 .else
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.ncurses}
 .endif
 

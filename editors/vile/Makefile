@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/08/08 13:31:06 agc Exp $
+# $NetBSD: Makefile,v 1.34 2003/09/27 17:07:36 grant Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:55:09 gj Exp
 
 DISTNAME=		vile-9.4
@@ -37,6 +37,6 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f ${EGDIR};		\
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

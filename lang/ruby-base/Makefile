@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/21 16:54:06 martti Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/27 17:07:37 grant Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -104,5 +104,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/${f:C/^(doc|ext)\///}
 .endfor
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/21 17:10:58 martti Exp $
+# $NetBSD: Makefile,v 1.26 2003/09/27 17:07:37 grant Exp $
 
 DISTNAME=		ntop-1.1
 PKGREVISION=		2
@@ -17,6 +17,6 @@ CONFIGURE_ARGS+=	--enable-threads=no
 INSTALL_TARGET=		install install-man
 
 .include "../../net/libpcap/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

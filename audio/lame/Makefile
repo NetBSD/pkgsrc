@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/08/27 08:32:54 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2003/09/27 17:07:34 grant Exp $
 #
 
 VERS=		3.93.1
@@ -41,5 +41,5 @@ CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-finline-functions -DFLOAT=double
 .endif
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 17:27:54 martti Exp $
+# $NetBSD: Makefile,v 1.9 2003/09/27 17:07:38 grant Exp $
 
 DISTNAME=	urlview-0.9
 PKGREVISION=	1
@@ -14,5 +14,5 @@ COMMENT=	Extract URLs from text files and display them in a menu
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

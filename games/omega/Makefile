@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/19 23:08:23 dent Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/27 17:07:36 grant Exp $
 
 DISTNAME=	omega-0.90-pa4
 PKGNAME=	omega-0.90.4
@@ -37,5 +37,5 @@ post-install:
 		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/omega;	\
 	done
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

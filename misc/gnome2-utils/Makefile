@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/23 15:36:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/27 17:07:37 grant Exp $
 #
 
 DISTNAME=		gnome-utils-2.2.1
@@ -32,7 +32,7 @@ GCONF2_SCHEMAS+=	gdict.schemas
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libgnome/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../lang/guile/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-panel/buildlink2.mk"

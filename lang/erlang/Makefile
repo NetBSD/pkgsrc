@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/11 03:42:02 jmc Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/27 17:07:36 grant Exp $
 
 DISTNAME=		otp_src_R9C-0
 PKGNAME=		erlang-9.2
@@ -20,7 +20,7 @@ USE_JAVA=		yes
 USE_JAVA2=		yes
 
 .include "../../security/openssl/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/curses.buildlink2.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
