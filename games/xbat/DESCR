@@ -1,7 +1,4 @@
-This is the XEVIOUS (NAMCO(C)) like game.
-
-TYPE:
-	xbat
+xbat is an XEVIOUS (NAMCO(C)) like game.
 
 OPTION:
         -hs : high speed mode
