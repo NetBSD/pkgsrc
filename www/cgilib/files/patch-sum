@@ -1,4 +1,4 @@
-$NetBSD: patch-sum,v 1.1.1.1 1999/11/06 16:50:47 wennmach Exp $
+$NetBSD: patch-sum,v 1.2 1999/11/08 17:24:36 wennmach Exp $
 
 MD5 (patch-aa) = 118b69e0833a92a704c441b49bfd8154
-MD5 (patch-ab) = 79a4b31ba3f55e1b0fbe7969a7eb844a
+MD5 (patch-ab) = 76322837d4c3f76a1ca643e3577d5005
