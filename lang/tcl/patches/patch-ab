@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.10 2001/06/13 20:42:38 jlam Exp $
+
 --- configure.orig	Tue Aug  8 15:17:11 2000
 +++ configure	Wed Jun 13 12:03:27 2001
 @@ -4766,6 +4766,7 @@
