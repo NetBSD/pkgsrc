@@ -1,9 +1,9 @@
-$NetBSD: patch-aj,v 1.3 1999/09/29 20:38:28 hubertf Exp $
+$NetBSD: patch-aj,v 1.4 1999/09/30 07:10:22 tron Exp $
 
 Yet another Solaris-only fix
 
---- kdm-config.h.orig   Wed Sep 29 22:34:24 1999
-+++ kdm-config.h        Wed Sep 29 22:36:27 1999
+--- kdm/kdm-config.h.orig   Wed Sep 29 22:34:24 1999
++++ kdm/kdm-config.h        Wed Sep 29 22:36:27 1999
 @@ -95,3 +95,8 @@
  #ifdef __cplusplus
  }
