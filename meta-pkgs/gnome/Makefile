@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2002/09/11 22:17:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/14 02:47:59 rh Exp $
 
-DISTNAME=	gnome-1.4.0.8
+DISTNAME=	gnome-1.4.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	meta-package for the GNU Network Object Model Environment
 
-DEPENDS+=	gnome-core>=1.4.0.4nb1:../../x11/gnome-core
+DEPENDS+=	gnome-core>=1.4.2:../../x11/gnome-core
 DEPENDS+=	ee>=0.3.12:../../graphics/ee
 DEPENDS+=	gdm>=2.2.0:../../x11/gdm
 DEPENDS+=	ggv>=1.0.1:../../print/ggv
