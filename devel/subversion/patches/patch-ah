@@ -1,0 +1,65 @@
+$NetBSD: patch-ah,v 1.1 2004/11/27 02:35:53 epg Exp $
+
+--- build/generator/gen_make.py.orig	2004-08-09 18:30:31.000000000 -0400
++++ build/generator/gen_make.py
+@@ -5,6 +5,7 @@
+ import os
+ import sys
+ import string
++import ConfigParser
+ 
+ import gen_base
+ 
+@@ -27,6 +28,13 @@ class Generator(gen_base.GeneratorBase):
+     install_deps = self.graph.get_deps(gen_base.DT_INSTALL)
+     install_sources = self.graph.get_all_sources(gen_base.DT_INSTALL)
+ 
++    cp = ConfigParser.ConfigParser()
++    cp.read('gen-make.opts')
++    if cp.has_option('options', '--installed-libs'):
++      self.installed_libs = cp.get('options', '--installed-libs').split(',')
++    else:
++      self.installed_libs = []
++
+     # ensure consistency between runs
+     install_deps.sort()
+     install_sources.sort(lambda s1, s2: cmp(s1.name, s2.name))
+@@ -68,6 +76,8 @@ class Generator(gen_base.GeneratorBase):
+         elif isinstance(source, gen_base.TargetLinked):
+           if source.external_lib:
+             libs.append(source.external_lib)
++          elif source.name in self.installed_libs:
++            libs.append('-l%s-%s' % (source.name[3:], self.cfg.version))
+           else:
+             # append the output of the target to our stated dependencies
+             deps.append(source.filename)
+@@ -184,6 +194,8 @@ class Generator(gen_base.GeneratorBase):
+       for target in inst_targets:
+         for target_dep in self.graph.get_sources(gen_base.DT_LINK, target.name,
+                                                  gen_base.TargetLib):
++          if target_dep.name in self.installed_libs:
++            continue
+           if target_dep.install and target_dep.install != area:
+             install_deps['install-%s' % target_dep.install] = None
+       install_deps = install_deps.keys()
+@@ -356,11 +368,18 @@ class Generator(gen_base.GeneratorBase):
+ 
+         # construct a list of the other .la libs to link against
+         retreat = build_path_retreat(target.path)
+-        deps = [ target.filename ]
+-        link = [ build_path_join(retreat, target.filename) ]
++        if target.name in self.installed_libs:
++          deps = []
++          link = [ '-l%s-%s' % (target.name[3:], self.cfg.version) ]
++        else:
++          deps = [ target.filename ]
++          link = [ build_path_join(retreat, target.filename) ]
+         for source in self.graph.get_sources(gen_base.DT_LINK, target.name):
+           if not isinstance(source, gen_base.TargetLib) or source.external_lib:
+             continue
++          if source.name in self.installed_libs:
++            link.append('-l%s-%s' % (source.name[3:], self.cfg.version))
++            continue
+           deps.append(source.filename)
+           link.append(build_path_join(retreat, source.filename))
+ 
