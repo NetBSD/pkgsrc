@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/21 22:42:04 schmonz Exp $
+
+SHA1 (netqmail-1.05.tar.gz) = fe4cbe97bd2f18a5ca1b36e4fbbd6c524256a829
+Size (netqmail-1.05.tar.gz) = 252264 bytes
+SHA1 (patch-aa) = c9928d0879dee77010bb469d4afa8c4ca35668f8
