@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/28 09:03:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/01 13:49:42 salo Exp $
 #
 
 DISTNAME=	tuxpaint-2002.10.26
@@ -9,9 +9,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.newbreedsoftware.com/tuxpaint/
 COMMENT=	drawing program for small children
 
-USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
-MANCOMPRESSED=	YES
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+USE_GMAKE=		YES
+MANCOMPRESSED=		YES
 
 .include "../../audio/SDL-mixer/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"

@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/08 07:53:46 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/01 13:49:41 salo Exp $
 bin/gnome-iconedit
 etc/CORBA/servers/gnome-iconedit.gnorba
 share/gnome/apps/Graphics/gnome-iconedit.desktop
 share/gnome/help/gnome-iconedit/C/topic.dat
 share/idl/Iconedit.idl
-share/locale/de/LC_MESSAGES/gnome-iconedit.mo
-share/locale/en_GB/LC_MESSAGES/gnome-iconedit.mo
-share/locale/fr/LC_MESSAGES/gnome-iconedit.mo
-share/locale/ko/LC_MESSAGES/gnome-iconedit.mo
-share/locale/sv/LC_MESSAGES/gnome-iconedit.mo
-share/locale/tr/LC_MESSAGES/gnome-iconedit.mo
-share/locale/wa/LC_MESSAGES/gnome-iconedit.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-iconedit.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-iconedit.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-iconedit.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-iconedit.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-iconedit.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-iconedit.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-iconedit.mo
 share/oaf/gnome-iconedit.oafinfo
 share/pixmaps/gnome-iconedit/cheques.png
 share/pixmaps/gnome-iconedit/dropper.png
