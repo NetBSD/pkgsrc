@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.10 2004/10/12 04:41:39 tv Exp $
 
 --- libtool.m4.orig	2004-09-19 08:15:08.000000000 -0400
 +++ libtool.m4
@@ -120,7 +120,7 @@ $NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
    ;;
  
 +interix3*)
-+  lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so|_pic\.a)$'
++  lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so|\.a)$'
 +  ;;
 +
  irix5* | irix6* | nonstopux*)
@@ -158,16 +158,24 @@ $NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
  
  _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
  _LT_AC_TAGVAR(allow_undefined_flag, $1)=
-@@ -3091,6 +3091,8 @@ case $host_os in
+@@ -3091,6 +3091,16 @@ case $host_os in
  	;;
      esac
      ;;
 +  interix3*)
++    # Oy, what a hack.
++    # Because shlibs are not compiled -fPIC due to broken code, we must
++    # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
++    # all libraries, leading to runtime relocations -- slow and very
++    # memory consuming.  To do this, we pick a random 256KB-aligned
++    # start address between 0x50000000 and 0x6ffc0000 at link time.
++    _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++    _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +    ;;
    irix5* | irix6*)
      case $cc_basename in
        CC)
-@@ -3210,6 +3212,13 @@ case $host_os in
+@@ -3210,6 +3220,13 @@ case $host_os in
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
        _LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
        wlarc=
@@ -181,7 +189,7 @@ $NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
        _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
        _LT_AC_TAGVAR(hardcode_direct, $1)=yes
        _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-@@ -3651,6 +3660,14 @@ if AC_TRY_EVAL(ac_compile); then
+@@ -3651,6 +3668,21 @@ if AC_TRY_EVAL(ac_compile); then
      esac
    done
  
@@ -191,12 +199,19 @@ $NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
 +      predep_objects_CXX=`eval echo $predep_objects_CXX | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
 +    fi
 +    ;;
++  interix3*)
++    # Interix installs completely hosed .la files for C++, so rather than
++    # hack all around it, let's just trust "g++" to DTRT.
++    predep_objects_CXX=
++    postdep_objects_CXX=
++    postdeps_CXX=
++    ;;
 +  esac
 +
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -4591,9 +4608,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4591,9 +4623,11 @@ AC_MSG_CHECKING([for $compiler option to
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -209,7 +224,7 @@ $NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -4615,6 +4634,10 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4615,6 +4649,10 @@ AC_MSG_CHECKING([for $compiler option to
  	;;
        esac
        ;;
@@ -220,7 +235,7 @@ $NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -4689,6 +4712,8 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4689,6 +4727,8 @@ AC_MSG_CHECKING([for $compiler option to
  	    ;;
  	esac
  	;;
@@ -229,7 +244,7 @@ $NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -4854,9 +4879,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4854,9 +4894,11 @@ AC_MSG_CHECKING([for $compiler option to
        ;;
  
      darwin* | rhapsody*)
@@ -242,7 +257,7 @@ $NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
        ;;
  
      msdosdjgpp*)
-@@ -4885,6 +4912,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4885,6 +4927,11 @@ AC_MSG_CHECKING([for $compiler option to
        esac
        ;;
  
@@ -254,7 +269,7 @@ $NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -5187,6 +5219,17 @@ EOF
+@@ -5187,6 +5234,17 @@ EOF
        fi
        ;;
  
@@ -272,7 +287,7 @@ $NetBSD: manual-libtool.m4,v 1.9 2004/10/11 17:19:53 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5592,6 +5635,21 @@ $echo "local: *; };" >> $output_objdir/$
+@@ -5592,6 +5650,21 @@ $echo "local: *; };" >> $output_objdir/$
        fi
        ;;
  
