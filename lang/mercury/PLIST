@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/05 21:16:36 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/07 00:19:29 seb Exp $
 bin/c2init
 bin/canonical_grade
 bin/info_to_mdb
@@ -17,38 +17,6 @@ bin/mprof
 bin/mprof_merge_runs
 bin/mtags
 bin/vpath_find
-info/mercury.info
-info/mercury_faq.info
-info/mercury_library.info
-info/mercury_library.info-1
-info/mercury_library.info-10
-info/mercury_library.info-11
-info/mercury_library.info-12
-info/mercury_library.info-13
-info/mercury_library.info-2
-info/mercury_library.info-3
-info/mercury_library.info-4
-info/mercury_library.info-5
-info/mercury_library.info-6
-info/mercury_library.info-7
-info/mercury_library.info-8
-info/mercury_library.info-9
-info/mercury_ref.info
-info/mercury_ref.info-1
-info/mercury_ref.info-2
-info/mercury_ref.info-3
-info/mercury_ref.info-4
-info/mercury_ref.info-5
-info/mercury_ref.info-6
-info/mercury_ref.info-7
-info/mercury_trans_guide.info
-info/mercury_user_guide.info
-info/mercury_user_guide.info-1
-info/mercury_user_guide.info-2
-info/mercury_user_guide.info-3
-info/mercury_user_guide.info-4
-info/mercury_user_guide.info-5
-info/mercury_user_guide.info-6
 lib/mercury/bin/${MACHINE_GNU_PLATFORM}/mercury_compile
 lib/mercury/bin/${MACHINE_GNU_PLATFORM}/mercury_profile
 lib/mercury/inc/array.mh
