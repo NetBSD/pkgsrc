@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/01/22 08:31:31 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/28 13:45:56 xtraeme Exp $
 #
 
 DISTNAME=	cooledit-3.17.5
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://cooledit.sourceforge.net/
 
@@ -14,7 +15,7 @@ BUILD_USES_MSGFMT=	# defined
 USE_BUILDLINK2=		# defined
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	# defined
-USE_X11BASE=		# defined
+USE_X11=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

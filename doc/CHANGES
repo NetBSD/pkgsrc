@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4631 2004/01/28 13:33:22 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4632 2004/01/28 13:46:45 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -516,3 +516,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated snd to 19980212nb1 [xtraeme 2004-01-28]
 	Updated xdeview to 0.5.18nb1 [xtraeme 2004-01-28]
 	Updated quicklist to 0.8.6nb3 [xtraeme 2004-01-28]
+	Updated cooledit to 3.17.5nb1 [xtraeme 2004-01-28]
