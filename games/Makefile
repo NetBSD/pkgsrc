@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1998/08/01 13:35:02 frueauf Exp $
+# $NetBSD: Makefile,v 1.23 1998/08/01 15:01:54 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -85,8 +85,8 @@
 #    SUBDIR += xonix
 #    SUBDIR += xpacman
 #    SUBDIR += xpat2
-#    SUBDIR += xpilot
-#    SUBDIR += xpipeman
+    SUBDIR += xpilot
+    SUBDIR += xpipeman
 #    SUBDIR += xpuyo
 #    SUBDIR += xpuzzletama
 #    SUBDIR += xripple
@@ -100,7 +100,7 @@
 #    SUBDIR += xskat
 #    SUBDIR += xsokoban
 #    SUBDIR += xsol
-#    SUBDIR += xsoldier
+    SUBDIR += xsoldier
 #    SUBDIR += xspringies
 #    SUBDIR += xtic
 #    SUBDIR += xtriangles
