@@ -1,23 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2002/08/25 21:50:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/13 05:16:45 jlam Exp $
 
 PKGNAME=	ghostscript-${GS_VERS}
 PKGREVISION=	4
 COMMENT=	Aladdin Postscript interpreter
 
-CONFLICTS=	ghostscript{,-x11,-nox11}-[0-9]*
-
-USE_BUILDLINK2=	YES
-USE_X11=	YES
-
-.include "../../print/ghostscript-nox11/Makefile.common"
-
+USE_X11=		YES
 MAKEFRAGS+=		${FILESDIR}/devs.x11
 GS_DISPLAY_DEVICE=	x11.dev
 XLIBS=			Xt SM ICE Xext X11
 
-.include "../../mk/bsd.pkg.mk"
-
-# arm32 compiler has an optimizer problem
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
-CFLAGS+=	-O0
-.endif
+.include "../ghostscript-nox11/Makefile.common"
