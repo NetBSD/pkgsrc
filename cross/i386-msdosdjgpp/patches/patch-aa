@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1998/08/12 12:30:59 tv Exp $
+
+--- ld/scripttempl/i386go32.sc.orig	Sun Aug  2 15:02:47 1998
++++ ld/scripttempl/i386go32.sc	Sun Aug  2 15:02:59 1998
+@@ -27,8 +27,6 @@
+     ${RELOCATING+ edata  =  . ; _edata = .};
+     ${RELOCATING+ . = ALIGN(${SEGMENT_SIZE});}
+   }
+-  ${CONSTRUCTING+${RELOCATING-.ctor : { *(.ctor) }}}
+-  ${CONSTRUCTING+${RELOCATING-.dtor : { *(.dtor) }}}
+   .bss ${RELOCATING+ SIZEOF(.data) + ADDR(.data)} :
+   { 					
+     *(.bss)
