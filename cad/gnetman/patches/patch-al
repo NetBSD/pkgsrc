@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
+
+--- src/tcl/Makefile.in.orig	Tue Apr 27 12:46:12 2004
++++ src/tcl/Makefile.in
+@@ -80,7 +80,7 @@ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+ 
+-AM_CFLAGS = -Wall -W -Wno-unused-parameter -Wno-unused-function -DDDR_DEBUG
++AM_CFLAGS = -DDDR_DEBUG
+ 
+ noinst_LIBRARIES = libtcl.a
+ 
