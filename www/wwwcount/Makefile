@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/24 21:13:03 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/04/05 20:19:13 reed Exp $
 
 DISTNAME=       wwwcount2.5
 PKGNAME=        wwwcount-2.5
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.muquit.com/muquit/software/Count/Count.html
 COMMENT=	Graphical access counter, clock and date indicator for WWW pages
 
 GNU_CONFIGURE=  yes
+INSTALLATION_DIRS=	bin man/man1 share/doc/wwwcount/Count2.5/images \
+			share/doc/wwwcount/Count2.5/eximages share/examples
 
 pre-configure:
 	cd ${WRKSRC}; yes "" | PREFIX=${PREFIX} ./Count-config
@@ -20,7 +22,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/utils/extdgts/extdgts ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/utils/mkstrip/mkstrip ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/utils/mkstrip/mkstrip.1 ${PREFIX}/man/man1
-	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/wwwcount
 	${INSTALL_MAN} ${WRKSRC}/docs/blues.gif ${PREFIX}/share/doc/wwwcount
 	${INSTALL_MAN} ${WRKSRC}/docs/Count.html ${PREFIX}/share/doc/wwwcount
 	( cd ${PREFIX}/share/doc/wwwcount && ${LN} -s Count.html index.html )
@@ -29,10 +30,8 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/Count_FAQ.html ${PREFIX}/share/doc/wwwcount
 	${INSTALL_MAN} ${WRKSRC}/docs/Count_download.html ${PREFIX}/share/doc/wwwcount
 	${INSTALL_MAN} ${WRKSRC}/docs/Count_mirrors.html ${PREFIX}/share/doc/wwwcount
-	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/wwwcount/Count2.5
 	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/c-c.txt ${PREFIX}/share/doc/wwwcount/Count2.5
 	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/gen-c.txt ${PREFIX}/share/doc/wwwcount/Count2.5
-	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/wwwcount/Count2.5/images
 	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/styleA.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
 	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/styleB.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
 	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/styleC.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
@@ -41,7 +40,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/stylecd.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
 	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/stylecdd.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
 	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/images/stylecdr.gif ${PREFIX}/share/doc/wwwcount/Count2.5/images
-	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/wwwcount/Count2.5/eximages
 	${INSTALL_MAN} ${WRKSRC}/docs/Count2.5/eximages/* ${PREFIX}/share/doc/wwwcount/Count2.5/eximages
 	${INSTALL_SCRIPT} ${WRKSRC}/utils/mkstrip/mkstrip.sh ${PREFIX}/libdata/wwwcount/digits
 
