@@ -1,14 +1,48 @@
-# $NetBSD: Makefile,v 1.3 2002/10/13 07:45:34 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/29 11:13:30 jlam Exp $
 
-# MASTER_SITES is very special, and must end in "=":
-DISTNAME=	j2re-1_4_0-linux-i386
-PKGNAME=	sun-jre14-0
-PKGREVISION=	1
-MASTER_SITES=	http://java.sun.com/Download4?config-file=j2re-1_4_0.config&platform=linux-i386&protocol=HTTP+download&download-name=
+DISTNAME=	j2re-1_4_1_01-linux-i586
+PKGNAME=	sun-jre14-1.0.1
+WRKSRC=		${WRKDIR}/j2re1.4.1_01
+MASTER_SITES=	# empty
 
-COMMENT=	Sun's Java(tm) Runtime Environment 1.4.0
+COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.4.1
 
-WRKSRC=		${WRKDIR}/j2re1.4.0
+USE_PKGINSTALL=	yes
+OWN_DIRS=	${PREFIX}
+OWN_DIRS+=	${PREFIX}/lib
+OWN_DIRS+=	${PREFIX}/lib/applet
+OWN_DIRS+=	${PREFIX}/lib/images
+OWN_DIRS+=	${PREFIX}/lib/images/cursors
+OWN_DIRS+=	${PREFIX}/lib/security
+SFILES=		content-types.properties	flavormap.properties
+SFILES+=	font.properties			font.properties.Redhat6.1
+SFILES+=	font.properties.ja		font.properties.ja.Redhat6.1
+SFILES+=	font.properties.ja.Redhat6.2	font.properties.ja.Turbo
+SFILES+=	font.properties.ja.Turbo6.0	font.properties.zh.Turbo
+SFILES+=	images/cursors/cursors.properties	i386/jvm.cfg
+SFILES+=	logging.properties		psfont.properties.ja
+SFILES+=	psfontj2d.properties		security/java.security
+SUPPORT_FILES=	# empty
+.for FILE in ${SFILES}
+SUPPORT_FILES+=	${PREFIX}/lib/${FILE}.default ${PREFIX}/lib/${FILE}
+.endfor
+
+do-configure:
+	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
+		${MV} -f $$file $$file.default;				\
+	done
+
+_FETCH_MESSAGE= \
+	${ECHO} "======================================================================"; \
+	${ECHO} ; \
+	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing the"; \
+	${ECHO} " Java(tm) 2 Runtime Environment, Standard Edition must be fetched"; \
+	${ECHO} " into:"; \
+	${ECHO} "	${DISTDIR}"; \
+	${ECHO} " from:"; \
+	${ECHO} "	${DOWNLOAD}"; \
+	${ECHO} ; \
+	${ECHO} "======================================================================"
 
 .include "../../lang/sun-jre14/Makefile.common"
 

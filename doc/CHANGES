@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1272 2003/01/29 11:10:28 jlam Exp $
+$NetBSD: CHANGES,v 1.1273 2003/01/29 11:13:41 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -471,3 +471,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated blackdown-jre13 to 1nb1 [jlam 2003-01-29]
 	Updated sun-jre13 to 1.0.7 [jlam 2003-01-29]
 	Updated sun-jdk13 to 1.0.7 [jlam 2003-01-29]
+	Updated sun-jre14 to 1.0.1 [jlam 2003-01-29]
+	Updated sun-jdk14 to 1.0.1 [jlam 2003-01-29]

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/27 22:21:05 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/29 11:13:28 jlam Exp $
 README.html
 bin/HtmlConverter
 bin/appletviewer
@@ -236,7 +236,6 @@ demo/jfc/FileChooserDemo/src/ExampleFileView.java
 demo/jfc/FileChooserDemo/src/FileChooserDemo.java
 demo/jfc/Font2DTest/Font2DTest.html
 demo/jfc/Font2DTest/Font2DTest.jar
-demo/jfc/Font2DTest/Font2DTestPlugin.html
 demo/jfc/Font2DTest/README.txt
 demo/jfc/Font2DTest/src/Font2DTest.java
 demo/jfc/Font2DTest/src/Font2DTestApplet.java
@@ -344,7 +343,7 @@ demo/jfc/Notepad/README.txt
 demo/jfc/Notepad/resources/Notepad.properties
 demo/jfc/Notepad/resources/Notepad_fr.properties
 demo/jfc/Notepad/resources/Notepad_sv.properties
-demo/jfc/Notepad/resources/Notepad_zh.properties
+demo/jfc/Notepad/resources/Notepad_zh_CN.properties
 demo/jfc/Notepad/resources/copy.gif
 demo/jfc/Notepad/resources/cut.gif
 demo/jfc/Notepad/resources/new.gif
@@ -362,18 +361,15 @@ demo/jfc/SampleTree/src/SampleData.java
 demo/jfc/SampleTree/src/SampleTree.java
 demo/jfc/SampleTree/src/SampleTreeCellRenderer.java
 demo/jfc/SampleTree/src/SampleTreeModel.java
-demo/jfc/SimpleExample/README.txt
-demo/jfc/SimpleExample/SimpleExample.jar
-demo/jfc/SimpleExample/src/SimpleExample.java
 demo/jfc/Stylepad/README.txt
 demo/jfc/Stylepad/Stylepad.jar
 demo/jfc/Stylepad/resources/Notepad.properties
 demo/jfc/Stylepad/resources/Notepad_fr.properties
 demo/jfc/Stylepad/resources/Notepad_sv.properties
-demo/jfc/Stylepad/resources/Notepad_zh.properties
+demo/jfc/Stylepad/resources/Notepad_zh_CN.properties
 demo/jfc/Stylepad/resources/Stylepad.properties
 demo/jfc/Stylepad/resources/Stylepad_sv.properties
-demo/jfc/Stylepad/resources/Stylepad_zh.properties
+demo/jfc/Stylepad/resources/Stylepad_zh_CN.properties
 demo/jfc/Stylepad/resources/alice.gif
 demo/jfc/Stylepad/resources/bold.gif
 demo/jfc/Stylepad/resources/bullets.gif
@@ -405,7 +401,6 @@ demo/jfc/SwingApplet/src/SwingApplet.java
 demo/jfc/SwingSet2/README.txt
 demo/jfc/SwingSet2/SwingSet2.html
 demo/jfc/SwingSet2/SwingSet2.jar
-demo/jfc/SwingSet2/SwingSet2Plugin.html
 demo/jfc/SwingSet2/src/AquaTheme.java
 demo/jfc/SwingSet2/src/BezierAnimationPanel.java
 demo/jfc/SwingSet2/src/ButtonDemo.java
@@ -669,7 +664,6 @@ demo/plugin/jfc/FileChooserDemo/src/ExampleFileView.java
 demo/plugin/jfc/FileChooserDemo/src/FileChooserDemo.java
 demo/plugin/jfc/Font2DTest/Font2DTest.html
 demo/plugin/jfc/Font2DTest/Font2DTest.jar
-demo/plugin/jfc/Font2DTest/Font2DTestPlugin.html
 demo/plugin/jfc/Font2DTest/README.txt
 demo/plugin/jfc/Font2DTest/src/Font2DTest.java
 demo/plugin/jfc/Font2DTest/src/Font2DTestApplet.java
@@ -777,7 +771,7 @@ demo/plugin/jfc/Notepad/README.txt
 demo/plugin/jfc/Notepad/resources/Notepad.properties
 demo/plugin/jfc/Notepad/resources/Notepad_fr.properties
 demo/plugin/jfc/Notepad/resources/Notepad_sv.properties
-demo/plugin/jfc/Notepad/resources/Notepad_zh.properties
+demo/plugin/jfc/Notepad/resources/Notepad_zh_CN.properties
 demo/plugin/jfc/Notepad/resources/copy.gif
 demo/plugin/jfc/Notepad/resources/cut.gif
 demo/plugin/jfc/Notepad/resources/new.gif
@@ -795,18 +789,15 @@ demo/plugin/jfc/SampleTree/src/SampleData.java
 demo/plugin/jfc/SampleTree/src/SampleTree.java
 demo/plugin/jfc/SampleTree/src/SampleTreeCellRenderer.java
 demo/plugin/jfc/SampleTree/src/SampleTreeModel.java
-demo/plugin/jfc/SimpleExample/README.txt
-demo/plugin/jfc/SimpleExample/SimpleExample.jar
-demo/plugin/jfc/SimpleExample/src/SimpleExample.java
 demo/plugin/jfc/Stylepad/README.txt
 demo/plugin/jfc/Stylepad/Stylepad.jar
 demo/plugin/jfc/Stylepad/resources/Notepad.properties
 demo/plugin/jfc/Stylepad/resources/Notepad_fr.properties
 demo/plugin/jfc/Stylepad/resources/Notepad_sv.properties
-demo/plugin/jfc/Stylepad/resources/Notepad_zh.properties
+demo/plugin/jfc/Stylepad/resources/Notepad_zh_CN.properties
 demo/plugin/jfc/Stylepad/resources/Stylepad.properties
 demo/plugin/jfc/Stylepad/resources/Stylepad_sv.properties
-demo/plugin/jfc/Stylepad/resources/Stylepad_zh.properties
+demo/plugin/jfc/Stylepad/resources/Stylepad_zh_CN.properties
 demo/plugin/jfc/Stylepad/resources/alice.gif
 demo/plugin/jfc/Stylepad/resources/bold.gif
 demo/plugin/jfc/Stylepad/resources/bullets.gif
@@ -838,7 +829,6 @@ demo/plugin/jfc/SwingApplet/src/SwingApplet.java
 demo/plugin/jfc/SwingSet2/README.txt
 demo/plugin/jfc/SwingSet2/SwingSet2.html
 demo/plugin/jfc/SwingSet2/SwingSet2.jar
-demo/plugin/jfc/SwingSet2/SwingSet2Plugin.html
 demo/plugin/jfc/SwingSet2/src/AquaTheme.java
 demo/plugin/jfc/SwingSet2/src/BezierAnimationPanel.java
 demo/plugin/jfc/SwingSet2/src/ButtonDemo.java
@@ -920,7 +910,6 @@ man/man1/serialver.1
 src.zip
 @dirrm include/linux
 @dirrm include
-@unexec ${RMDIR} %D/lib 2>/dev/null || ${TRUE}
 @dirrm demo/plugin/jfc/TableExample/src
 @dirrm demo/plugin/jfc/TableExample
 @dirrm demo/plugin/jfc/SwingSet2/src
@@ -930,8 +919,6 @@ src.zip
 @dirrm demo/plugin/jfc/Stylepad/src
 @dirrm demo/plugin/jfc/Stylepad/resources
 @dirrm demo/plugin/jfc/Stylepad
-@dirrm demo/plugin/jfc/SimpleExample/src
-@dirrm demo/plugin/jfc/SimpleExample
 @dirrm demo/plugin/jfc/SampleTree/src
 @dirrm demo/plugin/jfc/SampleTree/images
 @dirrm demo/plugin/jfc/SampleTree
@@ -1008,8 +995,6 @@ src.zip
 @dirrm demo/jfc/Stylepad/src
 @dirrm demo/jfc/Stylepad/resources
 @dirrm demo/jfc/Stylepad
-@dirrm demo/jfc/SimpleExample/src
-@dirrm demo/jfc/SimpleExample
 @dirrm demo/jfc/SampleTree/src
 @dirrm demo/jfc/SampleTree/images
 @dirrm demo/jfc/SampleTree
@@ -1076,4 +1061,3 @@ src.zip
 @dirrm demo/applets/Animator
 @dirrm demo/applets
 @dirrm demo
-@unexec ${RMDIR} %D 2>/dev/null || ${TRUE}
