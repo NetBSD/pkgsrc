@@ -1,4 +1,4 @@
-/*	$NetBSD: kttcp.c,v 1.4 2002/06/30 21:45:06 thorpej Exp $	*/
+/*	$NetBSD: kttcp.c,v 1.5 2002/07/11 23:32:35 simonb Exp $	*/
 
 /*
  * Copyright (c) 2002 Wasabi Systems, Inc.
@@ -37,6 +37,7 @@
  */
 
 #include <sys/types.h>
+#include <sys/resource.h>
 #include <sys/socket.h>
 #include <sys/ioctl.h>
 #include <sys/time.h>
@@ -62,9 +63,9 @@ static void
 usage(void)
 {
 	fprintf(stderr,
-	    "usage: kttcp -r [-b sockbufsize] [-p port] [-q]\n"
+	    "usage: kttcp -r [-b sockbufsize] [-p port] [-q] [-v]\n"
 	    "                [-4] [-6]\n"
-	    "       kttcp -s [-b sockbufsize] [-n bytes] [-q] [-p port]\n"
+	    "       kttcp -t [-b sockbufsize] [-n bytes] [-q] [-v] [-p port]\n"
 	    "                [-4] [-6] host\n"
 	);
 	exit(1);
@@ -99,7 +100,7 @@ get_bytes(const char *str)
 int
 main(int argc, char *argv[])
 {
-	int c, error, s, quiet, s2, kfd;
+	int c, error, s, verbose, s2, kfd;
 	int xmitset, family;
 	int bufsize;
 	int ai_flag;
@@ -108,6 +109,8 @@ main(int argc, char *argv[])
 	struct kttcp_io_args kio;
 	struct addrinfo hints, *addr, *res;
 	struct sockaddr_storage ss;
+	struct rusage rustart, ruend;
+	struct timeval tvtmp;
 	unsigned long long ull, usecs, bytespersec, bitspersec, xmitsize;
 	char connecthost[NI_MAXHOST];
 	socklen_t slen;
@@ -116,11 +119,12 @@ main(int argc, char *argv[])
 
 	cmd = 0;
 	portstr = KTTCP_PORT;
-	quiet = xmitset = 0;
+	verbose = 1;
+	xmitset = 0;
 	bufsize = KTTCP_SOCKBUF_DEFAULT;
 	xmitsize = KTTCP_XMITSIZE;
 	family = PF_UNSPEC;
-	while ((c = getopt(argc, argv, "46b:n:p:qrsw:")) != -1) {
+	while ((c = getopt(argc, argv, "46b:n:p:qrtvw:")) != -1) {
 		switch (c) {
 		case '4':
 			if (family != PF_UNSPEC)
@@ -149,17 +153,20 @@ main(int argc, char *argv[])
 			portstr = optarg;
 			break;
 		case 'q':
-			quiet = 1;
+			verbose = 0;
 			break;
 		case 'r':
 			if (cmd != 0)
 				usage();
 			cmd = KTTCP_IO_RECV;
 			break;
-		case 's':
+		case 't':
 			if (cmd != 0)
 				usage();
 			cmd = KTTCP_IO_SEND;
+			break;
+		case 'v':
+			verbose = 2;
 			break;
 		case '?':
 		default:
@@ -210,7 +217,7 @@ main(int argc, char *argv[])
 	if (cmd == KTTCP_IO_SEND) {
 		if (connect(s, res->ai_addr, res->ai_addrlen) < 0)
 			err(2, "connect");
-		if (!quiet) {
+		if (verbose) {
 			getnameinfo(res->ai_addr, res->ai_addrlen,
 			    connecthost, sizeof connecthost, NULL, 0,
 			    NI_NUMERICHOST);
@@ -228,13 +235,13 @@ main(int argc, char *argv[])
 			err(2, "bind");
 		if (listen(s, 1) < 0)
 			err(2, "listen");
-		if (!quiet)
+		if (verbose)
 			printf("kttcp: listening on port %s\n", portstr);
 		slen = sizeof ss;
 		s2 = accept(s, (struct sockaddr *)&ss, &slen);
 		if (s2 < 0)
 			err(2, "accept");
-		if (!quiet) {
+		if (verbose) {
 			getnameinfo((struct sockaddr *)&ss, ss.ss_len,
 			    connecthost, sizeof connecthost, NULL, 0,
 			    NI_NUMERICHOST);
@@ -248,20 +255,47 @@ main(int argc, char *argv[])
 
 	kio.kio_totalsize = xmitsize;
 
+	getrusage(RUSAGE_SELF, &rustart);
 	if (ioctl(kfd, cmd, &kio) == -1)
 		err(2, "kttcp i/o command");
+	getrusage(RUSAGE_SELF, &ruend);
 
 	usecs = (unsigned long long)kio.kio_elapsed.tv_sec * 1000000;
 	usecs += kio.kio_elapsed.tv_usec;
 
 	bytespersec = kio.kio_bytesdone * 1000000LL / usecs;
 	bitspersec = bytespersec * NBBY;
-	printf("kttcp: %llu bytes in %ld.%03ld seconds ==> %llu bytes/sec\n",
+	printf("kttcp: %llu bytes in %ld.%03ld real seconds ==> %llu bytes/sec\n",
 	    kio.kio_bytesdone, kio.kio_elapsed.tv_sec,
 	    kio.kio_elapsed.tv_usec / 1000, bytespersec);
+	if (verbose > 1) {
+		timersub(&ruend.ru_stime, &rustart.ru_stime, &tvtmp);
+		bytespersec = kio.kio_bytesdone * 1000000LL /
+		    (tvtmp.tv_sec * 1000000ULL + tvtmp.tv_usec);
+		printf("kttcp: %llu bytes in %ld.%03ld CPU seconds ==> %llu bytes/CPU sec\n",
+		    kio.kio_bytesdone, tvtmp.tv_sec, tvtmp.tv_usec / 1000, bytespersec);
+	}
 	printf("       %g (%g) Megabits/sec\n",
 	    ((double) bitspersec / 1024.0) / 1024.0,
 	    ((double) bitspersec / 1000.0) / 1000.0);
+
+	timersub(&ruend.ru_utime, &rustart.ru_utime, &tvtmp);
+	/* XXX
+	 * sometimes, this ends up as -1 * hz!?
+	 */
+	if (tvtmp.tv_sec < 0)
+		tvtmp.tv_sec = tvtmp.tv_usec = 0;
+	printf("  %ld.%02lduser", tvtmp.tv_sec, tvtmp.tv_usec / 10000);
+	ull = tvtmp.tv_sec * 1000000ULL + tvtmp.tv_usec;
+
+	timersub(&ruend.ru_stime, &rustart.ru_stime, &tvtmp);
+	printf(" %ld.%02ldsys", tvtmp.tv_sec, tvtmp.tv_usec / 10000);
+	ull += tvtmp.tv_sec * 1000000ULL + tvtmp.tv_usec;
+
+	printf(" %lld.%lldreal", usecs / 1000000, (usecs % 1000000) / 10000);
+	printf(" %lld%%", ull * 100 / usecs);
+	printf("\n");
+
 
 	close(kio.kio_socket);
 	if (cmd == KTTCP_IO_RECV)
