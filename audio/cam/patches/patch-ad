@@ -1,11 +1,7 @@
-$NetBSD: patch-ad,v 1.2 1999/03/07 15:44:06 hubertf Exp $
+$NetBSD: patch-ad,v 1.3 2000/04/15 23:50:33 mycroft Exp $
 
-Submitted by Thilo Manske <Thilo.Manske@HEH.Uni-Oldenburg.DE> after
-some discussion on PR 7093.
-
-
---- screens.c.BAK	Sun Mar  7 16:32:59 1999
-+++ screens.c	Sun Mar  7 16:36:03 1999
+--- screens.c.orig	Mon Oct 21 14:18:25 1996
++++ screens.c	Sat Apr 15 19:39:10 2000
 @@ -33,6 +33,7 @@
      endwin();
      clear();
@@ -14,14 +10,42 @@ some discussion on PR 7093.
      if (sig != 0)
         exit(1);
  }
-@@ -64,17 +65,17 @@
+@@ -40,15 +41,15 @@
+    
+ void set_screen(void)
+ {
+-   char dummy[COLS];
++   char dummy[COLS + 1];
+    int left, right;
+ 
+-   left = ( COLS - 15 - strlen(VERSION_HIGH) - strlen(VERSION_LOW) ) / 2;
+-   right = COLS - 15 - strlen(VERSION_HIGH) - strlen(VERSION_LOW) - left; 
++   left = ( COLS - 16 - strlen(VERSION_HIGH) - strlen(VERSION_LOW) ) / 2;
++   right = COLS - 16 - strlen(VERSION_HIGH) - strlen(VERSION_LOW) - left; 
+    clear();
+    leaveok(stdscr ,TRUE);
+    attrset(COLOR_PAIR( COLOR_SCREEN ) | A_BOLD);
+-   sprintf(dummy,"%*cCAM %s.%s for Linux%*c",left,' ',VERSION_HIGH,VERSION_LOW,right,' ');
++   sprintf(dummy,"%*cCAM %s.%s for NetBSD%*c",left,' ',VERSION_HIGH,VERSION_LOW,right,' ');
+    mvaddstr(0,0,dummy);
+    sprintf(dummy," Cpu's Audio Mixer %s.%s%*cauthor : Jan 'TWP' VANDENBERGHE (c)1994-1996 ",VERSION_HIGH,VERSION_LOW,COLS-20-45-strlen(VERSION_HIGH)-strlen(VERSION_LOW),' ');
+    mvaddstr(LINES-1,0,dummy );
+@@ -59,22 +60,25 @@
+ /* Draws the sliders */ 
+ void draw_slider(int Y, int X, char *device) 
+ { 
++   int i;
+    attrset(COLOR_PAIR(COLOR_SLIDER));
+    mvaddnstr(Y+1,X,device,7);
     mvaddstr(Y+1,X+8,"Left"); 
     mvaddstr(Y+2,X+8,"Right"); 
     attrset(COLOR_PAIR(COLOR_SLIDER) | A_ALTCHARSET);
 -   mvaddstr(Y+1,X+14,"อออออออออออออออออออออ"); 
 -   mvaddstr(Y+2,X+14,"อออออออออออออออออออออ"); 
-+   mvaddstr(Y+1,X+14,"---------------------");
-+   mvaddstr(Y+2,X+14,"---------------------");
++   for (i = 0; i < 21; i++)
++     mvaddch(Y+1,X+14+i,ACS_HLINE);
++   for (i = 0; i < 21; i++)
++     mvaddch(Y+2,X+14+i,ACS_HLINE);
     attrset(COLOR_PAIR(COLOR_VOL1) | A_ALTCHARSET);
 -   mvaddstr(Y,X+14,"๙ ๙ ๙ ๙");
 -   mvaddstr(Y+3,X+14,"๙ ๙ ๙ ๙");
@@ -40,12 +64,12 @@ some discussion on PR 7093.
  }
  
  /*
-@@ -87,26 +88,27 @@
+@@ -87,26 +91,27 @@
  {
     if ((level == 1 ) || ( level == 2 )) { 
        attrset(A_NORMAL  | A_ALTCHARSET); 
 -      mvaddch(Y,X++,205); 
-+      mvaddch(Y,X++,'-');
++      mvaddch(Y,X++,ACS_HLINE);
     } 
     if ( level != 5) { 
 -      #define ACT_HANDLE COLOR_PAIR(COLOR_HANDLE) | A_BOLD | A_ALTCHARSET
@@ -59,12 +83,12 @@ some discussion on PR 7093.
     if ((level == 3) || (level == 2)) { 
        attrset(A_NORMAL | A_ALTCHARSET); 
 -      mvaddch(Y,X++,205); 
-+      mvaddch(Y,X++,'-');
++      mvaddch(Y,X++,ACS_HLINE);
     } 
     if ( level  == 5 ) { 
        attrset(A_NORMAL | A_ALTCHARSET); 
 -      mvaddch(Y,X++,205); 
-+      mvaddch(Y,X++,'-');
++      mvaddch(Y,X++,ACS_HLINE);
     }    
  }
  
@@ -74,7 +98,7 @@ some discussion on PR 7093.
       stdscr = initscr();
       if ( (COLS < 80) || (LINES < 25) ) {
          finish(0);
-@@ -181,9 +183,9 @@
+@@ -181,9 +186,9 @@
     char ch; 
     touchwin(stdscr); 
     help_win = newwin(15,50,(LINES - 15) / 2,(COLS - 50) / 2);
@@ -82,7 +106,15 @@ some discussion on PR 7093.
 +   wattrset(help_win, COLOR_PAIR( COLOR_HELP) | A_BOLD );
     leaveok(help_win,TRUE); 
 -   wborder(help_win,179,179,196,196,218, 191,192,217); 
-+   wborder(help_win,'|','|','-','-','+','+','+','+');
++   wborder(help_win,ACS_VLINE,ACS_VLINE,ACS_HLINE,ACS_HLINE,ACS_ULCORNER,ACS_URCORNER,ACS_LLCORNER,ACS_LRCORNER);
     wattrset(help_win, A_NORMAL | A_BOLD);
     mvwaddstr(help_win,2,2," Left/Right : Lower/Higher "); 
     mvwaddstr(help_win,3,2," Up/Down    : Previous/Next "); 
+@@ -193,6 +198,7 @@
+    mvwaddstr(help_win,9,2," h : help "); 
+    mvwaddstr(help_win,11,2," ESC/q : exit "); 
+    mvwaddstr(help_win,13,8," Press key to leave help screen "); 
++   wrefresh(help_win);
+    ch = wgetch(help_win); 
+    delwin(help_win); 
+ } 
