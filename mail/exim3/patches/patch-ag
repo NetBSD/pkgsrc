@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2004/01/15 02:05:10 grant Exp $
+
+--- OS/os.h-Darwin.orig	2002-04-04 22:56:14.000000000 +1000
++++ OS/os.h-Darwin
+@@ -1,6 +1,8 @@
+ /* Exim: OS-specific C header file for Darwin (Mac OS X) */
+ 
++/* Darwin 6.8 does not have crypt.h
+ #define CRYPT_H
++*/
+ #define HAVE_MMAP
+ #define HAVE_SYS_MOUNT_H
+ #define SIOCGIFCONF_GIVES_ADDR
