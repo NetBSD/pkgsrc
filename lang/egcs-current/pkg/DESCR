@@ -1,7 +1,0 @@
-This version of egcs, Cygnus's own gcc, is a snapshot release.  That means
-the source is experimental, and not heavily tested. 
-
-The egcs compiler includes gcc (the GNU C compiler), g++ (the GNU C++
-compiler), g77 (the GNU FORTRAN 77 compiler), and libstdc++ (the GNU ANSI
-C++ library).  Currently, a shared C++ library is only available for a.out
-platforms (this is being worked on). 
