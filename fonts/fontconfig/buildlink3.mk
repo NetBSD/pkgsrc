@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/02/16 22:47:23 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/02/17 09:13:33 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FONTCONFIG_BUILDLINK3_MK:=	${FONTCONFIG_BUILDLINK3_MK}+
@@ -103,9 +103,11 @@ BUILDLINK_PREFIX.fontconfig=	${X11BASE}
 USE_X11=	yes
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
 
-.  include "../../devel/zlib/buildlink3.mk"
-.  include "../../graphics/freetype2/buildlink3.mk"
-.  include "../../textproc/expat/buildlink3.mk"
+.  if !empty(BUILDLINK_CHECK_BUILTIN.fontconfig:M[nN][oO])
+.    include "../../devel/zlib/buildlink3.mk"
+.    include "../../graphics/freetype2/buildlink3.mk"
+.    include "../../textproc/expat/buildlink3.mk"
+.  endif
 .endif	# FONTCONFIG_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
