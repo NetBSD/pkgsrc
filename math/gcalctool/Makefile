@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/01/14 02:27:17 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/16 02:46:01 xtraeme Exp $
 #
 
-DISTNAME=		gcalctool-4.3.35
+DISTNAME=		gcalctool-4.3.38
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/4.3/}
 EXTRACT_SUFX=		.tar.bz2
@@ -26,5 +26,6 @@ GCONF2_SCHEMAS=		gcalctool.schemas
 .include "../../devel/libgnome/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../textproc/intltool/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"
