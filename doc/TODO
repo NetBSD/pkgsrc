@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2755 2004/12/25 20:17:06 wiz Exp $
+$NetBSD: TODO,v 1.2756 2004/12/25 20:21:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -268,7 +268,6 @@ Suggested package updates
 	o 3ddesktop-0.2.7
 	o BasiliskII-1.0.20041109
 	o Chinput-3.0.1
-	o File-Handle-Unget-0.16.2
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GridSim-3.1
@@ -791,7 +790,7 @@ Suggested package updates
 	o p5-ExtUtils-PkgConfig-1.05
 	o p5-ExtUtils-XSBuilder-0.27
 	o p5-File-DirSync-1.12
-	o p5-FileHandle-Unget-0.16.1
+	o p5-FileHandle-Unget-0.16.2
 	o p5-Filter-1.30
 	o p5-Font-AFM-1.19
 	o p5-GD-2.19
