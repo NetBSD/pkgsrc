@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/02/02 09:11:27 tron Exp $
+# $NetBSD: Makefile,v 1.6 2005/02/02 09:13:57 tron Exp $
 
 DISTNAME=	mencvcd
 PKGNAME=	${DISTNAME}-0.3
@@ -12,6 +12,7 @@ HOMEPAGE=	http://hammelmann.gmxhome.de/projects_en.html
 COMMENT=	Script for converting movie files into (S)VCD format
 
 DEPENDS+=	bash-[0-9]*:../../shells/bash
+DEPENDS+=	cdrdao>=1.1.9:../../sysutils/cdrdao
 DEPENDS+=	lame>=3.96.1:../../audio/lame
 DEPENDS+=	mjpegtools>=1.6.2:../../multimedia/mjpegtools
 DEPENDS+=	mplayer>=1.0rc1:../../multimedia/mplayer
