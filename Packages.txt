@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.170 2001/07/01 23:03:17 jlam Exp $
+# $NetBSD: Packages.txt,v 1.171 2001/07/16 11:00:32 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1600,7 +1600,10 @@ the dependency pattern required.
 A package that builds correctly with USE_BUILDLINK_ONLY set should have
 that setting added to its Makefile to note that it doesn't use any
 libraries or headers in ${LOCALBASE} directly, but rather references them
-only through ${BUILDLINK_DIR}.
+only through ${BUILDLINK_DIR}.  Note that you MUST check the build output
+to verify that no references to ${LOCALBASE} directories occurred during
+the configure or build process, or else the package cannot be marked as
+USE_BUILDLINK_ONLY.
 
 
  9 Debugging
