@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.3 2000/04/29 04:15:41 mycroft Exp $
+
+--- vslib/unicon.cpp.orig	Fri Apr 28 21:11:45 2000
++++ vslib/unicon.cpp	Fri Apr 28 21:12:27 2000
+@@ -202,8 +202,6 @@
+   {
+     delwin(conio_scr);
+     endwin();
+-    echo();
+-    nl();
+   };
+ 
+   void ConSuspend()
