@@ -1,20 +1,21 @@
-$NetBSD: patch-bn,v 1.1 1999/07/29 16:44:43 bad Exp $
+$NetBSD: patch-bn,v 1.2 1999/08/01 22:12:29 bad Exp $
 
---- /dev/null	Tue Jul 27 03:18:59 1999
-+++ machdep/syscall-m68000-netbsd.S	Wed Jul  7 04:29:09 1999
-@@ -0,0 +1,82 @@
+--- /dev/null	Fri Jul 30 03:20:45 1999
++++ machdep/syscall-m68000-netbsd.S	Fri Jul 30 23:23:08 1999
+@@ -0,0 +1,83 @@
 +
 +#ifndef lint
 +    .text
-+    .asciz "$Id: patch-bn,v 1.1 1999/07/29 16:44:43 bad Exp $";
++    .asciz "$Id: patch-bn,v 1.2 1999/08/01 22:12:29 bad Exp $";
 +#endif
 +
 +#include <machine/asm.h>
 +#include <sys/syscall.h>
 +
 +#ifdef __STDC__
++#define IMM	#
 +#define SYSCALL(x)      .even; ENTRY(machdep_sys_ ## x); \
-+                        movl \#SYS_ ## x,d0; trap \#0; jcs err; rts
++                        movl IMM SYS_ ## x,d0; trap IMM 0; jcs err; rts
 +#else /* !__STDC__ */
 +#define SYSCALL(x)      .even; ENTRY(machdep_sys_/**/x); \
 +                        movl #SYS_/**/x,d0; trap #0; jcs err; rts
