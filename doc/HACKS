@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.5 2003/01/25 02:35:54 hubertf Exp $
+# $NetBSD: HACKS,v 1.6 2003/02/05 21:37:47 dmcmahill Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -26,6 +26,16 @@
 #  	  closing bracket.
 #
 # this is a comment.
+
+hack	gcc 2.95.3/alpha -O2 bug
+cdate	Wed Feb  5 16:36:58 EST 2003
+who	dmcmahill
+port	alpha
+file	devel/guile-gtk//Makefile : 1.10
+	devel/guile-gtk/patches/patch-aa : 1.6
+descr
+	Compiler crashes
+kcah
 
 hack	gcc 2.95.3/alpha -O2 bug
 cdate	Thu Jan 23 15:42:57 UTC 2003
