@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.1 2001/06/11 01:57:09 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.2 2001/06/11 03:20:48 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does 3 things:
@@ -25,6 +25,12 @@
 #				the targets should be appended to this variable
 #				using +=
 #
+# The variables that may optionally be defined are:
+#
+# BUILDLINK_TRANSFORM.<pkgname>	sed arguments used to transform the name of
+#				the source filename into a destination
+#				filename
+#
 # The targets required to be defined prior to including this file are
 # listed below.
 #
@@ -41,6 +47,9 @@
 # BUILDLINK_FILES.foo=		include/foo.h
 # BUILDLINK_FILES.foo+=		include/bar.h
 # BUILDLINK_FILES.foo+=		lib/libfoo.*
+#
+# # We need the libraries to be called "libbar.*".
+# BUILDLINK_TRANSFORM.foo=	-e "s|libfoo|libbar|g"
 #
 # BUILDLINK_TARGETS+=		foo-buildlink
 #
@@ -70,7 +79,11 @@ _BUILDLINK_USE: .USE
 	if [ ! -f $${cookie} ]; then					\
 		${ECHO} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
 		for file in ${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}; do \
-			dest=${BUILDLINK_DIR}/$${file##${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/}; \
+			if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
+				dest=${BUILDLINK_DIR}/$${file##${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/}; \
+			else						\
+				dest=`${ECHO} ${BUILDLINK_DIR}/$${file##${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/} | ${SED} ${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}}`; \
+			fi;						\
 			${MKDIR} $${dest%/*};				\
 			if [ -f $${file} ]; then			\
 				${RM} -f $${dest};			\
