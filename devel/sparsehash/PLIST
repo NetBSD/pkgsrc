@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/26 23:08:45 jschauma Exp $
+share/doc/html/sparsehash/dense_hash_map.html
+share/doc/html/sparsehash/dense_hash_set.html
+share/doc/html/sparsehash/implementation.html
+share/doc/html/sparsehash/performance.html
+share/doc/html/sparsehash/sparse_hash_map.html
+share/doc/html/sparsehash/sparse_hash_set.html
+share/doc/html/sparsehash/sparsetable.html
+include/google/dense_hash_map
+include/google/dense_hash_set
+include/google/sparse_hash_map
+include/google/sparse_hash_set
+include/google/sparsehash/config.h
+include/google/sparsehash/densehashtable.h
+include/google/sparsehash/hash_fun.h
+include/google/sparsehash/sparsehashtable.h
+include/google/sparsetable
+@dirrm include/google/sparsehash
+@unexec ${RMDIR} %D/include/google || ${TRUE}
+@dirrm share/doc/html/sparsehash
