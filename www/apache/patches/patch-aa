@@ -1,0 +1,50 @@
+$NetBSD: patch-aa,v 1.6 1998/12/03 17:23:52 tv Exp $
+
+--- Makefile.tmpl.orig	Thu Dec  3 07:42:35 1998
++++ Makefile.tmpl	Thu Dec  3 08:22:10 1998
+@@ -275,7 +275,7 @@
+ 	$(MKDIR) $(root)$(sysconfdir)/ssl.key
+ 	$(MKDIR) $(root)$(datadir)/htdocs
+ 	$(MKDIR) $(root)$(datadir)/icons
+-	$(MKDIR) $(root)$(datadir)/cgi-bin
++	$(MKDIR) $(root)$(prefix)/libexec/cgi-bin
+ 	$(MKDIR) $(root)$(includedir)
+ 	$(MKDIR) $(root)$(runtimedir)
+ 	$(MKDIR) $(root)$(logfiledir)
+@@ -352,6 +352,7 @@
+ 	@echo "$(INSTALL_SCRIPT) $(TOP)/$(SRC)/support/apachectl[*] $(root)$(sbindir)/apachectl"; \
+ 	sed -e 's;PIDFILE=.*;PIDFILE=$(runtimedir)/httpd.pid;' \
+ 		-e 's;HTTPD=.*;HTTPD=$(sbindir)/httpd;' \
++		-e 's;LD_LIBRARY_PATH=.*;LD_LIBRARY_PATH=/usr/lib:$(prefix)/lib:/usr/local/lib;' \
+ 		< $(TOP)/$(SRC)/support/apachectl > $(TOP)/$(SRC)/.apaci.install.tmp && \
+ 		$(INSTALL_SCRIPT) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(sbindir)/apachectl
+ 	$(INSTALL_DATA) $(TOP)/$(SRC)/support/apachectl.1 $(root)$(mandir)/man1/apachectl.1
+@@ -413,15 +414,15 @@
+ 		find $(root)$(datadir)/htdocs/ -type d -exec chmod a+rx {} \; ; \
+ 		find $(root)$(datadir)/htdocs/ -type f -exec chmod a+r {} \; ; \
+ 	fi
+-	-@if [ -f $(root)$(datadir)/cgi-bin/printenv ]; then \
+-		echo "[PRESERVING EXISTING DATA SUBDIR: $(root)$(datadir)/cgi-bin/]"; \
++	-@if [ -f $(root)$(prefix)/libexec/cgi-bin/printenv ]; then \
++		echo "[PRESERVING EXISTING DATA SUBDIR: $(root)$(prefix)/libexec/cgi-bin/]"; \
+ 	else \
+ 		for script in printenv test-cgi; do \
+ 			cat $(TOP)/cgi-bin/$${script} |\
+ 			sed -e 's;^#!/.*perl;#!$(PERL);' \
+         		> $(TOP)/$(SRC)/.apaci.install.tmp; \
+-			echo "$(INSTALL_DATA) $(TOP)/conf/$${script}[*] $(root)$(datadir)/cgi-bin/$${script}"; \
+-			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(datadir)/cgi-bin/$${script}; \
++			echo "$(INSTALL_DATA) $(TOP)/conf/$${script}[*] $(root)$(prefix)/libexec/cgi-bin/$${script}"; \
++			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(prefix)/libexec/cgi-bin/$${script}; \
+ 		done; \
+ 	fi
+ 	@echo "Copying tree $(TOP)/icons/ -> $(root)$(datadir)/icons/"; \
+@@ -450,7 +451,7 @@
+ 			-e 's;@@ServerRoot@@/conf/ssl.key;$(sysconfdir)/ssl.key;' \
+ 			-e 's;@@ServerRoot@@/htdocs;$(datadir)/htdocs;' \
+ 			-e 's;@@ServerRoot@@/icons;$(datadir)/icons;' \
+-			-e 's;@@ServerRoot@@/cgi-bin;$(datadir)/cgi-bin;' \
++			-e 's;@@ServerRoot@@/cgi-bin;$(prefix)/libexec/cgi-bin;' \
+ 			-e 's;@@ServerRoot@@/proxy;$(proxycachedir);' \
+ 			-e 's;@@ServerRoot@@;$(prefix);' \
+ 			-e 's;logs/accept.lock;$(runtimedir)/httpd.lock;' \
