@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.7 2005/01/12 15:32:01 jlam Exp $
+# $NetBSD: ccc.mk,v 1.8 2005/01/12 17:27:50 jlam Exp $
 
 .if !defined(COMPILER_CCC_MK)
 COMPILER_CCC_MK=	defined
@@ -27,9 +27,6 @@ _CCC_CC=	${_CCC_DIR}/cc
 _ALIASES.CC=	cc
 CCPATH=		/usr/bin/cc
 PKG_CC:=	${_CCC_CC}
-.  if !empty(CC:M*gcc)
-CC:=		${PKG_CC:T}	# ${CC} should be named "cc".
-.  endif
 .endif
 .if exists(/usr/bin/cxx)
 _CCC_VARS+=	CXX
@@ -37,9 +34,6 @@ _CCC_CXX=	${_CCC_DIR}/cxx
 _ALIASES.CXX=	c++ cxx
 CXXPATH=	/usr/bin/cxx
 PKG_CXX:=	${_CCC_CXX}
-.  if !empty(CXX:M*g++)
-CXX:=		${PKG_CXX:T}	 # ${CXX} should be named "cxx"
-.  endif
 .endif
 _COMPILER_STRIP_VARS+=	${_CCC_VARS}
 
