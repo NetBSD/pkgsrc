@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/07/26 18:23:23 dillo Exp $
+$NetBSD: patch-ac,v 1.2 2004/08/15 12:13:53 dillo Exp $
 
 --- src/gens/segacd/cd_aspi.c.orig	2004-05-18 22:34:00.000000000 +0200
 +++ src/gens/segacd/cd_aspi.c
