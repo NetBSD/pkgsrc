@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/08 19:48:27 snj Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/29 22:57:03 wiz Exp $
 
 DISTNAME=	mod_auth_pam-1.0a
 PKGNAME=	ap-auth-pam-1.0a
@@ -18,7 +18,8 @@ EGDIR=		${PREFIX}/share/examples/mod_auth_pam
 HTMLDIR=	${PREFIX}/share/doc/html/mod_auth_pam
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR} ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/samples/httpd ${EGDIR}/httpd.pam
 	${INSTALL_DATA} ${WRKSRC}/doc/configure.html ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/faq.html ${HTMLDIR}
