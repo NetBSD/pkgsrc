@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.1 2003/12/15 13:45:07 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2004/02/07 00:51:58 snj Exp $
 
---- font.c.orig	Sun Nov 30 12:56:55 2003
-+++ font.c
-@@ -294,7 +294,6 @@ void ClearFonts(void)
+--- font.c.orig	2004-01-16 04:35:29.000000000 -0800
++++ font.c	2004-02-06 16:32:49.000000000 -0800
+@@ -299,7 +299,6 @@ void ClearFonts(void)
    while(hfontptr!=NULL) {
      tmp=hfontptr->next;
      DoneFont(hfontptr);
 -    free(hfontptr);
      hfontptr=tmp;
    }
-   FreeFontNumP(dvi->fontnump);
+   if (dvi!=NULL)
