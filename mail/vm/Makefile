@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/14 21:43:49 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/03 21:46:31 jtb Exp $
 
 DISTNAME=	vm-6.92
 CATEGORIES=	mail
@@ -35,22 +35,11 @@ PLIST_SRC=	${PKGDIR}/PLIST.emacs
 
 do-install:
 	${INSTALL_DATA_DIR} ${LISPDIR}
-	@for f in ${WRKSRC}/*.el ${WRKSRC}/*.elc; do			\
-		i="${INSTALL_DATA} $$f ${LISPDIR}";			\
-		${ECHO} $$i; $$i;					\
-	done
-	@for f in ${WRKSRC}/*.info*; do					\
-		i="${INSTALL_DATA} $$f ${INFODIR}";			\
-		${ECHO} $$i; $$i;					\
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} *.el* ${LISPDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.info* ${INFODIR}
 	${INSTALL_DATA_DIR} ${PIXMAPDIR}
-	@for f in ${WRKSRC}/pixmaps/*.x[pb]m; do			\
-		i="${INSTALL_DATA} $$f ${PIXMAPDIR}";			\
-		${ECHO} $$i; $$i;					\
-	done
-	@for f in qp-decode qp-encode base64-decode base64-encode; do	\
-		i="${INSTALL_PROGRAM} ${WRKSRC}/$$f ${BINDIR}";		\
-		${ECHO} $$i; $$i;					\
-	done
+	${INSTALL_DATA} ${WRKSRC}/pixmaps/*.x[pb]m ${PIXMAPDIR}
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} qp-decode qp-encode		\
+		base64-decode base64-encode ${BINDIR}
 
 .include "../../mk/bsd.pkg.mk"
