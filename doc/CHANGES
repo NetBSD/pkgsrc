@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1943 2003/04/15 11:13:37 mjl Exp $
+$NetBSD: CHANGES,v 1.1944 2003/04/15 12:21:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1607,3 +1607,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated squirrelmail to 1.4.0 [martti 2003-04-15]
 	Updated ImageMagick to 5.5.6 [mjl 2003-04-15]
 	Updated p5-PerlMagick to 5.5.6 [mjl 2003-04-15]
+	Added gnet1-1.1.8 [wiz 2003-04-15]
+	Updated coconut to 0.3.0nb3 [wiz 2003-04-15]
+	Updated pan to 0.13.4nb1 [wiz 2003-04-15]
+	Updated gnet to 2.0.0 [wiz 2003-04-15]
