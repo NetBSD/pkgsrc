@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/10/05 12:37:19 wennmach Exp $
+
+--- jconfig.h.orig	Sat Oct  2 14:15:32 1999
++++ jconfig.h	Sat Oct  2 14:17:29 1999
+@@ -1,6 +1,6 @@
+ /* jconfig.h for Jitterbug. */
+ 
+-#define CONFIG_DIRECTORY "/etc/jitterbug"
++#define CONFIG_DIRECTORY "@PREFIX@/etc/jitterbug"
+ 
+ /* you probably want to leave the rest of these alone */
+ #define SYSTEMFILE "/system"
