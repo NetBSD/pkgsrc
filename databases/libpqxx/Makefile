@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2004/01/07 11:08:53 is Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/07 11:21:16 is Exp $
 #
 
 DISTNAME=		libpqxx-2.1.3
 CATEGORIES=		databases
 MASTER_SITES=		ftp://gborg.postgresql.org/pub/libpqxx/stable/
 
-MAINTAINER=		is@netbsd.org
+MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://pqxx.tk/
 COMMENT=		C++ interface to postgresql-lib
+NOT_FOR_PLATFORM=	NetBSD-*-pc532
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
