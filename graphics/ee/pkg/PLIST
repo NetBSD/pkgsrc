@@ -1,4 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/31 21:00:22 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/11/07 20:25:34 tron Exp $
+bin/ee
+share/gnome/apps/Graphics/ee.desktop
+share/gnome/help/ee/C/index.html
+share/gnome/help/ee/C/ee.jpg
+share/locale/hu/LC_MESSAGES/ee.mo
+share/locale/nl/LC_MESSAGES/ee.mo
+share/locale/pl/LC_MESSAGES/ee.mo
+share/locale/da/LC_MESSAGES/ee.mo
+share/locale/pt_BR/LC_MESSAGES/ee.mo
+share/locale/ro/LC_MESSAGES/ee.mo
+share/locale/en_GB/LC_MESSAGES/ee.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/ee.mo
 share/locale/de/LC_MESSAGES/ee.mo
 share/locale/fr/LC_MESSAGES/ee.mo
 share/locale/sv/LC_MESSAGES/ee.mo
@@ -11,11 +23,6 @@ share/locale/fi/LC_MESSAGES/ee.mo
 share/locale/ja/LC_MESSAGES/ee.mo
 share/locale/ko/LC_MESSAGES/ee.mo
 share/locale/ga/LC_MESSAGES/ee.mo
-share/apps/Graphics/ee.desktop
 share/mime-info/ee.keys
-share/gnome/help/ee/C/index.html
-share/gnome/help/ee/C/ee.jpg
-bin/ee
-@dirrm share/apps/Graphics
 @dirrm share/gnome/help/ee/C
 @dirrm share/gnome/help/ee
