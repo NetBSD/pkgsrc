@@ -1,0 +1,72 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/01 16:22:39 hubertf Exp $
+
+--- conf/NetBSD.mk.orig	Thu Aug 31 14:06:52 2000
++++ conf/NetBSD.mk
+@@ -1,33 +1,35 @@
+ INSTALL=install
+ MAKEDEPEND=sh ../conf/mkdep.sh
+-INCS_X11= -I/usr/X11R6/include
++INCS_X11= -I${X11BASE}/include
+ 
+ # set ELFENV in config.mk
+ # a.out env. -> 0
+ # ELF env.   -> 1
+-ifndef ELFENV
++#HF#
++#HF# Force -Wl,-rpath even on a.out
++#HF#ifndef ELFENV
+ ELFENV=1
+-endif
++#HF#endif
+ 
+ ifeq (${ELFENV},1)
+-LIBS_X11= -L/usr/X11R6/lib -Wl,-rpath,/usr/X11R6/lib -lX11
++LIBS_X11= -L${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib -lX11
+ else
+-LIBS_X11= -L/usr/X11R6/lib -lX11
++LIBS_X11= -L${X11BASE}/lib -lX11
+ endif
+ 
+-INCS_CONS= -I/usr/pkg/include
++INCS_CONS= -I${PREFIX}/include
+ ifeq (${ELFENV},1)
+-    LIBS_CONS= -L/usr/pkg/lib -Wl,-rpath /usr/pkg/lib
++    LIBS_CONS= -L${PREFIX}/lib -Wl,-rpath ${PREFIX}/lib
+ else
+-    LIBS_CONS= -L/usr/pkg/lib
++    LIBS_CONS= -L${PREFIX}/lib
+ endif
+ 
+ ifndef LIBS_IM
+-INCS_IM = -I/usr/pkg/include
++INCS_IM = -I${PREFIX}/include
+     ifeq (${ELFENV},1)
+-    LIBS_IM = -L/usr/pkg/lib -Wl,-rpath,/usr/pkg/lib -lcanna
++    LIBS_IM = -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lcanna
+     else
+-    LIBS_IM = -L/usr/pkg/lib -lcanna
++    LIBS_IM = -L${PREFIX}/lib -lcanna
+     endif
+ endif
+ 
+@@ -63,16 +65,16 @@
+ ifdef MGL_INSTALLED
+ 	INCS_MGL = -I${MGL_HEADER_DIR}
+ 	ifeq (${ELFENV},1)
+-	LIBS_MGL = -L${MGL_LIB_DIR} -L/usr/X11R6/lib -Wl,-rpath,/usr/pkg/lib -L/usr/pkg/lib  -lmgl2
++	LIBS_MGL = -L${MGL_LIB_DIR} -L${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lmgl2
+ 	else
+-	LIBS_MGL = -L${MGL_LIB_DIR} -L/usr/X11R6/lib -L/usr/pkg/lib  -lmgl2	
++	LIBS_MGL = -L${MGL_LIB_DIR} -L${X11BASE}/lib -L${PREFIX}/lib  -lmgl2	
+ 	endif
+ else
+ 	INCS_MGL = -I${SRCDIR}
+ 	ifeq (${ELFENV},1)
+-	LIBS_MGL = -L${SRCDIR} -rdynamic -L/usr/X11R6/lib -Wl,-rpath,/usr/pkg/lib -L/usr/pkg/lib -lmgl2 
++	LIBS_MGL = -L${SRCDIR} -rdynamic -L${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib -lmgl2 
+ 	else
+-	LIBS_MGL = -L${SRCDIR} -L/usr/X11R6/lib -L/usr/pkg/lib -lmgl2 
++	LIBS_MGL = -L${SRCDIR} -L${X11BASE}/lib -L${PREFIX}/lib -lmgl2 
+ 	endif
+ endif
+ 
