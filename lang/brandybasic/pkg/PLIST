@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/06 15:13:11 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/04 09:59:04 abs Exp $
 bin/brandy
 share/doc/brandy/COPYING
 share/doc/brandy/README
 share/doc/brandy/basic
 share/doc/brandy/compiling
 share/doc/brandy/graphics
+share/doc/brandy/history
 share/doc/brandy/internals
+share/doc/brandy/messages
 share/doc/brandy/use
 share/examples/brandy/cmdline
 share/examples/brandy/combsort
@@ -16,6 +18,7 @@ share/examples/brandy/hanoi
 share/examples/brandy/hex
 share/examples/brandy/lands
 share/examples/brandy/pastriang
+share/examples/brandy/readme
 share/examples/brandy/sieve
 share/examples/brandy/tekdemo1
 share/examples/brandy/tekdemo2
