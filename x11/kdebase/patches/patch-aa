@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 1999/11/12 04:50:00 hubertf Exp $
+$NetBSD: patch-aa,v 1.14 1999/12/06 20:44:59 bouyer Exp $
 
---- ./configure	Tue Sep  7 17:21:06 1999
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/configure	Fri Nov 12 05:10:30 1999
-@@ -517,9 +517,9 @@
+--- configure.old	Tue Sep  7 17:21:06 1999
++++ configure	Fri Dec  3 18:56:37 1999
+@@ -517,9 +517,10 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
    if test "x$prefix" != xNONE; then
@@ -10,11 +10,12 @@ $NetBSD: patch-aa,v 1.13 1999/11/12 04:50:00 hubertf Exp $
 +    CONFIG_SITE="$prefix/share/kde/config.site $prefix/etc/config.site"
    else
 -    CONFIG_SITE="$ac_default_prefix/share/config.site $ac_default_prefix/etc/config.site"
-+    CONFIG_SITE="$ac_default_prefix/share/kde/config.site $ac_default_prefix/etc/config.site"
++    CONFIG_SITE="$ac_default_prefix/share/kde/config.site $ac_default_prefix/e
++tc/config.site"
    fi
  fi
  for ac_site_file in $CONFIG_SITE; do
-@@ -3994,37 +3994,37 @@
+@@ -3994,37 +3995,37 @@
  if test "$ac_use_path_checking" = "default"; then
  
    if test -z "$kde_htmldir"; then
@@ -27,7 +28,7 @@ $NetBSD: patch-aa,v 1.13 1999/11/12 04:50:00 hubertf Exp $
    fi
    if test -z "$kde_icondir"; then
 -    kde_icondir='\$(prefix)/share/icons'
-+    kde_icondir='\$(prefix)/share/kde/icons'
++    kde_icondir='\$(prefix)/share/kde/kde/icons'
    fi
    if test -z "$kde_sounddir"; then
 -    kde_sounddir='\$(prefix)/share/sounds'
@@ -43,7 +44,7 @@ $NetBSD: patch-aa,v 1.13 1999/11/12 04:50:00 hubertf Exp $
    fi
    if test -z "$kde_cgidir"; then
 -    kde_cgidir='\$(exec_prefix)/cgi-bin'
-+    kde_cgidir='\$(libexecdir)/kde-cgi-bin'
++    kde_cgidir='\$(exec_prefix)/kde-cgi-bin'
    fi
    if test -z "$kde_confdir"; then
 -    kde_confdir='\$(prefix)/share/config'
@@ -63,7 +64,7 @@ $NetBSD: patch-aa,v 1.13 1999/11/12 04:50:00 hubertf Exp $
    fi
    if test -z "$kde_bindir"; then
      kde_bindir='\$(exec_prefix)/bin'
-@@ -4823,7 +4823,7 @@
+@@ -4823,7 +4824,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
@@ -72,7 +73,7 @@ $NetBSD: patch-aa,v 1.13 1999/11/12 04:50:00 hubertf Exp $
  cat > conftest.$ac_ext <<EOF
  #line 4829 "configure"
  #include "confdefs.h"
-@@ -4847,7 +4847,7 @@
+@@ -4847,7 +4848,7 @@
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -81,7 +82,7 @@ $NetBSD: patch-aa,v 1.13 1999/11/12 04:50:00 hubertf Exp $
    cat >> confdefs.h <<EOF
  #define HAVE_PAM_LIB 1
  EOF
-@@ -5124,7 +5124,7 @@
+@@ -5124,7 +5125,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
@@ -90,3 +91,58 @@ $NetBSD: patch-aa,v 1.13 1999/11/12 04:50:00 hubertf Exp $
  cat > conftest.$ac_ext <<EOF
  #line 5130 "configure"
  #include "confdefs.h"
+@@ -6166,6 +6167,46 @@
+ 
+ 
+ 
++echo $ac_n "checking for main in -lossaudio""... $ac_c" 1>&6
++echo "configure:6171: checking for main in -lossaudio" >&5
++ac_lib_var=`echo ossaudio'_'main | sed 'y%./+-%__p_%'`
++if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  ac_save_LIBS="$LIBS"
++LIBS="-lossaudio  $LIBS"
++cat > conftest.$ac_ext <<EOF
++#line 6179 "configure"
++#include "confdefs.h"
++
++int main() {
++main()
++; return 0; }
++EOF
++if { (eval echo configure:6186: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_lib_$ac_lib_var=no"
++fi
++rm -f conftest*
++LIBS="$ac_save_LIBS"
++
++fi
++if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  LIBOSSAUDIO=-lossaudio
++else
++  echo "$ac_t""no" 1>&6
++LIBOSSAUDIO=''
++fi
++
++
++
++
+ if test "$kde_have_setupterm" = "yes"; then
+   cat >> confdefs.h <<EOF
+ #define HAVE_SETUPTERM 1
+@@ -7420,6 +7461,7 @@
+ s%@XPMLIB@%$XPMLIB%g
+ s%@XPM_SAVERS@%$XPM_SAVERS%g
+ s%@LIBCURSES@%$LIBCURSES%g
++s%@LIBOSSAUDIO@%$LIBOSSAUDIO%g
+ s%@LIBVOLMGT@%$LIBVOLMGT%g
+ s%@topdir@%$topdir%g
+ s%@RUN_KAPPFINDER@%$RUN_KAPPFINDER%g
