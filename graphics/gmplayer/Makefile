@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/05/25 07:56:01 veego Exp $
+# $NetBSD: Makefile,v 1.8 2002/06/08 23:41:55 veego Exp $
 
 .include "../../graphics/mplayer-share/Makefile.common"
 
@@ -40,8 +40,6 @@ SITES_${skin}= ${SKIN_SITES}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
 
-DEPENDS+=	mplayer-share>=0.90rc4nb1:../../graphics/mplayer-share
-
 CONFIGURE_ARGS+=	--enable-gui
 CONFIGURE_ARGS+=	--disable-mencoder
 
@@ -56,11 +54,7 @@ do-install:
 	@${CHMOD} -R a+r ${PREFIX}/share/mplayer/Skin
 	@${CHMOD} a+rx ${PREFIX}/share/mplayer/Skin/*
 
-.include "../../devel/SDL/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../misc/libdvdread/buildlink.mk"
+.include "../../audio/nas/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
-.include "../../mk/ossaudio.buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../graphics/mplayer-share/Makefile.depends"
 .include "../../mk/bsd.pkg.mk"

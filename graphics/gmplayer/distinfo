@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2002/05/25 07:56:01 veego Exp $
+$NetBSD: distinfo,v 1.11 2002/06/08 23:41:55 veego Exp $
 
-SHA1 (mplayer/MPlayer-0.90pre4.tar.bz2) = 54621d010d5fb28e1ad2f857135543c3bd466d50
-Size (mplayer/MPlayer-0.90pre4.tar.bz2) = 2424843 bytes
+SHA1 (mplayer/MPlayer-0.90pre5.tar.bz2) = 1a78063dd055ce99985001072fb2057156f8cd2a
+Size (mplayer/MPlayer-0.90pre5.tar.bz2) = 2438747 bytes
 SHA1 (mplayer/default.tar.bz2) = 72eb4f088e19b20d3b861180525dffde4796a27d
 Size (mplayer/default.tar.bz2) = 167746 bytes
 SHA1 (mplayer/MidnightLove.tar.bz2) = 7464060fbffd8ac93402616426620a590fda8d7f
