@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/10/01 11:10:29 drochner Exp $
+A fix for this problem has been pulled up into KDE, though implemented
+in way not breaking the build for non-NetBSD systems.
+
+$NetBSD: patch-ab,v 1.2 1999/11/16 00:34:13 jdolecek Exp $
 --- kmix/Makefile.in.orig	Sun Sep 26 02:36:54 1999
 +++ kmix/Makefile.in	Sun Sep 26 02:37:38 1999
 @@ -286,7 +286,7 @@
