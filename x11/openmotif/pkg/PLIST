@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2001/09/08 20:03:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/09/09 08:03:44 jlam Exp $
 bin/DNDDemo
 bin/UTMXmText
 bin/aicon
@@ -274,6 +274,7 @@ lib/X11/bindings/sun
 lib/X11/bindings/sun_at
 lib/X11/bindings/tek
 lib/X11/bindings/xmbind.alias
+lib/X11/config/OpenMotif.def
 lib/X11/config/OpenMotif.rules
 lib/X11/config/OpenMotif.tmpl
 lib/X11/help/aicon.help
