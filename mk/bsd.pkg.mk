@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1219 2003/07/22 10:12:47 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1220 2003/07/22 13:48:48 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -4245,7 +4245,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		*)	ldd="${LDD}";					\
 		esac;							\
 		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then 	\
-			requires=`($$ldd $$bins $$libs || ${TRUE}) | ${AWK} 'NF == 3 { print $$3 }' | ${SORT} -u`; \
+			requires=`($$ldd $$bins $$libs 2>/dev/null || ${TRUE}) | ${AWK} 'NF == 3 { print $$3 }' | ${SORT} -u`; \
 			for req in "" $$requires; do			\
 				${TEST} "$$req" = "" && continue;	\
 				${ECHO} "REQUIRES=$$req" >> ${BUILD_INFO_FILE};	\
