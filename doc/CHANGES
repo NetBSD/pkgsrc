@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9507 2005/03/18 19:02:15 jmmv Exp $
+$NetBSD: CHANGES,v 1.9508 2005/03/19 01:08:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1409,3 +1409,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xfce4-wm-themes to 4.2.1 [martti 2005-03-18]
 	Updated galway to 0.33nb7 [wiz 2005-03-18]
 	Updated gaim to 1.1.4nb1 [jmmv 2005-03-18]
+	Updated dict-client to 1.9.15nb1 [jwise 2005-03-19]
