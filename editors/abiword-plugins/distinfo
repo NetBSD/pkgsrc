@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/02/07 14:15:13 adam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/10 19:27:32 wiz Exp $
 
-SHA1 (abiword-2.2.3.tar.bz2) = 0ad900f13e535a4b55faed41b8ab8d63400c7712
-Size (abiword-2.2.3.tar.bz2) = 23472285 bytes
+SHA1 (abiword-2.2.3/abiword-2.2.3.tar.bz2) = 0ad900f13e535a4b55faed41b8ab8d63400c7712
+Size (abiword-2.2.3/abiword-2.2.3.tar.bz2) = 23472285 bytes
