@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/08/21 08:23:26 abs Exp $
+# $NetBSD: Makefile,v 1.28 2002/03/14 03:14:46 lukem Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
 PKGNAME=	acroread-4.05
@@ -66,11 +66,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.pre \
 
 NS_PLUGINS_DIR=	${PREFIX}/lib/netscape/plugins
 
-.if (${OPSYS} == "SunOS")
-BIN_PATCH=	${PATCH} --quiet -V simple -z .orig
-.else
-BIN_PATCH=	${PATCH} --quiet -V simple -b .orig
-.endif
+BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat4
