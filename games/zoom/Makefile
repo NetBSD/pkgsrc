@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/11/04 23:35:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/24 09:53:49 jmmv Exp $
 #
 
 DISTNAME=		zoom-1.0.1
@@ -10,7 +10,7 @@ PATCH_SITES=		http://www.logicalshift.demon.co.uk/unix/zoom/
 PATCHFILES=		zoom-1.0.1-1.0.1a.patch
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=		dillo@netbsd.org
+MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://www.logicalshift.demon.co.uk/unix/zoom/
 COMMENT=		Plays Infocom-compatible games, with graphics support
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/11 17:32:23 manu Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:49 jmmv Exp $
 #
 
 DISTNAME=		milter-spamc-0.10
@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://www.snert.com/Software/download/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		manu@netbsd.org
+MAINTAINER=		manu@NetBSD.org
 HOMEPAGE=		http://www.snert.com/Software/download/
 COMMENT=		Yet another SpamAssassin Milter
 

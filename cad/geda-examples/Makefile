@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/10 23:38:27 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:48 jmmv Exp $
 #
 
 DISTNAME=	geda-examples-${PKGVERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 		http://www.geda.seul.org/devel/${PKGVERSION}/ \
 		http://www.geda.coelacanth.com/devel/${PKGVERSION}/
 
-MAINTAINER=	dmcmahill@netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda.seul.org/
 COMMENT=	Examples for gEDA
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/10 00:25:31 epg Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:50 jmmv Exp $
 
 DISTNAME=	fvwm-2.5.7
 PKGNAME=	${DISTNAME:S/fvwm/&-devel/}
@@ -6,7 +6,7 @@ CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	epg@netbsd.org
+MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	http://www.fvwm.org/
 COMMENT=	Development version of X11 Virtual window manager
 

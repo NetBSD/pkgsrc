@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/05 03:34:27 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:49 jmmv Exp $
 
 DISTNAME=	libdvdplay-1.0.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.videolan.org/pub/libdvdplay/1.0.1/
 
-MAINTAINER=	wulf@netbsd.org
+MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://developers.videolan.org/libdvdplay/
 COMMENT=	simple API library designed for DVD navigation
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/04 08:28:25 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:48 jmmv Exp $
 #
 
 DISTNAME=	chef.l
@@ -7,7 +7,7 @@ CATEGORIES=	converters
 MASTER_SITES=	http://www.evolutionzone.com/kulturezone/c-g.writing/
 EXTRACT_SUFX=	.txt
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 #HOMEPAGE=	none
 COMMENT=	Convert from English to (mock) Swedish - Bork Bork Bork!
 

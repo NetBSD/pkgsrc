@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/28 14:57:00 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:49 jmmv Exp $
 #
 
 DISTNAME=		routeplanner_0.11
@@ -6,7 +6,7 @@ PKGNAME=		routeplanner-cli-0.11
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=routeplanner/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://routeplanner.sourceforge.net/
 COMMENT=		Highway trip planner written in Python
 
