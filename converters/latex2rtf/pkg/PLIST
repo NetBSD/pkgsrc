@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/08 00:20:16 wiz Exp $
+bin/latex2rtf
+@unexec install-info --delete %D/info/latex2rtf.info %D/info/dir
+info/latex2rtf.info
+@exec install-info %D/info/latex2rtf.info %D/info/dir
+share/latex2rtf/direct.cfg
+share/latex2rtf/english.cfg
+share/latex2rtf/fonts.cfg
+share/latex2rtf/german.cfg
+share/latex2rtf/ignore.cfg
+share/latex2rtf/spanish.cfg
+man/man1/latex2rtf.1
+share/doc/latex2rtf/latex2rtf.html
+share/doc/latex2rtf/latex2rtf.pdf
+@dirrm share/doc/latex2rtf
+@dirrm share/latex2rtf

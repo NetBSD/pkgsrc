@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/03/08 00:20:17 wiz Exp $
+
+--- ./Makefile.in.orig	Tue Mar  7 23:37:35 2000
++++ ./Makefile.in	Tue Mar  7 23:45:10 2000
+@@ -83,13 +83,13 @@
+ DIR_USER=root
+ BIN_USER=root
+ DAT_USER=root
+-DIR_GROUP=root
+-BIN_GROUP=root
+-DAT_GROUP=root
++DIR_GROUP=wheel
++BIN_GROUP=wheel
++DAT_GROUP=wheel
+ # If you have the program install, use the following definitions
+-INST_DIR=$(INSTALL) -g $(DIR_GROUP) -o $(DIR_USER) -d -m $(BIN_MODE)
+-INST_BIN=$(INSTALL) -g $(BIN_GROUP) -o $(BIN_USER) -m $(DIR_MODE)
+-INST_DAT=$(INSTALL) -g $(DAT_GROUP) -o $(DAT_USER) -m $(DAT_MODE)
++INST_DIR=$(INSTALL) -c -g $(DIR_GROUP) -o $(DIR_USER) -d -m $(BIN_MODE)
++INST_BIN=$(INSTALL) -c -g $(BIN_GROUP) -o $(BIN_USER) -m $(DIR_MODE)
++INST_DAT=$(INSTALL) -c -g $(DAT_GROUP) -o $(DAT_USER) -m $(DAT_MODE)
+ CHOWN_DIR=true
+ CHOWN_BIN=true
+ CHOWN_DAT=true
+@@ -115,8 +115,8 @@
+ #
+ # Where support files are searched for by the executable
+ # prefix defaults to /usr/local, but may be set on the command line
+-prefix=/usr/local
+-LIBDIR=$(prefix)/lib/latex2rtf
++prefix=@PREFIX@
++LIBDIR=$(prefix)/share/latex2rtf
+ # You can give several Directories separated by ':' for the following
+ # install targets
+ #
+@@ -165,7 +165,7 @@
+     debian.control debian.rules util.c util.h  ChangeLog parser.c parser.h
+ SUPPORT=cfg/direct.cfg cfg/fonts.cfg cfg/ignore.cfg \
+     cfg/english.cfg cfg/german.cfg cfg/spanish.cfg \
+-    l2r.bat l2r.exe
++#   l2r.bat l2r.exe
+ MANUALS=latex2rtf.1
+ MSDOS=l2r.bat l2r.exe
+ DOCS=doc/latex2rtf.info doc/l2r.html doc/l2r.pdf doc/l2r.txt\
