@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/02/28 15:16:33 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/27 20:38:51 wiz Exp $
 
 DISTNAME=	bibtex2html-1.75
 CATEGORIES=	converters
@@ -8,7 +8,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.lri.fr/~filliatr/bibtex2html/
 COMMENT=	Collection of tools for translating from BibTeX to HTML
 
-BUILD_DEPENDS=	ocaml>=3.08:../../lang/ocaml
 BUILD_DEPENDS+=	hevea-[0-9]*:../../textproc/hevea
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 
@@ -36,4 +35,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/manual.html ${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/manual.ps ${PREFIX}/share/doc/${PKGBASE}
 
+.include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
