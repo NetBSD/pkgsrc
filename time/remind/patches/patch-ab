@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:11 wiz Exp $
+
+--- src/Makefile.in.orig	Wed Mar 15 11:03:39 2000
++++ src/Makefile.in	Fri Mar 17 15:13:31 2000
+@@ -15,11 +15,12 @@
+ 
+ INSTALL=@INSTALL@
+ INSTALL_PROGRAM=@INSTALL_PROGRAM@
++INSTALL_SCRIPT=@INSTALL@ -m 0555
+ INSTALL_DATA=@INSTALL_DATA@
+ 
+ PROGS=		remind rem2ps
+ SCRIPTS=	$(srcdir)/../scripts/kall $(srcdir)/../scripts/rem \
+-		$(srcdir)/../scripts/tkremind $(srcdir)/../scripts/cm2rem.tcl
++		$(srcdir)/../scripts/tkremind $(srcdir)/../scripts/cm2rem
+ 
+ MANS=		$(srcdir)/../man/kall.1 $(srcdir)/../man/rem.1 \
+ 		$(srcdir)/../man/rem2ps.1 $(srcdir)/../man/remind.1 \
+@@ -49,11 +50,12 @@
+ 	@CC@ @LDFLAGS@ -o remind $(REMINDOBJS) @LIBS@
+ 
+ install: all
+-	for prog in $(PROGS) $(SCRIPTS) ; do \
++	for prog in $(PROGS) ; do \
+ 		$(INSTALL_PROGRAM) $$prog $(bindir) ; \
+ 	done
+-	-strip $(bindir)/remind
+-	-strip $(bindir)/rem2ps
++	for prog in $(SCRIPTS) ; do \
++		$(INSTALL_SCRIPT) $$prog $(bindir) ; \
++	done
+ 	for man in $(MANS) ; do  \
+ 		$(INSTALL_DATA) $$man $(mandir)/man1 ; \
+ 	done

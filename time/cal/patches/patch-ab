@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:10 wiz Exp $
+
+--- cal.c.orig	Thu Jul 11 21:36:33 1996
++++ cal.c	Thu Oct 23 14:37:49 1997
+@@ -122,6 +122,7 @@
+ #include <ctype.h>
+ #include <string.h>
+ #include <sys/types.h>
++#include <sys/param.h>      /*NetBSD*/
+  
+ #ifndef max
+ #define max(a,b) (((a)>(b))?(a):(b))
+@@ -130,6 +131,10 @@
+ /* Note: Other unix systems may require this next re-define to work. */
+ /* I believe that SCO is one such system.  Please send in any fixes  */
+ /* needed to get your system running.                                */
++#if (defined(BSD) && BSD >= 199306)
++#define stricmp(a,b) strcasecmp(a,b) /* case-insensitive string comparison */
++#endif
++ 
+ #ifdef __linux__          /* Make linux compatible with stricmp() */
+ #define stricmp(a,b) strcasecmp(a,b) /* case-insensitive string comparison */
+ #endif
+@@ -1401,8 +1406,12 @@
+             strcpy(str, ".");
+             strcpy(str, file);
+             if ((fp = fopen(str, mode)) == NULL) {
+-                /* If still not found then look in a lib directory */
++                /* If still not found then look in config directory */
++#ifdef PREFIX
++                strcpy(str, PREFIX "/etc/cal/");
++#else
+                 strcpy(str, "/usr/lib/");
++#endif
+                 strcat(str,file);
+                 fp = fopen(str, mode);
+             }

@@ -1,0 +1,4 @@
+The asclock is a clock written to emulate the date/time application on
+the NEXTSTEP(tm) operating system.  asclock supports multiple
+languages, military and AM/PM time formats, program execution, and the
+shape extension to X-Windows.

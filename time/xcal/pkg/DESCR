@@ -1,0 +1,13 @@
+Xcal is an interactive calendar program with alarms and a notebook.
+
+Pscal is an program that generates calendars in PostScript.
+
+Xcal_cal is a program that takes you calendar entries and makes a file
+for the standard UNIX calendar program to send you mail.
+
+Xcalev is a program that is used to pre-load your calendar with all
+those birthdays that you are prone to forget.
+
+Xcalpr is a program that prints calendar files out to a terminal. Nice
+if you have no X screen. This also can be used to generate a file for
+the UNIX calendar program.

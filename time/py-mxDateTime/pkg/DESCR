@@ -1,0 +1,10 @@
+A C extension package for python that provides new datatypes for
+handling dates and times together with a rich set of conversion and
+parsing routines.
+
+These types were created to provide a consistent way of transferring
+date and time data between Python and databases. Apart from handling
+date before the Unix epoch (1.1.1970) they also correctly work with
+dates beyond the Unix time limit (currently with Unix time value being
+encoded using 32bit integers, the limit is reached in 2038) and thus
+is Year 2000 and Year 2038 safe.
