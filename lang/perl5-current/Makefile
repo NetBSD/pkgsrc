@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9.2.2 2002/06/29 03:50:43 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.3 2002/06/29 04:57:04 jlam Exp $
 
 .include "Makefile.common"
 
@@ -95,6 +95,10 @@ PERL5=			${PREFIX}/bin/perl${PERL5_DIST_VERS}
 PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_SITEARCH=		${PREFIX}/lib/perl5/site_perl/${PERL5_DIST_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
+
+pre-buildlink:
+	${MKDIR} ${BUILDLINK_DIR}/include
+	${MKDIR} ${BUILDLINK_DIR}/lib
 
 # It's tough to guess which hints file will be used, so add our modifications
 # to all of them:
