@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.96 2003/04/10 20:20:55 grant Exp $
+# $NetBSD: Makefile,v 1.97 2003/04/22 09:48:44 grant Exp $
 
 DISTNAME=		openssh-3.6.1p1
 PKGNAME=		openssh-3.6.1.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp7.usa.openbsd.org/pub/os/OpenBSD/OpenSSH/portable/ \
-			ftp://ftp.stealth.net/pub/mirrors/ftp.openssh.com/pub/OpenBSD/OpenSSH/portable \
+			ftp://ftp.stealth.net/pub/mirrors/ftp.openssh.com/pub/OpenBSD/OpenSSH/portable\ \
 			http://public.planetmirror.com.au/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://gd.tuwien.ac.at/opsys/OpenBSD/OpenSSH/portable/ \
