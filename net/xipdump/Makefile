@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile,v 1.12 2004/06/01 17:51:28 recht Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
 CATEGORIES=	net
-MASTER_SITES=	http://www.epita.fr/~lse/xipdump/
+MASTER_SITES=	http://www.lse.epita.fr/devel/xipdump/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	sakamoto@NetBSD.org
-HOMEPAGE=	http://www.epita.fr/~lse/xipdump/
+#HOMEPAGE=	http://www.epita.fr/~lse/xipdump/	
 COMMENT=	Displays IP packets using X Window System
 
 DEPENDS+=	libnet>=1.0.1bnb3:../../devel/libnet
