@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.33 2005/03/27 10:25:51 recht Exp $
+# $NetBSD: Makefile,v 1.34 2005/04/04 07:22:34 recht Exp $
 
-DISTNAME=	mono-1.1.5
+DISTNAME=	mono-1.1.6
 CATEGORIES=	lang
-MASTER_SITES=	http://www.go-mono.com/archive/1.1.5/
+MASTER_SITES=	http://www.go-mono.com/archive/1.1.6/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
 
-#BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 CONFLICTS=	pnet-[0-9]*
 
@@ -34,6 +34,9 @@ CONFIGURE_ARGS+=	--with-jit=yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 MAKE_FLAGS+=		PERL=${PERL5}
+UNLIMIT_RESOURCES=	datasize
+UNLIMIT_RESOURCES+=	stacksize
+UNLIMIT_RESOURCES.=	memorysize
 
 PKGCONFIG_OVERRIDE=	mint.pc.in
 PKGCONFIG_OVERRIDE+=	mono.pc.in
@@ -55,6 +58,8 @@ CONF_FILES+=	${EGDIR}/browscap.ini ${PKG_SYSCONFDIR}/mono/browscap.ini
 #CONF_FILES+=	${EGDIR}/machine.config ${PKG_SYSCONFDIR}/machine.config
 #CONF_FILES+=	${EGDIR}/DefaultWsdlHelpGenerator.aspx \
 #		${PKG_SYSCONFDIR}/DefaultWsdlHelpGenerator.aspx
+
+TEST_TARGET=	check
 
 .include "../../mk/bsd.prefs.mk"
 
