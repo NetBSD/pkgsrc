@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.334 2004/04/08 09:38:39 xtraeme Exp $
+# $NetBSD: Packages.txt,v 1.335 2004/04/08 17:17:16 reed Exp $
 ###########################################################################
 
 			==========================
@@ -1809,6 +1809,24 @@ The remaining parts create the foo-buildlink target that actually performs
 the symlinking and adds the foo-buildlink target to BUILDLINK_TARGETS,
 which is the global list of targets to execute at do-buildlink time.
 
+When updating a package be sure to check if the sonames (library
+versions) change and adjust the BUILDLINK_DEPENDS.foo to at least
+the new package version. For example, if the installed library
+changed from libfoo.so.4 to libfoo.so.5 then the BUILDLINK_DEPENDS.foo
+needs to be changed so binary packages (made using it) will require
+the correct package. It is also important to update the
+BUILDLINK_DEPENDS.foo when the API or interface to the included
+files change.  In some cases, the packages that depend on this new
+version may need their PKGREVISIONs increased and, if they have
+buildlink?.mk files, their BUILDLINK_DEPENDS.bar adjusted too. This
+is so binary packages will require correct versions (so a new
+package built against old library won't be installed with a new
+library, for example). Please take careful consideration before
+adjusting the BUILDLINK_DEPENDS so it doesn't cause unneeded package
+deletions and rebuilds. (In many cases, new versions of packages
+work just fine with older dependencies.) See section 10 for more
+information about dependencies on other packages, including the
+BUILDLINK_RECOMMENDED and RECOMMENDED definitions.
 
  9 Debugging
  ===========
@@ -2372,7 +2390,8 @@ commit of that file, it should be copied to both
 on ftp.netbsd.org by localsrc/security/advisories/Makefile.  In addition, if
 a buildlink2.mk or buildlink3.mk file exists for an affected package, bumping
 PKGREVISION and creating a corresponding BUILDLINK_RECOMMENDED.<pkg> entry
-should be considered.
+should be considered. See section 8 for more information about
+writing buildlink?.mk files and BUILDLINK_* definitions.
 
 
  10.22 What's the proper way to create an account from a package?
