@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5043 2004/02/29 17:52:27 jmmv Exp $
+$NetBSD: CHANGES,v 1.5044 2004/02/29 17:56:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1097,3 +1097,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added firefox-0.8 [xtraeme 2004-02-29]
 	Added firefox-gtk2-0.8 [xtraeme 2004-02-29]
 	Updated autoswc to 1.2 [jmmv 2004-02-29]
+	Updated mlterm to 2.8.0pl1nb1 [minskim 2004-02-29]
