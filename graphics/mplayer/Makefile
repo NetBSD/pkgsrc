@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/01/25 16:21:00 skrll Exp $
+# $NetBSD: Makefile,v 1.18 2002/01/30 10:44:21 zuntum Exp $
 
 DISTNAME=	MPlayer-0.60
 PKGNAME=	mplayer-0.60
@@ -49,7 +49,6 @@ do-install:
 
 .include "../../audio/lame/buildlink.mk"
 .include "../../devel/SDL/buildlink.mk"
-.include "../../graphics/aalib/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../misc/libdvdread/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
