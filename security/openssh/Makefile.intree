@@ -1,13 +1,15 @@
-# $NetBSD: Makefile.intree,v 1.3 2002/06/28 18:34:14 jlam Exp $
+# $NetBSD: Makefile.intree,v 1.4 2002/08/20 17:13:38 abs Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
-# Require an in-tree OpenSSL that is at least 0.9.5a.
+# We would like to require an in-tree OpenSSL that is at least 0.9.5a, but the
+# openssl buildlink.mk forces at least 0.9.5f, which makes
+# UPDATE_INTREE_OPENSSH useless for anything before 1.6x
 #
-USE_OPENSSL_VERSION:=	${OPENSSL_VERSION_095A}
+# USE_OPENSSL_VERSION:=	${OPENSSL_VERSION_095A}
 .include "../../security/openssl/buildlink.mk"
 .if ${_NEED_OPENSSL} == "YES"
-IGNORE=		"OpenSSL>=0.9.5a in the base distribution is required."
+IGNORE=		"OpenSSL>=0.9.5f in the base distribution is required."
 .endif
 
 _UPDATE_INTREE_OPENSSH?=	NO
