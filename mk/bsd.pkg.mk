@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1235 2003/08/12 11:35:03 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1236 2003/08/12 14:55:42 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -3381,53 +3381,11 @@ clean: pre-clean
 clean-depends:
 .  if defined(BUILD_DEPENDS) || defined(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for i in `${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_TOP=YES clean-depends-list | ${SED} -e 's;\.\./[^ ]*; ;g' | ${TR} -s "[:space:]" "\n" | ${SORT} -u` ;\
+	for i in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl` ;\
 	do 								\
 		cd ${.CURDIR}/../../$$i &&				\
 		${MAKE} ${MAKEFLAGS} CLEANDEPENDS=NO clean;		\
 	done
-.  endif
-.endif
-
-
-# The clean-depends-list target will produce a list of all
-# BUILD_DEPENDS and DEPENDS packages.
-# As each *DEPENDS package is visited, it is added to the
-# CLEAN_DEPENDS_LIST_SEEN variable.  Once a pkg is in the list
-# it will not be visited again.  This prevents traversing the same
-# part of the dependency tree multiple times.  Each depending package
-# ends up in the list twice.  Once as the relative path from the depending
-# package and once as the path from pkgsrc.  Eg, "../../foo/bar foo/bar"
-# The "../../foo/bar" version is later removed from the list in the
-# clean-depends target.  The remaining bit of redundancy is that some
-# packages list their depends as "../bar" instead of "../../foo/bar"
-# In this case its possible for a dependency to be visited twice.
-
-.PHONY: clean-depends-list
-.if !target(clean-depends-list)
-clean-depends-list:
-.  if defined(BUILD_DEPENDS) || defined(DEPENDS)
-	@for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//}	\
-			${DEPENDS:C/^[^:]*://:C/:.*//} |		\
-			${TR} '\040' '\012' `; do			\
-		case "$$CLEAN_DEPENDS_LIST_SEEN" in			\
-		*" "$$dir" "*)  ;; 					\
-		*) 							\
-			CLEAN_DEPENDS_LIST_SEEN=" $$dir `cd ${.CURDIR} ; cd $$dir && ${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_SEEN="$$CLEAN_DEPENDS_LIST_SEEN" CLEAN_DEPENDS_LIST_TOP=NO clean-depends-list`";\
-			;;						\
-		esac							\
-	done ;								\
-	if [ "${CLEAN_DEPENDS_LIST_TOP}" != "YES" ]; then		\
-		${ECHO} " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN";	\
-	else								\
-		${ECHO} " $$CLEAN_DEPENDS_LIST_SEEN";			\
-	fi
-.  else
-	@if [ "${CLEAN_DEPENDS_LIST_TOP}" != "YES" ]; then		\
-		${ECHO} " ${PKGPATH} $$CLEAN_DEPENDS_LIST_SEEN";	\
-	else								\
-		${ECHO} " $$CLEAN_DEPENDS_LIST_SEEN";			\
-	fi
 .  endif
 .endif
 
