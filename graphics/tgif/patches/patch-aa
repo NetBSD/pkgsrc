@@ -1,39 +1,18 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:53 agc Exp $
+$NetBSD: patch-aa,v 1.3 1998/08/26 21:18:58 frueauf Exp $
 
-*** Imakefile.orig      Sun Dec  7 12:25:26 1997
---- Imakefile   Sun Dec  7 12:26:52 1997
-***************
-*** 60,64 ****
-                    -DTELEPORT_ATTR=\"warp_to=\" -DTMP_DIR=\"/tmp/\" \@@\
-                    -DLAUNCH_ATTR=\"launch=\" -DEXEC_ATTR=\"exec=\" \@@\
-!                   -D_BACKGROUND_DONT_FORK -D_USE_XDRAWPOINT_TO_PUT_A_POINT
-  
-  XCOMM Things to try to add to the DEFINES line above:
---- 60,65 ----
-                    -DTELEPORT_ATTR=\"warp_to=\" -DTMP_DIR=\"/tmp/\" \@@\
-                    -DLAUNCH_ATTR=\"launch=\" -DEXEC_ATTR=\"exec=\" \@@\
-!                   -D_BACKGROUND_DONT_FORK -D_USE_XDRAWPOINT_TO_PUT_A_POINT \@@\
-!                 -D_NO_EXTERN
-  
-  XCOMM Things to try to add to the DEFINES line above:
-***************
-*** 72,75 ****
---- 73,77 ----
-  XCOMM    Linux:   
-  XCOMM    FreeBSD: 
-+ XCOMM  NetBSD:  -D_NO_EXTERN
-  XCOMM    SCO:     -D_NO_EXTERN -DPRINT_CMD=\""lp -o raw -o nobanner"\"
-  
-*** cutpaste.c.orig     Sun Dec  7 12:25:42 1997
---- cutpaste.c  Wed Nov 26 07:35:15 1997
-***************
-*** 31,34 ****
---- 31,38 ----
-   */
-  
-+ /* DAN added the following 2 lines for NetBSD-1.3 */
-+ #include <unistd.h>
-+ #include <stdlib.h>
-+ 
-  #include <stdio.h>
-  #include <string.h>
+--- Imakefile.orig	Wed Aug 19 09:38:26 1998
++++ Imakefile	Wed Aug 19 10:59:03 1998
+@@ -60,5 +60,6 @@
+                   -DTELEPORT_ATTR=\"warp_to=\" -DTMP_DIR=\"/tmp/\" \@@\
+                   -DLAUNCH_ATTR=\"launch=\" -DEXEC_ATTR=\"exec=\" \@@\
+-                  -D_BACKGROUND_DONT_FORK -D_USE_XDRAWPOINT_TO_PUT_A_POINT
++                  -D_BACKGROUND_DONT_FORK -D_USE_XDRAWPOINT_TO_PUT_A_POINT \@@\
++		  -D_NO_EXTERN
+ 
+ XCOMM Things to try to add to the DEFINES line above:
+@@ -72,4 +73,5 @@
+ XCOMM    Linux:   
+ XCOMM    FreeBSD: 
++XCOMM    NetBSD:  -D_NO_EXTERN
+ XCOMM    SCO:     -D_NO_EXTERN -DPRINT_CMD=\""lp -o raw -o nobanner"\"
+ 
