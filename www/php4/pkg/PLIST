@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2001/01/25 17:18:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/04/30 03:25:16 jlam Exp $
 bin/pear
 bin/php
 bin/php-config
 bin/phpextdist
 bin/phpize
-etc/php.ini-dist
-etc/php.ini-optimized
 include/php/acconfig.h
 include/php/php_version.h
 include/php/TSRM/TSRM.h
@@ -190,9 +188,12 @@ lib/php/build/rules_pear.mk
 lib/php/build/shtool
 lib/php/extensions/no-debug-non-zts-20001214/.directory
 libexec/cgi-bin/php
-share/php4/php4.gif
-@dirrm share/php4
+share/examples/php/php.ini-dist
+share/examples/php/php.ini-optimized
+share/php/php4.gif
+@dirrm share/php
 @unexec rmdir -p %D/libexec/cgi-bin 2>/dev/null || true
+@dirrm share/examples/php
 @dirrm lib/php/extensions/no-debug-non-zts-20001214
 @dirrm lib/php/extensions
 @dirrm lib/php/build
