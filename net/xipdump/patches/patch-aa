@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/15 02:29:51 sakamoto Exp $
+
+--- ./configure.in.orig	Fri Nov 12 12:56:10 1999
++++ ./configure.in	Mon Nov 15 10:06:16 1999
+@@ -56,4 +56,6 @@
+ fi
+ 
++if false
++then
+ MG_LIBNET(LIBNET_DEP,LIBNET_INCLPATH,LIBNET_LIBPATH)
+ if test "x$LIBNET_INCLPATH" != "x"
+@@ -64,4 +66,5 @@
+ then
+ 	LDFLAGS="$LDFLAGS -L$LIBNET_LIBPATH"
++fi
+ fi
+ 
