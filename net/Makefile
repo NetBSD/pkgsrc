@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2002/05/06 00:03:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.298 2002/05/07 22:25:25 hubertf Exp $
 #
 
 COMMENT=	Networking tools
@@ -228,6 +228,7 @@ SUBDIR+=	ttt
 SUBDIR+=	ucd-snmp
 SUBDIR+=	ucspi-tcp
 SUBDIR+=	unison
+SUBDIR+=	upclient
 SUBDIR+=	userppp
 SUBDIR+=	vnc
 SUBDIR+=	vncviewer
