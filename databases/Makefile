@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2002/10/30 00:52:52 rh Exp $
+# $NetBSD: Makefile,v 1.86 2002/10/30 05:09:36 rh Exp $
 #
 
 COMMENT=	Databases
@@ -25,6 +25,7 @@ SUBDIR+=	jdbc-postgresql
 SUBDIR+=	kmysqladmin
 SUBDIR+=	kpsql
 SUBDIR+=	libgda
+SUBDIR+=	libgnomedb
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-client
 SUBDIR+=	mysql-server
