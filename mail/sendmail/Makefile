@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/09/09 16:41:40 taca Exp $
+# $NetBSD: Makefile,v 1.41 2001/10/19 08:51:31 veego Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6nb1
@@ -72,6 +72,9 @@ post-patch:
 	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >> ${SITECONFIG}
 	${ECHO} -n ' TCPWRAPPERS' >> ${DESCR_SRC}
 .endif
+.if ${OPSYS} == "SunOS"
+	${CAT} ${FILESDIR}/site.config.m4-solaris >> ${SITECONFIG}
+.endif
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
 	${CAT} ${FILESDIR}/site.config.m4-ldap >> ${SITECONFIG}
 	${ECHO} -n ' LDAP' >> ${DESCR_SRC}
@@ -92,7 +95,7 @@ do-build:
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
 	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
-	${CAT} ${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} > ${PLIST_SRC}
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
 .if ${USE_DB2} == YES
 	${ECHO} "" >> ${MESSAGE_SRC}
