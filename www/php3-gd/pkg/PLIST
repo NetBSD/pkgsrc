@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/03 21:47:28 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/05/04 20:24:25 tv Exp $
+bin/bdf2gdfont
 lib/php3/gd.so
