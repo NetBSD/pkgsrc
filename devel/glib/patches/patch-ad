@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 1999/03/05 09:44:20 tron Exp $
+$NetBSD: patch-ad,v 1.3 1999/03/09 22:04:39 tron Exp $
 
 --- configure.orig	Wed Feb 24 07:44:18 1999
-+++ configure	Fri Mar  5 09:45:43 1999
++++ configure	Tue Mar  9 22:59:39 1999
 @@ -26,7 +26,7 @@
  #
  GLIB_MAJOR_VERSION=1
@@ -19,12 +19,25 @@ $NetBSD: patch-ad,v 1.2 1999/03/05 09:44:20 tron Exp $
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
-@@ -1825,6 +1826,8 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
+@@ -1826,6 +1827,8 @@
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+
-+fi
  
++fi
++
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
+ exec 5>>./config.log
+@@ -5965,10 +5968,12 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
+   esac
+ 
++if false; then
+   case "$ac_given_INSTALL" in
+   [/$]*) INSTALL="$ac_given_INSTALL" ;;
+   *) INSTALL="$ac_dots$ac_given_INSTALL" ;;
+   esac
++fi
+ 
+   echo creating "$ac_file"
+   rm -f "$ac_file"
