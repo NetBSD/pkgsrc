@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.6 2002/02/21 17:28:10 martti Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/04 09:47:04 tron Exp $
 
-DISTNAME=		suse_libjpeg-${SUSE_VERSION}
-PKGREVISION=		1
+DISTNAME=		libjpeg
+PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE:=gra1/} \
-			ftp://ftp.suse.com/pub/suse/i386/update/${SUSE_VERSION}/gra1/
-DISTFILES=		${RPMFILES}
+MASTER_SITES=		${MASTER_SITE_SUSE:=gra1/}
+EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		hubertf@netbsd.org
+MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.suse.com/
-COMMENT=		Linux compatibility package for jpeg binary
+COMMENT=		Linux compatibility package for the JPEG library
 
 DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
 EXTRACT_ONLY=		# empty
-NO_BUILD=		yes
+NO_BUILD=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		libjpeg-6.2.0-62.i386.rpm
+RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
 
 .include "../suse_linux/Makefile.common"
