@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.44 2004/07/15 11:39:11 grant Exp $
+# $NetBSD: post-build,v 1.45 2004/07/15 11:57:26 grant Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -359,9 +359,9 @@ tt.filename {
 </style>
 </head>
 
-<body bgcolor="white" text="black" link="#3535c5" vlink="#700080"
-alink="#3535c5">
+<body bgcolor="white" text="black" link="#3535c5" vlink="#700080" alink="#3535c5">
 
+<a name="top"/>
 <h1>pkgsrc bulk build results</h1>
 <h2>$os $osrev/$arch</h2>
 
@@ -408,6 +408,16 @@ alink="#3535c5">
   found in <a href="leftovers-${arch}.html" title="leftover files">this
   list</a>.
 </p>
+
+<p>
+  Jump to:<br/>
+  <ul>
+    <li><a href="#broken">Broken packages</a></li>
+    <li><a href="#broken depends">Broken dependencies</a></li>
+    <li><a href="#not packaged">Not packaged</a></li>
+  </ul>
+</p>
+
 EOHTML
 
 	my %state_head = (
@@ -426,6 +436,8 @@ EOHTML
 		next unless scalar(@{$broken->{$state}});
 
 		print HTML <<EOHTML;
+
+<a name="$state"/>
 <h2>$state_head{$state}</h2>
 <table width="100%">
 <tr align="left">
@@ -440,8 +452,14 @@ EOHTML
 			print HTML pkgResult($pinfo, $state);
 		}
 
-		print HTML "</table>\n";
+		print HTML <<EOHTML;
+</table>
+<hr>
+<a href="#top">Up to top</a><br/>
+<hr>
+EOHTML
 	}
+
 	print HTML <<EOHTML;
 <hr>
 <p>
