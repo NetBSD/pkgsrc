@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/04/18 04:55:29 snj Exp $
+# $NetBSD: Makefile,v 1.9 2004/06/17 11:35:56 grant Exp $
 # FreeBSD Id: ports/mail/ssmtp/Makefile,v 1.10 2003/04/14 08:41:04 leeym Exp
 #
 # TLS functionality needs testing. Please let me know the result,
@@ -32,7 +32,7 @@ CONF_FILES=	${EGDIR}/ssmtp.conf ${PKG_SYSCONFDIR}/ssmtp.conf
 CONF_FILES+=	${EGDIR}/revaliases ${PKG_SYSCONFDIR}/revaliases
 
 post-extract:
-	${RM} -rf ${WRKSRC}/RCS
+	@${RM} -rf ${WRKSRC}/RCS
 
 post-patch:
 	for f in ${WRKSRC}/ssmtp.c ${WRKSRC}/ssmtp.conf ; do		\
@@ -49,7 +49,7 @@ post-patch:
 	done
 
 post-build:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
 		> ${WRKDIR}/mailer.conf
 
 post-install:
