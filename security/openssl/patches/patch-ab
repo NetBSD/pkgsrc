@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
+$NetBSD: patch-ab,v 1.2 1999/10/19 04:09:19 erh Exp $
 
---- Configure.orig	Fri Mar 12 15:31:13 1999
-+++ Configure	Tue Apr 27 13:35:42 1999
+--- Configure.orig	Mon Oct 18 21:46:47 1999
++++ Configure	Mon Oct 18 22:28:19 1999
 @@ -153,9 +153,6 @@
  "linux-aout",	"gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
  "linux-mips",    "gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall
@@ -33,7 +33,16 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
  #
  # Cray T90 (SDSC)
  # It's Big-endian, but the algorithms work properly when B_ENDIAN is NOT
-@@ -288,7 +299,7 @@
+@@ -282,19 +293,23 @@
+ my $flags="";
+ my $libs="";
+ my $target="";
++my $usersaref=0;
++my $xmakelib="	cd .. && csh \${MAKELIB} libcrypto.so.1.0 libcrypto.a";
++
+ foreach (@ARGV)
+ 	{
+ 	if ($_ =~ /^no-asm$/)
  		{ $no_asm=1; }
  	elsif ($_ =~ /^-/)
  		{
@@ -42,3 +51,42 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/04/30 15:19:13 tv Exp $
  			{
  			$libs.=$_." ";
  			}
+ 		elsif ($_ =~ /^-D(.*)$/)
+ 			{
+ 			$flags.=$_." ";
++			$usersaref=1 if ($_ =~ /^-DRSAref(.*)$/);
+ 			}
+ 		elsif ($_ =~ /^-[fK](.*)$/)
+ 			{
+@@ -321,6 +336,11 @@
+ 		}
+ 	}
+ 
++if ($usersaref == 1)
++	{
++	$xmakelib.=" libRSAglue.a";
++	}
++
+ if (!defined($table{$target}))
+ 	{
+ 	&bad_target;
+@@ -370,6 +390,19 @@
+ #	$rmd160_obj=$rmd160_enc;
+ 	$cflags.=" -DRMD160_ASM";
+ 	}
++
++rename("crypto/Makefile.ssl", "crypto/Makefile.org") unless -e "crypto/Makefile.org";
++open(IN,'<crypto/Makefile.org') || die "unable to read crypto/Makefile.org:$!\n";
++open(OUT,">crypto/Makefile.ssl") || die "unable to create crypto/Makefile.ssl:$!\n";
++
++while (<IN>)
++	{
++	chop;
++	s/^	XMAKELIB$/$xmakelib/;
++	print OUT $_."\n";
++	}
++close(IN);
++close(OUT);
+ 
+ open(IN,'<Makefile.org') || die "unable to read Makefile.org:$!\n";
+ open(OUT,">$Makefile") || die "unable to create $Makefile:$!\n";
