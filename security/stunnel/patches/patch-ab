@@ -1,20 +1,20 @@
-$NetBSD: patch-ab,v 1.10 2001/12/28 07:22:30 tron Exp $
+$NetBSD: patch-ab,v 1.11 2003/01/18 08:33:43 martti Exp $
 
---- configure.orig	Sun Dec 23 20:52:04 2001
-+++ configure	Fri Dec 28 08:15:02 2001
-@@ -2226,6 +2226,7 @@
- 
+--- configure.orig	Wed Jan  1 14:26:05 2003
++++ configure	Sat Jan 18 08:08:29 2003
+@@ -7471,6 +7471,7 @@
  fi
+ 
  
 +if false; then
  # OSF hack instead of simple AC_CHECK_LIB here
- echo "$as_me:2230: checking for pthread_create in -lpthread" >&5
+ echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
  echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
-@@ -2324,6 +2325,7 @@
- #define HAVE_LIBPTHREAD 1
- EOF
+@@ -7582,6 +7583,7 @@
+ _ACEOF
+ 
  
 +fi
  fi
  
- echo "$as_me:2329: checking for openpty in -lutil" >&5
+ 
