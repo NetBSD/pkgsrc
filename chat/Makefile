@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2004/11/30 08:21:37 uebayasi Exp $
+# $NetBSD: Makefile,v 1.102 2004/12/03 17:31:52 minskim Exp $
 #
 
 COMMENT=	Communication programs
@@ -56,6 +56,7 @@ SUBDIR+=	licq-gui-console
 SUBDIR+=	licq-gui-qt
 SUBDIR+=	loudmouth
 SUBDIR+=	micq
+SUBDIR+=	msnre
 SUBDIR+=	mu-conference
 SUBDIR+=	naim
 SUBDIR+=	navi2ch
