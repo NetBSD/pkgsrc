@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2000/08/22 17:28:29 dmcmahill Exp $
+
+make sure the private libwww is searched first instead of a locally
+installed one
+
+--- ../amaya/Makefile.in.orig	Wed Apr 19 08:33:09 2000
++++ ../amaya/Makefile.in	Tue Aug 22 13:10:42 2000
+@@ -344,5 +344,5 @@
+ ../bin/amaya : $(AMAYA_OBJ) $(AMAYA_OPTION_OBJ) $(AMAYA_LIBS)
+ 	@(if test ! -d ../bin ; then $(MKDIR) ../bin ; fi)
+-	$(CC) $(LDFLAGS) -o ../bin/amaya $(AMAYA_OBJ) $(AMAYA_OPTION_OBJ) libCSS.a $(LIBS)
++	$(CC) -o ../bin/amaya $(AMAYA_OBJ) $(AMAYA_OPTION_OBJ) libCSS.a $(LIBS) $(LDFLAGS)
+ 	@$(ECHO) "====>" amaya is done
+ 
