@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.3 2001/06/20 05:46:39 jtb Exp $
+
+--- include/ircterm.h.orig	Wed Jun 13 15:36:59 2001
++++ include/ircterm.h	Wed Jun 13 15:37:49 2001
+@@ -238,8 +238,8 @@
+ 
+ #endif /* _HPUX_SOURCE */
+ 
+-/* well, it works */
+-#ifdef mips
++/* cough, cough... This doesn't work (since c is often a char constant) */
++#if defined(mips) && !defined(__NetBSD__)
+ # define fputc(c,f) write(1,&(c),1)
+ # define fwrite(buffer,len,cnt,f) write(1,buffer,len)
+ #endif /*mips*/
