@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/09/04 15:49:36 kim Exp $
+
+--- INSTALL.orig	Sat Apr 17 09:10:37 1999
++++ INSTALL	Sun Sep  3 09:31:55 2000
+@@ -2,8 +2,9 @@
+ 	make && make install
+    (use gmake instead of the standard make on FreeBSD)
+ 
+-2) Create a writeable directory /usr/share/fonts/truetype, copy some truetype *.ttf
+-   files or create soflinks to truetype directories in there, then run
++2) Create a writeable directory @X11BASE@/lib/X11/fonts/TrueType,
++   copy some truetype *.ttf files or create soflinks to truetype
++   directories in there, then run
+ 	xfstt --sync
+ 
+ 3) Start xfstt in the background
