@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:24:29 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/24 22:40:49 grant Exp $
 #
 
 DISTNAME=	pcps840
@@ -28,7 +28,7 @@ do-install:
 	@${INSTALL_PROGRAM}  ${WRKSRC}/pcps ${PREFIX}/bin/pcps
 	@${INSTALL_MAN}      ${WRKDIR}/pcps.1 ${PREFIX}/man/man1
 	@${INSTALL_DATA}     ${FILESDIR}/pcps.cfg ${PREFIX}/bin/pcps.cfg
-	@${INSTALL_DATA_DIR} ${WRKSRC}/license.doc ${PREFIX}/share/doc/pcps
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pcps
 	@${INSTALL_DATA}     ${WRKSRC}/license.doc ${PREFIX}/share/doc/pcps
 	@${INSTALL_DATA}     ${WRKSRC}/register.doc ${PREFIX}/share/doc/pcps
 	@${INSTALL_DATA}     ${WRKSRC}/pcps.man ${PREFIX}/share/doc/pcps
