@@ -1,34 +1,79 @@
-$NetBSD: patch-ar,v 1.2 2002/01/29 17:10:11 jlam Exp $
+$NetBSD: patch-ar,v 1.3 2002/12/23 21:24:00 jlam Exp $
 
---- modules/pam_unix/unix_chkpwd.c.orig	Sun Feb 11 01:33:53 2001
-+++ modules/pam_unix/unix_chkpwd.c
-@@ -22,8 +22,11 @@
- #include <syslog.h>
+--- modules/pam_unix/support.c.orig	Mon Sep 23 13:33:22 2002
++++ modules/pam_unix/support.c
+@@ -6,13 +6,17 @@
+ 
+ #define _BSD_SOURCE
+ 
++#include <security/_pam_aconf.h>
++
+ #include <stdlib.h>
  #include <unistd.h>
- #include <sys/types.h>
-+#include <sys/param.h>
+ #include <stdarg.h>
+ #include <string.h>
+ #include <malloc.h>
  #include <pwd.h>
-+#ifndef BSD
++#ifdef HAVE_SHADOW_H
  #include <shadow.h>
 +#endif
- #include <signal.h>
- 
- #define MAXPASS		200	/* the maximum length of a password */
-@@ -94,6 +97,9 @@
- 	pwd = getpwnam(name);	/* Get password file entry... */
- 	endpwent();
- 	if (pwd != NULL) {
-+#ifdef BSD
-+		salt = x_strdup(pwd->pw_passwd);
+ #include <limits.h>
+ #include <utmp.h>
+ #include <errno.h>
+@@ -113,6 +117,12 @@ int _make_remark(pam_handle_t * pamh, un
+    */
+ char *PAM_getlogin(void)
+ {
++#ifdef USE_GETLOGIN
++	char *retval = NULL;
++	retval = getlogin();
++	D(("PAM_getlogin retval: %s", retval));
++	return retval;
 +#else
- 		if (strcmp(pwd->pw_passwd, "x") == 0) {
- 			/*
- 			 * ...and shadow password file entry for this user,
-@@ -120,6 +126,7 @@
- 				salt = x_strdup(pwd->pw_passwd);
- 			}
- 		}
+ 	struct utmp *ut, line;
+ 	char *curr_tty, *retval;
+ 	static char curr_user[sizeof(ut->ut_user) + 4];
+@@ -135,6 +145,7 @@ char *PAM_getlogin(void)
+ 	D(("PAM_getlogin retval: %s", retval));
+ 
+ 	return retval;
++#endif
+ }
+ 
+ /*
+@@ -358,6 +369,7 @@ int _unix_blankpasswd(unsigned int ctrl,
+ #endif
+ 
+ 	if (pwd != NULL) {
++#ifdef HAVE_GETSPNAM
+ 		if (strcmp( pwd->pw_passwd, "*NP*" ) == 0)
+ 		{ /* NIS+ */                 
+ 			uid_t save_euid, save_uid;
+@@ -400,6 +412,9 @@ int _unix_blankpasswd(unsigned int ctrl,
+ 			salt = x_strdup(spwdent->sp_pwdp);
+ 		else
+ 			salt = x_strdup(pwd->pw_passwd);
++#else
++		salt = x_strdup(pwd->pw_passwd);
 +#endif
  	}
- 	if (pwd == NULL || salt == NULL) {
- 		_log_err(LOG_ALERT, "check pass; user unknown");
+ 	/* Does this user have a password? */
+ 	if (salt == NULL) {
+@@ -535,6 +550,7 @@ int _unix_verify_password(pam_handle_t *
+ 	pwd = getpwnam(name);	/* Get password file entry... */
+ 
+ 	if (pwd != NULL) {
++#ifdef GETSPNAM
+ 		if (strcmp( pwd->pw_passwd, "*NP*" ) == 0)
+ 		{ /* NIS+ */                 
+ 			uid_t save_euid, save_uid;
+@@ -572,6 +588,9 @@ int _unix_verify_password(pam_handle_t *
+ 			salt = x_strdup(spwdent->sp_pwdp);
+ 		else
+ 			salt = x_strdup(pwd->pw_passwd);
++#else
++		salt = x_strdup(pwd->pw_passwd);
++#endif
+ 	}
+ 
+ 	data_name = (char *) malloc(sizeof(FAIL_PREFIX) + strlen(name));

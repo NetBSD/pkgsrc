@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.887 2002/12/23 20:42:42 wiz Exp $
+$NetBSD: CHANGES,v 1.888 2002/12/23 21:24:32 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4075,3 +4075,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated createbuildlink to 2.3 [wiz 2002-12-23]
 	Updated m4 to 1.4nb1 [wiz 2002-12-23]
 	Updated gmake to 3.80nb1 [wiz 2002-12-23]
+	Updated PAM to 0.77 [jlam 2002-12-23]
