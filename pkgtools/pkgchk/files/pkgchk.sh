@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.7 2001/07/09 23:15:56 abs Exp $
+# $Id: pkgchk.sh,v 1.8 2001/07/31 17:32:07 tron Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
 # TODO: Order updates based on DEPENDENCIES.
@@ -13,7 +13,7 @@ extract_variables()
 
     if [ -z "$PKGSRCDIR" ];then
 	if [ -f /etc/mk.conf ] ;then
-	    eval `printf 'BSD_PKG_MK=1\nall:\n\t@echo PKGSRCDIR=${PKGSRCDIR}\n' | make -f - -f /etc/mk.conf`
+	    eval `printf 'BSD_PKG_MK=1\nall:\n\t@echo PKGSRCDIR=${PKGSRCDIR}\n' | ${MAKE} -f - -f /etc/mk.conf`
 	fi
 	if [ -z "$PKGSRCDIR" ];then
 	    PKGSRCDIR=/usr/pkgsrc
@@ -29,7 +29,7 @@ extract_variables()
     eval `printf 'CATEGORIES=x\nDISTNAME=x\nall:\n
 	@echo PACKAGES=${PACKAGES}
 	@echo PKGCHK_CONF=${PKGCHK_CONF}
-    ' | (cd $PKGSRCDIR ; make -f - -f $PKGSRCDIR/mk/bsd.prefs.mk)`
+    ' | (cd $PKGSRCDIR ; ${MAKE} -f - -f $PKGSRCDIR/mk/bsd.prefs.mk)`
 
     if [ -z "$PACKAGES" ];then
 	PACKAGES=$PKGSRCDIR/packages
@@ -66,18 +66,51 @@ pkg_install()
 	echo "make update for $PKGNAME"
 	cd $PKGSRCDIR/$PKGDIR
 	if [ -z "$opt_n" ];then
-	    make update
+	    ${MAKE} update
 	fi
     fi
     }
 
-args=`getopt D:IU:abchinsuv $*`
+
+get_build_version()
+    {
+    FILESDIR=`${MAKE} show-var VARNAME=FILESDIR`
+    PKGDIR=`${MAKE} show-var VARNAME=PKGDIR`
+    DISTINFO_FILE=`${MAKE} show-var VARNAME=DISTINFO_FILE`
+    PATCHDIR=`${MAKE} show-var VARNAME=PATCHDIR`
+    files=""
+    for f in `pwd`/Makefile ${FILESDIR}/* ${PKGDIR}/*; do
+	if [ -f $f ];then
+	    files="$files $f"
+	fi
+    done
+    if [ -f ${DISTINFO_FILE} ]; then
+	for f in `${AWK} 'NF == 4 && $3 == "=" { gsub("[()]", "", $2); print $2 }' < ${DISTINFO_FILE}`; do 
+	    if [ -f ${PATCHDIR}/$f ]; then
+		files="$files ${PATCHDIR}/$f";
+	    fi;
+	done
+    fi
+    if [ -d ${PATCHDIR} ]; then
+	for f in ${PATCHDIR}/patch-*; do
+	    case $f in
+	    *.orig|*.rej|*~) ;;
+	    ${PATCHDIR}/patch-local-*)
+		files="$files $f" ;;
+	    esac
+	done
+    fi
+    ${GREP} '\$NetBSD' $files | ${SED} -e "s|^${real_pkgsrcdir}/||"
+    }
+
+args=`getopt BD:U:abchinsuv $*`
 if [ $? != 0 ]; then
     opt_h=1
 fi
 set -- $args
 while [ $# != 0 ]; do
     case "$1" in
+	-B )    opt_B=1 ;;
 	-D )	opt_D="$2" ; shift;;
 	-U )	opt_U="$2" ; shift;;
 	-a )	opt_a=1 ; opt_c=1 ;;
@@ -106,6 +139,7 @@ fi
 
 if [ -n "$opt_h" -o $# != 1 ];then
     echo 'Usage: pkgchk [opts]
+	-B      Check the "Build version" of packages
 	-D tags Comma separated list of additional pkgchk.conf tags to set
 	-U tags Comma separated list of pkgchk.conf tags to unset
 	-a      Add all missing packages (implies -c)
@@ -126,10 +160,34 @@ on hostname and type, see pkgchk(8).
     exit 1
 fi
 
+test -n "$MAKE" || MAKE="@MAKE@"
+
+# grabbeb from GNU configure
+if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
+  # Stardent Vistra SVR4 grep lacks -e, says ghazi@caip.rutgers.edu.
+  if (echo -n testing; echo 1,2,3) | sed s/-n/xn/ | grep xn >/dev/null; then
+    ac_n= ac_c='
+' ac_t='	'
+  else
+    ac_n=-n ac_c= ac_t=
+  fi
+else
+  ac_n= ac_c='\c' ac_t=
+fi
+
 extract_variables
 
+cd $PKGSRCDIR
+real_pkgsrcdir=`pwd`
+
+cd pkgtools/pkgchk
+AWK=`${MAKE} show-var VARNAME=AWK`
+GREP=`${MAKE} show-var VARNAME=GREP`
+SED=`${MAKE} show-var VARNAME=SED`
+
+
 if [ -n "$opt_i" ];then
-    PKGDIRLIST=`pkg_info -B \* | awk '/PKGPATH= /{print $2}'`
+    PKGDIRLIST=`pkg_info -B \* | ${AWK} '/PKGPATH= /{print $2}'`
 fi
 
 if [ -n "$opt_c" ];then
@@ -141,7 +199,7 @@ if [ -n "$opt_c" ];then
 
     # Determine list of tags
     #
-    TAGS="`hostname -s`,`hostname`,`uname -srm | awk '{print $1"-"$2"-"$3","$1"-"$2","$1"-"$3","$1","$2","$3}'`"
+    TAGS="`hostname | sed -e 's,\..*,,'`,`uname -srm | ${AWK} '{print $1"-"$2"-"$3","$1"-"$2","$1"-"$3","$1","$2","$3}'`"
     if [ -f /usr/X11R6/lib/libX11.so -o /usr/X11R6/lib/libX11.a ];then
 	TAGS="$TAGS,x11"
     fi
@@ -155,7 +213,7 @@ if [ -n "$opt_c" ];then
 
     # Extract list of valid pkgdirs
     #
-    PKGDIRLIST="$PKGDIRLIST "`awk -v setlist=$TAGS -v unsetlist=$opt_U '
+    PKGDIRLIST="$PKGDIRLIST "`${AWK} -v setlist=$TAGS -v unsetlist=$opt_U '
     BEGIN {
 	split(setlist, tmp, ",");
 	for (tag in tmp)
@@ -203,33 +261,44 @@ for pkgdir in $PKGDIRLIST ; do
     fi
     cd $PKGSRCDIR/$pkgdir
     # Use 'make x' rather than 'make all' to avoid potential licence errors
-    pkgname=`printf 'x:\n\t@echo ${PKGNAME}\n'|make -f - -f Makefile x` || true
+    pkgname=`printf 'x:\n\t@echo ${PKGNAME}\n'|${MAKE} -f - -f Makefile x` || true
     if [ -z "$pkgname" ]; then
 	echo "Unable to extract PKGNAME for $pkgdir"
 	exit 1
     fi
     if [ ! -d /var/db/pkg/$pkgname ];then
-	echo -n "$pkgname: "
+	echo $ac_n "$pkgname: $ac_c"
 	pkg=`echo $pkgname | sed 's/-[0-9].*//'`
 	pkginstalled=`pkg_info -e $pkg || true`
 	INSTALL=
 	if [ -n "$pkginstalled" ];then
-	    echo -n "version mismatch - $pkginstalled"
+	    echo $ac_n "version mismatch - $pkginstalled$ac_c"
 	    if [ -n "$opt_u" ]; then
 		UPDATE_TODO="$UPDATE_TODO $pkgname $pkgdir"
 	    fi
 	else
-	    echo -n "missing"
+	    echo $ac_n "missing$ac_c"
 	    if [ -n "$opt_a" ] ; then
 		INSTALL_TODO="$INSTALL_TODO $pkgname $pkgdir"
 	    fi
 	fi
 	if [ -f $PACKAGES/All/$pkgname.tgz ] ;then
-	    echo -n " (binary package available)"
+	    echo $ac_n " (binary package available)$ac_c"
 	fi
 	echo
-    elif [ -n "$opt_v" ];then
-	echo "$pkgname: OK"
+    else
+	if [ -n "$opt_B" ];then
+	    current_build_version=`get_build_version`
+	    installed_build_version=`cat /var/db/pkg/$pkgname/+BUILD_VERSION`
+	    if [ x"$current_build_version" != x"$installed_build_version" ];then
+		echo "$pkgname: build version information mismatch"
+		# should we mark this pkg to be updated if -u is given ??
+	    elif [ -n "$opt_v" ];then
+		echo "$pkgname: OK"
+	    fi
+	elif [ -n "$opt_v" ];then
+	    echo "$pkgname: OK"
+	fi
     fi
 done
 
@@ -251,7 +320,7 @@ if [ -n "$UPDATE_TODO" ];then
 
     # drop any packages whose 'parents' are also to be updated
     #
-    UPDATE_TODO=`printf "$LIST" | awk -F '|' '
+    UPDATE_TODO=`printf "$LIST" | ${AWK} -F '|' '
     {
     pkg2dir[$1] = $2
     split($3, deplist, " ")
