@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2003/09/08 15:07:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2004/01/22 12:38:46 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -286,6 +286,8 @@ lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
 lib/pkgconfig/gdk-x11-2.0.pc
 lib/pkgconfig/gtk+-2.0.pc
 lib/pkgconfig/gtk+-x11-2.0.pc
+libdata/gtk-2.0/gdk-pixbuf.loaders
+libdata/gtk-2.0/gtk.immodules
 man/man1/gdk-pixbuf-csource.1
 share/aclocal/gtk-2.0.m4
 share/doc/html/gdk-pixbuf/GdkPixbufLoader.html
@@ -681,8 +683,6 @@ share/doc/html/gtk/stock_zoom_fit_24.png
 share/doc/html/gtk/stock_zoom_in_24.png
 share/doc/html/gtk/stock_zoom_out_24.png
 share/doc/html/gtk/up.png
-share/examples/gtk2/gdk-pixbuf.loaders
-share/examples/gtk2/gtk.immodules
 share/gtk-2.0/demo/alphatest.png
 share/gtk-2.0/demo/apple-red.png
 share/gtk-2.0/demo/appwindow.c
@@ -782,10 +782,10 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @unexec ${RMDIR} %D/share/themes 2>/dev/null || ${TRUE}
 @dirrm share/gtk-2.0/demo
 @dirrm share/gtk-2.0
-@dirrm share/examples/gtk2
 @dirrm share/doc/html/gtk
 @dirrm share/doc/html/gdk-pixbuf
 @dirrm share/doc/html/gdk
+@dirrm libdata/gtk-2.0
 @exec ${MKDIR} %D/lib/gtk-2.0/modules 2>/dev/null || ${TRUE}
 @dirrm lib/gtk-2.0/modules
 @dirrm lib/gtk-2.0/include
