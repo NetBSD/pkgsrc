@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6774 2004/08/03 09:00:10 schmonz Exp $
+$NetBSD: CHANGES,v 1.6775 2004/08/03 12:09:14 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3701,3 +3701,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xosview to 1.8.2 [cube 2004-08-03]
 	Updated getmail to 4.0.4 [schmonz 2004-08-03]
 	Updated qmail-run to 20040803 [schmonz 2004-08-03]
+	Updated py-checker to 0.8.14 [recht 2004-08-03]
