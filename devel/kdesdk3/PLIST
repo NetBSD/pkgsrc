@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/03/23 22:33:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2005/03/29 10:50:14 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -106,10 +106,12 @@ lib/kde3/kbabeldict_dbsearchengine.la
 lib/kde3/kbabeldict_poauxiliary.la
 lib/kde3/kbabeldict_pocompendium.la
 lib/kde3/kbabeldict_tmxcompendium.la
+${HAVE_SVN}lib/kde3/kded_ksvnd.la
 lib/kde3/kfile_cpp.la
 lib/kde3/kfile_diff.la
 lib/kde3/kfile_po.la
 lib/kde3/kfile_ts.la
+${HAVE_SVN}lib/kde3/kio_svn.la
 lib/kde3/libcervisiapart.la
 lib/kde3/libkomparenavtreepart.la
 lib/kde3/libkomparepart.la
@@ -766,6 +768,7 @@ share/kde/services/kbabel_whitespacetool.desktop
 share/kde/services/kbabel_xliff_export.desktop
 share/kde/services/kbabel_xliff_import.desktop
 share/kde/services/kbabel_xmltool.desktop
+${HAVE_SVN}share/kde/services/kded/ksvnd.desktop
 share/kde/services/kfile_cpp.desktop
 share/kde/services/kfile_diff.desktop
 share/kde/services/kfile_h.desktop
@@ -777,6 +780,11 @@ share/kde/services/kuiviewer_part.desktop
 share/kde/services/poauxiliary.desktop
 share/kde/services/pocompendium.desktop
 share/kde/services/pothumbnail.desktop
+${HAVE_SVN}share/kde/services/svn+file.protocol
+${HAVE_SVN}share/kde/services/svn+http.protocol
+${HAVE_SVN}share/kde/services/svn+https.protocol
+${HAVE_SVN}share/kde/services/svn+ssh.protocol
+${HAVE_SVN}share/kde/services/svn.protocol
 share/kde/services/tmxcompendium.desktop
 share/kde/servicetypes/kbabel_tool.desktop
 share/kde/servicetypes/kbabel_validator.desktop
