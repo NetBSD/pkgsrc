@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2001/04/22 07:24:47 tron Exp $
+
+--- ../ulib/x11/imgwin.cc.orig	Mon Jul 31 13:12:04 2000
++++ ../ulib/x11/imgwin.cc	Sun Apr 22 09:20:53 2001
+@@ -138,7 +138,7 @@
+ #if 1
+   XSizeHints sizeh;
+   sizeh.flags  = PSize; //|PMinSize|PMaxSize;
+-  if (d_xpos>=0 && d_ypos>=0) sizeh.flags |= PPosition;
++//  if (d_xpos>=0 && d_ypos>=0) sizeh.flags |= PPosition;
+   sizeh.width  = w;
+   sizeh.height = h;
+   sizeh.min_width  = w;
