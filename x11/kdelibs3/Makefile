@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2004/04/21 13:23:57 markd Exp $
+# $NetBSD: Makefile,v 1.59 2004/05/11 12:17:21 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGREVISION=	1
@@ -37,13 +37,6 @@ UNLIMIT_RESOURCES=	datasize memorysize
 FIXUP_FILES= \
 	kdeui/ksconfig.cpp \
 	kio/kssl/kopenssl.cc
-
-# Several programs need to be setuid-root, but due to the way that KDE3
-# finds executables, the files must have their read bit set so that
-# KStandardDir::findResource() will find them.
-#
-_KDE_SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4755
-SPECIAL_PERMS+=	${PREFIX}/bin/kgrantpty	${_KDE_SETUID_ROOT}
 
 pre-configure:
 	@for i in ${FIXUP_FILES}; do \
