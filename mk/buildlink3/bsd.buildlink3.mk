@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.20 2003/08/27 01:47:34 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.21 2003/08/27 03:38:21 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -90,37 +90,36 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 # Generate default values for:
 #
 #	BUILDLINK_PKGBASE.<pkg>
-#	BUILDLINK_DEPOT.<pkg>
+#	BUILDLINK_PKG_DBDIR.<pkg>
 #	BUILDLINK_PREFIX.<pkg>
 #	BUILDLINK_INCDIRS.<pkg>
 #	BUILDLINK_LIBDIRS.<pkg>
 #
 # BUILDLINK_PKGBASE.<pkg> is the package basename (without the version
-# number).  BUILDLINK_DEPOT.<pkg> is the depot directory for <pkg> and
-# contains all of the package metadata files for <pkg>.
-# BUILDLINK_PREFIX.<pkg> is the directory that contains all of the installed
-# files for <pkg>.  BUILDLINK_INCDIRS.<pkg> and BUILDLINK_LIBDIRS.<pkg> are
-# the subdirectories of BUILDLINK_PREFIX.<pkg> that should be added to the
-# compiler/linker search paths.
+# number).  BUILDLINK_PKG_DBDIR.<pkg> contains all of the package metadata
+# files for <pkg>.  BUILDLINK_PREFIX.<pkg> is the directory that contains
+# all of the installed files for <pkg>.  BUILDLINK_INCDIRS.<pkg> and
+# BUILDLINK_LIBDIRS.<pkg> are the subdirectories of BUILDLINK_PREFIX.<pkg>
+# that should be added to the compiler/linker search paths.
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 .  if !defined(BUILDLINK_PKGBASE.${_pkg_})
 BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
 .  endif
-.  if !defined(BUILDLINK_DEPOT.${_pkg_})
-BUILDLINK_DEPOT.${_pkg_}!=						\
+.  if !defined(BUILDLINK_PKG_DBDIR.${_pkg_})
+BUILDLINK_PKG_DBDIR.${_pkg_}!=						\
 	cd ${_PKG_DBDIR};						\
 	dir=`${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}" || ${TRUE}`; \
 	case "$$dir" in							\
 	"")	dir="not_found" ;;					\
 	esac;								\
 	${ECHO} $$dir
-.    if empty(BUILDLINK_DEPOT.${_pkg_}:Mnot_found)
-MAKEFLAGS+=	BUILDLINK_DEPOT.${_pkg_}=${BUILDLINK_DEPOT.${_pkg_}}
+.    if empty(BUILDLINK_PKG_DBDIR.${_pkg_}:Mnot_found)
+MAKEFLAGS+=	BUILDLINK_PKG_DBDIR.${_pkg_}=${BUILDLINK_PKG_DBDIR.${_pkg_}}
 .    endif
 .  endif
 .  if !defined(BUILDLINK_PREFIX.${_pkg_})
-BUILDLINK_PREFIX.${_pkg_}?=	${BUILDLINK_DEPOT.${_pkg_}}
+BUILDLINK_PREFIX.${_pkg_}?=	${BUILDLINK_PKG_DBDIR.${_pkg_}}
 .  endif
 .  if !defined(BUILDLINK_INCDIRS.${_pkg_})
 BUILDLINK_INCDIRS.${_pkg_}?=	include
