@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.217 2001/11/30 01:26:32 wiz Exp $
+# $NetBSD: Packages.txt,v 1.218 2001/12/02 21:29:20 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -594,6 +594,10 @@ a subdirectory:
 
 (Note the trailing slash after the subdirectory name.) Use of the deprecated
 MASTER_SITE_SUBDIR will not work.
+
+If the package has multiple DISTFILES from different MASTER_SITES, set
+	MASTER_SITE_name_of_file-0.1.2.tar.gz=	ftp://some.url/path/
+for all except the first distribution file, to speed up fetching the files.
 
 Currently the following values are available for CATEGORIES. If more than
 one is used, they need to be separated by spaces:
