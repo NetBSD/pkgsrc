@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/11/05 02:46:09 mycroft Exp $
+# $NetBSD: Makefile,v 1.10 1998/11/16 14:56:07 agc Exp $
 #
 
 DISTNAME=	rat-3.0.28
@@ -23,7 +23,7 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ( \
 	 ${INSTALL_PROGRAM} \
-	    bin/$${USER:=`whoami`}/rat-`uname -s`-`uname -r` \
+	    bin/$${USER:=`whoami`}/rat-${OPSYS}-${OS_VERSION} \
 	    ${PREFIX}/bin/rat; \
 	 ${INSTALL_MAN} \
 	    man/man1/rat.1 ${PREFIX}/man/man1/rat.1 )
