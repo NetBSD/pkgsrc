@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2003/10/07 23:27:06 heinz Exp $
+# $NetBSD: Makefile,v 1.15 2003/12/13 16:36:21 seb Exp $
 #
 
-DISTNAME=	sed-4.0.7
+DISTNAME=	sed-4.0.8
 PKGNAME=	g${DISTNAME}
 CATEGORIES=	textproc editors
 MASTER_SITES=	${MASTER_SITE_GNU:=sed/}
@@ -25,4 +25,8 @@ CONFIGURE_ARGS+=        --program-prefix=${GNU_PROGRAM_PREFIX}
 PLIST_SUBST+=           GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=            GNU_PROGRAM_PREFIX
 
+CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
+
+.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
