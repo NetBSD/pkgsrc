@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8269 2004/12/05 08:51:04 jmmv Exp $
+$NetBSD: CHANGES,v 1.8270 2004/12/05 09:02:51 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5773,3 +5773,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated leafpad to 0.7.7 [jmmv 2004-12-05]
 	Updated mail-notification to 1.0 [jmmv 2004-12-05]
 	Updated libgnomecups to 0.1.13 [jmmv 2004-12-05]
+	Updated beecrypt to 4.1.1 [jmmv 2004-12-05]

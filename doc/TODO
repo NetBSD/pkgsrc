@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2656 2004/12/05 08:51:04 jmmv Exp $
+$NetBSD: TODO,v 1.2657 2004/12/05 09:02:51 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -330,7 +330,6 @@ Suggested package updates
 	o balsa-1.4.4
 	o bbsload-0.2.8
 	o bchunk-1.2.0
-	o beecrypt-4.1.1
 	o benchfft-3.1
 	o bibparse-1.06
 	o bibtex2html-1.74 [requires ocaml>=3.07]
