@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/12/27 23:04:23 wiz Exp $
+
+--- Makefile.orig	Tue Dec 23 19:28:09 2003
++++ Makefile
+@@ -2,7 +2,7 @@ include Makefile.inc
+ 
+ LDFLAGS = -lncurses `xml2-config --libs` $(EXTRA_LDFLAGS)
+ OBJFILES = main.o netio.o interface.o xmlparse.o updatecheck.o conversions.o dialog.o ui-support.o categories.o
+-CFLAGS = -Wall -O2 -DLOCALEPATH="\"$(LOCALEPATH)\"" -DOS=\"$(shell uname)\" `xml2-config --cflags` $(EXTRA_CFLAGS)
++CFLAGS = -Wall -DLOCALEPATH="\"$(LOCALEPATH)\"" -DOS=\"$(shell uname)\" `xml2-config --cflags` $(EXTRA_CFLAGS)
+ VERSION = `grep VERSION version.h | sed s/\"//g | sed s/\#define\ VERSION\ //`
+ MAN = doc/man
+ DISTDIR = snownews-$(VERSION)
+@@ -29,8 +29,8 @@ install: snownews snownews.1 locales
+ 	if [ ! -d "$(PREFIX)/bin" ]; then \
+ 	  mkdir -p $(PREFIX)/bin; \
+ 	fi
+-	$(INSTALL) -s snownews $(PREFIX)/bin
+-	$(INSTALL) opml2snow $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) snownews $(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT) opml2snow $(PREFIX)/bin
+ 	$(MAKE) -C $(MAN) install-man
+ 	$(MAKE) -C po install
+ 	@echo ""
