@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/05/04 20:19:46 jtb Exp $
+
+--- ../input.c.orig
++++ ../input.c
+@@ -313,7 +313,7 @@
+ static char *lineBuffer = NULL;   /* getline() does the initial allocation */
+ #else
+ #define LINEBUFFER_SIZE 1000
+-static char lineBuffer[LINEBUFFER_SIZE];
++static signed char lineBuffer[LINEBUFFER_SIZE];
+ #endif
+ static int lineLength = 0;
+ static int inCodeBlock = FALSE; /* Inside \begin{code}..\end{code} */
