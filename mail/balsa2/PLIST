@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2004/01/26 03:31:31 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/31 12:37:00 recht Exp $
 bin/balsa
 bin/balsa-ab
+lib/bonobo/servers/GNOME_Balsa.server
 man/man1/balsa.1
 share/applications/balsa.desktop
 share/balsa/pixmaps/attachment.png
@@ -29,6 +30,7 @@ share/gnome/help/balsa/C/figures/newmsg-window-toolbar.png
 share/gnome/help/balsa/C/figures/newmsg-window.png
 share/gnome/help/balsa/C/figures/preferences-window.png
 share/gnome/help/balsa/C/figures/spell-check.png
+share/idl/Balsa.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/balsa.mo
@@ -37,6 +39,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/balsa.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/balsa.mo
@@ -45,6 +48,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/balsa.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/balsa.mo
@@ -73,16 +77,26 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/balsa.mo
-share/idl/Balsa.idl
 share/omf/balsa/balsa-C.omf
 share/pixmaps/gnome-balsa2.png
 share/sounds/balsa/newmail.wav
 share/sounds/balsa/startup.wav
 @dirrm share/sounds/balsa
+@comment in xdg-dirs: @dirrm share/sounds
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/balsa
+@comment in scrollkeeper: @dirrm share/omf
+@comment in ORBit2: @dirrm share/idl
 @dirrm share/gnome/help/balsa/C/figures
 @dirrm share/gnome/help/balsa/C
 @dirrm share/gnome/help/balsa
+@comment in gnome-dirs: @dirrm share/gnome/help
 @dirrm share/examples/balsa
 @dirrm share/balsa/pixmaps
 @dirrm share/balsa
+@comment in xdg-dirs: @dirrm share/applications
+@comment in scrollkeeper: @dirrm libdata/scrollkeeper/db/index
+@comment in scrollkeeper: @dirrm libdata/scrollkeeper/db/TOC
+@comment in scrollkeeper: @dirrm libdata/scrollkeeper/db
+@comment in libbonobo: @dirrm lib/bonobo/servers
+@comment in xdg-dirs: @dirrm etc/sound/events
