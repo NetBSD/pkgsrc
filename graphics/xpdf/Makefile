@@ -1,10 +1,6 @@
-# New ports collection makefile for:	xpdf
-# Version required:     0.7a
-# Date created:         02 Feb 1996
-# Whom:                 chuckr@glue.umd.edu
-#
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
-# $NetBSD: Makefile,v 1.1 1998/07/25 01:46:56 tsarna Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/03 18:01:30 tv Exp $
+# 
 
 DISTNAME=       xpdf-0.7a
 CATEGORIES=	graphics print
@@ -12,7 +8,7 @@ MASTER_SITES=	ftp://ftp.aimnet.com/pub/users/derekn/xpdf/
 
 MAINTAINER=	tsarna@netbsd.org
 
-LIB_DEPENDS=	Xpm.4.:../xpm
+DEPENDS=	xpm-3.4k:../../graphics/xpm
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gzip
