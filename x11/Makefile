@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2001/07/18 14:33:24 nra Exp $
+# $NetBSD: Makefile,v 1.226 2001/08/05 00:23:49 hubertf Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -12,6 +12,7 @@ SUBDIR+=	XmHTML
 SUBDIR+=	aterm
 SUBDIR+=	blt
 SUBDIR+=	controlcenter
+SUBDIR+=	dfm
 SUBDIR+=	dtx11session
 SUBDIR+=	dxpc
 SUBDIR+=	ebuilder
