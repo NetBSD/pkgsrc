@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 1998/10/04 17:16:22 tv Exp $
+$NetBSD: patch-ad,v 1.5 1999/03/14 20:59:42 tron Exp $
 
 --- intl/xopen-msg.sed.orig	Thu Jun 18 13:21:49 1998
 +++ intl/xopen-msg.sed	Thu Jun 18 13:32:08 1998

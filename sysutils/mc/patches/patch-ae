@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 1998/10/04 18:22:32 tv Exp $
+$NetBSD: patch-ae,v 1.5 1999/03/14 20:59:42 tron Exp $
 
 --- mcfn_install.in.orig	Mon May 25 06:16:04 1998
 +++ mcfn_install.in	Sun Oct  4 09:11:40 1998

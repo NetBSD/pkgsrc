@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 1998/10/04 18:22:31 tv Exp $
+$NetBSD: patch-ab,v 1.6 1999/03/14 20:59:42 tron Exp $
 
 --- vfs/Makefile.in.orig	Mon May 25 06:16:04 1998
 +++ vfs/Makefile.in	Sun Oct  4 09:07:34 1998
