@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/06/26 23:04:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/23 21:52:29 jmc Exp $
 bin/ossplay
 bin/ossmixer
 bin/ossmplay
@@ -29,7 +29,7 @@ lib/oss/docs/README.Envy24
 lib/oss/docs/README.Geode
 lib/oss/docs/README.Intelpci
 lib/oss/docs/README.Irqsharing
-lib/oss/docs/README.KDE
+lib/oss/docs/README.KDE-GNOME
 lib/oss/docs/README.Maestro
 lib/oss/docs/README.Notebooks
 lib/oss/docs/README.Playing
@@ -39,7 +39,6 @@ lib/oss/docs/README.Studio
 lib/oss/docs/README.Upgrading
 lib/oss/docs/README.VirtualMixer
 lib/oss/docs/README.Vortex
-lib/oss/docs/README.WaveLoop
 lib/oss/docs/README.Yamaha-DSXG
 lib/oss/docs/README.awe
 lib/oss/docs/README.chips
@@ -55,8 +54,6 @@ lib/oss/docs/programming.txt
 lib/oss/docs/using_oss.txt
 lib/oss/drums.o3
 lib/oss/drums.sb
-lib/oss/emu10k.bin1
-lib/oss/emu10k.bin2
 lib/oss/errors.cat
 lib/oss/include/sys/awe_voice.h
 lib/oss/include/sys/dm.h
@@ -64,7 +61,6 @@ lib/oss/include/sys/soundcard.h
 lib/oss/include/sys/ultrasound.h
 lib/oss/install.sh
 lib/oss/install2.sh
-lib/oss/ld10k
 lib/oss/libOSSlib.a
 lib/oss/license.asc.eval
 lib/oss/mixer
@@ -82,7 +78,6 @@ lib/oss/ossxmix
 lib/oss/play
 lib/oss/record
 lib/oss/savemixer
-lib/oss/sfxload
 lib/oss/sndconf
 lib/oss/soundcard.h
 lib/oss/soundconf
