@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2002/08/07 06:10:32 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2002/08/07 19:29:29 jlam Exp $
 #
 # This Makefile fragment is included by packages that use bzip2.
 #
@@ -35,7 +35,12 @@ _NEED_BZIP2=		YES
 .  else
 _NEED_BZIP2=		NO
 .  endif
-_INCOMPAT_BZIP2?=	# should be set from defs.${OPSYS}.mk
+#
+# This catch-all for SunOS is probably too broad, but better to err on
+# the safe side.  We can narrow down the match when we have better
+# information.
+#
+_INCOMPAT_BZIP2=	SunOS-*-*
 INCOMPAT_BZIP2?=	# empty
 .  for _pattern_ in ${_INCOMPAT_BZIP2} ${INCOMPAT_BZIP2}
 .    if !empty(MACHINE_PLATFORM:M${_pattern_})
