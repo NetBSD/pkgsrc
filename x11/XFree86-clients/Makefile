@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/01/31 16:15:12 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/02 14:16:07 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-clients-${XF_VER}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XFREE}
 DISTFILES=		X430src-1.tgz X430src-2.tgz \
@@ -22,6 +23,12 @@ XINSTALL_MAN_DIRS=	programs
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "NetBSD"
+PLIST_SUBST+=		MANPAGE_SUFFIX=${IMAKE_MANNEWSUFFIX}
+.else
+PLIST_SUBST+=		MANPAGE_SUFFIX=${IMAKE_LIBMAN_SUFFIX}
+.endif
+
 .if ${OPSYS} == "Linux"
 .  include "../../security/PAM/buildlink2.mk"
 .endif
@@ -30,7 +37,7 @@ post-configure:
 	@${MKDIR} ${WRKSRC}/exports/lib
 	@for l in fntstubs Xss FS fontenc Xau Xxf86vm Xxf86dga xkbfile \
 		Xxf86misc Xdmcp Xfontcache Xinerama Xfont; do \
-		${LN} -sf ${PREFIX}/lib/lib$${l}.a ${WRKSRC}/exports/lib/; \
+		${LN} -sf ${X11ROOT}/lib/lib$${l}.a ${WRKSRC}/exports/lib/; \
 	done
 
 .include "../../fonts/Xft2/buildlink2.mk"
