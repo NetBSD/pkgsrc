@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkg_alternatives.sh,v 1.2 2005/01/25 16:27:37 jmmv Exp $
+# $NetBSD: pkg_alternatives.sh,v 1.3 2005/01/25 16:47:20 jmmv Exp $
 #
 # pkg_alternatives - Generic wrappers for programs with similar interfaces
 # Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -99,7 +99,7 @@ action_destroy_package() {
         wrapper=$(echo ${w} | sed -e 's|^./||')
         manpage=$(get_manpage ${wrapper})
         info "removing wrapper \`${wrapper}'"
-	rm -f ${Prefix}/${wrapper}
+        rm -f ${Prefix}/${wrapper}
         info "removing manual page \`${manpage}'"
         rm -f ${manpage}
     done
@@ -490,7 +490,7 @@ mkdir_p() {
 # Shows an usage message and exits the program with an error condition.
 #
 usage() {
-    echo "Usage: ${Prog_Name} [-sw] [-p prefix] action [arg1 ... argN]" 1>&2
+    echo "Usage: ${Prog_Name} [-gsw] [-p prefix] action [arg1 ... argN]" 1>&2
     exit 1
 }
 
@@ -603,12 +603,15 @@ warn() {
 # action.
 #
 main() {
-    args=$(getopt p:sw ${*})
+    args=$(getopt gp:sw ${*})
     [ ${?} -eq 0 ] || usage
     set -- ${args}
     what=package
     while [ ${#} -gt 0 ]; do
         case ${1} in
+            -g)
+                what=package
+                ;;
             -p)
                 Prefix=$2; shift
                 Conf_Dir=@CONFDIR@${Prefix}

@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_alternatives.8,v 1.2 2005/01/25 16:27:37 jmmv Exp $
+.\" $NetBSD: pkg_alternatives.8,v 1.3 2005/01/25 16:47:20 jmmv Exp $
 .\"
 .\" pkg_alternatives - Generic wrappers for programs with similar interfaces
 .\" Copyright (c) 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -35,7 +35,7 @@
 .Nd generic wrappers for programs with similar interfaces
 .Sh SYNOPSIS
 .Nm
-.Op Fl sw
+.Op Fl gsw
 .Op Fl p Ar prefix
 action
 .Ar arg1 ... argN
@@ -62,13 +62,14 @@ in place of the generic name which points to one of the multiple
 .Em alternatives
 available.
 .Pp
-The alternatives are classified according to the
-.Em package
-they belong to.
+The alternatives are classified according to the package they belong to,
+forming
+.Em groups
+of alternatives.
 In other words, a concrete package contains a list of all the wrappers it
 affects by providing alternatives to them.
 This makes things easier to the end user and/or the administrator who has
-to deal with them, as they can manually select a package rather than a
+to deal with them, as they can manually select a group (package) rather than a
 bunch of wrappers.
 .Pp
 Wrappers are identified by its file name relative to the installation
@@ -129,6 +130,12 @@ will take care to (un)register themselves from them when (de)installed.
 .Ss Options
 The following options are available:
 .Bl -tag -width XpXprefixX
+.It Fl g
+Operate on groups of wrappers rather than individual files.
+This is the opposite of
+.Fl w
+and is currently the default behavior.
+Affects the behavior of all actions.
 .It Fl p Ar prefix
 Set installation prefix.
 This affects where wrappers and their manual pages are looked for.
@@ -138,12 +145,14 @@ if this flag is not given.
 .It Fl s
 Run in silent mode: no output except for errors.
 .It Fl w
-Operate on wrappers rather than on packages.
-This affects the behavior of all actions.
+Operate on individual wrappers rather than on groups.
+This is the opposite of
+.Fl g .
+Affects the behavior of all actions.
 .El
-.Ss Actions in package mode
+.Ss Actions in group mode
 The following table describes each available action and its behavior when
-working in package mode.
+working in group mode.
 All these actions are at a higher level than the same actions in wrapper
 mode.
 They always end up using the later at some point, so you should also
@@ -215,7 +224,7 @@ The following table describes each available action and its behavior when
 working in wrapper mode.
 Note that these actions work at a very low level as they are used to manage
 wrappers and alternative commands directly.
-In most situations, you will want to use these actions in package mode.
+In most situations, you will want to use these actions in group mode.
 .Bl -tag -width XXXX
 .It auto Ar wrapper
 Removes any manual configuration created for the given
