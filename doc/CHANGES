@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.575 2002/11/22 16:11:19 jschauma Exp $
+$NetBSD: CHANGES,v 1.576 2002/11/22 16:38:07 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3685,3 +3685,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mserv_irman to 0.16 [abs 2002-11-21]
 	Updated atari800 to 1.2.4 [wiz 2002-11-21]
 	Updated htmllint to 20021103 [jschauma 2002-11-22]
+	Updated tidy to 20021108 [jschauma 2002-11-22]
