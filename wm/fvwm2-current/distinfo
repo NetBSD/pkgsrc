@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:29 agc Exp $
+
+MD5 (fvwm-2.3.29.tar.gz) = 295dd0e0c50c185dcb67f1b86c18baf8
+MD5 (fvwm_icons.tgz) = 7b254da269a236d77c790581701442cb
+SHA1 (patch-aa) = 0f1a1b3a8d9df1482a91c6985d416067b2755977

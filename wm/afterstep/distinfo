@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:04 agc Exp $
+
+SHA1 (AfterStep-1.8.8.tar.bz2) = 571025239499cdde57307f3d35018311a3e68e63
+SHA1 (patch-aa) = 79d732f26da21d069a53443e3799730733bc050b
+SHA1 (patch-ab) = 24c9f8569c88ea661cc6eb79390b5ecc825500b4
+SHA1 (patch-ac) = 46a57e819fa2893041e90fa37c5453173df29fa5
+SHA1 (patch-ad) = e0e5cd8182bdf7b3b6ada61e58a2a2c0dd4e243c
+SHA1 (patch-ae) = 995ec52cbdc08d55277dc3c8dbaee0355d48e1aa
+SHA1 (patch-af) = 7e1cd2b8e184fca8ee38cae2c02dc1520b899d37
+SHA1 (patch-ag) = 8e018c8ca7c46d60b14513ad091f2dd87030a3ef
+SHA1 (patch-ah) = e64aac1b3902405c5733bc6a7e136344e610a222
+SHA1 (patch-ai) = e543bfb27d16b49d1844a4fc29dd0cca5e262bfc
+SHA1 (patch-aj) = ceca49e410ec22e5b5fdf8132ab80fa920514eb3

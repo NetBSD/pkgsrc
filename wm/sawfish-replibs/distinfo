@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:48 agc Exp $
+
+SHA1 (sawfish-0.38.tar.gz) = fe572192af508da93443ef67cea984024d148fe4
+SHA1 (patch-aa) = 18f4912ef5ae1a5201643b90aaac3f5f0a0c1550
+SHA1 (patch-ab) = 20ffaa03c787c0edaee2cdeea5855395ebb57fdc
+SHA1 (patch-ac) = 0f9558d5c968074d5ecf76534952478f128c2c29

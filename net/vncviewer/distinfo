@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:54:39 agc Exp $
+
+MD5 (vnc-3.3.3r2_unixsrc.tgz) = 6fc83e1b6153d3252649953267713f17
+SHA1 (patch-aa) = ae04511d6993b4d765bff4f88ecb5294ceb706eb
