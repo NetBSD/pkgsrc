@@ -1,0 +1,5 @@
+The problem: logging in to a remote system with a cryptographic solution
+such as lsh or ssh takes time, due to the computationally expensive key
+exchanges that occur when the connection is established.  The solution:
+reuse the secure tunnel once it has been established.  fsh is a drop-in
+rsh-compatible replacement for ssh that automatically reuses ssh tunnels.
