@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/01/12 01:57:04 uebayasi Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/30 09:57:54 seb Exp $
 #
 
 DISTNAME=	speedbar-0.14beta4
@@ -17,6 +17,7 @@ BUILD_ENV+=	EMACS=${EMACS}
 NO_CONFIGURE=	# set
 USE_GMAKE=	# set
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	speedbar.info
 
 SRCS=	speedbar.el dframe.el
@@ -35,5 +36,4 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${IMAGES} ${EMACS_LISPPREFIX}/speedbar
 	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${PREFIX}/info
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
