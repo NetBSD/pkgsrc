@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7722 2004/11/05 21:04:38 jdolecek Exp $
+$NetBSD: CHANGES,v 1.7723 2004/11/05 21:15:38 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5102,3 +5102,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkg_tarup to 1.6.5 [erh 2004-11-05]
 	Added php-dbx 4.3.9nb1 [jdolecek 2004-11-05]
 	Added php-dbx 5.0.2 [jdolecek 2004-11-05]
+	Added php5-dom 5.0.2 [jdolecek 2004-11-05]
