@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/03/04 08:56:06 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/16 20:16:41 tron Exp $
 
 DISTNAME=	gtkglarea-1.1
 CATEGORIES=	x11 graphics
@@ -8,7 +8,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.student.oulu.fi/~jlof/gtkglarea/
 
 DEPENDS+=       Mesa-3.0:../../graphics/Mesa
-DEPENDS+=       gtk+-1.2.0:../../x11/gtk
+DEPENDS+=       gtk+-1.2.1:../../x11/gtk
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
