@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/01/16 12:35:43 tron Exp $
+# $NetBSD: Makefile,v 1.18 1999/01/19 22:12:15 tron Exp $
 
 DISTNAME=		WindowMaker-0.50.2
 PKGNAME=		windowmaker-0.50.2
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
 DISTFILES+=		${DISTNAME}${EXTRACT_SUFX}\
 			WindowMaker-data.tar.gz
 
-MAINTAINER=		magick@bundy.lip.owl.de
+MAINTAINER=		lamj@stat.cmu.edu
 HOMEPAGE=		http://windowmaker.org/
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
