@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/05 09:42:05 jmmv Exp $
+
+SHA1 (clearlooks-0.4.tar.bz2) = b1b41424d15e891a984c50d88c3cff24fc997806
+RMD160 (clearlooks-0.4.tar.bz2) = 20de05bdb51273db4961d754990b1040e185600a
+Size (clearlooks-0.4.tar.bz2) = 384636 bytes
+SHA1 (patch-aa) = f92b5647e15c26eda4dd48dfb712462390dd4882
