@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5687 2004/04/20 17:29:04 minskim Exp $
+$NetBSD: CHANGES,v 1.5688 2004/04/20 17:55:43 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2189,3 +2189,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgnomedb to 1.0.4 [jmmv 2004-04-20]
 	Updated glade2 to 2.6.0 [jmmv 2004-04-20]
 	Updated mathomatic to 11.0bnb1 [minskim 2004-04-20]
+	Added portaudio-18.1 [ben 2004-04-20]
