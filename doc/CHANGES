@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5543 2004/04/11 19:13:11 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5544 2004/04/11 22:44:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added liferea-0.3.3 [snj 2004-04-11]
 	Updated crossfire-client to 1.0.0nb4 [snj 2004-04-11]
 	Updated yamt to 0.5nb6 [xtraeme 2004-04-11]
+	Updated gpdf to 0.131nb1 [jmmv 2004-04-11]
