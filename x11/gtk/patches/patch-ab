@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.8 1998/12/18 23:53:16 tron Exp $
+$NetBSD: patch-ab,v 1.9 1999/03/04 08:54:37 tron Exp $
 
---- gdk/Makefile.in.orig	Thu Dec 17 07:33:51 1998
-+++ gdk/Makefile.in	Fri Dec 18 23:50:07 1998
-@@ -180,7 +180,7 @@
- 	-lm
+--- gdk/Makefile.in.orig	Thu Feb 25 21:15:33 1999
++++ gdk/Makefile.in	Wed Mar  3 23:33:09 1999
+@@ -139,7 +139,7 @@
+ LDADDS =  	@x_ldflags@		@x_libs@		@GLIB_LIBS@		-lm
  
- libgdk_la_LDFLAGS = \
--	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -release $(LT_RELEASE) \
-+	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
-          @GLIB_LIBS@	\
-          @x_ldflags@	\
-          @x_libs@	\
+ 
+-libgdk_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -release $(LT_RELEASE)          @GLIB_DEPLIBS@	         @x_ldflags@	         @x_libs@	         -lm
++libgdk_la_LDFLAGS =  	-release $(LT_RELEASE)          @GLIB_DEPLIBS@	         @x_ldflags@	         @x_libs@	         -lm
+ 
+ 
+ EXTRA_PROGRAMS = gxid

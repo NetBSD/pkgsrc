@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.9 1999/01/16 01:43:30 tron Exp $
+$NetBSD: md5,v 1.10 1999/03/04 08:54:37 tron Exp $
 
-MD5 (gtk+-1.1.12.tar.gz) = e8430577fe750e463db2238d6190281e
+MD5 (gtk+-1.2.0.tar.gz) = d935cf94a4b0167b6b3570580a1013b9

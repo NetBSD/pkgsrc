@@ -1,21 +1,29 @@
-$NetBSD: patch-aa,v 1.6 1998/08/07 11:18:05 agc Exp $
+$NetBSD: patch-aa,v 1.7 1999/03/04 08:54:37 tron Exp $
 
---- configure.orig	Tue Jun  2 01:31:51 1998
-+++ configure	Sat Jul 18 10:44:53 1998
-@@ -1231,6 +1231,7 @@
-   echo "$ac_t""no" 1>&6
+--- configure.orig	Thu Feb 25 12:02:28 1999
++++ configure	Thu Mar  4 00:01:06 1999
+@@ -1600,6 +1600,7 @@
+   ac_tool_prefix=
  fi
  
 +if false; then
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
-@@ -1276,7 +1277,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+@@ -1832,6 +1833,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
--
 +fi
  
- echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
- echo "configure:1283: checking whether to enable maintainer-specific portions of Makefiles" >&5
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+@@ -4444,7 +4446,7 @@
+ 
+ # AM_GTK_GNU_GETTEXT above substs $DATADIRNAME
+ # this is the directory where the *.{mo,gmo} files are installed
+-gtklocaledir='${prefix}/${DATADIRNAME}/locale'
++gtklocaledir='${prefix}/share/locale'
+ 
+ 
+ echo $ac_n "checking for extra flags to get ANSI library prototypes""... $ac_c" 1>&6
