@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/12 22:21:35 jwise Exp $
+--- build.xml.orig	Wed Jan 12 14:17:55 2000
++++ build.xml	Wed Jan 12 14:19:03 2000
+@@ -1,7 +1,7 @@
+ <project name="Tomcat" default="main" basedir=".">
+   <property name="build.compiler" value="classic"/>
+   <property name="tomcat.build" value="../build/tomcat"/>
+-  <property name="tomcat.home" value="../dist/tomcat"/>
++  <property name="tomcat.home" value="@TOMCAT_HOME@"/>
+   <property name="test.classpath" value="${tomcat.build}/classes:../jakarta-tools/moo.jar" />
+ 
+   <!-- Create directories, copy static files -->
