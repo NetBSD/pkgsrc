@@ -1,4 +1,4 @@
-# $NetBSD: logic,v 1.5 2003/10/04 10:20:09 jlam Exp $
+# $NetBSD: logic,v 1.6 2004/04/15 09:31:48 jmmv Exp $
 #
 # If the wrapper caches don't cover the $arg we're examining, then run
 # it through the transformations and any wrapper-specific post-logic
@@ -13,10 +13,6 @@ cachesettings='arg="$cachearg"; cachehit=yes'
 searcharg="$qarg"
 
 case $arg in
--D*)
-	arg="$qarg"
-	addtocache=yes
-	;;
 -*|/*)
 	arg=`$echo "X$qarg" | $Xsed @_BLNK_TRANSFORM_SED@`
 	addtocache=yes
