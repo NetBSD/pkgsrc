@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2003/09/05 16:16:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/11 16:45:51 cjep Exp $
 
-DISTNAME=		leafnode-1.9.43.rel
+DISTNAME=		leafnode-1.9.49.rel
 PKGNAME=		${DISTNAME:S/.rel//}
 WRKSRC=			${WRKDIR}/${DISTNAME}
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leafnode/}
-
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		cjep@NetBSD.org
@@ -13,10 +12,25 @@ HOMEPAGE=		http://www.leafnode.org/
 COMMENT=		NNTP server for small (dialup) sites
 
 USE_BUILDLINK2=		yes
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 LEAFNODE_SPOOL?=	/var/spool/leafnode
 LEAFNODE_LOCKDIR?=	/var/spool/lock/leafnode
 LEAFNODE_CONFDIR?=	${PKG_SYSCONFDIR}/leafnode
+
+# Use news login and be compatible with inn package
+#
+BUILD_DEFS+=		INN_DATA_DIR
+PKG_USERS=		news:news::Internet\\ News:${INN_DATA_DIR}:${SH}
+PKG_GROUPS=		news
+LEAFNODE_HOME?=		${INN_DATA_DIR}
+
+FILES_SUBST+=	LEAFNODE_SPOOL=${LEAFNODE_SPOOL}
+FILES_SUBST+=	LEAFNODE_CONFDIR=${LEAFNODE_CONFDIR}
+FILES_SUBST+=	LEAFNODE_LOCKDIR=${LEAFNODE_LOCKDIR}
+FILES_SUBST+=	LEAFNODE_HOME=${LEAFNODE_HOME}
+MESSAGE_SUBST+=		LEAFNODE_CONFDIR=${LEAFNODE_CONFDIR}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-spooldir=${LEAFNODE_SPOOL}
@@ -32,24 +46,17 @@ CONFIGURE_ARGS+=	--with-ipv6
 CONFIGURE_ARGS+=	--without-ipv6
 .endif
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-MESSAGE_SUBST+=		LEAFNODE_CONFDIR=${LEAFNODE_CONFDIR}
-
-post-build:
-	for F in DEINSTALL INSTALL; do					\
-	${SED} 	-e 's#@@LEAFNODE_SPOOL@@#${LEAFNODE_SPOOL}#g' 		\
-		-e 's#@@LEAFNODE_LOCKDIR@@#${LEAFNODE_LOCKDIR}#g'	\
-		-e 's#@@LEAFNODE_CONFDIR@@#${LEAFNODE_CONFDIR}#g'	\
-		-e 's#@@PREFIX@@#${PREFIX}#g'	\
-		${PKGDIR}/$${F}	> ${WRKDIR}/$${F}; done
-
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/leafnode
 	${INSTALL_DATA} ${WRKSRC}/config.example 			\
 				${PREFIX}/share/examples/leafnode
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/leafnode
+
+	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README-FQDN 		\
+			${WRKSRC}/README-MAINTAINER			\
+			${WRKSRC}/README-daemontools			\
+			${WRKSRC}/README.FIRST ${PREFIX}/share/doc/leafnode
 
 .include "../../devel/pcre/buildlink2.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
