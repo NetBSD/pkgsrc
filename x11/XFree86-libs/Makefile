@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/07/29 05:39:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/29 06:36:33 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -15,7 +15,6 @@ COMMENT=		XFree86 Libraries
 CONFLICTS+=		xextensions-[0-9]*
 CONFLICTS+=		libX11-[0-9]*
 CONFLICTS+=		libXau-[0-9]*
-CONFLICTS+=		xorg-libs-[0-9]*
 
 BUILD_DEPENDS=		imake>=4.4.0:../../x11/imake
 
