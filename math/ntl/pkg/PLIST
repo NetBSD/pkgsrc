@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/26 23:46:22 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/20 10:19:28 jtb Exp $
 include/NTL/FFT.h
 include/NTL/FacVec.h
 include/NTL/GF2.h
@@ -89,6 +89,10 @@ include/NTL/vector.h
 include/NTL/version.h
 include/NTL/xdouble.h
 lib/libntl.a
+lib/libntl.la
+lib/libntl.so
+lib/libntl.so.0
+lib/libntl.so.0.0
 share/doc/NTL/GF2.txt
 share/doc/NTL/GF2E.txt
 share/doc/NTL/GF2EX.txt

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2001/04/13 00:45:05 jtb Exp $
+$NetBSD: patch-aa,v 1.4 2001/06/20 10:19:28 jtb Exp $
 
---- makefile.orig	Sun Nov 19 14:11:21 2000
+--- makefile.orig	Fri Jun  8 14:23:17 2001
 +++ makefile
 @@ -7,7 +7,7 @@
  ###############################################################
@@ -42,8 +42,7 @@ $NetBSD: patch-aa,v 1.3 2001/04/13 00:45:05 jtb Exp $
 +#AR=ar
  # command to make a library
  
--ARFLAGS=ruv
-+#ARFLAGS=ruv
+ ARFLAGS=ruv
  # arguments for AR
  
 -RANLIB=ranlib
@@ -91,38 +90,62 @@ $NetBSD: patch-aa,v 1.3 2001/04/13 00:45:05 jtb Exp $
  # Set to -lgmp if using GMP, empty otherwise
  
  ###############################################################
-@@ -291,7 +291,7 @@
+@@ -285,11 +285,11 @@
+ NTL_INCLUDE = -I../include -I.
+ # NTL needs this to find its include files
+ 
+-COMPILE = $(CC) $(NTL_INCLUDE) $(CPPFLAGS) $(CFLAGS) -c
+-COMPILE_CXX = $(CXX) $(NTL_INCLUDE) $(CPPFLAGS) $(CXXFLAGS) -c
++COMPILE = $(LIBTOOL) $(CC) $(NTL_INCLUDE) $(CPPFLAGS) $(CFLAGS) -c
++COMPILE_CXX = $(LIBTOOL) $(CXX) $(NTL_INCLUDE) $(CPPFLAGS) $(CXXFLAGS) -c
+ 
+-LINK = $(CC) $(NTL_INCLUDE) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
+-LINK_CXX = $(CXX) $(NTL_INCLUDE) $(CPPFLAGS) $(CXXFLAGS) $(LDFLAGS_CXX)
++LINK = $(LIBTOOL) $(CC) $(NTL_INCLUDE) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
++LINK_CXX = $(LIBTOOL) $(CXX) $(NTL_INCLUDE) $(CPPFLAGS) $(CXXFLAGS) $(LDFLAGS_CXX)
+ 
+ 
+ 
+@@ -298,14 +298,14 @@
  	make setup2
  	make setup3
  	make setup4
 -	make ntl.a
-+	make libntl.a
++	make libntl.la
  
  
  # setup1 generates the file ../incluse/NTL/mach_desc.h
-@@ -325,9 +325,9 @@
+ 
+ setup1:
+ 	$(COMPILE) MakeDescAux.c
+-	$(LINK) -o MakeDesc MakeDesc.c MakeDescAux.o $(LDLIBS)
++	$(LINK) -o MakeDesc MakeDesc.c MakeDescAux.lo $(LDLIBS)
+ 	./MakeDesc
+ 	mv mach_desc.h ../include/NTL/mach_desc.h
+ 
+@@ -332,9 +332,9 @@
  	sh Wizard $(WIZARD)
  
  
 -ntl.a:	$(OBJ) 
 -	$(AR) $(ARFLAGS) ntl.a $(OBJ)
 -	- $(RANLIB) ntl.a
-+libntl.a:	$(OBJ) 
-+	$(AR) $(ARFLAGS) $@ $(OBJ)
-+	- $(RANLIB) $@
++libntl.la:	$(OBJ) 
++	$(LIBTOOL) $(CC) -o libntl.la $(OBJ:.o=.lo) -rpath $(LIBDIR) \
++	--version-info 0:0
  
- lip.o:	lip.c g_lip.c c_lip.c lip_gmp_aux.c
+ lip.o:	lip.c g_lip_impl.h c_lip_impl.h lip_gmp_aux_impl.h
  	$(COMPILE) $(GMP_INCDIR) lip.c
-@@ -344,7 +344,7 @@
+@@ -351,7 +351,7 @@
  	$(COMPILE_CXX) $<
  
  .c: 
 -	$(LINK_CXX) -o $@ $< ntl.a  $(GMP_LIBDIR) $(GMP_LIB) $(LDLIBS_CXX) 
-+	$(LINK_CXX) -o $@ $< libntl.a  $(GMP_LIBDIR) $(GMP_LIB) $(LDLIBS_CXX) 
++	$(LINK_CXX) -o $@ $< libntl.la  $(GMP_LIBDIR) $(GMP_LIB) $(LDLIBS_CXX) 
  
  #################################################################
  #
-@@ -372,17 +372,24 @@
+@@ -379,17 +379,12 @@
  
  
  install:
@@ -137,47 +160,58 @@ $NetBSD: patch-aa,v 1.3 2001/04/13 00:45:05 jtb Exp $
 -	mkdir $(DOCDIR)/NTL
 -	cp ../doc/*.txt $(DOCDIR)/NTL
 -	cp ../doc/*.html $(DOCDIR)/NTL
-+	$(BSD_INSTALL_DATA_DIR) $(LIBDIR)
-+	$(BSD_INSTALL_DATA) libntl.a $(LIBDIR)
-+	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)
++	$(LIBTOOL) $(BSD_INSTALL_DATA) libntl.la $(LIBDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)/NTL
-+	@for d in ../include/NTL/*.h; do \
-+		c="$(BSD_INSTALL_DATA) $$d $(INCLUDEDIR)/NTL/"; \
-+		echo $$c; $$c; \
-+	done
-+	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)
++	$(BSD_INSTALL_DATA) ../include/NTL/*.h $(INCLUDEDIR)/NTL
 +	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)/NTL
-+	@for d in ../doc/*.txt; do \
-+		c="$(BSD_INSTALL_DATA) $$d $(DOCDIR)/NTL/"; \
-+		echo $$c; $$c; \
-+	done
-+	@for d in ../doc/*.html; do \
-+		c="$(BSD_INSTALL_DATA) $$d $(DOCDIR)/NTL/"; \
-+		echo $$c; $$c; \
-+	done
++	$(BSD_INSTALL_DATA) ../doc/*.txt $(DOCDIR)/NTL
++	$(BSD_INSTALL_DATA) ../doc/*.html $(DOCDIR)/NTL
  
  
  uninstall:
-@@ -402,16 +409,16 @@
+@@ -409,16 +404,16 @@
  #################################################################
  
  clobber:	
 -	- rm ntl.a mach_desc.h ../include/NTL/mach_desc.h  GetTime.c 
--	- rm lip_gmp_aux.c ../include/NTL/gmp_aux.h
-+	- rm -f libntl.a mach_desc.h ../include/NTL/mach_desc.h  GetTime.c 
-+	- rm -f lip_gmp_aux.c ../include/NTL/gmp_aux.h
+-	- rm lip_gmp_aux_impl.h ../include/NTL/gmp_aux.h
++	- rm -fr libntl.la .libs mach_desc.h ../include/NTL/mach_desc.h  GetTime.c 
++	- rm -f lip_gmp_aux_impl.h ../include/NTL/gmp_aux.h
  	- sh RemoveProg $(PROGS) MakeDesc TestGetTime gen_lip_gmp_aux gen_gmp_aux
 -	- rm *.o
 -	- rm -r small
-+	- rm -f *.o
++	- rm -f *.o *.lo
 +	- rm -fr small
  
  clean:
 -	- rm *.o 
-+	- rm -f *.o 
++	- rm -f *.o *.lo
  	- sh RemoveProg MakeDesc TestGetTime gen_lip_gmp_aux gen_gmp_aux
 -	- rm -r small
 +	- rm -fr small
  
  #################################################################
  #
+@@ -464,17 +459,17 @@
+ WOBJ = $(WO2)
+ 
+ 
+-wntl.a:	$(WOBJ) 
+-	$(AR) $(ARFLAGS) wntl.a $(WOBJ)
+-	- $(RANLIB) wntl.a
++libwntl.la: $(WOBJ) 
++	$(LIBTOOL) $(CC) -o libwntl.la $(WOBJ:.o=.lo) -rpath $(LIBDIR) \
++	--version-info 0:0
+ 
+ 
+ 
+ MulTimeTest:
+-	$(LINK_CXX) -o MulTimeTest MulTimeTest.c wntl.a  $(GMP_LIBDIR) $(GMP_LIB)  $(LDLIBS_CXX)
++	$(LINK_CXX) -o MulTimeTest MulTimeTest.c libwntl.la  $(GMP_LIBDIR) $(GMP_LIB)  $(LDLIBS_CXX)
+ 
+ PolyTimeTest:
+-	$(LINK_CXX) -o PolyTimeTest PolyTimeTest.c wntl.a  $(GMP_LIBDIR) $(GMP_LIB) $(LDLIBS_CXX)
++	$(LINK_CXX) -o PolyTimeTest PolyTimeTest.c libwntl.la  $(GMP_LIBDIR) $(GMP_LIB) $(LDLIBS_CXX)
+ 
+ InitSettings:
+ 	$(LINK_CXX) -o InitSettings InitSettings.c  $(LDLIBS_CXX)
