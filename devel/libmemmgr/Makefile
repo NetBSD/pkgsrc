@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/12/24 09:53:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:13:28 agc Exp $
 #
 
 DISTNAME=		MemMgr-1.04
 PKGNAME=		libmemmgr-1.04
-WRKSRC=			${WRKDIR}/memmgr-1.04
 CATEGORIES=		devel
 MASTER_SITES=		http://www.snake.net/software/MemMgr/
 
@@ -12,6 +11,8 @@ HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Simple memory manager library
 
 BUILD_DEPENDS+=		libetm-1.09:../../devel/libetm
+
+WRKSRC=			${WRKDIR}/memmgr-1.04
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:40:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:07:42 agc Exp $
 
 DISTNAME=		mbr301h
 PKGNAME=		mbrola-301h
-WRKSRC=			${WRKDIR}
 CATEGORIES=		audio
 MASTER_SITES=		http://www.festvox.org/mbrola/bin/netbsd/
 EXTRACT_SUFX=		.zip
@@ -13,6 +12,7 @@ COMMENT=		MBROLA diphone synthesizer executable
 
 LICENSE=		no-commercial-use
 
+WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		mbrola-20010717
 NO_BUILD=
 

@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 16:31:03 martti Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:08:12 agc Exp $
 
 DISTNAME=		heapsort.c
 PKGNAME=		heapsort-1.0
-WRKSRC=			${WRKDIR}
 CATEGORIES=		benchmarks
 MASTER_SITES=		ftp://ftp.nosc.mil/pub/aburto/heapsort/
 EXTRACT_SUFX=		#empty
 
 MAINTAINER=		root@garbled.net
 COMMENT=		Benchmark program for variable sized arrays
+
+WRKSRC=			${WRKDIR}
 
 do-extract:
 	${MKDIR} ${WRKSRC}

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/11/17 09:02:55 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:13:29 agc Exp $
 
 DISTNAME=	tet3.3h-unsup.src
 PKGNAME=	tet3-3.3h
-WRKSRC=		${WRKDIR}/src
 CATEGORIES=	devel
 MASTER_SITES=	http://tetworks.opengroup.org/tet/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tetworks.opengroup.org/
 COMMENT=	The Open Group test harness
 
+WRKSRC=		${WRKDIR}/src
 HAS_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 

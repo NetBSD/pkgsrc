@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2003/09/28 09:13:55 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2004/01/20 12:07:43 agc Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=    3
-WRKSRC=		${WRKDIR}/xmcd-3.0
 CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmcd/src/
 
@@ -14,6 +13,7 @@ PATCH_SITES=		${HOMEPAGE}
 PATCHFILES=		xmcd-3.0.2-proxyauth-patch
 PATCH_DIST_STRIP=	-p1
 
+WRKSRC=		${WRKDIR}/xmcd-3.0
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
 

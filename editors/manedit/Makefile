@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 21:34:37 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/20 12:14:05 agc Exp $
 #
 
 DISTNAME=	manedit-0.5.6
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/${DISTNAME}/manedit
 CATEGORIES=	editors
 MASTER_SITES=	ftp://wolfpack.twu.net/users/wolfpack/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://wolfpack.twu.net/ManEdit/
 COMMENT=	UNIX Manual (man, manpage) page editor, viewer, and browser for X11
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/manedit
 USE_BUILDLINK2=	YES
 
 MAKE_ENV+=	CPP="${CXX}"

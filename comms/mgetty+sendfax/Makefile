@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2004/01/03 18:49:36 reed Exp $
+# $NetBSD: Makefile,v 1.39 2004/01/20 12:10:01 agc Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
 DISTNAME=	mgetty1.1.30-Dec16
 PKGNAME=	mgetty-1.1.30
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/ \
 		ftp://alpha.greenie.net/pub/mgetty/source/1.1/
@@ -18,6 +17,7 @@ BUILD_DEPENDS+=	texi2roff-[0-9]*:../../textproc/texi2roff
 
 CONFLICTS=	hylafax-[0-9]*
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		yes
 
 USE_PKGINSTALL=		yes

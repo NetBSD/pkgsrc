@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/11/23 07:16:39 salo Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:14:41 agc Exp $
 #
 
 DISTNAME=	xbeeb-0.3.6
-WRKSRC=		${WRKDIR}/xbeeb
 CATEGORIES=	emulators x11
 MASTER_SITES=	ftp://ftp.netcom.net.uk/pub/Micros/BBC/Emulators/Xbeeb/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +10,7 @@ MAINTAINER=	skrll@NetBSD.org
 HOMEPAGE=	http://www.netcomuk.co.uk/~james/BBCMicro/Xbeeb/index.html
 COMMENT=	Acorn BBC Micro emulator with an X based interface
 
+WRKSRC=		${WRKDIR}/xbeeb
 USE_IMAKE=	yes
 MAN_PAGE=	${WRKDIR}/xbeeb.1
 

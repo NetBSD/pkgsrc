@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2003/09/29 03:29:55 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/20 12:12:49 agc Exp $
 
 DISTNAME=	sqsh-1.7-src
 PKGNAME=	sqsh-1.7
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	databases
 MASTER_SITES=	${HOMEPAGE}
 
@@ -14,6 +13,7 @@ COMMENT=	Sybase SQL shell
 ALL_TARGET=		sqsh
 INSTALL_TARGET=		install install.man
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2003/03/29 12:41:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:15:41 agc Exp $
 #
 
 DISTNAME=		xblast-2.6.beta-sound
 PKGNAME=		xblast-2.6b
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/XBlast-2.6.beta
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.ikp.uni-koeln.de/~vogel/archive/
 
@@ -14,6 +13,7 @@ COMMENT=		2-6 player kill the other guy with bombs game. A real blast!
 
 DEPENDS+=		tk>=8.3.2:../../x11/tk
 
+WRKSRC=			${WRKDIR}/XBlast-2.6.beta
 USE_IMAKE=		yes
 
 post-patch:

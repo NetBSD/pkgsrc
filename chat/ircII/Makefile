@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2004/01/05 11:16:31 grant Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/20 12:09:35 agc Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
-WRKSRC=			${WRKDIR}/ircii-${VERS}
 CATEGORIES=		chat
 MASTER_SITES=		ftp://ircii.warped.com/pub/ircII/ \
 			ftp://ircftp.au.eterna.com.au/pub/ircII/ \
@@ -21,6 +20,7 @@ PLIST_SUBST+= 		VERS=${VERS}
 
 .include "../../mk/bsd.prefs.mk"
 
+WRKSRC=			${WRKDIR}/ircii-${VERS}
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 .if defined(DEFAULT_IRC_SERVER)
