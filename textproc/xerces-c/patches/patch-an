@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1.1.1 2001/01/13 16:38:23 skrll Exp $
+
+--- util/Transcoders/Iconv/IconvTransService.cpp.orig	Sat Sep 30 18:37:34 2000
++++ util/Transcoders/Iconv/IconvTransService.cpp
+@@ -66,7 +66,7 @@
+ #include <util/XMLUni.hpp>
+ #include "IconvTransService.hpp"
+ #include <wchar.h>
+-#if defined (XML_GCC) || defined (XML_PTX) || defined (XML_IBMVAOS2)
++#if (defined (XML_GCC) || defined (XML_PTX) || defined (XML_IBMVAOS2)) && (!defined (XML_NETBSD))
+ #include <wctype.h>
+ #endif
+ #include <string.h>

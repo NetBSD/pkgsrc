@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2001/01/13 16:38:23 skrll Exp $
+
+--- util/AutoSense.hpp.orig	Sat Sep 30 18:37:28 2000
++++ util/AutoSense.hpp
+@@ -179,6 +179,8 @@
+     #define XML_MACOSX
+ #elif defined(__alpha) && defined(__osf__)
+     #define XML_TRU64
++#elif defined(__NetBSD__)
++    #define XML_NETBSD
+ #else
+     #error Code requires port to host OS!
+ #endif

@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1.1.1 2001/01/13 16:38:23 skrll Exp $
+
+--- util/Makefile.util.submodule.orig	Sat Sep 30 18:37:32 2000
++++ util/Makefile.util.submodule
+@@ -76,5 +76,5 @@
+ 	$(RM2) $(addprefix $(XML_INC_DIR)/$(MODULE)/$(SUBMODULE)/,$(CPP_PUBHEADERS))
+ 
+ install:
+-	-mkdir -p $(PREFIX)/$(MODULE)/$(SUBMODULE)
+-	$(CP) $(CPP_PUBHEADERS) $(PREFIX)/$(MODULE)/$(SUBMODULE)
++	-mkdir -p $(PREFIX)/include/$(MODULE)/$(SUBMODULE)
++	$(CP) $(CPP_PUBHEADERS) $(PREFIX)/include/$(MODULE)/$(SUBMODULE)

@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/01/13 16:38:27 skrll Exp $
+
+--- framework/Makefile.in.orig	Sat Sep 30 18:37:28 2000
++++ framework/Makefile.in
+@@ -179,5 +179,5 @@
+ 	$(RM2) $(addprefix $(XML_INC_DIR)/$(MODULE)/,$(FRAMEWORK_CPP_PUBHEADERS))
+ 
+ install::
+-	-mkdir -p $(PREFIX)/$(MODULE)
+-	$(CP) $(FRAMEWORK_CPP_PUBHEADERS) $(FRAMEWORK_C_FILES) $(PREFIX)/$(MODULE)
++	-mkdir -p $(PREFIX)/include/$(MODULE)
++	$(CP) $(FRAMEWORK_CPP_PUBHEADERS) $(FRAMEWORK_C_FILES) $(PREFIX)/include/$(MODULE)

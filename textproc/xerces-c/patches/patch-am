@@ -1,0 +1,14 @@
+$NetBSD: patch-am,v 1.1.1.1 2001/01/13 16:38:23 skrll Exp $
+
+--- util/Platforms/Makefile.in.orig	Sat Sep 30 18:37:34 2000
++++ util/Platforms/Makefile.in
+@@ -148,6 +148,9 @@
+ ifeq (${PLATFORM}, TRU64)
+ 	SUBMODULE = Tru64
+ endif
++ifeq (${PLATFORM}, NETBSD)
++	SUBMODULE = NetBSD
++endif
+ 
+ includes::
+ 	${CD} $(SUBMODULE) ; $(MAKE) $@ ; ${CD} ..

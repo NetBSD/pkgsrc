@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/01/13 16:38:27 skrll Exp $
+
+--- configure.orig	Sat Sep 30 18:37:26 2000
++++ configure
+@@ -1315,6 +1315,7 @@
+         *-*-os400*)     platform=OS400 ;;
+         *-*-OS400*)     platform=OS400 ;;
+         *-*-osf*)	platform=TRU64 ;;
++        *-*-netbsd*)	platform=NETBSD ;; 
+         *)              platform=UNKNOWN ;;
+ esac
+ 
+@@ -1485,6 +1486,7 @@
+ util/Platforms/PTX/Makefile \
+ util/Platforms/UnixWare/Makefile \
+ util/Platforms/Tru64/Makefile \
++util/Platforms/NetBSD/Makefile \
+ util/Compilers/Makefile \
+ util/MsgLoaders/InMemory/Makefile \
+ util/MsgLoaders/ICU/Makefile \
+@@ -1613,6 +1615,7 @@
+ util/Platforms/PTX/Makefile \
+ util/Platforms/UnixWare/Makefile \
+ util/Platforms/Tru64/Makefile \
++util/Platforms/NetBSD/Makefile \
+ util/Compilers/Makefile \
+ util/MsgLoaders/InMemory/Makefile \
+ util/MsgLoaders/ICU/Makefile \

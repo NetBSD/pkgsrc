@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/01/13 16:38:27 skrll Exp $
+
+--- parsers/Makefile.in.orig	Sat Sep 30 18:37:28 2000
++++ parsers/Makefile.in
+@@ -112,5 +112,5 @@
+ 	$(RM2) $(addprefix $(XML_INC_DIR)/$(MODULE)/,$(PARSERS_CPP_PUBHEADERS))
+ 
+ install::
+-	-mkdir -p $(PREFIX)/$(MODULE)
+-	$(CP) $(PARSERS_CPP_PUBHEADERS) $(PARSERS_C_FILES) $(PREFIX)/$(MODULE)
++	-mkdir -p $(PREFIX)/include/$(MODULE)
++	$(CP) $(PARSERS_CPP_PUBHEADERS) $(PARSERS_C_FILES) $(PREFIX)/include/$(MODULE)

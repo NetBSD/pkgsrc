@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1.1.1 2001/01/13 16:38:23 skrll Exp $
+
+--- sax2/Makefile.in.orig	Sat Sep 30 18:37:28 2000
++++ sax2/Makefile.in
+@@ -110,5 +110,5 @@
+ 	$(RM2) $(addprefix $(XML_INC_DIR)/$(MODULE)/,$(SAX2_CPP_PUBHEADERS))
+ 
+ install::
+-	-mkdir -p $(PREFIX)/$(MODULE)
+-	$(CP) $(SAX2_CPP_PUBHEADERS) $(SAX2_C_FILES) $(PREFIX)/$(MODULE)
++	-mkdir -p $(PREFIX)/include/$(MODULE)
++	$(CP) $(SAX2_CPP_PUBHEADERS) $(SAX2_C_FILES) $(PREFIX)/include/$(MODULE)
