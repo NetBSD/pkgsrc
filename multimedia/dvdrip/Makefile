@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/12 21:58:05 salo Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/10 13:48:31 wiz Exp $
 #
 
 VERS=		0.50.16
@@ -18,7 +18,7 @@ DEPENDS+=	mplayer>=0.90:../../multimedia/mplayer
 DEPENDS+=	ogmtools-[0-9]*:../../multimedia/ogmtools
 DEPENDS+=	p5-Gdk-Pixbuf-[0-9]*:../../graphics/p5-Gdk-Pixbuf
 DEPENDS+=	subtitleripper-[0-9]*:../../textproc/subtitleripper
-DEPENDS+=	transcode>=0.6.9:../../graphics/transcode
+DEPENDS+=	transcode>=0.6.9:../../multimedia/transcode
 DEPENDS+=	vcdimager>=0.7.12:../../sysutils/vcdimager-devel
 
 .if (${MACHINE_ARCH} == "i386")
