@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 1999/10/05 00:21:13 hubertf Exp $
+
+--- coda-src/vtools/Makefile.in.orig	Tue Oct  5 02:06:17 1999
++++ coda-src/vtools/Makefile.in	Tue Oct  5 02:06:50 1999
+@@ -41,7 +41,7 @@
+ 
+ include $(TOPDIR)/configs/Makerules
+ 
+-cmon: cmon.o $(CMON_LIBS)
++cmon: cmon.o
+ 	$(CXX) $(LIBFLAGS) cmon.o $(CMON_LIBS) -o cmon
+ 
+ codacon:    codacon.o
