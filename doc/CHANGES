@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9436 2005/03/06 03:25:12 uebayasi Exp $
+$NetBSD: CHANGES,v 1.9437 2005/03/06 05:24:10 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1290,3 +1290,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated imap-uw to 2004c1nb1 [adrianp 2005-03-05]
 	Updated xli to 1.17.0nb3 [fredb 2005-03-05]
 	Updated freepwing to 1.4.4nb1 [uebayasi 2005-03-06]
+	Added ja-sazanami-ttf-20040629 [uebayasi 2005-03-06]
+	Removed kochi-ttf-20030809 [uebayasi 2005-03-06]
