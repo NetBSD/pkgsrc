@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4638 2004/01/28 22:46:46 snj Exp $
+$NetBSD: CHANGES,v 1.4639 2004/01/29 15:46:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -523,3 +523,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated minivmac to 0.1.7nb1 [xtraeme 2004-01-28]
 	Updated xvile to 9.3nb1 [xtraeme 2004-01-28]
 	Added wmctrl-1.05 [snj 2004-01-28]
+	Updated poppassd to 4.0.5nb2 [taca 2004-01-28]
