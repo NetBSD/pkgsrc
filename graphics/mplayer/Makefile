@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2001/12/25 18:38:00 zuntum Exp $
-#
+# $NetBSD: Makefile,v 1.8 2001/12/26 00:58:04 zuntum Exp $
 
-DISTNAME=	MPlayer-0.18pre
-PKGNAME=	mplayer-0.18.0.1
+DISTNAME=	MPlayer-0.60pre1
+PKGNAME=	mplayer-0.60
 CATEGORIES=	graphics
-MASTER_SITES=	http://zuntum.utech.lublin.pl/distfiles/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	http://mp.dev.hu/MPlayer/releases/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	svs@ropnet.ru,zuntum@netbsd.org
 HOMEPAGE=	http://www.mplayerhq.hu/
@@ -15,6 +14,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5[Y-Z]*-i386
 
 DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
 BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
+REPLACE_BUILDLINK_PATTERNS+=	*.mak
 
 RESTRICTED=		"unsure of the license"
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -24,27 +24,26 @@ USE_X11=		YES
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
 
-WRKSRC=			${WRKDIR}/MPlayer-0.18pre5
+WRKSRC=			${WRKDIR}/${DISTNAME}
 
 CONFIGURE_ARGS+=	--prefix="${PREFIX}"
 CONFIGURE_ARGS+=	--with-extraincdir="${BUILDLINK_DIR}/include"
-CONFIGURE_ARGS+=	--with-extralibdir="${BUILDLINK_DIR}/lib"
+CONFIGURE_ARGS+=	--with-extralibdir="${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
-#CONFIGURE_ARGS+=	--disable-gcc-checking
 CONFIGURE_ARGS+=	--disable-css
-CONFIGURE_ARGS+=	--disable-streaming
 
-post-patch:
-	cd ${WRKSRC} && for i in TOOLS/audio-block.c TOOLS/audio-block2.c TOOLS/audio-select.c	\
-		libao2/ao_oss.c mp3lib/test2.c libac3/test2.c; do				\
-		${SED} "s,\/dev\/dsp,\/dev\/audio,g" $${i} >> $${i}.done;			\
-		${MV} -f $${i}.done $${i};							\
-	done;
+post-configure:
+	${CP} ${FILESDIR}/vcd_read_nbsd.c ${WRKSRC}/libmpdemux/vcd_read_nbsd.h
 
-post-install:
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/DOCS/mplayer.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer
+	${INSTALL_DATA} ${WRKSRC}/etc/codecs.conf ${PREFIX}/share/mplayer
 	${CP} -R ${WRKSRC}/DOCS ${PREFIX}/share/mplayer
 
+.include "../../audio/lame/buildlink.mk"
 .include "../../devel/SDL/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
+.include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
