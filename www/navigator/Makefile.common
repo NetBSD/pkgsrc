@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2002/12/23 16:33:42 cjep Exp $
+# $NetBSD: Makefile.common,v 1.60 2003/01/30 03:24:12 jschauma Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -67,8 +67,6 @@ VENDOR_NAME=	BSD/OS 2.1
 #
 .elif (${MACHINE_ARCH} == "i386")
 PLIST_ARCH=	linux-i386
-DEPENDS+=	suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTUNAME=	x86-unknown-linux2.2
 DIST_DIR_NAME=	supported/linux22
 WRKNAME=	x86-unknown-linux2.2
@@ -110,8 +108,6 @@ PKG_FAIL_REASON=  "There is no navigator-only package for PowerPC"
 PKG_FAIL_REASON+= "platform.  Please cd to ../communicator and"
 PKG_FAIL_REASON+= "install communicator package instead."
 .endif
-DEPENDS+=	suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
 NS_VERS=	4.73
 PKGNAME=	${BINNAME}-${NS_VERS}
 DISTNAME=	netscape-4.7-3.ppc
@@ -146,6 +142,11 @@ CATEGORIES=	www
 NS_NAME=	${BINNAME}-${NS_VERS}
 PKGNAME?=	${BINNAME}-${NS_VERS}
 DISTNAME?=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
+
+.if ((${OPSYS} != "Linux") && (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"))
+DEPENDS+=	suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
+.endif
 
 .if (${BINNAME} != "netscape")
 
