@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2518 2004/11/27 11:05:46 wiz Exp $
+$NetBSD: TODO,v 1.2519 2004/11/27 11:15:39 gson Exp $
 
 Suggested new packages
 ======================
@@ -963,7 +963,6 @@ Suggested package updates
 	o p5-Safe-Hole-0.10
 	o p5-Scalar-List-Utils-1.14
 	o p5-Sendmail-AccessDB-0.09
-	o p5-Set-IntSpan-1.08
 	o p5-Set-Scalar-1.19
 	o p5-Storable-2.13
 	o p5-Sys-Hostname-Long-1.2
