@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/08/14 21:42:14 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/15 19:40:04 jlam Exp $
 
 DISTNAME=	courier-imap-1.3.8.2
 CATEGORIES=	mail
@@ -22,7 +22,6 @@ CONFIGURE_ARGS+=	--with-db=db
 CONFIGURE_ARGS+=	--with-userdb=/etc/courier/userdb
 CONFIGURE_ARGS+=	--disable-root-check
 CONFIGURE_ENV+=		OPENSSL=${BUILDLINK_PREFIX.openssl}/bin/openssl
-CONFIGURE_ENV+=		SSLCERTS=${SSLCERTS}
 
 INSTALL_TARGET=		install-strip
 
@@ -31,6 +30,10 @@ INSTALL_TARGET=		install-strip
 #.if defined(USE_PAM)
 #.include "../../security/PAM/buildlink.mk"
 #.endif
+
+CONFIGURE_ARGS+=	--without-authpam
+CONFIGURE_ARGS+=	--without-authldap
+CONFIGURE_ARGS+=	--without-authmysql
 
 .if ${OPSYS} == "SunOS"
 .include "../../databases/db/buildlink.mk"
@@ -63,9 +66,9 @@ post-extract:
 			-e "s|^IMAPDSSLSTART=.*|IMAPDSSLSTART=YES|g"	\
 			-e "s|^POP3DSTART=.*|POP3DSTART=YES|g"		\
 			-e "s|^POP3DSSLSTART=.*|POP3DSSLSTART=YES|g"	\
-			-e "s|@datadir@/imapd.pem|@SSLCERTS@/imapd.pem|g" \
+			-e "s|@datadir@/imapd.pem|${SSLCERTS}/imapd.pem|g" \
 			-e "s|@datadir@/imapd.rand|@sysconfdir@/imapd.rand|g" \
-			-e "s|@datadir@/pop3d.pem|@SSLCERTS@/pop3d.pem|g" \
+			-e "s|@datadir@/pop3d.pem|${SSLCERTS}/pop3d.pem|g" \
 			-e "s|@datadir@/pop3d.rand|@sysconfdir@/pop3d.rand|g" \
 			$${file}.fixme > $${file};			\
 		if [ -x $${file}.fixme ]; then				\
