@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6129 2004/06/04 17:56:46 jmmv Exp $
+$NetBSD: CHANGES,v 1.6130 2004/06/05 03:19:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2781,3 +2781,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added java-wrapper-1.0 [jmmv 2004-06-04]
 	Updated glib2 to 2.4.2 [jmmv 2004-06-04]
 	Updated gtk2 to 2.4.2 [jmmv 2004-06-04]
+	Added p5-Unicode-IMAPUtf7-2.00 [taca 2004-06-05]
