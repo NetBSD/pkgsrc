@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1355 2003/02/14 02:50:06 hubertf Exp $
+$NetBSD: CHANGES,v 1.1356 2003/02/14 06:20:48 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -604,3 +604,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added matlab-mode-2.3 [dmcmahill 2003-02-13]
 	Updated aim to 1.5.277 [fredb 2003-02-14]
 	Updated xhippo 3.3 [hubertf 2003-02-14]
+	Added roundup-0.5.5 [lukem 2003-02-14]
