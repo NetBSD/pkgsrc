@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/28 16:34:11 agc Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/28 20:50:08 tron Exp $
 
 DISTNAME=		modeline_vfr.c
 PKGNAME=		modeline-20001121
@@ -16,7 +16,7 @@ do-extract:
 	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
 do-build:
-	cd ${WRKSRC}; ${CC} ${CPPFLAGS} ${DISTNAME} -o ${DISTNAME:S/.c//}
+	cd ${WRKSRC}; ${CC} ${CFLAGS} ${DISTNAME} -o ${DISTNAME:S/.c//}
 
 do-install:
 	${BSD_INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME:S/.c//} ${PREFIX}/bin
