@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/11 04:35:20 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/15 14:55:09 wiz Exp $
 #
 # This Makefile fragment is included by packages that use aspell.
 #
@@ -16,8 +16,6 @@ BUILDLINK_DEPENDS+=	aspell
 BUILDLINK_PACKAGES+=			aspell
 BUILDLINK_DEPENDS.aspell+=		aspell>=0.50.3nb2
 BUILDLINK_PKGSRCDIR.aspell?=		../../textproc/aspell
-
-.include "../../devel/ncurses/buildlink3.mk"
 
 .endif # ASPELL_BUILDLINK3_MK
 
