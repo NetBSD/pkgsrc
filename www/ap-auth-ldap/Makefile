@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2000/09/05 09:33:17 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/14 12:27:51 kleink Exp $
 
-DISTNAME=	auth_ldap-1.4.2
-PKGNAME=	ap-auth-ldap-1.4.2
+DISTNAME=	auth_ldap-1.5.2
+PKGNAME=	ap-auth-ldap-1.5.2
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.rudedog.org/auth_ldap/
 
@@ -19,11 +19,14 @@ do-build:
 	    -D WITH_OPENLDAP						\
 	    -I ${LOCALBASE}/include					\
 	    -L ${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lldap -llber	\
-	    auth_ldap.c auth_ldap_cache.c auth_ldap_config.c
+	    auth_ldap.c auth_ldap_cache.c auth_ldap_cache_mgr.c		\
+	    auth_ldap_config.c
 
 do-install:
 	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -i auth_ldap.so
 	-${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_ldap
+	${INSTALL_DATA} ${WRKSRC}/FAQ.html				\
+	    ${PREFIX}/share/doc/mod_auth_ldap
 	${INSTALL_DATA} ${WRKSRC}/auth_ldap.html			\
 	    ${PREFIX}/share/doc/mod_auth_ldap
 	${INSTALL_DATA} ${WRKSRC}/future-directions.html		\
