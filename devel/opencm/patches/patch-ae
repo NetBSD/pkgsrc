@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2004/09/16 13:34:13 agc Exp $
+$NetBSD: patch-ae,v 1.5 2004/12/04 23:37:14 jmmv Exp $
 
---- configure.orig	2003-06-19 04:49:44.000000000 +0100
-+++ configure	2004-09-16 14:24:54.000000000 +0100
-@@ -1909,7 +1909,7 @@
+--- configure.orig	2004-10-25 03:09:36.000000000 +0200
++++ configure
+@@ -4928,7 +4928,7 @@ else
              if test ! -d "$dir" ; then
          continue;
        fi
@@ -11,26 +11,13 @@ $NetBSD: patch-ae,v 1.4 2004/09/16 13:34:13 agc Exp $
          vl_cv_lib_kerberos="$dir"
          break;
        fi
-@@ -1997,11 +1997,21 @@
+@@ -5017,7 +5017,8 @@ if test -z "$DEFAULT_EDITOR"; then
      DEFAULT_EDITOR="vi"
  fi
  
 -case $host_os in solaris*|irix*)
 +case $host_os in
-+solaris*|irix*)
-     cat >> confdefs.h <<\EOF
++*)
+ 
+ cat >>confdefs.h <<\_ACEOF
  #define HAVE_SVR4_STATVFS 1
- EOF
- 
-+    ;;
-+netbsd*)
-+	if [ -f /usr/include/sys/statvfs.h ]; then
-+	    cat >> confdefs.h <<\EOF
-+#define HAVE_SVR4_STATVFS 1
-+EOF
-+
-+	fi
-+	;;
- esac
- 
- for ac_func in setlinebuf
