@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1803 2003/03/29 22:56:57 jmmv Exp $
+$NetBSD: CHANGES,v 1.1804 2003/03/30 23:42:46 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1347,3 +1347,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated djbdns to 1.05nb2 [salo 2003-03-29]
 	Updated kdrill to 5.11.6nb1 [jmmv 2003-03-29]
 	Updated xrolodex to 1.5nb1 [jmmv 2003-03-29]
+	Updated cvsync to 0.17.2 [gehenna 2003-03-30]
