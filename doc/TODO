@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.619 2003/06/05 07:25:54 wiz Exp $
+$NetBSD: TODO,v 1.620 2003/06/05 08:23:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -112,7 +112,6 @@ Suggested package updates
 	o ettercap-0.6.a
 	o exim-4.12 [pkg/19850]
 	o exim-4.20
-	o feh-1.2.6 [pkg/21777]
 	o festival-1.4.3
 	o file-roller-2.2.4 [pkg/21626]
 	o findutils-4.1.7
