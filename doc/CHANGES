@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5662 2004/04/19 17:35:20 hubertf Exp $
+$NetBSD: CHANGES,v 1.5663 2004/04/19 17:39:27 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2080,6 +2080,15 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxslt to 1.1.6 [wiz 2004-04-19]
 	Updated py-libxslt to 1.1.6 [minskim 2004-04-19]
 	Updated atk to 1.6.1 [jmmv 2004-04-19]
+<<<<<<< CHANGES
+	Updated libcdio to 0.68 [drochner 2004-04-19]
+	Added vobvopy-0.5.13 [drochner 2004-04-19]
+	Updated vcdimager-devel to 0.7.20 [drochner 2004-04-19]
+	Updated kermit to 8.0.211 [drochner 2004-04-19]
+	Updated dmalloc to 4.3.0 [drochner 2004-04-19]
+	Updated metakit-lib to 2.4.9.3 [drochner 2004-04-19]
+	Updated py-psycopg to 1.1.11 [drochner 2004-04-19]
+	Updated liboop to 1.0 [drochner 2004-04-19]
 	Added p5-ExtUtils-Depends-0.202 [xtraeme 2004-04-19]
 	Added p5-ExtUtils-PkgConfig-1.03 [xtraeme 2004-04-19]
 	Added p5-glib2-1.040 [xtraeme 2004-04-19]
