@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.399 2003/03/22 02:21:05 rh Exp $
+$NetBSD: TODO,v 1.400 2003/03/22 03:05:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -118,7 +118,6 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o gaim-0.59.9
 	o gauche-0.6.7 [kei]
-	o gcc3-3.2.2 [pkg/20308|jlam]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0
 	o gd-2.0.4
@@ -150,6 +149,7 @@ Suggested package updates
 	o inn 2.3.5
 	o ja-shinonome-0.9.10 [pkg/20832]
 	o jakarta-ant-1.5 [pkg/18322]
+	o jakarta-ant-1.5.2
 	o jakarta-tomcat-3.3.1a
 	o jed-0.99.16 [pkg/18937]
 	o jikes-1.18 [pkg/19979]
@@ -194,7 +194,7 @@ Suggested package updates
 	o netpbm-10.14
 	o netscape-7.02
 	o newscache-0.99.22p1
-	o nmap-3.20
+	o nmap-3.20 [pkg/20839]
 	o ns-flash-6.0.79
 	o nut-7.19
 	o ogle-0.9.1
