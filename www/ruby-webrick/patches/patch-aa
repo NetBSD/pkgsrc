@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2005/01/28 14:20:44 taca Exp $
+
+--- lib/webrick/httpauth.rb.orig	2003-07-23 04:20:42.000000000 +0900
++++ lib/webrick/httpauth.rb
+@@ -14,6 +14,7 @@ require 'webrick/httpauth/digestauth'
+ require 'webrick/httpauth/htpasswd'
+ require 'webrick/httpauth/htdigest'
+ require 'webrick/httpauth/htgroup'
++require 'base64'
+ 
+ module WEBrick
+   module HTTPAuth
+@@ -23,7 +24,7 @@ module WEBrick
+       user = pass = nil
+       if /^Basic\s+(.*)/o =~ req[req_field]
+         userpass = $1
+-        user, pass = decode64(userpass).split(":", 2)
++        user, pass = Base64.decode64(userpass).split(":", 2)
+       end
+       if block.call(user, pass)
+         req.user = user

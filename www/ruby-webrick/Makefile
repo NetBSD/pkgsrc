@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2004/12/01 15:40:23 taca Exp $
+# $NetBSD: Makefile,v 1.14 2005/01/28 14:20:44 taca Exp $
 #
 
 DISTNAME=	webrick-1.3.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www ruby
 MASTER_SITES=	http://www.webrick.org/src/
 
