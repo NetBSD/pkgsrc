@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2004/12/18 16:24:20 grant Exp $
+# $NetBSD: Makefile,v 1.124 2004/12/18 16:24:37 grant Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}			\
 			--enable-pop					\
 			--enable-imap
 
-.if (${OPSYS} == "SunOS")
+.if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--without-wc-funcs
 .endif
 
