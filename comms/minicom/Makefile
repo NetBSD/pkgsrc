@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/05/08 23:32:52 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/20 09:26:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
@@ -15,8 +15,6 @@ RUN_DEPENDS=	lrz:../../comms/lrzsz \
 
 WRKSRC=		${WRKDIR}/${PKGNAME}/src
 IS_INTERACTIVE=	yes
-
-MAN1=		minicom.1 runscript.1 ascii-xfr.1
 
 .if !defined(BATCH)
 pre-install:
