@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1352 2004/02/07 15:44:01 jmmv Exp $
+$NetBSD: TODO,v 1.1353 2004/02/07 17:21:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -148,7 +148,6 @@ Suggested package updates
 	o courier-imap-2.0 [pkg/22374]
 	o courier-imap-2.1
 	o crafty-19.5
-	o crimsonfields-0.3.8
 	o crossfire-1.5.0
 	o cscope-15.5
 	o cvs-1.12.3
