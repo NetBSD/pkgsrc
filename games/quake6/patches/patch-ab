@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2000/08/26 05:56:48 itojun Exp $
+--- configure.in.orig	Tue Jan 11 20:10:13 2000
++++ configure.in	Sat Aug 26 14:52:52 2000
+@@ -41,2 +41,3 @@
+ dnl Checks for X11 support
++AC_PATH_X
+ AC_PATH_XTRA
+@@ -45,3 +46,3 @@
+    AC_CHECK_LIB(Xext, XShmQueryExtension, [X11_SHM_LIB=-lXext],
+-     [X11_SHM_LIB=""], [ $X_LIBS $X_EXTRA_LIBS ])
++     [X11_SHM_LIB=""], [ $X_LIBS $X_EXTRA_LIBS -lX11])
+ fi

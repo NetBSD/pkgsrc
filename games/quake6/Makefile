@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/21 21:01:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/26 05:56:46 itojun Exp $
 
 DISTNAME=	quake-v6-bsd-kame
 PKGNAME=	quake6-0.0
@@ -13,6 +13,7 @@ MAINTAINER=	itojun@kame.net
 HOMEPAGE=	http://www.viagenie.qc.ca/en/ipv6-quake.shtml
 
 DEPENDS=	quakedata-*:../../games/quakedata
+BUILD_DEPENDS=	autoreconf:../../devel/autoconf
 
 WRKSRC=		${WRKDIR}/quakeforge
 
@@ -32,5 +33,8 @@ IGNORE=		"${PKGNAME} requires IPv6 support"
 
 # "bindir" setting is very non-standard for GNU autoconf
 CONFIGURE_ARGS+=--disable-asmopt --bindir=/bin
+
+post-patch:
+	(cd ${WRKSRC}; autoreconf)
 
 .include "../../mk/bsd.pkg.mk"
