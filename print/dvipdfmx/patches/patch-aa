@@ -1,19 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/02/24 15:29:25 kei Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/07 04:59:43 minskim Exp $
 
---- data/config/dvipdfmx.cfg.orig	Sun Feb 23 18:44:33 2003
-+++ data/config/dvipdfmx.cfg	Sun Feb 23 18:44:52 2003
-@@ -76,10 +76,11 @@
+--- src/type0.c.orig	2002-12-30 00:12:42.000000000 -0600
++++ src/type0.c
+@@ -102,7 +102,7 @@ static void load_tounicode_cmap_identity
+   MFCLOSE (fp);
  
- % Font map files
- %
--f cmr.map
--f psbase14.map
-+% f cmr.map
-+% f psbase14.map
- % Most distributions now use these names
--f lw35urw.map
-+% f lw35urw.map
- % Some use these names
- % f lw35urwa.map
- f cid-x.map
-+f dvipdfm.map
+   stream = pdf_new_stream(STREAM_COMPRESS);
+-  tounicode_cmap_identity = pdf_link_obj(pdf_ref_obj(stream));
++  tounicode_cmap_identity = pdf_ref_obj(stream);
+ 
+   pdf_add_dict(pdf_stream_dict(stream),
+ 	       pdf_new_name("Length"), pdf_new_number(length));
+@@ -398,7 +398,7 @@ int type0_font (const char *map_name, in
+     if (tounicode_cmap_identity == NULL)
+       load_tounicode_cmap_identity();
+     pdf_add_dict (font_resource, pdf_new_name("ToUnicode"),
+-		  tounicode_cmap_identity);
++		  pdf_link_obj(tounicode_cmap_identity));
+   }
+ 
+   /* finaly write Encoding */

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/12/24 13:02:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/07 04:59:43 minskim Exp $
 
-DISTNAME=	dvipdfmx-20021230
-PKGNAME=	dvipdfmx-0.0.0.20021230
-PKGREVISION=	3
+DISTNAME=	dvipdfmx-20031116
+PKGNAME=	${DISTNAME:S/-/-0.0.0./}
 CATEGORIES=	print converters
-MASTER_SITES=	http://project.ktug.or.kr/dvipdfmx/snapshot/
+MASTER_SITES=	http://project.ktug.or.kr/dvipdfmx/snapshot/release/
 
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/dvipdfmx/
@@ -24,10 +23,6 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 GNU_CONFIGURE=		YES
 #CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 
-post-patch:
-		${RM} ${WRKSRC}/data/config/*.orig
-
-.include "../../security/openssl/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
