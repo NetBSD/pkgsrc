@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/07/06 16:28:53 recht Exp $
+# $NetBSD: Makefile,v 1.15 2004/09/01 14:30:19 jmmv Exp $
 #
 
-DISTNAME=		gstreamer-0.8.3
-PKGREVISION=		2
+DISTNAME=		gstreamer-0.8.5
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gstreamer/0.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -39,6 +38,16 @@ PYTHON_VERSIONS_ACCEPTED=	23 23pth 22 22pth
 # won't work at all.
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb1
 .endif
+
+# XXX: Set up compatibility links for gstreamer-0.8.3; this is just a
+# workaround for our broken libtool naming, and it should be removed when
+# our libtool is fixed.
+post-install:
+.for f in gstcontrol gstreamer
+	cd ${PREFIX}/lib && ${LN} -fs lib${f}-0.8.so.5 lib${f}-0.8.so.3
+	cd ${PREFIX}/lib && ${LN} -fs lib${f}-0.8.so.5.0 lib${f}-0.8.so.3.0
+.endfor
+.undef f
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
