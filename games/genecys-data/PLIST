@@ -1,51 +1,66 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/10 22:01:23 garbled Exp $
-share/genecys/arch/plants/trees/douflan_pine.xgm
-share/genecys/arch/plants/trees/tree6.xgm
+@comment $NetBSD: PLIST,v 1.2 2004/04/09 03:44:30 garbled Exp $
 share/genecys/arch/plants/trees/tree2.xgm
-share/genecys/arch/plants/trees/tree3.xgm
 share/genecys/arch/plants/trees/tree4.xgm
 share/genecys/arch/plants/trees/tree5.xgm
 share/genecys/arch/plants/trees/deadtree1.xgm
 share/genecys/arch/plants/trees/deadtree2.xgm
-share/genecys/arch/plants/trees/deadtree3.xgm
 share/genecys/arch/plants/trees/tree7.xgm
-share/genecys/arch/plants/trees/tree8.xgm
-share/genecys/arch/plants/trees/tree9.xgm
 share/genecys/arch/plants/trees/tree10.xgm
 share/genecys/arch/plants/trees/tree11.xgm
 share/genecys/arch/plants/trees/palm1.xgm
 share/genecys/arch/plants/trees/sapling1.xgm
 share/genecys/arch/plants/trees/sapling2.xgm
 share/genecys/arch/plants/trees/tree12.xgm
-share/genecys/arch/plants/flowers/flower1.xgm
-share/genecys/arch/plants/flowers/lilly1.xgm
-share/genecys/arch/plants/flowers/purpleflower1.xgm
+share/genecys/arch/plants/trees/douflan_pine.xgm
+share/genecys/arch/plants/trees/tree3.xgm
+share/genecys/arch/plants/trees/tree6.xgm
+share/genecys/arch/plants/trees/deadtree3.xgm
+share/genecys/arch/plants/trees/tree8.xgm
+share/genecys/arch/plants/trees/tree9.xgm
 share/genecys/arch/plants/flowers/purpleflower2.xgm
 share/genecys/arch/plants/flowers/redflower1.xgm
 share/genecys/arch/plants/flowers/cattail1.xgm
 share/genecys/arch/plants/flowers/tulip1.xgm
 share/genecys/arch/plants/flowers/daisy1.xgm
-share/genecys/arch/plants/flowers/daisy2.xgm
 share/genecys/arch/plants/flowers/flower2.xgm
 share/genecys/arch/plants/flowers/flower3.xgm
 share/genecys/arch/plants/flowers/flower4.xgm
-share/genecys/arch/plants/flowers/pottedflower1.xgm
 share/genecys/arch/plants/flowers/flower5.xgm
 share/genecys/arch/plants/flowers/flower6.xgm
+share/genecys/arch/plants/flowers/flower1.xgm
+share/genecys/arch/plants/flowers/lilly1.xgm
+share/genecys/arch/plants/flowers/daisy2.xgm
+share/genecys/arch/plants/flowers/purpleflower1.xgm
+share/genecys/arch/plants/flowers/pottedflower1.xgm
 share/genecys/arch/plants/flowers/flower7.xgm
 share/genecys/arch/plants/flowers/lilly2.xgm
 share/genecys/arch/plants/flowers/flower8.xgm
-share/genecys/arch/plants/shrubs/fern1.xgm
-share/genecys/arch/plants/shrubs/mushroom1.xgm
-share/genecys/arch/plants/shrubs/bush1.xgm
+share/genecys/arch/plants/flowers/flower9.xgm
 share/genecys/arch/plants/shrubs/bush2.xgm
 share/genecys/arch/plants/shrubs/grass1.xgm
 share/genecys/arch/plants/shrubs/reed1.xgm
 share/genecys/arch/plants/shrubs/reed2.xgm
 share/genecys/arch/plants/shrubs/shrub1.xgm
-share/genecys/arch/plants/shrubs/cactus1.xgm
 share/genecys/arch/plants/shrubs/weed1.xgm
 share/genecys/arch/plants/shrubs/shrub2.xgm
+share/genecys/arch/plants/shrubs/fern1.xgm
+share/genecys/arch/plants/shrubs/mushroom1.xgm
+share/genecys/arch/plants/shrubs/bush1.xgm
+share/genecys/arch/plants/shrubs/cactus1.xgm
+share/genecys/arch/humans/males/farmer/farmer.xcm
+share/genecys/arch/humans/males/farmer/arms.cmf
+share/genecys/arch/humans/males/farmer/boots_tall.cmf
+share/genecys/arch/humans/males/farmer/hat.cmf
+share/genecys/arch/humans/males/farmer/head_basic.cmf
+share/genecys/arch/humans/males/farmer/head_hawkish.cmf
+share/genecys/arch/humans/males/farmer/male_face.cmf
+share/genecys/arch/humans/males/farmer/pants.cmf
+share/genecys/arch/humans/males/farmer/shirt_long.cmf
+share/genecys/arch/humans/males/farmer/shirt_short.cmf
+share/genecys/arch/humans/males/male1.csf
+share/genecys/arch/humans/males/male1_idle.caf
+share/genecys/arch/humans/males/male1_jog.caf
+share/genecys/arch/humans/males/male1_walk.caf
 share/genecys/arch/humans/females/paladin/paladin.xcm
 share/genecys/arch/humans/females/paladin/paladin_walk.caf
 share/genecys/arch/humans/females/paladin/paladin_strut.caf
@@ -64,9 +79,6 @@ share/genecys/arch/objects/magic/potions/flask2.xgm
 share/genecys/arch/objects/magic/scrolls/scroll1.xgm
 share/genecys/arch/objects/magic/cauldron1.xgm
 share/genecys/arch/objects/magic/cauldron2.xgm
-share/genecys/arch/objects/containers/barrel1.xgm
-share/genecys/arch/objects/containers/flowerpot1.xgm
-share/genecys/arch/objects/containers/flowerpot2_dirt.xgm
 share/genecys/arch/objects/containers/flowerpot2.xgm
 share/genecys/arch/objects/containers/bottle1.xgm
 share/genecys/arch/objects/containers/mailbox1.xgm
@@ -78,13 +90,11 @@ share/genecys/arch/objects/containers/planter1.xgm
 share/genecys/arch/objects/containers/casket1.xgm
 share/genecys/arch/objects/containers/jar2.xgm
 share/genecys/arch/objects/containers/jar3.xgm
-share/genecys/arch/objects/containers/bucket2.xgm
 share/genecys/arch/objects/containers/bucket3.xgm
 share/genecys/arch/objects/containers/bucket4.xgm
 share/genecys/arch/objects/containers/bucket5.xgm
 share/genecys/arch/objects/containers/bucket6.xgm
 share/genecys/arch/objects/containers/bowl1.xgm
-share/genecys/arch/objects/containers/bowl2.xgm
 share/genecys/arch/objects/containers/chalice1.xgm
 share/genecys/arch/objects/containers/jar4.xgm
 share/genecys/arch/objects/containers/jar5.xgm
@@ -92,187 +102,237 @@ share/genecys/arch/objects/containers/jar6.xgm
 share/genecys/arch/objects/containers/jar7.xgm
 share/genecys/arch/objects/containers/jar8.xgm
 share/genecys/arch/objects/containers/jar9.xgm
-share/genecys/arch/objects/rocks/rock1.xgm
-share/genecys/arch/objects/rocks/rock2.xgm
-share/genecys/arch/objects/rocks/rock3.xgm
+share/genecys/arch/objects/containers/barrel1.xgm
+share/genecys/arch/objects/containers/flowerpot1.xgm
+share/genecys/arch/objects/containers/bucket2.xgm
+share/genecys/arch/objects/containers/flowerpot2_dirt.xgm
+share/genecys/arch/objects/containers/bowl2.xgm
 share/genecys/arch/objects/rocks/rock4.xgm
 share/genecys/arch/objects/rocks/rock5.xgm
 share/genecys/arch/objects/rocks/rock6.xgm
 share/genecys/arch/objects/rocks/rock7.xgm
-share/genecys/arch/objects/rocks/rock8.xgm
 share/genecys/arch/objects/rocks/rock9.xgm
 share/genecys/arch/objects/rocks/rock10.xgm
 share/genecys/arch/objects/rocks/rock11.xgm
 share/genecys/arch/objects/rocks/rock12.xgm
-share/genecys/arch/objects/signs/sign1.xgm
-share/genecys/arch/objects/signs/banner1.xgm
-share/genecys/arch/objects/signs/pictureframe1.xgm
+share/genecys/arch/objects/rocks/rock1.xgm
+share/genecys/arch/objects/rocks/rock2.xgm
+share/genecys/arch/objects/rocks/rock3.xgm
+share/genecys/arch/objects/rocks/rock8.xgm
 share/genecys/arch/objects/signs/pictureframe2.xgm
 share/genecys/arch/objects/signs/tombstone1.xgm
 share/genecys/arch/objects/signs/gravestone1.xgm
+share/genecys/arch/objects/signs/sign1.xgm
+share/genecys/arch/objects/signs/banner1.xgm
+share/genecys/arch/objects/signs/pictureframe1.xgm
 share/genecys/arch/objects/farm/strawbale1.xgm
 share/genecys/arch/objects/farm/scarecrow1.xgm
-share/genecys/arch/objects/tools/pitchfork1.xgm
-share/genecys/arch/objects/tools/rollingpin1.xgm
-share/genecys/arch/objects/tools/broom1.xgm
 share/genecys/arch/objects/tools/anvil1.xgm
 share/genecys/arch/objects/tools/ladder1.xgm
 share/genecys/arch/objects/tools/saw1.xgm
 share/genecys/arch/objects/tools/ladder2.xgm
-share/genecys/arch/objects/furniture/chairs/stool1.xgm
-share/genecys/arch/objects/furniture/chairs/bench1.xgm
-share/genecys/arch/objects/furniture/chairs/stonechair1.xgm
+share/genecys/arch/objects/tools/pitchfork1.xgm
+share/genecys/arch/objects/tools/broom1.xgm
+share/genecys/arch/objects/tools/rollingpin1.xgm
 share/genecys/arch/objects/furniture/chairs/chair1.xgm
 share/genecys/arch/objects/furniture/chairs/chair2.xgm
+share/genecys/arch/objects/furniture/chairs/stool1.xgm
+share/genecys/arch/objects/furniture/chairs/stonechair1.xgm
+share/genecys/arch/objects/furniture/chairs/bench1.xgm
 share/genecys/arch/objects/furniture/shelves/bookshelf1.xgm
-share/genecys/arch/objects/furniture/shelves/coatrack1.xgm
 share/genecys/arch/objects/furniture/shelves/bookshelf2.xgm
-share/genecys/arch/objects/furniture/tables/table1.xgm
-share/genecys/arch/objects/furniture/tables/table2.xgm
-share/genecys/arch/objects/furniture/tables/table3.xgm
+share/genecys/arch/objects/furniture/shelves/coatrack1.xgm
 share/genecys/arch/objects/furniture/tables/pictable1.xgm
 share/genecys/arch/objects/furniture/tables/table4.xgm
 share/genecys/arch/objects/furniture/tables/table5.xgm
+share/genecys/arch/objects/furniture/tables/table1.xgm
+share/genecys/arch/objects/furniture/tables/table3.xgm
+share/genecys/arch/objects/furniture/tables/table2.xgm
 share/genecys/arch/objects/furniture/fireplace1.xgm
 share/genecys/arch/objects/lights/chandelier1.xgm
 share/genecys/arch/objects/lights/lantern1.xgm
-share/genecys/arch/objects/food/banana1.xgm
-share/genecys/arch/objects/food/soup1.xgm
-share/genecys/arch/objects/food/milk1.xgm
 share/genecys/arch/objects/food/broccoli1.xgm
 share/genecys/arch/objects/food/grapebowl1.xgm
+share/genecys/arch/objects/food/banana1.xgm
+share/genecys/arch/objects/food/milk1.xgm
+share/genecys/arch/objects/food/soup1.xgm
 share/genecys/arch/objects/readables/book1.xgm
-share/genecys/arch/objects/readables/book2.xgm
 share/genecys/arch/objects/readables/book3.xgm
-share/genecys/arch/objects/misc/shell1.xgm
-share/genecys/arch/objects/misc/feather1.xgm
-share/genecys/arch/objects/misc/candlestick1.xgm
+share/genecys/arch/objects/readables/book2.xgm
 share/genecys/arch/objects/misc/candlestick2.xgm
 share/genecys/arch/objects/misc/candlestick3.xgm
+share/genecys/arch/objects/misc/shell1.xgm
+share/genecys/arch/objects/misc/candlestick1.xgm
+share/genecys/arch/objects/misc/feather1.xgm
 share/genecys/arch/objects/wheeled/wagon1.xgm
-share/genecys/arch/objects/wheeled/wagon2.xgm
 share/genecys/arch/objects/wheeled/wagon3.xgm
+share/genecys/arch/objects/wheeled/wagon2.xgm
 share/genecys/arch/objects/boats/canoe1.xgm
 share/genecys/arch/objects/musical/sitar1.xgm
 share/genecys/arch/objects/musical/shinai1.xgm
 share/genecys/arch/objects/traps/punji1.xgm
 share/genecys/arch/objects/statues/easter1.xgm
-share/genecys/arch/objects/statues/celticcross1.xgm
 share/genecys/arch/objects/statues/monument1.xgm
-share/genecys/arch/structures/walls/fence1.xgm
-share/genecys/arch/structures/walls/fence2.xgm
-share/genecys/arch/structures/walls/fencepost1.xgm
+share/genecys/arch/objects/statues/celticcross1.xgm
 share/genecys/arch/structures/walls/fence3.xgm
 share/genecys/arch/structures/walls/gate1.xgm
+share/genecys/arch/structures/walls/fence1.xgm
+share/genecys/arch/structures/walls/fencepost1.xgm
+share/genecys/arch/structures/walls/fence2.xgm
+share/genecys/arch/structures/houses/simple/teepee1.xgm
+share/genecys/arch/structures/houses/simple/igloo1.xgm
 share/genecys/arch/structures/houses/simple/high-house.xgm
 share/genecys/arch/structures/houses/simple/richfarm.xgm
 share/genecys/arch/structures/houses/simple/village-house.xgm
-share/genecys/arch/structures/houses/simple/teepee1.xgm
-share/genecys/arch/structures/houses/simple/igloo1.xgm
 share/genecys/arch/structures/houses/shack1.xgm
-share/genecys/arch/structures/houses/pueblo1.xgm
 share/genecys/arch/structures/houses/outhouse1.xgm
-share/genecys/arch/structures/wells/shaft1.xgm
-share/genecys/arch/structures/wells/well1.xgm
-share/genecys/arch/structures/wells/well2.xgm
+share/genecys/arch/structures/houses/pueblo1.xgm
 share/genecys/arch/structures/wells/well3.xgm
 share/genecys/arch/structures/wells/fountain1.xgm
+share/genecys/arch/structures/wells/shaft1.xgm
+share/genecys/arch/structures/wells/well2.xgm
+share/genecys/arch/structures/wells/well1.xgm
 share/genecys/arch/structures/castles/castle1.xgm
 share/genecys/arch/structures/castles/pyramid1.xgm
 share/genecys/arch/structures/barns/barn1.xgm
-share/genecys/arch/structures/temples/church1.xgm
-share/genecys/arch/structures/temples/dojo1.xgm
-share/genecys/arch/structures/temples/dojo2.xgm
 share/genecys/arch/structures/temples/sphinx1.xgm
 share/genecys/arch/structures/temples/mausoleum1.xgm
 share/genecys/arch/structures/temples/crypt1.xgm
 share/genecys/arch/structures/temples/church2.xgm
+share/genecys/arch/structures/temples/church1.xgm
+share/genecys/arch/structures/temples/dojo1.xgm
+share/genecys/arch/structures/temples/dojo2.xgm
 share/genecys/arch/structures/temples/crypt2.xgm
 share/genecys/arch/structures/parks/gazebo1.xgm
 share/genecys/arch/structures/bridges/bridge1.xgm
 share/genecys/arch/structures/piers/pier1.xgm
-share/genecys/arch/structures/towers/lighthouse1.xgm
-share/genecys/arch/structures/towers/windmill1.xgm
-share/genecys/arch/structures/towers/tower1.xgm
 share/genecys/arch/structures/towers/tower2.xgm
 share/genecys/arch/structures/towers/guardtower1.xgm
+share/genecys/arch/structures/towers/lighthouse1.xgm
+share/genecys/arch/structures/towers/tower1.xgm
+share/genecys/arch/structures/towers/windmill1.xgm
 share/genecys/arch/structures/animal/nest1.xgm
 share/genecys/arch/structures/execution/gallows1.xgm
 share/genecys/arch/structures/execution/executionblock1.xgm
-share/genecys/arch/weapons/swords/sword1.xgm
-share/genecys/arch/weapons/swords/sword3.xgm
-share/genecys/arch/weapons/swords/sword4.xgm
 share/genecys/arch/weapons/swords/sword5.xgm
 share/genecys/arch/weapons/swords/katana1.xgm
 share/genecys/arch/weapons/swords/katana2.xgm
-share/genecys/arch/weapons/swords/claymore1.xgm
 share/genecys/arch/weapons/swords/sword6.xgm
 share/genecys/arch/weapons/swords/rapier1.xgm
 share/genecys/arch/weapons/swords/sword7.xgm
 share/genecys/arch/weapons/swords/sword8.xgm
 share/genecys/arch/weapons/swords/sword9.xgm
 share/genecys/arch/weapons/swords/rapier2.xgm
+share/genecys/arch/weapons/swords/sword1.xgm
+share/genecys/arch/weapons/swords/sword3.xgm
+share/genecys/arch/weapons/swords/sword4.xgm
+share/genecys/arch/weapons/swords/claymore1.xgm
 share/genecys/arch/weapons/swords/short_sword1.xgm
-share/genecys/arch/weapons/spears/lance1.xgm
-share/genecys/arch/weapons/spears/naginata1.xgm
-share/genecys/arch/weapons/spears/polearm1.xgm
-share/genecys/arch/weapons/spears/polearm2.xgm
 share/genecys/arch/weapons/spears/polearm3.xgm
 share/genecys/arch/weapons/spears/polearm4.xgm
-share/genecys/arch/weapons/knives/knife1.xgm
-share/genecys/arch/weapons/knives/dagger1.xgm
-share/genecys/arch/weapons/knives/sai1.xgm
+share/genecys/arch/weapons/spears/lance1.xgm
+share/genecys/arch/weapons/spears/polearm1.xgm
+share/genecys/arch/weapons/spears/naginata1.xgm
+share/genecys/arch/weapons/spears/polearm2.xgm
 share/genecys/arch/weapons/knives/dagger2.xgm
 share/genecys/arch/weapons/knives/dagger3.xgm
 share/genecys/arch/weapons/knives/dagger4.xgm
-share/genecys/arch/weapons/axes/battleaxe1.xgm
-share/genecys/arch/weapons/axes/tomahawk1.xgm
-share/genecys/arch/weapons/axes/stoneaxe1.xgm
+share/genecys/arch/weapons/knives/knife1.xgm
+share/genecys/arch/weapons/knives/sai1.xgm
+share/genecys/arch/weapons/knives/dagger1.xgm
 share/genecys/arch/weapons/axes/battleaxe2.xgm
 share/genecys/arch/weapons/axes/battleaxe3.xgm
 share/genecys/arch/weapons/axes/battleaxe4.xgm
 share/genecys/arch/weapons/axes/battleaxe5.xgm
-share/genecys/arch/weapons/bludgeon/club1.xgm
-share/genecys/arch/weapons/bludgeon/ballmace1.xgm
-share/genecys/arch/weapons/bludgeon/spikeclub1.xgm
+share/genecys/arch/weapons/axes/battleaxe1.xgm
+share/genecys/arch/weapons/axes/stoneaxe1.xgm
+share/genecys/arch/weapons/axes/tomahawk1.xgm
 share/genecys/arch/weapons/bludgeon/spikeclub2.xgm
 share/genecys/arch/weapons/bludgeon/mace1.xgm
 share/genecys/arch/weapons/bludgeon/spikeclub3.xgm
+share/genecys/arch/weapons/bludgeon/club1.xgm
+share/genecys/arch/weapons/bludgeon/spikeclub1.xgm
+share/genecys/arch/weapons/bludgeon/ballmace1.xgm
 share/genecys/arch/weapons/shooters/slingshot1.xgm
 share/genecys/arch/weapons/shooters/cataplut1.xgm
 share/genecys/arch/weapons/projectiles/arrow1.xgm
 share/genecys/arch/armor/shields/shield1.xgm
 share/genecys/arch/armor/shields/round1.xgm
-share/genecys/arch/armor/body/cuirass1.xgm
-share/genecys/arch/armor/body/tassets1.xgm
 share/genecys/arch/armor/body/tassets2.xgm
 share/genecys/arch/armor/body/plate1.xgm
-share/genecys/arch/armor/body/pauldron_r1.xgm
 share/genecys/arch/armor/body/pauldron_l1.xgm
+share/genecys/arch/armor/body/cuirass1.xgm
+share/genecys/arch/armor/body/tassets1.xgm
+share/genecys/arch/armor/body/pauldron_r1.xgm
 share/genecys/arch/armor/boots/leftsabaton1.xgm
 share/genecys/arch/armor/boots/rightsabaton1.xgm
+share/genecys/arch/armor/helmets/horned1.xgm
 share/genecys/arch/armor/helmets/visoredhelm1.xgm
 share/genecys/arch/armor/helmets/skullcap1.xgm
-share/genecys/arch/armor/helmets/horned1.xgm
 share/genecys/arch/armor/gloves/lgauntlet1.xgm
 share/genecys/arch/armor/gloves/rgauntlet1.xgm
 share/genecys/arch/spells/cold/snowflake1.xgm
-share/genecys/etc/gtextures.xml
-share/genecys/etc/archetypes.xml
+share/genecys/arch/animals/mammals/quadrupeds/cogre/cogre.xcm
+share/genecys/arch/animals/mammals/quadrupeds/cogre/cogre.cmf
+share/genecys/arch/animals/mammals/quadrupeds/pig/pig.xcm
+share/genecys/arch/animals/mammals/quadrupeds/pig/pig.cmf
+share/genecys/arch/animals/mammals/quadrupeds/pigwalk.caf
+share/genecys/arch/animals/mammals/quadrupeds/pigskel.csf
+share/genecys/arch/animals/mammals/quadrupeds/pigidle.caf
+share/genecys/arch/demihumans/orc/orc.xcm
+share/genecys/arch/demihumans/orc/orc.cmf
+share/genecys/arch/demihumans/orc/walk.caf
+share/genecys/arch/demihumans/orc/jog.caf
+share/genecys/arch/demihumans/orc/orc.csf
+share/genecys/arch/demihumans/orc/idle.caf
+share/genecys/arch/demihumans/goblin/goblin.xcm
+share/genecys/arch/demihumans/goblin/goblin.cmf
+share/genecys/arch/demihumans/goblin/goblin.csf
+share/genecys/arch/demihumans/goblin/idle.caf
+share/genecys/arch/demihumans/goblin/walk.caf
+share/genecys/arch/demihumans/goblin/run.caf
+share/genecys/arch/demihumans/bugbear/bugbear.xcm
+share/genecys/arch/demihumans/bugbear/bugbear.cmf
+share/genecys/arch/demihumans/bugbear/bugbear.csf
+share/genecys/arch/demihumans/bugbear/idle.caf
+share/genecys/arch/demihumans/bugbear/jog.caf
+share/genecys/arch/demihumans/bugbear/walk.caf
 share/genecys/etc/motd
-share/genecys/map/mapelev.png
-share/genecys/map/mapterr.png
-share/genecys/map/map.xml
-share/genecys/textures/human/faces/blue_porcelain.jpg
-share/genecys/textures/human/faces/foxylady.jpg
-share/genecys/textures/human/faces/oldman.jpg
-share/genecys/textures/human/faces/worker.jpg
-share/genecys/textures/human/faces/youngman.jpg
-share/genecys/textures/human/faces/woman1.jpg
-share/genecys/textures/human/faces/woman2.jpg
-share/genecys/textures/human/faces/paladin.jpg
-share/genecys/textures/human/faces/headman1.jpg
-share/genecys/textures/human/faces/headman2.jpg
+share/genecys/etc/languages.xml
+share/genecys/etc/archetypes.xml
+share/genecys/libdata/skymaps.xml
+share/genecys/libdata/gtextures.xml
+share/genecys/libdata/elvish.lang
+share/genecys/map/mapgroups.xml
+share/genecys/map/world01/mapgroup.xml
+share/genecys/map/world01/terr_00_00.png
+share/genecys/map/world01/terr_00_01.png
+share/genecys/map/world01/terr_00_02.png
+share/genecys/map/world01/terr_01_00.png
+share/genecys/map/world01/terr_01_01.png
+share/genecys/map/world01/terr_01_02.png
+share/genecys/map/world01/terr_02_00.png
+share/genecys/map/world01/terr_02_01.png
+share/genecys/map/world01/elev_00_00.png
+share/genecys/map/world01/elev_01_00.png
+share/genecys/map/world01/elev_01_01.png
+share/genecys/map/world01/elev_01_02.png
+share/genecys/map/world01/elev_00_01.png
+share/genecys/map/world01/elev_00_02.png
+share/genecys/map/world01/elev_02_00.png
+share/genecys/map/world01/map_00_00.xml
+share/genecys/map/world01/terr_02_02.png
+share/genecys/map/world01/elev_02_02.png
+share/genecys/map/world01/big.png
+share/genecys/map/world01/map_00_01.xml
+share/genecys/map/world01/map_00_02.xml
+share/genecys/map/world01/map_01_00.xml
+share/genecys/map/world01/map_01_01.xml
+share/genecys/map/world01/map_01_02.xml
+share/genecys/map/world01/map_02_00.xml
+share/genecys/map/world01/map_02_01.xml
+share/genecys/map/world01/map_02_02.xml
+share/genecys/map/world01/elev_02_01.png
 share/genecys/textures/human/faces/headman1.crf
 share/genecys/textures/human/faces/headman2.crf
 share/genecys/textures/human/faces/worker.crf
@@ -283,15 +343,29 @@ share/genecys/textures/human/faces/paladin.crf
 share/genecys/textures/human/faces/blue_porcelain.crf
 share/genecys/textures/human/faces/foxylady.crf
 share/genecys/textures/human/faces/woman2.crf
+share/genecys/textures/human/faces/blue_porcelain.jpg
+share/genecys/textures/human/faces/foxylady.jpg
+share/genecys/textures/human/faces/oldman.jpg
+share/genecys/textures/human/faces/worker.jpg
+share/genecys/textures/human/faces/youngman.jpg
+share/genecys/textures/human/faces/woman1.jpg
+share/genecys/textures/human/faces/woman2.jpg
+share/genecys/textures/human/faces/paladin.jpg
+share/genecys/textures/human/faces/headman1.jpg
+share/genecys/textures/human/faces/headman2.jpg
 share/genecys/textures/body/eyes/eyebr2.jpg
 share/genecys/textures/body/eyes/eyebl1.png
 share/genecys/textures/body/eyes/eyebr1.png
-share/genecys/textures/clothing/pants/pants.jpg
 share/genecys/textures/clothing/pants/pants.crf
-share/genecys/textures/clothing/shirts/shirtbr.jpg
+share/genecys/textures/clothing/pants/pants.jpg
 share/genecys/textures/clothing/shirts/shirtbr.crf
-share/genecys/textures/clothing/shoes/moccasin.jpg
+share/genecys/textures/clothing/shirts/shirt_white.crf
+share/genecys/textures/clothing/shirts/shirtbr.jpg
+share/genecys/textures/clothing/shirts/shirt_white.jpg
 share/genecys/textures/clothing/shoes/moccasin.crf
+share/genecys/textures/clothing/shoes/moccasin.jpg
+share/genecys/textures/clothing/hats/hat.crf
+share/genecys/textures/clothing/hats/hat.png
 share/genecys/textures/ground/ground-carrelage.jpg
 share/genecys/textures/ground/ground-snow.jpg
 share/genecys/textures/ground/ground-sand-brown.jpg
@@ -453,24 +527,6 @@ share/genecys/textures/elements/fire/firecone1.jpg
 share/genecys/textures/elements/ice/ice1.jpg
 share/genecys/textures/elements/ice/ice2.jpg
 share/genecys/textures/elements/water/water1.jpg
-share/genecys/textures/models/paladin/paladin_arm.jpg
-share/genecys/textures/models/paladin/paladin_cape.jpg
-share/genecys/textures/models/paladin/paladin_chest.jpg
-share/genecys/textures/models/paladin/paladin_cloth.jpg
-share/genecys/textures/models/paladin/paladin_edge.jpg
-share/genecys/textures/models/paladin/paladin_edge_alpha.jpg
-share/genecys/textures/models/paladin/paladin_flesh.jpg
-share/genecys/textures/models/paladin/paladin_gird.jpg
-share/genecys/textures/models/paladin/paladin_head.jpg
-share/genecys/textures/models/paladin/paladin_legging.jpg
-share/genecys/textures/models/paladin/paladin_legguard.jpg
-share/genecys/textures/models/paladin/paladin_legplate_left.jpg
-share/genecys/textures/models/paladin/paladin_legplate_right.jpg
-share/genecys/textures/models/paladin/paladin_plate.jpg
-share/genecys/textures/models/paladin/paladin_ponytail.jpg
-share/genecys/textures/models/paladin/paladin_shoe.jpg
-share/genecys/textures/models/paladin/paladin_stripe.jpg
-share/genecys/textures/models/paladin/paladin_edge_alpha.png
 share/genecys/textures/models/paladin/paladin_arm_left.crf
 share/genecys/textures/models/paladin/paladin_arm_right.crf
 share/genecys/textures/models/paladin/paladin_cape.crf
@@ -490,6 +546,24 @@ share/genecys/textures/models/paladin/paladin_loin_upper.crf
 share/genecys/textures/models/paladin/paladin_ponytail.crf
 share/genecys/textures/models/paladin/paladin_shoe.crf
 share/genecys/textures/models/paladin/paladin_stripe.crf
+share/genecys/textures/models/paladin/paladin_arm.jpg
+share/genecys/textures/models/paladin/paladin_cape.jpg
+share/genecys/textures/models/paladin/paladin_chest.jpg
+share/genecys/textures/models/paladin/paladin_cloth.jpg
+share/genecys/textures/models/paladin/paladin_edge.jpg
+share/genecys/textures/models/paladin/paladin_edge_alpha.jpg
+share/genecys/textures/models/paladin/paladin_flesh.jpg
+share/genecys/textures/models/paladin/paladin_gird.jpg
+share/genecys/textures/models/paladin/paladin_head.jpg
+share/genecys/textures/models/paladin/paladin_legging.jpg
+share/genecys/textures/models/paladin/paladin_legguard.jpg
+share/genecys/textures/models/paladin/paladin_legplate_left.jpg
+share/genecys/textures/models/paladin/paladin_legplate_right.jpg
+share/genecys/textures/models/paladin/paladin_plate.jpg
+share/genecys/textures/models/paladin/paladin_ponytail.jpg
+share/genecys/textures/models/paladin/paladin_shoe.jpg
+share/genecys/textures/models/paladin/paladin_stripe.jpg
+share/genecys/textures/models/paladin/paladin_edge_alpha.png
 share/genecys/textures/plants/flowers/lilly1.jpg
 share/genecys/textures/plants/flowers/purpleflower1.jpg
 share/genecys/textures/plants/flowers/flowerhead1.jpg
@@ -640,8 +714,35 @@ share/genecys/textures/cloth/orangeleather1.jpg
 share/genecys/textures/cloth/buff1.jpg
 share/genecys/textures/paper/paper1.jpg
 share/genecys/textures/paper/paper2.jpg
+share/genecys/textures/skin/male1_body.crf
 share/genecys/textures/skin/elephant1.jpg
-share/genecys/textures/genecys.jpg
+share/genecys/textures/skin/male1_body.jpg
+share/genecys/textures/animals/quadrupeds/cogre/cogre_skin.crf
+share/genecys/textures/animals/quadrupeds/cogre/cogre_skin.jpg
+share/genecys/textures/animals/quadrupeds/pig/pig_pink.crf
+share/genecys/textures/animals/quadrupeds/pig/pig_skeletal.crf
+share/genecys/textures/animals/quadrupeds/pig/pig_white_fur.crf
+share/genecys/textures/animals/quadrupeds/pig/pig_zombie.crf
+share/genecys/textures/animals/quadrupeds/pig/pig_brown_fur.crf
+share/genecys/textures/animals/quadrupeds/pig/pig_zombie.jpg
+share/genecys/textures/animals/quadrupeds/pig/pig_white_fur.jpg
+share/genecys/textures/animals/quadrupeds/pig/pig_brown_fur.jpg
+share/genecys/textures/animals/quadrupeds/pig/pig_pink.jpg
+share/genecys/textures/animals/quadrupeds/pig/pig_skeletal.png
+share/genecys/textures/demihumans/orc/orc1.crf
+share/genecys/textures/demihumans/orc/orc1.jpg
+share/genecys/textures/demihumans/goblin/goblin1.crf
+share/genecys/textures/demihumans/goblin/goblin1.jpg
+share/genecys/textures/demihumans/bugbear/bugbear1.crf
+share/genecys/textures/demihumans/bugbear/bugbear2.crf
+share/genecys/textures/demihumans/bugbear/bugbear3.crf
+share/genecys/textures/demihumans/bugbear/bugbear_skin3.jpg
+share/genecys/textures/demihumans/bugbear/bugbear_skin1.jpg
+share/genecys/textures/demihumans/bugbear/bugbear_skin2.jpg
+share/genecys/textures/sky/sky_no_clouds_night.png
+share/genecys/textures/sky/sky_light_clouds_day.png
+share/genecys/textures/sky/sky_light_clouds_night.png
+@dirrm share/genecys/var
 @dirrm share/genecys/textures/wood
 @dirrm share/genecys/textures/weapons/swords
 @dirrm share/genecys/textures/weapons/spears
@@ -663,6 +764,7 @@ share/genecys/textures/genecys.jpg
 @dirrm share/genecys/textures/structures/animal
 @dirrm share/genecys/textures/structures
 @dirrm share/genecys/textures/stone
+@dirrm share/genecys/textures/sky
 @dirrm share/genecys/textures/skin
 @dirrm share/genecys/textures/plants/leaves
 @dirrm share/genecys/textures/plants/flowers
@@ -696,9 +798,14 @@ share/genecys/textures/genecys.jpg
 @dirrm share/genecys/textures/elements/ice
 @dirrm share/genecys/textures/elements/fire
 @dirrm share/genecys/textures/elements
+@dirrm share/genecys/textures/demihumans/orc
+@dirrm share/genecys/textures/demihumans/goblin
+@dirrm share/genecys/textures/demihumans/bugbear
+@dirrm share/genecys/textures/demihumans
 @dirrm share/genecys/textures/clothing/shoes
 @dirrm share/genecys/textures/clothing/shirts
 @dirrm share/genecys/textures/clothing/pants
+@dirrm share/genecys/textures/clothing/hats
 @dirrm share/genecys/textures/clothing
 @dirrm share/genecys/textures/cloth
 @dirrm share/genecys/textures/ceramic
@@ -708,7 +815,12 @@ share/genecys/textures/genecys.jpg
 @dirrm share/genecys/textures/armor/shields
 @dirrm share/genecys/textures/armor/gloves
 @dirrm share/genecys/textures/armor
+@dirrm share/genecys/textures/animals/quadrupeds/pig
+@dirrm share/genecys/textures/animals/quadrupeds/cogre
+@dirrm share/genecys/textures/animals/quadrupeds
+@dirrm share/genecys/textures/animals
 @dirrm share/genecys/textures
+@dirrm share/genecys/map/world01
 @dirrm share/genecys/map
 @dirrm share/genecys/libdata
 @dirrm share/genecys/etc
@@ -720,13 +832,13 @@ share/genecys/textures/genecys.jpg
 @dirrm share/genecys/arch/weapons/bludgeon
 @dirrm share/genecys/arch/weapons/axes
 @dirrm share/genecys/arch/weapons
+@dirrm share/genecys/arch/system
 @dirrm share/genecys/arch/structures/wells
 @dirrm share/genecys/arch/structures/walls
 @dirrm share/genecys/arch/structures/towers
 @dirrm share/genecys/arch/structures/temples
 @dirrm share/genecys/arch/structures/piers
 @dirrm share/genecys/arch/structures/parks
-@dirrm share/genecys/arch/structures/misc
 @dirrm share/genecys/arch/structures/houses/simple
 @dirrm share/genecys/arch/structures/houses
 @dirrm share/genecys/arch/structures/execution
@@ -763,11 +875,15 @@ share/genecys/textures/genecys.jpg
 @dirrm share/genecys/arch/objects/containers
 @dirrm share/genecys/arch/objects/boats
 @dirrm share/genecys/arch/objects
-@dirrm share/genecys/arch/humans/males/builder
+@dirrm share/genecys/arch/humans/males/farmer
 @dirrm share/genecys/arch/humans/males
 @dirrm share/genecys/arch/humans/females/paladin
 @dirrm share/genecys/arch/humans/females
 @dirrm share/genecys/arch/humans
+@dirrm share/genecys/arch/demihumans/orc
+@dirrm share/genecys/arch/demihumans/goblin
+@dirrm share/genecys/arch/demihumans/bugbear
+@dirrm share/genecys/arch/demihumans
 @dirrm share/genecys/arch/armor/shields
 @dirrm share/genecys/arch/armor/helmets
 @dirrm share/genecys/arch/armor/gloves
