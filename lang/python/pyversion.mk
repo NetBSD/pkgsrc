@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.7 2002/01/29 19:21:58 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.8 2002/02/02 13:26:01 drochner Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -96,6 +96,9 @@ PYPKGPREFIX=	py15
 .if !defined(PYTHON_DISTUTILS_BOOTSTRAP)
 BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 .endif
+.else
+# force an error
+	error: no valid Python version
 .endif
 
 PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
