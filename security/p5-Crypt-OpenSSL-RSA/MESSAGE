@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/12/03 22:03:22 heinz Exp $
+
+Bugs:
+  There is a small memory leak when generating new keys of more than 512 bits.
+
+  The openssl functions RSA_public_decrypt, RSA_private_decrypt are
+  not yet implemented.
+
+  There is no support for encrypting text larger than the key-size.
+
+  There is no Crypt::CBC support.
+
+===========================================================================
