@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.6 2004/02/01 14:11:01 jlam Exp $
+# $NetBSD: gcc.mk,v 1.7 2004/02/01 14:36:23 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -99,7 +99,7 @@ _GCC_DEPENDENCY=	gcc3-c>=${_GCC_REQD}:../../lang/gcc3-c
 .  if !empty(PKGPATH:Mlang/gcc3-c) || \
       !empty(PKGPATH:Mlang/gcc3-c++) || \
       !empty(PKGPATH:Mlang/gcc3-f77) || \
-      !(defined(USE_CXX) && !empty(USE_CXX:M[yY][eE][sS]))
+      !defined(USE_CXX)
 _IGNORE_GCC3CXX=	yes
 MAKEFLAGS+=		_IGNORE_GCC3CXX=yes
 .  else
@@ -109,7 +109,7 @@ _GCC_DEPENDENCY+=	gcc3-c++>=${_GCC_REQD}:../../lang/gcc3-c++
 .  if !empty(PKGPATH:Mlang/gcc3-c) || \
       !empty(PKGPATH:Mlang/gcc3-c++) || \
       !empty(PKGPATH:Mlang/gcc3-f77) || \
-      !(defined(USE_FORTRAN) && !empty(USE_FORTRAN:M[yY][eE][sS]))
+      !defined(USE_FORTRAN)
 _IGNORE_GCC3F77=	yes
 MAKEFLAGS+=		_IGNORE_GCC3F77=yes
 .  else
