@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2001/12/21 03:55:50 fredb Exp $
+# $NetBSD: Makefile,v 1.44 2001/12/26 16:09:41 jlam Exp $
 #
 
 DISTNAME=		lynx2.8.4rel.1
@@ -16,9 +16,8 @@ BUILD_USES_MSGFMT=	yes
 
 WRKSRC=			${WRKDIR}/lynx2-8-4
 
+USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
-USE_LIBINTL=		yes
-USE_SSL=		yes
 INSTALL_TARGET=		install-bin install-cfg install-help install-lss
 INSTALL_TARGET+=	install-doc install-man
 MAKEFILE=       	makefile
@@ -59,9 +58,10 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if (${LYNX_SCREEN_LIB} == slang)
-DEPENDS+=		libslang>=1.4.4:../../devel/libslang
+.  include "../../devel/libslang/buildlink.mk"
 .elif (${LYNX_SCREEN_LIB} == ncurses)
-DEPENDS+=		ncurses-[0-9]*:../../devel/ncurses
+.  include "../../devel/ncurses/buildlink.mk"
+USE_NCURSES=		color
 CONFIGURE_ARGS+=	--enable-color-style
 .elif (${LYNX_SCREEN_LIB} != curses)
 pre-configure:
@@ -88,10 +88,10 @@ pre-configure:
 .endif
 .if ${USE_SOCKS} == 4
 CONFIGURE_ARGS+= 	--with-socks
-DEPENDS+=		socks4-2.2:../../net/socks4
+.  include "../../net/socks4/buildlink.mk"
 .else
 CONFIGURE_ARGS+= 	--with-socks5
-DEPENDS+=		socks5-1.0.2:../../net/socks5
+.  include "../../net/socks5/buildlink.mk"
 .endif
 .endif
 
@@ -100,15 +100,7 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 CONFIGURE_ARGS+=       --enable-ipv6
 .endif
 
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/zlib/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# "USE_SSL", set above, pulls in the openssl package, if needed, and
-# "sets SSLBASE", which we use here to tell the package where it needs
-# to look for SSL libs and includes.
-.if (${SSLBASE} == /usr)
-SSLLIBS=	-lssl -lcrypto
-SSLINCS=	-I/usr/include/openssl
-.else
-SSLLIBS=	-L${SSLBASE}/lib -Wl,-R${SSLBASE}/lib -lssl -lcrypto
-SSLINCS=	-I${SSLBASE}/include -I${SSLBASE}/include/openssl
-.endif
