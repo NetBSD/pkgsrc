@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2000/09/11 14:48:57 jwise Exp $
+# $NetBSD: Makefile,v 1.176 2000/09/13 15:57:37 wiz Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -88,8 +88,6 @@
     SUBDIR += titrax
     SUBDIR += tix
     SUBDIR += tk
-#    SUBDIR += tk80		# obsoleted by tk, will be removed when dependents are updated.
-    SUBDIR += tkcron
     SUBDIR += tkinfo
     SUBDIR += tkman
     SUBDIR += tvtwm
