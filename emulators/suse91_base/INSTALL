@@ -1,0 +1,68 @@
+#!/bin/sh
+# $NetBSD: INSTALL,v 1.1.1.1 2004/07/13 10:31:13 tron Exp $
+
+if [ "$2" != "POST-INSTALL" ]; then exit 0; fi
+emul=linux
+OPSYS=`/usr/bin/uname -s`
+
+cat <<EOF
+==============================================================================
+
+EOF
+
+if [ "$OPSYS" = "NetBSD" ]; then
+	cat <<-EOF
+	Do not forget to include COMPAT_LINUX (and EXEC_ELF32 on NetBSD systems older
+	than 1.5) in your kernel configuration file.  (Linux binaries require these
+	options in order to work.)
+	EOF
+fi
+
+if [ "$OPSYS" = "FreeBSD" ]; then 
+	cat <<-EOF
+	Do not forget to include COMPAT_LINUX in your kernel configuration file.
+	You also need to load "linux.ko" kernel module (using kldload(8) or by
+	setting linux_enable="yes" in /etc/rc.conf.
+	EOF
+fi
+
+if [ "$OPSYS" = "NetBSD" ]; then
+    if [ "`cd /etc && cd ${PKG_PREFIX}/emul/$emul 2>/dev/null && pwd -P`" != \
+	"`cd / && cd /emul/$emul 2>/dev/null && pwd -P`" ]; then
+	    if [ -e /emul/$emul -o -L /emul/$emul ] || \
+		[ \( -e /emul -o -L /emul \) -a ! -d /emul ]; then
+		cat <<-EOF
+
+		IMPORTANT:  You must create a symbolic link from /emul/$emul to
+		${PKG_PREFIX}/emul/$emul in order for this package to work properly.
+		(It seems there is something else located at /emul/$emul.)
+		EOF
+	    else
+		mkdir -p /emul
+		ln -sf ${PKG_PREFIX}/emul/$emul /emul/$emul
+	    fi
+    fi
+fi
+
+if [ "$OPSYS" = "FreeBSD" ]; then
+    if [ "`cd /etc && cd ${PKG_PREFIX}/emul/$emul 2>/dev/null && pwd -P`" != \
+	"`cd / && cd /compat/$emul 2>/dev/null && pwd -P`" ]; then
+	    if [ -e /compat/$emul -o -L /compat/$emul ] || \
+		[ \( -e /compat -o -L /compat \) -a ! -d /compat ]; then
+		cat <<-EOF
+			
+		IMPORTANT:  You must create a symbolic link from /compat/$emul to
+		${PKG_PREFIX}/emul/$emul in order for this package to work properly.
+		(It seems there is something else located at /compat/$emul.)
+		EOF
+	    else
+		mkdir -p /compat
+		ln -sf ${PKG_PREFIX}/emul/$emul /compat/$emul
+	    fi
+    fi
+fi
+
+cat <<EOF
+
+==============================================================================
+EOF
