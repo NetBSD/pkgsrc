@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/08/31 18:51:35 agc Exp $
+# $NetBSD: Makefile,v 1.24 1999/12/08 16:06:25 veego Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -33,8 +33,8 @@ post-install:
 	@strip ${PREFIX}/bin/a2p
 	@strip ${PREFIX}/bin/perl
 .if ${OPSYS} == "SunOS"
-	${CAT} ${PKGDIR}/PLIST-mi ${PKGDIR}/PLIST-md.static  | \
-				${EGREP} -v 'DB_File|Socket' > ${PLIST_SRC}
+	${CAT} ${PKGDIR}/PLIST-mi ${PKGDIR}/PLIST-md.shared  | \
+				${EGREP} -v 'DB_File' > ${PLIST_SRC}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
