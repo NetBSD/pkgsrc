@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:12 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/07/07 02:30:52 jschauma Exp $
 
-SHA1 (boost-1.18.1/boost_all.zip) = 13b4a828b8167aeb6b629c7c7c1f78a011a5d9bb
-Size (boost-1.18.1/boost_all.zip) = 1934248 bytes
-SHA1 (patch-aa) = a8321f84ea29295a57ea767ba1425e548a6a2461
+SHA1 (boost-1.28/boost_1_28_0.tar.gz) = d46e4bc89c557dc28cad715c544c3ffdb83593ca
+Size (boost-1.28/boost_1_28_0.tar.gz) = 4195589 bytes

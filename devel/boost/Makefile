@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2001/02/25 04:17:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2002/07/07 02:30:51 jschauma Exp $
 
-DISTNAME=		boost_all
-PKGNAME=		boost-1.18.1
-WRKSRC=			${WRKDIR}/boost_1_18_1
+DISTNAME=		boost
+PKGNAME=		${DISTNAME}-1.28
 CATEGORIES=		devel
-MASTER_SITES=		http://www.boost.org/
-EXTRACT_SUFX=		.zip
+MASTER_SITES=		http://boost.sourceforge.net/release/
+DISTFILES=		${DISTNAME}_1_28_0.tar.gz
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.boost.org/
@@ -15,7 +14,7 @@ COMMENT=		free, portable libraries that integrate with the ISO C++ Standard Libr
 DEPENDS+=		sgi-stl>=3.2:../../devel/sgi-stl
 
 DIST_SUBDIR=		${PKGNAME}
-EXTRACT_CMD=		unzip -aaoq ${DOWNLOADED_DISTFILE}
+WRKSRC=			${WRKDIR}/${DISTNAME}_1_28_0
 
 USE_LIBTOOL=		# defined
 BOOST_VERS=		0:0
@@ -24,22 +23,6 @@ MAKE_ENV+=		BOOST_VERS="${BOOST_VERS}"
 LIBDIR=			${PREFIX}/lib
 INCDIR=			${PREFIX}/include/boost
 HTMLDIR=		${PREFIX}/share/doc/html/boost
-
-# 2-step extraction process:
-#
-# 1) Extract everything in text mode with CR/LF -> LF conversions.
-# 2) Extract binary files in binary mode.
-#
-# Even though our current GCC (egcs-1.1.2) doesn't support namespaces and
-# hence can't compile some of the C++ constructs used by some of the Boost
-# libraries, we install all of it anyway, just in case there is an installed
-# compiler (like gcc-2.95.2) capable of compiling them.
-#
-post-extract:
-	cd ${WRKDIR} && unzip -aCoq \
-		${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX} "*.gif" "*.jpg" "*.zip"
-	cd ${WRKSRC} && unzip -aaCqu \
-		libs/pri_queue/boost-heap-1.0.zip "boost/*"
 
 do-configure:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
@@ -58,7 +41,6 @@ do-install:
 	${INSTALL_DATA} \
 		${WRKSRC}/c++boost.gif \
 		${WRKSRC}/index.htm \
-		${WRKSRC}/libraries.htm \
 		${HTMLDIR}
 	${CP} -R ${WRKSRC}/libs ${WRKSRC}/more ${HTMLDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INCDIR} ${HTMLDIR}
