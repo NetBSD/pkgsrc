@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/11/27 02:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/27 06:40:04 tron Exp $
 #
 
 DISTNAME=	GConf-0.8
@@ -28,6 +28,7 @@ USE_LIBTOOL=	YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${X11PREFIX}/include"
+PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
 
 post-install:
 	${SED} -e 's#@@X11PREFIX@@#${X11PREFIX}#g' < ${PKGDIR}/MESSAGE \
