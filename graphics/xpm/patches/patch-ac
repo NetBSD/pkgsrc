@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1 1999/10/31 10:46:31 mrg Exp $
+$NetBSD: patch-ac,v 1.2 2001/07/06 21:11:34 tron Exp $
 
---- lib/Imakefile.orig	Fri Mar 20 06:50:59 1998
-+++ lib/Imakefile	Sun Oct 31 21:39:04 1999
+--- lib/Imakefile.orig	Thu Mar 19 20:50:59 1998
++++ lib/Imakefile	Fri Jul  6 23:02:49 2001
+@@ -34,7 +34,7 @@
+ #define XpmLibDir $(USRLIBDIR)
+ #endif
+ #ifndef XpmIncDir
+-#define XpmIncDir $(INCDIR)
++#define XpmIncDir $(PROJECTROOT)/include
+ #endif
+ 
+ XCOMM If not already set in top dir,
 @@ -55,7 +55,7 @@
  #endif
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/07/02 08:02:34 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/07/06 21:11:33 tron Exp $
 
 DISTNAME=       xpm-3.4k
 CATEGORIES=	graphics x11
@@ -22,12 +22,6 @@ post-install:
 	cd ${PREFIX}/lib && \
 	${RM} -f libXpm.so.4 && \
 	${LN} -f libXpm.so.4.11 libXpm.so.4
-.endif
-
-.if defined(HAVE_OPENWINDOWS)
-PLIST_SUBST+=	INCDIR=include/X11/X11
-.else
-PLIST_SUBST+=	INCDIR=include/X11
 .endif
 
 .include "../../mk/bsd.pkg.mk"
