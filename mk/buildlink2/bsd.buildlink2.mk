@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.44 2002/10/23 19:07:56 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.45 2002/10/30 00:23:00 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -269,222 +269,84 @@ _BUILDLINK_USE: .USE
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 
-# _BLNK_TRANSFORM mini language for translating wrapper arguments into
-#	their buildlink equivalents:
+# Create _BLNK_PROTECT and _BLNK_UNPROTECT variables to protect key
+# directories from any argument filtering, as they may be subdirectories
+# of ${LOCALBASE}, /usr/pkg, or /usr/local.
 #
-#	I:src:dst		translates "-Isrc" into "-Idst"
-#	II:src:dst1,dst2	translates "-Isrc" into "-Idst1 -Idst2"
-#	L:src:dst		translates "-Lsrc" into "-Ldst"
-#	LL:src:dst1,dst2	translates "-Lsrc" into "-Ldst1 -Ldst2"
-#	l:foo:bar		translates "-lfoo" into "-lbar"
-#	r:dir			removes "dir" and "dir/*"
+_BLNK_PROTECT=		# empty
+_BLNK_UNPROTECT=	# empty
+_BLNK_PROTECT_DIRS=	# empty
+_BLNK_UNPROTECT_DIRS=	# empty
+
+_BLNK_MANGLE_DIR.BUILDLINK_X11PKG_DIR=	_bUiLdLiNk_x11pKg_dIr_
+_BLNK_MANGLE_DIR.BUILDLINK_DIR=		_bUiLdLiNk_dIr_
+_BLNK_MANGLE_DIR.ZOULARISBASE=		_zOuLaRiSbAsE_
+
+_BLNK_PROTECT_DIRS+=	BUILDLINK_X11PKG_DIR
+_BLNK_PROTECT_DIRS+=	BUILDLINK_DIR
+.if defined(ZOULARISBASE) && (${ZOULARISBASE} != ${LOCALBASE})
+_BLNK_PROTECT_DIRS+=	ZOULARISBASE
+_BLNK_UNPROTECT_DIRS+=	ZOULARISBASE
+.endif
+_BLNK_UNPROTECT_DIRS+=	BUILDLINK_DIR
+_BLNK_UNPROTECT_DIRS+=	BUILDLINK_X11PKG_DIR
+
+.for _dir_ in ${_BLNK_PROTECT_DIRS}
+_BLNK_PROTECT+=		s:${${_dir_}}:${_BLNK_MANGLE_DIR.${_dir_}}
+.endfor
+.for _dir_ in ${_BLNK_UNPROTECT_DIRS}
+_BLNK_UNPROTECT+=	s:${_BLNK_MANGLE_DIR.${_dir_}}:${${_dir_}}
+.endfor
+
+_BLNK_TRANSFORM+=	${_BLNK_PROTECT}
 #
-_BLNK_TRANSFORM+=	I:${LOCALBASE}:${BUILDLINK_DIR}
-_BLNK_TRANSFORM+=	L:${LOCALBASE}:${BUILDLINK_DIR}
+# Convert direct paths to libraries into "-Ldir -llib" equivalents.
+#
+_BLNK_TRANSFORM+=	p:${LOCALBASE}
+_BLNK_TRANSFORM+=	p:${X11BASE}
+_BLNK_TRANSFORM+=	p:/usr/lib
+#
+# Transform references into ${LOCALBASE} into ${BUILDLINK_DIR}.
+#
 _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
+_BLNK_TRANSFORM+=	I:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
+_BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
+#
+# Transform references into ${X11BASE} into ${BUILDLINK_X11PKG_DIR} and
+# into ${BUILDLINK_X11_DIR}, but the package doesn't use X11, then just
+# remove these references altogether.
+#
 .if defined(USE_X11)
 .  if !empty(USE_X11_LINKS:M[nN][oO])
-_BLNK_TRANSFORM+=	I:${X11BASE}:${BUILDLINK_X11PKG_DIR}
-_BLNK_TRANSFORM+=	L:${X11BASE}:${BUILDLINK_X11PKG_DIR}
+_BLNK_TRANSFORM+=	I:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11PKG_DIR}
+_BLNK_TRANSFORM+=	L:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11PKG_DIR}
 .  else
-_BLNK_TRANSFORM+=	II:${X11BASE}:${BUILDLINK_X11PKG_DIR},${BUILDLINK_X11_DIR}
-_BLNK_TRANSFORM+=	LL:${X11BASE}:${BUILDLINK_X11PKG_DIR},${BUILDLINK_X11_DIR}
+_BLNK_TRANSFORM+=	II:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11PKG_DIR},${BUILDLINK_X11_DIR}
+_BLNK_TRANSFORM+=	LL:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11PKG_DIR},${BUILDLINK_X11_DIR}
 .  endif
+.else
+_BLNK_TRANSFORM+=	r:${X11BASE}
 .endif
 .for _localbase_ in /usr/pkg /usr/local
 .  if ${LOCALBASE} != ${_localbase_}
-_BLNK_TRANSFORM+=	r:-I${_localbase_}
-_BLNK_TRANSFORM+=	r:-L${_localbase_}
-_BLNK_TRANSFORM+=	r:-Wl,-R${_localbase_}
-_BLNK_TRANSFORM+=	r:-Wl,-rpath,${_localbase_}
-_BLNK_TRANSFORM+=	r:-R${_localbase_}
+_BLNK_TRANSFORM+=	r:${_localbase_}
 .  endif
 .endfor
 #
-# Create _BLNK_PROTECT_SED and _BLNK_UNPROTECT_SED variables to protect
-# key directories from any argument filtering, as they may be
-# subdirectories of ${LOCALBASE}, /usr/pkg, or /usr/local.
+# Explicitly remove "-I/usr/include" and "-L/usr/lib" as they're redundant.
 #
-_BLNK_PROTECT_SED=	# empty
-_BLNK_UNPROTECT_SED=	# empty
-
-_BLNK_PROTECT_SED+=	-e "s|${_PKGSRCDIR}|_pKgSrCdIr_|g"
-_BLNK_PROTECT_SED+=	-e "s|${BUILDLINK_DIR}|_bUiLdLiNk_dIr_|g"
-.if defined(ZOULARISBASE) && (${ZOULARISBASE} != ${LOCALBASE})
-_BLNK_PROTECT_SED+=	-e "s|${ZOULARISBASE}|_zOuLaRiSbAsE_|g"
-_BLNK_UNPROTECT_SED+=	-e "s|_zOuLaRiSbAsE_|${ZOULARISBASE}|g"
-.endif
-_BLNK_UNPROTECT_SED+=	-e "s|_bUiLdLiNk_dIr_|${BUILDLINK_DIR}|g"
-_BLNK_UNPROTECT_SED+=	-e "s|_pKgSrCdIr_|${_PKGSRCDIR}|g"
-#
-# Create _BLNK_TRANSFORM_SED.{1,2,3,4} from _BLNK_TRANSFORM.  We must use
-# separate variables instead of just one because the contents are too long
-# for one variable when we substitute into a shell script later on.
-#
-_BLNK_TRANSFORM_SED.1+=		${_BLNK_PROTECT_SED}
-_BLNK_TRANSFORM_SED.2+=		${_BLNK_PROTECT_SED}
-_BLNK_TRANSFORM_SED.3+=		${_BLNK_PROTECT_SED}
-_BLNK_TRANSFORM_SED.4+=		${_BLNK_PROTECT_SED}
-#
-# Change "/usr/lib/libfoo.so"       into "-lfoo",
-#        "/usr/pkg/lib/libfoo.so"   into "-L/usr/pkg/lib -lfoo",
-#        "/usr/X11R6/lib/libbar.so" into "-L/usr/X11R6/lib -lbar".
-#
-_BLNK_TRANSFORM_SED.libpath+= \
-	-e "s|/usr/lib/lib\([^	 ]*\)\.a|-l\1|g"			\
-	-e "s|/usr/lib/lib\([^	 ]*\)\.so|-l\1|g"
-_BLNK_TRANSFORM_SED.libpath+= \
-	-e "s|\(${LOCALBASE}/[^	 ]*\)/lib\([^	 ]*\)\.a|-L\1 -l\2|g"	\
-	-e "s|\(${LOCALBASE}/[^	 ]*\)/lib\([^	 ]*\)\.so|-L\1 -l\2|g"
-_BLNK_TRANSFORM_SED.libpath+= \
-	-e "s|\(${X11BASE}/[^	 ]*\)/lib\([^	 ]*\)\.a|-L\1 -l\2|g"	\
-	-e "s|\(${X11BASE}/[^	 ]*\)/lib\([^	 ]*\)\.so|-L\1 -l\2|g"
-_BLNK_TRANSFORM_SED.1+=		${_BLNK_TRANSFORM_SED.libpath}
-_BLNK_UNTRANSFORM_SED.1+=	${_BLNK_TRANSFORM_SED.libpath}
-#
-# Transform "I:/usr/pkg:/buildlink" into:
-#	-e "s|-I/usr/pkg |-I/buildlink |g"
-#	-e "s|-I/usr/pkg$|-I/buildlink|g"
-#	-e "s|-I/usr/pkg/\([^	 ]*\)|-I/buildlink/\1|g"
-#
-.for _transform_ in ${_BLNK_TRANSFORM:MI\:*\:*}
-_BLNK_TRANSFORM_SED.I+= \
-	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/} |-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/} |g" \
-	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}$$|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}|g" \
-	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}/\([^	 ]*\)|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}/\1|g"
-_BLNK_UNTRANSFORM_SED.I+= \
-	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/} |-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/} |g" \
-	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}$$|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}|g" \
-	-e "s|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\2/}/\([^	 ]*\)|-I${_transform_:C/^I\:([^\:]*)\:([^\:]*)$/\1/}/\1|g"
-.endfor
-_BLNK_TRANSFORM_SED.2+=		${_BLNK_TRANSFORM_SED.I}
-_BLNK_UNTRANSFORM_SED.2+=	${_BLNK_UNTRANSFORM_SED.I}
-#
-# Transform "II:/usr/X11R6:/buildlink,/x11-links" into:
-#	-e "s|-I/usr/X11R6 |-I/buildlink -I/x11-links |g"
-#	-e "s|-I/usr/X11R6$|-I/buildlink -I/x11-links|g"
-#	-e "s|-I/usr/X11R6/\([^	 ]*\)|-I/buildlink/\1 -I/x11-links/\1|g"
-#
-.for _transform_ in ${_BLNK_TRANSFORM:MII\:*\:*,*}
-_BLNK_TRANSFORM_SED.II+= \
-	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} -I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/} |g" \
-	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}$$|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} -I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}|g" \
-	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\([^	 ]*\)|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}/\1 -I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}/\1|g"
-_BLNK_UNTRANSFORM_SED.II+= \
-	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} |-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |g" \
-	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/} |-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |g" \
-	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}$$|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}|g" \
-	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}$$|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}|g" \
-	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}/\([^	 ]*\)|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\1|g" \
-	-e "s|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}/\([^	 ]*\)|-I${_transform_:C/^II\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\1|g"
-.endfor
-_BLNK_TRANSFORM_SED.2+=		${_BLNK_TRANSFORM_SED.II}
-_BLNK_UNTRANSFORM_SED.2+=	${_BLNK_UNTRANSFORM_SED.II}
-#
-# Transform "L:/usr/pkg:/buildlink" into:
-#	-e "s|-L/usr/pkg |-L/buildlink |g"
-#	-e "s|-L/usr/pkg$|-L/buildlink|g"
-#	-e "s|-L/usr/pkg/\([^	 ]*\)|-L/buildlink/\1|g"
-#
-.for _transform_ in ${_BLNK_TRANSFORM:ML\:*\:*}
-_BLNK_TRANSFORM_SED.L+= \
-	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/} |-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/} |g" \
-	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/}$$|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/}|g" \
-	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/}/\([^	 ]*\)|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/}/\1|g"
-_BLNK_UNTRANSFORM_SED.L+= \
-	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/} |-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/} |g" \
-	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/}$$|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/}|g" \
-	-e "s|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\2/}/\([^	 ]*\)|-L${_transform_:C/^L\:([^\:]*)\:([^\:]*)$/\1/}/\1|g"
-.endfor
-_BLNK_TRANSFORM_SED.2+=		${_BLNK_TRANSFORM_SED.L}
-_BLNK_UNTRANSFORM_SED.2+=	${_BLNK_UNTRANSFORM_SED.L}
-#
-# Transform "LL:/usr/X11R6:/buildlink,/x11-links" into:
-#	-e "s|-L/usr/X11R6 |-L/buildlink -L/x11-links |g"
-#	-e "s|-L/usr/X11R6$|-L/buildlink -L/x11-links|g"
-#	-e "s|-L/usr/X11R6/\([^  ]*\)|-L/buildlink/\1 -L/x11-links/\1|g"
-#
-.for _transform_ in ${_BLNK_TRANSFORM:MLL\:*\:*,*}
-_BLNK_TRANSFORM_SED.LL+= \
-	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} -L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/} |g" \
-	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}$$|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} -L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}|g" \
-	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\([^	 ]*\)|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}/\1 -L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}/\1|g"
-_BLNK_UNTRANSFORM_SED.LL+= \
-	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/} |-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |g" \
-	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/} |-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/} |g" \
-	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}$$|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}|g" \
-	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}$$|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}|g" \
-	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\2/}/\([^	 ]*\)|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\1|g" \
-	-e "s|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\3/}/\([^	 ]*\)|-L${_transform_:C/^LL\:([^\:]*)\:([^\:]*),([^\:]*)$/\1/}/\1|g"
-.endfor
-_BLNK_TRANSFORM_SED.2+=		${_BLNK_TRANSFORM_SED.LL}
-_BLNK_UNTRANSFORM_SED.2+=	${_BLNK_UNTRANSFORM_SED.LL}
-#
-# Transform "l:foo:bar" into:
-#	-e "s|-lfoo |-lbar |g"
-#	-e "s|-lfoo$|-lbar|g"
-#
-.for _transform_ in ${_BLNK_TRANSFORM:Ml\:*}
-_BLNK_TRANSFORM_SED.l+= \
-	-e "s|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\1/} |-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\2/} |g" \
-	-e "s|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\1/}$$|-l${_transform_:C/^l\:([^\:]*)\:([^\:]*)$/\2/}|g"
-.endfor
-_BLNK_TRANSFORM_SED.3+=		${_BLNK_TRANSFORM_SED.l}
-_BLNK_UNTRANSFORM_SED.3+=	${_BLNK_TRANSFORM_SED.l}
-#
-# Fix up references to the x11-links directory.
-#
-.if defined(USE_X11)
-_BLNK_TRANSFORM_SED.4+= \
-	-e "s|${BUILDLINK_DIR}/\(${BUILDLINK_X11_DIR:S/^${LOCALBASE}\///}\)|${LOCALBASE}/\1|g"
-_BLNK_UNTRANSFORM_SED.4+= \
-	-e "s|${BUILDLINK_DIR}/\(${BUILDLINK_X11_DIR:S/^${LOCALBASE}\///}\)|${LOCALBASE}/\1|g"
-.endif
-#
-# Transform "r:-I/usr/local" into:
-#	-e "s|-I/usr/local ||g"
-#	-e "s|-I/usr/local$||g"
-#	-e "s|-I/usr/local/\([^	 ]*\)||g"
-#
-.for _transform_ in ${_BLNK_TRANSFORM:Mr\:*}
-_BLNK_TRANSFORM_SED.r+= \
-	-e "s|${_transform_:S/^r://} ||g"				\
-	-e "s|${_transform_:S/^r://}$$||g"				\
-	-e "s|${_transform_:S/^r://}/[^	 ]*||g"
-.endfor
-_BLNK_TRANSFORM_SED.4+=		${_BLNK_TRANSFORM_SED.r}
-_BLNK_UNTRANSFORM_SED.4+=	${_BLNK_TRANSFORM_SED.r}
+_BLNK_TRANSFORM+=	S:-I/usr/include:
+_BLNK_TRANSFORM+=	S:-L/usr/lib:
 #
 # Remove -Wl,-R* and *-rpath* if _USE_RPATH != "yes"
 #
 .if defined(_USE_RPATH) && empty(_USE_RPATH:M[yY][eE][sS])
-_BLNK_TRANSFORM_SED.4+= \
-	-e "s|-Wl,-R/[^ 	]*||g"					\
-	-e "s|-R/[^ 	]*||g"						\
-	-e "s|-Wl,-rpath,[^ 	]*||g"
-_BLNK_UNTRANSFORM_SED.4+= \
-	-e "s|-Wl,-R/[^ 	]*||g"					\
-	-e "s|-R/[^ 	]*||g"						\
-	-e "s|-Wl,-rpath,[^ 	]*||g"
+_BLNK_TRANSFORM+=	no-rpath
 .endif
-#
-# Explicitly remove "-I/usr/include" and "-L/usr/lib" as they're redundant.
-#
-_BLNK_TRANSFORM_SED.4+= \
-	-e "s|-I/usr/include ||g"					\
-	-e "s|-I/usr/include$$||g"					\
-	-e "s|-L/usr/lib ||g"						\
-	-e "s|-L/usr/lib$$||g"
-_BLNK_UNTRANSFORM_SED.4+= \
-	-e "s|-I/usr/include ||g"					\
-	-e "s|-I/usr/include$$||g"					\
-	-e "s|-L/usr/lib ||g"						\
-	-e "s|-L/usr/lib$$||g"
+_BLNK_TRANSFORM+=	${_BLNK_UNPROTECT}
 
-_BLNK_TRANSFORM_SED.1+=		${_BLNK_UNPROTECT_SED}
-_BLNK_TRANSFORM_SED.2+=		${_BLNK_UNPROTECT_SED}
-_BLNK_TRANSFORM_SED.3+=		${_BLNK_UNPROTECT_SED}
-_BLNK_TRANSFORM_SED.4+=		${_BLNK_UNPROTECT_SED}
+_BLNK_TRANSFORM_SED+=	-f ${_BLNK_TRANSFORM_SEDFILE}
+_BLNK_UNTRANSFORM_SED+=	-f ${_BLNK_UNTRANSFORM_SEDFILE}
 
 _BLNK_CHECK_IS_TEXT_FILE?= \
 	${FILE_CMD} $${file} | ${EGREP} "(shell script|text)" >/dev/null 2>&1
@@ -518,10 +380,6 @@ _BUILDLINK_SUBST_USE: .USE
 				for file in $${files}; do		\
 					if ${_BLNK_CHECK_IS_TEXT_FILE}; then \
 						${SED}  ${BUILDLINK_SUBST_SED.${.TARGET:S/-buildlink-subst//}} \
-							${BUILDLINK_SUBST_SED.1.${.TARGET:S/-buildlink-subst//}} \
-							${BUILDLINK_SUBST_SED.2.${.TARGET:S/-buildlink-subst//}} \
-							${BUILDLINK_SUBST_SED.3.${.TARGET:S/-buildlink-subst//}} \
-							${BUILDLINK_SUBST_SED.4.${.TARGET:S/-buildlink-subst//}} \
 							$${file} > $${file}.modified; \
 						if [ -x $${file} ]; then \
 							${CHMOD} +x $${file}.modified; \
@@ -562,10 +420,7 @@ BUILDLINK_SUBST_MESSAGE.unbuildlink= \
 	"Fixing buildlink references in files-to-be-installed."
 BUILDLINK_SUBST_FILES.unbuildlink=	${_REPLACE_BUILDLINK}
 BUILDLINK_SUBST_SED.unbuildlink=	${_REPLACE_BUILDLINK_SED}
-BUILDLINK_SUBST_SED.1.unbuildlink=	${_BLNK_UNTRANSFORM_SED.1}
-BUILDLINK_SUBST_SED.2.unbuildlink=	${_BLNK_UNTRANSFORM_SED.2}
-BUILDLINK_SUBST_SED.3.unbuildlink=	${_BLNK_UNTRANSFORM_SED.3}
-BUILDLINK_SUBST_SED.4.unbuildlink=	${_BLNK_UNTRANSFORM_SED.4}
+BUILDLINK_SUBST_SED.unbuildlink+=	${_BLNK_UNTRANSFORM_SED}
 
 post-build: unbuildlink-buildlink-subst
 unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
@@ -669,6 +524,9 @@ _BLNK_WRAP_SPECIFIC_LOGIC=		${BUILDLINK_DIR}/bin/.std-logic
 _BLNK_WRAP_LOG=				${BUILDLINK_DIR}/.wrapper.log
 _BLNK_LIBTOOL_FIX_LA=			${BUILDLINK_DIR}/bin/.libtool-fix-la
 _BLNK_FAKE_LA=				${BUILDLINK_DIR}/bin/.fake-la
+_BLNK_GEN_TRANSFORM=			${BUILDLINK_DIR}/bin/.gen-transform
+_BLNK_TRANSFORM_SEDFILE=		${BUILDLINK_DIR}/bin/.transform.sed
+_BLNK_UNTRANSFORM_SEDFILE=		${BUILDLINK_DIR}/bin/.untransform.sed
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 #
@@ -858,24 +716,20 @@ ${_BLNK_WRAP_POST_CACHE}: ${.CURDIR}/../../mk/buildlink2/post-cache
 		-e "s|@LOCALBASE@|${LOCALBASE}|g"			\
 		-e "s|@X11BASE@|${X11BASE}|g"				\
 		-e 's|@ECHO@|${ECHO}|g'					\
-		-e 's|@_BLNK_TRANSFORM_SED.1@||g'			\
-		-e 's|@_BLNK_TRANSFORM_SED.2@||g'			\
-		-e 's|@_BLNK_TRANSFORM_SED.3@||g'			\
-		-e 's|@_BLNK_TRANSFORM_SED.4@||g'			\
+		-e 's|@_BLNK_TRANSFORM_SED@||g'				\
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
-${_BLNK_WRAP_POST_CACHE_TRANSFORM}: ${.CURDIR}/../../mk/buildlink2/post-cache
+${_BLNK_WRAP_POST_CACHE_TRANSFORM}:					\
+		${.CURDIR}/../../mk/buildlink2/post-cache		\
+		${_BLNK_TRANSFORM_SEDFILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
 		-e "s|@LOCALBASE@|${LOCALBASE}|g"			\
 		-e "s|@X11BASE@|${X11BASE}|g"				\
 		-e 's|@ECHO@|${ECHO}|g'					\
-		-e 's|@_BLNK_TRANSFORM_SED.1@|${_BLNK_TRANSFORM_SED.1:Q}|g' \
-		-e 's|@_BLNK_TRANSFORM_SED.2@|${_BLNK_TRANSFORM_SED.2:Q}|g' \
-		-e 's|@_BLNK_TRANSFORM_SED.3@|${_BLNK_TRANSFORM_SED.3:Q}|g' \
-		-e 's|@_BLNK_TRANSFORM_SED.4@|${_BLNK_TRANSFORM_SED.4:Q}|g' \
-		${.ALLSRC} > ${.TARGET}.tmp
+		-e 's|@_BLNK_TRANSFORM_SED@|${_BLNK_TRANSFORM_SED:Q}|g'	\
+		${.CURDIR}/../../mk/buildlink2/post-cache > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_BLNK_WRAP_CACHE}:
@@ -909,7 +763,9 @@ ${_BLNK_WRAP_SPECIFIC_LOGIC.LD}: ${.CURDIR}/../../mk/buildlink2/ld-logic
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
-${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
+${_BLNK_LIBTOOL_FIX_LA}:						\
+		${.CURDIR}/../../mk/buildlink2/libtool-fix-la		\
+		${_BLNK_UNTRANSFORM_SEDFILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
 		-e "s|@WRKSRC@|${WRKSRC}|g"				\
@@ -924,11 +780,8 @@ ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 		-e "s|@SED@|${SED:Q}|g"					\
 		-e "s|@TOUCH@|${TOUCH:Q}|g"				\
 		-e 's|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g' \
-		-e 's|@_BLNK_UNTRANSFORM_SED.1@|${_BLNK_UNTRANSFORM_SED.1:Q}|g' \
-		-e 's|@_BLNK_UNTRANSFORM_SED.2@|${_BLNK_UNTRANSFORM_SED.2:Q}|g' \
-		-e 's|@_BLNK_UNTRANSFORM_SED.3@|${_BLNK_UNTRANSFORM_SED.3:Q}|g' \
-		-e 's|@_BLNK_UNTRANSFORM_SED.4@|${_BLNK_UNTRANSFORM_SED.4:Q}|g' \
-		${.ALLSRC} > ${.TARGET}.tmp
+		-e 's|@_BLNK_UNTRANSFORM_SED@|${_BLNK_UNTRANSFORM_SED:Q}|g' \
+		${.CURDIR}/../../mk/buildlink2/libtool-fix-la > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 .if ${OBJECT_FMT} == "a.out"
@@ -957,6 +810,22 @@ ${_BLNK_FAKE_LA}: ${.CURDIR}/../../mk/buildlink2/fake-la
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+${_BLNK_GEN_TRANSFORM}: ${.CURDIR}/../../mk/buildlink2/gen-transform.sh
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
+		-e "s|@_BLNK_TRANSFORM_SEDFILE@|${_BLNK_TRANSFORM_SEDFILE:Q}|g" \
+		-e "s|@_BLNK_UNTRANSFORM_SEDFILE@|${_BLNK_UNTRANSFORM_SEDFILE:Q}|g" \
+		-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL:Q}|g"		\
+		-e "s|@CAT@|${CAT:Q}|g"					\
+		${.ALLSRC} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+${_BLNK_TRANSFORM_SEDFILE} ${_BLNK_UNTRANSFORM_SEDFILE}: ${_BLNK_GEN_TRANSFORM}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${_BLNK_GEN_TRANSFORM}		\
+		${_BLNK_TRANSFORM}
 
 clear-buildlink-cache: remove-buildlink-cache buildlink-wrappers
 
