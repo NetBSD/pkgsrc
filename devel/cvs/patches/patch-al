@@ -1,22 +1,11 @@
-$NetBSD: patch-al,v 1.3 2000/02/23 06:48:56 mycroft Exp $
+$NetBSD: patch-al,v 1.4 2000/10/18 03:31:16 hubertf Exp $
 
---- src/client.c.orig	Sun Jul 26 22:54:06 1998
-+++ src/client.c	Wed Feb 23 01:23:49 2000
-@@ -1777,7 +1777,8 @@
- 		run_arg ("~");
- 		run_arg (filename);
- 		run_arg (temp_filename);
--		retcode = run_exec (DEVNULL, RUN_TTY, RUN_TTY, RUN_NORMAL);
-+		retcode = run_exec (DEVNULL, RUN_TTY, RUN_TTY,
-+				    RUN_NORMAL | RUN_UNSETXID);
- 	    }
- 	    /* FIXME: should we really be silently ignoring errors?  */
- 	    (void) unlink_file (temp_filename);
-@@ -4171,6 +4172,16 @@
- 	    else
+--- src/client.c.orig	Thu Jul  6 18:20:41 2000
++++ src/client.c
+@@ -4455,6 +4455,16 @@
  		error (1, 0,
  		       "This server does not support the global -n option.");
-+	}
+ 	}
 +	if (nolock && !noexec)
 +	{
 +	    if (have_global)
@@ -26,6 +15,7 @@ $NetBSD: patch-al,v 1.3 2000/02/23 06:48:56 mycroft Exp $
 +	    else
 +		error (1, 0,
 +		       "This server does not support the global -u option.");
- 	}
++	}
  	if (quiet)
  	{
+ 	    if (have_global)

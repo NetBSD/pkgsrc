@@ -1,66 +1,24 @@
-$NetBSD: patch-ar,v 1.3 2000/02/23 06:48:56 mycroft Exp $
+$NetBSD: patch-ar,v 1.4 2000/10/18 03:31:16 hubertf Exp $
 
---- src/server.c.orig	Thu Aug  6 20:46:38 1998
-+++ src/server.c	Wed Feb 23 01:18:51 2000
-@@ -597,31 +597,34 @@
+--- src/server.c.orig	Fri Jul 28 22:18:40 2000
++++ src/server.c
+@@ -796,6 +796,7 @@
         nothing.  But for rsh, we need to do it now.  */
      parse_config (CVSroot_directory);
  
--    path = xmalloc (strlen (CVSroot_directory)
--		    + sizeof (CVSROOTADM)
--		    + sizeof (CVSROOTADM_HISTORY)
--		    + 10);
--    (void) sprintf (path, "%s/%s", CVSroot_directory, CVSROOTADM);
--    if (!isaccessible (path, R_OK | X_OK))
--    {
--	save_errno = errno;
--	pending_error_text = malloc (80 + strlen (path));
--	if (pending_error_text != NULL)
--	    sprintf (pending_error_text, "E Cannot access %s", path);
--	pending_error = save_errno;
--    }
--    (void) strcat (path, "/");
--    (void) strcat (path, CVSROOTADM_HISTORY);
--    if (isfile (path) && !isaccessible (path, R_OK | W_OK))
--    {
--	save_errno = errno;
--	pending_error_text = malloc (80 + strlen (path));
--	if (pending_error_text != NULL)
--	    sprintf (pending_error_text, "E \
-+    if (!nolock)
-+    {
-+	path = xmalloc (strlen (CVSroot_directory)
-+			+ sizeof (CVSROOTADM)
-+			+ sizeof (CVSROOTADM_HISTORY)
-+			+ 10);
-+	(void) sprintf (path, "%s/%s", CVSroot_directory, CVSROOTADM);
-+	if (!isaccessible (path, R_OK | X_OK))
-+	{
-+	    save_errno = errno;
-+	    pending_error_text = malloc (80 + strlen (path));
-+	    if (pending_error_text != NULL)
-+		sprintf (pending_error_text, "E Cannot access %s", path);
-+	    pending_error = save_errno;
-+	}
-+	(void) strcat (path, "/");
-+	(void) strcat (path, CVSROOTADM_HISTORY);
-+	if (isfile (path) && !isaccessible (path, R_OK | W_OK))
-+	{
-+	    save_errno = errno;
-+	    pending_error_text = malloc (80 + strlen (path));
-+	    if (pending_error_text != NULL)
-+		sprintf (pending_error_text, "E \
- Sorry, you don't have read/write access to the history file %s", path);
--	pending_error = save_errno;
-+	    pending_error = save_errno;
-+	}
-+	free (path);
++    if (!nolock) {
+     path = malloc (strlen (CVSroot_directory)
+ 		   + sizeof (CVSROOTADM)
+ 		   + 10);
+@@ -813,6 +814,7 @@
+ 	pending_error = save_errno;
      }
--    free (path);
+     free (path);
++    }
  
  #ifdef HAVE_PUTENV
      env = malloc (strlen (CVSROOT_ENV) + strlen (CVSroot_directory) + 1 + 1);
-@@ -1759,6 +1762,8 @@
+@@ -2194,6 +2196,8 @@
      {
  	case 'n':
  	    noexec = 1;
@@ -69,33 +27,28 @@ $NetBSD: patch-ar,v 1.3 2000/02/23 06:48:56 mycroft Exp $
  	    break;
  	case 'q':
  	    quiet = 1;
-@@ -4663,19 +4668,23 @@
- #endif /* HAVE_INITGROUPS */
+@@ -5172,6 +5176,7 @@
+     const char *username;
+ {
+     struct passwd *pw;
++    int rc;
  
- #ifdef SETXID_SUPPORT
--    /* honor the setgid bit iff set*/
-+    /* Honor the setgid bit iff set. */
-     if (getgid() != getegid())
--    {
- 	setgid (getegid ());
--    }
-     else
- #else
--    {
- 	setgid (pw->pw_gid);
--    }
- #endif
+     pw = getpwnam (username);
+     if (pw == NULL)
+@@ -5231,7 +5236,15 @@
+ 	}
+     }
      
--    setuid (pw->pw_uid);
+-    if (setuid (pw->pw_uid) < 0)
 +#ifdef SETXID_SUPPORT
 +    /* Honor the setuid bit iff set. */
 +    if (getuid() != geteuid())
-+	setuid (geteuid ());
++	rc = setuid (geteuid ());
 +    else
 +#else
-+	setuid (pw->pw_uid);
++        rc = setuid (pw->pw_uid);
 +#endif
-+
-     /* We don't want our umask to change file modes.  The modes should
-        be set by the modes used in the repository, and by the umask of
-        the client.  */
++    if (rc < 0)
+     {
+ 	/* Note that this means that if run as a non-root user,
+ 	   CVSROOT/passwd must contain the user we are running as
