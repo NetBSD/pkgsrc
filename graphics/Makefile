@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2000/10/15 11:46:31 rh Exp $
+# $NetBSD: Makefile,v 1.92 2000/10/15 11:49:21 rh Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -37,6 +37,7 @@
     SUBDIR += gimp-helpbrowser
     SUBDIR += giram
     SUBDIR += glu
+    SUBDIR += glut
     SUBDIR += gnuplot
     SUBDIR += gphoto
     SUBDIR += gqview
