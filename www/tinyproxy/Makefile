@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/07 23:46:01 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/09 00:55:06 salo Exp $
 #
 
 DISTNAME=	tinyproxy-1.5.2
@@ -24,7 +24,7 @@ PKG_USERS=		${TINYPROXY_USER}:${TINYPROXY_GROUP}::Tinyproxy\\ user
 FILES_SUBST+=		TINYPROXY_USER="${TINYPROXY_USER}"
 FILES_SUBST+=		TINYPROXY_GROUP="${TINYPROXY_GROUP}"
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+CONFIGURE_ARGS+=	--with-config=${PKG_SYSCONFDIR}/tinyproxy.conf
 CONFIGURE_ARGS+=	--enable-transparent-proxy
 
 # Socks support
