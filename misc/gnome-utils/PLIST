@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/02/18 14:56:00 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/04/11 11:34:38 tron Exp $
 bin/gcalc
 bin/gcharmap
 bin/gcolorsel
@@ -10,7 +10,6 @@ bin/gless
 bin/gnome-exe-handler
 bin/gsearchtool
 bin/gshutdown
-bin/guname
 bin/gw
 bin/logview
 bin/meat-grinder
@@ -30,7 +29,6 @@ man/man1/gfontsel.1
 man/man1/gless.1
 man/man1/gnome-exe-handler.1
 man/man1/gsearchtool.1
-man/man1/guname.1
 man/man1/gw.1
 man/man1/logview.1
 man/man1/meat-grinder.1
@@ -53,7 +51,6 @@ share/gcolorsel/glade/view-color-grid-properties.glade
 share/gcolorsel/glade/view-color-list-properties.glade
 share/gnome/apps/System/gdiskfree.desktop
 share/gnome/apps/System/gshutdown.desktop
-share/gnome/apps/System/guname.desktop
 share/gnome/apps/System/gw.desktop
 share/gnome/apps/System/logview.desktop
 share/gnome/apps/Utilities/GDict.desktop
@@ -492,30 +489,6 @@ share/gnome/help/gshutdown_util/es/license.sgml
 share/gnome/help/gshutdown_util/es/ln10.html
 share/gnome/help/gshutdown_util/es/topic.dat
 share/gnome/help/gshutdown_util/es/usage.html
-share/gnome/help/guname/C/authors.html
-share/gnome/help/guname/C/docbook.css
-share/gnome/help/guname/C/figures/guname-cpuinfo.png
-share/gnome/help/guname/C/figures/guname-diskinfo.png
-share/gnome/help/guname/C/figures/guname-main.png
-share/gnome/help/guname/C/figures/guname-memoryinfo.png
-share/gnome/help/guname/C/guname.sgml
-share/gnome/help/guname/C/index.html
-share/gnome/help/guname/C/license.html
-share/gnome/help/guname/C/ln7.html
-share/gnome/help/guname/C/stylesheet-images/caution.gif
-share/gnome/help/guname/C/stylesheet-images/home.gif
-share/gnome/help/guname/C/stylesheet-images/important.gif
-share/gnome/help/guname/C/stylesheet-images/next.gif
-share/gnome/help/guname/C/stylesheet-images/note.gif
-share/gnome/help/guname/C/stylesheet-images/prev.gif
-share/gnome/help/guname/C/stylesheet-images/tip.gif
-share/gnome/help/guname/C/stylesheet-images/toc-blank.gif
-share/gnome/help/guname/C/stylesheet-images/toc-minus.gif
-share/gnome/help/guname/C/stylesheet-images/toc-plus.gif
-share/gnome/help/guname/C/stylesheet-images/up.gif
-share/gnome/help/guname/C/stylesheet-images/warning.gif
-share/gnome/help/guname/C/topic.dat
-share/gnome/help/guname/C/usage.html
 share/gnome/help/gw/C/authors.html
 share/gnome/help/gw/C/docbook.css
 share/gnome/help/gw/C/figures/gw-main.png
@@ -697,7 +670,6 @@ share/omf/gnome-utils/gsearchtool-es.omf
 share/omf/gnome-utils/gsearchtool-it.omf
 share/omf/gnome-utils/gshutdown-C.omf
 share/omf/gnome-utils/gshutdown-es.omf
-share/omf/gnome-utils/guname-C.omf
 share/omf/gnome-utils/gw-C.omf
 share/omf/gnome-utils/logview-C.omf
 share/omf/gnome-utils/meat-grinder-C.omf
@@ -742,10 +714,6 @@ share/stripchart/stripchart.params
 @dirrm share/gnome/help/gw/C/figures
 @dirrm share/gnome/help/gw/C
 @dirrm share/gnome/help/gw
-@dirrm share/gnome/help/guname/C/stylesheet-images
-@dirrm share/gnome/help/guname/C/figures
-@dirrm share/gnome/help/guname/C
-@dirrm share/gnome/help/guname
 @exec ${MKDIR} %D/share/gnome/help/gshutdown_util/es/stylesheet-images
 @dirrm share/gnome/help/gshutdown_util/es/stylesheet-images
 @dirrm share/gnome/help/gshutdown_util/es/figures
