@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2000/04/07 08:43:01 rh Exp $
+$NetBSD: patch-aa,v 1.5 2000/04/16 15:07:44 rh Exp $
 
---- configure.orig	Tue Mar 28 00:22:43 2000
-+++ configure	Fri Apr  7 10:36:22 2000
-@@ -2896,7 +2896,7 @@
+--- configure.orig	Thu Apr 13 02:52:06 2000
++++ configure	Sun Apr 16 07:56:42 2000
+@@ -2899,7 +2899,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lxml `$GNOME_CONFIG --libs xml` $LIBS"
 +LIBS="`xml-config --libs` ${LIBS}"
  cat > conftest.$ac_ext <<EOF
- #line 2902 "configure"
+ #line 2905 "configure"
  #include "confdefs.h"
-@@ -2926,7 +2926,8 @@
+@@ -2929,7 +2929,8 @@
    echo "$ac_t""yes" 1>&6
    
  		
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.4 2000/04/07 08:43:01 rh Exp $
  	
  else
    echo "$ac_t""no" 1>&6
-@@ -5080,10 +5081,12 @@
+@@ -5081,10 +5082,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
