@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/16 13:32:03 rh Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/08/18 14:01:14 adam Exp $
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/RTFConverter
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/stamp.make
@@ -48,6 +48,7 @@ share/GNUstep/System/Library/Headers/AppKit/GSServicesManager.h
 share/GNUstep/System/Library/Headers/AppKit/GSTable.h
 share/GNUstep/System/Library/Headers/AppKit/GSTextConverter.h
 share/GNUstep/System/Library/Headers/AppKit/GSTitleView.h
+share/GNUstep/System/Library/Headers/AppKit/GSToolbar.h
 share/GNUstep/System/Library/Headers/AppKit/GSToolbarView.h
 share/GNUstep/System/Library/Headers/AppKit/GSTrackingRect.h
 share/GNUstep/System/Library/Headers/AppKit/GSTypesetter.h
@@ -114,6 +115,7 @@ share/GNUstep/System/Library/Headers/AppKit/NSMenu.h
 share/GNUstep/System/Library/Headers/AppKit/NSMenuItem.h
 share/GNUstep/System/Library/Headers/AppKit/NSMenuItemCell.h
 share/GNUstep/System/Library/Headers/AppKit/NSMenuView.h
+share/GNUstep/System/Library/Headers/AppKit/NSNib.h
 share/GNUstep/System/Library/Headers/AppKit/NSNibConnector.h
 share/GNUstep/System/Library/Headers/AppKit/NSNibDeclarations.h
 share/GNUstep/System/Library/Headers/AppKit/NSNibLoading.h
@@ -169,6 +171,7 @@ share/GNUstep/System/Library/Headers/AppKit/NSToolbarItem.h
 share/GNUstep/System/Library/Headers/AppKit/NSUserInterfaceValidation.h
 share/GNUstep/System/Library/Headers/AppKit/NSView.h
 share/GNUstep/System/Library/Headers/AppKit/NSWindow.h
+share/GNUstep/System/Library/Headers/AppKit/NSWindow+Toolbar.h
 share/GNUstep/System/Library/Headers/AppKit/NSWindowController.h
 share/GNUstep/System/Library/Headers/AppKit/NSWorkspace.h
 share/GNUstep/System/Library/Headers/AppKit/PSOperators.h
@@ -193,6 +196,7 @@ share/GNUstep/System/Library/Headers/GNUstepGUI/GSServicesManager.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSTable.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSTextConverter.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSTitleView.h
+share/GNUstep/System/Library/Headers/GNUstepGUI/GSToolbar.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSToolbarView.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSTrackingRect.h
 share/GNUstep/System/Library/Headers/GNUstepGUI/GSTypesetter.h
@@ -222,6 +226,7 @@ share/GNUstep/System/Library/Headers/gnustep/gui/GSServicesManager.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSTable.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSTextConverter.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSTitleView.h
+share/GNUstep/System/Library/Headers/gnustep/gui/GSToolbar.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSToolbarView.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSTrackingRect.h
 share/GNUstep/System/Library/Headers/gnustep/gui/GSTypesetter.h
@@ -249,6 +254,7 @@ share/GNUstep/System/Library/Images/common_CloseBroken.tiff
 share/GNUstep/System/Library/Images/common_CloseBrokenH.tiff
 share/GNUstep/System/Library/Images/common_CloseH.tiff
 share/GNUstep/System/Library/Images/common_ColorSwatch.tiff
+share/GNUstep/System/Library/Images/common_ComboBoxEllipsis.tiff
 share/GNUstep/System/Library/Images/common_DecimalTabStop.tiff
 share/GNUstep/System/Library/Images/common_Diamond.tiff
 share/GNUstep/System/Library/Images/common_Dimple.tiff
@@ -311,6 +317,8 @@ share/GNUstep/System/Library/Images/common_outlineUnexpandable.tiff
 share/GNUstep/System/Library/Images/common_ret.tiff
 share/GNUstep/System/Library/Images/common_retH.tiff
 share/GNUstep/System/Library/Images/nsmapping.strings
+share/GNUstep/System/Library/Images/page_landscape.tiff
+share/GNUstep/System/Library/Images/page_portrait.tiff
 share/GNUstep/System/Library/KeyBindings/DefaultKeyBindings.dict
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSDataLinkPanel.gorm/data.classes
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSDataLinkPanel.gorm/objects.gorm
@@ -323,7 +331,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/GSSpe
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/English.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/Resources/gnustep-gui/Italian.lproj/Localizable.strings
 share/GNUstep/System/Library/Libraries/libgnustep-gui.so
-share/GNUstep/System/Library/Libraries/libgnustep-gui.so.0.9.2
+share/GNUstep/System/Library/Libraries/libgnustep-gui.so.0.9.3
 share/GNUstep/System/Library/Makefiles/Additional/gui.make
 share/GNUstep/System/Library/PostScript/GSProlog.ps
 share/GNUstep/System/Library/PostScript/PPD/English.lproj/AGFA_AccuSet.ppd
