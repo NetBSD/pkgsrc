@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/08/07 12:47:51 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/10/09 18:45:16 wiz Exp $
 #
 
 DISTNAME=	jhead-1.8
@@ -9,7 +9,9 @@ MAINTAINER=	veego@netbsd.org
 HOMEPAGE=	http://www.sentex.net/~mwandel/jhead/
 COMMENT=	Extract EXIF header from JPEG image
 
-LIBS=		-lm -L${BUILDLINK_DIR}/lib -Wl,-R${LOCALBASE}/lib -ljpeg
+LIBS=		-lm -L${BUILDLINK_PREFIX.jpeg}/lib -Wl,-R${BUILDLINK_PREFIX.jpeg}/lib -ljpeg
+
+USE_BUILDLINK2=	yes
 
 do-build:
 	cd ${WRKSRC} && \
@@ -20,5 +22,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/jhead ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/usage.html ${PREFIX}/share/doc/html/jhead
 
-.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

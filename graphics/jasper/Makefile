@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/04/08 12:25:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/09 18:42:55 wiz Exp $
 #
 
 DISTNAME=		jasper-1.500.4
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.ece.ubc.ca/~mdadams/jasper/
 COMMENT=		software-based reference implementation of the JPEG-2000 codec
 
 GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
@@ -20,5 +21,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/jasper
 .endfor
 
-.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
