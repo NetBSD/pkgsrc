@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.25 2004/06/18 11:22:41 kristerw Exp $
+# $NetBSD: defs.Interix.mk,v 1.26 2004/08/23 23:34:45 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -80,12 +80,15 @@ TYPE?=		type				# Shell builtin
 WC?=		/bin/wc
 XARGS?=		/bin/xargs
 
-USERADD?=	${LOCALBASE}/sbin/useradd
-GROUPADD?=	${LOCALBASE}/sbin/groupadd
-_PKG_USER_HOME?=# empty by default
-_USER_DEPENDS=	user>=20040426:../../sysutils/user_interix
-DEPENDS+=	${USE_USERADD:D${_USER_DEPENDS}}
-DEPENDS+=	${USE_GROUPADD:D${_USER_DEPENDS}}
+# Default to threaded Perl, the same as is shipped with Interix itself.
+PERL5_USE_THREADS?=	yes
+
+USERADD?=		${LOCALBASE}/sbin/useradd
+GROUPADD?=		${LOCALBASE}/sbin/groupadd
+_PKG_USER_HOME?=	# empty by default
+_USER_DEPENDS=		user>=20040426:../../sysutils/user_interix
+DEPENDS+=		${USE_USERADD:D${_USER_DEPENDS}}
+DEPENDS+=		${USE_GROUPADD:D${_USER_DEPENDS}}
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		002
