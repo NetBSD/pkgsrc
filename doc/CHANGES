@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6198 2004/06/10 18:08:13 jmmv Exp $
+$NetBSD: CHANGES,v 1.6199 2004/06/10 20:09:47 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2857,7 +2857,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvs to 1.11.17 [grant 2004-06-10]
 	Updated python23 to 2.3.4nb1 [recht 2004-06-10]
 	Updated python23-pth to 2.3.4nb1 [recht 2004-06-10]
-	Added sq905view-0.01 [hamajima 2004-06-10]
 	Updated kde3 to 3.2.3 [markd 2004-06-10]
 	Updated arts to 1.2.3 [markd 2004-06-10]
 	Updated quanta3 to 3.2.3 [markd 2004-06-10]
