@@ -1,0 +1,76 @@
+$NetBSD: patch-ab,v 1.1 1998/08/27 12:58:51 garbled Exp $
+--- sys/unix/Makefile.top.orig	Tue Dec 10 13:20:10 1996
++++ sys/unix/Makefile.top	Sat Aug  8 06:10:41 1998
+@@ -17,4 +17,4 @@
+ GAME     = nethack
+-GAMEUID  = games
+-GAMEGRP  = bin
++GAMEUID  = bin
++GAMEGRP  = games
+ 
+@@ -22,6 +22,6 @@
+ # See also the option "SECURE" in include/config.h
+-GAMEPERM = 04755
+-FILEPERM = 0644
++GAMEPERM = 2755
++FILEPERM = 0664
+ EXEPERM  = 0755
+-DIRPERM  = 0755
++DIRPERM  = 0775
+ 
+@@ -34,4 +34,4 @@
+ # instructions)
+-GAMEDIR  = /usr/games/lib/$(GAME)dir
+-SHELLDIR = /usr/games
++GAMEDIR  = $(LOCALBASE)/share/$(GAME)dir
++SHELLDIR = $(LOCALBASE)/bin
+ 
+@@ -40,3 +40,3 @@
+ # VARDATND = x11tiles pet_mark.xbm
+-# VARDATND = x11tiles pet_mark.xbm rip.xpm
++VARDATND = x11tiles pet_mark.xbm rip.xpm
+ 
+@@ -76,5 +76,8 @@
+ 
+-all:	$(GAME) Guidebook $(VARDAT) dungeon spec_levs check-dlb
++all:	$(GAME) datastuff
+ 	@echo "Done."
+ 
++datastuff: Guidebook $(VARDAT) dungeon spec_levs check-dlb
++	@echo "Data Sets Built"
++
+ Guidebook:
+@@ -128,2 +131,7 @@
+ 
++binfiles: $(GAME)
++	cp src/$(GAME) $(SHELLDIR)/$(GAME)$(GTYPE)
++	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)$(GTYPE) ; \
++			$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)$(GTYPE) )
++	chmod $(GAMEPERM) $(SHELLDIR)/$(GAME)$(GTYPE)
+ 
+@@ -137,3 +145,2 @@
+ 	$(MAKE) dofiles-$${target-nodlb}
+-	cp src/$(GAME) $(GAMEDIR)
+ 	-rm -f $(SHELLDIR)/$(GAME)
+@@ -141,2 +148,3 @@
+ 		-e 's;HACKDIR/nethack;HACKDIR/$(GAME);' \
++		-e 's;XXXPREFIXXXX;$(LOCALBASE);' \
+ 		< sys/unix/nethack.sh \
+@@ -144,5 +152,2 @@
+ # set up their permissions
+-	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) $(GAME) ; \
+-			$(CHGRP) $(GAMEGRP) $(GAME) )
+-	chmod $(GAMEPERM) $(GAMEDIR)/$(GAME)
+ 	-$(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)
+@@ -182,3 +187,3 @@
+ 
+-install: $(GAME) $(VARDAT) dungeon spec_levs
++install-dat: $(VARDAT) dungeon spec_levs
+ # set up the directories
+@@ -197,2 +202,6 @@
+ 			chmod $(FILEPERM) perm record logfile )
++	-mkdir -p $(LOCALBASE)/share/doc/nethack
++	cp doc/Guidebook $(LOCALBASE)/share/doc/nethack
++	chown $(GAMEUID):$(GAMEGRP) $(LOCALBASE)/share/doc/nethack/Guidebook
++	chmod $(FILEPERM) $(LOCALBASE)/share/doc/nethack/Guidebook
+ # and a reminder
