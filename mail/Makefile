@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2002/06/07 12:23:11 tron Exp $
+# $NetBSD: Makefile,v 1.132 2002/06/17 09:16:10 grant Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -69,6 +69,7 @@ SUBDIR+=	p5-Mail-ListDetector
 SUBDIR+=	p5-Mail-Sendmail
 SUBDIR+=	p5-Mail-SpamAssassin
 SUBDIR+=	p5-MailTools
+SUBDIR+=	p5-Sendmail-AccessDB
 SUBDIR+=	p5-razor-agents
 SUBDIR+=	php4-imap
 SUBDIR+=	pine
