@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1824 2003/04/01 15:19:59 abs Exp $
+$NetBSD: CHANGES,v 1.1825 2003/04/01 16:09:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1433,3 +1433,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kde3-i18n-zh_TW to 3.1.1 [markd 2003-04-01]
 	Updated kde3-i18n-zu to 3.1.1 [markd 2003-04-01]
 	Updated rconfig to 0.17 [abs 2003-04-01]
+	Updated sudo to 1.6.7.1 [wiz 2003-04-01]
