@@ -1,0 +1,15 @@
+$NetBSD: patch-bc,v 1.1 2003/10/05 14:26:00 grant Exp $
+
+--- hints/solaris_2.sh.orig	2003-09-18 19:21:49.000000000 +1000
++++ hints/solaris_2.sh
+@@ -241,6 +241,10 @@ END
+ 	    # All Solaris versions of ld I've seen contain the magic
+ 	    # string used in the grep.
+ 	    :
++	elif echo "$verbose" | grep "ld: Solaris Link Editors" >/dev/null 2>&1; then
++	    # This string has also been observed "in the wild" as
++	    # being the Solaris linker.
++	    :
+ 	else
+ 	    # No evidence yet of /usr/ccs/bin/ld.  Some versions
+ 	    # of egcs's ld wrapper call /usr/ccs/bin/ld in turn but
