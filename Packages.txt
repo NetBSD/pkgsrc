@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.115 2000/10/13 23:21:53 jlam Exp $
+# $NetBSD: Packages.txt,v 1.116 2000/10/17 14:52:31 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -698,7 +698,7 @@ at the shell prompt. Also, this directory is used to keep various
 timestamp files. 
 
 
- 4.7 importing the package into CVS
+ 4.7 Importing the package into CVS
  ==================================
 
 Newly created packages should be imported with a vendor tag of "TNF" and
