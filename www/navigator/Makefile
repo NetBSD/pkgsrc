@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/02/22 07:45:22 abs Exp $
+# $NetBSD: Makefile,v 1.2 1999/02/25 02:59:52 abs Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -19,7 +19,10 @@ UNAME_SHORT=	sunos413
 DISTNAME=	${BINNAME}-v45-export.${UNAME}
 PKGNAME=	${BINNAME}-4.5
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/4.5/english/unix/unsupported/${UNAME_SHORT}/navigator_standalone/
+SUB=		english/unix/unsupported/${UNAME_SHORT}/navigator_standalone
+MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/4.5/${SUB}/ \
+		ftp://sunsite.utk.edu/pub/netscape/communicator/4.5/${SUB}/ \
+		ftp://ftp-uk.netscape.com/pub/communicator/${SUB}/
 ONLY_FOR_ARCHS=	i386 sparc
 
 MAINTAINER=	abs@netbsd.org

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/01/14 18:50:09 kim Exp $
+# $NetBSD: Makefile,v 1.28 1999/02/25 02:59:52 abs Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -17,6 +17,7 @@
 #    SUBDIR += cgiparse
 #    SUBDIR += chimera
 #    SUBDIR += comline
+    SUBDIR += communicator
 #    SUBDIR += fxhtml
 #    SUBDIR += gn
 #    SUBDIR += gwstat
@@ -35,8 +36,7 @@
 #    SUBDIR += momspider
     SUBDIR += mozilla
 #    SUBDIR += netscape3
-#    SUBDIR += netscape4-communicator
-#    SUBDIR += netscape4-navigator
+    SUBDIR += navigator
     SUBDIR += p5-Apache-ASP
     SUBDIR += p5-Apache-ePerl
 #    SUBDIR += p5-CGI
