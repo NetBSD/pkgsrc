@@ -1,7 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 1998/01/24 04:08:15 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/01/30 20:47:26 frueauf Exp $
 bin/gmake
 man/man1/gmake.1.gz
 @unexec %D/bin/install-info --delete %D/info/make.info %D/info/dir
 info/make.info
+info/make.info-1
+info/make.info-2
+info/make.info-3
+info/make.info-4
+info/make.info-5
+info/make.info-6
+info/make.info-7
+info/make.info-8
+info/make.info-9
 @exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 @exec %D/bin/install-info %D/info/make.info %D/info/dir
