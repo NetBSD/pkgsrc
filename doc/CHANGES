@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5255 2004/03/14 01:26:55 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5256 2004/03/14 07:30:25 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1467,3 +1467,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kdegraphics3 to 3.2.1nb1 [markd 2004-03-14]
 	Updated kde3 to 3.2.1nb2 [markd 2004-03-14]
 	Updated dillo to 0.8.0 [xtraeme 2004-03-14]
+	Updated postfix to 2.0.19 [martti 2004-03-14]
