@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.18 2000/10/29 03:51:19 mycroft Exp $
+$NetBSD: md5,v 1.19 2000/12/15 07:16:22 martin Exp $
 
-MD5 (mozilla-source-M18.tar.bz2) = c92aadfd0a15ca7f48fafc2bbf321e0d
+MD5 (mozilla-0.6/mozilla-source.tar.bz2) = d56e61cfeb77f6889e62ab953e8a723d

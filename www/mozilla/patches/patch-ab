@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.12 2000/12/14 18:18:50 abs Exp $
+$NetBSD: patch-ab,v 1.13 2000/12/15 07:16:22 martin Exp $
 
---- configure.in.orig	Sat Sep 30 23:16:13 2000
-+++ configure.in	Wed Dec 13 10:11:27 2000
+diff -ru /usr/local/src/mozilla/configure.in ./configure.in
+--- /usr/local/src/mozilla/configure.in	Sun Oct  1 15:16:13 2000
++++ ./configure.in	Fri Oct 13 11:23:07 2000
 @@ -360,8 +360,6 @@
  TARGET_MD_ARCH=unix
  DIRENT_INO=d_ino
@@ -11,7 +12,7 @@ $NetBSD: patch-ab,v 1.12 2000/12/14 18:18:50 abs Exp $
  
  MOZ_JPEG_CFLAGS=
  MOZ_JPEG_LIBS='-L$(DIST)/lib -ljpeg'
-@@ -705,31 +703,26 @@
+@@ -705,31 +703,24 @@
      if $CC -E - -dM </dev/null | grep __ELF__ >/dev/null; then
          DLL_SUFFIX=".so"
          DSO_PIC_CFLAGS='-fPIC -DPIC'
@@ -19,21 +20,18 @@ $NetBSD: patch-ab,v 1.12 2000/12/14 18:18:50 abs Exp $
 -        SHLIB_LDSTARTFILE=/usr/lib/crtbeginS.o
 -        SHLIB_LDENDFILE=/usr/lib/crtendS.o
 +        DSO_LDOPTS='-shared -Wl,-soname,lib$(LIBRARY_NAME)$(DLL_SUFFIX)'
-+	MKSHLIB_FORCE_ALL='-Wl,--whole-archive'
-+	MKSHLIB_UNFORCE_ALL='-Wl,--no-whole-archive'
      else
      	DSO_PIC_CFLAGS='-fPIC -DPIC'
      	DLL_SUFFIX=".so.1.0"
 -    	DSO_LDOPTS='-x -shared'
 -    	SHLIB_LDSTARTFILE=/usr/lib/c++rt0.o
 +    	DSO_LDOPTS='-shared'
-+	MKSHLIB_FORCE_ALL=''
-+	MKSHLIB_UNFORCE_ALL=''
-+	# a.out ignores --no-whole-archive; using --whole-archive breaks link
      fi
--    # At least for 1.3 and up, ld supports this, despite the test failing above.
+     # At least for 1.3 and up, ld supports this, despite the test failing above.
 -    MKSHLIB_FORCE_ALL='--whole-archive'
 -    MKSHLIB_UNFORCE_ALL='--no-whole-archive'
++    MKSHLIB_FORCE_ALL='-Wl,--whole-archive'
++    MKSHLIB_UNFORCE_ALL='-Wl,--no-whole-archive'
      case $OS_TEST in
  	alpha)
  		dnl NetBSD/alpha can't find a shared lib
@@ -51,7 +49,7 @@ $NetBSD: patch-ab,v 1.12 2000/12/14 18:18:50 abs Exp $
      fi
      ;;
  
-@@ -981,8 +974,6 @@
+@@ -981,8 +972,6 @@
  
  dnl See above (netbsd)
  AC_SUBST(NEED_BASE_DLL_NAME_ALSO)
@@ -60,7 +58,7 @@ $NetBSD: patch-ab,v 1.12 2000/12/14 18:18:50 abs Exp $
  
  dnl Only one oddball right now (QNX), but this gives us flexibility
  dnl if any other platforms need to override this in the future.
-@@ -1195,12 +1186,6 @@
+@@ -1195,12 +1184,6 @@
      AM_PATH_GTK($GTK_VERSION,,
        AC_MSG_ERROR(Test for GTK failed.))
  
@@ -73,7 +71,7 @@ $NetBSD: patch-ab,v 1.12 2000/12/14 18:18:50 abs Exp $
  dnl ========================================================
  dnl =							   =
  dnl = --with-java-supplement				   =
-@@ -1691,13 +1676,6 @@
+@@ -1691,13 +1674,6 @@
  AC_SUBST(GLIB_CFLAGS)
  AC_SUBST(GLIB_LIBS)
  
@@ -87,7 +85,7 @@ $NetBSD: patch-ab,v 1.12 2000/12/14 18:18:50 abs Exp $
  dnl Checks for typedefs, structures, and compiler characteristics.
  dnl ========================================================
  AC_C_CONST
-@@ -2046,6 +2024,9 @@
+@@ -2046,6 +2022,9 @@
  				CXXFLAGS="$CXXFLAGS -mt" 
  			fi
  			;;
