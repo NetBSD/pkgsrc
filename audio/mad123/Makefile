@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/10 12:58:08 salo Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/11 17:23:38 xtraeme Exp $
 #
 
 DISTNAME=	mad123-0.7.1
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mctavish.co.uk/mad123/
 COMMENT=	Command-line MPEG audio player
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mad123 ${PREFIX}/bin/mad123
@@ -18,12 +18,12 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "../../audio/id3lib/buildlink2.mk"
-.include "../../audio/libmad/buildlink2.mk"
-.include "../../www/curl/buildlink2.mk"
+.include "../../audio/id3lib/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 
 .if defined(USE_OSS)
-.  include "../../mk/ossaudio.buildlink2.mk"
+.  include "../../mk/ossaudio.buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
