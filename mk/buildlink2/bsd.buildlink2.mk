@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.113 2004/02/08 02:59:14 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.114 2004/02/09 01:30:59 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -480,6 +480,10 @@ _BLNK_WRAPPEES+=	LD
 _BLNK_WRAPPEES+=	FC
 .endif
 _BLNK_WRAPPEES+=	LIBTOOL SHLIBTOOL
+.if defined(USE_LIBTOOL)
+_LIBTOOL=		${BUILDLINK_LIBTOOL}
+_SHLIBTOOL=		${BUILDLINK_SHLIBTOOL}
+.endif
 .if defined(USE_X11)
 IMAKE?=			${X11BASE}/bin/imake
 _BLNK_WRAPPEES+=	IMAKE
