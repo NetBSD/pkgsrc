@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2001/11/13 21:15:31 jlam Exp $
+
+--- xparts/src/gtk/Makefile.in.orig	Fri Sep  7 20:50:15 2001
++++ xparts/src/gtk/Makefile.in
+@@ -219,7 +219,7 @@
+ x_includes = @x_includes@
+ x_libraries = @x_libraries@
+ 
+-INCLUDES = $(GLIB_INCLUDES) -I$(prefix)/include -I$(top_srcdir) $(all_includes)
++INCLUDES = $(GLIB_INCLUDES) -I$(top_srcdir) $(all_includes)
+ 
+ AM_CFLAGS =  $(GLIB_CFLAGS) $(GTK_CFLAGS)
+ AM_CXXFLAGS =  $(GLIB_CFLAGS) $(GTK_CFLAGS)
+@@ -228,7 +228,7 @@
+ 
+ libgtkxparts_la_SOURCES = gtkpart.c gtkbrowserextension.c
+ libgtkxparts_la_LIBADD = $(GTK_LIBS) $(GLIB_LIBS) $(top_builddir)/dcopc/libdcopc.la
+-libgtkxparts_la_LDFLAGS = -L$(prefix)/lib $(all_libraries) -no-undefined
++libgtkxparts_la_LDFLAGS = $(all_libraries) -no-undefined
+ 
+ gtkxpartsinclude_HEADERS = gtkpart.h gtkbrowserextension.h
+ gtkxpartsincludedir = $(includedir)/xkparts
