@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/03/06 09:08:30 martin Exp $
+
+--- common/dirscan_rcs_scanfile.c.orig	2003-03-06 09:57:09.000000000 +0100
++++ common/dirscan_rcs_scanfile.c	2003-03-06 09:57:29.000000000 +0100
+@@ -28,6 +28,7 @@
+  */
+ 
+ #include <stdlib.h>
++#include <string.h>
+ 
+ #include <limits.h>
+ #include <pthread.h>
