@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/12/16 08:08:59 keihan Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/05 11:15:09 jlam Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -14,12 +14,14 @@ COMMENT=		The 'Internet Relay Chat' and 'Internet Citizens Band' Client
 
 CONFLICTS=		blackened-[0-9]*
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 VERS=			20030709
 PLIST_SUBST+= 		VERS=${VERS}
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 .if defined(DEFAULT_IRC_SERVER)
 CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER}
@@ -36,10 +38,10 @@ BUILD_DEFS+=		USE_SOCKS
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
 .  if ${USE_SOCKS} == 4
-.    include "../../net/socks4/buildlink2.mk"
+.    include "../../net/socks4/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-socks4=${BUILDLINK_PREFIX.socks4}
 .  elif ${USE_SOCKS} == 5
-.    include "../../net/socks5/buildlink2.mk"
+.    include "../../net/socks5/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-socks5=${BUILDLINK_PREFIX.socks5}
 .  endif
 .endif
