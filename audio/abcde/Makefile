@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2002/12/16 05:14:28 lukem Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/01 19:06:01 kim Exp $
 
 DISTNAME=	abcde-2.0.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://frantica.lly.org/~rcw/abcde/
 DISTFILES=	${DISTNAME:S/-/_/}.orig.tar.gz
