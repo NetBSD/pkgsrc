@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/04/09 18:24:51 jwise Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/26 22:59:32 jlam Exp $
 etc/rc.d/tomcat
 tomcat/KEYS
 tomcat/LICENSE
@@ -372,10 +372,10 @@ tomcat/webapps/test.war
 @comment must explicitly remove tomcat working stash
 @unexec ${RM} -rf tomcat/work
 @comment also remove auto-generated conf fragments, if present
-@unexec ${RM} -f /usr/pkg/tomcat/conf/iis_redirect.reg-auto
-@unexec ${RM} -f /usr/pkg/tomcat/conf/mod_jk.conf-auto
-@unexec ${RM} -f /usr/pkg/tomcat/conf/obj.conf-auto
-@unexec ${RM} -f /usr/pkg/tomcat/conf/uriworkermap.properties-auto
+@unexec ${RM} -f %D/tomcat/conf/iis_redirect.reg-auto
+@unexec ${RM} -f %D/tomcat/conf/mod_jk.conf-auto
+@unexec ${RM} -f %D/tomcat/conf/obj.conf-auto
+@unexec ${RM} -f %D/tomcat/conf/uriworkermap.properties-auto
 @dirrm tomcat/src/org/apache/tomcat/util/xml
 @dirrm tomcat/src/org/apache/tomcat/util/pattern
 @dirrm tomcat/src/org/apache/tomcat/util/compat
