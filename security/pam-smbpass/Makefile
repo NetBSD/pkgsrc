@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/12 07:59:28 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/23 04:41:01 jlam Exp $
 
 .include "../../net/samba2/Makefile.common"
 
@@ -12,7 +12,7 @@ CONFLICTS+=		samba>=3.0
 
 DEPENDS+=		{samba>=2.0,ja-samba>=2.0}:../../net/samba
 
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 CONFIGURE_ARGS+=	--with-pam
 
 ALL_TARGET=		pam_smbpass

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/03/05 19:09:22 minskim Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/03/23 04:41:01 jlam Exp $
 #
 # Canna common makefile.
 #
@@ -16,7 +16,7 @@ FILESDIR=	${.CURDIR}/../canna/files
 DISTINFO_FILE=	${.CURDIR}/../canna/distinfo
 PATCHDIR=	${.CURDIR}/../canna/patches
 
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 
 .include "../canna/Makefile.version"
 
