@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/04/19 18:42:33 seb Exp $
 bin/acyclic
 bin/ccomps
 bin/colorize
@@ -10,6 +10,7 @@ bin/lefty
 bin/lneato
 bin/neato
 bin/nop
+bin/prune
 bin/sccmap
 bin/tred
 bin/twopi
@@ -63,6 +64,8 @@ lib/graphviz/graphs/directed/unix2k.dot
 lib/graphviz/graphs/directed/viewfile.dot
 lib/graphviz/graphs/directed/world.dot
 lib/graphviz/graphs/undirected/ER.dot
+lib/graphviz/graphs/undirected/Heawood.dot
+lib/graphviz/graphs/undirected/Petersen.dot
 lib/graphviz/graphs/undirected/ngk10_4.dot
 lib/graphviz/graphs/undirected/process.dot
 lib/graphviz/lefty/box.lefty
@@ -118,6 +121,7 @@ man/man1/gpr.1
 man/man1/lefty.1
 man/man1/neato.1
 man/man1/nop.1
+man/man1/prune.1
 man/man1/sccmap.1
 man/man1/tred.1
 man/man1/twopi.1

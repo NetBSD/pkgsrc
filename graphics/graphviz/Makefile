@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/03/21 08:47:06 seb Exp $
+# $NetBSD: Makefile,v 1.5 2002/04/19 18:42:33 seb Exp $
 #
 
-DISTNAME=	graphviz-1.8.2
+DISTNAME=	graphviz-1.8.5
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.research.att.com/sw/tools/graphviz/dist/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.research.att.com/sw/tools/graphviz/
