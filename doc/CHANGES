@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.55 2002/09/25 09:55:42 wiz Exp $
+$NetBSD: CHANGES,v 1.56 2002/09/25 13:21:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2962,3 +2962,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pan to 0.13.0 [rh 2002-09-25]
 	Updated leafnode to 1.9.27 [cjep 2002-09-25]
 	Updated pkglint to 3.35 [wiz 2002-09-25]
+	Updated ipadic to 2.4.4nb1 [taca 2002-09-25]
