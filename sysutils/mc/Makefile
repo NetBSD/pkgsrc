@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 1999/03/15 00:11:08 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/03/22 22:43:42 agc Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
 DISTNAME=	mc-4.5.25
 CATEGORIES=	systuils
-MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-1.0/sources/ \
+MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
 		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/
 
