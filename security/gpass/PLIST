@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/10 16:21:54 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/06/21 07:29:13 jmmv Exp $
 bin/gpass
 share/applications/gpass.desktop
 share/doc/gpass/ABOUT-NLS
@@ -17,6 +17,7 @@ share/gpass/main-window.glade
 share/gpass/master-password-dialog.glade
 share/gpass/password-entry-dialog.glade
 share/gpass/remove-dialog.glade
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gpass.mo
 @dirrm share/gpass
 @dirrm share/doc/gpass
 @comment in xdg-dirs: @dirrm share/applications
