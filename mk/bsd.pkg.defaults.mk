@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.101 2002/10/21 01:18:55 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.102 2002/11/07 04:22:29 dillo Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -65,6 +65,11 @@ PKGSRC_SLEEPSECS?= 5
 #  * run check-shlibs to see that all binaries will find their libs
 # Possible: defined, not defined
 # Default: not defined
+
+PKGSRC_RUN_TEST?=	no
+# Run test target before install
+# Possible: yes, no
+# Default: no
 
 #WRKOBJDIR=	/usr/tmp
 # build here instead of in pkgsrc
