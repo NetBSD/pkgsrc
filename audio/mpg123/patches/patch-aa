@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 1998/10/30 03:11:52 mycroft Exp $
+$NetBSD: patch-aa,v 1.9 1999/02/06 12:24:30 mycroft Exp $
 
 --- Makefile.orig	Sun Feb  8 13:23:04 1998
-+++ Makefile	Thu Oct 29 22:01:30 1998
++++ Makefile	Sat Feb  6 07:19:22 1999
 @@ -32,6 +32,7 @@
  	@echo "make aix            IBM AIX (tested: 4.2)"
  	@echo "make os2            IBM OS/2"
@@ -10,7 +10,13 @@ $NetBSD: patch-aa,v 1.8 1998/10/30 03:11:52 mycroft Exp $
  	@echo "make bsdos          BSDI BSD/OS"
  	@echo "make generic        try this one if your system isn't listed above"
  	@echo ""
-@@ -218,10 +219,12 @@
+@@ -213,15 +214,17 @@
+ 		OBJECTS='decode.o dct64.o audio_sun.o' \
+ 		CFLAGS='-Wall -ansi -pedantic -O3 -fomit-frame-pointer \
+ 			-funroll-all-loops -ffast-math \
+-			-DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
++			-DREAL_IS_FLOAT -DUSE_MMAP -DREAD_MMAP -DNETBSD' \
+ 		mpg123-make
  
  netbsd-i386:
  	$(MAKE) CC=cc LDFLAGS= \
