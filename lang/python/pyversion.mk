@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.4 2002/01/16 20:09:08 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.5 2002/01/17 11:06:42 drochner Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -67,20 +67,26 @@ _PYTHON_VERSION=	${_PYTHON_VERSION_FIRSTACCEPTED}
 .endif
 
 #
-# set variables for the version we decided to use
+# set variables for the version we decided to use:
+#  PYVERSSUFFIX: suffix to executables and in library path,
+#                equal to sys.version[0:3]
+#  PYPKGPREFIX: prefix to use in PKGNAME for extensions which can install
+#               to multiple Python versions
 #
 .if ${_PYTHON_VERSION} == "22"
 DEPENDS+=	${BUILDLINK_DEPENDS.python22}:../../lang/python22
-PYTHONBIN=	${LOCALBASE}/bin/python2.2
+PYVERSSUFFIX=	2.2
 PYPKGPREFIX=	py22
 .elif ${_PYTHON_VERSION} == "21"
 DEPENDS+=	${BUILDLINK_DEPENDS.python21}:../../lang/python21
-PYTHONBIN=	${LOCALBASE}/bin/python2.1
+PYVERSSUFFIX=	2.1
 PYPKGPREFIX=	py21
 .elif ${_PYTHON_VERSION} == "20"
 DEPENDS+=	${BUILDLINK_DEPENDS.python20}:../../lang/python20
-PYTHONBIN=	${LOCALBASE}/bin/python2.0
+PYVERSSUFFIX=	2.0
 PYPKGPREFIX=	py20
 .endif
+
+PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
 
 .endif	# PYTHON_PYVERSION_MK
