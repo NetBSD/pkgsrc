@@ -1,0 +1,16 @@
+EasyTAG is a utility for easily and quickly viewing, editing and writing
+the ID3 tags of your MP3 files, using a nice GTK+ interface.
+
+Currently EasyTAG supports the following:
+  - Editing, writing all ID3 TAGs of MP3 files in the selected directory
+  - Process all mp3 of the selected directory,
+  - Can work recursively 
+  - Easy directory selection with a tree browser
+  - Supports ID3v1, ID3v1.1 tags
+  - Scan file for automatic tagging (using masks)
+  - Can apply a field (artist, title,...) to all other files,
+  - Display MP3 header informations
+  - Rename mp3 file
+  - Support of gettext (localization)
+  - Can load a character translation file
+  - Simple and explicit interface!
