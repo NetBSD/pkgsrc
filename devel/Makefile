@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.301 2002/07/27 20:27:30 wiz Exp $
+# $NetBSD: Makefile,v 1.302 2002/07/30 02:05:21 dmcmahill Exp $
 #
 
 COMMENT=	Development utilities
@@ -195,6 +195,7 @@ SUBDIR+=	p5-File-PathConvert
 SUBDIR+=	p5-File-Temp
 SUBDIR+=	p5-FileKGlob
 SUBDIR+=	p5-FreezeThaw
+SUBDIR+=	p5-IO-String
 SUBDIR+=	p5-IO-Stty
 SUBDIR+=	p5-IO-Tty
 SUBDIR+=	p5-IO-stringy
