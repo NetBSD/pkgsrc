@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.118.2.13 2003/08/25 19:37:47 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.118.2.14 2003/08/26 21:52:10 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -279,8 +279,24 @@ DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
 MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
 .endif
 
+# The style of installation to be performed for the package.
+# Possible: overwrite, pkgviews
+#
+# NOTE: PKG_INSTALLATION_TYPE should be set *before* including bsd.prefs.mk. 
+#
+PKG_INSTALLATION_TYPE?=	overwrite
+
 # This is the package database directory for the default view.
 PKG_DBDIR?=		${DESTDIR}/var/db/pkg
+
+# _PKG_DBDIR is the actual packages database directory where we register
+# packages.
+#
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_PKG_DBDIR=		${PKG_DBDIR}
+.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
+_PKG_DBDIR=		${DEPOTBASE}
+.endif
 
 PKG_ADD_CMD?=		${PKG_TOOLS_BIN}/pkg_add
 PKG_ADMIN_CMD?=		${PKG_TOOLS_BIN}/pkg_admin
