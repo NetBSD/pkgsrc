@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/09/21 18:18:50 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/10/05 21:06:06 tron Exp $
 #
 
 DISTNAME=	wmakerconf-2.2
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/wmakerconf/
 
 DEPENDS+=	windowmaker-*:../../x11/windowmaker
 DEPENDS+=	imlib-1.9.4:../../graphics/imlib
-DEPENDS+=	libproplist-0.8.3:../../devel/libproplist
+DEPENDS+=	libproplist-*:../../devel/libproplist
 DEPENDS+=	gtk+-1.2.4:../../x11/gtk
 
 USE_X11BASE=	yes
