@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/24 17:17:49 jmmv Exp $
+lib/ocaml/graphics.a
+lib/ocaml/graphics.cma
+lib/ocaml/graphics.cmi
+${OPT}lib/ocaml/graphics.cmxa
+lib/ocaml/graphics.mli
+lib/ocaml/graphicsX11.cmi
+lib/ocaml/graphicsX11.mli
+lib/ocaml/libgraphics.a
+@comment in ocaml: @dirrm lib/ocaml
