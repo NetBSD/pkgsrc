@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/14 20:51:12 jwise Exp $
+# $NetBSD: Makefile,v 1.4 2000/05/09 20:12:46 jwise Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -28,8 +28,6 @@ MIRROR_DISTFILE=no
 
 .include "../../mk/bsd.prefs.mk"
 
-JSDK_HOME?=	${JAVA_HOME}/jsdk
-
 do-fetch:
 	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
 	    ${ECHO_MSG} "==============================================================="; \
@@ -41,10 +39,12 @@ do-fetch:
 	fi
 
 do-install:
-	${MKDIR} ${JSDK_HOME}
-	cd ${WRKSRC} ; ${GTAR} pcf - . | ( cd ${JSDK_HOME} ; ${GTAR} pvxf - )
+	${MKDIR} ${PREFIX}/lib/java
+	${INSTALL_DATA} -c -m 644 ${WRKSRC}/lib/jsdk.jar ${PREFIX}/lib/java
+	${MKDIR} ${PREFIX}/share/doc/java/jsdk20
+	cd ${WRKSRC}/doc ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/jsdk20 ; ${GTAR} pvxf - )
+	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README ${PREFIX}/share/doc/java/jsdk20
+	${MKDIR} ${PREFIX}/share/examples/java/jsdk20
+	cd ${WRKSRC}/examples ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/examples/java/jsdk20 ; ${GTAR} pvxf - )
 
 .include "../../mk/bsd.pkg.mk"
-
-# This needs to be after bsd.pkg.mk 
-PREFIX:=        ${JSDK_HOME}

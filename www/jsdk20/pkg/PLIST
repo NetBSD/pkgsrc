@@ -1,101 +1,72 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/14 17:20:19 jwise Exp $
-README
-src/javax/servlet/Servlet.java
-src/javax/servlet/ServletConfig.java
-src/javax/servlet/ServletContext.java
-src/javax/servlet/ServletException.java
-src/javax/servlet/ServletInputStream.java
-src/javax/servlet/ServletOutputStream.java
-src/javax/servlet/ServletRequest.java
-src/javax/servlet/ServletResponse.java
-src/javax/servlet/UnavailableException.java
-src/javax/servlet/SingleThreadModel.java
-src/javax/servlet/GenericServlet.java
-src/javax/servlet/http/HttpUtils.java
-src/javax/servlet/http/HttpServlet.java
-src/javax/servlet/http/HttpServletRequest.java
-src/javax/servlet/http/HttpServletResponse.java
-src/javax/servlet/http/HttpSession.java
-src/javax/servlet/http/HttpSessionBindingEvent.java
-src/javax/servlet/http/HttpSessionBindingListener.java
-src/javax/servlet/http/HttpSessionContext.java
-src/javax/servlet/http/Cookie.java
-doc/servlet_tutorial.html
-doc/images/banner.gif
-doc/images/survey-reply.gif
-doc/apidoc/packages.html
-doc/apidoc/Package-javax.servlet.html
-doc/apidoc/javax.servlet.Servlet.html
-doc/apidoc/javax.servlet.ServletConfig.html
-doc/apidoc/javax.servlet.ServletContext.html
-doc/apidoc/javax.servlet.ServletRequest.html
-doc/apidoc/javax.servlet.ServletResponse.html
-doc/apidoc/javax.servlet.SingleThreadModel.html
-doc/apidoc/javax.servlet.GenericServlet.html
-doc/apidoc/javax.servlet.ServletInputStream.html
-doc/apidoc/javax.servlet.ServletOutputStream.html
-doc/apidoc/AllNames.html
-doc/apidoc/javax.servlet.ServletException.html
-doc/apidoc/javax.servlet.UnavailableException.html
-doc/apidoc/Package-javax.servlet.http.html
-doc/apidoc/javax.servlet.http.HttpServletRequest.html
-doc/apidoc/javax.servlet.http.HttpServletResponse.html
-doc/apidoc/javax.servlet.http.HttpSession.html
-doc/apidoc/javax.servlet.http.HttpSessionBindingListener.html
-doc/apidoc/javax.servlet.http.HttpSessionContext.html
-doc/apidoc/javax.servlet.http.Cookie.html
-doc/apidoc/javax.servlet.http.HttpServlet.html
-doc/apidoc/tree.html
-doc/apidoc/images/java.awt/GridBagEx.gif
-doc/apidoc/images/OpenBookIcon.gif
-doc/apidoc/images/class-index.gif
-doc/apidoc/images/blue-ball.gif
-doc/apidoc/images/blue-ball-small.gif
-doc/apidoc/images/constructors.gif
-doc/apidoc/images/cyan-ball-small.gif
-doc/apidoc/images/constructor-index.gif
-doc/apidoc/images/cyan-ball.gif
-doc/apidoc/images/interface-index.gif
-doc/apidoc/images/green-ball.gif
-doc/apidoc/images/exception-index.gif
-doc/apidoc/images/magenta-ball.gif
-doc/apidoc/images/green-ball-small.gif
-doc/apidoc/images/methods.gif
-doc/apidoc/images/magenta-ball-small.gif
-doc/apidoc/images/red-ball.gif
-doc/apidoc/images/method-index.gif
-doc/apidoc/images/package-index.gif
-doc/apidoc/images/red-ball-small.gif
-doc/apidoc/images/variables.gif
-doc/apidoc/images/yellow-ball.gif
-doc/apidoc/images/variable-index.gif
-doc/apidoc/images/error-index.gif
-doc/apidoc/images/yellow-ball-small.gif
-doc/apidoc/javax.servlet.http.HttpSessionBindingEvent.html
-doc/apidoc/javax.servlet.http.HttpUtils.html
-examples/JdcSurvey.html
-examples/servlet.properties
-examples/SessionServlet.java
-examples/SimpleServlet.java
-examples/SnoopServlet.java
-examples/SurveyServlet.java
-examples/SessionServlet.class
-examples/SimpleServlet.class
-examples/SnoopServlet.class
-examples/SurveyServlet.class
-bin/servletrunner
-lib/jsdk.jar
-@dirrm src/javax/servlet/http
-@dirrm src/javax/servlet
-@dirrm src/javax
-@dirrm src
-@dirrm doc/images
-@dirrm doc/apidoc/images/java.awt
-@dirrm doc/apidoc/images
-@dirrm doc/apidoc
-@dirrm doc
-@dirrm examples
-@dirrm bin
-@dirrm lib
-@comment leave this as it is, as dirrm doesn't do %D substitution
-@unexec rmdir %D
+@comment $NetBSD: PLIST,v 1.2 2000/05/09 20:12:46 jwise Exp $
+share/doc/java/jsdk20/README
+share/doc/java/jsdk20/servlet_tutorial.html
+share/doc/java/jsdk20/images/banner.gif
+share/doc/java/jsdk20/images/survey-reply.gif
+share/doc/java/jsdk20/apidoc/packages.html
+share/doc/java/jsdk20/apidoc/Package-javax.servlet.html
+share/doc/java/jsdk20/apidoc/javax.servlet.Servlet.html
+share/doc/java/jsdk20/apidoc/javax.servlet.ServletConfig.html
+share/doc/java/jsdk20/apidoc/javax.servlet.ServletContext.html
+share/doc/java/jsdk20/apidoc/javax.servlet.ServletRequest.html
+share/doc/java/jsdk20/apidoc/javax.servlet.ServletResponse.html
+share/doc/java/jsdk20/apidoc/javax.servlet.SingleThreadModel.html
+share/doc/java/jsdk20/apidoc/javax.servlet.GenericServlet.html
+share/doc/java/jsdk20/apidoc/javax.servlet.ServletInputStream.html
+share/doc/java/jsdk20/apidoc/javax.servlet.ServletOutputStream.html
+share/doc/java/jsdk20/apidoc/AllNames.html
+share/doc/java/jsdk20/apidoc/javax.servlet.ServletException.html
+share/doc/java/jsdk20/apidoc/javax.servlet.UnavailableException.html
+share/doc/java/jsdk20/apidoc/Package-javax.servlet.http.html
+share/doc/java/jsdk20/apidoc/javax.servlet.http.HttpServletRequest.html
+share/doc/java/jsdk20/apidoc/javax.servlet.http.HttpServletResponse.html
+share/doc/java/jsdk20/apidoc/javax.servlet.http.HttpSession.html
+share/doc/java/jsdk20/apidoc/javax.servlet.http.HttpSessionBindingListener.html
+share/doc/java/jsdk20/apidoc/javax.servlet.http.HttpSessionContext.html
+share/doc/java/jsdk20/apidoc/javax.servlet.http.Cookie.html
+share/doc/java/jsdk20/apidoc/javax.servlet.http.HttpServlet.html
+share/doc/java/jsdk20/apidoc/tree.html
+share/doc/java/jsdk20/apidoc/images/java.awt/GridBagEx.gif
+share/doc/java/jsdk20/apidoc/images/OpenBookIcon.gif
+share/doc/java/jsdk20/apidoc/images/class-index.gif
+share/doc/java/jsdk20/apidoc/images/blue-ball.gif
+share/doc/java/jsdk20/apidoc/images/blue-ball-small.gif
+share/doc/java/jsdk20/apidoc/images/constructors.gif
+share/doc/java/jsdk20/apidoc/images/cyan-ball-small.gif
+share/doc/java/jsdk20/apidoc/images/constructor-index.gif
+share/doc/java/jsdk20/apidoc/images/cyan-ball.gif
+share/doc/java/jsdk20/apidoc/images/interface-index.gif
+share/doc/java/jsdk20/apidoc/images/green-ball.gif
+share/doc/java/jsdk20/apidoc/images/exception-index.gif
+share/doc/java/jsdk20/apidoc/images/magenta-ball.gif
+share/doc/java/jsdk20/apidoc/images/green-ball-small.gif
+share/doc/java/jsdk20/apidoc/images/methods.gif
+share/doc/java/jsdk20/apidoc/images/magenta-ball-small.gif
+share/doc/java/jsdk20/apidoc/images/red-ball.gif
+share/doc/java/jsdk20/apidoc/images/method-index.gif
+share/doc/java/jsdk20/apidoc/images/package-index.gif
+share/doc/java/jsdk20/apidoc/images/red-ball-small.gif
+share/doc/java/jsdk20/apidoc/images/variables.gif
+share/doc/java/jsdk20/apidoc/images/yellow-ball.gif
+share/doc/java/jsdk20/apidoc/images/variable-index.gif
+share/doc/java/jsdk20/apidoc/images/error-index.gif
+share/doc/java/jsdk20/apidoc/images/yellow-ball-small.gif
+share/doc/java/jsdk20/apidoc/javax.servlet.http.HttpSessionBindingEvent.html
+share/doc/java/jsdk20/apidoc/javax.servlet.http.HttpUtils.html
+share/examples/java/jsdk20/JdcSurvey.html
+share/examples/java/jsdk20/servlet.properties
+share/examples/java/jsdk20/SessionServlet.java
+share/examples/java/jsdk20/SimpleServlet.java
+share/examples/java/jsdk20/SnoopServlet.java
+share/examples/java/jsdk20/SurveyServlet.java
+share/examples/java/jsdk20/SessionServlet.class
+share/examples/java/jsdk20/SimpleServlet.class
+share/examples/java/jsdk20/SnoopServlet.class
+share/examples/java/jsdk20/SurveyServlet.class
+lib/java/jsdk.jar
+@dirrm share/doc/java/jsdk20/images
+@dirrm share/doc/java/jsdk20/apidoc/images/java.awt
+@dirrm share/doc/java/jsdk20/apidoc/images
+@dirrm share/doc/java/jsdk20/apidoc
+@dirrm share/doc/java/jsdk20
+@dirrm share/examples/java/jsdk20
