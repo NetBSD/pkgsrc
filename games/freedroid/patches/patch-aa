@@ -1,12 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/06/24 15:26:00 dillo Exp $
+$NetBSD: patch-aa,v 1.2 2004/06/26 21:17:55 minskim Exp $
 
---- Makefile.in.orig	2003-08-11 12:40:47.000000000 +0200
+--- Makefile.in.orig	2003-08-11 05:40:47.000000000 -0500
 +++ Makefile.in
-@@ -83,11 +83,11 @@ X_PRE_LIBS = @X_PRE_LIBS@
- am__include = @am__include@
- am__quote = @am__quote@
- install_sh = @install_sh@
- SUBDIRS = src 
+@@ -87,7 +87,7 @@ SUBDIRS = src 
  
  man_MANS = freedroid.6
  
