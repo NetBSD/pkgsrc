@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.30 2004/02/04 23:24:36 jlam Exp $
+# $NetBSD: gcc.mk,v 1.31 2004/02/04 23:25:13 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -213,7 +213,7 @@ _GCC_SUBPREFIX!=	\
 			subprefix="${_CC:H:S/\/bin$//:S/${LOCALBASE}\///:S/${LOCALBASE}//}"; \
 			case "$${subprefix}" in				\
 			"")	${ECHO} "$${subprefix}" ;;		\
-			*)	${ECHO} "$${subprefix}/ ;;		\
+			*)	${ECHO} "$${subprefix}/" ;;		\
 			esac;						\
 			;;						\
 		*)							\
