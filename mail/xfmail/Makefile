@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2001/12/20 09:48:03 tron Exp $
+# $NetBSD: Makefile,v 1.23 2002/04/17 04:45:14 fredb Exp $
 
 DISTNAME=		xfmail-1.4.7
+PKGREVISION=		1
 CATEGORIES=		mail x11
 MASTER_SITES=		ftp://xfmail.ufies.org/pub/xfmail/release/1.4.7/source/
 EXTRACT_SUFX=		.tar.bz2
@@ -19,6 +20,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_X11BASE=		YES
+USE_XPM=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
@@ -32,6 +34,7 @@ post-install:
 
 .include "../../databases/gdbm/buildlink.mk"
 .include "../../devel/glib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../x11/xforms/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

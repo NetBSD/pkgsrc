@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 1999/11/14 22:53:22 frueauf Exp $
+$NetBSD: patch-aa,v 1.5 2002/04/17 04:45:09 fredb Exp $
 
---- Makefile.orig	Thu Aug 26 14:08:51 1999
-+++ Makefile	Sun Nov 14 23:40:47 1999
+--- Makefile.orig	Thu Aug 26 07:08:51 1999
++++ Makefile
 @@ -8,11 +8,11 @@
  #  Compilation/installation vars (global for all following sections) |
  #=====================================================================
@@ -96,8 +96,8 @@ $NetBSD: patch-aa,v 1.4 1999/11/14 22:53:22 frueauf Exp $
 +GCCFLAGS   = -Wall -O
 +EXTRADEFS  = -DMODEM_DEVICE=\"$(MODEM_PATH)\" -DHAVE_STRERROR
 +EXTRALIBS  = -lcrypt
-+LINKX11    = -Wl,-R$(LIBX11)
-+LINKFORMS  = -L$(LIBFORMS) -lforms
++LINKX11    = -Wl,-R$(LIBX11) -Wl,-R$(LOCALBASE)/lib
++LINKFORMS  = -L$(LIBFORMS) -L$(LOCALBASE)/lib -lforms -ljpeg -lXpm
 +INSTALL    = /usr/bin/install
  #
  # FreeBSD vars

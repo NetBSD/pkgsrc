@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.7 2002/04/17 04:45:17 fredb Exp $
+
+--- configure.orig	Fri Aug  3 07:21:35 2001
++++ configure
+@@ -8175,7 +8175,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lforms $LYX_LIBS $LIBS"
++LIBS="-lforms -ljpeg -lXpm $LYX_LIBS $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 8181 "configure"
+ #include "confdefs.h"
+@@ -8206,7 +8206,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  LYX_LIBS="-lforms $LYX_LIBS"
++  LYX_LIBS="-lforms -ljpeg -lXpm $LYX_LIBS"
+ else
+   echo "$ac_t""no" 1>&6
+ echo $ac_n "checking for fl_initialize in -lxforms""... $ac_c" 1>&6

@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/23 03:57:12 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2002/04/17 04:45:08 fredb Exp $
 
---- Makefile.orig	Sun Nov 17 17:43:29 1996
-+++ Makefile	Wed Dec 22 20:05:59 1999
-@@ -4,24 +4,21 @@
+--- Makefile.orig	Sun Nov 17 16:43:29 1996
++++ Makefile
+@@ -3,27 +3,24 @@
+ # then all you need is to type make and let it go
  #
  
 -CC=        gcc
@@ -16,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/23 03:57:12 dmcmahill Exp $
 -XFORMSINC=-I/usr/local/X11/include
 -XFORMSLIB=-L/usr/local/X11/lib
 +XFORMSINC=-I${X11BASE}/include
-+XFORMSLIB=-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
++XFORMSLIB=-L${X11BASE}/lib -Wl,-R${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
  
  # SYSLIB=-lXpm -lX11 -lm
  
@@ -29,7 +30,10 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/23 03:57:12 dmcmahill Exp $
  
 -CFLAGS=$(CCFLAG) $(XFORMSINC)  $(XINCLUDE)
 -LDFLAGS = $(LDFLAG)
+-LIBS=$(XFORMSLIB) -lforms $(SYSLIB)
 +CFLAGS+= $(XFORMSINC)  $(XINCLUDE)
 +LDFLAGS+= $(LDFLAG)
- LIBS=$(XFORMSLIB) -lforms $(SYSLIB)
++LIBS=$(XFORMSLIB) -lforms -ljpeg $(SYSLIB)
  
+ #
+ SRCS  =  main.c xchiplogo.c help.c
