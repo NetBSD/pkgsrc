@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.261 2003/10/05 09:56:00 taca Exp $
+# $NetBSD: Makefile,v 1.262 2003/12/18 09:46:51 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -191,6 +191,7 @@ SUBDIR+=	photopc
 SUBDIR+=	php3-gd
 SUBDIR+=	php4-exif
 SUBDIR+=	php4-gd
+SUBDIR+=	phpsview
 SUBDIR+=	pixieplus
 SUBDIR+=	pixmap
 SUBDIR+=	plasma
@@ -214,6 +215,7 @@ SUBDIR+=	py-gnuplot
 SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk
 SUBDIR+=	py-piddle
+SUBDIR+=	qcamview
 SUBDIR+=	qiv
 SUBDIR+=	qvplay
 SUBDIR+=	rayshade
