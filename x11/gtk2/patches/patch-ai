@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.7 2005/04/01 10:51:51 salo Exp $
+
+--- gdk-pixbuf/io-bmp.c.orig	2005-01-04 16:47:02.000000000 +0100
++++ gdk-pixbuf/io-bmp.c	2005-04-01 11:21:52.000000000 +0200
+@@ -219,7 +219,19 @@
+ static gboolean grow_buffer (struct bmp_progressive_state *State,
+                              GError **error)
+ {
+-  guchar *tmp = g_try_realloc (State->buff, State->BufferSize);
++  guchar *tmp;
++
++  if (State->BufferSize == 0) {
++    g_set_error (error,
++		 GDK_PIXBUF_ERROR,
++		 GDK_PIXBUF_ERROR_CORRUPT_IMAGE,
++		 _("BMP image has bogus header data"));
++    State->read_state = READ_STATE_ERROR;
++    return FALSE;
++  }
++
++  tmp = g_try_realloc (State->buff, State->BufferSize);
++
+   if (!tmp) {
+     g_set_error (error,
+ 		 GDK_PIXBUF_ERROR,
