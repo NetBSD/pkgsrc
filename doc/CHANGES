@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6609 2004/07/19 22:42:52 minskim Exp $
+$NetBSD: CHANGES,v 1.6610 2004/07/19 23:15:45 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3457,3 +3457,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added boinc3-seti-20040715 [drochner 2004-07-19]
 	Updated p5-DBD-Sybase to 0.94nb3 [heinz 2004-07-19]
 	Updated imhangul to 0.9.10 [minskim 2004-07-19]
+	Added pkgse-0.1 [xtraeme 2004-07-19]
