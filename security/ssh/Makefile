@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 1999/05/15 13:46:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.45 1999/05/16 15:02:22 tron Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -118,6 +118,10 @@ post-build:
 	    -e 's#@PREFIX@#${PREFIX}#g' \
 	    <$${FILE} >${WRKDIR}/`basename $${FILE}`; \
 	done
+	@if [ -x ${WRKSRC}/ssh-askpass ]; then \
+	  ${ECHO} bin/ssh-askpass >>${PLIST_SRC}; \
+	  ${ECHO} bin/ssh-askpass1 >>${PLIST_SRC}; \
+	fi
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/ssh
@@ -133,7 +137,6 @@ post-install:
 			-f ${SSH_CONF_DIR}/ssh_host_key -N ""; \
 	fi
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd.sh
-	@cd ${PREFIX}; find bin -name 'ssh-askpass*' >>${PLIST_SRC}
 
 # Include <bsd.pkg.mk> here.  It is essential to have all the override
 # targets precede inclusion of this.
