@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: authdaemond.sh,v 1.8 2004/07/14 20:07:07 jlam Exp $
+# $NetBSD: authdaemond.sh,v 1.9 2004/07/15 08:28:33 jlam Exp $
 #
 # Courier user authentication daemon
 #
@@ -13,45 +13,41 @@ fi
 
 name="authdaemond"
 rcvar=${name}
-daemon="@PREFIX@/libexec/courier/authlib/authdaemond"
+command="@PREFIX@/sbin/courierlogger"
+ctl_command="@PREFIX@/libexec/courier/authlib/authdaemond"
 pidfile="@AUTHDAEMONVAR@/pid"
 required_files="@PKG_SYSCONFDIR@/authdaemonrc"
 
 start_cmd="courier_doit start"
 stop_cmd="courier_doit stop"
 
-# Read the authdaemond config file to determine the actual command
-# executed.  If "$version" is non-empty, then it contains the
-# command name, otherwise, use the default of "authdaemond.plain".
-# We read the config file in a subprocess to protect against shell
-# environment pollution.
-#
-if [ -f @PKG_SYSCONFDIR@/authdaemonrc ]; then
-	command=`
-		. @PKG_SYSCONFDIR@/authdaemonrc
-		if [ -n "${version}" ]; then
-			@ECHO@ @PREFIX@/libexec/courier/authlib/${version}
-		else
-			@ECHO@ @PREFIX@/libexec/courier/authlib/authdaemond.plain
-		fi
-	`
-fi
-
 courier_doit()
 {
-        action=$1
-        case ${action} in
-        start)  echo "Starting ${name}." ;;
-        stop)   echo "Stopping ${name}." ;;
-        esac
+	action=$1
+	case ${action} in
+	start)
+		for f in $required_files; do
+			if [ ! -r "$f" ]; then
+				@ECHO@ 1>&2 "$0: WARNING: $f is not readable"
+				if [ -z $rc_force ]; then
+					return 1
+				fi
+			fi
+		done
+		@ECHO@ "Starting ${name}."
+		;;
+	stop)
+		@ECHO@ "Stopping ${name}."
+		;;
+	esac
 
-        @SETENV@ -i ${daemon} ${action}
+	${ctl_command} ${action}
 }
 
 if [ -f /etc/rc.subr ]; then
-        load_rc_config $name
-        run_rc_command "$1"
+	load_rc_config $name
+	run_rc_command "$1"
 else
-        @ECHO@ -n " ${name}"
-        ${start_cmd}
+	@ECHO@ -n " ${name}"
+	${start_cmd}
 fi
