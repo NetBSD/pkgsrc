@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/05 15:24:51 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/14 23:14:25 wiz Exp $
 lib/libirc.a
+lib/libirc.la
 lib/libirc.so.0.0
 include/btypes.h
 include/cmd.h
