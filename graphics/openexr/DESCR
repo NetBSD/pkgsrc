@@ -20,3 +20,10 @@ OpenEXR's features include:
   New image attributes (strings, vectors, integers, etc.) can be added to
   OpenEXR image headers without affecting backward compatibility with existing
   OpenEXR applications.
+
+This package provides development headers and libraries. It provides
+tools to display an OpenEXR image on the screen, convert OpenEXR
+latitude-longitude environment maps into cube-face environment maps
+(or vice versa), add preview image to header, produce tiled versions
+of an image, set the values of one or more standard attributes in
+the image's header, and print an image file's header.
