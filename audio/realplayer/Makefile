@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/14 12:37:53 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/10/25 19:42:43 jlam Exp $
 
 DISTNAME=		rp8_linux20_libc6_i386_cs2
 PKGNAME=		realplayer-8.0.1
@@ -32,11 +32,6 @@ EXTRACT_CMD=		HOME=${WRKDIR} XAUTHORITY=${XAUTHORITY} ${RP_INSTALLER}
 EXTRACT_CMD=		HOME=${WRKDIR} ${RP_INSTALLER}
 .endif
 
-NO_CONFIGURE=		# defined
-SCRIPTS_ENV+=		CAT="${CAT}"
-SCRIPTS_ENV+=		CHMOD="${CHMOD}"
-SCRIPTS_ENV+=		RP_INSTALLER="${RP_INSTALLER}"
-
 DOWNLOAD=		http://proforma.real.com/real/player/unix/unix.html
 RP_INSTALLER=		${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 REALPLAYER_HOME=	${PREFIX}/lib/RealPlayer8
@@ -53,7 +48,15 @@ do-fetch:
 	    ${FALSE}; \
 	fi
 
-# scripts/pre-extract
+pre-extract:
+	@delay=15;							\
+	${SED}	-e "s|@WRKSRC@|${WRKSRC}|g"				\
+		-e "s|@delay@|$${delay}|g"				\
+		${FILESDIR}/extract_instructions;			\
+	sleep $${delay}
+	@if [ ! -x ${RP_INSTALLER} ]; then				\
+		${CHMOD} +x ${RP_INSTALLER};				\
+	fi
 
 do-build:
 	cd ${WRKSRC};							\

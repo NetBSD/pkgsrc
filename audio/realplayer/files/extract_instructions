@@ -1,13 +1,3 @@
-#!/bin/sh
-#
-# $NetBSD: pre-extract,v 1.2 2001/09/27 06:36:47 jlam Exp $
-
-# The number of seconds to pause before continuing with the extraction
-# process.
-#
-delay=15
-
-${CAT} << EOF
 ===========================================================================
 
     Now running the RealPlayer installation program.
@@ -16,7 +6,7 @@ ${CAT} << EOF
 
     2) Make sure the "Destination Directory" is:
 
-	${WRKSRC}
+        @WRKSRC@
 
        (it should be the first choice on the drop-down menu), then press
        'Finish'.
@@ -30,12 +20,4 @@ ${CAT} << EOF
 
 ===========================================================================
 
-Be sure to read the above!  Proceeding in ${delay} seconds...
-EOF
-
-sleep ${delay}
-
-if [ ! -x ${RP_INSTALLER} ]
-then
-	${CHMOD} +x ${RP_INSTALLER}
-fi
+Be sure to read the above!  Proceeding in @delay@ seconds...
