@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 1999/12/13 23:57:22 bad Exp $
+# $NetBSD: Makefile,v 1.10 2000/02/15 04:46:23 bad Exp $
 #
 
-DISTNAME=		mysql-3.22.27
+DISTNAME=		mysql-3.22.32
 PKGNAME=		${DISTNAME:S/-/-server-/}
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.mysql.com/pub/mysql/Downloads/MySQL-3.22/ \
@@ -40,6 +40,9 @@ post-extract:
 		${MV} $$dir/Makefile.in $$dir/Makefile.in.orig; \
 		${SED} -e '/^install-exec:/s/install-pkglibLIBRARIES//' $$dir/Makefile.in.orig >$$dir/Makefile.in; \
 	done
+
+post-configure:
+	@cd ${WRKSRC} && ${CP} config.h include/my_config.h
 
 post-install:
 	@cd ${WRKSRC}/scripts && \
