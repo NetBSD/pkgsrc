@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5985 2004/05/19 13:13:53 adam Exp $
+$NetBSD: CHANGES,v 1.5986 2004/05/19 13:15:50 junyoung Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -709,7 +709,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Apache-Gallery to 0.7nb3 [kim 2004-02-08]
 	Updated logtime to 1.2 [kim 2004-02-08]
 	Updated musicbrainz to 2.0.2 [chris 2004-02-09]
-	Added trm-0.2.1 [chris 2004-02-09] 
+	Added trm-0.2.1 [chris 2004-02-09]
 	Added taglib-1.0 [chris 2004-02-09]
 	Updated metacity to 2.6.3nb3 [minskim 2004-02-09]
 	Updated kdemultimedia3 to 3.2.0nb1 [chris 2004-02-09]
@@ -2590,3 +2590,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added postgresql74-contrib-7.4.2 [recht 2004-05-19]
 	Updated gtk2 to 2.4.1nb1 [wiz 2004-05-19]
 	Updated soup to 0.7.11 [adam 2004-05-19]
+	Updated php4 to 4.3.6nb2 [junyoung 2004-05-19]
