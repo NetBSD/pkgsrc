@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/25 00:14:56 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/25 22:29:50 kleink Exp $
 #
 
 DISTNAME=	libksba-0.9.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/alpha/libksba/
 
