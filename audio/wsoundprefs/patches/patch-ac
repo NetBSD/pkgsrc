@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 1999/04/06 19:33:20 tron Exp $
+
+--- src/SoundPaths.c.orig	Tue Mar  2 14:13:40 1999
++++ src/SoundPaths.c	Tue Apr  6 21:18:06 1999
+@@ -81,7 +81,7 @@
+ 	if (array)
+ 	    wwarning(_("bad value in option SoundPath. Using default path list"));
+ 	addPathToList(panel->sndL, -1, "~/GNUstep/Library/WindowMaker/Sounds");
+-	addPathToList(panel->sndL, -1, "/usr/local/share/WindowMaker/Sounds");
++	addPathToList(panel->sndL, -1, PREFIX "/share/WindowMaker/Sounds");
+     } else {
+ 	for (i=0; i<PLGetNumberOfElements(array); i++) {
+ 	    val = PLGetArrayElement(array, i);
