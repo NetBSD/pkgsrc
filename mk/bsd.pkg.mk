@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.507 2000/07/15 21:36:22 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.508 2000/07/18 08:21:41 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -1980,13 +1980,14 @@ update-dirlist:
 ${DDIR}: ${DLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	ddir=`${SED} 's:-[^-]*$$::' <${DLIST}`;				\
-	if ${PKG_INFO} -b $${ddir} >/dev/null 2>&1 ; then		\
-		${PKG_INFO} -b $${ddir} |				\
-		    ${SED} -ne 's,^\([^/]*/[^/]*\)/Makefile:.*,\1,p'	\
-		    >${DDIR};						\
-	else 								\
-		${ECHO} >${DDIR};					\
-	fi
+	${ECHO} >${DDIR};						\
+	for pkg in $${ddir} ; do					\
+		if ${PKG_INFO} -b $${pkg} >/dev/null 2>&1 ; then	\
+			${PKG_INFO} -b $${pkg} |			\
+			    ${SED} -ne "s,\([^/]*/$${pkg}\)/Makefile:.*,\1,p"	\
+			    >>${DDIR};					\
+		fi ;							\
+	done
 
 ${DLIST}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} -p ${WRKDIR}
