@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2002/08/25 19:23:06 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2002/08/28 08:45:41 jlam Exp $
 
 DISTNAME=       imap-2001a
 PKGNAME=        imap-uw-2001.1
@@ -10,11 +10,11 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 
-USE_BUILDLINK_ONLY=	# defined
-USE_LIBTOOL=		# defined
+USE_BUILDLINK2=	# defined
+USE_LIBTOOL=	# defined
 
-INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
-INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
+INST_PROG=	${PKGLIBTOOL} ${INSTALL_PROGRAM}
+INST_LIB=	${PKGLIBTOOL} ${INSTALL_DATA}
 INC_DIR=	${PREFIX}/include/c-client
 LIB_DIR=	${PREFIX}/lib
 DOC_DIR=	${PREFIX}/share/doc/imap-uw
@@ -56,7 +56,7 @@ MAKE_ENV+=	CCLIENT_MAJOR="${CCLIENT_MAJOR}"
 MAKE_ENV+=	CCLIENT_MINOR="${CCLIENT_MINOR}"
 MAKE_ENV+=	CREATEPROTO=${IMAP_UW_CCLIENT_MBOX_FMT}proto
 
-ALL_TARGET+=	CC="${LIBTOOL} ${CC}"
+ALL_TARGET+=	CC="${PKGLIBTOOL} ${CC}"
 ALL_TARGET+=	EXTRACFLAGS="${CFLAGS}"
 ALL_TARGET+=	EXTRALDFLAGS="${LDFLAGS}"
 .if defined(IMAP_UW_NO_CLEARTEXT) && ${IMAP_UW_NO_CLEARTEXT} == "YES"
@@ -91,7 +91,8 @@ post-extract:
 # Generate _pic.a library from shared objects.
 #
 post-build:
-	cd ${WRKSRC}/c-client; ${LIBTOOL} ${CC} -o ${CCLIENT_PICLIB:.a=.la} *.lo
+	cd ${WRKSRC}/c-client;						\
+	${PKGLIBTOOL} ${CC} -o ${CCLIENT_PICLIB:.a=.la} *.lo
 
 do-install:
 	${INSTALL_DATA_DIR} ${INC_DIR}
@@ -117,6 +118,6 @@ do-install:
 	${CHMOD} -R a=rX ${DOC_DIR}
 
 .if !defined(IMAP_UW_NO_SSL) || ${IMAP_UW_NO_SSL} != "YES"
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"
