@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2002/09/27 09:46:27 wiz Exp $
+$NetBSD: distinfo,v 1.6 2002/09/29 07:34:30 jlam Exp $
 
 SHA1 (ddd-3.3.tar.gz) = 889c435bed8f16cb618dc56a85be6f6384d5df24
 Size (ddd-3.3.tar.gz) = 5801812 bytes
 SHA1 (patch-aa) = 6f8ce32d8aafd06cfa72e1dcb19d516183098a41
+SHA1 (patch-ab) = fcf7b99706479ea27d95649aa228efeb3eb042ff
