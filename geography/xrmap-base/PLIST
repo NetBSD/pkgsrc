@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 12:21:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/09 10:26:27 drochner Exp $
+bin/emx
 bin/xrmap
 man/cat1/xrmap.0
+share/editkit/README
+share/editkit/emxrc
+share/editkit/rc.common
 share/rmap/Locations
 share/rmap/Xrmaprc
 share/rmap/doc/CHANGES
@@ -112,3 +116,4 @@ share/rmap/themes/sea
 @dirrm share/rmap/factbook
 @dirrm share/rmap/doc
 @dirrm share/rmap
+@dirrm share/editkit
