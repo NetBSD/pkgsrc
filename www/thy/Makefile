@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2004/12/28 02:47:51 reed Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/20 17:36:56 jmmv Exp $
 #
 
 DISTNAME=		thy-0.9.3
-PKGREVISION=	2
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		ftp://bonehunter.rulez.org/pub/thy/stable/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		algernon@bonehunter.rulez.org
-HOMEPAGE=		http://bonehunter.rulez.org/Thy.phtml
+HOMEPAGE=		http://bonehunter.rulez.org/software/thy/
 COMMENT=		Tiny and fast HTTP daemon
 
 .include "../../mk/bsd.prefs.mk"
