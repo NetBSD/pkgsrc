@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/12/10 19:49:46 veego Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/11 04:01:34 wiz Exp $
 #
 
 DISTNAME=	a52dec-0.7.1b
-PKGNAME=	${DISTNAME:S/a52dec/liba52/}
+PKGNAME=	${DISTNAME:S/a52dec/liba52/:S/1b/1.2/}
 CATEGORIES=	audio
 MASTER_SITES=	http://liba52.sourceforge.net/files/
 
