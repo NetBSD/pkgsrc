@@ -3,7 +3,7 @@
 # Date created:				Tue Oct 28 00:12:41 CET 1997
 # Whom:					Hubert Feyrer (hubertf@netbsd.org)
 #
-# $NetBSD: Makefile,v 1.9 1998/02/02 08:10:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1998/02/02 08:59:11 hubertf Exp $
 
 DISTNAME=	ncurses-1.9.9g
 CATEGORIES=	devel
@@ -61,6 +61,6 @@ post-install:
 	( cd ${PREFIX}/include ; for i in form.h menu.h panel.h ; do \
 	  ${SED} '/#include/s|curses.h|ncurses.h|g' $$i >$$i.BAK ; \
 	  ${MV} $$i.BAK $$i ; done )
-	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
+	${LDCONFIG} || ${TRUE}
 
 .include <bsd.port.mk>

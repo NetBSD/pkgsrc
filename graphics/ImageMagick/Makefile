@@ -3,7 +3,7 @@
 # Date created:         11th December 1997
 # Whom:                 tron
 #
-# $NetBSD: Makefile,v 1.9 1998/02/02 08:10:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1998/02/02 08:59:13 hubertf Exp $
 #
 
 DISTNAME=	ImageMagick-4.0
@@ -43,6 +43,6 @@ post-extract:
 
 
 post-install:
-	${LDCONFIG} -m ${PREFIX}/lib || ${TRUE}
+	${LDCONFIG} || ${TRUE}
 
 .include <bsd.port.mk>
