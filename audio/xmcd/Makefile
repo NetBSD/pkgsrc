@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/01/10 20:56:25 tron Exp $
+# $NetBSD: Makefile,v 1.31 2002/03/23 17:44:21 yyamano Exp $
 
 DISTNAME=	xmcd-3.0.2
 CATEGORIES=	audio
@@ -27,7 +27,7 @@ post-patch:
 
 post-install:
 .for FILE in cda xmcd gobrowser
-	@${TEST} -n "${STRIPFLAG}" && \
+	@${TEST} -n "${_STRIPFLAG_INSTALL}" && \
 	strip ${PREFIX}/lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/${FILE}
 .endfor
 	${MV} ${PREFIX}/man/cat1/cda.1 ${PREFIX}/man/man1/cda.1
