@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/14 23:25:56 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/15 02:55:53 xtraeme Exp $
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
 bin/gnome-background-properties
@@ -20,10 +20,12 @@ bin/gnome-thumbnail-font
 bin/gnome-typing-monitor
 bin/gnome-ui-properties
 bin/gnome-window-properties
+bin/themus-theme-applier
 include/gnome-window-settings-2.0/gnome-window-manager.h
 include/gnome-window-settings-2.0/gnome-wm-manager.h
 lib/bonobo/libthemus-theme-properties-view.a
 lib/bonobo/libthemus-theme-properties-view.la
+lib/bonobo/libthemus-theme-properties-view.so
 lib/bonobo/servers/GNOME_SettingsDaemon.server
 lib/bonobo/servers/Themus_Properties_View.server
 lib/bonobo/servers/fontilus.server
@@ -32,6 +34,7 @@ lib/gnome-vfs-2.0/modules/libfont-method.la
 lib/gnome-vfs-2.0/modules/libfont-method.so
 lib/gnome-vfs-2.0/modules/libtheme-method.a
 lib/gnome-vfs-2.0/modules/libtheme-method.la
+lib/gnome-vfs-2.0/modules/libtheme-method.so
 lib/libgnome-window-settings.a
 lib/libgnome-window-settings.la
 lib/libgnome-window-settings.so
@@ -129,9 +132,13 @@ share/control-center-2.0/xrdb/Motif.ad
 share/control-center-2.0/xrdb/Tk.ad
 share/control-center-2.0/xrdb/Xaw.ad
 share/control-center/apply-font.glade
+share/examples/gnome2-control-center/font-method.conf
+share/examples/gnome2-control-center/theme-method.conf
 share/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas
 share/gconf/schemas/apps_gnome_settings_daemon_screensaver.schemas
 share/gconf/schemas/desktop_gnome_font_rendering.schemas
+share/gconf/schemas/fontilus.schemas
+share/gconf/schemas/themus.schemas
 share/gnome-2.0/ui/gnomecc-ui.xml
 share/gnome/cursor-fonts/cursor-large-white.pcf
 share/gnome/cursor-fonts/cursor-large.pcf

@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2003/12/15 02:55:53 xtraeme Exp $
+
+--- vfs-methods/fontilus/Makefile.in.orig	2003-12-15 03:25:37.000000000 +0100
++++ vfs-methods/fontilus/Makefile.in	2003-12-15 03:28:58.000000000 +0100
+@@ -215,14 +215,13 @@
+ appregdir = $(datadir)/application-registry
+ appreg_DATA = fontilus.applications
+ 
+-schemasdir = $(sysconfdir)/gconf/schemas
++schemasdir = $(datadir)/gconf/schemas
+ schemas_DATA = fontilus.schemas
+ 
+ serverdir = $(libdir)/bonobo/servers
+ server_DATA = fontilus.server
+ 
+ EXTRA_DIST = \
+-  font-method.conf \
+   font-method.directory.in \
+   fontilus.keys \
+   fontilus.mime \
