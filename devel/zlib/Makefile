@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/04/16 00:57:48 tron Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/17 11:14:05 tron Exp $
 
 DISTNAME=	zlib-1.1.3
 CATEGORIES=	devel
@@ -12,6 +12,8 @@ BUILD_DEPENDS+=	libtool-base>=${LIBTOOL_VERSION}:../../devel/libtool-base
 
 ONLY_FOR_PLATFORM=	SunOS-*-* # in base NetBSD system
 
+# To avoid circular dependences we must not use "USE_LIBTOOL" but
+# depend on the "libtool-base" package manually.
 LIBTOOL=	${LOCALBASE}/bin/libtool
 CONFIGURE_ENV+=	LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=	LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
