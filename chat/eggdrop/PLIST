@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/26 03:48:13 kent Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/25 18:32:10 wiz Exp $
 bin/eggdrop
 etc/eggdrop.conf.dist
 lib/eggdrop/assoc.so
@@ -63,6 +63,23 @@ share/eggdrop/html/users.html
 share/eggdrop/language/core.english.lang
 share/eggdrop/language/core.french.lang
 share/eggdrop/language/core.german.lang
+share/eggdrop/language/assoc.english.lang
+share/eggdrop/language/assoc.french.lang
+share/eggdrop/language/assoc.german.lang
+share/eggdrop/language/console.english.lang
+share/eggdrop/language/console.french.lang
+share/eggdrop/language/console.german.lang
+share/eggdrop/language/filesys.english.lang
+share/eggdrop/language/filesys.french.lang
+share/eggdrop/language/filesys.german.lang
+share/eggdrop/language/notes.english.lang
+share/eggdrop/language/notes.french.lang
+share/eggdrop/language/notes.german.lang
+share/eggdrop/language/transfer.english.lang
+share/eggdrop/language/transfer.french.lang
+share/eggdrop/language/wire.english.lang
+share/eggdrop/language/wire.french.lang
+share/eggdrop/language/wire.german.lang
 share/eggdrop/scripts/CONTENTS
 share/eggdrop/scripts/action.fix.tcl
 share/eggdrop/scripts/alltools.tcl
