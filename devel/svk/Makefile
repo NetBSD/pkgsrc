@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/09/26 23:35:38 epg Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:33 tv Exp $
 
 DISTNAME=	SVK-0.21
 PKGNAME=	svk-0.21
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
 

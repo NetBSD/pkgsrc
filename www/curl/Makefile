@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2004/08/21 11:31:00 recht Exp $
+# $NetBSD: Makefile,v 1.44 2004/10/03 00:18:25 tv Exp $
 
 DISTNAME=	curl-7.12.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/ \

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/06/26 18:27:23 grant Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:14:51 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GIMP_BASE_BUILDLINK3_MK:=	${GIMP_BASE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gimp-base
 
 .if !empty(GIMP_BASE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gimp-base+=	gimp-base>=1.2.5nb2
+BUILDLINK_RECOMMENDED.gimp-base+=	gimp-base>=1.2.5nb3
 BUILDLINK_PKGSRCDIR.gimp-base?=	../../graphics/gimp1-base
 .endif	# GIMP_BASE_BUILDLINK3_MK
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2004/04/11 17:51:20 snj Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/03 00:18:03 tv Exp $
 #
 
 DISTNAME=	slrn-0.9.8.0
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slrn/}
 EXTRACT_SUFX=	.tar.bz2

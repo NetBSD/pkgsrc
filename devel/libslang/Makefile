@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.50 2004/08/28 06:05:32 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2004/10/03 00:13:30 tv Exp $
 #
 
 DISTNAME=	slang-1.4.9
 PKGNAME=	lib${DISTNAME}
 SVR4_PKGNAME=	lslan
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v1.4/ \
 		http://gd.tuwien.ac.at/editors/davis/slang/v1.4/ \

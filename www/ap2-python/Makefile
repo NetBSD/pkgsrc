@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/07/17 17:34:30 recht Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:18:24 tv Exp $
 # FreeBSD Id: ports/www/mod_python3/Makefile,v 1.28 2004/03/11 14:36:30 perky Exp
 
 DISTNAME=		mod_python-${VERSION}
 PKGNAME=    	ap2-${PYPKGPREFIX}-python-${VERSION}
+PKGREVISION=	1
 CATEGORIES=		www python
 MASTER_SITES=	${MASTER_SITE_APACHE_HTTPD:=modpython/}
 EXTRACT_SUFX=	.tgz

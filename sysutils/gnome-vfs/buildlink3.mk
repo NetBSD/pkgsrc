@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/03/18 09:12:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:18:15 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_VFS_BUILDLINK3_MK:=	${GNOME_VFS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gnome-vfs
 
 .if !empty(GNOME_VFS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gnome-vfs+=	gnome-vfs>=1.0.5nb5
+BUILDLINK_RECOMMENDED.gnome-vfs+=	gnome-vfs>=1.0.5nb6
 BUILDLINK_PKGSRCDIR.gnome-vfs?=	../../sysutils/gnome-vfs
 .endif	# GNOME_VFS_BUILDLINK3_MK
 

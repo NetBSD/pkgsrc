@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/04/12 23:15:01 salo Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/10/03 00:13:05 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FLAC_BUILDLINK3_MK:=	${FLAC_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	flac
 
 .if !empty(FLAC_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.flac+=	flac>=1.1.0nb1
+BUILDLINK_RECOMMENDED.flac+=	flac>=1.1.1nb1
 BUILDLINK_PKGSRCDIR.flac?=	../../audio/flac
 .endif	# FLAC_BUILDLINK3_MK
 

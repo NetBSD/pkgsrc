@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/03/12 02:05:30 snj Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:13:11 tv Exp $
 #
 
 DISTNAME=	madspin-0.05
 PKGNAME=	xmms-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	xmms audio
 MASTER_SITES=	http://www.students.uiuc.edu/~birck/
 

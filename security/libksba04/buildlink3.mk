@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/12 20:32:43 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:10 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBKSBA_BUILDLINK3_MK:=	${LIBKSBA_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libksba
 
 .if !empty(LIBKSBA_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libksba+=	libksba>=0.4.7nb1
+BUILDLINK_RECOMMENDED.libksba+=	libksba>=0.4.7nb2
 BUILDLINK_PKGSRCDIR.libksba?=	../../security/libksba04
 .endif	# LIBKSBA_BUILDLINK3_MK
 

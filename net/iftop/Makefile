@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/05/07 01:14:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/03 00:17:53 tv Exp $
 #
 
 DISTNAME=	iftop-0.16
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.ex-parrot.com/~pdw/iftop/download/
 

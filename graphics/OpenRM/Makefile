@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/04/19 05:54:45 garbled Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:14:48 tv Exp $
 #
 
 DISTNAME=		openrm-devel-1.5.2
 PKGNAME=		OpenRM-1.5.2
+PKGREVISION=	1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openrm/}
 

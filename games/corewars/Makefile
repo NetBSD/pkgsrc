@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/03/10 02:39:51 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:43 tv Exp $
 #
 
 DISTNAME=	corewars-0.9.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=corewars/}
 

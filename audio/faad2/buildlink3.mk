@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/28 20:16:09 mycroft Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:13:05 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FAAD2_BUILDLINK3_MK:=	${FAAD2_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	faad2
 
 .if !empty(FAAD2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.faad2+=	faad2>=2.0
+BUILDLINK_RECOMMENDED.faad2+=	faad2>=2.0nb1
 BUILDLINK_PKGSRCDIR.faad2?=	../../audio/faad2
 .endif	# FAAD2_BUILDLINK3_MK
 

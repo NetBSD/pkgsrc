@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/27 04:05:41 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:19 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 JADE_BUILDLINK3_MK:=	${JADE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	jade
 
 .if !empty(JADE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.jade+=	jade>=1.2.1nb7
+BUILDLINK_RECOMMENDED.jade+=	jade>=1.2.1nb9
 BUILDLINK_PKGSRCDIR.jade?=	../../textproc/jade
 .endif	# JADE_BUILDLINK3_MK
 

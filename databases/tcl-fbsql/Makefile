@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/03/28 17:42:09 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:23 tv Exp $
 
 DISTNAME=		fbsql.c
 PKGNAME=		tcl-fbsql-1.06
+PKGREVISION=	1
 CATEGORIES=		databases
 MASTER_SITES=		http://www.fastbase.co.nz/fbsql/
 EXTRACT_SUFX=

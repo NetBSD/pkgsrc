@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/06/26 18:06:17 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:01 tv Exp $
 #
 
 DISTNAME=	dumpmpeg-0.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dumpmpeg/}
 

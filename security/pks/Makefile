@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/05/09 06:48:40 snj Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/03 00:18:12 tv Exp $
 
 DISTNAME=		pks-0.9.4
+PKGREVISION=	1
 CATEGORIES=		security www
 MASTER_SITES+=		http://www.mit.edu/people/marc/pks/ \
 			ftp://ftp.neonramp.com/pub/pksd/

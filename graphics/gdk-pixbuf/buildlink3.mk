@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/04/11 16:51:32 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/10/03 00:14:50 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GDK_PIXBUF_BUILDLINK3_MK:=	${GDK_PIXBUF_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gdk-pixbuf
 
 .if !empty(GDK_PIXBUF_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gdk-pixbuf+=		gdk-pixbuf>=0.22.0nb2
+BUILDLINK_RECOMMENDED.gdk-pixbuf+=	gdk-pixbuf>=0.22.0nb3
 BUILDLINK_PKGSRCDIR.gdk-pixbuf?=	../../graphics/gdk-pixbuf
 BUILDLINK_CPPFLAGS.gdk-pixbuf+= \
 	-I${BUILDLINK_PREFIX.gdk-pixbuf}/include/gdk-pixbuf-1.0

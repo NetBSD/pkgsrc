@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2004/03/23 04:41:00 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/10/03 00:13:06 tv Exp $
 #
 
 DISTNAME=       gsm-1.0.10
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.cs.tu-berlin.de/pub/local/kbs/tubmik/gsm/
 

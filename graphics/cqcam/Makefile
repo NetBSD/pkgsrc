@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2004/07/10 22:18:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2004/10/03 00:14:49 tv Exp $
 #
 
 DISTNAME=		cqcam-0.45a
+PKGREVISION=	1
 CATEGORIES=    		graphics x11
 MASTER_SITES=		http://www.cs.duke.edu/~reynolds/cqcam/
 EXTRACT_SUFX=		.tgz

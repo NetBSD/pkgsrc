@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/08/27 06:29:11 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/03 00:18:39 tv Exp $
 
 DISTNAME=	xcursorgen-4.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
