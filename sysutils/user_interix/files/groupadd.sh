@@ -1,5 +1,5 @@
 #!/bin/ksh
-# $NetBSD: groupadd.sh,v 1.1.1.1 2004/04/27 01:45:22 tv Exp $
+# $NetBSD: groupadd.sh,v 1.2 2004/04/27 01:50:04 tv Exp $
 
 export PATH=/bin:/usr/contrib/win32/bin
 
@@ -17,7 +17,7 @@ run_cmd () {
 while getopts 'g:ov' f; do
 	case $f in
 	g)	echo "$0: numeric gid cannot be set manually; ignoring" >&2;;
-	o)	echo "$0: cannot reuse numeric gid of another group; aborting" >&2; exit 2;;
+	o)	echo "$0: cannot reuse numeric gid of another group; aborting" >&2; exit 1;;
 	v)	verbose=true;;
 	\?)	show_usage;;
 	esac
