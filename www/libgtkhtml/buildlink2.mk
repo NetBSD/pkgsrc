@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2004/02/11 07:42:42 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/02/13 19:36:38 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use libgtkhtml.
 #
@@ -30,7 +30,6 @@ BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/view/*
 BUILDLINK_FILES.libgtkhtml+=	include/gtkhtml-2.0/libgtkhtml/*
 BUILDLINK_FILES.libgtkhtml+=	lib/libgtkhtml-2.*
 
-.include "../../devel/GConf2/buildlink2.mk"
 .include "../../devel/gail/buildlink2.mk"
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
