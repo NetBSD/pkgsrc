@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/07/25 12:44:34 wulf Exp $
+
+--- interp/baiutils.c.orig	Mon Jul 24 00:25:52 2000
++++ interp/baiutils.c	Mon Jul 24 00:26:49 2000
+@@ -171,8 +171,8 @@
+ 
+    d = PMAXP1;
+    suspended = active = 0;
+-   look = random(PMAXP1);
+-   add = 1 + random(PMAX); /* 1 <= add <= PMAXP1 */
++   look = __random(PMAXP1);
++   add = 1 + __random(PMAX); /* 1 <= add <= PMAXP1 */
+    while ( ((!ptab[look].active) || (ptab[look].suspend>=0) ||
+             (ptab[look].tabix < 0)) && (d >= 0) ){
+ /* keep looking until a called process that is active and not
+@@ -189,7 +189,7 @@
+       ps = deadlock;
+    }
+    else {
+-      stepcount = random(STEPMAXP1);
++      stepcount = __random(STEPMAXP1);
+       if (ptab[curpr].atomic){
+          if (ptab[curpr].suspend >= 0) {
+             ps = deadlock;

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/07/25 12:44:34 wulf Exp $
+
+--- interp/random.c.orig	Mon Jul 24 00:23:32 2000
++++ interp/random.c	Mon Jul 24 00:23:39 2000
+@@ -65,7 +65,7 @@
+    useed = temp+seed;   /* start user somewhere else */
+ }
+ 
+-unsigned int   random(range)
++unsigned int   __random(range)
+ unsigned int   range;
+    /* returns a pseudo-random unsigned int between 0 and 'range' - 1 */
+ {
