@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.487 2000/06/26 23:53:33 wiz Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.488 2000/06/27 20:14:45 hubertf Exp $			\
 #
 # This file is in the public domain.
 #
@@ -1636,6 +1636,37 @@ root-install:
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
 
+
+# Check if all binaries and shlibs find their needed libs
+# Must be run after "make install", so that files are installed, and
+# ${PLIST} exists.
+#
+check-shlibs:
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	bins=`${PKG_INFO} -qf ${PKGNAME} | ( ${EGREP} -h '/(bin|sbin|libexec)/' || true )`; \
+	if [ "${OBJECT_FMT}" = "ELF" ]; then \
+		shlibs=`${PKG_INFO} -qf ${PKGNAME} | ( ${EGREP} -h '^lib/lib.*.so' || true )`; \
+	else \
+		shlibs=""; \
+	fi ; \
+	for i in $${bins} $${shlibs} ; do \
+		err=`( ldd $$i 2>&1 || true ) | ( grep "not found" || true )`; \
+		if [ "${PKG_VERBOSE}" != "" ]; then \
+			echo "ldd $$i" ; \
+		fi ; \
+		if [ "$$err" != "" ]; then \
+			echo "$$i: $$err" ; \
+			error=1; \
+		fi ; \
+	done ; \
+	if [ "$$error" = 1 ]; then \
+		${ECHO} "*** The above programs/libs will not find the listed shared libraries"; \
+		${ECHO} "    at runtime. Please fix the package (add -Wl,-R.../lib in the right places)!" ; \
+		${SHCOMMENT} Might not error-out for non-pkg-developers; \
+		exit 1 ; \
+	fi
+
+
 .if !target(show-shlib-type)
 # Show the shared lib type being built: one of ELF, a.out or none
 show-shlib-type:
@@ -2648,7 +2679,7 @@ print-pkg-size-this:
 		/^@cwd/ { base = $$2 "/" }				\
 		/^@ignore/ { next }					\
 		NF == 1 { print base $$1 }'				\
-		<${PLIST}						\
+		<${PLIST} 						\
 	| sort -u							\
 	| ${SED} -e 's, ,\\ ,g'						\
 	| xargs ls -ld							\
@@ -2661,7 +2692,7 @@ print-pkg-size-this:
 # XXX This is intended to be run before pkg_create is called, so the
 # dependencies are all installed
 print-pkg-size-depends:
-	@${MAKE} ${.MAKEFLAGS} print-pkg-size-depends-help 		\
+	@${MAKE} ${MAKEFLAGS} print-pkg-size-depends-help 		\
 	| ${AWK} 'BEGIN { sum=0; }					\
 		  { sum+=$$1; }						\
 		  END { print sum; }'
@@ -2723,7 +2754,7 @@ COMMON_DIRS!= 	${AWK} 'BEGIN  { 				\
 
 .if !target(print-PLIST)
 print-PLIST:
-	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.487 2000/06/26 23:53:33 wiz Exp $$'
+	@${ECHO} '@comment $$NetBSD: bsd.pkg.mk,v 1.488 2000/06/27 20:14:45 hubertf Exp $$'
 	@${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED} s@${PREFIX}/./@@ 				\
 	 | sort							\
@@ -2807,7 +2838,7 @@ fake-pkg: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
 	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
-	${ECHO} $$size_this	>${SIZE_PKG_FILE} ;			\
+	${ECHO} $$size_this >${SIZE_PKG_FILE};				\
 	expr $$size_this + $$size_depends >${SIZE_ALL_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then		\
