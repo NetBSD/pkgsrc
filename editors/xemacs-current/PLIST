@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/01/18 05:45:42 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/02/26 10:09:59 tron Exp $
 bin/${EMACSVER}
 bin/ellcc
 bin/gnuattach
@@ -10,7 +10,6 @@ bin/xemacs-b2m
 bin/xemacs-ctags
 bin/xemacs-etags
 bin/xemacs-rcs-checkin
-@exec ${MKDIR} %D/lib/xemacs
 @exec ${MKDIR} %D/lib/xemacs/site-lisp
 @exec ${MKDIR} %D/lib/xemacs/site-modules
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/DOC
