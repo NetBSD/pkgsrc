@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.64 2004/04/27 13:43:05 tv Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.65 2004/05/12 01:04:00 jschauma Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -206,4 +206,12 @@ PKG_HAVE_KQUEUE=	# defined
 .if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
 _OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
 CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
+.endif
+
+# if games are to be installed setgid, set the group and mode to meaningful
+# values
+.if !(empty(SETGIDGAME:M[yY][eE][sS]))
+GAMEOWN=		games
+GAMEGRP=		games
+GAMEMODE=		2555
 .endif
