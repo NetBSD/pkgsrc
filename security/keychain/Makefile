@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/09/15 14:20:41 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/19 13:48:00 wiz Exp $
 
 DISTNAME=	keychain-1.2
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	security
 MASTER_SITES=	http://www.ibiblio.org/gentoo/distfiles/
 EXTRACT_SUFX=	.tar.bz2
