@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.55 2003/10/19 07:38:31 grant Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.56 2003/12/10 13:37:48 grant Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -98,7 +98,11 @@ EXPORT_SYMBOLS_LDFLAGS?=-Wl,--export-dynamic
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		/sbin/nologin
+.if exists(${LOCALBASE}/sbin/pkg_info)
+PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
+.else
 PKG_TOOLS_BIN?=		/usr/sbin
+.endif
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=	wheel
