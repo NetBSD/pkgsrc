@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/04 16:23:24 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/10 03:16:41 wulf Exp $
 
 DISTNAME=	kdevelop-1.3
 PKGNAME=	${DISTNAME:S/-/-base-/}
@@ -6,14 +6,13 @@ CATEGORIES=	devel kde
 MASTER_SITES=	ftp://ftp.e-technik.fh-muenchen.de/pub/unix/ide/KDevelop/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=       http://www.kdevelop.org/
 COMMENT=	Base modules for IDE for Unix/X11/KDE
 
 BUILD_DEPENDS+= msgfmt:../../devel/gettext
 DEPENDS+=       autoconf-*:../../devel/autoconf
 DEPENDS+=       automake-*:../../devel/automake
-DEPENDS+=       a2ps-*:../../print/a2ps
 DEPENDS+=       kdebase-1.*:../../x11/kdebase
 DEPENDS+=       kdoc-2*:../../textproc/kdoc
 DEPENDS+=       htdig>=3.1.5:../../www/htdig
