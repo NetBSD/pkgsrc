@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.50 2003/10/10 21:45:55 hubertf Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.51 2003/12/03 17:13:02 sketch Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -124,7 +124,7 @@ bulk-cache:
 	@${ECHO_MSG} "BULK> Building complete pkgsrc dependency tree (this may take a while)."
 	cd ${_PKGSRCDIR} && ${SH} mk/bulk/printdepends ${BROKENFILE} > ${DEPENDSTREEFILE}
 	@${ECHO_MSG} "BULK> Sorting build order."
-	tsort ${DEPENDSTREEFILE} > ${ORDERFILE}
+	${TSORT} ${DEPENDSTREEFILE} > ${ORDERFILE}
 	@${ECHO_MSG} "BULK> Generating up and down dependency files."
 	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat up ${DEPENDSTREEFILE} > ${SUPPORTSFILE}
 	${AWK} -f ${_PKGSRCDIR}/mk/bulk/tflat down ${DEPENDSTREEFILE} > ${DEPENDSFILE}
@@ -146,8 +146,8 @@ bulk-check-uptodate:
 	@uptodate=1 ; \
 	if [ -f "${REF}" ]; then \
 		${SHCOMMENT} "Check files of this package" ; \
-		newfiles="`find . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' || true`" ; \
-		nnewfiles="`find . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`" ; \
+		newfiles="`${FIND} . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' || ${TRUE}`" ; \
+		nnewfiles="`${FIND} . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`" ; \
 		if [ "$$nnewfiles" -gt 0 ]; then \
 			${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..." ; \
 			uptodate=0 ; \
@@ -196,7 +196,7 @@ bulk-package:
 		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} '^d' | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
 		${ECHO_MSG} '###' ; \
 	fi \
-	) 2>&1 | tee -a ${BUILDLOG}
+	) 2>&1 | ${TEE} -a ${BUILDLOG}
 	@uptodate=`${MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
 	if ${PKG_INFO} -qe "${PKGNAME:C/-[^-]*$/-[0-9]*/}" ; then \
 		installed=1; \
@@ -209,7 +209,7 @@ bulk-package:
 		else \
 			${ECHO_MSG} "BULK> Nothing to be done." ; \
 		fi \
-		) 2>&1 | tee -a ${BUILDLOG}; \
+		) 2>&1 | ${TEE} -a ${BUILDLOG}; \
 	else \
 		( if [ $$installed = 1 ]; then \
 			${ECHO_MSG} "BULK> Removing outdated (installed) package ${PKGNAME} first." ; \
@@ -304,7 +304,7 @@ bulk-package:
 		fi ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
 		${DO}     ( ${MAKE} package 2>&1 ); \
-		) 2>&1 | tee -a ${BUILDLOG} ; \
+		) 2>&1 | ${TEE} -a ${BUILDLOG} ; \
 		if [ -f ${PKGFILE} ]; then \
 			${RM} ${BUILDLOG} ; \
 		else \
@@ -349,7 +349,7 @@ bulk-package:
 				nerrors="0"; \
 			fi; \
 			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${_PKGSRCDIR}/${BROKENFILE} \
-			) 2>&1 | tee -a ${BROKENFILE}; \
+			) 2>&1 | ${TEE} -a ${BROKENFILE}; \
 		fi ; \
 		${ECHO_MSG} "BULK> Cleaning packages and its depends" ;\
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
@@ -362,7 +362,7 @@ bulk-package:
 		fi ;\
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
-		${ECHO_MSG} "BULK> Build for ${PKGNAME} was not successful, aborting." | tee -a ${BROKENFILE} ; \
+		${ECHO_MSG} "BULK> Build for ${PKGNAME} was not successful, aborting." | ${TEE} -a ${BROKENFILE} ; \
 		false; \
 	else \
 		${RM} -f ${BUILDLOG} ;\
