@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/05/24 20:39:37 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/07/02 08:37:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/11/18 11:22:35 asami Exp
 #
 
@@ -10,10 +10,6 @@ MAINTAINER=		tsarna@netbsd.org
 
 NOT_FOR_PLATFORM=	*-*-alpha	# Severe LP64 problems
 
-.include "../../mk/bsd.prefs.mk"
-
-.ifdef MANZ
-MANCOMPRESSED=	yes
-.endif
+MANCOMPRESSED_IF_MANZ=	yes
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/09/22 14:41:05 agc Exp $
+# $NetBSD: Makefile,v 1.6 1999/07/02 08:37:22 agc Exp $
 
 DISTNAME=	modemd-970221
 PKGNAME=	modemd-19970221
@@ -7,11 +7,7 @@ MASTER_SITES=	ftp://ftp.vix.com/pub/modemd/
 
 MAINTAINER=	tsarna@netbsd.org
 
-.include "../../mk/bsd.prefs.mk"
-
-.ifdef MANZ
-MANCOMPRESSED=	yes
-.endif
+MANCOMPRESSED_IF_MANZ=	yes
 
 pre-install:
 	${MKDIR} ${PREFIX}/share/examples/modemd
