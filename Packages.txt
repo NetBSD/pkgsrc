@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.195 2001/09/29 23:14:38 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.196 2001/09/29 23:15:45 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1681,7 +1681,7 @@ USE_BUILDLINK_ONLY.
  9 Debugging
  ===========
 
-To check out all the gotchas when building a package (wither from
+To check out all the gotchas when building a package (either from
 a FreeBSD port, or from scratch), here are the steps that I do in
 order to get a package working. Please note this is basically the
 same as what was explained in the previous sections, only with some
