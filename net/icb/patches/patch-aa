@@ -1,13 +1,14 @@
-$NetBSD: patch-aa,v 1.4 1998/08/07 11:10:40 agc Exp $
+$NetBSD: patch-aa,v 1.5 1999/02/10 22:31:56 jwise Exp $
 
 --- tcl/tclCmdAH.c.orig	Fri Feb 24 22:19:53 1995
 +++ tcl/tclCmdAH.c	Wed Apr 15 12:26:09 1998
-@@ -38,8 +38,14 @@
+@@ -38,8 +38,15 @@
  #include <sys/wait.h>
  #include "tclInt.h"
  
-+#if (defined(__unix__) || defined(unix)) && !defined(USG)
++#if (defined(__unix__) || defined(unix) || defined(__NetBSD__)) && !defined(USG)
 +#include <sys/param.h>
++#include <unistd.h>
 +#endif
 +
  extern int errno;
