@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.6 2004/04/05 01:34:17 cjep Exp $
+# $NetBSD: mkbinarykit,v 1.7 2004/04/21 20:34:52 tv Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -120,6 +120,7 @@ strip "$prefix/"bin/*
 strip "$prefix/"sbin/*
 
 echo "Making binary kit."
+PATH="$prefix/bin:$PATH"; export PATH # in case tar was built by bootstrap
 cp ${wrkdir}/mk.conf.example $mkfile &&						\
 cd / && 								\
 tar -hcf "$targetdir/bootstrap-pkgsrc-$opsys-$osrev-$ospro-$date.tar"	\
