@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/10/21 16:41:28 mycroft Exp $
+# $NetBSD: Makefile,v 1.33 2001/11/29 19:46:11 jlam Exp $
 
 DISTNAME=		gnome-games-1.4.0.3
 CATEGORIES=		games gnome
@@ -9,7 +9,6 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME games collection
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 # Required for ports which don't build "libgtop".
 DEPENDS+=		guile-[0-9]*:../../lang/guile
