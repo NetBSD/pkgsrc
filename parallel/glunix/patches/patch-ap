@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.2 2000/07/10 23:54:23 wiz Exp $
+$NetBSD: patch-ap,v 1.3 2000/10/10 19:09:26 dmcmahill Exp $
 
 --- progs/Makefile.common.orig	Wed Nov  5 15:43:41 1997
 +++ progs/Makefile.common	Wed Jun 21 15:54:25 2000
@@ -55,7 +55,7 @@ $NetBSD: patch-ap,v 1.2 2000/07/10 23:54:23 wiz Exp $
 +GLUNIX_PLATFORM = $(GLUNIX_ARCH)-$(GLUNIX_OS)-$(GLUNIX_NET)
 +PERL_PATH = ${LOCALBASE}/bin/perl
 +MAIL_PATH = /usr/bin/Mail
-+RSH_PATH = ${LOCALBASE}/bin/ssh
++RSH_PATH = ${SSH}
 +GLUNIX_DIR = $(NOW_ROOT)
 +GLUNIX_DATA_DIR = $(NOW_ROOT)/data
 +INSTALL_DIR = $(NOW_ROOT)
