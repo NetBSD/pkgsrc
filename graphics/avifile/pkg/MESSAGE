@@ -1,0 +1,5 @@
+
+This package requires a kernel built with
+the directive:
+
+options USER_LDT
