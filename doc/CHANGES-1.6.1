@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.15 2003/04/16 15:23:52 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.16 2003/04/16 15:49:05 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -439,3 +439,83 @@ chat/ircII/distinfo				1.17-1.18
 	  o  fix "irc -h" which was broken recently
 	  o  fix "dcc close raw" which was broken recently
 	[aymeric, ticket #1254]
+
+net/snort/Makefile.common			1.8
+net/snort/PLIST					1.9
+net/snort/distinfo				1.15
+net/snort/patches/patch-aa			1.9
+net/snort/patches/patch-ad			1.2
+net/snort/patches/patch-ae			1.2
+
+	Updated to version 2.0.0.
+
+	IMPORTANT: This version fixes remotely exploitable heap overflow in the stream4
+	           preprocessor module.
+
+	Advisory:  http://www.coresecurity.com/common/showdoc.php?idx=313&idxseccion=10
+
+	Changes:
+
+	2.0.0:
+	======
+	- Enhanced high-performance detection engine
+	- Stateful Pattern Matching
+	- New detection keywords: byte_test & byte_jump
+	- The Snort code base has undergone an external third party professional
+	  security audit funded by Sourcefire (http://www.sourcefire.com)
+	- Many new and updated rules
+	- snort.conf has been updated
+	- Enhancements to self preservation mechanisms in stream4 and frag2
+	- State tracking fixes in stream4
+	- New HTTP flow analyzer
+	- Enhanced protocol decoding (TCP options, 802.1q, etc)
+	- Enhanced protocol anomaly detection (IP, TCP, UDP, ICMP, RPC, HTTP, etc)
+	- Enhanced flexresp mode for real-time TCP session sniping
+	- Better chroot()'ing
+	- Tagging system updated
+	- Several million bugs addressed....
+	- Updated FAQ (thanks to Erek Adams and Dragos Ruiu) Snort 2.0 can be
+	  downloaded at http://www.snort.org/dl/snort-2.0.0.tar.gz. Binary
+	  versions of the codebase will be built over the next several days and
+	  made available at here.
+	
+	2.0.rc4:
+	========
+	- byte_jump/byte_test don't force relative content options
+	- byte_jump/byte_test absolute offsets work
+	- Better FIN handling in Stream4
+	
+	2.0.rc3:
+	========
+	- A low memory usage detection method (enabled via "config detection:
+	  search-method lowmem")
+	- Moved the default unix socket location to LOGDIR
+	
+	2.0.rc2:
+	========
+	- syslog should work on win32 and unix
+	- major tagging updates
+	- new UDP decoding alerts
+	- snort.conf updates
+	
+	2.0.rc1:
+	========
+	- Higher performance (due to a new pattern matcher and rebuilt detection
+	  engine)
+	- Better decoders
+	- Enhanced stream reassembly and defragmentation
+	- Tons of bug fixes
+	- Updated rules
+	- Updated snort.conf
+	- New detection keywords (byte_test, byte_jump, distance, within) &
+	  stateful pattern matching
+	- New HTTP flow analyzer
+	- Enhanced anomaly detection (HTTP, RPC, TCP, IP, etc)
+	- Better self preservation in stateful subsystems
+	- Xrefs fixed
+	- Flexresp works faster and more effectively
+	- Better chroot()'ing
+	- Fixed 802.1q decoding
+	- Better async state handling
+	- New alerting option: -A cmg!!
+	[salo, ticket #1257]
