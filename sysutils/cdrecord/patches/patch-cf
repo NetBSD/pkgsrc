@@ -1,0 +1,13 @@
+$NetBSD: patch-cf,v 1.1 2004/06/20 21:37:14 martin Exp $
+
+--- mkisofs/tree.c.orig	2002-12-07 21:40:47.000000000 +0100
++++ mkisofs/tree.c	2004-06-20 12:48:19.000000000 +0200
+@@ -1517,7 +1517,7 @@
+ 	/*
+ 	 * >= is required by the large file summit standard.
+ 	 */
+-	if (S_ISREG(lstatbuf.st_mode) && (lstatbuf.st_size >= (off_t)0x7FFFFFFF)) {
++	if (S_ISREG(lstatbuf.st_mode) && (lstatbuf.st_size >= (off_t)0x0FFFFFFFF)) {
+ #ifdef	EOVERFLOW
+ 		errno = EOVERFLOW;
+ #else
