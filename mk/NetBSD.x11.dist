@@ -1,4 +1,4 @@
-#     $NetBSD: NetBSD.x11.dist,v 1.3 1997/11/17 16:49:07 agc Exp $
+#     $NetBSD: NetBSD.x11.dist,v 1.4 2000/07/25 12:33:26 jlam Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -280,6 +280,8 @@
     ..
     share
         doc
+            html
+            ..
         ..
         examples
         ..
