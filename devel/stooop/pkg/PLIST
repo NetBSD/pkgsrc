@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/07 22:14:08 tron Exp $
+lib/stooop/pkgIndex.tcl
+lib/stooop/stooop.tcl
+lib/stooop/switched.tcl
+@dirrm lib/stooop
