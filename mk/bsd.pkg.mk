@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.496 2000/07/04 11:58:49 hubertf Exp $			\
+#	$NetBSD: bsd.pkg.mk,v 1.497 2000/07/06 15:05:25 hubertf Exp $			\
 #
 # This file is in the public domain.
 #
@@ -270,6 +270,9 @@ PATCH_DIST_ARGS?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP}
 .if defined(BATCH)
 PATCH_ARGS+=		--batch
 PATCH_DIST_ARGS+=	--batch
+.endif
+.if defined(PKG_DEVELOPER)
+PATCH_FUZZ_FACTOR?=	-F0			# Force zero fuzz
 .endif
 
 .if defined(PATCH_CHECK_ONLY)
@@ -1641,6 +1644,9 @@ root-install:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
+.if defined(PKG_DEVELOPER)
+	@${MAKE} ${MAKEFLAGS} check-shlibs
+.endif
 
 
 # Check if all binaries and shlibs find their needed libs
