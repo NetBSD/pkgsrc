@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/04/14 16:15:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2004/05/04 02:07:06 snj Exp $
 #
 
 DISTNAME=		gcombust-0.1.54
@@ -14,11 +14,11 @@ DEPENDS+=		cdrecord>=1.10:../../sysutils/cdrecord
 DEPENDS+=		cdlabelgen-[0-9]*:../../graphics/cdlabelgen
 DEPENDS+=		gv-[0-9]*:../../print/gv
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
