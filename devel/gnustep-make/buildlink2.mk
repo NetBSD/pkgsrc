@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/01/03 04:02:26 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/02/06 11:50:01 dmcmahill Exp $
 #
 
 .if !defined(GNUSTEP_MAKE_BUILDLINK2_MK)
 GNUSTEP_MAKE_BUILDLINK2_MK=		# defined
 
 BUILDLINK_PACKAGES+=			gnustep-make
-BUILDLINK_DEPENDS.gnustep-make?=	gnustep-make>=1.5.1
+BUILDLINK_DEPENDS.gnustep-make?=	gnustep-make>=1.5.1nb1
 BUILDLINK_PKGSRCDIR.gnustep-make?=	../../devel/gnustep-make
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnustep-make=gnustep-make
