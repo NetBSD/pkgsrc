@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.4 2000/06/19 04:17:27 soren Exp $
+
 diff -ru ../mozilla-current.orig/mozilla/nsprpub/config/NetBSD.mk ./nsprpub/config/NetBSD.mk
 --- ../mozilla-current.orig/mozilla/nsprpub/config/NetBSD.mk	Thu Apr 22 06:37:38 1999
 +++ ./nsprpub/config/NetBSD.mk	Sun Jun  4 14:06:23 2000
