@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.5 2000/02/05 16:13:41 wiz Exp $
 --- xlock/xlock.h	Tue Mar  9 01:51:30 1999
 +++ xlock/xlock.h.BAK	Tue Mar  9 01:49:16 1999
 @@ -131,7 +131,7 @@
