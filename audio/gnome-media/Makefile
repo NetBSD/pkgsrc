@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/01/27 12:31:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2003/01/27 19:47:49 jmmv Exp $
 
 DISTNAME=		gnome-media-1.2.3
 PKGREVISION=		4
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 CONFIGURE_ENV+=	XGETTEXT="${LOCALBASE}/bin/xgettext"
 
 .include "../../www/libghttp/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/27 12:31:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/27 19:48:46 jmmv Exp $
 
 DISTNAME=	yamt-0.5
 PKGREVISION=	1
@@ -17,6 +17,5 @@ USE_X11BASE=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

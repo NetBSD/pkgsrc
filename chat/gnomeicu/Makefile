@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/01/27 12:54:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/27 19:51:26 jmmv Exp $
 
 DISTNAME=	gnomeicu-0.96
 PKGREVISION=	5
@@ -20,7 +20,6 @@ LIBS+=		-liconv
 
 .include "../../databases/gdbm/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
 
