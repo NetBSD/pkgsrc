@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:47:02 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 15:40:33 agc Exp $
 
-MD5 (mcrypt-2.5.5.tar.gz) = 2c7ce0050d897c09ec1f650671b66a3f
+SHA1 (mcrypt-2.5.5.tar.gz) = d871b5d30cd927575dafba56155935a7a969b020
+Size (mcrypt-2.5.5.tar.gz) = 194895 bytes
