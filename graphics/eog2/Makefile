@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2004/07/16 15:58:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.33 2004/09/21 17:09:32 jmmv Exp $
 #
 
-DISTNAME=	eog-2.6.1
+DISTNAME=	eog-2.8.0
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -24,19 +24,19 @@ GCONF2_SCHEMAS= 	eog.schemas
 BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.16
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/eel2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/eel2/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
