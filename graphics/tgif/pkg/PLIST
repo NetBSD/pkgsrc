@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 1998/03/29 22:16:37 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/01/24 11:47:34 frueauf Exp $
 bin/tgif
-bin/prtgif
 lib/X11/tgif/tgif.Xdefaults
 lib/X11/tgif/tgificon.eps
 lib/X11/tgif/tgificon.obj
@@ -8,6 +7,5 @@ lib/X11/tgif/tgificon.xbm
 lib/X11/tgif/tgificon.xpm
 lib/X11/tgif/tangram.sym
 lib/X11/tgif/keys.obj
-man/cat1/prtgif.0
 man/cat1/tgif.0
 @dirrm lib/X11/tgif
