@@ -1,0 +1,30 @@
+# $NetBSD: buildlink3.mk,v 1.1 2004/01/25 14:23:39 recht Exp $
+#
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+PYTHON20_BUILDLINK3_MK:=	${PYTHON20_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	python20
+.endif
+
+.if !empty(PYTHON20_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=			python20
+BUILDLINK_DEPENDS.python20?=		python20>=2.0.1
+BUILDLINK_PKGSRCDIR.python20?=		../../lang/python20
+
+.if defined(BUILDLINK_DEPMETHOD.python)
+BUILDLINK_DEPMETHOD.python20?=	${BUILDLINK_DEPMETHOD.python}
+.endif
+
+BUILDLINK_TRANSFORM+=		l:python:python2.0
+
+BUILDLINK_CPPFLAGS.python20+= \
+	-I${BUILDLINK_PREFIX.python20}/include/python2.0
+BUILDLINK_LDFLAGS.python20+= \
+	-L${BUILDLINK_PREFIX.python20}/lib/python2.0/config		\
+	-Wl,-R${BUILDLINK_PREFIX.python20}/lib/python2.0/config
+
+.endif # PYTHON20_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
