@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4537 2004/01/21 22:54:00 wiz Exp $
+$NetBSD: CHANGES,v 1.4538 2004/01/22 08:09:48 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -380,3 +380,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated spamassassin to 2.63 [heinz 2004-01-21]
 	Updated iozone to 3.217 [wiz 2004-01-21]
 	Updated gsed to 4.09 [wiz 2004-01-21]
+	Updated pkglint to 3.67 [grant 2004-01-22]
