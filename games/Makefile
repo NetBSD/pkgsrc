@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2002/09/12 00:22:23 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2002/09/12 00:41:01 wiz Exp $
 #
 
 COMMENT=	Games
@@ -117,6 +117,7 @@ SUBDIR+=	quake6
 SUBDIR+=	quakedata
 SUBDIR+=	rocksndiamonds
 SUBDIR+=	rollemup
+SUBDIR+=	scummvm
 SUBDIR+=	sjeng
 SUBDIR+=	sl
 SUBDIR+=	spellcast
