@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2002/05/08 15:42:00 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/07 20:16:42 jschauma Exp $
 #
 
 DISTNAME=	joos-0.1
@@ -10,13 +10,11 @@ MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://www.brics.dk/~mis/dOvs/index.html
 COMMENT=	Java Object Oriented Subset
 
-USE_JAVA=	yes
+USE_JAVA=	run
+PKG_JVM=	sun-jdk
 
-# This is ugly.  The chown should happen after copying, or tar should have
-# a way to override permissions.
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/joos
-	${CHOWN} -hR ${BINOWN}:${BINGRP} ${WRKSRC}
-	${GTAR} -C ${WRKSRC} -cf- . | ${GTAR} -C ${PREFIX}/joos -xpf-
+	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}/joos
 
 .include "../../mk/bsd.pkg.mk"
