@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2000/08/15 23:20:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.54 2000/08/16 18:29:50 skrll Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -19,12 +19,15 @@ DEPENDS+=	tiff-*:../../graphics/tiff
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/admin/ltconfig
 GNU_CONFIGURE=	yes
 
 EVAL_PREFIX+=	QT1DIR=qt1
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${QT1DIR}/qt1"
 CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	"-Wl,-R${QT1DIR}/qt1/lib" \
+		"-L${QT1DIR}/qt1/lib"
 
 .include "../../mk/bsd.prefs.mk"
 
