@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pkgvi,v 1.8 2003/07/16 01:38:27 grant Exp $
+# $NetBSD: pkgvi,v 1.9 2003/08/23 19:40:19 seb Exp $
 #
 # Copyright (c) 2001 Tomasz Luchowski. All rights reserved.
 #
@@ -67,12 +67,15 @@ then
 	exit 0
 fi
 
-tmp="$file.$$"
+bfile=`basename $file`
+dfile=`dirname $file`
 
-ext=`echo $file | awk -F. '{ print $NF }'`
+ext=`echo $bfile | awk -F. '{ print $NF }'`
 
-if [ "$file" != "$ext" ]; then
-	tmp=$tmp.$ext
+if [ "$bfile" != "$ext" ]; then
+	tmp="$dfile/$bfile.$$.$ext"
+else
+	tmp="$file.$$"
 fi
 
 cp "$file" "$tmp"
