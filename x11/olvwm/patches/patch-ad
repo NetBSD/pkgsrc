@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/06/16 14:18:55 pooka Exp $
+
+--- olvwmrc.y.orig	Wed Apr 28 23:27:20 1999
++++ olvwmrc.y	Sat Jan  8 00:46:36 2000
+@@ -37,7 +37,7 @@
+ char	*LookupToken();
+ char	*FindOlvwmRC();
+ void	resetKeys();
+-char	*strexpand();
++static char	*strexpand();
+ 
+ typedef struct progscreen {
+     char        *target;
+@@ -527,7 +527,6 @@
+ 	    }
+ %%
+ /* Programs */
+-#define YYDEBUG 1
+ #include "parse.c"
+ 
+ extern List	*ActiveClientList;
