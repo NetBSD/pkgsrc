@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/26 20:55:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/03/12 10:26:21 wiz Exp $
 
 DISTNAME=		cyrus-imapd-1.6.24
 PKGNAME=		${DISTNAME}nb1
@@ -57,7 +57,7 @@ CONFIGURE_ENV+=		LIBS="${LIBS}"
 LIBS+=			`sasl-config --libs`
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WKRDIR}/INSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
 EGDIR=			${PREFIX}/share/examples/cyrus-imapd
