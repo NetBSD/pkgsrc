@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/05/08 23:47:03 salo Exp $
+$NetBSD: patch-ad,v 1.2 2004/11/10 16:38:27 adam Exp $
 
---- src/celestia/celestiacore.cpp.orig	2003-04-14 19:58:00.000000000 +0200
-+++ src/celestia/celestiacore.cpp	2003-05-08 23:46:34.000000000 +0200
-@@ -2658,7 +2658,7 @@
+--- src/celestia/celestiacore.cpp.orig	2004-07-30 07:10:10.000000000 +0000
++++ src/celestia/celestiacore.cpp
+@@ -3454,7 +3454,7 @@ bool CelestiaCore::initSimulation()
      }
  #endif
  
