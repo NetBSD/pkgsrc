@@ -1,16 +1,16 @@
-$NetBSD: patch-ad,v 1.1 1999/04/17 01:55:55 mjl Exp $
+$NetBSD: patch-ad,v 1.2 1999/12/18 04:53:18 mjl Exp $
 
---- ../ffcall/callback/Makefile.in.orig	Sat Apr 17 02:34:45 1999
-+++ ../ffcall/callback/Makefile.in	Sat Apr 17 02:35:02 1999
-@@ -99,10 +99,7 @@
+--- ../ffcall/callback/Makefile.in.orig	Sat Dec 18 03:30:02 1999
++++ ../ffcall/callback/Makefile.in	Sat Dec 18 03:30:39 1999
+@@ -134,10 +134,7 @@
  check-subdirs : force
- 	cd @subdir@; $(MAKE) check
+ 	cd @subdir@; $(MAKE) -r check
  
 -check : all check-subdirs tests
 -	./tests > tests.out
 -	uniq -u < tests.out > tests.output.$(HOST)
 -	test '!' -s tests.output.$(HOST)
-+check : # Theses tests also fail with egcs.
++check : # Fail with egcs
  
  mostlyclean : force
- 	cd @subdir@; $(MAKE) mostlyclean
+ 	cd @subdir@; $(MAKE) -r mostlyclean
