@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7887 2004/11/17 04:30:00 rh Exp $
+$NetBSD: CHANGES,v 1.7888 2004/11/17 07:23:44 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5315,3 +5315,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mplayer-plugin-mozilla-2.70 [xtraeme 2004-11-17]
 	Added mplayer-plugin-mozilla-gtk2-2.70 [xtraeme 2004-11-17]
 	Updated Addresses to 0.4.6 [rh 2004-11-17]
+	Updated openldap to 2.2.18 [jlam 2004-11-17]
