@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2004/01/24 15:06:57 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/31 22:56:11 xtraeme Exp $
 
-DISTNAME=	gpart-0.1g
+DISTNAME=	gpart-0.1h
 CATEGORIES=	sysutils
 MASTER_SITES=	http://home.pages.de/~michab/gpart/
 
