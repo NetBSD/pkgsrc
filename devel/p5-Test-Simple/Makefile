@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/31 01:53:01 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/01 16:05:18 kim Exp $
 
 DISTNAME=		Test-Simple-0.47
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,8 @@ MAINTAINER=		shell@NetBSD.org
 COMMENT=		Perl5 module with a simple framework for writing tests
 
 DEPENDS+=		p5-Test-Harness-[0-9]*:../../devel/p5-Test-Harness
+
+CONFLICTS+=		perl>=5.8.3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
