@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.756 2002/12/12 09:16:10 chris Exp $
+$NetBSD: CHANGES,v 1.757 2002/12/12 12:16:19 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3914,3 +3914,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated cyrus-sasl2 to 2.1.10 [chris 2002-12-11]
 	Updated gawk to 3.1.1 [dmcmahill 2002-12-11]
 	Updated tmda to 0.65 [kim 2002-12-12]
+	Added gtetrinet-0.4.4 [jmmv 2002-12-12]
