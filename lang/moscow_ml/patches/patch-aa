@@ -1,54 +1,60 @@
-$NetBSD: patch-aa,v 1.3 1998/12/04 11:09:46 frueauf Exp $
-
---- Makefile.inc.orig	Mon Apr 20 11:52:39 1998
-+++ Makefile.inc	Thu Dec  3 04:05:44 1998
-@@ -2,20 +2,34 @@
+--- Makefile.inc.orig	Wed Aug  4 17:40:24 1999
++++ Makefile.inc	Wed Apr  5 10:05:09 2000
+@@ -2,20 +2,20 @@
  
  # Where to install stuff
  
 -MOSMLHOME=${HOME}/mosml
 +MOSMLHOME=${PREFIX}
-+
-+# Various utility programs
-+INSTALL_PROGRAM=cp
-+INSTALL_SCRIPT=cp
-+INSTALL_DATA=cp
+ 
+ # Various utility programs
+ INSTALL_PROGRAM=cp
+ INSTALL_SCRIPT=cp
+ INSTALL_DATA=cp
+-PERL=perl
 +PERL=${LOCALBASE}/bin/perl
  
  # To compile the runtime system camlrunm with support for
  # dynamically loadable libraries (DDLs), uncomment these:
  
--# ADDPRIMS=dynlib.c
--# ADDOBJS=dynlib.o
-+ADDPRIMS=dynlib.c
-+ADDOBJS=dynlib.o
- # ADDLIBS=-ldl
- # ADDCFLAGS=-rdynamic
+ ADDPRIMS=dynlib.c
+ ADDOBJS=dynlib.o
+-ADDRUNLIBS=-ldl
++# ADDRUNLIBS=-ldl
+ ADDRUNCFLAGS=
+ ADDDYNLIBCFLAGS=
  
-+# For NetBSD, use:
+@@ -26,13 +26,13 @@ LD=gcc -rdynamic
+ DYNLD=ld -shared
+ 
+ # For NetBSD, use instead:
+-# CPP=/usr/bin/cpp -P -traditional -Dunix -Umsdos
+-# STRIP=/usr/bin/strip
+-# ADDRUNCFLAGS=-fPIC
+-# ADDDYNLIBCFLAGS=-fPIC
+-# INSTALL_PROGRAM=${BSD_INSTALL_PROGRAM}
+-# INSTALL_SCRIPT=${BSD_INSTALL_SCRIPT}
+-# INSTALL_DATA=${BSD_INSTALL_DATA}
 +CPP=/usr/bin/cpp -P -traditional -Dunix -Umsdos
 +STRIP=/usr/bin/strip
-+ADDCFLAGS=-fPIC
++ADDRUNCFLAGS=-fPIC
++ADDDYNLIBCFLAGS=-fPIC
 +INSTALL_PROGRAM=${BSD_INSTALL_PROGRAM}
 +INSTALL_SCRIPT=${BSD_INSTALL_SCRIPT}
 +INSTALL_DATA=${BSD_INSTALL_DATA}
-+
- # For Linux, use:
--CPP=/lib/cpp -P -traditional -Dunix -Umsdos
--STRIP=strip
--DYNLD=ld -shared 
-+#CPP=/lib/cpp -P -traditional -Dunix -Umsdos
-+#STRIP=strip
-+#DYNLD=ld -shared 
  
  # For Solaris 2 (not SunOS 4), use instead:
  # CPP=/usr/ccs/lib/cpp -P -Dunix -Umsdos
-@@ -41,8 +55,8 @@
+@@ -68,10 +68,10 @@ SHELL=/bin/sh
  # LIBDIR contains bytecode files (such as mosmlcmp and library units)
  
  BINDIR=${MOSMLHOME}/bin
 -LIBDIR=${MOSMLHOME}/lib
 -TOOLDIR=${MOSMLHOME}/tools
+-# LIBDIR=${MOSMLHOME}/lib/moscow_ml
+-# TOOLDIR=${MOSMLHOME}/libexec/moscow_ml
++# LIBDIR=${MOSMLHOME}/lib
++# TOOLDIR=${MOSMLHOME}/tools
 +LIBDIR=${MOSMLHOME}/lib/moscow_ml
 +TOOLDIR=${MOSMLHOME}/libexec/moscow_ml
  
