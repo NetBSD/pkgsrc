@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9278 2005/02/23 16:31:35 wiz Exp $
+$NetBSD: CHANGES,v 1.9279 2005/02/23 16:59:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1052,3 +1052,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gimp to 2.2.4 [adam 2005-02-23]
 	Updated loudmouth to 0.17.2 [wiz 2005-02-23]
 	Updated p5-Exception-Class to 1.20 [wiz 2005-02-23]
+	Updated p5-Class-Container to 0.12 [wiz 2005-02-23]
