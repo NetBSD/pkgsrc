@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink.mk,v 1.10 2001/09/21 19:26:45 jlam Exp $
+# $NetBSD: motif.buildlink.mk,v 1.11 2001/11/21 13:54:14 agc Exp $
 #
 # This Makefile fragment is included by packages that use Motif.
 #
@@ -16,25 +16,6 @@
 MOTIF_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
-
-# Default to using OpenMotif for Motif-2.0-compatible libraries as it's a
-# "real" Motif with full functionality.  On Solaris, default to DT-Motif
-# (in /usr/dt).
-#
-.if ${OPSYS} == "SunOS"
-MOTIF_TYPE_DEFAULT?=	dt
-.else
-MOTIF_TYPE_DEFAULT?=	openmotif
-.endif
-
-# Default to using LessTif for Motif-1.2-compatible libraries.  On Solaris,
-# default to DT-Motif (in /usr/dt).
-#
-.if ${OPSYS} == "SunOS"
-MOTIF12_TYPE_DEFAULT?=	dt
-.else
-MOTIF12_TYPE_DEFAULT?=	lesstif12
-.endif
 
 .if defined(USE_MOTIF12)
 #

@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.15 2001/11/21 13:44:44 agc Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.16 2001/11/21 13:54:14 agc Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -63,6 +63,8 @@ DEPENDS+=	user>=20000313:../../sysutils/user
 .endif
 
 DEF_UMASK?=	0022
+MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
+MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=	/sbin/nologin
 
 ROOT_USER?=	root
