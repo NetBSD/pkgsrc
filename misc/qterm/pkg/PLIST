@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/11 11:29:34 agc Exp $
+bin/qterm
+man/man1/qterm.1
+etc/qtermtab
