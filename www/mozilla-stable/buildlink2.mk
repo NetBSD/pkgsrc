@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/01/10 19:14:36 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/03/29 19:11:06 jmc Exp $
 #
 
 .if !defined(MOZILLA_STABLE_BUILDLINK2_MK)
@@ -699,14 +699,14 @@ BUILDLINK_FILES.mozilla-stable+=	lib/mozilla-stable/xpidl
 BUILDLINK_FILES.mozilla-stable+=	lib/mozilla-stable/xpt_dump
 BUILDLINK_FILES.mozilla-stable+=	lib/mozilla-stable/xpt_link
 
+.include 	"../../fonts/Xft2/buildlink2.mk"
 .include	"../../graphics/freetype2/buildlink2.mk"
 .include	"../../graphics/gdk-pixbuf/buildlink2.mk"
 .include	"../../graphics/jpeg/buildlink2.mk"
 .include	"../../graphics/png/buildlink2.mk"
 .include	"../../net/ORBit/buildlink2.mk"
 .include	"../../x11/gtk/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../fonts/Xft2/buildlink2.mk"
+.include 	"../../devel/pkgconfig/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	mozilla-stable-buildlink
 
