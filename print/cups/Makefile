@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2000/12/21 14:59:37 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2000/12/21 16:59:31 jlam Exp $
 #
 
-DISTNAME=		cups-1.1.5-source
-PKGNAME=		${DISTNAME:S/-source//}
-VERS=			${PKGNAME:S/cups-//}
-WRKSRC=			${WRKDIR}/${PKGNAME}
+DISTNAME=		cups-${VERS}-1-source
+PKGNAME=		cups-${VERS}.1
+VERS=			1.1.5
+WRKSRC=			${WRKDIR}/cups-${VERS}
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp2.easysw.com/pub/cups/${VERS}/ \
 			ftp://ftp.easysw.com/pub/cups/${VERS}/ \
@@ -75,16 +75,7 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 DOCDIR=			${PREFIX}/share/doc/cups
 EGDIR=			${PREFIX}/share/examples/cups
 
-# The Okidata PPD files are missing, but on the CUPS mailing list,
-# Michael Sweet says that the following should work.
-#
 post-extract:
-	${SED}	-e "s,EPSON24,OKIDAT24,g" \
-		-e "s,EPSON,OKIDATA,g" \
-		< ${WRKSRC}/ppd/epson24.ppd > ${WRKSRC}/ppd/okidat24.ppd
-	${SED}	-e "s,EPSON9,OKIDATA9,g" \
-		-e "s,EPSON,OKIDATA,g" \
-		< ${WRKSRC}/ppd/epson9.ppd > ${WRKSRC}/ppd/okidata9.ppd
 	cd ${WRKSRC}/conf; ${MV} cupsd.conf cupsd.conf.in
 
 pre-configure:
