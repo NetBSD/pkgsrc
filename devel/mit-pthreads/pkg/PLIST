@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 1997/11/06 09:59:25 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1997/11/13 14:54:50 agc Exp $
+@exec if [ ! -d %d/pthreads ]; then mkdir -p %D/pthreads; fi
 pthreads/bin/pgcc
 pthreads/bin/pg++
 pthreads/lib/libpthread.a
@@ -64,3 +65,10 @@ pthreads/include/sys/errno.h
 pthreads/include/sys/time.h
 pthreads/include/sys/timers.h
 pthreads/include/sys/wait.h
+@dirrm pthreads/lib
+@dirrm pthreads/bin
+@dirrm pthreads/include/arpa
+@dirrm pthreads/include/pthread
+@dirrm pthreads/include/sys
+@dirrm pthreads/include
+@dirrm pthreads
