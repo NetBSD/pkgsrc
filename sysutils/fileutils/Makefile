@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/12/08 15:29:18 bouyer Exp $
+# $NetBSD: Makefile,v 1.8 2000/02/01 00:52:54 wiz Exp $
 
 DISTNAME=		fileutils-3.16
 CATEGORIES=		sysutils
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--program-prefix=g
 
 .include "../../mk/bsd.pkg.mk"
 .if ${OPSYS} == "SunOS"
-PLIST_SUBST+=	LOCALBASE=lib
+PLIST_SUBST+=	LOCALEBASE=lib
 .else
-PLIST_SUBST+=	LOCALBASE=share
+PLIST_SUBST+=	LOCALEBASE=share
 .endif
