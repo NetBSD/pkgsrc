@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9510 2005/03/19 09:15:33 seb Exp $
+$NetBSD: CHANGES,v 1.9511 2005/03/19 14:33:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1412,3 +1412,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dict-client to 1.9.15nb1 [jwise 2005-03-19]
 	Updated p5-IO-Util to 1.43 [wiz 2005-03-19]
 	Updated graphviz to 2.2 [seb 2005-03-19]
+	Updated spamass-milter to 0.3.0 [wiz 2005-03-19]
