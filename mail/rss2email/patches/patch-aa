@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/06/27 23:00:34 schmonz Exp $
+$NetBSD: patch-aa,v 1.2 2004/06/30 20:19:35 schmonz Exp $
 
---- config.py.orig	2004-06-27 17:49:51.000000000 -0400
+--- config.py.orig	2004-06-30 15:33:08.000000000 -0400
 +++ config.py
 @@ -0,0 +1,27 @@
 +# The email address messages are from by default:
@@ -10,6 +10,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/06/27 23:00:34 schmonz Exp $
 +# 0: Use the email address specified by the feed, when possible.
 +FORCE_FROM = 0
 +
++# 1: Receive HTML mail
++# 0: Have entries converted to plain text
++HTML_MAIL = 1
++
 +# 1: Receive one email per post
 +# 0: Receive an email every time a post changes
 +TRUST_GUID = 1
@@ -17,10 +21,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/06/27 23:00:34 schmonz Exp $
 +# 1: Generate Date header based on item's date, when possible
 +# 0: Generate Date header based on time sent
 +DATE_HEADER = 0
-+
-+# 1: Treat the contents of <description> as HTML
-+# 0: Send the contents of <description> as is, without conversion
-+TREAT_DESCRIPTION_AS_HTML = 1
 +
 +# 1: Apply Q-P conversion (required for some MUAs)
 +# 0: Send message in 8-bits
