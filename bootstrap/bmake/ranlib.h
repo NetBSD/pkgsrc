@@ -1,5 +1,5 @@
 /*	@(#)ranlib.h 1.6 88/08/19 SMI; from UCB 4.1 83/05/03	*/
-/*	$Id: ranlib.h,v 1.1.1.1 2004/03/11 13:04:12 grant Exp $	*/
+/*	$Id: ranlib.h,v 1.2 2004/11/20 04:31:35 grant Exp $	*/
 
 /*
  * Structure of the __.SYMDEF table of contents for an archive.
@@ -10,7 +10,7 @@
  * The ran_strx fields index the string table whose first byte is numbered 0.
  */
 
-#ifndef IRIX
+#if !defined(IRIX) && !defined(__digital__)
 #ifndef _ranlib_h
 #define _ranlib_h
 
