@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/14 01:32:43 dmcmahill Exp $
+${EMACS_LISPPREFIX}/matlab-mode/matlab.el
+${EMACS_LISPPREFIX}/matlab-mode/matlab.elc
+@dirrm ${EMACS_LISPPREFIX}/matlab-mode
