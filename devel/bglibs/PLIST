@@ -1,0 +1,149 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/21 00:12:29 schmonz Exp $
+include/bglibs/adt/common.h
+include/bglibs/adt/ghash.h
+include/bglibs/adt/gqueue.h
+include/bglibs/adt/gstack.h
+include/bglibs/base64/base64.h
+include/bglibs/cdb/cdb.h
+include/bglibs/cdb/make.h
+include/bglibs/cdb/str.h
+include/bglibs/cli/cli.h
+include/bglibs/crc/crc16_arc.h
+include/bglibs/crc/crc16_ccitt.h
+include/bglibs/crc/crc16_xmodem.h
+include/bglibs/crc/crc32.h
+include/bglibs/crc/crc32c.h
+include/bglibs/crc/crc64.h
+include/bglibs/crc/gcrc.h
+include/bglibs/crypto/md5.h
+include/bglibs/crypto/sha1.h
+include/bglibs/crypto/sha256.h
+include/bglibs/crypto/sha384.h
+include/bglibs/crypto/sha512.h
+include/bglibs/crypto/surf.h
+include/bglibs/dict/dict.h
+include/bglibs/dict/load.h
+include/bglibs/fmt/number.h
+include/bglibs/installer.h
+include/bglibs/iobuf/common.h
+include/bglibs/iobuf/ibuf.h
+include/bglibs/iobuf/iobuf.h
+include/bglibs/iobuf/obuf.h
+include/bglibs/misc/misc.h
+include/bglibs/misc/ucspi.h
+include/bglibs/msg/msg.h
+include/bglibs/msg/wrap.h
+include/bglibs/net/ipv4.h
+include/bglibs/net/ipv6.h
+include/bglibs/net/resolve.h
+include/bglibs/net/socket.h
+include/bglibs/path/path.h
+include/bglibs/pwcmp/client.h
+include/bglibs/pwcmp/hex.h
+include/bglibs/pwcmp/module.h
+include/bglibs/str/env.h
+include/bglibs/str/iter.h
+include/bglibs/str/str.h
+include/bglibs/sysdeps.h
+include/bglibs/systime.h
+include/bglibs/uint16.h
+include/bglibs/uint32.h
+include/bglibs/uint64.h
+include/bglibs/uintnn.h
+include/bglibs/unix/cloexec.h
+include/bglibs/unix/fcntl.h
+include/bglibs/unix/nonblock.h
+include/bglibs/unix/selfpipe.h
+include/bglibs/unix/sig.h
+include/bglibs/unix/trigger.h
+include/bglibs/vmailmgr/client.h
+include/bglibs/vmailmgr/vpwentry.h
+lib/bglibs/libbase64/base64.a
+lib/bglibs/libbg-adt.a
+lib/bglibs/libbg-base64.a
+lib/bglibs/libbg-cdb.a
+lib/bglibs/libbg-cli.a
+lib/bglibs/libbg-crc.a
+lib/bglibs/libbg-crypto.a
+lib/bglibs/libbg-dict.a
+lib/bglibs/libbg-fmt.a
+lib/bglibs/libbg-installer.a
+lib/bglibs/libbg-instcheck.a
+lib/bglibs/libbg-instshow.a
+lib/bglibs/libbg-iobuf.a
+lib/bglibs/libbg-misc.a
+lib/bglibs/libbg-msg.a
+lib/bglibs/libbg-net.a
+lib/bglibs/libbg-path.a
+lib/bglibs/libbg-str.a
+lib/bglibs/libbg-sysdeps.a
+lib/bglibs/libbg-unix.a
+lib/bglibs/libbg.a
+lib/bglibs/libcdb/cdb.a
+lib/bglibs/libcdb/make.a
+lib/bglibs/libcdb/str.a
+lib/bglibs/libcli/cli.a
+lib/bglibs/libcrypto/md5.a
+lib/bglibs/libcrypto/sha1.a
+lib/bglibs/libcrypto/sha256.a
+lib/bglibs/libcrypto/sha512a.a
+lib/bglibs/libdict/dict.a
+lib/bglibs/libdict/load.a
+lib/bglibs/libinstaller.a
+lib/bglibs/libinstcheck.a
+lib/bglibs/libinstshow.a
+lib/bglibs/libiobuf/iobuf.a
+lib/bglibs/libiobuf/str.a
+lib/bglibs/libmisc/misc.a
+lib/bglibs/libmsg/msg.a
+lib/bglibs/libmsg/wrap.a
+lib/bglibs/libnet/ipv4.a
+lib/bglibs/libnet/resolve.a
+lib/bglibs/libnet/socket.a
+lib/bglibs/libpath/path.a
+lib/bglibs/libpwcmp-module.a
+lib/bglibs/libpwcmp.a
+lib/bglibs/libpwcmp/client.a
+lib/bglibs/libpwcmp/hex.a
+lib/bglibs/libpwcmp/module.a
+lib/bglibs/libstr/iter.a
+lib/bglibs/libstr/str.a
+lib/bglibs/libsysdeps.a
+lib/bglibs/libunix/nonblock.a
+lib/bglibs/libunix/sig.a
+lib/bglibs/libvmailmgr.a
+lib/bglibs/libvmailmgr/client.a
+lib/bglibs/libvmailmgr/vpwentry.a
+@dirrm lib/bglibs/libvmailmgr
+@dirrm lib/bglibs/libunix
+@dirrm lib/bglibs/libstr
+@dirrm lib/bglibs/libpwcmp
+@dirrm lib/bglibs/libpath
+@dirrm lib/bglibs/libnet
+@dirrm lib/bglibs/libmsg
+@dirrm lib/bglibs/libmisc
+@dirrm lib/bglibs/libiobuf
+@dirrm lib/bglibs/libdict
+@dirrm lib/bglibs/libcrypto
+@dirrm lib/bglibs/libcli
+@dirrm lib/bglibs/libcdb
+@dirrm lib/bglibs/libbase64
+@dirrm lib/bglibs
+@dirrm include/bglibs/vmailmgr
+@dirrm include/bglibs/unix
+@dirrm include/bglibs/str
+@dirrm include/bglibs/pwcmp
+@dirrm include/bglibs/path
+@dirrm include/bglibs/net
+@dirrm include/bglibs/msg
+@dirrm include/bglibs/misc
+@dirrm include/bglibs/iobuf
+@dirrm include/bglibs/fmt
+@dirrm include/bglibs/dict
+@dirrm include/bglibs/crypto
+@dirrm include/bglibs/crc
+@dirrm include/bglibs/cli
+@dirrm include/bglibs/cdb
+@dirrm include/bglibs/base64
+@dirrm include/bglibs/adt
+@dirrm include/bglibs
