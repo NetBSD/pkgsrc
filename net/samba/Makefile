@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2001/02/05 09:01:01 tron Exp $
+# $NetBSD: Makefile,v 1.43 2001/02/06 03:16:59 fredb Exp $
 
 DISTNAME=		samba-2.0.7-ja-1.3
 PKGNAME=		samba-2.0.7.1.3
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.samba.gr.jp/pub/samba-jp/samba-2.0.7-ja/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/${LOCALBASE}/bin/autoremake:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
 .if !exists(/usr/include/readline.h)

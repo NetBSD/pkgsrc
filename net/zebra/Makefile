@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/02/05 09:01:02 tron Exp $
+# $NetBSD: Makefile,v 1.33 2001/02/06 03:17:00 fredb Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	itojun@itojun.org
 HOMEPAGE=	http://www.zebra.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoremake:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,7 +51,7 @@ post-patch:
 		${ECHO} '@dirrm share/examples/zebra' >>${PLIST_SRC}
 
 pre-configure:
-		cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake
+		cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 #		cd ${WRKSRC} && ${LOCALBASE}/bin/automake
 
 #post-build:

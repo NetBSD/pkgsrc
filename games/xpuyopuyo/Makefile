@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/05 09:00:57 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/06 03:16:57 fredb Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 CATEGORIES=		games x11
@@ -8,6 +8,7 @@ MASTER_SITES=		http://chaos2.org/xpuyopuyo/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		libmikmod>=3.1.9:../../audio/libmikmod
@@ -25,7 +26,7 @@ CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="${GNOME_CONFIG}"
 GNOME_CONFIG=		${WRKDIR}/gnome-config
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoheader && ${LOCALBASE}/bin/automake --gnu && ${LOCALBASE}/bin/autoremake --force
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoheader && ${LOCALBASE}/bin/automake --gnu && ${LOCALBASE}/bin/autoreconf --force
 	${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/gnome-config \
 		> ${GNOME_CONFIG}
 	${CHMOD} +x ${GNOME_CONFIG}

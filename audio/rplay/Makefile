@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/02/05 09:00:54 tron Exp $
+# $NetBSD: Makefile,v 1.22 2001/02/06 03:16:56 fredb Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://rplay.doit.org/pub/rplay/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://rplay.doit.org/
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/${LOCALBASE}/bin/autoremake:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 DEPENDS+=	gsm-1.0.10:../../audio/gsm
 DEPENDS+=	rx-1.5:../../devel/rx
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/05 09:01:05 tron Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/06 03:17:01 fredb Exp $
 #
 
 DISTNAME=	bluefish-0.6
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	wulf@ping.net.au
 HOMEPAGE=	http://bluefish.openoffice.nl/
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	imlib-*:../../graphics/imlib
@@ -24,7 +24,7 @@ GNU_CONFIGURE=	# defined
 HTMLDIR=	${PREFIX}/share/doc/html/bluefish
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${HTMLDIR}
