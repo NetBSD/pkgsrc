@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2004/08/14 17:43:53 kristerw Exp $
+
+--- src/_codecs_iso2022.c.orig	Sat Aug 14 19:37:23 2004
++++ src/_codecs_iso2022.c	Sat Aug 14 19:39:09 2004
+@@ -141,7 +141,11 @@
+ 
+ struct iso2022_config {
+ 	int flags;
++#if defined(__GNUC__) && __GNUC__ <= 2
++	const struct iso2022_designation designations[0];
++#else
+ 	const struct iso2022_designation designations[]; /* non-ascii desigs */
++#endif
+ };
+ 
+ /*-*- iso-2022 codec implementation -*-*/
