@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.pre,v 1.2 2002/01/19 17:34:25 drochner Exp $
-${PYSITELIB}/PIL.pth
-${PYSITELIB}/PIL/_imaging.so
