@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2003/09/14 22:25:25 jlam Exp $
+# $NetBSD: Makefile,v 1.104 2003/10/11 11:42:11 grant Exp $
 
 .include "Makefile.common"
 PKGREVISION=		4
@@ -65,12 +65,12 @@ OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0500
 
 .if !defined(MKTEMP)
-MKTEMP!=	${TYPE} mktemp | \
+MKTEMP!=	${TYPE} mktemp 2>&1 | \
 		${AWK} '/not found/ { print "mktemp"; exit } { print $$3 }'
 MAKEFLAGS+=	MKTEMP="${MKTEMP}"
 .endif
 .if !defined(PWD_MKDB)
-PWD_MKDB!=	${TYPE} pwd_mkdb | \
+PWD_MKDB!=	${TYPE} pwd_mkdb 2>&1 | \
 		${AWK} '/not found/ { print "pwd_mkdb"; exit } { print $$3 }'
 MAKEFLAGS+=	PWD_MKDB="${PWD_MKDB}"
 .endif
