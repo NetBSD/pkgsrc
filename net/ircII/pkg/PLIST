@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 1999/05/21 22:07:47 tron Exp $
-bin/irc-4.4I
+@comment $NetBSD: PLIST,v 1.13 1999/07/15 06:26:27 mrg Exp $
+bin/irc-4.4J
 bin/ircbug
 bin/irc
 bin/ircio
@@ -585,7 +585,6 @@ share/irc/help/ison@.GZ@
 share/irc/help/servlist@.GZ@
 share/irc/help/squery@.GZ@
 share/irc/help/icb@.GZ@
-@unexec rm -f %D/share/irc/ircII.servers %D/share/irc/ircII.motd
 @dirrm share/irc/help/alias
 @dirrm share/irc/help/bind
 @dirrm share/irc/help/ctcp
