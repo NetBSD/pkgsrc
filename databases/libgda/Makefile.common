@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/01/22 08:02:16 grant Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/02/11 05:28:58 xtraeme Exp $
 #
 
 DISTNAME?=		libgda-1.0.0
@@ -12,7 +12,7 @@ HOMEPAGE?=		http://www.gnome-db.org/
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -27,9 +27,9 @@ PKG_SYSCONFSUBDIR=	libgda
 EGDIR=			${PREFIX}/share/examples/libgda
 CONF_FILES+=		${EGDIR}/config ${PKG_SYSCONFDIR}/config
 
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../textproc/libxslt/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
