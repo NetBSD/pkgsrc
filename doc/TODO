@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.867 2003/09/16 13:47:35 xtraeme Exp $
+$NetBSD: TODO,v 1.868 2003/09/16 18:54:16 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -238,7 +238,6 @@ Suggested package updates
 	o scribus-1.0.1 [pkg/22557]
 	o sendfile-20010424
 	o skill-4.1.1
-	o slib-2.4.4 [pkg/22185]
 	o slrn-0.9.8.0
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o sml-nj-110.43
