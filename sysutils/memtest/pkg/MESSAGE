@@ -5,4 +5,4 @@ Memtest86 on a floppy, insert a disk then type:
 
 Please read the documentation at:
 	${PREFIX}/share/doc/memtest/README
-	http://reality.sgi.com/cbrady_denver/memtest86/
+	http://www.memtest86.com

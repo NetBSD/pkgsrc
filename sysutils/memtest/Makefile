@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 11:28:32 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/09 16:31:36 wiz Exp $
 #
 
-DISTNAME=		memtest86-2.5
-PKGNAME=		memtest-2.5
+DISTNAME=		memtest86-2.6
+PKGNAME=		memtest-2.6
 CATEGORIES=		sysutils
-MASTER_SITES=		http://reality.sgi.com/cbrady_denver/memtest86/
+MASTER_SITES=		http://www.memtest86.com/
 
 MAINTAINER=		collver@linuxfreemail.com
-HOMEPAGE=		http://reality.sgi.com/cbrady_denver/memtest86/
+HOMEPAGE=		http://www.memtest86.com
 COMMENT=		thorough, stand alone memory test for x86 arch
 
 BUILD_DEPENDS+=		bcc-95.3.12:../../devel/bcc
