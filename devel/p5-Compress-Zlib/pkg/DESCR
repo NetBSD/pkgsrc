@@ -1,0 +1,3 @@
+This module provides a Perl interface to part of the info-zip zlib
+compression library.  For more details see the pod documentation
+embedded in the file Zlib.pm.
