@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
+
+--- conf/httpd.conf-dist.orig	Thu Dec  3 11:05:29 1998
++++ conf/httpd.conf-dist	Thu Dec  3 11:07:26 1998
+@@ -18,7 +18,16 @@
+ # binary.
+ #
+ # Example:
+-# LoadModule foo_module libexec/mod_foo.so
++# LoadModule foo_module lib/httpd/mod_foo.so
++
++<IfDefine SSL>
++### Uncomment the following if you wish to use SSL and you need RSAREF: ###
++#LoadFile !librsaref.so.2
++LoadFile !libcrypto.so.1
++LoadFile !libssl.so.1
++LoadModule ssl_module lib/httpd/mod_ssl.so
++AddModule mod_ssl.c
++</IfDefine>
+ 
+ # ServerType is either inetd, or standalone.
+ 
