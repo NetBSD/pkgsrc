@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/09 20:47:21 mjl Exp $
+
+--- Makefile.orig	2004-10-09 09:27:17.000000000 +0200
++++ Makefile	2004-10-09 09:27:40.000000000 +0200
+@@ -119,9 +119,9 @@
+ OPENH323DIR=$(HOME)/openh323
+ endif
+ 
+-VERSION_FILE := $(OPENH323DIR)/version.h
++VERSION_FILE := $(OPENH323DIR)/include/openh323/version.h
+ 
+-include $(OPENH323DIR)/openh323u.mak
++include $(OPENH323DIR)/share/openh323/openh323u.mak
+ 
+ ### Remove -fdata-sections gcc option that cause problems during link step
+ temp_STDCCFLAGS := $(subst -fdata-sections,,$(STDCCFLAGS))
