@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2004/02/18 16:35:27 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2004/02/29 00:22:43 recht Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREETYPE2_BUILDLINK3_MK:=	${FREETYPE2_BUILDLINK3_MK}+
@@ -28,7 +28,7 @@ _IS_BUILTIN.freetype2!=							\
 	fi
 BUILDLINK_IS_BUILTIN.freetype2=	${_IS_BUILTIN.freetype2}
 .    if !empty(BUILDLINK_CHECK_BUILTIN.freetype2:M[nN][oO]) && \
-        !empty(_IS_BUILTIN.freetype2:M[yY][eE][sS])
+	!empty(_IS_BUILTIN.freetype2:M[yY][eE][sS])
 #
 # Create an appropriate package name for the built-in freetype2 distributed
 # with the system.  This package name can be used to check against
