@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/03/20 02:23:38 snj Exp $
+# $NetBSD: Makefile,v 1.39 2004/03/27 17:33:28 he Exp $
 #
 
 DISTNAME=	lame-${VERS}
@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=	--disable-analyzer
 # double is faster than float on Alpha
 CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-mfp-regs -fschedule-insns -fschedule-insns2 		  \
-		-finline-functions -DFLOAT=double
+		-finline-functions -DFLOAT=double -DFLOAT_MAX=DBL_MAX
 .endif
 
 .include "../../mk/curses.buildlink3.mk"
