@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 1999/03/14 23:48:08 tron Exp $
+# $NetBSD: Makefile,v 1.11 1999/03/16 22:29:11 tron Exp $
 #
 
-DISTNAME=	gnome-core-1.0.1
+DISTNAME=	gnome-core-1.0.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-1.0/sources/ \
 		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
@@ -11,7 +11,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	esound-0.2.8:../../audio/esound
-DEPENDS+=	gnome-libs-1.0.1:../../x11/gnome-libs
+DEPENDS+=	gnome-libs-1.0.3:../../x11/gnome-libs
 DEPENDS+=	libgtop-1.0.1:../../devel/libgtop
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk

@@ -1,22 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 1998/10/07 19:45:26 agc Exp $
+$NetBSD: patch-ab,v 1.2 1999/03/16 22:29:11 tron Exp $
 
-Make this compile on NetBSD, as well as FreeBSD.
-
---- applets/modemlights/modemlights.h	1998/10/05 15:00:21	1.1
-+++ applets/modemlights/modemlights.h	1998/10/05 15:03:16
-@@ -7,11 +7,12 @@
- #include <sys/stat.h>
- #include <sys/ioctl.h>
- #include <sys/socket.h>
-+#include <sys/param.h>
- #include <net/if.h>
--#ifdef __FreeBSD__
--#include <net/if_ppp.h>
--#endif /* __FreeBSD__ */
- #include <net/ppp_defs.h>
-+#if (defined(BSD) && BSD >= 199506)
-+#include <net/if_ppp.h>
-+#endif /* 4.4 BSD derived */
+--- applets/modemlights/modemlights.h.orig	Fri Mar 12 03:50:10 1999
++++ applets/modemlights/modemlights.h	Tue Mar 16 19:25:48 1999
+@@ -25,6 +25,11 @@
  
+ #include <net/ppp_defs.h>
+ 
++#ifdef __NetBSD__
++#  include <net/if_pppvar.h>
++#  include <net/if_ppp.h>
++#endif /* __NetBSD__ */
++
  #include <gnome.h>
- #include "applet-lib.h"
+ #include <applet-widget.h>
+ 
