@@ -1,13 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2000/07/26 08:46:24 rh Exp $
+$NetBSD: patch-aa,v 1.5 2001/01/18 13:12:06 itojun Exp $
 
---- Makefile.in.orig	Wed Jul 12 19:06:01 2000
-+++ Makefile.in	Wed Jul 26 10:18:37 2000
-@@ -43,7 +43,7 @@
- cleandir: distclean
- 
- install:: isc-config.sh
+--- Makefile.in.orig	Wed Dec  6 05:19:14 2000
++++ Makefile.in	Sat Dec 16 03:17:07 2000
+@@ -37,3 +37,3 @@
+ install:: isc-config.sh installdirs
 -	${INSTALL_PROGRAM} isc-config.sh ${DESTDIR}${bindir}
 +	${BSD_INSTALL_SCRIPT} isc-config.sh ${DESTDIR}${bindir}
  
- kit: kitclean
- 	mkdir bind-${VERSION}
