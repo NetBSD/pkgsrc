@@ -1,0 +1,69 @@
+$NetBSD: patch-bd,v 1.1 2002/07/07 14:36:48 taca Exp $
+
+--- smbd/quotas.c.orig	Fri Jun  7 20:09:06 2002
++++ smbd/quotas.c
+@@ -855,7 +855,7 @@
+ 
+ #else
+ 
+-#if    defined(__FreeBSD__) || defined(__OpenBSD__)
++#if    defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <ufs/ufs/quota.h>
+ #include <machine/param.h>
+ #elif         AIX
+@@ -865,7 +865,7 @@
+ #define dqb_curfiles dqb_curinodes
+ #define dqb_fhardlimit dqb_ihardlimit
+ #define dqb_fsoftlimit dqb_isoftlimit
+-#else /* !__FreeBSD__ && !AIX && !__OpenBSD__ */
++#else /* !__FreeBSD__ && !AIX && !__OpenBSD__ && !__NetBSD__ */
+ #include <sys/quota.h>
+ #include <devnm.h>
+ #endif
+@@ -879,7 +879,7 @@
+   int r;
+   struct dqblk D;
+   uid_t euser_id;
+-#if !defined(__FreeBSD__) && !defined(AIX) && !defined(__OpenBSD__)
++#if !defined(__FreeBSD__) && !defined(AIX) && !defined(__OpenBSD__) && !defined(__NetBSD__)
+   char dev_disk[256];
+   SMB_STRUCT_STAT S;
+   /* find the block device file */
+@@ -898,7 +898,7 @@
+ 
+   restore_re_uid();
+ #else 
+-#if defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+   {
+     /* FreeBSD patches from Marty Moll <martym@arbor.edu> */
+     gid_t egrp_id;
+@@ -923,15 +923,15 @@
+   r= quotactl(path,QCMD(Q_GETQUOTA,USRQUOTA),euser_id,(char *) &D);
+ #else /* !__FreeBSD__ && !AIX && !__OpenBSD__ */
+   r=quotactl(Q_GETQUOTA, dev_disk, euser_id, &D);
+-#endif /* !__FreeBSD__ && !AIX && !__OpenBSD__ */
++#endif /* !__FreeBSD__ && !AIX && !__OpenBSD__ && !__NetBSD__ */
+ #endif /* HPUX */
+ 
+   /* Use softlimit to determine disk space, except when it has been exceeded */
+-#if defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+   *bsize = DEV_BSIZE;
+-#else /* !__FreeBSD__ && !__OpenBSD__ */
++#else /* !__FreeBSD__ && !__OpenBSD__ && !__NetBSD__ */
+   *bsize = 1024;
+-#endif /*!__FreeBSD__ && !__OpenBSD__ */
++#endif /*!__FreeBSD__ && !__OpenBSD__ && !__NetBSD__ */
+ 
+   if (r)
+     {
+@@ -954,7 +954,7 @@
+     return(False);
+   /* Use softlimit to determine disk space, except when it has been exceeded */
+   if ((D.dqb_curblocks>D.dqb_bsoftlimit)
+-#if !defined(__FreeBSD__) && !defined(__OpenBSD__)
++#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__NetBSD__)
+ ||((D.dqb_curfiles>D.dqb_fsoftlimit) && (D.dqb_fsoftlimit != 0))
+ #endif
+     ) {

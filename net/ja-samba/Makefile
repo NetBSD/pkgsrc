@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2002/06/28 17:13:59 taca Exp $
+# $NetBSD: Makefile,v 1.4 2002/07/07 14:36:40 taca Exp $
 
-DISTNAME=		samba-2.2.2-ja-1.1
-PKGNAME=		ja-samba-2.2.2.1.1
-PKGREVISION=		1
+DISTNAME=		samba-${SAMBA_BASE_VERSION}-ja-${SAMBA_JA_VERSION}
+PKGNAME=		ja-samba-${SAMBA_BASE_VERSION}.${SAMBA_JA_VERSION}
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.samba.gr.jp/pub/samba-jp/samba-2.2.2-ja/ \
-			ftp://ring.asahi-net.or.jp/pub/net/samba-jp/samba-2.2.2-ja/
+MASTER_SITES=		ftp://ftp.samba.gr.jp/pub/samba-jp/samba-${SAMBA_BASE_VERSION}-ja/ \
+			ftp://ring.asahi-net.or.jp/pub/net/samba-jp/samba-${SAMBA_BASE_VERSION}-ja/
 EXTRACT_SUFX=		.tar.bz2
-
-PATCH_SITES=		${MASTER_SITES:S/$/patches\//}
-PATCHFILES=		samba-2.2.2-ja-1.1-shirai-1.0.patch.gz
 
 MAINTAINER=		tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=		http://www.jp.samba.org/project/samba-ja/index.html.en
 COMMENT=		Samba supporting I18N swat and L10N for Japanese
 
+SAMBA_BASE_VERSION=	2.2.4
+SAMBA_JA_VERSION=	1.0
 CONFLICTS+=		samba-[0-9]*
 
 GNU_CONFIGURE=		# defined
