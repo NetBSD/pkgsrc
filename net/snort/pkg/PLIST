@@ -1,7 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/10 15:48:02 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/01/15 21:58:29 wiz Exp $
 bin/snort
+share/snort/backdoor-lib
+share/snort/misc-lib
+share/snort/overflow-lib
+share/snort/scan-lib
+share/snort/snort-lib
+share/snort/web-lib
+@dirrm share/snort
 share/doc/snort/README
+share/doc/snort/README.PLUGINS
 share/doc/snort/NEWS
 share/doc/snort/RULES.SAMPLE
 share/doc/snort/USAGE
 @dirrm share/doc/snort
+@exec install -d -m 700 -o root -g wheel /var/log/snort
+@unexec rmdir /var/log/snort 2>/dev/null || true
