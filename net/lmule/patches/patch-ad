@@ -1,0 +1,43 @@
+$NetBSD: patch-ad,v 1.3 2003/05/24 09:50:27 jmmv Exp $
+
+--- src/emuleDlg.cpp.orig	2003-04-27 16:19:51.000000000 +0200
++++ src/emuleDlg.cpp
+@@ -20,6 +20,7 @@
+ //
+ 
+ //#include "stdafx.h"
++#include "config.h"
+ #include "emule.h"
+ #include "emuleDlg.h"
+ #include "sockets.h"
+@@ -130,6 +131,9 @@ void muleDefaultToolbar( wxToolBar *pare
+ 
+ // CemuleDlg Dialog
+ #include <signal.h>
++#ifdef HAVE_SYS_UTSNAME_H
++#include <sys/utsname.h>
++#endif
+ 
+ #if wxMINOR_VERSION > 4
+ #define CLOSEBOX wxCLOSE_BOX
+@@ -137,8 +141,19 @@ void muleDefaultToolbar( wxToolBar *pare
+ #define CLOSEBOX 0
+ #endif
+ 
++const char * GetAppTitle()
++{
++#if defined(HAVE_UNAME) && defined(HAVE_SYS_UTSNAME_H)
++  struct utsname un;
++  uname(&un);
++  return CString("eMule for ") + un.sysname;
++#else
++  return CString("eMule for *NIX");
++#endif
++}
++
+ CemuleDlg::CemuleDlg(wxWindow* pParent /*=NULL*/) 
+-  : wxFrame(pParent,CemuleDlg::IDD,_("eMule for Linux"),wxDefaultPosition,wxSize(800,520),
++  : wxFrame(pParent,CemuleDlg::IDD,GetAppTitle(),wxDefaultPosition,wxSize(800,520),
+ 	    wxCAPTION|wxRESIZE_BORDER|wxSYSTEM_MENU|wxDIALOG_NO_PARENT|wxTHICK_FRAME|wxMINIMIZE_BOX|wxMAXIMIZE_BOX|CLOSEBOX)
+ {
+   m_app_state=APP_STATE_STARTING;
