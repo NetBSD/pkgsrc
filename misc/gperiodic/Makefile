@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/07/31 04:14:09 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/04 17:09:55 wiz Exp $
 #
 
 DISTNAME=	gperiodic-1.2.6
@@ -9,15 +9,13 @@ MASTER_SITES=	ftp://ftp.seul.org/pub/gperiodic/
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://gperiodic.seul.org/
 
-DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+USE_LIBINTL=	yes
 USE_X11BASE=	yes
-
-CPPFLAGS+=	-I${LOCALBASE}/include	# for libintl.h
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 pre-configure:
 .for file in config.cache config.h config.log config.status
