@@ -4,20 +4,24 @@
 # sub-Makefile in the build tree.  Makefiles for shared libraries include
 # Makefile.global then Makefile.shlib.
 #
-# $NetBSD: Makefile.custom,v 1.1 1999/09/19 04:24:54 jlam Exp $
+# $NetBSD: Makefile.custom,v 1.2 2000/03/18 17:43:16 jlam Exp $
 
-CUSTOM_INSTALL=	${LIBTOOL} ${INSTALL}
-CUSTOM_CC=	${LIBTOOL} ${CC}
-CUSTOM_CXX=	${LIBTOOL} ${CXX}
+# Where the database templates are stored
+#
+TEMPLATEDIR= $(POSTGRESDIR)/share/postgresql
 
 # installation directory for documentation
-PGDOCS=		${POSTGRESDIR}/../share/doc/postgresql
+PGDOCS=		$(POSTGRESDIR)/share/doc/postgresql
 
-# Rules to build object files from source files.
-# ${LIBTOOL} requires that there not be a -o flag when in compile mode.
-#
-%.o:	%.c
-	${CC} ${CPPFLAGS} ${CFLAGS} -c $<
+# Where the ODBC installation-wide configuration file gets installed.
+ODBCINST=	etc
 
-%.o:	%.cc
-	${CXX} ${CPPFLAGS} ${CXXFLAGS} -c $<
+ifdef INSTALLED_LIBPQ
+LIBPQDIR:=	$(HEADERDIR)
+LIBPQ:=		-L$(LIBDIR) -lpq
+endif
+
+ifdef INSTALLED_LIBPGTCL
+LIBPGTCLDIR:=	$(HEADERDIR)
+LIBPGTCL:=	-L$(LIBDIR) -lpgtcl
+endif
