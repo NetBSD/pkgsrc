@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/05/07 18:12:12 jtb Exp $
+# $NetBSD: Makefile,v 1.10 2001/05/07 18:41:16 jtb Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -49,6 +49,6 @@ do-install:
 		igmt_gmtdefaults_3.3 ${PREFIX}/share/igmt/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/igmt
 	cd ${WRKSRC} && ${INSTALL_DATA} example*.ps.gz			\
-		${WRKSRC}/example*.dat ${PREFIX}/share/examples/igmt/	\
+		${WRKSRC}/example*.dat ${PREFIX}/share/examples/igmt/
 
 .include "../../mk/bsd.pkg.mk"
