@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.7 2004/10/13 02:08:43 tv Exp $
+
+--- src/tools/qglobal.h.orig	Thu Aug  5 10:41:56 2004
++++ src/tools/qglobal.h
+@@ -63,6 +63,7 @@
+      NETBSD	- NetBSD
+      OPENBSD	- OpenBSD
+      BSDI	- BSD/OS
++     INTERIX	- Interix
+      IRIX	- SGI Irix
+      OSF	- HP Tru64 UNIX
+      SCO	- SCO OpenServer 5
+@@ -119,6 +120,9 @@
+ #  define Q_OS_BSD4
+ #elif defined(__NetBSD__)
+ #  define Q_OS_NETBSD
++#  define Q_OS_BSD4
++#elif defined(__INTERIX)
++#  define Q_OS_INTERIX
+ #  define Q_OS_BSD4
+ #elif defined(__OpenBSD__)
+ #  define Q_OS_OPENBSD
