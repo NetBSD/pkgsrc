@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2002/04/23 13:32:56 martti Exp $
+# $NetBSD: Makefile,v 1.66 2002/04/24 05:43:08 martti Exp $
 
 DISTNAME=		openssh-3.1p1
 PKGNAME=		openssh-3.1.1
@@ -18,6 +18,8 @@ CONFLICTS=		sftp-[0-9]*
 CONFLICTS+=		ssh-[0-9]* ssh6-[0-9]*
 
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
+
+USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 
 CRYPTO=			yes
 
