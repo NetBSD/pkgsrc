@@ -1,0 +1,19 @@
+$NetBSD: patch-bb,v 1.1 1998/11/05 01:34:02 mycroft Exp $
+
+--- lib/Makefile.in.orig	Tue Aug 11 12:09:18 1998
++++ lib/Makefile.in	Wed Nov  4 20:11:23 1998
+@@ -55,10 +55,10 @@
+ 	echo 'const int rpmTagTableSize = sizeof(rpmTagTable) / sizeof(struct headerTagTableEntry) - 1;' >> tagtable.c
+ 
+ install:
+-	$(INSTALL_DATA) -m 644 $(srcdir)/rpmlib.h $(INCDIR)
+-	$(INSTALL_DATA) -m 644 $(srcdir)/dbindex.h $(INCDIR)
+-	$(INSTALL_DATA) -m 644 $(srcdir)/header.h $(INCDIR)
+-	$(INSTALL_DATA) -m 644 librpm.a $(LIBDIR)
++	$(BSD_INSTALL_DATA) $(srcdir)/rpmlib.h $(INCDIR)
++	$(BSD_INSTALL_DATA) $(srcdir)/dbindex.h $(INCDIR)
++	$(BSD_INSTALL_DATA) $(srcdir)/header.h $(INCDIR)
++	$(BSD_INSTALL_DATA) librpm.a $(LIBDIR)
+ 
+ distclean: clean
+ 	rm -f Makefile	
