@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1997/10/06 14:37:25 agc Exp $
 # New ports collection makefile for:	noweb
 # Version required:	noweb-2.8a
 # Date created:		29 July 1995
 # Whom:			Thomas Gellekum <tg@freebsd.org>
 #
+# $NetBSD: Makefile,v 1.3 1998/01/24 04:31:10 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
@@ -31,4 +31,3 @@ post-install:
 .endif
 
 .include <bsd.port.mk>
-
