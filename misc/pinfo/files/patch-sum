@@ -1,3 +1,4 @@
-$NetBSD: patch-sum,v 1.1 2001/03/25 23:47:11 fredb Exp $
+$NetBSD: patch-sum,v 1.2 2001/03/26 00:28:12 fredb Exp $
 
 SHA1 (patch-aa) = e2d7d0e8ccbe5db276fb736d22682bb8f719eb98
+SHA1 (patch-ab) = f089af56a969af630e2cb886aa8fb40be055eca7
