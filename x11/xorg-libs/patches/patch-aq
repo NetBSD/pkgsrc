@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.3 2005/03/22 09:49:14 adam Exp $
+
+--- programs/Xserver/GL/apple/Imakefile.orig	Mon Mar 14 23:25:00 2005
++++ programs/Xserver/GL/apple/Imakefile
+@@ -36,7 +36,7 @@ LinkSourceFile(compsize.c,$(LIBSRC)/GL/g
+                 -I$(SERVERSRC)/GL/glx -I$(SERVERSRC)/hw/darwin/quartz/cr \
+                 -I$(SERVERSRC)/hw/darwin/quartz $(GL_INCLUDES) \
+                 -I$(MESASRCDIR)/include -I$(MESASRCDIR)/src/mesa/glapi \
+-                -I$(XF86OSSRC)
++                -I$(XF86OSSRC) -I$(DRMSRCDIR)/shared
+ 
+       DEFINES = $(GLX_DEFINES)
+ 

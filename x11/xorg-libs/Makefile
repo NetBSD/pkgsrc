@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/01 19:00:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/22 09:48:48 adam Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -55,15 +55,17 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${X11BASE}/lib/pkgconfig/${f}
 .endfor
 
-
-.if !empty(OPSYS:MNetBSD)
+.if ${OPSYS} == "NetBSD"
 .  if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
-PLIST_SRC+=	${.CURDIR}/PLIST.common
-PLIST_SRC+=	${.CURDIR}/PLIST.common_end
 PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}
 PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}.i386
 .  endif
 .endif
+PLIST_SRC+=	${.CURDIR}/PLIST.common
+.if ${OPSYS} != "Darwin"
+PLIST_SRC+=	${.CURDIR}/PLIST.common_i18n
+.endif
+PLIST_SRC+=	${.CURDIR}/PLIST.common_end
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
