@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.29 2002/01/08 10:01:33 tron Exp $
-#
+# $NetBSD: Makefile,v 1.30 2002/01/10 20:56:25 tron Exp $
 
-DISTNAME=	xmcd-3.0.1
+DISTNAME=	xmcd-3.0.2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmcd/src/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.ibiblio.org/tkan/xmcd/
 COMMENT=	Motif CD player
+
+PATCH_SITES=		${HOMEPAGE}
+PATCHFILES=		xmcd-3.0.2-proxyauth-patch
+PATCH_DIST_STRIP=	-p1
 
 WRKSRC=		${WRKDIR}/xmcd-3.0
 USE_NCURSES=	yes
