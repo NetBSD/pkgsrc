@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2004/12/10 06:20:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/03/23 22:15:49 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
 bin/keuphoria.kss
-bin/kfiresaver.kss
 bin/kflux.kss
 bin/kfountain.kss
 bin/kgravity.kss
@@ -22,26 +21,24 @@ bin/kvm.kss
 bin/kwave.kss
 bin/kxsconfig
 bin/kxsrun
-lib/kde3/kstyle_plastik_config.la
+lib/kde3/kstyle_phase_config.la
 lib/kde3/kwin3_cde.la
 lib/kde3/kwin3_glow.la
 lib/kde3/kwin3_icewm.la
 lib/kde3/kwin3_kde1.la
 lib/kde3/kwin3_kstep.la
 lib/kde3/kwin3_openlook.la
-lib/kde3/kwin3_plastik.la
+lib/kde3/kwin3_riscos.la
 lib/kde3/kwin3_system.la
 lib/kde3/kwin_cde_config.la
 lib/kde3/kwin_glow_config.la
 lib/kde3/kwin_icewm_config.la
-lib/kde3/kwin_plastik_config.la
 lib/kde3/plugins/styles/dotnet.la
-lib/kde3/plugins/styles/plastik.la
+lib/kde3/plugins/styles/phasestyle.la
 share/kde/applnk/System/ScreenSavers/KBanner.desktop
 share/kde/applnk/System/ScreenSavers/KBlob.desktop
 share/kde/applnk/System/ScreenSavers/KClock.desktop
 share/kde/applnk/System/ScreenSavers/KEuphoria.desktop
-share/kde/applnk/System/ScreenSavers/KFiresaver.desktop
 share/kde/applnk/System/ScreenSavers/KFlux.desktop
 share/kde/applnk/System/ScreenSavers/KFountain.desktop
 share/kde/applnk/System/ScreenSavers/KGravity.desktop
@@ -58,6 +55,7 @@ share/kde/applnk/System/ScreenSavers/KSwarm.desktop
 share/kde/applnk/System/ScreenSavers/KVm.desktop
 share/kde/applnk/System/ScreenSavers/KWave.desktop
 share/kde/applnk/System/ScreenSavers/anemone.desktop
+share/kde/applnk/System/ScreenSavers/anemotaxis.desktop
 share/kde/applnk/System/ScreenSavers/ant.desktop
 share/kde/applnk/System/ScreenSavers/antinspect.desktop
 share/kde/applnk/System/ScreenSavers/antspotlight.desktop
@@ -158,6 +156,7 @@ share/kde/applnk/System/ScreenSavers/lissie.desktop
 share/kde/applnk/System/ScreenSavers/lmorph.desktop
 share/kde/applnk/System/ScreenSavers/loop.desktop
 share/kde/applnk/System/ScreenSavers/maze.desktop
+share/kde/applnk/System/ScreenSavers/memscroller.desktop
 share/kde/applnk/System/ScreenSavers/menger.desktop
 share/kde/applnk/System/ScreenSavers/metaballs.desktop
 share/kde/applnk/System/ScreenSavers/mirrorblob.desktop
@@ -256,7 +255,7 @@ share/kde/apps/kscreensaver/image.png
 share/kde/apps/kscreensaver/kscience.png
 share/kde/apps/kscreensaver/particle.png
 share/kde/apps/kstyle/themes/dotnet.themerc
-share/kde/apps/kstyle/themes/plastik.themerc
+share/kde/apps/kstyle/themes/phase.themerc
 share/kde/apps/kwin/cde.desktop
 share/kde/apps/kwin/glow-themes/default/background.png
 share/kde/apps/kwin/glow-themes/default/close.png
@@ -464,7 +463,7 @@ share/kde/apps/kwin/icewm.desktop
 share/kde/apps/kwin/kde1.desktop
 share/kde/apps/kwin/kstep.desktop
 share/kde/apps/kwin/openlook.desktop
-share/kde/apps/kwin/plastik.desktop
+share/kde/apps/kwin/riscos.desktop
 share/kde/apps/kwin/system.desktop
 share/kde/apps/kworldclock/maps/alt/1200.jpg
 share/kde/apps/kworldclock/maps/alt/200.jpg
@@ -498,6 +497,185 @@ share/kde/apps/kworldclock/maps/rainfall/200.jpg
 share/kde/apps/kworldclock/maps/rainfall/400.jpg
 share/kde/apps/kworldclock/maps/rainfall/800.jpg
 share/kde/apps/kworldclock/maps/rainfall/rainfall.desktop
+share/kde/emoticons/Boxed/angry.png
+share/kde/emoticons/Boxed/bigsmile.png
+share/kde/emoticons/Boxed/confused.png
+share/kde/emoticons/Boxed/cry.png
+share/kde/emoticons/Boxed/emoticons.xml
+share/kde/emoticons/Boxed/oh.png
+share/kde/emoticons/Boxed/sad.png
+share/kde/emoticons/Boxed/shade.png
+share/kde/emoticons/Boxed/smile.png
+share/kde/emoticons/Boxed/tongue.png
+share/kde/emoticons/Boxed/wink.png
+share/kde/emoticons/GroupWise/emoticons.xml
+share/kde/emoticons/KMess-Blue/angry.png
+share/kde/emoticons/KMess-Blue/confused.png
+share/kde/emoticons/KMess-Blue/cry.png
+share/kde/emoticons/KMess-Blue/embarassed.png
+share/kde/emoticons/KMess-Blue/emoticons.xml
+share/kde/emoticons/KMess-Blue/omg.png
+share/kde/emoticons/KMess-Blue/sad.png
+share/kde/emoticons/KMess-Blue/shade.png
+share/kde/emoticons/KMess-Blue/smile.png
+share/kde/emoticons/KMess-Blue/teeth.png
+share/kde/emoticons/KMess-Blue/tongue.png
+share/kde/emoticons/KMess-Blue/wink.png
+share/kde/emoticons/KMess-Cartoon/angel.png
+share/kde/emoticons/KMess-Cartoon/angry.png
+share/kde/emoticons/KMess-Cartoon/confused.png
+share/kde/emoticons/KMess-Cartoon/cry.png
+share/kde/emoticons/KMess-Cartoon/devil.png
+share/kde/emoticons/KMess-Cartoon/embarrassed.png
+share/kde/emoticons/KMess-Cartoon/emoticons.xml
+share/kde/emoticons/KMess-Cartoon/omg.png
+share/kde/emoticons/KMess-Cartoon/sad.png
+share/kde/emoticons/KMess-Cartoon/shade.png
+share/kde/emoticons/KMess-Cartoon/smile.png
+share/kde/emoticons/KMess-Cartoon/teeth.png
+share/kde/emoticons/KMess-Cartoon/tongue.png
+share/kde/emoticons/KMess-Cartoon/ugly.png
+share/kde/emoticons/KMess-Cartoon/wink.png
+share/kde/emoticons/KMess-Violet/angry.png
+share/kde/emoticons/KMess-Violet/confused.png
+share/kde/emoticons/KMess-Violet/cry.png
+share/kde/emoticons/KMess-Violet/embarassed.png
+share/kde/emoticons/KMess-Violet/emoticons.xml
+share/kde/emoticons/KMess-Violet/omg.png
+share/kde/emoticons/KMess-Violet/sad.png
+share/kde/emoticons/KMess-Violet/shade.png
+share/kde/emoticons/KMess-Violet/smile.png
+share/kde/emoticons/KMess-Violet/teeth.png
+share/kde/emoticons/KMess-Violet/tongue.png
+share/kde/emoticons/KMess-Violet/wink.png
+share/kde/emoticons/KMess/angel.png
+share/kde/emoticons/KMess/angry.png
+share/kde/emoticons/KMess/bat.png
+share/kde/emoticons/KMess/beer.png
+share/kde/emoticons/KMess/boy.png
+share/kde/emoticons/KMess/cake.png
+share/kde/emoticons/KMess/camera.png
+share/kde/emoticons/KMess/cat.png
+share/kde/emoticons/KMess/clock.png
+share/kde/emoticons/KMess/cocktail.png
+share/kde/emoticons/KMess/confused.png
+share/kde/emoticons/KMess/cry.png
+share/kde/emoticons/KMess/cup.png
+share/kde/emoticons/KMess/devil.png
+share/kde/emoticons/KMess/dog.png
+share/kde/emoticons/KMess/dude_hug.png
+share/kde/emoticons/KMess/email.png
+share/kde/emoticons/KMess/embarassed.png
+share/kde/emoticons/KMess/emoticons.xml
+share/kde/emoticons/KMess/film.png
+share/kde/emoticons/KMess/girl.png
+share/kde/emoticons/KMess/girl_hug.png
+share/kde/emoticons/KMess/kiss.png
+share/kde/emoticons/KMess/lightbulb.png
+share/kde/emoticons/KMess/love.png
+share/kde/emoticons/KMess/messenger.png
+share/kde/emoticons/KMess/note.png
+share/kde/emoticons/KMess/omg.png
+share/kde/emoticons/KMess/phone.png
+share/kde/emoticons/KMess/present.png
+share/kde/emoticons/KMess/rose.png
+share/kde/emoticons/KMess/sad.png
+share/kde/emoticons/KMess/shade.png
+share/kde/emoticons/KMess/smile.png
+share/kde/emoticons/KMess/star.png
+share/kde/emoticons/KMess/teeth.png
+share/kde/emoticons/KMess/thumbs_down.png
+share/kde/emoticons/KMess/thumbs_up.png
+share/kde/emoticons/KMess/tongue.png
+share/kde/emoticons/KMess/unlove.png
+share/kde/emoticons/KMess/wilted_rose.png
+share/kde/emoticons/KMess/wink.png
+share/kde/emoticons/Plain/biggrin.png
+share/kde/emoticons/Plain/confused.png
+share/kde/emoticons/Plain/cry.png
+share/kde/emoticons/Plain/emoticons.xml
+share/kde/emoticons/Plain/oh.png
+share/kde/emoticons/Plain/pig.png
+share/kde/emoticons/Plain/smile.png
+share/kde/emoticons/Plain/sunglasses.png
+share/kde/emoticons/Plain/tongue.png
+share/kde/emoticons/Plain/unhappy.png
+share/kde/emoticons/Plain/wink.png
+share/kde/emoticons/RedOnes/angel.png
+share/kde/emoticons/RedOnes/biggrin.png
+share/kde/emoticons/RedOnes/confused.png
+share/kde/emoticons/RedOnes/cry.png
+share/kde/emoticons/RedOnes/emoticons.xml
+share/kde/emoticons/RedOnes/oh.png
+share/kde/emoticons/RedOnes/smile.png
+share/kde/emoticons/RedOnes/sunglasses.png
+share/kde/emoticons/RedOnes/tongue.png
+share/kde/emoticons/RedOnes/unhappy.png
+share/kde/emoticons/RedOnes/wink.png
+share/kde/emoticons/Yazoo-Smileys-16/angry.png
+share/kde/emoticons/Yazoo-Smileys-16/big_smile.png
+share/kde/emoticons/Yazoo-Smileys-16/confused.png
+share/kde/emoticons/Yazoo-Smileys-16/cool.png
+share/kde/emoticons/Yazoo-Smileys-16/emoticons.xml
+share/kde/emoticons/Yazoo-Smileys-16/lol.png
+share/kde/emoticons/Yazoo-Smileys-16/ooooh.png
+share/kde/emoticons/Yazoo-Smileys-16/sad.png
+share/kde/emoticons/Yazoo-Smileys-16/smile.png
+share/kde/emoticons/Yazoo-Smileys-16/tongue_out.png
+share/kde/emoticons/Yazoo-Smileys-16/wink.png
+share/kde/emoticons/Yazoo-Smileys-22/angry.png
+share/kde/emoticons/Yazoo-Smileys-22/big_smile.png
+share/kde/emoticons/Yazoo-Smileys-22/confused.png
+share/kde/emoticons/Yazoo-Smileys-22/cool.png
+share/kde/emoticons/Yazoo-Smileys-22/emoticons.xml
+share/kde/emoticons/Yazoo-Smileys-22/lol.png
+share/kde/emoticons/Yazoo-Smileys-22/ooooh.png
+share/kde/emoticons/Yazoo-Smileys-22/sad.png
+share/kde/emoticons/Yazoo-Smileys-22/smile.png
+share/kde/emoticons/Yazoo-Smileys-22/tongue_out.png
+share/kde/emoticons/Yazoo-Smileys-22/wink.png
+share/kde/emoticons/ccmathteam.com/biggrin.png
+share/kde/emoticons/ccmathteam.com/confused.png
+share/kde/emoticons/ccmathteam.com/cry.png
+share/kde/emoticons/ccmathteam.com/devil.png
+share/kde/emoticons/ccmathteam.com/emoticons.xml
+share/kde/emoticons/ccmathteam.com/oh.png
+share/kde/emoticons/ccmathteam.com/smile.png
+share/kde/emoticons/ccmathteam.com/sunglasses.png
+share/kde/emoticons/ccmathteam.com/tongue.png
+share/kde/emoticons/ccmathteam.com/unhappy.png
+share/kde/emoticons/ccmathteam.com/wink.png
+share/kde/emoticons/greggman.com/biggrin.png
+share/kde/emoticons/greggman.com/confused.png
+share/kde/emoticons/greggman.com/emoticons.xml
+share/kde/emoticons/greggman.com/kiss.png
+share/kde/emoticons/greggman.com/oh.png
+share/kde/emoticons/greggman.com/smile.png
+share/kde/emoticons/greggman.com/sunglasses.png
+share/kde/emoticons/greggman.com/tongue.png
+share/kde/emoticons/greggman.com/unhappy.png
+share/kde/emoticons/greggman.com/vampire.png
+share/kde/emoticons/greggman.com/wink.png
+share/kde/emoticons/phpBB/biggrin.png
+share/kde/emoticons/phpBB/confused.png
+share/kde/emoticons/phpBB/cry.png
+share/kde/emoticons/phpBB/devil.png
+share/kde/emoticons/phpBB/emoticons.xml
+share/kde/emoticons/phpBB/oh.png
+share/kde/emoticons/phpBB/smile.png
+share/kde/emoticons/phpBB/sunglasses.png
+share/kde/emoticons/phpBB/tongue.png
+share/kde/emoticons/phpBB/unhappy.png
+share/kde/emoticons/phpBB/wink.png
+share/kde/emoticons/tweakers.net/biggrin.png
+share/kde/emoticons/tweakers.net/cry.png
+share/kde/emoticons/tweakers.net/emoticons.xml
+share/kde/emoticons/tweakers.net/oh.png
+share/kde/emoticons/tweakers.net/sleep.png
+share/kde/emoticons/tweakers.net/smile.png
+share/kde/emoticons/tweakers.net/tongue.png
+share/kde/emoticons/tweakers.net/unhappy.png
+share/kde/emoticons/tweakers.net/wink.png
 share/kde/icons/Locolor/16x16/actions/1downarrow.png
 share/kde/icons/Locolor/16x16/actions/1leftarrow.png
 share/kde/icons/Locolor/16x16/actions/1rightarrow.png
@@ -1300,60 +1478,6 @@ share/kde/icons/Locolor/32x32/mimetypes/vcalendar.png
 share/kde/icons/Locolor/32x32/mimetypes/vcard.png
 share/kde/icons/Locolor/32x32/mimetypes/video.png
 share/kde/icons/Locolor/index.theme
-share/kde/icons/Technical/32x32/actions/1downarrow.png
-share/kde/icons/Technical/32x32/actions/1leftarrow.png
-share/kde/icons/Technical/32x32/actions/1rightarrow.png
-share/kde/icons/Technical/32x32/actions/1uparrow.png
-share/kde/icons/Technical/32x32/actions/2downarrow.png
-share/kde/icons/Technical/32x32/actions/2leftarrow.png
-share/kde/icons/Technical/32x32/actions/2rightarrow.png
-share/kde/icons/Technical/32x32/actions/2uparrow.png
-share/kde/icons/Technical/32x32/actions/back.png
-share/kde/icons/Technical/32x32/actions/contents.png
-share/kde/icons/Technical/32x32/actions/decrypted.png
-share/kde/icons/Technical/32x32/actions/down.png
-share/kde/icons/Technical/32x32/actions/editcopy.png
-share/kde/icons/Technical/32x32/actions/editcopy1.png
-share/kde/icons/Technical/32x32/actions/editcut.png
-share/kde/icons/Technical/32x32/actions/editcut1.png
-share/kde/icons/Technical/32x32/actions/editdelete.png
-share/kde/icons/Technical/32x32/actions/editpaste.png
-share/kde/icons/Technical/32x32/actions/editpaste1.png
-share/kde/icons/Technical/32x32/actions/encrypted.png
-share/kde/icons/Technical/32x32/actions/filenew.png
-share/kde/icons/Technical/32x32/actions/fileprint.png
-share/kde/icons/Technical/32x32/actions/filesave.png
-share/kde/icons/Technical/32x32/actions/find.png
-share/kde/icons/Technical/32x32/actions/forward.png
-share/kde/icons/Technical/32x32/actions/frameprint.png
-share/kde/icons/Technical/32x32/actions/gohome.png
-share/kde/icons/Technical/32x32/actions/kde.png
-share/kde/icons/Technical/32x32/actions/lock.png
-share/kde/icons/Technical/32x32/actions/mail_forward.png
-share/kde/icons/Technical/32x32/actions/mail_generic.png
-share/kde/icons/Technical/32x32/actions/mail_get.png
-share/kde/icons/Technical/32x32/actions/mail_reply.png
-share/kde/icons/Technical/32x32/actions/mail_replyall.png
-share/kde/icons/Technical/32x32/actions/mail_send.png
-share/kde/icons/Technical/32x32/actions/next.png
-share/kde/icons/Technical/32x32/actions/previous.png
-share/kde/icons/Technical/32x32/actions/queue.png
-share/kde/icons/Technical/32x32/actions/redo.png
-share/kde/icons/Technical/32x32/actions/reload.png
-share/kde/icons/Technical/32x32/actions/stop.png
-share/kde/icons/Technical/32x32/actions/undo.png
-share/kde/icons/Technical/32x32/actions/unlock.png
-share/kde/icons/Technical/32x32/actions/up.png
-share/kde/icons/Technical/32x32/actions/viewmag+.png
-share/kde/icons/Technical/32x32/actions/viewmag-.png
-share/kde/icons/Technical/32x32/filesystems/exec.png
-share/kde/icons/Technical/32x32/filesystems/folder.png
-share/kde/icons/Technical/32x32/mimetypes/txt.png
-share/kde/icons/Technical/48x48/filesystems/exec.png
-share/kde/icons/Technical/48x48/filesystems/exec1.png
-share/kde/icons/Technical/48x48/filesystems/folder.png
-share/kde/icons/Technical/48x48/mimetypes/txt.png
-share/kde/icons/Technical/index.theme
 share/kde/icons/ikons/16x16/actions/1day.png
 share/kde/icons/ikons/16x16/actions/1downarrow.png
 share/kde/icons/ikons/16x16/actions/1leftarrow.png
@@ -2882,6 +3006,7 @@ share/kde/icons/kdeclassic/22x22/actions/black_sum.png
 share/kde/icons/kdeclassic/22x22/actions/blend.png
 share/kde/icons/kdeclassic/22x22/actions/bookmark.png
 share/kde/icons/kdeclassic/22x22/actions/bookmark_add.png
+share/kde/icons/kdeclassic/22x22/actions/bookmark_folder.png
 share/kde/icons/kdeclassic/22x22/actions/border_all.png
 share/kde/icons/kdeclassic/22x22/actions/border_bottom.png
 share/kde/icons/kdeclassic/22x22/actions/border_fall.png
@@ -6644,6 +6769,7 @@ share/kde/icons/slick/22x22/apps/kmenu.png
 share/kde/icons/slick/22x22/apps/kmenuedit.png
 share/kde/icons/slick/22x22/apps/kmixdocked.png
 share/kde/icons/slick/22x22/apps/kmixdocked1.png
+share/kde/icons/slick/22x22/apps/kmixdocked_mute.png
 share/kde/icons/slick/22x22/apps/knotes.png
 share/kde/icons/slick/22x22/apps/konqsidebar_mediaplayer.png
 share/kde/icons/slick/22x22/apps/konqueror.png
@@ -7873,14 +7999,6 @@ share/kde/wallpapers/winter_theme_1.jpg
 @dirrm share/kde/icons/ikons/16x16/actions
 @dirrm share/kde/icons/ikons/16x16
 @dirrm share/kde/icons/ikons
-@dirrm share/kde/icons/Technical/48x48/mimetypes
-@dirrm share/kde/icons/Technical/48x48/filesystems
-@dirrm share/kde/icons/Technical/48x48
-@dirrm share/kde/icons/Technical/32x32/mimetypes
-@dirrm share/kde/icons/Technical/32x32/filesystems
-@dirrm share/kde/icons/Technical/32x32/actions
-@dirrm share/kde/icons/Technical/32x32
-@dirrm share/kde/icons/Technical
 @dirrm share/kde/icons/Locolor/32x32/mimetypes
 @dirrm share/kde/icons/Locolor/32x32/filesystems
 @dirrm share/kde/icons/Locolor/32x32/devices
@@ -7895,6 +8013,21 @@ share/kde/wallpapers/winter_theme_1.jpg
 @dirrm share/kde/icons/Locolor/16x16
 @dirrm share/kde/icons/Locolor
 @comment in kde: @dirrm share/kde/icons
+@dirrm share/kde/emoticons/tweakers.net
+@dirrm share/kde/emoticons/phpBB
+@dirrm share/kde/emoticons/greggman.com
+@dirrm share/kde/emoticons/ccmathteam.com
+@dirrm share/kde/emoticons/Yazoo-Smileys-22
+@dirrm share/kde/emoticons/Yazoo-Smileys-16
+@dirrm share/kde/emoticons/RedOnes
+@dirrm share/kde/emoticons/Plain
+@dirrm share/kde/emoticons/KMess-Violet
+@dirrm share/kde/emoticons/KMess-Cartoon
+@dirrm share/kde/emoticons/KMess-Blue
+@dirrm share/kde/emoticons/KMess
+@dirrm share/kde/emoticons/GroupWise
+@dirrm share/kde/emoticons/Boxed
+@comment in kde: @dirrm share/kde/emoticons
 @dirrm share/kde/apps/kworldclock/maps/rainfall
 @dirrm share/kde/apps/kworldclock/maps/mggd
 @unexec ${RMDIR} %D/share/kde/apps/kworldclock/maps/depths 2>/dev/null || ${TRUE}
