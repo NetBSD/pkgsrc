@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2005/03/07 12:04:41 tv Exp $
+
+--- config.h.in.orig	2002-04-05 10:22:45.000000000 -0500
++++ config.h.in
+@@ -164,6 +164,9 @@
+ /* Define if you have the <string.h> header file. */
+ #undef HAVE_STRING_H
+ 
++/* Define if you have the `sync' function. */
++#undef HAVE_SYNC
++
+ /* Define if you have the <syslog.h> header file. */
+ #undef HAVE_SYSLOG_H
+ 

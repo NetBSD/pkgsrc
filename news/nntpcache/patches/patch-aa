@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2005/03/07 12:04:41 tv Exp $
+
+--- configure.in.orig	2002-04-05 11:53:09.000000000 -0500
++++ configure.in
+@@ -206,7 +206,7 @@ AC_CHECK_LIB(crypt, crypt)
+ AC_CHECK_LIB(wrap, request_init)
+ dnl aix
+ AC_CHECK_LIB(flock, bsd)
+-AC_CHECK_FUNCS(getdtablesize usleep utime waitpid wait3 chroot strdup vsnprintf daemon setenv putenv mmap getpagesize setproctitle snprintf strerror setpriority getspnam statfs statvfs strcasecmp)
++AC_CHECK_FUNCS(getdtablesize usleep utime waitpid wait3 chroot strdup vsnprintf daemon setenv putenv mmap getpagesize setproctitle snprintf strerror setpriority getspnam statfs statvfs strcasecmp sync)
+ 
+ AC_MSG_CHECKING(for passwd authinfo support)
+ AC_ARG_WITH(authinfo-passwd,
