@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1203 2003/12/14 22:18:51 xtraeme Exp $
+$NetBSD: TODO,v 1.1204 2003/12/14 22:55:08 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -174,7 +174,6 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.21 [pkgsrc-wip]
 	o gkrellm-volume-2.1.9 [pkgsrc-wip]
-	o glade-2.0.1
 	o global-4.6
 	o glpk-4.3
 	o gnats-4.0 [pkgsrc-wip]
