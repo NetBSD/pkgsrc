@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/02/22 20:48:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2004/03/05 18:38:32 jmmv Exp $
 
 DISTNAME=	gnome-2.4.2
 PKGREVISION=	2
@@ -24,7 +24,6 @@ DEPENDS+=	gnome-applets>=2.4.2:../../x11/gnome2-applets
 DEPENDS+=	gnome-base>=2.4.2:../../meta-pkgs/gnome-base
 DEPENDS+=	gnome-audio>=2.0.0:../../audio/gnome-audio
 DEPENDS+=	gnome-games>=2.4.2:../../games/gnome2-games
-DEPENDS+=	gnome-icon-theme>=1.0.9:../../graphics/gnome-icon-theme
 DEPENDS+=	gnome-media>=2.4.1.1:../../multimedia/gnome2-media
 DEPENDS+=	gnome-themes>=2.4.1:../../x11/gnome-themes
 DEPENDS+=	gnome2-user-docs>=2.4.1:../../misc/gnome2-user-docs
