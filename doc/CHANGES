@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6668 2004/07/24 14:44:07 mrg Exp $
+$NetBSD: CHANGES,v 1.6669 2004/07/24 23:00:04 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3539,3 +3539,23 @@ Changes to the packages collection and infrastructure in 2004:
 	Added patchutils-0.2.30 [recht 2004-07-24]
 	Updated chicken to 1.51nb1 [wiz 2004-07-24]
 	Updated acroread5 to 5.09 [mrg 2004-07-24]
+        Added postgresql73-7.3.6 [recht 2004-07-25]
+        Added postgresql73-client-7.3.6 [recht 2004-07-25]
+        Added postgresql73-docs-7.3.6 [recht 2004-07-25]
+        Added postgresql73-lib-7.3.6 [recht 2004-07-25]
+        Added postgresql73-plperl-7.3.6 [recht 2004-07-25]
+        Added postgresql73-pltcl-7.3.6 [recht 2004-07-25]
+        Added postgresql73-server-7.3.6 [recht 2004-07-25]
+        Added py-postgresql73-3.3 [recht 2004-07-25]
+        Added tcl-postgresql73-7.3.6 [recht 2004-07-25]
+        Added tk-postgresql73-7.3.6 [recht 2004-07-25]
+        Removed postgresql [recht 2004-07-25]
+        Removed postgresql-client [recht 2004-07-25]
+        Removed postgresql-docs [recht 2004-07-25]
+        Removed postgresql-lib [recht 2004-07-25]
+        Removed postgresql-plperl [recht 2004-07-25]
+        Removed postgresql-pltcl [recht 2004-07-25]
+        Removed postgresql-server [recht 2004-07-25]
+        Removed py-postgresql [recht 2004-07-25]
+        Removed tcl-postgresql [recht 2004-07-25]
+        Removed tk-postgresql [recht 2004-07-25]
