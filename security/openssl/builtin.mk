@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2004/04/02 21:42:32 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2004/04/02 23:41:50 wiz Exp $
 
 _OPENSSL_PKGSRC_PKGNAME=	openssl-0.9.6m
 _OPENSSL_OPENSSLV_H=		/usr/include/openssl/opensslv.h
@@ -61,7 +61,7 @@ BUILTIN_PKG.openssl=	openssl-${_OPENSSL_VERSION}
 .    if !empty(_OPENSSL_VERSION:M0\.9\.6g)
 #
 # If the native OpenSSL contains the security fixes pulled up to the
-# netbsd-1-6 branch on 2003-11-07, and pretend it's openssl-0.9.6l.
+# netbsd-1-6 branch on 2003-11-07, then pretend it's openssl-0.9.6l.
 #    
 _OPENSSL_HAS_20031107_FIX!=						\
 	${AWK} 'BEGIN { ans = "no" }					\
@@ -73,7 +73,7 @@ BUILTIN_PKG.openssl=	openssl-0.9.6l
 .      endif
 #
 # If the native OpenSSL contains the security fixes pulled up to the
-# netbsd-1-6 branch on 2004-04-01, and pretend it's openssl-0.9.6m.
+# netbsd-1-6 branch on 2004-04-01, then pretend it's openssl-0.9.6m.
 #    
 _OPENSSL_HAS_20040401_FIX!=						\
 	${AWK} 'BEGIN { ans = "no" }					\
