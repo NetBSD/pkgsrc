@@ -1,26 +1,17 @@
-$NetBSD: patch-an,v 1.5 2000/02/01 00:38:14 wiz Exp $
+$NetBSD: patch-an,v 1.6 2000/04/27 13:14:54 tron Exp $
 
---- ./lib/Mrm-2.0/Makefile.in.orig	Fri Jan 14 23:42:19 2000
-+++ ./lib/Mrm-2.0/Makefile.in	Mon Jan 31 02:34:52 2000
-@@ -159,7 +159,7 @@
- @Version_2_0_TRUE@		-DLESSTIFHOME=\"@prefix@\"
+--- lib/Mrm-2.0/Makefile.in.orig	Sun Apr 16 02:38:50 2000
++++ lib/Mrm-2.0/Makefile.in	Mon Apr 17 15:23:23 2000
+@@ -143,7 +143,7 @@
  
- @Version_2_0_TRUE@libdir = \
--@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/lib
-+@Version_2_0_TRUE@$(prefix)/lib
+ @Version_2_0_TRUE@INCLUDES = -I$(top_srcdir)/include/Motif-2.0 		-I$(top_builddir)/include/Motif-2.0 		-I$(top_srcdir)/include/Motif-1.2 		-I$(top_builddir)/include/Motif-1.2 		-I$(top_srcdir)/include 		-I$(top_builddir)/include 		${X_CFLAGS} 		-DX_LIB_PATH=\"@x_libraries@\" 		-DLESSTIFHOME=\"@prefix@\"
  
- @Version_2_0_TRUE@lib_LTLIBRARIES = \
- @Version_2_0_TRUE@libMrm.la
-@@ -249,7 +249,7 @@
- maintainer-clean-compile:
+-@Version_2_0_TRUE@libdir = $(prefix)/LessTif/Motif2.0/lib
++@Version_2_0_TRUE@libdir = $(prefix)/lib
  
- .c.lo:
--	$(LIBTOOL) --mode=compile $(COMPILE) -c -o $@ $<
-+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+ @Version_2_0_TRUE@lib_LTLIBRARIES = libMrm.la
  
- mostlyclean-libtool:
- 	-rm -f *.lo
-@@ -327,7 +327,6 @@
+@@ -313,7 +313,6 @@
  
  install-data-am:
  	@$(NORMAL_INSTALL)

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2000/02/12 03:54:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2000/04/27 13:14:59 tron Exp $
 LessTif/FAQ
 LessTif/Motif1.2/include/Mrm/MrmAppl.h
 LessTif/Motif1.2/include/Mrm/MrmDecls.h
@@ -216,6 +216,7 @@ include/Xm/Manager.h
 include/Xm/ManagerP.h
 include/Xm/MenuShell.h
 include/Xm/MenuShellP.h
+include/Xm/MenuT.h
 include/Xm/MenuUtilP.h
 include/Xm/MessageB.h
 include/Xm/MessageBP.h
@@ -380,7 +381,7 @@ share/doc/lesstif/FAQ.html
 share/doc/lesstif/Form.txt
 share/doc/lesstif/GeoUtils.txt
 share/doc/lesstif/Geometry.html
-share/doc/lesstif/INSTALL
+share/doc/lesstif/Install
 share/doc/lesstif/INSTALL.html
 share/doc/lesstif/KNOWN_BUGS
 share/doc/lesstif/NEWS

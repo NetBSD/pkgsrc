@@ -1,8 +1,7 @@
-$NetBSD: patch-at,v 1.3 1999/11/24 17:38:51 hubertf Exp $
+$NetBSD: patch-at,v 1.4 2000/04/27 13:14:56 tron Exp $
 
-diff -x *.orig -urN ./test/configure /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/test/configure
---- ./test/configure	Fri Nov  5 21:16:52 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/test/configure	Wed Nov 24 17:30:55 1999
+--- test/configure.orig	Fri Nov  5 21:16:52 1999
++++ test/configure	Wed Nov 24 17:30:55 1999
 @@ -1537,6 +1537,7 @@
  fi
  

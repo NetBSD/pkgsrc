@@ -1,9 +1,8 @@
-$NetBSD: patch-af,v 1.8 1999/11/24 17:38:50 hubertf Exp $
+$NetBSD: patch-af,v 1.9 2000/04/27 13:14:51 tron Exp $
 
-diff -x *.orig -urN ./doc/lessdox/functions/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/lessdox/functions/Makefile.in
---- ./doc/lessdox/functions/Makefile.in	Fri Nov  5 21:15:03 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/doc/lessdox/functions/Makefile.in	Wed Nov 24 17:30:52 1999
-@@ -120,10 +120,10 @@
+--- doc/lessdox/functions/Makefile.in.orig	Sat Apr 15 16:39:13 2000
++++ doc/lessdox/functions/Makefile.in	Thu Apr 27 12:51:29 2000
+@@ -119,10 +119,10 @@
  EXTRA_DIST =  $(man1_DATA) $(man3_DATA) $(man5_DATA)
  SUFFIXES = .1 .3 .5 .html
  
@@ -18,16 +17,16 @@ diff -x *.orig -urN ./doc/lessdox/functions/Makefile.in /usr/pkgsrc/x11/lesstif/
  
  man1_DATA = 
  man3_DATA = 
-@@ -138,7 +138,7 @@
+@@ -137,7 +137,7 @@
  # build them.
  #
  
 -htmldir = $(exec_prefix)/LessTif/doc/html
 +htmldir = $(exec_prefix)/share/doc/lesstif/html
  
- @HaveMan2html_TRUE@html_DATA = \
- @HaveMan2html_TRUE@${man1_DATA:.1=.html} ${man3_DATA:.3=.html} \
-@@ -278,7 +278,7 @@
+ @HaveMan2html_TRUE@html_DATA = ${man1_DATA:.1=.html} ${man3_DATA:.3=.html}                 ${man5_DATA:.5=.html}
+ 
+@@ -274,7 +274,7 @@
  install-exec-am:
  install-exec: install-exec-am
  

@@ -1,8 +1,7 @@
-$NetBSD: patch-ab,v 1.8 1999/11/24 17:38:50 hubertf Exp $
+$NetBSD: patch-ab,v 1.9 2000/04/27 13:14:49 tron Exp $
 
-diff -x *.orig -urN ./clients/Motif-1.2/mwm/system.mwmrc /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/clients/Motif-1.2/mwm/system.mwmrc
---- ./clients/Motif-1.2/mwm/system.mwmrc	Wed Jan 13 16:11:05 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/clients/Motif-1.2/mwm/system.mwmrc	Wed Nov 24 17:30:51 1999
+--- clients/Motif-1.2/mwm/system.mwmrc.orig	Wed Jan 13 16:11:05 1999
++++ clients/Motif-1.2/mwm/system.mwmrc	Wed Nov 24 17:30:51 1999
 @@ -4,7 +4,7 @@
  Menu DefaultRootMenu
  {
