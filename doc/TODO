@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1971 2004/07/26 17:38:28 minskim Exp $
+$NetBSD: TODO,v 1.1972 2004/07/26 22:42:37 cube Exp $
 
 Suggested new packages
 ======================
@@ -235,7 +235,6 @@ Suggested package updates
 	o gimageview-0.2.25
 	o gimp-print-4.2.7
 	o gkrellm-2.2.2 
-	o gkrellm-xmms-2.1.20 [pkg/26428]
 	o glpk-4.3
 	o gmp-4.1.3
 	o gnomeicu-0.99.5
