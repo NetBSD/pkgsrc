@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2003/09/02 12:16:19 abs Exp $
+# $NetBSD: Makefile,v 1.5.4.1 2004/05/30 09:03:54 grant Exp $
 
-DISTNAME=	exim-html-4.20
+DISTNAME=	exim-html-4.30
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
