@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/10/01 02:50:09 jlam Exp $
+
+SHA1 (Compress-Zlib-1.14.tar.gz) = cce69e0004d4594e46e02fa16404fd19bd3f5280
+Size (Compress-Zlib-1.14.tar.gz) = 25022 bytes
+SHA1 (patch-aa) = 40c171f6f1b46b5a20165b836b9f2f6b59fbb828
+SHA1 (patch-ab) = 7953c1cd8b20265bf0f9f2da8f35ab3b35ee8239
