@@ -1,8 +1,36 @@
-$NetBSD: patch-af,v 1.1 1998/11/04 23:36:49 mycroft Exp $
+$NetBSD: patch-af,v 1.2 1998/11/29 16:34:28 frueauf Exp $
 
---- devs.mak.orig	Mon Sep 14 22:03:52 1998
-+++ devs.mak	Wed Nov  4 18:15:26 1998
-@@ -896,8 +896,8 @@
+--- devs.mak.orig	Tue Sep 15 04:03:52 1998
++++ devs.mak	Sun Nov 29 00:06:38 1998
+@@ -461,6 +461,27 @@
+ ljetplus.dev: $(HPMONO) page.dev
+ 	$(SETPDEV2) ljetplus $(HPMONO)
+ 
++### -------------- cdj850 - HP 850c Driver under development ------------- ###
++### Since this driver is in the development-phase it is not distributed    ###
++### with ghostscript, but it is available via anonymous ftp from:          ###
++###                        ftp://bonk.ethz.ch                              ###
++### For questions about this driver, please contact:                       ###
++###       Uli Wortmann (E-Mail address inside the driver-package)          ###
++   
++cdeskjet8_=$(GLOBJ)gdevcd8.$(OBJ) $(HPPCL)
++
++cdj850.dev: $(cdeskjet8_) page.dev
++	$(SETPDEV2) cdj850 $(cdeskjet8_)
++
++cdj670.dev: $(cdeskjet8_) page.dev
++	$(SETPDEV2) cdj670 $(cdeskjet8_)
++
++cdj890.dev: $(cdeskjet8_) page.dev
++	$(SETPDEV2) cdj890 $(cdeskjet8_)
++
++cdj1600.dev: $(cdeskjet8_) page.dev
++	$(SETPDEV2) cdj1600 $(cdeskjet8_)
++
+ ### Selecting ljet2p provides TIFF (mode 2) compression on LaserJet III,
+ ### IIIp, IIId, IIIsi, IId, and IIp. 
+ 
+@@ -896,8 +917,8 @@
  png_i_=-include $(PNGGENDIR)$(D)libpng
  
  $(GLOBJ)gdevpng.$(OBJ): $(GLSRC)gdevpng.c\
