@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.126 2002/09/30 16:36:59 wiz Exp $
+$NetBSD: CHANGES,v 1.127 2002/09/30 20:53:31 frueauf Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3051,3 +3051,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tuxpaint to 2002.09.29 [wiz 2002-09-30]
 	Updated pkglint to 3.36 [atatat 2002-09-30]
 	Updated dc_gui to 0.62 [wiz 2002-09-30]
+	Updated fetchmail to 6.1.0 [frueauf 2002-09-30]
+	Updated fetchmailconf to 6.1.0 [frueauf 2002-09-30]
