@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/05 16:05:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/05 16:41:18 wiz Exp $
 etc/gnome-vfs-mime-magic
 lib/pkgconfig/gnome-mime-data-2.0.pc
-man/man5/gnome-vfs-mime.5
+man/man5/gnome-vfs-mime.5.gz
 share/application-registry/gnome-vfs.applications
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-mime-data.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-mime-data.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-mime-data.mo
@@ -19,6 +21,8 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-mime-data.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-mime-data.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gnome-mime-data.mo
@@ -33,6 +37,7 @@ ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-mime-data.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-mime-data.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-mime-data.mo
@@ -41,6 +46,8 @@ share/mime-info/gnome-vfs.mime
 share/pixmaps/document-icons/gnome-application-encapsulated_postscript.png
 share/pixmaps/document-icons/gnome-application-msword.png
 share/pixmaps/document-icons/gnome-application-pdf.png
+share/pixmaps/document-icons/gnome-application-pgp-encrypted.png
+share/pixmaps/document-icons/gnome-application-pgp-keys.png
 share/pixmaps/document-icons/gnome-application-pgp.png
 share/pixmaps/document-icons/gnome-application-postscript.png
 share/pixmaps/document-icons/gnome-application-qif.png
@@ -57,15 +64,15 @@ share/pixmaps/document-icons/gnome-application-vnd.sun.xml.calc.png
 share/pixmaps/document-icons/gnome-application-vnd.sun.xml.impress.png
 share/pixmaps/document-icons/gnome-application-vnd.sun.xml.writer.png
 share/pixmaps/document-icons/gnome-application-x-abiword.png
+share/pixmaps/document-icons/gnome-application-x-applix-spreadsheet.png
+share/pixmaps/document-icons/gnome-application-x-applix-word.png
 share/pixmaps/document-icons/gnome-application-x-arj.png
 share/pixmaps/document-icons/gnome-application-x-backup.png
 share/pixmaps/document-icons/gnome-application-x-blender.png
 share/pixmaps/document-icons/gnome-application-x-bzip.png
-share/pixmaps/document-icons/gnome-application-x-c-header.png
-share/pixmaps/document-icons/gnome-application-x-c-source.png
-share/pixmaps/document-icons/gnome-application-x-cc-source.png
 share/pixmaps/document-icons/gnome-application-x-compress.png
 share/pixmaps/document-icons/gnome-application-x-dc-rom.png
+share/pixmaps/document-icons/gnome-application-x-deb.png
 share/pixmaps/document-icons/gnome-application-x-dia-diagram.png
 share/pixmaps/document-icons/gnome-application-x-e-theme.png
 share/pixmaps/document-icons/gnome-application-x-font-sunos-news.png
@@ -76,7 +83,7 @@ share/pixmaps/document-icons/gnome-application-x-gnumeric.png
 share/pixmaps/document-icons/gnome-application-x-gtktalog.png
 share/pixmaps/document-icons/gnome-application-x-gzip.png
 share/pixmaps/document-icons/gnome-application-x-jar.png
-share/pixmaps/document-icons/gnome-application-x-java-source.png
+share/pixmaps/document-icons/gnome-application-x-java-byte-code.png
 share/pixmaps/document-icons/gnome-application-x-kde-app-info.png
 share/pixmaps/document-icons/gnome-application-x-killustrator.png
 share/pixmaps/document-icons/gnome-application-x-kpresenter.png
@@ -87,7 +94,9 @@ share/pixmaps/document-icons/gnome-application-x-n64-rom.png
 share/pixmaps/document-icons/gnome-application-x-nes-rom.png
 share/pixmaps/document-icons/gnome-application-x-ogg.png
 share/pixmaps/document-icons/gnome-application-x-php.png
+share/pixmaps/document-icons/gnome-application-x-python-bytecode.png
 share/pixmaps/document-icons/gnome-application-x-reject.png
+share/pixmaps/document-icons/gnome-application-x-rpm.png
 share/pixmaps/document-icons/gnome-application-x-scheme-source.png
 share/pixmaps/document-icons/gnome-application-x-sms-rom.png
 share/pixmaps/document-icons/gnome-application-x-sql.png
@@ -99,6 +108,7 @@ share/pixmaps/document-icons/gnome-audio-mpeg.png
 share/pixmaps/document-icons/gnome-audio-ulaw.png
 share/pixmaps/document-icons/gnome-audio-x-aiff.png
 share/pixmaps/document-icons/gnome-audio-x-bmx.png
+share/pixmaps/document-icons/gnome-audio-x-it.png
 share/pixmaps/document-icons/gnome-audio-x-mod.png
 share/pixmaps/document-icons/gnome-audio-x-pn-realaudio.png
 share/pixmaps/document-icons/gnome-audio-x-s3m.png
@@ -142,23 +152,29 @@ share/pixmaps/document-icons/gnome-image-xpm.png
 share/pixmaps/document-icons/gnome-image-xwd.png
 share/pixmaps/document-icons/gnome-library.png
 share/pixmaps/document-icons/gnome-objectfile.png
-share/pixmaps/document-icons/gnome-pack-deb.png
-share/pixmaps/document-icons/gnome-pack-rpm.png
 share/pixmaps/document-icons/gnome-package.png
 share/pixmaps/document-icons/gnome-tex.png
 share/pixmaps/document-icons/gnome-text-abiword.png
+share/pixmaps/document-icons/gnome-text-css.png
 share/pixmaps/document-icons/gnome-text-html.png
 share/pixmaps/document-icons/gnome-text-x-authors.png
+share/pixmaps/document-icons/gnome-text-x-c++.png
+share/pixmaps/document-icons/gnome-text-x-c-header.png
 share/pixmaps/document-icons/gnome-text-x-c.png
 share/pixmaps/document-icons/gnome-text-x-copying.png
 share/pixmaps/document-icons/gnome-text-x-credits.png
+share/pixmaps/document-icons/gnome-text-x-csh.png
 share/pixmaps/document-icons/gnome-text-x-haskell.png
 share/pixmaps/document-icons/gnome-text-x-install.png
+share/pixmaps/document-icons/gnome-text-x-java.png
 share/pixmaps/document-icons/gnome-text-x-literate-haskell.png
+share/pixmaps/document-icons/gnome-text-x-lyx.png
 share/pixmaps/document-icons/gnome-text-x-makefile.png
 share/pixmaps/document-icons/gnome-text-x-patch.png
 share/pixmaps/document-icons/gnome-text-x-perl.png
+share/pixmaps/document-icons/gnome-text-x-python.png
 share/pixmaps/document-icons/gnome-text-x-readme.png
+share/pixmaps/document-icons/gnome-text-x-sh.png
 share/pixmaps/document-icons/gnome-text-x-sql.png
 share/pixmaps/document-icons/gnome-text-x-zsh.png
 share/pixmaps/document-icons/gnome-text-xml.png
@@ -171,18 +187,33 @@ share/pixmaps/document-icons/gnome-video-x-msvideo.png
 share/pixmaps/document-icons/gnome-x-font-afm.png
 share/pixmaps/document-icons/gnome-x-troff-man.png
 share/pixmaps/document-icons/i-blockdev.png
+share/pixmaps/document-icons/i-cdrom-audio.png
 share/pixmaps/document-icons/i-cdrom.png
 share/pixmaps/document-icons/i-chardev.png
 share/pixmaps/document-icons/i-core.png
+share/pixmaps/document-icons/i-dvd.png
 share/pixmaps/document-icons/i-executable.png
 share/pixmaps/document-icons/i-fifo.png
 share/pixmaps/document-icons/i-floppy.png
+share/pixmaps/document-icons/i-ftp.png
 share/pixmaps/document-icons/i-harddisk.png
 share/pixmaps/document-icons/i-manual.png
 share/pixmaps/document-icons/i-music-12.png
 share/pixmaps/document-icons/i-music-24.png
 share/pixmaps/document-icons/i-music-36.png
 share/pixmaps/document-icons/i-music.png
+share/pixmaps/document-icons/i-network.png
 share/pixmaps/document-icons/i-nfs.png
+share/pixmaps/document-icons/i-printer.png
+share/pixmaps/document-icons/i-regular-72.png
+share/pixmaps/document-icons/i-regular-96.png
+share/pixmaps/document-icons/i-regular.png
+share/pixmaps/document-icons/i-regular.xml
+share/pixmaps/document-icons/i-smb.png
+share/pixmaps/document-icons/i-sock.png
+share/pixmaps/document-icons/i-spreadsheet.png
+share/pixmaps/document-icons/i-web.png
+share/pixmaps/document-icons/i-zipdisk.png
 @dirrm share/pixmaps/document-icons
+@unexec ${RMDIR} %D/share/mime-info 2>/dev/null || ${TRUE}
 @dirrm share/application-registry
