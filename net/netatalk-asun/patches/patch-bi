@@ -1,13 +1,37 @@
-$NetBSD: patch-bi,v 1.3 2000/10/18 03:59:33 briggs Exp $
---- etc/atalkd/route.c.orig	Tue Oct 17 23:29:04 2000
-+++ etc/atalkd/route.c	Tue Oct 17 23:30:19 2000
-@@ -34,7 +34,8 @@
-     u_char	sam_family;
-     u_short	sam_pad;
-     u_short	sam_mask;
--} mask = { sizeof( struct sockaddr_m ), 0, 0, 0xffff };
-+    u_short	sam_pad2;
-+} mask = { sizeof( struct sockaddr_m ), 0, 0, 0xffff, 0 };
+$NetBSD: patch-bi,v 1.4 2001/05/21 18:42:22 abs Exp $
+
+--- sys/linux/Makefile.orig	Sat Feb 27 21:10:59 1999
++++ sys/linux/Makefile
+@@ -23,6 +23,7 @@
+ ${ALL}:	FRC
+ 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
++	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
+ 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
+ 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
+ 	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
+@@ -40,6 +41,8 @@
+ 	sed -e s@:DESTDIR:@${DESTDIR}@ -e s@:SBINDIR:@${SBINDIR}@ \
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
+ 		< ../../rc.atalk.redhat > /etc/rc.d/init.d/atalk.init; \
+ 	sed -e s@:RCDIR:@/etc/rc.d/init.d@ \
+@@ -62,12 +65,15 @@
+ 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
+ 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
+ 		-e s@:INCDIR:@${INCDIR}@ \
++		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
++		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
+ 		< ../../rc.atalk.bsd > ${ETCDIR}/rc.atalk; \
+ 	fi \
+ 	fi
  
- struct rt_msg_at {
-     struct rt_msghdr	rtma_rtm;
+ install : ${ETCDIR} install-sysv install-bsd
+ 	-mkdir ${DESTDIR} ${SBINDIR} ${BINDIR} ${LIBDIR}
++	-mkdir ${LIBEXECDIR} ${EXAMPLEDIR}
+ 	for i in ${ALL}; \
+ 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
+ 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \

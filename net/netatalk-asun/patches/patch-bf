@@ -1,43 +1,19 @@
-$NetBSD: patch-bf,v 1.3 2000/08/15 14:48:24 abs Exp $
+$NetBSD: patch-bf,v 1.4 2001/05/21 18:42:21 abs Exp $
 
---- sys/solaris/Makefile.orig	Wed Feb  3 19:52:10 1999
-+++ sys/solaris/Makefile
-@@ -48,6 +48,7 @@
- 	esac; \
- 	echo "Making $@ for $$PROCESSOR..."; \
- 	${MAKE} ${MFLAGS} \
-+	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}"\
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 	    MANDIR="${MANDIR}" DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" \
-@@ -67,6 +68,7 @@
- ${ALL}:	FRC
- 	cd $@; ${MAKE} ${MFLAGS} CC="${CC}" \
- 	    ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
-+	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 	    DESTDIR="${DESTDIR}" AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
-@@ -91,6 +93,8 @@
- 		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
- 		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
- 		-e s@:INCDIR:@${INCDIR}@ \
-+		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
-+		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
- 	    < ../../rc.atalk.sysv > /etc/init.d/atalk
- 	chmod 744 /etc/init.d/atalk
- 	-ln -s ../init.d/atalk /etc/rc2.d/S79atalk
-@@ -98,11 +102,13 @@
- 
- install :
- 	-mkdir ${DESTDIR} ${SBINDIR} ${BINDIR} ${ETCDIR} ${LIBDIR}
-+	-mkdir ${LIBEXECDIR} ${EXAMPLEDIR}
- 	sed -e s@:BINDIR:@${BINDIR}@ < ../../lp2pap.sh > ${RESDIR}/lp2pap.sh
- 	chmod 744 ${RESDIR}/lp2pap.sh
- 	for i in ${ALL}; \
- 	    do (cd $$i; ${MAKE} ${MFLAGS} CC="${CC}" \
- 		ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" OPTOPTS="${OPTOPTS}" \
-+		LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
- 	        SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	        ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 		AFSDIR="${AFSDIR}" KRBDIR="${KRBDIR}" \
+--- man/man8/psf.8.orig	Tue May 20 18:35:43 1997
++++ man/man8/psf.8
+@@ -93,10 +93,10 @@
+     :sd=/usr/spool/lpd/laser:\\
+     :lp=/usr/spool/lpd/laser/null:\\
+     :lf=/var/adm/lpd-errs:pw#80:hl:\\
+-    :of=:LIBDIR:/filters/ofpap:\\
+-    :if=:LIBDIR:/filters/ifpaprev:\\
+-    :tf=:LIBDIR:/filters/tfpaprev:\\
+-    :df=:LIBDIR:/filters/dfpaprev:
++    :of=:LIBEXECDIR:/psffilters/ofpap:\\
++    :if=:LIBEXECDIR:/psffilters/ifpaprev:\\
++    :tf=:LIBEXECDIR:/psffilters/tfpaprev:\\
++    :df=:LIBEXECDIR:/psffilters/dfpaprev:
+ .fi
+ .RE
+ .sp

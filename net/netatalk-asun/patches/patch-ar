@@ -1,13 +1,12 @@
-$NetBSD: patch-ar,v 1.3 2000/08/15 14:48:24 abs Exp $
+$NetBSD: patch-ar,v 1.4 2001/05/21 18:42:21 abs Exp $
 
---- libatalk/nbp/nbp_rgstr.c.orig	Thu Aug 14 22:27:23 1997
-+++ libatalk/nbp/nbp_rgstr.c
-@@ -7,7 +7,7 @@
- #include <sys/types.h>
- #include <sys/param.h>
- #include <sys/socket.h>
--#include <sys/signal.h>
-+#include <signal.h>
- #include <sys/time.h>
- #include <errno.h>
+--- libatalk/atp/atp_rsel.c.orig	Thu Feb  4 07:36:30 1999
++++ libatalk/atp/atp_rsel.c
+@@ -10,6 +10,7 @@
+ #include <sys/errno.h>
+ #include <sys/uio.h>
+ #include <signal.h>
++#include <string.h>
+ 
+ #include <netatalk/endian.h>
  #include <netatalk/at.h>

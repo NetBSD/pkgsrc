@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2000/08/15 14:48:23 abs Exp $
+$NetBSD: patch-ab,v 1.4 2001/05/21 18:42:21 abs Exp $
 
 --- bin/Makefile.orig	Wed Dec 30 07:30:33 1998
 +++ bin/Makefile

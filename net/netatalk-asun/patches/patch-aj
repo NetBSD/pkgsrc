@@ -1,21 +1,31 @@
-$NetBSD: patch-aj,v 1.4 2001/04/13 19:18:13 jonb Exp $
+$NetBSD: patch-aj,v 1.5 2001/05/21 18:42:21 abs Exp $
 
---- etc/papd/Makefile.orig	Tue May 20 10:35:42 1997
-+++ etc/papd/Makefile	Thu Apr 12 00:01:30 2001
-@@ -20,6 +20,7 @@
- 	fi; \
-         ${MAKE} ${MFLAGS} CC="${CC}" ADDLIBS="${ADDLIBS}" DEFS="${DEFS}" \
- 	    OPTOPTS="${OPTOPTS}" DESTDIR="${DESTDIR}" \
-+	    LIBEXECDIR="${LIBEXECDIR}" EXAMPLEDIR="${EXAMPLEDIR}" \
- 	    SBINDIR="${SBINDIR}" BINDIR="${BINDIR}" RESDIR="${RESDIR}" \
- 	    ETCDIR="${ETCDIR}" LIBDIR="${LIBDIR}" INCDIR="${INCDIR}" \
- 	    KRBLIBS="$${KRBLIBS}" KRBLIBDIRS="$${KRBLIBDIRS}" \
-@@ -56,7 +57,7 @@
- 	    ${CPPFLAGS} -c main.c
+--- etc/atalkd/nbp.c.orig	Sun Dec 13 05:22:42 1998
++++ etc/atalkd/nbp.c
+@@ -110,7 +110,7 @@
+     nn.nn_sat.sat_port = nt.nt_port;
  
- install : all
--	${INSTALL} -c papd ${SBINDIR}
-+	${INSTALL} -c papd ${LIBEXECDIR}
+     /* object */
+-    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
++    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
+ 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
+ 	return 1;
+     }
+@@ -119,7 +119,7 @@
+     data += nn.nn_objlen;
  
- clean :
- 	rm -f a.out core* *.o *.bak *[Ee]rrs tags
+     /* type */
+-    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
++    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
+ 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
+ 	return 1;
+     }
+@@ -128,7 +128,7 @@
+     data += nn.nn_typelen;
+ 
+     /* zone */
+-    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
++    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
+ 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
+ 	return 1;
+     }

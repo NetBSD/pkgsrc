@@ -1,31 +1,19 @@
-$NetBSD: patch-ai,v 1.3 2000/08/15 14:48:23 abs Exp $
+$NetBSD: patch-ai,v 1.4 2001/05/21 18:42:21 abs Exp $
 
---- etc/atalkd/nbp.c.orig	Sun Dec 13 05:22:42 1998
-+++ etc/atalkd/nbp.c
-@@ -110,7 +110,7 @@
-     nn.nn_sat.sat_port = nt.nt_port;
- 
-     /* object */
--    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
-+    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
- 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
- 	return 1;
-     }
-@@ -119,7 +119,7 @@
-     data += nn.nn_objlen;
- 
-     /* type */
--    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
-+    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
- 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
- 	return 1;
-     }
-@@ -128,7 +128,7 @@
-     data += nn.nn_typelen;
- 
-     /* zone */
--    if ( data >= end || ( *data < 0 || *data > 32 ) || data + *data > end ) {
-+    if ( data >= end || (*(unsigned char *)data > 32 ) || data + *data > end ) {
- 	syslog( LOG_INFO, "nbp_packet: malformed packet" );
- 	return 1;
-     }
+--- etc/atalkd/main.c.orig	Mon Jan 25 09:21:13 1999
++++ etc/atalkd/main.c
+@@ -245,12 +245,12 @@
+ 		    syslog( LOG_INFO, "config for no router" );
+ 		      
+ 		    if ( iface->i_flags & IFACE_PHASE2 ) {
+-			iface->i_rt->rt_firstnet = 0;
++			iface->i_rt->rt_firstnet = htons( 1 );
+ 			iface->i_rt->rt_lastnet = htons( STARTUP_LASTNET );
+ 			setaddr( iface, IFACE_PHASE2,
+ 				iface->i_addr.sat_addr.s_net,
+ 				iface->i_addr.sat_addr.s_node,
+-				0, htons( STARTUP_LASTNET ));
++				htons( 1 ), htons( STARTUP_LASTNET ));
+ 		    }
+ 		    if ( looproute( iface, RTMP_ADD ) ) { /* -1 or 1 */
+ 			syslog( LOG_ERR,

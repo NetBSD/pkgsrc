@@ -1,13 +1,19 @@
-$NetBSD: patch-ay,v 1.2 2000/08/15 14:48:24 abs Exp $
+$NetBSD: patch-ay,v 1.3 2001/05/21 18:42:21 abs Exp $
 
---- man/man8/Makefile.orig	Tue May 20 18:35:43 1997
-+++ man/man8/Makefile
-@@ -18,6 +18,8 @@
+--- man/man1/Makefile.orig	Tue May 20 18:35:43 1997
++++ man/man1/Makefile
+@@ -1,4 +1,4 @@
+-SRC=	aecho.1 getzones.1 nbp.1 nbplkup.1 nbprgstr.1 nbplkup.1 \
++SRC=	aecho.1 getzones.1 nbp.1 nbplkup.1 nbprgstr.1 nbpunrgstr.1 nbplkup.1 \
+ 	pap.1 papstatus.1 psorder.1 megatron.1 unhex.1 unbin.1 \
+ 	unsingle.1 macbinary.1 hqx2bin.1 single2bin.1
+ 
+@@ -20,6 +20,8 @@
  		-e s@:BINDIR:@${BINDIR}@ -e s@:RESDIR:@${RESDIR}@ \
  		-e s@:ETCDIR:@${ETCDIR}@ -e s@:LIBDIR:@${LIBDIR}@ \
  		-e s@:INCDIR:@${INCDIR}@ \
 +		-e s@:LIBEXECDIR:@${LIBEXECDIR}@ \
 +		-e s@:EXAMPLEDIR:@${EXAMPLEDIR}@ \
- 		< $$i > ${MANDIR}/man8/$$i; \
+ 		< $$i > ${MANDIR}/man1/$$i; \
  	done
  
