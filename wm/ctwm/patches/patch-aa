@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2003/06/04 04:36:56 simonb Exp $
+
+--- util.c.orig	Tue Sep 14 23:26:02 1999
++++ util.c
+@@ -3897,6 +3897,7 @@ Atom prop;
+ 		     ProgramName, XGetAtomName(dpy, prop), w);
+ 	    stringptr = NULL;
+ 	}
++	XFree (text_prop.value);
+     } else {
+ 	stringptr = NULL;
+     }
