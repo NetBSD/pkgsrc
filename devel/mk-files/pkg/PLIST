@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/25 12:33:34 agc Exp $
+share/mk/autodep.mk
+share/mk/bsd.dep.mk
+share/mk/bsd.doc.mk
+share/mk/bsd.lib.mk
+share/mk/bsd.man.mk
+share/mk/bsd.nls.mk
+share/mk/bsd.obj.mk
+share/mk/bsd.own.mk
+share/mk/bsd.prog.mk
+share/mk/bsd.subdir.mk
+share/mk/dep.mk
+share/mk/doc.mk
+share/mk/lib.mk
+share/mk/man.mk
+share/mk/nls.mk
+share/mk/obj.mk
+share/mk/own.mk
+share/mk/prog.mk
+share/mk/subdir.mk
+share/mk/sys.mk
