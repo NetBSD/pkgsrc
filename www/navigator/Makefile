@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/17 02:43:32 jlam Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/23 12:33:20 kleink Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -59,7 +59,7 @@ do-install:
 	${MV} ${MOZILLA_HOME}/netscape_dns ${MOZILLA_HOME}/netscape
 	${CAT} ${PKGDIR}/PLIST.sparc >>${PLIST_SRC}
 .endif
-	${CHOWN} -R 0.0 ${MOZILLA_HOME}
+	${CHOWN} -R 0:0 ${MOZILLA_HOME}
 	${CHMOD} -R go-w ${MOZILLA_HOME}
 
 	${CAT} ${PKGDIR}/PLIST.post >>${PLIST_SRC}

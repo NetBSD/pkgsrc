@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/03/14 15:44:55 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/23 12:33:19 kleink Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
@@ -34,6 +34,6 @@ do-install:
 	@${ECHO} "CATALOG \"${ISOCAT}\"" >> ${INSTDIR}/3.0/catalog
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/2.4.1/*
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/3.0/*
-	@${CHOWN} -R ${SHAREOWN}.${SHAREGRP} ${INSTDIR}
+	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTDIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/10/15 19:51:09 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/23 12:33:20 kleink Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1996/11/15 09:55:44 asami Exp
 #
 
@@ -13,6 +13,6 @@ USE_IMAKE=      yes
 
 post-install:
 	@chmod 755 ${PREFIX}/bin/xgas
-	@chown bin.bin ${PREFIX}/bin/xgas
+	@chown bin:bin ${PREFIX}/bin/xgas
 
 .include "../../mk/bsd.pkg.mk"
