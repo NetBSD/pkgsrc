@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/01/18 22:13:04 mjl Exp $
+# $NetBSD: Makefile,v 1.6 2002/07/30 01:49:56 grant Exp $
 #
 
-VERS=		2.16
+VERS=		2.21
 DISTNAME=	TermReadKey-${VERS}
 PKGNAME=	p5-Term-ReadKey-${VERS}
 SVR4_PKGNAME=	p5trk
