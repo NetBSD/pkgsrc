@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/07/13 07:09:19 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/11/19 16:23:10 jlam Exp $
 
 DISTNAME=	squirrelmail-1.0.6
 CATEGORIES=	mail www
@@ -19,30 +19,25 @@ NO_BUILD=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
-APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
+APACHE_SYSCONFDIR?=	${CONFDIR}/httpd
 BUILD_DEFS+=		APACHE_SYSCONFDIR
 MESSAGE_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/squirrelmail
 SMDIR=			${PREFIX}/share/squirrelmail
+DATADIR=		/var/spool/squirrelmail
 MESSAGE_SUBST+=		SMDIR=${SMDIR}
+FILES_SUBST+=		SMDIR=${SMDIR}
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-FILES_SUBST=		SMDIR=${SMDIR:S/^${PREFIX}\///}
-FILES_SUBST+=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
-FILES_SUBST+=		CAT=${CAT:Q}
-FILES_SUBST+=		CHGRP=${CHGRP:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CHOWN=${CHOWN:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		MKDIR=${MKDIR:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST+=		RMDIR=${RMDIR:Q}
-FILES_SUBST+=		TRUE=${TRUE:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+CONF_FILES=	${SMDIR}/config/config_default.php ${SMDIR}/config/config.php
+CONF_FILES+=	${SMDIR}/data/default_pref ${DATADIR}/data/default_pref
+CONF_FILES+=	${EGDIR}/squirrelmail.conf ${APACHE_SYSCONFDIR}/squirrelmail.conf
+MAKE_DIRS=		${APACHE_SYSCONFDIR}
+OWN_DIRS=		${DATADIR}
+OWN_DIRS+=		${SMDIR} ${SMDIR}/config
+OWN_DIRS_PERMS=		${DATADIR}/attachments root nobody 730
+OWN_DIRS_PERMS+=	${DATADIR}/data nobody nobody 755
 
 post-extract:
 	cd ${WRKSRC};							\
@@ -56,11 +51,9 @@ post-patch:
 	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;
 
 pre-install:
-	${SED}	-e "s|@SMDIR@|${SMDIR}|g"				\
+	${SED}	${FILES_SUBST_SED}					\
 		${FILESDIR}/squirrelmail.conf.dist			\
 		> ${WRKDIR}/squirrelmail.conf.dist
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
@@ -74,4 +67,5 @@ do-install:
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

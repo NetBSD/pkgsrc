@@ -1,54 +1,26 @@
 #!/bin/sh
 #
-# $NetBSD: thttpd.sh,v 1.4 2001/01/14 06:14:13 jlam Exp $
+# $NetBSD: thttpd.sh,v 1.5 2001/11/19 16:23:17 jlam Exp $
 #
 # PROVIDE: thttpd
 # REQUIRE: DAEMON
 
+if [ -d /etc/rc.d -a -f /etc/rc.subr ]
+then
+	. /etc/rc.subr
+fi
+
 name="thttpd"
+rcvar=$name
 command=@PREFIX@/sbin/${name}
+command_args="-C @CONFDIR@/${name}.conf"
+required_files="@CONFDIR@/${name}.conf"
 
-pid=`ps -ax | awk '{print $1,$5}' | grep ${name} | awk '{print $1}'`
+if [ ! -d /etc/rc.d ]
+then
+	@ECHO@ -n " ${name}"
+	exec ${command} ${thttpd_flags} ${command_args}
+fi
 
-cmd=${1:-start}
-
-case ${cmd} in
-start)
-	if [ "$pid" = "" -a -x ${command} -a -f /etc/${name}.conf ]
-	then
-		echo "Starting ${name}."
-		${command} -C /etc/${name}.conf
-	fi
-	;;
-
-stop)
-	if [ "$pid" != "" ]
-	then
-		echo "Stopping ${name}."
-		kill -TERM ${pid}
-	else
-		echo "${name} not running?"
-	fi
-	;;
-
-restart)
-	( $0 stop )
-	sleep 1
-	$0 start
-	;;
-
-status)
-	if [ "$pid" != "" ]
-	then
-		echo "${name} is running as pid ${pid}."
-	else
-		echo "${name} is not running."
-	fi
-	;;
-
-*)
-	echo 1>&2 "Usage: ${name} [restart|start|stop|status]"
-	exit 1
-	;;
-esac
-exit 0
+load_rc_config $name
+run_rc_command "$1"

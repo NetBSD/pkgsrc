@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 02:18:57 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2001/11/19 16:23:16 jlam Exp $
 
 In order to use makeweb:
 
@@ -7,5 +7,4 @@ In order to use makeweb:
 	chmod 2755 makeweb
 
 The suggested group is "www".
-
 ===========================================================================
