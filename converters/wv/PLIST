@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/21 14:45:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:21 jlam Exp $
 bin/wvAbw
 bin/wvCleanLatex
 bin/wvConvert
@@ -18,11 +18,7 @@ bin/wvWml
 include/wv/libole2/ms-ole-summary.h
 include/wv/libole2/ms-ole.h
 include/wv/wv.h
-lib/libwv-1.0.so.2
-lib/libwv-1.0.so.2.0
-lib/libwv.a
 lib/libwv.la
-lib/libwv.so
 lib/pkgconfig/wv-1.0.pc
 man/man1/wvAbw.1
 man/man1/wvCleanLatex.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/21 16:59:05 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:23 jlam Exp $
 include/at-spi-1.0/cspi/spi-impl.h
 include/at-spi-1.0/cspi/spi-listener.h
 include/at-spi-1.0/cspi/spi-roletypes.h
@@ -31,30 +31,12 @@ include/at-spi-1.0/libspi/value.h
 include/at-spi-1.0/login-helper/Accessibility_LoginHelper.h
 include/at-spi-1.0/login-helper/login-helper.h
 lib/bonobo/servers/Accessibility_Registry.server
-lib/gtk-2.0/modules/libatk-bridge.a
 lib/gtk-2.0/modules/libatk-bridge.la
-lib/gtk-2.0/modules/libatk-bridge.so
-lib/libcspi.a
 lib/libcspi.la
-lib/libcspi.so
-lib/libcspi.so.10
-lib/libcspi.so.10.4
-lib/libloginhelper.a
 lib/libloginhelper.la
-lib/libloginhelper.so
-lib/libloginhelper.so.0
-lib/libloginhelper.so.0.0
-lib/libspi.a
 lib/libspi.la
-lib/libspi.so
-lib/libspi.so.10
-lib/libspi.so.10.4
-lib/orbit-2.0/Accessibility_LoginHelper_module.a
 lib/orbit-2.0/Accessibility_LoginHelper_module.la
-lib/orbit-2.0/Accessibility_LoginHelper_module.so
-lib/orbit-2.0/Accessibility_module.a
 lib/orbit-2.0/Accessibility_module.la
-lib/orbit-2.0/Accessibility_module.so
 lib/pkgconfig/cspi-1.0.pc
 lib/pkgconfig/libloginhelper-1.0.pc
 lib/pkgconfig/libspi-1.0.pc

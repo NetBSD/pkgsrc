@@ -1,36 +1,17 @@
-@comment $NetBSD: PLIST,v 1.10 2004/03/07 14:16:26 seb Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/09/22 08:09:40 jlam Exp $
 bin/gst
 bin/gst-config
 bin/gst-package
 include/gst.h
 include/gstpub.h
 include/sigsegv.h
-lib/libgst.a
 lib/libgst.la
-lib/smalltalk/blox-tk-${PKGVERSION}.so
-lib/smalltalk/blox-tk.a
 lib/smalltalk/blox-tk.la
-lib/smalltalk/blox-tk.so
-lib/smalltalk/gdbm-${PKGVERSION}.so
-lib/smalltalk/gdbm.a
 lib/smalltalk/gdbm.la
-lib/smalltalk/gdbm.so
-lib/smalltalk/i18n-${PKGVERSION}.so
-lib/smalltalk/i18n.so
 lib/smalltalk/i18n.la
-lib/smalltalk/i18n.a
-lib/smalltalk/md5-${PKGVERSION}.so
-lib/smalltalk/md5.a
 lib/smalltalk/md5.la
-lib/smalltalk/md5.so
-lib/smalltalk/regex-${PKGVERSION}.so
-lib/smalltalk/regex.a
 lib/smalltalk/regex.la
-lib/smalltalk/regex.so
-lib/smalltalk/tcp-${PKGVERSION}.so
-lib/smalltalk/tcp.a
 lib/smalltalk/tcp.la
-lib/smalltalk/tcp.so
 man/man1/gst.1
 share/aclocal/gst.m4
 share/aclocal/snprintfv.m4

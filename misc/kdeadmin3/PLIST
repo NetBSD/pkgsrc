@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2004/08/21 12:57:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:43 jlam Exp $
 bin/kcron
 bin/kpackage
 bin/kuser
 bin/secpolicy
 lib/kde3/kfile_deb.la
-lib/kde3/kfile_deb.so
 lib/kde3/kfile_rpm.la
-lib/kde3/kfile_rpm.so
 share/applications/kde/kcron.desktop
 share/applications/kde/kpackage.desktop
 share/applications/kde/kuser.desktop

@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:52 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:17 jlam Exp $
 bin/rplay
 bin/rptp
 include/rplay.h
-lib/librplay.a
 lib/librplay.la
-lib/librplay.so
-lib/librplay.so.0
-lib/librplay.so.0.0
 man/man1/rplay.1
 man/man1/rptp.1
 man/man5/rplay.conf.5

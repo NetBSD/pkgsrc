@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/18 16:22:13 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:14 jlam Exp $
 bin/comprex-config
 include/comprex.h
 include/libcomprex/archive.h
@@ -13,26 +13,12 @@ include/libcomprex/io.h
 include/libcomprex/module.h
 include/libcomprex/types.h
 include/libcomprex/utils.h
-lib/comprex/archive/libar.a
 lib/comprex/archive/libar.la
-lib/comprex/archive/libar.so
-lib/comprex/archive/libbzip2.a
 lib/comprex/archive/libbzip2.la
-lib/comprex/archive/libbzip2.so
-lib/comprex/archive/libtar.a
 lib/comprex/archive/libtar.la
-lib/comprex/archive/libtar.so
-lib/comprex/archive/libzlib.a
 lib/comprex/archive/libzlib.la
-lib/comprex/archive/libzlib.so
-lib/comprex/scheme/libcurlscm.a
 lib/comprex/scheme/libcurlscm.la
-lib/comprex/scheme/libcurlscm.so
-lib/libcomprex.a
 lib/libcomprex.la
-lib/libcomprex.so
-lib/libcomprex.so.3
-lib/libcomprex.so.3.0
 man/man1/comprex-config.1
 man/man3/cxCleanup.3
 man/man3/cxCleanupModules.3

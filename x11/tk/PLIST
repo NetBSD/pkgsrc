@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/08 22:14:19 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:10:07 jlam Exp $
 bin/wish
 bin/wish8.4
 include/tk.h
@@ -31,11 +31,7 @@ include/tk/unix/tkUnixInt.h
 include/tk/unix/tkUnixPort.h
 include/tkDecls.h
 include/tkPlatDecls.h
-lib/libtk84.a
 lib/libtk84.la
-lib/libtk84.so
-lib/libtk84.so.1
-lib/libtk84.so.1.0
 lib/libtkstub84.a
 lib/tk8.4/bgerror.tcl
 lib/tk8.4/button.tcl

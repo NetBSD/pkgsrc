@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:34 jlam Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -11,37 +11,15 @@ bin/kruler
 bin/ksnapshot
 bin/kview
 bin/kviewshell
-lib/kcolorchooser.a
 lib/kcolorchooser.la
-lib/kcolorchooser.so
-lib/kview.a
 lib/kview.la
-lib/kview.so
-lib/libkdvi.a
 lib/libkdvi.la
-lib/libkdvi.so
-lib/libkfax.a
 lib/libkfax.la
-lib/libkfax.so
-lib/libkghostview.a
 lib/libkghostview.la
-lib/libkghostview.so
-lib/libkghostview.so.1
-lib/libkghostview.so.1.0
-lib/libkmultipage.a
 lib/libkmultipage.la
-lib/libkmultipage.so
-lib/libkmultipage.so.0
-lib/libkmultipage.so.0.0
-lib/libkpagetest.a
 lib/libkpagetest.la
-lib/libkpagetest.so
-lib/libkviewerpart.a
 lib/libkviewerpart.la
-lib/libkviewerpart.so
-lib/libkviewpart.a
 lib/libkviewpart.la
-lib/libkviewpart.so
 share/doc/kde/HTML/en/kdvi/KDVI-features.dvi
 share/doc/kde/HTML/en/kdvi/KDVI-features.tex
 share/doc/kde/HTML/en/kdvi/aboutkde.ps

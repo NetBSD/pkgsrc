@@ -1,16 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/27 08:23:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:31 jlam Exp $
 bin/pfaedit
 bin/sfddiff
-lib/libgdraw.a
 lib/libgdraw.la
-lib/libgdraw.so
-lib/libgdraw.so.1
-lib/libgdraw.so.1.6
-lib/libgunicode.a
 lib/libgunicode.la
-lib/libgunicode.so
-lib/libgunicode.so.2
-lib/libgunicode.so.2.2
 man/man1/pfaedit.1
 man/man1/sfddiff.1
 share/pfaedit/pfaedit-de.ui

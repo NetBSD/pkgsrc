@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/29 16:02:08 ben Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:37 jlam Exp $
 include/png.h
 include/pngconf.h
-lib/libpng.a
 lib/libpng.la
-lib/libpng.so
-lib/libpng.so.${LIBPNG_SO_MAJOR}
-lib/libpng.so.${LIBPNG_SO_MAJOR}.${LIBPNG_SO_MINOR}
 lib/pkgconfig/libpng12.pc
 man/man3/libpng.3
 man/man3/libpngpf.3

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:19 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:24 jlam Exp $
 bin/eel-config
 include/eel/eel-art-extensions.h
 include/eel/eel-art-gtk-extensions.h
@@ -65,11 +65,7 @@ include/eel/eel-wrap-table.h
 include/eel/eel-xml-extensions.h
 include/eel/eel.h
 lib/eelConf.sh
-lib/libeel.a
 lib/libeel.la
-lib/libeel.so
-lib/libeel.so.0
-lib/libeel.so.0.0
 share/eel/fonts/urw/fonts.dir
 share/eel/fonts/urw/n019003l.afm
 share/eel/fonts/urw/n019003l.pfb

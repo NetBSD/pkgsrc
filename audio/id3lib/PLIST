@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/07 22:09:02 skrll Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:16 jlam Exp $
 bin/id3convert
 bin/id3cp
 bin/id3info
@@ -17,9 +17,5 @@ include/id3/tag.h
 include/id3/utils.h
 include/id3/writer.h
 include/id3/writers.h
-lib/libid3-3.8.so.3
-lib/libid3-3.8.so.3.0
-lib/libid3.a
 lib/libid3.la
-lib/libid3.so
 @dirrm include/id3

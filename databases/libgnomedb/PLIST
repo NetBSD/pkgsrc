@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/04/20 16:26:01 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:22 jlam Exp $
 bin/gnome-database-properties
 include/libgnomedb/gnome-db-browser.h
 include/libgnomedb/gnome-db-combo.h
@@ -29,19 +29,11 @@ include/libgnomedb/gnome-db-stock.h
 include/libgnomedb/gnome-db-table-editor.h
 include/libgnomedb/gnome-db-util.h
 include/libgnomedb/libgnomedb.h
-lib/bonobo/monikers/libmoniker_database.a
 lib/bonobo/monikers/libmoniker_database.la
-lib/bonobo/monikers/libmoniker_database.so
 lib/bonobo/servers/GNOME_Database_Components.server
 lib/bonobo/servers/GNOME_Database_Monikers.server
-lib/libglade/2.0/libgnomedb.a
 lib/libglade/2.0/libgnomedb.la
-lib/libglade/2.0/libgnomedb.so
-lib/libgnomedb-2.a
 lib/libgnomedb-2.la
-lib/libgnomedb-2.so
-lib/libgnomedb-2.so.3
-lib/libgnomedb-2.so.3.0
 lib/pkgconfig/libgnomedb.pc
 libexec/gnome-database-components
 share/control-center-2.0/capplets/database-properties.desktop

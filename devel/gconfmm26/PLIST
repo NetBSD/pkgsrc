@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/04 13:50:28 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:24 jlam Exp $
 include/gconfmm-2.6/gconfmm.h
 include/gconfmm-2.6/gconfmm/callback.h
 include/gconfmm-2.6/gconfmm/changeset.h
@@ -18,11 +18,7 @@ include/gconfmm-2.6/gconfmm/wrap_init.h
 lib/gconfmm-2.6/include/gconfmmconfig.h
 lib/gconfmm-2.6/proc/m4/convert.m4
 lib/gconfmm-2.6/proc/m4/convert_gconfmm.m4
-lib/libgconfmm-2.6.a
 lib/libgconfmm-2.6.la
-lib/libgconfmm-2.6.so
-lib/libgconfmm-2.6.so.1
-lib/libgconfmm-2.6.so.1.1
 lib/pkgconfig/gconfmm-2.6.pc
 @dirrm lib/gconfmm-2.6/proc/m4
 @dirrm lib/gconfmm-2.6/proc

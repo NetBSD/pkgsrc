@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/22 15:00:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:26 jlam Exp $
 bin/gif2h5
 bin/h52gif
 bin/h5cc
@@ -44,12 +44,8 @@ include/H5api_adpt.h
 include/H5pubconf.h
 include/H5public.h
 include/hdf5.h
-lib/libhdf5.a
 lib/libhdf5.la
 lib/libhdf5.settings
-lib/libhdf5.so
-lib/libhdf5.so.0
-lib/libhdf5.so.0.0
 share/doc/hdf5/COPYING
 share/doc/hdf5/HISTORY.txt
 share/doc/hdf5/RELEASE.txt

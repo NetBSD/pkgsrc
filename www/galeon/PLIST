@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.21 2004/07/20 17:37:23 abs Exp $
+@comment $NetBSD: PLIST,v 1.22 2004/09/22 08:09:56 jlam Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
 lib/bonobo/servers/GNOME_Galeon_Automation.server
 lib/bonobo/servers/GNOME_Galeon_NautilusView.server
-lib/galeon/components/libgaleon-xpcom.a
 lib/galeon/components/libgaleon-xpcom.la
-lib/galeon/components/libgaleon-xpcom.so
 man/man1/galeon.1
 share/applications/galeon.desktop
 share/examples/galeon/sound/events/galeon.soundlist

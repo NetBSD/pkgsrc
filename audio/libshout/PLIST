@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/12 03:56:19 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:16 jlam Exp $
 bin/shout-config
 include/shout/shout.h
-lib/libshout.a
 lib/libshout.la
-lib/libshout.so
-lib/libshout.so.3
-lib/libshout.so.3.0
 share/aclocal/shout.m4
 share/doc/libshout/COPYING
 share/doc/libshout/README
