@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/10/03 00:17:54 tv Exp $
+# $NetBSD: Makefile,v 1.16 2005/01/28 23:35:59 adrianp Exp $
 # $FreeBSD: ports/net/libnids/Makefile,v 1.5 2000/04/24 07:42:58 kris Exp $
 #
 
@@ -16,6 +16,7 @@ GNU_CONFIGURE=	yes
 
 BUILDLINK_DEPMETHOD.libnet=	build
 BUILDLINK_DEPMETHOD.libpcap=	build
+BUILDLINK_DEPENDS.libnet+=	libnet<=1.0.1b
 
 .include "../../devel/libnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:17:51 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/01/28 23:35:59 adrianp Exp $
 
 DISTNAME=	firewalk-1.0
 PKGNAME=	firewalk-gtk-1.0
@@ -17,6 +17,8 @@ CONFIGURE_ENV+=	CFLAGS="-I${BUILDLINK_PREFIX.libnet}/include `gtk-config --cflag
 CONFIGURE_ENV+= GTK_CFLAGS="`gtk-config --cflags`"
 
 MAKE_ENV+=	FIREWALK_LOC=${LOCALBASE}
+
+BUILDLINK_DEPENDS.libnet+=	libnet<=1.0.1b
 
 pre-install:
 	${MV} ${WRKSRC}/firewalk.1 ${WRKSRC}/firewalk-gtk.1
