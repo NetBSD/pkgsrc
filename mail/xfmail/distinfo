@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/10 19:10:21 garbled Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 09:59:30 agc Exp $
 
 SHA1 (xfmail-1.5.5.tar.bz2) = 7a98486d1f8cce956efaf37d9540369d5f327401
+RMD160 (xfmail-1.5.5.tar.bz2) = bf3e866d6fa37b7b9959c532b1f4b82fb57eb307
 Size (xfmail-1.5.5.tar.bz2) = 1185913 bytes
 SHA1 (patch-aa) = 975551cddd979b39d423e32cb353f5ed48cb600a

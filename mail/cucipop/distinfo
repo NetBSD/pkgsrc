@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.6 2004/09/02 10:39:04 grant Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 09:59:21 agc Exp $
 
 SHA1 (cucipop-1.31.tar.gz) = d9b5dc2960e96ad1ee63f0a6f8879165f4477434
+RMD160 (cucipop-1.31.tar.gz) = dbca1b313a755544578f89586c200a0227858f92
 Size (cucipop-1.31.tar.gz) = 35508 bytes
 SHA1 (cucipop-1.31-v6-20010223.diff.gz) = 09dd955783237ea83b8b1052e464cf80bf6410e4
+RMD160 (cucipop-1.31-v6-20010223.diff.gz) = 3465094cb906ddec2a8780fdaf617dce51e6d6d5
 Size (cucipop-1.31-v6-20010223.diff.gz) = 1713 bytes
 SHA1 (patch-aa) = baf7a7a262d8d50d404bcc1eed9fe8da72a7b927
 SHA1 (patch-ab) = 2f021113d2634065034065aba0afd06b7a403cb1

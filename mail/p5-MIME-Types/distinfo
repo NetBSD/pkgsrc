@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/12/29 13:21:44 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 09:59:25 agc Exp $
 
 SHA1 (MIME-Types-1.13.tar.gz) = efc931327007aed490f6ee675d2dbc3aaf3fd659
+RMD160 (MIME-Types-1.13.tar.gz) = 9ef5c3fe1ee26f6a433fb21bdb4df165cff31ba9
 Size (MIME-Types-1.13.tar.gz) = 16265 bytes
