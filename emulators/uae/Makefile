@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2004/06/01 18:25:57 tron Exp $
+# $NetBSD: Makefile,v 1.32 2004/08/02 15:56:36 kristerw Exp $
 
 DISTNAME=	uae-0.8.22
+PKGREVISION=	1
 PKGNAME=	${DISTNAME}
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.freiburg.linux.de/~uae/bin/sources/develop/
@@ -16,7 +17,14 @@ USE_GNU_TOOLS+=	make
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=	--enable-dga --enable-vidmode --disable-ui
+CONFIGURE_ARGS+=	--enable-dga --enable-vidmode
+
+.include "../../mk/pthread.buildlink3.mk"
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
+.include "../../x11/gtk/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-ui
+.endif
 
 .include "../../mk/compiler.mk"
 
