@@ -1,0 +1,5 @@
+/* $NetBSD*/
+
+#define ProjectRoot @PREFIX@
+#define BuildHtmlManPages NO
+#define MakeCmd @MAKE@
