@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/05/21 12:42:23 he Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 09:03:12 agc Exp $
 
 SHA1 (wonka-src-0.9.6-release.tar.gz) = 2affc5b0387af97b8e6ea05168834736c3765cf4
+RMD160 (wonka-src-0.9.6-release.tar.gz) = dfed2eba1c6c3d1f613effa645f0000e7d998cc0
 Size (wonka-src-0.9.6-release.tar.gz) = 6315866 bytes
 SHA1 (patch-aa) = 4d60701fb4f600f336a10d4dd22df8ffd86599c0
 SHA1 (patch-ab) = de27e5f58ffc11ce45f09c56831f332e9b6121f7

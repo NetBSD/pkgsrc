@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/09/25 06:43:03 dmcmahill Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 09:03:12 agc Exp $
 
 SHA1 (tcl-itcl-20040920.tar.gz) = 469d8df8d7b506e7d175eb5a15fe68b5a60e95c6
+RMD160 (tcl-itcl-20040920.tar.gz) = 3c992eb5aba9f1e8d21d57b854fe782d0e2ca1f5
 Size (tcl-itcl-20040920.tar.gz) = 1133945 bytes
 SHA1 (patch-aa) = 0bd0534d1d8bb4578334f43d9e72712673ba7a27
 SHA1 (patch-ab) = 05a86eb12eb9bf5b1d2b5cc0349fb919263dedcb

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2003/09/27 18:33:56 kristerw Exp $
+$NetBSD: distinfo,v 1.4 2005/02/24 09:03:09 agc Exp $
 
 SHA1 (mos20src.tar.gz) = 5ca90c0dc679ebb6d84cb28b5cca7d4c7a8edfbc
+RMD160 (mos20src.tar.gz) = b0663311daac8a5af76a22d111ba2c803e87715c
 Size (mos20src.tar.gz) = 2308637 bytes
 SHA1 (patch-aa) = ffe745a14f8b41d2c1c278fbd6f7057a856a1e47
 SHA1 (patch-ab) = 37645c33f1f1f5c2ead0183f6adb0d1ded6c90e3
