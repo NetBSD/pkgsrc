@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.752 2003/07/30 13:38:08 wiz Exp $
+$NetBSD: TODO,v 1.753 2003/07/30 13:45:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -122,7 +122,6 @@ Suggested package updates
 	o gettext-0.12.1
 	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
-	o gif2png-2.4.7
 	o gkrellm-2.1.12 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
 	o gliblib-1.2.3 [pkg/21776]

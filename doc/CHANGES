@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2935 2003/07/30 13:38:07 wiz Exp $
+$NetBSD: CHANGES,v 1.2936 2003/07/30 13:45:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3069,3 +3069,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated delegate to 8.5.2nb1 [jmmv 2003-07-30]
 	Updated dynipclient to 3.00nb1 [jmmv 2003-07-30]
 	Updated easytag to 0.28.1 [wiz 2003-07-30]
+	Updated gif2png to 2.4.7 [wiz 2003-07-30]
