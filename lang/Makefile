@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/01/31 03:48:18 jwise Exp $
+# $NetBSD: Makefile,v 1.23 1999/02/28 10:39:29 dbj Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -10,6 +10,7 @@
     SUBDIR += clisp
 #    SUBDIR += cmucl
 #    SUBDIR += eiffel
+    SUBDIR += elisp-manual
     SUBDIR += elk
 #    SUBDIR += eperl
     SUBDIR += expect
