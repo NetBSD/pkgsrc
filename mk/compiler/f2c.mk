@@ -1,6 +1,6 @@
-# $NetBSD: ccache.mk,v 1.20.2.4 2005/01/13 20:11:55 tv Exp $
+# $NetBSD: f2c.mk,v 1.3.2.2 2005/01/13 20:11:55 tv Exp $
 #
-# Copyright (c) 2004 The NetBSD Foundation, Inc.
+# Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -35,91 +35,94 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-.if !defined(COMPILER_CCACHE_MK)
-COMPILER_CCACHE_MK=	defined
+.if !defined(COMPILER_F2C_MK)
+COMPILER_F2C_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKGPATH:Mdevel/ccache) || !empty(PKGPATH:Mdevel/patch)
-IGNORE_CCACHE=	yes
-MAKEFLAGS+=	IGNORE_CCACHE=yes
+.if !empty(PKGPATH:Mlang/f2c) || !empty(PKGPATH:Mdevel/patch) || \
+    !empty(PKGPATH:Mdevel/libtool-base)
+IGNORE_F2C=	yes
+MAKEFLAGS+=	IGNORE_F2C=yes
 .endif
 
-.if defined(IGNORE_CCACHE)
-_USE_CCACHE=	NO
+.if defined(IGNORE_F2C)
+_USE_F2C=	NO
 .endif
 
 # LANGUAGES.<compiler> is the list of supported languages by the compiler.
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
 # requested by the package in USE_LANGUAGES.
 # 
-LANGUAGES.ccache=	c c++
-_LANGUAGES.ccache=	# empty
+LANGUAGES.f2c=	fortran
+_LANGUAGES.f2c=	# empty
 .for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.ccache+=	${LANGUAGES.ccache:M${_lang_}}
+_LANGUAGES.f2c+=	${LANGUAGES.f2c:M${_lang_}}
 .endfor
-.if empty(_LANGUAGES.ccache)
-_USE_CCACHE=	NO
+.if empty(_LANGUAGES.f2c)
+_USE_F2C=	NO
 .endif
 
-.if !defined(_USE_CCACHE)
-_USE_CCACHE=	YES
+.if !defined(_USE_F2C)
+_USE_F2C=	YES
 .endif
 
-.if !empty(_USE_CCACHE:M[yY][eE][sS])
-EVAL_PREFIX+=		_CCACHEBASE=ccache
-_CCACHEBASE_DEFAULT=	${LOCALBASE}
+.if !empty(_USE_F2C:M[yY][eE][sS])
+EVAL_PREFIX+=		_F2CBASE=f2c
+_F2CBASE_DEFAULT=	${LOCALBASE}
+_F2CBASE?=		${LOCALBASE}
 
-_CCACHE_DIR=	${WRKDIR}/.ccache
-_CCACHE_VARS=	# empty
-.  if !empty(_LANGUAGES.ccache:Mc)
-PKG_CC?=	${CC}
-_CCACHE_VARS+=	CC
-_CCACHE_CC:=	${_CCACHE_DIR}/bin/${PKG_CC:T}
-_ALIASES.CC+=	cc
-PKG_CC:=	${_CCACHE_CC}
-.  endif
-.  if !empty(_LANGUAGES.ccache:Mc++)
-PKG_CXX?=	${CXX}
-_CCACHE_VARS+=	CXX
-_CCACHE_CXX:=	${_CCACHE_DIR}/bin/${PKG_CXX:T}
-_ALIASES.CXX+=	c++
-PKG_CXX:=	${_CCACHE_CXX}
+_F2C_DIR=	${WRKDIR}/.f2c
+_F2C_VARS=	# empty
+.  if !empty(_LANGUAGES.f2c:Mfortran)
+PKG_FC?=	${FC}
+_F2C_VARS+=	FC
+_F2C_FC:=	${_F2C_DIR}/bin/${PKG_FC:T}
+_ALIASES.FC+=	f77 f2c-f77
+FCPATH=		${_F2CBASE}/bin/f2c-f77
+PKG_FC:=	${_F2C_FC}
+#
+# The f2c-f77 shell script invokes the C compiler, so ensure that it finds
+# the cc wrapper for proper transformations.
+#
+# XXX This shouldn't really be leaking into here, as it breaks encapsulation.
+# XXX It should really be handled within the wrapper framework.
+#
+_WRAP_ENV.FC=	PATH="${WRAPPER_BINDIR}:${_WRAP_PATH}"; export PATH
 .  endif
 
 # Prepend the path the to the compiler to the PATH
-.  if !empty(_LANGUAGES.ccache)
-PREPEND_PATH+=	${_CCACHE_DIR}/bin
+.  if !empty(_LANGUAGES.f2c)
+PREPEND_PATH+=	${_F2C_DIR}/bin
 .  endif
 
-# Add the dependency on ccache.
-BUILD_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
+# Add the dependency on f2c.
+.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
+.    include "../../lang/f2c/buildlink3.mk"
+.  else
+DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
+.  endif
 
-# Override the compiler-specific hash with the version string for the
-# compiler.
-#
-BUILD_ENV+=	CCACHE_HASHCC=${CC_VERSION_STRING:Q}
-
-.  if defined(CCACHE_DIR) && !empty(CCACHE_DIR)
-BUILD_ENV+=	CCACHE_DIR=${CCACHE_DIR:Q}
+.  if defined(F2C_DIR) && !empty(F2C_DIR)
+BUILD_ENV+=	F2C_DIR=${F2C_DIR:Q}
 .  endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
-.  for _var_ in ${_CCACHE_VARS}
-.    if !target(${_CCACHE_${_var_}})
-override-tools: ${_CCACHE_${_var_}}
-${_CCACHE_${_var_}}:
+.  for _var_ in ${_F2C_VARS}
+.    if !target(${_F2C_${_var_}})
+override-tools: ${_F2C_${_var_}}
+${_F2C_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${LN} -fs ${_CCACHEBASE}/bin/ccache ${.TARGET}
+	${LN} -fs ${_F2CBASE}/bin/f2c-f77 ${.TARGET}
 .      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -x "${_alias_}" ]; then					\
-		${LN} -fs ${_CCACHEBASE}/bin/ccache ${_alias_};		\
+		${LN} -fs ${_F2CBASE}/bin/f2c-f77 ${_alias_};		\
 	fi
 .      endfor
 .    endif
 .  endfor
-.endif	# _USE_CCACHE == "yes"
+.endif	# _USE_F2C == "yes"
 
-.endif	# COMPILER_CCACHE_MK
+.endif	# COMPILER_F2C_MK
