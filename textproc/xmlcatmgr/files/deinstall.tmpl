@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.tmpl,v 1.1 2003/01/29 20:21:08 jmmv Exp $
+# $NetBSD: deinstall.tmpl,v 1.2 2003/03/17 17:48:06 jmmv Exp $
 #
 # Unregister SGML/XML catalog entries.
 #
@@ -12,7 +12,7 @@ XML_ENTRIES='@XML_ENTRIES@'
 case ${STAGE} in
 DEINSTALL)
 	if [ -n "${SGML_ENTRIES}" ]; then
-		${ECHO} "===> Unregistering SGML catalog entries for ${PKGBASE}"
+		${ECHO} "===> Unregistering SGML catalog entries for ${PKGNAME}"
 		set -- ${SGML_ENTRIES}
 		while [ $# -gt 0 ]; do
 			${XMLCATMGR} -sc ${SGML_CATALOG} remove "$2"
@@ -20,7 +20,7 @@ DEINSTALL)
 		done
 	fi
 	if [ -n "${XML_ENTRIES}" ]; then
-		${ECHO} "===> Unregistering XML catalog entries for ${PKGBASE}"
+		${ECHO} "===> Unregistering XML catalog entries for ${PKGNAME}"
 		set -- ${XML_ENTRIES}
 		while [ $# -gt 0 ]; do
 			${XMLCATMGR} -c ${XML_CATALOG} remove "$2"
