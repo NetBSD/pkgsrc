@@ -1,0 +1,11 @@
+  The MIME (Multipurpose Internet Mail Extensions) specification (RFC 1341
+and successors) defines a mechanism for encoding arbitrary binary information
+for transmission by electronic mail.  Triplets of 8-bit octets are encoded as
+groups of four characters, each representing 6 bits of the source 24 bits.
+Only characters present in all variants of ASCII and EBCDIC are used, avoiding
+incompatibilities in other forms of encoding such as uuencode/uudecode. 
+
+  base64 is a command line utility which encodes and decodes files in this
+format.  It can be used within a pipeline as an encoding or decoding filter,
+and is most commonly used in this manner as part of an automated mail
+processing system. 
