@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.105 2004/03/10 17:49:26 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.106 2004/03/10 19:42:27 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -619,19 +619,20 @@ ${_BLNK_COOKIE.${_pkg_}}:
 _BLNK_LT_ARCHIVE_FILTER.${_pkg_}=	\
 	${SED} ${_BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}}
 
+_BLNK_SEP=	\ \`\"':;,
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}=	# empty
 #
 #     -	Modify the dependency_libs line by changing all full paths to
 #	other *.la files into the canonical ${BUILDLINK_DIR} path.
 #
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
-	-e "/^dependency_libs=/s,/usr\(/lib/lib[^/ 	]*\.la\),${BUILDLINK_DIR}\\1,g" \
-	-e "/^dependency_libs=/s,${DEPOTBASE}/[^ 	]*\(/[^ 	]*/lib[^/ 	]*\.la\),${BUILDLINK_DIR}\\1,g" \
-	-e "/^dependency_libs=/s,${X11BASE}\(/[^ 	]*/lib[^/ 	]*\.la\),${BUILDLINK_X11_DIR}\\1,g" \
-	-e "/^dependency_libs=/s,${LOCALBASE}\(/[^ 	]*/lib[^/ 	]*\.la\),${BUILDLINK_DIR}\\1,g" \
-	-e "/^dependency_libs=/s,-L/usr/lib[^/ 	]*[ 	]*,,g"		\
-	-e "/^dependency_libs=/s,-L${X11BASE}/[^ 	]*[ 	]*,,g"	\
-	-e "/^dependency_libs=/s,-L${LOCALBASE}/[^ 	]*[ 	]*,,g"
+	-e "/^dependency_libs=/s,/usr\(/lib/lib[^/${_BLNK_SEP}]*\.la\),${BUILDLINK_DIR}\\1,g" \
+	-e "/^dependency_libs=/s,${DEPOTBASE}/[^${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*/lib[^/${_BLNK_SEP}]*\.la\),${BUILDLINK_DIR}\\1,g" \
+	-e "/^dependency_libs=/s,${X11BASE}\(/[^${_BLNK_SEP}]*/lib[^/${_BLNK_SEP}]*\.la\),${BUILDLINK_X11_DIR}\\1,g" \
+	-e "/^dependency_libs=/s,${LOCALBASE}\(/[^${_BLNK_SEP}]*/lib[^/${_BLNK_SEP}]*\.la\),${BUILDLINK_DIR}\\1,g" \
+	-e "/^dependency_libs=/s,-L/usr/lib[^/${_BLNK_SEP}]*[ 	]*,,g"	\
+	-e "/^dependency_libs=/s,-L${X11BASE}/[^${_BLNK_SEP}]*[ 	]*,,g" \
+	-e "/^dependency_libs=/s,-L${LOCALBASE}/[^${_BLNK_SEP}]*[ 	]*,,g"
 .  if (${PKG_INSTALLATION_TYPE} == "overwrite") ||			\
       !empty(BUILDLINK_IS_DEPOT.${_pkg_}:M[nN][oO])
 #
@@ -640,10 +641,10 @@ _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
 #	for other *.la files.
 #
 _BLNK_LT_ARCHIVE_FILTER_SED_SCRIPT.${_pkg_}+=				\
-	-e "/^libdir=/s,/usr\(/lib/[^ 	]*\),${BUILDLINK_DIR}\\1,g"	\
-	-e "/^libdir=/s,${DEPOTBASE}/[^/ 	]*\(/[^ 	]*\),${BUILDLINK_DIR}\\1,g" \
-	-e "/^libdir=/s,${X11BASE}\(/[^ 	]*\),${BUILDLINK_X11_DIR}\\1,g" \
-	-e "/^libdir=/s,${LOCALBASE}\(/[^ 	]*\),${BUILDLINK_DIR}\\1,g"
+	-e "/^libdir=/s,/usr\(/lib/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g" \
+	-e "/^libdir=/s,${DEPOTBASE}/[^/${_BLNK_SEP}]*\(/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g" \
+	-e "/^libdir=/s,${X11BASE}\(/[^${_BLNK_SEP}]*\),${BUILDLINK_X11_DIR}\\1,g" \
+	-e "/^libdir=/s,${LOCALBASE}\(/[^${_BLNK_SEP}]*\),${BUILDLINK_DIR}\\1,g"
 .  endif
 .endfor
 
