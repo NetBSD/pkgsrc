@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/25 09:14:11 jmmv Exp $
-bin/gnome2-terminal
+@comment $NetBSD: PLIST,v 1.5 2003/09/08 18:07:21 jmmv Exp $
+bin/gnome-terminal
 lib/bonobo/servers/gnome-terminal.server
 share/applications/gnome-terminal.desktop
 share/gconf/schemas/gnome-terminal.schemas
