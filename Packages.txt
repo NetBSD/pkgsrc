@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.46 1998/12/19 20:35:47 bad Exp $
+# $NetBSD: Packages.txt,v 1.47 1999/01/26 20:03:12 abs Exp $
 ###########################################################################
 
 			==========================
@@ -1330,7 +1330,7 @@ The file contents in this section must be used without the "> " prefix.
  ===================================
 
 The NetBSD package system comes with a tool called "pkglint" (located in the
-directory "pkgsrc/devel/pkglint") which helps to check the contents of these
+directory "pkgsrc/pkgtools/pkglint") which helps to check the contents of these
 files. After installation it is quite easy to use, just change to the
 directory of the package you which to examine and execute "pkglint":
 
