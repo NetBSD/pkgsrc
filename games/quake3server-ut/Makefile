@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/22 13:41:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/22 13:50:15 xtraeme Exp $
 
 DISTNAME=	urbanterror3
 PKGNAME=	quake3server-ut-3.0
@@ -24,6 +24,7 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/q3ut3
 Q3MODDIR=	${Q3ROOTDIR}/ut
 DOCDIR=		${PREFIX}/share/doc/lokigames/quake3server/ut
+MESSAGE_SUBST+=	Q3MODDIR=${Q3MODDIR}
 
 do-install:
 	${INSTALL_DATA_DIR} ${Q3MODDIR}
