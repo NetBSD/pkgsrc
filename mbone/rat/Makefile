@@ -3,7 +3,7 @@
 # Date created:		5 March 1998
 # Whom:			mycroft
 #
-# $NetBSD: Makefile,v 1.1 1998/03/05 22:26:24 mycroft Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/06 02:12:00 mycroft Exp $
 #
 
 DISTNAME=	rat-3.0
@@ -15,6 +15,8 @@ MAINTAINER=	mycroft@NetBSD.ORG
 
 LIB_DEPENDS=	tk80:${PORTSDIR}/x11/tk80
 
+RESTRICTED=	"Contains DES encryption"
+MIRROR_DISTFILE=no
 USE_GMAKE=	yes
 MAN1=		rat.1
 
