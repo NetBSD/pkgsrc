@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/07/15 06:50:36 rh Exp $
+
+--- heyu.1.orig	Thu Jul  6 23:01:16 2000
++++ heyu.1	Thu Jul  6 23:01:27 2000
+@@ -242,7 +242,7 @@
+ .br
+  .x10sched.conf - CM11A schedule information for timers and macros.
+ .br
+- /var/lock/LCK..heyu.mon - lock file for monitor process
++ /var/spool/lock/LCK..heyu.mon - lock file for monitor process
+ .br
+  /var/tmp/heyu.out - fifo file for relay process
+ .br
