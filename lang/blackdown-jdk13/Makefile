@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2003/01/29 11:02:58 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2003/02/11 04:23:15 jlam Exp $
 #
 
 BASENAME=	j2sdk
 DISTNAME=	${EXTNAME}-${BLACKDOWN_ARCH}
 PKGNAME=	blackdown-jdk13-1
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Linux port of the Blackdown Java(tm) Runtime Environment
 
 DEPENDS=	blackdown-jre13>=1:../../lang/blackdown-jre13
@@ -28,6 +28,7 @@ post-extract:
 			${RM} -f $$i;					\
 		fi;							\
 	done
+	${LN} -sf . ${WRKSRC}/jre
 
 .include "../../mk/bsd.pkg.mk"
 
