@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.11 2002/09/20 22:53:22 jlam Exp $
+# $NetBSD: pyversion.mk,v 1.12 2002/09/25 00:02:40 seb Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -92,7 +92,7 @@ PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2.1
 PYPKGPREFIX=	py21
 .elif ${_PYTHON_VERSION} == "21pth"
-PYPKGSRCDIR=	../../lang/python21pth
+PYPKGSRCDIR=	../../lang/python21-pth
 PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21pth}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2p1
 PYPKGPREFIX=	py21pth
