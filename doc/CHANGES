@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4725 2004/02/07 17:47:55 seb Exp $
+$NetBSD: CHANGES,v 1.4726 2004/02/07 17:50:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -695,3 +695,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated epiphany to 1.0.7nb2 [jmmv 2004-02-07]
 	Updated crimsonfields to 0.3.8 [wiz 2004-02-07]
 	Updated rrdtool to 1.0.40nb2 [seb 2004-02-07]
+	Added JMdict-2003.012 [wiz 2004-02-07]
