@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/01/07 02:21:17 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2004/02/01 01:43:30 jlam Exp $
 
 DISTNAME=		WindowMaker-0.80.2
 PKGNAME=		windowmaker-0.80.2
@@ -32,7 +32,7 @@ INSTALL_TARGET=		install-strip
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=	3.0
+GCC_REQD+=	3.0
 .endif
 
 PKG_SYSCONFSUBDIR=	WindowMaker
