@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/04/21 08:07:50 rh Exp $
+
+--- configure.orig	Tue Dec 25 23:00:07 2001
++++ configure	Tue Dec 25 22:58:10 2001
+@@ -233,6 +233,7 @@
+     ;;
+   --with-extralibdir=*)
+     _ld_extra=-L`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -L,g'`
++    _ld_extra="${_ld_extra} -Wl,-R"`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -L,g'`
+     ;;
+   esac
+ done
+@@ -1986,7 +1986,7 @@
+ 
+ 
+ echocheck "VCD support"
+-if linux || bsdos || freebsd || sunos ; then
++if linux || bsdos || freebsd || netbsd || sunos ; then
+   _inputmodules="vcd $_inputmodules"
+   _def_vcd='#define HAVE_VCD 1'
+   echores "ok"

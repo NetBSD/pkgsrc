@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2002/04/21 08:07:50 rh Exp $
+
+--- libmp1e/common/mmx.c.orig	Wed Dec  5 02:56:43 2001
++++ libmp1e/common/mmx.c	Tue Dec 25 23:23:07 2001
+@@ -44,6 +44,8 @@
+  *  VIA has no similar document available as of Jan 2001.
+  */
+ 
++#define cpuid_t xcpuid_t
++
+ typedef union {
+ 	unsigned char		s[16];
+ 	struct {

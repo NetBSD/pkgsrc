@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/04/21 08:07:50 rh Exp $
+
+--- libao2/ao_oss.c.orig	Sun Nov 25 14:23:25 2001
++++ libao2/ao_oss.c	Sun Nov 25 14:25:16 2001
+@@ -254,9 +254,11 @@
+ static float get_delay(){
+   /* Calculate how many bytes/second is sent out */
+   if(audio_delay_method==2){
++#ifdef SNDCTL_DSP_GETODELAY
+       int r=0;
+       if(ioctl(audio_fd, SNDCTL_DSP_GETODELAY, &r)!=-1)
+          return ((float)r)/(float)ao_data.bps;
++#endif
+       audio_delay_method=1; // fallback if not supported
+   }
+   if(audio_delay_method==1){

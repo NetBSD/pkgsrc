@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/04/21 08:07:50 rh Exp $
+
+--- libao2/ao_oss.c.orig	Wed Dec 26 02:32:52 2001
++++ libao2/ao_oss.c	Tue Dec 25 23:35:56 2001
+@@ -30,7 +30,7 @@
+ 
+ LIBAO_EXTERN(oss)
+ 
+-static char *dsp="/dev/dsp";
++static char *dsp="/dev/sound";
+ static audio_buf_info zz;
+ static int audio_fd=-1;
+ 

@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/04/21 08:07:50 rh Exp $
+
+--- configure.in	Sun Nov 25 13:42:15 2001
++++ configure	Sun Nov 25 14:12:54 2001
+@@ -1731,7 +1731,7 @@
+ if test "$_ossaudio" = auto ; then
+   cat > $TMPC << EOF
+ #include <sys/soundcard.h>
+-int main(void) { int arg = SNDCTL_DSP_SETFRAGMENT; return 0; }
++int main(void) { int arg = SOUND_VERSION; return 0; }
+ EOF
+   _ossaudio=no
+   cc_check && _ossaudio=yes
+@@ -2397,6 +2397,7 @@
+ 
+ _ld_arch="$_ld_arch $_ld_pthread $_ld_dl $_ld_dl_dynamic"
+ bsdos && _ld_arch="$_ld_arch -ldvd"
++netbsd && _ld_arch="$_ld_arch -li386 -lossaudio"
+ 
+ _def_debug='#undef MP_DEBUG'
+ test "$_debug" && _def_debug='#define MP_DEBUG 1'
