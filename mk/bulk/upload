@@ -11,6 +11,37 @@ else
     . `dirname $0`/build.conf
 fi
 
+if [ -z "$RSYNC_DST_SPECIFIC" -o -z "$RSYNC_DST_OTHER" ]; then
+	echo "You must set the variables RSYNC_DST_SPECIFIC and RSYNC_DST_OTHER"
+	echo " "
+	echo "RSYNC_DST_SPECIFIC should be set to the destination for packages"
+	echo "which have the OSVERSION_SPECIFIC flag set.  I.e., the complete OS"
+	echo "version number is required.  For example:"
+	echo "  user@ftp.netbsd.org:/pub/NetBSD/packages/1.5.1/alpha"
+	echo " "
+	echo "RSYNC_DST_OTHER should be set to the destination for packages"
+	echo "which do _not_ have the OSVERSION_SPECIFIC flag set.  I.e., only"
+	echo "the major.minor release string is used.  For example, on a 1.5.1"
+	echo "alpha system you would use:"
+	echo "  user@ftp.netbsd.org:/pub/NetBSD/packages/1.5/alpha"
+	echo " "
+	exit 1
+fi
+
+# 
+# Some temp files
+#
+
+umask 22
+TMPDIR=${TMPDIR:-/tmp}
+TMP=${TMPDIR}/pkg_upload.$$
+mkdir $TMP
+
+exf=$TMP/exclude
+osf=$TMP/osversion_specific
+upload_specific=$TMP/upload_specific
+upload_others=$TMP/upload_others
+
 # May be different than $USR_PKGSRC:
 pkgsrcdir=`cd pkgtools/pkglint ; make show-var VARNAME=PKGSRCDIR`
 packages=`cd pkgtools/pkglint ; make show-var VARNAME=PACKAGES`
@@ -19,13 +50,58 @@ packages=`cd pkgtools/pkglint ; make show-var VARNAME=PACKAGES`
 ( cd pkgtools/pkglint ; make bulk-install )
 ( cd net/rsync ;        make bulk-install )
 
-lintpkgsrc -P $pkgsrcdir -pR  | sed 's@'$packages'/@@' > /tmp/r.$$
+echo "Checking for restricted, out of date, and vulnerable packages:"
+# -p  =  report old versions of packages
+# -R  =  report restricted packages
+# -V  =  report vulnerable packages
+lintpkgsrc -P $pkgsrcdir -pRV  | sed 's@'$packages'/@@' > $exf
 
+echo "Checking for OSVERSION_SPECIFIC pkgs:"
+lintpkgsrc -P $pkgsrcdir -O  | sed 's@'$packages'/@@' > $osf
+
+
+RSFLAGS="-vap --progress $RSYNC_OPTS"
+
+failed=no
 cd $packages
-rsync \
-	-vap \
-	$RSYNC_OPTS \
-	--exclude-from=/tmp/r.$$ \
-	. $RSYNC_DST
 
-rm /tmp/r.$$
+echo "Uploading OSVERSION_SPECIFIC pkgs"
+cmd="rsync $RSFLAGS --include '*/' --exclude-from=$exf --include-from=$osf \
+	--exclude '*' . $RSYNC_DST_SPECIFIC"
+echo "#!/bin/sh" > $upload_specific
+echo $cmd >> $upload_specific
+chmod 755 $upload_specific
+echo $cmd
+. $upload_specific
+if [ $? != 0 ]; then
+	echo "--------------------------------------------------"
+	echo " "
+	echo "WARNING rsync failed.  To retry later, you can run"
+	echo "    $upload_specific"
+	echo " "
+	echo "--------------------------------------------------"
+	failed=yes
+fi
+
+echo "Uploading non-OSVERSION_SPECIFIC pkgs"
+cmd="rsync $RSFLAGS --exclude-from=$exf --exclude-from=$osf . $RSYNC_DST_OTHER"
+echo "#!/bin/sh" > $upload_others
+echo $cmd >> $upload_others
+chmod 755 $upload_others
+echo $cmd
+. $upload_others
+if [ $? != 0 ]; then
+	echo "--------------------------------------------------"
+	echo " "
+	echo "WARNING rsync failed.  To retry later, you can run"
+	echo "    $upload_others"
+	echo " "
+	echo "--------------------------------------------------"
+	failed=yes
+fi
+
+# clean up temp files
+if [ "$failed" = "no" ]; then
+	rm -fr $TMP
+fi
+
