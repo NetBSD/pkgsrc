@@ -1,5 +1,5 @@
 =============================================================================
-$NetBSD: MESSAGE,v 1.4 2000/09/12 14:05:16 jlam Exp $
+$NetBSD: MESSAGE,v 1.5 2000/10/13 21:48:02 jlam Exp $
 
 You will need to generate certificates and keys for your server before
 Apache will start with mod_ssl support.  Please read
@@ -14,10 +14,5 @@ configuration parts of the default httpd.conf are bracketed by:
 
   <IfDefine SSL>
   </IfDefine>
-
-If you are using RSAREF, you MUST uncomment the line in the SSL block of
-httpd.conf which reads:
-
-  #LoadFile !librsaref.so
 
 =============================================================================
