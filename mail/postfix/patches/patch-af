@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.16 2003/02/21 11:49:57 martti Exp $
+$NetBSD: patch-af,v 1.17 2003/05/01 14:07:58 jmmv Exp $
 
 --- conf/main.cf.orig	2003-02-20 16:44:47.000000000 +0200
 +++ conf/main.cf	2003-02-21 13:27:20.000000000 +0200
@@ -18,7 +18,7 @@ $NetBSD: patch-af,v 1.16 2003/02/21 11:49:57 martti Exp $
 +
 +# Shared files and etc directory
 +etc_directory = __PKG_SYSCONFDIR
-+share_directory = __PREFIX/share/postfix
++share_directory = __PREFIX/share/examples/postfix
 +man_directory = __PREFIX/man
  
  # QUEUE AND PROCESS OWNERSHIP
@@ -47,7 +47,7 @@ $NetBSD: patch-af,v 1.16 2003/02/21 11:49:57 martti Exp $
  # sample_directory: The location of the Postfix sample configuration files.
  #
 -sample_directory =
-+sample_directory = __PREFIX/share/postfix
++sample_directory = __PREFIX/share/examples/postfix
  
  # readme_directory: The location of the Postfix README files.
  #
