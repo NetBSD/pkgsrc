@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/22 07:15:01 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/11 18:50:45 xtraeme Exp $
 #
 
 DISTNAME=		SpiralSynth-0.1.7
@@ -15,7 +15,8 @@ ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 			*-*-hpcmips *-*-hpcsh *-*-i386 *-*-pc532 *-*-pmax \
 			*-*-vax
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		c c++
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
@@ -28,6 +29,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/.SpiralPatches.bank \
 		${WRKSRC}/.Spiralrc ${PREFIX}/share/spiralsynth
 
-.include "../../x11/fltk/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../x11/fltk/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
