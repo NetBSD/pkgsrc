@@ -1,5 +1,6 @@
-$NetBSD: patch-aa,v 1.14 1999/12/06 20:44:59 bouyer Exp $
+$NetBSD: patch-aa,v 1.15 1999/12/11 23:21:51 jdolecek Exp $
 
+The ossaudio check pulled into KDE. 1999-12-11 jdolecek
 --- configure.old	Tue Sep  7 17:21:06 1999
 +++ configure	Fri Dec  3 18:56:37 1999
 @@ -517,9 +517,10 @@
