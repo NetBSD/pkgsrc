@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/07/17 22:52:55 grant Exp $
+# $NetBSD: Makefile,v 1.48 2003/08/04 23:12:17 seb Exp $
 
 DISTNAME=	gnupg-1.2.2
 PKGREVISION=	1
@@ -28,6 +28,7 @@ TEST_TARGET=		check
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	gpg.info gpgv.info
 
 .include "../../mk/bsd.prefs.mk"
@@ -63,5 +64,4 @@ PLIST_SUBST+=	OPENLDAP="@comment "
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
