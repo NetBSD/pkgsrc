@@ -4,48 +4,9 @@ if [ -f $HOME/.antrc ] ; then
   . $HOME/.antrc
 fi
 
-# Cygwin support.  $cygwin _must_ be set to either true or false.
-case "`uname`" in
-  CYGWIN*) cygwin=true ;;
-  *) cygwin=false ;;
-esac
-
-# For Cygwin, ensure paths are in UNIX format before anything is touched
-if $cygwin; then
-  [ -n "$ANT_HOME" ] &&
-    ANT_HOME=`cygpath --unix "$ANT_HOME"`
-  [ -n "$JAVA_HOME" ] &&
-    JAVA_HOME=`cygpath --unix "$JAVA_HOME"`
-  [ -n "$CLASSPATH" ] &&
-    CLASSPATH=`cygpath --path --unix "$CLASSPATH"`
-fi
-
 if [ "$ANT_HOME" = "" ] ; then
   # try to find ANT
-  if [ -d /opt/ant ] ; then 
-    ANT_HOME=/usr/pkg
-  fi
-
-  if [ -d ${HOME}/opt/ant ] ; then 
-    ANT_HOME=${HOME}/ant
-  fi
-
-  ## resolve links - $0 may be a link to ant's home
-  PRG=$0
-  progname=`basename $0`
-  
-  while [ -h "$PRG" ] ; do
-    ls=`ls -ld "$PRG"`
-    link=`expr "$ls" : '.*-> \(.*\)$'`
-    if expr "$link" : '.*/.*' > /dev/null; then
-	PRG="$link"
-    else
-	PRG="`dirname $PRG`/$link"
-    fi
-  done
-  
-  ANT_HOME=`dirname "$PRG"`/..
-
+  ANT_HOME=@PREFIX@
 fi
 
 if [ "$JAVA_HOME" != "" ] ; then
@@ -53,14 +14,14 @@ if [ "$JAVA_HOME" != "" ] ; then
     JAVACMD=$JAVA_HOME/bin/java
   fi
 else
-  JAVA_HOME=/usr/pkg/java
+  JAVA_HOME=@PREFIX@/java
   if [ "$JAVACMD" = "" ] ; then 
     JAVACMD=$JAVA_HOME/bin/java
   fi
 fi
  
 # add in the dependency .jar files
-DIRLIBS=$${ANT_HOME}/lib/java/ant-optional.jar {ANT_HOME}/lib/java/parser.jar ${ANT_HOME}/lib/java/jaxp.jar
+DIRLIBS="${ANT_HOME}/lib/java/ant.jar ${ANT_HOME}/lib/java/ant-optional.jar ${ANT_HOME}/lib/java/parser.jar ${ANT_HOME}/lib/java/jaxp.jar"
 for i in ${DIRLIBS}
 do
     # if the directory is empty, then it will return the input string
@@ -71,7 +32,7 @@ do
 done
 
 if [ "$CLASSPATH" != "" ] ; then
-  LOCALCLASSPATH=$CLASSPATH:$LOCALCLASSPATH
+  LOCALCLASSPATH=$LOCALCLASSPATH:$CLASSPATH
 fi
 
 if [ "$JAVA_HOME" != "" ] ; then
@@ -98,11 +59,6 @@ if [ "$JIKESPATH" != "" ] ; then
   fi
 fi
 
-# For Cygwin, switch paths to Windows format before running java
-if $cygwin; then
-  ANT_HOME=`cygpath --path --windows "$ANT_HOME"`
-  JAVA_HOME=`cygpath --path --windows "$JAVA_HOME"`
-  LOCALCLASSPATH=`cygpath --path --windows "$LOCALCLASSPATH"`
-fi
+echo LOCALCLASSPATH=$LOCALCLASSPATH
 
 $JAVACMD -classpath "$LOCALCLASSPATH" -Dant.home="${ANT_HOME}" $ANT_OPTS org.apache.tools.ant.Main "$@"
