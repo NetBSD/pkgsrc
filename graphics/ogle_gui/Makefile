@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/17 21:42:00 grant Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/12 20:07:21 grant Exp $
 
 DISTNAME=	ogle_gui-0.9.1
 PKGREVISION=	2
@@ -17,6 +17,8 @@ USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/lib/ogle
 
+USE_GCC2=		# defined
+
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
@@ -25,7 +27,6 @@ LDFLAGS+=	${BUILDLINK_LDFLAGS.ogle}
 .include "../../devel/binutils/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../graphics/ogle/buildlink2.mk"
-.include "../../mk/gcc.buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
