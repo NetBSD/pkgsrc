@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4622 2004/01/28 11:26:15 recht Exp $
+$NetBSD: CHANGES,v 1.4623 2004/01/28 12:14:16 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -508,3 +508,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed koffice-devel [markd 2004-01-28]
 	Updated mutt to 1.4.1nb4 [lukem 2004-01-28]
 	Updated tla to 1.1 [recht 2004-01-28]
+	Updated nedit to 5.4nb1 [xtraeme 2004-01-28]
