@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1592 2003/03/08 08:31:03 tron Exp $
+$NetBSD: CHANGES,v 1.1593 2003/03/08 14:43:23 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -991,3 +991,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.14.2 [gehenna 2003-03-08]
 	Updated cdrecord to 2.0nb2 [grant 2003-03-08]
 	Added xcursorgen-4.3.0 [tron 2003-03-08]
+	Updated cvsync to 0.14.3 [gehenna 2003-03-08]
