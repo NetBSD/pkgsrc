@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.91 2004/06/28 09:55:44 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.92 2004/07/01 20:14:58 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -61,8 +61,8 @@ if ($opt{D} && @ARGV)
 	print "$file -> $pkgname\n";
 	foreach my $varname (sort keys %{$vars})
 	    { print "\t$varname = $vars->{$varname}\n"; }
-	if ($opt{d})
-	    { pkgsrc_check_depends(); }
+# 	if ($opt{d})
+# 	    { pkgsrc_check_depends(); }
 	}
     exit;
     }
@@ -764,6 +764,7 @@ sub parse_makefile_pkgsrc
 	    if ($pkglist)
 		{
 		my($pkgver) = $pkglist->add($1, $2);
+		debug("add $1 $2\n");
 
 		foreach my $var (qw(DEPENDS RESTRICTED OSVERSION_SPECIFIC BROKEN))
 		    { $pkgver->var($var, $vars->{$var}); }
@@ -789,8 +790,9 @@ sub parse_makefile_pkgsrc
 sub parse_makefile_vars
     {
     my($file, $cwd) = @_;
-    my($CURDIR, $NEWCURDIR, $pkgname, %vars, $plus, $value, @data,
-       %incfiles,
+    my($pkgname, %vars, $plus, $value, @data,
+       %incfiles,	# Cache of previously included fils
+       %incdirs,	# Directories in which to check for includes
        @if_false); # 0:true 1:false 2:nested-false&nomore-elsif
 
     if (! open(FILE, $file))
@@ -811,7 +813,7 @@ sub parse_makefile_vars
 	{ $vars{'.CURDIR'} = $1; }
     else
 	{ $vars{'.CURDIR'} = getcwd; }
-    $CURDIR = $vars{'.CURDIR'};
+    $incdirs{$vars{'.CURDIR'}} = 1;
     if ($opt{L})
 	{ print "$file\n"; }
 
@@ -826,7 +828,7 @@ sub parse_makefile_vars
 
 	# Conditionals
 	#
-	if (m#^\.if(|def|ndef)\s+(.*)#)
+	if (m#^\.\s*if(|def|ndef)\s+(.*)#)
 	    {
 	    my($type, $false);
 
@@ -842,82 +844,91 @@ sub parse_makefile_vars
 		    { $false = ! $false ; }
 		push(@if_false, $false ?1 :0);
 		}
-	    debug("$file: .if$type (@if_false)\n");
+	    debug("$file: .if$type (! @if_false)\n");
 	    next;
 	    }
-	if (m#^\.elif\s+(.*)# && @if_false)
+	if (m#^\.\s*elif\s+(.*)# && @if_false)
 	    {
 	    if ($if_false[$#if_false] == 0)
 		{ $if_false[$#if_false] = 2; }
 	    elsif ($if_false[$#if_false] == 1 &&
 		    ! parse_eval_make_false($1, \%vars) )
 		{ $if_false[$#if_false] = 0; }
-	    debug("$file: .elif (@if_false)\n");
+	    debug("$file: .elif (! @if_false)\n");
 	    next;
 	    }
-	if (m#^\.else\b# && @if_false)
+	if (m#^\.\s*else\b# && @if_false)
 	    {
 	    $if_false[$#if_false] = $if_false[$#if_false] == 1?0:1;
-	    debug("$file: .else (@if_false)\n");
+	    debug("$file: .else (! @if_false)\n");
 	    next;
 	    }
-	if (m#^\.endif\b#)
+	if (m#^\.\s*endif\b#)
 	    {
 	    pop(@if_false);
-	    debug("$file: .endif (@if_false)\n");
+	    debug("$file: .endif (! @if_false)\n");
 	    next;
 	    }
 
         $if_false[$#if_false] && next;
 
-	# for getting the path for .includes right
-	if (m#__CURDIR__=#)
-	    {
-	    s/__CURDIR__=//;
-	    $CURDIR = $_;
-	    next;
-	    }
 	# Included files (just unshift onto @data)
 	#
-	if (m#^\.include\s+"([^"]+)"#)
+	if (m#^\.\s*include\s+"([^"]+)"#)
 	    {
-	    $_ = $1;
-	    debug("$file: .include \"$_\"\n");
-	    if (m#/mk/bsd# || (!$opt{d} && m#/(buildlink[^/]*\.mk)#))
-		{ debug("$file: .include skipped\n"); }
+	    my($incfile) = parse_expand_vars($1, \%vars);
+	    # At this point just skip any includes which we were not able to
+	    # fully expand
+	    if ($incfile =~ m#/mk/bsd# || $incfile =~ /$magic_undefined/ ||
+		    (!$opt{d} && $incfile =~ m#/(buildlink[^/]*\.mk)#))
+		{ debug("$file: .include \"$incfile\" skipped\n"); }
 	    else
 		{
-		my($incfile) = $_;
+		debug("$file: .include \"$incfile\"\n");
 
 		# Expand any simple vars in $incfile
 		#
-		$incfile = parse_expand_vars($incfile, \%vars);
 
 		if (substr($incfile, 0, 1) ne '/')
-		    { $incfile = "$CURDIR/$incfile"; }
+		    {
+		    foreach my $dir (keys %incdirs)
+			{
+			if (-f "$dir/$incfile")
+			    { $incfile = "$dir/$incfile"; last; }
+			}
+		    }
 
 		# perl 5.6.1 realpath() cannot handle files, only directories
 		# If the last component is a symlink this will give a false
 		# negative, but that is not a problem as the duplicate check
 		# is for performance
                 $incfile =~ m#^(.+)(/[^/]+)$#;
-		$incfile = realpath($1).$2;
 
-		if (!$incfiles{$incfile})
+		if (! -f $incfile)
 		    {
-		    if ($opt{L})
-			{ print "inc $incfile\n"; }
-		    $incfiles{$incfile} = 1;
-		    $NEWCURDIR = $incfile;
-		    $NEWCURDIR =~ s#/[^/]*$##;
-		    if (!open(FILE, $incfile))
-			{ verbose("Cannot open '$incfile' (from $file): $!\n");}
-		    else
+		    verbose("Cannot locate '$incfile' (from $file): $_\n");
+		    }
+		else
+		    {
+		    $incfile = realpath($1).$2;
+
+		    if (!$incfiles{$incfile})
 			{
-			unshift(@data, "__CURDIR__=$CURDIR");
-			unshift(@data, map {chomp; $_} <FILE>);
-			unshift(@data, "__CURDIR__=$NEWCURDIR");
-			close(FILE);
+			if ($opt{L})
+			    { print "inc $incfile\n"; }
+			$incfiles{$incfile} = 1;
+			if (!open(FILE, $incfile))
+			    { verbose("Cannot open '$incfile' (from $file): $_ $!\n");}
+			else
+			    {
+			    my $NEWCURDIR = $incfile;
+			    $NEWCURDIR =~ s#/[^/]*$##;
+			    $incdirs{$NEWCURDIR} = 1;
+			    unshift(@data, ".CURDIR=$vars{'.CURDIR'}");
+			    unshift(@data, map {chomp; $_} <FILE>);
+			    unshift(@data, ".CURDIR=$NEWCURDIR");
+			    close(FILE);
+			    }
 			}
 		    }
 		}
@@ -930,13 +941,13 @@ sub parse_makefile_vars
 	    $key = $1;
 	    $plus = $2;
 	    $value = $3;
-	    debug("assignment: $key$plus=[$value]\n");
 	    if ($plus eq ':')
 		{ $vars{$key} = parse_expand_vars($value, \%vars); }
 	    elsif ($plus eq '+' && defined $vars{$key} )
 		{ $vars{$key} .= " $value"; }
 	    elsif ($plus ne '?' || !defined $vars{$key} )
 		{ $vars{$key} = $value; }
+	    debug("assignment: $key$plus=[$value] ($vars{$key})\n");
 
 	    # Give python a little hand (XXX - do we wanna consider actually
 	    # implementing make .for loops, etc?
