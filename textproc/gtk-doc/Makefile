@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/07/22 00:13:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/21 11:00:47 jlam Exp $
 #
 
 DISTNAME=	gtk-doc-0.9
@@ -12,7 +12,8 @@ COMMENT=	tools for authors of the GTK+ reference documentation
 DEPENDS+=	dsssl-docbook-modular-[0-9]*:../../textproc/dsssl-docbook-modular
 DEPENDS+=	jade-[0-9]*:../../textproc/jade
 
+USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
-USE_PERL5=	YES
 
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
