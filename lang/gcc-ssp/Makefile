@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/10/16 04:30:53 kent Exp $
+# $NetBSD: Makefile,v 1.17 2002/10/20 00:37:46 wiz Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
@@ -82,7 +82,7 @@ post-extract:
 
 post-patch:
 	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in
-	cd ${WRKDIR} && ${GTAR} xzf ${_DISTDIR}/${SSP_PATCH}
+	cd ${WRKDIR} && ${PAX} -rzf ${_DISTDIR}/${SSP_PATCH}
 	${CP} ${WRKDIR}/protector.c ${WRKDIR}/protector.h ${WRKDIR}/${DISTNAME}/gcc/
 	${PATCH} -p0 -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protector.dif
 	${PATCH} -p0 -d ${WRKDIR}/${DISTNAME} --forward --quiet -E < ${WRKDIR}/protectonly.dif
