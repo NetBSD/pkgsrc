@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:27:59 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/24 22:46:13 jlam Exp $
 
 DISTNAME=	apc-1.1.0pl1
 PKGNAME=	php-apc-1.1.0.1
@@ -7,7 +7,7 @@ CATEGORIES+=	www
 MASTER_SITES=	http://apc.communityconnect.com/sources/
 EXTRACT_SUFX=	.tar.gz
 
-MAINTAINER=	jlam@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://apc.communityconnect.com/
 COMMENT=	Alternative PHP Cache for PHP4
 
