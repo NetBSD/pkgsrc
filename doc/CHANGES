@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4595 2004/01/24 19:45:36 recht Exp $
+$NetBSD: CHANGES,v 1.4596 2004/01/24 21:32:27 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -464,3 +464,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pflogsumm to 1.1.0 [kim 2004-01-24]
 	Updated roller to 1.14 [kim 2004-01-24]
 	Updated pygopherd to 2.09 [recht 2004-01-24]
+	Renamed gnome to gnome1 [jmmv 2004-01-24]
+	Renamed gnome2 to gnome [jmmv 2004-01-24]
