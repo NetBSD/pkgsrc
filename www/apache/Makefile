@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.68 2001/05/08 17:28:09 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2001/05/14 14:02:02 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
 DISTNAME=		apache_1.3.19
-PKGNAME=		apache-1.3.19nb1
+PKGNAME=		apache-1.3.19nb2
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/ \
@@ -15,7 +15,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 MASTER_SITES+=		http://www.modssl.org/source/ \
 			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/
 DISTFILES+=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
-MODSSL_DISTNAME=	mod_ssl-2.8.2-1.3.19
+MODSSL_DISTNAME=	mod_ssl-2.8.3-1.3.19
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 
 MAINTAINER=		jlam@netbsd.org
