@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2003/05/17 05:42:10 salo Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/28 20:05:22 xtraeme Exp $
 #
 
 DISTNAME=	openbox-2.2.3
 CATEGORIES=	wm x11
 MASTER_SITES=	http://icculus.org/openbox/releases/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://icculus.org/openbox/
 COMMENT=	Window manager based on Blackbox
 

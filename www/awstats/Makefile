@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/31 03:18:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 20:05:23 xtraeme Exp $
 #
 
 DISTNAME=	awstats-5.1
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=awstats/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://awstats.sourceforge.net/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 

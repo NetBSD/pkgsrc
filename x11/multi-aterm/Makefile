@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/02 13:28:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 20:05:24 xtraeme Exp $
 #
 
 DISTNAME=	multi-aterm-0.0.4
 CATEGORIES=	x11
 MASTER_SITES=	http://www.materm.tuxfamily.org/
 
-MAINTAINER=	jrp@hispabsd.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.materm.tuxfamily.org/
 COMMENT=	Multi-terminal for the X Window System based on aterm
 
