@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/22 08:30:30 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/22 08:31:31 grant Exp $
 #
 
 DISTNAME=	cooledit-3.17.5
@@ -20,7 +20,7 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 post-configure:
-	if ! ${GREP} -q mbstate_t /usr/include/machine/ansi.h ; then \
+	if ${GREP} -q mbstate_t /usr/include/machine/ansi.h ; then :; else \
 		${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h.bak ; \
 		${SED} 's;^.*HAVE_WCHAR_H.*$$;/* mbstate_t is missing from machine/ansi.h */;g' \
 			< ${WRKSRC}/config.h.bak > ${WRKSRC}/config.h ; \
