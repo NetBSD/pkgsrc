@@ -1,0 +1,40 @@
+$NetBSD: patch-aj,v 1.1 1999/02/01 11:39:51 frueauf Exp $
+
+--- config/rules.mk-patch	Thu Oct  8 22:28:28 1998
++++ config/rules.mk	Fri Jan 29 17:38:59 1999
+@@ -112,6 +112,12 @@
+ ifeq ($(OS_ARCH),HP-UX)
+ SHARED_LIBRARY		:= $(LIBRARY:.a=.sl)
+ else
++ifeq ($(OS_ARCH),NetBSD)
++## HACK for mips libraries
++SHARED_LIBRARY		:= $(LIBRARY:.a=.so.1.0)
++## HACK for mips g++
++CCC			= c++
++else
+ ifneq (,$(filter FreeBSD NetBSD OpenBSD,$(OS_ARCH)))
+ SHARED_LIBRARY		:= $(LIBRARY:.a=.so.1.0)
+ else
+@@ -131,6 +137,7 @@
+ endif
+ endif
+ endif
++endif
+ 
+ ifdef NO_STATIC_LIB
+ LIBRARY			= $(NULL)
+@@ -308,6 +315,14 @@
+ endif
+ ifdef SHARED_LIBRARY
+ 	$(INSTALL) -m 555 $(SHARED_LIBRARY) $(DIST)/bin
++ifeq ($(OS_ARCH),NetBSD)
++ifeq ($(CPU_ARCH),mips)
++	rm -f $(DIST)/bin/lib$(LIBRARY_NAME).so.1
++	rm -f $(DIST)/bin/lib$(LIBRARY_NAME).so
++	(cd $(DIST)/bin;ln -s lib$(LIBRARY_NAME).so.1.0 lib$(LIBRARY_NAME).so.1)
++	(cd $(DIST)/bin;ln -s lib$(LIBRARY_NAME).so.1.0 lib$(LIBRARY_NAME).so)
++endif
++endif
+ endif
+ ifdef PROGRAM
+ 	$(INSTALL) -m 444 $(PROGRAM) $(DIST)/bin

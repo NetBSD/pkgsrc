@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1 1999/02/01 11:39:50 frueauf Exp $
+
+--- cmd/xfe/Makefile-patch	Fri Jan 29 16:42:39 1999
++++ cmd/xfe/Makefile	Fri Jan 29 17:30:01 1999
+@@ -753,7 +753,11 @@
+ DSO_EX_LIBS	= $(FOOL_GMAKE:-lutil=$(DIST)/lib/libutil.a)
+ 
+ ifdef LIBRUNPATH
++ifeq ($(OS_TEST),pmax)
++OS_LIBS		+= -Wl,-rpath,/usr/X11R6/lib,-rpath,$(LIBRUNPATH)
++else
+ OS_LIBS		+= -R$(LIBRUNPATH)
++endif
+ endif
+ 
+ OTHER_LIBS	= -L/usr/X11R6/lib -lXm -lXt -lXmu -lXext -lX11 -lSM -lICE -lm $(OS_LIBS)

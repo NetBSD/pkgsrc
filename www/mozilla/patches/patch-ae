@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1 1999/02/01 11:39:48 frueauf Exp $
+
+--- nsprpub/lib/libc/src/Makefile-patch	Thu Oct  8 22:24:52 1998
++++ nsprpub/lib/libc/src/Makefile	Fri Jan 29 16:59:36 1999
+@@ -142,6 +142,12 @@
+ 	$(INSTALL) -m 444 $(TARGETS) $(DIST)/lib
+ ifdef SHARED_LIBRARY
+ 	$(INSTALL) -m 444 $(SHARED_LIBRARY) $(DIST)/bin
++ifeq ($(OS_ARCH),NetBSD)
++ifeq ($(CPU_ARCH),mips)
++	(cd $(DIST)/bin;ln -s -f lib$(LIBRARY_NAME)$(LIBRARY_VERSION).so.1.0 lib$(LIBRARY_NAME)$(LIBRARY_VERSION).so.1)
++	(cd $(DIST)/bin;ln -s -f lib$(LIBRARY_NAME)$(LIBRARY_VERSION).so.1.0 lib$(LIBRARY_NAME)$(LIBRARY_VERSION).so)
++endif
++endif
+ endif
+ ifeq ($(MOZ_BITS),16)
+ 	$(INSTALL) -m 444 $(TARGETS) $(MOZ_DIST)/lib
