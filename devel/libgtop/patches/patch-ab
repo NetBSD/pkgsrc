@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1998/11/01 23:07:30 tron Exp $
+$NetBSD: patch-ab,v 1.3 1998/11/01 23:22:19 tron Exp $
 
 --- sysdeps/bsd/open.c.orig	Mon Aug 24 20:14:49 1998
 +++ sysdeps/bsd/open.c	Sun Nov  1 23:40:07 1998

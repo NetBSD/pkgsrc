@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 1998/10/07 13:11:35 agc Exp $
+$NetBSD: patch-ag,v 1.2 1998/11/01 23:22:19 tron Exp $
 
 --- sysdeps/bsd/msg_limits.c	1998/10/06 17:10:11	1.1
 +++ sysdeps/bsd/msg_limits.c	1998/10/06 17:10:53
