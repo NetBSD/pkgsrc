@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/20 02:40:46 fredb Exp $
+
+--- CONFIG.in.orig	Wed Apr 21 21:47:53 1999
++++ CONFIG.in	Sun Sep 19 18:08:24 1999
+@@ -23,7 +23,7 @@
+ #
+ # This specifies the root of the directory tree to be used by ht://Dig
+ #
+-DEST=                  $(prefix)
++DEST=                  $(prefix)/share/htdig
+ 
+ #
+ # BIN_DIR
