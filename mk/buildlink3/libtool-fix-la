@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.1.2.8 2003/08/31 07:05:50 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.1.2.9 2003/09/02 03:19:22 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -26,6 +26,10 @@ if $test -f $lafile; then
 	deps=
 	for i in ${dependency_libs}; do
 		case "$i" in
+		-R*)
+		# Skip all -R* options... rpath info shouldn't go into the
+		# dependency_libs line.
+			;;
 		# Catch -L<dir> and remove redundant ones.
 		-L*)
 			case "$deps" in
@@ -174,6 +178,11 @@ if $test -f $lafile; then
 			# becomes just "-lm".
 			#
 			$prev)
+				;;
+			# Skip all -R* options... rpath info shouldn't go
+			# into the dependency_libs line.
+			#
+			-R*)
 				;;
 			# Skip directories that should never appear in
 			# the -L<dir> flags.  Also modify directories in
