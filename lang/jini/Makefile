@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/06/03 20:13:03 abs Exp $
+# $NetBSD: Makefile,v 1.17 2004/06/28 17:28:57 abs Exp $
 #
 
 DISTNAME=		jini-${SUN_VERSION}-src
@@ -28,7 +28,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 WRKSRC=			${WRKDIR}/jini${SUN_VERSION}
 VERSION=		1.2.1
 SUN_VERSION=		${VERSION:C/\./_/g}_001
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk13 jdk14
 

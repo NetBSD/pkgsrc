@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/29 16:03:59 erh Exp $
+# $NetBSD: Makefile,v 1.3 2004/06/28 17:28:58 abs Exp $
 
 PKGNAME=        jakarta-tomcat4-${TOMCAT_VERSION}
 DISTNAME=       jakarta-tomcat-${TOMCAT_VERSION}
@@ -18,7 +18,7 @@ TOMCAT_VERSION=	4.1.30
 USE_JAVA=run
 USE_JAVA2=yes
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	YES
 
 TOMCAT_LIB=     ${PREFIX}/tomcat4
 

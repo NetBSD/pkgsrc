@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/03 20:13:03 abs Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/28 17:28:57 abs Exp $
 
 DISTNAME=	${BINNAME}_20
 PKGNAME=	${BINNAME}-2.0
@@ -21,7 +21,7 @@ LIBDIR=		${PREFIX}/lib/${BINNAME}
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		# defined
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 blackdown-jdk13 jdk13 jdk14
 
