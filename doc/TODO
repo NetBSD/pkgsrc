@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3053 2005/02/19 03:41:18 lukem Exp $
+$NetBSD: TODO,v 1.3054 2005/02/19 10:23:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -504,7 +504,6 @@ Suggested package updates
 	o grap-1.32
 	o grepmail-5.3030
 	o gri-2.12.8
-	o grub-0.96
 	o gsasl-0.2.5
 	o gsed-4.1.4
 	o gsharutils-4.3.78
