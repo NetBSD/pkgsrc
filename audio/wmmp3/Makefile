@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 16:30:48 martti Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/18 14:47:59 xtraeme Exp $
 
 DISTNAME=	wmmp3-0.12
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES= 	http://www.dotfiles.com/software/wmmp3/
 
@@ -12,7 +13,7 @@ DEPENDS+=	mpg123>=0.59.18:../../audio/mpg123
 
 USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
-USE_X11BASE=	yes
+USE_X11=	yes
 
 post-patch:
 	${MV} ${WRKSRC}/sample.wmmp3 ${WRKSRC}/sample.wmmp3.orig
