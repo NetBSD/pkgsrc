@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:18 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/19 04:37:30 jlam Exp $
 #
 
 DISTNAME=	lsqlite_src
@@ -15,9 +15,12 @@ COMMENT=	SQLite binding for LUA
 WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	yes
 
+CFLAGS+=	-fPIC
+LIBS+=		-llua -lsqlite -llualib
+
 do-build:
-	${CC} ${WRKSRC}/lsqlite.c ${CFLAGS} ${LDFLAGS} \
-	-shared -llua -lsqlite -llualib -o ${WRKSRC}/libluasqlite.so
+	cd ${WRKSRC}; ${CC} -shared ${CFLAGS} ${LDFLAGS} lsqlite.c	\
+		-o libluasqlite.so ${LIBS}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libluasqlite.so ${PREFIX}/lib
