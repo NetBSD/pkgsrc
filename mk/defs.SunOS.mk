@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.87 2004/06/18 11:22:41 kristerw Exp $
+# $NetBSD: defs.SunOS.mk,v 1.88 2004/07/03 22:04:57 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -81,7 +81,7 @@ SU?=		/usr/bin/su
 TAIL?=		/usr/xpg4/bin/tail
 TAR?=		${LOCALBASE}/bin/tar
 TEE?=		/usr/bin/tee
-TEST?=		/usr/bin/test
+TEST?=		test
 TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
