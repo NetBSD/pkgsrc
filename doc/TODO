@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2991 2005/02/04 22:10:37 adrianp Exp $
+$NetBSD: TODO,v 1.2992 2005/02/04 22:19:04 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -483,7 +483,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdeskcal-0.57.1
 	o gdm1-2.2.5.5
-	o geneweb-4.10
 	o gerbv-1.0.0
 	o gettext-0.14.1
 	o ghc-6.2.2
