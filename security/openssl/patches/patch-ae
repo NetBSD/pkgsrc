@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.5 2002/08/04 15:47:46 fredb Exp $
+
+--- tools/Makefile.ssl.orig	Thu Apr 29 16:52:08 1999
++++ tools/Makefile.ssl
+@@ -31,8 +31,8 @@
+ 	done;
+ 	@for i in $(MISC_APPS) ; \
+ 	do  \
+-	(cp $$i $(INSTALL_PREFIX)$(OPENSSLDIR)/misc/$$i; \
+-	chmod 755 $(INSTALL_PREFIX)$(OPENSSLDIR)/misc/$$i ); \
++	(cp $$i $(INSTALL_PREFIX)$(INSTALLTOP)/bin/$$i; \
++	chmod 755 $(INSTALL_PREFIX)$(INSTALLTOP)/bin/$$i ); \
+ 	done;
+ 
+ files:
