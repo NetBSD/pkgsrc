@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1175 2003/01/20 22:50:22 drochner Exp $
+$NetBSD: CHANGES,v 1.1176 2003/01/21 08:21:01 lukem Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -345,3 +345,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libwmf to 0.8.2 [drochner 2003-01-20]
 	Updated gimageview to 0.2.13 [drochner 2003-01-20]
 	Updated zope25-ZPhotoSlides to 0.9 [drochner 2003-01-20]
+	Updated mysql-client to 3.23.49nb3 [lukem 2003-01-21]
+	Updated mysql-server to 3.23.49nb3 [lukem 2003-01-21]
