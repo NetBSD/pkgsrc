@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/10/22 22:06:13 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2002/11/14 03:53:02 wiz Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -40,12 +40,12 @@ LDFLAGS+=		-R${GCCPREFIX}/lib
 .endif
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=		gmake-[0-9]*:../../devel/gmake
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		stlport>=4.0nb1:../../devel/stlport
 
 USE_X11=		# defined
+USE_GMAKE=		# defined
 USE_JAVA=		build
 PKG_JVMS_ACCEPTED=	sun-jdk13
 
@@ -88,7 +88,7 @@ pre-build: checkforx
 do-build:
 	${_ULIMIT_CMD}tcsh -c "setenv DISPLAY '${DISPLAY}'; \
 		cd ${WRKSRC}/.. && ./bootstrap && source *.Set && dmake"
-			
+
 pre-install: checkforx
 	${SH} -c "cd ${WRKSRC}/../instsetoo/*.pro/01/normal;		\
 	    ${SED} -e 's#@@PREFIX@@#${PREFIX}#g'			\
@@ -106,7 +106,7 @@ do-install:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g'				\
 	    <${FILESDIR}/soffice >${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
-	
+
 .include "../../devel/pth/buildlink.mk"
 .include "../../lang/perl5/buildlink.mk"
 .include "../../mk/java.mk"
