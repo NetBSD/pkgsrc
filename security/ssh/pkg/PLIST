@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.5 1998/06/12 20:39:26 tv Exp $
-bin/scp
-bin/slogin
+@comment $NetBSD: PLIST,v 1.6 1998/06/15 10:24:16 tron Exp $
 bin/ssh
-bin/ssh-add
-bin/ssh-agent
-bin/ssh-keygen
 bin/ssh1
-bin/ssh-keygen1
-bin/ssh-agent1
-bin/ssh-add1
+bin/scp
 bin/scp1
-bin/make-ssh-known-hosts1
+bin/slogin
+bin/ssh-add
+bin/ssh-add1
+bin/ssh-agent
+bin/ssh-agent1
+bin/ssh-keygen
+bin/ssh-keygen1
 bin/make-ssh-known-hosts
+bin/make-ssh-known-hosts1
 etc/rc.d/sshd.sh
 man/man1/make-ssh-known-hosts1.1
 man/man1/make-ssh-known-hosts.1
