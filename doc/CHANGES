@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1499 2003/02/27 13:28:09 seb Exp $
+$NetBSD: CHANGES,v 1.1500 2003/02/27 17:17:38 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -856,3 +856,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated swi-prolog to 5.0.10 [wulf 2003-02-27]
 	Updated cyrus-imapd to 2.1.12 [seb 2003-02-27]
 	Updated cyrus-sasl to 2.1.12 [seb 2003-02-27]
+	Updated mgetty to 1.1.28nb3 [fredb 2003-02-27]
