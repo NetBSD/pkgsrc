@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2004 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.3 2004/10/22 00:24:48 hubertf Exp $
+$NetBSD: pkgsrc.txt,v 1.7 2004/11/22 16:52:09 wiz Exp $
 
 Abstract
 
@@ -987,7 +987,7 @@ added to help with this.
 
 If you want to install a binary package that you've either created yourself
 (see next section), that you put into pkgsrc/packages manually or that is
-located on a remote FTP server, you can use the the "bin-install" target. This
+located on a remote FTP server, you can use the "bin-install" target. This
 target will install a binary package - if available - via pkg_add(1), else do a
 make package. The list of remote FTP sites searched is kept in the variable
 BINPKG_SITE, which defaults to ftp.NetBSD.org. Any flags that should be added
@@ -1663,7 +1663,7 @@ The following message is displayed as part of the audit-packages installation
 procedure:
 
 ===========================================================================
-$NetBSD: faq.xml,v 1.2 2004/11/20 13:25:22 hubertf Exp $
+$NetBSD: pkgsrc.txt,v 1.7 2004/11/22 16:52:09 wiz Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -2078,7 +2078,7 @@ the PLIST file (or files, see below!).
 
 Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 
-@comment $NetBSD$
+@comment $NetBSD: pkgsrc.txt,v 1.7 2004/11/22 16:52:09 wiz Exp $
 
 8.2. Semi-automatic PLIST generation
 
@@ -2353,7 +2353,7 @@ following command will generate a good starting point for buildlink3.mk files:
 The following real-life example buildlink3.mk is taken from pkgsrc/graphics/
 tiff:
 
-# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
+# $NetBSD: pkgsrc.txt,v 1.7 2004/11/22 16:52:09 wiz Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
@@ -4315,7 +4315,7 @@ A.1. files
 
 A.1.1. Makefile
 
-# $NetBSD$
+# $NetBSD: pkgsrc.txt,v 1.7 2004/11/22 16:52:09 wiz Exp $
 #
 
 DISTNAME=       bison-1.25
@@ -4339,7 +4339,7 @@ of the NetBSD source tree is beyond me.
 
 A.1.3. PLIST
 
-@comment $NetBSD$
+@comment $NetBSD: pkgsrc.txt,v 1.7 2004/11/22 16:52:09 wiz Exp $
 bin/bison
 man/man1/bison.1.gz
 info/bison.info

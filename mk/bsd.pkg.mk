@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1543 2004/11/26 08:15:25 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1544 2004/12/01 09:53:00 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -2330,7 +2330,7 @@ SUBST_FILES.pkgconfig=		${PKGCONFIG_OVERRIDE:S/^${WRKSRC}\///}
 SUBST_SED.pkgconfig=		${PKGCONFIG_OVERRIDE_SED}
 .endif
 
-# By adding this target, it makes sure the the above PREREQ's work.
+# By adding this target, it makes sure the above PREREQ's work.
 .PHONY: pre-configure-override
 pre-configure-override: ${_CONFIGURE_PREREQ}
 	@${DO_NADA}

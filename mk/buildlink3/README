@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.4 2003/09/09 09:13:20 jlam Exp $
+$NetBSD: README,v 1.5 2004/12/01 09:53:01 wiz Exp $
 
  0 Package Views
  ===============
@@ -46,7 +46,7 @@ of pkgsrc, including buildlink2, which conflicted with Alistair's
 implementation of package views.  In September 2003, Johnny Lam
 integrated the functionality on the pkgviews branch into modern
 pkgsrc.  As part of the integration, a new buildlink3 framework was
-created so that the the ability to isolate builds from differences in
+created so that the ability to isolate builds from differences in
 the environment wouldn't be lost.
 
 
@@ -68,7 +68,7 @@ view.
 The pkg_install tools have been enhanced to handle both binary depoted
 packages and binary "overwrite" packages.  The pkgsrc internals have
 been modified to allow building and installing depoted packages and to
-automatically add a depoted package in the the default view.
+automatically add a depoted package in the default view.
 "Overwrite" packages shouldn't be affected by the changes, and can be
 freely mixed with pkgviews packages.
 
