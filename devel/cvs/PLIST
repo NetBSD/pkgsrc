@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2003/01/21 09:58:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/06/19 21:55:26 seb Exp $
 bin/cvs
 bin/cvsbug
 bin/rcs2log
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/cvs.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/cvsclient.info
 info/cvs.info
 info/cvs.info-1
 info/cvs.info-2
@@ -18,8 +16,6 @@ info/cvsclient.info
 info/cvsclient.info-1
 info/cvsclient.info-2
 info/cvsclient.info-3
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/cvsclient.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/cvs.info
 man/man1/cvs.1
 man/man5/cvs.5
 man/man8/cvsbug.8
