@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+
+Also install rxgencon.h, since rx.h includes it.
+
+--- rx/Makefile.in.orig	Sat Jun  3 12:59:05 2000
++++ rx/Makefile.in	Sat Jun  3 12:59:28 2000
+@@ -29,7 +29,7 @@
+ LIB		= librx.a
+ include_HEADERS = rx.h rx_clock.h rx_event.h rx_globs.h rx_mach.h rx_misc.h \
+ 		  rx_multi.h rx_null.h rx_pkt.h rx_queue.h rx_trace.h \
+-		  rx_user.h
++		  rx_user.h rxgencon.h
+ 
+ PROGS		= test_rx_clock
+ 

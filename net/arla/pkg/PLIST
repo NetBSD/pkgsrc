@@ -1,0 +1,96 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+include/atypes.h
+include/fs_errors.h
+include/base64.h
+include/getarg.h
+include/parse_bytes.h
+include/parse_time.h
+include/parse_units.h
+include/resolve.h
+include/arla-roken.h
+include/lock.h
+include/preempt.h
+include/timer.h
+include/lwp_asm.h
+include/rx/rx.h
+include/rx/rx_clock.h
+include/rx/rx_event.h
+include/rx/rx_globs.h
+include/rx/rx_mach.h
+include/rx/rx_misc.h
+include/rx/rx_multi.h
+include/rx/rx_null.h
+include/rx/rx_pkt.h
+include/rx/rx_queue.h
+include/rx/rx_trace.h
+include/rx/rx_user.h
+include/rx/rxkad.h
+include/rx/rxgencon.h
+include/vldb.h
+include/cb.h
+include/fs.h
+include/pts.h
+include/vldb.cs.h
+include/vldb.ss.h
+include/cb.cs.h
+include/cb.ss.h
+include/fs.cs.h
+include/fs.ss.h
+include/pts.cs.h
+include/pts.ss.h
+include/ubik.cs.h
+include/ubik.ss.h
+include/bos.cs.h
+include/cellconfig.h
+include/auth.h
+lib/libarla-roken.a
+lib/liblwp.a
+lib/librx.a
+lib/librxdefclient.a
+lib/librxfsserver.a
+lib/librxvlserver.a
+lib/librxvolserver.a
+lib/libptserver.a
+lib/libptclient.a
+lib/libbosserver.a
+lib/libbosclient.a
+lib/libkaclient.a
+lib/libkaserver.a
+lib/libko.a
+lib/libbufdir.a
+lib/librxkad.a
+lib/libarlalib.a
+lkm/xfs_mod.o
+@unexec /bin/rm -f %D/lkm/xfs_mod
+@dirrm lkm
+bin/ydr
+bin/mount_xfs
+bin/umount_xfs
+bin/xfs_makedev
+bin/startarla
+bin/klog
+bin/tokens
+bin/unlog
+bin/up
+bin/amon
+bin/fs
+bin/pts
+bin/udebug
+bin/vos
+sbin/arlad
+etc/CellServDB.default
+etc/ThisCell.default
+etc/arla.conf.default
+etc/SuidCells.default
+etc/rc.d/arlad.sh
+share/examples/arla/lkm.conf
+share/examples/arla/services
+share/examples/arla/fstab
+@dirrm share/examples/arla
+@exec if [ ! -e @ARLA_CACHE@ ] ; then /bin/mkdir -p @ARLA_CACHE@; /bin/chmod 700 @ARLA_CACHE@; chown root @ARLA_CACHE@; fi
+@exec if [ ! -e /sbin/mount_xfs ]; then /bin/ln -s %D/bin/mount_xfs /sbin/mount_xfs; fi
+@exec if ! /usr/bin/grep xfs_mod /etc/lkm.conf 2>/dev/null 1>&2 ; then /bin/cat %D/share/examples/arla/lkm.conf >> /etc/lkm.conf; fi
+@exec if ! /usr/bin/grep afs3-bos /etc/services 2>/dev/null 1>&2 ; then /bin/cat %D/share/examples/arla/services >> /etc/services; fi
+@exec if ! /usr/bin/grep afs /etc/fstab 2>/dev/null 1>&2 ; then /bin/cat %D/share/examples/arla/fstab >> /etc/fstab; fi
+@unexec /bin/rm -f /sbin/mount_xfs
+@unexec /bin/rm -rf @ARLA_CACHE@

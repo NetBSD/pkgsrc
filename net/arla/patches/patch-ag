@@ -1,0 +1,34 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+
+Install arlad into $(sbindir), not $(bindir).
+
+--- arlad/Makefile.in.orig	Wed May 31 23:31:50 2000
++++ arlad/Makefile.in		Wed May 31 23:33:34 2000
+@@ -15,6 +15,7 @@
+ libdir 		= @libdir@
+ libexecdir 	= @libexecdir@
+ bindir 		= @bindir@
++sbindir		= @sbindir@
+ sysconfdir	= @sysconfdir@
+ transform	= @program_transform_name@
+ ARLACACHEDIR	= @ARLACACHEDIR@
+@@ -139,16 +140,16 @@
+ 		$(CC) -c $(CPPFLAGS) $(DEFS) -I$(srcdir) -I. $(REALCFLAGS) $<
+ 
+ install: all
+-		$(MKINSTALLDIRS) $(DESTDIR)$(bindir)
++		$(MKINSTALLDIRS) $(DESTDIR)$(sbindir)
+ 		PROG_BIN='$(ARLA_BIN)'; for x in $$PROG_BIN; do \
+ 			f=`echo $$x | sed '$(transform)'`; \
+-			$(INSTALL_PROGRAM) $$x $(DESTDIR)$(bindir)/$$f; \
++			$(INSTALL_PROGRAM) $$x $(DESTDIR)$(sbindir)/$$f; \
+ 		done
+ 
+ uninstall:
+ 		PROG_BIN='$(ARLA_BIN)'; for x in $$PROG_BIN; do \
+ 			f=`echo $$x | sed '$(transform)'`; \
+-			rm -f $(DESTDIR)$(bindir)/$$f; \
++			rm -f $(DESTDIR)$(sbindir)/$$f; \
+ 		done
+ 
+ arlad:		$(arlad_OBJS) $(LIBDEPENDS)
