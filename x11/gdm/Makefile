@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/01/22 10:11:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.45 2004/01/22 10:16:19 jmmv Exp $
 #
 
 DISTNAME=	gdm-2.4.4.7
@@ -66,7 +66,7 @@ SUBST_SED.desktop+=	-e 's|@GDMGRP@|${GDMGRP}|g'
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-CFLAGS+= -DSunOS
+CFLAGS+=	-DSunOS
 GDMOWN=		daemon
 GDMGRP=		other
 .else
