@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/01 14:07:53 agc Exp $
+# $NetBSD: Makefile,v 1.7 2000/03/16 12:16:54 wiz Exp $
 
 DISTNAME=		whetstone
 PKGNAME=		whetstone-1.2
@@ -22,6 +22,6 @@ benchmark:
 
 results:
 	-@${MKDIR} /tmp/benches/`domainname`
-	-@cp ${WRKSRC}/whetstone.out /tmp/benches/`domainname`/whetstone.`uname`-`uname -m`-`uname -r`.`hostname`
+	-@${CP} ${WRKSRC}/whetstone.out /tmp/benches/`domainname`/whetstone.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/01/05 11:42:49 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/03/16 12:16:53 wiz Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -20,10 +20,10 @@ post-configure:
 		${MV} $$f $$f.in;				\
 		${SED} -e 's|@PREFIX@|${PREFIX}|g' $$f.in > $$f; \
 	done
-	@chmod 0755 ${WRKSRC}/scripts/config-run
-	@chmod 0755 ${WRKSRC}/scripts/os
-	@chmod 0755 ${WRKSRC}/scripts/results
-	@chmod 0755 ${WRKSRC}/scripts/lmbench
+	@${CHMOD} 0755 ${WRKSRC}/scripts/config-run
+	@${CHMOD} 0755 ${WRKSRC}/scripts/os
+	@${CHMOD} 0755 ${WRKSRC}/scripts/results
+	@${CHMOD} 0755 ${WRKSRC}/scripts/lmbench
 
 do-install:
 	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} \
