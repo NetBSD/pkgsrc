@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/05/19 11:03:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/05/30 20:31:45 dmcmahill Exp $
 
 DISTNAME=	cscope-15.0bl2
 PKGNAME=	cscope-15.0.2
@@ -33,4 +33,4 @@ post-extract:
 .endfor
 .endif
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"
