@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/06 10:53:26 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/09 12:01:07 wiz Exp $
 #
 
 DISTNAME=	scrollkeeper-0.2
@@ -10,10 +10,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://scrollkeeper.sourceforge.net/
 COMMENT=	Open Document Cataloging Project
 
+BUILD_USES_MSGFMT=	yes
 DEPENDS+=	libxml>=1.8.9:../../textproc/libxml
 
 GNU_CONFIGURE=		yes
 USE_LIBINTL=		yes
-BUILD_USES_MSGFMT=	yes
 
 .include "../../mk/bsd.pkg.mk"
