@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2004/01/14 01:59:54 xtraeme Exp $
+
+--- configure.orig	2004-01-14 02:51:24.000000000 +0100
++++ configure	2004-01-14 02:51:41.000000000 +0100
+@@ -1515,7 +1515,7 @@
+ fi
+ 
+ REZ_FLAGS="`$WX_CONFIG_PATH --rezflags`"
+-if test "x$REZ_FLAGS" == "x" -o "x$REZ_FLAGS" == "x#"; then
++if test "x$REZ_FLAGS" = "x" -o "x$REZ_FLAGS" = "x#"; then
+ 	REZ_COMMAND=""
+ else
+ 	REZ_COMMAND="$REZ_FLAGS xchm"
