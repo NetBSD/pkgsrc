@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 18:15:41 jwise Exp $
+$NetBSD: distinfo,v 1.3 2001/05/24 02:58:29 jlam Exp $
 
 SHA1 (tk8.3.2.tar.gz) = a573d33fa76ca64a7148d3cc6b7b18906c311dab
 Size (tk8.3.2.tar.gz) = 2529172 bytes
-SHA1 (patch-aa) = 647f6253cc821b0bbf69c4cc69e53dc4cbce1ec3
-SHA1 (patch-ab) = 79aa30a26172953653d651aa2b7fb31fca32bc79
+SHA1 (patch-aa) = 0867d35fdc70dff1585552f07202d9da244f24db
+SHA1 (patch-ab) = 57af1fc87d4d5a901ae2bd0fd57c8ce0c751989a
+SHA1 (patch-ac) = 222832f6f71f9914f01f51a21b1366ca08aae96a
+SHA1 (patch-ad) = ec0c859b9561e94c9cbf7d9b78920fe2f0004329
