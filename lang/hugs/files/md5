@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1999/08/18 03:17:21 nathanw Exp $
+$Id: md5,v 1.4 2000/07/05 22:10:06 nathanw Exp $
 
-MD5 (Hugs98-May1999.tar.gz) = a8ea50fa1b1cc137d46cbda1cac8c741
+MD5 (hugs98-Feb2000.tar.gz) = 2d2281cc9d6f002526402636c685e11d
