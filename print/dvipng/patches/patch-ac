@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2003/12/15 13:45:07 wiz Exp $
+
+--- tfm.c.orig	Sun Nov 30 12:56:55 2003
++++ tfm.c
+@@ -58,7 +58,6 @@ bool ReadTFM(struct font_entry * tfontp,
+     c++;
+     position += 4;
+   }
+-  free(width);
+   return(true);
+ }
+   
