@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2000/01/23 22:04:54 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/16 19:49:33 wiz Exp $
 #
 
-DISTNAME=	upclient-4.08
+DISTNAME=	upclient-4.09
 CATEGORIES=	net
 MASTER_SITES=	http://www.atomicvoid.net/uptimes/ \
 		http://www.uptimes.net/download/ \
