@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/08/27 18:16:02 jlam Exp $
+# $NetBSD: Makefile,v 1.8 1999/10/08 04:46:34 deberg Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -13,7 +13,7 @@ MAINTAINER=	hubertf@netbsd.org
 BUILD_DEPENDS+=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	teTeX-share-1.0:../teTeX-share
 DEPENDS+=	dialog-0.6z:../../misc/dialog
-DEPENDS+=	libwww-5.1m1:../../www/libwww
+DEPENDS+=	libwww-5.2.8:../../www/libwww
 DEPENDS+=	ncurses-4.2:../../devel/ncurses
 DEPENDS+=	png-1.0.3:../../graphics/png
 
@@ -34,10 +34,7 @@ CONFIGURE_ARGS+=--without-texinfo \
 		--with-mftalkwin \
 		--with-x11 \
 		--enable-a4 \
-		--with-system-wwwlib \
-		--with-libwww=${LOCALBASE} \
-		--with-libwww-libdir=${LOCALBASE}/lib \
-		--with-libwww-include=${LOCALBASE}/include/w3c-libwww \
+		--with-libwww-config=${LOCALBASE}/bin/libwww-config \
 		--with-system-ncurses \
 		--with-ncurses-libdir=${LOCALBASE}/lib \
 		--with-ncurses-include=${LOCALBASE}/include \
