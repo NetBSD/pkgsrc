@@ -1,16 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/09/01 22:42:49 kim Exp $
+$NetBSD: patch-aa,v 1.2 2003/09/06 03:52:08 kim Exp $
 
---- lib/Apache/Gallery.pm.orig	Sun Aug 11 11:40:26 2002
-+++ lib/Apache/Gallery.pm	Sun Sep  1 17:51:34 2002
-@@ -23,9 +23,9 @@
+--- lib/Apache/Gallery.pm.orig	2003-04-21 07:26:51.000000000 -0400
++++ lib/Apache/Gallery.pm	2003-06-29 16:50:09.000000000 -0400
+@@ -25,8 +25,8 @@
  my $escape_rule = "^A-Za-z0-9\-_.!~*'()\/";
  
- use Inline C => Config => 
+ use Inline (C => Config => 
 -				LIBS => '-L/usr/X11R6/lib -lImlib2 -lm -ldl -lXext -lXext',
-+				LIBS => '-lImlib2',
- 				DIRECTORY => Apache->request()->dir_config('InlineDir') ?  Apache->request()->dir_config('InlineDir') : "/tmp/",
 -				INC => '-I/usr/X11R6/include',
-+				INC => '-I@X11BASE@/include',
- 				ENABLE    => 'UNTAINT';
- 
- use Inline 'C';
++				LIBS => '-lImlib2',
++				INC => '-I@LOCALBASE@/include -I@X11BASE@/include',
+ 				UNTAINT => 1,
+ 				DIRECTORY => File::Spec->tmpdir()
+ 			);
