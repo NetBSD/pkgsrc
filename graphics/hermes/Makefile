@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/30 08:22:15 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/03 14:52:49 wiz Exp $
 
 DISTNAME=		Hermes-1.2.6-2
 PKGNAME=		Hermes-1.2.6.2
@@ -7,7 +7,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		http://hermes.terminal.at/files/
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://hermes.terminal.at/
+HOMEPAGE=		http://www.clanlib.org/hermes/
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
