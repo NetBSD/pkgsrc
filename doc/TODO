@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.554 2003/05/14 18:54:58 salo Exp $
+$NetBSD: TODO,v 1.555 2003/05/15 07:43:14 grant Exp $
 
 Suggested new packages
 ======================
@@ -113,7 +113,7 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o gauche-0.6.7 [kei]
 	o gawk-3.1.2
-	o gcc-3.2.3 [pkg/21316]
+	o gcc-3.3 [gcc-3.2.3, pkg/21316]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gd-2.0.12
