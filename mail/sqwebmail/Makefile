@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/24 17:39:29 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/24 19:40:07 jlam Exp $
 
 DISTNAME=	sqwebmail-3.3.1
 CATEGORIES=	www
@@ -59,7 +59,7 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endfor
 .for FILE in ldapsearch sendit.sh
-CONF_FILES_PERMS+=	${DATADIR}/sqwebmail/${FILE}.dist		\
+CONF_FILES_PERMS+=	${DATADIR}/sqwebmail/${FILE}			\
 			${PKG_SYSCONFDIR}/${FILE}			\
 			${ROOT_USER} ${ROOT_GROUP} 0755
 .endfor
