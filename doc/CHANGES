@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.151 2002/10/03 15:47:49 abs Exp $
+$NetBSD: CHANGES,v 1.152 2002/10/03 16:11:05 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3082,3 +3082,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libxml2 to 2.4.25 [martti 2002-10-03]
 	Updated libxslt to 1.0.21 [martti 2002-10-03]
 	Updated mserv to 0.33nb5 [abs 2002-10-03]
+	Updated popt to 1.6.4 [martti 2002-10-03]
