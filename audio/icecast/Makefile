@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/08/01 06:40:50 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/09 11:41:31 jlam Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -9,23 +9,24 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.icecast.org/
 COMMENT=	Internet broadcasting system using Mpeg Layer III streaming
 
-PTHREAD_OPTS+=		native
+USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-readline \
 			--with-libwrap \
-			--with-python \
-			--with-python-includes=${LOCALBASE}/include \
-			--with-python-libraries=${LOCALBASE}/lib
-CFLAGS+=		-I${BUILDLINK_DIR}/include/readline
+			--with-python
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.readline}/include/readline
+CPPFLAGS+=		${BUILDLINK_CPPFLAGS.${PYPACKAGE}}
+LDFLAGS+=		${BUILDLINK_LDFLAGS.${PYPACKAGE}}
+LIBS+=			-lutil
+PTHREAD_OPTS+=		native
 
-.include "../../devel/readline/buildlink.mk"
-.include "../../security/tcp_wrappers/buildlink.mk"
-.include "../../mk/pthread.buildlink.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../lang/python/application.mk"
+.include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-.  include "../../devel/unproven-pthreads/buildlink.mk"
-PGCC=		${CC} -I${BUILDLINK_PREFIX.unproven-pthreads}/pthreads/include
-CONFIGURE_ENV+=	CC="${PGCC}"
+.  include "../../devel/unproven-pthreads/buildlink2.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
