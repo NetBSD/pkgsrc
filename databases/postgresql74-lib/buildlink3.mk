@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/12/02 10:41:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2005/03/18 19:57:31 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 POSTGRESQL74_LIB_BUILDLINK3_MK:=	${POSTGRESQL74_LIB_BUILDLINK3_MK}+
@@ -15,6 +15,9 @@ BUILDLINK_DEPENDS.postgresql74-lib+=		postgresql{74,}-lib>=7.4.0
 BUILDLINK_RECOMMENDED.postgresql74-lib+=	postgresql74-lib>=7.4.3
 BUILDLINK_PKGSRCDIR.postgresql74-lib?=	../../databases/postgresql74-lib
 BUILDLINK_INCDIRS.postgresql74-lib?=	include/postgresql
+
+# This variable contains the libraries need to link most clients.
+BUILDLINK_LDADD.postgresql74-lib=	-lpq ${BUILDLINK_LDADD.gettext}
 .endif	# POSTGRESQL74_LIB_BUILDLINK3_MK
 
 .include "../../security/openssl/buildlink3.mk"
