@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.53 2002/09/25 04:59:49 rh Exp $
+$NetBSD: CHANGES,v 1.54 2002/09/25 06:51:25 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2960,3 +2960,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added pvs-3.0 [jschauma 2002-09-24]
 	Added gtkspell-2.0.2 [rh 2002-09-25]
 	Updated pan to 0.13.0 [rh 2002-09-25]
+	Updated leafnode to 1.9.27 [cjep 2002-09-25]

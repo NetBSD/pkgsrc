@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2002/09/22 10:35:48 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/25 06:50:17 cjep Exp $
 
-DISTNAME=		leafnode-1.9.26.rel
-PKGNAME=		leafnode-1.9.26
+DISTNAME=		leafnode-1.9.27.rel
+PKGNAME=		leafnode-1.9.27
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leafnode/}
 
 EXTRACT_SUFX=		.tar.bz2
-#MASTER_SITES=		ftp://wpxx02.toxi.uni-wuerzburg.de/pub/            \
-#			ftp://ftp.karlsruhe.org/pub/news/servers/leafnode/ \
-#			ftp://ftp.stikman.com/pub/leafnode/                \
-#			${MASTER_SITE_SUNSITE:=system/news/transport/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		cjep@netbsd.org
 HOMEPAGE=		http://www.leafnode.org/
 COMMENT=		NNTP server for small (dialup) sites
 
