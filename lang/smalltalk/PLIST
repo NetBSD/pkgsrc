@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/20 01:32:55 mjl Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/01/31 14:08:58 mjl Exp $
 bin/gst
 bin/gst-config
 bin/gst-package
@@ -29,19 +29,19 @@ info/gst.info-9
 @exec install-info --info-dir=%D/info %D/info/gst.info
 lib/libgst.la
 lib/libgst.a
-lib/smalltalk/blox-tk-1.95.9.so
+lib/smalltalk/blox-tk-1.95.10.so
 lib/smalltalk/blox-tk.la
 lib/smalltalk/blox-tk.a
 lib/smalltalk/blox-tk.so
-lib/smalltalk/md5-1.95.9.so
+lib/smalltalk/md5-1.95.10.so
 lib/smalltalk/md5.so
 lib/smalltalk/md5.a
 lib/smalltalk/md5.la
-lib/smalltalk/regex-1.95.9.so
+lib/smalltalk/regex-1.95.10.so
 lib/smalltalk/regex.a
 lib/smalltalk/regex.la
 lib/smalltalk/regex.so
-lib/smalltalk/tcp-1.95.9.so
+lib/smalltalk/tcp-1.95.10.so
 lib/smalltalk/tcp.a
 lib/smalltalk/tcp.la
 lib/smalltalk/tcp.so
@@ -95,7 +95,6 @@ share/smalltalk/examples/Bench.st
 share/smalltalk/examples/Buffers.st
 share/smalltalk/examples/Case.st
 share/smalltalk/examples/CompFileSeg.st
-share/smalltalk/examples/DBFile.st
 share/smalltalk/examples/Debugger.st
 share/smalltalk/examples/Dinner.st
 share/smalltalk/examples/EditStream.st
@@ -113,9 +112,7 @@ share/smalltalk/examples/RecursLit.st
 share/smalltalk/examples/RegExp.st
 share/smalltalk/examples/Richards.st
 share/smalltalk/examples/SortCriter.st
-share/smalltalk/examples/Timer.st
 share/smalltalk/examples/Tokenizer.st
-share/smalltalk/examples/Watchdog.st
 share/smalltalk/examples/pepe.sed
 share/smalltalk/examples/xml.sed
 share/smalltalk/examples/blox/Man.st

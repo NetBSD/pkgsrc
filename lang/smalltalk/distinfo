@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/01/20 01:32:55 mjl Exp $
+$NetBSD: distinfo,v 1.5 2002/01/31 14:08:58 mjl Exp $
 
-SHA1 (smalltalk-1.95.9.tar.gz) = 2970076bb264f6fb5225c0bf90d15196599a839b
-Size (smalltalk-1.95.9.tar.gz) = 2239478 bytes
+SHA1 (smalltalk-1.95.10.tar.gz) = 7cfe11d39681f1114695f4b981ebcdd76e4dd553
+Size (smalltalk-1.95.10.tar.gz) = 2233844 bytes
