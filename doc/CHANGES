@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4540 2004/01/22 10:09:10 agc Exp $
+$NetBSD: CHANGES,v 1.4541 2004/01/22 10:54:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -383,3 +383,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.67 [grant 2004-01-22]
 	Updated gdm to 2.4.4.7nb1 [jmmv 2004-01-22]
 	Updated portsentry to 1.2 [agc 2004-01-22]
+	Updated gnome to 2.4.1nb1 [jmmv 2004-01-22]
