@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4710 2004/02/06 22:07:36 jmmv Exp $
+$NetBSD: CHANGES,v 1.4711 2004/02/06 22:31:54 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -676,3 +676,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libbonoboui to 2.4.3 [jmmv 2004-02-06]
 	Updated libgtop2 to 2.0.8 [jmmv 2004-02-06]
 	Updated zenity to 1.8 [jmmv 2004-02-06]
+	Updated nautilus to 2.4.2 [jmmv 2004-02-06]
