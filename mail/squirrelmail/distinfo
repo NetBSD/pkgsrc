@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.13 2003/04/15 09:25:08 martti Exp $
-
-SHA1 (squirrelmail-1.4.0.tar.bz2) = 0e416e8fd530fab2762be7c2b6816e36b463309f
-Size (squirrelmail-1.4.0.tar.bz2) = 1668728 bytes
-SHA1 (patch-aa) = cd78d02216a142ffe3cb66c31d26104f062f724e

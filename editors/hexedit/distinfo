@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/01/18 22:59:30 mjl Exp $
-
-SHA1 (hexedit-1.2.2.src.tgz) = 6f145f07717680fb088fb56f9813ba429bfae6b3
-Size (hexedit-1.2.2.src.tgz) = 56247 bytes
-SHA1 (patch-aa) = fbb203fb3e86b5ac2d029e9859112d5e7ec37344
-SHA1 (patch-ac) = 969c8f19692e63eb817f917f35b8ff871e689ed9

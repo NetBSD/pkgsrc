@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/06/29 23:55:01 jtb Exp $
-
-SHA1 (tinyscheme-1.33.tar.gz) = c596b428487c001d31f812137673a2683b352fae
-Size (tinyscheme-1.33.tar.gz) = 52733 bytes
-SHA1 (patch-aa) = d5e9006396c3d894f78a56a49b0d67bf18a1b6f2
-SHA1 (patch-ab) = b8577bc0659b88561bd8fe488e531ba7c69656b4

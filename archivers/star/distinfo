@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/02/23 11:28:59 salo Exp $
-
-SHA1 (star-1.4.3.tar.gz) = c59b68d97edba77a9ac6000be04d457ded1eefe9
-Size (star-1.4.3.tar.gz) = 520388 bytes
-SHA1 (patch-aa) = 4fe4af396adf23eb7ac071b02a7bf726ab1e4318

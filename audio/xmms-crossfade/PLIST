@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:25 zuntum Exp $
-lib/xmms/Output/libcrossfade.a
-lib/xmms/Output/libcrossfade.la
-lib/xmms/Output/libcrossfade.so

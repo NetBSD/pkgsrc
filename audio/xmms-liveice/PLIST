@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/01 12:27:43 jmmv Exp $
-lib/xmms/Effect/libliveice.a
-lib/xmms/Effect/libliveice.la
-lib/xmms/Effect/libliveice.so
-@comment in xmms: @dirrm lib/xmms/Effect

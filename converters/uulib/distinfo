@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/08/31 16:54:33 wiz Exp $
-
-SHA1 (uudeview-0.5.18.tar.gz) = 357c6adc20ef247c0a7745c42318230e90b16790
-Size (uudeview-0.5.18.tar.gz) = 260889 bytes
-SHA1 (patch-aa) = 2a60a00bb2bc4078063d285df65a5d4b906582c5

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/02/05 21:05:58 drochner Exp $
-
-SHA1 (mod_python-2.7.6.tgz) = 37579015f2c2bf0c6106e8d301b8a09254221b54
-Size (mod_python-2.7.6.tgz) = 176449 bytes
-SHA1 (patch-aa) = e1f3c0ea969ac3a512ac9b1ca171a3691cef1189
-SHA1 (patch-ab) = b79f50bed5ad6bda8f5e6aef111fbc9b9aedf943
-SHA1 (patch-ac) = 1c2a5c1d961e9710561c406b60518fbfef4cb2cb
-SHA1 (patch-ad) = 6ce2a424d581ebfc8763543451af566809b979a8

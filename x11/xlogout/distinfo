@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:56 skrll Exp $
-
-SHA1 (xlogout.tar.gz) = fca768ed9b07354d1a2226d6e1945d0f8958610f
-Size (xlogout.tar.gz) = 5612 bytes
-SHA1 (patch-aa) = 1ebcafc86e02690f5400c5fc30f5983c555eea84

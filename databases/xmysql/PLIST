@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:56 zuntum Exp $
-bin/xmysql
-share/xmysql/mysql.xpm
-share/xmysql/sqlhelp.txt
-share/xmysql

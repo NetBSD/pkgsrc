@@ -1,8 +1,0 @@
-$NetBSD: patch-ai,v 1.1 1999/12/08 16:18:50 agc Exp $
-
---- Configure	Thu Dec  3 11:56:33 1998
-+++ Configure	Thu Dec  3 11:57:30 1998
-@@ -355,3 +355,2 @@
-        set t_mode = 4711
--       set mode = 4711
-     endif

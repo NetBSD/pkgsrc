@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/07/14 03:47:46 dmcmahill Exp $
-
-SHA1 (magic-7.1.tar.gz) = 176eb4c6a0ff33c6e265e61360c02da4f454f101
-Size (magic-7.1.tar.gz) = 3860487 bytes
-SHA1 (patch-aa) = bb18e6672441e404b0969cd1f5cb387ef4f97386
-SHA1 (patch-ab) = c4b516d71ec012593f0559e8d0d1b5bad69d736a

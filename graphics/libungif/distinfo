@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/12/04 07:04:36 thorpej Exp $
-
-SHA1 (libungif-4.1.0b1.tar.gz) = 5675aeb4a96ec476929c6d78907b5a689f872b03
-Size (libungif-4.1.0b1.tar.gz) = 351757 bytes
-SHA1 (patch-ab) = a93e2fe0a93aacda4566e723e681fd316fe2cb2a
-SHA1 (patch-ac) = e5e156e1b85254d989c19dd39bb10e4fd8c33054

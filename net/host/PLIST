@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:36 zuntum Exp $
-bin/host
-bin/mxlookup
-bin/rblookup
-man/man1/host.1

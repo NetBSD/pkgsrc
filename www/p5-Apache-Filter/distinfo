@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/01 02:09:46 jlam Exp $
-
-SHA1 (Apache-Filter-1.019.tar.gz) = 66e5ab2c7798d7053ccca3e1f12dfde4856e2897
-Size (Apache-Filter-1.019.tar.gz) = 25509 bytes
-SHA1 (patch-aa) = f9d99a57056051115b494f9d51f5071863f28b29

@@ -1,3 +1,0 @@
-The SQL::Statement module implements a small, abstract SQL engine. This
-module is not usefull itself, but as a base class for deriving concrete
-SQL engines.

@@ -1,8 +1,0 @@
-UMB Scheme is an implementation of the language described in the
-"IEEE Standard for the Scheme Programming Language" (December,
-1990).
-
-All syntax, variables and procedures are implemented.  Integers
-are implemented as fixnums and bignums, rationals as pairs of
-integers, (inexact) reals as double-precision floats, and (inexact)
-complex numbers as pairs of double-precision floats.

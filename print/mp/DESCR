@@ -1,8 +1,0 @@
-The mp program will pretty print various files for you. It can be used
-in conjunction with a mail reading utility for producing a pretty print
-of your mail items. It can be used with a news reading tool to pretty
-print news articles. Digests can also be printed, and this version can
-pretty print ordinary ASCII files as well. Support for personal organiser
-printing was added into the last released version. There are numerous
-configuration options to allow you to adjust the way mp generates it's
-output.

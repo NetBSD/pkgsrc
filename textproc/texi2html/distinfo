@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:11 skrll Exp $
-
-SHA1 (texi2html-1.64.tar.gz) = 973b95dcc06fcdae4929a4a7a4ee7f51b568f84c
-Size (texi2html-1.64.tar.gz) = 143333 bytes
-SHA1 (patch-aa) = e6af355958fe61ad7cb0584685715c38e05cb3d5

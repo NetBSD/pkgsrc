@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:13 agc Exp $
-
-SHA1 (jitterbug-1.6.2.tar.gz) = c9c25ee892883560a829f832efbd028b8531651f
-Size (jitterbug-1.6.2.tar.gz) = 98728 bytes
-SHA1 (patch-aa) = 9573d1a2f78aef1bd381082080902c50b40bb067

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:22 zuntum Exp $
-etc/rc.d/rtspd
-man/man8/rtspd.8
-sbin/rtspd
-share/doc/ra-rtsp-proxy/README
-share/doc/ra-rtsp-proxy/license.txt
-@dirrm share/doc/ra-rtsp-proxy

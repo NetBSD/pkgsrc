@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/04/12 14:15:07 wiz Exp $
-
-SHA1 (emacs-21.3.tar.gz) = a8aae1b619e50ed6fed5b1351b54b38ed98c61b8
-Size (emacs-21.3.tar.gz) = 20399831 bytes
-SHA1 (leim-21.3.tar.gz) = a540ba0cb8be99f3dcef904110ac381b07add744
-Size (leim-21.3.tar.gz) = 3291224 bytes
-SHA1 (patch-aa) = a29b97515f4fea8feded6952d4ccd56c05d9f94d

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:28 zuntum Exp $
-bin/xmame
-man/man6/xmame.6
-share/xmame/xmamerc
-@dirrm share/xmame

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/17 09:02:01 salo Exp $
-bin/goto
-bin/if
-bin/osh
-man/man1/goto.1
-man/man1/if.1
-man/man1/osh.1

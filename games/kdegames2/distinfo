@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/06/30 21:31:24 jdolecek Exp $
-
-SHA1 (kdegames-2.2.2.tar.bz2) = 7f569c59053854396e364c1448c9ec9ce6ef0ed6
-Size (kdegames-2.2.2.tar.bz2) = 8828605 bytes
-SHA1 (patch-aa) = e5c3c0927f29a3f57af70b6c1012dc830d7e806e

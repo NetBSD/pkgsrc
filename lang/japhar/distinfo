@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/07/07 13:56:27 seb Exp $
-
-SHA1 (japhar-0.08.tar.gz) = 3f450610ca31061c1c183c8e86d1fcd47660f86d
-Size (japhar-0.08.tar.gz) = 903160 bytes
-SHA1 (patch-ac) = 26b8f7321fad1944d5df4eba757c35f9e32fa015
-SHA1 (patch-ad) = 640ebdda8fe1a6d51de69dde2626c62f6b2cf1e0
-SHA1 (patch-ae) = 25e5f05ad68b1788247d31144410a87fc2deec1f
-SHA1 (patch-af) = d41e8e516225e5d637882c44e44ac73e91e12941
-SHA1 (patch-ag) = 4c55ba01bb3665b779a534fbe11cd22ec400b78c

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 03:32:35 jschauma Exp $
-bin/piewm
-lib/X11/twm/system.twmrc
-${IMAKE_MAN_DIR}/piewm.${IMAKE_MANNEWSUFFIX}

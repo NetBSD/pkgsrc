@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:30 agc Exp $
-
-SHA1 (gsm-1.0.10.tar.gz) = ee47a81f4137bf3ce933dc610cb2293055ce9c02
-Size (gsm-1.0.10.tar.gz) = 65928 bytes
-SHA1 (patch-aa) = e976c2ceb5e21bc77c51830cbaef9a94c8e0baf2
-SHA1 (patch-ab) = 989ea8de589a43ebf91c8f78f4b2aa722f6c91d3
-SHA1 (patch-ac) = 9e4e582cfd4f6892531578d9df25a29485e8cf32

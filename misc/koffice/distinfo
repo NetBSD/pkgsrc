@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2003/04/09 13:57:14 markd Exp $
-
-SHA1 (koffice-1.2.1.tar.bz2) = f3fd98d081205f2cd7be3fba76e4cf5b053b8e53
-Size (koffice-1.2.1.tar.bz2) = 9275595 bytes
-SHA1 (1.2.1_kword_crashes.diff) = 13b6a4843ec918371e6de1622be1154d984aa76b
-Size (1.2.1_kword_crashes.diff) = 3816 bytes

@@ -1,6 +1,0 @@
-The Apache HTTP Server Project is a collaborative software development
-effort aimed at creating a robust, commercial-grade, featureful, and
-freely-available source code implementation of an HTTP (Web) server.
-
-This package is IPv6 ready.  The Apache module API is slightly modified,
-so some third-party modules may not work.

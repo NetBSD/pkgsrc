@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/04/28 02:36:35 dmcmahill Exp $
-
-SHA1 (simian_12_98.tar.gz) = c7d57087a397970b05195f497c98a058cea1a93a
-Size (simian_12_98.tar.gz) = 18474 bytes
-SHA1 (patch-aa) = fa43e88db6902537114d49ff0f14d420927c50e1
-SHA1 (patch-ab) = e31c96d7fa79833dbd9dc7d22ea1f0a95b327d4a
-SHA1 (patch-ac) = 64b974adb3111e21bd6f14838371eb5db5cbd050
-SHA1 (patch-ad) = d3f6b068fe0d16a8c097b7e5a77d7f89d010e8b8

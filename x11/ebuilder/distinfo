@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/08/25 21:52:34 jlam Exp $
-
-SHA1 (ebuilder-0.56d.tar.gz) = fb0c7d56a7c55580082a832be975d188fe0e5e5d
-Size (ebuilder-0.56d.tar.gz) = 84717 bytes
-SHA1 (patch-aa) = 906ee4003691e821b386cdcd6ccdd56777f7872d
-SHA1 (patch-ab) = a50121d2072e2c756432c4e0bfd44c6a2683498a

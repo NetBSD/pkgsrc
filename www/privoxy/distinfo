@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/16 03:02:04 kim Exp $
-
-SHA1 (privoxy-3.0.2-stable-src.tar.gz) = 8af78f6f8cd445d0de3cdbac4595524c206f7ae4
-Size (privoxy-3.0.2-stable-src.tar.gz) = 1925287 bytes
-SHA1 (patch-aa) = 2bdc980df283f14ac8694f04b07e6d499d46c5c1
-SHA1 (patch-ab) = 548d11ad83cef96c311cb0453cb149b71577631e

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/10 01:31:25 jtb Exp $
-bin/gperiodic
-share/gnome/apps/Applications/gperiodic.desktop
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gperiodic.mo
-share/pixmaps/gperiodic.png
-@unexec ${RMDIR} %D/share/gnome/apps/Applications 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome 2>/dev/null || ${TRUE}

@@ -1,6 +1,0 @@
-NetBSD's bmake utility uses some customised .mk files, in order to
-pre-define certain definitions and targets, which guide the build
-process.
-
-This package provides *.mk files for the bmake(1) utility, for a
-number of different operating systems other than NetBSD.

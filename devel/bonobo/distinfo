@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.14 2002/12/26 17:19:25 jlam Exp $
-
-SHA1 (bonobo-1.0.18.tar.gz) = e6f6790e0c0eb29a295163f643569e36896d27a0
-Size (bonobo-1.0.18.tar.gz) = 1279988 bytes
-SHA1 (patch-aa) = abb08c79e9971e755f4fef72bce46a88e9299397

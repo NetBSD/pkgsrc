@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2002/12/23 13:13:29 tron Exp $
-
-SHA1 (tkcvs_7_1_2.tar.gz) = 01342ef43bb6d04bb1daa9b760510ccc60e8ba6a
-Size (tkcvs_7_1_2.tar.gz) = 239874 bytes
-SHA1 (patch-aa) = a9d50bce32e84d9b7e23244957430fca57a765cd

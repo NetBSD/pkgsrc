@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:43 zuntum Exp $
-bin/xevil
-man/man6/xevil.6

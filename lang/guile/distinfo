@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.13 2003/02/21 12:03:30 mycroft Exp $
-
-SHA1 (guile-1.6.3.tar.gz) = 6b699dd79f41aa4f3555f70286f51f3824e4617e
-Size (guile-1.6.3.tar.gz) = 2780882 bytes
-SHA1 (patch-ad) = 180cb9e0f5dcd3e53f0b3b17d1ac0fc5016c1e36
-SHA1 (patch-ae) = 7f71ba48cd9025c10337771ce62f5fa257b66b67
-SHA1 (patch-af) = 7d4f1934fe57efb4f8803f5e68e6a13569e836c0
-SHA1 (patch-ag) = 33735111e799c529f42cfa97a71be8dfaa56aa8b
-SHA1 (patch-ah) = e66596a5ecc5c2d4fd09833507499b4d02c7af8a

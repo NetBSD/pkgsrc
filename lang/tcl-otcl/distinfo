@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/09/02 23:12:23 seb Exp $
-
-SHA1 (otcl-1.0a8.tar.gz) = 84cf8ec97a79230f5de6ae65ccee3ff788c7c20c
-Size (otcl-1.0a8.tar.gz) = 300607 bytes
-SHA1 (patch-aa) = 87f242437f8c22c9e6260d9343fa3ef3eabf2c8f

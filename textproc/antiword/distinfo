@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2002/08/21 03:39:42 rh Exp $
-
-SHA1 (antiword-0.33.tar.gz) = 401e25e79a1943e53cc6c1673b72e6cb4ccd62ee
-Size (antiword-0.33.tar.gz) = 240684 bytes
-SHA1 (patch-aa) = 9c6c24fc7e5b4a783d50be46ae87296cb9cace0e

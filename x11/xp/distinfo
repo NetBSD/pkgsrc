@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:58 skrll Exp $
-
-SHA1 (xp-1.2b10.tar.gz) = 70b232966ee2483ceb8f0ae8f0ef0cf7b899104b
-Size (xp-1.2b10.tar.gz) = 43036 bytes
-SHA1 (patch-aa) = 0d6fa753ff8010ba6264b0bfc19e44c3a5f723ce
-SHA1 (patch-ab) = 62b440dd9e5ee419113589d3758a1a6bcba35f5d

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/12/24 17:21:03 jmmv Exp $
-
-SHA1 (udunits-1.11.7/udunits.tar.Z) = 2d178bad5d2c8ebe1c16960865ea96ce4ced0e3e
-Size (udunits-1.11.7/udunits.tar.Z) = 352699 bytes
-SHA1 (patch-aa) = 0998141196898a7bc168fe45c5019586645167f2
-SHA1 (patch-ab) = 9a98e048499d38f8dedba6fb1a169e178dbd77ba

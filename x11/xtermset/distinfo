@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:08:00 skrll Exp $
-
-SHA1 (xtermset-0.4.tar.gz) = 54221a6decff217e87d651bc7227b136ff09f384
-Size (xtermset-0.4.tar.gz) = 20102 bytes
-SHA1 (patch-aa) = 042cc7fbe9b1cda59db13c3a17c27563bc6ad0ff

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:45 seb Exp $
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/cronolog.info
-info/cronolog.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/cronolog.info
-man/man8/cronolog.8
-man/man8/cronosplit.8
-sbin/cronolog
-sbin/cronosplit

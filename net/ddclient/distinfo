@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/03/25 01:18:50 hubertf Exp $
-
-SHA1 (ddclient-3.6.2.tar.gz) = c449ccbb63315bd6a0390bbc9ea852848d451ec9
-Size (ddclient-3.6.2.tar.gz) = 32793 bytes
-SHA1 (patch-aa) = 95f103edb6433caec994681233ee9a14b9a51597

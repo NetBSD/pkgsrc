@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/27 17:41:07 drochner Exp $
-include/libintl.h
-lib/libintl.a
-lib/libintl.la
-lib/libintl.so
-lib/libintl.so.4
-lib/libintl.so.4.0

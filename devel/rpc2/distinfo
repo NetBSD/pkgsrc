@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/08/25 18:38:48 jlam Exp $
-
-SHA1 (rpc2-1.13.tar.gz) = b4f13fe3f878c632b66a6a1ac19883c735eeef4d
-Size (rpc2-1.13.tar.gz) = 447572 bytes
-SHA1 (patch-aa) = dcabf7b6f7afdf8f3e058facfe8a6442177a03bf

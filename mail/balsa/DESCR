@@ -1,8 +1,0 @@
-  Balsa is an e-mail reader.  This client is part of the GNOME desktop
-environment. It supports local mailboxes, POP3 and IMAP.  It supports:
-
-	* Local mailboxes (mbox, maildir, mh)
-	* POP3
-	* IMAP
-	* MIME (in progress)
-	* many other things that I can't think of right now! :-)

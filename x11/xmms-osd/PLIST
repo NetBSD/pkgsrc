@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/12 12:15:35 jmmv Exp $
-lib/xmms/General/libxmms_osd.a
-lib/xmms/General/libxmms_osd.la
-lib/xmms/General/libxmms_osd.so
-@comment in xmms: @dirrm lib/xmms/General

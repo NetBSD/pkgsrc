@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/02 21:04:19 seb Exp $
-bin/cmail
-bin/pxboard
-bin/xboard
-bin/zic2xpm
-info/xboard.info
-man/man6/cmail.6
-man/man6/xboard.6
-man/man6/zic2xpm.6

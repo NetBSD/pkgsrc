@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/06/19 07:11:54 tron Exp $
-
-SHA1 (linux-507.tar.gz) = d3e23fc3f97f872c1ed794ad43f64967a39f5b19
-Size (linux-507.tar.gz) = 9282753 bytes
-SHA1 (sol-507.tar.gz) = 8f5782493757a5acd28de9814c6d4cb4450e1dac
-Size (sol-507.tar.gz) = 9937465 bytes
-SHA1 (patch-aa) = 635cfe39ca34ebc83cdb4633282f2fb667c452c3

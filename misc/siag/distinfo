@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/03/05 14:30:59 wiz Exp $
-
-SHA1 (siag-3.5.7.tar.gz) = 007030eb29fc1a4d3a0d78f9d93893cf40b6b84b
-Size (siag-3.5.7.tar.gz) = 1653929 bytes
-SHA1 (patch-av) = 2e2598ca694ed93ff6bd34c9bb4625f915d412ad

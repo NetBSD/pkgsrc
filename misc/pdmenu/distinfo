@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/01/01 17:36:28 wiz Exp $
-
-SHA1 (pdmenu_1.2.65.tar.gz) = d25a7cc5f0c316cbfdcd84ec22a1766ee8c50272
-Size (pdmenu_1.2.65.tar.gz) = 88453 bytes
-SHA1 (patch-aa) = e8d10f390785e1971e13b515e8d71c747353a0cc

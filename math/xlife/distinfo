@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/12/05 10:57:46 abs Exp $
-
-SHA1 (xlife-5.0.tar.gz) = 168edb2c8bdeb1689fea82c56db76e85aeeed43e
-Size (xlife-5.0.tar.gz) = 214220 bytes
-SHA1 (patch-aa) = a1797c733efa564b361f299650ea521987635feb
-SHA1 (patch-ab) = 891c098845652ad9f172b3693cdf416685e9a960

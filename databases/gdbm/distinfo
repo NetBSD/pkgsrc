@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/11/01 00:31:18 wiz Exp $
-
-SHA1 (gdbm-1.8.3.tar.gz) = a0296b1986a99cb9ec0dc3b17ea99aec76e9b760
-Size (gdbm-1.8.3.tar.gz) = 228695 bytes
-SHA1 (patch-ab) = 057163a0ee7b2b479d663a578eb77e10113603b1

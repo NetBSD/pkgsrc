@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/03/02 09:04:03 jtb Exp $
-
-SHA1 (ntl-5.3.1.tar.gz) = 22f9004d59595ddf931150e39805880cca67f8bc
-Size (ntl-5.3.1.tar.gz) = 669649 bytes
-SHA1 (patch-aa) = 3d263407a52690b7ef1346e8bcc8fcd42acbf7c8
-SHA1 (patch-ab) = 726bb373a3dc31c33763282c5cc7c07110a33f23
-SHA1 (patch-ac) = f6a1e211379e713aee4fb575cc2d92563cbdd6fd

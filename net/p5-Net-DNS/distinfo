@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/03/03 10:56:57 mjl Exp $
-
-SHA1 (Net-DNS-0.33.tar.gz) = a4bb8e6aabfe78198ae98e73cf2b607225eccebb
-Size (Net-DNS-0.33.tar.gz) = 91890 bytes
-SHA1 (patch-aa) = fb4bed3ed4c1c0353716529d27929444f15f6e31

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/11/25 11:01:18 schmonz Exp $
-
-SHA1 (suse73/i386/xforms.rpm) = 36084b10475a9c44a49c065ff4f6d88bc37e20f2
-Size (suse73/i386/xforms.rpm) = 565878 bytes
-SHA1 (suse73/ppc/xforms.rpm) = 7ac015a31f7dd802520de3f6d45e4dfd36176756
-Size (suse73/ppc/xforms.rpm) = 692123 bytes

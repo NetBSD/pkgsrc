@@ -1,5 +1,0 @@
-# $NetBSD: Setup.in,v 1.3 2000/10/29 20:48:27 tsarna Exp $
-#
-*shared*
-gdbm gdbmmodule.c -I@LOCALBASE@/include -L@LOCALBASE@/lib \
-	-R@LOCALBASE@/lib -lgdbm

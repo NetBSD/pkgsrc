@@ -1,5 +1,0 @@
-# $NetBSD: Setup.in,v 1.1 2002/03/14 17:58:49 wiz Exp $
-#
-*shared*
-readline readline.c @BUILDLINK_LDFLAGS@ -R@LOCALBASE@/lib \
-	@BUILDLINK_CPPFLAGS@ -lreadline -ltermcap

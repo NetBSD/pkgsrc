@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/04/04 20:56:38 agc Exp $
-
-SHA1 (hping2.0.0-rc1.tar.gz) = 710dbc77b04399cc8979a910aa03e805c17bd01c
-Size (hping2.0.0-rc1.tar.gz) = 90496 bytes
-SHA1 (patch-aa) = 9bc0ba438d29191247d61c0b9a4e71d09e4c60a0
-SHA1 (patch-ab) = 7862d487c5fa9940a51c82154e5427f426c93270

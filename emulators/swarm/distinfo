@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/04/01 05:50:44 dmcmahill Exp $
-
-SHA1 (swarm-0.57.tar.gz) = 63868d16472e4dcca2a595ea6c993abd5220c933
-Size (swarm-0.57.tar.gz) = 386019 bytes
-SHA1 (patch-aa) = e37efffc93a9991dbfe0ef613d3aca77d4204fd2
-SHA1 (patch-ab) = 10279324142fdbe50a4525bd7285c7cd328f3875
-SHA1 (patch-ac) = 57f5103fde8c1380ddd78c58dfd57c5368d92bfd

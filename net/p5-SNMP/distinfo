@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:28 wiz Exp $
-
-SHA1 (SNMP-3.1.0.tar.gz) = 097be7307d2803e74149abf294735d7aea5cfba8
-Size (SNMP-3.1.0.tar.gz) = 75010 bytes
-SHA1 (patch-aa) = 5a2c41eda609fee3b30ceccf436650c29f54d41b
-SHA1 (patch-ab) = 919e877aabec85b775a07cc74a7c646485298f70
-SHA1 (patch-ac) = d36f4edac534971f598129880f62af52120ff829

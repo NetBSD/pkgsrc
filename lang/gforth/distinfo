@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:50 agc Exp $
-
-SHA1 (gforth-0.5.0.tar.gz) = 03c0ffdf9381e0b29ed229b36b1d52e6a6da6758
-Size (gforth-0.5.0.tar.gz) = 1472986 bytes
-SHA1 (patch-aa) = 426205f27609f24f818837a853c974134c0d4035
-SHA1 (patch-ab) = a80fd7553acce1168931171b9c100eb25e2fa19a
-SHA1 (patch-ac) = d9155ee2d7f06b3aafeaa5fc2719948deb1c9c7e

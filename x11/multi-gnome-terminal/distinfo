@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/01/10 12:41:12 jmmv Exp $
-
-SHA1 (multi-gnome-terminal-1.6.1.tar.gz) = 411a5c0ef03601cccb22561a4f9cc6ed7fcbce74
-Size (multi-gnome-terminal-1.6.1.tar.gz) = 1867040 bytes
-SHA1 (patch-aa) = 8cce6513db77dcec543bcc1014e1db0161185550

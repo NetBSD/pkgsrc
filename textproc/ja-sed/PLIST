@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:00:07 seb Exp $
-bin/jsed
-@unexec ${INSTALL_INFO} --delete %D/info/sed.info %D/info/dir
-info/sed.info
-@exec ${INSTALL_INFO} %D/info/sed.info %D/info/dir
-man/man1/jsed.1
-share/doc/ja-sed/OREADME.MB
-share/doc/ja-sed/README.MB
-@dirrm share/doc/ja-sed

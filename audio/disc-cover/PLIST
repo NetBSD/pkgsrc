@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/18 09:34:26 jmmv Exp $
-bin/disc-cover
-man/man1/disc-cover.1

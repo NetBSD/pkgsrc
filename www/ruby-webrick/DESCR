@@ -1,3 +1,0 @@
-WEBrick is a toolkit for building webservers in Ruby.
-Features include SSL support, and a servlet interface.
-Also useful for generic network servers.

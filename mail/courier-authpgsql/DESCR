@@ -1,3 +1,0 @@
-This package contains the Courier authenticiation module that can
-authenticate against a list of mail accounts stored in a PostgreSQL
-database.

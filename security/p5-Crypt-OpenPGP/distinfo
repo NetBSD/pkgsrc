@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/10/21 11:11:23 wiz Exp $
-
-SHA1 (Crypt-OpenPGP-0.17.tar.gz) = e3f65291b63f3666980de8aee29e701b1814d622
-Size (Crypt-OpenPGP-0.17.tar.gz) = 70872 bytes
-SHA1 (patch-aa) = 40dd13adaf7a740d2f9681fe78d1e0765e876890

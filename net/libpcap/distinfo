@@ -1,4 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/03/25 10:51:13 wiz Exp $
-
-SHA1 (libpcap-0.7.2.tar.gz) = fcf36a938a9205ceb211883445bfd158a96098d6
-Size (libpcap-0.7.2.tar.gz) = 206173 bytes

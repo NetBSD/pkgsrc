@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:15 zuntum Exp $
-bin/alevt
-bin/alevt-date
-bin/alevt-cap
-man/man1/alevt.1x
-man/man1/alevt-cap.1
-man/man1/alevt-date.1
-share/pixmaps/mini-alevt.xpm

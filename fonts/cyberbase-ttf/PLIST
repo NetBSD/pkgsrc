@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/04/22 09:44:58 salo Exp $
-lib/X11/fonts/TrueType/cyberbas.ttf
-share/doc/html/cyberbit-ttf/ReadMe.htm
-@dirrm share/doc/html/cyberbit-ttf
-@unexec ${RMDIR} -p %D/lib/X11/fonts/TrueType 2> /dev/null || ${TRUE}

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/09 21:30:18 wiz Exp $
-
-SHA1 (IPv6socket_scrub.tar) = 505b6ebbf6b6f1d984fb761ce6e1ddf81cb4897f
-Size (IPv6socket_scrub.tar) = 160768 bytes
-SHA1 (patch-aa) = d3565972cccc3c8f85ca489cb1c88fb71fca476b
-SHA1 (patch-ab) = fcde9165c59a2d94ac7694471358d19405e87f63

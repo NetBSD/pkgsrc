@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 09:54:22 wiz Exp $
-
-SHA1 (pgraf-20010131.tar.gz) = 0f1fb3ad580de94eafb364aecc0d7befa8151959
-Size (pgraf-20010131.tar.gz) = 70301 bytes
-SHA1 (patch-aa) = f8aaa250906c775c8366580d55560f66a6403d7f
-SHA1 (patch-ab) = d3ba49c3379148593b243df5d03e805c0da37ec5
-SHA1 (patch-ac) = bd6e0172706f09ed4fcfa4c0484d33a016c3a78e
-SHA1 (patch-ad) = e2b36dd9b214a1decc536f81206abc1925ec134f

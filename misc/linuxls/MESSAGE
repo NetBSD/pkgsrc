@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:18 wiz Exp $
-
-linuxls has installed the programs linuxls and dircolors. In order
-to get the later working you need to configure the file:
-${PKG_SYSCONFDIR}/DIR_COLORS
-
-===========================================================================

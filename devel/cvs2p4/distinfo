@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/11/22 21:13:06 schmonz Exp $
-
-SHA1 (cvs2p4-2.3.3.tar) = 0b20c7768762d821303f0feb16be40877ba80475
-Size (cvs2p4-2.3.3.tar) = 163840 bytes
-SHA1 (patch-aa) = f48ff5b6956f2e422f5db07d43b7ac79bf6963f7

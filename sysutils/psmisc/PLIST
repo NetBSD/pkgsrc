@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:38 zuntum Exp $
-bin/killall
-bin/pidof
-bin/pstree
-man/man1/killall.1
-man/man1/pidof.1
-man/man1/pstree.1

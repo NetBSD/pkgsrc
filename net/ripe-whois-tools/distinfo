@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/18 11:39:29 rh Exp $
-
-SHA1 (ripe-whois-tools-2.4.tar.gz) = 0ce107294de244da74efe01928596eaebe090a62
-Size (ripe-whois-tools-2.4.tar.gz) = 8613 bytes
-SHA1 (patch-aa) = b90ecd2cd29dabc37b7b35715a4cc1dbfdef2016
-SHA1 (patch-ab) = 241f9c51ceb834ae90d44b3567dd59116c5696f8
-SHA1 (patch-ac) = 2340f3e8abf02f6ecd3c32e52c076f11fc12773b

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/01/31 01:00:51 salo Exp $
-
-SHA1 (bnc2.8.6.tar.gz) = 19544b83c4e8d558d56621b5001590432de2b4d0
-Size (bnc2.8.6.tar.gz) = 52569 bytes
-SHA1 (patch-aa) = a33813759c0b50cca01b954042c851d7a4e41948

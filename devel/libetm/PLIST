@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:29 zuntum Exp $
-lib/libetm.a
-include/etm.h
-share/doc/libetm/etm.txt
-@dirrm share/doc/libetm

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/05/15 23:02:05 dmcmahill Exp $
-
-SHA1 (boolean-6.4/boolean.zip) = 809e4126c3139a10b5c5905e17766a62fcb01f89
-Size (boolean-6.4/boolean.zip) = 2716249 bytes
-SHA1 (patch-aa) = 220f54da8e5fe76c498c03e6ba19fdfa299ca18e

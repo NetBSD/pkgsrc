@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:22 wiz Exp $
-
-SHA1 (mrt-2.2.2a-Aug11.tar.gz) = 6290a0b8d5539fddbd562d8dec64deb291dd3369
-Size (mrt-2.2.2a-Aug11.tar.gz) = 596596 bytes
-SHA1 (patch-aa) = b3d4121b5d94f6bc6b702e6c72e3565adf19d74e
-SHA1 (patch-ab) = 6f2d358eb50ccd7c8caa11cb3bff9f6b6232b8dd
-SHA1 (patch-ad) = bbc017a99d34ee3bd6eecad077102b10c7e83349

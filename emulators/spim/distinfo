@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/02/04 02:54:25 dmcmahill Exp $
-
-SHA1 (spim-6.5/spim.tar.gz) = 7ebae8a3fe1a523d92c3ba99cb197f094046229c
-Size (spim-6.5/spim.tar.gz) = 444075 bytes
-SHA1 (patch-aa) = cf4ee2fd60cf7d2864ba06398b612515591a7dcb

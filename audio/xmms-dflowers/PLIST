@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:26 zuntum Exp $
-lib/xmms/Visualization/libdflowers.a
-lib/xmms/Visualization/libdflowers.la
-lib/xmms/Visualization/libdflowers.so
-share/xmms/dflowers_themes/bg_blueheart.xpm
-share/xmms/dflowers_themes/bg_def.xpm
-@dirrm share/xmms/dflowers_themes

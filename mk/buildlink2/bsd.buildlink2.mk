@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.90 2003/07/09 20:07:46 salo Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.90.4.1 2003/07/16 09:33:48 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -56,11 +56,6 @@ CONFIGURE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
-_BLNK_CPPFLAGS=		-I${LOCALBASE}/include
-_BLNK_LDFLAGS=		-L${LOCALBASE}/lib
-.if ${_USE_RPATH} == "yes"
-_BLNK_LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${LOCALBASE}/lib
-.endif
 _BLNK_OPSYS=		${OPSYS}
 
 BUILDLINK_SHELL?=	${SH}
@@ -86,49 +81,17 @@ MAKE_ENV+=		BUILDLINK_CACHE_ALL=yes
 .  endif
 .endfor
 
-.if defined(USE_X11)
-USE_X11_LINKS?=		YES
-.  if !empty(USE_X11_LINKS:M[nN][oO])
-.    include "../../mk/x11.buildlink2.mk"
-.  else
-BUILD_DEPENDS+=		x11-links>=0.12:../../pkgtools/x11-links
-_BLNK_X11_DIR=		${LOCALBASE}/share/x11-links
-.  endif
-_BLNK_CPPFLAGS+=	-I${X11BASE}/include
-_BLNK_LDFLAGS+=		-L${X11BASE}/lib
-.if ${_USE_RPATH} == "yes"
-_BLNK_LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${X11BASE}/lib
-.endif
-.endif
-
-CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${_BLNK_CPPFLAGS}"
-MAKE_ENV+=		BUILDLINK_CPPFLAGS="${_BLNK_CPPFLAGS}"
-CONFIGURE_ENV+=		BUILDLINK_LDFLAGS="${_BLNK_LDFLAGS}"
-MAKE_ENV+=		BUILDLINK_LDFLAGS="${_BLNK_LDFLAGS}"
-
-.for FLAG in ${_BLNK_CPPFLAGS}
-.  if empty(CFLAGS:M${FLAG})
-CFLAGS+=	${FLAG}
-.  endif
-.  if empty(CXXFLAGS:M${FLAG})
-CXXFLAGS+=	${FLAG}
-.  endif
-.  if empty(CPPFLAGS:M${FLAG})
-CPPFLAGS+=	${FLAG}
-.  endif
-.endfor
-.for FLAG in ${_BLNK_LDFLAGS}
-.  if empty(LDFLAGS:M${FLAG})
-LDFLAGS+=	${FLAG}
-.  endif
-.endfor
-
 # Prepend ${BUILDLINK_DIR}/bin to the PATH so that the wrappers are found
 # first when searching for executables.
 #
 PATH:=			${BUILDLINK_DIR}/bin:${PATH}
 
-.for _pkg_ in ${BUILDLINK_PACKAGES}
+# BUILDLINK_DEPENDS contains the list of packages for which we add
+# dependencies.
+#
+BUILDLINK_DEPENDS=	${BUILDLINK_PACKAGES}
+
+.for _pkg_ in ${BUILDLINK_DEPENDS}
 #
 # Add the proper dependency on each package pulled in by buildlink2.mk
 # files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
@@ -151,6 +114,9 @@ ${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
 	${_depends_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .    endfor
 .  endif
+.endfor
+
+.for _pkg_ in ${BUILDLINK_PACKAGES}
 #
 # BUILDLINK_PLIST_CMD.<pkg> is a sequence of shell commands that extracts
 # a list of all of the files installed by <pkg>.  This list is relative to
@@ -159,6 +125,85 @@ ${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
 BUILDLINK_PLIST_CMD.${_pkg_}= \
 	${PKG_INFO} -f ${BUILDLINK_PKGBASE.${_pkg_}} |			\
 		${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p'
+.endfor
+
+# Pass the proper -I.../-L.../-Wl,-R... flags to the compiler and linker.
+
+_BLNK_CPPFLAGS=		# empty
+_BLNK_LDFLAGS=		# empty
+
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+_BLNK_INCDIR.${_pkg_}=	${BUILDLINK_PREFIX.${_pkg_}}/include
+_BLNK_LIBDIR.${_pkg_}=	${BUILDLINK_PREFIX.${_pkg_}}/lib
+
+.  if exists(${_BLNK_INCDIR.${_pkg_}})
+.    if empty(_BLNK_CPPFLAGS:M-I${_BLNK_INCDIR.${_pkg_}})
+_BLNK_CPPFLAGS+=	-I${_BLNK_INCDIR.${_pkg_}}
+.    endif
+.  endif
+.  if exists(${_BLNK_LIBDIR.${_pkg_}})
+.    if empty(_BLNK_LDFLAGS:M-L${_BLNK_LIBDIR.${_pkg_}})
+_BLNK_LDFLAGS+=		-L${_BLNK_LIBDIR.${_pkg_}}
+.    endif
+.    if empty(_BLNK_LDFLAGS:M-L${_BLNK_LIBDIR.${_pkg_}})
+_BLNK_LDFLAGS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.${_pkg_}}/lib
+.    endif
+.  endif
+.endfor
+
+.if ${PKG_INSTALLATION_TYPE} == "overwrite"
+.  if empty(_BLNK_CPPFLAGS:M-I${LOCALBASE}/include)
+_BLNK_CPPFLAGS+=	-I${LOCALBASE}/include
+.  endif
+.  if empty(_BLNK_LDFLAGS:M-L${LOCALBASE}/lib)
+_BLNK_LDFLAGS+=		-L${LOCALBASE}/lib
+.  endif
+.endif
+.if empty(_BLNK_LDFLAGS:M-Wl,${RPATH_FLAG}${LOCALBASE}/lib)
+_BLNK_LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
+.endif
+
+.if defined(USE_X11)
+USE_X11_LINKS?=		YES
+.  if !empty(USE_X11_LINKS:M[nN][oO])
+.    include "../../mk/x11.buildlink2.mk"
+.  else
+BUILD_DEPENDS+=		x11-links>=0.12:../../pkgtools/x11-links
+_BLNK_X11_DIR=		${LOCALBASE}/share/x11-links
+.  endif
+.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
+.    if empty(_BLNK_CPPFLAGS:M-I${X11BASE}/include)
+_BLNK_CPPFLAGS+=	-I${X11BASE}/include
+.    endif
+.    if empty(_BLNK_LDFLAGS:M-L${X11BASE}/lib)
+_BLNK_LDFLAGS+=		-L${X11BASE}/lib
+.    endif
+.  endif
+.  if empty(_BLNK_LDFLAGS:M-Wl,${RPATH_FLAG}${X11BASE}/lib)
+_BLNK_LDFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib
+.  endif
+.endif
+
+CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${_BLNK_CPPFLAGS}"
+MAKE_ENV+=		BUILDLINK_CPPFLAGS="${_BLNK_CPPFLAGS}"
+CONFIGURE_ENV+=		BUILDLINK_LDFLAGS="${_BLNK_LDFLAGS}"
+MAKE_ENV+=		BUILDLINK_LDFLAGS="${_BLNK_LDFLAGS}"
+
+.for FLAG in ${_BLNK_CPPFLAGS}
+.  if empty(CFLAGS:M${FLAG})
+CFLAGS+=	${FLAG}
+.  endif
+.  if empty(CXXFLAGS:M${FLAG})
+CXXFLAGS+=	${FLAG}
+.  endif
+.  if empty(CPPFLAGS:M${FLAG})
+CPPFLAGS+=	${FLAG}
+.  endif
+.endfor
+.for FLAG in ${_BLNK_LDFLAGS}
+.  if empty(LDFLAGS:M${FLAG})
+LDFLAGS+=	${FLAG}
+.  endif
 .endfor
 
 # Create the buildlink include and lib directories so that the Darwin

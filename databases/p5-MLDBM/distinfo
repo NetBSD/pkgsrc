@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 16:11:02 agc Exp $
-
-SHA1 (MLDBM-2.00.tar.gz) = f9b500c872b2e639c1e9818b05a95f2deeaf6d16
-Size (MLDBM-2.00.tar.gz) = 8678 bytes
-SHA1 (patch-aa) = fb01765941628c7d9d3c87663eecdc3ff0971719

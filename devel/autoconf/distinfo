@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2003/03/23 11:46:43 grant Exp $
-
-SHA1 (autoconf-2.57.tar.gz) = 957cb551fed9b7ed5b34f1207512dfb676731754
-Size (autoconf-2.57.tar.gz) = 1074128 bytes
-SHA1 (patch-aa) = e7037117c3bd0e5b331f8fef7bec831f4cc6e27a
-SHA1 (patch-ab) = 63a444ce23a8381892bda3258cc01d2632a37f98
-SHA1 (patch-ac) = 9962008a2bc8b7c2895b4bf357fe932639b8d4eb

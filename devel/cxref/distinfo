@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:15 wiz Exp $
-
-SHA1 (cxref-1.5a.tgz) = 2c9ec0ee6a199730853aba8e3a7ece1ec93c026e
-Size (cxref-1.5a.tgz) = 273716 bytes
-SHA1 (patch-aa) = 283c8d72febaa8d832dc16e4d3670442139cb2de

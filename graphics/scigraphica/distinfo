@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/01/24 19:24:04 wiz Exp $
-
-SHA1 (scigraphica-0.8.0.tar.gz) = 7a3b932f4e5de39bbf815c0e5629005e3c209421
-Size (scigraphica-0.8.0.tar.gz) = 841199 bytes
-SHA1 (patch-aa) = 5cd12c4adaa496bafc6bb68c57575a4e35d3913a
-SHA1 (patch-ab) = f96a2bf4d9ac22e9ec9c467b010f9f9cf4a642d5
-SHA1 (patch-ac) = c105e7f5ac410bbce44df667594b70cfdba825af

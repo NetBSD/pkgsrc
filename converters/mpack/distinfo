@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/12/05 16:45:21 is Exp $
-
-SHA1 (mpack-1.5-src.tar.Z) = 1c5081edd9c7152d2a8c4585af2c5a3fc9f17d60
-Size (mpack-1.5-src.tar.Z) = 285360 bytes
-SHA1 (patch-aa) = d08d4f7f3e44b1ddc71c0838c014b4a2aed61811
-SHA1 (patch-ab) = d221ba16f24843eb9d53ce91f487d6e857d21ddd
-SHA1 (patch-ac) = a69986a5c1b7659fac6df05f4db9a44df3110892
-SHA1 (patch-ad) = 76f32d163021a81d73d8316f72b141ef3edf4f14

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/07/02 20:07:29 jmc Exp $
-
-SHA1 (gdchart-py-0.6.tar.gz) = 20547e8550bb8c925a3b9776739f9a5e93ce8692
-Size (gdchart-py-0.6.tar.gz) = 321891 bytes
-SHA1 (patch-Makefile) = 477519d0493bd69e2b33f5861b36d1d19275ed96
-SHA1 (patch-gdc_py.c) = aeaca3dc2ca2a0ccb586b7da58e55d41b703abfc
-SHA1 (patch-aa) = 408ddf2be8ed5f72c6d148f25209de8b580a1dfe
-SHA1 (patch-ab) = b2179c1c7e1e6aee6d7d8051a7646344254ee96b

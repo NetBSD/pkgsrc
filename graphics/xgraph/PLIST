@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/02 19:47:26 jschauma Exp $
-bin/xgraph
-${IMAKE_MAN_DIR}/xgraph.${IMAKE_MANNEWSUFFIX}

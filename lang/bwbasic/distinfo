@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/05/20 10:39:36 wiz Exp $
-
-SHA1 (bwbasic-2.20/bwbasic-2.20.tar.Z) = b96ff440c573b9aac17dfd90830e3defa46a5592
-Size (bwbasic-2.20/bwbasic-2.20.tar.Z) = 485971 bytes
-SHA1 (patch-aa) = e397e2e5b88ccccb44750702bff6d65054d96641
-SHA1 (patch-ac) = e316d334098ba1919239959333804973619dbc81

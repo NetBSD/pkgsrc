@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/22 18:12:12 drochner Exp $
-lib/python2.0/site-packages/PIL/_imagingtk.so
-share/examples/py20-imaging/enhancer.py
-share/examples/py20-imaging/painter.py
-share/examples/py20-imaging/player.py
-share/examples/py20-imaging/thresholder.py
-share/examples/py20-imaging/viewer.py
-@comment share/examples/py-imaging and lib/python2.0/site-packages/PIL
-@comment belong to py-imaging, do not remove them here.

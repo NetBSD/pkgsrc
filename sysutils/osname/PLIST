@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:35 zuntum Exp $
-bin/osname
-man/man1/osname.1

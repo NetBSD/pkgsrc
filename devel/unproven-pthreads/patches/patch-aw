@@ -1,9 +1,0 @@
-$NetBSD: patch-aw,v 1.1 2001/04/12 16:10:33 skrll Exp $
-
---- pthreads/process.c.orig	Mon Jul 10 19:23:28 2000
-+++ pthreads/process.c
-@@ -45,2 +45,4 @@
- 
-+#include "config.h"
-+
- #ifndef lint

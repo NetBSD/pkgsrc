@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/01 11:38:16 jmmv Exp $
-bin/metacity-setup
-share/control-center-2.0/capplets/metacity-setup.desktop
-share/metacity-setup/pixmaps/metacity-setup-icon.png
-share/pixmaps/metacity-setup-icon.png
-@dirrm share/metacity-setup/pixmaps
-@dirrm share/metacity-setup
-@comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/08/27 08:06:08 seb Exp $
-
-SHA1 (nam-src-1.0a11a.tar.gz) = 74955f993767bb476abf5dc9c4222e1ede1c24f8
-Size (nam-src-1.0a11a.tar.gz) = 4355016 bytes
-SHA1 (patch-aa) = 79d115a0813e038d1d5a8f2bbe238bba48aaa544
-SHA1 (patch-ab) = 28cda4d9f68e031725016d2c06925394c76e5152
-SHA1 (patch-ac) = 7d9bbb391e025be2b75eebc4cb87a57a16409e7f

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/01/26 03:50:34 taca Exp $
-
-SHA1 (ruby/FXRuby-0.99.174.tar.gz) = 1c890cc6798d7080f648d9aec7c0880b0c2ece36
-Size (ruby/FXRuby-0.99.174.tar.gz) = 685531 bytes
-SHA1 (patch-aa) = ed54cc9ad60da7684ff1e595e0df06c3f7bee555
-SHA1 (patch-ab) = 637474bf8d428988340e06c5570dbaf104e520ed

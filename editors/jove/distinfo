@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:01:02 agc Exp $
-
-SHA1 (jove-4.16.tar.gz) = 47272816abac0c4b7b9e41a89d390d06a988cfcb
-Size (jove-4.16.tar.gz) = 432274 bytes
-SHA1 (patch-aa) = 51592f10aaaf5de234d50bf154484463163a30c6
-SHA1 (patch-ab) = 9c63b0208ff1a84dc7f015841d8f19968cef6d01
-SHA1 (patch-ac) = 98329cfcbbec9d56cbef7e1bee6685b6dd25e8ac

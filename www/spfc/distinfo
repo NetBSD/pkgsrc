@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:45 skrll Exp $
-
-SHA1 (spfc-0.2.0.tar.gz) = 263e4f62ecf3bd8a116faadfad923934f42c98d5
-Size (spfc-0.2.0.tar.gz) = 389387 bytes
-SHA1 (patch-aa) = c33eaa0ca572e4ca16077b189cde6771ef0abf5a

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/20 08:39:22 tron Exp $
-share/emacs/site-lisp/dictionary/connection.el
-share/emacs/site-lisp/dictionary/connection.elc
-share/emacs/site-lisp/dictionary/dictionary-init.el
-share/emacs/site-lisp/dictionary/dictionary.el
-share/emacs/site-lisp/dictionary/dictionary.elc
-share/emacs/site-lisp/dictionary/link.el
-share/emacs/site-lisp/dictionary/link.elc
-@dirrm share/emacs/site-lisp/dictionary

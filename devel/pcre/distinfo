@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2002/12/30 18:08:01 cjep Exp $
-
-SHA1 (pcre-3.9.tar.bz2) = bc8f2a83a089d84b3b8fb33c7cbaa5031afd6271
-Size (pcre-3.9.tar.bz2) = 261609 bytes
-SHA1 (patch-aa) = 5fded81da893d0bfcd97ba6b24f0ef94385051fd
-SHA1 (patch-ab) = 03bb38f5d07964a5ab16b1c80538ac77b3625640

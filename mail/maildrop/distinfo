@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/05/20 09:39:17 wiz Exp $
-
-SHA1 (maildrop-1.3.9.tar.gz) = 6d91ae5b93bc0eb93801dd095f8e6e1151936e5c
-Size (maildrop-1.3.9.tar.gz) = 635022 bytes
-SHA1 (patch-aa) = 1c5c62ccbd1b69a4aaf68d81f095171b2c369e7b

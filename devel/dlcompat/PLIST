@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2002/11/19 07:19:13 schmonz Exp $
-include/dlfcn.h
-lib/libdl.1.dylib
-lib/libdl.a
-lib/libdl.dylib
-man/man3/dlclose.3
-man/man3/dlerror.3
-man/man3/dlopen.3
-man/man3/dlsym.3

@@ -1,2 +1,0 @@
-English language support for aspell, e.g. `aspell -d english -c $myfile'.
-Other sub-dictionaries available in this package: british, american, canadian.

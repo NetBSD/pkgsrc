@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:34 zuntum Exp $
-lib/xmms/Visualization/neato.a
-lib/xmms/Visualization/neato.la
-lib/xmms/Visualization/neato.so

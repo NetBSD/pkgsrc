@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/03/15 17:05:37 skrll Exp $
-
-SHA1 (eperl-2.2.14.tar.gz) = cf05566602d93019a38638a6958739a1e192ead7
-Size (eperl-2.2.14.tar.gz) = 199664 bytes
-SHA1 (patch-aa) = 6eae0f635bae79bdd6fa88878f191e59b5f4fe92
-SHA1 (patch-ab) = 09a2274193bea7052a5367d18ec2e15ed7596129
-SHA1 (patch-ac) = c876f95efa24d348c8c42fa91123d0db316315bc
-SHA1 (patch-ad) = a96ebbbafb70829ca00fda2a840172034250e31e
-SHA1 (patch-ae) = 25b88531b1356ea1191911887204d49111aed263

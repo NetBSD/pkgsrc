@@ -1,6 +1,0 @@
-libdockapp is a simple (trivial) library for writing Window Maker dock
-applications, or dockapps (those that only show up in the dock), easily.
-
-It is very limited and can be only used for dockapps that open a single
-appicon for a process in only one single display, but this seems to be
-enough for most, if not all, dockapps.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/02/14 20:21:57 jmmv Exp $
-
-SHA1 (gail-1.2.0.tar.bz2) = 0b2ee703c940fc08977251cf1d4759d956c25a19
-Size (gail-1.2.0.tar.bz2) = 316112 bytes
-SHA1 (patch-aa) = 5f4bf0a96ffd28ad38667c720c0a19abf1e2b6a0
-SHA1 (patch-ab) = f0d567a2267be322ad9b020705b302f7a4bc46a0

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:01:00 agc Exp $
-
-SHA1 (biew-520.tar.bz2) = e66dbf4b6c8aafc58a8c2fa8fe103fa334f671ac
-Size (biew-520.tar.bz2) = 424983 bytes
-SHA1 (patch-aa) = 78944dfaedfc6d7a7aaf7018acdf5a82a7647be1
-SHA1 (patch-ab) = 3620d7c14d4457db64aa463b852d6f51306b7ae0

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/03/19 13:23:26 taca Exp $
-
-SHA1 (smtpfeed-1.18.tar.gz) = c5875be954a12035658c57dfca0d032609e4e057
-Size (smtpfeed-1.18.tar.gz) = 140293 bytes
-SHA1 (patch-aa) = e0ba34dd816d349ecedbc2a76cef9e70b396c655

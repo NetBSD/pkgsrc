@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.freebsd,v 1.1 2003/05/14 12:07:45 wiz Exp $
-lib/libcrypto.so
-lib/libcrypto.so.300
-lib/libcrypto.so.300.0
-lib/libssl.so
-lib/libssl.so.300
-lib/libssl.so.300.0

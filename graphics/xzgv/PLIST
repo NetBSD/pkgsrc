@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/03 19:17:17 seb Exp $
-bin/xzgv
-info/xzgv
-info/xzgv-1
-info/xzgv-2
-info/xzgv-3
-man/man1/xzgv.1

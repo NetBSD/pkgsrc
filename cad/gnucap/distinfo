@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/04/21 03:06:29 dmcmahill Exp $
-
-SHA1 (gnucap-0.33.tar.gz) = 67fe6ccc4e16807d842c5f0377b66a16c2904edf
-Size (gnucap-0.33.tar.gz) = 1387565 bytes
-SHA1 (patch-aa) = 404d6f926f4985a7d117e1361e9c2c9cabd6323b
-SHA1 (patch-ab) = 519cd313b023be49ee19018d4eb88697fcb739e3

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:37 agc Exp $
-
-SHA1 (rio007.tgz) = d7abbcd9619ff6528be31c38d55445bebb44e9f0
-Size (rio007.tgz) = 28953 bytes
-SHA1 (patch-aa) = eeaa99fba0c9c8fc53d9ea4639b81494a448cf2d
-SHA1 (patch-ab) = d3698fc8e76b264276f1809e96eb0675e9840b12
-SHA1 (patch-ac) = 4f490e55a906891f2c0488e9bdb78f5a26c7f073

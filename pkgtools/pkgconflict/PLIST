@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:31:37 zuntum Exp $
-lib/dewey_cmp.so
-bin/pkgconflict
-bin/pkgdbextract

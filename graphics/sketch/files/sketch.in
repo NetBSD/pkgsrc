@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cd @PREFIX@/share/sketch
-exec @PREFIX@/bin/python2.0 sketch.py $@

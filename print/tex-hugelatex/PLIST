@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:28:11 zuntum Exp $
-bin/hugelatex
-share/texmf/web2c/hugelatex.fmt
-share/texmf/web2c/hugelatex.log
-@exec cp %D/share/texmf/web2c/texmf.cnf %D/share/texmf/web2c/texmf.cnf-before-hugelatex
-share/texmf/web2c/texmf.cnf
-@unexec mv %D/share/texmf/web2c/texmf.cnf-before-hugelatex %D/share/texmf/web2c/texmf.cnf
-@unexec %D/bin/mktexlsr

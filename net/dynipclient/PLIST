@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/27 01:36:10 tv Exp $
-bin/dynipadmin
-bin/dynipclient
-etc/rc.d/dynipclient
-man/man1/dynipadmin.1
-man/man1/dynipclient.1

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/07/22 16:45:46 wiz Exp $
-
-SHA1 (SNNSv4.2.tar.gz) = ccdb91681e43bce68c90558bbf103e7f6417e3fc
-Size (SNNSv4.2.tar.gz) = 2170375 bytes
-SHA1 (patch-aa) = eade9e14cbf65fa45cd06d84f15a64751c9f2adf
-SHA1 (patch-ab) = abbd8f6c7c0d3c97d1064a9910ce884e05c65b8c
-SHA1 (patch-ac) = 5b9b47c9ebc0de28768bfecc85b57278abda5cdd

@@ -1,5 +1,0 @@
-# $NetBSD: Makefile.include,v 1.1 2003/05/31 07:24:39 uebayasi Exp $
-#
-
-.include "../../devel/nbitools/nbitools.mk"
-.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,0 @@
-$NetBSD: patch-ai,v 1.1.1.1 2002/05/31 13:00:40 seb Exp $
---- devlj4/DESC.in.orig	Wed Jul  6 22:10:25 1994
-+++ devlj4/DESC.in	Mon May 31 14:39:27 1999
-@@ -6,4 +6,4 @@
- fonts 6 0 0 0 0 0 S
- family T
- tcommand
--postpro grolj4
-+postpro jgrolj4

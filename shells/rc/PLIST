@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:26:59 zuntum Exp $
-bin/rc
-bin/-
-bin/--
-bin/-p
-bin/--p
-man/man1/history.1.gz
-man/man1/rc.1.gz

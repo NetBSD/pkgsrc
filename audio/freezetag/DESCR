@@ -1,5 +1,0 @@
-freezetag is an id3 tag editor for GTK+-1.2.0 and higher.  It currently
-supports adding directories recursively, changing multiple tags at a time,
-and the viewing of current tags.  In addition to viewing and changing tags,
-freezetag can also rename your files based on the tag from a format specifier
-Also, since freezetag uses GTK+ 1.2.0+, it takes advantage of your GTK+ themes.

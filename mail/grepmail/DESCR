@@ -1,3 +1,0 @@
-grepmail Searches a normal or gzip'ed mailbox for a given regular
-expression, and returns those emails that match it. Also supports
-searches constrained by date.

@@ -1,9 +1,0 @@
-$NetBSD: patch-ae,v 1.1 2003/07/02 19:51:43 drochner Exp $
-
---- gcc/config/t-netbsd.orig	2003-06-11 19:38:33.000000000 +0200
-+++ gcc/config/t-netbsd	2003-06-11 19:38:59.000000000 +0200
-@@ -3,3 +3,4 @@
- 
- # Always build crtstuff with PIC.
- CRTSTUFF_T_CFLAGS = -fPIC
-+TARGET_LIBGCC2_CFLAGS += -fPIC

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:44 zuntum Exp $
-bin/unarj
-share/doc/unarj/unarj.doc
-share/doc/unarj/technote.doc
-@dirrm share/doc/unarj

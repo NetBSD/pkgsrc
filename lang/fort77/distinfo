@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:50 agc Exp $
-
-SHA1 (fort77-1.14a.tar.gz) = 2c786587992bfe6458d6d8a7767391f555f05cc8
-Size (fort77-1.14a.tar.gz) = 6057 bytes
-SHA1 (patch-aa) = 6ba6f313cb553eb2160ae3d198fd05b67e52ff9a
-SHA1 (patch-ab) = 8e0a9ce6b1fd31f4fd6400eb955281b4aed60294

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:40 zuntum Exp $
-include/proplist.h
-lib/libPropList.a
-lib/libPropList.la
-lib/libPropList.so
-lib/libPropList.so.2
-lib/libPropList.so.2.2
-share/doc/libproplist/README
-@dirrm share/doc/libproplist

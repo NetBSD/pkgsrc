@@ -1,3 +1,0 @@
-This handy little tool will calculate an XFree86 Modeline for your
-XF86Config file, given the desired screen resolution and the vertical
-frequency of your monitor.

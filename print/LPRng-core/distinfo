@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/09/27 04:01:32 dmcmahill Exp $
-
-SHA1 (LPRng-3.6.26.tgz) = 9ca6e7eff9acbcaad81109e34a47cab1675fc030
-Size (LPRng-3.6.26.tgz) = 2135703 bytes
-SHA1 (patch-aa) = b205c5fb93c47bd8cbfce6fecc765e9c4101d7c6
-SHA1 (patch-ac) = 18672f47fd9fcb8288c070a89278ecb1c8ee8242

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/06/03 13:06:56 jmmv Exp $
-
-SHA1 (wdm-1.24.tar.gz) = 1ad41729df1981b7de3f00ed9666eca8f4fe588d
-Size (wdm-1.24.tar.gz) = 529908 bytes
-SHA1 (patch-aa) = 6af92e28c56ba557dc2552aaac501be0f8494ce8
-SHA1 (patch-ab) = 1c03cbc27cb5616c23441f0250988d80de375646

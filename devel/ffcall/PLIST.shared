@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.shared,v 1.1 2003/05/11 07:12:49 jmc Exp $
-lib/libavcall.so.0.0
-lib/libavcall.so.0
-lib/libavcall.so
-lib/libcallback.so.0.0
-lib/libcallback.so.0
-lib/libcallback.so

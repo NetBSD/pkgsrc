@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/01/19 06:59:53 salo Exp $
-
-SHA1 (Hermes-1.3.2.tar.gz) = d1a0edd8814ac3e9e699fd33843e60879d285083
-Size (Hermes-1.3.2.tar.gz) = 258439 bytes
-SHA1 (patch-aa) = 459804a7fe816c4b2d37bc0461d923352f99c129
-SHA1 (patch-ac) = 986475db735c3e01b7c7f0edb0c3bf5d6708b704
-SHA1 (patch-ad) = 480f7ef8dd9ec2ebb7b273328be163ae152d8226
-SHA1 (patch-ae) = b45652212ece5a7c70f86717ed81ba9993e03e9a

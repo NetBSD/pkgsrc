@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:11:45 zuntum Exp $
-bin/gtranscript
-share/gnome/apps/Applications/gtranscript.desktop
-share/examples/gtranscript/Info
-share/examples/gtranscript/PhoneBook
-share/examples/gtranscript/Table1
-@dirrm share/examples/gtranscript

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/07/15 16:51:31 mycroft Exp $
-
-SHA1 (gnumeric-0.75.tar.gz) = 5c5d8ea33283452c61a989b493a34b9b584b150d
-Size (gnumeric-0.75.tar.gz) = 8722118 bytes
-SHA1 (patch-aa) = 554ba6f4c4469ca83f1324f8bfc9a7c56f6031fd

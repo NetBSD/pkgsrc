@@ -1,12 +1,0 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/05/31 13:01:20 seb Exp $
-
---- ./uip/inc.c.orig	Fri Sep 10 02:10:53 1999
-+++ ./uip/inc.c	Mon Nov  1 19:13:30 1999
-@@ -38,4 +38,7 @@
- #include	<locale.h>
- #endif
-+#ifdef	UNISTD
-+#include <unistd.h>
-+#endif
- 
- /*  */

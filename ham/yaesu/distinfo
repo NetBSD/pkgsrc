@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/07/02 12:53:32 wiz Exp $
-
-SHA1 (yaesu-0.12.tar.gz) = a073e78f0635c84222176941e39cc62dca92f00d
-Size (yaesu-0.12.tar.gz) = 24694 bytes
-SHA1 (patch-aa) = 9fc04c222e7ed26c8e73449e475ff639d7ced051
-SHA1 (patch-ab) = 0a96f808929b7d1f1d4363e57c24dd33142e5f4e
-SHA1 (patch-ac) = cd5ee0384a53f436e07b4cec904c3a2176a40cdf
-SHA1 (patch-ad) = 89bb7dc00a7da82778ed357594cb5d0dfa756f64

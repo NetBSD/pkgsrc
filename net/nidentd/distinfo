@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/05/05 23:51:27 hubertf Exp $
-
-SHA1 (nidentd-1.0.tgz) = 5ad5f5f27514a9b647f00bdd8f132203c29987be
-Size (nidentd-1.0.tgz) = 1831 bytes
-SHA1 (patch-aa) = 3fed5dab21289532f36f44d2eb4594f241eb0130

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/06/10 06:38:47 wiz Exp $
-
-SHA1 (apg-2.1.0.tar.gz) = 415aeeae944c184bdc67ef36af9ea68c062c7cf9
-Size (apg-2.1.0.tar.gz) = 99202 bytes
-SHA1 (patch-aa) = d66d56ff653e66185a1af83d7b5330c1759e7573

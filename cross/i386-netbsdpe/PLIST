@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/21 12:42:44 kent Exp $
-bin/${TARGET_ARCH}-dlltool
-bin/${TARGET_ARCH}-dllwrap
-bin/${TARGET_ARCH}-windres
-${TARGET_ARCH}/bin/dlltool
-${TARGET_ARCH}/bin/dllwrap
-${TARGET_ARCH}/bin/windres

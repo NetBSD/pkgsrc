@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/26 04:00:51 jmcneill Exp $
-lib/xmms/Input/libxmmsmad.la
-lib/xmms/Input/libxmmsmad.so

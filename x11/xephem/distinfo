@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/10/03 15:33:51 wiz Exp $
-
-SHA1 (xephem-3.5.2.tar.gz) = ec3bee509b9fa2679c4a80e52c2c8763ad1f4f24
-Size (xephem-3.5.2.tar.gz) = 2523508 bytes
-SHA1 (patch-aa) = dd2564928714170a365747a93c5565b1122aa9a0

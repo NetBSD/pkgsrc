@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/04/27 14:13:53 agc Exp $
-
-SHA1 (eXdbm-beta-1.0b1.tar.gz) = a03586a82e4abe75deefb4d148ce55f1cfd372c4
-Size (eXdbm-beta-1.0b1.tar.gz) = 53688 bytes
-SHA1 (patch-aa) = ae4cf113442c50acbdcd91fc577133d88dd946ab

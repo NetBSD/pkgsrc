@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/07/14 10:07:11 jmmv Exp $
-
-SHA1 (vfu-3.04.src.tar.gz) = 75e87d102114dc08136420e7927e687f72a52dfd
-Size (vfu-3.04.src.tar.gz) = 187519 bytes
-SHA1 (patch-aa) = ce204485f8c781a6ffeb25e4de4de21cdf33b473
-SHA1 (patch-ab) = bb935cd9127479517daf36480e2637cd5447b978
-SHA1 (patch-ac) = 0477572760ca2497c1464e57c3a09c571625b266
-SHA1 (patch-ad) = 1410335b46d58ad9ec973b5a6b9ebe52091c0012

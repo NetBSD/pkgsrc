@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:40:31 agc Exp $
-
-SHA1 (Fortify-1.4.6-unix-src.tar.gz) = a1debcb3c7d2d5dbb9f638b7713bc2544dcea3cd
-Size (Fortify-1.4.6-unix-src.tar.gz) = 278224 bytes
-SHA1 (patch-aa) = b2d7540da220e4005bb76508fde52bfc5e28ae94

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/29 23:47:45 jtb Exp $
-
-SHA1 (erlang/otp_src_R9B-1.tar.gz) = 6e3f1de911e44b177453b5a2d5c4142f42ef7f54
-Size (erlang/otp_src_R9B-1.tar.gz) = 8455643 bytes
-SHA1 (patch-aa) = 4b1973638e590866e5f44f5ba9cef3b584638b8b

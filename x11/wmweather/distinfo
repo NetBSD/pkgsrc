@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/10/27 13:41:26 bouyer Exp $
-
-SHA1 (wmWeather-1.31.tar.gz) = b03ac1ad93f9e942feca26cfad91c1ea0b92eeb9
-Size (wmWeather-1.31.tar.gz) = 28639 bytes
-SHA1 (patch-aa) = aa534dfeea9040d5868eacdb899d92727899ee27
-SHA1 (patch-ab) = 0421f488743d8416f9e061302c38e08e03aaadd6
-SHA1 (patch-ac) = bd76256fa4479e3e9f3c2be2290debb36b941b72

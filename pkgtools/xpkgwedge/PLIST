@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/26 21:49:06 jlam Exp $
-bin/pkgxmkmf
-lib/X11/config/xpkgwedge.def

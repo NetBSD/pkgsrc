@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/03/20 01:52:31 wiz Exp $
-
-SHA1 (xdm3d-1.0.tar.gz) = 494a33aefee0c1545331b657bf47b90634b69648
-Size (xdm3d-1.0.tar.gz) = 157858 bytes
-SHA1 (patch-aa) = 4a86a37ad238e502352346fa86090b7578d862ee
-SHA1 (patch-ab) = b8d5c7a705d9abdec06fa139196605484dde679a
-SHA1 (patch-ac) = 9ea05506db86d181d9826f5c668899b7e760a8aa
-SHA1 (patch-ad) = fe87f070a74e6525908aa81cb2242a0d3e1ccd8a

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/06/06 22:49:19 cjep Exp $
-
-SHA1 (ngrep-1.39.tar.gz) = 705851cdef6e535cebf397b27f78ff3112e62824
-Size (ngrep-1.39.tar.gz) = 676694 bytes
-SHA1 (patch-aa) = b45836431187c112083841a5c714bb5ba1482181
-SHA1 (patch-ab) = 9522bd13976c850d109f91f6a5ec5a2aa7272d4e

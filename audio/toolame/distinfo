@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/23 07:07:26 mrg Exp $
-
-SHA1 (toolame-02l.tgz) = 9f58345ec5d552f49a9ad598e6eb2dc126cb10b4
-Size (toolame-02l.tgz) = 127493 bytes
-SHA1 (patch-aa) = 317743c6cb8d610be2dd3861388015b5d9cf7bf6
-SHA1 (patch-ab) = e2b8bb920d778c3d9fc1b72ff286c96d62a03051

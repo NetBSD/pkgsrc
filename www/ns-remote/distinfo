@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:39 skrll Exp $
-
-SHA1 (netscape/remote.c) = 7473c12d03ecc24b3a2e6af95b5154802117b793
-Size (netscape/remote.c) = 18579 bytes
-SHA1 (netscape/vroot.h) = 3713a3021ee940b7a642478f91e0348524da22d9
-Size (netscape/vroot.h) = 4930 bytes
-SHA1 (patch-aa) = d524df2b83bdd29bad1ed4a312eb46247321b7c0

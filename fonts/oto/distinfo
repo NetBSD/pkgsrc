@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/07/21 19:20:24 wiz Exp $
-
-SHA1 (oto-0.4.tar.gz) = 9a467e864d4945f8a47125cc41a4723a973d93d3
-Size (oto-0.4.tar.gz) = 264000 bytes
-SHA1 (patch-aa) = a7ea2508f7d6d57a892c1f8b3f89bfdf464abd6c

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:38 wiz Exp $
-
-SHA1 (xdemineur-2.1.1.tar.gz) = 7ef4998246a27598e914cd7e6510b7c853093eb7
-Size (xdemineur-2.1.1.tar.gz) = 15633 bytes
-SHA1 (patch-aa) = fd0cd8a55fb85c30c0b566b653f375d7ae2bfef6

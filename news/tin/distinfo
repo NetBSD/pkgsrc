@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/11/06 10:38:33 wiz Exp $
-
-SHA1 (tin-1.4.6.tar.bz2) = 5292b4f1c6ffb796ae0b0416b6f7e32a42ff8601
-Size (tin-1.4.6.tar.bz2) = 695190 bytes
-SHA1 (patch-aa) = da46ab8dee8c3319a5e8fd18580cd573b611cbca
-SHA1 (patch-ab) = 35eb5a696c34ad9fda1eb808c68f804100da0ea2
-SHA1 (patch-ac) = 57d127ed9e78e51b0f1b1e1f2efbe13c6a1f3e1d

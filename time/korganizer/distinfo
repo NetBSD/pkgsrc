@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 14:47:13 agc Exp $
-
-SHA1 (korganizer-1.1.2.tar.bz2) = e557fd7136dd51867f5844d58383822fd5134df5
-Size (korganizer-1.1.2.tar.bz2) = 737251 bytes
-SHA1 (patch-aa) = 464fba4775620a7dc4e67f947b601c45b7d33692
-SHA1 (patch-ab) = 389edd2db68bcb2ccf5e8c50c63775b39f92fc01

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2003/07/10 09:06:48 jtb Exp $
-
-SHA1 (yplot-1.1.2.tar.gz) = 21c3a3f9b9fc4f9ba9e25a6e58c2a5ac5812024e
-Size (yplot-1.1.2.tar.gz) = 141005 bytes
-SHA1 (patch-ab) = fcdde8d7ca95fcf2a201051812a0d6eafafcc7c0

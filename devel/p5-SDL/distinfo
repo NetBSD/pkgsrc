@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2003/01/02 00:22:32 explorer Exp $
-
-SHA1 (SDL_perl-1.19.2.tar.gz) = 3c36b46bc533f62052c045724e3b98511fd825e1
-Size (SDL_perl-1.19.2.tar.gz) = 680136 bytes
-SHA1 (patch-aa) = 79f56782e1d530e3948f530c23dc9a508941597a

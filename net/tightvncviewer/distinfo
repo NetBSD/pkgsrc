@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2003/02/17 23:32:21 jlam Exp $
-
-SHA1 (tightvnc-1.2.8_unixsrc.tar.bz2) = b1593f1e986cb57d20f10b2b5e7a6ec1b9312119
-Size (tightvnc-1.2.8_unixsrc.tar.bz2) = 1733425 bytes
-SHA1 (patch-aa) = 56346a71083a8565d034187fcabb28a965078d62

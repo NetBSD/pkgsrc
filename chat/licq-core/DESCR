@@ -1,7 +1,0 @@
-Licq is a multi-threaded ICQ clone written mostly in C++. It uses
-an extensive plugin system to manage many different functions. The
-main gui is written using the Qt widget set. Licq is distributed
-under GPL with some special QPL exceptions for Qt.
-
-Several GUI plugins for console, Qt etc. are available as seperate
-packages.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:42 wiz Exp $
-
-SHA1 (xroads-v0.5.tar.gz) = 559f916eda55ba4700c2cea6fcb42d1b1a47fa06
-Size (xroads-v0.5.tar.gz) = 48641 bytes
-SHA1 (patch-aa) = 4978b1b718b920871d06acff54895da60642c949
-SHA1 (patch-ab) = f22b139e84c4e2d4d9d190d818d0ce6aba816a23

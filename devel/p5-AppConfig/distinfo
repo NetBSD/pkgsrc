@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/06/11 12:30:49 wiz Exp $
-
-SHA1 (AppConfig-1.52.tar.gz) = 974e41ed348b43d98ae59ba6ccd88ab0a7061a94
-Size (AppConfig-1.52.tar.gz) = 45654 bytes
-SHA1 (patch-aa) = c08deb2b0dc4dbfb9ae921f4559fd0d6ac0ec7db

@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD: gnome-config,v 1.1 2000/08/11 20:01:20 jlam Exp $
-
-case $1 in
---datadir)
-	echo @PREFIX@/share
-	;;
-esac

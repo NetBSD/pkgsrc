@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/03 14:35:23 wiz Exp $
-bin/dosbox
-man/man1/dosbox.1
-share/doc/dosbox/README
-@dirrm share/doc/dosbox

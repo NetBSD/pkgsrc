@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/27 10:17:58 agc Exp $
-
-SHA1 (afio-2.4.7.tgz) = 92e473f025cbc69893ccc46c4f91ffb52da2fef3
-Size (afio-2.4.7.tgz) = 91224 bytes
-SHA1 (patch-aa) = b7a1c3952d7b5265afa16f4e94585fa66518e2ee

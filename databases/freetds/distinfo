@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2003/06/11 13:24:09 wiz Exp $
-
-SHA1 (freetds-0.61.tgz) = 3b86f6cf08775ec1f36b2ead289638bcbb273f70
-Size (freetds-0.61.tgz) = 746519 bytes
-SHA1 (patch-aa) = e0f358dec17b9735686bc7859312497de2908624
-SHA1 (patch-ab) = 6634d7358481d8a89cdf1112c7e1173b4206d448

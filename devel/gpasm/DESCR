@@ -1,3 +1,0 @@
-gpasm is fully functional open source replacement for Microchip's MPASM
-assembler. It supports all instruction sets of the PIC micro-controllers
-except for the 17Cxx.

@@ -1,5 +1,0 @@
-Dia is a program for creating diagrams of all kinds. The current version
-can do UML class diagrams, Entity-Relationship modeling, network diagrams,
-and much more. The engine is very flexible and dynamically loads
-diagram-types from disk. It can currently export to postscript and
-load/save in an xml format.

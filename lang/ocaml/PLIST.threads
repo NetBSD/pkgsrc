@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST.threads,v 1.2 2003/05/26 13:20:24 cjep Exp $
-lib/ocaml/libthreadsnat.a
-lib/ocaml/threads/event.cmx
-lib/ocaml/threads/threads.cmxa
-lib/ocaml/threads/threadUnix.cmx
-lib/ocaml/threads/threads.a
-lib/ocaml/threads/condition.cmx
-lib/ocaml/threads/mutex.cmx
-lib/ocaml/threads/thread.cmx

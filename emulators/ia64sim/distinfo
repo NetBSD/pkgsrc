@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/09 21:23:18 wiz Exp $
-
-SHA1 (ia64sim-0.3/ia64sim.zip) = 8ec70627716bfcc59f7083f76655bb3ee09aa89f
-Size (ia64sim-0.3/ia64sim.zip) = 91846 bytes
-SHA1 (patch-aa) = ec595d6964bdc9df6ad5501e320523466af3b0cf
-SHA1 (patch-ac) = 42b237f44e4dde9be1897a83ffe97cf5ccf3f8d4
-SHA1 (patch-ad) = e1e97c022d64c1729a8c4ca836695148808804d6

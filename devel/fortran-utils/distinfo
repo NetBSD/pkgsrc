@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:17 wiz Exp $
-
-SHA1 (fortran-utils-1.1.tar.gz) = 587f55857876b9447326faa1074d6d8b6b1a058e
-Size (fortran-utils-1.1.tar.gz) = 7566 bytes
-SHA1 (patch-aa) = ee581aa30dca69444485225695d2e9e013251b6d
-SHA1 (patch-ab) = 997cc5596047c4dc4c3dd07119e7045c0c5b89f8

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/10/26 18:06:47 bouyer Exp $
-
-SHA1 (gle-3.0.3.tar.gz) = bd469b571bc4128fe9eac75703d7f96b31a506ac
-Size (gle-3.0.3.tar.gz) = 702445 bytes
-SHA1 (patch-aa) = 5ed3695ec317819ddc25d33508bc2d8b865ca54c
-SHA1 (patch-ab) = b583b4ffcc389548f07f83b7e88d6c665aaca3ef
-SHA1 (patch-ac) = 1cf307bc45274c72c2d8c9f860af8041c6dca34a

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/15 00:27:54 salo Exp $
-lib/aspell/gaeilge
-share/aspell/gaeilge.dat
-share/aspell/gaeilge_phonet.dat

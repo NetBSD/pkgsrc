@@ -1,7 +1,0 @@
-This perl module allows you run and interact with child processes using files,
-pipes, and pseudo-ttys.  Both system()-style and scripted usages are supported
-and may be mixed.  Likewise, functional and OO API styles are both supported
-and may be mixed.
-
-Various redirection operators reminiscent of those seen on common Unix and DOS
-command lines are provided.

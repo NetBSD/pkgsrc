@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/01/30 22:38:36 mjl Exp $
-
-SHA1 (XML-LibXML-1.31.tar.gz) = 4578d00efe09062f2888775ab06263144de3fee4
-Size (XML-LibXML-1.31.tar.gz) = 69472 bytes
-SHA1 (patch-aa) = 01aaf6844c0caccd8b165cf82ec505d1aaa1b31d

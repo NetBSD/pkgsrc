@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/03/11 14:21:24 yyamano Exp $
-
-SHA1 (bunzip021.c.gz) = 0b12f8327807721d29e4bde44557b536ae9ecfc5
-Size (bunzip021.c.gz) = 20317 bytes
-SHA1 (patch-aa) = b4d4fc765c2b2b93e4aa855f65692302e16dc7ff

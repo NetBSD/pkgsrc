@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/06/27 14:36:32 seb Exp $
-
-SHA1 (liece-1.4.10.tar.gz) = 0150964b9346c8a23e56d91b9ba01c958ac5c232
-Size (liece-1.4.10.tar.gz) = 217046 bytes
-SHA1 (patch-aa) = 7a91fb834681eba806343d3345fe8cc2ebefb6d2

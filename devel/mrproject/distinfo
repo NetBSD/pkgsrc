@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/03/23 10:59:08 agc Exp $
-
-SHA1 (mrproject-0.5.1.tar.gz) = 6ba92ea1a15b394f3cc4a2be68afff4e4377dbd6
-Size (mrproject-0.5.1.tar.gz) = 854003 bytes
-SHA1 (patch-aa) = 93a94ce463a8cd7cf94234063ba7e11377acd0b7
-SHA1 (patch-ab) = 141e9aa53f12c4cf7de3e81cd56414c8843c1bea

@@ -1,3 +1,0 @@
-SML-MODE is a major Emacs mode for editing Standard ML. It provides
-syntax highlighting and automatic indentation and comes with sml-proc
-which allows interaction with an inferior SML interactive loop.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/06/29 23:52:04 jtb Exp $
-
-SHA1 (unison-2.9.1/src.tar.gz) = d355639b8191f5c74e652fe257fd98dcf76d4cc0
-Size (unison-2.9.1/src.tar.gz) = 319081 bytes
-SHA1 (patch-aa) = bb844e8070faab7d4c8aac30345881c1c66ca8d2
-SHA1 (patch-ab) = 0d391ffc0c47a16d24cda5e9f219665eeafb1553

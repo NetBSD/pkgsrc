@@ -1,3 +1,0 @@
-This is a major mode for editing Haskell source code under GNU Emacs or
-XEmacs.  It also supports running and interacting with the Hugs and GHCi
-interpreters as inferior processes in an Emacs buffer.

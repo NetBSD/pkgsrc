@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/07/12 12:05:01 wiz Exp $
-
-SHA1 (licq-1.2.6.tar.bz2) = fef2d6d8c9a368313335f3ac0e86128aa24133ef
-Size (licq-1.2.6.tar.bz2) = 3282918 bytes
-SHA1 (patch-aa) = 4678c53369dccdcfd2035ee2cc2d9967fba2e76d

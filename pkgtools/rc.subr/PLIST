@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/23 07:02:16 grant Exp $
-etc/rc.conf.example
-etc/rc.subr
-etc/rc.d/DAEMON
-etc/rc.d/LOGIN
-etc/rc.d/NETWORKING
-etc/rc.d/SERVERS
-@unexec ${RMDIR} %Detc/rc.d 2> /dev/null || ${TRUE}

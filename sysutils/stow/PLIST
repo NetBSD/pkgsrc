@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/25 21:51:03 jlam Exp $
-bin/stow
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/stow.info
-info/stow.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/stow.info
-man/man8/stow.8

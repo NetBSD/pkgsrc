@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:55 skrll Exp $
-
-SHA1 (xkeycaps-2.46.tar.Z) = 458133a394f63d84efacaf917254074005ce953d
-Size (xkeycaps-2.46.tar.Z) = 489439 bytes
-SHA1 (patch-aa) = 5ae1df3276449ed6fbd12f37e6c11401863911aa

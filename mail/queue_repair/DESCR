@@ -1,7 +1,0 @@
-queue_repair can be used to check or correct most corruptions of the queue
-in qmail (resulting from filesystem damage, etc). Functionality includes
-automatic, dynamic determination of UIDs and GIDs. Automatic, dynamic
-determination of use of big-todo. Handles basic tasks like fixing a queue
-restored from backups, incorrect ownership or permissions of directories and
-files, missing or extra split subdirectories, unexpected files or other
-directories, or creating a valid queue from scratch.

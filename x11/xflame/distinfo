@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:54 skrll Exp $
-
-SHA1 (xflame-1.1.1.tar.gz) = e76ac080115275e78590fbe1c6206da75dc99fd7
-Size (xflame-1.1.1.tar.gz) = 10439 bytes
-SHA1 (patch-aa) = 44aa8318dfd12c94a9498839cb669a699666eb5c

@@ -1,5 +1,0 @@
-Firewalking is a technique developed by Mike D. Schiffman and David E.
-Goldsmith that employs traceroute-like techniques to analyze IP packet
-responses to determine gateway ACL filters and map networks.
-Firewalk the tool employs the technique to determine the filter rules
-in place on a packet forwarding device.

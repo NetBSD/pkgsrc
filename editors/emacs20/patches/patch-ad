@@ -1,7 +1,0 @@
-$NetBSD: patch-ad,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
-
---- etc/ctags.1.orig	Fri Jul 17 18:58:29 1992
-+++ etc/ctags.1	Sat Feb 21 20:59:45 1998
-@@ -1 +1 @@
--.so man1/etags.1
-+.so man1/emacs-etags.1

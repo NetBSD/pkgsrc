@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/04/27 18:23:28 cjep Exp $
-
-SHA1 (xjig-2.4.tgz) = 539ee5974d7228e69bb84de1424064f84cac7577
-Size (xjig-2.4.tgz) = 124272 bytes
-SHA1 (patch-aa) = 28704775e443cde790db3dbe7990e561e97d4147

@@ -1,9 +1,0 @@
-This is a very cool water effect, written by Scott Scriven.
-
-This code uses palette tricks to do the height mapping, and assumes an
-image size of 320x200.  This means that if you want to use your own images,
-you'll need to create them as 320x200x8 images with a palette that ranges
-from darker colors at entry 0 to lighter colors at palette entry 255.
-
-I really like this demo, so be sure and read water.txt to see what keys
-enable what effects and how it's all done.

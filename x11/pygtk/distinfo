@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/02/18 11:55:02 drochner Exp $
-
-SHA1 (pygtk-0.6.9.tar.gz) = a6c8d30614f2f8d1be77064d839f48104eb8028b
-Size (pygtk-0.6.9.tar.gz) = 388901 bytes
-SHA1 (patch-aa) = a926a005a76d2805991b76830a002067de6daa67
-SHA1 (patch-ab) = e24ec6f868c128559d39186cf0088ace52c758bd

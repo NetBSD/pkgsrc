@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/11/21 10:02:56 grant Exp $
-
-SHA1 (bpalogin-2.0.1-src.tar.gz) = c0f7008586a4076f3fd932c64862dad6eaff1340
-Size (bpalogin-2.0.1-src.tar.gz) = 20722 bytes
-SHA1 (patch-aa) = d324a6eaf1bc4f442c171f4bd057e3339c2fd258
-SHA1 (patch-ab) = f2567d35d7a733d48c64497ede9e70fdadf97741

@@ -1,7 +1,0 @@
-apla is temporary replacement for aviplay player. It uses avifile library.
-
-If you have slow CPU/framebuffer you can try -s option to reduce count of
-frames displayed (all frames have to be decoded in most video formats
-though).  Using 16 bit video mode may help as well. Absolutely mandatory
-for optimal performance is use of write-combining access to framebuffer
-memory on i386 hardware, see memconfig(8).

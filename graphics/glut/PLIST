@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2003/03/30 08:54:39 jmc Exp $
-include/GL/glut.h
-include/GL/glutf90.h
-lib/libglut.so
-lib/libglut.so.${SO_SUFFIX}
-lib/libglut.so.${SO_VERS}
-lib/libglut.a
-lib/libglut.la
-@unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}

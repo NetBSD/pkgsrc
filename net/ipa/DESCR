@@ -1,9 +1,0 @@
-ipa(8) allows to make IP accounting (network accounting) based on FreeBSD
-IPv4/v6 Firewall (including IPFW2), OpenBSD Packet Filter and IP Filter
-accounting rules on FreeBSD, NetBSD and OpenBSD.
-
-It supports limits for accounting rules and limits events as "limit is
-reached", "reached limit is expired", etc.  It understands time intervals
-like "end of day", "end of week", "end of month", etc.
-
-ipastat(8) is a viewer for IP accounting database made by ipa(8).

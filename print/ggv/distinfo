@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/05/11 21:35:37 rh Exp $
-
-SHA1 (ggv-1.0.2.tar.gz) = 5c26425e7591e2ad24a31c17104f8f5018afe877
-Size (ggv-1.0.2.tar.gz) = 610873 bytes
-SHA1 (patch-aa) = 23c8583e03650119609d8a420e71fb3a34a3cb34
-SHA1 (patch-ab) = aa98a7dab0c47b00c240e0db3042fd9e686d5317

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/10/11 15:11:48 agc Exp $
-
-SHA1 (firewalk-1.0.tar.gz) = c8ade2a59b1e20e3e7800e6ac7702628773e24ad
-Size (firewalk-1.0.tar.gz) = 75573 bytes
-SHA1 (patch-aa) = a2fb24de0713e650f651dfd0e733d9b83462457e
-SHA1 (patch-ab) = 79a950620c539413fa6990a9202d3ad97ad807ca
-SHA1 (patch-ac) = 6ac2733b0a3bb2e7ae27c9b6b220381d0b9ee282
-SHA1 (patch-ad) = 4c49be6af143237a2b4f3839caa00b439d781ae6

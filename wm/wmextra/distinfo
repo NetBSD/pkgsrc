@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 09:26:04 agc Exp $
-
-SHA1 (WindowMaker-extra-0.1.tar.gz) = 80f34cb3af705ec0f79d727b82cef28ee50fc4e7
-Size (WindowMaker-extra-0.1.tar.gz) = 238018 bytes
-SHA1 (patch-aa) = 08330bb195997536be4c6c22b36e59f91a1b1f87

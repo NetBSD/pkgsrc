@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:35 wiz Exp $
-
-SHA1 (tcpd-tools-0.8.tar.gz) = fe2abe15bbf9062833af9bec3745c751a8aa06df
-Size (tcpd-tools-0.8.tar.gz) = 468856 bytes
-SHA1 (patch-aa) = 646ef4c578b5ede84f80e27b4226806c9f02c861

@@ -1,9 +1,0 @@
-$NetBSD: patch-ao,v 1.1.1.1 2002/05/25 12:25:51 markd Exp $
-
---- libatalk/atp/Makefile.inc	Wed Dec 31 16:00:00 1969
-+++ libatalk/atp/Makefile.inc	Mon Aug 30 06:47:42 1999
-@@ -0,0 +1,4 @@
-+.PATH: ${.CURDIR}/atp
-+
-+SRCS+= atp_bprint.c atp_bufs.c atp_close.c atp_open.c atp_packet.c
-+SRCS+= atp_rreq.c atp_rresp.c atp_rsel.c atp_sreq.c atp_sresp.c

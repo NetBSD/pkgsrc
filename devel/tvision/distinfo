@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/17 01:18:08 jtb Exp $
-
-SHA1 (tvision-0.7.tar.gz) = 5350d8e641dc66c62a68aa2606b5f389fad027f3
-Size (tvision-0.7.tar.gz) = 446880 bytes
-SHA1 (patch-aa) = 7ddf8b87f7991ad41a84c28f65646c7c9f11dde0
-SHA1 (patch-ab) = 0ed36ab7cafbbf702647e69c862f1ecc6d1cc5b3

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/09/22 00:16:58 jlam Exp $
-
-SHA1 (gfract-0.21.tar.gz) = 0d996547359ba5f52e43fdb2b4c4baf2a4773a88
-Size (gfract-0.21.tar.gz) = 27927 bytes
-SHA1 (gfract-palettes-0.1.tar.gz) = f05e06e6012e1b1526e0c796ca7f6617fca8ab7d
-Size (gfract-palettes-0.1.tar.gz) = 223648 bytes
-SHA1 (patch-aa) = d04a36b152ba2cd511a0ef18730121bf533cf221

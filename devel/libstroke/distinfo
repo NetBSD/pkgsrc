@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:29 wiz Exp $
-
-SHA1 (libstroke-0.3.tar.gz) = b73271d838d1fe5a9ca9308107051351688047cd
-Size (libstroke-0.3.tar.gz) = 92516 bytes
-SHA1 (patch-aa) = f24f9ba49e8b5e13bc53b49d5a918da0c8b4327d

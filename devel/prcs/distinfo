@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/09/24 18:04:31 hubertf Exp $
-
-SHA1 (prcs-1.2.15.tar.gz) = a8f763a08ab0844a8f7fdf0870e16e3a642fcc19
-Size (prcs-1.2.15.tar.gz) = 648041 bytes
-SHA1 (patch-aa) = c86d8d29ae5c051f35dc126d343df6e3886c65c1

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/13 17:50:50 cjep Exp $
-bin/lbrate
-share/doc/lbrate/COPYING
-share/doc/lbrate/ChangeLog
-share/doc/lbrate/README
-share/doc/lbrate/TODO
-@dirrm share/doc/lbrate

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2003/01/10 00:11:01 mycroft Exp $
-
-SHA1 (expect-5.38.0.tar.gz) = 73a34651f0e45f5208d84ef23d61e40c04deab86
-Size (expect-5.38.0.tar.gz) = 517652 bytes
-SHA1 (patch-aa) = a67976c3d81ae6f933e4e943bc59018961b9f9cd
-SHA1 (patch-ab) = 642e714e58bfe72b332cb89559e1f55df9b6052f
-SHA1 (patch-ac) = 9b1cf55607cf52f94b2499f7a654a04c93f71739
-SHA1 (patch-ad) = 460fcc04e6f1936fbb2669c80be91e790173b0a3

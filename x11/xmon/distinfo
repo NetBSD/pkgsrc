@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:57 skrll Exp $
-
-SHA1 (xmon.1.5.4.tar.gz) = 646236e6abe38d8049112eea534423550431cd1a
-Size (xmon.1.5.4.tar.gz) = 69490 bytes
-SHA1 (patch-aa) = 6f927e32fc7097f5a16355e3312b470d979be985
-SHA1 (patch-ab) = 2b23ab7d8f9fcc2d627320a2aa23e425365a59ec
-SHA1 (patch-ac) = f532bb53d4c08b507595116e09e2f7a2de5c6b9e

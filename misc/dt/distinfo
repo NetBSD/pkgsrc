@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2002/02/11 18:30:22 fredb Exp $
-
-SHA1 (dt-1.1.7.tar.gz) = 024c3137185dd93ced163e82227f53cfb79b993e
-Size (dt-1.1.7.tar.gz) = 119975 bytes
-SHA1 (patch-aa) = 9877c123f2f7f13ece91b40a70fb490524e53f18
-SHA1 (patch-ab) = 9d9971e5eaf8c7e8d7206d4174dfa4ccc8baae46
-SHA1 (patch-ac) = 2dfde914d866b3ad5ded30be4252d2675984ce74
-SHA1 (patch-ad) = 68320e1b2bda509cd940cf531d19ec8511ceca91

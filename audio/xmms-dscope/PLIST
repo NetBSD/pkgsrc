@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:28 zuntum Exp $
-lib/xmms/Visualization/libdscope.so
-lib/xmms/Visualization/libdscope.la
-lib/xmms/Visualization/libdscope.a
-share/xmms/dscope_themes/bg_xmms.xpm
-share/xmms/dscope_themes/bg_gtk.xpm
-@dirrm share/xmms/dscope_themes

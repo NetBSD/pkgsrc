@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:27 wiz Exp $
-
-SHA1 (icbm3d.0.3.tar.gz) = f8b5b414e8dbe5a17292da9b27846b5b9db081a3
-Size (icbm3d.0.3.tar.gz) = 28798 bytes
-SHA1 (patch-aa) = 8919ccd4e01fb4d9d1a47775f713ecd0f615f99e

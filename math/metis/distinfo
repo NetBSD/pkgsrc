@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 08:45:41 agc Exp $
-
-SHA1 (metis-4.0.tar.gz) = 580568308e1fa40e5a7a77cacbf27f865d6c01af
-Size (metis-4.0.tar.gz) = 508601 bytes
-SHA1 (patch-aa) = 4a7abb2a2d3e6600bb58cafc02d420cffa3ef4ca
-SHA1 (patch-ab) = c7f6787f67a981a3aace959d7337f4528f9d76cb
-SHA1 (patch-ac) = f3e956093d5931170a61f3e8c0732900b5d38874

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/10 05:29:11 tron Exp $
-
-SHA1 (rtspd-src-1.0.0.0.tar.gz) = 64cdbb847bd4966d65b86cc25eeac6403eed1738
-Size (rtspd-src-1.0.0.0.tar.gz) = 107032 bytes
-SHA1 (patch-aa) = 0ed39d567b2025580edab9078c8d90bb4969bee4
-SHA1 (patch-ab) = b6424dd652a2d9a531700ddab2098e3c230f6736

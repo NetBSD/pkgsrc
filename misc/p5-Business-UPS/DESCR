@@ -1,7 +1,0 @@
-Make shipping charge requests of the UPS web site or track UPS
-packages from within a Perl5 program.
-
-Note: UPS authorizes you to use UPS tracking systems solely to track
-shipments tendered by or for you to UPS for delivery and for no other
-purpose. Any other use of UPS tracking systems and information is
-strictly prohibited.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/08/25 21:52:20 jlam Exp $
-
-SHA1 (sitecopy-0.11.4.tar.gz) = 765e40e769e91fff0323e4cae73ad8048b453a2c
-Size (sitecopy-0.11.4.tar.gz) = 737326 bytes
-SHA1 (patch-aa) = ba1955f8cd86c16bca08872105db91c1532dc882
-SHA1 (patch-ab) = d8ce1af8b87a0d156a1795fef824553f64b22f59

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2002/08/25 18:38:50 jlam Exp $
-
-SHA1 (rvm-1.6.tar.gz) = d6b27b37601d5d1666f3956feb6582c3cb6b1d99
-Size (rvm-1.6.tar.gz) = 374944 bytes
-SHA1 (patch-aa) = c8faef5459fd5ab06293b8131ec9f41451e63bc5
-SHA1 (patch-ab) = 4bfdc161700e8adcf56e25ed535d6a95b77c7e1c

@@ -1,5 +1,0 @@
-#	$NetBSD: shlib_version,v 1.2 2000/10/18 11:16:59 wiz Exp $
-#	Don't forget to edit pkg/PLIST when changing
-#
-major=1
-minor=1

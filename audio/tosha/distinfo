@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:38 agc Exp $
-
-SHA1 (tosha-0.05.tar.gz) = b567f452843b544b082c88403d74ad1ca07f6820
-Size (tosha-0.05.tar.gz) = 17859 bytes
-SHA1 (patch-aa) = b549c7ae682ce14cae981d2311ed32e9b0ca6d48
-SHA1 (patch-ab) = 9b4b43d6cb0fe2871cfd0e7e76ffdbd19123573a
-SHA1 (patch-ac) = 26feb1151d4fb02c5831762447c7bb264517f4d6
-SHA1 (patch-af) = f68e8d1ff3d0372fe642259bd30e820a0a2daae2

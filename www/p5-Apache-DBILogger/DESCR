@@ -1,7 +1,0 @@
-DBI is a database access Application Programming Interface (API)
-for the Perl Language. The DBI API Specification defines a set
-of functions, variables and conventions that provide a consistent
-database interface independant of the actual database being used.
-
-With this module you can now have your httpd (apache) logs redirected
-into a database table for future querying.

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/04/01 08:07:47 rh Exp $
-
-SHA1 (Preferences-1.2.0.tar.bz2) = eb6b727c4f9eac2fd55237b3a3dc95e00bf748e9
-Size (Preferences-1.2.0.tar.bz2) = 52293 bytes
-SHA1 (patch-aa) = 72234b83635b5adef5a55de7b3c3188245f87a0c
-SHA1 (patch-ab) = b2e59ffd762d4e519aa1385a391ece62e92c8530
-SHA1 (patch-ac) = 7916a627f395a3b141d7cb1b07d7fb72f4d98da6
-SHA1 (patch-ad) = aee5e8ae6ba4546991a43c25e12b0bc8d9054139

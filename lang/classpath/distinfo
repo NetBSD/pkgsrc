@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/06/25 20:50:44 jmc Exp $
-
-SHA1 (classpath-0.05.tar.gz) = e73a81c314d4dba57e9115bef3ec7f0519831d4d
-Size (classpath-0.05.tar.gz) = 6800324 bytes
-SHA1 (patch-aa) = be36bf95ddbc4a8f5b4375d0c0bdaff4d449e560
-SHA1 (patch-ab) = 4d7a67ea14930b9432acdc701514fd8f4c30d229
-SHA1 (patch-ac) = 41d86c30a1989aa28e0f73c7122168418cdbfa1e

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/12 10:55:48 wiz Exp $
-etc/rc.d/teapop
-libexec/teapop
-man/man8/teapop.8
-sbin/cronpopauth.pl
-share/examples/teapop/teapop.passwd
-@dirrm share/examples/teapop

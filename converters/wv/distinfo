@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2002/11/15 18:03:41 wiz Exp $
-
-SHA1 (wv-0.7.4.tar.gz) = ce07299aadda9c88bd02cbc3489d5093825c51c5
-Size (wv-0.7.4.tar.gz) = 1199621 bytes
-SHA1 (patch-ad) = 820e595779998246e54a2a4c234873d563cb2bf0
-SHA1 (patch-ae) = 58b4cadf0276b1dc25bd737623336b4fc90093f0
-SHA1 (patch-aj) = f141b74b49611c954d4de24d050e5f68274ab26e

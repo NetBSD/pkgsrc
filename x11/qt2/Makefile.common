@@ -1,9 +1,0 @@
-# $NetBSD: Makefile.common,v 1.5 2001/06/17 19:10:37 drochner Exp $
-#
-
-QTVERSION=	2.3.1
-
-MAINTAINER=	skrll@netbsd.org
-HOMEPAGE=	http://www.trolltech.com/products/qt.html
-
-USE_X11BASE=	yes

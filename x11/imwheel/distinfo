@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/04/27 13:32:01 zuntum Exp $
-
-SHA1 (imwheel-0.9.9.tar.gz) = cbf5d40f764d4b7382538954b68bb9a6c4faa336
-Size (imwheel-0.9.9.tar.gz) = 411882 bytes
-SHA1 (patch-aa) = f869d434415e526b24451205383009be76829f28
-SHA1 (patch-ab) = 2547c10c55626568e9447f2a5f2258e83d26e506

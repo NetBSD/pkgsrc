@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/03/20 22:39:34 jschauma Exp $
-
-SHA1 (gap4r3.tar.gz) = 448d473fdba177aa4ba7d64542cec8bb770e3d61
-Size (gap4r3.tar.gz) = 47025159 bytes
-SHA1 (fix4r3n4.tar.gz) = 77f2e396b5f91504b3b9015b1317c2c25afcdfee
-Size (fix4r3n4.tar.gz) = 1129165 bytes
-SHA1 (patch-aa) = 98d7749f06e4b3c5c6955fe5478b39289ff219c6
-SHA1 (patch-ab) = bb7142d80f71ae0f2b97ff44d24d5fe0e9fa5431

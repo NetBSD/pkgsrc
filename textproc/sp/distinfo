@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/02/06 10:36:38 jmmv Exp $
-
-SHA1 (sp-1.3.4.tar.gz) = e71e96356b4bba269d01b6761d4ae33b4f291377
-Size (sp-1.3.4.tar.gz) = 597801 bytes
-SHA1 (patch-aa) = 8d3b4380b96091d26e263cc5ddfaed0f5d746ebb
-SHA1 (patch-ab) = 10b93c822b7a14d3384a1247b03db40198733c19
-SHA1 (patch-ac) = 012f14a4640db95a1d3708682de04d0d18fae97e
-SHA1 (patch-ad) = 4a8f06ac288cf22616825fbcbed2e047fd6bcf5a
