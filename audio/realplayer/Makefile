@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/09/23 00:44:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.15 2002/09/28 23:52:42 wiz Exp $
 
 PKGNAME=		realplayer-8.0.1
 WRKSRC=			${WRKDIR}/RealPlayer8
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.bin
 DISTNAME=		rp8_linux20_libc6_i386_cs2
 .elif ${MACHINE} == "sparc"
 DISTNAME=		rp8_solaris27_sparc_cs2
+.else
+DISTNAME=		must_be_defined
 .endif
 
 MAINTAINER=		packages@netbsd.org
