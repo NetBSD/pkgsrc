@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1637 2003/03/14 10:20:24 wiz Exp $
+$NetBSD: CHANGES,v 1.1638 2003/03/14 11:41:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1121,3 +1121,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sodipodi to 0.31nb1 [wiz 2003-03-13]
 	Updated less to 381nb1 [jmmv 2003-03-14]
 	Updated citrix_ica to 6.30.1052 [wiz 2003-03-14]
+	Updated libdvdcss to 1.2.6 [wiz 2003-03-14]
