@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/25 14:27:51 grant Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/26 18:11:45 grant Exp $
 #
 
 DISTNAME=		phoenix-0.3-i686-pc-linux-gnu
-PKGNAME=		phoenix-0.3
+PKGNAME=		phoenix-linux-0.3
 CATEGORIES=		www
 MASTER_SITES=		http://ftp.mozilla.org/pub/phoenix/releases/0.3/
 
@@ -24,8 +24,9 @@ post-build:
 		${WRKDIR}/phoenix.sh
 
 do-install:
-	cd ${WRKDIR} && ${PAX} -rw phoenix ${PREFIX}/lib
-	${INSTALL_SCRIPT} ${WRKDIR}/phoenix.sh ${PREFIX}/bin/phoenix
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/phoenix-linux
+	cd ${WRKDIR}/phoenix; && ${PAX} -rw .  ${PREFIX}/lib/phoenix-linux
+	${INSTALL_SCRIPT} ${WRKDIR}/phoenix.sh ${PREFIX}/bin/phoenix-linux
 
 .include "../../mk/bsd.prefs.mk"
 
