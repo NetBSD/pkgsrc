@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/04 13:45:52 minoura Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:49 jmmv Exp $
 #
 
 DISTNAME=		bbdb-2.34
 CATEGORIES=		mail misc news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bbdb/}
 
-MAINTAINER=		minoura@netbsd.org
+MAINTAINER=		minoura@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/bbdb/
 COMMENT=		Insidious Big Brother DataBase, a rolodex-like database program for Emacs
 

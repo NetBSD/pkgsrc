@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/22 14:33:35 manu Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:49 jmmv Exp $
 #
 
 DISTNAME=		jchkmail-1.3.1a
 CATEGORIES=		mail
 MASTER_SITES=		http://j-chkmail.ensmp.fr/download/
 
-MAINTAINER=		manu@netbsd.org
+MAINTAINER=		manu@NetBSD.org
 HOMEPAGE=		http://j-chkmail.ensmp.fr/
 COMMENT=		Behavior-based virus and spam milter for Sendmail
 

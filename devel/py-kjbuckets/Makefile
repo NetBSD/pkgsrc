@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/24 13:29:59 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:48 jmmv Exp $
 #
 
 DISTNAME=	gadfly-1.0.0
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-kjbuckets-2.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gadfly/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://starship.python.net/crew/aaron_watters/kjbuckets/
 COMMENT=	Fast set, graph and mapping operations
 
