@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/09/27 10:20:29 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2003/09/27 10:27:39 grant Exp $
 #
 # Optionally define:
 #
@@ -18,6 +18,13 @@ BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
 _NEED_NCURSES=		YES
 .else
 _NEED_NCURSES=		NO
+
+#                
+# Handle the base system not having (n)curses.
+#
+.  if !(exists(/usr/include/curses.h) || exists(/usr/include/ncurses.h))
+_NEED_NCURSES=		YES
+.  endif
 #
 # These versions of NetBSD didn't have a curses library that was capable of
 # replacing ncurses.
