@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/11 14:53:45 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/14 16:04:26 agc Exp $
 #
 
 DISTNAME=	kdf-0.5.1
@@ -14,13 +14,13 @@ DEPENDS+=	kde-1.1.2:../../x11/kde
 
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--datadir=`${MAKE} show-kdebase-prefix`/share/kde \
-		--with-qt-dir=`${MAKE} show-qt1-prefix`/qt1 \
+CONFIGURE_ARGS+=--datadir=`${SHOW_PREFIX1} kdebase ${SHOW_PREFIX2}`/share/kde \
+		--with-qt-dir=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1 \
 		--enable-path-check
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
-		QTDIR=`${MAKE} show-qt1-prefix`/qt1 \
-		MOC=`${MAKE} show-qt1-prefix`/qt1/bin/moc \
+		QTDIR=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1 \
+		MOC=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1/bin/moc \
 		CXXFLAGS="${CFLAGS}" \
 		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
 

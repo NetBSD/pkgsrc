@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/11 14:53:45 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/14 16:04:26 agc Exp $
 #
 
 DISTNAME=	asclock-gtk-2.1.10beta
@@ -18,7 +18,7 @@ PLIST_SRC=	${PKGDIR}/PLIST \
 		${PKGDIR}/PLIST.themes
 
 ALL_TARGET=	asclock
-MAKE_ENV+=	CONFIG_PATH="`${MAKE} show-gtk+-prefix`/bin/"	# for gtk-config
+MAKE_ENV+=	CONFIG_PATH="`${SHOW_PREFIX1} gtk+ ${SHOW_PREFIX2}`/bin/"	# for gtk-config
 
 pre-configure:
 	cd ${WRKSRC}; ${LN} -sf themes/classic default_theme

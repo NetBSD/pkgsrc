@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.503 2000/07/14 06:55:26 rh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.504 2000/07/14 16:04:24 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1182,16 +1182,8 @@ show-downlevel:
 .endif
 .endif
 
-show-gtk+-prefix: _SHOW_PREFIX_USE
-show-imlib-prefix: _SHOW_PREFIX_USE
-show-kdebase-prefix: _SHOW_PREFIX_USE
-show-qt1-prefix: _SHOW_PREFIX_USE
-show-qt2-prefix: _SHOW_PREFIX_USE
-show-xpm-prefix: _SHOW_PREFIX_USE
-
-_SHOW_PREFIX_USE: .USE
-	@${PKG_INFO} -qp ${.TARGET:S/^show-//:S/-prefix//} 2>/dev/null | \
-		 ${AWK} 'BEGIN { p="${X11PREFIX}" } { p = $$2 } END { printf("%s\n", p) }'
+SHOW_PREFIX1=	${PKG_INFO} -qp 
+SHOW_PREFIX2=	2>/dev/null | ${AWK} 'BEGIN { p="${X11PREFIX}" } { p = $$2 } END { printf("%s\n", p) }'
 
 .if !target(show-pkgsrc-dir)
 show-pkgsrc-dir:
