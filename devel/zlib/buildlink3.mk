@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/01/19 23:11:19 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/01/24 03:12:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ZLIB_BUILDLINK3_MK:=	${ZLIB_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ ZLIB_BUILDLINK3_MK:=	${ZLIB_BUILDLINK3_MK}+
 
 .if !empty(ZLIB_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		zlib
-BUILDLINK_DEPENDS.zlib?=	zlib>=1.1.4nb1
+BUILDLINK_DEPENDS.zlib+=	zlib>=1.1.4nb1
 BUILDLINK_PKGSRCDIR.zlib?=	../../devel/zlib
 .endif	# ZLIB_BUILDLINK3_MK
 
@@ -70,13 +70,17 @@ _ZLIB_PKG=	zlib-1.1.4nb1
 .      endfor
 .    endif
 
-_ZLIB_DEPENDS=	${BUILDLINK_DEPENDS.zlib}
+BUILDLINK_USE_BUILTIN.zlib?=	YES
+.    for _depend_ in ${BUILDLINK_DEPENDS.zlib}
+.      if !empty(BUILDLINK_USE_BUILTIN.zlib:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.zlib!=	\
-	if ${PKG_ADMIN} pmatch '${_ZLIB_DEPENDS}' ${_ZLIB_PKG}; then	\
+	if ${PKG_ADMIN} pmatch '${_depend_}' ${_ZLIB_PKG}; then		\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
+.      endif
+.    endfor
 .  endif
 MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.zlib="${BUILDLINK_USE_BUILTIN.zlib}"
 .endif
@@ -86,7 +90,7 @@ MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.zlib="${BUILDLINK_USE_BUILTIN.zlib}"
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
 #
-BUILDLINK_DEPENDS.zlib=	zlib>=1.2.1
+BUILDLINK_DEPENDS.zlib+=	zlib>=1.2.1
 .  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	zlib
 .  endif
