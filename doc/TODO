@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1300 2004/01/13 13:06:52 adam Exp $
+$NetBSD: TODO,v 1.1301 2004/01/14 02:28:17 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -170,7 +170,6 @@ Suggested package updates
 	o freetype-2.1.7 [breaks compatibility with other packages]
 	o fsviewer-0.2.5
 	o gauche-0.7.3 [kei]
-	o gcalctool-4.3.35 [pkg/24011]
 	o gcc-3.3.2 [gcc3 package]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
