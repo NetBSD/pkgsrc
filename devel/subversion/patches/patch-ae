@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2003/05/25 09:31:30 epg Exp $
+$NetBSD: patch-ae,v 1.2 2003/06/20 06:45:00 epg Exp $
 
---- configure.orig	Sat May 17 19:28:50 2003
+--- configure.orig	Mon Jun 16 08:28:05 2003
 +++ configure
-@@ -10287,8 +10287,9 @@ echo "$as_me: WARNING: swig bindings req
+@@ -10568,8 +10568,9 @@ echo "$as_me: WARNING: swig bindings req
      esac
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes"; then
        ### TODO: When it's ready, add the swig-java-lib rule here.
@@ -14,7 +14,7 @@ $NetBSD: patch-ae,v 1.1 2003/05/25 09:31:30 epg Exp $
  
        echo "$as_me:$LINENO: checking for swig library directory" >&5
  echo $ECHO_N "checking for swig library directory... $ECHO_C" >&6
-@@ -10454,8 +10455,9 @@ echo "$as_me: WARNING: swig bindings req
+@@ -10735,8 +10736,9 @@ echo "$as_me: WARNING: swig bindings req
      esac
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes"; then
        ### TODO: When it's ready, add the swig-java-lib rule here.
@@ -26,7 +26,7 @@ $NetBSD: patch-ae,v 1.1 2003/05/25 09:31:30 epg Exp $
  
        echo "$as_me:$LINENO: checking for swig library directory" >&5
  echo $ECHO_N "checking for swig library directory... $ECHO_C" >&6
-@@ -10624,8 +10626,9 @@ echo "$as_me: WARNING: swig bindings req
+@@ -10905,8 +10907,9 @@ echo "$as_me: WARNING: swig bindings req
      esac
      if test "$PYTHON" != "none" -a "$SWIG_SUITABLE" = "yes"; then
        ### TODO: When it's ready, add the swig-java-lib rule here.
