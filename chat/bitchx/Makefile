@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/11/06 00:59:30 grant Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/23 14:09:53 grant Exp $
 
 DISTNAME=	ircii-pana-1.0c18
 PKGNAME=	bitchx-1.0.3.18
@@ -33,7 +33,7 @@ post-extract:
 
 post-patch:
 	@${MV} ${WRKSRC}/doc/BitchX.1 ${WRKSRC}/doc/BitchX.1.orig
-	@${SED} -e 's|@PREFIX@|${PREFIX}|' \
+	@${SED} ${FILES_SUBST_SED} \
 		${WRKSRC}/doc/BitchX.1.orig > ${WRKSRC}/doc/BitchX.1
 
 # The WANT_NOTIFY_BITCHX_COM message after configure is misleading, we
@@ -51,4 +51,5 @@ post-install:
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
