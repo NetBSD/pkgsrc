@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/01/07 22:09:56 cjep Exp $
+# $NetBSD: Makefile,v 1.27 2003/01/14 07:12:24 tron Exp $
 
 DISTNAME=	opera-5.0.1
 CATEGORIES=	www
@@ -42,6 +42,7 @@ DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
 
 OPERA_ARCH=	ppc
 
+.include "../../mk/bsd.pkg.mk"
 .elif (${OPSYS} == SunOS && ${MACHINE_ARCH} == sparc)
 OPERA_ARCH=	sparc
 OPERA_DIR=	unix/solaris
@@ -60,5 +61,5 @@ do-install:
 	mv ${PREFIX}/bin/opera ${PREFIX}/libexec/opera
 	${INSTALL_SCRIPT} ${WRKDIR}/opera ${PREFIX}/bin
 
-.endif
 .include "../../mk/bsd.pkg.mk"
+.endif
