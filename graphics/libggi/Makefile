@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2002/11/25 20:48:42 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2003/01/02 23:54:55 jmmv Exp $
 #
 
 DISTNAME=	libggi-2.0b2.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.ggi-project.org/pub/ggi/ggi/current/
 
@@ -19,6 +20,12 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
+
+PKG_SYSCONFSUBDIR=	ggi
+EGDIR=			${PREFIX}/share/examples/ggi
+CONF_FILES=		${EGDIR}/libggi.conf ${PKG_SYSCONFDIR}/libggi.conf
+CONF_FILES+=		${EGDIR}/libggimisc.conf ${PKG_SYSCONFDIR}/libggimisc.conf
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
@@ -33,4 +40,5 @@ post-configure:
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../graphics/libgii/buildlink2.mk"
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
