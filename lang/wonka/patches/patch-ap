@@ -1,0 +1,12 @@
+$NetBSD: patch-ap,v 1.1 2002/11/12 11:17:19 skrll Exp $
+
+--- wonka/src/native/java/lang/ClassLoader.c.orig	Thu Oct  3 14:57:03 2002
++++ wonka/src/native/java/lang/ClassLoader.c
+@@ -400,6 +400,7 @@ w_instance ClassLoader_getCommandLineCla
+     }
+     else {
+       /* HACK! HACK! HACK! */
++      /* XXX NAH Do I need to do anything here? */
+       result = cstring2String(thread, "./:/system/:/user/", 18);
+     }
+     attachString(Result, result);
