@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.342 2004/07/29 05:15:31 xtraeme Exp $
+# $NetBSD: Packages.txt,v 1.343 2004/07/29 06:40:35 xtraeme Exp $
 ###########################################################################
 
 			==========================
@@ -2931,7 +2931,7 @@ X11 (/usr/X11R6, /usr/openwin, ...) you will have to add the following
 lines into mk.conf:
 
     X11_TYPE=xorg
-    X11BASE=/usr/pkg/X11R6
+    X11BASE=/usr/pkg/xorg
 
 `LOCALBASE' by default is `/usr/pkg'.
 
