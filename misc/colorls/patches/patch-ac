@@ -1,0 +1,66 @@
+--- ls.c-orig	Thu May 21 15:41:32 1998
++++ ls.c	Thu May 21 15:42:09 1998
+@@ -59,6 +59,8 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include <locale.h>
++#include <pwd.h>
++#include <grp.h>
+ 
+ #include "ls.h"
+ #include "extern.h"
+@@ -94,6 +96,7 @@
+ int f_dirname;			/* if precede with directory name */
+ int f_timesort;			/* sort by time vice name */
+ int f_type;			/* add type character for non-regular files */
++int f_color;			/* add type in color for non-regular files */
+ #ifndef BSD4_4_LITE
+ int f_whiteout;			/* show whiteout entries */
+ #endif
+@@ -135,9 +138,9 @@
+ 
+ 	fts_options = FTS_PHYSICAL;
+ #ifdef BSD4_4_LITE
+-	while ((ch = getopt(argc, argv, "1ACFLRTacdfgikloqrstu")) != EOF) {
++	while ((ch = getopt(argc, argv, "1ACFGLRTacdfgikloqrstu")) != EOF) {
+ #else
+-	while ((ch = getopt(argc, argv, "1ACFLRTWacdfgikloqrstu")) != EOF) {
++	while ((ch = getopt(argc, argv, "1ACFGLRTWacdfgikloqrstu")) != EOF) {
+ #endif
+ 		switch (ch) {
+ 		/*
+@@ -168,6 +171,10 @@
+ 		case 'F':
+ 			f_type = 1;
+ 			break;
++		case 'G':
++			if (isatty(STDOUT_FILENO))
++				f_color = 1;
++			break;
+ 		case 'L':
+ 			fts_options &= ~FTS_PHYSICAL;
+ 			fts_options |= FTS_LOGICAL;
+@@ -228,18 +235,21 @@
+ 	argc -= optind;
+ 	argv += optind;
+ 
++	parsecolors(getenv("LSCOLORS"));
++
+ 	/*
+ 	 * If not -F, -i, -l, -s or -t options, don't require stat
+ 	 * information.
+ 	 */
+-	if (!f_inode && !f_longform && !f_size && !f_timesort && !f_type)
++	if (!f_inode && !f_longform && !f_size && !f_timesort && !f_type
++	    && !f_color)
+ 		fts_options |= FTS_NOSTAT;
+ 
+ 	/*
+ 	 * If not -F, -d or -l options, follow any symbolic links listed on
+ 	 * the command line.
+ 	 */
+-	if (!f_longform && !f_listdir && !f_type)
++	if (!f_longform && !f_listdir && !f_type && !f_color)
+ 		fts_options |= FTS_COMFOLLOW;
+ 
+ #ifndef BSD4_4_LITE
