@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2000/07/16 19:45:32 rh Exp $
+# $NetBSD: Makefile,v 1.128 2000/07/27 12:42:02 agc Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -110,6 +110,7 @@
     SUBDIR += rcs
     SUBDIR += rdp
     SUBDIR += readline
+    SUBDIR += rvm
     SUBDIR += rx
     SUBDIR += sfio
     SUBDIR += sgi-stl
