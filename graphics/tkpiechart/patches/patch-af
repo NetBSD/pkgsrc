@@ -1,3 +1,4 @@
+$NetBSD: patch-af,v 1.2 2000/09/03 14:49:48 wiz Exp $
 --- piechart.htm.orig	Wed Aug 30 16:47:55 2000
 +++ piechart.htm	Wed Aug 30 16:50:38 2000
 @@ -91,9 +91,9 @@
