@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1579 2004/04/05 12:43:20 wiz Exp $
+$NetBSD: TODO,v 1.1580 2004/04/05 15:40:54 grant Exp $
 
 Suggested new packages
 ======================
@@ -121,6 +121,10 @@ Suggested new packages
 	wxWindows -> wxWidgets rename
 	http://www.wxwidgets.org/name.htm
 	Update all wxwindows packages and dependencies to wxwidgets.
+
+	linphone
+	http://www.linphone.org/
+	Telephony on Linux (and NetBSD?)
 
 Suggested package updates
 =========================
