@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.30 2002/10/13 07:48:52 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2003/02/03 23:48:07 jlam Exp $
 #
 
 VERSION=	1.1.8
 PKGNAME=	jdk-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
 		ftp://ftp.de.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jwise@netbsd.org
-HOMEPAGE=	http://www.quick.com.au/java/
 COMMENT=	Sun's Java(tm) Development Kit
 
 LICENSE=	jdk-license
@@ -32,9 +31,10 @@ PLIST_SRC+=	${PKGDIR}/PLIST
 
 CHECK_SHLIBS=	no
 
-USE_BUILDLINK2=	# defined
-NO_BUILD=	# defined
-NO_MTREE=	# defined, since we change PREFIX below
+USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
+NO_BUILD=	yes
+NO_MTREE=	yes	# since we change PREFIX below
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86
 RESTRICTED=	"No redistribution of the Java(tm) Development Kit"
@@ -42,6 +42,28 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+OWN_DIRS=	${PREFIX} ${PREFIX}/lib ${PREFIX}/lib/security
+SFILES=		appletviewer.properties		awt.properties
+SFILES+=	content-types.properties	font.properties
+SFILES+=	font.properties.ISO8859_15_FDIS	font.properties.cs
+SFILES+=	font.properties.el		font.properties.hu
+SFILES+=	font.properties.ja		font.properties.ko
+SFILES+=	font.properties.lt		font.properties.lv
+SFILES+=	font.properties.pl		font.properties.ru
+SFILES+=	font.properties.tr		font.properties.zh_EUC_CN
+SFILES+=	font.properties.zh_TW_Big5	font.properties.zh_TW_EUC_TW
+SFILES+=	psfont.properties.ja		serialver.properties
+SFILES+=	security/java.security
+SUPPORT_FILES=	# empty
+.for FILE in ${SFILES}
+SUPPORT_FILES+=	${PREFIX}/lib/${FILE}.default ${PREFIX}/lib/${FILE}
+.endfor
+
+do-configure:
+	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
+		${MV} -f $$file $$file.default;				\
+	done
 
 .if ${OBJECT_FMT} == "ELF"
 # This gross hack normalizes the shlib names so that automatic
