@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4413 2004/01/10 07:11:07 grant Exp $
+$NetBSD: CHANGES,v 1.4414 2004/01/10 09:50:53 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -142,3 +142,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Moved standalone-tcsh to tcsh-standalone [grant 2004-01-10]
 	Moved static-bash2 to bash2-static [grant 2004-01-10]
 	Moved static-ast-ksh to ast-ksh-static [grant 2004-01-10]
+	Added cuetools-0.4 [jmmv 2004-01-10]
