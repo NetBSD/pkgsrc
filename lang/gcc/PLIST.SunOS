@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.5 2002/09/09 03:23:06 dmcmahill Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.6 2002/09/27 12:28:15 jlam Exp $
 ${MACHINE_GNU_PLATFORM}/include/_G_config.h
 ${MACHINE_GNU_PLATFORM}/include/assert.h
 bin/${MACHINE_GNU_PLATFORM}-gcc
@@ -14,6 +14,7 @@ bin/gcjh
 bin/gcov
 bin/jcf-dump
 bin/jv-scan
+etc/${PKGNAME}.mk
 include/g++-3/PlotFile.h
 include/g++-3/SFile.h
 include/g++-3/algo.h
