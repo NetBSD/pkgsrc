@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/07/21 16:51:54 martti Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/26 21:41:27 jmmv Exp $
 #
 
 DISTNAME=		xine-lib-1-beta10
 PKGNAME=		${DISTNAME:S/-beta/.0rc/}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
