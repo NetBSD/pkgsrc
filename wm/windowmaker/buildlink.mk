@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/07/15 14:22:08 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/07/15 14:24:04 jlam Exp $
 #
 # This Makefile fragment is included by packages that use windowmaker.
 #
@@ -39,6 +39,9 @@ BUILDLINK_FILES.windowmaker+=	lib/libwraster.*
 .include "../../graphics/xpm/buildlink.mk" 
 
 BUILDLINK_TARGETS.windowmaker=	windowmaker-buildlink
+BUILDLINK_TARGETS.windowmaker+=	wm-wings-buildlink-config-wrapper
+BUILDLINK_TARGETS.windowmaker+=	wm-wutil-buildlink-config-wrapper
+BUILDLINK_TARGETS.windowmaker+=	wm-wraster-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.windowmaker}
 
 BUILDLINK_CONFIG.wm-wings=		${X11PREFIX}/bin/get-wings-flags
