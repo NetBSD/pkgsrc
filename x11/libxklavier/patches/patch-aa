@@ -1,14 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2004/06/27 21:01:58 kristerw Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/02 15:44:15 jmmv Exp $
 
---- libxklavier/xklavier_config_xkb.c.orig	Sun Jun 27 22:57:28 2004
-+++ libxklavier/xklavier_config_xkb.c	Sun Jun 27 22:58:08 2004
-@@ -173,9 +173,10 @@
+--- libxklavier/xklavier_config_xkb.c.orig	2004-10-02 16:45:49.000000000 +0200
++++ libxklavier/xklavier_config_xkb.c
+@@ -184,10 +184,13 @@ Bool XklMultipleLayoutsSupported( void )
  
    if ( supportState == UNCHECKED )
    {
++#ifdef XKB_HEADERS_PRESENT
 +    XkbRF_RulesPtr rulesPtr;
++#endif
      XklDebug( 100, "!!! Checking multiple layouts support\n" );
      supportState = NON_SUPPORTED;
+ #ifdef XKB_HEADERS_PRESENT
 -    XkbRF_RulesPtr rulesPtr = _XklLoadRulesSet();
 +    rulesPtr = _XklLoadRulesSet();
      if ( rulesPtr )
