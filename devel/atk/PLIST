@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/12/13 00:44:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/04/01 18:13:48 jmmv Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -28,8 +28,8 @@ include/atk-1.0/atk/atkvalue.h
 lib/libatk-1.0.a
 lib/libatk-1.0.la
 lib/libatk-1.0.so
-lib/libatk-1.0.so.400
-lib/libatk-1.0.so.400.1
+lib/libatk-1.0.so.600
+lib/libatk-1.0.so.600.0
 lib/pkgconfig/atk.pc
 share/doc/html/atk/AtkAction.html
 share/doc/html/atk/AtkComponent.html
@@ -62,6 +62,7 @@ share/doc/html/atk/index.sgml
 share/doc/html/atk/left.png
 share/doc/html/atk/right.png
 share/doc/html/atk/up.png
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/atk10.mo
@@ -73,15 +74,18 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/atk10.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/atk10.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/atk10.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/atk10.mo
@@ -110,6 +114,7 @@ ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/atk10.mo
+${PKGLOCALEDIR}/locale/sr@ije/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/atk10.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/atk10.mo
