@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/06/10 02:35:49 shell Exp $
+$NetBSD: distinfo,v 1.3 2003/06/03 14:08:51 wiz Exp $
 
-SHA1 (Attribute-Handlers-0.77.tar.gz) = 81ef689288e26a9002ef17fb6ee3c80ddb05aae7
-Size (Attribute-Handlers-0.77.tar.gz) = 14288 bytes
+SHA1 (Attribute-Handlers-0.78.tar.gz) = 2ae0e6151a68df31a1f9fe36b6b21c7974a367b8
+Size (Attribute-Handlers-0.78.tar.gz) = 15392 bytes
