@@ -4,7 +4,7 @@
 # Date created:         Sun Mar  1 13:41:17 PST 1998
 # Whom:                 cjs@netbsd.org
 #
-# $NetBSD: Makefile,v 1.2 1998/03/05 11:42:42 cjs Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/06 13:08:54 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.45 1998/02/25 06:23:55 asami Exp
 #
 
@@ -15,12 +15,12 @@ WRKSRC=         ${WRKROOT}/src
 CATEGORIES=	www
 MASTER_SITES=   http://www.apache.org/dist/
 
-HTTP_ROOT=	${PREFIX}/http
-
 MAINTAINER=	cjs@netbsd.org
 
 CONFIGURE_SCRIPT=Configure
 HAS_CONFIGURE=	YES
+
+HTTP_ROOT=	${PREFIX}/http
 
 CONF_DIR=   ${HTTP_ROOT}/conf
 MAN1=   apachectl.1 htpasswd.1
@@ -34,32 +34,32 @@ post-build:
 
 post-patch:
 	@cd ${WRKSRC} && \
-	    sed -e 's#^EXTRA_CFLAGS=#& -DHTTPD_ROOT=\\"${HTTP_ROOT}\\"#' \
+	    ${SED} -e 's#^EXTRA_CFLAGS=#& -DHTTPD_ROOT=\\"${HTTP_ROOT}\\"#' \
 		< Configuration > Configuration.new && \
-		mv Configuration.new Configuration
+		${MV} Configuration.new Configuration
 	@cd ${WRKROOT}/conf && \
 	    for I in httpd.conf-dist access.conf-dist srm.conf-dist; do \
-		sed -e 's#@@ServerRoot@@#${HTTP_ROOT}#g' < $${I} > $${I}.new && \
-		mv $${I}.new $${I}; \
+		${SED} -e 's#@@ServerRoot@@#${HTTP_ROOT}#g' < $${I} > $${I}.new && \
+		${MV} $${I}.new $${I}; \
 	    done
 	@cd ${WRKROOT}/conf && \
-	    sed -e "s#^PidFile .*/#PidFile /var/run/#" < httpd.conf-dist \
+	    ${SED} -e "s#^PidFile .*/#PidFile /var/run/#" < httpd.conf-dist \
 		>httpd.conf-dist.new && \
-	    mv httpd.conf-dist.new httpd.conf-dist
+	    ${MV} httpd.conf-dist.new httpd.conf-dist
 	@cd ${WRKSRC}/support && \
-	    sed -e 's#/usr/local/apache/logs/#/var/run/#' \
+	    ${SED} -e 's#/usr/local/apache/logs/#/var/run/#' \
 		-e 's#/usr/local/apache/src/#/usr/pkg/sbin/#' \
 		< apachectl >apachectl.new && \
-	    mv apachectl.new apachectl
+	    ${MV} apachectl.new apachectl
 .if defined(VERS_ID)
 	@cd ${WRKSRC} && \
-	    mv Configuration Configuration.old && \
-	    sed 's;^#*OPTIM=.*;OPTIM= -DSERVER_SUBVERSION=\\"${VERS_ID}\\";' \
+	    ${MV} Configuration Configuration.old && \
+	    ${SED} 's;^#*OPTIM=.*;OPTIM= -DSERVER_SUBVERSION=\\"${VERS_ID}\\";' \
 	    < Configuration.old > Configuration
 .endif
 
 do-install:
-	install -d -m 755 -o bin -g bin ${CONF_DIR} ${HTTP_ROOT}/htdocs \
+	${INSTALL} -d -m 755 -o bin -g bin ${CONF_DIR} ${HTTP_ROOT}/htdocs \
 		${HTTP_ROOT}/icons ${HTTP_ROOT}/cgi-bin
 	${INSTALL_PROGRAM} ${WRKSRC}/httpd ${PREFIX}/sbin
 	cd ${WRKSRC}/support && \
