@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/02/05 07:06:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/02/05 07:17:14 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSSL_BUILDLINK3_MK:=	${OPENSSL_BUILDLINK3_MK}+
@@ -28,11 +28,9 @@ BUILDLINK_IS_BUILTIN.openssl=	YES
 .  endif
 .endif
 
-.if defined(PREFER_PKGSRC)
-.  if empty(PREFER_PKGSRC) || !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-      !empty(PREFER_PKGSRC:Mopenssl)
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+    !empty(PREFER_PKGSRC:Mopenssl)
 BUILDLINK_USE_BUILTIN.openssl=	NO
-.  endif
 .endif
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.openssl:M[yY][eE][sS])

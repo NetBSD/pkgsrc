@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2004/02/05 07:06:15 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/02/05 07:17:14 jlam Exp $
 
 .if !defined(PAM_BUILDLINK2_MK)
 PAM_BUILDLINK2_MK=	# defined
@@ -14,11 +14,9 @@ _NEED_PAM=		NO
 _NEED_PAM=		YES
 .endif
 
-.if defined(PREFER_PKGSRC)
-.  if empty(PREFER_PKGSRC) || !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-      !empty(PREFER_PKGSRC:Mpam)
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
+    !empty(PREFER_PKGSRC:Mpam)
 _NEED_PAM=	YES
-.  endif
 .endif
 
 .if ${_NEED_PAM} == "YES"
