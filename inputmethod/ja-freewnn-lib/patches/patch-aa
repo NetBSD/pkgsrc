@@ -1,15 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/31 13:00:48 seb Exp $
+$NetBSD: patch-aa,v 1.2 2002/06/10 10:03:34 sakamoto Exp $
 
---- ./Wnn/Makefile.in.orig	Tue Mar 23 21:10:52 1999
-+++ ./Wnn/Makefile.in	Thu Sep  2 19:21:52 1999
-@@ -611,6 +611,4 @@
+--- Wnn/Makefile.in.orig	Tue Mar 23 21:10:52 1999
++++ Wnn/Makefile.in	Mon May 20 03:04:12 2002
+@@ -610,8 +610,6 @@
+ # along with GNU Emacs; see the file COPYING.  If not, write to the
  # Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  
 -WNNOWNER= wnn
 -
  JSERVERDIR = jserver
  
-@@ -629,9 +627,15 @@
+ PUBDICDIR = pubdic
+@@ -628,11 +626,20 @@
+ 
  JDDIR = jd
  
 -WNNMANDIR = man
@@ -19,7 +22,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 13:00:48 seb Exp $
 -SUBDIRS = $(JDDIR) $(JSERVERDIR) $(JLIBDIR) $(WNNCLIENTSDIR) $(WNNJUTILDIR)         $(PUBDICDIR) $(WNNCONSDIR) $(WNNMANDIR) $(WNNENVDIR) $(JLIBV3DIR)
 +.if (${WNN_TARGET} == "SERVER")
 +WNNMANDIR = man/2.env man/4.cmd man/6.jutil
-+SUBDIRS_INST = $(JSERVERDIR) $(WNNJUTILDIR) $(PUBDICDIR) $(WNNCONSDIR)			 $(WNNMANDIR)
++SUBDIRS_INST = $(JSERVERDIR) $(WNNJUTILDIR) $(WNNMANDIR)
++SUBDIRS = $(JDDIR) $(SUBDIRS_INST)
++.elif (${WNN_TARGET} == "DICT")
++SUBDIRS_INST = $(PUBDICDIR) $(WNNCONSDIR) 
 +SUBDIRS = $(JDDIR) $(SUBDIRS_INST)
 +.else
 +WNNMANDIR = man/3.libwnn
@@ -28,24 +34,31 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 13:00:48 seb Exp $
 +.endif
  
  all::
-@@ -699,5 +703,5 @@
+ 	@for flag in ${MAKEFLAGS} ''; do \
+@@ -698,7 +704,7 @@
+ install::
  	@for flag in ${MAKEFLAGS} ''; do \
  	case "$$flag" in *=*) ;; *[ik]*) set +e;; esac; done; \
 -	for i in $(SUBDIRS) ;\
 +	for i in $(SUBDIRS_INST) ;\
  	do \
  	echo "installing" "in $(CURRENT_DIR)/$$i..."; \
-@@ -709,5 +713,5 @@
+ 	(cd $$i && $(MAKE) $(MFLAGS) $(PARALLELMFLAGS) \
+@@ -708,7 +714,7 @@
+ install.man::
  	@for flag in ${MAKEFLAGS} ''; do \
  	case "$$flag" in *=*) ;; *[ik]*) set +e;; esac; done; \
 -	for i in $(SUBDIRS) ;\
 +	for i in $(SUBDIRS_INST) ;\
  	do \
  	echo "installing man pages" "in $(CURRENT_DIR)/$$i..."; \
-@@ -719,5 +723,5 @@
+ 	(cd $$i && $(MAKE) $(MFLAGS) $(PARALLELMFLAGS) \
+@@ -718,7 +724,7 @@
+ install.linkkit::
  	@for flag in ${MAKEFLAGS} ''; do \
  	case "$$flag" in *=*) ;; *[ik]*) set +e;; esac; done; \
 -	for i in $(SUBDIRS) ;\
 +	for i in $(SUBDIRS_INST) ;\
  	do \
  	echo "installing link kit" "in $(CURRENT_DIR)/$$i..."; \
+ 	(cd $$i && $(MAKE) $(MFLAGS) $(PARALLELMFLAGS) \
