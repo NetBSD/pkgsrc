@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/09/05 16:20:29 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/05 16:52:33 jwise Exp $
 #
 
 DISTNAME=	expect
@@ -22,9 +22,6 @@ CONFIGURE_ARGS= --enable-shared \
 		--without-x
 
 .include "../../mk/bsd.prefs.mk"
-
-#post-extract:
-#	${MV} ${WRKSRC}/example/rftp ${WRKSRC}/example/expect-rftp
 
 test:
 	@(cd ${WRKSRC}; ${MAKE} test)
