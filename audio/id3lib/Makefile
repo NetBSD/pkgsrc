@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/08/31 01:56:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/03 08:43:00 jlam Exp $
 #
 
 DISTNAME=	id3lib-3.8.0
@@ -10,8 +10,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://id3lib.sourceforge.net/
 COMMENT=	library for manipulating ID3v1 and ID3v2 tags
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	yes
+USE_BUILDLINK2=		# defined
+GNU_CONFIGURE=		# defined
+USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.pkg.mk"
