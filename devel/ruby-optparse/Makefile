@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/10/13 16:08:47 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/28 06:01:43 taca Exp $
 # FreeBSD: ports/devel/ruby-optparse/Makefile,v 1.10 2001/01/26 03:42:37 knu Exp
 
 DISTNAME=	optparse-0.12
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://nokada.jin.gr.jp/ruby/
 
@@ -10,9 +10,8 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	# not available
 COMMENT=	Yet another command line option parser for Ruby
 
-DIST_SUBDIR=	ruby
-USE_RUBY=	yes
-NO_BUILD=	# empty
+RUBY_VERSION=	${RUBY16_VERSION}
+NO_BUILD=	yes
 
 DOCS=		ChangeLog FIRSTSTEP.ja.html README.en README.ja \
 		optparse.html optparse.ja.html
@@ -34,7 +33,7 @@ do-install:
 .for f in ${EXAMPLES_JA}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_EXAMPLESDIR}/optparse/${f}.ja
 .endfor
-	${INSTALL_MAN} ${WRKSRC}/optparse.1 ${LOCALBASE}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/optparse.1 ${LOCALBASE}/man/man3/optparse.3
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
