@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2003/05/22 09:37:28 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2003/05/24 18:38:58 jschauma Exp $
 
---- gcc/Makefile.in.orig	Fri Apr 18 08:36:04 2003
-+++ gcc/Makefile.in
-@@ -1236,6 +1236,7 @@ c-semantics.o : c-semantics.c $(CONFIG_H
+--- gcc/Makefile.in.orig	Tue Jan 28 16:54:07 2003
++++ gcc/Makefile.in	Sat May 24 13:01:38 2003
+@@ -1236,6 +1236,7 @@
  # Language-independent files.
  
  DRIVER_DEFINES = \
@@ -10,3 +10,17 @@ $NetBSD: patch-ab,v 1.1 2003/05/22 09:37:28 wiz Exp $
    -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
    -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc-lib/\" \
    -DDEFAULT_TARGET_VERSION=\"$(version)\" \
+@@ -2662,11 +2663,11 @@
+ 	    $(INSTALL_DATA) $$f $(DESTDIR)$(infodir)/$$realfile; \
+ 	  done; \
+ 	else true; fi
+-	-if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
++	-if $(SHELL) -c '${INSTALL_INFO} --version' >/dev/null 2>&1; then \
+ 	  if [ -f $(DESTDIR)$(infodir)/dir ] ; then \
+ 	    for f in cpp.info gcc.info gccint.info cppinternals.info; do \
+ 		if [ -f $(DESTDIR)$(infodir)/$$f ]; then \
+-		  install-info --dir-file=$(DESTDIR)$(infodir)/dir $(DESTDIR)$(infodir)/$$f; \
++		  ${INSTALL_INFO} --dir-file=$(DESTDIR)$(infodir)/dir $(DESTDIR)$(infodir)/$$f; \
+ 		else true; fi; \
+ 	    done; \
+ 	  else true; fi; \
