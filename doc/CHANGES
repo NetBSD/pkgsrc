@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1755 2003/03/23 20:58:57 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.1756 2003/03/23 21:48:16 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1274,3 +1274,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sfs to 0.7.2nb1 [lukem 2003-03-23]
 	Removed latex-ttf-fonts [jmmv 2003-03-23]
 	Updated dinotrace to 9.1i [dmcmahill 2003-03-23]
+	Updated analog to 5.32 [tron 2003-03-23]
