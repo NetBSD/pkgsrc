@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1305 2004/01/16 07:10:33 xtraeme Exp $
+$NetBSD: TODO,v 1.1306 2004/01/16 09:03:03 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -161,6 +161,7 @@ Suggested package updates
 	o elm-me-2.4pl110a
 	o exim-4.24
 	o festival-1.4.3
+	o ffmpeg-0.4.8
 	o findutils-4.1.20
 	o firewalk-5.0
 	o firewalk-gtk-5.0
