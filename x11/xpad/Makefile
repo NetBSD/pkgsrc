@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/06/14 20:23:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/28 06:05:32 jlam Exp $
 #
 
 DISTNAME=	xpad-1.12
@@ -22,7 +22,7 @@ USE_X11=		yes
 
 LIBS.SunOS=		-lX11
 
-BUILDLINK_TRANSFORM+=	S:-DGTK_DISABLE_DEPRECATED:
+BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/06/21 20:24:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/28 06:05:32 jlam Exp $
 #
 
 DISTNAME=	gnome-themes-extras-0.7
@@ -21,8 +21,8 @@ GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
-BUILDLINK_TRANSFORM+=	S:-DG_DISABLE_DEPRECATED:
-BUILDLINK_TRANSFORM+=	S:-DGTK_DISABLE_DEPRECATED:
+BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
+BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
