@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.1 2001/02/09 11:29:39 dmcmahill Exp $
+$NetBSD: patch-as,v 1.2 2004/03/13 23:21:33 dmcmahill Exp $
 
 --- src/zbuf/savemat_mod.c.orig	Tue Nov 12 14:18:56 1996
 +++ src/zbuf/savemat_mod.c	Thu Feb  8 20:04:39 2001
@@ -8,6 +8,6 @@ $NetBSD: patch-as,v 1.1 2001/02/09 11:29:39 dmcmahill Exp $
 +#include <string.h>
  
 -#ifdef ALPHA
-+#if defined(ALPHA) || defined(__alpha__) || defined(__sparc64__)
++#if defined(ALPHA) || defined(__alpha__) || defined(__sparc64__) || defined(__x86_64__)
  typedef struct {
       int type;   /* type */
