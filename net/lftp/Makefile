@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.44 2004/06/02 12:20:13 adam Exp $
+# $NetBSD: Makefile,v 1.45 2004/06/14 08:42:17 salo Exp $
+#
 
-DISTNAME=	lftp-3.0.5
-CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/ \
-		ftp://ftp.tuwien.ac.at/infosys/browsers/ftp/lftp/ \
-		http://the.wiretapped.net/mirrors/lftp/ \
-		ftp://ftp.130th.net/pub/mirror/lftp/ \
-		ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/ \
-		ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/old/
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		lftp-3.0.6
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.cs.tu-berlin.de/pub/net/ftp/lftp/ \
+			ftp://ftp.tuwien.ac.at/infosys/browsers/ftp/lftp/ \
+			http://the.wiretapped.net/mirrors/lftp/ \
+			ftp://ftp.130th.net/pub/mirror/lftp/ \
+			ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/ \
+			ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/old/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	salo@NetBSD.org
-HOMEPAGE=	http://lftp.yar.ru/
-COMMENT=	Powerful command line file transfer client
+MAINTAINER=		salo@NetBSD.org
+HOMEPAGE=		http://lftp.yar.ru/
+COMMENT=		Powerful command line file transfer client
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
