@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/08/06 13:57:48 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/08/20 03:59:59 jlam Exp $
 #
 # This Makefile fragment is included by packages that use psiconv.
 #
@@ -23,10 +23,7 @@ DEPENDS+=		${BUILDLINK_DEPENDS.psiconv}:../../converters/psiconv
 EVAL_PREFIX+=				BUILDLINK_PREFIX.psiconv=psiconv
 BUILDLINK_PREFIX.psiconv_DEFAULT=	${LOCALBASE}
 
-BUILDLINK_FILES.psiconv=	include/psiconv/data.h
-BUILDLINK_FILES.psiconv+=	include/psiconv/list.h
-BUILDLINK_FILES.psiconv+=	include/psiconv/parse.h
-BUILDLINK_FILES.psiconv+=	include/psiconv/parse_routines.h
+BUILDLINK_FILES.psiconv=	include/psiconv/*
 BUILDLINK_FILES.psiconv+=	lib/libpsiconv.*
 
 BUILDLINK_TARGETS.psiconv=	psiconv-buildlink
