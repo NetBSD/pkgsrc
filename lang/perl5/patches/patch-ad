@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.6 2000/08/30 18:42:24 jlam Exp $
+$NetBSD: patch-ad,v 1.7 2000/08/30 19:46:47 jlam Exp $
 
 --- installperl.orig	Wed Mar  8 07:22:41 2000
-+++ installperl
++++ installperl	Wed Aug 30 15:09:30 2000
+@@ -56,7 +56,7 @@
+ }
+ 
+ my @scripts = qw(utils/c2ph utils/h2ph utils/h2xs utils/perlbug utils/perldoc
+-		utils/pl2pm utils/splain utils/perlcc utils/dprofpp
++		utils/pl2pm utils/splain utils/perlcc
+ 		x2p/s2p x2p/find2perl 
+ 		pod/pod2man pod/pod2html pod/pod2latex pod/pod2text
+ 		pod/pod2usage pod/podchecker pod/podselect);
 @@ -224,7 +224,7 @@
  safe_unlink("$installbin/s$perl_verbase$ver$exe_ext");
  if ($d_dosuid) {
