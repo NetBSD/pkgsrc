@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 1998/09/06 23:47:29 garbled Exp $
+--- Makefile.in.orig	Sun Sep  6 11:36:17 1998
++++ Makefile.in	Sun Sep  6 11:37:05 1998
+@@ -37,7 +37,7 @@
+ DISTDIR =
+ 
+ pkgdatadir = $(datadir)/@PACKAGE@
+-pkglibdir = $(libdir)/@PACKAGE@
++pkglibdir = $(datadir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+ 
+ top_builddir = .

@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 1998/09/06 23:47:30 garbled Exp $
+--- src/Makefile.in.orig	Sun Sep  6 11:37:38 1998
++++ src/Makefile.in	Sun Sep  6 11:38:26 1998
+@@ -35,7 +35,7 @@
+ DISTDIR =
+ 
+ pkgdatadir = $(datadir)/@PACKAGE@
+-pkglibdir = $(libdir)/@PACKAGE@
++pkglibdir = $(datadir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+ 
+ top_builddir = ..
