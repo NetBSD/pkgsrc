@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/07/29 22:37:35 tron Exp $
+# $NetBSD: Makefile,v 1.8 1999/09/20 19:21:21 kim Exp $
 #
 
 DISTNAME=	nntpclnt-1.6.1
@@ -11,8 +11,12 @@ CONFLICTS+=	inn-*
 
 ALL_TARGET=	inews
 
+.include "../../mk/bsd.prefs.mk"
+
+CONFIG_SH=	${FILESDIR}/config.${OPSYS}.sh
+
 do-configure:
-	${SED} -e s,@PREFIX@,${PREFIX}, ${FILESDIR}/config.sh >${WRKSRC}/config.sh
+	${SED} -e s,@PREFIX@,${PREFIX}, ${CONFIG_SH} >${WRKSRC}/config.sh
 	@cd ${WRKSRC} && sh Makefile.SH && sh config.h.SH
 
 post-build:
