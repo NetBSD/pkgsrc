@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/17 16:17:03 drochner Exp $
+# $NetBSD: Makefile,v 1.2 1999/11/23 19:29:06 drochner Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -6,7 +6,7 @@ NO_WRKSUBDIR=		yes
 CATEGORIES=		misc
 MASTER_SITES=		ftp://root.cern.ch/root/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		drochner@netbsd.org
 HOMEPAGE=		http://root.cern.ch/
 
 BUILD_DEPENDS+= cint:../../lang/cint
