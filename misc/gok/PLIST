@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/02/26 17:26:09 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/03/22 16:31:53 jmmv Exp $
 bin/create-branching-keyboard
 bin/gok
 lib/bonobo/servers/GNOME_Gok.server
@@ -413,6 +413,16 @@ share/gok/nb/numberpad.kbd
 share/gok/nb/quit.kbd
 share/gok/nb/text-operations.kbd
 share/gok/nb/valuator.kbd
+share/gok/ne/gok-controls.kbd
+share/gok/ne/hide.kbd
+share/gok/ne/launcher.kbd
+share/gok/ne/main.kbd
+share/gok/ne/mouse.kbd
+share/gok/ne/move-resize.kbd
+share/gok/ne/numberpad.kbd
+share/gok/ne/quit.kbd
+share/gok/ne/text-operations.kbd
+share/gok/ne/valuator.kbd
 share/gok/nl/gok-controls.kbd
 share/gok/nl/hide.kbd
 share/gok/nl/launcher.kbd
@@ -476,6 +486,16 @@ share/gok/pt_BR/text-operations.kbd
 share/gok/pt_BR/valuator.kbd
 share/gok/quit.kbd
 share/gok/qwerty.kbd
+share/gok/ro/gok-controls.kbd
+share/gok/ro/hide.kbd
+share/gok/ro/launcher.kbd
+share/gok/ro/main.kbd
+share/gok/ro/mouse.kbd
+share/gok/ro/move-resize.kbd
+share/gok/ro/numberpad.kbd
+share/gok/ro/quit.kbd
+share/gok/ro/text-operations.kbd
+share/gok/ro/valuator.kbd
 share/gok/singlekey-automatic-scanning.xam
 share/gok/singlekey-inverse-scanning.xam
 share/gok/sl/gok-controls.kbd
@@ -619,12 +639,14 @@ ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gok.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gok.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gok.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gok.mo
@@ -650,12 +672,14 @@ share/pixmaps/gok.png
 @dirrm share/gok/sr
 @dirrm share/gok/sq
 @dirrm share/gok/sl
+@dirrm share/gok/ro
 @dirrm share/gok/pt_BR
 @dirrm share/gok/pt
 @dirrm share/gok/pl
 @dirrm share/gok/pa
 @dirrm share/gok/no
 @dirrm share/gok/nl
+@dirrm share/gok/ne
 @dirrm share/gok/nb
 @dirrm share/gok/ms
 @dirrm share/gok/mn
