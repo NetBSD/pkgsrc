@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2002/08/25 21:53:04 jlam Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 17:36:26 wiz Exp $
 
 SHA1 (xworld-2.0.tar.gz) = 99217a8f0b63ef8685c5508fbbff4f5d7bb9b9a8
+RMD160 (xworld-2.0.tar.gz) = b139357f529a8df535f82fecd74319b0f82605b3
 Size (xworld-2.0.tar.gz) = 113385 bytes
 SHA1 (patch-aa) = 197faebefac19a2457c0201ca35eb3a2f333c51a
 SHA1 (patch-ab) = 60d1591c3c155e9fbf6bac094b20cd6a6df73df0
