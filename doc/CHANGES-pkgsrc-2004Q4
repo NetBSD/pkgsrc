@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.90 2005/02/26 07:25:47 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.91 2005/02/28 21:12:22 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -191,3 +191,5 @@ Pullup ticket 309 - requested by Adrian Portelli
 security fix for phpmyadmin
 Pullup ticket 311 - requested by Lubomir Sedlacik
 security fix for curl
+Pullup ticket 317 - requested by Lubomir Sedlacik
+security fix for xine-lib
