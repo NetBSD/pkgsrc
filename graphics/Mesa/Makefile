@@ -1,27 +1,33 @@
-# $NetBSD: Makefile,v 1.34 2000/06/21 02:24:22 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2000/10/15 11:57:17 rh Exp $
 #
 
-DISTNAME=		MesaLib-3.1
-PKGNAME=		Mesa-3.1
-CATEGORIES=		graphics
-MASTER_SITES= 		ftp://ftp.mesa3d.org/mesa/ \
-			http://download.sourceforge.net/mesa3d/
-EXTRACT_SUFX=		.tar.bz2
-# MesaDemos is needed for glut
-DISTFILES=		MesaLib-3.1${EXTRACT_SUFX} \
-			MesaDemos-3.1${EXTRACT_SUFX}
+DISTNAME=	Mesa-3.2.1
+CATEGORIES=	graphics
+MASTER_SITES= 	# empty
+DISTFILES=	# empty
 
-MAINTAINER=		mycroft@netbsd.org
-HOMEPAGE=		http://www.ssec.wisc.edu/~brianp/Mesa.html
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.ssec.wisc.edu/~brianp/Mesa.html
 
-CONFLICTS=		Mesa-glx-*
+DEPENDS+=	glu-3.2.1:../../graphics/glu
+DEPENDS+=	glut-3.2.1:../../graphics/glut
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
-USE_X11BASE=		# defined
-USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+CONFLICTS=	Mesa-glx-*
 
-GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS=		--enable-static
+CHECK_MESA=	yes
+.include	"../../mk/bsd.prefs.mk"
+
+.if ${HAVE_BUILTIN_MESA} == "NO"
+DEPENDS+=	MesaLib-3.2.1:../../graphics/MesaLib
+.endif
+
+USE_X11BASE=	yes
+NO_CHECKSUM=	yes
+NO_PATCH=	yes
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+EXTRACT_ONLY=	# empty
+
+do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
