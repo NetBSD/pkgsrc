@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2004/02/15 11:25:24 markd Exp $
+$NetBSD: patch-ab,v 1.5 2004/08/21 15:39:02 markd Exp $
 
---- lib/catalog/Makefile.am.orig	2003-07-09 02:38:45.000000000 +1200
-+++ lib/catalog/Makefile.am
-@@ -1,7 +1,7 @@
- INCLUDES = $(all_includes)
- lib_LTLIBRARIES = libkdevcatalog.la
- libkdevcatalog_la_SOURCES = tag.cpp
--libkdevcatalog_la_LIBADD = -ldb
-+libkdevcatalog_la_LIBADD = -ldb4
- 
- kdevcatalogincludedir = $(includedir)/kdevelop/catalog
- kdevcataloginclude_HEADERS = gcatalog.h gcatalog.tcc catalog.h tag.h
+--- Makefile.in.orig	2004-08-21 09:22:56.000000000 +1200
++++ Makefile.in
+@@ -403,7 +403,7 @@ x_libraries = @x_libraries@
+ xdg_appsdir = @xdg_appsdir@
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+-SUBDIRS = bdb lib parts languages buildtools editors vcs src pics doc mimetypes embedded kdevdesigner
++SUBDIRS = lib parts languages buildtools editors vcs src pics doc mimetypes embedded kdevdesigner
+ EXTRA_DIST = AUTHORS COPYING COPYING.LIB NEWS ChangeLog INSTALL README TODO HACKING HACKING.language admin configure.in.bot
+ apps_DATA = kdevelop.desktop kdevassistant.desktop
+ appsdir = $(kde_appsdir)/Development
