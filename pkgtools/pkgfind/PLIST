@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/22 20:01:01 xtraeme Exp $
+bin/pkgfind
+man/cat1/pkgfind.0
+man/man1/pkgfind.1
