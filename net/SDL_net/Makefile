@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/02/11 20:57:36 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/11 21:15:47 zuntum Exp $
 #
 
-DISTNAME=	SDL_net-1.2.0
+DISTNAME=	SDL_net-1.2.3
 CATEGORIES=	net
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_net/release/
 
