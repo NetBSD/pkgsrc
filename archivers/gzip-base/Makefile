@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/05/07 21:41:43 reed Exp $
+# $NetBSD: Makefile,v 1.16 2004/07/02 21:06:35 minskim Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.shar
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
 COMMENT=	Compress or expand files
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
