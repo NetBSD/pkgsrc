@@ -1,11 +1,14 @@
---- net.c.orig Wed Jun  9 11:06:27 1999
-+++ net.c      Wed Jul 14 02:03:23 1999
-@@ -213,7 +213,7 @@
+$NetBSD: patch-01,v 1.2 1999/12/04 16:50:11 sommerfeld Exp $
+
+--- net.c.orig	Fri Aug 13 18:46:49 1999
++++ net.c	Sat Dec  4 11:44:33 1999
+@@ -213,7 +213,9 @@
      rv = sendto(sendsock, packet, packetsize, 0, 
  		(struct sockaddr *)&remoteaddress, sizeof(remoteaddress));
      if (rv >= 0) {
--      fprintf (stderr, "You've got a broken (FreeBSD?) system\n");
-+/*      fprintf (stderr, "You've got a broken (FreeBSD?) system\n"); */
++#if 0
+       fprintf (stderr, "You've got a broken (FreeBSD?) system\n");
++#endif
        BSDfix = 1;
      }
    }
