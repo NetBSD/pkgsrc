@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2001/02/21 20:31:59 jtb Exp $
+$NetBSD: patch-ab,v 1.6 2003/01/28 01:18:21 uebayasi Exp $
 
---- Makefile.in.orig	Fri Apr 30 14:32:04 1999
+--- Makefile.in.orig	Fri Apr 30 23:32:04 1999
 +++ Makefile.in
 @@ -99,20 +99,20 @@
  # -lfftpack	FFTPACK library (double precision version)
@@ -33,7 +33,14 @@ $NetBSD: patch-ab,v 1.5 2001/02/21 20:31:59 jtb Exp $
  
  REQ_LIBS = $(LAPACK_LIB) $(BLAS_LIB) $(FFTPACK_LIB) $(RANLIB_LIB) $(MINPACK_LIB)
  
-@@ -157,7 +157,7 @@
+@@ -151,13 +151,13 @@
+ # Silicon Graphics machines need this for popen()
+ # SPECIAL_FLAGS = -ansiposix
+ 
+-SPECIAL_FLAGS = -DASSERT_OFF $(IGC)
++SPECIAL_FLAGS = $(CPPFLAGS) -DASSERT_OFF $(IGC)
+ 
+ # prefix: The parent directory for the installation
  prefix =        @prefix@
  exec_prefix =   @exec_prefix@
  bindir = 	$(exec_prefix)/bin
