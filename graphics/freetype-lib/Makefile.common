@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2001/06/10 00:08:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2001/06/11 02:05:10 jlam Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -27,9 +27,5 @@ PATCHDIR=		${.CURDIR}/../../graphics/freetype-lib/patches
 
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
-
-CPPFLAGS+=		-I${BUILDLINK_INCDIR}
-CFLAGS+=		-I${BUILDLINK_INCDIR}
-LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"
