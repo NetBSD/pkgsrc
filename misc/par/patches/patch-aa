@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/01/04 19:53:07 fredb Exp $
+
+--- Arena/Source/spawn.c.orig	Tue Jul 14 19:15:17 1998
++++ Arena/Source/spawn.c	Tue Jul 14 19:15:28 1998
+@@ -8,7 +8,6 @@
+ #include <limits.h>
+ #include <signal.h>
+ #include <stdarg.h>
+-#include <waitflags.h>
+ 
+ #include "arena.h"
+ #ifdef ARENA_DEBUG
