@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/07/19 12:44:18 taca Exp $
+# $NetBSD: Makefile,v 1.4 2001/07/22 12:36:09 taca Exp $
 # FreeBSD: ports/security/ruby-ssl/Makefile,v 1.2 2001/01/11 20:39:53 knu Exp
 
-DISTNAME=	ssl-0.3.1b
+DISTNAME=	ssl-0.3.1c
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	http://www.notwork.org/~gotoyuzo/ruby/src/
