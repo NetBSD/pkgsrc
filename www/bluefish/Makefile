@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2000/08/16 05:38:35 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/23 12:39:37 jlam Exp $
 #
 
-DISTNAME=	bluefish-0.4
-PKGNAME=	${DISTNAME}nb1
+DISTNAME=	bluefish-0.5
 CATEGORIES=	www
 MASTER_SITES=	http://bluefish.openoffice.nl/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,7 +24,13 @@ GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+HTMLDIR=	${PREFIX}/share/doc/html/bluefish
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf
+
+post-install:
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	cd ${WRKSRC}/manual; ${INSTALL_DATA} * ${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"
