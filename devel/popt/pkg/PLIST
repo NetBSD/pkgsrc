@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/31 13:33:12 wennmach Exp $
+lib/libpopt.a
+include/popt.h
+share/locale/ro/LC_MESSAGES/rpm.mo

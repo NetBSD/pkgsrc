@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/31 13:33:12 wennmach Exp $
+
+Adding missing install dir
+
+--- po/Makefile.in.in.orig      Thu Oct 22 21:39:17 1998
++++ po/Makefile.in.in   Mon Oct 30 14:51:12 2000
+@@ -16,6 +16,10 @@
+ LINGUAS = ro
+ CATALOGS = $(addsuffix .mo, $(LINGUAS))
+ 
++prefix         = @prefix@
++datadir         = @datadir@
++LOCALEDIR       = $(datadir)/locale
++
+ POTFILES = \
+ 
+ all: $(NLSPACKAGE).pot $(CATALOGS)
