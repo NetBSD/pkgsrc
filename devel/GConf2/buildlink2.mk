@@ -1,22 +1,44 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/09/11 09:13:08 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2002/09/14 07:58:03 rh Exp $
+#
+# This Makefile fragment is included by packages that use GConf2.
+#
+# This file was created automatically using createbuildlink 2.0.
+#
 
 .if !defined(GCONF2_BUILDLINK2_MK)
 GCONF2_BUILDLINK2_MK=	# defined
 
-BUILDLINK_PACKAGES+=		gconf2
-BUILDLINK_DEPENDS.gconf2?=	GConf2>=1.2.1nb1
-BUILDLINK_PKGSRCDIR.gconf2?=	../../devel/GConf2
+BUILDLINK_PACKAGES+=			GConf2
+BUILDLINK_DEPENDS.GConf2?=		GConf2>=1.2.1nb2
+BUILDLINK_PKGSRCDIR.GConf2?=		../../devel/GConf2
 
-EVAL_PREFIX+=				BUILDLINK_PREFIX.gconf2=GConf2
-BUILDLINK_PREFIX.gconf2_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.gconf2=			include/gconf/2/gconf/*
-BUILDLINK_FILES.gconf2+=		lib/libgconf-2*
+EVAL_PREFIX+=	BUILDLINK_PREFIX.GConf2=GConf2
+BUILDLINK_PREFIX.GConf2_DEFAULT=	${LOCALBASE}
+BUILDLINK_FILES.GConf2+=	include/gconf/2/gconf/gconf-changeset.h
+BUILDLINK_FILES.GConf2+=	include/gconf/2/gconf/gconf-client.h
+BUILDLINK_FILES.GConf2+=	include/gconf/2/gconf/gconf-engine.h
+BUILDLINK_FILES.GConf2+=	include/gconf/2/gconf/gconf-enum-types.h
+BUILDLINK_FILES.GConf2+=	include/gconf/2/gconf/gconf-error.h
+BUILDLINK_FILES.GConf2+=	include/gconf/2/gconf/gconf-listeners.h
+BUILDLINK_FILES.GConf2+=	include/gconf/2/gconf/gconf-schema.h
+BUILDLINK_FILES.GConf2+=	include/gconf/2/gconf/gconf-value.h
+BUILDLINK_FILES.GConf2+=	include/gconf/2/gconf/gconf.h
+BUILDLINK_FILES.GConf2+=	lib/GConf/2/libgconfbackend-xml.*
+BUILDLINK_FILES.GConf2+=	lib/libgconf-2.*
+BUILDLINK_FILES.GConf2+=	lib/pkgconfig/gconf-2.0.pc
 
-.include "../../databases/db3/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/popt/buildlink2.mk"
+.include "../../devel/ptl2/buildlink2.mk"
+.include "../../net/ORBit2/buildlink2.mk"
+.include "../../net/linc/buildlink2.mk"
+.include "../../textproc/gtk-doc/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 
-BUILDLINK_TARGETS+=	gconf2-buildlink
+BUILDLINK_TARGETS+=	GConf2-buildlink
 
-gconf2-buildlink: _BUILDLINK_USE
+GConf2-buildlink: _BUILDLINK_USE
 
 .endif	# GCONF2_BUILDLINK2_MK
