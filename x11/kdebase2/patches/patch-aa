@@ -1,8 +1,27 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 16:03:11 skrll Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/24 13:42:04 skrll Exp $
 
 --- configure.orig	Thu Feb 22 13:17:34 2001
 +++ configure
-@@ -11108,7 +11108,7 @@
+@@ -9944,7 +9944,9 @@
+ 
+ 
+ 
+-for ac_func in getsecretkey getloadavg getusershell login_getclass auth_timeok
++ac_save_LIBS="$LIBS"
++LIBS="$LIBS -lutil"
++for ac_func in getsecretkey getloadavg getusershell login_getclass auth_timeok setusercontext
+ do
+ echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
+ echo "configure:9951: checking for $ac_func" >&5
+@@ -10001,6 +10003,7 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ done
++LIBS="$ac_save_LIBS"
+ 
+ 
+ # Extract the first word of "X", so it can be a program name with args.
+@@ -11108,7 +11111,7 @@
  
      ac_save_ldflags="$LDFLAGS"
      ac_save_cflags="$CFLAGS"
@@ -11,7 +30,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/14 16:03:11 skrll Exp $
      CFLAGS="$CFLAGS $X_INCLUDES"
      test -n "$GL_INCLUDE" && CFLAGS="-I$GL_INCLUDE $CFLAGS"
      cat > conftest.$ac_ext <<EOF
-@@ -11173,13 +11173,13 @@
+@@ -11173,13 +11176,13 @@
  
      if test "$GL_LDFLAGS" = ""; then
         if test "$ac_cv_have_gl" = "mesa"; then
@@ -27,7 +46,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/14 16:03:11 skrll Exp $
         else
            GLLIB="$GL_LDFLAGS -lGL -lGLU "'$(LIB_X11)'
         fi
-@@ -11576,6 +11576,7 @@
+@@ -11576,6 +11579,7 @@
  case "$host" in 
    *-*-linux*) ksysguardd_compile=yes; UNAME='Linux' ;;
    *-*-freebsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;

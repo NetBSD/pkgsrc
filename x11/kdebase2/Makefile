@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/19 09:57:01 skrll Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/24 13:42:04 skrll Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -15,6 +15,7 @@ USE_XPM=	yes
 USE_MOTIF=	yes
 .include "../../x11/kde2/Makefile.part2"
 
+CONFIGURE_ARGS+=	--disable-greet-lib
 CONFIGURE_ENV+=	LIBS="-Wl,--export-dynamic"
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}

@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.1 2001/03/24 13:42:05 skrll Exp $
+
+--- kdm/greeter/verify.c.orig	Sun Feb 18 15:28:18 2001
++++ kdm/greeter/verify.c
+@@ -74,7 +74,7 @@
+ static char krbtkfile[MAXPATHLEN];
+ #endif
+ 
+-#if defined(HAVE_LOGIN_CAP_H) && !defined(__NetBSD__)
++#if defined(HAVE_LOGIN_CAP_H)
+ # define USE_LOGIN_CAP 1
+ # include <login_cap.h>
+ #endif
