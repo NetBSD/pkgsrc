@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2002/10/08 13:09:52 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2002/12/21 11:10:00 wiz Exp $
 
---- Makefile.orig	Mon Feb 12 14:08:59 2001
+--- Makefile.orig	Mon Feb 12 23:08:59 2001
 +++ Makefile
 @@ -4,13 +4,10 @@
  
@@ -34,11 +34,10 @@ $NetBSD: patch-aa,v 1.5 2002/10/08 13:09:52 jlam Exp $
  # OpenBSD stuff
  #
  ifeq ($(OS),OpenBSD)
-@@ -71,6 +59,15 @@ override CFLAGS           += -DHAVE_XFRE
- endif
+@@ -72,6 +60,15 @@ endif
  
  override CFLAGS           += $(C_WARN_FLAG) -DX11BASE=\"$(X11BASEINST)\"
-+
+ 
 +#
 +# NetBSD stuff
 +#
@@ -47,6 +46,16 @@ $NetBSD: patch-aa,v 1.5 2002/10/08 13:09:52 jlam Exp $
 +  override LIBDIRS        += $(LOCALBASE)/lib
 +  override LD_INC         += $(LIBOSSAUDIO) -lz
 +endif
- 
++
  ifeq ($(OS), linux)
  override CFLAGS            = $(CFLAGS) -DOLD_TUNER_IFACE
+ endif
+@@ -81,7 +78,7 @@ endif
+ #
+ override LDFLAGS           = $(LD_INC) 
+ override VIDEOLIB_LIB      = $(VIDEOLIB_DIR)/libvideo.a
+-override LIBS              = -ltiff -ljpeg -lXaw3d -lXmu -lXt -lXpm \
++override LIBS              = -lpng -ltiff -ljpeg -lXaw3d -lXmu -lXt -lXpm \
+                              -lSM -lICE -lXext -lX11 -lm
+ ifeq ($(HAVE_XFREE86),YES)
+   override LIBS           += -lXxf86dga -lXxf86vm
