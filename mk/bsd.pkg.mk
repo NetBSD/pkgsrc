@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1161 2003/04/04 10:06:41 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1162 2003/04/10 12:40:29 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -791,7 +791,6 @@ MASTER_SITE_TEX_CTAN+= \
 MASTER_SITE_SUNSITE+=	\
 	ftp://sunsite.unc.edu/pub/Linux/ \
 	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/ \
-	ftp://ftp.informatik.rwth-aachen.de/pub/comp/Linux/sunsite.unc.edu/ \
 	ftp://ftp.chg.ru/pub/Linux/sunsite/ \
 	ftp://ftp.is.co.za/linux/sunsite/ \
 	ftp://ftp.kddlabs.co.jp/Linux/metalab.unc.edu/ \
@@ -801,7 +800,6 @@ MASTER_SITE_SUNSITE+=	\
 	ftp://ftp.nvg.ntnu.no/pub/mirrors/metalab.unc.edu/ \
 	ftp://ftp.uvsq.fr/pub5/linux/sunsite/ \
 	ftp://ftp.lip6.fr/pub/linux/sunsite/ \
-	ftp://ftp.informatik.rwth-aachen.de/pub/comp/Linux/sunsite.unc.edu/ \
 	ftp://ftp.uni-stuttgart.de/pub/mirror/sunsite.unc.edu/pub/Linux/ \
 	ftp://ftp.uni-magdeburg.de/pub/mirror/linux/ftp.metalab.unc.edu/ \
 	ftp://ftp.uni-jena.de/pub/linux/MIRROR.sunsite/ \
