@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5591 2004/04/15 16:29:16 jmmv Exp $
+$NetBSD: CHANGES,v 1.5592 2004/04/15 16:44:27 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1967,3 +1967,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated t1lib to 5.0.2 [minskim 2004-04-15]
 	Updated gnopernicus to 0.8.3 [jmmv 2004-04-15]
 	Updated samba to 3.0.2anb1 [jmmv 2004-04-15]
+	Updated gnome-vfs2 to 2.6.0nb1 [jmmv 2004-04-15]
+	Added gnome-vfs2-cdda-2.6.0 [jmmv 2004-04-15]
+	Added gnome-vfs2-smb-2.6.0 [jmmv 2004-04-15]
