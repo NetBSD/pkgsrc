@@ -1,8 +1,8 @@
-$NetBSD: patch-bn,v 1.1 1999/08/18 23:30:26 thorpej Exp $
+$NetBSD: patch-bn,v 1.2 2000/04/10 00:19:17 bad Exp $
 
---- master/multi_server.c.orig	Tue Aug 17 17:32:22 1999
-+++ master/multi_server.c	Tue Aug 17 17:34:32 1999
-@@ -270,7 +270,7 @@
+--- master/multi_server.c.orig	Tue Nov  9 16:38:32 1999
++++ master/multi_server.c	Sat Apr  8 20:46:49 2000
+@@ -258,7 +258,7 @@
  
  static void multi_server_accept_local(int unused_event, char *context)
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-bn,v 1.1 1999/08/18 23:30:26 thorpej Exp $
      int     time_left = -1;
      int     fd;
  
-@@ -310,7 +310,7 @@
+@@ -292,7 +292,7 @@
  
  static void multi_server_accept_inet(int unused_event, char *context)
  {
@@ -20,7 +20,7 @@ $NetBSD: patch-bn,v 1.1 1999/08/18 23:30:26 thorpej Exp $
      int     time_left = -1;
      int     fd;
  
-@@ -580,7 +580,7 @@
+@@ -557,7 +557,7 @@
      if (var_idle_limit > 0)
  	event_request_timer(multi_server_timeout, (char *) 0, var_idle_limit);
      for (fd = MASTER_LISTEN_FD; fd < MASTER_LISTEN_FD + socket_count; fd++) {

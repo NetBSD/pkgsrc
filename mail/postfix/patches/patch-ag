@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.1 1999/05/30 18:18:31 tron Exp $
+$NetBSD: patch-ag,v 1.2 2000/04/10 00:19:17 bad Exp $
 
---- dns/Makefile.orig	Sun May 30 18:49:12 1999
-+++ dns/Makefile	Sun May 30 18:49:12 1999
-@@ -0,0 +1,13 @@
-+#	$NetBSD: patch-ag,v 1.1 1999/05/30 18:18:31 tron Exp $
+--- dns/Makefile.orig	Sat Apr  8 22:14:35 2000
++++ dns/Makefile	Sat Apr  8 23:18:53 2000
+@@ -0,0 +1,16 @@
++#	$NetBSD: patch-ag,v 1.2 2000/04/10 00:19:17 bad Exp $
 +
 +LIB	= dns
 +SRCS	= dns_lookup.c dns_rr.c dns_strerror.c dns_strtype.c
@@ -11,6 +11,9 @@ $NetBSD: patch-ag,v 1.1 1999/05/30 18:18:31 tron Exp $
 +MKLINT=		no
 +MKPIC=		no
 +MKPROFILE=	no
++NOLINT=		yes
++NOPIC=		yes
++NOPROFILE=	yes
 +
 +# only needed during build
 +libinstall::

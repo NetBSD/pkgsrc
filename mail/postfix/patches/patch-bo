@@ -1,8 +1,8 @@
-$NetBSD: patch-bo,v 1.1 1999/08/18 23:30:26 thorpej Exp $
+$NetBSD: patch-bo,v 1.2 2000/04/10 00:19:17 bad Exp $
 
---- master/single_server.c.orig	Tue Aug 17 17:36:40 1999
-+++ master/single_server.c	Tue Aug 17 17:37:06 1999
-@@ -241,7 +241,7 @@
+--- master/single_server.c.orig	Tue Nov  9 16:38:32 1999
++++ master/single_server.c	Sat Apr  8 20:46:49 2000
+@@ -229,7 +229,7 @@
  
  static void single_server_accept_local(int unused_event, char *context)
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-bo,v 1.1 1999/08/18 23:30:26 thorpej Exp $
      int     time_left = -1;
      int     fd;
  
-@@ -280,7 +280,7 @@
+@@ -262,7 +262,7 @@
  
  static void single_server_accept_inet(int unused_event, char *context)
  {
@@ -20,7 +20,7 @@ $NetBSD: patch-bo,v 1.1 1999/08/18 23:30:26 thorpej Exp $
      int     time_left = -1;
      int     fd;
  
-@@ -549,7 +549,7 @@
+@@ -526,7 +526,7 @@
      if (var_idle_limit > 0)
  	event_request_timer(single_server_timeout, (char *) 0, var_idle_limit);
      for (fd = MASTER_LISTEN_FD; fd < MASTER_LISTEN_FD + socket_count; fd++) {

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/04/09 08:10:19 simonb Exp $
+# $NetBSD: Makefile,v 1.18 2000/04/10 00:19:15 bad Exp $
 
 DISTNAME=	postfix-19991231-pl06
 PKGNAME=	postfix-19991231pl06
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.postfix.org/
 
 MIRROR_DISTFILE= no
 MANCOMPRESSED_IF_MANZ=	yes
+
+POSTFIX_SPOOL=	/var/spool/postfix
 
 pre-patch:
 	${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.dist
@@ -42,5 +44,10 @@ pre-install:
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
+	${LN} -sf ${PREFIX}/share/postfix/postfix-script /etc/postfix
+	-${MKDIR} ${POSTFIX_SPOOL}
+	$(CHMOD) 755 ${POSTFIX_SPOOL}
+	${TEST} -f /etc/postfix/main.cf || ${INSTALL_DATA} ${PREFIX}/share/postfix/main.cf /etc/postfix
+	${TEST} -f /etc/postfix/master.cf || ${INSTALL_DATA} ${PREFIX}/share/postfix/master.cf /etc/postfix
 
 .include "../../mk/bsd.pkg.mk"
