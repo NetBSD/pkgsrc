@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/05 09:01:03 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/06 03:17:00 fredb Exp $
 
 DISTNAME=	pakemon-0.3.1
 CATEGORIES=	security
@@ -12,7 +12,7 @@ DEPENDS+=	libnet-*:../../devel/libnet
 # only at compile-time.
 #
 BUILD_DEPENDS+=	${LOCALBASE}/lib/libnids.a:../../net/libnids
-BUILD_DEPENDS+=	${LOCALBASE}/bin/autoremake:../../devel/autoconf
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 
 GNU_CONFIGURE=	yes
 
@@ -20,6 +20,6 @@ post-extract:
 	${CP} ${WRKSRC}/pakemon.h ${WRKSRC}/pakemon.h.in
 
 post-patch:
-	(cd ${WRKSRC}; autoreconf)
+	cd ${WRKSRC}; autoreconf
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-## $NetBSD: Makefile,v 1.27 2001/02/05 09:01:00 tron Exp $
+## $NetBSD: Makefile,v 1.28 2001/02/06 03:16:58 fredb Exp $
 
 DISTNAME=		gnome-utils-1.2.0
 CATEGORIES=		misc x11 gnome
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-utils/}
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoremake:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 BUILD_DEPENDS+=		bison:../../devel/bison
 DEPENDS+=		gnome-core>=1.2.0:../../x11/gnome-core
