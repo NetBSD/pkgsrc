@@ -1,4 +1,4 @@
-/*	$NetBSD: pwcache.h,v 1.1.1.1 2003/03/31 05:02:59 grant Exp $	*/
+/*	$NetBSD: pwcache.h,v 1.2 2003/06/24 14:09:21 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -74,3 +74,19 @@ typedef struct gidc {
 	char name[GNMLEN];	/* gid name */
 	gid_t gid;		/* cached gid */
 } GIDC;
+
+#ifndef HAVE_USER_FROM_UID
+const char *user_from_uid(uid_t, int);
+#endif
+
+#ifndef HAVE_GROUP_FROM_GID
+const char *group_from_gid(gid_t, int);
+#endif
+
+#ifndef HAVE_UID_FROM_USER
+int uid_from_user(const char *, uid_t *);
+#endif
+
+#ifndef HAVE_GID_FROM_GROUP
+int gid_from_group(const char *, gid_t *);
+#endif
