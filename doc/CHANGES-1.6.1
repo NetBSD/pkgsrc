@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.30 2003/04/28 01:07:35 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.31 2003/06/19 00:13:06 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -610,5 +610,34 @@ mk/pthread.buildlink2.mk			1.8
 
 	s/SILIENT/SILENT/ (makes the pthread buildlink2 stage quiet
 	by default)
-
 	[jmmv, ticket #1273]
+
+textproc/gsed/buildlink2.mk			1.1 (new)
+
+	Provide a buildlink structure so sed and gsed appear in buildlink/bin
+	as some programs require GNU sed, but refer to 'sed' directly in their
+	scripts.
+	[required by ethereal update below]
+
+net/ethereal/DESCR				1.2
+net/ethereal/Makefile				1.73-1.74, 1.76
+net/ethereal/PLIST				1.8
+net/ethereal/distinfo				1.19
+net/ethereal/patches/patch-aa			1.1 (new)
+net/ethereal/patches/patch-ab			1.1 (new)
+net/ethereal/patches/patch-ac			1.1 (new)
+net/ethereal/patches/patch-ad			1.1 (new)
+net/ethereal/patches/patch-ae			1.1 (new)
+net/ethereal/patches/patch-af			1.1 (new)
+net/ethereal/patches/patch-ag			1.1 (new)
+
+	Updated to version 0.9.12.
+
+	This release fixes several off-by-one and integer overflow errors
+	discovered by Timo Sirainen.  See the following url for more details:
+
+	  http://www.ethereal.com/appnotes/enpa-sa-00009.html
+
+	On solaris use gsed's buildlink2 to provide sed to configure/etc
+	(it requires GNU sed)
+	[salo, ticket #1280]
