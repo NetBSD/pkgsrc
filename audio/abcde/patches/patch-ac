@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.13 2003/07/12 15:25:55 wiz Exp $
+$NetBSD: patch-ac,v 1.14 2003/09/15 11:17:28 agc Exp $
 
 --- abcde.orig	Sun May 18 23:01:13 2003
 +++ abcde
+@@ -337,7 +337,7 @@
+ 			do
+ 				TRACKFILES="$TRACKFILES track$UTRACKNUM.wav"
+ 			done
+-			nice $ENCNICE $ENCODER $ENCODEROPTS --nogap $TRACKFILES
++			nice $ENCNICE $MP3ENCODER $MP3ENCODEROPTS --nogap $TRACKFILES
+ 			RETURN=$?
+ 			if [ "$RETURN" != "0" ]; then
+ 				echo "batch-encode: $ENCODER returned code $RETURN" >> errors
 @@ -1233,8 +1233,8 @@ if [ -z "$WAVOUTPUTDIR" ]; then
  fi
  
@@ -33,3 +42,13 @@ $NetBSD: patch-ac,v 1.13 2003/07/12 15:25:55 wiz Exp $
  		;;
  	cdda2wav)
  		CDROMREADER="$CDDA2WAV"
+@@ -1427,7 +1427,8 @@
+ do
+ 	# Cut off the command-line options we just added in
+ 	X=$(echo $X | cut -d' ' -f2)
+-	if [ "$(which $X)" = "" ]; then
++	Y="$(which $X | cut -d' ' -f1,2)"
++	if [ "$Y" = "" -o "$Y" = "no $X" ]; then
+ 		echo "abcde error: $X is not in your path." >&2
+ 		exit 1
+ 	elif [ ! -x $(which $X) ]; then

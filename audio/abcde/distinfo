@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.18 2003/07/12 15:25:53 wiz Exp $
+$NetBSD: distinfo,v 1.19 2003/09/15 11:17:27 agc Exp $
 
 SHA1 (abcde_2.1.4.orig.tar.gz) = 0d00d1ab462f38c449b575b17828bdc20c35ca65
 Size (abcde_2.1.4.orig.tar.gz) = 42945 bytes
 SHA1 (patch-ab) = 524452b3930c25351deee7a508f98bcd0f51a872
-SHA1 (patch-ac) = 50fdf70637493358d83d6ad8f25e9650de1d8bdc
+SHA1 (patch-ac) = a752b7f3e54c7bb2ed38b08c45c564428fedffba
 SHA1 (patch-ad) = d6aecd0279087d190fb2c467526dbc35496659e9
-SHA1 (patch-ae) = c184b8df4b2ed69ff0d695fbef15c9f1f32158ca
