@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.37 2004/11/20 04:37:08 grant Exp $
+# $NetBSD: compiler.mk,v 1.38 2004/11/22 22:24:47 wiz Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -40,9 +40,6 @@
 #	GCC_REQD instead of the native compiler.  Should only be set in
 #	/etc/mk.conf.
 #
-# USE_GCC_SHLIB
-#	Indicates that a package uses GCC shared libraries, so we
-#	register a runtime dependency on the compiler package.
 #
 # USE_LANGUAGES
 #	Lists the languages used in the source code of the package,
@@ -67,16 +64,6 @@
 BSD_COMPILER_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
-
-# XXX Add this gross and completely inaccurate hack.  Packages that
-# XXX set USE_GCC_SHLIB should be adjusted to set USE_LANGUAGES
-# XXX correctly (most likely by saying it needs either "c++" or
-# XXX "c c++").  This is here for now so that ~85 packages won't
-# XXX suddenly break.
-#
-.if defined(USE_GCC_SHLIB)
-USE_LANGUAGES?=	c c++
-.endif
 
 # By default, assume that the package requires a C compiler.
 USE_LANGUAGES?=	c
