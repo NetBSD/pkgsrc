@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.3 1998/12/04 17:23:20 tv Exp $
+$NetBSD: patch-af,v 1.4 1998/12/07 16:20:40 tv Exp $
 
 --- src/modules/standard/mod_include.c.orig	Thu Sep 24 10:06:42 1998
-+++ src/modules/standard/mod_include.c	Fri Dec  4 10:51:50 1998
++++ src/modules/standard/mod_include.c	Mon Dec  7 11:17:39 1998
 @@ -92,7 +92,11 @@
  #include "http_log.h"
  #include "http_main.h"
@@ -33,7 +33,27 @@ $NetBSD: patch-af,v 1.3 1998/12/04 17:23:20 tv Exp $
  			size_t length, int leave_name)
  {
      char ch;
-@@ -2090,6 +2095,16 @@
+@@ -666,7 +671,8 @@
+             parse_string(r, tag_val, parsed_string, sizeof(parsed_string), 0);
+             if (tag[0] == 'f') {
+                 /* be safe; only files in this directory or below allowed */
+-		if (!is_only_below(parsed_string)) {
++		if ((ap_allow_options(r) & OPT_INCNOEXEC) &&
++		    !is_only_below(parsed_string)) {
+                     error_fmt = "unable to include file \"%s\" "
+                         "in parsed file %s";
+                 }
+@@ -1010,7 +1016,8 @@
+     int ret=0;
+ 
+     if (!strcmp(tag, "file")) {
+-        ap_getparents(tag_val);    /* get rid of any nasties */
++	if (ap_allow_options(r) & OPT_INCNOEXEC)
++	    ap_getparents(tag_val);    /* get rid of any nasties */
+         
+         rr = ap_sub_req_lookup_file(tag_val, r);
+ 
+@@ -2090,6 +2097,16 @@
      }
  }
  
@@ -42,7 +62,7 @@ $NetBSD: patch-af,v 1.3 1998/12/04 17:23:20 tv Exp $
 +    char cmdbuf[40] = "include::";
 +
 +    strncat(cmdbuf, cmd, 30);
-+    ap_hook_configure(cmdbuf, AP_HOOK_SIG5(int,ptr,ptr,ptr,ptr), AP_HOOK_DECLINE(-32767));
++    ap_hook_configure(cmdbuf, AP_HOOK_SIG5(int,ptr,ptr,ptr,ptr), AP_HOOK_TOPMOST);
 +    ap_hook_register(cmdbuf, func, NULL);
 +
 +    return 0;
@@ -50,14 +70,15 @@ $NetBSD: patch-af,v 1.3 1998/12/04 17:23:20 tv Exp $
  
  
  /* -------------------------- The main function --------------------------- */
-@@ -2214,6 +2229,12 @@
+@@ -2214,6 +2231,13 @@
              }
  #endif
              else {
 +		char cmdbuf[40] = "include::";
 +
 +		strncat(cmdbuf, directive, 30);
-+		if (ap_hook_call(cmdbuf, &ret, f, r, error, timefmt) == TRUE)
++		if ((ap_hook_status(cmdbuf) >= AP_HOOK_STATE_CONFIGURED) &&
++		    (ap_hook_call(cmdbuf, &ret, f, r, error, timefmt) == TRUE))
 +		    continue;
 +
                  ap_log_rerror(APLOG_MARK, APLOG_NOERRNO|APLOG_ERR, r,

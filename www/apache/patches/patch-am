@@ -1,0 +1,18 @@
+--- src/ap/ap_hook.c.orig	Mon Dec  7 10:31:53 1998
++++ src/ap/ap_hook.c	Mon Dec  7 10:32:48 1998
+@@ -705,6 +705,15 @@
+         *((int *)v_rc) = ((int(*)(void *, void *, void *, int))(hf->hf_ptr))(v1, v2, v3, v4);
+         rc = (*((int *)v_rc) != he->he_modeval.v_int);
+     }
++    else if (he->he_sig == AP_HOOK_SIG5(int, ptr, ptr, ptr, ptr)) {
++        /* Call: int func(ptr,ptr,ptr,int) */
++        void *v1 = va_arg(ap, va_type(ptr));
++        void *v2 = va_arg(ap, va_type(ptr));
++        void *v3 = va_arg(ap, va_type(ptr));
++        void *v4 = va_arg(ap, va_type(ptr));
++        *((int *)v_rc) = ((int(*)(void *, void *, void *, void *))(hf->hf_ptr))(v1, v2, v3, v4);
++        rc = (*((int *)v_rc) != he->he_modeval.v_int);
++    }
+     else if (he->he_sig == AP_HOOK_SIG6(int, ptr, ptr, ptr, ptr, int)) {
+         /* Call: int func(ptr,ptr,ptr,ptr,int) */
+         void *v1 = va_arg(ap, va_type(ptr));
