@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/04/30 17:07:11 tv Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/12/01 21:31:04 tron Exp $
 bin/newaliases
 bin/mailq
 bin/hoststat
@@ -172,5 +172,3 @@ share/sendmail/README
 @dirrm share/sendmail/domain
 @unexec rm -rf %D/share/sendmail/cf
 @dirrm share/sendmail
-@exec mv -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || true
-@unexec mv -f /usr/sbin/makemap.8.8 /usr/sbin/makemap || true
