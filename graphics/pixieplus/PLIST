@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/25 04:21:52 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/11 12:11:52 markd Exp $
 bin/pixie
 lib/libpixie_misc.a
 lib/libpixie_misc.la
@@ -236,7 +236,6 @@ share/kde/icons/locolor/16x16/apps/run.png
 share/kde/icons/locolor/22x22/actions/thumb.png
 share/kde/icons/locolor/32x32/actions/thumb.png
 share/kde/mimelnk/image/x-miff.desktop
-share/kde/mimelnk/image/x-pcx.desktop
 share/kde/mimelnk/image/x-pict.desktop
 share/kde/mimelnk/image/x-tga.desktop
 share/kde/mimelnk/image/x-xwd.desktop

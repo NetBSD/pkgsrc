@@ -1,13 +1,27 @@
-$NetBSD: patch-ac,v 1.1 2004/06/15 13:24:44 markd Exp $
+$NetBSD: patch-ac,v 1.2 2004/09/11 12:11:53 markd Exp $
 
 --- app/ifapp.cpp.orig	2003-02-09 17:56:50.000000000 +1300
 +++ app/ifapp.cpp
-@@ -34,7 +34,7 @@ int xioErrorHandler(Display *dpy);
+@@ -33,18 +33,18 @@ int xioErrorHandler(Display *dpy);
+ 
  // ImageMagick message and progress stubs
  extern "C"{
-     unsigned int magickMonitor(const char *msg, const off_t value,
+-    unsigned int magickMonitor(const char *msg, const off_t value,
 -                               const size_t span, ExceptionInfo *)
++    MagickBooleanType magickMonitor(const char *msg, const off_t value,
 +                               const MagickSizeType span, ExceptionInfo *)
      {
          if(!appPtr)
-             return(true);
+-            return(true);
++            return(MagickTrue);
+         int val = (int)((((float)value)/((float)span))*100.0);
+         if(appPtr->magickMessageProgress())
+             appPtr->magickMessageProgress()->setValue(val);
+         if(appPtr->magickMessageLabel())
+             appPtr->magickMessageLabel()->setText(msg);
+         appPtr->processEvents();
+-        return(true);
++        return(MagickTrue);
+     }
+ 
+     void magickWarning(const ExceptionType /*warning*/, const char *reason,
