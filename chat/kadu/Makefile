@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/09 10:46:23 adam Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/28 10:16:59 agc Exp $
 
 DISTNAME=	kadu-0.3.9
 CATEGORIES=	chat
@@ -18,8 +18,8 @@ LIBS+=			${LIBOSSAUDIO}
 WRKSRC=			${WRKDIR}/kadu
 
 # pure hack
-#post-configure:
-#	cd ${WRKSRC}; ${TOUCH} Makefile
+post-configure:
+	cd ${WRKSRC}; ${TOUCH} Makefile
 
 .include "../../chat/ekg/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
