@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2001/05/02 08:22:30 jlam Exp $
+$NetBSD: patch-af,v 1.2 2001/07/08 13:59:15 bad Exp $
 
---- configure.orig	Thu Mar 15 19:52:05 2001
-+++ configure
-@@ -5004,7 +5004,10 @@
+--- configure.orig	Tue Jun 12 21:07:37 2001
++++ configure	Sat Jul  7 23:37:20 2001
+@@ -5065,7 +5065,10 @@
  #define HAVE_LIBWRAP 1
  EOF
  
@@ -14,7 +14,15 @@ $NetBSD: patch-af,v 1.1 2001/05/02 08:22:30 jlam Exp $
  else
    echo "configure: failed program was:" >&5
    cat conftest.$ac_ext >&5
-@@ -9345,7 +9348,11 @@
+@@ -9554,7 +9557,6 @@
+ else
+   bench_dirs=""
+ fi
+-bench_dirs="$bench_dirs mysql-test"
+ 
+ 
+ # Don't build readline, i have it already
+@@ -9575,7 +9577,11 @@
    # This requires readline to be in a standard place. Mosty for linux
    # there readline may be a shared library.
    readline_dir=""
@@ -27,12 +35,21 @@ $NetBSD: patch-af,v 1.1 2001/05/02 08:22:30 jlam Exp $
  fi
  
  
-@@ -10466,7 +10473,7 @@
+@@ -10745,15 +10751,15 @@
  
      MT_INCLUDES="-I\$(top_srcdir)/mit-pthreads/include"
      
 -    MT_LD_ADD="-L \$(top_srcdir)/mit-pthreads/obj/ -lpthread"
 +    MT_LD_ADD="\$(top_srcdir)/mit-pthreads/obj/libpthread.a"
      
-     LIBS="$MT_LD_ADD $LIBS"
+-    LIBS="$MT_LD_ADD $LIBS"
      echo ""
+     echo "Configuring MIT Pthreads"
+     # We will never install so installation paths are not needed.
+     (cd mit-pthreads; sh ./configure)
+     echo "End of MIT Pthreads configuration"
+     echo ""
++    LIBS="$MT_LD_ADD $LIBS"
+   fi
+ fi
+ 
