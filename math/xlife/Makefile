@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/20 12:20:05 agc Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/22 17:11:35 drochner Exp $
 #
 
 DISTNAME=	xlife-5.0
@@ -12,6 +12,7 @@ COMMENT=	John Horton Conway's "Game of Life"
 
 WRKSRC=		${WRKDIR}
 USE_IMAKE=	yes
+USE_BUILDLINK3=	yes
 
 INSTALL_TARGET=	install
 
