@@ -1,0 +1,123 @@
+$NetBSD: patch-bsearch,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+
+Binary search patch.
+Originally from skk-users mailing list
+(Masahiro Doteguchi, Mailinglist-Id: 1779).
+
+--- skkserv/skkserv.c.patch1	Tue Dec 21 15:50:59 1999
++++ skkserv/skkserv.c	Tue Dec 21 16:01:06 1999
+@@ -107,7 +107,7 @@
+  *	Global Variables
+  */
+ 
+-char	pgmver[] = "3.9.4 ";	/* version number */
++char	pgmver[] = "3.9.4 (binary search) ";	/* version number */
+ 
+ char	*pgmnm;		/* program name */
+ char	*jname;		/* name of shared dictionary */
+@@ -538,7 +538,7 @@
+ }
+ 
+ /*
+- *	reply to client: linear search
++ *	reply to client: binary search
+  */
+ 
+ search(commsock)
+@@ -551,6 +551,7 @@
+   int		n; 	 	 /* number of characters from client */
+   int		sttpnt; 	 /* start point of searching */
+   int		endpnt; 	 /* end point of searching */
++  int		curpnt;		 /* current point of searching */
+   int		errcod = 0; 	 /* error flag */
+   int		sstyle;		 /* search style */
+ 
+@@ -659,18 +660,36 @@
+       endpnt = jtab1[KANA_END - code + 1];
+     }
+   }
+-  fseek(jisho, sttpnt, 0);
+   if (debug)
+-    fprintf(stderr, "from %d to %d\n", sttpnt, endpnt);
++    fprintf(errout, "from %d to %d\n", sttpnt, endpnt);
+   
+-  while ((c = fgetc(jisho)) != EOF) {
++  for (;;) {
++    if ((sstyle & 0x4) == 0) {	/* binary search? */
++      curpnt = (sttpnt + endpnt) / 2;
++      fseek(jisho, curpnt, 0);
++      while ((c = fgetc(jisho)) != EOF) {
++	curpnt++;
++	if (c == EOL) break;
++      }
++      if (c == EOF) break;
++      if (curpnt >= endpnt) {
++	fseek(jisho, sttpnt, 0);
++	sstyle |= 0x4;	/* linear search */
++      }
++    }
++
++    if (debug) {fprintf(errout, "%d:%d\t%d\t%d\t", sstyle, sttpnt, curpnt, endpnt);}
++    c = fgetc(jisho);
+     pbuf = &combuf[1]; /* ' ' is end-symbol */
+     while (c == *pbuf && c != ' ' && c != EOL) {
+-      if (debug) {fprintf(errout, "1:%d:%d:%d:%d:\n", c, *pbuf, ' ', EOL);}
++/*    if (debug) {fprintf(errout, "1:%d:%d:%d:%d:", c, *pbuf, ' ', EOL);}*/
++      if (debug) {fprintf(errout, "%c", c);}
+       c = fgetc(jisho); pbuf++;
+-    } 
+-    if (debug) {fprintf(errout, "1:%d:%d:%d:%d:\n", c, *pbuf, ' ', EOL);}
++    }
++/*    if (debug) {fprintf(errout, "1:%d:%d:%d:%d:", c, *pbuf, ' ', EOL);}*/
++    if (debug) {fprintf(errout, "%c", c);}
+     if (c == ' ' && (*pbuf == ' ' || *pbuf == '\n')) { /* found */
++      if (debug) {fprintf(errout, "found\n");}
+       if ((errcod = write(commsock, SERVER_FOUND, 1)) >= 0)
+ 	while ((c = fgetc(jisho)) != EOF) {
+ 	  *pbuf = c;
+@@ -686,18 +705,35 @@
+       }
+       return(0);
+     }
+-    if (comp(*pbuf, c, sstyle)) {
+-      if (debug) {
+-	fprintf(stderr, "comp break %d \n", ftell(jisho));
+-      }
+-      break; 
++    if (debug) {
++      int ch;
++
++      if (c != ' ')
++	do {
++	  ch = fgetc(jisho);
++	  fprintf(errout, "%c", ch);
++	} while (ch != ' ' && ch != EOL);
++      fprintf(errout, "unmatched\n");
+     }
+-                       /* fix 1992/3/6 under suggestion  */
+-		       /* of guchi@pfu.fujitsu.co.jp     */
+-    while ((c = fgetc(jisho)) != EOF) {
+-      if (c == EOL) break;
++    if (sstyle & 0x4) {
++      if (comp(*pbuf, c, sstyle&~0x4)) {
++	if (debug) {
++	  fprintf(stderr, "comp break %d \n", ftell(jisho));
++        }
++	break;
++      }
++                        /* fix 1992/3/6 under suggestion  */
++ 		       /* of guchi@pfu.fujitsu.co.jp     */
++      while ((c = fgetc(jisho)) != EOF) {
++        if (c == EOL) break;
++      }
++      if (ftell(jisho) >= endpnt) break;
++    } else {
++      if (comp(*pbuf, c, sstyle&~0x4))
++	endpnt = curpnt;
++      else
++	sttpnt = curpnt;
+     }
+-    if (ftell(jisho) >= endpnt) break;
+   }
+ 
+   if ((errcod = write(commsock, SERVER_NOT_FOUND, 1)) >= 0) {

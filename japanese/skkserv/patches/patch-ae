@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+
+--- skkserv/Makefile.in.orig	Fri Feb  7 11:05:23 1997
++++ skkserv/Makefile.in	Tue Dec 21 07:41:57 1999
+@@ -28,7 +28,8 @@
+ SERVERDIR = @libexecdir@
+ 
+ DEFS = -I$(srcdir) -I$(top_srcdir) $(CFLAGS) @DEFS@ @PRIVATE@ \
+-	-DDEFAULT_JISYO=\"$(JISYODIR)/$(JISYO)\"
++	-DDEFAULT_JISYO=\"$(JISYODIR)/$(JISYO)\" \
++	-DSKKSERV_UID=${SKKUID} -DSKKSERV_GID=${SKKGID}
+ 
+ all: skkserv
+ 
