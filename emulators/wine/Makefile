@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2005/01/14 13:00:05 adam Exp $
+# $NetBSD: Makefile,v 1.77 2005/01/17 15:35:41 adam Exp $
 
 DISTNAME=	Wine-20050111
 PKGNAME=	${DISTNAME:S/W/w/}
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.winehq.com/
 COMMENT=	Free implementation of Windows on Unix (still alpha)
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
+BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
 YACC=		${PREFIX}/bin/bison -y
 
@@ -62,6 +63,7 @@ post-install:
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
+
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
