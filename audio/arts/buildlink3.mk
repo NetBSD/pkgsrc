@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/10/03 00:13:04 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/12/10 06:00:52 markd Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ARTS_BUILDLINK3_MK:=	${ARTS_BUILDLINK3_MK}+
@@ -14,6 +14,9 @@ BUILDLINK_PACKAGES+=	arts
 BUILDLINK_DEPENDS.arts+=	arts>=1.1.4nb1
 BUILDLINK_RECOMMENDED.arts+=	arts>=1.3.0nb1
 BUILDLINK_PKGSRCDIR.arts?=	../../audio/arts
+
+PRINT_PLIST_AWK+=	/^@dirrm include\/arts$$/ \
+				{ print "@comment in arts: " $$0; next; }
 .endif	# ARTS_BUILDLINK3_MK
 
 .include "../../audio/esound/buildlink3.mk"
