@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2001/03/14 15:59:46 skrll Exp $
+
+--- kfile/Makefile.in.orig	Thu Feb 22 18:17:27 2001
++++ kfile/Makefile.in
+@@ -259,7 +259,7 @@
+ 
+ AM_CPPFLAGS = -DQT_NO_CAST_ASCII
+ 
+-INCLUDES = -I$(top_srcdir) -I$(srcdir)/../libltdl/ -I$(top_srcdir)/kio -I$(top_builddir)/kio $(all_includes)
++INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/kio -I$(top_builddir)/kio $(all_includes)
+ 
+ lib_LTLIBRARIES = libkfile.la
+ 

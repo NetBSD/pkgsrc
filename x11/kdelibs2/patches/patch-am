@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.1.1 2001/03/14 15:59:45 skrll Exp $
+
+--- kimgio/Makefile.in.orig	Thu Feb 22 18:17:32 2001
++++ kimgio/Makefile.in
+@@ -273,7 +273,7 @@
+ 
+ noinst_HEADERS = xview.h eps.h tiffr.h krl.h g3r.h ico.h
+ 
+-INCLUDES = -I$(top_srcdir)/kio -I$(top_srcdir)/dcop -I$(top_srcdir)/libltdl $(all_includes)
++INCLUDES = -I$(top_srcdir)/kio -I$(top_srcdir)/dcop $(all_includes)
+ 
+ EXTRA_DIST = netpbm.cpp netpbm.h
+ 
