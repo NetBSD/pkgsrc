@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.294 1999/07/09 14:05:12 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.295 1999/07/10 00:11:55 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1261,25 +1261,26 @@ root-install:
 		case "$$shlib_type" in					\
 		"ELF")							\
 			${ECHO_MSG} "===>   [Automatic $$shlib_type shared object handling]";\
-			for so2 in $$sos; do				\
-				so1=`${ECHO} $$so2 | ${SED} -e 's|\.[0-9]*$$||'`; \
+			for so3 in $$sos; do				\
+				so2=`${BASENAME} $$so3`; \
+				so1=`${ECHO} $$so3 | ${SED} -e 's|\.[0-9]*$$||'`; \
 				so0=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`; \
 				cnt=`${EGREP} -c -x "$$so0" ${PLIST} || ${TRUE}`; \
 				if [ $$cnt -eq 0 ]; then		\
-					${SED} -e "s|^$$so2$$|&!$$so0|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
-					${ECHO_MSG} "${LN} -s ${PREFIX}/$$so2 ${PREFIX}/$$so0"; \
+					${SED} -e "s|^$$so3$$|&!$$so0|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+					${ECHO_MSG} "${LN} -s $$so2 ${PREFIX}/$$so0"; \
 					${RM} -f ${PREFIX}/$$so0; 	\
-					${LN} -s ${PREFIX}/$$so2 ${PREFIX}/$$so0; \
+					${LN} -s $$so2 ${PREFIX}/$$so0; \
 				fi;					\
 				cnt=`${EGREP} -c -x "$$so1" ${PLIST} || ${TRUE}`; \
 				if [ $$cnt -eq 0 ]; then		\
-					${SED} -e "s|^$$so2$$|&!$$so1|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
-					${ECHO_MSG} "${LN} -s ${PREFIX}/$$so2 ${PREFIX}/$$so1"; \
+					${SED} -e "s|^$$so3$$|&!$$so1|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+					${ECHO_MSG} "${LN} -s $$so2 ${PREFIX}/$$so1"; \
 					${RM} -f ${PREFIX}/$$so1; 	\
-					${LN} -s ${PREFIX}/$$so2 ${PREFIX}/$$so1; \
+					${LN} -s $$so2 ${PREFIX}/$$so1; \
 				fi;					\
 				if [ X"${PKG_VERBOSE}" != X"" ]; then	\
-					${ECHO_MSG} "$$so2";		\
+					${ECHO_MSG} "$$so3";		\
 				fi;					\
 			done;						\
 			;;						\
