@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/04/01 13:38:45 agc Exp $
+# $NetBSD: Makefile,v 1.12 1999/04/26 19:15:38 garbled Exp $
 
 DISTNAME=	tkirc1.202
 PKGNAME=	tkirc-1.202
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.north.de/~atte/tkirc/
 DEPENDS+=	ircII-4.4:../../net/ircII
 DEPENDS+=	tk-8.0.5:../../x11/tk80
 
+USE_X11=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/tkirc

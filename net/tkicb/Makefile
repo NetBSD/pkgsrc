@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/01 13:38:45 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/26 19:15:38 garbled Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.icb.net/
 
 DEPENDS=	tk-8.0.5:../../x11/tk80
 
+USE_X11=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_WRKSUBDIR=	yes
