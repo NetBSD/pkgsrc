@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7018 2004/08/27 15:22:59 drochner Exp $
+$NetBSD: CHANGES,v 1.7019 2004/08/27 21:52:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4078,3 +4078,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added vp-1.5 [drochner 2004-08-27]
 	Added boaconstructor-0.2.3 [drochner 2004-08-27]
 	Updated mstream to 1.0 [kim 2004-08-27]
+	Updated getmail to 4.1.1 [schmonz 2004-08-27]
