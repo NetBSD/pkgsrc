@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.269 2002/11/04 13:00:51 seb Exp $
+# $NetBSD: Packages.txt,v 1.270 2002/11/08 09:29:14 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -389,7 +389,7 @@ policy:
     PACKAGES?=              ${_PKGSRCDIR}/packages/${MACHINE_ARCH}
     WRKOBJDIR?=             /usr/tmp/pkgsrc   # build here instead of in pkgsrc
     BSDSRCDIR=              /usr/src
-    BSDXSRCDIR=             /usr/xsrc         # for x11/xervers
+    BSDXSRCDIR=             /usr/xsrc         # for x11/xservers
     OBJHOSTNAME?=           yes               # use work.`hostname`
     FAILOVER_FETCH=         yes               # insist on the correct checksum
     PKG_DEVELOPER?=         yes
