@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.4 2001/07/05 23:41:27 jlam Exp $
+
+--- kcontrol/arts/Makefile.in.orig	Thu Feb 22 08:16:33 2001
++++ kcontrol/arts/Makefile.in
+@@ -263,7 +263,7 @@
+ libkcm_arts_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+ libkcm_arts_la_LIBADD = -lkdeui
+ 
+-INCLUDES = $(all_includes) -I$(kde_includes)/arts 
++INCLUDES = $(all_includes) -I${BUILDLINK_DIR}/include/arts 
+ 
+ #>- libkcm_arts_la_METASOURCES = AUTO
+ 
