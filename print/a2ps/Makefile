@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2001/02/17 17:51:35 wiz Exp $
-# FreeBSD Id: Makefile,v 1.12 1998/02/15 21:24:42 steve Exp
+# $NetBSD: Makefile,v 1.29 2001/05/22 13:11:37 wiz Exp $
 #
 
-DISTNAME=		a2ps-4.12
+DISTNAME=		a2ps-4.13b
+WRKSRC=			${WRKDIR}/a2ps-4.13
+PKGNAME=		a2ps-4.13.0.2
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.enst.fr/pub/unix/a2ps/
 
