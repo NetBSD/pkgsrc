@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2005/02/16 23:20:24 jschauma Exp $
+$NetBSD: patch-aa,v 1.3 2005/02/17 00:38:37 jschauma Exp $
 
 Make this script run non-interactively.
 
