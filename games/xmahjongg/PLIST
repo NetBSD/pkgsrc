@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:57:05 zuntum Exp $
+bin/xmahjongg
+man/cat6/xmahjongg.0
+lib/X11/xmahjongg/bridge
+lib/X11/xmahjongg/default
+lib/X11/xmahjongg/wedges
+@dirrm lib/X11/xmahjongg
+lib/X11/fonts/misc/xmahjongg.bdf
+@exec ${X11BASE}/bin/mkfontdir %B
+@unexec ${X11BASE}/bin/mkfontdir %B

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:50:53 zuntum Exp $
+bin/baduki
+share/locale/ko/LC_MESSAGES/baduki.mo
+share/baduki/baduki.gtkrc
+share/baduki/board.xpm
+@dirrm share/baduki

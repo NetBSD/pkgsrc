@@ -1,0 +1,9 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 00:55:11 zuntum Exp $
+
+To run Quake 3, you must place the file 'pak0.pk3' from your
+Quake 3 CD into:
+
+ ${LOCALBASE}/lib/lokigames/quake3arena/baseq3/
+
+======================================================================

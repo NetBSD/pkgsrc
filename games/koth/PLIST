@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:53:48 zuntum Exp $
+bin/koth
+bin/koths
+bin/kmoron-ai
+bin/kclever-ai

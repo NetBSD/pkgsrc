@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2000/02/01 02:30:37 wiz Exp $
-bin/qwsv
-bin/qwcl.x11
-bin/glqwcl.glx
-bin/glquake.glx
-bin/quake.x11

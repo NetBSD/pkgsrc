@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/11/01 00:54:19 zuntum Exp $
+#
+
+case $2 in
+	DEINSTALL) cat << EOF
+
+=============================================================
+The records, log and savegames were not wiped out by this
+deletion process. If you don't want them around, please
+remove ${PKG_PREFIX}/share/nethackdir.
+=============================================================
+
+EOF
+	;;
+esac
