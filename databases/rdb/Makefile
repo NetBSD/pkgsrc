@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/12/20 17:22:16 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/15 00:36:21 jlam Exp $
 
-DISTNAME=       RDB-2.6d
-PKGNAME=        rdb-2.6.4
-CATEGORIES=     databases
-MASTER_SITES=   ftp://ftp.rand.org/pub/RDB-hobbs/
+DISTNAME=	RDB-2.6d
+PKGNAME=	rdb-2.6.4
+CATEGORIES=	databases
+MASTER_SITES=	ftp://ftp.rand.org/pub/RDB-hobbs/
 
-MAINTAINER=     njohnston@globaltetrahedron.com
-HOMEPAGE=       ftp://ftp.rand.org/pub/RDB-hobbs/
-COMMENT=        relational database system that uses standard filters via pipes
+MAINTAINER=	njohnston@globaltetrahedron.com
+HOMEPAGE=	ftp://ftp.rand.org/pub/RDB-hobbs/
+COMMENT=	relational database system that uses standard filters via pipes
 
-WRKSRC=         ${WRKDIR}/rdb
-NO_BUILD=       yes
+WRKSRC=		${WRKDIR}/rdb
+NO_BUILD=	yes
 USE_BUILDLINK_ONLY=	yes
 
 REPLACE_PERL=	column compute dataent etbl headchg jointbl lst2tbl mergetbl
