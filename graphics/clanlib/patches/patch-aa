@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2000/12/15 03:13:05 garbled Exp $
+$NetBSD: patch-aa,v 1.4 2001/06/30 11:26:32 zuntum Exp $
 --- Makefile.conf.in.orig	Thu Dec 14 19:27:08 2000
 +++ Makefile.conf.in	Thu Dec 14 19:28:06 2000
 @@ -13,11 +13,11 @@
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.3 2000/12/15 03:13:05 garbled Exp $
  TARGET_PREFIX = @libdir@/ClanLib
  
 -INCLUDE_DIRS =	-I Sources @x_includes@
-+INCLUDE_DIRS =	-I Sources @x_includes@ -I$(LOCALBASE)/include
++INCLUDE_DIRS =	-I Sources @x_includes@ -I$(BUILDLINK_DIR)/include
  
  COMP_OPTIONS =	-Wall $(INCLUDE_DIRS) -fPIC -DNOCONTROLS @DEFS@ @comp_mode@
  

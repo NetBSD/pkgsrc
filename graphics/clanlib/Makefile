@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/05/22 09:32:20 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/30 11:26:31 zuntum Exp $
 
 DISTNAME=		ClanLib-0.4.4
 CATEGORIES=		graphics games devel x11
@@ -8,18 +8,12 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/
 COMMENT=		The ClanLib Game SDK
 
-DEPENDS+=		Hermes>=1.3:../../graphics/hermes
-DEPENDS+=		png>=1.0.11:../../graphics/png
-DEPENDS+=		pth-*:../../devel/pth
-
+USE_BUILDLINK_ONLY=	YES
 USE_X11BASE=		yes
-USE_MESA=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_PERL5=		yes
 
-LDFLAGS+=		-L${LOCALBASE}/lib
-CFLAGS+=		-I${LOCALBASE}/include/Hermes
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--enable-asm386
 .else
@@ -34,7 +28,6 @@ CONFIGURE_ARGS+=	--disable-ggi
 CONFIGURE_ARGS+=	--disable-vidmode
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"# CC='cc ${CFLAGS} ${LDFLAGS}'
-MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
 MAKE_ENV+=		X11BASE="${X11BASE}"
 
 post-patch:
@@ -42,6 +35,10 @@ post-patch:
 
 .include "../../mk/bsd.prefs.mk"
 
+.include "../../graphics/hermes/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/Mesa/buildlink.mk"
+.include "../../devel/pth/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if ${OPSYS} == "NetBSD"
