@@ -3,7 +3,7 @@
 # Date created:		97-10-24
 # Whom:			augustss@cs.chalmers.se
 #
-# $NetBSD: Makefile,v 1.7 1998/03/19 10:42:01 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/03/26 07:21:20 hubertf Exp $
 # FreeBSD ID: Makefile,v 1.5 1997/09/08 13:37:47 tg Exp
 #
 
@@ -21,6 +21,7 @@ CAT1=		xmmix.0
 post-patch:
 	for file in ${WRKSRC}/XMmix.ad ${WRKSRC}/resource.h; do \
 		${CP} $$file $$file.orig; \
+		chmod +w $$file; \
 		${SED} "s^/usr/lib/X11/xmmix.hlp^${PREFIX}/lib/X11/xmmix.hlp^" $$file.orig > $$file; \
 	done
 
