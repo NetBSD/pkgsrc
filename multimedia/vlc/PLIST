@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/07/27 17:18:41 manu Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/12/01 15:08:35 ben Exp $
 bin/vlc
 bin/vlc-config
 bin/wxvlc
@@ -112,13 +112,6 @@ lib/vlc/demux/libts_plugin.so
 lib/vlc/demux/libwav_plugin.so
 lib/vlc/gui/libwxwindows_plugin.so
 lib/vlc/libffmpeg.a
-lib/vlc/libi420_rgb_mmx.a
-lib/vlc/libi420_ymga_mmx.a
-lib/vlc/libi420_yuy2_mmx.a
-lib/vlc/libi422_yuy2_mmx.a
-lib/vlc/libmemcpy3dn.a
-lib/vlc/libmemcpymmx.a
-lib/vlc/libmemcpymmxext.a
 lib/vlc/libmkv.a
 lib/vlc/libstream_out_transcode.a
 lib/vlc/misc/libdummy_plugin.so

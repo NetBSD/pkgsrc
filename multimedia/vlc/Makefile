@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/03 00:13:03 tv Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/01 15:08:35 ben Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -22,12 +22,17 @@ VLC_VER=		0.7.2
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_SRC=		${PKGDIR}/PLIST
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc"
+PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE_ARCH}
+.endif
+
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=        --disable-vcd
 CONFIGURE_ARGS+=	--disable-skins2
 .endif
 BUILDLINK_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
-BUILDLINK_DEPENDS.ffmpeg+=	ffmpeg>=0.4.8nb1 # Postprocess fix 
+BUILDLINK_DEPENDS.ffmpeg+=	ffmpeg>=0.4.8nb1 # Postprocess fix
 
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
 
