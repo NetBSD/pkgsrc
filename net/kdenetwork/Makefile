@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/10/07 17:41:56 tron Exp $
+# $NetBSD: Makefile,v 1.37 1999/12/06 20:44:58 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -46,3 +46,6 @@ post-install:
 .endif
 
 .include "../../mk/bsd.pkg.mk"
+.if (${OPSYS} == "SunOS")
+PLIST_SRC= ${PKGDIR}/PLIST-SunOS
+.endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 1999/11/15 09:04:03 tron Exp $
+# $NetBSD: Makefile,v 1.59 1999/12/06 20:44:58 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -50,7 +50,7 @@ post-extract:
 
 post-install:
 	@${CHMOD} u+s ${PREFIX}/bin/klock
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	@${CP} ${PLIST_INIT} ${PLIST_SRC}
 	@(cd ${PREFIX}; find ${PLIST_DIRS} -type f >>${PLIST_SRC})
 	@(cd ${PREFIX}; find ${PLIST_DIRS} -type d | sort -r | \
 	    ${SED} "s/^/\@dirrm /" >>${PLIST_SRC})
@@ -73,3 +73,8 @@ post-install:
 	  ${PREFIX}/share/doc/kde/HTML/en/kdm
 
 .include "../../mk/bsd.pkg.mk"
+.if (${OPSYS} == "SunOS")
+PLIST_INIT= ${PKGDIR}/PLIST-SunOS
+.else
+PLIST_INIT= ${PKGDIR}/PLIST
+.endif

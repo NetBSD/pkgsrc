@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 1999/11/12 04:50:00 hubertf Exp $
+$NetBSD: patch-ab,v 1.10 1999/12/06 20:44:59 bouyer Exp $
 
 --- ./kaudio/Makefile.in	Tue Sep  7 17:20:48 1999
 +++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kaudio/Makefile.in	Fri Nov 12 05:10:31 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.9 1999/11/12 04:50:00 hubertf Exp $
  LIBS = @LIBS@
  maudio_OBJECTS =  io_oss.o maudio.o sample.o
 -maudio_LDADD = $(LDADD)
-+maudio_LDADD = $(LDADD) -lossaudio
++maudio_LDADD = $(LDADD) @LIBOSSAUDIO@
  maudio_DEPENDENCIES = 
  maudio_LDFLAGS = 
  kaudioserver_OBJECTS =  kaudioserver.o
