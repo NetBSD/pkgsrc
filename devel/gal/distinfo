@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.9 2002/01/16 03:20:18 rh Exp $
+$NetBSD: distinfo,v 1.10 2002/04/10 15:56:12 jlam Exp $
 
 SHA1 (gal-0.19.tar.bz2) = 175300d0cd56fc93df0865fd1857c12837bcaf30
 Size (gal-0.19.tar.bz2) = 893300 bytes
+SHA1 (patch-aa) = 316dd9ea13a251106defabf32a0703949de74f24
+SHA1 (patch-ab) = 51d98eac2b40cd660de15e53a93d6956439dca3a
