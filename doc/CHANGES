@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2968 2003/08/01 21:04:18 jdolecek Exp $
+$NetBSD: CHANGES,v 1.2969 2003/08/02 13:23:26 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3169,3 +3169,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bind8 to 8.4.1 [seb 2003-07-31]
 	Updated esound to 0.2.30 [jmmv 2003-08-01]
 	Updated p5-File-MMagic to 1.20 [jdolecek 2003-08-01]
+	Updated libesmtp to 1.0 [drochner 2003-08-02]
+	Added routeplanner-cli-0.11 [drochner 2003-08-02]
+	Added py-reportlab-renderPM-0.9 [drochner 2003-08-02]
+	Added zope25-RenderableCharts-0.6 [drochner 2003-08-02]
+	Updated sqlite to 2.8.5 [drochner 2003-08-02]
+	Updated pyxml to 0.8.3 [drochner 2003-08-02]
