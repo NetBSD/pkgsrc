@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.header,v 1.3 2004/03/07 21:51:26 seb Exp $
+@comment $NetBSD: PLIST.header,v 1.4 2005/03/06 19:24:55 hira Exp $
 share/doc/wl/en/BUGS
 share/doc/wl/en/NEWS
 share/doc/wl/en/README
@@ -9,6 +9,7 @@ ${FOR_emacs21}share/wl/archive.xpm
 ${FOR_emacs21}share/wl/closed.xpm
 ${FOR_emacs21}share/wl/draft.xpm
 ${FOR_emacs21}share/wl/elmo.xpm
+${FOR_emacs21}share/wl/file.xpm
 ${FOR_emacs21}share/wl/filter.xpm
 ${FOR_emacs21}share/wl/imap.xpm
 ${FOR_emacs21}share/wl/internal.xpm
@@ -61,10 +62,10 @@ ${FOR_emacs21}share/wl/wl-message-read-up.xpm
 ${FOR_emacs21}share/wl/wl-stable-logo.xpm
 ${FOR_emacs21}share/wl/wl-stable-xmas-logo.xpm
 ${FOR_emacs21}share/wl/wl-summary-delete-up.xpm
+${FOR_emacs21}share/wl/wl-summary-dispose-up.xpm
 ${FOR_emacs21}share/wl/wl-summary-exit-up.xpm
 ${FOR_emacs21}share/wl/wl-summary-forward-up.xpm
 ${FOR_emacs21}share/wl/wl-summary-jump-to-current-message-up.xpm
-${FOR_emacs21}share/wl/wl-summary-mark-as-important-up.xpm
 ${FOR_emacs21}share/wl/wl-summary-next-page-up.xpm
 ${FOR_emacs21}share/wl/wl-summary-next-up.xpm
 ${FOR_emacs21}share/wl/wl-summary-prev-page-up.xpm
@@ -72,6 +73,7 @@ ${FOR_emacs21}share/wl/wl-summary-prev-up.xpm
 ${FOR_emacs21}share/wl/wl-summary-read-up.xpm
 ${FOR_emacs21}share/wl/wl-summary-reply-up.xpm
 ${FOR_emacs21}share/wl/wl-summary-reply-with-citation-up.xpm
+${FOR_emacs21}share/wl/wl-summary-set-flags-up.xpm
 ${FOR_emacs21}share/wl/wl-summary-sync-force-update-up.xpm
 ${FOR_emacs21}share/wl/wl-write-current-folder-up.xpm
 share/wl/wl-alpha-logo.img
