@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:27:25 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/07 06:33:40 minskim Exp $
 #
 
 DISTNAME=	bibclean-2.11.4
@@ -10,8 +10,10 @@ MAINTAINER=	seb@pbox.org
 HOMEPAGE=	http://www.math.utah.edu/pub/bibclean/
 COMMENT=	Prettyprinter and syntax checker for BibTeX bibliography databases
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bibclean
