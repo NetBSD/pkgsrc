@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/07/16 00:36:32 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/16 00:46:42 jlam Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
@@ -8,8 +8,9 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}	# www.asclock.org is no more
 MAINTAINER=	jlam@netbsd.org
 COMMENT=	NeXTstep-like clock and calendar
 
-USE_IMAKE=	YES
-USE_XPM=	YES
+USE_BUILDLINK_ONLY=	YES
+USE_IMAKE=		YES
+USE_X11BASE=		YES
 
 LANGUAGES=	en de pt nl no it sv es hu br fr cs ru uk sl id da
 
@@ -50,13 +51,15 @@ do-install:
 		${FILESDIR}/asclock.sh > ${WRKDIR}/asclock.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/asclock.sh ${PREFIX}/bin/asclock
 	${INSTALL_PROGRAM} ${WRKSRC}/asclock ${PREFIX}/libexec/asclock-classic
+	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 .if (${OPSYS} == SunOS)
 	${INSTALL_DATA} ${WRKSRC}/asclock.man ${PREFIX}/man/man1/asclock.1
+	@${ECHO} man/man1/asclock.1 >> ${PLIST_SRC}
 .else
 	${INSTALL_DATA} ${WRKSRC}/asclock.0 ${PREFIX}/man/cat1/asclock.0
+	@${ECHO} man/cat1/asclock.0 >> ${PLIST_SRC}
 .endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock-classic
-	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 .for LANGUAGE in ${LANGUAGES}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock-classic/${LANGUAGE}
 	cd ${WRKSRC}/${LANGUAGE}; ${INSTALL_DATA} month.xpm weekday.xpm \
@@ -67,4 +70,5 @@ do-install:
 .endfor
 	@${ECHO} @dirrm share/asclock-classic >> ${PLIST_SRC}
 
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
