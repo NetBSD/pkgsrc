@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.13 2003/09/03 13:11:13 jlam Exp $
+# $NetBSD: Makefile.in,v 1.14 2003/09/03 16:38:38 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -27,9 +27,8 @@ INCS=		extern.h ftpglob.h getopt.h md5.h mtree.h nbcompat.h \
 
 OBJS=		@LIBOBJS@ \
 		md5c.o md5hl.o rmd160.o rmd160hl.o sha1.o sha1hl.o \
-		sha2.o sha2hl.o setmode.o __fts13.o getid.o misc.o \
-		pack_dev.o spec.o setmode.o stat_flags.o pwcache.o \
-		getopt_long.o
+		sha2.o sha2hl.o setmode.o getid.o misc.o pack_dev.o \
+		spec.o setmode.o stat_flags.o pwcache.o getopt_long.o
 
 LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
@@ -71,6 +70,7 @@ bits: bits.c
 	$(CC) -o bits bits.c
 
 install:
+	$(INSTALL) -m 755 -d $(prefix)/lib
 	$(INSTALL) -m 555 ${LIB} $(prefix)/lib
 	$(RANLIB) $(prefix)/lib/$(LIB)
 	$(INSTALL) -m 755 -d $(prefix)/include/libnbcompat
