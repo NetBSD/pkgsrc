@@ -1,27 +1,27 @@
-$NetBSD: patch-ai,v 1.5 2003/03/03 11:35:00 seb Exp $
+$NetBSD: patch-ai,v 1.6 2003/07/28 10:06:49 seb Exp $
 
---- tcldgl/Makefile.in.orig	2003-03-02 20:12:23.000000000 +0000
+--- tcldgl/Makefile.in.orig	2003-07-27 16:46:23.000000000 +0000
 +++ tcldgl/Makefile.in
-@@ -239,7 +239,7 @@ libtcldgl_la_LIBADD = \
- 	$(top_srcdir)/agutil/libagutil.la \
- 	$(top_srcdir)/shape/libshape.la \
- 	$(top_srcdir)/ns/libns.la \
--	$(top_srcdir)/tclstubs/libtclstubs.la
+@@ -236,7 +236,7 @@ libtcldgl_la_LIBADD = \
+ 	$(top_builddir)/agutil/libagutil.la \
+ 	$(top_builddir)/shape/libshape.la \
+ 	$(top_builddir)/ns/libns.la \
+-	$(top_builddir)/tclstubs/libtclstubs.la
 +	${TCL_STUB_LIB_SPEC}
  
  
  CLEANFILES = pkgIndex.tcl
-@@ -260,8 +260,7 @@ libtcldgl_la_DEPENDENCIES = $(top_srcdir
- 	$(top_srcdir)/incr/libincr.la \
- 	$(top_srcdir)/pathplan/libpathplanconvenience.la \
- 	$(top_srcdir)/agutil/libagutil.la \
--	$(top_srcdir)/shape/libshape.la $(top_srcdir)/ns/libns.la \
--	$(top_srcdir)/tclstubs/libtclstubs.la
-+	$(top_srcdir)/shape/libshape.la $(top_srcdir)/ns/libns.la
+@@ -257,8 +257,7 @@ libtcldgl_la_DEPENDENCIES = $(top_buildd
+ 	$(top_builddir)/incr/libincr.la \
+ 	$(top_builddir)/pathplan/libpathplanconvenience.la \
+ 	$(top_builddir)/agutil/libagutil.la \
+-	$(top_builddir)/shape/libshape.la $(top_builddir)/ns/libns.la \
+-	$(top_builddir)/tclstubs/libtclstubs.la
++	$(top_builddir)/shape/libshape.la $(top_builddir)/ns/libns.la
  am_libtcldgl_la_OBJECTS = dgl.lo dglayout.lo dglshape.lo dglutil.lo
  libtcldgl_la_OBJECTS = $(am_libtcldgl_la_OBJECTS)
  
-@@ -269,9 +268,7 @@ DEFS = @DEFS@
+@@ -266,9 +265,7 @@ DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
@@ -32,7 +32,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/03 11:35:00 seb Exp $
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
-@@ -310,7 +307,7 @@ distclean-libtool:
+@@ -307,7 +304,7 @@ distclean-libtool:
  	-rm -f libtool
  $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
  	cd $(top_srcdir) && \
@@ -41,7 +41,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/03 11:35:00 seb Exp $
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && \
  	  CONFIG_HEADERS= CONFIG_LINKS= \
-@@ -343,32 +340,14 @@ mostlyclean-compile:
+@@ -340,32 +337,14 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -74,7 +74,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/03 11:35:00 seb Exp $
  uninstall-info-am:
  
  manndir = $(mandir)/mann
-@@ -575,8 +554,8 @@ clean-am: clean-generic clean-libtool cl
+@@ -572,8 +551,8 @@ clean-am: clean-generic clean-libtool cl
  
  distclean: distclean-recursive
  
@@ -85,7 +85,7 @@ $NetBSD: patch-ai,v 1.5 2003/03/03 11:35:00 seb Exp $
  
  dvi: dvi-recursive
  
-@@ -614,21 +593,21 @@ uninstall-man: uninstall-mann
+@@ -611,21 +590,21 @@ uninstall-man: uninstall-mann
  
  .PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am all-local check check-am \
  	clean clean-generic clean-libtool clean-pkglibLTLIBRARIES \

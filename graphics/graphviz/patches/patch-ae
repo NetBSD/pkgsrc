@@ -1,27 +1,27 @@
-$NetBSD: patch-ae,v 1.5 2003/03/03 11:34:59 seb Exp $
+$NetBSD: patch-ae,v 1.6 2003/07/28 10:06:48 seb Exp $
 
---- gdtclft/Makefile.in.orig	2003-03-02 20:12:23.000000000 +0000
+--- gdtclft/Makefile.in.orig	2003-07-27 16:46:10.000000000 +0000
 +++ gdtclft/Makefile.in
-@@ -225,7 +225,7 @@ libgdtclft_la_SOURCES = gdtclft.c
+@@ -222,7 +222,7 @@ libgdtclft_la_SOURCES = gdtclft.c
  libgdtclft_la_LIBADD = \
- 	$(top_srcdir)/tclhandle/libtclhandle.la \
- 	$(top_srcdir)/gd/libgdconvenience.la \
--	$(top_srcdir)/tclstubs/libtclstubs.la
+ 	$(top_builddir)/tclhandle/libtclhandle.la \
+ 	$(top_builddir)/gd/libgdconvenience.la \
+-	$(top_builddir)/tclstubs/libtclstubs.la
 +	${TCL_STUB_LIB_SPEC}
  
  
  CLEANFILES = pkgIndex.tcl
-@@ -239,8 +239,7 @@ LTLIBRARIES = $(pkglib_LTLIBRARIES)
+@@ -236,8 +236,7 @@ LTLIBRARIES = $(pkglib_LTLIBRARIES)
  
  libgdtclft_la_LDFLAGS =
- libgdtclft_la_DEPENDENCIES = $(top_srcdir)/tclhandle/libtclhandle.la \
--	$(top_srcdir)/gd/libgdconvenience.la \
--	$(top_srcdir)/tclstubs/libtclstubs.la
-+	$(top_srcdir)/gd/libgdconvenience.la
+ libgdtclft_la_DEPENDENCIES = $(top_builddir)/tclhandle/libtclhandle.la \
+-	$(top_builddir)/gd/libgdconvenience.la \
+-	$(top_builddir)/tclstubs/libtclstubs.la
++	$(top_builddir)/gd/libgdconvenience.la
  am_libgdtclft_la_OBJECTS = gdtclft.lo
  libgdtclft_la_OBJECTS = $(am_libgdtclft_la_OBJECTS)
  
-@@ -248,8 +247,7 @@ DEFS = @DEFS@
+@@ -245,8 +244,7 @@ DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
@@ -31,7 +31,7 @@ $NetBSD: patch-ae,v 1.5 2003/03/03 11:34:59 seb Exp $
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
-@@ -286,7 +284,7 @@ distclean-libtool:
+@@ -283,7 +281,7 @@ distclean-libtool:
  	-rm -f libtool
  $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
  	cd $(top_srcdir) && \
@@ -40,7 +40,7 @@ $NetBSD: patch-ae,v 1.5 2003/03/03 11:34:59 seb Exp $
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && \
  	  CONFIG_HEADERS= CONFIG_LINKS= \
-@@ -319,29 +317,14 @@ mostlyclean-compile:
+@@ -316,29 +314,14 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -70,7 +70,7 @@ $NetBSD: patch-ae,v 1.5 2003/03/03 11:34:59 seb Exp $
  uninstall-info-am:
  
  manndir = $(mandir)/mann
-@@ -548,8 +531,8 @@ clean-am: clean-generic clean-libtool cl
+@@ -545,8 +528,8 @@ clean-am: clean-generic clean-libtool cl
  
  distclean: distclean-recursive
  
@@ -81,7 +81,7 @@ $NetBSD: patch-ae,v 1.5 2003/03/03 11:34:59 seb Exp $
  
  dvi: dvi-recursive
  
-@@ -587,21 +570,21 @@ uninstall-man: uninstall-mann
+@@ -584,21 +567,21 @@ uninstall-man: uninstall-mann
  
  .PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am all-local check check-am \
  	clean clean-generic clean-libtool clean-pkglibLTLIBRARIES \

@@ -1,29 +1,28 @@
-$NetBSD: patch-ba,v 1.5 2003/03/03 11:35:01 seb Exp $
+$NetBSD: patch-ba,v 1.6 2003/07/28 10:06:52 seb Exp $
 
---- tkspline/Makefile.in.orig	2003-03-02 20:12:24.000000000 +0000
+--- tkspline/Makefile.in.orig	2003-07-27 16:47:19.000000000 +0000
 +++ tkspline/Makefile.in
-@@ -222,8 +222,8 @@ man_MANS = tkspline.n
+@@ -220,8 +220,7 @@ man_MANS = tkspline.n
  libtkspline_la_SOURCES = tkspline.c
  
  libtkspline_la_LIBADD = \
--	$(top_srcdir)/tkstubs/libtkstubs.la \
--	$(top_srcdir)/tclstubs/libtclstubs.la 
-+	${TK_STUB_LIB_SPEC} \
-+	${TCL_STUB_LIB_SPEC}
+-	$(top_builddir)/tkstubs/libtkstubs.la \
+-	$(top_builddir)/tclstubs/libtclstubs.la 
++	${TK_STUB_LIB_SPEC}
  
  
  CLEANFILES = pkgIndex.tcl
-@@ -236,8 +236,7 @@ CONFIG_CLEAN_FILES =
+@@ -234,8 +233,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(pkglib_LTLIBRARIES)
  
  libtkspline_la_LDFLAGS =
--libtkspline_la_DEPENDENCIES = $(top_srcdir)/tkstubs/libtkstubs.la \
--	$(top_srcdir)/tclstubs/libtclstubs.la
+-libtkspline_la_DEPENDENCIES = $(top_builddir)/tkstubs/libtkstubs.la \
+-	$(top_builddir)/tclstubs/libtclstubs.la
 +libtkspline_la_DEPENDENCIES =
  am_libtkspline_la_OBJECTS = tkspline.lo
  libtkspline_la_OBJECTS = $(am_libtkspline_la_OBJECTS)
  
-@@ -245,8 +244,7 @@ DEFS = @DEFS@
+@@ -243,8 +241,7 @@ DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
@@ -33,7 +32,7 @@ $NetBSD: patch-ba,v 1.5 2003/03/03 11:35:01 seb Exp $
  COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
-@@ -283,7 +281,7 @@ distclean-libtool:
+@@ -281,7 +278,7 @@ distclean-libtool:
  	-rm -f libtool
  $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
  	cd $(top_srcdir) && \
@@ -42,7 +41,7 @@ $NetBSD: patch-ba,v 1.5 2003/03/03 11:35:01 seb Exp $
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && \
  	  CONFIG_HEADERS= CONFIG_LINKS= \
-@@ -316,29 +314,14 @@ mostlyclean-compile:
+@@ -314,29 +311,14 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -72,7 +71,7 @@ $NetBSD: patch-ba,v 1.5 2003/03/03 11:35:01 seb Exp $
  uninstall-info-am:
  
  manndir = $(mandir)/mann
-@@ -545,8 +528,8 @@ clean-am: clean-generic clean-libtool cl
+@@ -543,8 +525,8 @@ clean-am: clean-generic clean-libtool cl
  
  distclean: distclean-recursive
  
@@ -83,7 +82,7 @@ $NetBSD: patch-ba,v 1.5 2003/03/03 11:35:01 seb Exp $
  
  dvi: dvi-recursive
  
-@@ -584,21 +567,21 @@ uninstall-man: uninstall-mann
+@@ -582,22 +564,23 @@ uninstall-man: uninstall-mann
  
  .PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am all-local check check-am \
  	clean clean-generic clean-libtool clean-pkglibLTLIBRARIES \
@@ -118,5 +117,7 @@ $NetBSD: patch-ba,v 1.5 2003/03/03 11:35:01 seb Exp $
 +	uninstall-man uninstall-mann uninstall-pkglibLTLIBRARIES \
 +	uninstall-recursive
  
++	${TCL_STUB_LIB_SPEC}
  
  all-local: pkgIndex.tcl
+ 

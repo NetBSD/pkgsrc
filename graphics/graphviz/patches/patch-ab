@@ -1,20 +1,20 @@
-$NetBSD: patch-ab,v 1.5 2002/08/28 13:49:36 seb Exp $
+$NetBSD: patch-ab,v 1.6 2003/07/28 10:06:46 seb Exp $
 
---- configure.in.orig	Fri Aug  2 22:55:20 2002
+--- configure.in.orig	2003-07-09 19:28:52.000000000 +0000
 +++ configure.in
-@@ -48,7 +48,10 @@ DEFAULT_FONTPATH="C:/WINDOWS/FONTS;C:/WI
+@@ -59,7 +59,10 @@ DEFAULT_FONTPATH="C:/WINDOWS/FONTS;C:/WI
  PATHSEPARATOR=";"
  else
  # This sucks!  Whatever happened to standards for file system layout?
--DEFAULT_FONTPATH="/usr/X11R6/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/truetype:/usr/X11R6/lib/X11/fonts/TTF:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/Type1"
-+DEFAULT_FONTPATH="${X11PREFIX}/lib/X11/fonts/TrueType:${X11PREFIX}/lib/X11/fonts/truetype:${X11PREFIX}/lib/X11/fonts/Type1"
-+if test x"$X11PREFIX" != x"$X11BASE" ; then
-+DEFAULT_FONTPATH="${DEFAULT_FONTPATH}:${X11BASE}/lib/X11/fonts/TrueType:${X11BASE}/lib/X11/fonts/truetype:${X11BASE}/lib/X11/fonts/Type1"
+-DEFAULT_FONTPATH="/usr/X11R6/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/truetype:/usr/X11R6/lib/X11/fonts/TTF:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/Type1:/usr/common/share/fonts/ttf"
++DEFAULT_FONTPATH="${X11PREFIX}/lib/X11/fonts/TrueType:${X11PREFIX}/lib/X11/fonts/truetype:${X11PREFIX}/lib/X11/fonts/TTF:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType:${X11PREFIX}/lib/X11/fonts/Type1:/usr/common/share/fonts/ttf"
++if test x"$X11PREFIX" != x"$X11BASE"; then
++DEFAULT_FONTPATH="${DEFAULT_FONTPATH}:${X11BASE}/lib/X11/fonts/TrueType:${X11BASE}/lib/X11/fonts/truetype:${X11BASE}/lib/X11/fonts/TTF:${X11BASE}/lib/X11/fonts/Type1"
 +fi
  PATHSEPARATOR=":"
  fi
  fi
-@@ -177,7 +180,7 @@ if test -f $TCLCONFIG; then
+@@ -214,7 +217,7 @@ if test "x$TCLCONFIG" != "x"; then
      . $file
      # TCL STUBS support is required
      if test "${TCL_SUPPORTS_STUBS}" = "1"; then
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.5 2002/08/28 13:49:36 seb Exp $
          TCL_PKGINDEX="gdtclft/pkgIndex.tcl tcldot/pkgIndex.tcl tcldgr/pkgIndex.tcl tcldgl/pkgIndex.tcl tclpathplan/pkgIndex.tcl"
      else
          AC_MSG_WARN([Tcl does not have STUBs support, perhaps it is too old? The packages: "gdtclft tcldot tcldgr tcldgl tclpathplan" will not be built])
-@@ -266,7 +269,7 @@ if test -f $TKCONFIG; then
+@@ -328,7 +331,7 @@ if test "x$TKCONFIG" != "x"; then
      file=${TKCONFIG}
      . $file
      if test "${TCL_SUPPORTS_STUBS}" = "1"; then
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.5 2002/08/28 13:49:36 seb Exp $
          TK_PKGINDEX="tkspline/pkgIndex.tcl"
      else
          AC_MSG_WARN([Tcl does not have STUBs support, so neither does Tk. The packages: "tkspline" will not be built])
-@@ -610,36 +613,12 @@ AC_MSG_RESULT(no)])
+@@ -763,36 +766,12 @@ AC_MSG_RESULT(no)])
  
  # -----------------------------------
  # tclInt.h
