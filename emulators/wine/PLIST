@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2003/09/25 13:25:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2003/10/17 13:54:18 adam Exp $
 bin/function_grep.pl
 bin/notepad
 bin/progman
@@ -229,11 +229,13 @@ include/wine/windows/strmif.idl
 include/wine/windows/tapi.h
 include/wine/windows/tchar.h
 include/wine/windows/tlhelp32.h
+include/wine/windows/tmschema.h
 include/wine/windows/unknwn.h
 include/wine/windows/unknwn.idl
 include/wine/windows/urlmon.h
 include/wine/windows/urlmon.idl
 include/wine/windows/uuids.h
+include/wine/windows/uxtheme.h
 include/wine/windows/ver.h
 include/wine/windows/vfw.h
 include/wine/windows/vfwmsgs.h
@@ -271,7 +273,6 @@ include/wine/windows/wsipx.h
 include/wine/windows/wtypes.h
 include/wine/windows/wtypes.idl
 include/wine/windows/zmouse.h
-lib/libntdll.dll.so
 lib/libwine.so
 lib/libwine.so.1
 lib/libwine_unicode.so
@@ -288,7 +289,6 @@ lib/wine/clock.exe.so
 lib/wine/comcat.dll.so
 lib/wine/comctl32.dll.so
 lib/wine/comdlg32.dll.so
-lib/wine/comm.dll.so
 lib/wine/commdlg.dll.so
 lib/wine/compobj.dll.so
 lib/wine/control.exe.so
@@ -308,7 +308,6 @@ lib/wine/devenum.dll.so
 lib/wine/dinput.dll.so
 lib/wine/dinput8.dll.so
 lib/wine/dispdib.dll.so
-lib/wine/display.dll.so
 lib/wine/dmband.dll.so
 lib/wine/dmcompos.dll.so
 lib/wine/dmime.dll.so
@@ -335,7 +334,6 @@ lib/wine/imm32.dll.so
 lib/wine/iphlpapi.dll.so
 lib/wine/joystick.drv.so
 lib/wine/kernel32.dll.so
-lib/wine/keyboard.dll.so
 lib/wine/krnl386.exe.so
 lib/wine/libadvapi32.def
 lib/wine/libavicap32.def
@@ -422,6 +420,7 @@ lib/wine/libtwain_32.def
 lib/wine/liburl.def
 lib/wine/liburlmon.def
 lib/wine/libuser32.def
+lib/wine/libuxtheme.def
 lib/wine/libversion.def
 lib/wine/libw32skrnl.def
 lib/wine/libwinedos.def
@@ -447,7 +446,6 @@ lib/wine/mciseq.drv.so
 lib/wine/mciwave.drv.so
 lib/wine/midimap.drv.so
 lib/wine/mmsystem.dll.so
-lib/wine/mouse.dll.so
 lib/wine/mpr.dll.so
 lib/wine/msacm.dll.so
 lib/wine/msacm.drv.so
@@ -524,6 +522,7 @@ lib/wine/url.dll.so
 lib/wine/urlmon.dll.so
 lib/wine/user.exe.so
 lib/wine/user32.dll.so
+lib/wine/uxtheme.dll.so
 lib/wine/ver.dll.so
 lib/wine/version.dll.so
 lib/wine/w32skrnl.dll.so
@@ -579,7 +578,6 @@ man/man5/wine.conf.5
 share/aclocal/wine.m4
 share/examples/wine/generic.ppd
 share/examples/wine/system.ini
-share/examples/wine/win.ini
 share/examples/wine/wine.conf
 share/examples/wine/winedefault.reg
 @dirrm share/examples/wine
