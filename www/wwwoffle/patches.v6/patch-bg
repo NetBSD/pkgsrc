@@ -1,0 +1,192 @@
+--- wwwoffled.c.orig	Tue Aug 24 12:16:05 1999
++++ wwwoffled.c	Wed Aug 25 10:06:03 1999
+@@ -49,8 +49,8 @@
+ 
+ 
+ /*+ The server sockets that we listen on +*/
+-int http_fd=-1,                 /*+ for the HTTP connections. +*/
+-    wwwoffle_fd=-1;             /*+ for the WWWOFFLE connections. +*/
++int *http_fd_list, http_fd,              /*+ for the HTTP connections. +*/
++    *wwwoffle_fd_list, wwwoffle_fd;      /*+ for the WWWOFFLE connections. +*/
+ 
+ /*+ The online / offline /autodial status. +*/
+ int online=0;
+@@ -154,12 +154,12 @@
+  if(WWWOFFLE_Gid != -1 || WWWOFFLE_Uid != -1)
+     PrintMessage(Inform,"Running with uid=%d, gid=%d.",getuid(),getgid());
+ 
+- http_fd=OpenServerSocket(HTTP_Port);
+- if(http_fd==-1)
++ http_fd_list=OpenServerSockets(HTTP_Port);
++ if(!http_fd_list)
+     PrintMessage(Fatal,"Cannot create HTTP server socket.");
+ 
+- wwwoffle_fd=OpenServerSocket(WWWOFFLE_Port);
+- if(wwwoffle_fd==-1)
++ wwwoffle_fd_list=OpenServerSockets(WWWOFFLE_Port);
++ if(!wwwoffle_fd_list)
+     PrintMessage(Fatal,"Cannot create WWWOFFLE server socket.");
+ 
+  if(stat(SpoolDir,&buf))
+@@ -192,20 +192,29 @@
+    {
+     struct timeval tv;
+     fd_set readfd;
++    int fd, i;
+     int nfds;
+     int retval;
+ 
+-    if(http_fd>wwwoffle_fd)
+-       nfds=http_fd+1;
+-    else
+-       nfds=wwwoffle_fd+1;
++    fd = http_fd_list[1];
++    for (i = 1; i <= http_fd_list[0]; i++) {
++	if (!fd || fd < http_fd_list[i])
++	    fd = http_fd_list[i];
++    }
++    for (i = 1; i <= wwwoffle_fd_list[0]; i++) {
++	if (!fd || fd < wwwoffle_fd_list[i])
++	    fd = wwwoffle_fd_list[i];
++    }
++    nfds=fd+1;
+ 
+     FD_ZERO(&readfd);
+ 
+-    FD_SET(wwwoffle_fd,&readfd);
++    for (i = 1; i <= wwwoffle_fd_list[0]; i++)
++	FD_SET(wwwoffle_fd_list[i],&readfd);
+ 
+     if(n_servers<MaxServers)
+-       FD_SET(http_fd,&readfd);
++	for (i = 1; i <= http_fd_list[0]; i++)
++	    FD_SET(http_fd_list[i],&readfd);
+ 
+     tv.tv_sec=10;
+     tv.tv_usec=0;
+@@ -214,56 +223,62 @@
+ 
+     if(retval!=-1)
+       {
+-       if(FD_ISSET(wwwoffle_fd,&readfd))
+-         {
+-          char *host,*ip;
+-          int port,client;
+-
+-          client=AcceptConnect(wwwoffle_fd);
+-          init_buffer(client);
+-
+-          if(client>=0 && !SocketRemoteName(client,&host,&ip,&port))
+-            {
+-             if(IsAllowedConnectHost(host) || IsAllowedConnectHost(ip))
+-               {
+-                PrintMessage(Important,"WWWOFFLE Connection from host %s (%s).",host,ip); /* Used in audit-usage.pl */
+-
+-                CommandConnect(client);
+-
+-                if(fetch_fd!=client)
+-                   CloseSocket(client);
+-               }
+-             else
+-               {
+-                PrintMessage(Warning,"WWWOFFLE Connection rejected from host %s (%s).",host,ip); /* Used in audit-usage.pl */
+-                CloseSocket(client);
+-               }
+-            }
+-         }
+-
+-       if(FD_ISSET(http_fd,&readfd))
+-         {
+-          char *host,*ip;
+-          int port,client;
+-
+-          client=AcceptConnect(http_fd);
+-          init_buffer(client);
+-
+-          if(client>=0 && !SocketRemoteName(client,&host,&ip,&port))
+-            {
+-             if(IsAllowedConnectHost(host) || IsAllowedConnectHost(ip))
+-               {
+-                PrintMessage(Inform,"HTTP Proxy connection from host %s (%s).",host,ip); /* Used in audit-usage.pl */
+-                ForkServer(client,1);
+-               }
+-             else
+-                PrintMessage(Warning,"HTTP Proxy connection rejected from host %s (%s).",host,ip); /* Used in audit-usage.pl */
+-
+-             CloseSocket(client);
+-            }
+-         }
++	  for (i = 1; i <= wwwoffle_fd_list[0]; i++) {
++	      wwwoffle_fd = wwwoffle_fd_list[i];
++	      if(FD_ISSET(wwwoffle_fd,&readfd))
++	      {
++		  char *host,*ip;
++		  int port,client;
++
++		  client=AcceptConnect(wwwoffle_fd);
++		  init_buffer(client);
++
++		  if(client>=0 && !SocketRemoteName(client,&host,&ip,&port))
++		  {
++		      if(IsAllowedConnectHost(host) || IsAllowedConnectHost(ip))
++		      {
++			  PrintMessage(Important,"WWWOFFLE Connection from host %s (%s).",host,ip); /* Used in audit-usage.pl */
++
++			  CommandConnect(client);
++
++			  if(fetch_fd!=client)
++			      CloseSocket(client);
++		      }
++		      else
++		      {
++			  PrintMessage(Warning,"WWWOFFLE Connection rejected from host %s (%s).",host,ip); /* Used in audit-usage.pl */
++			  CloseSocket(client);
++		      }
++		  }
++	      }
++	  }
++	  for (i = 1; i <= http_fd_list[0]; i++) {
++	      http_fd = http_fd_list[i];
++
++	      if(FD_ISSET(http_fd,&readfd))
++	      {
++		  char *host,*ip;
++		  int port,client;
++
++		  client=AcceptConnect(http_fd);
++		  init_buffer(client);
++
++		  if(client>=0 && !SocketRemoteName(client,&host,&ip,&port))
++		  {
++		      if(IsAllowedConnectHost(host) || IsAllowedConnectHost(ip))
++		      {
++			  PrintMessage(Inform,"HTTP Proxy connection from host %s (%s).",host,ip); /* Used in audit-usage.pl */
++			  ForkServer(client,1);
++		      }
++		      else
++			  PrintMessage(Warning,"HTTP Proxy connection rejected from host %s (%s).",host,ip); /* Used in audit-usage.pl */
++
++		      CloseSocket(client);
++		  }
++	      }
++	  }
+       }
+-
++   
+     if(readconfig)
+       {
+        readconfig=0;
+@@ -342,9 +357,11 @@
+  while(!closedown);
+ 
+  /* Close down and exit. */
++ for (i = 1; i <= wwwoffle_fd_list[0]; i++)
++     CloseSocket(wwwoffle_fd_list[i]);
+ 
+- CloseSocket(http_fd);
+- CloseSocket(wwwoffle_fd);
++ for (i = 1; i <= http_fd_list[0]; i++)
++     CloseSocket(http_fd_list[i]);
+ 
+  if(n_servers)
+     PrintMessage(Important,"Exit signalled - waiting for children.");

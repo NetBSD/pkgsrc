@@ -1,0 +1,48 @@
+--- http.c.orig	Tue Aug 24 19:42:55 1999
++++ http.c	Wed Aug 25 20:43:50 1999
+@@ -44,8 +44,8 @@
+ char *HTTP_Open(URL *Url)
+ {
+  char *msg=NULL;
+- char *colon;
+- char *server_host=NULL;
++ char *colon, *escr, *escl;
++ char *server_host, *host;
+  int server_port=Protocols[Protocol_HTTP].defport;
+ 
+  proxy=WhichProxy(Url->proto,Url->host);
+@@ -63,7 +63,19 @@
+     strcpy(server_host,Url->host);
+    }
+ 
+- if((colon=strchr(server_host,':')))
++ escl=strchr(server_host,'[');
++ escr=strrchr(server_host,']');
++ if (escr && escl) {
++     *escr=0;
++     host = escl+1;
++     colon = strrchr(escr+1,':');
++ }     
++ else {
++     host = server_host;
++     colon = strrchr(server_host,':');
++ }
++
++ if(colon) 
+    {
+     *colon++=0;
+     if(*colon)
+@@ -72,11 +84,11 @@
+ 
+  /* Open the connection. */
+ 
+- server=OpenClientSocket(server_host,server_port);
++ server=OpenClientSocket(host,server_port);
+  init_buffer(server);
+ 
+  if(server==-1)
+-    msg=PrintMessage(Warning,"Cannot open the HTTP connection to %s port %d; [%!s].",server_host,server_port);
++    msg=PrintMessage(Warning,"Cannot open the HTTP connection to %s port %d; [%!s].",host,server_port);
+ 
+  free(server_host);
+ 

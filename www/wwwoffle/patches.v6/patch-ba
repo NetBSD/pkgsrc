@@ -1,0 +1,115 @@
+--- config.c.orig	Sat Dec  5 11:52:07 1998
++++ config.c	Thu Aug 26 15:36:02 1999
+@@ -705,11 +705,15 @@
+     localhost=(*LocalHost)->key.string;
+  else
+     localhost="localhost";
+-
++ 
+  ret=(char*)malloc(strlen(localhost)+8);
+ 
+- if(port)
+-    sprintf(ret,"%s:%d",localhost,HTTP_Port);
++ if(port) {
++    if (strchr(localhost, ':')) 
++       sprintf(ret,"[%s]:%d",localhost,HTTP_Port);
++    else
++       sprintf(ret,"%s:%d",localhost,HTTP_Port);
++ }
+  else
+     strcpy(ret,localhost);
+ 
+@@ -727,20 +731,32 @@
+   int port If true then check the port number as well.
+   ++++++++++++++++++++++++++++++++++++++*/
+ 
+-int IsLocalHost(char *host,int port)
++int IsLocalHost(char *hoststr,int port)
+ {
+  KeyPair **p;
+- char *colon=strchr(host,':');
++ char *escl, *escr, *host, *colon;
+  int isit=0;
+ 
+- if(colon)
+-    *colon=0;
++ escl=strchr(hoststr,'[');
++ escr=strrchr(hoststr,']');
++ colon=strrchr(hoststr,':');
++ host = hoststr;
++
++ if (escl && escr) {
++     host = escl + 1;
++     *escr = 0;
++ }
++ else if(colon)
++     *colon=0;
+ 
+  if(LocalHost)
+     for(p=LocalHost;(*p)!=&KeyPairEnd;p++)
+        if(!strcmp((*p)->key.string,host))
+          {isit=1;break;}
+ 
++ if (escl && escr) 
++     *escr = ']';
++
+  if(colon)
+     *colon=':';
+ 
+@@ -765,14 +781,23 @@
+   char *host The name of the host (and port number) to be checked.
+   ++++++++++++++++++++++++++++++++++++++*/
+ 
+-int IsLocalNetHost(char *host)
++int IsLocalNetHost(char *hoststr)
+ {
+  KeyPair **p;
+- char *colon=strchr(host,':');
++ char *escl, *escr, *host, *colon;
+  int isit=0;
+ 
+- if(colon)
+-    *colon=0;
++ escl=strchr(hoststr,'[');
++ escr=strrchr(hoststr,']');
++ colon=strrchr(hoststr,':');
++ host = hoststr;
++
++ if (escl && escr) {
++     host = escl + 1;
++     *escr = 0;
++ }
++ else if(colon) 
++     *colon=0;
+ 
+  if(IsLocalHost(host,0))
+     isit=1;
+@@ -782,6 +807,10 @@
+        if(wildcard_match(host,(*p)->key.string))
+          {isit=1;break;}
+ 
++
++ if (escl && escr) 
++     *escr = ']';
++
+  if(colon)
+     *colon=':';
+ 
+@@ -2031,7 +2060,7 @@
+        {errmsg=(char*)malloc(40);strcpy(errmsg,"Expecting a hostname, got nothing.");}
+      else
+        {
+-        char *colon=strchr(text,':'),*p;
++        char *colon = NULL,*p;
+         if(colon)
+           {errmsg=(char*)malloc(56+strlen(text));sprintf(errmsg,"Expecting a hostname not a port number, got '%s'.",text);}
+         else
+@@ -2058,7 +2087,7 @@
+       {errmsg=(char*)malloc(48);strcpy(errmsg,"Expecting a hostname (and port), got nothing.");}
+     else
+       {
+-       char *colon=strchr(text,':'),*p;
++       char *colon=strrchr(text,':'),*p;
+        if(*text==':')
+          {errmsg=(char*)malloc(48+strlen(text));sprintf(errmsg,"Expecting a hostname before the ':', got '%s'.",text);}
+        else
