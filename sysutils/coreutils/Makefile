@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/12/06 16:00:57 adam Exp $
+# $NetBSD: Makefile,v 1.23 2004/12/28 08:55:31 minskim Exp $
 
 DISTNAME=	coreutils-5.2.1
 PKGREVISION=	1
@@ -22,6 +22,12 @@ USE_PKGLOCALEDIR=	YES
 INFO_FILES=	coreutils.info
 
 TEST_TARGET=		check
+
+SUBST_CLASSES+=		root
+SUBST_MESSAGE.root=	"Fixing hardcoded root."
+SUBST_STAGE.root=	post-patch
+SUBST_FILES.root=	src/Makefile.in
+SUBST_SED.root=		-e 's, root , ${ROOT_USER} ,g'
 
 .include "../../mk/bsd.prefs.mk"
 
