@@ -1,0 +1,44 @@
+$NetBSD: patch-by,v 1.1 2004/11/29 22:11:51 seb Exp $
+
+--- Makefile.in.orig	2004-09-14 22:13:40.000000000 +0000
++++ Makefile.in
+@@ -41,9 +41,9 @@ DIST_COMMON = README $(am__configure_dep
+ 	$(srcdir)/Makefile.in $(srcdir)/ast_common.h.in \
+ 	$(srcdir)/config.h.in $(srcdir)/graphviz.spec.in \
+ 	$(top_srcdir)/configure AUTHORS COPYING ChangeLog INSTALL NEWS \
+-	config/config.guess config/config.sub config/depcomp \
+-	config/install-sh config/ltmain.sh config/missing \
+-	config/ylwrap
++	config/config.guess config/config.rpath config/config.sub \
++	config/depcomp config/install-sh config/ltmain.sh \
++	config/missing config/ylwrap
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/configure.ac
+@@ -187,7 +187,6 @@ SOCKET_LIBS = @SOCKET_LIBS@
+ SORT = @SORT@
+ STRIP = @STRIP@
+ TCLINT_INCLUDES = @TCLINT_INCLUDES@
+-TCLSH = @TCLSH@
+ TCL_CFLAGS = @TCL_CFLAGS@
+ TCL_DEFS = @TCL_DEFS@
+ TCL_INCLUDES = @TCL_INCLUDES@
+@@ -213,7 +212,6 @@ TK_VERSION = @TK_VERSION@
+ TK_XINCLUDES = @TK_XINCLUDES@
+ TOP_DIR = @TOP_DIR@
+ VERSION = @VERSION@
+-WISH = @WISH@
+ WITH_MYLIBGD_FALSE = @WITH_MYLIBGD_FALSE@
+ WITH_MYLIBGD_TRUE = @WITH_MYLIBGD_TRUE@
+ WITH_TCL_FALSE = @WITH_TCL_FALSE@
+@@ -282,8 +280,8 @@ target_os = @target_os@
+ target_vendor = @target_vendor@
+ pkgindexdir = $(libdir)/@PACKAGE@
+ pkgindex_DATA = pkgIndex.tcl
+-txtdir = $(pkgdatadir)/doc
+-htmldir = $(pkgdatadir)/doc/html
++txtdir = $(prefix)/share/doc/graphviz
++htmldir = $(prefix)/share/doc/html/graphviz
+ txt = AUTHORS COPYING ChangeLog NEWS FAQ.txt MINTERMS.txt
+ html = LICENSE.html
+ txt_DATA = $(txt)

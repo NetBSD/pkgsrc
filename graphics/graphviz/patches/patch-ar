@@ -1,15 +1,22 @@
-$NetBSD: patch-ar,v 1.4 2004/04/17 16:56:10 seb Exp $
+$NetBSD: patch-ar,v 1.5 2004/11/29 22:11:51 seb Exp $
 
---- tkspline/Makefile.am.orig	2003-11-08 11:38:11.000000000 +0000
-+++ tkspline/Makefile.am
-@@ -20,8 +20,8 @@ endif
- libtkspline_la_SOURCES = tkspline.c
+--- dotneato/Makefile.am.orig	2004-09-02 15:06:01.000000000 +0000
++++ dotneato/Makefile.am
+@@ -2,8 +2,7 @@
  
- libtkspline_la_LIBADD = \
--	$(top_builddir)/tkstubs/libtkstubs.la \
--	$(top_builddir)/tclstubs/libtclstubs.la 
-+	${TK_STUB_LIB_SPEC} \
-+	${TCL_STUB_LIB_SPEC}
+ SUBDIRS = common gvrender pack dotgen neatogen twopigen fdpgen circogen gvre_svg
  
- all-local: pkgIndex.tcl
+-pdfdir = $(pkgdatadir)/doc/pdf
+-pkgconfigdir = $(pkglibdir)/pkgconfig
++pkgconfigdir = $(libdir)/pkgconfig
  
+ linkedman = neato.1 twopi.1 fdp.1 circo.1
+ linkedpdf = neato.pdf twopi.pdf fdp.pdf circo.pdf
+@@ -31,7 +30,6 @@ bin_SCRIPTS = dotneato-config
+ bin_PROGRAMS = dot neato twopi fdp circo
+ noinst_PROGRAMS = dotmemtest neatomemtest twopimemtest fdpmemtest
+ man_MANS = $(man)
+-pdf_DATA = $(pdf)
+ 
+ libdotneato_la_SOURCES = dotneato.c
+ libdotneato_la_LIBADD = \

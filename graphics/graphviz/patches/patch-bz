@@ -1,0 +1,19 @@
+$NetBSD: patch-bz,v 1.1 2004/11/29 22:11:51 seb Exp $
+
+--- gd/Makefile.am.orig	2004-08-13 16:41:39.000000000 +0000
++++ gd/Makefile.am
+@@ -4,14 +4,12 @@ html = gd.html
+ 
+ AM_CPPFLAGS = @FT_INCLUDES@ @FC_INCLUDES@ @PNG_INCLUDES@ @JPEG_INCLUDES@ @Z_INCLUDES@
+ 
+-htmldir = $(pkgdatadir)/doc/html
+ 
+ if WITH_MYLIBGD
+ pkginclude_HEADERS = gd.h gd_io.h gdcache.h gdfontg.h gdfontl.h gdfontmb.h \
+ 	gdfonts.h gdfontt.h gdhelpers.h jisx0208.h wbmp.h gdfx.h entities.h
+ pkglib_LTLIBRARIES = libgvgd.la
+ noinst_PROGRAMS = fontwheeltest fontsizetest gdtestft gddemo circletexttest
+-html_DATA = $(html)
+ endif
+ 
+ libgvgd_la_SOURCES = gd.c gd_gd.c gd_gd2.c gd_io.c gd_io_dp.c gd_io_file.c \

@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.5 2004/04/17 16:56:10 seb Exp $
+$NetBSD: patch-ap,v 1.6 2004/11/29 22:11:51 seb Exp $
 
---- tclpathplan/demo/pathplan_data/Makefile.am.orig	2003-11-08 11:38:10.000000000 +0000
+--- tclpathplan/demo/pathplan_data/Makefile.am.orig	2004-07-26 16:52:13.000000000 +0000
 +++ tclpathplan/demo/pathplan_data/Makefile.am
-@@ -5,7 +5,7 @@ AUTOMAKE_OPTIONS = 1.4
+@@ -3,7 +3,7 @@
  EXAMPLES = boxes.dat dpd.dat funny.dat maze.dat nested.dat northo.dat \
  	obs.dat other.dat paths.dat rotor.dat u.dat unknown.dat
  
