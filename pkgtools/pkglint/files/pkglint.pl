@@ -1,4 +1,4 @@
-#!@PERL@
+#!@PERL@ -w
 #
 # pkglint - lint for package directory
 #
@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.106 2004/06/06 16:37:53 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.107 2004/06/25 19:03:26 hubertf Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -37,12 +37,14 @@ $portsdir = '@PORTSDIR@';
 $rcsidstr = 'NetBSD';
 $localbase = '@PREFIX@';
 
-getopts('hINB:vV');
+%opts = ();
+getopts('hINB:qvV', \%opts);
 
-if ($opt_h) {
+if ($opts{"h"}) {
 		($prog) = ($0 =~ /([^\/]+)$/);
 		print STDERR <<EOF;
-usage: $prog [-vIN] [-B#] [package_directory]
+usage: $prog [-qvIN] [-B#] [package_directory]
+	-q	quiet
 	-v	verbose mode
 	-V	version (@DISTVER@)
 	-I	show Makefile (with all included files)
@@ -51,14 +53,15 @@ usage: $prog [-vIN] [-B#] [package_directory]
 EOF
 		exit 0;
 };
-$verbose = 1	if $opt_v;
-$newpkg = 1	if $opt_N;
-$showmakefile = 1	if $opt_I;
-$contblank = $opt_B	if $opt_B;
+$quiet = 1	if $opts{"q"};
+$verbose = 1	if $opts{"v"};
+$newpkg = 1	if $opts{"N"};
+$showmakefile = 1	if $opts{"I"};
+$contblank = $opts{"B"}	if $opts{"B"};
 
 $portdir = shift || ".";
 
-if ($opt_V) {
+if ($opts{"V"}) {
 	print "@DISTVER@\n";
 	exit;
 }
@@ -133,7 +136,7 @@ EOF
 }
 
 # we need to handle the Makefile first to get some variables
-print "OK: checking Makefile.\n";
+print "OK: checking Makefile.\n" unless $quiet;
 if (! -f "$portdir/Makefile") {
 	&perror("FATAL: no Makefile in \"$portdir\".");
 } else {
@@ -194,7 +197,7 @@ if (-e <$portdir/$distinfo>) {
 	}
 }
 foreach $i (@checker) {
-	print "OK: checking $i.\n";
+	print "OK: checking $i.\n" unless $quiet;
 	if (! -f "$portdir/$i") {
 		&perror("FATAL: no $i in \"$portdir\".");
 	} else {
@@ -586,9 +589,9 @@ sub checklastline {
 }
 
 sub checkpatch {
-	local($file) = @_;
-	local($rcsidseen) = 0;
-	local($whole);
+	my ($file) = @_;
+	my ($rcsidseen, $whole, @lines);
+	$rcsidseen = 0;
 
 	if ($file =~ /.*~$/) {
 		&perror("WARN: is $file a backup file? If so, please remove it \n"
@@ -602,6 +605,7 @@ sub checkpatch {
 	while (<IN>) {
 		$rcsidseen++ if /\$$rcsidstr[:\$]/;
 		$whole .= $_;
+		push(@lines, $_);
 	}
 	if ($committer && $whole =~ /.\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|NetBSD)(:.*\$|\$)/) { # XXX
 	        # RCS ID in very first line is ok, to identify version
@@ -615,6 +619,45 @@ sub checkpatch {
 			"in patch $file.")
 	}
 	close(IN);
+
+	$files_in_patch = 0;
+	$patch_state = "";
+	foreach my $patch_line (@lines) {
+	    chomp($patch_line);
+	    if (index($patch_line, "--- ") == 0 && $patch_line !~ qr"^--- \d+,\d+ ----$") {
+	        $line_type = "-";
+	    } elsif (index($patch_line, "*** ") == 0 && $patch_line !~ qr"^\*\*\* \d+,\d+ \*\*\*\*$") {
+	        $line_type = "*";
+	    } elsif (index($patch_line, "+++ ") == 0) {
+	        $line_type = "+";
+	    } else {
+	        $line_type = "";
+	    }
+	    if ($patch_state eq "*") {
+	        if ($line_type eq "-") {
+		    $files_in_patch++;
+		    $patch_state = "";
+		} else {
+	            &perror("WARN: $i:$.: unknown patch format (might be an internal error)");
+		}
+	    } elsif ($patch_state eq "-") {
+	        if ($line_type eq "+") {
+		    $files_in_patch++;
+		    $patch_state = "";
+		} else {
+		    &perror("WARN: $i:$.: unknown patch format (might be an internal error)");
+		}
+	    } elsif ($patch_state eq "") {
+	        $patch_state = $line_type;
+	    }
+	    #printf("%s:%d: state=(%s), line=(%s)\n", $i, $., $patch_state, $line_type);
+	}
+	if ($files_in_patch > 1) {
+	    &perror("WARN: patch `$i' contains patches for more than one file, namely $files_in_patch");
+	} elsif ($files_in_patch == 0) {
+	    &perror("WARN: patch `$i' contains no patch");
+	}
+	return 1;
 }
 
 sub readmakefile {
@@ -653,7 +696,7 @@ sub readmakefile {
 						$level--;
 					}
 					if ($level eq 0) {
-						break;
+						last;
 					}
 				}
 				if ($level > 0) {
@@ -663,7 +706,7 @@ sub readmakefile {
 			}
 			else {
 				print("OK: defining $1\n") if $verbose;
-				$definesfound{$1} = true;
+				$definesfound{$1} = 1;
 			}
 		}
 		# try to get any included file
@@ -682,7 +725,7 @@ sub readmakefile {
 			} else {
 				$dirname = dirname($file);
                                 if (-e "$dirname/$includefile") {
-                                    print("OK: including $dirname/$includefile\n");
+                                    print("OK: including $dirname/$includefile\n") unless $quiet;
                                     $contents .= readmakefile("$dirname/$includefile");
                                 }
                                 else {
@@ -1347,6 +1390,8 @@ EOF
 			print "OK: checking packages listed in $j.\n"
 				if ($verbose);
 			foreach $k (split(/\s+/, $i)) {
+				$l = (split(':', $k))[0];
+
 				# check BUILD_USES_MSGFMT
 				if ($l =~ /^(msgfmt|gettext)$/) {
 					&perror("WARN: dependency to $1 ".
@@ -1354,7 +1399,6 @@ EOF
 						" BUILD_USES_MSGFMT.");
 				}
 				# check USE_PERL5
-				$l = (split(':', $k))[0];
 				if ($l =~ /^perl(\.\d+)?$/) {
 					&perror("WARN: dependency to perl ".
 						"listed in $j. Consider using".
@@ -1659,7 +1703,6 @@ sub category_check {
 	local($sub) = "";
 	local($contents);
 	local(@dirlist);
-	local(%alldirs);
 	local($i);
 
 	$contents = readmakefile("$portdir/$file") or
