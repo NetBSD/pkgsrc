@@ -1,8 +1,16 @@
-$NetBSD: patch-ai,v 1.5 1999/12/27 12:13:13 rh Exp $
+$NetBSD: patch-ai,v 1.6 2000/06/19 00:28:37 kim Exp $
 
---- src/ftpd.c.orig	Thu Oct 14 16:41:47 1999
-+++ src/ftpd.c	Mon Dec 27 11:57:37 1999
-@@ -88,6 +88,9 @@
+--- src/ftpd.c.orig	Thu Oct 14 10:41:47 1999
++++ src/ftpd.c	Sun Jun 18 20:24:20 2000
+@@ -75,6 +75,7 @@
+ #include <grp.h>
+ #endif
+ #include <sys/stat.h>
++#include <utmp.h>
+ 
+ #define VA_LOCAL_DECL	va_list ap;
+ #define VA_START(f)	va_start(ap, f)
+@@ -88,6 +89,9 @@
  #ifdef HAVE_SYS_FS_UFS_QUOTA_H
  #include <sys/fs/ufs_quota.h>
  #endif
@@ -12,7 +20,27 @@ $NetBSD: patch-ai,v 1.5 1999/12/27 12:13:13 rh Exp $
  
  #ifdef HAVE_SYS_SYSLOG_H
  #include <sys/syslog.h>
-@@ -5317,7 +5320,9 @@
+@@ -2296,7 +2300,8 @@
+     (void) seteuid((uid_t) 0);
+     if (logged_in)
+ 	if (wtmp_logging)
+-	    wu_logwtmp(ttyline, pw->pw_name, remotehost, 0);
++	    wu_logwtmp(ttyline, pw->pw_name, strlen(remotehost) > UT_HOSTSIZE
++		       ? remoteaddr : remotehost, 0);
+     pw = NULL;
+ #ifdef AFS_AUTH
+     ktc_ForgetAllTokens();
+@@ -2785,7 +2790,8 @@
+ #ifdef DEBUG
+ 	syslog(LOG_DEBUG, "about to call wtmp");
+ #endif
+-	wu_logwtmp(ttyline, pw->pw_name, remotehost, 1);
++	wu_logwtmp(ttyline, pw->pw_name, strlen(remotehost) > UT_HOSTSIZE
++		       ? remoteaddr : remotehost, 1);
+     }
+     logged_in = 1;
+ 
+@@ -5317,7 +5323,9 @@
  		*p = '\0';
  
  	    /* send a line...(note that this overrides dolreplies!) */
@@ -22,3 +50,12 @@ $NetBSD: patch-ai,v 1.5 1999/12/27 12:13:13 rh Exp $
  
  	    if (p)
  		ptr = p + 1;	/* set to the next line... (\0 is handled in the while) */
+@@ -5941,6 +5949,8 @@
+ 	(void) seteuid((uid_t) 0);
+ 	if (wtmp_logging)
+ 	    wu_logwtmp(ttyline, pw->pw_name, remotehost, 0);
++	    wu_logwtmp(ttyline, pw->pw_name, strlen(remotehost) > UT_HOSTSIZE
++		       ? remoteaddr : remotehost, 0);
+     }
+     if (logging)
+ 	syslog(LOG_INFO, "FTP session closed");
