@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.17 2001/04/09 11:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/07/16 22:50:47 garbled Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/26 23:09:14 jseger Exp
 #
 
-DISTNAME=       Bonnie
-PKGNAME=	bonnie-1.0
+DISTNAME=       bonnie
+PKGNAME=	bonnie-2.06
 CATEGORIES=	benchmarks
-MASTER_SITES=   ftp://ftp0.sunet.se/pub/benchmark/Bonnie/
-EXTRACT_SUFX=   .tar.Z
+MASTER_SITES=   http://www.textuality.com/bonnie/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.textuality.com/bonnie/index.html
 COMMENT=	Performance Test of Filesystem I/O
 
 NO_CONFIGURE=	yes
 
+WRKSRC=		${WRKDIR}
 MANCOMPRESSED_IF_MANZ=	yes
 
 post-extract:
