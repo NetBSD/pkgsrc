@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2005/02/17 15:11:23 taca Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 14:48:49 agc Exp $
 
 SHA1 (ruby/eruby-1.0.5.tar.gz) = d8900f8a7c30661351d2bf6f53753fa86df24996
+RMD160 (ruby/eruby-1.0.5.tar.gz) = 4fb288dd768f98780dc705574968f090cd82d560
 Size (ruby/eruby-1.0.5.tar.gz) = 61187 bytes
 SHA1 (patch-aa) = ca7a9d4d9827b18040cbebac54eabe762355b76d
 SHA1 (patch-ab) = bf3bce49348e0e157b67e5e4a26c2e9411248a84

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/11/28 04:22:48 taca Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:48:49 agc Exp $
 
 SHA1 (ruby/amrita-1.0.2.tar.gz) = b9d74d73b7668bcbfa60abf8c076bc12f71c6898
+RMD160 (ruby/amrita-1.0.2.tar.gz) = 348a6a52de58fe5a6ae0dc5a082018a6ba5702f6
 Size (ruby/amrita-1.0.2.tar.gz) = 221789 bytes
