@@ -1,0 +1,13 @@
+$NetBSD: patch-cn,v 1.1 2002/10/03 11:21:29 markd Exp $
+
+--- noatun/modules/artseffects/Makefile.in.orig	Thu Aug  8 06:02:32 2002
++++ noatun/modules/artseffects/Makefile.in
+@@ -297,7 +297,7 @@
+ libartseffects_la_LDFLAGS = -L$(top_builddir)/arts/gui/common $(all_libraries) \
+ 	-module -avoid-version -no-undefined
+ 
+-libartseffects_la_LIBADD = -lartsgui_idl -lkmedia2_idl -lsoundserver_idl -lartsflow
++libartseffects_la_LIBADD = $(top_builddir)/arts/gui/common/libartsgui_idl.la -lkmedia2_idl -lsoundserver_idl -lartsflow
+ 
+ 
+ #libartseffectsui_la_SOURCES = artseffects.cc
