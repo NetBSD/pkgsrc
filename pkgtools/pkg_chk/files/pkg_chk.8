@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.3 2004/11/17 16:27:20 wiz Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.4 2004/11/30 19:32:10 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -148,6 +148,10 @@ An asterisk
 .Em *
 matches any tag.
 .It
+If a tag starts with an
+.Em /
+then it is checked for as a readable filename.
+.It
 Tags cannot contain a hypen
 .Sq -
 or plus
@@ -157,18 +161,18 @@ Tags separated by spaces are treated as
 .Dq or .
 .Dq taga tagb
 means if
-.Em tag_a
+.Em taga
 or
-.Em tag_b
+.Em tagb
 match the current machine.
 .It
 Tags separated by a plus are treated as
 .Dq and .
 .Dq taga+tagb
 means if
-.Em tag_a
+.Em taga
 and
-.Em tag_b
+.Em tagb
 match the current machine.
 .El
 .Pp
