@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:14:41 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/07/11 17:22:47 kristerw Exp $
 #
 
 DISTNAME=		xm71010s
@@ -11,7 +11,7 @@ MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://www.ipc-tokai.or.jp/~ytanaka/fm7/xm7.shtml
 COMMENT=		X11-based FM-7 emulator
 
-BUILD_DEPENDS+=		nkf-1.7:../../converters/nkf
+BUILD_DEPENDS+=		nkf>=1.7:../../converters/nkf
 
 RESTRICTED=		source archive is not redistributable
 RESTRICTED+=		no-commercial-use
