@@ -1,3 +1,5 @@
+$NetBSD: patch-ag,v 1.2 2001/02/23 17:40:25 wiz Exp $
+
 --- /dev/null	Sun Jan 14 23:31:06 2001
 +++ lib/taskbar/bsd-daemon.xpm	Fri Feb 20 05:22:16 1998
 @@ -0,0 +1,169 @@
