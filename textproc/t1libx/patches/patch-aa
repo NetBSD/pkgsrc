@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/11/05 08:28:48 garbled Exp $
+$NetBSD: patch-aa,v 1.2 1998/11/13 15:44:44 tv Exp $
 --- lib/Makefile.in.orig	Thu Nov  5 00:59:03 1998
 +++ lib/Makefile.in	Thu Nov  5 01:00:23 1998
 @@ -251,17 +251,9 @@
  
  install: dummy
  	$(LIBTOOL) --mode=install \
--		$(INSTALL_DATA) .libs/libt1.a .libs/libt1.so.* $(libdir)
-+		$(INSTALL_DATA) .libs/libt1x.a .libs/libt1x.so.* $(libdir)
+-		$(INSTALL_DATA) libt1.la $(libdir)
++		$(INSTALL_DATA) libt1x.la $(libdir)
  	$(LIBTOOL) --mode=install \
 -		$(INSTALL_DATA) t1lib.h t1lib.h $(includedir)
 -	$(MKINSTALLDIRS) $(datadir)/t1lib
