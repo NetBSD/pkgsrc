@@ -1,0 +1,9 @@
+$NetBSD: patch-af,v 1.1 1998/08/28 15:23:43 garbled Exp $
+--- bin-extra/Makefile.orig	Fri Aug 28 07:48:58 1998
++++ bin-extra/Makefile	Fri Aug 28 07:49:25 1998
+@@ -1,4 +1,4 @@
+-SCRIPTS= MakeTeXMF MakeTeXPK MakeTeXTFM MakeTeXmkdir MakeTeXnames allcm allneeded append_db dvi2fax dvihp dvired fontexport fontimport mkfontdesc mkindex ps2frag texconfig texhash texi2dvi xdvi troffmpx makempx makeindex pslatex texi2html
++SCRIPTS= MakeTeXMF MakeTeXPK MakeTeXTFM MakeTeXmkdir MakeTeXnames allcm allneeded append_db dvi2fax dvihp dvired fontexport fontimport mkfontdesc mkindex ps2frag texconfig texhash xdvi troffmpx makempx makeindex pslatex texi2html
+ 
+ FILES = $(SCRIPTS) mf mp latex amstex tex allec kpsepath kpsewhich kpsexpand
+ bindir = $(prefix)/bin/$(platform)
