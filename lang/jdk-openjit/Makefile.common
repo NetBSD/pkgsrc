@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.2 2003/07/02 10:27:06 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/08/23 15:13:59 jschauma Exp $
 
 OPENJIT_VERSION=1.1.16
 
 DISTNAME=	OpenJIT-${OPENJIT_VERSION}
-CATEGORIES=	lang
+CATEGORIES=	lang java
 MASTER_SITES=	http://www.openjit.org/dist/
 
 MAINTAINER=	tv@pobox.com

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2003/07/17 21:44:46 grant Exp $
+# $NetBSD: Makefile,v 1.48 2003/08/23 15:14:01 jschauma Exp $
 #
 
 DISTNAME=		kaffe-1.0.7
 PKGREVISION=		1
-CATEGORIES=		lang
+CATEGORIES=		lang java
 MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.0.x-production/
 
 MAINTAINER=		tech-pkg@NetBSD.org
