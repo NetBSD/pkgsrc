@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3832 2003/11/18 14:05:17 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3833 2003/11/18 14:15:53 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4608,3 +4608,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated amaya to 8.0nb2 [wiz 2003-11-17]
 	Updated p5-Text-DelimMatch to 1.06a [xtraeme 2003-11-18]
 	Updated john to 1.6nb1 [xtraeme 2003-11-18]
+	Updated quake to 2.30nb2 [xtraeme 2003-11-18]
