@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.2 2004/08/02 03:57:17 schmonz Exp $
+# $NetBSD: INSTALL,v 1.3 2004/12/20 04:22:37 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
@@ -55,8 +55,9 @@ POST-INSTALL)
 		${CAT} <<EOF
 ===========================================================================
 
-NOTE: Before using qmail, create a .qmail-${QMAIL_QUEUE_EXTRA} in
-${QMAILDIR}/alias that meets the QUEUE_EXTRA requirements.
+NOTE: Before using qmail, create a .qmail file corresponding with the local
+user or alias "${QMAIL_QUEUE_EXTRA}" that meets the requirements for
+QUEUE_EXTRA.
 
 ===========================================================================
 EOF
