@@ -1,7 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.3 2003/09/14 01:47:51 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2003/09/28 12:54:52 jlam Exp $
 
-.if !defined(GLU_BUILDLINK3_MK)
-GLU_BUILDLINK3_MK=	# defined
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 
 .include "../../mk/bsd.prefs.mk"
@@ -29,9 +27,7 @@ BUILDLINK_IS_BUILTIN.glu!=						\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.glu=${BUILDLINK_IS_BUILTIN.glu}
 .endif
 
-.if !empty(BUILDLINK_CHECK_BUILTIN.glu:M[yY][eE][sS])
-_NEED_GLU=	NO
-.else
+.if !defined(_NEED_GLU)
 .  if !empty(BUILDLINK_IS_BUILTIN.glu:M[nN][oO])
 _NEED_GLU=	YES
 .  else
@@ -41,7 +37,7 @@ _NEED_GLU=	YES
 # BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
 # or if the built-in one is sufficient.
 #
-.    include "../../graphics/Mesa/version.mk"
+.      include "../../graphics/Mesa/version.mk"
 _GLU_PKG=	glu-${_MESA_VERSION}
 _GLU_DEPENDS=	${BUILDLINK_DEPENDS.glu}
 _NEED_GLU!=	\
@@ -51,6 +47,10 @@ _NEED_GLU!=	\
 		${ECHO} "YES";						\
 	fi
 .  endif
+.endif	# _NEED_GLU
+
+.if !empty(BUILDLINK_CHECK_BUILTIN.glu:M[yY][eE][sS])
+_NEED_GLU=	NO
 .endif
 
 .if ${_NEED_GLU} == "YES"
@@ -62,10 +62,11 @@ BUILDLINK_DEPENDS.glu=	glu>=5.0
 .  if !empty(BUILDLINK_DEPTH:M\+)
 BUILDLINK_DEPENDS+=	glu
 .  endif
+.  if !defined(BUILDLINK_PACKAGES) || empty(BUILDLINK_PACKAGES:Mglu)
 BUILDLINK_PACKAGES+=	glu
+.  endif
 .else
 BUILDLINK_PREFIX.glu=	${X11BASE}
 .endif
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
-.endif	# GLU_BUILDLINK3_MK
