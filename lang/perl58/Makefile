@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2004/12/10 04:27:39 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2004/12/10 06:01:08 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -42,9 +42,6 @@ CONFLICTS=	perl-5.00* perl-base-[0-9]* \
 		perl-mk-[0-9]* perl-thread-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-BUILDING_PERL5=		yes
-PERL5_CONFIGURE=	no
 
 USE_BUILDLINK3=		yes
 HAS_CONFIGURE=		yes
@@ -92,17 +89,6 @@ CONFIGURE_ARGS+=	-Dsiteman1dir="${VIEWBASE}/man/man1"
 # HFS filesystems by using GNUmakefiles, so we need to use GNU make.
 #
 USE_GNU_TOOLS+=	make
-#
-# "installarchlib" and "installsitearch" have different forms between
-# Darwin and NetBSD (and between older and newer versions of Darwin)
-#
-.  if ${OS_VERSION:R} >= 7
-PERL5_ARCHLIB=	${PREFIX}/lib/perl5/${PERL5_VERS}/darwin-2level
-PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/darwin-2level
-.  else
-PERL5_ARCHLIB=	${PREFIX}/lib/perl5/${PERL5_VERS}/darwin
-PERL5_SITEARCH=	${PREFIX}/lib/perl5/site_perl/${PERL5_VERS}/darwin
-.  endif
 .endif
 
 # Nail down the needed libraries for each platform here to avoid hidden
@@ -156,7 +142,6 @@ PERL5_USE_THREADS?=	${DLOPEN_REQUIRE_PTHREADS}
 CONFIGURE_ARGS+=	-Uuseithreads
 .else
 .  include "../../mk/pthread.buildlink3.mk"
-PERL5_ARCHLIB=		${PREFIX}/lib/perl5/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi
 CONFIGURE_ARGS+=	-Duseithreads
 CFLAGS+=		${PTHREAD_CFLAGS}
 PERL5_HINTS_LDFLAGS+=	${PTHREAD_LDFLAGS}
@@ -176,12 +161,10 @@ CONFIGURE_ARGS+=	-Duse64bitint
 
 PERL5=			${PREFIX}/bin/perl${PERL5_VERS}
 PERL5_PRIVLIB?=		${PREFIX}/lib/perl5/${PERL5_VERS}
-PERL5_ARCHLIB?=		${PREFIX}/lib/perl5/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
 PERL5_SITEPERL?=	${VIEWBASE}/lib/perl5/site_perl
 PERL5_SITELIB?=		${VIEWBASE}/lib/perl5/site_perl/${PERL5_VERS}
-PERL5_SITEARCH?=	${VIEWBASE}/lib/perl5/site_perl/${PERL5_VERS}/${MACHINE_ARCH}-${LOWER_OPSYS}
-PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 PLIST_SUBST+=		PERL5_SITEPERL=${PERL5_SITEPERL:S/^${PREFIX}\///}
+PLIST_SUBST+=		PERL5_SITELIB=${PERL5_SITELIB:S/^${PREFIX}\///}
 MESSAGE_SUBST+=		PERL5_SITELIB=${PERL5_SITELIB}
 
 # Some platforms may want the directory mode not to be 0755.  This is,
@@ -232,7 +215,12 @@ pre-configure:
 	done
 .endif
 
-WRKSRC_PERL5=		${WRKSRC}/perl
+WRKSRC_PERL5=	${WRKSRC}/perl
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+PLIST_FILE_SED=	-e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,,"
+PLIST_DIR_SED=	${PLIST_FILE_SED}					\
+		-e "s,^,@unexec \${RMDIR} -p %D/,"			\
+		-e "s,/[^/]*$$, 2>/dev/null || ${TRUE},"		\
 
 post-install:
 	${RM} -f ${PREFIX}/bin/perl ${PREFIX}/bin/perl${PERL5_VERS}
@@ -244,7 +232,21 @@ post-install:
 		strip ${PREFIX}/bin/a2p;				\
 	fi
 .endif
-	${RMDIR} -p ${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
+	# Generate the PLIST template
+	eval `${PERL5} -V:installarchlib 2>/dev/null`;			\
+	eval `${PERL5} -V:installsitearch 2>/dev/null`;			\
+	sitearch=`${ECHO} $$installsitearch | ${SED} ${PLIST_FILE_SED}`; \
+	${RMDIR} -p $$installsitearch 2>/dev/null || ${TRUE};		\
+	packlist="$$installarchlib/.packlist";				\
+	( ${ECHO} "@unexec ${RM} -f %D/$$sitearch/perllocal.pod";	\
+	  ${ECHO} "@unexec ${RMDIR} -p %D/$$sitearch 2>/dev/null || ${TRUE}"; \
+	  ${CAT} ${PKGDIR}/PLIST;					\
+	  ${ECHO} "@comment The following lines are automatically generated"; \
+	  ${ECHO} "@comment from the installed .packlist files.";	\
+	) > ${PLIST_SRC};						\
+	( ${ECHO} "$$packlist" && ${CAT} $$packlist )			\
+	| ${SED} ${PLIST_FILE_SED} | ${SORT} -u >> ${PLIST_SRC};	\
+	( ${ECHO} "$$packlist" && ${CAT} $$packlist )			\
+	| ${SED} ${PLIST_DIR_SED} | ${SORT} -ur >> ${PLIST_SRC}
 
-.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
