@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.16 2005/03/27 05:55:19 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.17 2005/03/27 07:01:19 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -33,3 +33,5 @@ Pullup ticket 392 - requested by Shin'ichiro TAYA
 security fix for mozilla and mozilla-gtk2
 Pullup ticket 394 - requested by Dan McMahill
 portability fix for hpijs
+Pullup ticket 395 - requested by Dan McMahill
+portability fix for tcpdump
