@@ -1,11 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/06/05 21:55:38 jtb Exp $
+$NetBSD: MESSAGE,v 1.2 2001/06/06 21:50:34 jtb Exp $
 
 `${PREFIX}/share/doc/zsh/NEWS' contains a summary of important changes
 for this version of zsh.
 
 Note that the completion system can now be setup and configured using
-the builtin "compinstall" function.  Please read zshcompsys(1) manual
-page for information on how this works.
+the "compinstall" function.  Please read the zshcompsys(1) manual page
+for information on how this works.
 
 ===========================================================================
