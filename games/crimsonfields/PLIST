@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/07 19:02:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/02/07 17:19:39 wiz Exp $
 bin/bi2cf
 bin/cfed
 bin/comet
@@ -10,6 +10,7 @@ man/man6/crimson.6
 share/crimson/cf.dat
 share/crimson/default.tiles
 share/crimson/default.units
+share/crimson/levels/Anthill.lev
 share/crimson/levels/ArmsRace.lev
 share/crimson/levels/BeachRaid.lev
 share/crimson/levels/Foxhole.lev
