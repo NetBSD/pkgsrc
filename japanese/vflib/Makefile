@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/04/30 18:39:24 sakamoto Exp $
+# $NetBSD: Makefile,v 1.7 2000/04/30 19:04:04 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.20 1999/05/03 01:58:33 steve Exp $
 
 DISTNAME=	VFlib2-2.24.2
@@ -19,15 +19,12 @@ PLIST_SUBST+=	VFLIB_VERSION=${VFLIB_VERSION} \
 
 USE_X11=	yes
 USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-freetype="ttf -lintl" \
 		--with-freetype-includedir=${LOCALBASE}/include \
 		--with-freetype-libdir=${LOCALBASE}/lib
 MAKE_ENV+=	LOCAL_LDFLAGS="${LDFLAGS}"
-
-post-configure:
-	@${RM} -r ${WRKSRC}/libtool
-	@${LN} -s ${LIBTOOL} ${WRKSRC}/libtool
 
 post-build:
 .for f in vfontcap vfontcap.bdf
