@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/01 21:50:40 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/27 10:02:52 jdolecek Exp $
 
 DISTNAME=	SOAP-0.7.5
 CATEGORIES+=	net
 
 MAINTAINER=	jdolecek@NetBSD.org
-HOMEPAGE= 	http://pear.php.net/package/SOAP
 COMMENT=	SOAP Client/Server for PHP
 
 DEPENDS+=	pear-Mail_Mime>=1.2:../../mail/pear-Mail_Mime
