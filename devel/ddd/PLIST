@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/06/04 11:19:32 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/01/11 09:04:16 martti Exp $
 bin/ddd
 man/man1/ddd.1
 share/${PKGNAME}/COPYING
@@ -6,6 +6,7 @@ share/${PKGNAME}/NEWS
 share/${PKGNAME}/ddd/Ddd
 share/${PKGNAME}/themes/green.vsl
 share/${PKGNAME}/themes/red.vsl
+share/${PKGNAME}/themes/rednil.vsl
 share/${PKGNAME}/themes/smalltitles.vsl
 share/${PKGNAME}/themes/smallvalues.vsl
 share/${PKGNAME}/themes/suppress.vsl
