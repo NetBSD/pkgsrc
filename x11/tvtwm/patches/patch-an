@@ -1,13 +1,7 @@
-$NetBSD: patch-an,v 1.2 2000/02/05 15:58:30 wiz Exp $
+$NetBSD: patch-an,v 1.3 2000/09/11 00:58:30 wiz Exp $
 
-Index: menus.c
-===================================================================
-RCS file: /home/siren/src/tvtwm/menus.c,v
-retrieving revision 1.1.1.1
-retrieving revision 1.2
-diff -u -r1.1.1.1 -r1.2
---- menus.c	1999/08/08 05:46:53	1.1.1.1
-+++ menus.c	1999/08/08 05:56:53	1.2
+--- menus.c.orig	Thu Feb  9 21:09:18 1995
++++ menus.c
 @@ -191,6 +191,7 @@
  #include "gram.h"
  #include "screen.h"
@@ -328,7 +322,15 @@ diff -u -r1.1.1.1 -r1.2
      struct MenuItem *item;
  
      RootFunction = 0;
-@@ -2092,8 +1958,6 @@
+@@ -2049,6 +1915,7 @@
+     case F_SCROLLUP:
+     case F_SCROLLDOWN:
+     case F_SCROLLBACK:
++	FocusOnRoot();
+ 	ScrollDesktop(func, action);
+ 	break;
+ 
+@@ -2092,8 +1959,6 @@
  	    return TRUE;
  
  	if (Scr->VirtualDesktop) {
@@ -337,7 +339,7 @@ diff -u -r1.1.1.1 -r1.2
  	    if (tmp_win->sticky) {
  		if (Scr->StickyAbove) {
  		    XReparentWindow(dpy, tmp_win->frame, Scr->VirtualDesktop,
-@@ -2300,7 +2164,7 @@
+@@ -2300,7 +2165,7 @@
  	    return TRUE;
  
  	PopDownMenu();
@@ -346,7 +348,7 @@ diff -u -r1.1.1.1 -r1.2
  	MoveFunction = func;
  	if (MoveFunction == F_OPAQUEMOVE) {
  	    Real_OpaqueMove = Scr->OpaqueMove;
-@@ -2313,11 +2177,11 @@
+@@ -2313,11 +2178,11 @@
  
  	if (context == C_ICON && tmp_win->icon.w)
  	{
@@ -360,7 +362,7 @@ diff -u -r1.1.1.1 -r1.2
  	}
  #ifdef OLD_MOVE
  	if (DeferExecution(context, func, action, Scr->MoveCursor))
-@@ -3149,7 +3013,7 @@
+@@ -3149,7 +3014,7 @@
   ***********************************************************************
   */
  
@@ -369,7 +371,7 @@ diff -u -r1.1.1.1 -r1.2
  {
      XGrabPointer(dpy, Scr->Root, True,
  	ButtonPressMask | ButtonReleaseMask,
-@@ -3171,6 +3035,7 @@
+@@ -3171,6 +3036,7 @@
   ***********************************************************************
   */
  
@@ -377,7 +379,7 @@ diff -u -r1.1.1.1 -r1.2
  Deferrable(func)
  int func;
  {
-@@ -3205,7 +3070,7 @@
+@@ -3205,7 +3071,7 @@
      }
  }
  
@@ -386,7 +388,7 @@ diff -u -r1.1.1.1 -r1.2
  MenuRoot *root;
  {
      MenuItem *mitem;
-@@ -3321,7 +3186,7 @@
+@@ -3321,7 +3187,7 @@
      Scr->FocusRoot = TRUE;
  }
  
@@ -395,7 +397,7 @@ diff -u -r1.1.1.1 -r1.2
  TwmWindow *tmp_win;
  {
      TwmWindow *t;
-@@ -3396,7 +3261,7 @@
+@@ -3396,7 +3262,7 @@
  
  
  
@@ -404,7 +406,7 @@ diff -u -r1.1.1.1 -r1.2
  TwmWindow *tmp_win;
  int def_x, def_y;
  {
-@@ -3603,7 +3468,7 @@
+@@ -3603,7 +3469,7 @@
  
  
  
@@ -413,7 +415,7 @@ diff -u -r1.1.1.1 -r1.2
  TwmWindow *tmp_win;
  int state;
  {
-@@ -3647,7 +3512,7 @@
+@@ -3647,7 +3513,7 @@
  
  
  
@@ -422,7 +424,7 @@ diff -u -r1.1.1.1 -r1.2
      int n, inc;
  {
      Window dumwin;
-@@ -3691,7 +3556,7 @@
+@@ -3691,7 +3557,7 @@
   * BumpWindowColormap - rotate our internal copy of WM_COLORMAP_WINDOWS
   */
  
@@ -431,7 +433,7 @@ diff -u -r1.1.1.1 -r1.2
      TwmWindow *tmp;
      int inc;
  {
-@@ -3704,9 +3569,9 @@
+@@ -3704,9 +3570,9 @@
  	cwins = (ColormapWindow **) malloc(sizeof(ColormapWindow *)*
  					   tmp->cmaps.number_cwins);
  	if (cwins) {
@@ -444,7 +446,7 @@ diff -u -r1.1.1.1 -r1.2
  		for (i = tmp->cmaps.number_cwins; i-- > 0; )
  		    tmp->cmaps.cwins[i]->colormap->state = 0;
  	    }
-@@ -3737,7 +3602,7 @@
+@@ -3737,7 +3603,7 @@
  
  
  
@@ -453,7 +455,7 @@ diff -u -r1.1.1.1 -r1.2
  {
      SetMapStateProp (Scr->iconmgr.twm_win, WithdrawnState);
      UnmapFrame(Scr->iconmgr.twm_win);
-@@ -3749,7 +3614,7 @@
+@@ -3749,7 +3615,7 @@
  
  
  
@@ -462,7 +464,7 @@ diff -u -r1.1.1.1 -r1.2
      TwmWindow *tmp;
      Bool onoroff;
  {
-@@ -3768,7 +3633,7 @@
+@@ -3768,7 +3634,7 @@
  
  
  
@@ -471,7 +473,7 @@ diff -u -r1.1.1.1 -r1.2
      MenuRoot *menu;
  {
      MenuItem *item;
-@@ -3890,14 +3755,14 @@
+@@ -3890,14 +3756,14 @@
      XSendEvent (dpy, w, False, 0L, (XEvent *) &ev);
  }
  
@@ -488,7 +490,7 @@ diff -u -r1.1.1.1 -r1.2
      TwmWindow *tmp;
      Time timestamp;
  {
-@@ -3905,7 +3770,7 @@
+@@ -3905,7 +3771,7 @@
  }
  
  
