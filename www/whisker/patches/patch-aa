@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 12:29:40 hubertf Exp $
+
+--- whisker.pl.orig	Wed Nov 27 22:13:13 2002
++++ whisker.pl	Fri Jan  3 22:42:57 2003
+@@ -25,7 +25,7 @@
+ 	if($^O =~ /Win32/){
+ 		$WHISKER_DIR='C:\\program files\\whisker\\'; 
+ 	} else {
+-		$WHISKER_DIR='/usr/local/share/whisker/'; 
++		$WHISKER_DIR='@PREFIX@/share/whisker/'; 
+ 	}
+ }
+ 
+@@ -58,7 +58,7 @@
+ eval 'use LW';
+ if($@){	$LW=0;
+     if(-e $WHISKER_DIR.'LW.pm'){
+-	eval "require $WHISKER_DIR".'LW.pm';
++	eval "require '$WHISKER_DIR'.'LW.pm'";
+ 	if(!$@){$LW++;}}
+ } else { $LW++; }
+ if(!$LW){
