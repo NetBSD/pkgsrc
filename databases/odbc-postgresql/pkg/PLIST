@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/06 21:59:59 jwise Exp $
+include/pgsql/iodbc/iodbc.h
+include/pgsql/iodbc/isql.h
+include/pgsql/iodbc/isqlext.h
+lib/libpsqlodbc.a
+lib/libpsqlodbc.so.0.26
