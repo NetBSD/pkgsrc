@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/26 02:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/31 10:05:14 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.1.15
 PKGREVISION=		3
@@ -13,18 +13,19 @@ COMMENT=		Cyrus IMAP server
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
-GNU_CONFIGURE=		YES
-PERL5_CONFIGURE=	NO
+USE_BUILDLINK3=		yes
+GNU_CONFIGURE=		yes
+PERL5_CONFIGURE=	no
+USE_DB185=		no
 AUTOCONF_REQD=		2.13
 
-USE_PKGINSTALL=		YES
+USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		CYRUS_USE_INET6
-.if defined(CYRUS_USE_INET6) && ${CYRUS_USE_INET6} == "YES"
+.if defined(CYRUS_USE_INET6) && !empty(CYRUS_USE_INET6:M[yY][eE][sS])
 PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
 PATCHFILES=		${DISTNAME}-ipv6-20030819.diff.gz
 .endif
@@ -47,13 +48,19 @@ CONFIGURE_ARGS+=	--with-bdb-libdir=${BUILDLINK_PREFIX.db3}/lib
 CONFIGURE_ARGS+=	--with-bdb-incdir=${BUILDLINK_PREFIX.db3}/include/db3
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
-CONFIGURE_ARGS+=	--without-ucdsnmp
-CONFIGURE_ARGS+=	--without-notify
-CONFIGURE_ARGS+=	--without-zephyr
-CONFIGURE_ARGS+=	--enable-netscapehack
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
+CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
+CONFIGURE_ENV+=		ac_cv_lib_wrap_request_init=yes
 
-# Follow the recommended methods for database types to use:
+CONFIGURE_ARGS+=	--enable-netscapehack
+CONFIGURE_ARGS+=	--without-notify
+CONFIGURE_ARGS+=	--without-ucdsnmp
+CONFIGURE_ARGS+=	--without-zephyr
+
+# Follow the recommended methods for database types to use.  I'm not
+# 100% ready to override the defaults till I've checked any side effects
+# - chris@nb.org
+#
 BUILD_DEFS+=		CYRUS_DB_RECOMMENDED
 .if defined(CYRUS_DB_RECOMMENDED)
 CONFIGURE_ARGS+=	--with-duplicate-db=db3_nosync
@@ -61,12 +68,7 @@ CONFIGURE_ARGS+=	--with-mboxlist-db=skiplist
 CONFIGURE_ARGS+=	--with-seen-db=skiplist
 CONFIGURE_ARGS+=	--with-subs-db=flat
 CONFIGURE_ARGS+=	--with-tls-db=db3_nosync
-# I'm not 100% ready to override the defaults till I've checked any side
-# effects - chris@nb.org
 .endif
-
-CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
-CONFIGURE_ENV+=		ac_cv_lib_wrap_request_init=yes
 
 .if exists(/usr/include/krb5/com_err.h)
 CPPFLAGS+=		-I/usr/include/krb5
@@ -93,6 +95,12 @@ FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
 PERL5_PACKLIST= \
 	${PERL5_SITEARCH}/auto/Cyrus/IMAP/.packlist			\
 	${PERL5_SITEARCH}/auto/Cyrus/SIEVE/managesieve/.packlist
+
+.include "../../databases/db3/buildlink3.mk"
+.include "../../lang/perl5/module.mk"
+.include "../../security/cyrus-sasl2/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 
 # Change references of some manpages from foo.8 to cyrus-foo.8 to avoid
 # manpage conflicts with other packages.  Also change references to
@@ -133,12 +141,6 @@ post-install:
 	cd ${WRKSRC}/doc; for file in *.html cyrusv2.mc; do		\
 		${INSTALL_DATA} $$file ${HTMLDIR};			\
 	done
-
-.include "../../databases/db3/buildlink3.mk"
-.include "../../lang/perl5/module.mk"
-.include "../../security/cyrus-sasl2/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
 
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
