@@ -1,0 +1,640 @@
+--- ../tkined/apps/ip_discover.tcl	Thu Sep 12 22:01:03 1996
++++ ../tkined/apps/ip_discover.tcl	Thu Mar  6 17:11:38 1997
+@@ -21,6 +21,17 @@
+ IpInit IP-Discover
+ 
+ ##
++## Mapping sysObjectID to icons
++##
++
++set sysid2icon(1.3.6.1.4.1.311.1.1.3.1) pc.xbm
++set sysid2icon(1.3.6.1.4.1.9.1) cisco.xbm
++set sysid2icon(1.3.6.1.4.1.11.2.3.9.1) laser.xbm
++set sysid2icon(1.3.6.1.4.1.75.5.80.1.1) concent.xbm
++set sysid2icon(1.3.6.1.4.10.250.8) unixpc.xbm
++set sysid2icon(1.3.6.1.4.1.42.2) SUN-Server.xbm
++
++##
+ ## These are the global parameters that control the discovering
+ ## process. They are manipulated by the "Discover Parameter" proc.
+ ##
+@@ -30,7 +41,15 @@
+ set columns 16
+ set report true
+ set debug false
+-
++set communities {public private}
++set suppresdomain {.foo.bar.com}
++set parallel 10
++
++for {set i 1} {$i < 32} {incr i} {
++        set a [expr 0xffffffff << $i]
++        set b [expr ($a >> 24) & 0xff].[expr ($a >> 16) & 0xff].[expr ($a >> 8) & 0xff].[expr ($a) & 0xff]
++        set subnetbits($b) /[expr 32-$i]
++}
+ 
+ ##
+ ## During our icmp fire, we build up the following tables.
+@@ -48,13 +67,30 @@
+ ##
+ 
+ ##
++## We want to do things in parallel, so this procedure comes handy
++##
++
++proc forsome {var count list code} {
++    upvar 1 $var sublist
++    set rel [expr $count - 1]
++    while {[llength $list]} {
++	set sublist [lrange $list 0 $rel]
++	uplevel 1 "$code"
++	set list [lrange $list $count end]
++    }
++}
++
++##
+ ## Reset the global tables. This is now called before we start anything
+ ## else to recover from abnormal terminated runs.
+ ##
+ 
+ proc reset {} {
+-    catch {
+-	unset nodes networks links ids trace mask fip name address gateways
++    foreach i {
++	nodes networks links ids trace mask fip name address gateways snmp
++	icon } {
++	global $i
++	catch "unset $i"
+     }
+ }
+ 
+@@ -146,20 +182,23 @@
+ ##
+ 
+ proc netping { network } {
++    global parallel
+     set result ""
++    set res ""
+     if {[regexp "^\[0-9\]+\.\[0-9\]+\.\[0-9\]+$" $network] > 0} {
+ 	set hosts ""
+ 	for {set a4 1} {$a4<255} {incr a4} {
+-	    append hosts " $network.$a4"
++	    lappend hosts "$network.$a4"
+ 	}
+-	set result [icmp echo $hosts]
+-    }
+-    set res ""
+-    foreach pr $result {
+-	set pr_ip [lindex $pr 0]
+-	set pr_time [lindex $pr 1]
+-	if {$pr_time>=0} {
+-	    lappend res $pr_ip
++	forsome lst $parallel $hosts {
++	    debug "** ping $lst"
++	    foreach pr [icmp echo $lst] {
++		set pr_ip [lindex $pr 0]
++		set pr_time [lindex $pr 1]
++		if {$pr_time>=0} {
++		    lappend res $pr_ip
++		}
++	    }
+ 	}
+     }
+     return $res
+@@ -246,13 +285,13 @@
+ }
+ 
+ ##
+-## Get a trace of the routes to very node. Store them in the global
++## Get a trace of the routes to every node. Store them in the global
+ ## array trace. If we find nodes that were not discovered using the
+ ## icmp fire, put them in the global table.
+ ##
+ 
+ proc discover_traces {} {
+-    global ids nodes trace address
++    global ids nodes trace address parallel
+     set count 0
+     set start [clock seconds]
+ 
+@@ -260,19 +299,14 @@
+     foreach id [array names nodes] {
+ 	set ip $address($id)
+ 	lappend addrs $ip
+-	if {[llength $addrs] > 255} {
+-	    foreach route [trace_route $addrs] {
+-		set id $ids([lindex $route 0])
+-		set trace($id) [lindex $route 1]
+-		incr count
+-	    }
+-	    set addrs ""
+-	}
+     }
+-    foreach route [trace_route $addrs] {
+-	set id $ids([lindex $route 0])
+-	set trace($id) [lindex $route 1]
+-	incr count
++    forsome lst $parallel $addrs {
++	debug "** trace $lst"
++	foreach route [trace_route $lst] {
++	    set id $ids([lindex $route 0])
++	    set trace($id) [lindex $route 1]
++	    incr count
++	}
+     }
+ 
+     # add new discovered nodes to the global tables
+@@ -301,26 +335,22 @@
+ ##
+ 
+ proc discover_masks {} {
+-    global nodes ids mask address
++    global nodes ids mask address parallel
+     set count 0
+     set start [clock seconds]
+ 
+     set addrs ""
+     foreach id [array names nodes] {
++	if {[info exists mask($id)]} continue
+ 	lappend addrs $address($id)
+-	if {[llength $addrs] > 255} {
+-	    foreach ipmask [icmp mask $addrs] {
+-		set id $ids([lindex $ipmask 0])
+-		set mask($id) [lindex $ipmask 1]
+-		incr count
+-	    }
+-	    set addrs ""
+-	}
+     }
+-    foreach ipmask [icmp mask $addrs] {
+-	set id $ids([lindex $ipmask 0])
+-	set mask($id) [lindex $ipmask 1]
+-	incr count
++    forsome lst $parallel $addrs {
++	debug "** masks $lst"
++	foreach ipmask [icmp mask $lst] {
++	    set id $ids([lindex $ipmask 0])
++	    set mask($id) [lindex $ipmask 1]
++	    incr count
++	}
+     }
+     writeln "$count netmasks queried in [expr {[clock seconds]-$start}] seconds."
+     flush stdout
+@@ -334,31 +364,101 @@
+ ## ===========================================================================
+ ##
+ 
+-proc discover_snmp_callback {id s e} {
+-    global snmp
++proc discover_snmp_callback {id s e {v ""}} {
++    global snmp icon sysid2icon
+     if {$e == "noError"} {
+ 	set snmp($id) [$s configure]
++	foreach i [array names sysid2icon] {
++		if {[string first $i [lindex $v 2]] == 0} {
++			set icon($id) $sysid2icon($i)
++		}
++	}
++	debug $v
+     }
+     $s destroy
+ }
+ 
+ proc discover_snmp {} {
+-    global nodes address snmp
+-    global icmp_retries icmp_timeout
++    global nodes address snmp communities ids parallel
++    global icmp_retries icmp_timeout mask gateways icon
++
+     set start [clock seconds]
+     mib load rfc1213.mib
+-    foreach id [array names nodes] {
+-        set ip $address($id)
+-	if {[catch {snmp session -address $ip \
+-		-retries $icmp_retries -timeout $icmp_timeout} s]} continue
++    foreach com $communities {
++	debug "** Looking for community $com"
++	set ips ""
++	foreach id [array names nodes] {
++	    if {[info exists snmp($id)]} continue
++	    lappend ips $address($id)
++	}
++	forsome ipl $parallel $ips {
++	    debug "** snmp community $com $ipl"
++	    foreach ip $ipl {
++		if {[catch {snmp session -address $ip -community $com \
++		    -retries $icmp_retries -timeout $icmp_timeout} s]} continue
++		if {[catch {
++		    $s get sysObjectID.0 "discover_snmp_callback $ids($ip) %S %E %V"
++		} msg]} {
++		    writeln "Oops: $ip get sysObjectID.0: $msg"
++		}
++		update
++		snmp wait
++	    }
++	}
++    }
++    foreach i [array names snmp] {
++	set s [eval snmp session $snmp($i)]
++	set l ""
++	catch {unset ifstate}
++	debug "** Walk [$s configure]"
++	if {[catch {$s walk x "ifIndex ifAdminStatus" {
++		set ifstate([lindex [lindex $x 0] 2]) [lindex [lindex $x 1] 2]
++	    } } msg]} {
++	    writeln "Oops: $msg from $s"
++	    continue
++	}
+ 	if {[catch {
+-	    $s get sysObjectID.0 [list discover_snmp_callback $id "%S" "%E"]
+-	} msg]} {
+-	    writeln "Oops: $ip get sysObjectID.0: $msg"
++	    $s walk x "ipAdEntAddr ipAdEntNetMask ipAdEntIfIndex" { 
++		set a [lindex [lindex $x 0] 2]
++		if {$a == "0.0.0.0"} continue
++		if {$a == "1.1.1.1"} continue
++		if {$a == "127.0.0.1"} continue
++		set if [lindex [lindex $x 2] 2]
++		if {$ifstate($if) != "up"} continue
++		lappend l $a
++		set m [lindex [lindex $x 1] 2]
++		if {$a == $address($i)} { 
++		    set mask($i) $m 
++		} elseif {![info exists ids($a)]} {
++		    create_node $a
++		    set j $ids($a)
++		    set mask($j) $m
++		    set snmp($j) $snmp($i)
++		    if {[info exists icon($i)]} {
++debug "** id $j $a/$m icon $icon($i)"
++			set icon($j) $icon($i)
++		    }
++		    debug "** New interface: $j $a $m"
++		}
++	    } } msg]} {
++	    writeln "Oops: $msg from $s"
++	    continue
++	}
++		
++	if {[llength $l] > 1} {
++	    foreach j $l {
++		set ll "$j"
++		foreach k $l {
++		    if {$k != $j} {
++			lappend ll "$k"
++		    }
++		}
++		set gateways($ids($j)) $ll
++	    }
+ 	}
+-        update
++	$s destroy
+     }
+-    snmp wait
++    
+     set count [llength [array names snmp]]
+     writeln "$count snmp agents queried in [expr {[clock seconds]-$start}] seconds."
+     flush stdout
+@@ -380,33 +480,26 @@
+ ##
+ 
+ proc discover_fips {} {
+-    global nodes ids fip address
++    global nodes ids fip address parallel
+     set count 0
+     set start [clock seconds]
+ 
+     set addrs ""
+-    set idlist ""
++    set idx 0
+     foreach id [array names nodes] {
+ 	lappend addrs $address($id)
+-	lappend idlist $id
+-	if {[llength $addrs] > 255} {
+-	    set idx 0
+-	    foreach ipfip [icmp ttl 32 $addrs] {
+-		set id [lindex $idlist $idx]
+-		set fip($id) [lindex $ipfip 0]
+-		incr count
+-		incr idx
+-	    }
+-	    set addrs ""
+-	    set idlist ""
+-	}
++	set idlist($idx) $id
++	incr idx
+     }
+     set idx 0
+-    foreach ipfip [icmp ttl 32 $addrs] {
+-	set id [lindex $idlist $idx]
+-	set fip($id) [lindex $ipfip 0]
+-	incr count
+-	incr idx
++    forsome lst $parallel $addrs {
++	debug "** fips $lst"
++	foreach ipfip [icmp ttl 32 $lst] {
++	    set id $idlist($idx)
++	    set fip($id) [lindex $ipfip 0]
++	    incr count
++	    incr idx
++	}
+     }
+     writeln "$count ip addresses queried in [expr {[clock seconds]-$start}] seconds."
+     flush stdout
+@@ -513,6 +606,7 @@
+     foreach id [array names nodes] {
+ 	set ip $address($id)
+ 	set netmask $mask($id)
++	if {$netmask == "0.0.0.0"} continue;
+ 
+ 	# Get the official network for this node.
+ 
+@@ -526,22 +620,25 @@
+ 	    D { set bytes "" }
+ 	}
+ 	set net [join $bytes .]
+-	if {![info exists table($net)]} { set table($net) $mmm }
++
++debug ">> $ip $netmask $net $mmm"
++
++	#if {![info exists table($net)]} { set table($net) $mmm }
+ 
+ 	# Sanity check for incorrect netmasks. Netmasks wider than
+ 	# the official network type don't make any sense. Ignore
+ 	# problems that are due to the loopback mask of the localhost.
+ 	
+-	if {$netmask == "0.0.0.0"} continue;
+ 	if { [ip_network $net $netmask] != $net } {
+ 	    if {![catch {nslook [exec hostname]} localhost]} {
+ 		if {[string trim $localhost] == $ip} continue
+ 	    }
+-	    set txt "Please check the netmask $netmask for $ip on class $class network $net."
++	    set txt "Please check the netmask $netmask for $ip on network $net."
+ 	    ined acknowledge $txt
+ 	    if {$report == "true"} {
+ 		writeln $txt
+ 	    }
++	    set mask($id) "0.0.0.0"
+ 	    continue
+ 	}
+ 
+@@ -550,6 +647,21 @@
+ 	set subnet [ip_network $ip $netmask]
+ 	if {![info exists table($subnet)]} { set table($subnet) $netmask }
+     }
++    foreach id [array names nodes] {
++	set ip $address($id)
++	set netmask $mask($id)
++	if {$netmask != "0.0.0.0"} continue;
++
++debug "))) $ip $netmask $mmm"
++	foreach net [array names table] {
++	    if {[ip_ismember $ip $net [lindex $table($net) 0]]} {
++		set mask($id) $table($net)
++debug "=== $ip $mask($id) $net "
++		break
++	    }
++	}
++
++    }
+ 
+     if {[info exist table]} {
+ 
+@@ -618,6 +730,7 @@
+ 		incr cons
+ 	    }
+ 	}
++        writeln "Network $net ($pros, $cons, $unk)." 
+ 	if {$cons > $pros} {
+ 	    set res [ined confirm \
+   "The majority ($cons : $pros) of nodes on network $net have wide netmasks." \
+@@ -745,6 +858,7 @@
+ 
+     writeln "$count gateways discovered in [expr {[clock seconds]-$start}] seconds."
+     flush stdout
++
+ }
+ 
+ 
+@@ -863,7 +977,7 @@
+ ##
+ 
+ proc merge_gateways {} {
+-    global ids nodes networks links gateways address name
++    global ids nodes networks links gateways address name snmp
+     set count 0
+     set start [clock seconds]
+ 
+@@ -871,7 +985,10 @@
+ 
+     debug "** entering merge_gateways"
+     foreach id [array names gateways] {
+-	if {[llength $gateways($id)] < 2} continue
++	if {[llength $gateways($id)] < 2} {
++		unset gateways($id)
++		continue
++	}
+ 	debug "** gateways ($id) :\t $gateways($id)"
+     }
+ 
+@@ -888,8 +1005,6 @@
+ 
+     foreach id [array names gateways] {
+ 
+-	if {[llength $gateways($id)] < 2} continue
+-
+ 	set myip [lindex $gateways($id) 0]
+ 	if {[info exists done($myip)]} {
+ 	    debug "** $myip skipped - $myip is already done"
+@@ -952,12 +1067,16 @@
+ 	    # addresses for which there is no id. We get such beasts
+ 	    # when checking the returned udp address.
+ 	    
+-	    if {![info exists ids($ip)]} continue
+-	    
++	    if {![info exists ids($ip)]} {
++		writeln "skipping $ip for reasons we don't understand"
++		continue
++	    }
++
+ 	    set rid $ids($ip)
+ 	    catch {unset nodes($rid)}
+ 	    catch {unset address($rid)}
+ 	    catch {unset name($rid)}
++	    catch {unset snmp($rid)}
+ 	    
+ 	    # Adjust the links pointing to rid.
+ 	    
+@@ -997,7 +1116,8 @@
+ ##
+ 
+ proc talk_to_ined {} {
+-    global nodes networks links address snmp name
++    global nodes networks links address snmp name gateways subnetbits
++    global suppresdomain icon
+     set count 0
+     set start [clock seconds]
+ 
+@@ -1018,6 +1138,9 @@
+ 		NODE {
+ 		    set addr [GetIpAddress $comp]
+ 		    set id_by_addr($addr) $id
++		    foreach a [ined attribute $id "allIP"] {
++			    set id_by_addr($a) $id
++		    }
+ 		}
+ 		NETWORK {
+ 		    set id_by_addr([ined address $comp]) $id
+@@ -1045,13 +1168,22 @@
+ 	if {[info exists id_by_addr($ip)]} {
+ 	    set ined_id($id) $id_by_addr($ip)
+ 	} else {
++	    set nm "[lindex $name($id) 0]" 
++	    regsub "\(.*\)$suppresdomain\$" "$nm" {\1} nm
+ 	    set ined_id($id) [ined -noupdate create NODE]
+ 	    ined -noupdate address $ined_id($id) $ip
+-	    ined -noupdate name $ined_id($id) "[lindex $name($id) 0]"
++	    ined -noupdate name $ined_id($id) "$nm"
+ 	    ined -noupdate label $ined_id($id) name
+ 	    ined -noupdate move $ined_id($id) [nextx] [nexty]
+ 	    if {[info exists snmp($id)]} {
+ 		ined -noupdate attribute $ined_id($id) "SNMP:Config" $snmp($id)
++		ined -noupdate color $ined_id($id) brown
++	    }
++	    if {[info exists icon($id)]} {
++		ined -noupdate icon $ined_id($id) $icon($id)
++	    }
++	    if {[info exists gateways($id)]} {
++		ined -noupdate attribute $ined_id($id) "allIP" $gateways($id)
+ 	    }
+ 	    set id_by_addr($ip) $ined_id($id)
+ 	    incr count
+@@ -1074,11 +1206,12 @@
+ 	if {[info exists id_by_addr($ip)]} {
+ 	    set ined_id($id) $id_by_addr($ip) 
+ 	} else {
+-	    set ined_id($id) [ined -noupdate create NETWORK 0 0 300 0]
+-	    ined -noupdate name $ined_id($id) "$ip $type"
++	    set ined_id($id) [ined -noupdate create NETWORK 0 0 100 0]
++	    ined -noupdate name $ined_id($id) "$ip$subnetbits($networks($id))"
+ 	    ined -noupdate address $ined_id($id) $ip
+ 	    ined -noupdate label $ined_id($id) name
+ 	    ined -noupdate move $ined_id($id) [nextx] [nexty]
++	    ined -noupdate attribute $ined_id($id) "netmask" $networks($id)
+ 	    set id_by_addr($ip) $ined_id($id)
+ 	    incr count
+ 	}
+@@ -1125,7 +1258,7 @@
+ 
+ proc "Discover IP Network" {list} {
+ 
+-    global nodes networks links ids trace mask fip name address gateways
++    global nodes networks links ids trace mask fip name address gateways snmp
+     static nets
+ 
+     reset
+@@ -1171,15 +1304,16 @@
+     foreach network $nets { discover_nodes $network }
+     if {[info exists nodes]} {
+ 	discover_traces
+-	discover_masks
+ 	discover_snmp
++	discover_masks
+ 	discover_fips
+ 	discover_networks
+ 	discover_gateways
+ 	discover_links
+ 	merge_gateways
+ 	talk_to_ined
+-	unset nodes networks links ids trace mask fip name address
++	catch {unset nodes networks links ids trace mask fip name address}
++	catch {unset snmp}
+ 	catch {unset gateways}
+     }
+ 
+@@ -1195,7 +1329,7 @@
+ 
+ proc "Discover Route" {list} {
+ 
+-    global nodes networks links ids trace mask fip name address gateways
++    global nodes networks links ids trace mask fip name address gateways snmp
+     static ips
+ 
+     reset
+@@ -1249,8 +1383,8 @@
+ 
+     if {[info exists nodes]} {
+ 	discover_traces
+-	discover_masks
+ 	discover_snmp
++	discover_masks
+ 	discover_fips
+ 	discover_networks
+ 	discover_gateways
+@@ -1259,6 +1393,7 @@
+ 	talk_to_ined
+ 	unset nodes networks links ids trace mask fip name address
+ 	catch {unset gateways}
++	catch {unset snmp}
+ 	
+     }
+ 
+@@ -1276,6 +1411,9 @@
+     global email_trace
+     global report
+     global debug
++    global communities
++    global suppresdomain
++    global parallel
+ 
+     set result [ined request "IP-Discover Parameter" \
+ 	[list [list "# of ICMP retries:" $icmp_retries scale 1 10] \
+@@ -1287,7 +1425,10 @@
+           [list "Nodes per row:" $columns scale 10 40] \
+           [list "Email Discover Routes:" $email_trace radio true false] \
+           [list "Write Report:" $report radio true false] \
+-          [list "Debug Mode:" $debug radio true false] ] \
++          [list "Debug Mode:" $debug radio true false]  \
++          [list "SNMP Communities:" $communities entry 10]  \
++          [list "Suppress Domain:" $suppresdomain entry 10]  \
++          [list "Parallelism:" $parallel scale 1 255] ] \
+         [list "set values" cancel] ]
+ 
+     if {[lindex $result 0] == "cancel"} return
+@@ -1302,6 +1443,9 @@
+     set email_trace      [lindex $result  8]
+     set report           [lindex $result  9]
+     set debug            [lindex $result 10]
++    set communities      [lindex $result 11]
++    set suppresdomain    [lindex $result 12]
++    set parallel	 [lindex $result 13]
+ 
+     icmp -retries $icmp_retries
+     icmp -timeout $icmp_timeout
+@@ -1408,7 +1552,7 @@
+ 
+ proc ined_create {host user} {
+     global nodes networks links ids trace mask fip name address gateways
+-    global hosts email_trace
++    global hosts email_trace snmp
+ 
+     if {![info exists hosts($host)]} {
+ 	set hosts($host) $host
+@@ -1425,8 +1569,8 @@
+ 	
+ 	if {[info exists nodes]} {
+ 	    discover_traces
+-	    discover_masks
+ 	    discover_snmp
++	    discover_masks
+ 	    discover_fips
+ 	    discover_networks
+ 	    discover_gateways
+@@ -1435,6 +1579,7 @@
+ 	    talk_to_ined
+ 	    unset nodes networks links ids trace mask fip name address
+ 	    catch {unset gateways}
++	    catch {unset snmp}
+ 	}
+ 	
+ 	writeln "discover finished in [expr {[clock seconds]-$start}] seconds"
