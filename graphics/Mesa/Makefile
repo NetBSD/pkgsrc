@@ -1,10 +1,7 @@
-# New ports collection makefile for:    Mesa
-# Version required:     2.2
-# Date created:         Tue Feb  7 12:02:49  1995
-# Whom:                 hsu
+# Makefile for:		Mesa
+# Version required:     2.6
 #
-# $NetBSD: Makefile,v 1.10 1998/03/05 20:56:25 mycroft Exp $
-# FreeBSD Id: Makefile,v 1.19 1997/09/30 19:21:40 max Exp
+# $NetBSD: Makefile,v 1.11 1998/03/20 06:19:05 mycroft Exp $
 #
 
 DISTNAME=       MesaLib-2.6
@@ -15,7 +12,7 @@ MASTER_SITES= 	ftp://iris.ssec.wisc.edu/pub/Mesa/ \
 DISTFILES=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX} \
 		MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	ports@FreeBSD.ORG
+MAINTAINER=	mycroft@NetBSD.ORG
 
 WRKSRC=         ${WRKDIR}/${PKGNAME}
 ALL_TARGET=	netbsd
