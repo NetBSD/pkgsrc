@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2004/03/12 20:06:29 wiz Exp $
+$NetBSD: distinfo,v 1.4 2004/12/02 13:24:15 wiz Exp $
 
-SHA1 (asc-source-1.14.0.0.tar.gz) = e824ee99ff39a1e429073a967592105b677a3723
-Size (asc-source-1.14.0.0.tar.gz) = 7826750 bytes
+SHA1 (asc-source-1.15.2.1.tar.gz) = 9311d1b668f4a4151e720d76d605b21268f8b4af
+Size (asc-source-1.15.2.1.tar.gz) = 7987215 bytes
 SHA1 (frontiers.mp3) = 7c6753fb5fe5e498fa780271da0a302c0619a1ca
 Size (frontiers.mp3) = 4407769 bytes
 SHA1 (machine_wars.mp3) = d05e92b46ae0e90d9f3b38ce9c4b41bde599a02e
