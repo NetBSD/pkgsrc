@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.1 2004/10/06 09:49:53 grant Exp $
+# $NetBSD: xlc.mk,v 1.2 2004/10/06 13:56:46 grant Exp $
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -19,8 +19,8 @@ _LANGUAGES.xlc+=	${LANGUAGES.xlc:M${_lang_}}
 
 _XLC_DIR=	${WRKDIR}/.xlc
 _XLC_LINKS=	# empty
-.if exists(${XLCBASE}/bin/cc)
-_XLC_CC=	${_XLC_DIR}/bin/cc
+.if exists(${XLCBASE}/bin/xlc)
+_XLC_CC=	${_XLC_DIR}/bin/xlc
 _XLC_LINKS+=	_XLC_CC
 PKG_CC=		${_XLC_CC}
 CC=		${PKG_CC:T}
@@ -32,8 +32,8 @@ PKG_CXX=	${_XLC_CXX}
 CXX=		${PKG_CXX:T}
 .endif
 
-.if exists(${XLCBASE}/bin/cc)
-CC_VERSION_STRING!=	${XLCBASE}/bin/cc -V 2>&1 | ${GREP} 'IBM XL C.*for' | ${SED} -e 's/^ *//' || ${TRUE}
+.if exists(${XLCBASE}/bin/xlc)
+CC_VERSION_STRING!=	${XLCBASE}/bin/xlc -V 2>&1 | ${GREP} 'IBM XL C.*for' | ${SED} -e 's/^ *//' || ${TRUE}
 CC_VERSION=		${CC_VERSION_STRING}
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
