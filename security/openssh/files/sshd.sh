@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sshd.sh,v 1.10 2002/09/20 02:02:00 grant Exp $
+# $NetBSD: sshd.sh,v 1.11 2003/05/22 09:05:38 wiz Exp $
 #
 # PROVIDE: sshd
 # REQUIRE: DAEMON LOGIN
@@ -50,14 +50,19 @@ sshd_precmd()
 	if [ ! -f @PKG_SYSCONFDIR@/ssh_host_key -o \
 	     ! -f @PKG_SYSCONFDIR@/ssh_host_dsa_key -o \
 	     ! -f @PKG_SYSCONFDIR@/ssh_host_rsa_key ]; then
-		$0 keygen
+		if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -f /etc/rc.d/DAEMON ]
+		then
+			run_rc_command keygen
+		else
+			eval ${keygen_cmd}
+		fi
 	fi
 }
 
 keygen_cmd=sshd_keygen
 start_precmd=sshd_precmd
 
-if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
+if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -f /etc/rc.d/DAEMON ]
 then
 	load_rc_config $name
 	run_rc_command "$1"
