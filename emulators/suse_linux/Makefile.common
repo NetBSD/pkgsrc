@@ -1,8 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2000/12/16 22:37:32 tron Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/12/17 13:05:44 tron Exp $
 
-MASTER_SITE_SUSE=	ftp://ftp.suse.com/pub/suse/i386/6.3/suse/
+SUSE_VERSION?=		6.4
 
-DIST_SUBDIR?=		suse63
+MASTER_SITE_SUSE=	ftp://ftp.suse.com/pub/suse/i386/${SUSE_VERSION}/suse/
+
+DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}
 
 WRKSRC?=		${WRKDIR}
 MANCOMPRESSED?=		yes
