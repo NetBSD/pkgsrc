@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/06/29 11:47:12 rh Exp $
+
+--- include/libxml/Makefile.in.orig	Tue Jun 26 18:11:28 2001
++++ include/libxml/Makefile.in	Fri Jun 29 07:54:49 2001
+@@ -117,7 +117,7 @@
+ Z_CFLAGS = @Z_CFLAGS@
+ Z_LIBS = @Z_LIBS@
+ 
+-xmlincdir = $(includedir)/libxml
++xmlincdir = $(includedir)/libxml2/libxml
+ 
+ xmlinc_HEADERS =  		SAX.h 		entities.h 		encoding.h 		parser.h 		parserInternals.h 		xmlerror.h 		HTMLparser.h 		HTMLtree.h 		debugXML.h 		tree.h 		list.h 		hash.h 		xpath.h 		xpathInternals.h 		xpointer.h 		xinclude.h 		xmlIO.h 		xmlmemory.h 		nanohttp.h 		nanoftp.h 		uri.h 		valid.h 		xlink.h 		xmlversion.h 		xmlwin32version.h 		DOCBparser.h 		catalog.h
+ 
+@@ -276,7 +276,7 @@
+ 
+ 
+ install-exec-hook:
+-	$(mkinstalldirs) $(DESTDIR)$(xmlincdir) $(DESTDIR)$(xmlincdir)/libxml
++	$(mkinstalldirs) $(DESTDIR)$(xmlincdir)
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
