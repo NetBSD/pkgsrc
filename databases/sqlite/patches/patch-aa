@@ -1,8 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2003/12/30 14:41:09 cjep Exp $
+$NetBSD: patch-aa,v 1.6 2004/03/31 05:50:17 snj Exp $
 
---- ../sqlite/src/attach.c.orig	2003-06-14 13:04:08.000000000 +0100
-+++ ../sqlite/src/attach.c
-@@ -15,2 +15,3 @@
+--- ../sqlite/src/sqliteInt.h.orig	2004-03-30 21:10:23.000000000 -0800
++++ ../sqlite/src/sqliteInt.h	2004-03-30 21:12:51.000000000 -0800
+@@ -14,6 +14,7 @@
+ ** @(#) $Id: patch-aa,v 1.6 2004/03/31 05:50:17 snj Exp $
  */
+ #include "config.h"
 +#include "os.h"
- #include "sqliteInt.h"
+ #include "sqlite.h"
+ #include "hash.h"
+ #include "parse.h"

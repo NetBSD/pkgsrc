@@ -1,29 +1,5 @@
-$NetBSD: distinfo,v 1.14 2003/12/30 14:41:09 cjep Exp $
+$NetBSD: distinfo,v 1.15 2004/03/31 05:50:17 snj Exp $
 
-SHA1 (sqlite-2.8.5.tar.gz) = f7819edfb360a14155c61f6c61f644ac3e3c514b
-Size (sqlite-2.8.5.tar.gz) = 817792 bytes
-SHA1 (patch-aa) = 6bb6d7778b517a3ad1ee630eba91526491cca5ea
-SHA1 (patch-ab) = 77ae6de033c741f99763b2ae3cda0d350d2142ae
-SHA1 (patch-ac) = 094c1143bbdb419fe9430a145afa7f35e8015c18
-SHA1 (patch-ad) = 7c805c28295464158a9888d67417f520e676355f
-SHA1 (patch-ae) = 7df7d4efb923e51ff66b0474cfb0fa41b81194fa
-SHA1 (patch-af) = bf1c47f3c4f0846a7513dbcb8bd4a12d6ec621bf
-SHA1 (patch-ag) = 0a0070ae00ad396c63c132ddc58aedc1b1087c2d
-SHA1 (patch-ah) = c5d0f884f0b644f0ffd086216081b073f8beb6d7
-SHA1 (patch-ai) = 53aec32dee3a7a3ee9e5e7ac5f58c2832e213124
-SHA1 (patch-aj) = 875fb93fb4152fcf56ce66ed1c56f8cd7867c79f
-SHA1 (patch-ak) = 921d2d9575080c174ca4ea467e55e34c9c959615
-SHA1 (patch-al) = 585c4266ba3dee04bb3c2b7ad1971a81823f05d2
-SHA1 (patch-am) = 242b1657a533b9d3b3d028328af898ed16c4ced5
-SHA1 (patch-an) = cc67198919f62825e993f9332f973013a5874e51
-SHA1 (patch-ao) = a7b5583b796ad744dac06e4d13093d72618276c9
-SHA1 (patch-ap) = 37f6853dac0cd6f2c1be602a0e30fe46122a36a0
-SHA1 (patch-aq) = f09c05affac7067d899a2586e8db2f26b8cc20b4
-SHA1 (patch-ar) = a8f0a10f0572531287fc3c8aa0c6e49b807822e7
-SHA1 (patch-as) = d23c2882f368a1f721bc82c4dd9b0ae68d1d709c
-SHA1 (patch-at) = 153dd5eec50f4268f5f1b54b2956b9a7b45a3446
-SHA1 (patch-au) = b379e6e9426fc5b273153af83a511db79a70883d
-SHA1 (patch-av) = f7513459ed3083ffdea162597709f1a924eb1e29
-SHA1 (patch-aw) = 7f33b270c299f8090f87c7fb7de91c7a201da82a
-SHA1 (patch-ax) = 22e7133dcdca779bbb8c3531570b587d43424a0c
-SHA1 (patch-ay) = b28e643bd51229de052181278d46d41a2bfb879e
+SHA1 (sqlite-2.8.13.tar.gz) = 42e426dab768a908f4e622ac65006732da4c615c
+Size (sqlite-2.8.13.tar.gz) = 956008 bytes
+SHA1 (patch-aa) = 21d2122f84de65cb29ae1b2d5b92984ac0868f98
