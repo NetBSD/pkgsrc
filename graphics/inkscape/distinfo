@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/10/15 03:11:50 reed Exp $
+
+SHA1 (inkscape-0.39.tar.bz2) = 60e5a424c443fd022ce240daf0569ba1cfe522ba
+Size (inkscape-0.39.tar.bz2) = 3181447 bytes
+SHA1 (patch-aa) = c17f095f727f668870c807722f64731e194a42c6
+SHA1 (patch-ac) = 69f84f3d7d8f710167b8a7d745a699c14f21c0f9
