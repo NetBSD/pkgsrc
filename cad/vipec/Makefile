@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/06/03 16:26:26 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/06/04 15:39:09 drochner Exp $
 #
 
 DISTNAME=	vipec-1.07
@@ -8,7 +8,7 @@ MASTER_SITES=	http://netfold.com/~vipec/public_ftp/unstable/
 MAINTAINER=	mcmahill@alum.mit.edu
 HOMEPAGE=	http://www.netfold.com/~vipec/
 
-DEPENDS+=	qt-1.42:../../x11/qt
+DEPENDS+=	qt-1.44:../../x11/qt
 
 USE_X11=	yes
 

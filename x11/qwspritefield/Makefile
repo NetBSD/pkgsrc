@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/03/23 21:08:01 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/06/04 15:39:10 drochner Exp $
 
 DISTNAME=	QwSpriteField1.6
 PKGNAME=	qwspritefield-1.6
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.troll.no/contrib/
 
 MAINTAINER=	tron@netbsd.org
 
-DEPENDS+=	qt-1.42:../../x11/qt
+DEPENDS+=	qt-1.44:../../x11/qt
 
 CONFLICTS=	kdesupport-1.0
 
