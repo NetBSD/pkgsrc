@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/20 04:11:07 minskim Exp $
+
+SHA1 (IO-LockedFile-0.23.tar.gz) = 4c285e28abb29e97673faa0f6bee646336dc929d
+Size (IO-LockedFile-0.23.tar.gz) = 7599 bytes
