@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/08/05 03:51:18 hubertf Exp $
+
+--- Imakefile.orig	Sun May  9 14:34:17 1999
++++ Imakefile	Thu Aug  5 05:32:09 1999
+@@ -2,10 +2,10 @@
+ LOCAL_LIBRARIES = $(XLIB)
+         DEPLIBS = $(DEPXLIB)
+   SYS_LIBRARIES = -lm
+-    CDEBUGFLAGS = -g -O2 -Wall -DDEFAULT_DATA_PATH="\"$(DATDIR)\""
++    CDEBUGFLAGS = -g -O2 -Wall -DDEFAULT_DATA_PATH="\"$(DATDIR)\"" -DPREFIX=\"${PREFIX}\"
+    INSTALLFLAGS = $(INSTBINFLAGS)
+-         DATDIR = /usr/local/share/xhangglider
+-	 BINDIR = /usr/local/bin
++         DATDIR = ${PREFIX}/share/xhangglider
++         BINDIR = ${PREFIX}/bin
+ 
+ 
+            SRCS = xhang.c 3ddraw.c pilot.c init.c

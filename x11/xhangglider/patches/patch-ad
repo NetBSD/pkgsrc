@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/08/05 03:51:18 hubertf Exp $
+
+--- init.c.orig	Thu Aug  5 05:27:57 1999
++++ init.c	Thu Aug  5 05:28:17 1999
+@@ -60,7 +60,7 @@
+   if (i) {
+     fprintf(stderr, "polygon data path %s not exist.\n", datadir);
+     fprintf(stderr, "To specify the path, describe it in the deffile like\n");
+-    fprintf(stderr, "PolygonDataPath /usr/share/xhangglider\n\n");
++    fprintf(stderr, "PolygonDataPath " PREFIX "/share/xhangglider\n\n");
+   }
+ 
+   return 0;

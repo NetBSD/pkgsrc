@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/08/05 03:51:18 hubertf Exp $
+
+--- def.h.orig	Thu Aug  5 05:27:25 1999
++++ def.h	Thu Aug  5 05:27:37 1999
+@@ -20,7 +20,7 @@
+ #define __DEF_H
+ 
+ #ifndef DEFAULT_DATA_PATH
+-#define DEFAULT_DATA_PATH "/usr/share/xhangglider"
++#define DEFAULT_DATA_PATH PREFIX "/share/xhangglider"
+ #endif
+ 
+ #define myTRUE 1
