@@ -1,0 +1,100 @@
+.\"	$NetBSD: feedback-patches.1,v 1.1 2004/11/23 22:00:48 hubertf Exp $
+.\"
+.\" Copyright (c) 2003 Hubert Feyrer. All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 3. All advertising materials mentioning features or use of this software
+.\"    must display the following acknowledgement:
+.\"	This product includes software developed by Hubert Feyrer
+.\"	for the NetBSD Project
+.\" 4. The name of the author may not be used to endorse or promote products
+.\"    derived from this software without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.Dd Sep 29, 2003
+.Dt FEEDBACK-PATCHES 1
+.Os
+.Sh NAME
+.Nm feedback-patches
+.Nd "help sending pkgsrc patches back"
+.Sh SYNOPSIS
+.Nm
+.Ar category/pkg
+.Op maintainer@software.org
+.Sh DESCRIPTION
+The
+.Nm
+script is intended to help sending back patches in the
+NetBSD Packages Collection, pkgsrc, back to the maintainers
+of the original package, for inclusion into future releases.
+The given 
+.Pa category/pkg
+is either a path relative to the pkgsrc base directory,
+or an absolute patch, which will be stripped the base
+directory.
+A pathname of
+.Pa \&.
+will be expanded to the current directory, which is useful
+when the current working directory is in a package's 
+directory in pkgsrc.
+.Pp
+If an email address is given, the patches will be sent to that
+address, with some nice words. If no email address is given,
+the mail will only be displayed instead of sent.
+.Sh EXAMPLES
+The command:
+.Pp
+.Dl feedback-patches audio/gqmpeg
+.Pp
+will display a mail that can be sent to the gqmpeg people
+with patches to include.
+.Pp
+.Dl feedback-patches somecat/dunno whoever@foobar.baz
+.Pp
+will invoke
+.Xr mail 1
+to send the patches back immediately.
+.Pp
+.Dl feedback-patches /usr/pkgsrc/somecat/dunno whoever@foobar.baz
+.Pp
+works just as well, you can use either full path or path relative
+to pkgsrc base when specifying a package. As you're usually already
+in the pkg's directory for finding out the contact address
+(probably by looking at the HOMEPAGE variable in the pkg's Makefile),
+you can also do:
+.Pp
+.Dl cd .../category/pkg
+.Dl feedback-patches `pwd` whoever@foobar.baz
+.Pp
+or
+.Pp
+.Dl cd .../category/pkg
+.Dl feedback-patches \ . whoever@foobar.baz
+.Pp
+.Sh SEE ALSO
+.Xr pkgdiff 1 ,
+.Xr mkpatches 1
+.Sh AUTHORS
+The feedback-patches utility was written by
+.An Hubert Feyrer Aq hubertf@NetBSD.org .
+.Sh BUGS
+Currently the pkgsrc base directory is hardcoded to
+.Pa /usr/pkgsrc .
