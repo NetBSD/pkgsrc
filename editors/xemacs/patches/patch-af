@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.3 1999/12/06 14:24:02 bouyer Exp $
+$NetBSD: patch-af,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
 
---- configure.in.orig	Sun Aug 15 03:29:49 1999
-+++ configure.in	Mon Dec  6 11:20:27 1999
-@@ -1027,6 +1027,7 @@
+--- configure.in.orig	Tue Jan  7 12:57:03 2003
++++ configure.in
+@@ -1079,6 +1079,7 @@
  
  dnl Straightforward machine determination
  case "$canonical" in
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.3 1999/12/06 14:24:02 bouyer Exp $
    sparc-*-*        ) machine=sparc ;;
    alpha*-*-*       ) machine=alpha ;;
    vax-*-*          ) machine=vax ;;
-@@ -1101,10 +1102,10 @@
+@@ -1157,10 +1158,10 @@
      case "$canonical" in
        i[[3-9]]86-*-netbsd*) machine=intel386 ;;
        hp300-*-netbsd* | amiga-*-netbsd* | sun3-*-netbsd* | mac68k-*-netbsd* | da30-*-netbsd* | m68k-*-netbsd* )
@@ -23,7 +23,7 @@ $NetBSD: patch-af,v 1.3 1999/12/06 14:24:02 bouyer Exp $
      esac
    ;;
  
-@@ -1941,7 +1942,7 @@
+@@ -2224,7 +2225,7 @@
      decosf* | linux* | irix*) dash_r="-rpath " ;;
      *)
        dash_r=""
@@ -32,7 +32,7 @@ $NetBSD: patch-af,v 1.3 1999/12/06 14:24:02 bouyer Exp $
          xe_check_libs="${try_dash_r}/no/such/file-or-directory"
          XE_PROTECT_LINKER_FLAGS(xe_check_libs)
          AC_TRY_LINK(, , dash_r="$try_dash_r")
-@@ -3485,6 +3486,9 @@
+@@ -4320,6 +4321,9 @@
      eval "with_${feature}=no"
    done
  fi dnl with_tty
@@ -41,4 +41,4 @@ $NetBSD: patch-af,v 1.3 1999/12/06 14:24:02 bouyer Exp $
 +AC_SUBST(LIBOSSAUDIO)
  
  dnl Do we need event-unixoid.o ?
- test "$with_x11" = "yes" -o "$with_tty" = "yes" && XE_ADD_OBJS(event-unixoid.o)
+ dnl This is needed for X, or for TTY, or for MSWIN w/Cygwin select()

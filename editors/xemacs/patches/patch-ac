@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2003/01/19 06:52:55 salo Exp $
+$NetBSD: patch-ac,v 1.5 2003/02/25 02:14:59 uebayasi Exp $
 
---- Makefile.in.orig	Mon Dec 18 04:03:32 2000
-+++ Makefile.in
-@@ -371,7 +371,7 @@
+--- Makefile.in.in.orig	Fri Nov  1 12:51:47 2002
++++ Makefile.in.in
+@@ -403,7 +403,7 @@
  ## all.  --cet
  
  check-features: all
@@ -11,16 +11,14 @@ $NetBSD: patch-ac,v 1.4 2003/01/19 06:52:55 salo Exp $
  
  install-only: ${MAKE_SUBDIR} check-features install-arch-dep install-arch-indep
  
-@@ -445,8 +445,12 @@
- 	## Note it's `xemacs' not ${PROGNAME}
+@@ -489,8 +489,10 @@
+ 	fi
  	cd ${srcdir}/etc && \
  	  for page in xemacs etags ctags gnuserv gnuclient gnuattach gnudoit; do \
 -	    ${INSTALL_DATA} ${srcdir}/etc/$${page}.1 ${mandir}/$${page}${manext} ; \
 -	    chmod 0644 ${mandir}/$${page}${manext} ; \
-+	    if [ $${page} = etags ] || [ $${page} = ctags ] ; \
-+	    then \
-+	      ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/xemacs-$${page}${manext} ; \
-+	    else \
++	    if test $${page} = etags || test $${page} = ctags ; then \
++	      ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/xemacs-$${page}${manext} ; else \
 +	      ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/$${page}${manext} ; \
 +	    fi \
  	  done
