@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/22 17:42:31 taca Exp $
+# $NetBSD: Makefile,v 1.10 2003/09/11 04:13:04 jlam Exp $
 
 DISTNAME=		ossl-0.1.4a
 PKGNAME=		${RUBY_PKGNAMEPREFIX}openssl-0.1.4.1
@@ -14,7 +14,6 @@ DIST_SUBDIR=		ruby
 USE_RUBY_EXTCONF=	yes
 RUBY_REQD=		1.6.4
 USE_BUILDLINK2=		# defined
-USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
 CONFLICTS=		ruby-ossl-*
 
 CONFIGURE_ARGS=		--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
