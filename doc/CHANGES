@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3328 2003/09/11 16:11:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.3329 2003/09/11 16:59:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3640,3 +3640,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gmplayer to 1.0rc1nb1 [jmmv 2003-09-11]
 	Updated squid to 2.5.1nb5 [taca 2003-09-11]
 	Updated magicpoint to 1.10a [jmmv 2003-09-11]
+	Updated ruby-termios to 0.9.4 [taca 2003-09-11]
