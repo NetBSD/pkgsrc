@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/11/08 16:23:02 mrg Exp $
+$NetBSD: distinfo,v 1.2 2005/01/11 05:12:56 hamajima Exp $
 
 SHA1 (compat16-sparc.tar.bz2) = f5cb874b06e2664582bf06680a952cf7bb571aaa
 Size (compat16-sparc.tar.bz2) = 2550861 bytes
+SHA1 (compat16-i386-1.6.0.tar.bz2) = 04c2fc19591941bb4ae79a2a909e5871b37dc33a
+Size (compat16-i386-1.6.0.tar.bz2) = 2478593 bytes
