@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/28 09:14:00 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 13:56:20 wiz Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 CATEGORIES=	comms
@@ -7,6 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.moshpit.org/pilotmgr/
+COMMENT=	synchronize databases on any 3Com Palm device
 
 DEPENDS+=	p5-Data-Dumper-*:../../devel/p5-Data-Dumper
 DEPENDS+=	p5-Digest-MD5-*:../../security/p5-Digest-MD5

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/08/27 07:11:00 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/16 13:59:26 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/08/04 22:47:16 ache Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=MIME/}
 
 MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/MIME-Base64/Base64.html
+COMMENT=		perl5 module for Base64 and Quoted-Printable encodings
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MIME/Base64/.packlist

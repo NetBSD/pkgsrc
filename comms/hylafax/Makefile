@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/10/01 11:22:36 rh Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/16 13:56:13 wiz Exp $
 #
 
 DISTNAME=	hylafax-4.1beta2
@@ -13,6 +13,7 @@ PATCHFILES=	tiff-3.5-interfaces.patch
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.hylafax.org/
+COMMENT=	Telecommunication and fax server system
 
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg

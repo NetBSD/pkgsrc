@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/15 00:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:51:27 wiz Exp $
 #
 
 DISTNAME=	ircu2.10.04
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://coder-com.undernet.org/
+COMMENT=	Internet Relay Chat server customized for Undernet
 
 GNU_CONFIGURE=	yes
 IS_INTERACTIVE=	yes

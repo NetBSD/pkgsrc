@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/08 16:06:45 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:56:23 wiz Exp $
 #
 
 DISTNAME=	ruby-termios-module-0.0.4
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://arika.org/pub/Tools/Ruby/
 
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://arika.org/ruby/termios.html
+COMMENT=	termios module for Ruby
 
 DEPENDS+=	ruby-1.4.*:../../lang/ruby
 

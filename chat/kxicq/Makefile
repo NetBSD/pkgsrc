@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/15 00:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:51:29 wiz Exp $
 
 DISTNAME=		kxicq-03132000
 CATEGORIES=		chat kde
@@ -6,6 +6,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kxicq/}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.kxicq.org/
+COMMENT=		KDE ICQ client
 
 DEPENDS+=		esound>=0.2.7:../../audio/esound
 DEPENDS+=		kdebase-1.1.2:../../x11/kdebase

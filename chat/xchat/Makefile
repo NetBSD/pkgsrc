@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/05 15:30:22 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 13:51:34 wiz Exp $
 
 DISTNAME=	xchat-1.6.2
 CATEGORIES=	chat x11 gnome
@@ -7,6 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://xchat.org/
+COMMENT=	X11 (X Window System) IRC client, using the GTK+ toolkit
 
 DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=	python>=2.0:../../lang/python

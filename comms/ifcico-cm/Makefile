@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/09/23 16:32:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 13:56:14 wiz Exp $
 #
 
 DISTNAME=	ifcico-3.0.cm.alpha-4.0
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.cosy.sbg.ac.at/~cmeer/files/
 
 MAINTAINER=	tv@netbsd.org	# aka "Todd Vierling" @ 1:396/1.5
 HOMEPAGE=	http://www.cosy.sbg.ac.at/~cmeer/ifcico/
+COMMENT=	FidoNet transport program using FTS protocols via dial or TCP
 
 post-build:
 	cd ${WRKSRC}/contrib/iftelnetd && ${MAKE} iftelnetd

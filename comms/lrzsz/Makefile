@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/06/12 18:38:14 rh Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 13:56:16 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:29 obrien Exp
 
 DISTNAME=	lrzsz-0.12.20
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.ohse.de/uwe/releases/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ohse.de/uwe/software/lrzsz.html
+COMMENT=	Receive/Send files via X/Y/ZMODEM protocol.  (unrestrictive)
 
 GNU_CONFIGURE=	yes
 
