@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2001/02/23 20:37:21 jtb Exp $
+# $NetBSD: Makefile,v 1.92 2001/02/24 15:48:21 jtb Exp $
 #
 
 COMMENT=	Programming languages
@@ -14,6 +14,7 @@ SUBDIR+=	camlp4
 SUBDIR+=	cim
 SUBDIR+=	cint
 SUBDIR+=	clisp
+SUBDIR+=	cu-prolog
 SUBDIR+=	drscheme
 SUBDIR+=	egcs
 SUBDIR+=	elisp-manual
