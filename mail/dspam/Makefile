@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:12:52 tv Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/22 05:43:29 xtraeme Exp $
 
-DISTNAME=	dspam-3.0.0
-PKGREVISION=	5
+DISTNAME=	dspam-3.2.0
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
@@ -15,25 +14,24 @@ USE_LIBTOOL=		yes
 USE_PERL5=		yes
 REPLACE_PERL=		tools/dspam_genaliases.in			\
 			tools/dspam_corpus.in				\
-			cgi/admin.cgi cgi/admingraph.cgi		\
-			cgi/dspam.cgi cgi/graph.cgi
+			cgi/*.cgi configure.pl.in
 
 PKGCONFIG_OVERRIDE+=	dspam.pc.in
 
-SUBST_CLASSES=		cgi
+SUBST_CLASSES+=		cgi
 SUBST_STAGE.cgi=	post-patch
 SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi
 SUBST_SED.cgi=		-e "s|/usr/local/bin/dspam|${PREFIX}/bin/dspam|g" \
 			-e "s|/var/dspam|${DSPAM_HOME}|g"		\
 			-e "s|/usr/local|${PREFIX}|g"			\
-			-e "s|LARGE_SCLAE|LARGE_SCALE|g"		\
 			-e "s|-deaf|${DSPAM_PSFLAGS}|g"
-SUBST_MESSAGE.cgi=	"Fixing paths and typos."
+SUBST_MESSAGE.cgi=	"Fixing paths and default options."
 
 BUILD_DEFS+=		DSPAM_HOME
 BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
 BUILD_DEFS+=		DSPAM_USER DSPAM_GROUP
 BUILD_DEFS+=		DSPAM_BINMODE
+BUILD_DEFS+=		DSPAM_LOGDIR
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,17 +41,17 @@ DSPAM_SIGNATURE_LIFE?=	14
 DSPAM_BINMODE?=		4511
 DSPAM_USER?=		dspam
 DSPAM_GROUP?=		dspam
+DSPAM_LOGDIR?=		${DSPAM_HOME}/log
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-chi-square
-CONFIGURE_ARGS+=	--enable-robinson-pvalues
 CONFIGURE_ARGS+=	--with-signature-life=${DSPAM_SIGNATURE_LIFE}
 CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}			\
 			--with-dspam-home-owner=${DSPAM_USER}		\
 			--with-dspam-home-group=${DSPAM_GROUP}		\
 			--with-dspam-owner=${DSPAM_USER}		\
 			--with-dspam-group=${DSPAM_GROUP}		\
-			--with-dspam-mode=${DSPAM_BINMODE}
+			--with-dspam-mode=${DSPAM_BINMODE}		\
+			--with-logdir=${DSPAM_LOGDIR}
 
 .include "options.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
@@ -61,34 +59,45 @@ CONFIGURE_ARGS+=	--with-dspam-home=${DSPAM_HOME}			\
 
 DOCDIR=		${PREFIX}/share/doc/dspam
 DATADIR=	${PREFIX}/share/dspam
+EGDIR=		${PREFIX}/share/examples/dspam
 
 USE_PKGINSTALL=		yes
+CONF_FILES=		${EGDIR}/dspam.conf ${PKG_SYSCONFDIR}/dspam.conf
+
 PKG_GROUPS=		${DSPAM_GROUP}
 PKG_USERS=		${DSPAM_USER}:${DSPAM_GROUP}
 SPECIAL_PERMS=		${PREFIX}/bin/dspam ${DSPAM_USER} ${DSPAM_GROUP} \
 			${DSPAM_BINMODE}
 OWN_DIRS_PERMS=		${DSPAM_HOME} ${DSPAM_USER} ${DSPAM_GROUP} 0770
 
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-install
+SUBST_FILES.conf=	dspam.conf.in
+SUBST_SED.conf=		-e "s,@dspam_home@,${DSPAM_HOME},g" \
+			-e "s,@delivery_agent@,${DSPAM_DELIVERY_AGENT_BIN},g"
+SUBST_MESSAGE.conf=	"Fixing configuration file."
+
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README* ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/RELEASE.NOTES ${DOCDIR}
 	${INSTALL_DATA_DIR} ${DATADIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/dspam.conf.in ${EGDIR}/dspam.conf
 .for d in txt cgi
 	${INSTALL_DATA_DIR} ${DATADIR}/${d}
 	cd ${WRKSRC}/${d} && ${PAX} -rwppm '-s|.*/Makefile.*$$||'	\
 		. ${DATADIR}/${d}
 .endfor
+	${RM} ${DATADIR}/cgi/configure.pl.in
 .undef d
-.if !empty(DSPAM_STORAGE_DRIVER:Mmysql)
-	${INSTALL_DATA_DIR} ${DATADIR}/mysql
-	cd ${WRKSRC}/tools.mysql_drv && ${PAX} -rwppm '-s|.*/Makefile.*$$||' \
-		. ${DATADIR}/mysql
-.endif
-.if !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
-	${INSTALL_DATA_DIR} ${DATADIR}/pgsql
-	cd ${WRKSRC}/tools.pgsql_drv && ${PAX} -rwppm '-s|.*/Makefile.*$$||' \
-		. ${DATADIR}/pgsql
-.endif
+.for drv in mysql pgsql sqlite
+.  if !empty(DSPAM_STORAGE_DRIVER:M${drv})
+	${INSTALL_DATA_DIR} ${DATADIR}/${drv}
+	cd ${WRKSRC}/tools.${drv}_drv && ${PAX} -rwppm '-s|.*/Makefile.*$$||' \
+		. ${DATADIR}/${drv}
+.  endif
+.endfor
+.undef drv
 
 .include "../../mk/bsd.pkg.mk"

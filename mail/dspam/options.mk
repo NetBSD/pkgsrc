@@ -1,41 +1,13 @@
-# $NetBSD: options.mk,v 1.3 2004/08/22 19:32:51 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2004/10/22 05:43:29 xtraeme Exp $
 
-.if defined(DSPAM_HOMEDIR_DOTFILES) && \
-    !empty(DSPAM_HOMEDIR_DOTFILES:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	dotfiles
-.endif
-.if defined(DSPAM_USE_WEBMAIL) && !empty(DSPAM_USE_WEBMAIL:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	webmail
-.endif
-.if defined(DSPAM_SIGNATURE_ATTACHMENTS) && \
-    !empty(DSPAM_SIGNATURE_ATTACHMENTS:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	sig-attachment
-.endif
-.if defined(DSPAM_SIGNATURE_HEADERS) && \
-    !empty(DSPAM_SIGNATURE_HEADERS:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	sig-headers
-.endif
-.if defined(DSPAM_LARGESCALE) && !empty(DSPAM_LARGESCALE:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	largescale
-.endif
-.if defined(DSPAM_VIRTUAL_USERS) && !empty(DSPAM_VIRTUAL_USERS:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	virtualusers
-.endif
-.if defined(DSPAM_CGI_GRAPHS) && !empty(DSPAM_CGI_GRAPHS:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	graphs
-.endif
-.if defined(DSPAM_CLIENT_COMPRESSION) && \
-    !empty(DSPAM_CLIENT_COMPRESSION:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	compress
-.endif
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dspam
-PKG_SUPPORTED_OPTIONS=	compress dotfiles graphs largescale		\
-			long-usernames sig-attachment sig-headers	\
-			spam-subject virtualusers webmail
+PKG_SUPPORTED_OPTIONS=	largescale homedir long-usernames graphs \
+			domainscale
+
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -50,13 +22,16 @@ PKG_SUPPORTED_OPTIONS=	compress dotfiles graphs largescale		\
 DSPAM_DELIVERY_AGENT?=		procmail
 BUILD_DEFS+=		DSPAM_DELIVERY_AGENT
 .if !empty(DSPAM_DELIVERY_AGENT:Mprocmail)
+DSPAM_DELIVERY_AGENT_BIN?=	${LOCALBASE}/bin/procmail
 BUILD_DEPENDS+=		procmail-[0-9]*:../../mail/procmail
-CONFIGURE_ARGS+=	--with-delivery-agent="${LOCALBASE}/bin/procmail"
+CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
 .elif !empty(DSPAM_DELIVERY_AGENT:Mmaildrop)
+DSPAM_DELIVERY_AGENT_BIN?=	${LOCALBASE}/bin/maildrop
 BUILD_DEPENDS+=		maildrop-[0-9]*:../../mail/maildrop
-CONFIGURE_ARGS+=	--with-delivery-agent="${LOCALBASE}/bin/maildrop"
+CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
 .elif !empty(DSPAM_DELIVERY_AGENT)
-CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT:Q}
+DSPAM_DELIVERY_AGENT_BIN?=	${DSPAM_DELIVERY_AGENT}
+CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
 .else
 PKG_FAIL_REASON+=	"${PKGBASE}: unknown delivery agent \`${DSPAM_DELIVERY_AGENT}'"
 .endif
@@ -65,51 +40,74 @@ PKG_FAIL_REASON+=	"${PKGBASE}: unknown delivery agent \`${DSPAM_DELIVERY_AGENT}'
 ### This is the backend database used to store the DSPAM signatures as
 ### well as other state information.  The recommended storage driver is
 ### "mysql", even for small installations.
-### Possible: mysql, pgsql, bdb
-### Default: bdb
+### Possible: mysql, pgsql, bdb or sqlite
+### Default: sqlite
 ###
-DSPAM_STORAGE_DRIVER?=	bdb
+DSPAM_STORAGE_DRIVER?=	sqlite
 BUILD_DEFS+=		DSPAM_STORAGE_DRIVER
-MYSQL_PLIST_SUBST=	MYSQL="@comment "
-PGSQL_PLIST_SUBST=	PGSQL="@comment "
-.if empty(DSPAM_STORAGE_DRIVER:Mmysql)
-PKG_OPTIONS:=		${PKG_OPTIONS:Ncompress}
-.endif
 .if empty(DSPAM_STORAGE_DRIVER:Mmysql) && empty(DSPAM_STORAGE_DRIVER:Mpgsql)
 PKG_OPTIONS:=		${PKG_OPTIONS:Nvirtualusers}
 .endif
 .if !empty(DSPAM_STORAGE_DRIVER:Mmysql)
-.  if !empty(PKG_OPTIONS:Mcompress)
-CONFIGURE_ARGS+=	--enable-client-compression
-.  endif
 .  include "../../databases/mysql4-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=mysql_drv
 CONFIGURE_ARGS+=	\
 	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql \
 	--with-mysql-libraries=${BUILDLINK_PREFIX.mysql-client}/lib
-MYSQL_PLIST_SUBST=	MYSQL=""
+MYSQL_PLIST_SUBST=	MYSQL=
 .elif !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=pgsql_drv
 CONFIGURE_ARGS+=	\
 	--with-pgsql-includes=${PGSQL_PREFIX}/include/postgresql	\
 	--with-pgsql-libraries=${PGSQL_PREFIX}/lib
-PGSQL_PLIST_SUBST=	PGSQL=""
+PGSQL_PLIST_SUBST=	PGSQL=
 .elif !empty(DSPAM_STORAGE_DRIVER:Mbdb)
 BDB_ACCEPTED=		db4 db3
 .  include "../../mk/bdb.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=lib${BDB_TYPE}_drv
+.elif !empty(DSPAM_STORAGE_DRIVER:Msqlite)
+.  include "../../databases/sqlite/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-storage-driver=sqlite_drv
+SQLITE_PLIST_SUBST=	SQLITE=
 .else
 PKG_FAIL_REASON+=	"${PKGBASE}: unknown storage driver \`${DSPAM_STORAGE_DRIVER}\'"
 .endif
+
+MYSQL_PLIST_SUBST?=	MYSQL="@comment "
+PGSQL_PLIST_SUBST?=	PGSQL="@comment "
+SQLITE_PLIST_SUBST?=	SQLITE="@comment "
+
 PLIST_SUBST+=		${MYSQL_PLIST_SUBST}
 PLIST_SUBST+=		${PGSQL_PLIST_SUBST}
+PLIST_SUBST+=		${SQLITE_PLIST_SUBST}
+
+###
+### Only available for mysql and pgsql backends.
+###
+.if !empty(DSPAM_STORAGE_DRIVER:Mmysql) || !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
+PKG_SUPPORTED_OPTIONS+=	preferences-extension virtualusers
+.endif
+
+# Used to store user prefernces in the backend instead of flat files
+# (built-in method)
+.if !empty(PKG_OPTIONS:Mpreferences-extension)
+CONFIGURE_ARGS+=	--enable-preferences-extension
+.endif
+
+### 
+### Tells DSPAM to create virtual user ids.  Use this if your users are
+### not system users.
+###
+.if !empty(PKG_OPTIONS:Mvirtualusers) 
+CONFIGURE_ARGS+=	--enable-virtual-users
+.endif
 
 ###
 ### Use of home directory dot file for opt-in/opt-out
 ###
-.if !empty(PKG_OPTIONS:Mdotfiles)
-CONFIGURE_ARGS+=	--enable-homedir-dotfiles
+.if !empty(PKG_OPTIONS:Mhomedir)
+CONFIGURE_ARGS+=	--enable-homedir
 .endif
 
 ###
@@ -125,11 +123,12 @@ DEPENDS+=	p5-GDGraph3d-[0-9]*:../../graphics/p5-GDGraph3d
 ###
 .if !empty(PKG_OPTIONS:Mlargescale)
 CONFIGURE_ARGS+=	--enable-large-scale
+SUBST_CLASSES+=		large
 SUBST_STAGE.large=	pre-configure
 SUBST_FILES.large=	cgi/dspam.cgi cgi/admin.cgi
 SUBST_SED.large=	\
 	-e "s|CONFIG{'LARGE_SCALE'}.*=.*0|CONFIG{'LARGE_SCALE'}	= 1|"
-SUBST_MESSAGE.large=	"Enabling large-scale options in DSPAM."
+SUBST_MESSAGE.large=	"Enabling large-scale option in DSPAM."
 .endif
 
 ###
@@ -140,48 +139,21 @@ CONFIGURE_ARGS+=	--enable-long-usernames
 .endif
 
 ###
-### Store DSPAM signatures as an attachment to the mail.  This option
-### doesn't work correctly with mail clients, e.g. elm, that quote an
-### embedded, forwarded message; it should only be used on networks
-### where all clients can properly understand an embedded multipart
-### message, e.g. Outlook, Evolution, etc., and forward the attachment
-### as an attachment instead of quoted text.
+### Support for a domain scale implementation.
 ###
-.if !empty(PKG_OPTIONS:Msig-attachment)
-CONFIGURE_ARGS+=	--enable-signature-attachments
+.if !empty(PKG_OPTIONS:Mdomainscale)
+CONFIGURE_ARGS+=	--enable-domain-scale
 .endif
 
 ###
-### Store DSPAM signatures in the message header of the mail.
+### EXPERIMENTAL:
+### Support for neural networking, please take a look at the docs.
 ###
-.if !empty(PKG_OPTIONS:Msig-headers)
-CONFIGURE_ARGS+=        --enable-signature-headers
-.endif
-
-###
-### Prepend "[SPAM]" to the Subject: header of messages classified as spam.
-###
-.if !empty(PKG_OPTIONS:Mspam-subject)
-CONFIGURE_ARGS+=	--enable-spam-subject
-.endif
-
-###
-### Tells DSPAM to create virtual user ids.  Use this if your users are
-### not system users.
-###
-.if !empty(PKG_OPTIONS:Mvirtualusers)
-CONFIGURE_ARGS+=	--enable-virtual-users
-.endif
-
-###
-### This option will cause DSPAM to cease all writing of signatures
-### and DSPAM headers to the message, and deliver the message in as
-### pristine format as possible.  DO NOT use this switch unless the
-### original message can be presented for retraining with the ORIGINAL
-### HEADERS and NO MODIFICATIONS.
-###
-.if !empty(PKG_OPTIONS:Mwebmail)
-CONFIGURE_ARGS+=	--enable-webmail
+.if !empty(DSPAM_STORAGE_DRIVER:Mmysql)
+PKG_SUPPORTED_OPTIONS+=	neural
+.  if !empty(PKG_OPTIONS:Mneural)
+CONFIGURE_ARGS+=	--enable-neural-networking
+.  endif
 .endif
 
 ###
