@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:54:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 08:26:03 martti Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
@@ -15,7 +15,8 @@ COMMENT=	Vim editor (vi clone) with X11 KDE3 GUI
 
 KVIM_VERSION=	6.1.141
 
-CONFLICTS+=	vim-gtk-[0-9]* vim-share-[0-9]* vim-[0-9]* vim-xaw-[0-9]*
+CONFLICTS+=	vim-gtk-[0-9]* vim-gtk2-[0-9]*
+CONFLICTS+=	vim-share-[0-9]* vim-[0-9]* vim-xaw-[0-9]*
 
 USE_BUILDLINK2=		YES
 
