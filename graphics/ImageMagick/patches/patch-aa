@@ -1,8 +1,15 @@
-$NetBSD: patch-aa,v 1.4 1998/08/07 10:40:46 agc Exp $
+$NetBSD: patch-aa,v 1.5 1998/09/28 18:13:37 tron Exp $
 
---- Magick.tmpl.orig	Wed Mar 11 21:28:31 1998
-+++ Magick.tmpl	Thu Mar 19 09:58:46 1998
-@@ -43,11 +43,11 @@
+--- Magick.tmpl.orig	Fri Sep 18 03:21:46 1998
++++ Magick.tmpl	Tue Sep 22 23:06:22 1998
+@@ -37,17 +37,17 @@
+ #ifdef RsArchitecture
+ XCOMM EXTENSIONS_DEFINES= -DHasLZW -DHasShape
+ #else
+-XCOMM EXTENSIONS_DEFINES= -DHasLZW -DHasShape -DHasSharedMemory
++EXTENSIONS_DEFINES= -DHasLZW -DHasShape -DHasSharedMemory
+ #endif
+ 
  XCOMM Set DoSharedLib to HasSharedLibraries to build ImageMagick with shared
  XCOMM libraries.
  XCOMM
@@ -16,7 +23,13 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:46 agc Exp $
  
  XCOMM By default, the maximum color value is 255.  To increase the maximum to
  XCOMM 65535 define:
-@@ -67,12 +67,12 @@
+@@ -59,17 +59,17 @@
+ XCOMM of these optional plug-ins, uncomment the respective define.  Make sure
+ XCOMM the path names are correct.  See README for more details.
+ XCOMM
+-XCOMM #define HasBZLIB
++#include "bzlib.tmpl"
+ XCOMM #define HasDPS
  XCOMM #define HasFPX
  XCOMM #define HasHDF
  XCOMM #define HasJBIG
@@ -32,9 +45,9 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:46 agc Exp $
 -XCOMM #define HasZLIB
 +#define HasZLIB
  
- #ifdef HasDPS
- DPS_DEFINES= -DHasDPS
-@@ -104,29 +104,29 @@
+ #ifdef HasBZLIB
+ BZLIB_DEFINES= -DHasBZLIB
+@@ -108,13 +108,13 @@
  
  #ifdef HasJPEG
  JPEG_DEFINES= -DHasJPEG
@@ -46,15 +59,14 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:46 agc Exp $
  #endif
  
  #ifdef HasMPEG
- MPEG_DEFINES= -DHasMPEG
--MPEG_INCLUDES= -I$(TOP)/mpeg
--MPEG_FLAGS= -L$(TOP)/mpeg
-+MPEG_INCLUDES= -I${LOCALBASE}/include
-+MPEG_FLAGS= -L${LOCALBASE}/lib
- MPEG_LIBRARIES= -lmpeg
+-MPEG_BINDIR= /usr/local/bin
++MPEG_BINDIR= ${PREFIX}/bin
+ MPEG_DEFINES= -DMPEGDecodeDelegate=\"$(MPEG_BINDIR)/mpeg2decode\" \
+   -DMPEGEncodeDelegate=\"$(MPEG_BINDIR)/mpeg2encode\"
  #endif
- 
+@@ -122,16 +122,16 @@
  #ifdef HasPNG
+ XCOMM Use libpng-1.00 or above.  You must also link with Zlib.
  PNG_DEFINES= -DHasPNG
 -PNG_INCLUDES= -I$(TOP)/png
 -PNG_FLAGS= -L$(TOP)/png
@@ -64,6 +76,7 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:46 agc Exp $
  #endif
  
  #ifdef HasTIFF
+ XCOMM Tiff library requires Jpeg and Zlib libraries.
  TIFF_DEFINES= -DHasTIFF
 -TIFF_INCLUDES= -I$(TOP)/tiff/libtiff
 -TIFF_FLAGS= -L$(TOP)/tiff/libtiff
@@ -72,7 +85,7 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:46 agc Exp $
  TIFF_LIBRARIES= -ltiff
  #endif
  
-@@ -139,8 +139,8 @@
+@@ -144,8 +144,8 @@
  
  #ifdef HasZLIB
  ZLIB_DEFINES= -DHasZLIB
@@ -83,14 +96,14 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 10:40:46 agc Exp $
  ZLIB_LIBRARIES= -lz
  #endif
  
-@@ -156,16 +156,12 @@
- XCOMM ImageMagick has an include file named X.h.  Do not set LOCALINC to
+@@ -162,15 +162,15 @@
  XCOMM the top level X11 include directory or X11/X.h will be overwritten.
  
--#ifndef PREFIX
+ #ifndef PREFIX
 -PREFIX=/usr/local
--#endif
--
++PREFIX=${X11BASE}
+ #endif
+ 
  LOCALDIR= $(PREFIX)/bin
  LOCALINC= $(PREFIX)/include/magick
  LOCALLIB= $(PREFIX)/lib
