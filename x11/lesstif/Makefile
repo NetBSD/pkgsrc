@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2003/12/12 10:11:39 adam Exp $
+# $NetBSD: Makefile,v 1.68 2004/01/24 15:30:33 grant Exp $
 
 DISTNAME=	lesstif-0.93.94
 CATEGORIES=	x11
@@ -13,7 +13,7 @@ CONFLICTS+=	openmotif-[0-9]*
 
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/test/libtool

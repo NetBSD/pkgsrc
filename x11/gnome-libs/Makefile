@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2004/01/22 13:32:32 jlam Exp $
+# $NetBSD: Makefile,v 1.95 2004/01/24 15:30:32 grant Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		1
@@ -13,7 +13,7 @@ DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
 BUILD_USES_MSGFMT=	YES
 
 USE_X11BASE=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libart_lgpl/libtool

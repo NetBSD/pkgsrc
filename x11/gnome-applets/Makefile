@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/03 18:49:56 reed Exp $
+# $NetBSD: Makefile,v 1.35 2004/01/24 15:30:32 grant Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.4
@@ -17,7 +17,7 @@ BUILDLINK_DEPENDS.gnome-panel=	gnome-panel<2.0
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

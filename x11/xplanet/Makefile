@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/03 18:50:01 reed Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/24 15:30:34 grant Exp $
 #
 
 DISTNAME=		xplanet-1.0.1
@@ -13,7 +13,7 @@ COMMENT=		Rotating rendered map of the Earth in X11 root window
 USE_BUILDLINK2=		yes
 USE_GCC_SHLIB=		yes
 USE_X11=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gl-dir=${BUILDLINK_PREFIX.Mesa}

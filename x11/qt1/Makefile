@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:56:41 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 15:30:33 grant Exp $
 #
 
 DISTNAME=	qt-1.44
@@ -13,7 +13,7 @@ COMMENT=	C++ X GUI toolkit
 
 USE_BUILDLINK2=	yes
 USE_X11BASE=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 
 QTPREFIX=${PREFIX}/qt1
