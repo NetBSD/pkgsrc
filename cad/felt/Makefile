@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/05/22 16:48:59 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/05/24 08:53:54 jlam Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
@@ -24,15 +24,15 @@ MAKE_ENV+=		SH="${SH}"
 
 USE_GNU_READLINE=	# uses remove_history() and history_list()
 
-.include "../../devel/readline/Makefile.readline"
+.include "../../devel/readline/buildlink.mk"
 
-CFLAGS+=		-I${WRKINCDIR}
-LDFLAGS+=		-L${WRKLIBDIR}
+CFLAGS+=		-I${BUILDLINK_INCDIR}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 post-extract:
 	@${GZCAT} ${DISTDIR}/felt-3.05.ps.gz > ${WRKSRC}/felt.ps
 
-pre-build: link-readline-headers link-readline-libs
+pre-build: ${BUILDLINK_TARGETS}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/felt
