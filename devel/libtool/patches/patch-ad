@@ -1,7 +1,21 @@
-$NetBSD: patch-ad,v 1.14 2004/10/04 19:48:09 tv Exp $
+$NetBSD: patch-ad,v 1.15 2004/10/08 17:37:50 tv Exp $
 
 --- libltdl/configure.orig	2004-09-19 08:23:09.000000000 -0400
 +++ libltdl/configure
+@@ -322,11 +322,11 @@ else
+ 
+   if test "X$echo" = Xecho; then
+     # We didn't find a better echo, so look for alternatives.
+-    if test "X`(print -r '\t') 2>/dev/null`" = 'X\t' &&
++    if test "X`(print -r - '\t') 2>/dev/null`" = 'X\t' &&
+        echo_testing_string=`(print -r "$echo_test_string") 2>/dev/null` &&
+        test "X$echo_testing_string" = "X$echo_test_string"; then
+       # This shell has a builtin print -r that does the trick.
+-      echo='print -r'
++      echo='print -r -'
+     elif (test -f /bin/ksh || test -f /bin/ksh$ac_exeext) &&
+ 	 test "X$CONFIG_SHELL" != X/bin/ksh; then
+       # If we have ksh, try running configure again with it.
 @@ -3739,6 +3739,10 @@ hpux10.20* | hpux11*)
    esac
    ;;
