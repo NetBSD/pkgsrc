@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/02/19 02:10:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.29 2000/02/19 23:46:26 jwise Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -17,6 +17,7 @@
     SUBDIR += openldap
     SUBDIR += oraedit
     SUBDIR += p5-DBD-mysql
+    SUBDIR += p5-DBD-postgresql
 #    SUBDIR += p5-DBD-Pg
     SUBDIR += p5-DBI
 #    SUBDIR += p5-Msql
