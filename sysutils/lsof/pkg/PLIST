@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/04/01 15:02:36 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/01/01 01:56:51 frueauf Exp $
 sbin/lsof
 man/man1/lsof.1.gz
 share/lsof/00MANIFEST
@@ -12,6 +12,7 @@ share/lsof/idrlogin.perl5
 share/lsof/list_NULf.perl5
 share/lsof/list_fields.awk
 share/lsof/list_fields.perl
+share/lsof/shared.perl5
 share/lsof/watch_a_file.perl
 share/lsof/xusers.awk
 @dirrm share/lsof
