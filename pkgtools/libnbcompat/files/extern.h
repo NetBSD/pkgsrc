@@ -1,4 +1,4 @@
-/*	$NetBSD: extern.h,v 1.1.1.1 2003/03/31 05:02:43 grant Exp $	*/
+/*	$NetBSD: extern.h,v 1.2 2003/05/22 18:10:43 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1991, 1993
@@ -64,6 +64,23 @@
 #ifndef MAXHOSTNAMELEN
 #define MAXHOSTNAMELEN 256
 #endif
+
+#ifndef HAVE_STRSEP
+char *strsep(char **, const char *);
+#endif
+
+#ifndef HAVE_USER_FROM_UID
+char *user_from_uid(uid_t, int);
+#endif
+
+#ifndef HAVE_GROUP_FROM_GID
+char *group_from_gid(gid_t, int);
+#endif
+
+#ifndef HAVE_SETMODE
+void *setmode(const char *);
+#endif
+
 
 void	 addtag(slist_t *, char *);
 int	 check_excludes(const char *, const char *);
