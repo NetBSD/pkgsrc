@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/17 16:58:30 bad Exp $
+
+--- Makefile.in.orig	Thu Jun 25 18:47:37 1998
++++ Makefile.in	Mon May 17 17:55:50 1999
+@@ -22,7 +22,7 @@
+ 
+ # Where should the support files go?
+ # LIBDIR=/usr/local/lib/jdb
+-LIBDIR=@mydatadir@
++LIBDIR=@mydatadir@/jdb
+ 
+ ######################################################################
+ # No need to change things below this line.
