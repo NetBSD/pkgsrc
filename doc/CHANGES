@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5930 2004/05/14 08:06:01 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5931 2004/05/14 08:43:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2522,3 +2522,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pnet to 0.6.4 [xtraeme 2004-05-14]
 	Updated pnetlib to 0.6.4 [xtraeme 2004-05-14]
 	Updated pnetC to 0.6.4 [xtraeme 2004-05-14]
+	Updated w3m to 0.5nb3 [wiz 2004-05-14]
+	Updated w3m-img to 0.5nb3 [wiz 2004-05-14]
