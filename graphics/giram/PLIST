@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/02/15 03:49:05 salo Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/05/24 11:23:08 salo Exp $
 bin/giram
 bin/povfront
 libexec/giram/plug-ins/Box
@@ -15,22 +15,16 @@ share/giram/0.3/color/color1.gcf
 share/giram/0.3/finish/finish1
 share/giram/0.3/giram_logo.ppm
 share/giram/0.3/giram_splash.ppm
-share/giram/0.3/modules/librender_flat.a
 share/giram/0.3/modules/librender_flat.la
 share/giram/0.3/modules/librender_flat.so
-share/giram/0.3/modules/librender_gouraud.a
 share/giram/0.3/modules/librender_gouraud.la
 share/giram/0.3/modules/librender_gouraud.so
-share/giram/0.3/modules/librender_hiddenfaces.a
 share/giram/0.3/modules/librender_hiddenfaces.la
 share/giram/0.3/modules/librender_hiddenfaces.so
-share/giram/0.3/modules/librender_povray.a
 share/giram/0.3/modules/librender_povray.la
 share/giram/0.3/modules/librender_povray.so
-share/giram/0.3/modules/librender_raytracing.a
 share/giram/0.3/modules/librender_raytracing.la
 share/giram/0.3/modules/librender_raytracing.so
-share/giram/0.3/modules/librender_wireframe.a
 share/giram/0.3/modules/librender_wireframe.la
 share/giram/0.3/modules/librender_wireframe.so
 share/giram/0.3/normal/normal1
@@ -75,10 +69,12 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/giram.mo
 @dirrm share/giram/0.3/normal
 @dirrm share/giram/0.3/modules
 @dirrm share/giram/0.3/finish
-@dirrm share/giram/0.3/color
+@exec ${MKDIR} %D/share/giram/0.3/color_map
 @dirrm share/giram/0.3/color_map
+@dirrm share/giram/0.3/color
 @dirrm share/giram/0.3
 @dirrm share/giram
-@dirrm share/doc/giram
 @dirrm share/examples/giram
+@dirrm share/doc/giram
 @dirrm libexec/giram/plug-ins
+@dirrm libexec/giram
