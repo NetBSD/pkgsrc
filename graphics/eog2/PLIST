@@ -1,22 +1,54 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/18 14:55:59 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/07/25 16:59:25 drochner Exp $
 bin/eog
 lib/bonobo/servers/GNOME_EOG.server
+lib/bonobo/servers/GNOME_EOG_Collection.server
+libexec/eog-collection-view
 libexec/eog-image-viewer
 share/applications/eog.desktop
 share/eog/glade/eog.glade
+share/eog/gpi-dialog.glade
 share/gconf/schemas/eog.schemas
+share/gnome-2.0/ui/eog-collection-view-ui.xml
 share/gnome-2.0/ui/eog-image-view-ctrl-ui.xml
 share/gnome-2.0/ui/eog-image-view-ui.xml
 share/gnome-2.0/ui/eog-shell-ui.xml
 share/gnome/help/eog/C/eog.xml
 share/gnome/help/eog/C/figures/eog_start_window.png
 share/gnome/help/eog/C/legal.xml
+share/gnome/help/eog/de/eog.xml
+share/gnome/help/eog/de/figures/eog_start_window.png
+share/gnome/help/eog/de/legal.xml
+share/gnome/help/eog/es/eog.xml
+share/gnome/help/eog/es/figures/eog_start_window.png
+share/gnome/help/eog/es/legal.xml
+share/gnome/help/eog/fr/eog.xml
+share/gnome/help/eog/fr/figures/eog_start_window.png
+share/gnome/help/eog/fr/legal.xml
+share/gnome/help/eog/it/eog.xml
+share/gnome/help/eog/it/figures/eog_start_window.png
+share/gnome/help/eog/it/legal.xml
+share/gnome/help/eog/ja/eog.xml
+share/gnome/help/eog/ja/figures/eog_start_window.png
+share/gnome/help/eog/ja/legal.xml
+share/gnome/help/eog/ko/eog.xml
+share/gnome/help/eog/ko/figures/eog_start_window.png
+share/gnome/help/eog/ko/legal.xml
+share/gnome/help/eog/sv/eog.xml
+share/gnome/help/eog/sv/figures/eog_start_window.png
+share/gnome/help/eog/sv/legal.xml
+share/gnome/help/eog/zh_CN/eog.xml
+share/gnome/help/eog/zh_CN/figures/eog_start_window.png
+share/gnome/help/eog/zh_CN/legal.xml
+share/gnome/help/eog/zh_TW/eog.xml
+share/gnome/help/eog/zh_TW/figures/eog_start_window.png
+share/gnome/help/eog/zh_TW/legal.xml
 share/idl/Eog.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/eog.mo
@@ -24,18 +56,23 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/eog.mo
@@ -49,8 +86,11 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/eog.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/eog.mo
@@ -58,21 +98,45 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/eog.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/eog.mo
 share/omf/eog/eog-C.omf
+share/omf/eog/eog-de.omf
+share/omf/eog/eog-es.omf
+share/omf/eog/eog-fr.omf
+share/omf/eog/eog-it.omf
+share/omf/eog/eog-ja.omf
+share/omf/eog/eog-ko.omf
+share/omf/eog/eog-sv.omf
+share/omf/eog/eog-zh_CN.omf
+share/omf/eog/eog-zh_TW.omf
 share/pixmaps/eog/down-right.png
 share/pixmaps/eog/orient-horizontal.png
 share/pixmaps/eog/orient-vertical.png
 share/pixmaps/eog/right-down.png
+share/pixmaps/eog/stock-rotate-180-16.png
+share/pixmaps/eog/stock-rotate-270-16.png
+share/pixmaps/eog/stock-rotate-90-16.png
 share/pixmaps/gnome-eog.png
 @dirrm share/pixmaps/eog
 @dirrm share/omf/eog
-@comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnome/help/eog/zh_TW/figures
+@dirrm share/gnome/help/eog/zh_TW
+@dirrm share/gnome/help/eog/zh_CN/figures
+@dirrm share/gnome/help/eog/zh_CN
+@dirrm share/gnome/help/eog/sv/figures
+@dirrm share/gnome/help/eog/sv
+@dirrm share/gnome/help/eog/ko/figures
+@dirrm share/gnome/help/eog/ko
+@dirrm share/gnome/help/eog/ja/figures
+@dirrm share/gnome/help/eog/ja
+@dirrm share/gnome/help/eog/it/figures
+@dirrm share/gnome/help/eog/it
+@dirrm share/gnome/help/eog/fr/figures
+@dirrm share/gnome/help/eog/fr
+@dirrm share/gnome/help/eog/es/figures
+@dirrm share/gnome/help/eog/es
+@dirrm share/gnome/help/eog/de/figures
+@dirrm share/gnome/help/eog/de
 @dirrm share/gnome/help/eog/C/figures
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
-@comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/eog/glade
 @dirrm share/eog
-@comment in gnome2-dirs: @dirrm share/applications
-@comment in bonobo-activation: @dirrm lib/bonobo/servers
