@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/25 19:14:41 jmmv Exp $
+bin/mlgui
+libexec/mldonkey/mlchat
+libexec/mldonkey/mlgui
+libexec/mldonkey/mlguistarter
+libexec/mldonkey/mlim
+libexec/mldonkey/mlnet+gui
+@unexec ${RMDIR} %D/libexec/mldonkey >/dev/null 2>&1 || ${TRUE}
