@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/12/20 11:31:03 grant Exp $
+# $NetBSD: Makefile,v 1.21 2005/03/04 17:38:53 tv Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -49,6 +49,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/packlist ${PERL5_PACKLIST}
 	${CAT} ${PERL5_PACKLIST} | ${XARGS} ${CHMOD} a-w
 	${CAT} ${PERL5_PACKLIST} | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
+
+# empty do-nothing to override module.mk TEST_TARGET
+do-test:
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
