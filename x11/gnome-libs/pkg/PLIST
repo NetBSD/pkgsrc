@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 1998/09/04 22:14:27 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/10/04 23:42:01 tron Exp $
+bin/convertrgb
 bin/dns-helper
 bin/gnome_segv
 bin/gnome-config
+bin/gnome-dump-metadata
 bin/htmltest
+@exec mkdir %D/html
 include/gnome.h
 include/libgnome/gnome-config.h
 include/libgnome/gnome-defs.h
@@ -21,6 +24,11 @@ include/libgnome/gnome-string.h
 include/libgnome/gnome-triggers.h
 include/libgnome/gnome-util.h
 include/libgnome/libgnome.h
+include/libgnome/gnome-metadata.h
+include/libgnome/gnome-regex.h
+include/libgnome/gnome-remote.h
+include/libgnome/lib_date.h
+include/libgnome/lib_defs.h
 include/libgnomeui/gnome-about.h
 include/libgnomeui/gnome-actionarea.h
 include/libgnomeui/gnome-app.h
@@ -56,7 +64,6 @@ include/libgnomeui/gnome-mdi.h
 include/libgnomeui/gnome-mdi-child.h
 include/libgnomeui/gnome-number-entry.h
 include/libgnomeui/gnome-net.h
-include/libgnomeui/gnome-popupmenu.h
 include/libgnomeui/gtkdial.h
 include/libgnomeui/gnome-preferences.h
 include/libgnomeui/gnome-propertybox.h
@@ -78,6 +85,10 @@ include/libgnomeui/gtk-ted.h
 include/libgnomeui/gtk-plug.h
 include/libgnomeui/gtk-socket.h
 include/libgnomeui/libgnomeui.h
+include/libgnomeui/gnome-color-picker.h
+include/libgnomeui/gnome-gtk-utils.h
+include/libgnomeui/gnome-popup-menu.h
+include/libgnomeui/gnome-winhints.h
 include/gtk-xmhtml/miniparse.h
 include/gtk-xmhtml/HTML.h
 include/gtk-xmhtml/XmHTML.h
@@ -86,11 +97,6 @@ include/gtk-xmhtml/XmHTMLP.h
 include/gtk-xmhtml/gtk-xmhtml-p.h
 include/gtk-xmhtml/gtk-xmhtml.h
 include/gtk-xmhtml/toolkit.h
-include/gtktty/gtkled.h
-include/gtktty/gtkterm.h
-include/gtktty/gtkvtemu.h
-include/gtktty/gtktty.h
-include/gtktty/libgtktty.h
 include/zvt/zvtterm.h
 include/zvt/vtx.h
 include/zvt/lists.h
@@ -103,16 +109,14 @@ lib/gnome-libs/include/long-options.h
 lib/gnome-libs/include/argp.h
 lib/gnome-libs/include/error.h
 lib/gnomeConf.sh
-lib/libgnome.so.26.0
+lib/libgnome.so.30.0
 lib/libgnome.a
 lib/libgnomesupport.so.0.0
 lib/libgnomesupport.a
-lib/libgnomeui.so.26.0
+lib/libgnomeui.so.30.0
 lib/libgnomeui.a
 lib/libgtkxmhtml.so.0.0
 lib/libgtkxmhtml.a
-lib/libgtktty.so.0.4
-lib/libgtktty.a
 lib/libzvt.a
 lib/libzvt.so.0.0
 share/locale/de/LC_MESSAGES/gnome-libs.mo
@@ -127,16 +131,13 @@ share/locale/ga/LC_MESSAGES/gnome-libs.mo
 share/locale/pt/LC_MESSAGES/gnome-libs.mo
 share/locale/ja/LC_MESSAGES/gnome-libs.mo
 share/locale/sv/LC_MESSAGES/gnome-libs.mo
-share/pixmaps/calculator-font.xpm
+share/pixmaps/calculator-font.png
 share/gtkrc
 @dirrm html
 @dirrm include/libgnome
 @dirrm include/libgnomeui
 @dirrm include/gtk-xmhtml
-@dirrm include/gtktty
 @dirrm include/zvt
-@dirrm lib/X11/Gnome/var/games
-@dirrm lib/X11/Gnome/var
-@dirrm lib/X11/Gnome
 @dirrm lib/gnome-libs/include
 @dirrm lib/gnome-libs
+@dirrm share/pixmaps
