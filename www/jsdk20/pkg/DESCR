@@ -1,0 +1,13 @@
+JSDK 2.0 is an older version of Sun's Java Servlet Development Kit.
+It includes the servlet java classes and a simple web server with
+servlet support.
+
+JSDK has been supplanted by project Jakarta, which is a joint project
+between The Apache Foundation and Sun to produce the next generation
+of the servlet classes.  The 3.0 release of the Jakarta project's
+servlet environment, Tomcat, is available via the www/jakarta-tomcat
+package.
+
+This package exists primarily to support building the Apache JServ
+module, which has not yet been updated to build against the Tomcat
+classes.
