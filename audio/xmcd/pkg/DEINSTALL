@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/05/06 00:11:47 wiz Exp $
+#
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	cat << EOF
+=============================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove
+any cached CD informations in
+	@PREFIX@/lib/X11/xmcd/cddb
+and any drive informations in
+	@PREFIX@/lib/X11/xmcd/config
+e.g. by deleting the corresponding directory. Please note that config
+files will get overwritten on re-install if you don't save them manually.
+=============================================================================
+EOF
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
