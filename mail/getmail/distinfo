@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2004/09/02 02:35:58 schmonz Exp $
+$NetBSD: distinfo,v 1.26 2004/10/20 21:55:12 schmonz Exp $
 
-SHA1 (getmail-4.1.4.tar.gz) = cee70895e22bcec75ea0588744cd46b381d494ec
-Size (getmail-4.1.4.tar.gz) = 118943 bytes
+SHA1 (getmail-4.2.2.tar.gz) = e2f9c080bfefae2b2deb65c6ac11e6dfb0c08cc2
+Size (getmail-4.2.2.tar.gz) = 121093 bytes
 SHA1 (patch-aa) = 63bb1a6427f5b129200e7fa4bdd34267d427a2a7
