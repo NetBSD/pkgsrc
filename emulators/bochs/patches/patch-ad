@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2002/07/12 03:39:16 itojun Exp $
+$NetBSD: patch-ad,v 1.5 2002/12/25 01:12:38 uebayasi Exp $
 
---- iodev/cdrom.cc.orig	Tue Mar 19 19:24:16 2002
+--- iodev/cdrom.cc.orig	Tue Dec 24 12:50:46 2002
 +++ iodev/cdrom.cc
-@@ -357,6 +357,22 @@
+@@ -662,6 +662,22 @@
      return(true);
  }
  
