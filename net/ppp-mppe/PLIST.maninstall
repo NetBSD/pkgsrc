@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.maninstall,v 1.1 2002/01/19 15:12:12 kim Exp $
-man/man8/chat.8
-man/man8/pppd.8
-man/man8/pppstats.8
