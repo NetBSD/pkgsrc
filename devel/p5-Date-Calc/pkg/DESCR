@@ -1,0 +1,13 @@
+This is the perl5 Date-Calc distribution. It requires perl version
+5.000 or later
+
+This package consists of a C library and a Perl module (which uses
+the C library, internally) for all kinds of date calculations based
+on the Gregorian calendar (the one used in all western countries today),
+thereby complying with all relevant norms and standards: ISO/R 2015-1971,
+DIN 1355 and, to some extent, ISO 8601 (where applicable).
+
+The module of course handles year numbers of 2000 and above correctly
+("Year 2000" or "Y2K" compliance) -- actually all year numbers from 1
+to the largest positive integer representable on your system (which
+is at least 32767) can be dealt with.
