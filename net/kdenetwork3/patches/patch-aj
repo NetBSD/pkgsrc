@@ -1,0 +1,252 @@
+$NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:59:29 skrll Exp $
+
+--- kxmlrpc/Makefile.in.orig	Fri May 10 13:09:01 2002
++++ kxmlrpc/Makefile.in
+@@ -234,17 +234,22 @@
+ INCLUDES = $(all_includes)
+ 
+ bin_PROGRAMS = kxmlrpcd
+-kxmlrpcd_LDADD = kxmlrpcd.la
++kxmlrpcd_LDADD = libkxmlrpcd_main.la
+ kxmlrpcd_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+-kxmlrpcd_SOURCES = dummy.cpp
++kxmlrpcd_SOURCES = kxmlrpcd_main.cpp
+ 
+-lib_LTLIBRARIES = kxmlrpcd.la
++lib_LTLIBRARIES = libkxmlrpcd_main.la kxmlrpcd.la
+ kde_module_LTLIBRARIES = libkcm_xmlrpcd.la
+-kxmlrpcd_la_LIBADD = $(LIB_KSYCOCA)
+-kxmlrpcd_la_LDFLAGS = $(all_libraries) -module -avoid-version 
+-kxmlrpcd_la_SOURCES = kxmlrpcserver.cpp kxmlrpcparser.cpp \
++libkxmlrpcd_main_la_LIBADD = $(LIB_KSYCOCA)
++libkxmlrpcd_main_la_LDFLAGS = $(all_libraries)
++libkxmlrpcd_main_la_SOURCES = kxmlrpcserver.cpp kxmlrpcparser.cpp \
+ 	kxmlrpcdaemon.cpp kxmlrpcutil.cpp
+ 
++#>- libkxmlrpcd_main_la_METASOURCES = AUTO
++
++kxmlrpcd_la_LIBADD = libkxmlrpcd_main.la
++kxmlrpcd_la_LDFLAGS = $(all_libraries) -avoid-version -module
++kxmlrpcd_la_SOURCES = kxmlrpcd_main.cpp
+ #>- kxmlrpcd_la_METASOURCES = AUTO
+ 
+ libkcm_xmlrpcd_la_LIBADD = $(LIB_KDECORE)
+@@ -261,30 +266,35 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
+ 
+-kxmlrpcd_la_DEPENDENCIES =
+-am_kxmlrpcd_la_OBJECTS = kxmlrpcserver.lo kxmlrpcparser.lo \
+-	kxmlrpcdaemon.lo kxmlrpcutil.lo
++kxmlrpcd_la_DEPENDENCIES = libkxmlrpcd_main.la
++am_kxmlrpcd_la_OBJECTS = kxmlrpcd_main.lo
+ #>- kxmlrpcd_la_OBJECTS = $(am_kxmlrpcd_la_OBJECTS)
+-#>+ 6
+-kxmlrpcd_la_final_OBJECTS = kxmlrpcd_la.all_cpp.lo 
+-kxmlrpcd_la_nofinal_OBJECTS = kxmlrpcserver.lo kxmlrpcparser.lo \
+-	kxmlrpcdaemon.lo kxmlrpcutil.lo \
+-	kxmlrpcd_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@kxmlrpcd_la_OBJECTS = $(kxmlrpcd_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kxmlrpcd_la_OBJECTS = $(kxmlrpcd_la_final_OBJECTS)
++#>+ 1
++kxmlrpcd_la_OBJECTS = kxmlrpcd_main.lo
+ libkcm_xmlrpcd_la_DEPENDENCIES =
+ am_libkcm_xmlrpcd_la_OBJECTS = kxmlrpcinit.lo
+ #>- libkcm_xmlrpcd_la_OBJECTS = $(am_libkcm_xmlrpcd_la_OBJECTS)
+ #>+ 1
+ libkcm_xmlrpcd_la_OBJECTS = kxmlrpcinit.lo
++libkxmlrpcd_main_la_DEPENDENCIES =
++am_libkxmlrpcd_main_la_OBJECTS = kxmlrpcserver.lo kxmlrpcparser.lo \
++	kxmlrpcdaemon.lo kxmlrpcutil.lo
++#>- libkxmlrpcd_main_la_OBJECTS = $(am_libkxmlrpcd_main_la_OBJECTS)
++#>+ 6
++libkxmlrpcd_main_la_final_OBJECTS = libkxmlrpcd_main_la.all_cpp.lo 
++libkxmlrpcd_main_la_nofinal_OBJECTS = kxmlrpcserver.lo kxmlrpcparser.lo \
++	kxmlrpcdaemon.lo kxmlrpcutil.lo \
++	libkxmlrpcd_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkxmlrpcd_main_la_OBJECTS = $(libkxmlrpcd_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkxmlrpcd_main_la_OBJECTS = $(libkxmlrpcd_main_la_final_OBJECTS)
+ bin_PROGRAMS = kxmlrpcd$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_kxmlrpcd_OBJECTS = dummy.$(OBJEXT)
++am_kxmlrpcd_OBJECTS = kxmlrpcd_main.$(OBJEXT)
+ #>- kxmlrpcd_OBJECTS = $(am_kxmlrpcd_OBJECTS)
+ #>+ 1
+-kxmlrpcd_OBJECTS = dummy.$(OBJEXT)
+-kxmlrpcd_DEPENDENCIES = kxmlrpcd.la
++kxmlrpcd_OBJECTS = kxmlrpcd_main.$(OBJEXT)
++kxmlrpcd_DEPENDENCIES = libkxmlrpcd_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -292,7 +302,9 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kxmlrpcdaemon.Plo \
++@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/kxmlrpcd_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kxmlrpcd_main.Po \
++	@AMDEP_TRUE@	$(DEPDIR)/kxmlrpcdaemon.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kxmlrpcinit.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kxmlrpcparser.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kxmlrpcserver.Plo \
+@@ -317,7 +329,7 @@
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+ DIST_SOURCES = $(kxmlrpcd_la_SOURCES) $(libkcm_xmlrpcd_la_SOURCES) \
+-	$(kxmlrpcd_SOURCES)
++	$(libkxmlrpcd_main_la_SOURCES) $(kxmlrpcd_SOURCES)
+ DATA = $(service_DATA)
+ 
+ HEADERS = $(noinst_HEADERS)
+@@ -329,7 +341,7 @@
+ 	uninstall-recursive check-recursive installcheck-recursive
+ DIST_COMMON = README $(noinst_HEADERS) Makefile.am Makefile.in
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(kxmlrpcd_la_SOURCES) $(libkcm_xmlrpcd_la_SOURCES) $(kxmlrpcd_SOURCES)
++SOURCES = $(kxmlrpcd_la_SOURCES) $(libkcm_xmlrpcd_la_SOURCES) $(libkxmlrpcd_main_la_SOURCES) $(kxmlrpcd_SOURCES)
+ 
+ #>- all: all-recursive
+ #>+ 1
+@@ -402,6 +414,8 @@
+ @KDE_USE_CLOSURE_TRUE@libkcm_xmlrpcd.la: libkcm_xmlrpcd.la.closure $(libkcm_xmlrpcd_la_OBJECTS) $(libkcm_xmlrpcd_la_DEPENDENCIES) 
+ @KDE_USE_CLOSURE_FALSE@libkcm_xmlrpcd.la: $(libkcm_xmlrpcd_la_OBJECTS) $(libkcm_xmlrpcd_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(kde_moduledir) $(libkcm_xmlrpcd_la_LDFLAGS) $(libkcm_xmlrpcd_la_OBJECTS) $(libkcm_xmlrpcd_la_LIBADD) $(LIBS)
++libkxmlrpcd_main.la: $(libkxmlrpcd_main_la_OBJECTS) $(libkxmlrpcd_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkxmlrpcd_main_la_LDFLAGS) $(libkxmlrpcd_main_la_OBJECTS) $(libkxmlrpcd_main_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+@@ -436,7 +450,8 @@
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxmlrpcd_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxmlrpcd_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxmlrpcdaemon.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxmlrpcinit.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxmlrpcparser.Plo@am__quote@
+@@ -577,7 +592,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kxmlrpcd.desktop LICENSE 
++KDE_DIST=kxmlrpcd kxmlrpcd.desktop LICENSE libkcm_xmlrpcd.la.closure dummy.cpp 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -744,8 +759,12 @@
+ 
+ 
+ #>+ 3
++kxmlrpcserver.moc: $(srcdir)/kxmlrpcserver.h
++	$(MOC) $(srcdir)/kxmlrpcserver.h -o kxmlrpcserver.moc
++
++#>+ 3
+ clean-metasources:
+-	-rm -f  kxmlrpcserver.moc
++	-rm -f  kxmlrpcserver.moc kxmlrpcserver.moc
+ 
+ #>+ 3
+ clean-closures:
+@@ -762,28 +781,28 @@
+ 
+ 
+ #>+ 12
+-kxmlrpcd_la_meta_unload.cpp:  kxmlrpcserver.moc
+-	@echo 'creating kxmlrpcd_la_meta_unload.cpp'
+-	@-rm -f kxmlrpcd_la_meta_unload.cpp
++libkxmlrpcd_main_la_meta_unload.cpp:  kxmlrpcserver.moc
++	@echo 'creating libkxmlrpcd_main_la_meta_unload.cpp'
++	@-rm -f libkxmlrpcd_main_la_meta_unload.cpp
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kxmlrpcd_la[] = {' > kxmlrpcd_la_meta_unload.cpp ;\
+-		cat  kxmlrpcserver.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kxmlrpcd_la_meta_unload.cpp ;\
+-		echo '0};' >> kxmlrpcd_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kxmlrpcd_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kxmlrpcd_la)' >> kxmlrpcd_la_meta_unload.cpp ;\
+-	else echo > kxmlrpcd_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkxmlrpcd_main_la[] = {' > libkxmlrpcd_main_la_meta_unload.cpp ;\
++		cat  kxmlrpcserver.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkxmlrpcd_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkxmlrpcd_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkxmlrpcd_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkxmlrpcd_main_la)' >> libkxmlrpcd_main_la_meta_unload.cpp ;\
++	else echo > libkxmlrpcd_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
+-	-rm -f  kxmlrpcd_la_meta_unload.cpp
++	-rm -f  libkxmlrpcd_main_la_meta_unload.cpp
+ 
+ #>+ 11
+-kxmlrpcd_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kxmlrpcserver.cpp $(srcdir)/kxmlrpcparser.cpp $(srcdir)/kxmlrpcdaemon.cpp $(srcdir)/kxmlrpcutil.cpp kxmlrpcd_la_meta_unload.cpp   kxmlrpcserver.moc 
++kxmlrpcd_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kxmlrpcd_main.cpp   kxmlrpcserver.moc 
+ 	@echo 'creating kxmlrpcd_la.all_cpp.cpp ...'; \
+ 	rm -f kxmlrpcd_la.all_cpp.files kxmlrpcd_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kxmlrpcd_la.all_cpp.final; \
+-	for file in kxmlrpcserver.cpp kxmlrpcparser.cpp kxmlrpcdaemon.cpp kxmlrpcutil.cpp kxmlrpcd_la_meta_unload.cpp ; do \
++	for file in kxmlrpcd_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kxmlrpcd_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kxmlrpcd_la.all_cpp.final; \
+ 	done; \
+@@ -803,11 +822,23 @@
+ 	rm -f libkcm_xmlrpcd_la.all_cpp.final libkcm_xmlrpcd_la.all_cpp.files
+ 
+ #>+ 11
+-kxmlrpcd.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++libkxmlrpcd_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kxmlrpcserver.cpp $(srcdir)/kxmlrpcparser.cpp $(srcdir)/kxmlrpcdaemon.cpp $(srcdir)/kxmlrpcutil.cpp libkxmlrpcd_main_la_meta_unload.cpp   kxmlrpcserver.moc 
++	@echo 'creating libkxmlrpcd_main_la.all_cpp.cpp ...'; \
++	rm -f libkxmlrpcd_main_la.all_cpp.files libkxmlrpcd_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkxmlrpcd_main_la.all_cpp.final; \
++	for file in kxmlrpcserver.cpp kxmlrpcparser.cpp kxmlrpcdaemon.cpp kxmlrpcutil.cpp libkxmlrpcd_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libkxmlrpcd_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkxmlrpcd_main_la.all_cpp.final; \
++	done; \
++	cat libkxmlrpcd_main_la.all_cpp.final libkxmlrpcd_main_la.all_cpp.files  > libkxmlrpcd_main_la.all_cpp.cpp; \
++	rm -f libkxmlrpcd_main_la.all_cpp.final libkxmlrpcd_main_la.all_cpp.files
++
++#>+ 11
++kxmlrpcd.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kxmlrpcd_main.cpp  
+ 	@echo 'creating kxmlrpcd.all_cpp.cpp ...'; \
+ 	rm -f kxmlrpcd.all_cpp.files kxmlrpcd.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kxmlrpcd.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kxmlrpcd_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kxmlrpcd.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kxmlrpcd.all_cpp.final; \
+ 	done; \
+@@ -816,20 +847,20 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kxmlrpcd_la.all_cpp.cpp libkcm_xmlrpcd_la.all_cpp.cpp kxmlrpcd.all_cpp.cpp
++	-rm -f kxmlrpcd_la.all_cpp.cpp libkcm_xmlrpcd_la.all_cpp.cpp libkxmlrpcd_main_la.all_cpp.cpp kxmlrpcd.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) kxmlrpcd_la_OBJECTS="$(kxmlrpcd_la_final_OBJECTS)" all-am
++	$(MAKE) libkxmlrpcd_main_la_OBJECTS="$(libkxmlrpcd_main_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) kxmlrpcd_la_OBJECTS="$(kxmlrpcd_la_final_OBJECTS)" install-am
++	$(MAKE) libkxmlrpcd_main_la_OBJECTS="$(libkxmlrpcd_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) kxmlrpcd_la_OBJECTS="$(kxmlrpcd_la_nofinal_OBJECTS)" all-am
++	$(MAKE) libkxmlrpcd_main_la_OBJECTS="$(libkxmlrpcd_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kxmlrpcd_la_OBJECTS="$(kxmlrpcd_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkxmlrpcd_main_la_OBJECTS="$(libkxmlrpcd_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
+@@ -839,4 +870,4 @@
+ 	-rm -f *.rpo
+ 
+ #>+ 2
+-$(srcdir)/kxmlrpcserver.cpp: kxmlrpcserver.moc 
++$(srcdir)/kxmlrpcserver.cpp: kxmlrpcserver.moc kxmlrpcserver.moc 
