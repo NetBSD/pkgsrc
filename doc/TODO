@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.645 2003/06/16 12:07:59 martti Exp $
+$NetBSD: TODO,v 1.646 2003/06/18 09:10:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -64,15 +64,13 @@ Suggested package updates
 =========================
 
 	o ImageViewer-0.6.1
-	o R-1.7.0
+	o R-1.7.1
 	o TeXmacs-1.0.1.14
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o adom-1.1.1 [pkg/21847]
 	o angband-3.0.3
 	o anjuta-1.0.2
-	o arch-1.0pre17 [pkg/20776]
-	o arch-1.0pre25
 	o atari800-1.3
 	o autogen-5.5.5
 	o avifile-devel-0.7.34-20030319
@@ -81,6 +79,7 @@ Suggested package updates
 	o bidwatcher-1.3.8
 	o biew-5.5.0
 	o bind-8.4.0
+	o binutils-2.14
 	o boehm-gc-6.2alpha6
 	o bogofilter-0.11.2
 	o bzflag-1.7g0
@@ -101,6 +100,7 @@ Suggested package updates
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl102
 	o ettercap-0.6.a
+	o evolution-1.4
 	o exim-4.12 [pkg/19850|ad]
 	o exim-4.20
 	o festival-1.4.3
@@ -125,6 +125,8 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o gimageview-0.2.22 [pkg/21851]
 	o gimageview-0.2.23
+	o gimp-1.2.5
+	o icewm-1.2.8
 	o gkrellm-2.1.12 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
 	o gliblib-1.2.3 [pkg/21776]
@@ -139,6 +141,7 @@ Suggested package updates
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
 	o gtetrinet-0.7.2
+	o gtk-gnutella-0.92 [pkg/21551]
 	o gtkglext-1.0.0
 	o gtkmm-2.2.2
 	o guile-1.6.4
@@ -146,6 +149,7 @@ Suggested package updates
 	o hpijs-1.4
 	o hylafax-4.1.5 [pkg/21804]
 	o icepref-2.2
+	o icewm-1.2.8
 	o inform-6.21.3 [pkg/19298]
 	o inn-2.4.0
 	o iozone-3.181
@@ -206,10 +210,12 @@ Suggested package updates
 	o polsms-1.9.2
 	o postgresql-7.3.3
 	o povray-3.5
+	o pureftpd-1.0.15
 	o py-soappy-0.10.1 [pkg/21735]
 	o pygtk-0.6.11
 	o ratpoison-1.2.2
 	o rep-gtk-0.17
+	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
 	o rox-session-0.1.19
 	o rt-3.0.2
@@ -239,19 +245,21 @@ Suggested package updates
 	o sylpheed-claws-0.9.0
 	o t1lib-5.0.0
 	o tcl/tk-8.4.3
-	o tcpreplay-1.4.3
+	o tcpreplay-1.4.4
 	o tightvnc-1.2.8
 	o tkman-2.2
 	o top-3.5b12.3
 	o ttf2pt1-3.4.3
 	o vfu-4.00
-	o vnc-3.3.4 [http://www.realvnc.com/download.html]
+	o vice-1.12
+	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wdm-1.25
 	o wine-20030508
 	o wmbiff-0.4.15
 	o wmweather-2.4.0
 	o wwwoffle-2.7h
+	o wxGTK-2.4.1
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
 	o xerces-c-2.2.0 [heinz]
@@ -270,6 +278,7 @@ Suggested package updates
 	o yacas-1.0.55
 	o yasm-0.2.2 [pkg/21850]
 	o ysm-2.9.0
+	o yudit-2.7.5
 	o zenicb 1.31 (needs merge with lots of local changes)
 
 Infrastructure problems which need addressing
