@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2003/09/08 04:47:51 epg Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/12/03 15:20:44 epg Exp $
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel
+MASTER_SITES=   	http://svn.collab.net/tarballs/
 
 MAINTAINER=		epg@pretzelnet.org
 HOMEPAGE=		http://subversion.tigris.org/
@@ -22,7 +23,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
-CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4:${LOCALBASE}
 CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
 CONFIGURE_ARGS+=	--with-ssl
 
