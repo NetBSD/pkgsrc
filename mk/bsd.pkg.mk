@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.593 2000/10/26 16:09:54 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.594 2000/10/31 17:20:07 itojun Exp $
 #
 # This file is in the public domain.
 #
@@ -215,6 +215,10 @@ DEPENDS+=		ncurses>=5.0:../../devel/ncurses
 
 .if defined(USE_GTEXINFO) && !exists(/usr/bin/install-info)
 DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
+.endif
+
+.if defined(USE_LIBINTL) && !exists(/usr/include/libintl.h)
+DEPENDS+=	gettext-lib>=0.10.35nb1:../../devel/gettext-lib
 .endif
 
 .if defined(USE_LIBTOOL)
