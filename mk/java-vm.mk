@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.20 2004/04/02 17:26:21 abs Exp $
+# $NetBSD: java-vm.mk,v 1.21 2004/04/06 19:15:13 tv Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -43,7 +43,7 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 # Note: The wonka configuration is still under development
 #
 .if defined(USE_JAVA2) && !empty(USE_JAVA2:M[yY][eE][sS])
-_PKG_JVMS?=		sun-jdk13 sun-jdk14 blackdown-jdk13 wonka jdk12 jdk13
+_PKG_JVMS?=		sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe wonka jdk12 jdk13
 .else
 _PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe wonka jdk12 jdk13
 .endif
@@ -195,7 +195,7 @@ BUILDLINK_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
 BUILDLINK_DEPENDS.sun-jre14?=		sun-jre14-[0-9]*
 BUILDLINK_DEPENDS.blackdown-jdk13?=	blackdown-jdk13-[0-9]*
 BUILDLINK_DEPENDS.blackdown-jre13?=	blackdown-jre13-[0-9]*
-BUILDLINK_DEPENDS.kaffe?=		kaffe-[0-9]*
+BUILDLINK_DEPENDS.kaffe?=		kaffe>=1.1.4
 BUILDLINK_DEPENDS.wonka?=		wonka-[0-9]*
 
 _JRE.jdk=		jdk
