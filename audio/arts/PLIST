@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/03/23 21:30:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/04/05 21:18:07 reed Exp $
 bin/artsc-config
 bin/artscat
 bin/artsd
@@ -137,4 +137,4 @@ lib/mcop/x11globalcomm.mcoptype
 @dirrm lib/mcop
 @dirrm include/artsc
 @dirrm include/arts/gsl
-@dirrm include/arts
+@unexec ${RMDIR} %D/include/arts 2>/dev/null || ${TRUE}
