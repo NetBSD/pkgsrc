@@ -1,0 +1,15 @@
+This Mini-Scheme Interpreter is based on "SCHEME Interpreter in
+Common Lisp" in Appendix of T.Matsuda & K.Saigo, Programming of LISP,
+archive No5 (1987) p6 - p42 (published in Japan).
+
+ Supported features (or, NOT supported features :-)
+	1) Lists, symbols, strings.
+	   However, strings have very limited capability.
+	   For instance, there is *NO* string-ref, string-set!, ... etc.
+	2) Numbers are limited to FIXNUM only.
+	   There is *NO* complex, real, rational and even bignum.
+	3) Macro feature is supported, though not the one defined in R4RS.
+
+ Known problems:
+	1) Poor error recovery from illegal use of syntax and procedure.
+	2) Certain procedures do not check its argument type.

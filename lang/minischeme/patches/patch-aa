@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/02 04:52:13 itojun Exp $
+
+--- Makefile-	Thu Nov  2 13:44:52 2000
++++ Makefile	Thu Nov  2 13:45:03 2000
+@@ -6,7 +6,7 @@
+ #  Please see source and/or README  for system defition
+ #
+ #CFLAGS = -g -DSYSV -traditional -traditional-cpp -Wid-clash-8
+-CFLAGS = -O -DSYSV
++CFLAGS += -O -DBSD
+ 
+ all :	miniscm
+ 
