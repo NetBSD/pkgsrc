@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2002/12/24 07:46:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.65 2003/01/09 13:13:04 schmonz Exp $
 
 # Notes to package maintainers:
 #
@@ -24,6 +24,7 @@ USE_DB185=		# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
 
+NO_PKGTOOLS_REQD_CHECK=	# defined
 NO_CHECKSUM=		# defined
 NO_PATCH=		# defined
 NO_MTREE=		# defined
@@ -35,7 +36,6 @@ NO_PACKAGE=		Deinstallation is not permitted
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
 
-LOCALBASE:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 PKG_DBDIR?=		/var/db/pkg
 
 .if ${OPSYS} == "NetBSD" && !exists(/usr/share/tmac/tmac.andoc)
@@ -55,3 +55,5 @@ post-install:
 
 .include "../../databases/db/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
+
+PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
