@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1866 2003/04/07 19:21:05 mason Exp $
+$NetBSD: CHANGES,v 1.1867 2003/04/08 03:40:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1486,3 +1486,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dialog to 0.6znb1 [jdc 2003-04-07]
 	Updated ja-samba to 2.2.7.1.1.1nb1 [taca 2003-04-07]
 	Updated cgoban-java to 2.4.59 [mason 2003-04-07]
+	Updated ja-samba to 2.2.7.1.1.1nb2 [taca 2003-04-08]
