@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/12/14 16:30:01 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/14 16:36:24 bouyer Exp $
 # FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
 
 DISTNAME=       swish-efiles.1.3.2
@@ -6,7 +6,7 @@ PKGNAME=        swish-e-1.3.2
 CATEGORIES=     www textproc
 MASTER_SITES=   ftp://sunsite.berkeley.edu/pub/swish-e/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE= 	http://sunsite.berkeley.edu/SWISH-E/
 
 WRKSRC=		${WRKDIR}/src
