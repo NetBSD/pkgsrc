@@ -1,16 +1,13 @@
-$NetBSD: patch-af,v 1.1 1998/09/13 17:06:10 garbled Exp $
-*** src/bat_include.h~	Tue May 27 06:27:48 1997
---- src/bat_include.h	Thu Mar  5 16:22:59 1998
-***************
-*** 71,75 ****
-  #include <arpa/inet.h>
-  extern int h_errno;
-! #if !defined(HPUX) && !defined(Linux) && !defined(__FreeBSD__)
-  #include <stropts.h>
-  #include <sys/filio.h>  
---- 71,75 ----
-  #include <arpa/inet.h>
-  extern int h_errno;
-! #if !defined(HPUX) && !defined(Linux) && !defined(__FreeBSD__) && !defined(__NetBSD__)
-  #include <stropts.h>
-  #include <sys/filio.h>  
+$NetBSD: patch-af,v 1.2 1998/11/05 02:46:09 mycroft Exp $
+
+--- src/bat_include.h.orig	Sat Aug 15 15:16:47 1998
++++ src/bat_include.h	Wed Nov  4 21:27:03 1998
+@@ -70,7 +70,7 @@
+ #include <netdb.h>
+ #include <arpa/inet.h>
+ extern int h_errno;
+-#if !defined(HPUX) && !defined(Linux) && !defined(__FreeBSD__)
++#if !defined(HPUX) && !defined(Linux) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #include <stropts.h>
+ #include <sys/filio.h>  
+ #endif /* HPUX */

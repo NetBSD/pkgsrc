@@ -1,6 +1,7 @@
-$NetBSD: patch-ae,v 1.1 1998/09/13 17:06:09 garbled Exp $
---- Makefile.orig	Thu Mar 19 08:40:07 1998
-+++ Makefile	Sun Sep 13 09:29:54 1998
+$NetBSD: patch-ae,v 1.2 1998/11/05 02:46:09 mycroft Exp $
+
+--- Makefile.orig	Sat Aug 15 15:16:44 1998
++++ Makefile	Wed Nov  4 21:27:03 1998
 @@ -9,10 +9,10 @@
  # -DNDEBUG -DDEBUG -DTEST -DGSM -DDEBUG_MIX -DDEBUG_MEM
  # -DDEBUG_RTP -DREPEAT
