@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.224 2001/12/31 14:58:46 lukem Exp $
+# $NetBSD: Packages.txt,v 1.225 2002/01/06 21:48:40 fredb Exp $
 ###########################################################################
 
 			==========================
@@ -595,9 +595,17 @@ a subdirectory:
 (Note the trailing slash after the subdirectory name.) Use of the deprecated
 MASTER_SITE_SUBDIR will not work.
 
-If the package has multiple DISTFILES from different MASTER_SITES, set
-	MASTER_SITE_name_of_file-0.1.2.tar.gz=	ftp://some.url/path/
-for all except the first distribution file, to speed up fetching the files.
+If the package has multiple DISTFILES or multiple PATCHFILES from different
+sites, set SITES_foo to a list of URI's where file "foo" may be found. "foo"
+includes the suffix, e.g.
+
+	DISTFILES=${DISTNAME}${EXTRACT_SUFX}
+	DISTFILES+=foo-file.tar.gz
+	SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
+			http://www.somewhereelse.com/mirror/somehow/
+
+Note, that the normal default setting of DISTFILES must be made explicit
+if you want to add to it (rather than replace it), as you usually would.
 
 Currently the following values are available for CATEGORIES. If more than
 one is used, they need to be separated by spaces:
@@ -1166,11 +1174,17 @@ The main targets used during the build process defined in bsd.pkg.mk are:
  * fetch:
    This will check if the file(s) given in the variables DISTFILES and
    PATCHFILES (as defined in the package's Makefile) are present on the
-   local system in /usr/pkgsrc/distfiles. If they are not present, they
-   will be fetched using ftp(1) from the site(s) given in the variable
-   PATCH_SITES. The location(s) in PATCH_SITES are in the form of URLs
-   and can be ftp://- and http://-URLs, as ftp(1) understands both of
-   them.
+   local system in /usr/pkgsrc/distfiles. If they are not present, an
+   attempt will be made to fetch them using commands of the form
+
+   ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
+
+   where ${site} varies through several possibilities in turn: first,
+   ${MASTER_SITE_OVERRIDE} is tried, then the sites specified in either
+   ${SITES_file}, if defined, else ${MASTER_SITES} or ${PATCH_SITES}, as
+   applies, then finally the value of ${MASTER_SITE_BACKUP}. The order of
+   all except the first can be optionally sorted by the user, via setting
+   either ${MASTER_SORT_AWK} or ${MASTER_SORT_REGEX}.
 
  * checksum:
    After the distfile(s) are fetched, their checksum is generated and
