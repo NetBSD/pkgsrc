@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.2 2004/02/01 00:59:51 jlam Exp $
+# $NetBSD: gcc.mk,v 1.3 2004/02/01 01:23:37 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -201,6 +201,11 @@ CPP=		${_GCC_PREFIX}bin/cpp
 CXX=		${_GCC_PREFIX}bin/g++
 F77=		${_GCC_PREFIX}bin/g77
 PKG_FC:=	${F77}
+.  endif
+.else
+.  if !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
+_GCC_PATH!=	${TYPE} ${CC} | ${AWK} '{ print $$NF }'
+PATH:=		${_GCC_PATH:H}:${PATH}
 .  endif
 .endif
 
