@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2003/03/15 20:57:50 kei Exp $
+
+ALIAS=@FONTDIR@/fonts.alias
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	${ECHO} '-- BEGIN shinonome --' >> ${ALIAS}
+	${CAT} @ALIAS_SHINONOME@ >> ${ALIAS}
+	${ECHO} >> ${ALIAS}
+	${ECHO} '!! shinonome generic aliases' >> ${ALIAS}
+	${CAT} @ALIAS_SHINONOME@ | \
+		${GREP} 'mincho-.*-misc-' | \
+		${SED} -e 's/mincho/fixed/' >> ${ALIAS}
+	${ECHO} '-- END shinonome --' >> ${ALIAS}
+	mkfontdir @FONTDIR@
+	;;
+
+*)
+	${ECHO} "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+
+esac
