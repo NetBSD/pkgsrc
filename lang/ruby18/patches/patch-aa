@@ -1,8 +1,26 @@
-$NetBSD: patch-aa,v 1.2 2004/11/29 08:20:06 taca Exp $
+$NetBSD: patch-aa,v 1.3 2005/01/21 06:13:36 tv Exp $
 
---- configure.in.orig	2003-12-25 04:19:12.000000000 +0900
+--- configure.in.orig	2003-12-24 14:19:12.000000000 -0500
 +++ configure.in
-@@ -864,6 +864,12 @@ if test "$with_dln_a_out" != yes; then
+@@ -314,6 +314,9 @@ msdosdjgpp*)	LIBS="-lm $LIBS"
+ 		ac_cv_func_getpgrp_void=yes
+ 		ac_cv_func_setitimer=no
+ 		;;
++interix3*)	LIBS="-lm $LIBS"
++		ac_cv_func_getpgrp_void=yes
++		;;
+ freebsd*)	LIBS="-lm $LIBS"
+ 		AC_CACHE_CHECK([whether -lxpg4 has to be linked],
+ 		  rb_cv_lib_xpg4_needed,
+@@ -824,6 +827,7 @@ if test "$with_dln_a_out" != yes; then
+     mingw*)	;;
+     aix*)	;;
+     netbsd*) CCDLFLAGS="$CCDLFLAGS -fPIC";;
++    interix3*)	;;
+     *) CCDLFLAGS="$CCDLFLAGS -fPIC";;
+     esac
+   else
+@@ -864,6 +868,12 @@ if test "$with_dln_a_out" != yes; then
  	osf*) 		: ${LDSHARED="ld -shared -expect_unresolved \"*\""}
  			rb_cv_dlopen=yes ;;
  	linux*) 	: ${LDSHARED="$CC -shared"}
@@ -15,7 +33,7 @@ $NetBSD: patch-aa,v 1.2 2004/11/29 08:20:06 taca Exp $
  			rb_cv_dlopen=yes ;;
  	gnu*)   	: ${LDSHARED="$CC -shared"}
  			rb_cv_dlopen=yes
-@@ -879,6 +885,7 @@ if test "$with_dln_a_out" != yes; then
+@@ -879,10 +889,18 @@ if test "$with_dln_a_out" != yes; then
  	netbsd*)	: ${LDSHARED='${CC} -shared'}
  			if test "$rb_cv_binary_elf" = yes; then
  			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
@@ -23,7 +41,18 @@ $NetBSD: patch-aa,v 1.2 2004/11/29 08:20:06 taca Exp $
  			    LIBPATHFLAG=' -L%1$-s'
  			    RPATHFLAG=' -Wl,-R%1$-s'
  			fi
-@@ -1157,6 +1164,7 @@ if test "$enable_shared" = 'yes'; then
+ 			rb_cv_dlopen=yes ;;
++	interix3*)	: ${LDSHARED='${CC} -shared'}
++			LDFLAGS="$LDFLAGS -Wl,-E"
++			# use special random-slot linkage in 0x[56]XXXXXXX
++			DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET) -Wl,--image-base,$$(($$RANDOM %%4096/2*262144+1342177280))'
++			LIBPATHFLAG=' -L%1$-s'
++			RPATHFLAG=' -Wl,-R%1$-s'
++			rb_cv_dlopen=yes ;;
+ 	openbsd*) 	: ${LDSHARED="\$(CC) -shared ${CCDLFLAGS}"}
+ 			if test "$rb_cv_binary_elf" = yes; then
+ 			    LDFLAGS="$LDFLAGS -Wl,-E"
+@@ -1157,6 +1175,7 @@ if test "$enable_shared" = 'yes'; then
  	;;
      linux*)
  	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR)'
@@ -31,7 +60,20 @@ $NetBSD: patch-aa,v 1.2 2004/11/29 08:20:06 taca Exp $
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_SO_NAME).so'
  	;;
      gnu*)
-@@ -1187,6 +1195,13 @@ if test "$enable_shared" = 'yes'; then
+@@ -1182,11 +1201,26 @@ if test "$enable_shared" = 'yes'; then
+ 	   LIBRUBY_ALIASES=""
+ 	fi
+  	;;
++    interix3*)
++	SOLIBS='$(LIBS)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
++	# link explicitly to 0x48000000
++	LIBRUBY_DLDFLAGS='-Wl,-h,lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) -Wl,--image-base,1207959552'
++	LIBRUBYARG_SHARED='-Wl,-R -Wl,${libdir} -L${libdir} -L. -l$(RUBY_SO_NAME)'
++	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_SO_NAME).so'
++ 	;;
+     openbsd*)
+ 	SOLIBS='$(LIBS)'
  	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
  	;;
      solaris*)
