@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/29 21:54:49 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 2000/07/11 10:03:50 agc Exp $
 #
 
 DISTNAME=	9.01
@@ -16,9 +16,9 @@ USE_IMAKE=	yes
 NO_WRKSUBDIR=	yes
 
 pre-install:
-	${MKDIR} ${X11BASE}/share/doc/xrn
-.for file in COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog
-	${INSTALL_DATA} ${WRKSRC}/${file} ${X11BASE}/share/doc/xrn
-.endfor
+	${MKDIR} ${X11PREFIX}/share/doc/xrn
+	for f in COMMON-PROBLMS COPYRIGHT CREDITS ChangeLog; do		\
+		${INSTALL_DATA} ${WRKSRC}/$$f ${X11PREFIX}/share/doc/xrn; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
