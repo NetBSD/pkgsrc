@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2001/11/17 16:29:08 martin Exp $
+
+--- speech_tools/include/unix/EST_socket_unix.h.orig	Sat Nov 17 16:55:44 2001
++++ speech_tools/include/unix/EST_socket_unix.h	Sat Nov 17 16:56:18 2001
+@@ -49,7 +49,7 @@
+ typedef int ssize_t;
+ #endif
+ 
+-#if defined(__linux__)
++#if defined(__linux__) || defined(__NetBSD__)
+ /* gcc-2.95.1 is fussy and requies certain arguments to follow their type */
+ /* Linux wants socklen_t params but other (even if they have this defined */
+ /* want int or maybe unsigned int (pretty random actually)                */
