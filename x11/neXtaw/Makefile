@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/02 20:10:47 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/12 11:56:43 dmcmahill Exp $
 
 DISTNAME=	neXtaw-0.12
 CATEGORIES=	x11
@@ -6,8 +6,6 @@ MASTER_SITES=	http://siag.nu/pub/neXtaw/
 
 MAINTAINER=	packages@netbsd.org
 COMMENT=	NeXTstep-like widgets based on the Athena Widget set
-
-.include "../../mk/bsd.prefs.mk"
 
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
@@ -17,6 +15,16 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-alpha)
+GCC_VERSION!=           gcc --version
+.if (${GCC_VERSION:C/-.*$$//} == egcs)
+# "egcs" cannot be used, as this package tickles c++ compiler bugs
+.  include "../../lang/gcc/Makefile.gcc"
+.endif
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -30,8 +38,3 @@ post-install:
 
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# XXX On NetBSD/alpha 1.5.2, gcc has an optimization bug.
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.5.2-alpha)
-CFLAGS+=	-O0
-.endif
