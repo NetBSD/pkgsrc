@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.19 2005/02/23 04:09:51 minskim Exp $
+# $NetBSD: Makefile.common,v 1.20 2005/03/29 14:28:05 wiz Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 CATEGORIES+=	graphics
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
 
-DIST_VERS=	1.4rc4
-BASE_VERS=	1.4.0.4
+DIST_VERS=	1.4rc5
+BASE_VERS=	1.4.0.5
 
 MAINTAINER?=	manu@NetBSD.org
 HOMEPAGE=	http://aa-project.sourceforge.net/aalib/

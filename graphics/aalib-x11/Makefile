@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/12/03 15:14:59 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/29 14:28:05 wiz Exp $
 
 PKGNAME=	aalib-x11-${BASE_VERS}
 CATEGORIES+=	x11
-PKGREVISION=	2
 
 COMMENT=	ASCII Art library with X11 support
 
