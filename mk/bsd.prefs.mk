@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.25 2001/03/13 09:41:36 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.26 2001/03/13 09:53:37 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -157,11 +157,16 @@ PKG_TOOLS_BIN?=		${LOCALBASE}/bsd/bin
 LOCALBASE?=		${DESTDIR}/usr/local
 X11BASE?=		${DESTDIR}/usr/X11R6
 CROSSBASE?=		${LOCALBASE}/cross
-     
+
 .ifndef DIGEST
 DIGEST:=		${LOCALBASE}/bin/digest
 MAKEFLAGS+=		DIGEST=${DIGEST}
 .endif
+
+# Only add the DIGEST_VERSION value to MAKEFLAGS when we know
+# we've got a valid version number, retrieved from the digest(1)
+# binary. This is different to PKGTOOLS_VERSION, since, in that
+# case, the build dies when pkg_info(1) is out of date. 
 
 .if !exists(${DIGEST})
 DIGEST_VERSION=		20010301
