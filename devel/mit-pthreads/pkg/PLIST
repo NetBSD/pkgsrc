@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2001/01/04 15:10:31 agc Exp $
+@comment $NetBSD: PLIST,v 1.14 2001/04/11 16:21:22 skrll Exp $
 pthreads/bin/pgcc
 pthreads/bin/pg++
 pthreads/lib/libpthread.a
@@ -8,7 +8,6 @@ pthreads/lib/libpthread.so.1.60
 pthreads/include/Makefile.inc
 pthreads/include/dirent.h
 pthreads/include/errno.h
-pthreads/include/math.h
 pthreads/include/netdb.h
 pthreads/include/pthread.h
 pthreads/include/pwd.h
@@ -50,7 +49,6 @@ pthreads/include/pthread/posix.h
 pthreads/include/pthread/config.h
 pthreads/include/pthread/ac-types.h
 pthreads/include/pthread/paths.h
-pthreads/include/sys/__math.h
 pthreads/include/sys/__path.h
 pthreads/include/sys/__signal.h
 pthreads/include/sys/__stdio.h

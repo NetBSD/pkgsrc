@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/02/25 04:17:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.32 2001/04/11 16:21:21 skrll Exp $
 #
 
 DISTNAME=		pthreads-1_60_beta6
@@ -22,12 +22,14 @@ PATCH_FUZZ_FACTOR=
 
 post-patch:
 	@${RM} ${WRKSRC}/include/endian.h
+	@${RM} ${WRKSRC}/include/math.h
 
 post-configure:
 	@${ECHO} "#define HAVE_SYSCALL_SIGACTION 1" >> ${WRKSRC}/config.h
 	@${ECHO} "#define HAVE_SYSCALL_SIGPAUSE 1" >> ${WRKSRC}/config.h
 	@${ECHO} "#define HAVE_SYSCALL_SIGPROCMASK 1" >> ${WRKSRC}/config.h
 	@${ECHO} "#define HAVE_SYSCALL_SIGSUSPEND 1" >> ${WRKSRC}/config.h
+	@${RM} ${WRKSRC}/include/sys/__math.h
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/pthreads
