@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/20 11:23:53 lonewolf Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/04 11:27:44 cjep Exp $
 #
 
 DISTNAME=	fakeroot_0.5.8
@@ -13,8 +13,5 @@ WRKSRC=		${WRKDIR}/fakeroot-0.5.8
 USE_LIBTOOL=	YES
 LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
-
-# XXX Kludge, configure bombs without this on my -current
-CONFIG_SHELL=
 
 .include "../../mk/bsd.pkg.mk"
