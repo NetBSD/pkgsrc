@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2000/06/27 00:51:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2000/06/27 05:03:49 kleink Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
-DISTNAME=	docbook-4.0
+DISTNAME=	docbook-4.1
 CATEGORIES=	textproc
 MASTER_SITES=	\
 		http://www.oasis-open.org/docbook/sgml/4.1/ \
