@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4696 2004/02/06 14:13:50 tron Exp $
+$NetBSD: CHANGES,v 1.4697 2004/02/06 17:04:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -661,3 +661,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kdepim3 to 3.2.0nb1 [markd 2004-02-06]
 	Updated kde3 to 3.2.0nb1 [markd 2004-02-06]
 	Updated arts to 1.2.0nb1 [tron 2004-02-06]
+	Updated ORBit2 to 2.8.3 [jmmv 2004-02-06]
