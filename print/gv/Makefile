@@ -1,45 +1,31 @@
-# $NetBSD: Makefile,v 1.44 2004/11/13 21:28:28 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2004/12/01 21:24:30 xtraeme Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
-DISTNAME=	gv-3.5.8
-PKGREVISION=	4
+DISTNAME=	gv-3.6.0
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftpthep.physik.uni-mainz.de/pub/gv/unix/
+MASTER_SITES=	${MASTER_SITE_GNU:=gv/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://wwwthep.physik.uni-mainz.de/~plass/gv/
+HOMEPAGE=	http://www.gnu.org/software/gv/
 COMMENT=	PostScript and PDF previewer
 
 USE_BUILDLINK3=		yes
-USE_IMAKE=		# defined
-XAW_TYPE?=		3d
-
-IMAKEOPTS+=		-DCONVERT_INCLUDE_DIRECTIVES
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
 USE_GNU_TOOLS+=		make
-.elif ${OPSYS} == "IRIX" && !empty(ABI)
-# Hack to put the correct path first -- otherwise, buildlink will first try to link X11BASE/lib
-.  if ${ABI} == "64"
-IMAKEOPTS+=		-DsgiABIopts="-L/usr/lib${ABI} -DLONG64"
-.  else
-IMAKEOPTS+=		-DsgiABIdefs=-L/usr/lib${ABI}
-.  endif
-.endif
+USE_X11=		yes
+GNU_CONFIGURE=		yes
+WRKSRC=			${WRKDIR}/gv
 
-# We need Xaw3d to build.
-.if ${XAW_TYPE} == "standard"
-XAW_TYPE:=	3d
-.endif
+USE_MAKEINFO=		yes
+INFO_FILES=		gv.info
 
-post-extract:
-	${MV} ${WRKSRC}/doc/gv.man ${WRKSRC}/source/
+XAW_TYPE=		3d
 
-post-install:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install.doc
+SUBST_CLASSES+=		sh
+SUBST_STAGE.sh=		post-patch
+SUBST_FILES.sh=		configure
+SUBST_SED.sh=		-e "s|==|=|g"
+SUBST_MESSAGE.sh=	"Fixing configure script."
 
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/ghostscript.mk"
