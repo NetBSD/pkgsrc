@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/07/15 19:52:58 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/11/12 23:26:58 tron Exp $
 bin/anytopnm
 bin/asciitopgm
 bin/atktopbm
@@ -179,6 +179,14 @@ bin/ybmtopbm
 bin/yuvsplittoppm
 bin/yuvtoppm
 bin/zeisstopnm
+include/pbm.h
+include/pgm.h
+include/pnm.h
+include/ppm.h
+lib/libpbm.a
+lib/libpgm.a
+lib/libpnm.a
+lib/libppm.a
 man/man1/anytopnm.1
 man/man1/asciitopgm.1
 man/man1/atktopbm.1
