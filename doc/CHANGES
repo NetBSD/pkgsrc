@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4220 2003/12/22 08:14:26 uebayasi Exp $
+$NetBSD: CHANGES,v 1.4221 2003/12/22 08:50:55 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5283,3 +5283,23 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xli to 1.17.0 [fredb 2003-12-22]
 	Updated xemacs to 21.4.14 [uebayasi 2003-12-22]
 	Updated xemacs-packages to 1.13 [uebayasi 2003-12-22]
+	Updated libxfce4util to 4.0.2 [martti 2003-12-22]
+	Updated libxfce4mcs to 4.0.2 [martti 2003-12-22]
+	Updated libxfce4gui to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-mcs-manager to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-panel to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-mcs-plugins to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-mixer to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-iconbox to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-print to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-fm to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-systray to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-wm to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-desktop to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-wm-themes to 4.0.0nb2 [martti 2003-12-22]
+	Updated xfce4-gtk2-engine to 2.1.7nb2 [martti 2003-12-22]
+	Updated xfce4-themes to 4.0.0nb3 [martti 2003-12-22]
+	Updated xfce4-toys to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-trigger-launcher to 4.0.2 [martti 2003-12-22]
+	Updated xfce4-utils to 4.0.2 [martti 2003-12-22]
+	Updated xfce4 to 4.0.2 [martti 2003-12-22]
