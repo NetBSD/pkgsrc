@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/04/16 18:18:28 xtraeme Exp $
+$NetBSD: patch-ad,v 1.2 2005/03/25 02:56:42 wiz Exp $
 
---- src/gfx/ggidrv.cc.orig	Sun Jan 25 03:56:28 2004
-+++ src/gfx/ggidrv.cc	Sun Jan 25 03:57:34 2004
-@@ -383,7 +383,7 @@
+--- src/gfx/ggidrv.cc.orig	1999-07-02 11:20:29.000000000 +0200
++++ src/gfx/ggidrv.cc
+@@ -32,6 +32,7 @@
+ #include <string.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <unistd.h>
+ #include <ggi/ggi.h>
+ #include <allegro.h>
+ /**************************************************************************/
+@@ -383,7 +384,7 @@ int set_gfx_mode(int mode, int w, int h,
  }
  /**************************************************************************/
  int set_palette(PALETTE p) {
@@ -11,7 +19,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/04/16 18:18:28 xtraeme Exp $
  	int i;
  
          for(i=0;i<256;i++) {
-@@ -398,7 +398,7 @@
+@@ -398,7 +399,7 @@ int set_palette(PALETTE p) {
  };
  /**************************************************************************/
  void get_palette(PALETTE p) {
@@ -20,7 +28,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/04/16 18:18:28 xtraeme Exp $
  	int i;
  
          ggiGetPalette(screen->vis, 0, 1 << 8, pal);
-@@ -715,7 +715,7 @@
+@@ -715,7 +716,7 @@ void remove_int(void (*proc)()) {
  }
  /**************************************************************************/
  int set_color(int i, RGB *rgb) {
