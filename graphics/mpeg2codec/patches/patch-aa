@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 1999/11/19 11:21:26 agc Exp $
+$NetBSD: patch-aa,v 1.4 2000/08/05 00:59:09 jlam Exp $
 
 --- Makefile.orig	Sat Jul 20 00:35:46 1996
 +++ Makefile	Fri Nov 19 11:19:12 1999
@@ -33,8 +33,8 @@ $NetBSD: patch-aa,v 1.3 1999/11/19 11:21:26 agc Exp $
  
 -#INCLUDEDIR = -I/usr/openwin/include
 -#LIBRARYDIR = -L/usr/openwin/lib
-+INCLUDEDIR = -I${PREFIX}/include
-+LIBRARYDIR = -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
++INCLUDEDIR = -I${X11BASE}/include
++LIBRARYDIR = -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
  
  # select one of the following CC CFLAGS settings
  
