@@ -1,0 +1,5 @@
+code2html is a perlscript which converts a program source code to syntax
+highlighted HTML. It may be called from the command line or as a CGI script.
+It can also handle include commands in HTML files. Currently supports: Ada 95,
+C, C++, HTML, Java, JavaScript, Makefile, Pascal, Perl, SQL, AWK, M4, and
+Groff.         
