@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2001/06/11 11:23:20 itojun Exp $
+# $NetBSD: Makefile,v 1.16 2001/10/22 05:51:25 martti Exp $
 #
 
-DISTNAME=		isakmpd-20010611
+DISTNAME=		isakmpd-20011018
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 MAINTAINER=		itojun@kame.net
 COMMENT=		OpenBSD IKE daemon
-
-USE_SSL=		yes
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
@@ -21,4 +19,19 @@ WRKSRC=			${WRKDIR}/isakmpd
 
 MAKE_ENV+=		BINDIR=${PREFIX}/sbin MANDIR=${PREFIX}/man
 
+post-patch:
+	@${ECHO_MSG} "Fixing references to buildlink directories"
+	@for i in `${FIND} ${WRKSRC} -name '*Makefile*'`; do		\
+		${MV} $${i} $${i}.orig;					\
+		${SED} "s+@BUILDLINK_DIR@+${BUILDLINK_DIR}+g"		\
+			< $${i}.orig > $${i};				\
+	done
+	@${ECHO_MSG} "Fixing manual page references"
+	@for i in isakmpd.8 isakmpd.conf.5 isakmpd.policy.5; do		\
+		${MV} ${WRKSRC}/$${i} ${WRKSRC}/$${i}.orig;		\
+		${SED} "s+/usr/share/ipsec+${PREFIX}/share/examples+g"	\
+			< ${WRKSRC}/$${i}.orig > ${WRKSRC}/$${i};	\
+	done
+
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

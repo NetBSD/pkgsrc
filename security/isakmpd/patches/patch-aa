@@ -1,16 +1,24 @@
-$NetBSD: patch-aa,v 1.4 2001/04/03 13:06:28 itojun Exp $
+$NetBSD: patch-aa,v 1.5 2001/10/22 05:51:25 martti Exp $
 
---- Makefile.orig	Sat Mar 24 01:14:34 2001
-+++ Makefile	Tue Apr  3 22:00:03 2001
-@@ -44,9 +44,9 @@
- # openbsd means 2.5 or newer, openbsd-encap is for older kernels with PF_ENCAP
- # linux is the name for Linux with FreeS/WAN integrated, freebsd/netbsd means
- # FreeBSD/NetBSD with KAME IPsec.
+--- Makefile.orig	Sun Aug 26 00:22:26 2001
++++ Makefile	Thu Oct 18 11:19:22 2001
+@@ -43,8 +43,8 @@
+ 
+ # openbsd means OpenBSD 2.5 or newer. linux is the name for Linux with
+ # FreeS/WAN integrated, freebsd/netbsd means FreeBSD/NetBSD with KAME IPsec.
 -OS=		openbsd
-+#OS=		openbsd
- #OS=		openbsd-encap
 -#OS=		netbsd
++#OS=		openbsd
 +OS=		netbsd
  #OS=		freebsd
  #OS=		linux
  #OS=		bsdi
+@@ -74,7 +74,7 @@
+ 		isakmp_num.c isakmp_num.h ipsec_fld.c ipsec_fld.h \
+ 		isakmp_fld.c isakmp_fld.h
+ MAN=		isakmpd.8 isakmpd.conf.5 isakmpd.policy.5
+-CFLAGS+=	-Wall -Wstrict-prototypes -Wmissing-prototypes \
++CFLAGS+=	-Wall -Wmissing-prototypes \
+ 		-DNEED_SYSDEP_APP \
+ 		-I${.CURDIR} -I${.CURDIR}/sysdep/${OS} -I.
+ 
