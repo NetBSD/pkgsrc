@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.161 2003/01/09 18:44:35 wiz Exp $
+$NetBSD: TODO,v 1.162 2003/01/09 18:51:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -257,11 +257,23 @@ Suggested pkgsrc enhancements
 
 	o Add a sort check to pkglint for PLISTs.
 
-	o Make packages install their configuration files under the
-	  examples hierarchy, using bsd.pkg.install.mk to copy them
-	  to the PKG_SYSCONFDIR directory when necessary.
-
 	o Make pkgsrc work on more operating systems.
 
 	o Permit cross-building of packages which are capable of
 	  doing so (e.g. ones that use GNU autoconf properly).
+
+Suggested cleanups in pkgsrc
+============================
+
+	o Make packages install their configuration files under the
+	  examples hierarchy, using bsd.pkg.install.mk to copy them
+	  to the PKG_SYSCONFDIR directory when necessary.
+
+	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate LIBTOOL_OVERRIDE
+
+	o Fix remaining packages to install documentation into share/doc
+	  instead of share/gtk-doc (usually,
+		CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+	  does the trick; additionally, one might set
+		CONFIGURE_ARGS+=	--enable-gtk-doc=no
+	  to avoid a gtk-doc dependency).
