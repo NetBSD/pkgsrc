@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/05/17 13:06:09 abs Exp $
+# $NetBSD: Makefile,v 1.3 2002/06/14 20:38:40 abs Exp $
 #
 
 DISTNAME=	libirman-0.4.1b
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.evation.com/libirman/
 
@@ -18,15 +18,18 @@ CONF_FILES=	${EGDIR}/irman.conf ${PKG_SYSCONFDIR}/irman.conf
 post-build:
 	    ${SED}  -e "s:/usr/local/etc:${PKG_SYSCONFDIR}:g" \
 		    -e "s:/usr/local:${PREFIX}:g" \
-		    -e 's/test_func/irman_&/g' \
-		    -e 's/test_io/irman_&/g' \
-		    -e 's/test_name/irman_&/g' \
+		    -e 's/test_func/irman_func/g' \
+		    -e 's/test_io/irman_func/g' \
+		    -e 's/test_name/irman_func/g' \
 			${WRKSRC}/README > ${WRKSRC}/libirman.README
+	    ${SED}  -e 's:port /dev/ttyS1:port ${DEFAULT_SERIAL_DEVICE}:' \
+			${WRKSRC}/irman.conf > ${WRKSRC}/irman.conf.patched
+	    ${MV} ${WRKSRC}/irman.conf.patched ${WRKSRC}/irman.conf
 
 post-install:
-	    ${INSTALL_PROGRAM} ${WRKSRC}/test_func ${PREFIX}/bin/irman_test_func
-	    ${INSTALL_PROGRAM} ${WRKSRC}/test_io ${PREFIX}/bin/irman_test_io
-	    ${INSTALL_PROGRAM} ${WRKSRC}/test_name ${PREFIX}/bin/irman_test_name
+	    ${INSTALL_PROGRAM} ${WRKSRC}/test_func ${PREFIX}/bin/irman_func
+	    ${INSTALL_PROGRAM} ${WRKSRC}/test_io ${PREFIX}/bin/irman_io
+	    ${INSTALL_PROGRAM} ${WRKSRC}/test_name ${PREFIX}/bin/irman_name
 	    ${INSTALL_DATA} ${WRKSRC}/libirman.README \
 					${PREFIX}/share/doc/libirman.README
 
