@@ -1,16 +1,19 @@
-$NetBSD: patch-aa,v 1.9 2003/10/05 17:55:34 martti Exp $
+$NetBSD: patch-aa,v 1.10 2004/10/28 01:08:15 xtraeme Exp $
 
---- Makefile.in.orig	Thu Mar 13 20:32:20 2003
-+++ Makefile.in	Fri Apr 11 13:57:27 2003
-@@ -195,10 +195,7 @@
- EXTRA_DIST = INSTALL-SOURCE README \
- 			COPYING COPYING.LIB
+--- Makefile.in.orig	2004-10-22 02:34:04.000000000 +0200
++++ Makefile.in	2004-10-22 02:35:05.000000000 +0200
+@@ -279,12 +279,8 @@
  
+ # These are built from source in the Docs directory
+ EXTRA_DIST = INSTALL-SOURCE README COPYING EXCEPTIONS-CLIENT
 -SUBDIRS = . include @docs_dirs@ @readline_dir@ \
--			@thread_dirs@ @sql_client_dirs@ \
--			@sql_server_dirs@ scripts tests man \
--			@bench_dirs@ support-files os2
-+SUBDIRS = @thread_dirs@ @sql_server_dirs@ tests @bench_dirs@ support-files
- 
+-			@thread_dirs@ pstack @sql_client_dirs@ \
+-			@sql_server_dirs@ scripts man tests \
+-			BUILD netware os2 @libmysqld_dirs@ \
+-			@bench_dirs@ support-files @fs_dirs@ @tools_dirs@
+-
++SUBDIRS = . include @thread_dirs@ pstack @sql_server_dirs@ tests \
++	  @bench_dirs@ support-files
  
  # Relink after clean
+ linked_sources = linked_client_sources linked_server_sources \

@@ -1,19 +1,22 @@
-@comment $NetBSD: PLIST,v 1.5 2004/04/23 22:07:53 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/10/28 01:08:15 xtraeme Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
 bin/my_print_defaults
+bin/myisam_ftdump
 bin/myisamchk
 bin/myisamlog
 bin/myisampack
 bin/mysql.server
+bin/mysql_install
 bin/mysql_install_db
+bin/mysql_waitpid
+bin/mysqld_safe
 bin/pack_isam
 bin/perror
 bin/replace
 bin/resolve_stack_dump
 bin/resolveip
-bin/safe_mysqld
 lib/mysql/libdbug.a
 lib/mysql/libheap.a
 lib/mysql/libmerge.a
@@ -22,9 +25,11 @@ lib/mysql/libmyisammrg.a
 lib/mysql/libmystrings.a
 lib/mysql/libmysys.a
 lib/mysql/libnisam.a
+lib/mysql/libvio.a
 libexec/mysqld
 man/man1/mysqld.1
-man/man1/safe_mysqld.1
+man/man1/mysqld_multi.1
+@comment man/man1/mysqld_safe.1
 share/mysql/charsets/Index
 share/mysql/charsets/README
 share/mysql/charsets/cp1251.conf
