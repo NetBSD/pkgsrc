@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/06/19 14:30:02 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/06/27 10:18:05 rh Exp $
 #
 
-DISTNAME=	dat-4082
+DISTNAME=	dat-4083
 PKGNAME=	uvscan-${DISTNAME}
 NO_WRKSUBDIR=	yes
 CATEGORIES=	security
@@ -11,13 +11,16 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nai.com/asp_set/download/dats/mcafee_4x.asp
 
-NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
 MIRROR_DISTFILE=no
 RESTRICTED=	"restricted to the license terms set for VirusScan"
 NO_PACKAGE=	${RESTRICTED}
 NO_CDROM=	${RESTRICTED}
+
+do-configure:
+	${SED} -e 's:@PREFIX@:${PREFIX}:g' \
+		<${FILESDIR}/update_dat >${WRKDIR}/update_dat
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/uvscan
@@ -28,5 +31,6 @@ do-install:
 .for file in reseller.txt readme.txt packing.lst
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/uvscan
 .endfor
+	${INSTALL_SCRIPT} ${WRKDIR}/update_dat ${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"
