@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/12/28 05:35:29 taya Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/03 15:34:08 taya Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 
-PKGREVISION=	1
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 MAINTAINER=	taya@NetBSD.org
@@ -14,6 +13,8 @@ USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		EMACS=no
+
+PKGCONFIG_OVERRIDE+=	anthy.pc.in
 
 # Global and legacy options
 .if defined(USE_2CH_DICT) && !empty(USE_2CH_DICT:M[Yy][Ee][Ss])
