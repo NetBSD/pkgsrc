@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2000/12/18 18:09:11 jwise Exp $
---- pine/makefile.gs5.orig	Thu Aug 27 12:49:57 1998
-+++ pine/makefile.gs5	Mon Dec 18 12:35:31 2000
+$NetBSD: patch-aa,v 1.11 2001/10/11 15:35:01 martti Exp $
+
+--- pine/makefile.gs5.orig	Tue Jul  3 19:03:55 2001
++++ pine/makefile.gs5	Mon Oct  8 10:04:40 2001
 @@ -47,9 +47,9 @@
  RM=          rm -f
  LN=          ln -s
@@ -28,20 +29,12 @@ $NetBSD: patch-aa,v 1.10 2000/12/18 18:09:11 jwise Exp $
  
  STDCFLAGS=   -DSV4 -DSYSTYPE=\"GSO\" -DMOUSE
  CFLAGS=      $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(LDAPCFLAGS) \
-@@ -93,13 +93,13 @@
- 	$(CCLIENTDIR)/mail.h $(CCLIENTDIR)/osdep.h \
- 	$(CCLIENTDIR)/rfc822.h $(CCLIENTDIR)/misc.h
+@@ -95,7 +95,7 @@
+ 
+ all:	pine rpload rpdump
  
 -pine:  $(OFILES) $(LOCLIBS)
 +pine:  $(OFILES)
  	echo "char datestamp[]="\"`date`\"";" > date.c
  	echo "char hoststamp[]="\"`uname -n`\"";" >> date.c
  	$(LDCC) $(LDFLAGS) $(CFLAGS) -o pine $(OFILES) date.c $(LIBS)
- 
--abookcpy:	abookcpy.o $(LOCLIBES)
--	$(CC) $(LDFLAGS) $(CFLAGS) -o abookcpy abookcpy.o $(LIBS)
-+abookcpy:	abookcpy.o
-+	$(CC) $(LDFLAGS) $(CFLAGS) -o abookcpy abookcpy.o $(CCLIENTDIR)/c-client.a 
- 
- pine-use:	pine-use.c
- 	$(CC) -o pine-use pine-use.c

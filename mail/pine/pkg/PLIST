@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2000/11/09 03:37:27 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/10/11 15:35:02 martti Exp $
 bin/pgpdecode
 bin/pgpencrypt
 bin/pgpsign
 bin/pine
+@exec if [ ! -f %D/etc/pine.conf ]; then cp -p %D/share/examples/pine/pine.conf %D/etc/; fi
+@unexec if cmp -s %D/etc/pine.conf %D/share/examples/pine/pine.conf; then rm -f %D/etc/pine.conf; fi
 man/man1/pine.1
 share/pine/tech-notes.txt
 share/pine/contrib/krb5-setup
@@ -17,7 +19,6 @@ share/pine/contrib/utils/txtcc.sh
 share/examples/pine/dot.pinerc.pgp
 share/examples/pine/pine.conf
 share/examples/pine/pine.conf.fixed
-@exec if [ ! -f %D/etc/pine.conf ]; then cp -p %D/share/examples/pine/pine.conf %D/etc/; fi
 @dirrm share/pine/contrib/utils
 @dirrm share/pine/contrib
 @dirrm share/pine
