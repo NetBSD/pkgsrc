@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/03/30 22:06:01 itojun Exp $
+
+--- support/Makefile.in-	Fri Mar 30 20:52:10 2001
++++ support/Makefile.in	Fri Mar 30 20:51:00 2001
+@@ -5,7 +5,8 @@
+ 
+ PROGRAM_LDADD        = $(EXTRA_LDFLAGS) $(PROGRAM_DEPENDENCIES) $(EXTRA_LIBS)
+ PROGRAM_DEPENDENCIES = \
+-	../srclib/apr-util/libaprutil.la ../srclib/apr/libapr.la
++	../srclib/apr-util/libaprutil.la ../srclib/apr/libapr.la \
++	../srclib/apr/shmem/unix/mm/libmm.la
+ 
+ include $(top_srcdir)/build/rules.mk
+ 
