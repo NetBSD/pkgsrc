@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2001/01/04 15:10:24 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/04/04 13:52:12 mjl Exp $
 freetds/lib/libtds.so
 freetds/lib/libtds.so.0
 freetds/lib/libtds.so.0.0
@@ -14,7 +14,9 @@ freetds/lib/libsybdb.so.0
 freetds/lib/libsybdb.so.0.0
 freetds/lib/libsybdb.la
 freetds/lib/libsybdb.a
+freetds/include/common.h
 freetds/include/cspublic.h
+freetds/include/ctlib.h
 freetds/include/ctpublic.h
 freetds/include/sybdb.h
 freetds/include/sybfront.h
@@ -26,6 +28,7 @@ freetds/include/syberror.h
 freetds/include/sqldb.h
 freetds/include/sqlfront.h
 freetds/include/tds.h
+freetds/include/tdsconvert.h
 freetds/include/tdsver.h
 freetds/interfaces
 @dirrm freetds/include
