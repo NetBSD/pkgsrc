@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/16 13:30:54 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/06/26 18:32:26 jlam Exp $
 #
 
 DISTNAME=	xsidplay-1_5_4
@@ -12,24 +12,19 @@ MAINTAINER=	pooka@netbsd.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 COMMENT=	Commodore 64 music player and SID chip emulator for X11
 
-DEPENDS+=	sidplay>=1.0:../../audio/sidplay
-DEPENDS+=	qt2>=2.2.1nb1:../../x11/qt2
+USE_BUILDLINK_ONLY=	yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-USE_X11BASE=	yes
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USE_X11BASE=		yes
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
 
-EVAL_PREFIX+=	QT2DIR=qt2-libs
-CONFIGURE_ARGS+= --with-sidplay-includes=${LOCALBASE}/include \
-		--with-sidplay-library=${LOCALBASE}/lib \
-		--with-qt-dir=${QT2DIR}/qt2
-
-LDFLAGS+=	-Wl,-R${QT2DIR}/qt2/lib
-CONFIGURE_ENV+=	LDFLAGS="${LDFLAGS}"
-
-CONFIGURE_ENV+=	"MOC=${QT2DIR}/qt2/bin/moc"
+CONFIGURE_ARGS+=	--with-qt-dir=${BUILDLINK_QTDIR}
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/src/xsidplay ${PREFIX}/bin
 
+.include "../../audio/libsidplay/buildlink.mk"
+.include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
