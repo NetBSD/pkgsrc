@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/05/22 13:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/05/29 23:14:07 grant Exp $
 #
 
 DISTNAME=	centericq-4.9.2
@@ -12,7 +12,7 @@ COMMENT=	Instant Messenger interface (ICQ2000, Yahoo!, and MSN support)
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
-USE_CXX=		yes
+USE_GCC_SHLIB=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 LIBS=			${LDFLAGS}
@@ -26,7 +26,6 @@ INCOMPAT_CURSES+=	NetBSD-1.6[A-T]-*
 .include "../../devel/glib/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../lang/gcc/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
