@@ -7,7 +7,7 @@
 # Date created:         31 July 1995
 # Whom:                 faulkner@cactus.org
 #
-# $NetBSD: Makefile,v 1.2 1997/10/24 00:28:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/24 20:55:30 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
 #
 
@@ -17,12 +17,12 @@ CATEGORIES=     misc
 MASTER_SITES=   http://www.astrolog.org/ftp/ephem/ \
 		http://www.astrolog.org/ftp/ \
 		ftp://ftp.kiarchive.ru/pub/unix/magick/astrology/astrolog/
-EXTRACT_ONLY=   ${DISTNAME}.shr
 EPHEM=          LRZ5_24 CHI_24 CPJV_24
 DISTFILES=      ${EXTRACT_ONLY} ${EPHEM}
 
 MAINTAINER=     ache@FreeBSD.ORG
 
+EXTRACT_ONLY=   ${DISTNAME}.shr
 EXTRACT_CMD=    ${SH}
 EXTRACT_ARGS=
 DIST_SUBDIR=    astrolog
