@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/07/04 00:23:21 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2004/07/06 22:40:36 wiz Exp $
 #
 
 DISTNAME=	prc-tools-2.2
@@ -16,6 +16,8 @@ DIST_BINUTILS=	binutils-2.12.1
 DIST_GCC=	gcc-2.95.3
 DIST_GDB=	gdb-5.0
 
+BROKEN=		Does not build with gcc3 nor buildlink3.
+
 SITES_${DIST_BINUTILS}.tar.bz2=${MASTER_SITE_GNU:=binutils/}
 SITES_${DIST_BINUTILS}.tar.bz2+=http://prc-tools.sourceforge.net/misc/
 SITES_${DIST_GCC}.tar.gz=${MASTER_SITE_GNU:=gcc/}
@@ -32,7 +34,7 @@ CONFLICTS+=	prc-tools-gdb-[0-9]*
 
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 AUTOCONF_REQD=	2.50
 USE_MAKEINFO=	YES
 INFO_FILES=	prc-tools.info
@@ -67,5 +69,5 @@ pre-patch:
 		&& ${PATCH} --quiet -p0 < ${WRKSRC}/${DIST_GDB}.palmos.diff
 
 .include "../../mk/autoconf.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
