@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/01 15:08:35 ben Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2005/02/21 21:04:06 veego Exp $
 bin/vlc
 bin/vlc-config
 bin/wxvlc
@@ -161,14 +161,14 @@ lib/vlc/video_output/libvout_sdl_plugin.so
 lib/vlc/video_output/libx11_plugin.so
 lib/vlc/video_output/libxvideo_plugin.so
 lib/vlc/visualization/libvisual_plugin.so
+man/man1/vlc-config.1
+man/man1/vlc.1
 share/doc/vlc/bugreport-howto.txt
 share/doc/vlc/fortunes.txt
 share/doc/vlc/intf-cdda.txt
 share/doc/vlc/intf-vcd.txt
 share/doc/vlc/vlc-howto.sgml
 share/doc/vlc/web-streaming.html
-man/man1/vlc.1 
-man/man1/vlc-config.1 
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/vlc.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/vlc.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/vlc.mo
@@ -272,28 +272,3 @@ share/vlc/vlc32x32.png
 share/vlc/vlc32x32.xpm
 share/vlc/vlc48x48.ico
 share/vlc/vlc48x48.png
-@dirrm share/vlc/skins/default
-@dirrm share/vlc/skins
-@dirrm share/vlc/http/admin
-@dirrm share/vlc/http
-@dirrm share/vlc
-@dirrm share/doc/vlc
-@dirrm lib/vlc/visualization
-@dirrm lib/vlc/video_output
-@dirrm lib/vlc/video_filter
-@dirrm lib/vlc/video_chroma
-@dirrm lib/vlc/stream_out
-@dirrm lib/vlc/packetizer
-@dirrm lib/vlc/mux
-@dirrm lib/vlc/misc
-@dirrm lib/vlc/gui
-@dirrm lib/vlc/demux
-@dirrm lib/vlc/control
-@dirrm lib/vlc/codec
-@dirrm lib/vlc/audio_output
-@dirrm lib/vlc/audio_mixer
-@dirrm lib/vlc/audio_filter
-@dirrm lib/vlc/access_output
-@dirrm lib/vlc/access
-@dirrm lib/vlc
-@dirrm include/vlc
