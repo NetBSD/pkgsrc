@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:23 wiz Exp $
+
+--- time.c.orig	Mon Oct 11 21:11:36 1999
++++ time.c
+@@ -244,7 +244,7 @@
+ 			zone += 24;
+ 		zone *= 3600;
+ #else
+-#if defined(bsdi) || defined(SUN) || defined(SVR4) || defined(convex)
++#if defined(bsdi) || defined(SUN) || defined(SVR4) || defined(convex) || defined(__NetBSD__)
+ 		time_t now;
+ 		struct tm *tm;
+ 		tzset();

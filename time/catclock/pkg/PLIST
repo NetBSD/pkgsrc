@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 23:32:16 wiz Exp $
+bin/catclock
+lib/X11/app-defaults/Catclock
+man/cat1/catclock.0

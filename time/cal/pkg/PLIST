@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 23:32:10 wiz Exp $
+bin/cal
+etc/cal/calcol
+etc/cal/caldat
+@dirrm etc/cal
+man/man1/cal.1.gz

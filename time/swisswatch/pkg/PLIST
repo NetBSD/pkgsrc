@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 23:32:20 wiz Exp $
+bin/swisswatch
+lib/X11/app-defaults/SwissWatch
+lib/X11/app-defaults/SwissWatch-color
+man/cat1/swisswatch.0.gz

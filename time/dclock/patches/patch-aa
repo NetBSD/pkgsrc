@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:16 wiz Exp $
+
+--- Makefile.orig	Wed Oct 20 11:40:45 1999
++++ Makefile	Wed Oct 20 11:43:33 1999
+@@ -3,12 +3,25 @@
+ OBJS= Dclock.o dclock.o
+ HFILES= Dclock.h DclockP.h patchlevel.h
+ 
+-CFLAGS= -O
+-LDFLAGS= 
++CFLAGS= -O -I$(X11BASE)/include
++LDFLAGS= -L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib
+ LIBS= -lXt -lX11
+ 
++# Make this link properly on Solaris
++OPSYS!= uname -s
++
++.if ${OPSYS} == "SunOS"
++LIBS+= -lSM -lICE -lsocket -lnsl
++.endif
++
++all: dclock
++
+ dclock: ${OBJS}
+-	cc ${LDFLAGS} ${OBJS} ${LIBS} -o dclock
++	${CC} ${LDFLAGS} ${OBJS} ${LIBS} -o dclock
++
++install: dclock
++	${BSD_INSTALL_PROGRAM} dclock $(X11BASE)/bin
++	${BSD_INSTALL_MAN} dclock.man $(X11BASE)/man/man1/dclock.1
+ 
+ clean: ; rm -f ${OBJS} core dclock
+ 

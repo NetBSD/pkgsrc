@@ -1,0 +1,43 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/17 23:32:11 wiz Exp $
+
+--- src/files.c.orig	Mon Apr  5 13:34:48 1999
++++ src/files.c	Wed Mar  1 19:48:52 2000
+@@ -19,6 +19,7 @@
+ 
+ #include <string.h>
+ #include <ctype.h>
++#include <glob.h>
+ #include <sys/stat.h>
+ 
+ #ifdef TM_IN_SYS_TIME
+@@ -421,16 +422,26 @@
+ {     
+     DynamicBuffer buf;
+     int r, e;
++    glob_t g;
+ 
+     DBufInit(&buf);
++    memset(&g, 0, sizeof(g));
++
+     if ( (r=ParseToken(p, &buf)) ) return r;
+     e = VerifyEoln(p); 
+     if (e) Eprint("%s", ErrMsg[e]);
+-    if ( (r=IncludeFile(DBufValue(&buf))) ) {
+-	DBufFree(&buf);
+-	return r;
+-    }
++
++    glob(DBufValue(&buf), GLOB_NOCHECK|GLOB_BRACE|GLOB_TILDE, NULL, &g);
+     DBufFree(&buf);
++
++    do {
++	if ( (r=IncludeFile(*g.gl_pathv)) ) {
++	    globfree(&g);
++	    return r;
++	}
++    } while (*++g.gl_pathv != NULL);
++
++    globfree(&g);
+     NumIfs = 0;
+     IfFlags = 0;
+     return OK;

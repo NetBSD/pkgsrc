@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 23:32:21 wiz Exp $
+bin/sumtitra
+bin/titrax
+bin/titrat
+lib/X11/app-defaults/Titrax
+libexec/titrax/weekno.perl
+man/cat1/sumtitra.0
+man/cat1/titrax.0
+@dirrm libexec/titrax

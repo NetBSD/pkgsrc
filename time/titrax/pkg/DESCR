@@ -1,0 +1,5 @@
+TimeTracker is an Athena Widget-based program to keep track of time.
+It puts up a list of projects, and the number of minutes worked on each.
+You click on the project you want to work on, and it starts counting on that.
+At the end of the day, it saves the collected data in a file, and you can
+use a script to process the data. "sumtitra" is one possible such script.

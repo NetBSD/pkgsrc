@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/12/17 23:32:18 wiz Exp $
+
+--- sound.c.orig	Sat Jan 11 11:35:52 1997
++++ sound.c	Sun May 23 10:24:16 1999
+@@ -108,6 +108,11 @@
+ #include "sys/FreeBSD/audio.c"
+ #endif	/* FreeBSD */
+ 
++/* NetBSD */
++#ifdef	__NetBSD__
++#include "sys/NetBSD/audio.c"
++#endif	/* NetBSD */
++
+ #else	/* USE_NETAUDIO */
+ 
+ /* netaudio (NCDaudio) */

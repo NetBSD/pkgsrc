@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/17 23:32:15 wiz Exp $
+
+--- ./config.c.orig	Sun Mar 14 18:09:13 1999
++++ ./config.c	Thu Oct  7 03:36:59 1999
+@@ -26,8 +26,7 @@
+  
+ char *themes_directories[] = {
+   "./themes/",
+-  "/usr/local/share/asclock/",
+-  "/usr/share/asclock/",
++  PREFIX "/share/asclock-xlib/",
+   "",
+   NULL
+ };

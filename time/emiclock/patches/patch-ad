@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/17 23:32:18 wiz Exp $
+
+--- Imakefile.orig	Sat Jan 11 11:35:42 1997
++++ Imakefile	Sun May 23 10:21:04 1999
+@@ -108,6 +108,11 @@
+ #define	StartupSound	myu.au
+ #endif	/* i386BsdArchitecture && (i386FreeBsd || FreeBSDArchitecture) */
+ 
++/* NetBSD */
++#if defined(NetBSDArchitecture)
++#define	StartupSound	myu.au
++#endif	/* NetBSDArchitecture */
++
+ #else	/* USE_NETAUDIO */
+ 
+ /* netaudio (NCDaudio) */

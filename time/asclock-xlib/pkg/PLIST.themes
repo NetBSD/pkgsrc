@@ -1,0 +1,89 @@
+@comment $NetBSD: PLIST.themes,v 1.1.1.1 2000/12/17 23:32:15 wiz Exp $
+share/asclock-xlib/Freeamp/beats.xpm
+share/asclock-xlib/Freeamp/clock.xpm
+share/asclock-xlib/Freeamp/config
+share/asclock-xlib/Freeamp/date.xpm
+share/asclock-xlib/Freeamp/hour.xpm
+share/asclock-xlib/Freeamp/led.xpm
+share/asclock-xlib/Freeamp/minute.xpm
+share/asclock-xlib/Freeamp/month.xpm
+share/asclock-xlib/Freeamp/old.clock.xpm
+share/asclock-xlib/Freeamp/second.xpm
+share/asclock-xlib/Freeamp/weekday.xpm
+share/asclock-xlib/Newstone/beats.xpm
+share/asclock-xlib/Newstone/clock.xpm
+share/asclock-xlib/Newstone/config
+share/asclock-xlib/Newstone/date.xpm
+share/asclock-xlib/Newstone/hour.xpm
+share/asclock-xlib/Newstone/led.xpm
+share/asclock-xlib/Newstone/minute.xpm
+share/asclock-xlib/Newstone/month.xpm
+share/asclock-xlib/Newstone/second.xpm
+share/asclock-xlib/Newstone/weekday.xpm
+share/asclock-xlib/Orb/beats.xpm
+share/asclock-xlib/Orb/clock.xpm
+share/asclock-xlib/Orb/config
+share/asclock-xlib/Orb/date.xpm
+share/asclock-xlib/Orb/hour.xpm
+share/asclock-xlib/Orb/led.xpm
+share/asclock-xlib/Orb/minute.xpm
+share/asclock-xlib/Orb/month.xpm
+share/asclock-xlib/Orb/second.xpm
+share/asclock-xlib/Orb/weekday.xpm
+share/asclock-xlib/Stone/beats.xpm
+share/asclock-xlib/Stone/clock.xpm
+share/asclock-xlib/Stone/config
+share/asclock-xlib/Stone/date.xpm
+share/asclock-xlib/Stone/hour.xpm
+share/asclock-xlib/Stone/led.xpm
+share/asclock-xlib/Stone/minute.xpm
+share/asclock-xlib/Stone/month.xpm
+share/asclock-xlib/Stone/second.xpm
+share/asclock-xlib/Stone/weekday.xpm
+share/asclock-xlib/beats/beats.xpm
+share/asclock-xlib/beats/classic
+share/asclock-xlib/beats/clock.xpm
+share/asclock-xlib/beats/config
+share/asclock-xlib/beats/date.xpm
+share/asclock-xlib/beats/hour.xpm
+share/asclock-xlib/beats/led.xpm
+share/asclock-xlib/beats/minute.xpm
+share/asclock-xlib/beats/month.xpm
+share/asclock-xlib/beats/second.xpm
+share/asclock-xlib/beats/weekday.xpm
+share/asclock-xlib/classic/beats.xpm
+share/asclock-xlib/classic/classic
+share/asclock-xlib/classic/clock.xpm
+share/asclock-xlib/classic/config
+share/asclock-xlib/classic/date.xpm
+share/asclock-xlib/classic/hour.xpm
+share/asclock-xlib/classic/led.xpm
+share/asclock-xlib/classic/minute.xpm
+share/asclock-xlib/classic/month.xpm
+share/asclock-xlib/classic/second.xpm
+share/asclock-xlib/classic/weekday.xpm
+share/asclock-xlib/penguin/clock.xpm
+share/asclock-xlib/penguin/config
+share/asclock-xlib/penguin/date.xpm
+share/asclock-xlib/penguin/led.xpm
+share/asclock-xlib/penguin/month.xpm
+share/asclock-xlib/shaped/beats.xpm
+share/asclock-xlib/shaped/classic
+share/asclock-xlib/shaped/clock.xpm
+share/asclock-xlib/shaped/config
+share/asclock-xlib/shaped/date.xpm
+share/asclock-xlib/shaped/hour.xpm
+share/asclock-xlib/shaped/led.xpm
+share/asclock-xlib/shaped/minute.xpm
+share/asclock-xlib/shaped/month.xpm
+share/asclock-xlib/shaped/second.xpm
+share/asclock-xlib/shaped/weekday.xpm
+@dirrm share/asclock-xlib/shaped
+@dirrm share/asclock-xlib/penguin
+@dirrm share/asclock-xlib/classic
+@dirrm share/asclock-xlib/beats
+@dirrm share/asclock-xlib/Stone
+@dirrm share/asclock-xlib/Orb
+@dirrm share/asclock-xlib/Newstone
+@dirrm share/asclock-xlib/Freeamp
+@dirrm share/asclock-xlib
