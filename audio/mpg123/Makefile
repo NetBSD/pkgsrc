@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.12 1999/04/08 07:34:56 tron Exp $
+# $NetBSD: Makefile,v 1.13 1999/06/28 00:35:33 thorpej Exp $
 #
+
+# for OBJECT_FMT
+.include "../../mk/bsd.prefs.mk"
 
 DISTNAME=       mpg123-0.59q
 CATEGORIES=	audio
@@ -9,7 +12,11 @@ MAINTAINER=	augustss@cs.chalmers.se
 HOMEPAGE=	http://mpg.123.org/
 
 .if (${MACHINE_ARCH} == "i386")
+.if (${OBJECT_FMT} == "ELF")
+ALL_TARGET=	netbsd-i386-elf
+.else
 ALL_TARGET=	netbsd-i386
+.endif
 .elif (${MACHINE_ARCH} == "m68k")
 ALL_TARGET=	netbsd-m68k
 .else
