@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:22:19 agc Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/15 13:26:07 tv Exp $
 #
 
 DISTNAME=		hf6to4-1.2
@@ -12,6 +12,8 @@ COMMENT=		Enables 6to4 IPv6 automatic tunnels
 
 WRKSRC=			${WRKDIR}
 USE_PKGINSTALL=		YES
+
+NOT_FOR_PLATFORM+=	Interix-*-* # no IPv6 support or ifconfig command
 
 # This pkg doesn't regard USE_INET6 (leave this comment for README-IPv6.html!)
 EXTRACT_ONLY=	# empty
