@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2000/04/27 13:14:50 tron Exp $
+$NetBSD: patch-ac,v 1.8 2000/05/30 07:38:54 tron Exp $
 
---- configure.orig	Sat Apr 15 16:40:00 2000
-+++ configure	Thu Apr 27 13:17:47 2000
-@@ -1551,6 +1551,7 @@
+--- configure.orig	Mon May 15 02:49:27 2000
++++ configure	Tue May 30 09:14:23 2000
+@@ -2151,6 +2151,7 @@
  fi
  
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.7 2000/04/27 13:14:50 tron Exp $
  # Check for any special flags to pass to ltconfig.
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -1708,6 +1709,7 @@
+@@ -2321,6 +2322,7 @@
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
  exec 5>>./config.log
@@ -18,7 +18,7 @@ $NetBSD: patch-ac,v 1.7 2000/04/27 13:14:50 tron Exp $
  
  
  if (aclocal --print-ac-dir) </dev/null >/dev/null 2>&1 && test -w `aclocal --print-ac-dir`; then
-@@ -2321,6 +2323,7 @@
+@@ -2905,6 +2907,7 @@
  echo "$ac_t""$debug_flag $conversions_flag $verbose_flag $production_flag" 1>&6
  
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.7 2000/04/27 13:14:50 tron Exp $
  if ${CONFIG_SHELL-/bin/sh} ./libtool --features | grep "enable shared" > /dev/null 2>&1; then
  	lt_libtool_shared="yes"
  fi
-@@ -2348,6 +2351,7 @@
+@@ -2932,6 +2935,7 @@
    LibtoolStatic_TRUE='#'
    LibtoolStatic_FALSE=
  fi
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.7 2000/04/27 13:14:50 tron Exp $
  
  
  # Extract the first word of "ar", so it can be a program name with args.
-@@ -5595,10 +5599,12 @@
+@@ -6252,10 +6256,12 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
@@ -47,7 +47,7 @@ $NetBSD: patch-ac,v 1.7 2000/04/27 13:14:50 tron Exp $
  
    echo creating "$ac_file"
    rm -f "$ac_file"
-@@ -5819,10 +5825,12 @@
+@@ -6476,10 +6482,12 @@
        *) # Relative path.
          ac_sub_cache_file="$ac_dots$cache_file" ;;
        esac
@@ -58,5 +58,5 @@ $NetBSD: patch-ac,v 1.7 2000/04/27 13:14:50 tron Exp $
          esac
 +  fi
  
-       echo "running ${CONFIG_SHELL-/bin/sh} $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
+       echo "running $ac_sub_configure $ac_sub_configure_args --cache-file=$ac_sub_cache_file --srcdir=$ac_sub_srcdir"
        # The eval makes quoting arguments work.
