@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/07/18 21:29:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2004/08/06 03:11:00 reed Exp $
 #
 
 DISTNAME=		ggv-2.6.2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		GNOME2 frontend for GhostScript
+COMMENT=		GNOME2 GhostScript frontend and PDF viewer
 
 BUILD_USES_MSGFMT=	YES
 
