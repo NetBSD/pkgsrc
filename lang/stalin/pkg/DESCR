@@ -7,7 +7,7 @@ unboxing, and flow-directed program-specific and
 program-point-specific low-level representation selection and code
 generation.
 
-Stalin is now self hosting (ie. compiles itself).  The distributed
+Stalin is now self hosting (ie. can compile itself).  The distributed
 code is self-compiled.  Scheme->C is no longer used or needed to build
 Stalin.
 
