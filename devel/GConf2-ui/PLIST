@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/05 22:19:56 jmmv Exp $
+libexec/gconf-sanity-check-2
