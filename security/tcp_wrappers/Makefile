@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2004/04/26 01:14:04 tv Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/27 19:26:35 tv Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
-PKGREVISION= 	1
+PKGREVISION= 	2
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.porcupine.org/pub/security/
 
@@ -54,7 +54,7 @@ post-build:
 	done
 
 do-install:
-	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_DATA} libwrap.la ${PREFIX}/lib
+	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_SCRIPT} libwrap.la ${PREFIX}/lib
 	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_PROGRAM} \
 		tcpdmatch try-from safe_finger tcpdchk ${PREFIX}/bin
 	cd ${WRKSRC}; ${INSTALL_DATA} tcpd.h ${PREFIX}/include
