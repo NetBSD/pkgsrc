@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.7 2001/07/14 13:35:13 jlam Exp $
+$NetBSD: patch-ad,v 1.8 2002/10/18 14:02:13 jlam Exp $
 
 --- server/dda/voxware/auvoxware.c.orig	Thu Oct  5 20:39:16 2000
 +++ server/dda/voxware/auvoxware.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.7 2001/07/14 13:35:13 jlam Exp $
  	3,			/* minFrags */
  	32,			/* maxFrags */
 +#if defined(__NetBSD__)
-+	"/dev/audio",		/* device */
++	"@DEVOSSAUDIO@",		/* device */
 +#else
  	"/dev/dsp1",		/* device */
 +#endif
@@ -19,7 +19,7 @@ $NetBSD: patch-ad,v 1.7 2001/07/14 13:35:13 jlam Exp $
  	3,			/* minFrags */
  	32,			/* maxFrags */
 +#if defined(__NetBSD__)
-+	"/dev/audio",		/* device */
++	"@DEVOSSAUDIO@",		/* device */
 +#else
  	"/dev/dsp",		/* device */
 +#endif
