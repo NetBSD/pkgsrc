@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3313 2005/03/27 20:59:04 wiz Exp $
+$NetBSD: TODO,v 1.3314 2005/03/27 21:55:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,7 @@ Suggested package updates
 	o gramps-1.0.11
 	o grap-1.32
 	o grepmail-5.3030
-	o grhino-0.13.0
+	o grhino-0.14.0
 	o gri-2.12.8
 	o gsed-4.1.4
 	o gsharutils-4.3.78
