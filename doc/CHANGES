@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9651 2005/03/27 17:43:54 wiz Exp $
+$NetBSD: CHANGES,v 1.9652 2005/03/27 17:56:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1781,3 +1781,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated cairo to 0.4.0 [recht 2005-03-27]
 	Updated xentools20 to 2.0.3nb2 [bouyer 2005-03-27]
 	Updated SDL to 1.2.8nb1 [wiz 2005-03-27]
+	Added socket++-1.12.10 [wiz 2005-03-27]
