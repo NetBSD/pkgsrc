@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1604 2003/03/09 18:13:02 wiz Exp $
+$NetBSD: CHANGES,v 1.1605 2003/03/09 19:06:22 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1010,3 +1010,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated windowmaker-desktop to 1.1 [jmmv 2003-03-09]
 	Updated drac to 1.12 [jmmv 2003-03-09]
 	Updated flawfinder to 1.22 [wiz 2003-03-09]
+	Updated Mesa to 5.0 [jschauma 2003-03-09]
+	Updated MesaLib to 5.0 [jschauma 2003-03-09]
+	Updated glu to 5.0 [jschauma 2003-03-09]
+	Updated glut to 5.0 [jschauma 2003-03-09]
