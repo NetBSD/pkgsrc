@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.10 2001/04/09 01:44:39 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.11 2001/04/15 02:00:25 dmcmahill Exp $
 
 Much cleanup of the script.  Added various options such as
 -O    for optimization
@@ -10,8 +10,8 @@ Much cleanup of the script.  Added various options such as
 -v,   for verbose output
 
 --- fc.orig	Fri Jul  7 17:47:06 2000
-+++ fc	Thu Feb 22 08:44:43 2001
-@@ -1,178 +1,256 @@
++++ fc	Sat Apr 14 21:57:18 2001
+@@ -1,178 +1,257 @@
 -#! /bin/sh
 -
 -# NOTE: you may need to adjust the references to /usr/local/... below
@@ -226,8 +226,6 @@ Much cleanup of the script.  Added various options such as
  		;;
  
 -	-m)	CFLAGS="$CFLAGS -m$2"
--		shift 2
--		;;
 +        -I*)    CFLAGS="$CFLAGS $1"
 +		CPPFLAGS="$CPPFLAGS $1"
 +		F2CFLAGS="$F2CFLAGS $1"
@@ -241,31 +239,32 @@ Much cleanup of the script.  Added various options such as
 +        -L*)    LIBS="$LIBS $1"
 +                shift 1
 +                ;;
- 
--	-U)	CPPFLAGS="$CPPFLAGS -U$2"
++
 +	-m)	CPPFLAGS="$CPPFLAGS -m$2"
 +		F2CFLAGS="$F2CFLAGS -m$2"
  		shift 2
  		;;
  
+-	-U)	CPPFLAGS="$CPPFLAGS -U$2"
 +        -m*)    CFLAGS="$CFLAGS $1"
 +		CPPFLAGS="$CPPFLAGS $1"
 +		F2CFLAGS="$F2CFLAGS $1"
 +                shift 1
 +                ;;
- 	-o)	OUTF=$2
++	-o)	OUTF=$2
+ 		shift 2
+ 		;;
+ 
+-	-o)	OUTF=$2
 -		OUTO=$2
++
++	-N)	F2CFLAGS="$F2CFLAGS $1""$2"
  		shift 2
  		;;
  
 -	-O)	case $2 in -1) O=-O1;; -2) O=-O2;; -3) O=-O3;; *) O=-O;; esac
 -		case $O in -O);; *) shift;; esac
 -		CFLAGS="$CFLAGS $O -Olimit 2000"
-+
-+	-N)	F2CFLAGS="$F2CFLAGS $1""$2"
-+		shift 2
-+		;;
-+
 +	-O|-O1|-O2|-O3)	
 +		CFLAGS="$CFLAGS $1"
  		shift
@@ -318,17 +317,17 @@ Much cleanup of the script.  Added various options such as
 -	-S)	CFLAGS="$CFLAGS -S"
 -		cOPT=0
 +	-w66)	F2CFLAGS="$F2CFLAGS -w66"
-+		shift
-+		;;
-+
+ 		shift
+ 		;;
+ 
 +	-Wl*)	CFLAGS="$CFLAGS $1"
 +		shift
 +		;;
 +
 +	-W*)	CFLAGS="$CFLAGS $1"
- 		shift
- 		;;
- 
++		shift
++		;;
++
 +	-*)	echo "ERROR:  $1 is not a valid option"
 +		exit 1
 +		;;
@@ -363,11 +362,12 @@ Much cleanup of the script.  Added various options such as
 +  echo "CFLAGS= $CFLAGS"
 +  echo "CPPFLAGS= $CPPFLAGS"
 +  echo "FLIBS= $FLIBS"
++  echo "LD_RUN_PATH= @PREFIX@/lib"
 +fi
 +
  while
  	test -n "$1"
-@@ -184,4 +262,7 @@
+@@ -184,4 +263,7 @@
  		case "$1" in
  			*.f)	b=`basename $1 .f`
 +				if test $VERBOSE = "yes"; then
@@ -375,7 +375,7 @@ Much cleanup of the script.  Added various options such as
 +				fi
  				$F2C $F2CFLAGS $1
  				rc=$?
-@@ -191,4 +272,7 @@
+@@ -191,4 +273,7 @@
  				rc=$?
  				case $rc in 0)
 +					if test $VERBOSE="yes"; then
@@ -383,35 +383,35 @@ Much cleanup of the script.  Added various options such as
 +					fi
  					$F2C $F2CFLAGS <$b.i >$b.c
  					rc=$?
-@@ -198,5 +282,5 @@
+@@ -198,5 +283,5 @@
  			esac
  		case $rc in 0);; *) exit;; esac
 -                $CC -c $CFLAGSF2C $CFLAGS $b.c 2>$s
 +                $CC -c $CFLAGS $b.c 2>$s
  		rc=$?
  		sed '/parameter .* is not referenced/d;/warning: too many parameters/d' $s 1>&2
-@@ -213,5 +297,5 @@
+@@ -213,5 +298,5 @@
  		$F2C $F2CFLAGS $b.f
  		case $? in 0);; *) rc=$?; exit;; esac
 -                $CC -c $CFLAGSF2C $CFLAGS $b.c
 +                $CC -c $CFLAGS $b.c
  		case $? in 0);; *) rc=$?; exit;; esac
  		OFILES="$OFILES $b.o"
-@@ -226,5 +310,5 @@
+@@ -226,5 +311,5 @@
  		$F2C $F2CFLAGS $b.f
  		case $? in 0);; *) rc=$?; exit;; esac
 -		$CC -c $CFLAGSF2C $CFLAGS $b.c
 +		$CC -c $CFLAGS $b.c
  		case $? in 0);; *) rc=$?; exit;; esac
  		OFILES="$OFILES $b.o"
-@@ -245,5 +329,5 @@
+@@ -245,5 +330,5 @@
  		echo $1: 1>&2
  		OFILE=`basename $1 .c`.o
 -                $CC -c $CFLAGSF2C $CPPFLAGS $CFLAGS $1
 +                $CC -c $CPPFLAGS $CFLAGS $1
  		rc=$?; case $rc in 0);; *) rc=$?; exit;; esac
  		OFILES="$OFILES $OFILE"
-@@ -261,10 +345,10 @@
+@@ -261,10 +346,10 @@
  		shift
  		;;
 -	-[lL])
@@ -425,7 +425,7 @@ Much cleanup of the script.  Added various options such as
 +	-l*)
  		OFILES="$OFILES $1"
  		shift
-@@ -272,6 +356,5 @@
+@@ -272,6 +357,5 @@
  		;;
  	-o)
 -		case $cOPT in 0) CFLAGS="$CFLAGS -o $2";; *) OUTF=$2;; esac
@@ -433,7 +433,7 @@ Much cleanup of the script.  Added various options such as
 +		OUTF=$2; shift 2;;
  	*.P)
  		F2CFLAGS="$F2CFLAGS $1"
-@@ -286,9 +369,11 @@
+@@ -286,9 +370,11 @@
  done
  
 -### On some (IRIX) systems, -Wl,-dont_warn_unused prevents complaints
