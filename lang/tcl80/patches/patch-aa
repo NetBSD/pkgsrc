@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1998/08/07 11:09:25 agc Exp $
+$NetBSD: patch-aa,v 1.6 1998/09/08 08:55:22 agc Exp $
 
 --- Makefile.in.orig	Tue Nov 25 11:31:41 1997
 +++ Makefile.in	Mon Feb  9 07:20:03 1998
@@ -107,8 +107,8 @@ $NetBSD: patch-aa,v 1.5 1998/08/07 11:09:25 agc Exp $
 +	@echo "**********"
 +	@echo "tclConfig.sh in $(SCRIPT_INSTALL_DIR)/tclConfig.sh"
 +	@echo "tcl.h        in $(INCLUDE_INSTALL_DIR)/tcl.h"
-+	@echo "There are NOT default place, but good place to avoid"
-+	@echo "conflicting with another version of Tcl/Tks."
++	@echo "These are NOT in the default location, but a good place to avoid"
++	@echo "conflicting with any other versions of Tcl/Tk."
  
  Makefile: $(UNIX_DIR)/Makefile.in
  	$(SHELL) config.status
