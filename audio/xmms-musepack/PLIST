@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 13:30:15 jmmv Exp $
+lib/xmms/Input/libmusepack.la
+lib/xmms/Input/libmusepack.so
+@comment in xmms: @dirrm lib/xmms/Input
