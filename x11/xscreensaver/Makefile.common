@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2003/01/10 08:01:00 cjep Exp $
+# $NetBSD: Makefile.common,v 1.43 2003/02/11 11:24:10 markd Exp $
 #
 
 DISTNAME=		xscreensaver-4.06
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
+USE_X11BASE=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-hackdir=${PREFIX}/libexec/xscreensaver
