@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/04 12:56:29 scw Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/12 08:06:04 rh Exp $
 
 DISTNAME=		DAPSource
 PKGNAME=		dap-2.0.2
@@ -9,6 +9,7 @@ MASTER_SITES=		http://www.cee.hw.ac.uk/~richardk/
 MAINTAINER=		scw@netbsd.org
 HOMEPAGE=		http://www.cee.hw.ac.uk/~richardk/
 
+DEPENDS+=		xpm-*:../../graphics/xpm
 DEPENDS+=		xforms-0.88:../../x11/xforms
 
 MAKEFILE=		Makefile.netbsd
