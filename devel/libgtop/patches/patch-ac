@@ -1,17 +1,43 @@
-$NetBSD: patch-ac,v 1.2 1998/11/01 23:22:19 tron Exp $
+$NetBSD: patch-ac,v 1.3 1999/01/02 19:50:17 tron Exp $
 
-<osreldate.h> is not available on NetBSD.
-
---- sysdeps/bsd/glibtop_machine.h	1998/10/06 16:21:44	1.1
-+++ sysdeps/bsd/glibtop_machine.h	1998/10/06 16:21:49
-@@ -31,7 +31,10 @@
- #include <sys/sysctl.h>
- 
- #include <fcntl.h>
-+
-+#ifdef __FreeBSD__
- #include <osreldate.h>
+--- sysdeps/freebsd/procsignal.c.orig	Thu Dec 17 18:16:37 1998
++++ sysdeps/freebsd/procsignal.c	Sat Jan  2 01:01:37 1999
+@@ -64,22 +64,38 @@
+ 	/* signal: mask of pending signals.
+ 	 *         pinfo [0].kp_proc.p_siglist
+ 	 */
++#if defined(__NetBSD__) && (NSIG > 32)
++	buf->signal [0] = pinfo [0].kp_proc.p_siglist.__bits[0];
++#else
+ 	buf->signal [0] = pinfo [0].kp_proc.p_siglist;
 +#endif
  
- __BEGIN_DECLS
+ 	/* blocked: mask of blocked signals.
+ 	 *          pinfo [0].kp_proc.p_sigmask
+ 	 */
++#if defined(__NetBSD__) && (NSIG > 32)
++	buf->blocked [0] = pinfo [0].kp_proc.p_sigmask.__bits[0];
++#else
+ 	buf->blocked [0] = pinfo [0].kp_proc.p_sigmask;
++#endif
+ 	
+ 	/* sigignore: mask of ignored signals.
+ 	 *            pinfo [0].kp_proc.p_sigignore
+ 	*/
++#if defined(__NetBSD__) && (NSIG > 32)
++	buf->sigignore [0] = pinfo [0].kp_proc.p_sigignore.__bits[0];
++#else
+ 	buf->sigignore [0] = pinfo [0].kp_proc.p_sigignore;
++#endif
+ 	
+ 	/* sigcatch: mask of caught signals.
+ 	 *           pinfo [0].kp_proc.p_sigcatch
+ 	*/
++#if defined(__NetBSD__) && (NSIG > 32)
++	buf->sigcatch [0] = pinfo [0].kp_proc.p_sigcatch.__bits[0];
++#else
+ 	buf->sigcatch [0] = pinfo [0].kp_proc.p_sigcatch;
++#endif
  
+ 	buf->flags = _glibtop_sysdeps_proc_signal;
+ }
