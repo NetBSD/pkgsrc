@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9270 2005/02/22 22:01:47 jmmv Exp $
+$NetBSD: CHANGES,v 1.9271 2005/02/23 01:12:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1044,3 +1044,4 @@ Changes to the packages collection and infrastructure in 2005:
 	bsd.pkg.mk: Add the ability to use multiple digests to ensure the
 		integrity of dist files and dist patches [agc 2005-02-22]
 	Updated gnome2-control-center to 2.8.2 [jmmv 2005-02-22]
+	Updated fxtv to 1.03nb8 [wiz 2005-02-23]
