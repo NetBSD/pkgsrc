@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/04/23 15:37:38 skrll Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/25 03:47:38 jlam Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/01/31 11:15:57 dirk Exp
 #
 
@@ -16,20 +16,25 @@ COMMENT=	Object-oriented SGML/XML parser toolkit and DSSSL engine
 
 CONFLICTS+=	sp-*
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-LTCONFIG_OVERRIDE= \
-		${WRKSRC}/config/ltconfig
+USE_BUILDLINK_ONLY=	yes
+GNU_CONFIGURE=		yes
+#USE_LIBINTL=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
-CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
-CONFIGURE_ARGS=	--disable-shared
-CONFIGURE_ARGS+= --enable-default-catalog=${PREFIX}/share/sgml/jade/catalog
-CONFIGURE_ARGS+= --enable-mif
+JADE_CATALOG_DIR=	${PREFIX}/share/sgml/jade/catalog
+
+CONFIGURE_ARGS=		--disable-shared
+CONFIGURE_ARGS+=	--enable-default-catalog=${JADE_CATALOG_DIR}
+CONFIGURE_ARGS+=	--enable-mif
+
+CXXFLAGS+=		${CFLAGS}
 
 post-install:
-.for i in jade nsgmls sgmlnorm spam spent sx
-	strip ${PREFIX}/bin/$i
-.endfor
+	@for prog in jade nsgmls sgmlnorm spam spent sx; do		\
+		${ECHO_MSG} "strip ${PREFIX}/bin/$${prog}";		\
+		strip ${PREFIX}/bin/$${prog};				\
+	done
 	${INSTALL_DATA_DIR} ${PREFIX}/include/sp
 	${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/include/sp
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jade
@@ -37,4 +42,14 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# Turn off C++ optimization as there seem to be problems with the generated
+# code: jade dumps core on some files if compiled with -O2.  This might be
+# a compiler bug, or something deep inside the code...
+#
+# This is placed after the inclusion of bsd.pkg.mk to force this option to
+# be the last optimization flag specified.
+#
+CXXFLAGS+=		-O0
