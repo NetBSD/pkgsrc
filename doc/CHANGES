@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4491 2004/01/17 19:11:30 kristerw Exp $
+$NetBSD: CHANGES,v 1.4492 2004/01/18 01:59:53 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -316,3 +316,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmame to 0.78.1 [kristerw 2004-01-17]
 	Updated xmess to 0.78.1 [kristerw 2004-01-17]
 	Removed kstars [kristerw 2004-01-17]
+	Updated lsof to 4.70 [atatat 2004-01-17]
