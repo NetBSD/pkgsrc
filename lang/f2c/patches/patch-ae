@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 1999/12/16 00:58:27 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.5 2001/02/24 18:37:46 dmcmahill Exp $
 
 --- ./libF77/makefile.orig	Tue Dec  7 17:52:36 1999
 +++ ./libF77/makefile	Tue Dec  7 18:03:51 1999
@@ -6,6 +6,6 @@ $NetBSD: patch-ae,v 1.4 1999/12/16 00:58:27 dmcmahill Exp $
  CC = cc
  SHELL = /bin/sh
 -CFLAGS = -O
-+CFLAGS = -Wcast-align -O2 -DNO_ONEXIT 
++CFLAGS = -fPIC -Wcast-align -O2 -DNO_ONEXIT 
  
  # If your system lacks onexit() and you are not using an
