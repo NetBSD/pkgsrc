@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/08/25 21:49:37 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2002/09/18 21:15:09 jlam Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 COMMENT=		PostgreSQL database server programs
@@ -37,8 +37,6 @@ PKG_GROUPS=		${PGGROUP}
 
 RCD_SCRIPTS=		pgsql
 OWN_DIRS_PERMS=		${PGHOME} ${PGUSER} ${PGGROUP} 0755
-
-DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 
 do-build:
 #

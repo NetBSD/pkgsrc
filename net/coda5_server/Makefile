@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/09/10 11:02:17 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2002/09/18 21:15:14 jlam Exp $
 
 PKGNAME=	coda-server-${DIST_VERS}
 COMMENT=	server programs for a replicated high-performance network file system
@@ -7,8 +7,6 @@ COMMENT=	server programs for a replicated high-performance network file system
 
 ALL_TARGET=		coda
 INSTALL_TARGET=		server-install
-INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
-DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 
 CONF_FILES+=	${EGDIR}/server.conf.ex ${PKG_SYSCONFDIR}/server.conf
 

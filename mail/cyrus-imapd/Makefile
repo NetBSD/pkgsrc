@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/07/31 15:48:31 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/09/18 21:15:11 jlam Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
 PKGREVISION=		1
@@ -69,9 +69,6 @@ CONF_FILES=		${EGDIR}/imapd.conf ${PKG_SYSCONFDIR}/imapd.conf
 CONF_FILES+=		${EGDIR}/normal.conf ${PKG_SYSCONFDIR}/cyrus.conf
 RCD_SCRIPTS=		cyrus
 FILES_SUBST+=		IMAPDCONF=${PKG_SYSCONFDIR}/imapd.conf
-
-DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 
 PERL5_PACKLIST= \
 	${PERL5_SITEARCH}/auto/Cyrus/IMAP/.packlist			\

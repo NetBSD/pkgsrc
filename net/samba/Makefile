@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2002/08/25 21:50:10 jlam Exp $
+# $NetBSD: Makefile,v 1.88 2002/09/18 21:15:15 jlam Exp $
 
 .include "Makefile.common"
 
@@ -52,8 +52,6 @@ SUPPORT_FILES_PERMS=	${SMBPASSWD_FILE}
 RCD_SCRIPTS=		samba nmbd smbd
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0500
-
-INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 
 # Remove irrelevant files for this package.
 post-extract:
