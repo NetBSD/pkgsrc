@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/05/24 20:39:38 tv Exp $
+# $NetBSD: Makefile,v 1.19 1999/06/14 00:08:59 cgd Exp $
 
 DISTNAME=		ncurses-1.9.9g
 CATEGORIES=		devel
@@ -9,7 +9,14 @@ MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/gnu/ncurses/
 MAINTAINER=		hubertf@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/ncurses/ncurses.html
 
-NOT_FOR_PLATFORM=	*-*-alpha	# needs to be libtooled
+# XXX The following comment is somewhat incorrect.  The package will build
+# XXX correctly on alpha, and even build shared libs, but not quite correctly:
+# XXX The shlibs have no SONAME, so references to them from programs
+# XXX will end up being to libfoo.so.  This may cause upgrade problems in the
+# XXX future.  However, an ncurses binary package appeared e.g. with 1.4,
+# XXX seemingly built from these bits, so it's probably best to just enable
+# XXX it for now.  -- cgd 19990613
+#NOT_FOR_PLATFORM=	*-*-alpha	# needs to be libtooled
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-normal --with-shared --enable-bsdpad
