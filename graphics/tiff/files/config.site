@@ -1,12 +1,27 @@
-DIR_BIN=$PREFIX/bin
-DIR_LIB=$PREFIX/lib
-DIRS_LIBINC=$PREFIX/include
-DIR_GZLIB=/usr/lib
-DIR_INC=$PREFIX/include
-DIR_JPEGLIB=$PREFIX/lib
-DIR_MAN=$PREFIX/man
-DSO=no
-INSTALL=
+# $NetBSD: config.site,v 1.3 1999/10/08 21:14:33 jlam Exp $
+
+DIR_BIN=${PREFIX}/bin			# destination for applications
+DIR_LIB=${PREFIX}/lib			# destination for library
+DIR_INC=${PREFIX}/include		# destination for include files
+DIR_MAN=${PREFIX}/man			# destination for man pages
+DIRS_LIBINC=${LOCALBASE}/include	# dirs to search for ancillary includes
+
+# JPEG support
+#
 JPEG=yes
-MANSCHEME=bsd-source-strip
+DIR_JPEGLIB=${LOCALBASE}/lib
+LIBJPEG="-Wl,-R${DIR_JPEGLIB} -L${DIR_JPEGLIB} -ljpeg"
+
+# ZLIB compression support
+#
 ZIP=yes
+DIR_GZLIB=${ZLIBDIR}
+LIBGZ="-Wl,-R${DIR_GZLIB} -L${DIR_GZLIB} -lz"
+
+DSO=no				# don't use libtiff's shared lib mechanism
+
+INSTALL=
+LIBGL=no			# don't build SGI -lgl apps
+LIBIMAGE=no			# don't build SGI -limage apps
+
+MANSCHEME=bsd-source-cat-strip

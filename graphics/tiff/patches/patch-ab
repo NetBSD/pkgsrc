@@ -1,17 +1,18 @@
-$NetBSD: patch-ab,v 1.5 1998/10/02 14:57:52 tv Exp $
+$NetBSD: patch-ab,v 1.6 1999/10/08 21:14:34 jlam Exp $
 
---- libtiff/Makefile.in.orig	Mon Jul 20 11:13:09 1998
-+++ libtiff/Makefile.in	Mon Jul 20 11:40:13 1998
-@@ -35,7 +35,7 @@
+--- ./libtiff/Makefile.in.orig	Wed Sep  8 05:39:00 1999
++++ ./libtiff/Makefile.in	Thu Oct  7 22:08:32 1999
+@@ -35,7 +35,8 @@
  #
  SHELL	= @SCRIPT_SH@
  NULL	=
 -CC	= @CCOMPILER@
-+CC	= ${LIBTOOL} @CCOMPILER@
++CCOMPILER = @CCOMPILER@
++CC	= ${LIBTOOL} ${CCOMPILER}
  AR	= @AR@
  AROPTS	= @AROPTS@
  RANLIB	= @RANLIB@
-@@ -135,7 +135,7 @@
+@@ -135,7 +136,7 @@
  	tif_write.o \
  	tif_zip.o \
  	${NULL}
@@ -20,7 +21,7 @@ $NetBSD: patch-ab,v 1.5 1998/10/02 14:57:52 tv Exp $
  
  all:	${TARGETS}
  	if [ @DSO@dso != nodso ]; then \
-@@ -144,9 +144,9 @@
+@@ -144,9 +145,9 @@
  	    true; \
  	fi
  
@@ -28,17 +29,17 @@ $NetBSD: patch-ab,v 1.5 1998/10/02 14:57:52 tv Exp $
 -	${AR} ${AROPTS} libtiff.a $?
 -	${RANLIB} libtiff.a
 +libtiff.la: ${OBJS}
-+	${CC} -o libtiff.la ${OBJS:.o=.lo} -rpath ${PREFIX}/lib \
-+		-version-info 3:4
++	${CC} -o $@ ${OBJS:.o=.lo} -rpath @DIR_LIB@ \
++		-version-info @DIST_MAJOR@:@DIST_MINOR@
  
  #
  # NB: The configure script verifies that the configured
-@@ -328,7 +328,7 @@
+@@ -334,7 +335,7 @@
  	fi
  install: all installHdrs
  	${INSTALL} -idb tiff.sw.dev -m 755 -dir @DIR_LIB@
 -	${INSTALL} -idb tiff.sw.dev -m 444 -F @DIR_LIB@ -O libtiff.a
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libtiff.la @DIR_LIB@
++	${LIBTOOL} ${BSD_INSTALL_DATA} libtiff.la @DIR_LIB@
  	if [ @DSO@dso != nodso ]; then					\
  	    ${MAKE} installDSO;						\
  	else								\
