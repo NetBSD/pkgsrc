@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1797 2004/05/31 01:59:06 epg Exp $
+$NetBSD: TODO,v 1.1798 2004/05/31 12:24:26 salo Exp $
 
 Suggested new packages
 ======================
@@ -219,6 +219,7 @@ Suggested package updates
 	o fox-1.2.1
 	o freetds-0.62.3
 	o fsviewer-0.2.5
+	o gaim-0.78
 	o gauche-0.8
 	o gcc-3.4.0 [pkgsrc-wip]
 	o gcpio-2.5 [pkg/20799]
