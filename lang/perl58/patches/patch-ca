@@ -1,6 +1,6 @@
-$NetBSD: patch-ca,v 1.4 2004/11/07 16:20:11 wiz Exp $
+$NetBSD: patch-ca,v 1.5 2004/11/23 17:32:36 jlam Exp $
 
---- Configure.orig	2004-05-12 13:00:41.000000000 +0200
+--- Configure.orig	2004-05-12 07:00:41.000000000 -0400
 +++ Configure
 @@ -7850,7 +7850,7 @@ if "$useshrplib"; then
  	solaris)
@@ -11,7 +11,21 @@ $NetBSD: patch-ca,v 1.4 2004/11/07 16:20:11 wiz Exp $
  		xxx="-Wl,-R$shrpdir"
  		;;
  	bsdos|linux|irix*|dec_osf)
-@@ -17288,7 +17288,15 @@ RCAT(Rei,ser)
+@@ -8971,6 +8971,13 @@ EOCP
+ 	;;
+ esac
+ 
++: Look for a hint-file generated 'call-back-unit'.  We need
++: to set some defaults for building perl in pkgsrc.
++if $test -f pkgsrc.cbu; then
++    echo "Setting pkgsrc-specific hints regarding compiler/linker flags..."
++    . ./pkgsrc.cbu
++fi
++
+ case "$vendorprefix" in
+ '')	d_vendorbin="$undef"
+ 	vendorbin=''
+@@ -17288,7 +17295,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2004/11/17 22:55:15 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2004/11/23 17:32:36 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -211,11 +211,21 @@ pre-configure:
 	hintdir="${WRKSRC}/hints";					\
 	for hints in $${hintdir}/*.sh; do				\
 		${CHMOD} +w $${hints};					\
-		( ${ECHO} '';						\
-		  ${ECHO} 'locincpth="${LOCINCPATH}"';			\
-		  ${ECHO} 'loclibpth="${LOCLIBPATH}"';			\
+		( ${ECHO} "";						\
+		  ${ECHO} "cat > UU/pkgsrc.cbu <<'EOCBU'";		\
+		  ${ECHO} "# This script UU/pkgsrc.cbu will get 'called-back' by Configure to set"; \
+		  ${ECHO} '# linker options after all other call-back scripts have been invoked.'; \
 		  ${ECHO} 'ldflags="${PERL5_HINTS_LDFLAGS} $$ldflags"';	\
 		  ${ECHO} 'lddlflags="${PERL5_HINTS_LDFLAGS} $$lddlflags"'; \
+		  ${ECHO} "EOCBU";					\
+		) >> $${hints};						\
+	done
+	hintdir="${WRKSRC}/hints";					\
+	for hints in $${hintdir}/*.sh; do				\
+		( ${ECHO} "";						\
+		  ${ECHO} "# Set pkgsrc defaults for library and header search paths."; \
+		  ${ECHO} 'locincpth="${LOCINCPATH}"';			\
+		  ${ECHO} 'loclibpth="${LOCLIBPATH}"';			\
 		) >> $${hints};						\
 	done
 .if !empty(SYSLIBPATH)
