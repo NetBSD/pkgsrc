@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/02/10 18:34:23 tron Exp $
+
+--- ../spunk/password.cc.orig	Thu Nov  7 18:06:48 1996
++++ ../spunk/password.cc	Sat Feb 10 18:38:35 2001
+@@ -529,10 +529,10 @@
+ // Allow editing of one password entry
+ {
+     // ID's of the menue items
+-    const miUserID      = 1;
+-    const miUserName    = 2;
+-    const miPassword    = 3;
+-    const miLevel       = 4;
++    const int miUserID      = 1;
++    const int miUserName    = 2;
++    const int miPassword    = 3;
++    const int miLevel       = 4;
+ 
+      // Remember the crc of the entry
+     u32 OldCRC = GetCRC (E);
