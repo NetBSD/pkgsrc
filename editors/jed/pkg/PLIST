@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/09/14 22:48:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/10/21 11:44:24 wiz Exp $
 bin/jed
 bin/rgrep
 man/man1/jed.1
@@ -245,5 +245,4 @@ share/jed/lib/yankpop.sl
 @dirrm share/jed/doc/manual
 @dirrm share/jed/doc
 @dirrm share/jed/info
-@dirrm share/jed/bin
 @dirrm share/jed
