@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2004/01/03 18:49:37 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/02/13 23:29:17 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use eel2.
 #
@@ -17,11 +17,18 @@ BUILDLINK_PREFIX.eel2_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.eel2+=	include/eel-2/eel/*.h
 BUILDLINK_FILES.eel2+=	lib/libeel-2.*
 
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
+.include "../../devel/GConf2/buildlink2.mk"
+.include "../../devel/gail/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/libglade2/buildlink2.mk"
+.include "../../devel/libgnome/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
-.include "../../devel/gail/buildlink2.mk"
+.include "../../graphics/libart2/buildlink2.mk"
+.include "../../sysutils/gnome-vfs2/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	eel2-buildlink
 
