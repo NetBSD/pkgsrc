@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2001/06/09 10:44:23 wiz Exp $
+# $NetBSD: Makefile,v 1.217 2001/06/10 11:32:39 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -139,6 +139,7 @@ SUBDIR+=	p5-Devel-DProf
 SUBDIR+=	p5-Devel-Peek
 SUBDIR+=	p5-Devel-SmallProf
 SUBDIR+=	p5-Devel-Symdump
+SUBDIR+=	p5-Event
 SUBDIR+=	p5-Expect
 SUBDIR+=	p5-ExtUtils-F77
 SUBDIR+=	p5-File-FlockDir
@@ -162,6 +163,7 @@ SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-Time-HiRes
 SUBDIR+=	p5-TimeDate
+SUBDIR+=	p5-WeakRef
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	palmos-includes
 SUBDIR+=	patch
