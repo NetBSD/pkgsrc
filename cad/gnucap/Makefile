@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:25:03 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:32:11 martti Exp $
 #
 
 DISTNAME=	gnucap-0.33
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gnucap/}
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda.seul.org/tools/acs/index.html
-COMMENT=	general purpose circuit simulator
+COMMENT=	General purpose circuit simulator
 
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/19 08:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 16:34:32 martti Exp $
 #
 
 DISTNAME=	lmme-0.6.4
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmme/}
 
 MAINTAINER=	collver1@comcast.net
 HOMEPAGE=	http://lmme.sourceforge.net/
-COMMENT=	curses-based client for MSN Messenger chat system
+COMMENT=	Curses-based client for MSN Messenger chat system
 
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
