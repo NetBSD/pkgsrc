@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/03/20 04:39:33 taca Exp $
+# $NetBSD: Makefile,v 1.28 2004/06/08 12:23:59 cjep Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -18,6 +18,8 @@ USE_RUBY=	yes
 RUBY_DEPENDS=	no
 RUBY_BUILD_DEPENDS= no
 DIST_SUBDIR=	ruby
+
+BUILD_DEFS+=		USE_INET6
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared
