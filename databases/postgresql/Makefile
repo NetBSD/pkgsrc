@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 1999/08/24 14:18:53 tron Exp $
+# $NetBSD: Makefile,v 1.38 1999/09/06 07:01:43 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -20,11 +20,11 @@ DEPENDS+=		tk-8.0.5:../../x11/tk80 \
 # Needs ELF clue, mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-alpha *-*-mips
 
-PLIST_SRC=		${WRKDIR}/PLIST.tmp
 REQ_FILE=		${WRKDIR}/REQ
 
 PGUSER?=		pgsql
 PGGROUP?=		ingres
+PLIST_SUBST=		PGUSER=${PGUSER}
 
 USE_GMAKE=
 MAKEFILE=		GNUmakefile
@@ -76,9 +76,6 @@ pre-install:
 		-e 's|@PREFIX@|${PREFIX}|g' \
 		-e 's|@LOCALBASE@|${LOCALBASE}|g' \
 		<${PKGDIR}/REQ > ${REQ_FILE}
-	@${SED}  \
-		-e 's|@PGUSER@|${PGUSER}|g' \
-		<${PKGDIR}/PLIST > ${PLIST_SRC}
 	${SH} ${REQ_FILE} ${PKGNAME} INSTALL
 
 post-install:
@@ -104,14 +101,14 @@ post-install:
 		${ECHO} "#export TZ" \
 			>> ${PREFIX}/${PGUSER}/.profile; \
 	fi
-	@/usr/sbin/chown -R ${PGUSER}:${PGGROUP} ${PREFIX}/${PGUSER}
+	@${CHOWN} -R ${PGUSER}:${PGGROUP} ${PREFIX}/${PGUSER}
 	@${ECHO} 'Initializing PostgreSQL Databases - this may take a few minutes...'
 	${LDCONFIG} ${PREFIX}/${PGUSER}/lib || ${TRUE}
-	@${ECHO} '${SETENV} PATH=${PREFIX}/${PGUSER}/bin:$$PATH ${PREFIX}/${PGUSER}/bin/initdb --pglib=${PREFIX}/${PGUSER}/lib --pgdata=${PREFIX}/${PGUSER}/data' | su -l ${PGUSER}
+	@${ECHO} '${SETENV} PATH=${PREFIX}/${PGUSER}/bin:$$PATH ${PREFIX}/${PGUSER}/bin/initdb --pglib=${PREFIX}/${PGUSER}/lib --pgdata=${PREFIX}/${PGUSER}/data' | ${SU} -l ${PGUSER}
 	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" -e "s=!!PGUSER!!=${PGUSER}=g" \
 		< ${FILESDIR}/pgsql.sh.tmpl > ${PREFIX}/etc/rc.d/pgsql.sh
-	@/bin/chmod 554 ${PREFIX}/etc/rc.d/pgsql.sh
-	@/usr/sbin/chown root:${PGGROUP} ${PREFIX}/etc/rc.d/pgsql.sh
+	@${CHMOD} 554 ${PREFIX}/etc/rc.d/pgsql.sh
+	@${CHOWN} root:${PGGROUP} ${PREFIX}/etc/rc.d/pgsql.sh
 	@${INSTALL} -c -o ${PGUSER} -g ${PGGROUP} -m 444 \
 		${FILESDIR}/post-install-notes ${PREFIX}/${PGUSER}
 	-${MKDIR} ${PREFIX}/share/doc/pgsql

@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.8 1999/09/06 07:01:44 sakamoto Exp $
+
 diff -rc2 config.sub config.sub
 *** config.sub	Tue Mar 25 02:16:33 1997
 --- config.sub	Thu Mar  4 21:46:43 1999
