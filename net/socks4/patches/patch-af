@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 1999/08/05 13:09:28 agc Exp $
+
+Solaris 2.6 appears to have herror(), so don't redefine it.
+
+--- rftp/ftp.c	1999/08/05 12:56:00	1.1
++++ rftp/ftp.c	1999/08/05 12:56:45
+@@ -112,7 +112,7 @@
+ FILE	*cin, *cout;
+ FILE	*dataconn();
+ 
+-#if !defined(SVR3) && !defined(BIND_RESOLVER) && !defined(LINUX)
++#if !defined(SVR3) && !defined(BIND_RESOLVER) && !defined(LINUX) && !defined(SOLARIS)
+ 
+ /* >>> YDL */
+ #if	!defined(BSD) || (BSD - 43 <= 0)
