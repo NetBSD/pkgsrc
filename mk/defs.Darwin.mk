@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.13 2001/11/21 13:57:31 agc Exp $
+# $NetBSD: defs.Darwin.mk,v 1.14 2001/11/21 14:10:07 agc Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -51,15 +51,18 @@ TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
 
-DEF_UMASK?=	0022
-GROUPADD?=	${FALSE}			# XXX - Fix me!
+DEF_UMASK?=		0022
+DEFAULT_SERIAL_DEVICE?=	/dev/null
+GROUPADD?=		${FALSE}			# XXX - Fix me!
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
-NOLOGIN?=	${FALSE}
-USERADD?=	${FALSE}			# XXX - Fix me!
-
-ROOT_USER?=	root
-ROOT_GROUP?=	wheel
+NOLOGIN?=		${FALSE}
+PKG_TOOLS_BIN?=		${ZOULARISBASE}/sbin
+ROOT_GROUP?=		wheel
+ROOT_USER?=		root
+SERIAL_DEVICES?=	/dev/null
+USERADD?=		${FALSE}			# XXX - Fix me!
+ZOULARISBASE?=		${DESTDIR}/usr/pkg
 
 _DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
