@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/04/01 17:44:43 tv Exp $
+
+SHA1 (ap-gzip-1.3.19.1a/mod_gzip.c.gz) = 5b1e7add6ddee17806ff9801f196797b80831989
+Size (ap-gzip-1.3.19.1a/mod_gzip.c.gz) = 55269 bytes
+SHA1 (ap-gzip-1.3.19.1a/changes.txt) = 6089a2e74091a3a630b5836c7c1e90e46c0d0e44
+Size (ap-gzip-1.3.19.1a/changes.txt) = 6897 bytes
+SHA1 (ap-gzip-1.3.19.1a/commands.txt) = b1b9e1745346dbbbfec6724d1e49b66b168678f9
+Size (ap-gzip-1.3.19.1a/commands.txt) = 8231 bytes
+SHA1 (ap-gzip-1.3.19.1a/samples.txt) = ebd31f221a4aeadd36ef17bbc05a7da0f550316f
+Size (ap-gzip-1.3.19.1a/samples.txt) = 7050 bytes
