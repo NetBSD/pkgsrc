@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.12 2004/12/18 15:59:55 jlam Exp $
+$NetBSD: distinfo,v 1.13 2004/12/18 16:04:16 jlam Exp $
 
+SHA1 (postgresql-7.4.6.tar.bz2) = 54e9126053579285b29a3a30e3055d1784a28b0a
+Size (postgresql-7.4.6.tar.bz2) = 10200107 bytes
 SHA1 (patch-aa) = 626b4b4bf0d47913072399535c55d413b90675a4
 SHA1 (patch-ab) = f44a544c56452bad197a88cb827e88624c54656c
 SHA1 (patch-ac) = 39ce96f3ea9fc1167c8d21168fd1536077898d58
