@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/15 18:22:10 mycroft Exp $
-@exec ${MKDIR} %D/share/doc/db3/ref/splash
+@comment $NetBSD: PLIST,v 1.4 2002/07/15 18:23:40 mycroft Exp $
 bin/db3_archive
 bin/db3_checkpoint
 bin/db3_deadlock
@@ -782,6 +781,7 @@ share/doc/db3/reftoc.html
 share/doc/db3/sleepycat/contact.html
 share/doc/db3/sleepycat/legal.html
 share/doc/db3/sleepycat/license.html
+@exec ${MKDIR} %D/share/doc/db3/ref/splash
 share/doc/db3/utility/berkeley_db_svc.html
 share/doc/db3/utility/db_archive.html
 share/doc/db3/utility/db_checkpoint.html
