@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5597 2004/04/15 21:27:39 jmmv Exp $
+$NetBSD: CHANGES,v 1.5598 2004/04/15 22:08:36 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1988,3 +1988,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gst-plugins-png to 0.8.1 [jmmv 2004-04-15]
 	Updated gst-plugins-theora to 0.8.1 [jmmv 2004-04-15]
 	Updated gst-plugins-vorbis to 0.8.1 [jmmv 2004-04-15]
+	Updated destroy to 20040415 [recht 2004-04-15]
