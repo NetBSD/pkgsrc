@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.37 2004/04/09 18:29:37 jschauma Exp $
+# $NetBSD: pre-build,v 1.38 2004/04/09 18:43:14 jschauma Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -21,8 +21,9 @@ PRUNELINKS=${PRUNEPACKAGES:-"no"}
 
 PKGLINT_PKG_DIR=${USR_PKGSRC}/pkgtools/pkglint
 
-# extract the name of the files used for the build log and broken build log.
-# these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
+# Extract the name of the files used for the build log and broken build log.
+# These have defaults set by bsd.bulk-pkg.mk and may be overridden in
+# /etc/mk.conf
 BROKENF=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=BROKENFILE )`;
 export BROKENF
 if [ "$BROKENF" = "" ]; then
@@ -45,29 +46,29 @@ X11BASE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=X11BASE )`;
 
 # On non-NetBSD platforms we need to keep the bootstrap-files!
 if [ x"$BMAKE" = x"bmake" ]; then
-	( cd $LOCALBASE && tar cf /tmp/$$.tar \
-		sbin/mtree sbin/pkg_add sbin/pkg_admin sbin/pkg_create \
-		sbin/pkg_delete sbin/pkg_info sbin/pkg_view sbin/linkfarm \
-		share/mk/sys.mk share/mk/bsd.dep.mk share/mk/bsd.depall.mk \
-		share/mk/bsd.files.mk share/mk/bsd.hostprog.mk \
+	( cd $LOCALBASE && tar cf /tmp/$$.tar                                \
+		sbin/mtree sbin/pkg_add sbin/pkg_admin sbin/pkg_create       \
+		sbin/pkg_delete sbin/pkg_info sbin/pkg_view sbin/linkfarm    \
+		share/mk/sys.mk share/mk/bsd.dep.mk share/mk/bsd.depall.mk   \
+		share/mk/bsd.files.mk share/mk/bsd.hostprog.mk               \
 		share/mk/bsd.doc.mk share/mk/bsd.inc.mk share/mk/bsd.info.mk \
-		share/mk/bsd.kernobj.mk share/mk/bsd.kinc.mk \
-		share/mk/bsd.kmod.mk share/mk/bsd.lib.mk \
-		share/mk/bsd.links.mk share/mk/bsd.man.mk \
-		share/mk/bsd.nls.mk share/mk/bsd.obj.mk \
-		share/mk/bsd.prog.mk share/mk/bsd.subdir.mk \
-		share/mk/bsd.sys.mk share/mk/bsd.own.mk \
-		bin/bmake bin/ftp bin/digest bin/nbsed bin/install-sh \
-		bin/pax bin/tar bin/cpio man/cat1/ftp.1 man/cat1/pax.0 \
-		man/cat1/tar.0 man/cat1/cpio.0 man/cat1/pkg_add.0 \
-		man/cat1/pkg_admin.0 man/cat1/pkg_create.0 \
-		man/cat1/pkg_delete.0 man/cat1/pkg_info.0 \
-		man/cat1/pkg_view.0 man/cat1/linkfarm.0 \
-		man/man1/digest.1 man/man1/pax.1 man/man1/cpio.1 \
-		man/man1/tar.1 man/man1/nbsed.1 man/man1/pkg_add.1 \
-		man/man1/pkg_admin.1 man/man1/pkg_create.1 \
-		man/man1/pkg_delete.1 man/man1/pkg_info.1 \
-		man/man1/pkg_view.1 man/man1/linkfarm.1 man/cat8/mtree.0 \
+		share/mk/bsd.kernobj.mk share/mk/bsd.kinc.mk                 \
+		share/mk/bsd.kmod.mk share/mk/bsd.lib.mk                     \
+		share/mk/bsd.links.mk share/mk/bsd.man.mk                    \
+		share/mk/bsd.nls.mk share/mk/bsd.obj.mk                      \
+		share/mk/bsd.prog.mk share/mk/bsd.subdir.mk                  \
+		share/mk/bsd.sys.mk share/mk/bsd.own.mk                      \
+		bin/bmake bin/ftp bin/digest bin/nbsed bin/install-sh        \
+		bin/pax bin/tar bin/cpio man/cat1/ftp.1 man/cat1/pax.0       \
+		man/cat1/tar.0 man/cat1/cpio.0 man/cat1/pkg_add.0            \
+		man/cat1/pkg_admin.0 man/cat1/pkg_create.0                   \
+		man/cat1/pkg_delete.0 man/cat1/pkg_info.0                    \
+		man/cat1/pkg_view.0 man/cat1/linkfarm.0                      \
+		man/man1/digest.1 man/man1/pax.1 man/man1/cpio.1             \
+		man/man1/tar.1 man/man1/nbsed.1 man/man1/pkg_add.1           \
+		man/man1/pkg_admin.1 man/man1/pkg_create.1                   \
+		man/man1/pkg_delete.1 man/man1/pkg_info.1                    \
+		man/man1/pkg_view.1 man/man1/linkfarm.1 man/cat8/mtree.0     \
 		man/man8/mtree.8 man/cat7/packages.0 )
 fi
 
@@ -149,7 +150,8 @@ if [ "$CVS_USER" != "" ]; then
 		( cd ${USR_PKGSRC}/security/ssh ; ${BMAKE} bulk-install )
 	fi
 	echo Performing CVS update - this will take some time
-	su - ${CVS_USER} -c "stty sane ; cd ${USR_PKGSRC} ; env CVS_RSH=ssh cvs -q update -Pd ${CVS_FLAGS} || exit 0"
+	su - ${CVS_USER} -c "stty sane ; cd ${USR_PKGSRC} ;                  \
+		env CVS_RSH=ssh cvs -q update -Pd ${CVS_FLAGS} || exit 0"
         if [ $? != 0 ]
         then
                 echo CVS update not successful, aborting.

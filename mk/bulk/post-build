@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.42 2004/04/07 22:56:34 dmcmahill Exp $
+# $NetBSD: post-build,v 1.43 2004/04/09 18:43:14 jschauma Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -42,12 +42,13 @@ $reportf=basename($REPORT);
 
 chomp($os=`uname -s`);
 
-# extract the name of the files used for the build log and broken build log.
-# these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
+# Extract the name of the files used for the build log and broken build log.
+# These have defaults set by bsd.bulk-pkg.mk and may be overridden in
+# /etc/mk.conf
 chomp($BROKENFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=BROKENFILE )`);
 
-# also extract the names of the cache files used during the bulk build.  We'll save a copy of
-# those to help debug if the build messed up.
+# Also extract the names of the cache files used during the bulk build.  We'll
+# save a copy of those to help debug if the build messed up.
 chomp($BULK_DBFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=BULK_DBFILE )`);
 chomp($DEPENDSTREEFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=DEPENDSTREEFILE )`);
 chomp($DEPENDSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=DEPENDSFILE )`);

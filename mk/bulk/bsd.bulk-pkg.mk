@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.58 2004/04/07 22:56:34 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.59 2004/04/09 18:43:14 jschauma Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -76,46 +76,50 @@ BROKENFILE?=	.broken${BULK_ID}.html
 # This file is where the log of the build goes
 BUILDLOG?=	.make${BULK_ID}
 
-# This is a top level file which lists the entire pkgsrc depends tree in the format:
+# This is a top level file which lists the entire pkgsrc depends tree in the
+# format:
 # foo/bar devel/libfoo
 # meaning 'foo/bar' is requied to build 'devel/libfoo'
 # this is in the format needed by tsort(1)
 DEPENDSTREEFILE?=	${_PKGSRCDIR}/.dependstree${BULK_ID}
 
-# This is a top level file which lists the entire pkgsrc depends tree in the format:
+# This is a top level file which lists the entire pkgsrc depends tree in the
+# format:
 # foo/bar depends on: devel/libfoo devel/libbar devel/baz .....
 # ie, to build foo/bar we need devel/libfoo devel/libbar devel/baz ... installed
 DEPENDSFILE?=	${_PKGSRCDIR}/.depends${BULK_ID}
 
-# This is a top level file which lists the entire pkgsrc depends tree in the format:
+# This is a top level file which lists the entire pkgsrc depends tree in the
+# format:
 # devel/libfoo is depended upon by: foo/bar graphics/gtkfoo ...
 # ie, to build foo/bar we need devel/libfoo to be installed.
 #     to build graphics/gtkfoo we need devel/libfoo to be installed
 SUPPORTSFILE?=	${_PKGSRCDIR}/.supports${BULK_ID}
 
-# This is a top level file which cross-references each package name and pkg directory
-# in the format:
+# This is a top level file which cross-references each package name and pkg
+# directory in the format:
 # devel/libfoo libfoo-1.3
 INDEXFILE?=	${_PKGSRCDIR}/.index${BULK_ID}
 
-# file containing a list of all the packages in the correct order for a bulk build.
-# the correct order is one where packages that are required by others are built
-# before the packages which require them.
+# File containing a list of all the packages in the correct order for a bulk
+# build.  The correct order is one where packages that are required by others
+# are built before the packages which require them.
 ORDERFILE?=	${_PKGSRCDIR}/.order${BULK_ID}
 
-# file which is used as a timestamp for when the build started.  This is used eventually
-# for looking for leftover files (files not properly deinstalled)
+# File which is used as a timestamp for when the build started.  This is used
+# eventually for looking for leftover files (files not properly deinstalled)
 STARTFILE?=	${_PKGSRCDIR}/.start${BULK_ID}
 
-# file which is used as a database for bulk builds in which SPECIFIC_PKGS is
-# defined.  This database is used to hold all the dependency and index information
-# for the specific packages as well as their dependencies.  In a SPECIFIC_PKGS
-# bulk build, this file is created and then used to create the INDEXFILE and
-# DEPENDSTREEFILE.
+# File which is used as a database for bulk builds in which SPECIFIC_PKGS is
+# defined.  This database is used to hold all the dependency and index
+# information for the specific packages as well as their dependencies.  In a
+# SPECIFIC_PKGS bulk build, this file is created and then used to create the
+# INDEXFILE and DEPENDSTREEFILE.
 BULK_DBFILE?=	${_PKGSRCDIR}/.bulk_db${BULK_ID}
 
-# a list of pkgs which we should _never_ delete during a build.  The primary use is for digest
-# and also for xpkgwedge.  Add pkgtools/xpkgwedge in /etc/mk.conf to do an xpkgwedged bulk build.
+# A list of pkgs which we should _never_ delete during a build.  The primary
+# use is for digest and also for xpkgwedge.  Add pkgtools/xpkgwedge in
+# /etc/mk.conf to do an xpkgwedged bulk build.
 BULK_PREREQ+=		pkgtools/digest
 
 # by default, clean up any broken packages
