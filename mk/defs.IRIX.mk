@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.38 2003/12/16 22:54:13 heinz Exp $
+# $NetBSD: defs.IRIX.mk,v 1.39 2003/12/16 23:07:42 heinz Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -46,6 +46,7 @@ LDCONFIG?=	/usr/bin/true
 LN?=		/sbin/ln
 LS?=		/sbin/ls
 M4?=		/usr/bin/m4
+MAIL?=		/usr/sbin/mailx
 MKDIR?=		/sbin/mkdir -p
 .if exists(${LOCALBASE}/sbin/mtree)
 MTREE?=		${LOCALBASE}/sbin/mtree
