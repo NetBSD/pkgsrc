@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2003/07/30 12:50:39 grant Exp $
+# $NetBSD: Makefile,v 1.89 2003/08/08 09:33:13 grant Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		5
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gtk.org/
-COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
+COMMENT=		The GIMP Toolkit - libraries for building X11 user interfaces
 
 BUILD_USES_MSGFMT=	yes
 
