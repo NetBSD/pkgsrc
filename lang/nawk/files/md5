@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/11/23 20:44:03 windsor Exp $
+$NetBSD: md5,v 1.3 2000/04/20 08:26:12 agc Exp $
 
-MD5 (awk.tar.gz) = d85853b63b117415d16daba456c0e6c5
+MD5 (nawk-19990620/awk.tar.gz) = d85853b63b117415d16daba456c0e6c5
