@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7059 2004/08/31 18:13:07 jmmv Exp $
+$NetBSD: CHANGES,v 1.7060 2004/08/31 19:12:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4131,3 +4131,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated vice to 1.15 [dillo 2004-08-31]
 	Updated epiphany to 1.2.8 [jmmv 2004-08-31]
 	Updated glade2 to 2.6.0nb1 [jmmv 2004-08-31]
+	Updated metacity to 2.8.4 [jmmv 2004-08-31]
