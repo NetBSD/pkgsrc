@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/02/04 10:53:06 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2000/02/08 12:06:26 fredb Exp $
 # FreeBSD Id: Makefile,v 1.38 1998/04/13 00:51:58 jseger Exp
 #
 
@@ -21,6 +21,7 @@
     SUBDIR += gnumeric
     SUBDIR += grace
     SUBDIR += grpn
+    SUBDIR += gsl
 #    SUBDIR += hexcalc
 #    SUBDIR += lapack
 #    SUBDIR += libranlib
