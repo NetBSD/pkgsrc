@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/18 09:23:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2002/07/01 17:45:11 jlam Exp $
 #
 
 DISTNAME=	bbkeys-0.8.4
@@ -12,10 +12,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://bbkeys.sourceforge.net/
 COMMENT=	General X Window keygrabber
 
-GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
-USE_PERL5=		YES
-USE_X11BASE=		YES
+GNU_CONFIGURE=	YES
+USE_BUILDLINK2=	YES
+USE_X11BASE=	YES
 
-.include "../../mk/x11.buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

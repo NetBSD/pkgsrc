@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1.2.2 2002/06/23 18:57:24 jlam Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.3 2002/07/01 17:45:05 jlam Exp $
 #
 
 DISTNAME=	cg-0.4
@@ -10,6 +10,6 @@ HOMEPAGE=	http://ftp.giga.or.at/pub/nih/cg/
 COMMENT=	semi-automatic newsgroup binary downloader
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 .include "../../mk/bsd.pkg.mk"

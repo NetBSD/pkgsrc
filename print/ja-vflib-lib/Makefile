@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1.2.2 2002/06/23 18:58:13 jlam Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.3 2002/07/01 17:45:06 jlam Exp $
 
 PKGNAME=		ja-vflib-lib-${VFLIB_VERSION}
 COMMENT=		Japanese Vector font library
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 .include "Makefile.common"
 

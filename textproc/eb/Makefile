@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7.2.1 2002/06/23 19:01:32 jlam Exp $
+# $NetBSD: Makefile,v 1.7.2.2 2002/07/01 17:45:10 jlam Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 
 DISTNAME=	eb-3.2.2
@@ -47,7 +47,7 @@ EB_APPENDICES=	\
 EXTRACT_ONLY=	${EB_DISTFILES}
 
 DIST_SUBDIR=		eb
-USE_BUILDLINK_ONLY=	# Defined
+USE_BUILDLINK2=		# Defined
 USE_LIBTOOL=		# Defined
 GNU_CONFIGURE=		# Defined
 CONFIGURE_ARGS+=	--with-zlib
@@ -69,7 +69,8 @@ post-install:
 		${GTAR} -C ${EB_APPENDIXDIR} -zxmf ${_DISTDIR}/$${f}; \
 	done
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/zlib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 2001/10/14 12:19:16 tron Exp $
+$NetBSD: patch-ag,v 1.1.2.1 2002/07/01 17:45:11 jlam Exp $
 
 --- style/Makefile.sub.orig	Sun Oct 14 13:51:50 2001
 +++ style/Makefile.sub	Sun Oct 14 14:01:26 2001
@@ -6,8 +6,8 @@ $NetBSD: patch-ag,v 1.1 2001/10/14 12:19:16 tron Exp $
  LIB=style
 -DEPLIBS=-lm -L$(TOP)/grove/.libs -lgrove -L$(TOP)/lib/.libs -lsp 	\
 -  -L$(TOP)/spgrove/.libs -lspgrove
-+DEPLIBS=-lm -L$(TOP)/grove -lgrove -L$(TOP)/lib -lsp 	\
-+  -L$(TOP)/spgrove -lspgrove
++DEPLIBS=-lm $(TOP)/grove/libgrove.la $(TOP)/lib/libsp.la 	\
++  $(TOP)/spgrove/libspgrove.la
  OBJS=Collector.o \
    DssslApp.o \
    DssslSpecEventHandler.o \

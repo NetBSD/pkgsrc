@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/03/13 17:38:04 fredb Exp $
+# $NetBSD: Makefile,v 1.14.2.1 2002/07/01 17:45:15 jlam Exp $
 #
 
 DISTNAME=		wxGTK-2.2.7
@@ -10,7 +10,8 @@ MAINTAINER=		tsarna@netbsd.org
 HOMEPAGE=		http://www.freiburg.linux.de/~wxxt/
 COMMENT=		GTK-based implementation of the wxWindows GUI library
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
+USE_X11=		# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
 GNU_CONFIGURE=		# defined
@@ -31,9 +32,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENCE.txt ${DOCDIR}/LICENSE
 	${INSTALL_DATA} ${WRKSRC}/SYMBOLS.txt ${DOCDIR}/SYMBOLS
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7.2.1 2002/06/23 18:58:45 jlam Exp $
+# $NetBSD: Makefile,v 1.7.2.2 2002/07/01 17:45:07 jlam Exp $
 # 
 
 DISTNAME=	xpdf-1.00
@@ -15,13 +15,12 @@ DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
 
 CONFLICTS=	xpdf-crypto-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
-USE_FREETYPE2=		YES
 GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--with-freetype2-includes=${BUILDLINK_DIR}/include/freetype2
-CONFIGURE_ARGS+=	--with-t1-includes=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	--with-freetype2-includes=${BUILDLINK_PREFIX.freetype2}/include/freetype2
+CONFIGURE_ARGS+=	--with-t1-includes=${BUILDLINK_PREFIX.t1lib}/include
 CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 MAKE_ENV+=		SED="${SED}" ECHO="${ECHO}"
 
@@ -31,8 +30,8 @@ MAKE_ENV+=		SED="${SED}" ECHO="${ECHO}"
 CONFIGURE_ARGS+=	--enable-a4-paper
 .endif
 
-.include "../../graphics/freetype2/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../textproc/t1lib/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../textproc/t1lib/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/04/05 11:41:09 fredb Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2002/07/01 17:45:03 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -28,7 +28,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 #			--with-syslog-facility=LOG_AUTH \
 #			--with-passwd
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-libconffile=${PREFIX}/etc/libsocks5.conf \
 			--with-srvconffile=${PREFIX}/etc/socks5.conf \

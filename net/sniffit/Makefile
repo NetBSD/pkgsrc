@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/11/29 23:49:12 wiz Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2002/07/01 17:45:03 jlam Exp $
 #
 
 DISTNAME=		sniffit.0.3.5
@@ -13,7 +13,7 @@ COMMENT=		Packet sniffer program
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 loss
 
 HAS_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 ALL_TARGET=
 
 do-install:
@@ -21,5 +21,5 @@ do-install:
 	${INSTALL_MAN}     ${WRKSRC}/sniffit.5 ${PREFIX}/man/man5
 	${INSTALL_MAN}     ${WRKSRC}/sniffit.8 ${PREFIX}/man/man8
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

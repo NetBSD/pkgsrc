@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/02/05 16:55:09 jlam Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2002/07/01 17:45:03 jlam Exp $
 
 DISTNAME=		samba-2.0.10
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -11,11 +11,11 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-IGNORE=			"${PKGNAME} has been superseded samba>=2.2.3"
+#IGNORE=			"${PKGNAME} has been superseded samba>=2.2.3"
 
 BUILD_USES_MSGFMT=	# defined
 GNU_CONFIGURE=		# defined
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,16 +36,16 @@ CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/swat
 CONFIGURE_ARGS+=	--with-sambabook=${PREFIX}/share/swat/using_samba
 
 CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ARGS+=	--with-sslinc=${BUILDLINK_DIR}
-CFLAGS+=		-I${BUILDLINK_DIR}/include/openssl      # ssl.h, err.h
+CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE}
+CFLAGS+=		-I${SSLBASE}/include/openssl      # ssl.h, err.h
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.include "../../print/cups/buildlink.mk"
+.include "../../print/cups/buildlink2.mk"
 BUILD_DEFS+=		USE_CUPS
 .endif
 
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink.mk"
+.include "../../security/PAM/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-pam
 .endif
 
@@ -101,8 +101,9 @@ post-install:
 		${FILESDIR}/smb.conf.sample > ${WRKDIR}/smb.conf.sample
 	${INSTALL_DATA} ${WRKDIR}/smb.conf.sample ${EXAMPLESDIR}
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
