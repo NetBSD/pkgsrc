@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2004/01/24 13:58:23 grant Exp $
+# $NetBSD: Makefile,v 1.49 2004/03/01 11:42:13 markd Exp $
 
 DISTNAME=		R-1.8.1
 PKGREVISION=		1
@@ -49,6 +49,7 @@ CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm_=yes
 # by the package builder.
 #
 USE_FORTRAN=		# defined
+USE_LANGUAGES=		c fortran
 
 .include "../../mk/bsd.prefs.mk"
 
