@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/08/04 11:09:40 abs Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/11/09 20:19:56 mycroft Exp $
 bin/AbiWord
 bin/abiword
 libexec/AbiSuite/AbiWord
@@ -321,16 +321,16 @@ share/AbiSuite/AbiWord/strings/sv-SE.strings
 share/AbiSuite/AbiWord/system.profile
 share/AbiSuite/COPYING
 share/AbiSuite/dictionary/american.hash
-share/AbiSuite/fonts//p052004l.afm
-share/AbiSuite/fonts//p052004l.pfa
-share/AbiSuite/fonts//p052023l.afm
-share/AbiSuite/fonts//p052023l.pfa
-share/AbiSuite/fonts//p052024l.afm
-share/AbiSuite/fonts//p052024l.pfa
-share/AbiSuite/fonts//s050000l.afm
-share/AbiSuite/fonts//s050000l.pfa
-share/AbiSuite/fonts//z003034l.afm
-share/AbiSuite/fonts//z003034l.pfa
+share/AbiSuite/fonts/p052004l.afm
+share/AbiSuite/fonts/p052004l.pfa
+share/AbiSuite/fonts/p052023l.afm
+share/AbiSuite/fonts/p052023l.pfa
+share/AbiSuite/fonts/p052024l.afm
+share/AbiSuite/fonts/p052024l.pfa
+share/AbiSuite/fonts/s050000l.afm
+share/AbiSuite/fonts/s050000l.pfa
+share/AbiSuite/fonts/z003034l.afm
+share/AbiSuite/fonts/z003034l.pfa
 share/AbiSuite/fonts/a010013l.afm
 share/AbiSuite/fonts/a010013l.pfa
 share/AbiSuite/fonts/a010015l.afm
