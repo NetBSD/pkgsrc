@@ -1,17 +1,28 @@
-# $NetBSD: Makefile,v 1.4 1999/02/20 22:48:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1999/06/15 21:22:10 itojun Exp $
 
 DISTNAME=		magicpoint-1.04a
-PKGNAME=		mgp-1.04a
+# question is for localized (i.e. Japanese) version
+PKGNAME?=		mgp-1.04a
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://ftp.mew.org/pub/MagicPoint/
 
-MAINTAINER=		root@garbled.net
+MAINTAINER=		itojun@itojun.org
 HOMEPAGE=		http://www.Mew.org/mgp/
+
+DEPENDS=		freetype-1.1:${.CURDIR}/../../print/freetype
 
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes
+CONFIGURE_ARGS+=	--disable-vflib
+
+post-configure:
+	(cd ${WRKSRC}/contrib/xmindpath; ./configure --prefix=${PREFIX})
+
+post-build:
+	(cd ${WRKSRC}/contrib/xmindpath; make)
 
 post-install:
+	(cd ${WRKSRC}/contrib/xmindpath; make install)
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mgp
 	${INSTALL_DATA} ${WRKSRC}/sample/README* ${PREFIX}/share/examples/mgp
 	${INSTALL_DATA} ${WRKSRC}/sample/*.gif ${PREFIX}/share/examples/mgp

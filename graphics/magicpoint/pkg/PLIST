@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 1998/11/11 06:28:40 garbled Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/06/15 21:22:10 itojun Exp $
 bin/mgp
 bin/mgp2ps
 bin/mgpnet
 bin/mgpembed
 bin/xwintoppm
+bin/xmindpath
 lib/X11/mgp/default.mgp
 lib/X11/mgp/mgp1.gif
 lib/X11/mgp/mgp2.gif
@@ -13,6 +14,7 @@ man/cat1/mgp2ps.0
 man/cat1/mgpnet.0
 man/cat1/xwintoppm.0
 man/cat1/mgpembed.0
+man/man1/xmindpath.1
 share/examples/mgp/README
 share/examples/mgp/README.jp
 share/examples/mgp/mgprc-sample
