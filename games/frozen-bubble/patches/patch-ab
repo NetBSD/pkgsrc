@@ -1,0 +1,24 @@
+--- Makefile	Wed Jan  1 19:46:44 2003
++++ Makefile	Wed Jan  1 20:03:20 2003
+@@ -1,8 +1,5 @@
+ DIRS = c_stuff
+ 
+-PREFIX = /usr/local
+-
+-
+ all: dirs
+ 
+ dirs:
+@@ -22,9 +19,10 @@
+ 		(cd $$n; $(MAKE) install) \
+ 	done
+ 	install -d $(PREFIX)/bin
+-	install binaries_installpathok/* $(PREFIX)/bin
++	install -c binaries_installpathok/frozen-bubble $(PREFIX)/bin
+ 	install -d $(PREFIX)/share/frozen-bubble
+-	cp -a gfx snd data highscores.default $(PREFIX)/share/frozen-bubble
++	cp -r gfx snd data highscores.default $(PREFIX)/share/frozen-bubble
++	chmod -R a+rX $(PREFIX)/share/frozen-bubble
+ 
+ 
+ clean: 
