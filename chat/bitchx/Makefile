@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/10/03 00:13:13 tv Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/28 23:42:25 heas Exp $
 #
 
 DISTNAME=	ircii-pana-1.0c19
@@ -11,6 +11,9 @@ MASTER_SITES=	ftp://ftp.bitchx.org/pub/BitchX/source/ \
 MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://www.bitchx.org/
 COMMENT=	IRC client based on ircII
+
+# This package is not even remotely 64-bit clean
+NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64
 
 WRKSRC=		${WRKDIR}/BitchX
 USE_BUILDLINK3=	YES
