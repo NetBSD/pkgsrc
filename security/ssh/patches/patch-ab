@@ -1,7 +1,6 @@
-$NetBSD: patch-ab,v 1.7 1999/09/18 21:08:20 kim Exp $
-
---- configure.in.orig	Wed May 12 07:20:02 1999
-+++ configure.in	Sat Sep 18 16:59:35 1999
+# $NetBSD: patch-ab,v 1.8 1999/11/30 09:08:46 explorer Exp $
+--- configure.in.orig	Wed May 12 04:20:02 1999
++++ configure.in	Mon Nov 29 16:04:28 1999
 @@ -311,9 +311,9 @@
  
  export CFLAGS CC
@@ -26,6 +25,17 @@ $NetBSD: patch-ab,v 1.7 1999/09/18 21:08:20 kim Exp $
      AC_MSG_WARN(Remember to read README.TIS. The connection between sshd and TIS authentication
  server is clear text!)
      ;;
+@@ -931,8 +931,8 @@
+   AC_DEFINE(KERBEROS)
+   AC_DEFINE(KRB5)
+   KERBEROS_ROOT="$with_kerberos5"
+-  KERBEROS_INCS="-I${KERBEROS_ROOT}/include"
+-  KERBEROS_LIBS="-L${KERBEROS_ROOT}/lib -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err"
++  KERBEROS_INCS="-I${KERBEROS_ROOT}/include/krb5"
++  KERBEROS_LIBS="-L${KERBEROS_ROOT}/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err"
+   AC_CHECK_LIB(ndbm, dbm_open, KERBEROS_LIBS="$KERBEROS_LIBS -lndbm")
+   KERBEROS_OBJS="auth-kerberos.o"
+   ;;
 @@ -1227,14 +1227,14 @@
  [ case "$enableval" in
    no)
