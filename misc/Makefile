@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2002/04/08 12:27:00 skrll Exp $
+# $NetBSD: Makefile,v 1.124 2002/05/09 15:12:02 agc Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -106,6 +106,7 @@ SUBDIR+=	xrolodex
 SUBDIR+=	xtail
 SUBDIR+=	xtend
 SUBDIR+=	xtide
+SUBDIR+=	yrolo
 SUBDIR+=	zorro
 
 .include "../mk/bsd.pkg.subdir.mk"
