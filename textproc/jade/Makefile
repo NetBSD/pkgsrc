@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2001/03/29 13:43:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/29 15:41:53 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/01/31 11:15:57 dirk Exp
 #
 
 DISTNAME=	jade-1.2.1
-PKGNAME=	jade-1.2.1nb1
+PKGNAME=	jade-1.2.1nb2
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.jclark.com/pub/jade/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.jclark.com/pub/jade/ \
@@ -19,6 +19,8 @@ CONFLICTS+=	sp-*
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS}"
 CONFIGURE_ARGS=	--disable-shared
+CONFIGURE_ARGS+= --enable-default-catalog=${PREFIX}/share/sgml/jade/catalog
+CONFIGURE_ARGS+= --enable-mif
 
 post-install:
 .for i in jade nsgmls sgmlnorm spam spent sx
@@ -27,7 +29,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/sp
 	${INSTALL_DATA} ${WRKSRC}/include/* ${PREFIX}/include/sp
 	${MKDIR} ${PREFIX}/share/doc/sp
-	${INSTALL_DATA} ${WRKSRC}/doc/*.htm ${PREFIX}/share/doc/sp
+	${INSTALL_DATA} ${WRKSRC}/jadedoc/*.htm ${PREFIX}/share/doc/jade
 	${MKDIR} ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
 
