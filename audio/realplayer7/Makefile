@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/09/09 19:40:17 fredb Exp $
+# $NetBSD: Makefile,v 1.13 2000/11/29 15:56:49 hubertf Exp $
 #
 
 DISTNAME=		rp7_linux20_libc6_i386_cs1
@@ -66,6 +66,8 @@ pre-extract:
 	@${ECHO_MSG} " to continue the package installation.                 "
 	@${ECHO_MSG} "-------------------------------------------------------"
 	@${ECHO_MSG} ""
+	@${ECHO_MSG} "Be sure to read the above! Proceeding in 10 seconds..."
+	@sleep 10
 	@${CHMOD} +x ${RP_INSTALLER}
 
 do-build:
