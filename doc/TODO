@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2418 2004/11/22 15:46:04 adam Exp $
+$NetBSD: TODO,v 1.2419 2004/11/22 16:37:34 adam Exp $
 
 Suggested new packages
 ======================
@@ -311,7 +311,6 @@ Suggested package updates
 	o astyle-1.15.3
 	o atlc-4.2.11
 	o auctex-11.53
-	o audacity-1.2.3
 	o autogen-5.6.4
 	o avidemux-2.0.34
 	o avl-2.0.1
