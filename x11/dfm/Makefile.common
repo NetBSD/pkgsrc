@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/03/29 12:42:58 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/04/27 12:51:03 cjep Exp $
 #
 
 DISTNAME=	dfm-0.99.9
@@ -6,10 +6,11 @@ PKGREVISION=	1
 WRKSRC=		${WRKDIR}/dfm
 MASTER_SITES=	http://www.kaisersite.de/dfm/
 
-USE_BUILDLINK2=	yes
-USE_X11=	yes
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --enable-imlib-icons
+USE_BUILDLINK2=		yes
+USE_X11=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+= 	--enable-imlib-icons
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/imlib/buildlink2.mk"
