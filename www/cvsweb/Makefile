@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.6 2001/11/25 18:59:49 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/28 14:00:47 jlam Exp $
 #
 
 DISTNAME=		cvsweb-1.112
@@ -12,15 +12,8 @@ COMMENT=		Web interface for browsing a CVS repository
 
 DEPENDS+=		apache{,6}-[0-9]*:../../www/apache
 
-USE_PERL5=		# defined
-
+USE_BUILDLINK_ONLY=	YES
 WRKSRC=			${WRKDIR}/cvsweb
-NO_CONFIGURE=		# defined
-
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
-
-.include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR?=	httpd
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
@@ -31,7 +24,7 @@ do-build:
 	${MV} ${WRKSRC}/cvsweb.cgi ${WRKSRC}/cvsweb.cgi.bak
 	${SED}	-e 's,/usr/bin/perl,${PERL5},'				\
 		-e 's,/usr/local/web/apache/conf/,${PKG_SYSCONFDIR}/,'	\
-	    ${WRKSRC}/cvsweb.cgi.bak > ${WRKSRC}/cvsweb.cgi
+		${WRKSRC}/cvsweb.cgi.bak > ${WRKSRC}/cvsweb.cgi
 
 do-install:
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/libexec/cgi-bin
@@ -43,5 +36,6 @@ do-install:
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
