@@ -1,0 +1,21 @@
+$NetBSD: patch-an,v 1.1.1.1 2001/02/24 01:30:07 jtb Exp $
+
+--- ui/application.c.orig	Fri Nov 10 09:52:16 2000
++++ ui/application.c
+@@ -29,6 +29,7 @@
+ #include "system.h"
+ #include "color.h"
+ #include <stdlib.h>
++#include <iostdio.h>
+ #include <string.h>
+ #include <Xm/XmStrDefs.h>
+ #ifdef USE_XMIM
+@@ -41,7 +42,7 @@
+ 	return Application::XErrorHandler(dpy, err_event);
+ }
+ 
+-const char Application::COLORFILE[] = "lib/colorrgb.txt";
++const char Application::COLORFILE[] = "share/tcm/colorrgb.txt";
+ 
+ Application *theApplication = 0;
+ 

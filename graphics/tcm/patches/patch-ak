@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1.1.1 2001/02/24 01:30:06 jtb Exp $
+
+--- sd/dv/ucdiagram.c.orig	Thu Feb 22 17:38:29 2001
++++ sd/dv/ucdiagram.c
+@@ -41,7 +41,9 @@
+ #include "ucdiagram.h"
+ #include "note.h"
+ #include <stdio.h>
++#ifndef __NetBSD__
+ #include <values.h>
++#endif
+ 
+ UCDiagram::UCDiagram(Config *c, UCWindow *d, UCViewer *v, UCGraph *g): 
+ 	   ERDiagram(c, d, v, g) {
