@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2001/10/17 07:47:54 martti Exp $
+@comment $NetBSD: PLIST,v 1.15 2001/10/17 19:26:02 jlam Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -8,10 +8,8 @@ include/httpd/ap_alloc.h
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
-include/httpd/ap_ebcdic.h
-include/httpd/sa_len.h
-include/httpd/sockaddr_storage.h
 include/httpd/ap_ctype.h
+include/httpd/ap_ebcdic.h
 include/httpd/ap_md5.h
 include/httpd/ap_mmn.h
 include/httpd/ap_sha1.h
@@ -34,6 +32,8 @@ include/httpd/multithread.h
 include/httpd/os-inline.c
 include/httpd/os.h
 include/httpd/rfc1413.h
+include/httpd/sa_len.h
+include/httpd/sockaddr_storage.h
 include/httpd/scoreboard.h
 include/httpd/util_date.h
 include/httpd/util_md5.h
@@ -164,8 +164,8 @@ share/httpd/htdocs/manual/invoking.html.html
 share/httpd/htdocs/manual/keepalive.html.en
 share/httpd/htdocs/manual/keepalive.html.html
 share/httpd/htdocs/manual/keepalive.html.ja.jis
-share/httpd/htdocs/manual/logs.html
 share/httpd/htdocs/manual/location.html
+share/httpd/htdocs/manual/logs.html
 share/httpd/htdocs/manual/man-template.html
 share/httpd/htdocs/manual/misc/API.html
 share/httpd/htdocs/manual/misc/FAQ.html
