@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/20 12:14:05 agc Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/12 03:41:51 snj Exp $
 
 DISTNAME=	ted-2.14.src
 PKGNAME=	ted-2.14
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.nllgg.nl/Ted/
 COMMENT=	X11 based WordPad-like word processor
 
 WRKSRC=		${WRKDIR}/Ted-2.14
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
 
 AFMDIR=		${PREFIX}/share/Ted/afm
@@ -75,11 +75,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/Ted/TedDocument-en_US.rtf ${INFODIR}
 	${INSTALL_DATA}	${WRKSRC}/Ted/Ted.ad ${PREFIX}/lib/X11/app-defaults/Ted
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
