@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:26 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 08:29:59 jlam Exp $
 
 .if !defined(XAW3D_BUILDLINK2_MK)
 XAW3D_BUILDLINK2_MK=	# defined
@@ -15,7 +15,9 @@ BUILDLINK_FILES.Xaw3d+=		lib/libXaw3d.*
 
 BUILDLINK_TARGETS+=	Xaw3d-buildlink
 
-LIBXAW?=	-L${BUILDLINK_PREFIX.Xaw3d}/lib -lXaw3d
+LIBXAW?=	-L${BUILDLINK_PREFIX.Xaw3d}/lib				\
+		-Wl,-R${BUILDLINK_PREFIX.Xaw3d}/lib			\
+		-lXaw3d
 
 Xaw3d-buildlink: _BUILDLINK_USE
 
