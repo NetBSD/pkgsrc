@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/12 10:35:41 wennmach Exp $
+# $NetBSD: Makefile,v 1.6 2001/05/19 03:56:32 jlam Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -52,7 +52,7 @@ pre-install:
 post-install:
 	@if [ "X${MANZ}" != X"" ]; then \
 		${ECHO} Compressing help files; \
-		${FIND} ${PREFIX}/share/irc/help -type f -print | xargs ${GZIP_CMD}; \
+		${FIND} ${PREFIX}/share/irc/help -type f -print | ${XARGS} ${GZIP_CMD}; \
 	fi
 	${RM} -f ${PREFIX}/man/man1/irc.1
 	${LN} -s ircII.1 ${PREFIX}/man/man1/irc.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/04/30 04:16:09 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2001/05/19 03:56:33 jlam Exp $
 
 DISTNAME=		PTL-2.1.7
 PKGNAME=		ptl-2.1.7
@@ -18,9 +18,9 @@ PLIST_SRC=		${WRKDIR}/PLIST
 
 post-install:
 	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/PTL/include
-	@${FIND} ${PREFIX}/PTL/include -type f -name "*.orig" | xargs ${RM}
-	@${FIND} ${PREFIX}/PTL/include -type d -print | xargs ${CHMOD} 755
-	@${FIND} ${PREFIX}/PTL/include -type f -print | xargs ${CHMOD} 444
+	@${FIND} ${PREFIX}/PTL/include -type f -name "*.orig" | ${XARGS} ${RM}
+	@${FIND} ${PREFIX}/PTL/include -type d -print | ${XARGS} ${CHMOD} 755
+	@${FIND} ${PREFIX}/PTL/include -type f -print | ${XARGS} ${CHMOD} 444
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@cd ${PREFIX}; \
 	${FIND} PTL -type f >>${PLIST_SRC}; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/16 13:30:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/05/19 03:56:28 jlam Exp $
 
 DISTNAME=	festvox_kallpc8k
 PKGNAME=	festvox-kal8-1.4.0
@@ -22,7 +22,7 @@ FHOME=		${PREFIX}/share/festival
 
 post-extract:
 	@ ${CHMOD} -R a+r ${WRKSRC}
-	@ ${FIND} ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
+	@ ${FIND} ${WRKSRC} -type d -print0 | ${XARGS} -0 ${CHMOD} 755
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}

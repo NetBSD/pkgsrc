@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/27 21:36:07 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/05/19 03:56:37 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME:S/smalleiffel/se/}
@@ -23,7 +23,7 @@ LIBDIR=		${PREFIX}/share/smalleiffel
 LIBEXECDIR=	${PREFIX}/libexec/smalleiffel
 
 post-extract:
-	${FIND} ${WRKSRC} -type f -print0 | xargs -0 ${CHMOD} 644
+	${FIND} ${WRKSRC} -type f -print0 | ${XARGS} -0 ${CHMOD} 644
 
 post-patch:
 	${CHMOD} +x ${WRKSRC}/misc/GC.SH
@@ -38,8 +38,8 @@ post-build:
 
 pre-install:
 	${RM} -f ${WRKSRC}/sys/loadpath.*
-	${FIND} ${WRKSRC} -name ".gdb*" -print0 | xargs -0 ${RM} -f
-	${FIND} ${WRKSRC} -name "*.orig" -print0 | xargs -0 ${RM} -f
+	${FIND} ${WRKSRC} -name ".gdb*" -print0 | ${XARGS} -0 ${RM} -f
+	${FIND} ${WRKSRC} -name "*.orig" -print0 | ${XARGS} -0 ${RM} -f
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/smalleiffel.sh ${PREFIX}/bin/smalleiffel

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 17:42:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/05/19 03:56:40 jlam Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/01/06 12:13:36 jkh Exp
 #
 
@@ -14,7 +14,7 @@ NO_WRKSUBDIR=   yes
 
 pre-configure:
 	${CHMOD} -R u+w ${WRKDIR}
-	for f in `${FIND} ${WRKDIR}/. -type f -print|xargs ${GREP} -l '/usr/local'`; do \
+	for f in `${FIND} ${WRKDIR}/. -type f -print | ${XARGS} ${GREP} -l '/usr/local'`; do \
 		${ECHO} patching $$f ; \
 		${SED} -e 's:/usr/local:${PREFIX}:g' $$f > $$f.pdone && ${MV} $$f.pdone $$f; \
 	done

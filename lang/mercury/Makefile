@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/15 21:09:44 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/05/19 03:56:36 jlam Exp $
 
 DISTNAME=		mercury-compiler-0.10.1
 PKGNAME=		mercury-0.10.1
@@ -27,8 +27,8 @@ post-install:
 	${LN} -sf ${PREFIX}/lib/libgc.a \
 		${PREFIX}/lib/mercury/lib/${MACHINE_ARCH}--${LOWER_OPSYS}/libgc.a
 	${LN} -sf ${PREFIX}/include/gc.h ${PREFIX}/lib/mercury/inc/gc.h
-	${FIND} ${WRKSRC} -type d -name "CVS" | xargs ${RM} -fr
-	${FIND} ${WRKSRC} -type f -name ".cvsignore" | xargs ${RM} -f
+	${FIND} ${WRKSRC} -type d -name "CVS" | ${XARGS} ${RM} -fr
+	${FIND} ${WRKSRC} -type f -name ".cvsignore" | ${XARGS} ${RM} -f
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mercury
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/samples
 	(cd ${WRKSRC}/samples; ${GTAR} cpf - . ) |			\

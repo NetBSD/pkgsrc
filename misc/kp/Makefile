@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/05/05 19:51:17 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/05/19 03:56:38 jlam Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/04/20 13:19:32 wosch Exp
 #
 
@@ -15,7 +15,7 @@ USE_X11=	yes
 
 pre-configure:
 	for f in `${FIND} ${WRKDIR}/. -type f -print \
-		| xargs ${GREP} -l '/usr/local'`; do \
+		| ${XARGS} ${GREP} -l '/usr/local'`; do \
 		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f \
 			> $$f.pdone && ${MV} $$f.pdone $$f; \
 	done
