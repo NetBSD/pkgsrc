@@ -1,0 +1,2 @@
+The srsh command will run ssh from your current path with options
+that make it very quiet, similar to rsh.
