@@ -1,0 +1,16 @@
+$NetBSD: patch-aq,v 1.1.1.1 2004/05/10 13:47:08 wiz Exp $
+
+--- libac3/Makefile.am	2004-03-26 19:16:37.000000000 +0000
++++ libac3/Makefile.am	2004-03-26 19:16:44.000000000 +0000
+@@ -4,9 +4,9 @@
+ 
+ CFLAGS = -O3 -funroll-loops -ffast-math -DLINUX -fPIC -DPIC @CFLAGS@
+ 
+-noinst_LIBRARIES = libac3_tc.a
++noinst_LTLIBRARIES = libac3_tc.la
+ 
+-libac3_tc_a_SOURCES = bitstream.c decode.c imdct.c coeff.c exponent.c stats.c\
++libac3_tc_la_SOURCES = bitstream.c decode.c imdct.c coeff.c exponent.c stats.c\
+ 	bit_allocate.c  parse.c crc.c debug.c rematrix.c downmix.c dither.c \
+ 	sanity_check.c
+ 
