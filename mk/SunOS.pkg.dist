@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: SunOS.pkg.dist,v 1.37 2003/05/15 20:34:18 salo Exp $
+#	$NetBSD: SunOS.pkg.dist,v 1.38 2003/05/15 20:47:01 salo Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -392,6 +392,7 @@
             ..
             mann
             ..
+        ..
         cat1           
         ..
         cat2            
@@ -459,6 +460,7 @@
             ..
             mann
             ..
+        ..
         de 
             cat1            
             ..
@@ -504,6 +506,7 @@
             ..
             mann
             ..
+        ..
         es 
             cat1            
             ..
@@ -549,6 +552,7 @@
             ..
             mann
             ..
+        ..
         fr 
             cat1            
             ..
@@ -594,6 +598,7 @@
             ..
             mann
             ..
+        ..
         ja_JP.EUC
             cat1            
             ..
@@ -639,6 +644,7 @@
             ..
             mann
             ..
+        ..
         pl 
             cat1            
             ..
