@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.58 2004/01/25 16:46:21 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.59 2004/01/25 18:44:31 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -222,7 +222,7 @@ _BLNK_PKG_DBDIR.${_pkg_}?=	# empty
 _BLNK_PKG_DBDIR.${_pkg_}!=	\
 	dir="";								\
 	if [ -d ${_PKG_DBDIR} ]; then					\
-		dir=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -s "" lsbest "${_depend_}" || ${TRUE}`; \
+		dir=`cd ${_PKG_DBDIR}; ${PKG_ADMIN} -S lsbest "${_depend_}" || ${TRUE}`; \
 	fi;								\
 	case "$$dir" in							\
 	"")	dir="not_found" ;;					\
