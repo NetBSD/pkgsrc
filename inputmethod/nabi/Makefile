@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/27 03:23:33 junyoung Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/18 13:08:49 cjep Exp $
 #
 
 DISTNAME=		nabi-0.7
 CATEGORIES=		korean inputmethod
 MASTER_SITES=		http://download.kldp.net/nabi/
 
-MAINTAINER=		minskim@bawi.org	
+MAINTAINER=		minskim@bawi.org
 HOMEPAGE=		http://nabi.kldp.net/
 COMMENT=		X Input Method for Korean
 
