@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3379 2003/09/15 00:20:59 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.3380 2003/09/15 00:43:32 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3665,6 +3665,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed bsdpak [wiz 2003-09-12]
 	Updated p5-Digest-MD5 to 2.27 [jlam 2003-09-12]
 	Updated pkg_install to 20030912 [jlam 2003-09-12]
+	Updated netscape7 to 7.1nb2 [seb 2003-09-12]
 	Updated quagga to 0.96.2nb1 [salo 2003-09-13]
 	Updated freetype2 to 2.1.5 [adam 2003-09-13]
 	Updated p5-Time-HiRes to 1.50 [jlam 2003-09-13]
