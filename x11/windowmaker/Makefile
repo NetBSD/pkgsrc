@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 1999/06/21 04:46:52 jlam Exp $
+# $NetBSD: Makefile,v 1.31 1999/06/21 05:13:57 jlam Exp $
 
 DISTNAME=		WindowMaker-0.60.0
 PKGNAME=		windowmaker-0.60.0
@@ -52,18 +52,6 @@ CONFIGURE_ARGS+=	--enable-${OPTION}
 BUILD_DEPENDS+=		gettext-0.10.35:../../devel/gettext
 CONFIGURE_ARGS+=	--enable-modelock
 CONFIGURE_ENV+=		LINGUAS="${LINGUAS}"
-
-# Enable multi-byte character support for languages that need it.
-# Currently, those are: ja, ko
-#
-.for lang in ja ko
-.if (${LINGUAS:M${lang}} != "")
-ENABLE_WM_KANJI=	yes
-.endif
-.endfor
-.if defined(ENABLE_WM_KANJI)
-CONFIGURE_ARGS+=	--enable-kanji
-.endif # ENABLE_WM_KANJI
 .endif # LINGUAS
 
 post-extract:
