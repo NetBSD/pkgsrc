@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/02/14 17:21:56 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/02/20 23:45:43 jlam Exp $
 
 DISTNAME=		lesstif-${LESSTIF_VERSION}
 LESSTIF_VERSION=	0.93.0
@@ -17,6 +17,7 @@ USE_X11BASE=		# defined
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		# defined
 AUTOMAKE_REQD=		1.4
+AUTOCONF_REQD=		2.50
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-production --disable-debug --disable-verbose

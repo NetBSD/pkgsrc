@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/02/14 17:21:43 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/02/20 23:45:43 jlam Exp $
 #
 
 DISTNAME=		gwydion-dylan-${DYLAN_VERSION}
@@ -25,6 +25,7 @@ ALL_TARGET=		default
 
 GNU_CONFIGURE=		yes
 AUTOMAKE_REQD=		1.4
+AUTOCONF_REQD=		2.50
 
 DYLAN_VERSION=		2.3.6
 
