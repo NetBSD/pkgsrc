@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2003/03/28 21:14:15 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2003/03/29 09:38:21 wiz Exp $
 #
 
 DISTFILES=	# empty
@@ -14,6 +14,8 @@ COMMENT=	Generic shared library support script
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+do-patch:
 
 do-install:
 	@${ECHO_MSG} this is only a meta package.
