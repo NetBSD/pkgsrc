@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/03/13 03:02:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2003/03/15 00:00:42 jschauma Exp $
 #
 
 DISTNAME=	slrn-0.9.7.4
@@ -23,6 +23,10 @@ CONFIGURE_ARGS+=--without-X --disable-inews --with-slrnpull \
 # together
 .if ${OPSYS} == "NetBSD" && ${OS_VERSION} == "1.3.2"
 CONFIGURE_ENV+=	INSTALL=/usr/bin/install
+.endif
+
+.if ${OPSYS} == "Linux"
+LDFLAGS+=	-ldl
 .endif
 
 .include "../../devel/libslang/buildlink2.mk"
