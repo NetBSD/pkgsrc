@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2004/05/14 15:45:04 dillo Exp $
+# $NetBSD: Makefile,v 1.215 2004/05/22 23:38:00 dillo Exp $
 #
 
 COMMENT=	Games
@@ -91,6 +91,7 @@ SUBDIR+=	gtkgo
 SUBDIR+=	gtkmagnetic
 SUBDIR+=	gturing
 SUBDIR+=	heretic2-demo
+SUBDIR+=	hugo
 SUBDIR+=	icbm3d
 SUBDIR+=	icebreaker
 SUBDIR+=	imaze
@@ -180,6 +181,7 @@ SUBDIR+=	ularn
 SUBDIR+=	urban
 SUBDIR+=	vms-empire
 SUBDIR+=	wormz
+SUBDIR+=	wxhugo
 SUBDIR+=	xarchon
 SUBDIR+=	xbat
 SUBDIR+=	xbill
