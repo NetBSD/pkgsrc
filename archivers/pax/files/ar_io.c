@@ -1,4 +1,4 @@
-/*	$NetBSD: ar_io.c,v 1.7 2004/06/20 10:11:02 grant Exp $	*/
+/*	$NetBSD: ar_io.c,v 1.8 2004/08/21 03:28:56 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -36,15 +36,19 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
 #include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#if defined(__RCSID) && !defined(lint)
+#if !defined(lint)
 #if 0
 static char sccsid[] = "@(#)ar_io.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: ar_io.c,v 1.7 2004/06/20 10:11:02 grant Exp $");
+__RCSID("$NetBSD: ar_io.c,v 1.8 2004/08/21 03:28:56 jlam Exp $");
 #endif
 #endif /* not lint */
 
@@ -140,7 +144,7 @@ static int get_phys(void);
 #endif /* SUPPORT_TAPE */
 extern sigset_t s_mask;
 static void ar_start_gzip(int, const char *, int);
-static const char *timefmt(char *, size_t, off_t, time_t);
+static const char *timefmt(char *, size_t, off_t, time_t, const char *);
 static const char *sizefmt(char *, size_t, off_t);
 
 #ifdef SUPPORT_RMT
@@ -234,8 +238,10 @@ ar_open(const char *name)
 		return(-1);
 
 	if (chdname != NULL)
-		if (chdir(chdname) != 0)
+		if (chdir(chdname) != 0) {
 			syswarn(1, errno, "Failed chdir to %s", chdname);
+			return(-1);
+		}
 	/*
 	 * set up is based on device type
 	 */
@@ -818,7 +824,7 @@ ar_read(char *buf, int cnt)
 			return(res);
 		}
 		break;
-#endif
+#endif /* SUPPORT_TAPE */
 	case ISREG:
 	case ISBLK:
 	case ISCHR:
@@ -908,8 +914,12 @@ ar_write(char *buf, int bsz)
 		/*
 		 * if file is out of space, handle it like a return of 0
 		 */
-		if ((errno == ENOSPC) || (errno == EFBIG) || (errno == EDQUOT))
+		if ((errno == ENOSPC) || (errno == EFBIG))
 			res = lstrval = 0;
+#ifdef EDQUOT
+		if (errno == EDQUOT)
+			res = lstrval = 0;
+#endif
 		break;
 #ifdef SUPPORT_TAPE
 	case ISTAPE:
@@ -1661,14 +1671,15 @@ ar_start_gzip(int fd, const char *gzp, int wr)
 }
 
 static const char *
-timefmt(buf, size, sz, tm)
+timefmt(buf, size, sz, tm, unitstr)
 	char *buf;
 	size_t size;
 	off_t sz;
 	time_t tm;
+	const char *unitstr;
 {
-	(void)snprintf(buf, size, "%lu secs (" OFFT_F " bytes/sec)",
-	    (unsigned long)tm, (OFFT_T)(sz / tm));
+	(void)snprintf(buf, size, "%lu secs (" OFFT_F " %s/sec)",
+	    (unsigned long)tm, (OFFT_T)(sz / tm), unitstr);
 	return buf;
 }
 
@@ -1711,11 +1722,11 @@ ar_summary(int n)
 	 * we have skipped over looking for a header to id. there is no way we
 	 * could have written anything yet.
 	 */
-	if (frmt == NULL) {
+	if (frmt == NULL && act != COPY) {
 		len = snprintf(buf, sizeof(buf),
 		    "unknown format, %s skipped in %s\n",
 		    sizefmt(s1buf, sizeof(s1buf), rdcnt),
-		    timefmt(tbuf, sizeof(tbuf), rdcnt, secs));
+		    timefmt(tbuf, sizeof(tbuf), rdcnt, secs, "bytes"));
 		if (n == 0)
 			(void)fprintf(outf, "%s: %s", argv0, buf);
 		else
@@ -1731,12 +1742,19 @@ ar_summary(int n)
 	}
 
 
-	len = snprintf(buf, sizeof(buf),
-	    "%s vol %d, %lu files, %s read, %s written in %s\n",
-	    frmt->name, arvol-1, (unsigned long)flcnt,
-	    sizefmt(s1buf, sizeof(s1buf), rdcnt),
-	    sizefmt(s2buf, sizeof(s2buf), wrcnt),
-	    timefmt(tbuf, sizeof(tbuf), rdcnt + wrcnt, secs));
+	if (act == COPY) {
+		len = snprintf(buf, sizeof(buf),
+		    "%lu files in %s\n",
+		    (unsigned long)flcnt,
+		    timefmt(tbuf, sizeof(tbuf), flcnt, secs, "files"));
+	} else {
+		len = snprintf(buf, sizeof(buf),
+		    "%s vol %d, %lu files, %s read, %s written in %s\n",
+		    frmt->name, arvol-1, (unsigned long)flcnt,
+		    sizefmt(s1buf, sizeof(s1buf), rdcnt),
+		    sizefmt(s2buf, sizeof(s2buf), wrcnt),
+		    timefmt(tbuf, sizeof(tbuf), rdcnt + wrcnt, secs, "bytes"));
+	}
 	if (n == 0)
 		(void)fprintf(outf, "%s: %s", argv0, buf);
 	else

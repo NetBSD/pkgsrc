@@ -1,4 +1,4 @@
-/*	$NetBSD: mtree.h,v 1.1 2003/09/05 18:40:52 jlam Exp $	*/
+/*	$NetBSD: mtree.h,v 1.2 2004/08/21 03:28:56 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -111,6 +111,7 @@ const char	*inotype(u_int);
 u_int		 nodetoino(u_int);
 int		 setup_getid(const char *);
 NODE		*spec(FILE *);
+void		 free_nodes(NODE *);
 char		*vispath(const char *);
 
 

@@ -1,4 +1,4 @@
-/*	$NetBSD: options.c,v 1.6 2004/06/20 10:11:02 grant Exp $	*/
+/*	$NetBSD: options.c,v 1.7 2004/08/21 03:28:56 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -36,15 +36,19 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
 #include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#if defined(__RCSID) && !defined(lint)
+#if !defined(lint)
 #if 0
 static char sccsid[] = "@(#)options.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: options.c,v 1.6 2004/06/20 10:11:02 grant Exp $");
+__RCSID("$NetBSD: options.c,v 1.7 2004/08/21 03:28:56 jlam Exp $");
 #endif
 #endif /* not lint */
 
@@ -69,8 +73,12 @@ __RCSID("$NetBSD: options.c,v 1.6 2004/06/20 10:11:02 grant Exp $");
 #if HAVE_ERRNO_H
 #include <errno.h>
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "compat_getopt.h"
+#else
 #if HAVE_GETOPT_H
 #include <getopt.h>
+#endif
 #endif
 #if HAVE_LIMITS_H
 #include <limits.h>
