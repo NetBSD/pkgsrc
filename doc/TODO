@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2424 2004/11/23 08:51:38 adam Exp $
+$NetBSD: TODO,v 1.2425 2004/11/23 12:03:32 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -263,7 +263,6 @@ Suggested package updates
 	o aap-0.144
 	o abiword1-1.0.7
 	o abook-0.5.3
-	o acidrip-0.14
 	o acpi-iasl-20040715
 	o adzap-20041030
 	o afterstep-2.00.00
