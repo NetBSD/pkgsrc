@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8247 2004/12/04 04:33:25 uebayasi Exp $
+$NetBSD: CHANGES,v 1.8248 2004/12/04 15:48:29 peter Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5748,3 +5748,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added anthy-5900 [taya 2004-12-04]
 	Updated p5-Jcode to 0.88 [taca 2004-12-04]
 	Removed sp [uebayasi 2004-12-04]
+	Updated pflkm to 20041204 [peter 2004-12-04]
+	Updated libdnet to 1.8 [peter 2004-12-04]
