@@ -1,0 +1,9 @@
+KDiskFree shows your harddisk-(floppy...)usage graphically and
+lets you simply mount/umount devices by clicking on its name.
+You can even configure a special mount/umount command for each device.
+Also a filemanager is opened if you click on the mountpoint.
+It is linked into the KControlCenter in the category "information"
+but also under the start-menu hierarchy [System].
+You also may start it simply by typing kdf.
+KwikDisk docks into the KPanel and gives you quick access to
+mount/umount your devices.
