@@ -1,0 +1,31 @@
+$NetBSD: patch-ah,v 1.1 2004/10/30 12:34:51 grant Exp $
+
+--- clamav-milter/clamav-milter.c.orig	2004-10-11 10:59:12.000000000 +1000
++++ clamav-milter/clamav-milter.c
+@@ -2691,7 +2691,7 @@ clamfi_eom(SMFICTX *ctx)
+ 						 * the postmaster, so include
+ 						 * some useful information
+ 						 */
+-						fprintf(sendmail, _("The message %1$s sent from %2$s to\n"),
++						fprintf(sendmail, _("The message %s sent from %s to\n"),
+ 							sendmailId, sender);
+ 					else
+ 						fprintf(sendmail, _("A message sent from %s to\n"),
+@@ -2706,7 +2706,7 @@ clamfi_eom(SMFICTX *ctx)
+ 							fprintf(sendmail, _("\nThe message in question has been quarantined as %s\n"), privdata->filename);
+ 
+ 					if(hflag) {
+-						fprintf(sendmail, _("\nThe message was received by %1$s from %2$s via %3$s\n\n"),
++						fprintf(sendmail, _("\nThe message was received by %s from %s via %s\n\n"),
+ 							smfi_getsymval(ctx, "j"), sender,
+ 							smfi_getsymval(ctx, "_"));
+ 						fputs(_("For your information, the original message headers were:\n\n"), sendmail);
+@@ -3697,7 +3697,7 @@ qfile(struct privdata *privdata, const c
+ 	if(link(privdata->filename, newname) < 0) {
+ 		perror(newname);
+ 		if(use_syslog)
+-			syslog(LOG_WARNING, _("Can't rename %1$s to %2$s"),
++			syslog(LOG_WARNING, _("Can't rename %s to %s"),
+ 				privdata->filename, newname);
+ 		free(newname);
+ 		return -1;
