@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.37 2004/10/15 14:50:05 tv Exp $
+# $NetBSD: Makefile,v 1.38 2005/01/11 03:16:22 dmcmahill Exp $
 #
 
 DISTNAME=	geda-${PKGVERSION}
-PKGREVISION=	2
 CATEGORIES=	cad
-MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
-		ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
-		http://www.geda.seul.org/devel/${PKGVERSION}/ \
-		http://www.geda.coelacanth.com/devel/${PKGVERSION}/
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda.seul.org/
 COMMENT=	Toolset for automating electronic design
 
+DEPENDS+=	gattrib-${PKGVERSION}{,nb[0-9]*}:../../cad/gattrib
 DEPENDS+=	gschem-${PKGVERSION}{,nb[0-9]*}:../../cad/gschem
 DEPENDS+=	gnetlist-${PKGVERSION}{,nb[0-9]*}:../../cad/gnetlist
 DEPENDS+=	gsymcheck-${PKGVERSION}{,nb[0-9]*}:../../cad/gsymcheck

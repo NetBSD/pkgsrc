@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/05 13:03:47 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/01/11 03:16:23 dmcmahill Exp $
 bin/convert_sym
 bin/garchive
 bin/gmk_sym
@@ -6,6 +6,7 @@ bin/gsch2pcb
 bin/gschemdoc
 bin/gschlas
 bin/gschupdate
+bin/gsymfix.pl
 bin/gsymupdate
 bin/olib
 bin/pads_backannotate

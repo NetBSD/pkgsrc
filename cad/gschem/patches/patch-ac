@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2005/01/11 03:16:24 dmcmahill Exp $
+
+--- noweb/g_register.nw.orig	2004-12-29 02:00:39.000000000 +0000
++++ noweb/g_register.nw
+@@ -195,7 +195,7 @@ g_register_funcs(void)
+ 
+   /* keymapping callbacks */
+   gh_new_procedure0_0 ("file-new-window", g_key_file_new_window);
+-  gh_new_procedure0_0 ("file-new", g_key_file_new);
++  gh_new_procedure0_0 ("file-new", g_key_gedafile_new);
+   gh_new_procedure0_0 ("file-open", g_key_file_open);
+   gh_new_procedure0_0 ("file-script", g_key_file_script);
+   gh_new_procedure0_0 ("file-save", g_key_file_save);

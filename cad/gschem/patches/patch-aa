@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2005/01/11 03:16:24 dmcmahill Exp $
+
+--- noweb/g_key.nw.orig	2003-10-20 03:37:25.000000000 +0000
++++ noweb/g_key.nw
+@@ -154,7 +154,7 @@ SCM g_key_ ## name(void)				\
+ 	return SCM_BOOL_T;				\
+ }
+ 
+-DEFINE_G_KEY(file_new)
++DEFINE_G_KEY(gedafile_new)
+ 
+ DEFINE_G_KEY(file_new_window)
+ 

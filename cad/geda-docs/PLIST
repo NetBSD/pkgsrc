@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/05 13:03:47 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/01/11 03:16:22 dmcmahill Exp $
 share/doc/geda-doc/attributes/WARNINGS
 share/doc/geda-doc/attributes/attributes.css
 share/doc/geda-doc/attributes/attributes.dvi
@@ -40,6 +40,7 @@ share/doc/geda-doc/attributes/node32.html
 share/doc/geda-doc/attributes/node33.html
 share/doc/geda-doc/attributes/node34.html
 share/doc/geda-doc/attributes/node35.html
+share/doc/geda-doc/attributes/node36.html
 share/doc/geda-doc/attributes/node4.html
 share/doc/geda-doc/attributes/node5.html
 share/doc/geda-doc/attributes/node6.html
@@ -270,7 +271,6 @@ share/doc/geda-doc/switcap/img3.png
 share/doc/geda-doc/switcap/img4.png
 share/doc/geda-doc/switcap/img5.png
 share/doc/geda-doc/switcap/img6.png
-share/doc/geda-doc/switcap/img7.png
 share/doc/geda-doc/switcap/index.html
 share/doc/geda-doc/switcap/internals.pl
 share/doc/geda-doc/switcap/labels.pl
@@ -416,4 +416,4 @@ share/doc/geda-doc/tutorials/tragesym/xpdf_selected.jpg
 @dirrm share/doc/geda-doc/fileformats
 @dirrm share/doc/geda-doc/cascade
 @dirrm share/doc/geda-doc/attributes
-@dirrm share/doc/geda-doc
+@unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}

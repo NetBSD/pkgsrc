@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1 2005/01/11 03:16:22 dmcmahill Exp $
+
+--- graphman/main.c.orig	2004-08-31 02:57:45.000000000 +0000
++++ graphman/main.c
+@@ -19,7 +19,7 @@
+ /*******************************************************************************/
+ 
+ #ifdef HAVE_CONFIG_H
+-#  include <config.h>
++#  include <../config.h>
+ #endif
+ 
+ #include <gtk/gtk.h>
+@@ -34,6 +34,7 @@
+ #include "interface.h"
+ #include "libstring.h"
+ #include "support.h"
++#include "value.h"
+ 
+ 
+ 

@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2005/01/11 03:16:22 dmcmahill Exp $
+
+--- src/doc.c.orig	2003-12-11 08:44:17.000000000 +0000
++++ src/doc.c
+@@ -38,6 +38,7 @@
+ #include "filetool.h"
+ #include "global.h"
+ #include "m_action.h"
++#include "m_project.h"
+ #include "msgbox.h"
+ #include "project.h"
+ #include "support.h"
