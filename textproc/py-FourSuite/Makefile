@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/23 15:39:13 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/22 06:07:39 minskim Exp $
 #
 
 DISTNAME=	4Suite-0.12.0a3
@@ -14,7 +14,7 @@ CONFLICTS+=	${PYPKGPREFIX}-4Suite-*
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 #pyxml is needed at runtime to get pyexpat
 #.include "../../textproc/py-xml/buildlink2.mk"
