@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6856 2004/08/12 22:57:00 jdolecek Exp $
+$NetBSD: CHANGES,v 1.6857 2004/08/13 03:15:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3804,3 +3804,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated getmail to 4.0.10 [schmonz 2004-08-12]
 	Updated cvsync to 0.24.16nb1 [minskim 2004-08-12]
 	Updated opera7 to 7.54 [jdolecek 2004-08-13]
+	Updated alee-ttf to 1.3 [minskim 2004-08-13]
