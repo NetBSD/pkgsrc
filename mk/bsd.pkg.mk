@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.122 1998/07/21 11:12:11 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.123 1998/07/22 07:30:22 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1836,7 +1836,7 @@ tags:
 # - fixing list of man-pages according to MANCOMPRESSED/MANZ
 #   (we don't take any notice of MANCOMPRESSED as many packages have .gz
 #   pages in PLIST even when they install manpages without compressing them)
-# - substituting machine architecture (uname -m) for <$ARCH>
+# - substituting ${OPSYS}, ${MACHINE_ARCH} and ${MACHINE_GNU_ARCH}
 
 ${PLIST}: ${PLIST_SRC}
 	@if [ -z "${PLIST_SRC}" ] ; then \
@@ -1848,7 +1848,7 @@ ${PLIST}: ${PLIST_SRC}
 		${CAT} ${PLIST_SRC} | ${SED} \
 			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
 			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]$$\)|\1.gz|' \
-			-e 's/<\$$ARCH>/'${ARCH}'/g' \
+			-e 's|\$${OPSYS}|${OPSYS}|g' \
 			-e 's/\$${MACHINE_ARCH}/'${MACHINE_ARCH}'/g' \
 			-e 's/\$${MACHINE_GNU_ARCH}/'${MACHINE_GNU_ARCH}'/g' \
 			>${PLIST} ; \
@@ -1858,7 +1858,7 @@ ${PLIST}: ${PLIST_SRC}
 		${CAT} ${PLIST_SRC} | ${SED} \
 			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
 			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]\)\.gz$$|\1|' \
-			-e 's/<\$$ARCH>/'${ARCH}'/g' \
+			-e 's|\$${OPSYS}|${OPSYS}|g' \
 			-e 's/\$${MACHINE_ARCH}/'${MACHINE_ARCH}'/g' \
 			-e 's/\$${MACHINE_GNU_ARCH}/'${MACHINE_GNU_ARCH}'/g' \
 			>${PLIST} ; \
