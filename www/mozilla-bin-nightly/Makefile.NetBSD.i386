@@ -1,13 +1,5 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.2 2003/10/19 08:47:42 grant Exp $
-#
+# $NetBSD: Makefile.NetBSD.i386,v 1.3 2004/01/04 05:01:03 grant Exp $
 
 DISTNAME=	mozilla-i686-pc-linux-gnu
 
-PLATFORM=	linux
-MOZILLA_LIB=	${PREFIX}/lib/mozilla-${PLATFORM}
-
-DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
-DEPENDS+=	suse_gtk>=7.3:../../emulators/${SUSE_DIR_PREFIX}_gtk
-
-.include "../../emulators/suse_linux/Makefile.application"
+MOZ_PLATFORM=	linux

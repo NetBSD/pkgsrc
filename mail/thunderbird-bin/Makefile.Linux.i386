@@ -1,11 +1,6 @@
-# $NetBSD: Makefile.Linux.i386,v 1.2 2003/12/13 04:01:50 grant Exp $
-#
+# $NetBSD: Makefile.Linux.i386,v 1.3 2004/01/04 05:01:02 grant Exp $
 
-DISTNAME=	thunderbird-0.4-i686-pc-linux-gtk2-gnu
+DISTNAME=	thunderbird-${MOZ_VER}-i686-pc-linux-gtk2-gnu
 EXTRACT_SUFX=	.tar.bz2
-MASTER_SITES=	http://ftp.mozilla.org/pub/thunderbird/releases/0.4/
 
-PLATFORM=	linux
-MOZILLA_LIB=	${PREFIX}/lib/thunderbird-${PLATFORM}
-
-DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
+MOZ_PLATFORM=	linux
