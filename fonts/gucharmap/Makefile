@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/14 01:23:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/14 16:41:52 taca Exp $
 #
 
 DISTNAME=	gucharmap-1.2.0
@@ -23,7 +23,7 @@ GNU_CONFIGURE=		yes
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/gucharmap.pc.in
 
-.include "../../gnome-2.4/libgnomeui/buildlink2.mk"
+.include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
