@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/03/10 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2004/03/26 18:48:52 jlam Exp $
 
 DISTNAME=	sqwebmail-3.6.2
 CATEGORIES=	www
@@ -10,7 +10,6 @@ DEPENDS+=	courier-maildirmake>=${BASE_VERS}:../../mail/courier-maildirmake
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
-USE_DB185=		yes
 USE_PERL5=		yes
 REPLACE_PERL=		sysconftool
 
