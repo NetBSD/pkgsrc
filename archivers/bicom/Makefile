@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/23 04:40:59 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/14 14:54:48 ben Exp $
 #
 
 DISTNAME=		bicom101
@@ -16,13 +16,14 @@ LICENSE=		no-commercial-use
 WRKSRC=			${WRKDIR}
 USE_BUILDLINK3=		yes
 USE_GCC_SHLIB=		yes
+USE_LANGUAGES=		c++
 
 do-build:
 	for i in bialib bicom; do					\
 		cd ${WRKSRC}/$$i &&					\
-		for file in *.cpp; do					\
+		for f in *.cpp; do					\
 			${CXX} ${CXXFLAGS} -I./ -I../bialib		\
-				-c $$file;				\
+				-c $$f;				\
 		done;							\
 	done
 	cd ${WRKSRC}/bicom &&						\
