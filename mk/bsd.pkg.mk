@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1388 2004/02/12 09:59:48 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1389 2004/02/12 13:16:02 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -690,7 +690,7 @@ PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 
 # Handle info files
 #
-INFO_FILES?=			# default to no info files to handle 
+INFO_FILES?=			# default to no info files to handle
 USE_MAKEINFO?=	no		# default to not using makeinfo
 .if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
 . include "../../mk/texinfo.mk"
@@ -2384,7 +2384,7 @@ pre-configure-override: ${_CONFIGURE_PREREQ}
 
 .PHONY: do-configure
 .if !target(do-configure)
-do-configure: 
+do-configure:
 .  if defined(HAS_CONFIGURE)
 .    for DIR in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${DIR} && ${SETENV} \
@@ -2444,16 +2444,16 @@ do-libtool-override:
 .if defined(CONFIG_STATUS_OVERRIDE)
 _CONFIGURE_POSTREQ+=	do-config-status-override
 .PHONY: do-config-status-override
-do-config-status-override:      
-.  for file in ${CONFIG_STATUS_OVERRIDE}  
+do-config-status-override:
+.  for file in ${CONFIG_STATUS_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${WRKSRC}/${file} ]; then				\
 		${RM} -f ${WRKSRC}/${file};				\
 		( ${ECHO} '#!${SH}'; ${ECHO} 'exit 0' ) > ${WRKSRC}/${file}; \
 		${CHMOD} +x ${WRKSRC}/${file};				\
 	fi
-.  endfor                       
-.endif 
+.  endfor
+.endif
 
 .PHONY: post-configure
 post-configure: ${_CONFIGURE_POSTREQ}
@@ -2668,7 +2668,7 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}# depending on it somewhere earlier), because it needs
 	${_PKG_SILENT}# to be created _after_ the {pre,do,post}-install
 	${_PKG_SILENT}# targets are run.
-	${_PKG_SILENT}# 
+	${_PKG_SILENT}#
 	${_PKG_SILENT}# We generate _before_ post-install-script is run so
 	${_PKG_SILENT}# that the real config files and rc.d scripts aren't
 	${_PKG_SILENT}# listed in the PLIST.
@@ -5001,10 +5001,10 @@ _PLIST_AWK_SCRIPT=	'
 # See comments above about _PLIST_AWK_SUBST: it contains single quotes!
 # So _PLIST_AWK_SCRIPT is intended to be single quoted.
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_SUBST}
-# Generated entries for info files 
-.if !empty(INFO_FILES) 
+# Generated entries for info files
+.if !empty(INFO_FILES)
 _PLIST_AWK_SCRIPT+=    ${_PLIST_AWK_INFO}
-.endif 
+.endif
 # Strip the '.gz' suffixes on man entries
 _PLIST_AWK_SCRIPT+=	${_PLIST_AWK_STRIP_MANZ}
 # Deal with MANINSTALL and man entries
@@ -5061,7 +5061,7 @@ ${PLIST}: ${_PLIST_SRC}
 		SHLIB_PLIST_MODE=1
 
 # generate ${MESSAGE} from ${MESSAGE_SRC} by substituting
-# for MESSAGE_SUBST entries 
+# for MESSAGE_SUBST entries
 
 .PHONY: message
 message: ${MESSAGE}
