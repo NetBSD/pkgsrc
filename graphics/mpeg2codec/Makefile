@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/08/29 22:41:19 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/22 01:32:58 jlam Exp $
 
 DISTNAME=	mpeg2vidcodec_v12
 PKGNAME=	mpeg2codec-1.2
@@ -10,8 +10,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mpeg.org/MSSG/
 COMMENT=	MPEG Software Simulation Group's MPEG-2 Encoder and Decoder
 
+USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined
-USE_BUILDLINK_ONLY=	# defined
 
 do-install:
 	${INSTALL_PROGRAM} \
@@ -24,5 +24,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mpeg2codec
 	${INSTALL_DATA} ${WRKSRC}/par/* ${PREFIX}/share/mpeg2codec
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
