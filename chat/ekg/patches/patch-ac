@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2003/07/22 10:41:41 adam Exp $
+$NetBSD: patch-ac,v 1.2 2003/12/08 16:32:52 adam Exp $
 
---- lib/Makefile.in.orig	2003-05-15 13:59:09.000000000 +0200
-+++ lib/Makefile.in	2003-07-22 11:10:38.000000000 +0200
-@@ -11,7 +11,7 @@
- VERSION_MINOR=13
+--- lib/Makefile.in.orig	2003-11-14 14:58:43.000000000 +0000
++++ lib/Makefile.in
+@@ -11,7 +11,7 @@ VERSION_MAJOR=3
+ VERSION_MINOR=0
  
  CC = @CC@ 
 -CFLAGS = @CFLAGS_LIBGADU@ -I. -I.. -Wall
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1 2003/07/22 10:41:41 adam Exp $
  LIBS = @LIBS_LIBGADU@
  
  MAKE = @MAKE@
-@@ -45,13 +45,12 @@
+@@ -45,13 +45,12 @@ distclean:	clean
  static: dep $(STATIC)
  
  $(STATIC): $(OBJS)
@@ -28,7 +28,7 @@ $NetBSD: patch-ac,v 1.1 2003/07/22 10:41:41 adam Exp $
  
  shared:	dep $(SHARED)
  
-@@ -86,7 +85,7 @@
+@@ -86,7 +85,7 @@ install-shared:	install-common @strip_li
  	cd $(DESTDIR)$(libdir) && $(LN_S) -f $(SHARED) $(SHAREDMM)
  
  install-static:	install-common
