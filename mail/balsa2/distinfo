@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/07/23 15:09:57 recht Exp $
+$NetBSD: distinfo,v 1.8 2004/08/15 22:08:40 recht Exp $
 
-SHA1 (balsa-2.2.0.tar.bz2) = da7181ac4a19cfc649d4c3226d693ca07c2df6e2
-Size (balsa-2.2.0.tar.bz2) = 2745675 bytes
+SHA1 (balsa-2.2.2.tar.bz2) = ee5961057f48bbbf6995728c0500dd95b705fd1e
+Size (balsa-2.2.2.tar.bz2) = 2771365 bytes
 SHA1 (patch-ab) = 47083f65d404e64ee238bc3e4f3e25008f5f82c8
 SHA1 (patch-ac) = 2479ee81784a76338860e5848ddcf4b4ae8449d5
 SHA1 (patch-ae) = 63ef5da19874848b221a594c6adbfadd21e7fd5f
