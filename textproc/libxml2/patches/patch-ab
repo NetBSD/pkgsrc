@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.4 2001/11/17 15:28:49 tron Exp $
+
+--- include/libxml/parser.h.orig	Thu Nov  1 04:35:06 2001
++++ include/libxml/parser.h	Sat Nov 17 11:09:51 2001
+@@ -573,7 +573,5 @@
+ }
+ #endif
+ 
+-#include <libxml/globals.h>
+-
+ #endif /* __XML_PARSER_H__ */
+ 
