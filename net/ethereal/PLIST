@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:19 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/09 05:50:56 itojun Exp $
 bin/editcap
 bin/ethereal
 bin/idl2eth
@@ -6,6 +6,11 @@ bin/mergecap
 bin/tethereal
 bin/text2pcap
 etc/manuf
+etc/dictionary.dtd
+etc/dictionary.xml
+etc/mobileipv4.xml
+etc/nasreq.xml
+etc/sunping.xml
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.la
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.a
 lib/ethereal/plugins/${PKGVERSION}/coseventcomm.so
