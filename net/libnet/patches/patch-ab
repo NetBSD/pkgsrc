@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2 2000/08/11 08:06:00 itojun Exp $
 --- Makefile.in.orig	Thu Oct  7 20:17:43 1999
 +++ Makefile.in	Thu Oct  7 20:17:56 1999
 @@ -104,7 +104,7 @@
