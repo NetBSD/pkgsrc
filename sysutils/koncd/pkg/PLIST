@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/24 14:42:12 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/07/26 13:55:03 tron Exp $
 bin/koncd
 share/kde/applnk/Multimedia/koncd.desktop
 share/kde/icons/locolor/32x32/apps/koncd.png
 share/kde/icons/locolor/16x16/apps/koncd.png
 share/kde/icons/hicolor/32x32/apps/koncd.png
 share/kde/icons/hicolor/16x16/apps/koncd.png
+share/kde/locale/de/LC_MESSAGES/koncd.mo
 share/doc/kde/HTML/en/koncd/images/audiocd.jpg
 share/doc/kde/HTML/en/koncd/images/copycd.jpg
 share/doc/kde/HTML/en/koncd/images/imagetype.jpg
