@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 1998/10/09 17:49:20 kim Exp $
+$NetBSD: patch-ac,v 1.2 1998/10/16 16:24:04 bad Exp $
 
---- scripts/RunCache.in.orig	Tue Aug  4 16:59:32 1998
-+++ scripts/RunCache.in	Thu Oct  1 15:30:29 1998
+--- scripts/RunCache.in.orig	Tue Aug  4 22:59:32 1998
++++ scripts/RunCache.in	Fri Oct 16 17:57:43 1998
+@@ -5,7 +5,7 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ logdir=@localstatedir@
+-PATH=@bindir@:/bin:/usr/bin
++PATH=@sbindir@:/bin:/usr/bin
+ export PATH
+ 
+ conf=""
 @@ -16,10 +16,10 @@
  
  failcount=0
