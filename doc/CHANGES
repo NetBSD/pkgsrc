@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3705 2003/10/18 10:17:38 agc Exp $
+$NetBSD: CHANGES,v 1.3706 2003/10/18 11:18:11 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4219,3 +4219,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gaim to 0.71 [jmmv 2003-10-18]
 	Updated kopete to 0.7.3 [jmmv 2003-10-18]
 	Updated audit-packages to 1.25 [agc 2003-10-18]
+	Updated xmule to 1.6.1 [jmmv 2003-10-18]
