@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6913 2004/08/16 23:36:50 ben Exp $
+$NetBSD: CHANGES,v 1.6914 2004/08/16 23:46:57 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3870,3 +3870,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added wipe-2.2.0 [minskim 2004-08-16]
 	Updated stella to 1.4.1 [dillo 2004-08-16]
 	Updated clustal to 1.83 [ben 2004-08-16]
+	Updated fastDNAml to 1.2.2 [ben 2004-08-16]
