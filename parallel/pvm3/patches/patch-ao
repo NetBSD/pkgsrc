@@ -1,33 +1,15 @@
-$NetBSD: patch-ao,v 1.1 1998/10/29 05:15:10 garbled Exp $
---- src/pmsg.c.orig	Tue Mar 10 12:32:31 1998
-+++ src/pmsg.c	Wed Oct 28 11:23:53 1998
-@@ -252,13 +252,28 @@
- 				return ((3 << 4) | i) << o;
+$NetBSD: patch-ao,v 1.2 1999/11/23 16:05:31 dmcmahill Exp $
  
- 			for (j = 0; j < n; j++)
-+				if (j < n/2) {
-+					if (p[n/2 - 1 - j ]
-+					    != thesigs[i].bytes[j])
-+						break;
-+				} else {
-+					if (p[n + n/2 - 1 - j ]
-+					    != thesigs[i].bytes[j])
-+						break;
-+				}
-+
-+			if (j == n)
-+				return ((1 << 4) | i) << o;
-+
-+			for (j = 0; j < n; j++)
- 				if (p[n - 1 - j] != thesigs[i].bytes[j])
- 					break;
- 			if (j == n)
- 				return i << o;
- 		}
- 	}
--	fprintf(stderr, "can't generate signature for my integer byte order\n");
-+	fprintf(stderr,
-+		"can't generate signature for my floating point byte order\n");
- 	abort();
- 	return 0;
- }
+--- /dev/null	Mon Nov  1 14:10:37 1999
++++ ./conf/NETBSDARM32.def	Mon Nov  1 16:55:03 1999
+@@ -0,0 +1,10 @@
++ARCHCFLAGS	=	-DSOCKADHASLEN -DRSHCOMMAND=\"${LOCALBASE}/bin/ssh\" \
++				-DHASERRORVARS -DNOREXEC -DNEEDMENDIAN -DSYSERRISCONST
++ARCHDLIB	=
++ARCHDOBJ	=
++ARCHLIB		=
++HASRANLIB	=	t
++AR			=	ar
++PVM_ARCH	=	NETBSDARM32
++MAKE		=	make
++#MAKE		=	gmake

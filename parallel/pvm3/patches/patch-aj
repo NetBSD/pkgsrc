@@ -1,24 +1,13 @@
-$NetBSD: patch-aj,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
---- /dev/null	Fri Aug  7 00:35:18 1998
-+++ conf/NETBSD.m4	Fri Aug  7 00:56:51 1998
-@@ -0,0 +1,20 @@
-+divert(-1)
-+undefine(`len')
-+#
-+# FORTRAN function names are in upper case
-+#
-+define(`FUNCTION',`translit($1,abcdefghijklmnopqrstuvwxyz,ABCDEFGHIJKLMNOPQRSTUVWXYZ)')
-+#
-+# FORTRAN character strings are passed as follows:
-+#   XXX is this right?
-+# a pointer to the base of the string is passed in the normal
-+# argument list, and the length is passed by value as an extra
-+# argument, after all of the other arguments.
-+#
-+define(`ARGS',`($1`'undivert(1))')
-+define(`SAVE',`divert(1)$1`'divert(0)')
-+define(`STRING_ARG',`$1_ptr`'SAVE(`, $1_len')')
-+define(`STRING_ARG_DECL',`char * $1_ptr; int $1_len')
-+define(`STRING_LEN',`$1_len')
-+define(`STRING_PTR',`$1_ptr')
-+divert(0)
+$NetBSD: patch-aj,v 1.2 1999/11/23 16:05:31 dmcmahill Exp $
+ 
+--- ./xep/Makefile.aimk.orig	Fri Aug 29 10:17:48 1997
++++ ./xep/Makefile.aimk	Sun Oct 31 11:47:13 1999
+@@ -25,6 +25,6 @@
+ LIBS		=	-l$(PVMLIB) $(ARCHLIB) $(OS2XEPLIBS)
+ XLIBS		=	-lXaw -lXmu -lXext -lXt -lX11
+-XCFLAGS		=	-I/usr/local/X11R5/include -I/usr/local/X11/include \
+-				-L/usr/local/X11R5/lib -L/usr/local/X11/lib
++XCFLAGS		=	-I${X11BASE}/include  \
++				-L${X11BASE}/lib -Wl,-R$(X11BASE)/lib
+ 
+ HEADERS		=	$(SDIR)/hostc.h $(SDIR)/imp.h $(SDIR)/myalloc.h \
