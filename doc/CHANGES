@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1568 2003/03/05 14:18:41 pooka Exp $
+$NetBSD: CHANGES,v 1.1569 2003/03/05 14:27:36 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -966,3 +966,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mowitz to 0.2.2 [wiz 2003-03-05]
 	Updated shorten to 3.5.1 [wiz 2003-03-05]
 	Updated gnuplot to 3.7.3 [wiz 2003-03-05]
+	Added mined-2000.5 [agc 2003-03-05]
