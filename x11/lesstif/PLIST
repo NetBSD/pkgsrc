@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/25 18:40:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/05 19:10:42 drochner Exp $
 bin/mwm
 bin/mxmkmf
 bin/uil
 bin/xmbind
+include/Dt/Print.h
 include/Mrm/MrmAppl.h
 include/Mrm/MrmDecls.h
 include/Mrm/MrmPrivate.h
@@ -17,8 +18,6 @@ include/Xm/AtomMgr.h
 include/Xm/BaseClassP.h
 include/Xm/BulletinB.h
 include/Xm/BulletinBP.h
-include/Xm/CSText.h
-include/Xm/CSTextP.h
 include/Xm/CacheP.h
 include/Xm/CareVisualT.h
 include/Xm/CascadeB.h
@@ -72,6 +71,7 @@ include/Xm/GrabShell.h
 include/Xm/GrabShellP.h
 include/Xm/IconG.h
 include/Xm/IconGP.h
+include/Xm/IconH.h
 include/Xm/JoinSideT.h
 include/Xm/Label.h
 include/Xm/LabelG.h
@@ -98,6 +98,8 @@ include/Xm/PanedW.h
 include/Xm/PanedWP.h
 include/Xm/Primitive.h
 include/Xm/PrimitiveP.h
+include/Xm/Print.h
+include/Xm/PrintSP.h
 include/Xm/Protocols.h
 include/Xm/ProtocolsP.h
 include/Xm/PushB.h
@@ -108,6 +110,8 @@ include/Xm/RCUtilsP.h
 include/Xm/RepType.h
 include/Xm/RowColumn.h
 include/Xm/RowColumnP.h
+include/Xm/SSpinB.h
+include/Xm/SSpinBP.h
 include/Xm/SashP.h
 include/Xm/Scale.h
 include/Xm/ScaleP.h
@@ -169,6 +173,7 @@ include/uil/UilDBDef.h
 include/uil/UilDef.h
 include/uil/UilSymDef.h
 include/uil/UilSymGl.h
+include/uil/XmAppl.uil
 lib/X11/app-defaults/Mwm
 lib/X11/config/LessTif.def
 lib/X11/config/LessTif.rules
@@ -176,27 +181,30 @@ lib/X11/config/LessTif.tmpl
 lib/X11/mwm/README
 lib/X11/mwm/alt.map
 lib/X11/mwm/system.mwmrc
+lib/libDtPrint.a
+lib/libDtPrint.la
+lib/libDtPrint.so
+lib/libDtPrint.so.1
+lib/libDtPrint.so.1.0
 lib/libMrm.a
 lib/libMrm.la
 lib/libMrm.so
 lib/libMrm.so.2
-lib/libMrm.so.2.0
+lib/libMrm.so.2.1
 lib/libUil.a
 lib/libUil.la
 lib/libUil.so
 lib/libUil.so.2
-lib/libUil.so.2.0
+lib/libUil.so.2.1
 lib/libXm.a
 lib/libXm.la
 lib/libXm.so
 lib/libXm.so.2
-lib/libXm.so.2.0
+lib/libXm.so.2.1
 man/man1/lesstif.1
 man/man1/ltversion.1
 man/man1/mwm.1
 man/man1/uil.1
-man/man1/xbae.1
-man/man1/xlt.1
 man/man1/xmbind.1
 man/man3/ApplicationShell.3
 man/man3/Composite.3
@@ -289,6 +297,7 @@ share/doc/html/lesstif/LessTifInternals.html
 share/doc/html/lesstif/OverrideShell.html
 share/doc/html/lesstif/PROGRAMMING_TIPS.html
 share/doc/html/lesstif/Rect.html
+share/doc/html/lesstif/ReleaseNotes.html
 share/doc/html/lesstif/SyntheticResources.txt
 share/doc/html/lesstif/TopLevelShell.html
 share/doc/html/lesstif/TransientShell.html
@@ -300,8 +309,6 @@ share/doc/html/lesstif/WmShell.html
 share/doc/html/lesstif/XCore.html
 share/doc/html/lesstif/XObject.html
 share/doc/html/lesstif/XShell.html
-share/doc/html/lesstif/Xbae.html
-share/doc/html/lesstif/Xlt.html
 share/doc/html/lesstif/XmArrowButton.html
 share/doc/html/lesstif/XmArrowButtonGadget.html
 share/doc/html/lesstif/XmBulletinBoard.html
@@ -401,7 +408,6 @@ share/doc/html/lesstif/news_frame.html
 share/doc/html/lesstif/platforms.html
 share/doc/html/lesstif/printing.html
 share/doc/html/lesstif/related_frame.html
-share/doc/html/lesstif/release-notes.html
 share/doc/html/lesstif/release-policy.html
 share/doc/html/lesstif/test_policy.html
 share/doc/html/lesstif/test_summary.html
@@ -411,8 +417,6 @@ share/doc/html/lesstif/titlebar.html
 share/doc/html/lesstif/uil.html
 share/doc/html/lesstif/versions.html
 share/doc/html/lesstif/web_button.html
-share/doc/html/lesstif/xbae.html
-share/doc/html/lesstif/xlt.html
 share/doc/html/lesstif/xmbind.html
 share/doc/lesstif/AUTHORS
 share/doc/lesstif/BUG-REPORTING
@@ -420,11 +424,10 @@ share/doc/lesstif/COPYING
 share/doc/lesstif/COPYING.LIB
 share/doc/lesstif/CREDITS
 share/doc/lesstif/FAQ
-share/doc/lesstif/Install
-share/doc/lesstif/KNOWN_BUGS
+share/doc/lesstif/INSTALL.txt
 share/doc/lesstif/README
-share/doc/lesstif/RELEASE-POLICY
-share/doc/lesstif/release-notes.txt
+share/doc/lesstif/ReleaseNotes.html
+share/doc/lesstif/ReleaseNotes.txt
 @dirrm share/doc/lesstif
 @dirrm share/doc/html/lesstif/images
 @dirrm share/doc/html/lesstif
@@ -432,3 +435,4 @@ share/doc/lesstif/release-notes.txt
 @dirrm include/uil
 @dirrm include/Xm
 @dirrm include/Mrm
+@dirrm include/Dt
