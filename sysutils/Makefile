@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2005/01/12 11:53:28 agc Exp $
+# $NetBSD: Makefile,v 1.279 2005/01/13 09:32:19 wiz Exp $
 
 COMMENT=	System utilities
 
@@ -94,8 +94,8 @@ SUBDIR+=	hfsutils
 SUBDIR+=	i2ocfg
 SUBDIR+=	idesk
 SUBDIR+=	ipw-firmware
-SUBDIR+=	iwi-firmware
 SUBDIR+=	isapnptools
+SUBDIR+=	iwi-firmware
 SUBDIR+=	kdirstat
 SUBDIR+=	krusader
 SUBDIR+=	lambd
@@ -204,8 +204,8 @@ SUBDIR+=	vobcopy
 SUBDIR+=	webmin
 SUBDIR+=	whowatch
 SUBDIR+=	wipe
-SUBDIR+=	wmcpuload
 SUBDIR+=	wmSMPmon
+SUBDIR+=	wmcpuload
 SUBDIR+=	wmmemmon
 SUBDIR+=	wtail
 SUBDIR+=	xapply
