@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/07 02:50:13 hubertf Exp $
+
+--- ddclient.orig	Tue Jul 18 22:04:54 2000
++++ ddclient	Mon Aug  7 04:33:20 2000
+@@ -1,2 +1,2 @@
+-#!/usr/bin/perl -w
++#!@LOCALBASE@/bin/perl -w
+ ######################################################################
+@@ -32,4 +32,4 @@
+ 	[ "server",   "=s", "members.dyndns.org",  "-server host     : update DNS information on 'host'" ],
+-	[ "file",     "=s", "/etc/ddclient.conf",  "-file path       : load configuration information from 'path'" ],
+-	[ "cache",    "=s", "/etc/ddclient.cache", "-cache path      : record address used in 'path'" ],
++	[ "file",     "=s", "@PREFIX@/etc/ddclient.conf",  "-file path       : load configuration information from 'path'" ],
++	[ "cache",    "=s", "@PREFIX@/etc/ddclient.cache", "-cache path      : record address used in 'path'" ],
+ 	"",
+@@ -57,3 +57,3 @@
+ 	"  ${program} -ip 192.168.1.1 -retry",
+-	"  -- set the ip address of all dyndns hosts listed in the /etc/ddclient.conf to 192.168.1.1",
++	"  -- set the ip address of all dyndns hosts listed in the @PREFIX@/etc/ddclient.conf to 192.168.1.1",
+ 	"  -- mark failures so they may be retried with -refresh",
+@@ -74,3 +74,3 @@
+ 	"  ${program} -refresh -force -retry",
+-	"  -- refresh all dyndns hosts listed in the /etc/ddclient.conf",
++	"  -- refresh all dyndns hosts listed in the @PREFIX@/etc/ddclient.conf",
+ 	"  -- force an update even if it may be unneccessary",
+@@ -82,3 +82,3 @@
+ 	"  ${program} -refresh -retry",
+-	"  -- refresh all dyndns hosts listed in the /etc/ddclient.conf that could not be updated",
++	"  -- refresh all dyndns hosts listed in the @PREFIX@/etc/ddclient.conf that could not be updated",
+ 	"     (hosts that do not require update will be skipped)",
+@@ -443,3 +443,3 @@
+     } elsif (($result = update(%args)) eq 'OK') {
+-	$cache{$host} = { %args, time => time };
++	$cache{$host} = { %args, time() => time() };
+ 	write_cache($opt{'cache'});
+@@ -448,3 +448,3 @@
+         warning("$host was not set to $args{'ip'}, use -refresh to retry later");
+-    	$cache{$host} = { %args, time => 0 };
++    	$cache{$host} = { %args, time() => 0 };
+         write_cache($opt{'cache'});
