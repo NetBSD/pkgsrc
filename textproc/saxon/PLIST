@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/18 21:33:56 jlam Exp $
 lib/java/saxon.jar
 share/doc/java/saxon/api-guide.html
 share/doc/java/saxon/changes.html
@@ -438,3 +438,4 @@ share/examples/java/saxon/styles/bible.xsl
 @dirrm share/doc/java/saxon/api/com
 @dirrm share/doc/java/saxon/api
 @dirrm share/doc/java/saxon
+@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}
