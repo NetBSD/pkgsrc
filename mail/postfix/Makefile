@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2001/12/05 15:00:46 agc Exp $
+# $NetBSD: Makefile,v 1.53 2002/01/31 21:20:34 jlam Exp $
 
 DISTNAME=	postfix-20010228-pl08
 PKGNAME=	postfix-20010228pl8
@@ -26,7 +26,7 @@ BUILD_DEFS+=	POSTFIX_USE_INET6
 .endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES" \
-	|| defined(POSTFIX_USE_SASL_AUTH) && ${POSTFIX_USE_SASL_AUTH} == "YES"
+	|| defined(USE_SASL) && ${USE_SASL} == "YES"
 CCARGS=		-I${LOCALBASE}/include
 AUXLIBS=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
@@ -39,14 +39,14 @@ AUXLIBS+=	-lpcre
 BUILD_DEFS+=	POSTFIX_USE_PCRE
 .endif
 
-.if defined(POSTFIX_USE_SASL_AUTH) && ${POSTFIX_USE_SASL_AUTH} == "YES"
+.if defined(USE_SASL) && ${USE_SASL} == "YES"
 DEPENDS+=	cyrus-sasl:../../security/cyrus-sasl
 CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-lsasl
 PLIST_SRC+=	${WRKDIR}/PLIST.sasl
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-BUILD_DEFS+=	POSTFIX_USE_SASL_AUTH
+BUILD_DEFS+=	USE_SASL
 .endif
 
 PLIST_SRC+=	${PKGDIR}/PLIST
@@ -79,7 +79,7 @@ pre-install:
 	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	${CHMOD} 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	-${RM} -f ${WRKSRC}/conf/*.orig
-.if defined(POSTFIX_USE_SASL_AUTH) && ${POSTFIX_USE_SASL_AUTH} == "YES"
+.if defined(USE_SASL) && ${USE_SASL} == "YES"
 	echo "pwcheck_method: sasldb" > ${WRKDIR}/smtpd.conf
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${PREFIX}/lib/sasl
 	echo lib/sasl/smtpd.conf > ${WRKDIR}/PLIST.sasl
