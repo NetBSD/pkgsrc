@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2315 2003/05/25 07:21:56 dan Exp $
+$NetBSD: CHANGES,v 1.2316 2003/05/25 07:58:53 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2140,3 +2140,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mplayer to 0.90nb3 [dan 2003-05-25]
 	Updated gmplayer to 0.90nb3 [dan 2003-05-25]
 	Updated mencoder to 0.90nb3 [dan 2003-05-25]
+	Updated libgnome to 2.2.1 [jmmv 2003-05-25]
