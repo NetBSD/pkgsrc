@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2001/12/15 03:00:43 reinoud Exp $
+# $NetBSD: Makefile,v 1.13 2002/02/17 22:31:18 jlam Exp $
 #
 
-DISTNAME=	gaim-0.50
+DISTNAME=	gaim-0.52
 CATEGORIES=	chat x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim/} \
 		ftp://ftp.marko.net/pub/gaim/
@@ -26,11 +26,13 @@ CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-screensaver
 
 CONFIGURE_ARGS+=	--enable-esd
+CONFIGURE_ARGS+=	--enable-perl
 CONFIGURE_ARGS+=	--enable-pixbuf
 
 CONFIGURE_ENV+=		pixbufcfg="${GDK_PIXBUF_CONFIG}"
 
 .include "../../audio/esound/buildlink.mk"
 .include "../../graphics/gdk-pixbuf/buildlink.mk"
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
