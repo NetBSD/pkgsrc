@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/05 20:21:42 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/11 16:05:40 adam Exp $
 ${NOFLOPPYD}bin/floppyd
 ${NOFLOPPYD}bin/floppyd_installtest
 bin/lz
@@ -22,7 +22,6 @@ bin/mmount
 bin/mmove
 bin/mpartition
 bin/mrd
-bin/mread
 bin/mren
 bin/mshowfat
 bin/mtools
@@ -34,6 +33,7 @@ bin/tgz
 bin/uz
 info/mtools.info
 ${NOFLOPPYD}man/man1/floppyd.1
+${NOFLOPPYD}man/man1/floppyd_installtest.1
 man/man1/mattrib.1
 man/man1/mbadblocks.1
 man/man1/mcat.1
@@ -44,6 +44,7 @@ man/man1/mdeltree.1
 man/man1/mdir.1
 man/man1/mdu.1
 man/man1/mformat.1
+man/man1/minfo.1
 man/man1/mkmanifest.1
 man/man1/mlabel.1
 man/man1/mmd.1
@@ -51,7 +52,6 @@ man/man1/mmount.1
 man/man1/mmove.1
 man/man1/mpartition.1
 man/man1/mrd.1
-man/man1/mread.1
 man/man1/mren.1
 man/man1/mshowfat.1
 man/man1/mtools.1
