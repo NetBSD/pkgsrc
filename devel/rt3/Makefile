@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/02 17:20:36 cube Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/08 13:33:30 cube Exp $
 
 DISTNAME=		rt-3.2.2
 CATEGORIES=		devel
@@ -66,7 +66,7 @@ DEPENDS+=	mysql-client>=4.0.9:../../databases/mysql4-client
 DEPENDS+=	p5-DBD-mysql>=2.1018:../../databases/p5-DBD-mysql
 _RT_DB_TYPE=		mysql
 .elif !empty(PKG_OPTIONS:Mbackend-pgsql)
-DEPENDS+=	p5-DBD-Pg-[0-9]*:../../database/p5-DBD-Pg
+DEPENDS+=	p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
 _RT_DB_TYPE=		Pg
 .endif
 
