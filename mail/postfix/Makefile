@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2004/07/30 21:05:41 jlam Exp $
+# $NetBSD: Makefile,v 1.146 2004/07/31 05:22:16 jlam Exp $
 
 DISTNAME=	postfix-2.1.4
 CATEGORIES=	mail
@@ -47,9 +47,9 @@ CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
 .include "Makefile.options"
 
 PKG_SYSCONFSUBDIR=	postfix
-LIBEXECDIR=		${PREFIX}/libexec/${PKGBASE}
-DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
-EXAMPLEDIR=		${PREFIX}/share/examples/${PKGBASE}
+LIBEXECDIR=		${PREFIX}/libexec/postfix
+DOCDIR=			${PREFIX}/share/doc/postfix
+EXAMPLEDIR=		${PREFIX}/share/examples/postfix
 
 FILES_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
 MESSAGE_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
