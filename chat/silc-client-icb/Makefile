@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2004/03/29 11:05:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/06/10 22:38:16 salo Exp $
 #
 
 DISTNAME=	irssi-icb-0.14
 PKGNAME=	${DISTNAME:S/irssi/silc-client/}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	chat
 MASTER_SITES=	http://www.irssi.org/files/plugins/icb/
 DISTFILES=	${DISTNAME}.tar.gz ${SILC_CLIENT_DISTFILE}
@@ -12,7 +12,7 @@ MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.silcnet.org/
 COMMENT=	silc-client plugin to access ICB networks
 
-DEPENDS+=	silc-client>=${SILC_CLIENT_VERSION}:../../chat/silc-client
+DEPENDS+=	silc-client>=${SILC_CLIENT_VERSION}nb1:../../chat/silc-client
 
 .include "../../chat/silc-client/Makefile.common"
 
@@ -28,7 +28,7 @@ post-extract:
 	${CP} ${SILC_CLIENT_CONFIG} ${IRSSI_DIR}/irssi-config
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/silc/README.icb
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/silc-client/README.icb
 
 .include "../../devel/glib/buildlink3.mk"
 
