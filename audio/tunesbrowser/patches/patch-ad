@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2004/08/14 11:43:53 kristerw Exp $
+$NetBSD: patch-ad,v 1.2 2005/03/20 11:09:47 jmmv Exp $
 
---- misc_ui.c.orig	Sat Aug 14 13:32:13 2004
-+++ misc_ui.c	Sat Aug 14 13:35:31 2004
-@@ -138,9 +138,9 @@
+--- misc_ui.c.orig	2005-01-02 02:53:52.000000000 +0100
++++ misc_ui.c
+@@ -202,9 +202,9 @@ static void cb_update_songpos(int second
  
      if (seconds >= 0)
      {
