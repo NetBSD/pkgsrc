@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/22 17:24:50 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/19 04:35:04 jmc Exp $
 ${PYSITELIB}/libqtcanvascmodule.a
 ${PYSITELIB}/libqtcanvascmodule.la
 ${PYSITELIB}/libqtcanvascmodule.so
@@ -34,6 +34,41 @@ ${PYSITELIB}/libqtxmlcmodule.la
 ${PYSITELIB}/libqtxmlcmodule.so
 ${PYSITELIB}/libqtxmlcmodule.so.1
 ${PYSITELIB}/libqtxmlcmodule.so.1.0
+${QTLIBDIR}/libqtcanvascmodule.a
+${QTLIBDIR}/libqtcanvascmodule.la
+${QTLIBDIR}/libqtcanvascmodule.so
+${QTLIBDIR}/libqtcanvascmodule.so.1
+${QTLIBDIR}/libqtcanvascmodule.so.1.0
+${QTLIBDIR}/libqtglcmodule.a
+${QTLIBDIR}/libqtglcmodule.la
+${QTLIBDIR}/libqtglcmodule.so
+${QTLIBDIR}/libqtglcmodule.so.1
+${QTLIBDIR}/libqtglcmodule.so.1.0
+${QTLIBDIR}/libqtnetworkcmodule.a
+${QTLIBDIR}/libqtnetworkcmodule.la
+${QTLIBDIR}/libqtnetworkcmodule.so
+${QTLIBDIR}/libqtnetworkcmodule.so.1
+${QTLIBDIR}/libqtnetworkcmodule.so.1.0
+${QTLIBDIR}/libqtsqlcmodule.a
+${QTLIBDIR}/libqtsqlcmodule.la
+${QTLIBDIR}/libqtsqlcmodule.so
+${QTLIBDIR}/libqtsqlcmodule.so.1
+${QTLIBDIR}/libqtsqlcmodule.so.1.0
+${QTLIBDIR}/libqttablecmodule.a
+${QTLIBDIR}/libqttablecmodule.la
+${QTLIBDIR}/libqttablecmodule.so
+${QTLIBDIR}/libqttablecmodule.so.1
+${QTLIBDIR}/libqttablecmodule.so.1.0
+${QTLIBDIR}/libqtuicmodule.a
+${QTLIBDIR}/libqtuicmodule.la
+${QTLIBDIR}/libqtuicmodule.so
+${QTLIBDIR}/libqtuicmodule.so.1
+${QTLIBDIR}/libqtuicmodule.so.1.0
+${QTLIBDIR}/libqtxmlcmodule.a
+${QTLIBDIR}/libqtxmlcmodule.la
+${QTLIBDIR}/libqtxmlcmodule.so
+${QTLIBDIR}/libqtxmlcmodule.so.1
+${QTLIBDIR}/libqtxmlcmodule.so.1.0
 ${PYSITELIB}/qtcanvas.py
 ${PYSITELIB}/qtgl.py
 ${PYSITELIB}/qtnetwork.py

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/07/22 17:22:48 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/08/19 04:35:03 jmc Exp $
 
 .if !defined(PY_QT3_BASE_BUILDLINK2_MK)
 PY_QT3_BASE_BUILDLINK2_MK=	# defined
@@ -6,7 +6,7 @@ PY_QT3_BASE_BUILDLINK2_MK=	# defined
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_PACKAGES+=		pyqt3base
-BUILDLINK_DEPENDS.pyqt3base?=	${PYPKGPREFIX}-qt3-base-[0-9]*
+BUILDLINK_DEPENDS.pyqt3base?=	${PYPKGPREFIX}-qt3-base>=3.7nb1
 BUILDLINK_PKGSRCDIR.pyqt3base?=	../../x11/py-qt3-base
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.pyqt3base=pyqt3base
