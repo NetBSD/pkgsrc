@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.206 2002/10/08 14:18:30 martti Exp $
+$NetBSD: CHANGES,v 1.207 2002/10/08 14:30:34 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3156,3 +3156,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pkgchk to 1.33 [abs 2002-10-08]
 	Removed koffice3 [martti 2002-10-08]
 	Updated koffice to 1.2 [martti 2002-10-08]
+	Updated netcat to 1.10nb1 [abs 2002-10-08]

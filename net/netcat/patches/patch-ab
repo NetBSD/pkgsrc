@@ -1,49 +1,12 @@
-$NetBSD: patch-ab,v 1.2 1999/09/07 13:47:09 is Exp $
---- netcat.c.orig	Tue Sep  7 15:15:59 1999
-+++ netcat.c	Tue Sep  7 15:42:44 1999
-@@ -151,6 +151,7 @@
+$NetBSD: patch-ab,v 1.3 2002/10/08 14:29:36 abs Exp $
+
+--- data/rservice.c.orig	Wed Jan 31 18:45:08 1996
++++ data/rservice.c
+@@ -10,6 +10,7 @@
+    ... whatever.  _H*/
  
- /* global cmd flags: */
- USHORT o_alla = 0;
-+USHORT o_allowbroad = 0;
- unsigned int o_interval = 0;
- USHORT o_listen = 0;
- USHORT o_nflag = 0;
-@@ -621,6 +622,13 @@
-   rr = setsockopt (nnetfd, SOL_SOCKET, SO_REUSEADDR, &x, sizeof (x));
-   if (rr == -1)
-     holler ("nnetfd reuseaddr failed");		/* ??? */
-+#ifdef SO_BROADCAST
-+  if (o_allowbroad) {
-+    rr = setsockopt (nnetfd, SOL_SOCKET, SO_BROADCAST, &x, sizeof (x));
-+    if (rr == -1)
-+       holler ("nnetfd reuseaddr failed");         /* ??? */
-+  }
-+#endif
- #ifdef SO_REUSEPORT	/* doesnt exist everywhere... */
-   rr = setsockopt (nnetfd, SOL_SOCKET, SO_REUSEPORT, &x, sizeof (x));
-   if (rr == -1)
-@@ -1390,12 +1398,14 @@
+ #include <stdio.h>
++#include <string.h>
  
- /* If your shitbox doesn't have getopt, step into the nineties already. */
- /* optarg, optind = next-argv-component [i.e. flag arg]; optopt = last-char */
--  while ((x = getopt (argc, argv, "ae:g:G:hi:lno:p:rs:tuvw:z")) != EOF) {
-+  while ((x = getopt (argc, argv, "abe:g:G:hi:lno:p:rs:tuvw:z")) != EOF) {
- /* Debug (("in go: x now %c, optarg %x optind %d", x, optarg, optind)) */
-     switch (x) {
-       case 'a':
- 	bail ("all-A-records NIY");
- 	o_alla++; break;
-+      case 'b':
-+	o_allowbroad++; break;
- #ifdef GAPING_SECURITY_HOLE
-       case 'e':				/* prog to exec */
- 	pr00gie = optarg;
-@@ -1643,6 +1653,7 @@
- 	-e prog			program to exec after connect [dangerous!!]");
- #endif
-   holler ("\
-+	-b			allow broadcasts\n\
- 	-g gateway		source-routing hop point[s], up to 8\n\
- 	-G num			source-routing pointer: 4, 8, 12, ...\n\
- 	-h			this cruft\n\
+ /* change if you like; "id" is a good one for figuring out if you won too */
+ static char cmd[] = "pwd";

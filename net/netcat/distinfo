@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.3 2002/08/21 06:31:57 simonb Exp $
+$NetBSD: distinfo,v 1.4 2002/10/08 14:29:36 abs Exp $
 
 SHA1 (nc110.tgz) = f8ec3a39796b141b6654d39b7957b863c7f79a95
 Size (nc110.tgz) = 75267 bytes
-SHA1 (patch-aa) = c1891404c8d520fe2c3f75b21ff3780ef08100a5
-SHA1 (patch-ab) = c967191d29c4be6bdcc37cf32455337ca1d28be3
-SHA1 (patch-ac) = b67b27baff943cc21d3c2052de22c5fb2e945ffd
-SHA1 (patch-ad) = d2eca09e83188785e57d9396acf45f8823504e4e
-SHA1 (patch-ae) = 9ee2267e4b516d21de7341a4a6279a8cb7dc9056
+SHA1 (patch-aa) = 44dc8cf9072a1c127925a4efed6bb7f1428360bc
+SHA1 (patch-ab) = 73990f9a87b04fffb22b94873e3225bd8ee496b5
+SHA1 (patch-ac) = 8b0c41953ab0237304a31fb999e27a51df8cb0a9
+SHA1 (patch-ad) = ee5e1c6a8e3e2a239135d74dbf46fc25c8d2ec80
