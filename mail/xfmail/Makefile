@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/03/27 03:20:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 2001/07/03 21:38:27 zuntum Exp $
 #
 
 DISTNAME=		xfmail-1.4.7
@@ -11,9 +11,6 @@ HOMEPAGE=		http://xfmail.slappy.org/
 COMMENT=		Xforms based mail application for Unix operating systems
 
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-DEPENDS+=		gdbm>=1.7.3:../../databases/gdbm
-DEPENDS+=		xforms>=0.88nb1:../../x11/xforms
-DEPENDS+=		glib-*:../../devel/glib
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
@@ -23,7 +20,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_X11BASE=		YES
-USE_XPM=		YES
 GNU_CONFIGURE=		YES
 
 pre-configure:
@@ -34,4 +30,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfmail
 	${INSTALL_DATA} ${WRKSRC}/Copyright ${PREFIX}/share/doc/xfmail
 
+.include "../../databases/gdbm/buildlink.mk"
+.include "../../devel/glib/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../x11/xforms/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
