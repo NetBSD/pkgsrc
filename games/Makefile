@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2003/05/29 22:58:16 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2003/06/02 14:10:50 jmmv Exp $
 #
 
 COMMENT=	Games
@@ -148,6 +148,7 @@ SUBDIR+=	tileworld
 SUBDIR+=	tscp
 SUBDIR+=	tuxracer
 SUBDIR+=	ularn
+SUBDIR+=	vms-empire
 SUBDIR+=	wormz
 SUBDIR+=	xarchon
 SUBDIR+=	xbat
