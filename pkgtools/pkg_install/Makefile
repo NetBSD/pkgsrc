@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2002/12/21 04:08:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.61 2002/12/21 05:05:28 schmonz Exp $
 
 # Notes to package maintainers:
 #
@@ -27,8 +27,6 @@ NO_PATCH=		# defined
 NO_MTREE=		# defined
 NO_PKG_REGISTER=	# defined
 NO_PACKAGE=		Deinstallation is not permitted
-MANCOMPRESSED_IF_MANZ=	# defined
-BUILD_DEFS+=		MANINSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
