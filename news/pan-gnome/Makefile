@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/04/14 16:15:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/04/14 19:30:22 jmmv Exp $
 #
 
 DISTNAME=	pan-0.11.4
@@ -14,7 +14,7 @@ COMMENT=	Newsreader for Gnome
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK2=		YES
-USE_DIRS+=		xdg-x11-1.1
+USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
