@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3739 2003/10/27 03:24:22 reinoud Exp $
+$NetBSD: CHANGES,v 1.3740 2003/10/27 03:57:00 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4252,4 +4252,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gqview-devel to 1.3.3 [wiz 2003-10-26]
 	Removed lmme [wiz 2003-10-26]
 	Updated udfclient to 0.1.2 [reinoud 2003-10-26]
-
+	Updated bind9 to 9.2.3 [itojun 2003-10-27]
