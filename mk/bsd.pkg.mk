@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1440 2004/04/12 20:48:07 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1441 2004/04/14 15:26:41 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -1384,6 +1384,10 @@ NO_BUILDLINK=		# defined
 .endif
 
 .include "../../mk/tools.mk"
+
+.if defined(USE_DIRS) && !empty(USE_DIRS)
+.  include "../../mk/dirs.mk"
+.endif
 
 _PREPENDED_TO_PATH?=	# empty
 .for _dir_ in ${PREPEND_PATH}
