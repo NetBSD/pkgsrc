@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2819 2005/01/03 21:50:12 jmmv Exp $
+$NetBSD: TODO,v 1.2820 2005/01/03 22:50:50 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -396,7 +396,6 @@ Suggested package updates
 	o cscope-15.5
 	o cstream-2.5
 	o cue-20041115
-	o cuetools-1.2
 	o cvs-1.11.18
 	o cwtext-0.94
 	o cxref-1.6
@@ -461,8 +460,6 @@ Suggested package updates
 	o enlightenment-0.16.7.2
 	o enscript-1.6.4
 	o epic4-2.2
-	o epiphany-1.4.7
-	o epiphany-extensions-1.4.4
 	o eric3-3.5.1
 	o erlang-10b-2
 	o esh-0.8.5
