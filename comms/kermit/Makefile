@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/07/23 18:34:46 fredb Exp $
+# $NetBSD: Makefile,v 1.29 2000/07/23 19:40:18 fredb Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.columbia.edu/kermit/
 
-LICENSE=	no-redistribution
+LICENSE=	limited-redistribution
 
 ALL_TARGET=	netbsd
 BUILD_DEFS+=	KFLAGS LIBS KERMIT_SUID_UUCP
