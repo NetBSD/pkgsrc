@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/09/08 21:32:18 recht Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/09 13:55:35 drochner Exp $
 #
 
 DISTNAME=	pygtk-2.0.0
@@ -25,8 +25,8 @@ PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2nb2
 
 .include "../../devel/libglade2/buildlink2.mk"
-.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 .include "../../math/py-Numeric/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
 .include "../../x11/gtkglarea2/buildlink2.mk"
