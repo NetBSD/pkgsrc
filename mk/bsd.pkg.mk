@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1359 2004/01/25 16:12:40 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1360 2004/01/26 21:10:31 heinz Exp $
 #
 # This file is in the public domain.
 #
@@ -2510,7 +2510,7 @@ package-links:
 .if !target(delete-package-links)
 delete-package-links:
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	${FIND} ${PACKAGES} -type l -name ${PKGNAME}${PKG_SUFX} | ${XARGS} ${RM} -f
+	${FIND} ${PACKAGES} -type l -name ${PKGNAME}${PKG_SUFX} -print | ${XARGS} ${RM} -f
 .endif
 
 .PHONY: delete-package
@@ -4517,7 +4517,7 @@ print-PLIST:
 	"a.out")	genlinks=1 ;;					\
 	*)		genlinks=0 ;;					\
 	esac;								\
-	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d	\
+	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d -print\
 	 | ${SORT}							\
 	 | ${AWK} '							\
 		{ sub("${PREFIX}/\\./", ""); }				\
@@ -4544,7 +4544,7 @@ print-PLIST:
 		}							\
 		{ print $$0; }'
 	${_PKG_SILENT}${_PKG_DEBUG}\
-	for i in `${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} -type d	\
+	for i in `${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} -type d -print\
 			| ${SORT} -r					\
 			| ${AWK} '					\
 				/emul\/linux\/proc/ { next; }		\
