@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5386 2004/03/31 04:39:16 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5387 2004/03/31 04:59:18 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1627,3 +1627,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated vim-kde to 6.2.14 [snj 2004-03-31]
 	Updated xmame to 0.80.1 [xtraeme 2004-03-31]
 	Updated xmess to 0.80.1 [xtraeme 2004-03-31]
+	Updated abiword to 2.0.5 [xtraeme 2004-03-31]
