@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/12/30 17:01:50 taca Exp $
+$NetBSD: distinfo,v 1.3 2003/08/30 05:54:26 taca Exp $
 
-SHA1 (ruby/amstd-1.10.0.tar.gz) = d71d2af10c7be50510063ce2532eae33bb9ac8cb
-Size (ruby/amstd-1.10.0.tar.gz) = 24094 bytes
-SHA1 (patch-aa) = 83ba3378439b4afbc167f072e622bf77273b5a37
+SHA1 (ruby/amstd-2.0.0.tar.gz) = 493b1d081493dc57ad9ae10292c5b2f09f5dcce6
+Size (ruby/amstd-2.0.0.tar.gz) = 20057 bytes
