@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/12/23 20:35:22 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/02/04 18:48:23 jlam Exp $
 
 .if !defined(ZLIB_BUILDLINK2_MK)
 ZLIB_BUILDLINK2_MK=	# defined
@@ -42,21 +42,29 @@ _NEED_ZLIB=		YES
 BUILDLINK_PACKAGES+=		zlib
 EVAL_PREFIX+=	BUILDLINK_PREFIX.zlib=zlib
 BUILDLINK_PREFIX.zlib_DEFAULT=	${LOCALBASE}
+_BLNK_ZLIB_LDFLAGS=		-L${BUILDLINK_PREFIX.zlib}/lib -lz
 .else
 BUILDLINK_PREFIX.zlib=		/usr
+_BLNK_ZLIB_LDFLAGS=		-lz
 .endif
+
+LIBTOOL_ARCHIVE_UNTRANSFORM_SED+= \
+	-e "s|${BUILDLINK_PREFIX.zlib}/lib/libz.la|${_BLNK_ZLIB_LDFLAGS}|g" \
+	-e "s|${LOCALBASE}/lib/libz.la|${_BLNK_ZLIB_LDFLAGS}|g"
 
 BUILDLINK_FILES.zlib=	include/zconf.h
 BUILDLINK_FILES.zlib+=	include/zlib.h
 BUILDLINK_FILES.zlib+=	lib/libz.*
 
 BUILDLINK_TARGETS+=	zlib-buildlink
-
-.if ${_NEED_ZLIB} == "NO"
-LIBTOOL_ARCHIVE_UNTRANSFORM_SED+= \
-	-e "s|${LOCALBASE}/lib/libz.la|-L${BUILDLINK_PREFIX.zlib}/lib -lz|g"
-.endif
+BUILDLINK_TARGETS+=	zlib-libz-la
 
 zlib-buildlink: _BUILDLINK_USE
+
+zlib-libz-la:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	lafile="${BUILDLINK_DIR}/lib/libz.la";				\
+	libpattern="${BUILDLINK_PREFIX.zlib}/lib/libz.*";		\
+	${BUILDLINK_FAKE_LA}
 
 .endif	# ZLIB_BUILDLINK2_MK
