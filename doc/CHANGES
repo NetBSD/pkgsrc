@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1514 2003/03/01 14:35:17 jmmv Exp $
+$NetBSD: CHANGES,v 1.1515 2003/03/01 22:00:37 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -876,3 +876,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added elizatalk-0.4 [jlam 2003-03-01]
 	Added mono-0.21 [jmmv 2003-03-01]
 	Added gtkmm-2.2.0 [jmmv 2003-03-01]
+	Added gconfmm-2.0.1 [jmmv 2003-03-01]
