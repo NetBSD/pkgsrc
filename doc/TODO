@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2452 2004/11/25 16:32:10 ben Exp $
+$NetBSD: TODO,v 1.2453 2004/11/25 17:25:57 ben Exp $
 
 Suggested new packages
 ======================
@@ -1234,7 +1234,6 @@ Suggested package updates
 	o spamass-milter-0.2.0
 	o speedtouch-1.2beta3
 	o spim-7.0
-	o spiralsynth-2.0.0
 	o splint-3.1.1
 	o spruce-0.6.5
 	o sqlite-3.0.7
