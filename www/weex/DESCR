@@ -1,0 +1,4 @@
+ Fast Webpage Exchanger (weex) is a utility designed to automate the
+task of remotely maintaining a web page or other FTP archive. With weex,
+the maintainer of a web site or archive that must be administered through
+FTP interaction can largely ignore that process.

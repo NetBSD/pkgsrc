@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/11/29 08:36:06 martti Exp $
+--- src/ftplib.c.orig	Mon May 28 21:59:05 2001
++++ src/ftplib.c	Mon May 28 21:59:47 2001
+@@ -40,7 +40,7 @@
+ #include "intl.h"
+ #include "variable.h"
+ 
+-#if defined(__unix__) || defined(__VMS)
++#if defined(__unix__) || defined(__NetBSD__) || defined(__VMS)
+ #include <unistd.h>
+ #endif
+ #if defined(_WIN32)
+@@ -51,7 +51,7 @@
+ #include <string.h>
+ #include <errno.h>
+ #include <ctype.h>
+-#if defined(__unix__)
++#if defined(__unix__) || defined(__NetBSD__)
+ #include <sys/time.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
+@@ -120,7 +120,7 @@
+ 
+ GLOBALDEF int ftplib_debug = 0;
+ 
+-#if defined(__unix__) || defined(VMS)
++#if defined(__unix__) || defined(__NetBSD__) || defined(VMS)
+ #define net_read read
+ #define net_write write
+ #define net_close close
