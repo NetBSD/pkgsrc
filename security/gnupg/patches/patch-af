@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2002/09/30 22:41:31 chris Exp $
+
+--- cipher/dynload.c.orig	Mon Sep 30 23:34:34 2002
++++ cipher/dynload.c	Mon Sep 30 23:35:18 2002
+@@ -287,7 +287,7 @@
+ 	goto failure;
+     }
+     name = (char**)dlsym(el->handle, SYMBOL_VERSION);
+-    if( (err=dlerror()) ) {
++    if( (name == NULL) && (err=dlerror()) ) {
+ 	log_error("%s: not a gnupg extension: %s\n", el->name, err );
+ 	goto failure;
+     }
+@@ -332,7 +332,7 @@
+ 
+   #ifdef HAVE_DL_DLOPEN
+     sym = dlsym(el->handle, SYMBOL_ENUM);
+-    if( (err=dlerror()) ) {
++    if( (sym == NULL) && (err=dlerror()) ) {
+ 	log_error("%s: invalid gnupg extension: %s\n", el->name, err );
+ 	goto failure;
+     }
