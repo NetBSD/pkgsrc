@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/01/26 11:36:35 jmmv Exp $
+
+--- pixelview_remote.c.orig	Sun May 21 17:10:09 2000
++++ pixelview_remote.c	Tue Feb 13 22:39:48 2001
+@@ -32,6 +32,7 @@
+  *
+  */
+ 
++#include <sys/ioctl.h>
+ #include <string.h>
+ #include <stdlib.h>
+ #include <stdio.h>
