@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/02/09 00:56:22 chris Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/09 14:04:16 seb Exp $
 
 DISTNAME=	kde-3.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,7 +16,7 @@ DEPENDS+=	kdeaddons-3.2.0nb1:../../misc/kdeaddons3
 DEPENDS+=	kdeadmin-3.2.0:../../misc/kdeadmin3
 DEPENDS+=	kdeedu-3.2.0:../../misc/kdeedu3
 DEPENDS+=	kdegames-3.2.0:../../games/kdegames3
-DEPENDS+=	kdegraphics-3.2.0:../../graphics/kdegraphics3
+DEPENDS+=	kdegraphics-3.2.0nb1:../../graphics/kdegraphics3
 DEPENDS+=	kdemultimedia-3.2.0nb1:../../multimedia/kdemultimedia3
 DEPENDS+=	kdenetwork-3.2.0:../../net/kdenetwork3
 DEPENDS+=	kdepim-3.2.0nb1:../../misc/kdepim3
