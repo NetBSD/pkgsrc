@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/01/03 01:29:54 hubertf Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/01/08 20:56:20 wiz Exp $
 #
 # This Makefile fragment is included by packages that use aalib.
 #
@@ -17,7 +17,7 @@ aalib_BUILDLINK_MK= # defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.aalib?= aalib>=1.4rc4
+BUILDLINK_DEPENDS.aalib?= aalib>=1.4.0.4
 DEPENDS+= ${BUILDLINK_DEPENDS.aalib}:../../graphics/aalib
 
 EVAL_PREFIX+= BUILDLINK_PREFIX.aalib=aalib
