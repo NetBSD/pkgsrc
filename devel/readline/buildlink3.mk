@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2004/02/18 16:35:27 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2004/02/20 06:51:16 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 READLINE_BUILDLINK3_MK:=	${READLINE_BUILDLINK3_MK}+
@@ -126,8 +126,9 @@ BUILDLINK_USE_BUILTIN.readline=	NO
 
 .  if defined(USE_GNU_READLINE)
 .    if !empty(BUILDLINK_IS_BUILTIN.readline:M[yY][eE][sS]) && \
-        !empty(_BLNK_LIBREADLINE_FOUND:M[nN][oO]) && \
-        !empty(_BLNK_LIBEDIT_FOUND:M[yY][eE][sS])
+        !empty(_BLNK_LIBREADLINE_FOUND:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.readline=	YES
+.    else
 BUILDLINK_USE_BUILTIN.readline=	NO
 .    endif
 .  endif
