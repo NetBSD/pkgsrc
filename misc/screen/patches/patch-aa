@@ -1,8 +1,0 @@
-$NetBSD: patch-aa,v 1.6 2000/09/11 14:43:14 itojun Exp $
-
---- Makefile.in.orig	Mon Sep 11 21:55:06 2000
-+++ Makefile.in	Mon Sep 11 21:56:08 2000
-@@ -23,3 +23,2 @@
- CC = @CC@
--CFLAGS = -O
- CPPFLAGS = @CPPFLAGS@
