@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2004/08/26 19:02:35 reed Exp $
+# $NetBSD: Makefile,v 1.12 2004/09/24 01:56:54 rh Exp $
 #
 
 .include "../../graphics/3DKit/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/3DKit/GlutKit/}
-PKGREVISION=	7
+PKGREVISION=	8
 
 COMMENT=	3DKit GLUT backend
 
