@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2000/03/07 23:03:13 tron Exp $
+
+--- libxmms/util.c.orig	Mon Nov 15 17:50:37 1999
++++ libxmms/util.c	Tue Mar  7 23:53:13 2000
+@@ -56,7 +56,7 @@
+ 
+ gboolean xmms_check_realtime_priority(void)
+ {
+-#ifdef HAVE_SCHED_SETSCHEDULER
++#if !defined(__NetBSD__) && defined(HAVE_SCHED_SETSCHEDULER)
+ #ifdef __FreeBSD__
+ 	/*
+ 	 * Check if priority scheduling is enabled in the kernel

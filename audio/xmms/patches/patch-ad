@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2000/03/07 23:03:13 tron Exp $
+
+--- Visualization/Makefile.in.orig	Mon Jan 31 19:44:44 2000
++++ Visualization/Makefile.in	Tue Mar  7 23:25:17 2000
+@@ -125,7 +125,7 @@
+ sidplay_library = @sidplay_library@
+ xmmsdir = @xmmsdir@
+ 
+-SUBDIRS = blur_scope sanalyzer opengl_spectrum
++SUBDIRS = blur_scope sanalyzer
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
