@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/07/15 06:10:25 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/15 06:22:16 jlam Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -13,6 +13,7 @@ ALL_TARGET=	cleandir depend all
 INSTALL_TARGET=	dirs includes install
 NO_WRKSUBDIR=	yes
 NO_CONFIGURE=	yes
+DIST_SUBDIR=	${PKGNAME}
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
