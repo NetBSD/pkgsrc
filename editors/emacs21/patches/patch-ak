@@ -1,0 +1,23 @@
+$NetBSD: patch-ak,v 1.1.1.1 2002/04/24 17:27:41 drochner Exp $
+
+--- lib-src/Makefile.in.orig	Wed Apr 24 14:24:16 2002
++++ lib-src/Makefile.in	Wed Apr 24 17:10:31 2002
+@@ -296,12 +296,14 @@
+ 	@echo
+ 	@echo "Installing utilities for users to run."
+ 	for file in ${INSTALLABLES} ; do \
+-	  $(INSTALL_PROGRAM) $(INSTALL_STRIP) $${file} ${bindir}/$${file} ; \
+-	  chmod a+rx ${bindir}/$${file}; \
++	  if [ $${file} = emacsclient ] ; then \
++	    $(INSTALL_PROGRAM) $(INSTALL_STRIP) $${file} ${bindir}/$${file} ; \
++	  else \
++	    $(INSTALL_PROGRAM) $(INSTALL_STRIP) $${file} ${bindir}/emacs-$${file} ; \
++	  fi ; \
+ 	done
+ 	for file in ${INSTALLABLE_SCRIPTS} ; do \
+-	  $(INSTALL_PROGRAM) ${srcdir}/$${file} ${bindir}/$${file} ; \
+-	  chmod a+rx ${bindir}/$${file}; \
++	  $(INSTALL_PROGRAM) ${srcdir}/$${file} ${bindir}/emacs-$${file} ; \
+ 	done
+ 
+ uninstall:
