@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.133 2002/10/02 05:32:48 uebayasi Exp $
+$NetBSD: CHANGES,v 1.134 2002/10/02 08:27:37 minoura Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3064,3 +3064,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added pan-0.13.0 as gtk2-pan [rh 2002-10-02]
 	Updated pan to 0.11.4 [rh 2002-10-02]
 	Updated vmware-modules to 1.0nb1 [uebayasi 2002-10-02]
+	Updated gauche to 0.6.3 [minoura 2002-10-02]
