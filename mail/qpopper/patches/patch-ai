@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 1999/07/09 15:58:34 itojun Exp $
+$NetBSD: patch-ai,v 1.2 1999/07/24 00:05:11 tron Exp $
 
 --- pop_init.c.orig	Thu Jul  9 16:44:07 1998
 +++ pop_init.c	Fri Jul  9 08:20:24 1999
@@ -19,7 +19,7 @@ $NetBSD: patch-ai,v 1.1 1999/07/09 15:58:34 itojun Exp $
 +sock_ntop(p)
 +    struct sockaddr *p;
 +{
-+#ifndef INET6
++#ifdef INET6
 +    static char ntop_buf[INET6_ADDRSTRLEN];
 +#else
 +    static char ntop_buf[INET_ADDRSTRLEN];
