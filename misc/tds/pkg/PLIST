@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/25 02:43:42 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/16 14:41:03 kei Exp $
 bin/tds-setup
 share/doc/tds/FAQ.html
 share/doc/tds/FAQ.tdf
@@ -265,7 +265,6 @@ share/tds/web_diary_dir/lib/SimpleDB/Hash.pm
 share/tds/web_diary_dir/lib/SimpleDB/Scalar.pm
 share/tds/web_diary_dir/lib/Skelton.pm
 share/tds/web_diary_dir/lib/StaticVariable.pm
-share/tds/web_diary_dir/lib/TCPIP.pm
 share/tds/web_diary_dir/lib/TDS.pm
 share/tds/web_diary_dir/lib/TDS/AccessLog.pm
 share/tds/web_diary_dir/lib/TDS/AccessLog/Analysis.pm
@@ -341,6 +340,7 @@ share/tds/web_diary_dir/lib/TDS/Replacer/Dictionary.pm
 share/tds/web_diary_dir/lib/TDS/Replacer/Term.pm
 share/tds/web_diary_dir/lib/TDS/Replacer/Url.pm
 share/tds/web_diary_dir/lib/TDS/RequestMode.pm
+share/tds/web_diary_dir/lib/TDS/SSTP.pm
 share/tds/web_diary_dir/lib/TDS/Search.pm
 share/tds/web_diary_dir/lib/TDS/Skelton.pm
 share/tds/web_diary_dir/lib/TDS/Static.pm
@@ -405,7 +405,6 @@ share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/IsFresh.al
 share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/NewerThanDatafile.al
 share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/WriteCache.al
 share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/autosplit.ix
-share/tds/web_diary_dir/lib/auto/TDS/Cache/Display/initialize.al
 share/tds/web_diary_dir/lib/auto/TDS/Cache/Recent/GetCacheFilename.al
 share/tds/web_diary_dir/lib/auto/TDS/Cache/Recent/IsFresh.al
 share/tds/web_diary_dir/lib/auto/TDS/Cache/Recent/NewerThanDatafile.al
@@ -467,6 +466,7 @@ share/tds/web_diary_dir/styles/t-hermes/back.png
 share/tds/web_diary_dir/styles/t-hermes/skelton.html
 share/tds/web_diary_dir/styles/t-hermes/template.ph
 share/tds/web_diary_dir/styles/tak3/skelton.html
+share/tds/web_diary_dir/styles/tom/log_skelton.html
 share/tds/web_diary_dir/styles/tom/skelton.html
 share/tds/web_diary_dir/styles/tom/tawagoto-banner.jpg
 share/tds/web_diary_dir/styles/tom/template.ph
@@ -544,4 +544,6 @@ share/tds/web_diary_dir/url.cgi
 @dirrm share/tds/contrib/tdf2html
 @dirrm share/tds/contrib/mail2tdf
 @dirrm share/tds/contrib
+@dirrm share/doc/tds/dat
+@dirrm share/doc/tds
 @dirrm share/tds
