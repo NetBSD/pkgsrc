@@ -1,0 +1,2 @@
+xpmroot reads the Xpm file specified in the command line and displays it in
+the root window.
