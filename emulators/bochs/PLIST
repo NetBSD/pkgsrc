@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:15 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/13 18:03:52 fredb Exp $
 bin/bochs
 share/doc/html/bochs/00README
 share/doc/html/bochs/3rdparty.license.html
@@ -21,12 +21,18 @@ share/doc/html/bochs/guestNT.html
 share/doc/html/bochs/index.html
 share/doc/html/bochs/install.html
 share/doc/html/bochs/instrumentation.html
+share/doc/html/bochs/iodebug.html
 share/doc/html/bochs/mtools.html
+share/doc/html/bochs/smp-simulation.html
 share/doc/html/bochs/sound.html
 share/doc/html/bochs/undercon.gif
 share/doc/html/bochs/whatisbochs.html
 share/doc/html/bochs/win32.html
-share/bochs/bios/BIOS-bochs-990925a
+share/bochs/bios/BIOS-bochs-2-processors
+share/bochs/bios/BIOS-bochs-4-processors
+share/bochs/bios/BIOS-bochs-latest
+share/bochs/bios/VGABIOS-cbothamy-0.2a
+share/bochs/bios/VGABIOS-cbothamy-0.2a-README
 share/bochs/bios/VGABIOS-elpin-2.40
 share/bochs/bios/VGABIOS-elpin-LICENSE
 share/bochs/xfonts/fonts.dir
