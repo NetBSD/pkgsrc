@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/02/10 11:29:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/02/14 14:52:42 jmmv Exp $
 share/doc/docbook-xsl/ChangeLog
 share/doc/docbook-xsl/book.xsl
 share/doc/docbook-xsl/ch01s02.html
@@ -666,6 +666,7 @@ share/xsl/docbook/common/en.xml
 share/xsl/docbook/common/es.xml
 share/xsl/docbook/common/et.xml
 share/xsl/docbook/common/eu.xml
+share/xsl/docbook/common/fa.xml
 share/xsl/docbook/common/fi.xml
 share/xsl/docbook/common/fr.xml
 share/xsl/docbook/common/gentext.xsl
