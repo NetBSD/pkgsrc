@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2000/04/26 22:10:47 tron Exp $
+# $NetBSD: Makefile,v 1.71 2000/05/02 08:15:01 tron Exp $
 #
 
 DISTNAME=       fetchmail-5.3.8
@@ -18,6 +18,7 @@ CONFIGURE_ARGS+=--without-hesiod --with-ssl=${SSLBASE}
 CONFIGURE_ENV+=  LDFLAGS="${CFLAGS}"
 
 BUILD_DEFS+=	USE_INET6
+RESTRICTED=	"Crypto; export-controlled"
 
 .include "../../mk/bsd.prefs.mk"
 
