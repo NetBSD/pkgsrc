@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.203 2004/01/11 17:03:47 kim Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.204 2004/01/14 06:57:45 rh Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -84,6 +84,14 @@ PKGSRC_SLEEPSECS?= 5
 #  * run check-shlibs to see that all binaries will find their libs
 # Possible: defined, not defined
 # Default: not defined
+
+IGNORE_RECOMMENDED?=	no
+# ignore package prerequisite recommendations.  If this is set to
+# "no", all entries in RECOMMENDED will be added to DEPENDS.
+# If set to "yes", a warning will be printed if recommendations
+# are possibly ignored.
+# Possible: yes, no
+# Default: no
 
 #PKG_REGISTER_SHELLS= YES
 # Automatically register shells in /etc/shells

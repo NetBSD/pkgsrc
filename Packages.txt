@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.320 2003/12/14 21:47:32 kristerw Exp $
+# $NetBSD: Packages.txt,v 1.321 2004/01/14 06:57:45 rh Exp $
 ###########################################################################
 
 			==========================
@@ -2053,6 +2053,34 @@ Wildcard dependencies should be used with care.
 The -[0-9]* should be used instead of -* to avoid potentially
 ambiguous matches such as tk-postgresql matching a tk-* DEPEND.
 
+Wildcards can also be used to specify that a package will only build against
+a certain minimum version of a pre-requisite:
+
+	DEPENDS+=       tiff>=3.5.4:../../graphics/tiff
+
+This means that the package will build against version 3.5.4 of the tiff library
+or newer.  Such a dependency may be warranted if, for example, the API of the
+library has changed with version 3.5.4 and a package would not compile against
+an earlier version of tiff.
+
+Please note that such dependencies should only be updated if a package requires
+a newer pre-requisite, but not to denote recommendations such as security
+updates or ABI changes that do not prevent a package from building correctly.
+Such recommendations can be expressed using RECOMENDED:
+
+	RECOMMENDED+=   tiff>=3.6.1:../../graphics/tiff
+
+In addition to the above DEPENDS line, this denotes that while a package will
+build against tiff>=3.5.4, at least version 3.6.1 is recommended.  RECOMMENDED
+entries will be turned into dependencies unless explicitly ignored (in which
+case a warning will be printed).  Packages that are built with recommendations
+ignored may not be uploaded to ftp.netbsd.org by developers and should not be
+used across different systems that may have different versions of binary
+packages installed.
+
+For security fixes, please update the package vulnerabilities file as well as
+setting RECOMMENDED (see section 10.21 for more information).
+
 (c) If your package needs some executable to be able to run correctly, this
 is specified using the DEPENDS definition. The pkgsrc/print/lyx package needs
 to be able to execute the latex binary from the teTeX package when it runs,
@@ -2286,7 +2314,10 @@ Note to package developers: When a vulnerability is found, this should be
 noted in localsrc/security/advisories/pkg-vulnerabilities, and after the
 commit of that file, it should be copied to both
 /pub/NetBSD/packages/distfiles/pkg-vulnerabilities and vulnerabilities 
-on ftp.netbsd.org by localsrc/security/advisories/Makefile.
+on ftp.netbsd.org by localsrc/security/advisories/Makefile.  In addition, if
+a buildlink2.mk or buildlink3.mk file exists for an affected package, bumping
+PKGREVISION and creating a corresponding BUILDLINK_RECOMMENDED.<pkg> entry
+should be considered.
 
 
  10.22 What's the proper way to create an account from a package?
