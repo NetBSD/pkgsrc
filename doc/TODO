@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.688 2003/07/09 21:16:20 jmmv Exp $
+$NetBSD: TODO,v 1.689 2003/07/09 21:54:37 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -116,7 +116,7 @@ Suggested package updates
 	o gawk-3.1.2
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
-	o gdm-2.4.1.1
+	o gdm-2.4.1.3
 	o geda-20030525
 	o generator-0.35
 	o getmail-3.1.7 [pkg/22007]
