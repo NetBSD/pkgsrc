@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/21 07:45:49 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/18 04:26:54 garbled Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -15,6 +15,7 @@ NO_WRKSUBDIR=	yes
 NO_CONFIGURE=	yes
 DIST_SUBDIR=	${PKGNAME}
 
+OSVERSION_SPECIFIC=	yes
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 .include "../../mk/bsd.prefs.mk"
