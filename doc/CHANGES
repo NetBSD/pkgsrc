@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8299 2004/12/05 18:29:01 he Exp $
+$NetBSD: CHANGES,v 1.8300 2004/12/05 18:39:45 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5802,3 +5802,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-HTML-Mason to 1.28 [he 2004-12-05]
 	Updated p5-HTML-FillInForm to 1.04 [he 2004-12-05]
 	Updated p5-HTML-Format to 2.04 [he 2004-12-05]
+	Updated p5-HTML-Parser to 3.42 [he 2004-12-05]
