@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:23:57 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/06 22:13:14 wiz Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.1
@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}
 USE_PERL5=	run
 USE_PKGINSTALL=	yes
 USE_DB185=	yes
+USE_BUILDLINK3=	yes
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
@@ -44,5 +45,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pkg_filecheck.conf \
 		${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf
 
-.include "../../databases/db/buildlink2.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
