@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/03/12 05:31:02 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/18 15:33:21 cube Exp $
 
 DISTNAME=	volume-0.8
 PKGNAME=	gkrellm-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://gkrellm.luon.net/files/
 
