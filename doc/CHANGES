@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4373 2004/01/06 15:53:41 hubertf Exp $
+$NetBSD: CHANGES,v 1.4374 2004/01/06 16:31:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -78,3 +78,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added chmlib-0.31 [wiz 2004-01-06]
 	Added xchm-0.8 [wiz 2004-01-06]
 	Updated pkg_install to 20040106 [hubertf 2004-01-06]
+	Updated screen to 4.0.2 [wiz 2004-01-06]
