@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.23 2004/10/03 00:14:56 tv Exp $
-#
+# $NetBSD: Makefile,v 1.24 2004/11/19 11:05:54 adam Exp $
 
-DISTNAME=	pl221src
-PKGNAME=	ploticus-2.21
-PKGREVISION=	2
+DISTNAME=	pl230src
+PKGNAME=	ploticus-2.30
 CATEGORIES=	graphics
 MASTER_SITES=	http://ploticus.sourceforge.net/download/
 
 MAINTAINER=	rh@NetBSD.org
-HOMEPAGE=	http://ploticus.sourceforge.net/doc/Welcome.html
+HOMEPAGE=	http://ploticus.sourceforge.net/
 COMMENT=	Versatile data visualization engine
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
-NO_CONFIGURE=	YES
-USE_X11=	YES
-USE_BUILDLINK3=	YES
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
+NO_CONFIGURE=		yes
+USE_X11=		yes
+USE_BUILDLINK3=		yes
 
 ALL_TARGET=	ploticus
 MANSRC=		${WRKDIR}/${DISTNAME}/man
@@ -41,7 +39,7 @@ do-install:
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/freetype-lib/buildlink3.mk"
+#.include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
