@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2004/02/15 12:12:32 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/15 18:36:23 jmmv Exp $
 #
 
 DISTNAME=	gnome2-dirs-${GNOME_DIRS_VERSION}
 CATEGORIES=	misc gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
-PKGREVISION=	1
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	# empty
@@ -33,6 +32,7 @@ GNOME_DIRS=	${GNOME_DIRS_COMMON}
 GNOME_DIRS+=	share/application-registry
 GNOME_DIRS+=	share/control-center-2.0
 GNOME_DIRS+=	share/control-center-2.0/capplets
+GNOME_DIRS+=	share/control-center-2.0/icons
 GNOME_DIRS+=	share/gnome-2.0
 GNOME_DIRS+=	share/gnome-2.0/ui
 GNOME_DIRS+=	share/gnome/wm-properties
