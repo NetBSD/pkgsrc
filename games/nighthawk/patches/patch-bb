@@ -1,3 +1,5 @@
+$NetBSD: patch-bb,v 1.2 1999/02/10 15:09:56 frueauf Exp $
+
 --- src_sound/dsp_mixxer.c.BAK	Sun Feb  7 02:24:23 1999
 +++ src_sound/dsp_mixxer.c	Sun Feb  7 02:26:49 1999
 @@ -23,6 +23,8 @@
