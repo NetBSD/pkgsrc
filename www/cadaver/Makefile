@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2002/01/13 21:24:44 agc Exp $
+# $NetBSD: Makefile,v 1.13 2002/02/28 18:23:57 jlam Exp $
 
-DISTNAME=		cadaver-0.19.0
+DISTNAME=		cadaver-0.19.1
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/cadaver/
 
@@ -8,15 +8,15 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.webdav.org/cadaver/
 COMMENT=		command-line WebDAV client
 
-USE_GMAKE=		# defined
-USE_BUILDLINK_ONLY=	# defined
+USE_GMAKE=		YES
+USE_BUILDLINK_ONLY=	YES
 
 ALL_TARGET=		cadaver
-GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_DIR}
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-netrc
-
-LIBS+=			${LIBGETOPT}
+CONFIGURE_ARGS+=	--with-included-neon
+CONFIGURE_ARGS+=	--with-libxml1
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 
 # We don't need curses, just termcap.
 CONFIGURE_ENV+=		ac_cv_lib_curses_tputs=no
@@ -35,8 +35,7 @@ pre-build:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/cadaver.1 ${PREFIX}/man/man1
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/libgetopt/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"
-.include "../../www/neon/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
