@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1 2004/02/13 11:18:29 jmmv Exp $
+
+--- src/UploadQueue.cpp.orig	2004-02-10 02:36:28.000000000 +0100
++++ src/UploadQueue.cpp
+@@ -15,6 +15,8 @@
+ //along with this program; if not, write to the Free Software
+ //Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
++#include <config.h>
++
+ #include "sys.h"
+ #include <cstring>
+ #include <cmath>			// Needed for std::exp
+@@ -335,11 +337,10 @@ bool CUploadQueue::AcceptNewClient()
+ 	} else {
+ 		uint16 nMaxSlots = 0;
+ 		if (theApp.glob_prefs->GetMaxUpload() >= 10) {
+-#if defined(__GNUC__) && __GNUC__ >= 3			
+-			nMaxSlots = (uint16)round((float)theApp.glob_prefs->GetMaxUpload() / kBpsUpPerClient);
+-#endif
+-#if !defined(__GNUC__) || __GNUC__ < 3
++#if defined(HAVE_FLOOR)
+ 			nMaxSlots = (uint16)floor((float)theApp.glob_prefs->GetMaxUpload() / kBpsUpPerClient);
++#else
++			nMaxSlots = (uint16)round((float)theApp.glob_prefs->GetMaxUpload() / kBpsUpPerClient);
+ #endif			
+ 			if (nMaxSlots < MIN_UP_CLIENTS_ALLOWED) {
+ 				nMaxSlots=MIN_UP_CLIENTS_ALLOWED;
