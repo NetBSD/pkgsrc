@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1518 2004/10/13 17:52:46 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1519 2004/10/13 18:42:19 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -390,7 +390,7 @@ CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
 .if defined(_OPSYS_LIBTOOL_REQD)
 LIBTOOL_REQD=		${_OPSYS_LIBTOOL_REQD}
 .else
-LIBTOOL_REQD?=		1.5.10
+LIBTOOL_REQD?=		1.5.10nb1
 .endif
 #
 # PKG_LIBTOOL is the path to the libtool script installed by libtool-base.
