@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2000/01/11 01:15:37 tron Exp $
+@comment $NetBSD: PLIST,v 1.15 2000/06/01 17:54:26 rh Exp $
 bin/mc
 bin/mcedit
 bin/mcmfmt
@@ -10,6 +10,7 @@ lib/mc/bin/mc.sh
 lib/mc/bin/mcfn_install
 lib/mc/desktop-scripts/README.desktop
 lib/mc/desktop-scripts/startup.links
+lib/mc/edit.indent.rc
 lib/mc/extfs/README
 lib/mc/extfs/a
 lib/mc/extfs/deb
@@ -38,6 +39,7 @@ lib/mc/mc.ext
 lib/mc/mc.hint
 lib/mc/mc.hint.cs
 lib/mc/mc.hint.es
+lib/mc/mc.hint.ru
 lib/mc/mc.hlp
 lib/mc/mc.lib
 lib/mc/mc.menu
@@ -46,7 +48,7 @@ lib/mc/syntax/ada95.syntax
 lib/mc/syntax/c.syntax
 lib/mc/syntax/changelog.syntax
 lib/mc/syntax/diff.syntax
-lib/mc/syntax/diffc.syntax
+lib/mc/syntax/fortran.syntax
 lib/mc/syntax/html.syntax
 lib/mc/syntax/java.syntax
 lib/mc/syntax/latex.syntax
@@ -96,6 +98,9 @@ ${LOCALEBASE}/locale/sv/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/wa/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/uk/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/sk/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/tr/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/zh_CN.GB2312/LC_MESSAGES/mc.mo
 @dirrm lib/mc/term
 @dirrm lib/mc/syntax
 @dirrm lib/mc/extfs

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2000/02/05 06:55:29 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2000/06/01 17:54:23 rh Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
-DISTNAME=	mc-4.5.42
+DISTNAME=	mc-4.5.50
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/mc/}
 
