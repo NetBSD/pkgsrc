@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/25 15:58:19 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/01 14:00:07 drochner Exp $
 #
 
 DISTNAME=		m2crypto-0.11
@@ -17,6 +17,6 @@ PYTHON_VERSIONS_ACCEPTED=	22pth 21pth
 USE_OPENSSL_VERSION=	OPENSSL_VERSION_097B
 
 .include "../../lang/python/extension.mk"
-.include "../../devel/swig-python/buildlink2.mk"
+.include "../../devel/swig-build/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
