@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/15 07:01:14 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/27 00:33:54 uebayasi Exp $
 #
 
 DISTNAME=	IIIMECF-0.6
 PKGNAME=	iiimecf-0.6
 CATEGORIES=	japanese inputmethod
-MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/IIICF/
+MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/IIIM/
 
 MAINTAINER=	uebayasi@netbsd.org
 #HOMEPAGE=
