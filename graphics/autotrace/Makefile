@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2001/10/24 22:10:59 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/01/03 14:03:01 wiz Exp $
 #
 
-DISTNAME=	autotrace-0.26
+DISTNAME=	autotrace-0.29
 CATEGORIES=	graphics cad
-MASTER_SITES=	http://homepages.go.com/homepages/m/a/r/martweb/ \
-		ftp://autotrace.sourceforge.net/pub/autotrace/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=autotrace/}
 
 MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://homepages.go.com/homepages/m/a/r/martweb/AutoTrace.htm
+HOMEPAGE=	http://autotrace.sourceforge.net/
 COMMENT=	convert bitmap to vector graphics
 
 USE_BUILDLINK_ONLY=	YES
