@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1405 2004/02/14 18:29:17 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1406 2004/02/16 11:28:13 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -4565,7 +4565,7 @@ _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/dir$$/)
 .endif
 .if !empty(INFO_FILES)
 .  for _f_ in ${INFO_FILES}
-_PRINT_PLIST_AWK_IGNORE+=      || ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/${_f_}(-[0-9]+)?$$/)
+_PRINT_PLIST_AWK_IGNORE+=      || ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/${_f_:S|+|\+|g}(-[0-9]+)?$$/)
 .  endfor
 .endif
 
@@ -5018,7 +5018,7 @@ BEGIN {									\
 	sub("^", "${LS} '\''${PREFIX}/${INFO_DIR}/", cmd);		\
 	sub("$$", "'\''*", cmd);					\
 	while ((cmd | getline l) > 0) {					\
-		if (match(l, ".*/${_f_}(-[0-9]+)?$$")) {		\
+		if (match(l, ".*/${_f_:S|+|\\\+|g}(-[0-9]+)?$$")) {	\
 			sub("^${PREFIX}/", "", l);			\
 			print l;					\
 		}							\
