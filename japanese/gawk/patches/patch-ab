@@ -1,21 +1,31 @@
---- gawk-2.15.4/Makefile.bsd44-orig	Wed Apr  5 16:13:10 1995
-+++ gawk-2.15.4/Makefile.bsd44	Wed Apr  5 16:43:45 1995
-@@ -1,4 +1,4 @@
--PROG=	awk
-+PROG=	gawk
- SRCS=	main.c eval.c builtin.c msg.c iop.c io.c field.c getopt1.c \
- 	getopt.c array.c \
- 	node.c version.c missing.c re.c awk.c regex.c dfa.c \
-@@ -6,10 +6,8 @@
- DPADD=	${LIBM}
- LDADD=	-lm
- CFLAGS+=-I${.CURDIR} -DGAWK -DEUC
--BINDIR=	/usr/bin
--MANDIR=	/usr/share/man/cat
-+BINDIR=	/usr/local/bin
-+MANDIR=	/usr/local/man/man
- CLEANFILES+=awk.c y.tab.h awk.0
+$NetBSD: patch-ab,v 1.2 1999/06/08 09:19:50 sakamoto Exp $
+
+--- awklib/Makefile.in.orig	Tue Jun  8 10:31:14 1999
++++ awklib/Makefile.in	Tue Jun  8 10:38:52 1999
+@@ -34,7 +34,7 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ exec_suffix = @exec_suffix@
+-binprefix =
++binprefix = j
+ manprefix =
  
--awk.0: gawk.1
--      nroff -man gawk.1 > awk.0
- .include <bsd.prog.mk>
+ bindir = @bindir@
+@@ -75,7 +75,7 @@
+ 	sed 's;/usr/local/libexec/awk;$(libexecdir);' < groupawk.in) > group.awk
+ 
+ install: igawk $(AUXPROGS) $(AUXAWK)
+-	$(INSTALL_PROGRAM) igawk $(bindir)/igawk
++	$(INSTALL_PROGRAM:-s=) igawk $(bindir)/$(binprefix)igawk
+ 	for i in $(AUXPROGS) ; do \
+ 		$(INSTALL_PROGRAM) $$i $(libexecdir)/$$i ; \
+ 	done
+@@ -87,7 +87,7 @@
+ # libexecdir and datadir are removed in the top level Makefile's uninstall
+ uninstall:
+ 	rm -fr $(libexecdir)/* $(datadir)/*
+-	rm -f $(bindir)/igawk
++	rm -f $(bindir)/$(binprefix)igawk
+ 
+ clean:
+ 	rm -f $(AUXPROGS) $(AUXAWK) igawk *~

@@ -1,2 +1,4 @@
-MD5 (gawk-2.15.6.tar.gz) = 62ad283de0ca65365481a9dc05bc367c
-MD5 (gawk-2.15.6-mb1.04.diff.gz) = bcf13277edf459b43269eeba1e70be38
+$NetBSD: md5,v 1.2 1999/06/08 09:19:50 sakamoto Exp $
+
+MD5 (gawk-3.0.3.tar.gz) = 531c1ba966fe072230e75bbad6f4dad8
+MD5 (gawkmb111.diff.gz) = 6c274f832d29521d343417f925f9b56c
