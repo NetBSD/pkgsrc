@@ -1,9 +1,0 @@
-$NetBSD: patch-ce,v 1.1 1998/08/25 12:53:13 agc Exp $
-
---- routines/xsci/wf_w_file.c.orig	Wed Aug 19 15:35:31 1998
-+++ routines/xsci/wf_w_file.c	Wed Aug 19 15:35:56 1998
-@@ -1,3 +1,3 @@
--#define FSIZE 200
-+#define FSIZE 1024
- char     cur_dir[FSIZE];
- char     cur_filename[FSIZE];

@@ -1,14 +1,7 @@
-$NetBSD: patch-af,v 1.1 1998/08/25 12:53:08 agc Exp $
+$NetBSD: patch-af,v 1.2 1999/03/05 11:22:34 frueauf Exp $
 
---- routines/sun/link.c.orig	Fri Jul 10 09:12:50 1998
-+++ routines/sun/link.c	Mon Aug 24 12:13:06 1998
-@@ -43,5 +43,5 @@
- } Epoints;
- 
--#define TMPL 25
-+#define TMPL 64
- 
- typedef struct {
+--- routines/sun/link.c.orig	Tue Aug 25 04:24:09 1998
++++ routines/sun/link.c	Sat Dec 19 00:53:28 1998
 @@ -120,9 +120,9 @@
  
  

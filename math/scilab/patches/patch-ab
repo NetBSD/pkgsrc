@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 1998/08/25 12:53:08 agc Exp $
+$NetBSD: patch-ab,v 1.2 1999/03/05 11:22:34 frueauf Exp $
 
---- ./routines/graphics/periFig.c.orig	Sat Jul 18 22:31:39 1998
-+++ ./routines/graphics/periFig.c	Sat Jul 18 22:31:38 1998
-@@ -64,5 +64,11 @@
+--- routines/graphics/periFig.c.orig	Sun Dec 13 21:20:36 1998
++++ routines/graphics/periFig.c	Sun Dec 13 21:21:44 1998
+@@ -47,5 +47,11 @@
  #define M_PI	3.14159265358979323846
  #else
 +#if defined(HAVE_VALUES_H)

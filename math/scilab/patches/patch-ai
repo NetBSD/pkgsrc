@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 1998/08/25 12:53:08 agc Exp $
+$NetBSD: patch-ai,v 1.2 1999/03/05 11:22:35 frueauf Exp $
 
 --- ./routines/default/scimem.c.orig	Mon Jul 20 07:50:29 1998
 +++ ./routines/default/scimem.c	Sat Aug  8 13:13:30 1998
@@ -16,7 +16,7 @@ $NetBSD: patch-ai,v 1.1 1998/08/25 12:53:08 agc Exp $
 +#include <floatingpoint.h>
 +#endif
 +
-+#if defined(netbsd) || defined(freebsd)
++#if (defined(netbsd) && !defined(__alpha__)) || defined(freebsd)
 +void C2F(nofpex)()
 +{
 +  fpsetmask(0);   /* Don't dump core on FPE return Inf or NaN */
