@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/29 04:04:31 itojun Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/01 08:14:43 wiz Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -150,8 +150,8 @@ include/isccc/result.h
 include/isccc/sexpr.h
 include/isccc/symtab.h
 include/isccc/symtype.h
-include/isccc/types.h    
-include/isccc/util.h     
+include/isccc/types.h
+include/isccc/util.h
 include/isccfg/cfg.h
 include/isccfg/check.h
 include/isccfg/log.h
