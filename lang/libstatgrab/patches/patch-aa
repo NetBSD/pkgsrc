@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/05/20 20:45:40 xtraeme Exp $
+
+--- configure.bak	2004-05-20 13:33:41.000000000 +0100
++++ configure	2004-05-20 13:35:00.000000000 +0100
+@@ -20421,7 +20421,7 @@
+ # Set things up for different OS's
+ # We define the name of the OS so the code can act accordingly
+ # We also need to add the right LDFLAGS
+-case $host_os in
++case $build_os in
+ solaris2.[6-7])
+ 
+ for ac_header in kstat.h
