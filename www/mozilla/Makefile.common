@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2004/02/18 13:33:41 jlam Exp $
+# $NetBSD: Makefile.common,v 1.35 2004/02/19 13:24:23 jmmv Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -14,7 +14,7 @@ FILESDIR=	"../../www/mozilla/files"
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 
 WRKSRC=		${WRKDIR}/mozilla
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GCC_SHLIB=	yes
 USE_LANGUAGES=	c c++
 USE_PERL5=	build
@@ -41,17 +41,17 @@ AUTOCONF_REQD= 2.13
 
 UNLIMIT_RESOURCES=	datasize memorysize stacksize
 
-.include	"../../graphics/freetype2/buildlink2.mk"
-.include	"../../graphics/jpeg/buildlink2.mk"
-.include	"../../graphics/png/buildlink2.mk"
+.include	"../../graphics/freetype2/buildlink3.mk"
+.include	"../../graphics/jpeg/buildlink3.mk"
+.include	"../../graphics/png/buildlink3.mk"
 .ifdef MOZILLA_USE_GTK2
-.include	"../../net/libIDL/buildlink2.mk"
-.include	"../../x11/gtk2/buildlink2.mk"
+.include	"../../net/libIDL/buildlink3.mk"
+.include	"../../x11/gtk2/buildlink3.mk"
 CONFIGURE_ARGS+= --enable-default-toolkit=gtk2
 .else
-.include	"../../graphics/gdk-pixbuf/buildlink2.mk"
-.include	"../../net/ORBit/buildlink2.mk"
-.include	"../../x11/gtk/buildlink2.mk"
+.include	"../../graphics/gdk-pixbuf/buildlink3.mk"
+.include	"../../net/ORBit/buildlink3.mk"
+.include	"../../x11/gtk/buildlink3.mk"
 CONFIGURE_ARGS+= --enable-default-toolkit=gtk
 .endif
 
@@ -147,7 +147,7 @@ post-build:
 do-install:
 	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/moz-install
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
 CONFIGURE_ARGS+= --without-pthreads
@@ -158,8 +158,8 @@ CONFIGURE_ARGS+= --with-pthreads
 .if ${MOZILLA_USE_XFT} == "YES" && exists(${X11BASE}/include/X11/Xdefs.h)
 CONFIGURE_ARGS+=	--enable-xft
 # pkgconfig defaults to a "build" dependency, which is what we want.
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../fonts/Xft2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
 .endif
 
 .include "../../mk/autoconf.mk"
