@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.28 2002/10/21 15:16:49 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2003/01/15 07:48:06 rh Exp $
 #
 
-DISTNAME=	gcombust-0.1.49
-CATEGORIES=	x11 sysutils
-MASTER_SITES=	${HOMEPAGE}
+DISTNAME=		gcombust-0.1.53
+CATEGORIES=		x11 sysutils
+MASTER_SITES=		${HOMEPAGE}
 
-MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://www.abo.fi/~jmunsin/gcombust/
-COMMENT=	Graphical frontend for CD mastering (mkhybrid, cdrecord, ...)
+MAINTAINER=		rh@netbsd.org
+HOMEPAGE=		http://www.abo.fi/~jmunsin/gcombust/
+COMMENT=		Graphical frontend for CD mastering (mkisofs, cdrecord, ...)
 
-DEPENDS+=	cdrecord>=1.10:../../sysutils/cdrecord
-DEPENDS+=	cdlabelgen-[0-9]*:../../graphics/cdlabelgen
-DEPENDS+=	gv-[0-9]*:../../print/gv
+DEPENDS+=		cdrecord>=1.10:../../sysutils/cdrecord
+DEPENDS+=		cdlabelgen-[0-9]*:../../graphics/cdlabelgen
+DEPENDS+=		gv-[0-9]*:../../print/gv
 
-USE_BUILDLINK2=	YES
-GNU_CONFIGURE=	YES
+USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
+GNU_CONFIGURE=		YES
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
