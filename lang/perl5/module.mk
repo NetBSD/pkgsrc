@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.15 2003/09/13 08:25:03 jlam Exp $
+# $NetBSD: module.mk,v 1.16 2003/09/13 13:53:31 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -34,7 +34,9 @@ _PERL5_MODULE_MK=	# defined
 BUILDLINK_DEPMETHOD.perl+=	full
 
 .if !defined(NO_BUILDLINK)
-.  if empty(USE_BUILDLINK2:M[nN][oO])
+.  if empty(USE_BUILDLINK3:M[nN][oO])
+.    include "../../lang/perl5/buildlink3.mk"
+.  elif empty(USE_BUILDLINK2:M[nN][oO])
 .    include "../../lang/perl5/buildlink2.mk"
 .  endif
 .endif
@@ -65,6 +67,11 @@ do-configure: perl5-configure
 .  endif
 .endif
 
+_PERL5_SITEVARS=							\
+	INSTALLSITEBIN INSTALLSITELIB INSTALLSITEARCH			\
+	INSTALLSITEMAN1DIR INSTALLSITEMAN3DIR				\
+	SITELIBEXP SITEARCHEXP
+
 .if !defined(_PERL5_SITEPREFIX)
 .  if exists(${PERL5})
 _PERL5_SITEPREFIX!=	\
@@ -82,20 +89,20 @@ _PERL5_VAR.INSTALLSITEMAN3DIR=	installsiteman3dir
 _PERL5_VAR.SITELIBEXP=		sitelibexp
 _PERL5_VAR.SITEARCHEXP=		sitearchexp
 
-.    for _var_ in							\
-	INSTALLSITEBIN INSTALLSITELIB INSTALLSITEARCH			\
-	INSTALLSITEMAN1DIR INSTALLSITEMAN3DIR				\
-	SITELIBEXP SITEARCHEXP
+.    for _var_ in ${_PERL5_SITEVARS}
 _PERL5_SUB_${_var_}!=	\
 	eval `${PERL5} -V:${_PERL5_VAR.${_var_}} 2>/dev/null`;		\
 	${ECHO} $${${_PERL5_VAR.${_var_}}} |				\
 	${SED} -e "s,^${_PERL5_SITEPREFIX}/,,"
-_PERL5_${_var_}=	${PREFIX}/${_PERL5_SUB_${_var_}}
-MAKEFLAGS+=	${_var_}="${_PERL5_${_var_}}"
-MAKE_FLAGS+=	${_var_}="${_PERL5_${_var_}}"
+MAKEFLAGS+=	_PERL5_SUB_${_var_}="${_PERL5_SUB_${_var_}}"
 .    endfor
 .  endif
 .endif
+
+.for _var_ in ${_PERL5_SITEVARS}
+_PERL5_${_var_}=	${PREFIX}/${_PERL5_SUB_${_var_}}
+MAKE_FLAGS+=		${_var_}="${_PERL5_${_var_}}"
+.endfor
 
 .if defined(DEFAULT_VIEW.perl)
 DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.perl}
