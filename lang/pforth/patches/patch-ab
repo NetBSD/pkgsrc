@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/01/19 22:27:00 jtb Exp $
+
+--- csrc/pf_main.c.orig	Fri Jan 19 21:03:56 2001
++++ csrc/pf_main.c
+@@ -42,7 +42,7 @@
+ 
+ int main( int argc, char **argv )
+ {
+-	const char *DicName = "pforth.dic";
++	const char *DicName = "@PREFIX@/lib/pforth/pforth.dic";
+ 	const char *SourceName = NULL;
+ 	char IfInit = FALSE;
+ 	char *s;

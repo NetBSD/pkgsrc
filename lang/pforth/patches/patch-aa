@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/19 22:27:00 jtb Exp $
+
+--- makefile.orig	Tue Apr  7 00:43:01 1998
++++ makefile
+@@ -27,7 +27,7 @@
+         -Wmissing-declarations
+         
+ CCOPTS = -DPF_SUPPORT_FP $(FULL_WARNINGS)
+-COMPILER = gcc
++COMPILER = $(CC)
+ 
+ EMBCCOPTS = -DPF_NO_INIT -DPF_NO_MALLOC -DPF_NO_FILEIO \
+     -DPF_NO_CLIB -DPF_STATIC_DIC
+@@ -44,10 +44,10 @@
+ COMPILE = $(COMPILER) $(CCOPTS) $(CDEFS)
+ 
+ ${OBJECTDIR}/%.o:  $(PFINCLUDES)  ${SOURCEDIR}/%.c
+-	$(COMPILE) -O -o ${OBJECTDIR}/$*.o -c ${SOURCEDIR}/$*.c
+-	
++	$(COMPILE) $(CFLAGS) -o ${OBJECTDIR}/$*.o -c ${SOURCEDIR}/$*.c
++
+ ${EMBOBJECTDIR}/%.o:  $(PFINCLUDES) ${SOURCEDIR}/%.c ${SOURCEDIR}/pfdicdat.h 
+-	$(COMPILE) -O -o ${EMBOBJECTDIR}/$*.o -c ${SOURCEDIR}/$*.c $(EMBCCOPTS)
++	$(COMPILE) $(CFLAGS) -o ${EMBOBJECTDIR}/$*.o -c ${SOURCEDIR}/$*.c $(EMBCCOPTS)
+ 
+ all: pforth pforth.dic
+ 
+@@ -62,26 +62,26 @@
+ 	echo ${PFOBJS}
+ 	echo "EMBEDDED OBJECT FILES ------------------"
+ 	echo ${PFEMBOBJS}
+-	
++
+ # build pforth by compiling 'C' source
+ pforth: $(PFINCLUDES) $(PFOBJS)
+ 	$(COMPILER) $(PFOBJS) -lm -o pforth
+ 
+ # build basic dictionary by running newly built pforth and including system.fth
+ pforth.dic: pforth
+-	pforth -i system.fth
++	./pforth -i system.fth
+ 
+ ${SOURCEDIR}/pfdicdat.h: pforth pforth.dic
+ 	@(echo 'INCLUDE utils/savedicd.fth'; \
+           echo 'SDAD';         \
+           echo 'bye')                                 | \
+-	pforth -dpforth.dic
++	./pforth -dpforth.dic
+ 	cp pfdicdat.h ${SOURCEDIR}
+ 
+ 
+ pfemb: $(PFINCLUDES) $(PFEMBOBJS)
+ 	$(COMPILER) $(PFEMBOBJS) -lm -o pfemb
+-	
++
+ clean:
+ 	rm -f $(PFOBJS) $(PFEMBOBJS) pforth *.dic core ${SOURCEDIR}/pfdicdat.h pfemb
+ 
