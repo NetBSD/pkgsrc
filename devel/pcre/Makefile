@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/18 20:48:43 ad Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/19 00:55:35 ad Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/07/12 22:59:19 steve Exp $
 
 DISTNAME=       pcre-2.07
@@ -18,6 +18,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pgrep ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/libpcre.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/libpcreposix.a ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/pcreposix.h ${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/pcre.h ${PREFIX}/include
 	${INSTALL_MAN} ${WRKSRC}/pcre.3 ${PREFIX}/man/man3
 	${INSTALL_MAN} ${WRKSRC}/pcreposix.3 ${PREFIX}/man/man3
