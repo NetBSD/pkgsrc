@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2003/09/10 23:43:36 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.5 2003/09/10 23:43:36 dmcmahill Exp $
 
---- scheme/gnet-PCBboard.scm.orig	Sun Aug 24 01:36:06 2003
-+++ scheme/gnet-PCBboard.scm
-@@ -134,7 +134,8 @@
+--- scheme/gnet-gsch2pcb.scm.orig	Wed Sep 10 16:26:08 2003
++++ scheme/gnet-gsch2pcb.scm
+@@ -133,7 +133,8 @@
  ;;
  ;;
  
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.7 2003/09/10 23:43:36 dmcmahill Exp $
  
  ;; To emulate popen. Guileish again.
  ; Needed after guile ver. 1.3.2. To save 1.3a users, wrap it in.
-@@ -153,7 +154,7 @@
+@@ -150,7 +151,7 @@
  ;; Original pipe command commented out by AVH (bugfix by Rich Walker)
  ;;  (let ((pipe (open-output-pipe (string-append "m4 " *m4-pcbdir* "/common.m4 - >> " output-filename))))
  ;; Fixed pipe command (AVH 1/27/02)
@@ -20,4 +20,4 @@ $NetBSD: patch-aa,v 1.7 2003/09/10 23:43:36 dmcmahill Exp $
 +   (let ((pipe (open-output-pipe (string-append "gm4 -d -I" *m4-pcbdir* " -I" *m4-pcbconfdir* " -I$HOME/.pcb -I. " *m4-pcbdir* "/common.m4 - >> " output-filename))))
  
  
-        ;; packages is a list with the different uref value
+        ;; packages is a list with the different refdes value
