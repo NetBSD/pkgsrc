@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/12 13:03:30 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/12/14 19:51:04 jmmv Exp $
 include/libgnomeprint-2.2/libgnomeprint/gnome-font-face.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-font.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-glyphlist.h
@@ -12,6 +12,7 @@ include/libgnomeprint-2.2/libgnomeprint/gnome-rfont.h
 include/libgnomeprint-2.2/libgnomeprint/gp-gc.h
 include/libgnomeprint-2.2/libgnomeprint/libgnomeprint-enum-types.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-font-private.h
+include/libgnomeprint-2.2/libgnomeprint/private/gnome-fontmap.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-glyphlist-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-config-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-private.h
@@ -31,46 +32,49 @@ include/libgnomeprint-2.2/libgnomeprint/private/gpa-utils.h
 lib/libgnomeprint-2-2.a
 lib/libgnomeprint-2-2.la
 lib/libgnomeprint-2-2.so
-lib/libgnomeprint-2-2.so.0
-lib/libgnomeprint-2-2.so.0.0
+lib/libgnomeprint-2-2.so.1
+lib/libgnomeprint-2-2.so.1.0
+${USE_CUPS}lib/libgnomeprint/${PKGVERSION}/modules/libgnomeprintcups.a
+${USE_CUPS}lib/libgnomeprint/${PKGVERSION}/modules/libgnomeprintcups.la
+${USE_CUPS}lib/libgnomeprint/${PKGVERSION}/modules/libgnomeprintcups.so
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-custom.a
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-custom.la
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-custom.so
-lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-custom.so.0
-lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-custom.so.0.0
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-file.a
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-file.la
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-file.so
-lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-file.so.0
-lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-file.so.0.0
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-lpr.a
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-lpr.la
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-lpr.so
-lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-lpr.so.0
-lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-lpr.so.0.0
 lib/pkgconfig/libgnomeprint-2.2.pc
-share/doc/html/libgnomeprint-2.2/index.html
-share/doc/html/libgnomeprint-2.2/index.sgml
-share/doc/html/libgnomeprint-2.2/libgnomeprint-building.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-compiling.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-gnome-font-face.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-gnome-font.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-gnome-glyphlist.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-gnome-pgl.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-gnome-print-config.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-gnome-print-job.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-gnome-print-paper.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-gnome-print-unit.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-gnome-print.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-gnome-rfont.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint-resources.html
-share/doc/html/libgnomeprint-2.2/libgnomeprint.html
-share/doc/html/libgnomeprint-2.2/libgnomeprintunsorted.html
+share/doc/html/libgnomeprint/home.png
+share/doc/html/libgnomeprint/index.html
+share/doc/html/libgnomeprint/index.sgml
+share/doc/html/libgnomeprint/left.png
+share/doc/html/libgnomeprint/libgnomeprint-building.html
+share/doc/html/libgnomeprint/libgnomeprint-compiling.html
+share/doc/html/libgnomeprint/libgnomeprint-gnome-font-face.html
+share/doc/html/libgnomeprint/libgnomeprint-gnome-font.html
+share/doc/html/libgnomeprint/libgnomeprint-gnome-glyphlist.html
+share/doc/html/libgnomeprint/libgnomeprint-gnome-pgl.html
+share/doc/html/libgnomeprint/libgnomeprint-gnome-print-config.html
+share/doc/html/libgnomeprint/libgnomeprint-gnome-print-job.html
+share/doc/html/libgnomeprint/libgnomeprint-gnome-print-paper.html
+share/doc/html/libgnomeprint/libgnomeprint-gnome-print-unit.html
+share/doc/html/libgnomeprint/libgnomeprint-gnome-print.html
+share/doc/html/libgnomeprint/libgnomeprint-gnome-rfont.html
+share/doc/html/libgnomeprint/libgnomeprint-resources.html
+share/doc/html/libgnomeprint/libgnomeprint.html
+share/doc/html/libgnomeprint/libgnomeprintunsorted.html
+share/doc/html/libgnomeprint/right.png
+share/doc/html/libgnomeprint/up.png
 share/libgnomeprint/${PKGVERSION}/globals.xml
 share/libgnomeprint/${PKGVERSION}/models/GNOME-GENERIC-PS.xml
 share/libgnomeprint/${PKGVERSION}/models/GNOME-PDF-WRITER.xml
+share/libgnomeprint/${PKGVERSION}/models/uninstalled/GNOME-META.xml
 share/libgnomeprint/${PKGVERSION}/printers/GENERIC.xml
 share/libgnomeprint/${PKGVERSION}/printers/PDF-WRITER.xml
+share/libgnomeprint/${PKGVERSION}/printers/uninstalled/META.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgnomeprint-2.2.mo
@@ -79,6 +83,7 @@ ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/libgnomeprint-2.2.mo
@@ -96,7 +101,10 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libgnomeprint-2.2.mo
@@ -109,19 +117,25 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libgnomeprint-2.2.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnomeprint-2.2.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnomeprint-2.2.mo
+@dirrm share/libgnomeprint/${PKGVERSION}/printers/uninstalled
 @dirrm share/libgnomeprint/${PKGVERSION}/printers
+@dirrm share/libgnomeprint/${PKGVERSION}/models/uninstalled
 @dirrm share/libgnomeprint/${PKGVERSION}/models
 @dirrm share/libgnomeprint/${PKGVERSION}
 @dirrm share/libgnomeprint
-@dirrm share/doc/html/libgnomeprint-2.2
+@dirrm share/doc/html/libgnomeprint
 @dirrm lib/libgnomeprint/${PKGVERSION}/modules/transports
 @dirrm lib/libgnomeprint/${PKGVERSION}/modules
 @dirrm lib/libgnomeprint/${PKGVERSION}
