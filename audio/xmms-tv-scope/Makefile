@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/04/23 02:22:26 jmc Exp $
+# $NetBSD: Makefile,v 1.4 2003/04/27 20:29:17 cjep Exp $
 #
 
 DISTNAME=	tv_scope-0.0.2
@@ -15,7 +15,7 @@ USE_LIBTOOL=	YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
 
-ONLY_FOR_PLATFORM=	SunOS-*-* Linux-*-* Darwin-*-* 
+ONLY_FOR_PLATFORM=	SunOS-*-* Linux-*-* Darwin-*-*
 ONLY_FOR_PLATFORM+=	NetBSD-1.6[N-Z]-* NetBSD-1.6Z[A-Z]-* NetBSD-1.[7-9]*
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*
 
