@@ -1,0 +1,48 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/06 21:07:40 frueauf Exp $
+bin/battalion
+man/man6/battalion.6
+share/battalion/battalion_hiscore
+share/battalion/HELP/bathelp01.gif
+share/battalion/HELP/bathelp02.gif
+share/battalion/HELP/bathelp03.gif
+share/battalion/HELP/bathelp04.gif
+share/battalion/HELP/bathelp05.gif
+share/battalion/HELP/bathelp06.gif
+share/battalion/HELP/bathelp07.gif
+share/battalion/HELP/bathelp08.gif
+share/battalion/HELP/bathelp09.gif
+share/battalion/HELP/bathelp10.gif
+share/battalion/HELP/bathelp11.gif
+share/battalion/battalion.data/DATA/road.data
+share/battalion/battalion.data/DATA/tank.data
+share/battalion/battalion.data/DATA/tree.data
+share/battalion/battalion.data/MUSIC/1.au
+share/battalion/battalion.data/MUSIC/2.au
+share/battalion/battalion.data/MUSIC/3.au
+share/battalion/battalion.data/MUSIC/4.au
+share/battalion/battalion.data/MUSIC/5.au
+share/battalion/battalion.data/MUSIC/d1.au
+share/battalion/battalion.data/MUSIC/d2.au
+share/battalion/battalion.data/MUSIC/d3.au
+share/battalion/battalion.data/MUSIC/d4.au
+share/battalion/battalion.data/MUSIC/d5.au
+share/battalion/battalion.data/SOUNDS/beam.au
+share/battalion/battalion.data/SOUNDS/boom.au
+share/battalion/battalion.data/SOUNDS/crash.au
+share/battalion/battalion.data/SOUNDS/monsterbeam.au
+share/battalion/battalion.data/SOUNDS/rocket.au
+share/battalion/battalion.data/SOUNDS/slag.au
+share/battalion/battalion.data/SOUNDS/tank.au
+share/battalion/battalion.data/SOUNDS/tech.au
+share/battalion/battalion.data/TEXTURES/road.tex
+share/battalion/battalion.data/TEXTURES/screenleft.tex
+share/battalion/battalion.data/TEXTURES/screenright.tex
+share/battalion/battalion.data/TEXTURES/treewood.tex
+share/battalion/battalion.data/battalion.sho
+@dirrm share/battalion/battalion.data/TEXTURES
+@dirrm share/battalion/battalion.data/DATA
+@dirrm share/battalion/battalion.data/MUSIC
+@dirrm share/battalion/battalion.data/SOUNDS
+@dirrm share/battalion/HELP
+@dirrm share/battalion/battalion.data
+@dirrm share/battalion
