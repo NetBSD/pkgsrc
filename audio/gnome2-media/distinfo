@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/25 04:49:42 rh Exp $
+$NetBSD: distinfo,v 1.2 2003/12/31 02:30:22 xtraeme Exp $
 
-SHA1 (gnome-media-2.2.1.1.tar.gz) = a11d865bad134dcbeb24602c81333693610b013c
-Size (gnome-media-2.2.1.1.tar.gz) = 1821362 bytes
-SHA1 (patch-aa) = 07cafe9d7b9917a46d2416344a59d0b73d05dfe3
-SHA1 (patch-ab) = c900d880a67cc98bf5926e887e9d65a53add9eb0
-SHA1 (patch-ac) = d0a9e20782e47782ce399a462900cb76d953c930
+SHA1 (gnome-media-2.4.1.1.tar.bz2) = aa98c51b6d2e4234dc0a45f3a52b6fbcaa451edd
+Size (gnome-media-2.4.1.1.tar.bz2) = 2745842 bytes
+SHA1 (patch-aa) = 556cbe7ef1c4a5776bfa1bce020d77adcd56b225
+SHA1 (patch-ab) = fabc0807403f57bfd8adb8b3cf3cb098f7a75ea2
+SHA1 (patch-ac) = 26c7aec8f236134d422762464b486f0a2f345fc5
 SHA1 (patch-ad) = 9d0ad2316afb3e09530a929784f10fc4e97dae8b
-SHA1 (patch-ae) = b792f73931d76437bdf8e6604b2fc43a59f03402
-SHA1 (patch-af) = 04475e6bf06c1d6982fbc05b28d05708c915725d
+SHA1 (patch-ae) = ae58fa078e8b7c7bdfbe57e269ea29f3791928f8
+SHA1 (patch-af) = 2b5ce1e8e161133ea1c2a4578251627158132543
+SHA1 (patch-ag) = f9e648d7fb548e5eb7d8956c87958141ee0abbbf
+SHA1 (patch-ah) = 9df1f4facdd215809eb3cffc893ecfe057b5eb4c
+SHA1 (patch-ai) = b28674e81961b5e2b69e168031c5389ce443a799
