@@ -1,8 +1,17 @@
-$NetBSD: patch-bp,v 1.2 2005/02/04 21:35:51 adrianp Exp $
+$NetBSD: patch-bp,v 1.3 2005/03/24 11:32:50 adam Exp $
 
---- otherlibs/threads/Makefile.orig	2004-10-12 18:17:28.000000000 +0100
-+++ otherlibs/threads/Makefile	2004-10-12 18:21:14.000000000 +0100
-@@ -99,12 +99,12 @@
+--- otherlibs/threads/Makefile.orig	2003-07-17 08:38:28.000000000 +0000
++++ otherlibs/threads/Makefile
+@@ -16,7 +16,7 @@
+ include ../../config/Makefile
+ 
+ CC=$(BYTECC)
+-CFLAGS=-I../../byterun -O $(BYTECCCOMPOPTS) $(SHAREDCCCOMPOPTS) -g
++CFLAGS+=-I../../byterun $(BYTECCCOMPOPTS) $(SHAREDCCCOMPOPTS) -g
+ CAMLC=../../ocamlcomp.sh -I ../unix
+ MKLIB=../../boot/ocamlrun ../../tools/ocamlmklib
+ COMPFLAGS=-warn-error A
+@@ -99,12 +99,12 @@ clean: partialclean
  	rm -f pervasives.mli marshal.mli unix.mli
  
  install:

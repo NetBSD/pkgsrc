@@ -1,8 +1,17 @@
-$NetBSD: patch-aj,v 1.4 2005/02/04 21:35:51 adrianp Exp $
+$NetBSD: patch-aj,v 1.5 2005/03/24 11:32:50 adam Exp $
 
---- byterun/Makefile.orig	2004-07-16 17:11:33.000000000 +0100
-+++ byterun/Makefile	2004-10-15 16:08:41.000000000 +0100
-@@ -48,14 +48,14 @@
+--- byterun/Makefile.orig	2004-08-20 15:11:36.000000000 +0000
++++ byterun/Makefile
+@@ -16,7 +16,7 @@
+ include ../config/Makefile
+ 
+ CC=$(BYTECC)
+-CFLAGS=-DCAML_NAME_SPACE -O $(BYTECCCOMPOPTS)
++CFLAGS+=-DCAML_NAME_SPACE $(BYTECCCOMPOPTS)
+ DFLAGS=-DCAML_NAME_SPACE -g -DDEBUG $(BYTECCCOMPOPTS)
+ 
+ OBJS=interp.o misc.o stacks.o fix_code.o startup.o main.o \
+@@ -48,14 +48,14 @@ ocamlrund$(EXE): libcamlrund.a prims.o
  	          prims.o libcamlrund.a $(BYTECCLIBS)
  
  install:
