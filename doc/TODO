@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2554 2004/11/28 16:30:05 recht Exp $
+$NetBSD: TODO,v 1.2555 2004/11/28 16:50:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1103,7 +1103,6 @@ Suggested package updates
 	o rpm-4.1
 	o rrdtool-1.0.49 [pkg/26353]
 	o rtcw-1.41.3
-	o ruby-fox-1.2.0
 	o rudiments-0.27
 	o rvm-1.9
 	o sablecc-2.18.2
