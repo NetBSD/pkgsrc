@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 1999/11/30 01:54:16 sakamoto Exp $
+$NetBSD: patch-ae,v 1.2 2000/03/11 15:03:39 fredb Exp $
 
 --- ./Makefile.orig	Sun Aug 29 01:36:34 1999
 +++ ./Makefile	Tue Nov 30 10:33:28 1999
@@ -34,3 +34,4 @@ $NetBSD: patch-ae,v 1.1 1999/11/30 01:54:16 sakamoto Exp $
 +MANSECT = 1
  
  INSTALL = install
+ INSTALLBIN = -s -m 755
