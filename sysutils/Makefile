@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2004/08/16 20:17:35 minskim Exp $
+# $NetBSD: Makefile,v 1.256 2004/08/26 18:26:21 wennmach Exp $
 
 COMMENT=	System utilities
 
@@ -41,6 +41,7 @@ SUBDIR+=	dmassage
 SUBDIR+=	dmesg2gif
 SUBDIR+=	dog
 SUBDIR+=	dptutil
+SUBDIR+=	duplicity
 SUBDIR+=	dvd+rw-tools
 SUBDIR+=	dvdrecord
 SUBDIR+=	e2fsprogs
