@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/06/17 19:13:52 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2004/04/20 18:02:16 ben Exp $
 
---- snd/sndconfig.h.orig	Fri Jun 15 13:48:58 2001
-+++ snd/sndconfig.h	Fri Jun 15 13:49:22 2001
-@@ -59,7 +59,7 @@
+--- lib-src/libnyquist/snd/sndconfig.h.orig	Sat Feb 28 11:19:39 2004
++++ lib-src/libnyquist/snd/sndconfig.h
+@@ -60,7 +60,7 @@ void snd_free(void *a);
  #elif defined(IRIX)
    #include "sndirix.h"
  

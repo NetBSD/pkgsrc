@@ -1,45 +1,34 @@
-# $NetBSD: Makefile,v 1.24 2004/03/23 04:41:00 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/04/20 18:02:16 ben Exp $
+# $Id: Makefile,v 1.25 2004/04/20 18:02:16 ben Exp $
 
-DISTNAME=	audacity-src-1.0.0-2
-PKGNAME=	audacity-1.0.0.2
-PKGREVISION=	8
+DISTNAME=	audacity-src-1.2.0
+PKGNAME=	audacity-1.2.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audacity/}
-EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	dotz@irc.pl
 HOMEPAGE=	http://audacity.sourceforge.net/
 COMMENT=	Audio editor
 
-BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+DEPENDS+=	zip>=0.0:../../archivers/zip
 
-WRKSRC=		${WRKDIR}/audacity-src-1.0.0
-USE_BUILDLINK3=		yes
-USE_GNU_TOOLS+=		make
+WRKSRC=			${WRKDIR}/audacity-src-1.2.0
+USE_BUILDLINK3=		# defined
 USE_X11=		# defined
+USE_GNU_TOOLS+=		make
+USE_PKGLOCALEDIR=	# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-xaudio
-CONFIGURE_ARGS+=	--with-id3
-CONFIGURE_ARGS+=	--with-libmad
-CONFIGURE_ARGS+=	--with-vorbis
-CONFIGURE_ARGS+=	--with-dev-dsp="${DEVOSSSOUND}"
-CONFIGURE_ARGS+=	--with-helpdir="${PREFIX}/share"
-HAVE_OSS=		NO
+CONFIGURE_ARGS+=	--with-id3=system
+CONFIGURE_ARGS+=	--with-libmad=system
+CONFIGURE_ARGS+=	--with-vorbis=system
+CONFIGURE_ARGS+=	--with-portaudio=system
 
 USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/id3lib/ltconfig
-
-pre-configure:
-	cd ${WRKSRC}/id3lib/include/id3; ${MV} -f strings.h id3_strings.h
-	cd ${WRKSRC}/id3lib; for file in				\
-		`${FIND} . -type f -print |				\
-			${XARGS} ${GREP} -l "\"strings\.h\""`; do	\
-		${SED}	-e "s|\"strings\.h\"|\"id3_strings.h\"|g"	\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
-	cd ${WRKSRC} && ${AUTOCONF}
+LTCONFIG_OVERRIDE=	${WRKSRC}/lib-src/libsndfile/libtool \
+			${WRKSRC}/lib-src/libsndfile/ltconfig \
+			${WRKSRC}/ltconfig
 
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
@@ -47,6 +36,7 @@ pre-configure:
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
+.include "../../audio/portaudio/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 
 .include "../../mk/autoconf.mk"

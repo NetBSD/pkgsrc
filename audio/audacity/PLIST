@@ -1,6 +1,48 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/04 08:59:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/04/20 18:02:16 ben Exp $
 bin/audacity
-share/audacity-help.htb
+man/man1/audacity.1
+share/audacity/nyquist/bug.lsp
+share/audacity/nyquist/dspprims.lsp
+share/audacity/nyquist/evalenv.lsp
+share/audacity/nyquist/follow.lsp
+share/audacity/nyquist/init.lsp
+share/audacity/nyquist/misc.lsp
+share/audacity/nyquist/nyinit.lsp
+share/audacity/nyquist/nyqmisc.lsp
+share/audacity/nyquist/nyquist.lsp
+share/audacity/nyquist/printrec.lsp
+share/audacity/nyquist/profile.lsp
+share/audacity/nyquist/seq.lsp
+share/audacity/nyquist/seqfnint.lsp
+share/audacity/nyquist/seqmidi.lsp
+share/audacity/nyquist/sndfnint.lsp
+share/audacity/nyquist/system.lsp
+share/audacity/nyquist/test.lsp
+share/audacity/nyquist/xlinit.lsp
+share/audacity/plug-ins/clicktrack.ny
+share/audacity/plug-ins/crossfadein.ny
+share/audacity/plug-ins/crossfadeout.ny
+share/audacity/plug-ins/delay.ny
+share/audacity/plug-ins/highpass.ny
+share/audacity/plug-ins/lowpass.ny
+share/audacity/plug-ins/pluck.ny
+share/audacity/plug-ins/tremolo.ny
 share/doc/audacity/LICENSE.txt
 share/doc/audacity/README.txt
+share/doc/audacity/audacity-1.2-help.htb
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/audacity.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/audacity.mo
+@dirrm share/audacity/nyquist
+@dirrm share/audacity/plug-ins
+@dirrm share/audacity
 @dirrm share/doc/audacity

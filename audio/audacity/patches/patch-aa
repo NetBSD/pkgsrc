@@ -1,24 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2002/10/04 08:59:35 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2004/04/20 18:02:16 ben Exp $
 
---- WaveTrack.cpp.orig	Wed Jun  5 00:51:19 2002
-+++ WaveTrack.cpp
-@@ -907,7 +907,9 @@ bool WaveTrack::Load(wxTextFile * in, Di
-          numSamples = 0;
-          block->Clear();
+--- lib-src/libnyquist/cmt/cext.h.orig	Sat Mar  6 16:02:24 2004
++++ lib-src/libnyquist/cmt/cext.h
+@@ -52,6 +52,8 @@ EXIT(n)  -- calls exit(n) after shutting
  
-+#if wxUSE_THREADS
-          blockMutex->Unlock();
-+#endif
+ #if HAS_SYS_TYPES_H
+ #include <sys/types.h>
++#define ulong u_long
++#undef NEED_ULONG
+ #endif
  
-          wxString msg;
-          msg.Printf("One or more data files is missing from this project.");
-@@ -919,7 +921,9 @@ bool WaveTrack::Load(wxTextFile * in, Di
-       block->Add(w);
-    }
- 
-+#if wxUSE_THREADS
-    blockMutex->Unlock();
-+#endif
- 
-    return true;
- 
+ #if HAS_MALLOC_H

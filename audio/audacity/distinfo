@@ -1,20 +1,12 @@
-$NetBSD: distinfo,v 1.4 2002/10/04 08:59:35 jlam Exp $
+$NetBSD: distinfo,v 1.5 2004/04/20 18:02:16 ben Exp $
 
-SHA1 (audacity-src-1.0.0-2.tgz) = 43e8faae6b08b5da05eee1ca196714d4b46c407d
-Size (audacity-src-1.0.0-2.tgz) = 1699503 bytes
-SHA1 (patch-aa) = a06aca17bda18bf5069c6a9110c6b116378f9a63
-SHA1 (patch-ab) = 139a2c31b0972622c0c743060d26c4def96fbfc6
-SHA1 (patch-ac) = 13d3a0f3733d5a155657f4137c1361c07d2f5f54
-SHA1 (patch-ad) = cc23e07d1f72d72fc9751b6370b64da525c4d19f
-SHA1 (patch-ae) = b94af5f25c3d96a9f2113b9a957671c2aaf20512
-SHA1 (patch-af) = 792b7337ef455adbfa935ce6b4923685f48d8b80
-SHA1 (patch-am) = f08098ffda76c7df16e338cde43fc3ae8a4dcb96
-SHA1 (patch-an) = c5ff2eca317134e57c9ce67ace38cf2085d83abb
-SHA1 (patch-ao) = 7e20649a7b56ca7aee66e8a518ec740e8c972c43
-SHA1 (patch-ap) = 0c8fde18fdd12e9986b24df14f4e4c07a2097eb1
-SHA1 (patch-aq) = 00a8ca5e27f0db723c99380193bf5e7fff828a54
-SHA1 (patch-ar) = 3fdc978f37d2f89fde0dcb7ba28f9fc5376d966b
-SHA1 (patch-as) = 1fb481f946bbaaa1b1bb07688bda48fe26702288
-SHA1 (patch-at) = 822621b2bd95cc56a6893a5c16f76317c239b03c
-SHA1 (patch-au) = 1f67a15f24439944e0d9f0c915514e34f696aedc
-SHA1 (patch-av) = 45df7d0d6d67f6ba2c14961f5beea1a656ce52c6
+SHA1 (audacity-src-1.2.0.tar.gz) = 379019855184d8e47809c2c53e384655eda70742
+Size (audacity-src-1.2.0.tar.gz) = 3341562 bytes
+SHA1 (patch-aa) = 5494f3fb6035f15a4447556f8cf4a0a2404a2259
+SHA1 (patch-ab) = 8630488f5a89b1542ac2a9f01080c36f1eac7c7d
+SHA1 (patch-ac) = 792ec327195ce105350a4a4d2d96d1a500bdb118
+SHA1 (patch-ad) = 75af90656c6709d5d7f4b166f03a2bf169e3360d
+SHA1 (patch-ae) = 8e22a7a8ce064c8877323e44ffd07286fe3ea02f
+SHA1 (patch-af) = 96cb88cdd9669c9429a61df71e726b727ab1eead
+SHA1 (patch-ag) = 6413d77cbc4e927bf2aa3b40e83b2b45842770eb
+SHA1 (patch-ah) = 5519be7e138fbfc764c8e0f200624a8ab1f0fa10

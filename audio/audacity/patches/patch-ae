@@ -1,43 +1,97 @@
-$NetBSD: patch-ae,v 1.4 2002/10/04 08:59:36 jlam Exp $
+$NetBSD: patch-ae,v 1.5 2004/04/20 18:02:16 ben Exp $
 
---- Makefile.in.orig	Fri Jun  7 23:00:04 2002
-+++ Makefile.in
-@@ -8,7 +8,10 @@
- # from Makefile.in
- #
+--- configure.in.orig	Sat Feb 28 11:19:39 2004
++++ configure.in
+@@ -556,8 +556,8 @@ if [[ "$use_portaudio" = "v19" ]] ; then
  
--LIBS = @LIBS@
-+HELPDIR = @HELPDIR@
-+DEV_DSP = @DEV_DSP@
-+EXTRA_CPPFLAGS = -DHELPDIR=\"$(HELPDIR)\" -DDEV_DSP=\"$(DEV_DSP)\"
-+LIBS = @LIBS@ ${LIBOSSAUDIO}
- CFLAGS = @CFLAGS@ @CPPFLAGS@ -Iallegro
- CCC = @CXX@
- CC = @CC@
-@@ -106,10 +109,11 @@ audacity: $(OBJS) Makefile
- #
- #
- install:
-+	-test -d $(HELPDIR) || mkdir -m 755 -p $(HELPDIR)
-+	-test -f audacity-help.htb && $(INSTALL) -m 644 audacity-help.htb \
-+		$(HELPDIR)/audacity-help.htb
- 	-test -d $(PREFIX)/share/doc/audacity || \
- 		mkdir -m 755 -p $(PREFIX)/share/doc/audacity
--	-test -f audacity-help.htb && $(INSTALL) -m 644 audacity-help.htb \
--		$(PREFIX)/share/doc/audacity/audacity-help.htb
- 	$(INSTALL) -m 644 README.txt $(PREFIX)/share/doc/audacity/README.txt
- 	$(INSTALL) -m 644 LICENSE.txt $(PREFIX)/share/doc/audacity/LICENSE.txt
- 	-test -d $(PREFIX)/bin || \
-@@ -175,10 +179,10 @@ $(DIRS): %: 
- #
+ 	AC_CONFIG_SUBDIRS([[lib-src/portaudio-v19]])
  
- $(OBJDIR)/%.cpp.o: %.cpp
--	$(CCC) -c $(CFLAGS) $< -o $@
-+	$(CCC) -c $(CFLAGS) $(EXTRA_CPPFLAGS) $< -o $@
+-else
+-
++fi
++if [[ "$use_portaudio" = "v18" ]] ; then
+ 	CXXFLAGS="-I../lib-src/portaudio/pa_common $CXXFLAGS"
  
- $(OBJDIR)/%.c.o: %.c
--	$(CC) -c $(CFLAGS) $< -o $@
-+	$(CC) -c $(CFLAGS) $(EXTRA_CPPFLAGS) $< -o $@
+ 	case "${host_os}" in
+@@ -625,6 +625,81 @@ else
  
- #
- # Include ".depend" if it exists (run "make dep" to generate it)
+ 		BUILDLIBS="$BUILDLIBS portaudio/pa_unix_oss/portaudio.a"
+ 		EXTRAOBJS="$EXTRAOBJS ../lib-src/portaudio/pa_unix_oss/portaudio.a"
++
++	   if [[ "$use_portmixer" = "yes" ]] ; then
++			BUILDLIBS="$BUILDLIBS portmixer/px_unix_oss/portmixer.a"
++			EXTRAOBJS="$EXTRAOBJS ../lib-src/portmixer/px_unix_oss/portmixer.a"		
++	   fi
++
++		if [[ "$use_ladspa" = "default" ]] ; then
++			use_ladspa="yes";
++		fi
++
++		AFTERBUILD=""
++
++	esac
++fi
++if [[ "$use_portaudio" = "system" ]] ; then
++
++	LIBS="$LIBS -lportaudio"
++
++	case "${host_os}" in
++	  darwin* | rhapsody*)
++		dnl Mac OS X configuration
++
++		CONFIGHEADER="configunix.h"
++
++		dnl CoreAudio
++
++		CXXFLAGS="-I../mac $CXXFLAGS"
++
++	   if [[ "$use_portmixer" = "yes" ]] ; then
++			BUILDLIBS="$BUILDLIBS portmixer/px_mac_core/portmixer.a"
++			EXTRAOBJS="$EXTRAOBJS ../lib-src/portmixer/px_mac_core/portmixer.a"		
++	   fi
++
++		LIBS="-framework AudioUnit -framework AudioToolbox $LIBS"
++		LIBS="-framework CoreAudio $LIBS -lz"
++
++		EXTRATARGETS="../Audacity.app"
++
++		if [[ "$use_ladspa" = "default" ]] ; then
++			use_ladspa="yes";
++		fi
++
++		dnl VST
++		
++		OPTOBJS="$OPTOBJS \$(OBJDIR)/effects/VST/LoadVSTMac.o"
++		OPTOBJS="$OPTOBJS \$(OBJDIR)/effects/VST/VSTEffect.o"
++
++	;;
++
++	cygwin*)
++ 	dnl Windows/CygWin configuration
++ 	
++ 	LIBS="$LIBS -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lodbc32 -lodbccp32 -lwsock32 -lwinmm"
++	LIBS="$LIBS -Wl,--subsystem,windows"
++ 	CONFIGHEADER="configwin.h"
++ 
++    if [[ "$use_portmixer" = "yes" ]] ; then
++ 		BUILDLIBS="$BUILDLIBS portmixer/px_win_wmme/portmixer.a"
++ 		EXTRAOBJS="$EXTRAOBJS ../lib-src/portmixer/px_win_wmme/portmixer.a Audacity.coff"
++    fi
++ 
++ 	if [[ "$use_ladspa" = "default" ]] ; then
++ 		use_ladspa="yes";
++ 	fi
++ 
++ 	AC_DEFINE(__CYGWIN__,1,[We're using cygwin])
++ 	AC_DEFINE(_FILE_OFFSET_BITS,32,[Placeholder for large file support])
++ 
++ 	AFTERBUILD=""
++	;;
++
++	  *)
++		dnl Unix OSS configuration
++
++		CONFIGHEADER="configunix.h"
+ 
+ 	   if [[ "$use_portmixer" = "yes" ]] ; then
+ 			BUILDLIBS="$BUILDLIBS portmixer/px_unix_oss/portmixer.a"
