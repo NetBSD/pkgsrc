@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/11 13:37:10 tv Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/30 23:18:38 jmmv Exp $
 #
 # Interix-only "JDK" for pkgsrc, implemented as a script wrapper around the
 # Win32 Sun JDK/JRE.
 #
 
 DISTNAME=		win32-jdk-0.1
+PKGREVISION=		1
 CATEGORIES=		lang java
 MASTER_SITES=		# empty
 DISTFILES=		# empty
