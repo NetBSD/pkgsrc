@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
+
+--- kmidi/TIMIDITY/Makefile.in.orig	Tue May 14 01:53:26 2002
++++ kmidi/TIMIDITY/Makefile.in
+@@ -300,8 +300,8 @@
+ 
+ INCLUDES = $(X_INCLUDES) `$(ARTSCCONFIG) --cflags`
+ AM_CFLAGS = -DDEFAULT_PATH=\"$(TIMID_DIR)\" $(EXTRATDEFS) $(EXTRATCFLAGS)
+-LDFLAGS = `$(ARTSCCONFIG) --libs`
+-LDADD = $(LIBALIB) $(LIBAUDIO) $(LIBMME) $(EXTRATLIBS) $(X_LIBS) -lm
++timidity_LDFLAGS = `$(ARTSCCONFIG) --libs`
++LDADD = $(LIBOSSAUDIO) $(LIBALIB) $(LIBAUDIO) $(LIBMME) $(EXTRATLIBS) $(X_LIBS) -lm
+ 
+ # Where to install the patches, config files, and MIDI files.
+ # If you change this, it's a good idea to recompile the binary,
+@@ -386,7 +386,6 @@
+ @KDE_USE_FINAL_TRUE@timidity_OBJECTS = $(timidity_final_OBJECTS)
+ timidity_LDADD = $(LDADD)
+ timidity_DEPENDENCIES =
+-timidity_LDFLAGS =
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)

@@ -1,0 +1,18 @@
+$NetBSD: patch-aw,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
+
+--- mpeglib/lib/util/render/x11/x11Surface.cpp.orig	Wed Aug  8 13:04:28 2001
++++ mpeglib/lib/util/render/x11/x11Surface.cpp
+@@ -267,8 +267,13 @@
+       XSizeHints hints;
+       hints.flags = PMaxSize;
+       if (HAS_RESIZE(newImage)) {
++#if defined(__NetBSD__)
++	hints.max_width = INT_MAX;
++	hints.max_height = INT_MAX;
++#else
+ 	hints.max_width = MAXINT;
+ 	hints.max_height = MAXINT;
++#endif
+       } else {
+ 	hints.max_width = xWindow->width;
+ 	hints.max_height = xWindow->height;

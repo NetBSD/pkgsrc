@@ -1,0 +1,387 @@
+$NetBSD: patch-ak,v 1.1.1.1 2002/05/31 14:46:49 skrll Exp $
+
+--- kmix/Makefile.in.orig	Tue May 14 01:53:26 2002
++++ kmix/Makefile.in
+@@ -293,7 +293,7 @@
+ INCLUDES = $(all_includes)
+ 
+ bin_PROGRAMS = kmix kmixctrl
+-lib_LTLIBRARIES = kmix.la kmixctrl.la
++lib_LTLIBRARIES = libkmix_main.la kmix.la libkmixctrl_main.la kmixctrl.la
+ kde_module_LTLIBRARIES = kmix_panelapplet.la
+ 
+ noinst_HEADERS = kmix.h kmixdockwidget.h kmixprefdlg.h kmixerwidget.h \
+@@ -302,23 +302,31 @@
+ 
+ 
+ METASOURCES = AUTO
+-kmix_la_SOURCES = main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
++libkmix_main_la_SOURCES = main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp \
+ 	kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp \
+ 	volume.cpp kledbutton.cpp mixdevicewidget.cpp
+ 
+-kmix_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
++libkmix_main_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
++libkmix_main_la_LDFLAGS = $(all_libraries)
++
++kmix_la_SOURCES = kmix_main.cpp
++kmix_la_LIBADD = libkmix_main.la
+ kmix_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+-kmix_SOURCES = dummy.cpp
+-kmix_LDADD = kmix.la
++kmix_SOURCES = kmix_main.cpp
++kmix_LDADD = libkmix_main.la
+ kmix_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+-kmixctrl_SOURCES = dummy.cpp
+-kmixctrl_LDADD = kmixctrl.la
++kmixctrl_SOURCES = kmixctrl_main.cpp
++kmixctrl_LDADD = libkmixctrl_main.la
+ kmixctrl_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+-kmixctrl_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp 
+-kmixctrl_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
++libkmixctrl_main_la_SOURCES = kmixctrl.cpp channel.cpp mixer.cpp volume.cpp 
++libkmixctrl_main_la_LIBADD = $(LIB_KDEUI) $(LIBALIB) $(LIBOSSAUDIO) $(LIBASOUND)
++libkmixctrl_main_la_LDFLAGS = $(all_libraries)
++
++kmixctrl_la_SOURCES = kmixctrl_main.cpp
++kmixctrl_la_LIBADD = libkmixctrl_main.la
+ kmixctrl_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+ #>- kmix_panelapplet_la_METASOURCES = AUTO
+@@ -352,19 +360,11 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
+ 
+-kmix_la_DEPENDENCIES =
+-am_kmix_la_OBJECTS = main.lo kmix.lo kmixdockwidget.lo kmixprefdlg.lo \
+-	kmixerwidget.lo channel.lo mixer.lo ksmallslider.lo volume.lo \
+-	kledbutton.lo mixdevicewidget.lo
++kmix_la_DEPENDENCIES = libkmix_main.la
++am_kmix_la_OBJECTS = kmix_main.lo
+ #>- kmix_la_OBJECTS = $(am_kmix_la_OBJECTS)
+-#>+ 7
+-kmix_la_final_OBJECTS = kmix_la.all_cpp.lo 
+-kmix_la_nofinal_OBJECTS = main.lo kmix.lo kmixdockwidget.lo kmixprefdlg.lo \
+-	kmixerwidget.lo channel.lo mixer.lo ksmallslider.lo volume.lo \
+-	kledbutton.lo mixdevicewidget.lo \
+-	kmix_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@kmix_la_OBJECTS = $(kmix_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kmix_la_OBJECTS = $(kmix_la_final_OBJECTS)
++#>+ 1
++kmix_la_OBJECTS = kmix_main.lo
+ kmix_panelapplet_la_DEPENDENCIES =
+ am_kmix_panelapplet_la_OBJECTS = kmixapplet.lo kmixerwidget.lo \
+ 	channel.lo mixer.lo ksmallslider.lo volume.lo kledbutton.lo \
+@@ -378,28 +378,48 @@
+ 	kmix_panelapplet_la_meta_unload.lo 
+ @KDE_USE_FINAL_FALSE@kmix_panelapplet_la_OBJECTS = $(kmix_panelapplet_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@kmix_panelapplet_la_OBJECTS = $(kmix_panelapplet_la_final_OBJECTS)
+-kmixctrl_la_DEPENDENCIES =
+-am_kmixctrl_la_OBJECTS = kmixctrl.lo channel.lo mixer.lo volume.lo
++kmixctrl_la_DEPENDENCIES = libkmixctrl_main.la
++am_kmixctrl_la_OBJECTS = kmixctrl_main.lo
+ #>- kmixctrl_la_OBJECTS = $(am_kmixctrl_la_OBJECTS)
+-#>+ 5
+-kmixctrl_la_final_OBJECTS = kmixctrl_la.all_cpp.lo 
+-kmixctrl_la_nofinal_OBJECTS = kmixctrl.lo channel.lo mixer.lo volume.lo \
+-	kmixctrl_la_meta_unload.lo 
+-@KDE_USE_FINAL_FALSE@kmixctrl_la_OBJECTS = $(kmixctrl_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kmixctrl_la_OBJECTS = $(kmixctrl_la_final_OBJECTS)
++#>+ 1
++kmixctrl_la_OBJECTS = kmixctrl_main.lo
++libkmix_main_la_DEPENDENCIES =
++am_libkmix_main_la_OBJECTS = main.lo kmix.lo kmixdockwidget.lo \
++	kmixprefdlg.lo kmixerwidget.lo channel.lo mixer.lo \
++	ksmallslider.lo volume.lo kledbutton.lo mixdevicewidget.lo
++#>- libkmix_main_la_OBJECTS = $(am_libkmix_main_la_OBJECTS)
++#>+ 7
++libkmix_main_la_final_OBJECTS = libkmix_main_la.all_cpp.lo 
++libkmix_main_la_nofinal_OBJECTS = main.lo kmix.lo kmixdockwidget.lo \
++	kmixprefdlg.lo kmixerwidget.lo channel.lo mixer.lo \
++	ksmallslider.lo volume.lo kledbutton.lo mixdevicewidget.lo \
++	libkmix_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkmix_main_la_OBJECTS = $(libkmix_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkmix_main_la_OBJECTS = $(libkmix_main_la_final_OBJECTS)
++libkmixctrl_main_la_DEPENDENCIES =
++am_libkmixctrl_main_la_OBJECTS = kmixctrl.lo channel.lo mixer.lo \
++	volume.lo
++#>- libkmixctrl_main_la_OBJECTS = $(am_libkmixctrl_main_la_OBJECTS)
++#>+ 6
++libkmixctrl_main_la_final_OBJECTS = libkmixctrl_main_la.all_cpp.lo 
++libkmixctrl_main_la_nofinal_OBJECTS = kmixctrl.lo channel.lo mixer.lo \
++	volume.lo \
++	libkmixctrl_main_la_meta_unload.lo 
++@KDE_USE_FINAL_FALSE@libkmixctrl_main_la_OBJECTS = $(libkmixctrl_main_la_nofinal_OBJECTS)
++@KDE_USE_FINAL_TRUE@libkmixctrl_main_la_OBJECTS = $(libkmixctrl_main_la_final_OBJECTS)
+ bin_PROGRAMS = kmix$(EXEEXT) kmixctrl$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_kmix_OBJECTS = dummy.$(OBJEXT)
++am_kmix_OBJECTS = kmix_main.$(OBJEXT)
+ #>- kmix_OBJECTS = $(am_kmix_OBJECTS)
+ #>+ 1
+-kmix_OBJECTS = dummy.$(OBJEXT)
+-kmix_DEPENDENCIES = kmix.la
+-am_kmixctrl_OBJECTS = dummy.$(OBJEXT)
++kmix_OBJECTS = kmix_main.$(OBJEXT)
++kmix_DEPENDENCIES = libkmix_main.la
++am_kmixctrl_OBJECTS = kmixctrl_main.$(OBJEXT)
+ #>- kmixctrl_OBJECTS = $(am_kmixctrl_OBJECTS)
+ #>+ 1
+-kmixctrl_OBJECTS = dummy.$(OBJEXT)
+-kmixctrl_DEPENDENCIES = kmixctrl.la
++kmixctrl_OBJECTS = kmixctrl_main.$(OBJEXT)
++kmixctrl_DEPENDENCIES = libkmixctrl_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -407,9 +427,11 @@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/channel.Plo $(DEPDIR)/dummy.Po \
+-	@AMDEP_TRUE@	$(DEPDIR)/kledbutton.Plo $(DEPDIR)/kmix.Plo \
+-	@AMDEP_TRUE@	$(DEPDIR)/kmixapplet.Plo $(DEPDIR)/kmixctrl.Plo \
++@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/channel.Plo $(DEPDIR)/kledbutton.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kmix.Plo $(DEPDIR)/kmix_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kmix_main.Po $(DEPDIR)/kmixapplet.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kmixctrl.Plo $(DEPDIR)/kmixctrl_main.Plo \
++	@AMDEP_TRUE@	$(DEPDIR)/kmixctrl_main.Po \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kmixdockwidget.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kmixerwidget.Plo \
+ 	@AMDEP_TRUE@	$(DEPDIR)/kmixprefdlg.Plo \
+@@ -436,7 +458,9 @@
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+ DIST_SOURCES = $(kmix_la_SOURCES) $(kmix_panelapplet_la_SOURCES) \
+-	$(kmixctrl_la_SOURCES) $(kmix_SOURCES) $(kmixctrl_SOURCES)
++	$(kmixctrl_la_SOURCES) $(libkmix_main_la_SOURCES) \
++	$(libkmixctrl_main_la_SOURCES) $(kmix_SOURCES) \
++	$(kmixctrl_SOURCES)
+ DATA = $(apps_DATA) $(lnk_DATA) $(rc_DATA) $(services_DATA)
+ 
+ HEADERS = $(noinst_HEADERS)
+@@ -448,7 +472,7 @@
+ 	uninstall-recursive check-recursive installcheck-recursive
+ DIST_COMMON = $(noinst_HEADERS) AUTHORS Makefile.am Makefile.in
+ DIST_SUBDIRS = $(SUBDIRS)
+-SOURCES = $(kmix_la_SOURCES) $(kmix_panelapplet_la_SOURCES) $(kmixctrl_la_SOURCES) $(kmix_SOURCES) $(kmixctrl_SOURCES)
++SOURCES = $(kmix_la_SOURCES) $(kmix_panelapplet_la_SOURCES) $(kmixctrl_la_SOURCES) $(libkmix_main_la_SOURCES) $(libkmixctrl_main_la_SOURCES) $(kmix_SOURCES) $(kmixctrl_SOURCES)
+ 
+ #>- all: all-recursive
+ #>+ 1
+@@ -523,6 +547,10 @@
+ 	$(CXXLINK) -rpath $(kde_moduledir) $(kmix_panelapplet_la_LDFLAGS) $(kmix_panelapplet_la_OBJECTS) $(kmix_panelapplet_la_LIBADD) $(LIBS)
+ kmixctrl.la: $(kmixctrl_la_OBJECTS) $(kmixctrl_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(kmixctrl_la_LDFLAGS) $(kmixctrl_la_OBJECTS) $(kmixctrl_la_LIBADD) $(LIBS)
++libkmix_main.la: $(libkmix_main_la_OBJECTS) $(libkmix_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkmix_main_la_LDFLAGS) $(libkmix_main_la_OBJECTS) $(libkmix_main_la_LIBADD) $(LIBS)
++libkmixctrl_main.la: $(libkmixctrl_main_la_OBJECTS) $(libkmixctrl_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libkmixctrl_main_la_LDFLAGS) $(libkmixctrl_main_la_OBJECTS) $(libkmixctrl_main_la_LIBADD) $(LIBS)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+@@ -561,11 +589,14 @@
+ 	-rm -f *.tab.c
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/channel.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kledbutton.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmix.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmix_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmix_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixapplet.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixctrl.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixctrl_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixctrl_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixdockwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixerwidget.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmixprefdlg.Plo@am__quote@
+@@ -760,7 +791,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=mixer_irix.h mixer_hpux.cpp resource.h mixer_irix.cpp mixer_sun.h mixer_none.cpp mixer_none.h mixer_alsa.cpp kmixapplet.desktop colorwidget.ui kmix-platforms.cpp configure.in.in mixer_hpux.h kmixui.rc kmixctrl_restore.desktop mixer_oss.cpp mixer_sun.cpp mixer_oss.h mixer_alsa.h 
++KDE_DIST=colorwidget.ui kmix-platforms.cpp configure.in.in mixer_hpux.h mixer_irix.h mixer_hpux.cpp kmixui.rc kmixctrl_restore.desktop resource.h mixer_oss.cpp mixer_irix.cpp mixer_sun.h mixer_sun.cpp mixer_none.cpp mixer_none.h mixer_oss.h mixer_alsa.cpp kmixapplet.desktop mixer_alsa.h 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -914,9 +945,6 @@
+ 
+ messages: rc.cpp
+ 	$(XGETTEXT) *.cpp -o $(podir)/kmix.pot
+-
+-dummy.cpp:
+-	echo > dummy.cpp
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -1003,19 +1031,6 @@
+ 
+ 
+ #>+ 12
+-kmix_la_meta_unload.cpp:  kmixdockwidget.moc mixdevicewidget.moc ksmallslider.moc kmixprefdlg.moc mixer.moc kmix.moc kledbutton.moc kmixerwidget.moc
+-	@echo 'creating kmix_la_meta_unload.cpp'
+-	@-rm -f kmix_la_meta_unload.cpp
+-	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kmix_la[] = {' > kmix_la_meta_unload.cpp ;\
+-		cat  kmixdockwidget.moc mixdevicewidget.moc ksmallslider.moc kmixprefdlg.moc mixer.moc kmix.moc kledbutton.moc kmixerwidget.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kmix_la_meta_unload.cpp ;\
+-		echo '0};' >> kmix_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kmix_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kmix_la)' >> kmix_la_meta_unload.cpp ;\
+-	else echo > kmix_la_meta_unload.cpp; fi
+-
+-
+-#>+ 12
+ kmix_panelapplet_la_meta_unload.cpp:  mixdevicewidget.moc ksmallslider.moc colorwidget.moc mixer.moc kmixapplet.moc kledbutton.moc kmixerwidget.moc
+ 	@echo 'creating kmix_panelapplet_la_meta_unload.cpp'
+ 	@-rm -f kmix_panelapplet_la_meta_unload.cpp
+@@ -1029,28 +1044,41 @@
+ 
+ 
+ #>+ 12
+-kmixctrl_la_meta_unload.cpp:  mixer.moc
+-	@echo 'creating kmixctrl_la_meta_unload.cpp'
+-	@-rm -f kmixctrl_la_meta_unload.cpp
++libkmix_main_la_meta_unload.cpp:  kmixdockwidget.moc mixdevicewidget.moc ksmallslider.moc kmixprefdlg.moc mixer.moc kmix.moc kledbutton.moc kmixerwidget.moc
++	@echo 'creating libkmix_main_la_meta_unload.cpp'
++	@-rm -f libkmix_main_la_meta_unload.cpp
++	@if test ${kde_qtver} = 2; then \
++		echo 'static const char * _metalist_libkmix_main_la[] = {' > libkmix_main_la_meta_unload.cpp ;\
++		cat  kmixdockwidget.moc mixdevicewidget.moc ksmallslider.moc kmixprefdlg.moc mixer.moc kmix.moc kledbutton.moc kmixerwidget.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkmix_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkmix_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkmix_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkmix_main_la)' >> libkmix_main_la_meta_unload.cpp ;\
++	else echo > libkmix_main_la_meta_unload.cpp; fi
++
++
++#>+ 12
++libkmixctrl_main_la_meta_unload.cpp:  mixer.moc
++	@echo 'creating libkmixctrl_main_la_meta_unload.cpp'
++	@-rm -f libkmixctrl_main_la_meta_unload.cpp
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kmixctrl_la[] = {' > kmixctrl_la_meta_unload.cpp ;\
+-		cat  mixer.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kmixctrl_la_meta_unload.cpp ;\
+-		echo '0};' >> kmixctrl_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kmixctrl_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kmixctrl_la)' >> kmixctrl_la_meta_unload.cpp ;\
+-	else echo > kmixctrl_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkmixctrl_main_la[] = {' > libkmixctrl_main_la_meta_unload.cpp ;\
++		cat  mixer.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkmixctrl_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkmixctrl_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkmixctrl_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkmixctrl_main_la)' >> libkmixctrl_main_la_meta_unload.cpp ;\
++	else echo > libkmixctrl_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
+-	-rm -f  kmix_la_meta_unload.cpp kmix_panelapplet_la_meta_unload.cpp kmixctrl_la_meta_unload.cpp
++	-rm -f  kmix_panelapplet_la_meta_unload.cpp libkmix_main_la_meta_unload.cpp libkmixctrl_main_la_meta_unload.cpp
+ 
+ #>+ 11
+-kmix_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kmix.cpp $(srcdir)/kmixdockwidget.cpp $(srcdir)/kmixprefdlg.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp kmix_la_meta_unload.cpp  
++kmix_la.all_cpp.cpp: $(srcdir)/Makefile.in kmix_main.cpp  
+ 	@echo 'creating kmix_la.all_cpp.cpp ...'; \
+ 	rm -f kmix_la.all_cpp.files kmix_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kmix_la.all_cpp.final; \
+-	for file in main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp volume.cpp kledbutton.cpp mixdevicewidget.cpp kmix_la_meta_unload.cpp ; do \
++	for file in kmix_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kmix_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kmix_la.all_cpp.final; \
+ 	done; \
+@@ -1070,11 +1098,11 @@
+ 	rm -f kmix_panelapplet_la.all_cpp.final kmix_panelapplet_la.all_cpp.files
+ 
+ #>+ 11
+-kmixctrl_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixctrl.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/volume.cpp kmixctrl_la_meta_unload.cpp  
++kmixctrl_la.all_cpp.cpp: $(srcdir)/Makefile.in kmixctrl_main.cpp  
+ 	@echo 'creating kmixctrl_la.all_cpp.cpp ...'; \
+ 	rm -f kmixctrl_la.all_cpp.files kmixctrl_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kmixctrl_la.all_cpp.final; \
+-	for file in kmixctrl.cpp channel.cpp mixer.cpp volume.cpp kmixctrl_la_meta_unload.cpp ; do \
++	for file in kmixctrl_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kmixctrl_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kmixctrl_la.all_cpp.final; \
+ 	done; \
+@@ -1082,11 +1110,35 @@
+ 	rm -f kmixctrl_la.all_cpp.final kmixctrl_la.all_cpp.files
+ 
+ #>+ 11
+-kmix.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++libkmix_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/main.cpp $(srcdir)/kmix.cpp $(srcdir)/kmixdockwidget.cpp $(srcdir)/kmixprefdlg.cpp $(srcdir)/kmixerwidget.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/ksmallslider.cpp $(srcdir)/volume.cpp $(srcdir)/kledbutton.cpp $(srcdir)/mixdevicewidget.cpp libkmix_main_la_meta_unload.cpp  
++	@echo 'creating libkmix_main_la.all_cpp.cpp ...'; \
++	rm -f libkmix_main_la.all_cpp.files libkmix_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkmix_main_la.all_cpp.final; \
++	for file in main.cpp kmix.cpp kmixdockwidget.cpp kmixprefdlg.cpp kmixerwidget.cpp channel.cpp mixer.cpp ksmallslider.cpp volume.cpp kledbutton.cpp mixdevicewidget.cpp libkmix_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libkmix_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkmix_main_la.all_cpp.final; \
++	done; \
++	cat libkmix_main_la.all_cpp.final libkmix_main_la.all_cpp.files  > libkmix_main_la.all_cpp.cpp; \
++	rm -f libkmix_main_la.all_cpp.final libkmix_main_la.all_cpp.files
++
++#>+ 11
++libkmixctrl_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kmixctrl.cpp $(srcdir)/channel.cpp $(srcdir)/mixer.cpp $(srcdir)/volume.cpp libkmixctrl_main_la_meta_unload.cpp  
++	@echo 'creating libkmixctrl_main_la.all_cpp.cpp ...'; \
++	rm -f libkmixctrl_main_la.all_cpp.files libkmixctrl_main_la.all_cpp.final; \
++	echo "#define KDE_USE_FINAL 1" >> libkmixctrl_main_la.all_cpp.final; \
++	for file in kmixctrl.cpp channel.cpp mixer.cpp volume.cpp libkmixctrl_main_la_meta_unload.cpp ; do \
++	  echo "#include \"$$file\"" >> libkmixctrl_main_la.all_cpp.files; \
++	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkmixctrl_main_la.all_cpp.final; \
++	done; \
++	cat libkmixctrl_main_la.all_cpp.final libkmixctrl_main_la.all_cpp.files  > libkmixctrl_main_la.all_cpp.cpp; \
++	rm -f libkmixctrl_main_la.all_cpp.final libkmixctrl_main_la.all_cpp.files
++
++#>+ 11
++kmix.all_cpp.cpp: $(srcdir)/Makefile.in kmix_main.cpp  
+ 	@echo 'creating kmix.all_cpp.cpp ...'; \
+ 	rm -f kmix.all_cpp.files kmix.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kmix.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kmix_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kmix.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kmix.all_cpp.final; \
+ 	done; \
+@@ -1094,11 +1146,11 @@
+ 	rm -f kmix.all_cpp.final kmix.all_cpp.files
+ 
+ #>+ 11
+-kmixctrl.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
++kmixctrl.all_cpp.cpp: $(srcdir)/Makefile.in kmixctrl_main.cpp  
+ 	@echo 'creating kmixctrl.all_cpp.cpp ...'; \
+ 	rm -f kmixctrl.all_cpp.files kmixctrl.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kmixctrl.all_cpp.final; \
+-	for file in dummy.cpp ; do \
++	for file in kmixctrl_main.cpp ; do \
+ 	  echo "#include \"$$file\"" >> kmixctrl.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kmixctrl.all_cpp.final; \
+ 	done; \
+@@ -1107,20 +1159,20 @@
+ 
+ #>+ 3
+ clean-final:
+-	-rm -f kmix_la.all_cpp.cpp kmix_panelapplet_la.all_cpp.cpp kmixctrl_la.all_cpp.cpp kmix.all_cpp.cpp kmixctrl.all_cpp.cpp
++	-rm -f kmix_la.all_cpp.cpp kmix_panelapplet_la.all_cpp.cpp kmixctrl_la.all_cpp.cpp libkmix_main_la.all_cpp.cpp libkmixctrl_main_la.all_cpp.cpp kmix.all_cpp.cpp kmixctrl.all_cpp.cpp
+ 
+ #>+ 2
+ final:
+-	$(MAKE) kmix_la_OBJECTS="$(kmix_la_final_OBJECTS)" kmix_panelapplet_la_OBJECTS="$(kmix_panelapplet_la_final_OBJECTS)" kmixctrl_la_OBJECTS="$(kmixctrl_la_final_OBJECTS)" all-am
++	$(MAKE) kmix_panelapplet_la_OBJECTS="$(kmix_panelapplet_la_final_OBJECTS)" libkmix_main_la_OBJECTS="$(libkmix_main_la_final_OBJECTS)" libkmixctrl_main_la_OBJECTS="$(libkmixctrl_main_la_final_OBJECTS)" all-am
+ #>+ 2
+ final-install:
+-	$(MAKE) kmix_la_OBJECTS="$(kmix_la_final_OBJECTS)" kmix_panelapplet_la_OBJECTS="$(kmix_panelapplet_la_final_OBJECTS)" kmixctrl_la_OBJECTS="$(kmixctrl_la_final_OBJECTS)" install-am
++	$(MAKE) kmix_panelapplet_la_OBJECTS="$(kmix_panelapplet_la_final_OBJECTS)" libkmix_main_la_OBJECTS="$(libkmix_main_la_final_OBJECTS)" libkmixctrl_main_la_OBJECTS="$(libkmixctrl_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
+-	$(MAKE) kmix_la_OBJECTS="$(kmix_la_nofinal_OBJECTS)" kmix_panelapplet_la_OBJECTS="$(kmix_panelapplet_la_nofinal_OBJECTS)" kmixctrl_la_OBJECTS="$(kmixctrl_la_nofinal_OBJECTS)" all-am
++	$(MAKE) kmix_panelapplet_la_OBJECTS="$(kmix_panelapplet_la_nofinal_OBJECTS)" libkmix_main_la_OBJECTS="$(libkmix_main_la_nofinal_OBJECTS)" libkmixctrl_main_la_OBJECTS="$(libkmixctrl_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) kmix_la_OBJECTS="$(kmix_la_nofinal_OBJECTS)" kmix_panelapplet_la_OBJECTS="$(kmix_panelapplet_la_nofinal_OBJECTS)" kmixctrl_la_OBJECTS="$(kmixctrl_la_nofinal_OBJECTS)" install-am
++	$(MAKE) kmix_panelapplet_la_OBJECTS="$(kmix_panelapplet_la_nofinal_OBJECTS)" libkmix_main_la_OBJECTS="$(libkmix_main_la_nofinal_OBJECTS)" libkmixctrl_main_la_OBJECTS="$(libkmixctrl_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2002/05/31 14:46:48 skrll Exp $
+
+--- kmidi/Makefile.in.orig	Tue May 14 01:53:26 2002
++++ kmidi/Makefile.in
+@@ -409,7 +409,7 @@
+ 	kmidiframe.$(OBJEXT) kmidifiledlg.$(OBJEXT) \
+ 	qttableview.$(OBJEXT) \
+ 	kmidi_meta_unload.o 
+-kmidi_LDADD = $(LDADD)
++kmidi_LDADD = $(LIBOSSAUDIO) $(LDADD)
+ kmidi_DEPENDENCIES =
+ kmidi_LDFLAGS =
+ am_sf2cfg_OBJECTS = sf2cfg.$(OBJEXT) readsbk.$(OBJEXT)
