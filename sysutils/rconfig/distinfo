@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2003/09/25 11:32:35 abs Exp $
+$NetBSD: distinfo,v 1.13 2003/10/03 13:13:14 abs Exp $
 
-SHA1 (rconfig-0.21.tar.gz) = 5d7086383537e1e847dd2caa353c6ab356b04dfe
-Size (rconfig-0.21.tar.gz) = 10611 bytes
+SHA1 (rconfig-0.22.tar.gz) = f7aafa8d29e47eed9af00c1b38dfb367f991d9df
+Size (rconfig-0.22.tar.gz) = 10747 bytes
