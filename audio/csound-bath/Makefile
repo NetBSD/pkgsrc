@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2002/03/12 22:30:10 jmc Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/23 02:22:59 wiz Exp $
 #
 
-DISTNAME=		Csound4.12
-PKGNAME=		csound-bath-4.12
+DISTNAME=		Csound4.18
+PKGNAME=		csound-bath-4.18
 CATEGORIES=		audio
-MASTER_SITES=		ftp://ftp.maths.bath.ac.uk/pub/dream/newest/
+MASTER_SITES=		ftp://ftp.cs.bath.ac.uk/pub/dream/newest/
 
-MAINTAINER=		collver@softhome.net
+MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.csound.org
 COMMENT=		software synthesizer and sequencer
 
@@ -19,15 +19,7 @@ WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		csound
 CONFLICTS=		csound-4*
 
-#pre-build:
-#	${CHMOD} -R 644 ${WRKDIR}
-
-#do-install:
-#	${INSTALL_DATA_DIR} ${PREFIX}/share/csound
-#	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/csound
-#	${INSTALL_DATA} ${WRKSRC}/csound.txt ${PREFIX}/share/csound/
-#	for i in `${FIND} ${WRKDIR} -type f -perm 755`; do \
-#		${INSTALL_PROGRAM} $${i} ${PREFIX}/bin ; \
-#	done
+pre-patch:
+	 ${CP} ${FILESDIR}/rtNetBSD.c ${FILESDIR}/rtNetBSD.h ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
