@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.130 2004/03/29 05:21:17 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.131 2004/03/29 05:27:42 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -588,6 +588,7 @@ _BLNK_FILES_CMD.${_pkg_}+=	${BUILDLINK_FILES_CMD.${_pkg_}};
 _BLNK_FILES_CMD.${_pkg_}+=	${LS} -1 ${_filepattern_} 2>/dev/null || ${TRUE};
 .endfor
 _BLNK_FILES_CMD.${_pkg_}+=	)
+_BLNK_FILES_CMD.${_pkg_}+=	| ${SORT} -u
 
 ${_BLNK_COOKIE.${_pkg_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
