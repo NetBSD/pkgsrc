@@ -1,0 +1,74 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/04 12:45:42 jmmv Exp $
+bin/file-roller
+etc/gconf/gconf.xml.defaults/apps/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/file-roller/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/file-roller/general/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/file-roller/listing/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/file-roller/ui/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/general/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/listing/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/ui/%gconf.xml
+etc/gconf/schemas/file-roller.schemas
+share/application-registry/file-roller.applications
+share/applications/file-roller.desktop
+share/file-roller/glade/file_roller.glade2
+share/file-roller/glade/file_roller_prop.glade2
+share/file-roller/scripts/Add_to_archive
+share/file-roller/scripts/Extract_here
+share/file-roller/scripts/Extract_in_a_subfolder
+share/file-roller/scripts/Extract_to
+share/file-roller/scripts/README
+share/gnome/help/file-roller/C/figures/fr-add-dialog.png
+share/gnome/help/file-roller/C/figures/fr-extract.png
+share/gnome/help/file-roller/C/figures/fr-mainwindow.png
+share/gnome/help/file-roller/C/figures/fr-prefs.png
+share/gnome/help/file-roller/C/file-roller.xml
+share/gnome/help/file-roller/C/legal.xml
+share/gnome/help/file-roller/ru/figures/fr-add-dialog.png
+share/gnome/help/file-roller/ru/figures/fr-extract.png
+share/gnome/help/file-roller/ru/figures/fr-mainwindow.png
+share/gnome/help/file-roller/ru/figures/fr-prefs.png
+share/gnome/help/file-roller/ru/file-roller.xml
+share/gnome/help/file-roller/ru/legal.xml
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/file-roller.mo
+share/mime-info/file-roller.keys
+share/mime-info/file-roller.mime
+share/omf/file-roller/file-roller-C.omf
+share/omf/file-roller/file-roller-ru.omf
+share/pixmaps/file-roller.png
+@dirrm share/omf/file-roller
+@dirrm share/gnome/help/file-roller/ru/figures
+@dirrm share/gnome/help/file-roller/ru
+@dirrm share/gnome/help/file-roller/C/figures
+@dirrm share/gnome/help/file-roller/C
+@dirrm share/gnome/help/file-roller
+@dirrm share/file-roller/scripts
+@dirrm share/file-roller/glade
+@dirrm share/file-roller
+@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/ui
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/listing
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/general
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/file-roller
+@dirrm etc/gconf/gconf.xml.defaults/apps/file-roller/ui
+@dirrm etc/gconf/gconf.xml.defaults/apps/file-roller/listing
+@dirrm etc/gconf/gconf.xml.defaults/apps/file-roller/general
+@dirrm etc/gconf/gconf.xml.defaults/apps/file-roller
