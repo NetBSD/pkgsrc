@@ -1,6 +1,10 @@
+@comment $NetBSD: PLIST,v 1.2 1998/04/15 22:03:38 tron Exp $
 bin/xmahjongg
-man/man6/xmahjongg.6.gz
-lib/X11/xmahjongg
+man/cat6/xmahjongg.0
+lib/X11/xmahjongg/bridge
+lib/X11/xmahjongg/default
+lib/X11/xmahjongg/wedges
 @dirrm lib/X11/xmahjongg
 lib/X11/fonts/misc/xmahjongg.bdf 
-@exec /usr/X11R6/bin/mkfontdir %B
+@exec %B/../../../../bin/mkfontdir %B
+@unexec %B/../../../../bin/mkfontdir %B

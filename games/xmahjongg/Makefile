@@ -1,8 +1,4 @@
-# New ports collection makefile for:	xmahjongg
-# Version required:	
-# Date created:		16 Aug 1996
-# Whom:			joerg@freebsd.org
-#
+# $NetBSD: Makefile,v 1.2 1998/04/15 22:03:38 tron Exp $
 # $FreeBSD Id: Makefile,v 1.3 1996/12/08 01:11:27 max Exp
 #
 
@@ -20,7 +16,9 @@ USE_IMAKE=	yes
 
 NO_CDROM=	"Restrictive copyright"
 
+CAT6=	xmahjongg.0
+
 post-extract:
 	@${CP} ${WRKSRC}/xmahjongg.6 ${WRKSRC}/xmahjongg.man
 
-.include <bsd.port.mk>
+.include <../../mk/bsd.pkg.mk>
