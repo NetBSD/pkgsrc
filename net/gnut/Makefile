@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/06 03:16:59 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 18:18:55 wiz Exp $
 #
 
 DISTNAME=	gnut-0.4.12
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.mrob.com/gnut/tars/
 
 MAINTAINER=	deberg@netbsd.org
 HOMEPAGE=	http://www.mrob.com/gnut/
+COMMENT=	Text-mode Gnutella client
 
 #BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 #BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake

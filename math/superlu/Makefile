@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/02 01:24:09 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 18:22:44 wiz Exp $
 
 DISTNAME=		superlu_2.0
 PKGNAME=		superlu-2.0
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.nersc.gov/~xiaoye/SuperLU/
 
 MAINTAINER=		jtb@netbsd.org
 HOMEPAGE=		http://www.nersc.gov/~xiaoye/SuperLU/
+COMMENT=		ANSI C routine library for the solution of sparse linear systems
 
 DEPENDS+=		blas-[0-9]*:../../math/blas
 

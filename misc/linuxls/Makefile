@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/18 22:46:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 18:09:12 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/30 04:43:34 asami Exp
 #
 
@@ -13,6 +13,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	bmc@WillsCreek.COM
 HOMEPAGE=	http://www.gnu.org/software/fileutils/fileutils.html
+COMMENT=	FreeBSD port of Linux Slackware colorized GNU `ls'
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 

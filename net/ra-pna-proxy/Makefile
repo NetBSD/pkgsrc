@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 18:19:30 wiz Exp $
 
 DISTNAME=	raproxy3.0b1
 PKGNAME=	ra-pna-proxy-3.0b1
@@ -7,6 +7,7 @@ MASTER_SITES=	# empty
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://service.real.com/firewall/fdev.html
+COMMENT=	Proxy server for the RealAudio PNA protocol
 
 IS_INTERACTIVE=	yes
 

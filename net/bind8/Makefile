@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.5 2001/01/27 07:33:21 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 18:18:36 wiz Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
@@ -13,6 +13,7 @@ DISTFILES=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
 MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.isc.org/products/BIND/
+COMMENT=	The Berkeley Internet Name Daemon, an implementation of DNS
 
 Y2K=		http://www.isc.org/ISC/y2k.html
 

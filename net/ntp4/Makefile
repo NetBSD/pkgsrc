@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/01/29 11:34:37 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/17 18:19:19 wiz Exp $
 #
 
 DISTNAME=	ntp-4.0.99k
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.udel.edu/pub/ntp/ntp4/ \
 
 MAINTAINER=	fb@enteract.com
 HOMEPAGE=	http://www.ntp.org/
+COMMENT=	Network Time Protocol Version 4
 
 DEPENDS+=	readline-4.*:../../devel/readline
 

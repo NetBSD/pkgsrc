@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/22 16:29:37 abs Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 18:08:49 wiz Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/08 12:23:55 tg Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.freefriends.org/arnold/Source/
 EXTRACT_SUFX=		.shar.gz
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		Simple menu patterened after plan9
 
 .include "../../mk/bsd.prefs.mk"
 .if (${OPSYS} == "NetBSD")

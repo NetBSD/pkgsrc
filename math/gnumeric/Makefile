@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/12/30 18:43:31 rh Exp $
+# $NetBSD: Makefile,v 1.26 2001/02/17 18:22:23 wiz Exp $
 #
 
 DISTNAME=		gnumeric-0.61
@@ -7,6 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/gnumeric/
+COMMENT=		Powerful and easy to use spreadsheet program from the GNOME project
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/python:../../lang/python
 DEPENDS+=		gal>=0.3:../../devel/gal
