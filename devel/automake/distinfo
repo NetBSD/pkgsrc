@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2004/03/08 20:42:17 wiz Exp $
+$NetBSD: distinfo,v 1.18 2004/04/29 13:15:03 wiz Exp $
 
-SHA1 (automake-1.8.3.tar.bz2) = 966ba209e769167e52a080c8c1eb7eef16596655
-Size (automake-1.8.3.tar.bz2) = 658156 bytes
+SHA1 (automake-1.8.4.tar.bz2) = 1fba2ddc458af7c08ab05c752b1e865eb7642818
+Size (automake-1.8.4.tar.bz2) = 659063 bytes
