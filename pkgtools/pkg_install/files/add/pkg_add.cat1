@@ -135,11 +135,13 @@ OOPPTTIIOONNSS
 
      --WW _v_i_e_w_b_a_s_e
              Set _v_i_e_w_b_a_s_e as the base directory for the managed views.  The
-             default _v_i_e_w_b_a_s_e directory is set by pkg_view(1).
+             default _v_i_e_w_b_a_s_e directory is set by pkg_view(1).  This value al-
+             so may be set from the LOCALBASE environment variable.
 
      --ww _v_i_e_w
              Set the _v_i_e_w to which packages should be added after installa-
-             tion.  The default _v_i_e_w is set by pkg_view(1).
+             tion.  The default _v_i_e_w is set by pkg_view(1).  This value also
+             may be set from the PKG_VIEW environment variable.
 
      One or more _p_k_g_-_n_a_m_e arguments may be specified, each being either a file
      containing the package (these usually ending with the ``.tgz'' suffix) or
@@ -263,6 +265,10 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
      user might change it with the --pp flag to ppkkgg__aadddd.
 
 EENNVVIIRROONNMMEENNTT
+     LOCALBASE   This is the location of the _v_i_e_w_b_a_s_e directory in which all
+                 the views are managed.  The default _v_i_e_w_b_a_s_e directory is
+                 _/_u_s_r_/_p_k_g.
+
      PKG_DBDIR   If the --KK flag isn't given, then PKG_DBDIR is the location of
                  the package database directory.  The default package database
                  directory is _/_v_a_r_/_d_b_/_p_k_g.
@@ -278,6 +284,9 @@ EENNVVIIRROONNMMEENNTT
      PKG_TMPDIR  Staging directory for installing packages, defaults to
                  /var/tmp.  Set to directory with lots of free disk if you run
                  out of space when installing a binary package.
+
+     PKG_VIEW    The default view can be specified in the PKG_VIEW environment
+                 variable.
 
 EEXXAAMMPPLLEESS
      In all cases, ppkkgg__aadddd will try to install binary packages listed in de-
@@ -325,4 +334,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 1.6.1_STABLE             August 15, 2002                              5
+NetBSD 1.6.1_STABLE            September 8, 2003                             6
