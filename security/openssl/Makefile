@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/03/01 13:57:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.33 2001/03/24 03:55:15 fredb Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -14,7 +14,6 @@ CONFLICTS=		SSLeay-* ssleay-* base64-*
 
 CRYPTO=			YES
 USE_PERL5=		YES
-USE_RSAREF2=		NO
 
 # supplies IDEA/RC5
 LICENCE=		fee-based-commercial-use
@@ -94,7 +93,13 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/apps/openssl.cnf ${PREFIX}/etc/openssl.cnf.example
 	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.a libssl.a ${PREFIX}/lib/
 .if ${OPSYS} == "NetBSD"
-	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.so.?.0 libssl.so.?.0 ${PREFIX}/lib/
+	cd ${WRKSRC} && ${INSTALL_DATA} libcrypto.so.1.0 libssl.so.1.0 ${PREFIX}/lib/
+.if ${OBJECT_FMT} == "ELF"
+.for shared_lib in libcrypto.so.1.0 libssl.so.1.0
+	cd ${PREFIX}/lib && ${LN} -s ${shared_lib} ${shared_lib:R} && \
+		${LN} -s ${shared_lib} ${shared_lib:R:R}
+.endfor
+.endif
 .endif
 .if exists(/usr/bin/ranlib)
 	/usr/bin/ranlib ${PREFIX}/lib/libcrypto.a
@@ -144,5 +149,6 @@ post-install:
 .include  "../../mk/bsd.pkg.mk"
 
 test: all
-	@cd ${WRKSRC}/test && ${SETENV} LD_LIBRARY_PATH=${WRKSRC} ${MAKE} tests
+	@cd ${WRKSRC}/test && ${SETENV} LD_LIBRARY_PATH=${WRKSRC} \
+		MAKELIB=${FILESDIR}/makelib ${MAKE} tests
 	@${ECHO} "*** Tests successful. ***"
