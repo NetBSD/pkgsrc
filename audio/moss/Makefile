@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/10 06:48:21 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/13 15:09:58 minskim Exp $
 
 DISTNAME=	moss-0.1.2
 CATEGORIES=	audio
@@ -14,7 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-vorbis>=1.3:../../audio/py-vorbis
 USE_BUILDLINK3=	yes
 USE_PKGINSTALL= yes
 
-PYTHON_PATCH_SCRIPTS=	${WRKSRC}/*.py
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
+PYTHON_PATCH_SCRIPTS=		${WRKSRC}/*.py
 
 RCD_SCRIPTS=	moss
 CONF_FILES=	${PREFIX}/share/moss/moss.conf.sample	\
