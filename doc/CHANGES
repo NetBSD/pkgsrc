@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2239 2003/05/15 21:08:23 wiz Exp $
+$NetBSD: CHANGES,v 1.2240 2003/05/15 21:39:10 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1964,3 +1964,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added overnet-0.48.2 [grant 2003-05-15]
 	Added lpe-1.2.6 [salo 2003-05-15]
 	Updated gnet to 2.0.3 [wiz 2003-05-15]
+	Added puf-0.93.2.1 [salo 2003-05-15]
