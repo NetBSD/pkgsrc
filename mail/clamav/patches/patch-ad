@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2004/02/11 10:55:49 recht Exp $
+$NetBSD: patch-ad,v 1.3 2004/04/25 21:37:59 recht Exp $
 
---- docs/Makefile.in.orig	2004-02-11 00:16:37.000000000 +0100
-+++ docs/Makefile.in	2004-02-11 11:04:17.000000000 +0100
-@@ -115,8 +115,10 @@
+--- docs/Makefile.in.orig	2004-04-17 00:50:41.000000000 +0200
++++ docs/Makefile.in	2004-04-25 21:30:17.000000000 +0200
+@@ -116,8 +116,10 @@
  am__quote = @am__quote@
  install_sh = @install_sh@
  
