@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:16 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/19 21:18:06 tron Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -16,6 +16,9 @@ NO_WRKSUBDIR=	yes
 
 # Do not list MAN/CAT pages here. It will confuse if MANZ is set.
 # The pkg uses BSD-style-Makefiles itself, so it does the right thing.
+
+# XXX kludge for problem with automatic manual page handling
+_MANPAGES=
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/kermit
