@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/06/04 18:07:40 thorpej Exp $
+# $NetBSD: Makefile,v 1.10 1999/06/14 21:43:33 cgd Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -7,26 +7,33 @@ BINNAME=	communicator
 NS_VERS=	4.6
 NS_VERS_SHORT=	46
 #
-.if (${MACHINE_ARCH} == "i386")
+.if (${MACHINE_ARCH} == "alpha")
+.if !exists(/emul/osf1/sbin/loader)
+IGNORE=You must have Digital UNIX libraries installed - see compat_osf1(8)
+.endif
+UNAME=		alpha-dec-osf4.0
+DIST_DIR_NAME=	supported/dec_unix40
+WRKNAME=	alpha-dec-osf4.0
+.elif (${MACHINE_ARCH} == "i386")
 .if !exists(/emul/linux/lib/ld-linux.so.2)
 IGNORE=You must have Linux libraries installed - see compat_linux(8)
 .endif
 UNAME=		x86-unknown-linuxglibc2.0
-UNAME_SHORT=	linux20_glibc2
+DIST_DIR_NAME=	unsupported/linux20_glibc2
 WRKNAME=	x86-unknown-linux2.0
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
 IGNORE=You must have SunOS libraries installed - see compat_sunos(8)
 .endif
 UNAME=		sparc-sun-sunos4.1.3_U1
-UNAME_SHORT=	sunos413
+DIST_DIR_NAME=	unsupported/sunos413
 WRKNAME=	${UNAME}
 .endif
 #
 DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-export.${UNAME}
 PKGNAME=	${BINNAME}-${NS_VERS}
 CATEGORIES=	www
-SUB=		english/unix/unsupported/${UNAME_SHORT}/complete_install
+SUB=		english/unix/${DIST_DIR_NAME}/complete_install
 MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${NS_VERS}/${SUB}/ \
 		ftp://sunsite.utk.edu/pub/netscape/communicator/${NS_VERS}/${SUB}/ \
 		ftp://ftp-uk.netscape.com/pub/communicator/${NS_VERS}/${SUB}/ \
