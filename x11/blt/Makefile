@@ -1,24 +1,28 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:28:26 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/06 06:26:21 minskim Exp $
 #
 
-DISTNAME=	BLT2.4o
-PKGNAME=	blt-2.4o
+DISTNAME=	BLT2.4z
+PKGNAME=	blt-2.4z
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.tcltk.com/aa004735/pub/blt/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blt/}
 
 MAINTAINER=	brook@nmsu.edu
-HOMEPAGE=	http://www.tcltk.com/blt/index.html
+HOMEPAGE=	http://blt.sourceforge.net/
 COMMENT=	Extension to Tcl/Tk
 
-WRKSRC=			${WRKDIR}/blt2.4o
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+WRKSRC=			${WRKDIR}/blt2.4z
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
+MAKE_ENV+=		CP=${CP}
 
-.include "../../lang/tcl/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.7 2002/03/31 14:37:31 abs Exp $
+$NetBSD: patch-ab,v 1.8 2004/03/06 06:26:21 minskim Exp $
 
---- library/Makefile.in.orig	Thu Jan 27 00:42:13 2000
+--- library/Makefile.in.orig	2002-07-14 18:33:24.000000000 -0500
 +++ library/Makefile.in
-@@ -31,7 +31,7 @@
- 
- mkdirs:
- 	@for i in $(instdirs) ; do \
--	    if test -d $$i ; then : ; else mkdir $$i ; fi ; \
-+	    if test -d $$i ; then : ; else mkdir -p $$i ; fi ; \
+@@ -66,7 +66,7 @@ mkdirs:
+             : ; \
+           else \
+             echo " mkdir $(INSTALL_ROOT)$$i" ; \
+-            mkdir $(INSTALL_ROOT)$$i ; \
++            mkdir -p $(INSTALL_ROOT)$$i ; \
+           fi ; \
          done
  
- dragdrop: mkdirs
