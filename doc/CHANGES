@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.424 2002/10/31 08:17:24 jlam Exp $
+$NetBSD: CHANGES,v 1.425 2002/10/31 08:21:06 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3466,3 +3466,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated phoenix-linux to 0.4 [grant 2002-10-31]
 	Updated latex-mk to 0.9.1 [dmcmahill 2002-10-30]
 	Updated aalib-x11 to 1.4.0.4nb2 [jlam 2002-10-31]
+	Updated grepmail to 4.80 [seb 2002-10-31]
