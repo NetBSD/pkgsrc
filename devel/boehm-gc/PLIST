@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/06/27 10:49:42 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/08/17 05:01:58 kei Exp $
 include/gc.h
 include/gc/gc.h
 include/gc/gc_alloc.h
@@ -16,6 +16,10 @@ include/gc/gc_pthread_redirects.h
 include/gc/gc_typed.h
 include/gc/leak_detector.h
 include/gc/new_gc_alloc.h
+include/gc/private/gc_hdrs.h
+include/gc/private/gc_locks.h
+include/gc/private/gc_priv.h
+include/gc/private/gcconfig.h
 include/gc/weakpointer.h
 include/gc_config_macros.h
 include/gc_local_alloc.h
@@ -61,4 +65,5 @@ share/doc/gc/leak.html
 share/doc/gc/scale.html
 share/doc/gc/tree.html
 @dirrm share/doc/gc
+@dirrm include/gc/private
 @dirrm include/gc
