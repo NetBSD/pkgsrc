@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9382 2005/03/02 00:59:18 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.9383 2005/03/02 02:10:03 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1223,3 +1223,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated fontconfig to 2.3.0 [wiz 2005-03-01]
 	Updated mksunbootcd to 1.0 [dmcmahill 2005-03-01]
 	Updated verilog to 0.8.1 [dmcmahill 2005-03-01]
+	Updated xorg-imake to 6.8.2nb1 [hira 2005-03-02]
