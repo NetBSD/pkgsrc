@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.693 2003/07/11 23:31:02 wiz Exp $
+$NetBSD: TODO,v 1.694 2003/07/11 23:44:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -171,7 +171,6 @@ Suggested package updates
 	o libole2-2.2.8
 	o libsigc++-1.2.5
 	o libtool-1.5 [skrll]
-	o libxslt-1.0.31
 	o lilypond-1.6.10
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
