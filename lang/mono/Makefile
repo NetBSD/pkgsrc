@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2004/04/04 16:53:59 recht Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/04 19:23:10 recht Exp $
 #
 
 DISTNAME=	mono-0.31
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.go-mono.org/archive/
 
@@ -49,14 +50,29 @@ CONF_FILES+=	${EGDIR}/DefaultWsdlHelpGenerator.aspx \
 
 .include "../../mk/bsd.prefs.mk"
 
+GC_LIB?=included
 .if ${OPSYS} == "Linux"
-BUILD_DEFS+=	MONO_USE_NPTL
 .  if defined(MONO_USE_NPTL) && !empty(MONO_USE_NPTL:M[yY][eE][sS])
 # Enable support for NPTL
 CONFIGURE_ARGS+=	--with-nptl=yes
 .  endif
+BUILD_DEFS+=	MONO_USE_NPTL
+GC_LIB=included
 .else
 CONFIGURE_ARGS+=	--with-nptl=no
+.endif
+
+.if ${GC_LIB} == "boehm"
+.  include "../../devel/boehm-gc/buildlink3.mk"
+PLIST_SUBST+=  GC="@comment "
+.else
+PLIST_SUBST+=  GC=
+.endif
+CONFIGURE_ARGS+=	--with-gc=${GC_LIB}
+
+# mcs coredumps with sigaltstack
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--with-sigaltstack=no
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
