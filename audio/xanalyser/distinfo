@@ -1,13 +1,5 @@
-$NetBSD: distinfo,v 1.6 2004/05/03 17:00:42 minskim Exp $
+$NetBSD: distinfo,v 1.7 2005/01/09 08:37:48 schmonz Exp $
 
-SHA1 (xanalyser-1.21.tar.bz2) = abdc1ddaffcb7dd4074672a54798b4b1ec4b0061
-Size (xanalyser-1.21.tar.bz2) = 58542 bytes
-SHA1 (patch-aa) = 29651c643550679f647b54726fb8d25579cdaaf7
-SHA1 (patch-ab) = 838c49ff3e15cbcd798aea0b3caec59b09f5c482
-SHA1 (patch-ad) = 835948759070cfab385e52e78a92494fe96ea140
-SHA1 (patch-ae) = 26fd8129f6283672d43e68163c372459e8cb93dc
-SHA1 (patch-af) = bf6af0c140a802fb98e82e82ecbfb7240696db09
-SHA1 (patch-ag) = 0ae5680df966e534d76d04cddf6a78259d87cbfe
-SHA1 (patch-ah) = a8bae5da6db1098ce1520cc49e167fc5999b0dda
-SHA1 (patch-ai) = 6805fc79e0c3135f6f22eb0b91c68cacd96c483c
-SHA1 (patch-aj) = 2a6549638be3d3d25126b0938a11572ffe1c6564
+SHA1 (xanalyser-1.24.tar.bz2) = 0b261568b8573d81b7e99980c2ffede6be683bdb
+Size (xanalyser-1.24.tar.bz2) = 73451 bytes
+SHA1 (patch-ad) = 46d15c6ff4ddc236de7d424dee667088dd693062
