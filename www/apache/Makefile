@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2002/09/19 09:04:28 jlam Exp $
+# $NetBSD: Makefile,v 1.106 2002/09/20 01:53:14 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -113,7 +113,7 @@ MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 
 .if (${OPSYS} == "SunOS")
 LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib
-CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_PREFIX.db2}/include/db2"
+CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_PREFIX.db}/include/db2"
 CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
 BUILDLINK_DEPENDS.db=	db>=2.7.7
 .include "../../databases/db/buildlink.mk"
