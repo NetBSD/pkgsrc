@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.24 2003/09/16 16:48:25 grant Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.25 2003/09/23 02:03:36 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -580,6 +580,14 @@ int gid_from_group(const char *, gid_t *);
 
 #ifndef UID_MAX
 # define UID_MAX	2147483647U  /* max value for a uid_t (2^31-2) */
+#endif
+
+#ifndef HAVE_SETMODE
+void *setmode(const char *);
+#endif
+
+#ifndef HAVE_GETMODE
+mode_t getmode(const void *, mode_t);
 #endif
 
 #endif /* _NBCOMPAT_H */
