@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2003/01/23 21:24:58 markd Exp $
+# $NetBSD: Makefile,v 1.43 2003/03/11 02:30:24 jmc Exp $
 
 DISTNAME=		R-1.6.2
 CATEGORIES=		math
@@ -32,7 +32,7 @@ CONFIGURE_ENV+=		XMKMF="${XMKMF}"
 # Use BLAS (math/blas)
 #
 CONFIGURE_ARGS+=	--without-atlas
-CONFIGURE_ARGS+=	--with-blas=${BUILDLINK_PREFIX.blas}/lib/libblas.a
+CONFIGURE_ARGS+=	--with-blas=${BUILDLINK_PREFIX.blas}/lib/libblas_pic.a
 CONFIGURE_ARGS+=	--without-blas_risc
 CONFIGURE_ARGS+=	--without-dxml
 CONFIGURE_ARGS+=	--without-libmoto
@@ -45,6 +45,9 @@ CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm_=yes
 # by the package builder.
 #
 USE_FORTRAN=		# defined
+
+# Specifically require at least this version since it includes libblas_pic.a
+BUILDLINK_DEPENDS.blas=	blas>=1.0nb1
 
 .include "../../mk/bsd.prefs.mk"
 
