@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/01/28 22:03:56 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2003/10/11 11:16:20 grant Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITES=	# empty -- manual fetch needed
 EXTRACT_SUFX=	_tar.gz
 
 MAINTAINER=	ambrisko@ambrisko.roble.com
-HOMEPAGE=	http://www.socks.nec.com/reference/socks5.html
+HOMEPAGE=	http://www.socks.permeo.com/
 COMMENT=	SOCKS v5 application layer gateway and clients
 
 CONFLICTS=	socks4-[0-9]*
