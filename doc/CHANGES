@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2748 2003/07/12 09:55:03 zuntum Exp $
+$NetBSD: CHANGES,v 1.2749 2003/07/12 10:03:17 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2767,3 +2767,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvs to 1.11.6 [wiz 2003-07-12]
 	Added KoboDeluxe-0.4rc8 [zuntum 2003-07-12]
 	Updated p5-Digest-MD5 to 2.24 [zuntum 2003-07-12]
+	Updated racoon to 20030711a [itojun 2003-07-12]
