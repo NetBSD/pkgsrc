@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.5 2002/08/04 15:47:46 fredb Exp $
+$NetBSD: patch-ac,v 1.6 2002/08/10 04:50:33 fredb Exp $
 
---- Configure.orig	Thu Aug  1 14:11:00 2002
+--- Configure.orig	Thu Aug  8 16:12:40 2002
 +++ Configure
 @@ -347,9 +347,6 @@
- "linux-s390",	"gcc:-DB_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::BN_LLONG::",
- "linux-s390x", "gcc:-DB_ENDIAN -DTERMIO -DNO_ASM -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::SIXTY_FOUR_BIT_LONG:::::::::::linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
+ "linux-s390",	"gcc:-DB_ENDIAN -DTERMIO -DNO_ASM -O3 -fomit-frame-pointer -Wall::-D_REENTRANT:-ldl:BN_LLONG::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR),\$(SHLIB_MINOR)",
+ "linux-s390x", "gcc:-DB_ENDIAN -DTERMIO -DNO_ASM -O3 -fomit-frame-pointer -Wall::-D_REENTRANT:-ldl:SIXTY_FOUR_BIT_LONG::::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
  "linux-ia64",   "gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::-D_REENTRANT:-ldl:SIXTY_FOUR_BIT_LONG RC4_CHUNK RC4_CHAR:asm/ia64.o:::::::::dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 -"NetBSD-sparc",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 -"NetBSD-m68",	"gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.5 2002/08/04 15:47:46 fredb Exp $
  "FreeBSD-elf",  "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::-pthread -D_REENTRANT -D_THREAD_SAFE -D_THREADSAFE::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
  "FreeBSD",      "gcc:-DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall::(unknown)::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_out_asm}",
  "bsdi-gcc",     "gcc:-O3 -ffast-math -DL_ENDIAN -DPERL5 -m486::(unknown)::RSA_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_bsdi_asm}",
-@@ -500,6 +482,20 @@
+@@ -500,6 +497,20 @@
  
  ##### VxWorks for various targets
  "vxworks-ppc405","ccppc:-g -msoft-float -mlongcall -DVXWORKS -DCPU=PPC405 -I\$(WIND_BASE)/target/h:::-r:::::",
