@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.34 2002/02/18 15:14:37 seb Exp $
+# $NetBSD: Makefile,v 1.35 2002/03/07 12:00:29 wiz Exp $
 #
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
 WRKSRC=			${WRKDIR}/a2ps-4.13
 CATEGORIES=		print
-MASTER_SITES=		ftp://ftp.enst.fr/pub/unix/a2ps/
+MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/} \
+			ftp://ftp.enst.fr/pub/unix/a2ps/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-inf.enst.fr/~demaille/a2ps/
