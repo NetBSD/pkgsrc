@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3156 2005/02/28 21:02:06 jschauma Exp $
+$NetBSD: TODO,v 1.3157 2005/02/28 22:02:48 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1089,7 +1089,6 @@ Suggested package updates
 	o tfmxplay-1.1.6
 	o thunderbird-bin-1.0
 	o tinc-1.0.3
-	o tinyca-0.6.8
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-7.2.2
