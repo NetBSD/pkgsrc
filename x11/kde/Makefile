@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2000/04/24 14:18:02 tron Exp $
+# $NetBSD: Makefile,v 1.26 2000/12/21 15:06:34 wiz Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/27 00:47:46 se Exp
 #
 
@@ -16,7 +16,7 @@ DEPENDS+=	kdegraphics-1.1.2:../../graphics/kdegraphics
 DEPENDS+=	kdegames-1.1.2:../../games/kdegames
 DEPENDS+=	kdemultimedia-1.1.2:../../audio/kdemultimedia
 DEPENDS+=	kdetoys-1.1.2:../../games/kdetoys
-DEPENDS+=	korganizer-1.1.2:../../x11/korganizer
+DEPENDS+=	korganizer-1.1.2:../../time/korganizer
 
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
