@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/04/15 10:38:24 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/05/16 19:53:06 frueauf Exp $
 #
 
 DISTNAME=		xblast-2.2
@@ -12,6 +12,8 @@ DISTFILES=		xblast-2.2.tar.gz \
 MAINTAINER=		root@garbled.futureone.com
 
 USE_IMAKE=		yes
+
+CAT1=			xblast.0
 
 post-patch:
 	cd ${WRKSRC} ; ${SED} '/file_appl_def/s@/usr/lib/X11@'${PREFIX}'/lib/X11@' defaults.h >xx ; ${MV} xx defaults.h
