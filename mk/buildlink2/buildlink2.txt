@@ -1,4 +1,4 @@
-$NetBSD: buildlink2.txt,v 1.8 2002/12/26 04:12:49 schmonz Exp $
+$NetBSD: buildlink2.txt,v 1.9 2002/12/27 20:34:53 schmonz Exp $
 
 The buildlink2 framework is a departure from the original buildlink
 framework, which tried to do its work up-front before the configure
@@ -24,7 +24,8 @@ To-do list:
 	the "-no-cpp-precomp" switch to every compiler invocation
 	by emitting it from the compiler wrapper. Likewise, the
 	use of _USE_RPATH in bsd.pkg.mk might be better handled in
-	the linker wrapper.
+	the linker wrapper. More: _STRIPFLAG_CC, _STRIPFLAG_INSTALL,
+	compiler optimization flags.
 
 Here are some FAQs and answers regarding buildlink2:
 
