@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/05/02 11:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/05/05 16:32:27 jmmv Exp $
 #
 
 DISTNAME=		imlib2-1.0.6
-PKGREVISION=	1
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
