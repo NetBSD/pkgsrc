@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.246 2004/05/30 08:10:05 mrauch Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.247 2004/05/31 16:47:00 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1937,10 +1937,10 @@ SILC_CLIENT_WITH_PERL?=	YES
 #          --enable-ipf-transparent
 #          --enable-snmp
 
-SSH_RSHPATH?= /usr/bin/rsh
+SSH_RSHPATH?= ${RSH}
 # Used in ssh to specify standard rsh path
 # Possible: path to rsh binary
-# Default: /usr/bin/rsh
+# Default: platform dependent; ${RSH} set in defs.${OPSYS}.mk
 
 SSH_SUID?= NO
 # Used in ssh to enable setuid installation of "ssh" binary.

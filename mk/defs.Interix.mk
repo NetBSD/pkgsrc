@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.23 2004/05/12 14:10:18 jschauma Exp $
+# $NetBSD: defs.Interix.mk,v 1.24 2004/05/31 16:47:00 jschauma Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -59,6 +59,9 @@ PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
+# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# and remove this comment.
+RSH?=		/usr/bin/rsh
 SED?=		${LOCALBASE}/bin/nbsed
 SETENV?=	/bin/env
 SH?=		/bin/sh
