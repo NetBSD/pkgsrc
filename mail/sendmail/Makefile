@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2002/06/17 13:27:14 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2002/06/17 20:13:10 tron Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -25,10 +25,9 @@ COMMENT=	The well known Mail Transport Agent
 
 LICENSE=	no-profit
 
-NO_CONFIGURE=	yes
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
-		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}"
-
+		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}" \
+		BUILDLINK_DIR="${BUILDLINK_DIR}"
 WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
@@ -53,7 +52,7 @@ DEPENDS+=	openldap-1.2.*:../../databases/openldap
 DEPENDS+=	db-2.7.7:../../databases/db
 .endif
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-USE_SSL=	yes
+.include "../../security/openssl/buildlink.mk"
 .endif
 
 post-patch:
@@ -91,7 +90,7 @@ post-patch:
 	${ECHO} >> ${DESCR_SRC}
 
 do-build:
-	@(cd ${WRKSRC}; ./Build)
+	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
