@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/13 08:30:38 minoura Exp $
-info/skk.info
-info/skk.info-1
-info/skk.info-2
-info/skk.info-3
-info/skk.info-4
+@comment $NetBSD: PLIST,v 1.5 2004/02/18 01:48:22 seb Exp $
 ${FOR_emacs20}${EMACS_LISPPREFIX}/skk/ccc.el
 ${FOR_emacs20}${EMACS_LISPPREFIX}/skk/ccc.elc
 ${FOR_emacs21}${EMACS_LISPPREFIX}/skk/ccc.el
