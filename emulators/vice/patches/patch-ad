@@ -1,4 +1,5 @@
-$NetBSD: patch-ad,v 1.5 2001/08/01 22:16:46 kristerw Exp $
+$NetBSD: patch-ad,v 1.6 2001/10/02 20:04:33 jlam Exp $
+
 --- src/arch/unix/c64ui.c.orig	Sat Jun 16 16:03:42 2001
 +++ src/arch/unix/c64ui.c	Wed Aug  1 23:02:01 2001
 @@ -460,6 +460,15 @@
