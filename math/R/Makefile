@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/04/23 01:14:49 markd Exp $
+# $NetBSD: Makefile,v 1.33 2002/05/03 12:34:39 markd Exp $
 
 DISTNAME=		R-1.4.1
 PKGREVISION=		2
@@ -66,7 +66,7 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 R_LIBDIR=		${PREFIX}/lib/R
 INSTALL_DIRS=		${R_LIBDIR}
 
-REPLACE_BUILDLINK=	src/scripts/R.fe
+REPLACE_BUILDLINK=	src/scripts/R.fe etc/Makeconf
 REPLACE_BUILDLINK_SED=	-e "s|${BUILDLINK_DIR}/|${LOCALBASE}/|g"
 
 # Generate the PLIST dynamically as it changes in each version only in a
