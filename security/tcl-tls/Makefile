@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/22 19:45:23 peter Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/23 14:40:12 peter Exp $
 #
 
 DISTNAME=		tls1.5.0-src
@@ -7,7 +7,7 @@ CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tls/}
 
 MAINTAINER=		peter@pointless.nl
-HOMEPAGE=		http://www.tcl.tk/
+HOMEPAGE=		http://tls.sourceforge.net/
 COMMENT=		TLS (aka SSL) Channel for the Tcl language
 
 WRKSRC=			${WRKDIR}/tls1.5
