@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.13 2004/11/10 18:46:07 jlam Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.14 2004/11/12 05:20:01 jlam Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -118,7 +118,8 @@ PTHREAD_OPTS?=	# empty
 #
 .undef PTHREAD_TYPE
 PREFER_NATIVE_PTHREADS?=	YES
-.if exists(/usr/include/pthread.h) && ${PREFER_NATIVE_PTHREADS} == "YES"
+.if exists(/usr/include/pthread.h) && \
+    !empty(PREFER_NATIVE_PTHREADS:M[yY][eE][sS])
 PTHREAD_TYPE=	native
 .else
 .  if !empty(PTHREAD_OPTS:Mnative)
@@ -141,52 +142,22 @@ PKG_SKIP_REASON= "${PKGNAME} requires a working pthreads implementation."
 .endif
 
 .if ${PTHREAD_TYPE} == "native"
-#
-# Link the native pthread libraries and headers into ${BUILDLINK_DIR}.
-#
-BUILDLINK_PREFIX.pthread=	/usr
-BUILDLINK_LDFLAGS.pthread=	# empty
-
-# only pass -pthread on platforms known to support it.
-.  if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
-BUILDLINK_CFLAGS.pthread=       -pthread
-.  else
-BUILDLINK_CFLAGS.pthread=       # empty
-.  endif
-
-#
-# Handle systems which have pthreads functions in libc_r such as
-# FreeBSD 5.x, or fall back to libc if we don't find libc_r.
-#
-.  if exists(/usr/lib/libpthread.so) || exists(/lib/libpthread.so)
-BUILDLINK_LDADD.pthread=	-lpthread
-.  elif exists(/usr/lib/libc_r.so)
-BUILDLINK_LDADD.pthread=	-lc_r
-# In OpenBSD there is no libpthread.so, just libpthread.so.X.X.
-.  elif ${OPSYS} == "OpenBSD"
-_CHECK_LIBPTH!=	\
-	if ${TEST} -f /usr/lib/libpthread.so.*; then \
-		${ECHO} "yes";	\
-	else			\
-		${ECHO} "no";	\
-	fi
-.    if ${_CHECK_LIBPTH} == "yes"
-BUILDLINK_LDADD.pthread=	-lpthread
-.    endif
-.  else
-BUILDLINK_LDADD.pthread=	# empty
-.  endif
-
+BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Npthread}
+BUILDLINK_PACKAGES+=		pthread
+BUILDLINK_BUILTIN_MK.pthread=	../../mk/pthread.builtin.mk
 .elif ${PTHREAD_TYPE} == "${_PKG_PTHREAD}"
 .  if exists(${_PKG_PTHREAD_BUILDLINK3_MK})
 .    if !empty(_PKG_PTHREAD_DEPENDS)
 BUILDLINK_DEPENDS.${_PKG_PTHREAD}+=	${_PKG_PTHREAD_DEPENDS}
 .    endif
-BUILDLINK_PREFIX.pthread=	${BUILDLINK_PREFIX.${_PKG_PTHREAD}}
-BUILDLINK_CFLAGS.pthread=	${BUILDLINK_CFLAGS.${_PKG_PTHREAD}}
-BUILDLINK_LDFLAGS.pthread=	${BUILDLINK_LDFLAGS.${_PKG_PTHREAD}}
-BUILDLINK_LDADD.pthread=	-lpthread
 .    include "${_PKG_PTHREAD_BUILDLINK3_MK}"
+BUILDLINK_PREFIX.pthread=		${BUILDLINK_PREFIX.${_PKG_PTHREAD}}
+BUILDLINK_CFLAGS.pthread=		${BUILDLINK_CFLAGS.${_PKG_PTHREAD}}
+BUILDLINK_CPPFLAGS.${_PKG_PTHREAD}?=	-D_REENTRANT
+BUILDLINK_CPPFLAGS.pthread=		${BUILDLINK_CPPFLAGS.${_PKG_PTHREAD}}
+BUILDLINK_LDFLAGS.pthread=		${BUILDLINK_LDFLAGS.${_PKG_PTHREAD}}
+BUILDLINK_LIBS.${_PKG_PTHREAD}?=	-lpthread
+BUILDLINK_LIBS.pthread=			${BUILDLINK_LIBS.${_PKG_PTHREAD}}
 .  else
 PKG_SKIP_REASON= "${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK3_MK} is missing."
 .  endif
@@ -194,13 +165,23 @@ PKG_SKIP_REASON= "${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK3_MK} i
 
 .if !empty(PTHREAD_BUILDLINK3_MK:M+)
 #
-# Define user-visible PTHREAD_CFLAGS and PTHREAD_LDFLAGS as compiler
-# options used to compile/link pthreaded code.
+# Define user-visible PTHREAD_{CFLAGS,LDFLAGS,LIBS} as compiler options
+# used to compile/link pthreaded code.
 #
 PTHREAD_CFLAGS=		${BUILDLINK_CFLAGS.pthread}
-PTHREAD_LDFLAGS=	${BUILDLINK_LDFLAGS.pthread} ${BUILDLINK_LDADD.pthread}
+PTHREAD_CFLAGS+=	${BUILDLINK_CPPFLAGS.pthread}
+PTHREAD_LDFLAGS=	${BUILDLINK_LDFLAGS.pthread}
+PTHREAD_LDFLAGS+=	${PTHREAD_LIBS}	# XXX This should be removed!
+PTHREAD_LIBS=		${BUILDLINK_LIBS.pthread}
+CONFIGURE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
+CONFIGURE_ENV+=		PTHREAD_LDFLAGS="${PTHREAD_LDFLAGS}"
+CONFIGURE_ENV+=		PTHREAD_LIBS="${PTHREAD_LIBS}"
+MAKE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
+MAKE_ENV+=		PTHREAD_LDFLAGS="${PTHREAD_LDFLAGS}"
+MAKE_ENV+=		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
 PTHREADBASE=		${BUILDLINK_PREFIX.pthread}
 CONFIGURE_ENV+=		PTHREADBASE=${PTHREADBASE}
 MAKE_ENV+=		PTHREADBASE=${PTHREADBASE}
+
 .endif	# PTHREAD_BUILDLINK3_MK
