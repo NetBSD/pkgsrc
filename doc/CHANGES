@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6795 2004/08/04 19:59:59 minskim Exp $
+$NetBSD: CHANGES,v 1.6796 2004/08/04 20:00:33 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3725,3 +3725,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Sendmail-PMilter to 0.94 [tv 2004-08-04]
 	Updated cyrus-sasl2 to 2.1.19 [jlam 2004-08-04]
 	Updated mathomatic to 11.3c [minskim 2004-08-04]
+	Updated sqlite to 2.8.15 [jlam 2004-08-04]
