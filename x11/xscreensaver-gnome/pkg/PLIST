@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/02/08 11:46:47 fredb Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/06/18 15:41:52 fredb Exp $
 bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -24,6 +24,7 @@ libexec/xscreensaver/coral
 libexec/xscreensaver/critical
 libexec/xscreensaver/crystal
 libexec/xscreensaver/cynosure
+libexec/xscreensaver/dangerball
 libexec/xscreensaver/decayscreen
 libexec/xscreensaver/deco
 libexec/xscreensaver/deluxe
@@ -32,6 +33,7 @@ libexec/xscreensaver/discrete
 libexec/xscreensaver/distort
 libexec/xscreensaver/drift
 libexec/xscreensaver/epicycle
+libexec/xscreensaver/extrusion
 libexec/xscreensaver/fadeplot
 libexec/xscreensaver/flag
 libexec/xscreensaver/flame
@@ -41,6 +43,7 @@ libexec/xscreensaver/galaxy
 libexec/xscreensaver/gears
 libexec/xscreensaver/gflux
 libexec/xscreensaver/glplanet
+libexec/xscreensaver/gltext
 libexec/xscreensaver/goop
 libexec/xscreensaver/grav
 libexec/xscreensaver/greynetic
@@ -67,6 +70,7 @@ libexec/xscreensaver/maze
 libexec/xscreensaver/moebius
 libexec/xscreensaver/moire
 libexec/xscreensaver/moire2
+libexec/xscreensaver/molecule
 libexec/xscreensaver/morph3d
 libexec/xscreensaver/mountain
 libexec/xscreensaver/munch
@@ -86,6 +90,7 @@ libexec/xscreensaver/ripples
 libexec/xscreensaver/rocks
 libexec/xscreensaver/rorschach
 libexec/xscreensaver/rotor
+libexec/xscreensaver/rotzoomer
 libexec/xscreensaver/rubik
 libexec/xscreensaver/shadebobs
 libexec/xscreensaver/sierpinski
@@ -93,6 +98,7 @@ libexec/xscreensaver/sierpinski3d
 libexec/xscreensaver/slidescreen
 libexec/xscreensaver/slip
 libexec/xscreensaver/sonar
+libexec/xscreensaver/speedmine
 libexec/xscreensaver/sphere
 libexec/xscreensaver/spiral
 libexec/xscreensaver/spotlight
@@ -113,13 +119,13 @@ libexec/xscreensaver/vines
 libexec/xscreensaver/wander
 libexec/xscreensaver/webcollage
 libexec/xscreensaver/whirlwindwarp
+libexec/xscreensaver/whirlygig
 libexec/xscreensaver/worm
 libexec/xscreensaver/xflame
 libexec/xscreensaver/xjack
 libexec/xscreensaver/xlyap
 libexec/xscreensaver/xmatrix
 libexec/xscreensaver/xrayswarm
-libexec/xscreensaver/xscreensaver-gl-helper
 libexec/xscreensaver/xspirograph
 libexec/xscreensaver/xsublim
 libexec/xscreensaver/xteevee
@@ -130,6 +136,7 @@ man/man1/bouboule.1
 man/man1/braid.1
 man/man1/bsod.1
 man/man1/bubbles.1
+man/man1/bumps.1
 man/man1/critical.1
 man/man1/decayscreen.1
 man/man1/deco.1
@@ -141,6 +148,7 @@ man/man1/flame.1
 man/man1/forest.1
 man/man1/galaxy.1
 man/man1/gflux.1
+man/man1/gltext.1
 man/man1/goop.1
 man/man1/grav.1
 man/man1/greynetic.1
@@ -161,6 +169,7 @@ man/man1/lisa.1
 man/man1/lmorph.1
 man/man1/maze.1
 man/man1/moire.1
+man/man1/molecule.1
 man/man1/munch.1
 man/man1/nerverot.1
 man/man1/noseguy.1
@@ -173,10 +182,12 @@ man/man1/qix.1
 man/man1/rd-bomb.1
 man/man1/rocks.1
 man/man1/rorschach.1
+man/man1/rotzoomer.1
 man/man1/sierpinski.1
 man/man1/slidescreen.1
 man/man1/slip.1
 man/man1/sonar.1
+man/man1/speedmine.1
 man/man1/sphere.1
 man/man1/spiral.1
 man/man1/spotlight.1
@@ -190,14 +201,12 @@ man/man1/vidwhacker.1
 man/man1/vines.1
 man/man1/webcollage.1
 man/man1/whirlwindwarp.1
+man/man1/whirlygig.1
 man/man1/xflame.1
 man/man1/xjack.1
 man/man1/xlyap.1
 man/man1/xmatrix.1
-man/man1/xscreensaver-command.1
-man/man1/xscreensaver-demo.1
 man/man1/xscreensaver-gl-helper.1
-man/man1/xscreensaver.1
 man/man1/xsublim.1
 man/man1/xteevee.1
 man/man1/zoom.1

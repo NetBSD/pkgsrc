@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.16 2001/05/18 12:54:06 abs Exp $
+# $NetBSD: Makefile.common,v 1.17 2001/06/18 15:41:49 fredb Exp $
 #
 
-DISTNAME=		xscreensaver-3.28
+DISTNAME=		xscreensaver-3.33
 CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE} \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/xscreensaver/
@@ -10,6 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
+DEPENDS+=		gle-*:../../graphics/gle
 
 USE_MESA=		yes
 USE_X11BASE=		yes
@@ -55,7 +56,7 @@ CONFIGURE_ARGS+=	--without-kerberos
 
 .include "../../mk/bsd.pkg.mk"
 
-# this has to come after bsd.pkg.mk for ECHO.
+# this has to come after bsd.pkg.mk for ${ECHO}.
 
 PERL?=			${LOCALBASE}/bin/perl
 .ifndef (PERL_VERSION)
