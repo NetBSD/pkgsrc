@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2004/02/25 00:54:28 cube Exp $
+# $NetBSD: Makefile,v 1.195 2004/03/08 19:29:25 jmmv Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -164,6 +164,7 @@ SUBDIR+=	vttest
 SUBDIR+=	watch
 SUBDIR+=	xchm
 SUBDIR+=	xdg-dirs
+SUBDIR+=	xdg-x11-dirs
 SUBDIR+=	xjdic
 SUBDIR+=	xrolodex
 SUBDIR+=	xtail
