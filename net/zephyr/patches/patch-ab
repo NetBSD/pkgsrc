@@ -1,63 +1,14 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:11:07 agc Exp $
+$NetBSD: patch-ab,v 1.3 1999/11/25 01:50:42 hubertf Exp $
 
-*** server/zserver.h.~1~	Tue Jun 18 15:43:02 1996
---- server/zserver.h	Thu Apr  9 13:26:04 1998
-***************
-*** 209,215 ****
-  void add_to_key_sched_cache __P((des_cblock key, Sched *sched));
-  int krb_set_key __P((char *key, int cvt));
-  int krb_rd_req __P((KTEXT authent, char *service, char *instance,
-! 		    unsigned KRB_INT32 from_addr, AUTH_DAT *ad, char *fn));
-  int krb_find_ticket __P((KTEXT authent, KTEXT ticket));
-  int krb_get_lrealm __P((char *r, int n));
-  #endif
---- 209,215 ----
-  void add_to_key_sched_cache __P((des_cblock key, Sched *sched));
-  int krb_set_key __P((char *key, int cvt));
-  int krb_rd_req __P((KTEXT authent, char *service, char *instance,
-! 		    KRB_INT32 from_addr, AUTH_DAT *ad, char *fn));
-  int krb_find_ticket __P((KTEXT authent, KTEXT ticket));
-  int krb_get_lrealm __P((char *r, int n));
-  #endif
-*** server/zsrv_conf.h.~1~	Fri Jun 30 18:11:35 1995
---- server/zsrv_conf.h	Thu Apr  9 13:24:38 1998
-***************
-*** 48,51 ****
---- 48,53 ----
-  #define SWEEP_INTERVAL  3600		/* Time between sweeps of the ticket
-  					   hash table */
-  
-+ #define KRB_INT32 int32_t
-+ 
-  #endif /* __ZSRV_CONF_H__ */
-*** lib/zephyr/ZMkAuth.c.~1~	Tue Jun 18 15:44:46 1996
---- lib/zephyr/ZMkAuth.c	Thu Apr  9 13:31:37 1998
-***************
-*** 44,50 ****
-      char *cstart, *cend;
-      ZChecksum_t checksum;
-      CREDENTIALS cred;
--     extern unsigned long des_quad_cksum();
-  
-      now = time(0);
-      if (last_authent_time == 0 || (now - last_authent_time > 120)) {
---- 44,49 ----
-*** server/kopt.c.~1~	Tue Jun 18 15:43:00 1996
---- server/kopt.c	Thu Apr  9 13:26:24 1998
-***************
-*** 234,240 ****
-      KTEXT authent;			/* The received message */
-      char *service;			/* Service name */
-      char *instance;			/* Service instance */
-!     unsigned KRB_INT32 from_addr;	/* Net address of originating host */
-      AUTH_DAT *ad;			/* Structure to be filled in */
-      char *fn;				/* Filename to get keys from */
-  {
---- 234,240 ----
-      KTEXT authent;			/* The received message */
-      char *service;			/* Service name */
-      char *instance;			/* Service instance */
-!     KRB_INT32 from_addr;		/* Net address of originating host */
-      AUTH_DAT *ad;			/* Structure to be filled in */
-      char *fn;				/* Filename to get keys from */
-  {
+diff -x *.orig -urN ./clients/xzwrite/Makefile.in /usr/pkgsrc/net/zephyr/work.i386.unpatched/zephyr-2.0.4/clients/xzwrite/Makefile.in
+--- ./clients/xzwrite/Makefile.in	Fri Jul  7 23:55:14 1995
++++ /usr/pkgsrc/net/zephyr/work.i386.unpatched/zephyr-2.0.4/clients/xzwrite/Makefile.in	Thu Nov 25 02:52:55 1999
+@@ -18,7 +18,7 @@
+ CC=@CC@
+ INSTALL=@INSTALL@
+ 
+-DEBUG=-O
++DEBUG=-O2
+ CFLAGS=$(DEBUG) -DDATADIR=\"$(datadir)\" -I$(top_srcdir)/h -I$(BUILDTOP)/h \
+ 	@X_CFLAGS@ @CPPFLAGS@
+ LDFLAGS=$(DEBUG) -L$(BUILDTOP)/lib/zephyr -L$(BUILDTOP)/lib/dyn @ET_LDFLAGS@ \
