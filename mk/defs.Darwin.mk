@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.4 2001/11/20 16:19:20 jlam Exp $
+# $NetBSD: defs.Darwin.mk,v 1.5 2001/11/21 12:42:24 agc Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -51,9 +51,10 @@ TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
 
-USERADD?=	${FALSE}			# XXX - Fix me!
+DEF_UMASK?=	0022
 GROUPADD?=	${FALSE}			# XXX - Fix me!
 NOLOGIN?=	${FALSE}
+USERADD?=	${FALSE}			# XXX - Fix me!
 
 ROOT_USER?=	root
 ROOT_GROUP?=	wheel

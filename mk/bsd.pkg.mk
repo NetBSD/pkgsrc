@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.851 2001/11/19 16:01:03 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.852 2001/11/21 12:42:23 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -28,15 +28,6 @@ MAKE_ENV+=	USETOOLS="${USETOOLS}"
 ##### Build crypto packages by default.
 MKCRYPTO?=		yes
 
-##### Some overrides of defaults below on a per-OS basis.
-.if (${OPSYS} == "SunOS")
-DEF_UMASK?=		022
-.elif (${OPSYS} == "Linux")
-DEF_UMASK?=		022
-NOMANCOMPRESS?=		yes
-.endif
-
-DEF_UMASK?=		0022
 CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
 REINSTALL?=		NO	# reinstall upon update
