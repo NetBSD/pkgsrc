@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2002/08/26 12:11:20 mjl Exp $
+# $NetBSD: Makefile,v 1.19 2002/08/26 13:45:37 mjl Exp $
 
 DISTNAME=		sylpheed-0.8.2
+PKGREVISION=		1
 CATEGORIES=		mail news x11
 MASTER_SITES=		http://sylpheed.good-day.net/sylpheed/
 EXTRACT_SUFX=		.tar.bz2
@@ -22,6 +23,8 @@ CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-compface
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+BUILDLINK_DEPENDS.gpgme=	gpgme>=0.3.5:../../security/gpgme
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6
