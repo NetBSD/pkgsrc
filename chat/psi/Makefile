@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/27 21:44:00 jdolecek Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/27 22:22:22 jdolecek Exp $
 
 DISTNAME=	psi-0.9
 CATEGORIES=	chat
@@ -25,6 +25,7 @@ post-configure:
 
 do-install:
 	cd ${WRKSRC} && ${QTDIR}/bin/lrelease psi.pro
+	${INSTALL_DATA_DIR} ${X11BASE}/share/psi
 	cd ${WRKSRC} && ${CP} -f -pR image iconsets sound certs lang/*.qm \
 		README COPYING \
 		${X11BASE}/share/psi/
