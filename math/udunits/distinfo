@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:36:00 agc Exp $
+
+MD5 (udunits-1.11.7/udunits.tar.Z) = d5bb619c8ab008fba9fc1e3ddefb2728
+SHA1 (patch-aa) = 4b4b0979f840a6e7f70bf410784f2ef4b3fb0630

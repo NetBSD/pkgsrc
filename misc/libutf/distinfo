@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:33 agc Exp $
+
+MD5 (libutf-2.10.tar.gz) = f83bcb35eb4600d5b0e16a401103c4bc
+SHA1 (patch-aa) = 74848da73b79be65f725aba9b4277cd83d86912f

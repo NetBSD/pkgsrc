@@ -1,4 +1,0 @@
-$NetBSD: md5,v 1.13 2001/04/15 01:18:07 itojun Exp $
-
-SHA1 (sendmail.8.11.3.tar.gz) = 6b7a7c4027f1c40b20f8c018b181ccbbe25a0ebb
-SHA1 (sendmail8.11.3+3.4W.patch.gz) = 8352c54937c32b5afbfa7ff15f45d41c8d11a0cc

@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:33:36 agc Exp $
+
+MD5 (cucipop-1.31.tar.gz) = e4dc7c3c6e3a4a83dde5cbbe21fee5f8
+MD5 (cucipop-1.31-v6-20010223.diff.gz) = bcb0ea319d82624966fd4a80adbed358
+SHA1 (patch-aa) = baf7a7a262d8d50d404bcc1eed9fe8da72a7b927
+SHA1 (patch-ab) = 2f021113d2634065034065aba0afd06b7a403cb1
+SHA1 (patch-ac) = a44452d25e33d3090cdf85ab6d76405fcbf28746
+SHA1 (patch-ad) = 702e1be8b6ff53da9d26d764f772b0dc4b23a7b7
+SHA1 (patch-ae) = 30715d0e00ed4862601ea0cb69fdb797a9eb234a

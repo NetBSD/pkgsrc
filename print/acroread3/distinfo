@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:43:24 agc Exp $
+
+MD5 (acroread_linux_301.tar.gz) = 3c168eab471aef91f1436c57ba7963b2
+MD5 (acroread_osf_301.tar.gz) = 19ffa95382dcb04ef3efc686e3ba1a6c
+MD5 (acroread_solaris_301.tar.gz) = f09b76b76638d028f029636eab819699
+MD5 (acroread_sunos_301.tar.gz) = 68dfc97aadbedc77d956db29e5766f94
+SHA1 (patch-aa) = 58a13d25db213726a9b3fda80a32dfdc2e85d0b7

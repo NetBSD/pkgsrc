@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:43:16 agc Exp $
+
+MD5 (LPRng-3.6.26.tgz) = 8d3dc76549191ae6681f6b61ed9fc660
+SHA1 (patch-ac) = 18672f47fd9fcb8288c070a89278ecb1c8ee8242

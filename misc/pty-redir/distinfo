@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:39:15 agc Exp $
+
+MD5 (pty-redir-0.1.tar.gz) = 2e8ce343022ae4ab87d3e46760953a79
+SHA1 (patch-aa) = 28f8a1c22a9bf602e0e447ca45736e7cde6fddd5

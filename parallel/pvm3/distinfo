@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:51 agc Exp $
+
+MD5 (pvm3.4.3.tgz) = 58d732cf31d21bd123f5c4ab04aa8610
+SHA1 (patch-aa) = 91b62b0b9cb541c5d0021ae4e4a1f2047655c34a
+SHA1 (patch-ab) = 4026b11d86eb2ba66ace1774a99f51c56bcc4b34
+SHA1 (patch-ac) = 953733fa2f1e41f2588ae71eae3ce70dc064a7c8
+SHA1 (patch-ad) = af899abbc2ee96d0d85f5133c0fb0bafccd01570
+SHA1 (patch-ae) = 5b7c2e0bd622529fdacb0b5b040da902992b722e
+SHA1 (patch-af) = cef251f0b542e12a46f6695c32289f0f1643a83f
+SHA1 (patch-ag) = 37c0340aef007543f0faae275d4317ad22632c5b
+SHA1 (patch-ah) = ea433b7e542844766f53137c71d103f73ca67e9c
+SHA1 (patch-ai) = b92a38791630dc6c0a7b93fc76891902b8876dea
+SHA1 (patch-aj) = faf239140e89495bb344e0b9be8f6e832673b1ba
+SHA1 (patch-ak) = c17cd124fbafaa87b31b844c656da7a1ecc036c5
+SHA1 (patch-al) = 519c3ef6439ad52c0a8b6290c3bfeae4e2d55be5
+SHA1 (patch-am) = 6fb271beb230e5fc5d5f0d720ba098b3b4352501

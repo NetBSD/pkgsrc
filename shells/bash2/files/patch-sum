@@ -1,5 +1,0 @@
-$NetBSD: patch-sum,v 1.4 2001/04/16 11:35:35 tron Exp $
-
-SHA1 (patch-aa) = 6a7733599ce07ca1c6257a96f41b985f25ad5a00
-SHA1 (patch-ab) = c206cb77dfc151bc32d3d56fc1253a01d60a21d5
-SHA1 (patch-ae) = f55a728f9f8ce8896a7097100de80db1d1cf752f

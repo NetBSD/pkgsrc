@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:39:27 agc Exp $
+
+MD5 (rpm-2.5.4.tar.gz) = d5f29162ada83b217b497063582af902
+SHA1 (patch-aa) = 3ee3193cc8e9043017b1f507b606c72acab77ddb
+SHA1 (patch-ab) = 63635f4f7fd96b4e7a40bfbaffd5673b40db3a13
+SHA1 (patch-ba) = edf6708fe7ef3b0e899473a13fe709d8c561e14b
+SHA1 (patch-bb) = dc0ea2dd366b793003218858ca3d67bc285a2089
+SHA1 (patch-bc) = 7b01437e0fa15ae802dfd7cde4c250fb081ef71c
+SHA1 (patch-bd) = 1c9cd4587314ee45bccdf08c6ecaabbe641aaa5d

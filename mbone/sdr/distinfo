@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:34:00 agc Exp $
+
+MD5 (sdr-3.0.tar.gz) = 905eeb8c4c9ad304e35728c95556fff0
+SHA1 (patch-aa) = 13be7ff0bffb042654e82ea6a02ab826c82f3c64
+SHA1 (patch-ab) = b96c341745f8b6f060c39326d3f3853079be6bda
+SHA1 (patch-ac) = a8b18c0c548284f417c07d12e64957225bc455a6
+SHA1 (patch-ad) = 337decefd454e4421e3b07fc95dceaf1dfa290f0
+SHA1 (patch-ae) = 092a76dbbd92bdaef07c2ee8994d191654087642

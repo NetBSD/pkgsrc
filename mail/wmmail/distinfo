@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:28 agc Exp $
+
+MD5 (WMMail.app-0.64.tar.gz) = fc596db9f2f6b52eec3a303178106c8e
+SHA1 (patch-aa) = 57b435f874cb04a289b21e61d741c4ddb4966d7e
+SHA1 (patch-ac) = 565d442850f7b406fad588dd5e045b465a40fbab
+SHA1 (patch-ad) = 13251a2ab4a656cf1452dc785d98e39b39aa7c94

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:37:18 agc Exp $
+
+MD5 (astrolog/ast53unx.shr) = 3be257b0bbd25afe53acc6838d09af0b
+MD5 (astrolog/LRZ5_24) = a02e13225eadbe4771edaa1a85c7a3bc
+MD5 (astrolog/CHI_24) = b2b2643270155c0947ec8a36c24ce9d7
+MD5 (astrolog/CPJV_24) = 858e401a8fbf19dda777eb432e176698
+SHA1 (patch-aa) = 22f92b4c56e0e72b94df00fccbf39f856507e612
+SHA1 (patch-ab) = 07d267465a1ca3c0211115006054e638075c1b78

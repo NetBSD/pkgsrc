@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:34:10 agc Exp $
+
+MD5 (maildrop-1.2.2.tar.gz) = 92399244e03694bbbe1dd75fe4b9a204
+SHA1 (patch-aa) = 44d6afa0775c315022a7d63897e67d3d12ab9363

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:02 agc Exp $
+
+SHA1 (granulate-0.1.tar.gz) = dd8b458ea2330b2adea61e3010ea9715fabedce4
+SHA1 (patch-aa) = 75c04296f16da1b3d0a81c08b9534ad1df45d7c2

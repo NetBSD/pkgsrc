@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:22 agc Exp $
+MD5 (octave-2.0.16.tar.gz) = 6ad6f87f762f3d313e6b6da8346e90d0
+SHA1 (patch-aa) = ee390a6f2c750a4c9ab01c753da0f7006bc4c0a8
+SHA1 (patch-ac) = 46f96166094821de179c7e8440503b9e11cc16d0
+SHA1 (patch-ae) = 385d3b34764c245530378a04c42735b597c881e4
+SHA1 (patch-af) = 8e1f3e3b4f18eeaa77c60ab887d9898b8e5936cc
+SHA1 (patch-ag) = c31a22e4feb22b2ee10301556bf2d497e5c1c895
+SHA1 (patch-ah) = faf342ddb0eeb91927dc119670e2124a214e5346

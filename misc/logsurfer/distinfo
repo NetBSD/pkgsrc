@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:40 agc Exp $
+
+MD5 (logsurfer-1.5.tar.gz) = 057ac8e80d86694ab2cd56cb620b4f17
+SHA1 (patch-aa) = 4c4f4e2f8093d38b08c5a119e9c84ba32b7a7648
+SHA1 (patch-ab) = 65289a445b062fabee11064d00aa8bb44caf89c8

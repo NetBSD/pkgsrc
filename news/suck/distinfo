@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:14 agc Exp $
+
+MD5 (suck-4.2.2.tar.gz) = 047e53a837b2c7534960f389b4284d61
+SHA1 (patch-aa) = 970ffa385a2b2b3f95944ba9a4321452bb247319

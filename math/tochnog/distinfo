@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:58 agc Exp $
+
+MD5 (tochnog-20010210/tn.tar.gz) = 8d48f9c18e9c30b5901f22b4392487de
+MD5 (tochnog-20010210/tnu.ps.gz) = 5af220e1c643ade9ef9aad309ad84ea0
+MD5 (tochnog-20010210/tnp.ps.gz) = d6b795565e655c1aada309709815f4ab
+SHA1 (patch-aa) = e09d2a76fbd09208eb04564ac05e37e89f7599d0
+SHA1 (patch-ab) = e90269af74181a3ce4be670b83ac07ff7e1a7c94

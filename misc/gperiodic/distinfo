@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:37:58 agc Exp $
+
+MD5 (gperiodic-1.2.6.tar.gz) = 719465978b1d6cd98b882e67f6943cfe
+SHA1 (patch-aa) = 55fc5b2d5751115e27a9e97613603a1b854384ea

@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:12 agc Exp $
+
+SHA1 (slrn-0.9.7.0a.tar.gz) = 55cf070ee208d7d3bcddc48506cd717224d98fd6
+SHA1 (patch-ac) = f8d6cee35de3c983e8832c8cc729418713a5d3d5

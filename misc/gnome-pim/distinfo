@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:37:52 agc Exp $
+
+SHA1 (gnome-pim-1.4.0.tar.gz) = aec0b200ef4fc538d67b92b592974945f5384a78
+SHA1 (patch-aa) = f378150affccecbb5dcd7668764a4cf32be6e3f2
+SHA1 (patch-ab) = e16133ee1f25ac3ea60d391eb66168288435f27e
+SHA1 (patch-ac) = ebe5848a5db932307f80e72579f502272edd0c17

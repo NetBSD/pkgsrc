@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:36:03 agc Exp $
+
+MD5 (xldlas-0.85-source.tgz) = 7fada7760d6b882b31cdf14b75f304a4
+SHA1 (patch-aa) = b7ba66fab8258f54093065a920e287a44654fe6a
+SHA1 (patch-ab) = 88c45901cf3095e5f86ef0f1e50832292278cf46

@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:33:41 agc Exp $
+
+MD5 (distribute/distribute-2.1-pl19.tar.gz) = 8f37899f0101423dba732718da64d97c
+MD5 (distribute/patch.20.gz) = c530466c690baf410ec50b014c3d3aa6
+MD5 (distribute/patch.21e.gz) = e9465e3a1f34d9fd6a5d40704024e3a7
+MD5 (distribute/patch.22e.gz) = 44e86eed0bb78522a2a5eab0dc8cb1dd
+MD5 (distribute/patch.23e.gz) = fb7043530b09b391568ee72f36cba2c0
+MD5 (distribute/patch.24e.gz) = 078daebdd79c62374f6c20c76a7c0c97
+MD5 (distribute/patch.25e.gz) = 5ebd709e50301105d613a1fd36f32464
+MD5 (distribute/patch.26e.gz) = d9ab9c605893c35d3f39b8beae9a9520
+SHA1 (patch-aa) = 7f5ead56594cb1bb4186c6c3b7cad59bd210cf45
+SHA1 (patch-ab) = 4c07a6ae9bb1e9dacd33db96624d2c2fefbb9240
+SHA1 (patch-ac) = 43395b388bb5c5131ae6de3d8f92d6b5609b02d2

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:37:35 agc Exp $
+
+MD5 (cuecat-0.2.1.tar.gz) = 828c4d693863b98ee6cc5d5d84647dd5
+SHA1 (patch-aa) = b47bdbdfc04db7e96eab189ea7cb4411a976e533
+SHA1 (patch-ab) = 1342ed521ddd540d2776021a6e4abeea8cb5c80c

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:16 agc Exp $
+
+MD5 (metis-4.0.tar.gz) = 0aa546419ff7ef50bd86ce1ec7f727c7
+SHA1 (patch-aa) = 4a7abb2a2d3e6600bb58cafc02d420cffa3ef4ca
+SHA1 (patch-ab) = c7f6787f67a981a3aace959d7337f4528f9d76cb
+SHA1 (patch-ac) = f3e956093d5931170a61f3e8c0732900b5d38874

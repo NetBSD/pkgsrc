@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:34:36 agc Exp $
+
+MD5 (cassowary-0.60.tar.gz) = e8bc875306b1c873ceeb0a9d8a83533d
+SHA1 (patch-aa) = 32c7d9db43bea9b9114c4091cd0687b558211a94
+SHA1 (patch-ab) = 66119674c748ea04a16b1c91850b4e6acc831ec4

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:36:08 agc Exp $
+
+MD5 (yacas-1.0.43/yacas-latest.tar.gz) = dbe5a9c8c906b505e3226b7dee2b5918
+SHA1 (patch-aa) = 58e0fbd4460c45f258e32550dedf59d348dfdd76
+SHA1 (patch-ad) = 4ea45ffba21a863a294419deae629c1524e4a3fa

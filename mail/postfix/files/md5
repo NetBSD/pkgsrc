@@ -1,5 +1,0 @@
-$NetBSD: md5,v 1.18 2001/04/14 15:20:31 itojun Exp $
-
-SHA1 (postfix/postfix-20010228-pl01.tar.gz) = ce4f51ac4edc09a4014cdca841f581939bd8e103
-SHA1 (postfix/postfix-20010228release-v6-20010415a.diff.gz) = b764dcead13b39006b207f67fc4e7e7ab7d6e2a0
-SHA1 (postfix/postfix-20010228release-ercpt.diff) = c6abc5d57ca1a36de85dadee878b266d707ad3cd

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:38 agc Exp $
+
+MD5 (pari-2.1.0.tar.gz) = 7cff208a621d2368ca0052c457b3b3cd
+SHA1 (patch-aa) = 7a1ca16b1bb7d48ed3bbbeaa7e48b0c567c6caed
+SHA1 (patch-ab) = 7670bfc9adc606e17e3897a7f784290813fcb294
+SHA1 (patch-ac) = 84af235f319ae108aadeedea5a25e005540160ac

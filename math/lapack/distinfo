@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:35:07 agc Exp $
+
+MD5 (lapack-20010201.tar.gz) = a24f59304f87b78cdc7da2ae59c98664
+SHA1 (patch-aa) = 523854177f1f91d7ad6eed9e61b9f69895e10f0a
+SHA1 (patch-ab) = 88d9d4a80cecb7e831010e59f90347173812fbbe

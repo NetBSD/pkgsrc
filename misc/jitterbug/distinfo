@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:38:13 agc Exp $
+
+MD5 (jitterbug-1.6.2.tar.gz) = a01f5807ff53c2ebcf1915fa9c472236
+SHA1 (patch-aa) = 9573d1a2f78aef1bd381082080902c50b40bb067

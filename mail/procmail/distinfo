@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:34:52 agc Exp $
+
+MD5 (procmail-3.15.tar.gz) = 2567273648f41ae23c51cf876e0019fc
+SHA1 (patch-aa) = 29d0b8bc73313fe655c97f7d5adafab5b9104309
+SHA1 (patch-ab) = 6655435092feacfc1b0a8ab6908ea7856532ce09
+SHA1 (patch-ac) = fe2350e704546c2262d546bb615175dd0591ba8b
+SHA1 (patch-ad) = 569d357c6afb9d7644c8094878aec08d22ae609d
+SHA1 (patch-ae) = c5921ea2723d64615b6e76c4ea7a0b4afec7d452

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:36:04 agc Exp $
+
+MD5 (xlispstat-3-52-18.tar.gz) = 33498b5f63e16e34bcdf310c5549d7cc
+SHA1 (patch-ac) = 6d0bc8a123c4978a47e6913c24b81800aba6928b
+SHA1 (patch-ad) = 832133137b104facbd90189e5dd163bb35ff9174
