@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2004/02/06 19:04:24 jlam Exp $
 
 .if !defined(ZLIB_BUILDLINK2_MK)
 ZLIB_BUILDLINK2_MK=	# defined
@@ -74,7 +74,7 @@ BUILDLINK_USE_BUILTIN.zlib!=	\
 		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.zlib="${BUILDLINK_USE_BUILTIN.zlib}"
+MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.zlib=${BUILDLINK_USE_BUILTIN.zlib}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.zlib:M[nN][oO])

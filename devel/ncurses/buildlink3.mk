@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2004/02/06 19:04:24 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -20,7 +20,7 @@ _BLNK_LIBNCURSES_FOUND!=	\
 	else								\
 		${ECHO} "YES";						\
 	fi
-MAKEFLAGS+=	_BLNK_LIBNCURSES_FOUND="${_BLNK_LIBNCURSES_FOUND}"
+MAKEFLAGS+=	_BLNK_LIBNCURSES_FOUND=${_BLNK_LIBNCURSES_FOUND}
 .endif
 
 _NCURSES_H=	/usr/include/curses.h
@@ -37,7 +37,7 @@ BUILDLINK_IS_BUILTIN.ncurses!=						\
 		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.ncurses="${BUILDLINK_IS_BUILTIN.ncurses}"
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.ncurses=${BUILDLINK_IS_BUILTIN.ncurses}
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
@@ -107,7 +107,7 @@ BUILDLINK_USE_BUILTIN.ncurses!=						\
 .    endfor
 .  endif
 MAKEFLAGS+=	\
-	BUILDLINK_USE_BUILTIN.ncurses="${BUILDLINK_USE_BUILTIN.ncurses}"
+	BUILDLINK_USE_BUILTIN.ncurses=${BUILDLINK_USE_BUILTIN.ncurses}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.ncurses:M[nN][oO])
