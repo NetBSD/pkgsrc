@@ -15,6 +15,6 @@ used, things like snprintf() are used instead.  There are few fixed
 sized buffers/arrays, instead, most data structures are dynamically
 allocated with the allocation sized recorded so I can check to make
 sure the buffer isn't overflowed.  The return values from malloc() and
-other system calls are checked and handled as gracefully as I can.
+other system calls are checked and handled as gracefully as possible.
 The valgrind program is regularly run to make sure that there are no
 memory leaks and reads/writes to invalid memory.
