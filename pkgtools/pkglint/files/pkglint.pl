@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.82 2003/02/01 13:37:33 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.83 2003/03/28 20:22:23 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -29,6 +29,7 @@ $verbose = $newpkg = 0;				# -vN
 $showmakefile = 0;				# -I
 $contblank = 1;
 $portdir = '.';
+%definesfound = ();
 
 # default settings for NetBSD
 $portsdir = '@PORTSDIR@';
@@ -603,6 +604,7 @@ sub readmakefile {
 	local $includefile;
 	local $dirname;
 	local $savedln;
+	local $level;
 	local $_;
 	my $handle = new FileHandle;
 
@@ -618,6 +620,32 @@ sub readmakefile {
 		if ($_ =~ /^        /) {	# 8 spaces here!
 			&perror("WARN: $file $.: use tab (not spaces) to".
 				" make indentation.");
+		}
+		if ($_ =~ /^\.\s*if\s+!defined\s*\((\w+)\)/) {
+			if ($definesfound{$1}) {
+				$level = 1;
+				print("OK: omitting contents of !defined($1)\n") if ($verbose);
+				$contents .= "# omitted inclusion for !defined($1) here\n";
+				while (<$handle>) {
+					if ($_ =~ /^\.\s*if\s+/) {
+						$level++;
+					}
+					elsif ($_ =~ /^\.\s*endif\s+/) {
+						$level--;
+					}
+					if ($level eq 0) {
+						break;
+					}
+				}
+				if ($level > 0) {
+					&perror("WARN: missing .endif.");
+				}
+				next;
+			}
+			else {
+				print("OK: defining $1\n") if $verbose;
+				$definesfound{$1} = true;
+			}
 		}
 		# try to get any included file
 		if ($_ =~ /^.include\s+([^\n]+)\n/) {
