@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2004/02/26 16:47:35 adam Exp $
+$NetBSD: patch-ad,v 1.5 2005/02/22 14:02:31 adam Exp $
 
 --- libcruft/Makefile.in.orig	2004-02-16 19:57:21.000000000 +0000
 +++ libcruft/Makefile.in
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.4 2004/02/26 16:47:35 adam Exp $
 -	  $(INSTALL_DATA) libcruft.$(LIBEXT) \
 -	    $(DESTDIR)$(octlibdir)/libcruft.$(LIBEXT) ; \
 -	  $(RANLIB) $(DESTDIR)$(octlibdir)/libcruft.$(LIBEXT) ; \
-+	  ${LIBTOOL} --mode=install $(INSTALL_DATA) libcruft.$(LIBEXT) \
++	  ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libcruft.$(LIBEXT) \
 +	    ${PREFIX}/lib; \
  	fi
  	if $(SHARED_LIBS); then \

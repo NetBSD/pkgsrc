@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2005/01/13 15:41:53 adam Exp $
+# $NetBSD: Makefile,v 1.41 2005/02/22 14:02:30 adam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGNAME=	octave-current-${OCTAVE_VER}
-PKGREVISION=	1
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/bleeding-edge/ \
-		ftp://ftp.eos.hokudai.ac.jp/pub/GNU/misc/octave/bleeding-edge/ \
-		ftp://ftp.u-aizu.ac.jp/pub/SciEng/numanal/Octave/bleeding-edge/ \
-		ftp://ftp.task.gda.pl/pub/software/octave/bleeding-edge/
+MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/ \
+		ftp://ftp.eos.hokudai.ac.jp/pub/GNU/misc/octave/ \
+		ftp://ftp.u-aizu.ac.jp/pub/SciEng/numanal/Octave/ \
+		ftp://ftp.task.gda.pl/pub/software/octave/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
@@ -18,7 +17,7 @@ BUILD_DEPENDS+=	bison>=1.875:../../devel/bison
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-OCTAVE_VER=	2.1.64
+OCTAVE_VER=	2.1.65
 CONFLICTS+=	octave-2.0.*
 
 .if (${MACHINE_ARCH} == "arm32")
@@ -71,15 +70,15 @@ post-build:
 
 post-install:
 .for f in ${LIBOCTAVE_INFO}
-	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/$f ${PREFIX}/info
+	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/${f} ${PREFIX}/info
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
 .for f in ${OCTAVE_DOC}
-	${INSTALL_DATA} ${WRKSRC}/doc/$f ${PREFIX}/share/octave/${OCTAVE_VER}/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/octave
 .for f in ${OCTAVE_HTML}
-	${INSTALL_DATA} ${WRKSRC}/doc/$f ${PREFIX}/share/doc/html/octave
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/doc/html/octave
 .endfor
 
 .include "../../audio/libsndfile/buildlink3.mk"
