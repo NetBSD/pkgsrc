@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/14 00:54:45 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/04/25 04:25:11 snj Exp $
 # $FreeBSD: ports/net/libnids/Makefile,v 1.5 2000/04/24 07:42:58 kris Exp $
 #
 
@@ -10,12 +10,12 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://libnids.sourceforge.net/
 COMMENT=	Network monitoring library with TCP/IP reassembly
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 
 BUILDLINK_DEPMETHOD.libnet=	build
 BUILDLINK_DEPMETHOD.libpcap=	build
 
-.include "../../devel/libnet/buildlink2.mk"
-.include "../../net/libpcap/buildlink2.mk"
+.include "../../devel/libnet/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

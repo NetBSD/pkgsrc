@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/10/28 16:59:14 cube Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/25 04:26:14 snj Exp $
 
 DISTNAME=	pakemon-0.3.1
 PKGREVISION=	2
@@ -11,13 +11,13 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://web.sfc.keio.ac.jp/~keiji/backup/ids/pakemon/index.html
 COMMENT=	Packet monster, an Open Source Intrusion Detection System
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 
 post-extract:
 	${CP} ${WRKSRC}/pakemon.h ${WRKSRC}/pakemon.h.in
 
-.include "../../net/libpcap/buildlink2.mk"
-.include "../../devel/libnet/buildlink2.mk"
-.include "../../net/libnids/buildlink2.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../devel/libnet/buildlink3.mk"
+.include "../../net/libnids/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
