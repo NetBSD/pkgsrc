@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/16 00:25:30 salo Exp $
+
+SHA1 (wtail-0.2.2.tar.gz) = 609f4ebe064c155829e96f865bee93e727b692e8
+Size (wtail-0.2.2.tar.gz) = 13633 bytes
+SHA1 (patch-aa) = 1605c1836fddce4c3fef589e3cf5a11d6bab33d6

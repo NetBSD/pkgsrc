@@ -1,0 +1,2 @@
+wtail does the equivalent of tail -f on several files at once. The screen 
+is split into as many parts as there are files to watch.
