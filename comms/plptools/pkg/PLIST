@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/14 05:41:47 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/06/12 13:36:20 skrll Exp $
 bin/plpftp
 lib/libplp.a
+lib/libplp.la
 lib/libplp.so.1.0
 sbin/ncpd
 sbin/plpnfsd
