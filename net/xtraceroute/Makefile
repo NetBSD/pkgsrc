@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/03 18:49:51 reed Exp $
+# $NetBSD: Makefile,v 1.35 2004/04/18 07:30:16 snj Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -16,7 +16,7 @@ BUILD_USES_MSGFMT=	yes
 
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+= --with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
@@ -31,11 +31,11 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/hosts.cache    ${PREFIX}/share/xtraceroute/hosts.cache
 	${INSTALL_DATA} ${WRKDIR}/networks.cache ${PREFIX}/share/xtraceroute/networks.cache
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../x11/gtkglarea/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtkglarea/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
