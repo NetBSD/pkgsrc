@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:34:08 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/31 19:45:21 jschauma Exp $
 
-DISTNAME=	tclcl-src-1.0b12
+DISTNAME=	tclcl-src-1.0b13
 PKGNAME=	tcl-${DISTNAME:S/b/rc/:S/-src//}
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	devel
