@@ -1,8 +1,15 @@
-$NetBSD: patch-ah,v 1.3 1999/07/09 15:58:34 itojun Exp $
+$NetBSD: patch-ah,v 1.4 1999/07/24 00:20:38 tron Exp $
 
---- sockunion.h.orig	Fri Jul  9 08:18:22 1999
-+++ sockunion.h	Fri Jul  9 08:20:21 1999
-@@ -0,0 +1,14 @@
+--- sockunion.h.orig	Sat Jul 24 02:11:15 1999
++++ sockunion.h	Sat Jul 24 02:15:32 1999
+@@ -0,0 +1,21 @@
++#ifndef INET_ADDRSTR
++#define INET_ADDRSTRLEN			16
++#endif
++#ifndef INET6_ADDRSTR
++#define INET6_ADDRSTRLEN		46
++#endif
++
 +union sockunion {
 +	struct sockinet {
 +		u_char si_len;
