@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/25 13:57:10 rh Exp $
+
+--- modules/nfs-method.c.orig	Wed Nov 15 13:41:58 2000
++++ modules/nfs-method.c
+@@ -36,6 +36,7 @@
+ #include <fcntl.h>
+ #include <limits.h>
+ #include <sys/stat.h>
++#include <sys/socket.h>
+ #include <sys/types.h>
+ #include <unistd.h>
+ #include <utime.h>
