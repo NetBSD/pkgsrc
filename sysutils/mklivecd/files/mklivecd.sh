@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.12 2004/04/27 16:33:12 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.13 2004/05/01 10:46:11 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -246,31 +246,37 @@ do_cdlive()
 		    [ ! -d $ISODIR/$BOOTDIR ] && mkdir -p $ISODIR/$BOOTDIR
 		    for f in $GRUB_FILES
 		    do
-			    cp @PREFIX@/share/grub/@MACHINE_ARCH@-/$f \
-				$ISODIR/$BOOTDIR
-			    if [ "$verbose_mode" = "on" ]; then
-				showmsg "Copying $f into $ISODIR/boot/grub."
+			    if [ ! -f $ISODIR/$BOOTDIR/$f ]; then
+				cp @PREFIX@/share/grub/@MACHINE_ARCH@-/$f \
+				    $ISODIR/$BOOTDIR
+				[ "$verbose_mode" = "on" ] && \
+				    showmsg "Copying $f into $ISODIR/boot/grub."
+			    else
+				showmsg "Not copying $f, already exists."
 			    fi
 		    done
-		    cp $WORKDIR/$KERNEL_NAME/netbsd $ISODIR
-		    make clean >/dev/null 2>&1
-		    rm -rf $KERNEL_NAME
-		    echo
-		    showmsg "Build successful"
-		    if [ "$verbose_mode" = "on" ]; then
-			showmsg "Boot/kernel image installed!"
-			showmsg "Next step: ${progname} base"
+		    cp $WORKDIR/$KERNEL_NAME/netbsd $ISODIR/$BOOTDIR
+		    if [ $? -eq 0 ]; then
+			showmsg "boot/kernel installed.."
+			if [ "$verbose_mode" = "on" ]; then
+			    showmsg "Boot/kernel images installed!"
+			    showmsg "Next step: ${progname} base"
+			fi
+			echo
+			make clean >/dev/null 2>&1
+			rm -rf $KERNEL_NAME
+		    else
+			showmsg "Couldn't install the kernel."
 		    fi
-		    echo
 		else
 		    echo
-		    showmsg "Build failed"
-		    showmsg "Boot/kernel image not installed!"
+		    showmsg "kernel build failed."
+		    showmsg "Boot/kernel images were not installed!"
 		    echo
 		fi
 	;;
 	base)
-		chown -R root:wheel $ISODIR/netbsd $ISODIR/$BOOTDIR
+		chown -R root:wheel $ISODIR/$BOOTDIR
 
 		for F in ${BASE_SETS}
 		do
@@ -343,7 +349,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.12 2004/04/27 16:33:12 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.13 2004/05/01 10:46:11 xtraeme Exp $
 # 
 
 # PROVIDE: root
