@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2002/07/31 14:02:44 abs Exp $
+$NetBSD: patch-ab,v 1.5 2002/08/02 23:01:46 abs Exp $
 
---- mserv/cmd.c.orig	Wed Jul 31 14:59:21 2002
+--- mserv/cmd.c.orig	Sat Jul 15 18:52:56 2000
 +++ mserv/cmd.c
-@@ -2790,6 +2790,7 @@ static void mserv_cmd_reset(t_client *cl
+@@ -2789,6 +2789,8 @@ static void mserv_cmd_reset(t_client *cl
+     mserv_response(cl, "RESETER", NULL);
      return;
    }
-   mserv_log("Reset initiated by %s", cl->user);
 +  mserv_broadcast("RESETGO", "%s", cl->user);
++  mserv_flush();
+   mserv_log("Reset initiated by %s", cl->user);
    mserv_reset();
    mserv_broadcast("RESET", "%s", cl->user);
-   if (cl->mode != mode_human)
