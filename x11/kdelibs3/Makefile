@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2004/10/03 00:18:36 tv Exp $
+# $NetBSD: Makefile,v 1.69 2004/10/13 11:47:51 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -46,9 +45,15 @@ pre-configure:
 	done
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-.include "../../print/cups/buildlink3.mk"
-BUILD_DEFS+=		USE_CUPS
+PKG_DEFAULT_OPTIONS+=	cups
+.endif
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.kdelibs
+PKG_SUPPORTED_OPTIONS=	cups
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcups)
+.include "../../print/cups/buildlink3.mk"
 PLIST_SUBST+=		CUPS=
 .else
 PLIST_SUBST+=		CUPS="@comment "
@@ -138,6 +143,11 @@ CFLAGS:=        ${CFLAGS:C/-O[0-9]*/-O/g}
 CONFIGURE_ENV+= CXXFLAGS="${CXXFLAGS}"
 CONFIGURE_ENV+= CFLAGS="${CFLAGS}"
 .  endif
+#
+# Configure finds these but apparently they are not ready for primetime
+# and build will blow up as declarations in netdb.h are not visible
+CONFIGURE_ENV+= ac_cv_func_getservbyname_r='no'
+CONFIGURE_ENV+= ac_cv_func_getprotobyname_r='no'
 .endif
 
 .if ${OPSYS} == "SunOS"
