@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/12/31 00:04:19 kristerw Exp $
+
+--- src/makefile.orig	Tue Dec 30 20:04:54 2003
++++ src/makefile	Tue Dec 30 20:05:12 2003
+@@ -19,7 +19,7 @@
+ .SUFFIXES: .cxx .c
+ 
+ .cxx.o:
+-	$(CPP) $(CFLAGS) $(DFLAGS) -c $<
++	$(CXX) $(CFLAGS) $(DFLAGS) -c $<
+ 
+ .c.o:
+ 	$(CC) $(CFLAGS) $(DFLAGS) -c $<
