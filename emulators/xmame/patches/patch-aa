@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.14 1998/09/05 12:27:40 mycroft Exp $
-
---- makefile.unix.orig	Fri Sep  4 03:02:07 1998
-+++ makefile.unix	Sat Sep  5 08:07:04 1998
+--- makefile.unix.orig	Wed Oct 21 08:20:43 1998
++++ makefile.unix	Sun Oct 25 04:03:24 1998
 @@ -39,7 +39,7 @@
  # GNU MAKE is MANDATORY !!!
  # so please give me the path...
@@ -11,7 +9,7 @@ $NetBSD: patch-aa,v 1.14 1998/09/05 12:27:40 mycroft Exp $
  # else ...
  # MAKE=/usr/people/jantonio/bin/gmake
  
-@@ -99,18 +99,18 @@
+@@ -106,18 +106,18 @@
  # *** Select destination directory for your compiled program , manual page
  # and binary distribution ( if you want to... )
  # ( only needed to install, not to compile... )
@@ -33,20 +31,20 @@ $NetBSD: patch-aa,v 1.14 1998/09/05 12:27:40 mycroft Exp $
 -MRC = \"/usr/games/lib/$(NAME)/$(NAME)rc\"
 +MRC = \"${PREFIX}/share/$(NAME)/$(NAME)rc\"
  
- 
+ # *** Where is cheat.dat ? 
+ CHEATFILE = \"/usr/games/lib/$(NAME)/cheat.dat\"
+@@ -132,7 +132,9 @@
  ##############################################################################
-@@ -118,7 +118,9 @@
- ##############################################################################
  
- # *** To disable joystick support comment next line
+ # *** To enable joystick support uncomment next line
 -# JOY		= -DUSE_JOYSTICK
 +ifeq (${NETBSD_JOYSTICK},yes)
 +JOY		= -DUSE_JOYSTICK
 +endif
  
- # *** To disable  mouse support comment next line
- MOUSE		= -DUSE_MOUSE
-@@ -137,7 +139,9 @@
+ # if you have selected joystick support , select your preferences:
+ #
+@@ -148,7 +150,9 @@
  # JSLIB   = -lXi
  
  # On iX86 based OS's, if supported, you can use standard joystick driver
@@ -57,7 +55,7 @@ $NetBSD: patch-aa,v 1.14 1998/09/05 12:27:40 mycroft Exp $
  
  # Linux FM-TOWNS game PAD joystick emulation support
  # Thanks to Osamu Kurati for provided patch
-@@ -158,8 +162,8 @@
+@@ -169,8 +173,8 @@
  # you might decide to use these feature. Otherwise, you should use a 
  # timer based audio code and ajust in src/unix/sound.h AUDIO_TIMER_FREQ item
  #
@@ -68,7 +66,7 @@ $NetBSD: patch-aa,v 1.14 1998/09/05 12:27:40 mycroft Exp $
  
  # *** When using timer, you should provide the frequency to generate audio sample
  # frames in your system. See readme.unix notes about these item
-@@ -202,7 +206,7 @@
+@@ -223,7 +227,7 @@
  # note: x11 is the only one supported on all platforms
  
  ### normal X11
@@ -77,7 +75,16 @@ $NetBSD: patch-aa,v 1.14 1998/09/05 12:27:40 mycroft Exp $
  ### XFree86's DGA extension, only tested under linux
  #DISPLAY_METHOD = xf86_dga
  ### svgalib, only supported under linux
-@@ -224,14 +228,16 @@
+@@ -244,19 +248,23 @@
+ # uncomment following section to support them ( you should have libxpm 
+ # available :-) )
+ # COMMENT IT if your are not compiling for normal x11
+-# XPM	= -DHAS_XPM
+-# XPMLIB	= -lXpm -L/usr/X11R6/lib
++ifeq (${DISPLAY_METHOD},x11)
++XPM	= -DHAS_XPM
++XPMLIB	= -lXpm -L/usr/X11R6/lib
++endif
   
  # *** If you don't have the MIT-Shared Memory X Extensions, comment the
  # following: ( Test if available by mean of xdpyinfo command )
@@ -96,7 +103,21 @@ $NetBSD: patch-aa,v 1.14 1998/09/05 12:27:40 mycroft Exp $
  # for Sun systems 
  # X11INC		= -I/usr/openwin/include
  # X11LIB		= -L/usr/openwin/lib
-@@ -252,11 +258,12 @@
+@@ -273,11 +281,11 @@
+ 
+ # OpenGL include path
+ 
+-GLINCPATH= /usr/src/Mesa-3.0/include
++GLINCPATH= ${PREFIX}/include
+ 
+ # OpenGL library path
+ 
+-GLLIBPATH= /usr/src/Mesa-3.0/lib
++GLLIBPATH= ${PREFIX}/lib
+ 
+ # OpenGL libs
+ 
+@@ -310,11 +318,12 @@
  ######## Alpha/Linux
  # ARCH  = linux_alpha
  ######## ix86/Linux
@@ -111,7 +132,7 @@ $NetBSD: patch-aa,v 1.14 1998/09/05 12:27:40 mycroft Exp $
  ######## Sparc/SunOS ( no sound )
  # ARCH  = sunos
  ######## ix86/Solaris
-@@ -291,7 +298,11 @@
+@@ -351,7 +360,11 @@
  DEFS.linux_alpha   = -Dlinux -DLSB_FIRST -DAXP_ASM -DACORN
  DEFS.linux_i386    = -Dlinux -DLSB_FIRST -DX86_ASM
  DEFS.FREEBSD       = -DLSB_FIRST -DX86_ASM -Dlinux -DFREEBSD_SOUND_WORKAROUND
@@ -124,10 +145,10 @@ $NetBSD: patch-aa,v 1.14 1998/09/05 12:27:40 mycroft Exp $
  DEFS.sunos	   = -Dsun -DCLOCKS_PER_SEC=1000000 -DACORN
  DEFS.solaris	   = -Dsun -DACORN 
  DEFS.solaris_i386  = -DLSB_FIRST -Dsun -Dsolaris
-@@ -309,12 +320,14 @@
- LIBS.solaris_i386  = -lm -lnsl -lsocket
- LIBS.irix          = -lm -laudio
- LIBS.aix           = -lm -lUMSobj
+@@ -371,12 +384,14 @@
+ LIBS.irix          = -laudio
+ LIBS.irix_al       = -laudio
+ LIBS.aix           = -lUMSobj
 +LIBS.netbsd	   = -lm
  
  ##############################################################################
