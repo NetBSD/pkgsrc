@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2279 2004/10/29 23:02:17 xtraeme Exp $
+$NetBSD: TODO,v 1.2280 2004/10/30 00:50:46 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -325,7 +325,6 @@ Suggested package updates
 	o ethereal-0.10.7
 	o ettercap-0.7.1 [wip/ettercap-NG|adrianp]
 	o evolution-2.0.0
-	o feh-1.2.7
 	o festival-1.4.3
 	o file-4.10
 	o file-roller-2.8.3

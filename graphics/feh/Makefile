@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/10/15 12:22:14 tv Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/30 00:50:46 xtraeme Exp $
 #
 
-DISTNAME=	feh-1.2.6
-PKGREVISION=	6
+DISTNAME=	feh-1.2.7
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.linuxbrit.co.uk/downloads/
 
@@ -16,8 +15,11 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
 USE_X11=	YES
 
-CONFIGURE_ARGS+=--program-transform-name=s,cam,feh_cam,
-REPLACE_PERL=	${WRKSRC}/cam/cam
+CONFIGURE_ARGS+=	--program-transform-name=s,cam,feh_cam,
+REPLACE_PERL=		cam/cam
+
+BUILDLINK_DEPENDS.giblib+=	giblib>=1.2.4
+BUILDLINK_DEPENDS.jpeg+=	jpeg>=6bnb3 # includes jpegint.h
 
 .include "../../devel/giblib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
