@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4047 2003/12/11 20:23:12 veego Exp $
+$NetBSD: CHANGES,v 1.4048 2003/12/11 22:58:40 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5064,3 +5064,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added milter-spamc-0.10 [manu 2003-12-11]
 	Updated irssi to 0.8.9 [veego 2003-12-11]
 	Updated irssi-icb to 0.14nb3 [veego 2003-12-11]
+	Updated gnucash to 1.8.8 [jschauma 2003-12-11]
