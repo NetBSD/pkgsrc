@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.6 2004/04/26 11:24:15 markd Exp $
+
+--- kdecore/kmountpoint.cpp.orig	2003-09-21 20:39:00.000000000 +1200
++++ kdecore/kmountpoint.cpp
+@@ -219,7 +219,11 @@ KMountPoint::List KMountPoint::currentMo
+ 
+ #ifdef HAVE_GETMNTINFO
+ 
++#ifdef ST_RDONLY
++    struct statvfs *mounted;
++#else
+     struct statfs *mounted;
++#endif
+ 
+     int num_fs = getmntinfo(&mounted, MNT_NOWAIT);
+ 
