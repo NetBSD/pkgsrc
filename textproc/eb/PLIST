@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/08/03 00:30:43 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/03/10 01:42:39 seb Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -14,21 +14,6 @@ include/eb/error.h
 include/eb/font.h
 include/eb/text.h
 include/eb/zio.h
-info/eb-ja.info
-info/eb-ja.info-1
-info/eb-ja.info-2
-info/eb-ja.info-3
-info/eb-ja.info-4
-info/eb-ja.info-5
-info/eb-ja.info-6
-info/ebfont-ja.info
-info/ebfont.info
-info/ebinfo-ja.info
-info/ebinfo.info
-info/ebrefile-ja.info
-info/ebrefile.info
-info/ebzip-ja.info
-info/ebzip.info
 lib/libeb.a
 lib/libeb.la
 lib/libeb.so
