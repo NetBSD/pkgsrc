@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.11 2001/02/23 11:18:29 dmcmahill Exp $
+# $NetBSD: post-build,v 1.12 2001/03/19 11:25:39 dmcmahill Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -27,6 +27,7 @@ sub getconf
 }
 
 
+getconf("ADMINSIG");		# "-Your Name"
 getconf("FTPURL");		# "pub/NetBSD/pkgstat/`date +%Y%m%d.%H%M`"
 getconf("FTP");			# "/disk1/ftp/${FTPURL}"
 getconf("FTPHOST");		# ftp://ftp.machi.ne/
@@ -251,7 +252,7 @@ if ($verbose) {
 	print "for logs of builds broken or not resulting in a binary pkg.\n";
 	print "\n";
 	print "\n";
-	print " - Hubert\n";
+	print "$ADMINSIG\n";
 	print "\n";
 	print "[* This message was created automatically! *]\n";
 	print "\n";
