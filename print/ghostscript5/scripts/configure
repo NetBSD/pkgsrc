@@ -1,13 +1,13 @@
 #! /bin/sh
 #
-# $NetBSD: configure,v 1.2 1998/08/07 11:11:24 agc Exp $
+# $NetBSD: configure,v 1.3 1998/11/08 11:04:51 frueauf Exp $
 #
 
 # without that no way :)
 touch ${WRKSRC}/makefile
 
 # driverselection
-/usr/bin/dialog --title "Ghostscript 4 driver configuration" --clear \
+${PREFIX}/bin/dialog --title "Ghostscript 4 driver configuration" --clear \
 	--checklist "\n\
 This new ghostscript driver configuration dialog allows you to choose \n\
 only those gs drivers, you really need. Don't think too economical, since \n\
@@ -77,11 +77,11 @@ Have fun with this new configuration style !     -andreas \n\n\
   "oki182"   "Okidata MicroLine 182" ON \
   "okiibm"   "Okidata MicroLine IBM-compatible printers" ON \
   "paintjet" "alternate HP PaintJet color printer" ON \
-  "pj"       "HP PaintJet XL driver " ON \
+  "pj"       "HP PaintJet XL driver" ON \
   "pjetxl"   "alternate HP PaintJet XL driver" ON \
   "pjxl"     "HP PaintJet XL color printer" ON \
   "pjxl300"  "HP PaintJet XL300 color printer (also for 1200C)" ON \
-  "pxlmono"  "HP black-and-white PCL XL printers (LaserJet 5 and 6 family)" ON \
+  "pxlmono"  "HP black/white PCL XL printers (LaserJet 5 and 6 family)" ON \
   "pxlcolor" "HP color PCL XL printers (none available yet)" ON \
   "r4081"    "Ricoh 4081 laser printer" ON \
   "sj48"     "StarJet 48 inkjet printer" ON \
@@ -91,7 +91,7 @@ Have fun with this new configuration style !     -andreas \n\n\
   "t4693d4"  "Tektronix 4693d color, 4 bits per R/G/B component" ON \
   "t4693d8"  "Tektronix 4693d color, 8 bits per R/G/B component" ON \
   "tek4696"  "Tektronix 4695/4696 inkjet plotter" ON \
-  "uniprint" "Configurable Color ESC/P,ESC/P2,HP-RTL/PCL mono/color driver" ON \
+  "uniprint" "Conf.able Color ESC/P,ESC/P2,HP-RTL/PCL mono/color driver" ON \
   "xes"      "Xerox XES printers (2700, 3700, 4045, etc.)" ON \
   "dfaxhigh" "DigiBoard, DigiFAX software format (high resol)" ON \
   "dfaxlow"  "DigiFAX low (normal) resol" ON \
@@ -177,8 +177,9 @@ esac
 # bring it into the right format with '.dev' appended to each driver name
 echo "DEVICE_DEVS=$choice" \
 	| sed -e "s/\"//g" \
+	| sed -e "s/$/ /g" \
+	| sed -e "s/  */ /g" \
 	| sed -e "s/ /.dev /g" \
-	| sed -e "s/$/.dev/g" \
 	> ${WRKSRC}/unix-gcc.mak.new
 
 # create one new Makefile, where DEVICE_DEVS contains all wanted devices
