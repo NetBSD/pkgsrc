@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2000/04/05 20:59:32 tron Exp $
+# $NetBSD: Makefile,v 1.7 2000/04/05 21:08:14 tron Exp $
 
 DISTNAME=	glx-19990804
 PKGNAME=	Mesa-${DISTNAME:S/-/-${GLX_CHIPSET}-/}
 CATEGORIES=	graphics
-MASTER_SITES=	http://utah-glx.sourceforge.net/
+MASTER_SITES=	http://glx.on.openprojects.net/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://glx.on.openprojects.net/
+HOMEPAGE=	http://utah-glx.sourceforge.net/
 
 BROKEN=		update required for Mesa 3.1.
 
