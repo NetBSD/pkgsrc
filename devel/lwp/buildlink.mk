@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/06/23 19:26:53 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/01 22:59:17 jlam Exp $
 #
 # This Makefile fragment is included by packages that use lwp.
 #
@@ -15,6 +15,8 @@
 .if !defined(LWP_BUILDLINK_MK)
 LWP_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.lwp?=	lwp>=1.6
 DEPENDS+=		${BUILDLINK_DEPENDS.lwp}:../../devel/lwp
 
@@ -27,7 +29,5 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.lwp}
 
 pre-configure: ${BUILDLINK_TARGETS.lwp}
 lwp-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# LWP_BUILDLINK_MK

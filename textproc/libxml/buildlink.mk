@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:27:00 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:30 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libxml.
 #
@@ -14,6 +14,8 @@
 
 .if !defined(LIBXML_BUILDLINK_MK)
 LIBXML_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.libxml?=	libxml>=1.8.11
 DEPENDS+=	${BUILDLINK_DEPENDS.libxml}:../../textproc/libxml
@@ -39,7 +41,5 @@ CONFIGURE_ENV+=		XML_CONFIG="${BUILDLINK_CONFIG_WRAPPER.libxml}"
 pre-configure: ${BUILDLINK_TARGETS.libxml}
 libxml-buildlink: _BUILDLINK_USE
 libxml-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# LIBXML_BUILDLINK_MK

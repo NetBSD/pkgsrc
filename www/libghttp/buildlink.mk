@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/30 10:34:42 zuntum Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:31 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libghttp.
 #
@@ -15,6 +15,8 @@
 .if !defined(LIBGHTTP_BUILDLINK_MK)
 LIBGHTTP_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.libghttp?=	libghttp>=1.0.9
 DEPENDS+=	${BUILDLINK_DEPENDS.libghttp}:../../www/libghttp
 
@@ -27,7 +29,5 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.libghttp}
 
 pre-configure: ${BUILDLINK_TARGETS.libghttp}
 libghttp-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# LIBGHTTP_BUILDLINK_MK

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/26 14:26:03 zuntum Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:17 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libslang.
 #
@@ -15,6 +15,8 @@
 .if !defined(LIBSLANG_BUILDLINK_MK)
 LIBSLANG_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.libslang?=	libslang>=1.4.4
 DEPENDS+=	${BUILDLINK_DEPENDS.libslang}:../../devel/libslang
 
@@ -28,7 +30,5 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.libslang}
 
 pre-configure: ${BUILDLINK_TARGETS.libslang}
 libslang-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# LIBSLANG_BUILDLINK_MK
