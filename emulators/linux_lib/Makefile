@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/08/17 18:14:07 tv Exp $
+# $NetBSD: Makefile,v 1.14 1998/08/17 18:20:06 tv Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/12/04 17:34:28 asami Exp
 #
 
@@ -10,9 +10,8 @@ ONLY_FOR_ARCHS=		i386
 MAINTAINER=		packages@netbsd.org
 
 # XXX this is not the right thing
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 LOCALBASE=		/emul/linux
-NO_MTREE=
 
 # The distfile is distributed under the GPL, so no re-distribution of
 # binaries without source.
