@@ -1,4 +1,4 @@
-.\" $NetBSD: cdpack.1,v 1.8 2002/05/22 22:30:44 dmcmahill Exp $
+.\" $NetBSD: cdpack.1,v 1.9 2002/09/18 02:42:20 dmcmahill Exp $
 .\"
 .\" Copyright (c) 2001 Dan McMahill, All rights reserved.
 .\"
@@ -37,9 +37,10 @@
 .Nd produce multi-CD binary package images
 .Sh SYNOPSIS
 .Nm ""
-.Op -ef
+.Op -ac | -ec
+.Op -af | -ef
 .Op -l logfile
-.Op -adnRvV
+.Op -dnRvV
 .Op -x common_directory
 .Op -X extras_directory
 .Ar packages_directory
