@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.23 2004/04/26 17:30:06 tv Exp $
+# $NetBSD: java-vm.mk,v 1.24 2004/05/02 20:30:44 xtraeme Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -43,9 +43,11 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 # Note: The wonka configuration is still under development
 #
 .if defined(USE_JAVA2) && !empty(USE_JAVA2:M[yY][eE][sS])
-_PKG_JVMS?=		sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe wonka jdk12 jdk13
+_PKG_JVMS?=		sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe wonka \
+			jdk12 jdk13
 .else
-_PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe wonka jdk12 jdk13
+_PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe \
+			wonka jdk12 jdk13
 .endif
 
 # To be deprecated: if PKG_JVM is explicitly set, then use it as the
@@ -257,23 +259,27 @@ EVAL_PREFIX+=		_JAVA_HOME=${_JAVA_PKGBASE.${_PKG_JVM}}
 
 # We always need a run-time dependency on the JRE.
 .if defined(_JRE_PKGSRCDIR)
-.if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.  include "${_JRE_PKGSRCDIR}/buildlink2.mk"
-.else
+.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
+.    include "${_JRE_PKGSRCDIR}/buildlink2.mk"
+.  elif defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[Nn][Oo])
+.    include "${_JRE_PKGSRCDIR}/buildlink3.mk"
+.  else
 DEPENDS+=		${_JRE_DEPENDENCY}
-.endif
+.  endif
 .endif
 
 # If we are building Java software, then we need a build-time dependency on
 # the JDK.
 #
 .if empty(USE_JAVA:M[rR][uU][nN])
-.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.    if defined(_JDK_PKGSRCDIR)
+.  if defined(_JDK_PKGSRCDIR)
+.    if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
 .      include "${_JDK_PKGSRCDIR}/buildlink2.mk"
-.    endif
-.  else
+.    elif defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[Nn][Oo])
+.      include "${_JDK_PKGSRCDIR}/buildlink3.mk"
+.    else
 BUILD_DEPENDS+=		${_JDK_DEPENDENCY}
+.    endif
 .  endif
 .endif
 
