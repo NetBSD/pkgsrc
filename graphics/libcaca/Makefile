@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/12/26 09:38:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/18 19:26:49 wiz Exp $
 #
 
 DISTNAME=		libcaca-0.5
@@ -10,11 +10,11 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://sam.zoy.org/projects/libcaca/
 COMMENT=		Graphics library that outputs text instead of pixels, in colour
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-slang --disable-ncurses
 
-.include "../../devel/libslang/buildlink2.mk"
+.include "../../devel/libslang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
