@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6197 2004/06/10 16:16:09 wiz Exp $
+$NetBSD: CHANGES,v 1.6198 2004/06/10 18:08:13 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2931,3 +2931,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added kde3-i18n-ar-3.2.3 [markd 2004-06-10]
 	Added kde3-i18n-hr-3.2.3 [markd 2004-06-10]
 	Added kde3-i18n-hsb-3.2.3 [markd 2004-06-10]
+	Updated blender to 2.32nb2 [jmmv 2004-06-10]
