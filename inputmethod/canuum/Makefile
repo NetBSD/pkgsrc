@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:01:31 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/10 09:54:59 sakamoto Exp $
 #
 
 DISTNAME=	canuum-1.0
@@ -11,13 +11,12 @@ MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.nec.co.jp/japanese/product/computer/soft/canna/
 COMMENT=	Japanese input tty frontend for Canna using uum
 
-DEPENDS=	Canna-lib>=3.5.2:../../inputmethod/canna-lib
-
 MANLANG=	ja
 MAN1=		canuum.1
 MAKE_ARGS=	PREFIX=${PREFIX}
 WRKSRC=		${WRKDIR}/Canna35b2/canuum
-USE_X11BASE=	yes
+
+MAKE_ENV+=	CCOPTIONS="${CPPFLAGS}" EXTRA_LDOPTIONS="${LDFLAGS}"
 
 post-extract:
 	@${GTAR} -xzf ${DISTDIR}/Canna35b2.tar.gz -C ${WRKDIR} \
@@ -29,13 +28,17 @@ pre-patch:
 	@(cd ${WRKSRC}; ${PATCH} ${PATCH_DIST_ARGS} < Canuum.patch)
 
 do-configure:
-	@(cd ${WRKSRC}; ${X11BASE}/bin/xmkmf; ${MAKE} ${MAKE_ARGS} Makefile; \
-	${MAKE} ${MAKE_ARGS} cannaconf.h; ${MAKE} ${MAKE_ARGS} depend)
+	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${XMKMF_CMD}; \
+		${MAKE} ${MAKE_ARGS} Makefile; \
+		${MAKE} ${MAKE_ARGS} cannaconf.h; ${MAKE} ${MAKE_ARGS} depend)
 
 do-build:
-	@(cd ${WRKSRC}; ${MAKE} ${MAKE_ARGS} all)
+	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_ARGS} all)
 
 post-install:
-	@${INSTALL_MAN} ${WRKSRC}/canuum.jmn ${PREFIX}/man/ja_JP.EUC/man1/canuum.1
+	@${INSTALL_MAN} ${WRKSRC}/canuum.jmn \
+		${PREFIX}/man/ja_JP.EUC/man1/canuum.1
 
+.include "../../devel/nbitools/nbitools.mk"
+.include "../canna-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
