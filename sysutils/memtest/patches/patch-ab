@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/04/27 11:28:32 agc Exp $
+
+--- head.S.orig	Sun Apr  8 22:37:53 2001
++++ head.S	Sun Apr  8 22:56:59 2001
+@@ -15,7 +15,7 @@
+ .global idt_descr
+ .global trap_regs
+ 
+-#include <linux/linkage.h>
++#include "linkage.h"
+ #include "defs.h"
+ #include "config.h"
+ 
