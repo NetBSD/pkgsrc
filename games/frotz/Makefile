@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/12/08 22:08:51 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2001/12/25 17:30:39 wiz Exp $
 #
 
 DISTNAME=	frotz-2.41
@@ -14,8 +14,10 @@ MAINTAINER=	seebs@plethora.net
 HOMEPAGE=	http://www.cs.csubak.edu/~dgriffi/proj/frotz/
 COMMENT=	Curses-based interpreter for Infocom-compatible games
 
-# uses setscrreg, which is missing from our curses
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
+USE_BUILDLINK_ONLY=	yes
+
+# setscrreg()
+INCOMPAT_CURSES=	1.5 1.5.* 1.5[A-V]
 
 SAMPLEDIR=	${PREFIX}/share/examples/frotz
 DOCDIR=		${PREFIX}/share/doc/frotz
@@ -28,4 +30,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} README INSTALL HOW_TO_PLAY ${DOCDIR}
 
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
