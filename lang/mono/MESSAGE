@@ -1,7 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/02/03 12:30:11 recht Exp $
+$NetBSD: MESSAGE,v 1.2 2004/04/04 16:53:59 recht Exp $
 
-If you want to use the System.Drawing APIs then you have to install
-graphics/libgdiplus as well.
+If you intent to use the System.Drawing then you have to install
+graphics/libgdiplus as well. For Windows.Forms you have to install
+emulators/winelib.
 
 ===========================================================================
