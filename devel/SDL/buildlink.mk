@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.18 2002/08/27 08:25:52 martti Exp $
+# $NetBSD: buildlink.mk,v 1.19 2002/08/27 18:21:18 jlam Exp $
 #
 # This Makefile fragment is included by packages that use SDL.
 #
@@ -36,7 +36,7 @@ PTHREAD_OPTS+=		require
 .endif
 .include "../../audio/esound/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
-.include "../../graphics/aalib-x11/buildlink2.mk"
+.include "../../graphics/aalib-x11/buildlink.mk"
 .include "../../mk/pthread.buildlink.mk"
 
 BUILDLINK_TARGETS.SDL=		SDL-buildlink
