@@ -1,8 +1,37 @@
-$NetBSD: patch-ac,v 1.1 1999/05/31 22:22:09 tron Exp $
+$NetBSD: patch-ac,v 1.2 1999/06/01 21:15:02 tron Exp $
 
---- floppyd.cpp.orig	Sun May 30 18:05:46 1999
-+++ floppyd.cpp	Sun May 30 18:25:37 1999
-@@ -527,12 +527,12 @@
+--- floppyd.cpp.orig	Mon May 31 14:46:31 1999
++++ floppyd.cpp	Tue Jun  1 10:53:28 1999
+@@ -24,6 +24,7 @@
+ #endif
+ 
+ #define FLOPPYD_DEFAULT_PORT 5703
++#define NOBODY "nobody"
+ extern int errno;
+ 
+ // #########################################################################
+@@ -395,6 +396,8 @@
+ 
+ /*
+  * Find the userid of the specified user.
++ * Use 'nobody' if not specified and revert to 65535 only if
++ * 'nobody' cannot be determined.
+  */
+ static uid_t getuserid(char *user)
+ {
+@@ -411,7 +414,10 @@
+ 	}
+ 	else
+ 	{
+-		uid = 65535;
++		if((pw = getpwnam(NOBODY)) != NULL)
++			uid = pw->pw_uid;
++		else
++			uid = 65535;
+ 	}
+ 
+ #ifdef DEBUG
+@@ -527,12 +533,12 @@
  {
  	int					new_sock;
  	struct sockaddr_in	addr;
@@ -17,16 +46,40 @@ $NetBSD: patch-ac,v 1.1 1999/05/31 22:22:09 tron Exp $
  
  	for (;;)
  	{
-@@ -615,6 +615,7 @@
+@@ -613,11 +619,13 @@
+ 	int			run_as_server = 0;
+ 	ipaddr_t		bind_ip = INADDR_ANY;
  	short			bind_port = FLOPPYD_DEFAULT_PORT;
- 	uid_t			run_uid = 65535;
- 	gid_t			run_gid = 65535;
+-	uid_t			run_uid = 65535;
+-	gid_t			run_gid = 65535;
++	uid_t			run_uid;
++	gid_t			run_gid;
 +	pid_t			run_pid;
  	int			sock;
  	int			port_is_supplied = 0;
  	int			no_local = 0;
-@@ -665,7 +666,7 @@
++	int			ug_given = 0;
+ 
+ 	char *server_hostname=NULL;
+ 	char* device_name = NULL; 
+@@ -644,6 +652,7 @@
+ 			break;
+ 
+ 		case 'r':
++         ug_given = 1;
+ 			run_uid = getuserid(optarg);
+ 			run_gid = getgroupid(run_uid);
+ 			break;
+@@ -663,9 +672,15 @@
+ 			break;
+ 		}
  	}
++
++	if(!ug_given) {
++		run_uid = getuserid(NOBODY);
++		run_gid = getgroupid(run_uid);
++	}
++
  	if(!run_as_server) {
  		struct sockaddr_in	addr;
 -		int len = sizeof(addr);
@@ -34,7 +87,7 @@ $NetBSD: patch-ac,v 1.1 1999/05/31 22:22:09 tron Exp $
  		
  		/* try to find out port that we are connected to */
  		if(getsockname(0, (sockaddr*) &addr, &len) >= 0 && 
-@@ -836,8 +837,8 @@
+@@ -836,8 +851,8 @@
  			/*
  			 * Start a new session and group.
  			 */
