@@ -1,4 +1,4 @@
-/*	$NetBSD: kver.c,v 1.1.1.1 2003/07/11 14:50:37 seb Exp $	*/
+/*	$NetBSD: kver.c,v 1.2 2003/09/30 19:13:30 seb Exp $	*/
 
 #include <sys/types.h>
 #include <sys/param.h>
@@ -8,7 +8,7 @@
 #include <errno.h>
 #include <string.h>
 
-#define KVER_VERSION_FMT "NetBSD %.6s (GENERIC) #0: %.40s  root@localhost:/sys/arch/%.20s/compile/GENERIC %.20s"
+#define KVER_VERSION_FMT "NetBSD %.6s (GENERIC) #0: %.40s  root@localhost:/sys/arch/%.20s/compile/GENERIC"
 
 /* _KVER_DATE is not really the real release date but the
    date of src/sys/sys/param.h's revision tagged for the release */
@@ -56,8 +56,8 @@ static int kver_osrevision = _KVER_OSREVISION;
 
 /* 6  chars for osrelease */
 /* 40 chars for the date string */
-/* 40 chars for 2 utsname.machine */
-#define KVER_VERSION_LEN	(sizeof(KVER_VERSION_FMT) + 6 + 40 + 40 + 1)
+/* 20 chars for utsname.machine */
+#define KVER_VERSION_LEN	(sizeof(KVER_VERSION_FMT) + 6 + 40 + 20 + 1)
 static char kver_version[KVER_VERSION_LEN] = "";
 static struct utsname real_utsname;
 
@@ -69,7 +69,6 @@ kver_init(void)
 	snprintf(kver_version, KVER_VERSION_LEN, KVER_VERSION_FMT,
 		kver_osrelease,
 		kver_date,
-		real_utsname.machine,
 		real_utsname.machine);
 }
 
