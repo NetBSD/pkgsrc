@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2004/06/06 13:50:41 taca Exp $
+# $NetBSD: Makefile,v 1.33 2004/07/02 08:03:04 martti Exp $
 
-DISTNAME=	postfix-2.2-20040504
-PKGNAME=	postfix-20040504
+DISTNAME=	postfix-2.2-20040628
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/ \
 		http://public.planetmirror.com.au/pub/postfix/experimental/
@@ -40,10 +39,9 @@ RCD_SCRIPTS=	postfix
 .endif
 
 FIX_RPATH+=	AUXLIBS
-REPLACE_PERL+=	examples/smtpd-policy/greylist.pl examples/smtpd-policy/spf.pl
 
 BUILD_DEFS+=	POSTFIX_USE_INET6
-#BUILD_DEFS+=	POSTFIX_USE_TLS
+BUILD_DEFS+=	POSTFIX_USE_TLS
 BUILD_DEFS+=	POSTFIX_USE_PCRE
 BUILD_DEFS+=	POSTFIX_USE_MYSQL
 BUILD_DEFS+=	POSTFIX_USE_PGSQL
@@ -51,20 +49,20 @@ BUILD_DEFS+=	USE_OPENLDAP
 BUILD_DEFS+=	USE_SASL
 BUILD_DEFS+=	USE_SASL2
 
-.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-.  include "../../security/openssl/buildlink3.mk"
-PATCHFILES+=		tls+ipv6-1.24-pf-2.2-20040504.patch.gz
-PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.24/
-PATCH_DIST_STRIP=	-p1
-
-CCARGS+=	-DHAS_SSL
-AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
-		-lssl -lcrypto
-
-PLIST_SRC+=	${PKGDIR}/PLIST.tls
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
-.endif
+# .if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
+# .  include "../../security/openssl/buildlink3.mk"
+# PATCHFILES+=		tls+ipv6-1.25-pf-2.2-20040616.patch.gz
+# PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
+# PATCH_DIST_STRIP=	-p1
+# 
+# CCARGS+=	-DHAS_SSL
+# AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
+# 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
+# 		-lssl -lcrypto
+# 
+# PLIST_SRC+=	${PKGDIR}/PLIST.tls
+# MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
+# .endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
 .  include "../../devel/pcre/buildlink3.mk"
@@ -82,6 +80,13 @@ CCARGS+=	-DHAS_LDAP
 AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
 		-lldap -llber
+.  if ${OPSYS} != "Linux"
+.    include "../../databases/db4/buildlink3.mk"
+CCARGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
+AUXLIBS+=	-L${BUILDLINK_PREFIX.db4}/lib                    \
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db4}/lib     \
+		-ldb4
+.  endif
 .endif
 
 .if defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
@@ -92,17 +97,17 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 		-lmysqlclient -lz -lm
 .endif
 
-.if defined(POSTFIX_USE_PGSQL) && ${POSTFIX_USE_PGSQL} == "YES"
-.  include "../../databases/postgresql-lib/buildlink3.mk"
-.  include "../../security/openssl/buildlink3.mk"
-PATCHFILES+=		postfix-pg.postfix-2.0.0.2.patch
-PATCH_SITES+=		http://www.mat.cc/postfix/
-PATCH_DIST_STRIP=	-p1
-
-CCARGS+=	-DHAS_PGSQL -I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
-AUXLIBS+=	-L${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq \
-		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt
-.endif
+## .if defined(POSTFIX_USE_PGSQL) && ${POSTFIX_USE_PGSQL} == "YES"
+## .  include "../../databases/postgresql-lib/buildlink3.mk"
+## .  include "../../security/openssl/buildlink3.mk"
+## PATCHFILES+=		postfix-pg.postfix-2.0.0.2.patch
+## PATCH_SITES+=		http://www.mat.cc/postfix/
+## PATCH_DIST_STRIP=	-p1
+##
+## CCARGS+=	-DHAS_PGSQL -I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
+## AUXLIBS+=	-L${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq \
+##		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt
+## .endif
 
 .if defined(USE_SASL2) && ${USE_SASL2} == "YES"
 USING_SASL=	YES
@@ -112,7 +117,7 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
 		-lsasl2
 .elif defined(USE_SASL) && ${USE_SASL} == "YES"
-USING_SASL=	YES
+USING_SASL=YES
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
@@ -212,15 +217,6 @@ pre-install:
 do-install:
 	cd ${WRKSRC} && ${SETENV} config_directory="${SHAREDIR}"	\
 		${SH} postfix-install -non-interactive
-.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-	${INSTALL_DATA} ${WRKSRC}/conf/sample-ipv6.cf ${SHAREDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/sample-tls.cf ${SHAREDIR}
-.endif
-	${INSTALL_DATA_DIR} ${SHAREDIR}/smtpd-policy
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/smtpd-policy/greylist.pl \
-		${SHAREDIR}/smtpd-policy
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/smtpd-policy/spf.pl \
-		${SHAREDIR}/smtpd-policy
 
 .if ${OPSYS} == "Linux"
 .  include "../../databases/db/buildlink3.mk"
