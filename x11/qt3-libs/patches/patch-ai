@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1 2004/10/13 02:08:43 tv Exp $
+
+--- src/codecs/qtextcodec.cpp.orig	Tue Oct 12 16:12:27 2004
++++ src/codecs/qtextcodec.cpp
+@@ -82,7 +82,9 @@
+ #include <locale.h>
+ #endif
+ #if defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6)
++extern "C" {
+ #include <langinfo.h>
++};
+ #endif
+ 
+ static QValueList<QTextCodec*> *all = 0;
