@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1998/12/18 11:50:52 kleink Exp $
+# $NetBSD: Makefile,v 1.22 1999/01/30 23:18:50 agc Exp $
 #
 
 DISTNAME=       MesaLib-3.0
@@ -19,7 +19,7 @@ NOT_FOR_ARCHS=	alpha	#gcc lossage
 
 WRKSRC=         ${WRKDIR}/${PKGNAME}
 ALL_TARGET=	netbsd
-USE_X11=	yes
+USE_X11BASE=	yes
 MESA_LIBS=	libMesaGL libMesaGLU
 MESA_VERSION=	3.0
 GLUT_LIBS=	libglut

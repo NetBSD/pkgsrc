@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:58 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/30 23:18:49 agc Exp $
 #
 
 DISTNAME=		xgalaga-2.0.34
@@ -10,7 +10,7 @@ HOMEPAGE=		http://ogresoft.dyn.ml.org/xgal.html
 
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-USE_X11=		yes
+USE_X11BASE=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${X11BASE}/share/xgalaga
 CONFIGURE_ARGS+=	--exec-prefix=${X11BASE}/bin

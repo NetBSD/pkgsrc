@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/12/14 02:17:10 tv Exp $
+# $NetBSD: Makefile,v 1.15 1999/01/30 23:18:46 agc Exp $
 
 DISTNAME=		Wine-981211
 PKGNAME=		wine-981211
@@ -15,7 +15,7 @@ DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 CONFLICTS=		wine-980[26]*
 
-USE_X11=		yes
+USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-dll
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/05 08:24:12 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1999/01/30 23:18:48 agc Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
@@ -11,7 +11,7 @@ HOMEPAGE=		http://lide.punknet.cz/miri/wormz.html
 
 WRKSRC=			${WRKDIR}/Wormz
 USE_GMAKE=		yes
-USE_X11=		yes
+USE_X11BASE=		yes
 
 post-extract:
 	${MKDIR} ${WRKSRC}/NetBSD

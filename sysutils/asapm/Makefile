@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/03 13:35:47 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1999/01/30 23:18:54 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/11/29 12:43:12 asami Exp
 #
 
@@ -14,7 +14,7 @@ DEPENDS+=	xpm-3.4k:../../graphics/xpm
 ONLY_FOR_ARCHS=	i386		# needs apm support
 
 GNU_CONFIGURE=	yes
-USE_X11=	yes
+USE_X11BASE=	yes
 
 INSTALL_TARGET=	install install.man
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/27 14:06:07 garbled Exp $
+# $NetBSD: Makefile,v 1.4 1999/01/30 23:18:47 agc Exp $
 #
 
 DISTNAME=	finalbattle.0.0
@@ -12,6 +12,6 @@ HOMEPAGE=	http://www.sonic.net/~nbs/unix/x/finalbattle/
 MAKEFILE=	makefile
 WRKSRC=		${WRKDIR}/final
 
-USE_X11=	yes
+USE_X11BASE=	yes
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/11/09 21:20:18 garbled Exp $
+# $NetBSD: Makefile,v 1.4 1999/01/30 23:18:48 agc Exp $
 #
 
 DISTNAME=		mirrormagic-1.3
@@ -10,7 +10,7 @@ MAINTAINER=		root@garbled.net
 
 DEPENDS=		xpm-3.4k:../../graphics/xpm
 
-USE_X11=		YES
+USE_X11BASE=		YES
 
 do-install:
 	${INSTALL_PROGRAM} -o bin -g games -m 2755 ${WRKSRC}/mirrormagic ${X11BASE}/bin

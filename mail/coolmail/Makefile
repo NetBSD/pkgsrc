@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/19 13:11:49 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/01/30 23:18:51 agc Exp $
 
 DISTNAME=		coolmail-1.3
 CATEGORIES=		mail x11
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		root@garbled.net
 
 MAKE_ENV+=		X11BASE=${PREFIX}
-USE_X11=		yes
+USE_X11BASE=		yes
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Coolmail.ad \
