@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2003/07/06 12:15:07 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/06 12:31:58 grant Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -73,8 +73,9 @@ ALL_TARGET=		bootstrap
 .endif
 
 GCC_PREFIX=	${PREFIX}/gcc3
+GCC_VERSION=	${PKGVERSION:C|nb*||}
+GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${GCC_VERSION}
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
-GCC_ARCHDIR=	${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}
 
 pre-configure:
 	${MKDIR} ${BUILD_DIRS}
