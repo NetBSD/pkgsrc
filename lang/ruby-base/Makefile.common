@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2004/02/03 00:18:22 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.17 2004/03/07 03:33:45 taca Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -22,7 +22,7 @@
 # RUBY_EXTCONF_SUBDIRS	- Set to list of subdirectories, if multiple modules
 #			  are included.
 # USE_RUBY_SETUP	- Says that the package uses setup.rb to configure and
-#			  build.  Implies USE_RUBY_AMSTD.
+#			  build.
 # RUBY_SETUP		- Set to the alternative name of setup.rb (default:
 #			  setup.rb).
 # REPLACE_RUBY		- Specify the files whose first line be replaced.
@@ -284,10 +284,6 @@ RUBY_BUILD_DEPENDS?=	yes
 BUILD_DEPENDS+=		${RUBY_PKGNAMEPREFIX}base>=${RUBY_REQD}:../../lang/ruby${RUBY_SUFFIX}-base
 .endif
 .endif
-.endif
-
-.if defined(USE_RUBY_AMSTD)
-.include "../../devel/ruby-amstd/Makefile.common"
 .endif
 
 MASTER_SITE_RUBY?= \
