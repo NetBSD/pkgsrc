@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.14 2004/12/17 16:24:22 jlam Exp $
+$NetBSD: patch-ac,v 1.14.2.1 2004/12/23 03:35:47 snj Exp $
 
---- ltmain.sh.orig	2004-09-19 08:34:44.000000000 -0400
+--- ltmain.sh.orig	2004-09-19 22:34:44.000000000 +1000
 +++ ltmain.sh
 @@ -184,6 +184,31 @@ func_win32_libid () {
  # command doesn't match the default compiler.
@@ -85,7 +85,46 @@ $NetBSD: patch-ac,v 1.14 2004/12/17 16:24:22 jlam Exp $
  	  if test "$prev" = rpath; then
  	    case "$rpath " in
  	    *" $arg "*) ;;
-@@ -3168,6 +3221,7 @@ EOF
+@@ -1466,7 +1519,7 @@ EOF
+ 	    # These systems don't actually have a C library (as such)
+ 	    test "X$arg" = "X-lc" && continue
+ 	    ;;
+-	  *-*-openbsd* | *-*-freebsd*)
++	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly*)
+ 	    # Do not include libc due to us having libc/libc_r.
+ 	    test "X$arg" = "X-lc" && continue
+ 	    ;;
+@@ -1477,7 +1530,7 @@ EOF
+ 	  esac
+ 	elif test "X$arg" = "X-lc_r"; then
+ 	 case $host in
+-	 *-*-openbsd* | *-*-freebsd*)
++	 *-*-openbsd* | *-*-freebsd* | *-*-dragonfly*)
+ 	   # Do not include libc_r directly, use -pthread flag.
+ 	   continue
+ 	   ;;
+@@ -3063,7 +3116,7 @@ EOF
+ 	    age="$number_minor"
+ 	    revision="$number_revision"
+ 	    ;;
+-	  freebsd-aout|freebsd-elf|sunos)
++	  freebsd-aout|freebsd-elf|dragonfly|sunos)
+ 	    current="$number_major"
+ 	    revision="$number_minor"
+ 	    age="0"
+@@ -3143,6 +3196,11 @@ EOF
+ 	  versuffix=".$current";
+ 	  ;;
+ 
++	dragonfly)
++	  major=".$current"
++	  versuffix=".$current"
++	  ;;
++
+ 	irix | nonstopux)
+ 	  major=`expr $current - $age + 1`
+ 
+@@ -3168,6 +3226,7 @@ EOF
  	linux)
  	  major=.`expr $current - $age`
  	  versuffix="$major.$age.$revision"
@@ -93,7 +132,16 @@ $NetBSD: patch-ac,v 1.14 2004/12/17 16:24:22 jlam Exp $
  	  ;;
  
  	osf)
-@@ -5364,8 +5418,16 @@ relink_command=\"$relink_command\""
+@@ -3336,7 +3395,7 @@ EOF
+ 	  *-*-netbsd*)
+ 	    # Don't link with libc until the a.out ld.so is fixed.
+ 	    ;;
+-	  *-*-openbsd* | *-*-freebsd*)
++	  *-*-openbsd* | *-*-freebsd* | *-*-dragonfly*)
+ 	    # Do not include libc due to us having libc/libc_r.
+ 	    test "X$arg" = "X-lc" && continue
+ 	    ;;
+@@ -5364,8 +5423,16 @@ relink_command=\"$relink_command\""
        exit $EXIT_FAILURE
      fi
  
