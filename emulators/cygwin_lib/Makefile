@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/10/11 20:53:00 tv Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/29 02:10:48 tv Exp $
 #
 
-DISTNAME=		cygwin-1.5.11-1
+DISTNAME=		cygwin-1.5.12-1
 PKGNAME=		${DISTNAME:S/-/!/:S/-/./g:S/!/_lib-/}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_CYGWIN:=release/cygwin/}
@@ -25,10 +25,10 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/usr/bin/cygwin1.dll ${PREFIX}/bin/
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/emul/cygwin ${PREFIX}/emul/cygwin/bin
 	@for f in ${WRKSRC}/usr/bin/*.exe; do \
-		${INSTALL_LIB} $$f ${PREFIX}/emul/cygwin/bin/$$(basename $$f); \
+		${INSTALL_LIB} $$f ${PREFIX}/emul/cygwin/bin/$$(basename $${f%.exe}); \
 	done
 .for f in ${SYMLINKS}
-	${LN} -sf ../emul/cygwin/bin/$f.exe ${PREFIX}/bin/cygwin-$f
+	${LN} -sf ../emul/cygwin/bin/$f ${PREFIX}/bin/cygwin-$f
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
