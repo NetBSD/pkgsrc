@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 1999/07/08 17:10:57 itojun Exp $
+# $NetBSD: Makefile,v 1.51 1999/07/10 22:05:28 itojun Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -89,6 +89,7 @@ CFLAGS+=		-DLIBWRAP_FWD
 # IPv6 support
 # always fetch IPv6 related patch files.  simplify files/md5 generation.
 .if defined(USE_INET6)
+PATCH_SITES+=		ftp://ftp.kyoto.wide.ad.jp/IPv6/ssh/
 PATCHFILES+=		ssh-1.2.27-IPv6-1.5-patch.gz
 PATCH_DIST_STRIP+=	-p1
 PATCHDIR=		${WRKDIR}/.patches
