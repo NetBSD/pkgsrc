@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.45 2002/12/15 13:03:03 salo Exp $
+# $NetBSD: defs.SunOS.mk,v 1.46 2002/12/16 09:18:57 salo Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -71,10 +71,12 @@ SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/usr/bin/sort
 SU?=		/usr/bin/su
 TAIL?=		/usr/xpg4/bin/tail
+TEE?=		/usr/bin/tee
 TEST?=		/usr/bin/test
 TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
+TSORT?=		/usr/ccs/bin/tsort
 TYPE?=		/usr/bin/type
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs

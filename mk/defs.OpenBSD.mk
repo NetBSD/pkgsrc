@@ -1,4 +1,4 @@
-# $NetBSD: defs.OpenBSD.mk,v 1.9 2002/12/15 13:03:03 salo Exp $
+# $NetBSD: defs.OpenBSD.mk,v 1.10 2002/12/16 09:18:57 salo Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -55,10 +55,12 @@ SHLOCK=		${LOCALBASE}/bin/shlock
 SORT?=		/usr/bin/sort
 SU?=		/usr/bin/su
 TAIL?=		/usr/bin/tail
+TEE?=		/usr/bin/tee
 TEST?=		test				# Shell builtin
 TOUCH?=		/usr/bin/touch
 TR?=		/usr/bin/tr
 TRUE?=		true				# Shell builtin
+TSORT?=		/usr/bin/tsort
 TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
