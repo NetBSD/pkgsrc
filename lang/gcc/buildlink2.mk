@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/05/27 07:01:56 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/05/27 08:40:19 grant Exp $
 
 .if !defined(GCC2_BUILDLINK2_MK)
 GCC2_BUILDLINK2_MK=	# defined
@@ -23,11 +23,7 @@ BUILDLINK_DEPMETHOD.gcc?=	build
 
 BUILDLINK_PREFIX.gcc=	${LOCALBASE}
 
-.if ${OPSYS} == "SunOS"
-_GCC_SUBPREFIX=		# empty
-.else
 _GCC_SUBPREFIX=		gcc-2.95.3/
-.endif
 _GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}
 _GCC_ARCHSUBDIR=	lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3
 _GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
