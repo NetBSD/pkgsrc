@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/06/15 20:56:03 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/06/20 05:27:33 jlam Exp $
 bin/vfu
 bin/ftparc
 bin/rx_auto
@@ -6,10 +6,10 @@ bin/rx_deb
 bin/rx_ftp
 bin/rx_tar
 bin/rx_zip
-share/doc/vfu/vfurc.example
-@exec [ -f %D/etc/vfurc ] || /bin/cp -p %D/%F %D/etc/vfurc
 share/doc/vfu/COPYING
 share/doc/vfu/INSTALL
 share/doc/vfu/README
 share/doc/vfu/VFU.txt
+share/examples/vfu/vfurc
+@dirrm share/examples/vfu
 @dirrm share/doc/vfu
