@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2001/03/27 03:20:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2001/07/22 16:42:45 rh Exp $
 
-DISTNAME=	gnapster-1.4.2
+DISTNAME=	gnapster-1.5.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.faradic.net/~jasta/files/
 
@@ -17,6 +17,6 @@ USE_LIBINTL=	YES
 USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=	# defined
+GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.pkg.mk"
