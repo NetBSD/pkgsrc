@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2004/03/10 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/04/12 16:04:45 taca Exp $
 
-DISTNAME=	postfix-2.0.18-20040209
-PKGNAME=	postfix-20040209
+DISTNAME=	postfix-2.0.19-20040312
+PKGNAME=	postfix-20040312
 CATEGORIES=	mail
-MASTER_SITES=	http://public.planetmirror.com.au/pub/postfix/experimental/
+MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/ \
+		http://public.planetmirror.com.au/pub/postfix/experimental/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
@@ -49,20 +50,20 @@ BUILD_DEFS+=	POSTFIX_USE_PGSQL
 BUILD_DEFS+=	USE_SASL
 BUILD_DEFS+=	USE_SASL2
 
-#.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-#.  include "../../security/openssl/buildlink3.mk"
-#PATCHFILES+=		tls+ipv6-1.21-pf-2.0.18.patch.gz
-#PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.21/
-#PATCH_DIST_STRIP=	-p1
-#
-#CCARGS+=	-DHAS_SSL
-#AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
-#		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
-#		-lssl -lcrypto
-#
-#PLIST_SRC+=	${PKGDIR}/PLIST.tls
-#MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
-#.endif
+.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
+.  include "../../security/openssl/buildlink3.mk"
+PATCHFILES+=		tls+ipv6-1.22-pf-2.0.19-20040312.patch.gz
+PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.22/
+PATCH_DIST_STRIP=	-p1
+
+CCARGS+=	-DHAS_SSL
+AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
+		-lssl -lcrypto
+
+PLIST_SRC+=	${PKGDIR}/PLIST.tls
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
+.endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
 .  include "../../devel/pcre/buildlink3.mk"
