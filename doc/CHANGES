@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7616 2004/10/30 07:05:51 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7617 2004/10/30 07:11:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4980,3 +4980,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated docbook-simple to 1.1rc2 [minskim 2004-10-30]
 	Updated octave-forge to 2004.09.09 [dmcmahill 2004-10-30]
 	Updated swapd to 1.0.1 [xtraeme 2004-10-30]
+	Updated chmlib to 0.35 [minskim 2004-10-30]
