@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2001/04/21 00:44:24 wiz Exp $
+$NetBSD: distinfo,v 1.4 2001/05/29 08:16:05 agc Exp $
 
 SHA1 (idiff-1.0.tar.gz) = 4d3f339184745a45747385bca6f559665c6136f8
 Size (idiff-1.0.tar.gz) = 2307 bytes
-SHA1 (patch-aa) = 40b277adc2d1ee493669b2f9716e11a699de76f4
+SHA1 (patch-aa) = c4ca9269a3a3d1432a33c6171af3c88cf541cf70
 SHA1 (patch-ab) = 88d480c86527766cb602a57e9d1528da73675dbd
