@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:22:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/22 01:08:12 jlam Exp $
 
 DISTNAME=	ns-remote
 PKGNAME=	ns-remote-1.3
@@ -12,6 +12,8 @@ COMMENT=	remote-control Netscape Navigator and Communicator
 
 DIST_SUBDIR=    netscape
 USE_X11=	yes
+
+USE_BUILDLINK_ONLY=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
