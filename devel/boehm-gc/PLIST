@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:31 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/14 18:50:50 wiz Exp $
 include/gc.h
+include/gc_backptr.h
 include/gc_cpp.h
 lib/libgc.a
+lib/libgc.la
+lib/libgc.so
+lib/libgc.so.1
+lib/libgc.so.1.1
 lib/libleak.a
 man/man3/gc.3

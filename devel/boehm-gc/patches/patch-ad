@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.11 2003/02/10 14:08:21 kei Exp $
+$NetBSD: patch-ad,v 1.12 2003/02/14 18:50:51 wiz Exp $
 
 --- include/private/gcconfig.h.orig	Wed Aug  7 03:49:22 2002
 +++ include/private/gcconfig.h	Mon Feb 10 22:54:58 2003
@@ -31,14 +31,3 @@ $NetBSD: patch-ad,v 1.11 2003/02/10 14:08:21 kei Exp $
  # if defined(mips) || defined(__mips) || defined(_mips)
  #    define MIPS
  #    if defined(nec_ews) || defined(_nec_ews)
-@@ -752,6 +756,10 @@
- #   ifdef ULTRIX
- #	define OS_TYPE "ULTRIX"
- #	define STACKBOTTOM ((ptr_t) 0x7fffc800)
-+#   endif
-+#   ifdef NETBSD
-+#      define OS_TYPE "NETBSD"
-+#      define HEURISTIC2
- #   endif
- # endif
- 
