@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/13 19:33:41 jschauma Exp $
+bin/tor
+bin/torify
+man/man1/tor.1
+man/man1/torify.1
+share/examples/tor/dirservers
+share/examples/tor/tor-tsocks.conf
+share/examples/tor/torrc.sample
+@dirrm share/examples/tor
