@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 1999/03/10 04:28:56 itohy Exp $
+
+--- config.guess.orig	Mon Sep 22 04:30:36 1997
++++ config.guess	Wed Mar 10 13:05:49 1999
+@@ -472,7 +472,8 @@
+ 	echo ${UNAME_MACHINE}-unknown-freebsd`echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`
+ 	exit 0 ;;
+     *:NetBSD:*:*)
+-	echo ${UNAME_MACHINE}-unknown-netbsd`echo ${UNAME_RELEASE}|sed -e 's/[-_].*/\./'`
++	arch=${MACHINE_ARCH:-`printf 'xxx:\n\techo ${MACHINE_ARCH}' | ${MAKE-make} -s -f-`}
++	echo $arch-unknown-netbsd`echo ${UNAME_RELEASE}|sed -e 's/[-_].*/\./'`
+ 	exit 0 ;;
+     *:OpenBSD:*:*)
+ 	echo ${UNAME_MACHINE}-unknown-openbsd`echo ${UNAME_RELEASE}|sed -e 's/[-_].*/\./'`
