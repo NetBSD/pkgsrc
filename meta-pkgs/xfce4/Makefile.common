@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/01/13 06:55:25 martti Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/01/23 12:11:48 martti Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.0.3.1/src/ \
 			http://linux.imp.mx/xfce4/xfce_4.0.3.1/src/
@@ -15,8 +15,8 @@ USE_PKGLOCALEDIR=	# defined
 USE_LIBTOOL=		# defined
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
+USE_GNU_TOOLS+=		make
 
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD=		3.0
