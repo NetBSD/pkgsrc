@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:32:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/21 13:08:54 wiz Exp $
 #
 
 DISTNAME=	wmtime-1.0b2
@@ -9,8 +9,8 @@ MASTER_SITES=	ftp://ftp.alpha.alt.ru/pub/UNIX/X11/WMaker/ \
 MAINTAINER=	ad@netbsd.org
 COMMENT=	Time/Date applet for WindowMaker
 
+USE_BUILDLINK2=	YES
 USE_IMAKE=	YES
-USE_XPM=	YES
 
 NO_INSTALL_MANPAGES=	YES
 WRKSRC=			${WRKDIR}/wmtime.app/wmtime
@@ -19,10 +19,5 @@ post-extract:
 	${CP} ${WRKSRC}/../Imakefile ${WRKSRC}/Imakefile
 	${TOUCH} ${WRKSRC}/wmtime.man
 
-do-configure:
-	cd ${WRKSRC} && imake -DUseInstalled -DUseGccMakeDepend -I${X11BASE}/lib/X11/config && \
-	${MAKE} Makefiles && \
-	${MAKE} includes && \
-	${MAKE} depend
-
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
