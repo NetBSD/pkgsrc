@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/06/09 18:53:53 frueauf Exp $
+$NetBSD: MESSAGE,v 1.5 2004/04/23 22:16:00 reed Exp $
 
 Nessus may have placed some files in /var/nessus, ${PREFIX}/etc/nessus,
 ${PREFIX}/com/nessus and ${PREFIX}/lib/nessus/reports. If you do not need
@@ -16,7 +16,7 @@ nessus daemon, nessusd, and use the "nessus" GUI program to direct the
 daemon.
 
 If you want to start nessusd automatically on system boot, please copy
-${RCD_SCRIPTS_EXAMPLEDIR}/etc/rc.d/nessusd to /etc/rc.d and set
+${RCD_SCRIPTS_EXAMPLEDIR}/nessusd to /etc/rc.d and set
 nessusd=YES in /etc/rc.conf.
 
 ===========================================================================
