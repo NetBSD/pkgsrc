@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.10 2002/07/02 01:47:53 kristerw Exp $
+--- Makefile.common.orig	Tue Jul  2 02:28:12 2002
++++ Makefile.common	Tue Jul  2 02:28:33 2002
+@@ -199,7 +199,7 @@
+ lib$(LIBROOT).$(NETPBMLIBSUFFIX).$(MAJ).$(MIN): \
+     $(LIBOBJECTS) $(LIBOBJECTS_X) $(LIBLIBS) $(LIBOPT)
+ 	$(LD) $(LDSHLIB) -o $@ $(LIBOBJECTS) $(LIBOBJECTS_X) \
+-          `$(LIBOPT) $(LIBLIBS)` -lc $(CDEBUG)
++          `$(LIBOPT) $(LIBLIBS)` $(CDEBUG)
+ endif
+ 
+ ifeq ($(NETPBMLIBTYPE),dll)
+@@ -223,7 +223,7 @@
+ lib$(LIBROOT).$(MAJ).$(MIN).dylib: $(LIBOBJECTS) $(LIBOBJECTS_X) $(LIBLIBS) \
+                                    $(LIBOPT)
+ 	$(LD) $(LDSHLIB) -o $@ $(LIBOBJECTS) $(LIBOBJECTS_X) \
+-          `$(LIBOPT) $(LIBLIBS)` -lc $(CDEBUG)
++          `$(LIBOPT) $(LIBLIBS)` $(CDEBUG)
+ endif
+ 
+ #--------------------------------------------------------------------------
