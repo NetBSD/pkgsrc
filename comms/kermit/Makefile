@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2004/03/26 02:27:35 wiz Exp $
-# $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
-#
+# $NetBSD: Makefile,v 1.52 2004/03/30 21:04:21 tron Exp $
 
 DISTNAME=	cku209
 PKGNAME=	kermit-8.0.209
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	comms
 MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 
@@ -17,7 +15,7 @@ LICENSE=	kermit-license
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 BUILD_DEFS+=	KERMIT_SUID_UUCP KFLAGS LIBS MANINSTALL
 MAKE_ENV+=	KFLAGS="${KFLAGS}" LIBS="${LIBS}"
 MAKE_ENV+=	SSLINC="${SSLINC}" SSLLIB="${SSLLIB}"
@@ -69,11 +67,11 @@ LIBS+=          -ltermcap
 .if ${USE_SOCKS} == 4
 KFLAGS+=	-DSOCKS
 LIBS+=		-L${PREFIX}/lib -lsocks4
-.include "../../net/socks4/buildlink2.mk"
+.include "../../net/socks4/buildlink3.mk"
 .elif ${USE_SOCKS} == 5
 KFLAGS+=	-DSOCKS -DCK_SOCKS5
 LIBS+=		-L${PREFIX}/lib -lsocks5
-.include "../../net/socks5/buildlink2.mk"
+.include "../../net/socks5/buildlink3.mk"
 .endif
 .endif
 
@@ -81,7 +79,7 @@ LIBS+=		-L${PREFIX}/lib -lsocks5
 ALL_TARGET=	macosx10
 .else
 ALL_TARGET=	netbsd+openssl
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
