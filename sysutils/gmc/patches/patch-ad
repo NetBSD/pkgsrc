@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/03/15 00:10:30 tron Exp $
+
+--- Makefile.in.orig	Mon Mar 15 00:27:39 1999
++++ Makefile.in	Mon Mar 15 00:27:48 1999
+@@ -46,7 +46,7 @@
+ install: installdirs
+ 	@for I in $(unixdirs); do cd $$I; $(MAKE) DESTDIR=$(DESTDIR) $@ || exit 1; cd ..; done
+ 	$(INSTALL_DATA) $(srcdir)/FAQ $(DESTDIR)$(libdir)/FAQ
+-	$(INSTALL_PROGRAM) mcfn_install $(DESTDIR)$(suppbindir)/mcfn_install
++	$(INSTALL_DATA) mcfn_install $(DESTDIR)$(suppbindir)/mcfn_install
+ 	chmod +x $(DESTDIR)$(suppbindir)/mcfn_install
+ 	@echo "Please verify that the configuration values are correctly"
+ 	@echo "set in the mc.ext file in $(libdir)"
+@@ -58,9 +58,8 @@
+ installdirs:
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(bindir) $(DESTDIR)$(libdir)
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(mandir) $(DESTDIR)$(man8dir)
+-	$(MKINSTALLDIRS) $(DESTDIR)$(icondir) $(DESTDIR)$(suppbindir)
++	$(MKINSTALLDIRS) $(DESTDIR)$(suppbindir)
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(tidir) $(DESTDIR)$(extfsdir)
+-	$(MKINSTALLDIRS) $(DESTDIR)$(idldir)
+ 
+ mcfninstall:
+ 	-/bin/sh ./mcfn_install

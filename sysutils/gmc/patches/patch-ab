@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/03/15 00:10:30 tron Exp $
+
+--- vfs/Make-mc.in.orig	Sat Mar 13 03:02:30 1999
++++ vfs/Make-mc.in	Sun Mar 14 23:25:48 1999
+@@ -192,11 +192,11 @@
+ 	          $(DESTDIR)$(libdir)/extfs/$$I; \
+ 	done
+ 	for I in $(EXTFS_CONST) ; do \
+-	    $(INSTALL_PROGRAM) $(srcdir)/extfs/$$I \
++	    $(INSTALL_SCRIPT) $(srcdir)/extfs/$$I \
+ 	             $(DESTDIR)$(libdir)/extfs/$$I; \
+ 	done
+ 	for I in $(EXTFS_OUT) ; do \
+-	    $(INSTALL_PROGRAM) $(builddir)/vfs/extfs/$$I \
++	    $(INSTALL_SCRIPT) $(builddir)/vfs/extfs/$$I \
+ 	             $(DESTDIR)$(libdir)/extfs/$$I; \
+ 	done
+ 
