@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1280 2004/01/06 08:49:30 taca Exp $
+$NetBSD: TODO,v 1.1281 2004/01/06 15:03:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -93,7 +93,6 @@ Suggested new packages
 
 	sgmltools-lite [wip/sgmltools-lite, PR 14849]
 	Generates various output formats from DocBook SGML documents
-	[in pkgsrc wip and another in PR 14849]
 
 	moz-plugger
 	http://mozplugger.mozdev.org/
@@ -103,6 +102,11 @@ Suggested new packages
 	http://www.aet.tu-cottbus.de/personen/jaenicke/postfix_tls/prngd.html
 	Pseudo Random Number Generator Daemon
 
+	moji
+	http://moji.mozdev.org/
+	Mozilla Firebird extension which helps you learn Japanese
+
+
 Suggested package updates
 =========================
 
@@ -110,6 +114,7 @@ Suggested package updates
 	o SDL_gfx-2.0.10
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
+	o abcde-2.1.10
 	o amanda-2.4.4p1
 	o anjuta-1.2.0 [cube]
 	o asc-1.13.9
@@ -173,7 +178,7 @@ Suggested package updates
 	o gdb-6.0
 	o gdm-2.4.4.6
 	o generator-0.35
-	o gettext-0.13
+	o gettext-0.13.1
 	o gforth-0.6.2
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.22 [pkgsrc-wip]
@@ -232,6 +237,7 @@ Suggested package updates
 	o mowitz-0.3.0
 	o moz-bin-plugger-1.4.2
 	o mrproject-0.9.1
+	o mrtg-2.10.12
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.0.2
 	o nano-1.2.2
@@ -285,7 +291,7 @@ Suggested package updates
 	o sml-nj-110.44
 	o snd-7.0
 	o snes9x-1.42
-	o sqlite-2.8.8
+	o sqlite-2.8.9
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
