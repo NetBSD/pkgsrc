@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2758 2003/07/12 14:54:10 salo Exp $
+$NetBSD: CHANGES,v 1.2759 2003/07/12 15:13:19 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2780,3 +2780,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added proj-doc-1.0 [jtb 2003-07-12]
 	Removed pureftpd [salo 2003-07-12]
 	Added pure-ftpd-1.0.15 [salo 2003-07-12]
+	Updated privoxy to 3.0.2nb2 [salo 2003-07-12]
