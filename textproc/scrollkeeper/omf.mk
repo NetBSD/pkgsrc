@@ -1,4 +1,4 @@
-# $NetBSD: omf.mk,v 1.2 2004/02/11 04:35:21 xtraeme Exp $
+# $NetBSD: omf.mk,v 1.3 2004/02/12 10:05:08 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # OMF files.  It takes care of registering them in scrollkeeper's global
@@ -12,6 +12,8 @@
 
 .if !defined(SCROLLKEEPER_OMF_MK)
 SCROLLKEEPER_OMF_MK=	# defined
+
+. include "../../mk/bsd.prefs.mk"
 
 # scrollkeeper's data directory.
 SCROLLKEEPER_DATADIR=	${BUILDLINK_PREFIX.scrollkeeper}/libdata/scrollkeeper
@@ -28,6 +30,12 @@ FILES_SUBST+=		SCROLLKEEPER_DATADIR="${SCROLLKEEPER_DATADIR}"
 FILES_SUBST+=		SCROLLKEEPER_REBUILDDB="${SCROLLKEEPER_REBUILDDB}"
 FILES_SUBST+=		SCROLLKEEPER_UPDATEDB="${SCROLLKEEPER_UPDATEDB}"
 
-.include "../../textproc/scrollkeeper/buildlink3.mk"
+.if !defined(NO_BUILDLINK)
+.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
+.    include "../../textproc/scrollkeeper/buildlink3.mk"
+.  elif empty(USE_BUILDLINK2:M[nN][oO])
+.    include "../../textproc/scrollkeeper/buildlink3.mk"
+.  endif
+.endif
 
 .endif	# SCROLLKEEPER_OMF_MK
