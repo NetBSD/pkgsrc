@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/10/12 16:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/25 17:18:19 wiz Exp $
 #
 
 DISTNAME=	emixer-0.05.5
@@ -12,10 +12,10 @@ COMMENT=	mpg123-frontend that can mix two mp3 streams, and fade between them
 
 DEPENDS+=	mpg123-0.59*:../../audio/mpg123
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=	YES
 
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
