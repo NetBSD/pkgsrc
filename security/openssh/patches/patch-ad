@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2000/01/17 05:34:34 christos Exp $
+$NetBSD: patch-ad,v 1.2 2000/05/31 15:32:44 itojun Exp $
 
---- fake-getnameinfo.c.orig	Sun Jan 16 23:45:45 2000
-+++ fake-getnameinfo.c	Sun Jan 16 23:48:01 2000
+--- fake-getnameinfo.c-	Wed May 31 18:50:37 2000
++++ fake-getnameinfo.c	Wed May 31 18:51:02 2000
 @@ -37,25 +37,27 @@
      else
        strcpy(serv, tmpserv);
@@ -17,11 +17,10 @@ $NetBSD: patch-ad,v 1.1 2000/01/17 05:34:34 christos Exp $
  	return 0;
        }
 -    else
--      if (hp = gethostbyaddr((char *)&sin->sin_addr, sizeof(struct in_addr),
--			     AF_INET))
 +    } else {
-+      if ((hp = gethostbyaddr((char *)&sin->sin_addr, sizeof(struct in_addr),
-+			     AF_INET)) != NULL) {
+       if (NULL != (hp = gethostbyaddr((char *)&sin->sin_addr, 
+-			sizeof(struct in_addr), AF_INET)))
++			sizeof(struct in_addr), AF_INET))) {
  	if (strlen(hp->h_name) > hostlen)
  	  return EAI_MEMORY;
  	else {

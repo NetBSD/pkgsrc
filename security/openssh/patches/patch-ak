@@ -1,11 +1,11 @@
-$NetBSD: patch-ak,v 1.1 2000/03/27 01:33:08 fredb Exp $
+$NetBSD: patch-ak,v 1.2 2000/05/31 15:32:44 itojun Exp $
 
---- sshd.8.orig	Fri Mar 17 06:40:18 2000
-+++ sshd.8	Sun Mar 26 19:29:22 2000
-@@ -765,6 +765,7 @@
+--- sshd.8-	Wed May 31 18:56:16 2000
++++ sshd.8	Wed May 31 18:56:26 2000
+@@ -940,6 +940,7 @@
  This can be used to specify
- machine-specific login-time initializations globally.  This file
- should be writable only by root, and should be world-readable.
+ machine-specific login-time initializations globally.
+ This file should be writable only by root, and should be world-readable.
 +.El
  .Sh AUTHOR
  OpenSSH
