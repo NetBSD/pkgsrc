@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2004/11/12 22:10:16 kristerw Exp $
+$NetBSD: distinfo,v 1.9 2004/12/28 21:54:11 jmmv Exp $
 
-SHA1 (gok-0.11.15.tar.bz2) = 546ccca602a6d9f993657484ba4a05b9a788a45d
-Size (gok-0.11.15.tar.bz2) = 1355428 bytes
+SHA1 (gok-0.11.16.tar.bz2) = fd6472c49f480474fdf950e528c58e532b08b6ea
+Size (gok-0.11.16.tar.bz2) = 1244123 bytes
 SHA1 (patch-aa) = 48aa6d30bcb91fb02049d5efbcf8f5c33bb13e04
