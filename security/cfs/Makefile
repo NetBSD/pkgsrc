@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.11 2003/07/21 17:20:06 martti Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/31 10:05:52 jmmv Exp $
 
 DISTNAME=		cfs-1.4.1
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.crypto.com/software/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.crypto.com/software/
 COMMENT=		Encrypting file system, using NFS as its interface
+
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 
 CRYPTO=			# defined
 
@@ -68,6 +72,8 @@ CFS_SUBST_SED=		${CFS_SUBST:S/->/!/:S/$/!g/:S/^/ -e s!/}
 
 DOCDIR=			${PREFIX}/share/doc/cfs
 
+RCD_SCRIPTS=		cfsd
+
 post-extract:
 	${RM} -f ${WRKSRC}/esm.1
 
@@ -90,12 +96,7 @@ do-build:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
 		${SH} ${CFS_BUILD_SCRIPT} ${ALL_TARGET}
 
-pre-install:
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		${FILESDIR}/cfsd.sh > ${WRKDIR}/cfsd.sh
-
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/cfsd.sh ${PREFIX}/etc/rc.d/cfsd
 	cd ${WRKSRC}; for file in *.1; do				\
 		${INSTALL_MAN} $${file} ${PREFIX}/man/man1/$${file};	\
 	done
