@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/04 22:35:40 agc Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/08 18:33:07 agc Exp $
 
 --- Makefile	2004/07/02 20:20:40	1.1
 +++ Makefile	2004/07/02 20:24:26
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/07/04 22:35:40 agc Exp $
  
 +OS= $(shell uname -s)
 +
-+ifeq ($(OS), "Linux")
++ifeq ($(OS), Linux)
  # For Linux (and maybe others), use these:
  CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER
  DEPS = $(OBJS) makebplay
@@ -16,16 +16,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/07/04 22:35:40 agc Exp $
  COPY_A = -a
 -
 +else
-+ifeq ($(OS), "NetBSD")
++ifeq ($(OS), NetBSD)
  # For FreeBSD (and maybe others), use these:
 -#CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER
 -#DEPS = $(OBJS) makebplay
 -#LIBS = -lncurses -lm
 -#COPY_A = -p
 -
-+CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER
++CFLAGS = -Wall -O2 -DTURBO_MEDIAN -DTURBO_BUFFER -DOLD_CURSES
 +DEPS = $(OBJS) makebplay
-+LIBS = -lncurses -lm
++LIBS = -lcurses -lm
 +COPY_A = -p
 +else
  # For IRIX (and maybe others), use these:
