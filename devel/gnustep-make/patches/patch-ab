@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.4 2004/11/24 02:37:32 rh Exp $
+
+--- user_home.c.orig	2004-09-04 06:27:56.000000000 +1000
++++ user_home.c
+@@ -140,6 +140,7 @@ int main (int argc, char** argv)
+ #endif /* HAVE_GETEUID */
+       struct passwd *pwent = getpwuid (uid);
+       loginName = pwent->pw_name;
++      pw = pwent;
+ #endif /* HAVE_GETPWUID */
+ #endif
+       if (loginName == 0)
+@@ -150,7 +151,9 @@ int main (int argc, char** argv)
+     }
+ 
+ #if !defined(__MINGW__)
++#if !HAVE_GETPWUID
+   pw = getpwnam (loginName);
++#endif
+   if (pw == 0)
+     {
+       fprintf(stderr, "Unable to locate home directory for '%s'\n", loginName);
