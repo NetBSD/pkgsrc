@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/07/09 15:51:44 recht Exp $
+$NetBSD: distinfo,v 1.3 2005/02/09 12:29:10 markd Exp $
 
-SHA1 (pytables-0.8.tar.gz) = 1035904c8d0ad567721f7ae7cac43211e9f99c4f
-Size (pytables-0.8.tar.gz) = 2068483 bytes
-SHA1 (patch-aa) = 990e2fbdf7f66154aa31d7b158ed9a741afda5d0
-SHA1 (patch-ab) = 9be211de978e9b77930451f64e0f784c2c696ea4
+SHA1 (pytables-0.9.1.tar.gz) = 41c219987af835a6260abd79859a29e4c0aa1238
+Size (pytables-0.9.1.tar.gz) = 2585363 bytes
+SHA1 (patch-aa) = 36b14a00122b87a3913348861e40326e133b1dad
