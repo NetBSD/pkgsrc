@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.6 2004/10/04 20:28:30 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.7 2004/10/06 09:49:53 grant Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -240,6 +240,13 @@ _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .endif
 
+.if !empty(PKGSRC_COMPILER:Mxlc)
+_WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-xlc-cc
+_WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-xlc-cc
+_WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
+_WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
+.endif
+
 _WRAP_CMD_SINK.LD=		${WRAPPER_TMPDIR}/cmd-sink-ld
 _WRAP_TRANSFORM_SED.IMAKE=	# empty
 
@@ -422,6 +429,13 @@ ${WRAPPER_TMPDIR}/transform-sunpro-cc:					\
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/transform-xlc-cc:					\
+		${WRAPPER_SRCDIR}/transform-xlc-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
 
 .if !target(${_WRAP_GEN_REORDER})
 ${_WRAP_GEN_REORDER}: 							\
