@@ -1,0 +1,3 @@
+A module that contains various interfaces
+(qt, gtk, curses, terminal) to enter a
+PIN/passphrase. 

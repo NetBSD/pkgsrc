@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2004/10/23 13:30:10 shannonjr Exp $
+bin/pinentry-curses
+info/pinentry.info
