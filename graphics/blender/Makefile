@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/03 14:02:00 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13.4.1 2002/09/25 13:00:23 agc Exp $
 
 PKGNAME=	blender-2.11
 PKGREVISION=	5
@@ -20,10 +20,12 @@ CHECK_SHLIBS=	NO
 # To be updated as other platforms PLIST will be built
 ONLY_FOR_PLATFORM= *-*-i386 *-*-powerpc *-*-sparc
 
+.include "../../mk/bsd.prefs.mk"
+
 .if (${MACHINE_ARCH} == "alpha")
-.if !exists(/emul/linux/lib/ld.so.1)
+.  if !exists(/emul/linux/lib/ld.so.1)
 IGNORE=		"${PKGNAME} requires Linux libraries - see compat_linux(8)"
-.endif
+.  endif
 DISTNAME=	blender2.11-linux-glibc2.1.3-alpha
 #
 .elif (${MACHINE_ARCH} == "i386")
@@ -32,16 +34,19 @@ DISTNAME=	blender2.11-linux-glibc2.1.2-i386-static
 PLIST_ARCH=	linux-i386
 #
 .elif (${MACHINE_ARCH} == "sparc")
-.if !exists(/emul/svr4/usr/lib/ld.so)
+.  if ${OPSYS} == "NetBSD"
+.    if !exists(/emul/svr4/usr/lib/ld.so)
 IGNORE=		"${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
-.endif
+.    endif
+.  endif
 DISTNAME=	blender2.11-solaris-2.6-sparc
+PLIST_ARCH=	solaris-sparc
 EXTRACT_SUFX=	.tar.Z
 #
 .elif (${MACHINE_ARCH} == "powerpc")
-.if !exists(/emul/linux/lib/ld.so.1)
+.  if !exists(/emul/linux/lib/ld.so.1)
 IGNORE=		"${PKGNAME} requires Linux libraries - see compat_linux(8)"
-.endif
+.  endif
 DEPENDS+=	linuxppc_lib>=2000.4.2:../../emulators/linuxppc_lib
 DISTNAME=	blender2.11-linux-glibc2.1.3-powerpc-static
 PLIST_ARCH=	linux-powerpc
