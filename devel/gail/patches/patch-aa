@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/09/21 01:04:24 rh Exp $
+
+--- Makefile.am.orig	Sat Sep  7 14:18:57 2002
++++ Makefile.am	Sat Sep  7 14:19:03 2002
+@@ -1,6 +1,6 @@
+ # Process this file with automake to create Makefile.in.
+ 
+-SUBDIRS=libgail-util gail tests docs
++SUBDIRS=libgail-util gail docs
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA= gail.pc
