@@ -1,0 +1,44 @@
+--- ../Makefile.in.orig	Fri Dec 22 17:16:48 2000
++++ ../Makefile.in	Sun Jan 14 12:38:48 2001
+@@ -263,14 +263,6 @@
+ 		@($(ECHO) "libwww is installed")
+ 
+ #
+-# Rules to rebuild the libjpeg package
+-#
+-
+-libjpeg libjpeg.a : force
+-	@($(RM) $(THOTDIR)/libjpeg/*.o)
+-	@(cd libjpeg ; $(MAKE) CC="$(CC)" CFLAGS="-O")
+-
+-#
+ # Rules to rebuild the libpng package
+ #
+ 
+@@ -279,14 +271,6 @@
+ 	@(cd libpng ; $(MAKE) CC="$(CC)" CFLAGS="-O")
+ 
+ #
+-# Rules to rebuild the libpng package
+-#
+-
+-libz libz.a : force
+-	@($(RM) $(THOTDIR)/libpng/libz/*.o)
+-	@(cd libpng/zlib ; $(MAKE) CC="$(CC)" CFLAGS="-O")
+-
+-#
+ # Rules to rebuild the Kaffe package
+ #
+ 
+@@ -364,11 +348,8 @@
+ $(THOTDIR)/Options.in \
+ $(THOTDIR)/configure.in \
+ $(THOTDIR)/Makefile.in \
+-$(THOTDIR)/libjpeg/Makefile.in \
+ $(THOTDIR)/batch/Makefile.in \
+-$(THOTDIR)/libjpeg/Makefile.in \
+ $(THOTDIR)/libpng/Makefile.in \
+-$(THOTDIR)/libpng/zlib/Makefile.in \
+ $(THOTDIR)/tablelib/Makefile.in \
+ $(THOTDIR)/thotlib/Makefile.in \
+ $(THOTDIR)/thotlib/include/Makefile.in \

@@ -1,22 +1,20 @@
-$NetBSD: patch-aa,v 1.2 2000/10/06 14:05:50 agc Exp $
-
---- ../configure.orig	Wed Apr 19 14:33:08 2000
-+++ ../configure	Sat Jun 17 20:50:20 2000
-@@ -1659,57 +1659,14 @@
+--- ../configure.orig	Sun Jan 14 12:11:19 2001
++++ ../configure	Sun Jan 14 12:20:22 2001
+@@ -1651,58 +1651,12 @@
    :
  fi
  
 -if test "$with_included_jpeg" != "yes" ; then
 -    echo $ac_n "checking for libjpeg version = 6b""... $ac_c" 1>&6
--echo "configure:1665: checking for libjpeg version = 6b" >&5
+-echo "configure:1657: checking for libjpeg version = 6b" >&5
 -    cat > conftest.$ac_ext <<EOF
--#line 1667 "configure"
+-#line 1659 "configure"
 -#include "confdefs.h"
 -#include <jpeglib.h>
 -         x JPEG_LIB_VERSION x
 -EOF
 -if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
--  egrep "x 62  x" >/dev/null 2>&1; then
+-  egrep "x 62 x" >/dev/null 2>&1; then
 -  rm -rf conftest*
 -          echo "$ac_t""yes" 1>&6
          LIBJPEG='-ljpeg'
@@ -29,25 +27,25 @@ $NetBSD: patch-aa,v 1.2 2000/10/06 14:05:50 agc Exp $
 -rm -f conftest*
 +	JPEGINCL=-I${LOCALBASE}/include
  
--    echo $ac_n "checking for libpng version = 1.0.1""... $ac_c" 1>&6
--echo "configure:1686: checking for libpng version = 1.0.1" >&5
+-    echo $ac_n "checking for libpng version = 1.0.x""... $ac_c" 1>&6
+-echo "configure:1678: checking for libpng version = 1.0.x" >&5
 -    cat > conftest.$ac_ext <<EOF
--#line 1688 "configure"
+-#line 1680 "configure"
 -#include "confdefs.h"
 -#include <png.h>
 -	x PNG_LIBPNG_VER_STRING x
 -EOF
 -if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
--  egrep "x \"1.0.1\"  x" >/dev/null 2>&1; then
+-  egrep "x \"1.0\..*\" x" >/dev/null 2>&1; then
 -  rm -rf conftest*
 -          echo "$ac_t""yes" 1>&6
-         LIBPNG='-lpng'
-         LIBZ=''
- 	MAKEPNG='#'
+-        LIBPNG='-lpng'
+-        LIBZ=''
+-	MAKEPNG='#'
 -else
 -  rm -rf conftest*
 -          echo "$ac_t""no" 1>&6
--        LIBPNG='../libpng.a'
+         LIBPNG='../libpng.a'
 -        LIBZ='../libz.a'
 -        
 -fi
@@ -58,23 +56,17 @@ $NetBSD: patch-aa,v 1.2 2000/10/06 14:05:50 agc Exp $
 -    LIBPNG='../libpng.a'
 -    LIBZ='../libz.a'
 -fi
-+	PNGINCL=-I${LOCALBASE}/include
+-
++	LIBZ=''
  
  
  
-@@ -6220,6 +6177,7 @@
-     /usr/local/lesstif/include\
-     /usr/gnu/lesstif/include  \
-     $HOME/lesstif/include     \
-+    $MOTIFBASE/include		\
-     ; \
-   do
-     if test -r "$ac_dir/$motif_direct_test_include"; then
-@@ -6271,6 +6229,7 @@
-     /usr/local/lesstif/lib\
-     /usr/gnu/lesstif/lib  \
-     $HOME/lesstif/lib     \
-+    $MOTIFBASE/lib		\
-     ; \
- do
-   for ac_extension in a so sl; do
+@@ -6518,7 +6472,7 @@
+ 
+ EXTRA_MAKEFILE_IN=
+ make_output="Makefile Options.orig:Options.in tools/Makefile \
+-       libjpeg/Makefile libpng/Makefile libpng/zlib/Makefile \
++       libpng/Makefile \
+        tools/mkdep/Makefile \
+        tools/cextract-1.7/Makefile thotlib/Makefile \
+        thotlib/include/Makefile batch/Makefile tablelib/Makefile"
