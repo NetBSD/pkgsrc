@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/10/18 04:26:54 garbled Exp $
+# $NetBSD: Makefile,v 1.8 2000/12/26 17:33:52 dmcmahill Exp $
 
 DISTNAME=	apNetBSD
 PKGNAME=	aperture-2.0
@@ -21,7 +21,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-.BEGIN:
+pre-fetch:
 	@if [ ! -f /sys/lib/libkern/libkern.h ]; then \
 	    ${ECHO_MSG} "==================================================="; \
 	    ${ECHO_MSG} "    Kernel sources for the version of the kernel"; \
