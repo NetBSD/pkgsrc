@@ -1,4 +1,4 @@
-$NetBSD: patch-pe,v 1.1 2001/01/30 03:09:01 minoura Exp $
+$NetBSD: patch-pe,v 1.2 2001/03/01 05:59:47 minoura Exp $
 
 --- /dev/null	Fri Jan 26 01:33:46 2001
 +++ gcc/config/i386/netbsd-pe.h
@@ -87,9 +87,9 @@ $NetBSD: patch-pe,v 1.1 2001/01/30 03:09:01 minoura Exp $
 +   by calling the init function from the prologue. */
 +
 +#undef STARTFILE_SPEC
-+#define STARTFILE_SPEC "%{mdll:crt0dll%o%s} \
-+                        %{!mdll: %{!mwindows:crt0%O%s} \
-+                                 %{mwindows:crt0win%O%s}}"
++#define STARTFILE_SPEC "%{mdll:crt0dll%O%s} %{!mdll: %{!mwindows:crt0%O%s} %{mwindows:crt0win%O%s}}"
++
++
 +
 +#undef CPP_SPEC
 +#define CPP_SPEC "-remap %(cpp_cpu) %{posix:-D_POSIX_SOURCE} \
@@ -117,13 +117,13 @@ $NetBSD: patch-pe,v 1.1 2001/01/30 03:09:01 minoura Exp $
 +   ld, but that doesn't work just yet.  */
 +
 +#undef LIB_SPEC
-+#define LIB_SPEC "-lkernel32 \
-+                  %{mwindows:-luser32 -lgdi32 -lcomdlg32 -ladvapi32 -lshell32 -lm} \
-+                  -lpthread -lc"
++#define LIB_SPEC "-lkernel32 %{mwindows:-luser32 -lgdi32 -lcomdlg32 -ladvapi32 -lshell32 -lm} \
++ -lpthread -lc %{mdll:-lpeasu}"
 +
-+#define LINK_SPEC "%{mwindows:--subsystem windows} \
-+                   %{mconsole:--subsystem console} \
-+                   %{mdll:--dll -e _DllMainCRTStartup@12}"
++
++#define LINK_SPEC "%{mwindows:--subsystem windows} %{mconsole:--subsystem console} \
++ %{mdll:--dll -e _DllMainCRTStartup@12 --file-alignment 0x1000}"
++
 +
 +
 +#define SIZE_TYPE "unsigned int"
