@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.12.2.9 2005/02/15 16:25:23 tv Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.12.2.10 2005/02/25 14:46:51 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -231,8 +231,13 @@ _WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
 .endif
 
 .if !empty(PKGSRC_COMPILER:Micc)
+.  if !empty(CC_VERSION:M8.1)
+_WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-icc81-cc
+_WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+.  else
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-icc-cc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+.  endif
 _WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-icc-cc
 _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-icc-cc
@@ -303,6 +308,14 @@ _WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-osf1-cc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-osf1-ld
+.elif ${OPSYS} == "AIX"
+_WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-aix-cc
+_WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+_WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-aix-ld
+_WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-aix-cc
+_WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-aix-cc
+_WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
+_WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .endif
 
 # Filter to scrunch shell scripts by removing comments and empty lines.
@@ -448,6 +461,18 @@ ${WRAPPER_TMPDIR}/cmd-sink-aix-xlc:					\
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
+${WRAPPER_TMPDIR}/cmd-sink-aix-cc:					\
+		${WRAPPER_SRCDIR}/cmd-sink-aix-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/cmd-sink-aix-ld:					\
+		${WRAPPER_SRCDIR}/cmd-sink-aix-ld
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
 ${WRAPPER_TMPDIR}/cmd-sink-darwin-xlc:					\
 		${WRAPPER_SRCDIR}/cmd-sink-darwin-xlc
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
@@ -492,6 +517,18 @@ ${WRAPPER_TMPDIR}/transform-ccc-cc:					\
 
 ${WRAPPER_TMPDIR}/cmd-sink-icc-cc:					\
 		${WRAPPER_SRCDIR}/cmd-sink-icc-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/cmd-sink-icc81-cc:					\
+		${WRAPPER_SRCDIR}/cmd-sink-icc81-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/transform-aix-cc:					\
+		${WRAPPER_SRCDIR}/transform-aix-cc
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.20.2.5 2004/12/20 20:46:00 tv Exp $
+# $NetBSD: bsd.sites.mk,v 1.20.2.6 2005/02/25 14:46:51 tv Exp $
 #
 # Default MASTER_SITES
 
@@ -6,14 +6,9 @@
 BSD_SITES_MK=	1
 
 MASTER_SITE_XCONTRIB+=  \
-	ftp://uiarchive.uiuc.edu/pub/ftp/ftp.x.org/contrib/ \
-	ftp://sunsite.doc.ic.ac.uk/packages/X11/contrib/ \
 	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/ \
-	ftp://ftp.sunet.se/pub/X11/contrib/ \
 	ftp://sunsite.sut.ac.jp/pub/archives/X11/contrib/ \
 	ftp://sunsite.icm.edu.pl/pub/X11/contrib/ \
-	ftp://ftp.task.gda.pl/mirror/ftp.x.org/contrib/ \
-	ftp://ftp.ntua.gr/pub/X11/contrib/ \
 	ftp://sunsite.cnlab-switch.ch/mirror/X11/contrib/ \
 	ftp://ftp.cica.es/pub/X/contrib/ \
 	ftp://ftp.unicamp.br/pub/X11/contrib/ \
@@ -22,19 +17,13 @@ MASTER_SITE_XCONTRIB+=  \
 MASTER_SITE_GNU+=       \
 	ftp://ftp.gnu.org/pub/gnu/ \
 	http://public.planetmirror.com.au/pub/gnu/ \
-	ftp://gatekeeper.dec.com/pub/GNU/ \
-	ftp://ftp.uu.net/archive/systems/gnu/ \
-	ftp://ftp.de.uu.net/pub/gnu/ \
 	ftp://ftp.funet.fi/pub/gnu/prep/ \
-	ftp://ftp.leo.org/pub/comp/os/unix/gnu/ \
-	ftp://ftp.digex.net/pub/gnu/ \
 	ftp://ftp.wustl.edu/mirrors/gnu/ \
-	ftp://ftp.kddlabs.co.jp/pub/gnu/ \
+	ftp://ftp.kddlabs.co.jp/pub/gnu/gnu/ \
 	ftp://ftp.dti.ad.jp/pub/GNU/ \
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnu.org/gnu/ \
-	ftp://sunsite.org.uk/Mirrors/ftp.gnu.org/pub/gnu/ \
 	ftp://ftp.informatik.hu-berlin.de/pub/gnu/ \
-	ftp://ftp.rediris.es/mirror/gnu/ \
+	ftp://ftp.rediris.es/mirror/GNU/gnu/ \
 	ftp://ftp.lip6.fr/pub/gnu/ \
 	ftp://ftp.tuwien.ac.at/linux/gnu/gnusrc/ \
 	ftp://ftp.chg.ru/pub/gnu/
@@ -82,24 +71,16 @@ MASTER_SITE_TEX_CTAN+= \
 
 MASTER_SITE_SUNSITE+=   \
 	ftp://sunsite.unc.edu/pub/Linux/ \
-	ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/ \
 	ftp://ftp.chg.ru/pub/Linux/sunsite/ \
-	ftp://ftp.is.co.za/linux/sunsite/ \
 	ftp://ftp.kddlabs.co.jp/Linux/metalab.unc.edu/ \
-	ftp://ftp.kobe-u.ac.jp/pub/Linux/metalab.unc.edu/ \
-	ftp://ftp.cse.cuhk.edu.hk/pub4/Linux/ \
 	ftp://ftp.icm.edu.pl/pub/Linux/sunsite/ \
 	ftp://ftp.nvg.ntnu.no/pub/mirrors/metalab.unc.edu/ \
 	ftp://ftp.uvsq.fr/pub5/linux/sunsite/ \
 	ftp://ftp.lip6.fr/pub/linux/sunsite/ \
 	ftp://ftp.uni-stuttgart.de/pub/mirror/sunsite.unc.edu/pub/Linux/ \
-	ftp://ftp.uni-magdeburg.de/pub/mirror/linux/ftp.metalab.unc.edu/ \
-	ftp://ftp.uni-jena.de/pub/linux/MIRROR.sunsite/ \
-	ftp://ftp.fu-berlin.de/unix/linux/mirrors/sunsite.unc.edu/ \
 	ftp://ftp.cs.tu-berlin.de/pub/linux/Mirrors/sunsite.unc.edu/ \
 	ftp://sunsite.cnlab-switch.ch/mirror/linux/sunsite/ \
-	ftp://ftp.tuwien.ac.at/pub/linux/ibiblio/ \
-	ftp://ftp.unicamp.br/pub/systems/Linux/
+	ftp://ftp.tuwien.ac.at/pub/linux/ibiblio/
 
 MASTER_SITE_GNOME+=     \
 	ftp://ftp.gnome.org/pub/GNOME/ \

@@ -1,4 +1,4 @@
-#	$NetBSD: plist.mk,v 1.1.2.2 2004/12/31 20:25:30 tv Exp $
+#	$NetBSD: plist.mk,v 1.1.2.3 2005/02/25 14:46:51 tv Exp $
 #
 # PLIST generation logic, invoked from the "install" target in bsd.pkg.mk.
 # This file should only be ".include"d from bsd.pkg.mk.
@@ -231,12 +231,12 @@ _DYLIB_AWK= \
 			}			\
 	}
 
-# Turn lib*.so.*, lib*.so into lib*.a.  Drop duplicates.
+# Turn lib*.so.*, lib*.so into lib*.so.  Drop duplicates.
 _AIXLIB_AWK= \
 	/^@/ { lines[NR] = $$0; next }		\
 	/.*\/lib[^\/]+\.so(\.[0-9]+)*$$/ {	\
 		sub("(\\.[0-9]+)*$$", "");	\
-		sub("\\.so$$", ".a");       	\
+		sub("\\.so$$", ".so");       	\
 		lines[NR] = $$0;     		\
 		next				\
 	}					\

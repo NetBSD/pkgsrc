@@ -1,4 +1,4 @@
-# $NetBSD: transform-icc-cc,v 1.2.2.2 2005/02/15 16:25:23 tv Exp $
+# $NetBSD: transform-icc-cc,v 1.2.2.3 2005/02/25 14:46:51 tv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -38,7 +38,7 @@ case $arg in
 ######################################################################
 # ignore flags that icc doesn't understand.
 ######################################################################
--ffast-math|-fomit-frame-pointer|-pedantic|-pipe|-s|-MP|-OPT:*)
+-fexceptions|-ffast-math|-fomit-frame-pointer|-pedantic|-pipe|-s|-MP|-OPT:*)
 	arg=
 	msg_log $wrapperlog "   (transform-icc-cc) to: $arg"
 	addtocache=yes

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.23 2005/02/15 16:25:22 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.24 2005/02/25 14:46:51 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -78,6 +78,10 @@ PLIST_SRC+=		${PKGDIR}/PLIST.common
 .  endif
 .  if exists(${PKGDIR}/PLIST.${OPSYS})
 PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
+.  elif exists(${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g})
+PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g}
+.  elif exists(${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
+PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .  elif exists(${PKGDIR}/PLIST)
 PLIST_SRC+=		${PKGDIR}/PLIST
 .  endif
@@ -97,7 +101,7 @@ CONFIGURE_DIRS?=	${WRKSRC}
 CONFIGURE_SCRIPT?=	./configure
 DEPENDS?=		# empty
 DESCR_SRC?=		${PKGDIR}/DESCR
-DIGEST_ALGORITHM?=	SHA1
+DIGEST_ALGORITHMS?=	SHA1 RMD160
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 DISTINFO_FILE?=		${PKGDIR}/distinfo
 EXTRACT_ONLY?=		${DISTFILES}
@@ -109,6 +113,7 @@ INTERACTIVE_STAGE?=	none
 MAINTAINER?=		tech-pkg@NetBSD.org
 MAKE_FLAGS?=		# empty
 MAKEFILE?=		Makefile
+PATCH_DIGEST_ALGORITHM?=SHA1
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
 PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
@@ -727,7 +732,6 @@ _CHECK_VULNERABLE=							\
 		  PKGBASE="${PKGBASE}"					\
 		${AWK} '/^$$/ { next }					\
 			/^\#.*/ { next }				\
-			$$1 !~ ENVIRON["PKGBASE"] { next }		\
 			{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); } \
 		' < ${PKGVULNDIR}/pkg-vulnerabilities || ${ECHO} 'could not check pkg-vulnerabilities file'
 
@@ -813,27 +817,33 @@ do-checksum: uptodate-digest
 	if [ ! -f ${DISTINFO_FILE} ]; then				\
 		${ECHO_MSG} "=> No checksum file.";			\
 	else								\
-		(cd ${DISTDIR}; OK="true";				\
+		(cd ${DISTDIR}; OK="true"; missing=""; 			\
 		  for file in "" ${_CKSUMFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
-			if [ "X$$alg" = "X" ]; then			\
-				${ECHO_MSG} "=> No checksum recorded for $$file."; \
-				OK="false";				\
-			else						\
-				CKSUM=`${DIGEST} $$alg < $$file`;	\
-				CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
-				if [ "$$CKSUM2" = "IGNORE" ]; then	\
-					${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
-					${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
-					OK="false";			\
-				elif [ "$$CKSUM" = "$$CKSUM2" ]; then	\
-					${ECHO_MSG} "=> Checksum OK for $$file."; \
-				else					\
-					${ECHO_MSG} "=> Checksum mismatch for $$file."; \
-					OK="false";			\
-				fi;					\
-			fi;						\
+			filesummed=false;				\
+			for a in ${DIGEST_ALGORITHMS}; do		\
+				CKSUM2=`${AWK} 'NF == 4 && $$1 == "'$$a'" && $$2 == "('$$file')" && $$3 == "=" {print $$4;}' ${DISTINFO_FILE}`; \
+				case "$${CKSUM2}" in			\
+				"")	${ECHO_MSG} "=> No $$a checksum recorded for $$file."; \
+					;;				\
+				*)	filesummed=true;		\
+					CKSUM=`${DIGEST} $$a < $$file`;	\
+					if [ "$$CKSUM2" = "IGNORE" ]; then \
+						${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
+						${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
+						OK="false";		\
+					elif [ "$$CKSUM" = "$$CKSUM2" ]; then	\
+						${ECHO_MSG} "=> Checksum $$a OK for $$file."; \
+					else				\
+						${ECHO_MSG} "=> Checksum $$a mismatch for $$file."; \
+						OK="false";		\
+					fi ;;				\
+				esac;					\
+			done;						\
+			case "$$filesummed" in				\
+			false)	missing="$$missing $$file";		\
+				OK=false ;;				\
+			esac;						\
 		  done;							\
 		  for file in "" ${_IGNOREFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
@@ -848,6 +858,10 @@ do-checksum: uptodate-digest
 			fi;						\
 		  done;							\
 		  if [ "$$OK" != "true" ]; then				\
+			case "$$missing" in				\
+			"")	;;					\
+			*)	${ECHO_MSG} "Missing checksums for $$missing";;	\
+			esac;						\
 			${ECHO_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
 			${ECHO_MSG} "are up to date.  If you want to override this check, type"; \
 			${ECHO_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
@@ -1570,7 +1584,7 @@ show-vars show-vars-noeval:
 .  for def in ${EVAL_PREFIX}
 .    if !defined(${def:C/=.*$//})
 ${def:C/=.*$//}_DEFAULT?=${LOCALBASE}
-_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | grep '' || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
+_${def:C/=.*$//}_CMD=	${PKG_INFO} -qp ${def:C/^.*=//} 2>/dev/null | ${AWK} '{ print $$2; exit }' | ${GREP} . || ${ECHO} ${${def:C/=.*$//}_DEFAULT}
 ${def:C/=.*$//}=	${_${def:C/=.*$//}_CMD:sh}
 .    endif
 .  endfor
@@ -1827,12 +1841,18 @@ makesum: recurse-fetch uptodate-digest
 	cd ${DISTDIR};							\
 	for sumfile in "" ${_CKSUMFILES}; do				\
 		if [ "X$$sumfile" = "X" ]; then continue; fi;		\
-		${DIGEST} ${DIGEST_ALGORITHM} $$sumfile >> $$newfile;	\
+		for a in "" ${DIGEST_ALGORITHMS}; do			\
+			if [ "X$$a" = "X" ]; then continue; fi;		\
+			${DIGEST} $$a $$sumfile >> $$newfile;		\
+		done;							\
 		${WC} -c $$sumfile | ${AWK} '{ print "Size (" $$2 ") = " $$1 " bytes" }' >> $$newfile; \
 	done;								\
 	for ignore in "" ${_IGNOREFILES}; do				\
 		if [ "X$$ignore" = "X" ]; then continue; fi;		\
-		${ECHO} "${DIGEST_ALGORITHM} ($$ignore) = IGNORE" >> $$newfile; \
+		for a in "" ${DIGEST_ALGORITHMS}; do			\
+			if [ "X$$a" = "X" ]; then continue; fi;		\
+			${ECHO} "$$a ($$ignore) = IGNORE" >> $$newfile;	\
+		done;							\
 	done;								\
 	if [ -f ${DISTINFO_FILE} ]; then				\
 		${AWK} '$$2 ~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
@@ -1864,7 +1884,7 @@ makepatchsum mps: uptodate-digest
 			case $$sumfile in				\
 				patch-local-*) ;;			\
 				*.orig|*.rej|*~) continue ;;		\
-				*)	${ECHO} "${DIGEST_ALGORITHM} ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${DIGEST} ${DIGEST_ALGORITHM}`" >> $$newfile;; \
+				*)	${ECHO} "${PATCH_DIGEST_ALGORITHM} ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${DIGEST} ${DIGEST_ALGORITHM}`" >> $$newfile;; \
 			esac;						\
 		done);							\
 	fi;								\
@@ -1973,7 +1993,7 @@ _FETCH_FILE=								\
 				if [ -n "${FAILOVER_FETCH}" -a -f ${DISTINFO_FILE} -a -f ${_DISTDIR}/$$bfile ]; then \
 					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
 					if [ -z "$$alg" ]; then		\
-						alg=${DIGEST_ALGORITHM};\
+						alg=${PATCH_DIGEST_ALGORITHM};\
 					fi;				\
 					CKSUM=`${DIGEST} $$alg < ${_DISTDIR}/$$bfile`; \
 					CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')" {print $$4;}' <${DISTINFO_FILE}`; \
