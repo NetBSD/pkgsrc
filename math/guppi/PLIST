@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2002/02/15 10:12:50 skrll Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/02/24 22:00:09 wiz Exp $
 bin/gnome-guile-repl
 bin/gnome-python-repl
-bin/guppi-gnumeric
 include/libguppi/delim-import-widget.h
 include/libguppi/gnan.h
 include/libguppi/guppi-2d.h
@@ -270,9 +269,7 @@ share/gnome/help/guppi/C/guppi.html
 share/gnome/help/guppi/C/ln14.html
 share/gnome/help/guppi/C/topic.dat
 @exec ${MKDIR} -p %D/share/gnome/help/guppi/C/images
-share/guppi/glade/guppi-gnumeric-format-guru.glade
 share/guppi/glade/view-properties.glade
-share/guppi/scripts/guppi-gnumeric-plots.xml
 share/guppi/scripts/guppi-guile-boot.scm
 share/guppi/scripts/python/Guppi/__init__.py
 share/guppi/scripts/python/Guppi/__init__.pyc
@@ -297,7 +294,6 @@ share/locale/sv/LC_MESSAGES/Guppi.mo
 share/locale/tr/LC_MESSAGES/Guppi.mo
 share/locale/uk/LC_MESSAGES/Guppi.mo
 share/oaf/GNOME_Guppi.oafinfo
-share/oaf/GNOME_Guppi_Gnumeric.oaf
 share/pixmaps/gnome-guppi.png
 share/pixmaps/guppi/area.xpm
 share/pixmaps/guppi/bar.xpm
