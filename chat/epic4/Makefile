@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/23 12:12:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/16 20:51:14 zuntum Exp $
 #
 
 DISTNAME=	epic4-0.9.16
@@ -19,7 +19,7 @@ PATCHFILES=     epic4-0.9.16-ipv6-20010208.patch.gz
 PATCH_DIST_STRIP=	-p1
 .endif
 
-MAINTAINER=	zuntum@eik.pl
+MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.epicsol.org/
 COMMENT=	The (E)nhanced (P)rogrammable (I)RC-II (C)lient
 
