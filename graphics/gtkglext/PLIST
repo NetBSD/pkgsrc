@@ -1,0 +1,56 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/16 03:37:03 rh Exp $
+include/gtkglext-0.x/gdk/gdkgl.h
+include/gtkglext-0.x/gdk/gdkglconfig.h
+include/gtkglext-0.x/gdk/gdkglcontext.h
+include/gtkglext-0.x/gdk/gdkgldebug.h
+include/gtkglext-0.x/gdk/gdkgldefs.h
+include/gtkglext-0.x/gdk/gdkgldrawable.h
+include/gtkglext-0.x/gdk/gdkglenumtypes.h
+include/gtkglext-0.x/gdk/gdkglfont.h
+include/gtkglext-0.x/gdk/gdkglpixmap.h
+include/gtkglext-0.x/gdk/gdkglprivate.h
+include/gtkglext-0.x/gdk/gdkglquery.h
+include/gtkglext-0.x/gdk/gdkgltokens.h
+include/gtkglext-0.x/gdk/gdkgltypes.h
+include/gtkglext-0.x/gdk/gdkglversion.h
+include/gtkglext-0.x/gdk/gdkglwindow.h
+include/gtkglext-0.x/gdk/gdkglx.h
+include/gtkglext-0.x/gtk/gtkgl.h
+include/gtkglext-0.x/gtk/gtkgldebug.h
+include/gtkglext-0.x/gtk/gtkgldefs.h
+include/gtkglext-0.x/gtk/gtkglprivate.h
+include/gtkglext-0.x/gtk/gtkglversion.h
+include/gtkglext-0.x/gtk/gtkglwidget.h
+include/gtkglext-0.x/gtk/gtkglwidgetparam.h
+lib/libgdkglext-x11-0.x.a
+lib/libgdkglext-x11-0.x.la
+lib/libgdkglext-x11-0.x.so
+lib/libgdkglext-x11-0.x.so.1
+lib/libgdkglext-x11-0.x.so.1.0
+lib/libgtkglext-x11-0.x.a
+lib/libgtkglext-x11-0.x.la
+lib/libgtkglext-x11-0.x.so
+lib/libgtkglext-x11-0.x.so.1
+lib/libgtkglext-x11-0.x.so.1.0
+lib/pkgconfig/gdkglext-0.x.pc
+lib/pkgconfig/gdkglext-x11-0.x.pc
+lib/pkgconfig/gtkglext-0.x.pc
+lib/pkgconfig/gtkglext-x11-0.x.pc
+share/gtk-doc/html/gtkglext/gtkglext-gdkglconfig.html
+share/gtk-doc/html/gtkglext/gtkglext-gdkglcontext.html
+share/gtk-doc/html/gtkglext/gtkglext-gdkgldrawable.html
+share/gtk-doc/html/gtkglext/gtkglext-gdkglfont.html
+share/gtk-doc/html/gtkglext/gtkglext-gdkglpixmap.html
+share/gtk-doc/html/gtkglext/gtkglext-gdkglquery.html
+share/gtk-doc/html/gtkglext/gtkglext-gdkgltokens.html
+share/gtk-doc/html/gtkglext/gtkglext-gdkglwindow.html
+share/gtk-doc/html/gtkglext/gtkglext-gdkglx.html
+share/gtk-doc/html/gtkglext/gtkglext-gtkglwidget.html
+share/gtk-doc/html/gtkglext/index.html
+share/gtk-doc/html/gtkglext/index.sgml
+share/gtk-doc/html/gtkglext/r2042.html
+share/gtk-doc/html/gtkglext/r4.html
+@dirrm share/gtk-doc/html/gtkglext
+@dirrm include/gtkglext-0.x/gtk
+@dirrm include/gtkglext-0.x/gdk
+@dirrm include/gtkglext-0.x
