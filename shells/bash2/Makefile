@@ -1,4 +1,4 @@
-$NetBSD: Makefile,v 1.12 1998/08/20 15:17:25 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1998/11/13 11:27:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -20,7 +20,7 @@ HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
 
 CONFLICTS=	bash-2.02
 
-GNU_CONFIGURE=	Yes
+GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
 
 pre-install:
