@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.522 2000/07/28 10:33:59 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.523 2000/07/29 00:06:26 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -91,15 +91,29 @@ X11PREFIX=		${LOCALBASE}
 X11PREFIX=		${X11BASE}
 .endif
 
+.if defined(USE_MOTIF12)
+USE_MOTIF=		# defined
+.endif
+
 .if defined(USE_MOTIF)
-.if ${X11PREFIX} == ${LOCALBASE}
-MOTIFBASE?=		${LOCALBASE}
-.elif ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS"
 MOTIFBASE?=		/usr/dt
+.elif exists(${X11BASE}/include/Xm/Xm.h)
+MOTIFBASE?=		${X11BASE}
+.elif ${X11PREFIX} == ${LOCALBASE}
+.if defined(USE_MOTIF12)
+MOTIFBASE?=		${LOCALBASE}/LessTif/Motif1.2
+.else
+MOTIFBASE?=		${LOCALBASE}
+.endif
+.else
+.if defined(USE_MOTIF12)
+MOTIFBASE?=		${X11BASE}/LessTif/Motif1.2
 .else
 MOTIFBASE?=		${X11BASE}
 .endif
-.endif # USE_MOTIF
+.endif
+.endif  # USE_MOTIF
 
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if ${X11PREFIX} == ${LOCALBASE}
@@ -714,15 +728,21 @@ INSTALL_TARGET+=	install.man
 FETCH_BEFORE_ARGS += -p
 .endif
 
-# Check if we got a real Motif, Lesstif or no Motif at all.
+# Check if we got a real Motif, LessTif or no Motif at all.
 .if defined(USE_MOTIF)
+.if defined(USE_MOTIF12)
+LESSTIF_DEPENDS=	lesstif12-*:../../x11/lesstif
+.else
+LESSTIF_DEPENDS=	lesstif-*:../../x11/lesstif
+.endif
 .if exists(${MOTIFBASE}/include/Xm/Xm.h)
 IS_LESSTIF!=	${EGREP} -c LESSTIF ${MOTIFBASE}/include/Xm/Xm.h || ${TRUE}
-.if (${IS_LESSTIF} != "0")
-DEPENDS+=	lesstif-*:../../x11/lesstif
+.if (${IS_LESSTIF} != "0") || \
+	(defined(USE_MOTIF12) && exists(${MOTIFBASE}/include/Xm/Gadget.h))
+DEPENDS+=		${LESSTIF_DEPENDS}
 .endif
 .else
-DEPENDS+=	lesstif-*:../../x11/lesstif
+DEPENDS+=		${LESSTIF_DEPENDS}
 .endif
 .endif
 
