@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/08/22 22:02:32 tron Exp $
+# $NetBSD: Makefile,v 1.23 1999/08/28 09:43:11 rh Exp $
 #
 
 DISTNAME=	imlib-1.9.4
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=gnome-1.0/sources/}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.labs.redhat.com/imlib/
 
-DEPENDS+=	gtk+-1.2.2:../../x11/gtk
+DEPENDS+=	gtk+-1.2.4:../../x11/gtk
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	netpbm-19940301:../../graphics/netpbm
