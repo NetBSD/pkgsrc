@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/02/14 17:21:33 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2004/03/23 04:41:00 jlam Exp $
 
 DISTNAME=		libmikmod_3.1.10
 PKGNAME=		libmikmod-3.1.10
@@ -12,8 +12,8 @@ COMMENT=		MikMod Sound Library
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
-USE_BUILDLINK3=		# defined
-USE_MAKEINFO=		YES
+USE_BUILDLINK3=		yes
+USE_MAKEINFO=		yes
 INFO_FILES=		mikmod.info
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
