@@ -1,0 +1,4 @@
+This is a spell checker with a JavaScript interface. It supports multiple
+languages, user dictionaries, and even encryption to protect the users'
+privacy.  Note that it may not work with older browsers that are not
+JavaScript capable. 
