@@ -1,0 +1,3 @@
+This is a pre-req package which ensures the existance of the mail user
+which is required for exim to build (and therefore must exist pre-build for
+the exim package itself).
