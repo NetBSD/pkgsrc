@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/09/26 04:41:06 epg Exp $
+
+SHA1 (PerlIO-via-dynamic-0.11.tar.gz) = 44cc6c47d99a796b49841f934f0af01f89410180
+Size (PerlIO-via-dynamic-0.11.tar.gz) = 17019 bytes
