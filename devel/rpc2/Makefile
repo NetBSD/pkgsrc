@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/31 22:52:17 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/10 00:08:43 jlam Exp $
 #
 
 DISTNAME=	rpc2-1.10
@@ -26,7 +26,5 @@ CONFIGURE_ENV+=	PERL=${PERL5}
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=	-I${BUILDLINK_INCDIR}
 LDFLAGS+=	-L${BUILDLINK_LIBDIR}
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"

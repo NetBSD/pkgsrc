@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/26 07:16:16 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/10 00:08:48 jlam Exp $
 
 DISTNAME=	xpp-1.0
 CATEGORIES=	print x11
@@ -22,7 +22,7 @@ LDFLAGS+=	-L${BUILDLINK_LIBDIR}
 
 DOCDIR=		${PREFIX}/share/doc/xpp
 
-pre-configure: ${BUILDLINK_TARGETS}
+pre-configure:
 	cd ${WRKSRC}; ${TOUCH} Makefile.in aclocal.m4 configure
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/24 08:53:57 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/10 00:08:46 jlam Exp $
 #
 
 DISTNAME=       chipmunk-1.4
@@ -19,8 +19,6 @@ MAKE_ENV+=	EXTRA_LIBS=-li386
 
 CPPFLAGS+=	-I${BUILDLINK_INCDIR}
 LDFLAGS+=	-L${BUILDLINK_LIBDIR}
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/chipmunk ${PREFIX}/sbin/chipmunk

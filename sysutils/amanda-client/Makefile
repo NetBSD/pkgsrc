@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/05/29 18:04:30 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/06/10 00:08:48 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -43,7 +43,5 @@ BUILD_DEFS+=		AMANDA_USER AMANDA_SMB AMANDA_VAR
 CONFIGURE_ARGS+=	--with-smbclient
 DEPENDS+=		samba>=2.0.0:../../net/samba
 .endif
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/24 08:53:58 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/10 00:08:48 jlam Exp $
 
 DISTNAME=		cadaver-0.17.0
 CATEGORIES=		www
@@ -31,8 +31,6 @@ CONFIGURE_ENV+=		ac_cv_lib_ncurses_tputs=no
 CFLAGS+=		-I${BUILDLINK_INCDIR} ${CPPFLAGS}
 LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 LIBS+=			-ltermcap
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 # The build process doesn't correctly find some headers for utility functions
 # which are provided in ${WRKSRC}/lib.  Help the compiler by linking the

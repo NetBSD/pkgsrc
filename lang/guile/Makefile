@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/05/28 05:36:28 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/06/10 00:08:45 jlam Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/11/22 16:01:32 jseger Exp
 #
 
@@ -24,7 +24,5 @@ INFO_FILES=		data-rep.info
 
 CFLAGS+=		-I${BUILDLINK_INCDIR}
 LDFLAGS+=		-L${BUILDLINK_LIBDIR}
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"

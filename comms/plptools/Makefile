@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/05/24 08:53:54 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/06/10 00:08:42 jlam Exp $
 #
 
 DISTNAME=	plptools-0.6
@@ -24,7 +24,5 @@ CONFIGURE_ENV+=		LIBS="${LIBS}"
 
 CPPFLAGS+=		-I${BUILDLINK_INCDIR}
 LIBS+=			-ltermcap
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"

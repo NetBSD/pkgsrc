@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/05/26 06:37:45 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/06/10 00:08:49 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME}-source
@@ -31,8 +31,6 @@ CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 CPPFLAGS+=	-I${BUILDLINK_INCDIR}
 LDFLAGS+=	-L${BUILDLINK_LIBDIR}
-
-pre-configure: ${BUILDLINK_TARGETS}
 
 test:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\

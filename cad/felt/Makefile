@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/24 08:53:54 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/10 00:08:42 jlam Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
@@ -12,7 +12,6 @@ COMMENT=		Free system for introductory level finite element analysis
 
 EXTRACT_ONLY=		felt-3.05.src.tar.gz
 WRKSRC=			${WRKDIR}/FElt-3.05
-NO_CONFIGURE=		# defined
 
 USE_X11BASE=		# defined
 USE_XAW=		# defined
@@ -31,8 +30,6 @@ LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 post-extract:
 	@${GZCAT} ${DISTDIR}/felt-3.05.ps.gz > ${WRKSRC}/felt.ps
-
-pre-build: ${BUILDLINK_TARGETS}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/felt
