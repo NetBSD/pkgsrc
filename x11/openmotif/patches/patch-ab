@@ -1,4 +1,4 @@
-$NetBSD: patch-bindings-Imakefile,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+$NetBSD: patch-ab,v 1.1 2001/04/05 14:06:57 wiz Exp $
 
 --- bindings/Imakefile.orig	Wed May  3 11:12:34 2000
 +++ bindings/Imakefile	Sun Oct 29 14:23:39 2000
