@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2004/01/24 08:13:14 grant Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.3 2004/10/30 16:24:20 grant Exp $
 lib/python${PY_VER_SUFFIX}/lib-dynload/sunaudiodev.so
-lib/python${PY_VER_SUFFIX}/plat-sunos5/CDIO.py
-lib/python${PY_VER_SUFFIX}/plat-sunos5/CDIO.pyc
-lib/python${PY_VER_SUFFIX}/plat-sunos5/CDIO.pyo
-lib/python${PY_VER_SUFFIX}/plat-sunos5/DLFCN.py
-lib/python${PY_VER_SUFFIX}/plat-sunos5/DLFCN.pyc
-lib/python${PY_VER_SUFFIX}/plat-sunos5/DLFCN.pyo
-lib/python${PY_VER_SUFFIX}/plat-sunos5/STROPTS.py
-lib/python${PY_VER_SUFFIX}/plat-sunos5/STROPTS.pyc
-lib/python${PY_VER_SUFFIX}/plat-sunos5/STROPTS.pyo
-lib/python${PY_VER_SUFFIX}/plat-sunos5/SUNAUDIODEV.py
-lib/python${PY_VER_SUFFIX}/plat-sunos5/SUNAUDIODEV.pyc
-lib/python${PY_VER_SUFFIX}/plat-sunos5/SUNAUDIODEV.pyo
-lib/python${PY_VER_SUFFIX}/plat-sunos5/TYPES.py
-lib/python${PY_VER_SUFFIX}/plat-sunos5/TYPES.pyc
-lib/python${PY_VER_SUFFIX}/plat-sunos5/TYPES.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDIO.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/DLFCN.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/STROPTS.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/STROPTS.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/STROPTS.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SUNAUDIODEV.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SUNAUDIODEV.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SUNAUDIODEV.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TYPES.pyo
