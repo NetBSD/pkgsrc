@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/11/25 11:01:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2002/11/25 19:41:32 wiz Exp $
 
 DISTNAME=		suse_linux-7.3
 CATEGORIES=		emulators
@@ -16,7 +16,7 @@ DEPENDS+=		suse_glx>=7.3:../suse_glx
 DEPENDS+=		suse_gtk>=7.3:../suse_gtk
 DEPENDS+=		suse_xforms>=7.3:../suse_xforms
 
-.include "arch.mk"
+.include "../../emulators/suse_linux/arch.mk"
 .if ${SUSE_ARCH} == i386
 DEPENDS+=		suse_libc5>=7.3:../suse_libc5
 .endif
