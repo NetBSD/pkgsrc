@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/11/22 13:32:01 adam Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/01 03:31:38 minskim Exp $
 
 .include "../../editors/abiword/Makefile.common"
 
 PKGNAME=	abiword-plugins-${ABIWORD_DIST_VERSION}
+PKGREVISION=	1
 COMMENT=	Plugins enhancing Abiword's capabilities
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/abiword-plugins
