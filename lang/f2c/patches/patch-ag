@@ -1,24 +1,11 @@
-$NetBSD: patch-ag,v 1.3 1998/08/25 08:54:08 agc Exp $
+$NetBSD: patch-ag,v 1.4 1999/12/16 00:58:28 dmcmahill Exp $
 
-Set optimisation level appropriately, and omit modified
-files from distributed checksum
-
---- libI77/makefile.orig	Sun Jul 19 22:58:35 1998
-+++ libI77/makefile	Sun Jul 19 23:13:08 1998
+--- ./libI77/makefile.orig	Tue Dec  7 17:52:41 1999
++++ ./libI77/makefile	Tue Dec  7 18:05:10 1999
 @@ -1,5 +1,5 @@
  .SUFFIXES: .c .o
  CC = cc
 -CFLAGS = -O
-+CFLAGS = -O2 
++CFLAGS = -Wcast-align -O2 
  SHELL = /bin/sh
  
-@@ -96,7 +96,7 @@
- 
- check:
--	xsum Notice README Version.c backspace.c close.c dfe.c dolio.c \
-+	../src/xsum Notice README Version.c backspace.c close.c dfe.c dolio.c \
- 	due.c endfile.c err.c f2ch.add fio.h fmt.c fmt.h fmtlib.c fp.h \
--	ftell_.c iio.c ilnw.c inquire.c lio.h lread.c lwrite.c makefile \
-+	ftell_.c iio.c ilnw.c inquire.c lio.h lread.c lwrite.c \
- 	open.c rawio.h rdfmt.c rewind.c rsfe.c rsli.c rsne.c sfe.c sue.c \
- 	typesize.c uio.c util.c wref.c wrtfmt.c wsfe.c wsle.c wsne.c \

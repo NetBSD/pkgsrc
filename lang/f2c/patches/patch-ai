@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 1999/01/14 13:56:04 frueauf Exp $
+$NetBSD: patch-ai,v 1.2 1999/12/16 00:58:28 dmcmahill Exp $
 
 required to make 
 sizeof(integer) == sizeof(real)
@@ -6,8 +6,8 @@ and
 sizeof(logical) == sizeof(real)
 (per f2c/readme)
 
---- f2c.h.orig	Wed Jan 13 17:42:45 1999
-+++ f2c.h	Wed Jan 13 17:44:21 1999
+--- f2c.h.orig	Tue Sep  7 13:46:24 1999
++++ f2c.h	Tue Dec  7 18:08:26 1999
 @@ -8,5 +8,9 @@
  #define F2C_INCLUDE
  
@@ -16,7 +16,7 @@ sizeof(logical) == sizeof(real)
 +#else
  typedef long int integer;
 +#endif
- typedef unsigned long uinteger;
+ typedef unsigned long int uinteger;
  typedef char *address;
 @@ -16,5 +20,9 @@
  typedef struct { real r, i; } complex;
