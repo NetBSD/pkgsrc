@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/12/07 02:39:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.24 2002/12/28 07:58:55 uebayasi Exp $
 
 DISTNAME=		XF86Setup-3.3.6
 CATEGORIES=		x11
@@ -26,7 +26,7 @@ USE_IMAKE=		yes
 X11_RELEASE!=	${MAKE} CHECK_X11=YES print-x11-release
 MAKEFLAGS+=	X11_RELEASE="${X11_RELEASE}"
 .if (${X11_RELEASE} == "6.4")
-PKG_FAIL_REASON= "This package doesn't work with your X11 distribution."
+PKG_SKIP_REASON= "This package doesn't work with your X11 distribution."
 .endif
 .endif
 
