@@ -1,23 +1,22 @@
-$NetBSD: patch-ab,v 1.5 1999/09/03 15:44:43 tron Exp $
+$NetBSD: patch-ab,v 1.6 2001/08/18 09:53:02 wiz Exp $
 
---- doc/Makefile.in.orig	Tue Aug 10 17:06:30 1999
-+++ doc/Makefile.in	Tue Aug 10 19:35:35 1999
-@@ -20,7 +20,8 @@
- 	$(TEXI2DVI) $(srcdir)/screen.texinfo
+--- doc/Makefile.in.orig	Fri May 25 16:50:55 2001
++++ doc/Makefile.in
+@@ -27,7 +27,7 @@
  
  info screen.info: screen.texinfo
+ 	@rm -f screen.info*
 -	$(MAKEINFO) $(srcdir)/screen.texinfo -o screen.info
-+	rm -f ./screen.info*
 +	$(MAKEINFO) --no-split $(srcdir)/screen.texinfo -o screen.info
  
  install: installdirs
- 	$(INSTALL_DATA) $(srcdir)/screen.1 $(mandir)/man1/screen.1
-@@ -28,9 +29,6 @@
+ 	$(INSTALL_DATA) $(srcdir)/screen.1 $(DESTDIR)$(mandir)/man1/screen.1
+@@ -35,9 +35,6 @@
  	-if test -f screen.info; then d=.; else d=$(srcdir); fi; \
  	if test -f $$d/screen.info; then \
- 	for f in $$d/screen.info*; do $(INSTALL_DATA) $$f $(infodir);done; \
+ 	for f in $$d/screen.info*; do $(INSTALL_DATA) $$f $(DESTDIR)$(infodir);done; \
 -	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
--	  install-info --info-dir=$(infodir) $$d/screen.info; \
+-	  install-info --info-dir=$(DESTDIR)$(infodir) $$d/screen.info; \
 -	else true; fi; \
  	fi
  
