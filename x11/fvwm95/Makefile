@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/11/01 16:09:39 tron Exp $
+# $NetBSD: Makefile,v 1.19 2000/01/26 23:11:46 tron Exp $
 # FreeBSD: Makefile,v 1.17 1997/12/24 01:21:18 alex Exp
 #
 
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	ftp://mitac11.uia.ac.be/html-test/fvwm95.html
 
-DEPENDS+=	rplay-3.2.0b6:../../audio/rplay
+DEPENDS+=	rplay-3.*:../../audio/rplay
 DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 
 USE_X11BASE=	yes
