@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2004/11/23 16:04:35 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2004/11/30 17:57:03 wiz Exp $
 
 DISTNAME=		guile-1.6.5
 PKGREVISION=		1
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
+PTHREAD_AUTO_VARS=	YES
 
 USE_MAKEINFO=		YES
 INFO_FILES=		guile.info guile-tut.info goops.info r5rs.info
