@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1564 2005/01/22 09:46:55 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1565 2005/01/23 20:45:22 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -664,11 +664,13 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .  undef NO_PACKAGE
 .endif
 
+PKG_DB_TMPDIR=		${WRKDIR}/.pkgdb
+
 .if !defined(COMMENT)
 COMMENT!=	(${CAT} ${PKGDIR}/COMMENT || ${ECHO_N} "(no description)") 2>/dev/null
 .endif
 
-DESCR=			${WRKDIR}/.DESCR
+DESCR=			${PKG_DB_TMPDIR}/+DESC
 .if !defined(DESCR_SRC)
 DESCR_SRC?=		${PKGDIR}/DESCR
 .endif
@@ -791,7 +793,7 @@ MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .endif
 
 .if defined(MESSAGE_SRC)
-MESSAGE=		${WRKDIR}/.MESSAGE
+MESSAGE=		${PKG_DB_TMPDIR}/+DISPLAY
 
 # Set MESSAGE_SUBST to substitute "${variable}" to "value" in MESSAGE
 MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
@@ -866,15 +868,15 @@ PKG_FAIL_REASON+='	cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MA
 .	endif
 
 # Files to create for versioning and build information
-BUILD_VERSION_FILE=	${WRKDIR}/.build_version
-BUILD_INFO_FILE=	${WRKDIR}/.build_info
+BUILD_VERSION_FILE=	${PKG_DB_TMPDIR}/+BUILD_VERSION
+BUILD_INFO_FILE=	${PKG_DB_TMPDIR}/+BUILD_INFO
 
 # Files containing size of pkg w/o and w/ all required pkgs
-SIZE_PKG_FILE=		${WRKDIR}/.SizePkg
-SIZE_ALL_FILE=		${WRKDIR}/.SizeAll
+SIZE_PKG_FILE=		${PKG_DB_TMPDIR}/+SIZE_PKG
+SIZE_ALL_FILE=		${PKG_DB_TMPDIR}/+SIZE_ALL
 
 # File to denote "no deletion of a package"
-PRESERVE_FILE=		${WRKDIR}/.PRESERVE
+PRESERVE_FILE=		${PKG_DB_TMPDIR}/+PRESERVE
 
 .ifndef PKG_ARGS_COMMON
 PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
@@ -2634,6 +2636,9 @@ real-su-install: ${MESSAGE}
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}[ -d ${PREFIX} ] || ${MKDIR} ${PREFIX}
 .endif # !NO_MTREE
+.if !defined(NO_PKG_REGISTER)
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install-fake-pkg
+.endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install-script
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install
@@ -2729,7 +2734,7 @@ real-su-install: ${MESSAGE}
 .  endif
 .endif
 .if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} register-pkg
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
 .if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
@@ -4798,35 +4803,15 @@ MAKE_ENV+=	VIEWBASE=${VIEWBASE}
 
 PKGVIEWS+=	${DEFAULT_VIEW.${PKGBASE}}
 
-# Fake installation of package so that user can pkg_delete it later.
-# Also, make sure that an installed package is recognized correctly in
-# accordance to the @pkgdep directive in the packing lists.
-
-.PHONY: fake-pkg
-.if !target(fake-pkg)
-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -f ${PLIST} -o ! -f ${DESCR} ]; then			\
-		${ECHO} "** Missing package files for ${PKGNAME} - installation not recorded."; \
-		exit 1;							\
-	fi
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -d ${_PKG_DBDIR} ]; then					\
-		${RM} -f ${_PKG_DBDIR};					\
-		${MKDIR} ${_PKG_DBDIR};					\
-	fi
-.  if defined(FORCE_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} delete ${PKGNAME}
-.    if ${PKG_INSTALLATION_TYPE} == "overwrite"
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${_PKG_DBDIR}/${PKGNAME}
-.    endif
-.  endif
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
+.PHONY: pre-install-fake-pkg
+.if !target(pre-install-fake-pkg)
+pre-install-fake-pkg:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PRESERVE_FILE}
 .  if defined(PKG_PRESERVE)
 	${_PKG_SILENT}${_PKG_DEBUG}${DATE} > ${PRESERVE_FILE}
 .  endif
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	files="";							\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
@@ -4851,6 +4836,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		done;							\
 	fi;								\
 	eval ${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^${PKGSRCDIR}/||' > ${BUILD_VERSION_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_INFO_FILE}
 .  for def in ${BUILD_DEFS}
 	@${ECHO} ${def}=${${def}:Q} | ${SED} -e 's|^PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
 .  endfor
@@ -4863,6 +4849,31 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 .  ifdef _USE_GMAKE
 	@${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
 .  endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "_PKGTOOLS_VER=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
+.endif
+
+.PHONY: post-install-fake-pkg
+.if !target(post-install-fake-pkg)
+post-install-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PKG_DB_TMPDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -f ${PLIST} -o ! -f ${DESCR} ]; then			\
+		${ECHO} "** Missing package files for ${PKGNAME} - installation not recorded."; \
+		exit 1;							\
+	fi
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -d ${_PKG_DBDIR} ]; then					\
+		${RM} -f ${_PKG_DBDIR};					\
+		${MKDIR} ${_PKG_DBDIR};					\
+	fi
+.  if defined(FORCE_PKG_REGISTER)
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} delete ${PKGNAME}
+.    if ${PKG_INSTALLATION_TYPE} == "overwrite"
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${_PKG_DBDIR}/${PKGNAME}
+.    endif
+.  endif
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
 .  if ${SHLIB_HANDLING} == "YES" && ${CHECK_SHLIBS} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case "${LDD}" in						\
@@ -4901,12 +4912,19 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	done
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "_PKGTOOLS_VER=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
 	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
 	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
 	${ECHO} $$size_this >${SIZE_PKG_FILE};				\
 	${ECHO} $$size_this $$size_depends + p | ${DC} >${SIZE_ALL_FILE}
+.endif
+
+# Fake installation of package so that user can pkg_delete it later.
+# Also, make sure that an installed package is recognized correctly in
+# accordance to the @pkgdep directive in the packing lists.
+#
+.PHONY: register-pkg
+.if !target(register-pkg)
+register-pkg: post-install-fake-pkg
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	doit=yes;							\
 	case ${PKG_INSTALLATION_TYPE} in				\
@@ -4972,7 +4990,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
       !empty(BUILD_VIEWS:M[yY][eE][sS])
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} build-views
 .  endif	# pkgviews
-.endif		# !fake-pkg
+.endif
 
 .PHONY: build-views
 build-views: do-su-build-views
