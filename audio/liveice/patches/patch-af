@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/11/21 06:01:49 hubertf Exp $
+
+--- liveiceconfigure.tk.orig	Tue Nov 21 04:01:33 2000
++++ liveiceconfigure.tk
+@@ -60,7 +60,7 @@
+     L3ENC { .f11.enc insert 0 "l3enc" }
+     MP3ENC { .f11.enc insert 0 "mp3enc" }
+     SCREAMER { .f11.enc insert 0 "lamer" }
+-    LAME3 { .f11.enc insert 0 "lame3" }
++    LAME3 { .f11.enc insert 0 "lame" }
+     XING { .f11.enc insert 0 "xingmp3enc" }
+     XING_VBR { .f11.enc insert 0 "xingmp3enc" }
+     default { .f11.enc insert 0 "encoder" }

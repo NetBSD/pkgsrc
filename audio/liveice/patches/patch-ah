@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/11/21 06:01:49 hubertf Exp $
+
+--- playlist.c.orig	Tue Nov 21 04:43:42 2000
++++ playlist.c
+@@ -130,6 +130,10 @@
+ 	int i,r_type=MISC_AUDIO;
+ 	
+ 	extn=strrchr(trackname,'.');
++
++	if (extn == NULL)
++		return MISC_AUDIO;
++
+ 	lcext=malloc(strlen(extn)+2);
+ 	i=0;
+ 	while(extn[i]!=0){
