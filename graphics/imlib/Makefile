@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2002/01/27 17:16:44 tron Exp $
+# $NetBSD: Makefile,v 1.63 2002/03/11 08:03:04 skrll Exp $
 #
 
 DISTNAME=		imlib-1.9.11
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/imlib/}
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.nl.rasterman.com/imlib.html
 COMMENT=		image manipulation library for X11
-
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
@@ -29,10 +27,6 @@ CONFIGURE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
 # linker flags for linking the X11 libs.
 #
 X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${BUILDLINK_X11_DIR}/lib
-
-pre-configure:
-	${TOUCH} ${WRKSRC}/ltconfig
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --include-deps --force
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/imlib
