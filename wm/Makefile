@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2002/10/28 22:29:12 agc Exp $
+# $NetBSD: Makefile,v 1.32 2002/11/20 18:17:18 jschauma Exp $
 #
 
 COMMENT=	window managers (for X)
@@ -12,6 +12,7 @@ SUBDIR+=	bbkeys
 SUBDIR+=	bbpager
 SUBDIR+=	bbrun
 SUBDIR+=	blackbox
+SUBDIR+=	bsetroot
 SUBDIR+=	ctwm
 SUBDIR+=	econf
 SUBDIR+=	enlightenment
@@ -30,6 +31,7 @@ SUBDIR+=	lwm
 SUBDIR+=	matchbox
 SUBDIR+=	metacity
 SUBDIR+=	olvwm
+SUBDIR+=	openbox
 SUBDIR+=	piewm
 SUBDIR+=	pwm
 SUBDIR+=	qvwm
