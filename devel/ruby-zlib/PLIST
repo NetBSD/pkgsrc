@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.5 2005/03/06 16:52:39 taca Exp $
+${RUBY_SITEARCHLIBDIR}/zlib.${RUBY_DLEXT}
+${RUBY_DOCDIR}/zlib/zlib.rd
+@dirrm ${RUBY_DOCDIR}/zlib
