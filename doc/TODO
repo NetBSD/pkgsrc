@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1936 2004/07/14 20:13:02 jlam Exp $
+$NetBSD: TODO,v 1.1937 2004/07/14 21:26:18 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -348,7 +348,7 @@ Suggested package updates
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.23
-	o rrdtool-1.0.45
+	o rrdtool-1.0.48 [pkg/26326]
 	o rt-3.0.10 [pkgsrc-wip]
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
