@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1141 2003/12/07 15:17:20 martti Exp $
+$NetBSD: TODO,v 1.1142 2003/12/07 19:04:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -112,6 +112,7 @@ Suggested package updates
 	o amanda-2.4.4p1
 	o anjuta-1.0.2
 	o atari800-1.3.1
+	o atk-1.4.1 [pkg/23684]
 	o autogen-5.5.6
 	o avidemux-2.0.18
 	o avifile-devel-0.7.34-20030319
@@ -131,10 +132,8 @@ Suggested package updates
 	o courier-imap-2.0 [pkg/22374]
 	o courier-imap-2.1
 	o crafty-19.5
-	o crimsonfields-0.3.7
 	o crossfire-1.5.0
 	o csound-4.24.1
-	o curl-7.10.8
 	o cvs-1.12.3
 	o cvsup-16.1.h [pkg/22870]
 	o cxref-1.5e
@@ -158,7 +157,6 @@ Suggested package updates
 	o elk-3.99.6
 	o elm-me-2.4pl109a
 	o enlightenment-0.16.6
-	o epic4-1.2.1
 	o ettercap-0.6.b
 	o evolution-1.4.4
 	o exim-4.24
@@ -336,6 +334,7 @@ Suggested package updates
 	o tcpreplay-1.4.6
 	o tct-1.12
 	o teapop-0.3.8
+	o thunderbird-bin-0.4
 	o tin-1.6.1 [dillo]
 	o tkman-2.2
 	o tla-1.1.0.5 [replacing arch; pkg/23022]
@@ -345,6 +344,7 @@ Suggested package updates
 	o ttf2pt1-3.4.3
 	o txt2html-2.04 [wennmach]
 	o vfu-4.03
+	o vim-kde-6.2.14 [pkg/23681]
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vorbis-tools-1.0.1
 	o vttest-20030301
