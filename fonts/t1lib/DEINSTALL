@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2002/07/19 12:37:41 wiz Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	CONFDIR=${PKG_PREFIX}/share/t1lib
+
+	cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may wish to manually
+remove the ${CONFDIR} directory.
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0
