@@ -1,45 +1,34 @@
-# $NetBSD: Makefile,v 1.10 2001/06/11 06:34:23 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/13 04:49:10 kei Exp $
 #
 
-DISTNAME=		wv-0.6.0
+DISTNAME=		wv-0.6.5
 CATEGORIES=		converters
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.wvWare.com/
-COMMENT=		Microsoft Word 6, 7, and 8 (95/97/2000) doc to HTML/LaTeX converter
-
-DEPENDS+=		libwmf>=0.1.17nb1:../../graphics/libwmf
-DEPENDS+=		ImageMagick>=5.2.2:../../graphics/ImageMagick
+COMMENT=		Microsoft Word 6, 7, 8, and 9 (95/97/2000) doc to HTML/LaTeX converter
 
 # not detected by configure, causes conflicts with the one coming with wv
 #CONFLICTS+=		libgetopt-*
 
+USE_BUILDLINK_ONLY=	YES
 USE_X11=		YES
-USE_XPM=		YES
-
-WRKSRC=			${WRKDIR}/wv
+USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 
 EVAL_PREFIX=		XPMDIR=xpm
-CONFIGURE_ARGS+=	--with-Magick=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-png=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-ttf=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-wmf=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-xpm=${XPMDIR}
 MAKE_ENV+=		RM="${RM} -f"
-
-CPPFLAGS+=		-I${LOCALBASE}/include
-CPPFLAGS+=		-I${LOCALBASE}/include/magick
-CPPFLAGS+=		-I${LOCALBASE}/include/libwmf
-
-pre-patch:
-	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} {} \;
 
 post-install:
 	${TOUCH} ${PREFIX}/share/wv/ttf/.directory
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wv
 	cd ${WRKSRC} && ${INSTALL_DATA} COPYING CREDITS INSTALL KNOWN-BUGS \
-		README Documentation/XML_Tags ${PREFIX}/share/doc/wv
+		README help/Docs/XML_Tags ${PREFIX}/share/doc/wv
 
+.include "../../converters/libiconv/buildlink.mk"
+.include "../../devel/glib/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../graphics/libwmf/buildlink.mk"
+.include "../../graphics/ImageMagick/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
