@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/29 01:02:59 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/01/31 11:15:57 dirk Exp
 #
 
-DISTNAME=	jade-1.2.1
+DISTNAME=	jade-1.2.1nb1
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.jclark.com/pub/jade/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.jclark.com/pub/jade/ \
