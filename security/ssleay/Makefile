@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/09/21 18:30:32 garbled Exp $
+# $NetBSD: Makefile,v 1.7 1998/09/24 16:53:20 garbled Exp $
 # FreeBSD: Makefile,v 1.20 1998/08/27 16:38:02 markm Exp
 #
 
@@ -27,9 +27,9 @@ post-extract:
 	chmod 755 ${WRKSRC}/util/NetBSD.sh
 
 post-patch:
-	@${CP} ${WRKSRC}/Configure foo
-	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <foo> ${WRKSRC}/Configure
-	@${RM} -f foo
+	@${CP} ${WRKSRC}/Configure ${WRKSRC}/foo
+	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <${WRKSRC}/foo> ${WRKSRC}/Configure
+	@${RM} -f ${WRKSRC}/foo
 
 post-configure:
 	${CP} ${WRKSRC}/rsaref/rsaref.h ${WRKSRC}/include/rsaref.h

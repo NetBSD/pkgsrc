@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/23 15:28:00 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 1998/09/24 16:53:19 garbled Exp $
 
 DISTNAME=		AfterStep-1.4.5.0
 PKGNAME=		afterstep-1.450
@@ -18,11 +18,11 @@ USE_X11=		yes
 INSTALL_TARGET=		install install.man
 
 post-patch:
-	@${MV} ${WRKSRC}/configure.h foo
-	${SED} -e 's@###x11###@${X11BASE}@g' < foo > ${WRKSRC}/configure.h
-	@${MV} ${WRKSRC}/afterdoc/afterstepdoc foo
-	${SED} -e 's@###x11###@${X11BASE}@g' < foo > ${WRKSRC}/afterdoc/afterstepdoc
-	@${RM} -f foo
+	@${MV} ${WRKSRC}/configure.h ${WRKSRC}/foo
+	${SED} -e 's@###x11###@${X11BASE}@g' < ${WRKSRC}/foo > ${WRKSRC}/configure.h
+	@${MV} ${WRKSRC}/afterdoc/afterstepdoc ${WRKSRC}/foo
+	${SED} -e 's@###x11###@${X11BASE}@g' < ${WRKSRC}/foo > ${WRKSRC}/afterdoc/afterstepdoc
+	@${RM} -f ${WRKSRC}/foo
 	${TOUCH} ${WRKSRC}/apps/asload/asload.man
 	${TOUCH} ${WRKSRC}/apps/asprint/asprint.man
 	${TOUCH} ${WRKSRC}/modules/ASSound/ASSound.man
