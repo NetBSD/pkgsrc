@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 1999/10/07 05:59:59 rh Exp $
+# $NetBSD: Makefile,v 1.83 1999/10/11 20:26:26 nathanw Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -72,6 +72,7 @@
     SUBDIR += netcdf
     SUBDIR += newmkdep
     SUBDIR += noweb
+    SUBDIR += nqc
 #    SUBDIR += omniBroker
 #    SUBDIR += omniORB
     SUBDIR += p5-AtExit
