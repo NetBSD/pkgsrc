@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 1998/11/24 15:14:02 tv Exp $
+$NetBSD: patch-aa,v 1.7 1999/06/03 08:17:10 agc Exp $
 
 --- src/Makefile.in.orig	Fri Apr 24 02:17:04 1998
 +++ src/Makefile.in	Tue Nov 24 10:07:20 1998
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.6 1998/11/24 15:14:02 tv Exp $
 -CC              = @CC@
 -CFLAGS 		= @CFLAGS@
 -LDFLAGS		= @LDFLAGS@
-+CC		= $(LIBTOOL) cc
++CC		= $(LIBTOOL) @CC@
 +CFLAGS		= @CFLAGS@
 +LDFLAGS		= $(EXECLIBS)
  #---------------------------------------------------------------------------
