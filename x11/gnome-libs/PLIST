@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/02/18 11:25:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/02/18 11:56:02 jmmv Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -572,11 +572,11 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-libs.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-libs.mo
 share/mime-info/gnome.mime
 share/pixmaps/calculator-font.png
-share/pixmaps/gnome-default-dlg.png
-share/pixmaps/gnome-error.png
-share/pixmaps/gnome-info.png
-share/pixmaps/gnome-question.png
-share/pixmaps/gnome-warning.png
+share/pixmaps/gnome1-default-dlg.png
+share/pixmaps/gnome1-error.png
+share/pixmaps/gnome1-info.png
+share/pixmaps/gnome1-question.png
+share/pixmaps/gnome1-warning.png
 share/pixmaps/no.xpm
 share/pixmaps/yes.xpm
 share/type-convert/gnome-make-postscript-mimes
