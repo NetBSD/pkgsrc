@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:23 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 1998/11/09 18:06:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
 #
 
 DISTNAME=		enscript-1.6.1
-PKGNAME=		enscript-${PAPERSIZE}-1.6.1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU}
 
@@ -12,35 +11,17 @@ HOMEPAGE=		http://www.ngs.fi/mtr/genscript/
 
 CONFLICTS=		enscript-Letter-1.6.0 enscript-A4-1.6.0 \
 			enscript-Letterdj-1.6.0
+CONFLICTS+=		enscript-Letter-1.6.1 enscript-A4-1.6.1 \
+			enscript-Letterdj-1.6.1
 
-MANUAL_PACKAGE_BUILD=	PAPERSIZE has to be set to Letter or A4
+DEPENDS+=		papersize-1.0:../../print/papersize
+
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-nls --with-media=${PAPERSIZE}
+CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ENV=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-MAKE_ENV+=		`${CAT} ${PAPER}`
 
 # If you want to build a static binary, uncomment the following line
 #LDFLAGS+=		-static
-
-PAPERSIZE?=		A4
-PAPER=			${.CURDIR}/${WRKDIR:T}/PaperSize
-
-pre-configure:
-	@case "X${PAPERSIZE}" in					\
-	XA4)								\
-		${ECHO} "WIDTH=8.27 HEIGHT=11.64" > ${PAPER};		\
-		;;							\
-	XLetter)							\
-		${ECHO} "WIDTH=8.5 HEIGHT=11.0" > ${PAPER};		\
-		;;							\
-	XLetterdj)							\
-		;;							\
-	*)								\
-		@${ECHO} "Error: PAPERSIZE invalid: \"${PAPERSIZE}\"";	\
-		@${ECHO} "Possible values are:  A4 (default) or Letter";\
-		${FALSE};						\
-		;;							\
-	esac
 
 post-install:
 .for file in enscript mkafmmap states
