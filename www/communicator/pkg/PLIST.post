@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST.post,v 1.1.1.1 1999/02/22 07:44:48 abs Exp $
+@dirrm lib/netscape/communicator-4.5/spell
+@dirrm lib/netscape/communicator-4.5/plugins
+@dirrm lib/netscape/communicator-4.5/nls
+@dirrm lib/netscape/communicator-4.5/nethelp/netscape/trouble
+@dirrm lib/netscape/communicator-4.5/nethelp/netscape/shared
+@dirrm lib/netscape/communicator-4.5/nethelp/netscape/news
+@dirrm lib/netscape/communicator-4.5/nethelp/netscape/navigatr
+@dirrm lib/netscape/communicator-4.5/nethelp/netscape/messengr
+@dirrm lib/netscape/communicator-4.5/nethelp/netscape/home
+@dirrm lib/netscape/communicator-4.5/nethelp/netscape/composer
+@dirrm lib/netscape/communicator-4.5/nethelp/netscape/collabra
+@dirrm lib/netscape/communicator-4.5/nethelp/netscape
+@dirrm lib/netscape/communicator-4.5/nethelp
+@dirrm lib/netscape/communicator-4.5/movemail-src
+@dirrm lib/netscape/communicator-4.5/java/classes/irix
+@dirrm lib/netscape/communicator-4.5/java/classes/hpux
+@dirrm lib/netscape/communicator-4.5/java/classes/aix
+@dirrm lib/netscape/communicator-4.5/java/classes
+@dirrm lib/netscape/communicator-4.5/java
+@dirrm lib/netscape/communicator-4.5
+@unexec rmdir %D/lib/netscape 2>/dev/null || true
