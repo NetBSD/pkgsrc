@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3369 2003/09/14 15:18:12 cjep Exp $
+$NetBSD: CHANGES,v 1.3370 2003/09/14 17:35:45 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3683,3 +3683,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated python23 to 2.3nb2 [recht 2003-09-14]
 	Updated python23-pth to 2.3nb2 [recht 2003-09-14]
 	Updated bsdgrep-devel to 20030914 [cjep 2003-09-14]
+	Updated roundup to 0.6.1 [recht 2003-09-14]
