@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 1998/12/28 01:48:16 tv Exp $
+$NetBSD: patch-aa,v 1.2 1998/12/28 09:22:25 tron Exp $
 
 --- iso9660.h.orig      Fri Aug  7 13:22:22 1998
 +++ iso9660.h   Fri Aug  7 13:20:49 1998
@@ -11,8 +11,7 @@ $NetBSD: patch-aa,v 1.1 1998/12/28 01:48:16 tv Exp $
  #define J_NAME_EXTRA   100     /* need space for longer Joliet filename */
 @@ -199,5 +199,5 @@
         unsigned char name_len          [ISODCL (33, 33)]; /* 711 */
-        char name                       [34 + J_NAME_EXTRA]; /* Not really, but 
-we need something here */
+        char name                       [34 + J_NAME_EXTRA]; /* Not really, but we need something here */
 -};
 +} __attribute((packed));
  #endif
