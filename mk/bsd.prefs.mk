@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.9 1999/06/23 17:06:21 christos Exp $
+# $NetBSD: bsd.prefs.mk,v 1.10 1999/07/08 07:58:42 agc Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -26,7 +26,6 @@ OPSYS!=			${UNAME} -s
 .endif
 .ifndef OS_VERSION
 OS_VERSION!=		${UNAME} -r
-OS_MAJOR_VERSION!=	echo ${OS_VERSION} | sed -e 's/\..*//g'
 .endif
 
 # Preload these for architectures not in all variations of bsd.own.mk.
@@ -40,14 +39,15 @@ GNU_ARCH.sparc?=	sparc
 GNU_ARCH.vax?=		vax
 MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
 
-.if (${OPSYS} == "SunOS")
+.if ${OPSYS} == "NetBSD"
+LOWER_OPSYS?=		netbsd
+.elif ${OPSYS} == "SunOS"
 LOWER_VENDOR?=		sun
-.endif
-.if !defined(LOWER_OPSYS)
+LOWER_OPSYS?=		sunos
+.elif ${OPSYS} == "Linux"
+LOWER_OPSYS?=		linux
+.elif !defined(LOWER_OPSYS)
 LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
-.endif
-.if !defined(CAPITAL_OPSYS)
-CAPITAL_OPSYS!=		echo ${OPSYS} | tr a-z A-Z
 .endif
 
 LOWER_VENDOR?=
