@@ -1,4 +1,4 @@
-/*	$NetBSD: progressbar.h,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	$NetBSD: progressbar.h,v 1.1.1.2 2005/01/03 10:08:40 lukem Exp $	*/
 
 /*-
  * Copyright (c) 1996-2003 The NetBSD Foundation, Inc.
@@ -58,6 +58,7 @@ GLOBAL	int	ttywidth;	/* width of tty */
 GLOBAL	off_t	bytes;		/* current # of bytes read */
 GLOBAL	off_t	filesize;	/* size of file being transferred */
 GLOBAL	off_t	restart_point;	/* offset to restart transfer */
+GLOBAL	char   *prefix;		/* Text written left of progress bar */
 
 
 #ifndef	STANDALONE_PROGRESS
