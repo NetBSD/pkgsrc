@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.56 2004/11/03 18:16:27 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.57 2004/11/14 21:51:05 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 if [ "$1" = -v ] ; then
@@ -138,6 +138,7 @@ case $hw_machine_arch in
 	604ev\ *)		FLAGS='-mcpu=604e'	;; # upgr B&W G3
 	620\ *)			FLAGS='-mcpu=620'	;; # Untested
 	7400\ *)		FLAGS='-mcpu=7400'	;; # AGP G4/400 Mac
+	7410\ *)		FLAGS='-mcpu=7400'	;; # powerbook g4
 	740\ *)			FLAGS='-mcpu=740'	;; # Untested
 	7450\ *)		FLAGS='-mcpu=7450'	;; # tibook 550
 	750\ *)			FLAGS='-mcpu=750'	;; # Untested
