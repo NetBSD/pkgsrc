@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2004/11/14 04:05:16 jlam Exp $
+# $NetBSD: builtin.mk,v 1.13 2004/11/21 02:40:15 jlam Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -178,16 +178,22 @@ BUILDLINK_LDADD.gettext?=	${_BLNK_LIBINTL}
 BROKEN_GETTEXT_DETECTION?=	yes
 .if !empty(BROKEN_GETTEXT_DETECTION:M[yY][eE][sS])
 BUILDLINK_LIBS.gettext+=	${BUILDLINK_LDADD.gettext}
-CONFIGURE_ENV+=		INTLLIBS="${BUILDLINK_LDADD.gettext}"
-.  if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
-.    if !empty(_BLNK_LIBINTL_FOUND:M[yY][eE][sS])
+CONFIGURE_ENV+=			INTLLIBS="${BUILDLINK_LDADD.gettext}"
+.endif	# BROKEN_GETTEXT_DETECTION
+
+# If using a built-in libintl that isn't from GNU gettext, then set up
+# some GNU configure variables that are checked by modern gettext.m4
+# so that it will detect "GNU gettext" in the existing libintl.
+#
+.if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
+.  if !empty(_BLNK_LIBINTL_FOUND:M[yY][eE][sS])
+CONFIGURE_ENV+=		gt_cv_func_gnugettext_libintl="yes"
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
-.      if defined(_GETTEXT_NGETTEXT) && !empty(_GETTEXT_NGETTEXT:M[yY][eE][sS])
+.    if defined(_GETTEXT_NGETTEXT) && !empty(_GETTEXT_NGETTEXT:M[yY][eE][sS])
 CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl="yes"
-.      endif
 .    endif
 .  endif
-.endif	# BROKEN_GETTEXT_DETECTION
+.endif
 
 .if defined(GNU_CONFIGURE)
 .  if !empty(USE_BUILTIN.gettext:M[nN][oO])
