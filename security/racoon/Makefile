@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/04/04 03:01:11 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/04/04 03:05:06 itojun Exp $
 #
 
 DISTNAME=	racoon-0.0
@@ -9,6 +9,7 @@ HOMEPAGE=	http:/www.kame.net/
 
 # openssl is necessary for RSA libraries
 DEPENDS+=	openssl-0.9.4:../../security/openssl
+BUILD_DEPENDS+=	cvs-*:../../devel/cvs
 
 CONFLICTS+=	racoon-*
 
