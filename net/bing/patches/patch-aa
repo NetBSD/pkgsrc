@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 1998/08/09 20:52:42 kim Exp $
+$NetBSD: patch-aa,v 1.5 2003/01/19 07:29:41 salo Exp $
 
 --- Makefile.orig	Thu Jul 20 20:03:30 1995
 +++ Makefile	Sun Aug  9 16:44:41 1998
@@ -20,5 +20,5 @@ $NetBSD: patch-aa,v 1.4 1998/08/09 20:52:42 kim Exp $
  install: bing bing.8
 -	$(INSTALL) -m 644 -o man -g man bing.8 $(MANDIR)/man8
 -	$(INSTALL) -m 4555 -o root -g staff bing $(BINDIR)
-+	$(INSTALL_MAN) bing.8 $(MANDIR)/man8
-+	$(INSTALL_PROGRAM) bing $(BINDIR)
++	$(BSD_INSTALL_MAN) bing.8 $(MANDIR)/man8
++	$(BSD_INSTALL_PROGRAM) bing $(BINDIR)
