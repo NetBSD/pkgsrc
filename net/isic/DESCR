@@ -16,5 +16,5 @@ can't legally have a beer so do you think I care about laws?)
 
 By far the most common use for these tools is testing IDS systems.
 A day after I took the source offline and moved it to a cvs server,
-a half dozen people working on seperate home-grown IDS systems
+a half dozen people working on separate home-grown IDS systems
 emailed requesting the source be put back up.
