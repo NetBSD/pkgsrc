@@ -1,20 +1,8 @@
-$NetBSD: patch-ab,v 1.4 1999/07/13 01:34:42 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2001/05/16 20:27:23 jlam Exp $
 
 --- Complete.c.orig	Fri Oct 18 01:10:31 1996
 +++ Complete.c	Thu Jul  8 15:33:42 1999
-@@ -52,7 +52,11 @@
- typedef char * (*CompleteFunc)(char *, int);
- 
- #ifdef HAVE_LIBREADLINE
-+#if HAVE_READLINE_H
-+#include <readline.h>
-+#else
- #include <readline/readline.h>
-+#endif
- 
- #ifdef HAVE_FILENAME_COMPLETION_FUNCTION
- /* This should have been in your readline.h already, but some older
-@@ -241,7 +245,11 @@
+@@ -241,7 +241,11 @@
  static int
  CompareStrings(char **a, char **b)
  {
