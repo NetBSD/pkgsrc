@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/03 11:53:33 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/06 09:36:28 jmmv Exp $
 bin/gst-launch-ext-0.8
 bin/gst-visualise-0.8
 include/gstreamer-0.8/gst/audio/audio.h
@@ -29,14 +29,6 @@ include/gstreamer-0.8/gst/tuner/tunerchannel.h
 include/gstreamer-0.8/gst/tuner/tunernorm.h
 include/gstreamer-0.8/gst/video/video.h
 include/gstreamer-0.8/gst/video/videosink.h
-include/gstreamer-0.8/gst/xoverlay/xoverlay.h
-include/gstreamer-0.8/gst/xwindowlistener/xwindowlistener.h
-lib/gstreamer-0.8/libgsta52dec.a
-lib/gstreamer-0.8/libgsta52dec.la
-lib/gstreamer-0.8/libgsta52dec.so
-lib/gstreamer-0.8/libgstaasink.a
-lib/gstreamer-0.8/libgstaasink.la
-lib/gstreamer-0.8/libgstaasink.so
 lib/gstreamer-0.8/libgstac3parse.a
 lib/gstreamer-0.8/libgstac3parse.la
 lib/gstreamer-0.8/libgstac3parse.so
@@ -55,9 +47,6 @@ lib/gstreamer-0.8/libgstaudio.so
 lib/gstreamer-0.8/libgstaudioconvert.a
 lib/gstreamer-0.8/libgstaudioconvert.la
 lib/gstreamer-0.8/libgstaudioconvert.so
-lib/gstreamer-0.8/libgstaudiofile.a
-lib/gstreamer-0.8/libgstaudiofile.la
-lib/gstreamer-0.8/libgstaudiofile.so
 lib/gstreamer-0.8/libgstaudiofilter.a
 lib/gstreamer-0.8/libgstaudiofilter.la
 lib/gstreamer-0.8/libgstaudiofilter.so
@@ -70,12 +59,6 @@ lib/gstreamer-0.8/libgstauparse.so
 lib/gstreamer-0.8/libgstavi.a
 lib/gstreamer-0.8/libgstavi.la
 lib/gstreamer-0.8/libgstavi.so
-lib/gstreamer-0.8/libgstcdparanoia.a
-lib/gstreamer-0.8/libgstcdparanoia.la
-lib/gstreamer-0.8/libgstcdparanoia.so
-lib/gstreamer-0.8/libgstcdplayer.a
-lib/gstreamer-0.8/libgstcdplayer.la
-lib/gstreamer-0.8/libgstcdplayer.so
 lib/gstreamer-0.8/libgstcdxaparse.a
 lib/gstreamer-0.8/libgstcdxaparse.la
 lib/gstreamer-0.8/libgstcdxaparse.so
@@ -91,18 +74,12 @@ lib/gstreamer-0.8/libgstcutter.so
 lib/gstreamer-0.8/libgstdeinterlace.a
 lib/gstreamer-0.8/libgstdeinterlace.la
 lib/gstreamer-0.8/libgstdeinterlace.so
-lib/gstreamer-0.8/libgstdvdreadsrc.a
-lib/gstreamer-0.8/libgstdvdreadsrc.la
-lib/gstreamer-0.8/libgstdvdreadsrc.so
 lib/gstreamer-0.8/libgstefence.a
 lib/gstreamer-0.8/libgstefence.la
 lib/gstreamer-0.8/libgstefence.so
 lib/gstreamer-0.8/libgsteffectv.a
 lib/gstreamer-0.8/libgsteffectv.la
 lib/gstreamer-0.8/libgsteffectv.so
-lib/gstreamer-0.8/libgstesd.a
-lib/gstreamer-0.8/libgstesd.la
-lib/gstreamer-0.8/libgstesd.so
 lib/gstreamer-0.8/libgstfestival.a
 lib/gstreamer-0.8/libgstfestival.la
 lib/gstreamer-0.8/libgstfestival.so
@@ -112,57 +89,30 @@ lib/gstreamer-0.8/libgstffmpegcolorspace.so
 lib/gstreamer-0.8/libgstfilter.a
 lib/gstreamer-0.8/libgstfilter.la
 lib/gstreamer-0.8/libgstfilter.so
-lib/gstreamer-0.8/libgstflac.a
-lib/gstreamer-0.8/libgstflac.la
-lib/gstreamer-0.8/libgstflac.so
 lib/gstreamer-0.8/libgstflxdec.a
 lib/gstreamer-0.8/libgstflxdec.la
 lib/gstreamer-0.8/libgstflxdec.so
 lib/gstreamer-0.8/libgstgamma.a
 lib/gstreamer-0.8/libgstgamma.la
 lib/gstreamer-0.8/libgstgamma.so
-lib/gstreamer-0.8/libgstgdkpixbuf.a
-lib/gstreamer-0.8/libgstgdkpixbuf.la
-lib/gstreamer-0.8/libgstgdkpixbuf.so
-lib/gstreamer-0.8/libgstgnomevfs.a
-lib/gstreamer-0.8/libgstgnomevfs.la
-lib/gstreamer-0.8/libgstgnomevfs.so
 lib/gstreamer-0.8/libgstgoom.a
 lib/gstreamer-0.8/libgstgoom.la
 lib/gstreamer-0.8/libgstgoom.so
-lib/gstreamer-0.8/libgstgsm.a
-lib/gstreamer-0.8/libgstgsm.la
-lib/gstreamer-0.8/libgstgsm.so
-lib/gstreamer-0.8/libgsthermescolorspace.a
-lib/gstreamer-0.8/libgsthermescolorspace.la
-lib/gstreamer-0.8/libgsthermescolorspace.so
 lib/gstreamer-0.8/libgstidct.a
 lib/gstreamer-0.8/libgstidct.la
 lib/gstreamer-0.8/libgstidct.so
 lib/gstreamer-0.8/libgstinterleave.a
 lib/gstreamer-0.8/libgstinterleave.la
 lib/gstreamer-0.8/libgstinterleave.so
-lib/gstreamer-0.8/libgstjpeg.a
-lib/gstreamer-0.8/libgstjpeg.la
-lib/gstreamer-0.8/libgstjpeg.so
-lib/gstreamer-0.8/libgstlame.a
-lib/gstreamer-0.8/libgstlame.la
-lib/gstreamer-0.8/libgstlame.so
 lib/gstreamer-0.8/libgstlevel.a
 lib/gstreamer-0.8/libgstlevel.la
 lib/gstreamer-0.8/libgstlevel.so
-lib/gstreamer-0.8/libgstmad.a
-lib/gstreamer-0.8/libgstmad.la
-lib/gstreamer-0.8/libgstmad.so
 lib/gstreamer-0.8/libgstmatroska.a
 lib/gstreamer-0.8/libgstmatroska.la
 lib/gstreamer-0.8/libgstmatroska.so
 lib/gstreamer-0.8/libgstmedian.a
 lib/gstreamer-0.8/libgstmedian.la
 lib/gstreamer-0.8/libgstmedian.so
-lib/gstreamer-0.8/libgstmikmod.a
-lib/gstreamer-0.8/libgstmikmod.la
-lib/gstreamer-0.8/libgstmikmod.so
 lib/gstreamer-0.8/libgstmixmatrix.a
 lib/gstreamer-0.8/libgstmixmatrix.la
 lib/gstreamer-0.8/libgstmixmatrix.so
@@ -196,12 +146,6 @@ lib/gstreamer-0.8/libgstmulaw.so
 lib/gstreamer-0.8/libgstnavigationtest.a
 lib/gstreamer-0.8/libgstnavigationtest.la
 lib/gstreamer-0.8/libgstnavigationtest.so
-lib/gstreamer-0.8/libgstogg.a
-lib/gstreamer-0.8/libgstogg.la
-lib/gstreamer-0.8/libgstogg.so
-lib/gstreamer-0.8/libgstossaudio.a
-lib/gstreamer-0.8/libgstossaudio.la
-lib/gstreamer-0.8/libgstossaudio.so
 lib/gstreamer-0.8/libgstoverlay.a
 lib/gstreamer-0.8/libgstoverlay.la
 lib/gstreamer-0.8/libgstoverlay.so
@@ -211,9 +155,6 @@ lib/gstreamer-0.8/libgstpassthrough.so
 lib/gstreamer-0.8/libgstplayondemand.a
 lib/gstreamer-0.8/libgstplayondemand.la
 lib/gstreamer-0.8/libgstplayondemand.so
-lib/gstreamer-0.8/libgstpng.a
-lib/gstreamer-0.8/libgstpng.la
-lib/gstreamer-0.8/libgstpng.so
 lib/gstreamer-0.8/libgstqtdemux.a
 lib/gstreamer-0.8/libgstqtdemux.la
 lib/gstreamer-0.8/libgstqtdemux.so
@@ -232,12 +173,6 @@ lib/gstreamer-0.8/libgstrtjpeg.so
 lib/gstreamer-0.8/libgstrtp.a
 lib/gstreamer-0.8/libgstrtp.la
 lib/gstreamer-0.8/libgstrtp.so
-lib/gstreamer-0.8/libgstsdlvideosink.a
-lib/gstreamer-0.8/libgstsdlvideosink.la
-lib/gstreamer-0.8/libgstsdlvideosink.so
-lib/gstreamer-0.8/libgstsid.a
-lib/gstreamer-0.8/libgstsid.la
-lib/gstreamer-0.8/libgstsid.so
 lib/gstreamer-0.8/libgstsilence.a
 lib/gstreamer-0.8/libgstsilence.la
 lib/gstreamer-0.8/libgstsilence.so
@@ -247,18 +182,9 @@ lib/gstreamer-0.8/libgstsinesrc.so
 lib/gstreamer-0.8/libgstsmooth.a
 lib/gstreamer-0.8/libgstsmooth.la
 lib/gstreamer-0.8/libgstsmooth.so
-lib/gstreamer-0.8/libgstsmoothwave.a
-lib/gstreamer-0.8/libgstsmoothwave.la
-lib/gstreamer-0.8/libgstsmoothwave.so
 lib/gstreamer-0.8/libgstsmpte.a
 lib/gstreamer-0.8/libgstsmpte.la
 lib/gstreamer-0.8/libgstsmpte.so
-lib/gstreamer-0.8/libgstsnapshot.a
-lib/gstreamer-0.8/libgstsnapshot.la
-lib/gstreamer-0.8/libgstsnapshot.so
-lib/gstreamer-0.8/libgstsndfile.a
-lib/gstreamer-0.8/libgstsndfile.la
-lib/gstreamer-0.8/libgstsndfile.so
 lib/gstreamer-0.8/libgstspectrum.a
 lib/gstreamer-0.8/libgstspectrum.la
 lib/gstreamer-0.8/libgstspectrum.so
@@ -268,9 +194,6 @@ lib/gstreamer-0.8/libgstspeed.so
 lib/gstreamer-0.8/libgststereo.a
 lib/gstreamer-0.8/libgststereo.la
 lib/gstreamer-0.8/libgststereo.so
-lib/gstreamer-0.8/libgstswfdec.a
-lib/gstreamer-0.8/libgstswfdec.la
-lib/gstreamer-0.8/libgstswfdec.so
 lib/gstreamer-0.8/libgstswitch.a
 lib/gstreamer-0.8/libgstswitch.la
 lib/gstreamer-0.8/libgstswitch.so
@@ -283,12 +206,6 @@ lib/gstreamer-0.8/libgsttagedit.so
 lib/gstreamer-0.8/libgsttcp.a
 lib/gstreamer-0.8/libgsttcp.la
 lib/gstreamer-0.8/libgsttcp.so
-lib/gstreamer-0.8/libgsttextoverlay.a
-lib/gstreamer-0.8/libgsttextoverlay.la
-lib/gstreamer-0.8/libgsttextoverlay.so
-lib/gstreamer-0.8/libgsttimeoverlay.a
-lib/gstreamer-0.8/libgsttimeoverlay.la
-lib/gstreamer-0.8/libgsttimeoverlay.so
 lib/gstreamer-0.8/libgsttypefindfunctions.a
 lib/gstreamer-0.8/libgsttypefindfunctions.la
 lib/gstreamer-0.8/libgsttypefindfunctions.so
@@ -328,24 +245,12 @@ lib/gstreamer-0.8/libgstvolenv.so
 lib/gstreamer-0.8/libgstvolume.a
 lib/gstreamer-0.8/libgstvolume.la
 lib/gstreamer-0.8/libgstvolume.so
-lib/gstreamer-0.8/libgstvorbis.a
-lib/gstreamer-0.8/libgstvorbis.la
-lib/gstreamer-0.8/libgstvorbis.so
 lib/gstreamer-0.8/libgstwavenc.a
 lib/gstreamer-0.8/libgstwavenc.la
 lib/gstreamer-0.8/libgstwavenc.so
 lib/gstreamer-0.8/libgstwavparse.a
 lib/gstreamer-0.8/libgstwavparse.la
 lib/gstreamer-0.8/libgstwavparse.so
-lib/gstreamer-0.8/libgstximagesink.a
-lib/gstreamer-0.8/libgstximagesink.la
-lib/gstreamer-0.8/libgstximagesink.so
-lib/gstreamer-0.8/libgstxvimagesink.a
-lib/gstreamer-0.8/libgstxvimagesink.la
-lib/gstreamer-0.8/libgstxvimagesink.so
-lib/gstreamer-0.8/libgstxwindowlistener.a
-lib/gstreamer-0.8/libgstxwindowlistener.la
-lib/gstreamer-0.8/libgstxwindowlistener.so
 lib/gstreamer-0.8/libgsty4menc.a
 lib/gstreamer-0.8/libgsty4menc.la
 lib/gstreamer-0.8/libgsty4menc.so
@@ -382,8 +287,6 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gst-plugins-0.8.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gst-plugins-0.8.mo
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in gstreamer: @dirrm lib/gstreamer-0.8
-@dirrm include/gstreamer-0.8/gst/xwindowlistener
-@dirrm include/gstreamer-0.8/gst/xoverlay
 @dirrm include/gstreamer-0.8/gst/video
 @dirrm include/gstreamer-0.8/gst/tuner
 @dirrm include/gstreamer-0.8/gst/tag
@@ -399,4 +302,4 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gst-plugins-0.8.mo
 @dirrm include/gstreamer-0.8/gst/floatcast
 @dirrm include/gstreamer-0.8/gst/colorbalance
 @dirrm include/gstreamer-0.8/gst/audio
-@dirrm include/gstreamer-0.8/gst
+@comment in gstreamer: @dirrm include/gstreamer-0.8/gst
