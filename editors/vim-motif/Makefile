@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2005/01/06 20:41:11 adrianp Exp $
-
-.include		"../vim-share/Makefile.common"
+# $NetBSD: Makefile,v 1.11 2005/01/25 13:48:54 jmmv Exp $
 
 PKGNAME=		vim-motif-${VIM_VERSION}.${VIM_PATCHLEVEL}
+PKGREVISION=		1
 
 COMMENT=		Vim editor (vi clone) with X11 Motif GUI
+
+.include		"../vim-share/Makefile.common"
 
 DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}:../vim-share
 CONFLICTS+=		vim-[0-9]* vim-gtk-[0-9]* vim-gtk2-[0-9]*
