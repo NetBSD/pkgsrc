@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2004/04/21 21:09:31 cube Exp $
+# $NetBSD: Makefile,v 1.70 2004/05/09 21:14:43 snj Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -16,28 +16,28 @@ USE_DB2?=	YES
 USE_DB2?=	NO
 .endif
 .if defined(USE_DB4) && ${USE_DB4} == YES
-.include "../../databases/db4/buildlink2.mk"
+.include "../../databases/db4/buildlink3.mk"
 .elif ${USE_DB2} == YES
-.include "../../databases/db/buildlink2.mk"
+.include "../../databases/db/buildlink3.mk"
 .endif
 
 .if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == YES
-.include "../../databases/openldap/buildlink2.mk"
+.include "../../databases/openldap/buildlink3.mk"
 .endif
 
 .if defined(USE_SASL2) && ${USE_SASL2} == YES
-.include "../../security/cyrus-sasl2/buildlink2.mk"
+.include "../../security/cyrus-sasl2/buildlink3.mk"
 .elif defined(USE_SASL) && ${USE_SASL} == YES
-.include "../../security/cyrus-sasl/buildlink2.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
 .if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .endif
 
 USE_TCPWRAPPERS?=	YES
 .if ${USE_TCPWRAPPERS} == YES
-.include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .endif
 
 post-patch: make-sendmail-siteconfig
