@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/09/01 09:00:26 itojun Exp $
+# $NetBSD: Makefile,v 1.7 1999/09/03 22:00:53 tron Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -49,7 +49,7 @@ CONFIGURE_ENV+=		OPTIM="${OPTIM}"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !defined(USE_INET6)
+.if !defined(USE_INET6) || ${USE_INET6} != YES
 BROKEN=			"IPv6 only build"
 .endif
 
