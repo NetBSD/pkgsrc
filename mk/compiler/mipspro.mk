@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.29 2004/11/30 14:50:37 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.30 2005/01/12 15:32:01 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	defined
@@ -93,6 +93,16 @@ ${_MIPSPRO_${_var_}}:
 MABIFLAG=       -${ABI:C/^32$/n&/}
 CFLAGS+=        ${MABIFLAG}
 LDFLAGS+=       ${MABIFLAG}
+.endif
+
+# Force the use of f2c-f77 for compiling Fortran.
+_MIPSPRO_USE_F2C=	no
+FCPATH=			/nonexistent
+.if !exists(${FCPATH})
+_MIPSPRO_USE_F2C=	yes
+.endif
+.if !empty(_MIPSPRO_USE_F2C:M[yY][eE][sS])
+.  include "../../mk/compiler/f2c.mk"
 .endif
 
 .endif	# COMPILER_MIPSPRO_MK

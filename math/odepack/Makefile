@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/10/03 00:12:57 tv Exp $
+# $NetBSD: Makefile,v 1.15 2005/01/12 15:32:01 jlam Exp $
 
 DISTNAME=		odepack-20001130
-PKGREVISION=	1
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -11,7 +11,7 @@ COMMENT=		Systematized Collection of ODE Solvers
 DEPENDS+=		linpack>=20010427:../../math/linpack
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
-USE_FORTRAN=		yes
+USE_LANGUAGES=		fortran
 WRKSRC=			${WRKDIR}/odepack
 
 pre-build:
