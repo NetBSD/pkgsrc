@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/02/23 17:03:42 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 1999/02/25 15:54:00 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -20,12 +20,16 @@ GNU_CONFIGURE=		yes
 .include "../../mk/bsd.prefs.mk"
 AMANDA_USER?=		backup
 AMANDA_GROUP=		operator
+AMANDA_VAR?=		/var/amanda
 
 CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
 			--with-group=${AMANDA_GROUP} \
+			--with-owner=root \
 			--with-mmap --with-amandahosts \
 			--with-includes=${PREFIX}/include \
 			--with-libraries=${PREFIX}/lib \
+			--localstatedir=${AMANDA_VAR} \
+			--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists \
 			--with-dump-honor-nodump \
 			--without-server --without-restore
 
