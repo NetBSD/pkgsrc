@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2000/02/18 20:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2000/02/20 04:33:12 wiz Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -14,6 +14,7 @@
     SUBDIR += bind8
     SUBDIR += bing
 #    SUBDIR += cap
+    SUBDIR += cftp
     SUBDIR += choparp
     SUBDIR += coda5_client
     SUBDIR += coda5_server
