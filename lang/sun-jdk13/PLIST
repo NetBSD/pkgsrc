@@ -1,60 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:25:06 zuntum Exp $
-COPYRIGHT
-LICENSE
-README
+@comment $NetBSD: PLIST,v 1.2 2002/07/27 22:01:33 jschauma Exp $
 README.html
-bin/.java_wrapper
-bin/ControlPanel
 bin/HtmlConverter
 bin/appletviewer
-bin/awt_robot
 bin/extcheck
-bin/i386/green_threads/appletviewer
-bin/i386/green_threads/extcheck
-bin/i386/green_threads/idlj
-bin/i386/green_threads/jar
-bin/i386/green_threads/jarsigner
-bin/i386/green_threads/java
-bin/i386/green_threads/javac
-bin/i386/green_threads/javadoc
-bin/i386/green_threads/javah
-bin/i386/green_threads/javap
-bin/i386/green_threads/jdb
-bin/i386/green_threads/keytool
-bin/i386/green_threads/native2ascii
-bin/i386/green_threads/oldjava
-bin/i386/green_threads/oldjavac
-bin/i386/green_threads/oldjdb
-bin/i386/green_threads/policytool
-bin/i386/green_threads/rmic
-bin/i386/green_threads/rmid
-bin/i386/green_threads/rmiregistry
-bin/i386/green_threads/serialver
-bin/i386/green_threads/tnameserv
 bin/i386/native_threads/appletviewer
 bin/i386/native_threads/extcheck
 bin/i386/native_threads/idlj
 bin/i386/native_threads/jar
 bin/i386/native_threads/jarsigner
-bin/i386/native_threads/java
-bin/i386/native_threads/java_vm
 bin/i386/native_threads/javac
 bin/i386/native_threads/javadoc
 bin/i386/native_threads/javah
 bin/i386/native_threads/javap
 bin/i386/native_threads/jdb
-bin/i386/native_threads/keytool
 bin/i386/native_threads/native2ascii
 bin/i386/native_threads/oldjava
 bin/i386/native_threads/oldjavac
 bin/i386/native_threads/oldjdb
-bin/i386/native_threads/policytool
 bin/i386/native_threads/rmic
-bin/i386/native_threads/rmid
-bin/i386/native_threads/rmiregistry
 bin/i386/native_threads/serialver
-bin/i386/native_threads/tnameserv
-bin/i386/realpath
 bin/idlj
 bin/jar
 bin/jarsigner
@@ -64,18 +28,12 @@ bin/javadoc
 bin/javah
 bin/javap
 bin/jdb
-bin/keytool
 bin/native2ascii
 bin/oldjava
 bin/oldjavac
 bin/oldjdb
-bin/policytool
-bin/realpath
 bin/rmic
-bin/rmid
-bin/rmiregistry
 bin/serialver
-bin/tnameserv
 demo/applets/Animator/Animation.class
 demo/applets/Animator/AnimationFrame.class
 demo/applets/Animator/Animator.class
@@ -627,48 +585,33 @@ lib/i386/libjdwp.so
 lib/ir.idl
 lib/orb.idl
 lib/tools.jar
-man/ja
 man/ja_JP.eucJP/man1/appletviewer.1
 man/ja_JP.eucJP/man1/extcheck.1
 man/ja_JP.eucJP/man1/jar.1
 man/ja_JP.eucJP/man1/jarsigner.1
-man/ja_JP.eucJP/man1/java.1
 man/ja_JP.eucJP/man1/javac.1
 man/ja_JP.eucJP/man1/javadoc.1
 man/ja_JP.eucJP/man1/javah.1
 man/ja_JP.eucJP/man1/javap.1
 man/ja_JP.eucJP/man1/jdb.1
-man/ja_JP.eucJP/man1/keytool.1
 man/ja_JP.eucJP/man1/native2ascii.1
 man/ja_JP.eucJP/man1/rmic.1
-man/ja_JP.eucJP/man1/rmid.1
-man/ja_JP.eucJP/man1/rmiregistry.1
 man/ja_JP.eucJP/man1/serialver.1
-man/ja_JP.eucJP/man1/tnameserv.1
 man/man1/appletviewer.1
 man/man1/extcheck.1
 man/man1/jar.1
 man/man1/jarsigner.1
-man/man1/java.1
 man/man1/javac.1
 man/man1/javadoc.1
 man/man1/javah.1
 man/man1/javap.1
 man/man1/jdb.1
-man/man1/keytool.1
 man/man1/native2ascii.1
 man/man1/rmic.1
-man/man1/rmid.1
-man/man1/rmiregistry.1
 man/man1/serialver.1
-man/man1/tnameserv.1
 src.jar
-@dirrm man/man1
-@dirrm man/ja_JP.eucJP/man1
-@dirrm man/ja_JP.eucJP
-@dirrm man
-@dirrm lib/i386
-@dirrm lib
+@unexec ${RMDIR} %D/lib/i386 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib 2>/dev/null || ${TRUE}
 @dirrm include/linux
 @dirrm include-old/linux
 @dirrm include-old
@@ -768,6 +711,7 @@ src.jar
 @dirrm demo/applets/Animator
 @dirrm demo/applets
 @dirrm demo
-@dirrm bin/i386/native_threads
-@dirrm bin/i386/green_threads
-@dirrm bin/i386
+@unexec ${RMDIR} %D/bin/i386/native_threads 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/bin/i386/green_threads 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/bin/i386 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D 2>/dev/null || ${TRUE}
