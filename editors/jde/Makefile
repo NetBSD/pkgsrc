@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/01/12 02:02:49 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/12 02:26:16 wiz Exp $
 #
 
 DISTNAME=       jde-2.3.2
@@ -12,7 +12,7 @@ HOMEPAGE=       http://jdee.sunsite.dk/
 COMMENT=        Full-featured Java editing mode for emacs
 
 DEPENDS+=       speedbar>=0.14rc2:../../editors/speedbar
-DEPENDS+=       eieio>=0.17rc3:../../lang/eieio
+DEPENDS+=       eieio>=0.17:../../lang/eieio
 DEPENDS+=       semantic>=1.4rc13:../../devel/semantic
 DEPENDS+=       elib>=1.0:../../devel/elib
 
