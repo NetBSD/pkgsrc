@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/06/23 16:47:12 taya Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/24 01:53:54 taya Exp $
 
 MOZILLA=	firefox
 MOZILLA_BIN=	firefox-bin
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--enable-extensions=default,-irc
 
 BUILD_MATHML=	# defined
 
-post-install:
+pre-install:
 	${CP} -r ${WRKSRC}/dist/bin/defaults/profile/extensions \
 							${WRKSRC}/dist/bin
 	${MV} ${WRKSRC}/dist/bin/extensions/installed-extensions.txt \
