@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2003/05/21 17:36:03 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2003/05/31 12:11:47 jmmv Exp $
 bin/gaim
 bin/gaim-remote
 lib/gaim/autorecon.a
@@ -77,6 +77,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gaim.mo
@@ -286,6 +287,5 @@ share/sounds/gaim/send.wav
 @dirrm share/pixmaps/gaim/dialogs
 @dirrm share/pixmaps/gaim/buttons
 @dirrm share/pixmaps/gaim
-@comment in gnome-dirs: @dirrm share/gnome/apps/Internet
 @comment in gnome2-dirs: @dirrm share/applications
 @dirrm lib/gaim
