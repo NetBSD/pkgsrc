@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.19 2002/10/02 23:48:07 wiz Exp $
+# $NetBSD: Makefile.module,v 1.20 2002/10/05 10:54:12 wiz Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
@@ -48,7 +48,9 @@ pre-configure:	phpize-module
 phpize-module:
 	@cookie=${WRKDIR}/.phpize_module_done;				\
 	if [ ! -f $${cookie} ]; then					\
-		( cd ${WRKSRC} && ${PHPIZE} );				\
+		( cd ${WRKSRC} && ${SETENV} AUTOCONF=${AUTOCONF}	\
+			AUTOHEADER=${AUTOHEADER} ACLOCAL=${ACLOCAL}	\
+			${PHPIZE} );					\
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 
