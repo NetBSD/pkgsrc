@@ -1,0 +1,45 @@
+$NetBSD: patch-bb,v 1.1 2002/08/05 21:42:34 jschauma Exp $
+
+--- bbappconf.cc.orig	Mon Aug  5 16:52:13 2002
++++ bbappconf.cc	Mon Aug  5 16:56:41 2002
+@@ -35,6 +35,8 @@
+ 
+   config_db = XrmGetFileDatabase("config.bb");
+ 
++  iconic = options->iconic;
++
+   desktop_nr=0;
+   current_desktop_nr=-1;
+   wm_init=False;
+@@ -245,6 +247,18 @@
+         getWMInterface()->sendWindowToDesktop(*win,
+                                 resource->getAppConf(i)->getStartOnDesktop()-1);
+       }
++
++      /* set window size */
++      if (resource->getAppConf(i)->getWidth()>=0 &&
++		      resource->getAppConf(i)->getHeight()>=0) {
++	      getWMInterface()->resizeWindow(*win,resource->getAppConf(i)->getWidth(),resource->getAppConf(i)->getHeight());
++      }
++      /* set window position */
++      if (resource->getAppConf(i)->getPositionX()!=-1111 &&
++		      resource->getAppConf(i)->getPositionY()!=-1111) {
++	      getWMInterface()->moveWindow(*win,resource->getAppConf(i)->getPositionX(),resource->getAppConf(i)->getPositionY());
++      }
++
+       if (resource->getAppConf(i)->getMaxHoriz() ||
+          resource->getAppConf(i)->getMaxVert()) {
+         if (XGetWindowProperty(getXDisplay(), *win, 
+@@ -413,12 +427,6 @@
+     XSetWindowBackgroundPixmap(getXDisplay(), framewin, pixmap.frame);
+   }
+ 
+-  if (!withdrawn && resource->report.auto_raise) {
+-    XRaiseWindow(getXDisplay(),framewin);
+-    lower=False;
+-  }
+-  else lower=True;
+-
+ 	if (!reconfigure) {
+ 
+ //		gcv.font = resource->menu.font->fid;
