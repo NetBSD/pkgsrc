@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2003/09/10 11:54:41 adam Exp $
+# $NetBSD: Makefile,v 1.68 2003/09/13 18:31:32 kim Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -6,6 +6,7 @@
 
 DISTNAME=       imap-2002e
 PKGNAME=        imap-uw-2002.5
+PKGREVISION=	1
 CATEGORIES=     mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -109,6 +110,23 @@ post-extract:
 			-e "s|/usr/etc/ipop3d|${PREFIX}/libexec/ipop3d|g" \
 			$${file} > $${f};				\
 	done
+
+BUILD_DEFS+=	IMAP_UW_MAILSPOOLHOME
+
+post-patch:
+.if defined(IMAP_UW_MAILSPOOLHOME)
+	cd ${WRKSRC}/src/osdep/unix &&					\
+	${SED}	-e 's|@SPOOLDIR@|myhomedir ()|'				\
+		-e 's|@MAILBOX@|"${IMAP_UW_MAILSPOOLHOME}"|'		\
+		env_unix.c > env_unix.c.new &&				\
+	${MV} -f env_unix.c.new env_unix.c
+.else
+	cd ${WRKSRC}/src/osdep/unix &&					\
+	${SED}	-e 's|@SPOOLDIR@|MAILSPOOL|'				\
+		-e 's|@MAILBOX@|myusername ()|'				\
+		env_unix.c > env_unix.c.new &&				\
+	${MV} -f env_unix.c.new env_unix.c
+.endif
 
 # Generate _pic.a library from shared objects.
 #
