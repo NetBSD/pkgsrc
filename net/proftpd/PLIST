@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:57 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/21 13:10:18 cube Exp $
 bin/ftpcount
 bin/ftpwho
+bin/ftpdctl
 bin/ftptop
 man/man1/ftpcount.1
 man/man1/ftptop.1
 man/man1/ftpwho.1
 man/man5/xferlog.5
+man/man8/ftpdctl.8
 man/man8/ftpshut.8
 man/man8/proftpd.8
 sbin/ftpshut
@@ -17,7 +19,6 @@ share/doc/proftpd/README
 share/doc/proftpd/README.IPv6
 share/doc/proftpd/README.LDAP
 share/doc/proftpd/README.PAM
-share/doc/proftpd/README.mod_sql
 share/doc/proftpd/README.modules
 share/doc/proftpd/faq.html
 share/doc/proftpd/license.txt
