@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6084 2004/06/01 16:51:13 cube Exp $
+$NetBSD: CHANGES,v 1.6085 2004/06/01 17:11:31 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2715,3 +2715,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla to 1.6nb3 [taya 2004-06-01]
 	Updated mozilla-gtk2 to 1.6nb4 [taya 2004-06-01]
 	Updated ion to 20040601 [cube 2004-06-01]
+	Updated libsoup-devel to 2.1.10 [recht 2004-06-01]
+	Updated evolution-data-server to 0.0.93 [recht 2004-06-01]
+	Updated sylpheed-gtk2 to 0.9.9nb3 [recht 2004-06-01]
