@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/06/11 11:14:30 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/16 09:14:51 grant Exp $
 #
 
 DISTNAME=	pure-ftpd-1.0.12
@@ -24,11 +24,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib/mysql -Wl,-R${LOCALBASE}/lib/mysql
 BUILD_DEFS+=	PURE_FTPD_USE_MYSQL
 .endif
 
-post-build:
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/pure_ftpd > ${WRKDIR}/pure_ftpd
-
-post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/pure_ftpd ${PREFIX}/etc/rc.d/pure_ftpd
+RCD_SCRIPTS=	pure_ftpd
 
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
