@@ -1,4 +1,4 @@
-# $NetBSD: STATUS,v 1.10 2003/05/19 19:47:10 jschauma Exp $
+# $NetBSD: STATUS,v 1.11 2003/05/24 19:27:03 jschauma Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -87,8 +87,8 @@ audio/xmms                                                             Y
 devel/gdb                                           Y                  N
 editors/abiword
 graphics/mplayer                                                       N
-lang/gcc                N/A                                            Y
-lang/gcc3               N/A                                            X
+lang/gcc                N/A                         Y                  Y
+lang/gcc3               N/A                         Y                  X
 lang/python22                                Y      Y
 lang/ruby                                           Y
 lang/sun-j*                                         Y
