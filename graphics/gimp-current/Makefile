@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/07/10 10:40:40 agc Exp $
+# $NetBSD: Makefile,v 1.20 2000/07/11 14:53:41 agc Exp $
 
 DISTNAME=		gimp-1.1.24
 CATEGORIES=		graphics
@@ -23,7 +23,7 @@ USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-gtk-prefix="`${PKG_INFO} -qp gtk+ | ${AWK} '{print $$2}'`" \
+CONFIGURE_ARGS+=	--with-gtk-prefix="`${MAKE} show-gtk+-prefix`" \
 			--disable-perl \
 			--disable-python
 CONFIGURE_ENV=		CPPFLAGS="${CPPFLAGS}" INTLLIBS="-lintl" \

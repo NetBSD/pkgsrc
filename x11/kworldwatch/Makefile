@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/11 10:58:34 agc Exp $
+# $NetBSD: Makefile,v 1.9 2000/07/11 14:53:47 agc Exp $
 #
 
 DISTNAME=	kworldwatch-0.6
@@ -15,14 +15,14 @@ CONFLICTS+=	kdetoys-*
 
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--datadir=`${PKG_INFO} -qp kdebase | ${AWK} '{print $$2}'`/share/kde \
-		--with-qt-dir=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1 \
-		--with-qt-libraries='`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1/lib -L${LOCALBASE}/lib' \
+CONFIGURE_ARGS+=--datadir=`${MAKE} show-kdebase-prefix`/share/kde \
+		--with-qt-dir=`${MAKE} show-qt1-prefix`/qt1 \
+		--with-qt-libraries='`${MAKE} show-qt1-prefix`/qt1/lib -L${LOCALBASE}/lib' \
 		--enable-path-check
 CFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	KDEDIR=`${PKG_INFO} -qp kdebase | ${AWK} '{print $$2}'` \
-		MOC=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1/bin/moc \
-		QTDIR=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1 \
+CONFIGURE_ENV=	KDEDIR=`${MAKE} show-kdebase-prefix` \
+		MOC=`${MAKE} show-qt1-prefix`/qt1/bin/moc \
+		QTDIR=`${MAKE} show-qt1-prefix`/qt1 \
 		CXXFLAGS="${CFLAGS}" \
 		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib"
 

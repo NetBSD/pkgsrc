@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/07/10 15:08:15 agc Exp $
+# $NetBSD: Makefile,v 1.30 2000/07/11 14:53:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -19,6 +19,6 @@ CONFIGURE_ARGS=	"--without-gnu-ld" \
 		"--without-libgdbm" \
 		"--without-libuulib" \
 		"--without-sprite-field" \
-		"--with-qt-dir=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1" 
+		"--with-qt-dir=`${MAKE} show-qt1-prefix`/qt1" 
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/10 15:08:14 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/11 14:53:36 agc Exp $
 
 DISTNAME=	musicbox-1.01p2
 CATEGORIES=	audio
@@ -14,7 +14,7 @@ USE_X11=	yes
 
 WRKSRC=		${WRKDIR}/musicbox-1.01
 
-PATH=	`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1/bin:$$PATH
+PATH=	`${MAKE} show-qt1-prefix`/qt1/bin:$$PATH
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/musicbox ${PREFIX}/bin
