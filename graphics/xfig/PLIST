@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/07 06:30:34 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/03/02 19:47:26 jschauma Exp $
 bin/xfig
 lib/X11/app-defaults/Fig
 lib/X11/app-defaults/Fig-color
@@ -1437,7 +1437,7 @@ lib/X11/xfig/Libraries/Welding/tv.1.fig
 lib/X11/xfig/Libraries/Welding/tv.2.fig
 lib/X11/xfig/Libraries/Welding/tv.3.fig
 lib/X11/xfig/Libraries/Welding/u.1.fig
-man/cat1/xfig.0
+${IMAKE_MAN_DIR}/xfig.${IMAKE_MANNEWSUFFIX}
 share/doc/xfig/html/japanese/accelerators.html
 share/doc/xfig/html/japanese/attributes.html
 share/doc/xfig/html/japanese/authors.html
