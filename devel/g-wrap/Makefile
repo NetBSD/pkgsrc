@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/12/03 17:06:58 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2004/12/07 14:25:47 wiz Exp $
 
 DISTNAME=	g-wrap-1.9.3
 CATEGORIES=	devel
@@ -20,5 +20,7 @@ TEST_TARGET=		check
 USE_MAKEINFO=		YES
 INFO_FILES=		g-wrap.info
 
+.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
