@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/11 23:58:23 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/12 00:09:06 minskim Exp $
 
 --- Makefile.orig	2002-01-31 11:35:52.000000000 -0600
 +++ Makefile
@@ -54,6 +54,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/11 23:58:23 minskim Exp $
 -	$(STRIP) ishd
 +install:
 +	${BSD_INSTALL_PROGRAM} ./ish ${PREFIX}/bin/ishell
-+	${BSD_INSTALL_PROGRAM} ./ish ${PREFIX}/sbin/ishelld
++	${BSD_INSTALL_PROGRAM} ./ishd ${PREFIX}/sbin/ishelld
  
 +.PHONY: all clean install
