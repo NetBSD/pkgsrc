@@ -1,0 +1,198 @@
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.1 2003/03/08 13:23:56 grant Exp $
+
+Changes to the pkgsrc-1-6-1 branch:
+
+File						Revision(s)
+----						--------
+mk/texinfo.mk					1.9
+
+When comparing install-info version, ignore non [0-9.] - treat 4.0b as 4.0
+	[abs]
+
+mail/imap-uw/Makefile				1.54
+
+Linux cp -R behaves differently to NetBSD when given a directory as a source
+argument. Handle differently.
+	[abs]
+
+devel/opencm/distinfo				1.6
+devel/opencm/patches/patch-aa			1.3
+
+Unset GZIP from the environment before calling GZIP_CMD.  Should fix problems
+shown in Hubert's bulk build.  Thanks to Yuji Yamano!
+	[jmmv]
+
+devel/oaf/Makefile				1.23
+sysutils/gnome-vfs/Makefile			1.26
+devel/bonobo/Makefile				1.35
+www/gtkhtml/Makefile				1.27
+
+Disable gtk-doc detection; not required and causes problems.
+	[jmmv]
+
+graphics/avifile-devel/Makefile			1.30
+graphics/avifile-devel/buildlink2.mk		1.4
+graphics/avifile-devel/distinfo			1.13
+graphics/avifile-devel/patches/patch-ac		1.3 (new)
+
+Add suitable arguments to "avifile-config --libs" for autodetected XFree 4
+static libraries, where required. [You can't have a shared library run-time
+dependency on a static library.] This may let "apla" build again on systems
+with XFree 4 -- not tested.
+	[fredb]
+
+graphics/apla/Makefile				1.14
+
+This builds again on NetBSD 1.6.1, but only against the latest version
+of avifile-devel. Bump pkgrevision.
+	[fredb]
+
+mk/bulk/bsd.bulk-pkg.mk				1.43
+
+correct the 'broken due to depends' processing.  This change makes the
+summary email list correctly the packages which are broken because of
+their dependencies.  Problem noted on Huberts most recent bulk build.
+	[dmcmahill]
+
+pkgtools/pkg_install/files/lib/pkgdb.c		1.7
+
+correct #ifdef misplacement.
+	[grant]
+
+pkgsrc/textproc/crimson/Makefile		1.7-1.8
+pkgsrc/textproc/crimson/distinfo		1.2
+
+Pull up changes from trunk to the netbsd-1-6-1 branch to allow this to be
+extracted.
+	[salo]
+
+misc/kdepim3/distinfo/distinfo			1.7
+misc/kdeutils3/distinfo				1.10
+net/kdenetwork3/distinfo			1.9
+
+misc/kdepim3/patches/patch-ai			1.1 (new)
+misc/kdeutils3/patches/patch-ao			1.1 (new)
+net/kdenetwork3/patches/patch-aa		1.1 (new)
+
+Remove some more bogus sizeof(size_t) == sizeof(unsigned int) checks.
+	[skrll]
+
+x11/kdebase3/Makefile				1.18
+x11/kdebase3/distinfo				1.20
+x11/kdebase3/patches/patch-de			1.3
+
+Let platforms that don't have apm compile ksysguard. This fixes PR 18340
+and PR 20439.
+	[skrll]
+
+x11/kdebase3/distinfo				1.19
+x11/kdebase3/patches/patch-aa			1.4
+
+fix typo in configure script which incorrectly determines that a prototype
+for strlcat is needed.  Unfortunately that had the effect of providing
+a bad (for 64 bit systems) prototype.
+	[dmcmahill]
+
+audio/kdemultimedia3/Makefile			1.13
+
+unlimit datasize to allow this to build on alpha
+	[dmcmahill]
+
+net/kdenetwork3/distinfo			1.10
+net/kdenetwork3/patches/patch-aa		1.4
+
+fix typo in check for strlcat which caused a build failure on alpha.
+	[dmcmahill]
+
+misc/kdeutils3/distinfo				1.11
+misc/kdeutils3/patches/patch-ao			1.2
+misc/kdepim3/distinfo				1.8
+misc/kdepim3/patches/patch-ai			1.2
+
+fix typo in check for strlcat which caused a failure on alpha
+	[dmcmahill]
+
+graphics/xv/distinfo				1.7
+graphics/xv/patches/patch-ab			1.6
+
+fix a broken #ifdef, noted on Linux.
+	[grant]
+
+misc/openoffice/distinfo			1.15
+misc/openoffice/patches/patch-eq		1.1 (new)
+
+Reduce optimisation for a particular file to avoid a gcc internal
+compiler error.
+	[mrauch]
+
+misc/openoffice-linux/Makefile			1.5
+misc/openoffice-linux/PLIST			1.3
+
+Automate the creation of /emul/linux/etc/mtab:
+Use the code from Johnny (jlam) again, but do an additional copy at
+pre-install, because the file has to be present during do-install already.
+	[mrauch]
+
+games/nethack-lib/Makefile.common		1.8
+games/nethack-lib/distinfo			1.5
+games/nethack-lib/patches/patch-aa		1.8
+games/nethack-lib/patches/patch-ab		1.9
+games/nethack-lib/patches/patch-ac		1.4
+games/nethack-lib/patches/patch-ae		1.4
+games/nethack-qt/Makefile			1.35
+games/nethack-qt/distinfo			1.9
+games/nethack-qt/patches/patch-aa		1.8
+games/nethack-qt/patches/patch-ab		1.6
+games/nethack-qt/patches/patch-ac		1.11
+games/nethack-qt/patches/patch-ae		1.2
+games/nethack-qt/patches/patch-ah		1.3
+games/nethack-qt/patches/patch-ai		1.2
+games/nethack-tty/distinfo			1.5
+games/nethack-x11/Makefile			1.20
+games/nethack-x11/distinfo			1.8
+games/nethack-x11/patches/patch-aa		1.6
+games/nethack-x11/patches/patch-ab		1.9
+games/nethack-x11/patches/patch-ac		1.2
+games/nethack-x11/patches/patch-ah		1.3
+
+Pullup nethack version 3.4.1 to netbsd-1-6-1 pkgsrc branch.
+	[pooka]
+
+devel/mrproject/Makefile			1.10
+devel/mrproject/PLIST				1.6
+
+Make this build again, without evolution support. Bump PKGREVISION.
+	[wiz, ticket #1196]
+
+net/snort/DEINSTALL				delete
+net/snort/Makefile.common			1.7
+net/snort/PLIST					1.8
+net/snort/distinfo				1.14
+net/snort-pgsql/Makefile			1.8
+
+Snort RPC preprocessing buffer overflow when decoding fragmented RPC
+records (http://www.kb.cert.org/vuls/id/916785).
+Versions affected <1.9.1.
+	[salo, ticket #1192]
+
+comms/p5-Device-SerialPort/Makefile		1.9-1.10
+
+Makes this pkg build on 1.6.1.
+	[hubertf, ticket #1197]
+
+devel/cvs/Makefile				1.59
+devel/cvs/distinfo				1.11
+
+Don't use .bz2 distfile, as it doesn't appear to exist on various mirrors
+	[grant, ticket #1198]
+
+mail/hypermail/Makefile				1.4
+mail/hypermail/PLIST				1.2
+mail/hypermail/distinfo				1.3
+mail/hypermail/patches/patch-aa			1.2
+mail/hypermail/patches/patch-ab			1.1 (new)
+mail/hypermail/patches/patch-ac			1.1 (new)
+
+Update to 2.1.7: Many bug and security fixes; you should upgrade.
+	[bouyer, ticket #1201]
+
