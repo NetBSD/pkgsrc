@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6157 2004/06/06 07:22:57 agc Exp $
+$NetBSD: CHANGES,v 1.6158 2004/06/06 08:04:31 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2813,3 +2813,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Downgraded smlnj to 110.42 [snj 2004-06-06]
 	Updated tmda to 1.0.3 [schmonz 2004-06-06]
 	Added applerecords-0.4 [agc 2004-06-06]
+	Added libopendaap-0.2.1 [agc 2004-06-06]
