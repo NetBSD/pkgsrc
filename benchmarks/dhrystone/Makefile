@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/30 17:39:21 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/24 09:23:32 agc Exp $
 
 DISTNAME=		dhry2.1
 PKGNAME=		dhrystone-2.1
@@ -16,5 +16,9 @@ do-install:
 	${MKDIR} ${PREFIX}/share/doc/dhrystone
 	${INSTALL_MAN} ${WRKSRC}/clarify.doc ${PREFIX}/share/doc/dhrystone
 	${INSTALL_MAN} ${WRKSRC}/Rationale ${PREFIX}/share/doc/dhrystone
+
+benchmark:
+	-${ECHO} 1000000 | ${WRKSRC}/dry2
+	-${ECHO} 1000000 | ${WRKSRC}/dry2reg
 
 .include "../../mk/bsd.pkg.mk"
