@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/02/14 20:55:03 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/04/25 08:13:29 rh Exp $
 include/eel-2/eel/eel-accessibility.h
 include/eel-2/eel/eel-art-extensions.h
 include/eel-2/eel/eel-art-gtk-extensions.h
@@ -30,6 +30,7 @@ include/eel-2/eel/eel-gtk-macros.h
 include/eel-2/eel/eel-i18n.h
 include/eel-2/eel/eel-image-chooser.h
 include/eel-2/eel/eel-image-table.h
+include/eel-2/eel/eel-input-event-box.h
 include/eel-2/eel/eel-labeled-image.h
 include/eel-2/eel/eel-marshal.h
 include/eel-2/eel/eel-pango-extensions.h
@@ -52,13 +53,14 @@ lib/libeel-2.a
 lib/libeel-2.la
 lib/libeel-2.so
 lib/libeel-2.so.4
-lib/libeel-2.so.4.1
+lib/libeel-2.so.4.3
 lib/pkgconfig/eel-2.0.pc
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/eel-2.0.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/eel-2.0.mo
@@ -72,11 +74,13 @@ ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/eel-2.0.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/eel-2.0.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/eel-2.0.mo
@@ -84,6 +88,7 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/eel-2.0.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/eel-2.0.mo
@@ -99,6 +104,7 @@ ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/eel-2.0.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/eel-2.0.mo
