@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.22.4.1 2005/01/24 18:40:01 tv Exp $
+# $NetBSD: build.conf-example,v 1.22.4.2 2005/03/02 19:38:26 tv Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -34,7 +34,7 @@ CVS_USER="yourlogin"
 
 # Flags to pass to 'cvs update', e.g. to get a certain branch
 #CVS_FLAGS="-rnetbsd-2004Q1"
-#CVS_FLAGS="-A"
+#CVS_FLAGS="-A"				# pkgsrc-current
 
 # prune distfiles to remove those which are out of date
 # can be set to 'yes' or 'no'.
