@@ -1,43 +1,42 @@
-$NetBSD: patch-aa,v 1.2 1999/10/24 20:03:29 tron Exp $
+$NetBSD: patch-aa,v 1.3 1999/12/14 17:20:46 wennmach Exp $
 
---- configure.orig	Sun Aug 22 23:26:53 1999
-+++ configure	Sun Oct 24 21:49:00 1999
-@@ -2194,6 +2194,10 @@
- kde_save_cflags="$CFLAGS"
- CC=$CXX
- CFLAGS="$CXXFLAGS"
-+
+--- configure.orig	Sat Oct 30 17:04:15 1999
++++ configure	Tue Nov 30 18:34:02 1999
+@@ -2185,7 +2185,8 @@
+   ac_tool_prefix=
+ fi
+ 
+-
 +# Use NetBSD package system libtool (start)
 +if false; then
-+
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool --silent'
  
-@@ -2433,6 +2437,9 @@
- # This can be used to rebuild libtool when needed
- LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+ 
+ kde_save_cc=$CC
+@@ -2437,6 +2438,9 @@
+  CC=$kde_save_cc
+ CFLAGS="$kde_save_cflags"
  
 +fi
 +# Use NetBSD package system libtool (end)
 +
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
- exec 5>>./config.log
-@@ -4452,7 +4459,7 @@
+ 
+ echo $ac_n "checking whether NLS is requested""... $ac_c" 1>&6
+ echo "configure:2443: checking whether NLS is requested" >&5
+@@ -4435,7 +4439,7 @@
  
  echo $ac_n "checking for KDE libraries installed""... $ac_c" 1>&6
- echo "configure:4455: checking for KDE libraries installed" >&5
+ echo "configure:4438: checking for KDE libraries installed" >&5
 -ac_link='/bin/sh ./libtool --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore $LIBQT $KDE_TEST_RPATH 1>&5'
 +ac_link='/bin/sh $LIBTOOL --silent --mode=link ${CXX-g++} -o conftest $CXXFLAGS $all_includes $CPPFLAGS $LDFLAGS $all_libraries conftest.$ac_ext $LIBS -lkdecore $LIBQT $KDE_TEST_RPATH 1>&5'
  
- if { (eval echo configure:4458: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then 
+ if { (eval echo configure:4441: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then 
    echo "$ac_t""yes" 1>&6
-@@ -4599,7 +4606,7 @@
+@@ -4582,7 +4586,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="$all_libraries -lgif -lX11 $LIBSOCKET"
 +LIBS="$all_libraries -lungif -lX11 $LIBSOCKET"
  cat > conftest.$ac_ext <<EOF
- #line 4605 "configure"
+ #line 4588 "configure"
  #include "confdefs.h"
