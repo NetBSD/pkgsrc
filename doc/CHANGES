@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5407 2004/04/01 14:29:59 abs Exp $
+$NetBSD: CHANGES,v 1.5408 2004/04/01 14:36:48 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1651,4 +1651,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated oss to 3.9.8e [wiz 2004-04-01]
 	Updated qt3 to 3.2.3nb2 [tron 2004-04-01]
 	Added apache-ant15 [abs 2004-04-01]
+	Updated apache-ant to 1.6.1 [abs 2004-04-01]
 
