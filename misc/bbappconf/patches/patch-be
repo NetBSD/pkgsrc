@@ -1,0 +1,29 @@
+$NetBSD: patch-be,v 1.1 2002/08/05 21:42:34 jschauma Exp $
+
+--- wminterface.cc.orig	Mon Aug  5 17:05:01 2002
++++ wminterface.cc	Mon Aug  5 17:06:15 2002
+@@ -285,9 +285,9 @@
+ 
+ void WMInterface::NETNotifyStartup() {
+   bbtool->setNETInit(); //wm_init=True;
+-  XClearWindow(bbtool->getXDisplay(), bbtool->framewin);
++/*  XClearWindow(bbtool->getXDisplay(), bbtool->framewin); 
+   XMapWindow(bbtool->getXDisplay(), bbtool->framewin);
+-  XMapSubwindows(bbtool->getXDisplay(), bbtool->framewin);
++  XMapSubwindows(bbtool->getXDisplay(), bbtool->framewin); */
+ }
+ 
+ void WMInterface::NETNotifyWindowAdd(Window win,int desktop_nr) {
+@@ -415,3 +415,12 @@
+   } else if (number_of_desktops<old_number_of_desktops)
+     bbtool->removeDesktopWindow();*/
+ }
++
++void WMInterface::moveWindow(Window win, int x, int y) {
++	XMoveWindow(bbtool->getXDisplay(), win, x, y);
++}
++
++void WMInterface::resizeWindow(Window win, int width, int height) {
++	XResizeWindow(bbtool->getXDisplay(), win, width, height);
++}
++
