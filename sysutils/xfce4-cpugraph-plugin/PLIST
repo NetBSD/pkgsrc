@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/21 06:06:11 martti Exp $
+lib/xfce4/panel-plugins/libcpugraph.a
+lib/xfce4/panel-plugins/libcpugraph.la
+lib/xfce4/panel-plugins/libcpugraph.so
