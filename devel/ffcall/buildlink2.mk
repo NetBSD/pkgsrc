@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/09/27 09:04:41 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/09/27 10:36:07 rh Exp $
 #
 # This Makefile fragment is included by packages that use ffcall.
 #
@@ -24,7 +24,6 @@ BUILDLINK_FILES.ffcall+=	lib/libavcall.*
 BUILDLINK_FILES.ffcall+=	lib/libcallback.*
 BUILDLINK_FILES.ffcall+=	lib/libtrampoline.*
 BUILDLINK_FILES.ffcall+=	lib/libvacall.*
-
 
 BUILDLINK_TARGETS+=	ffcall-buildlink
 
