@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/01/26 23:31:53 hubertf Exp $
-
---- vslib/makefile.BAK	Tue Jan 26 20:52:30 1999
-+++ vslib/makefile	Tue Jan 26 20:56:05 1999
+--- vslib/makefile.orig	Wed Feb  3 14:47:16 1999
++++ vslib/makefile	Thu Feb  4 01:29:57 1999
 @@ -3,8 +3,8 @@
  CC      = gcc
  LD      = gcc
  AR      = ar rvs
--CFLAGS  =  -I. -I/usr/include/ncurses -O2
--CCFLAGS =  -I. -I/usr/include/ncurses -O2
-+CFLAGS  =  -I. -I${LOCALBASE}/include -O2
-+CCFLAGS =  -I. -I${LOCALBASE}/include -O2
- LDFLAGS = 
+-CFLAGS  =  -I. -I/usr/include/ncurses -O2 $(CCDEF)
+-CCFLAGS =  -I. -I/usr/include/ncurses -O2 $(CCDEF)
++CFLAGS  =  -I. -I${LOCALBASE}/include -O2 $(CCDEF)
++CCFLAGS =  -I. -I${LOCALBASE}/include -O2 $(CCDEF)
+ LDFLAGS = $(LDDEF)
  ARFLAGS = 
  TARGET  = libvslib.a

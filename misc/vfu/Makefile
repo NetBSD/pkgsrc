@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/01/26 23:31:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1999/02/04 01:20:59 hubertf Exp $
 #
 
-DISTNAME=	vful141s
-PKGNAME=	vfu-1.41
+DISTNAME=	vfu-1.42-source
+PKGNAME=	vfu-1.42
 EXTRACT_SUFX=	.tgz
 CATEGORIES=	misc
 MASTER_SITES=	http://www.biscom.net/~cade/away/
@@ -13,11 +13,13 @@ HOMEPAGE=	http://www.biscom.net/~cade/vfu/
 DEPENDS=	ncurses-1.9.9g:../../devel/ncurses
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
+MAKE_FLAGS+=	CCDEF="-I${LOCALBASE}/include -DVFU_RCPATH1=\\\"${PREFIX}/etc/\\\" -DVFU_RCPATH2=\\\"${PREFIX}/\\\"" \
+		LDDEF="-L${LOCALBASE}/lib"
 
 do-build:
-	@cd ${WRKSRC}/vslib ; \
+	cd ${WRKSRC}/vslib ; \
 	 ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
-	@cd ${WRKSRC}/vfu ; \
+	cd ${WRKSRC}/vfu ; \
 	 ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
 do-install:
