@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/09 13:35:15 markd Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/27 14:05:52 cjep Exp $
 
 DISTNAME=	Ted_pl_PL
 PKGNAME=	ted-pl-2.14
@@ -22,14 +22,14 @@ post-extract:
 		cd ${WRKSRC};tar xvf Ted/ad/Ted_pl_PL.ad.tar
 
 post-patch:
-		echo "Ted*fontList:		-adobe-helvetica-medium-r-*-*-*-100-*-*-*-*-iso8859-2" \
-                >>${WRKSRC}/usr/lib/X11/pl_PL/app-defaults/Ted
-		echo "Ted.documentFileName:	"${PREFIX}"/share/doc/Ted/TedDocument-en_US.rtf" \
-                >>${WRKSRC}/usr/lib/X11/pl_PL/app-defaults/Ted
+		${ECHO} "Ted*fontList:		-adobe-helvetica-medium-r-*-*-*-100-*-*-*-*-iso8859-2" \
+		>>${WRKSRC}/usr/lib/X11/pl_PL/app-defaults/Ted
+		${ECHO} "Ted.documentFileName:	${PREFIX}/share/doc/Ted/TedDocument-en_US.rtf" \
+		>>${WRKSRC}/usr/lib/X11/pl_PL/app-defaults/Ted
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/ind/Polish.ind ${PREFIX}/share/Ted/ind
-	${MKDIR} ${PREFIX}/lib/X11/app-defaults/pl_PL
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/app-defaults/pl_PL
 	${INSTALL_DATA} ${WRKSRC}/usr/lib/X11/pl_PL/app-defaults/Ted ${PREFIX}/lib/X11/app-defaults/pl_PL/
 
 .include "../../mk/bsd.pkg.mk"
