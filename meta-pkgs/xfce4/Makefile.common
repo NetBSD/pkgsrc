@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/03/23 04:41:01 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/04/01 19:37:47 jmmv Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.0.4/src/ \
 			http://linux.imp.mx/xfce4/xfce_4.0.4/src/
@@ -7,7 +7,7 @@ MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
 
 XFCE4_VERSION=		4.0.4
-PKGREVISION=		1
+PKGREVISION=		2
 
 USE_BUILDLINK3=		yes
 USE_X11=		# defined
