@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/13 17:12:19 kei Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/30 21:44:26 agc Exp $
 
---- Makefile.X11.orig	Thu Mar 23 01:01:00 2000
-+++ Makefile.X11	Sat Aug 12 12:54:54 2000
+--- makefile.x11.orig	Thu Mar 23 01:01:00 2000
++++ makefile.x11	Sat Aug 12 12:54:54 2000
 @@ -6,21 +6,29 @@
  
  COMMONSRC = \
