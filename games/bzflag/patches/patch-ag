@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.3 2005/03/16 12:41:51 rillig Exp $
+
+tolower is a macro on NetBSD-1.6.2.
+
+--- include/TextUtils.h.orig	Wed May 12 22:10:51 2004
++++ include/TextUtils.h	Tue Mar 15 23:59:22 2005
+@@ -43,7 +43,7 @@ public:
+ 
+   /** returns a string converted to lowercase
+    */
+-  inline static std::string tolower(const std::string& s)
++  inline static std::string bz_tolower(const std::string& s)
+   {
+     std::string trans = s;
+ 
+@@ -55,7 +55,7 @@ public:
+ 
+   /** returns a string converted to uppercase
+    */
+-  inline static std::string toupper(const std::string& s)
++  inline static std::string bz_toupper(const std::string& s)
+   {
+     std::string trans = s;
+     std::transform (trans.begin(), trans.end(), // source
