@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/02/14 20:43:47 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2004/02/15 13:43:41 jlam Exp $
 #
 
 DISTNAME=		pango-1.2.5
@@ -17,7 +17,6 @@ USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
-USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/02/14 18:26:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2004/02/15 13:43:41 jlam Exp $
 
 DISTNAME=		glib-2.2.3
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -18,7 +18,6 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
-USE_LANGUAGES=		c c++
 USE_PERL5=		yes
 USE_LIBTOOL=		yes
 
