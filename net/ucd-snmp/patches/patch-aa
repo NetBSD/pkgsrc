@@ -1,25 +1,18 @@
---- agent/mibgroup/ip.c.orig	Sat May 23 18:46:55 1998
-+++ agent/mibgroup/ip.c	Sat May 23 18:52:17 1998
-@@ -6,6 +6,12 @@
- #include "mib_module_config.h"
+--- configure-orig	Fri Jun 19 22:14:25 1998
++++ configure	Mon Aug  3 16:44:56 1998
+@@ -4599,11 +4599,11 @@
+ #include "confdefs.h"
  
- #include <config.h>
-+
-+#if HAVE_SYS_SYSCTL_H
-+#include <sys/param.h>
-+#include <sys/sysctl.h>
-+#endif
-+
- #if defined(IFNET_NEEDS_KERNEL) && !defined(_KERNEL)
- #define _KERNEL 1
- #define _I_DEFINED_KERNEL
-@@ -24,9 +30,6 @@
- #endif
- #if HAVE_NETINET_IN_H
- #include <netinet/in.h>
--#endif
--#if HAVE_SYS_SYSCTL_H
--#include <sys/sysctl.h>
- #endif
- #if HAVE_SYS_SYSMP_H
- #include <sys/sysmp.h>
+ #include <sys/types.h>
+-#define KERNEL
+-#define _KERNEL
++/* #define KERNEL
++#define _KERNEL */
+ #include <sys/socket.h>
+-#undef KERNEL
+-#undef _KERNEL
++/* #undef KERNEL
++#undef _KERNEL */
+ #include <net/route.h>
+ 
+ int main() {
