@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2000/03/30 23:24:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/14 23:36:47 wiz Exp $
 #
 
-DISTNAME=	its4-1.0.1
+DISTNAME=	its4-1.1.1
+WRKSRC=		${WRKDIR}/its4
 CATEGORIES=	devel
 MASTER_SITES=	# have to fetch for yourself, or from a NetBSD mirror
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.rstcorp.com/its4/
+HOMEPAGE=	http://www.cigital.com/its4/
 
 LICENSE=        no-commercial-use
 
@@ -23,7 +24,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/its4 ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/docs/its4.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/its4
-	cd ${WRKSRC} && ${INSTALL_DATA} LICENCE TODO vulns.i4d \
+	cd ${WRKSRC} && ${INSTALL_DATA} LICENSE TODO vulns.i4d \
 		${PREFIX}/share/its4
 
 .include "../../mk/bsd.pkg.mk"
