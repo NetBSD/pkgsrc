@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.4 2004/05/31 09:55:36 grant Exp $
+# $NetBSD: builtin.mk,v 1.5 2004/05/31 10:00:42 grant Exp $
 
-.if !defined(_BLNK_LIBREADLINE_FOUND)
 _READLINE_H=		/usr/include/readline.h
 _READLINE_READLINE_H=	/usr/include/readline/readline.h
 
+.if !defined(_BLNK_LIBREADLINE_FOUND)
 _BLNK_LIBREADLINE_FOUND!=	\
 	if [ "`${ECHO} /usr/lib/libreadline.*`" = "/usr/lib/libreadline.*" ]; then \
 		${ECHO} "no";						\
