@@ -1,0 +1,6 @@
+The aewm++ window manager is a fork of the popular minimal 
+window manager aewm for the X Windows System. What makes 
+it different is its codebase, feature set and focus. The 
+name was created by using the first two letters in the word 
+aesthetic, the wm is for window manager and the ++ is for 
+its C++ code. 
