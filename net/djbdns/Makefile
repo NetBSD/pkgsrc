@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/03/30 17:12:28 taca Exp $
+# $NetBSD: Makefile,v 1.32 2004/04/10 20:28:52 zuntum Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
@@ -47,8 +47,8 @@ GCC_REQD+=	3.0
 INSTALLATION_DIRS=	bin etc man/man1 man/man5 man/man8
 
 post-extract:
-	@${CP} ${DISTDIR}/tinydns-log.pl.txt ${WRKSRC}/tinydns-log.pl
-	@${CP} ${DISTDIR}/dnscache-log.pl.txt ${WRKSRC}/dnscache-log.pl
+	@${CP} ${DISTDIR}/${DIST_SUBDIR}/tinydns-log.pl.txt ${WRKSRC}/tinydns-log.pl
+	@${CP} ${DISTDIR}/${DIST_SUBDIR}/dnscache-log.pl.txt ${WRKSRC}/dnscache-log.pl
 
 do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
