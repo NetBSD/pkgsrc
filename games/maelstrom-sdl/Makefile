@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/26 21:41:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/07 05:59:17 snj Exp $
 #
 
 DISTNAME=	Maelstrom-3.0.5
@@ -13,9 +13,11 @@ COMMENT=	High resolution version of Asteroids (SDL version)
 
 CONFLICTS=		maelstrom-x11-[0-9]* maelstrom-[0-9]*
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
+
+MAKE_ENV+=		CP=${CP}
 
 post-install:
 	${RM} ${PREFIX}/share/doc/Maelstrom/Docs/Makefile \
@@ -23,7 +25,7 @@ post-install:
 		${PREFIX}/share/Maelstrom/Images/Makefile \
 		${PREFIX}/share/Maelstrom/Images/Makefile.in
 
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../net/SDL_net/buildlink2.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../net/SDL_net/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
