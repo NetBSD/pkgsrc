@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4815 2004/02/13 18:06:11 jschauma Exp $
+$NetBSD: CHANGES,v 1.4816 2004/02/13 19:41:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -816,3 +816,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added opera-acroread-1.0 [jschauma 2004-02-13]
 	Added opera-acroread3-1.0 [jschauma 2004-02-13]
 	Added opera-acroread5-1.0 [jschauma 2004-02-13]
+	Added dbxml-1.2.1 [minskim 2004-02-13]
