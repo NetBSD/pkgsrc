@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 1998/10/31 23:01:54 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/12 22:30:39 mjl Exp $
 #
 
-DISTNAME=		slrn0.9.5.3
-PKGNAME=		slrn-0.9.5.3
+DISTNAME=		slrn0.9.5.4
+PKGNAME=		slrn-0.9.5.4
 CATEGORIES=		news
 MASTER_SITES=		ftp://space.mit.edu/pub/davis/slrn/ \
 			ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/slrn/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		mjl@netbsd.org
 HOMEPAGE=		http://space.mit.edu/%7Edavis/slrn.html
 
 DEPENDS+=		libslang-1.2.2:../../devel/libslang
