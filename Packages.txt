@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.335 2004/04/08 17:17:16 reed Exp $
+# $NetBSD: Packages.txt,v 1.336 2004/04/19 17:20:23 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -3276,15 +3276,47 @@ Appendix B: Layout of the FTP server's package archive
 Layout for precompiled binary packages on ftp.netbsd.org:
 
 /pub/NetBSD/packages/
-                README
                 distfiles/
-		pkgsrc -> /pub/NetBSD/NetBSD-current/pkgsrc
-                1.5/
-                        i386/
-                                All/
-                                archivers/
-                                        foo -> ../All/foo
-                                ...
+
+		# Unpacked pkgsrc trees
+		pkgsrc-current -> /pub/NetBSD/NetBSD-current/pkgsrc
+		pkgsrc-2003Q4 -> N/A
+		pkgsrc-2004Q1/pkgsrc
+
+		# pkgsrc archives
+		pkgsrc-current.tar.gz -> ../NetBSD-current/tar_files/pkgsrc.tar.gz
+		pkgsrc-2003Q4.tar.gz -> N/A
+		pkgsrc-2004Q1.tar.gz -> N/A
+
+		# Per pkgsrc-release/OS-release/arch package archives
+		pkgsrc-2003Q4/
+			NetBSD-1.6.2/
+				i386/
+					All/
+					archivers/
+						foo -> ../All/foo
+					...
+		pkgsrc-2004Q1/
+			NetBSD-1.6.2/
+				i386/
+					All/
+					...
+			NetBSD-2.0/
+				i386/
+					All/
+					...
+			Solaris-9/
+				sparc/
+					All/
+					...
+				x86/
+					All/
+					...
+
+		# Per os-release package archive convenience links
+		NetBSD-1.6.2 -> 1.6.2
+                1.6.2/
+			i386 -> ../pkgsrc-2004Q1/NetBSD-1.6.2/i386
                         m68k/
                                 All/
                                 archivers/
@@ -3294,25 +3326,23 @@ Layout for precompiled binary packages on ftp.netbsd.org:
                         atari -> m68k
                         ...
 
+		2.0 -> NetBSD-2.0	# backward compat, historic
+		NetBSD-2.0/
+			i386 -> ../pkgsrc-2004Q1/NetBSD-2.0/i386
+		Solaris-9/
+			sparc -> ../pkgsrc-2004Q1/Solaris-9/sparc
+			x86 -> ../pkgsrc-2004Q1/Solaris-9/x86
 
 To create:
- - cd /usr/pkgsrc ; make install ; make package
- - upload /usr/pkgsrc/packages to
+ - Run bulk build, see #3.2
+ - Upload /usr/pkgsrc/packages to
    ftp://ftp.netbsd.org/pub/NetBSD/packages/\
-    `uname -r | sed 's@\.\([0-9]*\)[\._].*@\.\1@'`/`uname -p`
- - if necessary ln -s `uname -m` `uname -p`
+	pkgsrc-2004Q1/\				# pkgsrc-branch
+	`uname -s`-`uname -r`/			# OS & version
+	`uname -p`				# architecture
+ - if necessary ln -s `uname -m` `uname -p`	# amiga -> m68k, ...
 
 Disk space needed: unknown.
-
-Packages for a release version of NetBSD should be uploaded to the
-directory major.minor corresponding to the appropriate release.  Packages
-for NetBSD with versions such as "1.5.1" should be uploaded to the "1.5"
-directory, stripping the tiny number off the directory name.  For packages
-that need to be tightly coupled with the OS Version, such as LKM's, you
-may create a major.minor.tiny release directory, and place those packages
-therein.  Such packages should be marked with the variable
-"OSVERSION_SPECIFIC=yes" to mark them in some way for binary package
-builders.
 
 
 ###########################################################################
