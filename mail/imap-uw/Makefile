@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2004/12/03 15:15:02 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2004/12/18 16:17:12 grant Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -32,6 +32,12 @@ BUILD_TARGET=	gso
 BUILD_TARGET=	slx
 .elif ${OPSYS} == "Darwin"
 BUILD_TARGET=	osx
+.elif ${OPSYS} == "IRIX"
+.  if ${OS_VERSION} >= 6.5
+BUILD_TARGET=	sg6
+.  else
+BUILD_TARGET=	sgi
+.  endif
 .else
 BUILD_TARGET=	neb
 .  if defined(USE_KERBEROS) && ${USE_KERBEROS} != "no"
