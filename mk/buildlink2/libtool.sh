@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: libtool.sh,v 1.1.2.3 2002/06/28 06:26:58 jlam Exp $
+# $NetBSD: libtool.sh,v 1.1.2.4 2002/06/29 20:02:41 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -11,6 +11,7 @@ post_cache="@_BLNK_WRAP_POST_CACHE@"
 logic="@_BLNK_WRAP_LOGIC@"
 libtool_fix_la="@_BLNK_LIBTOOL_FIX_LA@"
 wrapperlog="@_BLNK_WRAP_LOG@"
+updatecache=${BUILDLINK_UPDATE_CACHE-yes}
 
 cmd="@WRAPPEE@"
 lafile=
