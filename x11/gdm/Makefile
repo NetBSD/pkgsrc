@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/06/12 20:33:09 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/07/23 00:59:19 wiz Exp $
 
 DISTNAME=	gdm-2.2.0
 CATEGORIES=	x11 gnome
@@ -84,6 +84,7 @@ post-build:
 	${ECHO} '#! ${SH}' >Xsession;					\
 	${ECHO} 'exec ${X11BASE}/lib/X11/xdm/Xsession $$@' >>Xsession;	\
 	${CHMOD} +x KDE Xsession
+	${SED} "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/gdm > ${WRKDIR}/gdm
 
 post-install:
 	${CHMOD} +x ${WRKSRC}/config/gnomerc
@@ -112,5 +113,6 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/doc/gdm
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/pixmaps
 	${LN} -fs Gnome ${GDMCFGDIR}/Sessions/Default
+	${INSTALL_SCRIPT} ${WRKDIR}/gdm ${PREFIX}/etc/rc.d/
 
 .include "../../mk/bsd.pkg.mk"
