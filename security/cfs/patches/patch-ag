@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2004/07/25 11:59:27 grant Exp $
+$NetBSD: patch-ag,v 1.2 2004/08/02 17:09:06 tv Exp $
 
---- cfs_attach.c.orig	2004-07-25 21:55:56.000000000 +1000
-+++ cfs_attach.c
+--- cattach.c.orig	2004-07-25 21:55:56.000000000 +1000
++++ cattach.c
 @@ -81,8 +81,12 @@ main(argc,argv)
  	struct fs_data sfb;
  #define f_blocks  fd_req.btot
