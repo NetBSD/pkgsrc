@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.67 2004/11/28 16:33:58 taca Exp $
+$NetBSD: distinfo,v 1.68 2004/12/14 14:27:07 taca Exp $
 
 SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7.tar.bz2) = 24f29e28ec62d7ab5888cd594ac7a1975ee6aa36
 Size (squid-2.5.7-2004101300/squid-2.5.STABLE7.tar.bz2) = 1051830 bytes
@@ -14,7 +14,13 @@ SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7-non_blocking_disk.patch) = 73ccc1
 Size (squid-2.5.7-2004101300/squid-2.5.STABLE7-non_blocking_disk.patch) = 431 bytes
 SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7-blank_response.patch) = b5d323d54f1e901ab6218a6fc2dc3162a865e198
 Size (squid-2.5.7-2004101300/squid-2.5.STABLE7-blank_response.patch) = 723 bytes
-SHA1 (patch-aa) = 8d760f58175cdb62af453fd1b07783859fa0bcf9
+SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7-dothost.patch) = 63b960ad219bd0a945418155f129a5c6b6fa9bfc
+Size (squid-2.5.7-2004101300/squid-2.5.STABLE7-dothost.patch) = 2155 bytes
+SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7-httpd_accel_vport.patch) = 8e4144c20fe297853a442b196fa45ff74c9f0b87
+Size (squid-2.5.7-2004101300/squid-2.5.STABLE7-httpd_accel_vport.patch) = 843 bytes
+SHA1 (squid-2.5.7-2004101300/squid-2.5.STABLE7-cachemgr_vmobjects.patch) = f6f651a28b8ec65e3703137d2ec8bfbc69474d20
+Size (squid-2.5.7-2004101300/squid-2.5.STABLE7-cachemgr_vmobjects.patch) = 6238 bytes
+SHA1 (patch-aa) = 3e6fb677125eec276fdfa62336c134f26e1e1edd
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
 SHA1 (patch-ad) = 88b46bc9051ea32ebd74f06ebd362ce16f8c5c4c
