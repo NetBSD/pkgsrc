@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2000/08/26 03:36:45 jlam Exp $
+
+--- Bio/Root/Err.pm.orig	Thu Feb  4 03:06:35 1999
++++ Bio/Root/Err.pm
+@@ -984,7 +984,7 @@
+            : This method is an alternative to Bio::Root::Object::throw()
+            : and is not as well developed or documented as that method.
+ 
+-See Also   : L<warning>(), B<Bio::Root::Object::throw()>, B<Bio::Root::Global::strictness()
++See Also   : L<warning>(), B<Bio::Root::Object::throw()>, B<Bio::Root::Global::strictness()>
+ 
+ =cut
+ 
