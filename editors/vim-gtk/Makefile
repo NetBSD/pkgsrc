@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/12/21 13:18:14 pooka Exp $
+# $NetBSD: Makefile,v 1.7 1999/12/21 16:20:24 pooka Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -27,10 +27,17 @@ DEPENDS+=		ncurses-4.2:../../devel/ncurses
 .endif
 
 post-install:
-	@${LN} ${PREFIX}/man/man1/vim.1 ${PREFIX}/man/man1/gvim.1
-	@${LN} ${PREFIX}/man/man1/view.1 ${PREFIX}/man/man1/gview.1
-	@${LN} ${PREFIX}/man/man1/rvim.1 ${PREFIX}/man/man1/rgvim.1
-	@${LN} ${PREFIX}/man/man1/rview.1 ${PREFIX}/man/man1/rgview.1
+	@if [ -f ${PREFIX}/man/man1/vim.1.gz ]; then                           \
+		${LN} ${PREFIX}/man/man1/vim.1.gz ${PREFIX}/man/man1/gvim.1;   \
+		${LN} ${PREFIX}/man/man1/vim.1.gz ${PREFIX}/man/man1/gview.1;  \
+		${LN} ${PREFIX}/man/man1/vim.1.gz ${PREFIX}/man/man1/rgvim.1;  \
+		${LN} ${PREFIX}/man/man1/vim.1.gz ${PREFIX}/man/man1/rgview.1; \
+	else                                                                   \
+		${LN} ${PREFIX}/man/man1/vim.1 ${PREFIX}/man/man1/gvim.1;      \
+		${LN} ${PREFIX}/man/man1/vim.1 ${PREFIX}/man/man1/gview.1;     \
+		${LN} ${PREFIX}/man/man1/vim.1 ${PREFIX}/man/man1/rgvim.1;     \
+		${LN} ${PREFIX}/man/man1/vim.1 ${PREFIX}/man/man1/rgview.1;    \
+	fi
 	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/gvim
 	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/gview
 	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/rgvim
