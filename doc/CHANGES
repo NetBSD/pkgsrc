@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2841 2003/07/20 15:56:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.2842 2003/07/20 20:17:01 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2876,3 +2876,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fetchmail to 6.2.3 [frueauf 2003-07-20]
 	Updated fetchmailconf to 6.2.3 [frueauf 2003-07-20]
 	Updated pkg_comp to 1.8 [jmmv 2003-07-20]
+	Updated mplayer-share to 0.90nb4 [dillo 2003-07-20]
