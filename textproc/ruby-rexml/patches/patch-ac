@@ -1,0 +1,7 @@
+$NetBSD: patch-ac,v 1.1 2004/12/05 15:21:06 taca Exp $
+
+--- src/rexml/encodings/SHIFT_JIS.rb.orig	2004-06-21 01:04:47.000000000 +0900
++++ src/rexml/encodings/SHIFT_JIS.rb
+@@ -1 +1 @@
+-require 'rexml/encodings/Shift-JIS'
++load 'rexml/encodings/SHIFT-JIS.rb'
