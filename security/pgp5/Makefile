@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/12/31 14:25:30 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/14 18:00:48 bad Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://ftp.pgpi.com/pub/pgp/5.0/unix/ \
 MAINTAINER=	mjl@emsi.priv.at
 HOMEPAGE=       http://www.pgpi.com/
 
-BUILD_DEPENDS=	perl:../../lang/perl5
+BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 
 RESTRICTED=	"Cryptographic software"
 MIRROR_DISTFILE=no
