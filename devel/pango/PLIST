@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2002/12/09 16:01:19 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/12/22 18:06:21 jmmv Exp $
 bin/pango-querymodules
-etc/pango/pango.modules
-etc/pango/pangox.aliases
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
 include/pango-1.0/pango/pango-context.h
@@ -83,6 +81,8 @@ lib/pango/1.0.0/modules/pango-thai-x.so
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangoft2.pc
 lib/pkgconfig/pangox.pc
+share/examples/pango/pango.modules
+share/examples/pango/pangox.aliases
 share/gtk-doc/html/pango/index.html
 share/gtk-doc/html/pango/index.sgml
 share/gtk-doc/html/pango/layout.gif
@@ -109,9 +109,9 @@ share/gtk-doc/html/pango/rendering.html
 @dirrm share/gtk-doc/html/pango
 @unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
+@dirrm share/examples/pango
 @dirrm lib/pango/1.0.0/modules
 @dirrm lib/pango/1.0.0
 @dirrm lib/pango
 @dirrm include/pango-1.0/pango
 @dirrm include/pango-1.0
-@dirrm etc/pango

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2002/12/19 13:14:37 grant Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/22 18:06:21 jmmv Exp $
 #
 
 DISTNAME=		pango-1.0.5
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \
@@ -24,6 +25,13 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/pangox.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pangowin32.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/pangoxft.pc.in
 
+PKG_SYSCONFSUBDIR=	pango
+EGDIR=			${PREFIX}/share/examples/pango
+CONF_FILES=		${EGDIR}/pango.modules ${PKG_SYSCONFDIR}/pango.modules
+CONF_FILES+=		${EGDIR}/pangox.aliases ${PKG_SYSCONFDIR}/pangox.aliases
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
 .include "../../mk/bsd.prefs.mk"
 
 # directory appeared in XFree86 4.*
@@ -43,4 +51,5 @@ test: build
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
