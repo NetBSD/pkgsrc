@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/11 01:46:30 abs Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/14 15:29:15 jlam Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
@@ -24,8 +24,8 @@ LIBTOOL_OVERRIDE=	${WRKDIR}/${DISTNAME}/build_unix/libtool
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
 
-CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/dist/config.sub
-CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/dist/config.guess
+CONFIG_SUB_OVERRIDE+=	../dist/config.sub
+CONFIG_GUESS_OVERRIDE+=	../dist/config.guess
 
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db3_,
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db3
