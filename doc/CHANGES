@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2633 2003/06/30 07:29:12 jlam Exp $
+$NetBSD: CHANGES,v 1.2634 2003/06/30 07:31:51 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2624,3 +2624,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ImageMagick to 5.5.7.9 [tron 2003-06-30]
 	Updated p5-PerlMagick to 5.5.7.9 [tron 2003-06-30]
 	Updated xlockmore to 5.08.1nb1 [jlam 2003-06-30]
+	Added xlockmore-lite-5.08.1 [jlam 2003-06-30]
