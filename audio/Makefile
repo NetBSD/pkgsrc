@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2005/01/12 14:02:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.272 2005/01/17 09:47:50 seb Exp $
 #
 
 COMMENT=	Audio tools
@@ -9,6 +9,7 @@ SUBDIR+=	SDL-nas
 SUBDIR+=	SDL_mixer
 SUBDIR+=	SDL_sound
 SUBDIR+=	abcde
+SUBDIR+=	amarok
 SUBDIR+=	amp
 SUBDIR+=	applerecords
 SUBDIR+=	arts
