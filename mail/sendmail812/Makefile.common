@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2005/03/25 10:45:44 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/03/30 21:54:19 adrianp Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -26,7 +26,7 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_OPENLDAP USE_DB2 \
-		USE_SASL USE_SASL2 USE_STARTTLS USE_DB4
+		USE_SASL2 USE_STARTTLS USE_DB4
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
