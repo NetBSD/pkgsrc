@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2945 2005/01/21 09:51:38 adam Exp $
+$NetBSD: TODO,v 1.2946 2005/01/21 12:25:30 abs Exp $
 
 Suggested new packages
 ======================
@@ -581,7 +581,6 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.3
-	o jakarta-tomcat-5.0.30
 	o jessie-1.0.0
 	o jftpgw-0.13.5
 	o jhead-2.2
