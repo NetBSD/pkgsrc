@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2453 2004/11/25 17:25:57 ben Exp $
+$NetBSD: TODO,v 1.2454 2004/11/25 18:17:37 snj Exp $
 
 Suggested new packages
 ======================
@@ -1360,7 +1360,6 @@ Suggested package updates
 	o xdaliclock-2.20
 	o xdialog-2.1.2
 	o xdx-1.2
-	o xemacs-current-21.5.18
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
