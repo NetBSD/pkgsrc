@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8959 2005/01/28 09:12:27 tron Exp $
+$NetBSD: CHANGES,v 1.8960 2005/01/28 11:54:54 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -639,3 +639,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Update xlockmore to 5.15 [hubertf 2005-01-28]
 	Added scponly-4.0 [snj 2005-01-28]
 	Updated mencvcd to 0.3 [tron 2005-01-28]
+	Updated pcb-current to 20050127 [dmcmahill 2005-01-28]
