@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2004/12/25 02:54:49 wiz Exp $
+# $NetBSD: options.mk,v 1.1.2.1 2005/03/26 10:53:35 snj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg
-PKG_SUPPORTED_OPTIONS=	i586-optimized idea ldap m68060-optimized
+PKG_SUPPORTED_OPTIONS=	i586-optimized curl idea ldap m68060-optimized
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,10 +30,12 @@ ONLY_FOR_PLATFORM=	*-*-i386
 MACHINE_GNU_ARCH=	i586
 .endif
 
-.if !empty(PKG_OPTIONS:Mm68060-optimized)
-# be more efficient on M68060 machines
-CONFIGURE_ENV+=                M68060=${M68060}
-CFLAGS+=                       -m68060
+.if !empty(PKG_OPTIONS:Mcurl)
+.include "../../www/curl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libcurl
+PLIST_SUBST+=	CURL="" NOCURL="@comment "
+.else
+PLIST_SUBST+=	CURL="@comment " NOCURL=""
 .endif
 
 .if !empty(PKG_OPTIONS:Midea)
@@ -53,4 +55,10 @@ PLIST_SUBST+=	OPENLDAP=""
 .else
 CONFIGURE_ARGS+=--disable-ldap
 PLIST_SUBST+=	OPENLDAP="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Mm68060-optimized)
+# be more efficient on M68060 machines
+CONFIGURE_ENV+=                M68060=${M68060}
+CFLAGS+=                       -m68060
 .endif
