@@ -1,0 +1,21 @@
+$NetBSD: patch-bk,v 1.4 2005/03/25 17:40:25 wennmach Exp $
+
+Fix LP64 issue.
+Fix gcc warning.
+
+--- appl/vos/vos_dump.c.orig	2005-03-23 12:41:00.000000000 +0100
++++ appl/vos/vos_dump.c	2005-03-23 12:53:50.000000000 +0100
+@@ -98,11 +98,11 @@
+     if (isdigit(volume[0])) {
+ 	char *end;
+ 	vol_id = strtoul(volume, &end, 10);
+-	if (vol_id != ULONG_MAX && *end == '\0')
++	if (vol_id != UINT_MAX && *end == '\0')
+ 	    have_volid = 1;
+     }
+     if (!have_volid) {
+-	int type = volname_canonicalize(volume);
++	int type = volname_canonicalize((char *)volume);
+ 	vol_id = the_vlentry.volumeId[type];
+     }
+ 
