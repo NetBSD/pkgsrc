@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.version,v 1.23 2004/09/25 20:45:49 epg Exp $
+# $NetBSD: Makefile.version,v 1.24 2004/09/30 14:39:33 epg Exp $
 
 .if !defined(SVNVER)
-SVNVER=		1.0.8
+SVNVER=		1.1.0
 .endif
