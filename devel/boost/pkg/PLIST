@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2000/07/13 18:25:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/08/11 20:20:40 jlam Exp $
 include/boost/array.hpp
+include/boost/array_traits.hpp
 include/boost/call_traits.hpp
 include/boost/cast.hpp
 include/boost/compose.hpp
@@ -44,14 +45,30 @@ include/boost/stdint.h
 include/boost/timer.hpp
 include/boost/type_traits.hpp
 include/boost/utility.hpp
+lib/libboost.a
+lib/libboost.la
+lib/libboost.so.0.0
 share/doc/html/boost/c++boost.gif
 share/doc/html/boost/index.htm
 share/doc/html/boost/libraries.htm
-share/doc/html/boost/libs/array/array-article.html
-share/doc/html/boost/libs/array/array_traits.html
-share/doc/html/boost/libs/array/index.html
+share/doc/html/boost/libs/array/array.hpp.html
+share/doc/html/boost/libs/array/array.htm
+share/doc/html/boost/libs/array/array1.cpp
+share/doc/html/boost/libs/array/array1.cpp.html
+share/doc/html/boost/libs/array/array2.cpp
+share/doc/html/boost/libs/array/array2.cpp.html
+share/doc/html/boost/libs/array/array3.cpp
+share/doc/html/boost/libs/array/array3.cpp.html
+share/doc/html/boost/libs/array/array4.cpp
+share/doc/html/boost/libs/array/array4.cpp.html
+share/doc/html/boost/libs/array/array5.cpp
+share/doc/html/boost/libs/array/array5.cpp.html
+share/doc/html/boost/libs/array/index.htm
+share/doc/html/boost/libs/array/print.hpp.html
+share/doc/html/boost/libs/array_traits/array-article.html
+share/doc/html/boost/libs/array_traits/array_traits.html
+share/doc/html/boost/libs/array_traits/index.html
 share/doc/html/boost/libs/compiler_status.htm
-share/doc/html/boost/libs/compose/compose.hpp
 share/doc/html/boost/libs/compose/compose.hpp.html
 share/doc/html/boost/libs/compose/compose.html
 share/doc/html/boost/libs/compose/compose1.cpp
@@ -67,6 +84,8 @@ share/doc/html/boost/libs/compose/print.hpp
 share/doc/html/boost/libs/compose/print.hpp.html
 share/doc/html/boost/libs/config/config_test.cpp
 share/doc/html/boost/libs/config/index.htm
+share/doc/html/boost/libs/cs-linux2.html
+share/doc/html/boost/libs/cs-win32.html
 share/doc/html/boost/libs/functional/binders.html
 share/doc/html/boost/libs/functional/function_test.cpp
 share/doc/html/boost/libs/functional/function_traits.html
@@ -120,6 +139,7 @@ share/doc/html/boost/libs/random/statistic_tests.hpp
 share/doc/html/boost/libs/rational/index.html
 share/doc/html/boost/libs/rational/rational.html
 share/doc/html/boost/libs/rational/rational_example.cpp
+share/doc/html/boost/libs/regrtest.py
 share/doc/html/boost/libs/smart_ptr/gccspeed.gif
 share/doc/html/boost/libs/smart_ptr/index.htm
 share/doc/html/boost/libs/smart_ptr/msvcspeed.gif
@@ -137,11 +157,13 @@ share/doc/html/boost/libs/timer/timer.cpp
 share/doc/html/boost/libs/timer/timer.htm
 share/doc/html/boost/libs/timer/timer_test.cpp
 share/doc/html/boost/libs/utility/algo_opt_examples.cpp
+share/doc/html/boost/libs/utility/c++_type_traits.htm
 share/doc/html/boost/libs/utility/call_traits.htm
 share/doc/html/boost/libs/utility/call_traits_test.cpp
 share/doc/html/boost/libs/utility/cast.htm
 share/doc/html/boost/libs/utility/cast_test.cpp
 share/doc/html/boost/libs/utility/compressed_pair.htm
+share/doc/html/boost/libs/utility/compressed_pair_test.cpp
 share/doc/html/boost/libs/utility/index.htm
 share/doc/html/boost/libs/utility/iterators_test.cpp
 share/doc/html/boost/libs/utility/noncopyable_test.cpp
@@ -149,9 +171,11 @@ share/doc/html/boost/libs/utility/operators.htm
 share/doc/html/boost/libs/utility/operators_test.cpp
 share/doc/html/boost/libs/utility/type_traits.htm
 share/doc/html/boost/libs/utility/type_traits_test.cpp
+share/doc/html/boost/libs/utility/type_traits_test.hpp
 share/doc/html/boost/libs/utility/utility.htm
 share/doc/html/boost/more/count_bdy.htm
 share/doc/html/boost/more/faq.htm
+share/doc/html/boost/more/feature_model_diagrams.htm
 share/doc/html/boost/more/formal_review_process.htm
 share/doc/html/boost/more/header.htm
 share/doc/html/boost/more/imp_vars.htm
@@ -160,21 +184,18 @@ share/doc/html/boost/more/lib_guide.htm
 share/doc/html/boost/more/submission_process.htm
 share/doc/html/boost/more/use_other_libs.htm
 @dirrm share/doc/html/boost/more
-@dirrm share/doc/html/boost/libs/utility/debug
 @dirrm share/doc/html/boost/libs/utility
 @dirrm share/doc/html/boost/libs/timer
-@dirrm share/doc/html/boost/libs/smart_ptr/debug
 @dirrm share/doc/html/boost/libs/smart_ptr
-@dirrm share/doc/html/boost/libs/rational/debug
 @dirrm share/doc/html/boost/libs/rational
 @dirrm share/doc/html/boost/libs/random
 @dirrm share/doc/html/boost/libs/pri_queue
 @dirrm share/doc/html/boost/libs/min_rand
-@dirrm share/doc/html/boost/libs/integer/debug
 @dirrm share/doc/html/boost/libs/integer
 @dirrm share/doc/html/boost/libs/functional
 @dirrm share/doc/html/boost/libs/config
 @dirrm share/doc/html/boost/libs/compose
+@dirrm share/doc/html/boost/libs/array_traits
 @dirrm share/doc/html/boost/libs/array
 @dirrm share/doc/html/boost/libs
 @dirrm share/doc/html/boost
