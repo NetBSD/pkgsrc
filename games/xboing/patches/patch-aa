@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1 1998/08/18 09:25:17 frueauf Exp $
+
+--- Imakefile.orig	Thu Nov 21 18:28:46 1996
++++ Imakefile	Mon Aug 17 22:46:15 1998
+@@ -26,3 +26,3 @@
+ 
+-    XBOING_DIR = .
++    XBOING_DIR = $(X11BASE)/share/xboing
+ 
+@@ -31,10 +31,10 @@
+ 
+-    XPMLIB 				= -L/usr/X11/lib -lXpm
+-    XPMINCLUDE 			= -I/usr/X11/include/X11
++    XPMLIB 			= -L$(X11BASE)/lib -lXpm
++    XPMINCLUDE 			= -I$(X11BASE)/include/X11
+     XBOINGINCLUDE 		= -I./include
+-    LEVEL_INSTALL_DIR 	= $(XBOING_DIR)/levels
++    LEVEL_INSTALL_DIR 		= $(XBOING_DIR)/levels
+     SOUNDS_DIR 			= $(XBOING_DIR)/sounds
+     BACKUP_DIR 			= $(XBOING_DIR)/../backups
+-    HIGH_SCORE_FILE 	= $(XBOING_DIR)/.xboing.scr
+-    AUDIO_AVAILABLE 	= False
++    HIGH_SCORE_FILE 		= $(XBOING_DIR)/.xboing.scr
++    AUDIO_AVAILABLE 		= False
+     AUDIO_SRC 			= audio/NOaudio.c
+@@ -42,3 +42,3 @@
+     AUDIO_LIB 			=
+-	CDEBUGFLAGS         = -g
++    CDEBUGFLAGS         	= -O
+ 
+@@ -83,3 +83,3 @@
+ 
+-#if defined(SparcArchitecture) && defined(COMPILE_IN_AUDIO)
++#if defined(SparcArchitecture) && defined(COMPILE_IN_AUDIO) && !defined(__NetBSD__)
+     AUDIO_AVAILABLE	= True
+@@ -134,4 +134,4 @@
+         -DSOUNDS_DIR=\"$(SOUNDS_DIR)\" \
+-        -DREADMEP_FILE=\"$(XBOING_DIR)/docs/problems.doc\"
+-XCOMM   -DUSE_FLOCK=\"True\" \
++        -DREADMEP_FILE=\"$(XBOING_DIR)/docs/problems.doc\" \
++        -DUSE_FLOCK=\"True\" \
+ XCOMM   -DNEED_USLEEP=\"True\" \
+@@ -207,3 +207,4 @@
+ 	@touch $(HIGH_SCORE_FILE);
+-	@chmod a+rw $(HIGH_SCORE_FILE);
++	@chown bin:games $(HIGH_SCORE_FILE);
++	@chmod 0664 $(HIGH_SCORE_FILE);
+ 
