@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/07/20 15:30:08 tron Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/21 21:01:32 hubertf Exp $
 #
 
 DISTNAME=	py152
@@ -21,7 +21,7 @@ EXTRACT_ELEMENTS=	Python-1.5.2/Modules/readline.c
 PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config
 
 .if ${MACHINE_ARCH} == "sparc64"
-IGNORE="Needs dynamic loading"
+IGNORE="${PKGNAME} needs dynamic loading"
 .endif
 
 do-configure:

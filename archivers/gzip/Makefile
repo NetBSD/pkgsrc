@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/18 14:27:54 kim Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/21 21:01:29 hubertf Exp $
 #
 
 DISTNAME=	gzip-1.2.4a
@@ -21,7 +21,7 @@ NO_BUILD=	yes
 do-install:	# empty
 
 .if exists(/usr/bin/gzip)
-IGNORE=		"is part of your NetBSD distribution"
+IGNORE=		"${PKGNAME} is part of your NetBSD distribution"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
