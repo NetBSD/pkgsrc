@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4359 2004/01/05 10:09:57 cube Exp $
+$NetBSD: CHANGES,v 1.4360 2004/01/05 10:48:13 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -63,3 +63,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Delete kochi-otf [uebayasi 2003-01-05]
 	Updated libtool to 1.4.20010614nb19 [cube 2004-01-05]
 	Updated lua to 5.0.1 [cube 2004-01-05]
+	Updated perl58 to 5.8.1nb1 [grant 2004-01-05]
