@@ -1,10 +1,38 @@
---- kscreensaver/main.cpp.orig	Sat Jan 10 01:13:31 1998
-+++ kscreensaver/main.cpp	Wed Mar 18 22:19:20 1998
-@@ -288,6 +288,7 @@
- 	}
+--- configure.orig	Sun Apr 19 01:22:26 1998
++++ configure	Mon Apr 27 20:00:47 1998
+@@ -3842,7 +3842,7 @@
  
- 	initPasswd();
-+	setuid (getuid ());
  
- 	if ( mode == MODE_INSTALL )
- 	{
+   ac_save_LIBS=$LIBS
+-  LIBS="$LIBS -ldl"
++  LIBS="$LIBS"
+   echo $ac_n "checking for main in -lpam_misc""... $ac_c" 1>&6
+ echo "configure:3848: checking for main in -lpam_misc" >&5
+ ac_lib_var=`echo pam_misc'_'main | sed 'y%./+-%__p_%'`
+@@ -3968,7 +3968,7 @@
+  test "x$pam_libraries" = xNONE && pam_libraries=$ac_pam_libraries
+  
+  if test ! "x$pam_includes" = xNONE && test ! "x$pam_libraries" = xNONE; then
+-   ac_pam_libs="-lpam $PAM_MISC_LIB -ldl"
++   ac_pam_libs="-lpam $PAM_MISC_LIB"
+    ac_cv_path_pam="no_pam= ac_pam_includes=$ac_pam_includes ac_pam_libraries=$ac_pam_libraries ac_pam_libs=\"$ac_pam_libs\""
+  else
+    ac_cv_path_pam="no_pam=yes"
+@@ -4039,7 +4039,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lpam -ldl $LIBS"
++LIBS="-lpam $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 4045 "configure"
+ #include "confdefs.h"
+@@ -4063,7 +4063,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  PASSWDLIB="-lpam -ldl"
++  PASSWDLIB="-lpam"
+   cat >> confdefs.h <<EOF
+ #define HAVE_PAM_LIB 1
+ EOF
