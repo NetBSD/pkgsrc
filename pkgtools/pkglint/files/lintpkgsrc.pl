@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.89 2004/05/10 00:19:43 atatat Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.90 2004/06/27 22:47:38 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -29,7 +29,7 @@ my(	$pkglist,		# list of Pkg packages
 	%prebuilt_pkgdir_cache,	# To avoid symlink loops in prebuilt_pkgdirs
 	);
 
-$ENV{PATH} .= ':/usr/sbin';
+$ENV{PATH} .= ':/bin:/usr/bin:/sbin:/usr/sbin:@PREFIX@/sbin:@PREFIX@/bin';
 
 if (! getopts('BDE:I:K:LM:OP:RSVdg:hilmopru', \%opt) || $opt{h} ||
 	! ( defined($opt{d}) || defined($opt{g}) || defined($opt{i}) ||
@@ -408,6 +408,8 @@ sub get_default_makefile_vars
     ( $default_vars->{OPSYS},
 	$default_vars->{OS_VERSION},
 	$default_vars->{MACHINE} ) = (split);
+    if (!$default_vars->{MACHINE})
+	{ die('Unable to extract machine from uname'); }
 
     # Handle systems without uname -p  (NetBSD pre 1.4)
     chomp($default_vars->{MACHINE_ARCH} = `uname -p 2>/dev/null`);
@@ -724,6 +726,11 @@ sub parse_makefile_pkgsrc
 	{ $pkgname = $vars->{PKGNAME}; }
     elsif (defined $vars->{DISTNAME})
 	{ $pkgname = $vars->{DISTNAME}; }
+    if (defined $vars->{PKGNAME})
+	{ debug("$file: PKGNAME=$vars->{PKGNAME}\n"); }
+    if (defined $vars->{DISTNAME})
+	{ debug("$file: DISTNAME=$vars->{DISTNAME}\n"); }
+
     if ($pkgname !~ /(.*)-(\d.*)/)
 	{
 	# invoke make here as a last resort
@@ -782,7 +789,6 @@ sub parse_makefile_vars
     my($CURDIR, $NEWCURDIR, $pkgname, %vars, $plus, $value, @data,
        %incfiles,
        @if_false); # 0:true 1:false 2:nested-false&nomore-elsif
-
 
     if (! open(FILE, $file))
 	{ return(undef); }
@@ -974,16 +980,16 @@ sub parse_makefile_vars
 		# If $vars{$subvar} contains a $ skip it on this pass.
 		# Hopefully it will get substituted and we can catch it
 		# next time around.
-		if (index($result, '${') != -1)
+		if (index($result, '${') != -1)  #} to help bracket match
 		    { next; }
 
 		debug("$file: substitutelist $key ($result) $subvar (@patterns)\n");
 		foreach (@patterns)
 		    {
-		    if (! m#([CS])/([^/]+)/([^/]*)/([1g]*)#)
+		    if (! m#([CS])(.)([^/]+)\2([^/]*)\2([1g]*)#)
 			{ next; }
 
-		    my($how, $from, $to, $global) = ($1, $2, $3, $4);
+		    my($how, $from, $to, $global) = ($1, $3, $4, $5);
 
 		    debug("$file: substituteglob $subvar, $how, $from, $to, $global\n");
 		    if ($how eq 'S') # Limited substitution - keep ^ and $
@@ -1017,7 +1023,7 @@ sub parse_expand_vars
 	if (defined(${$vars}{$1}))
 	    { $line = $`.${$vars}{$1}.$'; }
 	else
-	    { $line = $`.'UNDEFINED'.$'; }
+	    { $line = $`.$'; }
 	}
     $line;
     }
@@ -1031,7 +1037,7 @@ sub parse_expand_vars_dumb
 	if (defined(${$vars}{$1}))
 	    { $line = $`.${$vars}{$1}.$'; }
 	else
-	    { $line = $`.'UNDEFINED'.$'; }
+	    { $line = $`.$'; }
 	}
     $line;
     }
@@ -1141,7 +1147,7 @@ sub scan_pkgsrc_makefiles
 	}
     $pkglist = new PkgList;
     @categories = list_pkgsrc_categories($pkgsrcdir);
-    verbose("Scanning pkgsrc Makefiles: ");
+    verbose("Scanning Makefiles: ");
     if (!$opt{L})
 	{ verbose('_'x@categories."\b"x@categories); }
     else
@@ -1201,7 +1207,7 @@ sub scan_pkgsrc_distfiles_vs_distinfo
 
     @categories = list_pkgsrc_categories($pkgsrcdir);
 
-    verbose("Scanning pkgsrc distinfo: ".'_'x@categories."\b"x@categories);
+    verbose("Scanning distinfo: ".'_'x@categories."\b"x@categories);
     $numpkg = 0;
     foreach my $cat (sort @categories)
 	{
