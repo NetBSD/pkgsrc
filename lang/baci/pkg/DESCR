@@ -1,0 +1,14 @@
+BACI stands for Ben-Ari Concurrent Interpreter. The compiler and interpreter
+originally were procedures in a program written by M. Ben-Ari, based on the
+original Pascal compiler by Niklaus Wirth. The original version of the BACI
+compiler and interpreter was created from that source code and was hosted on
+a PRIME mainframe.  After several modifications and additions, this version
+was ported to a PC version in Turbo Pascal, to Sun Pascal, and to C. Finally,
+the compiler and interpreter were split into two seperate programs.
+
+Recently, a C-- compiler has been added to the BACI suite of programs to
+compile source programs written in a restricted dialect of C++ into PCODE
+object code executable by the interpreter. Compared with other concurrent
+languages, BACI offers a variety of synchronization techniques with a
+syntax that is usually familiar. Any experienced C or Pascal programmer could
+use BACI within hours.

@@ -1,0 +1,48 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/25 12:44:34 wulf Exp $
+
+--- interp/bainterp.c.orig	Mon Jul 24 00:24:03 2000
++++ interp/bainterp.c	Mon Jul 24 00:25:36 2000
+@@ -240,8 +240,8 @@
+          else {
+             ptab[curpr].t--;
+             h2 = PMAXP1;  /* code like chooseproc */
+-            h3 = random(h2);
+-            h4 = 1 + random(PMAX);
++            h3 = __random(h2);
++            h4 = 1 + __random(PMAX);
+             while (( h2 >= 0 ) && (ptab[h3].suspend != h1 )){
+                h3 = (h3+h4) % (PMAXP1);
+                h2--;
+@@ -294,8 +294,8 @@
+             else { /* semaphore was initialized */
+                ptab[curpr].monitor = 0;
+                h2 = PMAXP1;
+-               h3 = random(h2);
+-               h5 = 1 + random(PMAX);
++               h3 = __random(h2);
++               h5 = 1 + __random(PMAX);
+                while ((h2 >= 0) &&
+                  ((ptab[h3].monitor != h4) || (ptab[h3].suspend >= 0 ))){
+                   h3 = (h3 + h5) % (PMAXP1);
+@@ -319,8 +319,8 @@
+             ptab[curpr].active = 0;
+             stepcount = 0;
+             h2 = PMAXP1;
+-            h3 = random(h2);
+-            h5 = 1 + random(PMAX);
++            h3 = __random(h2);
++            h5 = 1 + __random(PMAX);
+             while ((h2 >= 0) && 
+                ((ptab[h3].monitor != h4) || (ptab[h3].suspend >=0 ))){
+                h3 = (h3 + h5) % (PMAXP1);
+@@ -339,8 +339,8 @@
+          else { /* monitor sem was OK */
+             h1 = s[ptab[curpr].t];
+             ptab[curpr].t--;
+-            h3 = random(PMAXP1);
+-            h6 = 1 + random(PMAX);
++            h3 = __random(PMAXP1);
++            h6 = 1 + __random(PMAX);
+             h5 = 0;
+             minprior = MAXPRIO;
+             for (h2 = 0; h2 <= PMAX; h2++) {
