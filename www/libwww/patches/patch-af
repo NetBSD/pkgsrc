@@ -1,8 +1,24 @@
-$NetBSD: patch-af,v 1.1 2001/04/20 12:33:53 fredb Exp $
+$NetBSD: patch-af,v 1.2 2003/10/08 03:24:17 danw Exp $
 
 --- Library/src/wwwsys.h.orig	Wed Dec 20 05:00:07 2000
 +++ Library/src/wwwsys.h
-@@ -1138,25 +1138,24 @@
+@@ -925,6 +925,7 @@
+ #endif
+ 
+ /* appkit.h */
++#ifdef __NeXT__
+ #ifdef HAVE_APPKIT_APPKIT_H
+ #include <appkit/appkit.h>
+ #else
+@@ -932,6 +933,7 @@
+ #include <appkit.h>
+ #endif
+ #endif
++#endif
+ 
+ /* dn.h */
+ #ifdef HAVE_DN_H
+@@ -1225,25 +1227,24 @@
  #ifdef SOCKS4
  #define connect	        Rconnect
  #define getsockname	Rgetsockname
