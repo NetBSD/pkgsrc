@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3346 2003/09/12 20:48:47 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.3347 2003/09/12 21:22:33 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3662,3 +3662,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pico to 4.6nb1 [tron 2003-09-12]
 	Updated scilab to 2.7nb2 [dmcmahill 2003-09-12]
 	Updated gwave to 20030804 [dmcmahill 2003-09-12]
+	Updated p5-Digest-SHA1 to 2.04 [jlam 2003-09-12]
