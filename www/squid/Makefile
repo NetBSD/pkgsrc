@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/04/09 17:54:26 bad Exp $
+# $NetBSD: Makefile,v 1.9 1999/05/02 00:48:31 tron Exp $
 #
 
 DISTNAME=	squid-2.0.PATCH2
@@ -24,8 +24,13 @@ CONFIGURE_ARGS=	--sysconfdir=/etc \
 # Options you might want to enable
 CONFIGURE_ARGS+=	--enable-cachemgr-hostname=localhost
 CONFIGURE_ARGS+=	--enable-icmp
+CONFIGURE_ARGS+=	--enable-ipf-transparent
 #CONFIGURE_ARGS+=	--enable-snmp
-CONFIGURE_ENV+= PERL=${LOCALBASE}/bin/perl
+
+CPPFLAGS=		-I/usr/include/netinet
+CFLAGS+=		${CPPFLAGS}
+CONFIGURE_ENV+=		CPPFLAGS=${CPPFLAGS} \
+			PERL=${LOCALBASE}/bin/perl
 
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
