@@ -1,5 +1,5 @@
---- configure.orig	Mon Feb 16 21:59:23 1998
-+++ configure	Thu Feb 19 16:04:30 1998
+--- configure.orig	Tue Apr  7 08:05:44 1998
++++ configure	Tue Apr 21 23:38:17 1998
 @@ -9,7 +9,7 @@
  
  # Defaults:
@@ -8,8 +8,8 @@
 +ac_default_prefix=${prefix}
  # Any additions from configure.in:
  ac_help="$ac_help
-   --enable-perlinterp     Include a Perl interpreter in vi."
-@@ -1295,25 +1295,25 @@
+   --enable-perlinterp     Include Perl interpreter."
+@@ -1327,25 +1327,25 @@
      /usr/include/X11R5        \
      /usr/include/X11R4        \
                                \
@@ -45,7 +45,7 @@
      /usr/lpp/Xamples/include  \
                                \
      /usr/openwin/include      \
-@@ -1370,25 +1370,25 @@
+@@ -1402,25 +1402,25 @@
      /usr/lib/X11R5        \
      /usr/lib/X11R4        \
                            \
@@ -81,21 +81,12 @@
      /usr/lpp/Xamples/lib  \
      /lib/usr/lib/X11	  \
                            \
-@@ -2248,7 +2248,7 @@
+@@ -2280,7 +2280,7 @@
  
  
  if test -z "$SKIP_MOTIF"; then
 -  gui_includes="`echo $x_includes|sed 's%/^/^/*$%%'` /local/Motif*/include /local/include/Motif* /usr/local/Motif*/include /usr/local/include/Motif* /usr/include/Motif* /usr/Motif*/include /usr/local/include /usr/local/X11*/include /usr/include /usr/X11*/include /usr/include/X11* /usr/dt/include $MOTIFHOME/include $GUI_INC_LOC"
 +  gui_includes="`echo $x_includes|sed 's%/^/^/*$%%'` /local/Motif*/include /local/include/Motif* ${prefix}/Motif*/include ${prefix}/include/Motif* /usr/include/Motif* /usr/Motif*/include ${prefix}/include ${prefix}/X11*/include /usr/include /usr/X11*/include /usr/include/X11* /usr/dt/include $MOTIFHOME/include $GUI_INC_LOC"
    echo $ac_n "checking for location of Motif GUI includes""... $ac_c" 1>&6
- echo "configure:2254: checking for location of Motif GUI includes" >&5
+ echo "configure:2286: checking for location of Motif GUI includes" >&5
    GUI_INC_LOC=
-@@ -2270,7 +2270,7 @@
- if test -z "$SKIP_MOTIF"; then
-   echo $ac_n "checking for location of Motif GUI libs""... $ac_c" 1>&6
- echo "configure:2273: checking for location of Motif GUI libs" >&5
--  gui_libs="`echo $x_libraries|sed 's%/^/^/*$%%'` `echo "$GUI_INC_LOC" | sed s/include/lib/` /local/Motif*/lib /local/lib/Motif* /usr/local/Motif*/lib /usr/local/lib/Motif* /usr/Motif*/lib /usr/lib/Motif* /usr/local/lib /usr/local/X11*/lib /usr/lib /usr/X11*/lib /usr/lib/X11* /usr/dt/lib $MOTIFHOME/lib $GUI_LIB_LOC"
-+  gui_libs="`echo $x_libraries|sed 's%/^/^/*$%%'` `echo "$GUI_INC_LOC" | sed s/include/lib/` /local/Motif*/lib /local/lib/Motif* ${prefix}/Motif*/lib ${prefix}/lib/Motif* /usr/Motif*/lib /usr/lib/Motif* ${prefix}/lib ${prefix}/X11*/lib /usr/lib /usr/X11*/lib /usr/lib/X11* /usr/dt/lib $MOTIFHOME/lib $GUI_LIB_LOC"
-   GUI_LIB_LOC=
-   for try in $gui_libs; do
-     if test -f "$try/libXm.a" -o -f "$try/libXm.so" -o -f "$try/libXm.sl"; then
