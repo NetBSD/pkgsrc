@@ -1,15 +1,5 @@
-$NetBSD: distinfo,v 1.10 2004/11/12 05:23:33 erh Exp $
+$NetBSD: distinfo,v 1.11 2005/01/15 21:14:27 wiz Exp $
 
-SHA1 (mc-4.5.51.tar.gz) = 24d5d90695266587a2e8190196b32c8f3a4b2406
-Size (mc-4.5.51.tar.gz) = 4330056 bytes
-SHA1 (patch-aa) = 57bd96ecafd94e8bb2bd888c31bf3b1b97937eaf
-SHA1 (patch-ab) = 6da1ccfdcd9b0623bf5619a99c59e67cd70b51b6
-SHA1 (patch-ac) = 36ee4017c74f04efff92e2a79cdb40cd5a4de6ed
-SHA1 (patch-ad) = 9867fe55febd06055ab4bc5415260708fb5d7472
-SHA1 (patch-ae) = c3ad5c2f2ad99782f343f7197a3ebcfb07366dee
-SHA1 (patch-af) = be7b6906f5cd23e28311519b42a1d8c630e98f2e
-SHA1 (patch-ag) = 60e697e475647038181d12186a0424c4a6165c59
-SHA1 (patch-ah) = a5ef804a13870ae5d100a7f6fb45281303da82c3
-SHA1 (patch-ai) = 7bac376900226618f1bb5849cb5ac277bdd4e4f9
-SHA1 (patch-aj) = b9ab663bf8f2d1b048338b85449846869362f125
-SHA1 (patch-ak) = 1277d8072ac279e6c4a8fc5d7334ac831dce1783
+SHA1 (mc-4.6.1-pre2b.tar.gz) = 1e66efa538cd682fca9bee16b4d6b751b4d87bab
+Size (mc-4.6.1-pre2b.tar.gz) = 3903628 bytes
+SHA1 (patch-ab) = 7f6ace2493bc2e453f570153073183a289fbd153
