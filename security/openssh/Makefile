@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2000/12/08 08:52:35 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.33 2001/01/10 15:10:59 tron Exp $
 
 DISTNAME=		openssh-2.3.0p1
 CATEGORIES=		security
@@ -55,7 +54,7 @@ MESSAGE_FILE=		${WRKDIR}/MESSAGE
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-m68k NetBSD-*-mips NetBSD-*-mipseb \
 			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-powerpc \
-			NetBSD-*-sparc NetBSD-*-vax
+			NetBSD-*-sparc NetBSD-*-vax SunOS-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -87,6 +86,7 @@ post-build:
 	do \
 		${SED}	-e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
 			-e 's#@PREFIX@#${PREFIX}#g' \
+			-e 's#@OPSYS@#${OPSYS}#g' \
 			< $${FILE} > ${WRKDIR}/`basename $${FILE}`; \
 	done
 
