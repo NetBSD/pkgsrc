@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:28 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/02/17 21:55:44 jlam Exp $
 bin/esd
 bin/esd-config
 bin/esdcat
@@ -9,7 +9,6 @@ bin/esdloop
 bin/esdplay
 bin/esdrec
 bin/esdsample
-etc/esd.conf
 include/esd.h
 lib/libesd.a
 lib/libesd.la
@@ -18,4 +17,6 @@ lib/libesd.so.2
 lib/libesd.so.2.23
 lib/pkgconfig/esound.pc
 share/aclocal/esd.m4
-@unexec ${RMDIR} %D/lib/pkgconfig 2>/dev/null || true
+share/examples/esound/esd.conf
+@dirrm share/examples/esound
+@unexec ${RMDIR} %D/lib/pkgconfig 2>/dev/null || ${TRUE}
