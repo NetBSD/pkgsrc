@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.118 2000/10/17 15:12:00 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.119 2000/10/17 15:29:47 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -12,7 +12,7 @@
 Table of contents:
 ==================
 
-Run this command to produce a table of contents:`:w
+Run this command to produce a table of contents:
  grep -B1 '^.====' Packages.txt | egrep -v '^.[-=]'
 
 
