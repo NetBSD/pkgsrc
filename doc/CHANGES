@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3338 2003/09/12 12:41:41 jmmv Exp $
+$NetBSD: CHANGES,v 1.3339 2003/09/12 13:00:26 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3650,3 +3650,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated chicken to 1.17 [itojun 2003-09-12]
 	Updated net-snmp to 5.0.9 [uebayasi 2003-09-12]
 	Updated ijb to 2.0.2nb1 [jmmv 2003-09-12]
+	Updated audit-packages to 1.21 [seb 2003-09-12]
