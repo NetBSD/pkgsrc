@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/01/11 22:08:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/19 10:24:18 salo Exp $
 #
 
 DISTNAME=	sp-1.3.4
@@ -21,7 +21,6 @@ CONFLICTS+=	opensp-[0-9]*
 
 USE_BUILDLINK2=	YES
 
-MAKE_ENV+=	INSTALL="${INSTALL}"
 MAKE_ENV+=	PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 
 post-install:
