@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5409 2004/04/01 14:39:05 abs Exp $
+$NetBSD: CHANGES,v 1.5410 2004/04/01 15:15:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1653,4 +1653,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added apache-ant15 [abs 2004-04-01]
 	Updated apache-ant to 1.6.1 [abs 2004-04-01]
 	Updated tscp to 1.81 [abs 2004-04-01]
-
+	Updated libxslt to 1.1.5 [xtraeme 2004-04-01]
