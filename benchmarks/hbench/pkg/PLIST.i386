@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST.i386,v 1.1 1998/09/05 22:02:21 garbled Exp $
+bin/hbench/XXXNETBSDVERXXX-c/bw_bzero
+bin/hbench/XXXNETBSDVERXXX-c/bw_file_rd
+bin/hbench/XXXNETBSDVERXXX-c/bw_mem_cp
+bin/hbench/XXXNETBSDVERXXX-c/bw_mem_rd
+bin/hbench/XXXNETBSDVERXXX-c/bw_mem_wr
+bin/hbench/XXXNETBSDVERXXX-c/bw_mmap_rd
+bin/hbench/XXXNETBSDVERXXX-c/bw_pipe
+bin/hbench/XXXNETBSDVERXXX-c/bw_tcp
+bin/hbench/XXXNETBSDVERXXX-c/hello
+bin/hbench/XXXNETBSDVERXXX-c/hello-s
+bin/hbench/XXXNETBSDVERXXX-c/lat_connect
+bin/hbench/XXXNETBSDVERXXX-c/lat_ctx
+bin/hbench/XXXNETBSDVERXXX-c/lat_ctx2
+bin/hbench/XXXNETBSDVERXXX-c/lat_fs
+bin/hbench/XXXNETBSDVERXXX-c/lat_fslayer
+bin/hbench/XXXNETBSDVERXXX-c/lat_mem_rd
+bin/hbench/XXXNETBSDVERXXX-c/lat_mmap
+bin/hbench/XXXNETBSDVERXXX-c/lat_pipe
+bin/hbench/XXXNETBSDVERXXX-c/lat_proc
+bin/hbench/XXXNETBSDVERXXX-c/lat_rpc
+bin/hbench/XXXNETBSDVERXXX-c/lat_sig
+bin/hbench/XXXNETBSDVERXXX-c/lat_syscall
+bin/hbench/XXXNETBSDVERXXX-c/lat_tcp
+bin/hbench/XXXNETBSDVERXXX-c/lat_udp
+bin/hbench/XXXNETBSDVERXXX-c/memsize
+bin/hbench/XXXNETBSDVERXXX-c/mhz
+bin/hbench/XXXNETBSDVERXXX-c/mhz-counter
+@dirrm bin/hbench/XXXNETBSDVERXXX-c

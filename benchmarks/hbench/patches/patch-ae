@@ -1,0 +1,151 @@
+$NetBSD: patch-ae,v 1.1 1998/09/05 22:02:19 garbled Exp $
+--- scripts/gen-analysis.orig	Sat Sep  5 09:17:12 1998
++++ scripts/gen-analysis	Sat Sep  5 09:19:56 1998
+@@ -47,8 +47,7 @@
+ }
+ 
+ # Step 1: Discover hbench root path
+-$HBENCHROOT=`(cd \`dirname $0\`/.. ; pwd)`;
+-chop($HBENCHROOT);
++$HBENCHROOT="XXXPREFIXXXX/share/hbench";
+ 
+ # Some general system information
+ print "HBench-OS 1.0 Automatic Analysis Output\n";
+@@ -100,7 +99,7 @@
+ $stable = 20;
+ $lastsize = 0.0;
+ foreach $file (@latencyfiles) {
+-    $val = `${HBENCHROOT}/scripts/stats-single lat_mem_rd/$file`;
++    $val = `XXXPREFIXXXX/bin/hbench/stats-single lat_mem_rd/$file`;
+     chop($val);
+ 
+     if ($val > $threshold*$lastval || $val < $lastval*(2-$threshold)) {
+@@ -157,23 +156,23 @@
+ }
+ $drambuf = "4m";
+ 
+-$l1read = `${HBENCHROOT}/scripts/stats-single bw_mem_rd_$l1buf`;
++$l1read = `XXXPREFIXXXX/bin/hbench/stats-single bw_mem_rd_$l1buf`;
+ chop($l1read);
+-$l2read = `${HBENCHROOT}/scripts/stats-single bw_mem_rd_$l2buf`;
++$l2read = `XXXPREFIXXXX/bin/hbench/stats-single bw_mem_rd_$l2buf`;
+ chop($l2read);
+-$dramread = `${HBENCHROOT}/scripts/stats-single bw_mem_rd_$drambuf`;
++$dramread = `XXXPREFIXXXX/bin/hbench/stats-single bw_mem_rd_$drambuf`;
+ chop($dramread);
+-$l1write = `${HBENCHROOT}/scripts/stats-single bw_mem_wr_$l1buf`;
++$l1write = `XXXPREFIXXXX/bin/hbench/stats-single bw_mem_wr_$l1buf`;
+ chop($l1write);
+-$l2write = `${HBENCHROOT}/scripts/stats-single bw_mem_wr_$l2buf`;
++$l2write = `XXXPREFIXXXX/bin/hbench/stats-single bw_mem_wr_$l2buf`;
+ chop($l2write);
+-$dramwrite = `${HBENCHROOT}/scripts/stats-single bw_mem_wr_$drambuf`;
++$dramwrite = `XXXPREFIXXXX/bin/hbench/stats-single bw_mem_wr_$drambuf`;
+ chop($dramwrite);
+-$l1zero = `${HBENCHROOT}/scripts/stats-single bw_bzero_$l1buf`;
++$l1zero = `XXXPREFIXXXX/bin/hbench/stats-single bw_bzero_$l1buf`;
+ chop($l1zero);
+-$l2zero = `${HBENCHROOT}/scripts/stats-single bw_bzero_$l2buf`;
++$l2zero = `XXXPREFIXXXX/bin/hbench/stats-single bw_bzero_$l2buf`;
+ chop($l2zero);
+-$dramzero = `${HBENCHROOT}/scripts/stats-single bw_bzero_$drambuf`;
++$dramzero = `XXXPREFIXXXX/bin/hbench/stats-single bw_bzero_$drambuf`;
+ chop($dramzero);
+ 
+ printf ("    L1\$ : %.2fMB/sec read, %.2fMB/sec write, %.2f read/write ratio\n",
+@@ -217,11 +216,11 @@
+ 
+ print "\n * Comparison of Projected and Measured Copy Bandwidths\n";
+ print   "   (projection is one-half the harmonic mean of raw read/write bandwidths)\n";
+-$l1copy = `${HBENCHROOT}/scripts/stats-single bw_mem_cp_${l1buf}_libc_aligned`;
++$l1copy = `XXXPREFIXXXX/bin/hbench/stats-single bw_mem_cp_${l1buf}_libc_aligned`;
+ chop($l1copy);
+-$l2copy = `${HBENCHROOT}/scripts/stats-single bw_mem_cp_${l2buf}_libc_aligned`;
++$l2copy = `XXXPREFIXXXX/bin/hbench/stats-single bw_mem_cp_${l2buf}_libc_aligned`;
+ chop($l2copy);
+-$dramcopy = `${HBENCHROOT}/scripts/stats-single bw_mem_cp_${drambuf}_libc_aligned`;
++$dramcopy = `XXXPREFIXXXX/bin/hbench/stats-single bw_mem_cp_${drambuf}_libc_aligned`;
+ chop($dramcopy);
+ 
+ $l1proj = 1.0/(1.0/$l1read + 1.0/$l1write);
+@@ -267,7 +266,7 @@
+     $func = $file;
+     $func =~ s/lat_syscall_//;
+ 
+-    $val = `${HBENCHROOT}/scripts/stats-single $file`;
++    $val = `XXXPREFIXXXX/bin/hbench/stats-single $file`;
+     chop($val);
+     if ($val < $minsyscall) {
+ 	$minsyscall2 = $minsyscall;
+@@ -279,14 +278,14 @@
+ 
+ print " * Approximate \"null\" System Call Time: " . $minsyscall . " us\n";
+ print "    The system call auto-selected for this case is: ". $syscallname."\n";
+-print "    Full statistics: " . `${HBENCHROOT}/scripts/stats-full lat_syscall_$syscallname`;
++print "    Full statistics: " . `XXXPREFIXXXX/bin/hbench/stats-full lat_syscall_$syscallname`;
+ if ($syscallname eq "getpid") {
+     print "    NOTE: the system call selected was getpid, which is frequently\n";
+     print "          cached at user-level, and thus not a true system call. If\n";
+     print "          you are unsure whether your system caches getpid, you should\n";
+     print "          use the following (the second-fastest measured) system call instead:\n";
+     print "     Time for the ".$syscallname2." system call: " . $minsyscall2 . " us\n";
+-    print "     Full statistics: " . `${HBENCHROOT}/scripts/stats-full lat_syscall_$syscallname2`;
++    print "     Full statistics: " . `XXXPREFIXXXX/bin/hbench/stats-full lat_syscall_$syscallname2`;
+ } else {
+     print "    NOTE: this may be a cached system call, in which case the result\n";
+     print "          is not representative of true null system call time.\n";
+@@ -298,12 +297,12 @@
+ ##
+ print  " * Process Creation Analysis:\n";
+ print  "    Dynamic processes:\n";
+-$nulld = `${HBENCHROOT}/scripts/stats-single lat_proc_null_dummy`;
++$nulld = `XXXPREFIXXXX/bin/hbench/stats-single lat_proc_null_dummy`;
+ chop($nulld);
+ $nulls = $nulld;
+-$simpled = `${HBENCHROOT}/scripts/stats-single lat_proc_simple_dynamic`;
++$simpled = `XXXPREFIXXXX/bin/hbench/stats-single lat_proc_simple_dynamic`;
+ chop($simpled);
+-$shd = `${HBENCHROOT}/scripts/stats-single lat_proc_sh_dynamic`;
++$shd = `XXXPREFIXXXX/bin/hbench/stats-single lat_proc_sh_dynamic`;
+ chop($shd);
+ $totald = $shd;
+ $shd -= $simpled;
+@@ -316,9 +315,9 @@
+ 
+ if ( -f "lat_proc_simple_static" && -f "lat_proc_sh_static" ) {
+     print  "    Static processes:\n";
+-    $simples = `${HBENCHROOT}/scripts/stats-single lat_proc_simple_static`;
++    $simples = `XXXPREFIXXXX/bin/hbench/stats-single lat_proc_simple_static`;
+     chop($simples);
+-    $shs = `${HBENCHROOT}/scripts/stats-single lat_proc_sh_static`;
++    $shs = `XXXPREFIXXXX/bin/hbench/stats-single lat_proc_sh_static`;
+     chop($shs);
+     $totals = $shs;
+     $shs -= $simples;
+@@ -340,7 +339,7 @@
+ print  "\n * Virtual Memory Overhead in Mmap'd Read:\n";
+ print  "   (using $drambuf read to avoid low timer resolution)\n";
+ 
+-$mmaprd = `${HBENCHROOT}/scripts/stats-single bw_mmap_rd_$drambuf`;
++$mmaprd = `XXXPREFIXXXX/bin/hbench/stats-single bw_mmap_rd_$drambuf`;
+ chop($mmaprd);
+ $mmapoverhead = 1000000/(256*$mmaprd) - 1000000/(256*$dramread);
+ printf("     Mmap read bandwidth: %.2fMB/sec; raw HW read bandwidth: %.2fMB/sec\n",
+@@ -354,7 +353,7 @@
+ ##
+ print  "\n * TCP Network Stack Loopback Copy Overhead:\n";
+ 
+-$tcpbw = `${HBENCHROOT}/scripts/stats-single bw_tcp_1m_localhost`;
++$tcpbw = `XXXPREFIXXXX/bin/hbench/stats-single bw_tcp_1m_localhost`;
+ chop($tcpbw);
+ 
+ printf("    TCP bandwidth (1MB buffer via localhost): %.2fMB/sec\n",$tcpbw);
+@@ -375,7 +374,7 @@
+ ##
+ print  "\n * Pipe-based IPC Copy Overhead:\n";
+ 
+-$pipebw = `${HBENCHROOT}/scripts/stats-single bw_pipe_$drambuf`;
++$pipebw = `XXXPREFIXXXX/bin/hbench/stats-single bw_pipe_$drambuf`;
+ chop($pipebw);
+ 
+ printf("    Pipe bandwidth ($drambuf transfer): %.2fMB/sec\n",$pipebw);

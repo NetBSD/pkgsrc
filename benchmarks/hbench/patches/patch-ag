@@ -1,0 +1,31 @@
+$NetBSD: patch-ag,v 1.1 1998/09/05 22:02:20 garbled Exp $
+--- scripts/gen-summary.orig	Sat Sep  5 09:23:30 1998
++++ scripts/gen-summary	Sat Sep  5 09:24:09 1998
+@@ -45,9 +45,6 @@
+     exit 1
+ fi
+ 
+-# Step 1: Discover hbench root path
+-HBENCHROOT=`(cd \`dirname $0\`/.. ; pwd)`
+-
+ # Some general system information
+ echo "HBench-OS 1.0 Summary Output"
+ echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+@@ -60,7 +57,7 @@
+ do
+     echo "${benchmark}:"
+     FILES="${benchmark}_* ${benchmark}"
+-    FILES=`echo ${FILES} | ${HBENCHROOT}/scripts/argsort`
++    FILES=`echo ${FILES} | XXXPREFIXXXX/bin/hbench/argsort`
+     for file in $FILES
+     do
+ 	if [ -f $file ]; then
+@@ -70,7 +67,7 @@
+ 	    fi
+ 	    PARAMS="${PARAMS}: "
+ 	
+-	    echo "   ${PARAMS}`${HBENCHROOT}/scripts/stats-full $file 2>&1`"
++	    echo "   ${PARAMS}`XXXPREFIXXXX/bin/hbench/stats-full $file 2>&1`"
+ 	fi
+     done
+     echo

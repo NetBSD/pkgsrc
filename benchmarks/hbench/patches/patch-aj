@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1 1998/09/05 22:02:20 garbled Exp $
+--- scripts/stats-full.orig	Sat Sep  5 11:56:46 1998
++++ scripts/stats-full	Sat Sep  5 11:57:38 1998
+@@ -85,10 +85,10 @@
+     $sum += @vals[$i];
+     $sumsq += @vals[$i]*@vals[$i];
+ }
+-
++# XXX count -1 ???
+ $count -= 2*$tailsize;
+ $avg = $sum/$count;
+-$std = (1/($count - 1)) * ($sumsq - 2*$avg*$sum + $count*$avg*$avg);
++$std = (1/($count)) * ($sumsq - 2*$avg*$sum + $count*$avg*$avg);
+ $std = sqrt($std);
+ 
+ printf("%f (std. %f, %.2f%%) [median %f]\n",$avg,$std,100*$std/$avg,$median);
