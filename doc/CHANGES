@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1059 2003/01/09 12:33:43 rh Exp $
+$NetBSD: CHANGES,v 1.1060 2003/01/09 12:41:45 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -157,3 +157,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-vfs to 1.0.5 [rh 2003-01-09]
 	Updated gal to 0.22 [rh 2003-01-09]
 	Updated gtkhtml to 1.1.7 [rh 2003-01-09]
+	Updated gnumeric to 1.0.12 [rh 2003-01-09]
