@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.12 2004/05/11 13:34:20 wiz Exp $
+$NetBSD: patch-ac,v 1.13 2004/09/27 14:19:44 wiz Exp $
 
---- configure.orig	2004-02-27 02:37:55.000000000 +0100
+--- configure.orig	2004-08-15 00:22:36.000000000 +0200
 +++ configure
-@@ -2594,6 +2594,9 @@ echo "${ECHO_T}Turning on SGI compiler w
+@@ -2689,6 +2689,9 @@ echo "${ECHO_T}Turning on SGI compiler w
      esac
    fi
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.12 2004/05/11 13:34:20 wiz Exp $
  if test -n "$GCC"; then
     if test -n "$GCC"; then
     echo "$as_me:$LINENO: checking whether gcc accepts -std" >&5
-@@ -2640,6 +2643,7 @@ echo "${ECHO_T}Disabling C++ comments in
+@@ -2735,6 +2738,7 @@ echo "${ECHO_T}Disabling C++ comments in
       CC="$CC -Wp,-lang-c89"
     fi
    fi
@@ -20,16 +20,16 @@ $NetBSD: patch-ac,v 1.12 2004/05/11 13:34:20 wiz Exp $
  
  if test -n "$GCC"; then
     if test -n "$GCC"; then
-@@ -11780,7 +11784,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
+@@ -13226,7 +13230,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lkrb4  $LIBS"
 +LIBS="-lkrb -lcrypto -lroken -lcom_err  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -11860,7 +11864,7 @@ echo "$as_me: WARNING: Cannot find compa
+ _ACEOF
+@@ -13316,7 +13320,7 @@ echo "$as_me: WARNING: Cannot find compa
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.12 2004/05/11 13:34:20 wiz Exp $
  
      # jwz: MacOS X uses -lkrb5, but not -lcrypt
  
-@@ -13907,19 +13911,7 @@ fi
+@@ -15535,19 +15539,7 @@ fi
    fi
  
  
