@@ -1,33 +1,113 @@
-$NetBSD: patch-ab,v 1.4 1999/05/20 20:37:50 tron Exp $
+$NetBSD: patch-ab,v 1.5 2001/06/27 18:04:39 jlam Exp $
 
---- Makefile.in.orig	Mon Aug 24 09:16:08 1998
-+++ Makefile.in	Thu May 20 22:21:44 1999
-@@ -44,7 +44,7 @@
- libcclib = @libcclib@
- cclib = @cclib@
+--- Makefile.in.orig	Tue Jun 19 12:25:29 2001
++++ Makefile.in
+@@ -34,8 +34,8 @@
+ CXX = @CXX@
+ CDEFS = -DLIBDIR=\"$(libdir)\"
+ # -DDEBUG
+-CFLAGS = -I./include -I$(srcdir)/include @CFLAGS@ @CWFLAG@ $(RLDEFS) $(CDEFS) $(TCLTK_FLAGS)
+-CXXFLAGS = -I./include -I$(srcdir)/include @CXXFLAGS@ @CWFLAG@ $(RLDEFS) $(CDEFS) $(TCLTK_FLAGS)
++CFLAGS = @CFLAGS@ -I./include -I$(srcdir)/include @CWFLAG@ $(RLDEFS) $(CDEFS) $(TCLTK_FLAGS)
++CXXFLAGS = @CXXFLAGS@ -I./include -I$(srcdir)/include @CWFLAG@ $(RLDEFS) $(CDEFS) $(TCLTK_FLAGS)
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ # -lefence
+@@ -47,7 +47,7 @@
+ LANGS = Perl5 Java Tcl Python
+ SUBDIRS = tools
  
 -INSTALL = $(LIBTOOL) @INSTALL@
 +INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
  YACC = @YACC@
-@@ -112,12 +112,15 @@
- 	$(SHELL) ${srcdir}/scripts/mkinstalldirs $(bindir) $(includedir) $(libdir) $(pixdir) $(mandir1) $(mandir7)
+@@ -103,44 +103,52 @@
  
- install: $(EXECS) installdirs $(PILIB) $(PICCLIB)
+ EXECS = $(CEXECS) $(@WITHTCL@) $(@WITHCXX@) $(@WITHPERL5@)
+ 
+-PILIB = libsock/libpisock.la
+-PICCLIB = @libcclib@
++#PILIB = libsock/libpisock.la
++#PICCLIB = @libcclib@
+ 
+ all: $(EXECS)
+ 
+-$(PILIB): FORCE
++libs: libsock/libpisock.la libcc/libpicc.a
++
++libsock/libpisock.la: FORCE
+ 	$(SUBMAKE_COMM) libpisock.la
+ 
+ libcc/libpicc.a: FORCE
+ 	$(SUBMAKE_COMM_CC) libpicc.a
+ 
+-installdirs:
+-	$(SHELL) ${srcdir}/scripts/mkinstalldirs $(bindir) $(includedir) $(libdir) $(pixdir) $(mandir1) $(mandir7)
++install: install-libs install-execs install-man
+ 
+-install: $(EXECS) installdirs $(PILIB) $(PICCLIB)
 -	$(INSTALL_DATA) $(PILIB) $(libdir)/libpisock.la
-+	$(LIBTOOL) --mode=install $(INSTALL_DATA) $(PILIB) $(libdir)/libpisock.la
++install-libs: $(PILIB) $(PICCLIB)
++	$(SHELL) ${srcdir}/scripts/mkinstalldirs $(includedir) $(libdir)
++	for h in include/*.h $(srcdir)/include/*.h include/*.hxx $(srcdir)/include/*.hxx; do \
++		$(INSTALL_DATA) $$h $(includedir)/`basename $$h`; \
++	done
++	$(LIBTOOL) $(INSTALL_DATA) $(PILIB) $(libdir)/libpisock.la
  	if test -n "$(PICCLIB)"; then \
 -		$(INSTALL_DATA) $(PICCLIB) $(libdir)/libpicc.la; \
-+		$(LIBTOOL) --mode=install $(INSTALL_DATA) $(PICCLIB) $(libdir)/libpicc.la; \
++		$(INSTALL_DATA) $(PICCLIB) $(libdir)/libpicc.a; \
  	fi
+-	for p in $(CEXECS); do \
+-		$(STRIP) ".libs/$$p"; \
+-	done        
 -	for p in $(EXECS); do \
 -		$(INSTALL_PROGRAM) $$p $(bindir)/$$p; \
-+	for p in $(CEXECS) ${CXXEXECS}; do \
-+		$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$p $(bindir)/$$p; \
-+	done
-+	for p in $(PERLEXECS); do \
-+		$(BSD_INSTALL_SCRIPT) $$p $(bindir)/$$p; \
++	$(LIBTOOL) -n --finish $(libdir)
++
++install-execs: $(EXECS)
++	$(SHELL) ${srcdir}/scripts/mkinstalldirs $(bindir) $(pixdir)
++	for p in $(CEXECS) $(@WITHTCL@) $(@WITHCXX@); do \
++		$(LIBTOOL) $(INSTALL_PROGRAM) $$p $(bindir)/$$p; \
  	done
- 	for h in include/*.h $(srcdir)/include/*.h include/*.hxx $(srcdir)/include/*.hxx; do \
- 		$(INSTALL_DATA) $$h $(includedir)/`basename $$h`; \
+-	for h in include/*.h $(srcdir)/include/*.h include/*.hxx $(srcdir)/include/*.hxx; do \
+-		$(INSTALL_DATA) $$h $(includedir)/`basename $$h`; \
++	for p in $(@WITHPERL5@); do \
++		${BSD_INSTALL_SCRIPT} $$p $(bindir)/$$p; \
+ 	done
++	for p in $(srcdir)/tools/pix/*.gif $(srcdir)/tools/pix/*.xbm; do \
++		$(INSTALL_DATA) $$p $(pixdir)/`basename $$p`; \
++	done
++
++install-man:
++	$(SHELL) ${srcdir}/scripts/mkinstalldirs $(mandir1) $(mandir7)
+ 	for m in ${srcdir}/man/*.1; do \
+ 		$(INSTALL_DATA) $$m $(mandir1)/`basename $$m`; \
+ 	done
+ 	for m in ${srcdir}/man/*.7; do \
+ 		$(INSTALL_DATA) $$m $(mandir7)/`basename $$m`; \
+ 	done
+-	for p in $(srcdir)/tools/pix/*.gif $(srcdir)/tools/pix/*.xbm; do \
+-		$(INSTALL_DATA) $$p $(pixdir)/`basename $$p`; \
+-	done
+-	$(LIBTOOL) -n --finish $(libdir)
+ 
+ uninstall:
+ 	-for p in $(EXECS) $(PERLEXECS) $(CXXEXECS) $(TCLEXECS); do \
+@@ -243,13 +251,13 @@
+ 	$(CCLINK) pi-nredir.o $(PILIB) $(GETOPT) -o $@ $(LIBS)
+ 
+ ccexample$(EXT): $(PILIB) $(GETOPT) $(PICCLIB) ccexample.o
+-	$(CXXLINK) ccexample.o $(PILIB) $(GETOPT) $(PICCLIB) -o $@ $(CXXLIBS) $(LIBS)
++	$(CXXLINK) ccexample.o $(PILIB) $(GETOPT) -lpicc -o $@ $(CXXLIBS) $(LIBS)
+ 
+ validate$(EXT): $(PILIB) $(GETOPT) $(PICCLIB) validate.o
+-	$(CXXLINK) validate.o $(PILIB) $(GETOPT) $(PICCLIB) -o $@ $(CXXLIBS) $(LIBS)
++	$(CXXLINK) validate.o $(PILIB) $(GETOPT) -lpicc -o $@ $(CXXLIBS) $(LIBS)
+ 
+ iambicexample$(EXT): $(PILIB) $(GETOPT) $(PICCLIB) iambicexample.o
+-	$(CXXLINK) iambicexample.o $(PILIB) $(GETOPT) $(PICCLIB) -o $@ $(CXXLIBS) $(LIBS)
++	$(CXXLINK) iambicexample.o $(PILIB) $(GETOPT) -lpicc -o $@ $(CXXLIBS) $(LIBS)
+ 
+ getrom$(EXT): $(PILIB) $(GETOPT) getrom.o
+ 	$(CCLINK) getrom.o $(PILIB) $(GETOPT) -o $@ $(LIBS)
