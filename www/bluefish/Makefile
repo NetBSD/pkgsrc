@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2003/01/10 07:56:12 cjep Exp $
+# $NetBSD: Makefile,v 1.28 2003/02/20 17:34:49 salo Exp $
+#
 
-DISTNAME=	bluefish-0.7
-PKGREVISION=	1
+DISTNAME=	bluefish-0.9
 CATEGORIES=	www
 MASTER_SITES=	http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/	\
 		http://student.wau.nl/~olivier/bluefish/download/	\
@@ -15,29 +15,19 @@ MAINTAINER=	wulf@ping.net.au
 HOMEPAGE=	http://bluefish.openoffice.nl/
 COMMENT=	GTK HTML editor for the experienced web designer
 
-DEPENDS+=	weblint-[0-9]*:../../www/weblint
-
+DEPENDS+=		weblint-[0-9]*:../../www/weblint
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK2=		# defined
 USE_PKGLOCALEDIR=	# defined
-USE_X11BASE=		# defined
+USE_X11=		# defined
 USE_GMAKE=		# defined
+GNU_CONFIGURE=		# defined
 
 CONFIGURE_ARGS+=	--with-autocomplet
 
-GNU_CONFIGURE=	# defined
+.include "../../devel/pcre/buildlink2.mk"
+.include "../../textproc/aspell/buildlink2.mk"
+.include "../../x11/gtk2/buildlink2.mk"
 
-HTMLDIR=	${PREFIX}/share/doc/html/bluefish
-
-post-install:
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${CP} -R ${WRKSRC}/manual/* ${HTMLDIR}
-	@${ECHO} Setting permissions on HTML documentation...
-	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${HTMLDIR}
-	${FIND} ${HTMLDIR} -type d -exec ${CHMOD} 555 {} \;
-	${FIND} ${HTMLDIR} -type f -exec ${CHMOD} 444 {} \;
-
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
