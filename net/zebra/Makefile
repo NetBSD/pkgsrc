@@ -1,9 +1,11 @@
 # New ports collection makefile for:	zebra
 # Version required:	0.67
 # Date created:		So  31 Mai 1998 11:00:30 CEST
-# Whom:			Andreas Klemm <andreas@klemm.gtn.com>
+# Whom:			Andreas Klemm <andreas@klemm.gtn.com> (FreeBSD)
+#			itojun@itojun.org
 #
-# $Id: Makefile,v 1.1.1.1 1999/06/07 05:18:46 itojun Exp $
+# $NetBSD: Makefile,v 1.2 1999/06/07 05:21:34 itojun Exp $
+# Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
 DISTNAME=	zebra-0.67
