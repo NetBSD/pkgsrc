@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/11 23:22:50 dmcmahill Exp $
+emul/osf1/etc/sia/OSFC2_matrix.conf
+emul/osf1/etc/sia/bsd_matrix.conf
+emul/osf1/etc/sia/matrix.conf
+emul/osf1/etc/sia/siainitgood
+emul/osf1/etc/svc.conf
+emul/osf1/sbin/loader
+emul/osf1/usr/lib/X11/locale
+emul/osf1/usr/shlib/LICENSE
+emul/osf1/usr/shlib/libICE.so
+emul/osf1/usr/shlib/libSM.so
+emul/osf1/usr/shlib/libX11.so
+emul/osf1/usr/shlib/libXext.so
+emul/osf1/usr/shlib/libXm.so
+emul/osf1/usr/shlib/libXmu.so
+emul/osf1/usr/shlib/libXt.so
+emul/osf1/usr/shlib/libc.so
+emul/osf1/usr/shlib/libcxx.so
+emul/osf1/usr/shlib/libdnet_stub.so
+emul/osf1/usr/shlib/libexc.so
+emul/osf1/usr/shlib/libm.so
+emul/osf1/usr/shlib/libots.so
+@dirrm emul/osf1/usr/lib/X11
+@dirrm emul/osf1/usr/lib
+@dirrm emul/osf1/usr/shlib
+@dirrm emul/osf1/usr
+@dirrm emul/osf1/sbin
+@dirrm emul/osf1/etc/sia
+@dirrm emul/osf1/etc
+@dirrm emul/osf1
