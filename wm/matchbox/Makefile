@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:16:14 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/17 15:09:59 agc Exp $
 #
 
 DISTNAME=	matchbox-0.3.6
@@ -11,7 +11,9 @@ COMMENT=	window manager designed for computers with small displays
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES
+USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
+LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 
 .include "../../graphics/xpm/buildlink2.mk"
 
