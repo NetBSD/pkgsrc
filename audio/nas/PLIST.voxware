@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST.voxware,v 1.1 2001/11/01 00:20:13 zuntum Exp $
+@comment $NetBSD: PLIST.voxware,v 1.2 2003/02/25 02:22:29 jschauma Exp $
 bin/nasd
-man/cat1/auvoxware.0
-man/cat1/nasd.0
-man/cat1/nasd.conf.0
+${IMAKE_MAN_DIR}/auvoxware.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/nasd.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/nasd.conf.${IMAKE_MANNEWSUFFIX}
 share/examples/nas/nasd.conf.eg
 @dirrm share/examples/nas
