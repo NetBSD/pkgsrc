@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/07/09 17:10:27 tv Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/14 11:31:08 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -38,11 +38,11 @@ LIBSWANTED.NetBSD=	m crypt
 CONFIGURE_ARGS+=	-Dlibswanted="${LIBSWANTED.${OPSYS}}"
 .endif
 
-.if ${OPSYS} == "NetBSD"
+.if (${OPSYS} == "NetBSD")
 .if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
 MKPIC=			no
 .endif
-.if ${MACHINE_ARCH} == "sparc64"
+.if (${MACHINE_ARCH} == "sparc64")
 # The toolchain on sparc64 is not really production-quality right now, but
 # gcc-2.96 is supposed to fix most problems.  Passing -g to the configure
 # process triggers -DDEBUGGING, which plays the real trick and circumvents
@@ -51,11 +51,11 @@ MKPIC=			no
 #
 CFLAGS+=		-g -msoft-quad-float -O2
 .endif
-.elif ${OPSYS} == "SunOS"
+.elif (${OPSYS} == "SunOS")
 CFLAGS=
 .endif
 
-.if ${MKPIC} == "yes"
+.if (${MKPIC} == "yes")
 CONFIGURE_ARGS+=	-Duseshrplib
 .endif
 
@@ -69,38 +69,35 @@ PERL5_PACKLIST=		${PERL5_ARCHLIB}/.packlist
 pre-configure:
 	cd ${WRKSRC}; ${RM} -rf eg/cgi lib/CGI lib/CGI.pm
 
-.if ${MKPIC} == "yes"
-#
-# Build a static libperl.a and relink perl against it as a runtime
-# optimization.
-#
-post-configure:
-	${CAT} Makefile.static >> ${WRKSRC}/${MAKEFILE}
+.if (${MKPIC} == "yes")
+STATIC_WRKDIR=		${WRKDIR}/static
+STATIC_MAKEFLAGS=	MKPIC=no
+STATIC_MAKEFLAGS+=	WRKDIR=${STATIC_WRKDIR}
+STATIC_MAKEFLAGS+=	ALL_TARGET=perl
 
 post-build:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
-		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} libperl.a
-	@${RM} -f ${WRKSRC}/perl
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
-		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} perl	\
-		LLIBPERL=libperl.a
+	cd ${.CURDIR} && ${MAKE} build ${STATIC_MAKEFLAGS}
 .endif
 
 post-install:
-	@strip ${PREFIX}/bin/a2p
-	@strip ${PREFIX}/bin/perl
+.if (${MKPIC} == "yes")
+	${RM} ${PREFIX}/bin/perl
+	${INSTALL_PROGRAM} ${STATIC_WRKDIR}/${DISTNAME}/perl ${PREFIX}/bin/perl
+.endif
+	strip ${PREFIX}/bin/a2p
+	strip ${PREFIX}/bin/perl
 	${RMDIR} -p ${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
 	${RM} -f ${WRKDIR}/bsd.perl.mk
 	eval `${PERL5} -V:installsitelib 2>/dev/null` && \
-		echo PERL5_SITELIB=$$installsitelib >>${WRKDIR}/bsd.perl.mk
+		echo PERL5_SITELIB=$$installsitelib >>${WRKDIR}/bsd.perl.mk     
 	eval `${PERL5} -V:installsitearch 2>/dev/null` && \
-		echo PERL5_SITEARCH=$$installsitearch >>${WRKDIR}/bsd.perl.mk
+		echo PERL5_SITEARCH=$$installsitearch >>${WRKDIR}/bsd.perl.mk   
 	eval `${PERL5} -V:installarchlib 2>/dev/null` && \
-		echo PERL5_ARCHLIB=$$installarchlib >>${WRKDIR}/bsd.perl.mk
-	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/
+		echo PERL5_ARCHLIB=$$installarchlib >>${WRKDIR}/bsd.perl.mk     
+	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
 
 test:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} test
 
 .include "../../mk/bsd.pkg.mk"
