@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9362 2005/02/28 16:05:17 adam Exp $
+$NetBSD: CHANGES,v 1.9363 2005/02/28 16:51:37 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1203,3 +1203,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bibtex2html to 1.75 [minskim 2005-02-28]
 	Updated nam to 1.11 [minskim 2005-02-28]
 	Updated ike-scan to 1.7.1 [adam 2005-02-28]
+	Updated unzip to 5.52 [salo 2005-02-28]
