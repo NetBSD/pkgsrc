@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.2 2000/10/29 09:00:47 itojun Exp $
+$NetBSD: distinfo,v 1.1 2001/04/17 11:14:20 agc Exp $
 
 MD5 (kaist-newmj18.bdf.gz) = 5f578dea996966b5bf77515c7d85cafb
 MD5 (ks_philgi16.bdf.gz) = f1bf468802d81e282165b83bfdf2adae
