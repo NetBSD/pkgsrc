@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/16 00:00:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/16 00:10:23 xtraeme Exp $
 #
 
 DISTNAME=	sign-1.0.4
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://swapped.cc/sign/files/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://swapped.cc/sign/files/
+HOMEPAGE=	http://swapped.cc/sign/
 COMMENT=	File signing and signature verification utility
 
 USE_BUILDLINK3=	yes
