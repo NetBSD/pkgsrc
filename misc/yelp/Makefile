@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/16 13:51:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/16 13:56:44 jmmv Exp $
 #
 
 DISTNAME=		yelp-2.4.2
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-html-widget=gtkhtml2
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
