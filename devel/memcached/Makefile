@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/02/09 05:37:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2005/02/09 05:53:32 xtraeme Exp $
 #
 
 DISTNAME=	memcached-1.1.11
-CATEGORIES=	databases
+CATEGORIES=	devel
 MASTER_SITES=	http://www.danga.com/memcached/dist/
 
 MAINTAINER=	tech-pkg@NetBSD.org
