@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2000/11/25 14:27:23 rh Exp $
+# $NetBSD: Makefile,v 1.8 2000/12/31 14:01:43 rh Exp $
 #
 
-DISTNAME=		bonobo-0.26
+DISTNAME=		bonobo-0.30
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/bonobo/}
 
@@ -9,10 +9,11 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
+DEPENDS+=		ORBit>=0.5.6:../../net/ORBit
 DEPENDS+=		gdk-pixbuf>=0.6.0:../../graphics/gdk-pixbuf
-DEPENDS+=		oaf>=0.5.0:../../devel/oaf
+DEPENDS+=		oaf>=0.6.1:../../devel/oaf
 DEPENDS+=		gnome-libs>=1.2.7:../../x11/gnome-libs
-DEPENDS+=		gnome-print>=0.16:../../print/gnome-print
+DEPENDS+=		gnome-print>=0.25:../../print/gnome-print
 
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES

@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 2000/11/25 14:27:23 rh Exp $
+$NetBSD: md5,v 1.5 2000/12/31 14:01:44 rh Exp $
 
-MD5 (bonobo-0.26.tar.gz) = 9edc9184e1b6264c4b02bf04c7aceba5
+MD5 (bonobo-0.30.tar.gz) = 640d6b3285044ee7e9a1462dfe13a874
