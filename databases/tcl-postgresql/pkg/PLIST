@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/18 17:45:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/04/21 21:16:01 jwise Exp $
 bin/pgtclsh
-include/libpgtcl.h
+include/pgsql/libpgtcl.h
 lib/libpgtcl.a
 lib/libpgtcl.so.2.0
 lib/pltcl.so
