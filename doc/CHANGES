@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2490 2003/06/11 13:29:07 wiz Exp $
+$NetBSD: CHANGES,v 1.2491 2003/06/11 20:15:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2441,3 +2441,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-DBD-Sybase to 0.94nb1 [wiz 2003-06-11]
 	Updated sqsh to 1.7nb1 [wiz 2003-06-11]
 	Updated freetds to 0.61 [wiz 2003-06-11]
+	Updated proxycheck to 0.45 [wiz 2003-06-11]
