@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.8 2004/12/28 21:52:01 jmmv Exp $
+$NetBSD: distinfo,v 1.9 2005/02/23 17:36:26 wiz Exp $
 
 SHA1 (zenity-2.8.2.tar.bz2) = 856d2063accc078f8d75557dab7fd34674a68575
+RMD160 (zenity-2.8.2.tar.bz2) = 78d6275bab66653ac2a41edcc1dbf6479051257f
 Size (zenity-2.8.2.tar.bz2) = 721700 bytes

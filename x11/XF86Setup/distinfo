@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/01/22 03:58:32 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 17:36:09 wiz Exp $
 
 SHA1 (XF86Setup-3.3.6.tar.bz2) = 591bc872dfcd675a4ab07b857b4ed70f0d9141d9
+RMD160 (XF86Setup-3.3.6.tar.bz2) = fbe1cb12479f410950a0187c9101898991b455b6
 Size (XF86Setup-3.3.6.tar.bz2) = 395303 bytes
 SHA1 (patch-aa) = e57e3aa582008c8771384e79e28b866480599cc5
 SHA1 (patch-ab) = ee820199301bbdfbe6cfd9f1a4cf08ff32041750

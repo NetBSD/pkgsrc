@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:38 skrll Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 17:36:11 wiz Exp $
 
 SHA1 (users-guide-1.2.tar.gz) = ad73536660511fb6ff16b6c7a6987c66523d6443
+RMD160 (users-guide-1.2.tar.gz) = 99a4a630edc7a1dcffe287ee0f9d8c8c372f4f90
 Size (users-guide-1.2.tar.gz) = 6803164 bytes
