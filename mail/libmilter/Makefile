@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/09/18 10:39:12 markd Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/07 11:40:53 markd Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -13,6 +13,8 @@ do-build:
 
 do-install:
 	@(cd ${WRKSRC}/libmilter; ${SETENV} ${MAKE_ENV} ./Build INCLUDEDIR=${PREFIX}/include LIBDIR=${PREFIX}/lib install)
+
+PTHREAD_OPTS+=	require
 
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
