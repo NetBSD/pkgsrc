@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/03/25 10:38:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/05/23 09:39:53 wiz Exp $
 bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -29,6 +29,7 @@ libexec/xscreensaver/bumps
 libexec/xscreensaver/cage
 libexec/xscreensaver/ccurve
 libexec/xscreensaver/circuit
+libexec/xscreensaver/cloudlife
 libexec/xscreensaver/compass
 libexec/xscreensaver/coral
 libexec/xscreensaver/critical
@@ -84,6 +85,7 @@ libexec/xscreensaver/jigsaw
 libexec/xscreensaver/juggle
 libexec/xscreensaver/julia
 libexec/xscreensaver/kaleidescope
+libexec/xscreensaver/klein
 libexec/xscreensaver/kumppa
 libexec/xscreensaver/lament
 libexec/xscreensaver/laser
@@ -239,10 +241,12 @@ man/man1/hypercube.1
 man/man1/ifs.1
 man/man1/imsmap.1
 man/man1/interference.1
+man/man1/jigglypuff.1
 man/man1/jigsaw.1
 man/man1/juggle.1
 man/man1/julia.1
 man/man1/kaleidescope.1
+man/man1/klein.1
 man/man1/kumppa.1
 man/man1/lament.1
 man/man1/laser.1
@@ -357,6 +361,7 @@ share/control-center/screensavers/bumps.xml
 share/control-center/screensavers/cage.xml
 share/control-center/screensavers/ccurve.xml
 share/control-center/screensavers/circuit.xml
+share/control-center/screensavers/cloudlife.xml
 share/control-center/screensavers/compass.xml
 share/control-center/screensavers/coral.xml
 share/control-center/screensavers/cosmos.xml
@@ -410,6 +415,7 @@ share/control-center/screensavers/hypercube.xml
 share/control-center/screensavers/ifs.xml
 share/control-center/screensavers/imsmap.xml
 share/control-center/screensavers/interference.xml
+share/control-center/screensavers/jigglypuff.xml
 share/control-center/screensavers/jigsaw.xml
 share/control-center/screensavers/juggle.xml
 share/control-center/screensavers/julia.xml

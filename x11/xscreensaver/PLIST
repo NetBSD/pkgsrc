@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/03/25 10:38:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/05/23 09:39:52 wiz Exp $
 @comment bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
@@ -29,6 +29,7 @@ libexec/xscreensaver/bumps
 libexec/xscreensaver/cage
 libexec/xscreensaver/ccurve
 libexec/xscreensaver/circuit
+libexec/xscreensaver/cloudlife
 libexec/xscreensaver/compass
 libexec/xscreensaver/config/README
 libexec/xscreensaver/config/anemone.xml
@@ -51,6 +52,7 @@ libexec/xscreensaver/config/bumps.xml
 libexec/xscreensaver/config/cage.xml
 libexec/xscreensaver/config/ccurve.xml
 libexec/xscreensaver/config/circuit.xml
+libexec/xscreensaver/config/cloudlife.xml
 libexec/xscreensaver/config/compass.xml
 libexec/xscreensaver/config/coral.xml
 libexec/xscreensaver/config/cosmos.xml
@@ -104,6 +106,7 @@ libexec/xscreensaver/config/hypercube.xml
 libexec/xscreensaver/config/ifs.xml
 libexec/xscreensaver/config/imsmap.xml
 libexec/xscreensaver/config/interference.xml
+libexec/xscreensaver/config/jigglypuff.xml
 libexec/xscreensaver/config/jigsaw.xml
 libexec/xscreensaver/config/juggle.xml
 libexec/xscreensaver/config/julia.xml
@@ -254,6 +257,7 @@ libexec/xscreensaver/jigsaw
 libexec/xscreensaver/juggle
 libexec/xscreensaver/julia
 libexec/xscreensaver/kaleidescope
+libexec/xscreensaver/klein
 libexec/xscreensaver/kumppa
 libexec/xscreensaver/lament
 libexec/xscreensaver/laser
@@ -409,10 +413,12 @@ man/man1/hypercube.1
 man/man1/ifs.1
 man/man1/imsmap.1
 man/man1/interference.1
+man/man1/jigglypuff.1
 man/man1/jigsaw.1
 man/man1/juggle.1
 man/man1/julia.1
 man/man1/kaleidescope.1
+man/man1/klein.1
 man/man1/kumppa.1
 man/man1/lament.1
 man/man1/laser.1
