@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:42 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/29 16:59:28 jschauma Exp $
 
-DISTNAME=	aribas-1.20
+DISTNAME=	aribas-1.30
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.mathematik.uni-muenchen.de/pub/forster/aribas/
 
