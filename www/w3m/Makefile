@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/08/15 03:19:10 itojun Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/15 03:57:47 itojun Exp $
 
 DISTNAME=	w3m-0.1.10
 CATEGORIES=	www
@@ -48,9 +48,9 @@ CONFIGURE_ENV+=	use_cookie=n
 # base distribution.
 DEPENDS+=	openssl-0.9.*:../../security/openssl
 .endif
-CONFIGURE_ENV+=	use_ssl=y
+CONFIGURE_ENV+=	use_ssl=y use_ssl_verify=n
 .else
-CONFIGURE_ENV+=	use_ssl=n
+CONFIGURE_ENV+=	use_ssl=n use_ssl_verify=n
 .endif
 .if defined(W3M_USE_JAPANESE) && ${W3M_USE_JAPANESE} == YES
 CONFIGURE_ENV+=	def_lg=1
@@ -80,12 +80,16 @@ CONFIGURE_ENV+=	use_menu=n use_matrix=n
 CONFIGURE_ENV+=	ded=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+=	dcc="${CC}" dtermlib="-ltermcap"
 CONFIGURE_ENV+=	dldflags="-Wl,-rpath,${LOCALBASE}/lib -L${LOCALBASE}/lib"
-CONFIGURE_ENV+=	dmodel=1
+CONFIGURE_ENV+=	dmodel=6
 CONFIGURE_ENV+=	LOCALBASE="${LOCALBASE}"
 
 post-extract:
 	@(cd ${WRKSRC}/doc; ${RM} -fr CVS)
 	@(cd ${WRKSRC}/doc-jp; ${RM} -fr CVS)
+
+# do not look at previous configuration
+pre-configure:
+	${RM} ${WRKSRC}/config.param
 
 do-configure:
 	@yes '' | (cd ${WRKSRC} && CC="${CC}" ac_cv_path_CC="${CC}" \

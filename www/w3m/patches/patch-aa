@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2000/08/15 03:19:10 itojun Exp $
+$NetBSD: patch-aa,v 1.7 2000/08/15 03:57:48 itojun Exp $
 --- configure.orig	Mon Jun  5 18:41:35 2000
-+++ configure	Tue Aug 15 12:14:03 2000
++++ configure	Tue Aug 15 12:43:25 2000
 @@ -190,3 +190,3 @@
    sslinclude=""
 -  for i1 in /usr /usr/local
@@ -23,71 +23,17 @@ $NetBSD: patch-aa,v 1.6 2000/08/15 03:19:10 itojun Exp $
 +#  def_lg=1
 +#fi
  while :
-@@ -462,4 +462,4 @@
-     use_mouse=n; def_mouse="#undef MOUSE"
--    use_cookie=n; def_cookie="#undef USE_COOKIE"
--    use_ssl=n; def_ssl="#undef USE_SSL"
-+#   use_cookie=n; def_cookie="#undef USE_COOKIE"
-+#   use_ssl=n; def_ssl="#undef USE_SSL"
-     save_params
-@@ -471,4 +471,4 @@
-     use_mouse=n; def_mouse="#undef MOUSE"
--    use_cookie=n; def_cookie="#undef USE_COOKIE"
--    use_ssl=n; def_ssl="#undef USE_SSL"
-+#   use_cookie=n; def_cookie="#undef USE_COOKIE"
-+#   use_ssl=n; def_ssl="#undef USE_SSL"
-     save_params
-@@ -480,4 +480,4 @@
-     use_mouse=y; def_mouse="#define MOUSE"
--    use_cookie=n; def_cookie="#undef USE_COOKIE"
--    use_ssl=n; def_ssl="#undef USE_SSL"
-+#   use_cookie=n; def_cookie="#undef USE_COOKIE"
-+#   use_ssl=n; def_ssl="#undef USE_SSL"
-     save_params
-@@ -489,4 +489,4 @@
-     use_mouse=y; def_mouse="#define MOUSE"
--    use_cookie=y; def_cookie="#define USE_COOKIE"
--    use_ssl=n; def_ssl="#undef USE_SSL"
-+#   use_cookie=y; def_cookie="#define USE_COOKIE"
-+#   use_ssl=n; def_ssl="#undef USE_SSL"
-     save_params
-@@ -498,5 +498,5 @@
-     use_mouse=y; def_mouse="#define MOUSE"
--    use_cookie=y; def_cookie="#define USE_COOKIE"
--    use_ssl=y; def_ssl="#define USE_SSL"
--    find_ssl
-+#   use_cookie=y; def_cookie="#define USE_COOKIE"
-+#   use_ssl=y; def_ssl="#define USE_SSL"
-+#   find_ssl
-     save_params
-@@ -515,2 +515,16 @@
- 
-+# these are made independent from "model"
-+if [ "$use_cookie" = y ]; then
-+    def_cookie="#define USE_COOKIE"
-+else
-+    def_cookie="#undef USE_COOKIE"
-+fi
-+
-+if [ "$use_ssl" = y ]; then
-+    def_ssl="#define USE_SSL"
-+    find_ssl
-+else
-+    def_ssl="#undef USE_SSL"
-+fi
-+
- if [ "$customized" != y ]; then
-@@ -786,3 +800,3 @@
+@@ -786,3 +786,3 @@
  gctarget=''
 -for libdir in /lib /usr/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib ${HOME}/lib
 +for libdir in /lib /usr/lib ${LOCALBASE}/lib /usr/local/lib /usr/ucblib /usr/ccslib /usr/ccs/lib ${HOME}/lib
  do
-@@ -794,3 +808,3 @@
+@@ -794,3 +794,3 @@
  done
 -for inc in /usr/include /usr/include/gc /usr/local/include /usr/local/include/gc ${HOME}/include
 +for inc in /usr/include /usr/include/gc ${LOCALBASE}/include /usr/local/include /usr/local/include/gc ${HOME}/include
  do
-@@ -1555,2 +1569,3 @@
+@@ -1555,2 +1555,3 @@
  fi
 +perl=/usr/pkg/bin/perl
  if [ $sysname = CYGWIN ]; then
