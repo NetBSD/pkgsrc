@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/06/04 21:19:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2003/06/04 21:22:44 jschauma Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -18,6 +18,8 @@ CONFIGURE_ARGS+=	--enable-libplotter
 
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig ${WRKSRC}/libxmi/ltconfig
+
+.include "../../mk/bsd.prefs.mk"
 
 # this package works with and without X11, but if X11 is present, we need the
 # necessary compile and ld flags
