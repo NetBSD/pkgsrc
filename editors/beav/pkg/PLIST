@@ -1,3 +1,5 @@
+@comment $NetBSD: PLIST,v 1.2 1998/12/20 21:12:58 bad Exp $
 bin/beav
+man/man1/beav.1
 share/doc/beav/beav.txt
 @dirrm share/doc/beav
