@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/07/03 00:45:23 wulf Exp $
+
+--- Makefile.in.orig	2003-01-18 22:52:42.000000000 +1030
++++ Makefile.in	2003-07-03 06:45:48.000000000 +0930
+@@ -577,11 +577,11 @@
+ 		$(INSTALL_DATA) xlog.1 $(DESTDIR)$(mandir)/man1; \
+ 	fi
+ 
+-	install -m 0644 FAQ $(DESTDIR)$(pkgdatadir)
+-	install -m 0644 README $(DESTDIR)$(pkgdatadir)
+-	install -m 0644 TODO $(DESTDIR)$(pkgdatadir)
+-	install -m 0644 AUTHORS $(DESTDIR)$(pkgdatadir)
+-	install -m 0644 THANKS $(DESTDIR)$(pkgdatadir)
++	${INSTALL_DATA} FAQ $(DESTDIR)$(pkgdatadir)
++	${INSTALL_DATA} README $(DESTDIR)$(pkgdatadir)
++	${INSTALL_DATA} TODO $(DESTDIR)$(pkgdatadir)
++	${INSTALL_DATA} AUTHORS $(DESTDIR)$(pkgdatadir)
++	${INSTALL_DATA} THANKS $(DESTDIR)$(pkgdatadir)
+ 
+ dist-hook:
+ 	if test -d pixmaps; then \
