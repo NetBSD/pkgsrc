@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/02/06 22:57:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/07 15:26:01 jmmv Exp $
 
 DISTNAME=	gnome-extras-2.4.2
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,7 +11,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for applications related to the GNOME desktop
 
 DEPENDS+=	abiword>=2.0.2:../../editors/abiword
-DEPENDS+=	conglomerate>=0.7.6:../../editors/conglomerate
+DEPENDS+=	conglomerate>=0.7.6nb6:../../editors/conglomerate
 DEPENDS+=	evolution>=1.4.5:../../mail/evolution
 DEPENDS+=	gaim>=0.75:../../chat/gaim
 DEPENDS+=	gnome>=2.4.2:../../meta-pkgs/gnome
