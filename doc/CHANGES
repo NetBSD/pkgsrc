@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7893 2004/11/18 10:22:41 shannonjr Exp $
+$NetBSD: CHANGES,v 1.7894 2004/11/18 12:31:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5321,3 +5321,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added openvpn-current-2.0beta15 [xtraeme 2004-11-17]
 	Updated xmms to 1.2.10nb2 [grant 2004-11-18]
 	Updated wv2 to 0.2.2 [shannonjr 2004-11-18]
+	Updated guile to 1.6.5 [wiz 2004-11-18]
