@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5624 2004/04/17 10:56:21 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5625 2004/04/17 13:24:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2042,3 +2042,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libglade2 to 2.3.6nb1 [jmmv 2004-04-17]
 	Updated evolution to 1.4.5nb9 [jmmv 2004-04-17]
 	Updated openldap to 2.1.30 [xtraeme 2004-04-17]
+	Added same-1.3 [minskim 2004-04-17]
