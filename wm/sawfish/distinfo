@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2003/01/18 06:37:51 toshii Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 18:43:55 wiz Exp $
 
 SHA1 (sawfish-1.2-gtk1.tar.gz) = 03ea1b6aa917db7ec52047c661bbadef8793e74a
+RMD160 (sawfish-1.2-gtk1.tar.gz) = ffe716a8ab7b36e53c58906cd8de74f7600695ca
 Size (sawfish-1.2-gtk1.tar.gz) = 1519847 bytes
 SHA1 (patch-aa) = 68ebcda2da73b32c245844d7b753e6b68e880647
 SHA1 (patch-ab) = 20ffaa03c787c0edaee2cdeea5855395ebb57fdc

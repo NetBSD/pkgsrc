@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/28 22:42:57 snj Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 18:43:55 wiz Exp $
 
 SHA1 (wmctrl-1.05.tar.gz) = 1d1cd71680ff1dac906a04775070a7f0b9711475
+RMD160 (wmctrl-1.05.tar.gz) = 1965d943837a965cec80b1f5088d1c518ecec405
 Size (wmctrl-1.05.tar.gz) = 83049 bytes
 SHA1 (patch-aa) = 1531a6a6f02d195c10d4ead305aacb6aef1ce66a

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2003/07/12 11:54:39 zuntum Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 18:43:55 wiz Exp $
 
 SHA1 (qvwm-1.1.12.tar.gz) = 27b43148a750e5b6b3efac6a6506819adbc2ed4d
+RMD160 (qvwm-1.1.12.tar.gz) = ed8d78b43e4e5778224af3a490daa2d31eb9a914
 Size (qvwm-1.1.12.tar.gz) = 434618 bytes
 SHA1 (patch-aa) = f6417e645c7a17e7f826cebea51ba34713071a9d
