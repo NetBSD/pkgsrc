@@ -1,7 +1,7 @@
-$NetBSD: patch-at,v 1.3 2001/07/15 22:19:12 bad Exp $
+$NetBSD: patch-at,v 1.4 2001/12/20 22:31:10 jlam Exp $
 
---- src/unix-gcc.mak.orig	Sun Jul 15 23:47:57 2001
-+++ src/unix-gcc.mak	Sun Jul 15 23:49:00 2001
+--- src/unix-gcc.mak.orig	Thu Dec 20 00:32:55 2001
++++ src/unix-gcc.mak
 @@ -30,12 +30,12 @@
  
  BINDIR=./bin
@@ -57,30 +57,6 @@ $NetBSD: patch-at,v 1.3 2001/07/15 22:19:12 bad Exp $
  #ZLIB_NAME=gz
  ZLIB_NAME=z
  
-@@ -214,9 +214,9 @@
- # We don't include -ansi, because this gets in the way of the platform-
- #   specific stuff that <math.h> typically needs; nevertheless, we expect
- #   gcc to accept ANSI-style function prototypes and function definitions.
--XCFLAGS=
-+#XCFLAGS=
- 
--CFLAGS=$(CFLAGS_STANDARD) $(GCFLAGS) $(XCFLAGS)
-+#CFLAGS=$(CFLAGS_STANDARD) $(GCFLAGS) $(XCFLAGS)
- 
- # Define platform flags for ld.
- # SunOS 4.n may need -Bstatic.
-@@ -225,9 +225,9 @@
- #	-R /usr/local/xxx/lib:/usr/local/lib
- # giving the full path names of the shared library directories.
- # XLDFLAGS can be set from the command line.
--XLDFLAGS=
-+#XLDFLAGS=
- 
--LDFLAGS=$(XLDFLAGS) -fno-common
-+LDFLAGS=$(XLDFLAGS) # -fno-common
- 
- # Define any extra libraries to link into the executable.
- # ISC Unix 2.2 wants -linet.
 @@ -244,8 +244,11 @@
  # include pthreads in libc and don't require any additional library.
  # All reasonable platforms require -lm, but Rhapsody and perhaps one or
@@ -94,35 +70,7 @@ $NetBSD: patch-at,v 1.3 2001/07/15 22:19:12 bad Exp $
  
  # Define the include switch(es) for the X11 header files.
  # This can be null if handled in some other way (e.g., the files are
-@@ -255,7 +258,7 @@
- # Note that x_.h expects to find the header files in $(XINCLUDE)/X11,
- # not in $(XINCLUDE).
- 
--XINCLUDE=-I/usr/local/X/include
-+#XINCLUDE=-I/usr/local/X/include
- 
- # Define the directory/ies and library names for the X11 library files.
- # XLIBDIRS is for ld and should include -L; XLIBDIR is for LD_RUN_PATH
-@@ -270,9 +273,16 @@
- #XLIBS=Xt SM ICE Xext X11
- 
- #XLIBDIRS=-L/usr/local/X/lib
--XLIBDIRS=-L/usr/X11/lib
-+#XLIBDIRS=-L/usr/X11/lib
-+#XLIBDIR=
-+#XLIBS=Xt Xext X11
-+
-+.if defined(USE_X11)
-+XINCLUDE=-I${X11BASE}/include
-+XLIBDIRS=-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
- XLIBDIR=
--XLIBS=Xt Xext X11
-+XLIBS=Xt SM ICE Xext X11
-+.endif
- 
- # Define the directory/ies for the VFlib files.
- # If you use FreeType, Add ttf to VFLIBS
-@@ -281,7 +291,7 @@
+@@ -281,7 +284,7 @@
  #VFLIBS=VFlib
  VFINCLUDE=
  VFLIBDIRS=
@@ -131,16 +79,7 @@ $NetBSD: patch-at,v 1.3 2001/07/15 22:19:12 bad Exp $
  
  # Define whether this platform has floating point hardware:
  #	FPU_TYPE=2 means floating point is faster than fixed point.
-@@ -292,7 +302,7 @@
- #	FPU_TYPE=-1 means that floating point is always much slower than
- # fixed point.
- 
--FPU_TYPE=1
-+#FPU_TYPE=1
- 
- # Define the .dev module that implements thread and synchronization
- # primitives for this platform.
-@@ -339,7 +349,7 @@
+@@ -339,7 +342,7 @@
  # Choose the device(s) to include.  See devs.mak for details,
  # devs.mak and contrib.mak for the list of available devices.
  
@@ -149,7 +88,7 @@ $NetBSD: patch-at,v 1.3 2001/07/15 22:19:12 bad Exp $
  
  #DEVICE_DEVS1=
  #DEVICE_DEVS2=
-@@ -357,27 +367,27 @@
+@@ -357,27 +360,27 @@
  #DEVICE_DEVS14=
  #DEVICE_DEVS15=
  

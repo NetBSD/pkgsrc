@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.1 2001/12/20 22:31:10 jlam Exp $
+
+--- src/gdevgdi.c.orig	Thu Feb  8 23:51:11 2001
++++ src/gdevgdi.c
+@@ -126,7 +126,7 @@
+ private int
+ gdi_open(gx_device *pdev)
+ {	/* Change the margins if necessary. */
+-	const float _ds *m = 0;
++	const float *m = 0;
+ 	bool move_origin = true;
+ 
+ 	static const float m_a4[4] = { GDI_MARGINS_A4 };
