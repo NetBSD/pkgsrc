@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/25 12:58:46 rh Exp $
 libexec/netsaint/check_breeze
 libexec/netsaint/check_by_ssh
+libexec/netsaint/check_dig
 libexec/netsaint/check_disk
 libexec/netsaint/check_disk_smb
 libexec/netsaint/check_dns
@@ -14,8 +15,10 @@ libexec/netsaint/check_load
 libexec/netsaint/check_log
 libexec/netsaint/check_mrtg
 libexec/netsaint/check_mrtgtraf
+libexec/netsaint/check_netdns
 libexec/netsaint/check_netsaint
 libexec/netsaint/check_nntp
+libexec/netsaint/check_nt
 libexec/netsaint/check_ntp
 libexec/netsaint/check_nwstat
 libexec/netsaint/check_oracle
@@ -24,7 +27,6 @@ libexec/netsaint/check_ping
 libexec/netsaint/check_pop
 libexec/netsaint/check_procs
 libexec/netsaint/check_real
-libexec/netsaint/check_reply
 libexec/netsaint/check_rpc
 libexec/netsaint/check_sensors
 libexec/netsaint/check_smtp
@@ -37,3 +39,5 @@ libexec/netsaint/check_users
 libexec/netsaint/check_vsz
 libexec/netsaint/check_wave
 libexec/netsaint/urlize
+libexec/netsaint/utils.pm
+libexec/netsaint/utils.sh
