@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7077 2004/09/02 08:24:55 schmonz Exp $
+$NetBSD: CHANGES,v 1.7078 2004/09/02 10:59:14 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4169,3 +4169,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated memtester to 4.0.4 [schmonz 2004-09-02]
 	Updated getmail to 4.1.4 [schmonz 2004-09-02]
 	Updated djbdns-run to 20040902 [schmonz 2004-09-02]
+	Updated libIDL to 0.8.4 [jmmv 2004-09-02]
