@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/07/10 17:39:50 salo Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/27 13:03:39 wiz Exp $
 # FreeBSD Id: ports/archivers/arj/Makefile,v 1.2 2002/09/17 05:17:29 ijliao Exp
 
-DISTNAME=	arj-3.10.20
-PKGREVISION=	1
+DISTNAME=	arj-3.10.21
 CATEGORIES=	archivers
 MASTER_SITES=	http://testcase.newmail.ru/files/
 
