@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:13:17 tv Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/28 16:04:14 wiz Exp $
 #
 
 DISTNAME=	abook-0.5.2
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=abook/}
 
-MAINTAINER=	vincent.derrien@ahoup.net
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://abook.sourceforge.net/
 COMMENT=	Text-based addressbook program
 
