@@ -1,28 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/28 16:17:20 tron Exp $
+$NetBSD: patch-aa,v 1.2 2001/10/12 10:51:51 simonb Exp $
 
---- configure.orig	Mon Jul  6 03:38:03 1998
-+++ configure	Wed Jul 28 17:57:42 1999
-@@ -46,11 +46,13 @@
- # dashes changed to underlines.
- build=NONE
- cache_file=./config.cache
-+etcdir=/etc
- exec_prefix=NONE
- host=NONE
- no_create=
- nonopt=NONE
- no_recursion=
-+piddir=/var/run
- prefix=NONE
- program_prefix=NONE
- program_suffix=NONE
-@@ -549,9 +551,6 @@
+--- configure.orig	Fri Jan 12 20:24:53 2001
++++ configure	Wed Oct 10 14:54:02 2001
+@@ -1416,7 +1416,6 @@
+     fi
+ fi
  
- 
- 
--prefix=/usr
--etcdir=/etc
--piddir=/var/run
- 
- echo Configuring for dict
- echo .
+-local_zlib=1
+ if test "$local_zlib" = 0; then
+     echo $ac_n "checking for zlibVersion in -lz""... $ac_c" 1>&6
+ echo "configure:1423: checking for zlibVersion in -lz" >&5
