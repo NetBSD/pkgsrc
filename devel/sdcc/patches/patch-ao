@@ -1,13 +1,13 @@
-$NetBSD: patch-ao,v 1.1 2000/08/25 21:49:29 tron Exp $
+$NetBSD: patch-ao,v 1.2 2001/04/23 17:33:07 wulf Exp $ 
 
---- sdcdb/Makefile.in.orig	Fri Aug 25 23:17:26 2000
-+++ sdcdb/Makefile.in	Fri Aug 25 23:17:26 2000
+--- debugger/mcs51/Makefile.in.orig	Mon Apr  9 21:55:03 2001
++++ debugger/mcs51/Makefile.in	Mon Apr  9 21:55:16 2001
 @@ -27,7 +27,7 @@
  infodir         = ${prefix}/info
  
  STD_INC		= @sdcc_include_dir@
--CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR)
-+CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -Dunix
+-CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -I$(PRJDIR)/support
++CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -I$(PRJDIR)/support -Dunix
  CFLAGS		= @CFLAGS@
  M_OR_MM		= @M_OR_MM@
  LDFLAGS		= @LDFLAGS@

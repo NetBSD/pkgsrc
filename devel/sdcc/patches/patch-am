@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.1 2000/08/25 21:49:29 tron Exp $
+$NetBSD: patch-am,v 1.2 2001/04/23 17:33:06 wulf Exp $
 
---- sdcc51inc/Makefile.in.orig	Fri Aug 25 23:17:26 2000
-+++ sdcc51inc/Makefile.in	Fri Aug 25 23:17:26 2000
+--- device/include/Makefile.in.orig	Mon Apr  9 21:50:32 2001
++++ device/include/Makefile.in	Mon Apr  9 21:50:47 2001
 @@ -26,7 +26,7 @@
  infodir         = @infodir@
  srcdir          = @srcdir@

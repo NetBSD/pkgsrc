@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2000/08/25 21:49:29 tron Exp $
+$NetBSD: patch-ak,v 1.2 2001/04/23 17:33:06 wulf Exp $ 
 
---- sdcc.src/SDCCval.c.orig	Fri Sep 10 15:35:45 1999
-+++ sdcc.src/SDCCval.c	Fri Aug 25 23:17:26 2000
-@@ -578,7 +578,7 @@
+--- src/SDCCval.c.orig	Mon Apr  9 20:40:49 2001
++++ src/SDCCval.c	Mon Apr  9 20:43:10 2001
+@@ -573,7 +573,7 @@
  /*------------------------------------------------------------------*/
  /* floatFromVal - value to unsinged integer conversion		    */
  /*------------------------------------------------------------------*/
@@ -11,7 +11,7 @@ $NetBSD: patch-ak,v 1.1 2000/08/25 21:49:29 tron Exp $
  {
      if (!val)
  	return 0;
-@@ -591,22 +591,22 @@
+@@ -586,22 +586,22 @@
      /* if it is not a specifier then we can assume that */
      /* it will be an unsigned long                      */
      if (!IS_SPEC(val->type))

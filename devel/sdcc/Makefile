@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/23 17:35:41 wulf Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
-DISTNAME=	sdcc-2.1.9Ea
-PKGNAME=	${DISTNAME:S/Ea//}
+DISTNAME=	sdcc-2.2.1-src
+PKGNAME=	sdcc-2.2.1
 CATEGORIES=	devel lang
 MASTER_SITES=	http://web.kd0yu.com/sdcc/
 
@@ -10,15 +10,25 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sdcc.sourceforge.net/
 COMMENT=	Cross compile 8051 code
 
+ALL_TARGET=	dep all
+WRKSRC=		${WRKDIR}/${PKGNAME}
+
+#
+# This HACK circumvent a problem with the use of
+# yacc that breaks the building process of sdcc.
+# Use of bison fixes this problem for now.
+#
+BUILD_DEPENDS+=	bison-*:../../devel/bison
+YACC=		bison
+
 GNU_CONFIGURE=	yes
 USE_GMAKE=      yes
-
-ALL_TARGET=	dep all
-WRKSRC=         ${WRKDIR}/${DISTNAME:C/[\.-]//g}
+CONFIGURE_ARGS+=--datadir=${LOCALBASE}/share/sdcc
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
+
 CONFIGURE_ENV+=	CPPFLAGS=-I${WRKDIR}/include
 
 post-extract:
@@ -28,6 +38,13 @@ post-extract:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sdcc
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/sdcc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sdcc/avr
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sdcc/z80
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/sdcc/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.sgml ${PREFIX}/share/doc/sdcc/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.lyx ${PREFIX}/share/doc/sdcc/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${PREFIX}/share/doc/sdcc/
+	${INSTALL_DATA} ${WRKSRC}/doc/avr/avr_design.txt ${PREFIX}/share/doc/sdcc/avr
+	${INSTALL_DATA} ${WRKSRC}/doc/z80/README ${PREFIX}/share/doc/sdcc/z80
 
 .include "../../mk/bsd.pkg.mk"
