@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.5 2002/06/28 15:27:40 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.6 2002/06/29 20:02:40 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -37,6 +37,11 @@ CONFIGURE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 _BLNK_CPPFLAGS=		-I${LOCALBASE}/include
 _BLNK_LDFLAGS=		-L${LOCALBASE}/lib
+
+# The configure process usually tests for outlandish or missing things
+# that we don't want polluting the argument cache.
+#
+CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 
 .if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
 .  if !defined(_FOR_X11_LINKS_ONLY)
@@ -570,6 +575,12 @@ ${_BLNK_LIBTOOL_FIX_LA}: ${.CURDIR}/../../mk/buildlink2/libtool-fix-la
 		-e 's|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g' \
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+clear-buildlink-cache: remove-buildlink-cache buildlink-wrappers
+
+remove-buildlink-cache:
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_BLNK_WRAP_CACHE_TRANSFORM}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_BLNK_WRAP_LOGIC_TRANSFORM}
 
 _BLNK_CHECK_PATTERNS+=	-e "-I${LOCALBASE}/[a-rt-z]"
 _BLNK_CHECK_PATTERNS+=	-e "-L${LOCALBASE}/[a-rt-z]"
