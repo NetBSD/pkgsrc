@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.9 2003/09/02 06:59:52 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.10 2004/02/05 08:27:18 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -30,6 +30,9 @@ BUILDLINK_X11_DIR="@BUILDLINK_X11_DIR@"
 WRKDIR="@WRKDIR@"
 WRKSRC="@WRKSRC@"
 
+original_cmd="$0 $@"
+$echo [*] $original_cmd >> $wrapperlog
+
 cmd="@WRAPPEE@"
 while $test $# -gt 0; do
 	arg="$1"; shift
@@ -48,5 +51,5 @@ done
 @_BLNK_WRAP_ENV@
 @_BLNK_WRAP_SANITIZE_PATH@
 
-$echo $cmd >> $wrapperlog
+$echo "<.>" $cmd >> $wrapperlog
 eval exec $cmd
