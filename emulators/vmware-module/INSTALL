@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2001/10/31 23:54:09 zuntum Exp $
+# $NetBSD: INSTALL,v 1.2 2002/11/06 00:14:26 wiz Exp $
 
 case $2 in
 PRE-INSTALL)
@@ -10,9 +10,9 @@ POST-INSTALL)
 ===========================================================================
 Copy the following files from ${PKG_PREFIX}/etc/rc.d to /etc/rc.d:
 
-linuxrtc vmmon vmnet vmnetif vmware
+linuxrtc vmmon vmnet vmnetif
 
-and append the content of ${PKG_PREFIX}/etc/rc.conf.d to /etc/rc.conf:
+and append the content of ${PKG_PREFIX}/etc/rc.conf.d/vmware to /etc/rc.conf:
 
 vmware_prefix=${PKG_PREFIX}
 vmmon=YES
