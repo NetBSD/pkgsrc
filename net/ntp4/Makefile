@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2000/01/10 00:57:16 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2000/02/08 12:18:15 fredb Exp $
 #
 
-DISTNAME=	ntp-4.0.98f
+DISTNAME=	ntp-4.0.99d
 CATEGORIES=	net
-MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/testing/ \
-		http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ \
-		ftp://ftp.udel.edu/pub/ntp/testing/ \
-		ftp://ftp.udel.edu/pub/ntp/ntp4/
+MASTER_SITES=	ftp://ftp.udel.edu/pub/ntp/ntp4/
 
 MAINTAINER=	fb@enteract.com
 HOMEPAGE=	http://www.ntp.org/
@@ -18,7 +15,7 @@ EXAMPLESDIR=	${PREFIX}/share/examples
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 post-build:
-	${SED} 's#@PREFIX@#${PREFIX}#g' < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
+	${SED} 's|@PREFIX@|${PREFIX}|g' < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 post-install:
 	cd ${WRKSRC}; \
