@@ -1,20 +1,24 @@
-# $NetBSD: Makefile,v 1.5 1999/05/24 20:39:49 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/06/04 01:22:37 abs Exp $
 #
 
 DISTNAME=		${PKGNAME}-source
-PKGNAME=		htmldoc-1.4
+PKGNAME=		htmldoc-1.7
 WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		www
-MASTER_SITES=		ftp://ftp.easysw.com/pub/htmldoc/
+MASTER_SITES=		ftp://ftp.easysw.com/pub/htmldoc/1.7/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.easysw.com/~mike/htmldoc/
 
-NOT_FOR_PLATFORM=	*-*-alpha	#ps-pdf.cpp:3229: Internal compiler error.
+DEPENDS+=		jpeg-6b:../../graphics/jpeg
+DEPENDS+=		png-1.0.3:../../graphics/png
+
+NOT_FOR_PLATFORM=	*-*-alpha	#ps-pdf.cpp:3229: Internal compiler error. on 1.4 - 1.7 unknown
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-x
-MAKE_ENV+=		BINDIR=${PREFIX}/bin \
+MAKE_ENV+=		CPPFLAGS=-L${LOCALBASE}/lib \
+			BINDIR=${PREFIX}/bin \
 			MANDIR=${PREFIX}/man
 
 do-install:
