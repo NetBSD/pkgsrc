@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/12/11 23:05:32 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2001/01/28 15:48:56 pooka Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:41 max Exp 
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=  	ftp://space.mit.edu/pub/davis/slang/v1.4/ \
 		http://gd.tuwien.ac.at/editors/davis/slang/v1.4/
 
 MAINTAINER=    	packages@netbsd.org
-HOMEPAGE=	http://space.mit.edu/~davis/slang.html
+HOMEPAGE=	http://space.mit.edu/~davis/slang/
 
 GNU_CONFIGURE= 	yes
 USE_LIBTOOL=	yes
