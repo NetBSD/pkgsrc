@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/05 14:25:36 agc Exp $
+
+SHA1 (mined-2000.5.tar.gz) = 76e08c1ecdf0a18be48dcdf624c8652c80a4a293
+Size (mined-2000.5.tar.gz) = 620587 bytes
+SHA1 (patch-aa) = b6cdd15625e8651b61d91196552a56c296132237

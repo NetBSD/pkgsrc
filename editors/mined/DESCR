@@ -1,0 +1,19 @@
+Mined is a text editor with 
+	Good interactive features 
+	an intuitive user interface 
+	command control and pull-down menus available 
+	control and function key or mouse control 
+
+Many useful text editing capabilities 
+       extensive Unicode support, including double-width and combining
+		characters, keyboard mapping and script highlighting 
+       many text editing features, e.g. paragraph wrapping, smart quotes,
+		multi-line support in search and replacement patterns 
+       program editing features, HTML support and syntax highlighting,
+		identifier search 
+       systematic text and file handling safety, avoiding loss of data 
+
+"Small-footprint" operation and portability 
+       plain text mode (terminal) operation 
+       instant start-up 
+       cross-platform operation (Unix, DOS/Windows) 
