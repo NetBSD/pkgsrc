@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2001/11/11 02:29:27 taya Exp $
+# $NetBSD: Makefile,v 1.19 2001/11/24 02:13:13 taya Exp $
 
-DISTNAME=	galeon-0.12.7
+DISTNAME=	galeon-1.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
 
@@ -9,7 +9,7 @@ HOMEPAGE=	http://galeon.sourceforge.net/
 COMMENT=	GNOME web browser based on gecko (mozilla rendering engine)
 
 BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
-DEPENDS+=	mozilla>=0.9.5:../mozilla
+DEPENDS+=	mozilla>=0.9.6:../mozilla
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
@@ -34,11 +34,11 @@ MOZ_LIBDIR=     ${PREFIX}/lib/mozilla
 LDFLAGS+=       -Wl,-R${MOZ_LIBDIR}
 LDFLAGS+=	-export-dynamic
 
-.if (${OPSYS} == NetBSD)
-post-configure:
-	@${LN} -fs /usr/include/g++/string ${WRKSRC}/src
-	@${LN} -fs /usr/include/g++ ${WRKSRC}/src/g++-3
-.endif
+#.if (${OPSYS} == NetBSD)
+#post-configure:
+#	@${LN} -fs /usr/include/g++/string ${WRKSRC}/src
+#	@${LN} -fs /usr/include/g++ ${WRKSRC}/src/g++-3
+#.endif
 
 pre-install:
 	${X11PREFIX}/bin/gconftool --shutdown
