@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/05/06 09:08:47 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/08/17 03:33:32 ben Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -73,6 +73,7 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/metacity.mo
