@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.4 1999/11/12 04:50:00 hubertf Exp $
+$NetBSD: patch-aq,v 1.5 2001/09/10 08:23:19 skrll Exp $
 
---- ./kfm/kiojob.h	Mon Dec 21 23:21:00 1998
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kfm/kiojob.h	Fri Nov 12 05:10:34 1999
+--- kfm/kiojob.h.orig	Mon Dec 21 22:21:00 1998
++++ kfm/kiojob.h
 @@ -58,7 +58,7 @@
       * give values for every parameter.
       */

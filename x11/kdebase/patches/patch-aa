@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.18 2001/03/20 00:20:41 fredb Exp $
+$NetBSD: patch-aa,v 1.19 2001/09/10 08:23:19 skrll Exp $
 
---- configure.orig	Tue Sep  7 17:21:06 1999
-+++ configure	Sun Apr  2 23:16:38 2000
+--- configure.orig	Tue Sep  7 16:21:06 1999
++++ configure
 @@ -517,9 +517,10 @@
  # Prefer explicitly selected file to automatically selected ones.
  if test -z "$CONFIG_SITE"; then
@@ -158,7 +158,7 @@ $NetBSD: patch-aa,v 1.18 2001/03/20 00:20:41 fredb Exp $
  s%@LIBVOLMGT@%$LIBVOLMGT%g
  s%@topdir@%$topdir%g
  s%@RUN_KAPPFINDER@%$RUN_KAPPFINDER%g
-@@ -7567,7 +7608,6 @@
+@@ -7567,7 +7609,6 @@
  	kdehelp/Makefile \
  	kdehelp/index/Makefile \
  	kdehelp/search/Makefile \

@@ -1,8 +1,7 @@
-$NetBSD: patch-ak,v 1.4 1999/12/12 19:06:37 jdolecek Exp $
+$NetBSD: patch-ak,v 1.5 2001/09/10 08:23:19 skrll Exp $
 
-A bit different patch pulled into KDE2		jdolecek 1999/12/12
---- ./kdm/kdmshutdown.h	Fri Sep  4 17:33:00 1998
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kdm/kdmshutdown.h	Fri Nov 12 05:10:32 1999
+--- kdm/kdmshutdown.h.orig	Fri Sep  4 16:33:00 1998
++++ kdm/kdmshutdown.h
 @@ -49,9 +49,21 @@
  class KDMShutdown : public FDialog {
       Q_OBJECT
