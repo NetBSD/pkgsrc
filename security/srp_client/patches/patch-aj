@@ -1,8 +1,21 @@
-$NetBSD: patch-aj,v 1.1 2002/08/19 09:17:16 agc Exp $
+$NetBSD: patch-aj,v 1.2 2004/09/08 14:30:00 markd Exp $
 
---- base/libmisc/utmp.c	2002/08/19 08:56:57	1.1
-+++ base/libmisc/utmp.c	2002/08/19 09:02:40
-@@ -93,6 +93,8 @@
+--- base/libmisc/utmp.c.orig	1998-12-10 14:43:22.000000000 +1300
++++ base/libmisc/utmp.c
+@@ -37,6 +37,12 @@
+ #include <utmpx.h>
+ #endif
+ 
++#if HAVE_UTMPX_H && defined(__NetBSD__)
++#undef HAVE_SETUTENT
++#undef HAVE_GETUTENT
++#undef HAVE_ENDUTENT
++#endif
++
+ #include <fcntl.h>
+ #include <stdio.h>
+ 
+@@ -93,6 +99,8 @@ checkutmp (picky)
  #endif
  #endif
  
@@ -11,7 +24,7 @@ $NetBSD: patch-aj,v 1.1 2002/08/19 09:17:16 agc Exp $
  #if HAVE_UTMPX_H
  	setutxent ();
  #endif
-@@ -141,17 +143,21 @@
+@@ -141,17 +149,21 @@ checkutmp (picky)
  		if (utx)
  			utxent = *utx;
  #endif
@@ -33,7 +46,7 @@ $NetBSD: patch-aj,v 1.1 2002/08/19 09:17:16 agc Exp $
  
  		if (!ut) {
   			puts(NO_UTENT);
-@@ -188,6 +194,7 @@
+@@ -188,6 +200,7 @@ checkutmp (picky)
  		if (strncmp(line, "/dev/", 5) == 0)
  			line += 5;
  
@@ -41,7 +54,7 @@ $NetBSD: patch-aj,v 1.1 2002/08/19 09:17:16 agc Exp $
   		strncpy (utent.ut_line, line, sizeof utent.ut_line);
  		if ((ut = getutline(&utent)))
   			strncpy(utent.ut_id, ut->ut_id, sizeof ut->ut_id);
-@@ -206,6 +213,7 @@
+@@ -206,6 +219,7 @@ checkutmp (picky)
  		gettimeofday((struct timeval *) &utxent.ut_tv, NULL);
  		utent.ut_time = utxent.ut_tv.tv_sec;
  #endif
@@ -49,7 +62,7 @@ $NetBSD: patch-aj,v 1.1 2002/08/19 09:17:16 agc Exp $
  	}
  #else	/* !USG */
  
-@@ -283,6 +291,7 @@
+@@ -283,6 +297,7 @@ setutmp (name, line)
  			break;
  		}
  	}
@@ -57,7 +70,7 @@ $NetBSD: patch-aj,v 1.1 2002/08/19 09:17:16 agc Exp $
  	while (utmp = getutent ()) {
  		if (utmp->ut_pid == pid) {
  			found_utmp = 1;
-@@ -357,6 +366,7 @@
+@@ -357,6 +372,7 @@ setutmp (name, line)
  
  	utxent = utxline;
  	utent = utline;
