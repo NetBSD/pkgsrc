@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/02 00:04:26 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/02 17:38:09 jlam Exp $
 
 DISTNAME=		jpilot-syncmal_0.60
 PKGNAME=		jpilot-syncmal-0.60
@@ -29,6 +29,8 @@ CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
 CONFIGURE_ARGS+=	--with-mal-source="${WRKSRC}/../malsync"
 CONFIGURE_ARGS+=	--with-plugin-prefix="${JPILOTDIR}/include/jpilot"
 CONFIGURE_ARGS+=	--with-pilot-prefix="${PILOTLINKDIR}"
+
+CFLAGS+=		-D__unix__=1
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/.libs/libsyncmal.so ${PLUGINSDIR}
