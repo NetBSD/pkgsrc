@@ -1,16 +1,15 @@
-$NetBSD: patch-ad,v 1.10 2002/05/07 00:11:21 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.11 2003/02/04 00:46:08 dmcmahill Exp $
 
 work around a c++ -O2 bug which is present on at least sparc 
 and pmax using egcs-1.1.1 
 
-also don't try to strip a script.
-
---- Makefile.in.orig	Sun May  5 20:50:38 2002
+--- Makefile.in.orig	Sun Jan 26 16:15:58 2003
 +++ Makefile.in
-@@ -189,7 +189,16 @@
+@@ -174,7 +174,17 @@
  
  lexor.o: lexor.cc parse.h
  
++# work around buggy compilers when compiling the parser with optimization
 +# make sure no one sneaks a -O* in on us via one of these variables
 +# set in the environment
 +CXX_NOOPT=$(CXX:-O%=)
@@ -24,12 +23,3 @@ also don't try to strip a script.
  
  parse.h parse.cc: $(srcdir)/parse.y
  	$(YACC) --verbose -t -p VL -d -o parse.cc $(srcdir)/parse.y
-@@ -220,7 +229,7 @@
- 	for tgt in $(TARGETS); do (cd $$tgt ; $(MAKE) install); done
- 
- $(bindir)/iverilog-vpi: ./iverilog-vpi
--	$(INSTALL_PROGRAM) ./iverilog-vpi $(bindir)/iverilog-vpi
-+	$(INSTALL_SCRIPT) ./iverilog-vpi $(bindir)/iverilog-vpi
- 
- $(libdir)/libvpi.a : ./libvpi.a
- 	$(INSTALL_DATA) libvpi.a $(libdir)/libvpi.a
