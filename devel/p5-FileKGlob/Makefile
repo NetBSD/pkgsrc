@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/10/18 15:20:16 veego Exp $
 #
 
 DISTNAME=	FileKGlob
 PKGNAME=	p5-FileKGlob-1.2
+SVR4_PKGNAME=	p5fkg
 WRKSRC=		${WRKDIR}/File
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 18:09:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/18 15:20:28 veego Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:06 jfitz Exp
 #
 
 DISTNAME=		Business-CreditCard-0.1
 PKGNAME=		p5-${DISTNAME}
+SVR4_PKGNAME=		p5buc
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Business/}
 

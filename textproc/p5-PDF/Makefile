@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/03 15:30:08 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:41 veego Exp $
 #
 
 DISTNAME=	PDF-111
 PKGNAME=	p5-PDF-1.11
+SVR4_PKGNAME=	p5pdf
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PDF/}
 EXTRACT_SUFX=	.tgz

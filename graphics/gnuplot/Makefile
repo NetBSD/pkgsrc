@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/03/19 22:11:14 wennmach Exp $
+# $NetBSD: Makefile,v 1.13 2001/10/18 15:20:21 veego Exp $
 #
 
 DISTNAME=	gnuplot-3.7.1
+SVR4_PKGNAME=	gplot
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.gnuplot.vt.edu/pub/gnuplot/ \
 		ftp://ftp.ucc.ie/pub/gnuplot/
