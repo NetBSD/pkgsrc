@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/10/21 09:24:50 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/10/26 18:29:11 agc Exp $
 #
 
 # Note to package maintainers:
@@ -7,7 +7,7 @@
 # that file to ${MASTER_SITE_LOCAL}.
 # Also, check PKGTOOLS_REQD value in pkgsrc/mk/bsd.pkg.mk
 
-DISTNAME=		pkg_install-19981019
+DISTNAME=		pkg_install-19981026
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
