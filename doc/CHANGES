@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2590 2003/06/26 00:56:35 gehenna Exp $
+$NetBSD: CHANGES,v 1.2591 2003/06/26 07:01:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2572,3 +2572,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sqlite to 2.8.3 [tsarna 2003-06-25]
 	Added py-sqlite-0.4.3 [tsarna 2003-06-25]
 	Updated cvsync to 0.23.4 [gehenna 2003-06-26]
+	vmware3: Downgraded to 3.2.0 [tron 2003-06-26]
