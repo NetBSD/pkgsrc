@@ -1,4 +1,4 @@
-# $NetBSD: patch-am,v 1.1 2005/03/03 08:53:06 garbled Exp $
+$NetBSD: patch-am,v 1.2 2005/03/03 11:54:31 garbled Exp $
 --- ./src/lat_fs.c      Fri Jun 27 01:34:38 1997
 +++ work/hbench-OS/src/lat_fs.c       Wed Aug 14 12:48:11 2002
 @@ -229,8 +229,8 @@

@@ -1,4 +1,4 @@
-# $NetBSD: patch-ap,v 1.1 2005/03/03 08:53:06 garbled Exp $
+$NetBSD: patch-ap,v 1.2 2005/03/03 11:54:31 garbled Exp $
 --- src/lat_ctx2.c.orig	1997-06-26 17:34:37.000000000 -0700
 +++ src/lat_ctx2.c	2005-03-03 01:21:59.000000000 -0700
 @@ -63,6 +63,7 @@
