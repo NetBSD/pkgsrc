@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/20 01:40:11 hubertf Exp $
+
+--- Makefile.orig	Wed Jan 19 15:47:48 2000
++++ Makefile	Wed Jan 19 16:03:35 2000
+@@ -1,21 +1,21 @@
+ # makefile for:		avltree
+ # version:		1.1
+ # Date created:		13 January 2000
+ # Whom:			Bill Ross <bross@nas.nasa.gov> <ross@cgl.ucsf.edu>
+ #
+-CC=	cc
+ 
+ all:		libavltree.a
+ 
+ libavltree.a:	avltree.o
+-		$(AR) r  libavltree.a avltree.o
+-		strip libavltree.a
++		${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} \
++			avltree.lo -rpath ${PREFIX}/lib \
++			-version-info 1:0
+ 
+ avltree.o: 	avltree.c avltree.h
+-		$(CC) -c avltree.c
++		${LIBTOOL} --mode=compile ${CC} -c avltree.c
+ 
+ install:	libavltree.a
+-		install -c libavltree.a $(PREFIX)/lib
++		${LIBTOOL} --mode=install install -c libavltree.la ${PREFIX}/lib
+ 		install -c avltree.h $(PREFIX)/include
+ 		gzip -c avltree.3 > $(PREFIX)/man/man3/avltree.3.gz
+ 
