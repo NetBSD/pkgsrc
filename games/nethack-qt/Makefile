@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/08/23 23:14:26 tron Exp $
+# $NetBSD: Makefile,v 1.22 2000/10/19 08:06:56 skrll Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=		nethack-qt-${NETHACK_VERSION}
 CATEGORIES+=		x11
 
 DEPENDS+=		nethack-lib-${NETHACK_VERSION}:../nethack-lib
-DEPENDS+=		qt2-2.0.2:../../x11/qt
+DEPENDS+=		qt2-libs-*:../../x11/qt2-libs
 
 USE_X11=		YES
 USE_XPM=		YES
