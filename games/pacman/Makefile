@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/12/17 11:06:48 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/14 23:09:27 wiz Exp $
 
 DISTNAME=		Pacman-1.0.0
 CATEGORIES=		games x11
@@ -6,8 +6,6 @@ MASTER_SITES=		http://dark.x.dtu.dk/clansoft/clanlib/download/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/
-
-BROKEN=			Problems with ClanLib instance
 
 DEPENDS+=		ClanLib-0.2.2:../../graphics/clanlib
 
