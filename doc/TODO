@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.495 2003/04/24 13:33:29 wiz Exp $
+$NetBSD: TODO,v 1.496 2003/04/24 14:15:46 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -263,7 +263,6 @@ Suggested package updates
 	o wwwoffle-2.7h
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
-	o xchat-2.0.2 [pkg/21287]
 	o xdialog-2.1.0
 	o xerces-c-2.1.0 [heinz]
 	o xisp-2.7 [pkg/19566]
