@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2002/10/18 14:02:12 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2002/11/28 11:40:46 markd Exp $
 
---- server/Imakefile.orig	Tue Dec 12 20:45:48 2000
+--- server/Imakefile.orig	Wed Jul 24 13:49:33 2002
 +++ server/Imakefile
-@@ -38,7 +38,7 @@ XCOMM $NCDId: @(#)Imakefile,v 1.17 1995/
+@@ -38,7 +38,7 @@
       EXTENSIONS = 
           XAULIB = 
         XDMCPLIB = 
@@ -11,14 +11,18 @@ $NetBSD: patch-ab,v 1.7 2002/10/18 14:02:12 jlam Exp $
          BSDEMUL = $(LIBSRC)/Berk/Berklib.o
              MFB =
              CFB =
-@@ -217,10 +217,11 @@ clean::
+@@ -224,6 +224,7 @@
  	$(RM) $(ALL)
  
   ETCDIR = NasConfigSearchPath
-+  EGDIR = ${PREFIX}/share/examples/nas
++ EGDIR = ${PREFIX}/share/examples/nas
  
  InstallManPage(nasd,$(MANDIR))
+ #ifdef InstallGenManPage
+@@ -231,7 +232,7 @@
+ #else
  InstallManPage(nasd.conf,$(RCMANDIR))
+ #endif
 -InstallNonExecFile(nasd.conf.eg,$(ETCDIR))
 +InstallNonExecFile(nasd.conf.eg,$(EGDIR))
  
