@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/04 22:24:21 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/09 19:36:56 seb Exp $
 bin/abc2ly
 bin/as2text
 bin/convert-ly
@@ -10,27 +10,6 @@ bin/midi2ly
 bin/mup2ly
 bin/musedata2ly
 bin/pmx2ly
-info/lilypond-internals.info
-info/lilypond-internals.info-1
-info/lilypond-internals.info-10
-info/lilypond-internals.info-11
-info/lilypond-internals.info-12
-info/lilypond-internals.info-2
-info/lilypond-internals.info-3
-info/lilypond-internals.info-4
-info/lilypond-internals.info-5
-info/lilypond-internals.info-6
-info/lilypond-internals.info-7
-info/lilypond-internals.info-8
-info/lilypond-internals.info-9
-info/lilypond.info
-info/lilypond.info-1
-info/lilypond.info-2
-info/lilypond.info-3
-info/lilypond.info-4
-info/lilypond.info-5
-info/lilypond.info-6
-info/lilypond.info-7
 man/man1/abc2ly.1
 man/man1/as2text.1
 man/man1/convert-ly.1
