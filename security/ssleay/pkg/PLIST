@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/09/30 20:08:22 cjs Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/10/02 03:22:57 cjs Exp $
 bin/ssleay
 bin/asn1parse
 bin/base64
@@ -79,7 +79,6 @@ bin/c_info
 bin/c_issuer
 bin/c_name
 bin/c_rehash
-etc/ssleay.cnf.sample
 include/crypto.h
 include/cryptall.h
 include/md2.h
@@ -121,7 +120,7 @@ include/ssl2.h
 include/ssl3.h
 include/ssl23.h
 include/tls1.h
-lib/ssleay.cnf
+lib/ssleay.cnf.eg
 lib/libcrypto.a
 lib/libssl.a
 share/doc/SSLeay/API.doc
@@ -172,4 +171,5 @@ share/doc/SSLeay/threads.doc
 share/doc/SSLeay/txt_db.doc
 share/doc/SSLeay/verify
 share/doc/SSLeay/why.doc
+@exec if [ ! -f @@@PREFIX@@@/lib/ssleay.cnf ]; then echo "Installing ssleay.cnf in @@@PREFIX@@@/lib." ; cp -p @@@PREFIX@@@/lib/ssleay.cnf.eg @@@PREFIX@@@/lib/ssleay.cnf; fi
 @dirrm share/doc/SSLeay
