@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/30 02:11:06 jschauma Exp $
+bin/adjust
+bin/anomaly
+bin/build-icm
+bin/check
+bin/codon-usage
+bin/compare-lists
+bin/extract
+bin/generate
+bin/get-len
+bin/get-putative
+bin/glimmer2
+bin/long-orfs
+share/doc/glimmer/build-icm.readme
+share/doc/glimmer/extract.readme
+share/doc/glimmer/glimmer2.readme
+share/doc/glimmer/long-orfs.readme
+share/doc/glimmer/run-glimmer2.readme
+share/glimmer/run-glimmer2
+@dirrm share/glimmer
+@dirrm share/doc/glimmer

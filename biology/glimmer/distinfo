@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/30 02:11:06 jschauma Exp $
+
+SHA1 (glimmer21.tar.gz) = 676bf2150389b4eb817ef2db7c646a332151eaf7
+Size (glimmer21.tar.gz) = 79091 bytes
+SHA1 (patch-aa) = ceb45f887c32e91bd96b9d2c8dae39c9cc6fc658
