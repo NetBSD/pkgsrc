@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/07/03 16:16:30 drochner Exp $
+# $NetBSD: Makefile,v 1.29 2003/07/03 18:04:23 drochner Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -24,10 +24,6 @@ HAS_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
-# java takes hours to build, so make it optional
-.if !defined(PKG_GCC3_JAVA)
-CONFIGURE_ARGS+=	--enable-languages="c c++ f77 objc ada"
-.endif
 UNLIMIT_RESOURCES=	datasize
 
 # as this is named gcc3, use DISTNAME instead.
@@ -50,6 +46,10 @@ CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
 .else
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
+.endif
+# java takes hours to build, so make it optional
+.if !defined(PKG_GCC3_JAVA)
+CONFIGURE_ARGS+=	--enable-languages="c,c++,f77,objc,ada"
 .endif
 
 .if ${OPSYS} == "NetBSD" && !defined(USE_BINUTILS)
