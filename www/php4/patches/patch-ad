@@ -1,26 +1,8 @@
-$NetBSD: patch-ad,v 1.9 2002/08/26 00:32:22 grant Exp $
+$NetBSD: patch-ad,v 1.10 2002/08/26 00:42:34 grant Exp $
 
---- configure.orig	Wed Feb 27 20:18:32 2002
+--- configure.orig	Wed Feb 27 04:18:32 2002
 +++ configure
-@@ -3074,7 +3074,7 @@ if test "${with_apxs+set}" = set; then
-   
-   if test "$withval" = "yes"; then
-     APXS=apxs
--    $APXS -q CFLAGS >/dev/null 2>&1
-+    $APXS -q CFLAGS= >/dev/null 2>&1
-     if test "$?" != "0" && test -x /usr/sbin/apxs; then #SUSE 6.x 
-       APXS=/usr/sbin/apxs
-     fi
-@@ -3092,7 +3092,7 @@ if test "${with_apxs+set}" = set; then
- 
-   fi
- 
--  $APXS -q CFLAGS >/dev/null 2>&1
-+  $APXS -q CFLAGS= >/dev/null 2>&1
-   if test "$?" != "0"; then
-     echo "$ac_t""" 1>&6
-     echo "$ac_t""" 1>&6
-@@ -5138,11 +5138,6 @@ EOF
+@@ -5138,11 +5138,6 @@
    fi
  
  
@@ -32,7 +14,7 @@ $NetBSD: patch-ad,v 1.9 2002/08/26 00:32:22 grant Exp $
  INCLUDES="$INCLUDES -I\$(top_builddir)/Zend"
  
  
-@@ -16148,10 +16143,6 @@ EOF
+@@ -16148,10 +16143,6 @@
  
  else
    echo "$ac_t""no" 1>&6
@@ -43,7 +25,7 @@ $NetBSD: patch-ad,v 1.9 2002/08/26 00:32:22 grant Exp $
  fi
  
  
-@@ -23572,19 +23563,10 @@ EOF
+@@ -23572,19 +23563,10 @@
  
  
    else
@@ -63,7 +45,7 @@ $NetBSD: patch-ad,v 1.9 2002/08/26 00:32:22 grant Exp $
    echo "$ac_t""no" 1>&6
  
  fi
-@@ -58680,7 +58662,7 @@ esac
+@@ -58680,7 +58662,7 @@
  
  TSRM_LIB='TSRM/libtsrm.la'
  TSRM_DIR=TSRM
@@ -72,7 +54,7 @@ $NetBSD: patch-ad,v 1.9 2002/08/26 00:32:22 grant Exp $
  
  if test "$ZEND_EXPERIMENTAL_ZTS" = "yes"; then
    cat >> confdefs.h <<\EOF
-@@ -63418,7 +63400,7 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
+@@ -63418,7 +63400,7 @@
  
  if test "$enable_debug" != "yes"; then
    
