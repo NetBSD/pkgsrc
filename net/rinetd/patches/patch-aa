@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/10/01 01:15:44 grant Exp $
+
+--- Makefile.orig	1999-03-02 05:41:50.000000000 +1100
++++ Makefile
+@@ -1,9 +1,7 @@
+-CFLAGS=-DLINUX -g
+-
+ rinetd: rinetd.o match.o
+-	gcc rinetd.o match.o -o rinetd
++	${CC} rinetd.o match.o -o rinetd
+ 
+ install: rinetd
+-	install -m 700 rinetd /usr/sbin
+-	install -m 644 rinetd.8 /usr/man/man8
++	${INSTALL} -m 700 rinetd ${PREFIX}/sbin
++	${INSTALL} -m 644 rinetd.8 ${PREFIX}/man/man8
+ 
