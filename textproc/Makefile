@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2003/01/17 04:00:14 salo Exp $
+# $NetBSD: Makefile,v 1.189 2003/01/17 06:50:09 salo Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -7,11 +7,14 @@ SUBDIR+=	GutenMark
 SUBDIR+=	GutenMark-words
 SUBDIR+=	antiword
 SUBDIR+=	aspell
+SUBDIR+=	aspell-breton
 SUBDIR+=	aspell-catalan
 SUBDIR+=	aspell-czech
 SUBDIR+=	aspell-danish
 SUBDIR+=	aspell-dutch
 SUBDIR+=	aspell-english
+SUBDIR+=	aspell-esperanto
+SUBDIR+=	aspell-faroese
 SUBDIR+=	aspell-francais
 SUBDIR+=	aspell-gaeilge
 SUBDIR+=	aspell-german
@@ -25,6 +28,8 @@ SUBDIR+=	aspell-russian
 SUBDIR+=	aspell-slovak
 SUBDIR+=	aspell-spanish
 SUBDIR+=	aspell-svenska
+SUBDIR+=	aspell-ukrainian
+SUBDIR+=	aspell-welsh
 SUBDIR+=	bibclean
 SUBDIR+=	biblook
 SUBDIR+=	bibparse
