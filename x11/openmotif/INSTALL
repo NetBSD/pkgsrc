@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.4 2003/05/19 19:43:17 jschauma Exp $
+# $NetBSD: INSTALL,v 1.5 2003/08/30 20:23:08 jlam Exp $
 
 X11BASE=@X11BASE@
 MOTIF_RULES=${PKG_PREFIX}/lib/X11/config/Motif.rules
@@ -7,9 +7,6 @@ X11_HOSTDEF=${X11BASE}/lib/X11/config/host.def
 HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
 
 case ${STAGE} in
-PRE-INSTALL)
-	;;
-
 POST-INSTALL)
 	if [ ${PKG_PREFIX} = ${X11BASE} ]
 	then
@@ -37,10 +34,5 @@ POST-INSTALL)
 	) > ${HOSTDEF}
 	${RM} -f ${HOSTDEF}.bak
 	${ECHO} "done."
-	;;
-
-*)
-	${ECHO} "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac

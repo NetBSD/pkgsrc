@@ -1,12 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.3 2002/10/06 04:08:10 taca Exp $
-
-CAT="@CAT@"
-CMP="@CMP@"
-RM="@RM@"
-RMDIR="@RMDIR@"
-TRUE="@TRUE@"
+# $NetBSD: DEINSTALL,v 1.4 2003/08/30 20:23:00 jlam Exp $
 
 CONFDIR="@PKG_SYSCONFDIR@"
 SAMPLECONFDIR=${PKG_PREFIX}/share/examples/vtun
@@ -88,10 +82,4 @@ EOF
 EOF
 	fi
 	;;
-
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
-	;;
 esac
-exit 0
