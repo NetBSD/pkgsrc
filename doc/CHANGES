@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2627 2003/06/29 23:42:29 gson Exp $
+$NetBSD: CHANGES,v 1.2628 2003/06/29 23:45:15 gson Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2615,6 +2615,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cweb to 3.64 [jtb 2003-06-29]
 	Updated grap to 1.30 [jtb 2003-06-29]
 	Updated hevea to 1.06 [jtb 2003-06-29]
-	Added p5-Geography-Countries [gson 2003-06-29]
+	Added p5-Geography-Countries-1.4 [gson 2003-06-29]
 	Added swiftsurf-1.2.5 [jtb 2003-06-29]
 	Added py-dns-1.0.0b3 [gson 2003-06-29]
