@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.36 2004/02/25 09:05:40 grant Exp $
+# $NetBSD: post-build,v 1.37 2004/03/11 01:42:11 hubertf Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -73,12 +73,12 @@ if ($startdate == 0) {
 $verbose=1;
 
 $report_head = <<EOF;
-Package                    Breaks  Last commit  Maintainer
--------------------------------------------------------------------------
+Package                    Breaks  Maintainer
+--------------------------------------------------------------
 EOF
 $report_form = <<EOF;
-@<<<<<<<<<<<<<<<<<<<<<<<<< @<<<<<< @<<<<<<<<<<< @<<<<<<<<<<<<<<<<<<<<<<<<
-$pkg                       $nbrokenby $who      $maintainer
+@<<<<<<<<<<<<<<<<<<<<<<<<< @<<<<<< @<<<<<<<<<<<<<<<<<<<<<<<<
+$pkg                       $nbrokenby  $maintainer
 EOF
 
 system("mkdir -p ${FTP}");
@@ -206,7 +206,6 @@ sub pkgResult {
 <tr>
   <td><a class="pkg-$state_style" href="$pinfo->{bf}" title="build log for $pkg">$pkg</a></td>
   $nbrokenby_html
-  <td>$who</td>
   <td>$file</td>
   <td>$maintainer</td>
 </tr>
@@ -420,7 +419,6 @@ EOHTML
 <tr align="left">
   <th width="30%">Package</th>
   <th>Breaks</th>
-  <th>Last commit by</th>
   <th>File touched last</th>
   <th>Maintainer</th>
 </tr>
