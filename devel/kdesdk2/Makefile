@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/03/26 02:27:38 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/03 04:40:55 snj Exp $
 
 DISTNAME=	kdesdk-2.2.2
 PKGREVISION=	6
@@ -9,7 +9,7 @@ COMMENT=	Support applications and tools used by KDE developers
 
 BUILD_DEPENDS+= qt2-designer-kde>=2.3.1nb2:../../x11/qt2-designer-kde
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 LTCONFIG_OVERRIDE+=	${WRKSRC}/kapptemplate/admin/ltconfig
 
 .include "../../mk/bsd.prefs.mk"
@@ -20,9 +20,9 @@ PLIST_SRC+=	${PKGDIR}/PLIST.kmtrace
 .endif
 PLIST_SRC+=	${PKGDIR}/PLIST
 
-.include "../../databases/db/buildlink2.mk"
-.include "../../devel/libtool/buildlink2.mk"
-.include "../../x11/kde2/buildlink2.mk"
-.include "../../x11/kdebase2/buildlink2.mk"
+.include "../../databases/db/buildlink3.mk"
+.include "../../devel/libtool/buildlink3.mk"
+.include "../../x11/kde2/kde2.mk"
+.include "../../x11/kdebase2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
