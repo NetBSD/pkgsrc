@@ -1,0 +1,19 @@
+$NetBSD: patch-ag,v 1.1 2001/01/10 06:03:14 briggs Exp $
+
+*** mit-pthreads/config/configure.in.orig	Tue Jan  9 21:34:16 2001
+--- mit-pthreads/config/configure.in	Tue Jan  9 22:41:49 2001
+***************
+*** 174,179 ****
+--- 174,185 ----
+  	# hpux-9.03.mk seems to be missing; what should this be?
+  	except="fork"
+  	;;
++     powerpc-*-netbsd1.*)
++ 	name=powerpc-netbsd
++ 	sysincludes=netbsd-1.1
++ 	except="fork lseek ftruncate pipe fstat"
++ 	available_syscalls="sigprocmask sigaction sigsuspend"
++ 	;;
+      sparc-*-sunos4.1.3* | sparc-*-sunos4.1.4*)
+  	name=sparc-sunos-4.1.3
+  	sysincludes=sunos-4.1.3
