@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: pkg_install2nbcompat,v 1.1 2004/08/20 22:27:12 jlam Exp $
+#	$NetBSD: pkg_install2nbcompat,v 1.2 2005/02/03 23:53:23 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,7 +37,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-if [ $# -lt 1 ]; then echo "pax2nbcompat dest"; exit 1; fi
+if [ $# -lt 1 ]; then echo "pkg_install2nbcompat dest"; exit 1; fi
 
 : ${PKGSRCDIR:=/usr/pkgsrc}
 : ${BSDSRCDIR:=/usr/src}
