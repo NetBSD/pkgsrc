@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7209 2004/09/22 14:02:12 salo Exp $
+$NetBSD: CHANGES,v 1.7210 2004/09/22 15:08:13 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4387,3 +4387,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p0f to 2.0.5 [adrianp 2004-09-22]
 	Updated mad123 to 0.8.3 [scw 2004-09-22]
 	Updated lftp to 3.0.9 [salo 2004-09-22]
+	Added snort-contrib-2.2.0 [adrianp 2004-09-22]
