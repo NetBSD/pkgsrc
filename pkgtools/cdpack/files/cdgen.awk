@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: cdgen.awk,v 1.1.1.1 2001/04/27 18:16:42 dmcmahill Exp $
+# $NetBSD: cdgen.awk,v 1.2 2001/06/02 02:03:52 dmcmahill Exp $
 #
 # Copyright (c) 2001 Dan McMahill, All rights reserved.
 #
@@ -43,7 +43,7 @@ BEGIN {
 # ARGV[7] = verbose flag.  "verbose=yes" for verbose output
 # ARGV[8] = xtra_size.  How many kB are needed per CD for common files
 
-    if (ARGC != 9){
+    if (ARGC != 10){
 	printf("%s:  wrong number of arguments\n",ARGV[0]);
 	usage();
 	exit(1);
@@ -56,6 +56,7 @@ BEGIN {
     order    = ARGV[4];
     cdlist   = ARGV[5];
     xtra_size= ARGV[8];
+    other_size= ARGV[9];
 
     if (ARGV[6] ~ "dup=yes"){
 	dup=1;
@@ -205,8 +206,22 @@ BEGIN {
 	    }
 	}
 	cdpkgs[cdn] = pkgn;
-	printf("cd number %d is partially full (%g Mb)\n",cdn,
-	       cdtot[cdn]/1024);
+
+# see if the extra files will fit on the last CD
+	if ( (cdtot[cdn] + other_size) < maxcd ){
+	    printf("cd number %d is partially full (%g Mb)\n",cdn,
+		   cdtot[cdn]/1024);
+	}
+	else{
+	    printf("cd number %d is full (%g Mb)\n",cdn,
+		   cdtot[cdn]/1024);
+	    cdn = cdn + 1;
+	    cdtot[cdn] = other_size;
+	    cdpkgs[cdn] = 0;
+	    printf("cd number %d is partially full (%g Mb)\n",cdn,
+		   cdtot[cdn]/1024);
+	}
+	    
     }
 
 #
@@ -257,8 +272,21 @@ BEGIN {
 
 	}
 	cdpkgs[cdn] = pkgn;
-	printf("cd number %d is partially full (%g Mb)\n",cdn,
-	       cdtot[cdn]/1024);
+
+# see if the extra files will fit on the last CD
+	if ( (cdtot[cdn] + other_size) < maxcd ){
+	    printf("cd number %d is partially full (%g Mb)\n",cdn,
+		   cdtot[cdn]/1024);
+	}
+	else{
+	    printf("cd number %d is full (%g Mb)\n",cdn,
+		   cdtot[cdn]/1024);
+	    cdn = cdn + 1;
+	    cdtot[cdn] = other_size;
+	    cdpkgs[cdn] = 0;
+	    printf("cd number %d is partially full (%g Mb)\n",cdn,
+		   cdtot[cdn]/1024);
+	}
     }
 
 # remember how many cd's there are
