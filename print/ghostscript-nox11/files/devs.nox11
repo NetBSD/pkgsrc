@@ -1,15 +1,8 @@
-# $NetBSD: devs.nox11,v 1.4 2001/12/20 22:31:09 jlam Exp $
+# $NetBSD: devs.nox11,v 1.5 2002/02/03 21:27:20 jlam Exp $
 #
 # non-X11 drivers for Ghostscript
 
 DEVICE_DEVS+=	\
-	$(DD)AP21xx.dev \
-	$(DD)DJ630.dev \
-	$(DD)DJ6xx.dev \
-	$(DD)DJ6xxP.dev \
-	$(DD)DJ8xx.dev \
-	$(DD)DJ9xx.dev \
-	$(DD)DJ9xxVIP.dev \
 	$(DD)ap3250.dev \
 	$(DD)appledmp.dev \
 	$(DD)bit.dev \
@@ -70,7 +63,7 @@ DEVICE_DEVS+=	\
 	$(DD)gdi.dev \
 	$(DD)hl7x0.dev \
 	$(DD)hpdj.dev \
-	$(DD)hpijs.dev \
+	$(DD)ijs.dev \
 	$(DD)ibmpro.dev \
 	$(DD)imagen.dev \
 	$(DD)inferno.dev \
