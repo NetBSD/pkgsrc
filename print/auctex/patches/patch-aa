@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2003/01/11 10:02:04 uebayasi Exp $
+$NetBSD: patch-aa,v 1.5 2003/03/01 03:49:51 uebayasi Exp $
 
 --- Makefile.orig	Mon Nov 25 23:43:16 2002
 +++ Makefile
@@ -20,12 +20,37 @@ $NetBSD: patch-aa,v 1.4 2003/01/11 10:02:04 uebayasi Exp $
  
  ##----------------------------------------------------------------------
  ## YOU MAY NEED TO EDIT THESE
-@@ -112,7 +112,7 @@
+@@ -108,17 +108,17 @@
+ all:	lisp
  
- some:	$(AUCELC) $(STYLESRC:.el=.elc)
+ lisp:
+-	$(ELC) $(AUCSRC) $(STYLESRC)
++	-$(ELC) $(AUCSRC) $(STYLESRC)
+ 
+-some:	$(AUCELC) $(STYLESRC:.el=.elc)
++some:	-$(AUCELC) $(STYLESRC:.el=.elc)
  
 -install:	install-lisp
 +install:	install-lisp install-info
  
  contrib:
- 	$(ELC) bib-cite.el
+-	$(ELC) bib-cite.el
+-	$(ELC) font-latex.el
+-# 	$(ELC) tex-jp.el              # Doesn't compile without MULE
+-# 	$(ELC) hilit-LaTeX.el         # Doesn't compile without X
++	-$(ELC) bib-cite.el
++	-$(ELC) font-latex.el
++# 	-$(ELC) tex-jp.el              # Doesn't compile without MULE
++# 	-$(ELC) hilit-LaTeX.el         # Doesn't compile without X
+ 
+ install-lisp:	some
+ 	if [ ! -d $(lispdir) ]; then mkdir $(lispdir); else true; fi ;
+@@ -159,7 +159,7 @@
+ 
+ 
+ .el.elc:
+-	$(ELC) $<
++	-$(ELC) $<
+ 
+ clean:
+ 	rm -rf *~ #*# lex.yy.c idetex auctex
