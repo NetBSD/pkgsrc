@@ -1,0 +1,7 @@
+#!/bin/sh
+# $NetBSD: post-patch,v 1.1.1.1 1999/06/06 17:08:37 hwr Exp $
+
+cd ${WRKSRC}
+mv makeconfig makeconfig.configured
+sed -e 's/@PREFIX@/${PREFIX}/' <  makeconfig.configured > makeconfig
+chmod +x makeconfig
