@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/24 15:00:34 agc Exp $
 # New ports collection makefile for:	zsh
 # Version required:     	3.0.5
 # Date created:			11 Feb. 1995
@@ -26,6 +27,12 @@ MAN1=		zsh.1 zshbuiltins.1 zshcompctl.1 zshexpn.1 zshmisc.1 \
 
 # If you want to build a static binary, uncomment the following line
 #LDFLAGS+=-static
+
+OPSYS!=		uname -s
+.if (${OPSYS} == "NetBSD")
+BUILD_DEPENDS=  ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+RUN_DEPENDS=    ${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+.endif
 
 post-install:
 	@if [ ! -f ${PREFIX}/info/dir ]; then \
