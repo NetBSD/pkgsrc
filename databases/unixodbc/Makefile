@@ -1,0 +1,53 @@
+# $NetBSD: Makefile,v 1.1.1.1 2001/11/06 04:08:33 jlam Exp $
+
+PKGNAME=		unixodbc-${ODBC_VERS}
+ODBC_PKG_VERS=		# empty
+COMMENT=		ODBC 2.x/3.x driver manager
+
+CONFLICTS+=		iodbc-[0-9]*
+USE_BUILDLINK_ONLY=	YES
+
+.include "../../databases/unixodbc/Makefile.common"
+
+CONFIGURE_ARGS+=	--disable-gui
+
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WRKDIR}/INSTALL
+
+PLIST_SUBST+=		PKGBASE=${PKGBASE}
+PLIST_SUBST+=		UNIXODBC_DRIVERS_DIR=${UNIXODBC_DRIVERS_DIR}
+
+FILES_SUBST+=		PKGBASE=${PKGBASE}
+FILES_SUBST+=		UNIXODBC_DRIVERS_DIR=${UNIXODBC_DRIVERS_DIR}
+FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		PKGBASE=${PKGBASE}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CMP=${CMP:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		ECHO=${ECHO:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TR=${TR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+
+post-patch: fix-driver-installation
+
+pre-install:
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/odbcinst.ini.in		\
+		> ${WRKDIR}/odbcinst.ini
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+
+post-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/odbcinst.ini ${EGDIR}/odbcinst.ini
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+
+.include "../../devel/readline/buildlink.mk"
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/11/06 04:08:33 jlam Exp $
+
+SHA1 (unixODBC-2.0.11.tar.gz) = 8bfc4d03b8284ada319c5203352ec42c862cd34c
+Size (unixODBC-2.0.11.tar.gz) = 1734287 bytes
+SHA1 (patch-aa) = 082138af760a8ba572da5f9a32fb7865a1ed7823

@@ -1,0 +1,6 @@
+[TXT]
+Description	= Text file driver
+Driver		= @PREFIX@/@UNIXODBC_DRIVERS_DIR@/libodbctxt.so
+Setup		= @PREFIX@/@UNIXODBC_DRIVERS_DIR@/libodbctxtS.so
+FileUsage	= 1
+
