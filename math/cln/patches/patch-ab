@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/03/05 14:46:23 adam Exp $
+
+--- doc/Makefile.in.orig	2003-11-17 13:22:06.000000000 +0100
++++ doc/Makefile.in
+@@ -12,7 +12,7 @@ exec_prefix = @exec_prefix@
+ datadir = @datadir@
+ infodir = @infodir@
+ mandir = @mandir@
+-htmldir = $(datadir)/html
++htmldir = $(datadir)/doc/html/cln
+ dvidir = $(datadir)/dvi
+ DESTDIR =
+ 
+@@ -42,7 +42,7 @@ SHELL = /bin/sh
+ 
+ VPATH = $(srcdir)
+ 
+-all : info dvi ps html
++all : info html
+ 
+ 
+ info : $(srcdir)/$(PACKAGE).info
+@@ -82,13 +82,11 @@ $(PACKAGE)_toc.html : $(srcdir)/$(PACKAG
+ install : all installdirs force
+ 	$(INSTALL_DATA) $(srcdir)/$(PACKAGE).info $(DESTDIR)$(infodir)/$(PACKAGE).info
+ 	$(INSTALL_DATA) $(srcdir)/$(PACKAGE)_*.html $(DESTDIR)$(htmldir)
+-	$(INSTALL_DATA) $(srcdir)/$(PACKAGE).dvi $(DESTDIR)$(dvidir)/$(PACKAGE).dvi
+ 
+ installdirs : force
+ 	$(MKDIR) $(DESTDIR)$(datadir)
+ 	$(MKDIR) $(DESTDIR)$(infodir)
+ 	$(MKDIR) $(DESTDIR)$(htmldir)
+-	$(MKDIR) $(DESTDIR)$(dvidir)
+ 
+ uninstall : force
+ 	$(RM) $(DESTDIR)$(infodir)/$(PACKAGE).info
