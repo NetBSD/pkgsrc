@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/10 16:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/21 23:53:13 jlam Exp $
 
 .include "../xchat/Makefile.common"
 
@@ -9,7 +9,7 @@ COMMENT+=	and GNOME libraries
 
 CONFIGURE_ARGS+=	--enable-panel
 
-.include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
-.include "../../x11/gnome-core/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
