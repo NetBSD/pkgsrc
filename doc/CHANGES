@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5384 2004/03/31 03:52:45 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5385 2004/03/31 04:33:04 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1624,3 +1624,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added poedit-1.2.5 [xtraeme 2004-03-30]
 	Added galeon-devel-1.3.14a [xtraeme 2004-03-30]
 	Updated openldap to 2.1.29 [xtraeme 2004-03-31]
+	Updated vim-kde to 6.2.14 [snj 2004-03-31]
