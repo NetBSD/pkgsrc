@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/15 02:07:15 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/15 08:18:40 jlam Exp $
 
 DISTNAME=		enormous
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -37,10 +37,10 @@ pre-extract:
 	@${ECHO} ""
 
 do-build:
-        @${ECHO} ""
-        @${ECHO} "  ** Get yourself a shower and a big mug of coffee,"
-        @${ECHO} "  ** this will take _very_ long!"
-        @${ECHO} ""
+	@${ECHO} ""
+	@${ECHO} "  ** Get yourself a shower and a big mug of coffee,"
+	@${ECHO} "  ** this will take _very_ long!"
+	@${ECHO} ""
 
 	${RM} -f ${PGN_FILE}
 	cd ${WRKSRC} && ${CAT} ?.pgn > ${PGN_FILE}
