@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6871 2004/08/14 00:28:07 kristerw Exp $
+$NetBSD: CHANGES,v 1.6872 2004/08/14 09:47:06 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3827,3 +3827,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added tor-0.0.7 [jschauma 2004-08-13]
 	Updated xmame to 0.85 [kristerw 2004-08-14]
 	Updated xmess to 0.85 [kristerw 2004-08-14]
+	Added suse-9.1 [jdolecek 2004-08-14]
