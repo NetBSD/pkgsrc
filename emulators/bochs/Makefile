@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/02/14 00:54:45 grant Exp $
+# $NetBSD: Makefile,v 1.35 2004/06/13 08:42:24 grant Exp $
 
 DISTNAME=		bochs-2.1.1
 CATEGORIES=		emulators
@@ -11,6 +11,8 @@ COMMENT=		i386 machine emulator capable of running DOS/Windows
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_GCC_SHLIB=		yes
+USE_LANGUAGES=		c c++
+
 # These options are not enabled by default because they can adversely impact
 # performance. The number of processors can be either 1 (default), 2, or 4.
 #CONFIGURE_ARGS+=	--enable-debugger --enable-disasm
