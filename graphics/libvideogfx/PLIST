@@ -1,0 +1,77 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/13 18:55:41 drochner Exp $
+bin/libvideogfx-config
+include/libvideogfx.hh
+include/libvideogfx/arch/cpu.hh
+include/libvideogfx/audio/fileio/audiosink.hh
+include/libvideogfx/audio/fileio/timedsink.hh
+include/libvideogfx/containers/array.hh
+include/libvideogfx/containers/array.icc
+include/libvideogfx/containers/array2.hh
+include/libvideogfx/containers/array2.icc
+include/libvideogfx/containers/dynarray.hh
+include/libvideogfx/containers/heap.hh
+include/libvideogfx/containers/heap.icc
+include/libvideogfx/containers/queue.hh
+include/libvideogfx/containers/queue.icc
+include/libvideogfx/error.hh
+include/libvideogfx/graphics/color/colorspace.hh
+include/libvideogfx/graphics/color/img2raw.hh
+include/libvideogfx/graphics/datatypes/bitmap.hh
+include/libvideogfx/graphics/datatypes/image.hh
+include/libvideogfx/graphics/datatypes/primitives.hh
+include/libvideogfx/graphics/draw/blit.hh
+include/libvideogfx/graphics/draw/draw.hh
+include/libvideogfx/graphics/draw/format.hh
+include/libvideogfx/graphics/draw/pixelops.hh
+include/libvideogfx/graphics/draw/scale.hh
+include/libvideogfx/graphics/fileio/imagesink.hh
+include/libvideogfx/graphics/fileio/jpeg.hh
+include/libvideogfx/graphics/fileio/mpeg.hh
+include/libvideogfx/graphics/fileio/png.hh
+include/libvideogfx/graphics/fileio/ppm.hh
+include/libvideogfx/graphics/fileio/uyvy.hh
+include/libvideogfx/graphics/fileio/yuv.hh
+include/libvideogfx/graphics/fileio/yuv4mpeg.hh
+include/libvideogfx/graphics/fileio/yuv_vqeg.hh
+include/libvideogfx/graphics/filters/linear.hh
+include/libvideogfx/graphics/measure/snr.hh
+include/libvideogfx/graphics/visualize/regions.hh
+include/libvideogfx/init.hh
+include/libvideogfx/types.hh
+include/libvideogfx/utility/bitmanip.hh
+include/libvideogfx/utility/bitstream/bitbuffer.hh
+include/libvideogfx/utility/bitstream/bitreader.hh
+include/libvideogfx/utility/bitstream/bitreader.icc
+include/libvideogfx/utility/bitstream/bitreader_fast.hh
+include/libvideogfx/utility/bitstream/bytebuffer.hh
+include/libvideogfx/utility/fastalloc.hh
+include/libvideogfx/utility/math.hh
+include/libvideogfx/utility/refcntr.hh
+include/libvideogfx/utility/smartpointer.hh
+include/libvideogfx/x11/dispimg.hh
+include/libvideogfx/x11/draw_x11.hh
+include/libvideogfx/x11/imgwin.hh
+include/libvideogfx/x11/server.hh
+lib/libvideogfx-1.0.so
+lib/libvideogfx-1.0.so.3
+lib/libvideogfx-1.0.so.3.0
+lib/libvideogfx.a
+lib/libvideogfx.la
+lib/libvideogfx.so
+share/aclocal/libvideogfx.m4
+@dirrm include/libvideogfx/x11
+@dirrm include/libvideogfx/utility/bitstream
+@dirrm include/libvideogfx/utility
+@dirrm include/libvideogfx/graphics/visualize
+@dirrm include/libvideogfx/graphics/measure
+@dirrm include/libvideogfx/graphics/filters
+@dirrm include/libvideogfx/graphics/fileio
+@dirrm include/libvideogfx/graphics/draw
+@dirrm include/libvideogfx/graphics/datatypes
+@dirrm include/libvideogfx/graphics/color
+@dirrm include/libvideogfx/graphics
+@dirrm include/libvideogfx/containers
+@dirrm include/libvideogfx/audio/fileio
+@dirrm include/libvideogfx/audio
+@dirrm include/libvideogfx/arch
+@dirrm include/libvideogfx
