@@ -1,31 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2003/08/02 13:20:17 seb Exp $
+$NetBSD: patch-aa,v 1.6 2003/08/30 21:51:00 jtb Exp $
 
---- configure.orig	2002-12-18 22:32:51.000000000 +0000
-+++ configure
-@@ -939,13 +939,13 @@ echo "configure:939: checking for workin
- # Run test in a subshell; some versions of sh will print an error if
- # an executable is not found, even if stderr is redirected.
- # Redirect stdin to placate older versions of autoconf.  Sigh.
--if (makeinfo --version) < /dev/null > /dev/null 2>&1; then
--   MAKEINFO=makeinfo
--   echo "$ac_t""found" 1>&6
--else
--   MAKEINFO="$missing_dir/missing makeinfo"
--   echo "$ac_t""missing" 1>&6
--fi
-+#if (makeinfo --version) < /dev/null > /dev/null 2>&1; then
-+#   MAKEINFO=makeinfo
-+#   echo "$ac_t""found" 1>&6
-+#else
-+#   MAKEINFO="$missing_dir/missing makeinfo"
-+#   echo "$ac_t""missing" 1>&6
-+#fi
+--- configure.orig	2003-08-30 22:12:57.000000000 +0100
++++ configure	2003-08-30 22:14:01.000000000 +0100
+@@ -8102,7 +8102,7 @@
  
  
- 
-@@ -7652,7 +7652,7 @@ esac
- # Now restore our (possibly augmented) CFLAGS.
- CFLAGS="$save_cflags"
  GSL_CFLAGS="-I$includedir"
 -GSL_LIBS="-L$libdir -lgsl"
 +GSL_LIBS="-Wl,-R$libdir -L$libdir -lgsl"
