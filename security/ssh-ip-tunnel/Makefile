@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/09/27 23:18:41 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/31 22:13:16 kristerw Exp $
 
 DISTNAME=	vpn-1.0
 PKGNAME=	ssh-ip-tunnel-1.0
@@ -10,7 +10,7 @@ COMMENT=	Simple VPN system using pppd over ssh
 
 DEPENDS+=	pty-redir-0.1:../../misc/pty-redir
 .if !exists(/usr/bin/ssh)
-DEPENDS+=	{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/ssh
+DEPENDS+=	{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
 .endif
 
 CONFLICTS=	vpn-1.0
