@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/19 04:55:16 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/01/19 12:55:15 hubertf Exp $
 bin/vigor
-man/cat1/vi.0
-man/cat1/ex.0
-man/cat1/view.0
-man/man1/vi.1
-man/man1/ex.1
-man/man1/view.1
+man/cat1/vigor.0
+man/man1/vigor.1
 share/vi/catalog/german
 share/vi/catalog/spanish
 share/vi/catalog/ru_SU.KOI8-R
