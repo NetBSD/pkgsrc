@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2000/04/14 21:11:59 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.33 2000/04/28 10:09:53 drochner Exp $
 #
 
 DISTNAME=	qt-2.0.2
+PKGNAME=	qt2-2.0.2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.troll.no/qt/source/ \
 		ftp://ftp.fu-berlin.de/unix/X11/gui/Qt/source/
@@ -36,29 +37,32 @@ DEPENDS+=	egcs-1.1.2:../../lang/egcs
 CXX=		${LOCALBASE}/egcs/bin/g++
 .endif
 
+QTPREFIX=	${PREFIX}/qt2
+
 do-install:
-	${INSTALL_PROGRAM_DIR} ${X11BASE}/bin/qt2
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${X11BASE}/bin/qt2
-	${INSTALL_DATA_DIR} ${X11BASE}/lib/qt2
-	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${X11BASE}/lib/qt2
-	${INSTALL_DATA_DIR} ${X11BASE}/include/qt2
-	${INSTALL_DATA} ${WRKSRC}/include/* ${X11BASE}/include/qt2
-	${INSTALL_MAN_DIR}  ${X11BASE}/man/qt2/man1
-	${INSTALL_MAN_DIR}  ${X11BASE}/man/qt2/man3
-	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${X11BASE}/man/qt2/man1
+	${INSTALL_DATA_DIR} ${QTPREFIX}
+	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTPREFIX}/bin
+	${INSTALL_DATA_DIR} ${QTPREFIX}/lib
+	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${QTPREFIX}/lib
+	${INSTALL_DATA_DIR} ${QTPREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include
+	${INSTALL_MAN_DIR}  ${QTPREFIX}/man/man1
+	${INSTALL_MAN_DIR}  ${QTPREFIX}/man/man3
+	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${QTPREFIX}/man/man1
 	@cd ${WRKSRC}/man/man3; PAGES="`ls -1 | ${SED} -e 's,3qt$$,3,'`"; \
 	(for PAGE in $$PAGES; do \
-	    ${ECHO} installing ${X11BASE}/man/qt2/man3/$${PAGE}; \
+	    ${ECHO} installing ${QTPREFIX}/man/man3/$${PAGE}; \
 	    set - X `head -1 $${PAGE}qt`; \
 	    if [ $$# -eq 3 ] && [ "$$2" = .so ]; then \
 		${LN} -fs `basename $$3 | ${SED} s/qt$$//` \
-		  ${X11BASE}/man/qt2/man3/$${PAGE}; \
+		  ${QTPREFIX}/man/man3/$${PAGE}; \
 	    else \
-		${INSTALL_MAN} $${PAGE}qt ${X11BASE}/man/qt2/man3/$${PAGE}; \
+		${INSTALL_MAN} $${PAGE}qt ${QTPREFIX}/man/man3/$${PAGE}; \
 	    fi; \
 	 done)
-	${INSTALL_DATA_DIR} ${X11BASE}/share/doc/qt2
+	${INSTALL_DATA_DIR} ${QTPREFIX}/doc
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README.QT \
-	  ${WRKSRC}/doc/* ${X11BASE}/share/doc/qt2
+	  ${WRKSRC}/doc/* ${QTPREFIX}/doc
 
 .include "../../mk/bsd.pkg.mk"
