@@ -1,7 +1,10 @@
-$NetBSD: patch-ae,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
---- src/task.c.orig	Fri Aug  7 00:41:01 1998
-+++ src/task.c	Fri Aug  7 00:41:17 1998
-@@ -145,2 +145,3 @@
+$NetBSD: patch-ae,v 1.2 1999/11/23 16:05:30 dmcmahill Exp $
+ 
+--- ./src/pvmdpack.c.orig	Thu Jul  8 15:00:10 1999
++++ ./src/pvmdpack.c	Sun Oct 31 11:44:18 1999
+@@ -75,4 +75,5 @@
+ 
  #ifdef NEEDMENDIAN
 +#include <sys/types.h>
  #include <machine/endian.h>
+ #endif

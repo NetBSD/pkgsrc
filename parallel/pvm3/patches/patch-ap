@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.2 1999/11/23 16:05:31 dmcmahill Exp $
+$NetBSD: patch-ap,v 1.1 1999/11/23 16:05:31 dmcmahill Exp $
  
 --- /dev/null	Mon Nov  1 14:10:37 1999
-+++ ./conf/NETBSDALPHA.m4	Mon Nov  1 16:55:01 1999
++++ ./conf/NETBSDARM32.m4	Mon Nov  1 16:55:05 1999
 @@ -0,0 +1,19 @@
 +divert(-1)
 +undefine(`len')

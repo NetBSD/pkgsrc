@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
---- xep/Makefile.aimk.orig	Fri Aug  7 00:47:14 1998
-+++ xep/Makefile.aimk	Fri Aug  7 00:48:49 1998
-@@ -26,4 +26,4 @@
- XLIBS		=	-lXaw -lXmu -lXext -lXt -lX11
--XCFLAGS		=	-I/usr/local/X11R5/include -I/usr/local/X11/include \
--				-L/usr/local/X11R5/lib -L/usr/local/X11/lib
-+XCFLAGS		=	-I$(X11BASE)/include -Wl,-R$(X11BASE)/lib \
-+				-L$(X11BASE)/lib
+$NetBSD: patch-ag,v 1.2 1999/11/23 16:05:31 dmcmahill Exp $
  
+--- ./src/task.c.orig	Thu Jul  8 15:00:15 1999
++++ ./src/task.c	Sun Oct 31 11:45:04 1999
+@@ -165,4 +165,5 @@
+ 
+ #ifdef NEEDMENDIAN
++#include <sys/types.h>
+ #include <machine/endian.h>
+ #endif

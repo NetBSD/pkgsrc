@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.2 1999/11/23 16:05:31 dmcmahill Exp $
+$NetBSD: patch-aq,v 1.1 1999/11/23 16:05:32 dmcmahill Exp $
 
---- ./conf/NETBSDSPARC.def.orig	Wed Oct  7 11:48:38 1998
-+++ ./conf/NETBSDSPARC.def	Mon Nov  8 08:25:25 1999
+--- ./conf/NETBSDI386.def.orig  Wed Oct  7 11:48:36 1998
++++ ./conf/NETBSDI386.def       Mon Nov  1 16:55:07 1999
 @@ -1,4 +1,4 @@
 -ARCHCFLAGS	=	-DSOCKADHASLEN -DRSHCOMMAND=\"/usr/bin/rsh\" \
 -				-DHASERRORVARS -DNOREXEC -DNEEDMENDIAN

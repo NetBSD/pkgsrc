@@ -1,11 +1,31 @@
-$NetBSD: patch-ai,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
---- /dev/null	Fri Aug  7 01:41:07 1998
-+++ conf/NETBSD.def	Fri Aug  7 01:46:28 1998
-@@ -0,0 +1,7 @@
-+ARCHCFLAGS	=	-DSOCKADHASLEN -DRSHCOMMAND=\"$(LOCALBASE)/bin/ssh\" -DHASERRORVARS -DNOREXEC -DNEEDMENDIAN -DLOCALBASE=\"$(LOCALBASE)\"
-+ARCHDLIB	=
-+ARCHDOBJ	=
-+ARCHLIB		=
-+HASRANLIB	=	t
-+AR		= 	ar
-+PVM_ARCH	=	NETBSD
+$NetBSD: patch-ai,v 1.2 1999/11/23 16:05:31 dmcmahill Exp $
+ 
+--- ./src/pmsg.c.orig	Thu Jul  8 15:00:05 1999
++++ ./src/pmsg.c	Sun Oct 31 11:56:52 1999
+@@ -269,4 +269,18 @@
+ 
+ 			for (j = 0; j < n; j++)
++				if (j < n/2) {
++					if (p[n/2 - 1 - j ]
++					    != thesigs[i].bytes[j])
++						break;
++				} else {
++					if (p[n + n/2 - 1 - j ]
++					    != thesigs[i].bytes[j])
++						break;
++				}
++
++			if (j == n)
++				return ((1 << 4) | i) << o;
++
++			for (j = 0; j < n; j++)
+ 				if (p[n - 1 - j] != thesigs[i].bytes[j])
+ 					break;
+@@ -275,5 +289,6 @@
+ 		}
+ 	}
+-	fprintf(stderr, "can't generate signature for my integer byte order\n");
++	fprintf(stderr,
++		"can't generate signature for my floating point byte order\n");
+ 	abort();
+ 	return 0;

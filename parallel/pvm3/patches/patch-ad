@@ -1,7 +1,10 @@
-$NetBSD: patch-ad,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
---- src/sdpro.c.orig	Fri Aug  7 00:39:58 1998
-+++ src/sdpro.c	Fri Aug  7 00:40:27 1998
-@@ -75,2 +75,3 @@
+$NetBSD: patch-ad,v 1.2 1999/11/23 16:05:30 dmcmahill Exp $
+ 
+--- ./src/hoster.c.orig	Thu Aug 19 11:39:24 1999
++++ ./src/hoster.c	Sun Oct 31 11:43:48 1999
+@@ -171,4 +171,5 @@
+ 
  #ifdef NEEDMENDIAN
 +#include <sys/types.h>
  #include <machine/endian.h>
+ #endif

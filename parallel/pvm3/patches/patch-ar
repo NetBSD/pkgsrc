@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.2 1999/11/23 16:05:31 dmcmahill Exp $
-
---- ./conf/NETBSDSPARC.m4.orig	Mon Sep 23 16:18:02 1996
-+++ ./conf/NETBSDSPARC.m4	Mon Nov  1 08:58:05 1999
+$NetBSD: patch-ar,v 1.1 1999/11/23 16:05:32 dmcmahill Exp $
+ 
+--- ./conf/NETBSDI386.m4.orig	Mon Sep 23 16:17:58 1996
++++ ./conf/NETBSDI386.m4	Mon Nov  1 16:55:09 1999
 @@ -2,10 +2,9 @@
  undefine(`len')
  #
