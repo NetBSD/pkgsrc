@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.940 2002/12/29 18:55:58 wiz Exp $
+$NetBSD: CHANGES,v 1.941 2002/12/29 19:04:12 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4307,3 +4307,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ethereal to 0.9.8nb1 [veego 2002-12-29]
 	Updated pkgdepgraph to 1.2 [atatat 2002-12-29]
 	Removed lclint [wiz 2002-12-29]
+	Updated tightvncviewer to 1.2.7 [jlam 2002-12-29]
