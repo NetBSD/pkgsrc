@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/02/14 20:11:52 jmmv Exp $
+
+--- schemas/Makefile.in.orig	Thu Jan 23 15:08:14 2003
++++ schemas/Makefile.in
+@@ -279,7 +279,7 @@ maintainer-clean
+ 
+ # don't do this if we are building in eg. rpm
+ install-data-local:
+-	if test -z "$(DESTDIR)" ; then \
++	if false ; then \
+ 		for p in $(schema_DATA) ; do \
+ 			GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$$p; \
+ 		done \
