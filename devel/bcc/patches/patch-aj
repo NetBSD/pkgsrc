@@ -1,0 +1,11 @@
+--- as/macro.c.orig	Thu Jul 16 20:03:05 1998
++++ as/macro.c	Thu Jul 16 20:03:15 1998
+@@ -95,7 +95,7 @@
+ {
+     bool_t saving;
+     bool_t savingc;
+-    struct sym_s *symptr;
++    struct sym_s *symptr = NULL;
+ 
+     saving =			/* prepare for bad macro */
+ 	savingc = FALSE;	/* normally don't save comments */
