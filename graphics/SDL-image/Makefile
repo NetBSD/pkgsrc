@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2002/08/27 19:15:13 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/07 11:04:03 jmmv Exp $
 #
 
-DISTNAME=		SDL_image-1.2.1
+DISTNAME=		SDL_image-1.2.2
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		graphics devel
 MASTER_SITES=		http://www.libsdl.org/projects/SDL_image/release/
@@ -17,6 +17,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
