@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/11/15 03:10:45 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2002/08/23 01:31:24 dmcmahill Exp $
 
-SHA1 (mcalc-1.4.tar.gz) = 0f299ac7ea810d60b6b5f1aa7dca6fcfd1103faf
-Size (mcalc-1.4.tar.gz) = 18511 bytes
+SHA1 (mcalc-1.5.tar.gz) = b3d9171330041f44e490f0bb746b8eb0549a1d68
+Size (mcalc-1.5.tar.gz) = 19199 bytes
