@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/07/14 12:37:53 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/27 10:49:16 wiz Exp $
 
 DISTNAME=	ircii-pana-1.0c18
 PKGNAME=	bitchx-1.0.3.18
@@ -22,7 +22,7 @@ BUILDLINK_DEPENDS.ncurses=	ncurses>=5.2
 # find bunzip2 in the PATH.
 #
 .if !exists(/usr/bin/bunzip2)
-DEPENDS+=		bzip2-0.9.0b:../../archivers/bzip2
+DEPENDS+=		bzip2>=0.9:../../archivers/bzip2
 .endif
 
 # We don't need the CVS files, and if we don't delete them, they get
