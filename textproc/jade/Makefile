@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/04/26 10:34:09 recht Exp $
+# $NetBSD: Makefile,v 1.34 2004/05/12 21:57:21 grant Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	8
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.jclark.com/pub/jade/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.jclark.com/pub/jade/ \
 		ftp://ftp.u-aizu.ac.jp/pub/lang/sgml/jade/
 
-MAINTAINER=	rh@NetBSD.ORG
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.jclark.com/jade/
 COMMENT=	Object-oriented SGML/XML parser toolkit and DSSSL engine
 
