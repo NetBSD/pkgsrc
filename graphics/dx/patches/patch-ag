@@ -1,10 +1,11 @@
-$NetBSD: patch-ag,v 1.1.1.1 1999/10/01 11:23:15 drochner Exp $
---- src/uipp/dxui/Makefile.in.orig	Sun Sep 26 23:47:09 1999
-+++ src/uipp/dxui/Makefile.in	Sun Sep 26 23:47:12 1999
-@@ -74,7 +74,7 @@
- JAVA_ARCH = @JAVA_ARCH@
- JBASE = @JBASE@
- JDKBIN = @JDKBIN@
+$NetBSD: patch-ag,v 1.2 2000/01/31 20:56:49 drochner Exp $
+
+--- src/uipp/dxui/Makefile.in.orig	Thu Jan  6 21:18:02 2000
++++ src/uipp/dxui/Makefile.in	Sat Jan 29 17:52:12 2000
+@@ -78,7 +78,7 @@
+ JAVAH = @JAVAH@
+ JDK_CLASSPATH = @JDK_CLASSPATH@
+ JINC = @JINC@
 -LIBS = @LIBS@
 +LIBS = @LIBS@ -lcompat
  MAKEINFO = @MAKEINFO@
