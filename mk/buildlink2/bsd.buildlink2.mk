@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.37 2002/10/09 10:24:34 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.38 2002/10/09 20:58:10 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -38,7 +38,7 @@ MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 CONFIGURE_ENV+=		BUILDLINK_X11PKG_DIR="${BUILDLINK_X11PKG_DIR}"
 MAKE_ENV+=		BUILDLINK_X11PKG_DIR="${BUILDLINK_X11PKG_DIR}"
 _BLNK_CPPFLAGS=		-I${LOCALBASE}/include
-_BLNK_LDFLAGS=		-L${LOCALBASE}/lib
+_BLNK_LDFLAGS=		-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
 _BLNK_OPSYS=		${OPSYS}
 
 # The configure process usually tests for outlandish or missing things
@@ -58,13 +58,30 @@ BUILDLINK_X11_DIR=	${LOCALBASE}/share/x11-links
 CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 _BLNK_CPPFLAGS+=	-I${X11BASE}/include
-_BLNK_LDFLAGS+=		-L${X11BASE}/lib
+_BLNK_LDFLAGS+=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
 .endif
 
-CFLAGS:=		${_BLNK_CPPFLAGS} ${CFLAGS}
-CXXFLAGS:=		${_BLNK_CPPFLAGS} ${CXXFLAGS}
-CPPFLAGS:=		${_BLNK_CPPFLAGS} ${CPPFLAGS}
-LDFLAGS:=		${_BLNK_LDFLAGS} ${LDFLAGS}
+CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${_BLNK_CPPFLAGS}"
+MAKE_ENV+=		BUILDLINK_CPPFLAGS="${_BLNK_CPPFLAGS}"
+CONFIGURE_ENV+=		BUILDLINK_LDFLAGS="${_BLNK_LDFLAGS}"
+MAKE_ENV+=		BUILDLINK_LDFLAGS="${_BLNK_LDFLAGS}"
+
+.for FLAG in ${_BLNK_CPPFLAGS}
+.  if empty(CFLAGS:M${FLAG})
+CFLAGS+=	${FLAG}
+.  endif
+.  if empty(CXXFLAGS:M${FLAG})
+CXXFLAGS+=	${FLAG}
+.  endif
+.  if empty(CPPFLAGS:M${FLAG})
+CPPFLAGS+=	${FLAG}
+.  endif
+.endfor
+.for FLAG in ${_BLNK_LDFLAGS}
+.  if empty(LDFLAGS:M${FLAG})
+LDFLAGS+=	${FLAG}
+.  endif
+.endfor
 
 # Prepend ${BUILDLINK_DIR}/bin to the PATH so that the wrappers are found
 # first when searching for executables.
