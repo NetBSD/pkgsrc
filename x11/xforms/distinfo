@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/05/04 14:25:11 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2001/08/09 13:45:43 wiz Exp $
 
 SHA1 (xforms-alpha/bxform-088.tgz) = a82b5e2d3c9841323e54003c3d2fbf5e506fbd42
 Size (xforms-alpha/bxform-088.tgz) = 1197562 bytes
@@ -20,3 +20,7 @@ SHA1 (xforms-sparc/bxform-088-ELF.tgz) = 081be01417707d739cb71f3fa473fdc7e32eced
 Size (xforms-sparc/bxform-088-ELF.tgz) = 673651 bytes
 SHA1 (xforms-sparc/bxform-088.tgz) = 7c364dad70b65b1b613f54f3b693c958d9c4b27a
 Size (xforms-sparc/bxform-088.tgz) = 1017705 bytes
+SHA1 (xforms-SunOS-i386/bxform-088.tgz) = 724683ad7e9eb2cf99da9dfe558daca910bb8e32
+Size (xforms-SunOS-i386/bxform-088.tgz) = 899727 bytes
+SHA1 (xforms-SunOS-sparc/bxform-088.tgz) = 9b13e36c4440f4d3a84dc232489f06d0b8a8e449
+Size (xforms-SunOS-sparc/bxform-088.tgz) = 1123327 bytes
