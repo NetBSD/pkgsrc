@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.328 2003/03/03 19:45:27 wiz Exp $
+$NetBSD: TODO,v 1.329 2003/03/04 00:39:10 seb Exp $
 
 Suggested new packages
 ======================
@@ -238,8 +238,6 @@ Suggested package updates
 	o scribus-0.8
 	o scsh-0.6.3
 	o sendfile-20010424
-	o sendmail-8.12.7 [pkg/20324]
-	o sendmail-8.12.8
 	o shorten-3.5.1
 	o siag-3.5.7
 	o sketch-0.6.15
