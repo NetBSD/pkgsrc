@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2951 2005/01/22 03:07:17 minskim Exp $
+$NetBSD: TODO,v 1.2952 2005/01/22 09:28:59 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -256,7 +256,6 @@ Suggested package updates
 =========================
 
 	o 0verkill-0.16
-	o 3ddesktop-0.2.7
 	o ArX-2.1.0
 	o BasiliskII-1.0.20041109
 	o BitTornado-0.3.9b
