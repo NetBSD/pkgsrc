@@ -1,5 +1,5 @@
-.\" $NetBSD: audit-packages.8,v 1.5 2003/12/03 09:31:01 wiz Exp $
-.Dd December 3, 2003
+.\" $NetBSD: audit-packages.8,v 1.6 2004/01/01 23:35:28 agc Exp $
+.Dd January 1, 2004
 .Os
 .Dt AUDIT-PACKAGES 8
 .Sh NAME
@@ -8,6 +8,7 @@
 .Nd show vulnerabilities in installed packages
 .Sh SYNOPSIS
 .Nm
+.Op Fl v
 .Nm download-vulnerability-list
 .Sh DESCRIPTION
 The
@@ -32,7 +33,8 @@ packages team.
 .Pp
 Each line lists the package and vulnerable versions, the type of exploit,
 and an Internet address for further information.
-Commonly, the types of exploits listed are:
+The type of exploit can be any text, although
+some common types of exploits listed are:
 .Bl -bullet -compact -offset indent
 .It
 cross-site-html
