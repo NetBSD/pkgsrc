@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3557 2003/09/27 22:58:25 wiz Exp $
+$NetBSD: CHANGES,v 1.3558 2003/09/27 23:20:18 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3983,3 +3983,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ap2-subversion to 0.30.0 [recht 2003-09-27]
 	Added mummer-3.04 [jschauma 2003-09-27]
 	Updated ncftp3 to 3.1.6 [wiz 2003-09-27]
+	Added profit-2.2 [jschauma 2003-09-27]
