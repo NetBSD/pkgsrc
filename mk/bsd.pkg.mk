@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.33 2003/08/25 20:51:43 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.34 2003/08/26 00:14:31 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2475,7 +2475,7 @@ real-su-install: ${MESSAGE}
 	for dir in ${INSTALLATION_DIRS}; do				\
 		case $$dir in						\
 		/*)	;;						\
-		*bin|*bin/*|*libexec|*libexec/*)
+		*bin|*bin/*|*libexec|*libexec/*)			\
 			${INSTALL_PROGRAM_DIR} ${PREFIX}/$$dir ;;	\
 		*man/*)							\
 			${INSTALL_MAN_DIR} ${PREFIX}/$$dir ;;		\
