@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 1999/09/24 14:37:40 agc Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/09 17:42:13 wiz Exp $
 #
 
 DISTNAME=	zlib-1.1.3
 CATEGORIES=	devel
-MASTER_SITES=   ftp://ftp.cdrom.com/pub/infozip/zlib/
+MASTER_SITES=   ftp://ftp.freesoftware.com/pub/infozip/zlib/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.cdrom.com/pub/infozip/zlib/
+HOMEPAGE=	ftp://ftp.freesoftware.com/pub/infozip/zlib/index.html
 
 ONLY_FOR_PLATFORM=	SunOS-*-* # in base NetBSD system
 
