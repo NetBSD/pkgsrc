@@ -1,34 +1,29 @@
-$NetBSD: patch-ah,v 1.8 2002/10/26 18:11:20 bouyer Exp $
---- configure.in.orig	Thu Dec 14 12:49:06 2000
-+++ configure.in	Mon Oct 21 22:40:58 2002
-@@ -213,8 +213,13 @@
- 		getlogin getpass fcntl readdir sysinfo ioctl chdir tempnam \
- 		getsockopt setsockopt \
- 		gettimeofday mktime timegm tzset)
--AC_CHECK_FUNC(unlink, , AC_CHECK_FUNC(remove, AC_DEFINE(unlink, remove)))
-+AC_CHECK_FUNC(unlink)
-+if test "$ac_cv_func_unlink" != yes; then
-+  AC_CHECK_FUNC(remove)
-+fi
+$NetBSD: patch-am,v 1.1 2002/11/19 20:54:12 reinoud Exp $
+
+--- configure.in.orig	Wed Jun 12 11:26:46 2002
++++ configure.in
+@@ -237,6 +237,8 @@ AC_CHECK_FUNC(unlink)
+      fi
+ fi
  
 +dnl AC_CHECK_FUNC(unlink, , AC_CHECK_FUNC(remove, AC_DEFINE(unlink, remove)))
 +
  dnl Checks for configuration arguments
  AC_MSG_CHECKING(whether to support direct WAIS access.)
  AC_ARG_WITH(wais,
-@@ -307,7 +312,10 @@
-     AC_MSG_RESULT(yes)
+@@ -330,6 +332,11 @@ AC_ARG_WITH(regex,
      AC_DEFINE(HT_POSIX_REGEX)
      if test "x$withval" = "xyes"; then
--      AC_CHECK_LIB(rx, regexec, [ LIBS="-lrx $LIBS" ] )
+       AC_CHECK_LIB(rx, regexec, [ LIBS="-lrx $LIBS" ] )
 +      AC_TRY_LINK([],
 +	          [ regexec(); ],
 +		  [],
 +		  [ AC_CHECK_LIB(rx, regexec, [ LIBS="-lrx $LIBS" ] ) ] )
++ 
      else
        AC_ADDLIB($withval)
        AC_TRY_LINK([],
-@@ -510,53 +518,45 @@
+@@ -532,27 +539,39 @@ AC_ARG_WITH(md5,
  [ case "$withval" in
    no)
      AC_MSG_RESULT(no)
@@ -58,8 +53,6 @@ $NetBSD: patch-ah,v 1.8 2002/10/26 18:11:20 bouyer Exp $
    WWWMD5="libmd5.la"
    LWWWMD5="-lmd5"
    LIBWWWMD5='${top_builddir}/modules/md5/libmd5.la'
-+  LIBMD5INC='-I${top_srcdir}/modules/md5'
-+  LIBMD5DEP="../../modules/md5/libmd5.la"
  )
 +AC_SUBST(MD5DIR)
  AC_SUBST(WWWMD5)
@@ -67,6 +60,12 @@ $NetBSD: patch-ah,v 1.8 2002/10/26 18:11:20 bouyer Exp $
  AC_SUBST(LIBWWWMD5)
 +AC_SUBST(LIBMD5INC)
 +AC_SUBST(LIBMD5DEP)
+ 
+ AC_MSG_CHECKING(whether we include WebDAV support.)
+ AC_ARG_WITH(dav,
+@@ -609,31 +628,9 @@ AC_SUBST(MYEXT)
+ 
+ 
  
 -dnl Checks for libwww and OpenSSL:
 -AC_MSG_CHECKING(whether we can find OpenSSL)
@@ -98,7 +97,7 @@ $NetBSD: patch-ah,v 1.8 2002/10/26 18:11:20 bouyer Exp $
  LWWWSSL=""
  LIBWWWSSL=""
  WWWSSLEX=""
-@@ -568,14 +568,39 @@
+@@ -645,14 +642,40 @@ AC_ARG_WITH(ssl,
      ;;
    *)
      if test "x$withval" = "xyes"; then
@@ -129,6 +128,7 @@ $NetBSD: patch-ah,v 1.8 2002/10/26 18:11:20 bouyer Exp $
 +    else
 +      SSLINC="-I${withval}/include/openssl -I${withval}/include"
 +      SSLLIBS="-L${withval}/lib -lssl -lcrypto -Wl,-R${withval}/lib"
++ 
      fi
 -    LIBS="$LIBS $withval"
 +    SAVED_LIBS="${LIBS}"
@@ -141,7 +141,7 @@ $NetBSD: patch-ah,v 1.8 2002/10/26 18:11:20 bouyer Exp $
      AC_MSG_RESULT(yes)
      WWWSSL="libwwwssl.la"
      LWWWSSL="-lwwwssl" 
-@@ -586,6 +611,7 @@
+@@ -663,6 +686,7 @@ AC_ARG_WITH(ssl,
  [ AC_MSG_RESULT(no) ])
  AC_SUBST(WWWSSL)
  AC_SUBST(SSLINC)
@@ -149,11 +149,3 @@ $NetBSD: patch-ah,v 1.8 2002/10/26 18:11:20 bouyer Exp $
  AC_SUBST(LWWWSSL)
  AC_SUBST(LIBWWWSSL)
  AC_SUBST(WWWSSLEX)
-@@ -1006,7 +1032,6 @@
- Library/Makefile Library/User/Makefile Library/User/Patch/Makefile
- Library/User/Architecture/Makefile Library/User/Using/Makefile Library/User/Guide/Makefile
- Library/User/Style/Makefile Library/User/Platform/Makefile
--Library/Test/Makefile Library/Test/User/Makefile Library/Test/src/Makefile
- Library/src/Makefile Library/src/windows/Makefile Library/src/vms/Makefile 
- Library/src/SSL/Makefile Library/src/SSL/windows/Makefile
- Library/Examples/Makefile
