@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/01/28 22:03:45 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2003/07/01 11:55:01 pooka Exp $
 
 DISTNAME=	rpm-2.5.4
 CATEGORIES=	misc
@@ -28,7 +28,7 @@ RPMDIR=			${RPM_DB_PREFIX}/lib/rpm
 FILES_SUBST+=		RPMDIR=${RPMDIR}
 
 post-configure:
-	cd ${WRKSRC}/po && ( ${MV} cz.mo cs.mo; ${MV} cz.po cs.po )
+	cd ${WRKSRC}/po && ${MV} cz.po cs.po
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/rpm
