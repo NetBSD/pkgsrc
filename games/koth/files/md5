@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/08/05 01:56:58 hubertf Exp $
+$NetBSD: md5,v 1.3 1999/09/06 01:43:53 hubertf Exp $
 
-MD5 (koth-0.7.2.tar.gz) = 424cf265c9e93717d1938caaa808c30e
+MD5 (koth-0.7.6.tar.gz) = 9aa23274328ac8a9ab912830ea458200
