@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.49 2004/04/29 20:07:48 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.50 2004/05/12 14:10:18 jschauma Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -172,3 +172,14 @@ MAKE_ENV+=		ABI=${ABI}
 _OPSYS_MAX_CMDLEN!=	/usr/sbin/sysconf ARG_MAX
 CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
 .endif
+
+# If games are to be installed setgid, then SETGIDGAME is set to 'yes'
+# (it defaults to 'no' as per bsd.pkg.defaults.mk).
+# Set the group and mode to meaningful values in that case (defaults to
+# BINOWN, BINGRP and BINMODE as per bsd.pkg.defaults.mk).
+# FIXME: Adjust to work on this system and enable the lines below.
+#.if !(empty(SETGIDGAME:M[yY][eE][sS]))
+#GAMEOWN=		games
+#GAMEGRP=		games
+#GAMEMODE=		2555
+#.endif
