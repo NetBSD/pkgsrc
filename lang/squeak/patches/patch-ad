@@ -1,22 +1,12 @@
-$NetBSD: patch-ad,v 1.1 2001/05/16 02:27:53 fredb Exp $
+$NetBSD: patch-ad,v 1.2 2004/04/26 07:10:16 fredb Exp $
 
---- ../src/unix/acinclude.m4.orig	Mon Feb 12 15:59:05 2001
-+++ ../src/unix/acinclude.m4
-@@ -149,10 +149,16 @@
- AC_DEFUN(AC_HAVE_OSS,
- [AC_CACHE_CHECK([for Open Sound System], ac_cv_oss,
-   AC_TRY_COMPILE([#include <sys/soundcard.h>],[OPEN_SOUND_SYSTEM;],
--    ac_cv_oss="yes", ac_cv_oss="no"))
-+    ac_cv_oss="yes",
-+    AC_TRY_COMPILE([#include <soundcard.h>],[SOUND_VERSION;],
-+      ac_cv_oss="yes", ac_cv_oss="no")))
- if $test "$ac_cv_oss" = "yes" -a -e /dev/dsp; then
-   AC_DEFINE(HAVE_OSS,1)
-   AC_DEFINE(OSS_DEVICE,"/dev/dsp")
-+elif $test "$ac_cv_oss" = "yes" -a -e /dev/audio; then
-+  AC_DEFINE(HAVE_OSS,1)
-+  AC_DEFINE(OSS_DEVICE,"/dev/audio")
-+  AC_CHECK_LIB([ossaudio], [_oss_ioctl])
- fi])
+--- platforms/unix/config/configure.ac	2004-04-01 06:57:04.000000000 -0600
++++ platforms/unix/config/configure.ac	2004-04-25 15:08:29.000000000 -0500
+@@ -161,6 +161,7 @@
+ AC_HAVE_HEADERS(features.h)
+ AC_HEADER_TIME
+ AC_HEADER_DIRENT
++AC_HAVE_HEADERS(sys/audioio.h)
  
- AC_DEFUN(AC_C_BYTEORDER,
+ AC_STRUCT_TIMEZONE
+ 

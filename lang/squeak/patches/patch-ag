@@ -1,104 +1,24 @@
-$NetBSD: patch-ag,v 1.1 2002/10/02 22:00:10 dillo Exp $
+$NetBSD: patch-ag,v 1.2 2004/04/26 07:10:16 fredb Exp $
 
---- ../src/unix/configure.orig	Wed Oct  2 23:48:40 2002
-+++ ../src/unix/configure
-@@ -3737,7 +4463,22 @@ int main() {
- OPEN_SOUND_SYSTEM;
- ; return 0; }
- EOF
--if { (eval echo configure:3741: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
-+if { (eval echo configure:4467: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
-+  rm -rf conftest*
-+  ac_cv_oss="yes"
-+else
-+  echo "configure: failed program was:" >&5
-+  cat conftest.$ac_ext >&5
-+  rm -rf conftest*
-+  cat > conftest.$ac_ext <<EOF
-+#line 4475 "configure"
-+#include "confdefs.h"
-+#include <soundcard.h>
-+int main() {
-+SOUND_VERSION;
-+; return 0; }
-+EOF
-+if { (eval echo configure:4482: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
-   rm -rf conftest*
-   ac_cv_oss="yes"
- else
-@@ -3748,6 +4489,8 @@ else
- fi
- rm -f conftest*
- fi
-+rm -f conftest*
-+fi
+--- platforms/unix/vm/sqUnixCharConv.c	2003-11-18 12:30:32.000000000 -0600
++++ platforms/unix/vm/sqUnixCharConv.c	2004-04-25 15:02:13.000000000 -0500
+@@ -151,14 +151,18 @@
  
- echo "$ac_t""$ac_cv_oss" 1>&6
- if $test "$ac_cv_oss" = "yes" -a -e /dev/dsp; then
-@@ -3759,9 +4502,65 @@ EOF
- #define OSS_DEVICE "/dev/dsp"
- EOF
+ typedef char ichar_t;
  
-+elif $test "$ac_cv_oss" = "yes" -a -e /dev/audio; then
-+  cat >> confdefs.h <<\EOF
-+#define HAVE_OSS 1
-+EOF
-+
-+  cat >> confdefs.h <<\EOF
-+#define OSS_DEVICE "/dev/audio"
-+EOF
-+
-+  echo $ac_n "checking for _oss_ioctl in -lossaudio""... $ac_c" 1>&6
-+echo "configure:4516: checking for _oss_ioctl in -lossaudio" >&5
-+ac_lib_var=`echo ossaudio'_'_oss_ioctl | sed 'y%./+-%__p_%'`
-+if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-+  echo $ac_n "(cached) $ac_c" 1>&6
-+else
-+  ac_save_LIBS="$LIBS"
-+LIBS="-lossaudio  $LIBS"
-+cat > conftest.$ac_ext <<EOF
-+#line 4524 "configure"
-+#include "confdefs.h"
-+/* Override any gcc2 internal prototype to avoid an error.  */
-+/* We use char because int might match the return type of a gcc2
-+    builtin and then its argument prototype would still apply.  */
-+char _oss_ioctl();
-+
-+int main() {
-+_oss_ioctl()
-+; return 0; }
-+EOF
-+if { (eval echo configure:4535: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-+  rm -rf conftest*
-+  eval "ac_cv_lib_$ac_lib_var=yes"
-+else
-+  echo "configure: failed program was:" >&5
-+  cat conftest.$ac_ext >&5
-+  rm -rf conftest*
-+  eval "ac_cv_lib_$ac_lib_var=no"
-+fi
-+rm -f conftest*
-+LIBS="$ac_save_LIBS"
-+
-+fi
-+if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-+  echo "$ac_t""yes" 1>&6
-+    ac_tr_lib=HAVE_LIB`echo ossaudio | sed -e 's/[^a-zA-Z0-9_]/_/g' \
-+    -e 'y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/'`
-+  cat >> confdefs.h <<EOF
-+#define $ac_tr_lib 1
-+EOF
-+
-+  LIBS="-lossaudio $LIBS"
-+
-+else
-+  echo "$ac_t""no" 1>&6
-+fi
-+
- fi
- echo $ac_n "checking for prefix to use for loadable modules""... $ac_c" 1>&6
--echo "configure:3765: checking for prefix to use for loadable modules" >&5
-+echo "configure:4564: checking for prefix to use for loadable modules" >&5
- if eval "test \"`echo '$''{'ac_cv_module_prefix'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
+-#ifdef __sparc
++#if defined(__sparc) && !defined(__NetBSD__)
+ void *sqTextEncoding=	(void *)"mac";		/* xxxFIXME -> "ISO-8859-15" */ 
+ void *uxPathEncoding=	(void *)"iso";
+ void *uxTextEncoding=	(void *)"iso";
+ void *uxXWinEncoding=	(void *)"iso";
+ void *uxUTF8Encoding=	(void *)"UTF-8";
+ #else
++#ifdef __NetBSD__
++void *sqTextEncoding=	(void *)"ISO-8859-15";
++#else
+ void *sqTextEncoding=	(void *)"MACINTOSH";	/* xxxFIXME -> "ISO-8859-15" */ 
++#endif
+ void *uxPathEncoding=	(void *)"UTF-8";
+ void *uxTextEncoding=	(void *)"ISO-8859-15";
+ void *uxXWinEncoding=	(void *)"ISO-8859-1";

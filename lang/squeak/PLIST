@@ -1,27 +1,31 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:25:02 zuntum Exp $
-bin/squeak
+@comment $NetBSD: PLIST,v 1.2 2004/04/26 07:10:16 fredb Exp $
 bin/inisqueak
-lib/squeak/3.0/squeak
-lib/squeak/3.0/inisqueak
-lib/squeak/3.0/squeak.map
-lib/squeak/3.0/Profiler.a
-lib/squeak/3.0/Profiler.la
-lib/squeak/3.0/Profiler.so
-lib/squeak/3.0/System.a
-lib/squeak/3.0/System.la
-lib/squeak/3.0/System.so
+bin/squeak
+lib/squeak/3.6-3/B3DAcceleratorPlugin
+lib/squeak/3.6-3/UnixOSProcessPlugin
+lib/squeak/3.6-3/XDisplayControlPlugin
+lib/squeak/3.6-3/npsqueak.so
+lib/squeak/3.6-3/npsqueakrun
+lib/squeak/3.6-3/squeak
+lib/squeak/3.6-3/vm-display-X11
+lib/squeak/3.6-3/vm-display-null
+lib/squeak/3.6-3/vm-sound-NAS
+lib/squeak/3.6-3/vm-sound-NetBSD
+lib/squeak/3.6-3/vm-sound-null
+lib/squeak/Squeak3.6-5429.changes.gz
+lib/squeak/Squeak3.6-5429.image.gz
+lib/squeak/SqueakV3.sources
+lib/squeak/npsqueakregister
+lib/squeak/squeak.changes.gz
+lib/squeak/squeak.image.gz
+man/man1/inisqueak.1
 man/man1/squeak.1
-share/doc/squeak/BUILD.UnixSqueak
 share/doc/squeak/COPYING
 share/doc/squeak/COPYRIGHT
 share/doc/squeak/LICENSE
-share/doc/squeak/README.CodingStandards
-share/squeak/ReadMe.txt
-share/squeak/SqueakV3.sources
-share/squeak/3.0/Squeak3.0.changes
-share/squeak/3.0/Squeak3.0.image
-@dirrm lib/squeak/3.0
-@dirrm lib/squeak
+share/doc/squeak/README.Contributing
+share/doc/squeak/README.Keyboard
+share/doc/squeak/README.Sound
 @dirrm share/doc/squeak
-@dirrm share/squeak/3.0
-@dirrm share/squeak
+@dirrm lib/squeak/3.6-3
+@dirrm lib/squeak
