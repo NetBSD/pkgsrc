@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/03/04 12:05:13 wiz Exp $
+
+SHA1 (zident24.zip) = 2c22835ac1ad9ee8c7f9c40b125e3b856718828b
+RMD160 (zident24.zip) = 09500182746f6be1b2c78769474a632bf10ae7a9
+Size (zident24.zip) = 132766 bytes
+SHA1 (patch-aa) = b67b6cdb5961c697d673baef7a0a0cf49bfb400e
+SHA1 (patch-ab) = bd0d8a41f7f497da845113256e6aa8a0edeec75a
