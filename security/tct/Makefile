@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2002/02/06 16:58:15 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/02/18 09:57:57 agc Exp $
 #
 
 DISTNAME=	tct-1.09
 CATEGORIES=	security
 MASTER_SITES=	http://www.porcupine.org/forensics/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	frazee.23@osu.edu
 HOMEPAGE=	http://www.porcupine.org/forensics/tct.html
 COMMENT=	programs to aid post-mortem after a break-in
 
