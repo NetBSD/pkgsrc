@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1997/12/09 04:02:35 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/01/24 04:28:24 hubertf Exp $
 bin/tic
 bin/toe
 bin/infocmp
@@ -23,8 +23,8 @@ lib/libmenu_g.a
 lib/libform.so.3.4
 lib/libform.a
 lib/libform_g.a
-@exec /sbin/ldconfig -m %B || true
-@unexec /sbin/ldconfig -m %B || true
+@exec /sbin/ldconfig -m %B || /usr/bin/true
+@unexec /sbin/ldconfig -m %B || /usr/bin/true
 man/man1/captoinfo.1
 man/man1/infocmp.1
 man/man1/tic.1
@@ -57,6 +57,7 @@ man/man3/curs_outopts.3
 man/man3/curs_overlay.3
 man/man3/curs_pad.3
 man/man3/curs_printw.3
+man/man3/curs_print.3
 man/man3/curs_refresh.3
 man/man3/curs_scanw.3
 man/man3/curs_scr_dmp.3
@@ -88,6 +89,7 @@ man/man3/form_new_page.3
 man/man3/form_opts.3
 man/man3/form_page.3
 man/man3/form_post.3
+man/man3/form_requestname.3
 man/man3/form_userptr.3
 man/man3/form_win.3
 man/man3/menu.3
@@ -103,6 +105,8 @@ man/man3/menu_new.3
 man/man3/menu_opts.3
 man/man3/menu_pattern.3
 man/man3/menu_post.3
+man/man3/menu_requestname.3
+man/man3/menu_spacing.3
 man/man3/menu_userptr.3
 man/man3/menu_win.3
 man/man3/mitem_current.3
@@ -113,6 +117,7 @@ man/man3/mitem_userptr.3
 man/man3/mitem_value.3
 man/man3/mitem_visible.3
 man/man3/wresize.3
+man/man3/resizeterm.3
 man/man3/ncurses.3
 man/man5/terminfo.5
 man/man5/term.5
