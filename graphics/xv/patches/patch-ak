@@ -1,14 +1,17 @@
-$NetBSD: patch-ak,v 1.1 2001/04/05 13:57:16 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2002/10/06 16:26:57 he Exp $
 
 This patch is based on
 http://www.mit.edu/afs/athena/contrib/graphics/src/xv/patches/png/xvpng.diff
 It was edited to fit into the NetBSD Packages Collection! - HF
 
+It is also modified by
+ftp://ftp.trilon.com/pub/xv/patches/mp-tiff-patch
+
 ---------------------------------------------------------------------------
 
 
---- xv.c.patched	Sun Jun 13 02:45:51 1999
-+++ xv.c	Sun Jun 13 02:49:26 1999
+--- xv.c.orig	Fri Aug  9 17:09:06 2002
++++ xv.c
 @@ -279,6 +279,10 @@
  
    pcdW = (Window) NULL;  pcdUp = 0;
@@ -44,10 +47,12 @@ It was edited to fit into the NetBSD Packages Collection! - HF
  #ifdef HAVE_PDS
    else if (strncmp((char *) magicno,  "NJPL1I00", (size_t) 8)==0 ||
  	   strncmp((char *) magicno+2,"NJPL1I",   (size_t) 6)==0 ||
-@@ -2740,6 +2754,10 @@
+@@ -2739,7 +2753,11 @@
+ #endif
  
  #ifdef HAVE_TIFF
-   case RFT_TIFF:    rv = LoadTIFF  (fname, pinfo);           break;
+-  case RFT_TIFF:    rv = LoadTIFF  (fname, pinfo);           break;
++  case RFT_TIFF:    rv = LoadTIFF  (fname, pinfo, quick);    break;
 +#endif
 +
 +#ifdef HAVE_PNG
