@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1.1.1 2004/07/29 04:50:56 xtraeme Exp $
+@comment $NetBSD: PLIST.NetBSD,v 1.2 2004/09/21 17:38:53 xtraeme Exp $
 ${X11ROOT_PREFIX}/lib/libFS.a
 ${X11ROOT_PREFIX}/lib/libFS.so
 ${X11ROOT_PREFIX}/lib/libFS.so.6
@@ -35,9 +35,6 @@ ${X11ROOT_PREFIX}/lib/libXRes.a
 ${X11ROOT_PREFIX}/lib/libXRes.so
 ${X11ROOT_PREFIX}/lib/libXRes.so.1
 ${X11ROOT_PREFIX}/lib/libXRes.so.1.0
-${X11ROOT_PREFIX}/lib/libXThrStub.so
-${X11ROOT_PREFIX}/lib/libXThrStub.so.6
-${X11ROOT_PREFIX}/lib/libXThrStub.so.6.1
 ${X11ROOT_PREFIX}/lib/libXTrap.a
 ${X11ROOT_PREFIX}/lib/libXTrap.so
 ${X11ROOT_PREFIX}/lib/libXTrap.so.6
@@ -49,6 +46,26 @@ ${X11ROOT_PREFIX}/lib/libXaw.so.6
 ${X11ROOT_PREFIX}/lib/libXaw.so.6.1
 ${X11ROOT_PREFIX}/lib/libXaw.so.7
 ${X11ROOT_PREFIX}/lib/libXaw.so.7.0
+${X11ROOT_PREFIX}/lib/libXaw.so.8
+${X11ROOT_PREFIX}/lib/libXaw.so.8.0
+${X11ROOT_PREFIX}/lib/libXcomposite.a
+${X11ROOT_PREFIX}/lib/libXcomposite.so
+${X11ROOT_PREFIX}/lib/libXcomposite.so.1
+${X11ROOT_PREFIX}/lib/libXcomposite.so.1.0
+${X11ROOT_PREFIX}/lib/libXdamage.a
+${X11ROOT_PREFIX}/lib/libXdamage.so
+${X11ROOT_PREFIX}/lib/libXdamage.so.1
+${X11ROOT_PREFIX}/lib/libXdamage.so.1.0
+${X11ROOT_PREFIX}/lib/libXevie.a
+${X11ROOT_PREFIX}/lib/libXevie.so
+${X11ROOT_PREFIX}/lib/libXevie.so.1
+${X11ROOT_PREFIX}/lib/libXevie.so.1.0
+${X11ROOT_PREFIX}/lib/libXfixes.a
+${X11ROOT_PREFIX}/lib/libXfixes.so
+${X11ROOT_PREFIX}/lib/libXfixes.so.3
+${X11ROOT_PREFIX}/lib/libXfixes.so.3.0
+${X11ROOT_PREFIX}/lib/libXprintAppUtil.a
+${X11ROOT_PREFIX}/lib/libXprintUtil.a
 ${X11ROOT_PREFIX}/lib/libXdmcp.a
 ${X11ROOT_PREFIX}/lib/libXext.a
 ${X11ROOT_PREFIX}/lib/libXext.so
@@ -58,10 +75,6 @@ ${X11ROOT_PREFIX}/lib/libXfont.a
 ${X11ROOT_PREFIX}/lib/libXfont.so
 ${X11ROOT_PREFIX}/lib/libXfont.so.1
 ${X11ROOT_PREFIX}/lib/libXfont.so.1.5
-${X11ROOT_PREFIX}/lib/libXfontcache.a
-${X11ROOT_PREFIX}/lib/libXfontcache.so
-${X11ROOT_PREFIX}/lib/libXfontcache.so.1
-${X11ROOT_PREFIX}/lib/libXfontcache.so.1.2
 ${X11ROOT_PREFIX}/lib/libXi.a
 ${X11ROOT_PREFIX}/lib/libXi.so
 ${X11ROOT_PREFIX}/lib/libXi.so.6
