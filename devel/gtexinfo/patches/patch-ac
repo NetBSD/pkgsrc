@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 1998/08/07 10:40:24 agc Exp $
+$NetBSD: patch-ac,v 1.5 1999/02/11 17:54:32 tv Exp $
 
 --- info/filesys.h.orig	Mon Aug  4 22:21:35 1997
 +++ info/filesys.h	Wed May  6 23:00:23 1998
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.4 1998/08/07 10:40:24 agc Exp $
  /* The default value of INFOPATH. */
  #if !defined (DEFAULT_INFOPATH)
 -#  define DEFAULT_INFOPATH "/usr/local/info:/usr/info:/usr/local/lib/info:/usr/lib/info:/usr/local/gnu/info:/usr/local/gnu/lib/info:/usr/gnu/info:/usr/gnu/lib/info:/opt/gnu/info:/usr/share/info:/usr/share/lib/info:/usr/local/share/info:/usr/local/share/lib/info:/usr/gnu/lib/emacs/info:/usr/local/gnu/lib/emacs/info:/usr/local/lib/emacs/info:/usr/local/emacs/info:."
-+#  define DEFAULT_INFOPATH "@PREFIX@/info:@X11BASE@/info:@LOCALBASE@/info:/usr/local/info:/usr/info:/usr/local/lib/info:/usr/lib/info:/usr/local/gnu/info:/usr/local/gnu/lib/info:/usr/gnu/info:/usr/gnu/lib/info:/opt/gnu/info:/usr/share/info:/usr/share/lib/info:/usr/local/share/info:/usr/local/share/lib/info:/usr/gnu/lib/emacs/info:/usr/local/gnu/lib/emacs/info:/usr/local/lib/emacs/info:/usr/local/emacs/info:."
++#  define DEFAULT_INFOPATH "@PREFIX@/info:@X11BASE@/info:@LOCALBASE@/info:/usr/local/info:/usr/share/info:/usr/info:/usr/local/lib/info:/usr/lib/info:/usr/local/gnu/info:/usr/local/gnu/lib/info:/usr/gnu/info:/usr/gnu/lib/info:/opt/gnu/info:/usr/share/info:/usr/share/lib/info:/usr/local/share/info:/usr/local/share/lib/info:/usr/gnu/lib/emacs/info:/usr/local/gnu/lib/emacs/info:/usr/local/lib/emacs/info:/usr/local/emacs/info:."
  #endif /* !DEFAULT_INFOPATH */
  
  #if !defined (S_ISREG) && defined (S_IFREG)
