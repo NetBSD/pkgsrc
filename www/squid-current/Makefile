@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1998/10/11 20:42:41 kim Exp $
+# $NetBSD: Makefile,v 1.3 1998/10/11 22:06:20 kim Exp $
 #
 
-DISTNAME=	squid-2.0.RELEASE
+DISTNAME=	squid-2.0.PATCH1
 CATEGORIES=	www
 MASTER_SITES=  \
 	ftp://squid.nlanr.net/pub/squid-2/ \
@@ -54,7 +54,7 @@ pre-install:
 	) > ${WRKDIR}/PLIST.share
 
 # This is GNU ${datadir}/squid/squid.conf
-DEFCONF=	${PREFIX}/share/squid/squid.conf
+DEFCONF=	${PREFIX}/share/squid/squid.conf.default
 
 post-install:
 	cd ${WRKSRC}/src; make install-pinger
