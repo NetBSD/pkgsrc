@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.5 2001/09/24 13:10:48 wulf Exp $
+$NetBSD: patch-ak,v 1.6 2001/09/25 12:18:02 wulf Exp $
 
 --- perl-shared/Makefile.PL.orig	Thu Jul 13 16:22:17 2000
 +++ perl-shared/Makefile.PL
@@ -12,6 +12,6 @@ $NetBSD: patch-ak,v 1.5 2001/09/24 13:10:48 wulf Exp $
      # Perl will figure out which one is valid
      'depend'	   => {'RRDs.c' => "../src/.libs/librrd_private.a"},
 -    'dynamic_lib'  => {'OTHERLDFLAGS' => "$librrd -lm"},
-+    'dynamic_lib'  => {'OTHERLDFLAGS' => '-Wl,-R/usr/pkg/lib -L${X11BASE}/lib -L${X11PREFIX}/lib '."$librrd -lcgi -lm -lgd -lpng -lz -ljpeg -lttf -lXpm -lX11 -lintl"},
++    'dynamic_lib'  => {'OTHERLDFLAGS' => '-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib '."$librrd -lcgi -lm -lgd -lpng -lz -ljpeg -lttf -lXpm -lX11 -lintl"},
      'realclean'    => {FILES => 't/demo?.rrd t/demo?.gif' }
  );
