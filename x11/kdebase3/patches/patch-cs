@@ -1,8 +1,8 @@
-$NetBSD: patch-cs,v 1.2 2002/08/25 19:23:43 jlam Exp $
+$NetBSD: patch-cs,v 1.3 2002/08/28 07:15:41 skrll Exp $
 
---- konsole/konsole/Makefile.am.orig	Wed May  8 19:22:37 2002
+--- konsole/konsole/Makefile.am.orig	Mon Aug  5 15:56:24 2002
 +++ konsole/konsole/Makefile.am
-@@ -12,7 +12,8 @@
+@@ -12,7 +12,8 @@ INCLUDES = $(all_includes)
  
  # you can add here more. This one gets installed
  bin_PROGRAMS = 	konsole konsole_grantpty kwrited #kcmkonsole
@@ -12,8 +12,8 @@ $NetBSD: patch-cs,v 1.2 2002/08/25 19:23:43 jlam Exp $
  # libkonsolepart is a part, but konsole.la links directly to it, so we can't
  # install it under kde_module
  
-@@ -32,24 +33,34 @@
- libkonsolepart_la_LIBADD = $(LIB_KPARTS) $(LIBUTIL) @XTESTLIB@
+@@ -32,24 +33,32 @@ libkonsolepart_la_LDFLAGS = $(all_librar
+ libkonsolepart_la_LIBADD = $(LIBUTIL) @XTESTLIB@ $(LIB_KPARTS)
  
  # kwrited kdeinit module
 -kwrited_la_SOURCES = kwrited.cpp
@@ -45,18 +45,14 @@ $NetBSD: patch-cs,v 1.2 2002/08/25 19:23:43 jlam Exp $
  konsole_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
  # konsole executable - has all the sources, doesn't link kparts, saves startup time
--konsole_SOURCES	= TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp \
--                  TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsoleiface.skel sessioniface.skel \
+ konsole_SOURCES	= TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp \
+                   TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsoleiface.skel sessioniface.skel \
 -                  konsole_wcwidth.cpp
-+konsole_SOURCES	= TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp \
-+	session.cpp TEWidget.cpp TEmuVt102.cpp TEScreen.cpp TEmulation.cpp \
-+	TEHistory.cpp keytrans.cpp konsoleiface.skel sessioniface.skel \
-+	konsole_wcwidth.cpp konsole_main.cpp
-+
- konsole_LDADD = $(LIB_KDEUI) $(LIB_KSYCOCA) $(LIBUTIL) $(LIB_KFILE) @XTESTLIB@
++                  konsole_wcwidth.cpp konsole_main.cpp
+ konsole_LDADD = $(LIB_KSYCOCA) $(LIBUTIL) $(LIB_KFILE) @XTESTLIB@ $(LIB_KDEUI)
  konsole_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
-@@ -91,9 +102,6 @@
+@@ -91,9 +100,6 @@ messages: rc.cpp
  	$(XGETTEXT) rc.cpp *.cpp -o $(podir)/konsole.pot
  	rm -f schemas.cpp
  	rm -f tips.cpp
