@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2001/10/30 17:41:20 drochner Exp $
+
+--- man/Makefile.in.orig	Tue Oct 30 18:02:20 2001
++++ man/Makefile.in	Tue Oct 30 18:06:26 2001
+@@ -35,10 +35,6 @@
+ 	cd $(srcdir) && for f in *.1 ; do echo $(INSTALL_DATA) $$f $(DESTDIR)$(mandir)/man1/$$f ; $(INSTALL_DATA) $$f $(DESTDIR)$(mandir)/man1/$$f ; done
+ 	if [ ! -d $(DESTDIR)$(mandir)/man3 ] ; then mkdir $(DESTDIR)$(mandir)/man3 ; fi
+ 	cd $(srcdir) && for f in *.3 ; do echo $(INSTALL_DATA) $$f $(DESTDIR)$(mandir)/man3/$$f ; $(INSTALL_DATA) $$f $(DESTDIR)$(mandir)/man3/$$f ; done
+-	if [ ! -d $(DESTDIR)$(prefix)/doc ] ; then mkdir $(DESTDIR)$(prefix)/doc ; fi
+-	if [ ! -d $(DESTDIR)$(docdir) ] ; then mkdir $(DESTDIR)$(docdir) ; fi
+-	if [ ! -d $(DESTDIR)$(htmldir) ] ; then mkdir $(DESTDIR)$(htmldir) ; fi
+-	cd $(srcdir) && for f in *.html ; do echo $(INSTALL_DATA) $$f $(DESTDIR)$(htmldir)/$$f ; $(INSTALL_DATA) $$f $(DESTDIR)$(htmldir)/$$f ; done
+ 
+ installdirs : force
+ 	if [ ! -d $(DESTDIR)$(prefix) ] ; then mkdir $(DESTDIR)$(prefix) ; fi
