@@ -1,0 +1,3 @@
+This utility is based on Matthew Green's addbozo.pl script, and is
+designed to add a local user to the system, including the construction
+of the home directory.
