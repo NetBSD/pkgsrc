@@ -1,0 +1,42 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/04/19 23:25:29 taya Exp $
+
+diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	2001-09-29 05:12:52.000000000 +0900
++++ ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_netbsd_m68k.cpp	2004-01-16 23:17:24.000000000 +0900
+@@ -123,17 +123,27 @@
+     }
+ }
+ 
++/*
++ * Beware: use % instead of %% for register identifiers in a preprocessor macro
++ * SYMBOL PREFIX must be "_" for aout and "" for ELF 
++ */
++#ifndef	__ELF__
++#define	SYMBOLPREFIX	"_"
++#else
++#define	SYMBOLPREFIX
++#endif
++
+ #define STUB_ENTRY(n)							\
+ __asm__(								\
+-    ".global	_Stub"#n"__14nsXPTCStubBase\n\t"			\
+-"_Stub"#n"__14nsXPTCStubBase:\n\t"					\
+-    "link  a6,#0			\n\t"				\
+-    "lea   a6@(12), a0			\n\t"	/* pointer to args */	\
+-    "movl  a0, sp@-			\n\t"				\
+-    "movl  #"#n", sp@-			\n\t"	/* method index */	\
+-    "movl  a6@(8), sp@-			\n\t"	/* this */		\
+-    "jbsr  _PrepareAndDispatch		\n\t"				\
+-    "unlk  a6				\n\t"				\
++    ".global   "SYMBOLPREFIX"Stub"#n"__14nsXPTCStubBase\n\t"           \
++SYMBOLPREFIX"Stub"#n"__14nsXPTCStubBase:\n\t"                          \
++    "link  %a6,#0                      \n\t"                           \
++    "lea   %a6@(12), %a0               \n\t"   /* pointer to args */   \
++    "movl  %a0, %sp@-                  \n\t"                           \
++    "movl  #"#n", %sp@-                        \n\t"   /* method index */      \
++    "movl  %a6@(8), %sp@-              \n\t"   /* this */              \
++    "jbsr  "SYMBOLPREFIX"PrepareAndDispatch\n\t"                       \
++    "unlk  %a6                         \n\t"                           \
+     "rts				\n\t"				\
+ );
+ 
