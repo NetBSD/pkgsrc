@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2001/04/04 17:04:00 manu Exp $
+# $NetBSD: Makefile,v 1.10 2001/04/16 11:52:55 manu Exp $
 
-DISTNAME=		linuxppc_lib-2000.q4.3
+DISTNAME=		linuxppc_lib-2000.q4.4
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.linuxppc.org/linuxppc-halloween/software/
 DISTFILES=		glibc-2.1.3-15f.ppc.rpm glib-1.2.8-3.ppc.rpm \
@@ -44,7 +44,10 @@ do-build:	#do nothing
 do-install:
 	${RM} -f ${WRKDIR}/PLIST_DYNAMIC
 	${INSTALL_DATA_DIR} ${PREFIX}/${EMUL_LINUX}
+	${INSTALL_DATA_DIR} /${EMUL_LINUX}
 	${RPM2PKG} -d ${PREFIX} -f ${WRKDIR}/PLIST_DYNAMIC -p emul/linux ${RPMARGS}
+	${TEST} -f /emul/linux/lib/ld.so.1 || ( ${RMDIR} /${EMUL_LINUX} && \
+	    ${LN} -sf ${PREFIX}/${EMUL_LINUX} /${EMUL_LINUX} )
 	${TOUCH} ${PREFIX}/${EMUL_LINUX}/etc/ld.so.cache~
 	${CP} ${FILESDIR}/ld.so.conf ${PREFIX}/${EMUL_LINUX}/etc/ld.so.conf
 	${LINUX_LDCONFIG} -r ${PREFIX}/${EMUL_LINUX} -v | \
