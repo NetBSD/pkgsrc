@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 1999/11/21 23:03:38 tron Exp $
+$NetBSD: patch-ab,v 1.2 2000/02/09 20:55:29 hubertf Exp $
 
---- extras/Makefile.in.orig	Wed Sep 15 18:00:14 1999
-+++ extras/Makefile.in	Sun Nov 21 23:55:25 1999
+--- extras/Makefile.in.BAK	Wed Feb  9 21:07:16 2000
++++ extras/Makefile.in	Wed Feb  9 21:11:37 2000
 @@ -67,17 +67,15 @@
  
  install:	all

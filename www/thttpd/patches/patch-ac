@@ -1,25 +1,27 @@
-$NetBSD: patch-ac,v 1.1 1999/11/21 23:03:38 tron Exp $
+$NetBSD: patch-ac,v 1.2 2000/02/09 20:55:29 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2000/02/09 20:55:29 hubertf Exp $
 
---- cgi-src/Makefile.in.orig	Wed Sep 15 17:57:19 1999
-+++ cgi-src/Makefile.in	Sun Nov 21 23:57:31 1999
-@@ -66,15 +66,15 @@
- 
+
+--- cgi-src/Makefile.in.BAK	Wed Feb  9 21:12:32 2000
++++ cgi-src/Makefile.in	Wed Feb  9 21:13:16 2000
+@@ -67,15 +67,15 @@
  install:	all
- 	rm -f $(CGIBINDIR)/nph-redirect
--	cp nph-redirect $(CGIBINDIR)/nph-redirect
-+	$(BSD_INSTALL_PROGRAM) nph-redirect $(CGIBINDIR)/nph-redirect
- 	rm -f $(MANDIR)/man8/nph-redirect.8
--	cp nph-redirect.8 $(MANDIR)/man8/nph-redirect.8
-+	$(BSD_INSTALL_MAN) nph-redirect.8 $(MANDIR)/man8/nph-redirect.8
+ 	-mkdir $(CGIBINDIR)
+ 	rm -f $(CGIBINDIR)/redirect
+-	cp redirect $(CGIBINDIR)/redirect
++	$(BSD_INSTALL_PROGRAM) redirect $(CGIBINDIR)/redirect
+ 	rm -f $(MANDIR)/man8/redirect.8
+-	cp redirect.8 $(MANDIR)/man8/redirect.8
++	$(BSD_INSTALL_MAN) redirect.8 $(MANDIR)/man8/redirect.8
  	rm -f $(CGIBINDIR)/ssi
 -	cp ssi $(CGIBINDIR)/ssi
-+	$(BSD_INSTALL_PROGRAM) ssi $(CGIBINDIR)/ssi
++	$(BSD_INSTALL_MAN) ssi $(CGIBINDIR)/ssi
  	rm -f $(MANDIR)/man8/ssi.8
 -	cp ssi.8 $(MANDIR)/man8/ssi.8
 +	$(BSD_INSTALL_MAN) ssi.8 $(MANDIR)/man8/ssi.8
  	rm -f $(CGIBINDIR)/phf
 -	cp phf $(CGIBINDIR)/phf
-+	$(BSD_INSTALL_PROGRAM) phf $(CGIBINDIR)/phf
++	$(BSD_INSTALL_MAN) phf $(CGIBINDIR)/phf
  
  clean:
  	rm -f $(CLEANFILES)
