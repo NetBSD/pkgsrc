@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 1999/02/07 17:03:27 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/12/24 00:59:45 wiz Exp $
 
 DISTNAME=	cdd-1.0myc2
-PKGNAME=	cdd-1.0myc2
 WRKSRC=		${WRKDIR}/cdd
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_LOCAL}
