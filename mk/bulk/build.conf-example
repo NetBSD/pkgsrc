@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.5 2000/12/22 01:35:33 dmcmahill Exp $
+# $NetBSD: build.conf-example,v 1.6 2000/12/26 16:45:57 dmcmahill Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -37,6 +37,8 @@ PRUNEDISTFILES=yes
 ###########################################################################
 ### No changes should be needed below this line !!!
 ###########################################################################
+
+BROKENFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=BROKENFILE )`;
 
 # Name of the (generated) HTML file which lists all broken pkgs
 REPORT="$FTP/broken.html"
