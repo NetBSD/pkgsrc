@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/06 21:09:40 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/10 15:08:18 agc Exp $
 #
 
 DISTNAME=	kapm-0.3.1
@@ -16,7 +16,8 @@ DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 
 USE_X11BASE=	YES	# to get things near KDE
 GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	QTDIR=${X11BASE}/qt1 MOC=${X11BASE}/qt1/bin/moc
-CONFIGURE_ARGS+=--with-qt-dir=${X11BASE}/qt1
+CONFIGURE_ENV+=	QTDIR=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1
+CONFIGURE_ENV+= MOC=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1/bin/moc
+CONFIGURE_ARGS+=--with-qt-dir=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1
 
 .include "../../mk/bsd.pkg.mk"
