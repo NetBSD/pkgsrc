@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/20 12:14:41 agc Exp $
+# $NetBSD: Makefile,v 1.18 2004/06/15 13:49:52 grant Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:35 obrien Exp
 #
 
@@ -18,6 +18,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 USE_IMAKE=		yes
+USE_GNU_TOOLS+=		lex
 XMKMF=			${X11BASE}/bin/xmkmf # don't specify -a option
 
 ALL_TARGET=		y.tab.c depend spim xspim
