@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2005/03/23 01:48:06 schmonz Exp $
+# $NetBSD: options.mk,v 1.9 2005/03/29 12:34:16 schmonz Exp $
 
 .if ${OPSYS} == "Darwin"
 PKG_DEFAULT_OPTIONS+=	darwin
@@ -65,7 +65,7 @@ PATCH_DIST_STRIP.${NETQMAIL_PATCH}=	-p1
 .if !empty(PKG_OPTIONS:Mnullenvsender)
 NULLENVSENDER_PATCH=	nullenvsender-recipcount.patch
 PATCHFILES+=		${NULLENVSENDER_PATCH}
-SITES_${NULLENVSENDER_PATCH}=	http://www.qcc.ca/~charlesc/software/misc/
+SITES_${NULLENVSENDER_PATCH}=	http://pyropus.ca/software/misc/
 PATCH_DIST_STRIP.${NULLENVSENDER_PATCH}=	-p1
 .endif
 
@@ -84,7 +84,7 @@ SITES_${OUTGOINGIP_PATCH}=	http://www.qmail.org/
 .if !empty(PKG_OPTIONS:Mqregex)
 QREGEX_PATCH=		qregex-20040725.patch
 PATCHFILES+=		${QREGEX_PATCH}
-SITES_${REGEX_PATCH}=	http://www.arda.homeunix.net/store/qmail/
+SITES_${QREGEX_PATCH}=	http://www.arda.homeunix.net/store/qmail/
 PATCH_DIST_STRIP.${QREGEX_PATCH}=	-p3
 PLIST_SRC+=             ${PKGDIR}/PLIST.qregex
 .endif
