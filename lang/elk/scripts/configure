@@ -3,7 +3,7 @@
 mach=`uname -m`
 
 case $mach in
-i386|sparc|m68k)
+i386|sparc|amiga|atari|hp300|mac68k|mvme68k|sun3|sun3x|x68k)
 	exetype=aout
 	;;
 pmax|alpha)
