@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/11/23 21:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/11/25 12:30:41 wiz Exp $
 #
 
-DISTNAME=	vcdimager-0.7.12
+DISTNAME=	vcdimager-0.6.2
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://alpha.gnu.org/gnu/vcdimager/
+MASTER_SITES=	${MASTER_SITE_GNU:=vcdimager/}
 
 MAINTAINER=	collver@linuxfreemail.com
 HOMEPAGE=	http://www.gnu.org/software/vcdimager/
