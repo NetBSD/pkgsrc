@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.51 2002/12/10 15:39:48 wiz Exp $
+$NetBSD: TODO,v 1.52 2002/12/10 17:08:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -78,6 +78,7 @@ Suggested package updates
 	o bitchx-1.0c19 [pkg/19296]
 	o bonnie++-1.03
 	o bzflag-1.7g0
+	o canna*-3.6.1 [pkg/19340]
 	o cdlabelgen-2.5.0
 	o cdrecord-1.11a39 [pkg/19073]
 	o cdrecord-1.11a40
@@ -90,7 +91,7 @@ Suggested package updates
 	o crossfire-1.4.0
 	o ctwm-3.6
 	o cups-1.1.17
-	o cyrus-sasl-2.1.10
+	o cyrus-sasl-2.1.10 [pkg/19335]
 	o dante-1.1.13
 	o db4-4.1.24
 	o dctc-0.83.9
@@ -191,7 +192,6 @@ Suggested package updates
 	o oss-397f
 	o pan-0.13.2
 	o pen-0.9.5 [pkg/19216]
-	o phoenix-0.4
 	o pilot-link-0.11.4 [dillo]
 	o pine-4.50
 	o plib-1.6.0
