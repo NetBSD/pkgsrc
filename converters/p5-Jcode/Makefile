@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2004/08/17 17:03:04 taca Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/12 00:15:48 seb Exp $
 #
 
 DISTNAME=	Jcode-0.87
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5jco
-CATEGORIES=	converters japanese
+CATEGORIES=	converters japanese perl5
 MASTER_SITES=	http://openlab.ring.gr.jp/Jcode/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
