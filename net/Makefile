@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 1999/01/29 19:31:11 tron Exp $
+# $NetBSD: Makefile,v 1.54 1999/02/18 11:52:54 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -75,7 +75,6 @@
     SUBDIR += rumba
 #    SUBDIR += rwhois
     SUBDIR += samba
-    SUBDIR += samba2
     SUBDIR += scotty
     SUBDIR += sirc
     SUBDIR += sniffit
