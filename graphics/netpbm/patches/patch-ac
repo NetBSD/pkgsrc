@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.13 2003/03/18 12:11:57 tron Exp $
+$NetBSD: patch-ac,v 1.14 2005/01/18 14:16:20 adam Exp $
 
---- converter/ppm/ppmtompeg/param.c-orig	Fri Aug 31 16:49:01 2001
-+++ converter/ppm/ppmtompeg/param.c	Sat Mar 23 19:20:02 2002
-@@ -11,13 +11,6 @@
+--- converter/ppm/ppmtompeg/param.c.orig	2004-12-03 05:05:39.000000000 +0000
++++ converter/ppm/ppmtompeg/param.c
+@@ -7,13 +7,6 @@
  
  /* COPYRIGHT INFORMATION IS AT THE END OF THIS FILE */
  
