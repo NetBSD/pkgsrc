@@ -1,11 +1,11 @@
 #! /bin/sh
 #
-# $NetBSD: courierpops.sh,v 1.3 2002/01/02 22:19:39 jlam Exp $
+# $NetBSD: courierpops.sh,v 1.4 2002/01/22 22:08:53 jlam Exp $
 #
 # Courier POP3/SSL services daemon
 #
 # PROVIDE: courierpops
-# REQUIRE: DAEMON
+# REQUIRE: authdaemond
 
 if [ -e /etc/rc.subr ]
 then
