@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.15 2004/12/24 22:02:38 jlam Exp $
+$NetBSD: patch-aa,v 1.16 2004/12/25 19:09:09 jlam Exp $
 
---- config.orig	2004-06-28 18:01:05.000000000 -0400
+--- config.orig	Mon Jun 28 18:01:05 2004
 +++ config
 @@ -155,6 +155,10 @@ case "${SYSTEM}:${RELEASE}:${VERSION}:${
  	echo "mips4-sgi-irix64"; exit 0
@@ -13,12 +13,20 @@ $NetBSD: patch-aa,v 1.15 2004/12/24 22:02:38 jlam Exp $
      Linux:[2-9].*)
  	echo "${MACHINE}-whatever-linux2"; exit 0
  	;;
-@@ -655,8 +659,9 @@ EOF
+@@ -654,9 +658,16 @@ EOF
+   ia64-*-freebsd*) OUT="FreeBSD-ia64" ;;
    *-freebsd[3-9]*) OUT="FreeBSD-elf" ;;
    *-freebsd[1-2]*) OUT="FreeBSD" ;;
-   *86*-*-netbsd) OUT="NetBSD-x86" ;;
+-  *86*-*-netbsd) OUT="NetBSD-x86" ;;
 -  sun3*-*-netbsd) OUT="NetBSD-m68" ;;
 -  *-*-netbsd) OUT="NetBSD-sparc" ;;
++  *86*-*-netbsd)
++	if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++		OUT="NetBSD-x86-aout"
++	else
++		OUT="NetBSD-x86-elf"
++	fi
++	;;
 +  sun3*-*-netbsd) OUT="NetBSD-m68k" ;;
 +  *-*-netbsd) OUT="NetBSD-${MACHINE_ARCH}" ;;
 +  *-*-interix3) OUT="Interix3" ;;
