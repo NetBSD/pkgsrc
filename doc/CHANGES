@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2469 2003/06/09 17:04:04 frueauf Exp $
+$NetBSD: CHANGES,v 1.2470 2003/06/09 17:23:04 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2395,3 +2395,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nessus-plugins to 2.0.6a [frueauf 2003-06-09]
 	Updated nessus-libraries to 2.0.6a [frueauf 2003-06-09]
 	Updated nessus to 2.0.6a [frueauf 2003-06-09]
+	Updated libnbcompat to 20030609 [grant 2003-06-09]
