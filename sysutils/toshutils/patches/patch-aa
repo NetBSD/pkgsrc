@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2000/01/07 06:38:00 soren Exp $
 
 --- configure.in.orig	Fri Dec 17 14:07:03 1999
-+++ configure.in	Mon Dec 20 01:09:15 1999
++++ configure.in	Fri Jan  7 07:34:40 2000
 @@ -4,7 +4,7 @@
  AC_REVISION([configure.in 1.1])
  AC_INIT(src/sci.c)
@@ -20,3 +20,12 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
    linux*)
      OS_CFLAGS='-DLINUX'
    ;;
+@@ -69,7 +71,7 @@
+ if test "$have_x" = "yes"; then
+   XLIB="-lX11 $X_EXTRA_LIBS"
+   EXTRAFLAGS=""
+-  PROGRAMS="$PROGRAMS hotkey wmtuxtime"       # programs to build if X11 found
++  PROGRAMS="$PROGRAMS hotkey"       # programs to build if X11 found
+ else
+   AC_MSG_ERROR([*** libX11 not found. Check 'config.log' for more details.])
+   XLIB=""
