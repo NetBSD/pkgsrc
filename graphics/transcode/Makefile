@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2004/03/28 20:09:07 mycroft Exp $
+# $NetBSD: Makefile,v 1.31 2004/04/05 18:41:14 wiz Exp $
 
 DISTNAME=	transcode-0.6.12
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.zebra.fh-weingarten.de/~transcode/pre/
 
