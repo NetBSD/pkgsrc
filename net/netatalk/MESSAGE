@@ -1,3 +1,5 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/05/25 13:08:39 wiz Exp $
 
 To have Netatalk start automatically at boot, copy (or link) the following
 files into /etc/rc.d on rc.d-capable systems:
@@ -17,3 +19,5 @@ Example Netatalk config files have been installed in the examples directory
 at ${PREFIX}/share/examples/netatalk. Production config files are
 installed in ${PKG_SYSCONFDIR}. If no config files existed before this
 package was installed, default config files were copied in.
+
+===========================================================================

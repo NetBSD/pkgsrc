@@ -12,4 +12,3 @@ is a PostScript reverser, called by psf to reverse pages printed
 to face-up stacking printers. afpd provides Macs with an interface
 to the Unix file system. Refer to the appropriate man pages for
 operational information.
-

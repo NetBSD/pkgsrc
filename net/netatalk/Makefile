@@ -1,40 +1,37 @@
-# $NetBSD: Makefile,v 1.14 2002/05/25 12:55:24 markd Exp $
+# $NetBSD: Makefile,v 1.15 2002/05/25 13:08:40 wiz Exp $
 
-DISTNAME=       netatalk-1.5.3.1
-CATEGORIES=     net print
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=netatalk/} \
-		http://me.in-berlin.de/~jroger/netatalk/ \
+DISTNAME=	netatalk-1.5.3.1
+CATEGORIES=	net print
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/} \
+		http://me.in-berlin.de/~jroger/netatalk/
 
-GNU_CONFIGURE=  yes
-USE_GMAKE=      yes
-USE_PERL5=      yes
-#USE_LIBTOOL=    yes
+MAINTAINER=	markd@netbsd.org
+HOMEPAGE=	http://sourceforge.net/projects/netatalk/
+COMMENT=	Netatalk appletalk file and print services
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_PERL5=	yes
+#USE_LIBTOOL=	yes
 #LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 
+CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
+
 .include "../../mk/bsd.prefs.mk"
-CONFIGURE_ARGS+=        --with-tcp-wrappers --with-flock-locks \
+
+CONFIGURE_ARGS+=	--with-tcp-wrappers --with-flock-locks \
 			--enable-timelord \
-                        --localstatedir=/var/netatalk \
-                        --sbindir=${PREFIX}/libexec/netatalk \
-                        --with-uams-path=${PREFIX}/libexec/netatalk/uams \
+			--localstatedir=/var/netatalk \
+			--sbindir=${PREFIX}/libexec/netatalk \
+			--with-uams-path=${PREFIX}/libexec/netatalk/uams \
 			--sysconfdir=${PKG_SYSCONFDIR} \
 			--enable-netbsd
-
-MAINTAINER=     markd@netbsd.org
-HOMEPAGE=       http://sourceforge.net/projects/netatalk/
-COMMENT=        Netatalk appletalk file and print services
-
-CONFLICTS=      netatalk-asun-[0-9]*
-CONFLICTS+=     netatalk-umich-[0-9]*
-
-MESSAGE_SUBST+=	PREFIX=${PREFIX}
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/netatalk
 .for FILE in atalkd.conf netatalk.conf papd.conf AppleVolumes.default \
 		AppleVolumes.system afpd.conf
-	@-( cd ${WRKSRC}/config; gmake ${FILE} )
+	@-( cd ${WRKSRC}/config; ${MAKE_PROGRAM} ${FILE} )
 	${INSTALL_DATA} ${WRKSRC}/config/${FILE} \
 					${PREFIX}/share/examples/netatalk/
 .endfor
