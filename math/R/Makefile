@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2000/08/11 23:02:37 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2000/08/16 19:04:42 jlam Exp $
 #
 
-DISTNAME=		R-1.1.0
+DISTNAME=		R-1.1.1
 CATEGORIES=		math
 MASTER_SITES=		http://cran.r-project.org/src/base/ \
 			ftp://cran.r-project.org/pub/R/src/base/ \
@@ -66,10 +66,30 @@ CONFIGURE_ENV+=		R_PAPERSIZE="${R_PAPERSIZE}"
 INSTALL_DATA=		${INSTALL} ${COPY} -m ${SHAREMODE}
 INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 
+PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+R_LIBDIR=		${PREFIX}/lib/R
+INSTALL_DIRS=		${R_LIBDIR}
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf
 
+# Generate the PLIST dynamically as it changes in each version only in a
+# specific subtree.  This will make maintaining this package a little easier
+# when updating.
+#
 post-install:
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/R
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${R_LIBDIR}
+	${RM} -f ${PLIST_SRC}
+	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
+	( cd ${PREFIX}; \
+	  for dir in ${INSTALL_DIRS}; do \
+		${FIND} $${dir#${PREFIX}/} \( -type f -or -type l \) -print; \
+	  done; \
+	) | sort -u >> ${PLIST_SRC}
+	( cd ${PREFIX}; \
+	  for dir in ${INSTALL_DIRS}; do \
+		${FIND} $${dir#${PREFIX}/} -type d -print; \
+	  done; \
+	) | sort -ur | ${SED} -e "s,^,@dirrm ," >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

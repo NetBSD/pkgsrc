@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2000/08/11 23:02:38 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2000/08/16 19:04:43 jlam Exp $
 
---- configure.in.orig	Wed Jun 14 16:51:52 2000
-+++ configure.in	Fri Aug 11 18:26:41 2000
-@@ -362,10 +362,6 @@
+--- configure.in.orig	Sun Jul 30 18:46:45 2000
++++ configure.in	Wed Aug 16 13:56:09 2000
+@@ -321,10 +321,6 @@
  if ${use_libmoto}; then
    AC_CHECK_LIB(moto, sin)
  fi
