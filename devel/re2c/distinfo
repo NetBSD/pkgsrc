@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/05/07 01:59:02 danw Exp $
+$NetBSD: distinfo,v 1.3 2004/09/10 18:52:29 wiz Exp $
 
-SHA1 (re2c-0.9.1.tar.gz) = 45b2d33348bc340d633e6f0aca7b1a5e5a75914e
-Size (re2c-0.9.1.tar.gz) = 115783 bytes
-SHA1 (patch-aa) = 216cf9716303e141dec342601cef75ff657cb70f
+SHA1 (re2c-0.9.3.tar.gz) = f7afa459474abadea146031f2d9dbadbfc5a568f
+Size (re2c-0.9.3.tar.gz) = 173075 bytes
