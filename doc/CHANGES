@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7528 2004/10/23 06:13:14 epg Exp $
+$NetBSD: CHANGES,v 1.7529 2004/10/23 06:55:23 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4821,3 +4821,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added aumix-gtk-2.8 [jmmv 2004-10-22]
 	Added p5-Class-Factory-1.00 [minskim 2004-10-23]
 	Updated subversion to 1.1.1 [epg 2004-10-23]
+	Added gnotime-2.2.0 [jdolecek 2004-10-23]
