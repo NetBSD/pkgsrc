@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.85 2002/12/19 07:43:58 jmmv Exp $
+$NetBSD: TODO,v 1.86 2002/12/19 18:03:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -83,6 +83,7 @@ Suggested package updates
 	o cdrecord-1.11a39 [pkg/19073]
 	o cdrecord-1.11a40
 	o centericq-4.9.0
+	o cfengine-1.6.5 [pkg/19459]
 	o citrix-ica [pkg/19210]
 	o clisp-2.30
 	o courier-0.40 [jlam]
@@ -180,6 +181,7 @@ Suggested package updates
 	o mhonarc-2.5.13 [pkg/19366]
 	o mixer.app-1.8.0
 	o mkfontscale-20020618 (needs freetype-2.1.1)
+	o mlterm-2.6.2 [pkg/19457]
 	o mplayer-0.90rc1
 	o mrproject-0.7
 	o multi-gnome-terminal-1.6.1
@@ -196,7 +198,6 @@ Suggested package updates
 	o openssh-3.5p1
 	o openssl-0.9.6h
 	o opensp-1.5
-	o oss-397f
 	o pan-0.13.2
 	o pen-0.9.5 [pkg/19216]
 	o pilot-link-0.11.4 [dillo]
@@ -246,6 +247,7 @@ Suggested package updates
 	o xerces-c-2.1.0 [heinz]
 	o xforms-1.0RC4
 	o xfstt-1.4
+	o xmcd-3.2.0
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre15
 	o yudit-2.7.2
