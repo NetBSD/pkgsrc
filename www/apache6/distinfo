@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:33 skrll Exp $
+$NetBSD: distinfo,v 1.3 2001/04/29 21:21:13 jlam Exp $
 
 SHA1 (apache_1.3.19.tar.gz) = 2cc8d431ef9eb1037f876394fef4aecb83948501
 Size (apache_1.3.19.tar.gz) = 1928677 bytes
@@ -7,7 +7,7 @@ Size (sitedrivenby.gif) = 8519 bytes
 SHA1 (apache-1.3.19-v6-20010301a.diff.gz) = 6a859aad911613f110bbb4a4572929da8d7758eb
 Size (apache-1.3.19-v6-20010301a.diff.gz) = 57203 bytes
 SHA1 (patch-aa) = 0048d2cc0c96626f84e44192aca29256e9f30f72
-SHA1 (patch-ab) = f98ae8a686f66f1c0488ae08278d0388211aebb0
+SHA1 (patch-ab) = 18c07600171218432ac9f4e510722d20f72d39a9
 SHA1 (patch-ac) = 4c18bb80f3fbe8d44c941e403ff10fd92b820785
 SHA1 (patch-ae) = 2e4e7aab1cff7ddc82697946eeb8d13cd3aa1df0
 SHA1 (patch-af) = 78d0f26131c1000f45a072d55b1c82806c4e5ddf
