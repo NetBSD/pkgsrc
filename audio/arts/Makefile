@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/07/30 13:01:28 markd Exp $
+# $NetBSD: Makefile,v 1.19 2003/08/01 05:58:20 grant Exp $
 
 DISTNAME=	arts-1.1.3
 CATEGORIES=	audio
@@ -11,7 +11,7 @@ CONFLICTS+=	kdelibs-2*
 USE_BUILDLINK2=		yes
 USE_PERL5=		build
 
-LIBTOOL_OVERRIDE+=	${WRKSRC}/libltdl/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool ${WRKSRC}/libltdl/libtool
 CONFIGURE_ENV+=		ac_cv_path_PKG_CONFIG=no
 
 # Ensure we export symbols in the linked shared object.
