@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/21 23:46:49 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/24 21:24:18 drochner Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.python.org/idle/
 COMMENT=	IDLE - The Integrated DeveLopment Environment for Python
 
 USE_X11=	yes
+USE_BUILDLINK2=	yes
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/idle/*
 
@@ -38,8 +39,8 @@ do-install:
 	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/idle -type d -print | \
 		${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
+.include "../../lang/python/srcdist.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/srcdist.mk"
-.include "../../x11/py-Tk/buildlink.mk"
+.include "../../x11/py-Tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
