@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 1999/01/05 00:32:28 kim Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/05 19:12:00 kim Exp $
 #
-# There was a reason for the last digit and the patch number in
-# the distribution not matching, but it escapes me right now.
+# The version number for skill does not match the @P number.
+# This is normal.
 
-DISTNAME=	skill-3.7@P5
-PKGNAME=	skill-3.7.6
+DISTNAME=	skill-3.7@P6
+PKGNAME=	skill-3.7.7
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://jaguar.cs.utah.edu/pub/skill/
+MASTER_SITES=	ftp://fast.cs.utah.edu/pub/skill/
 EXTRACT_SUFX=	_tar.Z
 
 MAINTAINER=	kim@tac.nyc.ny.us
