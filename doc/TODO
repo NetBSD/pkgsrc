@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1239 2003/12/25 14:06:18 wiz Exp $
+$NetBSD: TODO,v 1.1240 2003/12/25 14:42:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -149,6 +149,7 @@ Suggested package updates
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
+	o elinks-0.9.0
 	o elk-3.99.6
 	o elm-me-2.4pl110
 	o evolution-1.5
@@ -191,7 +192,7 @@ Suggested package updates
 	o host-20031203
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
-	o icepref-2.2
+	o icepref-2.3
 	o inn-2.4.0
 	o isync-0.9.1 [pkg/22189]
 	o jakarta-tomcat-3.3.1a
@@ -204,6 +205,7 @@ Suggested package updates
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.46
+	o libcaca-0.4
 	o libcroco-0.4.0 [pkg/23793]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
@@ -241,6 +243,7 @@ Suggested package updates
 	o ngrep-1.41
 	o ns-flash-6.0.79
 	o nsd-1.2.3
+	o nut-9.4
 	o openh323-1.11.2
 	o openldap-2.1.25
 	o openoffice-1.1 [skrll]
@@ -299,6 +302,8 @@ Suggested package updates
 	o top-3.5b12.10
 	o transcode-0.6.11 [veego]
 	o ttf2pt1-3.4.3
+	o tuxpaint-0.9.13
+	o tuxpaint-stamps-2003.12.23
 	o txt2html-2.20 [wennmach]
 	o vfu-4.03
 	o vim-kde-6.2.14 [pkg/23681]
@@ -320,6 +325,7 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.5.0
 	o xfstt-1.6
+	o xine-ui-0.9.23
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.1
 	o xmms-1.2.8
