@@ -1,0 +1,5 @@
+# $NetBSD: Makefile.common,v 1.1 2004/02/22 20:37:45 dmcmahill Exp $
+#
+
+DIST_SUBDIR=	geda
+PKGVERSION=	20030901
