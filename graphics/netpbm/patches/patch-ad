@@ -1,0 +1,10 @@
+--- pbmplus.h.orig	Sat Jun 20 03:42:19 1998
++++ pbmplus.h	Sat Jun 20 03:43:47 1998
+@@ -121,2 +121,3 @@
+ #endif
++#ifndef __NetBSD__
+ extern int atoi();
+@@ -125,2 +126,3 @@
+ extern int write();
++#endif /* NetBSD */
+ #endif
