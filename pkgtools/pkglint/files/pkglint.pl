@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.15 1999/11/26 03:28:17 hubertf Exp $
+# $NetBSD: pkglint.pl,v 1.16 1999/11/26 03:30:39 hubertf Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -41,12 +41,12 @@ while (@ARGV > 0) {
 	/^-h/ && do {
 		($prog) = ($0 =~ /([^\/]+)$/);
 		print STDERR <<EOF;
-usage: $prog [-abcvN] [-B#] [port_directory]
+usage: $prog [-abcvN] [-B#] [package_directory]
 	-a	additional check for scripts/* and pkg/*
 	-b	warn \$(VARIABLE)
 	-c	committer mode
 	-v	verbose mode
-	-N	writing a new port
+	-N	writing a new package
 	-B#	allow # contiguous blank lines (default: $contblank line)
 EOF
 		exit 0;
@@ -217,16 +217,16 @@ foreach $i (@checker) {
 if ($committer) {
 	if (scalar(@_ = <$portdir/work*/*>) || -d "$portdir/work*") {
 		&perror("WARN: be sure to cleanup $portdir/work* ".
-			"before committing the port.");
+			"before committing the package.");
 	}
 	if (scalar(@_ = <$portdir/*/*~>) || scalar(@_ = <$portdir/*~>)) {
 		&perror("WARN: for safety, be sure to cleanup ".
-			"emacs backup files before committing the port.");
+			"emacs backup files before committing the package.");
 	}
 	if (scalar(@_ = <$portdir/*/*.orig>) || scalar(@_ = <$portdir/*.orig>)
 	 || scalar(@_ = <$portdir/*/*.rej>) || scalar(@_ = <$portdir/*.rej>)) {
 		&perror("WARN: for safety, be sure to cleanup ".
-			"patch backup files before committing the port.");
+			"patch backup files before committing the package.");
 	}
 }
 if ($err || $warn) {
@@ -935,7 +935,7 @@ EOF
 	}
 	if ($committer && -f "$portdir/$i.tgz") {
 		&perror("WARN: be sure to remove $portdir/$i.tgz ".
-			"before committing the port.");
+			"before committing the package.");
 	}
 
 	push(@varnames, split(/\s+/, <<EOF));
@@ -1043,7 +1043,7 @@ EOF
 		foreach $i (grep(/^[A-Z_]*DEPENDS[?+]?=/, split(/\n/, $tmp))) {
 			$i =~ s/^([A-Z_]*DEPENDS)[?+]?=[ \t]*//;
 			$j = $1;
-			print "OK: checking ports listed in $j.\n"
+			print "OK: checking packages listed in $j.\n"
 				if ($verbose);
 			foreach $k (split(/\s+/, $i)) {
 				# check USE_PERL5
@@ -1073,11 +1073,11 @@ EOF
 					$k =~ s/\${PORTSDIR}/$ENV{'PORTSDIR'}/;
 				}
 				if (! -d $k) {
-					&perror("WARN: no port directory $k ".
+					&perror("WARN: no package directory $k ".
 						"found, even though it is ".
 						"listed in $j.");
 				} else {
-					print "OK: port directory $k found.\n"
+					print "OK: package directory $k found.\n"
 						if ($verbose);
 				}
 			}
