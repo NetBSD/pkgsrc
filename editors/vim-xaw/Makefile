@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/06/11 06:34:31 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/06/20 19:57:48 jlam Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -11,12 +11,22 @@ CONFLICTS=		vim-[0-9]* vim-gtk-*
 
 USE_X11=		yes
 USE_XAW=		yes
-USE_CURSES=		yes
+USE_BUILDLINK_ONLY=	yes
 
 CONFIGURE_ARGS+=	--enable-gui=athena
+CONFIGURE_ARGS+=	--with-tlib=ncurses
 
 ALL_TARGET=		vim
 INSTALL_TARGET=		installvimbin
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${XAW_TYPE} == "standard")
+MAKE_ENV+=		XAW_LIB=Xaw
+.else
+.include "../../x11/Xaw3d/buildlink.mk"
+MAKE_ENV+=		XAW_LIB=Xaw3d
+.endif
 
 post-install:
 	for f in gvim.1 gview.1 rgvim.1 rgview.1; do			\
@@ -28,20 +38,5 @@ post-install:
 		${LN} -s vim ${PREFIX}/bin/$$f;				\
 	done
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${NEED_NCURSES} == "YES"
-CONFIGURE_ARGS+=	--with-tlib=ncurses
-CPPFLAGS+=		-I${LOCALBASE}/include	# for ncurses' termcap.h
-LDFLAGS+=		-L${LOCALBASE}/lib	# for -lncurses
-.else
-CONFIGURE_ARGS+=	--with-tlib=curses
-.endif
-
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if (${XAW_TYPE} == "standard")
-MAKE_ENV+=		XAW_LIB=Xaw
-.else
-MAKE_ENV+=		XAW_LIB=Xaw3d
-.endif
