@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/09/03 11:44:01 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/09/12 23:05:48 bad Exp $
 bin/ftp
-man/man1/ftp.1
-man/cat1/ftp.0
+share/man/man1/ftp.1
+share/man/cat1/ftp.0
