@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2001/11/29 19:46:13 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/12/02 18:52:52 jlam Exp $
 
 DISTNAME=	quanta-2.0-pr2
 PKGNAME=	quanta-1.9.9.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quanta/}
-EXTRACT_SUFX=	.tar.bz2
-
-.include "../../x11/kde2/Makefile.kde2"
 
 MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://quanta.sourceforge.net/
@@ -19,6 +16,11 @@ BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK_ONLY=	YES
 AUTOMAKE_OVERRIDE=	YES
+
+USE_GMAKE=              YES
+GNU_CONFIGURE=          YES
+USE_LIBTOOL=            YES
+LTCONFIG_OVERRIDE=      ${WRKSRC}/admin/ltconfig
 
 WRKSRC=		${WRKDIR}/quanta
 
