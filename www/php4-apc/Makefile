@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/29 16:50:16 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/31 23:54:49 jlam Exp $
 
 .include "../../www/php4/Makefile.module"
 
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_BUILDLINK_ONLY=	YES
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
-PLIST_SRC+=		${PKGDIR}/PLIST.extras
+PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE="${PKGBASE}"
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
