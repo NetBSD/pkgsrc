@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/25 12:44:21 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/09/04 13:49:41 minoura Exp $
 info/mime-ui-en.info
 info/mime-ui-ja.info
 ${FOR_xemacs214} ${EMACS_LISPPREFIX}/semi/auto-autoloads.el
@@ -12,6 +12,7 @@ ${FOR_xemacs215} ${EMACS_LISPPREFIX}/semi/custom-load.elc
 ${EMACS_LISPPREFIX}/semi/mail-mime-setup.el
 ${EMACS_LISPPREFIX}/semi/mail-mime-setup.elc
 ${EMACS_LISPPREFIX}/semi/mime-bbdb.el
+${EMACS_LISPPREFIX}/semi/mime-bbdb.elc
 ${EMACS_LISPPREFIX}/semi/mime-edit.el
 ${EMACS_LISPPREFIX}/semi/mime-edit.elc
 ${EMACS_LISPPREFIX}/semi/mime-image.el
@@ -27,7 +28,7 @@ ${EMACS_LISPPREFIX}/semi/mime-setup.elc
 ${EMACS_LISPPREFIX}/semi/mime-view.el
 ${EMACS_LISPPREFIX}/semi/mime-view.elc
 ${EMACS_LISPPREFIX}/semi/mime-w3.el
-@comment ${EMACS_LISPPREFIX}/semi/mime-w3.elc
+${EMACS_LISPPREFIX}/semi/mime-w3.elc
 ${EMACS_LISPPREFIX}/semi/pgg-def.el
 ${EMACS_LISPPREFIX}/semi/pgg-def.elc
 ${EMACS_LISPPREFIX}/semi/pgg-gpg.el
