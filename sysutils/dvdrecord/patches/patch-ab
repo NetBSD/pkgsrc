@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2003/01/31 11:02:29 abs Exp $
+$NetBSD: patch-ab,v 1.2 2005/01/10 15:48:07 hamajima Exp $
 
 --- libscg/scsi-bsd.c.orig	Tue Jan 29 17:23:22 2002
 +++ libscg/scsi-bsd.c
@@ -26,7 +26,7 @@ $NetBSD: patch-ab,v 1.1 2003/01/31 11:02:29 abs Exp $
  	char		devname[64];
 +#if defined(__NetBSD__)
 +	struct scsi_addr mysaddr;
-+#if defined(__i386__)
++#if defined(__i386__) || defined(__amd64__)
 +	char	slicename[] = "d";	/* i386 is special */
 +#else
 +	char	slicename[] = "c";	/* this is what the rest uses */
