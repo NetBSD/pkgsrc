@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2003/05/09 07:39:47 agc Exp $
+# $NetBSD: Makefile,v 1.159 2003/06/29 23:03:57 gson Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -107,6 +107,7 @@ SUBDIR+=	p5-Business-UPS
 SUBDIR+=	p5-ControlX10-CM11
 SUBDIR+=	p5-ControlX10-CM17
 SUBDIR+=	p5-File-MMagic
+SUBDIR+=	p5-Geography-Countries
 SUBDIR+=	p5-Locale-Codes
 SUBDIR+=	p5-Mac-Macbinary
 SUBDIR+=	p5-Msgcat
