@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2002/10/01 19:28:34 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/06 03:38:58 jlam Exp $
 
 DISTNAME=	kdelibs-3.0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
 .include "../../x11/kde3/Makefile.kde3"
+
+CONFLICTS+=	koffice3<=1.1.1
 
 BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.1.9
 BUILDLINK_DEPENDS.qt3-libs=	qt3-libs>=3.0.3
