@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Interix,v 1.1 2005/01/25 13:11:16 tv Exp $
+lib/zsh/${PKGVERSION}/zsh/terminfo.so
