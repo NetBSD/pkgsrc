@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.2 2002/09/20 21:24:49 jlam Exp $
+$NetBSD: patch-ah,v 1.2.2.1 2003/03/05 14:10:57 agc Exp $
 
---- sys/unix/Makefile.src.orig	Sat Aug  5 13:52:57 2000
-+++ sys/unix/Makefile.src	Thu Aug 10 20:03:19 2000
+--- sys/unix/Makefile.src.orig	2003-02-23 16:43:39.000000000 +0200
++++ sys/unix/Makefile.src	2003-03-01 22:36:14.000000000 +0200
 @@ -144,8 +144,8 @@
  # flags for debugging:
  # CFLAGS = -g -I../include
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.2 2002/09/20 21:24:49 jlam Exp $
  
  # The Qt and Be window systems are written in C++, while the rest of
  # NetHack is standard C.  If using Qt, uncomment the LD line here to get
-@@ -203,8 +203,8 @@
+@@ -204,8 +204,8 @@
  
  #
  #
@@ -24,7 +24,7 @@ $NetBSD: patch-ah,v 1.2 2002/09/20 21:24:49 jlam Exp $
  
  # on some systems the termcap library is in -ltermcap or -lcurses
  # on 386 Xenix, the -ltermlib tputs() seems not to work; use -lcurses instead
-@@ -230,7 +230,7 @@
+@@ -231,7 +231,7 @@
  # WINX11LIB = -lXaw -lXmu -lXpm -lXext -lXt -lX11 -lSM -lICE -lm # BSD/OS 2.0
  #
  # libraries for Qt
@@ -33,7 +33,7 @@ $NetBSD: patch-ah,v 1.2 2002/09/20 21:24:49 jlam Exp $
  #
  # libraries for KDE (with Qt)
  WINKDELIB = -lkdecore -lkdeui -lXext
-@@ -244,7 +244,7 @@
+@@ -245,7 +245,7 @@
  # libraries for BeOS 
  WINBELIB = -lbe
  

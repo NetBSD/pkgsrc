@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2002/03/25 20:32:30 pooka Exp $
+$NetBSD: patch-aa,v 1.5.6.1 2003/03/05 14:10:59 agc Exp $
 
---- include/config.h.orig	Thu Mar 21 01:42:43 2002
-+++ include/config.h	Fri Mar 22 18:24:20 2002
+--- include/config.h.orig	2003-02-23 16:43:19.000000000 +0200
++++ include/config.h	2003-03-01 22:17:08.000000000 +0200
 @@ -42,8 +42,8 @@
   * Define all of those you want supported in your binary.
   * Some combinations make no sense.  See the installation document.
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.5 2002/03/25 20:32:30 pooka Exp $
  /* #define QT_GRAPHICS */	/* Qt interface */
  /* #define GNOME_GRAPHICS */	/* Gnome interface */
  /* #define MSWIN_GRAPHICS */	/* Windows NT, CE, Graphics */
-@@ -110,7 +110,7 @@
+@@ -112,7 +112,7 @@
  #endif
  
  #ifndef DEFAULT_WINDOW_SYS
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.5 2002/03/25 20:32:30 pooka Exp $
  #endif
  
  #ifdef X11_GRAPHICS
-@@ -122,7 +122,7 @@
+@@ -124,7 +124,7 @@
   * would allow:
   *  xpmtoppm <x11tiles.xpm | pnmscale 1.25 | ppmquant 90 >x11tiles_big.xpm
   */
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.5 2002/03/25 20:32:30 pooka Exp $
  # ifdef USE_XPM
  #  define GRAPHIC_TOMBSTONE	/* Use graphical tombstone (rip.xpm) */
  # endif
-@@ -163,11 +163,11 @@
+@@ -167,11 +167,11 @@
  
  #ifdef UNIX
  /* path and file name extension for compression program */
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.5 2002/03/25 20:32:30 pooka Exp $
  #endif
  
  #ifndef COMPRESS
-@@ -201,7 +201,7 @@
+@@ -205,7 +205,7 @@
  #  ifdef __APPLE__
  #    define HACKDIR "nethackdir"	/* nethack directory */
  #  else
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.5 2002/03/25 20:32:30 pooka Exp $
  #  endif
  # endif
  
-@@ -298,7 +298,7 @@
+@@ -302,7 +302,7 @@
   * functions that have been macroized.
   */
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/09/23 10:10:51 jlam Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2003/03/05 14:10:58 agc Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -20,8 +20,7 @@ MAKE_ENV+=		GTYPE=-x11
 ALLFILES+=		${DISTFILES}
 
 post-install:
-	@${INSTALL_DATA} ${WRKSRC}/dat/x11tiles				\
-	     ${PREFIX}/share/nethackdir${NETHACK_DISTVER}
+	@${INSTALL_DATA} ${WRKSRC}/dat/x11tiles ${PREFIX}/share/${NETHACK_DIR}
 
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
