@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2002/04/15 12:13:38 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2002/09/24 18:06:26 tsarna Exp $
 
---- setup.py.orig	Tue Mar 26 14:43:04 2002
-+++ setup.py	Mon Apr 15 11:13:53 2002
+--- setup.py.orig	Tue Mar 26 08:43:04 2002
++++ setup.py	Tue Sep 24 12:30:40 2002
 @@ -197,11 +197,15 @@
          return platform
  
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.5 2002/04/15 12:13:38 drochner Exp $
  
          # Modules with some UNIX dependencies -- on by default:
          # (If you have a really backward UNIX, select and socket may not be
-@@ -319,13 +323,13 @@
+@@ -319,16 +323,16 @@
          # These represent audio samples or images as strings:
  
          # Disabled on 64-bit platforms
@@ -49,7 +49,11 @@ $NetBSD: patch-aa,v 1.5 2002/04/15 12:13:38 drochner Exp $
 +#            exts.append( Extension('rgbimg', ['rgbimgmodule.c']) )
  
          # readline
-         if self.compiler.find_library_file(lib_dirs, 'readline'):
+-        if self.compiler.find_library_file(lib_dirs, 'readline'):
++        if 0 and self.compiler.find_library_file(lib_dirs, 'readline'):
+             readline_libs = ['readline']
+             if self.compiler.find_library_file(lib_dirs,
+                                                  'ncurses'):
 @@ -352,14 +356,10 @@
          # socket(2)
          # Detect SSL support for the socket module
@@ -67,6 +71,32 @@ $NetBSD: patch-aa,v 1.5 2002/04/15 12:13:38 drochner Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
+@@ -390,9 +390,9 @@
+                 exts.append( Extension('dbm', ['dbmmodule.c']) )
+ 
+         # Anthony Baxter's gdbm module.  GNU dbm(3) will require -lgdbm:
+-        if (self.compiler.find_library_file(lib_dirs, 'gdbm')):
+-            exts.append( Extension('gdbm', ['gdbmmodule.c'],
+-                                   libraries = ['gdbm'] ) )
++        #if (self.compiler.find_library_file(lib_dirs, 'gdbm')):
++        #    exts.append( Extension('gdbm', ['gdbmmodule.c'],
++        #                           libraries = ['gdbm'] ) )
+ 
+         # Berkeley DB interface.
+         #
+@@ -446,9 +446,9 @@
+         # FTP archive sites. One URL for it is:
+         # ftp://gatekeeper.dec.com/.b/usenet/comp.sources.misc/volume40/fgmp/part01.Z
+ 
+-        if (self.compiler.find_library_file(lib_dirs, 'gmp')):
+-            exts.append( Extension('mpz', ['mpzmodule.c'],
+-                                   libraries = ['gmp'] ) )
++        #if (self.compiler.find_library_file(lib_dirs, 'gmp')):
++        #    exts.append( Extension('mpz', ['mpzmodule.c'],
++        #                           libraries = ['gmp'] ) )
+ 
+ 
+         # Unix-only modules
 @@ -475,8 +475,8 @@
  
          if (self.compiler.find_library_file(lib_dirs, 'ncurses')):
@@ -89,6 +119,23 @@ $NetBSD: patch-aa,v 1.5 2002/04/15 12:13:38 drochner Exp $
  
          # If the curses module is enabled, check for the panel module
          if (module_enabled(exts, '_curses') and
+@@ -566,11 +566,11 @@
+         else:
+             expat_incs = find_file('xmlparse.h', inc_dirs, [])
+ 
+-        if (expat_incs is not None and
+-            self.compiler.find_library_file(lib_dirs, 'expat')):
+-            exts.append( Extension('pyexpat', ['pyexpat.c'],
+-                                   define_macros = expat_defs,
+-                                   libraries = ['expat']) )
++        #if (expat_incs is not None and
++        #    self.compiler.find_library_file(lib_dirs, 'expat')):
++        #    exts.append( Extension('pyexpat', ['pyexpat.c'],
++        #                           define_macros = expat_defs,
++        #                           libraries = ['expat']) )
+ 
+         # Platform-specific libraries
+         if platform == 'linux2':
 @@ -793,7 +793,7 @@
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
