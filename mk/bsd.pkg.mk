@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.987 2002/06/10 05:51:10 martti Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.988 2002/06/10 11:40:53 skrll Exp $
 #
 # This file is in the public domain.
 #
@@ -247,6 +247,9 @@ _ULIMIT_CMD+=	ulimit -d `ulimit -H -d`;
 .  endif
 .  if ${UNLIMIT_RESOURCES:Mstacksize} != ""
 _ULIMIT_CMD+=	ulimit -s `ulimit -H -s`;
+.  endif
+.  if ${UNLIMIT_RESOURCES:Mmemorysize} != ""
+_ULIMIT_CMD+=	ulimit -m `ulimit -H -m`;
 .  endif
 .endif
 
