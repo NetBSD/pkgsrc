@@ -1,0 +1,10 @@
+--- libguile/Makefile.in.orig	Sun Nov  2 15:47:39 1997
++++ libguile/Makefile.in	Sun Nov  2 15:47:48 1997
+@@ -40,7 +40,6 @@
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ transform = @program_transform_name@
+ 
+ NORMAL_INSTALL = true
