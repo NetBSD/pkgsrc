@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/01/13 00:35:05 wiz Exp $
+
+--- server/sys_unix.c.orig	Thu Jan 13 00:13:37 2000
++++ server/sys_unix.c	Thu Jan 13 00:13:58 2000
+@@ -24,7 +24,7 @@
+ #include <libc.h>
+ #endif
+ 
+-#if defined(__linux__) || defined(sun)
++#if defined(__linux__) || defined(sun) || defined(__NetBSD__)
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include <sys/time.h>

@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2000/01/13 00:35:06 wiz Exp $
+
+--- client/cd_null.c~	Mon Jul  7 20:08:00 1997
++++ client/cd_null.c	Thu Jan 13 00:59:02 2000
+@@ -9,6 +9,9 @@
+ {
+ }
+ 
++void CDAudio_Pause(void)
++{
++}
+ 
+ void CDAudio_Resume(void)
+ {
