@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/09/25 13:31:18 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/09/29 17:43:56 rh Exp $
 bin/evolution
 bin/evolution-addressbook
 bin/evolution-alarm-notify
@@ -129,6 +129,7 @@ include/camel/string-utils.h
 include/ename/e-address-western.h
 include/ename/e-name-western-tables.h
 include/ename/e-name-western.h
+include/evolution/cal-client/cal-client-multi.h
 include/evolution/cal-client/cal-client-types.h
 include/evolution/cal-client/cal-client.h
 include/evolution/cal-client/cal-query.h
@@ -296,6 +297,7 @@ share/evolution/ecps/medbook.ecps
 share/evolution/ecps/phonelist.ecps
 share/evolution/ecps/smallbook.ecps
 share/evolution/etspec/e-calendar-table.etspec
+share/evolution/etspec/e-meeting-time-sel.etspec
 share/evolution/etspec/e-storage-set-view.etspec
 share/evolution/etspec/meeting-page.etspec
 share/evolution/etspec/message-list.etspec
@@ -305,7 +307,6 @@ share/evolution/glade/addressbook-config.glade
 share/evolution/glade/alarm-notify.glade
 share/evolution/glade/alarm-options.glade
 share/evolution/glade/alarm-page.glade
-share/evolution/glade/alphabet.glade
 share/evolution/glade/cal-prefs-dialog.glade
 share/evolution/glade/contact-editor.glade
 share/evolution/glade/contact-list-editor.glade
@@ -332,6 +333,7 @@ share/evolution/glade/mail-config.glade
 share/evolution/glade/meeting-page.glade
 share/evolution/glade/my-evolution.glade
 share/evolution/glade/recurrence-page.glade
+share/evolution/glade/schedule-page.glade
 share/evolution/glade/select-names.glade
 share/evolution/glade/subscribe-dialog.glade
 share/evolution/glade/task-details-page.glade
@@ -350,7 +352,6 @@ share/evolution/views/tasks/Tasks.galview
 share/evolution/views/tasks/With_Category.galview
 share/evolution/views/tasks/galview.xml
 share/gnome/apps/Applications/evolution.desktop
-share/gnome/help/evolution/C/aboutbook.html
 share/gnome/help/evolution/C/apx-authors.sgml
 share/gnome/help/evolution/C/apx-bugs.sgml
 share/gnome/help/evolution/C/apx-gloss.html
@@ -366,7 +367,10 @@ share/gnome/help/evolution/C/config-prefs.sgml
 share/gnome/help/evolution/C/config-sync.html
 share/gnome/help/evolution/C/config-sync.sgml
 share/gnome/help/evolution/C/config.html
+share/gnome/help/evolution/C/contact-automation-basic.html
+share/gnome/help/evolution/C/contact-automation-lists.html
 share/gnome/help/evolution/C/contact-search.html
+share/gnome/help/evolution/C/customizing-summary.html
 share/gnome/help/evolution/C/docbook.css
 share/gnome/help/evolution/C/encryption.html
 share/gnome/help/evolution/C/evolution-faq.sgml
@@ -404,6 +408,7 @@ share/gnome/help/evolution/C/print-destination.html
 share/gnome/help/evolution/C/quickref-cal.html
 share/gnome/help/evolution/C/quickref-contact.html
 share/gnome/help/evolution/C/quickref-mail.html
+share/gnome/help/evolution/C/rsvp-stuff.html
 share/gnome/help/evolution/C/stylesheet-images/caution.gif
 share/gnome/help/evolution/C/stylesheet-images/home.gif
 share/gnome/help/evolution/C/stylesheet-images/important.gif
@@ -417,19 +422,18 @@ share/gnome/help/evolution/C/stylesheet-images/toc-plus.gif
 share/gnome/help/evolution/C/stylesheet-images/up.gif
 share/gnome/help/evolution/C/stylesheet-images/warning.gif
 share/gnome/help/evolution/C/topic.dat
+share/gnome/help/evolution/C/typography.html
 share/gnome/help/evolution/C/ui-intro.html
 share/gnome/help/evolution/C/usage-calendar-apts.html
 share/gnome/help/evolution/C/usage-calendar-multiple.html
 share/gnome/help/evolution/C/usage-calendar-todo.html
 share/gnome/help/evolution/C/usage-calendar.html
 share/gnome/help/evolution/C/usage-calendar.sgml
-share/gnome/help/evolution/C/usage-contact-automate.html
 share/gnome/help/evolution/C/usage-contact-organize.html
 share/gnome/help/evolution/C/usage-contact-sharing.html
 share/gnome/help/evolution/C/usage-contact.html
 share/gnome/help/evolution/C/usage-contact.sgml
 share/gnome/help/evolution/C/usage-encryption.sgml
-share/gnome/help/evolution/C/usage-exec-summary.html
 share/gnome/help/evolution/C/usage-exec-summary.sgml
 share/gnome/help/evolution/C/usage-mail-getnsend-get.html
 share/gnome/help/evolution/C/usage-mail-getnsend-send.html
@@ -442,10 +446,12 @@ share/gnome/help/evolution/C/usage-mail-organize.html
 share/gnome/help/evolution/C/usage-mail-subscriptions.html
 share/gnome/help/evolution/C/usage-mail.html
 share/gnome/help/evolution/C/usage-mail.sgml
+share/gnome/help/evolution/C/usage-mainwindow-starting.html
 share/gnome/help/evolution/C/usage-mainwindow.html
 share/gnome/help/evolution/C/usage-mainwindow.sgml
 share/gnome/help/evolution/C/usage-print.html
 share/gnome/help/evolution/C/usage-print.sgml
+share/gnome/help/evolution/C/usage-summary.html
 share/gnome/help/evolution/C/usage-sync.html
 share/gnome/help/evolution/C/usage-sync.sgml
 share/gnome/help/evolution/C/usage.html
@@ -692,6 +698,7 @@ share/images/evolution/import.png
 share/images/evolution/import.xpm
 share/images/evolution/inbox-16.png
 share/images/evolution/inbox-full-16.png
+share/images/evolution/ldap-16.png
 share/images/evolution/mail-config-druid-account-name.png
 share/images/evolution/mail-config-druid-identity.png
 share/images/evolution/mail-config-druid-receive.png
@@ -699,6 +706,7 @@ share/images/evolution/mail-config-druid-send.png
 share/images/evolution/mail-config-druid.png
 share/images/evolution/malehead.png
 share/images/evolution/mark-as-important-16.png
+share/images/evolution/meeting-request.png
 share/images/evolution/move_message.xpm
 share/images/evolution/myevo-appointments.png
 share/images/evolution/myevo-mail-summary.png
@@ -720,6 +728,9 @@ share/images/evolution/open-in-new-window-16.png
 share/images/evolution/outbox-16.png
 share/images/evolution/outbox-full-16.png
 share/images/evolution/pattern.png
+share/images/evolution/pgp-signature-bad.png
+share/images/evolution/pgp-signature-nokey.png
+share/images/evolution/pgp-signature-ok.png
 share/images/evolution/print-preview.xpm
 share/images/evolution/print.xpm
 share/images/evolution/rdf.png
@@ -748,6 +759,8 @@ share/images/evolution/splash.png
 share/images/evolution/talking-heads.png
 share/images/evolution/task.xpm
 share/images/evolution/thankyou.png
+share/images/evolution/timezone-16.xpm
+share/images/evolution/timezone-48.png
 share/images/evolution/undelete_message-16.png
 share/images/evolution/wax-seal-broken.png
 share/images/evolution/wax-seal.png
@@ -1129,6 +1142,7 @@ share/libical/zoneinfo/Pacific/Wallis.ics
 share/libical/zoneinfo/Pacific/Yap.ics
 share/libical/zoneinfo/zones.tab
 share/locale/az/LC_MESSAGES/evolution.mo
+share/locale/bg/LC_MESSAGES/evolution.mo
 share/locale/ca/LC_MESSAGES/evolution.mo
 share/locale/da/LC_MESSAGES/evolution.mo
 share/locale/de/LC_MESSAGES/evolution.mo
