@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/10/31 11:56:54 itojun Exp $
+# $NetBSD: Makefile,v 1.17 2000/10/31 17:06:18 itojun Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -9,11 +9,17 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gettext/}
 
 MAINTAINER=		packages@netbsd.org
 
+DEPENDS+=		gettext-lib-0.10.35nb1:../../devel/gettext-lib
+
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ARGS+=	--with-included-gettext
 
 INFO_FILES=		gettext.info
+
+post-patch:
+	${RM} -f ${WRKSRC}/intl/libgettext.h
+	${RM} -f ${WRKSRC}/intl/libintl.h
+	${CP} ${FILESDIR}/libgettext.h ${WRKSRC}/intl
 
 .include "../../mk/bsd.pkg.mk"
