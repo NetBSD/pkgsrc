@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/04/20 23:00:28 xtraeme Exp $
+# $NetBSD: Makefile,v 1.42 2004/05/08 18:23:54 salo Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -41,6 +41,7 @@ SUBDIR+=	lsdvd
 SUBDIR+=	mencoder
 SUBDIR+=	mjpegtools
 SUBDIR+=	mkvtoolnix
+SUBDIR+=	mmg
 SUBDIR+=	moz-bin-flash
 SUBDIR+=	moz-flash
 SUBDIR+=	moz-mplayer
