@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.6 2003/02/15 04:20:18 salo Exp $
+$NetBSD: patch-aa,v 1.7 2003/04/10 09:55:51 wiz Exp $
 
---- doc/Makefile.in.orig	Fri Jan 24 20:03:17 2003
-+++ doc/Makefile.in	Sat Feb 15 05:00:29 2003
-@@ -118,7 +118,7 @@
+--- doc/Makefile.in.orig	Fri Mar  7 03:44:48 2003
++++ doc/Makefile.in
+@@ -119,7 +119,7 @@ sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  
--SUBDIRS = de fr es ru pt_BR uk
+-SUBDIRS = de fr es ru pt_BR uk sr
 +SUBDIRS =
  
  man_MANS = micq.1    micq.7    micqrc.5
