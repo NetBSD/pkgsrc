@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/07/01 13:43:01 taca Exp $
+
+SHA1 (ruby/ssl-0.2.2.tar.gz) = 41aac9c1d79b5c8f8cee5f7ef4cac200691b16c3
+Size (ruby/ssl-0.2.2.tar.gz) = 10662 bytes
+SHA1 (patch-aa) = 8fee1e7c36675bfc7ecf7523228c52a6402762e9
