@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 13:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/12/08 21:48:09 reed Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -19,6 +19,7 @@ BUILD_DIRS+=		${WRKSRC}/libpisock
 BUILD_DIRS+=		${WRKSRC}/libpisock++
 BUILD_DIRS+=		${WRKSRC}/libpisync
 
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
