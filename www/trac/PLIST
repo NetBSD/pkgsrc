@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/26 05:52:57 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/03 04:16:12 epg Exp $
 bin/trac-admin
 libexec/cgi-bin/trac.cgi
 ${PYSITELIB}/trac/About.py
@@ -55,12 +55,20 @@ ${PYSITELIB}/trac/perm.pyo
 ${PYSITELIB}/trac/siteconfig.py
 ${PYSITELIB}/trac/siteconfig.pyc
 ${PYSITELIB}/trac/siteconfig.pyo
+${PYSITELIB}/trac/sync.py
+${PYSITELIB}/trac/sync.pyc
+${PYSITELIB}/trac/sync.pyo
 ${PYSITELIB}/trac/trac.py
 ${PYSITELIB}/trac/trac.pyc
 ${PYSITELIB}/trac/trac.pyo
 ${PYSITELIB}/trac/util.py
 ${PYSITELIB}/trac/util.pyc
 ${PYSITELIB}/trac/util.pyo
+share/trac/htdocs/css/browser.css
+share/trac/htdocs/css/changeset.css
+share/trac/htdocs/css/ticket.css
+share/trac/htdocs/css/timeline.css
+share/trac/htdocs/css/trac.css
 share/trac/htdocs/README
 share/trac/htdocs/changeset.png
 share/trac/htdocs/closedticket.png
@@ -72,7 +80,6 @@ share/trac/htdocs/navbar_gradient.png
 share/trac/htdocs/newticket.png
 share/trac/htdocs/topbar_gradient.png
 share/trac/htdocs/trac.js
-share/trac/htdocs/trac.png
 share/trac/htdocs/trac_banner.png
 share/trac/htdocs/trac_logo_mini.png
 share/trac/htdocs/wiki.png
@@ -80,7 +87,6 @@ share/trac/templates/README
 share/trac/templates/about.cs
 share/trac/templates/browser.cs
 share/trac/templates/changeset.cs
-share/trac/templates/css.cs
 share/trac/templates/error.cs
 share/trac/templates/footer.cs
 share/trac/templates/header.cs
@@ -92,13 +98,28 @@ share/trac/templates/search.cs
 share/trac/templates/ticket.cs
 share/trac/templates/timeline.cs
 share/trac/templates/wiki.cs
+share/trac/wiki-default/CamelCase
 share/trac/wiki-default/TracAdmin
+share/trac/wiki-default/TracBrowser
+share/trac/wiki-default/TracChangeset
+share/trac/wiki-default/TracGuide
 share/trac/wiki-default/TracInstall
+share/trac/wiki-default/TracLinks
+share/trac/wiki-default/TracOnNetBsd
+share/trac/wiki-default/TracOnOsx
 share/trac/wiki-default/TracPermissions
+share/trac/wiki-default/TracReports
+share/trac/wiki-default/TracSupport
+share/trac/wiki-default/TracTickets
+share/trac/wiki-default/TracTimeline
+share/trac/wiki-default/TracWiki
 share/trac/wiki-default/WikiFormatting
+share/trac/wiki-default/WikiNewPage
+share/trac/wiki-default/WikiPageNames
 share/trac/wiki-default/WikiStart
 @dirrm share/trac/wiki-default
 @dirrm share/trac/templates
+@dirrm share/trac/htdocs/css
 @dirrm share/trac/htdocs
 @dirrm share/trac
 @dirrm ${PYSITELIB}/trac
