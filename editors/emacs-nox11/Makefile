@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2005/02/24 15:31:48 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2005/02/27 01:05:33 wiz Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
-DISTNAME=	emacs-21.4
-PKGNAME=	emacs-nox11-21.4
+DISTNAME=	emacs-21.4a
+PKGNAME=	emacs-nox11-21.4a
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
@@ -20,6 +20,10 @@ USE_BUILDLINK3=	yes
 PATCHDIR=	${PKGDIR}/../emacs/patches
 FILESDIR=	${PKGDIR}/../emacs/files
 DISTINFO_FILE=	${PKGDIR}/../emacs/distinfo
+
+# needed for 21.4a, can probably go away on next update
+WRKSRC=         ${WRKDIR}/emacs-21.4
+PLIST_SUBST+=   EMACSVERSION=21.4
 
 CONFIGURE_ARGS+=--without-x
 
