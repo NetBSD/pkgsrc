@@ -1,5 +1,5 @@
 --- drv_sun.c.orig	Sat Nov 30 22:09:55 1996
-+++ drv_sun.c	Sat Mar  7 05:59:39 1998
++++ drv_sun.c	Fri Mar 20 03:13:13 1998
 @@ -33,7 +33,7 @@
  
  #include "mikmod.h"
@@ -9,3 +9,13 @@
  
  static int sndfd; /* we need these in a few places */
  static int play_encoding = -1, play_precision, fragsize = DEFAULT_FRAGSIZE;
+@@ -173,9 +173,6 @@
+ 		close( sndfd );
+ 		return 0;
+ 	}
+-	if(!quiet)
+-		if( (play_stereo != 1 || play_rate != 8000) && AUDIO_ENCODING_ULAW )
+-			printf( "Warning: not using 8khz mono with ulaw. This might not sound good\n" );
+ 
+ 	AUDIO_INITINFO( &audioinfo );
+ 	audioinfo.play.precision = play_precision;
