@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1 1998/09/04 22:00:46 agc Exp $
+
+Use GNU indent, not NetBSD indent(1).
+
+--- src/idl-compiler/orbit-c-backend.c	1998/09/04 21:28:47	1.1
++++ src/idl-compiler/orbit-c-backend.c	1998/09/04 21:29:03
+@@ -18,9 +18,9 @@
+ #ifndef HAVE_INDENT
+ #define INDENT "cat"
+ #elif HAVE_INDENT_KR
+-#define INDENT "indent -kr -i8 -bad -fca -sc -sob"
++#define INDENT "gindent -kr -i8 -bad -fca -sc -sob"
+ #else
+-#define INDENT "indent -bad -bap -bc -sob -br -ce -cli2 -npcs -di1 -psl -i3 -lp"
++#define INDENT "gindent -bad -bap -bc -sob -br -ce -cli2 -npcs -di1 -psl -i3 -lp"
+ #endif /* HAVE_INDENT */
+ 
+ void
