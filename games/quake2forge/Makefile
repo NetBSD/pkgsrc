@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/17 19:19:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2004/08/24 23:11:17 snj Exp $
 #
 
 DISTNAME=	quake2-0.2.1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.quakeforge.net/
-COMMENT=	Quake2Forge is the Quake II engine
+COMMENT=	Enhanced Quake II engine
 
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
