@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/29 11:26:45 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/29 11:29:12 rh Exp $
 #
 
 DISTNAME=	libbf-0.8.2b
-CATEGORIES=	security
 WRKSRC=		${WRKDIR}/bf
+CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.psy.uq.oz.au/pub/Crypto/libeay/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/ \
 		ftp://ftp.ntnu.no/pub/unix/security/ \
