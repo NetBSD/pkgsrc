@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8856 2005/01/21 20:40:41 recht Exp $
+$NetBSD: CHANGES,v 1.8857 2005/01/21 21:17:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -479,3 +479,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated yacas to 1.0.55 [drochner 2005-01-21]
 	Updated xmbdfed to 4.5 [kei 2005-01-21]
 	Updated gnome-vfs2 to 2.8.3nb3 [recht 2005-01-21]
+	Updated vcdimager-devel to 0.7.20nb3 [wiz 2005-01-21]
