@@ -1,4 +1,4 @@
-# $NetBSD: x11.buildlink.mk,v 1.1 2001/08/29 22:33:38 jlam Exp $
+# $NetBSD: x11.buildlink.mk,v 1.2 2001/09/25 23:49:57 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -20,7 +20,7 @@ USE_X11=		# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILD_DEPENDS+=		x11-links>=0.2:../../pkgtools/x11-links
+BUILD_DEPENDS+=		x11-links>=0.3:../../pkgtools/x11-links
 BUILDLINK_X11_DIR?=	${LOCALBASE}/share/x11-links
 CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
