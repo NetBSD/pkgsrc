@@ -1,0 +1,50 @@
+# $NetBSD: Makefile,v 1.1 1998/06/02 11:29:28 agc Exp $
+# Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
+#
+
+DISTNAME=	ddd-2.2.3
+CATEGORIES=	devel
+MASTER_SITES=	ftp://ftp.ips.cs.tu-bs.de/pub/local/softech/ddd/  \
+		ftp://richb-pc.acc.qc.edu/pub/ddd/  \
+		ftp://ftp.gre.ac.uk/pub/tools/debuggers/ddd/  \
+		ftp://uiarchive.cso.uiuc.edu/pub/packages/ddd/  \
+		ftp://ftp.th-darmstadt.de/pub/programming/tools/ddd/
+
+MAINTAINER=     obrien@NUXI.com
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+REQUIRES_MOTIF=	yes
+MAN1=		ddd.1
+
+post-patch:
+	@case ${PAPERSIZE} in					\
+	A4)	echo "Using A4 paper size" ;;			\
+	Letter*)	echo "Using US Letter paper size";	\
+		${MV} ${WRKSRC}/ddd/Ddd.in ${WRKSRC}/ddd/Ddd.in.orig; \
+		${SED} -e 's|@Ddd@\*paperSize: 210mm x 297mm|@Ddd@*paperSize: 8.5" x 11"|' \
+			< ${WRKSRC}/ddd/Ddd.in.orig 		\
+			> ${WRKSRC}/ddd/Ddd.in ;;		\
+	"")	echo "PAPERSIZE not set - defaulting to A4" ;;	\
+	*)	echo "Bad PAPERSIZE - $$PAPERSIZE - defaulting to A4" ;; \
+	esac;							
+
+post-configure:
+	echo "LIBXM = ${MOTIFLIB}" >> ${WRKSRC}/ddd/Makefile
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${PREFIX}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC}/PROBLEMS ${PREFIX}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC}/doc/ddd-paper.ps ${PREFIX}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC}/doc/ddd.man.ps ${PREFIX}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC}/doc/sample.dddinit ${PREFIX}/share/doc/ddd
+	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd-paper.ps
+	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd.man.ps
+.endif
+
+check:
+	(cd ${WRKSRC} ; ${GMAKE} check)
+
+.include <bsd.port.mk>
