@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/08/20 15:17:30 tsarna Exp $
+# $NetBSD: Makefile,v 1.17 1998/09/05 22:27:29 hubertf Exp $
 #
 
 DISTNAME=       apache_1.3.1
@@ -9,6 +9,7 @@ MASTER_SITES=   http://www.apache.org/dist/
 MAINTAINER=	cjs@netbsd.org
 HOMEPAGE=	http://www.apache.org/
 
+CONFLICTS=     apache-modssl-1.3.1
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=--compat --prefix=${PREFIX}/http --exec-prefix=${PREFIX} \
 		--mandir=${PREFIX}/man --libexecdir=${PREFIX}/lib/apache \
