@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2002/03/05 15:23:46 tron Exp $
+$NetBSD: patch-aa,v 1.4 2002/11/21 16:18:16 tron Exp $
 
 --- src/wterm.h.orig	Sun Mar  5 12:22:32 2000
-+++ src/wterm.h	Tue Mar  5 16:01:19 2002
-@@ -435,10 +435,14 @@
++++ src/wterm.h	Thu Nov 21 17:13:53 2002
+@@ -117,6 +117,9 @@
+ #ifdef UTMP_SUPPORT
+ # ifdef HAVE_UTMPX_H
+ #  define __USE_GNU
++#  ifdef __NetBSD__
++#   include <utmp.h>
++#  endif
+ #  include <utmpx.h>
+ #  define USE_SYSV_UTMP
+ # else
+@@ -435,10 +438,14 @@
  #   ifdef _PATH_UTMP
  #    define UTMP_FILENAME		_PATH_UTMP
  #   else
@@ -20,7 +30,7 @@ $NetBSD: patch-aa,v 1.3 2002/03/05 15:23:46 tron Exp $
  #    endif
  #   endif
  #  endif
-@@ -458,6 +462,7 @@
+@@ -458,6 +465,7 @@
  #  define getutid		getutxid
  #  define endutent		endutxent
  #  define pututline		pututxline
@@ -28,7 +38,7 @@ $NetBSD: patch-aa,v 1.3 2002/03/05 15:23:46 tron Exp $
  # else
  #  define UTMP			struct utmp
  # endif
-@@ -466,7 +471,11 @@
+@@ -466,7 +474,11 @@
  #ifdef WTMP_SUPPORT
  # ifdef HAVE_UTMPX_H		/* means we're on Solaris (or Irix?) */
  #  undef WTMP_FILENAME
