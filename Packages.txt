@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.83 2000/03/10 17:57:11 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.84 2000/04/20 16:06:23 jdolecek Exp $
 ###########################################################################
 
 			==========================
@@ -1391,9 +1391,17 @@ You can also use wildcards in package dependences:
 
 DEPENDS+=	xpm-*:../../graphics/xpm
 
-Note that these wildcards will be expanded while creating binary packages.
-Thus binary package will depend on exactly the version which was installed
-when they were created.
+Note that such wildcard dependencies are retained when creating
+binary package. The dependency is checked when installing the binary
+package and any package which matches the pattern would be used.
+Beware that wildard dependencies should be used with a bit of care.
+Simple example for package which needs some version of Tk installed,
+but doesn't care which exactly - dependency
+
+DEPENDS+=	tk-*:../../x11/tk80
+
+would also match e.g. tk-postgresql-6.5.3, which is not what was
+needed. ALWAYS ensure that the wildcard doesn't match more than it should.
 
 (d) If your package needs some executable to be able to run correctly, this
 is specified using the DEPENDS definition. The print/lyx package needs to
@@ -1402,6 +1410,8 @@ and that is specified:
 
 DEPENDS+=        teTex-*:../../print/teTeX 
 
+The comment about wildcard dependencies from previous paragraph
+applies here, too.
 
 
  9.13 Conflicts with other packages
