@@ -1,0 +1,26 @@
+$NetBSD: patch-ag,v 1.1 1999/11/15 13:07:12 rh Exp $
+
+--- ../audioIO_SunOS.c.orig	Sat May 31 19:47:58 1997
++++ ../audioIO_SunOS.c	Mon Nov 15 13:58:45 1999
+@@ -8,7 +8,11 @@
+ 
+ #include "amp.h"
+ #include <sys/types.h>
++#ifndef OS_NetBSD
+ #include <sys/stropts.h>
++#else
++#include <sys/ioctl.h>
++#endif
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <stdio.h>
+@@ -36,8 +40,7 @@
+ 	}
+ 	DB(audio, msg("Audio device opened on %d\n",audio_fd) );
+ 
+-	if (ioctl(audio_fd,AUDIO_GETINFO,&auinfo)<0)
+-		die("Unable to get audio info\n");
++	AUDIO_INITINFO(&auinfo);
+ 
+ 	auinfo.play.precision=16;
+ 	auinfo.play.encoding=AUDIO_ENCODING_LINEAR;
