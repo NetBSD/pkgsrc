@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1984 2004/07/31 14:22:26 wiz Exp $
+$NetBSD: TODO,v 1.1985 2004/07/31 20:49:40 jlam Exp $
 
 Suggested new packages
 ======================
@@ -183,7 +183,7 @@ Suggested package updates
 	o cdrtools-ossdvd-2.01.1.27
 	o cervisia-2.1.2
 	o checkbot-1.75 [pkg/26371]
-	o clamav-0.75.1
+	o clamav-0.75.1 [jlam]
 	o clanlib-0.7.8
 	o classpath-0.10
 	o clisp-2.33.2
