@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/06/13 20:27:49 kleink Exp $
+# $NetBSD: Makefile,v 1.8 1999/06/26 16:55:27 christos Exp $
 
 DISTNAME=	postfix-19990317-pl05
 PKGNAME=	postfix-19990317p05
@@ -16,10 +16,16 @@ pre-patch:
 pre-configure:
 	${CP} ${WRKSRC}/conf/main.cf ${WRKSRC}/conf/main.cf.dist
 	${CP} ${WRKSRC}/util/sys_defs.h ${WRKSRC}/util/sys_defs.h.dist
-	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/conf/main.cf.dist \
+	${CP} ${WRKSRC}/Makefile.inc ${WRKSRC}/Makefile.inc.dist
+	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
+	    < ${WRKSRC}/conf/main.cf.dist \
 	    > ${WRKSRC}/conf/main.cf
-	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/util/sys_defs.h.dist \
+	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
+	    < ${WRKSRC}/util/sys_defs.h.dist \
 	    > ${WRKSRC}/util/sys_defs.h
+	${SED} -e 's:@OPSYS@:'${CAPITAL_OPSYS}${OS_MAJOR_VERSION}':g' \
+	    < ${WRKSRC}/Makefile.inc.dist \
+	    > ${WRKSRC}/Makefile.inc
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
