@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/07/26 09:02:35 grant Exp $
+# $NetBSD: Makefile,v 1.4 2002/07/29 08:10:49 grant Exp $
 
 DISTNAME=	sylpheed-0.8.0claws
 PKGNAME=	sylpheed-claws-0.8.0
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-compface
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6
@@ -30,10 +31,13 @@ BUILD_DEFS+=		USE_INET6
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
+SUPPORT_FILES=		${FILESDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
+
 .include "../../graphics/compface/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../security/gpgme/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
