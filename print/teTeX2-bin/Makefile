@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/23 04:59:25 kei Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/15 08:17:08 kei Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX2-bin-${TETEX_BIN_VERS}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	TeX distribution for UNIX compatible systems - executables, version 2
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-DEPENDS+=	teTeX2-share>=2.0.1:../teTeX2-share
+DEPENDS+=	teTeX2-share>=2.0.2:../teTeX2-share
 DEPENDS+=	dialog-0.6z:../../misc/dialog
 
 CONFLICTS+=	omega-[0-9]*
