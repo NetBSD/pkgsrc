@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3229 2003/09/03 19:56:39 abs Exp $
+$NetBSD: CHANGES,v 1.3230 2003/09/03 21:33:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3515,4 +3515,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sylpheed-claws to 0.9.4 [xtraeme 2003-09-03]
 	Updated wxGTK to 2.4.1 [xtraeme 2003-09-03]
 	Updated mserv to 0.05nb1 [abs 2003-09-03]
-
+	Updated nam to 1.9 [seb 2003-09-03]
