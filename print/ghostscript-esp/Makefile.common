@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/09/18 22:28:15 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/09/18 23:21:33 jlam Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.05
@@ -62,16 +62,16 @@ LDFLAGS+=		-L${ZOULARISBASE}/lib -Wl,-R${ZOULARISBASE}/lib
 REPLACE_PERL=		lib/fixmswrd.pl
 
 CUPS_CONFDIR?=		${PKG_SYSCONFBASE}/cups
+CUPS_EGDIR=		${PREFIX}/share/examples/cups
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
 GSDATADIR=		${PREFIX}/share/ghostscript/${BASEGS_VERS}
 DOCDIR=			${PREFIX}/share/doc/ghostscript
-EGDIR=			${PREFIX}/share/examples/ghostscript
 HTMLDIR=		${PREFIX}/share/doc/html/ghostscript
 LIBDIR=			${GSDATADIR}/lib
 
 PLIST_SUBST+=		GS_VERS=${BASEGS_VERS}
 
-CONF_FILES=	${EGDIR}/pstoraster.convs ${CUPS_CONFDIR}/pstoraster.convs
+CONF_FILES=	${CUPS_EGDIR}/pstoraster.convs ${CUPS_CONFDIR}/pstoraster.convs
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
@@ -89,7 +89,7 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/gs ${PREFIX}/bin/gs
 	${INSTALL_SCRIPT} ${WRKSRC}/pstoraster/pstoraster		\
 		${PREFIX}/libexec/cups/filter
-	${INSTALL_DATA} ${WRKSRC}/pstoraster/pstoraster.convs ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/pstoraster/pstoraster.convs ${CUPS_EGDIR}
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
