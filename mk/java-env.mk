@@ -1,4 +1,4 @@
-# $NetBSD: java-env.mk,v 1.1 2004/05/22 21:13:17 jmmv Exp $
+# $NetBSD: java-env.mk,v 1.2 2004/05/23 10:19:28 jmmv Exp $
 #
 # This Makefile fragment handles Java wrappers and is meant to be included
 # by packages that provide a Java build-time and/or run-time environment.
@@ -37,6 +37,8 @@ JAVA_WRAPPERS?=		# empty
 
 .for w in ${JAVA_WRAPPERS}
 
+JAVA_WRAPPER_BIN.${w}?=	${JAVA_HOME}/bin/${w}
+
 post-build:		${WRKDIR}/${w}
 
 .PHONY:			install-java-wrapper-${w}
@@ -57,7 +59,7 @@ ${WRKDIR}/${w}:
 	@${ECHO} '${ULIMIT_CMD_${f}}' >>${WRKDIR}/${w}
 .    endfor
 .    undef f
-	@${ECHO} '${JAVA_HOME}/bin/${w} "$$@"' >>${WRKDIR}/${w}
+	@${ECHO} '${JAVA_WRAPPER_BIN.${w}} "$$@"' >>${WRKDIR}/${w}
 .  endif
 
 install-java-wrapper-${w}:
