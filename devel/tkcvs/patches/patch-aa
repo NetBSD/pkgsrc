@@ -22,7 +22,7 @@
  # Find a Tk interpreter.
   
 -WISH=`which wish4.0`
-+WISH=`which wish8.1`
++WISH=`which wish8.0`
  if [ ! -f $WISH ]; then
 -  WISH=`which wish4.1`
 +  WISH=`which wish4.1`
