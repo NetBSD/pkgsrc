@@ -1,0 +1,13 @@
+fMSX is a portable emulator of MSX home computers written in C. You
+can always get the latest fMSX source code and support files from
+
+		http://www.komkon.org/fms/fMSX/
+
+MSX is an old Z80-based family of home computers which appeared in
+1982 as an attempt to establish a single standard in home computing
+similar to VHS in video. They were popular in Asian (Korea, Japan) and
+South American (Brazil, Chile) countries as well as in Europe
+(Netherlands, France, Spain) and former Soviet Union, but they are
+virtually unknown in USA. Although MSX standard quietly died to year
+1988, the world got to see MSX2, MSX2+, and TurboR extensions of the
+standard.
