@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/10 09:43:36 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/11 08:59:29 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
 PKGNAME=		${DISTNAME}nb2
@@ -106,6 +106,7 @@ pre-install:
 	${SED}	-e "s,@CYRUS_USER@,${CYRUS_USER},g" \
 		-e "s,@CYRUS_GROUP@,${CYRUS_GROUP},g" \
 		-e "s,@ADDUSER@,${ADDUSER},g" \
+		-e "s,@ADDGROUP@,${ADDGROUP},g" \
 		-e "s,@CHGRP@,${CHGRP},g" \
 		-e "s,@CHMOD@,${CHMOD},g" \
 		-e "s,@CHOWN@,${CHOWN},g" \
