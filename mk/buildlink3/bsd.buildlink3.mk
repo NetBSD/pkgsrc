@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.18 2003/08/26 20:52:17 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.19 2003/08/26 20:56:38 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -84,28 +84,34 @@ ${_BLNK_DEPMETHOD.${_pkg_}}+= \
 # Generate default values for:
 #
 #	BUILDLINK_PKGBASE.<pkg>
+#	BUILDLINK_DEPOT.<pkg>
 #	BUILDLINK_PREFIX.<pkg>
 #	BUILDLINK_INCDIRS.<pkg>
 #	BUILDLINK_LIBDIRS.<pkg>
 #
 # BUILDLINK_PKGBASE.<pkg> is the package basename (without the version
-# number).  BUILDLINK_PREFIX.<pkg> is the depot directory for <pkg>.
-# BUILDLINK_INCDIRS.<pkg> and BUILDLINK_LIBDIRS.<pkg> are the
-# sub-directories in the depot directory for <pkg> that should be added
-# to the compiler/linker search paths.
+# number).  BUILDLINK_DEPOT.<pkg> is the depot directory for <pkg> and
+# contains all of the package metadata files for <pkg>.
+# BUILDLINK_PREFIX.<pkg> is the directory that contains all of the installed
+# files for <pkg>.  BUILDLINK_INCDIRS.<pkg> and BUILDLINK_LIBDIRS.<pkg> are
+# the subdirectories of BUILDLINK_PREFIX.<pkg> that should be added to the
+# compiler/linker search paths.
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 .  if !defined(BUILDLINK_PKGBASE.${_pkg_})
 BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
 .  endif
 .  if !defined(BUILDLINK_PREFIX.${_pkg_})
-BUILDLINK_PREFIX.${_pkg_}!=						\
+BUILDLINK_DEPOT.${_pkg_}!=						\
 	cd ${_PKG_DBDIR};						\
 	dir=`${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}" || ${TRUE}`; \
 	case "$$dir" in							\
 	"")	${ECHO} "not_found" ;;					\
 	*)	${ECHO} "$$dir" ;;					\
 	esac
+.  endif
+.  if !defined(BUILDLINK_PREFIX.${_pkg_})
+BUILDLINK_PREFIX.${_pkg_}?=	${BUILDLINK_DEPOT.${_pkg_}}
 .  endif
 .  if !defined(BUILDLINK_INCDIRS.${_pkg_})
 BUILDLINK_INCDIRS.${_pkg_}?=	include
