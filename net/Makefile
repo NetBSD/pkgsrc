@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2001/07/29 10:04:19 abs Exp $
+# $NetBSD: Makefile,v 1.236 2001/07/30 19:51:10 nra Exp $
 #
 
 COMMENT=	Networking tools
@@ -191,6 +191,7 @@ SUBDIR+=	xarchie
 SUBDIR+=	xipdump
 SUBDIR+=	xspeakfree
 SUBDIR+=	xtraceroute
+SUBDIR+=	yale-tftpd
 SUBDIR+=	ytalk
 SUBDIR+=	ywho
 SUBDIR+=	zebra
