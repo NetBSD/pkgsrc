@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.2 2004/04/24 19:22:41 danw Exp $
+$NetBSD: README.MacOSX,v 1.3 2004/10/07 13:28:48 grant Exp $
 
 Please read "README.Darwin" as well, as everything there also applies
 to Mac OS X.
@@ -48,3 +48,23 @@ includes X11 and X11 SDK packages on CD. If you are using an older
 version of OS X, you can install the XFree86 packages instead, from
 www.xfree86.org.
 
+Experimental support for IBM's XL C/C++ compiler is present (tested
+with version 6.0). To use it, set:
+
+PKGSRC_COMPILER=xlc
+
+in mk.conf. XL C uses the Apple provided libtool to create shared
+libraries, however, we must force it to call libtool with the full
+path to avoid calling the pkgsrc provided GNU libtool with arguments
+that it does not understand.
+
+edit the template configuration file /opt/ibmcmp/vac/6.0/etc/vac.base.cfg
+and set:
+
+libtool = /usr/bin/libtool
+
+then run:
+
+/opt/ibmcmp/vacpp/6.0/bin/vacpp_configure -gcc /usr -install -force
+
+as root to install the configuration.
