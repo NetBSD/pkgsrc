@@ -96,21 +96,22 @@ Amanda should run on any modern Unix system that supports dump or GNU
 tar, has sockets and inetd, and either system V shared memory, or BSD
 mmap implemented.
 
-In particular, Amanda 2.4.0 has been compiled, and the client side tested
+In particular, Amanda 2.4.1p1 has been compiled, and the client side tested
 on the following systems:
 	AIX 3.2 and 4.1
 	BSDI BSD/OS 2.1 and 3.1
 	DEC OSF/1 3.2 and 4.0
 	FreeBSD 2.2.5
 	IRIX 5.2 and 6.3
-	Linux/GNU on x86, alpha and sparc
+	GNU/Linux on x86, alpha, sparc, arm and powerpc
 	NetBSD 1.0
 	Nextstep 3 (*)
-	SunOS 4.1.x (x >= 1) and 5.[56]
+	OpenBSD 2.5 x86, sparc, etc (ports available)
+	SunOS 4.1.x (x >= 1) and 5.[567]
 	Ultrix 4.2
 	HP-UX 9.x and 10.x (x >= 01)
 
-The Amanda 2.4.0 server side is known to run on all of the other
+The Amanda 2.4.1p1 server side is known to run on all of the other
 machines except on those marked with an asterisk.
 
 If you know of any system that is not listed here on which amanda
