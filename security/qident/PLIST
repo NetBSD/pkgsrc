@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:36 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/05 10:40:46 wiz Exp $
 bin/qident
-man/man1/qident.1
 man/cat1/qident.0
+man/man1/qident.1
