@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/09/19 09:04:13 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/29 23:44:28 simonb Exp $
 
-DISTNAME=	Mail-SpamAssassin-2.31
-PKGNAME=	spamassassin-2.31
+DISTNAME=	Mail-SpamAssassin-2.41
+PKGNAME=	spamassassin-2.41
 SVR4_PKGNAME=	sa
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
@@ -11,8 +10,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.spamassassin.org/
 COMMENT=	mail filter to identify spam
 
+DEPENDS+=	procmail-[0-9]*:../../mail/procmail
 DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
+DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 
 CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
 
