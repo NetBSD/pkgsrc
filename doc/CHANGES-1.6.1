@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.36 2003/06/24 09:53:10 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.37 2003/06/30 08:20:51 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -714,3 +714,26 @@ print/acroread5/distinfo			1.2
 	Update "acroread5" package to version 5.07. This version fixes a
 	remotely exploitable security whole in version 5.06 an older.
 	[tron, ticket #1335]
+
+
+ImageMagick/Makefile				1.94-1.96, 1.98
+ImageMagick/Makefile.common			1.1-1.2 (new)
+ImageMagick/PLIST				1.9-1.10
+ImageMagick/distinfo				1.13-1.14
+p5-PerlMagick/Makefile				1.25-1.28
+
+	Update "ImageMagick" and "p5-PerlMagick" packages to version 5.5.7.9.
+                                                                                
+	Implement suggestion from last commit: Split out common part of
+	p5-PerlMagick and ImageMagick into Makefile.common.
+
+	Update ImageMagick and p5-PerlMagick to 5.5.6.
+
+	Changes are lots of bug fixes and minor enhancements (several pages
+	worth of it).
+
+	XXX Those two should probably be using a Makefile.common instead
+	XXX of just copying the appropriate bits.
+
+	Place WRKSRC where it belongs, to make pkglint happy; ok'ed by wiz.
+	[tron, ticket #1359]
