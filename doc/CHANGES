@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5717 2004/04/22 23:44:06 ben Exp $
+$NetBSD: CHANGES,v 1.5718 2004/04/22 23:45:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2221,3 +2221,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated flow-tools to 0.67 [seb 2004-04-22]
 	Updated arj to 3.10.20 [dillo 2004-04-22]
 	Updated mailsync to 4.4.4 [ben 2004-04-22]
+	Updated mathomatic to 11.0cnb1 [minskim 2004-04-23]
