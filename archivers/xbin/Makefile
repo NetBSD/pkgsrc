@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/10/10 11:50:42 pooka Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 13:15:42 wiz Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://sunsite.unc.edu/pub/packages/TeX/tools/xbin/
 DISTFILES=	${DISTNAME}.c ${PRGNAME}.man
 
 MAINTAINER=	rh@netbsd.org
+COMMENT=	convert mailable BinHex format into binary
 
 PRGNAME=	xbin
 EXTRACT_ONLY=	# blank
