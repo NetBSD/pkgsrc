@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2002/06/20 22:20:09 itojun Exp $
+# $NetBSD: Makefile,v 1.53 2002/06/21 23:22:47 itojun Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -16,7 +16,7 @@ MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
 
-MASTER_SITES+=		http://www.ipng.nl/
+PATCH_SITES+=		http://www.ipng.nl/
 PATCHFILES+=		${IPV6_PATCH}
 IPV6_PATCH=		apache-1.3.26-ipv6.diff.gz
 PATCH_DIST_STRIP=	-p1
