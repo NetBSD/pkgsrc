@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.2 2000/08/29 17:08:38 abs Exp $
+$NetBSD: patch-ai,v 1.3 2000/08/30 09:50:45 abs Exp $
 
 --- etc/faxsetup.sh.in.orig	Thu Aug  5 12:11:42 1999
 +++ etc/faxsetup.sh.in
@@ -37,7 +37,7 @@ $NetBSD: patch-ai,v 1.2 2000/08/29 17:08:38 abs Exp $
  MKFIFO
  MV
  PATH
-@@ -741,6 +745,40 @@
+@@ -741,6 +745,48 @@
      bitch "Sorry, but you must run this script as the super-user!"
      boom
  fi
@@ -62,12 +62,20 @@ $NetBSD: patch-ai,v 1.2 2000/08/29 17:08:38 abs Exp $
 +	for i in archive docq doneq pollq sendq tmp ; do
 +	    ${MKDIR} -m 0700 ${DIR_SPOOL}/$i
 +	done
-+	for i in client cover dev info log recvq status ; do
++	for i in bin client cover dev info log recvq status ; do
 +	    ${MKDIR} -m 0755 ${DIR_SPOOL}/$i
 +	done
-+	${LN} ${LN_S} ${PREFIX}/etc/hylafax ${DIR_SPOOL}/etc
-+	${LN} ${LN_S} ${PREFIX}/etc/hylafax/modem ${DIR_SPOOL}/config
-+	${LN} ${LN_S} ${PREFIX}/libexec/hylafax ${DIR_SPOOL}/bin
++	for i in `ls ${PREFIX}/share/hylafax/etc_template` ; do
++	    ${CP} -p  ${PREFIX}/share/hylafax/etc_template/$i \
++							${DIR_SPOOL}/etc/$i
++	done
++	for i in `ls ${PREFIX}/share/hylafax/config_template` ; do
++	    ${CP} -p  ${PREFIX}/share/hylafax/config_template/$i \
++							${DIR_SPOOL}/config/$i
++	done
++	for i in `ls ${PREFIX}/libexec/hylafax` ; do
++	    ${CP} -p  ${PREFIX}/libexec/hylafax/$i ${DIR_SPOOL}/bin/$i
++	done
 +	${CHOWN} -R ${PROTOUID}:${PROTOGID} ${DIR_SPOOL}
 +    fi
 +}

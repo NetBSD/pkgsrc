@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2000/08/29 17:08:38 abs Exp $
+$NetBSD: patch-ab,v 1.3 2000/08/30 09:50:45 abs Exp $
 
 --- config.h.in.orig	Thu Aug  5 12:11:41 1999
 +++ config.h.in

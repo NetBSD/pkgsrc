@@ -1,34 +1,84 @@
-$NetBSD: patch-ao,v 1.2 2000/08/29 17:08:38 abs Exp $
+$NetBSD: patch-ao,v 1.3 2000/08/30 09:50:46 abs Exp $
 
---- util/Makefile.in.orig	Thu Aug  5 10:46:06 1999
-+++ util/Makefile.in
-@@ -154,7 +154,7 @@
- PUTCLIENT	= ${INSTALL} -idb ${PRODUCT}.sw.client
- PUTSERVER	= ${INSTALL} -idb ${PRODUCT}.sw.server
- PUTSERV		= ${PUTSERVER} -m 755
--PUTSUPD		= ${PUTSERVER} -F ${SPOOL}/bin -idb "config(update)"
-+PUTSUPD		= ${PUTSERVER} -F ${LIBEXEC}/hylafax -idb "config(update)"
- PUTSBIN		= ${PUTSERVER} -F ${SBIN}
+--- util/TypeRules.c++.orig	Sun Jun 13 08:41:26 1999
++++ util/TypeRules.c++
+@@ -36,6 +36,14 @@
+ #include <netinet/in.h>
+ }
  
- installClient: default
-@@ -171,6 +171,7 @@
- 	${PUTSBIN} -m 755 -src xferfaxstats.sh -O xferfaxstats
- 	${PUTSBIN} -m 755 -src recvstats.sh -O recvstats
- 	${PUTSBIN} -m 755 -idb "config(update)" -src faxcron.sh -O faxcron
-+	-${MKDIR} -m 755 ${LIBEXEC}/hylafax
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.gs.sh -O ps2fax.gs
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.dps.sh -O ps2fax.dps
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.imp.sh -O ps2fax.imp
-@@ -182,9 +183,10 @@
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/pollrcvd.sh -O pollrcvd
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/mkcover.sh -O mkcover
- 	${PUTSUPD} -m 755 -src ${SRCDIR}/wedged.sh -O wedged
--	${PUTSERVER} -F ${SPOOL}/etc -m 444 -idb "config(update)" \
-+	-${MKDIR} -m 755 ${PREFIX}/etc/hylafax
-+	${PUTSERVER} -F ${PREFIX}/etc/hylafax -m 444 -idb "config(update)" \
- 	    -src ${SRCDIR}/dpsprinter.ps -O dpsprinter.ps
--	${PUTSERVER} -F ${SPOOL}/etc -idb "config(suggest)" \
-+	${PUTSERVER} -F ${PREFIX}/etc/hylafax -idb "config(suggest)" \
- 	    -m 444 -src ${SRCDIR}/cover.templ -O cover.templ
++#ifndef TRUE
++#define TRUE 1
++#endif
++
++#ifndef FALSE
++#define FALSE 0
++#endif
++
+ TypeRule::TypeRule() {}
+ TypeRule::~TypeRule() {}
+ TypeRule::TypeRule(const TypeRule& other)
+@@ -51,7 +59,7 @@
+ }
  
- @MAKEDSOINCLUDE@ @MAKELQUOTE@${SRCDIR}/Makefile.@DSO@dso@MAKERQUOTE@
+ static const char* typeNames[] =
+-    { "ascii", "string", "address", "byte", "short", "long" };
++    { "ascii", "asciiesc", "string", "address", "byte", "short", "long" };
+ static const char* opNames[] =
+     { "<any>", "=", "!=", "<", "<=", ">", ">=", "&", "^", "!" };
+ static const char* resultNames[] = { "tiff", "postscript", "error" };
+@@ -68,7 +76,7 @@
+ 	);
+ 	if (type == STRING)
+ 	    printf(" \"%s\"", value.s);
+-	else if (type != ASCII) {
++	else if (type != ASCII && type != ASCIIESC) {
+ 	    if (op == ANY)
+ 		printf(" <any value>");
+ 	    else
+@@ -86,6 +94,7 @@
+     const u_char* cp = (const u_char*) data;
+     switch (type) {
+     case ASCII:
++      {
+ 	u_int i;
+ 	for (i = 0; i < size; i++)
+ 	    if (!isprint(cp[i]) && !isspace(cp[i])) {
+@@ -95,6 +104,19 @@
+ 	    }
+ 	ok = true;
+ 	goto done;
++       }
++    case ASCIIESC:
++       {
++	u_int i;
++	for (i = 0; i < size; i++)
++	    if (!isprint(cp[i]) && !isspace(cp[i]) && cp[i] != '\033') {
++		if (verbose)
++		    printf("failed (unprintable char %#x)\n", cp[i]);
++		return (FALSE);
++	    }
++	ok = TRUE;
++	goto done;
++       }
+     case STRING:
+ 	ok = (strncmp((const char*)(cp+off), value.s,
+ 	    fxmin((u_int) strlen(value.s), (u_int)(size-off))) == 0);
+@@ -311,6 +333,8 @@
+ 	    rule.type = TypeRule::STRING;
+ 	else if (strncasecmp(tp, "ascii", cp-tp) == 0)
+ 	    rule.type = TypeRule::ASCII;
++	else if (strncasecmp(tp, "asciiesc", cp-tp) == 0)
++	    rule.type = TypeRule::ASCIIESC;
+ 	else if (strncasecmp(tp, "addr", cp-tp) == 0)
+ 	    rule.type = TypeRule::ADDR;
+ 	else {
+@@ -321,7 +345,8 @@
+ 	    cp++;
+ 	rule.op = TypeRule::EQ;		// default is '='
+ 	const char* vp = cp;
+-	if (rule.type != TypeRule::STRING && rule.type != TypeRule::ASCII) {
++	if (rule.type != TypeRule::STRING && rule.type != TypeRule::ASCII
++	 && rule.type != TypeRule::ASCIIESC) {
+ 	    // numeric value
+ 	    switch (*vp) {
+ 	    case '=':	rule.op = TypeRule::EQ;	cp++; break;

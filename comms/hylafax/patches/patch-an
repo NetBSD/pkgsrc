@@ -1,31 +1,35 @@
-$NetBSD: patch-an,v 1.2 2000/08/29 17:08:38 abs Exp $
+$NetBSD: patch-an,v 1.3 2000/08/30 09:50:46 abs Exp $
 
---- hfaxd/User.c++.orig	Sun Jun 13 08:41:16 1999
-+++ hfaxd/User.c++
-@@ -218,7 +218,7 @@
-     if (id == uid)				// user currently logged in
- 	return (const char*) the_user;
-     if (id == FAXUID_ANON)			// anonymous user
--	return "fax";
-+	return FAX_USER;
-     if (idcache == NULL)			// load cache from file
- 	fillIDCache();
-     const fxStr* hit = idcache->find(id);	// check cache
-@@ -237,7 +237,7 @@
- {
-     if (name == the_user)
- 	id = uid;
--    else if (strcmp(name, "fax") == 0)
-+    else if (strcmp(name, FAX_USER) == 0)
- 	id = FAXUID_ANON;
-     else {
- 	if (idcache == NULL)
-@@ -324,7 +324,7 @@
-     if (faxuid < FAXUID_MAX)
- 	SetBit(FAXUID_RESV);			// reserved uid
-     else
--	logError("Internal error, \"fax\" UID (%u) too large.", faxuid);
-+	logError("Internal error, \"" FAX_USER "\" UID (%u) too large.", faxuid);
-     SetBit(FAXUID_ANON);			// anonymous uid is reserved
-     while (nextRecord(db, line, sizeof (line))) {
- 	if (line[0] == '!')
+--- util/Makefile.in.orig	Thu Aug  5 10:46:06 1999
++++ util/Makefile.in
+@@ -154,7 +154,7 @@
+ PUTCLIENT	= ${INSTALL} -idb ${PRODUCT}.sw.client
+ PUTSERVER	= ${INSTALL} -idb ${PRODUCT}.sw.server
+ PUTSERV		= ${PUTSERVER} -m 755
+-PUTSUPD		= ${PUTSERVER} -F ${SPOOL}/bin -idb "config(update)"
++PUTSUPD		= ${PUTSERVER} -F ${LIBEXEC}/hylafax -idb "config(update)"
+ PUTSBIN		= ${PUTSERVER} -F ${SBIN}
+ 
+ installClient: default
+@@ -171,6 +171,7 @@
+ 	${PUTSBIN} -m 755 -src xferfaxstats.sh -O xferfaxstats
+ 	${PUTSBIN} -m 755 -src recvstats.sh -O recvstats
+ 	${PUTSBIN} -m 755 -idb "config(update)" -src faxcron.sh -O faxcron
++	-${MKDIR} -m 755 ${LIBEXEC}/hylafax
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.gs.sh -O ps2fax.gs
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.dps.sh -O ps2fax.dps
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/ps2fax.imp.sh -O ps2fax.imp
+@@ -182,9 +183,11 @@
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/pollrcvd.sh -O pollrcvd
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/mkcover.sh -O mkcover
+ 	${PUTSUPD} -m 755 -src ${SRCDIR}/wedged.sh -O wedged
+-	${PUTSERVER} -F ${SPOOL}/etc -m 444 -idb "config(update)" \
++	-${MKDIR} -m 755 ${PREFIX}/share/hylafax
++	-${MKDIR} -m 755 ${PREFIX}/share/hylafax/etc_template
++	${PUTSERVER} -F ${PREFIX}/share/hylafax/etc_template -m 444 -idb "config(update)" \
+ 	    -src ${SRCDIR}/dpsprinter.ps -O dpsprinter.ps
+-	${PUTSERVER} -F ${SPOOL}/etc -idb "config(suggest)" \
++	${PUTSERVER} -F ${PREFIX}/share/hylafax/etc_template -idb "config(suggest)" \
+ 	    -m 444 -src ${SRCDIR}/cover.templ -O cover.templ
+ 
+ @MAKEDSOINCLUDE@ @MAKELQUOTE@${SRCDIR}/Makefile.@DSO@dso@MAKERQUOTE@

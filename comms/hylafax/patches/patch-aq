@@ -1,12 +1,13 @@
-$NetBSD: patch-aq,v 1.2 2000/08/29 17:08:38 abs Exp $
+$NetBSD: patch-aq,v 1.3 2000/08/30 09:50:46 abs Exp $
 
---- util/TypeRules.h.orig	Sun Jun 13 08:41:26 1999
-+++ util/TypeRules.h
-@@ -130,6 +130,7 @@
-     bool	cont;	// continuation
-     enum {
- 	ASCII,		// ascii-only string
-+	ASCIIESC,	// ascii-only string + escape char (iso-2022 variants)
- 	STRING,		// byte string
- 	ADDR,		// address of match
- 	BYTE,		// 8 bits
+--- util/faxcron.sh.in.orig	Tue Jun 29 12:55:07 1999
++++ util/faxcron.sh.in
+@@ -41,7 +41,7 @@
+ AGELOG=30			# keep log info for last 30 days
+ AGERCV=7			# purge received facsimile after 2 days
+ AGETMP=1			# purge orphaned temp files after 1 day
+-FAXUSER=fax			# owner of log files
++FAXUSER=@FAXUID@		# owner of log files
+ LOGMODE=0644			# mode for log files
+ XFERLOG=etc/xferfaxlog		# HylaFAX xferfaxlog file location
+ LAST=etc/lastrun		# file where time+date of last run recorded
