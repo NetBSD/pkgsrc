@@ -1,4 +1,4 @@
-#	$NetBSD: IRIX.bsd.lib.mk,v 1.2 2004/06/05 20:53:12 jschauma Exp $
+#	$NetBSD: IRIX.bsd.lib.mk,v 1.3 2004/08/15 22:15:18 jschauma Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -375,14 +375,14 @@ lib${LIB}.so.${SHLIB_FULLVERSION}: ${SOLIB} ${DPADD} \
 .if defined(DESTDIR)
 	$(LD) -nostdlib -x -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
 	    ${SHLIB_LDSTARTFILE} \
-	    --whole-archive ${SOLIB} \
-	    --no-whole-archive ${LDADD} \
+	    -all archive ${SOLIB} \
+	    -notall ${LDADD} \
 	    -L${DESTDIR}${LIBDIR} -rpath ${LIBDIR} \
 	    ${SHLIB_LDENDFILE}
 .else
 	$(LD) -x -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
 	    ${SHLIB_LDSTARTFILE} \
-	    --whole-archive ${SOLIB} --no-whole-archive ${LDADD} \
+	    -all ${SOLIB} -notall ${LDADD} \
 	    ${SHLIB_LDENDFILE}
 .endif
 .if ${OBJECT_FMT} == "ELF"
