@@ -1,0 +1,79 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/01 15:53:46 wiz Exp $
+bin/matchbox
+bin/mbcontrol
+bin/mbdock
+bin/minisys
+bin/minitime
+bin/minivol
+bin/miniwave
+bin/monolaunch
+man/man1/matchbox.1
+man/man1/mbcontrol.1
+man/man1/miniapm.1
+man/man1/minisys.1
+man/man1/minitime.1
+man/man1/minivol.1
+man/man1/miniwave.1
+man/man1/monolaunch.1
+share/matchbox/defaults
+share/matchbox/icon.xpm
+share/matchbox/mbdock/add.xpm
+share/matchbox/mbdock/down.xpm
+share/matchbox/mbdock/miniapm
+share/matchbox/mbdock/minisys
+share/matchbox/mbdock/minitime
+share/matchbox/mbdock/minivol
+share/matchbox/mbdock/miniwave
+share/matchbox/mbdock/remove.xpm
+share/matchbox/mbdock/stop.xpm
+share/matchbox/themes/akwa/button.xpm
+share/matchbox/themes/akwa/dock.cfg
+share/matchbox/themes/akwa/dockbg.xpm
+share/matchbox/themes/akwa/left.xpm
+share/matchbox/themes/akwa/mid.xpm
+share/matchbox/themes/akwa/right.xpm
+share/matchbox/themes/akwa/theme.xml
+share/matchbox/themes/classic/bg.xpm
+share/matchbox/themes/classic/close-button.xpm
+share/matchbox/themes/classic/dock.cfg
+share/matchbox/themes/classic/hide-button.xpm
+share/matchbox/themes/classic/next-button.xpm
+share/matchbox/themes/classic/prev-button.xpm
+share/matchbox/themes/classic/select.xpm
+share/matchbox/themes/classic/small-close-button.xpm
+share/matchbox/themes/classic/small-down-button.xpm
+share/matchbox/themes/classic/small-min-button.xpm
+share/matchbox/themes/classic/theme.xml
+share/matchbox/themes/depno/dock.cfg
+share/matchbox/themes/depno/theme.xml
+share/matchbox/themes/greeno/bggrad.xpm
+share/matchbox/themes/greeno/close.xpm
+share/matchbox/themes/greeno/closedown.xpm
+share/matchbox/themes/greeno/dock.cfg
+share/matchbox/themes/greeno/next.xpm
+share/matchbox/themes/greeno/nextdown.xpm
+share/matchbox/themes/greeno/prev.xpm
+share/matchbox/themes/greeno/prevdown.xpm
+share/matchbox/themes/greeno/small-close-button.xpm
+share/matchbox/themes/greeno/small-close-buttondown.xpm
+share/matchbox/themes/greeno/theme.xml
+share/matchbox/themes/keramik/button-close-active.xpm
+share/matchbox/themes/keramik/button-close-inactive.xpm
+share/matchbox/themes/keramik/button-menu-active.xpm
+share/matchbox/themes/keramik/button-menu-inactive.xpm
+share/matchbox/themes/keramik/caption-active-small-center.xpm
+share/matchbox/themes/keramik/caption-active-small-left.xpm
+share/matchbox/themes/keramik/caption-active-small-right.xpm
+share/matchbox/themes/keramik/dock.cfg
+share/matchbox/themes/keramik/theme.xml
+share/matchbox/themes/keramik/titlebar-active-center.xpm
+share/matchbox/themes/keramik/titlebar-active-left.xpm
+share/matchbox/themes/keramik/titlebar-active-right.xpm
+@dirrm share/matchbox/themes/keramik
+@dirrm share/matchbox/themes/greeno
+@dirrm share/matchbox/themes/depno
+@dirrm share/matchbox/themes/classic
+@dirrm share/matchbox/themes/akwa
+@dirrm share/matchbox/themes
+@dirrm share/matchbox/mbdock
+@dirrm share/matchbox
