@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/25 11:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/25 17:32:45 wiz Exp $
 
 DISTNAME=	nam-src-1.9
 PKGNAME=	${DISTNAME:S/-src//}
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.isi.edu/nsnam/dist/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.isi.edu/nsnam/nam/
 COMMENT=	The UCB/LBNL Network Animator
-
-.include "../../mk/bsd.prefs.mk"
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 GNU_CONFIGURE=	yes
