@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2000/08/14 12:06:37 itojun Exp $
+# $NetBSD: Makefile,v 1.149 2000/08/25 16:13:56 mjl Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -74,6 +74,7 @@
     SUBDIR += nocol
     SUBDIR += ntop
     SUBDIR += ntp4
+    SUBDIR += openh323
     SUBDIR += ORBit
     SUBDIR += p5-Net
     SUBDIR += p5-Net-DNS
