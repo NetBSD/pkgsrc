@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.4 1998/01/24 21:05:51 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/03/16 08:52:12 hubertf Exp $
 bin/git
 bin/gitps
 bin/gitview
-bin/gitcmp
 bin/gitkeys
 bin/gitwipe
 bin/gitmount
 bin/gitaction
-bin/gitredir
 bin/gitrgrep
 bin/gitxgrep
 bin/.gitaction
 bin/gitregrep
 bin/gitrfgrep
+bin/gitunpack
+bin/gitmkdirs
 @unexec %D/bin/install-info --delete %D/info/git.info %D/info/dir
 info/git.info
 info/git.info-1
@@ -46,14 +46,33 @@ lib/git/term/.gitrc.vt400
 lib/git/term/.gitrc.vt420
 lib/git/term/.gitrc.xterm
 lib/git/term/.gitrc.xterms
+lib/git/term/.gitrc.mach
+lib/git/term/.gitrc.xterm-color
+lib/git/term/.gitrc.dtterm
+lib/git/term/.gitrc.eterm
+lib/git/term/.gitrc.pc3
+lib/git/term/.gitrc.screen
+lib/git/term/.gitrc.iris-ansi
+lib/git/term/.gitrc.iris-ansi-net
 @dirrm lib/git/term
 @dirrm lib/git
+share/doc/git/git_1.html
+share/doc/git/git_10.html
+share/doc/git/git_2.html
+share/doc/git/git_3.html
+share/doc/git/git_4.html
+share/doc/git/git_5.html
+share/doc/git/git_6.html
+share/doc/git/git_7.html
+share/doc/git/git_8.html
+share/doc/git/git_9.html
+share/doc/git/git_toc.html
+@dirrm share/doc/git
 man/man1/git.1.gz
 man/man1/gitaction.1.gz
 man/man1/gitmount.1.gz
-man/man1/gitcmp.1.gz
 man/man1/gitkeys.1.gz
-man/man1/gitredir.1.gz
 man/man1/gitrgrep.1.gz
 man/man1/gitps.1.gz
 man/man1/gitview.1.gz
+man/man1/gitunpack.1

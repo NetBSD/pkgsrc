@@ -3,11 +3,11 @@
 # Date created:		12 Jul 1995
 # Whom:			torstenb@FreeBSD.ORG
 #
-# $NetBSD: Makefile,v 1.5 1998/02/09 07:10:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/03/16 08:52:11 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/21 11:54:39 asami Exp
 #
 
-DISTNAME=	git-4.3.11
+DISTNAME=	git-4.3.17
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU}
 
@@ -27,6 +27,8 @@ pre-install:
 	(cd ${WRKSRC}/term ; ${PATCH} --quiet -p0 <${FILESDIR}/gitrc.cons25.patch )
 
 post-install:
-	@install-info ${PREFIX}/info/git.info ${PREFIX}/info/dir
+	install-info ${PREFIX}/info/git.info ${PREFIX}/info/dir
+	${MKDIR} ${PREFIX}/share/doc
+	${MV} ${PREFIX}/lib/git/html ${PREFIX}/share/doc/git
 
 .include <bsd.port.mk>

@@ -1,11 +1,11 @@
---- src/Makefile.in.orig	Sat Jun 15 16:30:57 1996
-+++ src/Makefile.in	Sat Jun 15 16:36:16 1996
-@@ -100,7 +100,7 @@
+]2;feyrer@yui:/usr/pkgsrc/misc/git/work/git-4.3.17 ]1;yui--- src/Makefile.in.orig	Mon Mar 16 09:14:52 1998
++++ src/Makefile.in	Mon Mar 16 09:15:03 1998
+@@ -132,7 +132,7 @@
  	for i in $(GIT_SCRIPTS);\
  	do\
  	    rm -f $(bindir)/$$i;\
 -	    $(INSTALL_PROGRAM) $(srcdir)/$$i $(bindir)/$$i;\
-+	    $(INSTALL) $(srcdir)/$$i $(bindir)/$$i;\
++	    $(BSD_INSTALL_SCRIPT) $(srcdir)/$$i $(bindir)/$$i;\
  	done
  	for i in $(GIT_RGREPS);\
  	do\
