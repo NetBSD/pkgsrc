@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/08/03 09:55:38 seb Exp $
+# $NetBSD: Makefile,v 1.35 2003/08/07 15:36:23 seb Exp $
 
 DISTNAME=		arla-0.35.12
 #PKGREVISION=
@@ -58,6 +58,9 @@ CONF_FILES+=	${EGDIR}/SuidCells ${PKG_SYSCONFDIR}/SuidCells
 CONF_FILES+=	${EGDIR}/ThisCell ${PKG_SYSCONFDIR}/ThisCell
 CONF_FILES+=	${EGDIR}/arla.conf ${PKG_SYSCONFDIR}/arla.conf
 OWN_DIRS_PERMS=	${ARLA_CACHE} ${ROOT_USER} ${ROOT_GROUP} 0700
+
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 
 post-install:
 	${RM} -f ${EGDIR}/*.default
