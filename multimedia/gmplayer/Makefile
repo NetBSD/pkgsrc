@@ -1,4 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2004/06/21 07:01:38 tron Exp $
+# $NetBSD: Makefile,v 1.13 2004/06/21 09:40:16 grant Exp $
+
+#
+# NOTE: if you are updating both mplayer and gmplayer, you must ensure
+# that *both* distinfo files contain the correct, up-to-date files and
+# checksums.
+#
+# NOTE: patches are shared between mplayer and gmplayer!
+#
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
 

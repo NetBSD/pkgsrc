@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/05/16 10:15:49 grant Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/06/21 09:40:16 grant Exp $
 #
 
 MPLAYER_DIST_VERSION=	1.0pre4
@@ -17,6 +17,14 @@ DIST_SUBDIR=		mplayer-${MPLAYER_PKG_VERSION}
 
 MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
+
+#
+# NOTE: gmplayer has its own distinfo file. if you are also updating
+# gmplayer, you must ensure that *both* distinfo files contain the
+# correct, up-to-date files and checksums.
+#
+# NOTE: patches are shared between mplayer and gmplayer!
+#
 
 PATCHDIR=		${.CURDIR}/../../multimedia/mplayer-share/patches
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/mplayer-share/distinfo
