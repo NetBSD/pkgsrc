@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.13 2003/03/04 11:46:00 wiz Exp $
+
+--- dlls/ntdll/cdrom.c.orig	Wed Feb 19 23:08:50 2003
++++ dlls/ntdll/cdrom.c
+@@ -53,6 +53,16 @@
+ #endif
+ #ifdef HAVE_LINUX_CDROM_H
+ # include <linux/cdrom.h>
++#else
++# ifndef CD_FRAMES
++#  define CD_FRAMES 75
++# endif
++# ifndef CDROM_MSF
++#  define CDROM_MSF 0x02
++# endif
++# ifndef CD_SECS
++#  define CD_SECS 60
++# endif
+ #endif
+ #ifdef HAVE_LINUX_UCDROM_H
+ # include <linux/ucdrom.h>
+@@ -286,7 +296,9 @@ static int CDROM_SyncCache(int dev)
+     toc->Length[0] = tsz >> 8;
+     toc->Length[1] = tsz;
+    
++#if 0
+     TRACE("caching toc from=%d to=%d\n", hdr.cdth_trk0, hdr.cdth_trk1);
++#endif
+ 
+     for (i = toc->FirstTrack; i <= toc->LastTrack + 1; i++)
+     {
