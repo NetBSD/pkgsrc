@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2002/03/25 09:17:55 fredb Exp $
+# $NetBSD: Makefile,v 1.36 2002/04/25 10:43:26 fredb Exp $
 
-DISTNAME=	wwwoffle-2.7a
-PKGNAME=	wwwoffle-2.7.1
+DISTNAME=	wwwoffle-2.7b
+PKGNAME=	wwwoffle-2.7.2
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.demon.co.uk/pub/unix/httpd/ \
 		http://www.gedanken.freeserve.co.uk/download-wwwoffle/ \
