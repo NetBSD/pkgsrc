@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3182 2003/08/31 22:34:32 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3183 2003/09/01 03:42:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3423,7 +3423,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xcircuit to 3.1.19 [jtb 2003-08-31]
 	Deleted bgrep, renamed to bsdgrep-devel [cjep 2003-08-31]
 	Updated libnet to 1.0.1bnb2 [seb 2003-08-31]
-	Updated bsdgrep to 20030831 [cjep 2003-08-31]
+	Updated bsdgrep-devel to 20030831 [cjep 2003-08-31]
 	Updated asc to 1.13.8.0 [wiz 2003-08-31]
 	Updated pcre to 4.4 [wiz 2003-08-31]
 	Updated neXtaw to 0.14.1 [wiz 2003-08-31]
