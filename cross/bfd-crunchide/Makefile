@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/08/02 02:02:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.15 2005/04/05 11:05:33 wiz Exp $
 
 DISTNAME=	bfd-crunchide-1.1
 PKGREVISION=	1
@@ -7,9 +7,9 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	sakamoto@NetBSD.org
-COMMENT=	crunchide using libbfd. Used for cross-building distributions
+COMMENT=	Crunchide using libbfd, used for cross-building distributions
 
-BUILD_DEPENDS=	cross-binutils>=2.15.0.0:../binutils
+BUILDLINK_DEPMETHOD.cross-binutils=	build
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
@@ -30,4 +30,5 @@ do-extract:
 pre-install:
 	@if [ ! -d ${PREFIX}/bin ]; then ${INSTALL_PROGRAM_DIR} ${PREFIX}/bin; fi
 
+.include "../../cross/binutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
