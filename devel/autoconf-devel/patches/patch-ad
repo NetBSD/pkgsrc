@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/01/03 14:02:27 agc Exp $
+
+Prefer our awk to mawk
+
+--- configure	2002/01/03 13:44:05	1.1
++++ configure	2002/01/03 13:44:25
+@@ -1215,7 +1215,7 @@
+ # a AC-SUBST inside AC-PROG-GNU-M4.  Grmph!
+ 
+ # `autoconf' and `ifnames' use AWK.  And we need decent RE support.
+-for ac_prog in mawk gawk nawk awk
++for ac_prog in gawk nawk awk mawk
+ do
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
+ set dummy $ac_prog; ac_word=$2
