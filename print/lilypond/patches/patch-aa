@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 17:32:11 rh Exp $
+
+--- Documentation/faq.texi.orig	Sat Sep 16 14:35:18 2000
++++ Documentation/faq.texi
+@@ -43,7 +43,7 @@
+ Yes. Currently, all information on the mailing lists is available at
+ gnu.org:
+ 
+-@itemize
++@itemize @bullet
+ @item @uref{http://mail.gnu.org/mailman/listinfo/gnu-music-discuss}
+ @item @uref{http://mail.gnu.org/mailman/listinfo/info-gnu-music}
+ @item @uref{http://mail.gnu.org/mailman/listinfo/bug-gnu-music}
+@@ -53,7 +53,7 @@
+ Archives of mail before September 12, 2000 are at
+ @code{mail-archive.com}:
+ 
+-@itemize
++@itemize @bullet
+ @item @uref{http://www.mail-archive.com/info-gnu-music@@gnu.org}
+ @item @uref{http://www.mail-archive.com/help-gnu-music@@gnu.org}
+ @item @uref{http://www.mail-archive.com/bug-gnu-music@@gnu.org})
+@@ -235,7 +235,7 @@
+   @item If you update the Mudela file, run @code{lilypond infile.ly}
+         and then @code{latex infile_lyN.tex}.
+ @end itemize
+-Another alternative is to use @command{mudela-book}, where smaller or
++Another alternative is to use @code{mudela-book}, where smaller or
+ larger music examples can be included in a LaTeX or Texinfo file.
+ 
+ @subsubsection The tagline is visible in the .dvi file but is not printed on paper.
