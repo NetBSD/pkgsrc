@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2486 2004/11/26 21:05:09 snj Exp $
+$NetBSD: TODO,v 1.2487 2004/11/26 21:05:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -452,7 +452,6 @@ Suggested package updates
 	o dylan-compiler-2.4.0
 	o dylan-interpreter-2.4.0
 	o e2fsprogs-1.35
-	o easytag-1.0
 	o eb-4.1.1
 	o eblook-1.6.1
 	o edb-1.0.5
