@@ -1,0 +1,3 @@
+asm2html is a small tool to create nice looking HTML files from NASM
+assembly source code.  Other assembly formats, such as AT&T syntax will
+probably be added in the near future.
