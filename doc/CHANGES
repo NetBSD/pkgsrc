@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2851 2003/07/21 17:27:03 taca Exp $
+$NetBSD: CHANGES,v 1.2852 2003/07/21 17:46:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2889,3 +2889,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Deleted ruby-openssl, renamed to ruby-ossl [taca 2003-07-21]
 	Updated ruby-ossl to 0.1.4.1 [taca 2003-07-21]
 	Updated ruby-webrick to 1.2.3nb1 [taca 2003-07-21]
+	Added ap2-ruby-1.1.1 [epg 2003-07-21]
