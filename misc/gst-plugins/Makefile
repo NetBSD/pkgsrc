@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/26 21:41:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/08/17 20:31:55 jmc Exp $
 #
 
 DISTNAME=		gst-plugins-0.6.1
@@ -38,6 +38,7 @@ pre-install:
 .include "../../audio/cdparanoia/buildlink2.mk"
 .include "../../audio/flac/buildlink2.mk"
 .include "../../audio/gsm/buildlink2.mk"
+.include "../../audio/libid3tag/buildlink2.mk"
 .include "../../audio/lame/buildlink2.mk"
 .include "../../audio/liba52/buildlink2.mk"
 .include "../../audio/libmikmod/buildlink2.mk"
