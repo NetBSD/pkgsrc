@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2000/10/18 03:31:16 hubertf Exp $
+$NetBSD: patch-ab,v 1.5 2001/02/22 17:04:36 wiz Exp $
 
 --- doc/cvs.texinfo.orig	Wed Aug 30 03:16:32 2000
-+++ doc/cvs.texinfo
++++ doc/cvs.texinfo	Thu Feb 22 17:19:43 2001
 @@ -40,6 +40,10 @@
  @setfilename cvs.info
  @include CVSvn.texi
@@ -13,3 +13,15 @@ $NetBSD: patch-ab,v 1.4 2000/10/18 03:31:16 hubertf Exp $
  @setchapternewpage odd
  
  @c -- TODO list:
+@@ -12637,6 +12641,11 @@
+ all transactions.  Any subset of the default is
+ legal.  (For example, to only log transactions that modify the
+ @file{*,v} files, use @samp{LogHistory=TMAR}.)
++
++@cindex tag, in CVSROOT/config
++@item tag=@var{value}
++Enable an additional keyword that gets expanded on checkout;
++any string is legal.
+ @end table
+ 
+ @c ---------------------------------------------------------------------
