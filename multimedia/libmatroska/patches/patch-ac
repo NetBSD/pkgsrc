@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2004/05/31 09:50:35 salo Exp $
+$NetBSD: patch-ac,v 1.3 2004/07/20 23:53:12 salo Exp $
 
 --- make/linux/Makefile.orig	2004-01-05 12:28:43.000000000 +0100
-+++ make/linux/Makefile	2004-05-31 01:20:58.000000000 +0200
++++ make/linux/Makefile	2004-07-21 00:21:56.000000000 +0200
 @@ -15,13 +15,13 @@
  includedir=$(prefix)/include/matroska
  
@@ -32,3 +32,12 @@ $NetBSD: patch-ac,v 1.2 2004/05/31 09:50:35 salo Exp $
  
  SRC_DIR=$(CWD)/../../src/
  INCLUDE_DIR=$(CWD)/../../matroska
+@@ -66,7 +66,7 @@
+ 
+ DEPENDFLAGS  = ${CXXFLAGS} ${INCLUDE}
+ 
+-all: $(LIBRARY) test
++all: $(LIBRARY)
+ 
+ lib library: $(LIBRARY)
+ 
