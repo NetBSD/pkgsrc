@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.11 2003/12/14 19:51:04 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2003/12/14 22:35:35 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use libgnomeprint.
 #
@@ -27,7 +27,10 @@ BUILDLINK_FILES.libgnomeprint+=	lib/libgnomeprint/${PKGVERSION}/modules/transpor
 .include "../../devel/pango/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
-.if !empty(USE_CUPS:M[Yy][Ee][Ss])
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_CUPS) && !empty(USE_CUPS:M[Yy][Ee][Ss])
 .include "../../print/cups/buildlink2.mk"
 .endif
 
