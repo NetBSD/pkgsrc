@@ -1,12 +1,6 @@
---- Makefile.orig	Sat Nov 15 00:36:00 1997
-+++ Makefile	Mon Feb 23 23:49:25 1998
-@@ -21,28 +21,34 @@
- .include "mkconfig.h"
- ##### don't change anything after this line ####
- 
-+all:	demo
-+
- demo: 
+--- Makefile.orig	Thu Feb 26 04:03:26 1998
++++ Makefile	Fri May  8 15:56:29 1998
+@@ -25,24 +25,27 @@
  	@(cd DEMOS; make) 
  
  install:
@@ -41,7 +35,6 @@
 -          ln -s $(MAN5_DIR)/xforms.5 $(MAN5_DIR)/forms.5;\
 +          $(LN) $(MAN5_DIR)/xforms.5 $(MAN5_DIR)/forms.5;\
          fi
-+	(cd  DEMOS; make $@)
 +
  clean:
  	(cd  DEMOS; make $@)
