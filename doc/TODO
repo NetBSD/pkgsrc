@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2978 2005/01/31 00:31:08 wiz Exp $
+$NetBSD: TODO,v 1.2979 2005/01/31 11:52:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -441,7 +441,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enscript-1.6.4
 	o epic4-2.2
-	o eric3-3.6.0
+	o eric3-3.6.1
 	o erlang-10b-2
 	o esh-0.8.5
 	o etach-1.4.0
@@ -454,7 +454,7 @@ Suggested package updates
 	o fhist-1.14
 	o fidogate-4.4.10
 	o file-4.12
-	o findutils-4.1.20
+	o findutils-4.2.15
 	o firefox-bin-1.0
 	o firewalk-5.0
 	o firewalk-gtk-5.0
@@ -527,6 +527,7 @@ Suggested package updates
 	o grap-1.32
 	o grepmail-5.3030
 	o gri-2.12.8
+	o grub-0.96
 	o gsasl-0.2.4
 	o gsed-4.1.4
 	o gsharutils-4.3.78
@@ -672,6 +673,7 @@ Suggested package updates
 	o mlterm-2.9.1 [pkg/29061]
 	o mlview-0.7.1
 	o mmix-20041014
+	o mng-1.0.9
 	o moscow_ml-2.01
 	o most-4.9.5
 	o mowitz-0.3.0
@@ -726,7 +728,7 @@ Suggested package updates
 	o openmotif-2.2.4
 	o openvpn-1.6.0
 	o opera7-7.54u1
-	o oregano-0.40.1
+	o oregano-0.40.2
 	o oroborus-2.0.13.1
 	o osh-041231
 	o oss-3.99.2a [for 2.0]
@@ -870,6 +872,7 @@ Suggested package updates
 	o p5-xmltv-0.5.38
 	o p7zip-4.14.01
 	o pari-2.2.7
+	o pbzip2-0.9.1
 	o pcal-4.8
 	o pdmenu-1.2.85
 	o pear-HTTP_Request-1.2.4
@@ -893,7 +896,7 @@ Suggested package updates
 	o ploticus-examples-230
 	o plplot-5.3.1
 	o pnet-0.6.10 [pkg/28555]
-	o poedit-1.3.1
+	o poedit-1.3.2
 	o poppy-4.01
 	o posh-0.3.14
 	o postgresql-8.0
@@ -925,7 +928,7 @@ Suggested package updates
 	o py-amkCrypto-2.0
 	o py-bdb-xml-2.0.9
 	o py-gnuplot-1.7
-	o py-kenosis-0.93
+	o py-kenosis-0.94.1
 	o py-ldap-2.0.6
 	o py-logging-0.4.9.5
 	o py-m2crypto-0.13
@@ -1050,7 +1053,7 @@ Suggested package updates
 	o swig-python-1.3.24
 	o swish-e-2.4.3
 	o sylpheed-1.0.0
-	o sylpheed-claws-1.0.0
+	o sylpheed-claws-1.0.0 [pkg/29168]
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sysinfo-4.2.2
 	o tcl-itcl-3.2.1
@@ -1112,6 +1115,7 @@ Suggested package updates
 	o vcdimager-0.7.21
 	o vera-1.14
 	o vfu-4.03
+	o vice-1.16
 	o vifm-0.2
 	o vipec-3.2.0
 	o vlc-0.8.1
