@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/01/28 14:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2002/02/13 22:15:54 skrll Exp $
 #
 
 DISTNAME=		jpilot-0.99
@@ -10,7 +10,6 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://jpilot.org/
 COMMENT=		desktop organizer application for the palm pilot
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	# defined
 
 CONFLICTS+=		jpilot-libplugin-[0-9]*
@@ -33,7 +32,6 @@ post-extract:
 	${RM} -f ${WRKSRC}/po/Makefile.in
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --force
 	${SED} "s|@PREFIX@|${PREFIX}|g" ${WRKSRC}/docs/jpilot.1 \
 			> ${WRKSRC}/docs/jpilot.1.patched && \
 		${MV} ${WRKSRC}/docs/jpilot.1.patched ${WRKSRC}/docs/jpilot.1
