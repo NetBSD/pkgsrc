@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/10/29 08:27:48 tron Exp $
+# $NetBSD: Makefile,v 1.29 2004/11/01 10:50:55 minskim Exp $
 
 DISTNAME=	gphoto2-2.1.4
 PKGREVISION=	2
@@ -29,8 +29,6 @@ CONFIGURE_ARGS+=	--without-readline
 #USE_GNU_READLINE=	rl_completion_matches, rl_completion_append_character
 #.include "../../devel/readline/buildlink3.mk"
 
-BUILDLINK_DEPENDS.libexif=	libexif>=0.6.11
-
 .include "../../devel/cdk/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
@@ -38,4 +36,5 @@ BUILDLINK_DEPENDS.libexif=	libexif>=0.6.11
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
