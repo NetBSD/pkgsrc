@@ -1,0 +1,56 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/02/08 08:48:37 frueauf Exp $
+
+--- ../../gnuchess-4.0.pl79/src/gnuan.c	Mon Sep 28 08:41:21 1998
++++ ./src/gnuan.c	Thu Dec 10 23:39:26 1998
+@@ -1348,12 +1348,12 @@
+     fpout = stderr;
+     fprintf (fpout, "Input the file with the algebraic moves of the game.\n");
+     fflush (fpout);
+-    gets (infilename);
++    fgets (infilename, 255, stdin); infilename[255] = '\0';
+     fprintf (fpout, "\n");
+     do
+       {
+ 	  fprintf (fpout, "Input the search depth you want to use.  (1 to 29)(- for depth from file)\n");
+-	  gets (inbuf);
++	  fgets (inbuf, 256, stdin); inbuf[255] = '\0';
+ 	  search_depth = atoi (inbuf);
+ 	  if (search_depth < 0)
+ 	    {
+@@ -1369,7 +1369,7 @@
+     do
+       {
+ 	  fprintf (fpout, "Input the maximum number of minutes per move you want to use.\n");
+-	  gets (inbuf);
++	  fgets (inbuf, 256, stdin); inbuf[255] = '\0';
+ 	  max_minutes = atoi (inbuf);
+ 	  if (max_minutes < 0)
+ 	    {
+@@ -1379,7 +1379,7 @@
+       }
+     while ((max_minutes + max_seconds) < 1);
+     fprintf (fpout, "Post the search results(y/n).\n");
+-    gets (inbuf);
++    fgets (inbuf, 256, stdin); inbuf[255] = '\0';
+     if (inbuf[0] == 'y')
+ 	flag.post = true;
+     else
+@@ -1559,7 +1559,8 @@
+ 	      while (true)
+ 		{
+ 		    printf (">");
+-		    gets (GNUANinbuf1);
++		    fgets (GNUANinbuf1, 128, stdin);
++		    GNUANinbuf1[127] = '\0';
+ 		    p = GNUANinbuf1;
+ 		    q = GNUANinbuf;
+ 		    while (true)
+@@ -1724,7 +1725,7 @@
+     move_percent[black] = ((float) same_moves[black]) * 200 / (float) (GNUANmovecnt + (GNUANmovecnt % 2 ? 1 : 0));
+     fprintf (fpout, "\n           White's percentage was %5.2f%%.     Black's percentage was %5.2f%%.\n", move_percent[white], move_percent[black]);
+     time (&end_time);
+-    elapsed_time = difftime(end_time - start_time);
++    elapsed_time = difftime(end_time, start_time);
+     fprintf (fpout, "\n           Elapsed time was %ld seconds.\n", elapsed_time);
+     fclose (fpin);
+     fclose (fpout);
