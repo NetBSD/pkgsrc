@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/04/11 15:41:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2003/04/24 20:46:36 jmmv Exp $
 #
 
 DISTNAME=	gaim-0.61
@@ -12,7 +12,7 @@ COMMENT=	GTK2 based client for the AOL Instant Messenger chat system
 
 DEPENDS+=	gnome2-dirs>=1.1:../../misc/gnome2-dirs
 
-CONFLICTS+=	gaim-gtk1-[0-9]* gaim-gnome-[0-9]*
+CONFLICTS+=	gaim<0.61 gaim-gnome-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
