@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.703 2003/07/12 09:21:00 wiz Exp $
+$NetBSD: TODO,v 1.704 2003/07/12 10:08:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -94,7 +94,6 @@ Suggested package updates
 	o disc-cover-1.5.2
 	o distcc-2.8
 	o dmalloc-5.2.1 [pkg/21951]
-	o dopewars-1.5.9
 	o dvdrip-0.50.14
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
