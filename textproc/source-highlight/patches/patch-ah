@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.4 2003/10/03 14:42:39 seb Exp $
+$NetBSD: patch-ah,v 1.5 2004/05/15 14:55:38 seb Exp $
 
---- tests/Makefile.in.orig	2003-10-03 14:29:44.000000000 +0000
+--- tests/Makefile.in.orig	2004-04-19 11:19:02.000000000 +0000
 +++ tests/Makefile.in
 @@ -138,6 +138,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
@@ -10,33 +10,25 @@ $NetBSD: patch-ah,v 1.4 2003/10/03 14:42:39 seb Exp $
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  
-@@ -194,7 +195,7 @@ test.java.txt
+@@ -209,7 +210,7 @@ test.sml test.sml.html
  
  CPP2HTML_WHEADERS = $(CPP2HTML) --header=$(srcdir)/header.html --footer=$(srcdir)/footer.html --title="Header and footer test"
  
 -source_highlightdoc_DATA = test.php3.html test.pl.html test.pm.html \
 +source_highlightdochtml_DATA = test.php3.html test.pl.html test.pm.html \
- test.py.html test.rb.html test.js.html
+ test.py.html test.rb.html test.js.html test.lua.html test.ml.html \
+ test.sml.html
  
- 
-@@ -203,8 +204,10 @@ subdir = tests
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -220,7 +221,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/m
  CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
-+depcomp =
-+am__depfiles_maybe =
  DIST_SOURCES =
 -DATA = $(source_highlightdoc_DATA)
 +DATA = $(source_highlightdochtml_DATA)
  
  DIST_COMMON = Makefile.am Makefile.in
  all: all-am
-@@ -212,27 +215,27 @@ all: all-am
- .SUFFIXES:
- $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
- 	cd $(top_srcdir) && \
--	  $(AUTOMAKE) --gnu  tests/Makefile
-+	  $(AUTOMAKE) --foreign  --ignore-deps tests/Makefile
+@@ -232,23 +233,23 @@ $(srcdir)/Makefile.in:  Makefile.am  $(t
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
  uninstall-info-am:
@@ -70,7 +62,7 @@ $NetBSD: patch-ah,v 1.4 2003/10/03 14:42:39 seb Exp $
  	done
  tags: TAGS
  TAGS:
-@@ -277,7 +280,7 @@ check: check-am
+@@ -293,7 +294,7 @@ check: check-am
  all-am: Makefile $(DATA)
  
  installdirs:
@@ -79,7 +71,7 @@ $NetBSD: patch-ah,v 1.4 2003/10/03 14:42:39 seb Exp $
  
  install: install-am
  install-exec: install-exec-am
-@@ -320,7 +323,7 @@ info: info-am
+@@ -336,7 +337,7 @@ info: info-am
  
  info-am:
  
@@ -88,7 +80,7 @@ $NetBSD: patch-ah,v 1.4 2003/10/03 14:42:39 seb Exp $
  
  install-exec-am:
  
-@@ -346,17 +349,17 @@ ps: ps-am
+@@ -362,17 +363,17 @@ ps: ps-am
  
  ps-am:
  
