@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/09/20 05:14:12 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2000/11/14 19:58:05 itojun Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -10,8 +10,8 @@
 # sanity fixes in apache module API (for example, avoid u_long for IPv4 addrs)
 #
 
-DISTNAME=		apache_1.3.12
-PKGNAME=		apache6-1.3.12
+DISTNAME=		apache_1.3.14
+PKGNAME=		apache6-1.3.14
 CATEGORIES=		www
 MASTER_SITES=		http://www.apache.org/dist/ \
 			ftp://ftp.modssl.org/source/ \
@@ -21,7 +21,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 #			${SSL_DISTNAME}${EXTRACT_SUFX}
 
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=		apache-1.3.12-v6-20000908a.diff.gz
+PATCHFILES=		apache-1.3.14-v6-20001114.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		itojun@itojun.org
