@@ -1,3 +1,3 @@
-$NetBSD: patch-sum,v 1.1.1.1 2001/01/19 21:18:16 tron Exp $
+$NetBSD: patch-sum,v 1.2 2001/03/10 23:28:08 tron Exp $
 
-MD5 (patch-aa) = 3792063cadbeec539f1e2b44eea8f25a
+SHA1 (patch-aa) = fa9764d666fe59baa495e0b8487d2beef0f96a83
