@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.36 2002/10/08 01:06:33 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.37 2002/10/09 10:24:34 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -744,6 +744,13 @@ ${_alias_}: ${BUILDLINK_${_wrappee_}}
 .    endif
 .  endfor # _alias_
 .endfor   # _wrappee_
+
+# Allow BUILDLINK_ENV to override shell environment settings in
+# ${CONFIGURE_ENV} and in ${MAKE_ENV} for the configure and build processes,
+# respectively.
+#
+CONFIGURE_ENV+=	${BUILDLINK_ENV}
+MAKE_ENV+=	${BUILDLINK_ENV}
 
 # OS-specific overrides for buildlink2 wrappers
 #
