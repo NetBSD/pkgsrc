@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.38 2004/04/09 18:43:14 jschauma Exp $
+# $NetBSD: pre-build,v 1.39 2004/04/19 23:09:55 seb Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -36,7 +36,7 @@ if [ "$BLDLOG" = "" ]; then
 	exit 1
 fi
 STARTFILE=`( cd ${PKGLINT_PKG_DIR} ; ${BMAKE} show-var VARNAME=STARTFILE )`;
-if [ "$BLDLOG" = "" ]; then
+if [ "$STARTFILE" = "" ]; then
 	echo "Had problems determining the name of the .start file"
 	exit 1
 fi
