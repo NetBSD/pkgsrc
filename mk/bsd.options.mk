@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.8 2004/08/22 19:42:10 jlam Exp $
+# $NetBSD: bsd.options.mk,v 1.9 2004/09/15 03:59:17 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -48,7 +48,7 @@
 #		If this is set to "yes", then the presence of unsupported
 #		options in PKG_OPTIONS.<pkg> (see below) causes the build
 #		to fail.  Set this to "no" to silently ignore unsupported
-#		options.  Default: "yes".
+#		options.  Default: "no".
 #
 # After including this file, the following variables are defined:
 #
@@ -131,7 +131,7 @@ _PKG_OPTIONS_VAR=	_PKG_DEFAULT_OPTIONS
 # the variable named by ${PKG_OPTIONS_VAR} causes the build to fail.  Set
 # this to "no" to silently ignore unsupported options.
 #
-PKG_FAIL_UNSUPPORTED_OPTIONS?=	yes
+PKG_FAIL_UNSUPPORTED_OPTIONS?=	no
 
 # Separate out the selected options into "positive" and "negative" lists.
 _PKG_YES_OPTIONS=	# contains the "positive" options
