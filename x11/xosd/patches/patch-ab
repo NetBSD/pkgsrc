@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2003/04/12 12:14:16 jmmv Exp $
+
+--- src/xmms_plugin/Makefile.in.orig	2003-04-12 13:49:42.000000000 +0200
++++ src/xmms_plugin/Makefile.in
+@@ -153,14 +153,14 @@ xmmsplugindir = ${XMMS_PLUGIN_DIR}
+ 
+ xmmsplugin_LTLIBRARIES = libxmms_osd.la
+ libxmms_osd_la_SOURCES = xmms_osd.c
+-libxmms_osd_la_LIBADD = $(top_builddir)/src/libxosd/libxosd.la
++libxmms_osd_la_LIBADD = -lxosd
+ libxmms_osd_la_LDFLAGS = -module -avoid-version @GDK_PIXBUF_LIBS@
+ subdir = src/xmms_plugin
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(xmmsplugin_LTLIBRARIES)
+ 
+-libxmms_osd_la_DEPENDENCIES = $(top_builddir)/src/libxosd/libxosd.la
++libxmms_osd_la_DEPENDENCIES =
+ am_libxmms_osd_la_OBJECTS = xmms_osd.lo
+ libxmms_osd_la_OBJECTS = $(am_libxmms_osd_la_OBJECTS)
+ 
