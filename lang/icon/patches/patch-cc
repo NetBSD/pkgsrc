@@ -1,0 +1,45 @@
+*** src/h/sys.h.orig	Fri Jul 29 21:24:57 1994
+--- src/h/sys.h	Wed Mar  1 15:43:55 1995
+***************
+*** 181,192 ****
+--- 181,195 ----
+  #include <sys/ioctl.h>
+  #include <errno.h>
+  #include <sys/signal.h>
++ #ifdef __FreeBSD__
++ #include <sgtty.h>
++ #endif
+  #endif					/* HaveTioc */
+  
+  #endif					/* KeyboardFncs */
+  
+  #ifdef LoadFunc
+  #include <dlfcn.h>
+  #endif					/* LoadFunc */
+  
+  #endif					/* UNIX */
+*** src/runtime/fload.r.orig	Fri Jul 29 21:22:51 1994
+--- src/runtime/fload.r	Sun Apr 16 14:02:26 1995
+***************
+*** 24,29 ****
+--- 24,33 ----
+  
+  #ifdef FreeBSD
+  
++ /* Look at the DL_GETERRNO constant, if it exists this is FreeBSD 1.1.5
++    or 2.0. If it doesn't exist this must be post 2.0 with an dlerror */
++ 
++ #passthru #ifdef DL_GETERRNO
+  /* Sorry, no dlerror() on FreeBSD. Fake it. */
+  char *dlerror(void)
+  {
+***************
+*** 34,39 ****
+--- 38,44 ----
+      else
+          return(NULL);
+  }
++ #passthru #endif
+  
+  #endif					/* __FreeBSD__ */
+  
