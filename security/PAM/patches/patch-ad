@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.3 2002/12/23 21:23:58 jlam Exp $
+$NetBSD: patch-ad,v 1.4 2004/01/08 00:07:26 jlam Exp $
 
 --- libpam/Makefile.orig	Sun Dec  9 16:44:58 2001
-+++ libpam/Makefile
-@@ -125,8 +125,9 @@ ifeq ($(DYNAMIC_LIBPAM),yes)
++++ libpam/Makefile	Thu Sep 11 19:50:44 2003
+@@ -6,7 +6,7 @@
+ include ../Make.Rules
+ 
+ # need to tell libpam about the default directory for PAMs
+-MOREFLAGS=-D"DEFAULT_MODULE_PATH=\"$(SECUREDIR)/\""
++MOREFLAGS=-D"DEFAULT_MODULE_PATH=\"$(PAM_MODULEDIR)/\""
+ 
+ ifeq ($(WITH_LIBDEBUG),yes)
+  LIBNAME=libpamd
+@@ -125,8 +125,9 @@
  	$(INSTALL) -m $(SHLIBMODE) $(LIBPAM) $(FAKEROOT)$(libdir)/$(LIBPAMFULL)
  	$(LDCONFIG)
    ifneq ($(DYNTYPE),"sl")
