@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:16:11 agc Exp $
+
+MD5 (xneko.tar.gz) = IGNORE
+SHA1 (patch-aa) = 33a8f180a112be42981ed5f0615f3cfd7263eeb4
+SHA1 (patch-ab) = da34fcbbfdf77caa7514e9530de1615805cefc42

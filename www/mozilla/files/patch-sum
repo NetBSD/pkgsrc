@@ -1,7 +1,0 @@
-$NetBSD: patch-sum,v 1.46 2001/03/30 09:37:48 taya Exp $
-
-SHA1 (patch-ao) = de139891a25f136c0192e2089ff81c881a3cf396
-SHA1 (patch-aq) = 1d380eca30f686cfa44b8f8f2e35cb0f1a802b12
-SHA1 (patch-ar) = 89da463a694f4250e15f5a622a270a7ad68252ed
-SHA1 (patch-as) = 470175fc894b0bcf844ab4335613893040956ae7
-SHA1 (patch-at) = a1ed1da212a11a6af33cd5b270d460c329d9998f

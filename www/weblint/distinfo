@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:13:30 agc Exp $
+
+MD5 (weblint-1.020.tar.gz) = 032d12e353397e7675b1a739b0e7bc0a
+SHA1 (patch-aa) = d21483dab233a9d2c4fe032dcabc705cf767a41c

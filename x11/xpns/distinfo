@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:16:17 agc Exp $
+
+MD5 (pns_source.tar.Z) = 156e5971dc27e9580c68a9947eeb327c
+SHA1 (patch-aa) = 65b4aadd67e2d0211e8f5c1b14f49061404a272d
+SHA1 (patch-ab) = f32b75e6be49c02eb6e5e196c718a573570de6e3
