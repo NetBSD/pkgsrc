@@ -1,57 +1,39 @@
-*** Makefile.o	Sat Jan 24 17:11:37 1998
---- Makefile	Sat Jan 24 17:12:49 1998
-***************
-*** 8,14 ****
-  RANLIB=ranlib
-  AR=ar cq
-  
-! INSTROOT=/usr/local
-  LIBDIR=$(INSTROOT)/lib
-  INCDIR=$(INSTROOT)/include
-  MANDIR=$(INSTROOT)/man/man3
---- 8,14 ----
-  RANLIB=ranlib
-  AR=ar cq
-  
-! INSTROOT=${PREFIX}
-  LIBDIR=$(INSTROOT)/lib
-  INCDIR=$(INSTROOT)/include
-  MANDIR=$(INSTROOT)/man/man3
-***************
-*** 19,25 ****
-  # Add -DHAVE_ANSIHEADERS if your system have the ANSI C header files
-  # needed for our purposes (stdlib, string, unistd).
-  #
-! CFLAGS = -O
-  
-  LDLIBS =
-  LIBIDENT = libident.a
---- 19,25 ----
-  # Add -DHAVE_ANSIHEADERS if your system have the ANSI C header files
-  # needed for our purposes (stdlib, string, unistd).
-  #
-! #CFLAGS = -O
-  
-  LDLIBS =
-  LIBIDENT = libident.a
-***************
-*** 33,38 ****
---- 33,39 ----
-  	@echo aix
-  	@echo bsd
-  	@echo bsd2.11
-+ 	@echo netbsd
-  	@echo dynix
-  	@echo hpux
-  	@echo irix
-***************
-*** 126,131 ****
---- 127,134 ----
-  bsd2.11:
-  	@$(MAKE) all CC="$(CC)" CFLAGS="-O -DSIGRETURNTYPE=int -DHAVE_ANSIHEADERS"
-  
-+ netbsd:
-+ 	@$(MAKE) all CC="$(CC)" CFLAGS="${CFLAGS} -Wall -DHAVE_ANSIHEADERS"
-  
-  #
-  #
+$NetBSD: patch-aa,v 1.3 1999/03/12 15:58:09 tron Exp $
+
+--- Makefile.orig	Fri Jan 17 20:10:55 1997
++++ Makefile	Fri Mar 12 16:56:54 1999
+@@ -8,7 +8,7 @@
+ RANLIB=ranlib
+ AR=ar cq
+ 
+-INSTROOT=/usr/local
++INSTROOT=${PREFIX}
+ LIBDIR=$(INSTROOT)/lib
+ INCDIR=$(INSTROOT)/include
+ MANDIR=$(INSTROOT)/man/man3
+@@ -19,7 +19,7 @@
+ # Add -DHAVE_ANSIHEADERS if your system have the ANSI C header files
+ # needed for our purposes (stdlib, string, unistd).
+ #
+-CFLAGS = -O
++#CFLAGS = -O
+ 
+ LDLIBS =
+ LIBIDENT = libident.a
+@@ -33,6 +33,7 @@
+ 	@echo aix
+ 	@echo bsd
+ 	@echo bsd2.11
++	@echo netbsd
+ 	@echo dynix
+ 	@echo hpux
+ 	@echo irix
+@@ -126,6 +127,8 @@
+ bsd2.11:
+ 	@$(MAKE) all CC="$(CC)" CFLAGS="-O -DSIGRETURNTYPE=int -DHAVE_ANSIHEADERS"
+ 
++netbsd:
++	@$(MAKE) all CC="$(CC)" CFLAGS="${CFLAGS} -Wall -DHAVE_ANSIHEADERS"
+ 
+ #
+ #
