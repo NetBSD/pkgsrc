@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5045 2004/02/29 22:23:09 jmmv Exp $
+$NetBSD: CHANGES,v 1.5046 2004/03/01 00:45:27 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1099,3 +1099,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated autoswc to 1.2 [jmmv 2004-02-29]
 	Updated mlterm to 2.8.0pl1nb1 [minskim 2004-02-29]
 	Added ltsa-2.2 [jmmv 2004-02-29]
+	Updated roundup to 0.6.7 [recht 2004-03-01]
