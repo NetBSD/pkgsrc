@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/09/05 16:20:30 jwise Exp $
+bin/expect
+include/expect.h
+include/expect_comm.h
+include/expect_tcl.h
+include/tcldbg.h
+lib/tcl/expect5.32/pkgIndex.tcl
+lib/libexpect532.a
+lib/libexpect532.la
+lib/libexpect532.so.1.0
+man/man1/expect.1.gz
+man/man3/libexpect.3.gz
+share/examples/tcl/expect/autoexpect
+share/examples/tcl/expect/autoexpect.1
+share/examples/tcl/expect/autopasswd
+share/examples/tcl/expect/cryptdir
+share/examples/tcl/expect/cryptdir.1
+share/examples/tcl/expect/decryptdir
+share/examples/tcl/expect/decryptdir.1
+share/examples/tcl/expect/dislocate
+share/examples/tcl/expect/dislocate.1
+share/examples/tcl/expect/ftp-rfc
+share/examples/tcl/expect/kibitz
+share/examples/tcl/expect/kibitz.1
+share/examples/tcl/expect/lpunlock
+share/examples/tcl/expect/mkpasswd
+share/examples/tcl/expect/mkpasswd.1
+share/examples/tcl/expect/passmass
+share/examples/tcl/expect/passmass.1
+share/examples/tcl/expect/rftp
+share/examples/tcl/expect/rlogin-cwd
+share/examples/tcl/expect/timed-read
+share/examples/tcl/expect/timed-run
+share/examples/tcl/expect/tknewsbiff
+share/examples/tcl/expect/tknewsbiff.1
+share/examples/tcl/expect/tkpasswd
+share/examples/tcl/expect/unbuffer
+share/examples/tcl/expect/unbuffer.1
+share/examples/tcl/expect/weather
+share/examples/tcl/expect/xkibitz
+share/examples/tcl/expect/xkibitz.1
+share/examples/tcl/expect/xpstat
+@dirrm lib/tcl/expect5.32
+@dirrm share/examples/tcl/expect
