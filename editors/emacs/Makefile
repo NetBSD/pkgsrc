@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2000/03/26 08:09:07 enami Exp $
+# $NetBSD: Makefile,v 1.38 2000/03/28 07:08:41 enami Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-20.6
@@ -10,6 +10,11 @@ HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+
+BUILD_DEFS+=	USE_INET6 EMACS_USE_POP EMACS_USE_X EMACS_USE_X_TOOLKIT
+
+.include "../../mk/bsd.prefs.mk"
+
 EMACS_USE_POP?=	yes
 .if (defined(EMACS_USE_POP) && \
     (${EMACS_USE_POP} == yes || ${EMACS_USE_POP} == YES))
@@ -29,8 +34,6 @@ CONFIGURE_ARGS+=--with-ipv6
 MAKE_ENV+=	INSTALL_STRIP=${STRIPFLAG}
 INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff \
 		    ccmode message widget reftex forms
-
-BUILD_DEFS+=	USE_INET6 EMACS_USE_POP EMACS_USE_X EMACS_USE_X_TOOLKIT
 
 INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
