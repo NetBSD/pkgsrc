@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.242 2002/04/02 21:04:31 seb Exp $
+# $NetBSD: Packages.txt,v 1.243 2002/04/13 12:59:52 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -2307,7 +2307,7 @@ You have to separate between binary and "normal" (source) packages here:
 
  * packages:
    First, check that your package is complete, compiles and runs well; see
-   section 8 and the rest of this document. Next, generate a gzipped
+   section 9 and the rest of this document. Next, generate a gzipped
    tar-file of all the files needed for the package, preferably with all
    files in a single directory. Place this tar-file to a place where the
    package maintainers can fetch it using FTP or HTTP (WWW). Finally,
