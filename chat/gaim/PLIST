@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/05/29 16:27:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/07/01 17:16:21 hubertf Exp $
 bin/gaim
 lib/gaim/autorecon.so
 lib/gaim/chatlist.so
@@ -30,12 +30,15 @@ lib/gaim/libzephyr.so
 lib/gaim/notify.so
 lib/gaim/spellchk.so
 man/man1/gaim.1
+share/gnome/apps/Internet/gaim.desktop
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gaim.mo
@@ -46,7 +49,8 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gaim.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gaim.mo
-share/gnome/apps/Internet/gaim.desktop
 share/pixmaps/gaim.xpm
-@unexec ${RMDIR} -p %D/share/gnome/apps/Internet 2>/dev/null || ${TRUE}
+@dirrm share/gnome/apps/Internet
+@dirrm share/gnome/apps
+@dirrm share/gnome
 @dirrm lib/gaim
