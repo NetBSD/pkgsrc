@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:38 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/07/17 11:23:09 skrll Exp $
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/JavaSim.html
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/arrays.html
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/assignment.html
