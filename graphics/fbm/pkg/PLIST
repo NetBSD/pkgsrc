@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.2 2000/08/03 19:20:45 rh Exp $
 bin/clr2gray
 bin/fbcat
 bin/fbclean
@@ -34,3 +35,32 @@ bin/tga2fbm
 bin/udiff
 bin/unmap
 bin/uunet2fbm
+man/manl/clr2gray.l
+man/manl/fbcat.l
+man/manl/fbclean.l
+man/manl/fbedge.l
+man/manl/fbext.l
+man/manl/fbhalf.l
+man/manl/fbhist.l
+man/manl/fbinfo.l
+man/manl/fbm2pod.l
+man/manl/fbmask.l
+man/manl/fbnorm.l
+man/manl/fbps.l
+man/manl/fbquant.l
+man/manl/fbrot.l
+man/manl/fbsample.l
+man/manl/fbsharp.l
+man/manl/gray2clr.l
+man/manl/idiff.l
+man/manl/pbm2ps.l
+man/manl/pbmtitle.l
+man/manl/raw2fbm.l
+man/manl/qrt2fbm.l
+man/manl/fbm.l
+man/manl/fbham.l
+man/manl/uunet2fbm.l
+man/manl/tiff2fbm.l
+man/manl/fbmedian.l
+man/manl/fbconv.l
+man/manl/fbthin.l

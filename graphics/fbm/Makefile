@@ -1,25 +1,13 @@
-# New ports collection makefile for:	fbm
-# Date created:		21 January 1998
-# Whom:			giffunip@asme.org
-#
-# $FreeBSD: ports/graphics/fbm/Makefile,v 1.5 2000/04/29 23:54:02 steve Exp $
-#
+# $NetBSD: Makefile,v 1.1.1.2 2000/08/03 19:20:43 rh Exp $
+# FreeBSD Id: ports/graphics/fbm/Makefile,v 1.5 2000/04/29 23:54:02 steve Exp
 
-PORTNAME=	fbm
-PORTVERSION=	1.2
-CATEGORIES=	graphics
-MASTER_SITES=		${MASTER_SITE_SUNSITE}
-MASTER_SITE_SUBDIR=	apps/graphics/convert
+DISTNAME=	fbm-1.2
+CATEGORIES=	graphics converters
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/graphics/convert/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 NO_WRKSUBDIR=	yes
 
-MANL=	clr2gray.l fbcat.l fbclean.l fbconv.l fbedge.l fbext.l fbhalf.l \
-	fbham.l fbhist.l fbinfo.l fbm.l fbm2pod.l fbmask.l fbmedian.l \
-	fbnorm.l fbps.l fbquant.l fbrot.l fbsample.l fbsharp.l fbthin.l \
-	gray2clr.l idiff.l pbm2ps.l pbmtitle.l qrt2fbm.l raw2fbm.l tiff2fbm.l \
-	uunet2fbm.l 
-
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
