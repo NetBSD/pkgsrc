@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.67 2001/09/14 13:49:36 hubertf Exp $
+$NetBSD: TODO,v 1.68 2001/09/18 22:01:05 skrll Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -50,9 +50,6 @@ packages TODO (Suggested new packages)
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
 	o update x11/xfce to 3.8.3
-	o update/add cyrus-imapd 2.0.13
-		(skrll has a new package. Need testers for v1 -> v2
-		database upgrade)
 	o update/add openldap 2.0.8
 		(skrll has a new package)
 	o update print/ghostscript to 6.51/7.00
