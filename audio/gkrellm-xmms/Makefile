@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:22:14 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:34 reed Exp $
 
 DISTNAME=	gkrellmms-0.5.6
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	gkrellm-xmms-0.5.6
 WRKSRC=		${WRKDIR}/gkrellmms
 CATEGORIES=	audio

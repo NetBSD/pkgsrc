@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/12/13 00:45:22 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/01/03 18:49:37 reed Exp $
 #
 # This Makefile fragment is included by packages that use coconut.
 #
@@ -9,7 +9,7 @@
 COCONUT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			coconut
-BUILDLINK_DEPENDS.coconut?=		coconut>=0.3.0nb8
+BUILDLINK_DEPENDS.coconut?=		coconut>=0.3.0nb9
 BUILDLINK_PKGSRCDIR.coconut?=		../../devel/coconut
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.coconut=coconut

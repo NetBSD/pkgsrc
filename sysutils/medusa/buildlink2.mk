@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/11/12 01:31:51 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:53 reed Exp $
 #
 # This Makefile fragment is included by packages that use medusa.
 #
@@ -9,7 +9,7 @@
 MEDUSA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			medusa
-BUILDLINK_DEPENDS.medusa?=		medusa>=0.5.1nb4
+BUILDLINK_DEPENDS.medusa?=		medusa>=0.5.1nb5
 BUILDLINK_PKGSRCDIR.medusa?=		../../sysutils/medusa
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.medusa=medusa

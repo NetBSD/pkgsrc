@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/12/13 00:45:25 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:53 reed Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-systemload-plugin.
 #
@@ -9,7 +9,7 @@
 XFCE4_SYSTEMLOAD_PLUGIN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-systemload-plugin
-BUILDLINK_DEPENDS.xfce4-systemload-plugin?=		xfce4-systemload-plugin>=0.3.4nb1
+BUILDLINK_DEPENDS.xfce4-systemload-plugin?=		xfce4-systemload-plugin>=0.3.4nb2
 BUILDLINK_PKGSRCDIR.xfce4-systemload-plugin?=		../../sysutils/xfce4-systemload-plugin
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-systemload-plugin=xfce4-systemload-plugin

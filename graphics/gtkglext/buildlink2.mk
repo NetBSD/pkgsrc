@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2004/01/03 18:49:43 reed Exp $
 #
 # This Makefile fragment is included by packages that use gtkglext.
 #
@@ -9,7 +9,7 @@
 GTKGLEXT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gtkglext
-BUILDLINK_DEPENDS.gtkglext?=		gtkglext>=0.7.1nb3
+BUILDLINK_DEPENDS.gtkglext?=		gtkglext>=0.7.1nb4
 BUILDLINK_PKGSRCDIR.gtkglext?=		../../graphics/gtkglext
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gtkglext=gtkglext

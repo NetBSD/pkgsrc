@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2003/12/19 12:07:43 recht Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/01/03 18:49:51 reed Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 BASEGS_VERS=	7.07
+PKGREVISION=	1
 GS_VERS=	${BASEGS_VERS}.1
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 CATEGORIES=	print

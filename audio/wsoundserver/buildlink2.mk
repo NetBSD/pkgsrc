@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/13 13:50:31 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:34 reed Exp $
 
 .if !defined(WSOUND_BUILDLINK2_MK)
 WSOUND_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		wsound
-BUILDLINK_DEPENDS.wsound?=	wsoundserver>=0.4.0nb3
+BUILDLINK_DEPENDS.wsound?=	wsoundserver>=0.4.0nb4
 BUILDLINK_PKGSRCDIR.wsound?=	../../audio/wsoundserver
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.wsound=wsoundserver

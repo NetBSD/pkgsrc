@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/12/18 04:14:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/03 18:49:44 reed Exp $
 #
 
 DISTNAME=	sodipodi-0.33
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sodipodi/}
 
