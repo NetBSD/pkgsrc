@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2000/07/31 17:02:25 tron Exp $
+$NetBSD: patch-ac,v 1.2 2000/07/31 17:24:22 tron Exp $
 
 --- drivers.c.orig	Fri May  5 02:34:29 2000
-+++ drivers.c	Mon Jul 31 19:00:30 2000
++++ drivers.c	Mon Jul 31 19:22:21 2000
+@@ -445,7 +445,7 @@
+   if (((kvmfd = kvm_open(NULL, NULL, NULL, O_RDONLY, buffer)) == NULL) ||
+       (kvm_nlist(kvmfd, symbols) < 0) ||
+       kvm_read(kvmfd, (unsigned long)symbols[0].n_value, &ifnet_savedaddr, sizeof(unsigned long)) == -1 ) return False;
+-  if(device == NULL) device = "ec0";
++  if(device == NULL) device = "ppp0";
+   fprintf(stderr, "wmnet: using kmem driver to monitor %s\n", device);
+   return True;
+ }
 @@ -457,7 +457,7 @@
   int flag = 0;
   while (ifnet_addr && flag != (ACCOUNT_IN_FOUND|ACCOUNT_OUT_FOUND)) {
