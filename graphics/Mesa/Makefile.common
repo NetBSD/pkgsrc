@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2004/02/11 02:25:07 jlam Exp $
+# $NetBSD: Makefile.common,v 1.30 2004/04/09 13:05:52 adam Exp $
 #
 
 DISTNAME=	MesaLib-${MESA_VERSION}
@@ -9,7 +9,7 @@ CATEGORIES=	graphics
 MASTER_SITES= 	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 EXTRACT_SUFX=	.tar.bz2
 
-MESA_VERSION=	6.0
+MESA_VERSION=	6.0.1
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mesa3d.org/

@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2004/01/22 12:58:53 adam Exp $
+$NetBSD: patch-ag,v 1.2 2004/04/09 13:06:06 adam Exp $
 
---- src/glut/glx/Makefile.X11.orig	2004-01-22 12:23:17.000000000 +0000
+--- src/glut/glx/Makefile.X11.orig	2004-03-24 20:02:51.000000000 +0000
 +++ src/glut/glx/Makefile.X11
 @@ -82,6 +82,7 @@ OBJECTS = $(SOURCES:.c=.o)
  ##### RULES #####
@@ -15,8 +15,8 @@ $NetBSD: patch-ag,v 1.1 2004/01/22 12:58:53 adam Exp $
  # Make the library
  $(LIBDIR)/$(GLUT_LIB): $(OBJECTS)
 -	$(TOP)/bin/mklib -o glut -major $(GLUT_MAJOR) -minor $(GLUT_MINOR) \
--		-patch $(GLUT_TINY) $(GLUT_LIB_DEPS) -install $(LIBDIR) \
--		$(MKLIB_OPTIONS) $(OBJECTS)
+-		-patch $(GLUT_TINY) $(MKLIB_OPTIONS) -install $(LIBDIR) \
+-		$(GLUT_LIB_DEPS) $(OBJECTS)
 +	${LIBTOOL} --mode=link ${CC} -o ${GLUT_LIB:.so=.la} ${OBJECTS:.o=.lo} \
 +		-rpath ${PREFIX}/lib -version-info ${GLUT_MAJOR}:${GLUT_MINOR}
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2004/01/22 12:58:19 adam Exp $
+$NetBSD: patch-ab,v 1.11 2004/04/09 13:06:06 adam Exp $
 
---- Make-config.orig	2004-01-15 14:23:54.000000000 +0000
+--- Make-config.orig	2004-03-30 14:47:13.000000000 +0000
 +++ Make-config
-@@ -778,19 +778,14 @@ mklinux:
+@@ -1172,19 +1172,14 @@ mklinux:
  	"GLUT_CFLAGS = -fexceptions" \
  	"APP_LIB_DEPS = -lmoto -L/usr/X11/lib -lXmu -lX11 -lm"
  

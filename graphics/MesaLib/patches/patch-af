@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2004/01/22 12:58:53 adam Exp $
+$NetBSD: patch-af,v 1.2 2004/04/09 13:06:06 adam Exp $
 
---- src/glu/sgi/Makefile.X11.orig	2004-01-22 12:08:07.000000000 +0000
+--- src/glu/sgi/Makefile.X11.orig	2004-03-24 20:02:03.000000000 +0000
 +++ src/glu/sgi/Makefile.X11
 @@ -119,9 +119,11 @@ OBJECTS = $(C_OBJECTS) $(CC_OBJECTS)
  ##### RULES #####
@@ -20,8 +20,8 @@ $NetBSD: patch-af,v 1.1 2004/01/22 12:58:53 adam Exp $
  $(LIBDIR)/$(GLU_LIB): $(OBJECTS)
 -	$(TOP)/bin/mklib -o $(GLU_LIB_NAME) -major $(GLU_MAJOR) \
 -		-minor $(GLU_MINOR) -patch $(GLU_TINY) \
--		$(GLU_LIB_DEPS) -cplusplus -install $(LIBDIR) \
--		$(MKLIB_OPTIONS) $(OBJECTS)
+-		$(MKLIB_OPTIONS) -cplusplus -install $(LIBDIR) \
+-		$(GLU_LIB_DEPS) $(OBJECTS)
 +	${LIBTOOL} --mode=link ${CXX} -o ${GLU_LIB:.so=.la} ${OBJECTS:.o=.lo} \
 +		-rpath ${PREFIX}/lib -version-info ${GLU_MAJOR}:${GLU_MINOR}
  
