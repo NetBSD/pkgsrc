@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/05 17:18:21 jlam Exp $
 #
 
 DISTNAME=		ispman-0.5
@@ -11,7 +11,7 @@ MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.ispman.org/
 COMMENT=		Perl module for ISPMan webAdministrator and command line utils
 
-DEPENDS+=		p5-CGI>=2.72:../../www/p5-CGI
+DEPENDS+=		{p5-CGI>=2.72,perl>=5.6.1nb2}:../../www/p5-CGI
 DEPENDS+=		p5-Text-Template>=1.23:../../textproc/p5-Text-Template
 DEPENDS+=		p5-perl-ldap>=0.22:../../databases/p5-perl-ldap
 DEPENDS+=		p5-IMAP-Admin>=1.2.5:../../mail/p5-IMAP-Admin
