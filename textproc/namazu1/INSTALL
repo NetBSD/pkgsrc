@@ -1,13 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2002/05/31 13:01:39 seb Exp $
+# $NetBSD: INSTALL,v 1.2 2003/08/30 20:23:07 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 case ${STAGE} in
-PRE-INSTALL)
-	;;
 POST-INSTALL)
 	cat <<EOF
 
@@ -18,10 +16,6 @@ If you customize namazu configuration, copy
 =============================================================
 
 EOF
-	;;
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
 	;;
 esac
 exit 0
