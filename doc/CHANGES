@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3409 2003/09/16 16:32:04 taca Exp $
+$NetBSD: CHANGES,v 1.3410 2003/09/16 18:54:13 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3729,3 +3729,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gossip to 0.5nb1 [agc 2003-09-16]
 	Updated squid to 2.5.4 [taca 2003-09-16]
 	Added ruby-vapor-0.7.0 [taca 2003-09-16]
+	Updated slib to 2.4.6 [xtraeme 2003-09-16]
