@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:54 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/05/27 05:09:04 jlam Exp $
 bin/imtest
 bin/installsieve
 bin/lmtptest
@@ -99,19 +99,19 @@ man/man8/ctl_mboxlist.8
 man/man8/cvt_cyrusdb.8
 man/man8/cyr_expire.8
 man/man8/cyrus-deliver.8
+man/man8/cyrus-idled.8
 man/man8/cyrus-imapd.8
+man/man8/cyrus-lmtpd.8
 man/man8/cyrus-master.8
+man/man8/cyrus-nntpd.8
+man/man8/cyrus-notifyd.8
 man/man8/cyrus-pop3d.8
+man/man8/cyrus-quota.8
 man/man8/fetchnews.8
 man/man8/fud.8
-man/man8/idled.8
 man/man8/ipurge.8
-man/man8/lmtpd.8
 man/man8/mbexamine.8
 man/man8/mbpath.8
-man/man8/nntpd.8
-man/man8/notifyd.8
-man/man8/quota.8
 man/man8/reconstruct.8
 man/man8/rmnews.8
 man/man8/smmapd.8
