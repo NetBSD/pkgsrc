@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1252 2003/09/02 06:59:42 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1253 2003/09/02 12:01:14 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -2530,7 +2530,7 @@ real-su-install: ${MESSAGE}
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	fi
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${PREFIX}
+	${_PKG_SILENT}${_PKG_DEBUG}[ -d ${PREFIX} ] || ${MKDIR} ${PREFIX}
 .endif # !NO_MTREE
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install-script
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install
