@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/20 00:35:22 pooka Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/20 00:36:20 pooka Exp $
 bin/povray
 man/man1/povray.1
 lib/povray31/allscene.ini
@@ -20,9 +20,13 @@ lib/povray31/CMPL_Unix.doc
 lib/povray31/compile.doc
 lib/povray31/povlegal.doc
 lib/povray31/revision.doc
+lib/povray31/gamma.gif.txt
+lib/povray31/povuser.txt
 lib/povray31/gamma.gif
 lib/povray31/xpovicon.xpm
 lib/povray31/allscene.sh
+lib/povray31/runpov.sh
+lib/povray31/rerunpov.sh
 lib/povray31/include/bubinga.map
 lib/povray31/include/cedar.map
 lib/povray31/include/colors.inc
