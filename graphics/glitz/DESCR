@@ -1,0 +1,9 @@
+Glitz is a portable 2D graphics library that uses OpenGL to render hardware
+accelerated graphics.  It supports many of the latest OpenGL features, such as
+efficient off-screen rendering using pbuffers. Rendering can be carried out by
+arbitrary OpenGL layers, thanks to glitz's extensible backend system.
+
+Glitz is designed to match the X Render Extension semantics and provides
+a general way for accelerating this imaging model.  Glitz can be used as
+a stand-alone layer above OpenGL but is also designed to act as a backend for
+cairo, providing it with OpenGL accelerated output.
