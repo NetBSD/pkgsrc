@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.65 2005/01/26 09:32:31 tron Exp $
+# $NetBSD: Makefile,v 1.66 2005/03/15 16:07:01 tron Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	bind-${BIND_VERSION}pl1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
-MAINTAINER=	tron@NetBSD.org
-HOMEPAGE=	http://www.isc.org/sw/bind/
-COMMENT=	Version 9 of the Berkeley Internet Name Daemon, implementation of DNS
-
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		9.3.0-patch1
 PATCH_DIST_STRIP=	-p1
+
+MAINTAINER=	tron@NetBSD.org
+HOMEPAGE=	http://www.isc.org/sw/bind/
+COMMENT=	Version 9 of the Berkeley Internet Name Daemon, implementation of DNS
 
 BIND_VERSION=	9.3.0
 DIST_SUBDIR=	bind/${BIND_VERSION}
@@ -23,6 +23,7 @@ BUILD_DEFS+=	USE_INET6
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
+USE_PKGINSTALL=		yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-libtool=yes \
@@ -35,14 +36,6 @@ CONFIGURE_ARGS+=--with-openssl=${SSLBASE}
 
 PTHREAD_OPTS+=	native
 
-post-build:
-	${SED} \
-		-e 's|@PREFIX@|${PREFIX}|' \
-		<${FILESDIR}/named.sh >${WRKDIR}/named
-	${SED} \
-		-e 's|@PREFIX@|${PREFIX}|' \
-		<${FILESDIR}/lwresd.sh >${WRKDIR}/lwresd
-
 # include/isc/ipv6.h is installed on non-ipv6 platforms
 .if defined(USE_INET6) && (${USE_INET6} == "YES")
 PLIST_SUBST+=	IPV6H="@comment "
@@ -51,6 +44,7 @@ PLIST_SUBST+=	IPV6H=
 .endif
 
 PLIST_SRC=	${WRKDIR}/PLIST
+RCD_SCRIPTS=	lwresd named
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9
@@ -67,8 +61,6 @@ post-install:
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | \
 		${SED} -e 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
-	${INSTALL_SCRIPT} ${WRKDIR}/named ${PREFIX}/etc/rc.d/named9
-	${INSTALL_SCRIPT} ${WRKDIR}/lwresd ${PREFIX}/etc/rc.d/lwresd
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
