@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink2.mk,v 1.6 2002/12/23 22:50:29 jschauma Exp $
+# $NetBSD: motif.buildlink2.mk,v 1.7 2003/03/25 13:42:16 salo Exp $
 #
 # USE_MOTIF12
 #	use a Motif-1.2-compatible installation, otherwise, assume
@@ -26,7 +26,7 @@ MOTIF_BUILDLINK2_MK=	# defined
       !exists(/usr/dt/include/Xm/Gadget.h)
 _MOTIF_TYPE=		dt
 .  elif exists(${X11BASE}/include/Xm/Xm.h) && \
-        !exists(${X11BASE}/include/Xm/Gadget.h)
+	!exists(${X11BASE}/include/Xm/Gadget.h)
 _MOTIF_TYPE=		none
 .  else
 _MOTIF_TYPE=		${MOTIF12_TYPE_DEFAULT}
@@ -42,13 +42,13 @@ _MOTIF_TYPE=		${MOTIF12_TYPE_DEFAULT}
       exists(/usr/dt/include/Xm/Gadget.h)
 _MOTIF_TYPE=		dt
 .  elif exists(${X11BASE}/lib/X11/config/OpenMotif.tmpl) || \
-        exists(${LOCALBASE}/lib/X11/config/OpenMotif.tmpl)
+	exists(${LOCALBASE}/lib/X11/config/OpenMotif.tmpl)
 _MOTIF_TYPE=		openmotif
 .  elif exists(${X11BASE}/lib/X11/config/LessTif.tmpl) || \
-        exists(${LOCALBASE}/lib/X11/config/LessTif.tmpl)
+	exists(${LOCALBASE}/lib/X11/config/LessTif.tmpl)
 _MOTIF_TYPE=		lesstif
 .  elif exists(${X11BASE}/include/Xm.h) && \
-        exists(${X11BASE}/include/Xm/Gadget.h)
+	exists(${X11BASE}/include/Xm/Gadget.h)
 _MOTIF_TYPE=		none
 .  else
 _MOTIF_TYPE=		${MOTIF_TYPE_DEFAULT}
@@ -62,15 +62,15 @@ _MOTIF_TYPE=		${MOTIF_TYPE_DEFAULT}
 .if defined(USE_MOTIF12)
 .  if defined(MOTIF12_TYPE)
 .    if (${MOTIF12_TYPE} == "dt") || \
-        (${MOTIF12_TYPE} == "lesstif12")
+	(${MOTIF12_TYPE} == "lesstif12")
 _MOTIF_TYPE=		${MOTIF12_TYPE}
 .    endif
 .  endif
 .else
 .  if defined(MOTIF_TYPE)
 .    if (${MOTIF_TYPE} == "dt") || \
-        (${MOTIF_TYPE} == "lesstif") || \
-        (${MOTIF_TYPE} == "openmotif")
+	(${MOTIF_TYPE} == "lesstif") || \
+	(${MOTIF_TYPE} == "openmotif")
 _MOTIF_TYPE=		${MOTIF_TYPE}
 .    endif
 .  endif
