@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 1998/12/03 17:29:59 tv Exp $
+$NetBSD: patch-ac,v 1.6 1999/03/10 20:04:12 explorer Exp $
 
 --- Configure.orig	Tue Dec  1 10:49:58 1998
 +++ Configure	Tue Dec  1 10:51:42 1998
@@ -25,7 +25,7 @@ $NetBSD: patch-ac,v 1.5 1998/12/03 17:29:59 tv Exp $
 +"NetBSD-sparc", "$LIBTOOL gcc:$use_rsaref_def -DTERMIOS -D_ANSI_SOURCE -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
 +"NetBSD-sparc64", "$LIBTOOL gcc:$use_rsaref_def -DTERMIOS -D_ANSI_SOURCE -O3 -fomit-frame-pointer -Wall -DB_ENDIAN:-Wl,-R$ENV{'PREFIX'}/lib:SIXTY_FOUR_BIT_LONGS DES_INT DES_PTR DES_RISC1:::",
 +"NetBSD-m86", "$LIBTOOL gcc:$use_rsaref_def -DTERMIOS -D_ANSI_SOURCE -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:::",
-+"NetBSD-x86", "$LIBTOOL gcc:$use_rsaref_def -DTERMIOS -DL_ENDIAN -DBN_ASM -D_ANSI_SOURCE -O3 -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:",
++"NetBSD-x86", "$LIBTOOL gcc:$use_rsaref_def -DTERMIOS -DL_ENDIAN -DBN_ASM -D_ANSI_SOURCE -O -fomit-frame-pointer -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:",
  "FreeBSD",   "gcc:-DTERMIOS -DBN_ASM -DL_ENDIAN -D_ANSI_SOURCE -fomit-frame-pointer -O3 -m486 -Wall::BN_LLONG $x86_gcc_des $x86_gcc_opts:$x86_out_asm",
  #"bsdi-gcc",     "gcc:-O3 -ffast-math -DBN_ASM -DL_ENDIAN -DPERL5 -m486::RSA_LLONG $x86_gc_des $x86_gcc_opts:$x86_bsdi_asm",
  "nextstep",	"cc:-O3 -Wall -DBN_ASM::BN_LLONG $x86_gcc_des $x86_gcc_opts:::",
