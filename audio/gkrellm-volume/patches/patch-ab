@@ -1,57 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/06/11 22:39:42 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2002/06/11 22:54:11 wiz Exp $
 
---- Makefile.orig	Sun Apr 14 21:36:15 2002
-+++ Makefile	Sun Apr 14 21:37:33 2002
-@@ -1,27 +1,19 @@
- # Makefile for  GKrellM volume plugin
+--- volume.c.orig	Wed Nov 22 21:35:42 2000
++++ volume.c
+@@ -19,6 +19,8 @@
  
--# Linux
--GTK_CONFIG = gtk-config
--SYSLIB = -lpthread
--
--# FreeBSD
--#GTK_CONFIG = gtk12-config
--#SYSLIB =
--
--PLUGIN_DIR = /usr/share/gkrellm/plugins
-+PLUGIN_DIR = ${LOCALBASE}/lib/gkrellm/plugins
- GKRELLM_INCLUDE = -I/usr/local/include
- 
--GTK_INCLUDE = `$(GTK_CONFIG) --cflags`
--GTK_LIB = `$(GTK_CONFIG) --libs`
-+GTK_INCLUDE = `gtk-config --cflags`
-+GTK_LIB = `gtk-config --libs`
- 
- IMLIB_INCLUDE = `imlib-config --cflags-gdk`
- IMLIB_LIB = `imlib-config --libs-gdk`
- 
--FLAGS = -O2 -Wall -fPIC $(GTK_INCLUDE) $(IMLIB_INCLUDE) $(GKRELLM_INCLUDE)
--LIBS = $(GTK_LIB) $(IMLIB_LIB) $(SYSLIB)
--LFLAGS = -shared
-+CFLAGS+= -O2 -Wall -fPIC $(GTK_INCLUDE) $(IMLIB_INCLUDE) $(GKRELLM_INCLUDE)
-+LIBS+= $(GTK_LIB) $(IMLIB_LIB) $(SYSLIB)
-+LFLAGS+= -shared -lpthread -lossaudio
- 
--CC = gcc $(CFLAGS) $(FLAGS)
-+CC = gcc $(CFLAGS)
- 
- INSTALL = install -c
- INSTALL_PROGRAM = $(INSTALL) -s
-@@ -30,9 +22,6 @@
- 
- all:	volume.so
- 
--freebsd:
--	make GTK_CONFIG=gtk12-config SYSLIB=all
--
- volume.so: $(OBJS)
- 	$(CC) $(OBJS) -o volume.so $(LIBS) $(LFLAGS)
- 
-@@ -40,6 +29,7 @@
- 	rm -f *.o core *.so* *.bak *~
- 
- install: 
-+	mkdir -p $(PLUGIN_DIR)
- 	$(INSTALL_PROGRAM) volume.so $(PLUGIN_DIR)
- 
- volume.c.o: volume.c
+ #ifdef __FreeBSD__
+ #include <machine/soundcard.h>
++#elif __NetBSD__
++#include <soundcard.h>
+ #else
+ #include <sys/soundcard.h>
+ #endif
