@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2733 2004/12/21 07:01:07 martti Exp $
+$NetBSD: TODO,v 1.2734 2004/12/21 14:16:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -403,6 +403,7 @@ Suggested package updates
 	o cstream-2.5
 	o cue-20041115
 	o cuetools-1.2
+	o curl-7.12.3
 	o cvs-1.11.18
 	o cvsgraph-1.5.1
 	o cwtext-0.94
@@ -501,7 +502,7 @@ Suggested package updates
 	o gbib-0.1.2
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
-	o gcpio-2.5.90
+	o gcpio-2.6
 	o gdb6-6.3.0
 	o gdeskcal-0.57.1
 	o gdm-2.6.0.6
@@ -556,6 +557,7 @@ Suggested package updates
 	o gsed-4.1.2
 	o gss-0.0.15
 	o gst-plugins-0.8.6
+	o gtar-1.15
 	o gtk-systrace-2003.06.23
 	o gtk2-2.6.0
 	o gtksee-0.5.6 [pkg/26372]
@@ -568,6 +570,7 @@ Suggested package updates
 	o gwenview-1.1.7
 	o hackbot-2.21
 	o haskell-mode-1.45
+	o hatari-0.60
 	o hdf5-1.6.3
 	o hercules-3.01
 	o hevea-1.07
@@ -635,7 +638,7 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.10.7
 	o lesstif-0.94.0
-	o lftp-3.0.12
+	o lftp-3.0.13
 	o libast-0.6
 	o libcdio-0.71
 	o libcomprex-0.3.3
@@ -740,6 +743,7 @@ Suggested package updates
 	o newmail-1.0.2
 	o newscache-1.1.92
 	o ng-1.4.4
+	o nget-0.27.1
 	o nhc98-1.17
 	o nn-6.6.5
 	o nrg2iso-0.4
@@ -879,7 +883,7 @@ Suggested package updates
 	o p5-Tie-EncryptedHash-1.21
 	o p5-Time-HiRes-1.65
 	o p5-Time-Piece-2.00.01
-	o p5-TimeDate-1.16
+	o p5-TimeDate-1.16 [pkg/28725]
 	o p5-Tree-Simple-1.14
 	o p5-URI-1.35
 	o p5-User-Identity-0.90
@@ -1071,6 +1075,7 @@ Suggested package updates
 	o snes9x-1.42
 	o snownews-1.5.6
 	o socat-1.4.1.0
+	o sox-12.17.7
 	o spamassassin-3.0.2
 	o speedtouch-1.2beta3
 	o spim-7.0
@@ -1085,6 +1090,8 @@ Suggested package updates
 	o stlport-4.6.2
 	o strace-4.5.8
 	o subtitleripper-0.3.4
+	o subversion-1.1.2
+	o svk-0.27
 	o swfdec-0.3.2
 	o swi-prolog-5.4.4
 	o swi-prolog-lite-5.4.3
@@ -1118,6 +1125,7 @@ Suggested package updates
 	o tfmxplay-1.1.6
 	o thunderbird-bin-1.0
 	o tiff-3.7.0 [reed]
+	o tiff-3.7.1
 	o tinc-1.0.3
 	o tinyproxy-1.7.0
 	o tk-8.4.9
