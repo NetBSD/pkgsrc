@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 1998/08/20 15:17:22 tsarna Exp $
+# $NetBSD: Makefile,v 1.5 1998/10/16 21:08:26 frueauf Exp $
 #
 
-DISTNAME=	suck-3.9.4
+DISTNAME=	suck-3.10.1
 CATEGORIES=	news
 MASTER_SITES=	http://home.att.net/~bobyetman/
 MASTER_SITES+=	ftp://sunsite.unc.edu/pub/Linux/system/news/transport/
@@ -10,7 +10,7 @@ MASTER_SITES+=	ftp://tsx-11.mit.edu/pub/linux/sources/sbin/
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://home.att.net/~bobyetman/
 
-CONFLICTS=	suck-3.9.3
+CONFLICTS=	suck-3.9.3 suck-3.9.4
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS= --prefix=${LOCALBASE}
@@ -24,5 +24,6 @@ post-patch:
 post-install:
 	${MKDIR} ${LOCALBASE}/share/examples/suck
 	${CP} ${WRKSRC}/sample/* ${LOCALBASE}/share/examples/suck
+	${CHMOD} 644 ${LOCALBASE}/share/examples/suck/*
 
 .include "../../mk/bsd.pkg.mk"
