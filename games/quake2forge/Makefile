@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/16 15:17:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/17 10:36:05 xtraeme Exp $
 #
 
 DISTNAME=	quake2-0.2.1
@@ -17,8 +17,6 @@ USE_LIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 
-CFLAGS+=	-DDEVOSSAUDIO=\"\\\"${DEVOSSAUDIO}\\\"\"
-
 BUILDLINK_TRANSFORM+=	S:-Werror:
 CONFIGURE_ARGS+=	--program-transform-name='s/^quake2$$/quake2forge/'
 
@@ -26,7 +24,13 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/quake2forge
 	${INSTALL_DATA} ${WRKSRC}/docs/README* ${PREFIX}/share/doc/quake2forge
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/quake2forge
-    
+
+SUBST_CLASSES=	    snd
+SUBST_STAGE.snd=    post-patch
+SUBST_FILES.snd=    src/snd.c
+SUBST_SED.snd=	    -e "s,/dev/dsp,${DEVOSSAUDIO},g"
+SUBST_MESSAGE.snd=  "Fixing harcoded audio device."
+
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
