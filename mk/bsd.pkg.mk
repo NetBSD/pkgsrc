@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1024 2002/08/01 13:25:26 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1025 2002/08/03 00:15:30 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -3808,6 +3808,19 @@ print-pkg-size-depends:
 # Common (system) directories not to generate @dirrm statements for
 # Reads MTREE_FILE and extracts a list of sed commands that will
 # sort out which directories NOT to include into the PLIST @dirrm list
+SUBST_PLIST_REPLACEMENT=\
+		-e  's@${OPSYS}@\$${OPSYS}@' 				\
+		-e  's@${OS_VERSION:S/./\./g}@\$${OS_VERSION}@'		\
+		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
+		-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 		\
+		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
+		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
+		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
+		-e  's@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@' 	\
+		-e  's@${PKGNAME:S/./\./g}@\$${PKGNAME}@' 			\
+		-e  's@${PKGVERSION:S/./\./g}@\$${PKGVERSION}@'		\
+		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@' \
+
 .if make(print-PLIST)
 COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
 			i=0; 						\
@@ -3854,17 +3867,7 @@ print-PLIST:
 	 | ${SORT}							\
 	 | ${SED}							\
 		-e  's@${PREFIX}/./@@' 					\
-		-e  's@${OPSYS}@\$${OPSYS}@' 				\
-		-e  's@${OS_VERSION:S/./\./}@\$${OS_VERSION}@'		\
-		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
-		-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 		\
-		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
-		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
-		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
-		-e  's@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@' 	\
-		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
-		-e  's@${PKGVERSION:C/\./\./}@\$${PKGVERSION}@'		\
-		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@' \
+		${SUBST_PLIST_REPLACEMENT}				\
 	 | ${AWK} '							\
 		/^@/ { print $$0; next }				\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
@@ -3897,7 +3900,7 @@ print-PLIST:
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	for i in `${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} -type d	\
 			| ${SED}					\
-				-e s@${PREFIX}/./@@			\
+				-e 's@${PREFIX}/./@@'			\
 				-e '/^${PREFIX:S/\//\\\//g}\/.$$/d'	\
 			| ${SORT} -r | ${SED} ${COMMON_DIRS}` ;		\
 	do								\
@@ -3906,19 +3909,9 @@ print-PLIST:
 		fi ;							\
 		${ECHO} @dirrm $$i ;					\
 	done								\
-	| ${GREP} -v emul/linux/proc || ${TRUE}				\
+	| ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
 	| ${SED}							\
-		-e  s@${OPSYS}@\$${OPSYS}@ 				\
-		-e  s@${OS_VERSION}@\$${OS_VERSION}@ 			\
-		-e  s@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@ \
-		-e  s@${MACHINE_ARCH}@\$${MACHINE_ARCH}@ 		\
-		-e  s@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@	\
-		-e  s@${LOWER_VENDOR}@\$${LOWER_VENDOR}@ 		\
-		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
-		-e  s@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@ 	\
-		-e  s@${PKGNAME}@\$${PKGNAME}@ 				\
-		-e  s@${PKGVERSION}@\$${PKGVERSION}@			\
-		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@'
+		${SUBST_PLIST_REPLACEMENT}
 .endif # target(print-PLIST)
 
 
