@@ -1,46 +1,64 @@
-$NetBSD: patch-aa,v 1.4 2003/08/23 20:52:58 seb Exp $
+$NetBSD: patch-aa,v 1.5 2004/05/23 20:52:09 seb Exp $
 
---- Makefile.orig	2003-08-08 12:55:55.000000000 +0000
+--- Makefile.orig	2004-05-22 23:31:09.000000000 +0000
 +++ Makefile
-@@ -1,10 +1,6 @@
--CC = cc
--CFLAGS = -O
--LDFLAGS =
--
+@@ -1,18 +1,11 @@
 -DESTDIR = /usr/local
 -BINDIR = /usr/local/bin
+-SHAREDIR = /usr/local/share/imapfilter
 -MANDIR = /usr/local/man
+-
+-INCDIRS = -I/usr/local/include
+-LIBDIRS = -L/usr/local/lib
+-
+-MYCFLAGS = -Wall -O
+-MYLDFLAGS = 
 +DESTDIR = $(PREFIX)
 +BINDIR = $(PREFIX)/bin
++SHAREDIR = $(PREFIX)/share/imapfilter
 +MANDIR = $(PREFIX)/man
  
- MAN_BIN = imapfilter.1
- MAN_RC = imapfilterrc.5
-@@ -19,7 +15,7 @@ LIBS =  -lssl -lcrypto
- all: imapfilter
+ DEFS = -DMAKEFILE_SHAREDIR='"$(SHAREDIR)"'
  
- imapfilter: $(OBJ)
--	$(CC) $(LIBS) $(LDFLAGS) -o $(BIN) $(OBJ)
-+	$(CC) $(LDFLAGS) $(LIBS) $(CFLAGS) -o $(BIN) $(OBJ)
+-CFLAGS = $(MYCFLAGS) $(DEFS) $(INCDIRS)
+-LDFLAGS = $(MYLDFLAGS) $(LIBDIRS)
++CFLAGS+=	$(DEFS)
  
- account.o action.o auth.o buffer.o cert.o destroy.o file.o filter.o imap.o \
- 	imapfilter.o lock.o log.o match.o memory.o parse.o passwd.o \
-@@ -32,12 +28,12 @@ cert.o file.o lock.o parse.o: pathnames.
+ LIBS = -lm -llua -llualib -lssl -lcrypto
+ 
+@@ -30,7 +23,7 @@ OBJ = auth.o buffer.o cert.o core.o file
+ all: $(BIN)
+ 
+ $(BIN): $(OBJ)
+-	$(CC) -o $(BIN) $(LDFLAGS) $(OBJ) $(LIBS)
++	$(CC) -o $(BIN) $(LDFLAGS) $(CFLAGS) $(OBJ) $(LIBS)
+ 
+ $(OBJ): imapfilter.h
+ buffer.o imap.o imapfilter.o request.o response.o: buffer.h
+@@ -41,17 +34,15 @@ auth.o cert.o imap.o imapfilter.o log.o 
  imapfilter.o: version.h
  
- install: imapfilter
+ install: $(BIN)
 -	if test ! -d $(BINDIR); then mkdir -p $(BINDIR); fi
 -	cp -f $(BIN) $(BINDIR) && chmod 0755 $(BINDIR)/$(BIN)
+-	if test ! -d $(SHAREDIR); then mkdir -p $(SHAREDIR); fi
+-	cp -f $(INTERFACE_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(INTERFACE_LUA)
+-	cp -f $(AUXILIARY_LUA) $(SHAREDIR) && \
+-		chmod 0644 $(SHAREDIR)/$(AUXILIARY_LUA)
 -	if test ! -d $(MANDIR)/man1; then mkdir -p $(MANDIR)/man1; fi
 -	cp -f $(MAN_BIN) $(MANDIR)/man1 && chmod 0644 $(MANDIR)/man1/$(MAN_BIN)
 -	if test ! -d $(MANDIR)/man5; then mkdir -p $(MANDIR)/man5; fi
--	cp -f $(MAN_RC) $(MANDIR)/man5 && chmod 0644 $(MANDIR)/man5/$(MAN_RC)
+-	cp -f $(MAN_CONFIG) $(MANDIR)/man5 && chmod 0644 $(MANDIR)/man5/$(MAN_CONFIG)
 +	$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
-+	$(BSD_INSTALL_PROGRAM) $(BIN) $(BINDIR)
++	$(BSD_INSTALL_PROGRAM) $(BIN) $(BINDIR)/$(BIN)
++	$(BSD_INSTALL_DATA_DIR) $(SHAREDIR)
++	$(BSD_INSTALL_DATA) $(INTERFACE_LUA) $(SHAREDIR)/$(INTERFACE_LUA)
++	$(BSD_INSTALL_DATA) $(AUXILIARY_LUA) $(SHAREDIR)/$(AUXILIARY_LUA)
 +	$(BSD_INSTALL_MAN_DIR) $(MANDIR)/man1
-+	$(BSD_INSTALL_MAN) $(MAN_BIN) $(MANDIR)/man1
++	$(BSD_INSTALL_MAN) $(MAN_BIN) $(MANDIR)/man1/$(MAN_BIN)
 +	$(BSD_INSTALL_MAN_DIR) $(MANDIR)/man5
-+	$(BSD_INSTALL_MAN) $(MAN_RC) $(MANDIR)/man5
++	$(BSD_INSTALL_MAN) $(MAN_CONFIG) $(MANDIR)/man5/$(MAN_CONFIG)
  
  deinstall:
- 	rm -f $(BINDIR)/$(BIN) $(MANDIR)/man1/$(MAN_BIN) $(MANDIR)/man5/$(MAN_RC)
+ 	rm -f $(BINDIR)/$(BIN) $(SHAREDIR)/$(INTERFACE_LUA) \
