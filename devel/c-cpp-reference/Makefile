@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2004/04/25 20:07:04 snj Exp $
+# $NetBSD: Makefile,v 1.12 2004/08/21 15:43:56 markd Exp $
 #
 
 DISTNAME=	c_cpp_reference-2.0.2
 PKGNAME=	${DISTNAME:S/_/-/g}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel kde
 MASTER_SITES=	ftp://ftp.e-technik.fh-muenchen.de/pub/unix/ide/KDevelop/
 
@@ -11,7 +11,7 @@ MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.kdevelop.org/
 COMMENT=	C and C++ reference for the KDE IDE
 
-DEPENDS+=	kdevelop-base>=3.0.0:../../devel/kdevelop-base
+DEPENDS+=	kdevelop-base>=3.1.0:../../devel/kdevelop-base
 
 USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
@@ -25,8 +25,8 @@ post-build:
 	< ${FILESDIR}/c++_reference.toc > ${WRKDIR}/c++_reference.toc
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/c_reference.toc ${PREFIX}/share/kde/apps/kdevdoctreeview/tocs/c_reference.toc
-	${INSTALL_DATA} ${WRKDIR}/c++_reference.toc ${PREFIX}/share/kde/apps/kdevdoctreeview/tocs/c++_reference.toc
+	${INSTALL_DATA} ${WRKDIR}/c_reference.toc ${PREFIX}/share/kde/apps/kdevdocumentation/tocs/c_reference.toc
+	${INSTALL_DATA} ${WRKDIR}/c++_reference.toc ${PREFIX}/share/kde/apps/kdevdocumentation/tocs/c++_reference.toc
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../mk/bsd.pkg.mk"
