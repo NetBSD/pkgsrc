@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/17 18:04:04 xtraeme Exp $
+man/man8/openvpn.8
+sbin/openvpn
+share/examples/openvpn/config/README
+share/examples/openvpn/config/client.conf
+share/examples/openvpn/config/firewall.sh
+share/examples/openvpn/config/home.up
+share/examples/openvpn/config/loopback-client
+share/examples/openvpn/config/loopback-server
+share/examples/openvpn/config/office.up
+share/examples/openvpn/config/openvpn-shutdown.sh
+share/examples/openvpn/config/openvpn-startup.sh
+share/examples/openvpn/config/server.conf
+share/examples/openvpn/config/static-home.conf
+share/examples/openvpn/config/static-office.conf
+share/examples/openvpn/config/tls-home.conf
+share/examples/openvpn/config/tls-office.conf
+share/examples/openvpn/config/xinetd-client-config
+share/examples/openvpn/config/xinetd-server-config
+share/examples/openvpn/keys/README
+share/examples/openvpn/keys/client.crt
+share/examples/openvpn/keys/client.key
+share/examples/openvpn/keys/dh1024.pem
+share/examples/openvpn/keys/server.crt
+share/examples/openvpn/keys/server.key
+share/examples/openvpn/keys/tmp-ca.crt
+share/examples/openvpn/keys/tmp-ca.key
+share/examples/openvpn/scripts/auth-pam.pl
+share/examples/openvpn/scripts/bridge-start
+share/examples/openvpn/scripts/bridge-stop
+share/examples/openvpn/scripts/openvpn.init
+share/examples/openvpn/scripts/verify-cn
+@dirrm share/examples/openvpn/scripts
+@dirrm share/examples/openvpn/keys
+@dirrm share/examples/openvpn/config
+@dirrm share/examples/openvpn
