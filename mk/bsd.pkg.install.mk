@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.38 2002/10/23 17:43:16 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.39 2002/11/17 08:58:50 salo Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -212,6 +212,17 @@ PKG_RCD_SCRIPTS?=	NO
 FILES_SUBST+=		PKG_CREATE_USERGROUP=${PKG_CREATE_USERGROUP}
 FILES_SUBST+=		PKG_CONFIG=${PKG_CONFIG}
 FILES_SUBST+=		PKG_RCD_SCRIPTS=${PKG_RCD_SCRIPTS}
+
+# PKG_REGISTER_SHELLS indicates whether to automatically register shells
+#	in /etc/shells.  It is either YES or NO and defaults to YES.
+#
+# PKG_SHELL contains the full pathname of the shell being installed.
+#
+
+PKG_REGISTER_SHELLS?=	YES
+PKG_SHELL?=		# empty
+FILES_SUBST+=		PKG_REGISTER_SHELLS=${PKG_REGISTER_SHELLS}
+FILES_SUBST+=		PKG_SHELL=${PKG_SHELL:Q}
 
 # Substitute for various programs used in the DEINSTALL/INSTALL scripts and
 # in the rc.d scripts.
