@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4171 2003/12/18 04:27:27 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4172 2003/12/18 05:33:33 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5222,3 +5222,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated avidemux to 2.0.18 [xtraeme 2003-12-18]
 	Updated sodipodi to 0.33 [xtraeme 2003-12-18]
 	Updated pure-ftpd to 1.0.17a [xtraeme 2003-12-18]
+	Updated enlightenment to 0.16.6 [xtraeme 2003-12-18]
