@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/10/01 11:15:16 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/10/09 12:19:06 martti Exp $
 bin/FvwmCommand
 bin/fvwm-config
 bin/fvwm-menu-desktop
@@ -26,7 +26,7 @@ lib/X11/fvwm2/${FVWM_VER}/FvwmDebug
 lib/X11/fvwm2/${FVWM_VER}/FvwmDragWell
 lib/X11/fvwm2/${FVWM_VER}/FvwmEvent
 lib/X11/fvwm2/${FVWM_VER}/FvwmForm
-lib/X11/fvwm2/${FVWM_VER}/FvwmGtk
+${GTK}lib/X11/fvwm2/${FVWM_VER}/FvwmGtk
 lib/X11/fvwm2/${FVWM_VER}/FvwmIconBox
 lib/X11/fvwm2/${FVWM_VER}/FvwmIconMan
 lib/X11/fvwm2/${FVWM_VER}/FvwmIdent
@@ -393,6 +393,7 @@ man/man1/FvwmTaskBar.1
 man/man1/FvwmTheme.1
 man/man1/FvwmWharf.1
 man/man1/FvwmWinList.1
+man/man1/fvwm-config.1
 man/man1/fvwm-menu-desktop.1
 man/man1/fvwm-menu-directory.1
 man/man1/fvwm-menu-headlines.1
