@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/07/13 15:10:33 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/14 06:51:16 jlam Exp $
 
 DISTNAME=		GTL-0.3.3
 PKGNAME=		gtl-0.3.3
@@ -8,14 +8,24 @@ MASTER_SITES=		http://infosun.fmi.uni-passau.de/GTL/archive/
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.fmi.uni-passau.de/Graphlet/GTL/
 
+DEPENDS+=		sgi-stl-*:../../devel/sgi-stl
+
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CPPFLAGS+=		-I${LOCALBASE}/include/sgi-stl
+
 GTL_VERS=		0:3
 MAKE_ENV+=		GTL_VERS="${GTL_VERS}"
 
+MESSAGE_FILE=		${WRKDIR}/MESSAGE
 HTMLDOCDIR=		${PREFIX}/share/doc/html/GTL
+
+post-build:
+	${SED}	-e "s,@LOCALBASE@,${LOCALBASE},g" \
+		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${HTMLDOCDIR}
