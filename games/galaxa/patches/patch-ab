@@ -1,0 +1,32 @@
+--- galaxa.c.orig	Fri Jul 24 03:06:10 1998
++++ galaxa.c	Fri Jul 24 03:27:53 1998
+@@ -2694,7 +2694,7 @@
+   int i, z;
+-  
++  char temp[128];
+   
+   /* Open file: */
+-  
+-  fi = fopen("galaxa-highs.dat", "r");
++  sprintf(temp, "%s/galaxa-highs.dat", DATA);
++  fi = fopen(temp, "r");
+   
+@@ -2704,3 +2704,3 @@
+       
+-      perror("galaxa-highs.dat");
++      perror(temp);
+       
+@@ -2752,4 +2752,6 @@
+   int i;
+-  
+-  fi = fopen("galaxa-highs.dat", "w");
++  char temp[128];
++
++  sprintf(temp, "%s/galaxa-highs.dat", DATA);
++    fi = fopen(temp, "w");
+   
+@@ -2757,3 +2759,3 @@
+     {
+-      perror("galaxa-highs.dat");
++      perror(temp);
+     }
