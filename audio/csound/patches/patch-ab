@@ -1,8 +1,31 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/21 11:30:03 wiz Exp $
 
 --- Make.Targets.orig	Wed Oct 11 16:33:34 2000
 +++ Make.Targets
-@@ -67,7 +67,7 @@
+@@ -48,26 +48,26 @@
+ anals:			$(ANALS)
+ 
+ $(ANALS):		$(CSLIB)
+-	$(MAKE) -C $@ -$(MAKEFLAGS)
++	$(MAKE) -C $@ $(MAKEFLAGS)
+ 
+ utils1:			$(UTIL1)
+ 
+ $(UTIL1):		$(CSLIB)
+-	$(MAKE) -C $@ -$(MAKEFLAGS)
++	$(MAKE) -C $@ $(MAKEFLAGS)
+ 
+ utils2:			$(UTIL2)
+ 
+ $(UTIL2):		$(CSLIB)
+-	$(MAKE) -C $@ -$(MAKEFLAGS)
++	$(MAKE) -C $@ $(MAKEFLAGS)
+ 
+ $(STRINGSDB):
+-	$(MAKE) -C locale -$(MAKEFLAGS)
++	$(MAKE) -C locale $(MAKEFLAGS)
+ 
+ install:	install-$(CSLIB) install-progs install-headers install-shares
  
  install-progs:	$(PROGS)
  		if [ ! -d $(DEST) ]; then $(INSTALL) -d -m 755 $(DEST); fi
@@ -11,7 +34,14 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
  			$(CSOUND_PROG) $(DEST)
  		if [ -n "$(OTHER_PROGS)" ]; \
  		then \
-@@ -84,8 +84,8 @@
+@@ -78,14 +78,14 @@
+ 		fi
+ 		for i in $(SUBDIRS);\
+ 		do \
+-			$(MAKE) -C $$i -$(MAKEFLAGS) install; \
++			$(MAKE) -C $$i $(MAKEFLAGS) install; \
+ 		done
+ 
  install-$(CSADYNSO):	$(CSADYNSO)
  		if [ ! -d $(LIB) ]; then $(INSTALL) -d -m 755 $(LIB); fi
  		$(INSTALL) -m 755 $(CSADYNSO) $(LIB)/$(CSADYNSO)
@@ -21,3 +51,57 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
  
  install-$(CSASTAT):	$(CSASTAT)
  		if [ ! -d $(LIB) ]; then $(INSTALL) -d -m 755 $(LIB); fi
+@@ -99,7 +99,7 @@
+ 		done
+ 
+ install-shares:
+-		$(MAKE) -C locale -$(MAKEFLAGS) install
++		$(MAKE) -C locale $(MAKEFLAGS) install
+ 
+ bin-distrib: 	$(LINUX_BINDISTRIB).gz
+ 
+@@ -109,7 +109,7 @@
+ 	tar cf $@ $(CSLIB) $(PROGS) $(DOC_FILES)
+ 	for i in $(SUBDIRS); \
+ 	do \
+-		$(MAKE) -C $$i -$(MAKEFLAGS) $@; \
++		$(MAKE) -C $$i $(MAKEFLAGS) $@; \
+ 	done
+ 
+ 
+@@ -125,7 +125,7 @@
+ 	for i in $(SRCDISTRIB_DIRS); \
+ 	do \
+ 		$(INSTALL) -d -m 755 $(LINUX_SRCDISTRIBDIR)/$$i; \
+-		$(MAKE) -C $$i -$(MAKEFLAGS) $@; \
++		$(MAKE) -C $$i $(MAKEFLAGS) $@; \
+ 	done
+ 	for i in $(SRCDISTRIB_FILES); \
+ 	do \
+@@ -141,7 +141,7 @@
+ clean-subdirs:
+ 		for i in $(SUBDIRS); \
+ 		do \
+-			$(MAKE) -$(MAKEFLAGS) -C $$i $(PASSED_FLAGS) clean; \
++			$(MAKE) $(MAKEFLAGS) -C $$i $(PASSED_FLAGS) clean; \
+ 		done
+ 
+ clean:		clean-subdirs
+@@ -154,7 +154,7 @@
+ realclean-subdirs:
+ 		for i in $(SUBDIRS); \
+ 		do \
+-			$(MAKE) -$(MAKEFLAGS) -C $$i $(PASSED_FLAGS) realclean; \
++			$(MAKE) $(MAKEFLAGS) -C $$i $(PASSED_FLAGS) realclean; \
+ 		done
+ 
+ realclean:	clean realclean-subdirs
+@@ -164,7 +164,7 @@
+ 
+ depend:
+ 	$(RM) $(CDEP)
+-	$(MAKE) -$(MAKEFLAGS) $(CDEP)
++	$(MAKE) $(MAKEFLAGS) $(CDEP)
+ 
+ $(CDEP):
+ 	@echo "Building dependencies (this may take some time)..."
