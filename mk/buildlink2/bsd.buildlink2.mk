@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.78 2003/01/14 09:32:12 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.79 2003/01/25 07:57:21 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -501,12 +501,14 @@ BUILDLINK_FAKE_LA=	${TRUE}
 #
 BUILDLINK_FAKE_LA=							\
 	if [ ! -f $$lafile ]; then					\
-		${ECHO_BUILDLINK_MSG} "Creating libtool archive: $$lafile"; \
 		case ${OBJECT_FMT} in					\
-		Mach-O) _lib=`${LS} -1 $$libpattern | ${HEAD} -1` ;;	\
-		*)      _lib=`${LS} -1r $$libpattern | ${HEAD} -1` ;;	\
+		Mach-O) _lib=`${LS} -1 $$libpattern 2>/dev/null | ${HEAD} -1` ;; \
+		*)      _lib=`${LS} -1r $$libpattern 2>/dev/null | ${HEAD} -1` ;; \
 		esac;							\
-		${_BLNK_FAKE_LA} $$_lib > $$lafile;			\
+		if [ -n "$$_lib" ]; then				\
+			${ECHO_BUILDLINK_MSG} "Creating libtool archive: $$lafile"; \
+			${_BLNK_FAKE_LA} $$_lib > $$lafile;		\
+		fi;							\
 	fi
 .endif
 
