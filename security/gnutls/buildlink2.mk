@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/12/06 00:52:21 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/12/18 06:04:10 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use gnutls.
 #
@@ -9,7 +9,7 @@
 GNUTLS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnutls
-BUILDLINK_DEPENDS.gnutls?=		gnutls>=1.0.0
+BUILDLINK_DEPENDS.gnutls?=		gnutls>=1.0.1
 BUILDLINK_PKGSRCDIR.gnutls?=		../../security/gnutls
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnutls=gnutls
