@@ -1,4 +1,4 @@
-/*	$NetBSD: kver.c,v 1.6 2005/01/14 17:15:21 cube Exp $	*/
+/*	$NetBSD: kver.c,v 1.6.2.1 2005/04/01 05:30:34 snj Exp $	*/
 
 #include <sys/types.h>
 #include <sys/param.h>
@@ -89,10 +89,10 @@ str2osrevision(char *s)
 			n = (n * 10) + (*s - '0');
 		}
 		r += (n * 100);
-		if (*s != 0)
-			return KVER_INVALID_OSRELEASE;
-		return r;
 	}
+	/* nothing more, return */
+	if (*s == 0)
+		return r;
 	/* or optional underscore followed by release status */
 	if (*s == '_')
 		/* ignore the trailing label */
