@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 1998/01/29 13:25:12 frueauf Exp $
 # New ports collection makefile for:	dxpc
 # Version required:			3.7.0
 # Date created:				2 Januar 1998
 # Whom:					frueauf@ira.uka.de
 #
+# $NetBSD: Makefile,v 1.2 1998/01/29 16:37:28 frueauf Exp $
 #
 
 DISTNAME=	dxpc-3.7.0
