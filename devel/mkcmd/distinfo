@@ -1,6 +1,15 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/10 00:46:04 epg Exp $
+$NetBSD: distinfo,v 1.2 2004/11/10 16:43:50 epg Exp $
 
 SHA1 (mkcmd-8.14.tgz) = 33342afc845db84a040f116202b880d37b9f626f
 Size (mkcmd-8.14.tgz) = 295120 bytes
-SHA1 (patch-aa) = f9d297a7d3cf807163a53ba9d69d81e9dd83cd72
-SHA1 (patch-ab) = 72c1a8800491c967f402a1fa9038bab7a5cd3b11
+SHA1 (patch-aa) = f453a4abaaa4a0e4527e507249eb427f1c9ac22c
+SHA1 (patch-ab) = ff30b9b4818fcd105d433e0b2c943d27d698f18c
+SHA1 (patch-ac) = 6ee5e497e09157fbcf4d158966af8ee86e768bcb
+SHA1 (patch-ad) = cf3acdaf22930d577f13d28f2627515d78b8075b
+SHA1 (patch-ae) = 8610cbecca38033386bb2427647f18c80120591e
+SHA1 (patch-af) = 03f13f98dc52c467c8ae60dddcbcf7d9818adf33
+SHA1 (patch-ag) = 99e4ede7f0784bd343e181754de0608d65023b9f
+SHA1 (patch-ah) = 1738f8042db33232455d8cea0b033883312800df
+SHA1 (patch-ai) = 0ce87f6636e545c5a27c3a165de32b7b39bbd664
+SHA1 (patch-aj) = 1c0a9f177a8735f02cdec9f08f7311b03152c9f3
+SHA1 (patch-ak) = ed44815d12931845ab675ded6b32bda159d57af6
