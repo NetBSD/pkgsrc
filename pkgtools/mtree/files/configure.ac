@@ -15,7 +15,11 @@ AC_CHECK_LIB(util, fparseln)
 
 # Checks for header files.
 AC_HEADER_STDC
-AC_CHECK_HEADERS([fnmatch.h grp.h pwd.h util.h])
+AC_CHECK_HEADERS([ctype.h dirent.h errno.h err.h fcntl.h fnmatch.h fts.h \
+	grp.h inttypes.h limits.h md5.h netdb.h pwd.h rmd160.h sha1.h \
+	stdarg.h stddef.h stdio.h stdlib.h strings.h string.h time.h unistd.h \
+	util.h vis.h])
+AC_CHECK_HEADERS([sys/cdefs.h sys/param.h sys/queue.h sys/stat.h sys/types.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
