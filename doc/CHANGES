@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6387 2004/06/28 19:37:01 jmmv Exp $
+$NetBSD: CHANGES,v 1.6388 2004/06/28 20:45:38 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3169,3 +3169,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-accessibility to 2.6.2 [jmmv 2004-06-28]
 	Updated gnome to 2.6.2 [jmmv 2004-06-28]
 	Updated gnome-extras to 2.6.2 [jmmv 2004-06-28]
+	Updated gdb6 to 6.1.1 [shannonjr 2004-06-28]
