@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/04/04 19:23:20 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2003/04/04 19:48:11 jschauma Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -17,14 +17,13 @@ USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 
+CFLAGS+=	-DPKG_SYSCONFDIR='\\\"${PKG_SYSCONFDIR}\\\"'
+MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
 
 .include "../../mk/bsd.prefs.mk"
-
-CFLAGS+=	-DPKG_SYSCONFDIR='\\\"${PKG_SYSCONFDIR}\\\"'
-MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 .if ${OPSYS} == "SunOS"
 CFLAGS=		-DSYSV
