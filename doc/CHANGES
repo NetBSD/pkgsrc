@@ -1,8 +1,7 @@
-$NetBSD: CHANGES,v 1.1001 2003/01/03 22:23:07 jmmv Exp $
+$NetBSD: CHANGES,v 1.1002 2003/01/03 23:08:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
-	Updated psi-0.8.7 [lha 2003-01-03]
 	Added iasp-2.1.1 [jlam 2003-01-01]
 	Added ap-iasp-2.1.1 [jlam 2003-01-01]
 	Updated bison to 1.875 [cjep 2003-01-01]
@@ -61,6 +60,10 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pan to 0.13.3 (gtk2-pan) [wiz 2003-01-03]
 	Updated Speex to 0.99.4nb1 [wiz 2003-01-03]
 	Updated capc-calc to 2.11.6 [wiz 2003-01-03]
+	Updated psi-0.8.7 [lha 2003-01-03]
 	Updated nawk to 20021213 [cjep 2003-01-03]
+	Updated novawm to 0.8 [wiz 2003-01-03]
 	Updated libgnomecanvas to 2.0.5 [jmmv 2003-01-03]
 	Updated cal to 3.5nb1 [jmmv 2003-01-03]
+	Updated ImageMagick to 5.5.3.2 [wiz 2003-01-04]
+	Updated p5-PerlMagick to 5.5.3.2 [wiz 2003-01-04]
