@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2003/07/12 12:23:13 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2003/08/11 07:26:01 wiz Exp $
 
---- db.c.orig	Sun Jun  1 01:59:22 2003
+--- db.c.orig	Sun Aug 10 22:12:44 2003
 +++ db.c
 @@ -23,6 +23,7 @@
  #include "meal.h"
@@ -10,8 +10,8 @@ $NetBSD: patch-ab,v 1.2 2003/07/12 12:23:13 wiz Exp $
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
-@@ -729,7 +730,13 @@ void make_filenames(void)
-  sprintf(optionsfile,"%s/%s","NUTDB",optionsfile1);
+@@ -683,7 +684,13 @@ void make_filenames(void)
+  sprintf(versionfile,"%s/%s","NUTDB",versionfile1);
  #else
  sprintf(nutdir,"%s/%s",getenv("HOME"),nutdir1);
 -mkdir (nutdir, 0700 );
