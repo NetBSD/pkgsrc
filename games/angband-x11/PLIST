@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/26 22:06:46 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/09/15 13:58:37 wiz Exp $
 bin/angband
 share/games/angband/lib/apex/scores.raw
 share/games/angband/lib/data/artifact.raw
@@ -67,6 +67,7 @@ share/games/angband/lib/info/stats.spo
 share/games/angband/lib/info/store.spo
 share/games/angband/lib/info/user.hlp
 share/games/angband/lib/info/various.hlp
+share/games/angband/lib/pref/flvr-dvg.prf
 share/games/angband/lib/pref/flvr-new.prf
 share/games/angband/lib/pref/flvr-xxx.prf
 share/games/angband/lib/pref/font-ami.prf
@@ -78,6 +79,7 @@ share/games/angband/lib/pref/font-x11.prf
 share/games/angband/lib/pref/font-xxx.prf
 share/games/angband/lib/pref/font.prf
 share/games/angband/lib/pref/graf-ami.prf
+share/games/angband/lib/pref/graf-dvg.prf
 share/games/angband/lib/pref/graf-gcu.prf
 share/games/angband/lib/pref/graf-ibm.prf
 share/games/angband/lib/pref/graf-lsl.prf
@@ -98,13 +100,19 @@ share/games/angband/lib/pref/pref-x11.prf
 share/games/angband/lib/pref/pref.prf
 share/games/angband/lib/pref/user-mac.prf
 share/games/angband/lib/pref/user.prf
+share/games/angband/lib/pref/xtra-dvg.prf
 share/games/angband/lib/pref/xtra-new.prf
 share/games/angband/lib/pref/xtra-xxx.prf
+share/games/angband/lib/script/birth.lua
+share/games/angband/lib/script/event.lua
 share/games/angband/lib/script/init.lua
 share/games/angband/lib/script/object.lua
 share/games/angband/lib/script/spell.lua
+share/games/angband/lib/script/store.lua
 share/games/angband/lib/script/test.lua
 share/games/angband/lib/script/trace.lua
+share/games/angband/lib/xtra/font/16x16.txt
+@dirrm share/games/angband/lib/xtra/font
 @dirrm share/games/angband/lib/xtra
 @dirrm share/games/angband/lib/user
 @dirrm share/games/angband/lib/script
