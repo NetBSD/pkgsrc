@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.27 2001/02/16 14:38:39 wiz Exp $
-# FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:41 max Exp 
+# $NetBSD: Makefile,v 1.28 2001/02/26 15:27:36 mjl Exp $
 #
 
-DISTNAME=      	slang-1.4.3
+DISTNAME=      	slang-1.4.4
 PKGNAME=       	lib${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=  	ftp://space.mit.edu/pub/davis/slang/v1.4/ \
 		http://gd.tuwien.ac.at/editors/davis/slang/v1.4/ \
-		ftp://ftp.uni-stuttgart.de/pub/mirror/space.mit.edu/pub/davis/slang/v1.4/
+		ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/v1.4 \
+		ftp://ftp.fu-berlin.de/pub/unix/news/slrn/v1.4 \
+		ftp://ftp.ntua.gr/pub/lang/slang/v1.4 \
+		ftp://ftp.plig.org/pub/slang/v1.4 \
+		ftp://ftp.gigabell.net/pub/lang/1.4
 
 MAINTAINER=    	packages@netbsd.org
 HOMEPAGE=	http://www.s-lang.org/
