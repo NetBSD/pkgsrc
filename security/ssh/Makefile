@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 1999/09/08 22:18:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.60 1999/09/18 22:04:55 kim Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -7,6 +7,8 @@ CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
 			ftp://ftp.funet.fi/pub/unix/security/login/ssh/ \
 			ftp://ftp.cert.dfn.de/pub/tools/net/ssh/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.cs.hut.fi/ssh/
@@ -65,6 +67,26 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 .endif
 
+# Include Kerberos v4 support
+# http://www.monkey.org/~dugsong/ssh-afs/
+.if defined(KERBEROS) && ${KERBEROS} == 4
+USE_KERBEROS=		yes
+PATCH_SITES+=		ftp://ftp.monkey.org/pub/users/dugsong/
+PATCHFILES+=		ssh-1.2.27-afs-kerberos.patch-1
+PATCH_DIST_STRIP+=	-p1
+CONFIGURE_ARGS+=	--with-krb4=/usr
+.else
+MASTER_SITES+=		ftp://ftp.monkey.org/pub/users/dugsong/
+DISTFILES+=		ssh-1.2.27-afs-kerberos.patch-1
+.endif
+
+.if defined(KERBEROS) && ${KERBEROS} == 5
+USE_KERBEROS=	yes
+CONFIGURE_ARGS+=--with-krb5
+.else
+CONFIGURE_ARGS+=--without-krb5
+.endif
+
 # Find X11 libraries with xpkgwedge
 .if defined(USE_LOCALBASE_FOR_X11)
 CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include
@@ -95,9 +117,7 @@ PATCHDIR=		${WRKDIR}/.patches
 PATCH_SUM_FILE=		${FILESDIR}/patch-sum-v6
 .else
 MASTER_SITES+=		ftp://ftp.kyoto.wide.ad.jp/IPv6/ssh/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			ssh-1.2.27-IPv6-1.5-patch.gz
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		ssh-1.2.27-IPv6-1.5-patch.gz
 .endif
 
 # be more effective on M68060 machines
@@ -137,6 +157,14 @@ fetch-depends:
 # Make sure that "automake" is never run.
 post-patch:
 	@find ${WRKSRC} -name Makefile.in -print | xargs ${TOUCH} ${TOUCH_FLAGS}
+.if defined(KERBEROS) && ${KERBEROS} == 4
+	@${MV} ${WRKSRC}/configure ${WRKSRC}/configure.tmp
+	@${SED} \
+	    -e 's;KERBEROS_INCS="-I\$${KERBEROS_ROOT}/include";&/kerberosIV;' \
+	    ${WRKSRC}/configure.tmp > ${WRKSRC}/configure
+	@${CHMOD} a+rx ${WRKSRC}/configure
+	@${RM} -f ${WRKSRC}/configure.tmp
+.endif
 
 post-build:
 	@cd ${PKGDIR}; \
