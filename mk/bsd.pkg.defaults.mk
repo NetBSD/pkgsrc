@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.162 2003/07/26 23:08:47 jmmv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.163 2003/07/27 19:59:40 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1175,6 +1175,12 @@ MOZILLA_USE_XFT?=	NO
 # Used by mozilla packages to enable Xft support where available.
 # Possible: YES, NO
 # Default: NO
+
+MPLAYER_DISABLE_DRIVERS?=
+# Whitespace separated list of output drivers that are not wanted in
+# mplayer/gmplayer's binary.
+# Possible: arts esd faad nas sdl
+# Default: empty
 
 MPLAYER_ENABLE_RUNTIME_CPU_DETECTION?= YES
 # Used by mplayer to enable runtime CPU detection -- this makes
