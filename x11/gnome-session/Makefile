@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2004/06/28 14:59:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2004/09/21 16:58:42 jmmv Exp $
 #
 
-DISTNAME=		gnome-session-2.6.2
+DISTNAME=		gnome-session-2.8.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.6/}
-SITES_gnome-splash-2.6.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.8/}
+SITES_gnome-splash-2.8.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.6.0.png
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.8.0.png
 
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
@@ -26,12 +26,15 @@ USE_LIBTOOL=		yes
 
 MAKE_ENV+=		REAL_GCONFTOOL="${GCONFTOOL2}"
 
+CPPFLAGS+=		-DPREFIX=\"\\\"${PREFIX}\\\"\"
+CPPFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+
 GCONF2_SCHEMAS= 	gnome-session.schemas
 
 post-extract:
 	${MV} ${WRKSRC}/gnome-session/gnome-splash.png \
 	    ${WRKSRC}/gnome-session/gnome-splash-orig.png
-	${CP} ${DISTDIR}/gnome-splash-2.6.0.png \
+	${CP} ${DISTDIR}/gnome-splash-2.8.0.png \
 	    ${WRKSRC}/gnome-session/gnome-splash.png
 
 post-install:
