@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.5 2002/03/30 13:57:03 pooka Exp $
+
+--- configure.orig	Thu Jul 26 06:52:57 2001
++++ configure
+@@ -3715,7 +3715,7 @@
+   cat conftest.$ac_ext >&5
+ fi
+ rm -f conftest*
+-      LDFLAGS=$ODL_LDFLAGS
++      LDFLAGS=$OLD_LDFLAGS
+       test -n "$dash_r" && break
+     done ;;
+ esac
