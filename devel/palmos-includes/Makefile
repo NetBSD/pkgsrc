@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2001/09/27 23:17:57 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/07 13:22:03 dillo Exp $
 #
 
 DISTNAME=       sdk35
 PKGNAME=	palmos-includes-3.5.1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.palmos.com/dev/tech/tools/gcc/dist/
-DISTFILES=	${DISTSPECIAL} palmos-1-2-3.1-sdks-1${EXTRACT_SUFX}
+MASTER_SITES=	http://www.palmos.com/dev/tools/sdk/sdk2452534/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} sdk35-update1${EXTRACT_SUFX}
+DISTFILES+=	palmos-1-2-3.1-sdks-1${EXTRACT_SUFX}
+SITES_palmos-1-2-3.1-sdks-1.tar.gz=http://www.palmos.com/dev/tools/gcc/dist/
 
 MAINTAINER=	dillo@giga.or.at
-HOMEPAGE=	http://www.palmos.com/dev/tech/tools/gcc/
+HOMEPAGE=	http://www.palmos.com/dev/tools/gcc/index.html
 COMMENT=	Palm OS include files
-
-BUILD_DEPENDS+=	wget-[0-9]*:../../net/wget
-
-DISTSPECIAL=	${DISTNAME}${EXTRACT_SUFX} sdk35-update1${EXTRACT_SUFX}
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
@@ -26,24 +24,11 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 
 LICENSE=	palmos-sdk-license
 
-DOWNLOAD_URL=	http://www.palmos.com/dev/tech/tools/sdk35.cgi
 PALMDEV=	${PREFIX}/share/palmdev
-WGET=		${LOCALBASE}/bin/wget --non-verbose
 
 .include "../../mk/bsd.prefs.mk"
 
 PALMOS_DEFAULT_SDK?=	3.5
-
-pre-fetch: install-depends
-	for f in ${DISTSPECIAL}; \
-	do \
-	    if [ ! -f ${DISTDIR}/$$f ]; \
-	    then \
-	    	cd ${DISTDIR} && \
-		    ${WGET} --header 'Referer: ${DOWNLOAD_URL}' \
-			${DOWNLOAD_URL}/$$f; \
-	    fi; \
-	done
 
 do-install:
 	${INSTALL_DATA_DIR} ${PALMDEV}/sdk-1
