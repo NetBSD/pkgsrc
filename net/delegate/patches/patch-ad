@@ -1,0 +1,27 @@
+$NetBSD: patch-ad,v 1.1 1999/04/04 18:01:38 hubertf Exp $
+
+--- Makefile.BAK	Sun Apr  4 19:52:44 1999
++++ Makefile	Sun Apr  4 19:53:10 1999
+@@ -21,8 +21,8 @@
+ 
+ FILES = $(FILEC) $(MIME)
+ 
+-MKMKMK = mkmkmk.exe
+-MKMAKE = mkmake.exe
++MKMKMK = ./mkmkmk.exe
++MKMAKE = ./mkmake.exe
+ 
+ HDRDIRS = -I../include
+ LIBDIRS = -L../lib
+@@ -33,11 +33,6 @@
+ 
+ $(MKMAKE): Makefile mkmkmk.c maker/mkmake.c
+ 	$(CC) -DMKMKMK -DDEFCC=\"$(CC)\" $(HDRDIRS) $(LIBDIRS) mkmkmk.c -o $(MKMKMK)
+-	@echo "-----------------------------------------------------------------"
+-	@echo "This Makefile assumes '.' is included in your PATH environment."
+-	@echo "If the following rule failed in '$(MKMKMK): not found'"
+-	@echo "retry like this >>>>>>>>   $(MAKE) "PATH=\".:\$$PATH\"
+-	@echo "-----------------------------------------------------------------"
+ 	$(MKMKMK) -mkmkmk "$(CC)" $(HDRDIRS) $(LIBDIRS) maker/mkmake.c -o $@
+ 
+ files:;	@echo $(FILES)
