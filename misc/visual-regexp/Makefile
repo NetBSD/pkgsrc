@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/08 20:27:15 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/12 21:15:12 minskim Exp $
 #
 
 DISTNAME=	visual_regexp-3.0
@@ -9,7 +9,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://laurent.riesterer.free.fr/regexp/
 COMMENT=	Easily design and debug regular expressions graphically
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk83
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 NO_BUILD=	yes
 
