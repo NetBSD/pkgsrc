@@ -3,6 +3,7 @@
 # Date created:		Oct 27, 1994
 # Whom:			pst
 #
+# $NetBSD: Makefile,v 1.2 1998/02/10 00:29:57 tron Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -15,9 +16,9 @@ MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/ \
 MAINTAINER=	ports@FreeBSD.org
 
 RESTRICTED=	"'No redistribution' copyright"
+MIRROR_DISTFILE= no
 NO_WRKSUBDIR=	yes
 MAN1=		kermit.1
-MANCOMPRESSED=	yes
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/examples/kermit

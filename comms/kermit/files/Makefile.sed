@@ -7,7 +7,7 @@ SRCS=   ckcmai.c ckucmd.c ckuusr.c ckuus2.c ckuus3.c ckuus4.c ckuus5.c \
         ckcnet.c ckusig.c
 
 BINDIR=%%PREFIX%%/bin
-MANDIR=%%PREFIX%%/man/man
+MANDIR=%%PREFIX%%/man
 
 CLEANFILES+= ckcpro.c ckcwart.o wart kermit.1
 
