@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2818 2005/01/03 21:43:59 jmmv Exp $
+$NetBSD: TODO,v 1.2819 2005/01/03 21:50:12 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -479,7 +479,6 @@ Suggested package updates
 	o fhist-1.14
 	o fidogate-4.4.10
 	o file-4.12
-	o file-roller-2.9.0
 	o findutils-4.1.20
 	o firefox-bin-1.0
 	o firewalk-5.0
