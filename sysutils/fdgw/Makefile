@@ -1,0 +1,56 @@
+# $NetBSD: Makefile,v 1.1.1.1 2001/12/26 11:45:22 wennmach Exp $
+#
+
+DISTNAME=	fdgw-20011216
+CATEGORIES=	sysutils net
+MASTER_SITES=	ftp://ftp.fml.org/pub/fdgw/source/
+
+MAINTAINER= 	fukachan@fml.org
+HOMEPAGE=	http://www.fml.org/software/fdgw/
+COMMENT= 	toolkit to build a one-floppy NetBSD system
+
+BSDSRCDIR?=	/usr/src
+_IMG_SRC_DIR =	${WRKSRC}/image.${MACHINE_ARCH}
+_IMG_DST_DIR =	${PREFIX}/fdgw/${MACHINE_ARCH}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !exists(${X11BASE}/bin/lndir)
+IGNORE=                 "${PKGNAME} requires the 'lndir' command, and hence X11"
+.endif
+
+.if (${MACHINE_ARCH} != "i386")
+IGNORE=  "Sorry, fdgw is currently only available for i386 machines."
+IGNORE+= "Please report ${MAINTAINER} if you succeed to port fdgw to other architectures"
+.endif
+
+# we need NetBSD source tree.
+.if !exists(${BSDSRCDIR})
+IGNORE= "${PKGNAME} requires the NetBSD source tree in BSDSRCDIR (${BSDSRCDIR})"
+.endif
+
+ALL_TARGET=	dist-build
+
+pre-install:
+	(cd ${WRKSRC} && ${MAKE} dist-image)
+
+do-install:
+	${TEST} -d ${_IMG_DST_DIR} || ${MKDIR} ${_IMG_DST_DIR}
+	${INSTALL_DATA} ${_IMG_SRC_DIR}/natbox.img ${_IMG_DST_DIR}/natbox.img
+	${INSTALL_DATA} ${_IMG_SRC_DIR}/adslrouter.img ${_IMG_DST_DIR}/adslrouter.img
+
+post-install:
+	@ ${ECHO} "";
+	@ ${ECHO} "************************************";
+	@ ${ECHO} "";
+	@ ${ECHO} "The floppy images are installed into ${_IMG_DST_DIR}."
+	@ ${ECHO} ""
+	@ ${ECHO} "To write adslrouter.img onto a floppy:"
+	@ ${ECHO} "     # dd if=adslrouter.img of=/dev/rfd0a bs=18k"
+	@ ${ECHO} "";
+	@ ${ECHO} "See ${HOMEPAGE} for more details, e.g. customization";
+	@ ${ECHO} "";
+	@ ${ECHO} "************************************";
+	@ ${ECHO} "";
+
+.include "../../mk/bsd.pkg.mk"

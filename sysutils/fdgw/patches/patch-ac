@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/12/26 11:45:22 wennmach Exp $
+
+Remove unused directory gnu/usr.bin from srcdirs.
+
+--- model/natbox/ramdiskbin.conf.orig	Mon Dec 24 00:34:27 2001
++++ model/natbox/ramdiskbin.conf	Mon Dec 24 00:35:01 2001
+@@ -11,7 +11,7 @@
+ # ramdiskbin.conf - unified binary for the install ramdisk
+ #
+ 
+-srcdirs bin sbin usr.bin/less usr.bin usr.sbin gnu/usr.bin
++srcdirs bin sbin usr.bin/less usr.bin usr.sbin
+ srcdirs sys/arch/__ARCH__/stand
+ srcdirs usr.sbin/ipf
+ srcdirs usr.sbin/pppd
