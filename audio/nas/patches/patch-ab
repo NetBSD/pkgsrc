@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.8 2002/11/28 11:40:46 markd Exp $
+$NetBSD: patch-ab,v 1.9 2002/12/03 09:03:08 jlam Exp $
 
---- server/Imakefile.orig	Wed Jul 24 13:49:33 2002
+--- server/Imakefile.orig	Tue Jul 23 18:49:33 2002
 +++ server/Imakefile
-@@ -38,7 +38,7 @@
-      EXTENSIONS = 
-          XAULIB = 
-        XDMCPLIB = 
--             OS = os/libos.a $(XAULIB) $(XDMCPLIB)
-+             OS = os/libos.a $(XAULIB) $(XDMCPLIB) $(LIBOSSAUDIO)
-         BSDEMUL = $(LIBSRC)/Berk/Berklib.o
-             MFB =
-             CFB =
-@@ -224,6 +224,7 @@
+@@ -61,7 +61,7 @@ XCOMM $NCDId: @(#)Imakefile,v 1.17 1995/
+ #endif
+ 
+ #ifdef NetBSDArchitecture
+-        SYSLIBS = -lossaudio
++        SYSLIBS = $(LIBOSSAUDIO)
+ #endif
+ 
+            CBRT =
+@@ -224,6 +224,7 @@ clean::
  	$(RM) $(ALL)
  
   ETCDIR = NasConfigSearchPath
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.8 2002/11/28 11:40:46 markd Exp $
  
  InstallManPage(nasd,$(MANDIR))
  #ifdef InstallGenManPage
-@@ -231,7 +232,7 @@
+@@ -231,7 +232,7 @@ InstallGenManPage(nasd.conf,$(RCMANDIR),
  #else
  InstallManPage(nasd.conf,$(RCMANDIR))
  #endif
