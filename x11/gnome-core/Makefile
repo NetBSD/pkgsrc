@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2001/04/24 18:07:14 rh Exp $
+# $NetBSD: Makefile,v 1.64 2001/05/14 17:18:15 rh Exp $
 
-DISTNAME=		gnome-core-1.4.0.2
+DISTNAME=		gnome-core-1.4.0.3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-core/}
 
@@ -41,7 +41,7 @@ post-patch:
 	done
 
 post-install:
-.for prg in gnome-terminal gpl lgpl fdl
+.for prg in gnome-feedback gnome-terminal gpl lgpl fdl
 .for lng in C da de es it no
 	[ ! -d ${PREFIX}/share/gnome/help/${prg}/${lng}/figures ] || \
 	${RMDIR} ${PREFIX}/share/gnome/help/${prg}/${lng}/figures
