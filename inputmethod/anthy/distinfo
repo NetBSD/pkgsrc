@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/04 03:57:44 taya Exp $
+$NetBSD: distinfo,v 1.2 2004/12/28 05:35:29 taya Exp $
 
 SHA1 (anthy-5900.tar.gz) = 2f7cc9d4077d733d88859fc643203b68d35b7308
 Size (anthy-5900.tar.gz) = 1566783 bytes
-SHA1 (2ch.t) = 0118c98c21420aaeee0bf78b5bb99ede723e194b
-Size (2ch.t) = 142344 bytes
-SHA1 (patch-2ch-dict) = 72a75e1417b05626a4ad4894b5af30d38f7b03bf
+SHA1 (2ch.t) = 2160d7b0079e2c1a14093da968f34e7f8dbc07c2
+Size (2ch.t) = 142157 bytes
+SHA1 (okinawa-20041220.t) = 2dc67628363dfe087dae4a70ef5517c989ed7644
+Size (okinawa-20041220.t) = 145992 bytes
