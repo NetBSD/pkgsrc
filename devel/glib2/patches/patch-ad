@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.6 2003/09/27 20:18:37 danw Exp $
+
+--- gmodule/gmodule-dyld.c.orig	Sat Sep  6 13:23:40 2003
++++ gmodule/gmodule-dyld.c	Sat Sep  6 13:24:35 2003
+@@ -116,7 +116,13 @@
+       if (NSIsSymbolNameDefined (symbol_name))
+ 	sym = NSLookupAndBindSymbol (symbol_name);
+       else
+-	sym = NULL;
++	{
++	  GModule *mod;
++	  for (mod = modules, sym = NULL; mod && !sym; mod = mod->next)
++	    {
++	      sym = NSLookupSymbolInModule (mod->handle, symbol_name);
++	    }
++	}
+     }
+   else
+     sym = NSLookupSymbolInModule (handle, symbol_name);
