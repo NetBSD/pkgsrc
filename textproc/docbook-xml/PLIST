@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/10 19:29:29 jmmv Exp $
-@exec ${LOCALBASE}/bin/xmlcatmgr add CATALOG %D/share/xml/docbook/catalog
-@unexec ${LOCALBASE}/bin/xmlcatmgr remove %D/share/xml/docbook/catalog
+@comment $NetBSD: PLIST,v 1.5 2003/01/11 21:11:30 jmmv Exp $
+@exec ${LOCALBASE}/bin/xmlcatmgr -c %D/share/xml/catalog add CATALOG %D/share/xml/docbook/catalog
+@unexec ${LOCALBASE}/bin/xmlcatmgr -c %D/share/xml/catalog remove %D/share/xml/docbook/catalog
 share/xml/docbook/README
 share/xml/docbook/calstblx.dtd
 share/xml/docbook/catalog
