@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.338 1999/09/14 02:32:24 kim Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.339 1999/09/15 05:39:38 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -1643,7 +1643,8 @@ ${DDIR}: ${DLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	ddir=`${SED} 's:-[^-]*$$::' <${DLIST}` ;			\
 	if ${PKG_INFO} -b $${ddir} >/dev/null 2>&1 ; then		\
-		${PKG_INFO} -b $${ddir} | ${GREP} Makefile |		\
+		${PKG_INFO} -b $${ddir} |				\
+			${EGREP} '^[^/]+/[^/]+/Makefile:' |		\
 			${CUT} -d'/' -f1-2 >${DDIR} ;			\
 	else 								\
 		${ECHO} >${DDIR} ;					\
