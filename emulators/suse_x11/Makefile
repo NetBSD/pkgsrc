@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/05/31 05:02:57 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2000/12/16 22:37:33 tron Exp $
 
 DISTNAME=		suse_x11-6.3
 CATEGORIES=		emulators
@@ -18,4 +18,4 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		xshared.rpm xpm.rpm
 
-.include "../suse_linux/suse.mk"
+.include "../suse_linux/Makefile.common"

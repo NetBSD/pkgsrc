@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/16 14:53:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/16 22:37:31 tron Exp $
 #
 
 DISTNAME=		suse_glx-6.4
@@ -20,4 +20,4 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		glx.rpm
 
-.include "../suse_linux/suse.mk"
+.include "../suse_linux/Makefile.common"

@@ -1,4 +1,4 @@
-# $NetBSD: suse.mk,v 1.7 2000/09/04 16:05:12 wiz Exp $
+# $NetBSD: Makefile.common,v 1.1 2000/12/16 22:37:32 tron Exp $
 
 MASTER_SITE_SUSE=	ftp://ftp.suse.com/pub/suse/i386/6.3/suse/
 
