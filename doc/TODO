@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1022 2003/11/13 10:18:07 wiz Exp $
+$NetBSD: TODO,v 1.1023 2003/11/13 13:49:01 itojun Exp $
 
 Suggested new packages
 ======================
@@ -235,6 +235,7 @@ Suggested package updates
 	o host-20030604
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
+	o hylafax-4.1.8
 	o icepref-2.2
 	o inn-2.4.0
 	o iozone-3.203
