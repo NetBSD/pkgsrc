@@ -1,12 +1,12 @@
---- xa_audio.c.orig	Sun Jan 26 17:22:03 1997
-+++ xa_audio.c	Sun Feb 15 21:34:01 1998
+--- xa_audio.c-orig	Mon May 26 12:57:15 1997
++++ xa_audio.c	Mon May 26 15:55:13 1997
 @@ -4480,6 +4480,22 @@
    a_info.blocksize = 1024;
    ioctl(devAudio, AUDIO_SETINFO, &a_info);
    AUDIO_INITINFO(&a_info);
-+#ifdef AUDIO_ENCODING_SLINEAR
++#ifdef AUDIO_ENCODING_LINEAR_LE
 +  /* Use new encoding names */
-+  a_info.play.encoding = AUDIO_ENCODING_SLINEAR;
++  a_info.play.encoding = AUDIO_ENCODING_LINEAR_LE;
 +  ioctl(devAudio, AUDIO_SETINFO, &a_info);
 +  AUDIO_INITINFO(&a_info);
 +  a_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
