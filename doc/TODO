@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3014 2005/02/10 15:52:20 ben Exp $
+$NetBSD: TODO,v 1.3015 2005/02/10 22:18:49 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -994,7 +994,6 @@ Suggested package updates
 	o sdig-0.40
 	o semantic-1.4.4
 	o sendfile-20010424
-	o sendmail-8.13.3
 	o ser-0.8.14
 	o sharity-light-1.3
 	o shmux-1.0b6
