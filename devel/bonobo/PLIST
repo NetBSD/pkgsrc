@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/05 22:39:02 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/04/10 14:33:44 jlam Exp $
 bin/bonobo-application-x-mines
 bin/bonobo-audio-ulaw
 bin/bonobo-echo
@@ -211,4 +211,3 @@ share/oaf/Bonobo_Selector.oaf
 @dirrm lib/bonobo/monikers
 @dirrm lib/bonobo
 @dirrm include/gnome-1.0/bonobo
-@dirrm include/gnome-1.0
