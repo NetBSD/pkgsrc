@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/02/06 19:04:24 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2004/02/11 11:30:49 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BZIP2_BUILDLINK3_MK:=	${BZIP2_BUILDLINK3_MK}+
@@ -23,6 +23,16 @@ BUILDLINK_IS_BUILTIN.bzip2!=						\
 		${ECHO} "NO";						\
 	fi
 .  endif
+#
+# Solaris 9 has bzip2 1.0.1, build it on older versions.
+# Darwin only has static libbz2.a, which can't be buildlinked.
+#
+_INCOMPAT_BZIP2?=	SunOS-5.[678]-* Darwin-*
+.  for _pattern_ in ${_INCOMPAT_BZIP2} ${INCOMPAT_BZIP2}
+.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+BUILDLINK_IS_BUILTIN.bzip2=	NO
+.    endif
+.  endfor
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.bzip2=${BUILDLINK_IS_BUILTIN.bzip2}
 .endif
 
@@ -44,17 +54,6 @@ BUILDLINK_USE_BUILTIN.bzip2=	YES
 BUILDLINK_USE_BUILTIN.bzip2=	NO
 .  else
 BUILDLINK_USE_BUILTIN.bzip2=	YES
-#
-# Solaris 9 has bzip2 1.0.1, build it on older versions.
-# Darwin only has static libbz2.a, which can't be buildlinked.
-#
-_INCOMPAT_BZIP2=	SunOS-5.[678]-* Darwin-*
-INCOMPAT_BZIP2?=	# empty
-.    for _pattern_ in ${_INCOMPAT_BZIP2} ${INCOMPAT_BZIP2}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
-BUILDLINK_USE_BUILTIN.bzip2=	NO
-.      endif
-.    endfor
 .  endif
 MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.bzip2=${BUILDLINK_USE_BUILTIN.bzip2}
 .endif
