@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.77 2002/01/03 12:41:22 wiz Exp $
+$NetBSD: TODO,v 1.78 2002/03/18 12:50:23 wiz Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -57,7 +57,6 @@ package update TODO (Suggested package updates)
 	o update print/ghostscript to 6.53 when it is released, which will
 	  have the gs-cjk changes as part of the main distribution. [jlam]
 
-	o update autoconf to 2.52 (or newer)
 	o update automake to 1.5
 
 
