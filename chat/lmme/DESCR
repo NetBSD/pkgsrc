@@ -1,4 +1,0 @@
-LMME (Linux MSN Messenger Engine) is a fully asynchronous, multithreaded
-MSN protocol engine. Preliminary releases will be statically combined with
-an ncurses console-based EPIC4-like interface for instant messaging
-functionality.
