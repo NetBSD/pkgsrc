@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/25 11:49:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/03/04 14:59:23 tron Exp $
 # FreeBSD Id: Makefile,v 1.9 1998/08/20 18:56:00 jseger Exp
 #
 
@@ -13,6 +13,6 @@ DISTFILES=      povuni_s.tgz povuni_d.tgz
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.povray.org/
 
-DEPENDS+=	png-1.0.2:../../graphics/png
+DEPENDS+=	png-1.0.3:../../graphics/png
 
 .include "../../mk/bsd.pkg.mk"
