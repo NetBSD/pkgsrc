@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/06/30 21:38:49 tron Exp $
+# $NetBSD: Makefile,v 1.19 1998/07/04 05:11:15 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -13,7 +13,7 @@ DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
 
 MAINTAINER=	explorer@netbsd.org
 
-BUILD_DEPENDS=	../../graphics/jpeg/${WRKDIR:T}/jpeg-6a:../../graphics/jpeg:extract \
+BUILD_DEPENDS=	../../graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract \
 		../../graphics/png/${WRKDIR:T}/libpng-0.96:../../graphics/png:extract \
 		unzip:../../archivers/unzip
 
@@ -57,7 +57,7 @@ post-extract:
 	${TOUCH} ${WRKSRC}/adler32.o
 	${TOUCH} ${WRKSRC}/deflate.o
 	${TOUCH} ${WRKSRC}/trees.o
-	${LN} -s ${PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6a ${WRKSRC}/jpeg-6a
+	${LN} -s ${PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ${WRKSRC}/jpeg-6b
 	${LN} -s ${PKGSRCDIR}/graphics/png/${WRKDIR:T}/libpng-0.96 ${WRKSRC}/libpng
 	cd ${WRKSRC} && unzip -La ${DISTDIR}/${HP850_DRV}
 	${CP} ${DISTDIR}/${PDF_SEC} ${WRKSRC}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1998/07/04 04:18:26 mycroft Exp $
+# $NetBSD: Makefile,v 1.18 1998/07/04 05:11:13 mycroft Exp $
 #
 
 DISTNAME=	netpbm
@@ -17,7 +17,7 @@ MAINTAINER=	tron@netbsd.org
 CONFLICTS=	netpbm-94.3.1
 
 DEPENDS+=	tiff-3.4:../../graphics/tiff
-DEPENDS+=	jpeg-6a:../../graphics/jpeg
+DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-0.96:../../graphics/png
 
 WRKSRC=		${WRKDIR}/netpbm

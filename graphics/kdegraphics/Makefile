@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/05/04 00:20:02 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/07/04 05:11:13 mycroft Exp $
 #
 
 DISTNAME=	kdegraphics-beta4-1
@@ -14,7 +14,7 @@ MAINTAINER=	tron@netbsd.org
 BUILD_DEPENDS=	bzip2:../../archivers/bzip2 \
 		moc:../../x11/qt
 DEPENDS+=	giflib-3.0:../../graphics/giflib
-DEPENDS+=	jpeg-6a:../../graphics/jpeg
+DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	qt-1.33:../../x11/qt
 DEPENDS+=	kdelibs-4.1b:../../x11/kdelibs
 DEPENDS+=	kdebase-4.1b:../../x11/kdebase
