@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2898 2005/01/14 11:31:36 adam Exp $
+$NetBSD: TODO,v 1.2899 2005/01/14 13:01:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -1165,8 +1165,6 @@ Suggested package updates
 	o webmin-1.170
 	o weechat-0.0.8
 	o windowlab-1.25
-	o wine-20041201 [mmap problem on NetBSD]
-	o wine-20050111
 	o wmbiff-0.4.26
 	o wmweather-2.4.3
 	o wol-0.7.1

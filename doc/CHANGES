@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8751 2005/01/14 12:42:42 adam Exp $
+$NetBSD: CHANGES,v 1.8752 2005/01/14 13:01:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -301,3 +301,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libgcrypt to 1.2.1 [adam 2005-01-14]
 	Updated glpk to 4.8 [adam 2005-01-14]
 	Updated ImageMagick to 6.1.8-6 [adam 2005-01-14]
+	Updated wine to 20050111 [adam 2005-01-14]
