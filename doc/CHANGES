@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7894 2004/11/18 12:31:36 wiz Exp $
+$NetBSD: CHANGES,v 1.7895 2004/11/18 12:33:01 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5322,3 +5322,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmms to 1.2.10nb2 [grant 2004-11-18]
 	Updated wv2 to 0.2.2 [shannonjr 2004-11-18]
 	Updated guile to 1.6.5 [wiz 2004-11-18]
+	Updated R to 2.0.1 [markd 2004-11-18]
