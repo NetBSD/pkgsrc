@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: etcupdate,v 1.1.1.1 2001/11/20 09:53:55 martti Exp $
+# $NetBSD: etcupdate,v 1.2 2001/11/20 13:20:23 martti Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -183,6 +183,7 @@ diff_and_merge_file() {
 EOF
 		else
 			cat << EOF
+  d  Don't install the new file
   i  Install the new file
   m  Merge the currently installed and new file
   s  Show the differences between the installed and new file
