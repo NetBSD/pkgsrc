@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2003/07/17 22:51:28 grant Exp $
+# $NetBSD: Makefile,v 1.28 2003/09/20 14:15:27 salo Exp $
 #
 
-DISTNAME=	nmap-3.30
+DISTNAME=	nmap-3.45
 CATEGORIES=	net security
 MASTER_SITES=	http://www.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +15,8 @@ USE_GCC_SHLIB=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
+CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.libpcre}
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--without-nmapfe
 
 .include "../../mk/bsd.prefs.mk"
@@ -23,5 +25,8 @@ CONFIGURE_ARGS+=	--without-nmapfe
 MAKE_ENV+=	CPPFLAGS=""
 .endif
 
+.include "../../devel/pcre/buildlink2.mk"
 .include "../../net/libpcap/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

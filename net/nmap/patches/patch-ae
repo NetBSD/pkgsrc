@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.5 2003/09/20 14:15:28 salo Exp $
+
+--- nsock/src/configure.orig	2003-09-11 05:44:08.000000000 +0200
++++ nsock/src/configure	2003-09-20 14:50:34.000000000 +0200
+@@ -10,6 +10,8 @@
+ ## M4sh Initialization.  ##
+ ## --------------------- ##
+ 
++LIBS=
++
+ # Be Bourne compatible
+ if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
+   emulate sh
