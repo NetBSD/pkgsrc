@@ -1,8 +1,8 @@
 DISTNAME=		httpd-${APACHE_VERSION}
 # When updating this version be sure to update the checksum and remove
 # any PKGREVISION for devel/apr also.
-APACHE_VERSION=		2.0.52
-APR_VERSION=            0.9.5
+APACHE_VERSION=		2.0.53
+APR_VERSION=            0.9.6
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/} \
 			http://www.NetBSD.org/images/logos/
