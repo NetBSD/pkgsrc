@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/01/24 15:46:42 grant Exp $
+# $NetBSD: Makefile,v 1.39 2004/01/26 12:31:03 jmmv Exp $
 #
 
 DISTNAME=	avifile-0.6.20010814
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://avifile.sourceforge.net/
 COMMENT=	MPEG-4 (DivX) video player library
 
-DEPENDS+=	win32-codecs>=010122:../../graphics/win32-codecs
+DEPENDS+=	win32-codecs>=010122:../../multimedia/win32-codecs
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
