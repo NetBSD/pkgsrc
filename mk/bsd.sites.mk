@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.31 2005/02/23 15:30:57 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.32 2005/02/23 15:39:02 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -17,19 +17,13 @@ MASTER_SITE_XCONTRIB+=  \
 MASTER_SITE_GNU+=       \
 	ftp://ftp.gnu.org/pub/gnu/ \
 	http://public.planetmirror.com.au/pub/gnu/ \
-	ftp://gatekeeper.dec.com/pub/GNU/ \
-	ftp://ftp.uu.net/archive/systems/gnu/ \
-	ftp://ftp.de.uu.net/pub/gnu/ \
 	ftp://ftp.funet.fi/pub/gnu/prep/ \
-	ftp://ftp.leo.org/pub/comp/os/unix/gnu/ \
-	ftp://ftp.digex.net/pub/gnu/ \
 	ftp://ftp.wustl.edu/mirrors/gnu/ \
-	ftp://ftp.kddlabs.co.jp/pub/gnu/ \
+	ftp://ftp.kddlabs.co.jp/pub/gnu/gnu/ \
 	ftp://ftp.dti.ad.jp/pub/GNU/ \
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnu.org/gnu/ \
-	ftp://sunsite.org.uk/Mirrors/ftp.gnu.org/pub/gnu/ \
 	ftp://ftp.informatik.hu-berlin.de/pub/gnu/ \
-	ftp://ftp.rediris.es/mirror/gnu/ \
+	ftp://ftp.rediris.es/mirror/GNU/gnu/ \
 	ftp://ftp.lip6.fr/pub/gnu/ \
 	ftp://ftp.tuwien.ac.at/linux/gnu/gnusrc/ \
 	ftp://ftp.chg.ru/pub/gnu/
