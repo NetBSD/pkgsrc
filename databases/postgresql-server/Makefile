@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/08/30 22:51:14 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2003/09/18 16:25:19 jmmv Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 SVR4_PKGNAME=		pstgs
@@ -10,7 +10,7 @@ DEPENDS+=		postgresql-client>=${BASE_VERS}:../../databases/postgresql-client
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips
 
-.include "../postgresql/Makefile.common"
+.include "../../databases/postgresql/Makefile.common"
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
@@ -68,5 +68,5 @@ post-install:
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz		\
 		`${SED} -e "s|^#.*||" ${FILESDIR}/man.server`
 
-.include "../postgresql-lib/buildlink2.mk"
+.include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
