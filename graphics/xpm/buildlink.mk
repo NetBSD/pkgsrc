@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/02 08:05:06 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/02 14:16:55 jlam Exp $
 #
 # This Makefile fragment is included by packages that use xpm.
 #
@@ -16,11 +16,23 @@ XPM_BUILDLINK_MK=	# defined
 .include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.xpm?=	xpm-3.4k
-CHECK_XPM=		# defined
 
+# Check if we got Xpm distributed with XFree86 4.x or if we need to
+# depend on the Xpm package.
+#
 .include "../../mk/bsd.prefs.mk"
+.if exists(${X11BASE}/include/X11/xpm.h)
+_IS_BUILTIN_XPM!=	${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
+.else
+_IS_BUILTIN_XPM=	0
+.endif
+.if ${_IS_BUILTIN_XPM} == "0"
+_NEED_XPM=		YES
+.else
+_NEED_XPM=		NO
+.endif
 
-.if ${HAVE_BUILTIN_XPM} == "NO"
+.if ${_NEED_XPM} == "YES"
 DEPENDS+=		${BUILDLINK_DEPENDS.xpm}:../../graphics/xpm
 BUILDLINK_PREFIX.xpm=	${X11PREFIX}
 .else
