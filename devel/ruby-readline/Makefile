@@ -1,23 +1,21 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:13:33 tv Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/27 14:38:46 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
-PKGNAME=		${RUBY_PKGNAMEPREFIX}readline-${RUBY_VERSION}
-PKGREVISION=		4
+PKGNAME=		${RUBY_PKGPREFIX}-readline-${RUBY_VERSION}
 CATEGORIES=		devel ruby
 MASTER_SITES=		${MASTER_SITE_RUBY}
 
 MAINTAINER=		taca@NetBSD.org
-HOMEPAGE=		http://www.ruby-lang.org/en/
+HOMEPAGE=		${RUBY_HOMEPAGE}
 COMMENT=		Ruby extension to readline library
 
-WRKSRC=			${RUBY_WRKSRC}/ext/readline
-DIST_SUBDIR=		ruby
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 USE_BUILDLINK3=		yes
-
-EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/readline
 USE_RUBY_EXTCONF=	yes
+EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/readline
+WRKSRC=			${RUBY_WRKSRC}/ext/readline
+
 RUBY_DOCS=		README README.ja
 
 post-install:
@@ -27,6 +25,6 @@ post-install:
 .endfor
 
 .include "../../devel/readline/buildlink3.mk"
-.include "../../lang/ruby-base/Makefile.common"
-.include "../../lang/ruby-base/buildlink3.mk"
+.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
