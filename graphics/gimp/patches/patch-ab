@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.12 2005/01/04 15:20:25 adam Exp $
+$NetBSD: patch-ab,v 1.13 2005/02/23 14:16:15 adam Exp $
 
---- configure.orig	2004-12-27 19:49:38.000000000 +0000
+--- configure.orig	2005-02-22 22:11:23.000000000 +0000
 +++ configure
-@@ -27662,8 +27662,16 @@ if test "x$enable_altivec" = xyes; then
+@@ -27859,8 +27859,16 @@ if test "x$enable_altivec" = xyes; then
    echo "$as_me:$LINENO: checking whether we can compile Altivec code" >&5
  echo $ECHO_N "checking whether we can compile Altivec code... $ECHO_C" >&6
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.12 2005/01/04 15:20:25 adam Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -27703,7 +27711,7 @@ enable_altivec=no
+@@ -27900,7 +27908,7 @@ enable_altivec=no
  echo "${ECHO_T}no" >&6
      { echo "$as_me:$LINENO: WARNING: The assembler does not support the Altivec command set." >&5
  echo "$as_me: WARNING: The assembler does not support the Altivec command set." >&2;}
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.12 2005/01/04 15:20:25 adam Exp $
  fi
  rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  
-@@ -33686,7 +33694,7 @@ fi;
+@@ -33867,7 +33875,7 @@ fi;
  
  gimpdatadir="$datadir/$PACKAGE/2.0"
  gimpplugindir="$libdir/$PACKAGE/2.0"
