@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2001/02/25 04:18:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.36 2002/01/10 11:00:19 martti Exp $
 
-DISTNAME=	rsync-2.4.6
+DISTNAME=	rsync-2.5.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://rsync.samba.org/pub/rsync/ \
 		ftp://sunsite.auc.dk/pub/unix/rsync/  \
@@ -13,26 +13,10 @@ COMMENT=	Network file distribution/synchronisation utility
 
 GNU_CONFIGURE=	yes
 
-BUILD_DEFS+=	USE_INET6
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/ \
-		ftp://ftp.pasta.cs.uit.no/pub/IPv6/misc/
-PATCHFILES=	rsync-246-v6-20000907.diff.gz
-PATCH_DIST_STRIP=	-p1
-.endif
-
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS=	--enable-ipv6
-.else
-CONFIGURE_ARGS=	--disable-ipv6
-.endif
-
 post-install:
 	@strip ${PREFIX}/bin/rsync
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rsync
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/rsync
 	${INSTALL_DATA} ${WRKSRC}/tech_report.tex ${PREFIX}/share/doc/rsync
 
 .include "../../mk/bsd.pkg.mk"
