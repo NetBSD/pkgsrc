@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/10/13 18:16:00 kim Exp $
+# $NetBSD: Makefile,v 1.23 2000/11/05 11:07:57 veego Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=--disable-ipv6
 .endif
 
 # this might make it easier to use scotty's mibs, and local ones too
-CONFIGURE_ARGS+=--with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tnm2.1.8/mibs:/usr/local/share/snmp/mibs"
+CONFIGURE_ARGS+=--with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:/usr/local/share/snmp/mibs"
 
 # deal with libwrap bogosity by providing these variables to programs which
 # do not supply them:
