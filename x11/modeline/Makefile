@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:06:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/19 11:39:31 agc Exp $
 
 DISTNAME=		modeline_vfr.c
 PKGNAME=		modeline-20001121
 CATEGORIES=		x11
-MASTER_SITES=		http://www.dkfz-heidelberg.de/spec/linux/modeline/
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		# empty
 
 MAINTAINER=		packages@netbsd.org
