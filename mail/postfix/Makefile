@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2003/03/20 22:47:04 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2003/03/21 05:21:23 taca Exp $
 
 DISTNAME=	postfix-2.0.7
 CATEGORIES=	mail
@@ -29,7 +29,7 @@ CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
 FIX_RPATH+=	AUXLIBS
 
 #.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-#PATCHFILES+=		tls+ipv6-1.13-pf-2.0.6.patch.gz
+#PATCHFILES+=		tls+ipv6-1.13-pf-2.0.7.patch.gz
 #PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.13/
 #PATCH_DIST_STRIP=	-p1
 #BUILD_DEFS+=		POSTFIX_USE_INET6
