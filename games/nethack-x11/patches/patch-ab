@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.3 1999/12/24 22:30:07 pooka Exp $
+$NetBSD: patch-ab,v 1.4 2000/08/10 17:50:09 pooka Exp $
 
---- sys/unix/Makefile.src.orig	Sat Dec 11 07:21:05 1999
-+++ sys/unix/Makefile.src	Wed Dec 22 21:45:47 1999
-@@ -132,8 +132,8 @@
+--- sys/unix/Makefile.src.orig	Sat Aug  5 13:52:57 2000
++++ sys/unix/Makefile.src	Thu Aug 10 19:28:31 2000
+@@ -144,8 +144,8 @@
  # flags for debugging:
  # CFLAGS = -g -I../include
  
 -CFLAGS = -O -I../include
--LFLAGS = 
+-LFLAGS =
 +CFLAGS = -O -I../include -I${X11BASE}/include
 +LFLAGS = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib
  
- # Only used for Qt interface (other interfaces are standard C)
- CXXFLAGS = -g $(CFLAGS) -I. -I$(QTDIR)/include
-@@ -165,8 +165,8 @@
+ # The Qt and Be window systems are written in C++, while the rest of
+ # NetHack is standard C.  If using Qt, uncomment the LD line here to get
+@@ -203,8 +203,8 @@
  
  #
- # 
+ #
 -WINSRC = $(WINTTYSRC)
 -WINOBJ = $(WINTTYOBJ)
 +WINSRC = $(WINX11SRC)
@@ -24,7 +24,7 @@ $NetBSD: patch-ab,v 1.3 1999/12/24 22:30:07 pooka Exp $
  
  # on some systems the termcap library is in -ltermcap or -lcurses
  # on 386 Xenix, the -ltermlib tputs() seems not to work; use -lcurses instead
-@@ -186,7 +186,7 @@
+@@ -224,7 +224,7 @@
  #
  # libraries for X11
  # If USE_XPM is defined in config.h, you will also need -lXpm here.
@@ -33,9 +33,9 @@ $NetBSD: patch-ab,v 1.3 1999/12/24 22:30:07 pooka Exp $
  # WINX11LIB = -lXaw -lXmu -lXt -lX11
  # WINX11LIB = -lXaw -lXmu -lXext -lXt -lXpm -lX11 -lm
  # WINX11LIB = -lXaw -lXmu -lXpm -lXext -lXt -lX11 -lSM -lICE -lm # BSD/OS 2.0
-@@ -199,7 +199,7 @@
- #
- #
+@@ -244,7 +244,7 @@
+ # libraries for BeOS 
+ WINBELIB = -lbe
  
 -WINLIB = $(WINTTYLIB)
 +WINLIB = $(WINX11LIB)

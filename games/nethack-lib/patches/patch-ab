@@ -1,13 +1,14 @@
-$NetBSD: patch-ab,v 1.3 2000/04/14 14:06:53 pooka Exp $
+$NetBSD: patch-ab,v 1.4 2000/08/10 17:50:06 pooka Exp $
 
---- sys/unix/Makefile.top.orig	Sat Dec 11 07:21:05 1999
-+++ sys/unix/Makefile.top	Fri Apr 14 16:44:56 2000
-@@ -14,17 +14,16 @@
+--- sys/unix/Makefile.top.orig	Tue Jul  4 03:42:05 2000
++++ sys/unix/Makefile.top	Thu Aug 10 18:12:00 2000
+@@ -14,18 +14,17 @@
  # MAKE = make
  
  # make NetHack
 -PREFIX	 = /usr
  GAME     = nethack
+ # GAME     = nethack.prg
 -GAMEUID  = games
 -GAMEGRP  = bin
 +GAMEUID  = root
@@ -24,25 +25,26 @@ $NetBSD: patch-ab,v 1.3 2000/04/14 14:06:53 pooka Exp $
 +DIRPERM  = 0775
  
  # GAMEDIR also appears in config.h as "HACKDIR".
- #
-@@ -33,13 +32,13 @@
+ # VARDIR may also appear in unixconf.h as "VAR_PLAYGROUND" else GAMEDIR
+@@ -35,14 +34,13 @@
  # therefore there should not be anything in GAMEDIR that you want to keep
  # (if there is, you'll have to do the installation by hand or modify the
  # instructions)
 -GAMEDIR  = $(PREFIX)/games/lib/$(GAME)dir
--SHELLDIR = $(PREFIX)/games
 +GAMEDIR  = $(PREFIX)/share/$(GAME)dir
+ VARDIR  = $(GAMEDIR)
+-SHELLDIR = $(PREFIX)/games
 +SHELLDIR = $(PREFIX)/bin
  
  # per discussion in Install.X11 and Install.Qt
- VARDATND = 
+-VARDATND = 
  # VARDATND = x11tiles pet_mark.xbm
 -# VARDATND = x11tiles pet_mark.xbm rip.xpm
 +VARDATND = x11tiles pet_mark.xbm rip.xpm
- 
- VARDATD = data oracles options quest.dat rumors
- VARDAT = $(VARDATD) $(VARDATND)
-@@ -76,9 +75,12 @@
+ # for Atari/Gem
+ # VARDATND = nh16.img title.img GEM_RSC.RSC
+ # for BeOS
+@@ -87,9 +85,12 @@
  $(GAME):
  	( cd src ; $(MAKE) )
  
@@ -51,12 +53,12 @@ $NetBSD: patch-ab,v 1.3 2000/04/14 14:06:53 pooka Exp $
  	@echo "Done."
  
 +datastuff: Guidebook $(VARDAT) dungeon spec_levs check-dlb recover
-+	@echo "Data Sets Built"
++	@echo "Data Sets Built."
 +
  Guidebook:
  	( cd doc ; $(MAKE) Guidebook )
  
-@@ -88,6 +90,9 @@
+@@ -99,6 +100,9 @@
  data:
  	( cd dat ; $(MAKE) data )
  
@@ -66,21 +68,19 @@ $NetBSD: patch-ab,v 1.3 2000/04/14 14:06:53 pooka Exp $
  rumors:
  	( cd dat ; $(MAKE) rumors )
  
-@@ -128,7 +133,12 @@
+@@ -156,6 +160,11 @@
  	( cd util ; $(MAKE) dlb )
  	( cd dat ; ../util/dlb cf nhdat $(DATDLB) )
  
--
 +binfiles: $(GAME)
 +	cp src/$(GAME) $(SHELLDIR)/$(GAME)$(GTYPE)
 +	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)$(GTYPE) ; \
 +		$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)$(GTYPE) )
 +	chmod $(GAMEPERM) $(SHELLDIR)/$(GAME)$(GTYPE)
-+ 
+ 
  dofiles:
  	target=`sed -n					\
- 		-e '/librarian/{' 			\
-@@ -137,16 +147,13 @@
+@@ -165,16 +174,13 @@
  		-e '}' 					\
  	  	-e '$$s/.*/nodlb/p' < dat/options` ;	\
  	$(MAKE) dofiles-$${target-nodlb}
@@ -98,21 +98,21 @@ $NetBSD: patch-ab,v 1.3 2000/04/14 14:06:53 pooka Exp $
  	-$(CHOWN) $(GAMEUID) $(SHELLDIR)/$(GAME)
  	$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(GAME)
  	chmod $(EXEPERM) $(SHELLDIR)/$(GAME)
-@@ -182,10 +189,10 @@
+@@ -210,11 +216,10 @@
  # and a reminder
  	@echo You may also want to install the man pages via the doc Makefile.
  
 -install: $(GAME) $(VARDAT) dungeon spec_levs
 +install-dat: $(VARDAT) dungeon spec_levs
  # set up the directories
- 	-mkdir $(SHELLDIR)
--	-rm -rf $(GAMEDIR)
-+#	-rm -rf $(GAMEDIR)
- 	-mkdir $(GAMEDIR) $(GAMEDIR)/save
- 	-$(CHOWN) $(GAMEUID) $(GAMEDIR) $(GAMEDIR)/save
- 	$(CHGRP) $(GAMEGRP) $(GAMEDIR) $(GAMEDIR)/save
-@@ -197,6 +204,14 @@
- 	-( cd $(GAMEDIR) ; $(CHOWN) $(GAMEUID) perm record logfile ; \
+ # not all mkdirs have -p; those that don't will create a -p directory
+ 	-mkdir -p $(SHELLDIR)
+-	-rm -rf $(GAMEDIR) $(VARDIR)
+ 	-mkdir -p $(GAMEDIR) $(VARDIR) $(VARDIR)/save
+ 	-rmdir ./-p
+ 	-$(CHOWN) $(GAMEUID) $(GAMEDIR) $(VARDIR) $(VARDIR)/save
+@@ -227,6 +232,14 @@
+ 	-( cd $(VARDIR) ; $(CHOWN) $(GAMEUID) perm record logfile ; \
  			$(CHGRP) $(GAMEGRP) perm record logfile ; \
  			chmod $(FILEPERM) perm record logfile )
 +	-mkdir -p $(PREFIX)/share/doc/nethack
