@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.18 2005/03/16 05:31:23 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.19 2005/03/16 16:37:38 xtraeme Exp $
 #
 # Copyright (c) 2004, 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,7 +54,7 @@
 : ${MKISOFS_FIXED_ARGS:=-no-emul-boot -boot-load-size 30 -boot-info-table}
 : ${BOOTDIR:=boot/grub}
 : ${BOOTIMAGE:=stage2_eltorito}
-: ${GRUB_FILES:=stage2_eltorito iso9660_stage1_5 xfs_stage1_5 ufs2_stage1_5 reiserfs_stage1_5 jfs_stage1_5 ffs_stage1_5 fat_stage1_5 e2fs_stage1_5}
+: ${GRUB_FILES:=stage1 stage2 stage2_eltorito iso9660_stage1_5 xfs_stage1_5 ufs2_stage1_5 reiserfs_stage1_5 jfs_stage1_5 ffs_stage1_5 fat_stage1_5 e2fs_stage1_5}
 
 trap "echo; showmsg \"Process cancelled!\"; bye 127" INT QUIT
 
@@ -374,7 +374,7 @@ _EOF_
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.18 2005/03/16 05:31:23 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.19 2005/03/16 16:37:38 xtraeme Exp $
 # 
 
 # PROVIDE: root
