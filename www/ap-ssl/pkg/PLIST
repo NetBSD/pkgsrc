@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/09/12 14:05:17 jlam Exp $
-sbin/mkcert.sh
+@comment $NetBSD: PLIST,v 1.6 2000/09/12 14:09:52 jlam Exp $
 etc/httpd/ssl.crl/Makefile.crl
 etc/httpd/ssl.crl/README.CRL
 etc/httpd/ssl.crt/Makefile.crt
@@ -19,6 +18,7 @@ etc/httpd/ssl.prm/README.PRM
 etc/httpd/ssl.prm/snakeoil-ca-dsa.prm
 etc/httpd/ssl.prm/snakeoil-dsa.prm
 lib/httpd/mod_ssl.so
+sbin/mkcert.sh
 share/doc/mod_ssl/README.mkcert
 share/mod_ssl/cca.sh
 share/mod_ssl/gid-mkcert.sh
