@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2058 2003/04/27 16:06:02 jmmv Exp $
+$NetBSD: CHANGES,v 1.2059 2003/04/27 19:19:28 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1756,3 +1756,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cross-i386-netbsdpe to 1.4.0 [kent 2003-04-27]
 	Updated gnome-vfs2 to 2.2.4nb1 [jmmv 2003-04-27]
 	Updated nautilus to 2.2.3.1nb1 [jmmv 2003-04-27]
+	Updated gettext to 0.11.5nb2 [jmmv 2003-04-27]
