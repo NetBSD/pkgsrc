@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2001/01/29 04:10:39 jtb Exp $
+$NetBSD: patch-aa,v 1.6 2001/04/19 20:51:31 jtb Exp $
 
---- src/Makefile.orig	Wed Oct 18 03:30:08 2000
+--- src/Makefile.orig	Fri Mar  9 19:20:44 2001
 +++ src/Makefile
 @@ -43,7 +43,7 @@
  NETCDFLIB	= $(NETCDF)/lib
@@ -18,19 +18,19 @@ $NetBSD: patch-aa,v 1.5 2001/01/29 04:10:39 jtb Exp $
 -SHARED_LIB	= libpsl.a libgmt.a libpsl.$(SL) libgmt.$(SL)
 -STATIC_LIB	= libpsl.a libgmt.a
 +SHARED_LIB	= libpsl.la libgmt.la
-+STATIC_LIB	= 
++STATIC_LIB	=
  
  #-------------------------------------------------------------------------------
  
  all:		init libs $(PROGS)
  
- init:		gmt_notposix.h gmt_nan.h
+ init:		gmtmacros gmt_notposix.h gmt_nan.h
 -		
 +
- gmt_nan.h:	
- 		$(CC) $(CFLAGS) gmt_nan_init.c $(CDF) $(LIBS) -o gmt_nan_init
- 		$(COMPRESS) gmt_nan_init$(EXE)
-@@ -156,23 +156,19 @@
+ gmtmacros:	
+ 		if [ `cat makegmt.macros | wc -c` = 0 ]; then \
+ 			echo "src/makegmt.macros is empty - you must rerun configure in the main GMT directory"; \
+@@ -162,32 +162,28 @@
  		./configure
  
  install:	all
@@ -40,6 +40,7 @@ $NetBSD: patch-aa,v 1.5 2001/01/29 04:10:39 jtb Exp $
 -		for i in $(PROGS); do \
 -			$(INSTALL) $$i$(EXE) $(bindir); \
 -		done
+-		$(INSTALL) GMT $(bindir)
  		if [ ! -d $(libdir) ]; then \
  			mkdir -p $(libdir); \
  		fi
@@ -50,71 +51,71 @@ $NetBSD: patch-aa,v 1.5 2001/01/29 04:10:39 jtb Exp $
 -				$(INSTALL) -m 444 libpsl.$(SL) $(libdir); \
 -				$(INSTALL) -m 444 libgmt.$(SL) $(libdir); \
 -			fi; \
-+			$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) libpsl.la $(libdir);\
-+			$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) libgmt.la $(libdir);\
-+		fi
-+		if [ ! -d $(bindir) ]; then \
-+			mkdir -p $(bindir); \
++			$(LIBTOOL) $(INSTALL_DATA) libpsl.la $(libdir); \
++			$(LIBTOOL) $(INSTALL_DATA) libgmt.la $(libdir); \
  		fi
-+		for i in $(PROGS); do \
-+			$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
-+		done
  		if [ ! -d $(includedir) ]; then \
  			mkdir -p $(includedir); \
  		fi
-@@ -187,11 +183,7 @@
- 			\rm -f $(bindir)/$$i$(EXE); \
- 		done
- 		if [ ! $(libdir) = $(srcdir) ]; then \
--			\rm -f $(libdir)/libgmt.a $(libdir)/libpsl.a; \
--			if [ -f libpsl.$(SL) ]; then \
--				\rm -f $(libdir)/libpsl.$(SL); \
--				\rm -f $(libdir)/libgmt.$(SL); \
--			fi; \
-+			\rm -f $(libdir)/libgmt.* $(libdir)/libpsl.*; \
- 		fi
  		if [ ! $(includedir) = $(srcdir) ]; then \
  			for i in $(GMT_H); do \
-@@ -200,7 +192,7 @@
+-				$(INSTALL) -m 444 $$i $(includedir); \
++				$(INSTALL_DATA) $$i $(includedir); \
+ 			done; \
+ 		fi
++		if [ ! -d $(bindir) ]; then \
++			mkdir -p $(bindir); \
++		fi
++		for i in $(PROGS); do \
++			$(LIBTOOL) $(INSTALL_PROGRAM) $$i$(EXE) $(bindir); \
++		done
++		$(INSTALL) GMT $(bindir)
+ 
+ uninstall:
+ 		for i in $(PROGS); do \
+@@ -208,13 +204,13 @@
  		fi
  
  clean:
 -		rm -f *.o gmt_nan_init$(EXE)
-+		rm -rf *.o *.lo .libs libgmt.la libpsl.la gmt_nan_init$(EXE)
++		rm -f *.o *.lo gmt_nan_init$(EXE)
  		for i in $(PROGS); do \
  			rm -f $$i$(EXE); \
  		done
-@@ -214,31 +206,27 @@
- #	libraries
- #-------------------------------------------------------------------------------
  
--libs:		$(GMTLIB)
-+libs:		libpsl.la libgmt.la
+ spotless:	clean
+-		rm -f $(GMTLIB) gmt_nan.h gmt_notposix.h makegmt.macros
++		rm -fr .libs $(GMTLIB) gmt_nan.h gmt_notposix.h makegmt.macros
+ 		touch makegmt.macros
+ 
+ distclean:	spotless
+@@ -225,29 +221,24 @@
+ 
+ libs:		$(GMTLIB)
  
 -libpsl.a:	pslib.o
 -		$(AR) cvur libpsl.a $?
 -		$(RANLIB) libpsl.a
-+libpsl.la:		pslib.o
-+		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ \
-+		pslib.lo -lm -rpath $(libdir) --version-info 0:0
++libpsl.la:	pslib.o
++		@$(LIBTOOL) $(CC) -o $@ pslib.lo $(LDFLAGS) -lm --version-info 0:0 -rpath $(libdir)
  
  pslib.o:	pslib.c $(PS_H)
 -		$(CC) $(CFLAGS) -c pslib.c
-+		$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c pslib.c
- 
+-
 -libgmt.a:	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
 -		$(AR) cvur $@ $?
 -		$(RANLIB) $@
 -
 -libpsl.$(SL):	pslib.o
 -		$(LD) $(LD_OPT) $? -o $@
--
++		@$(LIBTOOL) $(CC) $(CPPFLAGS) $(CFLAGS) -c pslib.c
+ 
 -libgmt.$(SL):	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
 -		$(LD) $(LD_OPT) $(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O) -o $@
-+libgmt.la:		$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
-+		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ \
-+		$(LIB_O:.o=.lo) $(TRIANGLE_O:.o=.lo) $(ALPHA_SINCOS_O.o=.lo) \
-+		$(LDFLAGS) $(CDF) $(LIBS) -rpath $(libdir) --version-info 0:0
++libgmt.la:	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
++		@$(LIBTOOL) $(CC) -o $@ $(LIB_O:.o=.lo) $(TRIANGLE_O:.o=.lo) \
++		$(ALPHA_SINCOS_O:.o=.lo) $(LDFLAGS) $(CDF) $(LIBS) 	\
++		--version-info 0:0 -rpath $(libdir)
  
  #-------------------------------------------------------------------------------
  #	program dependencies
@@ -122,9 +123,9 @@ $NetBSD: patch-aa,v 1.5 2001/01/29 04:10:39 jtb Exp $
  
  $(PROGS):	$(GMTLIB) $(PROGS_O)
 -		$(CC) $(CFLAGS) $@.o -L. -lgmt -lpsl $(CDF) $(LIBS) $(LDFLAGS) -o $@
-+		$(LIBTOOL) --mode=link $(CC) $(CFLAGS) $@.o libgmt.la libpsl.la $(CDF) $(LIBS) $(LDFLAGS) -o $@
++		@$(LIBTOOL) $(CC) $(CPPFLAGS) $(CFLAGS) $@.o libgmt.la \
++		libpsl.la $(CDF) $(LIBS) $(LDFLAGS) -o $@
  		$(COMPRESS) $@$(EXE)
-+
  .c.o:
 -		$(CC) -c $(CFLAGS) $<
-+		$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<
++		@$(LIBTOOL) $(CC) $(CPPFLAGS) -c $(CFLAGS) $<
