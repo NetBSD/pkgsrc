@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7028 2004/08/28 23:21:43 rumble Exp $
+$NetBSD: CHANGES,v 1.7029 2004/08/29 06:48:55 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4089,3 +4089,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added queue-fix-1.4 [schmonz 2004-08-28]
 	Updated pkg_chk to 1.50 [grant 2004-08-28]
 	Added w9wm-0.4.2 [rumble 2004-08-28]
+	Updated bogofilter to 0.92.6 [snj 2004-08-29]
