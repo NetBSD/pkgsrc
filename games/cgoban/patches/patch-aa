@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2000/07/06 15:45:23 pooka Exp $
+$NetBSD: patch-aa,v 1.5 2000/11/20 04:11:48 toshii Exp $
 
---- Makefile.in.orig	Thu May 29 04:34:54 1997
-+++ Makefile.in	Thu Jul  6 18:37:25 2000
+--- Makefile.in.orig	Tue Jan 25 13:40:18 2000
++++ Makefile.in
 @@ -36,7 +36,7 @@
  
  # Change these values to tell make where to put the binary and the man page
  #   when it's done compiling.
--PREFIX = /usr/games
+-PREFIX = @PREFIX@
 +PREFIX = @prefix@
  BINDIR = $(PREFIX)/bin
  MANDIR = $(PREFIX)/man
