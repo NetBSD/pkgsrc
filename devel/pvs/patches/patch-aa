@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/09/24 17:57:25 jschauma Exp $
+
+--- pvs.orig	Fri Jul 19 05:57:05 2002
++++ pvs	Tue Sep 24 12:43:19 2002
+@@ -46,7 +46,7 @@
+ 
+ # PVSPATH should be set after installation by <PVS>/bin/relocate or by hand
+ # to the location of the PVS installation
+-PVSPATH=/homes/owre/pvs3.0
++PVSPATH=@PREFIX@/pvs
+ 
+ #-------------------------------------------------
+ # Nothing below this line should need modification
+@@ -167,6 +167,11 @@
+ 	    then echo "PVS 3.0 only runs under Solaris or Linux"; exit 1
+ 	 fi
+ 	 PVSARCH=sun4;;
++  NetBSD) # pretend to be a redhat linux system
++  	opsys=redhat
++	majvers=5
++	othervers=4
++	PVSARCH=ix86;;
+   Linux) # If Linux, we need to determine the Redhat version to use.
+ 	 opsys=redhat
+ 	 if [ ! $majvers ]; then
+@@ -228,8 +233,14 @@
+ PVSIMAGE="$PVSLISP"
+ 
+ export ALLEGRO_CL_HOME DISPLAY LD_LIBRARY_PATH
+-export PVSARCH PVSIMAGE PVSPATH PATH PVSLISP PVSVERBOSE PVSTIMEOUT
+-export PVSPATCHLEVEL PVSMINUSQ PVSFORCEDP PVSDEFAULTDP
++export PVSARCH PVSIMAGE PVSPATH PATH PVSLISP PVSVERBOSE
++export PVSPATCHLEVEL PVSMINUSQ PVSFORCEDP 
++if [ "$PVSTIMEOUT" ]; then
++	export PVSTIMEOUT
++fi
++if [ "$PVSDEFAULTDP" ]; then
++	export PVSDEFAULTDP;
++fi
+ 
+ pvsemacsinit="-load $PVSPATH/emacs/go-pvs.el $loadafter"
+ 
