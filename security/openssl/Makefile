@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/10/10 11:42:18 itojun Exp $
+# $NetBSD: Makefile,v 1.24 2000/10/11 16:30:12 wennmach Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.openssl.org/source/ \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssl.org/
 
-CONFLICTS=		SSLeay-* ssleay-* kth-krb4-*
+CONFLICTS=		SSLeay-* ssleay-*
 
 CRYPTO=			YES
 USE_PERL5=		YES
