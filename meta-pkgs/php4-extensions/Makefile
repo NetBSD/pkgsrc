@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/04 19:37:25 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/05 21:04:38 jdolecek Exp $
 
 DISTNAME=	php-extensions-4.3
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs www php
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,6 +21,7 @@ DEPENDS+=	php-calendar-4.3.*:../../misc/php-calendar
 DEPENDS+=	php-curl-4.3.*:../../www/php-curl
 DEPENDS+=	php-dba-4.3.*:../../databases/php-dba
 DEPENDS+=	php-dbase-4.3.*:../../databases/php-dbase
+DEPENDS+=	php-dbx-4.3.*:../../databases/php-dbx
 DEPENDS+=	php-exif-4.3.*:../../graphics/php-exif
 DEPENDS+=	php-filepro-4.3.*:../../databases/php-filepro
 DEPENDS+=	php-ftp-4.3.*:../../net/php-ftp
