@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/16 17:03:12 drochner Exp $
+lib/zope/lib/python/Products/RDFSummary/RDFSummary.py
+lib/zope/lib/python/Products/RDFSummary/RDFSummary.pyc
+lib/zope/lib/python/Products/RDFSummary/README.txt
+lib/zope/lib/python/Products/RDFSummary/__init__.py
+lib/zope/lib/python/Products/RDFSummary/__init__.pyc
+lib/zope/lib/python/Products/RDFSummary/add_summary.dtml
+lib/zope/lib/python/Products/RDFSummary/edit_prop.dtml
+lib/zope/lib/python/Products/RDFSummary/htmlview.dtml
+lib/zope/lib/python/Products/RDFSummary/refresh.txt
+lib/zope/lib/python/Products/RDFSummary/rss.gif
+lib/zope/lib/python/Products/RDFSummary/source.dtml
+lib/zope/lib/python/Products/RDFSummary/version.txt
+@dirrm lib/zope/lib/python/Products/RDFSummary
