@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/01/10 14:56:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/10 19:44:16 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
@@ -93,7 +93,9 @@ BUILDLINK_DEPENDS+=		heimdal
 .endif
 
 .if !empty(HEIMDAL_BUILDLINK3_MK:M+)
-.  if !empty(BUILDLINK_USE_BUILTIN.heimdal:M[nN][oO])
+.  if !empty(BUILDLINK_USE_BUILTIN.heimdal:M[yY][eE][sS])
+BUILDLINK_FILES.heimdal=	include/krb5/*.h
+.  else
 KRB5_CONFIG?=	${BUILDLINK_PREFIX.heimdal}/bin/krb5-config
 CONFIGURE_ENV+=	KRB5_CONFIG="${KRB5_CONFIG}"
 MAKE_ENV+=	KRB5_CONFIG="${KRB5_CONFIG}"
