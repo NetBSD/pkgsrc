@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9083 2005/02/09 09:14:58 seb Exp $
+$NetBSD: CHANGES,v 1.9084 2005/02/09 09:50:58 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -805,3 +805,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated vip to 19971113nb1 [seb 2005-02-09]
 	Updated p5-SNMP_Session to 1.07 [seb 2005-02-09]
 	Updated freeradius to 1.0.1nb7 [seb 2005-02-09]
+	Updated pkg_chk to 1.55 [abs 2005-02-09]
+
