@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/12/25 16:45:33 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/12/25 18:02:55 wiz Exp $
 #
 
 DISTNAME=	MPlayer-0.18pre
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--with-extralibdir="${BUILDLINK_DIR}/lib"
 CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
 #CONFIGURE_ARGS+=	--disable-gcc-checking
 CONFIGURE_ARGS+=	--disable-css
-CONFIGURE_ARGS+=	--disable-streaming 
+CONFIGURE_ARGS+=	--disable-streaming
 
 post-patch:
 	cd ${WRKSRC} && for i in TOOLS/audio-block.c TOOLS/audio-block2.c TOOLS/audio-select.c	\
