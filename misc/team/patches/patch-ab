@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
+$NetBSD: patch-ab,v 1.3 2004/06/13 17:25:48 kristerw Exp $
 
 --- team.c-orig	Fri May 22 15:35:25 1998
 +++ team.c	Fri May 22 15:35:59 1998
@@ -8,8 +8,8 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
  
 -#define TeamLVOLSZ	(1L<<10)
 -#define TeamHVOLSZ	((long unsigned) 3 * ((long unsigned) 1 << 30))
-+#define TeamLVOLSZ	(off_t unsigned)(1L<<10)
-+#define TeamHVOLSZ	((off_t unsigned) 3 * ((off_t unsigned) 1 << 62))
++#define TeamLVOLSZ	(unsigned long long)(1L<<10)
++#define TeamHVOLSZ	((unsigned long long) 3 * ((unsigned long long)1 << 62))
  
  #define TeamLBUFSZ	(64)		/* Low buffer size		*/
  #define TeamDBUFSZ	(60*512)	/* Default buffer size		*/
@@ -58,7 +58,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
    int 	    fd;
    short	    status;
 -  long unsigned   size;
-+  off_t unsigned   size;
++  unsigned long long   size;
  };
  
  local Fd		FdIn,FdOut;
@@ -67,7 +67,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
    fast Fd		  *fd
  _ int			  ffd
 -_ long unsigned		  size
-+_ off_t unsigned	  size
++_ unsigned long long	  size
  )
  {
    fd->status = (ffd >= 0) ? FdOPEN :   FdCLOSED;
@@ -76,14 +76,14 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
  }
  
 -local long unsigned	FdRetry on((fd,which,done,space)) is
-+local off_t unsigned	FdRetry on((fd,which,done,space)) is
++local unsigned long long	FdRetry on((fd,which,done,space)) is
  (
    fast Fd		  *fd
  _ char			  *which
 -_ long unsigned		  done
 -_ long unsigned		  space
-+_ off_t	unsigned	  done
-+_ off_t	unsigned	  space
++_ unsigned long long	  done
++_ unsigned long long	  space
  )
  {
    int			  tty;
@@ -116,7 +116,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
  (
    fast address		  remaining
 -_ fast long unsigned	  available
-+_ fast off_t unsigned	  available
++_ fast unsigned long long	  available
  )
  {
    return (remaining < available)
@@ -125,11 +125,11 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
  _ pointer		  buffer
  _ fast address		  todo
 -_ long unsigned		  done
-+_ off_t unsigned	  done
++_ unsigned long long	  done
  )
  {
 -  fast long unsigned	  space;
-+  fast off_t unsigned	  space;
++  fast unsigned long long	  space;
    fast int		  bytesRead;
    fast address		  justDone;
  
@@ -145,11 +145,11 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
  _ pointer		  buffer
  _ fast address		  todo
 -_ long unsigned		  done
-+_ off_t unsigned	  done
++_ unsigned long long	  done
  )
  {
 -  fast long unsigned	  space;
-+  fast off_t unsigned	  space;
++  fast unsigned long long	  space;
    fast int		  bytesWritten;
    fast address		  justDone;
  
@@ -165,7 +165,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
    Token			  token;
    short			  status;
 -  long unsigned		  done;
-+  off_t unsigned	  done;
++  unsigned long long	  done;
  };
  
  local bool		StreamSend on((fd,token,status,done)) is
@@ -174,7 +174,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
  _ Token 		  token
  _ short 		  status
 -_ long unsigned		  done
-+_ off_t unsigned	  done
++_ unsigned long long	  done
  )
  {
    fast int		  n;
@@ -183,7 +183,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
  _ Token 		  *tokenp
  _ short 		  *statusp
 -_ long unsigned		  *donep
-+_ off_t unsigned	  *donep
++_ unsigned long long	  *donep
  )
  {
    fast int		  n;
@@ -192,7 +192,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
    StreamReceive(&guy->upStream,tokenp,statusp,donep)
  
 -local bool		GuyStop of((Guy *,char *,long unsigned));
-+local bool		GuyStop of((Guy *,char *,off_t unsigned));
++local bool		GuyStop of((Guy *,char *,unsigned long long));
  
  local bool		GuyStart on((guy,bufsize)) is
  (
@@ -201,7 +201,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
    Token 		  token;
    short 		  status;
 -  long unsigned		  done;
-+  off_t unsigned	  done;
++  unsigned long long	  done;
    bool		  received;
    static int 		  bytesRead,bytesWritten;
  
@@ -237,7 +237,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
    fast Guy		  *guy
  _ char			  *errormsg
 -_ long unsigned		  done
-+_ off_t unsigned	  done
++_ unsigned long long	  done
  )
  {
    Mesg(("GuyStop guy %#o\n",guy));
@@ -248,7 +248,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
 -      mesg("%lu kilobytes, %lu seconds\r\n",
 -	  done>>10,(long unsigned) (time((time_t *) 0)-origin));
 +      mesg("%qu kilobytes, %lu seconds\r\n",
-+	  done>>10,(off_t unsigned) (time((time_t *) 0)-origin));
++	  done>>10,(unsigned long long) (time((time_t *) 0)-origin));
      else if (verbose)
        mesg("\n");
    }
@@ -267,8 +267,8 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
  _ address		  bufsize
 -_ long unsigned		  isize
 -_ long unsigned		  osize
-+_ off_t unsigned		  isize
-+_ off_t unsigned		  osize
++_ unsigned long long		  isize
++_ unsigned long long		  osize
  )
  {
    /*
@@ -329,13 +329,13 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
  }
  
 -local long unsigned	atos on((s)) is
-+local off_t unsigned	atos on((s)) is
++local unsigned long long	atos on((s)) is
  (
    fast char		  *s
  )
  {
 -  fast unsigned long	  l;
-+  fast off_t unsigned	  l;
++  fast unsigned long long	  l;
  
    for (
      s, l = 0L;
@@ -343,7 +343,7 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
      s++
    )
 -    l = l*10L + (long unsigned) (*s-'0');
-+    l = l*10L + (off_t unsigned) (*s-'0');
++    l = l*10L + (unsigned long long) (*s-'0');
  
    if (*s == 'b') l *= (1L<<9);
    if (*s == 'k') l *= (1L<<10);
@@ -353,8 +353,8 @@ $NetBSD: patch-ab,v 1.2 1998/08/07 11:10:34 agc Exp $
    address		  bufsize;
 -  long unsigned		  isize;
 -  long unsigned		  osize;
-+  off_t unsigned	  isize;
-+  off_t unsigned	  osize;
++  unsigned long long	  isize;
++  unsigned long long	  osize;
    int			  opt;
  
    teamsize = TeamDTEAMSZ;
