@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/02/04 18:40:07 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/02/04 18:44:52 jlam Exp $
 
 .if !defined(BZIP2_BUILDLINK2_MK)
 BZIP2_BUILDLINK2_MK=	# defined
@@ -58,12 +58,12 @@ BUILDLINK_FILES.bzip2+=		lib/libbz2.*
 BUILDLINK_TARGETS+=		bzip2-buildlink
 BUILDLINK_TARGETS+=		bzip2-libbz2-la
 
+bzip2-buildlink: _BUILDLINK_USE
+
 bzip2-libbz2-la:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	lafile="${BUILDLINK_DIR}/lib/libbz2.la";			\
 	libpattern="${BUILDLINK_PREFIX.bzip2}/lib/libbz2.*";		\
 	${BUILDLINK_FAKE_LA}
-
-bzip2-buildlink: _BUILDLINK_USE
 
 .endif	# BZIP2_BUILDLINK2_MK
