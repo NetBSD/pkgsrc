@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/09/06 08:19:55 sakamoto Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/20 22:05:41 wiz Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
@@ -49,7 +49,7 @@ GNU_CONFIGURE=	YES
 WRKSRC=		${WRKDIR}/Xsi
 
 post-patch:
-	@for file in `find ${WRKSRC} -name Makefile.in`; do	\
+	@for file in `${FIND} ${WRKSRC} -name Makefile.in`; do	\
 		${MV} $$file $$file.orig;			\
 		${SED} -e '/PREFIX = /d'			\
 			-e 's|\(WNNBINDIR = $${PREFIX}/\)\(bin\)|\1s\2|' \
@@ -60,7 +60,7 @@ post-patch:
 			${SEDSCRIPT}				\
 			$$file.orig > $$file;			\
 	done
-	@for file in `find ${WRKSRC}/Wnn/man -name Makefile.in`; do	\
+	@for file in `${FIND} ${WRKSRC}/Wnn/man -name Makefile.in`; do	\
 		${MV} $$file $$file.orig2;				\
 		${SED} -e 's|\(MANPATH = .*\)|\1/ja_JP.EUC|'		\
 			$$file.orig2 > $$file;				\

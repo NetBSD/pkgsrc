@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/02/15 09:26:23 agc Exp $
+# $NetBSD: Makefile,v 1.39 2000/02/20 22:05:42 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -42,7 +42,7 @@ PLIST_SRC=		${PKGDIR}/PLIST.gcc
 
 post-install:
 .if (${GCC_VERSION:C/-.*$$//} != egcs)
-	@find ${PREFIX}/share/kde/locale -name ksirc.mo | xargs ${RM}
+	@${FIND} ${PREFIX}/share/kde/locale -name ksirc.mo | xargs ${RM}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
