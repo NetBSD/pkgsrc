@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.237 2005/01/03 14:32:28 wiz Exp $
+# $NetBSD: Makefile,v 1.238 2005/01/07 11:14:57 wiz Exp $
 #
 
 COMMENT=	Games
@@ -154,6 +154,7 @@ SUBDIR+=	powermanga
 SUBDIR+=	powwow
 SUBDIR+=	prboom
 SUBDIR+=	pysol
+SUBDIR+=	qnetwalk
 SUBDIR+=	quake
 SUBDIR+=	quake2forge
 SUBDIR+=	quake3arena
