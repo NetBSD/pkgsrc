@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.2.2 2003/03/13 02:53:06 grant Exp $
+
+guint isn't big enough for a pointer on LP64 systems...
+
+--- src/libsoup/soup-message.c.orig	Mon Dec  2 11:03:15 2002
++++ src/libsoup/soup-message.c	Sun Mar  2 15:34:32 2003
+@@ -1008,5 +1008,5 @@
+ 		NULL, 
+ 		RESPONSE_HEADER_HANDLER, 
+-		{ (guint) "Location" }
++		{ .header = "Location" }
+ 	},
+ 	/* 
