@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3547 2003/09/27 02:28:57 dan Exp $
+$NetBSD: CHANGES,v 1.3548 2003/09/27 03:30:43 junyoung Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3962,3 +3962,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ImageMagick to 5.5.7.10nb1 [recht 2003-09-26]
 	Updated simh to 3.0.2 [jmmv 2003-09-26]
 	Updated xplot to 0.90.7.1 [dan 2003-09-27]
+	Added nabi-0.7 [junyoung 2003-09-27]
