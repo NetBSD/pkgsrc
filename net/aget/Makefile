@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/18 02:00:34 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/18 04:27:49 minskim Exp $
 #
 
 DISTNAME=	aget-0.4
@@ -22,7 +22,7 @@ SUBST_STAGE.options=	post-patch
 SUBST_FILES.options=	Makefile Makefile.Solaris
 SUBST_SED.options=	-e 's,CFLAGS =,\#CFLAGS =,' \
 			-e 's,LDFLAGS =,\#LDFLAGS =,' \
-			-e 's,CC =,\#CC =,' \
+			-e 's,CC =,\#CC =,'
 
 PTHREAD_OPTS+=          require
 CFLAGS+=	${PTHREAD_CFLAGS}
