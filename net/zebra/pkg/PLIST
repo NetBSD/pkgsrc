@@ -1,24 +1,22 @@
-@comment $NetBSD: PLIST,v 1.5 1999/11/19 02:47:01 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/01/17 05:06:17 itojun Exp $
 sbin/bgpd
-sbin/client
 sbin/ospfd
-@comment sbin/ospf6d
 sbin/ripd
-@comment sbin/ripngd
 sbin/zebra
 etc/zebra/bgpd.conf.sample
+etc/zebra/bgpd.conf.sample2
+etc/zebra/README.mbgp
 etc/zebra/ripd.conf.sample
-@comment etc/zebra/ripngd.conf.sample
 etc/zebra/zebra.conf.sample
 etc/zebra/ospfd.conf.sample
-@comment etc/zebra/ospf6d.conf.sample
 @unexec install-info --delete %D/info/zebra.info %D/info/dir
 info/zebra.info
+info/zebra.info-1
+info/zebra.info-2
+info/zebra.info-3
 @exec   install-info          %D/info/zebra.info %D/info/dir
 @dirrm etc/zebra
 man/man1/bgpd.1
-man/man1/ospf6d.1
 man/man1/ospfd.1
 man/man1/ripd.1
-man/man1/ripngd.1
 man/man1/zebra.1
