@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:37 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:28 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:06 jfitz Exp
 #
 
-DISTNAME=	Business-CreditCard-0.1
-PKGNAME=	p5-Business-CreditCard-0.1
-CATEGORIES=	misc perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN}
+DISTNAME=		Business-CreditCard-0.1
+PKGNAME=		p5-Business-CreditCard-0.1
+CATEGORIES=		misc perl5
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN}
 MASTER_SITE_SUBDIR=	Business
 
-MAINTAINER=	jfitz@FreeBSD.ORG
+MAINTAINER=		packages@netbsd.org
 
-USE_PERL5=	YES
+USE_PERL5=		YES
 
-NO_BUILD=	YES
+NO_BUILD=		YES
 
 do-install:
 		@ ${CP} ${WRKSRC}/CreditCard.pm ${WRKSRC}/CreditCard-0.1.pm

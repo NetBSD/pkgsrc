@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:34 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/20 11:56:27 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/04/30 03:18:06 asami Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 DISTFILES=	ls.tar.gz
 
-MAINTAINER=	asami@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
 WRKSRC=		${WRKDIR}/ls
 

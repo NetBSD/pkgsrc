@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:51 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/20 11:56:34 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.71 1997/11/24 19:35:30 ache Exp
 #
 
@@ -8,7 +8,7 @@ WRKSRC=         ${WRKDIR}/lynx2-8
 CATEGORIES=	www
 MASTER_SITES=   http://sol.slcc.edu/lynx/current/
 
-MAINTAINER=	ache@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
 LIB_DEPENDS=	ncurses.3.4:${PORTSDIR}/devel/ncurses
 

@@ -1,28 +1,29 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:45 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/20 11:56:31 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
-DISTNAME=	sam
-PKGNAME=	sam-4.3
-CATEGORIES=	plan9
-MASTER_SITES=	ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
-EXTRACT_SUFX=	.msg.gz
+DISTNAME=		sam
+PKGNAME=		sam-4.3
+CATEGORIES=		plan9
+MASTER_SITES=		ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
+EXTRACT_SUFX=		.msg.gz
 
-MAINTAINER=	erich@FreeBSD.org
+MAINTAINER=		packages@netbsd.org
 
-NO_WRKSUBDIR=	yes
+NO_WRKSUBDIR=		yes
 EXTRACT_CMD=		zcat
 EXTRACT_BEFORE_ARGS=
 EXTRACT_AFTER_ARGS=	|sh
 
-OPSYS!=		uname -s
+OPSYS!=			uname -s
 .if (${OPSYS} == "NetBSD")
-MANCOMPRESSED=	yes
+MANCOMPRESSED=		yes
 .endif
 
-MAN1=		sam.1
-MAN3=		add.3 balloc.3 bitblt.3 cachechars.3 event.3 frame.3 graphics.3 rgbpix.3 rune.3
-MAN4=		font.4 keyboard.4 utf.4
-MAN6=		bitmap.6 regexp.6
+MAN1=			sam.1
+MAN3=			add.3 balloc.3 bitblt.3 cachechars.3 event.3 frame.3 \
+			graphics.3 rgbpix.3 rune.3
+MAN4=			font.4 keyboard.4 utf.4
+MAN6=			bitmap.6 regexp.6
 
 .include "../../mk/bsd.pkg.mk"

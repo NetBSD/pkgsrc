@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/17 20:17:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/20 11:56:32 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=	psutils-${PAPERSIZE}-1.17
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/
 
-MAINTAINER=	jmz@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 MANUAL_PACKAGE_BUILD=	PAPERSIZE has to be set to letter or A4
 WRKSRC=		${WRKDIR}/psutils

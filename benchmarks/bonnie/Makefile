@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:16 agc Exp $
-# $FreeBSD Id: Makefile,v 1.5 1997/11/26 23:09:14 jseger Exp
+# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:20 frueauf Exp $
+# FreeBSD Id: Makefile,v 1.5 1997/11/26 23:09:14 jseger Exp
 #
 
 DISTNAME=       Bonnie
@@ -8,7 +8,7 @@ CATEGORIES=	benchmarks
 MASTER_SITES=   ftp://ftp.sunet.se/pub/benchmark/Bonnie/
 EXTRACT_SUFX=   .tar.Z
 
-MAINTAINER=	se@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
 
 NO_CONFIGURE=	yes
 

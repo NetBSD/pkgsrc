@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:50 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:33 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/07/17 19:29:07 andreas Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	textproc databases
 MASTER_SITES=   ftp://ftp.cs.arizona.edu/glimpse/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	chuckr@freebsd.org
+MAINTAINER=	packages@netbsd.org
 
 NO_CDROM=	"Restrictive copyright (don't sell for profit)"
 GNU_CONFIGURE=	yes

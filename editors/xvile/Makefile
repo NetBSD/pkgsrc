@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:23 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/20 11:56:23 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.clark.net/pub/dickey/vile/ \
 		ftp://id.wing.net/pub/pgf/vile/
 
-MAINTAINER=	gj@freebsd.org
+MAINTAINER=	packages@netbsd.org
 
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes

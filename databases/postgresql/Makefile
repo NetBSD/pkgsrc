@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:18 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/20 11:56:22 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.2.1
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.PostgreSQL.org/pub/ \
 		ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
 
-MAINTAINER=	andreas@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
 MAKE_ENV+=	USE_TCL=true
 LIB_DEPENDS+=	tcl80.1.:${PORTSDIR}/lang/tcl80 \

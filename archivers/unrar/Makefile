@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:09 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/20 11:56:18 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/08/10 22:31:33 fenner Exp 
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=   ftp://ftp.kiarchive.ru/pub/unix/arcers/
 EXTRACT_SUFX=   .tgz
 
-MAINTAINER=     ache@FreeBSD.ORG
+MAINTAINER=     packages@netbsd.org
 
 NO_WRKSUBDIR=   Yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/17 09:37:25 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/20 11:56:33 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/09/26 08:23:14 torstenb Exp
 #
 
@@ -14,7 +14,7 @@ MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/zsh/ \
 		ftp://ftp.ips.oz.au/pub/packages/zsh/ \
 		ftp://ftp.uit.no/pub/unix/shells/zsh/
 
-MAINTAINER=	torstenb@FreeBSD.ORG
+MAINTAINER=	packages@netbsd.org
 
 GNU_CONFIGURE=	yes
 MAN1=		zsh.1 zshbuiltins.1 zshcompctl.1 zshexpn.1 zshmisc.1 \
