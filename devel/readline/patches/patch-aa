@@ -1,0 +1,33 @@
+--- Makefile.in	1998/03/06 21:40:55	1.1
++++ Makefile.in	1998/03/06 21:41:04
+@@ -34,6 +34,7 @@
+ RM = rm -f
+ CP = cp
+ MV = mv
++SHELL = /bin/sh
+ 
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+@@ -191,10 +192,10 @@
+ 	done
+ 	-$(MV) $(libdir)/libreadline.a $(libdir)/libreadline.old
+ 	$(INSTALL_DATA) libreadline.a $(libdir)/libreadline.a
+-	-test -n "$(RANLIB)" && -$(RANLIB) -t $(libdir)/libreadline.a
++	-test -n "$(RANLIB)" && $(RANLIB) -t $(libdir)/libreadline.a
+ 	-( if test -d doc ; then \
+ 		cd doc && \
+-		${MAKE} ${MFLAGS} infodir=$(infodir) INSTALL_DATA=$(INSTALL_DATA) $@; \
++		${MAKE} ${MFLAGS} infodir=$(infodir) INSTALL_DATA="$(INSTALL_DATA)" $@; \
+ 	  fi )
+ 
+ installdirs: $(srcdir)/support/mkdirs
+--- doc/Makefile.in	1998/03/06 22:28:22	1.1
++++ doc/Makefile.in	1998/03/06 22:28:55
+@@ -10,6 +10,7 @@
+ man3dir = $(mandir)/man3
+ 
+ RM = rm -f
++SHELL = /bin/sh
+ 
+ TEXINPUTDIR = $(srcdir)
+ 
