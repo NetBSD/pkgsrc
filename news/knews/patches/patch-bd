@@ -1,4 +1,4 @@
-$NetBSD: patch-bd,v 1.1 2001/03/26 21:49:00 fredb Exp $
+$NetBSD: patch-bd,v 1.2 2002/03/15 03:25:57 fredb Exp $
 
 --- src/png.c.orig	Sat Nov 21 08:55:13 1998
 +++ src/png.c
@@ -19,7 +19,7 @@ $NetBSD: patch-bd,v 1.1 2001/03/26 21:49:00 fredb Exp $
  
 -    if (setjmp(p_str.jmpbuf))
 +    if ((p_str = (png_struct *) png_create_read_struct(PNG_LIBPNG_VER_STRING,
-+		    NULL, NULL, NULL)));
++		    NULL, NULL, NULL)))
 +	p_info = (png_info *) png_create_info_struct(p_str);
 +
 +    if (p_str && p_info && setjmp(png_jmpbuf(p_str)))
