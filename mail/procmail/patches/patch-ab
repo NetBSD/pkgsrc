@@ -1,10 +1,15 @@
-$NetBSD: patch-ab,v 1.4 1999/04/06 11:48:07 cjs Exp $
+$NetBSD: patch-ab,v 1.5 2001/04/13 04:18:34 kim Exp $
 
---- config.h~	Fri Feb 26 16:11:54 1999
-+++ config.h	Mon Apr  5 23:08:11 1999
-@@ -51,7 +51,7 @@
+--- config.h.orig	Tue Aug 22 00:26:34 2000
++++ config.h	Fri Apr 13 00:06:57 2001
+@@ -62,10 +62,12 @@
+    list of strings;  if unauthorised users use the -f option, an extra
+    >From_ field will be added in the header */
+ 
++#if 0
  #define TRUSTED_IDS	{"root","daemon","uucp","mail","x400","network",\
  			 "list","slist","lists","news",0}
++#endif
  
 -/*#define NO_fcntl_LOCK		/* uncomment any of these three if you	     */
 +#define NO_fcntl_LOCK		/* uncomment any of these three if you	     */
