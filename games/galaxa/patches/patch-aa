@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 1998/09/13 20:55:15 garbled Exp $
+$NetBSD: patch-aa,v 1.5 1998/09/14 06:38:45 garbled Exp $
 --- makefile.orig	Wed Apr 22 22:41:21 1998
-+++ makefile	Sun Sep 13 13:39:27 1998
++++ makefile	Sun Sep 13 23:25:17 1998
 @@ -14,16 +14,21 @@
  OPTFLAG=
  
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/13 20:55:15 garbled Exp $
  
  
  OBJECTS=galaxa.o hints.o randnum.o setup.o text.o soundmgr.o
-@@ -39,30 +44,24 @@
+@@ -39,30 +44,26 @@
  
  
  galaxa:	$(OBJECTS)
@@ -43,7 +43,9 @@ $NetBSD: patch-aa,v 1.4 1998/09/13 20:55:15 garbled Exp $
 +	mkdir -p $(IMAGES)
 +	install -g bin -o bin -m 0644 sounds/* $(SOUNDS)
 +	install -g bin -o bin -m 0644 images/* $(IMAGES)
-+	install -g games -o bin -m 0664 galaxa-highs.dat /var/games
++	if [ ! -e /var/games/galaxa-highs.dat ]; then \
++		install -g games -o bin -m 0664 galaxa-highs.dat /var/games ; \
++	fi
  
 -#-- App object--#
 +#-- Dependencies --#
