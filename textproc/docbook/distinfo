@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:04:55 skrll Exp $
+$NetBSD: distinfo,v 1.3 2002/08/22 11:20:26 martti Exp $
 
 SHA1 (docbk241.zip) = fb314ca2a1eddef2c1e2db3eb3ffd15feff2f865
 Size (docbk241.zip) = 55653 bytes
@@ -10,3 +10,5 @@ SHA1 (docbk40.zip) = 95f9c7d3d339d7d3889bd1f0dabaa6ca55445f26
 Size (docbk40.zip) = 55742 bytes
 SHA1 (docbk41.zip) = 3009fcc364511d186da40e828bf0d5d1556c020e
 Size (docbk41.zip) = 56654 bytes
+SHA1 (docbook-4.2.zip) = 98afcae616ed24edb30e40baa4ddd8cd8731f2c7
+Size (docbook-4.2.zip) = 61830 bytes
