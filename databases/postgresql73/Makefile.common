@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2004/08/21 17:27:04 seb Exp $
+# $NetBSD: Makefile.common,v 1.2.2.1 2004/11/08 16:43:29 salo Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -33,7 +33,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql73/patches
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
 # Note: Do not forget jdbc-postgresql when updating version
-DIST_VERS?=		7.3.6
+DIST_VERS?=		7.3.8
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_DEPENDS.postgresql73-lib?=	postgresql73-lib>=${BASE_VERS}
@@ -82,6 +82,11 @@ post-extract:
 		${RM} -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
 		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
 			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+	fi
+	if [ -d ${WRKSRC}/src/backend/port/dynloader ]; then		\
+		${RM} -f ${WRKSRC}/src/backend/port/dynloader/netbsd.[ch];\
+		${CP} -f ${COMMON_FILESDIR}/netbsd.[ch]	\
+			${WRKSRC}/src/backend/port/dynloader/;	\
 	fi
 
 pre-configure:
