@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2004/11/08 10:03:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.122 2004/11/27 01:30:40 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.87
+DISTNAME=		xmame-0.88
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -33,7 +33,7 @@ MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
 MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		X11INC= X11LIB=
 
-# Network support is broken in xmame-0.85
+# Network support is broken since xmame-0.85
 #MAKE_FLAGS+=		XMAME_NET=1
 
 # Determine which CPU-specific code to use.
@@ -71,7 +71,7 @@ MAKE_FLAGS+=		X11_XV=1
 # If supported, add appropriate definitions to build joystick drivers.
 .if exists(/usr/include/machine/joystick.h) ||				\
     exists(/usr/include/linux/joystick.h)
-MAKE_FLAGS+=		JOY_I386=1
+MAKE_FLAGS+=		JOY_STANDARD=1
 .endif
 .if ${OPSYS} == "NetBSD"
 .  if exists(/usr/lib/libusb.a) || exists(/usr/lib/libusbhid.a)
