@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.758 2003/07/31 18:42:20 jschauma Exp $
+$NetBSD: TODO,v 1.759 2003/07/31 18:53:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -81,6 +81,7 @@ Suggested package updates
 	o bluefish-0.11
 	o bomberclone-0.10.0
 	o bzflag-1.7g0
+	o calc-2.11.8
 	o centericq-4.9.5
 	o cervisia-2.0
 	o citrix_ica-7.00.7757 [pkg/22209]
@@ -99,7 +100,7 @@ Suggested package updates
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o echoping-5.0.1
-	o elm-me-2.4pl102
+	o elm-me-2.4pl102a
 	o ettercap-0.6.b
 	o evilwm-0.99.15 [pkg/22239]
 	o evolution-1.4
@@ -139,6 +140,7 @@ Suggested package updates
 	o host-20030604
 	o hp2xx-3.4.4
 	o hpijs-1.4.1
+	o hping-2.0.0.2 [pkg/22320]
 	o icepref-2.2
 	o inform-6.21.3 [pkg/19298]
 	o inform-6.21.4 [pkg/21934]
@@ -172,11 +174,11 @@ Suggested package updates
 	o mailsync-5.1.0
 	o memtest86-3.0
 	o mgetty-1.1.30
-	o mhonarc-2.6.3 [pkg/21306]
-	o mhonarc-2.6.5
+	o mhonarc-2.6.6
 	o midnight-commander-4.6.0
 	o minicom-2.1
 	o mozilla-firebird-0.6.1 [was phoenix]
+	o mozilla-thunderbird-0.1
 	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9.1
 	o mtools-3.9.9
@@ -197,6 +199,7 @@ Suggested package updates
 	o openssl-0.9.7b
 	o oss-3.9.7l
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
+	o p5-Net-Telnet-3.0.2 [pkg/22322]
 	o p5-XML-LibXML-1.54
 	o pcre-4.3
 	o pdmenu-1.2.81
@@ -205,6 +208,7 @@ Suggested package updates
 	o pnm2ppa-1.12 [pkg/21667]
 	o povray-3.5
 	o proftpd-1.2.9rc1
+	o pxe-1.4 [pkg/22323]
 	o py-soappy-0.10.1 [pkg/21735]
 	o pygtk-0.6.11
 	o python-2.3
