@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/19 10:54:55 rh Exp $
+# $NetBSD: Makefile,v 1.11 2002/12/01 15:56:56 salo Exp $
 #
 
 DISTNAME=		gnumeric-0.75
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Powerful and easy to use spreadsheet program from the GNOME project
 
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_PERL5=		YES
