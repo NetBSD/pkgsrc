@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 1999/07/07 15:17:36 itojun Exp $
+
+--- configure.in-	Wed Jul  7 08:00:40 1999
++++ configure.in	Wed Jul  7 08:01:09 1999
+@@ -296,7 +296,8 @@
+    AC_DEFINE(KAME)
+    RIPNGD="ripngd"
+    OSPF6D="ospf6d"
+-   LIB_IPV6="-L/usr/local/v6/lib -linet6"
++#  LIB_IPV6="-L/usr/local/v6/lib -linet6"
++   LIB_IPV6=""
+    AC_MSG_RESULT(Kame)
+ fi
+ dnl ------------
