@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2002/10/31 00:47:02 grant Exp $
+$NetBSD: distinfo,v 1.3 2002/12/09 00:24:51 grant Exp $
 
-SHA1 (phoenix-0.4-i686-pc-linux-gnu.tar.gz) = cf60abce3d433f8611baf31335075c41ef8102e0
-Size (phoenix-0.4-i686-pc-linux-gnu.tar.gz) = 9568682 bytes
+SHA1 (phoenix-0.5-i686-pc-linux-gnu.tar.gz) = 4102222f85dcbf8352c000dea6072452c6094a69
+Size (phoenix-0.5-i686-pc-linux-gnu.tar.gz) = 9153046 bytes

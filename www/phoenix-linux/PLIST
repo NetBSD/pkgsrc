@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/26 18:11:45 grant Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 00:24:51 grant Exp $
 bin/phoenix-linux
 lib/phoenix-linux/chrome/US.jar
 lib/phoenix-linux/chrome/browser.jar
@@ -11,8 +11,6 @@ lib/phoenix-linux/chrome/en-US.jar
 lib/phoenix-linux/chrome/en-mac.jar
 lib/phoenix-linux/chrome/en-unix.jar
 lib/phoenix-linux/chrome/en-win.jar
-lib/phoenix-linux/chrome/forms.jar
-lib/phoenix-linux/chrome/help.jar
 lib/phoenix-linux/chrome/installed-chrome.txt
 lib/phoenix-linux/chrome/modern.jar
 lib/phoenix-linux/chrome/overlayinfo/communicator/content/overlays.rdf
@@ -131,6 +129,7 @@ lib/phoenix-linux/components/libxpinstall.so
 lib/phoenix-linux/components/libxremote_client.so
 lib/phoenix-linux/components/libxremoteservice.so
 lib/phoenix-linux/components/locale.xpt
+lib/phoenix-linux/components/lwbrk.xpt
 lib/phoenix-linux/components/mimetype.xpt
 lib/phoenix-linux/components/mozbrwsr.xpt
 lib/phoenix-linux/components/mozfind.xpt
@@ -383,26 +382,12 @@ lib/phoenix-linux/xpicleanup
 @dirrm lib/phoenix-linux/chrome/overlayinfo/communicator/content
 @dirrm lib/phoenix-linux/chrome/overlayinfo/communicator
 @dirrm lib/phoenix-linux/chrome/overlayinfo
-@exec ${MKDIR} %D/lib/phoenix-linux/chrome/modern/skin/modern/communicator/help
-@dirrm lib/phoenix-linux/chrome/modern/skin/modern/communicator/help
 @exec ${MKDIR} %D/lib/phoenix-linux/chrome/modern/skin/modern/communicator/cookie
 @dirrm lib/phoenix-linux/chrome/modern/skin/modern/communicator/cookie
 @dirrm lib/phoenix-linux/chrome/modern/skin/modern/communicator
 @dirrm lib/phoenix-linux/chrome/modern/skin/modern
 @dirrm lib/phoenix-linux/chrome/modern/skin
 @dirrm lib/phoenix-linux/chrome/modern
-@exec ${MKDIR} %D/lib/phoenix-linux/chrome/help/content/help
-@dirrm lib/phoenix-linux/chrome/help/content/help
-@dirrm lib/phoenix-linux/chrome/help/content
-@dirrm lib/phoenix-linux/chrome/help
-@exec ${MKDIR} %D/lib/phoenix-linux/chrome/forms/skin/classic/forms
-@dirrm lib/phoenix-linux/chrome/forms/skin/classic/forms
-@dirrm lib/phoenix-linux/chrome/forms/skin/classic
-@dirrm lib/phoenix-linux/chrome/forms/skin
-@exec ${MKDIR} %D/lib/phoenix-linux/chrome/forms/content/forms
-@dirrm lib/phoenix-linux/chrome/forms/content/forms
-@dirrm lib/phoenix-linux/chrome/forms/content
-@dirrm lib/phoenix-linux/chrome/forms
 @exec ${MKDIR} %D/lib/phoenix-linux/chrome/en-win/locale/en-US/navigator-platform
 @dirrm lib/phoenix-linux/chrome/en-win/locale/en-US/navigator-platform
 @exec ${MKDIR} %D/lib/phoenix-linux/chrome/en-win/locale/en-US/global-platform
@@ -443,13 +428,8 @@ lib/phoenix-linux/xpicleanup
 @dirrm lib/phoenix-linux/chrome/en-US/locale/en-US/necko
 @exec ${MKDIR} %D/lib/phoenix-linux/chrome/en-US/locale/en-US/navigator
 @dirrm lib/phoenix-linux/chrome/en-US/locale/en-US/navigator
-@exec ${MKDIR} %D/lib/phoenix-linux/chrome/en-US/locale/en-US/help/images
-@dirrm lib/phoenix-linux/chrome/en-US/locale/en-US/help/images
-@dirrm lib/phoenix-linux/chrome/en-US/locale/en-US/help
 @exec ${MKDIR} %D/lib/phoenix-linux/chrome/en-US/locale/en-US/global
 @dirrm lib/phoenix-linux/chrome/en-US/locale/en-US/global
-@exec ${MKDIR} %D/lib/phoenix-linux/chrome/en-US/locale/en-US/forms
-@dirrm lib/phoenix-linux/chrome/en-US/locale/en-US/forms
 @exec ${MKDIR} %D/lib/phoenix-linux/chrome/en-US/locale/en-US/cookie
 @dirrm lib/phoenix-linux/chrome/en-US/locale/en-US/cookie
 @exec ${MKDIR} %D/lib/phoenix-linux/chrome/en-US/locale/en-US/communicator/xpinstall
