@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/27 02:43:47 uebayasi Exp $
+share/dictd/web1913.dict.dz
+share/dictd/web1913.index
+share/dictd/wn.dict.dz
+share/dictd/wn.index
+share/dictd/gazetteer.dict.dz
+share/dictd/gazetteer.index
+share/dictd/jargon.dict.dz
+share/dictd/jargon.index
+share/dictd/foldoc.dict.dz
+share/dictd/foldoc.index
+share/dictd/elements.dict.dz
+share/dictd/elements.index
+share/dictd/easton.dict.dz
+share/dictd/easton.index
+share/dictd/hitchcock.dict.dz
+share/dictd/hitchcock.index
+share/dictd/world95.dict.dz
+share/dictd/world95.index
+@dirrm share/dictd
