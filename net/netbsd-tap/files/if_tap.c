@@ -1,4 +1,4 @@
-/*	$NetBSD: if_tap.c,v 1.1.1.1 2005/01/20 18:02:40 cube Exp $	*/
+/*	$NetBSD: if_tap.c,v 1.2 2005/01/25 10:26:52 cube Exp $	*/
 
 /*
  *  Copyright (c) 2003, 2004 The NetBSD Foundation.
@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.1.1.1 2005/01/20 18:02:40 cube Exp $");
+__KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.2 2005/01/25 10:26:52 cube Exp $");
 
 #if defined(_KERNEL_OPT)
 #include "bpfilter.h"
@@ -1092,7 +1092,7 @@ tap_dev_poll(int unit, int events, struct proc *p)
 		if (m != NULL)
 			revents |= events & (POLLIN|POLLRDNORM);
 		else {
-			(void)simple_lock(&sc->sc_kqlock);
+			simple_lock(&sc->sc_kqlock);
 			selrecord(p, &sc->sc_rsel);
 			simple_unlock(&sc->sc_kqlock);
 		}
@@ -1140,7 +1140,7 @@ tap_dev_kqfilter(int unit, struct knote *kn)
 	}
 
 	kn->kn_hook = sc;
-	(void)simple_lock(&sc->sc_kqlock);
+	simple_lock(&sc->sc_kqlock);
 	SLIST_INSERT_HEAD(&sc->sc_rsel.sel_klist, kn, kn_selnext);
 	simple_unlock(&sc->sc_kqlock);
 	return (0);
@@ -1151,7 +1151,7 @@ tap_kqdetach(struct knote *kn)
 {
 	struct tap_softc *sc = (struct tap_softc *)kn->kn_hook;
 
-	(void)simple_lock(&sc->sc_kqlock);
+	simple_lock(&sc->sc_kqlock);
 	SLIST_REMOVE(&sc->sc_rsel.sel_klist, kn, knote, kn_selnext);
 	simple_unlock(&sc->sc_kqlock);
 }
