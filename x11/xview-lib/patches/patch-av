@@ -1,0 +1,12 @@
+$NetBSD: patch-av,v 1.1 2001/05/02 21:46:09 dmcmahill Exp $
+
+--- ./lib/libxview/notice/notice_get.c.nbsd	Sat Apr 28 21:34:01 2001
++++ ./lib/libxview/notice/notice_get.c	Sat Apr 28 21:34:44 2001
+@@ -29,7 +29,6 @@
+ va_list			valist;
+ {
+     Notice_info	*notice = NOTICE_PRIVATE(notice_public);
+-    Attr_avlist     avlist = (Attr_avlist) valist;
+     Xv_opaque	v = (Xv_opaque)NULL;
+ 
+     switch (attr)  {

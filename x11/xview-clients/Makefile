@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/17 17:07:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/05/02 21:46:08 dmcmahill Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=		jlam@netbsd.org
 COMMENT=		OpenLook applications and man pages
 
 DEPENDS+=		xview-lib>=3.2.1:../../x11/xview-lib
-NOT_FOR_PLATFORM=       *-*-alpha       # broken va_arg handling in xview-lib
+NOT_FOR_PLATFORM=       *-*-alpha       # it builds but everything segfaults...
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 

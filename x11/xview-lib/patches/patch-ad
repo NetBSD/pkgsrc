@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2000/06/16 14:16:54 pooka Exp $
+$NetBSD: patch-ad,v 1.7 2001/05/02 21:46:09 dmcmahill Exp $
 
 diff -rc ../old/xview3.2p1-X11R6/lib/libxview/attr/attr_copy.c ./lib/libxview/attr/attr_copy.c
 *** ../old/xview3.2p1-X11R6/lib/libxview/attr/attr_copy.c	Tue Jun 29 01:14:35 1993
@@ -1346,26 +1346,6 @@ diff -rc ../old/xview3.2p1-X11R6/lib/libxview/panel/p_get.c ./lib/libxview/panel
   
   #define MAX_NEGATIVE_SHRINK 2000
   #define SHRINK_MARGIN       4
-diff -rc ../old/xview3.2p1-X11R6/lib/libxview/panel/p_list.c ./lib/libxview/panel/p_list.c
-*** ../old/xview3.2p1-X11R6/lib/libxview/panel/p_list.c	Tue Jun 29 01:16:48 1993
---- ./lib/libxview/panel/p_list.c	Sun Nov 20 13:39:07 1994
-***************
-*** 3789,3795 ****
-  
-      /* weigh timeval's against multiclick-timeout resource */
-      is_multiclick = panel_is_multiclick(ip->panel, 
-! 					dp->last_click_row->click_time,
-  					&event_time(event)
-  					);
-  
---- 3789,3795 ----
-  
-      /* weigh timeval's against multiclick-timeout resource */
-      is_multiclick = panel_is_multiclick(ip->panel, 
-! 					&dp->last_click_row->click_time,
-  					&event_time(event)
-  					);
-  
 diff -rc ../old/xview3.2p1-X11R6/lib/libxview/panel/p_set.c ./lib/libxview/panel/p_set.c
 *** ../old/xview3.2p1-X11R6/lib/libxview/panel/p_set.c	Tue Jun 29 01:16:59 1993
 --- ./lib/libxview/panel/p_set.c	Sun Nov 20 13:39:07 1994
