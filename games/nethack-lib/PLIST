@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/16 15:50:02 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/18 14:02:20 agc Exp $
 bin/nethack
 bin/recover
 man/man6/nethack.6
@@ -132,10 +132,8 @@ share/nethackdir340/cmdhelp
 share/nethackdir340/help
 share/nethackdir340/hh
 share/nethackdir340/history
-share/nethackdir340/logfile
 share/nethackdir340/perm
 share/nethackdir340/opthelp
-share/nethackdir340/record
 share/nethackdir340/rumors
 share/doc/nethack/Guidebook
 @dirrm share/doc/nethack
