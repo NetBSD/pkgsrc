@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:38 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/13 21:25:13 jlam Exp $
 bin/ktail
 share/doc/kde/HTML/en/ktail/index.html
-share/kde/icons/locolor/32x32/apps/ktail.png
+share/kde/applnk/Applications/ktail.desktop
 share/kde/icons/locolor/16x16/apps/ktail.png
+share/kde/icons/locolor/32x32/apps/ktail.png
 share/kde/locale/de/LC_MESSAGES/ktail.mo
+@unexec ${RMDIR} share/kde/locale/de/LC_MESSAGES 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} share/kde/locale/de 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/en/ktail
