@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.2 1999/09/03 21:10:54 tron Exp $
+$NetBSD: patch-bb,v 1.3 1999/11/26 06:09:01 itohy Exp $
 
---- http.c.orig	Tue Aug 24 19:42:55 1999
-+++ http.c	Wed Aug 25 20:43:50 1999
+--- http.c.orig	Sun Oct 24 18:05:45 1999
++++ http.c	Thu Nov 25 20:00:34 1999
 @@ -44,8 +44,8 @@
  char *HTTP_Open(URL *Url)
  {
@@ -38,8 +38,8 @@ $NetBSD: patch-bb,v 1.2 1999/09/03 21:10:54 tron Exp $
  
   /* Open the connection. */
  
-- server=OpenClientSocket(server_host,server_port);
-+ server=OpenClientSocket(host,server_port);
+- server=OpenClientSocket(server_host,server_port,ConnectTimeout);
++ server=OpenClientSocket(host,server_port,ConnectTimeout);
   init_buffer(server);
  
   if(server==-1)

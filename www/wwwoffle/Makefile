@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 1999/09/03 21:57:49 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/11/26 06:09:00 itohy Exp $
 
-DISTNAME=	wwwoffle-2.4
+DISTNAME=	wwwoffle-2.5b
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.demon.co.uk/pub/unix/httpd/ \
 		${MASTER_SITE_SUNSITE:=apps/www/servers/}
@@ -52,6 +52,8 @@ post-install:
 	fi
 	${INSTALL_SCRIPT} ${WRKDIR}/wwwoffle.sh ${PREFIX}/etc/rc.d
 	${CHOWN} -R ${BINOWN}:${BINGRP} /var/wwwoffle
-	${GTAR} czCf / ${PREFIX}/libdata/wwwoffle-spool.tar.gz var/wwwoffle
+	# directories other than html are automatically created at run time
+	${GTAR} czCf / ${PREFIX}/libdata/wwwoffle-spool.tar.gz	\
+	  var/wwwoffle/html var/wwwoffle/outgoing
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,10 @@
-$NetBSD: patch-be,v 1.2 1999/09/03 21:10:54 tron Exp $
+$NetBSD: patch-be,v 1.3 1999/11/26 06:09:01 itohy Exp $
 
---- sockets.h.orig	Mon Aug 23 19:34:19 1999
-+++ sockets.h	Mon Aug 23 19:33:57 1999
+--- sockets.h.orig	Tue Jul  6 03:46:16 1999
++++ sockets.h	Thu Nov 25 20:00:36 1999
 @@ -20,7 +20,7 @@
  
- int OpenClientSocket(char* host, int port);
+ int OpenClientSocket(char* host, int port,int timeout);
  
 -int OpenServerSocket(int port);
 +int *OpenServerSockets(int port);
