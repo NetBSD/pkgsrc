@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2004/08/30 18:13:18 martti Exp $
+# $NetBSD: Makefile,v 1.14 2004/09/21 13:10:18 cube Exp $
 
-PKGNAME=	proftpd-1.2.9
-DISTNAME=	proftpd-1.2.9
+DISTNAME=	proftpd-1.2.10
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/
+MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
+		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
+		ftp://ftp.fsn.hu/pub/proftpd/distrib/source/ \
+		ftp://ftp.middle-earth.it/proftpd/ \
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	martti@NetBSD.org
@@ -74,7 +76,7 @@ CONFIGURE_ARGS+=--with-modules=${MODULES}
 post-install:
 	# documentation
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/proftpd
-.for i in NEWS README README.IPv6 README.LDAP README.PAM README.mod_sql README.modules
+.for i in NEWS README README.IPv6 README.LDAP README.PAM README.modules
 	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/proftpd
 .endfor
 .for i in Configuration.html faq.html license.txt

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2003/12/07 13:53:34 martti Exp $
+$NetBSD: distinfo,v 1.8 2004/09/21 13:10:18 cube Exp $
 
-SHA1 (proftpd-1.2.9.tar.bz2) = 37763933d9edc929e55609c3eb30b06aa71f9ba0
-Size (proftpd-1.2.9.tar.bz2) = 778953 bytes
+SHA1 (proftpd-1.2.10.tar.gz) = ea12d139b8b47168cabcd993b137b2360bba1465
+Size (proftpd-1.2.10.tar.gz) = 1182176 bytes
 SHA1 (patch-aa) = 3784f6aed87b327741685d45d453aa2ac98dd98b
