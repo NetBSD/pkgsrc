@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2000/09/13 20:21:54 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2000/10/23 18:02:56 jlam Exp $
 
 --- XView.cf.orig	Sun Jun 26 22:09:19 1994
 +++ XView.cf
@@ -29,15 +29,6 @@ $NetBSD: patch-ab,v 1.5 2000/09/13 20:21:54 jlam Exp $
  #endif
  /*
   *	The implementation of internationalization support in XView depends
-@@ -315,7 +315,7 @@
-  *	features disabled.
-  */
- #ifndef OsHasLocale
--#define OsHasLocale YES
-+#define OsHasLocale NO
- #endif
- /*
-  *	There are number of memory allocation macros in lib/libxview/base.h 
 @@ -360,7 +360,7 @@
   *    	be defined as -PIC
   */
