@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2000/03/17 23:36:09 tron Exp $
+$NetBSD: patch-aa,v 1.8 2003/06/23 10:39:51 adam Exp $
 
 --- Makefile.orig	Thu Jan 14 17:42:34 1999
 +++ Makefile	Sun Oct 31 00:18:17 1999
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.7 2000/03/17 23:36:09 tron Exp $
 +#    CFLAGS = -O -I$(GD)
 +#   #CFLAGS = -O -pedantic -Wall -I$(GD)
 +#      LIBS = -L$(GD) -lgd -lm
-+CFLAGS += -O ${CPPFLAGS}
++CFLAGS += ${CPPFLAGS}
 +LIBS = ${LDFLAGS} -lgd -lpng -lz -lttf -lintl -lXpm -lX11 -ljpeg -lm
  
 -all: gd fly
