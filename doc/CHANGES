@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7025 2004/08/28 20:08:54 schmonz Exp $
+$NetBSD: CHANGES,v 1.7026 2004/08/28 22:18:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4086,3 +4086,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nabi to 0.14 [minskim 2004-08-28]
 	Updated getmail to 4.1.2 [schmonz 2004-08-28]
 	Updated queue_repair to 0.9.0 [schmonz 2004-08-28]
+	Added queue-fix-1.4 [schmonz 2004-08-28]
