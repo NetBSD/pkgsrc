@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/08/04 03:06:55 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2004/12/27 22:11:31 minskim Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -16,6 +16,8 @@ USE_BUILDLINK3=		YES
 USE_IMAKE=		YES
 
 NO_INSTALL_MANPAGES=	YES
+
+MAKE_ENV+=		VARBASE=${VARBASE:Q}
 
 post-install:
 	${CHOWN} ${GAMEOWN}:${GAMEGRP} ${X11PREFIX}/bin/xboing
