@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1 1999/03/20 02:42:06 itohy Exp $
+
+ 1. Don't pollute G1 to allow 8-bit encondings.
+
+ 2. The original code make the TERMCAP env var
+    longer than 1023 bytes, which cause problems.
+    This is a quick hack but works with our termcap.
+
+--- termcap.c.orig	Thu Nov 26 01:12:23 1998
++++ termcap.c	Fri Mar 19 23:38:57 1999
+@@ -74,7 +74,7 @@
+ \t:DO=\\E[%dB:LE=\\E[%dD:RI=\\E[%dC:UP=\\E[%dA:bs:bt=\\E[Z:\\\n\
+ \t:cd=\\E[J:ce=\\E[K:cl=\\E[H\\E[J:cm=\\E[%i%d;%dH:ct=\\E[3g:\\\n\
+ \t:do=^J:nd=\\E[C:pt:rc=\\E8:rs=\\Ec:sc=\\E7:st=\\EH:up=\\EM:\\\n\
+-\t:le=^H:bl=^G:cr=^M:it#8:ho=\\E[H:nw=\\EE:ta=^I:is=\\E)0:";
++\t:le=^H:bl=^G:cr=^M:it#8:ho=\\E[H:nw=\\EE:ta=^I:is=\\E(B:";
+ 
+ char *
+ gettermcapstring(s)
+@@ -669,7 +669,7 @@
+ {
+   register int n;
+ 
+-  if (tcLineLen + (n = strlen(s)) > 55 && Termcaplen < TERMCAP_BUFSIZE + 8 - 4)
++  if (tcLineLen + (n = strlen(s)) > 69 && Termcaplen < TERMCAP_BUFSIZE + 8 - 4)
+     {
+       strcpy(Termcap + Termcaplen, "\\\n\t:");
+       Termcaplen += 4;
