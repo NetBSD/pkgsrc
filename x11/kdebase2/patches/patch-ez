@@ -1,6 +1,6 @@
-$NetBSD: patch-ez,v 1.1 2001/10/18 15:43:11 skrll Exp $
+$NetBSD: patch-ez,v 1.2 2001/12/03 15:37:20 skrll Exp $
 
---- kicker/kicker_main.cpp.orig	Thu Oct 18 16:16:52 2001
+--- kicker/kicker_main.cpp.orig	Mon Dec  3 10:00:55 2001
 +++ kicker/kicker_main.cpp
 @@ -0,0 +1,28 @@
 +/*
@@ -25,9 +25,9 @@ $NetBSD: patch-ez,v 1.1 2001/10/18 15:43:11 skrll Exp $
 + * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 + */
 +
-+extern int kicker_main(int, char **);
++extern "C" int kdemain(int, char **);
 +
 +int main( int argc, char* argv[] )
 +{
-+	return kicker_main(argc, argv);
++	return kdemain(argc, argv);
 +}

@@ -1,25 +1,22 @@
-$NetBSD: patch-du,v 1.1 2001/10/15 22:46:10 skrll Exp $
+$NetBSD: patch-du,v 1.2 2001/12/03 15:37:20 skrll Exp $
 
---- kwin/clients/kwmtheme/Makefile.in.orig	Sat Sep  8 01:36:49 2001
+--- kwin/clients/kwmtheme/Makefile.in.orig	Sat Nov 10 07:58:37 2001
 +++ kwin/clients/kwmtheme/Makefile.in
-@@ -280 +280 @@
+@@ -279,7 +279,7 @@
+ kde_module_LTLIBRARIES = libkwinkwmtheme.la
+ 
+ libkwinkwmtheme_la_SOURCES = kwmthemeclient.cpp
 -libkwinkwmtheme_la_LIBADD = ../../kwin.la
 +libkwinkwmtheme_la_LIBADD = ../../libkwin.la
-@@ -297 +297 @@
+ libkwinkwmtheme_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ #>- METASOURCES = AUTO
+@@ -296,7 +296,7 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -libkwinkwmtheme_la_DEPENDENCIES =  ../../kwin.la
 +libkwinkwmtheme_la_DEPENDENCIES =  ../../libkwin.la
-@@ -466 +466 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -524,11 +523,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ #>- libkwinkwmtheme_la_OBJECTS =  kwmthemeclient.lo
+ #>+ 5
+ libkwinkwmtheme_la_final_OBJECTS = libkwinkwmtheme_la.all_cpp.lo 

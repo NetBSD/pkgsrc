@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2001/10/15 22:45:58 skrll Exp $
+$NetBSD: patch-ab,v 1.3 2001/12/03 15:37:15 skrll Exp $
 
 --- kfind/pics/Makefile.in.orig	Sat Sep  8 01:46:33 2001
 +++ kfind/pics/Makefile.in
-@@ -349,14 +349,6 @@
+@@ -340,14 +340,6 @@
  
  #>+ 19
  install-kde-icons:

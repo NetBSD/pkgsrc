@@ -1,16 +1,14 @@
-$NetBSD: patch-de,v 1.1 2001/10/15 22:46:08 skrll Exp $
-
---- ksysguard/ksysguardd/FreeBSD/CPU.c.orig	Tue Aug  8 23:53:56 2000
-+++ ksysguard/ksysguardd/FreeBSD/CPU.c
-@@ -25,7 +25,11 @@
+--- ksysguard/ksysguardd/FreeBSD/CPU.c.orig	Mon Nov 26 01:14:58 2001
++++ ksysguard/ksysguardd/FreeBSD/CPU.c	Mon Nov 26 01:15:11 2001
+@@ -19,7 +19,11 @@
+ */
  
- #include <kvm.h>
- #include <nlist.h>
+ #include <sys/dkstat.h>
 +#ifdef __NetBSD__
 +#include <sys/sched.h>		/* CPUSTATES */
 +#else
  #include <devstat.h>
 +#endif
  #include <fcntl.h>
- #include <stdio.h>
- #include <stdlib.h>
+ #include <kvm.h>
+ #include <nlist.h>

@@ -1,28 +1,31 @@
-$NetBSD: patch-dy,v 1.1 2001/10/15 22:46:10 skrll Exp $
+$NetBSD: patch-dy,v 1.2 2001/12/03 15:37:20 skrll Exp $
 
---- kwin/clients/modernsystem/Makefile.in.orig	Sat Sep  8 01:36:50 2001
+--- kwin/clients/modernsystem/Makefile.in.orig	Sat Nov 10 07:58:37 2001
 +++ kwin/clients/modernsystem/Makefile.in
-@@ -283 +283 @@
+@@ -282,7 +282,7 @@
+ kde_module_LTLIBRARIES = libkwinmodernsys.la
+ 
+ libkwinmodernsys_la_SOURCES = modernsys.cpp
 -libkwinmodernsys_la_LIBADD = ../../kwin.la
 +libkwinmodernsys_la_LIBADD = ../../libkwin.la
-@@ -305 +305 @@
+ libkwinmodernsys_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN)
+ 
+ #>- METASOURCES = AUTO
+@@ -304,7 +304,7 @@
+ LIBS = @LIBS@
+ X_CFLAGS = @X_CFLAGS@
+ X_LIBS = @X_LIBS@
 -libkwinmodernsys_la_DEPENDENCIES =  ../../kwin.la
 +libkwinmodernsys_la_DEPENDENCIES =  ../../libkwin.la
-@@ -333 +333 @@
+ #>- libkwinmodernsys_la_OBJECTS =  modernsys.lo
+ #>+ 5
+ libkwinmodernsys_la_final_OBJECTS = libkwinmodernsys_la.all_cpp.lo 
+@@ -332,7 +332,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=buttondata.h btnhighcolor.h modernsystem.desktop 
 +KDE_DIST=btnhighcolor.h modernsystem.desktop buttondata.h 
-@@ -495 +495 @@
--	  test "$$subdir" = "." && dot_seen=yes; \
-+	  test "$$subdir" != "." || dot_seen=yes; \
-@@ -553,11 +552,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 

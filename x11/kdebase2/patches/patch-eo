@@ -1,103 +1,148 @@
-$NetBSD: patch-eo,v 1.1 2001/10/15 22:46:11 skrll Exp $
+$NetBSD: patch-eo,v 1.2 2001/12/03 15:37:20 skrll Exp $
 
---- kxkb/Makefile.in.orig	Sat Sep  8 01:36:51 2001
+--- kxkb/Makefile.in.orig	Sat Nov 10 07:58:38 2001
 +++ kxkb/Makefile.in
-@@ -278 +278 @@
+@@ -277,20 +277,24 @@
+ 
+ bin_PROGRAMS = kxkb
+ 
 -kxkb_SOURCES = dummy.cpp
 +kxkb_SOURCES = kxkb_main.cpp
-@@ -280 +280 @@
+ kxkb_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 -kxkb_LDADD = kxkb.la
 +kxkb_LDADD = libkxkb_main.la
-@@ -282 +282 @@
+ 
 -lib_LTLIBRARIES = libkcm_keyboard.la kxkb.la
 +lib_LTLIBRARIES = libkcm_keyboard.la libkxkb_main.la kxkb.la
-@@ -289 +289,5 @@
+ 
+ libkcm_keyboard_la_SOURCES = rules.cpp kcmlayout.cpp pixmap.cpp kcmmisc.cpp
+ 
+ libkcm_keyboard_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+ libkcm_keyboard_la_LIBADD = @XTESTLIB@ $(LIB_KFILE)
+ 
 -kxkb_la_SOURCES = rules.cpp kxkb.cpp extension.cpp pixmap.cpp
 +libkxkb_main_la_SOURCES = rules.cpp kxkb.cpp extension.cpp pixmap.cpp
 +libkxkb_main_la_LDFLAGS = $(all_libraries)
 +libkxkb_main_la_LIBADD = -lX11 -lXext $(LIB_KDEUI)
 +
 +kxkb_la_SOURCES = kxkb_main.cpp
-@@ -291 +295 @@
+ kxkb_la_LDFLAGS = $(all_libraries) -module -avoid-version
 -kxkb_la_LIBADD = -lX11 -lXext $(LIB_KDEUI)
 +kxkb_la_LIBADD = libkxkb_main.la
-@@ -318,2 +322,2 @@
+ 
+ data_DATA = keyboard.desktop
+ datadir = $(kde_appsdir)/Settings/Peripherals
+@@ -317,21 +321,25 @@
+ 	libkcm_keyboard_la_meta_unload.lo 
+ @KDE_USE_FINAL_FALSE@libkcm_keyboard_la_OBJECTS = $(libkcm_keyboard_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@libkcm_keyboard_la_OBJECTS = $(libkcm_keyboard_la_final_OBJECTS)
 -kxkb_la_DEPENDENCIES = 
 -#>- kxkb_la_OBJECTS =  rules.lo kxkb.lo extension.lo pixmap.lo
 +libkxkb_main_la_DEPENDENCIES = 
 +#>- libkxkb_main_la_OBJECTS =  rules.lo kxkb.lo extension.lo pixmap.lo
-@@ -321,5 +325,9 @@
+ #>+ 5
 -kxkb_la_final_OBJECTS = kxkb_la.all_cpp.lo 
 -kxkb_la_nofinal_OBJECTS = rules.lo kxkb.lo extension.lo pixmap.lo \
--kxkb_la_meta_unload.lo 
+-	kxkb_la_meta_unload.lo 
 -@KDE_USE_FINAL_FALSE@kxkb_la_OBJECTS = $(kxkb_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kxkb_la_OBJECTS = $(kxkb_la_final_OBJECTS)
 +libkxkb_main_la_final_OBJECTS = libkxkb_main_la.all_cpp.lo 
 +libkxkb_main_la_nofinal_OBJECTS = rules.lo kxkb.lo extension.lo pixmap.lo \
-+libkxkb_main_la_meta_unload.lo 
++	libkxkb_main_la_meta_unload.lo 
 +@KDE_USE_FINAL_FALSE@libkxkb_main_la_OBJECTS = $(libkxkb_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkxkb_main_la_OBJECTS = $(libkxkb_main_la_final_OBJECTS)
 +kxkb_la_DEPENDENCIES =  libkxkb_main.la
 +#>- kxkb_la_OBJECTS =  kxkb_main.lo
 +#>+ 1
 +kxkb_la_OBJECTS = kxkb_main.lo
-@@ -329 +337 @@
+ bin_PROGRAMS =  kxkb$(EXEEXT)
+ PROGRAMS =  $(bin_PROGRAMS)
+ 
 -#>- kxkb_OBJECTS =  dummy.$(OBJEXT)
 +#>- kxkb_OBJECTS =  kxkb_main.$(OBJEXT)
-@@ -331,2 +339,2 @@
+ #>+ 1
 -kxkb_OBJECTS = dummy.$(OBJEXT)
 -kxkb_DEPENDENCIES =  kxkb.la
 +kxkb_OBJECTS = kxkb_main.$(OBJEXT)
 +kxkb_DEPENDENCIES =  libkxkb_main.la
-@@ -351 +359 @@
+ CXXFLAGS = @CXXFLAGS@
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ #>+ 1
+@@ -350,15 +358,15 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
 -KDE_DIST=test.cpp kcmmisc.h configure.in.in kxkbbindings.cpp pixmap.h keyboard.desktop LICENSE kcmlayout.h extension.h uninstall.desktop kxkb.h kxkb.desktop rules.h 
 +KDE_DIST=pixmap.h kxkb.h test.cpp kcmmisc.h configure.in.in kcmlayout.h kxkbbindings.cpp extension.h kxkb.desktop LICENSE keyboard.desktop uninstall.desktop rules.h 
-@@ -358,2 +366,2 @@
+ 
+ DISTFILES= $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+ 
+ TAR = tar
+ GZIP_ENV = --best
 -SOURCES = $(libkcm_keyboard_la_SOURCES) $(kxkb_la_SOURCES) $(kxkb_SOURCES)
 -OBJECTS = $(libkcm_keyboard_la_OBJECTS) $(kxkb_la_OBJECTS) $(kxkb_OBJECTS)
 +SOURCES = $(libkcm_keyboard_la_SOURCES) $(libkxkb_main_la_SOURCES) $(kxkb_la_SOURCES) $(kxkb_SOURCES)
 +OBJECTS = $(libkcm_keyboard_la_OBJECTS) $(libkxkb_main_la_OBJECTS) $(kxkb_la_OBJECTS) $(kxkb_OBJECTS)
-@@ -451,0 +460,3 @@
+ 
+ #>- all: all-redirect
+ #>+ 1
+@@ -451,6 +459,9 @@
+ @KDE_USE_CLOSURE_FALSE@libkcm_keyboard.la: $(libkcm_keyboard_la_OBJECTS) $(libkcm_keyboard_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(libkcm_keyboard_la_LDFLAGS) $(libkcm_keyboard_la_OBJECTS) $(libkcm_keyboard_la_LIBADD) $(LIBS)
+ 
 +libkxkb_main.la: $(libkxkb_main_la_OBJECTS) $(libkxkb_main_la_DEPENDENCIES)
 +	$(CXXLINK) -rpath $(libdir) $(libkxkb_main_la_LDFLAGS) $(libkxkb_main_la_OBJECTS) $(libkxkb_main_la_LIBADD) $(LIBS)
 +
-@@ -562,11 +572,0 @@
--#>- 	@for file in $(DISTFILES); do \
--#>- 	  d=$(srcdir); \
--#>- 	  if test -d $$d/$$file; then \
--#>- 	    cp -pr $$/$$file $(distdir)/$$file; \
--#>- 	  else \
--#>- 	    test -f $(distdir)/$$file \
--#>- 	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
--#>- 	    || cp -p $$d/$$file $(distdir)/$$file || :; \
--#>- 	  fi; \
--#>- 	done
--#>+ 10
-@@ -685,3 +684,0 @@
+ kxkb.la: $(kxkb_la_OBJECTS) $(kxkb_la_DEPENDENCIES)
+ 	$(CXXLINK) -rpath $(libdir) $(kxkb_la_LDFLAGS) $(kxkb_la_OBJECTS) $(kxkb_la_LIBADD) $(LIBS)
+ 
+@@ -673,9 +684,6 @@
+ 	$(XGETTEXT) $(kxkb_la_SOURCES) kxkbbindings.cpp -o $(podir)/kxkb.pot
+ 	$(XGETTEXT) $(libkcm_keyboard_la_SOURCES) kxkbbindings.cpp -o $(podir)/kcmlayout.pot 
+ 
 -dummy.cpp:
 -	echo > dummy.cpp
 -
-@@ -742,8 +739,8 @@
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
+@@ -732,21 +740,21 @@
+ 
+ 
+ #>+ 12
 -kxkb_la_meta_unload.cpp:  kxkb.moc
 -	@echo 'creating kxkb_la_meta_unload.cpp'
 -	@-rm -f kxkb_la_meta_unload.cpp
--	@echo 'static const char * _metalist_kxkb_la[] = {' > kxkb_la_meta_unload.cpp
--	@cat  kxkb.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kxkb_la_meta_unload.cpp
--	@echo '0};' >> kxkb_la_meta_unload.cpp
--	@echo '#include <kunload.h>' >> kxkb_la_meta_unload.cpp
--	@echo '_UNLOAD(kxkb_la)' >> kxkb_la_meta_unload.cpp
 +libkxkb_main_la_meta_unload.cpp:  kxkb.moc
 +	@echo 'creating libkxkb_main_la_meta_unload.cpp'
 +	@-rm -f libkxkb_main_la_meta_unload.cpp
-+	@echo 'static const char * _metalist_libkxkb_main_la[] = {' > libkxkb_main_la_meta_unload.cpp
-+	@cat  kxkb.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkxkb_main_la_meta_unload.cpp
-+	@echo '0};' >> libkxkb_main_la_meta_unload.cpp
-+	@echo '#include <kunload.h>' >> libkxkb_main_la_meta_unload.cpp
-+	@echo '_UNLOAD(libkxkb_main_la)' >> libkxkb_main_la_meta_unload.cpp
-@@ -754 +751 @@
+ 	@if test ${kde_qtver} = 2; then \
+-		echo 'static const char * _metalist_kxkb_la[] = {' > kxkb_la_meta_unload.cpp ;\
+-		cat  kxkb.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> kxkb_la_meta_unload.cpp ;\
+-		echo '0};' >> kxkb_la_meta_unload.cpp ;\
+-		echo '#include <kunload.h>' >> kxkb_la_meta_unload.cpp ;\
+-		echo '_UNLOAD(kxkb_la)' >> kxkb_la_meta_unload.cpp ;\
+-	else echo > kxkb_la_meta_unload.cpp; fi
++		echo 'static const char * _metalist_libkxkb_main_la[] = {' > libkxkb_main_la_meta_unload.cpp ;\
++		cat  kxkb.moc | grep 'char.*className' | sed -e 's/.*[^A-Za-z0-9_:]\([A-Za-z0-9_:]*\)::className.*$$/\"\1\",/' | sort | uniq >> libkxkb_main_la_meta_unload.cpp ;\
++		echo '0};' >> libkxkb_main_la_meta_unload.cpp ;\
++		echo '#include <kunload.h>' >> libkxkb_main_la_meta_unload.cpp ;\
++		echo '_UNLOAD(libkxkb_main_la)' >> libkxkb_main_la_meta_unload.cpp ;\
++	else echo > libkxkb_main_la_meta_unload.cpp; fi
+ 
+ 
+ #>+ 3
+ clean-moc-classes:
 -	-rm -f  libkcm_keyboard_la_meta_unload.cpp kxkb_la_meta_unload.cpp
 +	-rm -f  libkcm_keyboard_la_meta_unload.cpp libkxkb_main_la_meta_unload.cpp
-@@ -769 +766,13 @@
+ 
+ #>+ 11
+ libkcm_keyboard_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/rules.cpp $(srcdir)/kcmlayout.cpp $(srcdir)/pixmap.cpp $(srcdir)/kcmmisc.cpp libkcm_keyboard_la_meta_unload.cpp   kcmlayout.moc kxkb.moc kcmmisc.moc 
+@@ -761,11 +769,23 @@
+ 	rm -f libkcm_keyboard_la.all_cpp.final libkcm_keyboard_la.all_cpp.files
+ 
+ #>+ 11
 -kxkb_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/rules.cpp $(srcdir)/kxkb.cpp $(srcdir)/extension.cpp $(srcdir)/pixmap.cpp kxkb_la_meta_unload.cpp  
 +libkxkb_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/rules.cpp $(srcdir)/kxkb.cpp $(srcdir)/extension.cpp $(srcdir)/pixmap.cpp libkxkb_main_la_meta_unload.cpp  
 +	@echo 'creating libkxkb_main_la.all_cpp.cpp ...'; \
@@ -112,21 +157,51 @@ $NetBSD: patch-eo,v 1.1 2001/10/15 22:46:11 skrll Exp $
 +
 +#>+ 11
 +kxkb_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kxkb_main.cpp  
-@@ -773 +782 @@
+ 	@echo 'creating kxkb_la.all_cpp.cpp ...'; \
+ 	rm -f kxkb_la.all_cpp.files kxkb_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kxkb_la.all_cpp.final; \
 -	for file in rules.cpp kxkb.cpp extension.cpp pixmap.cpp kxkb_la_meta_unload.cpp ; do \
 +	for file in kxkb_main.cpp ; do \
-@@ -781 +790 @@
+ 	  echo "#include \"$$file\"" >> kxkb_la.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kxkb_la.all_cpp.final; \
+ 	done; \
+@@ -773,11 +793,11 @@
+ 	rm -f kxkb_la.all_cpp.final kxkb_la.all_cpp.files
+ 
+ #>+ 11
 -kxkb.all_cpp.cpp: $(srcdir)/Makefile.in dummy.cpp  
 +kxkb.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kxkb_main.cpp  
-@@ -785 +794 @@
+ 	@echo 'creating kxkb.all_cpp.cpp ...'; \
+ 	rm -f kxkb.all_cpp.files kxkb.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> kxkb.all_cpp.final; \
 -	for file in dummy.cpp ; do \
 +	for file in kxkb_main.cpp ; do \
-@@ -794 +803 @@
+ 	  echo "#include \"$$file\"" >> kxkb.all_cpp.files; \
+ 	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kxkb.all_cpp.final; \
+ 	done; \
+@@ -786,20 +806,20 @@
+ 
+ #>+ 3
+ clean-final:
 -	-rm -f libkcm_keyboard_la.all_cpp.cpp kxkb_la.all_cpp.cpp kxkb.all_cpp.cpp
 +	-rm -f libkcm_keyboard_la.all_cpp.cpp libkxkb_main_la.all_cpp.cpp kxkb_la.all_cpp.cpp kxkb.all_cpp.cpp
-@@ -798 +807 @@
+ 
+ #>+ 2
+ final:
 -	$(MAKE) libkcm_keyboard_la_OBJECTS="$(libkcm_keyboard_la_final_OBJECTS)" kxkb_la_OBJECTS="$(kxkb_la_final_OBJECTS)" all-am
 +	$(MAKE) libkcm_keyboard_la_OBJECTS="$(libkcm_keyboard_la_final_OBJECTS)" libkxkb_main_la_OBJECTS="$(libkxkb_main_la_final_OBJECTS)" all-am
-@@ -801 +810 @@
+ #>+ 2
+ final-install:
+-	$(MAKE) libkcm_keyboard_la_OBJECTS="$(libkcm_keyboard_la_final_OBJECTS)" kxkb_la_OBJECTS="$(kxkb_la_final_OBJECTS)" install-am
++	$(MAKE) libkcm_keyboard_la_OBJECTS="$(libkcm_keyboard_la_final_OBJECTS)" libkxkb_main_la_OBJECTS="$(libkxkb_main_la_final_OBJECTS)" install-am
+ #>+ 2
+ no-final:
 -	$(MAKE) libkcm_keyboard_la_OBJECTS="$(libkcm_keyboard_la_nofinal_OBJECTS)" kxkb_la_OBJECTS="$(kxkb_la_nofinal_OBJECTS)" all-am
 +	$(MAKE) libkcm_keyboard_la_OBJECTS="$(libkcm_keyboard_la_nofinal_OBJECTS)" libkxkb_main_la_OBJECTS="$(libkxkb_main_la_nofinal_OBJECTS)" all-am
+ #>+ 2
+ no-final-install:
+-	$(MAKE) libkcm_keyboard_la_OBJECTS="$(libkcm_keyboard_la_nofinal_OBJECTS)" kxkb_la_OBJECTS="$(kxkb_la_nofinal_OBJECTS)" install-am
++	$(MAKE) libkcm_keyboard_la_OBJECTS="$(libkcm_keyboard_la_nofinal_OBJECTS)" libkxkb_main_la_OBJECTS="$(libkxkb_main_la_nofinal_OBJECTS)" install-am
+ #>+ 3
+ cvs-clean:
+ 	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean

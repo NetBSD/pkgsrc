@@ -1,40 +1,49 @@
-$NetBSD: patch-df,v 1.1 2001/10/15 22:46:08 skrll Exp $
-
---- ksysguard/ksysguardd/FreeBSD/Memory.c.orig	Fri Jul 28 00:59:28 2000
-+++ ksysguard/ksysguardd/FreeBSD/Memory.c
-@@ -29,7 +29,12 @@
- 
- #include <sys/param.h>
- #include <sys/sysctl.h>
+--- ksysguard/ksysguardd/FreeBSD/Memory.c.orig	Sat Nov 10 18:17:04 2001
++++ ksysguard/ksysguardd/FreeBSD/Memory.c	Mon Nov 26 12:00:04 2001
+@@ -32,7 +32,12 @@
+ #include <sys/types.h>
+ #include <sys/vmmeter.h>
+ #include <unistd.h>
 +/* Everything post 1.5.x uses uvm/uvm_* includes */
 +#if __NetBSD_Version__ >= 105010000
 +#include <uvm/uvm_param.h>
 +#else
  #include <vm/vm_param.h>
 +#endif
- #include <sys/vmmeter.h>
- #include <string.h>
- #include <unistd.h>
-@@ -65,9 +70,16 @@
-         struct vmtotal p;
-         FILE *file;
-         char buf[256];
+ 
+ #include "Command.h"
+ #include "Memory.h"
+@@ -82,15 +87,25 @@
+ 	struct vmtotal p;
+ 	FILE *file;
+ 	char buf[256];
 +	int rc;
++#ifndef __NetBSD__
+ 	struct kvm_swap kswap[16];
+ 	int i, swap_count, hlen, pagesize = getpagesize();
+ 	long blocksize;
++#endif
  
          len = sizeof (Total);
 +#ifdef __NetBSD__
-+        mib[0] = CTL_HW;
-+        mib[1] = HW_PHYSMEM;
-+        sysctl(mib, sizeof(mib), &Total, &len, NULL, 0);
++	mib[0] = CTL_HW;
++	mib[1] = HW_PHYSMEM;
++	sysctl(mib, sizeof(mib), &Total, &len, NULL, 0);
 +#else
          sysctlbyname("hw.physmem", &Total, &len, NULL, 0);
 +#endif
          Total /= 1024;
  
-         /* Q&D hack for swap display. Borrowed from xsysinfo-1.4 */
-@@ -92,23 +104,40 @@
- 	}
+ 	/* Borrowed from pstat */ 
++#ifndef __NetBSD__
+ 	swap_count = kvm_getswapinfo(kd, kswap, 16, SWIF_DEV_PREFIX);
+ 	getbsize(&hlen, &blocksize);
  
+@@ -101,24 +116,42 @@
+ 		SUsed = CONVERT(kswap[0].ksw_used);
+ 		SFree = CONVERT(kswap[0].ksw_total - kswap[0].ksw_used);
+ 	}
++#endif
  
 +#ifdef __NetBSD__
 +        /* NetBSD doesn't know about vfs.bufspace */

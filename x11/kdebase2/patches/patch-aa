@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2001/11/13 21:10:46 jlam Exp $
+$NetBSD: patch-aa,v 1.8 2001/12/03 15:37:18 skrll Exp $
 
---- configure.orig	Fri Sep  7 20:36:55 2001
+--- configure.orig	Sat Nov 10 08:08:04 2001
 +++ configure
-@@ -12536,7 +12536,7 @@
+@@ -16640,7 +16640,7 @@
  
      ac_save_ldflags="$LDFLAGS"
      ac_save_cflags="$CFLAGS"
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.7 2001/11/13 21:10:46 jlam Exp $
 +    LDFLAGS="$LDFLAGS $GL_LDFLAGS $X_LDFLAGS $all_libraries -lGL -lGLU -lX11 -lXext -lm $LIBSOCKET"
      CFLAGS="$CFLAGS $X_INCLUDES"
      test -n "$GL_INCLUDE" && CFLAGS="-I$GL_INCLUDE $CFLAGS"
-     cat > conftest.$ac_ext <<EOF
-@@ -12601,13 +12601,13 @@
+     cat >conftest.$ac_ext <<_ACEOF
+@@ -16733,13 +16733,13 @@
  
      if test "$GL_LDFLAGS" = ""; then
         if test "$ac_cv_have_gl" = "mesa"; then
@@ -27,41 +27,41 @@ $NetBSD: patch-aa,v 1.7 2001/11/13 21:10:46 jlam Exp $
         else
            GLLIB="$GL_LDFLAGS -lGL -lGLU "'$(LIB_X11)'
         fi
-@@ -12621,7 +12621,7 @@
-     
+@@ -16754,7 +16754,7 @@
+ 
  GL_SAVERS="kmorph3d.kss kspace.kss kpipes.kss"
  ac_save_CPPFLAGS="$CPPFLAGS"
 -CPPFLAGS="-I$GL_INCLUDE $CPPFLAGS $X_INCLUDES"
 +CPPFLAGS="$GLINC $CPPFLAGS $X_INCLUDES"
- for ac_hdr in GL/xmesa.h GL/glut.h memory.h
+ 
+ for ac_header in GL/xmesa.h GL/glut.h memory.h
  do
- ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
-@@ -12810,6 +12810,23 @@
-   
+@@ -16984,6 +16984,23 @@
+ 
                  ac_cv_have_dpms="-lXdpms"
-                 
-+	lib=Xdpms
-+	shared_lib_found=no
-+	for i in ${LDFLAGS}; do
-+		case "$i" in
-+		-L*)
-+			dir=`echo $i | sed "s,^-L,,"`
-+			if [ -e $dir/lib${lib}.so ] ||
-+			   [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
-+				shared_lib_found=yes
-+				break;
-+			fi
-+		esac
-+	done
-+	if [ "$shared_lib_found" = "no" ]; then
-+		eval "ac_cv_have_dpms=no"
-+	fi
+ 
++       lib=Xdpms
++       shared_lib_found=no
++       for i in ${LDFLAGS}; do
++               case "$i" in
++               -L*)
++                       dir=`echo $i | sed "s,^-L,,"`
++                       if [ -e $dir/lib${lib}.so ] ||
++                          [ "`echo $dir/lib${lib}.so.*`" != "$dir/lib${lib}.so.*" ]; then
++                               shared_lib_found=yes
++                               break;
++                       fi
++               esac
++       done
++       if [ "$shared_lib_found" = "no" ]; then
++               eval "ac_cv_have_dpms=no"
++       fi
 +
  else
-   echo "configure: failed program was:" >&5
-   cat conftest.$ac_ext >&5
-@@ -12919,6 +12936,7 @@
- case "$host" in 
+   echo "$as_me: failed program was:" >&5
+ cat conftest.$ac_ext >&5
+@@ -17108,6 +17125,7 @@
+ case "$host" in
    *-*-linux*) ksysguardd_compile=yes; UNAME='Linux' ;;
    *-*-freebsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;
 +  *-*-netbsd*) ksysguardd_compile=yes; UNAME='FreeBSD' ;;

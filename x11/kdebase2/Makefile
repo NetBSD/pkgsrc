@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2001/11/22 04:27:47 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2001/12/03 15:37:18 skrll Exp $
 
-DISTNAME=	kdebase-2.2.1
+DISTNAME=	kdebase-2.2.2
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 2 integrated X11 desktop
 
@@ -54,6 +54,11 @@ CONFIGURE_ENV+=		RUN_KAPPFINDER=no
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 ICONDIR=		share/kde/icons
+
+post-configure:
+	ln -s ../Linux/conf.c ${WRKSRC}/ksysguard/ksysguardd/FreeBSD/conf.c
+	ln -s ../Linux/conf.h ${WRKSRC}/ksysguard/ksysguardd/FreeBSD/conf.h
+	ln -s ../Linux/ksysguardd.h ${WRKSRC}/ksysguard/ksysguardd/FreeBSD/ksysguardd.h
 
 post-build:
 	cd ${WRKSRC};							\
