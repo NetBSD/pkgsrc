@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.299 1999/07/17 19:26:44 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.300 1999/07/21 12:16:27 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -858,7 +858,7 @@ _FETCH_FILE=								\
 		for site in $$sites; do					\
 			${ECHO_MSG} ">> Attempting to fetch $$bfile from $${site}."; \
 			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
-				if [ -n "${FAILOVER_FETCH}" -a -f ${MD5_FILE} ]; then	\
+				if [ -n "${FAILOVER_FETCH}" -a -f ${MD5_FILE} -a -f ${_DISTDIR}/$$bfile ]; then	\
 					CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
 					CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "('$$file')"{print $$4;}' ${MD5_FILE}`; \
 					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
@@ -866,6 +866,8 @@ _FETCH_FILE=								\
 					else				\
 						${ECHO_MSG} ">> Checksum failure - trying next site."; \
 					fi;				\
+				elif [ ! -f ${_DISTDIR}/$$bfile ]; then \
+					${ECHO_MSG} ">> FTP didn't fetch expected file, trying next site." ; \
 				else					\
 					continue 2;			\
 				fi;					\
