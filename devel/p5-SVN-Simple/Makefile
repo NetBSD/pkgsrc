@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/09/28 18:26:21 epg Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/10 18:09:07 epg Exp $
 
 DISTNAME=	SVN-Simple-0.25
 PKGNAME=	p5-${DISTNAME}
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Simple interface to the Subversion delta editor interface
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-subversion>=1.0.4:../../devel/p5-subversion
 
