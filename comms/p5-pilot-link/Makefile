@@ -1,40 +1,35 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 13:56:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/27 18:11:37 jlam Exp $
 
-DISTNAME=		pilot-link.0.9.3
-PKGNAME=		p5-pilot-link-0.9.3
-CATEGORIES=		comms
-MASTER_SITES=		ftp://ryeham.ee.ryerson.ca/pub/PalmOS/
+DISTNAME=		pilot-link.0.9.5
+PKGNAME=		p5-pilot-link-0.1
+CATEGORIES=		comms perl5
+MASTER_SITES=		http://www.gnu-designs.com/pilot-link/source/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.gnu-designs.com/pilot-link/
 COMMENT=		perl interface to pilot-link library
-
-DEPENDS+=		pilot-link-0.9.3:../../comms/pilot-link
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/PDA/Pilot/.packlist
 
-USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKDIR}/${DISTNAME}/scripts/ltconfig
+EXTRACT_ELEMENTS=	${DISTNAME}/tools/Perl5
+WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
 
-GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS=		--with-perl5=${PERL5} --without-tcl \
-			--without-python --without-java
-
-MAKE_ENV+=		OTHERLDFLAGS="${LDFLAGS}"
-WRKSRC=			${WRKDIR}/${DISTNAME}/Perl5
-
-# Until the source catches up to the current Perl API, we need PERL_POLLUTE
-# to look like an older perl.
-MAKE_PARAMS=		DEFINE="-DPERL_POLLUTE=1"
+# Force this to come at the end of the "make all" command to override
+# OTHERLDFLAGS setting in perl-generated Makefile.
+#
+ALL_TARGET+=		OTHERLDFLAGS="${LDFLAGS}"
 
 pre-configure:
-	@cd ${WRKSRC} && \
-	${RM} -f configure && \
-	${ECHO} >configure '#!/bin/sh' && \
-	${ECHO} >>configure 'cd .. && exec ./configure $${1+$$@}' && \
-	${CHMOD} ${BINMODE} configure
+	@cd ${WRKSRC};							\
+	${SED}	-e "s|@prefix@|${PREFIX}|g"				\
+		-e "s|@exec_prefix@|${PREFIX}|g"			\
+		-e "s|@libdir@|${PREFIX}/lib|g"				\
+		Makefile.PL.in > Makefile.PL
 
-post-configure:
+do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
+.include "../../comms/pilot-link-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
