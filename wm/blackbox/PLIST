@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/14 15:07:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/09/19 15:54:48 jschauma Exp $
 bin/blackbox
 bin/bsetbg
 bin/bsetroot
-man/ja_JP/man1/blackbox.1
-man/ja_JP/man1/bsetroot.1
 man/man1/blackbox.1
+man/man1/bsetbg.1
 man/man1/bsetroot.1
-man/nl_NL/man1/blackbox.1
-man/nl_NL/man1/bsetroot.1
-man/sl_SI/man1/blackbox.1
 share/blackbox/menu
 share/blackbox/nls/C/blackbox.cat
 share/blackbox/nls/POSIX
@@ -17,23 +13,33 @@ share/blackbox/nls/da_DK/blackbox.cat
 share/blackbox/nls/de
 share/blackbox/nls/de_DE/blackbox.cat
 share/blackbox/nls/en
+share/blackbox/nls/en_GB
 share/blackbox/nls/en_US
 share/blackbox/nls/es
+share/blackbox/nls/es_AR/blackbox.cat
 share/blackbox/nls/es_ES/blackbox.cat
-share/blackbox/nls/et_EE/blackbox.cat
+share/blackbox/nls/es_MX
 share/blackbox/nls/fr
 share/blackbox/nls/fr_FR/blackbox.cat
+share/blackbox/nls/hu_HU/blackbox.cat
 share/blackbox/nls/it
 share/blackbox/nls/it_IT/blackbox.cat
 share/blackbox/nls/ja_JP/blackbox.cat
+share/blackbox/nls/ko_KR/blackbox.cat
+share/blackbox/nls/lv_LV/blackbox.cat
 share/blackbox/nls/nl
 share/blackbox/nls/nl_NL/blackbox.cat
+share/blackbox/nls/no_NO/blackbox.cat
+share/blackbox/nls/pl_PL/blackbox.cat
 share/blackbox/nls/pt_BR/blackbox.cat
+share/blackbox/nls/ro_RO/blackbox.cat
 share/blackbox/nls/ru_RU/blackbox.cat
+share/blackbox/nls/sk_SK/blackbox.cat
 share/blackbox/nls/sl_SI/blackbox.cat
 share/blackbox/nls/sv_SE/blackbox.cat
-share/blackbox/nls/tr_TR/blackbox.cat
+share/blackbox/nls/uk_UA/blackbox.cat
 share/blackbox/nls/zh_CN/blackbox.cat
+share/blackbox/nls/zh_TW/blackbox.cat
 share/blackbox/styles/Artwiz
 share/blackbox/styles/Cthulhain
 share/blackbox/styles/Flux
@@ -49,26 +55,28 @@ share/blackbox/styles/Spiff
 share/blackbox/styles/TDF
 share/blackbox/styles/Twice
 @dirrm share/blackbox/styles
+@dirrm share/blackbox/nls/zh_TW
 @dirrm share/blackbox/nls/zh_CN
-@dirrm share/blackbox/nls/tr_TR
+@dirrm share/blackbox/nls/uk_UA
 @dirrm share/blackbox/nls/sv_SE
 @dirrm share/blackbox/nls/sl_SI
+@dirrm share/blackbox/nls/sk_SK
 @dirrm share/blackbox/nls/ru_RU
+@dirrm share/blackbox/nls/ro_RO
 @dirrm share/blackbox/nls/pt_BR
+@dirrm share/blackbox/nls/pl_PL
+@dirrm share/blackbox/nls/no_NO
 @dirrm share/blackbox/nls/nl_NL
+@dirrm share/blackbox/nls/lv_LV
+@dirrm share/blackbox/nls/ko_KR
 @dirrm share/blackbox/nls/ja_JP
 @dirrm share/blackbox/nls/it_IT
+@dirrm share/blackbox/nls/hu_HU
 @dirrm share/blackbox/nls/fr_FR
-@dirrm share/blackbox/nls/et_EE
 @dirrm share/blackbox/nls/es_ES
+@dirrm share/blackbox/nls/es_AR
 @dirrm share/blackbox/nls/de_DE
 @dirrm share/blackbox/nls/da_DK
 @dirrm share/blackbox/nls/C
 @dirrm share/blackbox/nls
 @dirrm share/blackbox
-@dirrm man/sl_SI/man1
-@dirrm man/sl_SI
-@dirrm man/nl_NL/man1
-@dirrm man/nl_NL
-@dirrm man/ja_JP/man1
-@dirrm man/ja_JP
