@@ -1,7 +1,7 @@
-$NetBSD: patch-bd,v 1.1 1999/06/04 03:42:35 mycroft Exp $
+$NetBSD: patch-bd,v 1.2 1999/06/04 04:15:44 mycroft Exp $
 
 --- /dev/null	Thu Jun  3 22:42:46 1999
-+++ powerpc.h	Thu Jun  3 23:04:00 1999
++++ src/m/powerpc.h	Thu Jun  3 23:04:00 1999
 @@ -0,0 +1,156 @@
 +/* machine description file For the PowerPC chip.
 +   Copyright (C) 1994, 1997 Free Software Foundation, Inc.

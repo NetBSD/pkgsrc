@@ -1,7 +1,7 @@
-$NetBSD: patch-az,v 1.2 1999/06/04 03:42:35 mycroft Exp $
+$NetBSD: patch-az,v 1.3 1999/06/04 04:15:44 mycroft Exp $
 
---- unexelf.c.orig	Sun Aug  9 22:33:12 1998
-+++ unexelf.c	Thu Jun  3 23:31:50 1999
+--- src/unexelf.c.orig	Sun Aug  9 22:33:12 1998
++++ src/unexelf.c	Thu Jun  3 23:31:50 1999
 @@ -501,9 +501,16 @@
  #  include <sys/exec_ecoff.h>
  #  define HDRR		struct ecoff_symhdr

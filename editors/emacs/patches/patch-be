@@ -1,7 +1,7 @@
-$NetBSD: patch-be,v 1.1 1999/06/04 03:42:35 mycroft Exp $
+$NetBSD: patch-be,v 1.2 1999/06/04 04:15:44 mycroft Exp $
 
 --- /dev/null	Fri Aug 28 13:20:16 1998
-+++ ./src/m/arm.h	Sun Aug 16 03:48:25 1998
++++ src/m/arm.h	Sun Aug 16 03:48:25 1998
 @@ -0,0 +1,97 @@
 +/* Machine description file for Acorn RISCiX machines.
 +   Copyright (C) 1994 Free Software Foundation, Inc.
