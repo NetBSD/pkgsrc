@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:25:46 zuntum Exp $
-bin/patch
-man/man1/patch.1
+@comment $NetBSD: PLIST,v 1.2 2001/12/04 09:14:41 seb Exp $
+bin/${PROGRAM_PREFIX}patch
+man/man1/${PROGRAM_PREFIX}patch.1
