@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/02/09 18:21:52 reed Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/29 16:02:36 wiz Exp $
 
-DISTNAME=	OpenEXR-1.2.1
-PKGNAME=	openexr-1.2.1
+DISTNAME=	OpenEXR-1.2.2
+PKGNAME=	openexr-1.2.2
 CATEGORIES=	games
 MASTER_SITES=	http://savannah.nongnu.org/download/openexr/
 
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 USE_X11=		yes # for exrdisplay FLTK application
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	${WRKSRC}/OpenExr.pc.in
+TEST_TARGET=		check
 
 .include "../../x11/fltk/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
