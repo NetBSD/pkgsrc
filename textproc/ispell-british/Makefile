@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:26:49 agc Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/01 12:23:30 markd Exp $
 #
 
-DISTNAME=	ispell-3.1.20
-PKGNAME=	ispell-${DICT_LANG}-3.1.20
+DISTNAME=	ispell-3.2.06
+PKGNAME=	ispell-${DICT_LANG}-3.2.06
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.cs.ucla.edu/pub/ispell-3.1/
+MASTER_SITES=	http://fmg-www.cs.ucla.edu/geoff/tars/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/ispell/ispell.html
+HOMEPAGE=	http://ficus-www.cs.ucla.edu/geoff/ispell.html
 COMMENT=	British dictionary for interactive spelling checker
 
-DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
+DEPENDS+=	ispell-base>=3.2.06:../../textproc/ispell-base
 
-WRKSRC=		${WRKDIR}/ispell-3.1
 ALL_TARGET=	config.sh all-languages
 
 DICT_LANG=	british
@@ -34,8 +33,6 @@ do-configure:
 	${ECHO} '#define MASTERHASH "${DICT_LANG}xlg.hash"'  >> local.h ;	\
 	${ECHO} "#undef WORDS"  >> local.h ;				\
 	${ECHO} '#define WORDS   "${WORDS}"'  >> local.h ;	\
-	${ECHO} '#undef ELISPDIR'  >> local.h;				\
-	${ECHO} "#define ELISPDIR \"${PREFIX}/share/emacs/site-lisp\"" >> local.h
 
 do-install:
 	${CP} ${WRKSRC}/languages/${DICT_LANG}/${DICT_LANG}xlg.hash ${PREFIX}/lib
