@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/07/26 08:46:25 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/08/10 12:51:49 itojun Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -279,3 +279,11 @@ share/doc/bind9/rfc/rfc952.txt
 @dirrm include/isc
 @dirrm include/dst
 @dirrm include/dns
+man/man8/lwresd.8
+man/man8/named.8
+man/man8/rndc.8
+man/man5/rndc.conf.5
+man/man8/dnssec-keygen.8
+man/man8/dnssec-makekeyset.8
+man/man8/dnssec-signkey.8
+man/man8/dnssec-signzone.8

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/07/26 08:46:23 rh Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/10 12:51:48 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -18,7 +18,7 @@ BUILD_DEFS+=	USE_INET6
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-arm32 NetBSD-*-m68k
 
 # No need to set USE_INET6, will auto-detect.
-BIND_VERSION=	9.0.0rc1
+BIND_VERSION=	9.0.0rc2
 DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-mit-pthreads \
@@ -39,5 +39,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/draft/* ${PREFIX}/share/doc/bind9/draft
 	${INSTALL_DATA} ${WRKSRC}/doc/misc/* ${PREFIX}/share/doc/bind9/misc
 	${INSTALL_DATA} ${WRKSRC}/doc/rfc/* ${PREFIX}/share/doc/bind9/rfc
+	${INSTALL_MAN} ${WRKSRC}/doc/man/bin/*.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/doc/man/bin/*.5 ${PREFIX}/man/man5
+	${INSTALL_MAN} ${WRKSRC}/doc/man/dnssec/*.8 ${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"
