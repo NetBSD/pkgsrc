@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2001/04/05 15:18:09 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2001/11/04 14:09:31 wiz Exp $
 
---- dns.c.orig Wed Jun  9 11:09:20 1999
-+++ dns.c      Tue Aug 10 01:21:12 1999
+--- dns.c.orig	Sat Mar  4 02:46:55 2000
++++ dns.c	Fri Nov  2 14:16:56 2001
 @@ -751,7 +751,7 @@
  void dorequest(char *s,int type,word id){
     packetheader *hp;
@@ -11,3 +11,31 @@ $NetBSD: patch-ab,v 1.1 2001/04/05 15:18:09 wiz Exp $
     r = res_mkquery(QUERY,s,C_IN,type,NULL,0,NULL,buf,MaxPacketsize);
     if (r == -1){
        restell("Resolver error: Query too large.");
+@@ -981,7 +981,7 @@
+                   restell("Resolver error: Specified rdata length exceeds packet size.");
+                   return;
+                }
+-               if (datatype == qdatatype){
++               if (datatype == qdatatype || datatype == T_CNAME){
+                   if (debug){
+                      sprintf(tempstring,"Resolver: TTL: %s",strtdiff(sendstring,ttl));
+                      restell(tempstring);
+@@ -1013,6 +1013,7 @@
+                            }
+                            break;
+                         case T_PTR:
++                        case T_CNAME:
+                            *namestring = '\0';
+                            r = dn_expand(s,s + l,c,namestring,MAXDNAME);
+                            if (r == -1){
+@@ -1027,6 +1028,10 @@
+                               restell("Resolver error: Domain name too long.");
+                               failrp(rp);
+                               return;
++                           }
++                           if (datatype == T_CNAME){
++                              strcpy(stackstring,namestring);
++                              break;
+                            }
+                            if (!rp->hostname){
+                               rp->hostname = (char *)statmalloc(strlen(namestring) + 1);
