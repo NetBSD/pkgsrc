@@ -1,12 +1,16 @@
-diff -ur stdlib/strtod.c stdlib/strtod.c
---- stdlib/strtod.c	Wed Nov  3 12:03:37 1999
-+++ stdlib/strtod.c	Wed Nov  3 12:01:09 1999
-@@ -94,7 +94,7 @@
+--- stdlib/strtod.c.orig	Fri Nov  5 09:21:45 1999
++++ stdlib/strtod.c	Fri Nov  5 09:33:24 1999
+@@ -94,7 +94,12 @@
  #endif /* LIBC_SCCS and not lint */
  
  #ifndef __arm32__
 -#include <endian.h>
++#if __NetBSD_Version__ > 104010000
 +#include <sys/endian.h>
++#else
++#include <sys/types.h>
++#include <machine/endian.h>
++#endif
  #if BYTE_ORDER == BIG_ENDIAN
  #define IEEE_BIG_ENDIAN			1
  #else
