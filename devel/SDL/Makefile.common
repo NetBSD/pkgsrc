@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2003/07/26 21:38:22 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/07/26 23:05:34 jmmv Exp $
 #
 
 DISTNAME=	SDL-1.2.5
@@ -28,15 +28,10 @@ NASMFLAGS_ELF=		-f elf
 NASMFLAGS_a.out=	-f aoutb
 .endif
 
-.if defined(SDL_USE_NAS)
-.  include "../../audio/nas/buildlink2.mk"
-.else
-CONFIGURE_ARGS+=	--disable-nas
-.endif
-
 CONFIGURE_ARGS+=	--enable-dlopen
 CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ARGS+=	--disable-esd
+CONFIGURE_ARGS+=	--disable-nas
 
 CONFIGURE_ARGS+=	--enable-video-aalib
 CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS_${OBJECT_FMT}}"
