@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/06 00:41:12 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/02/11 04:09:20 dmcmahill Exp $
 bin/vipec
 vipec/CHANGES
 vipec/COPYING
@@ -59,6 +59,8 @@ vipec/help/variables.html
 vipec/help/what_is.html
 vipec/messages/vipec_fr.qm
 vipec/messages/vipec_fr.ts
+vipec/messages/vipec_ger.qm
+vipec/messages/vipec_ger.ts
 vipec/messages/vipec_pt.qm
 vipec/messages/vipec_pt.ts
 vipec/vipec
@@ -68,4 +70,3 @@ vipec/vipec.cfg
 @dirrm vipec/help
 @dirrm vipec/ckt
 @dirrm vipec
-@dirrm opt
