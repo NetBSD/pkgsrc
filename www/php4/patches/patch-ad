@@ -1,7 +1,5 @@
-$NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
-
---- configure.orig	Thu Sep  5 19:40:53 2002
-+++ configure	Sun Jan 12 09:17:58 2003
+--- configure.orig	Thu Sep  5 23:40:53 2002
++++ configure	Fri May 30 10:04:07 2003
 @@ -3220,9 +3220,10 @@
      { echo "configure: error: Please specify the path to the root of AOLserver using --with-aolserver=DIR" 1>&2; exit 1; }
    fi
@@ -28,7 +26,15 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
    fi
  
    echo "$ac_t""yes" 1>&6
-@@ -3951,9 +3953,10 @@
+@@ -3794,6 +3796,7 @@
+ 
+ 
+   PHP_VAR_SUBST="$PHP_VAR_SUBST APXS"
++  INCLUDES="$INCLUDES `apr-config --includes`"
+ 
+ 
+ 
+@@ -3951,9 +3954,10 @@
  	*** Pike include dir(s) used: $PIKE_INCLUDE_DIR
  	*** Pike version:             $PIKE_VERSION"
          
@@ -41,7 +47,7 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
    fi
  
  
-@@ -4304,9 +4307,10 @@
+@@ -4304,9 +4308,10 @@
  	fi
  	test -f "$ZEUSPATH/web/include/httpext.h" || { echo "configure: error: Unable to find httpext.h in $ZEUSPATH/web/include" 1>&2; exit 1; }
  	
@@ -54,7 +60,7 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
    fi
  
  	cat >> confdefs.h <<\EOF
-@@ -4424,9 +4428,10 @@
+@@ -4424,9 +4429,10 @@
    fi
  
    
@@ -67,7 +73,7 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
    fi
  
    cat >> confdefs.h <<\EOF
-@@ -4454,9 +4459,10 @@
+@@ -4454,9 +4460,10 @@
  		{ echo "configure: error: You did not specify a directory" 1>&2; exit 1; }
  	fi
  	
@@ -80,7 +86,7 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
    fi
  
  	PHTTPD_DIR=$withval
-@@ -4565,9 +4571,10 @@
+@@ -4565,9 +4572,10 @@
  	fi
  	test -f "$PI3PATH/PiAPI/PiAPI.h" || { echo "configure: error: Unable to find PiAPI.h in $PI3PATH/PiAPI" 1>&2; exit 1; }
  	
@@ -93,7 +99,7 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
    fi
  
  	cat >> confdefs.h <<\EOF
-@@ -4855,9 +4862,10 @@
+@@ -4855,9 +4863,10 @@
    php_build_target=shared
  
      
@@ -106,7 +112,7 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
    fi
  
      echo "$ac_t""yes" 1>&6
-@@ -5396,10 +5404,6 @@
+@@ -5396,10 +5405,6 @@
  
    fi
  
@@ -117,7 +123,7 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
  INCLUDES="$INCLUDES -I\$(top_builddir)/Zend"
  test -d /usr/ucblib && 
    if test "/usr/ucblib" != "/usr/lib"; then
-@@ -26847,19 +26851,10 @@
+@@ -26847,19 +26852,10 @@
  
  
    else
@@ -137,7 +143,7 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
    echo "$ac_t""no" 1>&6
  
  fi
-@@ -67729,8 +67724,8 @@
+@@ -67729,8 +67725,8 @@
      if test "$lib_build_shared" != "yes"; then
          enable_shared=no
      fi
@@ -148,7 +154,7 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
  ;;
  shared)
      enable_static=no
-@@ -72831,7 +72826,7 @@
+@@ -72831,7 +72827,7 @@
  
  TSRM_LIB='TSRM/libtsrm.la'
  TSRM_DIR=TSRM
@@ -157,7 +163,7 @@ $NetBSD: patch-ad,v 1.13 2003/01/12 14:31:58 christos Exp $
  
  if test "$ZEND_EXPERIMENTAL_ZTS" = "yes"; then
    cat >> confdefs.h <<\EOF
-@@ -73625,7 +73620,7 @@
+@@ -73625,7 +73621,7 @@
  
  if test "$enable_debug" != "yes"; then
    
