@@ -1,0 +1,4 @@
+$NetBSD: md5,v 1.1.1.1 2001/02/04 08:03:39 mrg Exp $
+
+MD5 (compat14-sparc.tar.gz) = ff6617bbff745e81be92080244141960
+MD5 (compat14-i386.tar.gz) = 40fd9b6328922d2a6800537c05d3538b
