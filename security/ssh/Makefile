@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2000/03/03 06:07:31 itojun Exp $
+# $NetBSD: Makefile,v 1.74 2000/03/18 04:36:22 itojun Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -73,6 +73,7 @@ CONFIGURE_ARGS+=	--without-idea
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
+BROKEN=			SOCKS support currently unavailable
 CONFIGURE_ARGS+= 	--with-socks${USE_SOCKS}="-L${LOCALBASE}/lib -lsocks${USE_SOCKS}"
 CFLAGS+=	 	-I${LOCALBASE}/include
 .if ${USE_SOCKS} == 4
