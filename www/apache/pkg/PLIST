@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 1999/05/11 18:32:24 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 1999/05/11 20:26:23 tron Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -44,6 +44,7 @@ include/httpd/util_date.h
 include/httpd/util_md5.h
 include/httpd/util_script.h
 include/httpd/util_uri.h
+lib/httpd/mod_proxy.so
 libexec/cgi-bin/printenv
 libexec/cgi-bin/test-cgi
 man/man1/dbmmanage.1
@@ -306,6 +307,7 @@ share/httpd/icons/world2.gif
 @dirrm etc/httpd/ssl.key
 @unexec rmdir %D/etc/httpd 2>/dev/null || true
 @dirrm include/httpd
+@dirrm lib/httpd
 @dirrm libexec/cgi-bin
 @dirrm share/httpd/htdocs/manual/images
 @dirrm share/httpd/htdocs/manual/misc
