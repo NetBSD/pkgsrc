@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2003/12/18 05:31:34 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2003/12/20 05:29:55 xtraeme Exp $
 
 SHA1 (enlightenment-0.16.6.tar.gz) = 971cbed022b5162c1f7034758c91549fa1a9227f
 Size (enlightenment-0.16.6.tar.gz) = 11924484 bytes
+SHA1 (patch-aa) = c64318bba6fbdfb616a32a5952207599ce46ffa0
