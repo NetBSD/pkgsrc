@@ -22,3 +22,6 @@ Gtk, or any other theme.
   * Commands can be configured to run when monitor labels are clicked.
   * GKrellM is plugin capable so special interest monitors can be created.
   * A different theme can be created with the GIMP.
+
+While GKrellM monitors the host it is running on, it can poll a server
+over the network.  The server package is named gkrellm2-server.

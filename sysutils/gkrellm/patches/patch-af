@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/02/24 22:11:28 cube Exp $
+
+--- server/gkrellmd.h.orig	2003-03-29 03:34:13.000000000 +0100
++++ server/gkrellmd.h
+@@ -143,7 +143,7 @@ extern int	errno;
+ #define GKRELLMD_CONFIG     "gkrellmd.conf"
+ 
+ #if !defined(WIN32)
+-#define	GKRELLMD_SYS_ETC	"/etc"
++#define	GKRELLMD_SYS_ETC	"@@PREFIX@@/etc"
+ #define GKRELLMD_LOCAL_ETC	"/usr/local/etc"
+ #endif
+ 
