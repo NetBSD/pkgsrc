@@ -1,83 +1,103 @@
-@comment $NetBSD: PLIST,v 1.7 2004/04/06 16:59:37 xtraeme Exp $
-bin/appletviewer
-bin/install-jar
-bin/jar
-bin/java
-bin/javac
-bin/javadoc
-bin/javah
-bin/javakey
-bin/javap
-bin/jdb
-bin/kaffe
-bin/kaffeh
-bin/kjc
-bin/kopi
-bin/native2ascii
-bin/rmic
-bin/rmiregistry
-bin/serialver
-include/jni.h
-include/jni_cpp.h
-include/jvmpi.h
-include/kaffe/java_lang_Object.h
-include/kaffe/java_lang_StackTraceElement.h
-include/kaffe/java_lang_String.h
-include/kaffe/java_lang_Thread.h
-include/kaffe/java_lang_ThreadGroup.h
-include/kaffe/java_lang_Throwable.h
-include/kaffe/java_lang_VMThrowable.h
-include/kaffe/jmalloc.h
-include/kaffe/jtypes.h
-jre/bin/java
-jre/bin/kaffe
-jre/bin/kaffe-bin
-jre/bin/rmiregistry
-${WITH_X11}jre/lib/${MACHINE_ARCH}/libawt-${PKGVERSION}.so
-${WITH_X11}jre/lib/${MACHINE_ARCH}/libawt.a
-${WITH_X11}jre/lib/${MACHINE_ARCH}/libawt.la
-${WITH_X11}jre/lib/${MACHINE_ARCH}/libawt.so
-jre/lib/${MACHINE_ARCH}/libio-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libio.a
-jre/lib/${MACHINE_ARCH}/libio.la
-jre/lib/${MACHINE_ARCH}/libio.so
-jre/lib/${MACHINE_ARCH}/libkaffevm-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libkaffevm.a
-jre/lib/${MACHINE_ARCH}/libkaffevm.la
-jre/lib/${MACHINE_ARCH}/libkaffevm.so
-jre/lib/${MACHINE_ARCH}/libmanagement-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libmanagement.a
-jre/lib/${MACHINE_ARCH}/libmanagement.la
-jre/lib/${MACHINE_ARCH}/libmanagement.so
-jre/lib/${MACHINE_ARCH}/libmath-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libmath.a
-jre/lib/${MACHINE_ARCH}/libmath.la
-jre/lib/${MACHINE_ARCH}/libmath.so
-jre/lib/${MACHINE_ARCH}/libnative-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libnative.a
-jre/lib/${MACHINE_ARCH}/libnative.la
-jre/lib/${MACHINE_ARCH}/libnative.so
-jre/lib/${MACHINE_ARCH}/libnet-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libnet.a
-jre/lib/${MACHINE_ARCH}/libnet.la
-jre/lib/${MACHINE_ARCH}/libnet.so
-jre/lib/${MACHINE_ARCH}/libnio-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libnio.a
-jre/lib/${MACHINE_ARCH}/libnio.la
-jre/lib/${MACHINE_ARCH}/libnio.so
-jre/lib/${MACHINE_ARCH}/libsecurity-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libsecurity.a
-jre/lib/${MACHINE_ARCH}/libsecurity.la
-jre/lib/${MACHINE_ARCH}/libsecurity.so
-jre/lib/${MACHINE_ARCH}/libzip-${PKGVERSION}.so
-jre/lib/${MACHINE_ARCH}/libzip.a
-jre/lib/${MACHINE_ARCH}/libzip.la
-jre/lib/${MACHINE_ARCH}/libzip.so
-jre/lib/rt.jar
-jre/lib/security/java.security.default
-lib/kjc.jar
-license.terms
-man/man1/kaffe.1
-@dirrm man/man1
-@dirrm jre/lib/${MACHINE_ARCH}
-@dirrm include/kaffe
+@comment $NetBSD: PLIST,v 1.8 2004/05/22 21:46:57 jmmv Exp $
+bin/kaffe-appletviewer
+bin/kaffe-jar
+bin/kaffe-java
+bin/kaffe-javac
+bin/kaffe-javadoc
+bin/kaffe-javah
+bin/kaffe-javap
+java/kaffe/bin/appletviewer
+java/kaffe/bin/install-jar
+java/kaffe/bin/jar
+java/kaffe/bin/java
+java/kaffe/bin/javac
+java/kaffe/bin/javadoc
+java/kaffe/bin/javah
+java/kaffe/bin/javakey
+java/kaffe/bin/javap
+java/kaffe/bin/jdb
+java/kaffe/bin/kaffe
+java/kaffe/bin/kaffeh
+java/kaffe/bin/kjc
+java/kaffe/bin/kopi
+java/kaffe/bin/native2ascii
+java/kaffe/bin/rmic
+java/kaffe/bin/rmiregistry
+java/kaffe/bin/serialver
+java/kaffe/include/jni.h
+java/kaffe/include/jni_cpp.h
+java/kaffe/include/jvmpi.h
+java/kaffe/include/kaffe/java_lang_Object.h
+java/kaffe/include/kaffe/java_lang_StackTraceElement.h
+java/kaffe/include/kaffe/java_lang_String.h
+java/kaffe/include/kaffe/java_lang_Thread.h
+java/kaffe/include/kaffe/java_lang_ThreadGroup.h
+java/kaffe/include/kaffe/java_lang_Throwable.h
+java/kaffe/include/kaffe/java_lang_VMThrowable.h
+java/kaffe/include/kaffe/jmalloc.h
+java/kaffe/include/kaffe/jtypes.h
+java/kaffe/jre/bin/java
+java/kaffe/jre/bin/kaffe
+java/kaffe/jre/bin/kaffe-bin
+java/kaffe/jre/bin/rmiregistry
+${WITH_X11}java/kaffe/jre/lib/${MACHINE_ARCH}/libawt-${PKGVERSION}.so
+${WITH_X11}java/kaffe/jre/lib/${MACHINE_ARCH}/libawt.a
+${WITH_X11}java/kaffe/jre/lib/${MACHINE_ARCH}/libawt.la
+${WITH_X11}java/kaffe/jre/lib/${MACHINE_ARCH}/libawt.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libio-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libio.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libio.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libio.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libkaffevm-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libkaffevm.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libkaffevm.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libkaffevm.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmanagement-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmanagement.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmanagement.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmanagement.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmath-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmath.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmath.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libmath.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnative-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnative.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnative.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnative.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnet-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnet.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnet.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnet.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnio-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnio.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnio.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libnio.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libsecurity-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libsecurity.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libsecurity.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libsecurity.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libtritonusesd-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libtritonusesd.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libtritonusesd.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libtritonusesd.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libzip-${PKGVERSION}.so
+java/kaffe/jre/lib/${MACHINE_ARCH}/libzip.a
+java/kaffe/jre/lib/${MACHINE_ARCH}/libzip.la
+java/kaffe/jre/lib/${MACHINE_ARCH}/libzip.so
+java/kaffe/jre/lib/rt.jar
+java/kaffe/jre/lib/security/java.security.default
+java/kaffe/lib/kjc.jar
+java/kaffe/license.terms
+java/kaffe/man/man1/kaffe.1
+@dirrm java/kaffe/man/man1
+@dirrm java/kaffe/man
+@dirrm java/kaffe/lib
+@dirrm java/kaffe/jre/lib/security
+@dirrm java/kaffe/jre/lib/${MACHINE_ARCH}
+@dirrm java/kaffe/jre/lib
+@dirrm java/kaffe/jre/bin
+@dirrm java/kaffe/jre
+@dirrm java/kaffe/include/kaffe
+@dirrm java/kaffe/include
+@dirrm java/kaffe/bin
+@dirrm java/kaffe
