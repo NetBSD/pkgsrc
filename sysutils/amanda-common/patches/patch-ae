@@ -1,0 +1,31 @@
+$NetBSD: patch-ae,v 1.4 2004/05/28 09:20:37 bouyer Exp $
+
+--- tape-src/Makefile.in.orig	2004-01-08 19:22:46.000000000 +0100
++++ tape-src/Makefile.in	2004-05-12 14:35:59.000000000 +0200
+@@ -160,7 +160,7 @@
+ lib_LTLIBRARIES = libamtape.la
+ LIB_EXTENSION = la
+ 
+-sbin_PROGRAMS = ammt amdd amtapetype
++sbin_PROGRAMS = 
+ 
+ libamtape_la_SOURCES = output-file.c \
+ 			output-null.c \
+@@ -217,7 +217,7 @@
+ 	output-tape.lo tapeio.lo
+ libamtape_la_OBJECTS = $(am_libamtape_la_OBJECTS)
+ EXTRA_PROGRAMS = amtapeio$(EXEEXT)
+-sbin_PROGRAMS = ammt$(EXEEXT) amdd$(EXEEXT) amtapetype$(EXEEXT)
++sbin_PROGRAMS = 
+ PROGRAMS = $(sbin_PROGRAMS)
+ 
+ amdd_SOURCES = amdd.c
+@@ -519,7 +519,7 @@
+ 
+ install-data-am:
+ 
+-install-exec-am: install-libLTLIBRARIES install-sbinPROGRAMS
++install-exec-am: install-libLTLIBRARIES
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
+ 
