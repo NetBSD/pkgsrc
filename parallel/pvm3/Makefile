@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/03/12 01:14:00 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.30 2004/05/31 22:13:16 kristerw Exp $
 
 DISTNAME=		pvm3.4.4
 PKGNAME=		pvm-3.4.4
@@ -13,7 +13,7 @@ COMMENT=		Parallel Virtual Machine libraries and environment
 .if exists(/usr/bin/ssh)
 PVM_SSH?=		/usr/bin/ssh
 .else
-DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/ssh
+DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
 PVM_SSH?=		${LOCALBASE}/bin/ssh
 .endif
 
