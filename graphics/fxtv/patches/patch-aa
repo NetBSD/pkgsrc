@@ -1,26 +1,24 @@
-$NetBSD: patch-aa,v 1.4 2001/02/17 22:04:17 veego Exp $
+$NetBSD: patch-aa,v 1.5 2002/10/08 13:09:52 jlam Exp $
 
---- Makefile.orig	Mon Feb 12 23:08:59 2001
-+++ Makefile	Sat Feb 17 22:47:49 2001
-@@ -4,13 +4,14 @@
+--- Makefile.orig	Mon Feb 12 14:08:59 2001
++++ Makefile
+@@ -4,13 +4,10 @@
  
  HAVE_XFREE86 = YES
  
-+X11BASE      ?= /usr/X11R6
-+
- ifneq ($(X11PREFIX),)                      # NetBSD
+-ifneq ($(X11PREFIX),)                      # NetBSD
 -X11BASE      ?= $(X11PREFIX)
-+X11BASEINST  ?= $(X11PREFIX)
- else
--X11BASE      ?= /usr/X11R6
-+X11BASEINST  ?= $(X11BASE)
- endif
+-else
+ X11BASE      ?= /usr/X11R6
+-endif
++X11BASEINST  ?= $(PREFIX)
  
 -X11BASEINST  ?= $(X11BASE)
++PREFIX       ?= /usr/local
  LOCALBASE    ?= /usr/local
  DEBUG        = NO
  OS           = $(shell uname -s)
-@@ -24,15 +25,6 @@
+@@ -24,15 +21,6 @@ override LIBDIRS           = $(X11BASE)/
  override SHELL             = /bin/sh
  
  #
@@ -36,7 +34,7 @@ $NetBSD: patch-aa,v 1.4 2001/02/17 22:04:17 veego Exp $
  # OpenBSD stuff
  #
  ifeq ($(OS),OpenBSD)
-@@ -71,6 +63,15 @@
+@@ -71,6 +59,15 @@ override CFLAGS           += -DHAVE_XFRE
  endif
  
  override CFLAGS           += $(C_WARN_FLAG) -DX11BASE=\"$(X11BASEINST)\"
@@ -47,7 +45,7 @@ $NetBSD: patch-aa,v 1.4 2001/02/17 22:04:17 veego Exp $
 +ifeq ($(OS),NetBSD)
 +  override INC            += -I$(LOCALBASE)/include
 +  override LIBDIRS        += $(LOCALBASE)/lib
-+  override LD_INC         += -lossaudio -lz
++  override LD_INC         += $(LIBOSSAUDIO) -lz
 +endif
  
  ifeq ($(OS), linux)
