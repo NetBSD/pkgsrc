@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/06/11 06:34:36 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/06/25 23:54:31 zuntum Exp $
 
 DISTNAME=	gif2png-2.4.2
 CATEGORIES=	graphics converters
@@ -9,16 +9,14 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.tuxedo.org/~esr/gif2png/
 COMMENT=	convert GIF files to PNG
 
-DEPENDS+=	png>=1.0.11:../../graphics/png
-
+USE_BUILDLINK_ONLY=YES
 GNU_CONFIGURE=	YES
 
-CPPFLAGS+=	-I${LOCALBASE}/include
-
 post-install:
-	${SED} s:/usr/bin/python:${PREFIX}/bin/python: \
-	       ${PREFIX}/bin/web2png > ${PREFIX}/bin/web2png.new
-	${MV} ${PREFIX}/bin/web2png.new ${PREFIX}/bin/web2png
+	${SED} "s,/usr/bin/python,${PREFIX}/bin/python,"			\
+	       ${PREFIX}/bin/web2png > ${PREFIX}/bin/web2png.done
+	${MV} ${PREFIX}/bin/web2png.done ${PREFIX}/bin/web2png
 	${CHMOD} +x ${PREFIX}/bin/web2png
 
+.include "../../graphics/png/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
