@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8962 2005/01/28 15:02:25 adam Exp $
+$NetBSD: CHANGES,v 1.8963 2005/01/28 15:08:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -643,3 +643,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated alee-ttf to 4.1 [minskim 2005-01-28]
 	Updated librsvg to 1.0.3 [adam 2005-01-28]
 	Updated eel to 1.0.2 [adam 2005-01-28]
+	Updated ruby-webrick to 1.3.1nb1 [taca 2005-01-28]
