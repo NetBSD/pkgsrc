@@ -1,18 +1,4 @@
-#!/bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.1 2001/10/31 22:11:16 zuntum Exp $
-
-PKGNAME=$1
-STAGE=$2
-
-CP="@CP@"
-CMP="@CMP@"
-ECHO="@ECHO@"
-GREP="@GREP@"
-MV="@MV@"
-RM="@RM@"
-RMDIR="@RMDIR@"
-TRUE="@TRUE@"
+# $NetBSD: DEINSTALL,v 1.2 2002/01/10 12:10:45 jlam Exp $
 
 X11BASE=@X11BASE@
 MOTIF_RULES=${PKG_PREFIX}/lib/X11/config/Motif.rules
@@ -52,4 +38,3 @@ POST-DEINSTALL)
 	exit 1
 	;;
 esac
-exit 0
