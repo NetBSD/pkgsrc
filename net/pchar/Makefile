@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/01/08 06:39:40 mrg Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/19 16:24:28 atatat Exp $
 
 DISTNAME=		pchar-1.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://www.employees.org/~bmah/Software/pchar/
 
@@ -21,9 +21,9 @@ CONFIGURE_ARGS+=	--with-ipv6
 .endif
 
 .if ${OPSYS} == "NetBSD"
-.include "../ucd-snmp/buildlink2.mk"
+.include "../net-snmp/buildlink2.mk"
 
-CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_PREFIX.ucd-snmp}
+CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_PREFIX.net-snmp}
 LIBS+=			-lsnmp -lcrypto -ldes
 .endif
 
