@@ -1,0 +1,5 @@
+This is the elinks tree - intended to provide feature-rich version of links,
+however not rock-stable and dedicated mainly for testing.  Its purpuose is to
+make alternative to links, until Mikulas will have some time to maintain it,
+and to test and tune various patches for Mikulas to be able to include them
+in the official links releases.
