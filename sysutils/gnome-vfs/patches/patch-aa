@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2001/10/05 06:56:46 rh Exp $
+$NetBSD: patch-aa,v 1.5 2002/03/24 19:59:38 rh Exp $
 
---- aclocal.m4.orig	Tue Sep 11 09:27:38 2001
+--- aclocal.m4.orig	Fri Oct 12 18:35:42 2001
 +++ aclocal.m4
-@@ -221,46 +221,37 @@
+@@ -148,46 +148,37 @@
  dnl AC_SUBST itself to avoid automake putting 
  dnl XML_I18N_MERGE_OAF_RULE = @XML_I18N_MERGE_OAF_RULE@
  dnl in all the Makefile.in's, because that will blow up when substituted.
@@ -58,25 +58,7 @@ $NetBSD: patch-aa,v 1.4 2001/10/05 06:56:46 rh Exp $
  HACK_SUBST(XML_I18N_MERGE_SHEET_RULE)
  
  
-@@ -4556,17 +4547,6 @@
- dnl From Jim Meyering.  Use this if you use the GNU error.[ch].
- dnl FIXME: Migrate into libit
- 
--AC_DEFUN(AM_FUNC_ERROR_AT_LINE,
--[AC_CACHE_CHECK([for error_at_line], am_cv_lib_error_at_line,
-- [AC_TRY_LINK([],[error_at_line(0, 0, "", 0, "");],
--              am_cv_lib_error_at_line=yes,
--	      am_cv_lib_error_at_line=no)])
-- if test $am_cv_lib_error_at_line = no; then
--   LIBOBJS="$LIBOBJS error.o"
-- fi
-- AC_SUBST(LIBOBJS)dnl
--])
--
- dnl See whether we need a declaration for a function.
- dnl GCC_NEED_DECLARATION(FUNCTION [, EXTRA-HEADER-FILES])
- AC_DEFUN([GCC_NEED_DECLARATION],
-@@ -4706,7 +4686,7 @@
+@@ -4447,7 +4438,7 @@
  		  [CATOBJEXT=.gmo
  		   DATADIRNAME=share],
  		  [CATOBJEXT=.mo
