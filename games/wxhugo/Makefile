@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/22 23:35:38 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/16 23:11:33 dillo Exp $
 #
 
 DISTNAME=	hugov30_unix_source
@@ -22,7 +22,7 @@ WRKSRC=		${WRKDIR}/hugov3.0.07/hewx
 LIBDIR=		${PREFIX}/share/hugo
 
 post-extract:
-	extract_file="${DISTDIR}/${DISTFILE_WX}"; export extract_file;    \
+	extract_file="${DISTDIR}/${DIST_SUBDIR}/${DISTFILE_WX}"; export extract_file;    \
 	cd ${WRKSRC}/.. && ${EXTRACT_CMD.tar.gz}
 	for f in hejpeg.cpp hesound.cpp hesound_SDL.cpp hewxwin.cpp; \
 	do \
