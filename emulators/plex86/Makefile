@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/05/03 12:14:56 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.23 2003/05/05 17:51:10 grant Exp $
 
 DISTNAME=	plex86-20010106
 PKGNAME=	${DISTNAME:S/-/-0./}
@@ -50,10 +50,10 @@ do-install: do-install-dirs do-install-binaries do-install-bios \
 		do-install-font do-install-conf
 
 do-install-dirs:
-	${INSTALL_DATA_DIR} ${PREFIX}/lkm \
-		${PREFIX}/lib/plex86 \
-		${PREFIX}/lib/plex86/bios \
-		${PREFIX}/share/examples/plex86
+	${INSTALL_DATA_DIR} ${PREFIX}/lkm
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/plex86
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/plex86/bios
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/plex86
 
 do-install-binaries:
 	${INSTALL_PROGRAM} ${WRKSRC}/user/plex86 ${PREFIX}/bin
