@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/09 22:47:51 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/13 11:57:36 wiz Exp $
 #
 
 DISTNAME=	MToolsFM-1.9-3
@@ -12,8 +12,9 @@ COMMENT=	Easy MS-DOS disk access without learning MS-DOS commands
 
 DEPENDS+=	mtools>=3.9.7:../../sysutils/mtools
 
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-conffile=${PREFIX}/etc/mtoolsfm.conf
 
-.include "../../x11/gtk/buildlink.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
