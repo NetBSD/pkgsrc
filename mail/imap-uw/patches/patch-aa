@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.5 2000/05/19 03:58:57 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2000/09/19 13:13:30 hubertf Exp $
 
---- Makefile.orig	Mon Nov 15 15:20:34 1999
-+++ Makefile	Tue May  2 15:37:12 2000
-@@ -110,7 +110,7 @@
+--- Makefile.orig	Wed Aug  9 02:11:08 2000
++++ Makefile
+@@ -284,7 +284,7 @@
  
- 
- # *** TEMPORARY FOR PINE 4.10 BUILD ***
+ #EXTRASPECIALS=
+ # *** TEMPORARY FOR PINE BUILD ***
 -GSSDIR=/usr/local
-+GSSDIR=$(PREFIX)
- # *** TEMPORARY FOR PINE 4.10 BUILD ***
++GSSDIR=${PREFIX}
+ EXTRASPECIALS="GSSDIR=$(GSSDIR)"
+ # *** TEMPORARY FOR PINE BUILD ***
  
- # Normal command to build IMAP toolkit:
-@@ -402,7 +402,7 @@
- # *** TEMPORARY FOR PINE 4.10 BUILD ***
- 	echo GSSDIR=$(GSSDIR) >> c-client/EXTRASPECIALS
- # *** TEMPORARY FOR PINE 4.10 BUILD ***
+@@ -430,7 +430,7 @@
+ OSTYPE:
+ 	@echo Building c-client for $(OS)...
+ 	echo $(EXTRASPECIALS) > c-client/EXTRASPECIALS
 -	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS="$(BUILDOPTIONS)" $(EXTRASPECIALS)
 +	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS="$(BUILDOPTIONS)" $(EXTRASPECIALS) PREFIX=$(PREFIX) CC="$(CC)"
  	echo $(OS) > OSTYPE
