@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/05 20:53:02 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2002/05/03 22:44:04 jtb Exp $
 
 DISTNAME=		lapack
 PKGNAME=		lapack-20010201
@@ -14,16 +14,12 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netlib.org/lapack/index.html
 COMMENT=		Linear Algebra PACKage
 
-DEPENDS+=		blas-[0-9]*:../../math/blas
-
 DIST_SUBDIR=		lapack-20010201
 WRKSRC=			${WRKDIR}/LAPACK
 USE_FORTRAN=		yes
 
-BLAS_PREFIX_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=		BLAS_PREFIX=blas
-
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/liblapack.a ${PREFIX}/lib
 
+.include "../../math/blas/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
