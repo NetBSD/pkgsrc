@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/09/09 11:59:03 recht Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/14 16:43:57 recht Exp $
 #
 
 DISTNAME=	wxPythonSrc-2.4.1.2
@@ -27,12 +27,6 @@ PYDISTUTILSPKG=	yes
 PYSETUPBUILDARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1
 PYSETUPINSTALLARGS=	BUILD_GLCANVAS=0 BUILD_OGL=0 NO_SCRIPTS=1
 PYBINMODULE=	yes
-
-post-install:
-	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
-		${PREFIX}/${PYSITELIB}/wx
-	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
-		${PREFIX}/${PYSITELIB}/wxPython
 
 .include "../../x11/wxGTK/buildlink2.mk"
 .include "../../lang/python/extension.mk"

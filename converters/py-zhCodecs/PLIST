@@ -1,23 +1,33 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/15 08:18:15 shell Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:47 recht Exp $
 ${PYSITELIB}/big5_tw.py
 ${PYSITELIB}/big5_tw.pyc
+${PYSITELIB}/big5_tw.pyo
 ${PYSITELIB}/chinesecn/__init__.py
 ${PYSITELIB}/chinesecn/__init__.pyc
+${PYSITELIB}/chinesecn/__init__.pyo
 ${PYSITELIB}/chinesecn/euc_gb23122utf.py
 ${PYSITELIB}/chinesecn/euc_gb23122utf.pyc
+${PYSITELIB}/chinesecn/euc_gb23122utf.pyo
 ${PYSITELIB}/chinesecn/utf2euc_gb2312.py
 ${PYSITELIB}/chinesecn/utf2euc_gb2312.pyc
+${PYSITELIB}/chinesecn/utf2euc_gb2312.pyo
 ${PYSITELIB}/chinesetw/__init__.py
 ${PYSITELIB}/chinesetw/__init__.pyc
+${PYSITELIB}/chinesetw/__init__.pyo
 ${PYSITELIB}/chinesetw/big52utf1.py
 ${PYSITELIB}/chinesetw/big52utf1.pyc
+${PYSITELIB}/chinesetw/big52utf1.pyo
 ${PYSITELIB}/chinesetw/big52utf2.py
 ${PYSITELIB}/chinesetw/big52utf2.pyc
+${PYSITELIB}/chinesetw/big52utf2.pyo
 ${PYSITELIB}/chinesetw/utf2big51.py
 ${PYSITELIB}/chinesetw/utf2big51.pyc
+${PYSITELIB}/chinesetw/utf2big51.pyo
 ${PYSITELIB}/chinesetw/utf2big52.py
 ${PYSITELIB}/chinesetw/utf2big52.pyc
+${PYSITELIB}/chinesetw/utf2big52.pyo
 ${PYSITELIB}/eucgb2312_cn.py
 ${PYSITELIB}/eucgb2312_cn.pyc
+${PYSITELIB}/eucgb2312_cn.pyo
 @dirrm ${PYSITELIB}/chinesetw
 @dirrm ${PYSITELIB}/chinesecn
