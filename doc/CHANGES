@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1097 2003/01/11 22:12:46 jmmv Exp $
+$NetBSD: CHANGES,v 1.1098 2003/01/11 22:37:40 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -233,3 +233,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated iso12083 to 1993nb1 [jmmv 2003-01-11]
 	Updated iso8879 to 1986nb1 [jmmv 2003-01-11]
 	Updated sp to 1.3.4nb1 [jmmv 2003-01-11]
+	Updated bbweather to 0.6 [jschauma 2003-01-11]
