@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/02/27 08:48:14 tron Exp $
+# $NetBSD: Makefile,v 1.25 2001/03/19 16:24:53 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.gnu.org/software/make/make.html
 COMMENT=	GNU version of 'make' utility
 
 USE_GTEXINFO=	YES
+USE_LIBINTL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--program-prefix="g"
 CONFIGURE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
