@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5122 2004/03/07 03:36:07 taca Exp $
+$NetBSD: CHANGES,v 1.5123 2004/03/07 04:41:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1206,3 +1206,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xrick to 021212nb3 [snj 2004-03-07]
 	Updated p5-Crypt-OpenPGP to 1.03 [heinz 2004-03-07]
 	Updated ruby-tmail to 0.10.8 [taca 2004-03-07]
+	Updated ruby-rdtool to 0.6.14nb2 [taca 2004-03-07]
