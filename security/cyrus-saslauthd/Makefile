@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/02/19 07:11:16 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/29 05:50:26 jlam Exp $
 
-DISTNAME=	cyrus-sasl-2.1.17
+DISTNAME=	cyrus-sasl-2.1.18
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
-PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
@@ -30,8 +29,8 @@ ALL_TARGET=		all saslcache testsaslauthd
 
 BUILD_DEFS+=		USE_PAM USE_LDAP SASL_USE_GSSAPI
 
-# /var/run/saslauthd matches the default value in configure.
-SASLSOCKETDIR=		/var/run/saslauthd
+SASLSOCKETDIR?=		/var/run/saslauthd
+BUILD_DEFS+=		SASLSOCKETDIR
 FILES_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR}
 CONFIGURE_ARGS+=	--with-saslauthd="${SASLSOCKETDIR}"
 
@@ -44,6 +43,7 @@ CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
 .  include "../../databases/openldap/buildlink3.mk"
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
 .  include "../../security/openssl/buildlink3.mk"
+BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 PLIST_SRC+=		${PKGDIR}/PLIST.ldap
