@@ -1,13 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2000/04/24 13:13:23 tron Exp $
+@comment $NetBSD: PLIST,v 1.15 2000/09/06 06:17:57 jlam Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
 etc/httpd/httpd.conf.default
-@exec if [ ! -f %D/etc/httpd/httpd.conf ]; then cp -p %D/etc/httpd/httpd.conf.default %D/etc/httpd/httpd.conf; fi
 etc/httpd/magic.default
-@exec if [ ! -f %D/etc/httpd/magic ]; then cp -p %D/etc/httpd/magic.default %D/etc/httpd/magic; fi
 etc/httpd/mime.types.default
-@exec if [ ! -f %D/etc/httpd/mime.types ]; then cp -p %D/etc/httpd/mime.types.default %D/etc/httpd/mime.types; fi
 etc/rc.d/apache.sh
 include/httpd/alloc.h
 include/httpd/ap.h
@@ -57,8 +54,6 @@ include/httpd/xml/latin1tab.h
 include/httpd/xml/iasciitab.h
 include/httpd/xml/hashtable.h
 include/httpd/xml/xmltok_impl.h
-lib/httpd/mod_proxy.so
-lib/httpd/httpd.exp
 libexec/cgi-bin/printenv
 libexec/cgi-bin/test-cgi
 man/man1/dbmmanage.1
@@ -333,17 +328,8 @@ share/httpd/icons/uu.gif
 share/httpd/icons/uuencoded.gif
 share/httpd/icons/world1.gif
 share/httpd/icons/world2.gif
-@exec mkdir -p /var/log/httpd /var/spool/httpd/proxy %D/lib/httpd %D/etc/httpd/ssl.crl %D/etc/httpd/ssl.crt %D/etc/httpd/ssl.csr %D/etc/httpd/ssl.key %D/etc/httpd/ssl.prm
-@unexec rmdir /var/log/httpd /var/spool/httpd/proxy /var/spool/httpd 2>/dev/null || true
-@dirrm etc/httpd/ssl.crl
-@dirrm etc/httpd/ssl.crt
-@dirrm etc/httpd/ssl.csr
-@dirrm etc/httpd/ssl.key
-@dirrm etc/httpd/ssl.prm
-@unexec rmdir %D/etc/httpd 2>/dev/null || true
 @dirrm include/httpd/xml
 @dirrm include/httpd
-@dirrm lib/httpd
 @unexec rmdir %D/libexec/cgi-bin 2>/dev/null || true
 @dirrm share/httpd/htdocs/manual/images
 @dirrm share/httpd/htdocs/manual/misc
