@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2003/06/11 20:50:55 abs Exp $
+# $NetBSD: Makefile,v 1.73 2003/07/11 00:21:45 fredb Exp $
 
 DISTNAME=	netpbm-10.11.8
 CATEGORIES=	graphics
@@ -57,7 +57,7 @@ post-install:
 	  ${TEST} -d "${PREFIX}/$${DIR}" ||		\
 	    ${ECHO} "@dirrm $${DIR}";			\
 	done >>${PLIST_SRC} &&				\
-	${GTAR} cf - * | ${GTAR} xpCf ${PREFIX} -
+	${GTAR} -cf - * | ${GTAR} -xpC ${PREFIX} -f -
 	${RM} -fr ${STAGEDIR}
 
 .include "../../graphics/png/buildlink2.mk"
