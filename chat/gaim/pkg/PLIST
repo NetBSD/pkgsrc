@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/05/22 16:27:34 perry Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/06/05 22:49:49 wiz Exp $
 bin/gaim
 lib/gaim/autorecon.so
 lib/gaim/iconaway.so
@@ -27,11 +27,11 @@ lib/gaim/libzephyr.so.0.0
 lib/gaim/napster.so
 lib/gaim/notify.so
 lib/gaim/spellchk.so
-lib/locale/de/LC_MESSAGES/gaim.mo
-lib/locale/es/LC_MESSAGES/gaim.mo
-lib/locale/fr/LC_MESSAGES/gaim.mo
-lib/locale/ko/LC_MESSAGES/gaim.mo
-lib/locale/zh_CN/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gaim.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gaim.mo
 man/man1/gaim.1
 @exec mkdir %D/share/gnome/apps/Internet 2>/dev/null || true
 share/gnome/apps/Internet/gaim.desktop
@@ -40,16 +40,4 @@ share/pixmaps/gaim.xpm
 @unexec rmdir %D/share/gnome/apps 2>/dev/null || true
 @unexec rmdir %D/share/gnome 2>/dev/null || true
 @unexec rmdir %D/share/pixmaps 2>/dev/null || true
-@dirrm lib/locale/zh_CN/LC_MESSAGES
-@dirrm lib/locale/zh_CN
-@dirrm lib/locale/ko/LC_MESSAGES
-@dirrm lib/locale/ko
-@dirrm lib/locale/fr/LC_MESSAGES
-@dirrm lib/locale/fr
-@dirrm lib/locale/es/LC_MESSAGES
-@dirrm lib/locale/es
-@dirrm lib/locale/de/LC_MESSAGES
-@dirrm lib/locale/de
 @dirrm lib/gaim
-
-
