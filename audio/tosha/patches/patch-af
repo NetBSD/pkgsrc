@@ -1,3 +1,4 @@
+$NetBSD: patch-af,v 1.2 1999/12/25 23:45:23 wiz Exp $
 --- ../../work/tosha-0.05/pcmplay.c	Wed May 21 02:11:13 1997
 +++ pcmplay.c	Fri Oct 31 01:58:37 1997
 @@ -41,12 +41,18 @@
