@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8867 2005/01/22 13:28:20 peter Exp $
+$NetBSD: CHANGES,v 1.8868 2005/01/22 15:08:18 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -491,3 +491,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated firefox-bin to 1.0 [jdolecek 2005-01-22]
 	Added tls-1.5.0 [peter 2005-01-22]
 	Updated amsn to 0.94nb1 [peter 2005-01-22]
+	Updated mrtg to 2.11.1 [adrianp 2005-01-22]
