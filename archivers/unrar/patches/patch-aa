@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2003/05/11 12:37:33 salo Exp $
+$NetBSD: patch-aa,v 1.8 2003/05/23 09:19:02 wiz Exp $
 
 --- makefile.unix.orig	2003-01-03 19:14:22.000000000 +0100
 +++ makefile.unix	2003-05-11 14:22:31.000000000 +0200
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.7 2003/05/11 12:37:33 salo Exp $
 -CXX=g++
 -CXXFLAGS=-O2
 +#CXX=g++
-+CXXFLAGS+=-O2
++#CXXFLAGS=-O2
  DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
  
  # Linux using LCC
