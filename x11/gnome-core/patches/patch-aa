@@ -1,51 +1,7 @@
-$NetBSD: patch-aa,v 1.11 2002/09/14 02:46:56 rh Exp $
+$NetBSD: patch-aa,v 1.12 2002/09/21 23:11:19 jlam Exp $
 
 --- configure.orig	Tue Sep 10 04:09:25 2002
 +++ configure
-@@ -1328,8 +1328,8 @@ else
- fi
- 	if test x$gnome_cv_orbit_found = xyes; then
- 		
--		ORBIT_CFLAGS=`orbit-config --cflags client server`
--		ORBIT_LIBS=`orbit-config --use-service=name --libs client server`
-+		ORBIT_CFLAGS=`$ORBIT_CONFIG --cflags client server`
-+		ORBIT_LIBS=`$ORBIT_CONFIG --use-service=name --libs client server`
- 		
- 		
- 	else
-@@ -1346,8 +1346,8 @@ else
-   
- 		gnome_cv_gnorba_found=no
- 		if test x$gnome_cv_orbit_found = xyes; then
--			GNORBA_CFLAGS="`gnome-config --cflags gnorba gnomeui`"
--			GNORBA_LIBS="`gnome-config --libs gnorba gnomeui`"
-+			GNORBA_CFLAGS="`$GNOME_CONFIG --cflags gnorba gnomeui`"
-+			GNORBA_LIBS="`$GNOME_CONFIG --libs gnorba gnomeui`"
- 			if test -n "$GNORBA_LIBS"; then
- 				gnome_cv_gnorba_found=yes
- 			fi
-@@ -1367,8 +1367,8 @@ else
- fi
- 	if test x$gnome_cv_orbit_found = xyes; then
- 		
--		GNORBA_CFLAGS="`gnome-config --cflags gnorba gnomeui`"
--		GNORBA_LIBS="`gnome-config --libs gnorba gnomeui`"
-+		GNORBA_CFLAGS="`$GNOME_CONFIG --cflags gnorba gnomeui`"
-+		GNORBA_LIBS="`$GNOME_CONFIG --libs gnorba gnomeui`"
- 		
- 		
- 	else
-@@ -7068,8 +7068,8 @@ rm -f conftest*
- 
- CFLAGS_save=$CFLAGS
- LIBS_save=$LIBS
--CFLAGS=`gnome-config --cflags gnomeui`
--LIBS=`gnome-config --libs gnomeui`
-+CFLAGS=`$GNOME_CONFIG --cflags gnomeui`
-+LIBS=`$GNOME_CONFIG --libs gnomeui`
- 
- echo $ac_n "checking for gnome_window_icon_set_default_from_file in -lgnomeui""... $ac_c" 1>&6
- echo "configure:7076: checking for gnome_window_icon_set_default_from_file in -lgnomeui" >&5
 @@ -8792,6 +8792,11 @@ fi
     sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
  	< $srcdir/po/POTFILES.in > po/POTFILES
@@ -58,45 +14,3 @@ $NetBSD: patch-aa,v 1.11 2002/09/14 02:46:56 rh Exp $
  # AM_GNOME_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
  gnomelocaledir='${prefix}/share/locale'
-@@ -9021,7 +9026,10 @@ echo "configure:9021: checking for GdkPi
- PIXBUF_CFLAGS=`$GNOME_CONFIG --cflags gdk_pixbuf`
- PIXBUF_LIBS=`$GNOME_CONFIG --libs gdk_pixbuf`
- if test "x$PIXBUF_CFLAGS" != x ; then
--    vers=`gdk-pixbuf-config --version | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
-+    if test "x$GDK_PIXBUF_CONFIG" = "x"; then
-+        GDK_PIXBUF_CONFIG=gdk-pixbuf-config
-+    fi
-+    vers=`$GDK_PIXBUF_CONFIG --version | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
-     if test "$vers" -ge 0007000; then
-         echo "$ac_t""found" 1>&6
-     else
-@@ -9049,8 +9057,8 @@ ZVT_LIBS=`$GNOME_CONFIG --libs zvt`
- echo $ac_n "checking for Glade libraries >= $LIBGLADE_REQUIRED""... $ac_c" 1>&6
- echo "configure:9051: checking for Glade libraries >= $LIBGLADE_REQUIRED" >&5
- libglade_ok=no
--if gnome-config --libs libglade > /dev/null 2>&1; then 
--    verstxt=`gnome-config --modversion libglade`
-+if $GNOME_CONFIG --libs libglade > /dev/null 2>&1; then 
-+    verstxt=`$GNOME_CONFIG --modversion libglade`
-     vers=`echo "$verstxt" | awk -F. '{ printf "%d", $1 * 1000 + $2;}'`
-     if test "$vers" -ge 14; then
- 	echo "$ac_t""$marker_ok found $verstxt" 1>&6
-@@ -9066,14 +9074,14 @@ if test "$libglade_ok" = no; then
- fi
- unset libglade_ok
- GT_LIBS="libglade zvt gnorba gnomeui"
--GNOME_TERMINAL_LIBS=`gnome-config --libs $GT_LIBS`
--GNOME_TERMINAL_CFLAGS=`gnome-config --cflags $GT_LIBS`
-+GNOME_TERMINAL_LIBS=`$GNOME_CONFIG --libs $GT_LIBS`
-+GNOME_TERMINAL_CFLAGS=`$GNOME_CONFIG --cflags $GT_LIBS`
- 
- 
- 
- 
--GLADE_LIBS=`gnome-config --libs libglade`
--GLADE_CFLAGS=`gnome-config --cflags libglade`
-+GLADE_LIBS=`$GNOME_CONFIG --libs libglade`
-+GLADE_CFLAGS=`$GNOME_CONFIG --cflags libglade`
- 
- 
- 
