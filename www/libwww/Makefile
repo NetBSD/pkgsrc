@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 1999/08/12 19:40:52 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/10/08 04:43:07 deberg Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/14 23:34:59 jseger Exp
 #
 
 DISTNAME=	w3c-${PKGNAME}
-PKGNAME=	libwww-5.1m1
+PKGNAME=	libwww-5.2.8
 CATEGORIES=	www devel
-MASTER_SITES=	ftp://ftp.sunet.se/pub/www/libwww/old/
+MASTER_SITES=	http://www.w3.org/Library/Distribution/
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.w3.org/Library/
@@ -14,7 +14,6 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS=	--with-zlib --with-regex --without-x
-WRKSRC=		${WRKDIR}/w3c-libwww-5.1m
 
 DOCDIR=		${PREFIX}/share/doc/libwww
 
