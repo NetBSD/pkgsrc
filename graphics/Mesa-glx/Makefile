@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/15 09:26:20 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/04/05 20:43:17 tron Exp $
 
 DISTNAME=	glx-19990804
 PKGNAME=	Mesa-${DISTNAME:S/-/-${GLX_CHIPSET}-/}
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://glx.on.openprojects.net/
+
+BROKEN=		update required for Mesa 3.1.
 
 BUILD_DEPENDS+=	${PERL}:../../lang/perl5
 BUILD_DEPENDS+=	${TCLSH}:../../lang/tcl80
