@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.36 2005/04/04 07:29:49 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.37 2005/04/04 08:14:59 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -73,3 +73,5 @@ Pullup ticket 418 - requested by Min Sik Kim
 portability fix for gnutls
 Pullup ticket 419 - requested by Takahiro Kambe
 distfile update for squid
+Pullup ticket 420 - requested by Takahiro Kambe
+build fix for postfix
