@@ -1,14 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/22 00:30:10 wiz Exp $
-bin/pod_cover
-${PERL5_SITEARCH}/Pod/Coverage.pm
-${PERL5_SITEARCH}/Pod/Coverage/CountParents.pm
-${PERL5_SITEARCH}/Pod/Coverage/ExportOnly.pm
-${PERL5_SITEARCH}/Pod/Coverage/Overloader.pm
-${PERL5_SITEARCH}/auto/Pod/Coverage/Coverage.bs
-${PERL5_SITEARCH}/auto/Pod/Coverage/Coverage.so
-lib/perl5/site_perl/man/man3/Pod::Coverage.3
-lib/perl5/site_perl/man/man3/Pod::Coverage::CountParents.3
-lib/perl5/site_perl/man/man3/Pod::Coverage::ExportOnly.3
-lib/perl5/site_perl/man/man3/Pod::Coverage::Overloader.3
-@dirrm ${PERL5_SITEARCH}/auto/Pod/Coverage
-@dirrm ${PERL5_SITEARCH}/Pod/Coverage
+@comment $NetBSD: PLIST,v 1.2 2005/02/24 22:38:42 jlam Exp $

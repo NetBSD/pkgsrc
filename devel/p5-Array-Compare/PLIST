@@ -1,4 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/22 00:33:36 wiz Exp $
-${PERL5_SITELIB}/Array/Compare.pm
-lib/perl5/site_perl/man/man3/Array::Compare.3
-@unexec ${RMDIR} %D/${PERL5_SITELIB}/Array 2>/dev/null || ${TRUE}
+@comment $NetBSD: PLIST,v 1.2 2005/02/24 22:38:42 jlam Exp $

@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.39 2005/02/23 10:42:07 wiz Exp $
+# $NetBSD: module.mk,v 1.40 2005/02/24 22:38:42 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -26,8 +26,8 @@
 # PERL5_LDFLAGS		extra linker flags to pass on to the build
 #			process.
 #
-# PERL5_USES_MODULE_BUILD	the package uses Module::Build instead
-#				of ExtUtils::MakeMaker
+# PERL5_MODULE_TYPE	"MakeMaker" or "Module::Build" depending on which
+#			framework is used to build/install the module.
 
 .if !defined(_PERL5_MODULE_MK)
 _PERL5_MODULE_MK=	# defined
@@ -36,7 +36,11 @@ _PERL5_MODULE_MK=	# defined
 
 BUILDLINK_DEPMETHOD.perl+=	full
 
-.if !defined(BUILDING_PERL5)
+BUILDING_PERL5?=		no
+BUILDING_MODULE_BUILD?=		no
+PERL5_MODULE_TYPE?=		MakeMaker
+
+.if empty(BUILDING_PERL5:M[yY][eE][sS])
 .  if !defined(NO_BUILDLINK)
 .    if empty(USE_BUILDLINK3:M[nN][oO])
 .      include "../../lang/perl5/buildlink3.mk"
@@ -44,9 +48,12 @@ BUILDLINK_DEPMETHOD.perl+=	full
 .  endif
 .endif
 
-.if defined(PERL5_USES_MODULE_BUILD)
+.if empty(BUILDING_MODULE_BUILD:M[yY][eE][sS]) && \
+    (${PERL5_MODULE_TYPE} == "Module::Build")
 BUILD_DEPENDS+=		p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 .endif
+
+.include "../../lang/perl5/vars.mk"
 
 PERL5_CONFIGURE?=	YES
 PERL5_CONFIGURE_DIRS?=	${CONFIGURE_DIRS}
@@ -65,9 +72,9 @@ BROKEN=		Perl does not like building with gcc on AIX, please use a different com
 .endif
 
 MAKE_ENV+=	LC_ALL=C
-.if defined(PERL5_USES_MODULE_BUILD)
+.if ${PERL5_MODULE_TYPE} == "Module::Build"
 _CONF_ARG=	Build.PL
-.else
+.elif ${PERL5_MODULE_TYPE} == "MakeMaker"
 _CONF_ARG=	Makefile.PL ${MAKE_PARAMS}
 .endif
 
@@ -98,7 +105,7 @@ PERL5_${_var_}=		${PREFIX}/${PERL5_SUB_${_var_}}
 PERL5_MAKE_FLAGS+=	${_var_}="${PERL5_${_var_}}"
 .endfor
 
-.if !defined(PERL5_USES_MODULE_BUILD)
+.if ${PERL5_MODULE_TYPE} == "MakeMaker"
 #
 # The PREFIX in the generated Makefile will point to ${_PERL5_PREFIX},
 # so override its value to the module's ${PREFIX}.
@@ -106,7 +113,7 @@ PERL5_MAKE_FLAGS+=	${_var_}="${PERL5_${_var_}}"
 PERL5_MAKE_FLAGS+=	PREFIX="${PREFIX}"
 .endif
 
-.if defined(PERL5_USES_MODULE_BUILD)
+.if ${PERL5_MODULE_TYPE} == "Module::Build"
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build
 
