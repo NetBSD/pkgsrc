@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/10 18:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/14 15:51:37 snj Exp $
 
 DISTNAME=	nut-9.11
 CATEGORIES=	biology
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.lafn.org/~av832/
 COMMENT=	Record what you eat and analyze your meals
 
 ALL_TARGET=	nut
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 do-install:
