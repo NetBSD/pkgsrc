@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/28 17:10:17 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2005/03/29 18:47:52 wiz Exp $
 bin/uim-candwin-gtk
 bin/uim-fep
 bin/uim-fep-tick
@@ -6,56 +6,91 @@ bin/uim-helper-candwin-gtk
 bin/uim-helper-server
 bin/uim-helper-toolbar-gtk
 bin/uim-helper-toolbar-gtk-systray
-bin/uim-im-switcher
+bin/uim-im-switcher-gtk
 bin/uim-input-pad-ja
+bin/uim-pref-gtk
 bin/uim-sh
 bin/uim-toolbar-gtk
 bin/uim-toolbar-gtk-systray
 bin/uim-xim
+include/uim/plugin.h
+include/uim/uim-compat-scm.h
+include/uim/uim-custom.h
 include/uim/uim-helper.h
 include/uim/uim-im-switcher.h
 include/uim/uim-scm.h
 include/uim/uim-util.h
 include/uim/uim.h
 lib/gtk-2.0/2.4.0/immodules/im-uim.la
+lib/libuim-custom.la
 lib/libuim.la
 lib/pkgconfig/uim.pc
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/uim.mo
+lib/uim/plugin/libuim-custom-enabler.la
+lib/uim/plugin/libuim-skk.la
+share/applications/uim.desktop
 share/doc/uim/HELPER-CANDWIN
+share/doc/uim/HELPER-PROTOCOL
 share/doc/uim/KEY
+share/doc/uim/PLUGIN
+share/doc/uim/README
+share/doc/uim/README.ja
+share/doc/uim/UIM-SCM
 share/doc/uim/UIM-SH
 share/doc/uim/XIM-SERVER
+share/doc/uim/uim-fep/README
+share/doc/uim/uim-fep/README.ja
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/uim.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/uim.mo
 share/uim/PY.scm
+share/uim/action.scm
+share/uim/anthy-custom.scm
+share/uim/anthy-key-custom.scm
 share/uim/anthy.scm
+share/uim/canna-custom.scm
+share/uim/canna-key-custom.scm
 share/uim/canna.scm
+share/uim/custom-rt.scm
 share/uim/custom.scm
-share/uim/default-im.scm
 share/uim/default.scm
-share/uim/generic-key.scm
+share/uim/direct.scm
+share/uim/generic-custom.scm
+share/uim/generic-key-custom.scm
 share/uim/generic.scm
 share/uim/hangul.scm
 share/uim/hangul2.scm
 share/uim/hangul3.scm
-share/uim/hk.scm
 share/uim/i18n.scm
-share/uim/icons/alphabet_a.png
+share/uim/im-custom.scm
 share/uim/im.scm
-share/uim/ipa.scm
+share/uim/init.scm
+share/uim/installed-modules.scm
+share/uim/ipa-x-sampa.scm
 share/uim/japanese-azik.scm
 share/uim/japanese-kana.scm
 share/uim/japanese.scm
 share/uim/key.scm
 share/uim/latin.scm
+share/uim/lazy-load.scm
+share/uim/load-action.scm
 share/uim/loader.scm
 share/uim/m17nlib.scm
+share/uim/manage-modules.scm
 share/uim/pinyin-big5.scm
+share/uim/pixmaps/configure-qt.png
+share/uim/pixmaps/switcher-icon.png
+share/uim/plugin.scm
+share/uim/prime-custom.scm
+share/uim/prime-key-custom.scm
 share/uim/prime.scm
 share/uim/pyload.scm
 share/uim/pyunihan.scm
 share/uim/rk.scm
 share/uim/romaja.scm
+share/uim/skk-custom.scm
 share/uim/skk-editor.scm
+share/uim/skk-key-custom.scm
 share/uim/skk.scm
+share/uim/spellcheck-custom.scm
 share/uim/spellcheck.scm
 share/uim/tables/japanese-azik.table
 share/uim/tables/japanese-kana.table
@@ -65,14 +100,19 @@ share/uim/tables/japanese-tutcode.table
 share/uim/tables/korean-hangul2.table
 share/uim/tables/korean-hangul3.table
 share/uim/tcode.scm
+share/uim/tutcode-key-custom.scm
 share/uim/tutcode.scm
 share/uim/uim-sh.scm
+share/uim/ustr.scm
 share/uim/util.scm
 share/uim/viqr.scm
 share/uim/zaurus.scm
 @dirrm share/uim/tables
-@dirrm share/uim/icons
+@dirrm share/uim/pixmaps
 @dirrm share/uim
+@dirrm share/doc/uim/uim-fep
 @dirrm share/doc/uim
+@dirrm lib/uim/plugin
+@dirrm lib/uim
 @comment in gtk2: @dirrm lib/gtk-2.0/2.4.0/immodules
 @dirrm include/uim
