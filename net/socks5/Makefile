@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/02/20 22:26:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2000/05/03 17:44:27 rh Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -35,6 +35,6 @@ CONFIGURE_ARGS=	--with-libconffile=${PREFIX}/etc/libsocks5.conf \
 		${EXTRA_CONFIGURE_ARGS}
 
 post-install:
-	${LN} -fs ${PREFIX}/lib/libsocks5_sh.so ${PREFIX}/lib/libsocks5_sh.so.0.0
+	${MV} ${PREFIX}/lib/libsocks5_sh.so ${PREFIX}/lib/libsocks5_sh.so.0.0
 
 .include "../../mk/bsd.pkg.mk"
