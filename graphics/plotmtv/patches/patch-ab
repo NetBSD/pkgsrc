@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/25 21:06:04 jtb Exp $
+
+--- Tests/run.csh.orig
++++ Tests/run.csh
+@@ -8,16 +8,16 @@
+ #
+ 
+ # program location
+-set PLOTMTV="../Bin/plotmtv"
++set PLOTMTV="plotmtv"
+ 
+ # Use this to test color postscript
+-#set PLOTMTV="../Bin/plotmtv -scale 0.5 -colorps"
++#set PLOTMTV="plotmtv -scale 0.5 -colorps"
+ 
+ # Use this to test 3D postscript and the scale factor
+-#set PLOTMTV="../Bin/plotmtv -3D -scale 0.8"
++#set PLOTMTV="plotmtv -3D -scale 0.8"
+ 
+ # Use this to generate lots of postscript files (without prompting)
+-#set PLOTMTV="../Bin/plotmtv -noxplot -print"
++#set PLOTMTV="plotmtv -noxplot -print"
+ 
+ alias run_script      '$PLOTMTV $DATAFILE'
+ alias run_3d_script   '$PLOTMTV -3d $DATAFILE'
