@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/03/08 18:51:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2005/03/08 20:46:49 xtraeme Exp $
 
 DISTNAME=	nasm-0.98.39
 CATEGORIES=	devel lang
@@ -30,11 +30,7 @@ INSTALLATION_DIRS=	bin info man/man1 share/doc/html
 .include "../../mk/compiler.mk"
 
 .if !empty(CC_VERSION:Mgcc-2*)
-SUBST_CLASSES+=     c99
-SUBST_STAGE.c99=    pre-configure
-SUBST_FILES.c99=    configure
-SUBST_SED.c99=      -e "s,\-std=c99,,g"
-SUBST_MESSAGE.c99=  "Fixing configure script."
+BUILDLINK_TRANSFORM+=   rm:-std=c99
 .endif
 
 .include "../../mk/bsd.pkg.mk"
