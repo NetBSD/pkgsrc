@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.9 2005/02/17 20:03:26 reed Exp $
+# $NetBSD: Linux.mk,v 1.10 2005/03/18 18:16:35 tv Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -188,10 +188,8 @@ _USE_RPATH=		yes	# add rpath to LDFLAGS
 _OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
 _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
-.if (!defined(INSTALL_UNSTRIPPED) || empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) && !defined(DEBUG_FLAGS)
-_STRIPFLAG_CC?=		-s	# cc(1) option to strip
-_STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
-.endif
+_STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
 
