@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/04/16 14:30:45 recht Exp $
+# $NetBSD: Makefile,v 1.26 2004/07/06 16:02:33 reed Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -9,7 +9,7 @@ COMMENT=		QT GUI (WYSIWYG) builder and other tools
 CONFIGURE_ARGS+=	-I${QTDIR}/include \
 			-L${QTDIR}/lib
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 BUILD_QT3=		yes
 UNLIMIT_RESOURCES=	datasize
 ALL_TARGET=		sub-tools
@@ -37,5 +37,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}/mkspecs
 	${CP} -R ${WRKSRC}/mkspecs ${QTPREFIX}
 
-.include "../../x11/qt3-libs/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
