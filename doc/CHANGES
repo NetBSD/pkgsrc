@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1109 2003/01/12 21:49:34 tron Exp $
+$NetBSD: CHANGES,v 1.1110 2003/01/13 01:06:25 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -246,3 +246,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libglade2 to 2.0.1nb6 [jmmv 2003-01-12]
 	Updated xchat to 1.8.11 [tron 2003-01-12]
 	Updated xchat-gnome to 1.8.11 [tron 2003-01-12]
+	Updated gnome to 1.4.2.1 [rh 2003-01-13]
