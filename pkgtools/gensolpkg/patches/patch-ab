@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2002/11/23 20:55:23 cjep Exp $
---- gensolpkg.c.in.orig	Sat Nov 23 20:19:13 2002
-+++ gensolpkg.c.in	Sat Nov 23 20:19:33 2002
-@@ -572,7 +572,7 @@
- 	int	i;
- 
- 	(void) strcpy(prefix, "@PREFIX@");
--	(void) strcpy(bmake, "@PREFIX@/bsd/bin/bmake");
-+	(void) strcpy(bmake, "@ZOULARISBASE@/bin/bmake");
- 	(void) strcpy(output, "/tmp");
- 	(void) strcpy(pkgdir, "@SPOOLDIR@");
- 	transform = 0;
+$NetBSD: patch-ab,v 1.2 2002/12/08 12:54:46 cjep Exp $
+
+--- gensolpkg.1.in.orig	Sat May  5 14:44:31 2001
++++ gensolpkg.1.in
+@@ -53,7 +53,7 @@ one of the package extraction/info utili
+ The package must be installed using the Zoularis environment,
+ so that a generated .PLIST file is present in the work directory.
+ This is so that the package's
+-files are guranateed to be present, manual pages are represented
++files are guaranteed to be present, manual pages are represented
+ correctly, and so that any necessary macro definitions have been expanded.
+ .PP
+ The \f3gensolpkg\f1 command should be run from within a package directory
