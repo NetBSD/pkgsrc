@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.8 2002/06/28 18:29:20 jlam Exp $
+# $NetBSD: INSTALL,v 1.9 2003/03/28 21:24:25 wiz Exp $
 
 DIRS="/etc /etc/ssh ${PKG_PREFIX}/etc ${PKG_PREFIX}/etc/ssh"
 FILES="sshd.conf sshd_config"
@@ -34,4 +34,3 @@ EOF
 		done
 	fi
 done
-

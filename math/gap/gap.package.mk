@@ -1,4 +1,4 @@
-# $NetBSD: gap.package.mk,v 1.7 2003/01/05 12:43:01 cjep Exp $
+# $NetBSD: gap.package.mk,v 1.8 2003/03/28 21:24:25 wiz Exp $
 #
 # Set GAP_PKG_NAME in your Makefile. More may appear here later.
 
@@ -17,4 +17,3 @@ GAP_PLATFORM=   ${MACHINE_GNU_PLATFORM}2-${CC}
 .endif
 
 PLIST_SUBST=    GAP_PLATFORM=${GAP_PLATFORM}
-

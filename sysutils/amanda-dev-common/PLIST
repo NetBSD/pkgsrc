@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/02 13:28:15 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/28 21:24:25 wiz Exp $
 lib/libamanda.a
 lib/libamanda.la
 lib/libamtape.a
@@ -11,6 +11,4 @@ share/doc/amanda/COPYRIGHT-APACHE
 share/doc/amanda/COPYRIGHT-REGEX
 sbin/amdd
 sbin/ammt
-
 @dirrm share/doc/amanda
-

@@ -25,4 +25,3 @@ then
 		${CHMOD} 777 /var/spool/fax/outgoing/locks
 	fi
 fi
-
