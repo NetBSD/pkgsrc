@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/08/07 12:39:43 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2002/08/07 13:41:56 wiz Exp $
 
 DISTNAME=		Wine-20020804
 PKGNAME=		${DISTNAME:S/W/w/}
@@ -19,6 +19,8 @@ USE_GMAKE=		YES
 USE_PERL5=		run
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-curses
+
+REPLACE_PERL=		tools/winedump/function_grep.pl tools/winemaker
 
 # The Wine configure script has problems locating the freetype-config
 # script and the libraries in the buildlink directory, so explicitly
