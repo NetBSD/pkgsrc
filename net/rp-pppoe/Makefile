@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2001/10/07 13:26:37 tron Exp $
+# $NetBSD: Makefile,v 1.17 2002/10/06 21:08:58 tron Exp $
 
 DISTNAME=	rp-pppoe-3.3
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE} \
 		http://roaringpenguin.luky.org/pppoe/
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.roaringpenguin.com/pppoe/
 COMMENT=	Roaring Penguin's PPP over Ethernet client
 
