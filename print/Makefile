@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2004/03/10 18:20:11 jlam Exp $
+# $NetBSD: Makefile,v 1.114 2004/03/28 21:15:40 xtraeme Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -51,6 +51,7 @@ SUBDIR+=	html2ps
 SUBDIR+=	if-psprint
 SUBDIR+=	ijs
 SUBDIR+=	img2eps
+SUBDIR+=	imposter
 SUBDIR+=	ja-a2ps
 SUBDIR+=	ja-dvipdfm
 SUBDIR+=	ja-jsclasses
