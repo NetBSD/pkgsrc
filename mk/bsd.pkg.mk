@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.623 2000/11/29 12:40:55 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.624 2000/11/29 13:18:22 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1533,21 +1533,20 @@ do-install:
 
 .if !target(do-package)
 do-package: ${PLIST} ${DESCR}
-	${_PKG_SILENT}${_PKG_DEBUG}if ${TEST} -e ${PLIST}; then		\
-		${ECHO_MSG} "${_PKGSRC_IN}> Building binary package for ${PKGNAME}"; \
-		if [ ! -d ${PKGREPOSITORY} ]; then			\
-			${MKDIR} ${PKGREPOSITORY};			\
-			if [ $$? -ne 0 ]; then				\
-				${ECHO_MSG} "=> Can't create directory ${PKGREPOSITORY}."; \
-				exit 1;					\
-			fi;						\
-		fi;							\
-		if ${PKG_CREATE} ${PKG_ARGS} ${PKGFILE}; then		\
-			${MAKE} ${MAKEFLAGS} package-links;		\
-		else							\
-			${MAKE} ${MAKEFLAGS} delete-package;		\
-			exit 1;						\
-		fi;							\
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	${ECHO_MSG} "${_PKGSRC_IN}> Building binary package for ${PKGNAME}"; \
+	if [ ! -d ${PKGREPOSITORY} ]; then			\
+		${MKDIR} ${PKGREPOSITORY};			\
+		if [ $$? -ne 0 ]; then				\
+			${ECHO_MSG} "=> Can't create directory ${PKGREPOSITORY}."; \
+			exit 1;					\
+		fi;						\
+	fi;							\
+	if ${PKG_CREATE} ${PKG_ARGS} ${PKGFILE}; then		\
+		${MAKE} ${MAKEFLAGS} package-links;		\
+	else							\
+		${MAKE} ${MAKEFLAGS} delete-package;		\
+		exit 1;						\
 	fi
 .if defined(NO_BIN_ON_CDROM)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be put on a CD-ROM:"
@@ -1634,7 +1633,8 @@ _PORT_USE: .USE
 	${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.${.TARGET:S/^real-//}_done
 .endif
 
-root-install:
+
+real-su-install:
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -1706,7 +1706,6 @@ root-install:
 	install-info --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
 	install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
 .endfor
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
 	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
 		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$' \
 		${PLIST} 2>/dev/null || ${TRUE}`;			\
@@ -1750,25 +1749,74 @@ root-install:
 	fi
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 .if ${SHLIB_HANDLING} == "YES"
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
+.endif # SHLIB_HANDLING == "YES"
+.endif # OPSYS == "NetBSD" || OPSYS == "SunOS"
+.ifdef MESSAGE_FILE
+	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
+	@${ECHO_MSG} ""
+	@${CAT} ${MESSAGE_FILE}
+	@${ECHO_MSG} ""
+.endif
+.if !defined(NO_PKG_REGISTER)
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
+.endif # !NO_PKG_REGISTER
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
+.if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
+	@${MAKE} ${MAKEFLAGS} check-shlibs
+.endif
+
+
+
+# Do handling of shared libs for two cases:
+#
+# SHLIB_PLIST_MODE=1: when first called via the ${PLIST} target,
+#                     update the PLIST to contain ELF symlink, run
+#                     ldconfig on a.out,  etc. (used when called via
+#                     the ${PLIST} target). Will update ${PLIST}.
+# SHLIB_PLIST_MODE=0: when called via the real-su-install target,
+#                     actually generate symlinks for ELF, run ldconfig
+#                     for a.out, etc. Will not modify ${PLIST}.
+#
+# XXX This target could need some cleanup after it was ripped out of
+#     real-su-install
+#
+do-shlib-handling:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	sos=`${EGREP} -h -x '.*/lib[^/]+\.so\.[0-9]+(\.[0-9]+)+' ${PLIST} || ${TRUE}`; \
-	if [ "X$$sos" != "X" ]; then					\
+	if [ "$$sos" != "" ]; then					\
 		shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;	\
 		case "$$shlib_type" in					\
 		"ELF")							\
-			${ECHO_MSG} "${_PKGSRC_IN}> [Automatic ELF shared object handling]";\
+			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 	\
+				${ECHO_MSG} "${_PKGSRC_IN}> [Automatic ELF shared object handling]"; \
+			fi ; 						\
 			${AWK} 'function makelinks(target, lib, v1, v2, v3) { \
-					print target;			\
+					if (${SHLIB_PLIST_MODE}) {	\
+						print target;		\
+					}				\
 					slashc = split(target, slashes, "/"); \
 					if (v3 >= 0) {			\
-						system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s.%s", lib, v1, v2, v3, slashes[slashc], lib, v1, v2, v3)); \
-						printf("%s.%s.%s.%s\n", lib, v1, v2, v3); \
+						if (${SHLIB_PLIST_MODE}) {	\
+							printf("%s.%s.%s.%s\n", lib, v1, v2, v3); \
+						} else {		\
+							system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s.%s", lib, v1, v2, v3, slashes[slashc], lib, v1, v2, v3)); \
+						}			\
 					}				\
-					system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s", lib, v1, v2, slashes[slashc], lib, v1, v2)); \
-					system(sprintf("${RM} -f ${PREFIX}/%s.%s; ${LN} -s %s ${PREFIX}/%s.%s", lib, v1, slashes[slashc], lib, v1)); \
-					printf("%s.%s.%s\n%s.%s\n", lib, v1, v2, lib, v1); \
+					if (${SHLIB_PLIST_MODE}) {	\
+						printf("%s.%s.%s\n%s.%s\n", lib, v1, v2, lib, v1); \
+					} else {			\
+						system(sprintf("${RM} -f ${PREFIX}/%s.%s.%s; ${LN} -s %s ${PREFIX}/%s.%s.%s", lib, v1, v2, slashes[slashc], lib, v1, v2)); \
+						system(sprintf("${RM} -f ${PREFIX}/%s.%s; ${LN} -s %s ${PREFIX}/%s.%s", lib, v1, slashes[slashc], lib, v1)); \
+					}				\
 				}					\
-				/^@/ { print; next }			\
+				/^@/ { 					\
+					if (${SHLIB_PLIST_MODE}) {	\
+						print; 			\
+					}				\
+					next; 				\
+				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
 					dotc = split($$0, dots, "\.");	\
 					lib = dots[1];			\
@@ -1785,49 +1833,55 @@ root-install:
 					makelinks($$0, lib, dots[dotc - 2], dots[dotc - 1], -1); \
 					next;				\
 				}					\
-				/.*\/lib[^\/]+\.so\.[0-9]+$$/ { next; }	\
-				{ print; }' < ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+				/.*\/lib[^\/]+\.so\.[0-9]+$$/ { 	\
+					next;				\
+				}					\
+				{					\
+					if (${SHLIB_PLIST_MODE}) {	\
+						print; 			\
+					}				\
+				}' <${PLIST} >${PLIST}.tmp ;		\
+				if [ "${SHLIB_PLIST_MODE}" = "1" ]; then \
+					${MV} ${PLIST}.tmp ${PLIST};	\
+				else 					\
+					${RM} ${PLIST}.tmp ;		\
+				fi ; 					\
 			;;						\
 		"a.out")						\
-			${ECHO_MSG} "${_PKGSRC_IN}> [Automatic a.out shared object handling]";\
+			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 	\
+				${ECHO_MSG} "${_PKGSRC_IN}> [Automatic a.out shared object handling]"; \
+			fi ; 						\
 			cnt=`${EGREP} -c -x '@exec[ 	]*${LDCONFIG}' ${PLIST} || ${TRUE}`; \
-			if [ $$cnt -eq 0 ]; then			\
-				${ECHO} "@exec ${LDCONFIG}" >> ${PLIST}; \
-				${ECHO} "@unexec ${LDCONFIG}" >> ${PLIST}; \
+			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then 	\
+				if [ $$cnt -eq 0 ]; then		\
+					${ECHO} "@exec ${LDCONFIG}" >> ${PLIST}; \
+					${ECHO} "@unexec ${LDCONFIG}" >> ${PLIST}; \
+				fi					\
 			fi;						\
-			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
-				${ECHO_MSG} "$$sos";			\
-				${ECHO_MSG} "Running ${LDCONFIG}";	\
-			fi;						\
-			${LDCONFIG} || ${TRUE};				\
+			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then	\
+				if [ "${PKG_VERBOSE}" != "" ]; then	\
+					${ECHO_MSG} "$$sos";		\
+					${ECHO_MSG} "Running ${LDCONFIG}"; \
+				fi;					\
+				${LDCONFIG} || ${TRUE};			\
+			fi						\
 			;;						\
 		"*")							\
-			${ECHO_MSG} "No shared libraries for ${MACHINE_ARCH}"; \
-			for so in $$sos; do				\
-				if [ X"${PKG_VERBOSE}" != X"" ]; then	\
-					${ECHO_MSG} "Ignoring $$so";	\
-				fi;					\
-				${SED} -e "s;^$$so$$;@comment No shared objects - &;" ${PLIST} > ${PLIST}.tmp && \
-					${MV} ${PLIST}.tmp ${PLIST};	\
-			done;						\
+			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 	\
+				${ECHO_MSG} "No shared libraries for ${MACHINE_ARCH}"; \
+			fi ; 						\
+			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
+				for so in $$sos; do			\
+					if [ X"${PKG_VERBOSE}" != X"" ]; then \
+						${ECHO_MSG} >&2 "Ignoring $$so"; \
+					fi;				\
+					${SED} -e "s;^$$so$$;@comment No shared objects - &;" \
+						<${PLIST} >${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST};	\
+				done;					\
+			fi ;						\
 			;;						\
 		esac;							\
 	fi
-.endif
-.endif
-.ifdef MESSAGE_FILE
-	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
-	@${ECHO_MSG} ""
-	@${CAT} ${MESSAGE_FILE}
-	@${ECHO_MSG} ""
-.endif
-.if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} fake-pkg
-.endif # !NO_PKG_REGISTER
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${INSTALL_COOKIE}
-.if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
-	@${MAKE} ${MAKEFLAGS} check-shlibs
-.endif
 
 
 # Check if all binaries and shlibs find their needed libs
@@ -1948,18 +2002,18 @@ real-configure: _PORT_USE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Configuring for ${PKGNAME}"
 real-build: _PORT_USE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Building for ${PKGNAME}"
-real-install: pkg-su-install
+real-install: do-su-install
 real-package: _PORT_USE
 
 # sudo or priv are acceptable substitutes
 SU_CMD?=	${SU} - root -c
 PRE_ROOT_CMD?=	${TRUE}
 
-pkg-su-install:
+do-su-install: ${PLIST}
 	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ `${ID} -u` = 0 ]; then					\
-		${MAKE} ${MAKEFLAGS} root-install;			\
+		${MAKE} ${MAKEFLAGS} real-su-install;			\
 	elif [ "X${BATCH}" != X"" ]; then				\
 		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run mtree."; \
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
@@ -1978,7 +2032,7 @@ pkg-su-install:
 		fi;                                             	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to install ${PKGNAME}."; \
 		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} "cd ${.CURDIR}; $$make $$args ${MAKEFLAGS} root-install"; \
+		${SU_CMD} "cd ${.CURDIR}; $$make $$args ${MAKEFLAGS} real-su-install"; \
 	fi
 
 # Empty pre-* and post-* targets, note we can't use .if !target()
@@ -2022,39 +2076,39 @@ reinstall:
 # Special target to remove installation
 
 .if !target(deinstall)
-deinstall: pkg-su-deinstall
+deinstall: do-su-deinstall
 
-pkg-su-deinstall: uptodate-pkgtools
+do-su-deinstall: uptodate-pkgtools
 	@${ECHO_MSG} "${_PKGSRC_IN}> Deinstalling for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ `${ID} -u` = 0 ]; then					\
-		${MAKE} ${MAKEFLAGS} root-deinstall;			\
+		${MAKE} ${MAKEFLAGS} real-su-deinstall;			\
 	else								\
 		make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`;	\
 		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to deinstall ${PKGNAME}."; \
-		${SU_CMD} "cd ${.CURDIR}; $$make ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} root-deinstall DEINSTALLDEPENDS=${DEINSTALLDEPENDS}"; \
+		${SU_CMD} "cd ${.CURDIR}; $$make ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} real-su-deinstall DEINSTALLDEPENDS=${DEINSTALLDEPENDS}"; \
 	fi
 
 
 .if (${DEINSTALLDEPENDS} != "NO")
 .if (${DEINSTALLDEPENDS} != "ALL")
 # used for removing stuff in bulk builds
-root-deinstall-flags+=	-r -R
+real-su-deinstall-flags+=	-r -R
 # used for "update" target
 .else
-root-deinstall-flags+=	-r
+real-su-deinstall-flags+=	-r
 .endif
 .endif
 .ifdef PKG_VERBOSE
-root-deinstall-flags+=	-v
+real-su-deinstall-flags+=	-v
 .endif
 
-root-deinstall:
+real-su-deinstall:
 	${_PKG_SILENT}${_PKG_DEBUG} \
 	found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`"; \
 	if [ "$$found" != "" ]; then \
-		${ECHO} Running ${PKG_DELETE} ${root-deinstall-flags} $$found ; \
-		${PKG_DELETE} ${root-deinstall-flags} $$found || ${TRUE} ; \
+		${ECHO} Running ${PKG_DELETE} ${real-su-deinstall-flags} $$found ; \
+		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE} ; \
 	fi
 .if (${DEINSTALLDEPENDS} != "NO") && (${DEINSTALLDEPENDS} != "ALL")
 	@${SHCOMMENT} Also remove BUILD_DEPENDS:
@@ -2063,7 +2117,7 @@ root-deinstall:
 	found="`${PKG_INFO} -e \"${pkg}\" || ${TRUE}`"; \
 	if [ "$$found" != "" ]; then \
 		${ECHO} Running ${PKG_DELETE} $$found ; \
-		${PKG_DELETE} ${root-deinstall-flags} $$found || ${TRUE} ; \
+		${PKG_DELETE} ${real-su-deinstall-flags} $$found || ${TRUE} ; \
 	fi
 .endfor
 .endif # DEINSTALLDEPENDS
@@ -3228,6 +3282,7 @@ MANCOMPRESSED=	yes
 # - substituting by ${PLIST_SUBST}
 # - adding files and appropriate rmdir statements for perl5 modules if
 #   PERL5_PACKLIST is defined
+# - adding symlinks for shared libs (ELF) or ldconfig calls (a.out).
 
 .if ${OPSYS} == "NetBSD"
 IMAKE_MAN_CMD=
@@ -3303,6 +3358,8 @@ ${PLIST}: ${PLIST_SRC}
 			${SED} 	${MANZ_EXPRESSION}			\
 				${PLIST_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}\
 			> ${PLIST}; 					\
+		  ${MAKE} ${MAKEFLAGS} do-shlib-handling		\
+			SHLIB_PLIST_MODE=1 ;				\
 	fi
 
 # generate ${DESCR} from ${DESCR_SRC} by:
