@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 1998/10/31 00:18:47 tron Exp $
+#
+
+PKGNAME=$1
+
+case $2 in
+    PRE-INSTALL)
+	;;
+    POST-INSTALL)
+	if [ ! -e /emul/linux ] || \
+	   [ "`cd /emul/linux && ls -di .`" != \
+	     "`cd @@EMULDIR@@ && ls -di`" ]
+	then
+	   echo "===>   Please note the following:"
+	   echo ""
+	   echo -n "You must create a link \"/emul/linux\" "
+	   echo "pointing to \"@@EMULDIR@@\""
+	   echo "to be able to use this package."
+	   echo ""
+	 fi
+	;;
+    *)
+	echo "Unexpected Argument ${2}."
+	exit 1
+	;;
+esac
+
+exit 0
