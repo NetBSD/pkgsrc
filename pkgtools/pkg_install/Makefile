@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2003/01/09 13:13:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.66 2003/01/10 12:01:43 agc Exp $
 
 # Notes to package maintainers:
 #
@@ -30,6 +30,7 @@ NO_PATCH=		# defined
 NO_MTREE=		# defined
 NO_PKG_REGISTER=	# defined
 NO_PACKAGE=		Deinstallation is not permitted
+PKG_PRESERVE=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
