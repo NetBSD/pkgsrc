@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1834 2003/04/03 12:52:44 grant Exp $
+$NetBSD: CHANGES,v 1.1835 2003/04/03 14:44:50 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1454,3 +1454,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added bogofilter-0.11.1.3 [manu 2003-04-03]
 	Updated libslang to 1.4.9 [wiz 2003-04-03]
 	Updated libnbcompat to 20030403 [grant 2003-04-03]
+	Updated kdegraphics3 to 3.1.1nb1 [markd 2003-04-03]
