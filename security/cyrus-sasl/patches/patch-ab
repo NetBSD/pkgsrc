@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/12/08 14:32:01 wiz Exp $
+
+--- configure.orig	Fri Jul 21 04:35:50 2000
++++ configure
+@@ -3512,6 +3512,8 @@
+   echo "$ac_t""yes" 1>&6
+   LIB_DES="-ldes";
+ 				       with_des=yes
++# we want the des code form openssl
++				       with_des=no
+ else
+   echo "$ac_t""no" 1>&6
+ with_des=no
