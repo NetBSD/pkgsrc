@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2004/09/23 04:29:39 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2004/09/28 08:24:42 mrg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBPCAP_BUILDLINK3_MK:=	${LIBPCAP_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibpcap}
 BUILDLINK_PACKAGES+=	libpcap
 
 .if !empty(LIBPCAP_BUILDLINK3_MK:M+)
+# XXX?
 BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.7.2
 BUILDLINK_PKGSRCDIR.libpcap?=	../../net/libpcap
 

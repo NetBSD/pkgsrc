@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:05 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/28 08:24:42 mrg Exp $
 lib/libpcap.a
 include/pcap.h
+include/pcap-bpf.h
 include/pcap-namedb.h
-include/net/bpf.h
 man/man3/pcap.3
-@dirrm include/net
