@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2002/03/15 12:31:46 martti Exp $
+# $NetBSD: Makefile,v 1.10 2002/04/17 11:49:21 shell Exp $
 
-DISTNAME=		Test-Simple-0.42
+DISTNAME=		Test-Simple-0.43
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5tsi
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
-MAINTAINER=		shell@shellhung.org
+MAINTAINER=		shell@netbsd.org
 COMMENT=		perl5 module with a simple framework for writing tests
 
 DEPENDS+=		p5-Test-Harness-[0-9]*:../../devel/p5-Test-Harness
