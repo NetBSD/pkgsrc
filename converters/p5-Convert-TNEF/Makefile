@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/06/03 23:07:29 heinz Exp $
+# $NetBSD: Makefile,v 1.11 2004/08/02 21:47:59 jlam Exp $
 
 DISTNAME=		Convert-TNEF-0.17
 PKGNAME=		p5-${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=		Perl5 module interface to read TNEF files
 DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 
 USE_BUILDLINK3=		YES
+USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Convert/TNEF/.packlist
 
 .include "../../lang/perl5/module.mk"
