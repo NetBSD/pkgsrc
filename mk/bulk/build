@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.21 2002/06/29 03:33:34 dmcmahill Exp $
+# $NetBSD: build,v 1.22 2002/08/06 18:14:49 agc Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -114,7 +114,7 @@ if [ $fail = "yes" -o \
 	-z "$INDEXFILE" -o \
 	-z "$ORDERFILE" -o \
 	-z "$BROKENFILE" -o \
-	-z "$BUILDLOG" \
+	-z "$BUILDLOG" -o \
 	-z "$STARTFILE" \
 	]; then
 	echo "ERROR:  build failed to extract certain key variables."
