@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2000/12/10 09:45:32 jlam Exp $
+# $NetBSD: INSTALL,v 1.4 2001/09/18 21:56:31 skrll Exp $
 
 PKGNAME=$1
 STAGE=$2

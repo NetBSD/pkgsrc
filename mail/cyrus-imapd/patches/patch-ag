@@ -1,17 +1,12 @@
-$NetBSD: patch-ag,v 1.1 2001/02/26 20:55:05 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2001/09/18 21:56:31 skrll Exp $
 
---- imap/deliver.c.orig	Tue May 16 22:18:18 2000
-+++ imap/deliver.c
-@@ -833,7 +833,12 @@
-     }
- }
+--- master/master.c.orig	Mon Jul 16 19:23:11 2001
++++ master/master.c
+@@ -84,6 +84,7 @@
+ #include <ucd-snmp/ucd-snmp-agent-includes.h>
  
-+#ifdef __NetBSD__
-+#include <paths.h>
-+#define SENDMAIL _PATH_SENDMAIL
-+#else
- #define SENDMAIL "/usr/lib/sendmail"
-+#endif
- #define POSTMASTER "postmaster"
+ #include "cyrusMasterMIB.h"
++int smux_listen_sd;
+ #endif
  
- static char *month[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+ #include "masterconf.h"
