@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.7 2005/02/01 16:53:58 wiz Exp $
+
 --- dns.c.orig	Thu Aug 26 00:56:53 2004
 +++ dns.c	Sun Jan  9 16:06:08 2005
 @@ -32,9 +32,18 @@
