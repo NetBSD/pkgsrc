@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.3 2003/09/19 17:22:15 wiz Exp $
+$NetBSD: distinfo,v 1.4 2003/10/31 02:13:17 dmcmahill Exp $
 
 SHA1 (xrender-0.8.3.tar.gz) = a99c1c395b86b2fc4a92bd6de750e1438a5f3461
 Size (xrender-0.8.3.tar.gz) = 217525 bytes
+SHA1 (patch-aa) = 21c6164ceee41b560fdb96c62d72fa06aef70349
+SHA1 (patch-ab) = 7334ebd3de2386801cf25310d1f68e54fd062f5a
