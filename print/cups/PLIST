@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/09/18 22:58:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/10/20 18:57:37 jlam Exp $
 bin/cancel
 bin/cups-config
 bin/disable
@@ -203,14 +203,59 @@ share/cups/charsets/windows-1255
 share/cups/charsets/windows-1256
 share/cups/charsets/windows-1257
 share/cups/charsets/windows-1258
-share/cups/charsets/windows-874
 share/cups/data/HPGLprolog
 share/cups/data/psglyphs
 share/cups/data/testprint.ps
+share/cups/fonts/Courier
 share/cups/fonts/Courier-Bold
 share/cups/fonts/Courier-BoldOblique
 share/cups/fonts/Courier-Oblique
 share/cups/fonts/Symbol
+share/cups/fr/templates/add-class.tmpl 
+share/cups/fr/templates/add-printer.tmpl
+share/cups/fr/templates/admin-op.tmpl
+share/cups/fr/templates/admin.tmpl
+share/cups/fr/templates/choose-device.tmpl
+share/cups/fr/templates/choose-make.tmpl
+share/cups/fr/templates/choose-members.tmpl
+share/cups/fr/templates/choose-model.tmpl
+share/cups/fr/templates/choose-serial.tmpl
+share/cups/fr/templates/choose-uri.tmpl
+share/cups/fr/templates/class-added.tmpl
+share/cups/fr/templates/class-confirm.tmpl
+share/cups/fr/templates/class-deleted.tmpl
+share/cups/fr/templates/class-modified.tmpl
+share/cups/fr/templates/classes.tmpl
+share/cups/fr/templates/config-printer.tmpl
+share/cups/fr/templates/config-printer2.tmpl
+share/cups/fr/templates/error.tmpl
+share/cups/fr/templates/header.tmpl
+share/cups/fr/templates/job-cancel.tmpl
+share/cups/fr/templates/job-hold.tmpl
+share/cups/fr/templates/job-op.tmpl
+share/cups/fr/templates/job-release.tmpl
+share/cups/fr/templates/job-restart.tmpl
+share/cups/fr/templates/jobs.tmpl
+share/cups/fr/templates/modify-class.tmpl
+share/cups/fr/templates/modify-printer.tmpl
+share/cups/fr/templates/option-boolean.tmpl
+share/cups/fr/templates/option-header.tmpl
+share/cups/fr/templates/option-pickmany.tmpl
+share/cups/fr/templates/option-pickone.tmpl
+share/cups/fr/templates/option-trailer.tmpl
+share/cups/fr/templates/printer-accept.tmpl
+share/cups/fr/templates/printer-added.tmpl
+share/cups/fr/templates/printer-configured.tmpl
+share/cups/fr/templates/printer-confirm.tmpl
+share/cups/fr/templates/printer-deleted.tmpl
+share/cups/fr/templates/printer-modified.tmpl
+share/cups/fr/templates/printer-purge.tmpl
+share/cups/fr/templates/printer-reject.tmpl
+share/cups/fr/templates/printer-start.tmpl
+share/cups/fr/templates/printer-stop.tmpl
+share/cups/fr/templates/printers.tmpl
+share/cups/fr/templates/test-page.tmpl
+share/cups/fr/templates/trailer.tmpl
 share/cups/model/deskjet.ppd
 share/cups/model/deskjet2.ppd
 share/cups/model/dymo.ppd
@@ -251,6 +296,7 @@ share/cups/templates/jobs.tmpl
 share/cups/templates/modify-class.tmpl
 share/cups/templates/modify-printer.tmpl
 share/cups/templates/option-boolean.tmpl
+share/cups/templates/option-conflict.tmpl
 share/cups/templates/option-header.tmpl
 share/cups/templates/option-pickmany.tmpl
 share/cups/templates/option-pickone.tmpl
@@ -276,6 +322,43 @@ share/doc/html/cups/cmp.pdf
 share/doc/html/cups/cups.css
 share/doc/html/cups/cupsdoc.css
 share/doc/html/cups/documentation.html
+share/doc/html/cups/fr/cups.css
+share/doc/html/cups/fr/cupsdoc.css
+share/doc/html/cups/fr/documentation.html
+share/doc/html/cups/fr/images/accept-jobs.gif
+share/doc/html/cups/fr/images/add-class.gif
+share/doc/html/cups/fr/images/add-printer.gif
+share/doc/html/cups/fr/images/cancel-job.gif
+share/doc/html/cups/fr/images/cancel-jobs.gif
+share/doc/html/cups/fr/images/cancel.gif
+share/doc/html/cups/fr/images/config-printer.gif
+share/doc/html/cups/fr/images/continue.gif
+share/doc/html/cups/fr/images/delete-class.gif
+share/doc/html/cups/fr/images/delete-printer.gif
+share/doc/html/cups/fr/images/hold-job.gif
+share/doc/html/cups/fr/images/manage-classes.gif
+share/doc/html/cups/fr/images/manage-jobs.gif
+share/doc/html/cups/fr/images/manage-printers.gif
+share/doc/html/cups/fr/images/modify-class.gif
+share/doc/html/cups/fr/images/modify-printer.gif
+share/doc/html/cups/fr/images/navbar.gif
+share/doc/html/cups/fr/images/print-test-page.gif
+share/doc/html/cups/fr/images/reject-jobs.gif 
+share/doc/html/cups/fr/images/release-job.gif
+share/doc/html/cups/fr/images/restart-job.gif
+share/doc/html/cups/fr/images/show-active.gif
+share/doc/html/cups/fr/images/show-completed.gif 
+share/doc/html/cups/fr/images/start-class.gif
+share/doc/html/cups/fr/images/start-printer.gif
+share/doc/html/cups/fr/images/stop-class.gif
+share/doc/html/cups/fr/images/stop-printer.gif
+share/doc/html/cups/fr/index.html
+share/doc/html/cups/fr/overview.html
+share/doc/html/cups/fr/overview.pdf
+share/doc/html/cups/fr/sam.html
+share/doc/html/cups/fr/sam.pdf
+share/doc/html/cups/fr/sum.html
+share/doc/html/cups/fr/sum.pdf
 share/doc/html/cups/idd.html
 share/doc/html/cups/idd.pdf
 share/doc/html/cups/images/accept-jobs.gif
@@ -361,17 +444,22 @@ share/locale/sv/cups_sv
 share/locale/uk/cups_uk
 share/locale/uk_UA.cp1251/cups_uk_UA.cp1251
 share/locale/zh_CN/cups_zh_CN
-@dirrm share/locale/uk_UA.cp1251
-@dirrm share/locale/ru_RU.koi8r
-@dirrm share/locale/ru_RU.cp1251
-@dirrm share/locale/be
-@dirrm share/locale/C
+share/cups/charsets/windows-874
+@unexec ${RMDIR} %D/share/locale/uk_UA.cp1251 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/locale/ru_RU.koi8r 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/locale/ru_RU.cp1251 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/locale/be 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/locale/C 2>/dev/null || ${TRUE}
 @dirrm share/examples/cups
 @dirrm share/doc/html/cups/images
+@dirrm share/doc/html/cups/fr/images
+@dirrm share/doc/html/cups/fr
 @dirrm share/doc/html/cups
 @dirrm share/doc/cups
 @dirrm share/cups/templates
 @dirrm share/cups/model
+@dirrm share/cups/fr/templates
+@dirrm share/cups/fr
 @dirrm share/cups/fonts
 @dirrm share/cups/data
 @dirrm share/cups/charsets

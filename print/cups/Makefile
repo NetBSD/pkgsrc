@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2002/09/19 09:04:20 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2002/10/20 18:57:37 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
-BASE_VERS=		1.1.15
-DIST_VERS=		${BASE_VERS}-1
+BASE_VERS=		1.1.16
+DIST_VERS=		${BASE_VERS}
 VERS=			${DIST_VERS:S/-/./g}
 WRKSRC=			${WRKDIR}/cups-${BASE_VERS}
 CATEGORIES=		print
@@ -21,10 +21,10 @@ COMMENT=		Common UNIX Printing System
 
 CONFLICTS+=		LPRng-[0-9]* LPRng-core-[0-9]*
 
-USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		# defined
+USE_GMAKE=		# defined
+USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		# defined
 UNLIMIT_RESOURCES=	datasize memorysize
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--localstatedir=/var
@@ -39,7 +39,7 @@ CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink2.mk"
+.  include "../../security/PAM/buildlink2.mk"
 BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--enable-pam
 PLIST_SRC=		${PKGDIR}/PLIST.pam
@@ -72,6 +72,7 @@ CUPS_REQUESTS=		/var/spool/cups
 PKG_GROUPS=		${CUPS_GROUP}
 PKG_USERS=		${CUPS_USER}:${CUPS_GROUP}::Common\\ UNIX\\ Printing\\ System\\ user::${SH}
 
+SPECIAL_PERMS=		${PREFIX}/bin/lppasswd ${CUPS_USER} ${CUPS_GROUP} 4755
 CONF_FILES=		${EGDIR}/client.conf ${CUPS_CONFDIR}/client.conf
 CONF_FILES+=		${EGDIR}/cupsd.conf ${CUPS_CONFDIR}/cupsd.conf
 SUPPORT_FILES=		${EGDIR}/classes.conf ${CUPS_CONFDIR}/classes.conf
@@ -97,7 +98,15 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}/$${file};	\
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/conf; ${INSTALL_DATA} *.conf mime.* ${EGDIR}
+	cd ${WRKSRC}/conf; for file in *.conf mime.*; do		\
+		case $${file} in					\
+		pam.conf)						\
+			;;						\
+		*)							\
+			${INSTALL_DATA} $${file} ${EGDIR}/$${file};	\
+			;;						\
+		esac;							\
+	done
 .if defined(USE_PAM)
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${EGDIR}
 .endif
