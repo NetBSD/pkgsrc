@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:24:39 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/24 12:10:29 seb Exp $
 #
 
 DISTNAME=		sysinfo-3.5.1
@@ -15,6 +15,7 @@ ONLY_FOR_PLATFORM=	SunOS-*-*      # only for Solaris, at the moment
 
 ALL_TARGET=		default
 INSTALL_TARGET=		install install.man
+TEST_TARGET=		test
 MAKE_ENV+=		CPPFLAGS="" CC="${CC}"
 
 post-build:
