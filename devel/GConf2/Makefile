@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/10 18:10:31 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/11 00:53:57 xtraeme Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
@@ -23,11 +23,11 @@ CONF_FILES=	${EGDIR}/path ${PKG_SYSCONFDIR}/2/path
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gconf/schemas
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../net/ORBit2/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../textproc/xmlcatmgr/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../net/ORBit2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/xmlcatmgr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
