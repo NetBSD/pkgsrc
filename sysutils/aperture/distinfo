@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.3 2002/09/13 07:16:44 tron Exp $
+$NetBSD: distinfo,v 1.4 2002/09/14 08:14:22 tron Exp $
 
-SHA1 (aperture-2.0nb1/apNetBSD.shar) = 66022d35f41df667bbc9ad86a8f2ded292e1098b
-Size (aperture-2.0nb1/apNetBSD.shar) = 66731 bytes
+SHA1 (aperture-2.0nb2/apNetBSD.shar) = 66022d35f41df667bbc9ad86a8f2ded292e1098b
+Size (aperture-2.0nb2/apNetBSD.shar) = 66731 bytes
 SHA1 (patch-aa) = 544d71b6524b7aaeb5deb985372599f1962af4fe
-SHA1 (patch-ab) = abf10211cf19fd56373727c9952062e4cfa51cbc
+SHA1 (patch-ab) = 299cdbd9d2906a77fe4746996a7cf57b663dd07b
+SHA1 (patch-ac) = 676b2f426d6f9e725262342e0d7e9ac1c8418362
 SHA1 (patch-ad) = 22aa063237f08f38712017f310d535bc3e3ad0c8
 SHA1 (patch-ae) = b6ae1d888db3a0cbefd7088a7acf7ca881fdc767
 SHA1 (patch-af) = 475c127658ba1050154a7dcabe39482c088e2d02
