@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:13:49 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/03/26 05:19:20 christos Exp $
 
-SHA1 (host_991529.tar.Z) = 28097ee01a94bb82cec69a3be556a869ea236b5f
-RMD160 (host_991529.tar.Z) = 52b734d567b4a474f5cac94a5e44580a9eee7281
-Size (host_991529.tar.Z) = 184455 bytes
-SHA1 (patch-aa) = f9b4e0668419adb2223b315bb7facd03f1fa7e83
-SHA1 (patch-ab) = 471a67439f2e5847b510f0e73bb857226c79c450
-SHA1 (patch-ac) = b03893231b796f70412025eca7b8fb0884348e3a
-SHA1 (patch-ad) = 5440b41333d829e8522fb85189c8fe3159f74166
+SHA1 (host-20040812.tar.gz) = 02027effe88a851e6cecf133cef8ba096af48258
+Size (host-20040812.tar.gz) = 147758 bytes
+SHA1 (patch-aa) = bf2d0b44271feed9a1e595d78e34304052e34ab5
