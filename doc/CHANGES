@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9508 2005/03/19 01:08:59 wiz Exp $
+$NetBSD: CHANGES,v 1.9509 2005/03/19 02:58:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1410,3 +1410,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated galway to 0.33nb7 [wiz 2005-03-18]
 	Updated gaim to 1.1.4nb1 [jmmv 2005-03-18]
 	Updated dict-client to 1.9.15nb1 [jwise 2005-03-19]
+	Updated p5-IO-Util to 1.43 [wiz 2005-03-19]
