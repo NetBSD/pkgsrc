@@ -1,0 +1,11 @@
+--- doc/Makefile.in.orig	Thu Jun 25 16:25:37 1998
++++ doc/Makefile.in	Wed Jul  1 22:20:37 1998
+@@ -171,7 +171,7 @@
+ all: Makefile $(INFO_DEPS) $(MANS)
+ 
+ .SUFFIXES:
+-.SUFFIXES: .dvi .info .ps .texi .texinfo .txi
++#.SUFFIXES: .dvi .info .ps .texi .texinfo .txi
+ $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps doc/Makefile
+ 
