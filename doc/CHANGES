@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9456 2005/03/07 14:28:34 wiz Exp $
+$NetBSD: CHANGES,v 1.9457 2005/03/07 14:42:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1329,3 +1329,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated wxhaskell to 0.9 [augustss 2005-03-07]
 	Updated xfce4-weather-plugin to 0.4.9 [adam 2005-03-07]
 	Updated crimsonfields to 0.4.7 [wiz 2005-03-07]
+	Updated asc to 1.15.3.0 [wiz 2005-03-07]
