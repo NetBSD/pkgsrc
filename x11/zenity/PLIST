@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 23:40:39 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/06 22:07:00 jmmv Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -15,6 +15,7 @@ share/gnome/help/zenity/C/figures/zenity-warning-screenshot.png
 share/gnome/help/zenity/C/legal.xml
 share/gnome/help/zenity/C/zenity.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/zenity-0.1.mo
@@ -26,6 +27,9 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/zenity-0.1.mo
@@ -34,8 +38,11 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/zenity-0.1.mo
@@ -48,6 +55,7 @@ ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/zenity-0.1.mo
@@ -69,6 +77,8 @@ share/zenity/zenity.png
 @dirrm share/zenity/clothes
 @dirrm share/zenity
 @dirrm share/omf/zenity
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/zenity/C/figures
 @dirrm share/gnome/help/zenity/C
 @dirrm share/gnome/help/zenity
+@comment in gnome2-dirs: @dirrm share/gnome/help
