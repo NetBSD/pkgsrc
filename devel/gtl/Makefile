@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:13:28 tv Exp $
+# $NetBSD: Makefile,v 1.17 2004/11/02 20:36:50 wiz Exp $
 
-DISTNAME=		GTL-0.3.3
-PKGNAME=		gtl-0.3.3
-PKGREVISION=		1
+DISTNAME=		GTL-1.2.0
+PKGNAME=		gtl-1.2.0
 CATEGORIES=		devel
-MASTER_SITES=		http://infosun.fmi.uni-passau.de/GTL/archive/
+MASTER_SITES=		http://infosun.fmi.uni-passau.de/GTL/download/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.fmi.uni-passau.de/Graphlet/GTL/
@@ -14,26 +14,31 @@ USE_LIBTOOL=		# defined
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 
+# previous version of the same
+CONFLICTS=		gtl0-[0-9]*
+
 LICENSE=		no-commercial-use
 
-.include "../../mk/bsd.prefs.mk"
-
 GNU_CONFIGURE=		# defined
-.if defined(CXXFLAGS)
 CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS}"
-.endif
 
-GTL_VERS=		0:3
-MAKE_ENV+=		GTL_VERS="${GTL_VERS}"
+DOCDIR=		${PREFIX}/share/doc/GTL
 
-HTMLDOCDIR=		${PREFIX}/share/doc/html/GTL
+_FETCH_MESSAGE= \
+	${ECHO} "======================================================================"; \
+	${ECHO} ; \
+	${ECHO} " Follow the instructions at"; \
+	${ECHO} "	http://www.infosun.fmi.uni-passau.de/GTL/register.html"; \
+	${ECHO} " to download the distfile."; \
+	${ECHO} ; \
+	${ECHO} "======================================================================"
 
 post-install:
-	${INSTALL_DATA_DIR} ${HTMLDOCDIR}
-	${INSTALL_DATA_DIR} ${HTMLDOCDIR}/icons
-	cd ${WRKSRC}/doc/html; \
-		${INSTALL_DATA} *.html ${HTMLDOCDIR}
-	cd ${WRKSRC}/doc/html/icons; \
-		${INSTALL_DATA} *.gif *.jpeg ${HTMLDOCDIR}/icons
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}/icons
+	cd ${WRKSRC}/doc; \
+		${INSTALL_DATA} *.html style.css ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/icons/*.jpeg ${DOCDIR}/icons
+	${INSTALL_DATA} ${WRKSRC}/doc/userguide/GTL.ps ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
