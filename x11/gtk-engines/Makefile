@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/04/14 16:15:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2004/04/14 19:30:23 jmmv Exp $
 
 DISTNAME=		gtk-engines-0.12
 PKGREVISION=		6
@@ -13,7 +13,7 @@ CONFLICTS+=		gtk2-engines-*
 
 GNU_CONFIGURE=		# defined
 USE_BUILDLINK3=		yes
-USE_DIRS+=		xdg-x11-1.1
+USE_DIRS+=		xdg-1.1
 USE_X11BASE=		# defined
 USE_LIBTOOL=		# defined
 SHLIBTOOL_OVERRIDE=	libtool
