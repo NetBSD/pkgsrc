@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/02/13 14:54:08 agc Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/12 06:54:56 jmc Exp $
 
 DISTNAME=	SDL_perl-1.19.2
 PKGNAME=	p5-SDL-1.19.2
@@ -14,8 +14,6 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SDL_perl/.packlist
 BUILDLINK_DEPENDS.SDL=		SDL>=1.2.5
 BUILDLINK_DEPENDS.SDL-mixer=	SDL-mixer>=1.2.4
 
-BROKEN=		OpenGL.xs compilation issue, related to XFree86 version
-
 .include "../../audio/SDL-mixer/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../devel/SDL_gfx/buildlink2.mk"
@@ -25,6 +23,5 @@ BROKEN=		OpenGL.xs compilation issue, related to XFree86 version
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
-
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
