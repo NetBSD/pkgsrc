@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
+$NetBSD: patch-ab,v 1.33 2004/03/12 00:11:17 danw Exp $
 
---- configure.orig	2004-01-26 01:36:38.000000000 +1300
-+++ configure
+--- configure.orig	Sun Jan 25 07:36:38 2004
++++ configure	Sun Mar  7 11:35:41 2004
 @@ -4424,10 +4424,13 @@ beos*)
    lt_cv_deplibs_check_method=pass_all
    ;;
@@ -20,7 +20,20 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    ;;
  
  cygwin*)
-@@ -8135,9 +8138,10 @@ beos*)
+@@ -6837,9 +6840,11 @@ echo $ECHO_N "checking for $compiler opt
+       ;;
+ 
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic='-fno-common'
++      lt_prog_compiler_static=''
+       ;;
+ 
+     msdosdjgpp*)
+@@ -8135,9 +8140,10 @@ beos*)
    shlibpath_var=LIBRARY_PATH
    ;;
  
@@ -33,7 +46,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -8253,15 +8257,15 @@ kfreebsd*-gnu)
+@@ -8253,15 +8259,15 @@ kfreebsd*-gnu)
  
  freebsd*)
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -55,7 +68,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
        need_version=yes
        ;;
    esac
-@@ -8340,12 +8344,7 @@ hpux9* | hpux10* | hpux11*)
+@@ -8340,12 +8346,7 @@ hpux9* | hpux10* | hpux11*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -69,7 +82,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -8381,7 +8380,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -8381,7 +8382,7 @@ linux*oldld* | linux*aout* | linux*coff*
  
  # This must be Linux ELF.
  linux*)
@@ -78,7 +91,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -8505,7 +8504,7 @@ sco3.2v5*)
+@@ -8505,7 +8506,7 @@ sco3.2v5*)
    ;;
  
  solaris*)
@@ -87,7 +100,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -10854,6 +10853,13 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10854,6 +10855,13 @@ if test -z "$aix_libpath"; then aix_libp
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
        archive_cmds_CXX='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
        wlarc=
@@ -101,7 +114,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
        hardcode_libdir_flag_spec_CXX='-R$libdir'
        hardcode_direct_CXX=yes
        hardcode_shlibpath_var_CXX=no
-@@ -11226,6 +11232,14 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -11226,6 +11234,14 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
      esac
    done
  
@@ -116,7 +129,21 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -11828,9 +11842,10 @@ beos*)
+@@ -11273,9 +11289,11 @@ echo $ECHO_N "checking for $compiler opt
+       lt_prog_compiler_pic_CXX='-DDLL_EXPORT'
+       ;;
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+-      lt_prog_compiler_pic_CXX='-fno-common'
++      lt_prog_compiler_pic='-fno-common'
++      lt_prog_compiler_static=''
+       ;;
+     *djgpp*)
+       # DJGPP does not support shared libraries at all
+@@ -11828,9 +11846,10 @@ beos*)
    shlibpath_var=LIBRARY_PATH
    ;;
  
@@ -129,7 +156,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -11946,15 +11961,15 @@ kfreebsd*-gnu)
+@@ -11946,15 +11965,15 @@ kfreebsd*-gnu)
  
  freebsd*)
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -151,7 +178,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
        need_version=yes
        ;;
    esac
-@@ -12033,12 +12048,7 @@ hpux9* | hpux10* | hpux11*)
+@@ -12033,12 +12052,7 @@ hpux9* | hpux10* | hpux11*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -165,7 +192,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -12074,7 +12084,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -12074,7 +12088,7 @@ linux*oldld* | linux*aout* | linux*coff*
  
  # This must be Linux ELF.
  linux*)
@@ -174,7 +201,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -12198,7 +12208,7 @@ sco3.2v5*)
+@@ -12198,7 +12212,7 @@ sco3.2v5*)
    ;;
  
  solaris*)
@@ -183,7 +210,20 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -14968,9 +14978,10 @@ beos*)
+@@ -13690,9 +13704,11 @@ echo $ECHO_N "checking for $compiler opt
+       ;;
+ 
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic_F77='-fno-common'
++      lt_prog_compiler_static_F77=''
+       ;;
+ 
+     msdosdjgpp*)
+@@ -14968,9 +14984,10 @@ beos*)
    shlibpath_var=LIBRARY_PATH
    ;;
  
@@ -196,7 +236,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -15086,15 +15097,15 @@ kfreebsd*-gnu)
+@@ -15086,15 +15103,15 @@ kfreebsd*-gnu)
  
  freebsd*)
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -218,7 +258,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
        need_version=yes
        ;;
    esac
-@@ -15173,12 +15184,7 @@ hpux9* | hpux10* | hpux11*)
+@@ -15173,12 +15190,7 @@ hpux9* | hpux10* | hpux11*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -232,7 +272,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -15214,7 +15220,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -15214,7 +15226,7 @@ linux*oldld* | linux*aout* | linux*coff*
  
  # This must be Linux ELF.
  linux*)
@@ -241,7 +281,7 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -15338,7 +15344,7 @@ sco3.2v5*)
+@@ -15338,7 +15350,7 @@ sco3.2v5*)
    ;;
  
  solaris*)
@@ -250,3 +290,16 @@ $NetBSD: patch-ab,v 1.32 2004/02/23 10:54:08 markd Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
+@@ -16019,9 +16031,11 @@ echo $ECHO_N "checking for $compiler opt
+       ;;
+ 
+     darwin* | rhapsody*)
+-      # PIC is the default on this platform
++      # PIC is the default on this platform, and static linking of
++      # binaries generally doesn't work
+       # Common symbols not allowed in MH_DYLIB files
+       lt_prog_compiler_pic_GCJ='-fno-common'
++      lt_prog_compiler_static_GCJ=''
+       ;;
+ 
+     msdosdjgpp*)
