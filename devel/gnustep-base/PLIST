@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/27 10:58:43 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/27 23:56:30 rh Exp $
+bin/openapp
 share/GNUstep/System/Headers/Foundation/Foundation.h
 share/GNUstep/System/Headers/Foundation/GSMime.h
 share/GNUstep/System/Headers/Foundation/GSXML.h

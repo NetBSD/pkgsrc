@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/27 10:58:42 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/27 23:56:30 rh Exp $
 #
 
 DISTNAME=		gnustep-base-1.5.0
+PKGREVISION=		1
 CATEGORIES=		devel gnustep
 MASTER_SITES=		ftp://ftp.gnustep.org/pub/gnustep/core/
 
@@ -17,7 +18,12 @@ GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/share/GNUstep
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_SCRIPT}"
-LIBS+=			-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lpthread
+
+pre-configure:
+	${SED} 's|@PREFIX@|${PREFIX}|g' <${FILESDIR}/openapp >${WRKDIR}/openapp
+
+post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/openapp ${PREFIX}/bin
 
 .include "../../devel/gmp/buildlink2.mk"
 .include "../../devel/ffcall/buildlink2.mk"
