@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/28 00:02:06 rh Exp $
+$NetBSD: distinfo,v 1.2 2004/09/27 01:14:18 rh Exp $
 
-SHA1 (gnustep-examples-0.9.7.tar.gz) = d3d7cba3d6a62c24a84e6ef9dce2637cad94b50b
-Size (gnustep-examples-0.9.7.tar.gz) = 228587 bytes
+SHA1 (gnustep-examples-1.0.0.tar.gz) = 1b87caa4bfa26f9b2f7a63307a6d6bd09e43f158
+Size (gnustep-examples-1.0.0.tar.gz) = 265320 bytes
