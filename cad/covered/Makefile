@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/09/01 23:41:37 seb Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/09 01:20:36 dmcmahill Exp $
 #
 
-DISTNAME=	covered-0.2.1
+DISTNAME=	covered-0.2.2
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=covered/}
 
@@ -20,7 +20,7 @@ REPLACE_PERL=	diags/verilog/check_test
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 TEST_DIRS=	${WRKSRC}/diags/regress
-TEST_TARGET=	#defined
+TEST_TARGET=	iverilog
 
 post-patch:
 	${CHMOD} 755 ${WRKSRC}/missing
