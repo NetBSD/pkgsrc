@@ -3,7 +3,7 @@
 # Date created:         17 Feb 1998
 # Whom:                 tv@netbsd.org
 #
-# $NetBSD: Makefile,v 1.3 1998/03/19 12:17:53 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/23 22:20:47 frueauf Exp $
 #
 
 DISTNAME=		rsaref20
@@ -21,14 +21,12 @@ MIRROR_DISTFILE=	no
 IS_INTERACTIVE=		yes
 
 do-fetch:
-	@(if [ "X${USA_RESIDENT}" != XYES ]; then	\
+	@if [ "X${USA_RESIDENT}" != XYES ]; then	\
 		${ECHO} "This package is legal for use only within the United States."; \
 		${ECHO} "You must set the variable USA_RESIDENT to YES to enable"; \
 		${ECHO} "use of the rsaref package.";	\
-		${FALSE};				\
-	fi)
-	@${MKDIR} ${WRKDIR} || ${TRUE}
-	@if [ ! -f ${DISTDIR}/${DISTFILES} ]; then \
+	elif [ ! -f ${DISTDIR}/${DISTFILES} ]; then \
+		${MKDIR} ${WRKDIR} || ${TRUE};  \
 		cd ${WRKDIR} && ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${RSA_SITE}README ${FETCH_AFTER_ARGS}; \
 		cd ${_DISTDIR} && ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${RSA_SITE}`egrep '^dist/U\.S\.-only-' ${WRKDIR}/README`/${DISTNAME}${EXTRACT_SUFX} ${FETCH_AFTER_ARGS}; \
 	fi
