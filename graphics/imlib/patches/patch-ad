@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2001/06/16 19:56:16 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2001/08/13 11:14:31 rh Exp $
 
---- configure.in.orig	Sat May 20 02:24:10 2000
-+++ configure.in	Fri Jun 15 22:52:42 2001
-@@ -34,6 +34,8 @@
+--- configure.in.orig	Wed Aug  1 00:12:24 2001
++++ configure.in
+@@ -32,6 +32,8 @@
  	fi
  ])
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.4 2001/06/16 19:56:16 jlam Exp $
  dynworks=false
  if test x$with_modules = xno; then
  	AC_MSG_RESULT(no)
-@@ -43,8 +45,8 @@
+@@ -41,8 +43,8 @@
  if test "x$GDK_IMLIB" != x; then
    oLIBS="$LIBS"
    oCFLAGS="$CFLAGS"
@@ -22,7 +22,7 @@ $NetBSD: patch-ad,v 1.4 2001/06/16 19:56:16 jlam Exp $
    AC_TRY_RUN([
  #include <glib.h>
  #include <gmodule.h>
-@@ -76,8 +78,8 @@
+@@ -74,8 +76,8 @@
  
  if $dynworks; then
     AC_DEFINE(USE_GMODULE)
@@ -32,8 +32,8 @@ $NetBSD: patch-ad,v 1.4 2001/06/16 19:56:16 jlam Exp $
 +   GMODULE_FLAGS="`$GLIB_CONFIG --cflags gmodule`"
     AC_SUBST(GMODULE_LIBS)
     AC_SUBST(GMODULE_FLAGS)
-    AC_MSG_RESULT(yes)
-@@ -157,7 +159,9 @@
+ fi
+@@ -153,7 +155,9 @@
    GX_LIBS="$GTK_LIBS"
  fi
  
@@ -44,7 +44,18 @@ $NetBSD: patch-ad,v 1.4 2001/06/16 19:56:16 jlam Exp $
  
  SUPPORT_LIBS=""
  
-@@ -338,6 +342,7 @@
+@@ -245,8 +249,8 @@
+ dnl Test for libtiff
+ AC_CHECK_LIB(tiff, TIFFReadScanline,
+   AC_CHECK_HEADER(tiffio.h,
+-    TIFFLIBS="-ltiff"
+-    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff"; AC_DEFINE(HAVE_LIBTIFF),
++    TIFFLIBS="-ltiff -ljpeg -lz"
++    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff -jpeg -lz"; AC_DEFINE(HAVE_LIBTIFF),
+     AC_MSG_WARN(*** Native TIFF support will not be built (TIFF header files not found) ***)),
+   AC_CHECK_LIB(tiff, TIFFWriteScanline,
+     AC_CHECK_HEADER(tiffio.h,
+@@ -334,6 +338,7 @@
  AC_SUBST(CPPFLAGS)
  AC_SUBST(X_CFLAGS)
  AC_SUBST(LDFLAGS)

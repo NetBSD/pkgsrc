@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2000/06/17 01:09:36 wiz Exp $
+$NetBSD: patch-aa,v 1.12 2001/08/13 11:14:31 rh Exp $
 
---- gdk_imlib/io-png.c.orig	Sun Oct  3 21:17:35 1999
-+++ gdk_imlib/io-png.c	Sat Jun 17 02:58:44 2000
-@@ -61,6 +61,9 @@
+--- gdk_imlib/io-png.c.orig	Sat Jul 28 16:15:16 2001
++++ gdk_imlib/io-png.c
+@@ -299,6 +299,9 @@
    /* Setup Translators */
    if (color_type == PNG_COLOR_TYPE_PALETTE)
      png_set_expand(png_ptr);
@@ -12,29 +12,3 @@ $NetBSD: patch-aa,v 1.11 2000/06/17 01:09:36 wiz Exp $
    png_set_strip_16(png_ptr);
    png_set_packing(png_ptr);
    if (png_get_valid(png_ptr, info_ptr, PNG_INFO_tRNS))
-@@ -97,7 +100,8 @@
-   png_read_image(png_ptr, lines);
-   png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
-   ptr = data;
--  if (color_type == PNG_COLOR_TYPE_GRAY_ALPHA)
-+  if (color_type == PNG_COLOR_TYPE_GRAY
-+      || color_type == PNG_COLOR_TYPE_GRAY_ALPHA)
-     {
-       for (y = 0; y < *h; y++)
- 	{
-@@ -122,6 +126,7 @@
- 	    }
- 	}
-     }
-+#if 0
-   else if (color_type == PNG_COLOR_TYPE_GRAY)
-     {
-       for (y = 0; y < *h; y++)
-@@ -136,6 +141,7 @@
- 	    }
- 	}
-     }
-+#endif
-   else
-     {
-       for (y = 0; y < *h; y++)
