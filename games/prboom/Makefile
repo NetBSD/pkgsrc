@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/26 12:33:59 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/05/12 10:16:47 abs Exp $
 #
 
 DISTNAME=	prboom-2.2.1
 CATEGORIES=	games
-MASTER_SITES=	http://prdownloads.sourceforge.net/prboom/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prboom/}
 
 MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://prboom.sourceforge.net/
