@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.3 2003/05/25 07:58:06 jmmv Exp $
+$NetBSD: patch-ab,v 1.4 2003/09/25 02:56:01 danw Exp $
 
---- help-converters/gnome-vfs-module/Makefile.in.orig	2003-05-18 19:36:04.000000000 +0200
-+++ help-converters/gnome-vfs-module/Makefile.in
-@@ -161,7 +161,7 @@ libvfs_help_la_SOURCES =  	help-method.c
+--- help-converters/gnome-vfs-module/Makefile.in.orig	Thu Jul 10 14:42:24 2003
++++ help-converters/gnome-vfs-module/Makefile.in	Sun Aug 31 11:38:14 2003
+@@ -147,7 +147,7 @@
+ 
+ modules_LTLIBRARIES = libvfs-help.la
+ 
+-module_flags = -export_dynamic -avoid-version
++module_flags = -export_dynamic -avoid-version -module
+ modulesdir = $(libdir)/gnome-vfs-2.0/modules
+ 
+ libvfs_help_la_SOURCES =  	help-method.c		help-method.h		
+@@ -156,7 +156,7 @@
  libvfs_help_la_LDFLAGS = $(module_flags)
  libvfs_help_la_LIBADD = $(HELP_VFS_MODULE_LIBS)
  
