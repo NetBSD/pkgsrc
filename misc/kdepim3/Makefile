@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/03/23 22:07:07 markd Exp $
+# $NetBSD: Makefile,v 1.40 2005/03/24 05:08:41 markd Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -10,6 +10,11 @@ USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_PERL=		run
 USE_GNU_TOOLS+=		awk yacc
+
+PKG_DEFAULT_OPTIONS+=	sasl2
+PKG_OPTIONS_VAR=	PKG_OPTIONS.kdepim
+PKG_SUPPORTED_OPTIONS=	sasl2
+.include "../../mk/bsd.options.mk"
 
 BUILDLINK_DEPENDS.gpgme+=     gpgme>=0.4.5
 
@@ -32,9 +37,15 @@ REPLACE_PERL=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
 .include "../../meta-pkgs/kde3/kde3.mk"
 BUILDLINK_DEPMETHOD.qt3-tools=	full
 
+.if !empty(PKG_OPTIONS:Msasl2)
+.include "../../security/cyrus-sasl2/buildlink3.mk"
+PLIST_SUBST+=	HAVE_SASL=""
+.else
+PLIST_SUBST+=	HAVE_SASL="@comment "
+.endif
+
 .include "../../comms/libmal/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
-.include "../../security/cyrus-sasl2/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
