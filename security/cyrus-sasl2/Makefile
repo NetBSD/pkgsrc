@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/11/12 03:39:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/05 12:10:29 markd Exp $
 
 .include "Makefile.common"
 
@@ -35,9 +35,10 @@ CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
 .if defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--enable-gssapi=/usr	# GSSAPI
 PLIST_SRC+=		${PKGDIR}/PLIST.krb5
-.  if exists(/usr/include/krb5/krb5-types.h)
+.  if exists(/usr/include/krb5/krb5.h)
 CPPFLAGS+=		-I/usr/include/krb5
 .  endif
+LIBS+=-lcrypto
 .endif
 
 PLIST_SRC+=		${PKGDIR}/PLIST.plugins

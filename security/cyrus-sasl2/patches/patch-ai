@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.4 2003/08/16 09:06:42 recht Exp $
+$NetBSD: patch-ai,v 1.5 2004/01/05 12:10:29 markd Exp $
 
---- configure.orig	2003-07-15 17:42:27.000000000 +0200
-+++ configure	2003-07-26 12:21:14.000000000 +0200
-@@ -675,6 +675,7 @@
+--- configure.orig	2003-07-16 03:42:27.000000000 +1200
++++ configure
+@@ -675,6 +675,7 @@ host_os=`echo $host | sed 's/^\([^-]*\)-
  echo "$ac_t""$host" 1>&6
  
  
@@ -10,7 +10,7 @@ $NetBSD: patch-ai,v 1.4 2003/08/16 09:06:42 recht Exp $
  # Find a good install program.  We prefer a C program (faster),
  # so one script is as good as another.  But avoid the broken or
  # incompatible versions:
-@@ -842,29 +843,29 @@
+@@ -842,29 +843,29 @@ EOF
  
  
  missing_dir=`cd $ac_aux_dir && pwd`
@@ -50,7 +50,7 @@ $NetBSD: patch-ai,v 1.4 2003/08/16 09:06:42 recht Exp $
     echo "$ac_t""missing" 1>&6
  fi
  
-@@ -1951,6 +1952,13 @@
+@@ -1951,6 +1952,13 @@ fi
  
  target=$save_target
  
@@ -64,3 +64,30 @@ $NetBSD: patch-ai,v 1.4 2003/08/16 09:06:42 recht Exp $
  if test "$ac_cv_can_build_shared" = no; then
  	enable_shared=no
  	enable_static=yes
+@@ -5696,7 +5704,7 @@ else
+ fi
+ 
+   SASL_MECHS="$SASL_MECHS libgssapiv2.la"
+-  SASL_STATIC_OBJS="$SASL_STATIC_OBJS ../plugins/gssapi.o"
++#  SASL_STATIC_OBJS="$SASL_STATIC_OBJS ../plugins/gssapi.o"
+ 
+   cmu_save_LIBS="$LIBS"
+   LIBS="$LIBS $GSSAPIBASE_LIBS"
+@@ -5799,12 +5807,12 @@ EOF
+  fi
+ 
+ 
+-if test "$gssapi" != "no"; then
+-  cat >> confdefs.h <<\EOF
+-#define STATIC_GSSAPIV2 1
+-EOF
++#if test "$gssapi" != "no"; then
++#  cat >> confdefs.h <<\EOF
++##define STATIC_GSSAPIV2 1
++#EOF
+ 
+-fi
++#fi
+ 
+ # Check whether --enable-anon or --disable-anon was given.
+ if test "${enable_anon+set}" = set; then
