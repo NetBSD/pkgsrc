@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7248 2004/09/25 16:27:28 uebayasi Exp $
+$NetBSD: CHANGES,v 1.7249 2004/09/25 20:03:51 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4427,3 +4427,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnustep to 1.10.0 [rh 2004-09-25]
 	Updated entropy to 0.8.2.418 [tv 2004-09-25]
 	Added xtrs-4.9 [uebayasi 2004-09-25]
+	Updated prboom to 2.2.5 [snj 2004-09-25]
