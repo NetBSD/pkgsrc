@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.17 2004/02/11 16:27:03 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/04 16:14:53 wiz Exp $
 #
 
-DISTNAME=	mldonkey-2.5.11
+DISTNAME=	mldonkey-2-5-12
+PKGNAME=	mldonkey-2.5.12
 CATEGORIES=	net
 MASTER_SITES=	http://savannah.nongnu.org/download/mldonkey/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/mldonkey/
 COMMENT=	Free peer-to-peer client with eDonkey support and more
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 
@@ -30,22 +31,20 @@ pre-build:
 	${CHMOD} +x ${WRKDIR}/mldonkey.sh
 
 do-install:
-	( cd ${WRKDIR} && \
-	    ${INSTALL_SCRIPT} mldonkey.sh ${PREFIX}/bin/mldonkey \
-	)
-	( cd ${WRKSRC} && \
+	cd ${WRKDIR} && \
+	    ${INSTALL_SCRIPT} mldonkey.sh ${PREFIX}/bin/mldonkey
+	cd ${WRKSRC} && \
 	    ${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/mldonkey && \
 	    ${INSTALL_PROGRAM} mlchat ${PREFIX}/libexec/mldonkey && \
 	    ${INSTALL_PROGRAM} mlguistarter ${PREFIX}/libexec/mldonkey && \
 	    ${INSTALL_PROGRAM} mlgui ${PREFIX}/libexec/mldonkey && \
 	    ${INSTALL_PROGRAM} mlim ${PREFIX}/libexec/mldonkey && \
 	    ${INSTALL_PROGRAM} mlnet ${PREFIX}/libexec/mldonkey && \
-	    ${INSTALL_PROGRAM} mlnet+gui ${PREFIX}/libexec/mldonkey \
-	)
+	    ${INSTALL_PROGRAM} mlnet+gui ${PREFIX}/libexec/mldonkey
 
-.include "../../archivers/bzip2/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../lang/ocaml/buildlink2.mk"
-.include "../../x11/lablgtk/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/ocaml/buildlink3.mk"
+.include "../../x11/lablgtk/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
