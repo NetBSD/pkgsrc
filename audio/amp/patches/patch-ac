@@ -65,12 +65,3 @@
      CC="gcc"
      if test "$ARCH_TYPE" = "i486" ; then
        CFLAGS_ARCH="-m486"
-@@ -1409,7 +1409,7 @@
-     if test "$OS_TYPE" = "FreeBSD" ; then
-       OS_TYPE="BSD"
-     fi
--    CFLAGS="-O2 -m486 -pipe -ffast-math -fomit-frame-pointer ${CFLAGS_ARCH}"
-+    CFLAGS="-O6 -ffast-math -fomit-frame-pointer ${CFLAGS_ARCH}"
-     DEFINES="-DNO_BYTE_SWAPPING -DOS_$OS_TYPE -DARCH_$ARCH_TYPE" 
-     ;;
- 
