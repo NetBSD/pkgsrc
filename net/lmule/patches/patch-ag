@@ -1,0 +1,50 @@
+$NetBSD: patch-ag,v 1.1.1.1 2003/03/31 20:58:41 jmmv Exp $
+
+--- src/UDPSocket.cpp.orig	2003-03-27 09:19:17.000000000 +0100
++++ src/UDPSocket.cpp	2003-03-27 09:21:40.000000000 +0100
+@@ -25,7 +25,8 @@
+ static pthread_attr_t attr;//=PTHREAD_CREATE_DETACHED;
+ 
+ #ifdef __FreeBSD__
+-static pthread_mutex_t gethostby_mutex = PTHREAD_MUTEX_INITIALIZER;
++#elif defined(__NetBSD__)
++static wxMutex *s_mutexProtectingGetHostByName;
+ 
+ static int
+ convert (struct hostent *host, struct hostent *result,
+@@ -131,7 +132,7 @@
+ {
+   struct hostent *host;
+ 
+-  pthread_mutex_lock (&gethostby_mutex);
++  s_mutexProtectingGetHostByName->Lock();
+ 
+   host = gethostbyname (name);
+   if (!host ||
+@@ -140,11 +141,11 @@
+     result = NULL;
+   }
+ 
+-  pthread_mutex_unlock (&gethostby_mutex);
++  s_mutexProtectingGetHostByName->Unlock();
+   return result;
+ }
+ 
+-#endif /* __FreeBSD__ */
++#endif /* __FreeBSD__ || __NetBSD__ */
+ 
+ #define TM_DNSDONE 17851
+ 
+@@ -170,10 +171,11 @@
+   char dataBuf[512]={0};
+ 
+ #ifdef __FreeBSD__
++#elif defined(__NetBSD__)
+   result = gethostbyname_r(ipName.GetData(),&ret,dataBuf,sizeof(dataBuf),&errorno); 
+ #else
+   gethostbyname_r(ipName.GetData(),&ret,dataBuf,sizeof(dataBuf),&result,&errorno);
+-#endif /* __FreeBSD__ */
++#endif /* __FreeBSD__ || __NetBSD__ */
+   if(result) {
+     unsigned long addr=*(unsigned long*)ret.h_addr;
+     struct sockaddr_in* newsi=(struct sockaddr_in*)malloc(sizeof(struct sockaddr_in));//new struct sockaddr_in;
