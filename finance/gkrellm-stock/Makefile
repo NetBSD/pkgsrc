@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/02/24 23:05:57 cube Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/07 03:47:07 minskim Exp $
 #
 
 DISTNAME=		gkrellstock-0.5.1
@@ -21,5 +21,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/gkrellstock.so ${PREFIX}/lib/gkrellm2/plugins
 	${INSTALL_SCRIPT} ${WRKSRC}/GetQuote2 ${PREFIX}/bin
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
