@@ -1,0 +1,198 @@
+$NetBSD: patch-as,v 1.1 2003/08/16 09:06:42 recht Exp $
+
+--- plugins/digestmd5.c.orig	2003-08-14 13:15:30.000000000 +0200
++++ plugins/digestmd5.c	2003-08-14 13:41:39.000000000 +0200
+@@ -59,6 +59,7 @@
+ /* DES support */
+ #ifdef WITH_DES
+ # ifdef WITH_SSL_DES
++#  include <openssl/opensslv.h>
+ #  include <openssl/des.h>
+ # else /* system DES library */
+ #  include <des.h>
+@@ -655,9 +656,15 @@
+ 
+ #ifdef WITH_DES
+ struct des_context_s {
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    DES_key_schedule keysched;  /* key schedule for des initialization */
++    DES_cblock ivec;            /* initial vector for encoding */
++    DES_key_schedule keysched2; /* key schedule for 3des initialization */
++#else
+     des_key_schedule keysched;  /* key schedule for des initialization */
+     des_cblock ivec;            /* initial vector for encoding */
+     des_key_schedule keysched2; /* key schedule for 3des initialization */
++#endif
+ };
+ 
+ typedef struct des_context_s des_context_t;
+@@ -692,6 +699,15 @@
+     des_context_t *c = (des_context_t *) text->cipher_dec_context;
+     int padding, p;
+     
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    DES_ede2_cbc_encrypt((void *) input,
++			 (void *) output,
++			 inputlen,
++			 &c->keysched,
++			 &c->keysched2,
++			 &c->ivec,
++			 DES_DECRYPT);
++#else
+     des_ede2_cbc_encrypt((void *) input,
+ 			 (void *) output,
+ 			 inputlen,
+@@ -699,7 +715,7 @@
+ 			 c->keysched2,
+ 			 &c->ivec,
+ 			 DES_DECRYPT);
+-    
++#endif    
+     /* now chop off the padding */
+     padding = output[inputlen - 11];
+     if (padding < 1 || padding > 8) {
+@@ -743,6 +759,15 @@
+     
+     len=inputlen+paddinglen+10;
+     
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    DES_ede2_cbc_encrypt((void *) output,
++			 (void *) output,
++			 len,
++			 &c->keysched,
++			 &c->keysched2,
++			 &c->ivec,
++			 DES_ENCRYPT);
++#else
+     des_ede2_cbc_encrypt((void *) output,
+ 			 (void *) output,
+ 			 len,
+@@ -750,7 +775,7 @@
+ 			 c->keysched2,
+ 			 &c->ivec,
+ 			 DES_ENCRYPT);
+-    
++#endif 
+     *outputlen=len;
+     
+     return SASL_OK;
+@@ -769,12 +794,23 @@
+ 
+     /* setup enc context */
+     slidebits(keybuf, enckey);
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    if (DES_key_sched((DES_cblock *) keybuf, &c->keysched) < 0)
++	return SASL_FAIL;
++#else
+     if (des_key_sched((des_cblock *) keybuf, c->keysched) < 0)
+ 	return SASL_FAIL;
++#endif
+ 
+     slidebits(keybuf, enckey + 7);
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    if (DES_key_sched((DES_cblock *) keybuf, &c->keysched2) < 0)
++	return SASL_FAIL;
++#else
+     if (des_key_sched((des_cblock *) keybuf, c->keysched2) < 0)
+ 	return SASL_FAIL;
++#endif
++    
+     memcpy(c->ivec, ((char *) enckey) + 8, 8);
+ 
+     text->cipher_enc_context = (cipher_context_t *) c;
+@@ -782,13 +818,23 @@
+     /* setup dec context */
+     c++;
+     slidebits(keybuf, deckey);
++
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    if (DES_key_sched((DES_cblock *) keybuf, &c->keysched) < 0)
++	return SASL_FAIL;
++#else
+     if (des_key_sched((des_cblock *) keybuf, c->keysched) < 0)
+ 	return SASL_FAIL;
+-    
++#endif    
+     slidebits(keybuf, deckey + 7);
++
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    if (DES_key_sched((DES_cblock *) keybuf, &c->keysched2) < 0)
++	return SASL_FAIL;
++#else
+     if (des_key_sched((des_cblock *) keybuf, c->keysched2) < 0)
+ 	return SASL_FAIL;
+-    
++#endif 
+     memcpy(c->ivec, ((char *) deckey) + 8, 8);
+ 
+     text->cipher_dec_context = (cipher_context_t *) c;
+@@ -813,12 +859,21 @@
+     des_context_t *c = (des_context_t *) text->cipher_dec_context;
+     int p, padding = 0;
+     
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    DES_cbc_encrypt((void *) input,
++		    (void *) output,
++		    inputlen,
++		    &c->keysched,
++		    &c->ivec,
++		    DES_DECRYPT);
++#else
+     des_cbc_encrypt((void *) input,
+ 		    (void *) output,
+ 		    inputlen,
+ 		    c->keysched,
+ 		    &c->ivec,
+ 		    DES_DECRYPT);
++#endif
+ 
+     /* Update the ivec (des_cbc_encrypt implementations tend to be broken in
+        this way) */
+@@ -867,12 +922,21 @@
+     
+     len = inputlen + paddinglen + 10;
+     
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    DES_cbc_encrypt((void *) output,
++                    (void *) output,
++                    len,
++                    &c->keysched,
++                    &c->ivec,
++                    DES_ENCRYPT);
++#else
+     des_cbc_encrypt((void *) output,
+                     (void *) output,
+                     len,
+                     c->keysched,
+                     &c->ivec,
+                     DES_ENCRYPT);
++#endif
+     
+     /* Update the ivec (des_cbc_encrypt implementations tend to be broken in
+        this way) */
+@@ -896,7 +960,12 @@
+     
+     /* setup enc context */
+     slidebits(keybuf, enckey);
++
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    DES_key_sched((DES_cblock *) keybuf, &c->keysched);
++#else
+     des_key_sched((des_cblock *) keybuf, c->keysched);
++#endif
+ 
+     memcpy(c->ivec, ((char *) enckey) + 8, 8);
+     
+@@ -905,8 +974,11 @@
+     /* setup dec context */
+     c++;
+     slidebits(keybuf, deckey);
++#if OPENSSL_VERSION_NUMBER >= 0x0090700f    
++    DES_key_sched((DES_cblock *) keybuf, &c->keysched);
++#else
+     des_key_sched((des_cblock *) keybuf, c->keysched);
+-
++#endif
+     memcpy(c->ivec, ((char *) deckey) + 8, 8);
+     
+     text->cipher_dec_context = (cipher_context_t *) c;
