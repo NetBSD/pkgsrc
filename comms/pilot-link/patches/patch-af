@@ -1,0 +1,29 @@
+$NetBSD: patch-af,v 1.1 2002/01/30 10:05:13 dillo Exp $
+
+diff -r -u pilot-link.0.9.5/libsock/slp.c work/pilot-link.0.9.5/libsock/slp.c
+--- libsock/slp.c.orig	Wed Jun  6 10:16:56 2001
++++ libsock/slp.c	Wed Jan 30 09:44:42 2002
+@@ -136,6 +141,8 @@
+ 			ps->mac->state++;
+ 			ps->mac->expect = 1;
+ 			ps->mac->buf++;
++		} else if (v == 0xbe) {
++			ps->mac->expect = 1;
+ 		}
+ 		break;
+ 
+@@ -143,9 +155,14 @@
+ 		if (v == 0xed) {
+ 			/* OK.  we think we're sync'ed, so go for the rest
+ 			   of the header */
+ 			ps->mac->state++;
+ 			ps->mac->expect = 7;
+ 			ps->mac->buf++;
++		} else if (v == 0xbe) {
++			--ps->mac->buf;
++			ps->mac->buf[-1] = v;
++			ps->mac->expect = 1;
++			ps->mac->state = 2;
+ 		}
+ 		break;
+ 
