@@ -1,20 +1,27 @@
---- sources/Makefile.orig	Mon Nov 15 16:47:49 1993
-+++ sources/Makefile	Fri Jul 10 11:16:20 1998
-@@ -35,5 +35,5 @@
+--- sources/Makefile.orig	Mon Nov 15 22:47:49 1993
++++ sources/Makefile	Tue Jul 28 11:39:53 1998
+@@ -34,7 +34,7 @@
+ 
  # Installation sites (GNU conventions):
  #
 -prefix   = /usr/local
 +prefix   = ${PREFIX}
  bindir   = $(prefix)/bin
  includedir = $(prefix)/include
-@@ -48,5 +48,5 @@
+ mandir   = $(prefix)/man
+@@ -47,8 +47,8 @@
+ CC       = gcc
  CFLAGS   = -O2 -Wall -ansi -fstrength-reduce -finline-functions
  
 -LFLAGS   =                # only sometimes needed; see below for examples
+-CPPFLAGS = -I.            # only sometimes needed; see below for examples
 +LFLAGS   = -L${X11BASE}/lib  # only sometimes needed; see below for examples
- CPPFLAGS = -I.            # only sometimes needed; see below for examples
++CPPFLAGS = -I. -I${X11BASE}/include  # only sometimes needed; see below for examples
  BINDCMD  =                # only needed for EMX and DJGPP DOS extenders
-@@ -280,14 +280,10 @@
+ 
+ 
+@@ -279,15 +279,11 @@
+ install:	install-bin install-info install-man
  
  install-bin:	$(PROGRAM)
 -		-$(STRIP) $(PROGRAM)
