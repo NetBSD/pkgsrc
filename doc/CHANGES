@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5392 2004/03/31 09:02:27 snj Exp $
+$NetBSD: CHANGES,v 1.5393 2004/03/31 10:50:34 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1633,3 +1633,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ethereal to 0.10.3 [cube 2004-03-31]
 	Updated IglooFTP to 0.6.1nb3 [xtraeme 2004-03-31]
 	Updated gtkglext to 0.7.1nb5 [snj 2004-03-31]
+	Updated xsane to 0.90nb4 [tron 2004-03-31]
