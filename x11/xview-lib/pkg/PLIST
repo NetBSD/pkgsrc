@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/07/15 11:08:55 agc Exp $
-bin/xgettext
-bin/msgfmt
+@comment $NetBSD: PLIST,v 1.5 2000/09/13 20:24:39 jlam Exp $
 include/bitmaps/1x1
 include/bitmaps/2x2
 include/bitmaps/black
@@ -293,6 +291,4 @@ lib/help/xview.info
 lib/help/props.info
 lib/help/textedit.info
 @dirrm lib/help
-man/cat1/msgfmt.0
-man/cat1/xgettext.0
 man/cat1/xview.0
