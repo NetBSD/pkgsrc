@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 09:07:33 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/16 14:32:37 tv Exp $
 #
 
 # MASTER_SITES is very special, and must end in "=":
@@ -17,10 +17,10 @@ DEPENDS=	suse_x11-*:../../emulators/suse_x11
 CONFLICTS=	jdk-* blackdown-j*
 
 FETCH_BEFORE_ARGS=-o ${DISTNAME}${EXTRACT_SUFX}
-EXTRACT_CMD=	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_CMD=	${ECHO} yes | ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >/dev/null
 WRKSRC=		${WRKDIR}/jdk1.3/jre
 
-IS_INTERACTIVE=	yes
+LICENSE=	jdk13-license
 RESTRICTED=	"Redistribution of repackaged binaries not permitted"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
