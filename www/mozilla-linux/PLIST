@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/03 08:59:48 grant Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/27 16:28:09 grant Exp $
 bin/mozilla-linux
 lib/mozilla-linux/LICENSE
 lib/mozilla-linux/README.txt
@@ -18,7 +18,6 @@ lib/mozilla-linux/chrome/en-US.jar
 lib/mozilla-linux/chrome/en-mac.jar
 lib/mozilla-linux/chrome/en-unix.jar
 lib/mozilla-linux/chrome/en-win.jar
-lib/mozilla-linux/chrome/forms.jar
 lib/mozilla-linux/chrome/help.jar
 lib/mozilla-linux/chrome/icons/default/abcardWindow.xpm
 lib/mozilla-linux/chrome/icons/default/abcardWindow16.xpm
@@ -124,6 +123,7 @@ lib/mozilla-linux/components/libaccessibility.so
 lib/mozilla-linux/components/libaddrbook.so
 lib/mozilla-linux/components/libappcomps.so
 lib/mozilla-linux/components/libautoconfig.so
+lib/mozilla-linux/components/libbayesflt.so
 lib/mozilla-linux/components/libcaps.so
 lib/mozilla-linux/components/libchrome.so
 lib/mozilla-linux/components/libcomposer.so
@@ -153,6 +153,7 @@ lib/mozilla-linux/components/libjsdom.so
 lib/mozilla-linux/components/libjsurl.so
 lib/mozilla-linux/components/liblocalmail.so
 lib/mozilla-linux/components/libmailnews.so
+lib/mozilla-linux/components/libmailview.so
 lib/mozilla-linux/components/libmime.so
 lib/mozilla-linux/components/libmimeemitter.so
 lib/mozilla-linux/components/libmork.so
@@ -195,7 +196,9 @@ lib/mozilla-linux/components/libxpinstall.so
 lib/mozilla-linux/components/libxremote_client.so
 lib/mozilla-linux/components/libxremoteservice.so
 lib/mozilla-linux/components/locale.xpt
+lib/mozilla-linux/components/lwbrk.xpt
 lib/mozilla-linux/components/mailnews.xpt
+lib/mozilla-linux/components/mailview.xpt
 lib/mozilla-linux/components/mdn-service.js
 lib/mozilla-linux/components/mime.xpt
 lib/mozilla-linux/components/mimetype.xpt
@@ -257,6 +260,7 @@ lib/mozilla-linux/components/signonviewer.xpt
 lib/mozilla-linux/components/smime-service.js
 lib/mozilla-linux/components/timebomb.xpt
 lib/mozilla-linux/components/txmgr.xpt
+lib/mozilla-linux/components/txtsvc.xpt
 lib/mozilla-linux/components/typeaheadfind.xpt
 lib/mozilla-linux/components/uconv.xpt
 lib/mozilla-linux/components/unicharutil.xpt
@@ -291,6 +295,8 @@ lib/mozilla-linux/components/xuldoc.xpt
 lib/mozilla-linux/components/xultmpl.xpt
 lib/mozilla-linux/defaults/autoconfig/platform.js
 lib/mozilla-linux/defaults/autoconfig/prefcalls.js
+lib/mozilla-linux/defaults/messenger/US/mailViews.dat
+lib/mozilla-linux/defaults/messenger/mailViews.dat
 lib/mozilla-linux/defaults/pref/all.js
 lib/mozilla-linux/defaults/pref/editor.js
 lib/mozilla-linux/defaults/pref/inspector.js
@@ -524,10 +530,16 @@ lib/mozilla-linux/res/viewsource.css
 lib/mozilla-linux/run-mozilla.sh
 lib/mozilla-linux/searchplugins/NetscapeSearch.gif
 lib/mozilla-linux/searchplugins/NetscapeSearch.src
+lib/mozilla-linux/searchplugins/bugzilla.gif
+lib/mozilla-linux/searchplugins/bugzilla.src
 lib/mozilla-linux/searchplugins/dmoz.gif
 lib/mozilla-linux/searchplugins/dmoz.src
 lib/mozilla-linux/searchplugins/google.gif
 lib/mozilla-linux/searchplugins/google.src
+lib/mozilla-linux/searchplugins/lxrmozilla.gif
+lib/mozilla-linux/searchplugins/lxrmozilla.src
+lib/mozilla-linux/searchplugins/mozilla.gif
+lib/mozilla-linux/searchplugins/mozilla.src
 lib/mozilla-linux/timebombgen
 lib/mozilla-linux/xpcshell
 lib/mozilla-linux/xpicleanup
@@ -555,6 +567,8 @@ lib/mozilla-linux/xpt_link
 @dirrm lib/mozilla-linux/defaults/profile/US
 @dirrm lib/mozilla-linux/defaults/profile
 @dirrm lib/mozilla-linux/defaults/pref
+@dirrm lib/mozilla-linux/defaults/messenger/US
+@dirrm lib/mozilla-linux/defaults/messenger
 @dirrm lib/mozilla-linux/defaults/autoconfig
 @dirrm lib/mozilla-linux/defaults
 @dirrm lib/mozilla-linux/components
@@ -676,6 +690,8 @@ lib/mozilla-linux/xpt_link
 @dirrm lib/mozilla-linux/chrome/messenger/content/messenger/messengercompose
 @exec ${MKDIR} %D/lib/mozilla-linux/chrome/messenger/content/messenger/addressbook
 @dirrm lib/mozilla-linux/chrome/messenger/content/messenger/addressbook
+@exec ${MKDIR} %D/lib/mozilla-linux/chrome/messenger/content/messenger-views
+@dirrm lib/mozilla-linux/chrome/messenger/content/messenger-views
 @exec ${MKDIR} %D/lib/mozilla-linux/chrome/messenger/content/messenger-smime
 @dirrm lib/mozilla-linux/chrome/messenger/content/messenger-smime
 @exec ${MKDIR} %D/lib/mozilla-linux/chrome/messenger/content/messenger-region
@@ -768,14 +784,6 @@ lib/mozilla-linux/xpt_link
 @dirrm lib/mozilla-linux/chrome/help/content/help
 @dirrm lib/mozilla-linux/chrome/help/content
 @dirrm lib/mozilla-linux/chrome/help
-@exec ${MKDIR} %D/lib/mozilla-linux/chrome/forms/skin/classic/forms
-@dirrm lib/mozilla-linux/chrome/forms/skin/classic/forms
-@dirrm lib/mozilla-linux/chrome/forms/skin/classic
-@dirrm lib/mozilla-linux/chrome/forms/skin
-@exec ${MKDIR} %D/lib/mozilla-linux/chrome/forms/content/forms
-@dirrm lib/mozilla-linux/chrome/forms/content/forms
-@dirrm lib/mozilla-linux/chrome/forms/content
-@dirrm lib/mozilla-linux/chrome/forms
 @exec ${MKDIR} %D/lib/mozilla-linux/chrome/en-win/locale/en-US/navigator-platform
 @dirrm lib/mozilla-linux/chrome/en-win/locale/en-US/navigator-platform
 @exec ${MKDIR} %D/lib/mozilla-linux/chrome/en-win/locale/en-US/messenger-mapi
@@ -834,8 +842,6 @@ lib/mozilla-linux/xpt_link
 @dirrm lib/mozilla-linux/chrome/en-US/locale/en-US/help
 @exec ${MKDIR} %D/lib/mozilla-linux/chrome/en-US/locale/en-US/global
 @dirrm lib/mozilla-linux/chrome/en-US/locale/en-US/global
-@exec ${MKDIR} %D/lib/mozilla-linux/chrome/en-US/locale/en-US/forms
-@dirrm lib/mozilla-linux/chrome/en-US/locale/en-US/forms
 @exec ${MKDIR} %D/lib/mozilla-linux/chrome/en-US/locale/en-US/editor
 @dirrm lib/mozilla-linux/chrome/en-US/locale/en-US/editor
 @exec ${MKDIR} %D/lib/mozilla-linux/chrome/en-US/locale/en-US/cookie
