@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/27 03:20:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/30 04:16:12 jlam Exp $
 #
 
 DISTNAME=	eperl-2.2.14
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.engelschall.com/sw/eperl/
 COMMENT=	Interpreter/preprocessor for Perl embedded in text documents
 
 BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
-DEPENDS=	libperl-5.*:../../lang/libperl
+DEPENDS=	libperl>=${PERL5_REQD}:../../lang/libperl
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Parse/ePerl/.packlist

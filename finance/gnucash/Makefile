@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/23 15:46:42 mjl Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/30 04:16:09 jlam Exp $
 #
 
 DISTNAME=		gnucash-1.4.11
@@ -15,7 +15,7 @@ DEPENDS+=		gnome-libs>=1.0.40:../../x11/gnome-libs
 DEPENDS+=		eperl-2.2.14:../../textproc/eperl
 DEPENDS+=		g-wrap>=0.9.5:../../devel/g-wrap
 DEPENDS+=		guile-slib-2c8:../../devel/guile-slib
-DEPENDS+=		libperl-5.*:../../lang/libperl
+DEPENDS+=		libperl>=${PERL5_REQD}:../../lang/libperl
 DEPENDS+=		swig-1.1p5:../../devel/swig
 DEPENDS+=		libxml>=1.8.7:../../textproc/libxml
 
