@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/15 20:39:50 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/02 13:06:07 agc Exp $
 
 DISTNAME=		xquote-1.1
 CATEGORIES=		x11
@@ -14,6 +14,7 @@ DEPENDS+=		xpm-3.4k:../../graphics/xpm
 USE_IMAKE=		yes
 USE_MOTIF=		yes
 NO_INSTALL_MANPAGES=	yes
+EXTRACT_ONLY=		${DISTNAME}.tar.gz
 
 post-patch:
 	${TOUCH} ${WRKSRC}/Xquote.man
