@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.3 2002/12/03 21:21:57 jmmv Exp $
+$NetBSD: patch-af,v 1.3.2.1 2003/03/20 16:39:12 grant Exp $
 
---- doc/mutt.man.in.orig	Thu Aug 30 14:55:37 2001
-+++ doc/mutt.man.in
-@@ -124,21 +124,19 @@ Editor to invoke when the ~v command is 
+--- doc/mutt.man.in.orig	Wed Mar 19 23:25:40 2003
++++ doc/mutt.man.in	Wed Mar 19 23:27:11 2003
+@@ -124,21 +124,19 @@
  .PP
  .IP "~/.muttrc or ~/.mutt/muttrc"
  User configuration file.
@@ -15,7 +15,7 @@ $NetBSD: patch-af,v 1.3 2002/12/03 21:21:57 jmmv Exp $
  User definition for handling non-text MIME types.
 -.IP "/etc/mailcap"
 +.IP "@PKG_SYSCONFDIR@/mailcap"
- System definition for handing non-text MIME types.
+ System definition for handling non-text MIME types.
  .IP "~/.mime.types"
  User's personal mapping between MIME types and file extensions.
 -.IP "/etc/mime.types"
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.3 2002/12/03 21:21:57 jmmv Exp $
  The Mutt manual.
  .SH BUGS
  .PP
-@@ -174,7 +172,6 @@ GNU General Public License for more deta
+@@ -174,7 +172,6 @@
  .BR mailcap (5),
  .BR maildir (5),
  .BR mbox (5),
