@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/25 21:43:02 jtb Exp $
 
 DISTNAME=	ScientificPython-2.0.1
 PKGNAME=	py-Scientific-2.0.1
@@ -12,7 +12,7 @@ COMMENT=	Python modules for scientific computing
 
 DEPENDS+=	python>=1.5:../../lang/python
 DEPENDS+=	netcdf>=3.0:../../devel/netcdf
-DEPENDS+=	mpich-[0-9]*:../../parallel/mpi-ch
+DEPENDS+=	mpich->=1.2.1:../../parallel/mpi-ch
 DEPENDS+=	py-Numeric-[0-9]*:../../math/py-Numeric
 
 .if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "mips" || ${MACHINE_ARCH} == "vax"
