@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9262 2005/02/22 14:05:07 adam Exp $
+$NetBSD: CHANGES,v 1.9263 2005/02/22 14:35:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1029,3 +1029,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated skkserv to 3.9.4nb4 [hira 2005-02-22]
 	Removed abiword1 [adam 2005-02-22]
 	Updated octave-current to 2.1.65 [adam 2005-02-22]
+	Added gtmess-0.9 [minskim 2005-02-22]
