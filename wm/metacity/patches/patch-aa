@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2003/02/14 20:59:44 jmmv Exp $
+
+--- src/Makefile.in.orig	2003-02-13 23:51:38.000000000 +0100
++++ src/Makefile.in
+@@ -679,7 +679,6 @@ maintainer-clean-generic clean mostlycle
+ @INTLTOOL_SCHEMAS_RULE@
+ 
+ install-data-local:
+-	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
+ 
+ inlinepixbufs.h: $(IMAGES)
+ 	   $(GDK_PIXBUF_CSOURCE) --raw --build-list $(VARIABLES) >$(srcdir)/inlinepixbufs.h

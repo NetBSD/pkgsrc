@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2003/01/10 07:53:35 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2003/02/14 20:59:44 jmmv Exp $
 #
 
-DISTNAME=	metacity-2.4.1
-PKGREVISION=	1
+DISTNAME=	metacity-2.4.34
 CATEGORIES=	wm
-MASTER_SITES=	http://people.redhat.com/~hp/metacity/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.4/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
-#HOMEPAGE=	
+HOMEPAGE=	http://www.gnome.org/softwaremap/projects/Metacity
 COMMENT=	gnome-compliant window manager
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-included-gettext
@@ -21,10 +22,11 @@ USE_X11=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 
+GCONF2_SCHEMAS=		metacity.schemas
+
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/GConf2/buildlink2.mk"
+.include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libglade2/buildlink2.mk"
 .include "../../net/ORBit2/buildlink2.mk"
 .include "../../x11/gtk2/buildlink2.mk"
-.include "../../devel/ptl2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
