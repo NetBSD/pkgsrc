@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2004/01/22 12:38:46 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.22 2004/02/27 01:52:48 snj Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -791,6 +791,8 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @dirrm lib/gtk-2.0/include
 @exec ${MKDIR} %D/lib/gtk-2.0/engines 2>/dev/null || ${TRUE}
 @dirrm lib/gtk-2.0/engines
+@exec ${MKDIR} %D/lib/gtk-2.0/2.2.0/engines
+@dirrm lib/gtk-2.0/2.2.0/engines
 @dirrm lib/gtk-2.0/2.2.0/loaders
 @dirrm lib/gtk-2.0/2.2.0/immodules
 @dirrm lib/gtk-2.0/2.2.0
