@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2004/01/03 18:49:39 reed Exp $
+# $NetBSD: Makefile,v 1.67 2004/01/27 00:53:11 heinz Exp $
 
 DISTNAME=	xemacs-21.4.14
 PKGREVISION=	1
@@ -137,7 +137,7 @@ post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/${DISTNAME}
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/xemacs
 .if defined(MANZ)
-	${FIND} ${PREFIX}/lib/${DISTNAME} -name "*.el" -type f | \
+	${FIND} ${PREFIX}/lib/${DISTNAME} -name "*.el" -type f -print | \
 	${XARGS} ${GZIP_CMD}
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/24 13:51:15 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/27 00:53:11 heinz Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		2
@@ -78,7 +78,7 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/sather/Library \
 		${PREFIX}/lib/sather/System
 	${FIND} ${PREFIX}/lib/sather -name \*.config -o -name Makefile 	\
-		-o -name \*.orig | ${XARGS} ${RM} -f
+		-o -name \*.orig -print | ${XARGS} ${RM} -f
 	${INSTALL_DATA} ${WRKSRC}/Emacs/*.info* ${PREFIX}/info
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sather
 	cd ${WRKSRC}/Doc && ${PAX} -rw . ${PREFIX}/share/doc/sather
