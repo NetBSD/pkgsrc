@@ -1,0 +1,36 @@
+$NetBSD: patch-ap,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+
+--- sr/output.c.orig	1999-07-28 23:08:50.000000000 +0200
++++ sr/output.c
+@@ -8,7 +8,7 @@
+ #include "compiler.h"
+ #include <ctype.h>
+ #include <errno.h>
+-#include <varargs.h>
++#include <stdarg.h>
+ 
+ #define NSTREAMS 10		/* number of output streams */
+ #define DEFSTREAM 9		/* default stream number */
+@@ -231,11 +231,9 @@ cflush ()
+ 
+ /* VARARGS */
+ void
+-cprintf (va_alist)
+-va_dcl
++cprintf (char *fmt, ...)
+ {
+     va_list ap;
+-    char *fmt;
+     char *s;
+     char c;
+     int n, oldstream;
+@@ -244,8 +242,7 @@ va_dcl
+ 
+     oldstream = outstream;		/* save stream number in case changed */
+ 
+-    va_start (ap);
+-    fmt = va_arg (ap, char *);
++    va_start (ap, fmt);
+ 
+     if (*fmt == ',' && LASTPUT () == '(')
+ 	fmt++;				/* skip initial comma inside parens */
