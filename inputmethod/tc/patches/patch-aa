@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/09/15 06:31:42 uebayasi Exp $
+--- etc/Makefile.in.orig	Mon Jul  9 03:08:44 2001
++++ etc/Makefile.in	Mon Jul  9 03:09:00 2001
+@@ -74,7 +74,7 @@
+ lispdir = @lispdir@
+ 
+ SHELL = /bin/sh
+-INSTALL_SCRIPT = $(INSTALL_PROGRAM)
++INSTALL_SCRIPT = $(BSD_INSTALL_SCRIPT)
+ 
+ bin_SCRIPTS = tc-inst
+ 
