@@ -1,4 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/03/28 21:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/04/24 22:14:37 jmc Exp $
+
+# Needed so configure/patch rules don't get pulled in
+NO_BUILD=	yes
+NO_CONFIGURE=	yes
 
 .include	"../nethack-lib/Makefile.common"
 
@@ -16,9 +20,8 @@ DEPENDS+=	nethack-qt-${NETHACK_VERSION}:../nethack-qt
 USE_X11=	yes
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
-NO_BUILD=	yes
-NO_CONFIGURE=	yes
 
 do-install:	# empty
+do-patch:	# empty
 
 .include "../../mk/bsd.pkg.mk"
