@@ -1,10 +1,10 @@
-$NetBSD: patch-bg,v 1.1 2000/12/22 17:26:21 jlam Exp $
+$NetBSD: patch-bg,v 1.2 2001/03/28 14:57:55 drochner Exp $
 
---- lib/Uil-2.0/Makefile.am.orig	Wed Oct 25 04:56:15 2000
-+++ lib/Uil-2.0/Makefile.am
-@@ -40,7 +40,11 @@
-           -DX_LIB_PATH=\"@x_libraries@\" \
-           -DLESSTIFHOME=\"@prefix@\"
+--- lib/Uil-2.0/Makefile.am.orig	Tue Jan 16 23:22:14 2001
++++ lib/Uil-2.0/Makefile.am	Wed Mar 28 14:40:59 2001
+@@ -38,7 +38,11 @@
+           -I$(top_srcdir)/lib/Uil \
+           $(X_CFLAGS)
  
 +if DefaultVersion20
 +libdir = $(prefix)/lib
