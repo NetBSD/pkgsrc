@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/07/21 21:13:46 tv Exp $
+# $NetBSD: Makefile,v 1.13 1998/08/19 15:33:12 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -9,13 +9,13 @@ MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.0/distribution/tar/generic/s
 
 MAINTAINER=	tron@netbsd.org
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/libtool:../../devel/libtool
 DEPENDS+=	qt-1.40:../../x11/qt
 
 CONFLICTS=	kdesupport-2.1b kdesupport-3.1b kdesupport-4.1b
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-includes=${PREFIX}/include/qt" \
 		"--with-qt-libraries=${PREFIX}/lib" \
@@ -24,6 +24,6 @@ CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 		"--without-libgif" \
 		"--without-libgdbm" \
 		"--without-libuulib"
-CONFIGURE_ENV=	LIBTOOL="${LOCALBASE}/bin/libtool --install-la"
+LIBTOOL_FLAGS=	--install-la
 
 .include "../../mk/bsd.pkg.mk"
