@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
+bin/tsocks
+lib/libtsocks.so
+lib/libtsocks.so.1
+lib/libtsocks.so.${PKGVERSION}
+man/man5/tsocks.conf.5
+man/man8/tsocks.8
+share/examples/tsocks/tsocks.conf.complex
+share/examples/tsocks/tsocks.conf.simple
+@dirrm share/examples/tsocks

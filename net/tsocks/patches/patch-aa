@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
+
+--- Makefile.in.orig	2001-03-13 23:59:42.000000000 +0100
++++ Makefile.in
+@@ -38,19 +38,19 @@ TARGETS= ${SHLIB} ${UTIL_LIB} ${SAVE} ${
+ all: ${TARGETS}
+ 
+ ${COMMON}.o: ${COMMON}.c
+-	${SHCC} ${CFFLAGS} ${INCLUDES} -c -o ${COMMON}.o ${COMMON}.c
++	${SHCC} ${CFLAGS} ${INCLUDES} -c -o ${COMMON}.o ${COMMON}.c
+ 
+ ${PARSER}.o: ${PARSER}.c
+-	${SHCC} ${CFFLAGS} ${INCLUDES} -c -o ${PARSER}.o ${PARSER}.c
++	${SHCC} ${CFLAGS} ${INCLUDES} -c -o ${PARSER}.o ${PARSER}.c
+ 
+ ${VALIDATECONF}: ${VALIDATECONF}.c ${COMMON}.o ${PARSER}.o
+-	${SHCC} ${CFFLAGS} ${LIBS} ${INCLUDES} -o ${VALIDATECONF} ${VALIDATECONF}.c ${COMMON}.o ${PARSER}.o
++	${SHCC} ${CFLAGS} ${LIBS} ${INCLUDES} -o ${VALIDATECONF} ${VALIDATECONF}.c ${COMMON}.o ${PARSER}.o
+ 
+ ${INSPECT}: ${INSPECT}.c ${COMMON}.o
+-	${SHCC} ${CFFLAGS} ${LIBS} ${INCLUDES} -o ${INSPECT} ${INSPECT}.c ${COMMON}.o
++	${SHCC} ${CFLAGS} ${LIBS} ${INCLUDES} -o ${INSPECT} ${INSPECT}.c ${COMMON}.o
+ 
+ ${SAVE}: ${SAVE}.c
+-	${SHCC} ${CFFLAGS} ${INCLUDES} -static -o ${SAVE} ${SAVE}.c
++	${SHCC} ${CFLAGS} ${INCLUDES} -static -o ${SAVE} ${SAVE}.c
+ 
+ ${SHLIB}: ${SHOBJS} ${COMMON}.o ${PARSER}.o
+ 	${SHCC} ${CFLAGS} ${SPECIALLIBS} ${LIBS} ${INCLUDES} -nostdlib -shared -o ${SHLIB} ${SHOBJS} ${COMMON}.o ${PARSER}.o ${DYNLIB_FLAGS}
+@@ -65,19 +65,19 @@ ${SHLIB}: ${SHOBJS} ${COMMON}.o ${PARSER
+ install: ${TARGETS} installlib installman
+ 
+ installlib:
+-	${INSTALL} ${STATICLIB} ${SHLIB} ${libdir}
++	${BSD_INSTALL_DATA} ${STATICLIB} ${SHLIB} ${libdir}
+ 	ln -sf ${SHLIB} ${libdir}/${LIB_NAME}.so.${SHLIB_MAJOR}
+ 	ln -sf ${LIB_NAME}.so.${SHLIB_MAJOR} ${libdir}/${LIB_NAME}.so
+ 
+ installman:
+ 	if [ ! -d "${mandir}/man8" ] ; then \
+-		${INSTALL} -o root -g root -d ${mandir}/man8; \
++		${BSD_INSTALL_MAN_DIR} ${mandir}/man8; \
+ 	fi;
+-	${INSTALL_DATA} -o root -g root tsocks.8 ${mandir}/man8/
++	${BSD_INSTALL_MAN} tsocks.8 ${mandir}/man8/
+ 	if [ ! -d "${mandir}/man5" ] ; then \
+-		${INSTALL} -o root -g root -d ${mandir}/man5; \
++		${BSD_INSTALL_MAN_DIR} -d ${mandir}/man5; \
+ 	fi;
+-	${INSTALL_DATA} -o root -g root tsocks.conf.5 ${mandir}/man5/
++	${BSD_INSTALL_MAN} tsocks.conf.5 ${mandir}/man5/
+ 	
+ clean:
+ 	-rm -f *.so *.so.* *.o *~ ${TARGETS}
