@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/02/28 14:58:54 taca Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/23 23:33:12 taca Exp $
 #
 
-DISTNAME=		ipadic-2.4.3
+DISTNAME=		ipadic-2.4.4
 CATEGORIES=		japanese
 MASTER_SITES=		http://chasen.aist-nara.ac.jp/stable/ipadic/
 
@@ -19,8 +19,5 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/chasenrc \
 		${LOCALBASE}/share/chasen/dic/ipadic/chasenrc.example
-	${TEST} -f ${LOCALBASE}/etc/chasenrc || \
-		${INSTALL} -c -m ${NONBINMODE} -o ${BINOWN} -g ${BINGRP} \
-			${WRKSRC}/chasenrc ${LOCALBASE}/etc
 
 .include "../../mk/bsd.pkg.mk"
