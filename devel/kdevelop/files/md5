@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/12/14 17:20:43 wennmach Exp $
+$NetBSD: md5,v 1.3 2000/05/05 13:51:40 wulf Exp $
 
-MD5 (kdevelop-1.0.tar.gz) = 90177367981cf9d164f16950ccdebb46
+MD5 (kdevelop-1.2.tar.bz2) = 5d3fcc0469dd1b9f2f918ce1b48e76c4
