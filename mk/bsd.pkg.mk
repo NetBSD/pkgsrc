@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1248 2003/08/27 11:29:56 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1249 2003/08/30 20:52:09 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -559,14 +559,6 @@ PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}
 PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 .endif
 
-# Handle info files
-#
-INFO_FILES?=			# default to no info files to handle 
-USE_MAKEINFO?=	no		# default to not using makeinfo
-.if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
-. include "../../mk/texinfo.mk"
-.endif
-
 .if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
 .  include "../../mk/bsd.pkg.install.mk"
 .endif
@@ -579,6 +571,14 @@ INSTALL_FILE=		${PKGDIR}/INSTALL
 # Set DEINSTALL_FILE to be the name of any DEINSTALL file
 .if !defined(DEINSTALL_FILE) && exists(${PKGDIR}/DEINSTALL)
 DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
+.endif
+
+# Handle info files
+#
+INFO_FILES?=			# default to no info files to handle 
+USE_MAKEINFO?=	no		# default to not using makeinfo
+.if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
+. include "../../mk/texinfo.mk"
 .endif
 
 # If MESSAGE hasn't been defined, then set MESSAGE_SRC to be a space-separated
