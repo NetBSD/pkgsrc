@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/09/24 09:18:15 seb Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/24 16:17:53 jlam Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -20,10 +20,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		my_cv_comment=""
 
 pre-configure:
-	${ECHO} '#!${SH}' > ${WRAPPER_DIR}/bin/glib-config-2.0
+	${ECHO} '#!${SH}' > ${BUILDLINK_DIR}/bin/glib-config-2.0
 	${ECHO} '${PREFIX}/bin/pkg-config glib-2.0 "$$@"'		\
-		>> ${WRAPPER_DIR}/bin/glib-config-2.0
-	${CHMOD} +x ${WRAPPER_DIR}/bin/glib-config-2.0
+		>> ${BUILDLINK_DIR}/bin/glib-config-2.0
+	${CHMOD} +x ${BUILDLINK_DIR}/bin/glib-config-2.0
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
