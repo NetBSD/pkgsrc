@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2003/12/05 14:31:00 agc Exp $
+# $NetBSD: Makefile,v 1.60 2003/12/14 01:23:56 xtraeme Exp $
 #
 
 COMMENT=	Fonts
@@ -46,6 +46,7 @@ SUBDIR+=	geoslab703-ttf
 SUBDIR+=	ghostscript-cidfonts
 SUBDIR+=	ghostscript-cmaps
 SUBDIR+=	ghostscript-fonts
+SUBDIR+=	gucharmap
 SUBDIR+=	intlfonts
 SUBDIR+=	ja-elisat
 SUBDIR+=	ja-elisau
