@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 1999/04/16 20:36:40 jlam Exp $
+# $NetBSD: Makefile,v 1.87 1999/04/30 17:25:38 tv Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -6,8 +6,8 @@
     SUBDIR += XF86Setup
 #    SUBDIR += XFree86
 #    SUBDIR += XFree86-contrib
+    SUBDIR += Xaw-Xpm
     SUBDIR += Xaw3d
-#    SUBDIR += Xaw-Xpm
     SUBDIR += XmHTML
     SUBDIR += afterstep
     SUBDIR += amiwm
@@ -22,8 +22,8 @@
     SUBDIR += ctwm
 #    SUBDIR += dclock
     SUBDIR += dxpc
-    SUBDIR += emiclock
     SUBDIR += econf
+    SUBDIR += emiclock
 #    SUBDIR += emu
     SUBDIR += enlightenment
     SUBDIR += eterm
@@ -32,17 +32,16 @@
 #    SUBDIR += fbsd-icons
     SUBDIR += filerunner
 #    SUBDIR += freefonts
+    SUBDIR += fvwm-wharf
     SUBDIR += fvwm1
     SUBDIR += fvwm2
-#    SUBDIR += fvwm2-english
     SUBDIR += fvwm95
-    SUBDIR += fvwm-wharf
 #    SUBDIR += getbdf
     SUBDIR += gnome-core
     SUBDIR += gnome-libs
     SUBDIR += gtk
-    SUBDIR += gtk10
     SUBDIR += gtk--
+    SUBDIR += gtk10
     SUBDIR += gtkglarea
 #    SUBDIR += gwm
 #    SUBDIR += iv
@@ -58,14 +57,15 @@
 #    SUBDIR += mouseclock
 #    SUBDIR += neXtaw
 #    SUBDIR += olvwm
-    SUBDIR += p5-gtk
 #    SUBDIR += p5-Tcl-Tk
     SUBDIR += p5-Tk
+    SUBDIR += p5-gtk
 #    SUBDIR += piewm
 #    SUBDIR += pythonqt
     SUBDIR += py-Tk
     SUBDIR += qt
 #    SUBDIR += qvwm
+    SUBDIR += qwspritefield
     SUBDIR += rclock
     SUBDIR += rxvt
 #    SUBDIR += sliderule
