@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1998/11/05 07:44:45 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.10 1998/12/29 19:34:48 tron Exp $
 bin/moc
 include/qt/jri.h
 include/qt/jri_md.h
@@ -193,7 +193,7 @@ include/qt/qwindow.h
 include/qt/qwindowdefs.h
 include/qt/qwmatrix.h
 lib/libqt.a
-lib/libqt.so.1.41
+lib/libqt.so.1.42
 man/man1/moc.1
 man/man3/QAccel.3
 man/man3/QApplication.3
