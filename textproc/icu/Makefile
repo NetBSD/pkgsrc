@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/21 10:18:09 skrll Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/21 10:21:32 skrll Exp $
 #
 
 DISTNAME=	icu-1.6
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://oss.software.ibm.com/icu/download/1.6/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	p99dreyf@criens.u-psud.fr
+MAINTAINER=	skrll@netbsd.org
 HOMEPAGE=	http://oss.software.ibm.com/icu
 
 WRKSRC=		${WRKDIR}/icu/source
