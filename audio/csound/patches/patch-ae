@@ -1,26 +1,16 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2001/06/29 18:39:03 wiz Exp $
 
---- configure.in.orig	Sun Oct 29 00:25:07 2000
-+++ configure.in
-@@ -327,6 +327,9 @@
- dnl It provides an interface between Csound realtime record/play calls
- dnl and the device-driver code that controls the actual hardware.
- dnl
-+
-+dnl Some systems require libossaudio.a
-+AC_CHECK_LIB(ossaudio, _oss_ioctl, [LIBOSS="-lossaudio"], [ LIBOSS=""])
- AC_ARG_ENABLE(OSS_RTAUDIO,
-   [  --enable-OSS-RTAUDIO	  enable OSS-RTAUDIO (default: no)],
-   [case "${enable_OSS_RTAUDIO}" in
-@@ -341,6 +344,7 @@
- 	CSOUND_CONF_MESSAGE(enable the OSS-RTAUDIO feature...)
+--- configure.in.orig	Sun Jun  3 18:14:50 2001
++++ configure.in	Sun Jun  3 18:20:52 2001
+@@ -364,6 +364,7 @@
+ 	CSOUND_CONF_MESSAGE(enable the OSS-RTAUDIO driver...)
  	RTAUDIO_DRIVER=["LINUXaudio.c \${LINUX_DISTRIB_DIR}/OSSrtaudio.c"]
  	DEFS=["${DEFS} -DOSSRTAUDIO"]
-+	LIBS=["-lossaudio ${LIBOSS}"]
++	LIBS=["-lossaudio ${LIBS}"]
  fi
  
- dnl
-@@ -575,8 +579,8 @@
+ if test "${enable_rtaudio}" = "alsa"
+@@ -613,8 +614,8 @@
  dnl
  
  case $host in
@@ -31,7 +21,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
  		;;
  	*)
  		;;
-@@ -610,10 +614,10 @@
+@@ -648,10 +649,10 @@
  	changequote(<<, >>)dnl
  	csound_version_full=`(cat ${version_file}; echo VERSIONSTRING) | ${CPP} - | ${AWK} '/^" v"/ { gsub(/[" v]/,""); print $0; }'`
  	changequote([, ])dnl
