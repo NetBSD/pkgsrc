@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.4 2000/04/27 13:14:54 tron Exp $
+$NetBSD: patch-ao,v 1.5 2000/05/30 07:38:54 tron Exp $
 
---- lib/Xlt/configure.orig	Sat Apr 15 16:39:57 2000
-+++ lib/Xlt/configure	Thu Apr 27 13:27:55 2000
-@@ -1197,7 +1197,7 @@
+--- lib/Xlt/configure.orig	Mon May 15 02:47:21 2000
++++ lib/Xlt/configure	Tue May 30 09:35:32 2000
+@@ -560,7 +560,7 @@
  
  
  ac_aux_dir=
@@ -11,19 +11,19 @@ $NetBSD: patch-ao,v 1.4 2000/04/27 13:14:54 tron Exp $
    if test -f $ac_dir/install-sh; then
      ac_aux_dir=$ac_dir
      ac_install_sh="$ac_aux_dir/install-sh -c"
-@@ -2316,6 +2316,7 @@
- 
+@@ -2871,6 +2871,7 @@
+ fi
  
  
 +if false; then
  # Check for any special flags to pass to ltconfig.
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -2473,6 +2474,7 @@
+@@ -3041,6 +3042,7 @@
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
  exec 5>>./config.log
 +fi
  
  echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
- echo "configure:2479: checking whether to enable maintainer-specific portions of Makefiles" >&5
+ echo "configure:3047: checking whether to enable maintainer-specific portions of Makefiles" >&5
