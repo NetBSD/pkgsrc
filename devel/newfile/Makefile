@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/16 03:42:36 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/22 03:22:57 wiz Exp $
 #
 
-DISTNAME=	newfile-1.0.3
+DISTNAME=	newfile-1.0.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=newfile/}
 
