@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2004/11/18 19:07:04 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2004/11/27 05:32:35 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENLDAP_BUILDLINK3_MK:=	${OPENLDAP_BUILDLINK3_MK}+
@@ -20,17 +20,8 @@ BUILDLINK_PKGSRCDIR.openldap?=		../../databases/openldap
 
 PKG_OPTIONS.openldap?=	${PKG_DEFAULT_OPTIONS}
 
-.if !empty(PKG_OPTIONS.openldap:Mkerberos)
-.  if empty(PKG_OPTIONS.openldap:Msasl)
-PKG_OPTIONS.openldap+=	sasl
-.  endif
-.endif
-
-.if !empty(PKG_OPTIONS.openldap:Msasl)
+.if !empty(PKG_OPTIONS.openldap:Mkerberos) || !empty(PKG_OPTIONS.openldap:Msasl)
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
-.endif
-.if !empty(PKG_OPTIONS.openldap:Mslp)
-.  include "../../net/openslp/buildlink3.mk"
 .endif
 .include "../../security/openssl/buildlink3.mk"
 
