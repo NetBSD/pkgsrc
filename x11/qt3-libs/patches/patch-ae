@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2003/12/19 15:43:31 skrll Exp $
+
+--- src/kernel/qinputcontext_x11.cpp.orig	2003-10-10 10:47:35.000000000 +0900
++++ src/kernel/qinputcontext_x11.cpp	2003-12-15 23:15:04.000000000 +0900
+@@ -255,9 +255,8 @@
+ 		qDebug( "compose emptied" );
+ #endif // QT_XIM_DEBUG
+ 
+-		// don't send an empty compose, since we will send an IMEnd with
+-		// either the correct compose text (or null text if the user has
+-		// cancelled the compose or deleted all chars).
++		QIMComposeEvent event( QEvent::IMCompose, qic->text, 0, 0 );
++		QApplication::sendEvent(qic->focusWidget, &event);
+ 		return 0;
+ 	    }
+ 	}

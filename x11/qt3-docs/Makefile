@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2003/08/01 15:31:08 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2003/12/19 15:43:31 skrll Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
 
 PKGNAME=	qt3-docs-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Documentation for the QT C++ X GUI toolkit
 
 USE_BUILDLINK2=	yes
@@ -29,7 +28,7 @@ do-install:
 	    fi; \
 	 done)
 	${INSTALL_DATA_DIR} ${QTPREFIX}/doc/html
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README.QT ${QTPREFIX}/doc/html
+	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README-QT.TXT ${QTPREFIX}/doc/html
 	cd ${WRKSRC};  \
 	DOCDIRS="`${FIND} doc/html -type d -print | ${SORT}`"; \
 	(for d in $${DOCDIRS}; do \
