@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.13 2003/07/28 14:35:34 adam Exp $
+$NetBSD: patch-aa,v 1.14 2005/01/31 19:09:16 tv Exp $
 
 --- pico/makefile.neb.orig	2001-10-24 00:19:07.000000000 +0200
 +++ pico/makefile.neb	2003-07-28 14:04:16.000000000 +0200
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.13 2003/07/28 14:35:34 adam Exp $
 -		$(RANLIB) libpico.a
 +libpico.la:	$(OFILES)
 +		$(CC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
-+			-version-info 4:0
++			-version-info 5:0
  
  clean:
  		rm -f *.a *.o *~ pico_os.c os.h pico pilot
