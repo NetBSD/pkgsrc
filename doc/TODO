@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.6 2002/11/26 12:15:08 skrll Exp $
+$NetBSD: TODO,v 1.7 2002/11/26 12:16:18 skrll Exp $
 
 Suggested new packages
 ======================
@@ -134,7 +134,7 @@ Suggested package updates
 	o joe-2.9 [pkg/18022]
 	o johntheripper-1.6.32
 	o jpilot-0.99.2 [dillo]
-	o kde-3.0.5
+	o kde-3.0.5 [skrll]
 	o kdevelop-2.1.4 [3.0alpha1]
 	o lbreakout2-2.3.5
 	o lcms-1.0.9
