@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/06/07 04:25:33 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2001/07/09 17:10:27 tv Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -12,7 +12,6 @@ COMMENT=		Practical Extraction and Report Language
 
 DEPENDS+=		perl-base>=${PERL5_DIST_VERS}:../../lang/perl5-base
 DEPENDS+=		p5-CGI>=2.75.2:../../www/p5-CGI
-DEPENDS+=		perl-mk-1.1:../../pkgtools/perl-mk
 
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		# defined
