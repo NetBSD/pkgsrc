@@ -1,9 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/10/16 01:04:33 garbled Exp $
+bin/barrier
+bin/barrierd
+bin/seq
+bin/run
 bin/dsh
 bin/pcp
 bin/pdf
 bin/prm
 bin/dshbak
+man/man1/barrier.1
+man/man1/barrierd.1
+man/man1/seq.1
+man/man1/run.1
 man/man1/dsh.1
 man/man1/pcp.1
 man/man1/pdf.1
