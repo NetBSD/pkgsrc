@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/09/22 08:09:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/10/13 12:37:18 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -3071,6 +3071,7 @@ share/kde/icons/kdeclassic/22x22/actions/kalarm_disabled.png
 share/kde/icons/kdeclassic/22x22/actions/kalarmdgui.png
 share/kde/icons/kdeclassic/22x22/actions/kalarmdgui_disabled.png
 share/kde/icons/kdeclassic/22x22/actions/kanjidic.png
+share/kde/icons/kdeclassic/22x22/actions/kde.png
 share/kde/icons/kdeclassic/22x22/actions/kdeprint_addprinter.png
 share/kde/icons/kdeclassic/22x22/actions/kdeprint_addpseudo.png
 share/kde/icons/kdeclassic/22x22/actions/kdeprint_configmgr.png
@@ -3609,6 +3610,7 @@ share/kde/icons/kdeclassic/32x32/actions/insert_table_col.png
 share/kde/icons/kdeclassic/32x32/actions/insert_table_row.png
 share/kde/icons/kdeclassic/32x32/actions/int.png
 share/kde/icons/kdeclassic/32x32/actions/jail_pay.png
+share/kde/icons/kdeclassic/32x32/actions/kde.png
 share/kde/icons/kdeclassic/32x32/actions/kdeprint_inklevel.png
 share/kde/icons/kdeclassic/32x32/actions/krec_record.png
 share/kde/icons/kdeclassic/32x32/actions/ktip.png
