@@ -1,0 +1,27 @@
+$NetBSD: patch-an,v 1.1 2003/09/30 09:44:00 cube Exp $
+
+--- src/Makefile.am.orig	2002-09-20 22:40:15.000000000 +0200
++++ src/Makefile.am
+@@ -3,11 +3,8 @@ bin_PROGRAMS		= mp3blaster mp3tag splay
+ mp3blaster_SOURCES	= fileman.cc \
+ 			  main.cc \
+ 			  scrollwin.cc \
+-			  getopt.c \
+-			  getopt1.c \
+ 			  fileman.h \
+ 			  genretab.h \
+-			  getopt.h \
+ 				id3parse.cc \
+ 			  id3parse.h \
+ 			  mp3blaster.h \
+@@ -35,8 +32,8 @@ splay_LDADD = @LIBMPEGSOUND@
+ mp3tag_SOURCES = id3parse.cc mp3tag.cc id3parse.h
+ mp3tag_DEPENDENCIES = ../mpegsound/libmpegsound.a ../nmixer/libnmixer.a
+ mp3tag_LDADD = @LIBMPEGSOUND@ @LIBMYSQL@
+-mp3blaster_DEPENDENCIES = ../mpegsound/libmpegsound.a ../nmixer/libnmixer.a
++mp3blaster_DEPENDENCIES = ../mpegsound/libmpegsound.a ../nmixer/libnmixer.a ../getopt/libgetopt.a
+ INCLUDES		= -I$(top_srcdir)/mpegsound -I/usr/include/ncurses -I$(top_srcdir)/nmixer -I$(includedir)
+-mp3blaster_LDADD	= @LIBMPEGSOUND@ @LIBNMIXER@ @NAS_LIBS@ @SID_LIBS@ @OGG_LIBS@ @NCURSES_LIBS@
++mp3blaster_LDADD	= @LIBMPEGSOUND@ @LIBNMIXER@ @LIBGETOPT@ @NAS_LIBS@ @SID_LIBS@ @OGG_LIBS@ @NCURSES_LIBS@
+ EXTRA_DIST = FILES
+ CXXFLAGS	= @CXXFLAGS@ @NAS_CFLAGS@ -DMP3BLASTER_DOCDIR=\"${pkgdatadir}\"

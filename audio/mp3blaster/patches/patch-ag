@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 2003/09/30 09:44:00 cube Exp $
+
+--- src/main.cc.orig	2002-10-20 16:19:08.000000000 +0200
++++ src/main.cc
+@@ -45,10 +45,10 @@
+ #include <pth.h>
+ #endif
+ #include NCURSES
+-#ifdef HAVE_GETOPT_H
++#ifdef HAVE_GETOPT_LONG_ONLY
+ #include <getopt.h>
+ #else
+-#include "getopt.h"
++#include "../getopt/getopt.h"
+ #endif
+ #ifdef HAVE_ERRNO_H
+ #include <errno.h>
