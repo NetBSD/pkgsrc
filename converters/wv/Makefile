@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2000/08/05 02:39:18 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2000/09/02 17:52:53 wiz Exp $
 #
 
-DISTNAME=		wv-0.5.43
+DISTNAME=		wv-0.5.44
 CATEGORIES=		converters
 MASTER_SITES=		http://www.csn.ul.ie/~caolan/publink/mswordview/development/
 
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.wvWare.com/
 
 BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 DEPENDS+=		libwmf-0.1.17nb1:../../graphics/libwmf
-DEPENDS+=		ImageMagick-*:../../graphics/ImageMagick
+DEPENDS+=		ImageMagick>=5.2.2:../../graphics/ImageMagick
 
 # not detected by configure, causes conflicts with the one coming with wv
 CONFLICTS+=		libgetopt-*
