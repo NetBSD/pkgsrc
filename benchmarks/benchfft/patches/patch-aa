@@ -1,0 +1,70 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/21 19:35:56 garbled Exp $
+--- submit-script.orig	Wed Oct 21 00:18:48 1998
++++ submit-script	Wed Oct 21 00:19:37 1998
+@@ -4,7 +4,7 @@
+ # separately, and seems somewhat more stable than running them all at once
+ # (goodness knows why).
+ 
+-bench -submit -submit-info-only
++bench-fft -submit -submit-info-only
+ 
+ echo 
+ echo "You are done entering information now, and the benchmark is"
+@@ -17,49 +17,49 @@
+ echo
+ 
+ echo "Running 1D benchmark (powers of two)"
+-bench -1d -p2 -name "submit"
++bench-fft -1d -p2 -name "submit"
+ echo "------------------------------------------------------" >> submit.txt
+ echo "@@@@ bench.1d.p2.dat" >> submit.txt
+ cat submit.p2.1d.dat >> submit.txt
+ 
+ echo "Running 1D benchmark (non-powers of two)"
+-bench -1d -np2 -name "submit"
++bench-fft -1d -np2 -name "submit"
+ echo "------------------------------------------------------" >> submit.txt
+ echo "@@@@ bench.1d.np2.dat" >> submit.txt
+ cat submit.np2.1d.dat >> submit.txt
+ 
+ echo "Running 3D benchmark (powers of two)"
+-bench -3d -p2 -name "submit"
++bench-fft -3d -p2 -name "submit"
+ echo "------------------------------------------------------" >> submit.txt
+ echo "@@@@ bench.3d.p2.dat" >> submit.txt
+ cat submit.p2.3d.dat >> submit.txt
+ 
+ echo "Running 3D benchmark (non-powers of two)"
+-bench -3d -np2 -name "submit"
++bench-fft -3d -np2 -name "submit"
+ echo "------------------------------------------------------" >> submit.txt
+ echo "@@@@ bench.3d.np2.dat" >> submit.txt
+ cat submit.np2.3d.dat >> submit.txt
+ 
+ echo "Running 1D real-complex benchmark (powers of two)"
+-bench -r1d -p2 -name "submit"
++bench-fft -r1d -p2 -name "submit"
+ echo "------------------------------------------------------" >> submit.txt
+ echo "@@@@ bench.r1d.p2.dat" >> submit.txt
+ cat submit.p2.r1d.dat >> submit.txt
+ 
+ echo "Running 1D real-complex benchmark (non-powers of two)"
+-bench -r1d -np2 -name "submit"
++bench-fft -r1d -np2 -name "submit"
+ echo "------------------------------------------------------" >> submit.txt
+ echo "@@@@ bench.r1d.np2.dat" >> submit.txt
+ cat submit.np2.r1d.dat >> submit.txt
+ 
+ echo "Running 2D real-complex benchmark (powers of two)"
+-bench -r2d -p2 -name "submit"
++bench-fft -r2d -p2 -name "submit"
+ echo "------------------------------------------------------" >> submit.txt
+ echo "@@@@ bench.r2d.p2.dat" >> submit.txt
+ cat submit.p2.r2d.dat >> submit.txt
+ 
+ echo "Running 2D real-complex benchmark (non-powers of two)"
+-bench -r2d -np2 -name "submit"
++bench-fft -r2d -np2 -name "submit"
+ echo "------------------------------------------------------" >> submit.txt
+ echo "@@@@ bench.r2d.np2.dat" >> submit.txt
+ cat submit.np2.r2d.dat >> submit.txt
