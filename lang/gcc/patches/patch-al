@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.2 2001/02/28 23:28:09 hubertf Exp $
+$NetBSD: patch-al,v 1.3 2001/03/01 00:30:34 jlam Exp $
 
---- ../gcc-2.95.2/gcc/config/netbsd.h.orig	Wed Dec 16 21:59:58 1998
-+++ ../gcc-2.95.2/gcc/config/netbsd.h	Sat Sep 16 00:17:42 2000
-@@ -48,17 +48,31 @@
+--- ../gcc-2.95.2/gcc/config/netbsd.h.orig	Wed Dec 16 15:59:58 1998
++++ ../gcc-2.95.2/gcc/config/netbsd.h	Wed Feb 28 18:41:35 2001
+@@ -48,17 +48,37 @@
  #define ASM_SPEC " %| %{fpic:-k} %{fPIC:-k -K}"
  
  /* Provide a LIB_SPEC appropriate for NetBSD.  Just select the appropriate
@@ -15,6 +15,12 @@ $NetBSD: patch-al,v 1.2 2001/02/28 23:28:09 hubertf Exp $
 +#define LIB_SPEC							\
 +  "%{posix:%{!p:%{!pg:-lposix}}%{p:-lposix_p}%{pg:-lposix_p}}		\
 +   %{!p:%{!pg:-lc}}%{p:-lc_p}%{pg:-lc_p}"
++
++/* Provide a LIBGCC_SPEC appropriate for NetBSD.  We also want to exclude
++   libgcc when -symbolic.  */
++
++#undef LIBGCC_SPEC
++#define LIBGCC_SPEC "%{!shared:%{!symbolic:-lgcc}}"
 +
 +/* #ifdef NETBSD_AOUT */
 +
@@ -37,7 +43,7 @@ $NetBSD: patch-al,v 1.2 2001/02/28 23:28:09 hubertf Exp $
  
  /* This defines which switch letters take arguments. */
  #undef SWITCH_TAKES_ARG
-@@ -127,6 +141,9 @@
+@@ -127,6 +147,9 @@
     entries in an ELF object file under SVR4.  These macros also output
     the starting labels for the relevant functions/objects.  */
  
@@ -47,7 +53,7 @@ $NetBSD: patch-al,v 1.2 2001/02/28 23:28:09 hubertf Exp $
  /* Write the extra assembler code needed to declare a function properly.
     Some svr4 assemblers need to also have something extra said about the
     function's return value.  We allow for that here.  */
-@@ -207,3 +224,56 @@
+@@ -207,3 +230,56 @@
  	putc ('\n', FILE);						\
        }									\
    } while (0)
