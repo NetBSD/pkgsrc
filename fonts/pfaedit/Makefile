@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:40 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/04 17:12:34 junyoung Exp $
 #
 
 DISTNAME=	pfaedit_full-${VERSION}
@@ -13,7 +13,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://pfaedit.sourceforge.net/
 COMMENT=	Postscript font editor
 
-VERSION=	030712
+VERSION=	040102
 
 USE_GMAKE=	YES
 USE_LIBTOOL=	YES
