@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3784 2003/11/05 04:33:26 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3785 2003/11/05 04:51:46 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4305,5 +4305,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated x2vnc to 1.5.1 [wiz 2003-11-04]
 	Updated ethereal to 0.9.16 [adam 2003-11-04]
 	Updated x2vnc to 1.5.1nb1 [heinz 2003-11-04]
-	Updated coreutils to 5.0nb3 [recht 2003-05-11]
-	Updated prboom to 2.2.4 [xtraeme 2003-05-11]
+	Updated coreutils to 5.0nb3 [recht 2003-11-05]
+	Updated prboom to 2.2.4 [xtraeme 2003-11-05]
