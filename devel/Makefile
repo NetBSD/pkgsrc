@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.545 2004/10/19 16:20:50 adrianp Exp $
+# $NetBSD: Makefile,v 1.546 2004/10/20 17:02:04 adrianp Exp $
 #
 
 COMMENT=	Development utilities
@@ -385,6 +385,7 @@ SUBDIR+=	p5-Set-IntSpan
 SUBDIR+=	p5-Set-Scalar
 SUBDIR+=	p5-SortVersions
 SUBDIR+=	p5-Storable
+SUBDIR+=	p5-Term-ProgressBar
 SUBDIR+=	p5-Term-ReadKey
 SUBDIR+=	p5-Term-ReadLine
 SUBDIR+=	p5-Test-Cmd
