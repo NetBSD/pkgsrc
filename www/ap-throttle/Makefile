@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 13:26:20 abs Exp $
 
 DISTNAME=	mod_throttle312
 PKGNAME=	ap-throttle-3.1.2
-WRKSRC=         ${WRKDIR}/${PKGNAME:S/ap-/mod_/}
+PKGREVISION=	1
+WRKSRC=         ${WRKDIR}/${PKGNAMENOREV:S/ap-/mod_/}
 CATEGORIES=	www
 MASTER_SITES=	http://www.snert.com/Software/mod_throttle/
 EXTRACT_SUFX=	.tgz
@@ -15,6 +16,11 @@ USE_BUILDLINK2=	YES
 
 APACHE_MODULE_NAME=	mod_throttle.so
 APACHE_MODULE_SRC=	mod_throttle.c
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_throttle
+	${INSTALL_DATA} ${WRKSRC}/index.shtml \
+			${PREFIX}/share/doc/mod_throttle/index.html
 
 .include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"
