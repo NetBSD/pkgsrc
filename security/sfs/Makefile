@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/11/23 19:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/11/24 14:15:36 wiz Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--disable-uvfs
 USE_PKGINSTALL=		yes
 USE_BUILDLINK2=		yes
 USE_PERL5=		yes
+
+GCC_REQD=		2.95.3
 
 PKG_USERS=		sfs:sfs::Self-certifying\\ file\\ system:/
 PKG_GROUPS=		sfs
