@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/07/13 16:45:47 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/20 23:35:50 wiz Exp $
 bin/idn
 include/idn-free.h
 include/idn-int.h
@@ -10,7 +10,7 @@ lib/libidn.a
 lib/libidn.la
 lib/libidn.so
 lib/libidn.so.15
-lib/libidn.so.15.1
+lib/libidn.so.15.5
 lib/pkgconfig/libidn.pc
 man/man1/idn.1
 man/man3/idna_to_ascii_4i.3
