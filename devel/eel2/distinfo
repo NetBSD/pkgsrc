@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2005/02/23 22:24:13 agc Exp $
+$NetBSD: distinfo,v 1.14 2005/03/22 16:12:48 jmmv Exp $
 
-SHA1 (eel-2.8.2.tar.bz2) = cc06811ab5153206fe8ec9d3429278d6dc2e2125
-RMD160 (eel-2.8.2.tar.bz2) = 0675e543830e41a9ae77411a40e63b718356c922
-Size (eel-2.8.2.tar.bz2) = 620939 bytes
+SHA1 (eel-2.10.0.tar.bz2) = 9ed8732f9ea82767523be80f9b2f15daf7c4780e
+RMD160 (eel-2.10.0.tar.bz2) = 7b11635c1a6f1fbb4ac38cc96ca0f2d57a995e9f
+Size (eel-2.10.0.tar.bz2) = 665666 bytes
