@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/17 11:29:58 grant Exp $
+
+--- gsmlib/gsm_unix_serial.cc.orig	Tue Jan  9 02:57:20 2001
++++ gsmlib/gsm_unix_serial.cc	Tue Jul  3 22:35:08 2001
+@@ -37,6 +37,8 @@
+ // timer indepently of each other
+ 
+ static pthread_mutex_t timerMtx = PTHREAD_MUTEX_INITIALIZER;
++#define pthread_mutex_lock(x) 
++#define pthread_mutex_unlock(x) 
+ 
+ // for non-GNU systems, define alarm()
+ #ifndef HAVE_ALARM
