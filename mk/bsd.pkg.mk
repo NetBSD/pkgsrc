@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.845 2001/11/09 08:58:19 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.846 2001/11/11 09:46:51 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -125,9 +125,11 @@ X11PREFIX=		${X11BASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 .endif
 
-# Set the default BUILDLINK_X11_DIR to ${X11BASE} so that in the absence
-# of x11.buildlink.mk, it still points to a working X11R6 hierarchy.
+# Set the default BUILDLINK_DIR and BUILDLINK_X11_DIR so that if no
+# buildlink.mk files are included, then they still points to a where headers
+# and libraries for installed packages and X11R6 may be found, respectively.
 #
+BUILDLINK_DIR?=		${LOCALBASE}
 BUILDLINK_X11_DIR?=	${X11BASE}
 
 .if defined(USE_IMAKE) || defined(USE_X11BASE)
