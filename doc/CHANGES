@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2284 2003/05/22 16:39:54 abs Exp $
+$NetBSD: CHANGES,v 1.2285 2003/05/22 16:50:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2079,3 +2079,15 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bbkeys tp 0.8.6 [jschauma 2003-05-22]
 	Updated mtools to 3.9.7nb2 [salo 2003-05-22]
 	Updated pkgchk to 1.36 [abs 2003-05-22]
+	Updated boehm-gc to 6.2alpha5 [jmmv 2003-05-22]
+	Updated gale to 0.99anb2 [jmmv 2003-05-22]
+	Updated opencm to 0.1.2rc4nb2 [jmmv 2003-05-22]
+	Updated sdcc to 2.2.1nb1 [jmmv 2003-05-22]
+	Updated gauche to 0.6.3nb2 [jmmv 2003-05-22]
+	Updated mono to 0.24nb1 [jmmv 2003-05-22]
+	Updated oo2c to 2.0.9nb1 [jmmv 2003-05-22]
+	Updated openc++ to 2.5.12nb1 [jmmv 2003-05-22]
+	Updated sather to 1.2.1nb2 [jmmv 2003-05-22]
+	Updated stalin to 0.9nb2 [jmmv 2003-05-22]
+	Updated rlab to 2.1.05nb1 [jmmv 2003-05-22]
+	Updated w3m to 0.4nb1 [jmmv 2003-05-22]
