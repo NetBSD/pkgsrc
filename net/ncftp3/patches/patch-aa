@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2001/04/24 20:39:38 zuntum Exp $
+$NetBSD: patch-aa,v 1.3 2003/09/27 22:57:32 wiz Exp $
 
---- Makefile.in.orig	Sun Apr  8 18:27:34 2001
-+++ Makefile.in
-@@ -38,7 +38,7 @@
- 	( cd vis ; $(MAKE) "CC=$(CC)" "CFLAGS=$(CFLAGS)" )
- 	-mkdir "$(prefix)" "$(BINDIR)" "$(mandir)" "$(mandir)/man1" 2>/dev/null
+--- Makefile.in.orig	2003-09-28 01:18:31.000000000 +0900
++++ Makefile.in	2003-09-28 01:18:33.000000000 +0900
+@@ -45,7 +45,7 @@
+ 	@( cd vis ; $(MAKE) "CC=$(CC)" "CFLAGS=$(CFLAGS)" )
+ 	-mkdir "$(prefix)" "$(BINDIR)" "$(SYSCONFDIR)" "$(mandir)" "$(mandir)/man1" 2>/dev/null
  	-@echo '..... Installing the programs .....'
 -	$(INSTALL_PROGRAM) bin/ncftp@EXEEXT@ "$(BINDIR)/ncftp@EXEEXT@"
 +	$(INSTALL_PROGRAM) bin/ncftp@EXEEXT@ "$(BINDIR)/ncftp3@EXEEXT@"
