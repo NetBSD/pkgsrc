@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/23 19:48:19 jtb Exp $
 #
 
 DISTNAME=		gprolog-1.2.16
@@ -10,7 +10,7 @@ MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://gnu-prolog.inria.fr/
 COMMENT=		GNU prolog compiler and interpreter
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-powerpc
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-install-dir=${PREFIX}/libexec/${PKGNAME} \
