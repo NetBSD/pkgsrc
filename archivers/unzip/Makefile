@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2001/06/21 21:08:49 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/02/21 12:12:49 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
-DISTNAME=	unzip542
-PKGNAME=	unzip-5.42
+DISTNAME=	unzip550
+PKGNAME=	unzip-5.50
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
@@ -18,9 +18,8 @@ COMMENT=	List, test and extract compressed files in a ZIP archive
 USE_BUILDLINK_ONLY=	# defined
 
 MAKEFILE=	unix/Makefile
-ALL_TARGET=	unzips
-# we do not use USE_ZLIB because of unknown bugs in 5.40's use of libz
-MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK"
+ALL_TARGET=	generic_zlib unzipsfx
+MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -Dunix -DUSE_UNSHRINK" LF2="-lz -s"
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} unzip funzip unzipsfx ${PREFIX}/bin
@@ -32,4 +31,5 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} BUGS COPYING.OLD LICENSE README WHERE \
 		${PREFIX}/share/doc/unzip
 
+.include "../../devel/zlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
