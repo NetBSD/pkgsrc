@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/10 13:18:36 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/22 21:32:18 recht Exp $
 
---- lib/Makefile.in.orig	2003-04-06 12:47:18.000000000 +0200
-+++ lib/Makefile.in	2003-04-06 12:48:17.000000000 +0200
-@@ -769,7 +769,7 @@
+--- lib/Makefile.in.orig	2004-02-08 21:12:49.000000000 +0100
++++ lib/Makefile.in	2004-02-21 10:58:58.000000000 +0100
+@@ -903,7 +903,7 @@
  
  install-data-am:
  
