@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.24 2003/03/16 07:57:45 martti Exp $
+$NetBSD: patch-aa,v 1.25 2004/01/11 02:26:31 jlam Exp $
 
---- configure.in.orig	Fri Feb 28 15:56:18 2003
-+++ configure.in	Sun Mar 16 09:01:24 2003
-@@ -2033,6 +2033,10 @@
- # we can't build a pam module if we don't have pam.
- AC_CHECK_LIB(pam, pam_get_data, [AC_DEFINE(HAVE_LIBPAM)])
+--- configure.in.orig	Sun Dec 14 22:36:25 2003
++++ configure.in
+@@ -1642,7 +1642,7 @@ dnl Try to find iconv(3)
+     jm_ICONV($i)
  
-+dnl Checks for libraries.
-+AC_CHECK_LIB(c, __libc_sched_setscheduler, PAM_NEEDS_LIBC=, PAM_NEEDS_LIBC=-lc)
-+AC_SUBST(PAM_NEEDS_LIBC)
-+
- #################################################
- # check for pam_smbpass support
- AC_MSG_CHECKING(whether to use pam_smbpass)
+     if test "$ICONV_FOUND" = yes; then
+-	LDFLAGS=$save_LDFLAG
++	LDFLAGS=$save_LDFLAGS
+         LIB_ADD_DIR(LDFLAGS, "$i/lib")
+         CFLAGS_ADD_DIR(CPPFLAGS, "$i/include")
+         LIBS="$save_LIBS"
