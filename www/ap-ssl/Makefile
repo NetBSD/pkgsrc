@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/08/28 09:14:52 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2000/09/03 13:36:36 wiz Exp $
 #
 
 DISTNAME=	mod_ssl-2.6.3-1.3.12
@@ -45,16 +45,16 @@ post-install:
 	cd ${WRKSRC}/pkg.contrib && \
 		${INSTALL_SCRIPT} *.sh *.cgi ${PREFIX}/share/mod_ssl/
 	${INSTALL_DATA} ${WRKSRC}/pkg.sslcfg/README.CRL \
-		`ls -1 ${WRKSRC}/pkg.sslcfg/*.crl | grep -v /server\.` \
+		`ls -1 ${WRKSRC}/pkg.sslcfg/*.crl | ${GREP} -v /server\.` \
 		${PREFIX}/etc/httpd/ssl.crl
 	${INSTALL_DATA} ${WRKSRC}/pkg.sslcfg/README.CRT \
-		`ls -1 ${WRKSRC}/pkg.sslcfg/*.crt | grep -v /server\.` \
+		`ls -1 ${WRKSRC}/pkg.sslcfg/*.crt | ${GREP} -v /server\.` \
 		${PREFIX}/etc/httpd/ssl.crt
 	${INSTALL_DATA} ${WRKSRC}/pkg.sslcfg/README.CSR \
-		`ls -1 ${WRKSRC}/pkg.sslcfg/*.csr | grep -v /server\.` \
+		`ls -1 ${WRKSRC}/pkg.sslcfg/*.csr | ${GREP} -v /server\.` \
 		${PREFIX}/etc/httpd/ssl.csr
 	${INSTALL_DATA} ${WRKSRC}/pkg.sslcfg/README.KEY \
-		`ls -1 ${WRKSRC}/pkg.sslcfg/*.key | grep -v /server\.` \
+		`ls -1 ${WRKSRC}/pkg.sslcfg/*.key | ${GREP} -v /server\.` \
 		${PREFIX}/etc/httpd/ssl.key
 
 .include "../../mk/bsd.pkg.mk"
