@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $Id: pkg_tarup,v 1.18 2004/10/29 14:51:41 tv Exp $
+# $Id: pkg_tarup,v 1.19 2004/11/05 19:41:16 erh Exp $
 #
 # Tar up installed package
 #
@@ -92,10 +92,22 @@ create_package()
 	check_and_add -n "${PKG_DBDIR}/${PKG}/+PRESERVE"
 
 	PLIST=/tmp/+CONTENTS.$$
-	${SED} -n \
+
+	# This sed command trims out all of the following:
+	# md5 magic comments, symlink magic comments
+	# lines starting with @blddep, @pkgdep, @pkgcfl, @name, @mtree
+	# @cwd lines that refer to the current directory "@cwd ."
+	# @ignore and any line immediately following it
+	${SED} \
 		-e '/^@comment MD5:/d' \
-		-e '/^@cwd \.$/,$d' \
-		-e '/\$NetBSD/,$p' \
+		-e '/^@comment Symlink:/d' \
+		-e '/^@blddep/d' \
+		-e '/^@pkgdep/d' \
+		-e '/^@pkgcfl/d' \
+		-e '/^@name/d' \
+		-e '/^@mtree/d' \
+		-e '/^@cwd \.$/d' \
+		-e '/^@ignore/,/^.*$/d' \
 		<"${PKG_DBDIR}/${PKG}/+CONTENTS" >"${PLIST}"
 
 	# Duplicate first @cwd (work around pkg_create "feature" ...)
