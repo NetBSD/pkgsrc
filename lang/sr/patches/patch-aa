@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/03/01 11:18:43 is Exp $
+$NetBSD: patch-aa,v 1.3 2005/03/08 13:49:49 is Exp $
 
---- Configuration.orig	1999-08-14 01:42:02.000000000 +0200
+--- Configuration.orig	2005-01-18 16:11:10.000000000 +0000
 +++ Configuration
-@@ -26,13 +26,13 @@ VERSION = "SR version 2.3.2, August 1999
+@@ -26,13 +26,13 @@ VERSION = "SR version 2.3.3"
  #	MAN5:	directory in which to install the srmap/srtrace(5) man pages
  #		(extension will be `tr 1 5` of MANEXT)
  
@@ -39,17 +39,20 @@ $NetBSD: patch-aa,v 1.2 2005/03/01 11:18:43 is Exp $
  
  LIBC = 
 -LIBR =  -L/usr/X11/lib
-+LIBR =  -L/usr/X11R6/lib
++LIBR = -R_XLIB_ -L_XLIB_
  LIBM = -lm
  
  
-@@ -98,7 +98,7 @@ LIBM = -lm
+@@ -95,10 +95,10 @@ LIBM = -lm
+ #   If not set, SRanimator is not built.
+ #
+ #   for Sun Solaris 2.x, set XINCL = /usr/openwin/include
 -#   for NetBSD, set XINCL = /usr/X386/include
 +#   for NetBSD, set XINCL = /usr/X11R6/include
  #   for Linux, set XINCL = /usr/X11/include
  
 -XINCL = /usr/include
-+XINCL = /usr/X11R6/include
++XINCL = _XINC_
  XTANGO = 
  
  
