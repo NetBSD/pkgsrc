@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.29 2003/08/30 07:53:07 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.30 2003/08/30 10:22:00 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -422,7 +422,7 @@ CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 # The caching code, which greatly speeds up the build process, works only
 # on certain platforms.
 #
-_BLNK_SEED_CACHE?=	passthru transform # block
+_BLNK_SEED_CACHE?=	# passthru transform block
 _BLNK_CACHE_ALL=	# empty
 _BLNK_CACHE_ALL+=	Darwin-6*-*
 _BLNK_CACHE_ALL+=	IRIX-*-*
@@ -485,6 +485,12 @@ _BLNK_MANGLE_DIRS+=	${BUILDLINK_X11_DIR}
 _BLNK_MANGLE_DIRS+=	${WRKDIR}
 _BLNK_MANGLE_DIRS+=	${_BLNK_ALLOWED_RPATHDIRS}
 
+# We only want these for the untransform case, so don't add these
+# directories to _BLNK_{,UN}PROTECT_DIRS below.
+#
+_BLNK_MANGLE_DIRS+=	${PREFIX}
+_BLNK_MANGLE_DIRS+=	${X11BASE}
+
 _BLNK_MANGLE_START=		_bUiLdLiNk_
 _BLNK_MANGLE_END=		\#
 .for _dir_ in ${_BLNK_MANGLE_DIRS}
@@ -517,6 +523,13 @@ _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
 #
 .for _dir_ in ${_BLNK_PROTECT_DIRS}
 _BLNK_TRANSFORM+=	mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
+.endfor
+#
+# Protect ${PREFIX} and ${X11BASE} from change when untransforming, e.g.
+# when unbuildlinkifying files.
+#
+.for _dir_ in ${PREFIX} ${X11BASE}
+_BLNK_TRANSFORM+=	untransform:mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
 #
 # Change references to ${DEPOTBASE}/<pkg> into ${LOCALBASE} so that
@@ -591,6 +604,13 @@ _BLNK_TRANSFORM+=       no-rpath
 #
 .for _dir_ in ${_BLNK_ALLOWED_RPATHDIRS}
 _BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${_dir_}}:${_dir_}
+.endfor
+#
+# Undo the protection for ${PREFIX} and ${X11BASE} so that the directory
+# names are correct, e.g. when unbuildlinkifying files.
+#
+.for _dir_ in ${PREFIX} ${X11BASE}
+_BLNK_TRANSFORM+=	untransform:mangle:${_BLNK_MANGLE_DIR.${_dir_}}:${_dir_}
 .endfor
 #
 # Undo the protection so the correct directory names are passed to the
@@ -1172,6 +1192,18 @@ ${_BLNK_WRAP_CACHE_ADD_TRANSFORM}:
 .  endif # _BLNK_SEED_CACHE has "passthru"
 .  if !empty(_BLNK_SEED_CACHE:Mtransform)
 .    if ${PKG_INSTALLATION_TYPE} == "overwrite"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	( ${ECHO} "-I${DEPOTBASE}/*)";					\
+	  ${ECHO} "	arg=\"-I${BUILDLINK_DIR}/\$${arg#-I${DEPOTBASE}/[!/]*/}\""; \
+	  ${ECHO} "	cachehit=yes";					\
+	  ${ECHO} "	;;";						\
+	) >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	( ${ECHO} "-L${DEPOTBASE}/*)";					\
+	  ${ECHO} "	arg=\"-L${BUILDLINK_DIR}/\$${arg#-I${DEPOTBASE}/[!/]*/}\""; \
+	  ${ECHO} "	cachehit=yes";					\
+	  ${ECHO} "	;;";						\
+	) >> ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	( ${ECHO} "-I${LOCALBASE}/*)";					\
 	  ${ECHO} "	arg=\"-I${BUILDLINK_DIR}/\$${arg#-I${LOCALBASE}/}\""; \
