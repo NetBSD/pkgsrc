@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2003/02/26 00:33:48 uebayasi Exp $
+# $NetBSD: Makefile,v 1.59 2003/02/26 10:17:32 tron Exp $
 
 DISTNAME=	xemacs-21.4.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=xemacs-21.4/}
 DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
@@ -111,6 +111,12 @@ CONFIGURE_ARGS+=	--site-runtime-libraries=${PREFIX}/lib
 
 CFLAGS+=		-Dunix
 
+.if defined(MANZ)
+PLIST_SUBST+=	ELSUFX=.gz
+.else
+PLIST_SUBST+=	ELSUFX=
+.endif
+
 post-extract:
 	@for f in ${EXTRA_FILES}; do \
 		${GTAR} xzCf ${WRKDIR} ${DISTDIR}/${DIST_SUBDIR}/$$f; \
@@ -120,7 +126,11 @@ post-patch:
 	@${RM} -f ${WRKSRC}/etc/ctags.1.orig
 
 post-install:
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/${DISTNAME}
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/xemacs
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/${DISTNAME}
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/xemacs
+.if defined(MANZ)
+	${FIND} ${PREFIX}/lib/${DISTNAME} -name "*.el" -type f | \
+	${XARGS} ${GZIP_CMD}
+.endif
 
 .include "../../mk/bsd.pkg.mk"
