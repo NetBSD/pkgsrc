@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2747 2004/12/25 02:56:30 wiz Exp $
+$NetBSD: TODO,v 1.2748 2004/12/25 12:06:56 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -583,7 +583,6 @@ Suggested package updates
 	o ijs-0.35
 	o inkscape-0.40
 	o intercal-0.24 [dillo]
-	o intltool-0.32.1 [jmmv,waiting end of the freeze for pkgsrc-2004Q4|pkg/28648]
 	o ion3-devel-20041104
 	o ipcheck-0.219
 	o ipsec-tools-0.5beta1
