@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/05/05 00:00:37 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/05/05 23:23:34 rh Exp $
 #
 
-DISTNAME=	createbuildlink-1.1
+DISTNAME=	createbuildlink-1.2
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# Nothing
 DISTFILES=	# Nothing
@@ -16,8 +16,15 @@ NO_BUILD=	yes
 NO_PATCH=	yes
 EXTRACT_CMD=	${ECHO}
 
+do-configure:
+	${SED} -e 's/@PKGVERSION@/${PKGVERSION}/'		\
+		< ${FILESDIR}/${DISTNAME:C/-.*$//}		\
+		> ${WRKSRC}/${DISTNAME:C/-.*$//}
+
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/${DISTNAME:C/-.*$//} ${PREFIX}/bin/${DISTNAME:C/-.*$//}
-	${INSTALL_MAN} ${FILESDIR}/${DISTNAME:C/-.*$//}.8 ${PREFIX}/man/man8
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME:C/-.*$//}	\
+		${PREFIX}/bin/${DISTNAME:C/-.*$//}
+	${INSTALL_MAN} ${FILESDIR}/${DISTNAME:C/-.*$//}.8	\
+		${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"
