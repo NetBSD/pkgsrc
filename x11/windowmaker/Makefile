@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2000/06/04 00:30:33 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2000/06/09 12:35:23 tron Exp $
 
 DISTNAME=		WindowMaker-0.62.1
 PKGNAME=		windowmaker-0.62.1
@@ -34,6 +34,11 @@ CONFIGURE_ENV+=		LINGUAS=yes
 INSTALL_TARGET=		install-strip
 
 .include "../../mk/bsd.prefs.mk"
+
+# "egcs" has an optimizer problem on "arm32".
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
+CFLAGS=
+.endif
 
 # WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
 # to support.  Currently supported options:
