@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 15:10:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/25 04:17:50 hubertf Exp $
 
 DISTNAME=	omega-0.90-pa4
 PKGNAME=	omega-0.90.4
@@ -21,7 +21,7 @@ do-install:
 	@ ${INSTALL_PROGRAM} -o games -g games -m 4711 ${WRKSRC}/omega \
 		 ${PREFIX}/bin/Omega
 	@ ${INSTALL_MAN} ${WRKSRC}/docs/omega.6 ${PREFIX}/man/man6
-	@ ${MKDIR} ${PREFIX}/share/omega
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/omega
 	@ ${INSTALL_DATA} ${WRKSRC}/lib/* ${PREFIX}/share/omega
 	@ ${RM} ${PREFIX}/share/omega/license.old
 	@ ${CHMOD} 0600 ${PREFIX}/share/omega/omega.hi
@@ -30,7 +30,7 @@ do-install:
 	@ ${CHOWN} -R games:games ${PREFIX}/share/omega
 
 post-install:
-	@ ${MKDIR} ${PREFIX}/share/doc/omega
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/doc/omega
 .for file in buglist.txt docs/compile.all docs/readme.1st docs/omega.txt docs/readme3 docs/readme4
 	@ ${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/omega
 .endfor

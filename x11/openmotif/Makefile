@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:06:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:26 hubertf Exp $
 # FreeBSD: /c/ncvs/ports/x11-toolkits/open-motif/Makefile,v 1.18 2000/10/09 01:40:02 asami Exp 
 # OpenBSD: Makefile,v 1.5 2000/10/23 16:08:12 espie Exp 
 
@@ -55,7 +55,6 @@ post-build:
 # Install the manpages.
 post-install:
 	for i in man1 man3 man5 ; do cd ${WRKSRC}/doc/man/$$i; \
-	    ${MKDIR} ${PREFIX}/man/$$i; \
 	    for m in *.[135]; do ${INSTALL_MAN} $$m ${PREFIX}/man/$$i; done; \
 	done
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:11:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:50 hubertf Exp $
 # FreeBSD Id: ports/games/xemeraldia/Makefile,v 1.17 1999/12/10 19:24:55 steve Exp
 
 DISTNAME=	xemeraldia-0.3
@@ -21,7 +21,7 @@ MAKE_ENV+=	GAMES_DIR="${GAMES_DIR}"
 PLIST_SUBST=	GAMES_DIR="${GAMES_DIR}"
 
 post-install:
-	@${MKDIR} ${PREFIX}/${GAMES_DIR}/xemeraldia
+	@${INSTALL_DATA_DIR} ${PREFIX}/${GAMES_DIR}/xemeraldia
 	@${TOUCH} ${PREFIX}/${GAMES_DIR}/xemeraldia/xemeraldia.scores
 	@${CHMOD} 666 ${PREFIX}/${GAMES_DIR}/xemeraldia/xemeraldia.scores
 

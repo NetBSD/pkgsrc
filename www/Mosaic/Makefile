@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/17 17:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2001/02/25 04:18:22 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -44,6 +44,6 @@ do-install:
 	${LN} -sf Mosaic ${PREFIX}/bin/mosaic
 	${INSTALL_DATA} ${WRKSRC}/app-defaults.color \
 		${PREFIX}/lib/X11/app-defaults/Mosaic
-	${MKDIR} ${PREFIX}/share/mosaic
+	${INSTALL_DATA_DIR} ${PREFIX}/share/mosaic
 
 .include "../../mk/bsd.pkg.mk"

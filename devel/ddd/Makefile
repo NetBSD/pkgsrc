@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/02/17 18:28:12 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2001/02/25 04:17:41 hubertf Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
@@ -35,7 +35,7 @@ post-configure:
 	${ECHO} "LIBXM = ${MOTIFLIB}" >> ${WRKSRC}/ddd/Makefile
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/doc/ddd
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ddd
 	${INSTALL_DATA} ${WRKSRC}/PROBLEMS ${PREFIX}/share/doc/ddd
 	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/ddd
 	${INSTALL_DATA} ${WRKSRC}/doc/ddd-paper.ps ${PREFIX}/share/doc/ddd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/02/17 17:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2001/02/25 04:18:24 hubertf Exp $
 
 DISTNAME=	squid-2.3.STABLE4-src
 PKGNAME=	squid-2.3s4nb3
@@ -67,9 +67,9 @@ post-build:
 
 pre-install:
 	@-rm -f ${WRKDIR}/PLIST.share
-	@${MKDIR} ${PREFIX}/share/squid
-	@${MKDIR} ${PREFIX}/share/squid/errors
-	@${MKDIR} ${PREFIX}/share/squid/icons
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/icons
 	@(							\
 	cd ${WRKSRC}/errors/English;				\
 	ls ERR_* | ${SED} -e 's@^@share/squid/errors/@';		\
@@ -85,7 +85,7 @@ pre-install:
 	) > ${WRKDIR}/PLIST.share
 
 post-install:
-	${MKDIR} /var/squid
+	${INSTALL_DATA_DIR} /var/squid
 	${INSTALL} -d -o nobody /var/squid/logs
 	cd ${WRKSRC}/src; ${MAKE} install-pinger
 	${INSTALL_SCRIPT} ${WRKDIR}/squid.sh ${PREFIX}/etc/rc.d/squid

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:38:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:41 hubertf Exp $
 
 DISTNAME=	cfitsio2037
 PKGNAME=	cfitsio-2.0.37
@@ -21,7 +21,7 @@ post-build:
 	cmp testprog.fit testprog.std
 
 do-install:
-	${MKDIR} ${PREFIX}/share/doc/cfitsio
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cfitsio
 	cd ${WRKSRC}; \
 	${LIBTOOL} ${INSTALL_DATA} libcfitsio.la ${PREFIX}/lib; \
 	${INSTALL_DATA} *.h ${PREFIX}/include; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/23 18:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:29 hubertf Exp $
 
 DISTNAME=	xephem-3.4
 CATEGORIES=	x11
@@ -30,7 +30,7 @@ PERL_SCRIPTS= astorb2edb.pl mpcorb2edb.pl tle2edb.pl
 post-install:
 	${SED} s,@PREFIX@,${PREFIX}, ${FILESDIR}/XEphem.ad > ${WRKDIR}/XEphem
 	${INSTALL_DATA} ${WRKDIR}/XEphem ${PREFIX}/lib/X11/app-defaults
-	${MKDIR} ${PREFIX}/share/xephem/tools
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xephem/tools
 	(cd ${WRKSRC}; ${CP} -R auxil catalogs fifos fits \
 	 ${PREFIX}/share/xephem)
 	(cd ${WRKSRC}/tools; ${INSTALL_DATA} README \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:21 hubertf Exp $
 
 DISTNAME=	wmx-5
 PKGNAME=	wmx-5.0
@@ -24,9 +24,9 @@ do-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmx ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/doc/wmx
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmx
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wmx
 	${INSTALL_DATA} ${WRKSRC}/README.contrib ${PREFIX}/share/doc/wmx
-	${MKDIR} ${PREFIX}/etc/wmx
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/wmx
 
 .include "../../mk/bsd.pkg.mk"

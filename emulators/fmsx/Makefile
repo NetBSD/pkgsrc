@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 18:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:45 hubertf Exp $
 
 DISTNAME=	fMSX22.tar
 PKGNAME=	fmsx-2.2
@@ -27,9 +27,9 @@ DEFS+=		-DMITSHM -D${CUR_DEPTH} -DSOUND -DSUN_AUDIO
 MAKE_ENV=	DEFS="${DEFS}"
 
 pre-install:
-	@${MKDIR} ${PREFIX}/share/fmsx \
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/fmsx \
 		&& ${CHMOD} a+rx ${PREFIX}/share/fmsx
-	@${MKDIR} ${PREFIX}/share/doc/html/fmsx \
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/fmsx \
 		&& ${CHMOD} a+rx ${PREFIX}/share/doc/html/fmsx
 
 # Makefile of fMSX doesn't have install target.
@@ -37,7 +37,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fmsx ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/rddsk ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/wrdsk ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/fmsx
+	${INSTALL_DATA_DIR} ${PREFIX}/share/fmsx
 	${INSTALL_DATA} ${WRKSRC}/CYRILLIC.FNT ${PREFIX}/share/fmsx
 	${INSTALL_DATA} ${WRKSRC}/ITALIC.FNT ${PREFIX}/share/fmsx
 	${INSTALL_DATA} ${WRKSRC}/DISK.ROM ${PREFIX}/share/fmsx
@@ -48,7 +48,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/MSX2P.ROM ${PREFIX}/share/fmsx
 	${INSTALL_DATA} ${WRKSRC}/MSX2PEXT.ROM ${PREFIX}/share/fmsx
 	${INSTALL_DATA} ${WRKSRC}/PAINTER.ROM ${PREFIX}/share/fmsx
-	${MKDIR} ${PREFIX}/share/doc/fmsx
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fmsx
 	${INSTALL_DATA} ${WRKSRC}/fMSX.html ${PREFIX}/share/doc/fmsx
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:22:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:22 hubertf Exp $
 
 DISTNAME=	Cocoon-1.8
 PKGNAME=	cocoon-1.8
@@ -55,10 +55,10 @@ do-build:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/bin/cocoon.jar ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/lib/turbine-pool.jar ${PREFIX}/lib/java
-	${MKDIR} ${PREFIX}/share/doc/java/cocoon
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/cocoon
 	cd ${WRKSRC}/docs ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/cocoon ; ${GTAR} pvxf - )
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/cocoon
-	${MKDIR} ${PREFIX}/share/examples/java/cocoon/WEB-INF
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/cocoon/WEB-INF
 	${INSTALL_DATA} ${FILESDIR}/web.xml ${PREFIX}/share/examples/java/cocoon/WEB-INF
 	${INSTALL_DATA} ${WRKSRC}/conf/cocoon.properties ${PREFIX}/share/examples/java/cocoon/WEB-INF
 	cd ${WRKSRC}/samples ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/examples/java/cocoon ; ${GTAR} pvxf - )

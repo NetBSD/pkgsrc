@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:32:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:19 hubertf Exp $
 #
 
 DISTNAME=	plan-1.8.4
@@ -15,7 +15,7 @@ USE_MOTIF=	YES
 ALL_TARGET=	netbsd
 
 pre-install:
-	${MKDIR} ${X11PREFIX}/libexec/plan ${X11PREFIX}/share/plan \
+	${INSTALL_DATA_DIR} ${X11PREFIX}/libexec/plan ${X11PREFIX}/share/plan \
 		${X11PREFIX}/share/plan/holiday
 	${RM} -f ${WRKDIR}/${DISTNAME}/holiday/holiday_*.orig
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/holiday/holiday_* ${X11PREFIX}/share/plan/holiday

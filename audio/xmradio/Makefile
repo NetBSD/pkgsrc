@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 13:30:54 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/25 04:17:37 hubertf Exp $
 
 DISTNAME=	xmradio-1.0
 CATEGORIES=	audio
@@ -18,7 +18,7 @@ USE_IMAKE=	YES
 USE_XPM=	YES
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/xmradio
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xmradio
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xmradio
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:07:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:28 hubertf Exp $
 
 DISTNAME=		xdm3d-1.0
 CATEGORIES=		x11
@@ -16,7 +16,7 @@ PLIST_SRC=		${WRKDIR}/PLIST-src
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xdm ${PREFIX}/bin/xdm3d
-	${MKDIR} ${PREFIX}/share/xdm3d
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xdm3d
 	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/GiveConsole ${PREFIX}/share/xdm3d
 	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/TakeConsole ${PREFIX}/share/xdm3d
 	${INSTALL_DATA} ${X11BASE}/lib/X11/xdm/Xaccess ${PREFIX}/share/xdm3d
@@ -31,7 +31,7 @@ do-install:
 	fi;								\
 	${SED} "$$sedexpr" ${PKGDIR}/PLIST > ${PLIST_SRC}
 	${INSTALL_PROGRAM} ${X11BASE}/lib/X11/xdm/chooser ${PREFIX}/share/xdm3d
-	${MKDIR} ${PREFIX}/share/xdm3d/authdir
+	${INSTALL_DATA_DIR} ${PREFIX}/share/xdm3d/authdir
 	${CHMOD} 700 ${PREFIX}/share/xdm3d/authdir
 	${SED} -e 's@/usr/X11R6/lib/X11/xdm@${PREFIX}/share/xdm3d@' < \
 		${X11BASE}/lib/X11/xdm/xdm-config > \

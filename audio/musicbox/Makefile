@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/16 13:30:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/25 04:17:36 hubertf Exp $
 
 DISTNAME=	musicbox-1.01p2
 CATEGORIES=	audio
@@ -20,7 +20,7 @@ PATH=		${QT1DIR}/qt1/bin:$$PATH
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/musicbox ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/doc/musicbox
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/musicbox
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/musicbox/README
 
 .include "../../mk/bsd.pkg.mk"

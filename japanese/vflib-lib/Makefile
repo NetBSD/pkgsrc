@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:55 hubertf Exp $
 
 PKGNAME=		ja-vflib-lib-${VFLIB_VERSION}
 
@@ -21,7 +21,7 @@ post-build:
 post-install:
 	${MV} ${PREFIX}/share/VFlib/${VFLIB_VERSION}/VF.h ${PREFIX}/include
 
-	${MKDIR} ${PREFIX}/share/VFlib/${VFLIB_VERSION}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/VFlib/${VFLIB_VERSION}
 	cd ${WRKSRC}; ${INSTALL_DATA} COPYING COPYING.LIB README.txt.JP_EUC \
 		${PREFIX}/share/VFlib/${VFLIB_VERSION}
 	cd ${WRKSRC}; ${PAX} -rw jTeX ${PREFIX}/share/VFlib/${VFLIB_VERSION}

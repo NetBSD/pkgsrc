@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 18:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:17:47 hubertf Exp $
 #
 
 DISTNAME=	xbeeb-0.3.6
@@ -41,10 +41,10 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/xbeeb ${PREFIX}/bin/xbeeb
 	${INSTALL_MAN} ${MAN_PAGE} ${PREFIX}/man/man1/xbeeb.1
-	${MKDIR} ${PREFIX}/${XBEEBROOT}
-	${MKDIR} ${PREFIX}/${XBEEBROOT}/roms
-	${MKDIR} ${PREFIX}/${XBEEBROOT}/docs
-	${MKDIR} ${PREFIX}/lib/X11/fonts/xbeeb
+	${INSTALL_DATA_DIR} ${PREFIX}/${XBEEBROOT}
+	${INSTALL_DATA_DIR} ${PREFIX}/${XBEEBROOT}/roms
+	${INSTALL_DATA_DIR} ${PREFIX}/${XBEEBROOT}/docs
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/xbeeb
 	${INSTALL_DATA} ${WRKSRC}/roms/xdfs0.70.rom ${PREFIX}/${XBEEBROOT}/roms/xdfs0.70.rom
 	for docfile in ${WRKSRC}/doc/*; do \
 		${INSTALL_DATA} $$docfile ${PREFIX}/${XBEEBROOT}/docs; \

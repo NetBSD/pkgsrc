@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 13:30:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:37 hubertf Exp $
 #
 
 DISTNAME=	rio007
@@ -19,7 +19,7 @@ MAKEFILE=	makefile
 
 do-install:
 	${BSD_INSTALL_PROGRAM} ${WRKSRC}/rio ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/rio
+	${INSTALL_DATA_DIR} ${PREFIX}/share/rio
 	${BSD_INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/rio
 	${SED} -e 's|@AWK@|${AWK}|g' ${FILESDIR}/find-lpt-port > ${PREFIX}/bin/find-lpt-port
 	${CHMOD} 755 ${PREFIX}/bin/find-lpt-port

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:17 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/06/27 05:19:39 asami Exp
 #
 
@@ -23,7 +23,7 @@ EXTRACT_ONLY=	# empty
 INSTDIR=	${PREFIX}/share/sgml/iso12083
 
 pre-install:
-	@[ -d ${INSTDIR} ] || ${MKDIR} ${INSTDIR}
+	${INSTALL_DATA_DIR} ${INSTDIR}
 
 do-install:
 	@for i in ${DISTFILES}; do \

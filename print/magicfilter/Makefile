@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/02/17 17:51:48 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2001/02/25 04:18:11 hubertf Exp $
 
 DISTNAME=	magicfilter-1.2
 CATEGORIES=	print
@@ -27,7 +27,7 @@ PAPERSIZE?=	A4
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@${MKDIR} ${PREFIX}/${FILTER_DIR}
+	@${INSTALL_DATA_DIR} ${PREFIX}/${FILTER_DIR}
 	@(cd ${WRKSRC}/filters;	\
 	  paper=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`; \
 	  for FILTER in *-filter; do \
