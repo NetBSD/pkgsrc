@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 1997/10/13 12:57:38 agc Exp $
+# $NetBSD: Makefile,v 1.5 1997/10/13 14:07:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/10/11 22:17:46 hubertf Exp
 #
 
-#    SUBDIR += amanda
+    SUBDIR += amanda
 #    SUBDIR += astrolog
 #    SUBDIR += buffer
 #    SUBDIR += cal
