@@ -1,78 +1,12 @@
-@comment $NetBSD: PLIST,v 1.9 2002/10/20 20:09:05 heinz Exp $
-@comment bin/spamassassin
-@comment bin/spamc
-@comment bin/spamd
+@comment $NetBSD: PLIST,v 1.10 2003/04/15 00:02:24 heinz Exp $
+@comment Most of this PLIST is auto-generated; see Makefile.
 etc/rc.d/spamd
-@comment etc/spamassassin/local.cf
-@comment etc/spamassassin/netbsd_lists.cf
-@comment etc/spamassassin/user_prefs.template
 share/doc/html/spamassassin/ninjabutton.png
-share/doc/spamassassin/INSTALL
-share/doc/spamassassin/License
-share/doc/spamassassin/README
-share/doc/spamassassin/STATISTICS.txt
-share/doc/spamassassin/TRADEMARK
-share/doc/spamassassin/masses/CORPUS_POLICY
-share/doc/spamassassin/masses/CORPUS_SUBMIT
-share/doc/spamassassin/masses/README
-share/doc/spamassassin/masses/craig-evolve.c
-share/doc/spamassassin/masses/fp-fn-statistics
-share/doc/spamassassin/masses/freqdiff
-share/doc/spamassassin/masses/hit-frequencies
-share/doc/spamassassin/masses/lib/Mail/ArchiveIterator.pm
-share/doc/spamassassin/masses/lint-rules-from-freqs
-share/doc/spamassassin/masses/logs-to-c
-share/doc/spamassassin/masses/mass-check
-share/doc/spamassassin/masses/mass-check.cf
-share/doc/spamassassin/masses/mk-baseline-results
-share/doc/spamassassin/masses/parse-rules-for-masses
-share/doc/spamassassin/masses/post-ga-analysis.pl
-share/doc/spamassassin/masses/rewrite-cf-with-new-scores
-share/doc/spamassassin/masses/score-ranges-from-freqs
-share/doc/spamassassin/masses/true-false-pos-neg-filter.pl
-share/doc/spamassassin/sample-nonspam.txt
-share/doc/spamassassin/sample-spam.txt
-share/doc/spamassassin/spamd/README.spamd
-share/doc/spamassassin/spamd/README.spamd-vpopmail
-share/doc/spamassassin/sql/README
-share/doc/spamassassin/sql/spamassassin.sql
-share/doc/spamassassin/tools/README.speedtest
-share/doc/spamassassin/tools/check_whitelist
-share/doc/spamassassin/tools/speedtest
-share/doc/spamassassin/tools/translation_prep.pl
+@dirrm share/doc/html/spamassassin
 share/examples/spamassassin/local.cf
 share/examples/spamassassin/netbsd_lists.cf
 share/examples/spamassassin/procmailrc.example
-share/spamassassin/10_misc.cf
-share/spamassassin/20_anti_ratware.cf
-share/spamassassin/20_body_tests.cf
-share/spamassassin/20_compensate.cf
-share/spamassassin/20_head_tests.cf
-share/spamassassin/20_meta_tests.cf
-share/spamassassin/20_ratware.cf
-share/spamassassin/20_uri_tests.cf
-share/spamassassin/25_body_tests_es.cf
-share/spamassassin/25_body_tests_pl.cf
-share/spamassassin/25_head_tests_es.cf
-share/spamassassin/25_head_tests_pl.cf
-share/spamassassin/30_text_de.cf
-share/spamassassin/30_text_es.cf
-share/spamassassin/30_text_fr.cf
-share/spamassassin/30_text_pl.cf
-share/spamassassin/40_spam_phrases.cf
-share/spamassassin/50_scores.cf
-share/spamassassin/60_whitelist.cf
 share/spamassassin/languages
 share/spamassassin/triplets.txt
 share/spamassassin/user_prefs.template
-@dirrm share/spamassassin
 @dirrm share/examples/spamassassin
-@dirrm share/doc/spamassassin/tools
-@dirrm share/doc/spamassassin/sql
-@dirrm share/doc/spamassassin/spamd
-@dirrm share/doc/spamassassin/masses/lib/Mail
-@dirrm share/doc/spamassassin/masses/lib
-@dirrm share/doc/spamassassin/masses
-@dirrm share/doc/spamassassin
-@dirrm share/doc/html/spamassassin
-@comment @dirrm etc/spamassassin

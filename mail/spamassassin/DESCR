@@ -7,7 +7,8 @@ Once identified, the mail can then be optionally tagged as spam for
 later filtering using the user's own mail user-agent application.
 
 The spam-identification tactics used include header analysis, text
-analysis, blacklists and Razor.
+analysis, a Bayesian-style form of probability-analysis classification,
+blacklists and Razor.
 
 The distribution provides a command line tool to perform filtering,
 along with Mail::SpamAssassin, a set of perl modules which implement a

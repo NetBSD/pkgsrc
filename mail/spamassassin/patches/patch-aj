@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2003/04/15 00:02:26 heinz Exp $
+
+--- t/spamd_utf8.t.orig	Wed Dec 18 22:41:11 2002
++++ t/spamd_utf8.t
+@@ -4,7 +4,7 @@
+ use SATest; sa_t_init("spamd_utf8");
+ use Test; BEGIN { plan tests => 3 };
+ 
+-$ENV{'LANG'} = 'en_US.utf8';	# ensure we test in UTF-8 locale
++$ENV{'LANG'} = 'en_US.UTF-8';	# ensure we test in UTF-8 locale
+ 
+ # ---------------------------------------------------------------------------
+ 
