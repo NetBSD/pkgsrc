@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2003/06/07 17:39:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.245 2003/06/26 03:48:25 salo Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -84,6 +84,7 @@ SUBDIR+=	gimageview
 SUBDIR+=	gimp
 SUBDIR+=	gimp-base
 SUBDIR+=	gimp-data
+SUBDIR+=	gimp-wideangle
 SUBDIR+=	giram
 SUBDIR+=	gle
 SUBDIR+=	glu
@@ -139,6 +140,7 @@ SUBDIR+=	libwmf
 SUBDIR+=	magicpoint
 SUBDIR+=	mencoder
 SUBDIR+=	mgl
+SUBDIR+=	mjpegtools
 SUBDIR+=	mng
 SUBDIR+=	moz-bin-flash
 SUBDIR+=	moz-flash
@@ -167,6 +169,7 @@ SUBDIR+=	p5-GDGraph
 SUBDIR+=	p5-GDGraph3d
 SUBDIR+=	p5-GDTextUtil
 SUBDIR+=	p5-GIFgraph
+SUBDIR+=	p5-Gdk-Pixbuf
 SUBDIR+=	p5-GraphViz
 SUBDIR+=	p5-Image-Info
 SUBDIR+=	p5-Image-Size
@@ -215,6 +218,7 @@ SUBDIR+=	tcm
 SUBDIR+=	tgif
 SUBDIR+=	tiff
 SUBDIR+=	tkpiechart
+SUBDIR+=	transcode
 SUBDIR+=	tuxpaint
 SUBDIR+=	tuxpaint-stamps
 SUBDIR+=	urt
