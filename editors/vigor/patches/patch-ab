@@ -1,0 +1,20 @@
+--- configure.orig	Thu Jan 20 02:14:28 2000
++++ configure	Wed Aug 30 11:51:34 2000
+@@ -1880,7 +1880,7 @@
+   cat conftest.$ac_ext >&5
+ fi
+ rm -f conftest*
+-test "$ac_cv_search_Tcl_Init" = "no" && for i in tcl tcl82 tcl80; do
++test "$ac_cv_search_Tcl_Init" = "no" && for i in tcl83 tcl tcl82 tcl80; do
+ LIBS="-l$i -lm $ac_func_search_save_LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1887 "configure"
+@@ -1942,7 +1942,7 @@
+   cat conftest.$ac_ext >&5
+ fi
+ rm -f conftest*
+-test "$ac_cv_search_Tk_Init" = "no" && for i in tk tk82 tk80; do
++test "$ac_cv_search_Tk_Init" = "no" && for i in tk tk83 tk82 tk80; do
+ LIBS="-l$i $XLIBS -lm $ac_func_search_save_LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1949 "configure"
