@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.3 2001/04/29 16:15:16 dmcmahill Exp $
+$NetBSD: patch-ao,v 1.4 2001/11/28 04:49:02 jlam Exp $
 
 --- debugger/mcs51/Makefile.in.orig	Sat Apr 29 18:25:05 2000
 +++ debugger/mcs51/Makefile.in	Sun Apr 29 03:16:50 2001
@@ -6,13 +6,13 @@ $NetBSD: patch-ao,v 1.3 2001/04/29 16:15:16 dmcmahill Exp $
  
  STD_INC		= @sdcc_include_dir@
 -CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -I$(PRJDIR)/support
-+CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -I$(PRJDIR)/support -I$(LOCALBASE)/include -Dunix
++CPPFLAGS	= @CPPFLAGS@ -I. -I$(PRJDIR) -I$(PRJDIR)/support -I$(BUILDLINK_DIR)/include -Dunix
  CFLAGS		= @CFLAGS@
  M_OR_MM		= @M_OR_MM@
  LDFLAGS		= @LDFLAGS@
  LIBS            = -lgc @LIBS@
 -LIBDIRS         = -L$(PRJDIR)/support/gc
-+LIBDIRS         = -L$(LOCALBASE)/lib
++LIBDIRS         = -L$(BUILDLINK_DIR)/lib
  
  
 @@ -47,7 +47,4 @@
