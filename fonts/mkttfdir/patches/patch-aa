@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/11/28 18:20:28 wiz Exp $
+
+--- mkttfdir.in.orig	Tue Nov 13 19:31:00 2001
++++ mkttfdir.in
+@@ -108,7 +108,7 @@
+ # Add ttf fonts
+ add_fonts()
+ {
+-    for addfile in `ls $XTTFFONTPATH/*.tt?`; do
++    for addfile in `ls $XTTFFONTPATH/*.tt? 2>/dev/null`; do
+         targetname=`basename "$addfile"`
+         srcdir=`dirname "$addfile"`
+         # --add *.ttf
