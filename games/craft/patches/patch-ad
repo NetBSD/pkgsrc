@@ -1,0 +1,57 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/10/13 00:37:33 garbled Exp $
+--- option_menu.hc.orig	Thu Sep 24 10:08:09 1998
++++ option_menu.hc	Thu Sep 24 10:09:24 1998
+@@ -74,7 +74,7 @@
+ .  load_p
+      {char name [128];
+ 
+-      sprintf (name, "hcraft/men%d", m_no);
++      sprintf (name, "@PREFIX@/share/craft/hcraft/men%d", m_no);
+       p    [m_no] = new cmap (w, name);
+       is_p [m_no] = true;
+      }.
+@@ -206,7 +206,7 @@
+ .  load_p 
+      {w->set_cursor (150);
+       w->tick       ();
+-      p    [m_main] = new cmap (w, "hcraft/m1");
++      p    [m_main] = new cmap (w, "@PREFIX@/share/craft/hcraft/m1");
+       is_p [m_main] = true;
+       w->set_cursor (2);
+       w->tick       ();
+@@ -291,7 +291,7 @@
+ .  load_p 
+      {w->set_cursor (150);
+       w->tick       ();
+-      p    [m_player] = new cmap (w, "hcraft/m4");
++      p    [m_player] = new cmap (w, "@PREFIX@/share/craft/hcraft/m4");
+       is_p [m_player] = true;
+       w->set_cursor (2);
+       w->tick       ();
+@@ -356,7 +356,7 @@
+ .  load_p 
+      {w->set_cursor (150);
+       w->tick       ();
+-      p    [m_details] = new cmap (w, "hcraft/m2");
++      p    [m_details] = new cmap (w, "@PREFIX@/share/craft/hcraft/m2");
+       is_p [m_details] = true;
+       w->set_cursor (2);
+       w->tick       ();
+@@ -447,7 +447,7 @@
+ .  load_p 
+      {w->set_cursor (150);
+       w->tick        ();
+-      p    [m_robot] = new cmap (w, "hcraft/m3");
++      p    [m_robot] = new cmap (w, "@PREFIX@/share/craft/hcraft/m3");
+       is_p [m_robot] = true;
+       w->set_cursor (2);
+       w->tick       ();
+@@ -494,7 +494,7 @@
+ .  load_p 
+      {w->set_cursor (150);
+       w->tick        ();
+-      p    [m_inactive] = new cmap (w, "hcraft/m5");
++      p    [m_inactive] = new cmap (w, "@PREFIX@/share/craft/hcraft/m5");
+       is_p [m_inactive] = true;
+       w->set_cursor (2);
+       w->tick       ();
