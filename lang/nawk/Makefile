@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 21:44:58 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/06 13:59:18 cjep Exp $
 #
 
 DISTNAME=       awk
-PKGNAME=        nawk-20030314
+PKGNAME=        nawk-20030731
 WRKSRC=		${WRKDIR}
 CATEGORIES=	lang
 MASTER_SITES=   http://cm.bell-labs.com/who/bwk/
