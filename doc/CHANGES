@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6566 2004/07/15 23:13:36 recht Exp $
+$NetBSD: CHANGES,v 1.6567 2004/07/16 00:52:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3405,3 +3405,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added smartmontools-5.32 [xtraeme 2004-07-15]
 	Updated imposter to 0.2 [jmmv 2004-07-15]
 	Added prngd-0.9.29 [recht 2004-07-15]
+	Added memtester-2.93.1 [schmonz 2004-07-16]
