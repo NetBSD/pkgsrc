@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2002/12/30 21:40:11 kristerw Exp $
+$NetBSD: patch-aa,v 1.10 2003/09/21 18:22:15 kristerw Exp $
 --- Makefile.orig	Tue Sep 18 08:03:58 2001
-+++ Makefile	Mon Dec 30 21:14:12 2002
++++ Makefile	Sun Sep 21 19:48:50 2003
 @@ -1,14 +1,14 @@
 -ZSNESFX=1
 -ZSNESC4=1
@@ -83,10 +83,11 @@ $NetBSD: patch-aa,v 1.9 2002/12/30 21:40:11 kristerw Exp $
 -INCLUDES=-I/usr/X11R6/include -I/usr/local/include
 +INCLUDES=-I${X11BASE}/include
  
+-OPTIMISE= -O6 -mpentium -fomit-frame-pointer -fno-exceptions -Wall -W -pedantic -pipe 
 +ifdef USING_I386
- OPTIMISE= -O6 -mpentium -fomit-frame-pointer -fno-exceptions -Wall -W -pedantic -pipe 
++OPTIMISE= -O6 -mpentium -fomit-frame-pointer -fno-exceptions -Wall -W -pipe 
 +else
-+OPTIMISE=-fno-exceptions -Wall -W -pedantic -fomit-frame-pointer
++OPTIMISE=-fno-exceptions -Wall -W -fomit-frame-pointer
 +endif
  
  #OPTIMISE=-g -fno-exceptions
