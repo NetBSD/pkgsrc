@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2003/08/30 23:27:30 wiz Exp $
+$NetBSD: distinfo,v 1.9 2004/03/10 18:17:11 wiz Exp $
 
-SHA1 (calc-2.11.8.tar.gz) = d90a9de8346346a5dd25ed19c3cc7e86c6b6a645
-Size (calc-2.11.8.tar.gz) = 956819 bytes
-SHA1 (patch-aa) = 7ca5ffdb73cf05ec5ceb76c7d529c8f2112ea923
+SHA1 (calc-2.11.9.2.tar.gz) = b7fc42c53e140159b753688373ed17c18d49cd59
+Size (calc-2.11.9.2.tar.gz) = 959025 bytes
+SHA1 (patch-aa) = 55ac789f43cb8616a0b8917de707c6ff8f3520ea
