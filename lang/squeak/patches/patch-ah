@@ -1,0 +1,30 @@
+$NetBSD: patch-ah,v 1.1 2004/04/26 07:10:16 fredb Exp $
+
+--- platforms/unix/vm/sqUnixMain.c	2003-11-23 06:23:43.000000000 -0600
++++ platforms/unix/vm/sqUnixMain.c	2004-04-25 21:29:44.000000000 -0500
+@@ -62,7 +62,7 @@
+ #include <signal.h>
+ #include <fcntl.h>
+ 
+-#if defined(__alpha__)
++#if defined(__alpha__) && !defined(__NetBSD__)
+ # include <sys/sysinfo.h>
+ # include <sys/proc.h>
+ #endif
+@@ -677,6 +677,7 @@
+   { &soundModule,   "sound",   "NAS"    },	/*** NO DEFAULT ***/
+   { &displayModule, "display", "Quartz" },
+   { &soundModule,   "sound",   "MacOSX" },
++  { &soundModule,   "sound",   "NetBSD" },
+   { &soundModule,   "sound",   "Sun"    },
+   { &soundModule,   "sound",   "OSS"    },
+   { &soundModule,   "sound",   "null"   },
+@@ -1275,7 +1276,7 @@
+ 
+   signal(SIGSEGV, sigsegv);
+ 
+-#if defined(__alpha__)
++#if defined(__alpha__) && !defined(__NetBSD__)
+   /* disable printing of unaligned access exceptions */
+   {
+     int buf[2]= { SSIN_UACPROC, UAC_NOPRINT };
