@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/17 13:53:11 toshii Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/25 10:10:06 toshii Exp $
 
 DISTNAME=	dvdrtools-${VERSION}
 PKGNAME=	${DISTNAME:S/dvdrtools/dvdrecord/}
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.nongnu.org/dvdrtools/
 COMMENT=	This program allows you to create DVD's on a DVD-Recorder
 
 VERSION=	0.1.3
-
-CONFLICTS=	mkisofs-[0-9]*
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
