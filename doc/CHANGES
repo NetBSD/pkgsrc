@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5185 2004/03/10 11:53:38 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5186 2004/03/10 11:59:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1378,3 +1378,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-wm-themes to 4.0.4 [martti 2004-03-10]
 	Updated ruby-racc to 1.4.3nb1 [taca 2004-03-10]
 	Updated xfce4 to 4.0.4nb1 [xtraeme 2004-03-10]
+	Updated xfce4-extras to 4.0.4nb1 [xtraeme 2004-03-10]
