@@ -1,54 +1,67 @@
-$NetBSD: patch-aa,v 1.2.6.1 2003/03/17 17:44:27 bouyer Exp $
+$NetBSD: patch-aa,v 1.2.6.2 2003/03/17 17:52:10 bouyer Exp $
 
---- config/horde.php.dist.orig	Thu Jan 23 09:46:48 2003
-+++ config/horde.php.dist	Mon Mar 17 17:30:44 2003
-@@ -86,14 +86,14 @@
+--- config/horde.php.dist.orig	Wed Jan 30 01:15:31 2002
++++ config/horde.php.dist	Wed Jan 30 11:01:55 2002
+@@ -84,11 +84,11 @@
+ /* Which users should be treated as administrators (root, super-user)
+  * by Horde? Example: $conf['auth']['admins'] = array('admin', 'john');
+  */
+-$conf['auth']['admins'] = array();
++$conf['auth']['admins'] = array('root');
  
  // What backend should we use for authenticating users to Horde? Valid
- // options are currently 'imap', 'ldap', 'mcal', 'sql', 'ftp' and 'krb5'.
+ // options are currently 'imap', 'ldap', 'mcal', 'sql', and 'ftp'.
 -$conf['auth']['driver'] = '';
 +$conf['auth']['driver'] = 'imap';
  
- // An array holding any parameters that the Auth object will need to
- // function correctly.
- $conf['auth']['params'] = array();
+ /* An array holding any parameters that the Auth object will need to
+  * function correctly. For IMAP, this is the server name, port,
+@@ -98,8 +98,8 @@
+  * authentication driver. A SQL script can be found in 
+  * horde/scripts/db/auth.sql .
+  */
+-$conf['auth']['params'] = array();
+-//$conf['auth']['params']['dsn'] = '{imap.example.com/imap:143}INBOX';
++//$conf['auth']['params'] = array();
++$conf['auth']['params']['dsn'] = '{localhost/imap:143}INBOX';
  
- // For IMAP, this is the server name, port, protocol, etc.
--// $conf['auth']['params']['dsn'] = '{imap.example.com:143/imap}INBOX';
-+$conf['auth']['params']['dsn'] = '{localhost:143/imap}INBOX';
  
- // See $conf['prefs']['params'] further down for an example how to
- // setup a SQL backend. But you must use the horde_users SQL table for
-@@ -113,14 +113,14 @@
- 
- // What log driver should we use? Valid values are 'file', 'mcal',
- // 'sql', and 'syslog'.
+ /**
+@@ -112,7 +112,7 @@
+ /* What log driver should we use? Valid values are 'file', 'mcal',
+  * 'sql', and 'syslog'.
+  */
 -$conf['log']['type'] = 'file';
 +$conf['log']['type'] = 'syslog';
  
- // What is the name of the log? For the 'file' driver, this is the
- // path to a text file; for mcal, it would be the name of a calendar,
- // and for sql it would be the table name to use. For the 'syslog'
- // driver it is the facility as a _constant_ (with no quotes), e.g.:
- // ... = LOG_LOCAL0;
+ /* What is the name of the log? For the 'file' driver, this is the
+  * path to a text file; for mcal, it would be the name of a calendar,
+@@ -120,7 +120,7 @@
+  * driver it is the facility as a _constant_ (with no quotes), e.g.:
+  * ... = LOG_LOCAL0;
+  */
 -$conf['log']['name'] = '/tmp/horde.log';
 +$conf['log']['name'] = 'LOG_MAIL';
  
- // What level of messages should we log? The values are LOG_EMERG,
- // LOG_ALERT, LOG_CRIT, LOG_ERR, LOG_WARNING, LOG_NOTICE, LOG_INFO,
-@@ -145,7 +145,7 @@
- // (meaning use system defaults and don't save any user preferences),
- // 'session' (preferences only persist during the login), 'ldap',
- // and 'sql'.
+ /* What level of messages should we log? The values are LOG_EMERG,
+  * LOG_ALERT, LOG_CRIT, LOG_ERR, LOG_WARNING, LOG_NOTICE, LOG_INFO,
+@@ -148,23 +148,23 @@
+  * 'session' (preferences only persist during the login), 'ldap', 
+  * and 'sql'.
+  */
 -$conf['prefs']['driver'] = 'none';
 +$conf['prefs']['driver'] = 'sql';
  
- // Any parameters that the preferences driver needs. This includes
- // database or ldap server, username/password to connect with, etc.
-@@ -154,12 +154,12 @@
- // This is an example configuration for a MySQL preference backend.
- // The SQL script to setup the preference database is placed in
- // horde/scripts/db/prefs.sql.
+ /* Any parameters that the preferences driver needs. This includes
+  * database or ldap server, username/password to connect with, etc.
+  */
+-$conf['prefs']['params'] = array();
++//$conf['prefs']['params'] = array();
+ 
+ /* This is an example configuration for a MySQL preference backend. 
+  * Be sure to set the prefs driver to 'sql' above if you use this
+  * configuration. 
+  */
 -// $conf['prefs']['params']['phptype'] = 'mysql';
 -// $conf['prefs']['params']['hostspec'] = 'localhost';
 -// $conf['prefs']['params']['username'] = 'horde';
@@ -62,28 +75,49 @@ $NetBSD: patch-aa,v 1.2.6.1 2003/03/17 17:44:27 bouyer Exp $
 +$conf['prefs']['params']['database'] = 'horde';
 +$conf['prefs']['params']['table'] = 'horde_prefs';
  
- // This is an example configuration for an LDAP preference backend.
- // The schemas needed for ldap are in horde/scripts/ldap.  For more
-@@ -208,8 +208,8 @@
- // option; SMTP requires at least a server and a port (if nonstandard).
- // SMTP authentication can be enabled by setting the 'auth' parameter
- // to true.
+ 
+ /**
+@@ -176,13 +176,17 @@
+  * only live for the duration of a single request - they are NOT
+  * stored in the user's session.
+  */
+-$conf['category']['driver'] = 'none';
++$conf['category']['driver'] = 'sql';
+ 
+ /* An array holding any parameters that the Category object will need
+  * to function correctly.
+  */
+-$conf['category']['params'] = array();
+-
++$conf['category']['params']['phptype'] = 'mysql';
++$conf['category']['params']['hostspec'] = 'localhost';
++$conf['category']['params']['username'] = 'hordemgr';
++$conf['category']['params']['password'] = 'hordemgr';
++$conf['category']['params']['database'] = 'horde';
++$conf['category']['params']['table'] = 'horde_categories';
+ 
+ /**
+  ** Cache System Settings
+@@ -215,8 +219,8 @@
+  * function correctly. For sendmail, this is mainly the sendmail_path
+  * option; SMTP requires at least a server and a port (if nonstandard).
+  */
 -$conf['mailer']['params'] = array();
 -// $conf['mailer']['params'] = array('sendmail_path' => '/usr/lib/sendmail');
 +//$conf['mailer']['params'] = array();
 +$conf['mailer']['params'] = array('sendmail_path' => '/usr/sbin/sendmail');
- // $conf['mailer']['params'] = array('host' => 'smtp.example.com');
+ // $conf['mailer']['params'] = array('server' => 'smtp.example.com');
  
- 
-@@ -282,10 +282,10 @@
- 
- // Should we display a problem reporting link in Horde application
- // menus?
+ /**
+@@ -226,10 +230,10 @@
+ /* Should we display a problem reporting link in Horde application
+  * menus?
+  */
 -$conf['problems']['enabled'] = false;
 +$conf['problems']['enabled'] = true;
  
- // If so, where should problem report emails be sent?
--$conf['problems']['email'] = 'webmaster@example.com';
+ /* If so, where should problem report emails be sent? */
+-$conf['problems']['email'] = 'postmaster@example.com';
 +$conf['problems']['email'] = 'postmaster';
  
  
