@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2004/06/26 10:39:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2004/09/21 17:11:10 jmmv Exp $
 #
 
-DISTNAME=		gedit-2.6.2
+DISTNAME=		gedit-2.8.0
 CATEGORIES=		editors gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -35,6 +35,7 @@ CONFIGURE_ARGS+=	--enable-schemas-install
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
