@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/02/12 15:15:44 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -10,9 +10,9 @@ RM="@RM@"
 RMDIR="@RMDIR@"
 TRUE="@TRUE@"
 
+CONFDIR=${PKG_PREFIX}/etc/httpd
 DATADIR=/var/spool/squirrelmail
-SMDIR=${PKG_PREFIX}/@SM_SUBDIR@
-CONFDIR=${SMDIR}/config
+SMDIR=${PKG_PREFIX}/@SMDIR@
 CONFFILES="config.php"
 
 case ${STAGE} in
@@ -26,11 +26,20 @@ DEINSTALL)
 	then
 		${RM} -f ${FILE}
 	fi
+	FILE=${CONFDIR}/squirrelmail.conf
+	SAMPLEFILE=${FILE}.dist
+	if diff -q ${FILE} ${SAMPLEFILE} >/dev/null
+	then
+		${RM} -f ${FILE}
+	fi
 	;;
 
 POST-DEINSTALL)
 	modified_files=''
-	for FILE in ${CONFDIR}/config.php ${DATADIR}/data/default_pref
+	for FILE in							\
+		${SMDIR}/config/config.php				\
+		${DATADIR}/data/default_pref				\
+		${CONFDIR}/squirrelmail.conf
 	do
 		if [ -f ${FILE} ]
 		then
@@ -38,11 +47,12 @@ POST-DEINSTALL)
 		fi
 	done
 
-	${RMDIR} ${CONFDIR} 2>/dev/null || ${TRUE}
+	${RMDIR} ${SMDIR}/config 2>/dev/null || ${TRUE}
 	${RMDIR} ${SMDIR} 2>/dev/null || ${TRUE}
 	${RMDIR} ${DATADIR}/attachments 2>/dev/null || ${TRUE}
 	${RMDIR} ${DATADIR}/data 2>/dev/null || ${TRUE}
 	${RMDIR} ${DATADIR} 2>/dev/null || ${TRUE}
+	${RMDIR} ${CONFDIR} 2>/dev/null || ${TRUE}
 
 	existing_dirs=''
 	for dir in ${SMDIR} ${DATADIR}
