@@ -1,0 +1,11 @@
+--- gcc/configure	Thu Jul  1 17:11:06 2004
++++ gcc/configure.orig	Thu Jul  1 17:03:23 2004
+@@ -7693,7 +7693,7 @@
+   fi
+   LIBICONV=
+   if test "$am_cv_lib_iconv" = yes; then
+-    LIBICONV="$am_cv_lib_iconv_ldpath -liconv"
++    LIBICONV="$am_cv_lib_iconv_ldpath -liconv -Wl,-R${LOCALBASE}/lib"
+   fi
+ 
+ 
