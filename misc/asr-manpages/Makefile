@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/21 20:26:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/31 20:53:15 reed Exp $
 #
 
 DISTNAME=	asr.pages
@@ -14,6 +14,7 @@ COMMENT=	alt.sysadmin.recovery man page distribution
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 DIST_SUBDIR=	${PKGNAME}
+INSTALLATION_DIRS=	man/man1 man/man2 man/man3 man5 man/man8
 
 do-install:
 	${INSTALL_MAN} ${WRKDIR}/bosskill.8	${PREFIX}/man/man8
