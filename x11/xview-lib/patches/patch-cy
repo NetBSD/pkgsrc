@@ -1,8 +1,8 @@
-$NetBSD: patch-cy,v 1.1 2001/12/20 09:20:05 tron Exp $
+$NetBSD: patch-cy,v 1.2 2004/09/30 20:38:28 kristerw Exp $
 
---- lib/libxview/textsw/txt_file.c.orig	Tue Jun 29 07:17:48 1993
-+++ lib/libxview/textsw/txt_file.c	Thu Dec 20 10:09:41 2001
-@@ -45,13 +45,26 @@
+--- lib/libxview/textsw/txt_file.c.orig	1993-06-29 07:17:48.000000000 +0200
++++ lib/libxview/textsw/txt_file.c	2004-09-30 22:24:41.000000000 +0200
+@@ -45,13 +45,27 @@
  
  extern CHAR    *STRCAT();
  extern CHAR    *STRNCAT();
@@ -18,20 +18,21 @@ $NetBSD: patch-cy,v 1.1 2001/12/20 09:20:05 tron Exp $
  extern char    *getwd();
 -#endif /* SVR4 */
 +#endif /* GETCWD */
- extern int      errno, sys_nerr;
 +#if (defined(BSD) && (BSD >= 199306))
 +#if __NetBSD_Version__ > 103080000
 +#include <errno.h>
 +#else
++extern int      errno, sys_nerr;
 +extern const char *const sys_errlist[];
 +#endif
 +#else
+ extern int      errno, sys_nerr;
  extern char    *sys_errlist[];
 +#endif
  
  Pkg_private int textsw_change_directory();
  Pkg_private void textsw_display(), textsw_display_view_margins();
-@@ -354,21 +367,21 @@
+@@ -354,21 +368,21 @@
      }
  
  #ifdef		OW_I18N
