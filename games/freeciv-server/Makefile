@@ -1,21 +1,18 @@
-# $NetBSD: Makefile,v 1.14 2003/07/13 17:42:39 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/03/05 12:08:51 adam Exp $
 
-PKGNAME=		${DISTNAME:S/-/-server-/}
-COMMENT=		Freeciv game server
+PKGNAME=	${DISTNAME:S/-/-server-/}
+COMMENT=	Freeciv game server
 
-DEPENDS+=		freeciv-share>=${FC_VERS}:../../games/freeciv-share
-
-CONFIGURE_ARGS+=	--enable-client=no
-CONFIGURE_ARGS+=	--disable-make-data
-CONFIGURE_ARGS+=	--with-readline
+DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share
 
 USE_BUILDLINK2=		# defined
 USE_GNU_READLINE=	# uses callback interface of GNU readline
 LIBS+=			-ltermcap
 
-# Uses rl_filename_completion_function() which was introduced to the readline
-# API in version 4.2.
-#
+CONFIGURE_ARGS+=	--enable-client=no --disable-make-data
+CONFIGURE_ARGS+=	--with-readline
+
+# Uses rl_filename_completion_function() which was introduced in readline-4.2
 BUILDLINK_DEPENDS.readline=	readline>=4.2
 
 .include "../freeciv-share/Makefile.common"
