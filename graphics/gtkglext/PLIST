@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:34 jlam Exp $
-include/gtkglext-1.0/gdk/GL/glext.h
-include/gtkglext-1.0/gdk/GL/glxext.h
-include/gtkglext-1.0/gdk/GL/wglext.h
+@comment $NetBSD: PLIST,v 1.5 2004/11/10 14:50:59 adam Exp $
 include/gtkglext-1.0/gdk/gdkgl.h
 include/gtkglext-1.0/gdk/gdkglconfig.h
 include/gtkglext-1.0/gdk/gdkglcontext.h
@@ -13,20 +10,24 @@ include/gtkglext-1.0/gdk/gdkglfont.h
 include/gtkglext-1.0/gdk/gdkglglext.h
 include/gtkglext-1.0/gdk/gdkglinit.h
 include/gtkglext-1.0/gdk/gdkglpixmap.h
-include/gtkglext-1.0/gdk/gdkglprivate.h
 include/gtkglext-1.0/gdk/gdkglquery.h
 include/gtkglext-1.0/gdk/gdkglshapes.h
 include/gtkglext-1.0/gdk/gdkgltokens.h
 include/gtkglext-1.0/gdk/gdkgltypes.h
 include/gtkglext-1.0/gdk/gdkglversion.h
 include/gtkglext-1.0/gdk/gdkglwindow.h
+include/gtkglext-1.0/gdk/glext/glext.h
+include/gtkglext-1.0/gdk/glext/glxext.h
+include/gtkglext-1.0/gdk/glext/wglext.h
+include/gtkglext-1.0/gdk/glext/glext-extra.h
+include/gtkglext-1.0/gdk/glext/glxext-extra.h
+include/gtkglext-1.0/gdk/glext/wglext-extra.h
 include/gtkglext-1.0/gdk/x11/gdkglglxext.h
 include/gtkglext-1.0/gdk/x11/gdkglx.h
 include/gtkglext-1.0/gtk/gtkgl.h
 include/gtkglext-1.0/gtk/gtkgldebug.h
 include/gtkglext-1.0/gtk/gtkgldefs.h
 include/gtkglext-1.0/gtk/gtkglinit.h
-include/gtkglext-1.0/gtk/gtkglprivate.h
 include/gtkglext-1.0/gtk/gtkglversion.h
 include/gtkglext-1.0/gtk/gtkglwidget.h
 lib/gtkglext-1.0/include/gdkglext-config.h
@@ -69,6 +70,6 @@ share/doc/html/gtkglext/up.png
 @dirrm lib/gtkglext-1.0
 @dirrm include/gtkglext-1.0/gtk
 @dirrm include/gtkglext-1.0/gdk/x11
-@dirrm include/gtkglext-1.0/gdk/GL
+@dirrm include/gtkglext-1.0/gdk/glext
 @dirrm include/gtkglext-1.0/gdk
 @dirrm include/gtkglext-1.0
