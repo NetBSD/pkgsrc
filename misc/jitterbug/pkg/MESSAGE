@@ -20,7 +20,7 @@ o Add an alias for @JB_USER@ to your mail aliases:
   The details on how to do this depend on which MTA you use. For standard
   sendmail, add the following lines to your aliases files
   (/etc/aliases or /etc/mail/aliases):
-  @JB_LOCALMAIL@: "|@PREFIX@/@JB_USER@/bin/new_message"
+  @JB_LOCALMAIL@: "|@PREFIX@/@JB_USER@/bin/new_message @JB_PACKAGE@"
 
 o Append @PREFIX@/etc/jitterbug/httpd.conf.add to your httpd.conf
   (typically @PREFIX@/etc/httpd/httpd.conf) and restart your httpd.
