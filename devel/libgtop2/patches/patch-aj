@@ -1,7 +1,16 @@
-$NetBSD: patch-aj,v 1.1.1.1 2002/11/04 02:56:17 rh Exp $
+$NetBSD: patch-aj,v 1.2 2003/09/27 20:22:33 danw Exp $
 
 --- src/daemon/Makefile.in.orig	Tue Jun 11 07:49:23 2002
 +++ src/daemon/Makefile.in
+@@ -148,7 +148,7 @@ sysdeps_suid_lib = @sysdeps_suid_lib@
+ 
+ LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ 
+-INCLUDES = $(LIBGTOP_CFLAGS) @INCLUDES@ -D_BSD 				  -DLIBGTOP_COMPILE_SYSTEM=\"`uname -s`\" 				  -DLIBGTOP_COMPILE_RELEASE=\"`uname -r`\" 				  -DLIBGTOP_COMPILE_MACHINE=\"`uname -m`\"
++INCLUDES = $(LIBGTOP_CFLAGS) @INCLUDES@ -D_BSD 				  -DLIBGTOP_COMPILE_SYSTEM=\""`uname -s`"\" 				  -DLIBGTOP_COMPILE_RELEASE=\""`uname -r`"\" 				  -DLIBGTOP_COMPILE_MACHINE=\""`uname -m`"\"
+ 
+ @NEED_LIBGTOP_TRUE@suid_sysdeps = $(top_builddir)/sysdeps/@sysdeps_dir@/libgtop_sysdeps_suid-2.0.la
+ @NEED_LIBGTOP_FALSE@suid_sysdeps = 
 @@ -167,7 +167,7 @@ libgtop_daemon2_LDADD = $(top_builddir)/
  @ENABLE_STATIC_TRUE@libgtop_daemon2_LDFLAGS = -static
  
