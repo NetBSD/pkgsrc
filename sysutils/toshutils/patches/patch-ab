@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+
+--- configure.orig	Fri Dec 17 14:07:03 1999
++++ configure	Mon Dec 20 01:09:21 1999
+@@ -526,7 +526,7 @@
+ 
+ 
+ 
+-PROGRAMS="fan svpw tpasswd alarm dispswitch tdocked thotswap"
++PROGRAMS="fan alarm dispswitch tdocked thotswap"
+ 
+ VERSION=1.2
+ 
+@@ -592,6 +592,8 @@
+ echo "$ac_t""$host" 1>&6
+ 
+ case "$host_os" in
++  netbsd)
++  ;;
+   linux*)
+     OS_CFLAGS='-DLINUX'
+   ;;

@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/20 03:05:14 hubertf Exp $
+bin/fan
+bin/alarm
+bin/dispswitch
+bin/tdocked
+bin/thotswap
+bin/hotkey
+bin/wmtuxtime
+bin/tuxtime-conf
+man/man1/fan.1
+man/man1/svpw.1
+man/man1/hotkey.1
+man/man1/tpasswd.1
+man/man1/alarm.1
+man/man1/tdocked.1
+share/doc/toshutils/ac.gif
+share/doc/toshutils/battery.gif
+share/doc/toshutils/display.html
+share/doc/toshutils/hand.gif
+share/doc/toshutils/hci.tex
+share/doc/toshutils/machine.html
+share/doc/toshutils/modules.html
+share/doc/toshutils/sci.tex
+share/doc/toshutils/size.html
+share/doc/toshutils/space.html
+share/doc/toshutils/style.html
+share/doc/toshutils/toshiba.tex
+share/doc/toshutils/tuxtime.html
+share/doc/toshutils/whatis.html
+@dirrm share/doc/toshutils

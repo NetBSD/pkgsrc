@@ -1,0 +1,53 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+
+--- src/Makefile.in.orig	Fri Dec 17 14:07:03 1999
++++ src/Makefile.in	Mon Dec 20 03:38:38 1999
+@@ -88,37 +88,37 @@
+ 	$(CC) -m486 -Wall -c sci.c
+ 
+ fan: $(FANOBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(FANOBJS)
++	$(CC) $(LDFLAGS) -o $@ $(FANOBJS) -li386
+ 
+ svpw: $(SVPWOBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(SVPWOBJS)
++	$(CC) $(LDFLAGS) -o $@ $(SVPWOBJS) -li386
+ 
+ hotkey: $(HOTOBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(HOTOBJS) $(XLIBS)
++	$(CC) $(LDFLAGS) -o $@ $(HOTOBJS) $(XLIBS) -li386
+ 	
+ dispswitch: $(DISPOBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(DISPOBJS) $(GTKLIBS)
++	$(CC) $(LDFLAGS) -o $@ $(DISPOBJS) $(GTKLIBS) -li386
+ 
+ tpasswd: $(PASSOBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(PASSOBJS)
++	$(CC) $(LDFLAGS) -o $@ $(PASSOBJS) -li386
+ 
+ alarm: $(ALARMOBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(ALARMOBJS) $(LEXLIB)
++	$(CC) $(LDFLAGS) -o $@ $(ALARMOBJS) $(LEXLIB) -li386
+ 
+ ownerstring: $(OWNEROBJS)
+-	$(CC) $(LDFLAGS) -o $@ ($OWNEROBJS) $(READLIBS)
++	$(CC) $(LDFLAGS) -o $@ ($OWNEROBJS) $(READLIBS) -li386
+ 
+ tdocked: $(DOCKOBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(DOCKOBJS)
++	$(CC) $(LDFLAGS) -o $@ $(DOCKOBJS) -li386
+ 
+ thotswap: $(SWAPOBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(SWAPOBJS)
++	$(CC) $(LDFLAGS) -o $@ $(SWAPOBJS) -li386
+ 
+ tuxtime-conf: $(TUXCONFOBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(TUXCONFOBJS) $(GTKLIBS)
++	$(CC) $(LDFLAGS) -o $@ $(TUXCONFOBJS) $(GTKLIBS) -li386
+ 
+ wmtuxtime: $(WMTUXOBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(WMTUXOBJS) $(WMLIBS)
++	$(CC) $(LDFLAGS) -o $@ $(WMTUXOBJS) $(WMLIBS) -li386
+ 
+ install: all
+ 	$(BININSTALL) -m 4755 $(PROGRAMS) $(BINDESTDIR)
