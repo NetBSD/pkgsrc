@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.139 2004/07/19 05:28:07 jlam Exp $
+# $NetBSD: Makefile,v 1.140 2004/07/19 19:59:16 jlam Exp $
 
 DISTNAME=	postfix-2.1.3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
+DIST_SUBDIR=	postfix
 
 PATCHFILES+=		postfix-2.1.1-canonical_classes.diff
 PATCH_SITES+=		ftp://ftp.gw.com/pub/people/kim/patches/
@@ -14,160 +15,70 @@ COMMENT=	Postfix SMTP server and tools
 
 CONFLICTS+=	sendmail-[0-9]*
 
-DIST_SUBDIR=	postfix
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-USE_BUILDLINK3=	yes
-USE_PKGINSTALL=	yes
-
-PKG_SYSCONFSUBDIR=	postfix
-POSTFIX_QUEUE_DIR=	/var/spool/postfix
-
-OWN_DIRS=	${POSTFIX_QUEUE_DIR}
-
-CCARGS+=	-DDEF_CONFIG_DIR=\"${PKG_SYSCONFDIR}\"
-CCARGS+=	-DDEF_SENDMAIL_PATH=\"${PREFIX}/sbin/sendmail\"
-CCARGS+=	-DDEF_MAILQ_PATH=\"${PREFIX}/bin/mailq\"
-CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
-CCARGS+=	-DDEF_COMMAND_DIR=\"${PREFIX}/sbin\"
-CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
-CCARGS+=	-DDEF_QUEUE_DIR=\"${POSTFIX_QUEUE_DIR}\"
+USE_BUILDLINK3=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-# NetBSD 1.5 and above has /etc/rc.d/postfix already which is
-# suitable.
-.if empty(MACHINE_PLATFORM:MNetBSD-1.[5-9]*-*)
-RCD_SCRIPTS=	postfix
-.endif
+# POSTFIX_QUEUE_DIR is the default queue directory for Postfix.  This is
+# merely a default, and may be changed by setting "queue_directory" in
+# ${PKG_SYSCONFDIR}/main.cf.
+#
+POSTFIX_QUEUE_DIR?=	${VARBASE}/spool/postfix
 
+# CCARGS is a list of options to pass to the preprocessor/compiler.
+# AUXLIBS is a list of options to pass to the linker.
+#
+CCARGS=		# empty
+AUXLIBS=	# empty
 FIX_RPATH+=	AUXLIBS
 
-BUILD_DEFS+=	POSTFIX_USE_INET6
-BUILD_DEFS+=	POSTFIX_USE_TLS
-BUILD_DEFS+=	POSTFIX_USE_PCRE
-BUILD_DEFS+=	POSTFIX_USE_MYSQL
-BUILD_DEFS+=	POSTFIX_USE_PGSQL
-BUILD_DEFS+=	USE_OPENLDAP
-BUILD_DEFS+=	USE_SASL
-BUILD_DEFS+=	USE_SASL2
+CCARGS+=	-DDEF_CONFIG_DIR=\"${PKG_SYSCONFDIR}\"
+CCARGS+=	-DDEF_QUEUE_DIR=\"${POSTFIX_QUEUE_DIR}\"
+CCARGS+=	-DDEF_COMMAND_DIR=\"${PREFIX}/sbin\"
+CCARGS+=	-DDEF_DAEMON_DIR=\"${LIBEXECDIR}\"
+CCARGS+=	-DDEF_SENDMAIL_PATH=\"${PREFIX}/sbin/sendmail\"
+CCARGS+=	-DDEF_MAILQ_PATH=\"${PREFIX}/bin/mailq\"
+CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
 
-.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-.  include "../../security/openssl/buildlink3.mk"
-PATCHFILES+=		tls+ipv6-1.25-pf-2.1.3.patch.gz
-PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
-PATCH_DIST_STRIP=	-p1
+# Makefile.options appends to CCARGS and AUXLIBS the options needed to
+# build Postfix with support for various add-on modules.  It also defines
+# _POSTFIX_OPTIONS, which is POSTFIX_OPTIONS filtered to only contain
+# supported modules.
+#
+.include "Makefile.options"
 
-CCARGS+=	-DHAS_SSL
-AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib			\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib	\
-		-lssl -lcrypto
+PKG_SYSCONFSUBDIR=	postfix
+LIBEXECDIR=		${PREFIX}/libexec/${PKGBASE}
+DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
+EXAMPLEDIR=		${PREFIX}/share/examples/${PKGBASE}
 
-PLIST_SRC+=	${PKGDIR}/PLIST.tls
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
-.endif
+FILES_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
+MESSAGE_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
 
-.if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
-.  include "../../devel/pcre/buildlink3.mk"
-CCARGS+=	-DHAS_PCRE
-AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib				\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.pcre}/lib		\
-		-lpcre
-.else
-CCARGS+=	-DNO_PCRE
-.endif
-
-.if defined(USE_OPENLDAP) && ${USE_OPENLDAP} == "YES"
-.  include "../../databases/openldap/buildlink3.mk"
-CCARGS+=	-DHAS_LDAP
-AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
-		-lldap -llber
-.  if ${OPSYS} != "Linux"
-.    include "../../databases/db4/buildlink3.mk"
-CCARGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
-AUXLIBS+=	-L${BUILDLINK_PREFIX.db4}/lib                    \
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db4}/lib     \
-		-ldb4
-.  endif
-.endif
-
-.if defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
-.  include "../../databases/mysql-client/buildlink3.mk"
-CCARGS+=	-DHAS_MYSQL -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
-AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib/mysql	\
-		-lmysqlclient -lz -lm
-.endif
-
-## .if defined(POSTFIX_USE_PGSQL) && ${POSTFIX_USE_PGSQL} == "YES"
-## .  include "../../databases/postgresql-lib/buildlink3.mk"
-## .  include "../../security/openssl/buildlink3.mk"
-## PATCHFILES+=		postfix-pg.postfix-2.0.0.2.patch
-## PATCH_SITES+=		http://www.mat.cc/postfix/
-## PATCH_DIST_STRIP=	-p1
-##
-## CCARGS+=	-DHAS_PGSQL -I${BUILDLINK_PREFIX.postgresql-lib}/include/pgsql
-## AUXLIBS+=	-L${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq \
-##		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt
-## .endif
-
-.if defined(USE_SASL2) && ${USE_SASL2} == "YES"
-USING_SASL=	YES
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
-CCARGS+=	-DUSE_SASL2_AUTH
-AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
-		-lsasl2
-.elif defined(USE_SASL) && ${USE_SASL} == "YES"
-USING_SASL=YES
-.  include "../../security/cyrus-sasl/buildlink3.mk"
-CCARGS+=	-DUSE_SASL_AUTH
-AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib	\
-		-lsasl
-.endif
-
-.if defined(USING_SASL)
-PLIST_SRC+=	${PKGDIR}/PLIST.sasl
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-.endif
-
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE
 .if exists(${PKGDIR}/MESSAGE.${OPSYS})
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.${OPSYS}
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
 .endif
-PLIST_SRC+=	${PKGDIR}/PLIST
-ALL_TARGET=	#empty
-MAKE_ENV=	CC="${CC}" OPT="${CFLAGS}"
-MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
+PLIST_SRC+=		${PKGDIR}/PLIST
 
-POSTFIX_CONF_FILES=	conf/main.cf src/util/sys_defs.h postfix-install
-POSTFIX_CONF_FILES+=	src/global/mail_params.h
+ALL_TARGET=		# empty
+MAKE_ENV=		CC="${CC}" OPT="${CFLAGS}"
+MAKE_ENV+=		AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 
-FILES_SUBST+=	EXAMPLEDIR=${EXAMPLEDIR}
-MESSAGE_SUBST+=	EXAMPLEDIR=${EXAMPLEDIR}
-MESSAGE_SUBST+=	DOCDIR=${DOCDIR}
+USE_PKGINSTALL=		yes
+RCD_SCRIPTS=		postfix
+OWN_DIRS+=		${POSTFIX_QUEUE_DIR}
+MAKE_DIRS+=		${PKG_SYSCONFDIR}
 
-PKG_GROUPS?=	postfix maildrop
-PKG_USERS?=	postfix:postfix::Postfix\\ User:${POSTFIX_QUEUE_DIR}
+PKG_GROUPS?=		postfix maildrop
+PKG_USERS?=		postfix:postfix::Postfix\\ User:${POSTFIX_QUEUE_DIR}
 
-LIBEXECDIR=	${PREFIX}/libexec/${PKGBASE}
-DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
-EXAMPLEDIR=	${PREFIX}/share/examples/${PKGBASE}
-
-CONF_FILES=	${EXAMPLEDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
-CONF_FILES+=	${EXAMPLEDIR}/master.cf ${PKG_SYSCONFDIR}/master.cf
-.if defined(USING_SASL)
-.  if defined(USE_SASL2)
-MAKE_DIRS+=	${PREFIX}/lib/sasl2
-CONF_FILES+=	${EXAMPLEDIR}/smtpd.conf ${PREFIX}/lib/sasl2/smtpd.conf
-.  else
-MAKE_DIRS+=	${PREFIX}/lib/sasl
-CONF_FILES+=	${EXAMPLEDIR}/smtpd.conf ${PREFIX}/lib/sasl/smtpd.conf
-.  endif
+CONF_FILES=		${EXAMPLEDIR}/main.cf ${PKG_SYSCONFDIR}/main.cf
+CONF_FILES+=		${EXAMPLEDIR}/master.cf ${PKG_SYSCONFDIR}/master.cf
+.if !empty(_POSTFIX_OPTIONS:Msasl)
+MAKE_DIRS+=		${SASLLIBDIR}
+CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .endif
 CONF_FILES_PERMS=	# empty
 .for confscr in post-install postfix-files postfix-script
@@ -175,6 +86,9 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/${confscr} ${PKG_SYSCONFDIR}/${confscr} \
 			${ROOT_USER} ${ROOT_GROUP} 755
 .endfor
 .undef confscr
+
+POSTFIX_CONF_FILES=	conf/main.cf src/util/sys_defs.h		\
+			src/global/mail_params.h postfix-install
 
 pre-configure:
 	@for i in ${POSTFIX_CONF_FILES}; do				\
@@ -190,22 +104,17 @@ do-configure:
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
-		> ${WRKDIR}/mailer.conf.postfix
+		> ${WRKDIR}/mailer.conf
+.if !empty(_POSTFIX_OPTIONS:Msasl)
+	${ECHO} "pwcheck_method: ${PWCHECK_METHOD}" > ${WRKDIR}/smtpd.conf
+.endif
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
+do-install:
 	${INSTALL_DATA_DIR} ${LIBEXECDIR}
+	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${EXAMPLEDIR} ${LIBEXECDIR}
-	${CHMOD} 755 ${EXAMPLEDIR} ${LIBEXECDIR}
 	-${RM} -f ${WRKSRC}/conf/*.orig
-.if defined(USING_SASL)
-.  if defined(USE_SASL2)
-	${ECHO} "pwcheck_method: auxprop" > ${WRKDIR}/smtpd.conf
-.  else
-	${ECHO} "pwcheck_method: sasldb" > ${WRKDIR}/smtpd.conf
-.  endif
+.if !empty(_POSTFIX_OPTIONS:Msasl)
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${EXAMPLEDIR}
 .endif
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/post-install ${EXAMPLEDIR}
@@ -213,18 +122,8 @@ pre-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/postfix-script ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/conf/main.cf ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/conf/master.cf ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${EXAMPLEDIR}/mailer.conf
-
-do-install:
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLEDIR}/mailer.conf
 	cd ${WRKSRC} && ${SETENV} config_directory="${EXAMPLEDIR}"	\
 		${SH} postfix-install -non-interactive
-
-.if ${OPSYS} == "Linux"
-.  include "../../databases/db/buildlink3.mk"
-CCARGS+=	-I${BUILDLINK_PREFIX.db2}/include/db2
-AUXLIBS+=	-L${BUILDLINK_PREFIX.db2}/lib                    \
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db2}/lib     \
-		-ldb2
-.endif
 
 .include "../../mk/bsd.pkg.mk"
