@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.767 2001/06/21 04:52:56 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.768 2001/06/21 05:48:29 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -356,7 +356,11 @@ PATCH_DIST_ARGS?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP}
 PATCH_ARGS+=		--batch
 PATCH_DIST_ARGS+=	--batch
 .endif
+.if (${OPSYS} == "SunOS")
+PATCH_ARGS+=		-V simple -z .orig
+.else
 PATCH_ARGS+=		-V simple -b .orig
+.endif
 PATCH_FUZZ_FACTOR?=	-F0			# Default to zero fuzz
 
 # If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
