@@ -1,6 +1,6 @@
-$NetBSD: patch-ak,v 1.5 2001/10/16 04:11:06 jlam Exp $
+$NetBSD: patch-ak,v 1.5.16.1 2004/12/01 00:25:56 salo Exp $
 
---- src/Makefile.tmpl.orig	Sun Oct 14 22:14:29 2001
+--- src/Makefile.tmpl.orig	2004-10-29 14:44:35.000000000 +0100
 +++ src/Makefile.tmpl
 @@ -2,7 +2,7 @@
  CFLAGS=$(OPTIM) $(CFLAGS1) $(EXTRA_CFLAGS)
