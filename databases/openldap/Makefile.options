@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.3 2004/07/24 14:21:44 jlam Exp $
+# $NetBSD: Makefile.options,v 1.4 2004/07/24 18:37:10 jlam Exp $
 #
 # OPENLDAP_ALL_OPTIONS lists all of the currently-supported optional modules
 # that *may* be built.
@@ -52,13 +52,13 @@ PLIST_SUBST+=		DYNAMIC_MOD="@comment "
 .if !empty(_OPENLDAP_OPTIONS:Msasl)
 .  if !defined(USE_SASL2) && !defined(USE_SASL)
 .    include "../../security/cyrus-sasl2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-cyrus-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
+CONFIGURE_ARGS+=	--with-cyrus-sasl
 .  elif defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
 .    include "../../security/cyrus-sasl2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-cyrus-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
+CONFIGURE_ARGS+=	--with-cyrus-sasl
 .  elif defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
 .    include "../../security/cyrus-sasl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-cyrus-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
+CONFIGURE_ARGS+=	--with-cyrus-sasl
 .  endif
 .endif
 
