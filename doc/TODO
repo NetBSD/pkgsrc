@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.852 2003/09/12 10:02:47 itojun Exp $
+$NetBSD: TODO,v 1.853 2003/09/12 11:56:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -65,8 +65,9 @@ Suggested package updates
 
 	o Amaya-8.1a
 	o ImageViewer-0.6.3
+	o Mesa-5.0.2
 	o R-1.7.1
-	o TeXmacs-1.0.1.21
+	o TeXmacs-1.0.1.22
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o Xft2-2.1.2
@@ -75,10 +76,12 @@ Suggested package updates
 	o anjuta-1.0.2
 	o anomy-sanitizer-1.63 [pkg/22368]
 	o ap-auth-postgresql-1.4 [pkg/22518]
+	o atari800-1.3.1
 	o autogen-5.5.6
 	o avidemux-2.0.14
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
+	o bins-1.1.23
 	o bogofilter-0.14.5.2
 	o bzflag-1.7g2
 	o cervisia-2.0
@@ -99,8 +102,10 @@ Suggested package updates
 	o dnetc-2.9004-482 [pkg/22390]
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
+	o easytag-0.30
 	o echoping-5.0.1
 	o elm-me-2.4pl107
+	o ethereal-0.9.15
 	o ettercap-0.6.b
 	o evilwm-0.99.15 [pkg/22239]
 	o evolution-1.4.4
@@ -116,7 +121,6 @@ Suggested package updates
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdm-2.4.1.3
-	o geda-20030901
 	o generator-0.35
 	o gettext-0.12.1
 	o gforth-0.6.2
@@ -126,6 +130,7 @@ Suggested package updates
 	o gliblib-1.2.3 [pkg/21776]
 	o global-4.6
 	o gnats-4.0
+	o gnome-core-2.4
 	o gnomeicu-0.99
 	o gnucash-1.8.5
 	o gnuchess-5.06
@@ -137,6 +142,7 @@ Suggested package updates
 	o gstreamer-0.6.3
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.3
+	o gtkhtml-1.1.10
 	o gtksee-0.5.3
 	o guile-1.6.4
 	o hatari-0.40
@@ -157,17 +163,20 @@ Suggested package updates
 	o jove-4.16.0.58 [pkg/19924]
 	o jove-4.16.0.61
 	o jpilot-0.99.6
-	o jwhois-3.2.2
+	o jwhois-3.2.2 [pkg/22741]
 	o kaffe-1.1.0 [pkg/22155]
+	o kbiff-3.7
+	o latd-1.18 [pkg/22735]
 	o lavaps-2.3
 	o lcms-1.0.9
 	o libgcrypt-1.1.42
 	o libgphoto2-2.1.2
+	o libxml-2.5.11
 	o licq-1.2.7
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtool-1.5 [skrll]
-	o lilypond-1.8.1
+	o lilypond-1.8.2
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lwm-1.01
@@ -178,7 +187,7 @@ Suggested package updates
 	o mailsync-5.1.0
 	o memtest86-3.0
 	o mgetty-1.1.30
-	o mhonarc-2.6.8
+	o mhonarc-2.6.8 [pkg/22753]
 	o midnight-commander-4.6.0
 	o mimedefang-2.37
 	o minicom-2.1
@@ -193,7 +202,6 @@ Suggested package updates
 	o nap-1.5.2
 	o napshare-1.2
 	o neXtaW-0.15.0
-	o neon-0.24.1
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
 	o net-snmp-5.0.9
@@ -206,7 +214,9 @@ Suggested package updates
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
 	o oss-3.9.7l
+	o p5-Apache-Gallery-0.7
 	o p5-GdGraph-1.43 [pkg/22463]
+	o p5-Net-DNS-0.40 [pkg/22750]
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-Net-Server-0.85 [pkg/22542]
 	o p5-XML-LibXML-1.54
@@ -235,6 +245,7 @@ Suggested package updates
 	o slib-2.4.4 [pkg/22185]
 	o slrn-0.9.8.0
 	o smarteiffel-1.0 [replacing smalleiffel]
+	o sml-nj-110.43
 	o snd-6.8
 	o snes9x-1.41
 	o spamassassin-2.60
@@ -243,8 +254,10 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o stella-1.3
 	o swig-1.3.17 [epg]
+	o sylpheed-claws-0.9.5
 	o t1lib-5.0.0
 	o tcl/tk-8.4.4
+	o tcl-expect-5.39.0
 	o tcpreplay-1.4.5
 	o tct-1.12
 	o teapop-0.3.6
@@ -252,19 +265,22 @@ Suggested package updates
 	o tin-1.6.1
 	o tkman-2.2
 	o top-3.5b12.7
+	o transcode-0.6.10
 	o ttf2pt1-3.4.3
+	o tuxpaint-0.9.12
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdg-validate-1.1.3 [pkg/22631]
-	o wine-20030813
+	o wine-20030911
 	o wmbiff-0.4.17
 	o wmweather-2.4.1
 	o wv2-0.1.8
 	o wwwoffle-2.7h
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
+	o xdaliclock-2.20
 	o xephem-3.5.2
 	o xerces-c-2.2.0 [heinz]
 	o xerces-j-2.4.0 [pkg/21725]
