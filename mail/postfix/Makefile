@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2002/03/27 07:17:09 martti Exp $
+# $NetBSD: Makefile,v 1.60 2002/04/02 09:34:40 martti Exp $
 
-DISTNAME=	postfix-1.1.6
+DISTNAME=	postfix-1.1.7
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/official/
 
