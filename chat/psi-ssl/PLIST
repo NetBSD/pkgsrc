@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2003/09/01 10:17:35 cjep Exp $
 qt3/lib/libqssl.so
 qt3/lib/libqssl.a
 qt3/lib/libqssl.la
