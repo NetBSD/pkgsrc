@@ -1,0 +1,4 @@
+Argtable is a freely available programmer's library for parsing the command
+line arguments of any C/C++ program. Having only a few functions and a simple
+set of rules, argtable is capable of handling most aspects of command line
+parsing and error reporting with a minimum of fuss.

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/08 18:10:05 jlam Exp $
+
+--- Makefile.in.orig	Thu Aug  5 07:03:22 1999
++++ Makefile.in	Tue Aug  8 14:00:59 2000
+@@ -31,8 +31,6 @@
+ install: all
+ 	$(INSTALL) -d $(incldir)
+ 	$(INSTALL) -d $(libdir)
+-	$(INSTALL) -d $(mandir)
+-	$(INSTALL) -d $(docdir)
+ 	$(INSTALL) src/argtable.h     $(incldir)/argtable.h
+ 	$(INSTALL) src/libargtable.a  $(libdir)/libargtable.a
+ 
