@@ -1,0 +1,10 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2002/04/01 17:44:43 tv Exp $
+
+You will need to edit ${PREFIX}/etc/httpd/httpd.conf and add the following
+lines in order to use this module.
+
+LoadModule gzip_module lib/httpd/mod_gzip.so
+AddModule mod_gzip.c
+
+=============================================================================
