@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/28 00:34:33 jlam Exp $
+bin/civserver
