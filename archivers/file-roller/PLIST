@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/05/15 14:08:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/09/21 17:09:48 jmmv Exp $
 bin/file-roller
 lib/bonobo/libfile-roller-component.a
 lib/bonobo/libfile-roller-component.la
@@ -7,7 +7,6 @@ lib/bonobo/servers/File_Roller_Component.server
 share/application-registry/file-roller.applications
 share/applications/file-roller.desktop
 share/file-roller/glade/file_roller.glade
-share/file-roller/glade/file_roller_prop.glade
 share/gconf/schemas/file-roller.schemas
 share/gnome/help/file-roller/C/figures/file-roller_home.png
 share/gnome/help/file-roller/C/figures/file-roller_leftarrow.png
@@ -19,7 +18,11 @@ share/gnome/help/file-roller/C/legal.xml
 share/gnome/help/file-roller/de/figures/file-roller_main_window.png
 share/gnome/help/file-roller/de/file-roller.xml
 share/gnome/help/file-roller/de/legal.xml
+share/gnome/help/file-roller/es/figures/file-roller_home.png
+share/gnome/help/file-roller/es/figures/file-roller_leftarrow.png
 share/gnome/help/file-roller/es/figures/file-roller_main_window.png
+share/gnome/help/file-roller/es/figures/file-roller_rightarrow.png
+share/gnome/help/file-roller/es/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/es/file-roller.xml
 share/gnome/help/file-roller/es/legal.xml
 share/gnome/help/file-roller/fr/figures/file-roller_main_window.png
@@ -64,6 +67,7 @@ ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/file-roller.mo
@@ -96,6 +100,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/file-roller.mo
@@ -114,6 +119,7 @@ ${PKGLOCALEDIR}/locale/sr@ije/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/file-roller.mo
