@@ -1,0 +1,8 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/12/10 11:07:35 jtb Exp $
+
+--- /dev/null	Sun Dec 10 09:45:42 2000
++++ stalinc
+@@ -0,0 +1,3 @@
++#!/bin/sh
++
++exec %%PREFIX%%/bin/stalin -I %%PREFIX%%/lib/stalin -I %%PREFIX%%/include -I %%PREFIX%%/lib -I %%GC_PREFIX%%/include -I %%GC_PREFIX%%/lib -I %%X11BASE%%/lib -I %%X11BASE%%/include -I %%MESA_PREFIX%%/lib -I %%MESA_PREFIX%%/include -Ob -Om -On -Or -Ot -d -d1 -du -dI -k -copt -O2 -copt -fomit-frame-pointer -copt -freg-struct-return $@
