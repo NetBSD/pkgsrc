@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.610 2000/11/18 21:55:28 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.611 2000/11/20 08:33:42 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -779,7 +779,7 @@ DEPENDS+=		${LESSTIF_DEPENDS}
 # need to use the package.
 .if defined(USE_XPM)
 .if exists(${X11BASE}/include/X11/xpm.h)
-__BUILTIN_XPM!=		${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl  || ${TRUE}
+__BUILTIN_XPM!=		${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .if (${__BUILTIN_XPM} == "0")
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 XPMDIR_DEFAULT=		${X11PREFIX}
