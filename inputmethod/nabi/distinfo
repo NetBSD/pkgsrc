@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/10/23 16:24:17 junyoung Exp $
+$NetBSD: distinfo,v 1.3 2003/10/24 12:40:04 jmmv Exp $
 
-SHA1 (nabi-0.8.tar.gz) = fea9ed688dbf7738a0e0eeee8b723f3562fd2b22
-Size (nabi-0.8.tar.gz) = 511436 bytes
+SHA1 (nabi-0.9.tar.gz) = e713cf4b51fa81c643e088e494d0fd52e8d918aa
+Size (nabi-0.9.tar.gz) = 512079 bytes
