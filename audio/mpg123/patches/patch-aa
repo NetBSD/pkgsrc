@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.14 2000/03/01 22:03:37 pooka Exp $
+$NetBSD: patch-aa,v 1.15 2001/02/26 16:30:19 jlam Exp $
 
---- Makefile.orig	Fri Feb 18 19:45:31 2000
-+++ Makefile	Fri Feb 18 19:46:51 2000
+--- Makefile.orig	Mon Feb 26 10:58:56 2001
++++ Makefile
 @@ -54,6 +54,10 @@
  	@echo "make aix-tk3play    IBM AIX"
  	@echo "make os2            IBM OS/2"
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.14 2000/03/01 22:03:37 pooka Exp $
 +	$(MAKE) CC=cc LDFLAGS= \
 +		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
 +			audio_sun.o term.o' \
-+		CFLAGS='-Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
++		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
 +			-funroll-all-loops -ffast-math -DROT_I386 \
 +			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
 +			-DREAD_MMAP -DNETBSD -DTERM_CONTROL' \
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.14 2000/03/01 22:03:37 pooka Exp $
 +netbsd-m68k:
 +	$(MAKE) CC=cc LDFLAGS= \
 +		OBJECTS='decode.o dct64.o audio_sun.o term.o' \
-+		CFLAGS='-Wall -ansi -pedantic -O3 -fomit-frame-pointer \
++		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O3 -fomit-frame-pointer \
 +			-ffast-math -DREAL_IS_FLOAT \
 +			-DUSE_MMAP -DNETBSD -DM68K_ASSEM -DTERM_CONTROL' \
 +		mpg123-make
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.14 2000/03/01 22:03:37 pooka Exp $
 +netbsd-arm32:
 +	$(MAKE) CC=cc LDFLAGS= \
 +		OBJECTS='decode.o dct64.o audio_sun.o term.o' \
-+		CFLAGS='-Wall -O6 -fomit-frame-pointer \
++		CFLAGS='$(CFLAGS) -Wall -O6 -fomit-frame-pointer \
 +			-funroll-all-loops -finline-functions -ffast-math \
 +			-march=armv4 -mtune=strongarm -mcpu=strongarm \
 +			-DREAL_IS_FIXED -DUSE_MMAP -DREAD_MMAP -DTERM_CONTROL \
@@ -63,8 +63,9 @@ $NetBSD: patch-aa,v 1.14 2000/03/01 22:03:37 pooka Exp $
  netbsd-i386:
  	$(MAKE) CC=cc LDFLAGS= \
 -		OBJECTS='decode_i386.o dct64_i386.o audio_sun.o' \
+-		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
 +		OBJECTS='decode_i386.o dct64_i386.o audio_sun.o term.o' \
- 		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
++		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
  			-funroll-all-loops -ffast-math -DROT_I386 \
 -			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
 +			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL -DNETBSD' \
