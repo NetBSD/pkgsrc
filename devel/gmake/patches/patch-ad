@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1 2001/03/19 14:57:33 wiz Exp $
+
+--- getopt.c.orig	Tue Jan 25 08:42:51 2000
++++ getopt.c
+@@ -79,9 +79,13 @@
+ # endif
+ #endif
+ 
++#ifdef HAVE_GETTEXT
++# include <libintl.h>
++#else
+ /* This is for other GNU distributions with internationalized messages.
+    When compiling libc, the _ macro is predefined.  */
+-#include "gettext.h"
++# include "gettext.h"
++#endif
+ #define _(msgid)    gettext (msgid)
+ 
+ 
