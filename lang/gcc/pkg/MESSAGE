@@ -1,3 +1,3 @@
 To use "@@PKGNAME@@" invoke "@@MAKE@@" like this:
 
-@@MAKE@@ MAKECONF=@@PREFIX@@/etc/gcc-2.95.2.mk [...]
+@@MAKE@@ MAKECONF=@@PREFIX@@/etc/@@PKGNAME@@.mk [...]
