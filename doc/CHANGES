@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4492 2004/01/18 01:59:53 atatat Exp $
+$NetBSD: CHANGES,v 1.4493 2004/01/18 12:45:35 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -317,3 +317,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmess to 0.78.1 [kristerw 2004-01-17]
 	Removed kstars [kristerw 2004-01-17]
 	Updated lsof to 4.70 [atatat 2004-01-17]
+	Added cyrus-imapd-2.2.3 [recht 2004-01-18]
