@@ -1,12 +1,199 @@
-$NetBSD: patch-ab,v 1.1 2001/11/26 20:07:35 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2003/10/19 09:25:02 agc Exp $
 
---- xbattbar.c.orig	Fri Feb  2 06:25:29 2001
-+++ xbattbar.c
-@@ -594,6 +594,7 @@
+--- xbattbar.c.orig	2001-02-02 05:25:29.000000000 +0000
++++ xbattbar.c	2003-10-17 13:15:51.000000000 +0100
+@@ -27,6 +27,13 @@
+ 
+ #include <sys/types.h>
+ #include <sys/time.h>
++
++#ifdef __NetBSD__
++#define ENVSYSUNITNAMES
++#include <sys/envsys.h>
++#include <paths.h>
++#endif /* __NetBSD__ */
++
+ #include <signal.h>
+ #include <stdio.h>
+ #include <unistd.h>
+@@ -583,46 +590,158 @@
+ #define _PATH_APM_CTLDEV       "/dev/apmctl"
+ #define _PATH_APM_NORMAL       "/dev/apm"
+ 
++/*
++ * pre:  fd contains a valid file descriptor of an envsys(4) supporting device
++ *       && ns is the number of sensors
++ *       && etds and ebis are arrays of sufficient size
++ * post: returns 0 and etds and ebis arrays are filled with sensor info
++ *       or returns -1 on failure
++ */
++static int
++fillsensors(int fd, envsys_tre_data_t *etds, envsys_basic_info_t *ebis,
++    size_t ns)
++{
++	int i;
++
++	for (i = 0; i < ns; ++i) {
++		ebis[i].sensor = i;
++		if (ioctl(fd, ENVSYS_GTREINFO, &ebis[i]) == -1) {
++			warn("Can't get sensor info for sensor %d", i);
++			return 0;
++		}
++
++		etds[i].sensor = i;
++		if (ioctl(fd, ENVSYS_GTREDATA, &etds[i]) == -1) {
++			warn("Can't get sensor data for sensor %d", i);
++			return 0;
++		}
++	}
++	return 1;
++}
++
++/*
++ * pre:  fd contains a valid file descriptor of an envsys(4) supporting device
++ * post: returns the number of valid sensors provided by the device
++ *       or -1 on error
++ */
++static size_t
++numsensors(int fd)
++{
++	int count = 0, valid = 1;
++	envsys_tre_data_t etd;
++	etd.sensor = 0;
++
++	while (valid) {
++		if (ioctl(fd, ENVSYS_GTREDATA, &etd) == -1)
++			err(1, "Can't get sensor data");
++
++		valid = etd.validflags & ENVSYS_FVALID;
++		if (valid)
++			++count;
++
++		++etd.sensor;
++	}
++
++	return count;
++}
++
++static envsys_tre_data_t *etds;
++static envsys_basic_info_t *ebis;
++static int *cetds;
++
+ int first = 1;
+ void battery_check(void)
+ {
+        int fd, r, p;
+        struct apm_power_info info;
++       int acpi;
++       size_t ns;
++       size_t cc;
++       int i;
+ 
++       acpi = 0;
+        if ((fd = open(_PATH_APM_NORMAL, O_RDONLY)) == -1) {
+-               fprintf(stderr, "xbattbar: cannot open apm device\n");
++	       fd = open(_PATH_SYSMON, O_RDONLY);
++	       acpi = 1;
++       }
++       if (fd < 0) {
++               fprintf(stderr, "xbattbar: cannot open %s device\n", (acpi) ? _PATH_SYSMON : _PATH_APM_NORMAL);
                 exit(1);
         }
  
-+       memset(&info, 0, sizeof(info));
-        if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
-                fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
-                exit(1);
+-       if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
+-               fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
+-               exit(1);
++       if (acpi) {
++		if ((ns = numsensors(fd)) == 0) {
++		       fprintf(stderr, "xbattbar: no sensors found\n");
++		       exit(1);
++		}
++		if (first) {
++			cetds = (int *)malloc(ns * sizeof(int));
++			etds = (envsys_tre_data_t *)malloc(ns * sizeof(envsys_tre_data_t));
++			ebis = (envsys_basic_info_t *)malloc(ns * sizeof(envsys_basic_info_t));
++
++			if ((cetds == NULL) || (etds == NULL) || (ebis == NULL)) {
++				err(1, "Out of memory");
++			}
++		}
++
++		fillsensors(fd, etds, ebis, ns);
++
++       } else {
++
++	       memset(&info, 0, sizeof(info));
++	       if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
++		       fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
++		       exit(1);
++	       }
+        }
+ 
+        close(fd);
+ 
+        ++elapsed_time;
+ 
+-       /* get current remoain */
+-       if (info.battery_life > 100) {
+-               /* some APM BIOSes return values slightly > 100 */
+-               r = 100;
+-       } else {
+-               r = info.battery_life;
+-       }
++       if (acpi) {
++		r = 0;
++		p = APM_AC_ON;
++		for (i = 0 ; i < ns ; i++) {
++			cc = strlen(ebis[i].desc);
++			if (strcmp(&ebis[i].desc[cc - 6], "energy") == 0) {
++				r = (etds[i].cur.data_s * 100.0) / etds[i].max.data_s;
++			}
++			if (ebis[i].units == ENVSYS_INDICATOR &&
++			    etds[i].cur.data_s &&
++			    strcmp(&ebis[i].desc[cc - 11], "discharging") == 0) {
++				p = APM_AC_OFF;
++			}
++		}
++	       if (first || ac_line != p || battery_level != r) {
++		       first = 0;
++		       ac_line = p;
++		       battery_level = r;
++		       redraw();
++	       }
+ 
+-       /* get AC-line status */
+-       if (info.ac_state == APM_AC_ON) {
+-               p = APM_AC_ON;
+        } else {
+-               p = APM_AC_OFF;
+-       }
+-
+-       if (first || ac_line != p || battery_level != r) {
+-               first = 0;
+-               ac_line = p;
+-               battery_level = r;
+-               redraw();
++	       /* get current remain */
++	       if (info.battery_life > 100) {
++		       /* some APM BIOSes return values slightly > 100 */
++		       r = 100;
++	       } else {
++		       r = info.battery_life;
++	       }
++
++	       /* get AC-line status */
++	       if (info.ac_state == APM_AC_ON) {
++		       p = APM_AC_ON;
++	       } else {
++		       p = APM_AC_OFF;
++	       }
++
++	       if (first || ac_line != p || battery_level != r) {
++		       first = 0;
++		       ac_line = p;
++		       battery_level = r;
++		       redraw();
++	       }
+        }
+ }
+ 
