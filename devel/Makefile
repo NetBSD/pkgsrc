@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.601 2005/01/24 19:58:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.602 2005/01/25 12:21:10 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -198,6 +198,7 @@ SUBDIR+=	kdbg
 SUBDIR+=	kdesdk3
 SUBDIR+=	kdevelop
 SUBDIR+=	kdevelop-base
+SUBDIR+=	kscope
 SUBDIR+=	lcc
 SUBDIR+=	ldapsdk
 SUBDIR+=	libargparse
