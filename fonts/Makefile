@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2004/11/29 10:05:04 adam Exp $
+# $NetBSD: Makefile,v 1.77 2004/12/30 05:00:42 dmcmahill Exp $
 #
 
 COMMENT=	Fonts
@@ -47,6 +47,7 @@ SUBDIR+=	cyr-rfx-mac-cyrillic
 SUBDIR+=	cyr-rfx-windows_1251
 SUBDIR+=	cyr-rfx-winlatin_1
 SUBDIR+=	dbz-ttf
+SUBDIR+=	ec-fonts-mftraced
 SUBDIR+=	efont-unicode
 SUBDIR+=	fontconfig
 SUBDIR+=	fontforge
