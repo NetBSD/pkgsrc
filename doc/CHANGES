@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7405 2004/10/11 17:49:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.7406 2004/10/11 20:55:04 tv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4616,3 +4616,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added whoson-2.03 [abs 2004-10-11]
 	Added dbus-0.22 [jmmv 2004-10-11]
 	Added dbus-glib-0.22 [jmmv 2004-10-11]
+	Added cygwin_lib-1.5.11.1 [tv 2004-10-11]
+	Added cygwin_esound-0.2.35.1 [tv 2004-10-11]
