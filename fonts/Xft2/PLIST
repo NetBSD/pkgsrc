@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/16 12:08:42 jmmv Exp $
+bin/xft-config
+lib/libXft.so.2.0
+lib/libXft.so.2
+lib/pkgconfig/xft.pc
