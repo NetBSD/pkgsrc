@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.7 2003/12/08 19:20:49 wiz Exp $
+$NetBSD: patch-ad,v 1.8 2003/12/12 22:09:02 wiz Exp $
 
---- mp_msg.c.orig	Fri Sep 12 17:46:16 2003
+--- mp_msg.c.orig	2003-09-12 17:46:16.000000000 +0200
 +++ mp_msg.c
 @@ -34,6 +34,7 @@ void mp_msg_init(){
  #ifdef MP_DEBUG
@@ -10,14 +10,16 @@ $NetBSD: patch-ad,v 1.7 2003/12/08 19:20:49 wiz Exp $
      fprintf(stdout, "Original dirname: %s\n", bindtextdomain(textdomain(NULL),NULL));
  #endif
      setlocale(LC_ALL, ""); /* set from the environment variables */
-@@ -41,7 +42,10 @@ void mp_msg_init(){
+@@ -41,9 +42,12 @@ void mp_msg_init(){
      textdomain("mplayer");
  #ifdef MP_DEBUG
      fprintf(stdout, "Current domain: %s\n", textdomain(NULL));
 +#if 0
      fprintf(stdout, "Current dirname: %s\n\n", bindtextdomain(textdomain(NULL),NULL));
-+#endif
-+#endif
  #endif
  #endif
++#endif
++#endif
      mp_msg_set_level(MSGL_STATUS);
+ }
+ 
