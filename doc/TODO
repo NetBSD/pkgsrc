@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2761 2004/12/26 01:21:25 wiz Exp $
+$NetBSD: TODO,v 1.2762 2004/12/26 01:34:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,6 @@ Suggested package updates
 	o bzflag-1.10.8
 	o c4-1.10
 	o camlimages-2.12
-	o capc-calc-2.11.10.1
 	o catdoc-0.93.4
 	o catdoc-tk-0.93.4
 	o cbmconvert-2.1.2
