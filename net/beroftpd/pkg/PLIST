@@ -1,0 +1,9 @@
+sbin/BeroFTPD
+sbin/ftpshut
+sbin/ftprestart
+bin/ftpcount
+bin/ftpwho
+sbin/ckconfig
+sbin/ftpck
+etc/ftpconversions
+etc/ftpaccess
