@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8368 2004/12/19 22:00:54 tron Exp $
+$NetBSD: CHANGES,v 1.8369 2004/12/20 04:13:54 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5952,3 +5952,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ja-less to 358nb1 [grant 2004-12-19]
 	Updated overnet to 1.0.1 [minskim 2004-12-19]
 	Updated analog to 6.0 [tron 2004-12-19]
+	Updated getmail to 4.2.5 [schmonz 2004-12-20]
