@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2004/07/10 23:03:47 wiz Exp $
+
+--- gnmanager.h.orig	1999-03-29 15:07:19.000000000 +0200
++++ gnmanager.h
+@@ -2,7 +2,10 @@
+ #define GNManager_H
+ 
+ #include <string>
+-#include <hash_set>
++#include <ext/hash_set>
++
++using namespace __gnu_cxx;
++using namespace std;
+ 
+ class GameNumberManager {
+ public:
