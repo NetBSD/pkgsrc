@@ -1,17 +1,8 @@
-$NetBSD: patch-ah,v 1.2 2004/02/15 06:00:57 ben Exp $
+$NetBSD: patch-ah,v 1.3 2004/11/25 17:24:27 ben Exp $
 
---- GUI/Widgets/Fl_Knob.cxx.orig	2000-09-11 12:52:03.000000000 -0700
+--- GUI/Widgets/Fl_Knob.cxx.orig	Sun Jun  2 03:23:34 2002
 +++ GUI/Widgets/Fl_Knob.cxx
-@@ -4,7 +4,7 @@
- #include <FL/fl_draw.H>
- #include <math.h>
- 
--Fl_Knob::Fl_Knob(int xx,int yy,int ww,int hh,const char *l=0): Fl_Valuator(xx,yy,ww,hh,l) {
-+Fl_Knob::Fl_Knob(int xx,int yy,int ww,int hh,const char *l): Fl_Valuator(xx,yy,ww,hh,l) {
-   a1 = 35;
- 	a2 = 325;
- 	_type = DOTLIN;
-@@ -40,7 +40,7 @@ unsigned char rr,gg,bb;
+@@ -41,7 +41,7 @@ unsigned char rr,gg,bb;
  	int dam = damage();
  	if (dam & FL_DAMAGE_ALL)
  	{
