@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.4 2003/11/11 08:14:41 kei Exp $
+$NetBSD: distinfo,v 1.5 2004/01/02 21:55:43 cjep Exp $
 
 SHA1 (adobe-cmaps/ac14.tar.Z) = 5f95e93442e4aa8b7d14c064b4e33623753671b1
 Size (adobe-cmaps/ac14.tar.Z) = 1388945 bytes
-SHA1 (adobe-cmaps/ag14.tar.Z) = 4d38a49b589186f7432eacc41bfb6b321ba65b06
-Size (adobe-cmaps/ag14.tar.Z) = 2057991 bytes
+SHA1 (adobe-cmaps/ag14.tar.Z) = 4dd8905a2e35354c15bcf6198db0036a4365a18f
+Size (adobe-cmaps/ag14.tar.Z) = 2057976 bytes
 SHA1 (adobe-cmaps/ai0.tar.Z) = df90b2e71bcc045524dcc4683c1b084713e645ea
 Size (adobe-cmaps/ai0.tar.Z) = 4037 bytes
-SHA1 (adobe-cmaps/aj15.tar.Z) = dd75514e715e5b7b821322fa068ffbb61e72a77e
-Size (adobe-cmaps/aj15.tar.Z) = 1044712 bytes
+SHA1 (adobe-cmaps/aj15.tar.Z) = be206ecf0c8e05f9c91ca4533b6b58099a4f9d60
+Size (adobe-cmaps/aj15.tar.Z) = 1048901 bytes
 SHA1 (adobe-cmaps/aj20.tar.Z) = 45e7ebb82fa18eb3f2dc989949e0f673e00c4141
 Size (adobe-cmaps/aj20.tar.Z) = 258583 bytes
 SHA1 (adobe-cmaps/ak12.tar.Z) = c4c91f6baedee44b8e38c2b8cd8e572dfa4f007c
