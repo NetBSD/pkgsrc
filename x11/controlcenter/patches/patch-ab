@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2000/07/25 06:19:24 jlam Exp $
+
+--- po/Makefile.in.in.orig	Tue May 23 15:41:53 2000
++++ po/Makefile.in.in	Tue Jul 25 01:29:03 2000
+@@ -19,7 +19,7 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
++localedir = $(prefix)/share/locale
+ gnulocaledir = $(prefix)/share/locale
+ gettextsrcdir = $(prefix)/share/gettext/po
+ subdir = po
