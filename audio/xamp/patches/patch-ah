@@ -1,19 +1,7 @@
-$NetBSD: patch-ah,v 1.2 2000/03/23 23:27:25 dmcmahill Exp $
+$NetBSD: patch-ah,v 1.3 2000/03/28 00:09:21 dmcmahill Exp $
 
 --- configure.in.orig	Sun Oct  5 12:42:34 1997
-+++ configure.in	Wed Mar 22 18:49:34 2000
-@@ -9,9 +9,9 @@
- AC_PROG_CC
- AC_PROG_CXX
--AC_PATH_PROG(MOC, moc, /usr/bin/moc)
-+AC_PATH_PROG(MOC, moc1, /usr/bin/moc1)
- AC_PROG_INSTALL(INSTALL, /usr/bin/install)
- 
- dnl Checks for libraries.
--AC_HAVE_LIBRARY(qt,,,-lX11)
-+AC_HAVE_LIBRARY(qt1,,,-lX11)
- 
- dnl Checks for header files.
++++ configure.in	Sun Mar 26 13:59:52 2000
 @@ -58,5 +58,5 @@
      ;;
  

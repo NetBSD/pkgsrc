@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2000/03/23 22:07:13 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.5 2000/03/28 00:09:22 dmcmahill Exp $
 
 --- src/Makefile.in.orig	Fri Jul  2 12:37:40 1999
 +++ src/Makefile.in	Fri Dec 17 13:31:49 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2000/03/23 22:07:13 dmcmahill Exp $
  LIBIOS				= @LIBIOS@
  LIBAUDIO			= @LIBAUDIO@
 -LIBS				= @LIBS@ -lqt -lX11 -lsidplay $(LIBM) $(LIBIOS) $(LIBAUDIO)
-+LIBS				= @LIBS@ -lqt1 -lX11 -lXext -lsidplay $(LIBM) $(LIBIOS) $(LIBAUDIO)
++LIBS				= @LIBS@ -L${PREFIX}/qt1/lib -Wl,-R${PREFIX}/qt1/lib -lqt -lX11 -lXext -lsidplay $(LIBM) $(LIBIOS) $(LIBAUDIO)
  
  # Part of Qt.
  MOC					= @MOC@

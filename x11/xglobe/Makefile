@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/03/23 21:31:40 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2000/03/28 00:09:23 dmcmahill Exp $
 #
 
 DISTNAME=	xglobe-0.2
@@ -25,7 +25,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_X11BASE=	YES
 USE_GMAKE=	YES
-MAKE_ENV+=	QTDIR=${X11BASE}
+MAKE_ENV+=	QTDIR=${X11BASE}/qt1
 
 post-install:
 	${INSTALL_DATA_DIR} ${X11BASE}/lib/X11/xglobe
