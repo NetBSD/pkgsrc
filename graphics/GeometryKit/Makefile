@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:40 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/05 03:36:23 snj Exp $
 #
 
 .include "../../graphics/3DKit/Makefile.common"
@@ -10,6 +10,6 @@ COMMENT=	Objective-C class library for calculating 3D geometry
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/3DKit/GeometryKit
 
-.include "../../x11/gnustep-back/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../x11/gnustep-back/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/05 03:36:22 snj Exp $
 #
 
 .include "../../graphics/3DKit/Makefile.common"
@@ -17,8 +17,8 @@ do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}	\
 		${PREFIX}/share/doc/3DKit
 
-.include "../../graphics/GlutKit/buildlink2.mk"
-.include "../../graphics/GLXKit/buildlink2.mk"
-.include "../../graphics/SDLKit/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../graphics/GlutKit/buildlink3.mk"
+.include "../../graphics/GLXKit/buildlink3.mk"
+.include "../../graphics/SDLKit/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
