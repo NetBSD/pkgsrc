@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/04/09 13:29:48 agc Exp $
+# $NetBSD: Makefile,v 1.8 2002/04/09 16:51:49 agc Exp $
 #
 
 DISTNAME=	openh323_1.1beta3
@@ -28,6 +28,8 @@ MAKE_ENV+=	PWLIBDIR=${PREFIX} OPENH323DIR=${WRKSRC}
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 ALL_TARGET=	opt
+
+BROKEN=		Package has problems with libtool and pthreads
 
 pre-build:
 		-${MKDIR} ${WRKSRC}/lib; cd ${WRKSRC}/lib; ${LN} -s ${PREFIX}/lib/libpt.la
