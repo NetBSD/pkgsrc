@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2003/01/24 13:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/30 10:46:56 drochner Exp $
 
-DISTNAME=		ettercap-0.6.7
+DISTNAME=		ettercap-0.6.9
 CATEGORIES=		security net
 MASTER_SITES=		http://ettercap.sourceforge.net/download/
 
@@ -16,6 +16,9 @@ USE_BUILDLINK2=		yes
 
 USE_NCURSES=		# newpad(), MAX_FORM_COMMAND
 PTHREAD_OPTS+=		require
+
+post-build:
+			cd ${WRKSRC}/plugins ; ${MAKE_ENV} ${MAKE} all
 
 post-install:
 			cd ${WRKSRC}/plugins ; ${MAKE_ENV} ${MAKE} install
