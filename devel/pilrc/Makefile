@@ -1,23 +1,28 @@
-# $NetBSD: Makefile,v 1.4 2001/05/02 09:25:56 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/11 08:14:33 dillo Exp $
 #
 
-DISTNAME=	pilrc-2_7b
-PKGNAME=	pilrc-2.7b
+DISTNAME=	pilrc-2.8p4
+PKGNAME=	pilrc-2.8.4
 CATEGORIES=	devel
-MASTER_SITES=	http://www.ardiri.com/download/palm/pilrc/archive/
-#PATCH_SITES=	http://www.ardiri.com/download/palm/pilrc/patch/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	http://www.ardiri.com/download/palm/pilrc/patch/
+#MASTER_SITES=	http://www.ardiri.com/download/palm/pilrc/archive/
+#EXTRACT_SUFX=	.zip
 
-MAINTAINER=	dillo@giga.or.at
+#PATCH_SITES=	http://www.ardiri.com/download/palm/pilrc/patch/
+#PATCHFILES=	pilrc-2.8p0.diff pilrc-2.8p1.diff pilrc-2.8p2.diff
+#PATCHFILES+=	pilrc-2.8p3.diff
+#PATCH_DIST_STRIP+=-p1
+#
+MAINTAINER=	dillo@netbsd.org
 HOMEPAGE=	http://www.ardiri.com/index.cfm?redir=palm&cat=pilrc
 COMMENT=	generate resources for PalmOS applications from textual description
 
-# LP64 problems - pilrc.c has: Assert(sizeof(char *) == sizeof(int));
-NOT_FOR_PLATFORM= *-*-alpha *-*-sparc64
-
 .include "../../mk/bsd.prefs.mk"
 
-PILRC_USE_GTK?=	YES
+# pilrcui is broken in 2.8
+#PILRC_USE_GTK?=	YES
+PILRC_USE_GTK=	NO
+
 .if ${PILRC_USE_GTK} == YES
 DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
 PLIST_SUBST+=	PILRCUI=''
@@ -26,9 +31,9 @@ CONFIGURE_ARGS+=--disable-pilrcui
 PLIST_SUBST+=	PILRCUI='@comment '
 .endif
 
-EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
+#EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/pilrc-2.8p4
 GNU_CONFIGURE=	YES
 
 DOCDIR=		${PREFIX}/share/doc/html/pilrc
