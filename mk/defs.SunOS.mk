@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.5 2001/07/15 12:40:03 jlam Exp $
+# $NetBSD: defs.SunOS.mk,v 1.6 2001/11/19 16:17:51 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -61,3 +61,7 @@ TRUE?=		/usr/bin/true
 TYPE?=		/usr/bin/type
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
+
+USERADD?=	/usr/sbin/useradd
+GROUPADD?=	/usr/sbin/groupadd
+NOLOGIN?=	${FALSE}
