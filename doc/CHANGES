@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5389 2004/03/31 06:08:21 snj Exp $
+$NetBSD: CHANGES,v 1.5390 2004/03/31 07:07:14 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1630,3 +1630,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated abiword to 2.0.5 [xtraeme 2004-03-31]
 	Updated sqlite to 2.8.13 [snj 2004-03-31]
 	Updated py-sqlite to 0.5.0 [snj 2004-03-31]
+	Updated ethereal to 0.10.3 [cube 2004-03-31]
