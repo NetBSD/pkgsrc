@@ -1,0 +1,29 @@
+$NetBSD: patch-ao,v 1.1 2004/09/26 20:40:37 seb Exp $
+
+--- master/service.c.orig	2004-03-22 20:05:47.000000000 +0000
++++ master/service.c
+@@ -68,6 +68,7 @@
+ #include <limits.h>
+ 
+ #include "service.h"
++#include "libconfig.h"
+ #include "xmalloc.h"
+ 
+ extern int optind, opterr;
+@@ -145,7 +146,6 @@ static int libwrap_ask(struct request_in
+ #endif
+ 
+ extern void cyrus_init(const char *, const char *, unsigned);
+-extern const char *config_getstring(const char *key, const char *def);
+ extern const char *config_dir;
+ 
+ static int getlockfd(char *service, int id)
+@@ -365,7 +365,7 @@ int main(int argc, char **argv, char **e
+     if (call_debugger) {
+ 	char debugbuf[1024];
+ 	int ret;
+-	const char *debugger = config_getstring("debug_command", NULL);
++	const char *debugger = config_getstring(IMAPOPT_DEBUG_COMMAND);
+ 	if (debugger) {
+ 	    snprintf(debugbuf, sizeof(debugbuf), debugger, 
+ 		     argv[0], getpid(), service);
