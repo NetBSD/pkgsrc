@@ -1,28 +1,25 @@
-$NetBSD: patch-aa,v 1.5 2000/09/08 02:48:05 jwise Exp $
---- configure.in.orig	Wed Jan 12 15:15:36 2000
-+++ configure.in	Thu Sep  7 21:56:11 2000
-@@ -580,9 +580,9 @@
+$NetBSD: patch-aa,v 1.6 2001/12/16 07:39:11 jmc Exp $
+
+--- configure.in.orig	Wed Jan 12 20:15:36 2000
++++ configure.in	Sun Dec 16 07:16:49 2001
+@@ -580,7 +580,7 @@
  TK_LIB_DIR=${TK_EXEC_PREFIX}/lib
  
  case $target in
 -  *-sunos4*|NetBSD-*|FreeBSD-*|OpenBSD-*)
--    TCL_LIB_SPEC="-ltcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
--    TK_LIB_SPEC="-ltk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
 +  *-sunos4*|*-*-netbsd|FreeBSD-*|OpenBSD-*)
-+    TCL_LIB_SPEC="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -ltcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
-+    TK_LIB_SPEC="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -ltk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
+     TCL_LIB_SPEC="-ltcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
+     TK_LIB_SPEC="-ltk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
      ;;
-   *)
-     TCL_LIB_SPEC="-ltcl${TCL_MAJOR_VERSION}.${TCL_MINOR_VERSION}"
 @@ -933,9 +933,10 @@
      # Not available on all versions:  check for include file.
      AC_CHECK_HEADER(dlfcn.h, test_ok=yes, test_ok=no)
      if test "$test_ok" = yes; then
-+      LDFLAGS="-L${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib"
++      LDFLAGS="-L${prefix}/lib -L${X11BASE}/lib -Wl,-R${prefix}/lib -Wl,-R${X11BASE}/lib"
        SHLIB_CFLAGS="-fpic"
        SHLIB_LD="ld"
 -      SHLIB_LD_FLAGS="-Bshareable -x"
-+      SHLIB_LD_FLAGS="-Bshareable -x -R${PREFIX}/lib -R${X11BASE}/lib"
++      SHLIB_LD_FLAGS="-Bshareable -x -R${prefix}/lib -R${X11BASE}/lib"
      fi
      ;;
  
