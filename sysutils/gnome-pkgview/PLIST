@@ -1,0 +1,52 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/24 21:39:51 jmmv Exp $
+bin/gnome-pkgview
+share/applications/gnome-pkgview.desktop
+share/gconf/schemas/gnome-pkgview.schemas
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-pkgview.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-pkgview.mo
+share/pixmaps/gnome-pkgview/debian.png
+share/pixmaps/gnome-pkgview/fedora.png
+share/pixmaps/gnome-pkgview/gentoo.png
+share/pixmaps/gnome-pkgview/gnome.png
+share/pixmaps/gnome-pkgview/pkgview.png
+share/pixmaps/gnome-pkgview/pld.png
+share/pixmaps/gnome-pkgview/redhat.png
+share/pixmaps/gnome-pkgview/slackware.png
+share/pixmaps/gnome-pkgview/solaris.png
+share/pixmaps/gnome-pkgview/suse.png
+share/pixmaps/gnome-pkgview/whitebox.png
+@dirrm share/pixmaps/gnome-pkgview
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
