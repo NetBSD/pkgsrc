@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/27 15:24:36 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/18 09:23:26 rh Exp $
 share/GNUstep/System/Headers/AppKit/AppKit.h
 share/GNUstep/System/Headers/AppKit/AppKitDefines.h
 share/GNUstep/System/Headers/AppKit/AppKitExceptions.h
@@ -7,11 +7,13 @@ share/GNUstep/System/Headers/AppKit/GMAppKit.h
 share/GNUstep/System/Headers/AppKit/GMArchiver.h
 share/GNUstep/System/Headers/AppKit/GSDisplayServer.h
 share/GNUstep/System/Headers/AppKit/GSFontInfo.h
+share/GNUstep/System/Headers/AppKit/GSFusedSilica.h
 share/GNUstep/System/Headers/AppKit/GSHbox.h
 share/GNUstep/System/Headers/AppKit/GSHelpManagerPanel.h
 share/GNUstep/System/Headers/AppKit/GSInfoPanel.h
 share/GNUstep/System/Headers/AppKit/GSMemoryPanel.h
 share/GNUstep/System/Headers/AppKit/GSMethodTable.h
+share/GNUstep/System/Headers/AppKit/GSNibTemplates.h
 share/GNUstep/System/Headers/AppKit/GSPasteboardServer.h
 share/GNUstep/System/Headers/AppKit/GSServicesManager.h
 share/GNUstep/System/Headers/AppKit/GSTable.h
@@ -136,7 +138,6 @@ share/GNUstep/System/Headers/AppKit/NSWindow.h
 share/GNUstep/System/Headers/AppKit/NSWindowController.h
 share/GNUstep/System/Headers/AppKit/NSWorkspace.h
 share/GNUstep/System/Headers/AppKit/PSOperators.h
-share/GNUstep/System/Headers/AppKit/nsimage-tiff.h
 share/GNUstep/System/Headers/gnustep/AppKit/GMAppKit.h
 share/GNUstep/System/Headers/gnustep/AppKit/GMArchiver.h
 share/GNUstep/System/Headers/gnustep/AppKit/IMConnectors.h
