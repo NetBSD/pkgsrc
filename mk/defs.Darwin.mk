@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.73 2004/05/04 00:11:23 danw Exp $
+# $NetBSD: defs.Darwin.mk,v 1.74 2004/05/06 06:32:22 adam Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -151,8 +151,7 @@ LOCALBASE?=		${DESTDIR}/usr/pkg
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-# FIXME: Adjust to work on this system and enable the lines below.
-#.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
-#_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
-#CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
-#.endif
+.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
+_OPSYS_MAX_CMDLEN!=	/usr/sbin/sysctl -n kern.argmax
+CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
+.endif
