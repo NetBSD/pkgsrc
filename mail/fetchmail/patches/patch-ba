@@ -1,5 +1,5 @@
 --- driver.c.orig	Thu Mar  5 23:16:28 1998
-+++ driver.c	Mon Mar 16 03:14:48 1998
++++ driver.c	Mon Mar 16 03:20:15 1998
 @@ -54,6 +54,11 @@
  #include <krb.h>
  #define krb_get_err_text(e) (krb_err_txt[e])
@@ -20,6 +20,15 @@
  #endif /* ! defined (__bsdi__) */
  #include <netinet/in.h>
  #include <netdb.h>
+@@ -1594,7 +1600,7 @@
+ kerberos_auth (socket, canonical) 
+ /* authenticate to the server host using Kerberos V4 */
+ int socket;		/* socket to server host */
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ char *canonical;	/* server name */
+ #else
+ const char *canonical;	/* server name */
 --- imap.c.orig	Tue Mar  3 16:34:02 1998
 +++ imap.c	Mon Mar 16 03:15:37 1998
 @@ -18,12 +18,18 @@
