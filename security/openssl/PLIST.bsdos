@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.bsdos,v 1.1 2003/10/04 07:54:52 reed Exp $
+lib/libcrypto.so
+lib/libcrypto.so.300
+lib/libcrypto.so.300.1
+lib/libssl.so
+lib/libssl.so.300
+lib/libssl.so.300.1
