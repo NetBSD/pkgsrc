@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2310 2004/11/05 09:46:22 adam Exp $
+$NetBSD: TODO,v 1.2311 2004/11/05 11:54:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ Suggested package updates
 	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wesnoth-0.8.7
-	o windowmaker-0.91.0 [pkg/27474]
 	o wine-20041019
 	o wmakerconf-2.9.2
 	o wmweather-2.4.3
