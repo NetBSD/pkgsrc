@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/22 09:43:17 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/23 21:45:10 jlam Exp $
 
 .if !defined(LIBXML_BUILDLINK2_MK)
 LIBXML_BUILDLINK2_MK=	# defined
@@ -10,6 +10,7 @@ BUILDLINK_PKGSRCDIR.libxml?=	../../textproc/libxml
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libxml=libxml
 BUILDLINK_PREFIX.libxml_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libxml=		include/gnome-xml/*
+BUILDLINK_FILES.libxml+=	include/gnome-xml/libxml/*
 BUILDLINK_FILES.libxml+=	lib/libxml.*
 
 .include "../../devel/zlib/buildlink2.mk"
