@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2005/01/05 08:06:42 martti Exp $
+# $NetBSD: Makefile,v 1.34 2005/01/05 12:16:12 markd Exp $
 
 DISTNAME=		db-4.3.27
 PKGNAME=		${DISTNAME:S/db/db4/}
-#PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.sleepycat.com/releases/
 
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--program-transform-name=s,db_,db4_,
 CONFIGURE_ENV+=		F77=${FALSE}
 
 OPSYSVARS+=		LIBSO_LIBS
-LIBSO_LIBS.SunOS+=	-lnsl
+LIBSO_LIBS.SunOS+=	-lnsl -lrt
 CONFIGURE_ENV+=		LIBSO_LIBS="${LIBSO_LIBS}"
 
 # DB4 only want pthreads because it's really after POSIX 1003.1
