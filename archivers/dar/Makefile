@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/15 17:51:43 agc Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/10 05:22:47 grant Exp $
 #
 
 DISTNAME=	dar-2.0.2
 CATEGORIES=	archivers sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dar/}
 
-MAINTAINER=	David Simas <davids@idiom.com>
+MAINTAINER=	davids@idiom.com
 HOMEPAGE=	http://dar.linux.free.fr/
 COMMENT=	Disk archiver
 
