@@ -1,24 +1,31 @@
-# $NetBSD: Makefile,v 1.8 2002/01/02 22:24:43 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/01/22 22:08:50 jlam Exp $
 
-PKGNAME=	courier-imap-${BASE_VERS}
-PKGREVISION?=	# empty
+DISTNAME=	courier-imap-1.4.2
 COMMENT=	IMAP server for access to Maildir-style mailboxes
+HOMEPAGE=	http://www.inter7.com/courierimap/
 
-DEPENDS+=	courier-maildirmake>=0.3:../../mail/courier-maildirmake
+DEPENDS+=	courier-auth>=0.37.1:../../mail/courier-auth
+DEPENDS+=	courier-maildirmake>=0.37.1:../../mail/courier-maildirmake
 
 USE_BUILDLINK_ONLY=	yes
 USE_PERL5=		yes
 REPLACE_PERL=		sysconftool
 
-INSTALL_TARGET=		install-strip
+.include "../../mail/courier-auth/Makefile.common"
 
-.include "../../mail/courier-imap/Makefile.common"
+CONFIGURE_ENV+=		OPENSSL=${BUILDLINK_PREFIX.openssl}/bin/openssl
 
-GEN_FILES=	authdaemonrc imapd imapd-ssl pop3d pop3d-ssl
-SSLCNF_FILES=	imapd.cnf pop3d.cnf
-CONF_FILES=	${EGDIR}/quotawarnmsg.example ${PKG_SYSCONFDIR}/quotawarnmsg
-RCD_SCRIPTS=	courierimap courierimaps courierpop courierpops
-OWN_DIRS_PERMS=	/var/authdaemon ${ROOT_USER} ${ROOT_GROUP} 700
+.if !defined(STRIPFLAG) || empty(STRIPFLAG:M-s)
+INSTALL_TARGET=         install-strip
+.else
+INSTALL_TARGET=         install
+.endif
+
+SYSCONFTOOL=		${PREFIX}/sbin/imapd.sysconftool
+GEN_FILES=		imapd imapd-ssl pop3d pop3d-ssl
+SSLCNF_FILES=		imapd.cnf pop3d.cnf
+CONF_FILES=		${EGDIR}/quotawarnmsg.example ${PKG_SYSCONFDIR}/quotawarnmsg
+RCD_SCRIPTS=		courierimap courierimaps courierpop courierpops
 
 CONF_FILES_PERMS=	# empty
 .for FILE in ${GEN_FILES}
@@ -31,7 +38,8 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}	\
 .endfor
 
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+INSTALL_EXTRA_TMPL=	${.CURDIR}/../../mail/courier-auth/INSTALL
+FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
 FILES_SUBST+=		SSLCERTS=${SSLCERTS}
 FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
 
@@ -62,19 +70,11 @@ post-install:
 			${PREFIX}/etc/rc.d/$${file};			\
 	done
 	${INSTALL_DATA_DIR} ${EGDIR} ${DOCDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${SYSCONFTOOL}
 	${INSTALL_DATA} ${WRKSRC}/imap/BUGS				\
 		${DOCDIR}/BUGS.imap
 	${INSTALL_DATA} ${WRKSRC}/imap/README				\
 		${DOCDIR}/README.imap
-	${INSTALL_DATA} ${WRKSRC}/maildir/README.maildirquota.txt	\
-		${DOCDIR}/README.maildirquota
-	${INSTALL_DATA} ${WRKSRC}/maildir/README.sharedfolders.txt	\
-		${DOCDIR}/README.sharedfolders
-	for file in authdaemonrc.dist; do				\
-		${INSTALL_DATA} ${PKG_SYSCONFDIR}/$${file} ${EGDIR};	\
-		${RM} -f ${PKG_SYSCONFDIR}/$${file};			\
-	done
 	cd ${WRKSRC}; ${INSTALL_DATA} imap/imapd.pam imap/pop3d.pam ${EGDIR}
 
 .include "../../security/openssl/buildlink.mk"

@@ -1,20 +1,7 @@
-# $NetBSD: DEINSTALL,v 1.2 2002/01/02 22:19:37 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.3 2002/01/22 22:08:48 jlam Exp $
 
 # Additional files that are may be created for courier-imap.
-ALL_FILES="${ALL_FILES} /dev/null @PKG_SYSCONFDIR@/userdb"
-ALL_FILES="${ALL_FILES} /dev/null @PKG_SYSCONFDIR@/userdb.dat"
-ALL_FILES="${ALL_FILES} /dev/null @PKG_SYSCONFDIR@/userdbshadow.dat"
 ALL_FILES="${ALL_FILES} /dev/null @PKG_SYSCONFDIR@/imapd.rand"
 ALL_FILES="${ALL_FILES} /dev/null @PKG_SYSCONFDIR@/pop3d.rand"
 ALL_FILES="${ALL_FILES} /dev/null @SSLCERTS@/imapd.pem"
 ALL_FILES="${ALL_FILES} /dev/null @SSLCERTS@/pop3d.pem"
-
-case ${STAGE} in
-POST-DEINSTALL)
-	#
-	# Unconditionally remove authdaemon state directory as it contains
-	# files and sockets that authdaemond creates every time it is
-	# started.
-	#
-	${RM} -rf /var/authdaemon
-esac
