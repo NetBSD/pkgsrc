@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2002/08/02 15:36:53 grant Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/04 02:00:12 grant Exp $
 
 DISTNAME=		suse_libjpeg-${SUSE_VERSION}
 PKGREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE:=gra1/}
+MASTER_SITES=		ftp://ftp.suse.com/pub/suse/discontinued/i386/update/${SUSE_VERSION}/gra1/
+
 DISTFILES=		${RPMFILES}
 
 MAINTAINER=		hubertf@netbsd.org
@@ -18,6 +19,6 @@ EXTRACT_ONLY=		# empty
 NO_BUILD=		yes
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		libjpeg.rpm
+RPMFILES=		libjpeg-6.2.0-62.i386.rpm
 
 .include "../suse64_linux/Makefile.common"
