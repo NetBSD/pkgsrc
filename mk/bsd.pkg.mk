@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.743 2001/05/20 00:54:09 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.744 2001/05/20 01:58:20 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2632,17 +2632,45 @@ checksum: fetch uptodate-digest
 .endif
 
 
+
+# List of sites carrying binary pkgs. Variables "rel" and "arch" are
+# replaced with OS release ("1.5", ...) and architecture ("mipsel", ...)
+BINPKG_SITE?= \
+	ftp://ftp.netbsd.org/pub/NetBSD/packages/$${rel}/$${arch}
+
+# List of flags to pass to pkg_add(8) for bin-install:
+BIN_INSTALL_FLAGS?= 	# -v
+
 # Install binary pkg, without strict uptodate-check first
-# (XXX should be able to snarf via FTP. Later...)
 bin-install:
+	@found="`${PKG_INFO} -e \"${PKGWILDCARD}\" || ${TRUE}`";	\
+	if [ "$$found" != "" ]; then					\
+		${ECHO_MSG} "${_PKGSRC_IN}>  $$found is already installed - perhaps an older version?"; \
+		${ECHO_MSG} "*** If so, you may wish to \`\`pkg_delete $$found'' and install"; \
+		${ECHO_MSG} "*** this package again by \`\`${MAKE} bin-install'' to upgrade it properly."; \
+		${SHCOMMENT} ${ECHO_MSG} "*** or use \`\`${MAKE} bin-update'' to upgrade it and all of its dependencies."; \
+		exit 1;							\
+	fi
 	@if [ -f ${PKGFILE} ] ; then 					\
 		${ECHO_MSG} "Installing from binary pkg ${PKGFILE}" ;	\
 		${PKG_ADD} ${PKGFILE} ; 				\
 	else 				 				\
-		${SHCOMMENT} Cycle through some FTP server here ;\
-		${ECHO_MSG} "Installing from source" ;			\
-		${MAKE} ${MAKEFLAGS} package &&				\
-		${MAKE} ${MAKEFLAGS} clean ;				\
+		rel=`uname -r | sed 's@\.\([0-9]*\)[\._].*@\.\1@'`; 	\
+		arch=`sysctl -n hw.machine_arch`; 			\
+		for site in ${BINPKG_SITE} ; do 			\
+			${ECHO} Trying `eval echo $$site`/All ; 	\
+			${SHCOMMENT} echo ${SETENV} PKG_PATH="`eval echo $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
+			if ${SETENV} PKG_PATH="`eval echo $$site`/All" ${PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; then \
+				${ECHO} "${PKGNAME} successfully installed." ; 			\
+				break ; 				\
+			fi ; 						\
+		done ; 							\
+		if ! ${PKG_INFO} -qe ${PKGNAME} ; then 			\
+			${SHCOMMENT} Cycle through some FTP server here ;\
+			${ECHO_MSG} "Installing from source" ;		\
+			${MAKE} ${MAKEFLAGS} package &&			\
+			${MAKE} ${MAKEFLAGS} clean ;			\
+		fi ; \
 	fi
 
 
