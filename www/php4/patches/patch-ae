@@ -1,3 +1,4 @@
+$NetBSD: patch-ae,v 1.5 2003/09/01 10:17:38 cjep Exp $
 --- main/php_open_temporary_file.c.orig	2003-08-30 21:45:02.000000000 +0200
 +++ main/php_open_temporary_file.c	2003-08-30 21:45:13.000000000 +0200
 @@ -132,7 +132,7 @@
