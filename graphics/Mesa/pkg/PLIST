@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1997/12/02 23:25:11 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/01/24 05:19:32 hubertf Exp $
 include/GL/FooMesa.h
 include/GL/dosmesa.h
 include/GL/gl.h
@@ -30,8 +30,8 @@ lib/libMesaaux.so.2.4
 lib/libMesaaux_pic.a
 lib/libMesatk.so.2.4
 lib/libMesatk_pic.a
-@exec ldconfig -m %B || true
-@unexec ldconfig -m %B || true
+@exec ldconfig -m %B || /usr/bin/true
+@unexec ldconfig -m %B || /usr/bin/true
 share/examples/Mesa/book/Imakefile
 share/examples/Mesa/book/Makefile
 share/examples/Mesa/book/README
