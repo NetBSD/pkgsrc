@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2005/01/21 20:23:22 tv Exp $
+$NetBSD: distinfo,v 1.29 2005/02/02 19:09:52 jlam Exp $
 
 SHA1 (perl-5.8.6.tar.bz2) = 5267c5b4900a995a10e4fc56fe10a6852004c29b
 Size (perl-5.8.6.tar.bz2) = 9693085 bytes
@@ -8,6 +8,7 @@ SHA1 (patch-ah) = cb103c14090b2d61720ee9b555b32085c8eeb810
 SHA1 (patch-ba) = 74a01f3a86f263720b9f07d1fdbaadbaecafb012
 SHA1 (patch-bd) = 9f96ba1912f2a8db93db31f7a63c0b49a045318d
 SHA1 (patch-be) = 9f667f33ea24300a5580db84d0978ca53f126f29
+SHA1 (patch-bf) = 9bc5690b41a70617cde89b805184a8d5605d20d1
 SHA1 (patch-ca) = 3198a5f49c2a850b1ea1f5c6f0738f45da505924
 SHA1 (patch-cb) = de10a31b699d877cedb3ca849458e10071912972
 SHA1 (patch-cc) = b04ea30ac47ae0748aa6b6c83c8de0396ace349f
