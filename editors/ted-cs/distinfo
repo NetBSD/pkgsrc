@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/04/09 02:21:56 markd Exp $
+$NetBSD: distinfo,v 1.4 2003/04/09 13:26:46 markd Exp $
 
-SHA1 (Ted-2.11/Ted_cs_CZ.tar.gz) = ae8e3b54f09eaf9d58f419356fa79b5edc56f6e6
-Size (Ted-2.11/Ted_cs_CZ.tar.gz) = 1054438 bytes
+SHA1 (Ted-2.14/Ted_cs_CZ.tar.gz) = c1b5045140bbb2eae9dd72f3cb384078bfb2edec
+Size (Ted-2.14/Ted_cs_CZ.tar.gz) = 1064847 bytes
