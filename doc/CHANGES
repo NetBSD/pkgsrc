@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8998 2005/02/01 20:45:52 wiz Exp $
+$NetBSD: CHANGES,v 1.8999 2005/02/01 21:53:18 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -703,3 +703,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated keychain to 2.5.1 [martti 2005-02-01]
 	Added wide-0.1 [jschauma 2005-02-01]
 	Updated pkg_chk to 1.54 [wiz 2005-02-01]
+	Added nss-3.9.2 [jschauma 2005-02-01]
