@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/11/17 16:16:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/01/14 08:51:06 adam Exp $
 bin/lbreakout2
 bin/lbreakout2server
 share/doc/html/lbreakout2/b0.jpg
@@ -154,7 +154,9 @@ share/lbreakout2/levels/Abc
 share/lbreakout2/levels/Afl
 share/lbreakout2/levels/Alex
 share/lbreakout2/levels/Arcade
+share/lbreakout2/levels/Arkanoid
 share/lbreakout2/levels/BeOS-4ever
+share/lbreakout2/levels/Biolab428
 share/lbreakout2/levels/Bombs
 share/lbreakout2/levels/CalendarFun
 share/lbreakout2/levels/Chaos
@@ -173,6 +175,7 @@ share/lbreakout2/levels/GreenWall3
 share/lbreakout2/levels/GreenWall4
 share/lbreakout2/levels/Hans
 share/lbreakout2/levels/HereWeGo
+share/lbreakout2/levels/Heroes
 share/lbreakout2/levels/HighBall
 share/lbreakout2/levels/Holidays
 share/lbreakout2/levels/Hommage
@@ -237,7 +240,8 @@ share/lbreakout2/sounds/malus_magnet.wav
 share/lbreakout2/sounds/menu_click.wav
 share/lbreakout2/sounds/menu_motion.wav
 share/lbreakout2/sounds/metal.wav
-share/lbreakout2/sounds/reflect.wav
+share/lbreakout2/sounds/reflect_brick.wav
+share/lbreakout2/sounds/reflect_paddle.wav
 share/lbreakout2/sounds/score.wav
 share/lbreakout2/sounds/shot.wav
 share/lbreakout2/sounds/shrink.wav
@@ -259,4 +263,4 @@ share/lbreakout2/sounds/wontgiveup.wav
 @dirrm share/lbreakout2/gui_theme
 @dirrm share/lbreakout2
 @dirrm share/doc/html/lbreakout2
-@unexec echo Please remove highscore file %D/share/games/lbreakout2.hscr manually.
+@unexec echo Please remove highscore file %D/var/lbreakout2.hscr manually.
