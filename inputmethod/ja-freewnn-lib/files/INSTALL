@@ -1,0 +1,24 @@
+#!/bin/sh
+
+case $2 in
+PRE-INSTALL)
+	uid=`id -u ${WNNOWNER} 2> /dev/null`
+	if [ X"$uid" != X ]; then
+		exit 0
+	fi
+
+	wnn_uid=69
+	uid=`id -u $wnn_uid 2> /dev/null`
+	if [ X"$uid" != X ]; then
+		wnn_uid=32768
+		while id -u $wnn_uid > /dev/null 2>&1; do
+			wnn_uid=`echo $wnn_uid+1|bc`
+			if [ $wnn_uid = 65536 ]; then
+				exit 1
+			fi
+		done
+	fi
+	chpass -l -a "${WNNOWNER}:*:$wnn_uid:1::0:0:User Wnn:/nonexistent:/sbin/nologin"
+	exit $?
+	;;
+esac
