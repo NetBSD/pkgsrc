@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/01/24 13:51:14 grant Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/07/01 14:03:00 wiz Exp $
 
 OPENJIT_VERSION=1.1.16
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.openjit.org/
 COMMENT=	Reflective JIT compiler for Java
 
 GNU_CONFIGURE=	# defined
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	# defined
 USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.prefs.mk"
