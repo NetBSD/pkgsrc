@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/08/23 15:02:27 drochner Exp $
+$NetBSD: distinfo,v 1.3 2003/08/25 17:57:54 drochner Exp $
 
 SHA1 (PyQt-x11-gpl-3.8.tar.gz) = 626efd00304fb4a23c7af2a5248ced14c1421475
 Size (PyQt-x11-gpl-3.8.tar.gz) = 743487 bytes
@@ -6,7 +6,7 @@ SHA1 (patch-aa) = 12591c485bc40951e0110e96de7ea3df1cf99827
 SHA1 (patch-ab) = df819b1cef8fa6d51ba054e2c2604aabea80040b
 SHA1 (patch-ac) = 910d407bf809b8575dd7ff6899e126296ce75beb
 SHA1 (patch-ad) = c24e3e0d3774637fd17337c7b736a81668101105
-SHA1 (patch-ae) = 703d0f44ccd2c2a27ff0fc922f34fd2267ad5b88
+SHA1 (patch-ae) = 263e7784ddd66a1d7cf473c06ae540ca31f6c30e
 SHA1 (patch-af) = 0e3f558578b239c339f99cd7aca7ab5cf1b3cbc2
 SHA1 (patch-ag) = cc42028d82369b93f0ea8c49ad7a17c2ba2c7de5
 SHA1 (patch-ah) = 45ba3d3b0cf9b284af3563041fd35f8161436ef9
