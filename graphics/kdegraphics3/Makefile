@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2004/01/23 21:50:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2004/02/05 01:32:47 markd Exp $
 
-DISTNAME=	kdegraphics-3.1.5
-PKGREVISION=	1
+DISTNAME=	kdegraphics-${_KDE_VERSION}
 CATEGORIES=	graphics
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
 
@@ -17,12 +16,6 @@ CONFIGURE_ARGS+=	--with-imlib-config=${X11PREFIX}/bin
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
-
-FOO_MAIN_FILES= \
-	kview/kview_main.cpp \
-	kuickshow/src/kuickshow_main.cpp
-
-.include "../../meta-pkgs/kde3/Makefile.foo_main"
 
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/glut/buildlink2.mk"
