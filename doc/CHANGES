@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4935 2004/02/21 06:18:44 minskim Exp $
+$NetBSD: CHANGES,v 1.4936 2004/02/21 07:24:28 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -950,3 +950,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-gdick-0.9.1 [minskim 2004-02-21]
 	Downgraded jabberd to 1.4.2 [xtraeme 2004-02-21]
 	Added py-biggles-1.6.3 [minskim 2004-02-21]
+	Added quake3server-osp-1.03a [xtraeme 2004-02-21]
