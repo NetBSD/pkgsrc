@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/12/30 16:21:51 taca Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/04 09:44:59 taca Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}base-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -25,9 +26,13 @@ MLINKS=		ruby${_RUBY_SUFFIX}.1 ruby.1
 
 DOCS=		README README.EXT README.EXT.ja README.ja ToDo \
 		doc/NEWS doc/forwardable.rd doc/forwardable.rd.ja \
-		doc/shell.rd doc/shell.rd.ja
-DOCS_ETC=	etc.txt etc.txt.ja
-DOCS_PTY=	README README.expect README.expect.ja README.ja
+		doc/shell.rd doc/shell.rd.ja doc/irb/irb-tools.rd.ja \
+		doc/irb/irb.rd doc/irb/irb.rd.ja doc/net/http.rd.ja \
+		doc/net/pop.rd.ja doc/net/smtp.rd.ja doc/shell.rd \
+		doc/shell.rd.ja
+EXT_DOCS=	ext/etc/etc.txt ext/etc/etc.txt.ja ext/pty/README \
+		ext/pty/README.expect ext/pty/README.expect.ja \
+		ext/pty/README.ja ext/syslog/syslog.txt
 
 REPLACE_RUBY=	ext/curses/hello.rb ext/curses/rain.rb ext/curses/view.rb \
 		lib/matrix.rb sample/biorhythm.rb sample/cal.rb \
@@ -87,17 +92,13 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ext/pty/expect_sample.rb \
 		${WRKSRC}/ext/pty/script.rb ${WRKSRC}/ext/pty/shl.rb \
 		${RUBY_EXAMPLESDIR}/pty
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}
-.for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}
-.endfor
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/etc
-.for f in ${DOCS_ETC}
-	${INSTALL_DATA} ${WRKSRC}/ext/etc/${f} ${RUBY_DOCDIR}/etc
-.endfor
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/irb
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/net
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/pty
-.for f in ${DOCS_PTY}
-	${INSTALL_DATA} ${WRKSRC}/ext/pty/${f} ${RUBY_DOCDIR}/pty
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/syslog
+.for f in ${DOCS} ${EXT_DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/${f:C/^(doc|ext)\///}
 .endfor
 
 test:
