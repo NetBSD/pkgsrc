@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2002/09/25 00:09:32 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/19 18:16:40 dmcmahill Exp $
 #
 
 DISTNAME=	bins-1.1.17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +11,7 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://bins.sautret.org/
 COMMENT=	static HTML photo album generator
 
+DEPENDS+=	p5-gettext>=1.01:../../devel/p5-gettext
 DEPENDS+=	p5-Text-Iconv>=1.1:../../converters/p5-Text-Iconv
 DEPENDS+=	p5-Storable>=2.04:../../devel/p5-Storable
 DEPENDS+=	p5-Image-Info>=1.10:../../graphics/p5-Image-Info
@@ -33,7 +34,8 @@ REPLACE_PERL=	bins bins_edit bins-edit-gui bins_txt2xml
 
 post-patch:
 	${MV} ${WRKSRC}/bins ${WRKSRC}/bins.bak
-	${SED} 's;@pkgsysconfdir@;${PKG_SYSCONFDIR};g' \
+	${SED}	-e 's;@pkgsysconfdir@;${PKG_SYSCONFDIR};g' \
+		-e 's;@pkglocaledir@;${PREFIX}/${PKGLOCALEDIR}/locale;g' \
 		${WRKSRC}/bins.bak > ${WRKSRC}/bins
 
 do-install:
