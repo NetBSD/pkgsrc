@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.3 2000/11/27 05:00:20 kei Exp $
+$NetBSD: patch-ag,v 1.4 2000/11/27 12:54:47 kei Exp $
 
 --- Makefile.in.orig	Wed Mar 17 07:17:02 1999
-+++ Makefile.in	Mon Nov 27 13:48:13 2000
++++ Makefile.in	Mon Nov 27 21:35:50 2000
 @@ -15,7 +15,7 @@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
@@ -11,26 +11,12 @@ $NetBSD: patch-ag,v 1.3 2000/11/27 05:00:20 kei Exp $
  
  prefix = @prefix@
  exec_prefix =  @exec_prefix@
-@@ -38,7 +38,7 @@
- # Where to put the manual pages.
- mandir = $(prefix)/man/man8
- # Extension (not including `.') for the manual page filenames.
--manext = 8
-+manext = tbl
- 
- #### End of system configuration section. ####
- 
-@@ -68,11 +68,11 @@
+@@ -68,7 +68,7 @@
  apple_driver.o: apple_driver.c mac_label.h
  	$(CC) -c $(CFLAGS) $(srcdir)/apple_driver.c
  
 -install: mkisofs mkisofs.8
-+install: mkhybrid mkhybrid.tbl
++install: mkhybrid mkhybrid.8
  	[ -d $(bindir) ] || mkdir $(bindir)
  	[ -d $(mandir) ] || mkdir $(mandir)
  	$(INSTALL_PROGRAM) mkhybrid $(bindir)/mkhybrid
--	-$(INSTALL_DATA) $(srcdir)/mkhybrid.8 $(mandir)/mkhybrid.$(manext)
-+	-$(INSTALL_DATA) $(srcdir)/mkhybrid.tbl $(mandir)/mkhybrid.$(manext)
- 
- tree.o: tree.c mkisofs.h iso9660.h exclude.h config.h Makefile
- 	$(CC) -c $(CFLAGS) $(srcdir)/tree.c

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2000/11/27 04:58:27 kei Exp $
+@comment $NetBSD: PLIST,v 1.11 2000/11/27 12:54:48 kei Exp $
 bin/cdda2wav
 bin/cdrecord
 bin/mkisofs
@@ -6,4 +6,4 @@ bin/readcd
 man/man1/cdda2wav.1
 man/man1/cdrecord.1
 man/man1/readcd.1
-man/man8/mkisofs.tbl
+man/man8/mkisofs.8
