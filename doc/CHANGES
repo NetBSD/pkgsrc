@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3480 2003/09/22 13:23:57 taca Exp $
+$NetBSD: CHANGES,v 1.3481 2003/09/22 14:13:34 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3877,3 +3877,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cia to 20030922 [tron 2003-09-22]
 	Updated plib to 1.6.0 [xtraeme 2003-09-22]
 	Updated bind9 to 9.2.2p3 [taca 2003-09-22]
+	Updated jove to 4.16.0.63 [jmmv 2003-09-22]
