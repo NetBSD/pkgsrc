@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2003/06/30 13:46:04 grant Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/08/05 13:37:51 seb Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -17,8 +17,9 @@ COMMENT=	The Z shell
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
-TEXINFO_OVERRIDE=	YES
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
 INFO_FILES=		zsh.info
 
 .include "../../mk/bsd.prefs.mk"
@@ -39,8 +40,9 @@ PLIST_SRC=	${PKGDIR}/PLIST.shlibs ${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 
 PKG_SHELL=	${PREFIX}/bin/zsh
 
+INSTALL_TARGET=	install install.info
+
 post-install:
-	@cd ${WRKSRC}/Doc; ${MAKE} install.info
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/zsh
 	@cd ${WRKSRC}/Etc; ${INSTALL_DATA} BUGS FAQ FEATURES NEWS	\
 		${PREFIX}/share/doc/zsh

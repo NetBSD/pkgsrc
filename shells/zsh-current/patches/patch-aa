@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2003/08/05 13:37:54 seb Exp $
+
+--- Doc/Makefile.in.orig	2003-02-13 11:06:46.000000000 +0000
++++ Doc/Makefile.in
+@@ -37,7 +37,7 @@ INSTALL         = @INSTALL@
+ 
+ @DEFS_MK@
+ 
+-MAKEINFO = makeinfo
++MAKEINFO = makeinfo --no-split
+ TEXI2DVI = texi2dvi
+ DVIPS = dvips
+ TEXI2HTML = texi2html -expand info -split chapter
