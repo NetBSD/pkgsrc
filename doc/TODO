@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.390 2003/03/21 18:17:00 jmmv Exp $
+$NetBSD: TODO,v 1.391 2003/03/21 19:22:37 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -26,6 +26,10 @@ Suggested new packages
 	application for adding reading and translation annotations to Japanese
 	  text documents
 	http://jgloss.sourceforge.net/
+
+	lmule
+	An e2k client, based no emule, using the wxGTK toolkit.
+	http://lmule.sourceforge.net/
 
 	loserjabber
 	GTK application which allows posting of journal entries to
