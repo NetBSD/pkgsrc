@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5298 2004/03/26 00:39:25 kristerw Exp $
+$NetBSD: CHANGES,v 1.5299 2004/03/26 03:21:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1519,3 +1519,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ghostscript-gnu-nox11 to 7.07 [wiz 2004-03-24]
 	Updated emacs to emacs-21.3nb4 [kristerw 2004-03-25]
 	Updated emacs20 to emacs-20.7nb3 [kristerw 2004-03-25]
+	Updated openssl to 0.9.6m [wiz 2004-03-26]
