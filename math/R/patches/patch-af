@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 1999/05/25 23:51:12 jlam Exp $
+$NetBSD: patch-af,v 1.2 1999/08/26 23:52:22 jlam Exp $
 
---- src/scripts/R.sh.in.orig	Thu May  6 04:32:27 1999
-+++ src/scripts/R.sh.in	Mon May 24 19:26:06 1999
+--- src/scripts/R.sh.in.orig	Wed May 12 03:12:32 1999
++++ src/scripts/R.sh.in	Thu Aug 26 18:44:22 1999
 @@ -47,7 +47,7 @@
  	echo "*** (maybe use \`run ${args}'  from *inside* ${deb}"
  	echo ""
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.1 1999/05/25 23:51:12 jlam Exp $
      --no-environ)
        USE_R_ENVIRON=false ;;
      --vanilla)
-@@ -106,7 +106,7 @@
+@@ -107,7 +107,7 @@
  if ${USE_R_ENVIRON}; then
    [ -r ${HOME}/.Renviron ] && . ${HOME}/.Renviron
  fi
