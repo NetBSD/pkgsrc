@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2001/06/21 02:07:08 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/09 22:25:24 wiz Exp $
 #
 
 DISTNAME=	cdecl-2.5
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.netsw.org/netsw/SoftEng/Lang/C/Tools/cdecl/  \
-		ftp://ftp.cc.gatech.edu/ac121/linux/devel/lang/c/  \
-		ftp://ftp.deva.net/pub/sources/programming/  \
-		ftp://ftp.bitcon.no//pub/linux/linuxberg/files/console/dev/  \
-		ftp://ftp.uakom.sk/pub/linux/devel/lang/c/
+MASTER_SITES=	ftp://ftp.netsw.org/softeng/lang/c/tools/cdecl/ \
+		ftp://ftp-linux.cc.gatech.edu/pub/linux/devel/lang/c/ \
+		ftp://ftp.deva.net/pub/sources/programming/declaration/ \
+		ftp://ftp.bitcon.no//pub/linux/linuxberg/files/console/dev/
 
 MAINTAINER=     packages@netbsd.org
 COMMENT=	utility to explain and compose C and C++ declarations
