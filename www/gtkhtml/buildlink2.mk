@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2004/03/26 02:27:57 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/04/15 00:49:29 wiz Exp $
 
 .if !defined(GTKHTML_BUILDLINK2_MK)
 GTKHTML_BUILDLINK2_MK=	# defined
@@ -13,7 +13,6 @@ BUILDLINK_PREFIX.gtkhtml_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.gtkhtml+=	include/gtkhtml-1.1/gtkhtml/*.h
 BUILDLINK_FILES.gtkhtml+=	lib/bonobo/plugin/libstorage_http.*
 BUILDLINK_FILES.gtkhtml+=	lib/libgtkhtml-1.1.*
-BUILDLINK_FILES.gtkhtml+=	lib/pkgconfig/gtkhtml-1.1.pc
 
 .include "../../devel/bonobo/buildlink2.mk"
 .include "../../devel/gal/buildlink2.mk"
