@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.5 2004/08/03 07:42:04 cube Exp $
+
+--- Xrm.cc.orig	2003-10-09 05:25:25.000000000 +0200
++++ Xrm.cc
+@@ -98,7 +98,7 @@ const char *Xrm::getResource(const char 
+     char fcn_lower[1024];
+     strncpy(fcn_lower, className(), 1024);
+     char* p = fcn_lower;
+-    while (p && *p)  *p++ = tolower(*p);
++    while (p && *p)  { *p = tolower(*p); p++; }
+     snprintf(fcn, 1024, "%s.%s", fcn_lower, rname);
+     XrmGetResource(_db, frn, fcn, &type, &val);
+   }
