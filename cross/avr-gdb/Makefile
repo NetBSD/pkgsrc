@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/16 22:11:31 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 20:03:58 wennmach Exp $
 # FreeBSD Id: ports/devel/avr-gdb/Makefile,v 1.2 2003/03/07 06:00:08 ade Exp
 
-DISTNAME=	gdb-5.2.1
-PKGNAME=	avr-gdb-5.2.1
+DISTNAME=	gdb-5.3
+PKGNAME=	avr-gdb-5.3
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_SOURCEWARE:=gdb/releases/}
 
 MAINTAINER=	karlj@mdstud.chalmers.se
-COMMENT=	GNU GDB 5.2.1 for Atmel AVR microcontrollers
+COMMENT=	GNU gdb for Atmel AVR microcontrollers
 
 USE_GMAKE=	yes
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--target=avr --program-prefix=avr
 
