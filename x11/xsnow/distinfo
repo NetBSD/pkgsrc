@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/10/25 17:39:10 agc Exp $
+$NetBSD: distinfo,v 1.4 2001/12/19 07:02:31 martti Exp $
 
-SHA1 (xsnow-1.41.tar.gz) = 4a13a70f68c421241b8ed3716bfb6c79b19febf4
-Size (xsnow-1.41.tar.gz) = 36707 bytes
-SHA1 (patch-aa) = d8589150abf45816f910590f0ac4cd2879514c6a
+SHA1 (xsnow-1.42.tar.gz) = d63987560dac9c6341e50d270089e40d17031ce3
+Size (xsnow-1.42.tar.gz) = 56752 bytes
+SHA1 (patch-aa) = e7f13c14194d6490ca6a72d385829c3099dc2955

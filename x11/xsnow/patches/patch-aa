@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2001/10/25 17:39:10 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/19 07:02:32 martti Exp $
 
 --- Imakefile	2001/10/25 17:32:32	1.1
 +++ Imakefile	2001/10/25 17:33:19
 @@ -3,5 +3,6 @@
  DEPLIBS = $(DEPXLIB)
- SRCS = xsnow.c xsnow.h vroot.h
- OBJS = xsnow.o
+ SRCS = xsnow.c toon_root.c xsnow.h vroot.h
+ OBJS = xsnow.o toon_root.o
 +MANSUFFIX = 6
  
  ComplexProgramTarget(xsnow)
