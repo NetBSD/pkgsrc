@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/16 19:23:17 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/19 03:59:55 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libaudiofile.
 #
@@ -21,7 +21,7 @@ BUILDLINK_PREFIX.audiofile=	${LOCALBASE}
 BUILDLINK_FILES.audiofile=	include/af_vfs.h
 BUILDLINK_FILES.audiofile+=	include/audiofile.h
 BUILDLINK_FILES.audiofile+=	include/aupvlist.h
-BUILDLINK_FILES.audiofile+=	lib/audiofile.*
+BUILDLINK_FILES.audiofile+=	lib/libaudiofile.*
 
 BUILDLINK_TARGETS.audiofile=	audiofile-buildlink
 BUILDLINK_TARGETS.audiofile+=	audiofile-buildlink-config-wrapper
