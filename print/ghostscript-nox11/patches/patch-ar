@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.1.1.1 2000/05/07 02:04:35 jlam Exp $
+
+--- src/pagecount.c.orig	Sun Nov 15 06:33:04 1998
++++ src/pagecount.c	Mon May  1 20:26:24 2000
+@@ -33,10 +33,6 @@
+ 
+ /*****************************************************************************/
+ 
+-#ifndef _XOPEN_SOURCE
+-#define _XOPEN_SOURCE	500
+-#endif
+-
+ /* Standard headers */
+ #include <errno.h>
+ #include <stdio.h>

@@ -1,0 +1,14 @@
+$NetBSD: md5,v 1.1.1.1 2000/05/07 02:04:34 jlam Exp $
+
+MD5 (ghostscript/ghostscript-6.01.tar.bz2) = c2ffb0b215c01c34795183569048ae6c
+MD5 (ghostscript/pdf_sec.ps) = 92cd6af5b4d7219e91e61b8351f0f7c4
+MD5 (ghostscript/hpdj-2.6.tar.gz) = dcc402281f36afd2041144e0e97917be
+MD5 (ghostscript/dmprt-2.01.tar.gz) = c7a9fb127fde5d888a798bf5e1822b88
+MD5 (ghostscript/gdev10v.tar.gz) = 1486bb54c214ce215044a6c606280d73
+MD5 (ghostscript/gdevmjc-0.8.tar.gz) = 228f41c3cccce22c8f477c7a9407527c
+MD5 (ghostscript/gdevalps-0.2.tar.gz) = 8690b96eeb79fe770983a86beae84a11
+MD5 (ghostscript/gdevmd2k-0.2a.tar.gz) = 5ed2b4218b8f77cb411f3d2e4509ed24
+MD5 (ghostscript/gdevlips-2.3.6.tar.gz) = 94d7cfa745e632a8338e47c88feb31f8
+MD5 (ghostscript/gdevrpdl.tar.gz) = 9606f3cca1a8f85be76944fa4eda09b7
+MD5 (ghostscript/gdevprsc-0.2.tar.gz) = 717190d113196ae7d0f3ea28ce381e0b
+MD5 (ghostscript/gs6.01-jpdf-exp.patch.gz) = 63868cf3e6ccf93c31c79c66d7fea025
