@@ -1,8 +1,7 @@
-$NetBSD: patch-aa,v 1.5 1999/10/01 07:49:19 simonb Exp $
+$NetBSD: patch-aa,v 1.6 2000/07/08 12:47:04 tron Exp $
 
-diff -ur ../faces-DIST/Faces.ad ./Faces.ad
---- ../faces-DIST/Faces.ad	Mon Jul  1 11:25:46 1991
-+++ ./Faces.ad	Fri Oct  1 14:32:02 1999
+--- Faces.ad.orig	Mon Jul  1 03:25:46 1991
++++ Faces.ad	Sat Jul  8 14:25:27 2000
 @@ -13,5 +13,5 @@
  faces.displayHostname:		false
  
