@@ -1,26 +1,47 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/19 18:42:09 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/09 13:26:28 recht Exp $
 bin/pyslsk
 bin/pyslsk-import-winconfig
-lib/python2p2/site-packages/pysoulseek/__init__.pyc
-lib/python2p2/site-packages/pysoulseek/config.pyc
-lib/python2p2/site-packages/pysoulseek/mp3.pyc
-lib/python2p2/site-packages/pysoulseek/pysoulseek.pyc
-lib/python2p2/site-packages/pysoulseek/slskmessages.pyc
-lib/python2p2/site-packages/pysoulseek/slskproto.pyc
-lib/python2p2/site-packages/pysoulseek/transfers.pyc
-lib/python2p2/site-packages/pysoulseek/utils.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/__init__.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/about.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/buttonsplitter.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/chat.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/configwindow.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/frame.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/images.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/notebook.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/search.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/sortablelist.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/transfers.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/userinfobrowse.pyc
-lib/python2p2/site-packages/pysoulseek/wxgui/userlist.pyc
-@dirrm lib/python2p2/site-packages/pysoulseek/wxgui
-@dirrm lib/python2p2/site-packages/pysoulseek
+${PYSITELIB}/pysoulseek/__init__.py
+${PYSITELIB}/pysoulseek/__init__.pyc
+${PYSITELIB}/pysoulseek/config.py
+${PYSITELIB}/pysoulseek/config.pyc
+${PYSITELIB}/pysoulseek/mp3.py
+${PYSITELIB}/pysoulseek/mp3.pyc
+${PYSITELIB}/pysoulseek/pysoulseek.py
+${PYSITELIB}/pysoulseek/pysoulseek.pyc
+${PYSITELIB}/pysoulseek/slskmessages.py
+${PYSITELIB}/pysoulseek/slskmessages.pyc
+${PYSITELIB}/pysoulseek/slskproto.py
+${PYSITELIB}/pysoulseek/slskproto.pyc
+${PYSITELIB}/pysoulseek/transfers.py
+${PYSITELIB}/pysoulseek/transfers.pyc
+${PYSITELIB}/pysoulseek/utils.py
+${PYSITELIB}/pysoulseek/utils.pyc
+${PYSITELIB}/pysoulseek/wxgui/__init__.py
+${PYSITELIB}/pysoulseek/wxgui/__init__.pyc
+${PYSITELIB}/pysoulseek/wxgui/about.py
+${PYSITELIB}/pysoulseek/wxgui/about.pyc
+${PYSITELIB}/pysoulseek/wxgui/buttonsplitter.py
+${PYSITELIB}/pysoulseek/wxgui/buttonsplitter.pyc
+${PYSITELIB}/pysoulseek/wxgui/chat.py
+${PYSITELIB}/pysoulseek/wxgui/chat.pyc
+${PYSITELIB}/pysoulseek/wxgui/configwindow.py
+${PYSITELIB}/pysoulseek/wxgui/configwindow.pyc
+${PYSITELIB}/pysoulseek/wxgui/frame.py
+${PYSITELIB}/pysoulseek/wxgui/frame.pyc
+${PYSITELIB}/pysoulseek/wxgui/images.py
+${PYSITELIB}/pysoulseek/wxgui/images.pyc
+${PYSITELIB}/pysoulseek/wxgui/notebook.py
+${PYSITELIB}/pysoulseek/wxgui/notebook.pyc
+${PYSITELIB}/pysoulseek/wxgui/search.py
+${PYSITELIB}/pysoulseek/wxgui/search.pyc
+${PYSITELIB}/pysoulseek/wxgui/sortablelist.py
+${PYSITELIB}/pysoulseek/wxgui/sortablelist.pyc
+${PYSITELIB}/pysoulseek/wxgui/transfers.py
+${PYSITELIB}/pysoulseek/wxgui/transfers.pyc
+${PYSITELIB}/pysoulseek/wxgui/userinfobrowse.py
+${PYSITELIB}/pysoulseek/wxgui/userinfobrowse.pyc
+${PYSITELIB}/pysoulseek/wxgui/userlist.py
+${PYSITELIB}/pysoulseek/wxgui/userlist.pyc
+@dirrm ${PYSITELIB}/pysoulseek/wxgui
+@dirrm ${PYSITELIB}/pysoulseek
