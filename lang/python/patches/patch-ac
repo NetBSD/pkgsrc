@@ -1,35 +1,50 @@
---- Parser/tokenizer.c.orig	Tue Apr 29 23:03:03 1997
-+++ Parser/tokenizer.c	Mon Feb  9 13:05:34 1998
-@@ -46,6 +46,14 @@
- /* Don't ever change this -- it would break the portability of Python code */
- #define TABSIZE 8
- 
-+/* Convert a possibly signed character to a nonnegative int */
-+/* XXX This assumes characters are 8 bits wide */
-+#ifdef __CHAR_UNSIGNED__
-+#define Py_CHARMASK(c)		(c)
-+#else
-+#define Py_CHARMASK(c)		((c) & 0xff)
-+#endif
-+
- /* Forward */
- static struct tok_state *tok_new Py_PROTO((void));
- static int tok_nextc Py_PROTO((struct tok_state *tok));
-@@ -178,7 +186,7 @@
- {
- 	for (;;) {
- 		if (tok->cur != tok->inp) {
--			return *tok->cur++; /* Fast path */
-+			return Py_CHARMASK(*tok->cur++); /* Fast path */
- 		}
- 		if (tok->done != E_OK)
- 			return EOF;
-@@ -197,7 +205,7 @@
- 				tok->buf = tok->cur;
- 			tok->lineno++;
- 			tok->inp = end;
--			return *tok->cur++;
-+			return Py_CHARMASK(*tok->cur++);
- 		}
- 		if (tok->prompt != NULL) {
- 			char *new = PyOS_Readline(tok->prompt);
+Index: configure.in
+===================================================================
+RCS file: /projects/cvsroot/python/dist/src/configure.in,v
+retrieving revision 1.83
+retrieving revision 1.84
+diff -c -r1.83 -r1.84
+*** configure.in	1998/04/13 15:27:01	1.83
+--- configure.in	1998/04/20 18:51:54	1.84
+***************
+*** 314,320 ****
+  	SCO_SV*) CCSHARED="-KPIC -dy -Bdynamic";;
+  	IRIX*/6*)  case $CC in
+  		   *gcc*) CCSHARED="-shared";;
+! 		   *) CCSHARED="-shared -all";;
+  		   esac;;
+  	esac
+  fi
+--- 314,320 ----
+  	SCO_SV*) CCSHARED="-KPIC -dy -Bdynamic";;
+  	IRIX*/6*)  case $CC in
+  		   *gcc*) CCSHARED="-shared";;
+! 		   *) CCSHARED="";;
+  		   esac;;
+  	esac
+  fi
+Index: configure
+===================================================================
+RCS file: /projects/cvsroot/python/dist/src/configure,v
+retrieving revision 1.76
+retrieving revision 1.77
+diff -c -r1.76 -r1.77
+*** configure	1998/04/13 15:26:57	1.76
+--- configure	1998/04/20 18:51:49	1.77
+***************
+*** 1865,1871 ****
+  	SCO_SV*) CCSHARED="-KPIC -dy -Bdynamic";;
+  	IRIX*/6*)  case $CC in
+  		   *gcc*) CCSHARED="-shared";;
+! 		   *) CCSHARED="-shared -all";;
+  		   esac;;
+  	esac
+  fi
+--- 1865,1871 ----
+  	SCO_SV*) CCSHARED="-KPIC -dy -Bdynamic";;
+  	IRIX*/6*)  case $CC in
+  		   *gcc*) CCSHARED="-shared";;
+! 		   *) CCSHARED="";;
+  		   esac;;
+  	esac
+  fi

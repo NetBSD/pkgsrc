@@ -1,0 +1,112 @@
+Index: Modules/parsermodule.c
+===================================================================
+RCS file: /projects/cvsroot/python/dist/src/Modules/parsermodule.c,v
+retrieving revision 2.25
+retrieving revision 2.26
+diff -c -r2.25 -r2.26
+*** parsermodule.c	1998/04/13 18:45:18	2.25
+--- parsermodule.c	1998/04/21 22:31:45	2.26
+***************
+*** 473,483 ****
+  
+  static PyMethodDef
+  parser_methods[] = {
+!     {"compile",		parser_compileast,	METH_VARARGS},
+!     {"isexpr",		parser_isexpr,		METH_VARARGS},
+!     {"issuite",		parser_issuite,		METH_VARARGS},
+!     {"tolist",		parser_ast2list,	METH_VARARGS},
+!     {"totuple",		parser_ast2tuple,	METH_VARARGS},
+  
+      {NULL}
+  };
+--- 473,488 ----
+  
+  static PyMethodDef
+  parser_methods[] = {
+!     {"compile",		(PyCFunction)parser_compileast,	METH_VARARGS,
+! 	"Compile this AST object into a code object."},
+!     {"isexpr",		(PyCFunction)parser_isexpr,	METH_VARARGS,
+! 	"Determines if this AST object was created from an expression."},
+!     {"issuite",		(PyCFunction)parser_issuite,	METH_VARARGS,
+! 	"Determines if this AST object was created from a suite."},
+!     {"tolist",		(PyCFunction)parser_ast2list,	METH_VARARGS,
+! 	"Creates a list-tree representation of this AST."},
+!     {"totuple",		(PyCFunction)parser_ast2tuple,	METH_VARARGS,
+! 	"Creates a tuple-tree representation of this AST."},
+  
+      {NULL}
+  };
+***************
+*** 2685,2711 ****
+   *  inheritance.
+   */
+  static PyMethodDef parser_functions[] =  {
+!     {"ast2tuple",	parser_ast2tuple,	METH_VARARGS,
+  	"Creates a tuple-tree representation of an AST."},
+!     {"ast2list",	parser_ast2list,	METH_VARARGS,
+  	"Creates a list-tree representation of an AST."},
+!     {"compileast",	parser_compileast,	METH_VARARGS,
+  	"Compiles an AST object into a code object."},
+!     {"expr",		parser_expr,		METH_VARARGS,
+  	"Creates an AST object from an expression."},
+!     {"isexpr",		parser_isexpr,		METH_VARARGS,
+  	"Determines if an AST object was created from an expression."},
+!     {"issuite",		parser_issuite,		METH_VARARGS,
+  	"Determines if an AST object was created from a suite."},
+!     {"suite",		parser_suite,		METH_VARARGS,
+  	"Creates an AST object from a suite."},
+!     {"sequence2ast",	parser_tuple2ast,	METH_VARARGS,
+  	"Creates an AST object from a tree representation."},
+!     {"tuple2ast",	parser_tuple2ast,	METH_VARARGS,
+  	"Creates an AST object from a tree representation."},
+  
+      /* private stuff: support pickle module */
+!     {"_pickler",	parser__pickler,	METH_VARARGS,
+          "Returns the pickle magic to allow ast objects to be pickled."},
+  
+      {0, 0, 0}
+--- 2690,2716 ----
+   *  inheritance.
+   */
+  static PyMethodDef parser_functions[] =  {
+!     {"ast2tuple",	(PyCFunction)parser_ast2tuple,	METH_VARARGS,
+  	"Creates a tuple-tree representation of an AST."},
+!     {"ast2list",	(PyCFunction)parser_ast2list,	METH_VARARGS,
+  	"Creates a list-tree representation of an AST."},
+!     {"compileast",	(PyCFunction)parser_compileast,	METH_VARARGS,
+  	"Compiles an AST object into a code object."},
+!     {"expr",		(PyCFunction)parser_expr,	METH_VARARGS,
+  	"Creates an AST object from an expression."},
+!     {"isexpr",		(PyCFunction)parser_isexpr,	METH_VARARGS,
+  	"Determines if an AST object was created from an expression."},
+!     {"issuite",		(PyCFunction)parser_issuite,	METH_VARARGS,
+  	"Determines if an AST object was created from a suite."},
+!     {"suite",		(PyCFunction)parser_suite,	METH_VARARGS,
+  	"Creates an AST object from a suite."},
+!     {"sequence2ast",	(PyCFunction)parser_tuple2ast,	METH_VARARGS,
+  	"Creates an AST object from a tree representation."},
+!     {"tuple2ast",	(PyCFunction)parser_tuple2ast,	METH_VARARGS,
+  	"Creates an AST object from a tree representation."},
+  
+      /* private stuff: support pickle module */
+!     {"_pickler",	(PyCFunction)parser__pickler,	METH_VARARGS,
+          "Returns the pickle magic to allow ast objects to be pickled."},
+  
+      {0, 0, 0}
+***************
+*** 2761,2767 ****
+      /* register to support pickling */
+      module = PyImport_ImportModule("copy_reg");
+      if (module != NULL) {
+! 	PyObject *func, *constructor, *pickler;
+  
+  	func = PyObject_GetAttrString(module, "pickle");
+  	pickle_constructor = PyDict_GetItemString(dict, "sequence2ast");
+--- 2766,2772 ----
+      /* register to support pickling */
+      module = PyImport_ImportModule("copy_reg");
+      if (module != NULL) {
+! 	PyObject *func, *pickler;
+  
+  	func = PyObject_GetAttrString(module, "pickle");
+  	pickle_constructor = PyDict_GetItemString(dict, "sequence2ast");
