@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4246 2003/12/24 11:01:53 recht Exp $
+$NetBSD: CHANGES,v 1.4247 2003/12/24 11:48:08 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5334,3 +5334,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added py23-html-docs-2.3.3 [recht 2003-12-24]
 	Added py-ZSI-1.4.1 [recht 2003-12-24]
 	Added py-fpconst-0.6.0 [recht 2003-12-24]
+	Updated py-soappy to 0.11.1 [recht 2003-12-24]
+	Updated py-google to 0.5.3 [recht 2003-12-24]
