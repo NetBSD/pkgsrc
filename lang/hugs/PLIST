@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/21 19:04:42 nra Exp $
 bin/hugs
 bin/runhugs
 man/man1/hugs.1
@@ -43,6 +43,7 @@ share/hugs/lib/Maybe.hs
 share/hugs/lib/Monad.hs
 share/hugs/lib/Numeric.hs
 share/hugs/lib/Prelude.hs
+share/hugs/lib/Quote.hs
 share/hugs/lib/Random.hs
 share/hugs/lib/Ratio.hs
 share/hugs/lib/System.hs
@@ -59,7 +60,9 @@ share/hugs/lib/exts/IOExts.hs
 share/hugs/lib/exts/Int.hs
 share/hugs/lib/exts/LazyST.hs
 share/hugs/lib/exts/Memo.hs
+share/hugs/lib/exts/MonadRec.hs
 share/hugs/lib/exts/NumExts.hs
+share/hugs/lib/exts/Observe.lhs
 share/hugs/lib/exts/Pretty.lhs
 share/hugs/lib/exts/ST.hs
 share/hugs/lib/exts/SampleVar.lhs
