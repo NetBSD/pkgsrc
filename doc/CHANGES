@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.777 2002/12/13 21:10:30 tron Exp $
+$NetBSD: CHANGES,v 1.778 2002/12/14 00:20:34 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3945,3 +3945,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added parchive-1.0 [cjep 2002-12-13]
 	Added nomarch-1.3 [cjep 2002-12-13]
 	Added ucl-1.01 [cjep 2002-12-13]
+	Added p5-IO-Null-0.02 [cjep 2002-12-14]
