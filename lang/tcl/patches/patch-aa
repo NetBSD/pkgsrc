@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2001/12/23 17:02:31 bjoern Exp $
+$NetBSD: patch-aa,v 1.7 2003/04/02 04:25:24 jschauma Exp $
 
 --- Makefile.in.orig	Sat Oct 20 02:24:15 2001
 +++ Makefile.in
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.6 2001/12/23 17:02:31 bjoern Exp $
 -CC			= @CC@
  #CC			= purify -best-effort @CC@ -DPURIFY
 +CC                      = ${LIBTOOL} --mode=compile @CC@
-+LD                      = ${LIBTOOL} --mode=link @CC@ -Wl,-R${PREFIX}/lib
++LD                      = ${LIBTOOL} --mode=link @CC@ -Wl,${RPATH_FLAG}${PREFIX}/lib
  
  #----------------------------------------------------------------
  # The information below should be usable as is.  The configure
