@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/06/02 01:18:01 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/10 00:00:26 jmc Exp $
 #
 
 DISTNAME=	dctc-0.84.1
@@ -21,6 +21,8 @@ USE_GMAKE=	YES
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
 
 post-configure:
+	@${TOUCH} ${WRKSRC}/stamp-h.in ${WRKSRC}/config.h.in
+	@${TOUCH} ${WRKSRC}/config.status ${WRKSRC}/stamp-h
 	@${ECHO} '#ifndef MSG_NOSIGNAL' >> ${WRKSRC}/config.h
 	@${ECHO} '# define MSG_NOSIGNAL 0' >> ${WRKSRC}/config.h
 	@${ECHO} '#endif' >> ${WRKSRC}/config.h
