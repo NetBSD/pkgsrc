@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/12/04 13:42:37 adam Exp $
+# $NetBSD: Makefile,v 1.47 2004/01/05 12:20:57 markd Exp $
 
 DISTNAME=		R-1.8.1
 PKGREVISION=		1
@@ -111,6 +111,7 @@ post-install:
 	${ECHO} "@exec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
 	${ECHO} "@exec ${CAT} %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null" >> ${PLIST_SRC}
 
+.include "../../archivers/bzip2/buildlink2.mk"
 .include "../../devel/pcre/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
