@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1957 2004/07/20 21:56:16 wiz Exp $
+$NetBSD: TODO,v 1.1958 2004/07/20 22:06:35 recht Exp $
 
 Suggested new packages
 ======================
@@ -344,7 +344,6 @@ Suggested package updates
 	o povray-3.6.0
 	o prc-tools-2.3
 	o psi-0.9.2
-	o pureftpd-1.0.19 [pkg/26381]
 	o pwlib-1.5.2
 	o py-checker-0.8.14
 	o py-psycopg-1.1.10
