@@ -1,4 +1,4 @@
-# $NetBSD: defs.FreeBSD.mk,v 1.43 2004/08/27 06:29:09 jlam Exp $
+# $NetBSD: FreeBSD.mk,v 1.1 2004/10/06 20:51:47 jlam Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 

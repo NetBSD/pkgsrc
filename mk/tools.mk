@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.38 2004/08/23 09:33:25 seb Exp $
+# $NetBSD: tools.mk,v 1.39 2004/10/06 20:51:47 jlam Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -148,7 +148,7 @@ _TOOLS_OPSYS_HAS_GNU.yacc+=	Linux-*-*
 
 # These platforms have GNUish versions of the tools available in the base
 # system, which we already define as ${AWK}, ${SED}, etc. (refer to
-# defs.*.mk for the definitions), so no need to pull in the pkgsrc
+# mk/platform/*.mk for the definitions), so no need to pull in the pkgsrc
 # versions; we will use these instead.
 #
 _TOOLS_REPLACE_OPSYS.awk+=	SunOS-*-*
