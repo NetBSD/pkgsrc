@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2002/12/20 11:30:20 lonewolf Exp $
+# $NetBSD: Makefile,v 1.178 2002/12/22 13:13:39 seb Exp $
 
 COMMENT=	System utilities
 
@@ -27,6 +27,8 @@ SUBDIR+=	cdrecord
 SUBDIR+=	cdrecord-devel
 SUBDIR+=	cdrecord-xcdroast
 SUBDIR+=	cfengine
+SUBDIR+=	cfengine2
+SUBDIR+=	cfengine2-doc
 SUBDIR+=	checkpassword
 SUBDIR+=	cpogm
 SUBDIR+=	cpuburn
