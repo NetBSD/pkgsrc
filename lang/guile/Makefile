@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/02 15:30:15 perry Exp $
-#
-# taken from the FreeBSD port by jseger@FreeBSD.org
+# $NetBSD: Makefile,v 1.2 1998/07/17 19:39:42 tv Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/11/22 16:01:32 jseger Exp
 #
 
@@ -10,7 +8,12 @@ MASTER_SITES=	${MASTER_SITE_GNU}
 
 MAINTAINER=	perry@piermont.com
 
+BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
+
 GNU_CONFIGURE=	YES
-MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+CONFIGURE_ENV=	LIBTOOL=${PREFIX}/bin/libtool \
+		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+		INSTALL_DATA="${INSTALL_DATA}" \
+		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 .include "../../mk/bsd.pkg.mk"
