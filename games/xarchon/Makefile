@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/08/15 20:40:01 zuntum Exp $
+# $NetBSD: Makefile,v 1.18 2002/09/06 12:17:38 wiz Exp $
 #
 
 DISTNAME=	xarchon-0.50
@@ -10,8 +10,10 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://xarchon.seul.org/
 COMMENT=	Chess-like strategy game with battle options
 
-USE_BUILDLINK_ONLY=	YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK2=	YES
+USE_GMAKE=	YES
+GNU_CONFIGURE=	YES
+USE_X11=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -19,7 +21,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=	CC="${CC}"
 .endif
 
-.include "../../audio/esound/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
+.include "../../audio/esound/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
