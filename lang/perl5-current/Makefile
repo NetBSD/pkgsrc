@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9.2.3 2002/06/29 04:57:04 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.4 2002/06/29 18:25:47 jlam Exp $
 
 .include "Makefile.common"
 
@@ -31,6 +31,19 @@ CONFIGURE_ARGS+=	-Uinstallusrbinperl
 .include "../../mk/bsd.prefs.mk"
 
 MKPIC?=			yes
+
+.if ${OPSYS} == "Darwin"
+#
+# The perl build attempts to work around case-insensitivity problems on
+# HFS filesystems by using GNUmakefiles, so we need to use GNU make.
+#
+USE_GMAKE=		# defined
+#
+# There seems to be a bug when using the buildlink2 wrapper scripts to
+# build perl on Darwin.  Disable it for now until the problem is fixed.
+#
+.  undef USE_BUILDLINK2
+.endif
 
 # Nail down the needed libraries for each platform here to avoid hidden
 # dependencies.  If this isn't defined, then use the perl defaults for the
