@@ -1,3 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:01 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/30 10:23:24 abs Exp $
 
-SHA1 (./opera-static-5.0b7-20010320.018.1.i386.rpm) = bf1325d7cbf38210914181b6dc543382a62b3703
+SHA1 (./opera-static-5.0b8-20010426.023.1.i386.rpm) = 88c122a12f5eaea89da0700881cc9889b867021b
+Size (./opera-static-5.0b8-20010426.023.1.i386.rpm) = 2791768 bytes
+SHA1 (./opera-static-5.0b8-20010426.023.1.ppc.rpm) = 88a313281255d677ff237275e8716bb86f6e0887
+Size (./opera-static-5.0b8-20010426.023.1.ppc.rpm) = 2939366 bytes
