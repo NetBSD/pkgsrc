@@ -1,0 +1,6 @@
+mlterm is a Multi Lingual TERMinal emulator for X.  It supports
+many character sets, many encodings, and many other decorative
+functions.  Since mlterm retains character tables in memory to
+convert characters between UCS and other encodings, it consumes a
+lot of memory while running, so it's recommended that you open
+multiple ptys in one process.
