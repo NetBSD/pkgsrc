@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1854 2004/06/22 13:46:02 grant Exp $
+$NetBSD: TODO,v 1.1855 2004/06/23 14:38:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -154,10 +154,16 @@ Suggested new packages
 	http://www.chiark.greenend.org.uk/~sgtatham/putty/
 	SSH client
 
+	Exult
+	http://exult.sourceforge.net/
+	Open source game engine for Ultima 7
+
+
 Suggested package updates
 =========================
 
 	o ImageViewer-0.6.3
+	o R-1.9.1
 	o TeXmacs-1.0.3.9
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
@@ -173,6 +179,7 @@ Suggested package updates
 	o bk_edit-0.6.23
 	o blender-2.33
 	o boehm-gc-6.3alpha6 [recht]
+	o bomberclone-0.11.3
 	o boson-0.10
 	o capc-calc-2.11.9.3
 	o centericq-4.9.12
@@ -182,7 +189,7 @@ Suggested package updates
 	o classpath-0.09
 	o clisp-2.33.2
 	o cocoon-2.1.5
-	o conserver-8.1.7
+	o conserver-8.1.8
 	o courier-0.45
 	o courier-imap-3.0.0
 	o crafty-19.5
@@ -209,9 +216,9 @@ Suggested package updates
 	o dylan-interpreter-2.3.11
 	o easytag-0.31
 	o eclipse-2.1.3
-	o efax-gtk-2.2.7
+	o efax-gtk-2.2.8
 	o elk-3.99.6
-	o elm-me-2.4pl116
+	o elm-me-2.4pl116a
 	o evolution-1.5.2
 	o exim-4.34
 	o festival-1.4.3
@@ -220,9 +227,10 @@ Suggested package updates
 	o firefox-bin-0.9 (+ gtk2, etc..) [grant]
 	o firewalk-5.0
 	o firewalk-gtk-5.0
+	o flawfinder-1.26
 	o foomatic-2.9.1 [jlam]
 	o fop-0.20.5
-	o fox-1.2.1
+	o fox-1.2.4
 	o freetds-0.62.3
 	o fsviewer-0.2.5
 	o gauche-0.8
@@ -241,17 +249,23 @@ Suggested package updates
 	o gnucash-1.8.9
 	o gnunet-0.6.2a
 	o gnuplot-4.0.0 [pkg/25450]
+	o gnustep-0.9.3
+	o gnutls-1.0.14
 	o gogo-3.11p1
 	o gqmpeg-0.91.1
 	o grace-5.1.15
+	o grepmail-5.30
 	o grhino-0.12.0
 	o groff-1.19.1
 	o gsasl-0.1.0
+	o gsed-4.1
 	o gss-0.0.11
 	o gtar-1.14
 	o gtetrinet-0.7.4
+	o gtk-gnutella-0.93.4
 	o gtkballs-3.1.3
 	o gtkglext-1.0.6
+	o gtkmm-2.4.3
 	o gtksee-0.5.5.1
 	o gtranslator-1.0.1
 	o guile-pg-0.16 [pkg/24039]
@@ -260,24 +274,28 @@ Suggested package updates
 	o hp2xx-3.4.4
 	o icepref-2.3
 	o idesk-0.5.6
-	o imp-3.2.3
+	o imp-3.2.4
 	o inform-6.30 [pkg/24631]
 	o intercal-0.24 [dillo]
+	o iozone-3.218
+	o ivtools-1.2
 	o jakarta-tomcat-3.3.1a
 	o jam-2.5
 	o john-1.6.37
 	o jpilot-0.99.7 [pkg/24635]
-	o larswm-7.4.8
+	o larswm-7.5.0
 	o latex2rtf-1.9.15
-	o lavaps-2.4
+	o lavaps-2.5
 	o leafnode-1.10.0
 	o libcaca-0.9
 	o libggi-2.0.5
 	o libgii-0.8.5
-	o libidn-0.4.7
+	o libidn-0.4.9
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libole2-2.2.8
+	o libsigc++-2.0.3
+	o libsndfile-1.0.10
 	o licq-1.2.7
 	o lilypond-2.2
 	o lmbench-2.0.4
@@ -289,11 +307,12 @@ Suggested package updates
 	o maradns-1.0.23
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
-	o mathomatic-11.2
+	o mathomatic-11.2b
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o mimedefang-2.43
 	o minicom-2.1
+	o mkvtoolnix-0.9.1
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
@@ -312,12 +331,13 @@ Suggested package updates
 	o ns-flash-6.0.79
 	o nsd-2.1.0
 	o nslint-2.1a3
-	o nut-9.14
+	o nut-9.16
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
 	o openal-20040215
 	o openh323-1.12.2
+	o openoffice-1.1.2
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o oss-3.99.1c
 	o p5-CGI-3.05
@@ -330,15 +350,18 @@ Suggested package updates
 	o pgplot-5.2 [grant]
 	o physfs-1.0.0
 	o plib-1.7.0
-	o psi-0.9.1
+	o povray-3.6.0
+	o psi-0.9.2
 	o pwlib-1.5.2
+	o py-checker-0.8.14
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
+	o ratpoison-1.3.0
 	o rdiff-backup-0.12.7
 	o rep-gtk-0.17
 	o rox-1.2.2
-	o rox-session-0.1.22
+	o rox-session-0.1.23
 	o rrdtool-1.0.45
 	o rt-3.0.10 [pkgsrc-wip]
 	o ruby-1.8.1 [taca]
@@ -346,18 +369,22 @@ Suggested package updates
 	o samba-2.2.9
 	o sawfish-1.3
 	o scm-5d9
-	o scribus-1.1.6
+	o scribus-1.1.7
 	o sendfile-20010424
+	o sendmail-8.13.0
 	o shorten-3.6.0
 	o siag-3.6.0
 	o skill-4.1.1
 	o skkinput-2.06.4
 	o slib-3a1
+	o smalltalk-2.1.8
 	o smarteiffel-1.1 [replacing smalleiffel]
 	o smokeping-1.29 [pkg/25549]
 	o snd-7.4
 	o snes9x-1.42
-	o snownews-1.5.2
+	o snownews-1.5.3
+	o socat-1.4.0.0
+	o sqlite-2.8.14
 	o sqwebmail-4.0.4
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
@@ -365,12 +392,14 @@ Suggested package updates
 	o sweep-0.8.3
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
-	o tcpreplay-2.2.0
+	o tcpreplay-2.2.2
 	o tct-1.14
 	o teapop-0.3.8
 	o texi2html-1.70
 	o texinfo-4.7
+	o thunderbird-0.7
 	o thy-0.9.0 [pkg/25318]
+	o thy-0.9.2
 	o tkdesk-2.0
 	o tkman-2.2
 	o top-3.5b12.10
@@ -379,13 +408,15 @@ Suggested package updates
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vfu-4.03
-	o vnc-3.3.7 [http://www.realvnc.com/download.html]
+	o vlc-0.7.2
+	o vnc-4.0 [http://www.realvnc.com/download.html]
 	o vttest-20030301
-	o w3m-0.5.1
+	o w3m-0.5.1 [pkg/25995]
 	o wavesurfer-1.5.3
 	o wdm-1.27
+	o wine-20040615
 	o wmaker-conf-2.9.1
-	o wwwoffle-2.8a
+	o wwwoffle-2.8c
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
 	o xanalyser-1.23
 	o xanim-2.92.0 [pkg/19934]
@@ -405,11 +436,12 @@ Suggested package updates
 	o xmmsctrl-0.8
 	o xorp-0.5
 	o xpad-1.13.1
-	o xplanet-1.0.8
+	o xplanet-1.1.0
 	o xps-4.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
 	o xskat-4.0
+	o xterm-191
 	o xzgv-0.8
 	o yacas-1.0.55
 	o yaz-2.0.12
