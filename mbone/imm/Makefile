@@ -1,45 +1,20 @@
-# $NetBSD: Makefile,v 1.2 1997/11/24 12:06:23 is Exp $
+# $NetBSD: Makefile,v 1.3 1997/11/24 15:04:25 is Exp $
 #
-# NetBSD "imm" package, based on:
-#
-# New ports collection makefile for:	imm
-# Version required:	3.5a1
-# Date created:		13 October 1994
-# Whom:			wollman
-#
-# Id: Makefile,v 1.15 1997/09/13 16:58:21 fenner Exp 
+# NetBSD "imm" package
+# The original was based on the imm-3.5a1 FreeBSD port maintained
+# by Bill Fenner, but the new one had to be redone completely.
 #
 
-DISTNAME=	imm-3.5a1
+DISTNAME=	imm-3.6a1
 CATEGORIES=	mbone tk80
-MASTER_SITES=	ftp://ftp.hawaii.edu/paccom/imm-3.5a1/
-DISTFILES=	imm.source.tar.Z
-WRKSRC=		${WRKDIR}/mnm
+MASTER_SITES=	ftp://ftp.hawaii.edu/paccom/imm/
+DISTFILES=	imm36a1.tar.Z
+WRKSRC=		${WRKDIR}/imm36a1.src
 
 MAINTAINER=	is@netbsd.org
 
 LIB_DEPENDS=	tk80\\.1:${PORTSDIR}/x11/tk80
 
-USE_X11=	yes
-
-post-extract:
-	@${MKDIR} ${WRKSRC}/freebsd
-	@${CP} ${FILESDIR}/Makefile.work ${WRKSRC}/Makefile
-	@${CP} ${FILESDIR}/Makefile.freebsd ${WRKSRC}/src
-
-# The included makefile doesn't have an "install" target.
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/freebsd/imm ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/freebsd/immserv ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/freebsd/lscomp ${PREFIX}/bin
-# and no man pages at all yet.
-# But include the very limited documentation
-	${MKDIR} ${PREFIX}/share/doc/imm
-.if !defined(NOPORTDOCS)
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/imm
-	${INSTALL_DATA} ${WRKSRC}/imm_readme.txt ${PREFIX}/share/doc/imm
-.endif
-# The sdr plugin is pretty much required.
-	${INSTALL_DATA} ${WRKSRC}/sdr2.plugin.S53.image.imm ${PREFIX}/share/doc/imm
+ALL_TARGET=	netbsd
 
 .include <bsd.port.mk>
