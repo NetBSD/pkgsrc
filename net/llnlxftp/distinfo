@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/02/23 14:41:42 ben Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:13:52 agc Exp $
 
 SHA1 (llnlxftp2.1.tar.Z) = bd7a2b1e9a53ae139559f09bfa5c4b590fa0cd5e
+RMD160 (llnlxftp2.1.tar.Z) = 8db89d902538b8b589a50c3e24b975395e072b1b
 Size (llnlxftp2.1.tar.Z) = 359401 bytes
 SHA1 (patch-aa) = d4cc87e2dce654d9b21d112cea5befb1ed070ac0
 SHA1 (patch-ab) = f43adf13f0cd6f16eb9df0756d033ff5586227f6
