@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3321 2003/09/11 06:46:11 martti Exp $
+$NetBSD: CHANGES,v 1.3322 2003/09/11 11:14:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3630,3 +3630,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added geda-examples-20030901 [dmcmahill 2003-09-10]
 	Updated ddd to 3.3.7 [martti 2003-09-11]
 	Updated distcc to 2.10.1 [martti 2003-09-11]
+	Added gtksourceview-0.6.0 [jmmv 2003-09-11]
