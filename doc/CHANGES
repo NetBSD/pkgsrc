@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9331 2005/02/26 22:51:01 jmmv Exp $
+$NetBSD: CHANGES,v 1.9332 2005/02/27 01:06:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1165,3 +1165,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated boost-python to 1.32.0 [jmmv 2005-02-26]
 	Updated boost to 1.32.0 [jmmv 2005-02-26]
 	Updated monotone to 0.16nb1 [jmmv 2005-02-26]
+	Updated emacs-nox11 to 21.4a [wiz 2005-02-27]
