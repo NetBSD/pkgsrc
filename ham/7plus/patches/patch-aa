@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2004/08/02 21:12:48 minskim Exp $
+
+--- 7plus.h.orig	2000-01-10 09:03:02.000000000 -0600
++++ 7plus.h
+@@ -225,6 +225,12 @@
+   #include <string.h>
+   #include <linux/limits.h>
+   #include <sys/ioctl.h>
++  #ifndef S_IREAD
++    #define S_IREAD S_IRUSR
++  #endif
++  #ifndef S_IWRITE
++    #define S_IWRITE S_IWUSR
++  #endif
+  #endif /* __linux__ */
+ 
+  #ifdef __NetBSD__
+@@ -343,7 +349,7 @@
+ 
+ /** shorthands for unsigned types **/
+ typedef unsigned char byte;  /* 8bit unsigned char */
+-#ifdef __unix__
++#if defined(__unix__) && !defined(__linux__)
+  #ifdef __vax__
+    typedef u_long ulong;
+  #endif
