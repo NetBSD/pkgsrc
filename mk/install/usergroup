@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: usergroup,v 1.4 2005/01/31 17:42:20 jlam Exp $
+# $NetBSD: usergroup,v 1.5 2005/01/31 18:41:08 jlam Exp $
 #
 # +USERGROUP - users and groups management script
 #
@@ -137,12 +137,15 @@ ADD)
 			group_exists $group &&
 				${ECHO} "${PKGNAME}" > $preexist
 		fi
-		group_exists $group ||
-			{ ${ECHO} "Creating group: $group";
+		if group_exists $group; then
+			:
+		elif ${TEST} -n "${GROUPADD}" -a -x "${GROUPADD}"; then
+			${ECHO} "Creating group: $group";
 			case $groupid in
 			"")	${GROUPADD} $group ;;
 			*)	${GROUPADD} -g $groupid $group ;;
-			esac; }
+			esac
+		fi
 		if ${TEST} -f "$token" && \
 		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
 			:
@@ -171,14 +174,16 @@ ADD)
 			user_exists $user &&
 				${ECHO} "${PKGNAME}" > $preexist
 		fi
-		{ user_exists $user && group_exists $group; } ||
-			{ ${ECHO} "Creating user: $user";
+		if user_exists $user && group_exists $group; then
+			:
+		elif ${TEST} -n "${USERADD}" -a -x "${USERADD}"; then
+			${ECHO} "Creating user: $user";
 			case $userid in
 			"")	${USERADD} -c "$descr" -d "$home" -s "$shell" \
 					-g $group $user ;;
 			*)	${USERADD} -c "$descr" -d "$home" -s "$shell" \
 					-g $group -u $userid $user ;;
-			esac; }
+			esac
 		if ${TEST} -f "$token" && \
 		   ${GREP} "^${PKG_METADATA_DIR}$" $token >/dev/null; then
 			:
