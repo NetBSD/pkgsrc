@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/23 14:31:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/26 01:19:57 wiz Exp $
 #
 
 DISTNAME=		digger-20020314
@@ -16,6 +16,7 @@ USE_BUILDLINK3=		yes
 
 .if ${OPSYS:MLinux}
 MAKEFILE=		Makefile.sdl
+USE_GNU_TOOLS+=		make
 .else
 MAKEFILE=		Makefile.fbsd
 .endif
