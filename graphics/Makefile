@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2004/04/06 09:47:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.307 2004/04/14 09:59:26 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -164,7 +164,6 @@ SUBDIR+=	netpbm
 SUBDIR+=	ns-cult3d
 SUBDIR+=	nvtv
 SUBDIR+=	nvtv-gtk2
-SUBDIR+=	ogmtools
 SUBDIR+=	opendis
 SUBDIR+=	openptc
 SUBDIR+=	p5-GD
