@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 1999/10/25 16:05:37 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2000/01/31 21:18:43 drochner Exp $
 
-DISTNAME=		bochs-991023a
+DISTNAME=		bochs-2000_0104c
+PKGNAME=		bochs-2000.01.04c
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://bochs.com/pub/
 
@@ -11,7 +12,8 @@ NOT_FOR_PLATFORM=	*-*-alpha	#runs, SEGV.
 
 LICENSE=		shareware
 GNU_CONFIGURE=		yes
-USE_X11BASE=		yes
+#CONFIGURE_ARGS=		--enable-debugger --enable-disasm
+USE_X11=		yes
 
 post-configure:
 	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' < ${WRKSRC}/.bochsrc > ${WRKSRC}/bochsrc
