@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4971 2004/02/23 13:28:21 cube Exp $
+$NetBSD: CHANGES,v 1.4972 2004/02/23 13:42:41 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -995,3 +995,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkglint to 3.68 [wiz 2004-02-23]
 	Updated heimdal to 1.6nb1 [wiz 2004-02-23]
 	Deleted ion-dock [cube 2004-02-23]
+	Deleted ion-devel [cube 2004-02-23]
+	Updated ion to 20040207 [cube 2004-02-23]
