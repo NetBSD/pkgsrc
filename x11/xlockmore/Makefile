@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2001/07/03 13:51:43 abs Exp $
+# $NetBSD: Makefile,v 1.45 2001/07/26 03:35:25 lukem Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -13,6 +13,8 @@ COMMENT=	Like the XLock session locker/screen saver, but with more
 
 CHECK_MESA=	YES
 
+.include "../../mk/bsd.prefs.mk"
+
 .if defined(XLOCK_LIGHT)
 CONFIGURE_ARGS+=--without-gltt --without-ttf --without-opengl --without-mesagl \
 		--without-xpm # --without-cxx XXX doesn't work
@@ -22,8 +24,6 @@ USE_XPM=	YES
 USE_MESA=	YES
 CONFIGURE_ARGS+= --with-mesagl
 .endif
-
-.include "../../mk/bsd.prefs.mk"
 
 .if !exists(${X11BASE}/lib/libXdpms.a)
 XLOCK_NO_DPMS=	YES
