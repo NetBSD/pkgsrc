@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.obsolete.mk,v 1.7 2002/01/31 21:18:38 jlam Exp $
+# $NetBSD: bsd.pkg.obsolete.mk,v 1.8 2002/02/05 04:12:07 jlam Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -23,6 +23,11 @@ PKG_SYSCONFDIR.stripes?=		${APACHE_SYSCONFDIR}
 
 .if defined(PHP_CONFDIR)
 PKG_SYSCONFDIR.php?=			${PHP_CONFDIR}
+.endif
+
+.if defined(SSH_CONF_DIR)
+PKG_SYSCONFDIR.openssh?=		${SSH_CONF_DIR}
+PKG_SYSCONFDIR.ssh?=			${SSH_CONF_DIR}
 .endif
 
 .if defined(VTUN_SYSCONFDIR)
