@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/12/18 02:44:12 grant Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/12/18 03:59:30 grant Exp $
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
@@ -11,12 +11,17 @@ CONFIGURE_ARGS+=	--libexecdir=${LOCALBASE}/libexec \
 VERSION=		4.0.5
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 QPOPPER_USER?=		pop
 QPOPPER_GROUP?=		mail
 QPOPPER_FAC?=		LOCAL1
 QPOPPER_APOP_AUTH?=	${PKG_SYSCONFDIR}/apop.auth
 DB_SUFFIX?=		db
+
+.if defined(QPOPPER_SPOOL_DIR)
+CONFIGURE_ARGS+=	--enable-spool-dir=${QPOPPER_SPOOL_DIR}
+.endif
 
 .if defined(KERBEROS)
 PKG_USE_KERBEROS=	# defined
@@ -27,9 +32,6 @@ BUILD_DEFS+=		QPOPPER_SERVERMODE USE_INET6
 
 .if defined(QPOPPER_SERVERMODE)
 CONFIGURE_ARGS+=	--enable-servermode
-.endif
-.if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
 .endif
 
 .if defined(QPOPPER_USE_DRAC) && !empty(QPOPPER_USE_DRAC:M[Yy][Ee][Ss])
