@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1202 2003/06/23 14:26:32 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1203 2003/07/02 23:02:23 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -1801,7 +1801,7 @@ EXTRACT_ELEMENTS?=	# empty
 
 DOWNLOADED_DISTFILE=	$${extract_file}
 
-EXTRACT_CMD.zip?=	${LOCALBASE}/bin/unzip -Laq $${extract_file}
+EXTRACT_CMD.zip?=	${LOCALBASE}/bin/unzip -Laqo $${extract_file}
 EXTRACT_CMD.lha?=	${LOCALBASE}/bin/lha xq $${extract_file}
 EXTRACT_CMD.lzh?=	${EXTRACT_CMD.lha}
 EXTRACT_CMD.zoo?=	${LOCALBASE}/bin/unzoo -x $${extract_file}
