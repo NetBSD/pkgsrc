@@ -1,13 +1,14 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: apache.sh,v 1.17 2002/10/14 00:29:51 lukem Exp $
+# $NetBSD: apache.sh,v 1.18 2002/11/19 23:08:47 jlam Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 #
-# To start apache at startup, copy this script to /etc/rc.d and set
-# apache=YES in /etc/rc.conf.
+# You will need to set some variables in /etc/rc.conf to start Apache:
+#
+# apache=YES 
 
 if [ -f /etc/rc.subr ]
 then
@@ -25,24 +26,10 @@ stop_cmd="apache_doit stop"
 restart_cmd="apache_doit restart"
 reload_cmd="apache_doit reload"
 
-# "${apache_start}" is the subcommand sent to apachectl to control how
-# httpd is started.  It's value may be overridden in:
-#
-#	@PKG_SYSCONFDIR@/apache_start.conf
-#	/etc/rc.conf
-#	/etc/rc.conf.d/apache,
-#
-# in order of increasing precedence.  Its possible values are "start"
-# and "startssl", and defaults to "start" unless it's already set.
-#
-: ${apache_start:=start}
-if [ -f @PKG_SYSCONFDIR@/apache_start.conf ]
-then
-	. @PKG_SYSCONFDIR@/apache_start.conf
-fi
-
 apache_doit ()
 {
+	: ${apache_start:=start}
+
 	case $1 in
 	start)	action=${apache_start} ;;
 	reload)	action=graceful ;;
