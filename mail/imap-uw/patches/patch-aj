@@ -1,25 +1,5 @@
-$NetBSD: patch-aj,v 1.7 2002/10/28 22:21:16 elric Exp $
+$NetBSD: patch-aj,v 1.8 2002/10/30 02:12:45 elric Exp $
 
---- src/c-client/auth_gss.c.orig	Wed Oct 23 16:05:35 2002
-+++ src/c-client/auth_gss.c	Wed Oct 23 16:06:44 2002
-@@ -18,9 +18,17 @@
-  * CPYRIGHT, included with this Distribution.
-  */
- 
-+#ifdef __NetBSD__
-+/* This is really Heimdal specific, but . . . */
-+#include <gssapi/gssapi.h>
-+#include <krb5/krb5.h>
-+
-+#define gss_nt_service_name	GSS_C_NT_HOSTBASED_SERVICE
-+#else
- #define PROTOTYPE(x) x
- #include <gssapi/gssapi_generic.h>
- #include <gssapi/gssapi_krb5.h>
-+#endif
- 
- long auth_gssapi_valid (void);
- long auth_gssapi_client (authchallenge_t challenger,authrespond_t responder,
 --- src/osdep/unix/Makefile.gss.orig	Wed Oct 23 17:23:36 2002
 +++ src/osdep/unix/Makefile.gss	Wed Oct 23 17:41:19 2002
 @@ -20,12 +20,16 @@

@@ -1,0 +1,52 @@
+$NetBSD: patch-al,v 1.1 2002/10/30 02:12:45 elric Exp $
+
+--- src/c-client/auth_gss.c.orig	Fri Sep 28 16:35:14 2001
++++ src/c-client/auth_gss.c
+@@ -18,9 +18,17 @@
+  * CPYRIGHT, included with this Distribution.
+  */
+ 
++#ifdef __NetBSD__
++/* This is really Heimdal specific, but . . . */
++#include <gssapi/gssapi.h>
++#include <krb5/krb5.h>
++
++#define gss_nt_service_name	GSS_C_NT_HOSTBASED_SERVICE
++#else
+ #define PROTOTYPE(x) x
+ #include <gssapi/gssapi_generic.h>
+ #include <gssapi/gssapi_krb5.h>
++#endif
+ 
+ long auth_gssapi_valid (void);
+ long auth_gssapi_client (authchallenge_t challenger,authrespond_t responder,
+@@ -58,22 +66,21 @@ long auth_gssapi_valid (void)
+   krb5_context ctx;
+   krb5_keytab kt;
+   krb5_kt_cursor csr;
++  if (krb5_init_context(&ctx))
++    return NIL;
+   sprintf (tmp,"host@%s",mylocalhost ());
+   buf.length = strlen (buf.value = tmp) + 1;
+ 				/* see if can build a name */
+   if (gss_import_name (&smn,&buf,gss_nt_service_name,&name) != GSS_S_COMPLETE)
+     return NIL;			/* failed */
+-				/* make a context */
+-  if (!krb5_init_context (&ctx)) {
+ 				/* get default keytab */
+-    if (!krb5_kt_default (ctx,&kt)) {
++  if (!krb5_kt_default (ctx,&kt)) {
+ 				/* can do server if have good keytab */
+-      if (!krb5_kt_start_seq_get (ctx,kt,&csr))
+-	auth_gss.server = auth_gssapi_server;
+-      krb5_kt_close (ctx,kt);	/* finished with keytab */
+-    }
+-    krb5_free_context (ctx);	/* finished with context */
++    if (!krb5_kt_start_seq_get (ctx,kt,&csr))
++       auth_gss.server = auth_gssapi_server;
++    krb5_kt_close (ctx,kt);	/* finished with keytab */
+   }
++  krb5_free_context (ctx);	/* finished with context */
+   gss_release_name (&smn,&name);/* finished with name */
+   return LONGT;
+ }
