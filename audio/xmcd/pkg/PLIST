@@ -1,10 +1,15 @@
-@comment $NetBSD: PLIST,v 1.8 1998/11/05 06:26:08 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.9 1999/06/28 07:49:06 tron Exp $
 bin/cda
 bin/cddbcmd
 bin/dp2xmcd
 bin/wm2xmcd
 bin/xmcd
-lib/X11/app-defaults/XMcd
+lib/X11/xmcd/app-defaults/XMcd
+lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/cda
+lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/cddbcmd
+lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/dp2xmcd
+lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/wm2xmcd
+lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/xmcd
 lib/X11/xmcd/config/.tbl/Acer
 lib/X11/xmcd/config/.tbl/Apple
 lib/X11/xmcd/config/.tbl/Aztech
@@ -32,6 +37,7 @@ lib/X11/xmcd/config/.tbl/Pioneer
 lib/X11/xmcd/config/.tbl/Plextor
 lib/X11/xmcd/config/.tbl/Procom
 lib/X11/xmcd/config/.tbl/Regal
+lib/X11/xmcd/config/.tbl/Ricoh
 lib/X11/xmcd/config/.tbl/SGI
 lib/X11/xmcd/config/.tbl/Samsung
 lib/X11/xmcd/config/.tbl/Sanyo
@@ -48,6 +54,20 @@ lib/X11/xmcd/config/device.cfg
 lib/X11/xmcd/config/sites
 @comment remove the CD drive configuration file(s). Its name is unknown.
 @unexec rm -f %D/lib/X11/xmcd/config/*
+lib/X11/xmcd/discog/bkgnd.gif
+lib/X11/xmcd/discog/xmcdlogo.gif
+lib/X11/xmcd/discog/discog.html
+lib/X11/xmcd/discog/blues/index.html
+lib/X11/xmcd/discog/classical/index.html
+lib/X11/xmcd/discog/country/index.html
+lib/X11/xmcd/discog/data/index.html
+lib/X11/xmcd/discog/folk/index.html
+lib/X11/xmcd/discog/jazz/index.html
+lib/X11/xmcd/discog/misc/index.html
+lib/X11/xmcd/discog/newage/index.html
+lib/X11/xmcd/discog/reggae/index.html
+lib/X11/xmcd/discog/rock/index.html
+lib/X11/xmcd/discog/soundtrack/index.html
 lib/X11/xmcd/docs/ACKS
 lib/X11/xmcd/docs/CDDB
 lib/X11/xmcd/docs/CHANGES
@@ -73,6 +93,16 @@ lib/X11/xmcd/help/DdOk.btn
 lib/X11/xmcd/help/Disc.lbl
 lib/X11/xmcd/help/DiscId.lbl
 lib/X11/xmcd/help/DiscTitl.lbl
+lib/X11/xmcd/help/DlCancel.btn
+lib/X11/xmcd/help/DlChgTo.btn
+lib/X11/xmcd/help/DlDel.btn
+lib/X11/xmcd/help/DlDelAll.btn
+lib/X11/xmcd/help/DlReScan.btn
+lib/X11/xmcd/help/DlShow.btn
+lib/X11/xmcd/help/DpDList.btn
+lib/X11/xmcd/help/DpSubmit.btn
+lib/X11/xmcd/help/DlDisc.lsw
+lib/X11/xmcd/help/DlType.opt
 lib/X11/xmcd/help/DpAddPgm.btn
 lib/X11/xmcd/help/DpCancel.btn
 lib/X11/xmcd/help/DpClrPgm.btn
@@ -83,13 +113,11 @@ lib/X11/xmcd/help/DpLoad.btn
 lib/X11/xmcd/help/DpPgmSeq.txw
 lib/X11/xmcd/help/DpRmDsbl.btn
 lib/X11/xmcd/help/DpSave.btn
-lib/X11/xmcd/help/DpSend.btn
 lib/X11/xmcd/help/DpTExt.btn
 lib/X11/xmcd/help/DpTTitle.txw
 lib/X11/xmcd/help/DpTimSel.btn
 lib/X11/xmcd/help/DpTotTim.lbl
 lib/X11/xmcd/help/DpTrk.lsw
-lib/X11/xmcd/help/DpWeb.btn
 lib/X11/xmcd/help/DsCancel.btn
 lib/X11/xmcd/help/DsDir.lsw
 lib/X11/xmcd/help/DsOk.btn
@@ -154,6 +182,7 @@ lib/X11/xmcd/help/Time.lbl
 lib/X11/xmcd/help/TimeMode.lbl
 lib/X11/xmcd/help/Track.lbl
 lib/X11/xmcd/help/TrkTitle.lbl
+lib/X11/xmcd/help/WWWwarp.btn
 lib/X11/xmcd/help/WwCancel.btn
 lib/X11/xmcd/help/WwGo.btn
 lib/X11/xmcd/help/WwSearch.opt
@@ -162,6 +191,7 @@ lib/X11/xmcd/pixmaps/xmcd.icon
 lib/X11/xmcd/pixmaps/xmcd.xpm
 lib/X11/xmcd/pixmaps/xmcd_a.px
 lib/X11/xmcd/pixmaps/xmcd_b.px
+lib/X11/xmcd/scripts/genidx
 lib/X11/xmcd/scripts/ncsarmt
 lib/X11/xmcd/scripts/ncsawrap
 lib/X11/xmcd/scripts/nswrap
@@ -170,22 +200,36 @@ man/man1/cddbcmd.1
 man/man1/dp2xmcd.1
 man/man1/wm2xmcd.1
 man/man1/xmcd.1
-@exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/soundtrack
-@exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/rock
-@exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/reggae
-@exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/newage
-@exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/jazz
-@exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/folk
-@exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/data
-@exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/country
-@exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/classical
-@exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/blues
+@exec mkdir -p %D/lib/X11/xmcd/cddb/soundtrack
+@exec mkdir -p %D/lib/X11/xmcd/cddb/rock
+@exec mkdir -p %D/lib/X11/xmcd/cddb/reggae
+@exec mkdir -p %D/lib/X11/xmcd/cddb/newage
+@exec mkdir -p %D/lib/X11/xmcd/cddb/jazz
+@exec mkdir -p %D/lib/X11/xmcd/cddb/folk
+@exec mkdir -p %D/lib/X11/xmcd/cddb/data
+@exec mkdir -p %D/lib/X11/xmcd/cddb/country
+@exec mkdir -p %D/lib/X11/xmcd/cddb/classical
+@exec mkdir -p %D/lib/X11/xmcd/cddb/blues
 @dirrm lib/X11/xmcd/scripts
 @dirrm lib/X11/xmcd/pixmaps
 @dirrm lib/X11/xmcd/help
 @dirrm lib/X11/xmcd/docs
+@dirrm lib/X11/xmcd/discog/soundtrack
+@dirrm lib/X11/xmcd/discog/rock
+@dirrm lib/X11/xmcd/discog/reggae
+@dirrm lib/X11/xmcd/discog/newage
+@dirrm lib/X11/xmcd/discog/misc
+@dirrm lib/X11/xmcd/discog/jazz
+@dirrm lib/X11/xmcd/discog/folk
+@dirrm lib/X11/xmcd/discog/data
+@dirrm lib/X11/xmcd/discog/country
+@dirrm lib/X11/xmcd/discog/classical
+@dirrm lib/X11/xmcd/discog/blues
+@dirrm lib/X11/xmcd/discog
 @dirrm lib/X11/xmcd/config/.tbl
 @dirrm lib/X11/xmcd/config
+@dirrm lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}
+@dirrm lib/X11/xmcd/app-defaults
 @comment in case users requested using internet cddb server
 @unexec rm -fr %D/lib/X11/xmcd/cddb
 @dirrm lib/X11/xmcd
