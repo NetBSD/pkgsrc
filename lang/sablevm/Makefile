@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/05/23 10:25:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/28 06:05:32 jlam Exp $
 #
 
 DISTNAME=	sablevm-1.1.3
@@ -34,7 +34,7 @@ BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/lib
 
 .if !exists(/usr/include/semaphore.h)
 LDFLAGS+=	-lsemaphore
-BUILDLINK_TRANSFORM+=	l:rt:semaphore:
+BUILDLINK_TRANSFORM+=	l:rt:semaphore
 .include "../../devel/pthread-sem/buildlink3.mk"
 .endif
 .include "../../devel/libffi/buildlink3.mk"

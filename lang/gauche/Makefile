@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/08/18 13:51:50 minoura Exp $
+# $NetBSD: Makefile,v 1.25 2004/08/28 06:05:32 jlam Exp $
 #
 
 DISTNAME=	Gauche-0.8.1
@@ -38,5 +38,5 @@ CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
 .if !empty(_WITH_ICONV_LIB)
 CONFIGURE_ARGS+=	--with-iconv-lib=${_WITH_ICONV_LIB}
 .else
-BUILDLINK_TRANSFORM+=	S:-liconv:
+BUILDLINK_TRANSFORM+=	rm:-liconv
 .endif
