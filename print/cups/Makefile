@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2001/08/14 03:41:38 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2001/08/18 04:41:45 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
-BASE_VERS=		1.1.9
+BASE_VERS=		1.1.10
 DIST_VERS=		${BASE_VERS}-1
 VERS=			${DIST_VERS:S/-/./g}
 WRKSRC=			${WRKDIR}/cups-${BASE_VERS}
@@ -28,9 +28,10 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--sysconfdir=/etc
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
-CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
 CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP}
+CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
+CONFIGURE_ARGS+=	--enable-slp
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
 
@@ -85,6 +86,7 @@ FILES_SUBST+=		CHMOD=${CHMOD:Q}
 FILES_SUBST+=		CHOWN=${CHOWN:Q}
 FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		ECHO=${ECHO:Q}
 FILES_SUBST+=		ID=${ID:Q}
 FILES_SUBST+=		MKDIR=${MKDIR:Q}
 FILES_SUBST+=		RM=${RM:Q}
@@ -95,11 +97,13 @@ FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 pre-install:
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/cupsd.sh > ${WRKDIR}/cupsd.sh
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/cupsd.sh ${PREFIX}/etc/rc.d/cupsd
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	for file in ENCRYPTION.txt LICENSE.txt README.txt; do		\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR}/$${file};	\
@@ -115,5 +119,6 @@ post-install:
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
+.include "../../net/openslp/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
