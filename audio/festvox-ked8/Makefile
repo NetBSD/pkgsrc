@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 1999/10/28 02:57:51 proff Exp $
+# $NetBSD: Makefile,v 1.9 1999/12/25 22:39:00 wiz Exp $
 
-DISTNAME=	festvox-ked8-1.4.0
+DISTNAME=	festvox_kedlpc8k
+PKGNAME=	festvox-ked8-1.4.0
 WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
-DISTFILES=	festvox_kedlpc8k.tar.gz
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
@@ -25,6 +25,6 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
-	cd ${WRKSRC} && pax -r -w * ${FHOME}
+	cd ${WRKSRC} && ${PAX} -r -w * ${FHOME}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 1999/10/11 14:36:02 proff Exp $
+# $NetBSD: Makefile,v 1.6 1999/12/25 22:39:03 wiz Exp $
 
-PKGNAME=	mbrolavox-en1-980910
 DISTNAME=	en1-980910
+PKGNAME=	mbrolavox-en1-980910
 WRKSRC=		${WRKDIR}
 CATEGORIES=	audio
 MASTER_SITES=	ftp://tcts.fpms.ac.be/pub/mbrola/VOICES/en1/
@@ -10,9 +10,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 
-DEPENDS+=	mbrola-301h:../mbrola
-
 BUILD_DEPENDS=	unzip:../../archivers/unzip
+DEPENDS+=	mbrola-301h:../mbrola
 
 LICENSE=	no-commercial-use
 
@@ -23,11 +22,11 @@ NO_BUILD=	yes
 MHOME=		${PREFIX}/share/mbrola/voices
 
 post-extract:
-	@ chmod -R a+r ${WRKSRC}
-	@ find ${WRKSRC} -type d -print0 | xargs -0 chmod 755
+	@ ${CHMOD} -R a+r ${WRKSRC}
+	@ find ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
 
 do-install:
 	${INSTALL_DATA_DIR} ${MHOME}
-	cd ${WRKSRC} && pax -r -w en1 ${MHOME}
+	cd ${WRKSRC} && ${PAX} -r -w en1 ${MHOME}
 
 .include "../../mk/bsd.pkg.mk"
