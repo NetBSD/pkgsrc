@@ -1,0 +1,36 @@
+$NetBSD: patch-aq,v 1.1 2001/11/18 15:03:39 itohy Exp $
+
+--- src/riff.h.orig	Thu Aug 13 08:27:10 1998
++++ src/riff.h	Sun Nov 18 21:10:34 2001
+@@ -17,20 +17,20 @@
+ #define RIFF_IDVI_ADPCM 1024
+ 
+ typedef struct {
+-   long riff;
+-   ulong length;
+-   long wave;
++   int32_t riff;
++   u_int32_t length;
++   int32_t wave;
+ } RiffHeader;
+ 
+ typedef struct {
+-   long fmt;
+-   ulong chunk_length;
+-   short format;
+-   short modus;
+-   ulong freq;
+-   ulong bpsec;
+-   short bpspl;
+-   short res;
++   int32_t fmt;
++   u_int32_t chunk_length;
++   int16_t format;
++   int16_t modus;
++   u_int32_t freq;
++   u_int32_t bpsec;
++   int16_t bpspl;
++   int16_t res;
+ } FmtHeader;
+ 
+ bool is_riff(int fd);

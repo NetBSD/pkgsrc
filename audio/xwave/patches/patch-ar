@@ -1,0 +1,12 @@
+$NetBSD: patch-ar,v 1.1 2001/11/18 15:03:40 itohy Exp $
+
+--- src/audio_file.c.orig	Thu Aug 13 08:27:09 1998
++++ src/audio_file.c	Sun Nov 18 21:21:01 2001
+@@ -16,6 +16,7 @@
+ #include "xwave.h"
+ #include "xwave_widget.h"
+ #include "audio_file.h"
++#include "endian.h"
+ #include "riff.h"
+ #include "aifc.h"
+ #include "au.h"
