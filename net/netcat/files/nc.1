@@ -1,3 +1,4 @@
+.\" $NetBSD: nc.1,v 1.2 2001/12/03 19:03:22 wiz Exp $
 .Dd October 1, 1999
 .Dt NC 1
 .Sh NAME
@@ -24,7 +25,7 @@
 .Op Fl o Ar file
 .Ar [hostname] [port]
 .\" ae:g:G:hi:lno:p:rs:tuvw:z
-.\"connect to somewhere:   nc [-options] hostname port[s] [ports] ... 
+.\"connect to somewhere:   nc [-options] hostname port[s] [ports] ...
 .\"listen for inbound:     nc -l -p port [-options] [hostname] [port]
 .\"options:
 .\"        -g gateway              source-routing hop point[s], up to 8
@@ -110,9 +111,6 @@ have been closed.  It doesn't do this very well, and relies rather
 heavily on the network layers at both ends for this, and as such, if
 microsoft products are used, it might not notice a close because microsoft
 sucks.
-.Sh BUGS
-I don't know...I didn't write the damn thing.  But there are probably
-a bunch.  Go blame microsoft.
 .Sh SEE ALSO
 .Xr cat 1
 .Sh HISTORY
@@ -125,3 +123,6 @@ standard Unix utility.  IMHO,
 .Nm
 could take its place right next to cat,
 cp, rm, mv, dd, ls, and all those other cryptic and Unix-like things.
+.Sh BUGS
+I don't know...I didn't write the damn thing.  But there are probably
+a bunch.  Go blame microsoft.

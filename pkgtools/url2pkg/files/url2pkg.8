@@ -1,4 +1,4 @@
-.\"	$NetBSD: url2pkg.8,v 1.2 2001/04/09 14:51:47 hubertf Exp $
+.\"	$NetBSD: url2pkg.8,v 1.3 2001/12/03 19:03:23 wiz Exp $
 .\"
 .\" Copyright (c) 2001 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -45,16 +45,16 @@
 .Op Ar URL
 .Sh DESCRIPTION
 .Nm
-takes the 
-.Ar URL 
+takes the
+.Ar URL
 to a package's distfile that should be
 turned into a package. The
-generated package includes a 
-.Pa Makefile 
+generated package includes a
+.Pa Makefile
 and a basic set of files to get the
 package going. Any customisations to get the package going need to be
-adjusted manually after 
-.Nm 
+adjusted manually after
+.Nm
 has finished it's job.
 .Pp
 .Nm
@@ -64,36 +64,30 @@ intended to fly on autopilot, though.
 The
 .Pa Makefile
 contains all the requiered variable, such as DISTNAME or MASTER_SITES, but some of them cannot be automatically set. Hence, the user's usual editor is invoked to edit the
-.Pa Makefile.
+.Pa Makefile .
 .Pp
 After the
-.Pa Makefile 
-is completed, 
-.Nm 
+.Pa Makefile
+is completed,
+.Nm
 fetches the archive, and computes its checksum via the
 .Ic make makesum
-target. Then archive extraction is done, via the 
+target. Then archive extraction is done, via the
 .Ic make extract
-target, and finally, 
+target, and finally,
 .Nm
 attempts to detect if
-the software uses a 
-.Ic configure 
-script, and if it's from GNU 
-.Ic autoconf.
+the software uses a
+.Ic configure
+script, and if it's from GNU
+.Ic autoconf .
 .Pp
 If the user does not supply the
 .Ar URL
-on the command line, then 
+on the command line, then
 .Nm
 will prompt for it.
-.Sh EXAMPLES
-.Nm
-.Ar http://www.foo.com/bar/buz.tgz
-.Pp
-Will generate a template NetBSD package for the software that can be found at
-.Ar http://www.foo.com/bar/buz.tgz
-.Sh ENVIRONMENTAL VARIABLES
+.Sh ENVIRONMENT
 .Bl -tag -width indent
 .It PKGEDITOR, EDITOR
 Editor used for
@@ -101,23 +95,31 @@ Editor used for
 edition.
 .It PKGMAINTAINER, REPLYTO
 Name used for the MAINTAINER field in the package
-.Pa Makefile.
+.Pa Makefile .
 .El
-.Sh BUGS
+.Sh EXAMPLES
 .Nm
-does not generate an empty 
-.Pa patches
-directory
-.Sh AUTHOR(S)
-.Nm 
-was written by
-.An Hubert Feyrer Aq hubertf@netbsd.org
-.br
-This man page was written by 
-.An Emmanuel Dreyfus Aq manu@netbsd.org
+.Ar http://www.foo.com/bar/buz.tgz
+.Pp
+Will generate a template
+.Nx
+package for the software that can be found at
+.Ar http://www.foo.com/bar/buz.tgz
 .Sh SEE ALSO
 .Xr packages 7
 .br
-.Em "Documentation on the NetBSD Package System", 
+.Em "Documentation on the NetBSD Package System" ,
 .An Hubert Feyrer Aq hubertf@netbsd.org
 .An Alistair Crooks Aq agc@pkgsrc.org
+.Sh AUTHORS
+.Nm
+was written by
+.An Hubert Feyrer Aq hubertf@netbsd.org
+.br
+This man page was written by
+.An Emmanuel Dreyfus Aq manu@netbsd.org
+.Sh BUGS
+.Nm
+does not generate an empty
+.Pa patches
+directory

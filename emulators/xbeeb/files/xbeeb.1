@@ -1,4 +1,4 @@
-.\" $NetBSD: xbeeb.1,v 1.1 2001/01/29 11:34:26 wiz Exp $
+.\" $NetBSD: xbeeb.1,v 1.2 2001/12/03 19:03:21 wiz Exp $
 .\"
 .Dd May 27, 2000
 .Dt XBEEB 1
@@ -18,7 +18,7 @@
 .Op Fl m Ar mode
 .Op Fl d Ar dir
 .Op Ar file
-.Sh DESCRIPTION   
+.Sh DESCRIPTION
 The
 .Nm
 program is an X11 based emulator of the Acorn BBC
@@ -28,7 +28,7 @@ of Cambridge.
 .Pp
 The BBC Micro was based on the 6502 processor with a 16k
 operating system ROM, upto 32k RAM and 15 paged 16k ROMs for
-utilities.       
+utilities.
 .Ss Options
 The options are as follows:
 .Bl -tag -width Ds
@@ -37,7 +37,7 @@ Display usage information.
 .It Fl a
 Emulate the Model A only - if available.
 .It Fl d Ar dir
-Use 
+Use
 .Ar dir
 as the directory for disk emulation.
 .It Fl h
@@ -81,7 +81,7 @@ Load the snapshot
 as the start point of the emulator.
 .El
 .Ss Implementation
-All of the instruction set of a standard 6502 CPU, 
+All of the instruction set of a standard 6502 CPU,
 Illegal or undocumented opcodes on the NMOS 6502
 and changes for the CMOS R65C02 and R65C12 are implemented.
 .Pp
@@ -126,7 +126,7 @@ machine state.
 The emulated disk system requires a directory containing a
 set of files present on a given disk, exactly as they
 would appear on a BBC disk. In addition there is a file
-called 
+called
 .Qq __CATALOG__
 which contains the name, load and
 execution address, length and sector number for each file
@@ -134,8 +134,7 @@ as it would be displayed by *INFO
 .Pp
 The sectory number is unused in this emulation - it's
 there for the sake of completeness and maybe used in the
-future. 
-
+future.
 .Sh FILES
 .Bl -tag -width @PREFIX@/@XBEEBROOT@/roms/xdfs0.70.rom -compact
 .It Pa @PREFIX@/@XBEEBROOT@/roms/OS1.2.rom
@@ -145,6 +144,12 @@ the BBC Basic rom image
 .It Pa @PREFIX@/@XBEEBROOT@/roms/xdfs0.70.rom
 the XDFS rom image required for disc emulation
 .El
+.Sh SEE ALSO
+The best site for information about BBC Micro is
+.Pa http://www.nvg.ntnu.no/bbc
+.Sh AUTHORS
+This program was written by James Fidell. This man page was
+put together by Nick Hudson (nick@nthcliff.demon.co.uk)
 .Sh BUGS
 The following are known bugs:
 .Bl -bullet
@@ -191,7 +196,7 @@ honest.
 .It
 Handling of hardware-scrolled screens isn't perfect.  In
 the efs-demo and xdfs-demo directories there's a program
-called B.DEMO that will usually demonstrate the problem.  
+called B.DEMO that will usually demonstrate the problem.
 .It
 Changing the Horizontal Sync. register in the
 CRTC isn't implemented but is required for some games.
@@ -202,9 +207,3 @@ working at once stage, but I've broken it again.
 The screen window overlaps the window with the LED
 status in sometimes.
 .El
-.Sh WEB Resources
-The best site for information about BBC Micro is
-.B http://www.nvg.ntnu.no/bbc
-.Sh AUTHORS
-This program was written by James Fidell. This man page was
-put together by Nick Hudson (nick@nthcliff.demon.co.uk)
