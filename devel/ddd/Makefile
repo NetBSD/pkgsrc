@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/09 13:36:49 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/19 23:46:54 tron Exp $
 # Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
@@ -12,9 +12,12 @@ MASTER_SITES=	ftp://ftp.ips.cs.tu-bs.de/pub/local/softech/ddd/  \
 
 MAINTAINER=     obrien@NUXI.com
 
+DEPENDS=	xpm-3.4j:../../graphics/xpm
+
+USE_X11=	yes
+USE_MOTIF=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_MOTIF=	yes
 MAN1=		ddd.1
 
 .include "../../mk/bsd.prefs.mk"
