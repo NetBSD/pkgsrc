@@ -1,0 +1,18 @@
+  libstash is a collection of programming support routines and
+useful algorithms that was developed in the course of the SQRL
+project.
+
+  libstash implements a number of algorithms such as hash tables,
+lists, rings, trees, and binomial heaps.  A somewhat unique
+implementation of reference-counted arbitrary buffers simplifies
+streaming data.
+
+  There is an extensible printf replacement that makes printing
+user-defined types (such as the buffers mentioned above) as clean
+as printing built-in types. There are memory allocation and thread
+wrappers, various aids to threaded programming such as message
+queues, specialized memory allocation facilities, and lots of
+debugging aids that help detect many common memory-related errors.
+
+  libstash comes with a BSD style licence (without the advertising
+clause).

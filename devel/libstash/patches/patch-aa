@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/03/30 14:10:45 rh Exp $
+
+--- Makefile.bsd.in.orig	Mon Sep 13 08:32:44 1999
++++ Makefile.bsd.in	Thu Mar 30 16:07:16 2000
+@@ -296,7 +296,7 @@
+ 	done; \
+ 	@INSTALL@ -d @prefix@/man/man3; \
+ 	for i in $(MANPAGES); do \
+-	@INSTALL@ -m 0644 $$i @prefix@/man/man3/; \
++	@INSTALL@ -m 0644 $$i @prefix@/$${i%s}; \
+ 	done; \
+ 	@INSTALL@ -d @prefix@/lib; \
+ 	'
