@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/15 20:05:55 kei Exp $
+share/texmf.local/ptex/platex/js/jsarticle.cls
+share/texmf.local/ptex/platex/js/jsbook.cls
+share/texmf.local/ptex/platex/js/jsclasses.dtx
+share/texmf.local/ptex/platex/js/jsclasses.ins
+share/texmf.local/ptex/platex/js/jspf.cls
+share/texmf.local/ptex/platex/js/morisawa.dtx
+share/texmf.local/ptex/platex/js/morisawa.ins
+share/texmf.local/ptex/platex/js/morisawa.sty
+share/texmf.local/ptex/platex/js/okumacro.dtx
+share/texmf.local/ptex/platex/js/okumacro.ins
+share/texmf.local/ptex/platex/js/okumacro.sty
+share/texmf.local/ptex/platex/js/okuverb.dtx
+share/texmf.local/ptex/platex/js/okuverb.ins
+share/texmf.local/ptex/platex/js/okuverb.sty
+@dirrm share/texmf.local/ptex/platex/js
