@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5853 2004/05/07 11:14:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.5854 2004/05/07 11:28:31 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2392,3 +2392,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cue to 20040426 [itojun 2004-05-07]
 	Added posh-0.3 [jmmv 2004-05-07]
 	Updated vte to 0.11.11 [jmmv 2004-05-07]
+	Updated cuetools to 0.6 [jmmv 2004-05-07]
