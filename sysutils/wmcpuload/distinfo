@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/03/24 18:04:57 wiz Exp $
+
+SHA1 (wmcpuload-0.9.0.tar.gz) = 5883ebcc2f3c11f1ef498a6740a1edb3c52ea816
+Size (wmcpuload-0.9.0.tar.gz) = 99481 bytes
+SHA1 (patch-aa) = 4844c1927eb72d5f0599d6a26a040023d2845feb
+SHA1 (patch-ab) = 42e9fabebfe23120d70ddff8b3e1b5bfd322fbbb
+SHA1 (patch-ac) = cbedd3d888a1fdf70fdd03621f917949cf5c037c

@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/03/24 18:04:58 wiz Exp $
+
+--- configure.orig	Sat Mar 23 18:10:00 2002
++++ configure
+@@ -3880,8 +3880,8 @@
+ 
+ XLIBS="-lX11 $X_EXTRA_LIBS"
+ 
+-lib_search_path="$lib_search_path $XLFLAGS -L/usr/local/lib"
+-inc_search_path="$inc_search_path $XCFLAGS -I/usr/local/include"
++lib_search_path="$lib_search_path $XLFLAGS"
++inc_search_path="$inc_search_path $XCFLAGS"
+ 
+ 
+ 
+@@ -4359,6 +4359,10 @@
+   ;;
+ openbsd*)
+   OS=openbsd
++  ignore_nice=yes
++  ;;
++netbsd*)
++  OS=netbsd
+   ignore_nice=yes
+   ;;
+ solaris*)
