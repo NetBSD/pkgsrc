@@ -1,0 +1,6 @@
+You might want to set the following environment variables in your
+favourite shell rc file:
+
+	IRCNICK   : to set your nick
+	IRCNAME   : to set your irc name
+	IRCSERVER : to set the server to use
