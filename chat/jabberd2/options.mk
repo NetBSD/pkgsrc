@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2004/10/29 07:07:44 xtraeme Exp $
+# $NetBSD: options.mk,v 1.3 2004/11/18 23:02:00 jlam Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jabberd2
-PKG_SUPPORTED_OPTIONS=	db mysql pgsql ldap pam
+PKG_SUPPORTED_OPTIONS=	db mysql pgsql ldap PAM
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdb)
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=        --enable-ldap
 .  include "../../databases/openldap/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mpam)
+.if !empty(PKG_OPTIONS:MPAM)
 CONFIGURE_ARGS+=        --enable-pam
 .  include "../../security/PAM/buildlink3.mk"
 .endif
