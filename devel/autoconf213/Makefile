@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/10/03 19:40:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/23 19:57:52 wiz Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/autoconf/autoconf.html
 COMMENT=	Generates automatic source code configuration scripts (old version)
 
-DEPENDS=	m4-1.4:../../devel/m4
+DEPENDS=	m4>=1.4:../../devel/m4
 
 CONFLICTS=		autoconf-devel-[0-9]*
 CONFLICTS=		autoconf<2.50
