@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/04/28 04:09:54 jtb Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/04/28 19:51:53 jtb Exp $
 bin/gcat
 bin/gcksum
 bin/gcomm
@@ -29,7 +29,6 @@ bin/gwc
 info/textutils.info
 @exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
 @exec install-info %D/info/textutils.info %D/info/dir
-man/man1
 man/man1/gcat.1
 man/man1/gcksum.1
 man/man1/gcomm.1
