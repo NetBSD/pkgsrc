@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:55:48 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:29 martti Exp $
 
 DISTNAME=	CGI-FastTemplate-1.09
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=	jlam@NetBSD.org
-COMMENT=	perl5 extension for managing templates
+COMMENT=	Perl5 extension for managing templates
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/CGI/FastTemplate/.packlist

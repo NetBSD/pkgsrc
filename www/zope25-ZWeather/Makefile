@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:56:17 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:47 martti Exp $
 
 DISTNAME=	ZWeather-0_0_1
 PKGREVISION=	1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/TheJester/ZWeather
-COMMENT=	display the weather in a pleasant format
+COMMENT=	Display the weather in a pleasant format
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:16 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/22 04:14:46 martti Exp $
 #
 
 DISTNAME=	ZNavigator-2.02
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/jonas/ZNavigator/
-COMMENT=	creating navigation bars
+COMMENT=	Creating navigation bars
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-long
 

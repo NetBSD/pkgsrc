@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 22:55:50 grant Exp $
+# $NetBSD: Makefile,v 1.21 2003/07/22 04:14:31 martti Exp $
 #
 
 DISTNAME=		HTML-Parser-3.27
@@ -8,7 +8,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=		jlam@NetBSD.org
-COMMENT=		perl5 module to parse HTML text documents
+COMMENT=		Perl5 module to parse HTML text documents
 
 DEPENDS+=		p5-HTML-Tagset>=3.0:../../www/p5-HTML-Tagset
 

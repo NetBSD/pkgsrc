@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:55:29 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/22 04:14:20 martti Exp $
 
 DISTNAME=	apc_gui-1.0.3
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://apc.neuropeans.com/download/
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://apc.neuropeans.com/
-COMMENT=	web interface for managing APC (php-apc)
+COMMENT=	Web interface for managing APC (php-apc)
 
 DEPENDS+=	php-apc>=1.1.0.1:../../www/php4-apc
 DEPENDS+=	php-gd>=4.0.1:../../graphics/php4-gd

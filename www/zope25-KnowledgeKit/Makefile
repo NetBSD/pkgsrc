@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:12 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/22 04:14:43 martti Exp $
 #
 
 DISTNAME=	KnowledgeKit-1.6.7
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/Bill/Products/KnowledgeKit/
-COMMENT=	automatic creation and maintenance of Knowledge Bases
+COMMENT=	Automatic creation and maintenance of Knowledge Bases
 
 ZOPE_COPYPRODUCT= KnowledgeKit-copyimport
 PRODNAMES=	#nothing

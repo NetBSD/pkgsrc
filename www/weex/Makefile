@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:56:07 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:40 martti Exp $
 
 DISTNAME=	weex-2.6.1
 CATEGORIES=	www
@@ -6,7 +6,7 @@ MASTER_SITES=	http://www.enjoy.ne.jp/~gm/program/weex/arc/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.enjoy.ne.jp/~gm/program/weex/index.html
-COMMENT=	non-interactive ftp client
+COMMENT=	Non-interactive ftp client
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
