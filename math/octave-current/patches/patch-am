@@ -1,70 +1,49 @@
-$NetBSD: patch-am,v 1.1 2001/04/22 22:58:47 jtb Exp $
+$NetBSD: patch-am,v 1.2 2001/04/22 23:16:09 jtb Exp $
 
---- liboctave/oct-rl-edit.c.orig	Sun Apr 22 23:54:15 2001
+--- liboctave/oct-rl-edit.c.orig	Mon Apr 23 00:07:12 2001
 +++ liboctave/oct-rl-edit.c
-@@ -33,36 +33,20 @@
+@@ -33,20 +33,20 @@
  
  #include "oct-rl-edit.h"
  
--/* It would be nice if readline.h declared these, I think. */
--
--extern int rl_blink_matching_paren;
--
--extern int screenheight;
--
--extern int screenwidth;
--
++extern int screenheight;
++
++extern int screenwidth;
++
  int
  octave_rl_screen_height (void)
  {
--  return screenheight;
+-  int rows, cols;
+-  rl_get_screen_size (&rows, &cols);
+-  return rows;
++    return screenheight;
  }
  
  int
  octave_rl_screen_width (void)
  {
--  return screenwidth;
+-  int rows, cols;
+-  rl_get_screen_size (&rows, &cols);
+-  return cols;
++    return screenwidth;
  }
  
  void
--octave_set_rl_blink_matching_paren_flag (int val)
--{
--  rl_blink_matching_paren = val;
--}
--
--int
--octave_get_rl_blink_matching_paren_flag (void)
-+octave_rl_enable_paren_matching (int val)
+@@ -93,7 +93,7 @@
  {
--  return rl_blink_matching_paren;
-+  rl_variable_bind ("blink-matching-paren", val ? "1" : "0");
- }
+   if (rl_undo_list)
+     {
+-      rl_free_undo_list ();
++      free_undo_list ();
  
- void
-@@ -95,7 +79,7 @@
- void
- octave_rl_newline (void)
+       rl_undo_list = 0;
+     }
+@@ -221,7 +221,7 @@
+ char **
+ octave_rl_completion_matches (const char *text, rl_completer_fcn_ptr f)
  {
--  rl_newline ();
-+  rl_newline (1, '\n');
+-  return rl_completion_matches (text, f);
++  return completion_matches (text, f);
  }
  
- void
-@@ -130,7 +114,7 @@
-      init file to take advantage of the conditional parsing feature
-      based on rl_readline_name; */
- 
--  rl_re_read_init_file ();
-+  rl_re_read_init_file (0, 0);
- }
- 
- char *
-@@ -169,7 +153,7 @@
-   if (f && *f)
-     rl_read_init_file (f);
-   else
--    rl_re_read_init_file ();
-+    rl_re_read_init_file (0, 0);
- }
- 
- void
+ char
