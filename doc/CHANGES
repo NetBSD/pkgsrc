@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7915 2004/11/19 17:33:59 peter Exp $
+$NetBSD: CHANGES,v 1.7916 2004/11/19 17:35:16 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5344,3 +5344,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed ip6_int [wiz 2004-11-19]
 	Removed sftp [wiz 2004-11-19]
 	Updated openntpd to 3.6p1 [peter 2004-11-19]
+	Added browser-bookmarks-menu-0.3 [jmmv 2004-11-19]
