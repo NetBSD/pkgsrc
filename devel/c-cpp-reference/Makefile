@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/30 15:56:08 markd Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/22 08:24:28 grant Exp $
 #
 
 DISTNAME=	c_cpp_reference-2.0.2
@@ -14,7 +14,7 @@ COMMENT=	C and C++ reference for the KDE IDE
 DEPENDS+=	kdevelop-base>=2.1.1:../kdevelop-base
 
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/03 18:49:39 reed Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/22 08:30:30 grant Exp $
 #
 
 DISTNAME=		gedit-2.4.1
@@ -17,7 +17,7 @@ DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 USE_PERL5=		build
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
