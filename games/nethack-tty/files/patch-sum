@@ -1,7 +1,7 @@
-$NetBSD: patch-sum,v 1.2 1999/12/24 22:30:05 pooka Exp $
+$NetBSD: patch-sum,v 1.3 2000/05/01 09:00:46 pooka Exp $
 
 MD5 (patch-aa) = ab2e40a9c222d914cc0ca9ecfda1cd88
-MD5 (patch-ab) = 21f70d969186fda8328f8f4a2300cebf
+MD5 (patch-ab) = 39341410ce990a7eb55beeef4af75855
 MD5 (patch-ac) = 4f89ee35a5901b7b8a8e376216c227ba
 MD5 (patch-ad) = 1c894f6943c2b5edfcca5e36a6f43c4d
 MD5 (patch-ae) = 0461964e1047cb98a734dfbe257e8325
