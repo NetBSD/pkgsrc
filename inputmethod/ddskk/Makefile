@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/03 13:32:15 agc Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/09 03:59:53 uebayasi Exp $
 #
 
 DISTNAME=	ddskk20020929
@@ -30,7 +30,7 @@ do-configure:
 # The idea here is that files compiled as *.elc will be installed.
 post-build:
 	@{ \
-		cat ${PKGDIR}/PLIST.header; \
+		${CAT} ${PKGDIR}/PLIST.header; \
 		cd ${WRKSRC}; \
 		for e in *.elc; do \
 			${ECHO} '$${EMACS_LISPPREFIX}/skk/'$${e%.elc}.el; \
