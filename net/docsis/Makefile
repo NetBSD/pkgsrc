@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/25 04:12:52 grant Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/05 03:58:58 wiz Exp $
 #
 
 DISTNAME=	docsis-0.7.5-RELEASE
@@ -11,10 +11,10 @@ MAINTAINER=	grant@netbsd.org
 HOMEPAGE=	http://docsis.sourceforge.net/
 COMMENT=	utility for manipulating DOCSIS-compliant cable modems
 
-BUILD_DEPENDS+=		bison>=1.25:../../devel/bison
-USE_BUILDLINK_ONLY=	# defined
+BUILD_DEPENDS+=	bison>=1.25:../../devel/bison
+USE_BUILDLINK2=	# defined
 
-ALL_TARGET=		docsis
+ALL_TARGET=	docsis
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/docsis ${PREFIX}/bin
@@ -24,6 +24,6 @@ do-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/share/examples/docsis
 		cd ${WRKSRC}/examples; ${PAX} -rw . ${PREFIX}/share/examples/docsis
 
-.include "../../security/openssl/buildlink.mk"
-.include "../../net/ucd-snmp/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../net/ucd-snmp/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/02/17 21:40:31 tron Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/05 04:01:44 wiz Exp $
 
 DISTNAME=		pchar-1.4
 CATEGORIES=		net
@@ -10,6 +10,7 @@ COMMENT=		Tool for measuring Internet path characteristics
 
 GNU_CONFIGURE=		yes
 
+USE_BUILDLINK2=		yes
 BUILD_DEFS+=		USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
@@ -20,9 +21,9 @@ CONFIGURE_ARGS+=	--with-ipv6
 
 # XXX Not fully integrated
 .if ${OPSYS} == "NetBSD"
-.include "../ucd-snmp/buildlink.mk"
+.include "../ucd-snmp/buildlink2.mk"
 
-CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_PREFIX.ucd-snmp}
 LIBS+=			-lsnmp -lcrypto
 .endif
 
@@ -30,5 +31,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pchar ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/pchar.8 ${PREFIX}/man/man8
 
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
