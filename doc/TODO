@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.966 2003/10/24 02:03:28 xtraeme Exp $
+$NetBSD: TODO,v 1.967 2003/10/24 02:14:25 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -101,6 +101,10 @@ Suggested new packages
 	p5-CGI-FormBuilder-2.12
 	Perl CGI Form builder
 	${MASTER_SITE_PERL_CPAN:=CGI/}
+
+	info2man
+	http://freshmeat.net/projects/info2man/
+	requires perl, provides info2man and info2pod
 
 Suggested package updates
 =========================
