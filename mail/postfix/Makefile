@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2002/09/11 15:50:58 taca Exp $
+# $NetBSD: Makefile,v 1.69 2002/10/25 12:09:33 wiz Exp $
 
 DISTNAME=	postfix-1.1.11
 PKGREVISION=	1
@@ -12,6 +12,8 @@ COMMENT=	Postfix SMTP server and tools
 DIST_SUBDIR=	postfix
 
 POSTFIX_SPOOL=	/var/spool/postfix
+
+USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,30 +29,30 @@ POSTFIX_SPOOL=	/var/spool/postfix
 	|| defined(USE_SASL) && ${USE_SASL} == "YES" \
 	|| defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES" \
 	|| defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
-CCARGS=		-I${LOCALBASE}/include
-AUXLIBS=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 .endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
-DEPENDS+=	pcre>=2.08:../../devel/pcre
+.include "../../devel/pcre/buildlink2.mk"
 CCARGS+=	-DHAS_PCRE
-AUXLIBS+=	-lpcre
+AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib -Wl,-R${BUILDLINK_PREFIX.pcre}/lib -lpcre
 BUILD_DEFS+=	POSTFIX_USE_PCRE
 .endif
 
 .if defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
-DEPENDS+=	mysql-client>=3.23:../../databases/mysql-client
-CCARGS+=	-DHAS_MYSQL -I${LOCALBASE}/include/mysql
-AUXLIBS+=	-L${LOCALBASE}/lib/mysql -Wl,-R${LOCALBASE}/lib/mysql
+.include "../../databases/mysql-client/buildlink2.mk"
+CCARGS+=	-DHAS_MYSQL -I${BUILDLINK_PREFIX.mysql-client}/include/mysql
+AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql \
+		-Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql
 AUXLIBS+=	-lmysqlclient -lz -lm
 BUILD_DEFS+=	POSTFIX_USE_MYSQL
 .endif
 
 .if defined(USE_SASL) && ${USE_SASL} == "YES"
-DEPENDS+=	cyrus-sasl>=1.5.5:../../security/cyrus-sasl
+.include "../../security/cyrus-sasl/buildlink2.mk"
 CCARGS+=	-DUSE_SASL_AUTH
-AUXLIBS+=	-lsasl
+AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib \
+		-Wl,-R${BUILDLINK_PREFIX.cyrus-sasl}/lib -lsasl
 PLIST_SRC+=	${WRKDIR}/PLIST.sasl
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
@@ -58,11 +60,13 @@ BUILD_DEFS+=	USE_SASL
 .endif
 
 .if defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
+.include "../../security/openssl/buildlink2.mk"
 PATCH_SITES+=	http://people.arhea.net/dawszy/NetBSD/postfix_tls/
 PATCHFILES+=	pfixtls-1.1.11.diff.gz
 PATCH_DIST_STRIP=	-p1
 CCARGS+=	-DHAS_SSL
-AUXLIBS+=	-lssl -lcrypto
+AUXLIBS+=	-L${BUILDLINK_PREFIX.openssl}/lib \
+		-Wl,-R${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto
 PLIST_SRC+=	${PKGDIR}/PLIST.tls
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
 BUILD_DEFS+=	POSTFIX_USE_TLS
@@ -147,8 +151,5 @@ post-install:
 	${TEST} -f /etc/postfix/master.cf || \
 		${INSTALL_DATA} ${PREFIX}/share/postfix/master.cf /etc/postfix
 
-.if defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
-.include "../../security/openssl/buildlink.mk"
-.endif
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
