@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.13 2003/09/14 01:46:47 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.14 2003/09/19 07:39:01 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -343,7 +343,7 @@ do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 _BLNK_COOKIE.${_pkg_}=		${BUILDLINK_DIR}/.buildlink_${_pkg_}_done
 
-BUILDLINK_TARGETS+=		buildlink-${_pkg_}
+_BLNK_TARGETS+=			buildlink-${_pkg_}
 _BLNK_TARGETS.${_pkg_}=		buildlink-${_pkg_}-message
 _BLNK_TARGETS.${_pkg_}+=	${_BLNK_COOKIE.${_pkg_}}
 _BLNK_TARGETS.${_pkg_}+=	buildlink-${_pkg_}-cookie
@@ -463,11 +463,16 @@ _BLNK_LT_ARCHIVE_FILTER=						\
 		{ print }						\
 	'
 
-# Add each of the targets in BUILDLINK_TARGETS as a prerequisite for the
+# Include any BUILDLINK_TARGETS provided in buildlink3.mk files in
+# _BLNK_TARGETS.
+#
+_BLNK_TARGETS+=	${BUILDLINK_TARGETS}
+
+# Add each of the targets in _BLNK_TARGETS as a prerequisite for the
 # do-buildlink target.  This ensures that all the buildlink magic happens
 # before any configure or build commands are called.
 #
-.for _target_ in ${BUILDLINK_TARGETS}
+.for _target_ in ${_BLNK_TARGETS}
 do-buildlink: ${_target_}
 .endfor
 
