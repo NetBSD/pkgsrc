@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/04/25 22:59:28 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2004/04/26 22:07:06 snj Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -13,11 +13,12 @@ COMMENT=	Objective-C library for Unix-like systems
 
 BUILD_DEPENDS+=	papaya>=0.1.7:../../devel/papaya
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_LIBTOOL=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 CPPFLAGS+=	-I${PREFIX}/include/libxml2/libxml -DGL_GLEXT_LEGACY
+MAKE_ENV+=	AM_MAKEFLAGS="am__depfiles_maybe="
 
 pre-configure:
 	cd ${WRKSRC} &&							\
@@ -25,11 +26,12 @@ pre-configure:
 	${SED} < configure.old > configure				\
 	's|^\(INCLUDE_DIR_LIST=\).*|\1"${PREFIX}/include ${X11PREFIX}/include"|'
 
-.include "../../graphics/gtkglext/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../textproc/libxslt/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../net/gnet1/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../graphics/gtkglext/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../net/gnet1/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
