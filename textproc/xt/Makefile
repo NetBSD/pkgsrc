@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/11/14 14:47:56 agc Exp $
+# $NetBSD: Makefile,v 1.7 2002/04/03 21:17:54 jwise Exp $
 #
 
 DISTNAME=	xt
@@ -31,7 +31,6 @@ do-install:
 	${INSTALL_DATA} -c ${WRKDIR}/copying.txt ${PREFIX}/share/doc/java/xt
 	${INSTALL_DATA} -c ${WRKDIR}/xt.htm ${PREFIX}/share/doc/java/xt
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/xt
-	cd ${WRKDIR}/demo && ${PAX} -rwpe . ${PREFIX}/share/examples/java/xt
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/java/xt
+	cd ${WRKDIR}/demo && ${PAX} -rwpp . ${PREFIX}/share/examples/java/xt
 
 .include "../../mk/bsd.pkg.mk"
