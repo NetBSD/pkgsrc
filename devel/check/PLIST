@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/23 07:10:42 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/09/27 20:41:19 cube Exp $
 include/check.h
 lib/libcheck.a
 share/aclocal/check.m4
@@ -7,16 +7,25 @@ share/doc/check/ChangeLog
 share/doc/check/ChangeLogOld
 share/doc/check/NEWS
 share/doc/check/README
+share/doc/check/c14.html
+share/doc/check/c163.html
+share/doc/check/c237.html
+share/doc/check/c33.html
+share/doc/check/c57.html
 share/doc/check/examples/Makefile.am.money
 share/doc/check/examples/check_money.c
 share/doc/check/examples/configure.in.money
 share/doc/check/examples/money.c
 share/doc/check/examples/money.h
-share/doc/check/tutorial.html
-share/doc/check/tutorial-1.html
-share/doc/check/tutorial-2.html
-share/doc/check/tutorial-3.html
-share/doc/check/tutorial-4.html
-share/doc/check/tutorial-5.html
+share/doc/check/index.html
+share/doc/check/x108.html
+share/doc/check/x115.html
+share/doc/check/x172.html
+share/doc/check/x183.html
+share/doc/check/x214.html
+share/doc/check/x220.html
+share/doc/check/x234.html
+share/doc/check/x68.html
+share/doc/check/x80.html
 @dirrm share/doc/check/examples
 @dirrm share/doc/check
