@@ -45,21 +45,21 @@ OOPPTTIIOONNSS
 
      aadddd _p_k_g _._._.
              For each listed package, write the absolute pathnames of the
-             files listed in its +CONTENTS file together with the package they
+             files listed in its _+_C_O_N_T_E_N_T_S file together with the package they
              belong to into the package database.  This should be used only by
              pkg_view(1).
 
      cchheecckk [_p_k_g _._._.]
              Use this command to check the files belonging to some or all of
              the packages installed on the local machine against the checksum
-             which was recorded in the +CONTENTS files at package installation
+             which was recorded in the _+_C_O_N_T_E_N_T_S files at package installation
              time.  Symbolic links also have their integrity checked against
              the recorded value at package installation time.  If no addi-
              tional argument is given, the files of all installed packages are
              checked, else only the named packages will be checked (wildcards
              can be used here, see pkg_info(1)).
 
-             The packages' +CONTENTS files will be parsed and the checksum
+             The packages' _+_C_O_N_T_E_N_T_S files will be parsed and the checksum
              will be checked for every file found.  A warning message is
              printed if the expected checksum differs from the checksum of the
              file on disk.  Symbolic links are also checked, ensuring that the
