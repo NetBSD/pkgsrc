@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2004/01/03 18:49:46 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2004/01/24 16:34:19 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use gstreamer.
 #
@@ -9,7 +9,7 @@
 GSTREAMER_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gstreamer
-BUILDLINK_DEPENDS.gstreamer?=		gstreamer>=0.6.1nb8
+BUILDLINK_DEPENDS.gstreamer?=		gstreamer>=0.6.4
 BUILDLINK_PKGSRCDIR.gstreamer?=		../../misc/gstreamer
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gstreamer=gstreamer
