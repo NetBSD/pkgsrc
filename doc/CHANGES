@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8208 2004/12/02 04:09:00 jlam Exp $
+$NetBSD: CHANGES,v 1.8209 2004/12/02 06:44:02 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5705,3 +5705,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated wesnoth to 0.8.7 [wiz 2004-12-01]
 	Updated ng-spice to 15 [dmcmahill 2004-12-01]
 	Added proxsmtp-0.6 [jlam 2004-12-01]
+	Updated netperf to 2.3.1 for 2.3pl1 [itojun 2004-12-02]
+	Updated racoon to 20040818a [itojun 2004-12-02]
