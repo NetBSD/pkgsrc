@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6219 2004/06/16 18:17:36 abs Exp $
+$NetBSD: CHANGES,v 1.6220 2004/06/16 22:59:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2953,4 +2953,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mrtg to 2.10.13nb1 [xtraeme 2004-06-15]
 	Added openssh+gssapi-3.6.1.2.20030430nb3 [kristerw 2004-06-15]
 	Updated firefox-bin-java to 1.1 [abs 2004-06-15]
-
+	Updated python15 to 1.5.2nb1 [minskim 2004-06-16]
