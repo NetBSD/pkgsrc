@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/27 18:22:35 ben Exp $
+# $NetBSD: Makefile,v 1.17 2005/03/31 01:05:22 reed Exp $
 #
 
 DISTNAME=		RTF-1.10
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		RTF to troff/groff/text converter
-
-BUILD_DEPENDS+=		libts-1.08:../../devel/libts
 
 WRKSRC=			${WRKDIR}/rtf
 INSTALL_TARGET=		install install.man
@@ -50,4 +48,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/rtf2troff.man \
 		${PREFIX}/man/manl/rtf2troff.l
 
+.include "../../devel/libts/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
