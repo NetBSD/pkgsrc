@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/01/19 10:34:26 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/01/21 04:28:06 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -7,7 +7,7 @@ NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
 
 .if !empty(NCURSES_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		ncurses
-BUILDLINK_DEPENDS.ncurses?=	ncurses>=5.3nb1
+BUILDLINK_DEPENDS.ncurses?=	ncurses>=5.0
 BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
 .endif	# NCURSES_BUILDLINK3_MK
 
@@ -23,11 +23,21 @@ _BLNK_LIBNCURSES_FOUND!=	\
 MAKEFLAGS+=	_BLNK_LIBNCURSES_FOUND="${_BLNK_LIBNCURSES_FOUND}"
 .endif
 
+_NCURSES_H=	/usr/include/curses.h
+
 .if !defined(BUILDLINK_IS_BUILTIN.ncurses)
 BUILDLINK_IS_BUILTIN.ncurses=	NO
 .  if ${_BLNK_LIBNCURSES_FOUND} == "YES"
 BUILDLINK_IS_BUILTIN.ncurses=	YES
+.  elif exists(${_NCURSES_H})
+BUILDLINK_IS_BUILTIN.ncurses!=						\
+	if ${GREP} -q "\#define[ 	]*NCURSES_VERSION" ${_NCURSES_H}; then \
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
 .  endif
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.ncurses="${BUILDLINK_IS_BUILTIN.ncurses}"
 .endif
 
 .if defined(USE_NCURSES)
@@ -40,28 +50,52 @@ BUILDLINK_USE_BUILTIN.ncurses=	YES
 
 .if !defined(BUILDLINK_USE_BUILTIN.ncurses)
 .  if !empty(BUILDLINK_IS_BUILTIN.ncurses:M[nN][oO])
-BUILDLINK_USE_BUILTIN.ncurses=	YES
-.  else
+BUILDLINK_USE_BUILTIN.ncurses=	NO
 #
-# These versions of NetBSD didn't have a curses library that was capable of
-# replacing ncurses.
+# XXX By default, assume that the builtin curses on NetBSD systems
+# XXX supports ncurses.
+#
+.    if ${OPSYS} == "NetBSD"
+BUILDLINK_USE_BUILTIN.ncurses=	YES
+#
+# These versions of NetBSD didn't have a curses library that was
+# capable of replacing ncurses.
+#
+# XXX In reality, no version of NetBSD has a curses library that can
+# XXX completely replace ncurses; however, some version implement
+# XXX enough of ncurses that some packages are happy.
 #
 _INCOMPAT_CURSES=	NetBSD-0.*-* NetBSD-1.[0123]*-*
 _INCOMPAT_CURSES+=	NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
-#
-# These catch-alls are probably too broad, but better to err on the safe
-# side.  We can narrow down the match when we have better information.
-#
-_INCOMPAT_CURSES+=	SunOS-*-*
-_INCOMPAT_CURSES+=      IRIX-*-*
-_INCOMPAT_CURSES+=      Darwin-*-*
-
-INCOMPAT_CURSES?=	# empty
-.    for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
+.      for _pattern_ in ${_INCOMPAT_CURSES}
+.        if !empty(MACHINE_PLATFORM:M${_pattern_})
 BUILDLINK_USE_BUILTIN.ncurses=	NO
-.      endif
-.    endfor
+.        endif
+.      endfor
+.    endif
+.  else
+BUILDLINK_USE_BUILTIN.ncurses=	YES
+#
+# Create an appropriate name for the built-in package distributed
+# with the system.  This package name can be used to check against
+# BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc
+# version or if the built-in one is sufficient.
+#
+_NCURSES_VERSION!=							\
+	${AWK} '/\#define[ 	]*NCURSES_VERSION[ 	]/ {		\
+			vers = $$3;					\
+			gsub("\"", "", vers);				\
+			print vers;					\
+		}							\
+	' ${_NCURSES_H}
+_NCURSES_PKG=		ncurses-${_NCURSES_VERSION}
+_NCURSES_DEPENDS=	${BUILDLINK_DEPENDS.ncurses}
+BUILDLINK_USE_BUILTIN.ncurses!=						\
+	if ${PKG_ADMIN} pmatch '${_NCURSES_DEPENDS}' ${_NCURSES_PKG}; then \
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
 .  endif
 MAKEFLAGS+=	\
 	BUILDLINK_USE_BUILTIN.ncurses="${BUILDLINK_USE_BUILTIN.ncurses}"
