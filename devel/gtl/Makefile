@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/31 04:53:55 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/10/12 17:21:53 jlam Exp $
 
 DISTNAME=		GTL-0.3.3
 PKGNAME=		gtl-0.3.3
@@ -8,9 +8,15 @@ MASTER_SITES=		http://infosun.fmi.uni-passau.de/GTL/archive/
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.fmi.uni-passau.de/Graphlet/GTL/
 
-GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+.include "../../mk/bsd.prefs.mk"
+
+GNU_CONFIGURE=		# defined
+.if defined(CXXFLAGS)
+CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS}"
+.endif
 
 GTL_VERS=		0:3
 MAKE_ENV+=		GTL_VERS="${GTL_VERS}"
