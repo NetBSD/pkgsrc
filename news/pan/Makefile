@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/24 14:14:09 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/15 07:24:38 rh Exp $
 #
 
-DISTNAME=		pan-0.9.6
+DISTNAME=		pan-0.10.0.92
 CATEGORIES=		news gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/pan/}
+MASTER_SITES=		http://pan.rebelbase.com/download/0.10.0.92/SOURCE/	\
+			${MASTER_SITE_GNOME:=stable/sources/pan/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://pan.rebelbase.com/
 COMMENT=		Newsreader for Gnome
 
-DEPENDS+=		gnome-core>1.4.0:../../x11/gnome-core
 BUILD_USES_MSGFMT=	YES
 
 USE_X11BASE=		YES
-USE_LIBINTL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LOCALEDIR="${PKGLOCALEDIR}"
 CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../x11/gnome-core/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
