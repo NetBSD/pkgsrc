@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2004/01/14 15:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.200 2004/01/15 08:15:52 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -24,8 +24,8 @@ SUBDIR+=	cs4235
 SUBDIR+=	csound-bath
 SUBDIR+=	csound-dev
 SUBDIR+=	csound-manual
-SUBDIR+=	darkice
 SUBDIR+=	dap
+SUBDIR+=	darkice
 SUBDIR+=	disc-cover
 SUBDIR+=	easytag
 SUBDIR+=	eawpatches
