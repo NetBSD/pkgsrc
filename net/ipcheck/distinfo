@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/09/16 17:41:27 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:13:50 agc Exp $
 
 SHA1 (ipcheck-0.217/ipcheck.217) = 19f1f32a5fb2571d49d555f7a3ad53627257f2d2
+RMD160 (ipcheck-0.217/ipcheck.217) = 2cbd9785022cd19c8e0f2430e90b94b534cc5f57
 Size (ipcheck-0.217/ipcheck.217) = 165383 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/04/21 10:47:31 rh Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:14:07 agc Exp $
 
 SHA1 (xmftp-1.0.4.tar.gz) = c39b14cabced594a045def93e363a9a6eb069b0b
+RMD160 (xmftp-1.0.4.tar.gz) = 0d31d84430292d71951df78770552be61eb199a3
 Size (xmftp-1.0.4.tar.gz) = 152614 bytes
 SHA1 (patch-aa) = 455222cbb7396d87844f44acbc2203c36b580952
 SHA1 (patch-ab) = c6f54a9ba8b3af66b6da0f04618f6a0d41828245

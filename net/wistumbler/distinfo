@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2004/03/25 20:29:36 markd Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 12:14:07 agc Exp $
 
 SHA1 (wistumbler-20020816.tar.gz) = fe980cdd4934dbb70411e4ce0394adef56e21999
+RMD160 (wistumbler-20020816.tar.gz) = df6744ac26dc498063834da5475a70ecc0f34ab2
 Size (wistumbler-20020816.tar.gz) = 9327 bytes
 SHA1 (patch-aa) = 662f467fbf9f51c83843f88ec4d854fb19fd2a43
 SHA1 (patch-ab) = 3bb5345822142204b9d15dd7b9d3d6672ea8169e
