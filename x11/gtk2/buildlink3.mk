@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/03/18 09:12:17 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2004/04/01 18:15:41 jmmv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gtk2
 
 .if !empty(GTK2_BUILDLINK3_MK:M+)
 BUILDLINK_PKGBASE.gtk2?=	gtk2+
-BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.2.4nb2
+BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.4.0
 BUILDLINK_PKGSRCDIR.gtk2?=	../../x11/gtk2
 .endif	# GTK2_BUILDLINK3_MK
 
@@ -26,6 +26,7 @@ USE_X11= 	yes
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/xcursor/buildlink3.mk"
 .include "../../x11/Xrandr/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

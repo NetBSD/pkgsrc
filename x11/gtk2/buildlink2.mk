@@ -1,11 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.13 2004/03/29 05:05:50 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.14 2004/04/01 18:15:41 jmmv Exp $
 
 .if !defined(GTK2_BUILDLINK2_MK)
 GTK2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		gtk2
-BUILDLINK_PKGBASE.gtk2?=	gtk2+
-BUILDLINK_DEPENDS.gtk2?=	gtk2+>=2.2.4nb2
+BUILDLINK_DEPENDS.gtk2?=	gtk2+>=2.4.0
 BUILDLINK_PKGSRCDIR.gtk2?=	../../x11/gtk2
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.gtk2=gtk2
@@ -28,6 +27,7 @@ USE_X11=	YES
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
+.include "../../x11/xcursor/buildlink2.mk"
 .include "../../x11/Xrandr/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	gtk2-buildlink
