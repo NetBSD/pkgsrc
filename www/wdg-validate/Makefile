@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/17 01:29:30 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/17 01:58:08 minskim Exp $
 #
 
 DISTNAME=	validate-1.2
@@ -21,17 +21,21 @@ EXTRACT_ONLY=	wdg-sgml-lib-1.1.3.tar.gz
 SITES_wdg-sgml-lib-1.1.3.tar.gz=	http://www.htmlhelp.com/tools/validator/src/
 
 USE_BUILDLINK3=	YES
-REPLACE_PERL=	validate.netbsd
+REPLACE_PERL=	validate
+NO_BUILD=	YES
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	validate
+SUBST_SED.paths=	-e 's,/usr/local/share,${PREFIX}/share,g' \
+			-e 's,/usr/local/bin/lq-nsgmls,${LOCALBASE}/bin/lq-nsgmls,g'
 
 INSTALLATION_DIRS+=	bin share/doc
 
 post-extract:
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${WRKSRC}/validate.netbsd
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${WRKSRC}/validate
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/README ${WRKSRC}/README
-
-do-build:
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g" \
-		${WRKSRC}/validate.netbsd > ${WRKSRC}/validate
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/wdg/sgml-lib
