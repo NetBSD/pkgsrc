@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1 1999/09/03 04:11:08 sakamoto Exp $
+
+--- include/wnnlib.h.orig	Thu May 27 08:55:22 1999
++++ include/wnnlib.h	Fri Sep  3 09:34:09 1999
+@@ -29,4 +29,5 @@
+ #define _wnnlib_h
+ 
++#include	<config.h>
+ #include	<commonhd.h>
+ #include	<jllib.h>
