@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2003/07/09 13:11:02 grant Exp $
+$NetBSD: patch-ak,v 1.2 2004/07/04 23:17:59 wiz Exp $
 
---- configure.orig	Wed Jun 11 06:51:21 2003
+--- configure.orig	2004-04-09 23:25:03.000000000 +0200
 +++ configure
-@@ -6214,7 +6214,7 @@ build_os=`echo $ac_cv_build | sed 's/^\(
+@@ -6317,7 +6317,7 @@ build_os=`echo $ac_cv_build | sed 's/^\(
  # rather ncurses.  So we check for it.
  TERMLIBS=
  # Check for termlib before termcap because Solaris termcap needs libucb.
