@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.418 2000/03/13 17:47:07 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.419 2000/03/25 17:17:37 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -211,12 +211,16 @@ MD5?=			md5
 MD5_FILE?=		${FILESDIR}/md5
 PATCH_SUM_FILE?=	${FILESDIR}/patch-sum
 
+.if exists(/usr/bin/m4)
+M4?=			/usr/bin/m4
+.endif
+
 .if defined(USE_MOTIF) || defined(USE_X11BASE) || defined(USE_X11)
 LDFLAGS+=		-Wl,-R${MOTIFBASE}/lib -L${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 .endif
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
-CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}"
+CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
 
 MAKE_FLAGS?=
 MAKEFILE?=		Makefile
