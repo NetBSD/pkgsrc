@@ -1,0 +1,19 @@
+*** hint.c.ORIG	Sun May 31 15:34:52 1998
+--- hint.c	Mon Jun 15 09:44:53 1998
+***************
+*** 90,96 ****
+  #ifdef DEBUG
+      curv = stdout;
+  #else
+!     sprintf(filnm,"data/%s",argv[0]);
+      if ((curv = fopen(filnm, "w")) == NULL)
+      {
+          printf("Could not open data file\n");
+--- 90,96 ----
+  #ifdef DEBUG
+      curv = stdout;
+  #else
+!     sprintf(filnm,"data/%s","DOUBLE");
+      if ((curv = fopen(filnm, "w")) == NULL)
+      {
+          printf("Could not open data file\n");
