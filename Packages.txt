@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.66 1999/09/08 20:57:22 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.67 1999/09/09 22:10:56 tron Exp $
 ###########################################################################
 
 			==========================
@@ -1359,8 +1359,9 @@ variable.
    tar-file of all the files needed for the package, preferably with all
    files in a single directory. Place this tar-file to a place where the
    package maintainers can fetch it using FTP or HTTP (WWW). Finally,
-   send-pr with category "pkg", a short description of your package
-   (contents of pkg/COMMENT are OK), plus the URL of your tar-file.
+   send-pr with category "pkg", a synopsis which includes the package name
+   and version number, a short description of your package
+   (contents of pkg/COMMENT are OK) and the URL of your tar-file.
 
    You will be notified if your send-pr has been addressed so you can remove
    the tar-file. 
