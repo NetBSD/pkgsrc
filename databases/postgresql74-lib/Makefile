@@ -1,17 +1,25 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/19 00:02:30 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/20 22:37:22 recht Exp $
 
 PKGNAME=		postgresql-lib-${BASE_VERS}
+PKGREVISION=		1
 SVR4_PKGNAME=		pstgl
 COMMENT=		PostgreSQL database headers and libraries
 
 .include "../../databases/postgresql74/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+
 BUILD_DIRS=		${WRKSRC}/src/include
 BUILD_DIRS+=		${WRKSRC}/src/interfaces
 BUILD_DIRS+=		${WRKSRC}/src/pl
 
 .include "../../mk/bsd.prefs.mk"
+
+# As told by Josh Berkus
+# currently broken for SunOS, will be fixed in 7.4.3
+.if (${OPSYS} != "SunOS")
+CONFIGURE_ARGS+=	--enable-thread-safety
+.endif
 
 # handle additional headers installed by hierarchical queries patch
 .if defined(PGSQL_USE_HIER) && !empty(PGSQL_USE_HIER:M[yY][eE][sS])
@@ -37,4 +45,5 @@ post-install:
 		-f ${WRKSRC}/doc/man.tar.gz
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
