@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2004/11/19 11:05:54 adam Exp $
+$NetBSD: patch-aa,v 1.8 2005/02/08 09:40:35 adam Exp $
 
---- Makefile.orig	2004-08-26 19:47:44.000000000 +0000
+--- Makefile.orig	2005-02-03 21:17:43.000000000 +0000
 +++ Makefile
 @@ -26,7 +26,7 @@
  
@@ -20,9 +20,9 @@ $NetBSD: patch-aa,v 1.7 2004/11/19 11:05:54 adam Exp $
 +#XLIBS = -L/usr/X11R6/lib -lX11
 +#INCLUDEDIRS = -I/usr/X11R6/include
  
+ #### Note: for 64 bit platform I used: XLIBS = -L/usr/X11R6/lib64
  
- #### For Solaris 2.x uncomment the following.. #################
-@@ -157,11 +157,11 @@ ZFLAG = -DWZ
+@@ -159,11 +159,11 @@ ZFLAG = -DWZ
  #### For JPEG, WBMP, PNG, and FreeType2, using your copy of GD 1.84+,          ######
  #### uncomment the following..  (gd 1.84+, libpng, zlib, libjpeg, libfreetype  ######
  #### are all required).  Set GDFONTPATH to directory containing .ttf files     ######
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.7 2004/11/19 11:05:54 adam Exp $
  
  
  #### To disable all GD image support uncomment the following..  ######################
-@@ -183,6 +183,7 @@ BIN = /usr/local/bin
+@@ -197,6 +197,7 @@ BIN = /usr/local/bin
  #### If done, users won't be required to have PLOTICUS_PREFABS environment variable defined.
  #### This option not available for win32
  # PREFABS_DIR = "/usr/lib/ploticus"
@@ -47,16 +47,15 @@ $NetBSD: patch-aa,v 1.7 2004/11/19 11:05:54 adam Exp $
  
  
  #### For LOCALE support (non-roman alphabets & collation), uncomment the following..
-@@ -250,9 +251,10 @@ GD16 = grgd16.o devstuff16.o gd16.o gd_i
+@@ -258,9 +259,9 @@ GD16 = grgd16.o devstuff16.o gd16.o gd_i
  GD = gdfontg.o gdfontl.o gdfontmb.o gdfonts.o gdfontt.o
  
  
 -LIBS = $(XLIBS) -lm $(ADDLIBS) 
-+# LIBS = $(XLIBS) -lm $(ADDLIBS) 
-+LIBS = $(LDFLAGS) $(XLIBS) -lm $(ADDLIBS) 
++LIBS = ${LDFLAGS} $(XLIBS) -lm $(ADDLIBS) 
  
--CFLAGS = -DPLOTICUS -D$(PLATFORM) -DTDH_NOREC $(ZFLAG) $(FLAGS) $(LOCALE_FLAG) \
-+CFLAGS+= -DPLOTICUS -D$(PLATFORM) -DTDH_NOREC $(ZFLAG) $(FLAGS) $(LOCALE_FLAG) \
+-CFLAGS = $(WALL) -DPLOTICUS -D$(PLATFORM) -DTDH_NOREC $(ZFLAG) $(FLAGS) $(LOCALE_FLAG) \
++CFLAGS += $(WALL) -DPLOTICUS -D$(PLATFORM) -DTDH_NOREC $(ZFLAG) $(FLAGS) $(LOCALE_FLAG) \
    $(NOGDFLAG) $(NOXFLAG) $(NOPSFLAG) $(NOSVGFLAG) $(NOSWFFLAG) $(INCLUDEDIRS) \
    $(MINGH) $(NORLIMFLAG) -DPREFABS_DIR=\"$(PREFABS_DIR)\"
  
