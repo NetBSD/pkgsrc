@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1 2002/09/15 06:51:40 kim Exp $
+$NetBSD: patch-an,v 1.2 2003/12/11 22:35:09 grant Exp $
 
---- Makefile.in.orig	Thu Feb 14 08:36:33 2002
-+++ Makefile.in	Sun Sep 15 01:57:20 2002
-@@ -55,12 +55,12 @@
+--- Makefile.in.orig	2003-09-19 02:13:02.000000000 +1000
++++ Makefile.in
+@@ -55,12 +55,12 @@ CFILES=	screen.c ansi.c fileio.c mark.c 
  	search.c tty.c term.c window.c utmp.c loadav.c putenv.c help.c \
  	termcap.c input.c attacher.c pty.c process.c display.c comm.c \
  	kmapdef.c acls.c braille.c braille_tsi.c logfile.c layer.c \
@@ -17,3 +17,12 @@ $NetBSD: patch-an,v 1.1 2002/09/15 06:51:40 kim Exp $
  
  all:	screen
  
+@@ -78,7 +78,7 @@ install_bin: .version screen
+ # This doesn't work if $(bindir)/screen is a symlink
+ 	-if [ -f $(DESTDIR)$(bindir)/screen ] && [ ! -f $(DESTDIR)$(bindir)/screen.old ]; then mv $(DESTDIR)$(bindir)/screen $(DESTDIR)$(bindir)/screen.old; fi
+ 	rm -f $(DESTDIR)$(bindir)/screen
+-	(cd $(DESTDIR)$(bindir) && ln -sf $(SCREEN) screen)
++	(cd $(DESTDIR)$(bindir) && ln -s -f $(SCREEN) screen)
+ 	cp $(srcdir)/utf8encodings/?? $(DESTDIR)$(SCREENENCODINGS)
+ 
+ ###############################################################################
