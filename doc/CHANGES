@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7329 2004/10/03 16:07:17 taca Exp $
+$NetBSD: CHANGES,v 1.7330 2004/10/03 16:17:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4530,3 +4530,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed bind9-current [tron 2004-10-03]
 	Updated mlview to 0.7.0 [jmmv 2004-10-03]
 	Updated squid to 2.5.6nb3 [taca 2004-10-03]
+	Updated ja-samba to 2.2.11.1.0 [taca 2004-10-03]
