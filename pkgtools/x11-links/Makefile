@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10.2.2 2002/06/21 23:05:36 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.3 2002/06/24 16:29:48 jlam Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in x11.buildlink.mk to the correct version,
 #	usually the most recent.
 
-DISTNAME=	x11-links-0.7
+DISTNAME=	x11-links-0.8
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,13 +24,7 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 BUILDLINK_X11_SUBDIR=	share/x11-links
 
 USE_BUILDLINK2=	# defined
-_FOR_X11_LINKS_ONLY=	# needed to use x11-links/buildlink.mk
-
-.include "../../mk/bsd.prefs.mk"
-   
-.if !exists(${X11BASE}/include/X11/X.h)
-IGNORE=         "x11-links requires X headers to be installed"
-.endif
+_FOR_X11_LINKS_ONLY=	# needed to use x11-links/buildlink2.mk
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${BUILDLINK_X11_SUBDIR}
