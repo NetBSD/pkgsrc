@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt.h,v 1.1 2003/09/05 18:36:07 jlam Exp $	*/
+/*	$NetBSD: getopt.h,v 1.2 2003/12/05 15:42:13 erh Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -50,7 +50,7 @@
 /*
  * Gnu like getopt_long() and BSD4.4 getsubopt()/optreset extensions
  */
-#if (!defined(_POSIX_SOURCE) && !defined(_XOPEN_SOURCE)) || defined(__linux__)
+#if (!defined(_POSIX_SOURCE) && !defined(_XOPEN_SOURCE)) || defined(__linux__) || defined(_AIX)
 #define no_argument        0
 #define required_argument  1
 #define optional_argument  2
