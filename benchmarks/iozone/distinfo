@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/07/16 22:04:55 garbled Exp $
+$NetBSD: distinfo,v 1.4 2003/03/10 11:06:50 wiz Exp $
 
-SHA1 (iozone3_56.tar) = 360485a61c7477332414e77f1b989128d9eab075
-Size (iozone3_56.tar) = 1013760 bytes
-SHA1 (patch-aa) = 5075a54d837e084a5eebec7df768943160e3da0e
-SHA1 (patch-ab) = a0c468b83751c4bde2aea6b0dd5e0ff6a2376dc0
+SHA1 (iozone3_161.tar) = 9920b4b06761800783ad2b795c157f9249852e34
+Size (iozone3_161.tar) = 1372160 bytes
+SHA1 (patch-aa) = 1ddc60958a4017dc6bdf546215d2970e336aa604

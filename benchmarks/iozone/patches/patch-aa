@@ -1,126 +1,37 @@
-$NetBSD: patch-aa,v 1.2 2001/07/16 22:04:55 garbled Exp $
---- iozone.c.orig	Wed Jul  4 03:21:12 2001
-+++ iozone.c	Mon Jul 16 11:58:10 2001
-@@ -307,9 +307,17 @@
- #endif
- 
- #ifdef HAVE_PREAD
-+#ifndef __NetBSD__
- #include <sys/puio.h>
- #define PVECMAX 16
- struct piovec piov[PVECMAX];
-+#else
-+#include <sys/uio.h>
-+#define piov_base iov_base
-+#define piov_len iov_len
-+#define PVECMAX 16
-+struct iovec piov[PVECMAX];
-+#endif
- #endif
- 
- struct child_stats {
-@@ -393,7 +401,11 @@
- #ifdef HAVE_PREAD
- #include <sys/times.h>
- #define CONTROL_STRING1 "%16lld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%8ld%9ld%9ld%8ld%10ld%9ld%10ld%9ld%10ld%10ld%9ld\n"
-+#ifdef HAVE_PREADV
- #define CONTROL_STRING2 "%16s%8s%8s%8s%8s%10s%8s%8s%8s%8s%8s%9s%9s%8s%9s%8s%9s%7s%10s%10s%10s%9s%9s\n"
-+#else
-+#define CONTROL_STRING2 "%16s%8s%8s%8s%8s%10s%8s%8s%8s%8s%8s%9s%9s%8s%9s%8s%9s%7s%10s\n"
-+#endif
- #define CONTROL_STRING3 "%16s%8s%8s%8s%8s%10s%8s%8s%8s%8s%8s%9s%9s%8s%9s\n"
- #define CONTROL_STRING4 "%16s%8s%8s%8s%8s%10s\n"
+$NetBSD: patch-aa,v 1.3 2003/03/10 11:06:50 wiz Exp $
+
+--- iozone.c.orig	Mon Mar  3 20:44:39 2003
++++ iozone.c
+@@ -831,7 +831,7 @@ void purgeit();			/* Purge on chip cache
+ void throughput_test();		/* Multi process throughput 	  */
+ void multi_throughput_test();	/* Multi process throughput 	  */
+ void prepage();			/* Pre-fault user buffer	  */
+-#if defined(linux) || defined(solaris) || defined(__AIX__) || defined(OSFV5) || defined(UWIN) || defined(Windows) || defined(__APPLE__) || defined(OSFV4) || defined(IRIX) || defined(IRIX64) || defined(__FreeBSD__)
++#ifdef HAVE_ANSIC_C
+ float do_compute(float);	/* compute cycle simulation       */
  #else
-@@ -452,9 +464,11 @@
- void read_stride_perf_test();	/* read with stride test	  */
- #ifdef HAVE_PREAD
- void pread_perf_test();		/* pread/re-pread test		  */
--void preadv_perf_test();	/* preadv/re-preadv test	  */
- void pwrite_perf_test();	/* pwrite/re-pwrite test	  */
-+#ifdef HAVE_PREADV
-+void preadv_perf_test();	/* preadv/re-preadv test	  */
- void pwritev_perf_test();	/* pwritev/re-pwritev test	  */
-+#endif
- #endif /* HAVE_PREAD */
- void store_dvalue();		/* Store doubles array 		  */
- void dump_excel();
-@@ -538,9 +552,12 @@
- #ifdef HAVE_PREAD
- 			,
- 			pwrite_perf_test,
--			pread_perf_test,
-+			pread_perf_test
-+#ifdef HAVE_PREADV
-+			,
- 			pwritev_perf_test,
- 			preadv_perf_test
-+#endif
- #endif /* HAVE_PREAD */
- 	};
- 
-@@ -5949,6 +5966,7 @@
- #endif
- }
- 
-+#ifdef HAVE_PREADV
- /************************************************************************/
- /* pwritev_perf_test				        		*/
- /* pwritev and re-pwritev test						*/
-@@ -5965,7 +5983,11 @@
- 	double starttime1;
- 	double pwritevtime[2];
- 	double compute_val = (double)0;
-+#ifndef __NetBSD__
- 	long long list_off[PVECMAX];
-+#else
-+	off_t list_off[PVECMAX];
-+#endif
- 	long long numvecs,j,xx;
- 	unsigned long long pwritevrate[2];
- 	off64_t filebytes64,i;
-@@ -6091,8 +6113,8 @@
- 					(caddr_t)(buffer+(xx * reclen));
- 				if(verify)
- 					fill_buffer(piov[xx].piov_base,reclen,(long long)pattern,sverify);
--				piov[xx].piov_len = reclen;
- 				piov[xx].piov_offset = list_off[xx];
-+				piov[xx].piov_len = reclen;
- 				if(purge)
- 					purgeit(piov[xx].piov_base,reclen);
+ float do_compute();		/* compute cycle simulation       */
+@@ -15024,6 +15024,7 @@ int flag, prot;
+ 		 * a file that is opened with O_DIRECT 
+ 		 */
+ 	 	file_flags=fcntl(fd,F_GETFL);
++#if 0
+ 	 	if((file_flags & O_DIRECT) !=0)
+ 	 	{
+ 	 		recs=filebytes/reclen;
+@@ -15038,6 +15039,7 @@ int flag, prot;
  			}
-@@ -6361,6 +6383,7 @@
- 	fflush(stdout);
- #endif
- }
-+#endif /* PREADV */
- 
- /************************************************************************/
- /* print_header()							*/
-@@ -6419,11 +6442,14 @@
- 		"pwrite",
- 		"repwrite",
- 		"pread",
--		"repread",
-+		"repread"
-+#ifdef HAVE_PREADV
-+		,
- 		"pwritev",
- 		"repwritev",
- 		"preadv",
- 		"repreadv"
-+#endif
- 		);
- 	}else 
- 	if(RWONLYflag){				/*kcollins 8-21-96*/
-@@ -6779,7 +6805,11 @@
- #endif
-                 exit(119);
-         }
-+#ifndef __NetBSD__
-         addr = (char *)shmat(shmid, 0, SHM_W);
+ 	 	}
+ 		else
 +#else
-+	addr = (char *)shmat(shmid, 0, 0);
+ 		{
+ 			/* Save time, just seek out and touch at the end */
+ 		 	I_LSEEK(fd,(filebytes-reclen),SEEK_SET);
+@@ -15048,6 +15050,7 @@ int flag, prot;
+ 				exit(181);
+ 			}
+ 		}
 +#endif
- #ifdef __LP64__
-         if((long long)addr == (long long)-1)
- #else
+ 	 	free(stmp);
+ 	 	I_LSEEK(fd,0,SEEK_SET);
+ #endif
