@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/28 19:59:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/07 01:14:48 xtraeme Exp $
 #
 
 DISTNAME=		gliv-1.8.2
@@ -6,7 +6,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		http://guichaz.free.fr/gliv/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://guichaz.free.fr/gliv/
 COMMENT=		OpenGL image viewer
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/10 14:12:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/07 01:14:50 xtraeme Exp $
 #
 
 DISTNAME=	windowlab-1.12
@@ -6,7 +6,7 @@ CATEGORIES=	wm
 MASTER_SITES=	http://www.nickgravgaard.com/windowlab/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nickgravgaard.com/windowlab/
 COMMENT=	Small and simple window manager
 
