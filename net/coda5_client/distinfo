@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2001/05/31 22:55:54 jlam Exp $
-
-SHA1 (coda-5.3.13.tar.gz) = 6f06e73d8441f4ae7010acb2a35d0f0bde6ff7a4
-Size (coda-5.3.13.tar.gz) = 1324328 bytes
-SHA1 (patch-aa) = 8b837514b87683608b52d103a3743396027145d9
-SHA1 (patch-ab) = 0170aeef668bb4a1ace0691beaefa9d67e95f28a
