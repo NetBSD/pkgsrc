@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.1 2002/11/13 14:24:22 dillo Exp $
+$NetBSD: patch-ag,v 1.2 2004/03/02 10:28:18 adam Exp $
 
---- src/libjasper/jpc/jpc_dec.c.orig	Fri Oct 18 21:48:51 2002
+--- src/libjasper/jpc/jpc_dec.c.orig	2004-02-09 01:34:40.000000000 +0000
 +++ src/libjasper/jpc/jpc_dec.c
-@@ -1502,7 +1502,9 @@ static int jpc_dec_process_com(jpc_dec_t
- static int jpc_dec_process_unk(jpc_dec_t *dec, jpc_ms_t *ms)
- {
+@@ -1472,7 +1472,9 @@ static int jpc_dec_process_unk(jpc_dec_t
+ 	dec = 0;
+ 
  	fprintf(stderr, "warning: ignoring unknown marker segment\n");
 -	jpc_ms_dump(ms, stderr);
 +	if (jas_getdbglevel() >= 1) {
