@@ -1,18 +1,14 @@
-$NetBSD: patch-ag,v 1.4 1999/11/14 19:00:01 tron Exp $
-
---- applets/battery/read-battery.h.orig	Tue Aug 24 21:41:15 1999
-+++ applets/battery/read-battery.h	Sun Nov 14 19:04:44 1999
-@@ -18,7 +18,12 @@
- #include <fcntl.h>
- #include <machine/apm_bios.h>
- #define APMDEV "/dev/apm"
--#elif defined(__NetBSD__) || defined(__OpenBSD__)
-+#elif defined(__OpenBSD__)
-+#include <sys/ioctl.h>
-+#include <machine/apmvar.h>
-+#include <fcntl.h>
-+#define APMDEV "/dev/apm"
-+#elif defined(__NetBSD_APM__)
- #include <sys/ioctl.h>
- #include <machine/apmvar.h>
- #include <fcntl.h>
+--- help-browser/Makefile.in.orig	Tue May 23 11:25:07 2000
++++ help-browser/Makefile.in	Tue May 30 21:05:46 2000
+@@ -558,8 +558,9 @@
+ help-caller.o gnome-help-browser.o: help-browser.h
+ 
+ install-exec-local:
+-	$(INSTALL_PROGRAM) $(top_srcdir)/help-browser/gnome-download \
+-		$(top_srcdir)/help-browser/gnome-convert $(DESTDIR)$(bindir)/
++	$(INSTALL_SCRIPT) $(top_srcdir)/help-browser/gnome-download \
++		$(top_srcdir)/help-browser/gnome-convert \
++		$(DESTDIR)$(bindir)/
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
