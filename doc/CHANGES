@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8932 2005/01/26 07:01:53 schmonz Exp $
+$NetBSD: CHANGES,v 1.8933 2005/01/26 09:35:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -608,3 +608,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkgfind to 20050125 [cube 2005-01-25]
 	Updated bind8 to 8.4.6 [cube 2005-01-26]
 	Updated djbdns-run to 20050126 [schmonz 2005-01-26]
+	Updated bind to 9.3.0pl1 [tron 2005-01-26]
