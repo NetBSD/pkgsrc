@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/08 02:43:01 wiz Exp $
+bin/Mixer.app
+share/doc/Mixer.app/README
+@dirrm share/doc/Mixer.app
