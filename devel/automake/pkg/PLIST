@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/01/24 03:54:34 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/04/14 01:51:06 hubertf Exp $
 bin/aclocal
 bin/automake
 @unexec %D/bin/install-info --delete %D/info/automake.info %D/info/dir
@@ -25,6 +25,9 @@ share/aclocal/sanity.m4
 share/aclocal/strtod.m4
 share/aclocal/termios.m4
 share/aclocal/winsz.m4
+share/aclocal/exeext.m4
+share/aclocal/lex.m4
+share/aclocal/mingw.m4
 share/automake/COPYING
 share/automake/INSTALL
 share/automake/acinstall
@@ -75,5 +78,8 @@ share/automake/texi-vers.am
 share/automake/texinfo.tex
 share/automake/texinfos.am
 share/automake/ylwrap
+share/automake/mans.am
+share/automake/java.am
+share/automake/java-clean.am
 @dirrm share/aclocal
 @dirrm share/automake
