@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 1997/11/09 23:39:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/11/10 00:46:57 hubertf Exp $
 
-DISTNAME=	sirc-2.141
+DISTNAME=	sirc-2.21
 
-MASTER_SITES=	http://				# XXX can't remember - HF
+MASTER_SITES=	http://www.eleves.ens.fr:8080/home/espel/sirc/
 MAINTAINER=	hubertf@netbsd.org
 CATEGORIES=	net
 RUN_DEPENDS=    perl:${PORTSDIR}/lang/perl5
@@ -18,13 +18,17 @@ do-install:
 		echo "y" ; \
 		echo "" ; \
 		echo "" ; \
+		echo "" ; \
+		echo "" ; \
+		echo "" ; \
 		echo "${PREFIX}/bin/perl" ; \
-		echo "y" ; \
 		echo "${PREFIX}/bin" ; \
 		echo "y" ; \
 		echo "${PREFIX}/lib/sirc" ; \
 		echo "y" ; \
 		echo "y" ; \
+		echo "n" ; \
+		echo "${PREFIX}/man/man1" ; \
 		echo "${SERVER}" ; \
 		echo "" ; \
 	) | ./install
