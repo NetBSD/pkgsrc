@@ -1,17 +1,23 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/16 11:34:26 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/22 10:35:48 cjep Exp $
 
-DISTNAME=		leafnode-1.9.22
+DISTNAME=		leafnode-1.9.26.rel
+PKGNAME=		leafnode-1.9.26
 CATEGORIES=		news
-MASTER_SITES=		ftp://wpxx02.toxi.uni-wuerzburg.de/pub/            \
-			ftp://ftp.karlsruhe.org/pub/news/servers/leafnode/ \
-			ftp://ftp.stikman.com/pub/leafnode/                \
-			${MASTER_SITE_SUNSITE:=system/news/transport/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=leafnode/}
+
+EXTRACT_SUFX=		.tar.bz2
+#MASTER_SITES=		ftp://wpxx02.toxi.uni-wuerzburg.de/pub/            \
+#			ftp://ftp.karlsruhe.org/pub/news/servers/leafnode/ \
+#			ftp://ftp.stikman.com/pub/leafnode/                \
+#			${MASTER_SITE_SUNSITE:=system/news/transport/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.leafnode.org/
 COMMENT=		NNTP server for small (dialup) sites
 
-WRKSRC=			${WRKDIR}/${DISTNAME}.rel
+WRKSRC=			${WRKDIR}/${DISTNAME}
+
+USE_BUILDLINK2=		yes
 
 LEAFNODE_SPOOL?=	/var/spool/leafnode
 LEAFNODE_LOCKDIR?=	/var/spool/lock/leafnode
@@ -50,4 +56,5 @@ post-install:
 				${PREFIX}/share/examples/leafnode
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../devel/pcre/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
