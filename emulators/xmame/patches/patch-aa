@@ -1,6 +1,6 @@
---- makefile.unix.orig	Thu Jan 29 12:21:09 1998
-+++ makefile.unix	Tue May 12 21:57:05 1998
-@@ -36,18 +36,18 @@
+--- makefile.unix.orig	Wed Jun 17 06:07:13 1998
++++ makefile.unix	Sat Jul  4 07:31:19 1998
+@@ -36,7 +36,7 @@
  # GNU MAKE is MANDATORY !!!
  # so please give me the path...
  # if GNU make is "native" use this
@@ -9,99 +9,67 @@
  # else ...
  # MAKE=/usr/people/jantonio/bin/gmake
  
- # *** Choose your compiler
- # Where posible, please enforce ansi usage
--CC	= gcc -ansi -pedantic -D_XOPEN_SOURCE -DM_PI=3.141592 -DPEDANTIC
-+#CC	= gcc -ansi -pedantic -D_XOPEN_SOURCE -DM_PI=3.141592 -DPEDANTIC
- #
- # Some OS either libs are not ANSI-Compliant. If previous line fails, please
- # use next and report me item, to add to README.UNIX file
- #
--# CC	= gcc
-+CC	= gcc
- # for IRIX systems seems that DCC gets better code than GNU. so use it:
- # CC	= DCC
- #
-@@ -73,10 +73,18 @@
- ### normal optimization flags
- # OPTFLAGS    = -O2
- # OPTFLAGS    = -O2 -m486 -Wall
-+ifeq ($(ARCH),i386)
-+ARCHOPS=	-m486
-+endif
- ### to get full optimization under gcc/x Intel based OS's.. ( !!else comment!! )
--OPTFLAGS     = -O3 -m486 -Wall -Wno-parentheses -funroll-loops \
-+ifeq ($(ARCH),i386)
-+OPTFLAGS     = -O2 $(ARCHOPS) -Wall -Wno-parentheses -funroll-loops \
-   -fstrength-reduce -fomit-frame-pointer -ffast-math -malign-functions=2 \
-   -malign-jumps=2 -malign-loops=2
-+else
-+OPTFLAGS     = -O2 $(ARCHOPS) -Wall -Wno-parentheses -funroll-loops \
-+  -fstrength-reduce -fomit-frame-pointer -ffast-math 
-+endif
- ### for Linux/X11/PowerPC use following opts
- # OPTFLAGS     = -O3 -Wall -Wno-parentheses -funroll-loops \
- #  -fstrength-reduce -fomit-frame-pointer -ffast-math -fsigned-char
-@@ -92,7 +100,9 @@
+@@ -95,7 +95,9 @@
  ##############################################################################
  
  # *** To disable joystick support comment next line
-+ifeq ($(ARCH),i386)
- JOY		= -DUSE_JOYSTICK
+-# JOY		= -DUSE_JOYSTICK
++ifeq (${MACHINE},i386)
++JOY		= -DUSE_JOYSTICK
 +endif
  
  # *** To disable  mouse support comment next line
  MOUSE		= -DUSE_MOUSE
-@@ -114,7 +124,9 @@
+@@ -114,7 +116,9 @@
  # JSLIB   = -lXi
  
  # On iX86 based OS's, if supported, you can use standard joystick driver
-+ifeq ($(ARCH),i386)
- JS	= -DI386_JOYSTICK
+-# JS	= -DI386_JOYSTICK
++ifeq (${MACHINE},i386)
++JS	= -DI386_JOYSTICK
 +endif
  
  # Linux FM-TOWNS game PAD joystick emulation support
  # Thanks to Osamu Kurati for provided patch
-@@ -156,8 +168,8 @@
- # *** where does your X11 source tree resides ?? use aproppiate switch 
- 
- # standard location for X11 
--X11INC		= -I/usr/include/X11
--X11LIB		= -L/usr/lib/X11
-+#X11INC		= -I/usr/include/X11
-+#X11LIB		= -L/usr/lib/X11
+@@ -148,8 +152,8 @@
+ # X11INC		= -I/usr/include/X11
+ # X11LIB		= -L/usr/lib/X11
  # standard location for XFree86
- X11INC		= -I/usr/X11R6/include
- X11LIB		= -L/usr/X11R6/lib
-@@ -175,18 +187,18 @@
+-X11INC		= -I/usr/X11R6/include
+-X11LIB		= -L/usr/X11R6/lib
++X11INC		= -I${PREFIX}/include
++X11LIB		= -L${PREFIX}/lib
+ # for Sun systems 
+ # X11INC		= -I/usr/openwin/include
+ # X11LIB		= -L/usr/openwin/lib
+@@ -164,18 +168,18 @@
  # *** Select destination directory for your compiled program , manual page
  # and binary distribution ( if you want to... )
  # ( only needed to install, not to compile... )
 -DESTDIR = /usr/games
 -MANDIR = /usr/local/man/man6
--DISTDIR = /home/ftp/pub/emulators/mame
-+#DESTDIR = /usr/games
-+#MANDIR = /usr/local/man/man6
-+#DISTDIR = /home/ftp/pub/emulators/mame
++DESTDIR = ${PREFIX}/bin
++MANDIR = ${PREFIX}/man/man6
+ DISTDIR = /home/ftp/pub/emulators/mame
  
  # *** Where the ROM source tree ?
 -MDIR = \"/usr/games/lib/mame\"
-+MDIR = \"$(PREFIX)/lib/mame\"
++MDIR = \"${PREFIX}/share/mame\"
  
  # *** Where to store high scores ?
 -SDIR = \"/usr/games/lib/mame\"
-+SDIR = \"$(PREFIX)/lib/mame\"
++SDIR = \"${PREFIX}/share/mame\"
  
  # *** Where resides global configuration file ?
 -MRC = \"/usr/games/lib/mame/xmamerc\"
-+MRC = \"$(PREFIX)/lib/mame/xmamerc\"
++MRC = \"${PREFIX}/share/mame/xmamerc\"
  
  # *** Use this definition as default X Display
  DP = \":0.0\"
-@@ -209,8 +221,8 @@
+@@ -197,8 +201,8 @@
+ # you might decide to use these feature. Otherwise, you should use a 
  # timer based audio code and ajust in src/unix/sound.h AUDIO_TIMER_FREQ item
  #
- # DONTUSE_TIMER is mandatory for SVGALIB -else you'll get a compile error-
 -S_TIM = -DDONTUSE_TIMER
 -# S_TIM = -DUSE_TIMER
 +# S_TIM = -DDONTUSE_TIMER
@@ -109,7 +77,7 @@
  
  # *** When using timer, you should provide the frequency to generate audio sample
  # frames in your system. See readme.unix notes about these item
-@@ -232,7 +244,7 @@
+@@ -220,7 +224,7 @@
  ######## Alpha/Linux/X11
  # ARCH  = linux_alpha
  ######## ix86/Linux/X11
@@ -118,142 +86,37 @@
  ######## ix86/Linux/SVGALIB
  # ARCH	= svgalib
  ######## ix86/Linux/GGI *New* *New* *New* Please test - no mouse or joy yet
-@@ -321,12 +333,12 @@
- #If you want sound add to DEFS.netbsd_i386  "-DUSE_AUDIO" and 
+@@ -228,7 +232,8 @@
+ ######## ix86/FreeBSD/X11 and ix86/BSDi/X11
+ # ARCH  = FREEBSD
+ ######## ix86/NetBSD/X11
+-# ARCH  = netbsd_i386
++ARCH  = netbsd
++MACHINE  != uname -m
+ ######## Sparc/SunOS/X11 ( no sound )
+ # ARCH  = sunos
+ ######## ix86/Solaris/X11
+@@ -304,17 +309,17 @@
+ 		-fomit-frame-pointer -Wall
+ INST.FREEBSD   = doinstall
+ 
+-# netbsd_i386
++# netbsd
+ #####################
+-#If you want sound add to DEFS.netbsd_i386  "-DUSE_AUDIO" and 
++#If you want sound add to DEFS.netbsd  "-DUSE_AUDIO" and 
  #set STIM=-DUSE_TIMER above
  #
 -DEFS.netbsd_i386   = -DX86_ASM -DLSB_FIRST -DUNIX -Dnetbsd_i386 -DNETBSD \
-+DEFS.NetBSD   = -DX86_ASM -DLSB_FIRST -DUNIX -Dnetbsd_i386 -DNETBSD \
- 		-DHAVE_GETTIMEOFDAY -DUSE_AUDIO
++DEFS.netbsd   = -DX86_ASM -DLSB_FIRST -DUNIX -DNETBSD \
+ 		-DHAVE_GETTIMEOFDAY -DUSE_AUDIO -DSIGNED_SAMPLES
 -LIBS.netbsd_i386   = $(X11LIB) -lX11 -lXext -lm
 -CFLAGS.netbsd_i386 = $(X11INC) -m486 -fstrength-reduce -funroll-loops \
-+LIBS.NetBSD   = $(X11LIB) -lX11 -lXext -lXi -lm
-+CFLAGS.NetBSD = $(X11INC) -O2 $(ARCHOPS) -fstrength-reduce -funroll-loops \
++LIBS.netbsd   = $(X11LIB) -lX11 -lXext -lm
++CFLAGS.netbsd = $(X11INC) -O3 -fstrength-reduce -funroll-loops \
  		-fomit-frame-pointer -Wall
 -INST.netbsd_i386   = doinstall
-+INST.NetBSD   = doinstall
++INST.netbsd   = doinstall
  
  # SunOS
  #####################
-@@ -414,7 +426,7 @@
- # Perhaps one day original mame sources will use POSIX strcasecmp and M_PI
- # instead MS-DOS counterparts... ( a long and sad history ...)
- CFLAGS	= $(CAPABILITIES) $(SOUND_OPTS) $(DBGFLAGS) $(OPTFLAGS) \
--	  $(XPM) $(IL) $(INCDIRS) $(CFLAGS.$(ARCH)) -Dstricmp=strcasecmp -DPI=M_PI
-+	  $(XPM) $(IL) $(INCDIRS) $(CFLAGS.$(OPSYS)) -Dstricmp=strcasecmp -DPI=M_PI
- 
- OBJOSDEP = obj/unix/osdepend.a
- 
-@@ -585,13 +597,13 @@
- # not sure why, but was in original xmame makefile long time ago...
- VPATH = src src/Z80 src/M6502 src/I86 src/M6809 src/M68000 src/unix src/zipfiles
- 
--all: objdirs osdepend zipfiles xmame.$(ARCH)
-+all: objdirs osdepend zipfiles xmame.$(OPSYS)
- 
--OBJDIRS= obj.$(ARCH) obj.$(ARCH)/msdos obj.$(ARCH)/unix obj.$(ARCH)/zipfiles \
--	 obj.$(ARCH)/I86 obj.$(ARCH)/I8039 obj.$(ARCH)/Z80 obj.$(ARCH)/M6502 \
--	 obj.$(ARCH)/M6808 obj.$(ARCH)/M6809 obj.$(ARCH)/M68000 \
--	 obj.$(ARCH)/drivers obj.$(ARCH)/machine \
--	 obj.$(ARCH)/vidhrdw obj.$(ARCH)/sndhrdw
-+OBJDIRS= obj.$(OPSYS) obj.$(OPSYS)/msdos obj.$(OPSYS)/unix obj.$(OPSYS)/zipfiles \
-+	 obj.$(OPSYS)/I86 obj.$(OPSYS)/I8039 obj.$(OPSYS)/Z80 obj.$(OPSYS)/M6502 \
-+	 obj.$(OPSYS)/M6808 obj.$(OPSYS)/M6809 obj.$(OPSYS)/M68000 \
-+	 obj.$(OPSYS)/drivers obj.$(OPSYS)/machine \
-+	 obj.$(OPSYS)/vidhrdw obj.$(OPSYS)/sndhrdw
- 
- $(OBJDIRS):
- 	-mkdir $@
-@@ -600,36 +612,36 @@
- 
- objlnk:
- 	-rm -fR obj
--	 ln -s obj.$(ARCH) obj
-+	 ln -s obj.$(OPSYS) obj
- 
--xmame.$(ARCH):	$(OBJS)
--	$(LD) -g3 -o xmame.$(ARCH) $(OBJS) $(ZLIB) $(JSLIB) $(XPMLIB) $(LIBS.$(ARCH))
-+xmame.$(OPSYS):	$(OBJS)
-+	$(LD) -g3 -o xmame.$(OPSYS) $(OBJS) $(ZLIB) $(JSLIB) $(XPMLIB) $(LIBS.$(OPSYS))
- 
- xlistdev: xlistdev.c
--	$(CC) $(X11INC) xlistdev.c -o xlistdev $(JSLIB) $(LIBS.$(ARCH))
-+	$(CC) $(X11INC) xlistdev.c -o xlistdev $(JSLIB) $(LIBS.$(OPSYS))
- 
- # obj/unix/osdepend.a:
- 
- osdepend:
- 	 ( \
- 	 cd src/unix; \
--	  $(MAKE) CC="$(CC)" ARCH="$(ARCH)" DEFS="$(CONF) $(DEFS.$(ARCH))" CFLAGS="$(CFLAGS)" \
-+	  $(MAKE) CC="$(CC)" OPSYS="$(OPSYS)" DEFS="$(CONF) $(DEFS.$(OPSYS))" CFLAGS="$(CFLAGS)" \
- 	 )
- 
- zipfiles: FRC
- 	 ( \
- 	 cd src/zipfiles; \
--	  $(MAKE) CC="$(CC)" ARCH="$(ARCH)" DEFS="$(CONF) $(DEFS.$(ARCH))" CFLAGS="$(CFLAGS)" \
-+	  $(MAKE) CC="$(CC)" OPSYS="$(OPSYS)" ZLIB="$(ZLIB)" DEFS="$(CONF) $(DEFS.$(OPSYS))" CFLAGS="$(CFLAGS)" \
- 	 )
- 
- FRC:
- 
- 
--sndserver.$(ARCH): obj/unix/sndserver.o obj/unix/osdepend.a 
--	$(LD) -g3 -o  sndserver.$(ARCH) obj/unix/sndserver.o $(LIBS.$(ARCH))
-+sndserver.$(OPSYS): obj/unix/sndserver.o obj/unix/osdepend.a 
-+	$(LD) -g3 -o  sndserver.$(OPSYS) obj/unix/sndserver.o $(LIBS.$(OPSYS))
- 	
- obj/%.o: src/%.c
--	$(CC) $(DEFS.$(ARCH)) $(CFLAGS) -o $@ -c $<
-+	$(CC) $(DEFS.$(OPSYS)) $(CFLAGS) -o $@ -c $<
- 
- sndtest: sndtest.c
- 	gcc -o sndtest sndtest.c
-@@ -647,33 +659,33 @@
- 			src/I86/instr.h
- 
- install: install-bin install-man
--	@echo X-Mame $(VERSION) for $(ARCH) installation completed
-+	@echo X-Mame $(VERSION) for $(OPSYS) installation completed
- 
--install-bin: $(INST.$(ARCH)) xmame.$(ARCH)
-+install-bin: $(INST.$(OPSYS)) xmame.$(OPSYS)
- 
- install-man:
--	@echo installing manual pages under $(MANDIR) ...
--	$(INSTALL) doc/xmame.man $(MANDIR)/xmame.6
-+	@echo installing manual pages under $(PREFIX)/man/man6 ...
-+	$(INSTALL_MAN) doc/xmame.man $(PREFIX)/man/man6/xmame.6
- 
- doinstall:
--	@echo installing binaries under $(DESTDIR)...
--	$(INSTALL) xmame.$(ARCH) $(DESTDIR)/xmame
-+	@echo installing binaries under $(PREFIX)/bin...
-+	$(INSTALL_PROGRAM) xmame.$(OPSYS) $(PREFIX)/bin/xmame
- 
- # Every SVGALIB-based software must be run setuid. Beware security !!!
- doinstallsvgalib:
--	@echo installing binaries under $(DESTDIR)...
--	$(INSTALL) xmame.$(ARCH) $(DESTDIR)/mame
--	chmod 4755 $(DESTDIR)/mame	
-+	@echo installing binaries under $(PREFIX)...
-+	$(INSTALL) xmame.$(OPSYS) $(PREFIX)/mame
-+	chmod 4755 $(PREFIX)/mame	
- 
- #clean now depends on objdirs, cause otherwise it just might rm the wrong ARCH
- clean: objdirs
--	rm -f $(OBJS) xmame.$(ARCH) xlistdev sndserver.*
--	( cd src/unix; $(MAKE) ARCH="$(ARCH)" clean; )
--	( cd src/zipfiles; $(MAKE) ARCH="$(ARCH)" clean; )
-+	rm -f $(OBJS) xmame.$(OPSYS) xlistdev sndserver.*
-+	( cd src/unix; $(MAKE) OPSYS="$(OPSYS)" clean; )
-+	( cd src/zipfiles; $(MAKE) OPSYS="$(OPSYS)" clean; )
- 	rm -f sndtest
- 
- bindist: 
--	tar zcvf $(DISTDIR)/xmame.$(ARCH)_bin.tgz xmame.$(ARCH) doc
-+	tar zcvf $(DISTDIR)/xmame.$(OPSYS)_bin.tgz xmame.$(OPSYS) doc
- 
- srcdist: pristine
- 	( cd ..; tar zcvf $(DISTDIR)/xmame-$(VERSION)_src.tgz xmame-$(VERSION) )

@@ -1,16 +1,15 @@
---- doc/xmamerc.dist.orig	Sat Feb 14 05:42:01 1998
-+++ doc/xmamerc.dist	Sat Feb 14 05:43:14 1998
-@@ -25,6 +25,6 @@
+--- doc/xmamerc.dist.orig	Sun Jun  7 07:50:24 1998
++++ doc/xmamerc.dist	Sat Jul  4 07:17:18 1998
+@@ -23,10 +23,10 @@
+ 
+ # Where does your Mame rom files reside? 
  # This option can be overriden by MAMEDIR environment variable
 -mamedir		/usr/games/lib/mame
-+mamedir		XXX
++mamedir		@MAMEDIR@
  
  # Also Mame needs a public-writable directory to store high scores
 -spooldir        /var/games/mame
-+spooldir        XXX
++spooldir        @MAMEDIR@
  
-@@ -77,3 +77,3 @@
- # Do you want use trackball emulation via mouse?
--use_trakball	0
-+#use_trakball	0
- 
+ # What is your loved game? ( remember that mame defaults to "pacman" )
+ defaultgame	galturbo

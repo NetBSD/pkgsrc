@@ -1,20 +1,19 @@
---- src/unix/Makefile.orig	Thu Jan  1 18:31:14 1998
-+++ src/unix/Makefile	Fri Feb 13 08:12:11 1998
-@@ -1,2 +1,2 @@
--OBJDIR = ../../obj.$(ARCH)/unix
-+OBJDIR = ../../obj.$(OPSYS)/unix
+--- src/unix/Makefile.orig	Fri Jun  5 07:32:04 1998
++++ src/unix/Makefile	Sat Jul  4 07:37:41 1998
+@@ -25,6 +25,7 @@
  
-@@ -8,3 +8,3 @@
- UOBJS = $(OBJDIR)/main.o $(OBJDIR)/sound.o $(OBJDIR)/xdep.o \
--	$(OBJDIR)/update_dsp.o $(OBJDIR)/$(ARCH).o $(OBJDIR)/lin2ulaw.o \
-+	$(OBJDIR)/update_dsp.o $(OBJDIR)/$(OPSYS).o $(OBJDIR)/lin2ulaw.o \
- 	$(OBJDIR)/keyboard.o $(OBJDIR)/devices.o
-@@ -24,2 +24,3 @@
+ $(TRG): $(ALLOBJS)
  	ar -rcv $@ $(UOBJS)
 +	ranlib $@
  
-@@ -41,3 +42,3 @@
+ $(OBJDIR)/%.o: %.c xmame.h
+ 	$(CC) $(DEFS) -I../../src/ $(MS) $(JS) $(CFLAGS) -o $@ -c $<
+@@ -42,7 +43,7 @@
+ $(OBJDIR)/irix.o: irix.c xmame.h sound.h
+ $(OBJDIR)/hpux.o: hpux.c xmame.h sound.h
  $(OBJDIR)/aix.o: aix.c xmame.h sound.h
 -$(OBJDIR)/netbsd_i386.o: netbsd_i386.c xmame.h sound.h
-+$(OBJDIR)/$(OPSYS).o: $(OPSYS).c xmame.h sound.h
++$(OBJDIR)/netbsd.o: netbsd.c xmame.h sound.h
  $(OBJDIR)/sndserver.o: sndserver.c xmame.h
+ $(OBJDIR)/svgalib.o: svgalib.c linux.c xmame.h sound.h
+ $(OBJDIR)/ultrix.c: ultrix.c xmame.h sound.h

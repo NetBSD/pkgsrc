@@ -1,32 +1,34 @@
-# $NetBSD: Makefile,v 1.9 1998/07/04 09:18:57 mycroft Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/04 12:05:06 mycroft Exp $
 #
 
-DISTNAME=		xmame-0.30.1_src
-PKGNAME=		xmame-0.30.1
+DISTNAME=		xmame-0.33b6.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		ftp://drake.dit.upm.es/pub/emulators/mame/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		mycroft@NetBSD.ORG
 
+CONFLICTS=		xmame-0.30.1
+
 RUN_DEPENDS=		unzip:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-WRKSRC=			${WRKDIR}/xmame-0.30.1
 USE_X11=		yes
 USE_GMAKE=		yes
 MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} DESTDIR=${DESTDIR} \
 			INSTALL_MAN="${INSTALL_MAN}" \
 			INSTALL_PROGRAM="${INSTALL_PROGRAM}"
 
+MAMEDIR=		${PREFIX}/share/mame
+
 post-patch:
 	${CP} ${WRKSRC}/makefile.unix ${WRKSRC}/Makefile
-	${SED} 's|XXX|${PREFIX}/lib/mame|' ${WRKSRC}/doc/xmamerc.dist >${WRKSRC}/doc/xmamerc
-	${MV} ${WRKSRC}/src/unix/netbsd_i386.c ${WRKSRC}/src/unix/NetBSD.c
+	${SED} 's|@MAMEDIR@|${MAMEDIR}|' ${WRKSRC}/doc/xmamerc.dist >${WRKSRC}/doc/xmamerc
+	${MV} ${WRKSRC}/src/unix/netbsd_i386.c ${WRKSRC}/src/unix/netbsd.c
 
 post-install:
-	${MKDIR} ${PREFIX}/lib/mame
-	${CP} ${WRKSRC}/doc/xmamerc ${PREFIX}/lib/mame/xmamerc
-	@${ECHO} Remember to set MAMEDIR to ${PREFIX}/lib/mame.
+	${MKDIR} -p ${MAMEDIR}
+	${CP} ${WRKSRC}/doc/xmamerc ${MAMEDIR}/xmamerc
+	@${ECHO} Remember to set MAMEDIR to ${MAMEDIR}.
 
 .include "../../mk/bsd.pkg.mk"
