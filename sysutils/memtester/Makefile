@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/02/16 18:44:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/22 00:07:36 schmonz Exp $
 #
 
-DISTNAME=		memtester-4.0.4
+DISTNAME=		memtester-4.0.5
 CATEGORIES=		sysutils
 MASTER_SITES=		${HOMEPAGE}
 
@@ -14,6 +14,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
 
 INSTALLATION_DIRS=	bin man/man8 share/doc/memtester
+
+do-configure:
+	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
+	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/memtester ${PREFIX}/bin
