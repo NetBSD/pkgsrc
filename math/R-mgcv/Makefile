@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/23 01:35:51 markd Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/09 01:19:35 markd Exp $
 
 R_PKGNAME=	mgcv
-R_PKGVER=	0.7-1
+R_PKGVER=	0.8-1
 
 MAINTAINER=	markd@netbsd.org
 COMMENT=	Multiple smoothing parameter estimation and GAMs by GCV

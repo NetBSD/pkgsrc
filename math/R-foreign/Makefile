@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/23 01:34:06 markd Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/09 01:19:35 markd Exp $
 
 R_PKGNAME=	foreign
-R_PKGVER=	0.4-9
+R_PKGVER=	0.5-5
 
 MAINTAINER=	markd@netbsd.org
 COMMENT=	Read data stored by Minitab, S, SAS, SPSS, Stata, ...
