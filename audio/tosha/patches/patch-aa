@@ -1,0 +1,29 @@
+--- Makefile.orig	Wed May 21 01:57:17 1997
++++ Makefile	Sun May 25 10:53:33 1997
+@@ -5,7 +5,6 @@
+ #   Wed May 21 01:51:37 MET DST 1997
+ #
+ 
+-PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin
+ MANDIR=$(PREFIX)/man
+ SECTION=1
+@@ -16,7 +15,7 @@
+ ######                                       ######
+ ###################################################
+ 
+-CFLAGS=-O2 -Wall -ansi
++# CFLAGS=-O2 -Wall -ansi
+ # CFLAGS=-g -Wall -ansi -pedantic
+ 
+ all:	tosha pcmplay pcmfade
+@@ -40,9 +39,6 @@
+ 	install -s -g bin -o bin -m 755 tosha pcmplay pcmfade $(BINDIR)
+ 	install -c -g bin -o bin -m 644 tosha.1 pcmplay.1 pcmfade.1 \
+ 		$(MANDIR)/man$(SECTION)
+-	gzip -f -9 $(MANDIR)/man$(SECTION)/tosha.1 \
+-		$(MANDIR)/man$(SECTION)/pcmplay.1 \
+-		$(MANDIR)/man$(SECTION)/pcmfade.1
+ 
+ clean:
+ 	rm -f *.o *~ *core tosha pcmplay pcmfade
