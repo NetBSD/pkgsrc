@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/01/14 14:06:01 simonb Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/29 11:34:44 wiz Exp $
 #
 
 DISTNAME=	adzap-20010112
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.zip.com.au/~cs/adzap/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.zip.com.au/~cs/adzap/index.html
 WRKSRC=		${WRKDIR}/adzap
-
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 NO_BUILD=	# defined
 USE_PERL5=	# defined
@@ -31,9 +29,5 @@ do-install:
 	no-op-clear.js no-op.js ad-clear.gif ad.gif
 	${INSTALL_DATA} ${WRKSRC}/${FILE} ${PREFIX}/share/examples/adzap
 .endfor
-
-post-install:
-	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' < ${PKGDIR}/MESSAGE \
-		>${WRKDIR}/MESSAGE
 
 .include "../../mk/bsd.pkg.mk"

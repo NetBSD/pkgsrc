@@ -1,12 +1,12 @@
-$NetBSD: MESSAGE,v 1.3 2000/08/26 14:26:59 wiz Exp $
-
 =============================================================
+$NetBSD: MESSAGE,v 1.4 2001/01/29 11:34:31 wiz Exp $
+
 Please note the following:
 
-    - The system-wide procmailrc is expected in @PREFIX@/etc
-      (e.g. @PREFIX@/etc/procmailrc).
+    - The system-wide procmailrc is expected in ${PREFIX}/etc
+      (e.g. ${PREFIX}/etc/procmailrc).
 
     - The system-wide procmailrc directory is expected in
-      @PREFIX@/etc (e.g. @PREFIX@/etc/procmailrcs/*).
+      ${PREFIX}/etc (e.g. ${PREFIX}/etc/procmailrcs/*).
 
 =============================================================

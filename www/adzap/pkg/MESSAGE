@@ -1,12 +1,13 @@
-$NetBSD: MESSAGE,v 1.2 2000/04/25 15:50:21 rh Exp $
-
 ==========================================================================
+$NetBSD: MESSAGE,v 1.3 2001/01/29 11:34:44 wiz Exp $
+
   Adzap has now been installed.  To get it up and running, copy
-  @@PREFIX@@/share/examples/adzap/adzap.conf to /etc and modify
+  ${PREFIX}/share/examples/adzap/adzap.conf to /etc and modify
   it to match your setup.  Then edit your squid configuration and
-  add @@PREFIX@@/libexec/adzap as your http-redirector.
+  add ${PREFIX}/libexec/adzap as your http-redirector.
 
   If you run a web server, you can copy the *.{html,js,gif} files from
-  @@PREFIX@@/share/examples/adzap to your htdocs tree and modify
+  ${PREFIX}/share/examples/adzap to your htdocs tree and modify
   the web locations in /etc/adzap.conf accordingly.
+
 ==========================================================================

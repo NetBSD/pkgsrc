@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/09/08 13:34:23 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/01/29 11:34:27 wiz Exp $
 #
 
 DISTNAME=	Rollemup
@@ -26,10 +26,9 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-
 PLIST_SRC=	${WRKDIR}/PLIST.src
 GAMES_DIR=	share/games
+MESSAGE_SUBST+=	GAMES_DIR=${GAMES_DIR}
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
@@ -45,9 +44,6 @@ do-build:
 	@${SED} -e 's|$${PREFIX}|${PREFIX}|g' \
 		-e 's|$${GAMES_DIR}|${GAMES_DIR}|g' \
 		${FILESDIR}/rollemup.sh > ${WRKDIR}/rollemup
-	@${SED} -e 's|$${PREFIX}|${PREFIX}|g' \
-		-e 's|$${GAMES_DIR}|${GAMES_DIR}|g' \
-		${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 	@${SED} -e 's|$${PREFIX}|${PREFIX}|g' ${FILESDIR}/README.Rollemup \
 		> ${WRKDIR}/README.Rollemup
 

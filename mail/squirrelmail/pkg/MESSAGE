@@ -1,16 +1,16 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2001/01/29 11:34:33 wiz Exp $
 
 You will need to make SquirrelMail accessible through your HTTP server.
 If you are running Apache and ap-php, then you may either symlink
 	
-	@SMDIR@
+	${SMDIR}
 
 into DocumentRoot, or add the following lines to httpd.conf:
 
-	Alias /mail/ "@SMDIR@"
+	Alias /mail/ "${SMDIR}"
 
-	<Directory "@SMDIR@">
+	<Directory "${SMDIR}">
 		Options Indexes MultiViews
 		AllowOverride None
 		Order allow,deny

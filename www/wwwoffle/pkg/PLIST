@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2001/01/26 05:21:49 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/01/29 11:34:47 wiz Exp $
 bin/wwwoffle
 bin/wwwoffle-ls
 bin/wwwoffle-mv
@@ -30,7 +30,7 @@ share/doc/wwwoffle/README.lang
 share/doc/wwwoffle/README.udmsearch
 share/doc/wwwoffle/README.win32
 @dirrm share/doc/wwwoffle
-@exec @GTAR@ xzCf / %D/libdata/wwwoffle-spool.tar.gz
+@exec ${GTAR} xzCf / %D/libdata/wwwoffle-spool.tar.gz
 @exec cd /var/wwwoffle/html && mv wwwoffle.pac wwwoffle.pac.dist && sed /PROXY/s/localhost/`hostname`/ <wwwoffle.pac.dist >wwwoffle.pac
 @unexec cd /var/wwwoffle && rm -rf html* lasttime outgoing prevtime* temp
 @unexec rmdir /var/wwwoffle/* 2>/dev/null && rmdir /var/wwwoffle ; :

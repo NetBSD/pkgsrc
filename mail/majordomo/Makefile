@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/12/28 10:34:03 rh Exp $
+# $NetBSD: Makefile,v 1.10 2001/01/29 11:34:31 wiz Exp $
 
 DISTNAME=		majordomo-1.94.4
 CATEGORIES=		mail
@@ -26,7 +26,6 @@ NO_BIN_ON_CDROM=	${NO_BIN_ON_FTP}
 ALL_TARGET=		wrapper
 INSTALL_TARGET=		install install-wrapper
 
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
 INSTALL_FILE=		${WRKDIR}/INSTALL
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 MAKEFILE=		Makefile.netbsd
@@ -36,8 +35,11 @@ MAJORDOMO_HOMEDIR?=	/home
 MAJORDOMO_USER?=	majordom
 MAJORDOMO_GROUP?=	majordom
 
-PLIST_SUBST=		HOME=${MAJORDOMO_HOMEDIR}	\
+PLIST_SUBST=		HOME=${MAJORDOMO_HOMEDIR}		\
 			MAJORDOMO_USER=${MAJORDOMO_USER}
+MESSAGE_SUBST+=		HOME=${MAJORDOMO_HOMEDIR}		\
+			MAJORDOMO_USER=${MAJORDOMO_USER}	\
+			MAJORDOMO_GROUP=${MAJORDOMO_GROUP}
 
 DOCDIR=			${PREFIX}/share/doc/majordomo
 DOCFILES=		Changelog FUTURE INSTALL LICENSE NEWLIST README
@@ -128,12 +130,6 @@ do-configure:
 		< ${FILESDIR}/aliases.majordomo > ${WRKSRC}/aliases.majordomo
 
 pre-install:
-	@${SED} \
-		-e 's:@PREFIX@:${PREFIX}:g' \
-		-e 's:@HOME@:${MAJORDOMO_HOMEDIR}:g' \
-		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
-		-e 's:@MAJORDOMO_GROUP@:${MAJORDOMO_GROUP}:g' \
-		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 # for safety's sake, if the user/group got deleted since configuration
 	@${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
@@ -146,7 +142,7 @@ post-install:
 .for file in ${DOCDOCFILES}
 	@${INSTALL_DATA} ${WRKSRC}/Doc/${file} ${DOCDIR}/${file}
 .endfor
-	@${INSTALL_DATA} ${MESSAGE_FILE} ${DOCDIR}/post-install-notes
+	@${INSTALL_DATA} ${MESSAGE} ${DOCDIR}/post-install-notes
 	${INSTALL} -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${EXDIR}
 .for dir in ${EXDIRS}
 	@${INSTALL} -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${EXDIR}/${dir}
@@ -171,7 +167,7 @@ post-install:
 		${WRKSRC}/majordomo.cf ${EXDIR}/majordomo.cf
 
 # verify installation; requires interaction
-check test: install
+test: install
 	${PREFIX}/libexec/majordomo/wrapper config-test
 
 .include "../../mk/bsd.pkg.mk"

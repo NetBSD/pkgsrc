@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/09/03 12:40:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/29 11:34:35 wiz Exp $
 #
 
 DISTNAME=	dhid-4.0.1
@@ -10,15 +10,11 @@ HOMEPAGE=	http://www.dhis.org/
 
 DEPENDS+=	gmp-[0-9]*:../../devel/gmp
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-
 do-configure:
 	${SED} \
 		-e "s,@PREFIX@,${PREFIX},g" \
 		-e "s,@ECHO@,${ECHO},g" \
 		< ${FILESDIR}/dhid.sh > ${WRKDIR}/dhid.sh
-	${SED} -e "s,@PREFIX@,${PREFIX},g" \
-		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dhid ${PREFIX}/sbin

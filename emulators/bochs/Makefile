@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/01/04 22:51:53 simonb Exp $
+# $NetBSD: Makefile,v 1.11 2001/01/29 11:34:25 wiz Exp $
 
 DISTNAME=		bochs-2000_0325a
 PKGNAME=		bochs-2000.03.25a
@@ -13,19 +13,17 @@ USE_GMAKE=		yes
 #CONFIGURE_ARGS=		--enable-debugger --enable-disasm
 USE_X11=		yes
 
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
 BOCHS_MAINDIR=		${PREFIX}/share/bochs
 BOCHS_BIOSDIR=		${BOCHS_MAINDIR}/bios
 BOCHS_FONTDIR=		${BOCHS_MAINDIR}/xfonts
 BOCHS_DOCDIR=		${PREFIX}/share/doc/html/bochs
+MESSAGE_SUBST+=		BOCHS_MAINDIR=${BOCHS_MAINDIR} \
+			BOCHS_FONTDIR=${BOCHS_FONTDIR} \
+			BOCHS_DOCDIR=${BOCHS_DOCDIR}
 
 post-configure:
 	${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' \
 		< ${WRKSRC}/.bochsrc > ${WRKSRC}/bochsrc
-	${SED} -e 's,@BOCHS_MAINDIR@,${BOCHS_MAINDIR},g' \
-		-e 's,@BOCHS_FONTDIR@,${BOCHS_FONTDIR},g' \
-		-e 's,@BOCHS_DOCDIR@,${BOCHS_DOCDIR},g' \
-		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-install:
 	${INSTALL_DATA_DIR} ${BOCHS_BIOSDIR}

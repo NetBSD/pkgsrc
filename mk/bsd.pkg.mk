@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.653 2001/01/29 01:56:51 jwise Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.654 2001/01/29 11:34:21 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -504,9 +504,21 @@ INSTALL_FILE=		${PKGDIR}/INSTALL
 DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
 .endif
 
-# Set MESSAGE_FILE to be the name of any MESSAGE file
-.if !defined(MESSAGE_FILE) && exists(${PKGDIR}/MESSAGE)
-MESSAGE_FILE=		${PKGDIR}/MESSAGE
+# Set MESSAGE_SRC to be the name of any MESSAGE file, if ${MESSAGE}
+# hasn't be defined
+.if !defined(MESSAGE_SRC) && !defined(MESSAGE) && exists(${PKGDIR}/MESSAGE)
+MESSAGE_SRC=		${PKGDIR}/MESSAGE
+.endif
+
+.if defined(MESSAGE_SRC)
+MESSAGE=		${WRKDIR}/.MESSAGE
+
+# Set MESSAGE_SUBST to substitute "${variable}" to "value" in MESSAGE
+MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
+		PREFIX=${PREFIX}					\
+		LOCALBASE=${LOCALBASE}					\
+		X11PREFIX=${X11PREFIX}					\
+		X11BASE=${X11BASE}
 .endif
 
 .if (${OPSYS} == "SunOS")
@@ -715,8 +727,8 @@ PKG_ARGS_COMMON+=	-i ${INSTALL_FILE}
 .ifdef DEINSTALL_FILE
 PKG_ARGS_COMMON+=	-k ${DEINSTALL_FILE}
 .endif
-.ifdef MESSAGE_FILE
-PKG_ARGS_COMMON+=	-D ${MESSAGE_FILE}
+.ifdef MESSAGE
+PKG_ARGS_COMMON+=	-D ${MESSAGE}
 .endif
 .ifndef NO_MTREE
 PKG_ARGS_COMMON+=	-m ${MTREE_FILE}
@@ -1636,7 +1648,7 @@ _PORT_USE: .USE
 .endif
 
 
-real-su-install:
+real-su-install: ${MESSAGE}
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -1757,10 +1769,10 @@ real-su-install:
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
 .endif # OPSYS == "NetBSD" || OPSYS == "SunOS"
-.ifdef MESSAGE_FILE
+.ifdef MESSAGE
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
 	@${ECHO_MSG} ""
-	@${CAT} ${MESSAGE_FILE}
+	@${CAT} ${MESSAGE}
 	@${ECHO_MSG} ""
 .endif
 .if !defined(NO_PKG_REGISTER)
@@ -3130,7 +3142,7 @@ print-PLIST:
 # accordance to the @pkgdep directive in the packing lists
 
 .if !target(fake-pkg)
-fake-pkg: ${PLIST} ${DESCR}
+fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	if [ ! -f ${PLIST} -o ! -f ${COMMENT} -o ! -f ${DESCR} ]; then \
 		${ECHO} "** Missing package files for ${PKGNAME} - installation not recorded."; \
@@ -3215,9 +3227,9 @@ fake-pkg: ${PLIST} ${DESCR}
 				${CP} ${DEINSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+DEINSTALL; \
 			fi;						\
 		fi;							\
-		if [ -n "${MESSAGE_FILE}" ]; then			\
-			if ${TEST} -e ${MESSAGE_FILE}; then		\
-				${CP} ${MESSAGE_FILE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
+		if [ -n "${MESSAGE}" ]; then			\
+			if ${TEST} -e ${MESSAGE}; then		\
+				${CP} ${MESSAGE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
 		list="`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | sort -u`" ; \
@@ -3347,6 +3359,19 @@ PERL5_GENERATE_PLIST=	${PERL5_COMMENT}; \
 			${PERL5_PACKLIST_DIRS}
 .else
 PERL5_GENERATE_PLIST=	${TRUE}
+.endif
+
+message: ${MESSAGE}
+.ifdef MESSAGE
+${MESSAGE}: ${MESSAGE_SRC}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ -z "${MESSAGE_SRC}" ]; then				\
+		${ECHO} "${MESSAGE_SRC} not found.";			\
+		${ECHO} "Please set MESSAGE_SRC correctly.";		\
+	else								\
+		${SED} ${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}\
+			${MESSAGE_SRC} > ${MESSAGE};			\
+	fi
 .endif
 
 plist: ${PLIST}

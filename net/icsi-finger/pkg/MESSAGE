@@ -1,3 +1,6 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.2 2001/01/29 11:34:36 wiz Exp $
+
 This is the NetBSD package for ICSI-finger, a more advanced version of
 GNU finger.
 
@@ -5,12 +8,14 @@ This needs a log of configuration to be useful. Therefore it isn't activated
 when installed.
 
 You'll find example configuration files in
-/usr/pkg/share/examples/icsi-finger and
-/usr/pkg/share/examples/icsi-finger/targets, and are strongly advised
+${PREFIX}/share/examples/icsi-finger and
+${PREFIX}/share/examples/icsi-finger/targets, and are strongly advised
 to read the gfingerd and cfingerd man pages.
 
 Also, if you activate the package, you'll need to append 
-/usr/pkg/share/examples/icsi-finger/inetd.conf-add to /etc/inetd.conf,
-/usr/pkg/share/examples/icsi-finger/services-add to /etc/services, and
+${PREFIX}/share/examples/icsi-finger/inetd.conf-add to /etc/inetd.conf,
+${PREFIX}/share/examples/icsi-finger/services-add to /etc/services, and
 (on the master finger server) 
-/usr/pkg/share/examples/icsi-finger/rc.local-add to /etc/rc.local.
+${PREFIX}/share/examples/icsi-finger/rc.local-add to /etc/rc.local.
+
+======================================================================

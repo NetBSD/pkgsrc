@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/01/18 17:05:50 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2001/01/29 11:34:39 wiz Exp $
 #
 
 DISTNAME=	xpkgwedge-1.1
@@ -16,7 +16,6 @@ NO_CHECKSUM=	# defined
 
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -44,8 +43,6 @@ do-build:
 		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e "s,@X11BASE@,${X11BASE},g" \
 		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
-		< ${PKGDIR}/MESSAGE.pre > ${MESSAGE_FILE}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/config

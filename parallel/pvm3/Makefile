@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/10/21 22:53:35 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/01/29 11:34:39 wiz Exp $
 
 DISTNAME=		pvm3.4.3
 PKGNAME=		pvm-3.4.3
@@ -23,13 +23,9 @@ MAKE_ENV+=		PVM_ROOT=${WRKSRC}
 MAKE_ENV+=		PVM_ARCH=
 MAKE_ENV+=		SSH=${SSH}
 ALL_TARGET=		all install
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
 PLIST_SRC=		${WRKDIR}/PLIST-src
 
 PVM_DIR=		${PREFIX}/pvm3
-
-pre-install:
-	${SED} "s_@PREFIX@_${PREFIX}_g" < ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-install:
 	PVM_ARCH=`${PVM_ROOT}/lib/pvmgetarch` ; export PVM_ARCH ;\

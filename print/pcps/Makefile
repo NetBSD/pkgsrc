@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/23 13:47:00 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/29 11:34:40 wiz Exp $
 #
 
 DISTNAME=	pcps840
@@ -13,16 +13,12 @@ HOMEPAGE=	http://www.swreg.org/soft_shop/695/shopscr3.shtml
 MAKEFILE=	makefile
 ALL_TARGET=
 MAKE_ENV+=	"CC=${CC} ${CFLAGS} -DUNIX"
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
+NO_CONFIGURE=	yes
 
 LICENSE=        shareware
 RESTRICTED=	This is shareware for your evaluation and subsequent payment
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
-
-do-configure:
-	 ${SED} -e 's#@@PREFIX@@#${PREFIX}#g' < ${PKGDIR}/MESSAGE	\
-		>${WRKDIR}/MESSAGE
 
 do-install:
 	@${INSTALL_PROGRAM}  ${WRKSRC}/pcps ${PREFIX}/bin/pcps

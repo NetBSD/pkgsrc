@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/01/26 05:21:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 2001/01/29 11:34:34 wiz Exp $
 #
 
 DISTNAME=		arla-0.34.5
@@ -29,14 +29,13 @@ CONFIGURE_ARGS+=	--with-krb4=${PREFIX}
 CONFIGURE_ARGS+=	--with-arlacachedir=${ARLA_CACHE}
 .endif
 
-PLIST_SRC=		${WRKDIR}/PLIST
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
-
 .if defined(ARLA_CACHE)
 CACHEDIR=		${ARLA_CACHE}
 .else
 CACHEDIR=		${LOCALBASE}/cache
 .endif
+MESSAGE_SUBST+=		ARLA_CACHE=${CACHEDIR}
+PLIST_SUBST+=		ARLA_CACHE=${CACHEDIR}
 
 post-patch:
 # This is ugly. Utterly ugly. Sigh.
@@ -86,15 +85,6 @@ do-configure:
 # So, basically, bsd.pkg.mk sets LDFLAGS=-Wl,-R${LOCALBASE}
 # while arla expects LDFLAGS=-R${LOCALBASE}
 	@(LDFLAGS= ; cd ${WRKSRC}; ./configure ${CONFIGURE_ARGS})
-
-pre-install:
-	@${SED} -e 's|@ARLA_CACHE@|${CACHEDIR}|g'                             \
-		<${PKGDIR}/PLIST                                              \
-		>${PLIST_SRC}
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
-		-e 's|@ARLA_CACHE@|${CACHEDIR}|g'                             \
-		<${PKGDIR}/MESSAGE                                            \
-		>${MESSAGE_FILE}
 
 post-install:
 	@${ECHO} " "

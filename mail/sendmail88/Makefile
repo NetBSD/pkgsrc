@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/29 11:34:32 wiz Exp $
 
 DISTNAME=	sendmail.8.8.8
 PKGNAME=	sendmail-8.8.8
@@ -11,7 +11,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
 
 MANCOMPRESSED_IF_MANZ= YES
-MESSAGE_FILE=	${WRKSRC}/MESSAGE
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
 M4DIR=		${PREFIX}/share/sendmail
@@ -110,11 +109,11 @@ post-extract:
 do-configure:
 	cd ${WRKSRC}; \
 	for FILE in ${FILESDIR}/${MAKEFILE} ${FILESDIR}/${MAKEFILE}.inc \
-	  ${FILESDIR}/mailer.conf ${PKGDIR}/MESSAGE; do \
+	  ${FILESDIR}/mailer.conf; do \
 	  ${CP} $${FILE} .; \
 	done; \
 	${CP} ${FILESDIR}/netbsd-proto.mc ${WRKSRC}/cf/cf; \
-	for FILE in MESSAGE cf/README cf/feature/smrsh.m4 mailer.conf; do \
+	for FILE in cf/README cf/feature/smrsh.m4 mailer.conf; do \
 	  ${CP} $${FILE} tempfile; \
 	  ${SED} -e 's#@@PKGNAME@@#${PKGNAME}#g' \
 	    -e 's#@@PREFIX@@#${PREFIX}#g' \

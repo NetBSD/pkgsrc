@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/11/27 16:00:19 tron Exp $
+# $NetBSD: Makefile,v 1.9 2001/01/29 11:34:23 wiz Exp $
 #
 
 DISTNAME=	GConf-0.11
@@ -13,8 +13,6 @@ DEPENDS+=	oaf-*:../../devel/oaf
 DEPENDS+=	guile>=1.3.4:../../lang/guile
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
 USE_LIBINTL=	YES
@@ -25,8 +23,6 @@ CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${X11PREFIX}/include"
 PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
 
 post-install:
-	${SED} -e 's#@@X11PREFIX@@#${X11PREFIX}#g' < ${PKGDIR}/MESSAGE \
-		> ${MESSAGE_FILE}
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/gconf-1.m4 \
 	  ${LOCALBASE}/share/aclocal/gconf-1.m4

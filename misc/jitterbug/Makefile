@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/12/08 09:43:06 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/01/29 11:34:34 wiz Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -20,7 +20,6 @@ ADDGROUP=		${LOCALBASE}/sbin/groupadd
 PLIST_SRC=	${WRKDIR}/PLIST-src
 INSTALL_FILE=	${WRKDIR}/INSTALL
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 CONFIGDIR=	${WRKDIR}/${PKGNAME}/config
 DOCSDIR=	${WRKDIR}/${PKGNAME}/docs
 CGIBINDIR=	libexec/cgi-bin
@@ -59,6 +58,10 @@ JB_EMAIL?=	${JB_LOCALMAIL}@${JB_FQHOSTNAME}
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
+
+MESSAGE_SUBST+=	JB_USER=${JB_USER}		\
+		JB_PACKAGE=${JB_PACKAGE}	\
+		JB_LOCALMAIL=${JB_LOCALMAIL}
 
 pre-extract:
 .if ${JB_FQHOSTNAME} == "totally.unknown.domain"
@@ -161,13 +164,6 @@ pre-install:
 			>${WRKDIR}/NEWPACKAGE
 	@${SED}                                                               \
 		-e 's|@JB_USER@|${JB_USER}|g'                                 \
-		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
-		-e 's|@PREFIX@|${PREFIX}|g'                                   \
-		-e 's|@JB_LOCALMAIL@|${JB_LOCALMAIL}|g'                       \
-			<${PKGDIR}/MESSAGE                                    \
-			>${MESSAGE_FILE}
-	@${SED}                                                               \
-		-e 's|@JB_USER@|${JB_USER}|g'                                 \
 		-e 's|@JB_GROUP@|${JB_GROUP}|g'                               \
 		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
@@ -232,7 +228,7 @@ do-install:
 		${WRKDIR}/jitterbug.auth ${PREFIX}/${JB_USER}/etc
 	${MKDIR} ${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${MESSAGE_FILE} ${PREFIX}/${JB_USER}/doc/POSTINSTALL
+		${MESSAGE} ${PREFIX}/${JB_USER}/doc/POSTINSTALL
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
 		${WRKDIR}/NEWPACKAGE ${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \

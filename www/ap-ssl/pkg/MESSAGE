@@ -1,10 +1,10 @@
 =============================================================================
-$NetBSD: MESSAGE,v 1.5 2000/10/13 21:48:02 jlam Exp $
+$NetBSD: MESSAGE,v 1.6 2001/01/29 11:34:45 wiz Exp $
 
 You will need to generate certificates and keys for your server before
 Apache will start with mod_ssl support.  Please read
 
-	@PREFIX@/share/doc/mod_ssl/README.mkcert
+	${PREFIX}/share/doc/mod_ssl/README.mkcert
 
 for more information on how to do this.
 

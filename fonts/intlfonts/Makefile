@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/06/28 21:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/01/29 11:34:27 wiz Exp $
 
 DISTNAME=	intlfonts-1.2
 CATEGORIES=	fonts x11
@@ -33,7 +33,6 @@ MISC_FILES=	README.split
 
 DIST_SUBDIR=	${PKGNAME}
 EXTRACT_ONLY=	${FONT_SETS:S/$/${EXTRACT_SUFX}/}
-MESSAGE_FILE=	${WRKSRC}/MESSAGE
 USE_X11BASE=	yes
 
 GNU_CONFIGURE=	yes
@@ -55,8 +54,5 @@ post-extract:
 .for FILE in ${MISC_FILES}
 	${CP} ${_DISTDIR}/${FILE} ${WRKSRC}
 .endfor
-
-do-build:
-	${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/MESSAGE >${MESSAGE_FILE}
 
 .include "../../mk/bsd.pkg.mk"

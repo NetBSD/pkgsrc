@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/26 05:21:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/29 11:34:43 wiz Exp $
 #
 
 DISTNAME=		xdm-krb4-3.3.6.2
@@ -13,8 +13,6 @@ DEPENDS+=               kth-krb4-1.0.1:../../security/kth-krb4
 USE_X11BASE=		yes
 USE_IMAKE=		yes
 
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
-
 .include "../../mk/bsd.prefs.mk"
 
 post-patch:
@@ -23,9 +21,6 @@ post-patch:
 		> ${WRKSRC}/Imakefile
 
 pre-install:
-	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
-		<${PKGDIR}/MESSAGE                                            \
-		>${MESSAGE_FILE}
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
 		<${FILESDIR}/xdm-krb4.sh                                      \
 		>${WRKDIR}/xdm-krb4.sh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/01/13 18:39:44 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2001/01/29 11:34:30 wiz Exp $
 
 DISTNAME=       imap-2000a
 PKGNAME=        imap-uw-2000a
@@ -10,8 +10,6 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.washington.edu/imap/
 
 USE_LIBTOOL=	# defined
-
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
 INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
@@ -40,10 +38,6 @@ post-build:
 		< ${WRKSRC}/src/imapd/imapd.8c > ${WRKDIR}/imapd.8
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
 		< ${WRKSRC}/src/ipopd/ipopd.8c > ${WRKDIR}/ipopd.8
-
-pre-install:
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
-		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-install:
 	${INST_LIB} ${WRKSRC}/c-client/libimapuw.la ${PREFIX}/lib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/01/07 17:07:13 tron Exp $
+# $NetBSD: Makefile,v 1.18 2001/01/29 11:34:25 wiz Exp $
 
 DISTNAME=	plex86-20010106
 PKGNAME=	${DISTNAME:S/-/-0./}
@@ -21,8 +21,6 @@ ONLY_FOR_PLATFORM= NetBSD-*-i386
 RESTRICTED=	CPU-specific binary code
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
-
-MESSAGE_FILE=	${WRKSRC}/.MESSAGE
 
 BSDSRCDIR?=	/nonexistent	# to override <bsd.own.mk>, MUST be
                                 # set this way BEFORE bsd.prefs.mk
@@ -48,7 +46,6 @@ post-build:
 
 do-install: do-install-dirs do-install-binaries do-install-bios \
 		do-install-font do-install-conf
-	${SED} -e 's,@PREFIX@,${PREFIX},g' <${PKGDIR}/MESSAGE >${MESSAGE_FILE}
 
 do-install-dirs:
 	${INSTALL_DATA_DIR} ${PREFIX}/lkm \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/26 05:21:45 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/29 11:34:29 wiz Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4nb1
@@ -19,7 +19,6 @@ DIST_SUBDIR=	skk
 
 GNU_CONFIGURE=	YES
 INSTALL_FILE=	${WRKDIR}/INSTALL
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,7 +42,6 @@ post-build:
 	${SED} -e 's#@PREFIX@#${PREFIX}#g' <${FILESDIR}/skkserv.sh	\
 		>${WRKDIR}/skkserv.sh
 	${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/INSTALL	>${INSTALL_FILE}
-	${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/MESSAGE	>${MESSAGE_FILE}
 	:
 	: Merging dictionaries....
 	:

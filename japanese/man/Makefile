@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/02/15 09:26:21 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/29 11:34:28 wiz Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -16,9 +16,6 @@ PLIST_SUBST+=	JAMANDIR=${JAMANDIR}
 MAKE_ENV+=	JAMANDIR=${JAMANDIR}
 
 PLIST_SRC=	${WRKDIR}/PLIST
-
-MESSAGE_SRC=    ${PKGDIR}/MESSAGE
-MESSAGE_FILE=   ${WRKDIR}/.MESSAGE
 
 MANCOMPRESSED_IF_MANZ=	yes
 
@@ -47,7 +44,6 @@ do-build:
 MKCATPAGES?=	yes
 
 pre-install:
-	@${SED} -e 's|$${PREFIX}|${PREFIX}|' ${MESSAGE_SRC} > ${MESSAGE_FILE}
 .if ${MKCATPAGES} == no
 	@${SED} -e '/\/cat[1-9]\//d' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .if exists(${PKGDIR}/PLIST.${MACHINE})

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/10/21 22:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/01/29 11:34:39 wiz Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -23,9 +23,8 @@ IS_INTERACTIVE= yes
 NO_MTREE=	yes
 NO_WRKSUBDIR=	yes
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-
 NOW_ROOT=	${LOCALBASE}/now
+MESSAGE_SUBST+=	NOW_ROOT=${NOW_ROOT}
 
 .if (${MACHINE} == "i386")
 FLAGS= "-m486 -DL_ENDIAN"
@@ -56,7 +55,6 @@ pre-configure:
 	fi
 
 pre-install:
-	${SED} -e 's|\$${NOW_ROOT}|${NOW_ROOT}|g' ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 	@${ECHO} "updating /etc/shells";
 	${CP} /etc/shells /etc/shells.bak;
 	( ${GREP} -v ${NOW_ROOT}/bin/glush /etc/shells.bak;		\

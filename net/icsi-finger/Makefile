@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/07/05 20:45:43 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/29 11:34:35 wiz Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.27
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	is@netbsd.org
 
 USE_X11=	yes
-
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 XMPLD=		${PREFIX}/share/examples/icsi-finger
 XMPLDT=		${XMPLD}/targets
@@ -39,8 +37,6 @@ pre-configure:
 				$$i.bak > $$i ; \
 			${RM} -f $$i.bak ; \
 		done
-		${SED} -e s@/usr/pkg@${PREFIX}@g ${PKGDIR}/MESSAGE | \
-			fmt >${WRKDIR}/MESSAGE
 
 do-${INSTALL}:
 		${INSTALL} -c -m 755 ${WRKSRC}/src/finger ${PREFIX}/bin/gfinger

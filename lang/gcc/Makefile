@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/01/13 00:34:55 tron Exp $
+# $NetBSD: Makefile,v 1.12 2001/01/29 11:34:29 wiz Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -29,6 +29,7 @@ CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 
 GCC_VERSION=		${PKGNAME:C/.*-//}
+MESSAGE_SUBST+=		MAKE=${MAKE}
 PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION} \
 			MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM}
 SRCDIR=			${WRKDIR}/${PKGNAME}
@@ -39,14 +40,13 @@ WRKSRC=			${WRKDIR}/objdir
 .if (${OPSYS} != SunOS)
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
 GCC_PREFIX=		${LOCALBASE}/${PKGNAME}
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
 .else
 .if (${CC} != gcc)
 ALL_TARGET=		bootstrap
 .endif
 GCC_PREFIX=		${LOCALBASE}
 PLIST_SRC=		${PKGDIR}/PLIST.SunOS
-MESSAGE_FILE=		${PKGDIR}/MESSAGE.SunOS
+MESSAGE=		${PKGDIR}/MESSAGE.SunOS
 .endif
 
 post-extract:
@@ -57,7 +57,7 @@ post-patch:
 
 .if (${OPSYS} != SunOS)
 post-build:
-	for FILE in ${FILESDIR}/gcc.mk ${PKGDIR}/MESSAGE; do \
+	for FILE in ${FILESDIR}/gcc.mk do \
 	  ${SED} -e 's#@@MAKE@@#${MAKE}#g' \
 		 -e 's#@@PKGNAME@@#${PKGNAME}#g' \
 		 -e 's#@@PREFIX@@#${PREFIX}#g' \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/01/25 12:36:16 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2001/01/29 11:34:44 wiz Exp $
 
 DISTNAME=	AfterStep-1.8.0
 PKGNAME=	afterstep-1.8.0
@@ -34,8 +34,6 @@ CONFIGURE_ARGS+=	--with-png-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-png-lib=${LOCALBASE}/lib
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 
-MESSAGE_FILE=		${WRKDIR}/MESSAGE
-
 post-patch:
 	for i in `${FIND} ${WRKSRC} -name "*.man" -print` \
 		${WRKSRC}/autoconf/Makefile.common.in; do \
@@ -48,8 +46,5 @@ pre-configure:
 	  autoconf --localdir=autoconf autoconf/configure.in > configure; \
 	  ${CHMOD} 755 configure; \
 	  autoheader --localdir=autoconf autoconf/configure.in > autoconf/config.h.in;
-
-post-build:
-	${SED} 's|@PREFIX@|${PREFIX}|g' < ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/08/26 14:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/01/29 11:34:31 wiz Exp $
 # FreeBSD Id: Makefile,v 1.24 1997/05/14 14:40:34 ache Exp
 #
 
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.procmail.org/
 INSTALL_TARGET=	install-suid install.man
 MAKE_ENV=	SHELL=/bin/sh
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
-
 post-patch:
 	${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h-orig
 	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g' < ${WRKSRC}/config.h-orig \
@@ -22,9 +20,6 @@ post-patch:
 	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g' \
 		< ${WRKSRC}/man/procmail.man-orig \
 		> ${WRKSRC}/man/procmail.man
-
-pre-install:
-	${SED} -e 's,@PREFIX@,${PREFIX},g' ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/01/26 05:21:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/01/29 11:34:37 wiz Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0
@@ -19,7 +19,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 DOWNLOAD=	http://proforma.real.com/mario/devzone/rtspproxyform.html
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a
 
 do-fetch:
@@ -34,8 +33,6 @@ do-fetch:
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/rtspd.sh >${WRKDIR}/rtspd.sh
-	@${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/MESSAGE \
-	  >${MESSAGE_FILE}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/rtspd.sh ${PREFIX}/etc/rc.d/rtspd
