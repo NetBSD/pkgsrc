@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2002/08/21 02:43:44 grant Exp $
+# $NetBSD: Makefile,v 1.52 2002/10/10 09:42:58 wiz Exp $
 #
 
 DISTNAME=	cvs-1.11
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		USE_INET6
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 .if ${OPSYS} == "NetBSD"
 PATCH_SITES=		${MASTER_SITE_LOCAL}
@@ -46,6 +46,6 @@ CONFIGURE_ENV+=	perl_path=${PERL5}
 INFO_FILES=	cvs.info cvsclient.info
 TEXINFO_OVERRIDE=	YES
 
-.include "../../devel/zlib/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
