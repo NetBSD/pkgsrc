@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2000/03/22 08:42:29 rh Exp $
+
+case $2 in
+POST-INSTALL)
+	cat << EOF
+==============================================================
+
+Please be sure to read ${PKG_PREFIX}/lib/RealPlayer7/LICENSE.
+
+Users can run ${PKG_PREFIX}/lib/RealPlayer7/mimeinstall.sh to
+install the RealPlayer MIME types into their .mime.types and
+.mailcap files and to install a RealPlayer icon and MIME types
+into their KDE desktop.
+
+==============================================================
+EOF
+	;;
+*)
+	;;
+esac
+exit 0

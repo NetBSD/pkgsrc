@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/03/22 08:42:30 rh Exp $
+
+--- mimeinstall.sh.orig	Sat Mar 11 17:17:22 2000
++++ mimeinstall.sh	Mon Mar 20 20:03:14 2000
+@@ -17,8 +17,8 @@
+ }
+ 
+ 
+-REALPLAY=`pwd`/realplay
+-LOC=`pwd`
++REALPLAY=@@PREFIX@@/bin/realplay
++LOC=@@PREFIX@@/lib/RealPlayer7
+ 
+ 
+ if [ -f "$HOME/.mime.types" ] ; then
+@@ -42,7 +42,7 @@
+ fi
+ 
+ 
+-if [ "%1" = "MP3" ] ; then
++if [ "$1" = "MP3" ] ; then
+ if [ -f "$HOME/.mime.types" ] ; then
+     if grep x-pn-mp3 $HOME/.mime.types > /dev/null 2>&1 ; then
+         echo "Found MP3 mimetype in $HOME/.mime.types"
+@@ -71,7 +71,7 @@
+ audio/vnd.rn-realaudio;$REALPLAY %u
+ application/smil;$REALPLAY %u
+ EOF
+-	if [ "%1" = "MP3" ] ; then
++	if [ "$1" = "MP3" ] ; then
+         echo "Added MP3 mimetype to $HOME/.mailcap"
+         cat >> $HOME/.mailcap << EOF
+ audio/x-pn-mp3;$REALPLAY %u
+@@ -84,7 +84,7 @@
+ audio/vnd.rn-realaudio;$REALPLAY %u
+ application/smil;$REALPLAY %u
+ EOF
+-    if [ "%1" = "MP3" ] ; then
++    if [ "$1" = "MP3" ] ; then
+         echo "Added MP3 mimetype to $HOME/.mailcap"
+         cat >> $HOME/.mailcap << EOF
+ audio/x-pn-mp3;$REALPLAY %u
