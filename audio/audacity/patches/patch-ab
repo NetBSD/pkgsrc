@@ -1,27 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2002/10/04 08:59:36 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2004/04/20 18:02:16 ben Exp $
 
---- snd/audiooss.c.orig	Wed Jun  5 00:51:19 2002
-+++ snd/audiooss.c
-@@ -16,7 +16,13 @@
- #include <pthread.h>
+--- lib-src/libnyquist/sys/term.c.orig	Sat Mar  6 16:02:50 2004
++++ lib-src/libnyquist/sys/term.c
+@@ -40,7 +40,7 @@ int term_testchar()
+ #else
  
- #include <sys/ioctl.h>
-+#if defined(HAVE_SYS_SOUNDCARD_H)
- #include <sys/soundcard.h>
-+#elif defined(HAVE_SOUNDCARD_H)
-+#include <soundcard.h>
-+#else
-+#error "No OSS soundcard.h header found."
-+#endif
- #include <sys/time.h>
- 
- /* snd includes */
-@@ -187,7 +193,7 @@ int audio_open(snd_type snd, long *flags
-    int channels;
-    int rate;
-    oss_info dp;
--   const char *device = "/dev/dsp";
-+   const char *device = DEV_DSP;
-    pthread_t thread;
- 
-    snd->u.audio.descriptor = (oss_info) malloc(sizeof(oss_info_struct));
+ #include <termios.h>
+-#ifndef __APPLE__
++#ifdef __LINUX__
+ #include <asm/ioctls.h>
+ #endif
+ #include <signal.h>
