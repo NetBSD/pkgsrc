@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/30 08:18:39 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/05 09:14:11 uebayasi Exp $
 #
 
-DISTNAME=	riece-1.0.5
+DISTNAME=	riece-1.0.7a
 CATEGORIES=	chat japanese
-MASTER_SITES=	http://wiliki.designflaw.org/riece/
+MASTER_SITES=	http://savannah.nongnu.org/download/riece/
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/riece/
 COMMENT=	IRC client for Emacs
 
-USE_NEW_EMACS_MK= \
-		YES
-
 EMACS_VERSIONS_ACCEPTED= \
 		emacs21 emacs21nox xemacs214
 
 .include "../../mk/emacs.mk"
+
+WRKSRC=		${WRKDIR}/${DISTNAME:C|[^0-9]$||}
 
 GNU_CONFIGURE=	YES
 .if ${EMACS_FLAVOR} == "emacs"
