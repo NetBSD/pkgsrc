@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/29 17:46:13 xtraeme Exp $
+
+--- docs/reference/cspi/Makefile.in.orig	2003-12-29 18:12:12.000000000 +0100
++++ docs/reference/cspi/Makefile.in	2003-12-29 18:12:50.000000000 +0100
+@@ -164,9 +164,9 @@
+ # Extra options to supply to gtkdoc-mkdb
+ MKDB_OPTIONS = --output-format=xml
+ 
+-INSTALLDIR = $(prefix)/share/gtk-doc
++INSTALLDIR = $(prefix)/share/doc
+ 
+-HTML_DIR = ${datadir}/gtk-doc/html
++HTML_DIR = ${datadir}/doc/html
+ 
+ TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
+ 
