@@ -1,14 +1,67 @@
-@comment $NetBSD: PLIST,v 1.6 2004/12/28 21:54:10 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2005/02/26 17:26:09 jmmv Exp $
 bin/create-branching-keyboard
 bin/gok
 lib/bonobo/servers/GNOME_Gok.server
 lib/pkgconfig/gok-1.0.pc
 share/applications/gok.desktop
+share/doc/gok/ch01.html
+share/doc/gok/gok-GokButton.html
+share/doc/gok/gok-arraylist.html
+share/doc/gok/gok-callbacks.html
+share/doc/gok/gok-command-common.html
+share/doc/gok/gok-command-edge-data.html
+share/doc/gok/gok-command-edge.html
+share/doc/gok/gok-command-graph.html
+share/doc/gok/gok-command-predictor.html
+share/doc/gok/gok-command-vertex-data.html
+share/doc/gok/gok-command-vertex.html
+share/doc/gok/gok-global.html
+share/doc/gok/gok-gok-action.html
+share/doc/gok/gok-gok-branchback-stack.html
+share/doc/gok/gok-gok-chunker.html
+share/doc/gok/gok-gok-control.html
+share/doc/gok/gok-gok-data.html
+share/doc/gok/gok-gok-editor.html
+share/doc/gok/gok-gok-feedback.html
+share/doc/gok/gok-gok-gconf.html
+share/doc/gok/gok-gok-key.html
+share/doc/gok/gok-gok-keyboard.html
+share/doc/gok/gok-gok-keyslotter.html
+share/doc/gok/gok-gok-log-priv.html
+share/doc/gok/gok-gok-log-reader.html
+share/doc/gok/gok-gok-log.html
+share/doc/gok/gok-gok-modifier.html
+share/doc/gok/gok-gok-output.html
+share/doc/gok/gok-gok-page-accessmethod.html
+share/doc/gok/gok-gok-page-actions.html
+share/doc/gok/gok-gok-page-feedbacks.html
+share/doc/gok/gok-gok-page-keysizespace.html
+share/doc/gok/gok-gok-page-wordcomplete.html
+share/doc/gok/gok-gok-predictor.html
+share/doc/gok/gok-gok-scanner.html
+share/doc/gok/gok-gok-settings-dialog.html
+share/doc/gok/gok-gok-sound.html
+share/doc/gok/gok-gok-spy-priv.html
+share/doc/gok/gok-gok-spy.html
+share/doc/gok/gok-gok-word-complete.html
+share/doc/gok/gok-gok.html
+share/doc/gok/gok-gtkjoyswitch.html
+share/doc/gok/gok-interface.html
+share/doc/gok/gok-main.html
+share/doc/gok/gok-support.html
+share/doc/gok/gok-switchapi.html
+share/doc/gok/gok-word-complete.html
+share/doc/gok/gok.devhelp
+share/doc/gok/home.png
+share/doc/gok/index.html
+share/doc/gok/index.sgml
+share/doc/gok/left.png
+share/doc/gok/right.png
+share/doc/gok/style.css
+share/doc/gok/up.png
 share/gconf/schemas/gok.schemas
 share/gnome/help/gok/C/gok.xml
-share/gnome/help/gok/C/keyboards.xml
 share/gnome/help/gok/C/legal.xml
-share/gnome/help/gok/C/prefs.xml
 share/gok/East.png
 share/gok/Keyboard.kbd
 share/gok/NE.png
@@ -641,5 +694,6 @@ share/pixmaps/gok.png
 @dirrm share/gnome/help/gok
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/doc/gok
 @comment in xdg-dirs: @dirrm share/applications
 @comment in libbonobo: @dirrm lib/bonobo/servers
