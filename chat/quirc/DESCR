@@ -1,0 +1,5 @@
+QuIRC is a stable and powerful IRC client. It features a clean interface
+that scales well to many servers and channels. It includes many features
+that power users will appreciate. It contains advanced scripting
+facilities powered by Tcl, accompanied by Tk. It has been called by
+some what XiRCON should have been, and by others, simply great.
