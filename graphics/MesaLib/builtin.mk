@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/15 16:48:18 jlam Exp $
 
 _GL_GLX_H=	${X11BASE}/include/GL/glx.h
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
@@ -8,13 +8,13 @@ _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
 #
 _MESA_STRICTEST_REQD?=	none
 .  for _version_ in ${MESA_REQD}
-.    for _pkg_ in gcc-${_version_}
+.    for _pkg_ in MesaLib-${_version_}
 .      if ${_MESA_STRICTEST_REQD} == "none"
 _MESA_PKG_SATISFIES_DEP=	yes
 .        for _vers_ in ${MESA_REQD}
 .          if !empty(_MESA_PKG_SATISFIES_DEP:M[yY][eE][sS])
 _MESA_PKG_SATISFIES_DEP!=	\
-	if ${PKG_ADMIN} pmatch 'gcc>=${_vers_}' ${_pkg_}; then		\
+	if ${PKG_ADMIN} pmatch 'MesaLib>=${_vers_}' ${_pkg_}; then	\
 		${ECHO} "yes";						\
 	else								\
 		${ECHO} "no";						\
