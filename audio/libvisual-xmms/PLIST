@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 23:09:21 wiz Exp $
+lib/xmms/Visualization/libvisual_xmms.la
+share/libvisual-xmms/libvisual-xmms-vis.bmp
+share/libvisual-xmms/libvisual-xmms-vis.xpm
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libvisual-xmms.mo
+${PKGLOCALEDIR}/locale/es_AR/LC_MESSAGES/libvisual-xmms.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libvisual-xmms.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libvisual-xmms.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libvisual-xmms.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libvisual-xmms.mo
+@dirrm share/libvisual-xmms
