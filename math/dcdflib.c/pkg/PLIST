@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/29 06:13:54 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/02/08 06:01:06 jtb Exp $
 include/dcdflib.h
 lib/libdcdflib.a
-lib/libdcdflib.la
 lib/libdcdflib.so.0
 lib/libdcdflib.so.0.0
+lib/libdcdflib_p.a
+lib/libdcdflib_pic.a
 share/doc/dcdflib.c/README
 share/doc/dcdflib.c/dcdflib.chs
 share/doc/dcdflib.c/dcdflib.fdoc
