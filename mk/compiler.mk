@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.8 2003/09/17 19:58:08 grant Exp $
+# $NetBSD: compiler.mk,v 1.9 2003/09/21 16:43:47 wiz Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -63,11 +63,11 @@ _CC_VERSION_STRING!=	if ${CC} -v 2>&1 | ${GREP} -q 'gcc version'; then \
 			fi
 
 # egcs is considered to be gcc-2.8.1.
-.  if !empty(_CC_VERSION_STRING:Mgcc*)
-_CC_VERSION!=		${CC} -dumpversion
-_CC_IS_GCC=		YES
-.  elif !empty(_CC_VERSION_STRING:Megcs*)
+.  if !empty(_CC_VERSION_STRING:Megcs*)
 _CC_VERSION=		2.8.1
+_CC_IS_GCC=		YES
+.  elif !empty(_CC_VERSION_STRING:Mgcc*)
+_CC_VERSION!=		${CC} -dumpversion
 _CC_IS_GCC=		YES
 .  endif
 
