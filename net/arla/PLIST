@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/01/14 12:00:09 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/03/05 13:10:21 wennmach Exp $
 bin/aklog
 bin/amon
 bin/bos
@@ -6,7 +6,6 @@ bin/fs
 bin/kalog
 bin/pts
 bin/rxdebug
-bin/themis
 bin/tokens
 bin/udebug
 bin/unlog
@@ -79,7 +78,6 @@ man/man1/fs.1
 man/man1/kalog.1
 man/man1/pts.1
 man/man1/rxdebug.1
-man/man1/themis.1
 man/man1/tokens.1
 man/man1/udebug.1
 man/man1/unlog.1
