@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:11:15 taca Exp $
+$NetBSD: patch-ab,v 1.2 2004/11/29 08:20:06 taca Exp $
 
 --- configure.orig	2003-12-25 04:21:24.000000000 +0900
 +++ configure
@@ -31,3 +31,17 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/11/27 14:11:15 taca Exp $
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR) lib$(RUBY_SO_NAME).so'
  	;;
      gnu*)
+@@ -14468,6 +14476,13 @@ if test "$enable_shared" = 'yes'; then
+ 	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).'`expr ${MINOR} \* 10 + ${TEENY}`
+ 	;;
+     solaris*)
++	SOLIBS='$(LIBS)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)'
++	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR).$(TEENY) lib$(RUBY_SO_NAME).so'
++	if test "$GCC" = yes; then
++	    LIBRUBY_DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET)'
++	    LIBRUBYARG_SHARED='-Wl,-R -Wl,${libdir} -L${libdir} -L. -l$(RUBY_SO_NAME)'
++	fi
+ 	XLDFLAGS="$XLDFLAGS "'-R${libdir}'
+  	;;
+     hpux*)
