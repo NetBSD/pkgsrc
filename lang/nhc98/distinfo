@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:54 agc Exp $
+SHA1 (patch-aa) = dbe63c3e3cbf2182d40cda9b28757f0b93548d0c
 
-SHA1 (nhc98src-1.02.tar.gz) = 66bf2b56945fee9d1aa856fd3d6177dc3c1ca337
-Size (nhc98src-1.02.tar.gz) = 3036226 bytes
+SHA1 (nhc98src-1.04.tar.gz) = 1a3ed2bf54a0ad8620ea5db7eaf9576323b5f2ae
+Size (nhc98src-1.04.tar.gz) = 3211304 bytes
+SHA1 (patch-aa) = dbe63c3e3cbf2182d40cda9b28757f0b93548d0c

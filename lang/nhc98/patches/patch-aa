@@ -1,0 +1,66 @@
+$NetBSD: patch-aa,v 1.1 2001/05/22 00:45:55 jtb Exp $
+
+--- Makefile.orig	Tue May 22 00:22:29 2001
++++ Makefile
+@@ -149,10 +149,10 @@
+ 	 timeruntime timeprelude \
+ 	 timetraceruntime timetraceprelude \
+ 	 traceruntime traceprelude \
+-	 compiler-nhc compiler-hbc compiler-ghc compiler-$(CC) \
+-	 hmake-nhc hmake-hbc hmake-ghc hmake-$(CC) \
+-	 greencard-nhc greencard-hbc greencard-ghc greencard-$(CC) \
+-	 prelude-$(CC) pragma-$(CC)
++	 compiler-nhc compiler-hbc compiler-ghc compiler-gcc \
++	 hmake-nhc hmake-hbc hmake-ghc hmake-gcc \
++	 greencard-nhc greencard-hbc greencard-ghc greencard-gcc \
++	 prelude-gcc pragma-gcc
+ 
+ .PHONY: basic all tracer compiler help config install hattools
+ 
+@@ -182,8 +182,8 @@
+ basic-nhc: $(PRAGMA) runtime hmake-nhc greencard-nhc compiler-nhc prelude
+ basic-hbc: $(PRAGMA) runtime hmake-hbc greencard-hbc compiler-hbc prelude
+ basic-ghc: $(PRAGMA) runtime hmake-ghc greencard-ghc compiler-ghc prelude
+-basic-$(CC):   runtime prelude-$(CC) pragma-$(CC) compiler-$(CC) \
+-		 greencard-$(CC) hmake-$(CC)
++basic-gcc:   runtime prelude-gcc pragma-gcc compiler-gcc \
++		 greencard-gcc hmake-gcc
+ 
+ all-$(BUILDCOMP): basic-$(BUILDCOMP) heapprofile timeprofile tracer hoodui
+ 
+@@ -302,25 +302,25 @@
+ 	touch $(TARGDIR)/$(MACHINE)/timeprelude
+ 
+ 
+-$(TARGDIR)/$(MACHINE)/prelude-$(CC): $(PRELUDEC)
++$(TARGDIR)/$(MACHINE)/prelude-gcc: $(PRELUDEC)
+ 	cd src/prelude;        $(MAKE) fromC 
+-	touch $(TARGDIR)/$(MACHINE)/prelude-$(CC)
+-$(TARGDIR)/$(MACHINE)/compiler-$(CC): $(COMPILERC)
++	touch $(TARGDIR)/$(MACHINE)/prelude-gcc
++$(TARGDIR)/$(MACHINE)/compiler-gcc: $(COMPILERC)
+ 	cd src/compiler98;     $(MAKE) fromC
+ 	cd src/prelude/$(MACHINE); $(MAKE) clean all	# Patch machine-specific parts.
+ 	cd src/prelude;        $(MAKE) relink
+ 	cd src/compiler98;     $(MAKE) relink
+-	touch $(TARGDIR)/$(MACHINE)/compiler-$(CC)
+-$(TARGDIR)/$(MACHINE)/greencard-$(CC): $(GREENCARDC)
++	touch $(TARGDIR)/$(MACHINE)/compiler-gcc
++$(TARGDIR)/$(MACHINE)/greencard-gcc: $(GREENCARDC)
+ 	cd src/greencard;      $(MAKE) fromC
+-	touch $(TARGDIR)/$(MACHINE)/greencard $(TARGDIR)/$(MACHINE)/greencard-$(CC)
+-$(TARGDIR)/$(MACHINE)/pragma-$(CC): script/hmake-PRAGMA.c
++	touch $(TARGDIR)/$(MACHINE)/greencard $(TARGDIR)/$(MACHINE)/greencard-gcc
++$(TARGDIR)/$(MACHINE)/pragma-gcc: script/hmake-PRAGMA.c
+ 	script/nhc98 -o $(PRAGMA) script/hmake-PRAGMA.c
+-	touch $(TARGDIR)/$(MACHINE)/pragma-$(CC)
+-$(TARGDIR)/$(MACHINE)/hmake-$(CC): $(HMAKEC)
++	touch $(TARGDIR)/$(MACHINE)/pragma-gcc
++$(TARGDIR)/$(MACHINE)/hmake-gcc: $(HMAKEC)
+ 	cd src/hmake;          $(MAKE) fromC
+ 	cd src/interpreter;    $(MAKE) fromC
+-	touch $(TARGDIR)/$(MACHINE)/hmake-$(CC)
++	touch $(TARGDIR)/$(MACHINE)/hmake-gcc
+ 
+ 
+ script/errnogen.c: script/GenerateErrNo.hs
