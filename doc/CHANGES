@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7379 2004/10/08 19:19:41 jmmv Exp $
+$NetBSD: CHANGES,v 1.7380 2004/10/08 23:36:30 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4586,3 +4586,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dbh to 1.0.20 [martti 2004-10-08]
 	Updated psiconv to 0.9.6 [adam 2004-10-08]
 	Updated glib2 to 2.4.7 [jmmv 2004-10-08]
+	Updated dync to 1.1nb1 [kristerw 2004-10-08]
