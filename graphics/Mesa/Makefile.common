@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2004/04/09 13:05:52 adam Exp $
+# $NetBSD: Makefile.common,v 1.31 2004/10/13 18:00:08 tv Exp $
 #
 
 DISTNAME=	MesaLib-${MESA_VERSION}
@@ -30,7 +30,7 @@ pre-install:
 	@if [ -n "${INSTLIBS}" ]; then					\
 		${ECHO_MSG} "Installing libraries.";			\
 		for lib in ${INSTLIBS}; do				\
-			${LIBTOOL} --mode=install ${INSTALL_DATA}	\
+			${LIBTOOL} --mode=install ${INSTALL_LIB}	\
 				$${lib} ${PREFIX}/lib;			\
 		done;							\
 	fi
