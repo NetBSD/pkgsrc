@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5433 2004/04/03 17:02:55 taca Exp $
+$NetBSD: CHANGES,v 1.5434 2004/04/03 17:35:29 yamt Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1765,3 +1765,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated galeon-devel to 1.3.14anb1 [jmmv 2004-04-03]
 	Updated startup-notification to 0.6 [recht 2004-04-03]
 	Updated kterm to 6.2.0nb7 [taca 2004-04-03]
+	Updated nvi-m17n to 1.79.19991117nb2 [yamt 2004-04-03]
