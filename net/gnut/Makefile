@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 18:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/24 23:48:57 christos Exp $
 #
 
-DISTNAME=	gnut-0.4.12
+DISTNAME=	gnut-0.4.20
 CATEGORIES=	net
-MASTER_SITES=	http://www.mrob.com/gnut/tars/
+MASTER_SITES=	http://www.gnutelladev.com/source/gnut/
 
 MAINTAINER=	deberg@netbsd.org
 HOMEPAGE=	http://www.mrob.com/gnut/

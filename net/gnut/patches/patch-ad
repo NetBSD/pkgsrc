@@ -1,33 +1,26 @@
-$NetBSD: patch-ad,v 1.1 2000/08/12 15:12:41 deberg Exp $
+$NetBSD: patch-ad,v 1.2 2001/02/24 23:48:58 christos Exp $
 
---- configure.orig	Sun Aug  6 20:29:43 2000
-+++ configure	Sat Aug 12 10:23:24 2000
-@@ -1208,20 +1208,20 @@
+--- configure.orig	Wed Feb  7 14:33:52 2001
++++ configure	Sat Feb 24 18:36:14 2001
+@@ -1282,14 +1282,14 @@
  fi
  
  
 -echo $ac_n "checking for readline in readline.h""... $ac_c" 1>&6
--echo "configure:1213: checking for readline in readline.h" >&5
+-echo "configure:1287: checking for readline in readline.h" >&5
 +echo $ac_n "checking for readline in readline.h with libedit""... $ac_c" 1>&6
-+echo "configure:1213: checking for readline in readline.h with libedit" >&5
- if eval "test \"`echo '$''{'g_cv_readline'+set}'`\" = set"; then
++echo "configure:1287: checking for readline in readline.h with libedit" >&5
+ if eval "test \"\${g_cv_readline+set}\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    
  	save_LIBS="$LIBS"
 -	LIBS="-lreadline $LIBS"
-+	LIBS="-ledit -ltermcap $LIBS"
++	LIBS="-ledit $LIBS"
  	cat > conftest.$ac_ext <<EOF
- #line 1221 "configure"
+ #line 1295 "configure"
  #include "confdefs.h"
- 
- 		#include <stdio.h>
--		#include <readline/readline.h>
-+		#include <readline.h>
- 		
- int main() {
- readline(NULL);
-@@ -1244,10 +1244,60 @@
+@@ -1318,10 +1318,60 @@
  echo "$ac_t""$g_cv_readline" 1>&6
  	
  if test $g_cv_readline = yes ; then

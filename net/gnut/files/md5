@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/08/12 15:12:41 deberg Exp $
+$NetBSD: md5,v 1.4 2001/02/24 23:48:58 christos Exp $
 
-MD5 (gnut-0.4.12.tar.gz) = 328f407fa1a4b066f7c68577e359ff98
+MD5 (gnut-0.4.20.tar.gz) = e4f74abd2c958c96a50def716a05f986
