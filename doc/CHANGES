@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9167 2005/02/17 23:35:29 rillig Exp $
+$NetBSD: CHANGES,v 1.9168 2005/02/18 07:09:13 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -909,3 +909,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated radmind to 1.5.0 [wiz 2005-02-17]
 	Updated criticalmass to 0.9.10 [peter 2005-02-17]
 	Updated pkglint to 4.06 [rillig 2005-02-17]
+	Added blur6ex-0.1.198 [xtraeme 2005-02-18]
