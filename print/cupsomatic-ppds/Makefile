@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/21 15:06:06 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/28 04:00:58 jlam Exp $
 
 DISTNAME=	all-com-ppds
-PKGNAME=	cupsomatic-ppds-20001220
+PKGNAME=	cupsomatic-ppds-20010128
 WRKSRC=		${WRKDIR}/cupsomatic-ppd
 CATEGORIES=	print
 
