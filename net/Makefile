@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.426 2004/01/08 09:45:20 wiz Exp $
+# $NetBSD: Makefile,v 1.427 2004/01/08 15:04:02 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -25,7 +25,6 @@ SUBDIR+=	bftpd
 SUBDIR+=	bind4
 SUBDIR+=	bind8
 SUBDIR+=	bind9
-SUBDIR+=	bind9-current
 SUBDIR+=	bing
 SUBDIR+=	bittorrent
 SUBDIR+=	bounce
