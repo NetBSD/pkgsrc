@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.22 2001/06/14 14:55:47 skrll Exp $
+$NetBSD: patch-ab,v 1.23 2001/06/20 08:10:49 skrll Exp $
 
---- ltmain.sh.orig	Wed May 23 05:05:43 2001
+--- ltmain.sh.orig	Thu Jun 14 05:06:50 2001
 +++ ltmain.sh
 @@ -494,11 +494,18 @@
      # command doesn't match the default compiler.
@@ -64,3 +64,12 @@ $NetBSD: patch-ab,v 1.22 2001/06/14 14:55:47 skrll Exp $
      fi
  
      if test "$export_dynamic" = yes && test -n "$export_dynamic_flag_spec"; then
+@@ -5053,7 +5063,7 @@
+       fi
+ 
+       # Now prepare to actually exec the command.
+-      exec_cmd='"$cmd"$args'
++      exec_cmd="\$cmd$args"
+     else
+       # Display what would be done.
+       if test -n "$shlibpath_var"; then
