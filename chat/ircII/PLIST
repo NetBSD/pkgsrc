@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/04/03 14:00:50 mrg Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/09/13 03:12:16 mrg Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -103,8 +103,6 @@ share/irc/help/dcc/list@.GZ@
 share/irc/help/dcc/raw@.GZ@
 share/irc/help/dcc/rename@.GZ@
 share/irc/help/dcc/send@.GZ@
-share/irc/help/dcc/talk@.GZ@
-share/irc/help/dcc/tmsg@.GZ@
 share/irc/help/deop@.GZ@
 share/irc/help/describe@.GZ@
 share/irc/help/die@.GZ@
@@ -345,6 +343,7 @@ share/irc/help/set/display@.GZ@
 share/irc/help/set/eight_bit_characters@.GZ@
 share/irc/help/set/encrypt_program@.GZ@
 share/irc/help/set/exec_protection@.GZ@
+share/irc/help/set/dcchost@.GZ@
 share/irc/help/set/flood_after@.GZ@
 share/irc/help/set/flood_rate@.GZ@
 share/irc/help/set/flood_users@.GZ@
@@ -534,6 +533,7 @@ share/irc/script/english
 share/irc/script/events
 share/irc/script/extensions
 share/irc/script/finger
+share/irc/script/fkeys
 share/irc/script/flood
 share/irc/script/fnet
 share/irc/script/functions
