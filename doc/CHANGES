@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6732 2004/07/30 11:24:38 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6733 2004/07/30 13:03:17 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3648,3 +3648,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated alee-ttf to 0.4 [minskim 2004-07-30]
 	Updated XFree86-dirs to 1.1 [xtraeme 2004-07-30]
 	Updated xorg-dirs to 1.1 [xtraeme 2004-07-30]
+	Added p5-Module-Versions-Report-1.02 [cube 2004-07-30]
+	Added p5-Tree-Simple-1.06 [cube 2004-07-30]
+	Added p5-HTML-Scrubber-0.08 [cube 2004-07-30]
