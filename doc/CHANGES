@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.742 2002/12/10 01:31:39 hubertf Exp $
+$NetBSD: CHANGES,v 1.743 2002/12/10 09:20:02 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3886,3 +3886,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated suse64_base to 6.4nb7 [tron 2002-12-09]
 	Updated suse_base to 7.3nb2 [tron 2002-12-09]
 	Updated galeon to 1.2.7 [hubertf 2002-12-10]
+	Added gtkgo-0.0.10 [rh 2002-12-10]
