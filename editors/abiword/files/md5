@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 1999/09/11 18:27:49 jlam Exp $
+$NetBSD: md5,v 1.2 1999/09/14 02:19:15 jlam Exp $
 
 MD5 (abisuite/abi-0.7.5.tar.gz) = 8ae9d28cbd5905b2f0869114f1259510
 MD5 (abisuite/abidistfiles-0.7.5.tar.gz) = 57bf3b793de91edb6fc0f06c483c66ed
