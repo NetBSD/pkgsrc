@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/07 14:51:56 tsarna Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/08/07 14:58:35 tsarna Exp $
 lib/python1.5/site-packages/arc4module.so
 lib/python1.5/site-packages/blowfishmodule.so
 lib/python1.5/site-packages/des3module.so
@@ -42,4 +42,3 @@ info/pct.info
 @exec %D/bin/install-info %D/info/pct.info %D/info/dir
 info/pct.info-1
 info/pct.info-2
-
