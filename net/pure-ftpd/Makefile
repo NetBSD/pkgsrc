@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/20 22:04:15 recht Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/24 22:45:15 recht Exp $
 
 DISTNAME=	pure-ftpd-1.0.19
 CATEGORIES=	net
@@ -33,7 +33,7 @@ BUILD_DEFS+=		PURE_FTPD_USE_MYSQL
 .endif
 
 .if !empty(PURE_FTPD_USE_PGSQL:M[Yy][Ee][Ss])
-.  include "../../databases/postgresql-lib/buildlink3.mk"
+.  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pgsql
 BUILD_DEFS+=		PURE_FTPD_USE_PGSQL
 .endif
