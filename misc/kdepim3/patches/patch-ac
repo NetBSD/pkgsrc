@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2004/11/28 18:35:48 kleink Exp $
+
+--- korganizer/plugins/holidays/holidays.cpp	2004/07/23 16:32:44	1.12
++++ korganizer/plugins/holidays/holidays.cpp	2004/10/03 18:33:19	1.12.2.1
+@@ -91,7 +91,7 @@
+   //static int lastYear = 0;
+   int lastYear = 0;
+ 
+-  if (mHolidayFile.isEmpty()) return QString::null;
++  if (mHolidayFile.isEmpty() || qd.isNull()) return QString::null;
+ 
+   //if ((lastYear == 0) || (qd.year() != lastYear)) {
+   if ((yearLast == 0) || (qd.year() != yearLast)) {
