@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/11 16:11:26 ad Exp $
+
+--- Imakefile.orig	Mon Sep 28 23:06:35 1998
++++ Imakefile	Thu Nov 11 16:07:02 1999
+@@ -2,7 +2,7 @@
+ DESTDIR = /usr/X11R6
+ BINDIR = /bin
+ 
+-XPMLIB = -L/usr/lib/X11 -L/opt/X11_Contrib/lib/sparc -lXpm -lm  
++XPMLIB = -lXpm -lm  
+ DEPLIBS = $(DEPXLIB) 
+ 
+ /* -lrpcsvc is required on SPARC or HP-UX */
+@@ -10,7 +10,7 @@
+ 
+ LINTLIBS = $(LINTXLIB)
+ 
+-EXTRA_INCLUDES = -I/opt/X11_Contrib/include
++EXTRA_INCLUDES =
+ 
+ EXTRA_DEFINES = -DMANY_COLORS
+ 
