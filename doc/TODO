@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9 2002/11/27 13:52:29 wiz Exp $
+$NetBSD: TODO,v 1.10 2002/11/27 18:45:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -108,8 +108,6 @@ Suggested package updates
 	o gd-2.0.4
 	o gedit-2.0.0
 	o gentoo-0.11.34
-	o gettext-0.11.5 [drochner]
-	o gimp-print-4.2.4
 	o gkrellm-2.0.4
 	o glade2-1.1.3 [pkg/19154]
 	o gnome-applets-2.0.0
