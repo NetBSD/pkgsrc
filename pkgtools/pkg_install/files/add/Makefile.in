@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.10 2003/10/06 10:12:42 grant Exp $
+# $NetBSD: Makefile.in,v 1.11 2004/02/11 11:31:26 grant Exp $
 
 srcdir=		@srcdir@
 
@@ -14,7 +14,7 @@ CC=		@CC@
 CCLD=		$(CC)
 LIBS=		-linstall @LIBS@
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
-DEFS=		@DEFS@ -DBINDIR=\"$(sbindir)\" -DMTREE_CMD=\"@mtree@\" -DTAR_CMD=\"@tar@\"
+DEFS=		@DEFS@ -DOPSYS_NAME=\"$(OPSYS)\" -DMACHINE_ARCH=\"$(MACHINE_ARCH)\" -DBINDIR=\"$(sbindir)\" -DMTREE_CMD=\"@mtree@\" -DTAR_CMD=\"@tar@\" 
 CFLAGS=		@CFLAGS@
 LDFLAGS=	@LDFLAGS@ -L../lib
 
