@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 1998/02/22 23:25:55 hubertf Exp $
+bin/snd
+lib/X11/app-defaults/Snd
+share/doc/snd/README.Snd
+share/doc/snd/auto.gif
+share/doc/snd/controls.gif
+share/doc/snd/d.gif
+share/doc/snd/fft.gif
+share/doc/snd/files.gif
+share/doc/snd/mixer.gif
+share/doc/snd/n.gif
+share/doc/snd/rec.gif
+share/doc/snd/regions.gif
+share/doc/snd/s.gif
+share/doc/snd/save.gif
+share/doc/snd/snd-widgets.txt
+share/doc/snd/snd.html
+share/doc/snd/snd.txt
+share/doc/snd/title.gif
+@dirrm share/doc/snd
