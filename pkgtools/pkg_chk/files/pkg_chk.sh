@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.10 2005/01/29 15:36:30 abs Exp $
+# $Id: pkg_chk.sh,v 1.11 2005/02/01 20:44:48 wiz Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -215,7 +215,7 @@ list_packages()
 		fatal_maybe " ** $PKGNAME - binary package (dependency) missing"
 		continue
 	    fi
-	    for dep in $(pkg_info -N $PACKAGES/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..) ; do
+	    for dep in $(${PKG_INFO} -. -N $PACKAGES/$pkg.tgz | ${SED} '1,/Built using:/d' | ${GREP} ..) ; do
 		case "$PKGLIST$NEXTCHECK" in
 		    *\ $dep\ *)
 			verbose "$pkg: Duplicate depend $dep"
@@ -495,7 +495,7 @@ if [ -n "$opt_b" -a -z "$opt_s" -a -d $PACKAGES ] ; then
     msg_progress Scan $PACKAGES
     cd $PACKAGES
     for f in `ls -t *.tgz` ; do # Sort by time to pick up newest first
-	PKGDIR=`${PKG_INFO} -B $PACKAGES/$f|${AWK} -F= '$1=="PKGPATH"{print $2}'`
+	PKGDIR=`${PKG_INFO} -. -B $PACKAGES/$f|${AWK} -F= '$1=="PKGPATH"{print $2}'`
 	PKGNAME=`echo $f | ${SED} 's/\.tgz$//'`
 	PKGDB="${PKGDB} $PKGDIR:$PKGNAME"
     done
