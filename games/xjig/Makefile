@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/24 22:26:31 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/05/17 13:21:20 frueauf Exp $
 #
 
 DISTNAME=		xjig-2.4
@@ -11,6 +11,8 @@ MAINTAINER=		packages@netbsd.org
 
 USE_IMAKE=		yes
 ALL_TARGET=		xjig xjig.0
+
+CAT1=			xjig.0
 
 post-install:
 	${INSTALL_DATA_DIR} ${X11BASE}/lib/xjig
