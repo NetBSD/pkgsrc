@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.292 2003/05/08 13:31:06 zuntum Exp $
+# $NetBSD: Packages.txt,v 1.293 2003/05/31 19:35:16 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -1109,13 +1109,11 @@ Here's how to use libtool in a pkg in seven simple steps:
  6.3 Using libtool on GNU packages that already support libtool
  ==============================================================
 
-Add USE_LIBTOOL=yes and LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig to the package
-Makefile as the quick way to bypass the pkg's own libtool. The pkg's own
-libtool is made by ltconfig script at do-configure target. If USE_LIBTOOL
-and LTCONFIG_OVERRIDE are defined, the specified ltconfig is overridden,
-using the pkgsrc/devel/libtool instead of the pkg's own libtool.  For newer
-versions of libtool (without ltconfig) it may be necessary to use
-LIBTOOL_OVERRIDE=${WRKSRC}/libtool instead.
+Add USE_LIBTOOL=yes and LIBTOOL_OVERRIDE=${WRKSRC}/libtool to the
+package Makefile as the quick way to bypass the pkg's own libtool.
+For older libtool using packages, libtool is made by ltconfig script
+during the do-configure step; you can check the libtool script
+location by doing "make configure; find work*/ -name libtool".
 
 If your package makes use of the platform independent library for loading
 dynamic shared objects, that comes with libtool (libltdl), you should
