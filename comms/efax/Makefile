@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/11 06:14:32 snj Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/29 16:07:29 recht Exp $
 
 DISTNAME=	efax-0.9
 CATEGORIES=	comms
@@ -30,9 +30,9 @@ post-patch:
 # `fax' script so that the user doesn't need to edit the script itself
 # to set important variables.
 
-	${HEAD} -n 5 ${WRKSRC}/fax.tmp > ${WRKSRC}/fax
-	${TAIL} -n 649 ${WRKSRC}/fax.tmp >> ${WRKSRC}/fax
-	${HEAD} -n 404 ${WRKSRC}/fax.tmp > ${WRKSRC}/efax.rc1
-	${TAIL} -n 402 ${WRKSRC}/efax.rc1 > ${WRKSRC}/efax.rc
+	${HEAD} -5 ${WRKSRC}/fax.tmp > ${WRKSRC}/fax
+	${TAIL} -649 ${WRKSRC}/fax.tmp >> ${WRKSRC}/fax
+	${HEAD} -404 ${WRKSRC}/fax.tmp > ${WRKSRC}/efax.rc1
+	${TAIL} -402 ${WRKSRC}/efax.rc1 > ${WRKSRC}/efax.rc
 
 .include "../../mk/bsd.pkg.mk"
