@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/09/17 00:48:02 garbled Exp $
+# $NetBSD: Makefile,v 1.5 1998/09/17 12:34:28 frueauf Exp $
 # FreeBSD: Makefile,v 1.20 1998/08/27 16:38:02 markm Exp
 #
 
@@ -22,7 +22,8 @@ CONFIGURE_SCRIPT=	util/NetBSD.sh
 CONFIGURE_ARGS=		${MACHINE_ARCH}
 
 post-extract:
-	${CP} ${FILESDIR}/NetBSD.sh ${WRKSRC}/util/NetBSD.sh
+	${SED} -e 's|@@@PREFIX@@@|${PREFIX}|g' < ${FILESDIR}/NetBSD.sh \
+		> ${WRKSRC}/util/NetBSD.sh
 
 post-configure:
 	${CP} ${WRKSRC}/rsaref/rsaref.h ${WRKSRC}/include/rsaref.h
