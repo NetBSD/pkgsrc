@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.323 2004/01/23 23:46:44 wiz Exp $
+# $NetBSD: Packages.txt,v 1.324 2004/01/24 15:32:59 grant Exp $
 ###########################################################################
 
 			==========================
@@ -1415,9 +1415,9 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    Once configuration has taken place, the software can be built on
    NetBSD by invoking $MAKE_PROGRAM on $MAKEFILE with $ALL_TARGET as
    the target to build.  The default MAKE_PROGRAM is "gmake" if
-   USE_GMAKE is set, "make" otherwise.  MAKEFILE is set to "Makefile"
-   by default, and ALL_TARGET defaults to "all".  Any of these
-   variables can be set to change the default build process.
+   USE_GNU_TOOLS 'make' is set, "make" otherwise.  MAKEFILE is set to
+   "Makefile" by default, and ALL_TARGET defaults to "all".  Any of
+   these variables can be set to change the default build process.
 
  * install:
    Once the build stage has completed, the final step is to install
