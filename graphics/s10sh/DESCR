@@ -1,3 +1,3 @@
 s10sh is a USB/serial userspace driver for the Canon PowerShot digital cameras.
-Using s10sh you can download, upload and explore the images caputered with your
+Using s10sh you can download, upload and explore the images captured with your
 PowerShot camera. The interface is quite similar to DOS's command.com.
