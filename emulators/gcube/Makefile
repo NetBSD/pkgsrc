@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/16 14:25:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/17 16:46:03 kristerw Exp $
 #
 
 DISTNAME=		gcube-v0.2-src
 PKGNAME=		gcube-0.2
 CATEGORIES=		emulators
-MASTER_SITES=		http://gcube.exemu.net/
+MASTER_SITES=		http://gcube.exemu.net/downloads/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
