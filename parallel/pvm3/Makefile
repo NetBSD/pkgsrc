@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.33 2004/10/03 00:18:03 tv Exp $
+# $NetBSD: Makefile,v 1.34 2004/11/12 10:45:45 adam Exp $
 
-DISTNAME=		pvm3.4.4
-PKGNAME=		pvm-3.4.4
-PKGREVISION=		1
-CATEGORIES=		parallel
-MASTER_SITES=		http://www.netlib.org/pvm3/
-EXTRACT_SUFX=		.tgz
+DISTNAME=	pvm3.4.5
+PKGNAME=	pvm-3.4.5
+CATEGORIES=	parallel
+MASTER_SITES=	http://www.netlib.org/pvm3/
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.epm.ornl.gov/pvm/pvm_home.html
-COMMENT=		Parallel Virtual Machine libraries and environment
+MAINTAINER=	root@garbled.net
+HOMEPAGE=	http://www.epm.ornl.gov/pvm/pvm_home.html
+COMMENT=	Parallel Virtual Machine libraries and environment
 
 .if exists(/usr/bin/ssh)
 PVM_SSH?=		/usr/bin/ssh

@@ -1,22 +1,18 @@
-$NetBSD: patch-an,v 1.4 2001/05/24 19:32:32 dmcmahill Exp $
+$NetBSD: patch-an,v 1.5 2004/11/12 10:45:45 adam Exp $
 
-passdown {C,F}FLAGS and also quote stuff so
-CC=gcc -pipe
-works
-
---- Makefile.aimk.orig	Mon Aug 11 10:38:48 1997
-+++ Makefile.aimk	Tue May 15 22:29:18 2001
-@@ -34,9 +34,9 @@
+--- Makefile.aimk.orig	2003-03-28 18:29:52.000000000 +0000
++++ Makefile.aimk
+@@ -34,10 +34,9 @@ SHELL		=	/bin/sh
  #
  
--PVMOPTS		=	CC=$(CC) \
--				F77=$(F77)
-+PVMOPTS		=	CC="$(CC)" \
-+			F77="$(F77)" \
-+			CFLOPTS="$(CFLAGS)" \
-+			FFLOPTS="$(FFLAGS)" 
- 
--#				CFLOPTS=$(CFLOPTS)
--#				FFLOPTS=$(FFLOPTS)
+ PVMOPTS		=	CC="$(CC)" \
+-				F77="$(F77)"
+-
+-#				CFLOPTS="$(CFLOPTS)"
+-#				FFLOPTS="$(FFLOPTS)"
++				F77="$(F77)" \
++				CFLOPTS="$(CFLAGS)" \
++				FFLOPTS="$(FFLAGS)"
  #				PVMDIR=$(PVMDIR)
  
+ #

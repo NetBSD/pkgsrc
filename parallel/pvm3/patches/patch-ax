@@ -1,8 +1,8 @@
-$NetBSD: patch-ax,v 1.4 2004/03/12 01:14:00 dmcmahill Exp $
+$NetBSD: patch-ax,v 1.5 2004/11/12 10:45:45 adam Exp $
 
---- lib/pvmgetarch.orig	Thu Sep 27 21:24:04 2001
+--- lib/pvmgetarch.orig	2004-02-03 20:12:05.000000000 +0000
 +++ lib/pvmgetarch
-@@ -141,17 +141,27 @@ if [ "$ARCH" = UNKNOWN ]; then
+@@ -143,17 +143,27 @@ if [ "$ARCH" = UNKNOWN ]; then
  		# sun3)   ARCH=NETBSDSUN3 ;;  --> NETBSDM68K
  		case "`/usr/bin/uname -p`" in
  		alpha)   ARCH=NETBSDALPHA ;;
