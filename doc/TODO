@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.480 2003/04/18 22:31:52 wiz Exp $
+$NetBSD: TODO,v 1.481 2003/04/20 15:15:28 cjep Exp $
 
 Suggested new packages
 ======================
@@ -63,8 +63,7 @@ Suggested new packages
 	http://www.tutos.org [agc is looking at this one]
 
 	vmsbackup
-	Read VMS backup tapes. [cjep is looking at this one, but
-			hasn't got anything to test against.]
+	Read VMS backup tapes. [cjep has put a package into pkgsrc-wip.]
 	http://garbo.uwasa.fi/pub/unix/vmsbackup/
 
 	xmltv
