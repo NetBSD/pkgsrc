@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9235 2005/02/20 15:45:25 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9236 2005/02/20 16:00:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -979,3 +979,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnetman to 20050211 [dmcmahill 2005-02-20]
 	Added goom-2004.0 [wiz 2005-02-20]
 	Updated mips64emul to 0.3 [xtraeme 2005-02-20]
+	Updated libvisual to 0.2.0 [wiz 2005-02-20]
+	Updated libvisual-bmp to 0.2.0 [wiz 2005-02-20]
+	Removed libvisual-gforce [wiz 2005-02-20]
+	Removed libvisual-nebulus [wiz 2005-02-20]
+	Updated libvisual-plugins to 0.2.0 [wiz 2005-02-20]
+	Updated libvisual-xmms to 0.2.0 [wiz 2005-02-20]
