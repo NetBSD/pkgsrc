@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/12/24 00:09:55 ben Exp $
+$NetBSD: MESSAGE,v 1.2 2004/03/12 02:55:49 snj Exp $
 
 You will need to configure xmms-meta-input by adding player scripts to
-${PKG_PREFIX}/lib/xmms/Input/Meta.  Example player scripts may be found
-in ${PKG_PREFIX}/share/xmms-meta-input.
+${PREFIX}/lib/xmms/Input/Meta.  Example player scripts may be found
+in ${PREFIX}/share/xmms-meta-input.
 
 ===========================================================================
