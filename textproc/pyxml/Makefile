@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/08/20 12:54:21 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2002/08/29 16:11:22 drochner Exp $
 #
 
 DISTNAME=	PyXML-0.8
@@ -16,6 +16,7 @@ USE_BUILDLINK_ONLY=	yes
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 PYSETUPBUILDARGS+=	--with-libexpat=${BUILDLINK_DIR}
+PYSETUPBUILDARGS+=	--ldflags=-Wl,-R${BUILDLINK_PREFIX.expat}/lib
 
 PYXML_SCRIPTS=	scripts/xmlproc_parse \
 		scripts/xmlproc_val
