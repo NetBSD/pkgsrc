@@ -23,6 +23,10 @@ AC_SUBST(AUTOCONF)
 AUTOHEADER=${AUTOHEADER-"$srcdir/missing --run autoheader"}
 AC_SUBST(AUTOHEADER)
 
+dnl Checks for libraries.
+dnl
+AC_CHECK_LIB(util, fparseln)
+
 dnl Checks for header files.
 AC_HEADER_STDC
 AC_CHECK_HEADERS([sys/endian.h sys/file.h sys/mkdev.h sys/param.h])
@@ -63,7 +67,7 @@ AC_FUNC_MALLOC
 AC_FUNC_STRERROR_R
 AC_FUNC_VPRINTF
 
-AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv glob inet_ntop \
+AC_REPLACE_FUNCS([err fgetln fseeko getenv glob inet_ntop \
 		inet_pton lchflags lchmod lchown lutimes mkstemp setenv \
 		setprogname sl_init snprintf strdup strerror strlcat \
 		strlcpy strptime strsep strtoll timegm usleep])
@@ -82,9 +86,9 @@ AC_CHECK_FUNCS([getpassphrase getpgrp memmove poll select])
 if test $ac_cv_func_getpgrp = yes; then
 	AC_FUNC_GETPGRP
 fi
-dnl if test $ac_cv_lib_util_fparseln != yes; then
-dnl 	AC_REPLACE_FUNCS([fparseln])
-dnl fi
+if test $ac_cv_lib_util_fparseln != yes; then
+	AC_REPLACE_FUNCS([fparseln])
+fi
 
 if test $ac_cv_type_long_long = yes -a $ac_cv_sizeof_off_t -ge 8; then
 
