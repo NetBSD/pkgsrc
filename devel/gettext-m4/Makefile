@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:20:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:30:40 grant Exp $
 
 DISTNAME=		gettext-0.11.5
 PKGNAME=		gettext-m4-0.11.5
@@ -6,7 +6,7 @@ SVR4_PKGNAME=		gttm4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=gettext/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gettext/gettext.html
 COMMENT=		autoconf/automake m4 files for GNU NLS library
 

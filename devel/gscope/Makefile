@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:51:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:30:58 grant Exp $
 #
 
 DISTNAME=		gscope-0.4.1
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gscope/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://gscope.sourceforge.net/
 COMMENT=		software oscilloscope library
 

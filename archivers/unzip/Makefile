@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/06/18 09:22:14 agc Exp $
+# $NetBSD: Makefile,v 1.40 2003/07/17 21:21:45 grant Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
 		ftp://uiarchive.cso.uiuc.edu/pub/packages/zip/src/ \
 		ftp://ftp.fu-berlin.de/pub/unix/tools/archivers/unzip/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/UnZip.html
 COMMENT=	List, test and extract compressed files in a ZIP archive
 

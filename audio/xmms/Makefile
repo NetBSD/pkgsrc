@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/07/13 13:50:39 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2003/07/17 21:23:52 grant Exp $
 #
 
 DISTNAME=	xmms-1.2.7
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.2.x/ \
 		ftp://ftp.sunet.se/pub/multimedia/xmms/1.2.x/
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.xmms.org/
 COMMENT=	X Multimedia System --- An audio player with a Winamp GUI
 

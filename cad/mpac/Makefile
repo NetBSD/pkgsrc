@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/29 01:12:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:25:12 grant Exp $
 #
 
 DISTNAME=	mpac-0.2.2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://goemon.polito.it/ftp/pub/software/lethal/Elettronica/antenna/
 
-MAINTAINER=	dmcmahill@netbsd.org
+MAINTAINER=	dmcmahill@NetBSD.org
 COMMENT=	Microstrip Patch Antenna Calculator
 
 DEPENDS+=	tk>=8.1:../../x11/tk

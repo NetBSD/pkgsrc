@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/18 09:22:16 agc Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:23:04 grant Exp $
 #
 
 DISTNAME=	oggasm_1.4.0
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	audio
 MASTER_SITES=	http://oggasm.sourceforge.net/
 
-MAINTAINER=	rxg@netbsd.org
+MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://oggasm.sourceforge.net/
 COMMENT=	perform batch conversion of mp3s into oggs
 

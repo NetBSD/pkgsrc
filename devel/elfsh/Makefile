@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:30:25 grant Exp $
 #
 
 VERS=		0.43b
@@ -9,7 +9,7 @@ MASTER_SITES=	http://devhell.org/projects/elfsh/files/ \
 	http://www.hert.org/projects/elfsh/files/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://devhell.org/projects/elfsh/
 COMMENT=	ELF format exploration shell
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/23 07:10:41 uebayasi Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:29:52 grant Exp $
 #
 
 DISTNAME=	check-0.8.4
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=check/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://check.sourceforge.net/
 COMMENT=	unit test framework for C
 

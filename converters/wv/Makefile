@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/07/13 13:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2003/07/17 21:27:43 grant Exp $
 #
 
 DISTNAME=		wv-0.7.4
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		converters
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.wvWare.com/
 COMMENT=		Microsoft Word 6, 7, 8, and 9 (95/97/2000) doc to HTML/LaTeX converter
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/01/10 14:26:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:26:33 grant Exp $
 #
 
 DISTNAME=	zephyr-mode-2.5.20
 CATEGORIES=	chat net
 MASTER_SITES=	http://www-2.cs.cmu.edu/People/dkindred/zephyr-mode/
 
-MAINTAINER=	sommerfeld@netbsd.org
+MAINTAINER=	sommerfeld@NetBSD.org
 HOMEPAGE=	http://www-2.cs.cmu.edu/People/dkindred/zephyr-mode/zephyr.html
 COMMENT=	CMU Emacs-based Zephyr client
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/09/01 16:34:42 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:25:38 grant Exp $
 #
 
 DISTNAME=	epic4-1.1.6
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-ALPHA/	\
 		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-ALPHA/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.epicsol.org/
 COMMENT=	The (E)nhanced (P)rogrammable (I)RC-II (C)lient
 

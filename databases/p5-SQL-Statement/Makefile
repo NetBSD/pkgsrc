@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:21:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:28:43 grant Exp $
 #
 
 DISTNAME=	SQL-Statement-1.005
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5sqs
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SQL/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 # HOMEPAGE=	http://
 COMMENT=	small, abstract SQL engine
 

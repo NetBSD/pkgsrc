@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:50:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:24:09 grant Exp $
 #
 
 DISTNAME=	JESS-2.9.1
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	xmms audio
 MASTER_SITES=	http://arquier.free.fr/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://arquier.free.fr/
 COMMENT=	XMMS plugin with Blur, image distortion, and others
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:21:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:27:15 grant Exp $
 
 DISTNAME=	ish-1.11
 CATEGORIES=	converters
 MASTER_SITES=	ftp://ports.jp.freebsd.org/pub/FreeBSD-jp/ports-jp/LOCAL_PORTS/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Binary-to-text file-encoder
 
 MAKEFILE=	makefile
