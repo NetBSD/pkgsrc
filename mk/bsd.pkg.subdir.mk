@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.36 2000/05/29 00:54:25 hubertf Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.37 2000/06/03 15:25:16 mycroft Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -48,10 +48,6 @@
 STRIPFLAG?=	-s
 .endif
 
-.if !defined(OPSYS)	# XXX !!
-OPSYS!=	uname -s
-.endif
-
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
 ECHO?=		/bin/echo
@@ -83,8 +79,8 @@ _SUBDIRUSE: .USE
 		if [ "$$OK" = "" ]; then \
 			cd ${.CURDIR}/$${edir}; \
 			${ECHO_MSG} "===> ${_THISDIR_}$${edir}"; \
-			${MAKE} ${.TARGET:realinstall=install} \
-				"_THISDIR_=${_THISDIR_}$${edir}/" || /usr/bin/true ; \
+			${MAKE} ${MAKEFLAGS} "_THISDIR_=${_THISDIR_}$${edir}/" \
+			    ${.TARGET:realinstall=install} || true; \
 		fi; \
 	done
 
@@ -94,7 +90,7 @@ ${SUBDIR}::
 	else \
 		cd ${.CURDIR}/${.TARGET}; \
 	fi; \
-	${MAKE} all
+	${MAKE} ${MAKEFLAGS} all
 
 .for __target in all fetch fetch-list package extract configure build clean \
 		cleandir distclean depend describe reinstall tags checksum \
@@ -124,13 +120,13 @@ readmes: readme _SUBDIRUSE
 .if !target(readme)
 readme:
 	@if [ -f README.html ]; then ${MV} -f README.html README.html.BAK ; fi
-	@${MAKE} README.html _README_TYPE=$@
+	@${MAKE} ${MAKEFLAGS} README.html _README_TYPE=$@
 .endif
 
 .if !target(cdrom-readme)
 cdrom-readme:
 	@if [ -f README.html ]; then ${MV} -f README.html README.html.BAK ; fi
-	@${MAKE} README.html _README_TYPE=$@
+	@${MAKE} ${MAKEFLAGS} README.html _README_TYPE=$@
 .endif
 
 .if defined(PKGSRCTOP)
@@ -147,7 +143,7 @@ README.html: .PRECIOUS
 .if defined(PKGSRCTOP)
 	@${ECHO} -n '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`${ECHO} ${entry} | ${HTMLIFY}`"'</a>: <TD>' >> $@.tmp
 .else
-	@${ECHO} -n '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} package-name | ${HTMLIFY}`</a>: <TD>" >> $@.tmp
+	@${ECHO} -n '<TR><TD VALIGN=TOP><a href="'${entry}/README.html'">'"`cd ${entry}; ${MAKE} ${MAKEFLAGS} package-name | ${HTMLIFY}`</a>: <TD>" >> $@.tmp
 .endif
 .if exists(${entry}/pkg/COMMENT)
 	@${HTMLIFY} ${entry}/pkg/COMMENT >> $@.tmp
@@ -181,7 +177,7 @@ README.html: .PRECIOUS
 	fi
 	@${RM} -f $@.tmp $@.tmp2 $@.tmp3 $@.tmp4
 .for subdir in ${SUBDIR}
-	@cd ${subdir} && ${MAKE} "_THISDIR_=${_THISDIR_}${.CURDIR:T}/" ${_README_TYPE}
+	@cd ${subdir} && ${MAKE} ${MAKEFLAGS} "_THISDIR_=${_THISDIR_}${.CURDIR:T}/" ${_README_TYPE}
 .endfor
 
 .if !target(show-distfiles)
@@ -196,7 +192,7 @@ show-distfiles:
 			${ECHO_MSG} "===> ${_THISDIR_}$${entry} non-existent"; \
 		fi;							\
 		if [ "$$OK" = "" ]; then				\
-			cd ${.CURDIR}/$${edir} && ${MAKE} show-distfiles; \
+			cd ${.CURDIR}/$${edir} && ${MAKE} ${MAKEFLAGS} show-distfiles; \
 		fi;							\
 	done
 .endif
