@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/04/17 11:49:21 shell Exp $
+$NetBSD: distinfo,v 1.8 2002/04/27 08:06:21 shell Exp $
 
-SHA1 (Test-Simple-0.43.tar.gz) = e9635c206fd1226cfe62a6a4da8123140a82320b
-Size (Test-Simple-0.43.tar.gz) = 40798 bytes
+SHA1 (Test-Simple-0.44.tar.gz) = 50bb36a03c40f99a065d5bfe1060db98ef998855
+Size (Test-Simple-0.44.tar.gz) = 41821 bytes
