@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/20 14:43:32 mjl Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/01/08 06:24:41 schmonz Exp $
 bin/mDNSBrowse
 bin/mDNSPublish
+bin/mDNSQuery
+bin/mDNSResolve
 bin/mDNSResponder
 include/howl/corby/buffer.h
 include/howl/corby/channel.h
@@ -23,6 +25,7 @@ include/howl/salt/signal.h
 include/howl/salt/socket.h
 include/howl/salt/time.h
 lib/libhowl.la
+lib/libmDNSResponder.la
 lib/pkgconfig/howl.pc
 man/man8/mDNSResponder.8
 share/howl/help/address-summary.html

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/11/20 14:43:32 mjl Exp $
+$NetBSD: patch-aa,v 1.3 2005/01/08 06:24:41 schmonz Exp $
 
---- src/lib/howl/socket.c.orig	2004-11-20 14:57:33.000000000 +0100
-+++ src/lib/howl/socket.c	2004-11-20 14:57:38.000000000 +0100
-@@ -261,7 +261,7 @@
+--- src/lib/howl/socket.c.orig	2004-10-27 13:39:52.000000000 -0400
++++ src/lib/howl/socket.c
+@@ -261,7 +261,7 @@ sw_multicast_socket_super_init(
  	err = sw_translate_error(self->m_desc != SW_INVALID_SOCKET, sw_socket_errno());
  	sw_check_okay_log(err, exit);
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2004/11/20 14:43:32 mjl Exp $
     res = setsockopt(self->m_desc, SOL_SOCKET, SO_REUSEPORT, (char*) &opt, sizeof(opt));
  #else
  	res = setsockopt(self->m_desc, SOL_SOCKET, SO_REUSEADDR, (char*) &opt, sizeof(opt));
-@@ -375,6 +375,7 @@
+@@ -375,6 +375,7 @@ sw_socket_join_multicast_group(
  #endif
  	int							res;
  	sw_result					err;
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.2 2004/11/20 14:43:32 mjl Exp $
  
     /*
        initialize the group membership
-@@ -425,7 +426,7 @@
+@@ -425,7 +426,7 @@ sw_socket_join_multicast_group(
  	err = sw_translate_error(res == 0, sw_socket_errno());
  	sw_check_okay_log(err, exit);
  
