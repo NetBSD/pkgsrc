@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1 2000/05/02 15:17:47 pooka Exp $
+
+--- makefile.orig	Wed Sep 15 00:38:17 1999
++++ makefile	Tue May  2 17:11:25 2000
+@@ -6,7 +6,7 @@
+ #
+ # Supports:	hpux, hpux_no_ansi, hpux-10.1, hpux_no_ansi-10.1,
+ #		sppux, sppux-10.1, ghpux, sppux, 
+-#		convex, FreeBSD, OpenBSD
++#		convex, FreeBSD, OpenBSD, NetBSD
+ 
+ 
+ all:  
+@@ -29,6 +29,7 @@
+ 	@echo "\t->   IRIX                 (32bit)   <-"
+ 	@echo "\t->   IRIX64               (64bit)   <-"
+ 	@echo "\t->   linux                (32bit)   <-"
++	@echo "\t->   NetBSD               (32bit)   <-"
+ 	@echo "\t->   openbsd              (32bit)   <-"
+ 	@echo "\t->   OSFV3                (64bit)   <-"
+ 	@echo "\t->   OSFV4                (64bit)   <-"
+@@ -208,6 +209,15 @@
+ freebsd: iozone_freebsd.o libbif.o
+ 	cc -O -Dunix -DHAVE_ANSIC_C -DNO_THREADS -DSHARED_MEM \
+ 		iozone_freebsd.o libbif.o -o iozone
++
++#
++# GNU C compiler NetBSD build with no threads, no largefiles, no async I/O
++#
++
++NetBSD: iozone_netbsd.o libbif.o
++	cc -O -Dunix -DHAVE_ANSIC_C -DNO_THREADS -DSHARED_MEM \
++		iozone_netbsd.o libbif.o -o iozone
++
+ #
+ # GNU C compiler OpenBSD build with no threads, no largefiles, no async I/O
+ #
+@@ -459,6 +469,15 @@
+ 	cc -c -O -Dunix -Dbsd4_2 -DHAVE_ANSIC_C -DNO_THREADS \
+ 		-DSHARED_MEM iozone.c -o iozone_freebsd.o
+ 	cc -c -O -Dunix -Dbsd4_2 -DHAVE_ANSIC_C -DNO_THREADS \
++		-DSHARED_MEM libbif.c -o libbif.o
++
++iozone_netbsd.o: iozone.c libbif.c
++	@echo ""
++	@echo "Build Iozone for NetBSD"
++	@echo ""
++	cc -c -O -Dunix -Dbsd4_4 -DHAVE_ANSIC_C -DNO_THREADS \
++		-DSHARED_MEM iozone.c -o iozone_netbsd.o
++	cc -c -O -Dunix -Dbsd4_4 -DHAVE_ANSIC_C -DNO_THREADS \
+ 		-DSHARED_MEM libbif.c -o libbif.o
+ 
+ iozone_openbsd.o: iozone.c libbif.c

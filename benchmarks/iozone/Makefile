@@ -1,32 +1,27 @@
-# $NetBSD: Makefile,v 1.8 2000/03/16 12:16:52 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/05/02 15:17:45 pooka Exp $
 
-DISTNAME=		iozone
-PKGNAME=		iozone-1.14b
+DISTNAME=		iozone3_9
+PKGNAME=		iozone-3.09
 CATEGORIES=		benchmarks
-MASTER_SITES=		ftp://ftp.bme.hu/pub/OS/Linux/tsx-11/sources/test_suites/
-EXTRACT_SUFX=		.tar.Z
+MASTER_SITES=		http://www.iozone.org/src/stable/
+EXTRACT_SUFX=		.tar
 
 MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.iozone.org/
 
-NO_WRKSUBDIR=		yes
+WRKSRC=			${WRKDIR}/src
+MAKEFILE=		makefile
 
-do-build:
-	(cd ${WRKDIR} &&					\
-	case `uname -s` in					\
-	SunOS)							\
-		${CC} -O2 -DSYSTYPE_SYSV -o iozone iozone.c ;;	\
-	NetBSD)							\
-		${CC} -O2 -o iozone iozone.c ;;			\
-	esac)
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "NetBSD")
+  ALL_TARGET=		NetBSD
+.elif (${OPSYS} == "SunOS")
+  ALL_TARGET=		Solaris
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iozone ${PREFIX}/bin
-
-benchmark:
-	@(cd ${WRKSRC}; ./iozone 100 | tee iozone.out)
-
-results:
-	-@${MKDIR} /tmp/benches/`domainname`
-	-@${CP} ${WRKSRC}/iozone.out /tmp/benches/`domainname`/iozone.`uname`-`uname -m`-`uname -r`.`hostname`
+	${INSTALL_MAN} ${WRKSRC}/iozone.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
