@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/02/25 04:17:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/26 16:56:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 
 DISTNAME=	urt
@@ -19,6 +19,7 @@ DEPENDS+=	netpbm-9.*:../netpbm
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z
 
+USE_LIBTOOL=	yes
 USE_X11=	yes
 NO_WRKSUBDIR=   yes
 CONFIGURE_SCRIPT=./Configure
