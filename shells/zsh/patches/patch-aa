@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2000/01/06 22:42:15 windsor Exp $
+$NetBSD: patch-aa,v 1.4 2001/06/05 16:28:08 jtb Exp $
 
---- Src/Makefile.in.orig	Thu Jan  6 15:39:29 2000
-+++ Src/Makefile.in	Thu Jan  6 15:40:03 2000
-@@ -148,7 +148,7 @@
- # install binary, creating install directory if necessary
- install.bin: zsh
- 	$(top_srcdir)/mkinstalldirs $(bindir)
--	-if [ -f $(bindir)/zsh ]; then mv $(bindir)/zsh $(bindir)/zsh.old; fi
-+	-if [ -f $(bindir)/zsh ]; then mv -f $(bindir)/zsh $(bindir)/zsh.old; fi
- 	$(INSTALL_PROGRAM) zsh $(bindir)/zsh
- 	-if [ -f $(bindir)/zsh-$(VERSION) ]; then rm -f $(bindir)/zsh-$(VERSION); fi
- 	ln $(bindir)/zsh $(bindir)/zsh-$(VERSION)
+--- Doc/Makefile.in.orig	Fri Jun  1 23:43:42 2001
++++ Doc/Makefile.in
+@@ -37,7 +37,7 @@
+ 
+ @DEFS_MK@
+ 
+-MAKEINFO = makeinfo
++MAKEINFO = makeinfo --no-split
+ TEXI2DVI = texi2dvi
+ DVIPS = dvips
+ TEXI2HTML = texi2html -expandinfo -split_chapter
