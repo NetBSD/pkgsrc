@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.355 2004/09/03 17:22:42 reed Exp $
+# $NetBSD: Packages.txt,v 1.356 2004/09/09 12:25:27 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -422,13 +422,10 @@ policy:
     PKG_DEVELOPER?=         yes
     _ACCEPTABLE=            yes
 
-If you wish to use xpkgwedge for the entire build, then add:
-
-    BULK_PREREQ+=           pkgtools/xpkgwedge
-
 Other packages which must be installed during the bulk build to modify the
 build behaviour may be added to the BULK_PREREQ variable.  Note that currently
 the only package for which BULK_PREREQ makes sense is xpkgwedge.
+
 
  3.2.1.2 build.conf
  ==================
