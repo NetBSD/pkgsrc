@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2004/04/25 13:07:19 tron Exp $
+# $NetBSD: Makefile.common,v 1.39 2004/06/01 15:01:17 taya Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -70,6 +70,7 @@ LDFLAGS+=	-Wl,${RPATH_FLAG}${MOZ_LIBDIR}
 MAKE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
 CONFIGURE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
 CONFIGURE_ARGS+=	--enable-svg
+CONFIGURE_ARGS+=	--enable-svg-renderer-libart
 .endif
 
 .ifdef BUILD_CALENDAR
@@ -87,6 +88,9 @@ CONFIGURE_ARGS+=	--enable-xinerama
 # avoid creating a .mozilla directory in the users home
 # directory
 SCRIPTS_ENV+=	HOME="${WRKDIR}"
+.if (${MOZCONFDIR} != "")
+SCRIPTS_ENV+=	TMPMOZCONFDIR="${WRKDIR}/${MOZCONFDIR}"
+.endif
 
 PLIST_SUBST+=	MOZILLA=${MOZILLA}
 PLIST_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN}

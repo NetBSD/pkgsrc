@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.129 2004/04/25 13:19:56 tron Exp $
+# $NetBSD: Makefile,v 1.130 2004/06/01 15:01:17 taya Exp $
 
 MOZILLA=	mozilla
 MOZILLA_BIN=	mozilla-bin
+MOZCONFDIR=	.mozilla
 MOZ_VER=	1.6
 PKGREVISION=	2
 EXTRACT_SUFX=	.tar.bz2
