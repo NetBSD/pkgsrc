@@ -1,14 +1,15 @@
-$NetBSD: distinfo,v 1.11 2004/10/09 14:01:03 mjl Exp $
+$NetBSD: distinfo,v 1.12 2004/11/30 16:44:47 adam Exp $
 
-SHA1 (pwlib-v1_8_2-src-tar.gz) = 2da1504a43763a3127397c9be89ae83fa33c4662
-Size (pwlib-v1_8_2-src-tar.gz) = 1847698 bytes
-SHA1 (patch-aa) = 8974c5a843e6a426d63835aff1dae1a8857edfd1
+SHA1 (pwlib-v1_8_3-src-tar.gz) = d3a6eff571ebfd37889e75cbaef75983e6119d2e
+Size (pwlib-v1_8_3-src-tar.gz) = 1900922 bytes
+SHA1 (patch-aa) = f07517555dee8ba1a0b4ecad93aa36a57ae024b2
 SHA1 (patch-ab) = 7d7e09d5403a8b98c832e286eb8403d457164d0e
-SHA1 (patch-ac) = 07fa4e45663840e273e21b8f240ec749fff4a13a
-SHA1 (patch-af) = 6e1042c5c34df4ebb9336a36466a2483fcd2528a
+SHA1 (patch-ac) = c0284e67ce689d774b715be4dc17214aa88c3d4a
+SHA1 (patch-ad) = e7da3f984d9c0800aba0c69583d28ebb8b1e3b6e
+SHA1 (patch-af) = c38f646d75d57f17101ce42813f8e66232778447
 SHA1 (patch-ai) = 68e6b9ef55695a01193c1e77eb7960232311e695
 SHA1 (patch-aj) = 93e039bb60c5cb75abb916e2797c644b67a6b9b0
-SHA1 (patch-al) = 3eca475154580f2cdd461f2e6da131f532173b95
+SHA1 (patch-al) = 306d4e7882c1e717ae51f0eda70d08e89b40d20e
 SHA1 (patch-am) = 5b80fce03de136913dadfdbbdc161edef2f72919
 SHA1 (patch-an) = f79776e86d32bd15fd9f8fe1c0c02196ce4bcd3e
 SHA1 (patch-ba) = 4fb25dba8dc9143d7e655194894db1ee4221a1cf

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/10/09 14:01:03 mjl Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/11/30 16:44:47 adam Exp $
 include/ptbuildopts.h
 include/ptbuildopts.h.in
 include/ptclib/asnber.h
@@ -118,6 +118,7 @@ include/ptlib/unix/ptlib/filepath.h
 include/ptlib/unix/ptlib/icmpsock.h
 include/ptlib/unix/ptlib/ipdsock.h
 include/ptlib/unix/ptlib/ipsock.h
+include/ptlib/unix/ptlib/maccoreaudio.h
 include/ptlib/unix/ptlib/mutex.h
 include/ptlib/unix/ptlib/pdirect.h
 include/ptlib/unix/ptlib/pipechan.h
