@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/25 04:18:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/25 22:50:19 wiz Exp $
 #
 
 DISTNAME=		xdm-krb4-3.3.6.2
@@ -22,13 +22,13 @@ post-patch:
 
 pre-install:
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
-		<${FILESDIR}/xdm-krb4.sh                                      \
-		>${WRKDIR}/xdm-krb4.sh
+		${FILESDIR}/xdm_krb4                                          \
+		>${WRKDIR}/xdm_krb4   
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/rc.d
 	${INSTALL_DATA}                                                       \
-		${WRKDIR}/xdm-krb4.sh                                         \
-		${PREFIX}/etc/rc.d/xdm-krb4
+		${WRKDIR}/xdm_krb4                                            \
+		${PREFIX}/etc/rc.d/xdm_krb4
 
 .include "../../mk/bsd.pkg.mk"
