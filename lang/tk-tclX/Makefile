@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/10/07 02:01:37 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/11/04 01:01:35 minskim Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -28,8 +28,8 @@ TEST_TARGET=		test
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ENV+=		\
-	PKGSRC_TCL_SRC_DIR="${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.6" \
-	PKGSRC_TK_SRC_DIR="${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.4.6"
+	PKGSRC_TCL_SRC_DIR="${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.7" \
+	PKGSRC_TK_SRC_DIR="${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.4.7"
 
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
@@ -48,10 +48,10 @@ INSTALLATION_DIRS=	bin include
 
 post-extract:
 	${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
-	@if [ ! -r ${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.6 ]; then	\
+	@if [ ! -r ${PKGSRCDIR}/lang/tcl/${WRKDIR:T}/tcl8.4.7 ]; then	\
 		cd ../../lang/tcl && ${MAKE} extract;			\
 	fi
-	@if [ ! -r ${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.4.6 ]; then	\
+	@if [ ! -r ${PKGSRCDIR}/x11/tk/${WRKDIR:T}/tk8.4.7 ]; then	\
 		cd ../../x11/tk && ${MAKE} extract;			\
 	fi
 
