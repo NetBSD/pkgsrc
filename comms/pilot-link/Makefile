@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 1998/06/20 09:26:33 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/07/06 18:46:07 nathanw Exp $
 #
 
-DISTNAME=	pilot-link.0.8.11
+DISTNAME=	pilot-link.0.8.13
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ryeham.ee.ryerson.ca/pub/PalmOS/
 
