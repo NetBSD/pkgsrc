@@ -1,15 +1,15 @@
-# $NetBSD: buildlink2.mk,v 1.11 2003/07/03 18:27:29 jschauma Exp $
+# $NetBSD: buildlink2.mk,v 1.12 2003/07/03 18:47:41 jschauma Exp $
 
 .if !defined(MESALIB_BUILDLINK2_MK)
 MESALIB_BUILDLINK2_MK=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
+MESA_REQD?=			3.4.2
+
 .if exists(${X11PREFIX}/lib/libGL.so.5) && empty(MESA_REQD:M5.[0-9]*)
 MESA_REQD=			5.0
 .endif
-
-MESA_REQD?=			3.4.2
 
 BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
