@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/10/08 06:22:07 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/28 09:55:49 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.3.0
+XFCE4_VERSION=	0.4.0
 
 DISTNAME=	xfce4-showdesktop-plugin-${XFCE4_VERSION}
 CATEGORIES=	sysutils
