@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.8 2004/11/02 00:44:00 erh Exp $	*/
+/*	$NetBSD: str.c,v 1.9 2004/11/10 16:50:39 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: str.c,v 1.8 2004/11/02 00:44:00 erh Exp $");
+__RCSID("$NetBSD: str.c,v 1.9 2004/11/10 16:50:39 wiz Exp $");
 #endif
 #endif
 
@@ -163,6 +163,7 @@ static const test_t   tests[] = {
 static const test_t	modifiers[] = {
 	{	"alpha",	5,	Alpha	},
 	{	"beta",		4,	Beta	},
+	{	"pre",		3,	RC	},
 	{	"rc",		2,	RC	},
 	{	"pl",		2,	Dot	},
 	{	"_",		1,	Dot	},
