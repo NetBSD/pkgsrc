@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2002,v 1.4 2003/04/21 13:38:31 taca Exp $
+$NetBSD: CHANGES-2002,v 1.5 2003/11/30 14:12:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3715,7 +3715,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated lynx to 2.8.4.1.4 [itojun 2002-11-25]
 	vcdimager: Downgraded to 0.6.2 [wiz 2002-11-25]
 	Added vcdimager-devel-0.7.12 [wiz 2002-11-25]
-	Updated squid to 2.5.1nb1 [taca 2002-11-25]
+	Updated squid to 2.5.1nb2 [taca 2002-11-25]
 	Updated gtk-gnutella to 0.91.1 [jschauma 2002-11-25]
 	Updated tcl-scotty to 2.1.11 [jwise 2002-11-25]
 	Updated tkined to 1.4.11 [jwise 2002-11-25]
