@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/13 22:27:38 snj Exp $
 #
 
 DISTNAME=	sympa-3.4.2
@@ -27,7 +27,7 @@ DEPENDS.SunOS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 
 OPSYSVARS+=	DEPENDS
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-piddir=/var/run
@@ -41,7 +41,7 @@ PKG_USERS?=	sympa:sympa
 post-install:
 	${CHMOD} ug-s ${PREFIX}/bin/wwsympa.fcgi
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX=	${LOCALBASE}/sympa
