@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/08/23 14:28:26 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/09/05 11:09:41 wiz Exp $
 pvm3/bin/@pvmarch@/dbwtest
 pvm3/bin/@pvmarch@/fgexample
 pvm3/bin/@pvmarch@/fmaster1
@@ -128,6 +128,7 @@ pvm3/lib/@pvmarch@/libpvmtrc.a
 pvm3/lib/@pvmarch@/pvm
 pvm3/lib/@pvmarch@/pvmd3
 pvm3/lib/@pvmarch@/pvmgs
+man/man1/PVM.1
 man/man1/aimk.1
 man/man1/pvm.1
 man/man1/pvm_intro.1
