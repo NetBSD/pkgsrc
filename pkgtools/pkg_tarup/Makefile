@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2004/10/06 15:27:28 erh Exp $
+# $NetBSD: Makefile,v 1.24 2004/10/29 14:51:41 tv Exp $
 
-DISTNAME=	pkg_tarup-1.6.3
+DISTNAME=	pkg_tarup-1.6.4
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,6 +17,7 @@ NO_MTREE=	yes
 # Set SCRIPT_SUBST to substitute "@VARIABLE@" with "value"
 SCRIPT_SUBST+=	\
 		ECHO=${ECHO:Q}				\
+		ECHO_N=${ECHO_N:Q}			\
 		GREP=${GREP:Q}				\
 		HEAD=${HEAD:Q}				\
 		ID=${ID:Q}				\
@@ -24,9 +25,10 @@ SCRIPT_SUBST+=	\
 		PKG_SUFX=${PKG_SUFX:Q}			\
 		PREFIX=${PREFIX:Q}			\
 		PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}	\
-		SED=${SED:Q}			\
+		ROOT_USER=${ROOT_USER:Q}		\
+		SED=${SED:Q}				\
 		SH=${SH:Q}				\
-		SU=${SU:Q}				\
+		SU_CMD=${SU_CMD:Q}			\
 		XARGS=${XARGS:Q}
 
 SCRIPT_SUBST_SED=	${SCRIPT_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
