@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/15 23:27:07 jlam Exp $
+$NetBSD: distinfo,v 1.2 2002/08/20 08:52:33 uebayasi Exp $
 
-SHA1 (sitecopy-0.10.15.tar.gz) = 810bf312b830366985e9f6182b8379d28f9b3118
-Size (sitecopy-0.10.15.tar.gz) = 627536 bytes
-SHA1 (patch-aa) = ebd41e69b9a6c4ba88bb344d8dce67aa669e248f
+SHA1 (sitecopy-0.11.4.tar.gz) = 765e40e769e91fff0323e4cae73ad8048b453a2c
+Size (sitecopy-0.11.4.tar.gz) = 737326 bytes
+SHA1 (patch-aa) = ba1955f8cd86c16bca08872105db91c1532dc882
