@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.2 2004/12/21 18:56:44 drochner Exp $
+$NetBSD: patch-bc,v 1.1 2004/12/21 18:56:44 drochner Exp $
 
---- m4/ffmpeg.m4.orig	2004-12-16 00:57:33.000000000 +0100
-+++ m4/ffmpeg.m4
-@@ -50,14 +50,6 @@ if test x"$external_ffmpeg" != "xno"; th
+--- aclocal.m4.orig	2004-12-18 01:22:24.000000000 +0100
++++ aclocal.m4
+@@ -7886,14 +7886,6 @@ if test x"$external_ffmpeg" != "xno"; th
          CPPFLAGS="${FFMPEG_CPPFLAGS} ${ac_save_CPPFLAGS}"
          LDFLAGS="${FFMPEG_LIBS} ${ac_save_LDFLAGS}"
    
