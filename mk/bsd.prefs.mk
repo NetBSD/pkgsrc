@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.8 1999/05/26 14:47:07 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.9 1999/06/23 17:06:21 christos Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -13,11 +13,20 @@
 BSD_PKG_MK=1 
 __PREFIX_SET__:=${PREFIX}
 
+.if exists(/usr/bin/uname)
+UNAME=/usr/bin/uname
+.elif exists(/bin/uname)
+UNAME=/bin/uname
+.else
+UNAME=echo Unknown
+.endif
+
 .ifndef OPSYS
-OPSYS!=			/usr/bin/uname -s
+OPSYS!=			${UNAME} -s
 .endif
 .ifndef OS_VERSION
-OS_VERSION!=		/usr/bin/uname -r
+OS_VERSION!=		${UNAME} -r
+OS_MAJOR_VERSION!=	echo ${OS_VERSION} | sed -e 's/\..*//g'
 .endif
 
 # Preload these for architectures not in all variations of bsd.own.mk.
@@ -31,13 +40,14 @@ GNU_ARCH.sparc?=	sparc
 GNU_ARCH.vax?=		vax
 MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
 
-.if (${OPSYS} == "NetBSD")
-LOWER_OPSYS?=		netbsd
-.elif (${OPSYS} == "SunOS")
-LOWER_OPSYS?=		solaris
+.if (${OPSYS} == "SunOS")
 LOWER_VENDOR?=		sun
-.elif !defined(LOWER_OPSYS)
+.endif
+.if !defined(LOWER_OPSYS)
 LOWER_OPSYS!=		echo ${OPSYS} | tr A-Z a-z
+.endif
+.if !defined(CAPITAL_OPSYS)
+CAPITAL_OPSYS!=		echo ${OPSYS} | tr a-z A-Z
 .endif
 
 LOWER_VENDOR?=
@@ -52,7 +62,7 @@ NEED_OWN_INSTALL_TARGET=no
 
 .include <bsd.own.mk>
 
-.if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS")
+.if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS") || (${OPSYS} == "Linux")
 SHAREOWN?=		${DOCOWN}
 SHAREGRP?=		${DOCGRP}
 SHAREMODE?=		${DOCMODE}
