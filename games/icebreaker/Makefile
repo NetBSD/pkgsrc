@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/07 07:05:50 snj Exp $
+# $NetBSD: Makefile,v 1.14 2004/06/26 09:16:10 grant Exp $
 #
 
 DISTNAME=	icebreaker-1.9.7
@@ -27,6 +27,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/icebreaker
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../devel/smpeg/buildlink3.mk"
+.include "../../multimedia/smpeg/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
