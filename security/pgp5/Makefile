@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/07/23 14:22:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/01 23:58:34 grant Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -11,8 +11,8 @@ MASTER_SITES=	ftp://ftp.pgpi.com/pub/pgp/5.0/unix/ \
 		ftp://ftp.ch.pgpi.com/pub/pgp/5.0/unix/ \
 		ftp://ftp.au.pgpi.com/pub/pgp/5.0/unix/ \
 		ftp://ftp.ifi.uio.no/pub/pgp/5.0/unix/ \
-		ftp://ftp.tuwien.ac.at/privacy/pgp/pgpi/5.0/unix/ \
-		http://gd.tuwien.ac.at/privacy/pgp/pgpi/5.0/unix/
+		ftp://ftp.tuwien.ac.at/privacy/pgp/5.0/unix/ \
+		http://ftp.tuwien.ac.at/privacy/pgp/5.0/unix/
 
 MAINTAINER=	mjl@NetBSD.org
 HOMEPAGE=       http://www.pgpi.com/
