@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.9 2000/08/21 20:31:51 hubertf Exp $
+$NetBSD: patch-ab,v 1.10 2000/11/09 04:46:22 hubertf Exp $
 
 --- xlock/xlock.c.orig	Mon Aug 21 16:14:05 2000
-+++ xlock/xlock.c	Mon Aug 21 22:26:06 2000
++++ xlock/xlock.c
 @@ -597,7 +597,9 @@
  #include <X11/extensions/dpms.h>
  #else /* XFree86 < 4.x */
@@ -12,3 +12,13 @@ $NetBSD: patch-ab,v 1.9 2000/08/21 20:31:51 hubertf Exp $
  extern int  DPMSGetTimeouts(Display *, unsigned short *, unsigned short *, unsigned short *);
  extern int  DPMSSetTimeouts(Display *, unsigned short, unsigned short, unsigned short);
  #endif
+@@ -3084,7 +3086,8 @@
+ #endif
+ 
+ #if defined( USE_SOUND ) && defined( USE_ESOUND )
+-        sound =( init_sound() != -1 );
++	/* only enable sound if not disabled - see NetBSD PR pkg/11185 */
++        sound = sound && ( init_sound() != -1 );
+ #endif
+ 
+ #ifdef USE_DTSAVER
