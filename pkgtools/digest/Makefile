@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/03/26 12:57:32 agc Exp $
+# $NetBSD: Makefile,v 1.16 2001/03/26 16:34:00 fredb Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -22,7 +22,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 BUILD_DEFS+=	MANINSTALL
 
 MAKE_ENV+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
-MAKE_ENV+=	VERSION="${VERSION}"
+MAKE_ENV+=	MANZ="${MANZ}" VERSION="${VERSION}"
 
 .include "../../mk/bsd.prefs.mk"
 
