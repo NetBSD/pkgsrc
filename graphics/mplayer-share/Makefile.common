@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2002/08/01 05:48:13 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2002/08/04 08:43:57 veego Exp $
 
 MPLAYER_DIST_VERSION=	0.90pre5
 
@@ -20,7 +20,7 @@ MAINTAINER?=		svs@ropnet.ru,zuntum@netbsd.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
 
 PATCHDIR=		${.CURDIR}/../../graphics/mplayer-share/patches
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-powerpc SunOS-*-*
 
 RESTRICTED?=		"unsure of the license"
 #	see http://www.mplayerhq.hu/DOCS/users_against_developers.html#binary
