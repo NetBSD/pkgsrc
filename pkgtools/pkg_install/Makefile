@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2003/07/17 22:52:15 grant Exp $
+# $NetBSD: Makefile,v 1.74 2003/08/31 10:55:26 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -18,9 +18,6 @@ HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		NetBSD-current's pkg_* tools
 
 USE_BUILDLINK2=		# defined
-
-USE_DB185=		# defined
-
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
 
@@ -53,11 +50,6 @@ post-install:
 		${PKG_ADMIN} rebuild ; \
 	fi
 
-# db1 support is only known to work on NetBSD, so we leave it out for
-# on other platforms.
-.if ${OPSYS} == "NetBSD"
-.  include "../../databases/db/buildlink2.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
