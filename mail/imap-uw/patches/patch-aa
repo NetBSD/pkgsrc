@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2000/12/17 17:07:58 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2000/12/17 18:25:44 jlam Exp $
 
 --- Makefile.orig	Thu Nov  2 16:04:11 2000
 +++ Makefile
-@@ -272,7 +272,7 @@
- #	gradually-increasing intervals, starting at 2800-2900, and becoming
- #	permanent at 48,300.
- 
--EXTRACFLAGS=
-+#EXTRACFLAGS=
- 
- 
- # Extra linker flags (additional/alternative libraries, etc.)
 @@ -285,7 +285,7 @@
  #SPECIALS=
  EXTRASPECIALS=
@@ -25,7 +16,7 @@ $NetBSD: patch-aa,v 1.8 2000/12/17 17:07:58 jlam Exp $
  	echo $(SPECIALS) $(EXTRASPECIALS) > c-client/SPECIALS
  	$(CD) c-client;$(MAKE) $(OS) BUILDOPTIONS="$(BUILDOPTIONS)" \
 -	 $(SPECIALS) $(EXTRASPECIALS)
-+	 $(SPECIALS) $(EXTRASPECIALS) PREFIX=$(PREFIX) CC="${LIBTOOL} $(CC)"
++	 $(SPECIALS) $(EXTRASPECIALS) PREFIX=$(PREFIX) CC="$(CC)"
  	echo $(OS) > OSTYPE
  	$(TOUCH) rebuild
  
