@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2004/11/19 13:24:11 adam Exp $
+$NetBSD: distinfo,v 1.7 2004/12/06 16:20:12 minskim Exp $
 
 SHA1 (xcircuit-3.3.0.tgz) = ec3c0995fd4f8755a50d39e278ca0ab293705b38
 Size (xcircuit-3.3.0.tgz) = 1308602 bytes
-SHA1 (patch-aa) = 83ac777b29b9e2979f3ff8e5ef04c0af8317f7b2
-SHA1 (patch-ab) = 3314749c7a09ea1cb5b617d3cf0742df99e1292c
+SHA1 (patch-aa) = 0d23ac7e52c0fa879c252008fcde37e96d5b5b77
+SHA1 (patch-ab) = 1d61d017c22f8068aefbea23d628678ebad1f93e
 SHA1 (patch-ac) = 1f84054174f790bd32d14eafa6a91444737795ff
