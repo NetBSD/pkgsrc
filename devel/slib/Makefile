@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/23 20:20:45 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/21 05:58:31 jlam Exp $
 
-DISTNAME=	slib2c7
-PKGNAME=	slib-2c7
+DISTNAME=	slib2c8
+PKGNAME=	slib-2c8
 CATEGORIES=	devel
 MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/ \
 		${MASTER_SITE_GNU:=jacal/}
@@ -16,8 +16,8 @@ WRKSRC=		${WRKDIR}/slib
 EXTRACT_CMD=	${LOCALBASE}/bin/unzip -uLa \
 			${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+NO_CONFIGURE=	# defined
+NO_BUILD=	# defined
 
 SLIBDIR=	share/slib
 DOCDIR=		share/doc/slib

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/23 20:20:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/06/21 05:58:34 jlam Exp $
 @unexec	install-info --delete %D/info/slib.info %D/info/dir
 info/slib.info
 @exec	install-info %D/info/slib.info %D/info/dir
@@ -24,6 +24,7 @@ share/slib/collect.scm
 share/slib/comlist.scm
 share/slib/comparse.scm
 share/slib/cring.scm
+share/slib/db2html.scm
 share/slib/dbrowse.scm
 share/slib/dbutil.scm
 share/slib/debug.scm
@@ -54,6 +55,7 @@ share/slib/macscheme.init
 share/slib/macwork.scm
 share/slib/makcrc.scm
 share/slib/mbe.scm
+share/slib/minimize.scm
 share/slib/mitscheme.init
 share/slib/mklibcat.scm
 share/slib/modular.scm
