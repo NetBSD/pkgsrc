@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/12 23:42:52 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/05 11:55:12 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
 
@@ -13,6 +13,7 @@ BUILD_DIRS=	${WRKSRC}/src
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/celestia/celestia \
 		${PREFIX}/bin/gcelestia
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/gconf/schemas
 	${INSTALL_DATA} ${WRKSRC}/src/celestia/gtk/data/celestia.schemas \
 		${PREFIX}/etc/gconf/schemas
 	${INSTALL_DATA} ${WRKSRC}/src/celestia/gtk/data/celestia.desktop \
