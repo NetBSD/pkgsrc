@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1 2001/10/29 12:30:07 seb Exp $
+
+--- configure.orig	Mon Oct 29 12:29:47 2001
++++ configure
+@@ -2297,25 +2297,6 @@
+ done
+ 
+ 
+-if test "$program_transform_name" = s,x,x,; then
+-  program_transform_name=
+-else
+-  # Double any \ or $.  echo might interpret backslashes.
+-  cat <<\EOF_SED > conftestsed
+-s,\\,\\\\,g; s,\$,$$,g
+-EOF_SED
+-  program_transform_name="`echo $program_transform_name|sed -f conftestsed`"
+-  rm -f conftestsed
+-fi
+-test "$program_prefix" != NONE &&
+-  program_transform_name="s,^,${program_prefix},; $program_transform_name"
+-# Use a double $ so make ignores it.
+-test "$program_suffix" != NONE &&
+-  program_transform_name="s,\$\$,${program_suffix},; $program_transform_name"
+-
+-# sed with no file args requires a program.
+-test "$program_transform_name" = "" && program_transform_name="s,x,x,"
+-
+ trap '' 1 2 15
+ cat > confcache <<\EOF
+ # This file is a shell script that caches the results of configure

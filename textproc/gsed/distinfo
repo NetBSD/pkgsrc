@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/26 12:45:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2001/10/29 12:30:07 seb Exp $
 
 SHA1 (sed-3.02.tar.gz) = 049d525abe926a7eec9d210d49181f5bf046f7b7
 Size (sed-3.02.tar.gz) = 264236 bytes
 SHA1 (patch-aa) = 5dac905e585762bd4cc0fe46712e8b239c1ff4be
+SHA1 (patch-ab) = a162210aeac44b7c0627f2ed76d4bfe6884ada6e
