@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.2 2004/01/25 16:17:37 jlam Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.3 2004/03/18 09:12:13 jlam Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -101,6 +101,8 @@
 #	Makefile for ${_PKG_PTHREAD}.  It's used to see if ${_PKG_PTHREADS}
 #	can actually be used to replace a native pthreads.
 #
+PTHREAD_BUILDLINK3_MK:=	${PTHREAD_BUILDLINK3_MK}+
+
 _PKG_PTHREAD?=			pth
 _PKG_PTHREAD_DEPENDS?=		pth>=2.0.0
 _PKG_PTHREAD_PKGSRCDIR?=	../../devel/${_PKG_PTHREAD}
@@ -138,9 +140,6 @@ PKG_SKIP_REASON= "${PKGNAME} requires a working pthreads implementation."
 .  endif
 .endif
 
-.if !defined(PTHREAD_BUILDLINK3_MK)
-PTHREAD_BUILDLINK3_MK=	# defined
-
 .if ${PTHREAD_TYPE} == "native"
 #
 # Link the native pthread libraries and headers into ${BUILDLINK_DIR}.
@@ -175,6 +174,8 @@ PKG_SKIP_REASON= "${PKGNAME} needs pthreads, but ${_PKG_PTHREAD_BUILDLINK3_MK} i
 .  endif
 .endif
 
+.if !empty(PTHREAD_BUILDLINK3_MK:M+)
+#
 # Define user-visible PTHREAD_CFLAGS and PTHREAD_LDFLAGS as compiler
 # options used to compile/link pthreaded code.
 #
@@ -184,5 +185,4 @@ PTHREAD_LDFLAGS=	${BUILDLINK_LDFLAGS.pthread} ${BUILDLINK_LDADD.pthread}
 PTHREADBASE=		${BUILDLINK_PREFIX.pthread}
 CONFIGURE_ENV+=		PTHREADBASE=${PTHREADBASE}
 MAKE_ENV+=		PTHREADBASE=${PTHREADBASE}
-
 .endif	# PTHREAD_BUILDLINK3_MK
