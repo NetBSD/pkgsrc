@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/18 23:47:03 snj Exp $
-# FreeBSD Id: ports/x11-fm/xfm/Makefile,v 1.20 2001/02/05 21:00:55 olgeni Exp
+# $NetBSD: Makefile,v 1.7 2005/03/24 21:13:01 wiz Exp $
 
 DISTNAME=	xfm-1.4.3
 PKGREVISION=	1

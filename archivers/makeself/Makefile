@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/07/28 02:47:35 minskim Exp $
-# FreeBSD Id: ports/archivers/makeself/Makefile,v 1.8 2001/07/07 03:47:49 dwcjr Exp
+# $NetBSD: Makefile,v 1.7 2005/03/24 21:12:50 wiz Exp $
 
 DISTNAME=	makeself-1.5.3
 CATEGORIES=	archivers

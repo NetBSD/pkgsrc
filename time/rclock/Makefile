@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/03 15:15:11 wiz Exp $
-# FreeBSD Id: Makefile,v 1.1.1.1 1997/03/03 16:27:10 obrien Exp
-#
+# $NetBSD: Makefile,v 1.6 2005/03/24 21:13:03 wiz Exp $
 
 DISTNAME=		rxvt-2.6.0
 PKGNAME=		rclock-2.6.0

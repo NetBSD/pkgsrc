@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/31 08:14:35 martti Exp $
-# FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
+# $NetBSD: Makefile,v 1.15 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28

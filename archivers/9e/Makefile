@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/11 03:24:36 minskim Exp $
-# FreeBSD Id: ports/archivers/9e/Makefile,v 1.5 2002/07/22 03:58:19 fenner Exp
+# $NetBSD: Makefile,v 1.5 2005/03/24 21:12:50 wiz Exp $
 
 DISTNAME=	9e
 PKGNAME=	9e-1.0

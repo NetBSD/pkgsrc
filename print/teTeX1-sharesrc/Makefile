@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/02/21 20:26:13 hubertf Exp $
-# FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
-#
+# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:00 wiz Exp $
 
 DISTNAME=	teTeX-texmfsrc-1.0.1
 PKGNAME=	teTeX-sharesrc-1.0.1

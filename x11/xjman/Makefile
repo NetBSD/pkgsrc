@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/27 00:53:10 heinz Exp $
-# FreeBSD Id: ports/japanese/xjman/Makefile,v 1.10 1999/10/30 15:34:24 sada Exp
+# $NetBSD: Makefile,v 1.6 2005/03/24 21:13:04 wiz Exp $
 
 DISTNAME=	xjman-0.5
 CATEGORIES=	japanese x11

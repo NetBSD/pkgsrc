@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/12/20 11:31:05 grant Exp $
-# FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:51:12 jfitz Exp
-#
+# $NetBSD: Makefile,v 1.19 2005/03/24 21:12:58 wiz Exp $
 
 DISTNAME=		Locale-Codes-1.06
 PKGNAME=		p5-${DISTNAME}

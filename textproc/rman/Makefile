@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/20 12:26:50 agc Exp $
-# FreeBSD Id: Makefile,v 1.17 1997/12/08 15:45:27 tg Exp
-#
+# $NetBSD: Makefile,v 1.25 2005/03/24 21:13:02 wiz Exp $
 
 DISTNAME=	rman
 PKGNAME=	rman-3.0.9

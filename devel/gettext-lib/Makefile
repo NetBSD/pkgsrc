@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/12/03 15:14:54 wiz Exp $
-# FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
-#
+# $NetBSD: Makefile,v 1.36 2005/03/24 21:12:52 wiz Exp $
 
 DISTNAME=		gettext-0.11.5
 PKGNAME=		gettext-lib-0.11.5

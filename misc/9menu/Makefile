@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/12/03 15:15:03 wiz Exp $
-# FreeBSD Id: Makefile,v 1.4 1997/09/08 12:23:55 tg Exp
-#
+# $NetBSD: Makefile,v 1.14 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=		9menu-1.8
 CATEGORIES=		misc plan9

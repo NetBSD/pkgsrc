@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/03/08 09:33:19 adam Exp $
-# FreeBSD Id: ports/mail/ssmtp/Makefile,v 1.10 2003/04/14 08:41:04 leeym Exp
+# $NetBSD: Makefile,v 1.13 2005/03/24 21:12:56 wiz Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.

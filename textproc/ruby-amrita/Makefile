@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/06 17:19:07 taca Exp $
-# FreeBSD: ports/textproc/ruby-amrita/Makefile,v 1.5 2003/02/18 05:38:23 knu Exp
-#
+# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:02 wiz Exp $
 
 DISTNAME=	amrita-1.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}

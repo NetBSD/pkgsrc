@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/07 10:01:12 uebayasi Exp $
-# FreeBSD: ports/mail/distribute/Makefile,v 1.2 1999/08/25 06:50:06 obrien Exp
-#
+# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:55 wiz Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26

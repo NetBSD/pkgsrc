@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/12/03 15:15:09 wiz Exp $
-# FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp
-#
+# $NetBSD: Makefile,v 1.29 2005/03/24 21:13:00 wiz Exp $
 
 DISTNAME=		scsh-0.6.6
 CATEGORIES=		shells lang

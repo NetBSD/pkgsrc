@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/12/03 15:15:07 wiz Exp $
-# FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
-#
+# $NetBSD: Makefile,v 1.34 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2

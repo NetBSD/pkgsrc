@@ -1,11 +1,4 @@
-# New ports collection makefile for:	rsynth
-# Version required:	2.0
-# Date created:		03 Jan 1995
-# Whom:			faulkner@mpd.tandem.com
-#
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:23:19 grant Exp $
-# FreeBSD Id: Makefile,v 1.8 1996/11/15 23:14:14 obrien Exp
-#
+# $NetBSD: Makefile,v 1.8 2005/03/24 21:12:51 wiz Exp $
 
 DISTNAME=	rsynth-2.0
 PKGREVISION=	1

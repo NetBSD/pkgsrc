@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2005/03/01 22:59:16 dmcmahill Exp $
-# FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
+# $NetBSD: Makefile,v 1.50 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=	gv-3.6.1
 CATEGORIES=	print

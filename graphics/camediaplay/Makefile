@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/02/21 20:26:11 hubertf Exp $
-# FreeBSD Id: Makefile,v 1.10 1998/01/17 17:46:00 itojun Exp
-#
+# $NetBSD: Makefile,v 1.11 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=	camediaplay-20010211
 CATEGORIES=	graphics

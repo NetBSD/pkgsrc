@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/09/06 10:44:44 martti Exp $
-# FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
-#
+# $NetBSD: Makefile,v 1.12 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=	LPRng_DOC-3.6.13
 PKGNAME=	LPRng-doc-3.6.13

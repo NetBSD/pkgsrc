@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/03/23 23:02:30 dmcmahill Exp $
-# FreeBSD Id: ports/security/crack/Makefile,v 1.11 1999/09/04 19:24:50 obrien Exp
+# $NetBSD: Makefile,v 1.18 2005/03/24 21:13:00 wiz Exp $
 
 DISTNAME=	crack5.0
 PKGNAME=	crack-5.0

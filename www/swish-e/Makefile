@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:18:27 tv Exp $
-# FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
+# $NetBSD: Makefile,v 1.20 2005/03/24 21:13:03 wiz Exp $
 
 DISTNAME=	swish-e-2.4.1
 PKGREVISION=	4

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 15:13:20 grant Exp $
-# FreeBSD Id: Makefile,v 1.7 1999/01/27 07:41:18 fenner Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/24 21:13:02 wiz Exp $
 
 DISTNAME=	sed-3.02
 PKGNAME=	ja-sed-3.02

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/03/05 11:06:42 uebayasi Exp $
-# FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
-#
+# $NetBSD: Makefile,v 1.28 2005/03/24 21:13:01 wiz Exp $
 
 DISTNAME=	eb-4.1.3
 CATEGORIES=	textproc japanese

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/12/03 15:15:03 wiz Exp $
-# FreeBSD Id: Makefile,v 1.7 1998/08/20 07:35:21 asami Exp
-#
+# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:56 wiz Exp $
 
 DISTNAME=		xlispstat-3-52-18
 PKGNAME=		xlispstat-3.52.18

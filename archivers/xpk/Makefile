@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/27 17:19:51 minskim Exp $
-# FreeBSD Id: ports/archivers/xpk/Makefile,v 1.7 2002/10/18 07:58:00 adamw Exp
+# $NetBSD: Makefile,v 1.8 2005/03/24 21:12:50 wiz Exp $
 
 DISTNAME=	xpk-0.1.4
 PKGREVISION=	1

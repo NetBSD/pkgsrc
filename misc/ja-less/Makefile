@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/19 02:56:19 grant Exp $
-# FreeBSD Id: Makefile,v 1.13 1998/07/17 20:36:13 steve Exp
-#
+# $NetBSD: Makefile,v 1.5 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=	less-358
 PKGNAME=	ja-${DISTNAME}

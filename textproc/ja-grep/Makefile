@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 22:54:27 grant Exp $
-# FreeBSD Id: Makefile,v 1.10 1999/01/27 07:41:16 fenner Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/24 21:13:02 wiz Exp $
 
 DISTNAME=	grep-2.0
 PKGNAME=	ja-grep-2.0

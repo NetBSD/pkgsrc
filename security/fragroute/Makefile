@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/20 16:37:04 jmmv Exp $
-# FreeBSD Id: ports/security/fragroute/Makefile,v 1.10 2003/09/24 08:37:38 edwin Exp
+# $NetBSD: Makefile,v 1.5 2005/03/24 21:13:00 wiz Exp $
 
 DISTNAME=	fragroute-1.2
 PKGREVISION=	1

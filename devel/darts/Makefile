@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/06 13:22:43 taca Exp $
-# $FreeBSD: ports/devel/darts/Makefile,v 1.2 2003/11/20 19:28:29 knu Exp $
-#
+# $NetBSD: Makefile,v 1.2 2005/03/24 21:12:52 wiz Exp $
 
 DISTNAME=	darts-0.2
 CATEGORIES=	devel

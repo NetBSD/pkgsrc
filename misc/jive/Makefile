@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/20 12:21:02 agc Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/04/02 07:58:25 obrien Exp
-#
+# $NetBSD: Makefile,v 1.15 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=		jive-1.1
 CATEGORIES=		misc

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/12/03 15:15:11 wiz Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/08/13 06:33:51 asami Exp
-#
+# $NetBSD: Makefile,v 1.12 2005/03/24 21:13:02 wiz Exp $
 
 DISTNAME=	Par152
 PKGNAME=	par-1.52

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/03 15:14:50 wiz Exp $
-# FreeBSD Id: Makefile,v 1.9 1997/08/10 22:31:19 fenner Exp
-#
+# $NetBSD: Makefile,v 1.20 2005/03/24 21:12:50 wiz Exp $
 
 DISTNAME=       ha0999
 PKGNAME=        ha-0.999b

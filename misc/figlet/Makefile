@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/05/07 15:25:13 cjep Exp $
-# FreeBSD Id: Makefile,v 1.6 1997/06/29 09:56:32 obrien Exp
-#
+# $NetBSD: Makefile,v 1.16 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=	figlet221
 PKGNAME=	figlet-2.2.1

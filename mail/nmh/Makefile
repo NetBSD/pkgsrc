@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2005/01/16 19:19:46 jmmv Exp $
-# FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
-#
+# $NetBSD: Makefile,v 1.56 2005/03/24 21:12:56 wiz Exp $
 
 DISTNAME=		nmh-1.0.4
 PKGREVISION=		6
