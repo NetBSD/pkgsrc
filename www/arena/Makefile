@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/07/15 01:09:21 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/07/15 01:27:42 tv Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -30,7 +30,8 @@ pre-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Arena/netbsd/arena ${PREFIX}/bin/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/Arena
-	${INSTALL_DATA} ${WRKSRC}/Arena/Source/arenarc ${PREFIX}/share/Arena/
+# XXX not quite right, breaks on some platforms
+#	${INSTALL_DATA} ${WRKSRC}/Arena/Source/arenarc ${PREFIX}/share/Arena/
 	${INSTALL_DATA} ${WRKSRC}/Arena/doc/arena.man ${PREFIX}/man/man1/arena.1
 
 .include "../../mk/bsd.pkg.mk"
