@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/17 17:40:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/04/09 00:35:38 jtb Exp $
 #
 
 DISTNAME=       zsh-3.0.7
@@ -18,8 +18,11 @@ COMMENT=	The Z shell
 GNU_CONFIGURE=	yes
 INFO_FILES=	zsh.info
 
-# If you want to build a static binary, uncomment the following line
-#LDFLAGS+=-static
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(ZSH_STATIC)
+LDFLAGS+=	-static
+.endif
 
 post-install:
 	${CP} /etc/shells /etc/shells.bak
