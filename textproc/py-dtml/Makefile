@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/28 16:57:17 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 2000/09/05 17:11:20 jdolecek Exp $
 #
 
 DISTNAME=	Zope-2.2.0-src
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/Documentation/Guides/DTML-HTML/DTML.html
 
-DEPENDS+=	py-extclass-2.2.*:../../lang/python
+DEPENDS+=	py-extclass-2.2.*:../../lang/py-extclass
 
 ALL_TARGET=	default
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
