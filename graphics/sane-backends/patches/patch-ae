@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2002/02/16 15:10:57 mjl Exp $
+$NetBSD: patch-ae,v 1.2 2002/02/18 23:49:08 mycroft Exp $
 
 --- frontend/scanimage.c.orig	Sat Feb 16 12:54:39 2002
 +++ frontend/scanimage.c	Sat Feb 16 13:06:23 2002
@@ -16,7 +16,7 @@ $NetBSD: patch-ae,v 1.1 2002/02/16 15:10:57 mjl Exp $
  	                  }
  	                start = percent;
  	              }
--	            vprintf(fmt, (va_list) arglist);
+-	            vprintf(fmt, arglist);
 -		    va_end(arglist);
 +	            damn_i386_centric_vprintf(fmt, arglist);
 +		    free(arglist);
