@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2000/09/05 17:15:44 jwise Exp $
+# $NetBSD: Makefile,v 1.63 2000/09/05 21:03:12 jwise Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -14,7 +14,6 @@
     SUBDIR += egcs
     SUBDIR += elisp-manual
     SUBDIR += elk
-#    SUBDIR += expect		# obsoleted by tcl-expect, will be removed when tk-expect is committed.
     SUBDIR += f2c
     SUBDIR += fort77
     SUBDIR += gawk
