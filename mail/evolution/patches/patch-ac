@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+
+--- shell/main.c.orig	Tue Apr 24 17:31:26 2001
++++ shell/main.c
+@@ -35,6 +35,23 @@
+ 
+ #include "e-shell.h"
+ 
++#ifdef __NetBSD__
++#include <gtk/gtk.h>
++#include <pthread.h>
++
++/*
++ * NetBSD uses non-preemptive pth, so we yield the processor periodically
++ */
++
++gint
++pth_nbschedule (gpointer data)
++{
++	pthread_yield_np();
++
++	return TRUE;
++}
++#endif
++
+ 
+ #define STARTUP_URI "evolution:/local/Inbox"
+ 
+@@ -206,6 +223,10 @@
+ 	}
+ 
+ 	gtk_idle_add (idle_cb, evolution_directory);
++
++#ifdef __NetBSD__
++	gtk_timeout_add (200, pth_nbschedule, NULL);
++#endif
+ 
+ 	bonobo_main ();
+ 

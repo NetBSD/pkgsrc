@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+
+--- camel/providers/imap/camel-imap-store.c.orig	Tue Apr 24 17:50:27 2001
++++ camel/providers/imap/camel-imap-store.c
+@@ -22,6 +22,10 @@
+  *
+  */
+ 
++#ifdef	_POSIX_THREAD_SYSCALL_SOFT
++#undef	_POSIX_THREAD_SYSCALL_SOFT
++#endif
++#define	_POSIX_THREAD_SYSCALL_SOFT	0
+ 
+ #include <config.h>
+ 
