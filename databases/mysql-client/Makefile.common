@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2004/11/12 12:39:12 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.31 2004/11/16 17:29:36 tron Exp $
 
 DISTNAME=		mysql-4.0.22
 CATEGORIES=		databases
@@ -70,7 +70,13 @@ CFLAGS+=		-DHAVE_CURSES_H
 CXXFLAGS+=		-DHAVE_CURSES_H
 .endif
 
+SAVE_CFLAGS:=		${CFLAGS}
+SAVE_CXXFLAGS:=		${CXXFLAGS}
+
 .include "../../mk/pthread.buildlink3.mk"
+
+CFLAGS=			${SAVE_CFLAGS}
+CXXFLAGS=		${SAVE_CXXFLAGS}
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
 CFLAGS+=	-DSIGNALS_DONT_BREAK_READ
