@@ -1,23 +1,13 @@
-$NetBSD: patch-ab,v 1.2 1999/11/12 15:17:16 rh Exp $
+$NetBSD: patch-ab,v 1.3 2000/10/15 17:35:30 rh Exp $
 
---- Makefile.in.orig	Fri Nov 12 16:12:48 1999
-+++ Makefile.in	Fri Nov 12 16:12:48 1999
-@@ -335,15 +335,15 @@
+--- Makefile.in.orig	Wed Sep 20 00:33:04 2000
++++ Makefile.in
+@@ -302,7 +302,7 @@
  
  gnome-font-install: $(gnome_font_install_OBJECTS) $(gnome_font_install_DEPENDENCIES)
  	@rm -f gnome-font-install
 -	$(LINK) $(gnome_font_install_LDFLAGS) $(gnome_font_install_OBJECTS) $(gnome_font_install_LDADD) $(LIBS)
 +	$(LINK) $(gnome_font_install_OBJECTS) $(gnome_font_install_LDFLAGS) $(gnome_font_install_LDADD) $(LIBS)
  
- testprint: $(testprint_OBJECTS) $(testprint_DEPENDENCIES)
- 	@rm -f testprint
--	$(LINK) $(testprint_LDFLAGS) $(testprint_OBJECTS) $(testprint_LDADD) $(LIBS)
-+	$(LINK) $(testprint_OBJECTS) $(testprint_LDFLAGS) $(testprint_LDADD) $(LIBS)
- 
- testtext: $(testtext_OBJECTS) $(testtext_DEPENDENCIES)
- 	@rm -f testtext
--	$(LINK) $(testtext_LDFLAGS) $(testtext_OBJECTS) $(testtext_LDADD) $(LIBS)
-+	$(LINK) $(testtext_OBJECTS) $(testtext_LDFLAGS) $(testtext_LDADD) $(LIBS)
- 
- testprint2: $(testprint2_OBJECTS) $(testprint2_DEPENDENCIES)
- 	@rm -f testprint2
+ install-confexecDATA: $(confexec_DATA)
+ 	@$(NORMAL_INSTALL)
