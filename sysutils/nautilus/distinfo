@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2004/10/27 19:33:37 drochner Exp $
+$NetBSD: distinfo,v 1.16 2004/11/03 12:40:53 jmmv Exp $
 
 SHA1 (nautilus-2.8.1.tar.bz2) = 76ef92ee99365c56528b16ba5edf1f652edcc97f
 Size (nautilus-2.8.1.tar.bz2) = 5767420 bytes
@@ -7,4 +7,4 @@ SHA1 (patch-ae) = a67d8b7ba3a1b9a71958736ef4946be301e67124
 SHA1 (patch-af) = dbdfb1e7e2103a3174fddaccad64868781052057
 SHA1 (patch-ah) = 081da3e950f04573e136b6ed8c1ce0d057e803c5
 SHA1 (patch-ai) = fe69717dce315877966e7c4d394ddfdcfd379bde
-SHA1 (patch-aj) = 325018516f0d4566af893d0d88f00e055348c0a5
+SHA1 (patch-aj) = 7e4ed40cb7acbf363a4722d2a033e92db93483ed
