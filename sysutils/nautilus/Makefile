@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2004/04/19 15:05:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2004/05/03 18:20:30 jmmv Exp $
 #
 
-DISTNAME=		nautilus-2.6.0
-PKGREVISION=		1
+DISTNAME=		nautilus-2.6.1
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,7 +14,7 @@ DEPENDS+=		hicolor-icon-theme>=0.4:../../graphics/hicolor-icon-theme
 
 USE_PKGLOCALEDIR=	yes
 USE_BUILDLINK3=		yes
-USE_DIRS+=		xdg-1.1
+USE_DIRS+=		gnome2-1.5
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes

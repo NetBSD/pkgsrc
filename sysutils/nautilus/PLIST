@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/04/01 18:38:03 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/05/03 18:20:30 jmmv Exp $
 bin/nautilus
 bin/nautilus-file-management-properties
 include/libnautilus/libnautilus.h
@@ -91,6 +91,7 @@ share/gnome-2.0/ui/nautilus-spatial-window-ui.xml
 share/gnome-2.0/ui/nautilus-text-view-ui.xml
 share/idl/nautilus-distributed-undo.idl
 share/idl/nautilus-view-component.idl
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/nautilus.mo
@@ -113,6 +114,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/nautilus.mo
@@ -245,9 +247,8 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrm share/examples/nautilus/X11
 @dirrm share/examples/nautilus
 @comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
-@comment in gnome2-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/applications
 @comment in libbonobo: @dirrm lib/bonobo/servers
-@comment in libbonobo: @dirrm lib/bonobo
 @dirrm include/nautilus/libnautilus-extension
 @dirrm include/nautilus
 @dirrm include/libnautilus
