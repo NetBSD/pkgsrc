@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/08/21 12:00:14 rh Exp $
+
+--- pen.c.orig	Mon Aug 20 21:02:54 2001
++++ pen.c
+@@ -33,6 +33,7 @@
+ #include <sys/socket.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <sys/param.h>
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <syslog.h>
+@@ -465,6 +466,7 @@
+ 	exit(0);
+ }
+ 
++#if !(defined(BSD) && BSD >= 199306)
+ static void background(void)
+ {
+ 	int childpid;
+@@ -478,6 +480,7 @@
+ 	setpgrp();
+ 	signal(SIGCHLD, SIG_IGN);
+ }
++#endif
+ 
+ static void init(int argc, char **argv)
+ {
+@@ -817,7 +820,11 @@
+ 	signal(SIGCHLD, SIG_IGN);
+ 
+ 	if (!foreground) {
++#if (defined(BSD) && BSD >= 199306)
++		daemon(0, 0);
++#else
+ 		background();
++#endif
+ 	}
+ 
+ 	listenfd = open_listener(argv[0]);
