@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.18 2002/05/19 07:43:25 itojun Exp $
+$NetBSD: patch-ah,v 1.19 2002/06/25 02:13:13 itojun Exp $
 
---- Makefile.in.orig	Mon May 13 13:12:05 2002
-+++ Makefile.in	Sun May 19 16:37:28 2002
+--- Makefile.in.orig	Fri Jun 21 10:38:53 2002
++++ Makefile.in	Tue Jun 25 10:50:44 2002
 @@ -21,7 +21,7 @@
  DESTDIR=
  VPATH=@srcdir@
@@ -9,9 +9,9 @@ $NetBSD: patch-ah,v 1.18 2002/05/19 07:43:25 itojun Exp $
 -ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
 +#ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
  SFTP_SERVER=$(libexecdir)/sftp-server
- PRIVSEP_PATH=@PRIVSEP_PATH@
- 
-@@ -198,7 +198,7 @@
+ SSH_KEYSIGN=$(libexecdir)/ssh-keysign
+ RAND_HELPER=$(libexecdir)/ssh-rand-helper
+@@ -203,7 +203,7 @@
  scard-install:
  	(cd scard && $(MAKE) DESTDIR=$(DESTDIR) install)
  
