@@ -4,17 +4,17 @@
 # sub-Makefile in the build tree.  Makefiles for shared libraries include
 # Makefile.global then Makefile.shlib.
 #
-# $NetBSD: Makefile.custom,v 1.3 2000/04/09 03:53:17 jlam Exp $
+# $NetBSD: Makefile.custom,v 1.4 2000/05/20 19:32:19 jlam Exp $
 
 # Where the database templates are stored
 #
-TEMPLATEDIR= $(POSTGRESDIR)/share/postgresql
+TEMPLATEDIR=	$(POSTGRESDIR)/share/postgresql
 
 # installation directory for documentation
-PGDOCS=		$(POSTGRESDIR)/share/doc/postgresql
+PGDOCS=		$(POSTGRESDIR)/share/doc/html/postgresql
 
 # Where the header files necessary to build frontend programs get installed.
-HEADERDIR= $(POSTGRESDIR)/include/pgsql
+HEADERDIR=	$(POSTGRESDIR)/include/pgsql
 
 # Where the ODBC installation-wide configuration file gets installed.
 ODBCINST=	etc
