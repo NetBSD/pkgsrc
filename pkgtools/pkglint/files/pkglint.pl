@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.37 2000/12/13 23:53:42 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.38 2001/01/26 13:16:52 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -765,6 +765,11 @@ sub checkmakefile {
 	if ($whole =~ /\nUSE_PKGLIBTOOL/) {
 		&perror("FATAL: USE_PKGLIBTOOL is deprecated, ".
 			"use USE_LIBTOOL instead.");
+	}
+	print "OK: checking LIBTOOL_OVERRIDE.\n" if ($verbose);
+	if ($whole =~ /\nLIBTOOL_OVERRIDE/) {
+		&perror("FATAL: LIBTOOL_OVERRIDE is deprecated, ".
+			"try to use LTCONFIG_OVERRIDE instead.");
 	}
 	print "OK: checking MIRROR_DISTFILE.\n" if ($verbose);
 	if ($whole =~ /\nMIRROR_DISTFILE/) {
