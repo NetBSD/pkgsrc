@@ -1,45 +1,28 @@
-# $NetBSD: Makefile,v 1.12 2001/03/27 03:20:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2001/04/07 10:58:33 rh Exp $
 #
 
-DISTNAME=		gnome-applets-1.2.2
+DISTNAME=		gnome-applets-1.4.0.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-applets/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=stable/releases/gnome-1.4/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Applets for GNOME
 
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
-BUILD_DEPENDS+=		automake-1.4:../../devel/automake
-DEPENDS+=		gnome-core>=1.2.1:../../x11/gnome-core
-DEPENDS+=		libgtop>=1.0.0:../../devel/libgtop
+BUILD_DEPENDS+=		xml-i18n-tools-*:../../textproc/xml-i18n-tools
+DEPENDS+=		gnome-core>1.4.0:../../x11/gnome-core
+DEPENDS+=		libgtop>=1.0.12:../../devel/libgtop
 
-USE_GMAKE=		# defined
-USE_X11BASE=		# defined
-USE_LIBTOOL=		# defined
+USE_GMAKE=		YES
+USE_X11BASE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=		-I${LOCALBASE}/include
 
 AUTOGEN_ENV=		NOCONFIGURE=1
 AUTOGEN_ENV+=		srcdir=${WRKSRC}
-
-pre-configure:
-	cd ${WRKSRC} && ${MV} -f aclocal.m4 acinclude.m4
-	cd ${WRKSRC} && ${SETENV} ${AUTOGEN_ENV} ${SH} macros/autogen.sh
-
-post-install:
-	${RMDIR} ${PREFIX}/share/gnome/help/cpuload_applet/C/stylesheet-images
-	${RMDIR} ${PREFIX}/share/gnome/help/cpuload_applet/it/stylesheet-images
-	${RMDIR} ${PREFIX}/share/gnome/help/loadavg_applet/C/stylesheet-images
-	${RMDIR} ${PREFIX}/share/gnome/help/loadavg_applet/it/stylesheet-images
-	${RMDIR} ${PREFIX}/share/gnome/help/memload_applet/C/stylesheet-images
-	${RMDIR} ${PREFIX}/share/gnome/help/memload_applet/it/stylesheet-images
-	${RMDIR} ${PREFIX}/share/gnome/help/netload_applet/C/stylesheet-images
-	${RMDIR} ${PREFIX}/share/gnome/help/netload_applet/it/stylesheet-images
-	${RMDIR} ${PREFIX}/share/gnome/help/swapload_applet/C/stylesheet-images
-	${RMDIR} ${PREFIX}/share/gnome/help/swapload_applet/it/stylesheet-images
 
 .include "../../mk/bsd.pkg.mk"

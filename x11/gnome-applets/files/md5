@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/10/18 00:07:43 jlam Exp $
+$NetBSD: md5,v 1.4 2001/04/07 10:58:34 rh Exp $
 
-MD5 (gnome-applets-1.2.2.tar.gz) = f2acdded6ed982547c1f767f9b027d42
+SHA1 (gnome-applets-1.4.0.1.tar.gz) = 221a6a4317f6b280f7300aa7456ba8e22bc76e6b
