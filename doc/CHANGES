@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4567 2004/01/23 09:47:22 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4568 2004/01/23 09:49:27 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -420,3 +420,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated netscape to 20040123 [abs 2004-01-23]
 	Updated loudmouth to 0.15.1 [xtraeme 2004-01-23]
 	Updated gossip to 0.7 [xtraeme 2004-01-23]
+	Updated pkg_comp to 1.15 [jmmv 2004-01-23]
