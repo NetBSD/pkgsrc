@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.2 2005/03/21 10:32:06 dmcmahill Exp $
+$NetBSD: distinfo,v 1.3 2005/03/21 17:35:53 dmcmahill Exp $
 
 SHA1 (simian_12_98.tar.gz) = c7d57087a397970b05195f497c98a058cea1a93a
 RMD160 (simian_12_98.tar.gz) = 3eecb229dd1fb3c761ee30c9d053673a45782170
 Size (simian_12_98.tar.gz) = 18474 bytes
 SHA1 (patch-aa) = fa43e88db6902537114d49ff0f14d420927c50e1
-SHA1 (patch-ab) = e31c96d7fa79833dbd9dc7d22ea1f0a95b327d4a
-SHA1 (patch-ac) = 64b974adb3111e21bd6f14838371eb5db5cbd050
-SHA1 (patch-ad) = d3f6b068fe0d16a8c097b7e5a77d7f89d010e8b8
+SHA1 (patch-ab) = 7efafa8a96615697361b23a449112b15bcf6a178
+SHA1 (patch-ac) = bc391a8264946bb66a86801f99db597b89f07800
+SHA1 (patch-ad) = cfecf1e29df43a5034e7ec8f5f6f260396327b3f
+SHA1 (patch-ae) = 701700e5b254504d83989479a7948ba49b71a6c4
+SHA1 (patch-af) = 69489c7a8f78f8f9649ae681dea6fd8d7722cbb1
+SHA1 (patch-ag) = 6d7560439e13613f54e3a04ef7c6bd6813d5e890
+SHA1 (patch-ah) = 57cd20aa8da97f305f12d717394f1cdbaccf95c0
