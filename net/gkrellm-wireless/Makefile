@@ -1,25 +1,20 @@
-# $NetBSD: Makefile,v 1.9 2004/01/24 14:50:05 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/24 23:35:52 cube Exp $
 
-DISTNAME=		gkrellmwireless-0.2.2
-PKGNAME=		gkrellm-wireless-0.2.2
-PKGREVISION=		4
+DISTNAME=		gkrellmwireless-2.0.3
+PKGNAME=		${DISTNAME:S/gkrellm/gkrellm-/}
 CATEGORIES=		net sysutils
 MASTER_SITES=		http://gkrellm.luon.net/files/
 
-MAINTAINER=		jasper@pointless.net
+MAINTAINER=		cube@NetBSD.org
 HOMEPAGE=		http://gkrellm.luon.net/gkrellmwireless.phtml
 COMMENT=		Wavelan signal strength monitor for gkrellm
 
 ONLY_FOR_PLATFORM=	*BSD-*-* Linux-*-*
 
-USE_BUILDLINK2=		# defined
+WRKSRC=			${WRKDIR}/gkrellmwireless
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
-	${INSTALL_PROGRAM} ${WRKSRC}/wireless.so ${PREFIX}/lib/gkrellm/plugins/
-
-.include "../../graphics/imlib/buildlink2.mk"
-.include "../../sysutils/gkrellm/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../sysutils/gkrellm/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
