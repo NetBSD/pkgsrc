@@ -1,0 +1,7 @@
+Image::Size returns a raw (X, Y) pair of the height and width of
+an image, and includes wrappers to pre-format that output into
+either HTML or a set of attribute pairs suitable for the CGI.pm
+library by Lincoln Stein.
+
+Currently Image::Size can size images in XPM, XBM, GIF, JPEG, PNG,
+TIFF and the PPM family of formats (PPM/PGM/PBM).
