@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.22 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: sunpro.mk,v 1.22.2.1 2004/11/23 20:54:12 tv Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
@@ -24,12 +24,14 @@ _SUNPRO_CC=	${_SUNPRO_DIR}/bin/cc
 _SUNPRO_LINKS+=	_SUNPRO_CC
 PKG_CC=		${_SUNPRO_CC}
 CC=		${PKG_CC:T}
+CCPATH=		${SUNWSPROBASE}/bin/cc
 .endif
 .if exists(${SUNWSPROBASE}/bin/CC)
 _SUNPRO_CXX=	${_SUNPRO_DIR}/bin/CC
 _SUNPRO_LINKS+=	_SUNPRO_CXX
 PKG_CXX=	${_SUNPRO_CXX}
 CXX=		${PKG_CXX:T}
+CXXPATH=	${SUNWSPROBASE}/bin/CC
 .endif
 
 # SunPro passes rpath directives to the linker using "-R".
@@ -41,9 +43,9 @@ _COMPILER_RPATH_FLAG=	-R
 # SunPro compiler must be passed certain flags to compile/link 64-bit code.
 _COMPILER_ABI_FLAG.64=	-xtarget=ultra -xarch=v9
 
-.if exists(${SUNWSPROBASE}/bin/cc)
-CC_VERSION_STRING!=	${SUNWSPROBASE}/bin/cc -V 2>&1 || ${TRUE}
-CC_VERSION!=		${SUNWSPROBASE}/bin/cc -V 2>&1 | ${GREP} '^cc'
+.if exists(${CCPATH})
+CC_VERSION_STRING!=	${CCPATH} -V 2>&1 || ${TRUE}
+CC_VERSION!=		${CCPATH} -V 2>&1 | ${GREP} '^cc'
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		cc: Sun C
