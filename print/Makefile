@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2001/06/11 21:58:31 zuntum Exp $
+# $NetBSD: Makefile,v 1.57 2001/09/29 06:18:33 jlam Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -34,6 +34,7 @@ SUBDIR+=	mgv
 SUBDIR+=	mp
 SUBDIR+=	mpage
 SUBDIR+=	p5-Font-AFM
+SUBDIR+=	p5-PostScript-MailLabels
 SUBDIR+=	papersize
 SUBDIR+=	pcps
 SUBDIR+=	pdflib
