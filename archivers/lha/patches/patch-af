@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2001/12/06 05:09:48 jlam Exp $
+
+--- man/Makefile.orig	Fri Dec 15 21:13:16 2000
++++ man/Makefile
+@@ -11,7 +11,7 @@
+ 	$(NROFF) -man lha.n > lha.man
+ 
+ install:
+-	$(INSTALL) $(INSTALLMAN) lha.n $(MANDIR)/man$(MANSECT)/lha.$(MANSECT)
++	$(BSD_INSTALL_MAN) lha.n $(MANDIR)/man$(MANSECT)/lha.$(MANSECT)
+ 
+ clean:
+ 	rm -f *~

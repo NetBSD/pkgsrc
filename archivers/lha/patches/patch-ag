@@ -1,0 +1,10 @@
+$NetBSD: patch-ag,v 1.1 2001/12/06 05:09:48 jlam Exp $
+
+--- src/Makefile.orig	Fri Dec 15 21:13:15 2000
++++ src/Makefile
+@@ -49,4 +49,4 @@
+ 	rm -f core *.o lha.tar lha.tar.Z *~ \#* *.orig
+ 
+ install:
+-	$(INSTALL) $(INSTALLBIN) lha $(BINDIR)/lha
++	$(BSD_INSTALL_BIN) lha $(BINDIR)/lha
