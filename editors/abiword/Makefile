@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/05/20 01:57:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/04 11:09:38 abs Exp $
 #
 
 # According to AbiSource's explanation of their trademark rights,
@@ -8,9 +8,9 @@
 #
 DISTNAME=	abi-${ABIWORD_VERS}
 PKGNAME=	abiword-personal-${ABIWORD_VERS}
-ABIWORD_VERS=	0.7.9
+ABIWORD_VERS=	0.7.10
 CATEGORIES=	editors
-MASTER_SITES=	http://www.abisource.com/downloads/Version-${ABIWORD_VERS}/lf/
+MASTER_SITES=	http://download.abisource.com/releases/${ABIWORD_VERS}/src/lf/
 DISTFILES=	${ABISRC} ${ABIDISTFILES} ${EXPATSRC} ${ICONVSRC} \
 		${UNIXFONTS} ${WVSRC}
 
