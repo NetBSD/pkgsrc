@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2000/07/25 01:50:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.28 2000/07/25 05:14:59 jlam Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -582,5 +582,7 @@ share/type-convert/type.convert
 @dirrm share/mime-info
 @unexec rmdir %D/share/pixmaps 2>/dev/null || true
 @dirrm share/type-convert
+@dirrm etc/CORBA/servers
+@dirrm etc/CORBA
 @exec mkdir -p ${LOCALSTATEDIR}
 @unexec rm -rf ${LOCALSTATEDIR}
