@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2002/06/29 01:48:53 kristerw Exp $
---- Makefile.orig	Sun Mar 10 01:24:16 2002
-+++ Makefile	Sat Jun 29 03:32:34 2002
+$NetBSD: patch-aa,v 1.7 2002/10/29 17:09:06 dillo Exp $
+
+--- Makefile.orig	Mon Oct 28 02:21:52 2002
++++ Makefile
 @@ -1,7 +1,7 @@
  # Define your C compiler.  I recommend gcc if you have it.
  # MacOS users should use "cc" even though it's really "gcc".
@@ -11,14 +12,14 @@ $NetBSD: patch-aa,v 1.6 2002/06/29 01:48:53 kristerw Exp $
  
  # Define your optimization flags.  Most compilers understand -O and -O2,
 @@ -14,7 +14,7 @@
+ #-malign-jumps=2
  
- # Define where you want Frotz to be installed.  Usually this is /usr/local
- #
+ # Define where you want Frotz installed.  Usually this is /usr/local
 -PREFIX = /usr/local
 +#PREFIX = /usr/local
- #PREFIX =
  
- #Define where manpages should go.
+ MAN_PREFIX = $(PREFIX)
+ #MAN_PREFIX = /usr/local/share
 @@ -24,7 +24,7 @@
  
  # Define where you want Frotz to look for frotz.conf.
@@ -28,70 +29,34 @@ $NetBSD: patch-aa,v 1.6 2002/06/29 01:48:53 kristerw Exp $
  #CONFIG_DIR = /etc
  #CONFIG_DIR = /usr/pkg/etc
  #CONFIG_DIR =
-@@ -36,16 +36,23 @@
+@@ -37,18 +37,18 @@
  # Uncomment this if you have an OSS soundcard driver and want classical
- # Infocom sound support.  Currently this works only for Linux.
+ # Infocom sound support.
  #
 -#SOUND_DEFS = -DOSS_SOUND
 +SOUND_DEFS = -DOSS_SOUND
  
- # Also uncomment this if you want sound through the OSS driver.
+ # Uncomment this too if you're running BSD of some sort and are using
+ # the OSS sound driver.
  #
 -#SOUND_LIB = -lossaudio
-+SOUND_LIB = -lossaudio
-+
-+# Define your sound device
-+# This should probably be a command-line/config-file option.
-+#
-+SOUND_DEV = /dev/sound
-+#SOUND_DEV = /dev/dsp
-+#SOUND_DEV = /dev/audio
++SOUND_LIB = ${LIBOSSAUDIO}
  
- # This should point to the location of your curses.h or ncurses.h include
- # file if your compiler doesn't know about it.
+ # Define your sound device 
+ # This should probably be a command-line/config-file option.
  #
--INCL = -I/usr/local/include
-+INCL = -I${BUILDLINK_DIR}/include
- #INCL = -I/usr/pkg/include
- #INCL = -I/usr/freeware/include
- #INCL = -I/5usr/include
-@@ -55,7 +62,7 @@
- # linking with.  Usually, this isn't necessary if /etc/ld.so.conf is set
- # up correctly.
- #
--LIB = -L/usr/local/lib
-+LIB = -L${BUILDLINK_DIR}/lib -Wl,-R${PREFIX}/lib
- #LIB = -L/usr/pkg/lib
- #LIB = -L/usr/freeware/lib
- #LIB = -L/5usr/lib
-@@ -86,7 +93,7 @@
- # Nothing under this line should need to be changed.
- #####################################################
+ #SOUND_DEV = /dev/dsp
+-#SOUND_DEV = /dev/sound
++SOUND_DEV = ${DEVOSSSOUND}
+ #SOUND_DEV = /dev/audio
  
--VERSION = 2.42
-+VERSION = 2.42nb1
+ # If your vendor-supplied curses library won't work, uncomment the
+@@ -163,7 +163,7 @@
+ $(NAME): $(NAME)-curses
  
- BINNAME = frotz
+ $(NAME)-curses:		soundcard.h  $(COMMON_TARGET) $(CURSES_TARGET)
+-	$(CC) -o $(BINNAME)$(EXTENSION) $(TARGETS) $(LIB) $(CURSES) \
++	$(CC) $(LDFLAGS) -o $(BINNAME)$(EXTENSION) $(TARGETS) $(LIB) $(CURSES) \
+ 		$(SOUND_LIB)
  
-@@ -103,17 +110,18 @@
- 	ux_audio_none.o ux_audio_oss.o
- 
- OPT_DEFS = -DCONFIG_DIR="\"$(CONFIG_DIR)\"" $(CURSES_DEF) \
--	-DVERSION="\"$(VERSION)\""
-+	-DVERSION="\"$(VERSION)\"" -DSOUND_DEV="\"$(SOUND_DEV)\""
- 
- 
- COMP_DEFS = $(OPT_DEFS) $(COLOR_DEFS) $(SOUND_DEFS) $(SOUNDCARD) \
- 	$(MEMMOVE_DEF)
- 
--CFLAGS = $(OPTS) $(COMP_DEFS) $(INCL)
-+CFLAGS += $(OPTS) $(COMP_DEFS)
- 
-+all: frotz
- 
- $(BINNAME): soundcard.h $(OBJECTS)
--	$(CC) -o $(BINNAME)$(EXTENSION) $(OBJECTS) $(LIB) $(CURSES) $(SOUND_LIB)
-+	$(CC) -o $(BINNAME)$(EXTENSION) $(LDFLAGS) $(OBJECTS) $(LIB) $(CURSES) $(SOUND_LIB)
- 
- all: $(BINNAME)
- 
+ all:	$(NAME) d$(NAME)

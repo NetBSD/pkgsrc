@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2002/10/13 15:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/29 17:09:05 dillo Exp $
 #
 
-DISTNAME=	frotz-2.42
-PKGREVISION=	1
+DISTNAME=	frotz-2.43
 CATEGORIES=	games
 # The maintainer has asked us to use the mirrors instead of www.cs.csubak.edu.
 #MASTER_SITES=	http://www.cs.csubak.edu/~dgriffi/frotz/files/
@@ -25,11 +24,12 @@ DOCDIR=		${PREFIX}/share/doc/frotz
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/frotz ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/frotz.6 ${PREFIX}/man/man6
+	${INSTALL_MAN} ${WRKSRC}/doc/frotz.6 ${PREFIX}/man/man6
 	${INSTALL_DATA_DIR} ${SAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/frotz.conf-big ${SAMPLEDIR}/frotz.conf
+	${INSTALL_DATA} ${WRKSRC}/doc/frotz.conf-big ${SAMPLEDIR}/frotz.conf
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} README INSTALL HOW_TO_PLAY ${DOCDIR}
 
 .include "../../devel/ncurses/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
