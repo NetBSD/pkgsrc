@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2005/03/28 08:53:07 jlam Exp $
+# $NetBSD: options.mk,v 1.19 2005/03/28 09:39:57 jlam Exp $
 
 # Global and legacy options
 
@@ -81,12 +81,10 @@ AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
 .endif
 
 ###
-### SASL support for SMTP authentication.  If neither SASLv1 or SASLv2 is
-### explicitly specified, then build with SASLv2.
+### SASL support for SMTP authentication.
 ###
 .if !empty(PKG_OPTIONS:Msasl)
-.  if !defined(USE_SASL2) && !defined(USE_SASL)
-.    include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl2/buildlink3.mk"
 BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 SASLLIBDIR=	${PREFIX}/lib/sasl2
 PWCHECK_METHOD=	auxprop
@@ -94,24 +92,6 @@ CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl2
-.  elif defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-.    include "../../security/cyrus-sasl2/buildlink3.mk"
-BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
-SASLLIBDIR=	${PREFIX}/lib/sasl2
-PWCHECK_METHOD=	auxprop
-CCARGS+=	-DUSE_SASL_AUTH
-AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
-		-lsasl2
-.  elif defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
-.    include "../../security/cyrus-sasl/buildlink3.mk"
-SASLLIBDIR=	${PREFIX}/lib/sasl
-PWCHECK_METHOD=	sasldb
-CCARGS+=	-DUSE_SASL_AUTH
-AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
-		-lsasl
-.  endif
 PLIST_SUBST+=	SASL=
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}

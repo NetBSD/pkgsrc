@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2005/01/02 11:59:36 adrianp Exp $
+# $NetBSD: options.mk,v 1.5 2005/03/28 09:39:57 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
-PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl sasl2 starttls tcpwrappers \
+PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl starttls tcpwrappers \
 			socketmap
 
 .if !defined(PKG_OPTIONS.sendmail)
@@ -9,14 +9,6 @@ PKG_DEFAULT_OPTIONS+=	tcpwrappers
 .endif
 
 .include "../../mk/bsd.options.mk"
-
-###
-### Can't support SASLv1 and SASLv2
-###
-.if !empty(PKG_OPTIONS:Msasl) && !empty(PKG_OPTIONS:Msasl2)
-PKG_FAIL_REASON+=	"SASLv1 and SASLv2 cannot both be compiled in." \
-			"Please change ${PKG_OPTIONS_VAR} to one or the other."
-.endif
 
 ###
 ### Berkeley DB version 2/4 format for on disk databases e.g. aliases
@@ -38,9 +30,7 @@ PKG_FAIL_REASON+=	"SASLv1 and SASLv2 cannot both be compiled in." \
 ### Use SASL/v2 for SMTP AUTH
 ###
 .if !empty(PKG_OPTIONS:Msasl)
-.	include "../../security/cyrus-sasl/buildlink3.mk"
-.	elif !empty(PKG_OPTIONS:Msasl2)
-.		include "../../security/cyrus-sasl2/buildlink3.mk"
+.	include "../../security/cyrus-sasl2/buildlink3.mk"
 .endif
 
 ###

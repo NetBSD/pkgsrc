@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2004/11/17 19:37:07 xtraeme Exp $
+# $NetBSD: options.mk,v 1.8 2005/03/28 09:39:57 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
 #PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql mysql4 pcre pgsql sasl tls
@@ -104,8 +104,7 @@ AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
 ### explicitly specified, then build with SASLv2.
 ###
 .if !empty(PKG_OPTIONS:Msasl)
-.  if !defined(USE_SASL2) && !defined(USE_SASL)
-.    include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl2/buildlink3.mk"
 BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 SASLLIBDIR=	${PREFIX}/lib/sasl2
 PWCHECK_METHOD=	auxprop
@@ -113,24 +112,6 @@ CCARGS+=	-DUSE_SASL_AUTH
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl2
-.  elif defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
-.    include "../../security/cyrus-sasl2/buildlink3.mk"
-BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
-SASLLIBDIR=	${PREFIX}/lib/sasl2
-PWCHECK_METHOD=	auxprop
-CCARGS+=	-DUSE_SASL_AUTH
-AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
-		-lsasl2
-.  elif defined(USE_SASL) && !empty(USE_SASL:M[yY][eE][sS])
-.    include "../../security/cyrus-sasl/buildlink3.mk"
-SASLLIBDIR=	${PREFIX}/lib/sasl
-PWCHECK_METHOD=	sasldb
-CCARGS+=	-DUSE_SASL_AUTH
-AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
-		-lsasl
-.  endif
 PLIST_SRC+=	${PKGDIR}/PLIST.sasl
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2005/03/24 04:47:58 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2005/03/28 09:39:58 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEBASE_BUILDLINK3_MK:=	${KDEBASE_BUILDLINK3_MK}+
@@ -27,7 +27,7 @@ BUILDLINK_DEPENDS.Xrandr+=      Xrandr>=1.0
 .if !empty(PKG_OPTIONS.kdebase:Msamba)
 .  include "../../net/samba/buildlink3.mk"
 .endif
-.if !empty(PKG_OPTIONS.kdebase:Msasl2)
+.if !empty(PKG_OPTIONS.kdebase:Msasl)
 .  include "../../security/cyrus-sasl2/buildlink3.mk"
 .endif
 .include "../../x11/Xrandr/buildlink3.mk"
