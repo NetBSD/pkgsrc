@@ -1,38 +1,15 @@
---- configure.orig	Mon Jan 26 08:07:08 1998
-+++ configure	Fri Jan 30 03:53:22 1998
-@@ -2773,7 +2773,7 @@
- fi
- if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  TIFF='tiff'; LIBTIFF_LIB='-ltiff'
-+  TIFF='tiff'; LIBTIFF_LIB='-ltiff -lz -ljpeg'
- else
-   echo "$ac_t""no" 1>&6
- echo $ac_n "checking for TIFFWriteScanline in -ltiff""... $ac_c" 1>&6
-@@ -3039,14 +3039,14 @@
- fi
+--- plug-ins/mail/mail.c.orig	Mon Nov 24 23:04:27 1997
++++ plug-ins/mail/mail.c	Tue Apr 14 00:43:26 1998
+@@ -88,9 +88,9 @@
+    * As always: The utility of this plugin is left as an exercise for the reader
+    *
+  */
+-#ifndef MAILER
+-#define MAILER "/usr/lib/sendmail"
+-#endif
++
++#include <paths.h>
++#define MAILER _PATH_SENDMAIL
  
- else
--  echo $ac_n "checking for Tcl_StaticPackage in -ltcl""... $ac_c" 1>&6
--echo "configure:3044: checking for Tcl_StaticPackage in -ltcl" >&5
-+  echo $ac_n "checking for Tcl_StaticPackage in -ltcl80""... $ac_c" 1>&6
-+echo "configure:3044: checking for Tcl_StaticPackage in -ltcl80" >&5
- ac_lib_var=`echo tcl'_'Tcl_StaticPackage | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="-ltcl -lm $DL_LIBRARY $LIBS"
-+LIBS="-ltcl80 -lm $DL_LIBRARY $LIBS"
- cat > conftest.$ac_ext <<EOF
- #line 3052 "configure"
- #include "confdefs.h"
-@@ -3074,7 +3074,7 @@
- fi
- if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  GIMPTCL='gimptcl'; LIBTCL_LIB="-ltcl -ltk $DL_LIBRARY"
-+  GIMPTCL='gimptcl'; LIBTCL_LIB="-ltcl80 -ltk80 $DL_LIBRARY"
- else
-   echo "$ac_t""no" 1>&6
- echo "configure: warning: *** gimptcl plug-in will not be built ***" 1>&2
+ #ifndef UUENCODE
+ #define UUENCODE "uuencode"
