@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/11/12 01:31:53 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:56 reed Exp $
 #
 # This Makefile fragment is included by packages that use gnome-session.
 #
@@ -9,7 +9,7 @@
 GNOME_SESSION_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-session
-BUILDLINK_DEPENDS.gnome-session?=		gnome-session>=1.4.2nb3
+BUILDLINK_DEPENDS.gnome-session?=		gnome-session>=1.4.2nb5
 BUILDLINK_PKGSRCDIR.gnome-session?=		../../x11/gnome1-session
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-session=gnome-session

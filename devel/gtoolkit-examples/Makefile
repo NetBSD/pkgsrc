@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/07/13 13:51:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/03 18:49:38 reed Exp $
 #
 .include "../../x11/gtoolkit/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-examples-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 COMMENT=	Objective-C examples for GToolKit

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:49:22 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/03 18:49:47 reed Exp $
 # FreeBSD Id: ports/astro/kstars/Makefile,v 1.7 2002/03/31 06:52:00 pat Exp
 
 DISTNAME=	kstars-0.9.kde2
 PKGBASE=	kstars-0.9
 PKGNAME=	${PKGBASE}
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/${PKGBASE}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kstars/}

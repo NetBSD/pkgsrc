@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/27 22:37:44 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/03 18:49:37 reed Exp $
 #
 # This Makefile fragment is included by packages that use blib.
 #
@@ -7,7 +7,7 @@
 BLIB_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			blib
-BUILDLINK_DEPENDS.blib?=		blib>=1.0.2
+BUILDLINK_DEPENDS.blib?=		blib>=1.0.2nb1
 BUILDLINK_PKGSRCDIR.blib?=		../../devel/blib
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.blib=blib

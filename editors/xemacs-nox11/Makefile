@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:35:13 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:40 reed Exp $
 
 DISTNAME=	xemacs-21.4.12
 PKGNAME=	xemacs-nox11-21.4.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=xemacs-21.4/}
 DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}

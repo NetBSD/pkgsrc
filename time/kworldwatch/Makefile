@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:55:01 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/03 18:49:54 reed Exp $
 #
 
 DISTNAME=	kworldwatch-0.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 kde time
 MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.1.2/apps/utils/
 EXTRACT_SUFX=	.tgz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:22 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/03 18:49:55 reed Exp $
 #
 
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 
 MAINTAINER=	hubertf@NetBSD.org

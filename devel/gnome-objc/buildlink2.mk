@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:51:11 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/01/03 18:49:38 reed Exp $
 #
 # This Makefile fragment is included by packages that use gnome-objc.
 #
@@ -9,7 +9,7 @@
 GNOME_OBJC_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-objc
-BUILDLINK_DEPENDS.gnome-objc?=		gnome-objc>=1.0.40nb3
+BUILDLINK_DEPENDS.gnome-objc?=		gnome-objc>=1.0.40nb4
 BUILDLINK_PKGSRCDIR.gnome-objc?=		../../devel/gnome-objc
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-objc=gnome-objc

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/12/13 00:45:27 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/01/03 18:50:00 reed Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-clipman-plugin.
 #
@@ -9,7 +9,7 @@
 XFCE4_CLIPMAN_PLUGIN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-clipman-plugin
-BUILDLINK_DEPENDS.xfce4-clipman-plugin?=		xfce4-clipman-plugin>=0.3.1nb1
+BUILDLINK_DEPENDS.xfce4-clipman-plugin?=		xfce4-clipman-plugin>=0.4.0nb1
 BUILDLINK_PKGSRCDIR.xfce4-clipman-plugin?=		../../x11/xfce4-clipman-plugin
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-clipman-plugin=xfce4-clipman-plugin

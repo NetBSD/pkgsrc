@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2003/07/21 16:51:41 martti Exp $
+# $NetBSD: Makefile,v 1.28 2004/01/03 18:49:42 reed Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	The GNOME image loading library
 
 # XXX hopefully there is no x.gnome-config.x in PATH

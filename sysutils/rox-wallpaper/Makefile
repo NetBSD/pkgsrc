@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:53:49 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:53 reed Exp $
 #
 
 DISTNAME=	Wallpaper-0.1.1
 PKGNAME=	rox-wallpaper-0.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/Wallpaper
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}

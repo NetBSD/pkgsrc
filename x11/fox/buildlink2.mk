@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/08/29 10:16:12 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:55 reed Exp $
 
 .if !defined(FOX_BUILDLINK2_MK)
 FOX_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		fox
-BUILDLINK_DEPENDS.fox?=		fox>=1.0.43
+BUILDLINK_DEPENDS.fox?=		fox>=1.0.43nb2
 BUILDLINK_PKGSRCDIR.fox?=	../../x11/fox
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.fox=fox

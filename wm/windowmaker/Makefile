@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2003/09/17 19:41:15 grant Exp $
+# $NetBSD: Makefile,v 1.40 2004/01/03 18:49:54 reed Exp $
 
 DISTNAME=		WindowMaker-0.80.2
 PKGNAME=		windowmaker-0.80.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 wm windowmaker
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/source/release/ \
 			ftp://ftp.ics.es.osaka-u.ac.jp/mirrors/WindowMaker/source/release/

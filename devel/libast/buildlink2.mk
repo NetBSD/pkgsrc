@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:51:17 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/01/03 18:49:38 reed Exp $
 #
 
 .if !defined(LIBAST_BUILDLINK2_MK)
 LIBAST_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libast
-BUILDLINK_DEPENDS.libast?=	libast>=0.5nb3
+BUILDLINK_DEPENDS.libast?=	libast>=0.5nb5
 BUILDLINK_PKGSRCDIR.libast?=	../../devel/libast
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libast=libast

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2003/07/13 13:52:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/03 18:49:46 reed Exp $
 #
 
 .include "../../misc/celestia/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	GNOME frontend for free real-time 3D space simulator
 

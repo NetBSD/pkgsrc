@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:53:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/03 18:49:52 reed Exp $
 #
 
 DISTNAME=	FSViewer.app-0.2.3
 PKGNAME=	FSViewer-0.2.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils x11 windowmaker
 MASTER_SITES=	http://www.csn.ul.ie/~clernong/download/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} icons.tar.gz

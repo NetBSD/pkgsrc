@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/12/05 10:15:23 adam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/01/03 18:49:56 reed Exp $
 #
 
 .if !defined(GNUSTEP_BACK_BUILDLINK2_MK)
 GNUSTEP_BACK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnustep-back
-BUILDLINK_DEPENDS.gnustep-back?=	gnustep-back>=0.9.0
+BUILDLINK_DEPENDS.gnustep-back?=	gnustep-back>=0.9.0nb1
 BUILDLINK_PKGSRCDIR.gnustep-back?=	../../x11/gnustep-back
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnustep-back=gnustep-back
