@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2004/12/16 23:57:40 hira Exp $
+# $NetBSD: Makefile,v 1.38 2004/12/28 21:49:02 jmmv Exp $
 #
 
-DISTNAME=		gnome-applets-2.8.1.1
+DISTNAME=		gnome-applets-2.8.2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -62,7 +62,7 @@ PLIST_SUBST+=		BATTSTAT="@comment "
 CONFIGURE_ARGS+=	--disable-battstat
 .endif
 
-PRINT_PLIST_AWK+=	/battstat/ { print "$${BATTSTAT}"$$0; next; }
+PRINT_PLIST_AWK+=	/[Bb]attstat/ { print "$${BATTSTAT}"$$0; next; }
 
 .include "../../devel/GConf2/schemas.mk"
 
@@ -75,6 +75,7 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/libgtop2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
