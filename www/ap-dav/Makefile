@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/02/28 18:28:14 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/03/06 15:35:04 jlam Exp $
 
-DISTNAME=		mod_dav-1.0.2-1.3.6
-PKGNAME=		ap-dav-1.0.2
+DISTNAME=		mod_dav-1.0.3-1.3.6
+PKGNAME=		ap-dav-1.0.3
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/mod_dav/
 
@@ -16,6 +16,7 @@ DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_DIR}
 
 AP_MODULE_DIR=		${PREFIX}/lib/httpd
 DOCDIR=			${PREFIX}/share/doc/mod_dav
@@ -25,6 +26,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/libdav.so ${AP_MODULE_DIR}/mod_dav.so
 	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE.html ${HTMLDIR}
 
 .include "../../textproc/expat/buildlink.mk"

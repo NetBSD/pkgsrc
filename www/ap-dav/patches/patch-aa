@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2002/02/28 18:28:15 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2002/03/06 15:35:05 jlam Exp $
 
---- configure.in.orig	Thu Oct 19 04:54:17 2000
+--- configure.in.orig	Sat Nov  3 09:48:13 2001
 +++ configure.in
-@@ -29,15 +29,6 @@
+@@ -24,15 +24,6 @@
          CPPFLAGS="$CPPFLAGS -traditional-cpp"
  fi
  
@@ -18,22 +18,3 @@ $NetBSD: patch-aa,v 1.1 2002/02/28 18:28:15 jlam Exp $
  AC_HEADER_STDC
  
  AC_MSG_CHECKING(for static Apache module support)
-@@ -140,10 +131,17 @@
-                             default search.],
- [
-   if test "$withval" != "no" ; then
--    if test -f "$withval/include/xmlparse.h" ; then
-+    if test -f "$withval/include/expat.h" ; then
-         XML_DIR=$withval
-         XML_INCLUDE="$withval/include"
-         XML_LIB="$withval/lib"
-+    fi
-+    if test "$XML_DIR" = "" ; then
-+      if test -f "$withval/include/xmlparse.h" ; then
-+          XML_DIR=$withval
-+          XML_INCLUDE="$withval/include"
-+          XML_LIB="$withval/lib"
-+      fi
-     fi
-     if test "$XML_DIR" = "" ; then
-       if test -f "$withval/include/xml/xmlparse.h" ; then
