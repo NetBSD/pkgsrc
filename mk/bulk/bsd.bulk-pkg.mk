@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.28 2001/07/21 19:36:47 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.29 2001/10/20 09:07:13 abs Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -213,6 +213,9 @@ bulk-package:
 			do \
 				if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 					pkgdir=`${GREP} " $$pkgname " ${INDEXFILE} | ${AWK} '{print $$1}'` ;\
+					if [ -z "$$pkgdir" ]; then \
+					    pkgdir=unknown ; \
+					fi; \
 					if ${PKG_INFO} -qe $$pkgname ; then \
 						${SHCOMMENT} "Remove only unneeded pkgs" ; \
 						if ! ${EGREP} -q "^${PKGPATH}.* $$pkgdir( |$$)" ${DEPENDSFILE} ; then \
