@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/13 13:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/21 16:30:36 martti Exp $
 #
 
 DISTNAME=	cmp3-2.0pre5
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.personal.psu.edu/users/n/k/nkk104/cmp3/
 
 MAINTAINER=	rxg@ms25.url.com.tw
 HOMEPAGE=	http://www.personal.psu.edu/nkk104/cmp3/
-COMMENT=	curses based frontend to mpg123
+COMMENT=	Curses based frontend to mpg123
 
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:26:10 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 16:34:33 martti Exp $
 #
 
 DISTNAME=	Net-AOLIM-1.4
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.phonon.net/pub/Net-AOLIM/
-COMMENT=	perl5 module for connecting to AOL IM (TOC protocol)
+COMMENT=	Perl5 module for connecting to AOL IM (TOC protocol)
 
 USE_BUILDLINK2=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/AOLIM/.packlist
