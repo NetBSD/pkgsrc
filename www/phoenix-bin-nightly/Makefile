@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/11 13:19:42 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/25 14:13:00 salo Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -14,14 +14,14 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386 SunOS-5.[789]*-sparc
 
 CONFLICTS+=		phoenix-linux-[0-9]*
 
-PKGVER!=		date +%Y%m%d
 DIST_SUBDIR=		${PKGNAME}
-NO_CHECKSUM=		# defined
-NO_CONFIGURE=		# defined
+NO_CHECKSUM=		YES
+NO_CONFIGURE=		YES
 USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
+PKGVER!=		${DATE} +%Y%m%d
 FILES_SUBST+=		PLATFORM=${PLATFORM}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
@@ -40,6 +40,7 @@ do-install:
 		| ${XARGS} ${CHMOD} a+rx
 	@${FIND} ${PHOENIX_LIB} -type d -print \
 		| ${XARGS} ${CHMOD} a+rx
+	@${RM} -f ${PHOENIX_LIB}/plugins/libnullplugin.so
 
 post-install:
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
