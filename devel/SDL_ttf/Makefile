@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2001/06/26 09:54:07 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/26 21:42:52 zuntum Exp $
 #
 
-DISTNAME=	SDL_ttf-1.2.2
+DISTNAME=	SDL_ttf-2.0.3
 CATEGORIES=	devel
-MASTER_SITES=	http://www.libsdl.org/projects/SDL_ttf/src/
+MASTER_SITES=	http://www.libsdl.org/projects/SDL_ttf/release/
 
 MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_ttf/
@@ -15,8 +15,6 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-CONFIGURE_ENV+=		CFLAGS="-DFREETYPE_HDR_DIRECTORY"
-
 .include "../../devel/SDL/buildlink.mk"
-.include "../../graphics/freetype-lib/buildlink.mk"
+.include "../../graphics/freetype2/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
