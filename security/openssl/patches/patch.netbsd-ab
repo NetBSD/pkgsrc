@@ -1,6 +1,7 @@
-diff -ur openssl-0.9.5a/Configure work/openssl-0.9.5a/Configure
---- Configure.sma	Mon Mar 27 13:28:10 2000
-+++ Configure	Wed Apr 19 19:21:36 2000
+$NetBSD: patch.netbsd-ab,v 1.2 2001/03/16 13:42:09 wiz Exp $
+
+--- Configure.orig	Mon Mar 27 23:28:10 2000
++++ Configure
 @@ -274,9 +274,6 @@
  "linux-mips",   "gcc:-DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::(unknown)::BN_LLONG:::",
  "linux-ppc",    "gcc:-DB_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::BN_LLONG::",
@@ -25,7 +26,7 @@ diff -ur openssl-0.9.5a/Configure work/openssl-0.9.5a/Configure
 +"NetBSD-mipsel", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
 +"NetBSD-ns32k", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
 +"NetBSD-powerpc", "gcc:-DTERMIOS -O3 -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
-+"NetBSD-sparc", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -mv8 -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
++"NetBSD-sparc", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall -DB_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
 +"NetBSD-sparc64", "gcc:-DTERMIOS -O3 -fomit-frame-pointer -Wall::(unknown)::SIXTY_FOUR_BIT_LONG DES_INT DES_PTR DES_RISC1:",
 +"NetBSD-vax", "gcc:-DTERMIOS -O3 -Wall -DL_ENDIAN::(unknown)::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL:",
 +
