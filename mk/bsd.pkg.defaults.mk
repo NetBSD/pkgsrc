@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.274 2004/08/07 14:13:06 xtraeme Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.275 2004/08/07 21:03:59 minskim Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -701,11 +701,6 @@ ATERM_USE_GREEK?= NO
 # built in addition to non-qt version: avi{bench,cat,make,recompress,type}.
 # aviplay (qt-based player that uses avifile libraries) will be built too,
 # but it has problems with threads and does not work yet.
-# Default: not defined
-
-#BASH_STATIC=	YES
-# Used in bash2 to link it statically (for use as a root shell).
-# Possible: not defined, YES
 # Default: not defined
 
 #BATTLEBALL_USE_MESA=
