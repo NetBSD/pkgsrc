@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# $NetBSD: port2pkg.pl,v 1.5 2000/05/12 10:07:36 sakamoto Exp $
+# $NetBSD: port2pkg.pl,v 1.6 2000/12/15 14:58:44 wiz Exp $
 #
 
 require 'getopts.pl';
@@ -31,6 +31,7 @@ if (! -d "$pkgdir") {
 
 system("${GTAR} cCf $portsdir - .|${GTAR} xCf $pkgdir -");
 
+&fix_new_ports();
 &read_Makefile();
 &conv_Makefile();
 &conv_PLIST();
@@ -42,6 +43,33 @@ system("(cd $pkgdir; pkglint)");
 sub usage_and_exit {
 	print "port2pkg [-m maintainer] portsdir pkgdir\n";
 	exit;
+}
+
+sub fix_new_ports {
+	my (@allfiles);
+	my ($fn, $dn);
+	if (!opendir(PKGDIR, "$pkgdir/pkg")) {
+		mkdir("$pkgdir/pkg", 0777) ||
+		    warn("can't mkdir $pkgdir/pkg: $!");
+		rename("$pkgdir/pkg-comment", "$pkgdir/pkg/COMMENT") ||
+		    warn("can't copy $pkgdir/pkg-comment to ".
+			 "$pkgdir/pkg/COMMENT");
+		rename("$pkgdir/pkg-descr", "$pkgdir/pkg/DESCR") ||
+		    warn("can't copy $pkgdir/pkg-descr to ".
+			 "$pkgdir/pkg/DESCR");
+		foreach $fn (<$pkgdir/pkg-plist*>) {
+			$dn = $fn;
+			$dn =~ s|.*pkg-plist|PLIST|;
+			rename("$fn", "$pkgdir/pkg/$dn") ||
+			    warn("can't copy $fn to $pkgdir/pkg/$dn");
+		}
+	}
+	else {
+	    closedir(PKGDIR);
+	}
+	unlink <$pkgdir/files/patch*>;
+	unlink("$pkgdir/distinfo");
+	mkdir("$pkgdir/patches");
 }
 
 sub read_Makefile {
@@ -243,45 +271,47 @@ sub add_manual {
 
 sub conv_PLIST {
 	my ($file, $plist);
-	return 0 if (opendir(PKGDIR, "$portsdir/pkg") == 0);
+	return 0 if (!opendir(PKGDIR, "$pkgdir/pkg"));
 	while ($plist = readdir(PKGDIR)) {
 		next if (!($plist =~ /^PLIST/));
 
-		open(PORTS, "$portsdir/pkg/$plist")
-			|| die "$portsdir/pkg/$plist: $!\n";
-		open(PKG, ">$pkgdir/pkg/$plist")
-			|| die "$pkgdir/pkg/$plist: $!\n";
+		open(OLDPLIST, "$pkgdir/pkg/$plist")
+		    || die "$pkgdir/pkg/$plist: $!\n";
+		open(NEWPLIST, ">$pkgdir/pkg/new.$plist")
+			|| die "$pkgdir/pkg/new.$plist: $!\n";
 
-		print PKG "\@comment \$NetBSD\$\n";
+		print NEWPLIST "\@comment \$NetBSD\$\n";
 		my ($cat_added, $man_added);
-		while (<PORTS>) {
+		while (<OLDPLIST>) {
 			s|\%\%([^\%]+)\%\%|\${$1}|g;
 			next if (/^\@.*ldconfig/);
 			if (defined($cat_added) && $cat_added == 0 && /^[d-z]/){
-				&add_manual(*PKG, "cat");
+				&add_manual(*NEWPLIST, "cat");
 				$cat_added++;
 			}
 			if (defined($man_added) && $man_added == 0 && /^[n-z]/){
-				&add_manual(*PKG, "man");
+				&add_manual(*NEWPLIST, "man");
 				$man_added++;
 			}
 
-			print PKG $_;
+			print NEWPLIST $_;
 		}
 		if (defined($cat_added) && $cat_added == 0)
-			{&add_manual(*PKG, "cat");}
+			{&add_manual(*NEWPLIST, "cat");}
 		if (defined($man_added) && $man_added == 0)
-			{&add_manual(*PKG, "man");}
+			{&add_manual(*NEWPLIST, "man");}
 
-		close(PKG);
-		close(PORTS);
+		close(NEWPLIST);
+		close(OLDPLIST);
+		rename("$pkgdir/pkg/new.$plist", "$pkgdir/pkg/$plist");
 	}
 	closedir(PKGDIR);
 }
 
 sub add_NetBSD_ID {
 	my ($patch);
-	if (open(MD5, "$portsdir/files/md5")) {
+	if (open(MD5, "$portsdir/files/md5")
+	    || open(MD5, "$portsdir/distinfo")) {
 		open(NMD5, ">$pkgdir/files/md5")
 			|| die "$pkgdir/files/md5: $!\n";
 		print NMD5 "\$NetBSD\$\n\n";
@@ -292,11 +322,14 @@ sub add_NetBSD_ID {
 		close(MD5);
 	}
 
-	return 0 if (opendir(PATCHDIR, "$portsdir/patches") == 0);
+	opendir(PATCHDIR, "$portsdir/patches") ||
+	    opendir(PATCHDIR, "$portsdir/files") ||
+		return 0;
 	while ($patch = readdir(PATCHDIR)) {
 		if ($patch eq "\." || $patch eq "\.."
 			|| $patch eq "CVS") {next;}
-		if (open(PATCH, "$portsdir/patches/$patch")) {
+		if (open(PATCH, "$portsdir/patches/$patch")
+		    || open(PATCH, "$portsdir/files/$patch")) {
 			open(NPATCH, ">$pkgdir/patches/$patch")
 				|| die "$pkgdir/patches/$patch: $!\n";
 			print NPATCH "\$NetBSD\$\n\n";
