@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/13 21:10:21 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/01/14 22:33:28 wiz Exp $
 
 SHA1 (obconf-1.5.tar.gz) = a82067d5cd79d13df4c1c77e2a281a37fa5de7d2
 Size (obconf-1.5.tar.gz) = 163007 bytes
+SHA1 (patch-aa) = 3aedcfc85c81e075ef07b07d06cb427c5aaf6b53
