@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 03:35:28 itojun Exp $
 
-MD5 (wget-1.6.tar.gz) = c5c9d3894ebf1bef3555c01376392c0d
-MD5 (wget-16-v6-20010111a.diff.gz) = 947a1f95fe5ac6c09d8fe0244b2d8fae
+SHA1 (wget-1.6.tar.gz) = 5561c716a38170acb782bd5b6abe064940d13e20
+Size (wget-1.6.tar.gz) = 670777 bytes
+SHA1 (wget-16-v6-20010418a.diff.gz) = e32d408a925c430d24ce7aa1ba766afe3795438f
+Size (wget-16-v6-20010418a.diff.gz) = 23685 bytes
