@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1998/07/15 11:22:53 agc Exp $
+@comment $NetBSD: PLIST,v 1.10 1998/09/05 18:44:34 hubertf Exp $
 include/GL/FooMesa.h
 include/GL/dosmesa.h
 include/GL/fxmesa.h
@@ -178,9 +178,7 @@ share/examples/Mesa/widgets-sgi/GLwMDrawA.c
 share/examples/Mesa/widgets-sgi/GLwMDrawA.h
 share/examples/Mesa/widgets-sgi/GLwMDrawAP.h
 share/examples/Mesa/widgets-sgi/Makefile
-share/examples/Mesa/widgets-sgi/Makefile~
 share/examples/Mesa/widgets-sgi/README
-share/examples/Mesa/widgets-sgi/README~
 share/examples/Mesa/widgets-sgi/boilerplate.c
 share/examples/Mesa/widgets-sgi/depend
 @dirrm share/examples/Mesa/samples
