@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1842 2003/04/04 17:20:31 abs Exp $
+$NetBSD: CHANGES,v 1.1843 2003/04/04 18:29:20 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1462,3 +1462,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mrstat to 1.16 [abs 2003-04-03]
 	Updated cvsync-0.19.0 [gehenna 2003-04-03]
 	Updated mrstat to 1.17 [abs 2003-04-04]
+	Added wol-0.6.0 [zuntum 2003-04-04]
