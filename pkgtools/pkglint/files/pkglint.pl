@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.54 2001/07/13 08:20:55 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.55 2001/07/15 12:56:58 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -735,6 +735,7 @@ su tail test touch tr true type wc xmkmf
 EOF
 		$cmdnames{$i} = "\$\{\U$i\E\}";
 	}
+	$cmdnames{'file'} = '${FILE_CMD}';
 	$cmdnames{'gunzip'} = '${GUNZIP_CMD}';
 	$cmdnames{'gzip'} = '${GZIP_CMD}';
 	#
