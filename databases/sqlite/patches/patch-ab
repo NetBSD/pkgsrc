@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2001/10/20 18:52:38 reinoud Exp $
+$NetBSD: patch-ab,v 1.2 2001/11/19 00:41:06 reinoud Exp $
 
---- ../sqlite/src/btree.c.orig	Mon Oct 15 02:44:35 2001
+--- ../sqlite/src/btree.c.orig	Sat Nov 10 14:51:08 2001
 +++ ../sqlite/src/btree.c
 @@ -60,7 +60,7 @@
  ** The uptr type must be big enough to hold a pointer.
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1 2001/10/20 18:52:38 reinoud Exp $
  
  /* There are already defined in sqliteInt.h...
  ** typedef unsigned int u32;
-@@ -818,7 +818,7 @@
+@@ -829,7 +829,7 @@
  int sqliteBtreeCursor(Btree *pBt, int iTable, int wrFlag, BtCursor **ppCur){
    int rc;
    BtCursor *pCur;
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.1 2001/10/20 18:52:38 reinoud Exp $
  
    if( pBt->page1==0 ){
      rc = lockBtree(pBt);
-@@ -841,7 +841,7 @@
+@@ -852,7 +852,7 @@
    if( rc!=SQLITE_OK ){
      goto create_cursor_exception;
    }
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.1 2001/10/20 18:52:38 reinoud Exp $
    if( nLock<0 || (nLock>0 && wrFlag) ){
      rc = SQLITE_LOCKED;
      goto create_cursor_exception;
-@@ -875,7 +875,7 @@
+@@ -886,7 +886,7 @@
  ** when the last cursor is closed.
  */
  int sqliteBtreeCloseCursor(BtCursor *pCur){
@@ -38,16 +38,16 @@ $NetBSD: patch-ab,v 1.1 2001/10/20 18:52:38 reinoud Exp $
    Btree *pBt = pCur->pBt;
    if( pCur->pPrev ){
      pCur->pPrev->pNext = pCur->pNext;
-@@ -889,7 +889,7 @@
+@@ -900,7 +900,7 @@
      sqlitepager_unref(pCur->pPage);
    }
    unlockBtreeIfUnused(pBt);
 -  nLock = (int)sqliteHashFind(&pBt->locks, 0, pCur->pgnoRoot);
 +  nLock = (long long int)sqliteHashFind(&pBt->locks, 0, pCur->pgnoRoot);
-   assert( nLock!=0 );
+   assert( nLock!=0 || sqlite_malloc_failed );
    nLock = nLock<0 ? 0 : nLock-1;
    sqliteHashInsert(&pBt->locks, 0, pCur->pgnoRoot, (void*)nLock);
-@@ -2311,11 +2311,11 @@
+@@ -2293,11 +2293,11 @@
  */
  int sqliteBtreeClearTable(Btree *pBt, int iTable){
    int rc;
