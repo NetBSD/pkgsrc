@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/31 00:30:21 damon Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/01 15:33:36 damon Exp $
 
 DISTNAME=		gkrellmwireless-0.2.2
 PKGNAME=		gkrellm-wireless-0.2.2
@@ -16,6 +16,7 @@ ONLY_FOR_PLATFORM=	*BSD-*-* Linux-*-*
 USE_GMAKE=              #defined
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 	${INSTALL_PROGRAM} ${WRKSRC}/wireless.so ${PREFIX}/lib/gkrellm/plugins/
 
 .include "../../mk/bsd.prefs.mk"
