@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/03/05 23:56:22 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/13 21:35:50 jlam Exp $
 
-DISTNAME=		httpd-2.0.32-beta
-PKGNAME=		apache-2.0.32
-WRKSRC=			${WRKDIR}/httpd-2.0.32
+DISTNAME=		httpd-2.0.35
+PKGNAME=		apache-2.0.35
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://httpd.apache.org/dist/httpd/old/ \
@@ -22,10 +21,10 @@ REPLACE_BUILDLINK=	config_vars.mk
 REPLACE_BUILDLINK_SED=	-e "s|${BUILDLINK_DIR}|${LOCALBASE}|g"
 
 USE_GMAKE=		YES
-PLIST_SRC=		# empty
 
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/srclib/apr/libtool
+LIBTOOL_OVERRIDE=	${WRKSRC}/shlibtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/srclib/apr/libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
@@ -43,17 +42,11 @@ CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_DIR}
 .include "../../mk/bsd.prefs.mk"
 
 APACHE_MODULES=		all
-APACHE_MODULES+=	proxy proxy-connect proxy-ftp proxy-http
+APACHE_MODULES+=	proxy proxy_connect proxy_ftp proxy_http
 APACHE_MODULES+=	ssl
 
-.if defined(NOPIC) || (defined(MKPIC) && (${MKPIC} == "no"))
 CONFIGURE_ARGS+=	--enable-modules="${APACHE_MODULES}"
-CONFIGURE_ARGS+=	--disable-so
-.else
-CONFIGURE_ARGS+=	--enable-mods-shared="${APACHE_MODULES}"
 CONFIGURE_ARGS+=	--enable-so
-PLIST_SRC+=		${.CURDIR}/PLIST.shared
-.endif
 
 SUEXEC_COMMENT?=	"@comment "
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
@@ -75,7 +68,6 @@ PKG_GROUPS=		${APACHE_SUEXEC_GROUP}
 PKG_USERS=		${APACHE_SUEXEC_USER}:${APACHE_SUEXEC_GROUP}::Apache\\ suEXEC\\ user
 .endif
 
-PLIST_SRC+=		${.CURDIR}/PLIST
 PLIST_SUBST+=		SUEXEC_COMMENT=${SUEXEC_COMMENT}
 
 PKG_SYSCONFVAR=		apache
@@ -89,45 +81,15 @@ SUPPORT_FILES+=		${EGDIR}/magic ${PKG_SYSCONFDIR}/magic
 SUPPORT_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 RCD_SCRIPTS=		apache
 
-# Fix problems with the Apache configure process.  It's still in flux in
-# moving over to a GNU autoconf framework, and is missing some of the
-# flexibility of the way it used to be done via APACI.
-#
-# We override preprocessor definitions that are used in Apache sources.
-# The values we use are derived from the NetBSD layout of the
-# config.layout file.
-#
-CONFIGURE_ENV+=		NOTEST_CPPFLAGS="${NOTEST_CPPFLAGS}"
-
-# Override values in server/mpm/<MPM>/mpm_default.h.
-NOTEST_CPPFLAGS=							\
-	-DDEFAULT_ERRORLOG=\\\"\$$(logfiledir)/error_log\\\"		\
-	-DDEFAULT_LOCKFILE=\\\"\$$(runtimedir)/accept.lock\\\"		\
-	-DDEFAULT_PIDLOG=\\\"\$$(runtimedir)/httpd.pid\\\"		\
-	-DDEFAULT_SCOREBOARD=\\\"\$$(runtimedir)/apache_runtime_status\\\"
-
-# Used in server/config.c and server/main.c to locate default config file.
-NOTEST_CPPFLAGS+=							\
-	-DSERVER_CONFIG_FILE=\\\"\$$(sysconfdir)/httpd.conf\\\"
-
-# Override value in include/httpd.h and used in modules/http/mod_mime.c
-# to locate default MIME types file.
-#
-NOTEST_CPPFLAGS+=							\
-	-DAP_TYPES_CONFIG_FILE=\\\"\$$(sysconfdir)/mime.types\\\"
-
-post-extract:
-	cd ${WRKSRC}/support;						\
-	${MV} apxs.in apxs.pl.in;					\
-	${MV} apachectl.in apachectl.sh.in;				\
-	${MV} dbmmanage.in dbmmanage.pl.in
-
-post-configure:
-	cd ${WRKSRC}; for file in config_vars.mk; do			\
-		${SED} -e "s|^\(sysconfdir\)[ 	]*=.*|\1 = ${PKG_SYSCONFDIR}|g" \
-			$${file} > $${file}.new;			\
-		${MV} -f $${file}.new $${file};				\
-	done
+MAKE_DIRS=		${PREFIX}/share/httpd
+MAKE_DIRS+=		${PREFIX}/share/httpd/htdocs
+OWN_DIRS= 		/var/log/httpd
+OWN_DIRS+=		/var/db/httpd
+.if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
+OWN_DIRS_PERMS+=	/var/db/httpd/proxy ${APACHE_SUEXEC_USER} ${APACHE_SUEXEC_GROUP} 0755
+.else
+OWN_DIRS_PERMS+=	/var/db/httpd/proxy nobody nobody 0755
+.endif
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
@@ -141,14 +103,34 @@ post-install:
 		httpd-std.conf						\
 		ssl-std.conf;						\
 	do								\
-		${SED}	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g"		\
+		(${SED} -e "/^Listen[	 ]/q"				\
+			-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g"		\
+			$${file};					\
+		 ${ECHO} "Listen 0.0.0.0:80";				\
+		 ${SED} -e "1,/^Listen[	 ]/d"				\
+			-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g"		\
+			$${file};					\
+		) >> $${file}.new;					\
+		${MV} -f $${file}.new $${file};				\
+	done
+.if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
+	cd ${EGDIR};							\
+	for file in							\
+		highperformance-std.conf				\
+		httpd-std.conf						\
+		ssl-std.conf;						\
+	do								\
+		${SED}	-e "s|^\(User[	 ]\).*|\1${APACHE_SUEXEC_USER}|g" \
+			-e "s|^\(Group[	 ]\).*|\1${APACHE_SUEXEC_GROUP}|g" \
 			$${file} >> $${file}.new;			\
 		${MV} -f $${file}.new $${file};				\
 	done
+.endif
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 
 .include "../../lang/perl5/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
 .include "../../textproc/expat/buildlink.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
