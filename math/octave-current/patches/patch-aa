@@ -1,18 +1,20 @@
-$NetBSD: patch-aa,v 1.7 2004/03/29 16:20:16 adam Exp $
-
---- configure.orig	2004-03-05 19:16:10.000000000 +0000
-+++ configure
-@@ -7930,7 +7930,7 @@ if $have_fortran_compiler; then
- %.c : %.f
+--- configure.orig	Fri Mar 12 19:39:23 2004
++++ configure	Mon Sep  6 16:28:24 2004
+@@ -7931,5 +7931,5 @@
  
  %.o : %.f
 -	$(FC) -c $(ALL_FFLAGS) -o $@ $<
 +	${LIBTOOL} --mode=compile --tag=CC $(FC) -c $(ALL_FFLAGS) $<
  
  pic/%.o : %.f
- 	$(FC) -c $(FPICFLAG) $(ALL_FFLAGS) $< -o $@
-@@ -18717,19 +18717,19 @@ case "$canonical_host_type" in
-     cat << \EOF > $bsd_gcc_kluge_targets_frag
+@@ -9831,5 +9831,5 @@
+ library_path_var=LD_LIBRARY_PATH
+ case "$canonical_host_type" in
+-  *-*-386bsd* | *-*-openbsd* | *-*-netbsd*)
++  *-*-386bsd* | *-*-openbsd* )
+     SH_LD=ld
+     SH_LDFLAGS=-Bshareable
+@@ -18718,17 +18718,17 @@
  
  lex.o: lex.cc
 -	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
@@ -35,4 +37,3 @@ $NetBSD: patch-aa,v 1.7 2004/03/29 16:20:16 adam Exp $
 +	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
  
  EOF
-   ;;

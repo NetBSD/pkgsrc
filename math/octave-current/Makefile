@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/08/14 01:34:50 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.32 2004/09/11 21:47:43 dmcmahill Exp $
 #
 
 DISTNAME=	octave-${OCTAVE_VER}
@@ -35,6 +35,11 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
 GCC_REQD=		3.0
 
+# needed for loading of shared objects such as those in the
+# octave-forge package or user written ones compiled with
+# mkoctfile
+CONFIGURE_ARGS+=	--enable-dl
+
 INFO_FILES=	octave.info liboctave.info
 LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 \
 		liboctave.info-2 liboctave.info-3
@@ -44,8 +49,11 @@ OCTAVE_DOC=	faq/Octave-FAQ.ps interpreter/octave.ps \
 OCTAVE_HTML=	faq/Octave-FAQ_*.html interpreter/octave_*.html \
 		liboctave/liboctave_*.html
 
+UNWRAP_FILES+=	mkoctfile octave-bug src/oct-conf.h
+
 post-extract:
 	${FIND} ${WRKSRC}/doc -type f -name '*.info*' -exec ${RM} -f {} \;
+	${MKDIR} -p ${WRKSRC}/src/pic
 
 post-install:
 .for f in ${LIBOCTAVE_INFO}
