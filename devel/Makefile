@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 1999/05/12 18:56:35 bad Exp $
+# $NetBSD: Makefile,v 1.58 1999/05/12 20:48:24 bad Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -78,6 +78,7 @@
 #    SUBDIR += p5-Devel-Symdump
 #    SUBDIR += p5-Errno
 #    SUBDIR += p5-File-BasicFlock
+    SUBDIR += p5-FileKGlob
 #    SUBDIR += p5-File-Lock
 #    SUBDIR += p5-File-Slurp
 #    SUBDIR += p5-File-Tools
