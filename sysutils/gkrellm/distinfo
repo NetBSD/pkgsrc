@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.23 2004/05/15 23:42:24 xtraeme Exp $
+$NetBSD: distinfo,v 1.24 2004/06/05 18:57:37 cube Exp $
 
-SHA1 (gkrellm-2.2.0.tar.bz2) = ddd6a61e8b85d672d6f0d15871e32381deceb0a8
-Size (gkrellm-2.2.0.tar.bz2) = 663376 bytes
+SHA1 (gkrellm-2.2.1.tar.bz2) = 4a4d296a61307b3a0b93da035c07e301ed474dbc
+Size (gkrellm-2.2.1.tar.bz2) = 663952 bytes
 SHA1 (patch-aa) = 6335a5cb00a535c34c35fad47db077cb8db51dfe
+SHA1 (patch-ab) = 000f1c383c6fa7d010cb22c8481130800d4375c6
