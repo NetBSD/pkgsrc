@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:59:29 skrll Exp $
+$NetBSD: patch-aj,v 1.2 2002/10/14 09:13:52 skrll Exp $
 
---- kxmlrpc/Makefile.in.orig	Fri May 10 13:09:01 2002
+--- kxmlrpc/Makefile.in.orig	Sat Oct 12 13:19:15 2002
 +++ kxmlrpc/Makefile.in
-@@ -234,17 +234,22 @@
+@@ -241,17 +241,22 @@ SUBDIRS = gui
  INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kxmlrpcd
@@ -31,7 +31,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:59:29 skrll Exp $
  #>- kxmlrpcd_la_METASOURCES = AUTO
  
  libkcm_xmlrpcd_la_LIBADD = $(LIB_KDECORE)
-@@ -261,30 +266,35 @@
+@@ -268,30 +273,35 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
  
@@ -80,18 +80,17 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:59:29 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -292,7 +302,9 @@
- LDFLAGS = @LDFLAGS@
+@@ -300,7 +310,8 @@ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kxmlrpcdaemon.Plo \
-+@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/kxmlrpcd_main.Plo \
-+	@AMDEP_TRUE@	$(DEPDIR)/kxmlrpcd_main.Po \
-+	@AMDEP_TRUE@	$(DEPDIR)/kxmlrpcdaemon.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/kxmlrpcinit.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/kxmlrpcparser.Plo \
- 	@AMDEP_TRUE@	$(DEPDIR)/kxmlrpcserver.Plo \
-@@ -317,7 +329,7 @@
+ am__depfiles_maybe = depfiles
+-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po \
++@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/kxmlrpcd_main.Plo \
++	@AMDEP_TRUE@	./$(DEPDIR)/kxmlrpcd_main.Po \
+ 	@AMDEP_TRUE@	./$(DEPDIR)/kxmlrpcdaemon.Plo \
+ 	@AMDEP_TRUE@	./$(DEPDIR)/kxmlrpcinit.Plo \
+ 	@AMDEP_TRUE@	./$(DEPDIR)/kxmlrpcparser.Plo \
+@@ -326,7 +337,7 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kxmlrpcd_la_SOURCES) $(libkcm_xmlrpcd_la_SOURCES) \
@@ -100,7 +99,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:59:29 skrll Exp $
  DATA = $(service_DATA)
  
  HEADERS = $(noinst_HEADERS)
-@@ -329,7 +341,7 @@
+@@ -338,7 +349,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = README $(noinst_HEADERS) Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -109,35 +108,35 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:59:29 skrll Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -402,6 +414,8 @@
+@@ -418,6 +429,8 @@ kxmlrpcd.la: $(kxmlrpcd_la_OBJECTS) $(kx
  @KDE_USE_CLOSURE_TRUE@libkcm_xmlrpcd.la: libkcm_xmlrpcd.la.closure $(libkcm_xmlrpcd_la_OBJECTS) $(libkcm_xmlrpcd_la_DEPENDENCIES) 
  @KDE_USE_CLOSURE_FALSE@libkcm_xmlrpcd.la: $(libkcm_xmlrpcd_la_OBJECTS) $(libkcm_xmlrpcd_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(kde_moduledir) $(libkcm_xmlrpcd_la_LDFLAGS) $(libkcm_xmlrpcd_la_OBJECTS) $(libkcm_xmlrpcd_la_LIBADD) $(LIBS)
 +libkxmlrpcd_main.la: $(libkxmlrpcd_main_la_OBJECTS) $(libkxmlrpcd_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkxmlrpcd_main_la_LDFLAGS) $(libkxmlrpcd_main_la_OBJECTS) $(libkxmlrpcd_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -436,7 +450,8 @@
+@@ -457,7 +470,8 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxmlrpcd_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxmlrpcd_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxmlrpcdaemon.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxmlrpcinit.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxmlrpcparser.Plo@am__quote@
-@@ -577,7 +592,7 @@
- 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxmlrpcd_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxmlrpcd_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxmlrpcdaemon.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxmlrpcinit.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxmlrpcparser.Plo@am__quote@
+@@ -611,7 +625,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=kxmlrpcd.desktop LICENSE 
-+KDE_DIST=kxmlrpcd kxmlrpcd.desktop LICENSE libkcm_xmlrpcd.la.closure dummy.cpp 
++KDE_DIST=LICENSE kxmlrpcd.desktop 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -744,8 +759,12 @@
+@@ -784,8 +798,12 @@ libkcm_xmlrpcd.la.closure: $(libkcm_xmlr
  
  
  #>+ 3
@@ -151,7 +150,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:59:29 skrll Exp $
  
  #>+ 3
  clean-closures:
-@@ -762,28 +781,28 @@
+@@ -802,28 +820,28 @@ force-reedit:
  
  
  #>+ 12
@@ -192,7 +191,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:59:29 skrll Exp $
  	  echo "#include \"$$file\"" >> kxmlrpcd_la.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kxmlrpcd_la.all_cpp.final; \
  	done; \
-@@ -803,11 +822,23 @@
+@@ -843,11 +861,23 @@ libkcm_xmlrpcd_la.all_cpp.cpp: $(srcdir)
  	rm -f libkcm_xmlrpcd_la.all_cpp.final libkcm_xmlrpcd_la.all_cpp.files
  
  #>+ 11
@@ -218,7 +217,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:59:29 skrll Exp $
  	  echo "#include \"$$file\"" >> kxmlrpcd.all_cpp.files; \
  	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kxmlrpcd.all_cpp.final; \
  	done; \
-@@ -816,20 +847,20 @@
+@@ -856,20 +886,20 @@ kxmlrpcd.all_cpp.cpp: $(srcdir)/Makefile
  
  #>+ 3
  clean-final:
@@ -244,7 +243,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2002/05/31 13:59:29 skrll Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -839,4 +870,4 @@
+@@ -879,4 +909,4 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 2

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2002/08/29 16:03:44 skrll Exp $
+$NetBSD: distinfo,v 1.11 2002/10/14 09:13:54 skrll Exp $
 
-SHA1 (kdebase-3.0.3.tar.bz2) = 075eaa470e8927fec676613080cd7944c8f7f31f
-Size (kdebase-3.0.3.tar.bz2) = 13112153 bytes
+SHA1 (kdebase-3.0.4.tar.bz2) = e1c56fffaa4678b7fe09143dab767d9da011157d
+Size (kdebase-3.0.4.tar.bz2) = 13111203 bytes
 SHA1 (Daemon.png) = e77a42c644beecd66c4b95c0ae68c08c728a4e6d
 Size (Daemon.png) = 15725 bytes
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b

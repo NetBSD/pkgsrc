@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/03 12:32:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/10/14 09:13:46 skrll Exp $
 bin/adddebug
 bin/catalogmanager
 bin/cervisia
@@ -20,7 +20,6 @@ bin/includemocs
 bin/kapptemplate
 bin/kbabel
 bin/kbabeldict
-bin/kbugbuster
 bin/kde-build
 bin/kdedoc
 bin/kdekillall
@@ -157,7 +156,6 @@ share/kde/applnk/Development/catalogmanager.desktop
 share/kde/applnk/Development/cervisia.desktop
 share/kde/applnk/Development/kbabel.desktop
 share/kde/applnk/Development/kbabeldict.desktop
-share/kde/applnk/Development/kbugbuster.desktop
 share/kde/applnk/Development/kompare.desktop
 share/kde/apps/catalogmanager/catalogmanagerui.rc
 share/kde/apps/catalogmanager/icons/hicolor/16x16/actions/statistics.png
@@ -378,10 +376,6 @@ share/kde/apps/kbabel/pics/splash.png
 share/kde/apps/kbabeldict/modules/dbsearchengine.rc
 share/kde/apps/kbabeldict/modules/poauxiliary.rc
 share/kde/apps/kbabeldict/modules/pocompendium.rc
-share/kde/apps/kbugbuster/kbugbusterui.rc
-share/kde/apps/kbugbuster/pics/bars.png
-share/kde/apps/kbugbuster/pics/logo.png
-share/kde/apps/kbugbuster/pics/tools.png
 share/kde/apps/kompare/icons/hicolor/16x16/apps/kompare.png
 share/kde/apps/kompare/icons/locolor/16x16/apps/kompare.png
 share/kde/apps/kompare/icons/locolor/32x32/apps/kompare.png
@@ -404,13 +398,11 @@ share/kde/icons/hicolor/48x48/mimetypes/gettext.png
 share/kde/icons/locolor/16x16/apps/catalogmanager.png
 share/kde/icons/locolor/16x16/apps/kbabel.png
 share/kde/icons/locolor/16x16/apps/kbabeldict.png
-share/kde/icons/locolor/16x16/apps/kbugbuster.png
 share/kde/icons/locolor/16x16/apps/kompare.png
 share/kde/icons/locolor/16x16/mimetypes/gettext.png
 share/kde/icons/locolor/32x32/apps/catalogmanager.png
 share/kde/icons/locolor/32x32/apps/kbabel.png
 share/kde/icons/locolor/32x32/apps/kbabeldict.png
-share/kde/icons/locolor/32x32/apps/kbugbuster.png
 share/kde/icons/locolor/32x32/apps/kompare.png
 share/kde/icons/locolor/32x32/mimetypes/gettext.png
 share/kde/mimelnk/application/x-gettext.desktop
@@ -439,8 +431,6 @@ share/kde/services/pothumbnail.desktop
 @dirrm share/kde/apps/kompare/icons/hicolor
 @dirrm share/kde/apps/kompare/icons
 @dirrm share/kde/apps/kompare
-@dirrm share/kde/apps/kbugbuster/pics
-@dirrm share/kde/apps/kbugbuster
 @dirrm share/kde/apps/kbabeldict/modules
 @dirrm share/kde/apps/kbabeldict
 @dirrm share/kde/apps/kbabel/pics
