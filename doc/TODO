@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.219 2003/01/27 11:06:16 grant Exp $
+$NetBSD: TODO,v 1.220 2003/01/27 22:31:34 grant Exp $
 
 Suggested new packages
 ======================
@@ -73,7 +73,7 @@ Suggested package updates
 	o abiword-1.0.4 [pkg/20016]
 	o adobe-cmaps-1.5 [pkg/19646]
 	o angband-3.0.3
-	o apache-2.0.44
+	o apache-2.0.44 [pkg/20086]
 	o aim-1.5.277
 	o amaya-7.0
 	o aumix-2.8
