@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3574 2003/09/29 10:50:09 hubertf Exp $
+$NetBSD: CHANGES,v 1.3575 2003/09/29 12:54:26 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4004,3 +4004,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated clamav to 0.60nb1 [chris 2003-09-29]
 	Updated rdiff-backup to 0.12.5 [lukem 2003-09-29]
 	Updated bittorrent to 3.3 [hubertf 2003-09-29]
+	Updated roundup to 0.6.2 [recht 2003-09-29]
