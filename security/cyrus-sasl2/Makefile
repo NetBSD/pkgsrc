@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2005/02/26 08:14:11 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2005/03/02 15:52:26 jlam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	# empty
+PKGREVISION=	1
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
 
@@ -32,7 +32,7 @@ BUILD_DEFS+=		SASLSOCKETDIR
 # plaintext password authentication.
 #
 AUTHDAEMONVAR?=		${VARBASE}/authdaemon
-CONFIGURE_ARGS+=        --with-authdaemond=${AUTHDAEMONVAR}
+CONFIGURE_ARGS+=        --with-authdaemond=${AUTHDAEMONVAR}/socket
 BUILD_DEFS+=		AUTHDAEMONVAR
 
 # Support using APOP against a POP server for plaintext password
