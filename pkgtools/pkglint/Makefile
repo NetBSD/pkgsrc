@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 1999/03/10 08:24:16 agc Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/19 07:32:09 abs Exp $
 #
 
-DISTNAME=		pkglint-1.69
+DISTNAME=		pkglint-1.70
 CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -23,29 +23,27 @@ MAKE_ENV=	PKGSRCDIR=${PKGSRCDIR}
 .include "../../mk/bsd.prefs.mk"
 
 do-build:
+.for file in pkglint lintpkgsrc plist-clash
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
-		< ${FILESDIR}/pkglint.pl 		\
-		> ${WRKSRC}/pkglint
+		< ${FILESDIR}/${file}.pl 		\
+		> ${WRKSRC}/${file}
+.endfor
+.for file in pkglint lintpkgsrc
 	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
 		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
-		< ${FILESDIR}/lintpkgsrc.sh		\
-		> ${WRKSRC}/lintpkgsrc
-	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
-		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
-		< ${FILESDIR}/plist-clash.pl		\
-		> ${WRKSRC}/plist-clash
-	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
-		-e 's|@PORTSDIR@|${PKGSRCDIR}|g'	\
-		< ${FILESDIR}/pkglint.1			\
-		> ${WRKSRC}/pkglint.1
-	nroff -mandoc ${WRKSRC}/pkglint.1 >${WRKSRC}/pkglint.0
+		< ${FILESDIR}/${file}.1			\
+		> ${WRKSRC}/${file}.1
+	nroff -mandoc ${WRKSRC}/${file}.1 >${WRKSRC}/${file}.0
+.endfor
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkglint ${PREFIX}/bin/pkglint
 	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc ${PREFIX}/bin/lintpkgsrc
 	${INSTALL_SCRIPT} ${WRKSRC}/plist-clash ${PREFIX}/bin/plist-clash
-	${INSTALL_MAN} ${WRKSRC}/pkglint.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.0 ${PREFIX}/man/cat1
+	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${PREFIX}/man/cat1
+	${INSTALL_MAN} ${WRKSRC}/pkglint.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"
