@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5048 2004/03/01 09:45:31 cube Exp $
+$NetBSD: CHANGES,v 1.5049 2004/03/01 15:58:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1102,3 +1102,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated roundup to 0.6.7 [recht 2004-03-01]
 	Updated autogen to 5.6.0 [minskim 2004-03-01]
 	Added srm-1.2.8 [cube 2004-03-01]
+	Updated libmad to 0.15.1b [adam 2004-03-01]
+	Updated libid3tag to 0.15.1b [adam 2004-03-01]
+	Updated madplay to 0.15.2b [adam 2004-03-01]
