@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1.1.1 1999/08/11 06:04:29 rh Exp $
+
+--- config.h.in.orig	Sat Feb 14 11:46:29 1998
++++ config.h.in	Mon Apr 12 17:49:10 1999
+@@ -53,6 +53,7 @@
+  * NB: The Unix-domain support is unfinished.
+  */
+ #define	FAX_USER	"@FAXUID@"	/* account name of the ``fax user'' */
++#define	FAX_GROUP	"@FAXGID@"	/* group name of the ``fax user'' */
+ #define	FAX_SERVICE	"hylafax"	/* client-server service name */
+ #define	FAX_PROTONAME	"tcp"		/* protocol used by client+server */
+ #define	FAX_DEFPORT	4559		/* port to use if service is unknown */

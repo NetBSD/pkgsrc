@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
+
+--- faxd/faxGettyApp.c++.orig	Sat Feb 14 11:49:40 1998
++++ faxd/faxGettyApp.c++	Mon Apr 12 18:06:51 1999
+@@ -671,7 +671,7 @@
+     FaxServer::notifyDocumentRecvd(ri);
+ 
+     FaxAcctInfo ai;
+-    ai.user = "fax";
++    ai.user = FAX_USER;
+     ai.commid = getCommID();
+     ai.duration = (time_t) ri.time;
+     ai.start = Sys::now() - ai.duration;

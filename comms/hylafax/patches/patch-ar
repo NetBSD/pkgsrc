@@ -1,0 +1,29 @@
+$NetBSD: patch-ar,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
+
+--- Makefile.in.orig	Sat Feb 14 11:46:32 1998
++++ Makefile.in	Fri Apr 16 00:03:33 1999
+@@ -247,22 +247,13 @@
+ makeServerDirs::
+ 	-${INSTALL} -u ${SYSUSER} -g ${SYSGROUP} -m ${DIRMODE} \
+ 	    -idb hylafax.sw.server -dir ${SBIN};
+-	-${INSTALL} -u ${FAXUSER} -g ${FAXGROUP} -m ${DIRMODE} \
+-	    -idb hylafax.sw.server -dir ${SPOOL}
+-	-${INSTALL} -u ${FAXUSER} -g ${FAXGROUP} -m ${DIRMODE} \
+-	    -idb hylafax.sw.server -dir \
+-	    -F ${SPOOL} bin client config dev etc info log recvq status
+-	-${INSTALL} -u ${FAXUSER} -g ${FAXGROUP} -m 700 \
+-	    -idb hylafax.sw.server -dir \
+-	    -F ${SPOOL} sendq doneq docq tmp pollq archive
+ makeDirs: makeClientDirs makeServerDirs
+ 
+ makeDevices::
+-	${INSTALL} -u ${FAXUSER} -g ${FAXGROUP} -m 600 -fifo \
+-	    -idb hylafax.sw.server -F ${SPOOL} FIFO
+ 
+ install: makeDirs makeDevices
+-	${INSTALL} -m 444 -F ${SPOOL} -idb hylafax.sw.server \
++	-${MKDIR} -p -m 755 ${PREFIX}/share/doc/hylafax
++	${INSTALL} -m 444 -F ${PREFIX}/share/doc/hylafax -idb hylafax.sw.server \
+ 	    -src ${SRCDIR}/COPYRIGHT -O COPYRIGHT
+ 	@if [ "@ZLIB@" = yes ]; then \
+ 	    ${ECHO} "= "zlib; cd zlib; ${MAKE} install; \

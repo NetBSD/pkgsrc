@@ -1,0 +1,23 @@
+Hylafax was installed.  You'll need manual configurations to actually
+activate it.
+
+Setting up: (for impatients)
+
+	Invoke faxsetup, and answer what she asks.
+
+	Add the following to your rc.local script (insert the directory
+        your have your packages installed in -- for example /usr/pkg --
+        instead of <prefix> below):
+
+	if [ -x <prefix>/sbin/faxq ]; then 
+		<prefix>/sbin/faxq && echo -n ' hylafax' 
+	fi
+
+	For accepting incoming FAX/data calls, modify /etc/ttys as below
+	and send SIGHUP to init process: 
+
+>tty00	"<prefix>/libexec/faxgetty"	dialup	on secure
+
+Documentation:
+	On Line Manuals: 	man hylafax.
+	World Wide Web site:	http://www.hylafax.org/
