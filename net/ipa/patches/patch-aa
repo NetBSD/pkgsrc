@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2002/04/16 08:44:05 martti Exp $
+$NetBSD: patch-aa,v 1.4 2002/06/30 03:47:54 jlam Exp $
 
---- Makefile.orig	Tue Dec 25 04:52:48 2001
-+++ Makefile	Fri Dec 28 23:10:11 2001
+--- Makefile.orig	Sat Jun 29 21:14:15 2002
++++ Makefile
 @@ -38,7 +38,7 @@
  #	-Ox   - optimize;
  #	-g    - produce debugging information.
@@ -11,6 +11,15 @@ $NetBSD: patch-aa,v 1.3 2002/04/16 08:44:05 martti Exp $
  
  #
  # PREFIX - prefix for all below listed paths
+@@ -58,7 +58,7 @@
+ #
+ # DSTETCDIR - where to install template configuration
+ #
+-DSTETCDIR=	${PREFIX}/etc
++DSTETCDIR=	${DSTEXAMPLEDIR}
+ 
+ #
+ # DSTRCDIR - where to install sample rc-script
 @@ -97,10 +97,10 @@
  #
  # Some INSTALL_* variables
@@ -26,3 +35,43 @@ $NetBSD: patch-aa,v 1.3 2002/04/16 08:44:05 martti Exp $
  INSTALL_MAN_DIR=	${INSTALL} -d -m 0555 -g wheel -o root
  INSTALL_DATA_DIR=	${INSTALL} -d -m 0555 -g wheel -o root
  
+@@ -219,7 +219,7 @@
+ 	${RM} -r ${DSTEXAMPLEDIR}
+ 	${RM} ${DSTMANDIR}/man5/ipa.conf.5 ${DSTMANDIR}/man5/ipa.5 ${DSTMANDIR}/man8/ipa.8 ${DSTMANDIR}/man8/ipastat.8
+ 	${RM} ${DSTMANDIR}/ru_SU.KOI8-R/man5/ipa.conf.5 ${DSTMANDIR}/ru_SU.KOI8-R/man5/ipa.5 ${DSTMANDIR}/ru_SU.KOI8-R/man8/ipa.8 ${DSTMANDIR}/ru_SU.KOI8-R/man8/ipastat.8
+-	${RM} ${DSTETCDIR}/ipa.conf.default ${DSTRCDIR}/ipa.sh.sample
++	${RM} ${DSTETCDIR}/ipa.conf.default ${DSTRCDIR}/ipa
+ 	
+ install:
+ .if !exists(./ipa) || !exists(./ipastat)
+@@ -231,21 +231,10 @@
+ 	${INSTALL_PROGRAM} ipa ipastat ${DSTBINDIR}
+ 	${INSTALL_MAN} man/ipa.5 man/ipa.conf.5 ${DSTMANDIR}/man5
+ 	${INSTALL_MAN} man/ipa.8 man/ipastat.8 ${DSTMANDIR}/man8
+-.if !exists(${DSTMANDIR}/ru_SU.KOI8-R/man5)
+-	${INSTALL_MAN_DIR} ${DSTMANDIR}/ru_SU.KOI8-R/man5
+-.endif
+-.if !exists(${DSTMANDIR}/ru_SU.KOI8-R/man8)
+-	${INSTALL_MAN_DIR} ${DSTMANDIR}/ru_SU.KOI8-R/man8
+-.endif
+-.if !exists(${DSTMANDIR}/ru_RU.KOI8-R)
+-	${LN} -s ${DSTMANDIR}/ru_SU.KOI8-R ${DSTMANDIR}/ru_RU.KOI8-R
+-.endif
+-	${INSTALL_MAN} man/ru_RU.KOI8-R/ipa.5 man/ru_RU.KOI8-R/ipa.conf.5 ${DSTMANDIR}/ru_SU.KOI8-R/man5
+-	${INSTALL_MAN} man/ru_RU.KOI8-R/ipa.8 man/ru_RU.KOI8-R/ipastat.8 ${DSTMANDIR}/ru_SU.KOI8-R/man8
+ 	${INSTALL_DATA_DIR} ${DSTEXAMPLEDIR}
+ 	${INSTALL_DATA} examples/* ${DSTEXAMPLEDIR}
+ .if exists(${DSTRCDIR})
+-	${INSTALL_SCRIPT} etc/ipa.sh.sample ${DSTRCDIR}
++	${INSTALL_SCRIPT} etc/ipa.sh.sample ${DSTRCDIR}/ipa
+ .else
+ 	@${ECHO}
+ 	@${ECHO} ">> Can't find directory ${DSTRCDIR}, skip installing of ipa.sh.sample"
+@@ -254,7 +243,6 @@
+ .endif
+ .if exists(${DSTETCDIR})
+ 	${INSTALL_DATA} etc/ipa.conf.default ${DSTETCDIR}
+-	${CHMOD} 0400 ${DSTETCDIR}/ipa.conf.default
+ .else
+ 	@${ECHO}
+ 	@${ECHO} ">> Can't find directory ${DSTETCDIR}, skip installing of ipa.conf.default"
