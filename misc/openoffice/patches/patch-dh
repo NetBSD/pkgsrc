@@ -1,0 +1,12 @@
+$NetBSD: patch-dh,v 1.1 2002/02/14 22:51:42 mrauch Exp $
+
+--- ../connectivity/source/parse/makefile.mk.orig	Thu Feb 14 18:05:15 2002
++++ ../connectivity/source/parse/makefile.mk
+@@ -97,6 +97,7 @@
+ $(MISC)$/sqlbison.cxx: sqlbison.y
+ 	+bison -v -d -pSQLyy -l -bsql -o$(MISC)$/sqlbison.cxx sqlbison.y
+ 	-$(MKDIR) $(OUT)$/inc$/connectivity
++	-$(COPY) $(MISC)$/sqlbison.hxx $(MISC)$/sqlbison.cxx.h
+ 	+$(COPY) $(MISC)$/sqlbison.cxx.h $(OUT)$/inc$/connectivity$/sqlbison.hxx
+ 
+ $(SLO)$/sqlbison.obj : $(MISC)$/sqlbison.cxx
