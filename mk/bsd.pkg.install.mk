@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.69 2005/01/15 10:50:17 jmmv Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.70 2005/01/23 20:45:22 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -13,8 +13,8 @@ BSD_PKG_INSTALL_MK=	1
 
 .include "../../mk/bsd.prefs.mk"
 
-DEINSTALL_FILE=		${WRKDIR}/.DEINSTALL
-INSTALL_FILE=		${WRKDIR}/.INSTALL
+DEINSTALL_FILE=		${PKG_DB_TMPDIR}/+DEINSTALL
+INSTALL_FILE=		${PKG_DB_TMPDIR}/+INSTALL
 
 # These are the template scripts for the INSTALL/DEINSTALL scripts.  Packages
 # may do additional work in the INSTALL/DEINSTALL scripts by overriding the
@@ -299,11 +299,13 @@ INSTALL_SCRIPTS_ENV=	PKG_PREFIX=${PREFIX}
 .PHONY: pre-install-script post-install-script
 
 pre-install-script: generate-install-scripts
-	${_PKG_SILENT}${_PKG_DEBUG}${SETENV} ${INSTALL_SCRIPTS_ENV}	\
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKG_DB_TMPDIR} &&		\
+		${SETENV} ${INSTALL_SCRIPTS_ENV}			\
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install-script:
-	${_PKG_SILENT}${_PKG_DEBUG}${SETENV} ${INSTALL_SCRIPTS_ENV}	\
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKG_DB_TMPDIR} &&		\
+		${SETENV} ${INSTALL_SCRIPTS_ENV}			\
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .PHONY: generate-install-scripts
@@ -313,6 +315,7 @@ generate-install-scripts:	# do nothing
 .if !empty(DEINSTALL_SRC)
 generate-install-scripts: ${DEINSTALL_FILE}
 ${DEINSTALL_FILE}: ${DEINSTALL_SRC}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
 		${SED} ${FILES_SUBST_SED} > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
@@ -321,6 +324,7 @@ ${DEINSTALL_FILE}: ${DEINSTALL_SRC}
 .if !empty(INSTALL_SRC)
 generate-install-scripts: ${INSTALL_FILE}
 ${INSTALL_FILE}: ${INSTALL_SRC}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
 		${SED} ${FILES_SUBST_SED} > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
