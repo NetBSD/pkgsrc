@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/28 05:06:28 snj Exp $
+# $NetBSD: Makefile,v 1.17 2004/06/14 11:47:36 kristerw Exp $
 
 DISTNAME=		rs-0.7.3.2
 PKGNAME=		RScheme-0.7.3.2
@@ -13,6 +13,7 @@ COMMENT=		Object-oriented Scheme implementation
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 ALL_TARGET=		base
+AUTOMAKE_OVERRIDE=	NO
 
 NOT_FOR_PLATFORM=       *-*-alpha
 
@@ -56,6 +57,7 @@ do-install:
 	cd ${WRKSRC}/src && \
 		(cd install; ${PAX} -rw include ${BUILDLINK_DIR}) && \
 		(cd install; ${PAX} -rw lib ${BUILDLINK_DIR}) && \
+		${LN} -s ${PREFIX}/lib/rscheme ${BUILDLINK_DIR}/lib/rscheme && \
 		${SETENV} ${MAKE_ENV} ${MAKE} install-base && \
 		${SETENV} ${MAKE_ENV} ${MAKE} shell && \
 		${MAKE} install-shell && \
@@ -69,7 +71,8 @@ post-install:
 		${PREFIX}/share/doc/rscheme
 	${RM} -rf ${BUILDLINK_DIR}/include/rscheme			\
 		${BUILDLINK_DIR}/include/rscheme.h			\
-		${BUILDLINK_DIR}/lib/librs.a
+		${BUILDLINK_DIR}/lib/librs.a				\
+		${BUILDLINK_DIR}/lib/rscheme
 	${CHMOD} -R g+w ${WRKSRC}
 
 .include "../../devel/readline/buildlink3.mk"
