@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.13 2001/11/27 12:26:12 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.14 2001/12/03 23:33:01 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -8,6 +8,13 @@ else
 fi
 
 hw_model=`$SYSCTL -n hw.model`
+hw_machine=`$SYSCTL -n hw.machine`
+
+# We're almost certainly crosscompiling
+if [ -n "$MACHINE" -a $hw_machine != "$MACHINE" ]; then
+    echo
+    exit
+fi
 
 case $hw_model in
     # i386
@@ -30,8 +37,7 @@ case $hw_model in
     ARM610*)		FLAGS="-mcpu=arm610"		;; # risc pc
     ARM710*)		FLAGS="-mcpu=arm710"		;; # risc pc
     SA-110*)	
-	hw_machine=`$SYSCTL -n hw.machine` # arm32 split post 1.5
-	case $hw_machine in
+	case $hw_machine in			 # arm32 split post 1.5
 	    cats|dnard|hpcarm|netwinder)
 		FLAGS="-mcpu=strongarm110" ;;
 	    acorn32)
@@ -50,7 +56,6 @@ case $hw_model in
     #
     # vax / unknown
     *)
-	hw_machine=`$SYSCTL -n hw.machine`
 	case $hw_machine in
 	    vax)
 		;;	# No VAX specific gcc flags :(
