@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/10/28 10:24:10 agc Exp $
+# $NetBSD: Makefile,v 1.16 1999/10/29 07:53:03 tron Exp $
 #
 
 DISTNAME=	libglade-0.7
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libglade/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.daa.com.au/~james/gnome/
-
-BROKEN=		broken link phase
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
 DEPENDS+=	esound-0.2.15:../../audio/esound # do not remove this pre-req
