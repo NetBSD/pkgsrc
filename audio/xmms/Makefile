@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/10/15 12:06:32 rh Exp $
+# $NetBSD: Makefile,v 1.13 2000/11/29 01:34:04 wiz Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
@@ -17,6 +17,8 @@ HOMEPAGE=	http://www.xmms.org/
 DEPENDS+=	gtk+>=1.2.7:../../x11/gtk
 DEPENDS+=	libmikmod>=3.1.7:../libmikmod
 DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
+
+BROKEN=		Compiles, but does not work; probably threads problem. See pkg/11091.
 
 USE_LIBTOOL=	yes
 USE_X11=	yes
