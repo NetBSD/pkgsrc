@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4186 2003/12/19 12:10:12 recht Exp $
+$NetBSD: CHANGES,v 1.4187 2003/12/19 12:26:12 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5241,3 +5241,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_comp to 1.12 [jmmv 2003-12-19]
 	Updated ghostscript-esp to 7.07.1 [recht 2003-12-19]
 	Updated ghostscript-esp-nox11 to 7.07.1 [recht 2003-12-19]
+	Updated whatmask to 1.2 [zuntum 2003-12-19]
