@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
+$NetBSD: patch-ag,v 1.2 2001/04/22 20:23:03 jtb Exp $
 
---- src/Makefile.in.orig	Sat Dec  9 07:42:21 2000
-+++ src/Makefile.in	Mon Mar 26 21:44:49 2001
+--- src/Makefile.in.orig	Sun Apr 22 20:22:24 2001
++++ src/Makefile.in	Sun Apr 22 20:52:40 2001
 @@ -143,13 +143,7 @@
  OBJECTS_1 := $(patsubst %.c, %.o, $(OBJECTS_2))
  OBJECTS := $(patsubst %.cc, %.o, $(OBJECTS_1))
@@ -55,7 +55,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
  
  liboctinterp.$(LIBEXT): $(OBJECTS)
 -	rm -f $@
--	$(AR) $(ARFLAGS) $@ $^
+-	$(TEMPLATE_AR) $(TEMPLATE_ARFLAGS) $@ $^
 -	$(RANLIB) $@
 +	${LIBTOOL} --mode=link cc -o liboctinterp.la ${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib -version-info ${version:2.1.%=2:%}
  
@@ -70,11 +70,10 @@ $NetBSD: patch-ag,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
  
  stmp-pic: pic
  	@if [ -f stmp-pic ]; then \
-@@ -343,21 +320,7 @@
- .PHONY: install-oct
+@@ -344,20 +321,7 @@
  
  install-lib:
--	$(top_srcdir)/mkinstalldirs $(octlibdir)
+ 	$(top_srcdir)/mkinstalldirs $(octlibdir)
 -	if $(STATIC_LIBS); then \
 -	  rm -f $(octlibdir)/liboctinterp.$(LIBEXT); \
 -	  $(INSTALL_DATA) liboctinterp.$(LIBEXT) \

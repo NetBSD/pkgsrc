@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2001/04/19 00:25:23 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.3 2001/04/22 20:23:02 jtb Exp $
 
---- configure.orig	Fri Jan  5 12:37:51 2001
-+++ configure	Wed Apr 18 20:22:03 2001
-@@ -799,7 +799,7 @@
+--- configure.orig	Sun Apr 22 20:22:10 2001
++++ configure	Sun Apr 22 20:33:23 2001
+@@ -799,9 +799,9 @@
+ ### Allow the user disable support for command line editing using GNU
  ### readline.
  
 -READLINE_DIR=readline
@@ -12,25 +13,31 @@ $NetBSD: patch-aa,v 1.2 2001/04/19 00:25:23 dmcmahill Exp $
 +LIBREADLINE='${LOCALBASE}/lib/libreadline.so'
  # Check whether --enable-readline or --disable-readline was given.
  if test "${enable_readline+set}" = set; then
-@@ -821,5 +821,5 @@
+   enableval="$enable_readline"
+@@ -821,7 +821,7 @@
+ 
  
  
 -LIBKPATHSEA='$(TOPDIR)/kpathsea/libkpathsea.$(LIBEXT)'
 +LIBKPATHSEA='$(TOPDIR)/kpathsea/libkpathsea.a'
  
  
-@@ -2435,5 +2435,5 @@
+ ### Make it possible to have Octave's array and matrix classes do bounds
+@@ -2414,7 +2414,7 @@
+   echo "$ac_t""defining F77 to be $F77" 1>&6
  elif $use_g77; then
    if test "$with_g77" = yes; then
 -    F77=g77
 +    F77=${CC}
    else
      F77="$with_g77"
-@@ -2725,11 +2725,6 @@
+   fi
+@@ -2704,13 +2704,8 @@
+ 
  
  
 -if test "$cross_compiling" = yes; then
-+if true; then
++if true "$cross_compiling" = yes; then
    octave_cv_f2c_f77_compat=yes
 -  if test "$octave_cv_f77_is_g77" = yes; then
 -    echo "$ac_t""assuming ${F77-f77} cross compiler is f2c compatible" 1>&6
@@ -39,14 +46,18 @@ $NetBSD: patch-aa,v 1.2 2001/04/19 00:25:23 dmcmahill Exp $
 -  fi
  else
    echo $ac_n "checking ${F77-f77}/f2c compatibility""... $ac_c" 1>&6
-@@ -2776,5 +2771,5 @@
+ echo "configure:2717: checking ${F77-f77}/f2c compatibility" >&5
+@@ -2755,7 +2750,7 @@
+ }
  #if defined (sun)
  int MAIN_ () { return 0; }
 -#elif defined (linux) && defined (__ELF__)
-+#elif (defined (linux) && defined (__ELF__)) || defined (__NetBSD) 
++#elif (defined (linux) && defined (__ELF__)) || defined (__NetBSD)
  int MAIN__ () { return 0; }
  #endif
-@@ -2865,8 +2860,6 @@
+ EOF
+@@ -2844,10 +2839,8 @@
+ %.c : %.f
  
  %.o : %.f
 -	$(FC) -c $(ALL_FFLAGS) -o $@ $<
@@ -56,7 +67,9 @@ $NetBSD: patch-aa,v 1.2 2001/04/19 00:25:23 dmcmahill Exp $
 -	$(FC) -c $(FPICFLAG) $(ALL_FFLAGS) $< -o $@
  
  EOF
-@@ -3047,9 +3040,9 @@
+ elif $have_f2c; then
+@@ -3026,11 +3019,11 @@
+ fi
  
  FORTRAN_MAIN_FLAG=
 -case "$canonical_host_type" in
@@ -71,21 +84,27 @@ $NetBSD: patch-aa,v 1.2 2001/04/19 00:25:23 dmcmahill Exp $
 +fi
  if test -n "$FORTRAN_MAIN_FLAG"; then
    echo "$ac_t""defining FORTRAN_MAIN_FLAG to be $FORTRAN_MAIN_FLAG" 1>&6
-@@ -5066,5 +5059,5 @@
+ fi
+@@ -5145,7 +5138,7 @@
+ 
  GLOB_DIR=glob
  LIBGLOB='$(TOPDIR)/glob/glob.o $(TOPDIR)/glob/fnmatch.o'
 -GLOB_INCFLAGS='-I$(top_srcdir)/glob -I$(TOPDIR)/glob'
 +GLOB_INCFLAGS='-I$(top_srcdir)/glob -I$(TOPDIR)/glob -I${LOCALBASE}/include'
  if test "$ac_cv_header_fnmatch_h" = yes \
    && test "$ac_cv_header_glob_h" = yes; then
-@@ -6226,5 +6219,5 @@
+   cat > conftest.$ac_ext <<EOF
+@@ -6305,7 +6298,7 @@
+ 
  
  TERMLIBS=""
 -for termlib in ncurses curses termcap terminfo termlib; do
 +for termlib in curses termcap termlib; do
    echo $ac_n "checking for tputs in -l${termlib}""... $ac_c" 1>&6
- echo "configure:6231: checking for tputs in -l${termlib}" >&5
-@@ -6277,11 +6270,9 @@
+ echo "configure:6311: checking for tputs in -l${termlib}" >&5
+ ac_lib_var=`echo ${termlib}'_'tputs | sed 'y%./+-%__p_%'`
+@@ -6356,13 +6349,11 @@
+ 
  
  if test "$ac_cv_lib_termcap_tputs" = yes \
 -    || test "$ac_cv_lib_terminfo_tputs" = yes \
@@ -98,7 +117,9 @@ $NetBSD: patch-aa,v 1.2 2001/04/19 00:25:23 dmcmahill Exp $
 +  warn_termlibs="I couldn't find -ltermcap, -lcurses, or -ltermlib!"
    echo "configure: warning: $warn_termlibs" 1>&2
  fi
-@@ -6990,17 +6981,17 @@
+ 
+@@ -7069,19 +7060,19 @@
+     cat << \EOF > $bsd_gcc_kluge_targets_frag
  
  lex.o: lex.cc 
 -	$(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
@@ -121,21 +142,27 @@ $NetBSD: patch-aa,v 1.2 2001/04/19 00:25:23 dmcmahill Exp $
 +	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(CXXFLAGS_NO_PT_FLAGS) $<
  
  EOF
-@@ -7271,5 +7262,5 @@
+   ;;
+@@ -7350,7 +7341,7 @@
+ # ./install, which can be erroneously created by make from ./install.sh.
  echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
- echo "configure:7273: checking for a BSD compatible install" >&5
+ echo "configure:7353: checking for a BSD compatible install" >&5
 -if test -z "$INSTALL"; then
 +if true; then
  if eval "test \"`echo '$''{'ac_cv_path_install'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
-@@ -7915,5 +7906,5 @@
+ else
+@@ -7994,7 +7985,7 @@
+ done
  
  ac_given_srcdir=$srcdir
 -ac_given_INSTALL="$INSTALL"
 +ac_given_INSTALL="${INSTALL}"
  
  trap 'rm -fr `echo "Makefile octMakefile Makeconf install-octave \
-@@ -8154,8 +8145,4 @@
+   test/Makefile dlfcn/Makefile \
+@@ -8237,10 +8228,6 @@
+     top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
 -  case "$ac_given_INSTALL" in
@@ -144,3 +171,4 @@ $NetBSD: patch-aa,v 1.2 2001/04/19 00:25:23 dmcmahill Exp $
 -  esac
  
    echo creating "$ac_file"
+   rm -f "$ac_file"

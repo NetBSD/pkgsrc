@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
+$NetBSD: patch-ac,v 1.2 2001/04/22 20:23:02 jtb Exp $
 
---- Makeconf.in.orig	Sat Dec  9 07:41:37 2000
-+++ Makeconf.in	Fri Dec 29 21:03:25 2000
-@@ -39,7 +39,7 @@
+--- Makeconf.in.orig	Sun Apr 22 20:22:09 2001
++++ Makeconf.in	Sun Apr 22 20:37:34 2001
+@@ -42,7 +42,7 @@
  
  RUNTEST = @RUNTEST@
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
  
  DEFAULT_PAGER = @DEFAULT_PAGER@
  
-@@ -56,7 +56,7 @@
+@@ -59,7 +59,7 @@
  SHLEXT = @SHLEXT@
  SHLEXT_VER = $(SHLEXT).$(version)
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
  
  # Fortran to C translator and associated flags.
  
-@@ -128,7 +128,7 @@
+@@ -134,7 +134,7 @@
  	$(LD_STATIC_FLAG) $(CPICFLAG) $(LDFLAGS)
  
  SH_LD = @SH_LD@
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
  
  SONAME_FLAGS = @SONAME_FLAGS@
  
-@@ -284,16 +284,12 @@
+@@ -290,16 +290,12 @@
  # How to make .o files:
  
  %.o : %.c
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
  
  %.o : %.cc
 -	$(CXX) -c $(CPPFLAGS) $(ALL_CXXFLAGS) $< -o $@
-+	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(ALL_CXXFLAGS) $<
++	${LIBTOOL} --mode=compile $(CXX) -c $(CPPFLAGS) $(ALL_CXXFLAGS) $< -o $@
  
 -pic/%.o : %.c
 -	$(CC) -c $(CPPFLAGS) $(CPICFLAG) $(ALL_CFLAGS) $< -o $@

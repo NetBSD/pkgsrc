@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
+$NetBSD: patch-af,v 1.2 2001/04/22 20:23:02 jtb Exp $
 
---- liboctave/Makefile.in.orig	Tue Jul 18 07:33:02 2000
-+++ liboctave/Makefile.in	Sat Dec 30 10:13:43 2000
+--- liboctave/Makefile.in.orig	Sun Apr 22 20:22:11 2001
++++ liboctave/Makefile.in	Sun Apr 22 20:47:03 2001
 @@ -18,7 +18,7 @@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
@@ -28,12 +28,12 @@ $NetBSD: patch-af,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
 -    libraries:
 -  endif
 -endif
-+libraries: liboctave.$(LIBEXT)
+++libraries: liboctave.$(LIBEXT)
  .PHONY: libraries
  
  liboctave.$(LIBEXT): $(OBJECTS)
 -	rm -f $@
--	$(AR) $(ARFLAGS) $@ $^
+-	$(TEMPLATE_AR) $(TEMPLATE_ARFLAGS) $@ $^
 -	$(RANLIB) $@
 +	${LIBTOOL} --mode=link cc -o liboctave.${LIBEXT} ${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib -version-info ${version:2.1.%=2:%}
  

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/04/19 15:10:35 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/22 20:23:01 jtb Exp $
 
 DISTNAME=	octave-2.1.33
+PKGNAME=	octave-2.1.34
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/bleeding-edge/ \
 		ftp://ftp.math.uni-hamburg.de/pub/soft/math/octave/bleeding-edge/ \
@@ -8,6 +9,10 @@ MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/bleeding-edge/ \
 		ftp://ftp.u-aizu.ac.jp/pub/SciEng/numanal/Octave/bleeding-edge/ \
 		ftp://ftp.task.gda.pl/pub/software/octave/bleeding-edge/
 EXTRACT_SUFX=	.tar.bz2
+
+PATCHFILES=	octave-2.1.33-2.1.34.patch.gz
+PATCH_SITES=	${MASTER_SITES}
+PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.che.wisc.edu/octave/
