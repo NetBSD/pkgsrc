@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/27 01:46:59 epg Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/18 11:23:36 recht Exp $
 
 DISTNAME=	clearsilver-0.9.7
 CATEGORIES=	www
@@ -16,6 +16,7 @@ CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 
 PY_PATCHPLIST=	YES
 PYBINMODULE=	YES
+PYTHON_VERSIONS_ACCEPTED=	23pth 22pth 21pth
 PYTHON_PATCH_SCRIPTS=	scripts/document.py
 
 .include "../../lang/python/application.mk"
