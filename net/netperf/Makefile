@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 18:19:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/24 02:09:29 hubertf Exp $
 # KAME Id: Makefile,v 1.3 2000/01/21 12:34:29 itojun Exp
 #
 
@@ -17,7 +17,6 @@ COMMENT=	Rick Jones' network performance benchmarking package
 
 MAKEFILE=	makefile
 MAN1=		netperf.1 netserver.1
-MINSTALL=	${INSTALL} ${COPY} -o ${MANOWN} -g ${MANGRP} -m ${MANMODE}
 
 BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
@@ -28,11 +27,11 @@ CFLAGS+=	-DDO_IPV6
 post-install:
 	strip ${PREFIX}/netperf/netperf
 	strip ${PREFIX}/netperf/netserver
-	${MINSTALL} ${WRKSRC}/netperf.man ${PREFIX}/man/man1/netperf.1
-	${MINSTALL} ${WRKSRC}/netserver.man ${PREFIX}/man/man1/netserver.1
+	${INSTALL_MAN} ${WRKSRC}/netperf.man ${PREFIX}/man/man1/netperf.1
+	${INSTALL_MAN} ${WRKSRC}/netserver.man ${PREFIX}/man/man1/netserver.1
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/netperf
-	${MINSTALL} ${WRKSRC}/netperf.ps ${PREFIX}/share/doc/netperf
+	${INSTALL_MAN} ${WRKSRC}/netperf.ps ${PREFIX}/share/doc/netperf
 	${GZIP_CMD} -9nf ${PREFIX}/share/doc/netperf/netperf.ps
 .endif
 
