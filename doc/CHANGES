@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2821 2003/07/18 12:22:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.2822 2003/07/18 12:41:16 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2854,3 +2854,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated eawpatches to 12 [adam 2003-07-18]
 	Updated lesstif to 0.93.46 [adam 2003-07-18]
 	Updated pkg_comp to 1.7 [jmmv 2003-07-18]
+	Added libffi-2.0beta [agc 2003-07-18]
