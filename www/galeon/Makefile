@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/07/26 09:47:38 abs Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/06 13:22:08 taya Exp $
 #
 
-DISTNAME=	galeon-0.11.3
+DISTNAME=	galeon-0.12pre1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
 
@@ -26,7 +26,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-mozilla-includes=${PREFIX}/include/mozilla \
 		 --with-mozilla-libs=${PREFIX}/lib/mozilla \
 		--with-libiconv=${LOCALBASE} \
-		--disable-applet
+		--disable-applet \
+		--sysconfdir=${PREFIX}/etc
+
 USE_LIBINTL=	yes
 
 MOZ_LIBDIR=     ${PREFIX}/lib/mozilla
@@ -34,12 +36,15 @@ LDFLAGS+=       -Wl,-R${MOZ_LIBDIR}
 LDFLAGS+=	-export-dynamic
 
 pre-configure:
-	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf && ${TOUCH} aclocal.m4)
+	(cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf && ${TOUCH} aclocal.m4 && \
+		./setup-gconf-source ${PREFIX}/etc)
 
 post-install:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/galeon.in > ${PREFIX}/bin/galeon
 	${CHOWN} ${BINOWN} ${PREFIX}/bin/galeon
 	${CHGRP} ${BINGRP} ${PREFIX}/bin/galeon
 	${CHMOD} ${BINMODE} ${PREFIX}/bin/galeon
+	${BSD_INSTALL_PROGRAM_DIR} ${PREFIX}/lib/galeon
+	${BSD_INSTALL_SCRIPT} ${WRKSRC}/setup-gconf-source ${PREFIX}/lib/galeon
 
 .include "../../mk/bsd.pkg.mk"
