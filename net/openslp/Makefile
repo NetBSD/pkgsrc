@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/06 07:08:50 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/05/10 22:18:58 minskim Exp $
 
 DISTNAME=	openslp-1.0.11
 CATEGORIES=	net
@@ -40,9 +40,11 @@ post-install:
 	cd ${WRKSRC}/etc; for file in ${CONFS}; do			\
 		${INSTALL_DATA} $${file} ${EGDIR}/$${file};		\
 	done
-	cd ${WRKSRC}/doc; ${CP} -R rfc/* ${DOCDIR}
-	cd ${WRKSRC}/doc; ${CP} -R html/* ${HTMLDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOCDIR} ${HTMLDIR}
-	${CHMOD} -R a+rx,a-w ${DOCDIR} ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/rfc/* ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html ${HTMLDIR}
+	for d in IntroductionToSLP ProgrammersGuide UsersGuide; do	\
+		${INSTALL_DATA_DIR} ${HTMLDIR}/$${d};			\
+		${INSTALL_DATA} ${WRKSRC}/doc/html/$${d}/* ${HTMLDIR}/$${d}; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
