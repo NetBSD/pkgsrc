@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2085 2004/08/29 16:53:16 recht Exp $
+$NetBSD: TODO,v 1.2086 2004/08/30 13:41:23 recht Exp $
 
 Suggested new packages
 ======================
@@ -184,7 +184,6 @@ Suggested package updates
 	o audacity-1.2.2
 	o avidemux-2.0.28
 	o balsa-1.4.4
-	o balsa2-2.2.3
 	o bash3-3.0
 	o biew-5.61
 	o bind-9.3
