@@ -1,7 +1,6 @@
 ==============================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 00:22:47 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2002/07/27 22:45:08 jschauma Exp $
 
-powerpc: The PowerPC version of Blackdown JDK requires COMPAT_LINUX in your
-kernel.
+The Blackdown JDK requires COMPAT_LINUX in your kernel.
 
 ==============================================================================
