@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6069 2004/05/29 22:14:23 cube Exp $
+$NetBSD: CHANGES,v 1.6070 2004/05/29 23:33:59 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2698,3 +2698,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ghc to 6.2.1 [kristerw 2004-05-29]
 	Updated opensp to 1.5.1nb1 [kristerw 2004-05-29]
 	Updated libnids to 1.18nb1 [cube 2004-05-29]
+	Updated hercules to 2.11nb2 [kristerw 2004-05-29]
