@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/26 03:30:00 jschauma Exp $
+
+--- Makefile.orig	Thu May 17 13:27:07 2001
++++ Makefile
+@@ -5,20 +5,20 @@
+ ######################################################################
+ # Change the following to suit your needs
+ 
+-SHELL=/bin/bash
++SHELL=${SH}
+ 
+ # The directory root of your installation
+ # If you make a personal installation, change it to your home directory
+ # Default: /usr
+ # uncomment the following line to install to the default directories...
+-TREE=/usr
++TREE=${PREFIX}
+ # ...or the following line to install into your home directory:
+ # TREE=$(HOME)
+ 
+ # if you don't have the gd graphic library installed, you have to comment out or
+ # delete the following line. However, gp_map is such a nice program, so you
+ # better go to www.boutell.com and download the gd library.
+-GDPROGRAMS=gp_map
++# GDPROGRAMS=gp_map
+ 
+ # Directory to install the programs themselves. 
+ # Default: /usr/local/bin
+@@ -28,7 +28,7 @@ BINDIR=$(TREE)/bin
+ MANDIR=$(TREE)/man
+ 
+ #directory to install the data directory
+-DATADIR=$(TREE)/lib
++DATADIR=$(TREE)/share/examples
+ 
+ # documentation. 
+ # If you want to install documents automagically, type:

@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/09/26 03:30:00 jschauma Exp $
+
+--- src/Makefile.orig	2001-05-17 15:27:06.000000000 -0400
++++ src/Makefile	2003-09-25 23:22:01.000000000 -0400
+@@ -5,14 +5,13 @@
+ ######################################################################
+ # Change the following to suit your needs
+ 
+-SHELL=/bin/bash
+-CC=gcc
++SHELL=${SH}
+ LIBS= -lz -lm
+ #CFLAGS= -DNLS -DGZ
+ 
+ all: $(PROGRAMS) $(GPPROGRAMS)
+ 
+-$(PROGRAMS): gp%: gp%.o genpak.h genpak.o
++$(PROGRAMS): gp*: gp*.c genpak.h genpak.o
+ 	@echo Creating $@
+ 	$(CC) $(CFLAGS) -o $@ genpak.o $< $(LIBS)
+ 	

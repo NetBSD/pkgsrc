@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/26 03:30:00 jschauma Exp $
+
+SHA1 (gp-0.26.tgz) = 18107463df9bb33d12cc0f0fc6a6f17985492666
+Size (gp-0.26.tgz) = 141159 bytes
+SHA1 (patch-aa) = 2c3078fe296c281162f5ea9bca7773cdbdda9577
+SHA1 (patch-ab) = ce6ec76011f18a9a86b8c65ba5541848e298e27a
