@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2002/10/05 11:41:27 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/19 10:54:53 rh Exp $
 #
 
 DISTNAME=		gnome-desktop-2.0.8
 PKGNAME=		${DISTNAME:S/-desktop/2-pixmaps/}
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=2.0.1/sources/gnome-desktop/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.0/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.77 2002/08/25 18:40:30 jlam Exp $
+# $NetBSD: Makefile,v 1.78 2002/10/19 10:55:01 rh Exp $
 
 DISTNAME=		gnome-libs-1.4.1.4
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-libs/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-libs/1.4/}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
@@ -44,6 +45,13 @@ pre-configure:
 			> ${WRKSRC}/configure && \
 		${CHMOD} 0755 ${WRKSRC}/configure
 .endif
+
+post-extract:
+.for file in gnome-app-helper-convenience-macros.htm			\
+	     gnome-app-helper-keybindings-config.htm
+	cd ${WRKSRC}/devel-docs/gnome-dev-info/gnome-dev-info &&	\
+	( [ -e ${file}l ] || ${MV} ${file} ${file}l )
+.endfor
 
 post-patch:
 	${MV} ${WRKSRC}/gnome-config.in ${WRKSRC}/gnome-config.in-pre-lpath && \

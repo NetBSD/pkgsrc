@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2002/07/27 15:20:05 jschauma Exp $
+# $NetBSD: Makefile,v 1.29 2002/10/19 10:55:00 rh Exp $
 
 DISTNAME=	gdm-2.2.0
 PKGREVISION=	2
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gdm/} \
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.2/} \
 		${MASTER_SITE_LOCAL}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.README Daemon.png
 
