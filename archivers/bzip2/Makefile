@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2004/03/29 01:18:41 tv Exp $
+# $NetBSD: Makefile,v 1.35 2004/03/29 01:19:28 tv Exp $
 #
 
 DISTNAME=	bzip2-1.0.2
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://sources.redhat.com/pub/bzip2/v102/
 
