@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/03/29 12:40:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2003/05/05 17:18:24 grant Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 PKGNAME=	pilotmgr-1.107.2
@@ -29,30 +29,31 @@ PM_PERL_DIR=	${PREFIX}/lib/${DISTNAME:C/-.*$//}
 PM_DOC_DIR=	${PREFIX}/share/doc/${DISTNAME:C/-.*$//}
 
 post-extract:
-		@${RM} -f ${WRKSRC}/SyncCM.pm
-		@${CHMOD} +x ${WRKSRC}/Setup
+	@${RM} -f ${WRKSRC}/SyncCM.pm
+	@${CHMOD} +x ${WRKSRC}/Setup
 
 pre-install:
-		@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 do-install:
-		${INSTALL_DATA_DIR} ${PM_PERL_DIR} ${PM_DOC_DIR}
-		for FILE in ${WRKSRC}/*.pm; do \
-		  ${INSTALL_DATA} $$FILE ${PM_PERL_DIR}; \
-		done
-		${CHMOD} ${BINMODE} ${PM_PERL_DIR}/PilotMgr.pm
-		${LN} -fs ${PM_PERL_DIR}/PilotMgr.pm ${PREFIX}/bin/PilotManager
-		cd ${WRKSRC}; \
+	${INSTALL_DATA_DIR} ${PM_PERL_DIR}
+	${INSTALL_DATA_DIR} ${PM_DOC_DIR}
+	for FILE in ${WRKSRC}/*.pm; do \
+		${INSTALL_DATA} $$FILE ${PM_PERL_DIR}; \
+	done
+	${CHMOD} ${BINMODE} ${PM_PERL_DIR}/PilotMgr.pm
+	${LN} -fs ${PM_PERL_DIR}/PilotMgr.pm ${PREFIX}/bin/PilotManager
+	cd ${WRKSRC} && \
 		for DIR in lib/*; do \
-		  ${INSTALL_DATA_DIR} ${PM_PERL_DIR}/$$DIR; \
-		  for FILE in $$DIR/*; do \
-		    ${INSTALL_DATA} $$FILE ${PM_PERL_DIR}/$$DIR; \
-		  done; \
+			${INSTALL_DATA_DIR} ${PM_PERL_DIR}/$$DIR; \
+			for FILE in $$DIR/*; do \
+				${INSTALL_DATA} $$FILE ${PM_PERL_DIR}/$$DIR; \
+			done; \
 		done
-		for FILE in ${WRKSRC}/docs/*; do \
-		  ${INSTALL_DATA} $$FILE ${PM_DOC_DIR}; \
-		done
-		${LN} -fs ${PM_DOC_DIR} ${PM_PERL_DIR}/docs
+	for FILE in ${WRKSRC}/docs/*; do \
+		${INSTALL_DATA} $$FILE ${PM_DOC_DIR}; \
+	done
+	${LN} -fs ${PM_DOC_DIR} ${PM_PERL_DIR}/docs
 
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
