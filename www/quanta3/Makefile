@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2004/01/24 15:23:47 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/05 02:25:36 markd Exp $
 
-DISTNAME=	quanta-3.1.5
-PKGREVISION=	1
+DISTNAME=	quanta-${_KDE_VERSION}
 CATEGORIES=	www
 COMMENT= 	HTML editor suitable for experienced web developers
 
