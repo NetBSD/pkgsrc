@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/07/13 14:38:05 manu Exp $
+--- Makefile.orig	Fri Oct 27 07:08:32 2000
++++ Makefile	Fri Jul 13 16:07:15 2001
+@@ -2,9 +2,9 @@
+ cp=/bin/cp
+ mv=/bin/mv
+ strip=/usr/bin/strip
+ ln=/bin/ln
+-PREFIX=/usr
++PREFIX=/usr/pkg
+ 
+ all:	make_impress make_font3d make_pstoedit
+ 
+ make_font3d:
+@@ -29,5 +29,5 @@
+ install: $(PREFIX)/bin/pstoedit.orig
+ 	install -c bin/impress $(PREFIX)/bin && rm -f $(PREFIX)/bin/impress.tcl && ${ln} -s $(PREFIX)/bin/impress $(PREFIX)/bin/impress.tcl
+ 	install -c bin/transeps $(PREFIX)/bin
+ 	install -c bin/font3d $(PREFIX)/bin
+-	install -c bin/pstoedit $(PREFIX)/bin
++#	install -c bin/pstoedit $(PREFIX)/bin
