@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/25 04:55:41 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/12/06 17:14:13 jlam Exp $
 #
 
 DISTNAME=		libungif-4.1.0
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--without-x
 
 DOCDIR=			${PREFIX}/share/doc/libungif
+HTMLDIR=		${PREFIX}/share/doc/html/libungif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -39,6 +40,7 @@ post-install:
 	done
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} COPYING UNCOMPRESSED_GIF ${DOCDIR}
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt *.png ${DOCDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt *.png ${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"
