@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1189 2003/06/04 09:39:17 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1190 2003/06/05 17:20:04 jmmv Exp $
 #
 # This file is in the public domain.
 #
@@ -918,6 +918,43 @@ MASTER_SITE_APACHE+=	\
 	ftp://mirror.telentente.com/pub/apache/dist/ \
 	ftp://mirrors.midco.net/pub/apache.org/ \
 	http://nagoya.apache.org/mirror/
+
+MASTER_SITE_DEBIAN+= \
+	http://ftp.debian.org/debian/ \
+	http://ftp.at.debian.org/debian/ \
+	http://ftp.au.debian.org/debian/ \
+	http://ftp.wa.au.debian.org/debian/ \
+	http://ftp.bg.debian.org/debian/ \
+	http://ftp.br.debian.org/debian/ \
+	http://ftp.cl.debian.org/debian/ \
+	http://ftp.cz.debian.org/debian/ \
+	http://ftp.de.debian.org/debian/ \
+	http://ftp2.de.debian.org/debian/ \
+	http://ftp.dk.debian.org/debian/ \
+	http://ftp.ee.debian.org/debian/ \
+	http://ftp.es.debian.org/debian/ \
+	http://ftp.fi.debian.org/debian/ \
+	http://ftp.fr.debian.org/debian/ \
+	http://ftp2.fr.debian.org/debian/ \
+	http://ftp.uk.debian.org/debian/ \
+	http://ftp.hk.debian.org/debian/ \
+	http://ftp.hr.debian.org/debian/ \
+	http://ftp.hu.debian.org/debian/ \
+	http://ftp.ie.debian.org/debian/ \
+	http://ftp.is.debian.org/debian/ \
+	http://ftp.it.debian.org/debian/ \
+	http://ftp2.it.debian.org/debian/ \
+	http://ftp.jp.debian.org/debian/ \
+	http://ftp.nl.debian.org/debian/ \
+	http://ftp.no.debian.org/debian/ \
+	http://ftp.nz.debian.org/debian/ \
+	http://ftp.pl.debian.org/debian/ \
+	http://ftp.ru.debian.org/debian/ \
+	http://ftp.se.debian.org/debian/ \
+	http://ftp.si.debian.org/debian/ \
+	http://ftp.sk.debian.org/debian/ \
+	http://ftp.tr.debian.org/debian/ \
+	http://ftp.us.debian.org/debian/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
