@@ -1,46 +1,47 @@
-# $NetBSD: Makefile,v 1.3 2002/12/31 15:44:29 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/11 08:51:37 uebayasi Exp $
 #
 
-DISTNAME=       jde-2.2.7.1
+DISTNAME=       jde-2.3.2
 CATEGORIES=     devel editors
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # The "real" site has silly naming conventions:
-#MASTER_SITES=   http://jde.sunsite.dk/projects/jde/
+#MASTER_SITES=   http://jdee.sunsite.dk/
 
 MAINTAINER=     cjones@netbsd.org
-HOMEPAGE=       http://jde.sunsite.dk/
+HOMEPAGE=       http://jdee.sunsite.dk/
 COMMENT=        Full-featured Java editing mode for emacs
 
-DEPENDS+=       speedbar-0.13a:../../editors/speedbar
-DEPENDS+=       eieio-0.16:../../lang/eieio
-DEPENDS+=       semantic-1.4beta5:../../devel/semantic
-DEPENDS+=       elib-1.0:../../devel/elib
+DEPENDS+=       speedbar>=0.14rc2:../../editors/speedbar
+DEPENDS+=       eieio>=0.17rc3:../../lang/eieio
+DEPENDS+=       semantic>=1.4rc13:../../devel/semantic
+DEPENDS+=       elib>=1.0:../../devel/elib
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/emacs.mk"
 
-.if defined(USE_XEMACS)
-DEPENDS+=               xemacs-[0-9]*:../../editors/xemacs
-EMACS=                  xemacs
-LISPDIR=                lib/xemacs/xemacs-packages/lisp/jde
-.else
-DEPENDS+=               emacs-[0-9]*:../../editors/emacs
-EMACS=                  emacs
-LISPDIR=                share/emacs/site-lisp/jde
-.endif
+# XEmacs has its own JDE package
+EMACS_VERSIONS_ACCEPTED=emacs21 emacs20
 
 BUILD_ENV+=     EMACS=${EMACS}
-BUILD_ENV+=     LISPDIR=${LISPDIR}
-PLIST_SUBST+=   LISPDIR=${LISPDIR}
+MAKE_ENV+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX}
 
 NO_CONFIGURE=   # set
 
 WRKSRC=         ${WRKDIR}/${DISTNAME}/lisp
 MAKEFILE=       makefile
 
+post-extract:
+	@${RMDIR} ${WRKDIR}/${DISTNAME}/java/classes
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${LISPDIR}
-	cd ${WRKDIR}/${DISTNAME} ; tar cf - . | \
-		( cd ${PREFIX}/${LISPDIR} ; tar xf - )
+	@${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/jde
+	@cd ${WRKDIR}/${DISTNAME}/doc; \
+		${PAX} -rw * ${PREFIX}/share/doc/jde -s',^src.*,,' \
+			-s',.*\.nosearch.*,,'
+	@cd ${WRKDIR}/${DISTNAME}; \
+		${PAX} -rw java ${PREFIX}/share/jde -s',^java/classes.*,,' \
+			-s',^java/src.*,,' -s',.*\.nosearch.*,,'
+	@cd ${WRKDIR}/${DISTNAME}; \
+		${PAX} -rw lisp ${EMACS_LISPPREFIX}/jde
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
