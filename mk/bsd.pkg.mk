@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1218 2003/07/19 02:50:22 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1219 2003/07/22 10:12:47 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -4230,6 +4230,29 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 .  endif
 .  ifdef USE_GMAKE
 	@${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
+.  endif
+.  if ${CHECK_SHLIBS} == "YES"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	case "${OBJECT_FMT}" in						\
+	ELF)	bins=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^(bin|sbin|libexec)\// { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
+		libs=`${SETENV} PREFIX=${PREFIX} ${AWK} '/^lib\/lib.*\.so\.[0-9]+$$/ { print ENVIRON["PREFIX"] "/" $$0 }' ${PLIST} || ${TRUE}`; \
+		for i in "" $$libs; do					\
+			${TEST} "$$i" = "" && continue;			\
+			${ECHO} "PROVIDES=$$i" >> ${BUILD_INFO_FILE};	\
+		done;							\
+		case "${LDD}" in					\
+		"")	ldd=`${TYPE} ldd | ${AWK} '{ print $$NF }'`;;	\
+		*)	ldd="${LDD}";					\
+		esac;							\
+		if ${TEST} "$$bins" != "" -o "$$libs" != ""; then 	\
+			requires=`($$ldd $$bins $$libs || ${TRUE}) | ${AWK} 'NF == 3 { print $$3 }' | ${SORT} -u`; \
+			for req in "" $$requires; do			\
+				${TEST} "$$req" = "" && continue;	\
+				${ECHO} "REQUIRES=$$req" >> ${BUILD_INFO_FILE};	\
+			done;						\
+		fi;							\
+        	;;							\
+	esac
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "_PKGTOOLS_VER=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
