@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/10/24 02:01:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/22 07:15:00 grant Exp $
 
 DISTNAME=	rosegarden-2.1pl4
 PKGNAME=	rosegarden-2.1.4
@@ -11,7 +11,7 @@ COMMENT=	Notation editor & MIDI sequencer
 
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 MAKE_ENV+=	GCC=yes
 USE_X11BASE=	YES
 
