@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2002/09/11 21:29:29 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2002/09/17 05:41:54 jlam Exp $
 
---- sigc++/Makefile.in.orig	Tue May 28 14:32:45 2002
-+++ sigc++/Makefile.in	Tue May 28 14:32:52 2002
-@@ -94,7 +94,7 @@
+--- sigc++/Makefile.in.orig	Tue Oct 23 04:40:58 2001
++++ sigc++/Makefile.in
+@@ -94,7 +94,7 @@ libsigc_la_SOURCES =     object.cc   sco
  
  EXTRA_libsigc_la_SOURCES = sigc_res.rc
  
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.2 2002/09/11 21:29:29 wiz Exp $
  
  
  lib_LTLIBRARIES = libsigc.la
+@@ -121,7 +121,7 @@ DEFS = @DEFS@ -I. -I$(srcdir) -I../sigc+
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+-libsigc_la_LIBADD = 
++libsigc_la_LIBADD = $(THREAD_LIB)
+ @SIGCRC_TRUE@libsigc_la_OBJECTS =  object.lo scope.lo marshal.lo slot.lo \
+ @SIGCRC_TRUE@basic_signal.lo adaptor.lo thread.lo sigc_res.lo
+ @SIGCRC_FALSE@libsigc_la_OBJECTS =  object.lo scope.lo marshal.lo \
