@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.2 2000/10/15 07:39:45 wulf Exp $
+$NetBSD: patch-af,v 1.3 2001/04/17 16:27:21 rh Exp $
 
---- src/audio/Makefile.am.orig	Wed Aug 23 13:05:26 2000
-+++ src/audio/Makefile.am	Sun Oct  8 00:34:41 2000
-@@ -3,7 +3,7 @@
+--- src/hermes/Makefile.in.orig	Tue Apr 17 16:30:45 2001
++++ src/hermes/Makefile.in
+@@ -334,7 +334,7 @@
  
- noinst_LTLIBRARIES = libaudio.la
  
--EXTRA_SUBDIRS = aix amigaos beos irix linux macos openbsd solaris win32
-+EXTRA_SUBDIRS = aix amigaos beos irix linux macos netbsd openbsd solaris win32
+ .asm.lo:
+-	$(LIBTOOL) --mode=compile $(STRIP_FPIC) $(NASM) @NASMFLAGS@ $<
++	$(LIBTOOL) --tag=CC --mode=compile $(STRIP_FPIC) $(NASM) @NASMFLAGS@ $<
  
- SUBDIRS = @AUDIO_ARCH@
- 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
