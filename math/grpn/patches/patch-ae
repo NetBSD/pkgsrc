@@ -1,0 +1,81 @@
+$NetBSD: patch-ae,v 1.1 2002/04/02 02:01:24 dmcmahill Exp $
+
+--- number.c.orig	Mon May 31 19:44:23 1999
++++ number.c
+@@ -278,6 +278,76 @@
+    return c;
+ }
+ 
++Number * dbNumber(Number *a,double sf){
++   Real *r1,*rtmp1,*rtmp2;
++   Cmplx *c1;
++   Number *mul = newNumber();
++   Number *c = newNumber();
++
++   if(a == NULL){ fprintf(stderr, "dbNumber(NULL)\n"); exit(0); }
++
++
++   switch(a->type){
++      case REAL:
++         if(-1 == cmpReal(a->data, realZero)){
++            /* log(<0) is complex ! */
++            c1 = setCmplxReal(newCmplx(), a->data, realZero);
++            c->type = COMPLEX;
++            c->data = logCmplx(c1);
++            rtmp1=newReal();
++            rtmp2=newReal();
++            setRealDouble(rtmp1, sf);
++            setRealDouble(rtmp2, 0.0);
++            mul->type = COMPLEX;
++            mul->data = newCmplx();
++            setCmplxReal(mul->data,rtmp1,rtmp2);
++            freeReal(rtmp1);
++            freeReal(rtmp2);
++            freeCmplx(c1);
++         } else {
++            c->type = REAL;
++            mul->type = REAL;
++            mul->data = newReal();
++            setRealDouble(mul->data, sf);
++            c->data = logReal(a->data);
++         }
++         break;
++      case COMPLEX:
++         c->type = COMPLEX;
++         c->data = logCmplx(a->data);
++         rtmp1=newReal();
++         rtmp2=newReal();
++         setRealDouble(rtmp1, sf);
++         setRealDouble(rtmp2, 0.0);
++         mul->type = COMPLEX;
++         mul->data = newCmplx();
++         setCmplxReal(mul->data,rtmp1,rtmp2);
++         freeReal(rtmp1);
++         freeReal(rtmp2);
++         break;
++      case MATRIX:
++         c->type = MATRIX;
++         invalidTyprError("db");
++         c->data = NULL;
++         break;
++      default:
++         fprintf(stderr, "Error: Unknown number type\n");
++         exit(0);
++   }
++
++
++   if(c->data == NULL){
++      free(c);
++      c = NULL;
++   }
++   else {
++	   c = mulNumber(c,mul); 
++   }
++
++   free(mul);
++   return c;
++}
++
+ Number * expNumber(Number *a){
+    Number *c = newNumber();
+ 

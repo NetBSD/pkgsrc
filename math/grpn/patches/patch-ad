@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2002/04/02 02:01:24 dmcmahill Exp $
+
+--- funcs.h.orig	Wed May 26 12:08:11 1999
++++ funcs.h
+@@ -56,6 +56,8 @@
+ void NrootStack();
+ 
+ void RipStack();
++void Db10Stack();
++void Db20Stack();
+ 
+ void SqrStack();
+ void SqrtStack();
