@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2003/07/21 17:10:51 martti Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/31 07:49:23 lukem Exp $
 #
 
-DISTNAME=		lukemftp-1.6-beta2
-PKGNAME=		lukemftp-1.6rc2
-SVR4_PKGNAME=		luftp
+DISTNAME=		tnftp-20030731
+PKGNAME=		tnftp-20030731
+SVR4_PKGNAME=		tnftp
 CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.fi.NetBSD.org/pub/NetBSD/misc/lukemftp/ \
-			ftp://ftp.NetBSD.org/pub/NetBSD/misc/lukemftp/
+MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
 
 MAINTAINER=		lukem@NetBSD.org
 COMMENT=		The enhanced ftp client in NetBSD
