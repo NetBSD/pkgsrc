@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 1999/10/21 01:26:14 dan Exp $
+$NetBSD: patch-ad,v 1.6 2000/08/21 04:00:23 simonb Exp $
 
 
 Note:  before adding drives to the compatibility list, please test them
@@ -11,11 +11,21 @@ Note:  before adding drives to the compatibility list, please test them
 
 
 --- cdd_cdcmds.c.orig	Sun May 31 17:13:24 1998
-+++ cdd_cdcmds.c	Sun May 23 21:31:10 1999
-@@ -160,6 +160,36 @@
++++ cdd_cdcmds.c	Sun Aug 20 23:45:24 2000
+@@ -160,6 +160,46 @@
          mmc_end_cdda
          }
      ,
++        { 
++        "SONY CDU4811",
++        mmc_getcdtoc,
++        mmc_cd_setblocksize,
++        mmc_cdrawread,
++        mmc_cddaread,
++        mmc_begin_cdda,
++        mmc_end_cdda
++        }
++    ,
 +        { 
 +        "MATSHITA CD-R   CW-7502",
 +        mmc_getcdtoc,
