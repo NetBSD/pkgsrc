@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/07/17 10:42:30 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/28 08:38:01 jlam Exp $
 #
 
 DISTNAME=	amp-0.7.6
@@ -12,8 +12,8 @@ COMMENT=	another mp3 player
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
-USE_BUILDLINK_ONLY=	yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=	yes
+GNU_CONFIGURE=	yes
 
 do-install:
 	@ ${INSTALL_PROGRAM} ${WRKSRC}/amp ${PREFIX}/bin
