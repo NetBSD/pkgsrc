@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2003/09/12 16:12:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/02/18 11:25:36 jmmv Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -605,8 +605,8 @@ share/type-convert/type.convert
 @dirrm include/gnome-1.0/libart_lgpl
 @dirrm include/gnome-1.0/gtk-xmhtml
 @dirrm include/gnome-1.0
-@dirrm etc/sound/events
-@dirrm etc/sound
+@unexec ${RMDIR} %D/etc/sound/events 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/etc/sound 2>/dev/null || ${TRUE}
 @dirrm etc/CORBA/servers
 @dirrm etc/CORBA
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/libart.m4 ${LOCALBASE}/share/aclocal/libart.m4
