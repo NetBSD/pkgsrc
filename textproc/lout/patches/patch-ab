@@ -1,0 +1,61 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/09 18:05:10 tsarna Exp $
+
+Fixes bogus PDF output. Will be fixed in next release. 
+
+--- z48.c.orig	Tue Apr  7 00:41:11 1998
++++ z48.c	Mon Nov  9 11:17:06 1998
+@@ -3038,17 +3038,14 @@
+ 	g_page_h_origin			=	g_page_v_origin			=	0;
+ 	g_page_line_width		=	in_line_width;
+ 
+-	g_graphics_vars[k_in]		=	IN;
+-	g_graphics_vars[k_cm]		=	CM;
+-	g_graphics_vars[k_pt]		=	PT;
+-	g_graphics_vars[k_em]		=	EM;
+ 	g_graphics_vars[k_xsize]	=	0;	/*	undefined	*/
+ 	g_graphics_vars[k_ysize]	=	0;	/*	undefined	*/
+ 	g_graphics_vars[k_xmark]	=	0;	/*	undefined	*/
+ 	g_graphics_vars[k_ymark]	=	0;	/*	undefined	*/
+-	g_graphics_vars[k_loutf]	=	0;	/*	undefined	*/
+-	g_graphics_vars[k_loutv]	=	0;	/*	undefined	*/
+-	g_graphics_vars[k_louts]	=	0;	/*	undefined	*/
++
++	g_units[k_loutf]	=	0;	/*	undefined	*/
++	g_units[k_loutv]	=	0;	/*	undefined	*/
++	g_units[k_louts]	=	0;	/*	undefined	*/
+ 
+ 	g_ET_pending			=	FALSE;
+ 	g_TJ_pending			=	FALSE;
+@@ -3636,17 +3633,25 @@
+ /*
+ 	write out trailer
+  */
++/* uwe: comments can appear in the body only.
+ 	if (g_PDF_debug)
+ 		fprintf(in_fp, "%%\n%% trailer:\n%%\n");
++ */
++	fputs("trailer\n<<\n", in_fp);
++
++	fprintf(in_fp, "/Size %u\n", g_next_objnum);
++
++	fputs("/Root ", in_fp);
++	PDFObject_WriteRef(in_fp, catalog_obj_num);
++	fputc('\n', in_fp);
+ 
+-	fputs("trailer\n"
+-		  "<< ", in_fp);
+-	fprintf(in_fp, "/Size %u ", g_next_objnum);
+-	fputs("/Root ", in_fp);		PDFObject_WriteRef(in_fp, catalog_obj_num);
+-	fputs(" /Info ", in_fp);	PDFObject_WriteRef(in_fp, info_obj_num);
++	fputs("/Info ", in_fp);
++	PDFObject_WriteRef(in_fp, info_obj_num);
++	fputc('\n', in_fp);
+ 
+-	fprintf(in_fp, " >>\n"
+-				   "startxref %u\n", xref_start);
++	fprintf(in_fp, ">>\n"
++				   "startxref\n"
++				   "%u\n", xref_start);
+ 	fputs("%%EOF\n", in_fp);
+ /*
+ 	memory deallocation (no need to dispose of the qsave_marking_stack because it's always
