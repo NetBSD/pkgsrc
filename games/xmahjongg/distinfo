@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:29:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:40 wiz Exp $
 
-MD5 (xmahjongg.tar.gz) = 969200f399e9c5d28a7c1239a068fef0
+SHA1 (xmahjongg.tar.gz) = 2f2c642a89249cac8642e1ef3be97058f4e39aa8
+Size (xmahjongg.tar.gz) = 32850 bytes
 SHA1 (patch-aa) = e12e1b85a39e85c92968f601ece87bc3ecae6e81
 SHA1 (patch-ab) = fdf3116384c4fcc84758a021c996cc21e8338859

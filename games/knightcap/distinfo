@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:27:59 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:29 wiz Exp $
 
-MD5 (KnightCap-3.6.tar.gz) = b3e912cc6d4ef68f8063c45620526d1a
+SHA1 (KnightCap-3.6.tar.gz) = 923dc3e6b19f3b4b8c2d6236eb438388e68b878a
+Size (KnightCap-3.6.tar.gz) = 157943 bytes
 SHA1 (patch-aa) = 8be5487db04419c82e8fcb9569145303ab783ef2
 SHA1 (patch-ab) = ad31712d14e820521f38432eaa75be5a47a23693
 SHA1 (patch-ac) = de3ce657b4d45aabde42faebe1e32dd95c190795

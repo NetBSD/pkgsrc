@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:28:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 02:08:35 wiz Exp $
 
-MD5 (quake-v6-bsd-kame.tar.gz) = 634991e85ca27c8e867f387268c0ec48
-MD5 (quake6-00-v6-20000202b.diff.gz) = 7b610d74ecff7087bc2a3c5f7180681d
+SHA1 (quake-v6-bsd-kame.tar.gz) = 09d58eef39f3d8a6b7b7287c88fc66d4dd3feb0b
+Size (quake-v6-bsd-kame.tar.gz) = 4503326 bytes
+SHA1 (quake6-00-v6-20000202b.diff.gz) = a4a1cf178e40c5effb3faad0fa744bbbcd0a56ab
+Size (quake6-00-v6-20000202b.diff.gz) = 3857 bytes
 SHA1 (patch-aa) = 6a1efb5ac2a9a8a7375a40c95beb67276ae163e8
 SHA1 (patch-ab) = 6cb06286340c5d9818125594c097dda77714fb5e
