@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/10/12 13:48:29 tv Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/13 16:35:27 jschauma Exp $
 #
 
-DISTNAME=	netbsd-www-1.1
+DISTNAME=	netbsd-www-1.2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,12 +9,16 @@ DISTFILES=	# empty
 MAINTAINER=	grant@NetBSD.org
 COMMENT=	Packages required to build the NetBSD.org web site
 
+# we add an explicit dependency on docbook-xsl here since earlier versions
+# generated slightly different html code, leading to a large number of
+# unneccessary 'regen' commits
+DEPENDS+=	docbook-xsl>=1.67.0:../../textproc/docbook-xsl
 DEPENDS+=	docbook-website>=2.3nb3:../../textproc/docbook-website
 DEPENDS+=	libxslt>=1.0.20:../../textproc/libxslt
 DEPENDS+=	ImageMagick>=5.5.7.11nb1:../../graphics/ImageMagick
 DEPENDS+=	xearth>=1.1:../../x11/xearth
 DEPENDS+=	opensp>=1.1:../../textproc/opensp
-DEPENDS+=	w3m>=0.5.1:../../www/w3m
+DEPENDS+=	w3m>=0.4:../../www/w3m
 
 USE_PERL5=	run
 EXTRACT_ONLY=	# defined
