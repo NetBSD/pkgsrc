@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/06/25 11:50:32 pooka Exp $
+# $NetBSD: Makefile,v 1.34 2000/07/28 10:33:57 wiz Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -13,32 +13,10 @@ CPPFLAGS+=              -I${LOCALBASE}/include  # for ncurses' termcap.h
 LDFLAGS+=               -L${LOCALBASE}/lib      # for -lncurses
 CONFIGURE_ENV+=         CPPFLAGS="${CPPFLAGS}"
 
+USE_CURSES=		yes
+
 ALL_TARGET=		vim
 INSTALL_TARGET=		installvimbin
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-GOOD_CURSES=    1.4[Y-Z] 1.4Z[A-Z] 1.[5-9]*
-
-.for PATTERN in ${GOOD_CURSES}
-.if ${OS_VERSION:M${PATTERN}} != ""
-CURSES_GOOD?=   #defined
-.endif
-.endfor
-.endif
-
-.if ${OPSYS} == "SunOS"
-CURSES_GOOD?=	#defined
-.endif
-
-.if defined(CURSES_GOOD)
-CPPFLAGS=
-CONFIGURE_ARGS+=	--with-tlib=curses
-.else
-DEPENDS+=               ncurses>=4.2:../../devel/ncurses
-CONFIGURE_ARGS+=	--with-tlib=ncurses
-.endif
 
 post-install:
 	for f in rvim rview ; do				\
@@ -47,3 +25,10 @@ post-install:
 	done
 
 .include "../../mk/bsd.pkg.mk"
+
+.if ${NEED_NCURSES} == "YES"
+CONFIGURE_ARGS+=	--with-tlib=ncurses
+.else
+CPPFLAGS=
+CONFIGURE_ARGS+=	--with-tlib=curses
+.endif
