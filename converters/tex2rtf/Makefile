@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.8 2004/03/29 05:19:47 ben Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/30 18:23:46 ben Exp $
 
-DISTNAME=		tex2rtf164_source
-PKGNAME=		tex2rtf-164
+DISTNAME=		tex2rtf-2.01-source
+PKGNAME=		tex2rtf-2.01
 CATEGORIES=		converters textproc
-MASTER_SITES=		ftp://www.remstar.com/pub/wxwin/tex2rtf/	\
-			ftp://ftp.sunet.se/pub7/lang/wxwin/tex2rtf/
-EXTRACT_SUFX=		.zip
+MASTER_SITES=		ftp://biolpc22.york.ac.uk/pub/tex2rtf/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.wxwindows.org/tex2rtf/index.htm
 COMMENT=		LaTex-to-RTF translator
 
-WRKSRC=			${WRKDIR}/src
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
+MAKEFILE=		makefile.unx
+USE_BUILDLINK3=		yes
 
-do-build:
-	cd ${WRKSRC} && make -f makefile.unx nogui
+post-patch:
+	${CP} ${FILESDIR}/stringmatch.* ${WRKSRC}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tex2rtf_nogui ${PREFIX}/bin/tex2rtf
+	${INSTALL_PROGRAM} ${WRKSRC}/tex2rtf ${PREFIX}/bin/tex2rtf
 
+.include "../../x11/wxGTK/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
