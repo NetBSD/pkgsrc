@@ -1,3 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2001/02/23 15:03:45 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/02/24 01:25:01 taca Exp $
 #
-CHASEN_VERSION=		2.2.2
+
+CHASEN_VERSION=		2.2.3
