@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2570 2004/11/29 02:28:11 tv Exp $
+$NetBSD: TODO,v 1.2571 2004/11/29 04:53:04 tv Exp $
 
 Suggested new packages
 ======================
@@ -766,7 +766,6 @@ Suggested package updates
 	o nsca-1.2.0
 	o nsd-2.1.4
 	o nslint-2.1a3
-	o nulib2-2.0.3
 	o nut-10.11
 	o obexftp-0.10.6
 	o objc-3.2.6
