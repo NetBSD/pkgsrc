@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/02/12 02:35:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BINUTILS_BUILDLINK3_MK:=	${BINUTILS_BUILDLINK3_MK}+
@@ -37,33 +37,35 @@ BUILDLINK_IS_BUILTIN.binutils=	NO
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.binutils=${BUILDLINK_IS_BUILTIN.binutils}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.binutils:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.binutils=	YES
-.else
-BUILDLINK_USE_BUILTIN.binutils=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.binutils:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.binutils=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.binutils=	NO
-.endif
-.if !empty(PREFER_NATIVE:Mbinutils) && \
-    !empty(BUILDLINK_IS_BUILTIN.binutils:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.binutils=	YES
-.endif
-.if !empty(PREFER_PKGSRC:Mbinutils)
-BUILDLINK_USE_BUILTIN.binutils=	NO
-.endif
-
-.if defined(USE_BINUTILS)
-BUILDLINK_USE_BUILTIN.binutils=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.binutils:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.binutils=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.binutils)
+.  if !empty(BUILDLINK_IS_BUILTIN.binutils:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.binutils=	YES
+.  else
+BUILDLINK_USE_BUILTIN.binutils=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.binutils:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.binutils=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.binutils=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:Mbinutils) && \
+      !empty(BUILDLINK_IS_BUILTIN.binutils:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.binutils=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:Mbinutils)
+BUILDLINK_USE_BUILTIN.binutils=	NO
+.  endif
+
+.  if defined(USE_BINUTILS)
+BUILDLINK_USE_BUILTIN.binutils=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.binutils:M[nN][oO])

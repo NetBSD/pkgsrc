@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/02/17 16:48:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XFT2_BUILDLINK3_MK:=	${XFT2_BUILDLINK3_MK}+
@@ -90,29 +90,31 @@ BUILDLINK_IS_BUILTIN.Xft2!=	\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.Xft2=${BUILDLINK_IS_BUILTIN.Xft2}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.Xft2:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.Xft2=	YES
-.else
-BUILDLINK_USE_BUILTIN.Xft2=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.Xft2:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.Xft2=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.Xft2=	NO
-.endif
-.if !empty(PREFER_NATIVE:MXft2) && \
-    !empty(BUILDLINK_IS_BUILTIN.Xft2:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.Xft2=	YES
-.endif
-.if !empty(PREFER_PKGSRC:MXft2)
-BUILDLINK_USE_BUILTIN.Xft2=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.Xft2:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.Xft2=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.Xft2)
+.  if !empty(BUILDLINK_IS_BUILTIN.Xft2:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xft2=	YES
+.  else
+BUILDLINK_USE_BUILTIN.Xft2=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.Xft2:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xft2=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xft2=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:MXft2) && \
+      !empty(BUILDLINK_IS_BUILTIN.Xft2:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.Xft2=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:MXft2)
+BUILDLINK_USE_BUILTIN.Xft2=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.Xft2:M[nN][oO])

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2004/02/12 02:35:06 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
@@ -54,29 +54,31 @@ BUILDLINK_IS_BUILTIN.glu!=	\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.glu=${BUILDLINK_IS_BUILTIN.glu}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.glu:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.glu=	YES
-.else
-BUILDLINK_USE_BUILTIN.glu=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.glu:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.glu=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.glu=	NO
-.endif
-.if !empty(PREFER_NATIVE:Mglu) && \
-    !empty(BUILDLINK_IS_BUILTIN.glu:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.glu=	YES
-.endif
-.if !empty(PREFER_PKGSRC:Mglu)
-BUILDLINK_USE_BUILTIN.glu=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.glu:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.glu=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.glu)
+.  if !empty(BUILDLINK_IS_BUILTIN.glu:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.glu=	YES
+.  else
+BUILDLINK_USE_BUILTIN.glu=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.glu:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.glu=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.glu=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:Mglu) && \
+      !empty(BUILDLINK_IS_BUILTIN.glu:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.glu=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:Mglu)
+BUILDLINK_USE_BUILTIN.glu=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.glu:M[nN][oO])

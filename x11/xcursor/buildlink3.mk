@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/02/17 16:27:54 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/02/18 16:35:27 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XCURSOR_BUILDLINK3_MK:=	${XCURSOR_BUILDLINK3_MK}+
@@ -54,29 +54,31 @@ BUILDLINK_IS_BUILTIN.xcursor!=		\
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.xcursor=${BUILDLINK_IS_BUILTIN.xcursor}
 .endif
 
-.if !empty(BUILDLINK_IS_BUILTIN.xcursor:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.xcursor=	YES
-.else
-BUILDLINK_USE_BUILTIN.xcursor=	NO
-.endif
-
-.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
-    !empty(BUILDLINK_IS_BUILTIN.xcursor:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.xcursor=	YES
-.endif
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.xcursor=	NO
-.endif
-.if !empty(PREFER_NATIVE:Mxcursor) && \
-    !empty(BUILDLINK_IS_BUILTIN.xcursor:M[yY][eE][sS])
-BUILDLINK_USE_BUILTIN.xcursor=	YES
-.endif
-.if !empty(PREFER_PKGSRC:Mxcursor)
-BUILDLINK_USE_BUILTIN.xcursor=	NO
-.endif
-
 .if !empty(BUILDLINK_CHECK_BUILTIN.xcursor:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.xcursor=	YES
+.endif
+
+.if !defined(BUILDLINK_USE_BUILTIN.xcursor)
+.  if !empty(BUILDLINK_IS_BUILTIN.xcursor:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.xcursor=	YES
+.  else
+BUILDLINK_USE_BUILTIN.xcursor=	NO
+.  endif
+
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+      !empty(BUILDLINK_IS_BUILTIN.xcursor:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.xcursor=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.xcursor=	NO
+.  endif
+.  if !empty(PREFER_NATIVE:Mxcursor) && \
+      !empty(BUILDLINK_IS_BUILTIN.xcursor:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.xcursor=	YES
+.  endif
+.  if !empty(PREFER_PKGSRC:Mxcursor)
+BUILDLINK_USE_BUILTIN.xcursor=	NO
+.  endif
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.xcursor:M[nN][oO])
