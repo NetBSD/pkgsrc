@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.27 2004/04/12 11:49:09 chris Exp $
+# $NetBSD: deinstall,v 1.28 2004/07/10 20:42:37 salo Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -111,7 +111,7 @@ DEINSTALL)
 			shift; shift
 
 			if [ ! "${file}" -ef "${samplefile}" -a		\
-			     -e "${file}" -a -e "${samplefile}" ]; then
+			     -f "${file}" -a -f "${samplefile}" ]; then
 				if ${CMP} -s "${file}" "${samplefile}"; then
 					${RM} -f "${file}"
 				fi
@@ -127,7 +127,7 @@ POST-DEINSTALL)
 		samplefile="$1"; file="$2"
 		shift; shift
 
-		if [ -e "${file}" ]; then
+		if [ -f "${file}" ]; then
 			modified_files="${modified_files} \"${file}\""
 		fi
 	done
