@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/06/23 19:26:55 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/06/26 16:30:57 jlam Exp $
 
 .include "../gdk-pixbuf/Makefile.common"
 
@@ -8,19 +8,7 @@ COMMENT=	the GNOME image loading library GNOME canvas support add-on
 CONFLICTS+=	gdk-pixbuf<0.10.1
 
 BUILDLINK_DEPENDS.gdk-pixbuf=	gdk-pixbuf>=0.10.1
-
-# Fix config scripts by removing buildlink directory references.
-post-build:
-	@cd ${WRKSRC};							\
-	config_scripts="gnomecanvaspixbufConf.sh";			\
-	for file in $${config_scripts}; do				\
-		${MV} -f $${file} $${file}.fixme;			\
-		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
-			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
-			$${file}.fixme > $${file};			\
-		${RM} -f $${file}.fixme;				\
-		${CHMOD} +x $${file};					\
-	done
+REPLACE_BUILDLINK=		gnomecanvaspixbufConf.sh
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gdk-pixbuf/gnome-canvas-pixbuf.h \

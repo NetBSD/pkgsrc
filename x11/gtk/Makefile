@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2001/06/19 06:52:10 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2001/06/26 16:30:58 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 CATEGORIES=		x11
@@ -15,12 +15,14 @@ BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 BUILD_USES_MSGFMT=	yes
 
 USE_BUILDLINK_ONLY=	yes
+USE_CONFIG_WRAPPER=	yes
+REPLACE_BUILDLINK=	gtk-config
+
 #USE_LIBINTL=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_CONFIG_WRAPPER=	yes
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
@@ -60,19 +62,6 @@ pre-configure:
 			-e "s|@VERSION@|${GTK_VERSION}|g"		\
 			$${file}.fixme > $${file};			\
 		${RM} $${file}.fixme;					\
-	done
-
-# Fix config scripts by removing buildlink directory references.
-post-build:
-	@cd ${WRKSRC};							\
-	config_scripts="gtk-config";					\
-	for file in $${config_scripts}; do				\
-		${MV} -f $${file} $${file}.fixme;			\
-		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
-			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
-			$${file}.fixme > $${file};			\
-		${RM} -f $${file}.fixme;				\
-		${CHMOD} +x $${file};					\
 	done
 
 post-install:
