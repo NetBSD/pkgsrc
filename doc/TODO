@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2249 2004/10/22 05:43:29 xtraeme Exp $
+$NetBSD: TODO,v 1.2250 2004/10/24 15:33:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -195,7 +195,9 @@ Suggested package updates
 	o bitlbee-0.91
 	o blender-2.34
 	o boson-0.10
+	o capc-calc-2.11.10.1
 	o cdrtools-2.01
+	o cdrtools-ossdvd-2.01a32
 	o celestia-1.3.2
 	o centericq-4.12.0
 	o checkbot-1.75 [pkg/26371]
@@ -226,17 +228,19 @@ Suggested package updates
 	o dict-server-1.9.11
 	o dmalloc-5.3.0
 	o docbook-4.3
+	o docbook-simple-1.0CR2
 	o docsis-0.9.1
 	o doxygen-1.3.9.1
 	o drscheme-208
 	o dvipng-1.2 [http://sourceforge.net/projects/dvipng/]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
-	o efax-gtk-2.2.11
+	o efax-gtk-2.2.12
 	o eggdrop-1.6.17
 	o elk-3.99.6
 	o elm-me-2.4pl121
 	o erlang-r10b
+	o ethereal-0.10.7
 	o ettercap-0.7.1 [wip/ettercap-NG|adrianp]
 	o evolution-2.0.0
 	o feh-1.2.7
@@ -267,6 +271,7 @@ Suggested package updates
 	o gpsdrive-2.09
 	o grace-5.1.17
 	o gstreamer-0.8.7
+	o gtk-send-pr-0.3.4
 	o gtkglext-1.0.6
 	o gtkmm-2.4.5
 	o gtksee-0.5.6 [pkg/26372]
@@ -384,6 +389,8 @@ Suggested package updates
 	o readline-5.0
 	o realplayer-10.0
 	o rep-gtk-0.17
+	o ripmime-1.4.0.1
+	o rocksndiamonds-3.1.0 [adam]
 	o rox-1.2.2
 	o rox-session-0.1.24
 	o rrdtool-1.0.49 [pkg/26353]
@@ -406,11 +413,12 @@ Suggested package updates
 	o snd-7.7
 	o snes9x-1.42
 	o snownews-1.5.4
+	o socat-1.4.0.3
 	o sqlite-3.0.7
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o stellarium-0.6.1
-	o streamtuner-0.12.5
+	o streamtuner-0.99
 	o svk-0.23
 	o sweep-0.8.3
 	o sylpheed-0.9.99
@@ -440,6 +448,7 @@ Suggested package updates
 	o wavesurfer-1.5.3
 	o wdm-1.27
 	o wesnoth-0.8.5
+	o windowmaker-0.90.0
 	o wine-20041019
 	o wmakerconf-2.9.2
 	o wmweather-2.4.3
@@ -449,6 +458,7 @@ Suggested package updates
 	o xbeeb-0.4.1
 	o xblast-2.9.22
 	o xboard-4.2.7
+	o xchm-0.9.6
 	o xdaliclock-2.20
 	o xdx-1.2
 	o xerces-c-2.5.0 [heinz?|p5-XML-Xerces requires xerces-c-2.3.0]
