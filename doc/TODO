@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2291 2004/11/02 11:39:26 markd Exp $
+$NetBSD: TODO,v 1.2292 2004/11/02 13:53:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -269,10 +269,12 @@ Suggested package updates
 	o blender-2.34
 	o boson-0.10
 	o capc-calc-2.11.10.1
+	o catdoc-0.92
 	o cdrtools-2.01
 	o cdrtools-ossdvd-2.01a32
 	o celestia-1.3.2
 	o centericq-4.12.0
+	o cfengine2-2.1.11
 	o checkbot-1.75 [pkg/26371]
 	o chemtool-1.6.3
 	o cint-5.15
@@ -313,8 +315,8 @@ Suggested package updates
 	o doxygen-1.3.9.1
 	o drscheme-208
 	o dvipng-1.2 [http://sourceforge.net/projects/dvipng/]
-	o dylan-compiler-2.3.11
-	o dylan-interpreter-2.3.11
+	o dylan-compiler-2.4.0
+	o dylan-interpreter-2.4.0
 	o easytag-1.0
 	o efax-gtk-2.2.12
 	o eggdrop-1.6.17
@@ -326,6 +328,7 @@ Suggested package updates
 	o erlang-r10b
 	o ettercap-0.7.1 [wip/ettercap-NG|adrianp]
 	o evolution-2.0.0
+	o faac-1.24.1
 	o festival-1.4.3
 	o file-4.10
 	o file-roller-2.8.3
@@ -345,6 +348,7 @@ Suggested package updates
 	o gbib-0.1.2
 	o gdm-2.6.0.5
 	o generator-0.35
+	o gentoo-0.11.52
 	o gettext-0.14.1
 	o gg2-2.2.1
 	o ghostscript-8.00 (apfl)
@@ -360,6 +364,7 @@ Suggested package updates
 	o gossip-0.7.7
 	o gpsdrive-2.09
 	o grace-5.1.17
+	o gramps-1.0.8
 	o gtkballs-3.1.4
 	o gtkglext-1.0.6
 	o gtkmm-2.4.6
@@ -419,7 +424,8 @@ Suggested package updates
 	o libxklavier-1.10 [breaks gnome-2.8]
 	o libxml2-2.6.15
 	o licq-1.3.0
-	o lilypond-2.2
+	o liferea-0.6.1
+	o lilypond-2.4
 	o lmbench-2.0.4
 	o lout-3.29
 	o lwm-1.2.1
@@ -460,9 +466,10 @@ Suggested package updates
 	o ngspice-15c
 	o nosefart-2.1
 	o ns-flash-6.0.79
+	o nsd-2.1.3
 	o nslint-2.1a3
 	o nulib2-2.0.3
-	o nut-10.7
+	o nut-10.8
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
@@ -535,7 +542,7 @@ Suggested package updates
 	o skkinput-2.06.4
 	o slib-3a1
 	o slrn-0.9.8.1
-	o smalltalk-2.1.8
+	o smalltalk-2.1.9
 	o smarteiffel-2.0b2 [replacing smalleiffel|pkg/26540]
 	o sml-nj-110.49 [pkgsrc-wip]
 	o sml-nj-110.50
@@ -582,7 +589,7 @@ Suggested package updates
 	o vttest-20030301
 	o wavesurfer-1.5.3
 	o wdm-1.27
-	o wesnoth-0.8.5
+	o wesnoth-0.8.7
 	o windowmaker-0.91.0 [pkg/27474]
 	o wine-20041019
 	o wmakerconf-2.9.2
