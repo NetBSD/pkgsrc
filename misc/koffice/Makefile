@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2004/07/06 16:28:52 recht Exp $
+# $NetBSD: Makefile,v 1.43 2004/07/09 12:09:39 markd Exp $
 
-DISTNAME=	koffice-1.3.1
-PKGREVISION=	1
+DISTNAME=	koffice-1.3.2
 CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3.1/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.3.1/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.3.1/src/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/koffice-1.3.2/src/ \
+		ftp://ftp.us.kde.org/pub/kde/stable/koffice-1.3.2/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/koffice-1.3.2/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
