@@ -1,0 +1,233 @@
+$NetBSD: patch-ac,v 1.1 2002/09/05 01:41:24 dillo Exp $
+
+--- dither.c.orig	Tue Jun  4 14:38:37 2002
++++ dither.c
+@@ -500,6 +500,29 @@ long color_555(int rgb)
+ 
+ }
+ 
++long color_565be(int rgb)
++{
++	int r,g,b;
++	long ret;
++	int i, i2;
++
++	r=(rgb>>16)&255;
++	g=(rgb>>8)&255;
++	/* Long live the PIN photodiode */
++	b=rgb&255;
++
++	r=(r*31+127)/255;
++	g=(g*63+127)/255;
++	b=(b*31+127)/255;
++	i = (r<<11)|(g<<5)|b;
++#ifdef AC_LITTLE_ENDIAN
++	ret = (((i&0xff)<<8) | ((i>>8)&0xff)) << 16;
++#else
++	ret = i;
++#endif
++	return ret;
++}
++
+ long color_565(int rgb)
+ {
+ 	int r,g,b;
+@@ -557,6 +580,10 @@ long (*get_color_fn(int depth))(int rgb)
+ 			return color_565;
+ 			break;
+ 
++		case 386:
++			return color_565be;
++			break;
++
+ 		case 451:
+ 			return color_pass_rgb;
+ 			break;
+@@ -605,7 +632,8 @@ void make_8_table(int *table, double gam
+ /* dump_t2c means memory organization defined in comment for
+  * red_table on the top of dither.c */
+ /* dump_t2c is taken into account only if t2c is defined. */
+-void make_16_table(int *table, int bits, int pos,double gamma, int dump_t2c)
++void make_16_table(int *table, int bits, int pos,double gamma, int dump_t2c,
++	int bigendian)
+ {
+ 	int j,light_val,grades=(1<<bits)-1,grade;
+ 	double voltage;
+@@ -649,13 +677,24 @@ void make_16_table(int *table, int bits,
+ 			t2c sh;
+ 			int val=grade<<pos;
+ 
+-			((unsigned char *)&sh)[0]=val;
+-			((unsigned char *)&sh)[1]=val>>8;
++			if (bigendian) {
++				((unsigned char *)&sh)[0]=val & 0xff;
++				((unsigned char *)&sh)[1]=val>>8;
++			}else{
++				((unsigned char *)&sh)[1]=val;
++				((unsigned char *)&sh)[0]=val>>8;
++			}
+ 			last_content=light_val|(sh<<16U);	
+-
+ 		}else{
+ #endif /* #ifdef t2c */
+-			last_content=light_val|(grade<<(pos+16U));
++			if (bigendian) {
++				int val, val2;
++				val = grade<<pos;
++				val2 = (val>>8) | ((val&0xff)<<8);
++				last_content=light_val|(val2<<16U);
++			}else{
++				last_content=light_val|(grade<<(pos+16U));
++			}
+ #ifdef t2c
+ 		}
+ #endif /* #ifdef t2c */
+@@ -664,19 +703,19 @@ void make_16_table(int *table, int bits,
+ 	}
+ }
+ 
+-void make_red_table(int bits, int pos, int dump_t2c)
++void make_red_table(int bits, int pos, int dump_t2c, int be)
+ {
+-	make_16_table(red_table,bits,pos,display_red_gamma,dump_t2c);
++	make_16_table(red_table,bits,pos,display_red_gamma,dump_t2c, be);
+ }
+ 
+-void make_green_table(int bits, int pos, int dump_t2c)
++void make_green_table(int bits, int pos, int dump_t2c, int be)
+ {
+-	make_16_table(green_table,bits,pos,display_green_gamma,dump_t2c);
++	make_16_table(green_table,bits,pos,display_green_gamma,dump_t2c, be);
+ }
+ 
+-void make_blue_table(int bits, int pos,int dump_t2c)
++void make_blue_table(int bits, int pos,int dump_t2c, int be)
+ {
+-	make_16_table(blue_table,bits,pos,display_blue_gamma, dump_t2c);
++	make_16_table(blue_table,bits,pos,display_blue_gamma, dump_t2c, be);
+ }
+ 
+ void dither(unsigned short *in, struct bitmap *out)
+@@ -727,36 +766,45 @@ void init_dither(int depth)
+ 	switch(depth){
+ 		case 33:
+ 		/* 4bpp, 1Bpp */
+-		make_red_table(1,3,0);
+-		make_green_table(2,1,0);
+-		make_blue_table(1,0,0);
++		make_red_table(1,3,0,0);
++		make_green_table(2,1,0,0);
++		make_blue_table(1,0,0,0);
+ 		dither_fn_internal=dither_1byte;
+ 		round_fn=round_1byte;
+ 		break;
+ 
+ 		case 65:
+ 		/* 8 bpp, 1 Bpp */
+-		make_red_table(3,5,0);
+-		make_green_table(3,2,0);
+-		make_blue_table(2,0,0);
++		make_red_table(3,5,0,0);
++		make_green_table(3,2,0,0);
++		make_blue_table(2,0,0,0);
+ 		dither_fn_internal=dither_1byte;
+ 		round_fn=round_1byte;
+ 		break;
+ 
+ 		case 122:
+ 		/* 15bpp, 2Bpp */
+-		make_red_table(5,10,1);
+-		make_green_table(5,5,1);
+-		make_blue_table(5,0,1);
++		make_red_table(5,10,1,0);
++		make_green_table(5,5,1,0);
++		make_blue_table(5,0,1,0);
+ 		dither_fn_internal=dither_2byte;
+ 		round_fn=round_2byte;
+ 		break;
+ 
+ 		case 130:
+ 		/* 16bpp, 2Bpp */
+-		make_red_table(5,11,1);
+-		make_green_table(6,5,1);
+-		make_blue_table(5,0,1);
++		make_red_table(5,11,1,0);
++		make_green_table(6,5,1,0);
++		make_blue_table(5,0,1,0);
++		dither_fn_internal=dither_2byte;
++		round_fn=round_2byte;
++		break;
++
++		case 386:
++		/* 16bpp, 2Bpp, disordered */
++		make_red_table(5,11,1,1);
++		make_green_table(6,5,1,1);
++		make_blue_table(5,0,1,1);
+ 		dither_fn_internal=dither_2byte;
+ 		round_fn=round_2byte;
+ 		break;
+@@ -766,9 +814,9 @@ void init_dither(int depth)
+ 		 * Even this is dithered!
+ 		 * R G B
+ 		 */
+-		make_red_table(8,0,0);
+-		make_green_table(8,0,0);
+-		make_blue_table(8,0,0);
++		make_red_table(8,0,0,0);
++		make_green_table(8,0,0,0);
++		make_blue_table(8,0,0,0);
+ 		dither_fn_internal=dither_451;
+ 		round_fn=round_451;
+ 		break;
+@@ -778,9 +826,9 @@ void init_dither(int depth)
+ 		 * Even this is dithered!
+ 		 * B G R
+ 		 */
+-		make_red_table(8,0,0);
+-		make_green_table(8,0,0);
+-		make_blue_table(8,0,0);
++		make_red_table(8,0,0,0);
++		make_green_table(8,0,0,0);
++		make_blue_table(8,0,0,0);
+ 		dither_fn_internal=dither_195;
+ 		round_fn=round_195;
+ 		break;
+@@ -790,9 +838,9 @@ void init_dither(int depth)
+ 		 * Even this is dithered!
+ 		 * 0 B G R
+ 		 */
+-		make_red_table(8,0,0);
+-		make_green_table(8,0,0);
+-		make_blue_table(8,0,0);
++		make_red_table(8,0,0,0);
++		make_green_table(8,0,0,0);
++		make_blue_table(8,0,0,0);
+ 		dither_fn_internal=dither_452;
+ 		round_fn=round_452;
+ 		break;
+@@ -802,9 +850,9 @@ void init_dither(int depth)
+ 		 * Even this is dithered!
+ 		 * B G R 0
+ 		 */
+-		make_red_table(8,0,0);
+-		make_green_table(8,0,0);
+-		make_blue_table(8,0,0);
++		make_red_table(8,0,0,0);
++		make_green_table(8,0,0,0);
++		make_blue_table(8,0,0,0);
+ 		dither_fn_internal=dither_196;
+ 		round_fn=round_196;
+ 		break;
+@@ -814,9 +862,9 @@ void init_dither(int depth)
+ 		 * Even this is dithered!
+ 		 * 0 R G B
+ 		 */
+-		make_red_table(8,0,0);
+-		make_green_table(8,0,0);
+-		make_blue_table(8,0,0);
++		make_red_table(8,0,0,0);
++		make_green_table(8,0,0,0);
++		make_blue_table(8,0,0,0);
+ 		dither_fn_internal=dither_708;
+ 		round_fn=round_708;
+ 		break;
