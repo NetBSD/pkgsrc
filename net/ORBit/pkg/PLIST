@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2000/07/10 10:52:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2000/07/11 13:17:25 wiz Exp $
 bin/libIDL-config
 bin/name-client
 bin/old-name-server
@@ -76,7 +76,7 @@ info/libIDL.info
 lib/libIDL-0.6.so.0.0
 lib/libIDL.a
 lib/libIDL.la
-lib/libIDL.so
+@unexec rm -f %D/lib/libIDL.so
 lib/libIDLConf.sh
 lib/libIIOP.a
 lib/libIIOP.la
