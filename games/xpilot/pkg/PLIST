@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/01 14:46:30 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/08/01 15:11:13 frueauf Exp $
 bin/xpilots
 bin/xpilot
 bin/xp-replay
 bin/xp-mapedit
-man/man6/xpilot.0
-man/man6/xpilots.0
-man/man6/xp-replay.0
+man/cat6/xpilot.0
+man/cat6/xpilots.0
+man/cat6/xp-replay.0
 share/xpilot/sounds
 share/xpilot/defaults
 share/xpilot/robots
