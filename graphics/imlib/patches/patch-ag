@@ -1,15 +1,15 @@
-$NetBSD: patch-ag,v 1.4 2002/08/25 18:39:13 jlam Exp $
+$NetBSD: patch-ag,v 1.5 2004/12/03 13:42:47 adam Exp $
 
---- configure.orig	Mon Mar 25 11:45:33 2002
+--- configure.orig	2004-09-23 01:15:44.000000000 +0000
 +++ configure
-@@ -7670,8 +7670,8 @@
- fi
- if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
-   echo "$ac_t""yes" 1>&6
--  TIFFLIBS="-ltiff"
--    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff"; cat >> confdefs.h <<\EOF
-+  TIFFLIBS="-ltiff -ljpeg -lz"
-+    SUPPORT_LIBS="$SUPPORT_LIBS $TIFFLIBS"; cat >> confdefs.h <<\EOF
- #define HAVE_LIBTIFF 1
- EOF
+@@ -23645,8 +23645,8 @@ echo "${ECHO_T}$ac_cv_header_tiffio_h" >
  
+ fi
+ if test $ac_cv_header_tiffio_h = yes; then
+-  TIFFLIBS="-ltiff"
+-    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff";
++  TIFFLIBS="-ltiff -ljpeg -lz"
++    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff -ljpeg -lz";
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_LIBTIFF 1
+ _ACEOF
