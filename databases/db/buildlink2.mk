@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/12/15 01:48:45 seb Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2002/12/22 10:28:08 grant Exp $
 
 .if !defined(DB_BUILDLINK2_MK)
 DB_BUILDLINK2_MK=	# defined
@@ -9,7 +9,7 @@ BUILDLINK_PKGSRCDIR.db?=	../../databases/db
 _NEED_DB2=			YES
 
 .if defined(USE_DB185)
-.  if exists(/usr/include/db.h)		# NetBSD
+.  if exists(/usr/include/db.h)		# NetBSD, Darwin
 BUILDLINK_PREFIX.db=		/usr
 BUILDLINK_FILES.db=		include/db.h
 BUILDLINK_FILES.db+=		include/mpool.h
