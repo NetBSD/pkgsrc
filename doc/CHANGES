@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5031 2004/02/28 20:53:53 jmmv Exp $
+$NetBSD: CHANGES,v 1.5032 2004/02/28 22:10:55 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1084,3 +1084,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tla to 1.2 [recht 2004-02-28]
 	Updated metamail to 2.7nb3 [snj 2004-02-28]
 	Updated docbook-xsl to 1.65.0 [jmmv 2004-02-28]
+	Updated tla to 1.2nb1 [recht 2004-02-28]
