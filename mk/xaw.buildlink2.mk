@@ -1,4 +1,4 @@
-# $NetBSD: xaw.buildlink2.mk,v 1.6 2002/12/02 17:07:28 jschauma Exp $
+# $NetBSD: xaw.buildlink2.mk,v 1.7 2002/12/23 22:33:14 jschauma Exp $
 
 .if !defined(XAW_BUILDLINK2_MK)
 XAW_BUILDLINK2_MK=	# defined
@@ -20,7 +20,7 @@ BUILDLINK_PREFIX.Xaw?=	${BUILDLINK_PREFIX.neXtaw}
 .else
 BUILDLINK_PREFIX.Xaw?=	${X11BASE}
 .  if ${OPSYS} == "IRIX"
-LIBXAW?=		-L${X11BASE}/lib -Wl,-rpath -Wl,${X11BASE}/lib -lXaw
+LIBXAW?=		-L${X11BASE}/lib -Wl,-rpath,${X11BASE}/lib -lXaw
 .  else
 LIBXAW?=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lXaw
 .  endif
