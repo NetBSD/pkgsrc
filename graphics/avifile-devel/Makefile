@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/26 17:33:02 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/26 21:22:20 zuntum Exp $
 #
 
 DISTNAME=	avifile-0.6.20010618
@@ -43,19 +43,12 @@ CONFIGURE_ARGS+=	--disable-dpms
 
 .if defined (WITH_QT) && ${WITH_QT} == YES
 .include "../../x11/qt2-designer/buildlink.mk"
-BUILDLINK_QTDIR=	${BUILDLINK_DIR}/qt2
-QTDIR=			${X11PREFIX}/qt2
-
 CXXFLAGS+=		-Wl,-R${QTDIR}/lib
 CXXFLAGS+=		-Wl,-R${LOCALBASE}/lib
 CXXFLAGS+=		-Wl,-R${X11BASE}/lib
 
 CONFIGURE_ARGS+=	--enable-qt
 CONFIGURE_ARGS+=	--with-qt-dir="${BUILDLINK_DIR}/qt2"
-
-CONFIGURE_ENV+=		QTDIR="${BUILDLINK_DIR}/qt2"
-CONFIGURE_ENV+=		MOC="${BUILDLINK_QTDIR}/bin/moc"
-CONFIGURE_ENV+=		UIC="${BUILDLINK_QTDIR}/bin/uic"
 .endif
 
 pre-configure:
