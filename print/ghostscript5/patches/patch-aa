@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.4 1998/11/04 21:42:12 mycroft Exp $
-
---- unix-gcc.mak.orig	Wed Nov  4 13:11:19 1998
-+++ unix-gcc.mak	Wed Nov  4 14:40:18 1998
+--- unix-gcc.mak.orig	Thu Sep 17 02:06:06 1998
++++ unix-gcc.mak	Wed Nov  4 19:33:28 1998
 @@ -141,7 +141,7 @@
  # what its name is.
  # See gs.mak and Make.htm for more information.
@@ -20,6 +18,15 @@ $NetBSD: patch-aa,v 1.4 1998/11/04 21:42:12 mycroft Exp $
  #ZLIB_NAME=gz
  ZLIB_NAME=z
  
+@@ -224,7 +224,7 @@
+ # SVR4 may need -lnsl.
+ # (Libraries required by individual drivers are handled automatically.)
+ 
+-EXTRALIBS=
++EXTRALIBS=-L${PREFIX}/lib
+ 
+ # Define the include switch(es) for the X11 header files.
+ # This can be null if handled in some other way (e.g., the files are
 @@ -234,7 +234,7 @@
  # Note that x_.h expects to find the header files in $(XINCLUDE)/X11,
  # not in $(XINCLUDE).
