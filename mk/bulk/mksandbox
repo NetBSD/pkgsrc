@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.31 2004/02/13 23:53:13 grant Exp $
+# $NetBSD: mksandbox,v 1.32 2004/06/06 01:30:31 grant Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -173,7 +173,7 @@ cat > $sandbox_script <<EOS
 sandbox=$sandbox
 
 r3() {
-	local _R=
+	_R=
 	while [ \$# -ge 3 ]
 	do
 		_R="\$1 \$2 \$3 \$_R"
