@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2004/06/01 07:40:16 skrll Exp $
+$NetBSD: patch-aa,v 1.3 2004/11/18 16:47:19 adam Exp $
 
---- Makefile.in.orig	2002-07-18 17:07:41.000000000 +0100
+--- Makefile.in.orig	2004-05-07 18:10:30.000000000 +0000
 +++ Makefile.in
 @@ -57,9 +57,9 @@ X11_PROGS_INSTALLED = @X_PROGS@_installe
  # your Expect scripts.
@@ -53,7 +53,7 @@ $NetBSD: patch-aa,v 1.2 2004/06/01 07:40:16 skrll Exp $
  
  AR = ar
  ARFLAGS = cr
-@@ -320,14 +322,14 @@ LIB_RUNTIME_DIR = $(tcl_libdir)
+@@ -321,14 +323,14 @@ LIB_RUNTIME_DIR = $(tcl_libdir)
  # I don't understand why Tcl splits these up, but it does.  LIB_RUNTIME_DIR
  # can appear as part of the LD_SEARCH_FLAGS inherited by configure.
  
@@ -76,7 +76,7 @@ $NetBSD: patch-aa,v 1.2 2004/06/01 07:40:16 skrll Exp $
  
  all: binaries libraries doc
  
-@@ -344,7 +346,7 @@ dvi:
+@@ -345,7 +347,7 @@ dvi:
  # build expect binary that does not depend on Expect's shared libs
  # IFF static Tcl/Tk libraries are available.
  expect:	exp_main_exp.o $(EXP_UNSHARED_LIB_FILE)
@@ -85,7 +85,7 @@ $NetBSD: patch-aa,v 1.2 2004/06/01 07:40:16 skrll Exp $
  	$(SETUID) expect
  
  # install Expect library
-@@ -359,24 +361,16 @@ expect:	exp_main_exp.o $(EXP_UNSHARED_LI
+@@ -360,24 +362,16 @@ expect:	exp_main_exp.o $(EXP_UNSHARED_LI
  #   is too long for some filesystems, sigh.
  install_shared_lib: $(EXP_LIB_FILES)
  	${srcdir}/mkinstalldirs $(libdir)
@@ -114,7 +114,7 @@ $NetBSD: patch-aa,v 1.2 2004/06/01 07:40:16 skrll Exp $
  	$(SETUID) expect.tc
  
  # Build an executable with both Expect and Tk
-@@ -387,16 +381,16 @@ expect.tc: exp_main_exp.o $(OFILES) 
+@@ -388,16 +382,16 @@ expect.tc: exp_main_exp.o $(OFILES) 
  # configure) separately for Expectk, but as far as I know, it doesn't hurt
  # anything here, so I'm not worrying about it.
  expectk: exp_main_tk.o $(EXP_UNSHARED_LIB_FILE)
@@ -134,7 +134,7 @@ $NetBSD: patch-aa,v 1.2 2004/06/01 07:40:16 skrll Exp $
  	$(SETUID) expectk.tc
  
  expect-unshared-lib-file :: $(EXP_UNSHARED_LIB_FILE)
-@@ -412,7 +406,7 @@ $(EXP_UNSHARED_LIB_FILE): $(OFILES)
+@@ -413,7 +407,7 @@ $(EXP_UNSHARED_LIB_FILE): $(OFILES)
  expect-shared-lib-file :: $(EXP_SHARED_LIB_FILE)
  $(EXP_SHARED_LIB_FILE): $(OFILES)
  	-rm -f $(EXP_SHARED_LIB_FILE)
@@ -143,7 +143,7 @@ $NetBSD: patch-aa,v 1.2 2004/06/01 07:40:16 skrll Exp $
  
  .PHONY: install-info install info
  install-info:
-@@ -450,7 +444,7 @@ install-libraries:
+@@ -451,7 +445,7 @@ install-libraries:
  	${srcdir}/mkinstalldirs $(bindir_arch_indep) $(man1dir) $(SCRIPTDIR) $(EXECSCRIPTDIR)
  	-for i in $(SCRIPT_LIST) ; do \
  	  if [ -f $$i ] ; then \
@@ -152,7 +152,7 @@ $NetBSD: patch-aa,v 1.2 2004/06/01 07:40:16 skrll Exp $
  	    rm -f $$i ; \
  	  else true; fi ; \
  	done
-@@ -459,7 +453,7 @@ install-doc:
+@@ -460,7 +454,7 @@ install-doc:
  	${srcdir}/mkinstalldirs $(man1dir) $(man3dir)
  # install Expectk man page if present
  	-if [ -s expectk_installed ] ; then \
@@ -161,7 +161,7 @@ $NetBSD: patch-aa,v 1.2 2004/06/01 07:40:16 skrll Exp $
  	else true; fi
  # install Expect man page
  	$(INSTALL_DATA) $(srcdir)/expect.man $(man1dir)/expect.1
-@@ -467,7 +461,7 @@ install-doc:
+@@ -468,7 +462,7 @@ install-doc:
  	$(INSTALL_DATA) $(srcdir)/libexpect.man $(man3dir)/libexpect.3
  	-for i in $(SCRIPT_MANPAGE_LIST) ; do \
  	  if [ -f $(srcdir)/example/$$i.man ] ; then \
