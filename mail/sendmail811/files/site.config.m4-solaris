@@ -1,9 +1,0 @@
-# $NetBSD: site.config.m4-solaris,v 1.1.1.1 2002/09/23 12:38:45 markd Exp $
-
-# man pathnames specific for Solaris
-#
-define(`confMAN1EXT', `0')
-define(`confMAN3EXT', `0')
-define(`confMAN4EXT', `0')
-define(`confMAN5EXT', `0')
-define(`confMAN8EXT', `0')
