@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9023 2005/02/04 11:21:54 jmmv Exp $
+$NetBSD: CHANGES,v 1.9024 2005/02/04 14:36:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -739,3 +739,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_install to 20050204 [jlam 2005-02-04]
 	Updated powwow to 1.2.5 [adam 2005-02-04]
 	Updated glib2 to 2.6.2 [jmmv 2005-02-04]
+	Updated p5-Perl-Tidy to 20031021 [wiz 2005-02-04]
