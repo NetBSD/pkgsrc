@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/08/01 07:35:41 skrll Exp $
+# $NetBSD: Makefile,v 1.15 2001/08/14 21:39:05 thorpej Exp $
 #
 
 COMMENT=	communication programs
@@ -28,6 +28,7 @@ SUBDIR+=	tkirc
 SUBDIR+=	xchat
 SUBDIR+=	ymessenger
 SUBDIR+=	zenicb
+SUBDIR+=	zenirc
 SUBDIR+=	zircon
 
 .include "../mk/bsd.pkg.subdir.mk"
