@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/20 13:08:21 jmmv Exp $
 
 DISTNAME=	seahorse-0.7.3
 PKGREVISION=	9
@@ -16,18 +16,21 @@ DEPENDS+=		gnome2-dirs>=1.1:../../misc/gnome2-dirs
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS= 	seahorse.schemas
 
-.include "../../databases/gnome-mime-data/buildlink2.mk"
+.include "../../databases/gnome-mime-data/buildlink3.mk"
+.include "../../devel/eel2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/eel2/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../security/gpgme03/buildlink2.mk"
+.include "../../devel/libbonobo/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../security/gpgme03/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
