@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/20 11:56:25 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1998/04/24 09:20:35 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/20 10:33:35 jkh Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=		packages@netbsd.org
 WRKSRC=			${WRKDIR}/tcl8.0/unix
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
-CONFIGURE_ENV+=		PORTSDIR=${PORTSDIR}
+CONFIGURE_ENV+=		PORTSDIR=${.CURDIR}/../../../../..
 
 MAN1=	tclsh.1
 MAN3=	Alloc.3 AddErrInfo.3 AllowExc.3 AppInit.3 AssocData.3 Async.3 \

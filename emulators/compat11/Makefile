@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:23 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/24 09:20:34 agc Exp $
 #
 
 DISTNAME=	compat11
@@ -8,9 +8,9 @@ EXTRACT_SUFX=	_${ARCH}.tgz
 
 MAINTAINER=	tv@netbsd.org
 
-LIB_DEPENDS=	edit.0.:${PORTSDIR}/emulators/compat12 \
-		g++.3.:${PORTSDIR}/emulators/compat12 \
-		util.3.:${PORTSDIR}/emulators/compat12
+LIB_DEPENDS=	edit.0.:../../emulators/compat12 \
+		g++.3.:../../emulators/compat12 \
+		util.3.:../../emulators/compat12
 
 HAS_CONFIGURE=	yes
 NO_BUILD=	yes

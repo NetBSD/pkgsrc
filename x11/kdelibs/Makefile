@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/22 14:22:49 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/04/24 09:20:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	packages@netbsd.org
 
-BUILD_DEPENDS=	moc:${PORTSDIR}/x11/qt
+BUILD_DEPENDS=	moc:../../x11/qt
 DEPENDS+=	jpeg-6a:../../graphics/jpeg
 DEPENDS+=	qt-1.33:../../x11/qt
 DEPENDS+=	giflib-3.0:../../graphics/giflib

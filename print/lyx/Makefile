@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:47 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/24 09:20:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -9,9 +9,9 @@ MASTER_SITES=	ftp://ftp.via.ecp.fr/pub/lyx/stable/ \
 
 MAINTAINER=	frueauf@netbsd.org
 
-BUILD_DEPENDS=	latex:${PORTSDIR}/print/teTeX
-RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX \
-		ispell:${PORTSDIR}/textproc/ispell
+BUILD_DEPENDS=	latex:../../print/teTeX
+RUN_DEPENDS=	latex:../../print/teTeX \
+		ispell:../../textproc/ispell
 DEPENDS+=	xpm-3.4j:../../graphics/xpm
 DEPENDS+=	xforms-0.88:../../x11/xforms
 

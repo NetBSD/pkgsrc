@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/04/22 14:22:50 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/04/24 09:20:39 agc Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/12/08 15:51:20 tg Exp
 #
 
@@ -10,8 +10,8 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		packages@netbsd.org
 
 DEPENDS+=		tk-8.0p2:../../x11/tk80
-RUN_DEPENDS=		rman:${PORTSDIR}/textproc/rman \
-			glimpse:${PORTSDIR}/textproc/glimpse
+RUN_DEPENDS=		rman:../../textproc/rman \
+			glimpse:../../textproc/glimpse
 
 NO_CDROM=		"Don't sell for profit"
 MIRROR_DISTFILE=	no

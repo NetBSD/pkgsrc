@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/04/15 10:38:45 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/04/24 09:20:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -12,11 +12,11 @@ DISTFILES=	${GS_SOURCES} ${GS_FONTS_STD} ${GS_FONTS_OTHER} \
 
 MAINTAINER=	explorer@netbsd.org
 
-BUILD_DEPENDS=	${PORTSDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6a:${PORTSDIR}/graphics/jpeg:extract \
-		${PORTSDIR}/graphics/png/${WRKDIR:T}/libpng-0.96:${PORTSDIR}/graphics/png:extract \
-		unzip:${PORTSDIR}/archivers/unzip
+BUILD_DEPENDS=	../../graphics/jpeg/${WRKDIR:T}/jpeg-6a:../../graphics/jpeg:extract \
+		../../graphics/png/${WRKDIR:T}/libpng-0.96:../../graphics/png:extract \
+		unzip:../../archivers/unzip
 
-MAKE_ENV=	PORTSDIR=${PORTSDIR}
+MAKE_ENV=	PORTSDIR=${.CURDIR}/../..
 EXTRACT_ONLY=	${GS_SOURCES}
 WRKSRC=		${WRKDIR}/gs5.10
 MAKEFILE=	unix-gcc.mak
@@ -44,16 +44,16 @@ post-extract:
 	${TOUCH} ${WRKSRC}/adler32.o
 	${TOUCH} ${WRKSRC}/deflate.o
 	${TOUCH} ${WRKSRC}/trees.o
-	ln -s ${PORTSDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6a ${WRKSRC}/jpeg-6a
-	ln -s ${PORTSDIR}/graphics/png/${WRKDIR:T}/libpng-0.96 ${WRKSRC}/libpng
+	${LN} -s ../../../../graphics/jpeg/${WRKDIR:T}/jpeg-6a ${WRKSRC}/jpeg-6a
+	${LN} -s ../../../../graphics/png/${WRKDIR:T}/libpng-0.96 ${WRKSRC}/libpng
 	cd ${WRKSRC} && unzip -La ${DISTDIR}/${HP850_DRV}
 
 do-configure:
 .if defined(BATCH)
-	@${SETENV} PORTSDIR=${PORTSDIR} WRKSRC=${WRKSRC} \
+	@${SETENV} PORTSDIR=${.CURDIR}/../.. WRKSRC=${WRKSRC} \
 		${SH} ${SCRIPTDIR}/configure.batch
 .else
-	@${SETENV} PORTSDIR=${PORTSDIR} WRKSRC=${WRKSRC} \
+	@${SETENV} PORTSDIR=${.CURDIR}/../.. WRKSRC=${WRKSRC} \
 		${SH} ${SCRIPTDIR}/configure
 .endif
 
@@ -82,7 +82,7 @@ post-install:
 	strip ${PREFIX}/bin/gs
 
 pre-clean:
-	@cd ${PORTSDIR}/graphics/jpeg && ${MAKE} clean
-	@cd ${PORTSDIR}/graphics/png && ${MAKE} clean
+	@cd ../../graphics/jpeg && ${MAKE} clean
+	@cd ../../graphics/png && ${MAKE} clean
 
 .include "../../mk/bsd.pkg.mk"
