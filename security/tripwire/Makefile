@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/04/10 01:28:24 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/04/10 20:10:20 grant Exp $
 #
 
 DISTNAME=       tripwire-1.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.cerias.purdue.edu/coast/coast-library.html
 COMMENT=	File and directory integrity checker
 
 post-extract:
-	cd ${WRKDIR} && ${PAX} -rf T1.2.tar
+	cd ${WRKDIR} && ${PAX} -O -rf T1.2.tar
 	${CP} ${FILESDIR}/conf-${LOWER_OPSYS}.h ${WRKSRC}/configs
 
 post-patch:

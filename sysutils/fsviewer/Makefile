@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/08/25 21:50:57 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/04/10 20:10:20 grant Exp $
 #
 
 DISTNAME=	FSViewer.app-0.2.3
@@ -26,7 +26,7 @@ USE_BUILDLINK2=		yes
 
 post-install:
 	cd ${PREFIX}/GNUstep/Apps/FSViewer.app && \
-		${PAX} -zrf ${_DISTDIR}${DISTSUBDIR}/icons.tar.gz *.xpm *.tif
+		${PAX} -O -zrf ${_DISTDIR}${DISTSUBDIR}/icons.tar.gz *.xpm *.tif
 
 .include "../../wm/windowmaker/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

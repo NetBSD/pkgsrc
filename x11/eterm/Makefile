@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/03/27 19:44:46 salo Exp $
+# $NetBSD: Makefile,v 1.19 2003/04/10 20:10:20 grant Exp $
 #
 
 DISTNAME=		Eterm-0.9.2
@@ -46,9 +46,9 @@ BUILD_DEFS+=		USE_MMX
 
 post-extract:
 	${LN} -sf ${WRKSRC} ${WRKDIR}/Eterm
-	cd ${WRKDIR};							\
-	for f in ${PIXMAP_FILES}; do					\
-		${GZCAT} ${DISTDIR}/$$f | ${PAX} -r;			\
+	cd ${WRKDIR} && \
+	for f in ${PIXMAP_FILES}; do \
+		${PAX} -O -zrf ${DISTDIR}/$$f; \
 	done
 
 .include "../../devel/libast/buildlink2.mk"

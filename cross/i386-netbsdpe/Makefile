@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/10/03 14:26:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/04/10 20:10:15 grant Exp $
 # $PEACE: Makefile,v 1.21 2002/08/21 02:48:23 kent Exp $
 
 DISTVERSION=		1.3.4
@@ -45,10 +45,10 @@ DISTFILES+=		${PTHREAD_DISTFILE}
 EXTRACT_ONLY=		${GCC_WIN32_PATCHBUNDLE} ${SSP_PATCH} ${PTHREAD_DISTFILE}
 
 post-extract:
-	cd ${WRKDIR} && ${PAX} -rz -s /${GCC_DISTNAME}/toolchain/ \
+	cd ${WRKDIR} && ${PAX} -O -rz -s /${GCC_DISTNAME}/toolchain/ \
 		-f ${_DISTDIR}/${GCC_DISTNAME}.tar.gz
 	${PATCH} -d ${WRKSRC} -p1 --forward --quiet -E < ${GCC_WIN32_PATCH}
-	cd ${WRKDIR} && ${PAX} -rz -s /${BINUTILS_DISTNAME}/toolchain/ \
+	cd ${WRKDIR} && ${PAX} -O -rz -s /${BINUTILS_DISTNAME}/toolchain/ \
 		-f ${_DISTDIR}/${BINUTILS_DISTNAME}.tar.bz2
 
 post-patch:
