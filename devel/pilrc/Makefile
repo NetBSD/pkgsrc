@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2001/05/18 09:51:59 dillo Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/28 06:09:24 jlam Exp $
 #
 
 DISTNAME=	pilrc-2.8p4
 PKGNAME=	pilrc-2.8.4nb1
+WRKSRC=		${WRKDIR}/pilrc-2.8p4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ardiri.com/download/palm/pilrc/patch/
 #MASTER_SITES=	http://www.ardiri.com/download/palm/pilrc/archive/
@@ -17,24 +18,26 @@ MAINTAINER=	dillo@netbsd.org
 HOMEPAGE=	http://www.ardiri.com/index.cfm?redir=palm&cat=pilrc
 COMMENT=	generate resources for PalmOS applications from textual description
 
+#EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
+
+USE_BUILDLINK_ONLY=	YES
+USE_CONFIG_WRAPPER=	YES
+
+GNU_CONFIGURE=	YES
+
+DOCDIR=		${PREFIX}/share/doc/html/pilrc
+
 .include "../../mk/bsd.prefs.mk"
 
 PILRC_USE_GTK?=	YES
 
 .if ${PILRC_USE_GTK} == YES
-DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
+.include "../../x11/gtk/buildlink.mk"
 PLIST_SUBST+=	PILRCUI=''
 .else
 CONFIGURE_ARGS+=--disable-pilrcui
 PLIST_SUBST+=	PILRCUI='@comment '
 .endif
-
-#EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
-
-WRKSRC=		${WRKDIR}/pilrc-2.8p4
-GNU_CONFIGURE=	YES
-
-DOCDIR=		${PREFIX}/share/doc/html/pilrc
 
 post-extract:
 	${CHMOD} +x ${WRKSRC}/configure
