@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2001/10/24 22:11:03 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/17 15:14:20 uebayasi Exp $
 
-DISTNAME=		sylpheed-0.6.3
+DISTNAME=		sylpheed-0.7.4
 CATEGORIES=		mail news x11
 MASTER_SITES=		http://sylpheed.good-day.net/sylpheed/
 EXTRACT_SUFX=		.tar.bz2
@@ -18,7 +18,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ARGS+=	--enable-gpgme
 
+.include "../../security/gpgme/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
