@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2001/12/21 04:29:10 jlam Exp $
+# $NetBSD: Makefile.common,v 1.27 2002/01/06 22:12:56 fredb Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -25,7 +25,7 @@ EXTRACT_ONLY=		${GS_SRCS}
 #
 JPEG_SRCS=		jpegsrc.v6b.tar.gz
 JPEG_WRKSRC=		${WRKDIR}/jpeg-6b
-MASTER_SITES_${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/
+${JPEG_SRCS}=		ftp://ftp.uu.net/graphics/jpeg/
 DISTFILES+=		${JPEG_SRCS}
 EXTRACT_ONLY+=		${JPEG_SRCS}
 
@@ -36,14 +36,14 @@ PATCH_DIST_STRIP=	-p1
 
 # PostScript source to decode encrypted PDF files
 PDF_SEC=		pdf_sec.ps
-MASTER_SITES_${PDF_SEC}=	http://www.ozemail.com.au/~geoffk/pdfencrypt/
+SITES_${PDF_SEC}=	http://www.ozemail.com.au/~geoffk/pdfencrypt/
 DISTFILES+=		${PDF_SEC}
 
 # Gimp-print/STP drivers for photo-quality inkjet output
 GIMPPRINT=		gimp-print-4.2.0
 GIMPPRINT_SRCS=		${GIMPPRINT}.tar.gz
 GIMPPRINT_WRKSRC=	${WRKDIR}/${GIMPPRINT}
-MASTER_SITES_${GIMPPRINT_SRCS}=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
+SITES_${GIMPPRINT_SRCS}=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 DISTFILES+=			${GIMPPRINT_SRCS}
 EXTRACT_ONLY+=			${GIMPPRINT_SRCS}
 GIMPPRINT_CONFIGURE_ARGS=	--without-gimp --with-ghost
@@ -52,19 +52,19 @@ GIMPPRINT_CONFIGURE_ARGS=	--without-gimp --with-ghost
 HPIJS_DRV=		hpijs0.97
 HPIJS_SRCS=		${HPIJS_DRV}.tar.gz
 HPIJS_WRKSRC=		${WRKDIR}/${HPIJS_DRV}
-MASTER_SITES_${HPIJS_SRCS}=	${MASTER_SITE_SOURCEFORGE:=hpinkjet/}
+SITES_${HPIJS_SRCS}=	${MASTER_SITE_SOURCEFORGE:=hpinkjet/}
 DISTFILES+=		${HPIJS_SRCS}
 EXTRACT_ONLY+=		${HPIJS_SRCS}
 
 # Additional driver for several HP deskjets
 HPDJ_DRV=		hpdj-2.6
-MASTER_SITES_${HPDJ_DRV}.tar.gz=	ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
+SITES_${HPDJ_DRV}.tar.gz=	ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
 DISTFILES+=		${HPDJ_DRV}.tar.gz
 EXTRACT_ONLY+=		${HPDJ_DRV}.tar.gz
 
 # I don't know the primary destribution sites of these drivers....
 DMPRT_DRV=		dmprt-2.01
-MASTER_SITES_${DMPRT_DRV}.tar.gz=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
+SITES_${DMPRT_DRV}.tar.gz=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 DISTFILES+=		${DMPRT_DRV}.tar.gz
 EXTRACT_ONLY+=		${DMPRT_DRV}.tar.gz
 
@@ -84,31 +84,31 @@ EXTRACT_ONLY+=		${MD5000_DRV}.tar.gz
 
 # Alps MD-2000/2010/4000/1300/1500/5000
 MD2000_DRV=		gdevmd2k-0.2a
-MASTER_SITES_${MD2000_DRV}.tar.gz=	http://plaza26.mbn.or.jp/~higamasa/gdevmd2k/
+SITES_${MD2000_DRV}.tar.gz=	http://plaza26.mbn.or.jp/~higamasa/gdevmd2k/
 DISTFILES+=		${MD2000_DRV}.tar.gz
 EXTRACT_ONLY+=		${MD2000_DRV}.tar.gz
 
 # Canon LIPS II+, III, IV; EPSON ESC/Page; NEC NPDL drivers
 LIPS_DRV=		gdevlips-2.3.6
-MASTER_SITES_${LIPS_DRV}.tar.gz=	http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/
+SITES_${LIPS_DRV}.tar.gz=	http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/
 DISTFILES+=		${LIPS_DRV}.tar.gz
 EXTRACT_ONLY+=		${LIPS_DRV}.tar.gz
 
 # Ricoh RPDL
 RPDL_DRV=		gdevrpdl
-MASTER_SITES_${RPDL_DRV}.tar.gz=	http://home.jp.FreeBSD.org/~mita/LOCAL_PORTS/
+SITES_${RPDL_DRV}.tar.gz=	http://home.jp.FreeBSD.org/~mita/LOCAL_PORTS/
 DISTFILES+=		${RPDL_DRV}.tar.gz
 EXTRACT_ONLY+=		${RPDL_DRV}.tar.gz
 
 # Kyocera Prescribe
 PRESCR_DRV=		gdevprsc-0.3
-MASTER_SITES_${PRESCR_DRV}.tar.gz=	${MASTER_SITE_LOCAL}
+SITES_${PRESCR_DRV}.tar.gz=	${MASTER_SITE_LOCAL}
 DISTFILES+=		${PRESCR_DRV}.tar.gz
 EXTRACT_ONLY+=		${PRESCR_DRV}.tar.gz
 
 # Samsung SmartGDI laser printers
 GDI_DRV=		samsung-gdi-driver
-MASTER_SITES_${GDI_DRV}.tar.gz=	http://www.linuxprinting.org/download/printing/
+SITES_${GDI_DRV}.tar.gz=	http://www.linuxprinting.org/download/printing/
 DISTFILES+=		${GDI_DRV}.tar.gz
 EXTRACT_ONLY+=		${GDI_DRV}.tar.gz
 
