@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/04/09 11:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/02/25 04:47:21 jlam Exp $
 # FreeBSD: Makefile,v 1.1.1.1 1998/06/15 18:09:43 ghelmer Exp
 #
 
@@ -12,7 +12,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.scl.ameslab.gov/Projects/HINT/
 COMMENT=	Scalable benchmark for testing CPU and memory performance
 
-EXTRACT_CMD=	${GTAR} -xf ${DOWNLOADED_DISTFILE}
 WRKSRC=		${WRKDIR}/unix
 ALL_TARGET=	DOUBLE INT
 
