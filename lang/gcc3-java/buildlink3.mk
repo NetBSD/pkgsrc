@@ -1,16 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/05 00:28:35 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/02/05 03:45:13 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GCC3JAVA_BUILDLINK3_MK:=	${GCC3JAVA_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.prefs.mk"
 
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	gcc3java
+.endif
+
 .if !empty(GCC3JAVA_BUILDLINK3_MK:M+)
 .  if defined(GCC3_INSTALLTO_SUBPREFIX)
 GCC3_PKGMODIF=			_${GCC3_INSTALLTO_SUBPREFIX}
 .  endif
 BUILDLINK_PACKAGES+=		gcc3java
-BUILDLINK_DEPENDS+=		gcc3java
 BUILDLINK_DEPENDS.gcc3java+=	gcc3${GCC3_PKGMODIF}-java>=${_GCC_REQD}
 BUILDLINK_PKGSRCDIR.gcc3java?=	../../lang/gcc3-java
 BUILDLINK_LIBDIRS.gcc3java?=	\
