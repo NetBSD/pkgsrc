@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2000/06/09 11:06:20 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2000/06/20 01:40:16 dmcmahill Exp $
 #
 
 DISTNAME=		imlib-1.9.8.1
@@ -29,6 +29,12 @@ CPPFLAGS=		-DENABLE_NLS
 .endif
 
 CPPFLAGS+=		-I${LOCALBASE}/include
+
+.if ${OBJECT_FMT} == "a.out"
+PLIST_SRC=	${PKGDIR}/PLIST.mi
+.else
+PLIST_SRC=	${PKGDIR}/PLIST.mi ${PKGDIR}/PLIST.elf
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/imlib
