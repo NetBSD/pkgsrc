@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2001/01/17 23:57:53 jlam Exp $
+$NetBSD: patch-ad,v 1.6 2003/03/19 17:56:39 jmmv Exp $
 
---- module/aperture.c.orig	Fri Jan 12 13:58:55 2001
+--- module/aperture.c.orig	2003-03-19 18:52:51.000000000 +0100
 +++ module/aperture.c
-@@ -117,8 +117,17 @@
+@@ -117,8 +117,17 @@ xf86close(dev, cflags, devtype, p)
   * allow only section in the vga framebuffer and above main memory 
   * to be mapped
   */
@@ -21,3 +21,15 @@ $NetBSD: patch-ad,v 1.5 2001/01/17 23:57:53 jlam Exp $
  int
  xf86mmap(dev, offset, length)
  	dev_t dev;
+@@ -144,7 +153,11 @@ xf86mmap(dev, offset, length)
+ 		     && (unsigned)offset <= HOLE16M_END)
+ #endif
+ 		     )) {
++#if __NetBSD_Version__ >= 106160000
++		return x86_btop(offset);
++#else
+ 		return i386_btop(offset);
++#endif
+ 	} else {
+ 		return(-1);
+ 	}
