@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/07/26 19:47:37 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/08/18 09:08:10 agc Exp $
 # $FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
@@ -10,7 +10,9 @@ MASTER_SITES=	ftp://uniwa.uwa.edu.au/pub/nn/old/beta/ \
 
 MAINTAINER=     tron@netbsd.org
 
-.include <../../mk/bsd.prefs.mk>
+BUILD_DEFS+=	USE_INN
+
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_INN) && ${USE_INN} == YES
 DEPENDS=	inn-2.2:../inn
@@ -25,4 +27,4 @@ post-extract:
 	  s#@@BINGRP@@#${BINGRP}#' \
 	  <${FILESDIR}/s-netbsd.h >${WRKSRC}/conf/s-netbsd.h
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"
