@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2004/06/09 22:15:41 kivinen Exp $
+$NetBSD: patch-af,v 1.3 2004/06/09 22:22:09 kivinen Exp $
 
 --- apm_read.c.orig	2001-11-23 23:07:19.000000000 +0200
 +++ apm_read.c
@@ -102,7 +102,7 @@ $NetBSD: patch-af,v 1.2 2004/06/09 22:15:41 kivinen Exp $
 +	}
 +
 +	if (state.ac_line_status != connected) {
-+		state.ac_line_status = connected ? AC_BATTERY : AC_ONLINE;
++		state.ac_line_status = connected ? AC_ONLINE : AC_BATTERY;
 +		++state.update;
 +		if ( state.ac_line_status == AC_ONLINE ) 
 +			state.flags |= CHANGE_AC_ON;
