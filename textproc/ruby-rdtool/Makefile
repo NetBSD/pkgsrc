@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/02/11 15:46:32 taca Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/07 04:40:26 taca Exp $
 # FreeBSD: ports/textproc/ruby-rdtool/Makefile,v 1.15 2001/01/30 19:20:09 knu Exp
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www2.pos.to/~tosh/ruby/rdtool/archive/
 
@@ -11,10 +11,8 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
 COMMENT=	RD (Ruby Document) converter to HTML/man/etc
 
+BUILD_DEPENDS+=	${RUBY_PKGNAMEPREFIX}racc>=1.3.6:../../devel/ruby-racc
 DEPENDS+=	${RUBY_PKGNAMEPREFIX}optparse>=0.7:../../devel/ruby-optparse
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}racc>=1.3.6:../../devel/ruby-racc
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}strscan>=0.6.1:../../devel/ruby-strscan
-#DEPENDS+=	${RUBY_PKGNAMEPREFIX}forwardable>=1.1:../../devel/ruby14-forwardable
 
 DIST_SUBDIR=	ruby
 USE_RUBY=	yes
@@ -28,6 +26,8 @@ DOCS=		${DOCS_RD} README.html README.html.ja \
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${RUBY} rdtoolconf.rb
+	@cd ${WRKSRC}; \
+		${RM} -f rd/rdinlineparser.tab.rb rd/rdblockparser.tab.rb
 
 post-build:
 .for f in ${DOCS_RD}
