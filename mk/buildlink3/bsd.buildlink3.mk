@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.102 2004/03/05 19:25:37 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.103 2004/03/06 09:46:05 xtraeme Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -123,9 +123,10 @@ _BLNK_PACKAGES+=	${_pkg_}
 #
 _BLNK_DEPENDS=	# empty
 .for _pkg_ in ${BUILDLINK_DEPENDS}   
-.  if empty(_BLNK_DEPENDS:M${_pkg_}) && !empty(USE_BUILTIN.${_pkg_}:M[nN][oO])
+.    if empty(_BLNK_DEPENDS:M${_pkg_}) && (defined(USE_BUILTIN.${_pkg_}) && \
+	!empty(USE_BUILTIN.${_pkg_}:M[nN][oO]))
 _BLNK_DEPENDS+=	${_pkg_}
-.  endif
+.    endif
 .endfor
 
 # Add the proper dependency on each package pulled in by buildlink3.mk
