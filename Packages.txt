@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.50 1999/02/18 12:36:16 frueauf Exp $
+# $NetBSD: Packages.txt,v 1.51 1999/02/19 01:44:41 tv Exp $
 ###########################################################################
 
 			==========================
@@ -292,6 +292,24 @@ categories into which the package falls, PKGNAME which is the name of the
 package and the MAINTAINER name. This is so that anyone who quibbles with
 the (always completely correct) decisions taken by the guy who maintains
 the port can complain vigorously.
+
+The MASTER_SITES may be set to one of the predefined sites:
+
+	${MASTER_SITE_XCONTRIB}
+	${MASTER_SITE_GNU}
+	${MASTER_SITE_PERL_CPAN}
+	${MASTER_SITE_TEX_CTAN}
+	${MASTER_SITE_SUNSITE}
+
+If one of these predefined sites is chosen, you may require the ability to
+specify a subdirectory of that site.  Since these macros may expand to
+more than one actual site, you MUST use the following construct to specify
+a subdirectory:
+
+	${MASTER_SITE_GNU:=/subdirectory/name/}
+
+(Note the leading and trailing slashes after the := characters.)  Use of
+the deprecated MASTER_SITE_SUBDIR will not work.
 
 Currently the following values are available for CATEGORIES. If more than
 one is used, they need to be separated by spaces:
