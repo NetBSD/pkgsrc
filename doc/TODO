@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1846 2004/06/20 20:39:10 jmmv Exp $
+$NetBSD: TODO,v 1.1847 2004/06/20 22:09:27 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -17,9 +17,6 @@ Suggested new packages
 	pfaedit -> fontforge rename
 	http://pfaedit.sourceforge.net/
 	Update any pfaedit packages and dependencies to fontforge.
-
-	gd-noX11
-	Version of gd for systems without X11.
 
 	jgloss
 	application for adding reading and translation annotations to Japanese
