@@ -1,0 +1,24 @@
+--- unixinst.mak.orig	Mon May 31 22:39:43 1999
++++ unixinst.mak	Mon May 31 22:55:18 1999
+@@ -36,7 +36,7 @@
+ 	-mkdir $(gsdir)
+ 	-mkdir $(gsdatadir)
+ 	-mkdir $(bindir)
+-	$(INSTALL_PROGRAM) $(GS_XE) $(bindir)/$(GS)
++	$(INSTALL_PROGRAM) $(GS_XE) $(bindir)/vfgs
+ 
+ install-scripts: gsnd
+ 	-mkdir $(datadir)
+@@ -47,10 +47,10 @@
+ gsbj gsdj gsdj500 gslj gslp gsnd \
+ bdftops dvipdf font2c \
+ pdf2dsc pdf2ps pf2afm printafm ps2ascii ps2epsi ps2pdf ps2ps wftopfa ;\
+-	do if ( test -f $$f ); then $(INSTALL_PROGRAM) $$f $(scriptdir)/$$f; fi;\
++	do if ( test -f $$f ); then cat $$f | sed "s/ gs / vfgs /g" > vf$$f ; $(INSTALL_PROGRAM) vf$$f $(scriptdir)/vf$$f; fi;\
+ 	done'
+ 
+-MAN1_PAGES=gs pdf2dsc pdf2ps ps2ascii ps2epsi ps2pdf ps2ps
++MAN1_PAGES=
+ install-data: gs.1
+ 	-mkdir $(mandir)
+ 	-mkdir $(man1dir)

@@ -1,0 +1,15 @@
+$NetBSD: md5,v 1.1.1.1 1999/09/03 06:14:16 sakamoto Exp $
+
+MD5 (ghostscript-5.50.tar.gz) = f51e92976c4cda9a05de5388fdbbbbbd
+MD5 (ghostscript-5.50gnu.tar.gz) = 4930c9d2feea3294904fc683bf8b8beb
+MD5 (ghostscript-fonts-std-5.10a.tar.gz) = 8462a429e2672d332a510da076dca6d2
+MD5 (ghostscript-fonts-other-5.10.tar.gz) = fcf3abf81a1b46da9a92942d288020f9
+MD5 (hp8xxs13.zip) = e46bcac0aed0c511c8cc88a1093cc586
+MD5 (pdf_sec.ps) = 92cd6af5b4d7219e91e61b8351f0f7c4
+MD5 (gs5.50-vflib-1.0.tar.gz) = e934d1bd3a48a1c151e2a15af0640c97
+MD5 (gdevlips-2.3.3.tar.gz) = ec95c0a192579e83525f9d7033b3737a
+MD5 (gdevmjc-0.8.tar.gz) = 228f41c3cccce22c8f477c7a9407527c
+MD5 (gdevrpdl.tar.gz) = 9606f3cca1a8f85be76944fa4eda09b7
+MD5 (gdev10v.tar.gz) = 1486bb54c214ce215044a6c606280d73
+MD5 (dmprt-2.01.tar.gz) = c7a9fb127fde5d888a798bf5e1822b88
+MD5 (gdevalps-0.1.tar.gz) = 67c9da9feae4e16938e43d5430cbd9c5
