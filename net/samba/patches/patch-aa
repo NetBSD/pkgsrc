@@ -1,67 +1,39 @@
-$NetBSD: patch-aa,v 1.13 2001/05/10 09:00:23 abs Exp $
+$NetBSD: patch-aa,v 1.14 2001/05/14 18:56:16 jlam Exp $
 
---- Makefile.in.orig	Thu Mar 16 22:57:08 2000
-+++ Makefile.in
-@@ -25,10 +25,12 @@
- BINDIR = @bindir@
- # we don't use sbindir because we want full compatibility with
- # the previous releases of Samba
--SBINDIR = @bindir@
-+SBINDIR = @sbindir@
- LIBDIR = @libdir@
- VARDIR = @localstatedir@
- MANDIR = @mandir@
-+ETCDIR?= $(BASEDIR)/etc
-+LOGDIR?= $(BASEDIR)/log
- SAMBABOOK = @sambabook@
+--- configure.in.orig	Tue Apr 17 01:44:30 2001
++++ configure.in
+@@ -392,9 +392,6 @@
+ AC_CHECK_TYPE(ssize_t, int)
+ AC_CHECK_TYPE(wchar_t, unsigned short)
  
- # The permissions to give the executables
-@@ -37,12 +39,12 @@
- # set these to where to find various files
- # These can be overridden by command line switches (see smbd(8))
- # or in smb.conf (see smb.conf(5))
--SMBLOGFILE = $(VARDIR)/log.smb
--NMBLOGFILE = $(VARDIR)/log.nmb
--CONFIGFILE = $(LIBDIR)/smb.conf
--LMHOSTSFILE = $(LIBDIR)/lmhosts
--DRIVERFILE = $(LIBDIR)/printers.def
--PASSWD_PROGRAM = /bin/passwd
-+SMBLOGFILE = $(LOGDIR)/log.smb
-+NMBLOGFILE = $(LOGDIR)/log.nmb
-+CONFIGFILE = $(ETCDIR)/smb.conf
-+LMHOSTSFILE = $(ETCDIR)/lmhosts
-+DRIVERFILE = $(ETCDIR)/printers.def
-+PASSWD_PROGRAM = /usr/bin/passwd
- # This is where smbpasswd et al go
- PRIVATEDIR = @privatedir@
+-# we need libcups for CUPS support...
+-AC_CHECK_LIB(cups,httpConnect)
+-
+ # we need libdl for PAM and the new VFS code
+ AC_CHECK_LIB(dl, dlopen, [LIBS="$LIBS -ldl";
+ 	AC_DEFINE(HAVE_LIBDL)])
+@@ -1459,6 +1456,24 @@
+     AC_DEFINE(BROKEN_NISPLUS_INCLUDE_FILES)
+ fi
  
-@@ -463,14 +465,14 @@
++
++################################################
++# check for CUPS support
++AC_MSG_CHECKING(whether to use CUPS)
++AC_ARG_WITH(cups,
++[  --with-cups    Include CUPS support
++  --without-cups Don't include CUPS support (default)],
++[ case "$withval" in
++  yes)
++    AC_MSG_RESULT(yes)
++    AC_CHECK_LIB(cups, httpConnect)
++    ;;
++  *)
++    AC_MSG_RESULT(no)
++    ;;
++  esac ],
++  AC_MSG_RESULT(no)
++)
  
- installdirs:
- 	$(SHELL) $(srcdir)/install-sh -d -m $(INSTALLPERMS) \
--	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(CODEPAGEDIR)
-+	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(ETCDIR) $(LOGDIR) $(CODEPAGEDIR)
- 
- installservers: all installdirs
--	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
-+	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
- 
- installbin: all installdirs
--	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
--	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(PROGS)
-+	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
-+	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
- 
- installscripts: installdirs
- 	@$(SHELL) $(srcdir)/script/installscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
-@@ -495,8 +497,8 @@
- 	@$(SHELL) $(srcdir)/script/uninstallman.sh $(MANDIR) $(srcdir)
- 
- uninstallbin:
--	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
--	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(PROGS)
-+	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(ETCDIR) $(LOGDIR) $(SPROGS)
-+	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
- 
- uninstallscripts:
- 	@$(SHELL) $(srcdir)/script/uninstallscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
+ #################################################
+ # check for smbwrapper support
