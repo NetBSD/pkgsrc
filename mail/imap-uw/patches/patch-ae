@@ -29,7 +29,7 @@
 -	@cat ARCHIVE
 -	@$(SH) ARCHIVE
 +	$(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib \
-+	-version-info 0:0
++		-version-info 1:0
  
  # Cleanup
  
