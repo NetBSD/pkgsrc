@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2003/11/05 07:26:04 mrg Exp $
+$NetBSD: patch-ab,v 1.6 2003/11/10 23:53:32 mrg Exp $
 
 --- xbattbar.c.orig	2001-02-02 16:25:29.000000000 +1100
-+++ xbattbar.c	2003-11-03 17:17:11.000000000 +1100
++++ xbattbar.c	2003-11-10 17:50:08.000000000 +1100
 @@ -27,6 +27,14 @@
  
  #include <sys/types.h>
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.5 2003/11/05 07:26:04 mrg Exp $
  #include <signal.h>
  #include <stdio.h>
  #include <unistd.h>
-@@ -583,39 +590,171 @@
+@@ -583,39 +591,174 @@
  #define _PATH_APM_CTLDEV       "/dev/apmctl"
  #define _PATH_APM_NORMAL       "/dev/apm"
  
@@ -89,17 +89,22 @@ $NetBSD: patch-ab,v 1.5 2003/11/05 07:26:04 mrg Exp $
  {
         int fd, r, p;
         struct apm_power_info info;
+-
+-       if ((fd = open(_PATH_APM_NORMAL, O_RDONLY)) == -1) {
+-               fprintf(stderr, "xbattbar: cannot open apm device\n");
+-               exit(1);
 +       int acpi;
 +       size_t ns;
 +       size_t cc;
++       char *apmdev;
 +       int i;
- 
++
 +       acpi = 0;
-        if ((fd = open(_PATH_APM_NORMAL, O_RDONLY)) == -1) {
--               fprintf(stderr, "xbattbar: cannot open apm device\n");
--               exit(1);
++       apmdev = _PATH_APM_NORMAL;
++       if ((fd = open(apmdev, O_RDONLY)) == -1) {
 +#ifdef HAVE_NETBSD_ACPI
-+	       fd = open(_PATH_SYSMON, O_RDONLY);
++	       apmdev = _PATH_SYSMON;
++	       fd = open(apmdev, O_RDONLY);
 +	       acpi = 1;
 +#endif
         }
@@ -107,7 +112,7 @@ $NetBSD: patch-ab,v 1.5 2003/11/05 07:26:04 mrg Exp $
 -       if (ioctl(fd, APM_IOC_GETPOWER, &info) != 0) {
 -               fprintf(stderr, "xbattbar: ioctl APM_IOC_GETPOWER failed\n");
 +       if (fd < 0) {
-+               fprintf(stderr, "xbattbar: cannot open %s device\n", (acpi) ? _PATH_SYSMON : _PATH_APM_NORMAL);
++               fprintf(stderr, "xbattbar: cannot open %s device\n", apmdev);
                 exit(1);
         }
  
