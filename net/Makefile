@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 1999/02/23 18:29:47 rh Exp $
+# $NetBSD: Makefile,v 1.57 1999/02/26 11:31:17 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -85,6 +85,7 @@
 .else
     SUBDIR += socks5
 .endif
+    SUBDIR += spegla
 #    SUBDIR += strobe
 #    SUBDIR += sup
 #    SUBDIR += tac_plus
