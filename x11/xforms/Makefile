@@ -1,7 +1,14 @@
-# $NetBSD: Makefile,v 1.16 1999/08/25 22:48:37 bad Exp $
+# $NetBSD: Makefile,v 1.17 1999/09/14 03:16:23 jwise Exp $
 #
 
-DISTNAME=	bxform-088
+# for OBJECT_FORMAT, LOWER_OPSYS, MACHINE_PLATFORM, ...
+.include "../../mk/bsd.prefs.mk"
+
+.if ((${LOWER_OPSYS} == "netbsd") && (${MACHINE_ARCH} == "i386") && (${OBJECT_FMT} == "ELF"))
+DISTNAME=	bxform-088-ELF
+.else
+DISTNAME=       bxform-088
+.endif
 PKGNAME=	xforms-0.88
 WRKSRC=		${WRKDIR}/xforms
 CATEGORIES=	x11
@@ -20,15 +27,12 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	lamj@stat.cmu.edu
 HOMEPAGE=	http://bragg.phys.uwm.edu/xforms/
 
-# for OBJECT_FORMAT, LOWER_OPSYS, MACHINE_PLATFORM, ...
-.include "../../mk/bsd.prefs.mk"
-
 ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-ns32k *-*-sparc
 
-# XXX no ELF objects for sparc and i386 on NetBSD
-.if (${LOWER_OPSYS} == "netbsd") && ((${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "sparc"))
+# XXX no ELF objects for sparc on NetBSD
+.if (${LOWER_OPSYS} == "netbsd") && (${MACHINE_ARCH} == "sparc")
 .if (${OBJECT_FMT} == "ELF")
-NOT_FOR_PLATFORM=	${MACHINE_PLATFORM}
+IGNORE="is not available for ${MACHINE_PLATFORE} using the ELF object format."
 .endif
 .endif
 
