@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST-a.out,v 1.4 2000/10/29 03:51:20 mycroft Exp $
+@comment $NetBSD: PLIST-a.out,v 1.5 2000/10/29 09:14:25 mycroft Exp $
 @option extract-in-place
 bin/mozilla
+lib/mozilla/chrome/user-locales.rdf
+lib/mozilla/chrome/user-skins.rdf
 @comment begin PROGRAMS
 lib/mozilla/mozilla-bin
 lib/mozilla/nsTestSample
@@ -130,8 +132,6 @@ lib/mozilla/chrome/overlayinfo/editor/content/overlays.rdf
 lib/mozilla/chrome/overlayinfo/messenger/content/overlays.rdf
 lib/mozilla/chrome/overlayinfo/navigator/content/overlays.rdf
 lib/mozilla/chrome/toolkit.jar
-lib/mozilla/chrome/user-locales.rdf
-lib/mozilla/chrome/user-skins.rdf
 lib/mozilla/component.reg
 lib/mozilla/components/absync.xpt
 lib/mozilla/components/addrbook.xpt
