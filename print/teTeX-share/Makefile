@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/09/21 00:46:32 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/20 02:33:45 wiz Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0.2
@@ -23,17 +23,11 @@ NO_MTREE=	yes
 EXTRA_PATCH=	${FILESDIR}/latex.ltx.diff
 
 do-install:
-	@${ECHO} ""
-	@${ECHO} "Extracting ${DISTFILES} to ${PREFIX}/share/texmf"
-	@${ECHO} ""
-	@${ECHO} "  ** Get yourself a shower and a big mug of coffee,"
-	@${ECHO} "  ** this will take _very_ long!"
-	@${ECHO} ""
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
-	${GTAR} -plzx \
-		-C ${PREFIX}/share/texmf \
-		-X ${FILESDIR}/exclude \
-		-f ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
+	cd ${PREFIX}/share/texmf; ${PAX} -rzf ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
+	cd ${PREFIX}/share/texmf; ${RM} -f `${CAT} ${FILESDIR}/exclude`
+
+post-install:
 	@cd ${PREFIX}/share/texmf/tex/latex/base && \
 	  ${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${EXTRA_PATCH} && \
 	  ${RM} latex.ltx.orig
