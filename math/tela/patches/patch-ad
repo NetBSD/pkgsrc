@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2001/04/09 03:09:12 jtb Exp $
+$NetBSD: patch-ad,v 1.7 2001/04/09 03:55:20 jtb Exp $
 
 --- Makefile.orig	Tue Mar  6 18:25:25 2001
 +++ Makefile
@@ -11,15 +11,6 @@ $NetBSD: patch-ad,v 1.6 2001/04/09 03:09:12 jtb Exp $
  SGML2PS = sgml2latex
  #HDFLIBS = /usr/local/lib/libdf.a
  #DLDINCLUDE =
-@@ -94,7 +94,7 @@
- TSYGANENKO_O = geopack_ct.o
- TSYGLIB = libtsyg.a
- MPEG2ENCODELIB = libmpeg2encode.a
--CTELA_MODULES = std.o files.o plotmtv.o sppc.o la.o fft.o dld.o fileio.o \
-+CTELA_MODULES = MAIN__.o std.o files.o plotmtv.o sppc.o la.o fft.o dld.o fileio.o \
- 				numerics.o ani.o $(MATLABENG_O) $(CDF_O) $(TSYGANENKO_O)
- NEEDED_BY_CTELA_MODULES = $(MATLABLIB) $(VECFFTPACK_O) fftpack.o $(TSYGLIB) $(MPEG2ENCODELIB)
- #---------------------------------------------------------------------
 @@ -113,7 +113,7 @@
  OBJECTDEPS = objarithm.H object.H def.H deftyp.h Tcomplex.H error.H ctinfo.H common.H $(srcdir)/templ/tLL.H
  EXECUTABLES = testobject testil testerror testtree tela ctpp
