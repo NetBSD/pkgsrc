@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.3 2000/10/23 19:45:05 jlam Exp $
+# $NetBSD: Makefile.common,v 1.4 2000/12/22 17:26:18 jlam Exp $
 
 DISTNAME=		lesstif-${LESSTIF_VERSION}
-LESSTIF_VERSION=	0.91.8
+LESSTIF_VERSION=	0.92.6
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
 			ftp://ftp.unicamp.br/pub/X11/lesstif/srcdist/ \
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
 			http://gd.tuwien.ac.at/hci/lesstif/srcdist/ \
 			http://www.damtp.cam.ac.uk/mirror/ftp.hungry.com/pub/hungry/lesstif/srcdist/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.lesstif.org/
 
 BUILD_DEPENDS+=		autoconf:../../devel/autoconf
@@ -25,7 +25,13 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/Xbae/ltconfig
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-production --disable-debug --disable-verbose
-CONFIGURE_ARGS+=	--enable-xdnd
+CONFIGURE_ARGS+=	--enable-editres --enable-xdnd
+
+# The following forces the build process to use sed as the HTML-to-text
+# converter.
+#
+CONFIGURE_ENV+=		LYNX_CMD=${WRKDIR}/nonexecutable
+CONFIGURE_ENV+=		LINKS_CMD=${WRKDIR}/nonexecutable
 
 FILESDIR=		${.CURDIR}/../../x11/lesstif/files
 PATCHDIR=		${.CURDIR}/../../x11/lesstif/patches
@@ -34,8 +40,11 @@ post-extract:
 	cd ${WRKSRC}/lib/config; ${MV} host.def LessTif.def
 
 pre-configure:
-	for d in . lib/Xlt lib/Xbae test ; do \
-		cd ${WRKSRC}/$$d && libtoolize --force && aclocal && autoheader && automake -a -i && autoconf; \
+	${TOUCH} ${WRKDIR}/nonexecutable
+	${CHMOD} a-x ${WRKDIR}/nonexecutable
+	for dir in . lib/Xlt lib/Xbae test ; do				\
+		cd ${WRKSRC}/$$dir && libtoolize --force && aclocal	\
+			&& autoheader && automake -a -i && autoconf;	\
 	done
 
 .include "../../mk/bsd.pkg.mk"

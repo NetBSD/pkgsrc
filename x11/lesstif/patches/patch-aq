@@ -1,38 +1,30 @@
-$NetBSD: patch-aq,v 1.8 2000/10/23 19:45:18 jlam Exp $
+$NetBSD: patch-aq,v 1.9 2000/12/22 17:26:19 jlam Exp $
 
---- lib/Xm-2.0/Makefile.am.orig	Tue Aug  8 18:21:12 2000
-+++ lib/Xm-2.0/Makefile.am
-@@ -69,8 +69,6 @@
- # Lets put the headers in a sub directory to avoid
- # poluting /usr/local with more directories for default installs.
+--- doc/www.lesstif.org/Makefile.am.orig	Mon Dec 18 07:58:29 2000
++++ doc/www.lesstif.org/Makefile.am
+@@ -11,8 +11,7 @@
+ # Lets put the informational stuff in a sub directory to avoid 
+ # polluting /usr/local for default installs.
  #
--libdir = $(prefix)/LessTif/Motif2.0/lib
--
- lib_LTLIBRARIES=	libXm.la
+-docdir=	$(exec_prefix)/LessTif/doc
+-doc_DATA=	COPYING.LIB.html FAQ.html INSTALL.html apps.html \
++html_DATA=	COPYING.LIB.html FAQ.html INSTALL.html apps.html \
+ 		bugs.html cdrom.html core.html current.html \
+ 		cvs.html download.html index.html links.html lists.html \
+ 		mirrors.html platforms.html release-policy.html \
+@@ -20,7 +19,7 @@
+ 		versions.html web_button.html known.html help.html \
+ 		Advocacy.html Xbae.html Xlt.html feedback.html
  
- libXm_la_SOURCES= ${SRCS_1_2:%=../Xm/%} ${SRCS_2_0}
-@@ -87,24 +85,4 @@
- 	      rm $$i; \
- 	   fi ; \
- 	  done
--endif
--
--install-data-hook:
--if Version_2_0
--if LibtoolShared
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so.2*
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.so.2* .)
--endif
--if DefaultVersion20
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.la
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.la .)
--if LibtoolShared
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.so .)
--endif
--if LibtoolStatic
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.a
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.a .)
--endif
--endif
- endif
+-rootdir=	$(exec_prefix)/LessTif
++rootdir=	$(docdir)
+ root_DATA=	Install
+ 
+ all-local:      FAQ
+@@ -32,5 +31,5 @@
+ 	$(HTML2TEXT) $(srcdir)/INSTALL.html >$@
+ 
+ 
+-root2dir=	$(exec_prefix)/LessTif
++root2dir=	$(docdir)
+ root2_DATA=	FAQ

@@ -1,30 +1,24 @@
-$NetBSD: patch-aa,v 1.15 2000/10/23 19:45:10 jlam Exp $
+$NetBSD: patch-aa,v 1.16 2000/12/22 17:26:18 jlam Exp $
 
---- Makefile.am.orig	Tue May  2 17:05:14 2000
+--- Makefile.am.orig	Mon Dec 18 07:58:29 2000
 +++ Makefile.am
-@@ -3,29 +3,37 @@
+@@ -3,25 +3,32 @@
  #
  
- MAINTAINERCLEANFILES=Makefile.in configure libtool config.guess config.sub ltconfig ltmain.sh aclocal.m4 config.h.in install-sh missing mkinstalldirs
-+
+ MAINTAINERCLEANFILES=Makefile.in configure libtool config.guess config.sub ltconfig ltmain.sh aclocal.m4 config.h.in install-sh missing mkinstalldirs release-notes.html release-notes.txt
 +if Version_1_2
-+SUBDIRS	= include lib
-+
-+DIST_SUBDIRS = include lib test
++SUBDIRS	     = include lib
 +else
- SUBDIRS	= include lib clients scripts doc @BuildTestDir@
- 
- DIST_SUBDIRS = include lib clients scripts doc test
+ SUBDIRS	     = include scripts lib clients doc @BuildTestDir@
 +endif
+ 
+ DIST_SUBDIRS = include scripts lib clients doc test
  
  AUTOMAKE_OPTIONS = 1.4
  
-+EXTRA_DIST=    acconfig.h configure \
-+               BUG-REPORTING CREDITS KNOWN_BUGS RELEASE-POLICY NOTES
++EXTRA_DIST=	acconfig.h configure \
++		BUG-REPORTING CREDITS KNOWN_BUGS RELEASE-POLICY NOTES
 +
-+# Only install the documentation if installing 2.0-compatible libraries.
-+#
-+if Version_2_0
  #
  # Install some information files
  #
@@ -32,25 +26,32 @@ $NetBSD: patch-aa,v 1.15 2000/10/23 19:45:10 jlam Exp $
  # poluting /usr/local for default installs.
  #
 -rootdir=	$(exec_prefix)/LessTif
--root_DATA=	AUTHORS BUG-REPORTING COPYING COPYING.LIB CREDITS \
-+doc_DATA=	AUTHORS BUG-REPORTING COPYING COPYING.LIB CREDITS \
- 	KNOWN_BUGS NEWS README RELEASE-POLICY TODO release-notes.txt
++# Only install the documentation if installing 2.0-compatible libraries.
++#
++if Version_2_0
++rootdir=	$(docdir)
+ root_DATA=	AUTHORS BUG-REPORTING COPYING COPYING.LIB CREDITS \
+                 KNOWN_BUGS README RELEASE-POLICY release-notes.txt
  
 -EXTRA_DIST=	acconfig.h configure \
 -		BUG-REPORTING CREDITS KNOWN_BUGS RELEASE-POLICY NOTES
 -
  @MAINT@changelog:
- @MAINT@	@( cd $(srcdir)/lib/Xm ; cvs -Q log -rrelease_@MAJOR_VERSION@_@MINOR_VERSION@_@PICO_VERSION@: ) | $(srcdir)/scripts/parselog >ChangeLog
+ @MAINT@	@ cvs -Q -z8 log -rrelease_@MAJOR_VERSION@_@MINOR_VERSION@_@PICO_VERSION@: \
+ @MAINT@              include \
+@@ -32,7 +39,6 @@
+ @MAINT@              clients \
+ @MAINT@	      | $(srcdir)/scripts/parselog >ChangeLog
  
 -htmldir=	$(exec_prefix)/LessTif/doc
  html_DATA=	release-notes.html
  
  all-local: BUG-REPORTING
-@@ -47,6 +55,4 @@
- release-notes.html:	$(srcdir)/NOTES
- 	rm -f $@
- 	cp $(srcdir)/NOTES $@
--
--#install-data-hook:
--#	${INSTALL_DATA} $(srcdir)/NOTES $(DESTDIR)$(htmldir)/release-notes.html
+@@ -49,6 +55,7 @@
+ 
+ #install-data-hook:
+ #	${INSTALL_DATA} $(srcdir)/NOTES $(DESTDIR)$(htmldir)/release-notes.html
 +endif
+ 
+ 
+ #

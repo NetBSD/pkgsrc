@@ -1,15 +1,29 @@
-$NetBSD: patch-ak,v 1.10 2000/10/23 19:45:17 jlam Exp $
+$NetBSD: patch-ak,v 1.11 2000/12/22 17:26:19 jlam Exp $
 
---- include/Motif-1.2/Xm/Makefile.am.orig	Sun Apr 11 08:28:42 1999
-+++ include/Motif-1.2/Xm/Makefile.am
-@@ -46,10 +46,3 @@
- xm_DATA = Xm.h
+--- clients/Motif-2.1/xmbind/Makefile.am.orig	Fri Nov 24 09:58:22 2000
++++ clients/Motif-2.1/xmbind/Makefile.am
+@@ -4,8 +4,12 @@
  
- endif
+ if Version_2_1
+ bin_PROGRAMS=	xmbind
+-endif
++if DefaultVersion21
++bindir = $(prefix)/bin
++else
+ bindir = $(prefix)/LessTif/Motif2.1/bin
++endif
++endif
+ 
+ MAINTAINERCLEANFILES=Makefile.in
+ 
+@@ -57,10 +61,3 @@
+ 	      rm $$i; \
+ 	   fi ; \
+ 	   done
+-
 -install-data-hook:
--if Version_1_2
--if DefaultVersion12
--	if [ -d $(DESTDIR)$(prefix)/include/Xm ]; then rm -rf $(DESTDIR)$(prefix)/include/Xm; else rm -f $(DESTDIR)$(prefix)/include/Xm; fi
--	(mkdir -p $(DESTDIR)$(prefix)/include && cd $(DESTDIR)$(prefix)/include && $(LN_S) ../LessTif/Motif1.2/include/Xm Xm)
+-if DefaultVersion21
+-	-rm -f $(DESTDIR)$(prefix)/bin/$(bin_PROGRAMS)
+-	(cd $(DESTDIR)$(prefix)/bin && $(LN_S) ../LessTif/Motif2.1/bin/$(bin_PROGRAMS) .)
 -endif
--endif
+-
