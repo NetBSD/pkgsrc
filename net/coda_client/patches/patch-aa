@@ -1,0 +1,142 @@
+diff -ru ../coda-4.6.5/configure ./configure
+--- ../coda-4.6.5/configure     Wed Sep  2 14:07:47 1998
++++ ./configure Thu Sep  3 14:37:32 1998
+@@ -1362,8 +1362,14 @@
+		initsuffix=../etc
+  ;;
+ 
+-	*-*-freebsd* )
++	*-*-freebsd2* )
+		sys=i386_fbsd2
++		vfsdir=bsd44
++		initsuffix=../etc
++ ;;
++
++	*-*-freebsd3* )
++		sys=i386_fbsd3
+		vfsdir=bsd44
+		initsuffix=../etc
+  ;;
+diff -ru ../coda-4.6.5/coda-src/scripts/venus-setup ./coda-src/scripts/venus-setup
+--- ../coda-4.6.5/coda-src/scripts/venus-setup	Wed Sep  2 14:21:24 1998
++++ ./coda-src/scripts/venus-setup	Thu Sep  3 13:48:08 1998
+@@ -22,9 +22,13 @@
+ case `uname -sr` in
+ 	"NetBSD 1.2" )
+ 		CFSMAJOR=46 ;;
+-	NetBSD\ 1.3* )
++	NetBSD\ 1.3 )
++		CFSMAJOR=51 ;;
++	NetBSD\ 1.3.* )
+ 		CFSMAJOR=51 ;;
+-	FreeBSD\ 2.2* )
++	NetBSD\ 1.3* )
++		CFSMAJOR=60 ;;
++	FreeBSD* )
+ 		CFSMAJOR=93 ;;
+ 	*)
+ 		CFSMAJOR=67 ;;
+diff -ru ../coda-4.6.5/coda-src/vice/Makefile.in ./coda-src/vice/Makefile.in
+--- ../coda-4.6.5/coda-src/vice/Makefile.in	Wed Sep  2 14:21:38 1998
++++ ./coda-src/vice/Makefile.in	Thu Sep  3 13:40:46 1998
+@@ -25,7 +25,7 @@
+ # improvements or extensions that  they  make,  and  to  grant  Carnegie
+ # Mellon the rights to redistribute these changes without encumbrance.
+ # 
+-# static char *rcsid = "$Header: /cvsroot/pkgsrc/net/coda_client/patches/Attic/patch-aa,v 1.1.1.1 1998/09/29 17:20:46 rvb Exp $";
++# static char *rcsid = "$Header: /cvsroot/pkgsrc/net/coda_client/patches/Attic/patch-aa,v 1.1.1.1 1998/09/29 17:20:46 rvb Exp $";
+ 
+ 
+ # 
+@@ -96,7 +96,7 @@
+ 	smon.o		\
+ 	ViceErrorMsg.o	
+ 
+-codasrv: ${objects} srv.o dummyplumber.o ${LIBS}
++codasrv: ${objects} srv.o dummyplumber.o ${CLIBS}
+ 	$(CXX) $(LIBFLAGS)  srv.o ${objects} dummyplumber.o ${CLIBS} -lm -o codasrv
+ 
+ printvrdb: printvrdb.o
+diff -ru /dev/null ./configs/Makeconf.i386_fbsd3
+--- /dev/null	Thu Sep  3 17:13:07 1998
++++ ./configs/Makeconf.i386_fbsd3	Thu Sep  3 17:11:30 1998
+@@ -0,0 +1,60 @@
++#
++# sets:
++#	variables, libraries for BSD build
++
++#
++#            Coda: an Experimental Distributed File System
++#                             Release 4.4
++#
++#          Copyright (c) 1987-1995 Carnegie Mellon University
++#                         All Rights Reserved
++#
++# Permission  to  use, copy, modify and distribute this software and its
++# documentation is hereby granted,  provided  that  both  the  copyright
++# notice  and  this  permission  notice  appear  in  all  copies  of the
++# software, derivative works or  modified  versions,  and  any  portions
++# thereof, and that both notices appear in supporting documentation, and
++# that credit is given to Carnegie Mellon University  in  all  documents
++# and publicity pertaining to direct or indirect use of this code or its
++# derivatives.
++# 
++# CODA IS AN EXPERIMENTAL SOFTWARE SYSTEM AND IS  KNOWN  TO  HAVE  BUGS,
++# SOME  OF  WHICH MAY HAVE SERIOUS CONSEQUENCES.  CARNEGIE MELLON ALLOWS
++# FREE USE OF THIS SOFTWARE IN ITS "AS IS" CONDITION.   CARNEGIE  MELLON
++# DISCLAIMS  ANY  LIABILITY  OF  ANY  KIND  FOR  ANY  DAMAGES WHATSOEVER
++# RESULTING DIRECTLY OR INDIRECTLY FROM THE USE OF THIS SOFTWARE  OR  OF
++# ANY DERIVATIVE WORK.
++# 
++# Carnegie  Mellon  encourages  users  of  this  software  to return any
++# improvements or extensions that  they  make,  and  to  grant  Carnegie
++# Mellon the rights to redistribute these changes without encumbrance.
++# */
++# 
++# static char *rcsid = "$Header: /cvsroot/pkgsrc/net/coda_client/patches/Attic/patch-aa,v 1.1.1.1 1998/09/29 17:20:46 rvb Exp $";
++# 
++
++MACHINE_FLAGS = -D__BSD44__
++SHORTSYS      = bsd44
++INCLFLAGS     = -I/usr/include
++GFLAG         = -g
++CPP 	      = gcc -E -x c-header
++LIBCURSES     = /usr/lib/aout/libcurses.a
++LIBCOMPAT     = /usr/lib/aout/libcompat.a
++LIBREADLINE   = /usr/lib/aout/libreadline.a
++INCREADLINE   = -I/usr/include/readline
++LIBTERMCAP    = /usr/lib/aout/libtermcap.a
++#for rvm
++LIBTHREADS    =
++LIBMACH       = 
++
++#for advice_srv
++LIBKVM        = /usr/lib/aout/libkvm.a
++INCGDBM       = -I/usr/local/include
++LGDBM         = -L/usr/local/lib
++LIBMATH       = -lm
++GUIDIR        = /usr/lib/coda
++
++KRBINCLFLAGS  = -I/usr/athena/include -I/usr/include/kerberosIV
++#LIBKRBS       =    /usr/athena/lib/libkrb4.a /usr/athena/lib/libkrb5.a /usr/athena/lib/libcrypto.a /usr/athena/lib/libcom_err.a  /usr/athena/lib/libdes425.a /usr/athena/lib/libkrb524.a
++LIBKRBS = /usr/lib/libkrb.a
++
+diff -ru ../coda-4.6.5/configs/codaconf.m4 ./configs/codaconf.m4
+--- ../coda-4.6.5/configs/codaconf.m4	Wed Sep  2 14:21:53 1998
++++ ./configs/codaconf.m4	Thu Sep  3 14:11:57 1998
+@@ -32,8 +32,14 @@
+ 		initsuffix=../etc
+  ;;
+ 
+-	*-*-freebsd* )
++	*-*-freebsd2* )
+ 		sys=i386_fbsd2
++		vfsdir=bsd44
++		initsuffix=../etc
++ ;;
++
++	*-*-freebsd3* )
++		sys=i386_fbsd3
+ 		vfsdir=bsd44
+ 		initsuffix=../etc
+  ;;
