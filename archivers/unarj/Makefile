@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:18 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/11/12 15:22:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/11/12 02:17:38 obrien Exp 
 #
 
-DISTNAME=       unarj
+DISTNAME=       unarj241
 PKGNAME=	unarj-2.41
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://garbo.uwasa.fi/unix/arcers/
-DISTFILES=      unarj241.tar.Z
+EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=     packages@netbsd.org
+
+WRKSRC=		${WRKDIR}/unarj
 
 do-install:
 	cd ${WRKSRC}; ${INSTALL_PROGRAM} ${DISTNAME} ${PREFIX}/bin
