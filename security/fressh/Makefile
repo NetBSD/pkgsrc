@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/11/12 19:50:10 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2004/12/04 12:10:35 wiz Exp $
 
 DISTNAME=		fressh-0.8.1
 PKGREVISION=		2
@@ -14,6 +14,8 @@ USE_BUILDLINK3=		yes
 
 # Some versions of the openssl header files gives warnings.
 BUILDLINK_TRANSFORM+=	rm:-Wstrict-prototypes
+# too many unsigned char problems on -current
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
