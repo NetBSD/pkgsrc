@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2005/01/16 22:39:50 epg Exp $
+# $NetBSD: Makefile,v 1.11 2005/02/02 03:05:16 epg Exp $
 
-DISTNAME=	SVK-0.28
+DISTNAME=	SVK-0.29
 PKGNAME=	${DISTNAME:S/SVK/svk/}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
@@ -34,7 +34,7 @@ DEPENDS+=	p5-PerlIO-via-symlink>=0.02:../../devel/p5-PerlIO-via-symlink
 DEPENDS+=	p5-Pod-Escapes>=1.04:../../textproc/p5-Pod-Escapes
 DEPENDS+=	p5-Pod-Simple>=3.02:../../textproc/p5-Pod-Simple
 DEPENDS+=	p5-Regexp-Shellish>=0.93:../../devel/p5-Regexp-Shellish
-DEPENDS+=	p5-SVN-Mirror>=0.53:../../devel/p5-SVN-Mirror
+DEPENDS+=	p5-SVN-Mirror>=0.55:../../devel/p5-SVN-Mirror
 DEPENDS+=	p5-SVN-Simple>=0.26:../../devel/p5-SVN-Simple
 DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
