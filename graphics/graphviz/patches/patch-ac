@@ -1,40 +1,52 @@
-$NetBSD: patch-ac,v 1.9 2004/04/17 16:56:10 seb Exp $
+$NetBSD: patch-ac,v 1.10 2004/11/29 22:11:51 seb Exp $
 
---- configure.orig	2004-03-02 00:20:47.000000000 +0000
+--- configure.orig	2004-09-14 22:12:44.000000000 +0000
 +++ configure
-@@ -1021,8 +1021,6 @@ Optional Packages:
-   --with-pic              try to use only PIC/non-PIC objects default=use both
-   --with-dmalloc          use dmalloc for debugging memory use
+@@ -464,7 +464,7 @@ ac_includes_default="\
+ # include <unistd.h>
+ #endif"
+ 
+-ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os CYGWIN MINGW32 DARWIN INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar BUILDDATE CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE LEX LEXLIB LEX_OUTPUT_ROOT YACC EGREP LN_S ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB CPP CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL SED SORT KSH TOP_DIR BUILD_DIR ENABLE_DYNAGRAPH_TRUE ENABLE_DYNAGRAPH_FALSE ENABLE_GVRENDER_TRUE ENABLE_GVRENDER_FALSE ENABLE_CODEGENS_TRUE ENABLE_CODEGENS_FALSE TCLSH TCL_INCLUDES HAVE_TCL WITH_TCL_TRUE WITH_TCL_FALSE TCL_PKGINDEX TCL_VERSION TCL_MAJOR_VERSION TCL_MINOR_VERSION TCL_PATCH_LEVEL TCL_CFLAGS TCL_DEFS TCL_SHLIB_SUFFIX TCL_SRC_DIR TCL_STUB_LIB_SPEC WISH TK_INCLUDES HAVE_TK WITH_TK_TRUE WITH_TK_FALSE TK_PKGINDEX TK_VERSION TK_MAJOR_VERSION TK_MINOR_VERSION TK_PATCH_LEVEL TK_DEFS TK_XINCLUDES TK_SRC_DIR TK_CFLAGS TK_STUB_LIB_SPEC MATH_LIBS SOCKET_LIBS X_CFLAGS X_PRE_LIBS X_LIBS X_EXTRA_LIBS WITH_X_TRUE WITH_X_FALSE EXPAT_CONFIG EXPAT_INCLUDES EXPAT_LIBS XPM_INCLUDES XPM_LIBS XAW_INCLUDES XAW_LIBS Z_INCLUDES Z_LIBS GDLIB_CONFIG GD_INCLUDES GD_LIBS WITH_MYLIBGD_TRUE WITH_MYLIBGD_FALSE LIBICONV LTLIBICONV ICONV_INCLUDES ICONV_LIBS FREETYPE_CONFIG FT_INCLUDES FT_LIBS FONTCONFIG_CONFIG FC_INCLUDES FC_LIBS LIBPNG_CONFIG PNG_INCLUDES PNG_LIBS JPEG_INCLUDES JPEG_LIBS PKG_CONFIG LIBSVG_CAIRO_CFLAGS LIBSVG_CAIRO_LIBS ALLOCA LIBOBJS TCLINT_INCLUDES TKINT_INCLUDES LTLIBOBJS'
++ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os CYGWIN MINGW32 DARWIN INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar BUILDDATE CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE LEX LEXLIB LEX_OUTPUT_ROOT YACC EGREP LN_S ECHO AR ac_ct_AR RANLIB ac_ct_RANLIB CPP CXXCPP F77 FFLAGS ac_ct_F77 LIBTOOL SED SORT KSH TOP_DIR BUILD_DIR ENABLE_DYNAGRAPH_TRUE ENABLE_DYNAGRAPH_FALSE ENABLE_GVRENDER_TRUE ENABLE_GVRENDER_FALSE ENABLE_CODEGENS_TRUE ENABLE_CODEGENS_FALSE TCL_INCLUDES HAVE_TCL WITH_TCL_TRUE WITH_TCL_FALSE TCL_PKGINDEX TCL_VERSION TCL_MAJOR_VERSION TCL_MINOR_VERSION TCL_PATCH_LEVEL TCL_CFLAGS TCL_DEFS TCL_SHLIB_SUFFIX TCL_SRC_DIR TCL_STUB_LIB_SPEC TK_INCLUDES HAVE_TK WITH_TK_TRUE WITH_TK_FALSE TK_PKGINDEX TK_VERSION TK_MAJOR_VERSION TK_MINOR_VERSION TK_PATCH_LEVEL TK_DEFS TK_XINCLUDES TK_SRC_DIR TK_CFLAGS TK_STUB_LIB_SPEC MATH_LIBS SOCKET_LIBS X_CFLAGS X_PRE_LIBS X_LIBS X_EXTRA_LIBS WITH_X_TRUE WITH_X_FALSE EXPAT_CONFIG EXPAT_INCLUDES EXPAT_LIBS XPM_INCLUDES XPM_LIBS XAW_INCLUDES XAW_LIBS Z_INCLUDES Z_LIBS GDLIB_CONFIG GD_INCLUDES GD_LIBS WITH_MYLIBGD_TRUE WITH_MYLIBGD_FALSE LIBICONV LTLIBICONV ICONV_INCLUDES ICONV_LIBS FREETYPE_CONFIG FT_INCLUDES FT_LIBS FONTCONFIG_CONFIG FC_INCLUDES FC_LIBS LIBPNG_CONFIG PNG_INCLUDES PNG_LIBS JPEG_INCLUDES JPEG_LIBS PKG_CONFIG LIBSVG_CAIRO_CFLAGS LIBSVG_CAIRO_LIBS ALLOCA LIBOBJS TCLINT_INCLUDES TKINT_INCLUDES LTLIBOBJS'
+ ac_subst_files=''
+ 
+ # Initialize some variables set by options.
+@@ -1054,8 +1054,6 @@ Optional Packages:
+   --with-tags[=TAGS]
+                           include additional configurations [automatic]
    --with-efence           use efence for debugging memory use
 -  --with-tclsh=PROG       build graphviz for specific tclsh
 -  --with-wish=PROG        build graphviz for specific wish
    --with-extraincludedir=DIR use extra includes from DIR
    --with-extralibdir=DIR  use extra libraries from DIR
    --with-x                use the X Window System
-@@ -1530,7 +1528,10 @@ case "${target_os}" in
+@@ -1676,7 +1674,10 @@ case "${target_os}" in
  	PATHSEPARATOR=":"
  	;;
    * ) # This sucks!  Whatever happened to standards for file system layout?
 -	DEFAULT_FONTPATH="/usr/X11R6/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/truetype:/usr/X11R6/lib/X11/fonts/TTF:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/Type1:/usr/common/share/fonts/ttf";
 +	DEFAULT_FONTPATH="${X11PREFIX}/lib/X11/fonts/TrueType:${X11PREFIX}/lib/X11/fonts/truetype:${X11PREFIX}/lib/X11/fonts/TTF:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/Type1:/usr/common/share/fonts/ttf";
-+        if test x"$X11PREFIX" != x"$X11BASE"; then
-+            DEFAULT_FONTPATH="${DEFAULT_FONTPATH}:${X11BASE}/lib/X11/fonts/TrueType:${X11BASE}/lib/X11/fonts/truetype:${X11BASE}/lib/X11/fonts/TTF:${X11BASE}/lib/X11/fonts/Type1"
-+        fi
++	if test x"$X11PREFIX" != x"$X11BASE"; then
++		DEFAULT_FONTPATH="${DEFAULT_FONTPATH}:${X11BASE}/lib/X11/fonts/TrueType:${X11BASE}/lib/X11/fonts/truetype:${X11BASE}/lib/X11/fonts/TTF:${X11BASE}/lib/X11/fonts/Type1"
++	fi
  	PATHSEPARATOR=":"
  	;;
  esac
-@@ -8964,169 +8965,14 @@ fi
- #     AC_MSG_RESULT(no)
- # )
+@@ -20354,165 +20355,9 @@ fi
+ # start by assuming we have it
+ HAVE_TCL=1
  
--
++. ${TCLCONFIG}
++TCL_INCLUDES=${TCL_INCLUDE_SPEC}
+ 
 -# Check whether --with-tclsh or --without-tclsh was given.
 -if test "${with_tclsh+set}" = set; then
 -  withval="$with_tclsh"
 -  TCLSH=$withval
 -fi;
+-
 -if test "x$TCLSH" = "x"; then
--	# Extract the first word of "tclsh8.4", so it can be a program name with args.
+-    # Extract the first word of "tclsh8.4", so it can be a program name with args.
 -set dummy tclsh8.4; ac_word=$2
 -echo "$as_me:$LINENO: checking for $ac_word" >&5
 -echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
@@ -73,8 +85,8 @@ $NetBSD: patch-ac,v 1.9 2004/04/17 16:56:10 seb Exp $
 -echo "${ECHO_T}no" >&6
 -fi
 -
--	if test "x$TCLSH" = "x"; then
--		# Extract the first word of "tclsh8.3", so it can be a program name with args.
+-    if test "x$TCLSH" = "x"; then
+-        # Extract the first word of "tclsh8.3", so it can be a program name with args.
 -set dummy tclsh8.3; ac_word=$2
 -echo "$as_me:$LINENO: checking for $ac_word" >&5
 -echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
@@ -113,8 +125,8 @@ $NetBSD: patch-ac,v 1.9 2004/04/17 16:56:10 seb Exp $
 -echo "${ECHO_T}no" >&6
 -fi
 -
--		if test "x$TCLSH" = "x"; then
--			# Extract the first word of "tclsh", so it can be a program name with args.
+-        if test "x$TCLSH" = "x"; then
+-            # Extract the first word of "tclsh", so it can be a program name with args.
 -set dummy tclsh; ac_word=$2
 -echo "$as_me:$LINENO: checking for $ac_word" >&5
 -echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
@@ -153,60 +165,88 @@ $NetBSD: patch-ac,v 1.9 2004/04/17 16:56:10 seb Exp $
 -echo "${ECHO_T}no" >&6
 -fi
 -
--		fi
--	fi
+-        fi
+-    fi
 -fi
--TCL_VERSION_FOUND=`echo 'puts [info tclversion]' | $TCLSH`
 -
--# can't assume ksh on all architectures
--# TCLSH_EXEC_PREFIX=${TCLSH%%/bin/tclsh.*}
--TCLSH_EXEC_PREFIX=`echo $TCLSH|sed -e 's%/bin/tclsh.*$%%'`
+-if test "x$TCLSH" = "x"; then
+-    { echo "$as_me:$LINENO: WARNING: Unable to find a tclsh. The Tcl packages will not be built" >&5
+-echo "$as_me: WARNING: Unable to find a tclsh. The Tcl packages will not be built" >&2;}
+-    HAVE_TCL=0
+-fi
 -
--if test -f ${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND}/tcl.h; then
--	TCL_INCLUDES="-I${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND} -I${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND}/generic"
--else
--if test "x${TCLSH_EXEC_PREFIX}" != "x/usr" -a -f ${TCLSH_EXEC_PREFIX}/include/tcl.h; then
--	TCL_INCLUDES=-I${TCLSH_EXEC_PREFIX}/include
--fi
--fi
--if test "x$TCL_INCLUDES" != "x" ; then
--	echo "$as_me:$LINENO: result: using tcl headers from $TCL_INCLUDES" >&5
+-if test "$HAVE_TCL" = "1"; then
+-    TCL_VERSION_FOUND=`echo 'puts [info tclversion]' | $TCLSH`
+-
+-    # can't assume ksh on all architectures
+-    # TCLSH_EXEC_PREFIX=${TCLSH%%/bin/tclsh.*}
+-    # so use sed instead
+-    TCLSH_EXEC_PREFIX=`echo $TCLSH|sed -e 's%/bin/tclsh.*$%%'`
+-
+-    if test -f ${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND}/tcl.h; then
+-        TCL_INCLUDES="-I${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND} -I${TCLSH_EXEC_PREFIX}/include/tcl${TCL_VERSION_FOUND}/generic"
+-    else
+-        if test "x${TCLSH_EXEC_PREFIX}" != "x/usr" -a -f ${TCLSH_EXEC_PREFIX}/include/tcl.h; then
+-            TCL_INCLUDES=-I${TCLSH_EXEC_PREFIX}/include
+-        fi
+-    fi
+-    if test "x$TCL_INCLUDES" != "x" ; then
+-        echo "$as_me:$LINENO: result: using tcl headers from $TCL_INCLUDES" >&5
 -echo "${ECHO_T}using tcl headers from $TCL_INCLUDES" >&6
+-    fi
+-
+-    save_CPPFLAGS=$CPPFLAGS
+-    CPPFLAGS="$CPPFLAGS $TCL_INCLUDES"
+     if test "${ac_cv_header_tcl_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for tcl.h" >&5
+ echo $ECHO_N "checking for tcl.h... $ECHO_C" >&6
+@@ -20660,30 +20505,6 @@ echo "$as_me: WARNING: Unable to find he
+ fi
+ 
+ 
+-    CPPFLAGS=$save_CPPFLAGS
 -fi
 -
--
--# Some systems don't have Tcl.  Don't build
--# the Tcl products if we don't have the library.
--if test -f ${TCLSH_EXEC_PREFIX}/lib/tcl${TCL_VERSION_FOUND}/tclConfig.sh; then
--	TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tcl${TCL_VERSION_FOUND}/tclConfig.sh
--else
--if test -f ${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh; then
--	TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh
+-if test "$HAVE_TCL" = "1"; then
+-    # Some systems don't have Tcl.  Don't build
+-    # the Tcl products if we don't have the library.
+-    if test -f ${TCLSH_EXEC_PREFIX}/lib/tcl${TCL_VERSION_FOUND}/tclConfig.sh; then
+-        TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tcl${TCL_VERSION_FOUND}/tclConfig.sh
+-    else
+-        if test -f ${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh; then
+-            TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh
+-        fi
+-    fi
+-    if test "x$TCLCONFIG" != "x"; then
+-        echo "$as_me:$LINENO: result: using $TCLCONFIG" >&5
+-echo "${ECHO_T}using $TCLCONFIG" >&6
+-        file=${TCLCONFIG}
+-            . $file
+-    else
+-        { echo "$as_me:$LINENO: WARNING: Unable to find tclConfig.sh. The Tcl packages will not be built" >&5
+-echo "$as_me: WARNING: Unable to find tclConfig.sh. The Tcl packages will not be built" >&2;}
+-        HAVE_TCL=0
+-    fi
 -fi
--fi
--
- if test "x$TCLCONFIG" != "x"; then
-     echo "$as_me:$LINENO: result: using $TCLCONFIG" >&5
- echo "${ECHO_T}using $TCLCONFIG" >&6
-     file=${TCLCONFIG}
-     . $file
-+    #
-+    TCLSH_EXEC_PREFIX="${TCL_EXEC_PREFIX}"
-+    TCL_INCLUDES="${TCL_INCLUDE_SPEC}"
+ 
+ if test "$HAVE_TCL" = "1"; then
      # TCL STUBS support is required
-     if test "${TCL_SUPPORTS_STUBS}" = "1"; then
- #        TCL_SUBDIRS="tclstubs tclhandle gdtclft tcldot tcldgr tcldgl tclpathplan"
-@@ -9212,174 +9058,14 @@ fi
+@@ -20775,169 +20596,9 @@ echo "$as_me: WARNING: No Tcl. The Tk pa
+ fi
  
+ HAVE_TK=$HAVE_TCL
++. ${TKCONFIG}
++TK_INCLUDES="-I${TK_PREFIX}/include"
  
- 
+-if test "$HAVE_TK" = "1"; then
+-
 -# Check whether --with-wish or --without-wish was given.
 -if test "${with_wish+set}" = set; then
 -  withval="$with_wish"
 -  WISH=$withval
 -fi;
--if test "x$WISH" = "x"; then
--	# Extract the first word of "wish8.4", so it can be a program name with args.
+-    if test "x$WISH" = "x"; then
+-        # Extract the first word of "wish8.4", so it can be a program name with args.
 -set dummy wish8.4; ac_word=$2
 -echo "$as_me:$LINENO: checking for $ac_word" >&5
 -echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
@@ -245,8 +285,8 @@ $NetBSD: patch-ac,v 1.9 2004/04/17 16:56:10 seb Exp $
 -echo "${ECHO_T}no" >&6
 -fi
 -
--	if test "x$WISH" = "x"; then
--		# Extract the first word of "wish8.3", so it can be a program name with args.
+-        if test "x$WISH" = "x"; then
+-    	    # Extract the first word of "wish8.3", so it can be a program name with args.
 -set dummy wish8.3; ac_word=$2
 -echo "$as_me:$LINENO: checking for $ac_word" >&5
 -echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
@@ -285,8 +325,8 @@ $NetBSD: patch-ac,v 1.9 2004/04/17 16:56:10 seb Exp $
 -echo "${ECHO_T}no" >&6
 -fi
 -
--		if test "x$WISH" = "x"; then
--			# Extract the first word of "wish", so it can be a program name with args.
+-    	    if test "x$WISH" = "x"; then
+-                # Extract the first word of "wish", so it can be a program name with args.
 -set dummy wish; ac_word=$2
 -echo "$as_me:$LINENO: checking for $ac_word" >&5
 -echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
@@ -325,64 +365,77 @@ $NetBSD: patch-ac,v 1.9 2004/04/17 16:56:10 seb Exp $
 -echo "${ECHO_T}no" >&6
 -fi
 -
--		fi
--	fi
+-            fi
+-        fi
+-    fi
+-    if test "x$WISH" = "x"; then
+-        { echo "$as_me:$LINENO: WARNING: Unable to find a wish. The Tk packages will not be built" >&5
+-echo "$as_me: WARNING: Unable to find a wish. The Tk packages will not be built" >&2;}
+-        HAVE_TK=0
+-    fi
 -fi
 -
+-if test "$HAVE_TK" = "1"; then
+-    #TK_VERSION_FOUND=`echo 'puts [[info tkversion]]' | $WISH`
+-    #
+-    # No such var as tkversion.  Use tclversion instead.
+-    TK_VERSION_FOUND=${TCL_VERSION_FOUND}
 -
--#TK_VERSION_FOUND=`echo 'puts [[info tkversion]]' | $WISH`
--#
--# No such var as tkversion.  Use tclversion instead.
--TK_VERSION_FOUND=${TCL_VERSION_FOUND}
+-    # can't assume ksh on all architectures
+-    # WISH_EXEC_PREFIX=${WISH%%/bin/tclsh.*}
+-    # so use sed instead
+-    WISH_EXEC_PREFIX=`echo $WISH|sed -e 's%/bin/wish.*$%%'`
 -
--# can't assume ksh on all architectures
--# WISH_EXEC_PREFIX=${WISH%%/bin/tclsh.*}
--WISH_EXEC_PREFIX=`echo $WISH|sed -e 's%/bin/wish.*$%%'`
--
--if test -f ${WISH_EXEC_PREFIX}/include/tk${TK_VERSION_FOUND}/tk.h; then
+-    if test -f ${WISH_EXEC_PREFIX}/include/tk${TK_VERSION_FOUND}/tk.h; then
 -	TK_INCLUDES="-I${WISH_EXEC_PREFIX}/include/tk${TK_VERSION_FOUND} -I${WISH_EXEC_PREFIX}/include/tk${TK_VERSION_FOUND}/generic"
--else
--if test "x${WISH_EXEC_PREFIX}" != "x/usr" -a -f ${WISH_EXEC_PREFIX}/include/tk.h; then
--	TK_INCLUDES=-I${WISH_EXEC_PREFIX}/include
--fi
--fi
--if test "x$TK_INCLUDES" != "x" ; then
+-    else
+-        if test "x${WISH_EXEC_PREFIX}" != "x/usr" -a -f ${WISH_EXEC_PREFIX}/include/tk.h; then
+-	    TK_INCLUDES=-I${WISH_EXEC_PREFIX}/include
+-        fi
+-    fi
+-    if test "x$TK_INCLUDES" != "x" ; then
 -	echo "$as_me:$LINENO: result: using tk headers from $TK_INCLUDES" >&5
 -echo "${ECHO_T}using tk headers from $TK_INCLUDES" >&6
--fi
+-    fi
 -
--
--# Some systems don't have Tcl.  Don't build
--# Some systems have Tcl, but not TK.  Don't build
--# the Tk products if we don't have the library.
--if test -f ${WISH_EXEC_PREFIX}/lib/tk${TK_VERSION_FOUND}/tkConfig.sh; then
--	TKCONFIG=${WISH_EXEC_PREFIX}/lib/tk${TK_VERSION_FOUND}/tkConfig.sh
--else
--if test -f ${WISH_EXEC_PREFIX}/lib/tkConfig.sh; then
--	TKCONFIG=${WISH_EXEC_PREFIX}/lib/tkConfig.sh
--fi
--fi
--
- if test "x$TKCONFIG" != "x"; then
-     echo "$as_me:$LINENO: result: using $TKCONFIG" >&5
- echo "${ECHO_T}using $TKCONFIG" >&6
-     file=${TKCONFIG}
-     . $file
-+    #
-+    WISH_EXEC_PREFIX="${TK_EXEC_PREFIX}"
-+    TK_INCLUDES="-I${TK_PREFIX}/include"
-     if test "${TCL_SUPPORTS_STUBS}" = "1"; then
-         TK_PKGINDEX="tkspline/pkgIndex.tcl"
-     else
-@@ -9434,6 +9120,7 @@ fi
+-    save_CPPFLAGS=$CPPFLAGS
+-    CPPFLAGS="$CPPFLAGS $TCL_INCLUDES $TK_INCLUDES"
+     if test "${ac_cv_header_tk_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for tk.h" >&5
+ echo $ECHO_N "checking for tk.h... $ECHO_C" >&6
+@@ -21085,31 +20746,6 @@ echo "$as_me: WARNING: Unable to find he
+ fi
  
  
+-    CPPFLAGS=$save_CPPFLAGS
+-fi
+-
+-if test "$HAVE_TK" = "1"; then
+-    # Some systems don't have Tcl.  Don't build
+-    # Some systems have Tcl, but not TK.  Don't build
+-    # the Tk products if we don't have the library.
+-    if test -f ${WISH_EXEC_PREFIX}/lib/tk${TK_VERSION_FOUND}/tkConfig.sh; then
+-        TKCONFIG=${WISH_EXEC_PREFIX}/lib/tk${TK_VERSION_FOUND}/tkConfig.sh
+-    else
+-        if test -f ${WISH_EXEC_PREFIX}/lib/tkConfig.sh; then
+-	    TKCONFIG=${WISH_EXEC_PREFIX}/lib/tkConfig.sh
+-        fi
+-    fi
+-    if test "x$TKCONFIG" != "x"; then
+-        echo "$as_me:$LINENO: result: using $TKCONFIG" >&5
+-echo "${ECHO_T}using $TKCONFIG" >&6
+-        file=${TKCONFIG}
+-        . $file
+-    else
+-        { echo "$as_me:$LINENO: WARNING: Unable to find tkConfig.sh. The Tk packages will not be built" >&5
+-echo "$as_me: WARNING: Unable to find tkConfig.sh. The Tk packages will not be built" >&2;}
+-        HAVE_TK=0
+-    fi
+-fi
  
-+
- # Check whether --with-extraincludedir or --without-extraincludedir was given.
- if test "${with_extraincludedir+set}" = set; then
-   withval="$with_extraincludedir"
-@@ -13653,36 +13340,12 @@ rm -f conftest.$ac_objext conftest.$ac_e
+ #if test "$HAVE_TK" = "1"; then
+ #    # TK STUBS support is required (but support is indicated by TCL_SUPPORTS_STUBS)
+@@ -27946,36 +27582,12 @@ rm -f conftest.err conftest.$ac_objext c
  
  # -----------------------------------
  # tclInt.h
@@ -421,37 +474,19 @@ $NetBSD: patch-ac,v 1.9 2004/04/17 16:56:10 seb Exp $
  
  
  # -----------------------------------
-@@ -14920,8 +14583,6 @@ s,@ENABLE_GVRENDER_TRUE@,$ENABLE_GVRENDE
+@@ -29395,7 +29007,6 @@ s,@ENABLE_GVRENDER_TRUE@,$ENABLE_GVRENDE
  s,@ENABLE_GVRENDER_FALSE@,$ENABLE_GVRENDER_FALSE,;t t
  s,@ENABLE_CODEGENS_TRUE@,$ENABLE_CODEGENS_TRUE,;t t
  s,@ENABLE_CODEGENS_FALSE@,$ENABLE_CODEGENS_FALSE,;t t
 -s,@TCLSH@,$TCLSH,;t t
--s,@TCL_INCLUDES@,$TCL_INCLUDES,;t t
+ s,@TCL_INCLUDES@,$TCL_INCLUDES,;t t
+ s,@HAVE_TCL@,$HAVE_TCL,;t t
  s,@WITH_TCL_TRUE@,$WITH_TCL_TRUE,;t t
- s,@WITH_TCL_FALSE@,$WITH_TCL_FALSE,;t t
- s,@TCL_PKGINDEX@,$TCL_PKGINDEX,;t t
-@@ -14944,6 +14605,7 @@ s,@TCL_NEEDS_EXP_FILE@,$TCL_NEEDS_EXP_FI
- s,@TCL_EXPORT_FILE_SUFFIX@,$TCL_EXPORT_FILE_SUFFIX,;t t
- s,@TCL_LIBS@,$TCL_LIBS,;t t
- s,@TCL_PREFIX@,$TCL_PREFIX,;t t
-+s,@TCL_INCLUDES@,$TCL_INCLUDES,;t t
- s,@TCL_EXEC_PREFIX@,$TCL_EXEC_PREFIX,;t t
- s,@TCL_SHLIB_CFLAGS@,$TCL_SHLIB_CFLAGS,;t t
- s,@TCL_SHLIB_CXXFLAGS@,$TCL_SHLIB_CXXFLAGS,;t t
-@@ -14971,8 +14633,6 @@ s,@TCL_BUILD_STUB_LIB_SPEC@,$TCL_BUILD_S
+@@ -29410,7 +29021,6 @@ s,@TCL_DEFS@,$TCL_DEFS,;t t
+ s,@TCL_SHLIB_SUFFIX@,$TCL_SHLIB_SUFFIX,;t t
+ s,@TCL_SRC_DIR@,$TCL_SRC_DIR,;t t
  s,@TCL_STUB_LIB_SPEC@,$TCL_STUB_LIB_SPEC,;t t
- s,@TCL_BUILD_STUB_LIB_PATH@,$TCL_BUILD_STUB_LIB_PATH,;t t
- s,@TCL_STUB_LIB_PATH@,$TCL_STUB_LIB_PATH,;t t
 -s,@WISH@,$WISH,;t t
--s,@TK_INCLUDES@,$TK_INCLUDES,;t t
+ s,@TK_INCLUDES@,$TK_INCLUDES,;t t
+ s,@HAVE_TK@,$HAVE_TK,;t t
  s,@WITH_TK_TRUE@,$WITH_TK_TRUE,;t t
- s,@WITH_TK_FALSE@,$WITH_TK_FALSE,;t t
- s,@TK_PKGINDEX@,$TK_PKGINDEX,;t t
-@@ -14999,6 +14659,7 @@ s,@TK_BUILD_STUB_LIB_SPEC@,$TK_BUILD_STU
- s,@TK_STUB_LIB_SPEC@,$TK_STUB_LIB_SPEC,;t t
- s,@TK_BUILD_STUB_LIB_PATH@,$TK_BUILD_STUB_LIB_PATH,;t t
- s,@TK_STUB_LIB_PATH@,$TK_STUB_LIB_PATH,;t t
-+s,@TK_INCLUDES@,$TK_INCLUDES,;t t
- s,@SOCKET_LIBS@,$SOCKET_LIBS,;t t
- s,@X_CFLAGS@,$X_CFLAGS,;t t
- s,@X_PRE_LIBS@,$X_PRE_LIBS,;t t

@@ -1,29 +1,29 @@
-$NetBSD: patch-ag,v 1.6 2004/04/17 16:56:10 seb Exp $
+$NetBSD: patch-ag,v 1.7 2004/11/29 22:11:51 seb Exp $
 
---- gdtclft/demo/Makefile.in.orig	2004-03-02 00:20:38.000000000 +0000
+--- gdtclft/demo/Makefile.in.orig	2004-09-14 22:13:16.000000000 +0000
 +++ gdtclft/demo/Makefile.in
-@@ -104,7 +104,6 @@ SOCKET_LIBS = @SOCKET_LIBS@
+@@ -160,7 +160,6 @@ SOCKET_LIBS = @SOCKET_LIBS@
  SORT = @SORT@
  STRIP = @STRIP@
  TCLINT_INCLUDES = @TCLINT_INCLUDES@
 -TCLSH = @TCLSH@
- TCLSH_EXEC_PREFIX = @TCLSH_EXEC_PREFIX@
- TCL_BUILD_LIB_SPEC = @TCL_BUILD_LIB_SPEC@
- TCL_BUILD_STUB_LIB_PATH = @TCL_BUILD_STUB_LIB_PATH@
-@@ -181,7 +180,6 @@ TK_XINCLUDES = @TK_XINCLUDES@
- TK_XLIBSW = @TK_XLIBSW@
+ TCL_CFLAGS = @TCL_CFLAGS@
+ TCL_DEFS = @TCL_DEFS@
+ TCL_INCLUDES = @TCL_INCLUDES@
+@@ -186,7 +185,6 @@ TK_VERSION = @TK_VERSION@
+ TK_XINCLUDES = @TK_XINCLUDES@
  TOP_DIR = @TOP_DIR@
  VERSION = @VERSION@
 -WISH = @WISH@
- XAW_INCLUDES = @XAW_INCLUDES@
- XAW_LIBS = @XAW_LIBS@
- XPM_INCLUDES = @XPM_INCLUDES@
-@@ -199,7 +197,7 @@ install_sh = @install_sh@
- 
- AUTOMAKE_OPTIONS = 1.4
- 
+ WITH_MYLIBGD_FALSE = @WITH_MYLIBGD_FALSE@
+ WITH_MYLIBGD_TRUE = @WITH_MYLIBGD_TRUE@
+ WITH_TCL_FALSE = @WITH_TCL_FALSE@
+@@ -253,7 +251,7 @@ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
 -demodir = $(datadir)/@PACKAGE@/demo
 +demodir = $(prefix)/share/examples/@PACKAGE@
- demo_SCRIPTS = entities
- demo_DATA = entities.README entities.html
- EXTRA_DIST = $(demo_SCRIPTS) $(demo_DATA)
+ @WITH_TCL_TRUE@demo_SCRIPTS = entities
+ @WITH_TCL_TRUE@demo_DATA = entities.README entities.html
+ EXTRA_DIST = entities entities.README entities.html
