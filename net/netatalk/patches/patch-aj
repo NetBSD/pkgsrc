@@ -1,0 +1,8 @@
+$NetBSD: patch-aj,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+--- /dev/null	Mon Oct 26 13:21:23 1998
++++ libatalk/nbp/Makefile.inc	Mon Oct 26 13:24:16 1998
+@@ -0,0 +1,3 @@
++.PATH: ${.CURDIR}/nbp
++
++SRCS+= nbp_util.c nbp_lkup.c nbp_rgstr.c nbp_unrgstr.c

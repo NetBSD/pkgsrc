@@ -1,0 +1,34 @@
+$NetBSD: patch-au,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+--- man/man8/psf.8.orig	Fri Oct 30 10:32:38 1998
++++ man/man8/psf.8	Fri Oct 30 10:34:23 1998
+@@ -90,13 +90,13 @@
+ .RS
+ .nf
+ laser|lp|LaserWriter Plus on AppleTalk:\\
+-    :sd=/usr/spool/lpd/laser:\\
+-    :lp=/usr/spool/lpd/laser/null:\\
+-    :lf=/var/adm/lpd-errs:pw#80:hl:\\
+-    :of=:LIBDIR:/filters/ofpap:\\
+-    :if=:LIBDIR:/filters/ifpaprev:\\
+-    :tf=:LIBDIR:/filters/tfpaprev:\\
+-    :df=:LIBDIR:/filters/dfpaprev:
++    :sd=/usr/spool/output/laser:\\
++    :lp=/usr/spool/output/laser/null:\\
++    :lf=/var/log/lpd-errs:pw#80:hl:\\
++    :of=:RESDIR:/psffilters/ofpap:\\
++    :if=:RESDIR:/psffilters/ifpaprev:\\
++    :tf=:RESDIR:/psffilters/tfpaprev:\\
++    :df=:RESDIR:/psffilters/dfpaprev:
+ .fi
+ .RE
+ .sp
+@@ -110,7 +110,7 @@
+ for each printer, as has been done above.
+ .LP
+ Finally, there is a file in the spool directory,
+-.BR /var/spool/lpd/laser ,
++.BR /var/spool/output/laser ,
+ called
+ .BR .paprc ,
+ which

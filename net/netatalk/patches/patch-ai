@@ -1,0 +1,10 @@
+$NetBSD: patch-ai,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+New Makefile
+
+--- /dev/null	Mon Oct 26 13:21:23 1998
++++ libatalk/compat/Makefile.inc	Mon Oct 26 13:22:39 1998
+@@ -0,0 +1,3 @@
++.PATH: ${.CURDIR}/compat
++
++SRCS+=	mktemp.c getusershell.c strcasecmp.c strstr.c flock.c sigvec.c

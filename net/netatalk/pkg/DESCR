@@ -1,0 +1,3 @@
+University of Michigan's netatalk userland tools and utilities, for
+AppleTalk interworking.  This is the standard, reference version. 
+Lacks AppleshareIP support.  See also the netatalk-asun package.

@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/12/26 22:09:27 agc Exp $
+
+--- include/Makefile.orig	Thu Oct  1 18:46:15 1998
++++ include/Makefile	Thu Sep 17 21:46:49 1998
+@@ -1,11 +1,11 @@
+-TARGETS=	atalk netatalk
++TARGETS=	atalk
+ 
+ INSTALL=	install
+ 
+ all :
+ 
+ install : all
+-	-mkdir ${DESTDIR}
++	-mkdir ${ATALK_DESTDIR}
+ 	-mkdir ${INCDIR}
+ 	for i in ${TARGETS}; do \
+ 	    rm -rf ${INCDIR}/$$i ; \
