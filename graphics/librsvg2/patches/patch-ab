@@ -1,26 +1,26 @@
-$NetBSD: patch-ab,v 1.3 2004/01/22 12:43:10 jmmv Exp $
+$NetBSD: patch-ab,v 1.4 2004/09/21 16:51:01 jmmv Exp $
 
---- gdk-pixbuf-loader/Makefile.in.orig	2003-12-07 20:35:59.000000000 +0100
+--- gdk-pixbuf-loader/Makefile.in.orig	2004-09-12 21:16:37.000000000 +0200
 +++ gdk-pixbuf-loader/Makefile.in
-@@ -122,7 +122,7 @@ svg_loader_la_SOURCES = io-svg.c
- svg_loader_la_LDFLAGS = -avoid-version -module $(no_undefined)
- svg_loader_la_LIBADD = $(LIBRSVG_LIBS) \
- 	$(LIBGSF_LIBS) $(LIBCROCO_LIBS)\
+@@ -52,7 +52,7 @@ LTLIBRARIES = $(loader_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+ svg_loader_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+-	$(am__DEPENDENCIES_1) $(top_builddir)/librsvg-2.la
++	$(am__DEPENDENCIES_1)
+ am_svg_loader_la_OBJECTS = io-svg.lo
+ svg_loader_la_OBJECTS = $(am_svg_loader_la_OBJECTS)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+@@ -252,7 +252,7 @@ svg_loader_la_LDFLAGS = -avoid-version -
+ svg_loader_la_LIBADD = $(LIBRSVG_LIBS) 	\
+ 	$(LIBGNOME_VFS_LIBS)		\
+ 	$(LIBGSF_LIBS) $(LIBCROCO_LIBS)	\
 -	$(top_builddir)/librsvg-2.la
 +	`pkg-config --libs librsvg-2.0`
  
- 
  loader_LTLIBRARIES = $(target_pixbuf_loader)
-@@ -136,7 +136,7 @@ DEFS = @DEFS@ -I. -I$(srcdir) -I..
- CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
--svg_loader_la_DEPENDENCIES =  $(top_builddir)/librsvg-2.la
-+svg_loader_la_DEPENDENCIES =
- svg_loader_la_OBJECTS =  io-svg.lo
- CFLAGS = @CFLAGS@
- COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -362,10 +362,6 @@ maintainer-clean-generic clean mostlycle
+ all: all-am
+@@ -534,10 +534,6 @@ uninstall-am: uninstall-info-am uninstal
  
  
  install-data-hook: 
@@ -28,6 +28,6 @@ $NetBSD: patch-ab,v 1.3 2004/01/22 12:43:10 jmmv Exp $
 -	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/gtk-2.0 ; \
 -	  $(QUERYLOADERS) > $(DESTDIR)$(sysconfdir)/gtk-2.0/gdk-pixbuf.loaders ; \
 -	fi
- 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
