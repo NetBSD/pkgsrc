@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2001/04/14 14:47:31 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.8 2001/05/21 22:25:19 dmcmahill Exp $
 
---- tgt-null/Makefile.in.orig	Thu Dec 14 21:00:31 2000
-+++ tgt-null/Makefile.in	Sat Apr 14 09:35:39 2001
-@@ -48,5 +48,5 @@
- %.o: %.c
- 	@[ -d dep ] || mkdir dep
--	$(CC) -Wall $(CPPFLAGS) -I$(srcdir)/.. -MD -c $< -o $*.o
-+	$(CC) -Wall -I$(srcdir)/.. $(CPPFLAGS) -MD -c $< -o $*.o
- 	mv $*.d dep
+--- vvp/configure.in.orig	Sun May 20 11:09:40 2001
++++ vvp/configure.in	Mon May 21 12:07:09 2001
+@@ -6,4 +6,8 @@
+ AC_CHECK_TOOL(STRIP, strip, true)
+ 
++AC_CYGWIN
++AC_EXEEXT
++AC_SUBST(EXEEXT)
++
+ AC_PROG_INSTALL
  
