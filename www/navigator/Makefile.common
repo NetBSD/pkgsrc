@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2000/10/21 23:02:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.24 2000/10/27 02:20:54 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -6,7 +6,7 @@
 
 # Note - the version will be overridden for certain architectures which
 #	 do not have the latest version available (eg: SunOS sparc)
-NS_VERS=	4.75
+NS_VERS=	4.76
 NS_ENCRYPTION=	us
 LDAP_VERS=	40
 
@@ -40,6 +40,7 @@ WRKNAME=	alpha-dec-osf4.0
 VENDOR_NAME=	Tru64 UNIX
 #
 .elif (${MACHINE_ARCH} == "i386" && defined(NS_USE_BSDI))
+NS_VERS=	4.75
 PLIST_ARCH=	bsdi-i386
 DISTUNAME=	x86-bsdi-bsd2
 DIST_DIR_NAME=	unsupported/bsdi21
