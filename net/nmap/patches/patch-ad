@@ -1,22 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2002/08/03 12:24:00 hubertf Exp $
+$NetBSD: patch-ad,v 1.5 2003/03/22 04:07:11 salo Exp $
 
---- nmap-services.orig	Sat Jul 20 11:19:26 2002
-+++ nmap-services
-@@ -1748,7 +1748,7 @@
- dls-monitor       2048/udp   # 
- nfs               2049/tcp   # networked file system
- nfs               2049/udp   # networked file system
--distrib-net-losers 2064/tcp  # A group of lamers working on a silly closed-source client for solving the RSA cryptographic challenge.  This is the keyblock proxy port.
-+distrib-net-kbproxy 2064/tcp # keyblock proxy port for distributed.net-clients
- knetd             2053/tcp   #
- dlsrpn            2065/tcp   # Data Link Switch Read Port Number
- dlsrpn            2065/udp   # Data Link Switch Read Port Number
-@@ -1809,7 +1809,7 @@
- cfs               3049/tcp   # cryptographic file system (nfs) (proposed)
- cfs               3049/udp   # cryptographic file system (nfs)
- PowerChute        3052/tcp
--distrib-net-proxy 3064/tcp   # Stupid closed source distributed.net project proxy port
-+distrib-net-proxy 3064/tcp   # distributed.net project proxy port
- sj3               3086/tcp   # SJ3 (kanji input)
- squid-http        3128/tcp   #
- squid-ipc         3130/udp   #
+--- nbase/configure.orig	2003-03-22 04:36:20.000000000 +0100
++++ nbase/configure	2003-03-22 04:39:41.000000000 +0100
+@@ -10,6 +10,8 @@
+ ## M4sh Initialization.  ##
+ ## --------------------- ##
+ 
++LIBS=
++
+ # Be Bourne compatible
+ if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
+   emulate sh

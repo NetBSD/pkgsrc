@@ -1,20 +1,13 @@
-$NetBSD: patch-af,v 1.2 2002/08/03 12:24:01 hubertf Exp $
+$NetBSD: patch-af,v 1.3 2003/03/22 04:07:11 salo Exp $
 
---- config.sub.orig	Mon Jul  1 07:56:09 2002
-+++ config.sub
-@@ -236,6 +236,7 @@
- 	| i370 | i860 | i960 | ia64 \
- 	| m32r | m68000 | m68k | m88k | mcore \
- 	| mips | mips16 | mips64 | mips64el | mips64orion | mips64orionel \
-+	| mipseb | mipsel \
- 	| mips64vr4100 | mips64vr4100el | mips64vr4300 \
- 	| mips64vr4300el | mips64vr5000 | mips64vr5000el \
- 	| mipsbe | mipseb | mipsel | mipsle | mipstx39 | mipstx39el \
-@@ -296,6 +297,7 @@
- 	| m68000-* | m680[012346]0-* | m68360-* | m683?2-* | m68k-* \
- 	| m88110-* | m88k-* | mcore-* \
- 	| mips-* | mips16-* | mips64-* | mips64el-* | mips64orion-* \
-+	| mipseb | mipsel \
- 	| mips64orionel-* | mips64vr4100-* | mips64vr4100el-* \
- 	| mips64vr4300-* | mips64vr4300el-* | mipsbe-* | mipseb-* \
- 	| mipsle-* | mipsel-* | mipstx39-* | mipstx39el-* \
+--- nmapfe/configure.orig	2002-08-28 02:11:16.000000000 +0200
++++ nmapfe/configure	2003-03-22 04:52:48.000000000 +0100
+@@ -10,6 +10,8 @@
+ ## M4sh Initialization.  ##
+ ## --------------------- ##
+ 
++LIBS=
++
+ # Be Bourne compatible
+ if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
+   emulate sh
