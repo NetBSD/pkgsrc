@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 15:11:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/14 14:47:54 agc Exp $
 #
 
 DISTNAME=	xtux-arena-src-nov-15
@@ -18,10 +18,8 @@ WRKSRC=		${WRKDIR}/xtux
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xtux
-	cd ${WRKSRC} ; \
-	${GTAR} cf - data | ( cd ${PREFIX}/share/xtux ; ${GTAR} vxf - )
-	cd ${WRKSRC} ; \
-	${GTAR} cf - doc | ( cd ${PREFIX}/share/xtux ; ${GTAR} vxf - )
+	cd ${WRKSRC} && ${PAX} -rw data ${PREFIX}/share/xtux
+	cd ${WRKSRC} && ${PAX} -rw doc ${PREFIX}/share/xtux
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/xtux
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG ${PREFIX}/share/xtux
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/xtux
