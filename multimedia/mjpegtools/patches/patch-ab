@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/01/26 12:44:06 jmmv Exp $
+
+--- lavtools/Makefile.in.orig	2004-01-16 12:22:10.000000000 +0100
++++ lavtools/Makefile.in
+@@ -340,7 +340,7 @@ multiblend_flt_LDADD = $(top_builddir)/u
+ lavplay_SOURCES = lavplay.c
+ lavplay_LDADD = $(top_builddir)/utils/libmjpegutils.a \
+ 	liblavplay.la liblavjpeg.la liblavfile.la \
+-	@LIBGETOPT_LIB@ ${PTHREAD_LIBS} ${SDL_LIBS} $(LAVPLAY_X_LIBS)
++	@LIBGETOPT_LIB@ ${PTHREAD_LIBS} ${SDL_LIBS} $(LAVPLAY_X_LIBS) $(LIBOSSAUDIO)
+ 
+ 
+ lavrec_SOURCES = lavrec.c
