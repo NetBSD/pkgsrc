@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8541 2004/12/31 13:21:33 kristerw Exp $
+$NetBSD: CHANGES,v 1.8542 2004/12/31 13:29:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6721,3 +6721,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated icewmconf to 2.1.0nb1 [minskim 2004-12-31]
 	Updated eukleides to 1.0.1 [kristerw 2004-12-31]
 	Updated xeukleides to 1.0.0 [kristerw 2004-12-31]
+	Updated autoconf to 2.59nb1 [minskim 2004-12-31]
+	Updated autoconf213 to 2.13nb1 [minskim 2004-12-31]
+	Updated a2ps to 4.13.0.2nb6 [minskim 2004-12-31]
+	Updated mysql-client to 4.0.22nb4 [minskim 2004-12-31]
