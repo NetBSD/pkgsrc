@@ -1,0 +1,3 @@
+$NetBSD: PLIST.powerpc,v 1.1 2004/12/01 15:08:35 ben Exp $
+lib/vlc/libi420_yuy2_altivec.a
+lib/vlc/libmemcpyaltivec.a
