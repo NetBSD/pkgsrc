@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.41 2002/03/05 13:32:42 seb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.42 2002/03/06 17:05:30 seb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -200,6 +200,9 @@ PATCH_FUZZ_FACTOR?= -F0
 #ACCEPTABLE_LICENSES+=	mosaic-license
 # Enable it if you accept the license terms for mosaic
 # and would like to build mosaic.  see pkgsrc/www/Mosaic.
+#ACCEPTABLE_LICENSES+=	ms-ttf-license
+# Enable it if you accept the license terms for Microsoft TrueType fonts
+# and would like to install them. see pkgsrc/fonts/ms-ttf.
 #ACCEPTABLE_LICENSES+=	mush-license
 # Enable it if you accept the license terms for mush
 # and would like to build mush.  see pkgsrc/mail/mush.
