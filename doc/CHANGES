@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3317 2003/09/10 21:24:16 manu Exp $
+$NetBSD: CHANGES,v 1.3318 2003/09/10 21:52:21 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3615,4 +3615,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added ruby-DBD-mysql-0.0.21 [taca 2003-09-10]
 	Updated xpkgwedge to 1.8 [gavan 2003-09-10]
 	Updated pkg_chk to 1.40 [jmmv 2003-09-10]
-	Added fondu-030428 [manu 2003-01-10]	
+	Added fondu-030428 [manu 2003-09-10]	
+	Added resize_image-0.6 [itojun 2003-09-10]	
