@@ -1,8 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
-
---- gmetad/conf.c.orig	2005-02-04 17:33:45.000000000 -0500
-+++ gmetad/conf.c	2005-02-04 17:35:56.000000000 -0500
-@@ -252,7 +252,7 @@
+--- gmetad/conf.c.orig	2005-04-03 13:24:33.000000000 -0400
++++ gmetad/conf.c	2005-04-03 13:24:57.000000000 -0400
+@@ -264,7 +264,7 @@
     config->debug_level = 0;
     config->should_setuid = 1;
     config->setuid_username = "nobody";
@@ -10,4 +8,4 @@ $NetBSD: patch-ah,v 1.1.1.1 2005/02/07 14:33:21 jschauma Exp $
 +   config->rrd_rootdir = "/var/db/ganglia/rrds";
     config->scalable_mode = 1;
     config->all_trusted = 0;
- }
+    config->num_RRAs = 5;
