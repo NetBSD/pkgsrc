@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1 2000/11/27 14:26:18 rh Exp $
+
+--- gconf/gconf-glib.c.orig	Tue Nov  7 17:37:02 2000
++++ gconf/gconf-glib.c
+@@ -9966,7 +9966,9 @@
+ #endif
+ #include <string.h>
+ 
++#ifdef HAVE_ICONV
+ #include <iconv.h>
++#endif
+ #include <errno.h>
+ 
+ #include "glib.h"
+@@ -10482,6 +10484,7 @@
+   return retval;
+ }
+ 
++#ifdef HAVE_ICONV
+ /* iconv_open() etc. are not thread safe */
+ G_LOCK_DEFINE_STATIC (iconv_lock);
+ 
+@@ -10580,7 +10583,7 @@
+   else
+     return dest;
+ }
+-
++#endif	/* HAVE_ICONV */
+ 
+ /*************************************************************/
+ 
