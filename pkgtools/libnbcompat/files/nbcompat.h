@@ -1,3 +1,6 @@
+#ifndef _NBCOMPAT_H
+#define _NBCOMPAT_H
+
 #include "config.h"
 
 #include <nbtypes.h>
@@ -336,3 +339,5 @@ char   *strsep(char **stringp, const char *delim);
 #define SECSPERMIN     60
 #define	SECSPERDAY	86400
 #define	TM_YEAR_BASE	1900
+
+#endif /* _NBCOMPAT_H */
