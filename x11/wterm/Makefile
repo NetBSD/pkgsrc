@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/09/21 18:18:50 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/10/25 15:09:46 hubertf Exp $
 #
 
 DISTNAME=	wterm-6.2.6
@@ -16,7 +16,13 @@ USE_X11=	YES
 GNU_CONFIGURE=	YES
 
 CFLAGS+=	-I${PREFIX}/include
+PLIST_SUBST+=	PREFIX=${PREFIX} \
+		X11BASE=${X11BASE}
 
 CONFIGURE_ARGS+= --enable-utmp --enable-wtmp --enable-xpm-background --enable-menubar --enable-graphics --enable-next-scroll --enable-half-shadow
+
+post-install:
+		${INSTALL_DATA} ${WRKSRC}/wterm.tiff ${X11BASE}/share/WindowMaker/Icons
+		${INSTALL_DATA} ${WRKSRC}/wtermthai.tiff ${X11BASE}/share/WindowMaker/Icons
 
 .include "../../mk/bsd.pkg.mk"
