@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/04 22:03:18 proff Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/05 15:22:56 rh Exp $
 
 DISTNAME=	festvox-rab16-1.3.1
 WRKSRC=		${WRKDIR}/festival
@@ -9,9 +9,9 @@ DISTFILES=	festvox_rablpc16k.tar.gz
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 
-DEPENDS+=	festival-1.3.1:../festival \
-		festlex-poslex-1.3.1:../festlex-poslex \
-		festlex-oald-1.3.1:../festival
+DEPENDS+=	festival-1.3.1:../festival
+DEPENDS+=	festlex-poslex-1.3.1:../festlex-poslex
+DEPENDS+=	festlex-oald-1.3.1:../festlex-oald
 
 CONFLICTS=	festvox-rab8-*
 
