@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.7 2004/01/03 18:49:43 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/02/11 22:57:16 xtraeme Exp $
 
 .if !defined(IMLIB2_BUILDLINK2_MK)
 IMLIB2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		imlib2
-BUILDLINK_DEPENDS.imlib2?=	imlib2>=1.1.0nb1
+BUILDLINK_DEPENDS.imlib2?=	imlib2>=1.1.0nb2
 BUILDLINK_PKGSRCDIR.imlib2?=	../../graphics/imlib2
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.imlib2=imlib2
