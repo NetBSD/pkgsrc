@@ -1,0 +1,400 @@
+<!-- $NetBSD: components.xml,v 1.1.1.1 2004/10/21 14:27:38 grant Exp $ -->
+
+<chapter id="components"> <?dbhtml filename="components.html"?>
+  <title>Package components - files, directories and contents</title>
+  
+  <para>  Whenever you're preparing a package, there are a number of
+    files involved which are described in the following
+    sections. </para> 
+
+  <sect1 id="components.Makefile">
+    <title><filename>Makefile</filename></title>
+
+    <para>Building, installation and creation of a binary package are all
+      controlled by the package's <filename>Makefile</filename>.</para>
+
+    <para>There is a <filename>Makefile</filename> for each package.
+      This file includes the standard
+      <filename>bsd.pkg.mk</filename> file (referenced as
+      <filename>../../mk/bsd.pkg.mk</filename>), which sets all the
+      definitions and actions necessary for the package to compile and
+      install itself. The mandatory variables are the
+      <varname>DISTNAME</varname> which specifies the base name
+      of the distribution file to be downloaded from the site on the
+      Internet, <varname>MASTER_SITES</varname> which specifies that site,
+      <varname>CATEGORIES</varname> which denotes the
+      categories into which the package falls, <varname>PKGNAME</varname>
+      which is the name of the package, the <varname>MAINTAINER</varname>'s
+      name, and the <varname>COMMENT</varname> variable, which should
+      contain a one-line description of the package (the package name
+      should not appear, it will be added automatically). The maintainer
+      variable is there so that anyone who quibbles with the (always
+      completely correct) decisions taken by the guy who maintains the
+      package can complain vigorously, or send chocolate as a sign of
+      appreciation.</para>
+
+    <para>The <varname>MASTER_SITES</varname> may be set to one of the
+      predefined sites:</para>
+
+    <programlisting>
+        ${MASTER_SITE_APACHE}
+        ${MASTER_SITE_DEBIAN}
+        ${MASTER_SITE_GNOME}
+        ${MASTER_SITE_GNU}
+        ${MASTER_SITE_GNUSTEP}
+        ${MASTER_SITE_MOZILLA}
+        ${MASTER_SITE_PERL_CPAN}
+        ${MASTER_SITE_SOURCEFORGE}
+        ${MASTER_SITE_SUNSITE}
+        ${MASTER_SITE_R_CRAN}
+        ${MASTER_SITE_SUSE}
+        ${MASTER_SITE_TEX_CTAN}
+        ${MASTER_SITE_XCONTRIB}
+        ${MASTER_SITE_XEMACS} </programlisting>
+
+    <para>If one of these predefined sites is chosen, you may require the
+      ability to specify a subdirectory of that site.  Since these macros
+      may expand to more than one actual site, you
+      <emphasis>must</emphasis> use the following construct to specify a
+      subdirectory:</para>
+
+    <programlisting>
+        ${MASTER_SITE_GNU:=subdirectory/name/}
+        ${MASTER_SITE_SOURCEFORGE:=project_name/} </programlisting>
+
+    <para>Note the trailing slash after the subdirectory name.</para>
+
+    <note>
+      <para><varname>MASTER_SITE_SUBDIR</varname> has been deprecated and
+        <emphasis>should no longer be used</emphasis>.</para>
+    </note>
+
+    <para>If the package has multiple <varname>DISTFILES</varname> or multiple
+      <varname>PATCHFILES</varname> from different
+      sites, set <varname>SITES_foo</varname> to a list of URI's where file
+      <quote>foo</quote> may be found. <quote>foo</quote>
+      includes the suffix, e.g.</para>
+
+<programlisting>DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=     foo-file.tar.gz
+SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
+        http://www.somewhereelse.com/mirror/somehow/</programlisting>
+
+    <para>Note that the normal default setting of <varname>DISTFILES</varname>
+      must be made explicit if you want to add to it (rather than replace
+      it), as you usually would.</para>
+
+    <para>Currently the following values are available for
+      <varname>CATEGORIES</varname>. If more than
+      one is used, they need to be separated by spaces:</para>
+
+    <programlisting>
+archivers     cross         geography     meta-pkgs     security
+audio         databases     graphics      misc          shells
+benchmarks    devel         ham           multimedia    sysutils
+biology       editors       inputmethod   net           textproc
+cad           emulators     lang          news          time
+chat          finance       mail          parallel      wm
+comms         fonts         math          pkgtools      www
+converters    games         mbone         print         x11</programlisting>
+
+    <para> Please pay attention to the following gotchas: </para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Add <varname>MANCOMPRESSED</varname> if manpages are installed in
+          compressed form by the package; see comment in
+          <filename>bsd.pkg.mk</filename>.</para>
+      </listitem>
+
+      <listitem>
+        <para>Replace <filename>/usr/local</filename> with
+          <quote>${PREFIX}</quote> in all files (see patches, below).</para>
+      </listitem>
+
+      <listitem>
+        <para>If the package installs any info files, see
+          <xref linkend="faq.info-files"/>.</para>
+      </listitem>
+
+      <listitem>
+        <para>Set <varname>MAINTAINER</varname> to be yourself. 
+          If you really can't maintain the package for future updates,
+          set it to <email>tech-pkg@NetBSD.org</email>.</para>
+      </listitem>
+
+      <listitem>
+        <para>If a home page for the software in question exists, 
+          add the variable <varname>HOMEPAGE</varname> right after
+          <varname>MAINTAINER</varname>. The value of this
+          variable should be the URL for the home page.</para>
+      </listitem>
+
+      <listitem>
+        <para>Be sure to set the <varname>COMMENT</varname> variable to a short
+          description of the package, not containing the pkg's name.</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1 id="components.distinfo">
+    <title><filename>distinfo</filename></title>
+
+    <para>Most important, the mandatory message digest, or checksum, of all the
+      distfiles needed for the package to compile, confirming they match the
+      original file distributed by the author.  This ensures that the
+      distfile retrieved from the Internet has not been corrupted during
+      transfer or altered by a malign force to introduce a security hole.
+      It is generated using the <command>make makesum</command> command.
+      The digest algorithm used was, at one stage, md5, but that was felt
+      lacking compared to sha1, and so sha1 is now the default algorithm.
+      The distfile size is also generated and stored in new distinfo files.
+      The <pkg>pkgtools/digest</pkg> utility calculates all of the digests
+      in the distinfo file, and it provides various different algorithms.
+      At the current time, the algorithms provided are:
+      <emphasis>md5</emphasis>, <emphasis>rmd160</emphasis>,
+      <emphasis>sha1</emphasis>, <emphasis>sha256</emphasis>,
+      <emphasis>sha384</emphasis> and <emphasis>sha512</emphasis>.</para>
+
+    <para>Some packages have different sets of distfiles on a per architecture
+      basis, for example <pkg>www/navigator</pkg>). These are kept in the
+      same distinfo file and care should be taken when upgrading such a
+      package to ensure distfile information is not lost.</para>
+
+    <para>The message digest/checksum for all the official patches found in the
+      <filename>patches/</filename> directory (see
+      <xref linkend="components.patches"/>) for the package is also stored in
+      the <filename>distinfo</filename> file. This is a message
+      digest/checksum of all lines in the patch file except the &os; RCS Id.
+      This file is generated by invoking <command>make
+      makepatchsum</command> (or <command>make mps</command> if you're
+      in a hurry).</para>
+  </sect1>
+
+  <sect1 id="components.patches">
+    <title>patches/*</title>
+
+    <para>This directory contains files that are used by the
+      &man.patch.1; command to
+      modify the sources as distributed in the distribution file into a form
+      that will compile and run perfectly on &os;. The files are applied
+      successively in alphabetic order (as returned by a shell
+      <quote>patches/patch-*</quote> glob expansion), so
+      <filename>patch-aa</filename> is applied before
+      <filename>patch-ab</filename>, etc.</para>
+
+    <para> Patch files which are optional and will depend on local
+      site configuration can be included with names matching the
+      pattern <filename>patches/patch-optional-*</filename>. Their
+      suffixes should match the configuration options.  The selected
+      optional patch file names should be assigned to the variable
+      <varname>OPTIONAL_PATCHFILES</varname>.  They will not be
+      applied by default. 
+      </para>
+
+    <para> For example if a package data file needs patching to
+      indicate the default local printer paper size as specified in
+      the <varname>$PAPERSIZE</varname> file you can include patches
+      for all the possible paper sizes other than the one the package
+      comes configured for by default.  In this case you might have a
+      patch called
+      "<filename>patch-optional-Letter-papersize</filename>" and/or
+      another patch called
+      "<filename>patch-optional-A4-papersize</filename>".  In your
+      <filename>Makefile</filename> you would select between them with
+      the following construct:
+      </para>
+
+    <programlisting>            
+   PATCHDIR=    ${.CURDIR}/patches
+   .if exists(${PATCHDIR}/patch-optional-${PAPERSIZE}-papersize)
+        OPTIONAL_PATCHFILES+= ${PATCHDIR}/patch-optional-${PAPERSIZE}-papersize
+   .endif </programlisting>
+
+    <para> Note that you have to define the value of
+      <varname>PATCHDIR</varname> in order to use it in a
+      <quote><command>.if</command></quote> statement like this as
+      otherwise it's not defined until too late during the processing
+      of the Makefile.  You should use a
+      <quote><command>.if</command></quote> statement in order to
+      avoid problems should the configuration item
+      (<varname>$PAPERSIZE</varname> in this example) be set to an
+      unexpected value.
+      </para>
+      
+    <para>The <filename>patch-*</filename> files should be in
+      <command>diff -bu</command> format, and apply without a fuzz to avoid
+      problems. (To force patches to apply
+      with fuzz you can set <varname>PATCH_FUZZ_FACTOR=-F2</varname>).
+      Furthermore, do not put changes for more than one file into a single
+      patch-file, as this will make future modifications more difficult.</para>
+
+    <para>Similar, a file should be patched at most once, not several times by
+      several different patches. If a file needs several patches, they should
+      be combined into one file.</para>
+
+    <para>One important thing to mention is to pay attention that no RCS IDs
+      get stored in the patch files, as these will cause problems when
+      later checked into the &os; CVS tree. Use the
+      <command>pkgdiff</command> from the 
+      <pkg>pkgtools/pkgdiff</pkg> package to avoid these problems.</para>
+
+    <para>For even more automation, we recommend using <command>mkpatches</command> from the same
+      package to make a whole set of patches. You just have to backup files
+      before you edit them to <filename>filename.orig</filename>, e.g. with
+      <command>cp -p filename filename.orig</command> or, easier, by using
+      <command>pkgvi</command> again from the same package. If you upgrade a package
+      this way, you can easily compare the new set of patches with the
+      previously existing one with <command>patchdiff</command>.</para>
+
+    <para>When you have finished a package, remember to generate the checksums
+      for the patch files by using the <command>make makepatchsum</command>
+      command, see <xref linkend="components.distinfo"/>.</para>
+
+    <para>Patch files that are distributed by the author or other
+      maintainers can be listed in
+      <varname>$PATCHFILES</varname>. </para> 
+    
+    <para>If it is desired to store any patches that should not be committed into
+      pkgsrc, they can be kept outside the pkgsrc tree in the
+      <filename>$LOCALPATCHES</filename>
+      directory. The directory tree there is expected to have the same
+      <quote>category/package</quote> structure as pkgsrc, and patches are
+      expected to be stored inside these dirs (also known as
+      <filename>$LOCALPATCHES/$PKGPATH</filename>). For
+      example if you want to keep a private patch for
+      <filename>pkgsrc/graphics/png</filename>, keep
+      it in <filename>$LOCALPATCHES/graphics/png/mypatch</filename>. All
+      files in the named directory are expected to be patch files, and
+      <emphasis>they are applied after pkgsrc patches are applied</emphasis>.</para>
+  </sect1>
+
+  <sect1>
+    <title>Other mandatory files</title>
+
+    <variablelist>
+      <varlistentry>
+        <term><filename>DESCR</filename></term>
+
+        <listitem>
+          <para>A multi-line description of the piece of software.  This should include
+            any credits where they are due.  Please bear in mind that others do not
+            share your sense of humour (or spelling idiosyncrasies), and that others
+            will read everything that you write here.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><filename>PLIST</filename></term>
+
+        <listitem>
+          <para>
+            This file governs the files that are installed on your system: all the
+            binaries, manual pages, etc. There are other directives which may be
+            entered in this file, to control the creation and deletion of
+            directories, and the location of inserted files.
+            See <xref linkend="plist"/> for more information. </para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect1>
+
+  <sect1 id="components.optional">
+    <title>Optional files</title>
+
+    <variablelist>
+      <varlistentry>
+        <term><filename>INSTALL</filename></term>
+
+        <listitem>
+          <para>This shell script is invoked twice by &man.pkg.add.1;.
+            First time after package
+            extraction and before files are moved in place, the second time after
+            the files to install are moved in place. This can be used to do any
+            custom procedures not possible with @exec commands in
+            <filename>PLIST</filename>. See
+            &man.pkg.add.1; and &man.pkg.create.1; for more information.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><filename>DEINSTALL</filename></term>
+
+        <listitem>
+          <para>This script is executed before and after any files are removed.  It is
+            this script's responsibility to clean up any additional messy details
+            around the package's installation, since all pkg_delete knows is how to
+            delete the files created in the original distribution.
+            See &man.pkg.delete.1;
+            and &man.pkg.create.1; for more information.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><filename>MESSAGE</filename></term>
+
+        <listitem>
+          <para>Display this file after installation of the package.
+            Useful for things like legal notices on almost-free
+            software and hints for updating config files after
+            installing modules for apache, PHP etc. 
+            Please note that you can modify variables in it easily by using
+            <varname>MESSAGE_SUBST</varname> in the package's
+            <filename>Makefile</filename>:</para>
+
+          <programlisting>MESSAGE_SUBST+=  SOMEVAR="somevalue"</programlisting>
+
+          <para>replaces "${SOMEVAR}" with <quote>somevalue</quote> in
+            <filename>MESSAGE</filename>.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </sect1>
+
+  <sect1>
+    <title><filename>work*</filename></title>
+
+    <para>When you type <command>make</command> the distribution files are
+      unpacked into this directory. It can be removed by running
+      <command>make clean</command>. Besides the sources, this
+      directory is also used to keep various timestamp files.</para>
+      
+    <para> If a package doesn't create a subdirectory for itself (like
+      GNU software   does, for instance), but extracts itself in the
+      current directory,   you should set <varname>WRKSRC</varname>
+      accordingly, e.g.   <pkg>editors/sam</pkg> again, but the quick
+      answer is: </para>
+
+    <programlisting>WRKSRC=		${WRKDIR}</programlisting>
+
+    <para> Please note that the old <varname>NO_WRKSUBDIR</varname>
+      has been deprecated and should not be used. Also, if your
+      package doesn't create a subdir with the name of
+      <varname>DISTNAME</varname> but some different name, set
+      <varname>WRKSRC</varname> to point to the proper name in
+      <filename>${WRKDIR}</filename>. See <pkg>lang/tcl</pkg> and
+      <pkg>x11/tk</pkg> for examples, and here is another one: </para>
+      
+    <programlisting>WRKSRC=         ${WRKDIR}/${DISTNAME}/unix</programlisting>
+
+    <para> The name of the working directory created by pkgsrc is
+      <filename>work</filename> by default. If the same pkgsrc tree
+      should be used on several different platforms, the variable
+      <varname>OBJMACHINE</varname> can be set in /etc/mk.conf to
+      attach the platform to the directory name,
+      e.g. <filename>work.i386</filename> or
+      <filename>work.sparc</filename>. </para>
+  </sect1>
+
+  <sect1>
+    <title><filename>files/*</filename></title>
+
+    <para>If you have any files that you wish to be placed in the package prior
+      to configuration or building, you could place these files here and use
+      a <quote>${CP}</quote> command in the
+      <quote>pre-configure</quote> target to achieve 
+      this. Alternatively, you could simply diff the file against
+      <filename>/dev/null</filename> and use the patch mechanism to manage
+      the creation of this file.</para>
+  </sect1>
+</chapter>

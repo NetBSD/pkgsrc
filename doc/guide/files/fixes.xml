@@ -1,0 +1,1425 @@
+<!-- $NetBSD: fixes.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+
+<chapter id="fixes"> <?dbhtml filename="fixes.html"?>
+  <title>Notes on fixes for packages</title>
+
+  <sect1>
+    <title>General operation</title>
+
+    <sect2>
+      <title>How to pull in variables from /etc/mk.conf</title>
+    
+      <para> The problem with package-defined variables that can be
+        overridden via <varname>MAKECONF</varname> or
+        <filename>/etc/mk.conf</filename> is that &man.make.1; expands a
+        variable as it is used, but evaluates preprocessor like
+        statements (.if, .ifdef and .ifndef) as they are read.  So, to
+        use any variable (which may be set in
+        <filename>/etc/mk.conf</filename>) in one of the .if*
+        statements, the file <filename>/etc/mk.conf</filename> must be
+        included before that .if* statement.  </para>
+    
+      <para> Rather than have a number of ad-hoc ways of including
+        <filename>/etc/mk.conf</filename>, should it exist, or
+        <varname>MAKECONF</varname>, should it exist, include the
+        <filename>pkgsrc/mk/bsd.prefs.mk</filename> file in the package
+        Makefile before any preprocessor-like .if, .ifdef, or .ifndef
+        statements: </para>
+    
+      <programlisting>.include "../../mk/bsd.prefs.mk"
+    
+    .if defined(USE_MENUS)
+      ...
+    .endif</programlisting>
+    
+      <para>  If you wish to set the <varname>CFLAGS</varname> variable
+        in <filename>/etc/mk.conf</filename> please make sure to use: 
+    
+        <programlisting>CFLAGS+=  -your -flags</programlisting>
+    
+        Using <varname>CFLAGS=</varname> (i.e. without the
+        <quote>+</quote>) may lead to problems with packages that need
+        to add their own flags.  Also, you may want to take a look at
+        the <pkg>devel/cpuflags</pkg> package if you're interested in
+        optimization for the current CPU.  </para>
+    </sect2>
+
+
+    <sect2>
+      <title>Restricted packages</title>
+    
+      <para> Some licenses restrict how software may be re-distributed.
+        In order to satisfy these restrictions, the package system
+        defines five make variables that can be set to note these
+        restrictions: </para>
+    
+      <itemizedlist>
+        <listitem>
+          <para><varname>RESTRICTED</varname></para>
+          
+          <para> This variable should be set whenever a restriction
+            exists (regardless of its kind).  Set this variable to a
+            string containing the reason for the restriction.  </para>
+        </listitem>
+    
+        <listitem> 
+          <para><varname>NO_BIN_ON_CDROM</varname></para>
+          
+          <para>     Binaries may not be placed on CD-ROM.  Set this
+            variable to     <varname>${RESTRICTED}</varname> whenever a
+            binary package may not     be included on a CD-ROM.  </para> 
+        </listitem>
+    
+        <listitem>
+          <para><varname>NO_BIN_ON_FTP</varname></para>
+          
+          <para>     Binaries may not be placed on an FTP server.  Set
+            this     variable to <varname>${RESTRICTED}</varname>
+            whenever a binary package     may not not be made available
+            on the Internet.  </para> 
+        </listitem>
+    
+        <listitem>
+          <para><varname>NO_SRC_ON_CDROM</varname></para>
+          
+          <para> Distfiles may not be placed on CD-ROM.  Set this
+            variable to <varname>${RESTRICTED}</varname> if
+            re-distribution of the source code or other distfile(s) is
+            not allowed on CD-ROMs.  </para>
+        </listitem>
+    
+        <listitem>
+          <para><varname>NO_SRC_ON_FTP</varname></para>
+          
+          <para> Distfiles may not be placed on FTP.  Set this variable
+            to <varname>${RESTRICTED}</varname> if re-distribution of
+            the source code or other distfile(s) via the Internet is not
+            allowed.  </para>
+        </listitem>
+      </itemizedlist>
+    
+      <para> Please note that the use of <varname>NO_PACKAGE</varname>,
+        <varname>IGNORE</varname>, <varname>NO_CDROM</varname>, or other
+        generic make variables to denote restrictions is deprecated,
+        because they unconditionally prevent users from generating
+        binary packages!  </para>
+    </sect2>
+
+    
+    <sect2 id="dependencies">
+      <title>Handling dependencies</title>
+    
+      <para> Your package may depend on some other package being present
+        - and there are various ways of expressing this
+        dependency. pkgsrc supports the <varname>BUILD_DEPENDS</varname>
+        and <varname>DEPENDS</varname> definitions, as well as
+        dependencies via <filename>buildlink3.mk</filename>, which is
+        the preferred way to handle dependencies, and which uses the
+        variables named above. See <xref linkend="buildlink"/> for more
+        information. </para> 
+    
+      <para> The basic difference between the two variables is as
+        follows: The <varname>DEPENDS</varname> definition registers
+        that pre-requisite in the binary package so it will be pulled in
+        when the binary package is later installed, whilst the
+        <varname>BUILD_DEPENDS</varname> definition does not, marking a
+        dependency that is only needed for building the package.
+        </para>
+    
+      <para> This means that if you only need a package present whilst
+        you are building, it should be noted as a
+        <varname>BUILD_DEPENDS</varname>.  </para>
+    
+      <para> The format for a <varname>BUILD_DEPENDS</varname> and a
+        <varname>DEPENDS</varname> definition is: </para>
+    
+      <programlisting>&lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;</programlisting>
+    
+      <para> Please note that the <quote>pre-req-package-name</quote>
+        may include any of the wildcard version numbers recognised by
+        &man.pkg.info.1;.  </para>
+    
+      <orderedlist>
+        <listitem>
+          <para> If your package needs another package's binaries or
+            libraries to build or run, and if that package has a
+            <filename>buildlink3.mk</filename> file available, use it:
+            </para>
+
+            <programlisting>
+    .include "../../graphics/jpeg/buildlink3.mk"
+    </programlisting>
+        </listitem>
+    
+        <listitem>
+          <para> If your package needs to use another package to build
+            itself and there is no <filename>buildlink3.mk</filename>
+            file available, use the <varname>BUILD_DEPENDS</varname>
+            definition: </para>
+    
+          <programlisting>BUILD_DEPENDS+=  autoconf-2.13:../../devel/autoconf</programlisting>
+        </listitem>
+    
+        <listitem>
+          <para> If your package needs a library with which to link and
+            again there is no <filename>buildlink3.mk</filename> file
+            available, this is specified using the
+            <varname>DEPENDS</varname> definition.  An example of this
+            is the <pkg>print/lyx</pkg> package, which uses the xpm
+            library, version 3.4j to build: </para>
+    
+          <programlisting>DEPENDS+=       xpm-3.4j:../../graphics/xpm</programlisting>
+    
+          <para> You can also use wildcards in package dependences:
+            </para>
+    
+          <programlisting>DEPENDS+=       xpm-[0-9]*:../../graphics/xpm</programlisting>
+    
+          <para> Note that such wildcard dependencies are retained when
+            creating binary packages.  The dependency is checked when
+            installing the binary package and any package which matches
+            the pattern will be used.  Wildcard dependencies should be
+            used with care.  </para>
+    
+          <para> The <quote>-[0-9]*</quote> should be used instead of
+            <quote>-*</quote> to avoid potentially ambiguous matches
+            such as <quote>tk-postgresql</quote> matching a
+            <quote>tk-*</quote> <varname>DEPENDS</varname>.  </para>
+    
+          <para>Wildcards can also be used to specify that a package
+            will only  build against a certain minimum version of a
+            pre-requisite: </para>
+              
+          <programlisting>DEPENDS+=       tiff>=3.5.4:../../graphics/tiff</programlisting>
+    
+          <para> This means that the package will build against version
+            3.5.4 of the tiff library or newer.  Such a dependency may
+            be warranted if, for example, the API of the library has
+            changed with version 3.5.4 and a package would not compile
+            against an earlier version of tiff.  </para>
+    
+          <para>  Please note that such dependencies should only be
+            updated if a package requires  a newer pre-requisite, but
+            not to denote recommendations such as security  updates or
+            ABI changes that do not prevent a package from building
+            correctly.  Such recommendations can be expressed using
+            <varname>RECOMMENDED</varname>: </para>
+    
+          <programlisting>RECOMMENDED+=   tiff>=3.6.1:../../graphics/tiff</programlisting>
+    
+          <para> In addition to the above <varname>DEPENDS</varname>
+            line, this denotes that while a package will build against
+            tiff&gt;=3.5.4, at least version 3.6.1 is recommended.
+            <varname>RECOMMENDED</varname> entries will be turned into
+            dependencies unless explicitly ignored (in which case a
+            warning will be printed).  Packages that are built with
+            recommendations ignored may not be uploaded to
+            ftp.NetBSD.org by developers and should not be used across
+            different systems that may have different versions of binary
+            packages installed.  </para>
+    
+          <para> For security fixes, please update the package
+            vulnerabilities file as well as setting
+            <varname>RECOMMENDED</varname>, see <xref
+            linkend="security-handling"/> for more
+            information. </para> 
+	</listitem>
+    
+        <listitem>
+          <para> If your package needs some executable to be able to run
+            correctly and if there's agail no
+            <filename>buildlink3.mk</filename> file, this is specified
+            using the <varname>DEPENDS</varname> variable. The
+            <pkg>print/lyx</pkg> package needs to be able to execute the
+            latex binary from the teTeX package when it runs, and that
+            is specified: </para>
+    
+          <programlisting>DEPENDS+=        teTeX-[0-9]*:../../print/teTeX</programlisting>
+    
+          <para>  The comment about wildcard dependencies from previous
+            paragraph  applies here, too.  </para> 
+        </listitem>
+      </orderedlist>
+    
+      <para> If your package needs files from another package to build,
+        see the first part of the <quote>do-configure</quote> target
+        <pkg>print/ghostscript5</pkg> package (it relies on the jpeg
+        sources being present in source form during the build): </para>
+    
+      <programlisting>if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
+          cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} extract;              \
+    fi</programlisting>
+    
+      <para> If you build any other packages that way, please make sure
+        the working files are deleted too when this package's working
+        files are cleaned up.  The easiest way to do so is by adding a
+        pre-clean target: </para>
+    
+      <programlisting>pre-clean:
+          cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} clean</programlisting>
+    
+      <para> Please also note the <varname>BUILD_USES_MSGFMT</varname>
+        and <varname>BUILD_USES_GETTEXT_M4</varname> definitions, which
+        are provided as convenience definitions.  The former works out
+        whether msgfmt(1) is part of the base system, and, if it isn't,
+        installs the <pkg>devel/gettext</pkg> package.  The latter adds
+        a build dependency on either an installed version of an older
+        gettext package, or if it isn't, installs the
+        <pkg>devel/gettext-m4</pkg> package.  </para>
+    </sect2>
+
+
+    <sect2>
+      <title>Handling conflicts with other packages</title>
+    
+      <para> Your package may conflict with other packages a user might
+        already have installed on his system, e.g. if your package
+        installs the same set of files like another package in our
+        pkgsrc tree.  </para>
+    
+      <para> In this case you can set <varname>CONFLICTS</varname> to a
+        space separated list of packages (including version string) your
+        package conflicts with.  </para>
+    
+      <para> For example <pkg>x11/Xaw3d</pkg> and <pkg>x11/Xaw-Xpm</pkg>
+        install provide the same shared library, thus you set in
+        <filename>pkgsrc/x11/Xaw3d/Makefile</filename>: </para>
+    
+      <programlisting>CONFLICTS=      Xaw-Xpm-[0-9]*</programlisting>
+    
+      <para> and in <filename>pkgsrc/x11/Xaw-Xpm/Makefile</filename>:
+        </para>
+    
+      <programlisting>CONFLICTS=      Xaw3d-[0-9]*</programlisting>
+    
+      <para>  Packages will automatically conflict with other packages
+        with the name prefix  and a different version
+        string. <quote>Xaw3d-1.5</quote> e.g. will automatically
+        conflict  with the older version <quote>Xaw3d-1.3</quote>.
+        </para> 
+    </sect2>
+
+
+    <sect2>
+      <title>Packages that cannot or should not be built</title>
+    
+      <para>
+        There are several reasons why a package might be instructed to not
+        build under certain circumstances. If the package builds and runs
+        on most platforms, the exceptions should be noted with
+        <varname>NOT_FOR_PLATFORM</varname>.  If the package builds and
+        runs on a small handful of platforms, set
+        <varname>ONLY_FOR_PLATFORM</varname> instead. If the package
+        should be skipped (for example, because it provides functionality
+        already provided by the system), set
+        <varname>PKG_SKIP_REASON</varname> to a descriptive message. If
+        the package should fail because some preconditions are not met,
+        set <varname>PKG_FAIL_REASON</varname> to a descriptive message.
+        </para> 
+    
+      <para> <varname>IGNORE</varname> is deprecated because it didn't
+        provide enough information to determine whether the build should
+        fail. 
+      </para>  
+    </sect2>
+    
+    
+    <sect2>
+      <title>Packages which should not be deleted, once installed</title>
+    
+      <para>To ensure that a package may not be deleted, once it has been
+        installed, the <varname>PKG_PRESERVE</varname> definition should
+        be set in the package Makefile. This will be carried into any
+        binary package that is made from this pkgsrc entry. A
+        <quote>preserved</quote> package will 
+        not be deleted using &man.pkg.delete.1; unless the
+        <quote>-f</quote> option is used. </para>
+    </sect2>
+    
+    
+    <sect2 id="security-handling">
+      <title>Handling packages with security problems</title>
+      
+      <para> When a vulnerability is found, this should be noted in
+        <filename>localsrc/security/advisories/pkg-vulnerabilities</filename>,
+        and after the commit of that file, it should be copied to both
+        <filename>/pub/NetBSD/packages/distfiles/pkg-vulnerabilities</filename>
+        and
+        <filename>/pub/NetBSD/packages/distfiles/vulnerabilities</filename>
+        on ftp.NetBSD.org using
+        <filename>localsrc/security/advisories/Makefile</filename>.  In
+        addition, if a <filename>buildlink3.mk</filename> file exists
+        for an affected package, bumping <varname>PKGREVISION</varname>
+        and creating a corresponding
+        <varname>BUILDLINK_RECOMMENDED.<replaceable>pkg</replaceable></varname>
+        entry should be considered. See <xref linkend="buildlink"/> for
+        more information about writing
+        <filename>buildlink3.mk</filename> files and
+        <varname>BUILDLINK_*</varname> definitions. </para>
+
+      <para> Also, if the fix should be applied to the stable pkgsrc
+        branch, be sure to submit a pullup request!  </para>
+    </sect2>
+
+
+    <sect2>
+      <title>How to handle compiler bugs</title>
+    
+      <para>  Some source files trigger bugs in the compiler, based on
+        combinations  of compiler version and architecture and almost
+        always relation to  optimisation being enabled.  Common symptoms
+        are gcc internal errors  or never finishing compiling a file.
+        </para> 
+    
+      <para>  Typically a workaround involves testing the
+        <varname>MACHINE_ARCH</varname>  and compiler version, disabling
+        optimisation for that
+        file/<varname>MACHINE_ARCH</varname>/compiler  combination, and
+        documenting it in  <filename>pkgsrc/doc/HACKS</filename>.  See
+        that file for a number of examples!  </para> 
+    </sect2>
+            
+
+    <sect2>
+      <title>How to handle incrementing versions when fixing an existing package</title>
+    
+      <para> When making fixes to an existing package it can be useful
+        to change the version number in <varname>PKGNAME</varname>. To
+        avoid conflicting with future versions by the original author, a
+        <quote>nb1</quote>, <quote>nb2</quote>, ... suffix can be used
+        on package versions by setting <varname>PKGREVISION=1</varname>
+        (2, ...). The <quote>nb</quote> is treated like a
+        <quote>.</quote> by the pkg tools. e.g.  </para>
+    
+      <programlisting>  DISTNAME= foo-17.42
+    PKGREVISION=  9</programlisting>
+    
+      <para> will result in a <varname>PKGNAME</varname> of
+        <quote>foo-17.42nb9</quote>.  </para>
+    
+      <para> When a new release of the package is released, the
+        <varname>PKGREVISION</varname> should be removed. e.g. on a new
+        minor release of the above package, things should be like:
+        </para>
+    
+      <programlisting>DISTNAME=   foo-17.43</programlisting>
+    </sect2>
+    
+    
+    <sect2>
+      <title>Portability of packages</title>
+
+      <para>One appealing feature of pkgsrc is that it runs on many different
+        platforms. As a result, it is important to ensure, where possible,
+        that packages in pkgsrc are portable. There are some particular
+        details you should pay attention to while working on pkgsrc.</para>
+
+      <sect3>
+        <title>${INSTALL}, ${INSTALL_DATA_DIR}, ...</title>
+
+        <para>The BSD-compatible <command>install</command> supplied with some
+          operating systems will not perform more than one operation at a time.
+          As such, you should call <quote>${INSTALL}</quote>, etc. like this:</para>
+
+          <programlisting>${INSTALL_DATA_DIR} ${PREFIX}/dir1
+${INSTALL_DATA_DIR} ${PREFIX}/dir2</programlisting>
+      </sect3>
+
+    </sect2>
+  </sect1>
+  
+  
+  <sect1>
+    <title>Possible downloading issues</title>
+
+    <sect2>
+      <title>Packages whose distfiles aren't available for plain downloading</title>
+    
+      <para> If you need to download from a dynamic URL you can set
+        <varname>DYNAMIC_MASTER_SITES</varname> and a <command>make
+        fetch</command> will call <filename>files/getsite.sh</filename>
+        with the name of each file to download as an argument, expecting
+        it to output the URL of the directory from which to download
+        it. <pkg>graphics/ns-cult3d</pkg> is an example of this usage.
+        </para>
+    
+      <para> If the download can't be automated, because the user must
+        submit personal information to apply for a password, or must pay
+        for the source, or whatever, you can set
+        <varname>_FETCH_MESSAGE</varname> to a macro which displays a
+        message explaining the
+        situation. <varname>_FETCH_MESSAGE</varname> must be executable
+        shell commands, not just a message. (Generally, it executes
+        <varname>${ECHO}</varname>). As of this writing, the following
+        packages use this: <pkg>audio/realplayer</pkg>,
+        <pkg>cad/simian</pkg>, <pkg>devel/ipv6socket</pkg>,
+        <pkg>emulators/vmware-module</pkg>,
+        <pkg>fonts/acroread-jpnfont</pkg>,
+        <pkg>sysutils/storage-manager</pkg>,
+        <pkg>www/ap-aolserver</pkg>, <pkg>www/openacs</pkg>. Try to be
+        consistent with them.  </para>
+    </sect2>
+    
+
+    <sect2>
+      <title>How to handle modified distfiles with the 'old' name</title>
+    
+      <para> Sometimes authors of a software package make some
+        modifications after the software was released, and they put up a
+        new distfile without changing the package's version number. If a
+        package is already in pkgsrc at that time, the md5 checksum will
+        no longer match. The correct way to work around this is to
+        update the package's md5 checksum to match the package on the
+        master site (beware, any mirrors may not be up to date yet!),
+        and to remove the old distfile from
+        ftp.NetBSD.org's
+        <filename>/pub/NetBSD/packages/distfiles</filename> directory.
+        Furthermore, a mail to the package's author seems appropriate
+        making sure the distfile was really updated on purpose, and that
+        no trojan horse or so crept in.  </para>
+    </sect2>
+  </sect1>
+
+
+  <sect1>
+    <title>Configuration gotchas</title>
+
+    <sect2 id="fixes.libtool">
+      <title>Shared libraries - libtool</title>
+
+      <para>pkgsrc supports many different machines, with different
+        object formats like a.out and ELF, and varying abilities to do
+        shared library and dynamic loading at all. To accompany this,
+        varying commands and options have to be passed to the
+        compiler, linker, etc. to get the Right Thing, which can be
+        pretty annoying especially if you don't have all the machines
+        at your hand to test things.  The <pkg>devel/libtool</pkg> pkg
+        can help here, as it just <quote>knows</quote> how to build
+        both static and dynamic libraries from a set of source files,
+        thus being platform independent.</para>
+
+      <para>Here's how to use libtool in a pkg in seven simple
+        steps:</para> 
+
+      <orderedlist>
+        <listitem>
+          <para>Add <varname>USE_LIBTOOL=yes</varname> to the package
+            Makefile.</para> 
+        </listitem>
+
+        <listitem>
+          <para>For library objects, use <quote>${LIBTOOL} --mode=compile
+            ${CC}</quote> in place of <quote>${CC}</quote>. You could even
+            add it to the definition of <varname>CC</varname>, if only
+            libraries are being built in a given Makefile. This one command
+            will build both PIC and non-PIC library objects, so you need not
+            have separate shared and non-shared library rules.</para>
+        </listitem>
+
+        <listitem>
+          <para>For the linking of the library, remove any
+            <quote>ar</quote>, <quote>ranlib</quote>, and <quote>ld
+            -Bshareable</quote> commands, and instead use:</para> 
+
+          <programlisting>${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info major:minor</programlisting>
+
+          <para>Note that the library is changed to have a
+            <filename>.la</filename> extension, and the objects are
+            changed to have a <filename>.lo</filename>
+            extension. Change <varname>OBJS</varname> as
+            necessary. This automatically creates all of the
+            <filename>.a</filename>,
+            <filename>.so.major.minor</filename>, and ELF symlinks (if
+            necessary) in the build directory. Be sure to include
+            <quote>-version-info</quote>, especially when major and
+            minor are zero, as libtool will otherwise strip off the
+            shared library version.</para>
+
+          <para> From the libtool manual:</para>
+
+          <programlisting>
+     So, libtool library versions are described by three integers:
+
+CURRENT
+       The most recent interface number that this library implements.
+
+REVISION
+       The implementation number of the CURRENT interface.
+
+AGE
+       The difference between the newest and oldest interfaces that this
+       library implements.  In other words, the library implements all the
+       interface numbers in the range from number `CURRENT - AGE' to
+       `CURRENT'.
+       
+     If two libraries have identical CURRENT and AGE numbers, then the
+dynamic linker chooses the library with the greater REVISION number. </programlisting>
+
+          <para>The <quote>-release</quote> option will produce
+            different results for a.out and ELF (excluding symlinks)
+            in only one case. An ELF library of the form
+            <quote>libfoo-release.so.<emphasis>x</emphasis>.<emphasis>y</emphasis></quote>
+            will have a symlink of
+            <quote>libfoo.so.<emphasis>x</emphasis>.<emphasis>y</emphasis></quote>
+            on an a.out platform. This is handled
+            automatically.</para>
+
+          <para>The <quote>-rpath argument</quote> is the install
+            directory of the library being built.</para>
+
+          <para>In the <filename>PLIST</filename>, include all of the
+            <filename>.a</filename>, <filename>.la</filename>, and
+            <filename>.so</filename>,
+            <filename>.so.<replaceable>major</replaceable></filename>
+            and
+            <filename>.so.<replaceable>major</replaceable>.<replaceable>minor</replaceable></filename>
+            files.</para>
+        </listitem>
+
+        <listitem>
+          <para>When linking shared object (<filename>.so</filename>)
+            files, i.e. files that are loaded via dlopen(3), NOT
+            shared libraries, use <quote>-module
+            -avoid-version</quote> to prevent them getting version
+            tacked on.</para>
+
+          <para>The <filename>PLIST</filename> file gets the
+            <filename>foo.so</filename> entry.</para>
+        </listitem>
+
+        <listitem>
+          <para>When linking programs that depend on these libraries
+            <emphasis>before</emphasis> they are installed, preface
+            the &man.cc.1; or &man.ld.1; line with <quote>${LIBTOOL}
+            --mode=link</quote>, and it will find the correct
+            libraries (static or shared), but please be aware that
+            libtool will not allow you to specify a relative path in
+            -L (such as <quote>-L../somelib</quote>), because it
+            expects you to change that argument to be the
+            <filename>.la</filename> file. e.g.</para>
+
+          <programlisting>${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib</programlisting>
+
+          <para>should be changed to:</para>
+
+          <programlisting>${LIBTOOL} --mode=link ${CC} -o <replaceable>someprog</replaceable> <replaceable>../somelib/somelib.la</replaceable></programlisting>
+
+          <para>and it will do the right thing with the libraries.</para>
+        </listitem>
+
+        <listitem>
+          <para>When installing libraries, preface the &man.install.1;
+            or &man.cp.1; command with <quote>${LIBTOOL}
+            --mode=install</quote>, and change the library name to
+            <filename>.la</filename>. e.g.</para>
+
+          <programlisting>${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib</programlisting>
+
+          <para>This will install the static <filename>.a</filename>,
+            shared library, any needed symlinks, and run
+            &man.ldconfig.8;.</para>
+        </listitem>
+
+        <listitem>
+          <para> In your <filename>PLIST</filename>, include all of
+            the <filename>.a</filename>, <filename>.la</filename>, and
+            <filename>.so</filename>, <filename>.so.CURRENT</filename>
+            and <filename>.so.CURRENT.REVISION</filename> files (this
+            is a change from the previous behaviour). </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+
+    
+    <sect2>
+      <title>Using libtool on GNU packages that already support libtool</title>
+
+      <para>Add <varname>USE_LIBTOOL=yes</varname> to the
+        package Makefile. This will override the package's own libtool
+        in most cases.  For older libtool using packages,  libtool is
+        made by ltconfig script during the do-configure step; you can
+        check the libtool script location by doing <command>make
+        configure; find work*/ -name libtool</command>. </para>
+
+      <para> <varname>LIBTOOL_OVERRIDE</varname> specifies which libtool
+        scripts, relative to <varname>WRKSRC</varname>, to override.  By
+        default, it is set to <quote>libtool */libtool
+        */*/libtool</quote>.  If this does not match the location of the
+        package's libtool script(s), set it as appropriate. </para>
+
+      <para> If you do not need <filename>*.a</filename> static
+        libraries built and installed, then use
+        <varname>SHLIBTOOL_OVERRIDE</varname> instead. </para>
+
+      <para>If your package makes use of the platform independent library
+        for loading dynamic shared objects, that comes with libtool
+        (libltdl), you should include the libtool buildlink3.mk (and
+        set <varname>USE_BUILDLINK3=YES</varname>).</para>
+
+      <para>Some packages use libtool incorrectly so that the package may not work or
+        build in some circumstances. Some of the more common errors are:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>The inclusion of a shared object (-module) as a dependent library in an
+            executable or library. This in itself isn't a problem if one of two things
+            has been done:</para>
+
+          <orderedlist>
+            <listitem>
+              <para>The shared object is named correctly, i.e.
+                <filename>libfoo.la</filename>, not
+                <filename>foo.la</filename></para>
+            </listitem>
+
+            <listitem>
+              <para>The -dlopen option is used when linking an executable.</para>
+            </listitem>
+          </orderedlist>
+        </listitem>
+
+        <listitem>
+          <para>The use of libltdl without the correct calls to initialisation routines.
+            The function lt_dlinit() should be called and the macro
+            <varname>LTDL_SET_PRELOADED_SYMBOLS</varname> included in
+            executables.</para> 
+        </listitem>
+      </itemizedlist>
+    </sect2>
+
+    
+    <sect2>
+      <title>GNU Autoconf/Automake</title>
+
+      <para>If a package needs GNU autoconf or automake to be executed
+        to regenerate the configure script and Makefile.in makefile
+        templates, then they should be executed in a pre-configure
+        target. Two Makefile fragments are provided in
+        <filename>pkgsrc/mk/autoconf.mk</filename> and
+        <filename>pkgsrc/mk/automake.mk</filename> to help
+        dealing with these tools. See comments in these files for
+        details.</para>
+
+        <para> For packages that need only autoconf: </para>
+
+        <programlisting>AUTOCONF_REQD=    2.50    # if default version is not good enough
+...
+
+pre-configure:
+          cd ${WRKSRC}; ${AUTOCONF}
+
+...
+.include "../../mk/autoconf.mk"</programlisting>
+
+        <para> and for packages that need automake and autoconf: </para> 
+
+<programlisting>AUTOMAKE_REQD=  1.7.1   # if default version is not good enough
+...
+
+pre-configure:
+          cd ${WRKSRC};                                           \
+          ${ACLOCAL};                                             \
+          ${AUTOHEADER};                                          \
+          ${AUTOMAKE} -a --foreign -i;                            \
+          ${AUTOCONF}
+
+...
+.include "../mk/automake.mk"</programlisting>
+
+        <para> Packages which use GNU Automake will almost certainly
+          require GNU Make, but that's automatically provided for you in
+          <filename>mk/automake.mk</filename>. </para> 
+
+        <para> There are times when the configure process makes
+          additional  changes to the generated files, which then causes
+          the build  process to try to re-execute the automake sequence.
+          This is  prevented by touching various files in the configure
+          stage. If  this causes problems with your package you can set
+          <varname>AUTOMAKE_OVERRIDE=NO</varname> in the package
+          Makefile. </para>
+    </sect2>
+  </sect1>
+  
+  
+  <sect1>
+    <title>Building considerations</title>
+
+    <sect2>
+      <title>CPP defines</title>
+    
+      <para>
+        To port an application to NetBSD, it's usually necessary for the
+        compiler to be able to judge the system on which it's compiling, and
+        we use definitions so that the C pre-processor can do this.
+      </para>
+
+      <para>
+        To test whether you are working on a 4.4 BSD-derived system, you
+        should use the BSD definition, which is defined in
+        <filename>&lt;sys/param.h&gt;</filename> on said systems.
+      </para>
+
+      <programlisting><![CDATA[#include <sys/param.h>]]></programlisting>
+
+      <para>and then you can surround the BSD-specific parts of your
+        package's C/C++ code using this conditional:</para>
+
+      <programlisting><![CDATA[#if (defined(BSD) && BSD >= 199306)
+    ...
+#endif]]></programlisting>
+
+      <para>Please use the <quote>__NetBSD__</quote> definition sparingly - it
+        should only apply to features of &os; that are not present in other
+        4.4-lite derived BSDs.</para>
+    </sect2>
+  </sect1>
+  
+  
+  <sect1>
+    <title>Package specific actions</title>
+
+    <sect2>
+      <title>Package configuration files</title>
+      
+      <para> Packages should be taught to look for their configuration
+        files in <varname>${PKG_SYSCONFDIR}</varname>, which is passed
+        through to the configure and build processes.
+        <varname>PKG_SYSCONFDIR</varname> may be customized in various
+        ways by setting other make variables: </para>
+
+      <itemizedlist>
+        <listitem>
+          <para> <varname>PKG_SYSCONFBASE</varname> is the main config
+            directory   under which all package configuration files are
+            to be found.  This defaults to
+            <filename>${PREFIX}/etc</filename>, but may  be overridden
+            in <filename>/etc/mk.conf</filename>.</para> 
+        </listitem>
+
+        <listitem>
+          <para>  <varname>PKG_SYSCONFSUBDIR</varname> is the subdirectory of
+            <varname>PKG_SYSCONFBASE</varname> under which the
+            configuration files for a particular package may be found, e.g.
+            the Apache configuration files may all be found under the
+            <filename>httpd/</filename> subdirectory of
+            <varname>${PKG_SYSCONFBASE}</varname>. This should be set in
+            the package Makefile.
+            </para>
+        </listitem>
+
+        <listitem>     
+          <para> By default,
+            <varname>PKG_SYSCONFDIR</varname> is set to
+            <varname>${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}</varname>, 
+            but this may be overridden by setting
+            <varname>PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</varname> for a
+            particular package, where <varname>PKG_SYSCONFVAR</varname>
+            defaults to <varname>${PKGBASE}</varname>. This is not meant to
+            be set by a package Makefile, but is reserved for users who wish
+            to override the <varname>PKG_SYSCONFDIR</varname> setting for
+            a particular package with a special location.
+            </para>
+          </listitem>
+        </itemizedlist>
+
+        <para> The only variables that users should customize are
+          <varname>PKG_SYSCONFBASE</varname> and  <varname>PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</varname>.
+          Users will typically want to set
+          <varname>PKG_SYSCONFBASE</varname> to
+          <filename>/etc</filename>, or to accept the default location
+          of <filename>${PREFIX}/etc</filename>. </para>
+    </sect2>
+
+    <sect2>
+      <title>User Interaction</title>
+
+      <para>Occasionally, packages require interaction from the user, and this can be
+        in a number of ways:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>help in fetching the distfiles</para>
+        </listitem>
+
+        <listitem>
+          <para>help to configure the package before it is built</para>
+        </listitem>
+
+        <listitem>
+          <para>help during the build process</para>
+        </listitem>
+
+        <listitem>
+          <para>help during the installation of a package</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>The <varname>INTERACTIVE_STAGE</varname> definition is provided to notify
+        the pkgsrc mechanism of an interactive stage which will be needed, and
+        this should be set in the package's <filename>Makefile</filename>. e.g.</para>
+
+      <programlisting>INTERACTIVE_STAGE= build</programlisting>
+
+      <para>Multiple interactive stages can be specified:</para>
+
+      <programlisting>INTERACTIVE_STAGE= configure install</programlisting>
+    </sect2>
+
+
+    <sect2>
+      <title>Handling licenses</title>
+
+      <para>A package may underly a license which the user has or has
+        not agreed to accept. Usually, packages that underly
+        well-known Open Source licenses (e.g. the GNU Public License,
+        GPL) won't have any special license 
+        tags added in pkgsrc which require special action by the user
+        of such packages, but there are quite a number of other
+        licenses out there that pkgsrc users may not be able to
+        follow, for whatever reasons. For these cases, pkgsrc contains
+        a mechanism to note that a package underlies a certain
+        license, and the user has to accept the license before the
+        package can be installed. </para>
+
+      <para>
+        Placing a certain package under a certain license works by
+        setting the <varname>LICENSE</varname> variable to a string
+        identifying the license, e.g. in <pkg>graphics/graphviz</pkg>:
+        </para>
+
+      <programlisting>LICENSE=        graphviz-license</programlisting>
+
+      <para>
+	When trying to build, the user will get a notice that the
+        package underlies a license which he hasn't accepted (yet):
+        </para>
+	
+      <programlisting>
+&cprompt; <userinput>make</userinput>
+===> graphviz-1.12 has an unacceptable license: graphviz-license.
+===>     To build this package, add this line to your /etc/mk.conf:
+===>     ACCEPTABLE_LICENSES+=graphviz-license
+===>     To view the license, enter "/usr/bin/make show-license".
+*** Error code 1</programlisting>
+
+        <para> The license can be viewed with <command>make
+          show-license</command>, and if it is considered appropriate,
+          the line printed above can be added to
+          <filename>/etc/mk.conf</filename> to indicate acceptance of
+          the particular license:</para>
+
+	<programlisting>ACCEPTABLE_LICENSES+=graphviz-license</programlisting>
+
+	<para>When adding a package with a new license, the license
+          text should be added to <filename>pkgsrc/licenses</filename>
+          for displaying. A list of known licenses can be seen in this
+          directory as well as by looking at the list of (commented
+          out) <varname>ACCEPTABLE_LICENSES</varname> variable
+          settings in
+          <filename>pkgsrc/mk/bsd.pkg.defaults.mk</filename>.</para>
+
+	<para> Is there is a <emphasis>really</emphasis> pressing need
+          to accept all licenses at once, like when trying to download
+          or mirror all distfiles or doing a bulk build to test if all
+          packages in pkgsrc build, this can be done by setting
+          <varname>_ACCEPTABLE=yes</varname>. 
+	  </para>
+      </sect2>
+    
+
+    <sect2>
+      <title>Creating an account from a package</title>
+    
+      <para> There are two make variables used to control the creation
+        of package-specific groups and users at pre-install time.  The
+        first is <varname>PKG_GROUPS</varname>, which is a list of
+        group[:groupid] elements, where the groupid is optional.  The
+        second is <varname>PKG_USERS</varname>, which is a list of
+        elements of the form: </para>
+    
+      <programlisting>user:group[:[userid][:[description][:[home][:shell]]]]</programlisting>
+    
+      <para> where only the user and group are required, the rest being
+        optional.  A simple example is: </para>
+    
+      <programlisting>  PKG_GROUPS=       foogroup
+    PKG_USERS=    foouser:foogroup</programlisting>
+    
+      <para>  A more complex example is that creates two groups and two
+        users is:  </para> 
+    
+      <programlisting>  PKG_GROUPS=       group1 group2:1005
+    PKG_USERS=    first:group1::First\\ User                      \
+                  second:group2::Second\\ User:/home/second:${SH}</programlisting>
+    
+      <para> By default, a new user will have home directory
+        <filename>/nonexistent</filename>, and login shell
+        <filename>/sbin/nologin</filename> unless they are specified as
+        part of the user element.  </para>
+    
+      <para> The package <filename>Makefile</filename> must also set
+        <varname>USE_PKGINSTALL=YES</varname>. This will cause the users
+        and groups to be created at pre-install time, and the admin will
+        be prompted to remove them at post-deinstall time.  Automatic
+        creation of the users and groups can be toggled on and off by
+        setting the <varname>PKG_CREATE_USERGROUP</varname> variable
+        prior to package installation.  </para>
+    </sect2>
+    
+    
+    <sect2>
+      <title>Installing score files</title>
+    
+      <para> Certain packages, most of them in the games category, install
+        a score file that allows all users on the system to record their
+        highscores.  In order for this to work, the binaries need to be
+        installed setgid and the score files owned by the appropriate
+        group and/or owner (traditionally the "games" user/group).  The
+        following variables, documented in more detail in
+        <filename>mk/bsd.pkg.defaults.mk</filename>, control this
+        behaviour: <varname>SETGIDGAME</varname>,
+        <varname>GAMEDATAMODE</varname>, <varname>GAMEGRP</varname>,
+        <varname>GAMEMODE</varname>, <varname>GAMEOWN</varname>. </para>
+    
+      <para> Note that per default, setgid installation of games is
+        disabled;  setting <varname>SETGIDGAME=YES</varname> will set all
+        the other variables accordingly. </para>
+    
+      <para> A package should therefor never hard code file ownership or
+        access permissions but rely on <varname>INSTALL_GAME</varname> and
+        <varname>INSTALL_GAME_DATA</varname> to set these
+        correctly. </para>
+    </sect2>
+    
+    
+    <sect2>
+      <title>Packages providing login shells</title>
+    
+      <para>  If the purpose of the package is to provide a login shell,
+        the variable  <varname>PKG_SHELL</varname> should contain the
+        full pathname of the  shell executable installed by this
+        package. The package  <filename>Makefile</filename> must also
+        set  <varname>USE_PKGINSTALL=YES</varname> to use the
+        automatically generated
+        <filename>INSTALL</filename>/<filename>DEINSTALL</filename>
+        scripts.  </para>
+          
+      <para> An example taken from shells/zsh: </para>
+    
+      <programlisting>  USE_PKGINSTALL=   YES
+    PKG_SHELL=    ${PREFIX}/bin/zsh</programlisting>
+    
+      <para>
+        The shell is registered into <filename>/etc/shells</filename>
+        file automatically in the post-install target by the generated
+        <filename>INSTALL</filename> script and removed in the deinstall
+        target by the <filename>DEINSTALL</filename> script.  </para>
+    </sect2>
+    
+    
+    <sect2>
+      <title>Packages containing perl scripts</title>
+    
+      <para>
+        If your package contains interpreted perl scripts, set
+        <varname>REPLACE_PERL</varname> to ensure that the proper
+        interpreter path is set. <varname>REPLACE_PERL</varname> should
+        contain a list of scripts, relative to
+        <varname>WRKSRC</varname>, that you want adjusted.  </para>
+    </sect2>
+    
+    
+    <sect2>
+      <title>Packages with hardcoded paths to other interpreters</title>
+    
+      <para>
+        Your package may also contain scripts with hardcoded paths to
+        other interpreters besides (or as well as) perl.  To correct the
+        full pathname to the script interpreter, you need to set the
+        following definitions in your <filename>Makefile</filename> (we
+        shall use <command>tclsh</command> in this example):</para>
+    
+      <programlisting>  REPLACE_INTERPRETER+=     tcl
+    _REPLACE.tcl.old=     .*/bin/tclsh
+    _REPLACE.tcl.new=     ${PREFIX}/bin/tclsh
+    _REPLACE_FILES.tcl=   ...list of tcl scripts which need to be fixed,
+                          relative to ${WRKSRC}, just as in REPLACE_PERL</programlisting>
+    </sect2>
+
+    
+    <sect2>
+      <title>Packages installing perl modules</title>
+  
+      <para>Makefiles of packages providing perl5 modules should include
+        the Makefile fragment
+        <filename>../../lang/perl5/module.mk</filename>.  It provides a
+        <command>do-configure</command> target for the standard perl
+        configuration for such modules as well as various hooks to tune
+        this configuration.  See comments in this file for
+        details.</para>
+  
+      <para>Perl5 modules will install into different places depending
+        on the version of perl used during the build process.  To
+        address this, pkgsrc will append lines to the
+        <filename>PLIST</filename> corresponding to the files listed in
+        the installed <filename>.packlist</filename> file generated by
+        most perl5 modules.  This is invoked by defining
+        <varname>PERL5_PACKLIST</varname> to a space-separated list of
+        paths to packlist files, e.g.:</para>
+  
+      <programlisting>PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist</programlisting>
+  
+      <para>The variables <varname>PERL5_SITELIB</varname>,
+        <varname>PERL5_SITEARCH</varname>, and
+        <varname>PERL5_ARCHLIB</varname> represent the three locations
+        in which perl5 modules may be installed, and may be used by
+        perl5 packages that don't have a packlist.  These three
+        variables are also substituted for in the
+        <filename>PLIST</filename>.</para>
+      </sect2>
+
+
+    <sect2 id="faq.info-files">
+      <title>Packages installing info files</title>
+    
+      <para>  Some packages install info files or use the
+        <quote>makeinfo</quote>  or <quote>install-info</quote>
+        commands. Each of the info files: </para>
+    
+      <itemizedlist>
+        <listitem>
+          <para>is considered to be installed in the directory
+            <filename>${PREFIX}/${INFO_DIR}</filename>,</para>
+        </listitem>
+        
+        <listitem>
+          <para>is registered in the Info directory file
+            <filename>${PREFIX}/${INFO_DIR}/dir</filename>,</para>
+        </listitem>
+        
+        <listitem>
+          <para>and must be listed as a filename in the
+            <varname>INFO_FILES</varname> variable in the package
+            Makefile.</para>
+        </listitem>
+      </itemizedlist>
+    
+      <para> <varname>INFO_DIR</varname> defaults to <quote>info</quote>
+        and can be overridden in the package
+        Makefile. <filename>INSTALL</filename> and
+        <filename>DEINSTALL</filename> scripts will be generated to
+        handle registration of the info files in the Info directory
+        file. The <quote>install-info</quote> command used for the info
+        files registration is either provided by the system, or by a
+        special purpose package automatically added as dependency if
+        needed.  </para>
+    
+      <para> A package which needs the <quote>makeinfo</quote> command
+        at build time must define the variable
+        <varname>USE_MAKEINFO</varname> in its Makefile. If a minimum
+        version of the <quote>makeinfo</quote> command is needed it
+        should be noted with the <varname>TEXINFO_REQD</varname>
+        variable in the package <filename>Makefile</filename>. By
+        default, a minimum version of 3.12 is required. If the system
+        does not provide a <command>makeinfo</command> command or if it
+        does not match the required minimum, a build dependency on the
+        <pkg>devel/gtexinfo</pkg> package will be added automatically.
+        </para>
+    
+      <para> The build and installation process of the software provided
+        by the package should not use the
+        <command>install-info</command> command as the registration of
+        info files is the task of the package
+        <filename>INSTALL</filename> script, and it must use the
+        appropriate <command>makeinfo</command> command.  </para>
+    
+      <para> To achieve this goal the pkgsrc infrastructure creates
+        overriding scripts for the <command>install-info</command> and
+        <command>makeinfo</command> commands in a directory listed early
+        in <varname>PATH</varname>.  </para>
+    
+      <para> The script overriding <command>install-info</command> has
+        no effect except the logging of a message. The script overriding
+        <command>makeinfo</command> logs a message and according to the
+        value of <varname>USE_MAKEINFO</varname> and
+        <varname>TEXINFO_REQD</varname> either run the appropriate
+        <command>makeinfo</command> command or exit on error.  </para>
+    </sect2>
+
+
+    <sect2>
+      <title>Packages installing GConf2 data files</title>
+    
+      <para>
+        If a package installs <filename>.schemas</filename> or
+        <filename>.entries</filename> files, used by GConf2, 
+        you need to take some extra steps to make sure they get registered
+        in the database:
+        </para>
+    
+      <orderedlist>
+      <listitem>
+        <para> Include <filename>../../devel/GConf2/schemas.mk</filename>
+          instead of its <filename>buildlink3.mk</filename> file.  This
+          takes care of rebuilding the GConf2 database at installation and
+          deinstallation time, and tells the package where to install
+          GConf2 data files using some standard configure arguments.  It
+          also disallows any access to the database directly from the
+          package. </para>
+      </listitem>
+      
+      <listitem>
+        <para> Ensure that the package installs its
+          <filename>.schemas</filename> files under
+          <filename>${PREFIX}/share/gconf/schemas</filename>.  If they get
+          installed under <filename>${PREFIX}/etc</filename>, you will
+          need to manually patch the package. </para>
+      </listitem>
+      
+      <listitem>
+        <para> Check the PLIST and remove any entries under the etc/gconf
+          directory, as they will be handled automatically.  See
+          <xref linkend="faq.conf"/> for more information. </para>
+      </listitem>
+      
+      <listitem>
+        <para> Define the <varname>GCONF2_SCHEMAS</varname> variable in
+          your <filename>Makefile</filename> with a list of all
+          <filename>.schemas</filename> files installed by the package, if
+          any.  Names must not contain any directories in them. </para>
+      </listitem>
+      
+      <listitem>
+        <para> Define the <varname>GCONF2_ENTRIES</varname> variable in
+          your <filename>Makefile</filename> with a 
+          list of all <filename>.entries</filename> files installed by the
+          package, if any. Names must not contain any directories in
+          them. </para> 
+      </listitem>
+      </orderedlist>
+    </sect2>
+    
+    
+    <sect2>
+      <title>Packages installing scrollkeeper data files</title>
+    
+      <para>
+        If a package installs <filename>.omf</filename> files, used by
+        scrollkeeper, you need to take some extra steps to make sure they
+        get registered in the database:
+        </para>
+    
+      <orderedlist>
+        <listitem>
+          <para> Include
+            <filename>../../textproc/scrollkeeper/omf.mk</filename>
+            instead of its <filename>buildlink3.mk</filename> file.  This
+            takes care of rebuilding the scrollkeeper database at
+            installation and deinstallation time, and disallows any access
+            to it directly from the package.
+            </para>
+        </listitem>
+        
+        <listitem>
+          <para> Check the PLIST and remove any entries under the
+            <filename>libdata/scrollkeeper</filename> directory, as they
+            will be handled automatically. </para>
+        </listitem>
+        
+        <listitem>
+          <para> Remove the <filename>share/omf</filename> directory from
+            the PLIST.  It will be handled by scrollkeeper. </para>
+        </listitem>       
+      </orderedlist>
+    </sect2>
+    
+    
+    <sect2>
+      <title>Packages installing X11 fonts</title>
+    
+      <para> If a package installs font files, you will need to rebuild
+        the fonts database in the directory where they get installed at
+        installation and deinstallation time.  This can be automatically
+        done by using <filename>mk/fonts.mk</filename>, which you need to
+        include in your <filename>Makefile</filename>. </para>
+    
+      <para> When the file is included, you can list the directories where
+        fonts are installed in the
+        <varname>FONTS_<replaceable>type</replaceable>_DIRS</varname>
+        variables, where <replaceable>type</replaceable> can be one of
+        <quote>TTF</quote>, <quote>TYPE1</quote> or <quote>X11</quote>.
+        Also make sure that the database file
+        <filename>fonts.dir</filename> is not listed in the PLIST. </para>
+    
+      <para> Note that you should not create new directories for fonts;
+        instead use the standard ones to avoid that the user needs to 
+        manually configure his X server to find them. </para>
+    </sect2>
+    
+    
+    <sect2>
+      <title>Packages installing GTK2 modules</title>
+    
+      <para>If a package installs gtk2 immodules or loaders, you need to
+        take some extra steps to get them registered in the GTK2 database
+        properly: </para>
+    
+      <orderedlist>
+      <listitem> <para> Include
+        <filename>../../x11/gtk2/modules.mk</filename> instead of its
+        <filename>buildlink3.mk</filename> file.  This takes care of
+        rebuilding the database at installation and deinstallation time.
+        </para>
+      </listitem>
+      
+      <listitem> <para>
+        Set <varname>GTK2_IMMODULES=YES</varname> if
+            your package installs GTK2 immodules. </para>
+      </listitem>
+      
+      <listitem> <para>
+        Set <varname>GTK2_LOADERS=YES</varname> if your package installs
+            GTK2 loaders. </para>
+      </listitem>
+      
+      <listitem> <para>
+        Patch the package to not touch any of the gtk2 databases directly.
+        These are:
+    
+        <itemizedlist>
+          <listitem><para><filename>libdata/gtk-2.0/gdk-pixbuf.loaders</filename></para></listitem>
+          <listitem><para><filename>libdata/gtk-2.0/gtk.immodules</filename></para></listitem>
+        </itemizedlist>
+        </para>
+      </listitem>
+      
+      <listitem> <para>
+        Check the PLIST and remove any entries under the
+        <filename>libdata/gtk-2.0</filename> directory, as they will be
+        handled automatically. </para>
+      </listitem>
+      </orderedlist>
+    </sect2>
+    
+    
+    <sect2>
+      <title>Packages installing SGML or XML data</title>
+    
+      <para> If a package installs SGML or XML data files that need to be
+        registered in system-wide catalogs (like DTDs, sub-catalogs,
+        etc.), you need to take some extra steps:
+        </para>
+    
+      <orderedlist>
+        <listitem>
+          <para> Include
+            <filename>../../textproc/xmlcatmgr/catalogs.mk</filename> in
+            your <filename>Makefile</filename>, which takes care of
+            registering those files in system-wide catalogs at
+            installation and deinstallation time. </para>
+        </listitem>
+    
+        <listitem>
+          <para> Set <varname>SGML_CATALOGS</varname> to the full path of
+            any SGML catalogs installed by the package. </para>
+        </listitem>
+    
+        <listitem>
+          <para> Set <varname>XML_CATALOGS</varname> to the full path of
+            any XML catalogs installed by the package. </para>
+        </listitem>
+    
+        <listitem>
+          <para> Set <varname>SGML_ENTRIES</varname> to individual entries
+            to be added to the SGML catalog.  These come in groups of
+            three strings; see xmlcatmgr(1) for more information
+            (specifically, arguments recognized by the 'add' action).
+            Note that you will normally not use this variable. </para>
+        </listitem>
+    
+        <listitem>
+          <para> Set <varname>XML_ENTRIES</varname> to individual entries
+            to be added to the XML catalog.  These come in groups of three
+            strings; see xmlcatmgr(1) for more information (specifically,
+            arguments recognized by the 'add' action).  Note that you will
+            normally not use this variable.
+            </para>
+        </listitem>
+      </orderedlist>
+    </sect2>
+    
+    
+    <sect2>
+      <title>Packages installing extensions to the MIME database</title>
+    
+      <para> If a package provides extensions to the MIME database by
+        installing <filename>.xml</filename> files inside
+        <filename>${PREFIX}/share/mime/packages</filename>, you 
+        need to take some extra steps to ensure that the database is kept
+        consistent with respect to these new files:
+        </para>
+    
+      <orderedlist>
+        <listitem>
+          <para> Include
+            <filename>../../databases/shared-mime-info/mimedb.mk</filename>
+            (avoid using the <filename>buildlink3.mk</filename> file from
+            this same directory, which is reserved for inclusion from
+            other <filename>buildlink3.mk</filename> files).  It takes
+            care of rebuilding the MIME database at installation and
+            deinstallation time, and disallows any access to it directly
+            from the package. </para>
+        </listitem>
+    
+        <listitem>
+          <para> Check the PLIST and remove any entries under the
+            <filename>share/mime</filename> directory,
+            <emphasis>except</emphasis> for files saved under 
+            <filename>share/mime/packages</filename>.  The former are
+            handled automatically by 
+            the update-mime-database program, but the later are
+            package-dependent and must be removed by the package that
+            installed them in the first place. </para>
+        </listitem>
+    
+        <listitem>
+          <para> Remove any <filename>share/mime/*</filename> directories
+            from the PLIST.  They will be handled by the shared-mime-info
+            package. </para>
+        </listitem>       
+      </orderedlist>
+    </sect2>
+
+    
+    <sect2>
+      <title>Packages using intltool</title>
+    
+      <para>   If a package uses intltool during its build, include the 
+        <filename>../../textproc/intltool/buildlink3.mk</filename> file,
+        which forces it to use the intltool package provided by pkgsrc,
+        instead of the one bundled with the distribution file.
+        </para>
+    
+      <para> This tracks intltool's build-time dependencies and uses the
+        latest available version; this way, the package benefits of any
+        bug fixes that may have appeared since it was released.
+        </para>
+    </sect2>
+    
+  </sect1>
+
+    
+  <sect1>
+    <title>Feedback to the author</title>
+    
+    <para> If you have found any bugs in the package you make available,
+      if you had to do special steps to make it run under NetBSD or
+      if you enhanced the software in various other ways, be sure
+      to report these changes back to the original author of the
+      program! With that kind of support, the next release of the
+      program can incorporate these fixes, and people not using the
+      NetBSD packages system can win from your efforts. </para>
+
+    <para> Support the idea of free software! </para>
+  </sect1>
+</chapter>

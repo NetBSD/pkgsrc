@@ -1,0 +1,463 @@
+<!-- $NetBSD: platforms.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+
+<chapter id="platforms">
+  <title>Using pkgsrc on systems other than &os;</title>
+
+  <sect1>
+    <title>Bootstrapping pkgsrc</title>
+
+    <para>For Operating Systems other than &os;, we provide a bootstrap kit to
+      build the required tools to use pkgsrc on your platform. Besides
+      support for native &os;, pkgsrc and the bootstrap kit have support for
+      the following operating systems:</para>
+
+    <itemizedlist>
+      <listitem>
+	<para>Darwin (Mac OS X)</para>
+      </listitem>
+
+      <listitem>
+	<para>FreeBSD</para>
+      </listitem>
+
+      <listitem>
+	<para>Interix (Windows 2000, XP, 2003)</para>
+      </listitem>
+
+      <listitem>
+	<para>IRIX</para>
+      </listitem>
+
+      <listitem>
+	<para>Linux</para>
+      </listitem>
+
+      <listitem>
+	<para>OpenBSD</para>
+      </listitem>
+
+      <listitem>
+	<para>Solaris</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Support for other platforms is under development.</para>
+
+    <para>Installing the bootstrap kit should be as simple as:</para>
+
+    <screen>
+&rprompt; <userinput>env CVS_RSH=ssh cvs -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout pkgsrc</userinput>
+&rprompt; <userinput>cd pkgsrc/bootstrap</userinput>
+&rprompt; <userinput>./bootstrap</userinput></screen>
+
+    <para>See <xref linkend="getting"/> for other ways to get
+      pkgsrc before bootstrapping. The given
+      <command>bootstrap</command> command will use the defaults of
+      <filename>/usr/pkg</filename> for the
+      <emphasis>prefix</emphasis> where programs will be installed in,
+      and <filename>/var/db/pkg</filename> for the package database
+      directory where pkgsrc will do it's internal bookkeeping.
+      However, these can also be set using command-line
+      parameters.</para>
+
+    <para>Binary packages for the pkgsrc tools and an initial set of packages is
+      available for supported platforms. An up-to-date list of these can be
+      found on <ulink url="http://www.pkgsrc.org/">www.pkgsrc.org</ulink>.</para>
+  </sect1>
+
+  <sect1>
+    <title>Platform specific notes</title>
+
+    <para>Here are some platform-specific notes you should be aware of.</para>
+
+    <sect2>
+      <title>Darwin (Mac OS X)</title>
+
+      <para>Darwin 5.x and 6.x are supported. There are two methods of using
+	pkgsrc on Mac OS X, by using a <link linkend="platform.osx-image">disk
+	  image</link>, or a <link linkend="platform.osx-ufs">UFS
+	  partition</link>.</para>
+
+      <para>Before you start, you will need to download and install the Mac OS X Developer
+	Tools from Apple's Developer Connection.  See <ulink
+	  url="http://developer.apple.com/macosx/">http://developer.apple.com/macosx/</ulink>
+	for details.  Also, make sure you install X11 for Mac OS X and the X11 SDK
+	from <ulink
+	  url="http://www.apple.com/macosx/x11/download/">http://www.apple.com/macosx/x11/download/</ulink>
+	if you intend to build packages that use the X11 Window System.</para>
+
+      <para>If you already have a UFS partition, or have a spare partition
+	that you can format as UFS, it is recommended to use that instead of
+	the disk image. It'll be somewhat faster and will mount automatically
+	at boot time, where you must manually mount a disk image.</para>
+
+      <note>
+	<para>You cannot use a HFS+ file system for pkgsrc, because pkgsrc currently
+	  requires the filesystem to be case-sensitive, and HFS+ is not.</para>
+      </note>
+
+      <sect3 id="platform.osx-image">
+	<title>Using a disk image</title>
+
+	<para>Create the disk image:</para>
+
+	<screen>&rprompt; <userinput>cd pkgsrc/bootstrap</userinput>
+&rprompt; <userinput>./ufsdiskimage create ~/Documents/NetBSD 512</userinput> # megabytes - season to taste
+&rprompt; <userinput>./ufsdiskimage mount ~/Documents/NetBSD</userinput>
+&rprompt; <userinput>sudo chown `id -u`:`id -g` /Volumes/NetBSD</userinput></screen>
+
+	<para>That's it!</para>
+      </sect3>
+
+      <sect3 id="platform.osx-ufs">
+	<title>Using a UFS partition</title>
+
+	<para>By default, <filename>/usr</filename> will be on your root file
+	  system, normally HFS+. It is possible to use the default
+	  <emphasis>prefix</emphasis> of <filename>/usr/pkg</filename>
+	  by symlinking <filename>/usr/pkg</filename> to a directory on a UFS
+	  file system. Obviously, another symlink is required if you want to
+	  place the package database directory outside the
+	  <emphasis>prefix</emphasis>. e.g.</para>
+
+	<screen>&rprompt; <userinput>./bootstrap --pkgdbdir=/usr/pkg/pkgdb --pkgsrcdir=/Volumes/ufs/pkgsrc</userinput></screen>
+
+	<para>If you created your partitions at the time of installing Mac OS X
+	  and formatted the target partition as UFS, it should automatically
+	  mount on <filename>/Volumes/&lt;volume name&gt;</filename> when the
+	  machine boots. If you are (re)formatting a partition as UFS, you need
+	  to ensure that the partition map correctly reflects
+	  <quote>Apple_UFS</quote> and not <quote>Apple_HFS</quote>.</para>
+
+	<para>The problem is that none of the disk tools will let you touch a
+	  disk that is booted from. You can unmount the partition, but even if
+	  you newfs it, the partition type will be incorrect and the
+	  automounter won't mount it. It can be mounted manually, but it won't
+	  appear in Finder.</para>
+
+	<para>You'll need to boot off of the OS X Installation (User) CD.  When
+	  the Installation program starts, go up to the menu and select Disk
+	  Utility.  Now, you will be able to select the partition you want
+	  to be UFS, and Format it Apple UFS. Quit the Disk Utility, quit the
+	  installer which will reboot your machine. The new UFS file system
+	  will appear in Finder.</para>
+
+	<para>Be aware that the permissions on the new file system will be writable
+	  by root only.</para>
+
+	<para>This note is as of 10.2 (Jaguar) and applies to earlier versions.
+	  Hopefully Apple will fix Disk Utility in 10.3 (Panther).</para>
+      </sect3>
+    </sect2>
+
+    <sect2>
+      <title>FreeBSD</title>
+
+      <para>
+	FreeBSD 4.7 and 5.0 have been tested and are supported, other versions
+	may work.</para>
+
+      <para>Care should be taken so that the tools that this kit installs do not conflict
+	with the FreeBSD userland tools. There are several steps:</para>
+
+      <orderedlist>
+	<listitem>
+	  <para>FreeBSD stores its ports pkg database in
+	    <filename>/var/db/pkg</filename>. It is therefore
+	    recommended that you choose a different location (e.g.
+	    <filename>/usr/pkgdb</filename>) by
+	    using the --pkgdbdir option to the bootstrap script.</para>
+	</listitem>
+
+	<listitem>
+	  <para>If you do not intend to use the FreeBSD ports tools, it's probably a
+	    good idea to move them out of the way to avoid confusion, e.g.</para>
+
+	  <screen>&rprompt; <userinput>cd /usr/sbin</userinput>
+&rprompt; <userinput>mv pkg_add pkg_add.orig</userinput>
+&rprompt; <userinput>mv pkg_create pkg_create.orig</userinput>
+&rprompt; <userinput>mv pkg_delete pkg_delete.orig</userinput>
+&rprompt; <userinput>mv pkg_info pkg_info.orig</userinput></screen>
+</listitem>
+
+	<listitem>
+	  <para>An example <filename>/etc/mk.conf</filename> file will be placed in
+	    <filename>/etc/mk.conf.example</filename> file
+	    when you use the bootstrap script.</para>
+	</listitem>
+      </orderedlist>
+    </sect2>
+
+    <sect2>
+      <title>Interix</title>
+
+      <para>Interix is a POSIX compatible subsystem for the Windows NT kernel,
+	providing a Unix-like environment with a tighter kernel integration than
+	available with Cygwin.  It is part of the Windows Services for Unix
+	package, available for free for any licensed copy of Windows 2000, XP,
+	or 2003.  SFU can be downloaded from <ulink
+	url="http://www.microsoft.com/windows/sfu/">http://www.microsoft.com/windows/sfu/</ulink>.</para>
+
+      <para>Services for Unix 3.5, current as of this writing, has been tested.  3.0
+	or 3.1 may work, but are not officially supported.  (The main difference
+	in 3.0/3.1 is lack of pthreads.)</para>
+
+      <sect3 id="platform.interix-sfu-install">
+	<title>When Installing Interix/SFU</title>
+
+	<para>At an absolute minimum, the following packages must be installed from
+	  the Windows Services for Unix 3.5 distribution in order to use pkgsrc:</para>
+
+	<itemizedlist>
+	  <listitem><para>Utilities -&gt; Base Utilities</para></listitem>
+	  <listitem><para>Interix GNU Components -&gt; (all)</para></listitem>
+	  <listitem><para>Remote Connectivity</para></listitem>
+	  <listitem><para>Interix SDK</para></listitem>
+	</itemizedlist>
+
+	<para>When using pkgsrc on Interix, DO NOT install the Utilities subcomponent
+	  "UNIX Perl".  That is Perl 5.6 without shared module support, installed to
+	  /usr/local, and will only cause confusion. Instead, install Perl 5.8 from
+	  pkgsrc (or from a binary package).</para>
+
+	<para>The Remote Connectivity subcomponent "Windows Remote Shell Service" does
+	  not need to be installed, but Remote Connectivity itself should be
+	  installed in order to have a working inetd.</para>
+
+	<para>Finally, during installation you may be asked whether to enable setuid
+	  behavior for Interix programs, and whether to make pathnames default to
+	  case-sensitive.  Setuid should be enabled, and case-sensitivity MUST be
+	  enabled.  (Without case-sensitivity, a large number of packages including
+	  perl will not build.)</para>
+
+      </sect3>
+
+      <sect3 id="platform.interix-sfu-postinstall">
+	<title>What to do if Interix/SFU is already installed</title>
+
+	<para>If SFU is already installed and you wish to alter these settings to work
+	  with pkgsrc, note the following things.</para>
+
+	<itemizedlist>
+	  <listitem>
+	    <para>To uninstall UNIX Perl, use Add/Remove Programs, select Microsoft
+	      Windows Services for UNIX, then click Change.  In the installer, choose
+	      Add or Remove, then uncheck Utilities-&gt;UNIX Perl.</para>
+	  </listitem>
+	  <listitem>
+	    <para>To enable case-sensitivity for the filesystem, run REGEDIT.EXE, and
+	      change the following registry key:</para>
+	    <para>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel</para>
+	    <para>Set the DWORD value "obcaseinsensitive" to 0; then reboot.</para>
+	  </listitem>
+	  <listitem>
+	    <para>To enable setuid binaries (optional), run REGEDIT.EXE, and change the
+	      following registry key:</para>
+	    <para>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Services for UNIX</para>
+	    <para>Set the DWORD value "EnableSetuidBinaries" to 1; then reboot.</para>
+	  </listitem>
+	</itemizedlist>
+
+      </sect3>      
+      <sect3 id="platform.interix-notes">
+	<title>Important notes for using pkgsrc</title>
+
+	<para>The package imanager (either the pkgsrc "su" user, or the user
+	  running "pkg_add") must be a member of the local Administrators
+	  group.  Such a user must also be used to run the bootstrap.  This is
+	  slightly relaxed from the normal pkgsrc requirement of "root".</para>
+
+	<para>The package manager should use a umask of 002.  "make install" will
+	  automatically complain if this is not the case.  This ensures that
+	  directories written in /var/db/pkg are Administrators-group writeable.</para>
+
+	<para>The popular Interix binary packages from http://www.interopsystems.com/
+	  use an older version of pkgsrc's pkg_* tools.  Ideally, these should
+	  NOT be used in conjunction with pkgsrc.  If you choose to use them at
+	  the same time as the pkgsrc packages, ensure that you use the proper
+	  pkg_* tools for each type of binary package.</para>
+
+      </sect3>
+    </sect2>
+
+    <sect2>
+      <title>IRIX</title>
+
+      <para>You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
+	compiler (cc/c89).  Please set the <varname>CC</varname> environment variable
+	according to your preference.  If you do not have a license for the MIPSpro
+	compiler suite, you can download a gcc tardist file from <ulink
+	  url="http://freeware.sgi.com/">http://freeware.sgi.com/</ulink>.</para>
+
+      <para>Please note that you will need IRIX 6.5.17 or higher, as this is the earliest
+	version of IRIX providing support for if_indextoname(3), if_nametoindex(3),
+	etc.</para>
+
+      <para>At this point in time, pkgsrc only supports one ABI.  That is, you can not
+	switch between the old 32-bit ABI, the new 32-bit ABI and the 64-bit ABI.  If
+	you start out using "abi=n32", that's what all your packages will be built
+	with.</para>
+
+      <para>Therefore, please make sure that you have no conflicting
+	<varname>CFLAGS</varname> in your environment or the
+	<filename>/etc/mk.conf</filename>.  Particularly, make sure that you do not
+	try to link n32 object files with lib64 or vice versa.  Check your
+	<filename>/etc/compiler.defaults</filename>!</para>
+
+      <para>If you have the actual pkgsrc tree mounted via NFS from a different host,
+	please make sure to set <varname>WRKOBJDIR</varname> to a local directory,
+	as it appears that IRIX linker occasionally runs into issues when trying to
+	link over a network mounted filesystem.</para>
+
+      <para>The bootstrapping process should set all the right options for programs such
+	as imake(1), but you may want to set some options depending on your local
+	setup.  Please see <filename>pkgsrc/mk/bsd.pkg.defaults.mk</filename> and, of
+	course, your compilers man pages for details.</para>
+    </sect2>
+
+<!--
+<sect2>
+<title>Linux</title>
+<para>
+... XXX
+</para>
+</sect2>
+-->
+
+    <sect2>
+      <title>OpenBSD</title>
+
+      <para>OpenBSD 3.0 and 3.2 are tested and supported.</para>
+
+      <para>Care should be taken so that the tools that this kit installs do not conflict
+	with the OpenBSD userland tools. There are several steps:</para>
+
+      <orderedlist>
+	<listitem>
+	  <para>OpenBSD stores its ports pkg database in
+	    <filename>/var/db/pkg</filename>. It is therefore
+	    recommended that you choose a different location (e.g.
+	    <filename>/usr/pkgdb</filename>) by
+	    using the --pkgdbdir option to the bootstrap script.</para>
+	</listitem>
+
+	<listitem>
+	  <para>If you do not intend to use the OpenBSD ports tools, it's probably a
+	    good idea to move them out of the way to avoid confusion, e.g.</para>
+
+	  <screen>&rprompt; <userinput>cd /usr/sbin</userinput>
+&rprompt; <userinput>mv pkg_add pkg_add.orig</userinput>
+&rprompt; <userinput>mv pkg_create pkg_create.orig</userinput>
+&rprompt; <userinput>mv pkg_delete pkg_delete.orig</userinput>
+&rprompt; <userinput>mv pkg_info pkg_info.orig</userinput></screen>
+	</listitem>
+
+	<listitem>
+	  <para>An example <filename>/etc/mk.conf</filename> file will be placed in
+	    <filename>/etc/mk.conf.example</filename> file
+	    when you use the bootstrap script. OpenBSD's make program uses
+	    <filename>/etc/mk.conf</filename>
+	    as well. You can work around this by enclosing all the pkgsrc specific parts 
+	    of the file with:</para>
+
+	  <programlisting>.ifdef BSD_PKG_MK
+# pkgsrc stuff, e.g. insert bsd.pkg.defaults.mk or similar here
+.else
+# OpenBSD stuff
+.endif</programlisting>
+	</listitem>
+      </orderedlist>
+    </sect2>
+
+    <sect2>
+      <title>Solaris</title>
+
+      <para>Solaris 2.6 through 9 are supported on both x86 and sparc. You will need a working C 
+	compiler. Both gcc 2.95.3 and Sun WorkShop 5 have been tested.</para>
+
+      <para>The following packages are required on Solaris 8 for the bootstrap
+	process and to build packages.</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para>SUNWsprot</para>
+	</listitem>
+
+	<listitem>
+	  <para>SUNWarc</para>
+	</listitem>
+
+	<listitem>
+	  <para>SUNWbtool</para>
+	</listitem>
+
+	<listitem>
+	  <para>SUNWtoo</para>
+	</listitem>
+
+	<listitem>
+	  <para>SUNWlibm</para>
+	</listitem>
+      </itemizedlist>
+
+      <para>Please note the use of GNU binutils on Solaris is
+	<emphasis>not</emphasis> supported.</para>
+
+      <sect3>
+	<title>If you are using gcc</title>
+
+	<para>It makes life much simpler if you only use the same gcc consistently
+	  for building all packages.</para>
+
+	<para>It is recommended that an external gcc be used only for bootstrapping,
+	  then either build gcc from <pkg>lang/gcc</pkg> or install a binary gcc
+	  package, then remove gcc used during bootstrapping.</para>
+
+	<para>Binary packages of gcc can be found through <ulink
+	    url="http://www.sun.com/bigadmin/common/freewareSearch.html">http://www.sun.com/bigadmin/common/freewareSearch.html</ulink>.</para>
+      </sect3>
+
+      <sect3>
+	<title>If you are using Sun WorkShop</title>
+
+	<para>You will need at least the following packages installed (from WorkShop
+	  5.0)</para>
+
+	<itemizedlist>
+	  <listitem>
+	    <para>SPROcc - Sun WorkShop Compiler C 5.0</para>
+	  </listitem>
+
+	  <listitem>
+	    <para>SPROcpl - Sun WorkShop Compiler C++ 5.0</para>
+	  </listitem>
+
+	  <listitem>
+	    <para>SPROild - Sun WorkShop Incremental Linker</para>
+	  </listitem>
+
+	  <listitem>
+	    <para>SPROlang - Sun WorkShop Compilers common components</para>
+	  </listitem>
+	</itemizedlist>
+
+	<para>You should set <varname>CC</varname>, <varname>CXX</varname> and
+	  optionally, <varname>CPP</varname> in <filename>/etc/mk.conf</filename>,
+	  eg.</para>
+
+	<programlisting>CC=	cc
+CXX=	CC
+CPP=	/usr/ccs/lib/cpp</programlisting>
+
+	<para>You may also want to build 64-bit binaries, eg.</para>
+
+	<programlisting>CFLAGS=	-xtarget=ultra -xarch=v9</programlisting>
+
+	<para>Whichever compiler you use, please ensure the compiler tools and
+	  your $prefix are in your <varname>PATH</varname>. This includes
+	  <filename>/usr/ccs/{bin,lib}</filename>
+	  and eg. <filename>/usr/pkg/{bin,sbin}</filename>.</para>
+      </sect3>
+    </sect2>
+  </sect1>
+</chapter>
