@@ -184,7 +184,6 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o galeon-1.3.12
 	o gauche-0.7.4.1 [kei]
-	o gcc-3.3.3
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
 	o gdb-6.0
@@ -193,7 +192,6 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
-	o gimp-print-4.2.6
 	o global-4.6
 	o glpk-4.3
 	o gnats-4.0 [pkgsrc-wip]
