@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5683 2004/04/20 15:59:57 recht Exp $
+$NetBSD: CHANGES,v 1.5684 2004/04/20 16:26:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2184,3 +2184,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-icon-theme to 1.2.1nb1 [minskim 2004-04-20]
 	Updated gnome2-games to 2.6.1 [jmmv 2004-04-20]
 	Updated cyrus-imapd to 2.2.3nb2 [recht 2004-04-20]
+	Updated pkg_tarup to 1.5.2 [wiz 2004-04-20]
