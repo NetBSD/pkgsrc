@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2003/09/02 07:33:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.78 2003/09/16 20:12:53 seb Exp $
 #
 
 COMMENT=	Communication programs
@@ -86,7 +86,7 @@ SUBDIR+=	ymessenger
 SUBDIR+=	ysm
 SUBDIR+=	zenicb
 SUBDIR+=	zenirc
-SUBDIR+=	zephyr-current
+SUBDIR+=	zephyr
 SUBDIR+=	zephyr-mode
 SUBDIR+=	zircon
 
