@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1378 2004/02/08 02:59:14 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1379 2004/02/08 03:50:43 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2308,7 +2308,7 @@ do-ltconfig-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${ltconfig} ]; then					\
 		${RM} -f ${ltconfig};					\
-		${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool" \
+		${ECHO} "${RM} -f libtool; ${LN} -s ${PKG_LIBTOOL} libtool" \
 			> ${ltconfig};					\
 		${CHMOD} +x ${ltconfig};				\
 	fi
@@ -2385,7 +2385,7 @@ do-libtool-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${libtool} ]; then					\
 		(${ECHO} '#!${CONFIG_SHELL}';				\
-		 ${ECHO} 'exec ${LIBTOOL} "$$@"';			\
+		 ${ECHO} 'exec ${PKG_LIBTOOL} "$$@"';			\
 		) > ${libtool}.override;				\
 		if [ -x ${libtool} ]; then				\
 			${CHMOD} +x ${libtool}.override;		\
