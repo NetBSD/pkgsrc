@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1999/03/05 01:52:32 hubertf Exp $
+$NetBSD: patch-aa,v 1.4 1999/10/21 15:15:02 agc Exp $
 
---- siag/Makefile.in.BAK	Fri Mar  5 02:04:49 1999
-+++ siag/Makefile.in	Fri Mar  5 02:05:41 1999
+--- Makefile.in.orig	Tue Jul  6 02:09:00 1999
++++ Makefile.in	Thu Oct 21 16:07:11 1999
 @@ -58,7 +58,7 @@
  PRE_UNINSTALL = :
  POST_UNINSTALL = :
@@ -11,3 +11,19 @@ $NetBSD: patch-aa,v 1.3 1999/03/05 01:52:32 hubertf Exp $
  GUILE = @GUILE@
  LIBCURSES = @LIBCURSES@
  LIBDL = @LIBDL@
+@@ -423,12 +423,12 @@
+ 
+ install-data-local:
+ 	@echo "Install support files for Siag"
+-	$(mkinstalldirs) $(DESTDIR)$(prefix)/doc/siag/siag
+-	cp $(srcdir)/data.scm $(DESTDIR)$(prefix)/doc/siag/siag
++	$(mkinstalldirs) $(DESTDIR)$(prefix)/share/doc/siag/siag
++	cp $(srcdir)/data.scm $(DESTDIR)$(prefix)/share/doc/siag/siag
+ 
+ uninstall-local:
+ 	@echo "Uninstalling support files for Siag"
+-	rm -rf $(DESTDIR)$(prefix)/doc/siag/siag
++	rm -rf $(DESTDIR)$(prefix)/share/doc/siag/siag
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
