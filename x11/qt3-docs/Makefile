@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/12/19 15:43:31 skrll Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/10 02:10:14 snj Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -6,7 +6,7 @@
 PKGNAME=	qt3-docs-${QTVERSION}
 COMMENT=	Documentation for the QT C++ X GUI toolkit
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 BUILD_QT3=	yes
 
 NO_CONFIGURE=	yes
@@ -41,5 +41,5 @@ do-install:
 	    ${INSTALL_DATA} $${f} ${QTPREFIX}/$${f}; \
 	done)
 
-.include "../../x11/qt3-libs/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
