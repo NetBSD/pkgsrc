@@ -1,13 +1,19 @@
-# $NetBSD: Makefile,v 1.10 2004/02/10 19:33:11 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/13 15:13:01 jlam Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-java-${GCC_VERSION}
+PKGREVISION=	1
 COMMENT=	GNU Compiler Collection, v3 - Java compiler
+
+BUILDLINK_DEPENDS.gcc3cxx+=	gcc3${GCC3_PKGMODIF}-c++>=${GCC_VERSION}
+BUILDLINK_DEPMETHOD.gcc3cxx+=	full
 
 INFO_FILES=	gcj.info
 
-.include "../gcc3-c/language.mk"
+INSTLIBS=	libjava/lib-org-w3c-dom.la				\
+		libjava/lib-org-xml-sax.la				\
+		libjava/libgcj.la
 
-BUILD_DEPENDS+=	gcc3${GCC3_PKGMODIF}-c++>=${GCC_VERSION}:../../lang/gcc3-c++
+.include "../gcc3-c/language.mk"
 
 CONFIGURE_ARGS+=	--enable-languages="java"
 CONFIGURE_ARGS+=	--with-system-zlib
@@ -31,6 +37,7 @@ do-install:
 		install-target-libjava
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/gcc3-c++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # On NetBSD, the gcc-2.95.3 for:
