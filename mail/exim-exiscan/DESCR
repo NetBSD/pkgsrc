@@ -1,5 +1,7 @@
-exim-exiscan adds email content scanning to the exim MTA
-It can hook into spamassassin, virus scanning, and to filter on mime type
+exim-exiscan adds email content scanning to the exim MTA.  It supports
+SpamAssassin, Brightmail Anti-Spam, third-party virus scanners, and SPF.
+It also provides a MIME ACL and also regular expression matching against
+headers, bodies, raw MIME parts and decoded MIME parts.
 
 Exim is a mail transport agent (MTA) developed at the University of Cambridge
 for use on Unix systems connected to the Internet. It is freely available
