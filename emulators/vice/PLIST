@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/08/31 15:53:09 dillo Exp $
+@comment $NetBSD: PLIST,v 1.13 2005/02/06 23:10:09 kristerw Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -108,7 +108,8 @@ share/vice/C64/os2_sym.vkm
 share/vice/C64/pc64.vpl
 share/vice/C64/vice.vpl
 share/vice/C64/win_pos.vkm
-share/vice/C64/win_sym.vkm
+share/vice/C64/win_sym_de.vkm
+share/vice/C64/win_sym_us.vkm
 share/vice/C64/x11_pos.vkm
 share/vice/C64/x11_sym.vkm
 share/vice/CBM-II/amber.vpl
@@ -139,8 +140,8 @@ share/vice/CBM-II/rom256h.vrs
 share/vice/CBM-II/rom256l.vrs
 share/vice/CBM-II/rom500.vrs
 share/vice/CBM-II/white.vpl
-share/vice/CBM-II/win_bukp.vkm
-share/vice/CBM-II/win_buks.vkm
+share/vice/CBM-II/win_pos_uk.vkm
+share/vice/CBM-II/win_sym_uk.vkm
 share/vice/CBM-II/x11_buks.vkm
 share/vice/DRIVES/d1541II
 share/vice/DRIVES/d1571cr
@@ -183,8 +184,8 @@ share/vice/PET/rom4b40.vrs
 share/vice/PET/rom4b80.vrs
 share/vice/PET/rom4g40.vrs
 share/vice/PET/white.vpl
-share/vice/PET/win_bgrs.vkm
-share/vice/PET/win_buks.vkm
+share/vice/PET/win_sym_gr.vkm
+share/vice/PET/win_sym_uk.vkm
 share/vice/PET/x11_bdep.vkm
 share/vice/PET/x11_bdes.vkm
 share/vice/PET/x11_bgrs.vkm
