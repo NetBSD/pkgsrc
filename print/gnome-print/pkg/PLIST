@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/31 19:13:07 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/01 18:57:09 tron Exp $
 bin/gnome-font-install
 include/libgnomeprint/gnome-print.h
 include/libgnomeprint/gnome-printer.h
@@ -8,14 +8,14 @@ include/libgnomeprint/gnome-printer-profile.h
 include/libgnomeprint/gnome-font-dialog.h
 include/libgnomeprint/gnome-text.h
 include/libgnomeprint/gnome-print-i18n.h
-lib/locale/de/LC_MESSAGES/gnome-print.mo
-lib/locale/fr/LC_MESSAGES/gnome-print.mo
-lib/locale/es/LC_MESSAGES/gnome-print.mo
-lib/locale/hu/LC_MESSAGES/gnome-print.mo
-lib/locale/no/LC_MESSAGES/gnome-print.mo
-lib/locale/pl/LC_MESSAGES/gnome-print.mo
-lib/locale/ru/LC_MESSAGES/gnome-print.mo
-lib/locale/it/LC_MESSAGES/gnome-print.mo
+share/locale/de/LC_MESSAGES/gnome-print.mo
+share/locale/fr/LC_MESSAGES/gnome-print.mo
+share/locale/es/LC_MESSAGES/gnome-print.mo
+share/locale/hu/LC_MESSAGES/gnome-print.mo
+share/locale/no/LC_MESSAGES/gnome-print.mo
+share/locale/pl/LC_MESSAGES/gnome-print.mo
+share/locale/ru/LC_MESSAGES/gnome-print.mo
+share/locale/it/LC_MESSAGES/gnome-print.mo
 lib/libgnomeprint.so.1.0
 lib/libgnomeprint.a
 lib/printConf.sh
