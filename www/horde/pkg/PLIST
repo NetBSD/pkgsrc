@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/04/30 05:56:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/05/22 21:11:57 jlam Exp $
 sbin/horde_setup
 sbin/horde_secure
 share/doc/horde/CHANGES
@@ -41,6 +41,17 @@ share/horde/lib/js/msie_generic_help.js
 share/horde/lib/js/ns_generic_help.js
 share/horde/lib/mime.lib
 share/horde/lib/version.php
+share/horde/locale/da/status.lang
+share/horde/locale/da/horde.lang
+share/horde/locale/da/login.lang
+share/horde/locale/da/logo.lang
+share/horde/locale/da/menu.lang
+share/horde/locale/da/modules.lang
+share/horde/locale/da/problem.lang
+share/horde/locale/da/setup.lang
+share/horde/locale/da/signup.help
+share/horde/locale/da/signup.lang
+share/horde/locale/da/help.lang
 share/horde/locale/de/help.lang
 share/horde/locale/de/horde.lang
 share/horde/locale/de/login.lang
@@ -153,6 +164,17 @@ share/horde/locale/pt-BR/setup.lang
 share/horde/locale/pt-BR/signup.help
 share/horde/locale/pt-BR/signup.lang
 share/horde/locale/pt-BR/status.lang
+share/horde/locale/se/status.lang
+share/horde/locale/se/horde.lang
+share/horde/locale/se/login.lang
+share/horde/locale/se/logo.lang
+share/horde/locale/se/menu.lang
+share/horde/locale/se/modules.lang
+share/horde/locale/se/problem.lang
+share/horde/locale/se/setup.lang
+share/horde/locale/se/signup.help
+share/horde/locale/se/signup.lang
+share/horde/locale/se/help.lang
 share/horde/locale/sk/help.lang
 share/horde/locale/sk/horde.lang
 share/horde/locale/sk/login.lang
@@ -279,6 +301,7 @@ share/horde/test.php3
 @dirrm share/horde/scripts/database
 @dirrm share/horde/scripts
 @dirrm share/horde/locale/sk
+@dirrm share/horde/locale/se
 @dirrm share/horde/locale/pt-BR
 @dirrm share/horde/locale/nl
 @dirrm share/horde/locale/local
@@ -290,6 +313,7 @@ share/horde/test.php3
 @dirrm share/horde/locale/en
 @dirrm share/horde/locale/defines
 @dirrm share/horde/locale/de
+@dirrm share/horde/locale/da
 @dirrm share/horde/locale
 @dirrm share/horde/lib/js
 @dirrm share/horde/lib
