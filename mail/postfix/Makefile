@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2004/09/23 16:10:07 martti Exp $
+# $NetBSD: Makefile,v 1.151 2004/11/25 04:02:35 xtraeme Exp $
 
 DISTNAME=	postfix-2.1.5
 CATEGORIES=	mail
@@ -109,6 +109,8 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
 MAKE_DIRS+=		${SASLLIBDIR}
 CONF_FILES+=		${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .endif
+
+MAKE_ENV+=		DEBUG= # empty
 
 do-configure:
 	cd ${WRKSRC} &&							\
