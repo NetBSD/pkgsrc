@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2142 2004/09/20 22:47:26 adrianp Exp $
+$NetBSD: TODO,v 1.2143 2004/09/20 23:19:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -322,7 +322,6 @@ Suggested package updates
 	o libntlm-0.3.3
 	o libole2-2.2.8
 	o libpng-1.2.7
-	o libsamplerate-0.1.2
 	o libsigc++-2.0.3
 	o libtool-1.5.8
 	o licq-1.2.7
