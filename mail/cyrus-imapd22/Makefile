@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2004/12/29 15:42:37 minskim Exp $
+# $NetBSD: Makefile,v 1.32 2005/01/11 03:58:22 kim Exp $
 
 DISTNAME=	cyrus-imapd-2.2.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
@@ -137,8 +137,8 @@ PERL5_PACKLIST= \
 #
 post-patch:
 	cd ${WRKSRC}/man;						\
-	set --	deliver 8 idled 8 imapd 8 lmtpd 8 master 8 nntpd 8	\
-		notifyd 8 pop3d 8 quota 8;				\
+	set --	deliver 8 fetchnews 8 idled 8 imapd 8 lmtpd 8 master 8	\
+		nntpd 8	notifyd 8 pop3d 8 quota 8;			\
 	while [ $$# -gt 0 ]; do						\
 		man=$$1.$$2;						\
 		for file in Makefile.in *.[0-9]; do			\
