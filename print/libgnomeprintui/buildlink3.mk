@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/04/01 18:29:40 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEPRINTUI_BUILDLINK3_MK:=	${LIBGNOMEPRINTUI_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgnomeprintui}
 BUILDLINK_PACKAGES+=	libgnomeprintui
 
 .if !empty(LIBGNOMEPRINTUI_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.4.2nb1
+BUILDLINK_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.6.0
 BUILDLINK_PKGSRCDIR.libgnomeprintui?=	../../print/libgnomeprintui
 .endif	# LIBGNOMEPRINTUI_BUILDLINK3_MK
 
@@ -20,6 +20,7 @@ BUILDLINK_PKGSRCDIR.libgnomeprintui?=	../../print/libgnomeprintui
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
