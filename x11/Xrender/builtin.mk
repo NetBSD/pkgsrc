@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:15 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:36 jlam Exp $
 
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
 
@@ -49,7 +49,7 @@ _XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}
 _XF86_VERSION=	${_XF86_MAJOR}.${_XF86_MINOR}.${_XF86_TEENY}
 .          endif
 .        endif
-MAKEFLAGS+=	_XF86_VERSION=${_XF86_VERSION}
+BUILDLINK_VARS+=	_XF86_VERSION
 .      endif
 .      for _xrender_version_ in ${_XRENDER_VERSIONS}
 .        for _pattern_ in ${_XRENDER_${_xrender_version_}}
@@ -60,16 +60,15 @@ _XRENDER_VERSION?=	${_xrender_version_}
 .      endfor
 _XRENDER_VERSION?=	0.1
 BUILTIN_PKG.Xrender=	Xrender-${_XRENDER_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.Xrender=${BUILTIN_PKG.Xrender}
+BUILDLINK_VARS+=	BUILTIN_PKG.Xrender
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.Xrender=${IS_BUILTIN.Xrender}
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.Xrender
+.endif	# IS_BUILTIN.Xrender
 
-CHECK_BUILTIN.Xrender?=	no
-.if !empty(CHECK_BUILTIN.Xrender:M[yY][eE][sS])
-USE_BUILTIN.Xrender=	yes
-.endif
+#.if defined(USE_BUILTIN.render) && !empty(USE_BUILTIN.render:M[nN][oO])
+#USE_BUILTIN.Xrender=	no
+#.endif
 
 .if !defined(USE_BUILTIN.Xrender)
 USE_BUILTIN.Xrender?=	${IS_BUILTIN.Xrender}
@@ -89,6 +88,9 @@ USE_BUILTIN.Xrender!=	\
 .  endif
 .endif	# USE_BUILTIN.Xrender
 
+CHECK_BUILTIN.Xrender?=	no
+.if !empty(CHECK_BUILTIN.Xrender:M[nN][oO])
+
 .if !empty(USE_BUILTIN.Xrender:M[nN][oO])
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8.2
 BUILDLINK_DEPENDS.render+=	render>=0.8
@@ -98,3 +100,5 @@ BUILDLINK_DEPENDS.render+=	render>=0.8
 BUILDLINK_PREFIX.Xrender=	${X11BASE}
 USE_BUILTIN.render=		yes
 .endif
+
+.endif	# CHECK_BUILTIN.Xrender

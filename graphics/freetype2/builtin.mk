@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:31 jlam Exp $
 
 _FREETYPE2_FREETYPE_H=	${X11BASE}/include/freetype2/freetype/freetype.h
 _X11_TMPL=		${X11BASE}/lib/X11/config/X11.tmpl
@@ -27,16 +27,11 @@ _FREETYPE2_PATCH!=	\
 	${AWK} 'BEGIN { patch=0; } /\#define[ 	]*FREETYPE_PATCH/ { patch=$$3; } END { print "."patch; }' ${_FREETYPE2_FREETYPE_H}
 _FREETYPE2_VERSION=	${_FREETYPE2_MAJOR}${_FREETYPE2_MINOR}${_FREETYPE2_PATCH}
 BUILTIN_PKG.freetype2=	freetype2-${_FREETYPE2_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.freetype2=${BUILTIN_PKG.freetype2}
+BUILDLINK_VARS+=	BUILTIN_PKG.freetype2
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.freetype2=${IS_BUILTIN.freetype2}
-.endif
-
-CHECK_BUILTIN.freetype2?=	no
-.if !empty(CHECK_BUILTIN.freetype2:M[yY][eE][sS])
-USE_BUILTIN.freetype2=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.freetype2
+.endif	# IS_BUILTIN.freetype2
 
 .if !defined(USE_BUILTIN.freetype2)
 USE_BUILTIN.freetype2?=	${IS_BUILTIN.freetype2}
@@ -56,6 +51,9 @@ USE_BUILTIN.freetype2!=	\
 .  endif
 .endif	# USE_BUILTIN.freetype2
 
+CHECK_BUILTIN.freetype2?=	no
+.if !empty(CHECK_BUILTIN.freetype2:M[nN][oO])
+
 .if !empty(USE_BUILTIN.freetype2:M[nN][oO])
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
 .endif
@@ -64,3 +62,5 @@ BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
 BUILDLINK_PREFIX.freetype2=	${X11BASE}
 USE_X11=			yes
 .endif
+
+.endif	# CHECK_BUILTIN.freetype2

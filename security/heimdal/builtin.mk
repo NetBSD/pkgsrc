@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:35 jlam Exp $
 
 _KRB5_KRB5_H=	/usr/include/krb5/krb5.h
 
@@ -48,11 +48,6 @@ MAKEFLAGS+=		BUILTIN_PKG.heimdal=${BUILTIN_PKG.heimdal}
 MAKEFLAGS+=	IS_BUILTIN.heimdal=${IS_BUILTIN.heimdal}
 .endif
 
-CHECK_BUILTIN.heimdal?=	no
-.if !empty(CHECK_BUILTIN.heimdal:M[yY][eE][sS])
-USE_BUILTIN.heimdal=	yes
-.endif
-
 .if !defined(USE_BUILTIN.heimdal)
 USE_BUILTIN.heimdal?=	${IS_BUILTIN.heimdal}
 
@@ -71,10 +66,15 @@ USE_BUILTIN.heimdal!=	\
 .  endif
 .endif	# USE_BUILTIN.heimdal
 
+CHECK_BUILTIN.heimdal?=	no
+.if !empty(CHECK_BUILTIN.heimdal:M[nN][oO])
+
 .if !empty(USE_BUILTIN.heimdal:M[nN][oO])
 BUILDLINK_DEPENDS.heimdal+=	heimdal>=0.6
 
 KRB5_CONFIG?=	${BUILDLINK_PREFIX.heimdal}/bin/krb5-config
 CONFIGURE_ENV+=	KRB5_CONFIG="${KRB5_CONFIG}"
 MAKE_ENV+=	KRB5_CONFIG="${KRB5_CONFIG}"
-.endif	# HEIMDAL_BUILDLINK3_MK
+.endif
+
+.endif	# CHECK_BUILTIN.heimdal

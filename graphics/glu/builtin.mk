@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/15 17:38:10 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/03/29 05:43:31 jlam Exp $
 
 _GL_GLU_H=	${X11BASE}/include/GL/glu.h
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
@@ -21,15 +21,14 @@ IS_BUILTIN.glu!=							\
 # Mesa software distributed with the built-in XFree86.
 #
 BUILTIN_PKG.glu=	glu-${_MESA_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.glu=${BUILTIN_PKG.glu}
+BUILDLINK_VARS+=	BUILTIN_PKG.glu
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.glu=${IS_BUILTIN.glu}
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.glu
+.endif	# IS_BUILTIN.glu
 
-CHECK_BUILTIN.glu?=	no
-.if !empty(CHECK_BUILTIN.glu:M[yY][eE][sS])
-USE_BUILTIN.glu=	yes
+.if defined(USE_BUILTIN.MesaLib) && !empty(USE_BUILTIN.MesaLib:M[nN][oO])
+USE_BUILTIN.glu=	no
 .endif
 
 .if !defined(USE_BUILTIN.glu)
@@ -50,6 +49,9 @@ USE_BUILTIN.glu!=	\
 .  endif
 .endif	# USE_BUILTIN.glu
 
+CHECK_BUILTIN.glu?=	no
+.if !empty(CHECK_BUILTIN.glu:M[nN][oO])
+
 .if !empty(USE_BUILTIN.glu:M[nN][oO])
 BUILDLINK_DEPENDS.glu+=	glu>=6.0
 .endif
@@ -59,3 +61,5 @@ BUILDLINK_PREFIX.glu=	${X11BASE}
 USE_X11=		yes
 _MESA_REQD=		${_MESA_VERSION}
 .endif
+
+.endif	# CHECK_BUILTIN.glu

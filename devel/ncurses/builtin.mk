@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/20 19:28:46 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/03/29 05:43:30 jlam Exp $
 
 .if !defined(_BLNK_LIBNCURSES_FOUND)
 _BLNK_LIBNCURSES_FOUND!=	\
@@ -7,7 +7,7 @@ _BLNK_LIBNCURSES_FOUND!=	\
 	else								\
 		${ECHO} "yes";						\
 	fi
-MAKEFLAGS+=	_BLNK_LIBNCURSES_FOUND=${_BLNK_LIBNCURSES_FOUND}
+BUILDLINK_VARS+=	_BLNK_LIBNCURSES_FOUND
 .endif
 
 _NCURSES_H=	/usr/include/curses.h
@@ -38,16 +38,11 @@ _NCURSES_VERSION!=							\
 		}							\
 	' ${_NCURSES_H}
 BUILTIN_PKG.ncurses=	ncurses-${_NCURSES_VERSION}
-MAKEFLAGS+=		BUILTIN_PKG.ncurses=${BUILTIN_PKG.ncurses}
+BUILDLINK_VARS+=	BUILTIN_PKG.ncurses
 .    endif
 .  endif
-MAKEFLAGS+=	IS_BUILTIN.ncurses=${IS_BUILTIN.ncurses}
-.endif
-
-CHECK_BUILTIN.ncurses?=	no
-.if !empty(CHECK_BUILTIN.ncurses:M[yY][eE][sS])
-USE_BUILTIN.ncurses=	yes
-.endif
+BUILDLINK_VARS+=	IS_BUILTIN.ncurses
+.endif	# IS_BUILTIN.ncurses
 
 .if !defined(USE_BUILTIN.ncurses)
 USE_BUILTIN.ncurses?=	${IS_BUILTIN.ncurses}
@@ -100,6 +95,9 @@ USE_BUILTIN.ncurses=	no
 .  endif
 .endif	# USE_BUILTIN.ncurses
 
+CHECK_BUILTIN.ncurses?=	no
+.if !empty(CHECK_BUILTIN.ncurses:M[nN][oO])
+
 .if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
 .  if !empty(_BLNK_LIBNCURSES_FOUND:M[nN][oO])
 BUILDLINK_TRANSFORM.ncurses+=	-e "s|/curses\.h|/ncurses.h|g"
@@ -135,3 +133,5 @@ buildlink-ncurses-curses-h:
 			${BUILDLINK_DIR}/include/curses.h;		\
 	fi
 .endif
+
+.endif	# CHECK_BUILTIN.ncurses

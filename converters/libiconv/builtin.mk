@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:28 jlam Exp $
 
 .if !defined(_LIBICONV_FOUND)
 _LIBICONV_FOUND!=							\
@@ -7,7 +7,7 @@ _LIBICONV_FOUND!=							\
 	else								\
 		${ECHO} "yes";						\
 	fi
-MAKEFLAGS+=	_LIBICONV_FOUND=${_LIBICONV_FOUND}
+BUILDLINK_VARS+=	_LIBICONV_FOUND
 .endif
 
 _ICONV_H=	/usr/include/iconv.h
@@ -17,12 +17,7 @@ IS_BUILTIN.iconv=	no
 .  if exists(${_ICONV_H})
 IS_BUILTIN.iconv=	yes
 .  endif
-.endif
-
-CHECK_BUILTIN.iconv?=	no
-.if !empty(CHECK_BUILTIN.iconv:M[yY][eE][sS])
-USE_BUILTIN.iconv=	yes
-.endif
+.endif	# IS_BUILTIN.iconv
 
 .if !defined(USE_BUILTIN.iconv)
 USE_BUILTIN.iconv?=	${IS_BUILTIN.iconv}
@@ -42,6 +37,9 @@ USE_BUILTIN.iconv=	no
 .    endif
 .  endif
 .endif	# USE_BUILTIN.iconv
+
+CHECK_BUILTIN.iconv?=	no
+.if !empty(CHECK_BUILTIN.iconv:M[nN][oO])
 
 .if !empty(USE_BUILTIN.iconv:M[nN][oO])
 _LIBICONV=		-liconv
@@ -66,7 +64,7 @@ ICONV_TYPE!=	\
 		${ECHO} "native";					\
 	fi
 .  endif
-MAKEFLAGS+=	ICONV_TYPE=${ICONV_TYPE}
+BUILDLINK_VARS+=	ICONV_TYPE
 .endif
 
 .if defined(GNU_CONFIGURE)
@@ -76,3 +74,5 @@ CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 .  endif
 .endif
+
+.endif	# CHECK_BUILTIN.iconv

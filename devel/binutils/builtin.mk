@@ -1,12 +1,7 @@
-# $NetBSD: builtin.mk,v 1.1 2004/03/10 17:57:14 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2004/03/29 05:43:29 jlam Exp $
 
 # XXX Assume that the base OS provides a built-in binutils.
 IS_BUILTIN.binutils?=	yes
-
-CHECK_BUILTIN.binutils?=	no
-.if !empty(CHECK_BUILTIN.binutils:M[yY][eE][sS])
-USE_BUILTIN.binutils=	yes
-.endif
 
 .if !defined(USE_BUILTIN.binutils)
 USE_BUILTIN.binutils?=	${IS_BUILTIN.binutils}
@@ -35,6 +30,9 @@ USE_BUILTIN.binutils=	no
 .  endfor
 .endif	# USE_BUILTIN.binutils
 
+CHECK_BUILTIN.binutils?=	no
+.if !empty(CHECK_BUILTIN.binutils:M[nN][oO])
+
 .if !empty(USE_BUILTIN.binutils:M[nN][oO])
 AR=	${BUILDLINK_PREFIX.binutils}/bin/ar
 AS=	${BUILDLINK_PREFIX.binutils}/bin/as
@@ -42,3 +40,5 @@ LD=	${BUILDLINK_PREFIX.binutils}/bin/ld
 NM=	${BUILDLINK_PREFIX.binutils}/bin/nm
 RANLIB=	${BUILDLINK_PREFIX.binutils}/bin/ranlib
 .endif
+
+.endif	# CHECK_BUILTIN.binutils
