@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5431 2004/04/03 11:19:03 jmmv Exp $
+$NetBSD: CHANGES,v 1.5432 2004/04/03 11:23:13 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1763,3 +1763,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated GConf2 to 2.6.0nb1 [minskim 2004-04-03]
 	Updated gnome-themes to 2.6.0nb1 [minskim 2004-04-03]
 	Updated galeon-devel to 1.3.14anb1 [jmmv 2004-04-03]
+	Updated startup-notification to 0.6 [recht 2004-04-03]
