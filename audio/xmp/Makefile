@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 13:30:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/03/05 16:40:11 wiz Exp $
 # FreeBSD: ports/audio/xmp/Makefile,v 1.5 2000/04/08 21:24:59 mharo Exp
 #
 
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rxg@ms25.url.com.tw
 HOMEPAGE=	http://xmp.helllabs.org/
-COMMENT=	Player for many different Amiga and PC module formats.
+COMMENT=	Player for many different Amiga and PC module formats
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-alsa \
