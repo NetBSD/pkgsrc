@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2002/09/24 10:20:29 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/18 04:34:42 jschauma Exp $
 #
 
-DISTNAME=	bbappconf-0.0.1-peak3
-PKGNAME=	bbappconf-0.0.1.0.3
-PKGREVISION=	1
+DISTNAME=	bbappconf-0.0.2
+PKGNAME=	bbappconf-0.0.2
 CATEGORIES=	misc x11 wm
-MASTER_SITES=	http://bbtools.windsofstorm.net/sources/devel/
+MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
 
 MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://bbtools.windsofstorm.net
