@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1298 2004/01/12 23:54:50 xtraeme Exp $
+$NetBSD: TODO,v 1.1299 2004/01/13 00:21:35 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -210,6 +210,7 @@ Suggested package updates
 	o kaffe-1.1.3
 	o kbiff-3.7
 	o koffice-1.2.94 [pkg/23412|kleink]
+	o lame-3.95.1
 	o lavaps-2.4
 	o lcms-1.0.9
 	o libcaca-0.7
