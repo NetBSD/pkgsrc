@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2000/01/26 22:03:19 rh Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/08/28 16:00:20 rh Exp $
 bin/xsane
 man/man1/xsane.1
 share/locale/fr/LC_MESSAGES/xsane.mo
 share/locale/de/LC_MESSAGES/xsane.mo
 share/locale/cs/LC_MESSAGES/xsane.mo
+share/locale/sv/LC_MESSAGES/xsane.mo
 share/sane/xsane/xsane-style.rc
-share/sane/xsane-logo.xpm
+share/sane/xsane/xsane-calibration.pnm
+share/sane/xsane/xsane-logo.xpm
+share/sane/xsane/xsane-startimage.pnm
 share/sane/sane-backends-doc.html
 share/sane/sane-pnm-doc.html
 share/sane/sane-pnm16-doc.html
@@ -27,6 +30,10 @@ share/sane/sane-xsane-setup-save-doc.html
 share/sane/sane-xsane-standard-doc.html
 share/sane/sane-problems-doc.html
 share/sane/sane-xsane-setup-copy-doc.html
+share/sane/sane-xsane-output-formats-doc.html
+share/sane/sane-xsane-setup-device-doc.html
+share/sane/sane-xsane-setup-device.jpg
+share/sane/threshold.jpg
 share/sane/brightness.jpg
 share/sane/contrast.jpg
 share/sane/default.jpg
