@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 1999/12/12 08:06:04 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/22 14:26:50 scw Exp $
 
-DISTNAME=		DAPSource
-PKGNAME=		dap-2.0.2
-WRKSRC=			${WRKDIR}/dap
+DISTNAME=		dap-2.1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.cee.hw.ac.uk/~richardk/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		scw@netbsd.org
 HOMEPAGE=		http://www.cee.hw.ac.uk/~richardk/
