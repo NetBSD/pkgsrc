@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2003/07/22 17:17:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/07/23 09:41:41 drochner Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
+qt3/bin/lrelease
+qt3/bin/lupdate
 qt3/bin/qm2ts
 qt3/bin/qmake
 qt3/bin/qtconfig
