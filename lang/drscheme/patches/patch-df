@@ -1,0 +1,13 @@
+$NetBSD: patch-df,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+
+--- ../../man/man1/drscheme-jr.1.orig	Sat May 20 17:30:30 2000
++++ ../../man/man1/drscheme-jr.1	Sat May 20 17:31:16 2000
+@@ -104,7 +104,7 @@
+ looks for its libraries using the environment variables
+ PLTHOME and PLTCOLLECTS.  If this variable is not defined,
+ the installation directory is assumed (usually
+-"/usr/local/lib/plt/").  See the documentation for details.
++"XXXPREFIXXXX/lib/plt/").  See the documentation for details.
+ .PP
+ Please consult your local administrator to determine whether
+ the on-line documentation has been installed locally.

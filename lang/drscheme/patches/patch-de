@@ -1,0 +1,29 @@
+$NetBSD: patch-de,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+
+--- ../../bin/help-desk.orig	Sat May 20 16:35:35 2000
++++ ../../bin/help-desk	Sat May 20 16:36:05 2000
+@@ -1,13 +1,12 @@
+ #!/bin/sh
+ # This script was created by make-mred-launcher
++# and modified for the netbsd pkg system
+ 
+ if [ "$PLTHOME" = '' ] ; then
+-  PLTHOME=/usr/local/lib/plt
++  PLTHOME=XXXPREFIXXXX/lib/plt
+   export PLTHOME
+ fi
+ 
+-SYS=`${PLTHOME}/bin/archsys`
+-
+ # Find X flags and shift them to the front
+ findxend()
+ {
+@@ -66,7 +65,7 @@
+     xn=yes
+   ;;
+   *)
+-    exec ${PLTHOME}/.bin/${SYS}/mred  ${xa+"-display"} ${xa+"$xa"} ${xb+"-geometry"} ${xb+"$xb"} ${xc+"-bg"} ${xc+"$xc"} ${xd+"-fg"} ${xd+"$xd"} ${xe+"-font"} ${xe+"$xe"} ${xf+"-name"} ${xf+"$xf"} ${xg+"-selectionTimeout"} ${xg+"$xg"} ${xh+"-title"} ${xh+"$xh"} ${xi+"-xnllanguage"} ${xi+"$xi"} ${xj+"-xrm"} ${xj+"$xj"} ${xk+"-iconic"} ${xl+"-rv"} ${xm+"+rv"} ${xn+"-synchronous"} '-mqvL' 'help.ss' 'help' '--'  ${1+"$@"}
++    exec ${PLTHOME}/bin/mred  ${xa+"-display"} ${xa+"$xa"} ${xb+"-geometry"} ${xb+"$xb"} ${xc+"-bg"} ${xc+"$xc"} ${xd+"-fg"} ${xd+"$xd"} ${xe+"-font"} ${xe+"$xe"} ${xf+"-name"} ${xf+"$xf"} ${xg+"-selectionTimeout"} ${xg+"$xg"} ${xh+"-title"} ${xh+"$xh"} ${xi+"-xnllanguage"} ${xi+"$xi"} ${xj+"-xrm"} ${xj+"$xj"} ${xk+"-iconic"} ${xl+"-rv"} ${xm+"+rv"} ${xn+"-synchronous"} '-mqvL' 'help.ss' 'help' '--'  ${1+"$@"}
+   ;;
+  esac
+  shift

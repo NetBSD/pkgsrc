@@ -1,0 +1,19 @@
+$NetBSD: patch-dd,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+
+--- ../../bin/drscheme-jr.orig	Sat May 20 16:34:38 2000
++++ ../../bin/drscheme-jr	Sat May 20 16:35:23 2000
+@@ -1,11 +1,10 @@
+ #!/bin/sh
+ # This script was created by make-mzscheme-launcher
++# and modified for the netbsd pkg system
+ 
+ if [ "$PLTHOME" = '' ] ; then
+-  PLTHOME=/usr/local/lib/plt
++  PLTHOME=XXXPREFIXXXX/lib/plt
+   export PLTHOME
+ fi
+ 
+-SYS=`${PLTHOME}/bin/archsys`
+-
+-exec ${PLTHOME}/.bin/${SYS}/mzscheme '-mqvL' 'go.ss' 'drscheme-jr' '--'   ${1+"$@"}
++exec ${PLTHOME}/bin/mzscheme '-mqvL' 'go.ss' 'drscheme-jr' '--'   ${1+"$@"}

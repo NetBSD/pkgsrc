@@ -1,0 +1,22 @@
+$NetBSD: patch-db,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+
+--- ../../collects/launcher/launcherr.ss.orig	Sat May 20 16:10:38 2000
++++ ../../collects/launcher/launcherr.ss	Sat May 20 16:22:05 2000
+@@ -170,15 +170,14 @@
+ 		     "# This script was created by make-~a-launcher" newline
+ 		     newline
+ 		     "if [ \"$PLTHOME\" = '' ] ; then" newline
+-		     "  PLTHOME=~a" newline
++		     "  PLTHOME=XXXPREFIXXXX/lib/plt" newline
+ 		     "  export PLTHOME" newline
+ 		     "fi" newline
+ 		     newline
+-		     "SYS=`${PLTHOME}/bin/archsys`" newline
+ 		     newline)
+ 		    kind plthome)]
+ 	   [exec (format
+-		  "exec ${PLTHOME}/.bin/${SYS}/~a ~a"
++		  "exec ${PLTHOME}/bin/~a ~a"
+ 		  kind pre-str)]
+ 	   [args (format
+ 		  " ~a ${1+\"$@\"}~n"
