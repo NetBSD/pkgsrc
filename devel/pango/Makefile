@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.48 2004/12/24 00:17:37 reed Exp $
+# $NetBSD: Makefile,v 1.49 2004/12/24 10:03:54 jmmv Exp $
 #
 
-DISTNAME=		pango-1.6.0
-PKGREVISION=		1
+DISTNAME=		pango-1.8.0
 CATEGORIES=		devel fonts
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.4/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.4/ \
-			${MASTER_SITE_GNOME:=sources/pango/1.6/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.6/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.6/ \
+			${MASTER_SITE_GNOME:=sources/pango/1.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
