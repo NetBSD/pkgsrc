@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/13 10:31:14 tron Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 18:49:20 agc Exp $
 
 SHA1 (suse91/i586/compat-2004.4.2-3.i586.rpm) = 837f2272da26f8efe242e33724370d45cc2c5a74
+RMD160 (suse91/i586/compat-2004.4.2-3.i586.rpm) = a18f61b6fd3c3eb63600b37d8324a3f2fe0b4043
 Size (suse91/i586/compat-2004.4.2-3.i586.rpm) = 1806417 bytes
