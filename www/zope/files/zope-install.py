@@ -1,6 +1,6 @@
-#!/usr/pkg/bin/python
+#!/usr/pkg/bin/python2.0
 #
-#	$NetBSD: zope-install.py,v 1.5 2000/02/15 02:48:40 tsarna Exp $
+#	$NetBSD: zope-install.py,v 1.6 2002/01/22 18:47:15 drochner Exp $
 #
 # Copyright (c) 1998,1999 Endicor Technologies, Inc.
 # All rights reserved. Written by Ty Sarna <tsarna@endicor.com>

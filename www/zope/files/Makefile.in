@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.6 2000/10/22 23:11:48 tsarna Exp $
+# $NetBSD: Makefile.in,v 1.7 2002/01/22 18:47:15 drochner Exp $
 
 all: 	all-pcgi all-lib all-zodb all-search all-expat # link-cpickle
 configure: config-pcgi config-lib config-zodb config-search \
@@ -13,7 +13,7 @@ all-pcgi:
 config-lib:
 	(cd lib/python; \
 	cp @PREFIX@/lib/python2.0/config/Makefile.pre.in . ; \
-	make -f Makefile.pre.in boot PYTHON=@PREFIX@/bin/python)
+	make -f Makefile.pre.in boot)
 
 all-lib:
 	(cd lib/python; make)
@@ -21,7 +21,7 @@ all-lib:
 config-zodb:
 	(cd lib/python/ZODB; \
 	cp @PREFIX@/lib/python2.0/config/Makefile.pre.in . ; \
-	make -f Makefile.pre.in boot PYTHON=python)
+	make -f Makefile.pre.in boot)
 
 all-zodb:
 	(cd lib/python/ZODB; make)
@@ -30,7 +30,7 @@ all-zodb:
 config-search:
 	(cd lib/python/SearchIndex; \
 	cp @PREFIX@/lib/python2.0/config/Makefile.pre.in . ; \
-	make -f Makefile.pre.in boot PYTHON=python)
+	make -f Makefile.pre.in boot)
 
 all-search:
 	(cd lib/python/SearchIndex; make)
@@ -38,7 +38,7 @@ all-search:
 config-expat:
 	(cd lib/python/Shared/DC/xml/pyexpat; \
 	cp @PREFIX@/lib/python2.0/config/Makefile.pre.in . ; \
-	make -f Makefile.pre.in boot PYTHON=python)
+	make -f Makefile.pre.in boot)
 
 all-expat:
 	(cd lib/python/Shared/DC/xml/pyexpat; make)

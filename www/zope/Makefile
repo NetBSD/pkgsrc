@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/25 04:18:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2002/01/22 18:47:14 drochner Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -20,6 +20,8 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 ZOPEDIR=	${PREFIX}/lib/zope
 
+PYTHON_VERSIONS_ACCEPTED= 20 # XXX for now
+
 do-configure:
 	${SED} -e "s,@PREFIX@,${PREFIX}," \
 		<${FILESDIR}/Makefile.in > ${WRKSRC}/Makefile
@@ -32,7 +34,7 @@ do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	${INSTALL_DATA_DIR} ${ZOPEDIR}
 	(cd ${WRKSRC}; ${PAX} -r -w -s'/.*\.[cho]$$//' . ${ZOPEDIR})
-	${PREFIX}/bin/python \
+	${PYTHONBIN} \
 		${PREFIX}/lib/python2.0/compileall.py ${ZOPEDIR}
 	${CHMOD} -R a+rX ${ZOPEDIR}
 	(cd ${PREFIX}; ${FIND} lib/zope \( -type f -o -type l \) -print >>${PLIST_SRC})
@@ -44,4 +46,5 @@ do-install:
 		<${FILESDIR}/zope-shutdown.py >${PREFIX}/sbin/zope-shutdown
 	${CHMOD} 755 ${PREFIX}/sbin/zope-install ${PREFIX}/sbin/zope-shutdown
 
+.include "../../lang/python/application.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
