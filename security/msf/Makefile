@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/19 16:38:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/14 23:36:38 adrianp Exp $
 #
 
-DISTNAME=	framework-2.2
-PKGNAME=	msf-2.2
+DISTNAME=	framework-2.3
+PKGNAME=	msf-2.3
 CATEGORIES=	security
 MASTER_SITES=	http://www.metasploit.com/tools/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.metasploit.com/
 COMMENT=	Platform for developing, testing, and using exploit code
+
+LICENSE=	inlineegg-license
 
 DEPENDS+=	p5-Net-SSLeay>=1.23:../../security/p5-Net-SSLeay
 DEPENDS+=	p5-Term-ReadLine>=1.14:../../devel/p5-Term-ReadLine
@@ -20,9 +22,9 @@ MESSAGE_SUBST+= MSFDIR=${MSFDIR}
 PERL5_REQD=	5.6.0
 USE_PERL5=	YES
 PERL_FILES=	msfcli msfconsole msfdldebug msfencode msflogdump msfpayload \
-		msfpayload.cgi msfpescan msfweb msfupdate
+		msfpayload.cgi msfpescan msfweb msfupdate msfelfscan
 REPLACE_PERL+=	${PERL_FILES} tools/socketNinja.pl sdk/formatGen.pl \
-		sdk/patternOffset.pl sdk/spitCode.pl
+		sdk/patternOffset.pl sdk/spitCode.pl src/shellcode/import.pl
 
 NO_BUILDLINK=	YES
 NO_BUILD=	YES
@@ -40,7 +42,8 @@ PYTHON_PATCH_SCRIPTS=	payloads/external/WindowsSyscall.py \
 			payloads/external/linx86bind_ie.py \
 			payloads/external/linx86reverse_ie.py \
 			payloads/external/linx86reverse_xor.py \
-			payloads/external/win32_stg_winexec.py
+			payloads/external/win32_stg_winexec.py \
+			payloads/external/inlineegg.py
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .endif
@@ -49,6 +52,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${MSFDIR}
 	${INSTALL_DATA_DIR} ${MSFDIR}/docs
 	${INSTALL_DATA_DIR} ${MSFDIR}/data
+	${INSTALL_DATA_DIR} ${MSFDIR}/data/meterpreter
+	${INSTALL_DATA_DIR} ${MSFDIR}/data/msfweb
 	${INSTALL_DATA_DIR} ${MSFDIR}/encoders
 	${INSTALL_DATA_DIR} ${MSFDIR}/exploits
 	${INSTALL_DATA_DIR} ${MSFDIR}/extras
@@ -57,11 +62,14 @@ do-install:
 	${INSTALL_DATA_DIR} ${MSFDIR}/payloads
 	${INSTALL_DATA_DIR} ${MSFDIR}/payloads/external
 	${INSTALL_DATA_DIR} ${MSFDIR}/sdk
-	${INSTALL_DATA_DIR} ${MSFDIR}/tools
 	${INSTALL_DATA_DIR} ${MSFDIR}/src
+	${INSTALL_DATA_DIR} ${MSFDIR}/tools
 
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${MSFDIR}/docs
-	${INSTALL_DATA} ${WRKSRC}/data/* ${MSFDIR}/data
+	${INSTALL_PROGRAM} ${WRKSRC}/data/shelldemo ${MSFDIR}/data
+	${INSTALL_DATA} ${WRKSRC}/data/vncdll.dll ${MSFDIR}/data
+	${INSTALL_DATA} ${WRKSRC}/data/meterpreter/*.dll \
+		${MSFDIR}/data/meterpreter
 	${INSTALL_DATA} ${WRKSRC}/encoders/*.pm ${MSFDIR}/encoders
 	${INSTALL_DATA} ${WRKSRC}/exploits/*.pm ${MSFDIR}/exploits
 	${INSTALL_DATA} ${WRKSRC}/extras/*.tar.gz ${MSFDIR}/extras
@@ -71,6 +79,7 @@ do-install:
 	cd ${WRKSRC}/sdk && ${PAX} -rw . ${MSFDIR}/sdk
 	cd ${WRKSRC}/tools && ${PAX} -rw . ${MSFDIR}/tools
 	cd ${WRKSRC}/src && ${PAX} -rw . ${MSFDIR}/src
+	cd ${WRKSRC}/data/msfweb && ${PAX} -rw . ${MSFDIR}/data/msfweb
 
 	${INSTALL_DATA} ${WRKSRC}/nops/*.pm ${MSFDIR}/nops
 	${INSTALL_DATA} ${WRKSRC}/payloads/*.pm ${MSFDIR}/payloads
