@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2000/07/16 17:15:58 tron Exp $
+# $NetBSD: Makefile,v 1.135 2000/07/28 06:28:02 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -37,6 +37,7 @@
 #   SUBDIR += gnut		# broken
     SUBDIR += gtk-gnutella
     SUBDIR += gtksamba
+    SUBDIR += gtm
     SUBDIR += icb
     SUBDIR += icsi-finger
     SUBDIR += ircII
