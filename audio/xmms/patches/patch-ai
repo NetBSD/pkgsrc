@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 2000/03/12 20:36:27 tron Exp $
+
+--- xmms/main.c.orig	Mon Jan 31 19:35:16 2000
++++ xmms/main.c	Sun Mar 12 14:58:05 2000
+@@ -2945,7 +2945,7 @@
+ 	gchar *filename;
+ 	gint i;
+ 	gboolean have_display = FALSE;
+-#ifdef HAVE_SCHED_SETSCHEDULER
++#if defined(HAVE_SCHED_SETSCHEDULER) && !defined(__NetBSD__)
+ 	struct sched_param sparam;
+ 
+ #endif
+@@ -2988,7 +2988,7 @@
+ 
+ 	if (geteuid() == 0)
+ 	{
+-#ifdef HAVE_SCHED_SETSCHEDULER
++#if defined(HAVE_SCHED_SETSCHEDULER) && !defined(__NetBSD__)
+ 		if (cfg.use_realtime)
+ 		{
+ 			sparam.sched_priority = sched_get_priority_max(SCHED_RR);

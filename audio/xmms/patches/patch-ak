@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2000/03/12 20:36:27 tron Exp $
+
+--- wmxmms/Makefile.in.orig	Mon Jan 31 19:44:47 2000
++++ wmxmms/Makefile.in	Sun Mar 12 20:58:15 2000
+@@ -148,7 +148,7 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) -I..
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ @PTHREAD_LIBS@
+ wmxmms_OBJECTS =  getopt.o getopt1.o wmxmms.o
+ wmxmms_DEPENDENCIES =  $(top_builddir)/libxmms/libxmms.la
+ wmxmms_LDFLAGS = 
