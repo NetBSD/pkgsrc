@@ -1,0 +1,172 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/20 02:18:04 jtb Exp $
+
+--- src/Makefile.in.orig	Sun Sep 24 17:07:52 1995
++++ src/Makefile.in
+@@ -19,60 +19,61 @@
+ 
+ bindir = $(exec_prefix)/bin
+ libdir = $(exec_prefix)/lib
++sharedir = $(exec_prefix)/share
+ incdir = $(exec_prefix)/include
+ 
+-LDEF = -DPROJ_LIB=\"$(libdir)/$(LIB_DIR_NAME)\"
++LDEF = -DPROJ_LIB=\"$(sharedir)/proj\"
+ 
+ CFLAGS = -O -I./ $(DEFS) $(LDEF)
+ 
+ SHELL = /bin/sh
+ 
+-L = libproj.a
++L = libproj
+ 
+ .PRECIOUS: $L
+ 
+ azimuthal = \
+-	$L(PJ_aeqd.o) $L(PJ_gnom.o) $L(PJ_laea.o) $L(PJ_mod_ster.o) \
+-	$L(PJ_nsper.o) $L(PJ_nzmg.o) $L(PJ_ortho.o) $L(PJ_stere.o)
++	PJ_aeqd.o PJ_gnom.o PJ_laea.o PJ_mod_ster.o \
++	PJ_nsper.o PJ_nzmg.o PJ_ortho.o PJ_stere.o
+ 
+ conic = \
+-	$L(PJ_aea.o) $L(PJ_bipc.o) $L(PJ_bonne.o) $L(PJ_eqdc.o) \
+-	$L(PJ_imw_p.o) $L(PJ_lcc.o) $L(PJ_mpoly.o) $L(PJ_poly.o) \
+-	$L(PJ_rpoly.o) $L(PJ_sconics.o)
++	PJ_aea.o PJ_bipc.o PJ_bonne.o PJ_eqdc.o \
++	PJ_imw_p.o PJ_lcc.o PJ_mpoly.o PJ_poly.o \
++	PJ_rpoly.o PJ_sconics.o
+ 
+ cylinder = \
+-	$L(PJ_cass.o) $L(PJ_cc.o) $L(PJ_cea.o) $L(PJ_eqc.o) \
+-	$L(PJ_gall.o) $L(PJ_labrd.o) $L(PJ_lsat.o) $L(PJ_merc.o) \
+-	$L(PJ_mill.o) $L(PJ_ocea.o) $L(PJ_omerc.o) $L(PJ_somerc.o) \
+-	$L(PJ_tcc.o) $L(PJ_tcea.o) $L(PJ_tmerc.o)
++	PJ_cass.o PJ_cc.o PJ_cea.o PJ_eqc.o \
++	PJ_gall.o PJ_labrd.o PJ_lsat.o PJ_merc.o \
++	PJ_mill.o PJ_ocea.o PJ_omerc.o PJ_somerc.o \
++	PJ_tcc.o PJ_tcea.o PJ_tmerc.o
+ 
+ misc = \
+-	$L(PJ_airy.o) $L(PJ_aitoff.o) $L(PJ_august.o) $L(PJ_bacon.o) \
+-	$L(PJ_chamb.o) $L(PJ_hammer.o) $L(PJ_lagrng.o) $L(PJ_larr.o) \
+-	$L(PJ_lask.o) $L(PJ_nocol.o) $L(PJ_ob_tran.o) $L(PJ_oea.o) \
+-	$L(PJ_tpeqd.o) $L(PJ_vandg.o) $L(PJ_vandg2.o) $L(PJ_vandg4.o) \
+-	$L(PJ_wag7.o)
++	PJ_airy.o PJ_aitoff.o PJ_august.o PJ_bacon.o \
++	PJ_chamb.o PJ_hammer.o PJ_lagrng.o PJ_larr.o \
++	PJ_lask.o PJ_nocol.o PJ_ob_tran.o PJ_oea.o \
++	PJ_tpeqd.o PJ_vandg.o PJ_vandg2.o PJ_vandg4.o \
++	PJ_wag7.o
+ 
+ pseudo = \
+-	$L(PJ_boggs.o) $L(PJ_collg.o) $L(PJ_crast.o) $L(PJ_denoy.o) \
+-	$L(PJ_eck1.o) $L(PJ_eck2.o) $L(PJ_eck3.o) $L(PJ_eck4.o) \
+-	$L(PJ_eck5.o) $L(PJ_fahey.o) $L(PJ_fouc_s.o) $L(PJ_gins8.o) \
+-	$L(PJ_gn_sinu.o) $L(PJ_goode.o) $L(PJ_hatano.o) $L(PJ_loxim.o) \
+-	$L(PJ_mbt_fps.o) $L(PJ_mbtfpp.o) $L(PJ_mbtfpq.o) $L(PJ_moll.o) \
+-	$L(PJ_nell.o) $L(PJ_nell_h.o) $L(PJ_putp2.o) $L(PJ_putp3.o) \
+-	$L(PJ_putp4p.o) $L(PJ_putp5.o) $L(PJ_putp6.o) $L(PJ_robin.o) \
+-	$L(PJ_sts.o) $L(PJ_urm5.o) $L(PJ_urmfps.o) $L(PJ_wag2.o) \
+-	$L(PJ_wag3.o) $L(PJ_wink1.o) $L(PJ_wink2.o)
++	PJ_boggs.o PJ_collg.o PJ_crast.o PJ_denoy.o \
++	PJ_eck1.o PJ_eck2.o PJ_eck3.o PJ_eck4.o \
++	PJ_eck5.o PJ_fahey.o PJ_fouc_s.o PJ_gins8.o \
++	PJ_gn_sinu.o PJ_goode.o PJ_hatano.o PJ_loxim.o \
++	PJ_mbt_fps.o PJ_mbtfpp.o PJ_mbtfpq.o PJ_moll.o \
++	PJ_nell.o PJ_nell_h.o PJ_putp2.o PJ_putp3.o \
++	PJ_putp4p.o PJ_putp5.o PJ_putp6.o PJ_robin.o \
++	PJ_sts.o PJ_urm5.o PJ_urmfps.o PJ_wag2.o \
++	PJ_wag3.o PJ_wink1.o PJ_wink2.o
+ 
+ support = \
+-	$L(aasincos.o) $L(adjlon.o) $L(bch2bps.o) $L(bchgen.o) \
+-	$L(biveval.o) $L(dmstor.o) $L(mk_cheby.o) $L(pj_auth.o) \
+-	$L(pj_deriv.o) $L(pj_ell_set.o) $L(pj_ellps.o) $L(pj_errno.o) \
+-	$L(pj_factors.o) $L(pj_fwd.o) $L(pj_init.o) $L(pj_inv.o) \
+-	$L(pj_list.o) $L(pj_malloc.o) $L(pj_mlfn.o) $L(pj_msfn.o) \
+-	$L(pj_open_lib.o) $L(pj_param.o) $L(pj_phi2.o) $L(pj_pr_list.o) \
+-	$L(pj_qsfn.o) $L(pj_strerrno.o) $L(pj_tsfn.o) $L(pj_units.o) \
+-	$L(pj_zpoly1.o) $L(rtodms.o) $L(vector1.o)
++	aasincos.o adjlon.o bch2bps.o bchgen.o \
++	biveval.o dmstor.o mk_cheby.o pj_auth.o \
++	pj_deriv.o pj_ell_set.o pj_ellps.o pj_errno.o \
++	pj_factors.o pj_fwd.o pj_init.o pj_inv.o \
++	pj_list.o pj_malloc.o pj_mlfn.o pj_msfn.o \
++	pj_open_lib.o pj_param.o pj_phi2.o pj_pr_list.o \
++	pj_qsfn.o pj_strerrno.o pj_tsfn.o pj_units.o \
++	pj_zpoly1.o rtodms.o vector1.o
+ 
+ LLIST = $(azimuthal) $(conic) $(cylinder) $(misc) $(pseudo) $(support)
+ 
+@@ -81,47 +82,50 @@
+ 
+ all: @PROGS@
+ 
+-PROJ.o = proj.o gen_cheb.o p_series.o emess.o
++PROJ = proj.o gen_cheb.o p_series.o emess.o
+ 
+-proj:	$(PROJ.o) $L
+-	$(CC) -o $@ $(PROJ.o) $L $(LIBS)
++proj:	$(PROJ) $L
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(PROJ:.o=.lo) $L.la $(LIBS)
+ 
+-NAD2NAD.o = nad2nad.o nad_cvt.o nad_init.o nad_intr.o emess.o
++NAD2NAD = nad2nad.o nad_cvt.o nad_init.o nad_intr.o emess.o
+ 
+-nad2nad:	$(NAD2NAD.o) $L
+-	$(CC) -o $@ $(NAD2NAD.o) $L $(LIBS)
++nad2nad:	$(NAD2NAD) $L
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(NAD2NAD:.o=.lo) $L.la $(LIBS)
+ 
+ nad2nad: nad_list.h
+ 
+ nad2bin:	nad2bin.o
+-	$(CC) -o $@ nad2bin.o $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ nad2bin.lo $(LIBS)
+ 
+-RLIB = $L(pj_release.o)
++RLIB = pj_release.o
+ 
+ libproj:	$(RLIB) $(LLIST) $(PJ_ADDL)
+-	$(RANLIB) $L
++	$(LIBTOOL) --mode=link $(CC) -O -o libproj.la \
++	$(RLIB:.o=.lo) $(LLIST:.o=.lo) $(PJ_ADDL:.o=.lo) -lm \
++	-rpath $(libdir) --version-info 0:0
+ 
+-GEOD.o = geod.o geod_set.o geod_for.o geod_inv.o emess.o
++GEOD = geod.o geod_set.o geod_for.o geod_inv.o emess.o
+ 
+-geod:	$(GEOD.o) $L
+-	$(CC) -o $@ $(GEOD.o) $L $(LIBS)
++geod:	$(GEOD) $L
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(GEOD:.o=.lo) $L.la $(LIBS)
+ 
+ install:	all
+-	cp proj geod nad2nad $(bindir)
+-	chmod 755 $(bindir)/proj $(bindir)/geod $(bindir)/nad2nad
+-	cp projects.h $(incdir)
+-	chmod 644 $(incdir)/projects.h
+-	cp libproj.a $(libdir)
+-	chmod 644 $(libdir)/libproj.a
+-	$(RANLIB) $(libdir)/libproj.a
++	$(LIBTOOL) --mode=install install -c libproj.la $(libdir)
++	@for i in proj geod nad2nad ; do \
++		c="$(LIBTOOL) --mode=install install -c $$i $(bindir)" ; \
++		echo $$c; $$c; \
++	done
+ 
+ clean:
+-	/bin/rm -f core *.o
++	/bin/rm -f -r core *.o *.lo .libs libproj.la
+ 
+-$(GEOD.o): geodesic.h
++$(GEOD): geodesic.h
+ 
+ $(RLIB) : projects.h pj_list.h
+ 
+ nad2nad.o geod.o proj.o: emess.h projects.h
+ 
+-nad2bin.o: projects.h
++nad2bin: projects.h
++
++.c.o:
++		$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $<
