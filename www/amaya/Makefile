@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2003/05/05 19:05:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2003/05/24 14:38:17 salo Exp $
 #
 
-DISTNAME=	amaya-src-7.2
-PKGNAME=	amaya-7.2
-PKGREVISION=	1
+DISTNAME=	amaya-src-8.0
+PKGNAME=	${DISTNAME:S/-src//}
 WRKSRC=		${WRKDIR}/Amaya/work
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
@@ -16,12 +15,12 @@ HOMEPAGE=	http://www.w3.org/Amaya/
 COMMENT=	Web browser/editor from the World Wide Web Consortium (W3C)
 
 EXTRACT_ELEMENTS=	Amaya libwww
+
 USE_BUILDLINK2=	YES
+USE_X11=	YES
+USE_GMAKE=	YES
+GNU_CONFIGURE=	YES
 
-USE_X11BASE=		yes
-USE_GMAKE=		yes
-
-GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--without-graphic-libs	# Use pkgsrc libraries
 CFLAGS+=		-Dunix
@@ -43,8 +42,6 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/Amaya
 
 .include "../../graphics/imlib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
