@@ -1,4 +1,4 @@
-# $NetBSD: libtool-fix-la,v 1.1.2.6 2003/08/27 12:56:00 jlam Exp $
+# $NetBSD: libtool-fix-la,v 1.1.2.7 2003/08/30 07:45:03 jlam Exp $
 #
 # For *.la files, in the "relink_command" line, we make the following
 # replacements:
@@ -245,6 +245,7 @@ if $test -f $lafile; then
 			L=
 		fi
 		deps="$L$l"
+		deps=`$echo "X$deps" | $Xsed -e "s/^[ 	]*//"`
 		@MV@ -f $laifile ${laifile}.blsav
 		(
 			$cat ${laifile}.tmp | @SED@ -e '/^dependency_libs=/,$d'
