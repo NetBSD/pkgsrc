@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/03/12 20:38:59 magick Exp $
+# $NetBSD: Makefile,v 1.34 2004/03/22 03:34:35 kristerw Exp $
 
 DISTNAME=	nxtvepg-2.6.0
 PKGREVISION=	1
@@ -10,7 +10,8 @@ HOMEPAGE=	http://sourceforge.net/projects/nxtvepg/
 COMMENT=	NextView EPG decoder
 
 ONLY_FOR_PLATFORM=      NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
-			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-*
+			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-* \
+			NetBSD-[2-9]*-*
 
 USE_PERL5=	yes
 USE_GNU_TOOLS+=	make
