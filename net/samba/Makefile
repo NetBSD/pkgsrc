@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2004/01/11 02:26:30 jlam Exp $
+# $NetBSD: Makefile,v 1.110 2004/01/12 03:33:04 jlam Exp $
 
 DISTNAME=		samba-3.0.1
+PKGREVISION=		1
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
@@ -17,13 +18,14 @@ MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite
 
-CONFLICTS+=		winbind-[0-9]*
+CONFLICTS+=		pam-smbpass-[0-9]* winbind-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PERL="${PERL5}"
+PLIST_SRC=		${PKGDIR}/PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -82,8 +84,10 @@ CONFIGURE_ARGS+=	--enable-cups
 BUILD_DEFS+=		USE_CUPS
 
 .if defined(USE_PAM)
-.  include "../../security/PAM/buildlink3.mk"
+.  include "../../security/PAM/module.mk"
 CONFIGURE_ARGS+=	--with-pam
+CONFIGURE_ARGS+=	--with-pam_smbpass
+PLIST_SRC+=		${PKGDIR}/PLIST.pam
 .endif
 BUILD_DEFS+=		USE_PAM
 
@@ -122,10 +126,13 @@ SUPPORT_FILES_PERMS=	${EGDIR}/adduser.sh ${SAMBA_ETCDIR}/adduser	\
 			${ROOT_USER} ${ROOT_GROUP} 0755
 SUPPORT_FILES_PERMS+=	${EGDIR}/deluser.sh ${SAMBA_ETCDIR}/deluser	\
 			${ROOT_USER} ${ROOT_GROUP} 0755
-OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}		\
-			${SAMBA_VARDIR} ${SAMBA_LOGDIR} ${SAMBA_PIDDIR}
+MAKE_DIRS=		${SAMBA_VARDIR} ${SAMBA_LOGDIR} ${SAMBA_PIDDIR}
+OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
 OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0700
 RCD_SCRIPTS=		samba nmbd smbd winbindd
+
+INSTALL_LIBRARY=	\
+	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/adduser.sh > ${WRKDIR}/adduser.sh
@@ -133,6 +140,8 @@ post-build:
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/libnss_winbind.so ${PREFIX}/lib
+	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/libnss_wins.so ${PREFIX}/lib
 	cd ${WRKSRC}/../docs/Registry; for file in *.reg; do		\
 		${INSTALL_DATA} $$file ${DOCDIR}/$$file;		\
 	done
@@ -145,5 +154,16 @@ post-install:
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpwdtbl.sh ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mksmbpasswd.sh ${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} updatesmbpasswd.sh ${EGDIR}
+.if defined(USE_PAM)
+	${INSTALL_DATA_DIR} ${PAM_INSTMODULEDIR}
+	${INSTALL_LIBRARY} ${WRKSRC}/bin/pam_smbpass.so ${PAM_INSTMODULEDIR}
+	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/pam_winbind.so ${PAM_INSTMODULEDIR}
+	${INSTALL_DATA} ${WRKSRC}/pam_smbpass/README			\
+		${DOCDIR}/README.pam_smbpass
+	${INSTALL_DATA_DIR} ${EGDIR}/pam_smbpass
+	cd ${WRKSRC}/pam_smbpass/samples; for file in [a-z]*; do	\
+		${INSTALL_DATA} $${file} ${EGDIR}/pam_smbpass/$${file};	\
+	done
+.endif
 
 .include "../../mk/bsd.pkg.mk"
