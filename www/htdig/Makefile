@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/11/15 17:54:50 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2005/01/12 21:31:29 jlam Exp $
 
 DISTNAME=	htdig-3.1.6
+PKGREVISION=	1
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.htdig.org/files/ \
 		ftp://ftp.htdig.org/ \
@@ -16,10 +17,8 @@ HOMEPAGE=	http://htdig.sourceforge.net/
 COMMENT=	WWW indexing and searching system
 
 USE_BUILDLINK3=	YES
-USE_LANGUAGES=	c c++
 USE_PKGINSTALL=	YES
-USE_DB185=	yes
-BDB_ACCEPTED=	db2
+USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
@@ -28,21 +27,19 @@ CONFIGURE_ARGS=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
 		--with-database-dir=${DBDIR} \
 		--with-image-dir=${PREFIX}/share/examples/htdig \
 		--with-search-dir=${PREFIX}/share/examples/htdig
+CONFIGURE_ENV+=	PDF_PARSER="${LOCALBASE}/bin/acroread"
 CXXFLAGS+=	-Wno-deprecated
 CPPFLAGS+=	${CXXFLAGS}
 
 INSTALL_EXTRA_TMPL=     ${PKGDIR}/INSTALL
 PKG_SYSCONFSUBDIR=	htdig
 
-DBDIR?=		/var/db/htdig
+DBDIR?=		${VARBASE}/db/htdig
 MESSAGE_SUBST+=	DBDIR=${DBDIR}
 OWN_DIRS+=	${DBDIR}
 
 CONF_FILES+=	${PREFIX}/share/examples/htdig/htdig.conf \
 		${PKG_SYSCONFDIR}/htdig.conf
-
-post-patch:
-	${TOUCH} ${WRKSRC}/configure
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(EXTRACT_USING_PAX)
@@ -51,5 +48,10 @@ EXTRACT_ELEMENTS= -c ${DISTNAME}/db*
 EXTRACT_ELEMENTS= --exclude ${DISTNAME}/db*
 .endif
 
-.include "../../mk/bdb.buildlink3.mk"
+.include "../../databases/db/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+
+post-patch:
+	${TOUCH} ${WRKSRC}/configure
+
 .include "../../mk/bsd.pkg.mk"
