@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/03/27 03:20:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2001/04/05 19:27:41 jwise Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -37,7 +37,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 TEMPDIR?=	/tmp
 TEMPFILE!=echo ${TEMPDIR}/jsdk20.location.$$$$
 
-pre-fetch: install-build-depends
+pre-fetch:
+	${MAKE} install-depends DEPENDS=
 
 do-fetch:
 	-if [ ! -f ${DISTDIR}/${DISTFILES} ] ; \
