@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/06/24 03:42:41 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2004/09/30 22:59:47 xtraeme Exp $
 
-SHA1 (pearpc-0.2.0.tar.bz2) = b83a3cea723c077d8037e7a78015c4c325748dfc
-Size (pearpc-0.2.0.tar.bz2) = 547558 bytes
+SHA1 (pearpc-0.3.1.tar.bz2) = dd72099397045dfb5b2b74bc8119ca54b7bcfeba
+Size (pearpc-0.3.1.tar.bz2) = 641965 bytes
+SHA1 (patch-aa) = 4f5355b989f963ef030b1ae28d4f5fce6b0f462d

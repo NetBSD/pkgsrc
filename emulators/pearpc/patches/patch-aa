@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1 2004/09/30 22:59:47 xtraeme Exp $
+
+--- src/system/osapi/posix/systimer.cc.orig	2004-10-01 00:35:34.000000000 +0200
++++ src/system/osapi/posix/systimer.cc	2004-10-01 00:37:26.000000000 +0200
+@@ -31,7 +31,11 @@
+ static const int kTimerSignal = SYSTIMER_SIGNAL;
+ #ifdef USE_POSIX_REALTIME_CLOCK
+ static void signal_handler(int signo, siginfo_t *extra, void *junk);
++#  ifdef __NetBSD__
++static const int kClockRT = CLOCK_PROF;
++#  else
+ static const int kClockRT = CLOCK_PROCESS_CPUTIME_ID;
++#  endif
+ static const int kClock = CLOCK_REALTIME;
+ #else
+ # ifdef USE_POSIX_SETITIMER
+@@ -70,7 +74,11 @@
+ #ifdef USE_POSIX_REALTIME_CLOCK
+ static void signal_handler(int signo, siginfo_t *extra, void *junk)
+ {
++#  ifndef __NetBSD__
+ 	sys_timer_struct *timer = reinterpret_cast<sys_timer_struct *>(extra->si_value.sival_ptr);
++#  else
++	sys_timer_struct *timer = reinterpret_cast<sys_timer_struct *>(extra->si_sigval.sival_ptr);
++#  endif
+ 	timer->callback(reinterpret_cast<sys_timer>(timer));
+ }
+ #else
