@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6965 2004/08/21 13:09:21 reinoud Exp $
+$NetBSD: CHANGES,v 1.6966 2004/08/21 15:29:32 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3935,4 +3935,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated taglib to 1.2 [markd 2004-08-21]
 	Added tunepimp-0.3.0 [markd 2004-08-21]
 	Updated udfclient to 0.3 [reinoud 2004-08-21]
-
+	Added generate-2.0 [darcy 2004-08-21]
+	Added py-generate-2.0 [darcy 2004-08-21]
