@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/24 14:24:27 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/05/15 22:37:01 dmcmahill Exp $
 lib/libcassowary.a
 lib/libcassowary.so.0.0
 lib/cassowary/bench
-lib/cassowary/tests
 lib/cassowary/tests/ClTests
 lib/libconstraints.a
 include/Cl.h
@@ -50,6 +49,7 @@ share/guile/site/cassowary/libconstraints.so.0.0
 share/guile/site/cassowary/libconstraints.a
 doc/cassowary-tr.pdf
 doc/cassowary-tr.ps.gz
+@dirrm lib/cassowary/tests
 @dirrm lib/cassowary
 @dirrm include/cassowary
 @dirrm share/guile/site/cassowary
