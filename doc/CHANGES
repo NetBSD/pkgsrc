@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3439 2003/09/18 11:24:02 markd Exp $
+$NetBSD: CHANGES,v 1.3440 2003/09/18 14:06:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3828,3 +3828,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added kde-i18n-mk-3.1.4 [markd 2003-09-18]
 	Added kde-i18n-se-3.1.4 [markd 2003-09-18]
 	Added kde-i18n-ss-3.1.4 [markd 2003-09-18]
+	Added mp3splt-1.9 [wiz 2003-09-18]
