@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4893 2004/02/18 00:18:48 minskim Exp $
+$NetBSD: CHANGES,v 1.4894 2004/02/18 00:32:40 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -906,3 +906,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Storable to 2.09 [heinz 2004-02-17]
 	Updated p5-FreezeThaw to 0.43 [heinz 2004-02-17]
 	Added imhangul_status_applet-0.2 [minskim 2004-02-18]
+	Updated p5-MLDBM to 2.01 [heinz 2004-02-18]
