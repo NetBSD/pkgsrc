@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/29 15:08:11 erh Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/29 16:03:59 erh Exp $
 
+PKGNAME=        jakarta-tomcat4-${TOMCAT_VERSION}
 DISTNAME=       jakarta-tomcat-${TOMCAT_VERSION}
 WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	www java
@@ -22,7 +23,7 @@ USE_BUILDLINK2=	yes
 TOMCAT_LIB=     ${PREFIX}/tomcat4
 
 SAMPLECONFDIR=			${TOMCAT_LIB}/conf
-PKG_SYSCONFDIR.jakarta-tomcat=	${SAMPLECONFDIR}
+PKG_SYSCONFDIR.jakarta-tomcat4=	${SAMPLECONFDIR}
 
 USE_PKGINSTALL=	yes
 CFILES=		server.xml web.xml tomcat-users.xml
