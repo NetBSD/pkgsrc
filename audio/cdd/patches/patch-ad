@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 1999/10/20 05:44:05 dan Exp $
+$NetBSD: patch-ad,v 1.5 1999/10/21 01:26:14 dan Exp $
 
 
 Note:  before adding drives to the compatibility list, please test them
@@ -12,7 +12,7 @@ Note:  before adding drives to the compatibility list, please test them
 
 --- cdd_cdcmds.c.orig	Sun May 31 17:13:24 1998
 +++ cdd_cdcmds.c	Sun May 23 21:31:10 1999
-@@ -160,6 +160,26 @@
+@@ -160,6 +160,36 @@
          mmc_end_cdda
          }
      ,
