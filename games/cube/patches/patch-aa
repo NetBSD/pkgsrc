@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/01/18 17:48:53 peter Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/15 23:28:58 peter Exp $
 
 --- source/src/Makefile.orig	2003-12-20 16:47:58.000000000 +0100
 +++ source/src/Makefile	2004-06-10 01:27:22.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/01/18 17:48:53 peter Exp $
 -CXXOPTFLAGS=-Wall -O3 -fsigned-char -fomit-frame-pointer
 -CXXFLAGS=$(CXXOPTFLAGS) -I../enet/include `sdl-config --cflags`
 +CXXOPTFLAGS=-Wall -O3 -fsigned-char -fomit-frame-pointer -Wno-deprecated
-+CXXFLAGS=$(CXXOPTFLAGS) -I../enet/include `sdl-config --cflags` -I/usr/X11R6/include
++CXXFLAGS=$(CXXOPTFLAGS) -I../enet/include `sdl-config --cflags` -DHAS_SOCKLEN_T
  
  CLIENT_LIBS=-L../enet -lenet `sdl-config --libs` -lSDL_image -lSDL_mixer -lz -lGL -lGLU 
  CLIENT_OBJS= \
