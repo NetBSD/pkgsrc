@@ -1,0 +1,89 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+
+--- ntfsprogs/ntfsclone.c.orig	Sat Sep  4 06:16:32 2004
++++ ntfsprogs/ntfsclone.c
+@@ -30,6 +30,17 @@
+ #include <errno.h>
+ #include <getopt.h>
+ 
++#ifdef __NetBSD__
++#  include <sys/param.h>
++   /* NetBSD versions later than 2.0D have statvfs(2) instead of statfs(2) */
++#  if __NetBSD_Version__ >= 200040000
++#    include <sys/statvfs.h>
++#    define F_TYPE	f_fsid
++#  else
++#    define F_TYPE	f_type
++#  endif
++#endif
++
+ #include "debug.h"
+ #include "types.h"
+ #include "support.h"
+@@ -66,7 +77,11 @@
+ 	int restore_image;
+ 	char *output;
+ 	char *volume;
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 200040000)
++	struct statvfs stfs;
++#else
+ 	struct statfs stfs;
++#endif
+ } opt;
+ 
+ struct bitmap {
+@@ -338,16 +353,13 @@
+ 	}	
+ 		
+ 	msg_out = stdout;
+-	
+-	/* FIXME: this is a workaround for loosing debug info if stdout != stderr
+-	   and for the uncontrollable verbose messages in libntfs. Ughhh. */
+ 	if (opt.std_out)
+ 		msg_out = stderr;
+-	else if (opt.debug)
+-		stderr = stdout; 
+-	else
+-		if (!(stderr = fopen("/dev/null", "rw")))
+-			perr_exit("Couldn't open /dev/null");
++
++#ifdef DEBUG
++	if (!opt.debug)
++		ntfs_err_out = NULL;
++#endif
+ }
+ 
+ static void progress_init(struct progress_bar *p, u64 start, u64 stop, int res)
+@@ -462,7 +474,7 @@
+ 	if (write_all(&fd_out, buff, csize) == -1) {
+ 		int err = errno;
+ 		perr_printf("Write failed");
+-		if (err == EIO && opt.stfs.f_type == 0x517b)
++		if (err == EIO && opt.stfs.F_TYPE == 0x517b)
+ 			Printf("Apparently you tried to clone to a remote "
+ 			       "Windows computer but they don't\nhave "
+ 			       "efficient sparse file handling by default. "
+@@ -1152,12 +1164,12 @@
+ 	if (fstatfs(fd_out, &opt.stfs) == -1)
+ 		Printf("WARNING: Couldn't get filesystem type: "
+ 		       "%s\n", strerror(errno));
+-	else if (opt.stfs.f_type == 0x52654973)
++	else if (opt.stfs.F_TYPE == 0x52654973)
+ 		Printf("WARNING: You're using ReiserFS, it has very poor "
+ 		       "performance creating\nlarge sparse files. The next "
+ 		       "operation might take a very long time!\n"
+ 		       "Creating sparse output file ...\n");
+-	else if (opt.stfs.f_type == 0x517b)
++	else if (opt.stfs.F_TYPE == 0x517b)
+ 		Printf("WARNING: You're using SMBFS and if the remote share "
+ 		       "isn't Samba but a Windows\ncomputer then the clone "
+ 		       "operation will be very inefficient and may fail!\n");
+@@ -1168,7 +1180,7 @@
+ 		if (err == E2BIG) {
+ 			Printf("Your system or the destination filesystem "
+ 			       "doesn't support large files.\n");
+-			if (opt.stfs.f_type == 0x517b) {
++			if (opt.stfs.F_TYPE == 0x517b) {
+ 				Printf("SMBFS needs minimum Linux kernel "
+ 				       "version 2.4.25 and\n the 'lfs' option"
+ 				       "\nfor smbmount to have large "
