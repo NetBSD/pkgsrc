@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/22 08:24:28 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/10 01:56:42 xtraeme Exp $
 #
 
 DISTNAME=		atk-1.4.1
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://developer.gnome.org/projects/gap/
 COMMENT=		Set of interfaces for accessibility
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
@@ -24,8 +24,8 @@ CONFIGURE_ARGS+=	--with-html-dir="${LOCALBASE}/share/doc/html"
 # glib-mkenums overflows a 2048kb stack on atkobject.h
 UNLIMIT_RESOURCES=	stacksize
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
