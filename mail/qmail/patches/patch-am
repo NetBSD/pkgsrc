@@ -1,0 +1,17 @@
+$NetBSD: patch-am,v 1.1 2004/04/10 05:30:06 schmonz Exp $
+
+--- qmail-queue.8.orig	1998-06-15 06:53:16.000000000 -0400
++++ qmail-queue.8
+@@ -40,6 +40,12 @@ and does not enforce any restrictions on
+ However, the recipients probably expect to see a proper header,
+ as described in
+ .BR qmail-header(5) .
++
++Programs included with qmail which invoke
++.B qmail-queue
++will invoke the contents of
++.B $QMAILQUEUE
++instead, if that environment variable is set.
+ .SH "FILESYSTEM RESTRICTIONS"
+ .B qmail-queue
+ imposes two constraints on the queue structure:

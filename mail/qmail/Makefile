@@ -1,21 +1,20 @@
-# $NetBSD: Makefile,v 1.20 2004/03/29 05:10:04 snj Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/10 05:30:06 schmonz Exp $
 #
 
 DISTNAME=	qmail-1.03
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	http://cr.yp.to/software/			\
 		ftp://ftp.ntnu.no/pub/unix/mail/qmail/		\
 		ftp://ftp.jp.qmail.org/qmail/			\
-		ftp://ftp.rifkin.technion.ac.il/pub/qmail/	\
-		ftp://ftp.net.ohio-state.edu/pub/networking/mail/qmail/ \
-		ftp://ftp.id.wustl.edu/pub/qmail/
+		ftp://ftp.net.ohio-state.edu/pub/networking/mail/qmail/
 
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.qmail.org/
-COMMENT=	SECURE, reliable, efficient, simple, and FAST MTA for UNIX systems
+COMMENT=	Secure, reliable, efficient, simple, and fast MTA for UNIX systems
 
 DEPENDS+=	qmail-users>=1.0:../../mail/qmail-users
+DEPENDS+=	ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
 ALL_TARGET= 	it man
 INSTALL_TARGET=	setup check
@@ -30,8 +29,11 @@ USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 OWN_DIRS+=		${QMAILDIR}
 
+EVAL_PREFIX+=		LOCALBASE_UCSPI_TCP=ucspi-tcp
+
 FILES_SUBST+=		QMAILDIR=${QMAILDIR}
-RCD_SCRIPTS=		qmail
+FILES_SUBST+=		LOCALBASE_UCSPI_TCP=${LOCALBASE_UCSPI_TCP}
+RCD_SCRIPTS=		qmail qmailsmtpd
 RCD_SCRIPTS_EXAMPLEDIR=	${QMAILDIR}/etc/rc.d
 
 .include "../../mk/bsd.prefs.mk"

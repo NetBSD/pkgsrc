@@ -1,11 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2002/05/03 10:39:01 zuntum Exp $
+$NetBSD: patch-ac,v 1.2 2004/04/10 05:30:06 schmonz Exp $
 
-Patch necessary to cope with non-RFC >512 dns entries,
-as found on http://www.ckdhr.com/ckd/qmail-103.patch
-
---- dns.c.orig	Mon Aug 17 16:06:58 1998
-+++ dns.c	Wed Aug 26 16:28:56 1998
-@@ -21,10 +21,12 @@
+--- dns.c.orig	1998-06-15 06:53:16.000000000 -0400
++++ dns.c
+@@ -7,8 +7,6 @@
+ #include <errno.h>
+ extern int res_query();
+ extern int res_search();
+-extern int errno;
+-extern int h_errno;
+ #include "ip.h"
+ #include "ipalloc.h"
+ #include "fmt.h"
+@@ -21,10 +19,12 @@ extern int h_errno;
  static unsigned short getshort(c) unsigned char *c;
  { unsigned short u; u = c[0]; return (u << 8) + c[1]; }
  
@@ -19,7 +25,7 @@ as found on http://www.ckdhr.com/ckd/qmail-103.patch
  
  static int numanswers;
  static char name[MAXDNAME];
-@@ -45,18 +47,33 @@
+@@ -45,18 +45,33 @@ int type;
   errno = 0;
   if (!stralloc_copy(&glue,domain)) return DNS_MEM;
   if (!stralloc_0(&glue)) return DNS_MEM;
@@ -57,7 +63,7 @@ as found on http://www.ckdhr.com/ckd/qmail-103.patch
   while (n-- > 0)
    {
     i = dn_expand(response.buf,responseend,responsepos,name,MAXDNAME);
-@@ -66,7 +83,7 @@
+@@ -66,7 +81,7 @@ int type;
     if (i < QFIXEDSZ) return DNS_SOFT;
     responsepos += QFIXEDSZ;
    }
