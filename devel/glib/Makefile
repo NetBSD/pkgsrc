@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/06/19 06:04:41 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2001/06/19 06:48:50 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -36,6 +36,9 @@ CFLAGS=		-O0
 .endif
 
 GLIB_VERSION=		${DISTNAME:S/glib-//}
+GLIB_MAJOR_VERSION=	${GLIB_VERSION:C/\..*//}
+GLIB_MINOR_VERSION=	${GLIB_VERSION:C/[^.]*\.//:C/\..*//}
+GLIB_MICRO_VERSION=	${GLIB_VERSION:C/.*\.//}
 
 # We patch the version info in the configure scripts for reasons related to
 # shared library numbering, but we don't want it to leak into the various
@@ -52,5 +55,18 @@ pre-configure:
 			$${file}.fixme > $${file};			\
 		${RM} $${file}.fixme;					\
 	done
+
+post-configure:
+	@cd ${WRKSRC};							\
+	files="config.status config.h glibconfig.h";			\
+	for file in $${files}; do					\
+		${MV} $${file} $${file}.fixme;				\
+		${SED}	-e "s|^\(#define.*GLIB_MAJOR_VERSION\).*|\1	${GLIB_MAJOR_VERSION}|" \
+			-e "s|^\(#define.*GLIB_MINOR_VERSION\).*|\1	${GLIB_MINOR_VERSION}|" \
+			-e "s|^\(#define.*GLIB_MICRO_VERSION\).*|\1	${GLIB_MICRO_VERSION}|" \
+			$${file}.fixme > $${file};			\
+		${RM} $${file}.fixme;					\
+	done
+	${CHMOD} +x ${WRKSRC}/config.status
 
 .include "../../mk/bsd.pkg.mk"
