@@ -1,4 +1,4 @@
-/*	$NetBSD: lambd.c,v 1.3 2001/07/19 20:23:43 itojun Exp $	*/
+/*	$NetBSD: lambd.c,v 1.4 2001/07/19 20:29:08 itojun Exp $	*/
 
 /*
  * Copyright (C) 2001 WIDE Project.  All rights reserved.
@@ -291,6 +291,9 @@ morse()
 	unsigned long t = delay / 10;
 
 	for (p = morsestr; *p; p++) {
+		if (monitor())
+			return 1;
+
 		if (isdigit(*p))
 			q = digit[*p - '0'];
 		else if (isalpha(*p) && isupper(*p))
