@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/04/06 18:58:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/19 05:17:53 jmc Exp $
 #
 
 DISTNAME=	gtkballs-3.0.0
@@ -19,4 +19,5 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../x11/gtk2/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
