@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/21 23:29:25 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/05/23 18:04:32 salo Exp $
 bin/gimp
 bin/gimp-1.2
 bin/gimp-config
@@ -252,19 +252,19 @@ lib/gimp/1.2/plug-ins/xwd
 lib/gimp/1.2/plug-ins/zealouscrop
 lib/libgck-1.2.so
 lib/libgck-1.2.so.0
-lib/libgck-1.2.so.0.3
+lib/libgck-1.2.so.0.4
 lib/libgck.a
 lib/libgck.la
 lib/libgck.so
 lib/libgimp-1.2.so
 lib/libgimp-1.2.so.0
-lib/libgimp-1.2.so.0.3
+lib/libgimp-1.2.so.0.4
 lib/libgimp.a
 lib/libgimp.la
 lib/libgimp.so
 lib/libgimpui-1.2.so
 lib/libgimpui-1.2.so.0
-lib/libgimpui-1.2.so.0.3
+lib/libgimpui-1.2.so.0.4
 lib/libgimpui.a
 lib/libgimpui.la
 lib/libgimpui.so
@@ -1292,6 +1292,7 @@ share/gimp/1.2/scripts/pupi-button.scm
 share/gimp/1.2/scripts/rendermap.scm
 share/gimp/1.2/scripts/ripply-anim.scm
 share/gimp/1.2/scripts/round-corners.scm
+share/gimp/1.2/scripts/script-fu-util.scm
 share/gimp/1.2/scripts/sel-to-anim-img.scm
 share/gimp/1.2/scripts/select_to_brush.scm
 share/gimp/1.2/scripts/select_to_image.scm
@@ -1333,6 +1334,8 @@ share/gimp/1.2/tips/gimp_tips.ko.txt
 share/gimp/1.2/tips/gimp_tips.lt.txt
 share/gimp/1.2/tips/gimp_tips.pl.txt
 share/gimp/1.2/tips/gimp_tips.ru.txt
+share/gimp/1.2/tips/gimp_tips.sk.txt
+share/gimp/1.2/tips/gimp_tips.sl.txt
 share/gimp/1.2/tips/gimp_tips.tr.txt
 share/gimp/1.2/tips/gimp_tips.txt
 share/gimp/1.2/tips/gimp_tips.uk.txt
@@ -1423,6 +1426,10 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gimp-libgimp.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gimp-script-fu.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gimp-std-plugins.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gimp.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gimp-libgimp.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gimp-script-fu.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gimp-std-plugins.mo
@@ -1439,6 +1446,10 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp-libgimp.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp-script-fu.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp-std-plugins.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gimp-libgimp.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gimp-script-fu.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gimp-std-plugins.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gimp.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp-libgimp.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp-script-fu.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp-std-plugins.mo
