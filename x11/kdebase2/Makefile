@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/04/01 09:22:19 skrll Exp $
+# $NetBSD: Makefile,v 1.12 2001/05/01 09:46:36 skrll Exp $
 
 DISTNAME=	kdebase-2.1
 CATEGORIES=	x11 kde
@@ -9,7 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 
 BUILD_DEPENDS+=	automake-1.4:../../devel/automake
 BUILD_DEPENDS+=	qt2-designer>=2.2.4:../../x11/qt2-designer
-DEPENDS+=	kdelibs-2.1:../../x11/kdelibs2
+DEPENDS+=	kdelibs-2.1nb1:../../x11/kdelibs2
 
 USE_XPM=	yes
 USE_MOTIF=	yes
