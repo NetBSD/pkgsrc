@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2000/02/27 18:33:38 wiz Exp $
+
+if [ "$2" = POST-INSTALL ]
+then
+	echo "--------------------------------------------------------"
+	echo For getting the most out of libwmf, consider getting
+	echo the default Windows TrueType fonts and installing xfstt,
+	echo a free TrueType font server for X11.
+	echo "--------------------------------------------------------"
+fi
+
+exit 0
