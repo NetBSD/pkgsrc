@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/14 22:42:15 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/01 18:36:11 jmmv Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnomeui/gnome-ditem-edit.h
@@ -7,7 +7,7 @@ lib/libgnome-desktop-2.a
 lib/libgnome-desktop-2.la
 lib/libgnome-desktop-2.so
 lib/libgnome-desktop-2.so.3
-lib/libgnome-desktop-2.so.3.9
+lib/libgnome-desktop-2.so.3.12
 lib/pkgconfig/gnome-desktop-2.0.pc
 man/man1/gnome-about.1
 share/gnome-about/gnome-64.gif
@@ -51,6 +51,7 @@ ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-desktop-2.0.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -63,6 +64,7 @@ ${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-desktop-2.0.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -82,6 +84,7 @@ ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-desktop-2.0.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -95,6 +98,7 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnome-desktop-2.0.mo
+${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -102,13 +106,22 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-desktop-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-desktop-2.0.mo
+share/omf/gnome-desktop/fdl-C.omf
+share/omf/gnome-desktop/gnome-feedback-C.omf
+share/omf/gnome-desktop/gpl-C.omf
+share/omf/gnome-desktop/lgpl-C.omf
+@dirrm share/omf/gnome-desktop
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/vfolders
-@exec ${MKDIR} %D/share/gnome/help/gnome-feedback/C/figures
-@dirrm share/gnome/help/gnome-feedback/C/figures
+@comment in gnome2-dirs: @dirrm share/gnome/help/lgpl/C
+@comment in gnome2-dirs: @dirrm share/gnome/help/gpl/C
 @dirrm share/gnome/help/gnome-feedback/C
 @dirrm share/gnome/help/gnome-feedback
+@comment in gnome2-dirs: @dirrm share/gnome/help/fdl/C
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome-about/headers
 @dirrm share/gnome-about
+@comment in gnome2-dirs: @dirrm share/gnome
 @dirrm include/gnome-desktop-2.0/libgnomeui
 @dirrm include/gnome-desktop-2.0/libgnome
 @dirrm include/gnome-desktop-2.0
