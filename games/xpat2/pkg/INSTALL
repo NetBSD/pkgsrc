@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2000/07/28 18:12:07 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	if [ ! -f /var/games/xpat.log ]
+	then
+		install -c -o games -g games -m 0644 /dev/null \
+			/var/games/xpat.log
+	fi
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
