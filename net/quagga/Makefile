@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/13 08:18:03 salo Exp $
+# $NetBSD: Makefile,v 1.6 2003/10/02 12:57:48 kim Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -18,6 +18,7 @@ USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=/var/run/zebra
 # you might need debugging, it's a developer release !
 #CFLAGS+=	-g
 
