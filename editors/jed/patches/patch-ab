@@ -1,19 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2001/09/14 22:48:27 wiz Exp $
-
---- src/Makefile.in.orig	Fri Jun  1 04:23:13 2001
-+++ src/Makefile.in
-@@ -13,8 +13,8 @@
+--- src/Makefile.in.orig	Sun Oct  7 23:48:16 2001
++++ src/Makefile.in	Tue Oct  9 09:16:12 2001
+@@ -13,8 +13,7 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
  #JED_ROOT = $(HOME)/src/jed# <--- make sure # is at end of file!!
 -#JED_ROOT = $(prefix)/jed# <--- make sure # is at end of file!!
 -JED_ROOT = @JED_ROOT@# <--- make sure # is at end of file!!
-+JED_ROOT = $(prefix)/share/jed# <-- make sure # is at end of file!!
-+#JED_ROOT = @JED_ROOT# <-- make fure # is at end of file!!
++JED_ROOT = $(prefix)/share/jed# <--- make sure # is at end of file!!
  BIN_DIR = @bindir@
  MAN_DIR = @mandir@/man1
  INSTALL		= @INSTALL@
-@@ -151,7 +151,7 @@
+@@ -154,7 +153,7 @@
  rgrep: $(OBJDIR)/rgrep
  	@echo rgrep created in $(OBJDIR)
  $(OBJDIR)/rgrep: $(OBJDIR)/vfile.o $(OBJDIR)/rgrep.o
@@ -22,7 +19,7 @@ $NetBSD: patch-ab,v 1.4 2001/09/14 22:48:27 wiz Exp $
  #
  getmail: $(OBJDIR)/getmail
  	@echo getmail created in $(OBJDIR)
-@@ -183,7 +183,6 @@
+@@ -186,7 +185,6 @@
  
  install: all install_directories
  	$(INSTALL) $(OBJDIR)/jed $(DEST_BIN_DIR)/
