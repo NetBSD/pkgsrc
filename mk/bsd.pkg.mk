@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.174 1998/10/05 21:47:02 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.175 1998/10/12 19:40:33 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -654,7 +654,7 @@ _ACCEPTABLE=	yes
 .endfor	# _lic
 .endif	# ACCEPTABLE_LICENSES
 .ifndef _ACCEPTABLE
-IGNORE=	"Unacceptable license: ${LICENSE}"
+IGNORE=	"Unacceptable license: ${LICENSE} - set ACCEPTABLE_LICENSES in /etc/mk.conf to include ${LICENSE} to make this package"
 .endif
 .endif
 
@@ -798,35 +798,35 @@ describe:
 
 # Fetch
 _FETCH_FILE=								\
-		bfile=`${BASENAME} $$file`;				\
-		if [ ! -f $$file -a ! -f $$bfile ]; then		\
-			if [ -h $$file -o -h $$bfile ]; then		\
-				${ECHO_MSG} ">> ${_DISTDIR}/$$bfile is a broken symlink."; \
-				${ECHO_MSG} ">> Perhaps a filesystem (most likely a CD) isn't mounted?"; \
-				${ECHO_MSG} ">> Please correct this problem and try again."; \
-				exit 1;					\
-			fi ; \
-			${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
-			for site in $$sites; do				\
-				${ECHO_MSG} ">> Attempting to fetch $$bfile from $${site}."; \
-				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
-					if [ -n "${FAILOVER_FETCH}" -a -f ${MD5_FILE} ]; then	\
-						CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
-						CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
-						if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
-							continue 2;	\
-						else			\
-							${ECHO_MSG} ">> Checksum failure - trying next site."; \
-						fi;			\
-					else				\
-						continue 2;		\
-					fi;				\
-				fi					\
-			done;						\
-			${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
-			${ECHO_MSG} ">> file manually into ${_DISTDIR} and try again."; \
+	bfile=`${BASENAME} $$file`;					\
+	if [ ! -f $$file -a ! -f $$bfile ]; then			\
+		if [ -h $$file -o -h $$bfile ]; then			\
+			${ECHO_MSG} ">> ${_DISTDIR}/$$bfile is a broken symlink."; \
+			${ECHO_MSG} ">> Perhaps a filesystem (most likely a CD) isn't mounted?"; \
+			${ECHO_MSG} ">> Please correct this problem and try again."; \
 			exit 1;						\
-		fi
+		fi ;							\
+		${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
+		for site in $$sites; do					\
+			${ECHO_MSG} ">> Attempting to fetch $$bfile from $${site}."; \
+			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
+				if [ -n "${FAILOVER_FETCH}" -a -f ${MD5_FILE} ]; then	\
+					CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
+					CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
+					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
+						continue 2;		\
+					else				\
+						${ECHO_MSG} ">> Checksum failure - trying next site."; \
+					fi;				\
+				else					\
+					continue 2;			\
+				fi;					\
+			fi						\
+		done;							\
+		${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
+		${ECHO_MSG} ">> file manually into ${_DISTDIR} and try again."; \
+		exit 1;							\
+	fi
 
 .if !target(do-fetch)
 do-fetch:
@@ -1911,21 +1911,33 @@ fake-pkg: ${PLIST} ${DESCR}
 				${CP} ${MESSAGE_FILE} ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 			fi;						\
 		fi;							\
+		files="${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*";	\
+		if [ -d ${PATCHDIR} ]; then				\
+			for f in ${PATCHDIR}/patch-*; do		\
+				case $$f in				\
+				*.orig|*.rej|*~) ;;			\
+				*)					\
+					files="$$files $$f" ;;		\
+				esac;					\
+			done;						\
+		fi;							\
+		pkgsrcdir=`(cd ../.. ; /bin/pwd)`;			\
+		${GREP} '\$NetBSD' $$files | ${SED} -e 's|^'$$pkgsrcdir'/||' > ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
 		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true ECHO_MSG=${TRUE} | sort -u`; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
-			echo "a sanity check should be put in here to prevent some user having the pkg installed/registered twice somehow - HF" >/dev/null ; \
-			if [ -z "$$realdep" ]; then \
-				echo "$$dep not installed - NOT registered" ; \
-			else \
+			${ECHO} "a sanity check should be put in here to prevent some user having the pkg installed/registered twice somehow - HF" >/dev/null ; \
+			if [ -z "$$realdep" ]; then			\
+				${ECHO} "$$dep not installed - NOT registered" ; \
+			else						\
 				if [ -d "${PKG_DBDIR}/$$realdep" ]; then \
 					if ! ${GREP} "^${PKGNAME}$$" "${PKG_DBDIR}/$$realdep/+REQUIRED_BY" \
-						>/dev/null 2>&1; then \
+						>/dev/null 2>&1; then	\
 						${ECHO} "${PKGNAME}" >> "${PKG_DBDIR}/$$realdep/+REQUIRED_BY"; \
-						echo "${PKGNAME} registered in ${PKG_DBDIR}/$$realdep/+REQUIRED_BY" ; \
-					fi; \
-				fi; \
-			fi; \
-		done; \
+						${ECHO} "${PKGNAME} requires installed package $$realdep"; \
+					fi;				\
+				fi;					\
+			fi;						\
+		done;							\
 	fi
 .endif
 
