@@ -1,0 +1,138 @@
+$NetBSD: patch-aa,v 1.1 2002/06/18 07:05:32 explorer Exp $
+
+diff -ur dbdimp.c.orig dbdimp.c
+--- dbdimp.c.orig	Thu Apr  4 18:55:51 2002
++++ dbdimp.c	Wed May 15 19:16:54 2002
+@@ -40,6 +40,30 @@
+ 
+ 
+ int
++_dbd_begin(imp_dbh_t *imp_dbh)
++{
++	PGresult *result = NULL;
++	ExecStatusType status;
++
++	if (DBIc_has(imp_dbh, DBIcf_AutoCommit) == TRUE)
++		return 1;
++
++	if (imp_dbh->need_begin == 0)
++		return 1;
++
++	imp_dbh->need_begin = 0;
++
++	result = PQexec(imp_dbh->conn, "begin");
++	status = result ? PQresultStatus(result) : -1;
++	PQclear(result);
++	if (status != PGRES_COMMAND_OK) {
++		return 0;
++	}
++
++	return 1;
++}
++
++int
+ dbd_discon_all (drh, imp_drh)
+     SV *drh;
+     imp_drh_t *imp_drh;
+@@ -191,6 +215,7 @@
+ 
+     imp_dbh->init_commit = 1;			/* initialize AutoCommit */
+     imp_dbh->pg_auto_escape = 1;		/* initialize pg_auto_escape */
++    imp_dbh->need_begin = 1;
+ 
+     DBIc_IMPSET_on(imp_dbh);			/* imp_dbh set up now */
+     DBIc_ACTIVE_on(imp_dbh);			/* call disconnect before freeing */
+@@ -241,6 +266,9 @@
+         PGresult* result = 0;
+         ExecStatusType status;
+ 
++	if (imp_dbh->need_begin)
++		return 1;
++
+         /* execute commit */
+         result = PQexec(imp_dbh->conn, "commit");
+         status = result ? PQresultStatus(result) : -1;
+@@ -252,15 +280,8 @@
+             return 0;
+         }
+ 
+-        /* start new transaction.  AutoCommit must be FALSE, ref. 20 lines up */
+-        result = PQexec(imp_dbh->conn, "begin");
+-        status = result ? PQresultStatus(result) : -1;
+-        PQclear(result);
+-        if (status != PGRES_COMMAND_OK) {
+-            pg_error(dbh, status, "begin failed\n");
+-            return 0;
+-        }
+-        
++        imp_dbh->need_begin = 1;
++
+         return 1;
+     }
+     
+@@ -284,6 +305,9 @@
+         PGresult* result = 0;
+         ExecStatusType status;
+         
++	if (imp_dbh->need_begin)
++		return 1;
++
+         /* execute rollback */
+         result = PQexec(imp_dbh->conn, "rollback");
+         status = result ? PQresultStatus(result) : -1;
+@@ -295,15 +319,8 @@
+             return 0;
+         }
+ 
+-        /* start new transaction.  AutoCommit must be FALSE, ref. 20 lines up */
+-        result = PQexec(imp_dbh->conn, "begin");
+-        status = result ? PQresultStatus(result) : -1;
+-        PQclear(result);
+-        if (status != PGRES_COMMAND_OK) {
+-            pg_error(dbh, status, "begin failed\n");
+-            return 0;
+-        }
+-        
++        imp_dbh->need_begin = 1;
++
+         return 1;
+     }
+ 
+@@ -326,7 +343,8 @@
+ 
+     if (NULL != imp_dbh->conn) {
+         /* rollback if AutoCommit = off */
+-        if (DBIc_has(imp_dbh, DBIcf_AutoCommit) == FALSE) {
++        if ((imp_dbh->need_begin == 0)
++	    && (DBIc_has(imp_dbh, DBIcf_AutoCommit) == FALSE)) {
+             PGresult* result = 0;
+             ExecStatusType status;
+             result = PQexec(imp_dbh->conn, "rollback");
+@@ -402,16 +420,7 @@
+             if (dbis->debug >= 2) { PerlIO_printf(DBILOGFP, "dbd_db_STORE: switch AutoCommit to on: commit\n"); }
+         } else if ((oldval != FALSE && newval == FALSE) || (oldval == FALSE && newval == FALSE && imp_dbh->init_commit)) {
+             if (NULL != imp_dbh->conn) {
+-                /* start new transaction */
+-                PGresult* result = 0;
+-                ExecStatusType status;
+-                result = PQexec(imp_dbh->conn, "begin");
+-                status = result ? PQresultStatus(result) : -1;
+-                PQclear(result);
+-                if (status != PGRES_COMMAND_OK) {
+-                    pg_error(dbh, status, "begin failed\n");
+-                    return 0;
+-                }
++		    imp_dbh->need_begin = 1;
+             }
+             if (dbis->debug >= 2) { PerlIO_printf(DBILOGFP, "dbd_db_STORE: switch AutoCommit to off: begin\n"); }
+         }
+@@ -1027,6 +1036,9 @@
+     SV **svp;
+ 
+     if (dbis->debug >= 1) { PerlIO_printf(DBILOGFP, "dbd_st_execute\n"); }
++
++    if (_dbd_begin(imp_dbh) == 0)
++	    return 0;
+ 
+     /*
+     here we get the statement from the statement handle where
