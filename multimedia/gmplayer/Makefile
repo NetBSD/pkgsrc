@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 12:09:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/20 17:32:33 jmmv Exp $
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
 PKGREVISION=	1
@@ -41,7 +41,7 @@ SITES_${skin}= ${SKIN_SITES}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${SKINS}
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		YES
 CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \
 			--confdir=${PREFIX}/share/mplayer
 
@@ -57,7 +57,7 @@ do-install:
 
 .include "../../multimedia/mplayer-share/Makefile.depends"
 
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../multimedia/mplayer-share/Makefile.cflags"
