@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/10/25 20:00:55 minskim Exp $
+
+--- data/Makefile.in.orig	2004-10-21 01:24:31.000000000 -0500
++++ data/Makefile.in
+@@ -682,7 +682,7 @@ uninstall-man: uninstall-man1
+ 
+ @INTLTOOL_SCHEMAS_RULE@
+ 
+-@SCHEMAS_INSTALL_TRUE@install-data-local:
++install-data-local:
+ @SCHEMAS_INSTALL_TRUE@	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
