@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/01/04 19:56:38 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/02/15 10:12:33 wiz Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -67,27 +67,28 @@ include/glib/glib-2.0/gobject/gvalue.h
 include/glib/glib-2.0/gobject/gvaluearray.h
 include/glib/glib-2.0/gobject/gvaluecollector.h
 include/glib/glib-2.0/gobject/gvaluetypes.h
+@comment belongs to libiconv: lib/charset.alias
 lib/glib-2.0/include/glibconfig.h
 lib/libglib-2.0.a
 lib/libglib-2.0.la
 lib/libglib-2.0.so
 lib/libglib-2.0.so.200
-lib/libglib-2.0.so.200.0
+lib/libglib-2.0.so.200.1
 lib/libgmodule-2.0.a
 lib/libgmodule-2.0.la
 lib/libgmodule-2.0.so
 lib/libgmodule-2.0.so.200
-lib/libgmodule-2.0.so.200.0
+lib/libgmodule-2.0.so.200.1
 lib/libgobject-2.0.a
 lib/libgobject-2.0.la
 lib/libgobject-2.0.so
 lib/libgobject-2.0.so.200
-lib/libgobject-2.0.so.200.0
+lib/libgobject-2.0.so.200.1
 lib/libgthread-2.0.a
 lib/libgthread-2.0.la
 lib/libgthread-2.0.so
 lib/libgthread-2.0.so.200
-lib/libgthread-2.0.so.200.0
+lib/libgthread-2.0.so.200.1
 lib/pkgconfig/glib-2.0.pc
 lib/pkgconfig/gmodule-2.0.pc
 lib/pkgconfig/gobject-2.0.pc
@@ -189,15 +190,18 @@ share/doc/html/gobject/right.png
 share/doc/html/gobject/rn01.html
 share/doc/html/gobject/up.png
 share/glib-2.0/gettext/po/Makefile.in.in
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/glib20.mo
@@ -205,6 +209,7 @@ ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/glib20.mo
