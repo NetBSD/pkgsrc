@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2890 2005/01/13 09:59:47 adam Exp $
+$NetBSD: TODO,v 1.2891 2005/01/13 11:58:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -313,7 +313,7 @@ Suggested package updates
 	o ast-ksh-20040229
 	o astyle-1.15.3
 	o at-spi-1.6.2
-	o auctex-11.53
+	o auctex-11.54
 	o autogen-5.6.5
 	o avidemux-2.0.34
 	o avl-2.0.1
@@ -376,6 +376,7 @@ Suggested package updates
 	o conglomerate-0.7.16
 	o conserver-8.1.11
 	o controlcenter-1.4.0.5
+	o coreutils-5.3.0
 	o corewars-0.9.13
 	o courier-auth-0.48
 	o courier-imap-4.0.0
@@ -405,6 +406,7 @@ Suggested package updates
 	o dict-server-1.9.11
 	o diction-1.07
 	o diffstat-1.37
+	o dillo-0.8.4
 	o dinotrace-9.2a
 	o dirac-0.5.0
 	o dirdiff-2.0
@@ -493,7 +495,6 @@ Suggested package updates
 	o gdeskcal-0.57.1
 	o gdm-2.6.0.6
 	o gdm1-2.2.5.5
-	o geda-20041228
 	o generator-0.35
 	o geneweb-4.10
 	o gerbv-1.0.0
@@ -516,6 +517,7 @@ Suggested package updates
 	o gkrellm1-snmp-0.21
 	o gkrellm1-xmms-0.5.8
 	o gliv-1.9.1
+	o glpk-4.8
 	o gnet1-1.1.9
 	o gnetman-20041117
 	o gnocatan-0.8.1.30
@@ -540,6 +542,7 @@ Suggested package updates
 	o gri-2.12.8
 	o gsasl-0.2.4
 	o gsed-4.1.2
+	o gsl-1.6
 	o gtetrinet-0.7.8
 	o gtexinfo-4.8
 	o gtk-systrace-2003.06.23
@@ -565,15 +568,16 @@ Suggested package updates
 	o httperf-0.8
 	o httptunnel-3.3
 	o hydrogen-0.9.0
-	o hylafax-4.2.0
+	o hylafax-4.2.1
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icepref-2.3
-	o icewm-1.2.19
-	o icewm-gnome-1.2.19
-	o icewm-imlib-1.2.19
+	o icewm-1.2.20
+	o icewm-gnome-1.2.20
+	o icewm-imlib-1.2.20
 	o icsi-finger-1.0.29
 	o idesk-0.6.0 [pkg/28850]
+	o idesk-0.6.1
 	o ifile-1.3.5
 	o ijs-0.35
 	o ike-scan-1.6.7
@@ -631,6 +635,7 @@ Suggested package updates
 	o libetpan-0.34b
 	o libextractor-0.4.0
 	o libfwbuilder-2.0.4
+	o libgcrypt-1.2.1
 	o libgda-1.2.0
 	o libggi-2.1
 	o libggiwmh-0.2.0
@@ -707,7 +712,7 @@ Suggested package updates
 	o mrproject-0.9.1
 	o mrtg-2.11.1
 	o mserv-devel-0.41
-	o msmtp-1.3.0
+	o msmtp-1.3.1
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.4.3
@@ -892,7 +897,7 @@ Suggested package updates
 	o p5-XML-XUpdate-LibXML-0.5.0
 	o p5-gettext-1.03
 	o p5-glib2-1.071
-	o p5-gtk2-1.071
+	o p5-gtk2-1.072
 	o p5-ispman-1.1.1
 	o p5-libapreq-1.3
 	o p5-libwww-5.801
@@ -912,6 +917,7 @@ Suggested package updates
 	o pgpdump-0.24
 	o phoon-20030120
 	o photopc-3.05
+	o phpmyadmin-2.6.1rc2
 	o phylip-3.62
 	o piewm-1.03
 	o pilot-link-0.11.8
@@ -932,6 +938,7 @@ Suggested package updates
 	o prc-tools-2.3
 	o proj-4.4.9
 	o proxsmtp-1.0
+	o psi-0.9.3
 	o psmisc-21.5
 	o pstree-2.26
 	o pth-2.0.3
@@ -1035,12 +1042,12 @@ Suggested package updates
 	o scheme48-1.1
 	o scm-5d9
 	o screws-0.56 [pkg/28646]
-	o scribus-1.2
+	o scribus-1.2.1
 	o scrollz-1.9.4
 	o sdig-0.40
 	o semantic-1.4.4
 	o sendfile-20010424
-	o sendmail-8.13.2
+	o sendmail-8.13.3
 	o ser-0.8.14
 	o sharity-light-1.3
 	o shmux-1.0b6
@@ -1168,6 +1175,7 @@ Suggested package updates
 	o weechat-0.0.8
 	o windowlab-1.25
 	o wine-20041201 [mmap problem on NetBSD]
+	o wine-20050111
 	o wmbiff-0.4.26
 	o wmweather-2.4.3
 	o wol-0.7.1
