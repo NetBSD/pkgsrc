@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:52 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/15 10:01:39 jmmv Exp $
 bin/glmovie
 bin/gtv
 bin/plaympeg
@@ -16,7 +16,7 @@ include/smpeg/MPEGvideo.h
 include/smpeg/smpeg.h
 lib/libsmpeg-0.4.so
 lib/libsmpeg-0.4.so.1
-lib/libsmpeg-0.4.so.1.2
+lib/libsmpeg-0.4.so.1.3
 lib/libsmpeg.a
 lib/libsmpeg.la
 lib/libsmpeg.so
