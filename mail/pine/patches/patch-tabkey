@@ -1,8 +1,8 @@
-$NetBSD: patch-tabkey,v 1.4 1998/08/07 11:09:50 agc Exp $
+$NetBSD: patch-tabkey,v 1.5 1999/11/11 17:40:18 tv Exp $
 
---- pine/mailcmd.c.orig	Sun Jul 19 01:00:42 1998
-+++ pine/mailcmd.c	Sun Jul 19 01:06:24 1998
-@@ -316,9 +316,7 @@
+--- pine/mailcmd.c.orig	Mon Oct 11 18:13:50 1999
++++ pine/mailcmd.c	Thu Nov 11 12:03:40 1999
+@@ -320,9 +320,7 @@
  	}
  	else{
  	    prompt[0] = '\0';
@@ -13,7 +13,7 @@ $NetBSD: patch-tabkey,v 1.4 1998/08/07 11:09:50 agc Exp $
  		char nextfolder[MAXPATH];
  
  		strcpy(nextfolder, state->cur_folder);
-@@ -445,14 +443,7 @@
+@@ -465,14 +463,7 @@
  	    char ret = 'n';
  	    int  in_inbox = !strucmp(state->cur_folder,state->inbox_name);
  
@@ -29,18 +29,18 @@ $NetBSD: patch-tabkey,v 1.4 1998/08/07 11:09:50 agc Exp $
  		char	    nextfolder[MAXPATH];
  		MAILSTREAM *nextstream = NULL;
  		long	    recent_cnt;
-@@ -463,8 +454,8 @@
- 				     state->context_current, &recent_cnt))){
- 			if(!in_inbox){
- 			    sprintf(prompt, "No more %ss.  Return to \"%s\"",
+@@ -490,8 +481,8 @@
+ 			    };
+ 
+ 			    sprintf(prompt, "No more %ss.  Return to \"%s\"? ",
 -				    (state->context_current->use&CNTXT_INCMNG)
 -				      ? "incoming folder" : "news group", 
 +				    NEWS_TEST(state->context_current)
 +				      ? "news group" : "folder", 
  				    state->inbox_name);
- 			    ret = want_to(prompt, 'y', 'x', NO_HELP, WT_NORM);
- 			    if(ret == 'y'){
-@@ -475,15 +466,15 @@
+ 
+ 			    ret = radio_buttons(prompt, -FOOTER_ROWS(state),
+@@ -512,15 +503,15 @@
  			}
  			else
  			  q_status_message1(SM_ORDER, 0, 2, "No more %ss",
@@ -60,7 +60,7 @@ $NetBSD: patch-tabkey,v 1.4 1998/08/07 11:09:50 agc Exp $
  			    nextfolder,
  			    recent_cnt ? long2string(recent_cnt) : "some");
  
-@@ -1248,12 +1239,9 @@
+@@ -1350,12 +1341,9 @@
  	}
  
  	if(!state->nr_mode

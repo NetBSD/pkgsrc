@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 1998/07/31 17:51:21 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/11/11 17:40:18 tv Exp $
 bin/abookcpy
 bin/pine
 bin/pgpdecode
 bin/pgpencrypt
 bin/pgpsign
-etc/pine.conf
-etc/pine.conf.fixed
 man/man1/pine.1
 share/doc/pine/tech-notes.txt
-share/examples/pine/dot.pinerc.pgp.sample
+share/examples/pine/dot.pinerc.pgp
+share/examples/pine/pine.conf
+share/examples/pine/pine.conf.fixed
+@exec if [ ! -f %D/etc/pine.conf ]; then cp -p %D/share/examples/pine/pine.conf %D/etc/; fi
 @dirrm share/doc/pine
 @dirrm share/examples/pine
