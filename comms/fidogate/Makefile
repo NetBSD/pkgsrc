@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/10/31 14:32:30 tv Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/30 17:37:15 jlam Exp $
 #
 
 DISTNAME=	fidogate-4.4.4
@@ -10,8 +10,7 @@ HOMEPAGE=	http://www.fido.de/fidogate/
 COMMENT=	FidoNet (FTN) <-> Internet mail and news gateway
 
 USE_BUILDLINK_ONLY=	yes
-USE_GMAKE=	yes
-USE_PERL5=	yes
+USE_GMAKE=		yes
 
 INFO_FILES=	fidogate.info
 MAKE_ENV=	DEBUG="${CFLAGS} -Werror" CC="${CC} ${STRIPFLAG}"
@@ -56,4 +55,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/fidogate.txt ${PREFIX}/share/doc/fidogate/
 	${INSTALL_DATA} ${WRKSRC}/fidogate.conf.dist ${PREFIX}/etc/fidogate/
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
