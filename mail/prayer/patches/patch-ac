@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/12/27 12:52:07 abs Exp $
+
+--- files/Makefile.orig	Wed Oct 30 14:08:03 2002
++++ files/Makefile
+@@ -54,11 +54,11 @@ install-cert:
+ 	fi
+ 
+ install-config: etc/prayer.cf
+-	$(INSTALL) -D -o $(RO_USER) -g $(RO_GROUP) -m $(PUBLIC_FILE) \
++	$(INSTALL) -o $(RO_USER) -g $(RO_GROUP) -m $(PUBLIC_FILE) \
+ 	etc/prayer.cf ${BROOT}${PRAYER_CONFIG_FILE}
+ 
+ install-aconfig:
+-	$(INSTALL) -D -o $(RO_USER) -g $(RO_GROUP) -m $(PUBLIC_FILE) \
++	$(INSTALL) -o $(RO_USER) -g $(RO_GROUP) -m $(PUBLIC_FILE) \
+ 	etc/prayer-accountd.cf ${BROOT}${ACCOUNTD_CONFIG_FILE}
+ 
+ install-motd:
