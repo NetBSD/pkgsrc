@@ -1,0 +1,50 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/16 03:42:36 salo Exp $
+bin/newfile
+man/man1/newfile.1
+share/newfile/fileproc.rb
+share/newfile/licenses/Artistic@Artistic
+share/newfile/licenses/Artistic@README
+share/newfile/licenses/Artistic@license.inc
+share/newfile/licenses/BSD@LICENSE
+share/newfile/licenses/BSD@README
+share/newfile/licenses/BSD@license.inc
+share/newfile/licenses/GPL@COPYING
+share/newfile/licenses/GPL@README
+share/newfile/licenses/GPL@license.inc
+share/newfile/licenses/default@license.inc
+share/newfile/licenses/minimal@LICENSE
+share/newfile/licenses/minimal@README
+share/newfile/licenses/minimal@license.inc
+share/newfile/licenses/no@license.inc
+share/newfile/projects/auto@Makefile.am
+share/newfile/projects/auto@Makefile.cvs
+share/newfile/projects/auto@acinclude.m4
+share/newfile/projects/auto@configure.ac
+share/newfile/projects/auto@doc!Makefile.am
+share/newfile/projects/auto@doc-src!Makefile.am
+share/newfile/projects/auto@doc-src!alane.pod.mk
+share/newfile/projects/auto@doc-src!alane.tex.mk
+share/newfile/projects/auto@src!Makefile.am
+share/newfile/projects/port@Makefile
+share/newfile/projects/port@distinfo
+share/newfile/projects/port@pkg-comment
+share/newfile/projects/port@pkg-descr
+share/newfile/projects/port@pkg-plist
+share/newfile/sytab.rb
+share/newfile/templates/body.inc@sh
+share/newfile/templates/tmpl@c
+share/newfile/templates/tmpl@c++
+share/newfile/templates/tmpl@generic
+share/newfile/templates/tmpl@h
+share/newfile/templates/tmpl@h++
+share/newfile/templates/tmpl@mgp
+share/newfile/templates/tmpl@mk
+share/newfile/templates/tmpl@pl
+share/newfile/templates/tmpl@pod
+share/newfile/templates/tmpl@py
+share/newfile/templates/tmpl@rb
+share/newfile/templates/tmpl@sh
+@dirrm share/newfile/templates
+@dirrm share/newfile/projects
+@dirrm share/newfile/licenses
+@dirrm share/newfile

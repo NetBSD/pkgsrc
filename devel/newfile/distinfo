@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/16 03:42:36 salo Exp $
+
+SHA1 (newfile-1.0.3.tar.gz) = 30d4cc7c0db20ddc93b24a8ae610398282a2b914
+Size (newfile-1.0.3.tar.gz) = 136863 bytes
+SHA1 (patch-aa) = 95be72f2f3784fa70e5d444d5c14f61c66124eca
