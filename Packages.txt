@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.139 2001/02/09 14:48:39 agc Exp $
+# $NetBSD: Packages.txt,v 1.140 2001/02/16 13:06:17 wiz Exp $
 ###########################################################################
 
 			==========================
@@ -349,7 +349,7 @@ which user to su(8) to to do a 'cvs update'.
  ========================================
 
 Drop your favourite login shell in /usr/local, or install it from
-/etc/rc.local. Also, if you use a OS version below 1.5 or stil want
+/etc/rc.local. Also, if you use a OS version below 1.5 or you still want
 to use the pkgsrc version of ssh for some reason, be sure to install 
 ssh before starting it from rc.local:
 
@@ -402,7 +402,7 @@ The bulk builds consist of three steps:
 	that report will also be mailed to the build's admin.
 
 During the build, a list of broken packages will be compiled in
-.usr/pkgsrc/.broken  (or .../.broken.${MACHINE} if OBJMACHINE is set),
+/usr/pkgsrc/.broken  (or .../.broken.${MACHINE} if OBJMACHINE is set),
 individual build logs of broken builds can be found in the package's
 directory. These files are used by the bulk-targets to mark broken builds
 to not waste time trying to rebuild them, and they can be used to debug
@@ -452,9 +452,11 @@ itself. The mandatory fields are the DISTNAME which specifies the base name
 of the distribution file to be downloaded from the site on the Internet,
 MASTER_SITES which specifies that site, CATEGORIES which denotes the
 categories into which the package falls, PKGNAME which is the name of the
-package and the MAINTAINER name. This is so that anyone who quibbles with
-the (always completely correct) decisions taken by the guy who maintains
-the port can complain vigorously.
+package, the MAINTAINER name, and the COMMENT variable, which should
+contain a one-line description of the package (the package name should not
+appear, it will be added automatically). The maintainer variable is there
+so that anyone who quibbles with the (always completely correct) decisions
+taken by the guy who maintains the port can complain vigorously.
 
 The MASTER_SITES may be set to one of the predefined sites:
 
@@ -479,18 +481,15 @@ MASTER_SITE_SUBDIR will not work.
 Currently the following values are available for CATEGORIES. If more than
 one is used, they need to be separated by spaces:
 
-        archivers      devel          math           shells
-        audio          editors        mbone          sysutils
-        benchmarks     emulators      meta-pkgs      templates
-        biology        finance        misc           textproc
-        cad            fonts          net            time
-        chat           games          news           wm
-        comms          graphics       parallel       www
-        converters     ham            pkgtools       x11
-        corba          japanese       plan9
-        cross          lang           print
-        databases      mail           security
-  
+       archivers  audio      benchmarks   biology       cad     
+       chat       comms      converters   cross         databases
+       devel      editors    emulators    finance       fonts
+       games      graphics   ham          japanese      lang
+       mail       math       mbone        misc          net
+       news       parallel   print        security      shells
+       sysutils   textproc   time         wm            www
+       x11
+
 See the NetBSD packages(7) manual page for a description of all available
 options and variables.
 
@@ -535,6 +534,12 @@ package from the FreeBSD ports collection:
  - If there exists a home page for the software in question, please
    add the variable HOMEPAGE right after MAINTAINER. The value of this
    variable should be the URL for the home page.
+ - Please also set the COMMENT variable to a short description of the
+   package.
+
+ port2pkg (pkgsrc/pkgtools/port2pkg) does many of the mentioned steps
+ for you -- operator discretion is advised, though.
+
 
  4.2 files/*
  ===========
@@ -621,11 +626,6 @@ witticisms.
  4.4.1 Mandatory files
  =====================
 
- * pkg/COMMENT:
-   A one-line description of the piece of software. There is no need to
-   mention the package's name - this will automatically be added by the
-   pkg_* tools when they are invoked.
-
  * pkg/DESCR:
    A multi-line description of the piece of software.  This should include
    any credits where they are due.  Please bear in mind that others do not
@@ -670,8 +670,13 @@ which does a lot of the donkey work for you.
 
  * pkg/MESSAGE
    Display this file after installation of the package.
-   Useful for things like legal notices on almost-free software,
-   etc.
+   Useful for things like legal notices on almost-free software, etc.
+   Please note that you can modify variables in it easily by using
+   MESSAGE_SUBST in the package's Makefile:
+	MESSAGE_SUBST+=  SOMEVAR="somevalue"
+   replaces
+	${SOMEVAR}
+   in pkg/MESSAGE with "somevalue" before displaying the message.
 
 
  4.5 scripts/*
@@ -1771,7 +1776,7 @@ You have to separate between binary and "normale" (source) packages here:
    package maintainers can fetch it using FTP or HTTP (WWW). Finally,
    send-pr with category "pkg", a synopsis which includes the package name
    and version number, a short description of your package
-   (contents of pkg/COMMENT are OK) and the URL of your tar-file.
+   (contents of the COMMENT variable are OK) and the URL of your tar-file.
 
    You will be notified if your send-pr has been addressed so you can remove
    the tar-file. 
@@ -1843,6 +1848,7 @@ The file contents in this section must be used without the "> " prefix.
 >
 > MAINTAINER=     thorpej@netbsd.org
 > HOMEPAGE=       http://www.gnu.org/software/bison/bison.html
+> COMMENT=        GNU yacc clone
 >  
 > GNU_CONFIGURE=  yes
 > INFO_FILES=     bison.info
@@ -1850,13 +1856,7 @@ The file contents in this section must be used without the "> " prefix.
 > .include "../../mk/bsd.pkg.mk"
 
 
- 11.1.2 pkg/COMMENT
- ==================
-
-> GNU yacc clone.
-
-
- 11.1.3 pkg/DESCR
+ 11.1.2 pkg/DESCR
  ================
 
 > GNU version of yacc.  Can make re-entrant parsers, and numerous other
@@ -1864,7 +1864,7 @@ The file contents in this section must be used without the "> " prefix.
 > of the NetBSD source tree is beyond me.
 
 
- 11.1.4 pkg/PLIST
+ 11.1.3 pkg/PLIST
  ================
 
 > @comment <$>NetBSD<$>
@@ -1882,16 +1882,15 @@ The file contents in this section must be used without the "> " prefix.
 > share/bison.hairy
 
 
- 11.1.5 Checking a package "pkglint"
+ 11.1.4 Checking a package "pkglint"
  ===================================
 
 The NetBSD package system comes with a tool called "pkglint" (located in the
 directory "pkgsrc/pkgtools/pkglint") which helps to check the contents of these
 files. After installation it is quite easy to use, just change to the
-directory of the package you which to examine and execute "pkglint":
+directory of the package you wish to examine and execute "pkglint":
 
 > tron@lyssa:/usr/pkgsrc/devel/bison>pkglint
-> OK: checking pkg/COMMENT.
 > OK: checking pkg/DESCR.
 > OK: checking Makefile.
 > OK: checking files/md5.
@@ -1899,8 +1898,8 @@ directory of the package you which to examine and execute "pkglint":
 > looks fine.
 
 Depending on the supplied command line arguments (see "man pkglint") more
-intensive checks will be performed. Use e.g. "pkglint -a -v" for a very
-detailed and verbose check.
+verbose checks will be performed. Use e.g. "pkglint -v" for a very verbose
+check.
 
 
  11.2 Steps for building, installing, packaging
@@ -1913,7 +1912,7 @@ Create the directory where the package lives, plus any auxiliary directories:
 > root@pumpy:/u/pkgsrc/lang(1766)# cd bison
 > root@pumpy:/u/pkgsrc/lang/bison(1768)# mkdir files patches pkg
 
-Create Makefile, pkg/COMMENT, pkg/DESCR and pkg/PLIST as in section 11.1,
+Create Makefile, pkg/DESCR and pkg/PLIST as in section 11.1,
 then continue with fetching the distfile:
 
 > root@pumpy:/u/pkgsrc/lang/bison(1769)# make fetch
@@ -1983,10 +1982,7 @@ Now compile:
 > cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g version.c
 > cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g getopt.c
 > cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g getopt1.c
-> cc  -g -o bison LR0.o allocate.o closure.o conflicts.o derives.o files.o         getargs.o gram.o lalr.o lex.o                                   main.o nullable.o output.o print.o reader.o reduce.o symtab.o   warshall.o version.o                        
-
-
-                    getopt.o getopt1.o  
+> cc  -g -o bison LR0.o allocate.o closure.o conflicts.o derives.o files.o         getargs.o gram.o lalr.o lex.o                                   main.o nullable.o output.o print.o reader.o reduce.o symtab.o   warshall.o version.o getopt.o getopt1.o
 > ./files.c:240: warning: mktemp() possibly used unsafely, consider using mkstemp()
 > rm -f bison.s1
 > sed -e "/^#line/ s|bison|/usr/pkg/share/bison|" < ./bison.simple > bison.s1
@@ -2123,7 +2119,7 @@ Layout for precompiled binary packages on ftp.netbsd.org:
                 README
                 distfiles/
 		pkgsrc -> /pub/NetBSD/NetBSD-current/pkgsrc
-                1.3/
+                1.5/
                         i386/
                                 All/
                                 archivers/
