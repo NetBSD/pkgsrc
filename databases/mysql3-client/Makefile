@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/01/01 00:37:56 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/20 14:15:04 xtraeme Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		mysqc
 COMMENT=		MySQL 3, a free SQL database (client)
 
