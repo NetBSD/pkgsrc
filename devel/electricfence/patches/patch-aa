@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/10/27 04:04:11 garbled Exp $
---- Makefile.orig	Thu Jan 19 22:33:04 1995
-+++ Makefile	Mon Oct 26 00:27:29 1998
-@@ -1,12 +1,12 @@
+$NetBSD: patch-aa,v 1.2 1998/10/27 11:03:09 agc Exp $
+
+--- Makefile.orig	Fri Jan 20 05:33:04 1995
++++ Makefile	Tue Oct 27 10:55:46 1998
+@@ -1,12 +1,11 @@
 -ASFLAGS= -mips2
 +#ASFLAGS= -mips2
  CC= cc
  AR= ar
 -INSTALL= install
-+INSTALL= install -c -g bin -o bin
  MV= mv
  CHMOD= chmod
  CFLAGS= -g
@@ -18,12 +18,17 @@ $NetBSD: patch-aa,v 1.1.1.1 1998/10/27 04:04:11 garbled Exp $
  
  PACKAGE_SOURCE= README libefence.3 Makefile efence.h \
  	efence.c page.c print.c eftest.c tstheap.c CHANGES
-@@ -39,7 +39,7 @@
+@@ -39,10 +38,9 @@
  	@ echo
  
  install: libefence.a libefence.3
 -	$(MV) libefence.a $(LIB_INSTALL_DIR)
-+	$(INSTALL) libefence.a $(LIB_INSTALL_DIR)
- 	$(CHMOD) 644 $(LIB_INSTALL_DIR)/libefence.a
- 	$(INSTALL) libefence.3 $(MAN_INSTALL_DIR)/libefence.3
- 	$(CHMOD) 644 $(MAN_INSTALL_DIR)/libefence.3
+-	$(CHMOD) 644 $(LIB_INSTALL_DIR)/libefence.a
+-	$(INSTALL) libefence.3 $(MAN_INSTALL_DIR)/libefence.3
+-	$(CHMOD) 644 $(MAN_INSTALL_DIR)/libefence.3
++	${INSTALL} -c -m 0644 -o root -g wheel libefence.a $(LIB_INSTALL_DIR)
++	${RANLIB} ${LIB_INSTALL_DIR}/libefence.a
++	${INSTALL} -c -m 0644 -o root -g wheel libefence.3 $(MAN_INSTALL_DIR)/libefence.3
+ 
+ clean:
+ 	- rm -f $(OBJECTS) tstheap.o eftest.o tstheap eftest libefence.a \
