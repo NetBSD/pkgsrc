@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3859 2003/11/26 16:01:57 jlam Exp $
+$NetBSD: CHANGES,v 1.3860 2003/11/26 23:20:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4644,3 +4644,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cxunzip to 0.98 [abs 2003-11-25]
 	Updated p5-Image-Size to 2.992 [abs 2003-11-25]
 	Updated ap-aolserver to 1.1nb3 [jlam 2003-11-26]
+	Updated gst-plugins to 0.6.1nb6 [wiz 2003-11-26]
