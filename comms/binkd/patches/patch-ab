@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/22 20:47:14 tv Exp $
+
+--- binkd.8.orig	Sun Nov 22 12:44:13 1998
++++ binkd.8	Sun Nov 22 12:44:25 1998
+@@ -75,7 +75,7 @@
+ inetd(8)
+ 
+ Binkd homepage,
+-http://www.magadan.su/~maloff/binkd/
++http://www.corbina.net/~maloff/binkd/
+ 
+ "Binkd User Guide" by Nick Soveiko,
+ http://www.doe.carleton.ca/~nsoveiko/fido/binkd/man/

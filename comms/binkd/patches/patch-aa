@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/22 20:47:14 tv Exp $
+
+--- Makefile.in.orig	Sun Nov 22 12:35:50 1998
++++ Makefile.in	Sun Nov 22 12:36:07 1998
+@@ -6,7 +6,7 @@
+ AUTODEFS=@DEFS@
+ AUTOLIBS=@LIBS@
+ DEFINES=$(AUTODEFS) -DHAVE_FORK -DUNIX -DOS="\"UNIX\""
+-CFLAGS=$(DEFINES) -Wall
++CFLAGS=@CFLAGS@ $(DEFINES) -Wall
+ LIBS=$(AUTOLIBS)
+ 
+ all: binkd
