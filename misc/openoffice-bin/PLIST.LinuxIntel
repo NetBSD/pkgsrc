@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.LinuxIntel,v 1.1 2005/02/26 01:22:16 dmcmahill Exp $
+@comment $NetBSD: PLIST.LinuxIntel,v 1.2 2005/02/27 11:10:09 wiz Exp $
 OpenOffice.org${VER}/LICENSE
 OpenOffice.org${VER}/LICENSE.html
 OpenOffice.org${VER}/README
@@ -4977,8 +4977,8 @@ bin/swriter
 @dirrm OpenOffice.org${VER}/share/cde/types/hu.UTF-8
 @dirrm OpenOffice.org${VER}/share/cde/types/hu
 @dirrm OpenOffice.org${VER}/share/cde/types/he
-@dirrm OpenOffice.org${VER}/share/cde/types/gl
 @dirrm OpenOffice.org${VER}/share/cde/types/gr
+@dirrm OpenOffice.org${VER}/share/cde/types/gl
 @dirrm OpenOffice.org${VER}/share/cde/types/fr.UTF-8
 @dirrm OpenOffice.org${VER}/share/cde/types/fr
 @dirrm OpenOffice.org${VER}/share/cde/types/fi.UTF-8
