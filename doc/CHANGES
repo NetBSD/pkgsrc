@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2065 2003/04/28 12:01:51 taca Exp $
+$NetBSD: CHANGES,v 1.2066 2003/04/28 12:49:57 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1764,3 +1764,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.20.0 [gehenna 2003-04-28]
 	Updated netatalk to 1.6.2 [fredb 2003-04-28]
 	Updated squid to 2.5.2nb2 [taca 2003-04-28]
+	Updated mimedefang to 2.33 [markd 2003-04-28]
