@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2002/09/11 00:08:32 jlam Exp $
+# $NetBSD: Makefile.common,v 1.36 2002/09/13 05:16:46 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -10,11 +10,14 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.cs.wisc.edu/~ghost/index.html
 
+CONFLICTS+=		ghostscript{,-nox11}-[0-9]*
+CONFLICTS+=		ghostscript-gnu{,-nox11}-[0-9]* 
 CONFLICTS+=		hpijs-[0-9]*
 
 DEPENDS+=		ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 DEPENDS+=		watanabe-vfont-19930318:../../fonts/watanabe_vfont
 
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 
@@ -289,3 +292,9 @@ post-install:
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../print/ja-vflib-lib/buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"
+
+# arm32 compiler has an optimizer problem
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "arm32"
+CFLAGS+=	-O0
+.endif
