@@ -1,0 +1,30 @@
+$NetBSD: patch-cc,v 1.1 2004/04/24 21:04:43 tv Exp $
+
+--- hints/interix.sh.orig	Fri Apr 23 12:29:09 2004
++++ hints/interix.sh	Fri Apr 23 12:32:55 2004
+@@ -0,0 +1,25 @@
++# hints/interix.sh
++#
++# Please check with packages@netbsd.org before making modifications
++# to this file.
++
++cc='gcc'
++cccdlflags="-DPIC $cccdlflags"
++ccdlflags='-Wl,-E'
++ccflags="-D_ALL_SOURCE $ccflags"
++ld='gcc'
++lddlflags="-shared $lddlflags"
++rpathflag='-Wl,-R'
++sharpbang='#!'
++usenm='false'
++
++# This script UU/usethreads.cbu will get 'called-back' by Configure 
++# after it has prompted the user for whether to use threads. 
++cat > UU/usethreads.cbu <<'EOCBU' 
++case "$usethreads" in
++$define|true|[yY]*)
++	ccflags="-D_REENTRANT $ccflags"
++	libswanted="$libswanted pthread"
++        ;; 
++esac 
++EOCBU

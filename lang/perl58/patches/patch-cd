@@ -1,0 +1,12 @@
+$NetBSD: patch-cd,v 1.1 2004/04/24 21:04:43 tv Exp $
+
+--- lib/File/Find.pm.orig	Fri Apr 23 12:41:39 2004
++++ lib/File/Find.pm	Fri Apr 23 12:42:19 2004
+@@ -1212,6 +1212,7 @@
+ 
+ $File::Find::dont_use_nlink = 1
+     if $^O eq 'os2' || $^O eq 'dos' || $^O eq 'amigaos' || $^O eq 'MSWin32' ||
++       $^O eq 'interix' ||
+        $^O eq 'cygwin' || $^O eq 'epoc' || $^O eq 'qnx' ||
+ 	   $^O eq 'nto';
+ 
