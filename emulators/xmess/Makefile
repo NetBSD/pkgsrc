@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2003/03/20 19:03:27 kristerw Exp $
+# $NetBSD: Makefile,v 1.34 2003/04/13 17:37:48 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.66.2
-PKGNAME=		xmess-0.66.2
+DISTNAME=		xmame-0.67.2
+PKGNAME=		xmess-0.67.2
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -42,7 +42,7 @@ MAKE_FLAGS+=		SOUND_ESOUND=1
 MAME_DISP_METHOD?=	x11
 
 # Determine which CPU-specific code to use.
-.for MARCH in i386 alpha m68k
+.for MARCH in alpha m68k i386 ia64
 MAME_CPU.${MARCH}?=	${MARCH}
 .endfor
 .if !defined(MAME_CPU.${MACHINE_ARCH})

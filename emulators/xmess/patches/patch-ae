@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.7 2003/02/14 21:58:36 kristerw Exp $
---- doc/xmessrc.dist.orig	Fri Feb 14 22:32:17 2003
-+++ doc/xmessrc.dist	Fri Feb 14 22:34:15 2003
-@@ -69,15 +69,15 @@
+$NetBSD: patch-ae,v 1.8 2003/04/13 17:37:48 kristerw Exp $
+--- doc/xmessrc.dist.orig	Sun Apr  6 23:41:26 2003
++++ doc/xmessrc.dist	Sun Apr 13 19:15:47 2003
+@@ -69,21 +69,17 @@
  mouse                   1
  
  ### Fileio Related ###
@@ -13,14 +13,18 @@ $NetBSD: patch-ae,v 1.7 2003/02/14 21:58:36 kristerw Exp $
 +CRC_directory           @ROMPATH@/crc
  snapshot_directory      .
 -cheat_directory         /usr/local/share/xmess/cheat
-+cheat_directory         @SPOOLDIR@/cheat
- cheatfile               cheat.cdb
+-cheatfile               cheat.cdb
 -hiscore_file            /usr/local/share/xmess/hiscore.dat
 -history_file            /usr/local/share/xmess/history.dat
 -mameinfo_file           /usr/local/share/xmess/mameinfo.dat
 +hiscore_file            @SPOOLDIR@/hiscore.dat
-+history_file            @SPOOLDIR@/history.dat
-+mameinfo_file           @SPOOLDIR@/mameinfo.dat
  
  ### Mess Related ###
  language                english
+ fuzzycmp                1
+ cheat                   0
+-debug                   0
++# debug                   0
+ 
+ ### Frontend Related ###
+ clones                  1

@@ -1,11 +1,68 @@
-$NetBSD: patch-aa,v 1.16 2003/02/14 21:58:36 kristerw Exp $
---- makefile.unix.orig	Fri Feb 14 22:29:58 2003
-+++ makefile.unix	Fri Feb 14 22:30:10 2003
-@@ -33,7 +33,6 @@
+$NetBSD: patch-aa,v 1.17 2003/04/13 17:37:48 kristerw Exp $
+--- makefile.unix.orig	Sun Apr 13 18:22:02 2003
++++ makefile.unix	Sun Apr 13 18:31:53 2003
+@@ -33,7 +33,7 @@
  ###########################################################################
  
  # Uncomment one of these.
 -TARGET = mame
++# TARGET = mame
  # TARGET = mess
  # TARGET = neomame
  # TARGET = cpmame
+@@ -85,7 +85,7 @@
+ # just as well.  However, stay away from the `cc' Ultrix compiler if 
+ # possible.
+ 
+-CC	= gcc
++# CC	= gcc
+ # CC    = cc
+ # CC	= icc
+ # CC	= c89
+@@ -97,7 +97,7 @@
+ 
+ # If you want to use whatever CFLAGS are currently set in your 
+ # environment, then comment this out.
+-CFLAGS =
++# CFLAGS =
+ 
+ 
+ ###########################################################################
+@@ -397,7 +397,7 @@
+ ###########################################################################
+ 
+ # i386, GNU asm
+-MY_CPU = i386
++# MY_CPU = i386
+ 
+ # i386, no asm -- needed for the Intel C++ compiler, which does not fully
+ # understand gcc's inline assembly syntax, though you may still enable 
+@@ -429,7 +429,7 @@
+ ###########################################################################
+ 
+ # Linux 
+-ARCH  = linux
++# ARCH  = linux
+ 
+ # FreeBSD
+ # ARCH  = freebsd
+@@ -555,7 +555,7 @@
+ X11_MITSHM = 1
+ 
+ # Use Xv extension for hardware scaling.
+-X11_XV = 1
++# X11_XV = 1
+ 
+ # Enable XFree86 DGA.  This also causes "make install" to set the suid bit 
+ # on the executable.
+@@ -575,8 +575,8 @@
+ # X11LIB		= -L/usr/lib/X11
+ 
+ # Standard location for XFree86
+-X11INC		= -I/usr/X11R6/include
+-X11LIB		= -L/usr/X11R6/lib
++# X11INC		= -I/usr/X11R6/include
++# X11LIB		= -L/usr/X11R6/lib
+ 
+ # Standard location for Sun systems
+ # X11INC		= -I/usr/openwin/include
