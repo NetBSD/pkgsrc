@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.61 2003/12/18 13:49:17 atatat Exp $
+# $NetBSD: Makefile.common,v 1.62 2003/12/19 18:21:03 sketch Exp $
 #
 
 DISTNAME=		xscreensaver-4.14
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--without-kerberos
 .  endif
 .endif
 
-.if (${_CC_IS_GCC} == "YES")
+.if !empty(CC_VERSION:Mgcc*)
 CFLAGS+=		-fno-strict-aliasing
 .endif
 
