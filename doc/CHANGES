@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6954 2004/08/20 01:27:45 schmonz Exp $
+$NetBSD: CHANGES,v 1.6955 2004/08/20 03:21:43 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3920,3 +3920,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-pyrex to 0.9.3 [recht 2004-08-19]
 	Added poster-1.0 [jschauma 2004-08-19]
 	Updated getmail to 4.0.13 [schmonz 2004-08-20]
+	Updated bozohttpd to 20040808 [mrg 2004-08-20]
+	Updated ircII to 20040820 [mrg 2004-08-20]
