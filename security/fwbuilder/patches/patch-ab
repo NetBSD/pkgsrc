@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/02/24 11:03:22 bad Exp $
+
+--- qmake.inc.in.orig	Mon Dec 13 04:08:36 2004
++++ qmake.inc.in	Thu Feb 24 00:13:52 2005
+@@ -30,7 +30,7 @@
+ 	res_os.path             = $(DDIR)@RES_DIR@/os
+ 	res_platform.path       = $(DDIR)@RES_DIR@/platform
+ 
+-	CONFIG                 += qt thread rtti stl warn_on debug
++	CONFIG                 += qt thread rtti stl warn_on
+ 	INCLUDEPATH            += @LIBFWBUILDER_INCLUDEPATH@
+ 
+ 	LIBS                   += $$LIBS_FWBUILDER
+@@ -38,9 +38,7 @@
+ 	PKGLOCALEDIR            = $$res.path/locale
+ 
+ 	QMAKE_CFLAGS_DEBUG     += -Wno-unused-parameter
+-	QMAKE_CFLAGS_RELEASE   += -Wno-unused-parameter
+ 	QMAKE_CXXFLAGS_DEBUG   += -Wno-unused-parameter
+-	QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter
+ }
+ }
+ 
