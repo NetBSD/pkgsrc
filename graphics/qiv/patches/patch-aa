@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2004/02/17 15:20:47 snj Exp $
+$NetBSD: patch-aa,v 1.5 2004/11/26 22:18:28 snj Exp $
 
---- Makefile.orig	2003-01-13 03:57:42.000000000 -0800
-+++ Makefile	2004-02-17 07:09:06.000000000 -0800
+--- Makefile.orig	2004-05-22 00:21:47.000000000 -0700
++++ Makefile	2004-11-26 14:05:41.000000000 -0800
 @@ -4,7 +4,7 @@
- ######################################################################
+ #######################################################################
  
  # Directory where qiv will be installed under.
 -PREFIX = /usr/local
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2004/02/17 15:20:47 snj Exp $
  
  # Font to use for statusbar in fullscreen mode
  STATUSBAR_FONT = "fixed"
-@@ -53,11 +53,6 @@ SS_RANDOMIZE = -r
+@@ -57,11 +57,6 @@ SS_RANDOMIZE = -r
  # Do not edit below here!
  ######################################################################
  
@@ -23,11 +23,11 @@ $NetBSD: patch-aa,v 1.4 2004/02/17 15:20:47 snj Exp $
  INCLUDES  = `imlib-config --cflags-gdk`
  LIBS      = `imlib-config --libs-gdk`
  
-@@ -87,10 +82,10 @@ SS_PROG   = $(PREFIX)/ss-qiv
+@@ -96,10 +91,10 @@ SS_PROG   = $(PREFIX)/ss-qiv
  all: $(PROGRAM)
  
  $(PROGRAM): $(OBJS)
--	$(CC) $(CFLAGS) $(DEFINES) $(LIBS) $(OBJS) -o $(PROGRAM)
+-	$(CC) $(CFLAGS) $(DEFINES) $(OBJS) $(LIBS) -o $(PROGRAM)
 +	$(CC) $(CPPFLAGS) $(CFLAGS) $(DEFINES) $(LDFLAGS) $(OBJS) $(LIBS) -o $(PROGRAM)
  
  $(OBJS): %.o: %.c $(HEADERS)
@@ -36,17 +36,18 @@ $NetBSD: patch-aa,v 1.4 2004/02/17 15:20:47 snj Exp $
  
  main.o: main.h
  
-@@ -115,13 +110,8 @@ distclean : clean
+@@ -124,14 +119,8 @@ distclean : clean
  
  install: $(PROGRAM)
- 	@echo "Installing..."
+ 	@echo "Installing QIV..."
 -	install -s -m 0755 $(PROGRAM) $(PREFIX)/bin
 -	install -m 0644 $(PROGRAM).1 $(PREFIX)/man/man1
 -	$(COMPRESS_PROG) $(PREFIX)/man/man1/$(PROGRAM).1
--	@if ./qiv -o white -f ./intro.jpg ; \
+-	@if ./qiv -f ./intro.jpg ; \
 -	then echo "-- Test Passed --" ; \
 -	else echo "-- Test Failed --" ; \
 -	fi
+-	@echo -ne "\nDont forget to look into the \"qiv-command\" file and install it!\n-> cp qiv-command.example /usr/local/bin/qiv-command\n\n" 
 +	$(BSD_INSTALL_PROGRAM) $(PROGRAM) $(PREFIX)/bin
 +	$(BSD_INSTALL_DATA) $(PROGRAM).1 $(PREFIX)/man/man1
  
