@@ -1,4 +1,4 @@
-$NetBSD: patches-aa,v 1.1 1998/08/12 21:28:06 tron Exp $
+$NetBSD: patch-aa,v 1.1 1998/12/28 01:48:16 tv Exp $
 
 --- iso9660.h.orig      Fri Aug  7 13:22:22 1998
 +++ iso9660.h   Fri Aug  7 13:20:49 1998
