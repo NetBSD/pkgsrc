@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3132 2003/08/29 15:33:49 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3133 2003/08/29 15:53:21 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3375,3 +3375,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libxslt to 1.0.32 [xtraeme 2003-08-29]
 	Updated sablotron to 1.0 [xtraeme 2003-08-29]
 	Updated tinyproxy to 1.6.1 [xtraeme 2003-08-29]
+	Updated php4-xslt to 4.2.3nb2 [xtraeme 2003-08-29]
+	Updated ap-xslt to 1.1nb7 [xtraeme 2003-08-29]
