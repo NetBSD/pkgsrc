@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/05/05 16:27:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.28 2001/05/05 16:33:07 hubertf Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -23,7 +23,7 @@ DEPENDS+=	zlib-*:../../devel/zlib
 PHP_VERSION=	3.0.18
 
 .if defined(BUILDING_EXTENSION_MODULE) || defined(BUILDING_SERVER_MODULE)
-DEPENDS+=	php-${PHP_VERSION}:${.CURDIR}/../../www/php3
+DEPENDS+=	php-${PHP_VERSION}:../../www/php3
 DISTINFO_FILE=	${.CURDIR}/../../www/php3/distinfo
 FILESDIR?=	${.CURDIR}/../../www/php3/files
 PATCHDIR?=	${.CURDIR}/../../www/php3/patches
