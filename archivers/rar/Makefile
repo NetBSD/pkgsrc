@@ -4,7 +4,7 @@
 # Date created:         15 May 1996
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.2 1997/10/27 03:22:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1997/11/18 12:43:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp 
 #
 
@@ -22,6 +22,7 @@ NO_PACKAGE=     Only unmodified original package can be distributed
 NO_WRKSUBDIR=   yes
 EXTRACT_CMD=
 EXTRACT_BEFORE_ARGS=
+CAT1=		rar.1
 
 post-fetch:
 	chmod a+x ${DISTDIR}/${DISTFILES}
