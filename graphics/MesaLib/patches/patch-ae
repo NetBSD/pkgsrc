@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.3 2004/01/22 12:58:53 adam Exp $
+
+--- src/glw/Makefile.X11.orig	2004-01-22 11:46:07.000000000 +0000
++++ src/glw/Makefile.X11
+@@ -28,7 +28,7 @@ OBJECTS = $(SOURCES:.c=.o)
+ ##### RULES #####
+ 
+ .c.o:
+-	$(CC) -c $(INCDIRS) $(CFLAGS) $<
++	${LIBTOOL} --mode=compile $(CC) -c $(INCDIRS) $(CFLAGS) $<
+ 
+ 
+ 
+@@ -45,9 +45,8 @@ targets: $(LIBDIR)/$(GLW_LIB) message
+ 
+ # Make the library
+ $(LIBDIR)/$(GLW_LIB): $(OBJECTS)
+-	$(TOP)/bin/mklib -o GLw -major $(MAJOR) -minor $(MINOR) \
+-		-patch $(TINY) $(GLW_LIB_DEPS) -install $(LIBDIR) \
+-		$(MKLIB_OPTIONS) $(OBJECTS)
++	${LIBTOOL} --mode=link ${CC} -o ${GLW_LIB:.so=.la} ${OBJECTS:.o=.lo} \
++		-rpath ${PREFIX}/lib -version-info ${MAJOR}:${MINOR}
+ 
+ 
+ message:

@@ -1,25 +1,24 @@
-# $NetBSD: Makefile,v 1.25 2004/01/20 12:18:16 agc Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/22 13:00:00 adam Exp $
+#
 
-PKGNAME=		${DISTNAME:C/MesaLib/glu/}
-MAINTAINER=		rh@NetBSD.org
-COMMENT=		GLU polygon tesselation facility for Mesa
+PKGNAME=	${DISTNAME:C/MesaLib/glu/}
+COMMENT=	GLU polygon tesselation facility for Mesa
 
-CONFLICTS+=		Mesa-glx-[0-9]*
-CONFLICTS+=		Mesa<3.2.1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+CONFLICTS+=	Mesa-glx-[0-9]*
+CONFLICTS+=	Mesa<3.2.1
 
 .include "../../graphics/Mesa/Makefile.common"
 
-WRKSRC=			${WRKDIR}/${DISTNAME:C/Lib//}
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=		yes
-USE_X11=		yes
-INSTLIBS=		libGLU.so.1.3
+
+INSTLIBS=	${WRKSRC}/src/glu/sgi/libGLU.la
 
 .include "../../mk/bsd.prefs.mk"
 
 pre-build:
-	${RM} -fr ${WRKSRC}/src/mesa ${WRKSRC}/src/glw
+	cd ${WRKSRC} && ${RM} -fr src/mesa src/glut src/glw progs
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
