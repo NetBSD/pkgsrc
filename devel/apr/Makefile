@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2004/03/09 19:34:14 snj Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/22 19:50:16 reed Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	http://apr.apache.org/

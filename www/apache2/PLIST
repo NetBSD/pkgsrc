@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2004/01/27 08:09:17 grant Exp $
+@comment $NetBSD: PLIST,v 1.19 2004/03/22 19:50:16 reed Exp $
 etc/rc.d/apache
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -26,6 +26,7 @@ include/httpd/mod_include.h
 include/httpd/mod_log_config.h
 include/httpd/mod_proxy.h
 include/httpd/mod_ssl.h
+include/httpd/mod_status.h
 include/httpd/mpm.h
 include/httpd/mpm_common.h
 include/httpd/mpm_default.h
@@ -651,9 +652,11 @@ share/httpd/manual/mod/allmodules.xml.ja
 share/httpd/manual/mod/allmodules.xml.ko
 share/httpd/manual/mod/allmodules.xml.ru
 share/httpd/manual/mod/beos.html
+share/httpd/manual/mod/beos.html.de
 share/httpd/manual/mod/beos.html.en
 share/httpd/manual/mod/beos.html.ko.euc-kr
 share/httpd/manual/mod/beos.xml
+share/httpd/manual/mod/beos.xml.de
 share/httpd/manual/mod/beos.xml.ko
 share/httpd/manual/mod/beos.xml.meta
 share/httpd/manual/mod/core.html
@@ -693,9 +696,11 @@ share/httpd/manual/mod/index.xml.ja
 share/httpd/manual/mod/index.xml.ko
 share/httpd/manual/mod/index.xml.meta
 share/httpd/manual/mod/leader.html
+share/httpd/manual/mod/leader.html.de
 share/httpd/manual/mod/leader.html.en
 share/httpd/manual/mod/leader.html.ko.euc-kr
 share/httpd/manual/mod/leader.xml
+share/httpd/manual/mod/leader.xml.de
 share/httpd/manual/mod/leader.xml.ko
 share/httpd/manual/mod/leader.xml.meta
 share/httpd/manual/mod/mod_access.html
@@ -1113,6 +1118,10 @@ share/httpd/manual/programs/apxs.html
 share/httpd/manual/programs/apxs.html.en
 share/httpd/manual/programs/apxs.xml
 share/httpd/manual/programs/apxs.xml.meta
+share/httpd/manual/programs/configure.html
+share/httpd/manual/programs/configure.html.en
+share/httpd/manual/programs/configure.xml
+share/httpd/manual/programs/configure.xml.meta
 share/httpd/manual/programs/dbmmanage.html
 share/httpd/manual/programs/dbmmanage.html.en
 share/httpd/manual/programs/dbmmanage.xml
@@ -1151,7 +1160,6 @@ share/httpd/manual/programs/suexec.html
 share/httpd/manual/programs/suexec.html.en
 share/httpd/manual/programs/suexec.xml
 share/httpd/manual/programs/suexec.xml.meta
-share/httpd/manual/search/manual-index.cgi
 share/httpd/manual/sections.html
 share/httpd/manual/sections.html.en
 share/httpd/manual/sections.html.ja.jis
@@ -1215,6 +1223,7 @@ share/httpd/manual/stopping.xml.ja
 share/httpd/manual/stopping.xml.ko
 share/httpd/manual/stopping.xml.meta
 share/httpd/manual/stopping.xml.ru
+share/httpd/manual/style/build.properties
 share/httpd/manual/style/chm/chm.de.xsl
 share/httpd/manual/style/chm/chm.en.xsl
 share/httpd/manual/style/chm/chm.ja.xsl
@@ -1293,7 +1302,11 @@ share/httpd/manual/style/xsl/util/nbsp.xml
 share/httpd/manual/style/xsl/util/tab.xml
 share/httpd/manual/style/xsl/util/ul-end.xml
 share/httpd/manual/style/xsl/util/ul-start.xml
+share/httpd/manual/style/zip/zip.de.xsl
 share/httpd/manual/style/zip/zip.en.xsl
+share/httpd/manual/style/zip/zip.ja.xsl
+share/httpd/manual/style/zip/zip.ko.xsl
+share/httpd/manual/style/zip/zip.ru.xsl
 share/httpd/manual/suexec.html
 share/httpd/manual/suexec.html.en
 share/httpd/manual/suexec.html.ja.jis
@@ -1385,7 +1398,6 @@ share/httpd/manual/vhosts/name-based.xml.meta
 @dirrm share/httpd/manual/mod
 @dirrm share/httpd/manual/platform
 @dirrm share/httpd/manual/programs
-@dirrm share/httpd/manual/search
 @dirrm share/httpd/manual/ssl
 @dirrm share/httpd/manual/style/zip
 @dirrm share/httpd/manual/style/xsl/util
@@ -1401,11 +1413,9 @@ share/httpd/manual/vhosts/name-based.xml.meta
 @dirrm share/httpd/manual
 @dirrm share/httpd/icons/small
 @dirrm share/httpd/icons
-@dirrm share/httpd/htdocs
 @dirrm share/httpd/error/include
 @dirrm share/httpd/error
 @dirrm share/httpd/build
-@dirrm share/httpd
 @dirrm share/examples/httpd
 @unexec ${RMDIR} ${PREFIX}/libexec/cgi-bin 2>/dev/null || ${TRUE}
 @dirrm lib/httpd
