@@ -1,0 +1,30 @@
+# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 00:05:50 tron Exp $
+
+DISTNAME=	Guppi-0.35.5
+PKGNAME=	guppi-0.35.5
+CATEGORIES=	math graphics
+MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/Guppi/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	tron@netbsd.org
+HOMEPAGE=	http://www.gnome.org/guppi/
+COMMENT=	Plot program with integrated statistics capabilities
+
+DEPENDS+=	gnome-core>=1.4:../../x11/gnome-core
+DEPENDS+=	python>=2.0:../../lang/python
+
+GNU_CONFIGURE=	YES
+USE_GMAKE=	YES
+USE_LIBTOOL=	YES
+USE_X11BASE=	YES
+
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
+			PKGVERSION=${PKGNAME:S/guppi-//}
+
+post-install:
+	${TEST} ${PREFIX} = ${LOCALBASE} || \
+	${LN} -fs ${PREFIX}/share/aclocal/libguppi.m4 \
+	  ${LOCALBASE}/share/aclocal/libguppi.m4
+
+.include "../../mk/bsd.pkg.mk"
