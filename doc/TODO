@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1602 2004/04/12 21:39:45 salo Exp $
+$NetBSD: TODO,v 1.1603 2004/04/13 02:46:15 minskim Exp $
 
 Suggested new packages
 ======================
@@ -130,11 +130,14 @@ Suggested package updates
 =========================
 
 	o ImageViewer-0.6.3
+	o LPRng-3.8.26
 	o SDL-1.2.7
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o amanda-2.4.4p2 [pkg/24550, bouyer]
 	o ap-python-2.7.10
+	o aqsis-0.9.1
+	o arj-3.10.19
 	o audacity-1.2.0
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
@@ -181,6 +184,7 @@ Suggested package updates
 	o firewalk-gtk-5.0
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.51
+	o freetds-0.62.3
 	o freetype-2.1.7 [breaks compatibility with other packages]
 	o fsviewer-0.2.5
 	o gcpio-2.5 [pkg/20799]
@@ -218,6 +222,7 @@ Suggested package updates
 	o jam-2.5
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.7 [pkg/24635]
+	o lame-3.96
 	o larswm-7.3
 	o lavaps-2.4
 	o leafnode-1.9.52
@@ -327,6 +332,7 @@ Suggested package updates
 	o treecc-0.2.8
 	o ttf2pt1-3.4.3
 	o txt2html-2.20 [wennmach]
+	o txt2html-2.23
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.1
 	o vfu-4.03
