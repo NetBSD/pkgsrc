@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.3 2002/12/11 22:27:26 jlam Exp $
+$NetBSD: patch-ah,v 1.4 2003/12/05 18:15:49 erh Exp $
 
---- src/Makefile.in.orig	Tue Aug  6 06:59:06 2002
-+++ src/Makefile.in
-@@ -248,7 +248,7 @@ urlget_SOURCES = urlget.c
+--- src/Makefile.in.orig	2002-08-06 08:59:06.000000000 -0500
++++ src/Makefile.in	2003-12-04 17:34:23.000000000 -0600
+@@ -248,7 +248,7 @@
  # use iconv().
  libgettextsrc_la_LDFLAGS = \
    -release @VERSION@ \
@@ -11,3 +11,38 @@ $NetBSD: patch-ah,v 1.3 2002/12/11 22:27:26 jlam Exp $
  
  
  # Link dependencies.
+@@ -267,9 +267,7 @@
+ msgexec_LDADD = libgettextsrc.la
+ msgfilter_LDADD = libgettextsrc.la
+ msggrep_LDADD = libgettextsrc.la
+-msginit_LDADD = ../intl/localealias.@INTL_LIBTOOL_SUFFIX_PREFIX@o \
+-                ../intl/localename.@INTL_LIBTOOL_SUFFIX_PREFIX@o \
+-                libgettextsrc.la
++msginit_LDADD = libgettextsrc.la
+ 
+ msguniq_LDADD = libgettextsrc.la
+ 
+@@ -367,9 +365,7 @@
+ msggrep_LDFLAGS =
+ am_msginit_OBJECTS = msginit.$(OBJEXT)
+ msginit_OBJECTS = $(am_msginit_OBJECTS)
+-msginit_DEPENDENCIES = ../intl/localealias.@INTL_LIBTOOL_SUFFIX_PREFIX@o \
+-	../intl/localename.@INTL_LIBTOOL_SUFFIX_PREFIX@o \
+-	libgettextsrc.la
++msginit_DEPENDENCIES = libgettextsrc.la
+ msginit_LDFLAGS =
+ am_msgmerge_OBJECTS = msgmerge.$(OBJEXT)
+ msgmerge_OBJECTS = $(am_msgmerge_OBJECTS)
+@@ -731,9 +727,12 @@
+ 
+ 
+ # No need to install libgettextsrc.a.
++# Unless we're on AIX, where .a's are shared libraries.
+ install-exec-am: install-exec-clean
+ install-exec-clean:
++.if ${OPSYS} != "AIX"
+ 	$(RM) $(DESTDIR)$(libdir)/libgettextsrc.a
++.endif
+ 
+ po-lex.o po-lex.lo: po-gram-gen2.h
+ po-gram-gen2.h: po-gram-gen.h
