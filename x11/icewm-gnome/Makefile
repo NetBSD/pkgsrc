@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/23 16:03:36 tron Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/23 16:50:40 tron Exp $
 
 DISTNAME=	icewm-1.0.1
 PKGNAME=	icewm-gnome-1.0.1
@@ -16,7 +16,7 @@ CONFLICTS+=	icewm-[0-9]*
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
-CONFIGURE_ARGS+= --with-gnome-menus=${X11BASE}/bin/gnome-config
+CONFIGURE_ARGS+= --with-gnome-menus=${X11BASE}/bin/gnome-config --with-imlib
 CONFIGURE_ENV+=	LIBS="-lintl"
 
 post-install:
