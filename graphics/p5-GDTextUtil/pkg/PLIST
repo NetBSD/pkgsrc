@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/16 20:17:40 rh Exp $
+
+lib/perl5/site_perl/GD/Text.pm
+lib/perl5/site_perl/GD/Text/Align.pm
+lib/perl5/site_perl/GD/Text/Wrap.pm
+lib/perl5/man/man3/GD::Text::Align.3
+lib/perl5/man/man3/GD::Text.3
+lib/perl5/man/man3/GD::Text::Wrap.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GD/Text/.packlist
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GD/Text
