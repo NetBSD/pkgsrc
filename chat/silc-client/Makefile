@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/05/24 21:38:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2002/05/25 16:02:23 wiz Exp $
 
 DISTNAME=		silc-client-0.9.1
 CATEGORIES=		chat
@@ -17,7 +17,6 @@ COMMENT=                Client for the Secure Internet Live Conferencing (SILC) 
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-USE_NCURSES=		yes
 USE_LIBTOOL=		yes
 USE_BUILDLINK_ONLY=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
