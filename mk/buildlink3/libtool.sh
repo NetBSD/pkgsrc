@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.12 2004/01/29 06:06:41 jlam Exp $
+# $NetBSD: libtool.sh,v 1.13 2004/01/29 07:14:30 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -37,8 +37,8 @@ BUILDLINK_DIR="@BUILDLINK_DIR@"
 WRKDIR="@WRKDIR@"
 WRKSRC="@WRKSRC@"
 
-# Argument buffers
-buf1=; buf2=; buf3=; buf4=; buf5=
+# Argument stack depth
+depth=
 
 original_cmd="$0 $@"
 $echo [*] $original_cmd >> $wrapperlog
@@ -112,7 +112,7 @@ install)
 	done    
 	;;
 *)
-	while $test $# -gt 0 -o -n "${buf1}${buf2}${buf3}${buf4}${buf5}"; do
+	while $test $# -gt 0 -o -n "$depth"; do
 		skipargs=0
 		#
 		# Get the next argument from the buffer.
