@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.322 2002/10/20 22:49:55 seb Exp $
+$NetBSD: CHANGES,v 1.323 2002/10/20 22:53:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3343,3 +3343,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tightvnc to 1.2.6 [lukem 2002-10-20]
 	Updated cups to 1.1.16 [jlam 2002-10-20]
 	Updated samba to 2.2.6nb1 [jlam 2002-10-20]
+	Updated curl to 7.10.1nb1 [seb 2002-10-20]
