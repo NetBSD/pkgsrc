@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2004/04/14 16:15:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.59 2004/04/15 09:33:30 jmmv Exp $
 
 DISTNAME=		evolution-1.4.5
 PKGREVISION=		8
@@ -65,6 +65,9 @@ GCONF2_SCHEMAS+=	apps_evolution_addressbook.schemas
 GCONF2_SCHEMAS+=	apps_evolution_calendar.schemas
 GCONF2_SCHEMAS+=	apps_evolution_summary.schemas
 GCONF2_SCHEMAS+=	evolution-mail.schemas
+
+BUILDLINK_TRANSFORM+=	S:-DG_DISABLE_DEPRECATED:
+BUILDLINK_TRANSFORM+=	S:-DGTK_DISABLE_DEPRECATED:
 
 pre-configure:
 	for i in ${WRKSRC}/camel/providers/*/Makefile.in ; do		\
