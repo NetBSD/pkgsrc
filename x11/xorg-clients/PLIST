@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/01 19:00:11 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/03/22 09:51:04 adam Exp $
 ${X11ROOT_PREFIX}/bin/Xmark
 ${X11ROOT_PREFIX}/bin/appres
 ${X11ROOT_PREFIX}/bin/atobm
@@ -9,7 +9,6 @@ ${X11ROOT_PREFIX}/bin/bitmap
 ${X11ROOT_PREFIX}/bin/bmtoa
 ${X11ROOT_PREFIX}/bin/chooser
 ${X11ROOT_PREFIX}/bin/cxpm
-${X11ROOT_PREFIX}/bin/dga
 ${X11ROOT_PREFIX}/bin/dpsexec
 ${X11ROOT_PREFIX}/bin/dpsinfo
 ${X11ROOT_PREFIX}/bin/editres
@@ -752,7 +751,6 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/beforelight.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/bitmap.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/bmtoa.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/cxpm.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/dga.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/dpsexec.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/dpsinfo.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/editres.${MAN_SUFFIX}

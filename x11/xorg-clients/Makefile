@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.11 2005/03/01 19:00:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/22 09:51:04 adam Exp $
 
-DISTNAME=		${DISTFILES}
-PKGNAME=		xorg-clients-${XORG_VER}
-CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_XORG}
-DISTFILES=		X11R${XORG_VER}-src1.tar.gz \
-			X11R${XORG_VER}-src2.tar.gz \
-			X11R${XORG_VER}-src3.tar.gz
+DISTNAME=	${DISTFILES}
+PKGNAME=	xorg-clients-${XORG_VER}
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_XORG}
+DISTFILES=	X11R${XORG_VER}-src1.tar.gz \
+		X11R${XORG_VER}-src2.tar.gz \
+		X11R${XORG_VER}-src3.tar.gz
 
-MAINTAINER=		xtraeme@NetBSD.org
-HOMEPAGE=		http://www.x.org/
-COMMENT=		X.org client programs and related files
+MAINTAINER=	xtraeme@NetBSD.org
+HOMEPAGE=	http://www.x.org/
+COMMENT=	X.org client programs and related files
 
-USE_X11=		yes
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
+USE_X11=		yes
 DISTINFO_FILE=		${.CURDIR}/../../x11/xorg-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches
 
@@ -49,11 +49,11 @@ CONF_FILES_PERMS+=	${EGDIR}/Xwilling ${PKG_SYSCONFDIR}/Xwilling \
 
 post-wrapper:
 	@${MKDIR} ${WRKSRC}/exports/include
-	@${CP} ${X11ROOT}/include/X11/fonts/*.h ${BUILDLINK_DIR}/include
+	@${CP} -p ${X11ROOT}/include/X11/fonts/*.h ${BUILDLINK_DIR}/include
 
 post-configure:
 	@${MKDIR} ${WRKSRC}/exports/lib
-	@${CP} ${X11ROOT}/lib/lib* ${WRKSRC}/exports/lib
+	@${CP} -p ${X11ROOT}/lib/lib* ${WRKSRC}/exports/lib
 
 post-install:
 	@${CHMOD} a+r ${X11ROOT}/bin/xterm
@@ -64,10 +64,16 @@ post-install:
 .  include "../../security/PAM/buildlink3.mk"
 .endif
 
+PLIST_SRC+=	PLIST
+.if ${OPSYS} != "Darwin"
+PLIST_SRC+=	PLIST.dga
+.endif
+
+.include "../../meta-pkgs/xorg/Makefile.common"
+
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../meta-pkgs/xorg/Makefile.common"
 .include "../../x11/Xrandr/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
