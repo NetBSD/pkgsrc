@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/14 14:53:52 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/24 03:02:54 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -8,7 +8,7 @@ PG_PKG_VERS=		# empty
 COMMENT=		Tcl interface to PostgreSQL
 
 DEPENDS+=		postgresql-lib>=${PG_BASE_VERS}:../../databases/postgresql-lib
-DEPENDS+=		tcl>=8.3.2:../../lang/tcl
+DEPENDS+=		tcl>=8.3.2nb2:../../lang/tcl
 
 TCLSH=			${LOCALBASE}/bin/tclsh
 TCL_CONFIGDIR=		${LOCALBASE}/lib
