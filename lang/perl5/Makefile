@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2001/02/17 09:07:24 agc Exp $
+# $NetBSD: Makefile,v 1.33 2001/02/20 16:33:35 wiz Exp $
 
-DISTNAME=		perl-5.6.0nb3
+DISTNAME=		perl-5.6.0nb4
 CATEGORIES=		lang devel perl5
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -14,6 +14,7 @@ DEPENDS+=		p5-Data-Dumper>=2.101:../../devel/p5-Data-Dumper
 DEPENDS+=		p5-Devel-DProf>=19990108:../../devel/p5-Devel-DProf
 DEPENDS+=		p5-Devel-Peek>=1.0001:../../devel/p5-Devel-Peek
 DEPENDS+=		p5-CGI>=2.56:../../www/p5-CGI
+DEPENDS+=		perl-mk-1.0:../../pkgtools/perl-mk
 
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		# defined
