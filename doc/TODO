@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.839 2003/09/08 20:06:55 wiz Exp $
+$NetBSD: TODO,v 1.840 2003/09/09 12:02:25 recht Exp $
 
 Suggested new packages
 ======================
@@ -131,7 +131,7 @@ Suggested package updates
 	o gliblib-1.2.3 [pkg/21776]
 	o global-4.6
 	o gnats-4.0
-	o gnome-python-2.0.0
+	o gnome-python-2.0.0 [pkgsrc-wip]
 	o gnomeicu-0.99
 	o gnucash-1.8.5
 	o gnuchess-5.06
@@ -228,9 +228,6 @@ Suggested package updates
 	o pure-ftpd-1.0.16a [pkg/22680]
 	o pxe-1.4 [pkg/22323]
 	o pygtk-0.6.11
-	o py-gtk2-2.0.0
-	o py-ORBit-2.0.0
-	o py-wxWindows-2.4.1.2 [pkg/22704]
 	o pysol-4.82
 	o rep-gtk-0.17
 	o rocksndiamonds-3.0.3
