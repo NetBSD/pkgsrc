@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1729 2003/03/22 05:21:12 wiz Exp $
+$NetBSD: CHANGES,v 1.1730 2003/03/22 05:28:27 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1246,3 +1246,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libnet to 1.0.1bnb1 [wiz 2003-03-22]
 	Updated ja-shinonome to 0.9.10 [salo 2003-03-22]
 	Updated fetchmail to 6.2.2 [wiz 2003-03-22]
+	Updated xnc to 4.4.7nb2 [dillo 2003-03-22]
