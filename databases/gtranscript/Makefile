@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/07/24 22:45:14 recht Exp $
+# $NetBSD: Makefile,v 1.26 2004/08/13 09:03:40 recht Exp $
 #
 
 DISTNAME=	gtranscript-0.0.1
@@ -22,6 +22,8 @@ USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
 
 #CPPFLAGS+=	-I${LOCALBASE}/include		# <postgresql/*.h>
+
+PGSQL_VERSION_REQD=	73
 
 .include "../../x11/gnome-core/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
