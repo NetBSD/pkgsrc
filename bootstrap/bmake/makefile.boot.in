@@ -1,0 +1,60 @@
+# RCSid:
+#	$Id: makefile.boot.in,v 1.1.1.1 2004/03/11 13:04:10 grant Exp $
+
+#
+# modify MACHINE and MACHINE_ARCH as appropriate for your target architecture
+#
+prefix=@prefix@
+srcdir=@srcdir@
+VPATH=.:$(srcdir)
+CC=@CC@
+INSTALL=$(srcdir)/install-sh
+MKDEP=$(srcdir)/mkdeps.sh -n -i/usr/include
+MKDEP_OPTS=-A
+MK=${prefix}/share/mk
+MKSRC=${srcdir}/mk
+
+CFLAGS=-I. -I$(srcdir) @DEFS@ @CPPFLAGS@ -DMAKE_BOOTSTRAP ${XDEFS}
+MDEFS="-D@force_machine@MACHINE=\"@machine@\"" "-DMACHINE_ARCH=\"@machine_arch@\""
+
+OBJ=arch.o buf.o compat.o cond.o dir.o for.o hash.o job.o main.o make.o \
+    parse.o str.o suff.o targ.o trace.o var.o util.o getopt.o sigcompat.o @LIBOBJS@
+
+bmake:	bmake.boot
+	@echo you might want to try: 
+	@echo ${MAKE} -f makefile.boot bootstrap
+	cp bmake.boot $@
+
+bmake.boot: ${OBJ}
+	(cd lst.lib; $(MAKE) -f makefile.boot CC="$(CC)" CFLAGS="-I.. -I${srcdir}/.. ${CFLAGS}" )
+	${CC} *.o -o $@ @LIBS@
+	rm -f *.[ado] */*.[ado] 
+
+bootstrap:	bmake.boot
+	CC="$(CC)" MAKESYSPATH=${MK} ./bmake.boot -f Makefile 
+install:	install-bin install-man install-mk
+
+install-bin:
+	${INSTALL} -m 755 bmake ${prefix}/bin
+
+install-man:
+	test -d ${prefix}/man/cat1 || ${INSTALL} -m 755 -d ${prefix}/man/cat1
+	${INSTALL} -m 444 ${srcdir}/bmake.0 ${prefix}/man/cat1/bmake.1
+
+install-mk:
+	test -d ${MK} || ${INSTALL} -m 775 -d ${MK}
+	${INSTALL} -m 644 ${MKSRC}/[ac-z]*.mk ${MK}
+	test -s ${MK}/bsd.own.mk || ${INSTALL} -m 644 ${MKSRC}/bsd*.mk ${MK}
+	test -s ${MK}/sys.mk || ${INSTALL} -m 644 ${MKSRC}/`uname`.sys.mk ${MK}/sys.mk || echo "Need to find/create a sys.mk"
+
+depend:
+	VPATH=${VPATH} ${MKDEP} $(MKDEP_OPTS) -f makefile.boot ${CFLAGS} ${OBJ:.o=.c}
+	(cd lst.lib; $(MAKE) -f makefile.boot depend MKDEP="$(MKDEP) $(MKDEP_OPTS)" CC="$(CC)" CFLAGS="-I.. ${CFLAGS}" )
+
+main.o: $(srcdir)/main.c
+	${CC} ${CFLAGS} ${MDEFS} -o $@ -c $(srcdir)/main.c
+
+${OBJ}: config.h
+
+clean:
+	rm -f bmake ${OBJ}
