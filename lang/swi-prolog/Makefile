@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/10/07 12:16:51 markd Exp $
+# $NetBSD: Makefile,v 1.33 2005/02/21 20:26:12 hubertf Exp $
 
 .include "../swi-prolog-lite/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=		swi-prolog-${SWIPLVERS}
 PKGREVISION=		1
 CATEGORIES=		lang
 
-MAINTAINER=		hubertf@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		ISO/Edinburgh-style Prolog compiler suite
 
 DEPENDS+=		swi-prolog-lite-${SWIPLVERS}nb1:../swi-prolog-lite

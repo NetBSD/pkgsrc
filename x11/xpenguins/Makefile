@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2004/11/26 20:44:02 snj Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/21 20:26:15 hubertf Exp $
 #
 
 DISTNAME=	xpenguins-2.2
 CATEGORIES=	games x11
 MASTER_SITES=	http://xpenguins.seul.org/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xpenguins.seul.org/
 COMMENT=	Little penguins walking along the tops of your windows
 

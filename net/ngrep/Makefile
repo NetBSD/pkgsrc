@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/03 15:15:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/02/21 20:26:13 hubertf Exp $
 #
 
 DISTNAME=	ngrep-1.42
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ngrep/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://ngrep.sourceforge.net/
 COMMENT=	Network grep
 

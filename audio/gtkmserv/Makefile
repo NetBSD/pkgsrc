@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:13:06 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/02/21 20:26:08 hubertf Exp $
 #
 
 DISTNAME=	gtkmserv-0.5.2
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://projects.ubertechnique.com/downloads/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://projects.ubertechnique.com/index.html
 COMMENT=	Gtk-based GUI client for the audio/mserv package
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.48 2004/10/03 00:13:10 tv Exp $
+# $NetBSD: Makefile,v 1.49 2005/02/21 20:26:08 hubertf Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=    4
 CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmcd/src/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ibiblio.org/tkan/xmcd/
 COMMENT=	Motif CD player
 

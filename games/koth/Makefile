@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/02/14 10:57:39 uebayasi Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/21 20:26:10 hubertf Exp $
 #
 
 DISTNAME=	koth-0.8.0
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://savannah.nongnu.org/download/koth/default.pkg/0.8.0/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/koth/
 COMMENT=	The classic "shoot the other tank" artillery game, networked
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/01/23 20:41:48 recht Exp $
+# $NetBSD: Makefile,v 1.16 2005/02/21 20:26:13 hubertf Exp $
 #
 
 DISTNAME=	nicotine-1.0.8
@@ -6,7 +6,7 @@ CATEGORIES=	net audio x11
 MASTER_SITES=	http://nicotine.thegraveyard.org/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://nicotine.thegraveyard.org/
 COMMENT=	Client for soulseek, a peer-to-peer network for music
 

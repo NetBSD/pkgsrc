@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2004/10/03 00:18:33 tv Exp $
+# $NetBSD: Makefile,v 1.35 2005/02/21 20:26:15 hubertf Exp $
 
 DISTNAME=		gtkglarea-1.2.2
 PKGREVISION=		5
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://www.student.oulu.fi/~jlof/gtkglarea/download/
 
-MAINTAINER=		hubertf@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.student.oulu.fi/~jlof/gtkglarea/
 COMMENT=		OpenGL/Mesa widget for GTK+ GUI toolkit
 

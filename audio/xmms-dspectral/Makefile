@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:13:11 tv Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/21 20:26:09 hubertf Exp $
 #
 
 DISTNAME=	dspectral-1.2
@@ -7,7 +7,7 @@ PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://hem.passagen.se/joakime/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://hem.passagen.se/joakime/linuxapp.html
 COMMENT=	XMMS plugin for dual spectral analyzer
 
