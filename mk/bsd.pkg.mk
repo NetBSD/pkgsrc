@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.445 2000/05/31 02:08:04 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.446 2000/05/31 16:59:44 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1966,14 +1966,32 @@ clean: pre-clean
 .endif
 .endif
 
+
+.if !target(clean-depends)
+clean-depends:
+.if defined(BUILD_DEPENDS) || defined(DEPENDS) || defined(RUN_DEPENDS)
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//} \
+			          ${DEPENDS:C/^[^:]*://:C/:.*//} \
+			      ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} | sort -u`; do \
+		if [ -d $$dir ] ; then					\
+			(cd $$dir && ${MAKE} CLEANDEPENDS=${CLEANDEPENDS} clean ); \
+		fi							\
+	done
+.endif
+.endif
+
+
 .if !target(pre-distclean)
 pre-distclean:
 	@${DO_NADA}
 .endif
 
+
 .if !target(cleandir)
 cleandir: clean
 .endif
+
 
 .if !target(distclean)
 distclean: pre-distclean clean
@@ -2208,11 +2226,11 @@ package-depends:
 		else							\
 			(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi;							\
-		if ${PACKAGE_DEPENDS_QUICK} ; then \
+		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
 			${PKG_INFO} -qf "$$pkg" | ${GREP} '^@pkgdep' | ${AWK} '{print $$2}' ; \
-		else \
+		else 							\
 		(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
-		fi ; \
+		fi ; 							\
 	else								\
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 	fi
@@ -2226,11 +2244,11 @@ package-depends:
 		else							\
 			(cd $$dir && ${MAKE} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
 		fi;							\
-		if ${PACKAGE_DEPENDS_QUICK} ; then \
+		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
 			${PKG_INFO} -qf "$$pkg" | grep ^@pkgdep | awk '{print $$2}' ; \
-		else \
+		else 							\
 			(cd $$dir && ${MAKE} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
-		fi ; \
+		fi ; 							\
 	else								\
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
 	fi
@@ -2379,20 +2397,6 @@ check-depends:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Validating dependencies for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 _DEPENDS_TARGET_OVERRIDE=1 depends || \
 		(${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} cannot build necessary dependencies."; ${FALSE})
-.endif
-.endif
-
-.if !target(clean-depends)
-clean-depends:
-.if defined(BUILD_DEPENDS) || defined(DEPENDS) || defined(RUN_DEPENDS)
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//} \
-			          ${DEPENDS:C/^[^:]*://:C/:.*//} \
-			      ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} | sort -u`; do \
-		if [ -d $$dir ] ; then					\
-			(cd $$dir && ${MAKE} CLEANDEPENDS=${CLEANDEPENDS} clean ); \
-		fi							\
-	done
 .endif
 .endif
 
