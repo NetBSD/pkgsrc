@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2003/04/10 10:22:11 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2003/12/08 22:51:55 wiz Exp $
 
---- configure.orig	Tue Mar 11 18:14:02 2003
+--- configure.orig	2003-11-05 23:02:32.000000000 +0100
 +++ configure
-@@ -11254,7 +11254,7 @@ _ACEOF
-      *)
+@@ -11554,7 +11554,7 @@ _ACEOF
+       *)
  
  cat >>confdefs.h <<_ACEOF
 -#define LIBGLADE_LIB "libglade.so.0"
