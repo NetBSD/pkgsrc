@@ -1,0 +1,16 @@
+$NetBSD: patch-bt,v 1.1 2005/03/06 11:40:21 spz Exp $
+
+--- src/RtConfig/command.y.orig	2004-07-30 12:58:11.000000000 +0200
++++ src/RtConfig/command.y
+@@ -56,7 +56,11 @@
+ 
+ #include "config.h"
+ 
++#if (__GNUC__ > 2)
+ #include <ostream>
++#else
++#include <ostream.h>
++#endif
+ #include <cstring>
+ #include <cstdlib>
+ #include <cctype>

@@ -1,74 +1,95 @@
-$NetBSD: patch-an,v 1.1.1.1 2005/02/28 12:37:30 spz Exp $
+$NetBSD: patch-an,v 1.2 2005/03/06 11:40:21 spz Exp $
 
 --- src/normalform/RadixSet.hh.orig	2004-07-30 12:58:13.000000000 +0200
 +++ src/normalform/RadixSet.hh
-@@ -76,7 +76,8 @@ extern FixedSizeAllocator RadixTreeAlloc
+@@ -76,7 +76,12 @@ extern FixedSizeAllocator RadixTreeAlloc
  
  class RadixTree {
  public:
--   friend class Iterator {
++#if (__GNUC__ > 2)
 +   friend class Iterator;
 +   class Iterator {
++#else
+    friend class Iterator {
++#endif
     private:
        const RadixTree* last;
        const RadixTree* root;
-@@ -155,7 +156,8 @@ class RadixSet {
+@@ -155,7 +160,12 @@ class RadixSet {
  public:
     static bool compressedPrint;
  
--   friend class Iterator {
++#if (__GNUC__ > 2)
 +   friend class Iterator;
 +   class Iterator {
++#else
+    friend class Iterator {
++#endif
     private:
        RadixTree::Iterator itr;
        const RadixTree *now;     // points to current node during iteration
-@@ -166,7 +168,8 @@ public:
+@@ -166,7 +176,12 @@ public:
        bool next(u_int &_addr, u_int &_leng, u_int64_t &rngs);
     };
  
--   friend class SortedIterator {
++#if (__GNUC__ > 2)
 +   friend class SortedIterator;
 +   class SortedIterator {
++#else
+    friend class SortedIterator {
++#endif
     private:
        class PrefixLNode : public ListNode {
        public:
-@@ -189,7 +192,8 @@ public:
+@@ -189,7 +204,12 @@ public:
        bool next(u_int &_addr, u_int &_leng, u_int64_t &_rngs);
     };
  
--   friend class PrefixIterator {
++#if (__GNUC__ > 2)
 +   friend class PrefixIterator;
 +   class PrefixIterator {
++#else
+    friend class PrefixIterator {
++#endif
     private:
        RadixTree::Iterator itr;
        const RadixTree *current;
-@@ -206,7 +210,8 @@ public:
+@@ -206,7 +226,12 @@ public:
        bool next(u_int &_addr, u_int &_leng);
     };
  
--   friend class SortedPrefixIterator {
++#if (__GNUC__ > 2)
 +   friend class SortedPrefixIterator;
 +   class SortedPrefixIterator {
++#else
+    friend class SortedPrefixIterator {
++#endif
     private:
        class PrefixLNode : public ListNode {
        public:
-@@ -228,7 +233,8 @@ public:
+@@ -228,7 +253,12 @@ public:
        bool next(u_int &_addr, u_int &_leng);
     };
  
--   friend class PrefixRangeIterator {
++#if (__GNUC__ > 2)
 +   friend class PrefixRangeIterator;
 +   class PrefixRangeIterator {
++#else
+    friend class PrefixRangeIterator {
++#endif
     private:
        RadixTree::Iterator itr;
        const RadixTree *current;
-@@ -259,7 +265,8 @@ public:
+@@ -259,7 +289,12 @@ public:
        }
     };
  
--   friend class SortedPrefixRangeIterator {
++#if (__GNUC__ > 2)
 +   friend class SortedPrefixRangeIterator;
 +   class SortedPrefixRangeIterator {
++#else
+    friend class SortedPrefixRangeIterator {
++#endif
     private:
        class PrefixLNode : public ListNode {
        public:
