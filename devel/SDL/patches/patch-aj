@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.11 2002/07/14 07:28:40 kristerw Exp $
+$NetBSD: patch-aj,v 1.12 2002/07/15 23:04:20 kristerw Exp $
 --- configure.in.orig	Thu Nov  8 08:28:00 2001
-+++ configure.in	Sun Jul 14 06:02:41 2002
++++ configure.in	Mon Jul 15 23:28:12 2002
 @@ -374,10 +374,7 @@
                    , enable_nas=yes)
      if test x$enable_audio = xyes -a x$enable_nas = xyes; then
@@ -32,7 +32,7 @@ $NetBSD: patch-aj,v 1.11 2002/07/14 07:28:40 kristerw Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1281,6 +1278,124 @@
+@@ -1281,6 +1278,126 @@
      VIDEO_DRIVERS="$VIDEO_DRIVERS quartz/libvideo_quartz.la"
  }
  
@@ -43,29 +43,31 @@ $NetBSD: patch-aj,v 1.11 2002/07/14 07:28:40 kristerw Exp $
 +        have_libusbhid=no
 +        have_libusb=no
 +        AC_CHECK_LIB(usbhid, hid_init, have_libusbhid=yes)
-+        AC_CHECK_LIB(usb, hid_init, have_libusb=yes)
 +        if test x$have_libusbhid = xyes; then
 +            SYSTEM_LIBS="$SYSTEM_LIBS -lusbhid"
-+        fi
-+        if test x$have_libusb = xyes; then
-+            SYSTEM_LIBS="$SYSTEM_LIBS -lusb"
-+        fi
 +
-+        AC_CHECK_HEADER(usb.h, have_usb_h=yes)
-+        AC_CHECK_HEADER(usbhid.h, have_usbhid_h=yes)
-+        AC_CHECK_HEADER(libusb.h, have_libusb_h=yes)
-+        AC_CHECK_HEADER(libusbhid.h, have_libusbhid_h=yes)
-+        if test x$have_usb_h = xyes; then
-+            CFLAGS="$CFLAGS -DHAVE_USB_H"
-+        fi
-+        if test x$have_usbhid_h = xyes; then
-+            CFLAGS="$CFLAGS -DHAVE_USBHID_H"
-+        fi
-+        if test x$have_libusb_h = xyes; then
-+            CFLAGS="$CFLAGS -DHAVE_LIBUSB_H"
-+        fi
-+        if test x$have_libusbhid_h = xyes; then
-+            CFLAGS="$CFLAGS -DHAVE_LIBUSBHID_H"
++            AC_CHECK_HEADER(usbhid.h, have_usbhid_h=yes)
++            AC_CHECK_HEADER(libusbhid.h, have_libusbhid_h=yes)
++            if test x$have_usbhid_h = xyes; then
++                CFLAGS="$CFLAGS -DHAVE_USBHID_H"
++            fi
++            if test x$have_libusbhid_h = xyes; then
++                CFLAGS="$CFLAGS -DHAVE_LIBUSBHID_H"
++            fi
++	else
++            AC_CHECK_LIB(usb, hid_init, have_libusb=yes)
++            if test x$have_libusb = xyes; then
++                SYSTEM_LIBS="$SYSTEM_LIBS -lusb"
++
++                AC_CHECK_HEADER(usb.h, have_usb_h=yes)
++                AC_CHECK_HEADER(libusb.h, have_libusb_h=yes)
++                if test x$have_usb_h = xyes; then
++                    CFLAGS="$CFLAGS -DHAVE_USB_H"
++                fi
++                if test x$have_libusb_h = xyes; then
++                    CFLAGS="$CFLAGS -DHAVE_LIBUSB_H"
++                fi
++            fi
 +        fi
 +
 +        AC_MSG_CHECKING(for usbhid)
@@ -157,7 +159,7 @@ $NetBSD: patch-aj,v 1.11 2002/07/14 07:28:40 kristerw Exp $
  case "$target" in
      *-*-linux*)
          ARCH=linux
-@@ -1465,14 +1580,17 @@
+@@ -1465,14 +1582,17 @@
          CheckDummyVideo
          CheckDiskAudio
          CheckNASM
@@ -175,7 +177,7 @@ $NetBSD: patch-aj,v 1.11 2002/07/14 07:28:40 kristerw Exp $
          # Set up files for the main() stub
          COPY_ARCH_SRC(src/main, linux, SDL_main.c)
          # Set up files for the audio library
-@@ -1481,12 +1599,6 @@
+@@ -1481,12 +1601,6 @@
              AUDIO_SUBDIRS="$AUDIO_SUBDIRS sun"
              AUDIO_DRIVERS="$AUDIO_DRIVERS sun/libaudio_sun.la"
          fi
@@ -188,7 +190,7 @@ $NetBSD: patch-aj,v 1.11 2002/07/14 07:28:40 kristerw Exp $
          # Set up files for the cdrom library
          if test x$enable_cdrom = xyes; then
              CDROM_SUBDIRS="$CDROM_SUBDIRS openbsd"
-@@ -1770,7 +1882,11 @@
+@@ -1770,7 +1884,11 @@
              COPY_ARCH_SRC(src/thread, linux, SDL_systhread_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex.c)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex_c.h)
@@ -200,7 +202,7 @@ $NetBSD: patch-aj,v 1.11 2002/07/14 07:28:40 kristerw Exp $
              COPY_ARCH_SRC(src/thread, generic, SDL_syssem_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_syscond.c)
              COPY_ARCH_SRC(src/thread, generic, SDL_syscond_c.h)
-@@ -2159,6 +2275,10 @@
+@@ -2159,6 +2277,10 @@
    SDL_RLD_FLAGS="-R\${exec_prefix}/lib"
  fi
  
@@ -211,7 +213,7 @@ $NetBSD: patch-aj,v 1.11 2002/07/14 07:28:40 kristerw Exp $
  if test $ARCH = openbsd; then
    SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib $SYSTEM_LIBS"
  fi
-@@ -2277,6 +2397,7 @@
+@@ -2277,6 +2399,7 @@
  src/joystick/Makefile
  src/joystick/amigaos/Makefile
  src/joystick/beos/Makefile
