@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/02 16:39:35 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/28 12:54:55 wiz Exp $
 #
 
-PKGNAME=       	p5-Filter-1.16
-DISTNAME!=     	echo ${PKGNAME} | sed -e 's/^p5-//'
+DISTNAME=	Filter-1.16
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Filter/}
 
