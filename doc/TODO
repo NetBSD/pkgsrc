@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1647 2004/04/20 14:59:08 markd Exp $
+$NetBSD: TODO,v 1.1648 2004/04/20 20:22:51 minskim Exp $
 
 Suggested new packages
 ======================
@@ -296,7 +296,6 @@ Suggested package updates
 	o p5-Term-Readline-1.14 [pkg/25163]
 	o p5-XML-Path-1.13 [pkg/24998]
 	o p5-XML-Writer-0.500 [pkg/24903]
-	o p5-XML-XSLT-0.47
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
 	o php-4.3.6
