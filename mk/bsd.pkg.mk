@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.381 2000/01/06 03:21:51 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.382 2000/01/07 12:24:14 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -402,8 +402,7 @@ PKGTOOLS_REQD=		19990909
 # Check that we're using up-to-date pkg_* tools with this file.
 uptodate-pkgtools:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	pkgtools_version=`${MAKE} show-pkgtools-version`;		\
-	if [ $$pkgtools_version -lt ${PKGTOOLS_REQD} ]; then		\
+	if [ ${PKGTOOLS_VERSION} -lt ${PKGTOOLS_REQD} ]; then		\
 		case ${PKGNAME} in					\
 		pkg_install-*)						\
 			;;						\
@@ -488,10 +487,7 @@ MTREE?=		${LOCALBASE}/bsd/bin/mtree
 MV?=		/usr/bin/mv
 PATCH?=		${LOCALBASE}/bin/patch -b
 PAX?=		/bin/pax
-PKG_ADD?=	${LOCALBASE}/bsd/bin/pkg_add
-PKG_CREATE?=	${LOCALBASE}/bsd/bin/pkg_create
-PKG_DELETE?=	${LOCALBASE}/bsd/bin/pkg_delete
-PKG_INFO?=	${LOCALBASE}/bsd/bin/pkg_info
+PKG_TOOLS_BIN?= ${LOCALBASE}/bsd/bin
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
 SED?=		/usr/bin/sed
@@ -533,10 +529,7 @@ MTREE?=		${LOCALBASE}/bsd/bin/mtree
 MV?=		/bin/mv
 PATCH?=		/usr/bin/patch
 PAX?=		/usr/local/bsd/bin/pax
-PKG_ADD?=	${LOCALBASE}/bsd/bin/pkg_add
-PKG_CREATE?=	${LOCALBASE}/bsd/bin/pkg_create
-PKG_DELETE?=	${LOCALBASE}/bsd/bin/pkg_delete
-PKG_INFO?=	${LOCALBASE}/bsd/bin/pkg_info
+PKG_TOOLS_BIN?= ${LOCALBASE}/bsd/bin
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/bin/sed
@@ -578,10 +571,7 @@ MTREE?=		/usr/sbin/mtree
 MV?=		/bin/mv
 PATCH?=		/usr/bin/patch
 PAX?=		/bin/pax
-PKG_ADD?=	/usr/sbin/pkg_add
-PKG_CREATE?=	/usr/sbin/pkg_create
-PKG_DELETE?=	/usr/sbin/pkg_delete
-PKG_INFO?=	/usr/sbin/pkg_info
+PKG_TOOLS_BIN?= /usr/sbin
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/usr/bin/sed
@@ -595,6 +585,20 @@ TR?=		/usr/bin/tr
 TRUE?=		/usr/bin/true
 TYPE?=		type
 .endif # !SunOS
+
+PKG_ADD?=	${PKG_TOOLS_BIN}/pkg_add
+PKG_CREATE?=	${PKG_TOOLS_BIN}/pkg_create
+PKG_DELETE?=	${PKG_TOOLS_BIN}/pkg_delete
+PKG_INFO?=	${PKG_TOOLS_BIN}/pkg_info
+
+.if !defined(PKGTOOLS_VERSION)
+.if !exists(${IDENT})
+PKGTOOLS_VERSION=${PKGTOOLS_REQD}
+.else
+PKGTOOLS_VERSION!= ${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ { gsub("/", "", $$4); print $$4 }' | sort | ${TAIL} -n 1
+.endif
+.endif
+MAKEFLAGS+=	" PKGTOOLS_VERSION=${PKGTOOLS_VERSION}"
 
 # Used to print all the '===>' style prompts - override this to turn them off.
 ECHO_MSG?=		${ECHO}
@@ -2406,11 +2410,7 @@ README.html: .PRECIOUS
 
 .if !target(show-pkgtools-version)
 show-pkgtools-version:
-.if !exists(${IDENT})
-	@echo ${PKGTOOLS_REQD}
-.else
-	@${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ { gsub("/", "", $$4); print $$4 }' | sort | ${TAIL} -n 1
-.endif
+	@${ECHO} ${PKGTOOLS_VERSION}
 .endif
 
 # convenience target, to display make variables from command line
@@ -2528,7 +2528,7 @@ fake-pkg: ${PLIST} ${DESCR}
 .ifdef USE_GMAKE
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
-	@${ECHO} "_PKGTOOLS_VER= `${MAKE} show-pkgtools-version`" >> ${BUILD_INFO_FILE}
+	@${ECHO} "_PKGTOOLS_VER= ${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
 .if ${PKGTOOLS_REQD} > 19990909
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size                       >${SIZE_PKG_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size SIZEDEPENDS=yesplease >${SIZE_ALL_FILE}
