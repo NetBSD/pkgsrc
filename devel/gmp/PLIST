@@ -1,16 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2003/06/23 11:02:22 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/02/15 22:12:08 seb Exp $
 include/gmp.h
 include/gmpxx.h
-info/gmp.info
-info/gmp.info-1
-info/gmp.info-2
-info/gmp.info-3
-info/gmp.info-4
-info/gmp.info-5
-info/gmp.info-6
-info/gmp.info-7
-info/gmp.info-8
-info/gmp.info-9
 lib/libgmp.a
 lib/libgmp.la
 lib/libgmp.so
