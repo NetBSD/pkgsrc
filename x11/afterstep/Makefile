@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/06/12 21:51:37 tron Exp $
+# $NetBSD: Makefile,v 1.12 1999/10/28 10:07:42 agc Exp $
 
 DISTNAME=	AfterStep-1.6.10
 PKGNAME=	afterstep-1.6.10
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.afterstep.org/
 
-DEPENDS+=	asclock-11:../../x11/asclock
+DEPENDS+=	asclock-1.0:../../x11/asclock
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	rplay-3.2.0b6:../../audio/rplay
