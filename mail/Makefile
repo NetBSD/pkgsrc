@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2005/04/02 14:46:29 abs Exp $
+# $NetBSD: Makefile,v 1.255 2005/04/04 19:12:27 salo Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -190,7 +190,6 @@ SUBDIR+=	sylpheed-claws-ghostscript-viewer
 SUBDIR+=	sylpheed-claws-image-viewer
 SUBDIR+=	sylpheed-claws-trayicon
 SUBDIR+=	sylpheed-devel
-SUBDIR+=	sylpheed-gtk2
 SUBDIR+=	sympa
 SUBDIR+=	teapop
 SUBDIR+=	thunderbird
