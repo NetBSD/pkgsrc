@@ -1,7 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2005/02/26 17:25:37 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/11 21:24:49 rillig Exp $
 
---- drivers/festival/festivalsynthesisdriver.c.orig	2005-01-11 13:27:34.000000000 +0100
-+++ drivers/festival/festivalsynthesisdriver.c
+Added some necessary header files.
+Don't put statements above declarations (gcc-2.95 is not a C99 compiler).
+
+Needed for NetBSD-1.6.2.
+
+--- drivers/festival/festivalsynthesisdriver.c.orig	Tue Mar  8 14:10:23 2005
++++ drivers/festival/festivalsynthesisdriver.c	Fri Mar 11 09:47:37 2005
 @@ -25,6 +25,8 @@
   *
   */
@@ -11,3 +16,14 @@ $NetBSD: patch-aa,v 1.1 2005/02/26 17:25:37 jmmv Exp $
  #include <string.h>
  #include <sys/types.h>
  #include <sys/wait.h>
+@@ -591,9 +593,9 @@ get_voice_list (void)
+ static void
+ voice_list_free (GSList *l)
+ {
+-	g_assert (l);
+ 	GSList *tmp = l;
+ 	
++	g_assert (l);
+ 	while (tmp)
+ 	{
+     	    CORBA_free (tmp->data);
