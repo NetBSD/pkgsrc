@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2749 2004/12/25 15:24:52 jmmv Exp $
+$NetBSD: TODO,v 1.2750 2004/12/25 15:34:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -428,6 +428,7 @@ Suggested package updates
 	o dnstracer-1.8
 	o docbook-4.3
 	o docbook-website-2.5.0
+	o doclifter-2.0
 	o docsis-0.9.1
 	o dpkg-1.10.25
 	o drscheme-208
@@ -446,6 +447,7 @@ Suggested package updates
 	o efax-gtk-2.2.14
 	o efont-unicode-0.4.2
 	o egtk-0.3.6
+	o elinks-0.10.0
 	o elk-3.99.6
 	o elm-2.5.7
 	o elm-me-2.5plalpha4
@@ -494,6 +496,7 @@ Suggested package updates
 	o gattrib-20041120
 	o gauche-0.8.3
 	o gbib-0.1.2
+	o gcc3-3.3.5
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
 	o gcpio-2.6
@@ -703,11 +706,12 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpfr-2.1.0
 	o mpi-ch-1.2.6 [pkg/27273]
+	o mplayer-1.0pre6
 	o mplayer-plugin-firefox-2.75
 	o mrproject-0.9.1
 	o mrtg-2.11.0
 	o mserv-devel-0.41
-	o msmtp-1.2.4
+	o msmtp-1.3.0
 	o mtail-1.1.1
 	o mtr-0.67
 	o multi-gnome-terminal-1.6.2
@@ -1036,6 +1040,7 @@ Suggested package updates
 	o screws-0.56 [pkg/28646]
 	o scribus-1.2
 	o scrollz-1.9.4
+	o scummvm-0.7.0
 	o sdig-0.40
 	o semantic-1.4.4
 	o sendfile-20010424
@@ -1076,6 +1081,8 @@ Suggested package updates
 	o streamtuner-0.99.99
 	o subtitleripper-0.3.4
 	o subversion-1.1.2
+	o sun-jdk15-5.0.1
+	o sun-jre15-5.0.1
 	o svk-0.27
 	o swfdec-0.3.2
 	o swi-prolog-5.4.4
@@ -1085,7 +1092,7 @@ Suggested package updates
 	o swig-perl-1.3.23
 	o swig-python-1.3.23
 	o swish-e-2.4.2
-	o sylpheed-1.0rc
+	o sylpheed-1.0.0
 	o sylpheed-claws-0.9.13
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sysinfo-4.2.2
@@ -1175,6 +1182,7 @@ Suggested package updates
 	o xblast-2.9.22
 	o xboard-4.2.7
 	o xcb-2.4
+	o xchm-0.9.7
 	o xcursor-1.1.2
 	o xdaliclock-2.20
 	o xdialog-2.1.2
