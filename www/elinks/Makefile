@@ -1,19 +1,23 @@
-# $NetBSD: Makefile,v 1.4 2002/09/12 23:14:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/26 21:51:13 salo Exp $
 #
 
-DISTNAME=	elinks-0.3.0
+DISTNAME=	elinks-0.4.2
 CATEGORIES=	www
 MASTER_SITES=	http://elinks.or.cz/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://elinks.or.cz/
-COMMENT=	Extended/Enhanced Links (elinks)
+COMMENT=	Extended/Enhanced Links
 
-CONFLICTS=	links-[0-9]* links-gui-[0-9]*
-
-GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
+GNU_CONFIGURE=	YES
 
+CONFIGURE_ARGS+=	--without-x
+
+.include "../../archivers/bzip2/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../lang/lua/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
