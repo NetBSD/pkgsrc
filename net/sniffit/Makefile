@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 1998/09/22 06:11:39 garbled Exp $
+# $NetBSD: Makefile,v 1.7 1998/10/15 19:51:07 agc Exp $
 #
 
 DISTNAME=	sniffit.0.3.5
 PKGNAME=	sniffit-0.3.5
-CATEGORIES=	security
+CATEGORIES=	net security
 MASTER_SITES=	http://reptile.rug.ac.be/~coder/sniffit/files/
 
 NOT_FOR_ARCHS=	alpha	# severe LP64 loss

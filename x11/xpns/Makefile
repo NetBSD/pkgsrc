@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:40 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1998/10/15 19:51:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
 DISTNAME=	pns_source
 PKGNAME=	xpns-1.0
-CATEGORIES=	misc cad
+CATEGORIES=	x11 cad
 MASTER_SITES=	ftp://ftp.informatik.uni-stuttgart.de/pub/petri-nets/
 EXTRACT_SUFX=	.tar.Z
 
