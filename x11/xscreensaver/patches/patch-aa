@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.13 2001/10/24 14:05:48 tron Exp $
+
+--- configure.orig	Mon Jun  4 01:43:39 2001
++++ configure	Wed Oct 24 15:59:51 2001
+@@ -1531,7 +1531,7 @@
+ # implement the "install-strip" target properly (strip executables,
+ # but do not try to strip scripts.)
+ #
+-INSTALL_SCRIPT='${INSTALL}'
++#INSTALL_SCRIPT='${INSTALL}'
+ 
+ # random libc stuff
+ echo $ac_n "checking for ANSI C header files""... $ac_c" 1>&6
