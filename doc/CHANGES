@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6113 2004/06/03 22:10:00 shannonjr Exp $
+$NetBSD: CHANGES,v 1.6114 2004/06/03 23:02:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2772,4 +2772,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed gccAda-3.4 [shannonjr 2004-06-03]
 	Removed gcc-3.4 [shannonjr 2004-06-03]
 	Removed florist [shannonjr 2004-06-03]
+	Updated bitlbee to 0.90 [xtraeme 2004-06-03]
 
