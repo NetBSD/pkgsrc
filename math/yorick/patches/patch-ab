@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2000/10/02 10:58:52 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/18 17:32:23 drochner Exp $
 
---- Yorick/sysdep.c.orig	Wed Dec 18 12:28:30 1996
-+++ Yorick/sysdep.c
+--- Yorick/sysdep.c.orig	Wed Dec 18 18:28:30 1996
++++ Yorick/sysdep.c	Fri Jan 18 18:26:28 2002
 @@ -127,7 +127,7 @@
    fp_trap(FP_TRAP_FASTMODE);
    fp_enable(TRP_INVALID | TRP_DIV_BY_ZERO | TRP_OVERFLOW);
@@ -11,3 +11,14 @@ $NetBSD: patch-ab,v 1.1 2000/10/02 10:58:52 jlam Exp $
    /* References:   exception_intro, ieee man pages */
  #include <machine/fpu.h>
    ieee_set_fp_control(IEEE_TRAP_ENABLE_INV | IEEE_TRAP_ENABLE_DZE |
+@@ -176,8 +176,10 @@
+    definition had second parameter of type int; size_t (long) as here
+    makes more sense and has apparently superceded the original.
+    On machines with sizeof(int)<sizeof(long) this could be serious... */
++#if 0
+ extern char *getcwd(char *, unsigned long);
+ extern int chdir(const char *);
++#endif
+ #ifndef HAS_GETCWD
+ /* if neither getcwd nor getwd is present, we're out of luck */
+ extern char *getwd(char *);
