@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5758 2004/04/27 17:08:57 adam Exp $
+$NetBSD: CHANGES,v 1.5759 2004/04/27 23:24:58 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2269,3 +2269,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ttf2pt1 to 3.4.4 [adam 2004-04-27]
 	Updated dvipng to 1.0 [adam 2004-04-27]
 	Added glitz-0.1.0 [adam 2004-04-27]
+	Updated jikes to 1.20 [recht 2004-04-27]
