@@ -1,4 +1,4 @@
-/*	$NetBSD: ruserpass.c,v 1.1.1.1 2003/02/28 10:44:55 lukem Exp $	*/
+/*	$NetBSD: ruserpass.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
 
 /*
  * Copyright (c) 1985, 1993, 1994

@@ -1,4 +1,4 @@
-/* $Id: tnftp.h,v 1.1.1.1 2003/08/25 11:52:56 lukem Exp $ */
+/* $Id: tnftp.h,v 1.1 2004/03/11 13:01:01 grant Exp $ */
 
 #define	FTP_PRODUCT	"tnftp"
 #define	FTP_VERSION	"20030825"
