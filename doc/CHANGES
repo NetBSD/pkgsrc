@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.310 2002/10/19 15:40:40 taya Exp $
+$NetBSD: CHANGES,v 1.311 2002/10/19 18:09:54 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3330,3 +3330,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated odbc-postgresql to 7.2.3 [jlam 2002-10-19]
 	Updated p5-XML-Node to 0.10nb2 [seb 2002-10-19]
 	Added phoenix-0.3 [taya 2002-10-19]
+	Updated popt to 1.7nb1 [martti 2002-10-19]
