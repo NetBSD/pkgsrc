@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/30 10:17:53 zuntum Exp $
 
 DISTNAME=	wm2-4
 PKGNAME=	wm2-4.0
@@ -11,7 +11,8 @@ COMMENT=	Minimalist window manager for X
 
 ALL_TARGET=	depend wm2
 
-USE_X11BASE=	yes
+USE_BUILDLINK_ONLY=	YES
+USE_X11BASE=		YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wm2 ${PREFIX}/bin
