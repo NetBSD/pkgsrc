@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.387 2003/06/19 08:34:50 wiz Exp $
+# $NetBSD: Makefile,v 1.388 2003/06/29 23:40:19 gson Exp $
 #
 
 COMMENT=	Networking tools
@@ -219,6 +219,7 @@ SUBDIR+=	pxe
 SUBDIR+=	py-IP
 SUBDIR+=	py-METAR
 SUBDIR+=	py-ORBit
+SUBDIR+=	py-dns
 SUBDIR+=	py-google
 SUBDIR+=	py-soaplib
 SUBDIR+=	py-soappy
