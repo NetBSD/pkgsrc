@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/04 22:46:58 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/08/22 11:22:04 martti Exp $
 share/xml/catalog
-share/xml/docbook/40chg.txt
-share/xml/docbook/41chg.txt
+share/xml/docbook/README
 share/xml/docbook/calstblx.dtd
 share/xml/docbook/catalog
 share/xml/docbook/dbcentx.mod
@@ -29,7 +28,6 @@ share/xml/docbook/ent/iso-lat2.ent
 share/xml/docbook/ent/iso-num.ent
 share/xml/docbook/ent/iso-pub.ent
 share/xml/docbook/ent/iso-tech.ent
-share/xml/docbook/readme.txt
 share/xml/docbook/soextblx.dtd
 @dirrm share/xml/docbook/ent
 @dirrm share/xml/docbook
