@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7884 2004/11/16 19:47:37 abs Exp $
+$NetBSD: CHANGES,v 1.7885 2004/11/16 20:25:01 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5308,4 +5308,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mysql-client to 4.0.22nb2 [tron 2004-11-16]
 	Updated mailsync to 5.2.1 [adrianp 2004-11-16]
 	Updated checkbot to 1.75 [abs 2004-11-16]
-
+	Added skype-0.92.0.12 [xtraeme 2004-11-16]
