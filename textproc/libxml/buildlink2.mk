@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:10 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/22 09:43:17 jlam Exp $
 
 .if !defined(LIBXML_BUILDLINK2_MK)
 LIBXML_BUILDLINK2_MK=	# defined
@@ -11,7 +11,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.libxml=libxml
 BUILDLINK_PREFIX.libxml_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libxml=		include/gnome-xml/*
 BUILDLINK_FILES.libxml+=	lib/libxml.*
-BUILDLINK_FILES.libxml+=	lib/xmlConf.sh
 
 .include "../../devel/zlib/buildlink2.mk"
 
