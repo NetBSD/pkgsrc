@@ -1,56 +1,25 @@
-# $NetBSD: Makefile,v 1.30 2000/08/30 19:46:47 jlam Exp $
-# FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
-#
+# $NetBSD: Makefile,v 1.31 2000/09/05 09:20:44 jlam Exp $
 
-DISTNAME=		perl-${PERL_VERSION}
-PKGNAME=		perl-${PERL_VERSION}nb2
-PERL_VERSION=		5.6.0
+DISTNAME=		perl-5.6.0nb3
 CATEGORIES=		lang devel perl5
-MASTER_SITES=		ftp://ftp.digital.com/pub/plan/perl/CPAN/src/5.0/maint/ \
-			ftp://ftp.cdrom.com/pub/perl/CPAN/src/5.0/maint/
+MASTER_SITES=		# empty
+DISTFILES=		# empty
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
 
-HAS_CONFIGURE=		# defined
-CONFIGURE_ENV+=		PREFIX=${PREFIX}
-CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Doptimize="${CFLAGS}" \
-			-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS} \
-			-Dcc=gcc -Dusemymalloc=false
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
+DEPENDS+=		perl-base>=5.6.0:../../lang/perl5-base
+DEPENDS+=		p5-Data-Dumper>=2.101:../../devel/p5-Data-Dumper
+DEPENDS+=		p5-Devel-DProf>=19990108:../../devel/p5-Devel-DProf
+DEPENDS+=		p5-Devel-Peek>=1.0001:../../devel/p5-Devel-Peek
+DEPENDS+=		p5-CGI>=2.56:../../www/p5-CGI
 
-.if exists(/usr/libexec/ld.so) || exists(/usr/libexec/ld.elf_so)
-CONFIGURE_ARGS+=	-Duseshrplib=true
-.else
-CONFIGURE_ARGS+=	-Duseshrplib=false
-.endif
+EXTRACT_ONLY=		# empty
+NO_CHECKSUM=		# defined
+NO_PATCH=		# defined
+NO_CONFIGURE=		# defined
+NO_BUILD=		# defined
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=		CFLAGS=
-.endif
-
-PERL5_PACKLIST=		${PREFIX}/lib/perl5/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/.packlist
-
-test:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test
-
-post-patch:
-	cd ${WRKSRC}/ext/DynaLoader/hints && ${CP} -f openbsd.pl netbsd.pl
-
-# Remove several modules which are externally available and don't need to be
-# part of the base perl distribution.
-#
-pre-configure:
-	cd ${WRKSRC}/ext; ${RM} -rf Data Devel GDBM_File
-	cd ${WRKSRC}/lib; ${RM} -rf CGI CGI.pm
-	cd ${WRKSRC}/utils; ${RM} -f dprofpp.PL
-
-post-install:
-	@strip ${PREFIX}/bin/a2p
-	@strip ${PREFIX}/bin/perl
-	${RMDIR} -p ${PREFIX}/lib/perl5/site_perl/${PERL_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS} 2>/dev/null || ${TRUE}
+do-install:		# empty
 
 .include "../../mk/bsd.pkg.mk"
