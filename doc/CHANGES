@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4835 2004/02/15 03:43:26 minskim Exp $
+$NetBSD: CHANGES,v 1.4836 2004/02/15 07:34:12 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -836,3 +836,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-ogg-1.3 [minskim 2004-02-14]
 	Updated xemacs-nox11 to 21.4.15 [minskim 2004-02-15]
 	Updated xemacs-packages to 1.14 [minskim 2004-02-15]
+	Updated mrtg to 2.10.13 [martti 2004-02-15]
