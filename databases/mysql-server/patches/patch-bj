@@ -1,3 +1,4 @@
+$NetBSD: patch-bj,v 1.2 1999/12/28 04:41:25 wiz Exp $
 --- mit-pthreads/config/Makefile.in.orig	Mon Mar  2 19:44:34 1998
 +++ mit-pthreads/config/Makefile.in	Sun Dec  5 03:24:04 1999
 @@ -2,8 +2,12 @@
