@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN"
+        "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+
+<!-- $NetBSD: catalog,v 1.1.1.1 2003/12/03 23:48:06 xtraeme Exp $ -->
+
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://www.tei-c.org/Stylesheets/P4/tei.xsl" uri="tei.xsl" />
+</catalog>
