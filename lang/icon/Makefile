@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/06/25 18:00:16 jtb Exp $
+# $NetBSD: Makefile,v 1.19 2001/06/25 18:29:21 jtb Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/02/12 08:39:15 tg Exp
 #
 
@@ -35,7 +35,7 @@ pre-build:
 
 do-configure:
 	cd ${WRKSRC}/config/unix/netbsd; \
-	${SED} -e 's:@X11BASE@:${X11BASE}:g' define.h.graphics.in
+	${SED} -e 's:@X11BASE@:${X11BASE}:g' define.h.graphics.in \
 		> define.h.graphics
 	cd ${WRKSRC}; ${MAKE} ${CONFIGURE_TARGET} name=netbsd
 
