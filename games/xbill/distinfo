@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2004/04/30 20:13:38 tv Exp $
+$NetBSD: distinfo,v 1.6 2004/04/30 20:29:40 tv Exp $
 
 SHA1 (xbill-2.0.tgz) = 4ce4e37687801343af5f57c28498bd0b969c0537
 Size (xbill-2.0.tgz) = 46909 bytes
-SHA1 (patch-aa) = fbbc8583fbbafa44af625ae46950d3e61906f6a8
+SHA1 (patch-aa) = 67f0bdeb4dc80bde68dbd99f2684c2d4908e0423
 SHA1 (patch-ab) = 245573e1ea2223ed1bde91c16db81a658bfcc8f6
 SHA1 (patch-ac) = c3dd487d0002f528f6726d268673bc11be0b24b6
