@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.12 2004/04/11 03:17:12 heinz Exp $
+# $NetBSD: bootstrap,v 1.13 2004/04/16 23:47:02 heinz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -519,8 +519,8 @@ if [ "$need_fixed_strip" = "yes" ] ; then
 fi
 
 if [ "$need_mkdir" = "yes" ]; then
-	echo_msg "Installing fixed mkdir script \"mkdir-p.sh\""
-	run_cmd "(cd files; $shprog ./install-sh -c -o $user -g $group -m 755 mkdir-p.sh $prefix/sbin/mkdir-p.sh)"
+	echo_msg "Installing fixed mkdir script \"mkdir-sh\""
+	run_cmd "(cd files; $shprog ./install-sh -c -o $user -g $group -m 755 mkdir-sh $prefix/sbin/mkdir-sh)"
 fi
 
 echo_msg "Installing bmake"
