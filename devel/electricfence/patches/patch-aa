@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/27 04:04:11 garbled Exp $
+--- Makefile.orig	Thu Jan 19 22:33:04 1995
++++ Makefile	Mon Oct 26 00:27:29 1998
+@@ -1,12 +1,12 @@
+-ASFLAGS= -mips2
++#ASFLAGS= -mips2
+ CC= cc
+ AR= ar
+-INSTALL= install
++INSTALL= install -c -g bin -o bin
+ MV= mv
+ CHMOD= chmod
+ CFLAGS= -g
+-LIB_INSTALL_DIR= /usr/lib
+-MAN_INSTALL_DIR= /usr/man/man3
++LIB_INSTALL_DIR= ${PREFIX}/lib
++MAN_INSTALL_DIR= ${PREFIX}/man/man3
+ 
+ PACKAGE_SOURCE= README libefence.3 Makefile efence.h \
+ 	efence.c page.c print.c eftest.c tstheap.c CHANGES
+@@ -39,7 +39,7 @@
+ 	@ echo
+ 
+ install: libefence.a libefence.3
+-	$(MV) libefence.a $(LIB_INSTALL_DIR)
++	$(INSTALL) libefence.a $(LIB_INSTALL_DIR)
+ 	$(CHMOD) 644 $(LIB_INSTALL_DIR)/libefence.a
+ 	$(INSTALL) libefence.3 $(MAN_INSTALL_DIR)/libefence.3
+ 	$(CHMOD) 644 $(MAN_INSTALL_DIR)/libefence.3
