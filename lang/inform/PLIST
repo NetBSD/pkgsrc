@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:25 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/07/05 14:56:24 seb Exp $
 bin/inform
 bin/inform-6.21
-@unexec ${INSTALL_INFO} --delete %D/info/inform %D/info/dir
 info/inform
 info/inform-1
 info/inform-2
@@ -17,7 +16,6 @@ info/inform-11
 info/inform-12
 info/inform-13
 info/inform-14
-@exec ${INSTALL_INFO} %D/info/inform %D/info/dir
 share/inform/6.21/module/parserm.m5
 share/inform/6.21/module/verblibm.m5
 share/inform/6.21/module/english.h
