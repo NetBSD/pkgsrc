@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/11/22 21:27:44 soren Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/22 22:22:21 rh Exp $
 #
 
 DISTNAME=		so51a_lnx_${LANGNO}
@@ -16,7 +16,7 @@ CONFLICTS=		staroffice-*
 NO_CDROM=		"Redistribution not permitted"
 MIRROR_DISTFILE=	NO
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.4?-i386
 PATCH_FUZZ_FACTOR=	-F1
 IS_INTERACTIVE=		YES
 NO_BUILD=		YES
