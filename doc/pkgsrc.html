@@ -1,14 +1,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta name="generator" content=
-  "HTML Tidy for NetBSD (vers 1st October 2003), see www.w3.org" />
+  "HTML Tidy for NetBSD (vers 1st August 2004), see www.w3.org" />
   <meta http-equiv="Content-Type" content=
   "text/html; charset=us-ascii" />
 
   <title>The pkgsrc guide</title>
   <link rel="stylesheet" href="/NetBSD.css" type="text/css" />
   <meta name="generator" content=
-  "DocBook XSL Stylesheets V1.67.0" />
+  "DocBook XSL Stylesheets V1.68.1" />
   <meta name="description" content=
   "Information about using the NetBSD package system (pkgsrc) from both a user view for installing packages as well as from a pkgsrc developers' view for creating new packages." />
   </head>
@@ -19,8 +19,8 @@ alink="#0000FF">
     <div class="titlepage">
       <div>
         <div>
-          <h1 class="title"><a name="id2458253" id=
-          "id2458253"></a>The pkgsrc guide</h1>
+          <h1 class="title"><a name="id2550988" id=
+          "id2550988"></a>The pkgsrc guide</h1>
         </div>
 
         <div>
@@ -93,7 +93,7 @@ alink="#0000FF">
 
         <dd>
           <dl>
-            <dt><span class="sect1"><a href="#id2514136">1.1.
+            <dt><span class="sect1"><a href="#id2516957">1.1.
             Introduction</a></span></dt>
 
             <dt><span class="sect1"><a href="#overview">1.2.
@@ -117,13 +117,13 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2514722">2.1.
+                <dt><span class="sect1"><a href="#id2517611">2.1.
                 As tar file</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2514738">2.2.
+                <dt><span class="sect1"><a href="#id2517627">2.2.
                 Via SUP</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2514838">2.3.
+                <dt><span class="sect1"><a href="#id2517659">2.3.
                 Via CVS</a></span></dt>
               </dl>
             </dd>
@@ -133,32 +133,32 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2514948">3.1.
+                <dt><span class="sect1"><a href="#id2517769">3.1.
                 Bootstrapping pkgsrc</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2515129">3.2.
+                <dt><span class="sect1"><a href="#id2518019">3.2.
                 Platform specific notes</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2515136">3.2.1. Darwin (Mac OS
+                    "#id2518025">3.2.1. Darwin (Mac OS
                     X)</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2515366">3.2.2. FreeBSD</a></span></dt>
+                    "#id2518187">3.2.2. FreeBSD</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2515878">3.2.3. Interix</a></span></dt>
+                    "#id2518768">3.2.3. Interix</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2515976">3.2.4. IRIX</a></span></dt>
+                    "#id2518926">3.2.4. IRIX</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2516025">3.2.5. OpenBSD</a></span></dt>
+                    "#id2519044">3.2.5. OpenBSD</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2516274">3.2.6. Solaris</a></span></dt>
+                    "#id2519156">3.2.6. Solaris</a></span></dt>
                   </dl>
                 </dd>
               </dl>
@@ -176,38 +176,38 @@ alink="#0000FF">
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2516410">4.1.1. Where to get binary
+                    "#id2519292">4.1.1. Where to get binary
                     packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2516519">4.1.2. How to use binary
+                    "#id2519333">4.1.2. How to use binary
                     packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2516585">4.1.3. A word of
+                    "#id2519467">4.1.3. A word of
                     warning</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2516597">4.2.
+                <dt><span class="sect1"><a href="#id2519479">4.2.
                 Building packages from source</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2516606">4.2.1.
+                    "#id2519489">4.2.1.
                     Requirements</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2516627">4.2.2. Fetching
+                    "#id2519509">4.2.2. Fetching
                     distfiles</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2516747">4.2.3. How to build and
+                    "#id2519561">4.2.3. How to build and
                     install</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2517542">4.2.4. Selecting the
+                    "#id2520288">4.2.4. Selecting the
                     compiler</a></span></dt>
                   </dl>
                 </dd>
@@ -219,10 +219,10 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2582755">5.1.
+                <dt><span class="sect1"><a href="#id2520374">5.1.
                 Building a single binary package</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2582833">5.2.
+                <dt><span class="sect1"><a href="#id2585578">5.2.
                 Settings for creation of binary
                 packages</a></span></dt>
 
@@ -236,26 +236,26 @@ alink="#0000FF">
                     Configuration</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2582972">5.3.2. Other environmental
+                    "#id2585786">5.3.2. Other environmental
                     considerations</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2583081">5.3.3. Operation</a></span></dt>
+                    "#id2585827">5.3.3. Operation</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2583219">5.3.4. What it
+                    "#id2585964">5.3.4. What it
                     does</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2583275">5.3.5. Disk space
+                    "#id2586021">5.3.5. Disk space
                     requirements</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2583302">5.3.6. Setting up a sandbox for
+                    "#id2586048">5.3.6. Setting up a sandbox for
                     chroot'ed builds</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2583763">5.3.7. Building a partial set of
+                    "#id2586508">5.3.7. Building a partial set of
                     packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
@@ -264,14 +264,14 @@ alink="#0000FF">
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2584200">5.4.
+                <dt><span class="sect1"><a href="#id2586946">5.4.
                 Creating a multiple CD-ROM packages
                 collection</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2584215">5.4.1. Example of
+                    "#id2586961">5.4.1. Example of
                     cdpack</a></span></dt>
                   </dl>
                 </dd>
@@ -283,54 +283,54 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2584475">6.1.
+                <dt><span class="sect1"><a href="#id2587153">6.1.
                 Are there any mailing lists for pkg-related
                 discussion?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2584610">6.2.
+                <dt><span class="sect1"><a href="#id2587355">6.2.
                 Where's the pkgviews documentation?</a></span></dt>
 
                 <dt><span class="sect1"><a href=
                 "#faq-pkgtools">6.3. Utilities for package
                 management (pkgtools)</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2584794">6.4.
+                <dt><span class="sect1"><a href="#id2587540">6.4.
                 How to use pkgsrc as non-root</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2584806">6.5.
+                <dt><span class="sect1"><a href="#id2587552">6.5.
                 How to resume transfers when fetching
                 distfiles?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2584849">6.6.
+                <dt><span class="sect1"><a href="#id2587594">6.6.
                 How can I install/use XFree86 from
                 pkgsrc?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2584876">6.7.
+                <dt><span class="sect1"><a href="#id2587622">6.7.
                 How can I install/use X.org from
                 pkgsrc?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2584904">6.8.
+                <dt><span class="sect1"><a href="#id2587650">6.8.
                 How to fetch files from behind a
                 firewall</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2584918">6.9.
+                <dt><span class="sect1"><a href="#id2587664">6.9.
                 How do I tell <span><strong class="command">make
                 fetch</strong></span> to do passive
                 FTP?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2584969">6.10.
+                <dt><span class="sect1"><a href="#id2587715">6.10.
                 How to fetch all distfiles at once</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2585177">6.11.
+                <dt><span class="sect1"><a href="#id2587923">6.11.
                 What does &#8220;<span class="quote">Don't know how
                 to make /usr/share/tmac/tmac.andoc</span>&#8221;
                 mean?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2585216">6.12.
+                <dt><span class="sect1"><a href="#id2587961">6.12.
                 What does &#8220;<span class="quote">Could not find
                 bsd.own.mk</span>&#8221; mean?</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2585273">6.13.
+                <dt><span class="sect1"><a href="#id2588087">6.13.
                 Using 'sudo' with pkgsrc</a></span></dt>
 
                 <dt><span class="sect1"><a href="#faq.conf">6.14.
@@ -368,17 +368,17 @@ alink="#0000FF">
                 "#components.patches">7.3.
                 patches/*</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2586455">7.4.
+                <dt><span class="sect1"><a href="#id2589201">7.4.
                 Other mandatory files</a></span></dt>
 
                 <dt><span class="sect1"><a href=
                 "#components.optional">7.5. Optional
                 files</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2586649">7.6.
+                <dt><span class="sect1"><a href="#id2589326">7.6.
                 <code class="filename">work*</code></a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2586737">7.7.
+                <dt><span class="sect1"><a href="#id2589482">7.7.
                 <code class=
                 "filename">files/*</code></a></span></dt>
               </dl>
@@ -389,10 +389,10 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2586791">8.1.
+                <dt><span class="sect1"><a href="#id2589537">8.1.
                 RCS ID</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2586806">8.2.
+                <dt><span class="sect1"><a href="#id2589552">8.2.
                 Semi-automatic <code class="filename">PLIST</code>
                 generation</a></span></dt>
 
@@ -404,14 +404,14 @@ alink="#0000FF">
                 <dt><span class="sect1"><a href="#plist.misc">8.4.
                 Variable substitution in PLIST</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2587127">8.5.
+                <dt><span class="sect1"><a href="#id2589941">8.5.
                 Manpage-compression</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2587169">8.6.
+                <dt><span class="sect1"><a href="#id2589982">8.6.
                 Changing PLIST source with <code class=
                 "varname">PLIST_SRC</code></a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2587322">8.7.
+                <dt><span class="sect1"><a href="#id2590000">8.7.
                 Platform specific and differing
                 PLISTs</a></span></dt>
 
@@ -426,22 +426,22 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2587526">9.1.
+                <dt><span class="sect1"><a href="#id2590322">9.1.
                 Converting packages to use
                 buildlink3</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2587785">9.2.
+                <dt><span class="sect1"><a href="#id2590513">9.2.
                 Writing <code class="filename">buildlink3.mk</code>
                 files</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2587854">9.2.1. Anatomy of a buildlink3.mk
+                    "#id2590582">9.2.1. Anatomy of a buildlink3.mk
                     file</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2588295">9.2.2. Updating <code class=
+                    "#id2591022">9.2.2. Updating <code class=
                     "varname">BUILDLINK_DEPENDS.<em class=
                     "replaceable"><code>pkg</code></em></code> in
                     <code class="filename">buildlink3.mk</code>
@@ -449,19 +449,19 @@ alink="#0000FF">
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2588442">9.3.
+                <dt><span class="sect1"><a href="#id2591170">9.3.
                 Writing <code class="filename">builtin.mk</code>
                 files</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2588523">9.3.1. Anatomy of a <code class=
+                    "#id2591387">9.3.1. Anatomy of a <code class=
                     "filename">builtin.mk</code>
                     file</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2588819">9.3.2. Global preferences for
+                    "#id2591614">9.3.2. Global preferences for
                     native or pkgsrc software</a></span></dt>
                   </dl>
                 </dd>
@@ -473,10 +473,10 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2588960">10.1.
+                <dt><span class="sect1"><a href="#id2591687">10.1.
                 Global default options</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2588974">10.2.
+                <dt><span class="sect1"><a href="#id2591702">10.2.
                 Converting packages to use <code class=
                 "filename">bsd.options.mk</code></a></span></dt>
               </dl>
@@ -491,7 +491,7 @@ alink="#0000FF">
                 "#build.prefix">11.1. Program
                 location</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2589582">11.2.
+                <dt><span class="sect1"><a href="#id2592310">11.2.
                 Main targets</a></span></dt>
 
                 <dt><span class="sect1"><a href=
@@ -505,17 +505,17 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2590983">12.1.
+                <dt><span class="sect1"><a href="#id2593710">12.1.
                 General operation</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2590986">12.1.1. How to pull in variables
+                    "#id2593714">12.1.1. How to pull in variables
                     from /etc/mk.conf</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2591138">12.1.2. Restricted
+                    "#id2593865">12.1.2. Restricted
                     packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
@@ -523,15 +523,15 @@ alink="#0000FF">
                     dependencies</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2591585">12.1.4. Handling conflicts with
+                    "#id2594380">12.1.4. Handling conflicts with
                     other packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2591703">12.1.5. Packages that cannot or
+                    "#id2594430">12.1.5. Packages that cannot or
                     should not be built</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2591729">12.1.6. Packages which should not
+                    "#id2594456">12.1.6. Packages which should not
                     be deleted, once installed</a></span></dt>
 
                     <dt><span class="sect2"><a href=
@@ -539,37 +539,37 @@ alink="#0000FF">
                     with security problems</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2591889">12.1.8. How to handle compiler
+                    "#id2594616">12.1.8. How to handle compiler
                     bugs</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2591911">12.1.9. How to handle incrementing
+                    "#id2594638">12.1.9. How to handle incrementing
                     versions when fixing an existing
                     package</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2591960">12.1.10. Portability of
+                    "#id2594688">12.1.10. Portability of
                     packages</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2591985">12.2.
+                <dt><span class="sect1"><a href="#id2594712">12.2.
                 Possible downloading issues</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2591988">12.2.1. Packages whose distfiles
+                    "#id2594715">12.2.1. Packages whose distfiles
                     aren't available for plain
                     downloading</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2592051">12.2.2. How to handle modified
+                    "#id2594778">12.2.2. How to handle modified
                     distfiles with the 'old' name</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2592062">12.3.
+                <dt><span class="sect1"><a href="#id2594790">12.3.
                 Configuration gotchas</a></span></dt>
 
                 <dd>
@@ -579,66 +579,66 @@ alink="#0000FF">
                     libtool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2592441">12.3.2. Using libtool on GNU
+                    "#id2595237">12.3.2. Using libtool on GNU
                     packages that already support
                     libtool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2592594">12.3.3. GNU
+                    "#id2595321">12.3.3. GNU
                     Autoconf/Automake</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2592775">12.4.
+                <dt><span class="sect1"><a href="#id2595434">12.4.
                 Building considerations</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2592778">12.4.1. CPP
+                    "#id2595437">12.4.1. CPP
                     defines</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2592808">12.5.
+                <dt><span class="sect1"><a href="#id2595467">12.5.
                 Package specific actions</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#id2592811">12.5.1. Package configuration
+                    "#id2595470">12.5.1. Package configuration
                     files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2592982">12.5.2. User
+                    "#id2595709">12.5.2. User
                     interaction</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593027">12.5.3. Handling
+                    "#id2595754">12.5.3. Handling
                     licenses</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593178">12.5.4. Creating an account from a
+                    "#id2595906">12.5.4. Creating an account from a
                     package</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593240">12.5.5. Installing score
+                    "#id2595968">12.5.5. Installing score
                     files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593284">12.5.6. Packages providing login
+                    "#id2596011">12.5.6. Packages providing login
                     shells</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593341">12.5.7. Packages containing perl
+                    "#id2596069">12.5.7. Packages containing perl
                     scripts</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593360">12.5.8. Packages with hardcoded
+                    "#id2596087">12.5.8. Packages with hardcoded
                     paths to other interpreters</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593381">12.5.9. Packages installing perl
+                    "#id2596108">12.5.9. Packages installing perl
                     modules</a></span></dt>
 
                     <dt><span class="sect2"><a href=
@@ -646,40 +646,40 @@ alink="#0000FF">
                     info files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593601">12.5.11. Packages installing
+                    "#id2596328">12.5.11. Packages installing
                     GConf2 data files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593769">12.5.12. Packages installing
+                    "#id2596428">12.5.12. Packages installing
                     scrollkeeper data files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593889">12.5.13. Packages installing X11
+                    "#id2596548">12.5.13. Packages installing X11
                     fonts</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2593936">12.5.14. Packages installing GTK2
+                    "#id2596595">12.5.14. Packages installing GTK2
                     modules</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2594005">12.5.15. Packages installing SGML
+                    "#id2596732">12.5.15. Packages installing SGML
                     or XML data</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2594057">12.5.16. Packages installing
+                    "#id2596785">12.5.16. Packages installing
                     extensions to the MIME database</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2594332">12.5.17. Packages using
+                    "#id2596923">12.5.17. Packages using
                     intltool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#id2594346">12.5.18. Packages installing
+                    "#id2597005">12.5.18. Packages installing
                     startup scripts</a></span></dt>
                   </dl>
                 </dd>
 
-                <dt><span class="sect1"><a href="#id2594368">12.6.
+                <dt><span class="sect1"><a href="#id2597027">12.6.
                 Feedback to the author</a></span></dt>
               </dl>
             </dd>
@@ -692,18 +692,18 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href="#id2594898">14.1.
+                <dt><span class="sect1"><a href="#id2597557">14.1.
                 Submitting your packages</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2594949">14.2.
+                <dt><span class="sect1"><a href="#id2597608">14.2.
                 Committing: Importing a package into
                 CVS</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2595012">14.3.
+                <dt><span class="sect1"><a href="#id2597671">14.3.
                 Updating a package to a newer
                 version</a></span></dt>
 
-                <dt><span class="sect1"><a href="#id2595031">14.4.
+                <dt><span class="sect1"><a href="#id2597758">14.4.
                 Moving a package in pkgsrc</a></span></dt>
               </dl>
             </dd>
@@ -715,27 +715,27 @@ alink="#0000FF">
 
         <dd>
           <dl>
-            <dt><span class="sect1"><a href="#id2595257">A.1.
+            <dt><span class="sect1"><a href="#id2597985">A.1.
             files</a></span></dt>
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2595260">A.1.1.
+                <dt><span class="sect2"><a href="#id2597988">A.1.1.
                 Makefile</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2595268">A.1.2.
+                <dt><span class="sect2"><a href="#id2597995">A.1.2.
                 DESCR</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2595283">A.1.3.
+                <dt><span class="sect2"><a href="#id2598010">A.1.3.
                 PLIST</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2595290">A.1.4.
+                <dt><span class="sect2"><a href="#id2598018">A.1.4.
                 Checking a package with <span><strong class=
                 "command">pkglint</strong></span></a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2595331">A.2. Steps
+            <dt><span class="sect1"><a href="#id2598058">A.2. Steps
             for building, installing, packaging</a></span></dt>
           </dl>
         </dd>
@@ -761,10 +761,10 @@ alink="#0000FF">
 
         <dd>
           <dl>
-            <dt><span class="sect1"><a href="#id2596182">D.1.
+            <dt><span class="sect1"><a href="#id2598909">D.1.
             Targets</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2596389">D.2.
+            <dt><span class="sect1"><a href="#id2599116">D.2.
             Procedure</a></span></dt>
           </dl>
         </dd>
@@ -785,7 +785,7 @@ alink="#0000FF">
         <p><b>Table of Contents</b></p>
 
         <dl>
-          <dt><span class="sect1"><a href="#id2514136">1.1.
+          <dt><span class="sect1"><a href="#id2516957">1.1.
           Introduction</a></span></dt>
 
           <dt><span class="sect1"><a href="#overview">1.2.
@@ -804,8 +804,8 @@ alink="#0000FF">
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2514136" id=
-              "id2514136"></a>1.1.&nbsp;Introduction</h2>
+              "id2516957" id=
+              "id2516957"></a>1.1.&nbsp;Introduction</h2>
             </div>
           </div>
         </div>
@@ -835,32 +835,32 @@ alink="#0000FF">
               <p><a xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" href=
               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/apache/README.html"
-                 class="pkgname">www/apache</a> - The Apache web
-                 server</p>
+              class="pkgname">www/apache</a> - The Apache web
+              server</p>
             </li>
 
             <li>
               <p><a xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" href=
               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/mozilla/README.html"
-                 class="pkgname">www/mozilla</a> - The Mozilla web
-                 browser</p>
+              class="pkgname">www/mozilla</a> - The Mozilla web
+              browser</p>
             </li>
 
             <li>
               <p><a xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" href=
               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/gnome/README.html"
-                 class="pkgname">meta-pkgs/gnome</a> - The GNOME
-                 Desktop Environment</p>
+              class="pkgname">meta-pkgs/gnome</a> - The GNOME
+              Desktop Environment</p>
             </li>
 
             <li>
               <p><a xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" href=
               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/kde3/README.html"
-                 class="pkgname">meta-pkgs/kde3</a> - The K Desktop
-                 Environment</p>
+              class="pkgname">meta-pkgs/kde3</a> - The K Desktop
+              Environment</p>
             </li>
           </ul>
         </div>
@@ -1115,13 +1115,13 @@ alink="#0000FF">
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2514722">2.1. As
+              <dt><span class="sect1"><a href="#id2517611">2.1. As
               tar file</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2514738">2.2. Via
+              <dt><span class="sect1"><a href="#id2517627">2.2. Via
               SUP</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2514838">2.3. Via
+              <dt><span class="sect1"><a href="#id2517659">2.3. Via
               CVS</a></span></dt>
             </dl>
           </dd>
@@ -1131,32 +1131,32 @@ alink="#0000FF">
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2514948">3.1.
+              <dt><span class="sect1"><a href="#id2517769">3.1.
               Bootstrapping pkgsrc</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2515129">3.2.
+              <dt><span class="sect1"><a href="#id2518019">3.2.
               Platform specific notes</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2515136">3.2.1. Darwin (Mac OS
+                  "#id2518025">3.2.1. Darwin (Mac OS
                   X)</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2515366">3.2.2. FreeBSD</a></span></dt>
+                  "#id2518187">3.2.2. FreeBSD</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2515878">3.2.3. Interix</a></span></dt>
+                  "#id2518768">3.2.3. Interix</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2515976">3.2.4. IRIX</a></span></dt>
+                  "#id2518926">3.2.4. IRIX</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2516025">3.2.5. OpenBSD</a></span></dt>
+                  "#id2519044">3.2.5. OpenBSD</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2516274">3.2.6. Solaris</a></span></dt>
+                  "#id2519156">3.2.6. Solaris</a></span></dt>
                 </dl>
               </dd>
             </dl>
@@ -1174,37 +1174,37 @@ alink="#0000FF">
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2516410">4.1.1. Where to get binary
+                  "#id2519292">4.1.1. Where to get binary
                   packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2516519">4.1.2. How to use binary
+                  "#id2519333">4.1.2. How to use binary
                   packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2516585">4.1.3. A word of
+                  "#id2519467">4.1.3. A word of
                   warning</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2516597">4.2.
+              <dt><span class="sect1"><a href="#id2519479">4.2.
               Building packages from source</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2516606">4.2.1. Requirements</a></span></dt>
+                  "#id2519489">4.2.1. Requirements</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2516627">4.2.2. Fetching
+                  "#id2519509">4.2.2. Fetching
                   distfiles</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2516747">4.2.3. How to build and
+                  "#id2519561">4.2.3. How to build and
                   install</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2517542">4.2.4. Selecting the
+                  "#id2520288">4.2.4. Selecting the
                   compiler</a></span></dt>
                 </dl>
               </dd>
@@ -1216,10 +1216,10 @@ alink="#0000FF">
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2582755">5.1.
+              <dt><span class="sect1"><a href="#id2520374">5.1.
               Building a single binary package</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2582833">5.2.
+              <dt><span class="sect1"><a href="#id2585578">5.2.
               Settings for creation of binary
               packages</a></span></dt>
 
@@ -1233,25 +1233,25 @@ alink="#0000FF">
                   Configuration</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2582972">5.3.2. Other environmental
+                  "#id2585786">5.3.2. Other environmental
                   considerations</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2583081">5.3.3. Operation</a></span></dt>
+                  "#id2585827">5.3.3. Operation</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2583219">5.3.4. What it does</a></span></dt>
+                  "#id2585964">5.3.4. What it does</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2583275">5.3.5. Disk space
+                  "#id2586021">5.3.5. Disk space
                   requirements</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2583302">5.3.6. Setting up a sandbox for
+                  "#id2586048">5.3.6. Setting up a sandbox for
                   chroot'ed builds</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2583763">5.3.7. Building a partial set of
+                  "#id2586508">5.3.7. Building a partial set of
                   packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
@@ -1260,14 +1260,14 @@ alink="#0000FF">
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2584200">5.4.
+              <dt><span class="sect1"><a href="#id2586946">5.4.
               Creating a multiple CD-ROM packages
               collection</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2584215">5.4.1. Example of
+                  "#id2586961">5.4.1. Example of
                   cdpack</a></span></dt>
                 </dl>
               </dd>
@@ -1279,52 +1279,52 @@ alink="#0000FF">
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2584475">6.1. Are
+              <dt><span class="sect1"><a href="#id2587153">6.1. Are
               there any mailing lists for pkg-related
               discussion?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2584610">6.2.
+              <dt><span class="sect1"><a href="#id2587355">6.2.
               Where's the pkgviews documentation?</a></span></dt>
 
               <dt><span class="sect1"><a href="#faq-pkgtools">6.3.
               Utilities for package management
               (pkgtools)</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2584794">6.4. How
+              <dt><span class="sect1"><a href="#id2587540">6.4. How
               to use pkgsrc as non-root</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2584806">6.5. How
+              <dt><span class="sect1"><a href="#id2587552">6.5. How
               to resume transfers when fetching
               distfiles?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2584849">6.6. How
+              <dt><span class="sect1"><a href="#id2587594">6.6. How
               can I install/use XFree86 from
               pkgsrc?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2584876">6.7. How
+              <dt><span class="sect1"><a href="#id2587622">6.7. How
               can I install/use X.org from pkgsrc?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2584904">6.8. How
+              <dt><span class="sect1"><a href="#id2587650">6.8. How
               to fetch files from behind a firewall</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2584918">6.9. How
+              <dt><span class="sect1"><a href="#id2587664">6.9. How
               do I tell <span><strong class="command">make
               fetch</strong></span> to do passive
               FTP?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2584969">6.10.
+              <dt><span class="sect1"><a href="#id2587715">6.10.
               How to fetch all distfiles at once</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2585177">6.11.
+              <dt><span class="sect1"><a href="#id2587923">6.11.
               What does &#8220;<span class="quote">Don't know how
               to make /usr/share/tmac/tmac.andoc</span>&#8221;
               mean?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2585216">6.12.
+              <dt><span class="sect1"><a href="#id2587961">6.12.
               What does &#8220;<span class="quote">Could not find
               bsd.own.mk</span>&#8221; mean?</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2585273">6.13.
+              <dt><span class="sect1"><a href="#id2588087">6.13.
               Using 'sudo' with pkgsrc</a></span></dt>
 
               <dt><span class="sect1"><a href="#faq.conf">6.14.
@@ -1354,13 +1354,13 @@ alink="#0000FF">
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2514722">2.1. As
+            <dt><span class="sect1"><a href="#id2517611">2.1. As
             tar file</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2514738">2.2. Via
+            <dt><span class="sect1"><a href="#id2517627">2.2. Via
             SUP</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2514838">2.3. Via
+            <dt><span class="sect1"><a href="#id2517659">2.3. Via
             CVS</a></span></dt>
           </dl>
         </div>
@@ -1374,7 +1374,7 @@ alink="#0000FF">
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2514722" id="id2514722"></a>2.1.&nbsp;As tar
+                "id2517611" id="id2517611"></a>2.1.&nbsp;As tar
                 file</h2>
               </div>
             </div>
@@ -1383,8 +1383,8 @@ alink="#0000FF">
           <p>To get pkgsrc going, you need to get the pkgsrc.tar.gz
           file from <a href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-current/tar_files/pkgsrc.tar.gz"
-             target="_top">ftp.NetBSD.org</a> and unpack it into
-             <code class="filename">/usr/pkgsrc</code>.</p>
+          target="_top">ftp.NetBSD.org</a> and unpack it into
+          <code class="filename">/usr/pkgsrc</code>.</p>
         </div>
 
         <div class="sect1" lang="en" xml:lang="en">
@@ -1392,7 +1392,7 @@ alink="#0000FF">
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2514738" id="id2514738"></a>2.2.&nbsp;Via
+                "id2517627" id="id2517627"></a>2.2.&nbsp;Via
                 SUP</h2>
               </div>
             </div>
@@ -1418,7 +1418,7 @@ release=pkgsrc
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2514838" id="id2514838"></a>2.3.&nbsp;Via
+                "id2517659" id="id2517659"></a>2.3.&nbsp;Via
                 CVS</h2>
               </div>
             </div>
@@ -1475,30 +1475,30 @@ release=pkgsrc
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2514948">3.1.
+            <dt><span class="sect1"><a href="#id2517769">3.1.
             Bootstrapping pkgsrc</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2515129">3.2.
+            <dt><span class="sect1"><a href="#id2518019">3.2.
             Platform specific notes</a></span></dt>
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2515136">3.2.1.
+                <dt><span class="sect2"><a href="#id2518025">3.2.1.
                 Darwin (Mac OS X)</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2515366">3.2.2.
+                <dt><span class="sect2"><a href="#id2518187">3.2.2.
                 FreeBSD</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2515878">3.2.3.
+                <dt><span class="sect2"><a href="#id2518768">3.2.3.
                 Interix</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2515976">3.2.4.
+                <dt><span class="sect2"><a href="#id2518926">3.2.4.
                 IRIX</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2516025">3.2.5.
+                <dt><span class="sect2"><a href="#id2519044">3.2.5.
                 OpenBSD</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2516274">3.2.6.
+                <dt><span class="sect2"><a href="#id2519156">3.2.6.
                 Solaris</a></span></dt>
               </dl>
             </dd>
@@ -1510,8 +1510,8 @@ release=pkgsrc
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2514948" id=
-                "id2514948"></a>3.1.&nbsp;Bootstrapping pkgsrc</h2>
+                "id2517769" id=
+                "id2517769"></a>3.1.&nbsp;Bootstrapping pkgsrc</h2>
               </div>
             </div>
           </div>
@@ -1601,7 +1601,7 @@ release=pkgsrc
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2515129" id="id2515129"></a>3.2.&nbsp;Platform
+                "id2518019" id="id2518019"></a>3.2.&nbsp;Platform
                 specific notes</h2>
               </div>
             </div>
@@ -1614,8 +1614,8 @@ release=pkgsrc
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2515136" id=
-                  "id2515136"></a>3.2.1.&nbsp;Darwin (Mac OS
+                  <h3 class="title"><a name="id2518025" id=
+                  "id2518025"></a>3.2.1.&nbsp;Darwin (Mac OS
                   X)</h3>
                 </div>
               </div>
@@ -1747,8 +1747,8 @@ release=pkgsrc
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2515366" id=
-                  "id2515366"></a>3.2.2.&nbsp;FreeBSD</h3>
+                  <h3 class="title"><a name="id2518187" id=
+                  "id2518187"></a>3.2.2.&nbsp;FreeBSD</h3>
                 </div>
               </div>
             </div>
@@ -1804,8 +1804,8 @@ release=pkgsrc
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2515878" id=
-                  "id2515878"></a>3.2.3.&nbsp;Interix</h3>
+                  <h3 class="title"><a name="id2518768" id=
+                  "id2518768"></a>3.2.3.&nbsp;Interix</h3>
                 </div>
               </div>
             </div>
@@ -1815,9 +1815,8 @@ release=pkgsrc
             with a tighter kernel integration than available with
             Cygwin. It is part of the Windows Services for Unix
             package, available for free for any licensed copy of
-            Windows 2000, XP (not including XP Home), or 2003. SFU
-            can be downloaded from <a href=
-            "http://www.microsoft.com/windows/sfu/" target=
+            Windows 2000, XP, or 2003. SFU can be downloaded from
+            <a href="http://www.microsoft.com/windows/sfu/" target=
             "_top">http://www.microsoft.com/windows/sfu/</a>.</p>
 
             <p>Services for Unix 3.5, current as of this writing,
@@ -1969,16 +1968,6 @@ release=pkgsrc
               them at the same time as the pkgsrc packages, ensure
               that you use the proper pkg_* tools for each type of
               binary package.</p>
-
-              <p>The TERM setting used for DOS-type console windows
-              (including those invoked by the csh and ksh startup
-              shortcuts) is "interix". Most systems don't have a
-              termcap/terminfo entry for it, but the following
-              .termcap entry provides adequate emulation in most
-              cases:</p>
-              <pre class="programlisting">
-interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
-</pre>
             </div>
           </div>
 
@@ -1986,8 +1975,8 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2515976" id=
-                  "id2515976"></a>3.2.4.&nbsp;IRIX</h3>
+                  <h3 class="title"><a name="id2518926" id=
+                  "id2518926"></a>3.2.4.&nbsp;IRIX</h3>
                 </div>
               </div>
             </div>
@@ -2039,8 +2028,8 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2516025" id=
-                  "id2516025"></a>3.2.5.&nbsp;OpenBSD</h3>
+                  <h3 class="title"><a name="id2519044" id=
+                  "id2519044"></a>3.2.5.&nbsp;OpenBSD</h3>
                 </div>
               </div>
             </div>
@@ -2106,8 +2095,8 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2516274" id=
-                  "id2516274"></a>3.2.6.&nbsp;Solaris</h3>
+                  <h3 class="title"><a name="id2519156" id=
+                  "id2519156"></a>3.2.6.&nbsp;Solaris</h3>
                 </div>
               </div>
             </div>
@@ -2151,8 +2140,8 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
               <div class="titlepage">
                 <div>
                   <div>
-                    <h4 class="title"><a name="id2516305" id=
-                    "id2516305"></a>3.2.6.1.&nbsp;If you are using
+                    <h4 class="title"><a name="id2519187" id=
+                    "id2519187"></a>3.2.6.1.&nbsp;If you are using
                     gcc</h4>
                   </div>
                 </div>
@@ -2166,23 +2155,23 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
               <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
               href=
               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/lang/gcc/README.html"
-                 class="pkgname">lang/gcc</a> or install a binary
-                 gcc package, then remove gcc used during
-                 bootstrapping.</p>
+              class="pkgname">lang/gcc</a> or install a binary gcc
+              package, then remove gcc used during
+              bootstrapping.</p>
 
               <p>Binary packages of gcc can be found through
               <a href=
               "http://www.sun.com/bigadmin/common/freewareSearch.html"
-                 target=
-                 "_top">http://www.sun.com/bigadmin/common/freewareSearch.html</a>.</p>
+              target=
+              "_top">http://www.sun.com/bigadmin/common/freewareSearch.html</a>.</p>
             </div>
 
             <div class="sect3" lang="en" xml:lang="en">
               <div class="titlepage">
                 <div>
                   <div>
-                    <h4 class="title"><a name="id2516326" id=
-                    "id2516326"></a>3.2.6.2.&nbsp;If you are using
+                    <h4 class="title"><a name="id2519208" id=
+                    "id2519208"></a>3.2.6.2.&nbsp;If you are using
                     Sun WorkShop</h4>
                   </div>
                 </div>
@@ -2259,32 +2248,32 @@ CFLAGS= -xtarget=ultra -xarch=v9
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2516410">4.1.1.
+                <dt><span class="sect2"><a href="#id2519292">4.1.1.
                 Where to get binary packages</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2516519">4.1.2.
+                <dt><span class="sect2"><a href="#id2519333">4.1.2.
                 How to use binary packages</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2516585">4.1.3.
+                <dt><span class="sect2"><a href="#id2519467">4.1.3.
                 A word of warning</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2516597">4.2.
+            <dt><span class="sect1"><a href="#id2519479">4.2.
             Building packages from source</a></span></dt>
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2516606">4.2.1.
+                <dt><span class="sect2"><a href="#id2519489">4.2.1.
                 Requirements</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2516627">4.2.2.
+                <dt><span class="sect2"><a href="#id2519509">4.2.2.
                 Fetching distfiles</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2516747">4.2.3.
+                <dt><span class="sect2"><a href="#id2519561">4.2.3.
                 How to build and install</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2517542">4.2.4.
+                <dt><span class="sect2"><a href="#id2520288">4.2.4.
                 Selecting the compiler</a></span></dt>
               </dl>
             </dd>
@@ -2311,8 +2300,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2516410" id=
-                  "id2516410"></a>4.1.1.&nbsp;Where to get binary
+                  <h3 class="title"><a name="id2519292" id=
+                  "id2519292"></a>4.1.1.&nbsp;Where to get binary
                   packages</h3>
                 </div>
               </div>
@@ -2343,8 +2332,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2516519" id=
-                  "id2516519"></a>4.1.2.&nbsp;How to use binary
+                  <h3 class="title"><a name="id2519333" id=
+                  "id2519333"></a>4.1.2.&nbsp;How to use binary
                   packages</h3>
                 </div>
               </div>
@@ -2388,8 +2377,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2516585" id=
-                  "id2516585"></a>4.1.3.&nbsp;A word of
+                  <h3 class="title"><a name="id2519467" id=
+                  "id2519467"></a>4.1.3.&nbsp;A word of
                   warning</h3>
                 </div>
               </div>
@@ -2412,7 +2401,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2516597" id="id2516597"></a>4.2.&nbsp;Building
+                "id2519479" id="id2519479"></a>4.2.&nbsp;Building
                 packages from source</h2>
               </div>
             </div>
@@ -2427,8 +2416,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2516606" id=
-                  "id2516606"></a>4.2.1.&nbsp;Requirements</h3>
+                  <h3 class="title"><a name="id2519489" id=
+                  "id2519489"></a>4.2.1.&nbsp;Requirements</h3>
                 </div>
               </div>
             </div>
@@ -2447,8 +2436,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2516627" id=
-                  "id2516627"></a>4.2.2.&nbsp;Fetching
+                  <h3 class="title"><a name="id2519509" id=
+                  "id2519509"></a>4.2.2.&nbsp;Fetching
                   distfiles</h3>
                 </div>
               </div>
@@ -2489,8 +2478,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2516747" id=
-                  "id2516747"></a>4.2.3.&nbsp;How to build and
+                  <h3 class="title"><a name="id2519561" id=
+                  "id2519561"></a>4.2.3.&nbsp;How to build and
                   install</h3>
                 </div>
               </div>
@@ -2654,8 +2643,8 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2517542" id=
-                  "id2517542"></a>4.2.4.&nbsp;Selecting the
+                  <h3 class="title"><a name="id2520288" id=
+                  "id2520288"></a>4.2.4.&nbsp;Selecting the
                   compiler</h3>
                 </div>
               </div>
@@ -2755,10 +2744,10 @@ CFLAGS= -xtarget=ultra -xarch=v9
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2582755">5.1.
+            <dt><span class="sect1"><a href="#id2520374">5.1.
             Building a single binary package</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2582833">5.2.
+            <dt><span class="sect1"><a href="#id2585578">5.2.
             Settings for creation of binary
             packages</a></span></dt>
 
@@ -2771,23 +2760,23 @@ CFLAGS= -xtarget=ultra -xarch=v9
                 "#binary.configuration">5.3.1.
                 Configuration</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2582972">5.3.2.
+                <dt><span class="sect2"><a href="#id2585786">5.3.2.
                 Other environmental considerations</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2583081">5.3.3.
+                <dt><span class="sect2"><a href="#id2585827">5.3.3.
                 Operation</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2583219">5.3.4.
+                <dt><span class="sect2"><a href="#id2585964">5.3.4.
                 What it does</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2583275">5.3.5.
+                <dt><span class="sect2"><a href="#id2586021">5.3.5.
                 Disk space requirements</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2583302">5.3.6.
+                <dt><span class="sect2"><a href="#id2586048">5.3.6.
                 Setting up a sandbox for chroot'ed
                 builds</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2583763">5.3.7.
+                <dt><span class="sect2"><a href="#id2586508">5.3.7.
                 Building a partial set of packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
@@ -2796,13 +2785,13 @@ CFLAGS= -xtarget=ultra -xarch=v9
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2584200">5.4.
+            <dt><span class="sect1"><a href="#id2586946">5.4.
             Creating a multiple CD-ROM packages
             collection</a></span></dt>
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2584215">5.4.1.
+                <dt><span class="sect2"><a href="#id2586961">5.4.1.
                 Example of cdpack</a></span></dt>
               </dl>
             </dd>
@@ -2814,7 +2803,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2582755" id="id2582755"></a>5.1.&nbsp;Building a
+                "id2520374" id="id2520374"></a>5.1.&nbsp;Building a
                 single binary package</h2>
               </div>
             </div>
@@ -2855,7 +2844,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
           the above <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/misc/figlet/README.html"
-             class="pkgname">misc/figlet</a> example.</p>
+          class="pkgname">misc/figlet</a> example.</p>
 
           <p>See <a href="#submit" title=
           "Chapter&nbsp;14.&nbsp;Submitting and Committing">Chapter
@@ -2868,7 +2857,7 @@ CFLAGS= -xtarget=ultra -xarch=v9
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2582833" id="id2582833"></a>5.2.&nbsp;Settings
+                "id2585578" id="id2585578"></a>5.2.&nbsp;Settings
                 for creation of binary packages</h2>
               </div>
             </div>
@@ -2950,8 +2939,8 @@ _ACCEPTABLE=    yes
               <div class="titlepage">
                 <div>
                   <div>
-                    <h4 class="title"><a name="id2582897" id=
-                    "id2582897"></a>5.3.1.2.&nbsp;<code class=
+                    <h4 class="title"><a name="id2585642" id=
+                    "id2585642"></a>5.3.1.2.&nbsp;<code class=
                     "filename">build.conf</code></h4>
                   </div>
                 </div>
@@ -2976,8 +2965,8 @@ _ACCEPTABLE=    yes
               <div class="titlepage">
                 <div>
                   <div>
-                    <h4 class="title"><a name="id2582933" id=
-                    "id2582933"></a>5.3.1.3.&nbsp;<code class=
+                    <h4 class="title"><a name="id2585747" id=
+                    "id2585747"></a>5.3.1.3.&nbsp;<code class=
                     "filename">pre-build.local</code></h4>
                   </div>
                 </div>
@@ -3008,8 +2997,8 @@ _ACCEPTABLE=    yes
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2582972" id=
-                  "id2582972"></a>5.3.2.&nbsp;Other environmental
+                  <h3 class="title"><a name="id2585786" id=
+                  "id2585786"></a>5.3.2.&nbsp;Other environmental
                   considerations</h3>
                 </div>
               </div>
@@ -3050,8 +3039,8 @@ fi
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2583081" id=
-                  "id2583081"></a>5.3.3.&nbsp;Operation</h3>
+                  <h3 class="title"><a name="id2585827" id=
+                  "id2585827"></a>5.3.3.&nbsp;Operation</h3>
                 </div>
               </div>
             </div>
@@ -3097,8 +3086,8 @@ fi
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2583219" id=
-                  "id2583219"></a>5.3.4.&nbsp;What it does</h3>
+                  <h3 class="title"><a name="id2585964" id=
+                  "id2585964"></a>5.3.4.&nbsp;What it does</h3>
                 </div>
               </div>
             </div>
@@ -3156,8 +3145,8 @@ fi
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2583275" id=
-                  "id2583275"></a>5.3.5.&nbsp;Disk space
+                  <h3 class="title"><a name="id2586021" id=
+                  "id2586021"></a>5.3.5.&nbsp;Disk space
                   requirements</h3>
                 </div>
               </div>
@@ -3199,8 +3188,8 @@ fi
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2583302" id=
-                  "id2583302"></a>5.3.6.&nbsp;Setting up a sandbox
+                  <h3 class="title"><a name="id2586048" id=
+                  "id2586048"></a>5.3.6.&nbsp;Setting up a sandbox
                   for chroot'ed builds</h3>
                 </div>
               </div>
@@ -3256,8 +3245,7 @@ fi
                   (for <a xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" href=
                   "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/smtpd/README.html"
-                     class="pkgname">security/smtpd</a> and
-                     mail):</p>
+                  class="pkgname">security/smtpd</a> and mail):</p>
                   <pre class="screen">
 <code class="prompt">#</code> <strong class=
 "userinput"><code>cp /etc/resolv.conf /usr/sandbox/etc</code></strong>
@@ -3278,7 +3266,7 @@ fi
                   (for <a xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" href=
                   "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/smtpd/README.html"
-                     class="pkgname">security/smtpd</a>):</p>
+                  class="pkgname">security/smtpd</a>):</p>
                   <pre class="screen">
 <code class="prompt">#</code> <strong class=
 "userinput"><code>ln -sf /usr/share/zoneinfo/UTC /usr/sandbox/etc/localtime</code></strong>
@@ -3290,12 +3278,10 @@ fi
                   sources, for <a xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" href=
                   "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html"
-                     class="pkgname">sysutils/aperture</a>,
-                     <a xmlns=
-                     "http://www.w3.org/TR/xhtml1/transitional"
-                     href=
-                     "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/net/ppp-mppe/README.html"
-                     class="pkgname">net/ppp-mppe</a>):</p>
+                  class="pkgname">sysutils/aperture</a>, <a xmlns=
+                  "http://www.w3.org/TR/xhtml1/transitional" href=
+                  "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/net/ppp-mppe/README.html"
+                  class="pkgname">net/ppp-mppe</a>):</p>
                   <pre class="screen">
 <code class="prompt">#</code> <strong class=
 "userinput"><code>ln -s ../disk1/cvs .</code></strong>
@@ -3392,8 +3378,8 @@ fi
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2583763" id=
-                  "id2583763"></a>5.3.7.&nbsp;Building a partial
+                  <h3 class="title"><a name="id2586508" id=
+                  "id2586508"></a>5.3.7.&nbsp;Building a partial
                   set of packages</h3>
                 </div>
               </div>
@@ -3576,7 +3562,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2584200" id="id2584200"></a>5.4.&nbsp;Creating a
+                "id2586946" id="id2586946"></a>5.4.&nbsp;Creating a
                 multiple CD-ROM packages collection</h2>
               </div>
             </div>
@@ -3588,19 +3574,19 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           machines. The <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/cdpack/README.html"
-             class="pkgname">pkgtools/cdpack</a> package provides a
-             simple tool for creating the ISO 9660 images.
-             <span><strong class="command">cdpack</strong></span>
-             arranges the packages on the CD-ROMs in a way that
-             keeps all the dependencies for given package on the
-             same CD as that package.</p>
+          class="pkgname">pkgtools/cdpack</a> package provides a
+          simple tool for creating the ISO 9660 images.
+          <span><strong class="command">cdpack</strong></span>
+          arranges the packages on the CD-ROMs in a way that keeps
+          all the dependencies for given package on the same CD as
+          that package.</p>
 
           <div class="sect2" lang="en" xml:lang="en">
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2584215" id=
-                  "id2584215"></a>5.4.1.&nbsp;Example of
+                  <h3 class="title"><a name="id2586961" id=
+                  "id2586961"></a>5.4.1.&nbsp;Example of
                   cdpack</h3>
                 </div>
               </div>
@@ -3673,51 +3659,51 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2584475">6.1. Are
+            <dt><span class="sect1"><a href="#id2587153">6.1. Are
             there any mailing lists for pkg-related
             discussion?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2584610">6.2.
+            <dt><span class="sect1"><a href="#id2587355">6.2.
             Where's the pkgviews documentation?</a></span></dt>
 
             <dt><span class="sect1"><a href="#faq-pkgtools">6.3.
             Utilities for package management
             (pkgtools)</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2584794">6.4. How
+            <dt><span class="sect1"><a href="#id2587540">6.4. How
             to use pkgsrc as non-root</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2584806">6.5. How
+            <dt><span class="sect1"><a href="#id2587552">6.5. How
             to resume transfers when fetching
             distfiles?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2584849">6.6. How
+            <dt><span class="sect1"><a href="#id2587594">6.6. How
             can I install/use XFree86 from pkgsrc?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2584876">6.7. How
+            <dt><span class="sect1"><a href="#id2587622">6.7. How
             can I install/use X.org from pkgsrc?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2584904">6.8. How
+            <dt><span class="sect1"><a href="#id2587650">6.8. How
             to fetch files from behind a firewall</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2584918">6.9. How
+            <dt><span class="sect1"><a href="#id2587664">6.9. How
             do I tell <span><strong class="command">make
             fetch</strong></span> to do passive
             FTP?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2584969">6.10. How
+            <dt><span class="sect1"><a href="#id2587715">6.10. How
             to fetch all distfiles at once</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2585177">6.11. What
+            <dt><span class="sect1"><a href="#id2587923">6.11. What
             does &#8220;<span class="quote">Don't know how to make
             /usr/share/tmac/tmac.andoc</span>&#8221;
             mean?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2585216">6.12. What
+            <dt><span class="sect1"><a href="#id2587961">6.12. What
             does &#8220;<span class="quote">Could not find
             bsd.own.mk</span>&#8221; mean?</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2585273">6.13.
+            <dt><span class="sect1"><a href="#id2588087">6.13.
             Using 'sudo' with pkgsrc</a></span></dt>
 
             <dt><span class="sect1"><a href="#faq.conf">6.14.
@@ -3739,7 +3725,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2584475" id="id2584475"></a>6.1.&nbsp;Are there
+                "id2587153" id="id2587153"></a>6.1.&nbsp;Are there
                 any mailing lists for pkg-related discussion?</h2>
               </div>
             </div>
@@ -3753,32 +3739,31 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <li>
                 <p><a href=
                 "http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bugs"
-                   target="_top">pkgsrc-bugs</a> -- a list where
-                   problem reports related to pkgsrc are sent and
-                   discussed</p>
+                target="_top">pkgsrc-bugs</a> -- a list where
+                problem reports related to pkgsrc are sent and
+                discussed</p>
               </li>
 
               <li>
                 <p><a href=
                 "http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bulk"
-                   target="_top">pkgsrc-bulk</a> -- a list where
-                   the results of pkgsrc bulk builds are sent and
-                   discussed</p>
+                target="_top">pkgsrc-bulk</a> -- a list where the
+                results of pkgsrc bulk builds are sent and
+                discussed</p>
               </li>
 
               <li>
                 <p><a href=
                 "http://www.NetBSD.org/MailingLists/index.html#pkgsrc-changes"
-                   target="_top">pkgsrc-changes</a> -- a list where
-                   all commit messages to pkgsrc are sent</p>
+                target="_top">pkgsrc-changes</a> -- a list where
+                all commit messages to pkgsrc are sent</p>
               </li>
 
               <li>
                 <p><a href=
                 "http://www.NetBSD.org/MailingLists/index.html#tech-pkg"
-                   target="_top">tech-pkg</a> -- a general
-                   discussion list for all things related to
-                   pkgsrc</p>
+                target="_top">tech-pkg</a> -- a general discussion
+                list for all things related to pkgsrc</p>
               </li>
             </ul>
           </div>
@@ -3799,7 +3784,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2584610" id="id2584610"></a>6.2.&nbsp;Where's
+                "id2587355" id="id2587355"></a>6.2.&nbsp;Where's
                 the pkgviews documentation?</h2>
               </div>
             </div>
@@ -3838,8 +3823,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/x11-links/README.html"
-                   class="pkgname">pkgtools/x11-links</a>: symlinks
-                   for use by buildlink</p>
+                class="pkgname">pkgtools/x11-links</a>: symlinks
+                for use by buildlink</p>
               </li>
             </ul>
           </div>
@@ -3853,34 +3838,34 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/digest/README.html"
-                   class="pkgname">pkgtools/digest</a>: calculates
-                   SHA1 checksums (and other kinds)</p>
+                class="pkgname">pkgtools/digest</a>: calculates
+                SHA1 checksums (and other kinds)</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/libnbcompat/README.html"
-                   class="pkgname">pkgtools/libnbcompat</a>: compat
-                   library for pkg tools</p>
+                class="pkgname">pkgtools/libnbcompat</a>: compat
+                library for pkg tools</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/mtree/README.html"
-                   class="pkgname">pkgtools/mtree</a>: installed on
-                   non-BSD systems due to lack of native mtree</p>
+                class="pkgname">pkgtools/mtree</a>: installed on
+                non-BSD systems due to lack of native mtree</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_install/README.html"
-                   class="pkgname">pkgtools/pkg_install</a>:
-                   up-to-date replacement for
-                   /usr/sbin/pkg_install, or for use on operating
-                   systems where pkg_install is not present</p>
+                class="pkgname">pkgtools/pkg_install</a>:
+                up-to-date replacement for /usr/sbin/pkg_install,
+                or for use on operating systems where pkg_install
+                is not present</p>
               </li>
             </ul>
           </div>
@@ -3894,38 +3879,37 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_tarup/README.html"
-                   class="pkgname">pkgtools/pkg_tarup</a>: create a
-                   binary package from an already-installed
-                   package. used by 'make replace' to save the old
-                   package</p>
+                class="pkgname">pkgtools/pkg_tarup</a>: create a
+                binary package from an already-installed package.
+                used by 'make replace' to save the old package</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/dfdisk/README.html"
-                   class="pkgname">pkgtools/dfdisk</a>: adds extra
-                   functionality to pkgsrc, allowing it to fetch
-                   distfiles from multiple locations. It currently
-                   supports the following methods: multiple CD-ROMs
-                   and network FTP/HTTP connections.</p>
+                class="pkgname">pkgtools/dfdisk</a>: adds extra
+                functionality to pkgsrc, allowing it to fetch
+                distfiles from multiple locations. It currently
+                supports the following methods: multiple CD-ROMs
+                and network FTP/HTTP connections.</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/xpkgwedge/README.html"
-                   class="pkgname">pkgtools/xpkgwedge</a>: put X11
-                   packages someplace else (enabled by default)</p>
+                class="pkgname">pkgtools/xpkgwedge</a>: put X11
+                packages someplace else (enabled by default)</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/cpuflags/README.html"
-                   class="pkgname">devel/cpuflags</a>: will
-                   determine the best compiler flags to optimise
-                   code for your current CPU and compiler.</p>
+                class="pkgname">devel/cpuflags</a>: will determine
+                the best compiler flags to optimise code for your
+                current CPU and compiler.</p>
               </li>
             </ul>
           </div>
@@ -3939,46 +3923,45 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_chk/README.html"
-                   class="pkgname">pkgtools/pkg_chk</a>: installs
-                   pkg_chk, which reports on packages whose
-                   installed versions do not match the latest
-                   pkgsrc entries</p>
+                class="pkgname">pkgtools/pkg_chk</a>: installs
+                pkg_chk, which reports on packages whose installed
+                versions do not match the latest pkgsrc entries</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdep/README.html"
-                   class="pkgname">pkgtools/pkgdep</a>: makes
-                   dependency graphs of packages, to aid in
-                   choosing a strategy for updating</p>
+                class="pkgname">pkgtools/pkgdep</a>: makes
+                dependency graphs of packages, to aid in choosing a
+                strategy for updating</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdepgraph/README.html"
-                   class="pkgname">pkgtools/pkgdepgraph</a>: make
-                   graph from above (uses graphviz)</p>
+                class="pkgname">pkgtools/pkgdepgraph</a>: make
+                graph from above (uses graphviz)</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html"
-                   class="pkgname">pkgtools/pkglint</a>: This
-                   provides two distinct abilities: check a pkgsrc
-                   entry for correctness (pkglint) check for and
-                   remove out-of-date distfiles and binary packages
-                   (lintpkgsrc)</p>
+                class="pkgname">pkgtools/pkglint</a>: This provides
+                two distinct abilities: check a pkgsrc entry for
+                correctness (pkglint) check for and remove
+                out-of-date distfiles and binary packages
+                (lintpkgsrc)</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgsurvey/README.html"
-                   class="pkgname">pkgtools/pkgsurvey</a>: report
-                   what packages you have installed</p>
+                class="pkgname">pkgtools/pkgsurvey</a>: report what
+                packages you have installed</p>
               </li>
             </ul>
           </div>
@@ -3992,28 +3975,28 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdiff/README.html"
-                   class="pkgname">pkgtools/pkgdiff</a>: automate
-                   making and maintaining patches for a package
-                   (includes pkgdiff, pkgvi, mkpatches, ...)</p>
+                class="pkgname">pkgtools/pkgdiff</a>: automate
+                making and maintaining patches for a package
+                (includes pkgdiff, pkgvi, mkpatches, ...)</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/rpm2pkg/README.html"
-                   class="pkgname">pkgtools/rpm2pkg</a>, <a xmlns=
-                   "http://www.w3.org/TR/xhtml1/transitional" href=
-                   "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/url2pkg/README.html"
-                   class="pkgname">pkgtools/url2pkg</a>: aids in
-                   converting to pkgsrc</p>
+                class="pkgname">pkgtools/rpm2pkg</a>, <a xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" href=
+                "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/url2pkg/README.html"
+                class="pkgname">pkgtools/url2pkg</a>: aids in
+                converting to pkgsrc</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/gensolpkg/README.html"
-                   class="pkgname">pkgtools/gensolpkg</a>: convert
-                   pkgsrc to a Solaris package</p>
+                class="pkgname">pkgtools/gensolpkg</a>: convert
+                pkgsrc to a Solaris package</p>
               </li>
             </ul>
           </div>
@@ -4027,25 +4010,25 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgconflict/README.html"
-                   class="pkgname">pkgtools/pkgconflict</a>: find
-                   packages that conflict but aren't marked as
-                   such</p>
+                class="pkgname">pkgtools/pkgconflict</a>: find
+                packages that conflict but aren't marked as
+                such</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_comp/README.html"
-                   class="pkgname">pkgtools/pkg_comp</a>: build
-                   packages in a chrooted area</p>
+                class="pkgname">pkgtools/pkg_comp</a>: build
+                packages in a chrooted area</p>
               </li>
 
               <li>
                 <p><a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/libkver/README.html"
-                   class="pkgname">pkgtools/libkver</a>: spoof
-                   kernel version for chrooted cross builds</p>
+                class="pkgname">pkgtools/libkver</a>: spoof kernel
+                version for chrooted cross builds</p>
               </li>
             </ul>
           </div>
@@ -4056,7 +4039,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2584794" id="id2584794"></a>6.4.&nbsp;How to use
+                "id2587540" id="id2587540"></a>6.4.&nbsp;How to use
                 pkgsrc as non-root</h2>
               </div>
             </div>
@@ -4066,7 +4049,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           set some variables to make pkgsrc work under these
           conditions. Please see <a href=
           "http://mail-index.NetBSD.org/tech-pkg/2003/09/27/0023.html"
-             target="_top">this message</a> for more details.</p>
+          target="_top">this message</a> for more details.</p>
         </div>
 
         <div class="sect1" lang="en" xml:lang="en">
@@ -4074,7 +4057,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2584806" id="id2584806"></a>6.5.&nbsp;How to
+                "id2587552" id="id2587552"></a>6.5.&nbsp;How to
                 resume transfers when fetching distfiles?</h2>
               </div>
             </div>
@@ -4113,7 +4096,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2584849" id="id2584849"></a>6.6.&nbsp;How can I
+                "id2587594" id="id2587594"></a>6.6.&nbsp;How can I
                 install/use XFree86 from pkgsrc?</h2>
               </div>
             </div>
@@ -4136,7 +4119,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2584876" id="id2584876"></a>6.7.&nbsp;How can I
+                "id2587622" id="id2587622"></a>6.7.&nbsp;How can I
                 install/use X.org from pkgsrc?</h2>
               </div>
             </div>
@@ -4159,7 +4142,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2584904" id="id2584904"></a>6.8.&nbsp;How to
+                "id2587650" id="id2587650"></a>6.8.&nbsp;How to
                 fetch files from behind a firewall</h2>
               </div>
             </div>
@@ -4184,7 +4167,7 @@ http_proxy=http://orpheus.amdahl.com:80/
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2584918" id="id2584918"></a>6.9.&nbsp;How do I
+                "id2587664" id="id2587664"></a>6.9.&nbsp;How do I
                 tell <span><strong class="command">make
                 fetch</strong></span> to do passive FTP?</h2>
               </div>
@@ -4218,7 +4201,7 @@ ${LOCALBASE}/bin/ftp
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2584969" id="id2584969"></a>6.10.&nbsp;How to
+                "id2587715" id="id2587715"></a>6.10.&nbsp;How to
                 fetch all distfiles at once</h2>
               </div>
             </div>
@@ -4287,7 +4270,7 @@ ${LOCALBASE}/bin/ftp
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2585177" id="id2585177"></a>6.11.&nbsp;What does
+                "id2587923" id="id2587923"></a>6.11.&nbsp;What does
                 &#8220;<span class="quote">Don't know how to make
                 /usr/share/tmac/tmac.andoc</span>&#8221; mean?</h2>
               </div>
@@ -4297,22 +4280,21 @@ ${LOCALBASE}/bin/ftp
           <p>When compiling the <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_install/README.html"
-             class="pkgname">pkgtools/pkg_install</a> package, you
-             get the error from make that it doesn't know how to
-             make <code class=
-             "filename">/usr/share/tmac/tmac.andoc</code>? This
-             indicates that you don't have installed the
-             &#8220;<span class="quote">text</span>&#8221; set on
-             your machine (nroff, ...). It is recommended to do
-             that to format manpages.</p>
+          class="pkgname">pkgtools/pkg_install</a> package, you get
+          the error from make that it doesn't know how to make
+          <code class="filename">/usr/share/tmac/tmac.andoc</code>?
+          This indicates that you don't have installed the
+          &#8220;<span class="quote">text</span>&#8221; set on your
+          machine (nroff, ...). It is recommended to do that to
+          format manpages.</p>
 
           <p>In the case of the <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_install/README.html"
-             class="pkgname">pkgtools/pkg_install</a> package, you
-             can get away with setting <code class=
-             "varname">NOMAN=YES</code> either in the environment
-             or in <code class="filename">/etc/mk.conf</code>.</p>
+          class="pkgname">pkgtools/pkg_install</a> package, you can
+          get away with setting <code class=
+          "varname">NOMAN=YES</code> either in the environment or
+          in <code class="filename">/etc/mk.conf</code>.</p>
         </div>
 
         <div class="sect1" lang="en" xml:lang="en">
@@ -4320,7 +4302,7 @@ ${LOCALBASE}/bin/ftp
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2585216" id="id2585216"></a>6.12.&nbsp;What does
+                "id2587961" id="id2587961"></a>6.12.&nbsp;What does
                 &#8220;<span class="quote">Could not find
                 bsd.own.mk</span>&#8221; mean?</h2>
               </div>
@@ -4349,7 +4331,7 @@ ${LOCALBASE}/bin/ftp
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2585273" id="id2585273"></a>6.13.&nbsp;Using
+                "id2588087" id="id2588087"></a>6.13.&nbsp;Using
                 'sudo' with pkgsrc</h2>
               </div>
             </div>
@@ -4363,9 +4345,9 @@ ${LOCALBASE}/bin/ftp
           use it, install sudo (either as binary package or from
           <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/sudo/README.html"
-             class="pkgname">security/sudo</a>) and then put the
-             following into your <code class=
-             "filename">/etc/mk.conf</code>:</p>
+          class="pkgname">security/sudo</a>) and then put the
+          following into your <code class=
+          "filename">/etc/mk.conf</code>:</p>
           <pre class="programlisting">
         .if exists(/usr/pkg/bin/sudo)
         SU_CMD=/usr/pkg/bin/sudo /bin/sh -c
@@ -4532,8 +4514,8 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
           this, install the <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/security/audit-packages/README.html"
-             class="pkgname">security/audit-packages</a> package.
-             It has two components:</p>
+          class="pkgname">security/audit-packages</a> package. It
+          has two components:</p>
 
           <div class="orderedlist">
             <ol type="1">
@@ -4548,8 +4530,8 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 
                 <p><a href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities"
-                   target=
-                   "_top">ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities</a></p>
+                target=
+                "_top">ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities</a></p>
               </li>
 
               <li>
@@ -4631,17 +4613,17 @@ fi
               <dt><span class="sect1"><a href=
               "#components.patches">7.3. patches/*</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2586455">7.4.
+              <dt><span class="sect1"><a href="#id2589201">7.4.
               Other mandatory files</a></span></dt>
 
               <dt><span class="sect1"><a href=
               "#components.optional">7.5. Optional
               files</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2586649">7.6.
+              <dt><span class="sect1"><a href="#id2589326">7.6.
               <code class="filename">work*</code></a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2586737">7.7.
+              <dt><span class="sect1"><a href="#id2589482">7.7.
               <code class="filename">files/*</code></a></span></dt>
             </dl>
           </dd>
@@ -4651,10 +4633,10 @@ fi
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2586791">8.1. RCS
+              <dt><span class="sect1"><a href="#id2589537">8.1. RCS
               ID</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2586806">8.2.
+              <dt><span class="sect1"><a href="#id2589552">8.2.
               Semi-automatic <code class="filename">PLIST</code>
               generation</a></span></dt>
 
@@ -4665,14 +4647,14 @@ fi
               <dt><span class="sect1"><a href="#plist.misc">8.4.
               Variable substitution in PLIST</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2587127">8.5.
+              <dt><span class="sect1"><a href="#id2589941">8.5.
               Manpage-compression</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2587169">8.6.
+              <dt><span class="sect1"><a href="#id2589982">8.6.
               Changing PLIST source with <code class=
               "varname">PLIST_SRC</code></a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2587322">8.7.
+              <dt><span class="sect1"><a href="#id2590000">8.7.
               Platform specific and differing
               PLISTs</a></span></dt>
 
@@ -4687,21 +4669,21 @@ fi
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2587526">9.1.
+              <dt><span class="sect1"><a href="#id2590322">9.1.
               Converting packages to use buildlink3</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2587785">9.2.
+              <dt><span class="sect1"><a href="#id2590513">9.2.
               Writing <code class="filename">buildlink3.mk</code>
               files</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2587854">9.2.1. Anatomy of a buildlink3.mk
+                  "#id2590582">9.2.1. Anatomy of a buildlink3.mk
                   file</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2588295">9.2.2. Updating <code class=
+                  "#id2591022">9.2.2. Updating <code class=
                   "varname">BUILDLINK_DEPENDS.<em class=
                   "replaceable"><code>pkg</code></em></code> in
                   <code class="filename">buildlink3.mk</code>
@@ -4709,18 +4691,18 @@ fi
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2588442">9.3.
+              <dt><span class="sect1"><a href="#id2591170">9.3.
               Writing <code class="filename">builtin.mk</code>
               files</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2588523">9.3.1. Anatomy of a <code class=
+                  "#id2591387">9.3.1. Anatomy of a <code class=
                   "filename">builtin.mk</code> file</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2588819">9.3.2. Global preferences for native
+                  "#id2591614">9.3.2. Global preferences for native
                   or pkgsrc software</a></span></dt>
                 </dl>
               </dd>
@@ -4732,10 +4714,10 @@ fi
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2588960">10.1.
+              <dt><span class="sect1"><a href="#id2591687">10.1.
               Global default options</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2588974">10.2.
+              <dt><span class="sect1"><a href="#id2591702">10.2.
               Converting packages to use <code class=
               "filename">bsd.options.mk</code></a></span></dt>
             </dl>
@@ -4749,7 +4731,7 @@ fi
               <dt><span class="sect1"><a href="#build.prefix">11.1.
               Program location</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2589582">11.2.
+              <dt><span class="sect1"><a href="#id2592310">11.2.
               Main targets</a></span></dt>
 
               <dt><span class="sect1"><a href=
@@ -4763,17 +4745,17 @@ fi
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2590983">12.1.
+              <dt><span class="sect1"><a href="#id2593710">12.1.
               General operation</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2590986">12.1.1. How to pull in variables
+                  "#id2593714">12.1.1. How to pull in variables
                   from /etc/mk.conf</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2591138">12.1.2. Restricted
+                  "#id2593865">12.1.2. Restricted
                   packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
@@ -4781,15 +4763,15 @@ fi
                   dependencies</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2591585">12.1.4. Handling conflicts with
+                  "#id2594380">12.1.4. Handling conflicts with
                   other packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2591703">12.1.5. Packages that cannot or
+                  "#id2594430">12.1.5. Packages that cannot or
                   should not be built</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2591729">12.1.6. Packages which should not be
+                  "#id2594456">12.1.6. Packages which should not be
                   deleted, once installed</a></span></dt>
 
                   <dt><span class="sect2"><a href=
@@ -4797,37 +4779,37 @@ fi
                   with security problems</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2591889">12.1.8. How to handle compiler
+                  "#id2594616">12.1.8. How to handle compiler
                   bugs</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2591911">12.1.9. How to handle incrementing
+                  "#id2594638">12.1.9. How to handle incrementing
                   versions when fixing an existing
                   package</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2591960">12.1.10. Portability of
+                  "#id2594688">12.1.10. Portability of
                   packages</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2591985">12.2.
+              <dt><span class="sect1"><a href="#id2594712">12.2.
               Possible downloading issues</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2591988">12.2.1. Packages whose distfiles
+                  "#id2594715">12.2.1. Packages whose distfiles
                   aren't available for plain
                   downloading</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2592051">12.2.2. How to handle modified
+                  "#id2594778">12.2.2. How to handle modified
                   distfiles with the 'old' name</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2592062">12.3.
+              <dt><span class="sect1"><a href="#id2594790">12.3.
               Configuration gotchas</a></span></dt>
 
               <dd>
@@ -4837,65 +4819,65 @@ fi
                   libtool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2592441">12.3.2. Using libtool on GNU
+                  "#id2595237">12.3.2. Using libtool on GNU
                   packages that already support
                   libtool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2592594">12.3.3. GNU
+                  "#id2595321">12.3.3. GNU
                   Autoconf/Automake</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2592775">12.4.
+              <dt><span class="sect1"><a href="#id2595434">12.4.
               Building considerations</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2592778">12.4.1. CPP defines</a></span></dt>
+                  "#id2595437">12.4.1. CPP defines</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2592808">12.5.
+              <dt><span class="sect1"><a href="#id2595467">12.5.
               Package specific actions</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#id2592811">12.5.1. Package configuration
+                  "#id2595470">12.5.1. Package configuration
                   files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2592982">12.5.2. User
+                  "#id2595709">12.5.2. User
                   interaction</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593027">12.5.3. Handling
+                  "#id2595754">12.5.3. Handling
                   licenses</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593178">12.5.4. Creating an account from a
+                  "#id2595906">12.5.4. Creating an account from a
                   package</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593240">12.5.5. Installing score
+                  "#id2595968">12.5.5. Installing score
                   files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593284">12.5.6. Packages providing login
+                  "#id2596011">12.5.6. Packages providing login
                   shells</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593341">12.5.7. Packages containing perl
+                  "#id2596069">12.5.7. Packages containing perl
                   scripts</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593360">12.5.8. Packages with hardcoded
+                  "#id2596087">12.5.8. Packages with hardcoded
                   paths to other interpreters</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593381">12.5.9. Packages installing perl
+                  "#id2596108">12.5.9. Packages installing perl
                   modules</a></span></dt>
 
                   <dt><span class="sect2"><a href=
@@ -4903,40 +4885,40 @@ fi
                   info files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593601">12.5.11. Packages installing GConf2
+                  "#id2596328">12.5.11. Packages installing GConf2
                   data files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593769">12.5.12. Packages installing
+                  "#id2596428">12.5.12. Packages installing
                   scrollkeeper data files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593889">12.5.13. Packages installing X11
+                  "#id2596548">12.5.13. Packages installing X11
                   fonts</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2593936">12.5.14. Packages installing GTK2
+                  "#id2596595">12.5.14. Packages installing GTK2
                   modules</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2594005">12.5.15. Packages installing SGML or
+                  "#id2596732">12.5.15. Packages installing SGML or
                   XML data</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2594057">12.5.16. Packages installing
+                  "#id2596785">12.5.16. Packages installing
                   extensions to the MIME database</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2594332">12.5.17. Packages using
+                  "#id2596923">12.5.17. Packages using
                   intltool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#id2594346">12.5.18. Packages installing startup
+                  "#id2597005">12.5.18. Packages installing startup
                   scripts</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#id2594368">12.6.
+              <dt><span class="sect1"><a href="#id2597027">12.6.
               Feedback to the author</a></span></dt>
             </dl>
           </dd>
@@ -4949,17 +4931,17 @@ fi
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href="#id2594898">14.1.
+              <dt><span class="sect1"><a href="#id2597557">14.1.
               Submitting your packages</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2594949">14.2.
+              <dt><span class="sect1"><a href="#id2597608">14.2.
               Committing: Importing a package into
               CVS</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2595012">14.3.
+              <dt><span class="sect1"><a href="#id2597671">14.3.
               Updating a package to a newer version</a></span></dt>
 
-              <dt><span class="sect1"><a href="#id2595031">14.4.
+              <dt><span class="sect1"><a href="#id2597758">14.4.
               Moving a package in pkgsrc</a></span></dt>
             </dl>
           </dd>
@@ -4992,17 +4974,17 @@ fi
             <dt><span class="sect1"><a href=
             "#components.patches">7.3. patches/*</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2586455">7.4. Other
+            <dt><span class="sect1"><a href="#id2589201">7.4. Other
             mandatory files</a></span></dt>
 
             <dt><span class="sect1"><a href=
             "#components.optional">7.5. Optional
             files</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2586649">7.6.
+            <dt><span class="sect1"><a href="#id2589326">7.6.
             <code class="filename">work*</code></a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2586737">7.7.
+            <dt><span class="sect1"><a href="#id2589482">7.7.
             <code class="filename">files/*</code></a></span></dt>
           </dl>
         </div>
@@ -5205,25 +5187,25 @@ converters    games         mbone         print         x11
           in new distinfo files. The <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/digest/README.html"
-             class="pkgname">pkgtools/digest</a> utility calculates
-             all of the digests in the distinfo file, and it
-             provides various different algorithms. At the current
-             time, the algorithms provided are: <span class=
-             "emphasis"><em>md5</em></span>, <span class=
-             "emphasis"><em>rmd160</em></span>, <span class=
-             "emphasis"><em>sha1</em></span>, <span class=
-             "emphasis"><em>sha256</em></span>, <span class=
-             "emphasis"><em>sha384</em></span> and <span class=
-             "emphasis"><em>sha512</em></span>.</p>
+          class="pkgname">pkgtools/digest</a> utility calculates
+          all of the digests in the distinfo file, and it provides
+          various different algorithms. At the current time, the
+          algorithms provided are: <span class=
+          "emphasis"><em>md5</em></span>, <span class=
+          "emphasis"><em>rmd160</em></span>, <span class=
+          "emphasis"><em>sha1</em></span>, <span class=
+          "emphasis"><em>sha256</em></span>, <span class=
+          "emphasis"><em>sha384</em></span> and <span class=
+          "emphasis"><em>sha512</em></span>.</p>
 
           <p>Some packages have different sets of distfiles on a
           per architecture basis, for example <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/navigator/README.html"
-             class="pkgname">www/navigator</a>). These are kept in
-             the same distinfo file and care should be taken when
-             upgrading such a package to ensure distfile
-             information is not lost.</p>
+          class="pkgname">www/navigator</a>). These are kept in the
+          same distinfo file and care should be taken when
+          upgrading such a package to ensure distfile information
+          is not lost.</p>
 
           <p>The message digest/checksum for all the official
           patches found in the <code class=
@@ -5286,8 +5268,8 @@ converters    games         mbone         print         x11
           "command">pkgdiff</strong></span> from the <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdiff/README.html"
-             class="pkgname">pkgtools/pkgdiff</a> package to avoid
-             these problems.</p>
+          class="pkgname">pkgtools/pkgdiff</a> package to avoid
+          these problems.</p>
 
           <p>For even more automation, we recommend using
           <span><strong class="command">mkpatches</strong></span>
@@ -5337,7 +5319,7 @@ converters    games         mbone         print         x11
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2586455" id="id2586455"></a>7.4.&nbsp;Other
+                "id2589201" id="id2589201"></a>7.4.&nbsp;Other
                 mandatory files</h2>
               </div>
             </div>
@@ -5461,8 +5443,8 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2586649" id=
-                "id2586649"></a>7.6.&nbsp;<code class=
+                "id2589326" id=
+                "id2589326"></a>7.6.&nbsp;<code class=
                 "filename">work*</code></h2>
               </div>
             </div>
@@ -5482,8 +5464,8 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
           <code class="varname">WRKSRC</code> accordingly, e.g.
           <a xmlns="http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/editors/sam/README.html"
-             class="pkgname">editors/sam</a> again, but the quick
-             answer is:</p>
+          class="pkgname">editors/sam</a> again, but the quick
+          answer is:</p>
           <pre class="programlisting">
 WRKSRC=                ${WRKDIR}
 </pre>
@@ -5498,11 +5480,11 @@ WRKSRC=                ${WRKDIR}
           See <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
           href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/lang/tcl/README.html"
-             class="pkgname">lang/tcl</a> and <a xmlns=
-             "http://www.w3.org/TR/xhtml1/transitional" href=
-             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/tk/README.html"
-             class="pkgname">x11/tk</a> for examples, and here is
-             another one:</p>
+          class="pkgname">lang/tcl</a> and <a xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" href=
+          "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/tk/README.html"
+          class="pkgname">x11/tk</a> for examples, and here is
+          another one:</p>
           <pre class="programlisting">
 WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
 </pre>
@@ -5522,8 +5504,8 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2586737" id=
-                "id2586737"></a>7.7.&nbsp;<code class=
+                "id2589482" id=
+                "id2589482"></a>7.7.&nbsp;<code class=
                 "filename">files/*</code></h2>
               </div>
             </div>
@@ -5555,10 +5537,10 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2586791">8.1. RCS
+            <dt><span class="sect1"><a href="#id2589537">8.1. RCS
             ID</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2586806">8.2.
+            <dt><span class="sect1"><a href="#id2589552">8.2.
             Semi-automatic <code class="filename">PLIST</code>
             generation</a></span></dt>
 
@@ -5569,14 +5551,14 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
             <dt><span class="sect1"><a href="#plist.misc">8.4.
             Variable substitution in PLIST</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2587127">8.5.
+            <dt><span class="sect1"><a href="#id2589941">8.5.
             Manpage-compression</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2587169">8.6.
+            <dt><span class="sect1"><a href="#id2589982">8.6.
             Changing PLIST source with <code class=
             "varname">PLIST_SRC</code></a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2587322">8.7.
+            <dt><span class="sect1"><a href="#id2590000">8.7.
             Platform specific and differing PLISTs</a></span></dt>
 
             <dt><span class="sect1"><a href="#faq.common-dirs">8.8.
@@ -5602,7 +5584,7 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2586791" id="id2586791"></a>8.1.&nbsp;RCS
+                "id2589537" id="id2589537"></a>8.1.&nbsp;RCS
                 ID</h2>
               </div>
             </div>
@@ -5620,8 +5602,8 @@ WRKSRC=         ${WRKDIR}/${DISTNAME}/unix
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2586806" id=
-                "id2586806"></a>8.2.&nbsp;Semi-automatic
+                "id2589552" id=
+                "id2589552"></a>8.2.&nbsp;Semi-automatic
                 <code class="filename">PLIST</code> generation</h2>
               </div>
             </div>
@@ -5815,8 +5797,8 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2587127" id=
-                "id2587127"></a>8.5.&nbsp;Manpage-compression</h2>
+                "id2589941" id=
+                "id2589941"></a>8.5.&nbsp;Manpage-compression</h2>
               </div>
             </div>
           </div>
@@ -5840,7 +5822,7 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2587169" id="id2587169"></a>8.6.&nbsp;Changing
+                "id2589982" id="id2589982"></a>8.6.&nbsp;Changing
                 PLIST source with <code class=
                 "varname">PLIST_SRC</code></h2>
               </div>
@@ -5860,7 +5842,7 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2587322" id="id2587322"></a>8.7.&nbsp;Platform
+                "id2590000" id="id2590000"></a>8.7.&nbsp;Platform
                 specific and differing PLISTs</h2>
               </div>
             </div>
@@ -5887,13 +5869,6 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
               </li>
             </ul>
           </div>
-
-          <p>If <code class="filename">PLIST.${OPSYS}</code>
-          exists, these files are used instead of <code class=
-          "filename">PLIST</code>. This allows packages which
-          behave in this way to be handled gracefully. Manually
-          overriding <code class="varname">PLIST_SRC</code> for
-          other more exotic uses is also possible.</p>
         </div>
 
         <div class="sect1" lang="en" xml:lang="en">
@@ -5938,9 +5913,9 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
                 <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
                 href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/textproc/scrollkeeper/README.html"
-                   class="pkgname">textproc/scrollkeeper</a>, which
-                   removes the shared directory <code class=
-                   "filename">share/omf</code>.</p>
+                class="pkgname">textproc/scrollkeeper</a>, which
+                removes the shared directory <code class=
+                "filename">share/omf</code>.</p>
               </li>
 
               <li>
@@ -6002,19 +5977,19 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2587526">9.1.
+            <dt><span class="sect1"><a href="#id2590322">9.1.
             Converting packages to use buildlink3</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2587785">9.2.
+            <dt><span class="sect1"><a href="#id2590513">9.2.
             Writing <code class="filename">buildlink3.mk</code>
             files</a></span></dt>
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2587854">9.2.1.
+                <dt><span class="sect2"><a href="#id2590582">9.2.1.
                 Anatomy of a buildlink3.mk file</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2588295">9.2.2.
+                <dt><span class="sect2"><a href="#id2591022">9.2.2.
                 Updating <code class=
                 "varname">BUILDLINK_DEPENDS.<em class=
                 "replaceable"><code>pkg</code></em></code> in
@@ -6023,17 +5998,17 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2588442">9.3.
+            <dt><span class="sect1"><a href="#id2591170">9.3.
             Writing <code class="filename">builtin.mk</code>
             files</a></span></dt>
 
             <dd>
               <dl>
-                <dt><span class="sect2"><a href="#id2588523">9.3.1.
+                <dt><span class="sect2"><a href="#id2591387">9.3.1.
                 Anatomy of a <code class=
                 "filename">builtin.mk</code> file</a></span></dt>
 
-                <dt><span class="sect2"><a href="#id2588819">9.3.2.
+                <dt><span class="sect2"><a href="#id2591614">9.3.2.
                 Global preferences for native or pkgsrc
                 software</a></span></dt>
               </dl>
@@ -6084,7 +6059,7 @@ PLIST_SUBST+=    SOMEVAR="somevalue"
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2587526" id="id2587526"></a>9.1.&nbsp;Converting
+                "id2590322" id="id2590322"></a>9.1.&nbsp;Converting
                 packages to use buildlink3</h2>
               </div>
             </div>
@@ -6166,7 +6141,7 @@ DEPENDS+=       foo&gt;=1.1.0:../../category/foo
                 will take care to install the <a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/ncurses/README.html"
-                   class="pkgname">devel/ncurses</a> package.</p>
+                class="pkgname">devel/ncurses</a> package.</p>
               </li>
 
               <li>
@@ -6185,10 +6160,10 @@ DEPENDS+=       foo&gt;=1.1.0:../../category/foo
                 dependency on <a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/lesstif/README.html"
-                   class="pkgname">x11/lesstif</a> or <a xmlns=
-                   "http://www.w3.org/TR/xhtml1/transitional" href=
-                   "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/openmotif/README.html"
-                   class="pkgname">x11/openmotif</a>;</p>
+                class="pkgname">x11/lesstif</a> or <a xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" href=
+                "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/openmotif/README.html"
+                class="pkgname">x11/openmotif</a>;</p>
               </li>
 
               <li>
@@ -6213,7 +6188,7 @@ DEPENDS+=       foo&gt;=1.1.0:../../category/foo
                 on <a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/pth/README.html"
-                   class="pkgname">devel/pth</a> as needed;</p>
+                class="pkgname">devel/pth</a> as needed;</p>
               </li>
 
               <li>
@@ -6235,7 +6210,7 @@ DEPENDS+=       foo&gt;=1.1.0:../../category/foo
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2587785" id="id2587785"></a>9.2.&nbsp;Writing
+                "id2590513" id="id2590513"></a>9.2.&nbsp;Writing
                 <code class="filename">buildlink3.mk</code>
                 files</h2>
               </div>
@@ -6258,11 +6233,10 @@ DEPENDS+=       foo&gt;=1.1.0:../../category/foo
           Rene Hexel's <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/createbuildlink/README.html"
-             class="pkgname">pkgtools/createbuildlink</a> package
-             is highly recommended. For most packages, the
-             following command will generate a good starting point
-             for <code class="filename">buildlink3.mk</code>
-             files:</p>
+          class="pkgname">pkgtools/createbuildlink</a> package is
+          highly recommended. For most packages, the following
+          command will generate a good starting point for
+          <code class="filename">buildlink3.mk</code> files:</p>
           <pre class="screen">
 <code class="prompt">%</code> <strong class=
 "userinput"><code>cd pkgsrc/<em class=
@@ -6276,8 +6250,8 @@ DEPENDS+=       foo&gt;=1.1.0:../../category/foo
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2587854" id=
-                  "id2587854"></a>9.2.1. Anatomy of a buildlink3.mk
+                  <h3 class="title"><a name="id2590582" id=
+                  "id2590582"></a>9.2.1. Anatomy of a buildlink3.mk
                   file</h3>
                 </div>
               </div>
@@ -6507,8 +6481,8 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2588295" id=
-                  "id2588295"></a>9.2.2. Updating <code class=
+                  <h3 class="title"><a name="id2591022" id=
+                  "id2591022"></a>9.2.2. Updating <code class=
                   "varname">BUILDLINK_DEPENDS.<em class=
                   "replaceable"><code>pkg</code></em></code> in
                   <code class="filename">buildlink3.mk</code>
@@ -6577,7 +6551,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2588442" id="id2588442"></a>9.3.&nbsp;Writing
+                "id2591170" id="id2591170"></a>9.3.&nbsp;Writing
                 <code class="filename">builtin.mk</code> files</h2>
               </div>
             </div>
@@ -6629,8 +6603,8 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2588523" id=
-                  "id2588523"></a>9.3.1.&nbsp;Anatomy of a
+                  <h3 class="title"><a name="id2591387" id=
+                  "id2591387"></a>9.3.1.&nbsp;Anatomy of a
                   <code class="filename">builtin.mk</code>
                   file</h3>
                 </div>
@@ -6755,8 +6729,8 @@ CHECK_BUILTIN.foo?=     no
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2588819" id=
-                  "id2588819"></a>9.3.2.&nbsp;Global preferences
+                  <h3 class="title"><a name="id2591614" id=
+                  "id2591614"></a>9.3.2.&nbsp;Global preferences
                   for native or pkgsrc software</h3>
                 </div>
               </div>
@@ -6814,10 +6788,10 @@ CHECK_BUILTIN.foo?=     no
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2588960">10.1.
+            <dt><span class="sect1"><a href="#id2591687">10.1.
             Global default options</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2588974">10.2.
+            <dt><span class="sect1"><a href="#id2591702">10.2.
             Converting packages to use <code class=
             "filename">bsd.options.mk</code></a></span></dt>
           </dl>
@@ -6837,7 +6811,7 @@ CHECK_BUILTIN.foo?=     no
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2588960" id="id2588960"></a>10.1.&nbsp;Global
+                "id2591687" id="id2591687"></a>10.1.&nbsp;Global
                 default options</h2>
               </div>
             </div>
@@ -6855,8 +6829,8 @@ CHECK_BUILTIN.foo?=     no
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2588974" id=
-                "id2588974"></a>10.2.&nbsp;Converting packages to
+                "id2591702" id=
+                "id2591702"></a>10.2.&nbsp;Converting packages to
                 use <code class=
                 "filename">bsd.options.mk</code></h2>
               </div>
@@ -7019,7 +6993,7 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
             <dt><span class="sect1"><a href="#build.prefix">11.1.
             Program location</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2589582">11.2. Main
+            <dt><span class="sect1"><a href="#id2592310">11.2. Main
             targets</a></span></dt>
 
             <dt><span class="sect1"><a href=
@@ -7144,8 +7118,8 @@ CONFIGURE_ARGS+=        --enable-sasl=${BUILDLINK_PREFIX.sasl}
                 <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
                 href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/xpkgwedge/README.html"
-                   class="pkgname">pkgtools/xpkgwedge</a> is
-                   enabled by default.</p>
+                class="pkgname">pkgtools/xpkgwedge</a> is enabled
+                by default.</p>
               </li>
 
               <li>
@@ -7216,7 +7190,7 @@ GTKDIR_DEFAULT= ${LOCALBASE}
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2589582" id="id2589582"></a>11.2.&nbsp;Main
+                "id2592310" id="id2592310"></a>11.2.&nbsp;Main
                 targets</h2>
               </div>
             </div>
@@ -7378,7 +7352,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
                 from the <a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/top/README.html"
-                   class="pkgname">sysutils/top</a> package:</p>
+                class="pkgname">sysutils/top</a> package:</p>
                 <pre class="programlisting">
 HAS_CONFIGURE=          yes
 CONFIGURE_SCRIPT=       Configure
@@ -7756,28 +7730,27 @@ make build
                 viewed using a browser such as <a xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" href=
                 "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/mozilla/README.html"
-                   class="pkgname">www/mozilla</a> or <a xmlns=
-                   "http://www.w3.org/TR/xhtml1/transitional" href=
-                   "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/links/README.html"
-                   class="pkgname">www/links</a>. The generated
-                   files contain references to any packages which
-                   are in the <code class="varname">PACKAGES</code>
-                   directory on the local host. The generated files
-                   can be made to refer to URLs based on
-                   <code class="varname">FTP_PKG_URL_HOST</code>
-                   and <code class=
-                   "varname">FTP_PKG_URL_DIR</code>. For example,
-                   if I wanted to generate <code class=
-                   "filename">README.html</code> files which
-                   pointed to binary packages on the local machine,
-                   in the directory <code class=
-                   "filename">/usr/packages</code>, set <code class=
-                   "varname">FTP_PKG_URL_HOST=file://localhost</code>
-                   and <code class=
-                   "varname">FTP_PKG_URL_DIR=/usr/packages</code>.
-                   The <code class="varname">${PACKAGES}</code>
-                   directory and its subdirectories will be
-                   searched for all the binary packages.</p>
+                class="pkgname">www/mozilla</a> or <a xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" href=
+                "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/links/README.html"
+                class="pkgname">www/links</a>. The generated files
+                contain references to any packages which are in the
+                <code class="varname">PACKAGES</code> directory on
+                the local host. The generated files can be made to
+                refer to URLs based on <code class=
+                "varname">FTP_PKG_URL_HOST</code> and <code class=
+                "varname">FTP_PKG_URL_DIR</code>. For example, if I
+                wanted to generate <code class=
+                "filename">README.html</code> files which pointed
+                to binary packages on the local machine, in the
+                directory <code class=
+                "filename">/usr/packages</code>, set <code class=
+                "varname">FTP_PKG_URL_HOST=file://localhost</code>
+                and <code class=
+                "varname">FTP_PKG_URL_DIR=/usr/packages</code>. The
+                <code class="varname">${PACKAGES}</code> directory
+                and its subdirectories will be searched for all the
+                binary packages.</p>
               </dd>
 
               <dt><span class="term">readme-all</span></dt>
@@ -7983,17 +7956,17 @@ make build
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2590983">12.1.
+            <dt><span class="sect1"><a href="#id2593710">12.1.
             General operation</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#id2590986">12.1.1. How to pull in variables from
+                "#id2593714">12.1.1. How to pull in variables from
                 /etc/mk.conf</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2591138">12.1.2. Restricted
+                "#id2593865">12.1.2. Restricted
                 packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
@@ -8001,15 +7974,15 @@ make build
                 dependencies</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2591585">12.1.4. Handling conflicts with other
+                "#id2594380">12.1.4. Handling conflicts with other
                 packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2591703">12.1.5. Packages that cannot or should
+                "#id2594430">12.1.5. Packages that cannot or should
                 not be built</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2591729">12.1.6. Packages which should not be
+                "#id2594456">12.1.6. Packages which should not be
                 deleted, once installed</a></span></dt>
 
                 <dt><span class="sect2"><a href=
@@ -8017,37 +7990,37 @@ make build
                 security problems</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2591889">12.1.8. How to handle compiler
+                "#id2594616">12.1.8. How to handle compiler
                 bugs</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2591911">12.1.9. How to handle incrementing
+                "#id2594638">12.1.9. How to handle incrementing
                 versions when fixing an existing
                 package</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2591960">12.1.10. Portability of
+                "#id2594688">12.1.10. Portability of
                 packages</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2591985">12.2.
+            <dt><span class="sect1"><a href="#id2594712">12.2.
             Possible downloading issues</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#id2591988">12.2.1. Packages whose distfiles
+                "#id2594715">12.2.1. Packages whose distfiles
                 aren't available for plain
                 downloading</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2592051">12.2.2. How to handle modified
+                "#id2594778">12.2.2. How to handle modified
                 distfiles with the 'old' name</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2592062">12.3.
+            <dt><span class="sect1"><a href="#id2594790">12.3.
             Configuration gotchas</a></span></dt>
 
             <dd>
@@ -8057,64 +8030,64 @@ make build
                 libtool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2592441">12.3.2. Using libtool on GNU packages
+                "#id2595237">12.3.2. Using libtool on GNU packages
                 that already support libtool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2592594">12.3.3. GNU
+                "#id2595321">12.3.3. GNU
                 Autoconf/Automake</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2592775">12.4.
+            <dt><span class="sect1"><a href="#id2595434">12.4.
             Building considerations</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#id2592778">12.4.1. CPP defines</a></span></dt>
+                "#id2595437">12.4.1. CPP defines</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2592808">12.5.
+            <dt><span class="sect1"><a href="#id2595467">12.5.
             Package specific actions</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#id2592811">12.5.1. Package configuration
+                "#id2595470">12.5.1. Package configuration
                 files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2592982">12.5.2. User
+                "#id2595709">12.5.2. User
                 interaction</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593027">12.5.3. Handling
+                "#id2595754">12.5.3. Handling
                 licenses</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593178">12.5.4. Creating an account from a
+                "#id2595906">12.5.4. Creating an account from a
                 package</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593240">12.5.5. Installing score
+                "#id2595968">12.5.5. Installing score
                 files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593284">12.5.6. Packages providing login
+                "#id2596011">12.5.6. Packages providing login
                 shells</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593341">12.5.7. Packages containing perl
+                "#id2596069">12.5.7. Packages containing perl
                 scripts</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593360">12.5.8. Packages with hardcoded paths
+                "#id2596087">12.5.8. Packages with hardcoded paths
                 to other interpreters</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593381">12.5.9. Packages installing perl
+                "#id2596108">12.5.9. Packages installing perl
                 modules</a></span></dt>
 
                 <dt><span class="sect2"><a href=
@@ -8122,40 +8095,40 @@ make build
                 files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593601">12.5.11. Packages installing GConf2
+                "#id2596328">12.5.11. Packages installing GConf2
                 data files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593769">12.5.12. Packages installing
+                "#id2596428">12.5.12. Packages installing
                 scrollkeeper data files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593889">12.5.13. Packages installing X11
+                "#id2596548">12.5.13. Packages installing X11
                 fonts</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2593936">12.5.14. Packages installing GTK2
+                "#id2596595">12.5.14. Packages installing GTK2
                 modules</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2594005">12.5.15. Packages installing SGML or
+                "#id2596732">12.5.15. Packages installing SGML or
                 XML data</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2594057">12.5.16. Packages installing
+                "#id2596785">12.5.16. Packages installing
                 extensions to the MIME database</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2594332">12.5.17. Packages using
+                "#id2596923">12.5.17. Packages using
                 intltool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#id2594346">12.5.18. Packages installing startup
+                "#id2597005">12.5.18. Packages installing startup
                 scripts</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#id2594368">12.6.
+            <dt><span class="sect1"><a href="#id2597027">12.6.
             Feedback to the author</a></span></dt>
           </dl>
         </div>
@@ -8165,7 +8138,7 @@ make build
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2590983" id="id2590983"></a>12.1.&nbsp;General
+                "id2593710" id="id2593710"></a>12.1.&nbsp;General
                 operation</h2>
               </div>
             </div>
@@ -8175,8 +8148,8 @@ make build
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2590986" id=
-                  "id2590986"></a>12.1.1.&nbsp;How to pull in
+                  <h3 class="title"><a name="id2593714" id=
+                  "id2593714"></a>12.1.1.&nbsp;How to pull in
                   variables from /etc/mk.conf</h3>
                 </div>
               </div>
@@ -8228,16 +8201,16 @@ CFLAGS+=  -your -flags
             the <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
             href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/cpuflags/README.html"
-               class="pkgname">devel/cpuflags</a> package if you're
-               interested in optimization for the current CPU.</p>
+            class="pkgname">devel/cpuflags</a> package if you're
+            interested in optimization for the current CPU.</p>
           </div>
 
           <div class="sect2" lang="en" xml:lang="en">
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2591138" id=
-                  "id2591138"></a>12.1.2.&nbsp;Restricted
+                  <h3 class="title"><a name="id2593865" id=
+                  "id2593865"></a>12.1.2.&nbsp;Restricted
                   packages</h3>
                 </div>
               </div>
@@ -8397,9 +8370,8 @@ BUILD_DEPENDS+=  autoconf-2.13:../../devel/autoconf
                   of this is the <a xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" href=
                   "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/lyx/README.html"
-                     class="pkgname">print/lyx</a> package, which
-                     uses the xpm library, version 3.4j to
-                     build:</p>
+                  class="pkgname">print/lyx</a> package, which uses
+                  the xpm library, version 3.4j to build:</p>
                   <pre class="programlisting">
 DEPENDS+=       xpm-3.4j:../../graphics/xpm
 </pre>
@@ -8484,10 +8456,9 @@ RECOMMENDED+=   tiff&gt;=3.6.1:../../graphics/tiff
                   "varname">DEPENDS</code> variable. The <a xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" href=
                   "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/lyx/README.html"
-                     class="pkgname">print/lyx</a> package needs to
-                     be able to execute the latex binary from the
-                     teTeX package when it runs, and that is
-                     specified:</p>
+                  class="pkgname">print/lyx</a> package needs to be
+                  able to execute the latex binary from the teTeX
+                  package when it runs, and that is specified:</p>
                   <pre class="programlisting">
 DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 </pre>
@@ -8503,9 +8474,9 @@ DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
             "quote">do-configure</span>&#8221; target <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/ghostscript5/README.html"
-               class="pkgname">print/ghostscript5</a> package (it
-               relies on the jpeg sources being present in source
-               form during the build):</p>
+            class="pkgname">print/ghostscript5</a> package (it
+            relies on the jpeg sources being present in source form
+            during the build):</p>
             <pre class="programlisting">
 if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
           cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} extract;              \
@@ -8529,21 +8500,21 @@ pre-clean:
             system, and, if it isn't, installs the <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/gettext/README.html"
-               class="pkgname">devel/gettext</a> package. The
-               latter adds a build dependency on either an
-               installed version of an older gettext package, or if
-               it isn't, installs the <a xmlns=
-               "http://www.w3.org/TR/xhtml1/transitional" href=
-               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/gettext-m4/README.html"
-               class="pkgname">devel/gettext-m4</a> package.</p>
+            class="pkgname">devel/gettext</a> package. The latter
+            adds a build dependency on either an installed version
+            of an older gettext package, or if it isn't, installs
+            the <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
+            href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/gettext-m4/README.html"
+            class="pkgname">devel/gettext-m4</a> package.</p>
           </div>
 
           <div class="sect2" lang="en" xml:lang="en">
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2591585" id=
-                  "id2591585"></a>12.1.4.&nbsp;Handling conflicts
+                  <h3 class="title"><a name="id2594380" id=
+                  "id2594380"></a>12.1.4.&nbsp;Handling conflicts
                   with other packages</h3>
                 </div>
               </div>
@@ -8562,12 +8533,12 @@ pre-clean:
             <p>For example <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/Xaw3d/README.html"
-               class="pkgname">x11/Xaw3d</a> and <a xmlns=
-               "http://www.w3.org/TR/xhtml1/transitional" href=
-               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/Xaw-Xpm/README.html"
-               class="pkgname">x11/Xaw-Xpm</a> install provide the
-               same shared library, thus you set in <code class=
-               "filename">pkgsrc/x11/Xaw3d/Makefile</code>:</p>
+            class="pkgname">x11/Xaw3d</a> and <a xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/x11/Xaw-Xpm/README.html"
+            class="pkgname">x11/Xaw-Xpm</a> install provide the
+            same shared library, thus you set in <code class=
+            "filename">pkgsrc/x11/Xaw3d/Makefile</code>:</p>
             <pre class="programlisting">
 CONFLICTS=      Xaw-Xpm-[0-9]*
 </pre>
@@ -8590,8 +8561,8 @@ CONFLICTS=      Xaw3d-[0-9]*
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2591703" id=
-                  "id2591703"></a>12.1.5.&nbsp;Packages that cannot
+                  <h3 class="title"><a name="id2594430" id=
+                  "id2594430"></a>12.1.5.&nbsp;Packages that cannot
                   or should not be built</h3>
                 </div>
               </div>
@@ -8622,8 +8593,8 @@ CONFLICTS=      Xaw3d-[0-9]*
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2591729" id=
-                  "id2591729"></a>12.1.6.&nbsp;Packages which
+                  <h3 class="title"><a name="id2594456" id=
+                  "id2594456"></a>12.1.6.&nbsp;Packages which
                   should not be deleted, once installed</h3>
                 </div>
               </div>
@@ -8686,8 +8657,8 @@ CONFLICTS=      Xaw3d-[0-9]*
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2591889" id=
-                  "id2591889"></a>12.1.8.&nbsp;How to handle
+                  <h3 class="title"><a name="id2594616" id=
+                  "id2594616"></a>12.1.8.&nbsp;How to handle
                   compiler bugs</h3>
                 </div>
               </div>
@@ -8712,8 +8683,8 @@ CONFLICTS=      Xaw3d-[0-9]*
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2591911" id=
-                  "id2591911"></a>12.1.9.&nbsp;How to handle
+                  <h3 class="title"><a name="id2594638" id=
+                  "id2594638"></a>12.1.9.&nbsp;How to handle
                   incrementing versions when fixing an existing
                   package</h3>
                 </div>
@@ -8753,8 +8724,8 @@ DISTNAME=   foo-17.43
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2591960" id=
-                  "id2591960"></a>12.1.10.&nbsp;Portability of
+                  <h3 class="title"><a name="id2594688" id=
+                  "id2594688"></a>12.1.10.&nbsp;Portability of
                   packages</h3>
                 </div>
               </div>
@@ -8770,8 +8741,8 @@ DISTNAME=   foo-17.43
               <div class="titlepage">
                 <div>
                   <div>
-                    <h4 class="title"><a name="id2591965" id=
-                    "id2591965"></a>12.1.10.1.&nbsp;${INSTALL},
+                    <h4 class="title"><a name="id2594693" id=
+                    "id2594693"></a>12.1.10.1.&nbsp;${INSTALL},
                     ${INSTALL_DATA_DIR}, ...</h4>
                   </div>
                 </div>
@@ -8796,7 +8767,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2591985" id="id2591985"></a>12.2.&nbsp;Possible
+                "id2594712" id="id2594712"></a>12.2.&nbsp;Possible
                 downloading issues</h2>
               </div>
             </div>
@@ -8806,8 +8777,8 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2591988" id=
-                  "id2591988"></a>12.2.1.&nbsp;Packages whose
+                  <h3 class="title"><a name="id2594715" id=
+                  "id2594715"></a>12.2.1.&nbsp;Packages whose
                   distfiles aren't available for plain
                   downloading</h3>
                 </div>
@@ -8824,8 +8795,8 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             it. <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
             href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/graphics/ns-cult3d/README.html"
-               class="pkgname">graphics/ns-cult3d</a> is an example
-               of this usage.</p>
+            class="pkgname">graphics/ns-cult3d</a> is an example of
+            this usage.</p>
 
             <p>If the download can't be automated, because the user
             must submit personal information to apply for a
@@ -8839,39 +8810,37 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             following packages use this: <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/audio/realplayer/README.html"
-               class="pkgname">audio/realplayer</a>, <a xmlns=
-               "http://www.w3.org/TR/xhtml1/transitional" href=
-               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/cad/simian/README.html"
-               class="pkgname">cad/simian</a>, <a xmlns=
-               "http://www.w3.org/TR/xhtml1/transitional" href=
-               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/ipv6socket/README.html"
-               class="pkgname">devel/ipv6socket</a>, <a xmlns=
-               "http://www.w3.org/TR/xhtml1/transitional" href=
-               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/emulators/vmware-module/README.html"
-               class="pkgname">emulators/vmware-module</a>,
-               <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
-               href=
-               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/fonts/acroread-jpnfont/README.html"
-               class="pkgname">fonts/acroread-jpnfont</a>, <a xmlns=
-               "http://www.w3.org/TR/xhtml1/transitional" href=
-               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/storage-manager/README.html"
-               class="pkgname">sysutils/storage-manager</a>,
-               <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
-               href=
-               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/ap-aolserver/README.html"
-               class="pkgname">www/ap-aolserver</a>, <a xmlns=
-               "http://www.w3.org/TR/xhtml1/transitional" href=
-               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/openacs/README.html"
-               class="pkgname">www/openacs</a>. Try to be
-               consistent with them.</p>
+            class="pkgname">audio/realplayer</a>, <a xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/cad/simian/README.html"
+            class="pkgname">cad/simian</a>, <a xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/ipv6socket/README.html"
+            class="pkgname">devel/ipv6socket</a>, <a xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/emulators/vmware-module/README.html"
+            class="pkgname">emulators/vmware-module</a>, <a xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/fonts/acroread-jpnfont/README.html"
+            class="pkgname">fonts/acroread-jpnfont</a>, <a xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/storage-manager/README.html"
+            class="pkgname">sysutils/storage-manager</a>, <a xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/ap-aolserver/README.html"
+            class="pkgname">www/ap-aolserver</a>, <a xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" href=
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/openacs/README.html"
+            class="pkgname">www/openacs</a>. Try to be consistent
+            with them.</p>
           </div>
 
           <div class="sect2" lang="en" xml:lang="en">
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2592051" id=
-                  "id2592051"></a>12.2.2.&nbsp;How to handle
+                  <h3 class="title"><a name="id2594778" id=
+                  "id2594778"></a>12.2.2.&nbsp;How to handle
                   modified distfiles with the 'old' name</h3>
                 </div>
               </div>
@@ -8900,8 +8869,8 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2592062" id=
-                "id2592062"></a>12.3.&nbsp;Configuration
+                "id2594790" id=
+                "id2594790"></a>12.3.&nbsp;Configuration
                 gotchas</h2>
               </div>
             </div>
@@ -8928,11 +8897,11 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
             hand to test things. The <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/libtool/README.html"
-               class="pkgname">devel/libtool</a> pkg can help here,
-               as it just &#8220;<span class=
-               "quote">knows</span>&#8221; how to build both static
-               and dynamic libraries from a set of source files,
-               thus being platform independent.</p>
+            class="pkgname">devel/libtool</a> pkg can help here, as
+            it just &#8220;<span class="quote">knows</span>&#8221;
+            how to build both static and dynamic libraries from a
+            set of source files, thus being platform
+            independent.</p>
 
             <p>Here's how to use libtool in a pkg in seven simple
             steps:</p>
@@ -9122,8 +9091,8 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2592441" id=
-                  "id2592441"></a>12.3.2.&nbsp;Using libtool on GNU
+                  <h3 class="title"><a name="id2595237" id=
+                  "id2595237"></a>12.3.2.&nbsp;Using libtool on GNU
                   packages that already support libtool</h3>
                 </div>
               </div>
@@ -9202,8 +9171,8 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${SOMELIB:.a=.la} ${PREFIX}/lib
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2592594" id=
-                  "id2592594"></a>12.3.3.&nbsp;GNU
+                  <h3 class="title"><a name="id2595321" id=
+                  "id2595321"></a>12.3.3.&nbsp;GNU
                   Autoconf/Automake</h3>
                 </div>
               </div>
@@ -9269,7 +9238,7 @@ pre-configure:
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2592775" id="id2592775"></a>12.4.&nbsp;Building
+                "id2595434" id="id2595434"></a>12.4.&nbsp;Building
                 considerations</h2>
               </div>
             </div>
@@ -9279,8 +9248,8 @@ pre-configure:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2592778" id=
-                  "id2592778"></a>12.4.1.&nbsp;CPP defines</h3>
+                  <h3 class="title"><a name="id2595437" id=
+                  "id2595437"></a>12.4.1.&nbsp;CPP defines</h3>
                 </div>
               </div>
             </div>
@@ -9319,7 +9288,7 @@ pre-configure:
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2592808" id="id2592808"></a>12.5.&nbsp;Package
+                "id2595467" id="id2595467"></a>12.5.&nbsp;Package
                 specific actions</h2>
               </div>
             </div>
@@ -9329,8 +9298,8 @@ pre-configure:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2592811" id=
-                  "id2592811"></a>12.5.1.&nbsp;Package
+                  <h3 class="title"><a name="id2595470" id=
+                  "id2595470"></a>12.5.1.&nbsp;Package
                   configuration files</h3>
                 </div>
               </div>
@@ -9402,8 +9371,8 @@ pre-configure:
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2592982" id=
-                  "id2592982"></a>12.5.2.&nbsp;User
+                  <h3 class="title"><a name="id2595709" id=
+                  "id2595709"></a>12.5.2.&nbsp;User
                   interaction</h3>
                 </div>
               </div>
@@ -9452,8 +9421,8 @@ INTERACTIVE_STAGE= configure install
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593027" id=
-                  "id2593027"></a>12.5.3.&nbsp;Handling
+                  <h3 class="title"><a name="id2595754" id=
+                  "id2595754"></a>12.5.3.&nbsp;Handling
                   licenses</h3>
                 </div>
               </div>
@@ -9478,7 +9447,7 @@ INTERACTIVE_STAGE= configure install
             identifying the license, e.g. in <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/graphics/graphviz/README.html"
-               class="pkgname">graphics/graphviz</a>:</p>
+            class="pkgname">graphics/graphviz</a>:</p>
             <pre class="programlisting">
 LICENSE=        graphviz-license
 </pre>
@@ -9527,8 +9496,8 @@ ACCEPTABLE_LICENSES+=graphviz-license
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593178" id=
-                  "id2593178"></a>12.5.4.&nbsp;Creating an account
+                  <h3 class="title"><a name="id2595906" id=
+                  "id2595906"></a>12.5.4.&nbsp;Creating an account
                   from a package</h3>
                 </div>
               </div>
@@ -9582,8 +9551,8 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593240" id=
-                  "id2593240"></a>12.5.5.&nbsp;Installing score
+                  <h3 class="title"><a name="id2595968" id=
+                  "id2595968"></a>12.5.5.&nbsp;Installing score
                   files</h3>
                 </div>
               </div>
@@ -9620,8 +9589,8 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593284" id=
-                  "id2593284"></a>12.5.6.&nbsp;Packages providing
+                  <h3 class="title"><a name="id2596011" id=
+                  "id2596011"></a>12.5.6.&nbsp;Packages providing
                   login shells</h3>
                 </div>
               </div>
@@ -9656,8 +9625,8 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593341" id=
-                  "id2593341"></a>12.5.7.&nbsp;Packages containing
+                  <h3 class="title"><a name="id2596069" id=
+                  "id2596069"></a>12.5.7.&nbsp;Packages containing
                   perl scripts</h3>
                 </div>
               </div>
@@ -9675,8 +9644,8 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593360" id=
-                  "id2593360"></a>12.5.8.&nbsp;Packages with
+                  <h3 class="title"><a name="id2596087" id=
+                  "id2596087"></a>12.5.8.&nbsp;Packages with
                   hardcoded paths to other interpreters</h3>
                 </div>
               </div>
@@ -9702,8 +9671,8 @@ user:group[:[userid][:[description][:[home][:shell]]]]
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593381" id=
-                  "id2593381"></a>12.5.9.&nbsp;Packages installing
+                  <h3 class="title"><a name="id2596108" id=
+                  "id2596108"></a>12.5.9.&nbsp;Packages installing
                   perl modules</h3>
                 </div>
               </div>
@@ -9807,8 +9776,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             on the <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/gtexinfo/README.html"
-               class="pkgname">devel/gtexinfo</a> package will be
-               added automatically.</p>
+            class="pkgname">devel/gtexinfo</a> package will be
+            added automatically.</p>
 
             <p>The build and installation process of the software
             provided by the package should not use the
@@ -9842,8 +9811,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593601" id=
-                  "id2593601"></a>12.5.11.&nbsp;Packages installing
+                  <h3 class="title"><a name="id2596328" id=
+                  "id2596328"></a>12.5.11.&nbsp;Packages installing
                   GConf2 data files</h3>
                 </div>
               </div>
@@ -9917,8 +9886,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593769" id=
-                  "id2593769"></a>12.5.12.&nbsp;Packages installing
+                  <h3 class="title"><a name="id2596428" id=
+                  "id2596428"></a>12.5.12.&nbsp;Packages installing
                   scrollkeeper data files</h3>
                 </div>
               </div>
@@ -9962,8 +9931,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593889" id=
-                  "id2593889"></a>12.5.13.&nbsp;Packages installing
+                  <h3 class="title"><a name="id2596548" id=
+                  "id2596548"></a>12.5.13.&nbsp;Packages installing
                   X11 fonts</h3>
                 </div>
               </div>
@@ -10000,8 +9969,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2593936" id=
-                  "id2593936"></a>12.5.14.&nbsp;Packages installing
+                  <h3 class="title"><a name="id2596595" id=
+                  "id2596595"></a>12.5.14.&nbsp;Packages installing
                   GTK2 modules</h3>
                 </div>
               </div>
@@ -10067,8 +10036,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2594005" id=
-                  "id2594005"></a>12.5.15.&nbsp;Packages installing
+                  <h3 class="title"><a name="id2596732" id=
+                  "id2596732"></a>12.5.15.&nbsp;Packages installing
                   SGML or XML data</h3>
                 </div>
               </div>
@@ -10129,8 +10098,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2594057" id=
-                  "id2594057"></a>12.5.16.&nbsp;Packages installing
+                  <h3 class="title"><a name="id2596785" id=
+                  "id2596785"></a>12.5.16.&nbsp;Packages installing
                   extensions to the MIME database</h3>
                 </div>
               </div>
@@ -10188,8 +10157,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2594332" id=
-                  "id2594332"></a>12.5.17.&nbsp;Packages using
+                  <h3 class="title"><a name="id2596923" id=
+                  "id2596923"></a>12.5.17.&nbsp;Packages using
                   intltool</h3>
                 </div>
               </div>
@@ -10212,8 +10181,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div class="titlepage">
               <div>
                 <div>
-                  <h3 class="title"><a name="id2594346" id=
-                  "id2594346"></a>12.5.18.&nbsp;Packages installing
+                  <h3 class="title"><a name="id2597005" id=
+                  "id2597005"></a>12.5.18.&nbsp;Packages installing
                   startup scripts</h3>
                 </div>
               </div>
@@ -10236,7 +10205,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2594368" id="id2594368"></a>12.6.&nbsp;Feedback
+                "id2597027" id="id2597027"></a>12.6.&nbsp;Feedback
                 to the author</h2>
               </div>
             </div>
@@ -10283,10 +10252,10 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               <p>Install <a xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" href=
               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/url2pkg/README.html"
-                 class="pkgname">pkgtools/url2pkg</a>, create a
-                 directory for a new package, change into it, then
-                 run <span><strong class=
-                 "command">url2pkg</strong></span>:</p>
+              class="pkgname">pkgtools/url2pkg</a>, create a
+              directory for a new package, change into it, then run
+              <span><strong class=
+              "command">url2pkg</strong></span>:</p>
               <pre class="screen">
 <code class="prompt">%</code> <strong class=
 "userinput"><code>mkdir /usr/pkgsrc/<em class=
@@ -10352,7 +10321,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               are from the <a xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" href=
               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkgdiff/README.html"
-                 class="pkgname">pkgtools/pkgdiff</a> package.</p>
+              class="pkgname">pkgtools/pkgdiff</a> package.</p>
             </li>
 
             <li>
@@ -10439,8 +10408,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
               "command">pkglint</strong></span> from <a xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" href=
               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html"
-                 class="pkgname">pkgtools/pkglint</a>, and fix the
-                 problems it reports:</p>
+              class="pkgname">pkgtools/pkglint</a>, and fix the
+              problems it reports:</p>
               <pre class="screen">
 <code class="prompt">#</code> <strong class=
 "userinput"><code>pkglint</code></strong>
@@ -10472,17 +10441,17 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#id2594898">14.1.
+            <dt><span class="sect1"><a href="#id2597557">14.1.
             Submitting your packages</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2594949">14.2.
+            <dt><span class="sect1"><a href="#id2597608">14.2.
             Committing: Importing a package into
             CVS</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2595012">14.3.
+            <dt><span class="sect1"><a href="#id2597671">14.3.
             Updating a package to a newer version</a></span></dt>
 
-            <dt><span class="sect1"><a href="#id2595031">14.4.
+            <dt><span class="sect1"><a href="#id2597758">14.4.
             Moving a package in pkgsrc</a></span></dt>
           </dl>
         </div>
@@ -10492,8 +10461,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2594898" id=
-                "id2594898"></a>14.1.&nbsp;Submitting your
+                "id2597557" id=
+                "id2597557"></a>14.1.&nbsp;Submitting your
                 packages</h2>
               </div>
             </div>
@@ -10559,8 +10528,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2594949" id=
-                "id2594949"></a>14.2.&nbsp;Committing: Importing a
+                "id2597608" id=
+                "id2597608"></a>14.2.&nbsp;Committing: Importing a
                 package into CVS</h2>
               </div>
             </div>
@@ -10616,7 +10585,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2595012" id="id2595012"></a>14.3.&nbsp;Updating
+                "id2597671" id="id2597671"></a>14.3.&nbsp;Updating
                 a package to a newer version</h2>
               </div>
             </div>
@@ -10667,7 +10636,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "id2595031" id="id2595031"></a>14.4.&nbsp;Moving a
+                "id2597758" id="id2597758"></a>14.4.&nbsp;Moving a
                 package in pkgsrc</h2>
               </div>
             </div>
@@ -10768,27 +10737,27 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
         <p><b>Table of Contents</b></p>
 
         <dl>
-          <dt><span class="sect1"><a href="#id2595257">A.1.
+          <dt><span class="sect1"><a href="#id2597985">A.1.
           files</a></span></dt>
 
           <dd>
             <dl>
-              <dt><span class="sect2"><a href="#id2595260">A.1.1.
+              <dt><span class="sect2"><a href="#id2597988">A.1.1.
               Makefile</a></span></dt>
 
-              <dt><span class="sect2"><a href="#id2595268">A.1.2.
+              <dt><span class="sect2"><a href="#id2597995">A.1.2.
               DESCR</a></span></dt>
 
-              <dt><span class="sect2"><a href="#id2595283">A.1.3.
+              <dt><span class="sect2"><a href="#id2598010">A.1.3.
               PLIST</a></span></dt>
 
-              <dt><span class="sect2"><a href="#id2595290">A.1.4.
+              <dt><span class="sect2"><a href="#id2598018">A.1.4.
               Checking a package with <span><strong class=
               "command">pkglint</strong></span></a></span></dt>
             </dl>
           </dd>
 
-          <dt><span class="sect1"><a href="#id2595331">A.2. Steps
+          <dt><span class="sect1"><a href="#id2598058">A.2. Steps
           for building, installing, packaging</a></span></dt>
         </dl>
       </div>
@@ -10806,7 +10775,7 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2595257" id="id2595257"></a>A.1.&nbsp;files</h2>
+              "id2597985" id="id2597985"></a>A.1.&nbsp;files</h2>
             </div>
           </div>
         </div>
@@ -10815,8 +10784,8 @@ PERL5_PACKLIST=   ${PERL5_SITEARCH}/auto/Pg/.packlist
           <div class="titlepage">
             <div>
               <div>
-                <h3 class="title"><a name="id2595260" id=
-                "id2595260"></a>A.1.1.&nbsp;Makefile</h3>
+                <h3 class="title"><a name="id2597988" id=
+                "id2597988"></a>A.1.1.&nbsp;Makefile</h3>
               </div>
             </div>
           </div>
@@ -10843,8 +10812,8 @@ INFO_FILES=     bison.info
           <div class="titlepage">
             <div>
               <div>
-                <h3 class="title"><a name="id2595268" id=
-                "id2595268"></a>A.1.2.&nbsp;DESCR</h3>
+                <h3 class="title"><a name="id2597995" id=
+                "id2597995"></a>A.1.2.&nbsp;DESCR</h3>
               </div>
             </div>
           </div>
@@ -10860,8 +10829,8 @@ of the NetBSD source tree is beyond me.
           <div class="titlepage">
             <div>
               <div>
-                <h3 class="title"><a name="id2595283" id=
-                "id2595283"></a>A.1.3.&nbsp;PLIST</h3>
+                <h3 class="title"><a name="id2598010" id=
+                "id2598010"></a>A.1.3.&nbsp;PLIST</h3>
               </div>
             </div>
           </div>
@@ -10878,8 +10847,8 @@ share/bison.hairy
           <div class="titlepage">
             <div>
               <div>
-                <h3 class="title"><a name="id2595290" id=
-                "id2595290"></a>A.1.4.&nbsp;Checking a package with
+                <h3 class="title"><a name="id2598018" id=
+                "id2598018"></a>A.1.4.&nbsp;Checking a package with
                 <span><strong class=
                 "command">pkglint</strong></span></h3>
               </div>
@@ -10889,12 +10858,12 @@ share/bison.hairy
           <p>The NetBSD package system comes with <a xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" href=
           "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkglint/README.html"
-             class="pkgname">pkgtools/pkglint</a> which helps to
-             check the contents of these files. After installation
-             it is quite easy to use, just change to the directory
-             of the package you wish to examine and execute
-             <span><strong class=
-             "command">pkglint</strong></span>:</p>
+          class="pkgname">pkgtools/pkglint</a> which helps to check
+          the contents of these files. After installation it is
+          quite easy to use, just change to the directory of the
+          package you wish to examine and execute
+          <span><strong class=
+          "command">pkglint</strong></span>:</p>
           <pre class="screen">
 <code class="prompt">$</code> <strong class=
 "userinput"><code>pkglint</code></strong>
@@ -10917,7 +10886,7 @@ looks fine.
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2595331" id="id2595331"></a>A.2.&nbsp;Steps for
+              "id2598058" id="id2598058"></a>A.2.&nbsp;Steps for
               building, installing, packaging</h2>
             </div>
           </div>
@@ -11335,10 +11304,10 @@ Registering depends:.
         <p><b>Table of Contents</b></p>
 
         <dl>
-          <dt><span class="sect1"><a href="#id2596182">D.1.
+          <dt><span class="sect1"><a href="#id2598909">D.1.
           Targets</a></span></dt>
 
-          <dt><span class="sect1"><a href="#id2596389">D.2.
+          <dt><span class="sect1"><a href="#id2599116">D.2.
           Procedure</a></span></dt>
         </dl>
       </div>
@@ -11351,7 +11320,7 @@ Registering depends:.
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2596182" id="id2596182"></a>D.1.&nbsp;Targets</h2>
+              "id2598909" id="id2598909"></a>D.1.&nbsp;Targets</h2>
             </div>
           </div>
         </div>
@@ -11404,8 +11373,8 @@ Registering depends:.
           <div>
             <div>
               <h2 class="title" style="clear: both"><a name=
-              "id2596389" id=
-              "id2596389"></a>D.2.&nbsp;Procedure</h2>
+              "id2599116" id=
+              "id2599116"></a>D.2.&nbsp;Procedure</h2>
             </div>
           </div>
         </div>
