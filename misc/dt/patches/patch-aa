@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/05 15:48:51 frueauf Exp $
+
+--- Makefile.orig	Sun Nov 24 05:41:26 1996
++++ Makefile	Sun Nov 29 15:31:31 1998
+@@ -2,5 +2,5 @@
+ 
+ #CFLAGS	=	-g -Wall -Wno-unused
+-CFLAGS	=	-O6 -Wall -Wno-unused
++CFLAGS	+=	-O6 -Wall -Wno-unused
+ SRCS	=	main.c vt.c grf.c blit.c event.c kbd.c mouse.c mux.c func.c utmp.c bell.c vers.c
+ LIBS	=
+@@ -8,5 +8,5 @@
+ DT	=	dt
+ # where to install the executable
+-BINDIR	=	/usr/local/bin
++BINDIR	=	${PREFIX}/bin
+ 
+ all:		$(DT)

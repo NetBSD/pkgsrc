@@ -1,0 +1,3 @@
+Provides virtual consoles for NetBSD/mac68k in a manner similar to
+"screen,"  with the addition of mouse support.  The only supported
+platform is NetBSD/mac68k (and NetBSD/macppc, maybe). 

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/05 15:48:51 frueauf Exp $
+bin/dt
+share/doc/dt/README
+share/doc/dt/dt.html
+share/doc/dt/example.dtrc
+@dirrm share/doc/dt
