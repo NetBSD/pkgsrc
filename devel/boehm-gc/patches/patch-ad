@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.2 2000/06/20 21:47:22 jlam Exp $
+$NetBSD: patch-ad,v 1.3 2000/06/20 21:50:20 jlam Exp $
 
 --- dyn_load.c.orig	Wed Apr 26 09:01:16 2000
 +++ dyn_load.c	Sat May  6 04:48:00 2000
