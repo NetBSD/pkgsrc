@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/12/06 01:58:07 sakamoto Exp $
+
+--- ./Makefile.in.orig	Sun Dec  5 06:42:04 1999
++++ ./Makefile.in	Mon Dec  6 10:02:40 1999
+@@ -78,5 +78,5 @@
+ cflags_set = @cflags_set@
+ 
+-SUBDIRS = compat lib psiconv formats docs
++SUBDIRS = compat lib psiconv docs
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
