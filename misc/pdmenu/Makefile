@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/24 14:11:10 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/18 19:32:27 snj Exp $
 #
 
 DISTNAME=	pdmenu_1.2.65
@@ -18,7 +18,7 @@ USE_PERL5=	YES
 
 REPLACE_PERL=	examples/showdir.pl
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 CONFIGURE_ENV=	SLANG_LIB_LOC="${BUILDLINK_PREFIX.libslang}/lib"	\
 		SLANG_H_LOC="${BUILDLINK_PREFIX.libslang}/include/slang.h"
@@ -42,5 +42,5 @@ post-install:
 		pdmenurc.newbie	rpm-info-on-command \
 		${PREFIX}/share/examples/pdmenu/newbie
 
-.include "../../devel/libslang/buildlink2.mk"
+.include "../../devel/libslang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
