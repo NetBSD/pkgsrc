@@ -1,0 +1,13 @@
+$NetBSD: disabled-patch-ac,v 1.1 2003/10/06 04:52:06 mycroft Exp $
+
+--- xvid.m4.orig	2003-07-13 19:29:04.000000000 +0000
++++ xvid.m4	2003-10-06 04:44:40.000000000 +0000
+@@ -18,7 +18,7 @@
+     XVID_LIBS="-L$xvid_prefix/lib"
+   fi
+ 
+-  XVID_LIBS="$XVID_LIBS -lxvidcore"
++  XVID_LIBS="$XVID_LIBS -lxvidcore -lm"
+ 
+   AC_MSG_CHECKING(for XviD)
+   no_xvid=""

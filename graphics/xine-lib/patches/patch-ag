@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.4 2003/10/05 09:27:13 mycroft Exp $
+$NetBSD: patch-ag,v 1.5 2003/10/06 04:52:06 mycroft Exp $
 
 --- configure.orig	2003-08-02 13:50:43.000000000 +0000
-+++ configure	2003-10-05 09:10:21.000000000 +0000
++++ configure	2003-10-06 04:36:21.000000000 +0000
 @@ -467,7 +467,7 @@
  # include <unistd.h>
  #endif"
@@ -134,6 +134,15 @@ $NetBSD: patch-ag,v 1.4 2003/10/05 09:27:13 mycroft Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define HAVE_XINERAMA 1
+@@ -18624,7 +18683,7 @@
+     XVID_LIBS="-L$xvid_prefix/lib"
+   fi
+ 
+-  XVID_LIBS="$XVID_LIBS -lxvidcore"
++  XVID_LIBS="$XVID_LIBS -lxvidcore -lm"
+ 
+   echo "$as_me:$LINENO: checking for XviD" >&5
+ echo $ECHO_N "checking for XviD... $ECHO_C" >&6
 @@ -20505,102 +20564,7 @@
  fi
  
