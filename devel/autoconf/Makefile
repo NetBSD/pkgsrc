@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/10/06 14:30:49 agc Exp $
+# $NetBSD: Makefile,v 1.3 1997/10/09 09:22:30 agc Exp $
 # New ports collection makefile for:	autoconf
 # Version required:     2.12
 # Date created:		7 October 1995
@@ -18,16 +18,17 @@ MAINTAINER=	torstenb@FreeBSD.ORG
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	M4=${PREFIX}/bin/gm4
 
-OPSYS!= uname -s
+OPSYS!= 	uname -s
 
-.if (${OPSYS} != "NetBSD")
-# agc - this assumes /usr/share/info/dir and install-info
+.if (${OPSYS} == "NetBSD")
+BUILD_DEPENDS=	install-info:${PORTSDIR}/devel/gtexinfo
+.endif
+
 post-install:
 	@if [ ! -f ${PREFIX}/info/dir ]; then \
 	  ${SED} -ne '1,/Menu:/p' /usr/share/info/dir > ${PREFIX}/info/dir; \
 	 fi
 	@install-info ${PREFIX}/info/autoconf.info ${PREFIX}/info/dir
 	@install-info ${PREFIX}/info/standards.info ${PREFIX}/info/dir
-.endif
 
 .include <bsd.port.mk>
