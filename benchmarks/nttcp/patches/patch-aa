@@ -1,8 +1,27 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/04/17 21:51:35 thorpej Exp $
+$NetBSD: patch-aa,v 1.2 2002/08/21 06:36:35 simonb Exp $
 
---- Makefile.orig	Mon Dec 18 02:17:20 2000
-+++ Makefile	Wed Apr 17 14:42:49 2002
-@@ -151,9 +151,12 @@
+--- Makefile.orig	Mon Dec 18 21:17:20 2000
++++ Makefile
+@@ -108,8 +108,16 @@
+ #DBG=	-Wall -g
+ #INC=	
+ 
+-# For FreeBSD
+-ARCH=	-DFreeBSD
++## For FreeBSD
++#ARCH=	-DFreeBSD
++#LIB=
++#OPT=	-O2
++#CC=	cc
++#DBG=	
++#INC=	
++
++# For NetBSD
++ARCH=	
+ LIB=
+ OPT=	-O2
+ CC=	cc
+@@ -151,9 +159,12 @@
  VERSION=	1.47
  #prefix=		/usr/local/dist/DIR/nttcp-$(VERSION)
  #prefix=		/usr/local
