@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:54:59 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/04/25 04:52:18 snj Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
@@ -16,8 +16,7 @@ NO_BIN_ON_FTP=${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-USE_BUILDLINK2=	yes
-USE_X11BASE=	yes
+USE_BUILDLINK3=	yes
 USE_IMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -35,5 +34,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/resources/R6/EUC/EmiClock.ad \
 		${PREFIX}/lib/X11/ja_JP.eucJP/app-defaults/EmiClock
 
-.include "../../mk/xaw.buildlink2.mk"
+.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
