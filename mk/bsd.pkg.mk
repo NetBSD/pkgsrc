@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1156 2003/03/23 09:40:48 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1157 2003/03/25 22:05:00 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -280,7 +280,9 @@ LDFLAGS+=		${X11_LDFLAGS}
 .endif
 FIX_RPATH+=		LDFLAGS
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
+MAKE_ENV+=		RPATH_FLAG="${RPATH_FLAG}"
 CONFIGURE_ENV+=		LDFLAGS="${LDFLAGS}" M4="${M4}" YACC="${YACC}"
+CONFIGURE_ENV+=		RPATH_FLAG="${RPATH_FLAG}"
 
 MAKE_FLAGS?=
 MAKEFILE?=		Makefile
