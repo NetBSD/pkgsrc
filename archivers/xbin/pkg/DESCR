@@ -1,0 +1,7 @@
+Xbin converts a file created by BinHex (usually named with one of the
+extensions ".hex", ".hcx", or ".hqx") into three host-system files
+suitable for downloading to a Macintosh via macput.
+
+  This program was designed for use with the 1.1 Release version of
+MacTerminal, but includes a compatibility option for the old -0.15X
+Almost-Alpha version.  
