@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/24 20:08:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/04 15:36:37 jlam Exp $
 bin/colchess
 share/colchess/chessdat.dat
 share/colchess/tests/bk.epd
@@ -6,5 +6,6 @@ share/colchess/tests/bwtc.epd
 share/colchess/tests/wac.epd
 share/colchess/tests/wcsac.epd
 share/doc/colchess/README
+@dirrm share/doc/colchess
 @dirrm share/colchess/tests
 @dirrm share/colchess
