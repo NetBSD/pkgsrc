@@ -36,8 +36,8 @@ OOPPTTIIOONNSS
              sulted for the package to which the given file belongs.  These
              packages are then deinstalled.
 
-     --DD      If a deinstallation script exists for a given package, do not ex-
-             ecute it.
+     --DD      If a deinstallation script exists for a given package, do not
+             execute it.
 
      --dd      Remove empty directories created by file cleanup.  By default,
              only files/directories explicitly listed in a package's contents
@@ -67,8 +67,8 @@ OOPPTTIIOONNSS
              not touch the package or its files itself.
 
      --pp _p_r_e_f_i_x
-             Set _p_r_e_f_i_x as the directory in which to delete files from any in-
-             stalled packages which do not explicitly set theirs.  For most
+             Set _p_r_e_f_i_x as the directory in which to delete files from any
+             installed packages which do not explicitly set theirs.  For most
              packages, the prefix will be set automatically to the installed
              location by pkg_add(1).
 
@@ -77,8 +77,8 @@ OOPPTTIIOONNSS
              some other package still needs them.  This can be used to delete
              a package and all the packages it needs.
 
-     --rr      ppkkgg__ddeelleettee first builds a list of all packages that require (di-
-             rectly and indirectly) the one being deleted.  It then deletes
+     --rr      ppkkgg__ddeelleettee first builds a list of all packages that require
+             (directly and indirectly) the one being deleted.  It then deletes
              these packages using ppkkgg__ddeelleettee with the given options before
              deleting the user specified package.
 
@@ -88,9 +88,9 @@ OOPPTTIIOONNSS
 
 TTEECCHHNNIICCAALL DDEETTAAIILLSS
      ppkkgg__ddeelleettee does pretty much what it says.  It examines installed package
-     records in _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-_n_a_m_e_>, deletes the package contents, and fi-
-     nally removes the package records (if an alternate package database di-
-     rectory is specified, then it overrides the _/_v_a_r_/_d_b_/_p_k_g path shown
+     records in _/_v_a_r_/_d_b_/_p_k_g_/_<_p_k_g_-_n_a_m_e_>, deletes the package contents, and
+     finally removes the package records (if an alternate package database
+     directory is specified, then it overrides the _/_v_a_r_/_d_b_/_p_k_g path shown
      above).
 
      If a package is required by other installed packages, ppkkgg__ddeelleettee will
@@ -98,8 +98,8 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
      the --ff option is given).
 
      If a package has been marked as a pprreesseerrvveedd package, it will not be able
-     to be deleted (unless more than one occurrence of the --ff option is giv-
-     en).
+     to be deleted (unless more than one occurrence of the --ff option is
+     given).
 
      If a filename is given instead of a package name, the package of which
      the given file belongs to can be deleted if the --FF Flag is given.  The
@@ -110,8 +110,8 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
      executed first as
            rreeqquuiirree _<_p_k_g_-_n_a_m_e_> _D_E_I_N_S_T_A_L_L
      (where _p_k_g_-_n_a_m_e is the name of the package in question and _D_E_I_N_S_T_A_L_L is a
-     keyword denoting that this is a deinstallation) to see whether or not de-
-     installation should continue.  A non-zero exit status means no, unless
+     keyword denoting that this is a deinstallation) to see whether or not
+     deinstallation should continue.  A non-zero exit status means no, unless
      the --ff option is specified.
 
      If a ddeeiinnssttaallll script exists for the package, it is executed before and
