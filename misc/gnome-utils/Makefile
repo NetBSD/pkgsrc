@@ -1,6 +1,6 @@
-## $NetBSD: Makefile,v 1.32 2001/03/27 03:20:07 hubertf Exp $
+## $NetBSD: Makefile,v 1.33 2001/04/07 20:52:44 rh Exp $
 
-DISTNAME=		gnome-utils-1.2.0
+DISTNAME=		gnome-utils-1.4.0
 CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-utils/}
 
@@ -11,16 +11,15 @@ COMMENT=		Set of useful GNOME utilities and applications
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_DEPENDS+=		automake-1.4:../../devel/automake
 BUILD_DEPENDS+=		bison-*:../../devel/bison
-DEPENDS+=		gnome-core>=1.2.0:../../x11/gnome-core
-DEPENDS+=		libgtop>=1.0.9:../../devel/libgtop
-DEPENDS+=		libglade>=0.13:../../devel/libglade
+DEPENDS+=		gnome-core>1.4.0:../../x11/gnome-core
+DEPENDS+=		libgtop>=1.0.12:../../devel/libgtop
 
-USE_CURSES=		# defined
-USE_GMAKE=		# defined
-USE_LIBINTL=		# defined
-USE_X11BASE=		# defined
+USE_CURSES=		YES
+USE_GMAKE=		YES
+USE_LIBINTL=		YES
+USE_X11BASE=		YES
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
 
 AUTOGEN_ENV=		NOCONFIGURE=1
