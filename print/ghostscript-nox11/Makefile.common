@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2003/07/17 22:52:27 grant Exp $
+# $NetBSD: Makefile.common,v 1.48 2003/09/04 08:27:37 wiz Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -32,7 +32,8 @@ EXTRACT_ONLY=		${GS_SRCS}
 #
 JPEG_SRCS=		jpegsrc.v6b.tar.gz
 JPEG_WRKSRC=		${WRKDIR}/jpeg-6b
-SITES_${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/
+SITES_${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/ \
+			ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/3rdparty/
 DISTFILES+=		${JPEG_SRCS}
 EXTRACT_ONLY+=		${JPEG_SRCS}
 
