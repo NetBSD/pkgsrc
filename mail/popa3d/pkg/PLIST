@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2001/09/22 11:06:13 wiz Exp $
-libexec/popa3d
-share/doc/popa3d/DESIGN
-share/doc/popa3d/INSTALL
-share/doc/popa3d/LICENSE
-@dirrm share/doc/popa3d
-@comment empty dir to chroot to
-@exec mkdir -p %D/share/empty
-@dirrm share/empty

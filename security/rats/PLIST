@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:38 zuntum Exp $
+bin/rats
+lib/rats-c.xml
+lib/rats-perl.xml
+lib/rats-python.xml
+

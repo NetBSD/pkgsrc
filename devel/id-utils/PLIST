@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:11 zuntum Exp $
+bin/mkid
+bin/lid
+bin/fid
+bin/fnid
+bin/xtokid
+bin/eid
+bin/aid
+bin/gid
+bin/defid
+@unexec install-info --delete %D/info/id-utils.info %D/info/dir
+info/id-utils.info
+@exec install-info %D/info/id-utils.info %D/info/dir
+share/id-lang.map
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/id-utils.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/id-utils.mo
+${CLISPDIR}/id-utils.elc
+${LISPDIR}/id-utils.el

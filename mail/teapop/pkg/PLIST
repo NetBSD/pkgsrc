@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/24 06:17:06 zuntum Exp $
-libexec/teapop
-man/man8/teapop.8
-share/examples/teapop/teapop.passwd
-@dirrm share/examples/teapop

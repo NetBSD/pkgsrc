@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:54 zuntum Exp $
+bin/nasl
+bin/nasl-config
+include/nessus/nasl.h
+lib/libnasl.a
+lib/libnasl.la
+lib/libnasl.so
+lib/libnasl.so.1
+lib/libnasl.so.1.9
+man/man1/nasl-config.1
+man/man1/nasl.1

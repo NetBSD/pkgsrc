@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:51 zuntum Exp $
+@unexec install-info --delete --info-dir=%D/info %D/info/sml-mode.info
+info/sml-mode.info
+@exec install-info --info-dir=%D/info %D/info/sml-mode.info
+share/emacs/site-lisp/sml-mode/sml-compat.el
+share/emacs/site-lisp/sml-mode/sml-defs.el
+share/emacs/site-lisp/sml-mode/sml-mode-startup.el
+share/emacs/site-lisp/sml-mode/sml-mode.el
+share/emacs/site-lisp/sml-mode/sml-move.el
+share/emacs/site-lisp/sml-mode/sml-proc.el
+share/emacs/site-lisp/sml-mode/sml-util.el
+share/emacs/site-lisp/sml-mode/sml-compat.elc
+share/emacs/site-lisp/sml-mode/sml-defs.elc
+share/emacs/site-lisp/sml-mode/sml-mode.elc
+share/emacs/site-lisp/sml-mode/sml-move.elc
+share/emacs/site-lisp/sml-mode/sml-proc.elc
+share/emacs/site-lisp/sml-mode/sml-util.elc
+share/emacs/site-lisp/sml-mode/README
+share/emacs/site-lisp/sml-mode/NEWS
+share/emacs/site-lisp/sml-mode/TODO
+share/emacs/site-lisp/sml-mode/ChangeLog
+@dirrm share/emacs/site-lisp/sml-mode

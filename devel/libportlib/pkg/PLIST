@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/27 11:54:52 agc Exp $
-lib/libport.a
-include/portlib.h

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:18:03 zuntum Exp $
+bin/xdm-krb4
+man/cat1/xdm-krb4.0
+etc/rc.d/xdm_krb4

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/08/06 06:10:50 jun Exp $
-bin/rats
-lib/rats-c.xml
-lib/rats-perl.xml
-lib/rats-python.xml
-

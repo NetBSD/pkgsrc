@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:54 zuntum Exp $
+share/mk/autodep.mk
+@comment skip-on-BSD share/mk/bsd.dep.mk
+@comment skip-on-BSD share/mk/bsd.doc.mk
+@comment skip-on-BSD share/mk/bsd.lib.mk
+@comment skip-on-BSD share/mk/bsd.man.mk
+@comment skip-on-BSD share/mk/bsd.nls.mk
+@comment skip-on-BSD share/mk/bsd.obj.mk
+@comment skip-on-BSD share/mk/bsd.own.mk
+@comment skip-on-BSD share/mk/bsd.prog.mk
+@comment skip-on-BSD share/mk/bsd.subdir.mk
+share/mk/dep.mk
+share/mk/doc.mk
+share/mk/lib.mk
+share/mk/man.mk
+share/mk/nls.mk
+share/mk/obj.mk
+share/mk/own.mk
+share/mk/prog.mk
+share/mk/subdir.mk
+@comment skip-on-BSD share/mk/sys.mk
+share/mk/target-flags.mk

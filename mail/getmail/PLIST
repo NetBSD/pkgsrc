@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:10 zuntum Exp $
+bin/getmail
+libexec/getmail/ConfParser.py
+libexec/getmail/getmail.py
+libexec/getmail/timeoutsocket.py
+share/doc/getmail/BUGS
+share/doc/getmail/CHANGELOG
+share/doc/getmail/COPYING
+share/doc/getmail/TODO
+share/doc/getmail/docs.txt
+share/doc/getmail/faq.txt
+share/doc/getmail/getmail.txt
+share/doc/getmail/getmailrc-example
+share/examples/getmailrc
+@dirrm libexec/getmail
+@dirrm share/doc/getmail

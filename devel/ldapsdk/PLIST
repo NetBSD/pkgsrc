@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:26 zuntum Exp $
+etc/ldapfilter.conf
+etc/ldapsearchprefs.conf
+etc/ldapfriendly
+etc/ldaptemplates.conf
+include/disptmpl.h
+include/lber.h
+include/ldap.h
+include/srchpref.h
+lib/libldap.a
+lib/liblber.a
+lib/libldap.so
+lib/libldap.so.1
+lib/libldap.so.1.0
+lib/liblber.so
+lib/liblber.so.1
+lib/liblber.so.1.0

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/25 12:41:14 agc Exp $
-bin/bmake
-man/cat1/bmake.0
-man/man1/bmake.1

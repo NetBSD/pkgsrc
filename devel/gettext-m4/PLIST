@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:42 zuntum Exp $
+share/aclocal/gettext.m4
+share/aclocal/lcmessage.m4
+share/aclocal/progtest.m4

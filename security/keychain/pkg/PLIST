@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/09/15 14:20:41 wiz Exp $
-bin/keychain
-share/doc/keychain/README
-@dirrm share/doc/keychain

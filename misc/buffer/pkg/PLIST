@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 1998/03/10 14:42:22 frueauf Exp $
-bin/buffer
-man/man1/buffer.1.gz

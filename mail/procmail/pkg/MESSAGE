@@ -1,9 +1,0 @@
-=============================================================
-$NetBSD: MESSAGE,v 1.5 2001/04/07 02:01:26 kim Exp $
-
-Please note the following:
-
-- The system-wide procmailrc is /etc/procmailrc
-- The system-wide procmailrc directory is /etc/procmailrcs/
-
-=============================================================
