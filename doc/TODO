@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.990 2003/11/04 10:33:18 wiz Exp $
+$NetBSD: TODO,v 1.991 2003/11/04 12:51:29 adam Exp $
 
 Suggested new packages
 ======================
@@ -171,7 +171,6 @@ Suggested package updates
 	o elk-3.99.5
 	o elm-me-2.4pl108
 	o enlightenment-0.16.5
-	o ethereal-0.9.16
 	o ettercap-0.6.b
 	o evilwm-0.99.17
 	o evolution-1.4.4
