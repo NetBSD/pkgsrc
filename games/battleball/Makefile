@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:15:39 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/17 20:40:45 snj Exp $
 
 DISTNAME=	battleball.21.src
 PKGNAME=	battleball-2.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.cs.utexas.edu/users/pahardin/bb.html
 COMMENT=	3d game of soccer, with tanks
 
 WRKSRC=		${WRKDIR}/battleball-2.1-src
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11=	YES
 USE_GCC_SHLIB=	YES
 
@@ -27,7 +27,7 @@ do-install:
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(BATTLEBALL_USE_MESA)
-.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .else
 CPPFLAGS+=	-DNO_OPENGL
 SED_CMDS+=	-e '/^GLINCS/s|^|\#|' -e '/^GLLIBS/s|^|\#|'
