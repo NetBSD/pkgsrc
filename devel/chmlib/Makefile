@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/22 08:24:28 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/07 01:17:12 minskim Exp $
 #
 
 DISTNAME=	chmlib-0.31
@@ -10,11 +10,15 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://66.93.236.84/%7Ejedwin/projects/chmlib/
 COMMENT=	Library for dealing with Microsoft ITSS/CHM format files
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 
+INSTALLATION_DIRS=	include lib
+
 PTHREAD_OPTS=		require
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
