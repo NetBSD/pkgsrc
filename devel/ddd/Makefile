@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.60 2004/10/03 00:13:26 tv Exp $
+# $NetBSD: Makefile,v 1.61 2005/01/11 09:04:16 martti Exp $
 #
 
-DISTNAME=	ddd-3.3.8
-PKGREVISION=	1
+DISTNAME=	ddd-3.3.10
+#PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ddd/}
 
-MAINTAINER=     martti@NetBSD.org
+MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/ddd/
-COMMENT=	Data Display Debugger -- a common graphical front-end for GDB/DBX/XDB
+COMMENT=	Data Display Debugger -- graphical front-end for GDB/DBX/XDB
 
 GNU_CONFIGURE=		YES
 INFO_FILES=		ddd-themes.info ddd.info
@@ -51,5 +51,4 @@ post-install:
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
-.include "../../devel/libiberty/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
