@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2001/02/28 15:44:16 wiz Exp $
+
+--- src/cksfv.c.orig	Fri Dec 29 01:34:33 2000
++++ src/cksfv.c	Wed Feb 28 15:11:46 2001
+@@ -21,7 +21,7 @@
+ #include <unistd.h>
+ #include <stdio.h>
+ 
+-extern int  readsfv(char*, char*, int);
++extern int  readsfv(char*, char*, int, int, char **);
+ extern int  newsfv(char**);
+ extern void pusage();
+ 
+@@ -59,7 +59,7 @@
+   argv += optind;
+ 
+   if (rsfvflag == 1) {
+-    rval = readsfv(sfvfile, dir, nocase);
++    rval = readsfv(sfvfile, dir, nocase, argc, argv);
+   } else {
+     if (argc < 1) {
+       pusage();
