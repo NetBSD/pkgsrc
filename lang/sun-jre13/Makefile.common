@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2003/03/17 21:25:38 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.14 2003/03/26 04:05:43 jschauma Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang
@@ -71,10 +71,10 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rwp ma . ${PREFIX}
 .endif
 
-.if ${OPSYS} != "NetBSD"
-.  include "../../mk/bsd.pkg.mk"
-.else
+.if ${OPSYS} == "NetBSD"
 .  include "../../emulators/suse_linux/Makefile.application"
 .endif
+
+.include "../../mk/bsd.pkg.mk"
 
 PREFIX=		${JVM_HOME}
