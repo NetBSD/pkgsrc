@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2000/02/27 18:21:44 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 2000/03/11 19:59:56 tsarna Exp $
 #
 
 DISTNAME=	ZMySQLDA-1.1.3-nonbin
-PKGNAME=	zope-mysql-1.1.3nb1
+PKGNAME=	zope-mysql-1.1.3nb2
 CATEGORIES=	databases www
 MASTER_SITES=   http://www.zope.org/Members/MikeP/ZMySQLDA/
 
@@ -10,7 +10,7 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/Members/MikeP/ZMySQLDA
 
 DEPENDS+=	zope-2.*:../../www/zope
-DEPENDS+=	py-mysqldb-0.1.2:../../databases/py-mysqldb
+DEPENDS+=	py-mysqldb-0.1.3:../../databases/py-mysqldb
 
 WRKSRC=		${WRKDIR}/lib
 
