@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/03/17 20:48:55 kim Exp $
+# $NetBSD: Makefile,v 1.7 2000/09/03 11:17:23 wiz Exp $
 
 DISTNAME=	remind-03.00.21
 PKGNAME=	${DISTNAME:C/0([0-9])/\1/g}
@@ -15,7 +15,7 @@ post-build:
 	@${SED} -e 's,@TCLSH@,tclsh8.0,' \
 		< ${WRKSRC}/scripts/cm2rem.tcl \
 		> ${WRKSRC}/scripts/cm2rem
-	@mv ${WRKSRC}/man/cm2rem.1 ${WRKSRC}/man/cm2rem.1.bak
+	@${MV} ${WRKSRC}/man/cm2rem.1 ${WRKSRC}/man/cm2rem.1.bak
 	@${SED} -e 's,@TCLSH@,tclsh8.0,' \
 		< ${WRKSRC}/man/cm2rem.1.bak \
 		> ${WRKSRC}/man/cm2rem.1
