@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 1999/01/04 20:47:31 frueauf Exp $
+$NetBSD: patch-aa,v 1.5 1999/07/06 08:04:15 jlam Exp $
 
---- Makefile.orig	Thu Jan  9 07:19:34 1997
-+++ Makefile	Mon Jan  4 20:39:17 1999
+--- Makefile.orig	Thu Jan  9 01:19:34 1997
++++ Makefile	Fri Jul  2 08:27:09 1999
 @@ -17,8 +17,8 @@
  # can be disabled to make dialog a bit smaller (could be done for more things)
  HAVE_GUAGE=true
@@ -18,21 +18,20 @@ $NetBSD: patch-aa,v 1.4 1999/01/04 20:47:31 frueauf Exp $
  
  CFLAGS = $(OPTIM) -DLOCALE -DVERSION=\"0.6z\"
 -LDFLAGS = -L .
-+LDFLAGS = -Wl,-R${PREFIX}/lib -L . -L${PREFIX}/lib
++LDFLAGS += -L . -L${LOCALBASE}/lib
  LDLIBS = -ldialog
  
  OBJS = checklist.o inputbox.o menubox.o msgbox.o \
-@@ -42,7 +42,8 @@
+@@ -42,7 +42,7 @@
  OBJS+=mouse.o
  endif
  ifeq ($(HAVE_NCURSES), true)
 -CFLAGS+=-DHAVE_NCURSES -I/usr/include/ncurses
-+#CFLAGS+=-DHAVE_NCURSES -I/usr/include/ncurses
-+CFLAGS+=-DHAVE_NCURSES -I${PREFIX}/include
++CFLAGS+=-DHAVE_NCURSES -I${LOCALBASE}/include
  LDLIBS+=-lncurses
  endif
  ifeq ($(HAVE_RC_FILE), true)
-@@ -59,7 +60,7 @@
+@@ -59,7 +59,7 @@
  all: libdialog.a dialog
  
  libdialog.a: $(OBJS)
@@ -41,7 +40,7 @@ $NetBSD: patch-aa,v 1.4 1999/01/04 20:47:31 frueauf Exp $
  
  dialog: dialog.o
  
-@@ -70,7 +71,7 @@
+@@ -70,7 +70,7 @@
  include .depend
  
  install: dialog libdialog.a
@@ -50,7 +49,7 @@ $NetBSD: patch-aa,v 1.4 1999/01/04 20:47:31 frueauf Exp $
  	cp dialog.man dialog.1
  ifeq ($(HAVE_RC_FILE),false)
  	mv dialog.1 dialog.in
-@@ -82,7 +83,7 @@
+@@ -82,7 +82,7 @@
  endif
  	mv dialog.1 dialog.in
  	sed -e "/COMMENTSTART/,/COMMENTEND/d" dialog.in >dialog.1

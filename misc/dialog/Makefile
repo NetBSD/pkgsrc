@@ -1,25 +1,25 @@
-# $NetBSD: Makefile,v 1.3 1999/04/15 20:39:44 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/07/06 08:04:14 jlam Exp $
 #
 
 DISTNAME=       dialog-0.6z
 CATEGORIES=	misc
 MASTER_SITES=   ${MASTER_SITE_SUNSITE:=utils/shell/}
 
-MAINTAINER=	lamj@stat.cmu.edu
+MAINTAINER=	jlam@netbsd.org
 
-DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
+DEPENDS+=	ncurses-4.2:../../devel/ncurses
 
 NO_CONFIGURE=	yes
 USE_GMAKE=	yes
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/examples/dialog
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dialog
 .for file in checklist guage infobox inputbox menubox msgbox radiolist textbox yesno
-	@${SED} "s,\.\./dialog,${PREFIX}/bin/dialog,g" \
-		${WRKSRC}/samples/${file} > ${WRKSRC}/samples/${file}.sed
-	@${INSTALL_SCRIPT} ${WRKSRC}/samples/${file}.sed \
+	${SED} "s,\.\./dialog,${PREFIX}/bin/dialog,g" \
+		${WRKSRC}/samples/${file} > ${WRKSRC}/samples/${file}.tmp
+	${INSTALL_SCRIPT} ${WRKSRC}/samples/${file}.tmp \
 		${PREFIX}/share/examples/dialog/${file}
-	@${RM} ${WRKSRC}/samples/${file}.sed
+	${RM} ${WRKSRC}/samples/${file}.tmp
 .endfor
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"
