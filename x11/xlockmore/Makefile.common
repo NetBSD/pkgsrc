@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2004/03/12 19:06:55 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/04/19 17:35:20 hubertf Exp $
 #
 # This Makefile.common is included by:
 #
@@ -8,7 +8,7 @@
 # If these packages are updated, please remember to reset any PKGREVISIONs
 # in those Makefiles.
 
-DISTNAME=       xlockmore-5.11.1
+DISTNAME=       xlockmore-5.12
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/ \
 		${MASTER_SITE_XCONTRIB:=applications/}
