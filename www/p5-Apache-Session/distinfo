@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2001/09/19 03:44:39 mjl Exp $
+$NetBSD: distinfo,v 1.4 2001/12/04 01:35:54 mjl Exp $
 
-SHA1 (Apache-Session-1.53.tar.gz) = bd1fb03954b91712daaf77334be87ddc80d98da7
-Size (Apache-Session-1.53.tar.gz) = 25572 bytes
+SHA1 (Apache-Session-1.54.tar.gz) = 7202e097123af9b8df5e5eac8a1c794d7aaff015
+Size (Apache-Session-1.54.tar.gz) = 27355 bytes
 SHA1 (patch-aa) = c3d70b4a708611f9eeff3116cb4e55810c60c053
 SHA1 (patch-ab) = 4cc24c09b21b6305d502d9fcace129ed469d6e0d
