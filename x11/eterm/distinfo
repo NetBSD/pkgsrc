@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/08/29 22:41:27 jlam Exp $
+$NetBSD: distinfo,v 1.5 2002/06/17 22:13:43 agc Exp $
 
 SHA1 (Eterm-0.8.10.tar.gz) = 0cafeec2c9d79c874c6b312dcb105b912168ad0d
 Size (Eterm-0.8.10.tar.gz) = 593026 bytes
@@ -15,3 +15,4 @@ SHA1 (patch-ad) = a750146fe3a0b0b2796997cf2e20e38f14be86bf
 SHA1 (patch-ae) = 7464d0b7b4b8d5b4c825d7fdcfa464b5e3d18a6c
 SHA1 (patch-af) = 8f21b197a56ddc0d66f29dcf9d5dcbe7922a28ae
 SHA1 (patch-ag) = 5359f122eb6fe605202288de59d71d07be4d2556
+SHA1 (patch-ah) = ebf2fa3ae2d272795f0a292b201586cc2158c973
