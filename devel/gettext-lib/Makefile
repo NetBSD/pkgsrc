@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/11/27 17:41:07 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2002/12/02 11:24:40 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -31,12 +31,7 @@ MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 ALL_TARGET=		all-yes
 INSTALL_TARGET=		install-exec
-
-do-build:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/intl && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
-
-do-install:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/intl && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
+BUILD_DIRS=		${WRKSRC}/intl
 
 .include "../../mk/bsd.pkg.mk"
 
