@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 16:24:07 is Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/26 22:42:23 is Exp $
 share/examples/sr/README
+share/examples/sr/ccr2sr/1/Compiler.std
 share/examples/sr/ccr2sr/1/No_input.std
 share/examples/sr/ccr2sr/1/Script
 share/examples/sr/ccr2sr/1/a.ccr
@@ -124,10 +125,12 @@ share/examples/sr/csp2sr/7/Script
 share/examples/sr/csp2sr/7/f.csp
 share/examples/sr/csp2sr/8/Script
 share/examples/sr/csp2sr/8/f.csp
+share/examples/sr/csp2sr/dp1/Compiler.std
 share/examples/sr/csp2sr/dp1/Script
 share/examples/sr/csp2sr/dp1/dp.csp
 share/examples/sr/csp2sr/dp1/te.std
 share/examples/sr/csp2sr/dp1/ti.std
+share/examples/sr/csp2sr/dp2/Compiler.std
 share/examples/sr/csp2sr/dp2/Script
 share/examples/sr/csp2sr/dp2/dp.csp
 share/examples/sr/csp2sr/nest/Script
@@ -282,6 +285,7 @@ share/examples/sr/srwin/winquad.sr
 @dirrm share/examples/sr/other/probe
 @dirrm share/examples/sr/other/mbrot
 @dirrm share/examples/sr/other/heartbeat
+@dirrm share/examples/sr/other
 @dirrm share/examples/sr/m2sr/timer
 @dirrm share/examples/sr/m2sr/noproc
 @dirrm share/examples/sr/m2sr/nocv
@@ -292,6 +296,7 @@ share/examples/sr/srwin/winquad.sr
 @dirrm share/examples/sr/m2sr/bb1
 @dirrm share/examples/sr/m2sr/barrier2
 @dirrm share/examples/sr/m2sr/barrier1
+@dirrm share/examples/sr/m2sr
 @dirrm share/examples/sr/csp2sr/wxe2
 @dirrm share/examples/sr/csp2sr/wxe1
 @dirrm share/examples/sr/csp2sr/sort2
@@ -311,6 +316,7 @@ share/examples/sr/srwin/winquad.sr
 @dirrm share/examples/sr/csp2sr/3
 @dirrm share/examples/sr/csp2sr/2
 @dirrm share/examples/sr/csp2sr/1
+@dirrm share/examples/sr/csp2sr
 @dirrm share/examples/sr/chap18
 @dirrm share/examples/sr/chap17
 @dirrm share/examples/sr/chap16
@@ -334,4 +340,5 @@ share/examples/sr/srwin/winquad.sr
 @dirrm share/examples/sr/ccr2sr/3
 @dirrm share/examples/sr/ccr2sr/2
 @dirrm share/examples/sr/ccr2sr/1
+@dirrm share/examples/sr/ccr2sr
 @dirrm share/examples/sr
