@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2004/02/14 13:55:19 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2004/04/02 02:01:34 jlam Exp $
 
 DISTNAME=		texinfo-4.6
 PKGNAME=		g${DISTNAME}
@@ -17,16 +17,11 @@ USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+PKGSRC_INFOPATH=	${PREFIX}/info:${X11BASE}/info:${LOCALBASE}/info
+MAKE_ENV+=		PKGSRC_INFOPATH="${PKGSRC_INFOPATH}"
+
 INFO_FILES=		info-stnd.info info.info texinfo
 TEST_TARGET=		check
-
-post-patch:
-	${MV} -f ${WRKSRC}/info/filesys.h ${WRKSRC}/info/filesys.h.orig
-	${SED} -e 's|@PREFIX@|${PREFIX}|g'		\
-		-e 's|@X11BASE@|${X11BASE}|g'		\
-		-e 's|@LOCALBASE@|${LOCALBASE}|g'	\
-		< ${WRKSRC}/info/filesys.h.orig		\
-		> ${WRKSRC}/info/filesys.h
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
