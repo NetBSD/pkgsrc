@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/03/13 11:30:28 agc Exp $
+# $NetBSD: Makefile,v 1.26 2001/03/13 12:01:43 agc Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -50,9 +50,15 @@ post-patch:
 
 # check that path does not contain cwd
 pre-configure:
-	@if ${ECHO} ${PATH} | ${EGREP} '(^\.?:|:\.?$$|:\.?:)'; then	\
+	@cd ${WRKDIR};							\
+	${LN} -s ${CAT} ld;						\
+	whichld=`${TYPE} ld | ${AWK} '{ print $$NF }'`;			\
+	${RM} -f ld;							\
+	if [ "X$$whichld" = "X./ld" ]; then				\
 		${ECHO} "Warning - \".\" is present in your path \"${PATH}\". Configuration step will fail"; \
-	fi
+		${ECHO} "Please remove \".\" from your path, so that the correct ld executable will be found."; \
+		${FALSE};						\
+	fi;								\
 
 # we use MKDIR, not INSTALL_PROGRAM_DIR, deliberately.
 do-install:
