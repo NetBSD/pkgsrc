@@ -1,4 +1,4 @@
-/*	$NetBSD: digest.c,v 1.8 2003/07/24 00:27:09 atatat Exp $ */
+/*	$NetBSD: digest.c,v 1.9 2005/03/22 10:16:15 agc Exp $ */
 
 /*
  * Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
@@ -39,7 +39,7 @@
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 2001 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.8 2003/07/24 00:27:09 atatat Exp $");
+__RCSID("$NetBSD: digest.c,v 1.9 2005/03/22 10:16:15 agc Exp $");
 #endif
 
 
@@ -56,6 +56,7 @@ __RCSID("$NetBSD: digest.c,v 1.8 2003/07/24 00:27:09 atatat Exp $");
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <tiger.h>
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
@@ -80,6 +81,7 @@ typedef struct alg_t {
 		SHA256_CTX	sha256;
 		SHA384_CTX	sha384;
 		SHA512_CTX	sha512;
+		tiger_context_t	tiger;
 	} hash_ctx, hash_ctx2;
 } alg_t;
 
@@ -103,6 +105,9 @@ static alg_t algorithms[] = {
 	{ "SHA512",	SHA512_DIGEST_LENGTH,
 	  (HASH_init) SHA512_Init,	(HASH_update) SHA512_Update,
 	  (HASH_end) SHA512_End,	(HASH_file) SHA512_File },
+	{ "TIGER",	20,
+	  (HASH_init) TIGERInit,	(HASH_update) TIGERUpdate,
+	  (HASH_end) TIGEREnd,	(HASH_file) TIGERFile },
 	{ NULL }
 };
 

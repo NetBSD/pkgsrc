@@ -1,7 +1,7 @@
 #! /bin/sh
 #
 # From
-# $NetBSD: regress.sh,v 1.2 2002/12/21 04:06:15 schmonz Exp $
+# $NetBSD: regress.sh,v 1.3 2005/03/22 10:16:15 agc Exp $
 
 # one can do, for example to test with openssl: 
 #  DIGESTDIR=/path/to DIGESTCMD=openssl sh regress.sh
@@ -66,6 +66,18 @@ echo $ECHO_N "abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq$ECHO_C" |
 diff expected5 output5 || echo "*** WARNING: output differs in test 5 (sha1) ***"
 
 rm -f expected5 output5
+
+cat > expected6 << EOF
+f258c1e88414ab2a527ab541ffc5b8bf935f7b951c132951
+f2589c9ba1f97b0fc30a4fe8f70d61b78ef7537b1e631ca7
+3d9aeb03d1bd1a6357b2774dfd6d5b24dd68151d503974fc
+EOF
+echo $ECHO_N "abc$ECHO_C" | ${DIGEST} tiger > output6
+echo $ECHO_N "abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq$ECHO_C" | ${DIGEST} tiger >> output6
+echo $ECHO_N "Tiger - A Fast New Hash Function, by Ross Anderson and Eli Biham, proceedings of Fast Software Encryption 3, Cambridge, 1996.$ECHO_C" | ${DIGEST} tiger >> output6
+diff expected6 output6 || echo "*** WARNING: output differs in test 6 (tiger) ***"
+
+rm -f expected6 output6
 
 
 

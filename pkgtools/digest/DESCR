@@ -1,2 +1,11 @@
-This utility is a wrapper for the md5(3), rmd160(3), and sha1, sha256,
-sha384 and sha512 routines.
+This utility is a wrapper for the
+
+	+ md5(3),
+	+ rmd160(3),
+	+ sha1(3),
+	+ sha256,
+	+ sha384
+	+ sha512
+	+ tiger
+
+message digest routines.

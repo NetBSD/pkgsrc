@@ -268,8 +268,8 @@ SHELL=${CONFIG_SHELL-/bin/sh}
 # Identity of this package.
 PACKAGE_NAME='nbsd-digest'
 PACKAGE_TARNAME='nbsd-digest'
-PACKAGE_VERSION='20021220'
-PACKAGE_STRING='nbsd-digest 20021220'
+PACKAGE_VERSION='20050310'
+PACKAGE_STRING='nbsd-digest 20050310'
 PACKAGE_BUGREPORT='agc@netbsd.org'
 
 ac_unique_file="digest.c"
