@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/30 09:41:49 grant Exp $
+bin/shc
+man/man1/shc.1
