@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2001/03/20 13:54:31 wiz Exp $
 
---- conf/config.mk-hpcmips.orig	Thu Aug 31 21:06:52 2000
-+++ conf/config.mk-hpcmips	Sun Sep 24 06:16:34 2000
+--- conf/config.mk-hpcmips.orig	Sun Dec 10 02:49:29 2000
++++ conf/config.mk-hpcmips	Wed Mar 14 06:44:01 2001
 @@ -1,15 +1,15 @@
  # MGLDIR : mgl direcory (headers,libs,shared objects,fonts ..)
 -MGLDIR=/usr/pkg/lib/mgl2
@@ -23,12 +23,16 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
  
  ifndef MGL_HEADER_DIR
  MGL_HEADER_DIR = ${MGLDIR}
-@@ -64,22 +64,22 @@
+@@ -65,22 +65,26 @@
  # im option input-method
  #IM_STATIC=y
  IM_DYNAMIC=y
 -IM_PROG=imcanna.so
 +#IM_PROG=imcanna.so
++
++# nine
++GP_DYNAMIC=y
++PATCH_YY_BUF_SIZE=y
  
  # mil options 
  USE_JPEG   = -DUSE_JPEG
@@ -46,11 +50,12 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
  GIFLIB    = -lungif
  
 -#USE_PNG   = -DUSE_PNG
--PNGINCDIR = -I/usr/pkg/include
--PNGLIBDIR = -L/usr/pkg/lib
+-#PNGINCDIR = -I/usr/pkg/include
+-#PNGLIBDIR = -L/usr/pkg/lib
+-#PNGLIB    = -lpng
 +USE_PNG   = -DUSE_PNG
 +PNGINCDIR = -I${PREFIX}/include
 +PNGLIBDIR = -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib
- PNGLIB    = -lpng
++PNGLIB    = -lpng
  
  OSTYPE=NetBSD

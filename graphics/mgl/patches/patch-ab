@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2001/03/20 13:54:31 wiz Exp $
 
---- conf/config.mk-netbsd-i386-x.orig	Thu Aug 31 21:06:52 2000
-+++ conf/config.mk-netbsd-i386-x	Sun Sep 24 06:15:44 2000
+--- conf/config.mk-netbsd-i386-x.orig	Sun Dec 10 02:49:30 2000
++++ conf/config.mk-netbsd-i386-x	Wed Mar 14 06:41:48 2001
 @@ -1,15 +1,15 @@
  # MGLDIR : mgl direcory (headers,libs,shared objects,fonts ..)
 -MGLDIR=/usr/local/lib/mgl2
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
  
  ifndef MGL_HEADER_DIR
  MGL_HEADER_DIR = ${MGLDIR}
-@@ -35,7 +35,7 @@
+@@ -36,7 +36,7 @@
  SUPPORT_CLIENT=y
  
  # server option
@@ -32,12 +32,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
  OBJS_X11=emx11.o
  #SERVER_CONS = mglsvrcons
  #OBJS_CONS=emcons.o
-@@ -57,22 +57,22 @@
+@@ -58,22 +58,26 @@
  # im option input-method
  #IM_STATIC=y
  IM_DYNAMIC=y
 -IM_PROG=imcanna.so
 +#IM_PROG=imcanna.so
++
++# nine
++GP_DYNAMIC=y
++PATCH_YY_BUF_SIZE=y
  
  # mil options 
  USE_JPEG   = -DUSE_JPEG
@@ -55,11 +59,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/11/01 16:25:09 hubertf Exp $
  GIFLIB    = -lungif
  
 -#USE_PNG   = -DUSE_PNG
--PNGINCDIR = -I/usr/pkg/include
--PNGLIBDIR = -L/usr/pkg/lib
-+USE_PNG   = -DUSE_PNG   
-+PNGINCDIR = -I${PREFIX}/include        
-+PNGLIBDIR = -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib 
- PNGLIB    = -lpng
+-#PNGINCDIR = -I/usr/pkg/include
+-#PNGLIBDIR = -L/usr/pkg/lib
+-#PNGLIB    = -lpng
++USE_PNG   = -DUSE_PNG
++PNGINCDIR = -I${PREFIX}/include
++PNGLIBDIR = -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib
++PNGLIB    = -lpng
  
  OSTYPE=NetBSD
