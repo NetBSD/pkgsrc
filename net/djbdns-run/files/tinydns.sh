@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tinydns.sh,v 1.1.1.1 2004/09/01 20:13:04 schmonz Exp $
+# $NetBSD: tinydns.sh,v 1.2 2004/09/02 08:23:02 schmonz Exp $
 #
 # @PKGNAME@ script to control tinydns (authoritative DNS service)
 #
@@ -24,11 +24,11 @@ cdb_cmd="tinydns_cdb"
 # User-settable rc.conf variables and their default values:
 tinydns_ip=${tinydns_ip-"127.0.0.2"}
 tinydns_datalimit=${tinydns_datalimit-"300000"}
-tinydns_logcmd=${tinydns_logcmd-"@LOCALBASE@/bin/setuidgid Gdnslog logger -t nb${name} -p daemon.info"}
+tinydns_logcmd=${tinydns_logcmd-"@LOCALBASE@/bin/setuidgid dnslog logger -t nb${name} -p daemon.info"}
 
 tinydns_precmd()
 {
- 	command="@SETENV@ - ROOT=@PKG_SYSCONFDIR@/tinydns IP=${tinydns_ip} @LOCALBASE@/bin/envuidgid Gtinydns @LOCALBASE@/bin/softlimit -d ${tinydns_datalimit} @LOCALBASE@/bin/tinydns </dev/null 2>&1 | ${tinydns_logcmd}"
+ 	command="@SETENV@ - ROOT=@PKG_SYSCONFDIR@/tinydns IP=${tinydns_ip} @LOCALBASE@/bin/envuidgid tinydns @LOCALBASE@/bin/softlimit -d ${tinydns_datalimit} @LOCALBASE@/bin/tinydns </dev/null 2>&1 | ${tinydns_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
