@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2001/01/26 04:25:37 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.13 2001/01/26 21:12:02 hubertf Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -66,7 +66,7 @@ include/dns/request.h
 include/dns/resolver.h
 include/dns/result.h
 include/dns/rootns.h
-include/dns/sdb.h        
+include/dns/sdb.h
 include/dns/secalg.h
 include/dns/secproto.h
 include/dns/ssu.h
@@ -189,12 +189,27 @@ lib/libomapi.la
 lib/libomapi.so
 lib/libomapi.so.3
 lib/libomapi.so.3.0
+man/man1/dig.1
+man/man1/host.1
+man/man1/named-checkconf.1
+man/man1/named-checkzone.1
+man/man5/rndc.conf.5
+man/man8/dnssec-keygen.8
+man/man8/dnssec-makekeyset.8
+man/man8/dnssec-signkey.8
+man/man8/dnssec-signzone.8
+man/man8/lwresd.8
+man/man8/named.8
+man/man8/nsupdate.8
+man/man8/rndc.8
 sbin/dnssec-keygen
 sbin/dnssec-makekeyset
 sbin/dnssec-signkey
 sbin/dnssec-signzone
 sbin/lwresd
 sbin/named
+sbin/named-checkconf
+sbin/named-checkzone
 sbin/rndc
 share/doc/bind9/README
 share/doc/bind9/arm/Bv9ARM-book.xml
@@ -350,16 +365,3 @@ share/doc/bind9/rfc/rfc952.txt
 @dirrm include/isc
 @dirrm include/dst
 @dirrm include/dns
-man/man1/dig.1
-man/man1/host.1
-man/man1/named-checkconf.1
-man/man1/named-checkzone.1
-man/man5/rndc.conf.5
-man/man8/dnssec-keygen.8
-man/man8/dnssec-makekeyset.8
-man/man8/dnssec-signkey.8
-man/man8/dnssec-signzone.8
-man/man8/lwresd.8
-man/man8/named.8
-man/man8/nsupdate.8
-man/man8/rndc.8
