@@ -1,0 +1,70 @@
+$NetBSD: patch-aa,v 1.4 2002/01/19 16:06:41 drochner Exp $
+
+--- configure.orig	Sat Jan 19 16:52:07 2002
++++ configure	Sat Jan 19 16:58:08 2002
+@@ -4035,35 +4035,7 @@
+ EOF
+ 
+ 
+-# Extract the first word of "python", so it can be a program name with args.
+-set dummy python; ac_word=$2
+-echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
+-echo "configure:4042: checking for $ac_word" >&5
+-if eval "test \"`echo '$''{'ac_cv_prog_python_val'+set}'`\" = set"; then
+-  echo $ac_n "(cached) $ac_c" 1>&6
+-else
+-  if test -n "$python_val"; then
+-  ac_cv_prog_python_val="$python_val" # Let the user override the test.
+-else
+-  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH"
+-  for ac_dir in $ac_dummy; do
+-    test -z "$ac_dir" && ac_dir=.
+-    if test -f $ac_dir/$ac_word; then
+-      ac_cv_prog_python_val="true"
+-      break
+-    fi
+-  done
+-  IFS="$ac_save_ifs"
+-  test -z "$ac_cv_prog_python_val" && ac_cv_prog_python_val="false"
+-fi
+-fi
+-python_val="$ac_cv_prog_python_val"
+-if test -n "$python_val"; then
+-  echo "$ac_t""$python_val" 1>&6
+-else
+-  echo "$ac_t""no" 1>&6
+-fi
++python_val=true
+ 
+ numpy=false
+ 
+@@ -4084,8 +4056,8 @@
+ fi
+ 
+           if test x$python_prefix = x; then 
+-           PY_PREFIX=`python -c 'import sys ; print sys.prefix'`
+-           PY_EXEC_PREFIX=`python -c 'import sys ; print sys.exec_prefix'`
++           PY_PREFIX=`${PYTHONBIN} -c 'import sys ; print sys.prefix'`
++           PY_EXEC_PREFIX=`${PYTHONBIN} -c 'import sys ; print sys.exec_prefix'`
+           else
+            echo "Using elternative python installation under $python_prefix"
+            PY_PREFIX=$python_prefix
+@@ -4093,13 +4065,13 @@
+           fi
+ 
+ 	            echo PY_PREFIX=$PY_PREFIX
+-	  PY_VERSION=`python -c 'import sys ; print sys.version[0:3]'`
+-          PY_VVERSION=`python -c 'import sys ; print sys.version[0:5]'`
++	  PY_VERSION=`${PYTHONBIN} -c 'import sys ; print sys.version[0:3]'`
++          PY_VVERSION=`${PYTHONBIN} -c 'import sys ; print sys.version[0:5]'`
+ 	  	  if test -f $PY_PREFIX/include/python$PY_VERSION/Python.h; then
+ 		  PY_LIBS="python$PY_VERSION"
+ 		  PY_LIB_LOC="$PY_EXEC_PREFIX/lib/python$PY_VERSION/"
+-                  array_loc=`find $PY_PREFIX/ -name arrayobject.h | sed s/arrayobject\.h//`
+-#                  array_loc=`find $PY_PREFIX/include/python$PY_VERSION/ -name arrayobject.h | sed s/arrayobject\.h//`
++#                  array_loc=`find $PY_PREFIX/ -name arrayobject.h | sed s/arrayobject\.h//`
++                  array_loc=`find $PY_PREFIX/include/python$PY_VERSION/ -name arrayobject.h | sed s/arrayobject\.h//`
+                   echo arrayobject.h location: $array_loc
+                   PY_CFLAGS="-I$PY_PREFIX/include/python$PY_VERSION"
+                   if  test -n $array_loc; then
