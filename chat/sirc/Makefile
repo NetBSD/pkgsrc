@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/01 14:25:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 13:51:31 wiz Exp $
 
 DISTNAME=	sirc-2.211
 PKGNAME=	sirc-2.211nb1
@@ -10,6 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}	\
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.iagora.com/~espel/sirc/sirc.html
+COMMENT=	IRC client written and programmable in perl
 
 USE_PERL5=	# defined
 DEPENDS+=	p5-Socket6>=0.07:../../net/p5-Socket6

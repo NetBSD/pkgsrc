@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/09/13 02:26:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.31 2001/02/16 13:56:16 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.columbia.edu/kermit/
+COMMENT=	Network and serial communication, file transfer, and scripting utility
 
 LICENSE=	kermit-license
 

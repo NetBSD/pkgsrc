@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/15 00:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:51:33 wiz Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.icb.net/
+COMMENT=	TK interface to the ICB chat system
 
 DEPENDS=	tk-8.3.2:../../x11/tk
 
