@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/18 10:59:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/12 09:46:05 cjep Exp $
 share/kde/locale/se/LC_MESSAGES/appletproxy.mo
 share/kde/locale/se/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/se/LC_MESSAGES/clockapplet.mo
@@ -155,4 +155,3 @@ share/kde/locale/se/entry.desktop
 share/kde/locale/se/flag.png
 @comment @dirrm share/kde/locale/se/LC_MESSAGES
 @comment @dirrm share/kde/locale/se
-
