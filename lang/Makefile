@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2002/04/03 18:08:05 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2002/04/19 10:50:48 drochner Exp $
 #
 
 COMMENT=	Programming languages
@@ -68,6 +68,8 @@ SUBDIR+=	pforth
 SUBDIR+=	pgcc
 SUBDIR+=	py-extclass
 SUBDIR+=	py-html-docs
+SUBDIR+=	py21-html-docs
+SUBDIR+=	py22-html-docs
 #SUBDIR+=	python		# only contains Makefile fragments
 SUBDIR+=	python15
 SUBDIR+=	python20
