@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3176 2003/08/31 16:47:09 wiz Exp $
+$NetBSD: CHANGES,v 1.3177 2003/08/31 19:21:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3429,3 +3429,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated neXtaw to 0.14.1 [wiz 2003-08-31]
 	Updated anomy-sanitizer to 1.63 [mjl 2003-08-31]
 	Updated centericq to 4.9.6 [wiz 2003-08-31]
+	Updated fontconfig to 2.2.1 [wiz 2003-08-31]
