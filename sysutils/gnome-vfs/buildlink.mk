@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/10/10 08:01:55 rh Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/10/10 13:39:22 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-vfs.
 #
@@ -22,11 +22,15 @@ DEPENDS+=	${BUILDLINK_DEPENDS.gnome-vfs}:../../sysutils/gnome-vfs
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gnome-vfs=gnome-vfs
 BUILDLINK_PREFIX.gnome-vfs_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.gnome-vfs=	include/gnome-vfs-1.0/*
-BUILDLINK_FILES.gnome-vfs+=	lib/libgnomevfs*
+BUILDLINK_FILES.gnome-vfs=	include/gnome-vfs-1.0/*/*
+BUILDLINK_FILES.gnome-vfs+=	lib/gnome-vfs-1.0/include/*
+BUILDLINK_FILES.gnome-vfs+=	lib/libgnomevfs-pthread.*
+BUILDLINK_FILES.gnome-vfs+=	lib/libgnomevfs.*
 BUILDLINK_FILES.gnome-vfs+=	lib/vfsConf.sh
 
-BUILDLINK_CONFIG_WRAPPER_SED+=	-e "s|-I${BUILDLINK_PREFIX.gnome-vfs}\(/include/gnome-vfs-1.0\)|-I${BUILDLINK_DIR}\1|g"
+BUILDLINK_CONFIG_WRAPPER_SED+=	\
+	-e "s|-I${BUILDLINK_PREFIX.gnome-vfs}\(/include/gnome-vfs-1.0\)|-I${BUILDLINK_DIR}\1|g" \
+	-e "s|-I${BUILDLINK_PREFIX.gnome-vfs}\(/lib/gnome-vfs-1.0\)|-I${BUILDLINK_DIR}\1|g"
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/GConf/buildlink.mk"
