@@ -3,7 +3,8 @@
 # Date created:		03 Jan 1995
 # Whom:			faulkner@mpd.tandem.com
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:18:58 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1998/01/19 01:07:52 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.8 1996/11/15 23:14:14 obrien Exp
 #
 
 DISTNAME=	rsynth-2.0
