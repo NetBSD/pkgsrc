@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3073 2003/08/20 08:33:13 grant Exp $
+$NetBSD: CHANGES,v 1.3074 2003/08/20 11:30:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3301,3 +3301,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tgif to 4.1.43 [dmcmahill 2003-08-19]
 	Added dropbear-0.36 [agc 2003-08-19]
 	Updated tcptrace to 6.4.2 [grant 2003-08-20]
+	Updated lesstif to 0.93.46nb1 [markd 2003-08-20]
+	Added kmessage-0.1 [markd 2003-08-20]
+	Added kimagemapeditor-1.0 [markd 2003-08-20]
