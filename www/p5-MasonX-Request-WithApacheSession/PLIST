@@ -1,5 +1,1 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 23:35:30 he Exp $
-${INSTALLSITELIB}/MasonX/Request/WithApacheSession.pm
-${INSTALLSITELIB}/MasonX/Request/WithMultiSession.pm
-${INSTALLSITEMAN3DIR}/MasonX::Request::WithApacheSession.3
-${INSTALLSITEMAN3DIR}/MasonX::Request::WithMultiSession.3
+@comment $NetBSD: PLIST,v 1.2 2005/02/24 22:38:42 jlam Exp $
