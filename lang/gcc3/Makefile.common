@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/09/26 21:38:03 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/10/08 14:42:55 tv Exp $
 
 GCC_VERSION=	3.3.4
 DISTNAME=	gcc-${GCC_VERSION}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 
-NOT_FOR_PLATFORM=	Darwin-*-*
+NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-*
 
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
