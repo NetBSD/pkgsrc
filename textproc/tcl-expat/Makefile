@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/09 01:16:59 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2005/04/04 17:11:17 fredb Exp $
 #
 
 DISTNAME=	TclExpat-1.1
@@ -22,4 +22,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcl/TclExpat
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tcl/TclExpat
 
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
