@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2005/02/24 15:31:48 drochner Exp $
-# FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
+# $NetBSD: Makefile,v 1.78 2005/02/26 16:01:32 wiz Exp $
 
-DISTNAME=	emacs-21.4
+DISTNAME=	emacs-21.4a
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
@@ -16,6 +15,10 @@ USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+# needed for 21.4a, can probably go away on next update
+WRKSRC=		${WRKDIR}/emacs-21.4
+PLIST_SUBST+=	EMACSVERSION=21.4
 
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
