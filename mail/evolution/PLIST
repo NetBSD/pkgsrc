@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/07/12 23:39:49 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/07/15 18:25:49 mycroft Exp $
 bin/csv2vcard
 bin/evolution
 bin/evolution-addressbook
@@ -368,6 +368,8 @@ share/evolution/views/tasks/Tasks.galview
 share/evolution/views/tasks/With_Category.galview
 share/evolution/views/tasks/galview.xml
 share/gnome/apps/Applications/evolution.desktop
+@exec ${MKDIR} %D/share/gnome/help/cal
+@exec ${MKDIR} %D/share/gnome/help/cal/C
 share/gnome/help/evolution/C/access.html
 share/gnome/help/evolution/C/apx-gloss.html
 share/gnome/help/evolution/C/authors.html
