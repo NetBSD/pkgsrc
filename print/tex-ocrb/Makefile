@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/12 00:50:02 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/25 13:59:36 mjl Exp $
 #
 
 DISTNAME=	ocr-b
@@ -6,7 +6,7 @@ PKGNAME=	tex-ocrb-1.0
 # PKGREVISION=	1
 WRKSRC=		${WRKDIR}/ocr-b
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=fonts/}
+MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=fonts/${DISTNAME}/}
 
 MAINTAINER=	packages@netbsd.org
 # HOMEPAGE=	
@@ -14,9 +14,19 @@ COMMENT=	OCR-B font for LaTeX
 
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 
+DIST_SUBDIR=	${DISTNAME}
+DISTFILES= ocrb10.mf ocrb10e.mf ocrb10f.mf ocrb10g.mf ocrb10l.mf \
+	ocrb10s.mf ocrb10x.mf ocrb5.mf ocrb6.mf ocrb7.mf ocrb8.mf \
+	ocrb9.mf ocrbdef.mf ocrbinfo ocrbmac.mf
+
 NO_CONFIGURE=	yes
-NO_PATCH=	yes
 NO_BUILD=	yes
+
+do-extract:
+	${MKDIR} ${WRKSRC}
+	for f in ${DISTFILES}; do \
+		${CP} ${DISTDIR}/${DIST_SUBDIR}/$$f ${WRKSRC}; \
+	done
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/doc/fonts/ocrb
