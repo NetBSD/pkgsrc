@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/06 13:07:43 agc Exp $
 # New ports collection makefile for:	X-Emacs
 # Version required:	20.2
 # Date created:		26 August 1997
@@ -17,7 +18,6 @@ MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs-20.2/ \
 		ftp://ftp.miranova.com/pub/xemacs/ \
 		ftp://ftp.gw.com/mirrors/pub/unix/xemacs/xemacs-20.2/
 
-MAINTAINER=	me@FreeBSD.org
 
 LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
 		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
@@ -26,12 +26,28 @@ LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
 USE_GMAKE=	yes
 STRIP=
 HAS_CONFIGURE=	yes
+
+OPSYS!=		uname -s
+
+.if (${OPSYS} == "FreeBSD")
+MAINTAINER=	me@FreeBSD.org
 CONFIGURE_ARGS=	i386--freebsd --prefix=${PREFIX} \
+		--site-includes=${PREFIX}/include \
 		--with-sound=native \
-		--site-includes=/usr/local/include \
-		--site-libraries=/usr/local/lib \
+		--site-libraries=${PREFIX}/lib \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
 		${WITH_MULE} ${WITH_DIALOGS}
+.elif (${OPSYS} == "NetBSD")
+# agc - NetBSD doesn't use the native sound option
+# agc - braindead xpm installation - or is it us?
+MAINTAINER=	agc@netbsd.org
+CONFIGURE_ARGS=	i386--netbsd --prefix=${PREFIX} \
+		--site-includes="${PREFIX}/include /usr/X11R6/include/X11" \
+		--site-libraries=${PREFIX}/lib \
+		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
+		${WITH_MULE} ${WITH_DIALOGS}
+.endif
+
 MAN1=		ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 \
 		gnuserv.1 xemacs.1
 
