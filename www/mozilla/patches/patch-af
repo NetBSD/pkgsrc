@@ -1,0 +1,29 @@
+$NetBSD: patch-af,v 1.14 2003/02/12 00:55:49 atatat Exp $
+
+Re-open stdin on /dev/null before executing netstat.  netstat is a
+setgid program that should not be executed with stdin closed,
+regardless of whether the kernel will cover up for you or not.
+
+--- security/nss/lib/freebl/unix_rand.c.orig	Tue Apr  9 23:27:23 2002
++++ security/nss/lib/freebl/unix_rand.c	Wed Jun 12 09:20:47 2002
+@@ -32,6 +32,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <fcntl.h>
+ #include <string.h>
+ #include <signal.h>
+ #include <unistd.h>
+@@ -678,7 +679,11 @@
+ 	/* dup write-side of pipe to stderr and stdout */
+ 	if (p[1] != 1) dup2(p[1], 1);
+ 	if (p[1] != 2) dup2(p[1], 2);
+-	close(0);
++	fd = open("/dev/null", O_RDONLY);
++	if (fd != 0) {
++	    dup2(fd, 0);
++	    close(fd);
++	}
+ 	for (fd = getdtablesize(); --fd > 2; close(fd))
+ 	    ;
+ 
