@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/30 04:17:52 tv Exp $
+
+--- lib/target.exp.orig	Wed May 30 00:04:44 2001
++++ lib/target.exp	Wed May 30 00:04:52 2001
+@@ -272,8 +272,7 @@
+     regsub -all "(^|\n)\[^\n\]*: In function\[^\n\]*\n\[^\n\]\[^\n\]*is not implemented and will always fail\[^\n\]*" $text "" text
+ 
+     # Cygwin cc1 warns about -fpic and -fPIC
+-    regsub -all ".*: warning: -f(pic|PIC) ignored for target .*" $text ""
+-text
++    regsub -all ".*: warning: -f(pic|PIC) ignored for target .*" $text "" text
+ 
+     # It might be tempting to get carried away and delete blank lines, etc.
+     # Just delete *exactly* what we're ask to, and that's it.
