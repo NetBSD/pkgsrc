@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9559 2005/03/22 15:41:22 wiz Exp $
+$NetBSD: CHANGES,v 1.9560 2005/03/22 15:53:23 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1475,3 +1475,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mc to 4.6.1rc4 [wiz 2005-03-22]
 	Updated emacs to 21.4anb1 [wiz 2005-03-22]
 	Updated emacs-nox11 to 21.4anb1 [wiz 2005-03-22]
+	Updated gkrell-leds to 0.8.2 [cube 2005-03-22]
