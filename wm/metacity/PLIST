@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/02/14 20:59:44 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/23 15:34:17 jmmv Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -20,6 +20,7 @@ share/gconf/schemas/metacity.schemas
 share/gnome/wm-properties/metacity.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/metacity.mo
@@ -29,8 +30,10 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/metacity.mo
@@ -39,6 +42,7 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/metacity.mo
@@ -50,6 +54,8 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/metacity.mo
