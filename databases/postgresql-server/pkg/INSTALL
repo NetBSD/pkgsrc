@@ -1,0 +1,81 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2001/05/14 14:50:25 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+USER=@PGUSER@
+GROUP=@PGGROUP@
+PGHOME=@PGHOME@
+
+ADDUSER="@ADDUSER@"
+ADDGROUP="@ADDGROUP@"
+CAT="@CAT@"
+CHGRP="@CHGRP@"
+CHOWN="@CHOWN@"
+GREP="@GREP@"
+MKDIR="@MKDIR@"
+RM="@RM@"
+SU="@SU@"
+TOUCH="@TOUCH@"
+
+case ${STAGE} in
+PRE-INSTALL)
+	${CAT} << EOF
+------------------------------------------------------------
+Dump existing databases, before installing new db version !!
+------------------------------------------------------------
+EOF
+	# Group... the default's shipped with NetBSD
+	# We need to check that ${GROUP} exists before adding the user.
+	# Do it with chgrp to be able to use NIS.
+	#
+	${TOUCH} "/tmp/grouptest.$$"
+	${CHGRP} ${GROUP} "/tmp/grouptest.$$" >/dev/null 2>&1
+	if [ $? -eq 0 ]
+	then
+		echo "Group '${GROUP}' already exists...proceeding."
+	else
+		echo "Creating '${GROUP}' group..."
+		${ADDGROUP} ${GROUP}
+		echo "Done."
+	fi
+	${RM} -f "/tmp/grouptest.$$"
+
+	# Use `finger' to be able to use NIS.
+	#
+	finger ${USER} 2>&1 | ${GREP} -q "no such user"
+	if [ $? -eq 0 ]
+	then
+		echo "Creating '${USER}' user..."
+		${ADDUSER} \
+			-c "PostgreSQL database administrator" \
+			-d ${PGHOME} \
+			-g ${GROUP} \
+			-s /bin/sh \
+			${USER}
+		${RM} -f ${PGHOME}/.profile
+		echo "Done."
+	else
+		echo "User '${USER}' already exists...proceeding."
+	fi
+	${MKDIR} ${PGHOME}
+	${CHOWN} -R ${USER}:${GROUP} ${PGHOME}
+	;;
+
+POST-INSTALL)
+	${CAT} << EOF
+------------------------------------------------------------------
+Initializing PostgreSQL Databases - this may take a few minutes...
+------------------------------------------------------------------
+EOF
+        ${SU} -m ${USER} -c "${PKG_PREFIX}/bin/initdb -D ${PGHOME}/data"
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
