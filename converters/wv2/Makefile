@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/26 02:27:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/15 11:46:47 wiz Exp $
 #
 
 DISTNAME=		wv2-0.2.1
@@ -11,7 +11,7 @@ MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://wvware.sourceforge.net/
 COMMENT=		Library to access Microsoft Word files
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_ICONV=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.libiconv}
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/libgsf/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libgsf/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
