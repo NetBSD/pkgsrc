@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2496 2003/06/13 03:19:26 itojun Exp $
+$NetBSD: CHANGES,v 1.2497 2003/06/13 03:56:55 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated file-roller to 2.2.4 [wiz 2003-06-12]
 	Updated gtexinfo to 4.6 [wiz 2003-06-12]
 	Updated ethereal to 0.9.13 [itojun 2003-06-13]
+	Updated pwm to 1.0.20030528nb1 [jlam 2003-06-13]
