@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/07/04 20:03:30 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/10/10 00:35:57 jlam Exp $
 
 --- Makefile.orig	Thu Nov 30 07:44:57 2000
 +++ Makefile
@@ -13,12 +13,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/07/04 20:03:30 wiz Exp $
  
  CC = gcc
 -CFLAGS = -O2 -pedantic -Wall -I/opt/include -DVERSION=$(VERSION)
-+CFLAGS = -O2 -pedantic -Wall -DVERSION=$(VERSION) -I${BUILDLINK_DIR}/include
++CFLAGS = -O2 -pedantic -Wall -DVERSION=$(VERSION) ${BUILDLINK_CPPFLAGS}
  
  PROGS = gdbm-clear gdbm-create gdbm-dump gdbm-exists gdbm-keys gdbm-load \
  	gdbm-get gdbm-put gdbm-remove gdbm-revget
 -LIBS = -L/opt/lib -lgdbm
-+LIBS = -L${BUILDLINK_DIR}/lib -Wl,-R${PREFIX}/lib -lgdbm
++LIBS = ${BUILDLINK_LDFLAGS} -lgdbm
  
 -INSTALL_PREFIX=/opt/pkgs/gdbm_primitive-$(VERSION)
 +INSTALL_PREFIX=${prefix}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/25 20:35:33 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/10 00:38:00 jlam Exp $
 
 DISTNAME=	Sjeng-Free-11.0
 PKGNAME=	sjeng-11.0
@@ -10,10 +10,10 @@ MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.sjeng.org/
 COMMENT=	engine for chess variations (bughouse, suicide, etc.)
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=	YES
 
 GNU_CONFIGURE=	YES
-LIBS+=		-lm			# floor()
+LIBS+=		-lm	# floor()
 
 MAKE_ENV+=	BOOKDIR="${BOOKDIR}/"
 
@@ -41,5 +41,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${BOOKDIR}
 	${INSTALL_DATA} ${WRKSRC}/books/*.opn ${BOOKDIR}
 
-.include "../../databases/gdbm/buildlink.mk"
+.include "../../databases/gdbm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
