@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/01 13:54:55 taca Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/03 16:06:07 taca Exp $
 # FreeBSD: ports/sysutils/ruby-syslog/Makefile,v 1.4 2000/09/26 08:02:09 knu Exp
 
 DISTNAME=	syslog-20010130
@@ -12,6 +12,7 @@ COMMENT=	Ruby module to access syslog(3) interface
 
 DIST_SUBDIR=	ruby
 USE_RUBY_EXTCONF= yes
+CONFLICTS=	ruby>=1.6.6
 
 INSTALL_TARGET=	site-install
 
