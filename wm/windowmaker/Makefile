@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/26 00:38:28 zuntum Exp $
+# $NetBSD: Makefile,v 1.12 2001/06/30 09:16:47 zuntum Exp $
 
 DISTNAME=		WindowMaker-0.65.0
 PKGNAME=		windowmaker-0.65.0
@@ -19,7 +19,6 @@ USE_LIBTOOL=		YES
 USE_LIBINTL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_X11BASE=		YES
-USE_XPM=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-usermenu \
 			--with-nlsdir=${PREFIX}/share/locale
@@ -85,4 +84,5 @@ post-install:
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
