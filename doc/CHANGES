@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7749 2004/11/07 10:47:05 shannonjr Exp $
+$NetBSD: CHANGES,v 1.7750 2004/11/07 13:12:17 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5144,3 +5144,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mpg123-esound to 0.59.18nb4 [tron 2004-11-07]
 	Updated mpg123-nas to 0.59.18nb5 [tron 2004-11-07]
 	Updated librfuncs to 1.0.4 [shannonjr 2004-11-07]
+	Updated gpgme to 1.0.1nb2 [jmmv 2004-11-07]
