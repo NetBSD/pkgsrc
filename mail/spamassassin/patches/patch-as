@@ -1,0 +1,12 @@
+$NetBSD: patch-as,v 1.1 2003/12/01 16:04:40 heinz Exp $
+
+--- rules/50_scores.cf.orig	Sat Sep 13 03:05:25 2003
++++ rules/50_scores.cf
+@@ -936,7 +936,6 @@ score RCVD_IN_BL_SPAMCOP_NET 0 2.25 0 1.
+ score RCVD_IN_BSP_OTHER 0 -0.1 0 -0.1
+ score RCVD_IN_BSP_TRUSTED  0 -4.3 0 -4.3
+ score RCVD_IN_DSBL 0 1.101 0 0.706
+-score RCVD_IN_DYNABLOCK 0 2.546 0 2.599
+ score RCVD_IN_NJABL 0 0.100 0 0.100
+ score RCVD_IN_NJABL_CGI 0
+ score RCVD_IN_NJABL_DIALUP 0 0.525 0 3.536
