@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6155 2004/06/06 04:42:34 snj Exp $
+$NetBSD: CHANGES,v 1.6156 2004/06/06 05:09:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2811,3 +2811,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libwmf to 0.2.8.3 [reed 2004-06-05]
 	Updated freeze to 2.5nb2 [recht 2004-06-05]
 	Downgraded smlnj to 110.42 [snj 2004-06-06]
+	Updated tmda to 1.0.3 [schmonz 2004-06-06]
