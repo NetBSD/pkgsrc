@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7138 2004/09/11 12:17:05 markd Exp $
+$NetBSD: CHANGES,v 1.7139 2004/09/11 14:56:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4235,3 +4235,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated teixsl-html to 3.3 [minskim 2004-09-11]
 	Updated teixsl-fo to 3.3 [minskim 2004-09-11]
 	Updated pixieplus to 0.5.4nb5 [markd 2004-09-11]
+	Removed cmdline [jmmv 2004-09-11]
