@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2645 2004/12/03 22:53:27 lukem Exp $
+$NetBSD: TODO,v 1.2646 2004/12/04 02:19:41 taya Exp $
 
 Suggested new packages
 ======================
@@ -1118,7 +1118,6 @@ Suggested package updates
 	o tex-musixtex-112
 	o texi2html-1.70
 	o tfmxplay-1.1.6
-	o thunderbird-0.9
 	o tiff-3.7.0 [reed]
 	o tileworld-1.2.1
 	o tinc-1.0.3
