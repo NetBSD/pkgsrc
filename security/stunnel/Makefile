@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/05 09:01:03 tron Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/06 03:17:00 fredb Exp $
 #
 
 DISTNAME=		stunnel-3.13
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.stunnel.org/download/stunnel/src/
 MAINTAINER=		martin@NetBSD.ORG
 HOMEPAGE=		http://www.stunnel.org/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 DEPENDS+=		pth>=1.3.5:../../devel/pth
 
 USE_SSL=		# defined
@@ -18,6 +18,6 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
 			--with-pem-dir="${SSLCERTS}"
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoremake
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
 .include "../../mk/bsd.pkg.mk"
