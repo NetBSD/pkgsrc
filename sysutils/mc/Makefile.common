@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2002/10/02 19:03:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2002/10/02 19:09:02 wiz Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -16,7 +16,6 @@ CONFLICTS+=		mc-[0-9]* gmc-[0-9]*
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/mc/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/mc/patches
 
-AUTOCONF_REQD=		2.13
 USE_GMAKE=		yes
 USE_LIBINTL=		yes
 
@@ -53,5 +52,4 @@ LOCALEDIR=		lib
 LOCALEDIR=		share
 .endif
 
-.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
