@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:18 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/04/22 21:02:10 kristerw Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -18,16 +18,17 @@ include/resid/voice.h
 include/resid/wave.h
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/vice.info
 info/vice.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/vice.info
 info/vice.info-1
 info/vice.info-2
 info/vice.info-3
 info/vice.info-4
 info/vice.info-5
 info/vice.info-6
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/vice.info
 man/man1/c1541.1
 man/man1/petcat.1
 man/man1/vice.1
+share/doc/html/vice/index.html
 share/doc/html/vice/vice_1.html
 share/doc/html/vice/vice_10.html
 share/doc/html/vice/vice_11.html
@@ -45,18 +46,15 @@ share/doc/html/vice/vice_7.html
 share/doc/html/vice/vice_8.html
 share/doc/html/vice/vice_9.html
 share/doc/html/vice/vice_toc.html
-share/doc/vice/64doc.txt
-share/doc/vice/Evaluation
-share/doc/vice/PETdoc.txt
+share/doc/vice/NLS-Howto.txt
 share/doc/vice/Readme.beos
 share/doc/vice/Readme.dos
 share/doc/vice/Win32-Howto.txt
-share/doc/vice/cbm_basic_tokens.txt
-share/doc/vice/drive_info.txt
 share/doc/vice/mon.txt
-share/doc/vice/serial.txt
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/vice.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/vice.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vice.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/vice.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/vice.mo
 share/vice/C128/basic
 share/vice/C128/basic64
@@ -82,6 +80,7 @@ share/vice/C64/64gs.vrs
 share/vice/C64/basic
 share/vice/C64/basic.64gs
 share/vice/C64/c64s.vpl
+share/vice/C64/c64mem.sym
 share/vice/C64/ccs64.vpl
 share/vice/C64/chargen
 share/vice/C64/default.vkm
@@ -126,6 +125,7 @@ share/vice/CBM-II/white.vpl
 share/vice/DRIVES/d1541II
 share/vice/DRIVES/dos1001
 share/vice/DRIVES/dos1541
+share/vice/DRIVES/dos1551
 share/vice/DRIVES/dos1571
 share/vice/DRIVES/dos1581
 share/vice/DRIVES/dos2031
@@ -161,9 +161,20 @@ share/vice/PET/rom4b40.vrs
 share/vice/PET/rom4b80.vrs
 share/vice/PET/rom4g40.vrs
 share/vice/PET/white.vpl
+share/vice/PLUS4/3plus1hi
+share/vice/PLUS4/3plus1lo
+share/vice/PLUS4/basic
+share/vice/PLUS4/default.vkm
+share/vice/PLUS4/default.vpl
+share/vice/PLUS4/default.vrs
+share/vice/PLUS4/kernal
+share/vice/PLUS4/os2.vkm
+share/vice/PLUS4/position.vkm
+share/vice/PLUS4/vice.vpl
 share/vice/PRINTER/cbm1526
 share/vice/PRINTER/mps801
 share/vice/PRINTER/mps803
+share/vice/PRINTER/mps803.vpl
 share/vice/VIC20/basic
 share/vice/VIC20/chargen
 share/vice/VIC20/default.vkm
@@ -177,6 +188,7 @@ share/vice/fonts/vice-cbm.pcf
 @dirrm share/vice/fonts
 @dirrm share/vice/VIC20
 @dirrm share/vice/PRINTER
+@dirrm share/vice/PLUS4
 @dirrm share/vice/PET
 @dirrm share/vice/DRIVES
 @dirrm share/vice/CBM-II
