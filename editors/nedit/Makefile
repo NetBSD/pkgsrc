@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/10/31 00:03:16 mjl Exp $
+# $NetBSD: Makefile,v 1.20 2001/12/19 01:23:09 mjl Exp $
 
 VERS=		5.2
 DISTNAME=	nedit-${VERS}-src
@@ -24,7 +24,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/nedit
 	${INSTALL_DATA} ${WRKSRC}/ReleaseNotes ${PREFIX}/share/doc/nedit
 	${INSTALL_DATA} ${WRKSRC}/doc/faq.txt ${PREFIX}/share/doc/nedit
-	${INSTALL_DATA} ${WRKSRC}/doc/NEdit.ad ${PREFIX}/lib/X11/app-defaults/NEdit
+	${INSTALL_DATA} ${WRKSRC}/doc/NEdit.ad ${PREFIX}/share/doc/nedit
 
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/motif.buildlink.mk"
