@@ -1,4 +1,4 @@
-#	$NetBSD: IRIX.bsd.lib.mk,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+#	$NetBSD: IRIX.bsd.lib.mk,v 1.2 2004/06/05 20:53:12 jschauma Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -347,12 +347,10 @@ realall: ${SRCS} ${ALLOBJS:O} ${_LIBS}
 __archivebuild: .USE
 	@rm -f ${.TARGET}
 	${AR} cq ${.TARGET} `NM=${NM} ${LORDER} ${.ALLSRC:M*o} | ${TSORT}`
-	${RANLIB} ${.TARGET}
 
 __archiveinstall: .USE
 	${INSTALL} ${RENAME} ${PRESERVE} ${COPY} ${INSTPRIV} -o ${LIBOWN} \
 	    -g ${LIBGRP} -m 600 ${.ALLSRC} ${.TARGET}
-	${RANLIB} -t ${.TARGET}
 	chmod ${LIBMODE} ${.TARGET}
 
 DPSRCS+=	${SRCS:M*.l:.l=.c} ${SRCS:M*.y:.y=.c}
