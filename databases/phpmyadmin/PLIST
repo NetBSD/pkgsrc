@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.9 2005/02/24 17:26:03 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9.2.1 2005/04/04 14:07:10 salo Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
 share/doc/phpmyadmin/INSTALL
 share/doc/phpmyadmin/LICENSE
 share/doc/phpmyadmin/README
-share/doc/phpmyadmin/TODO
 share/doc/phpmyadmin/RELEASE-DATE-${DIST_VERSION}
-share/examples/phpmyadmin/config.inc.php
+share/doc/phpmyadmin/TODO
 share/examples/phpmyadmin/apache.conf
+share/examples/phpmyadmin/config.inc.php
 share/phpmyadmin/ChangeLog
 share/phpmyadmin/Documentation.html
 share/phpmyadmin/browse_foreigners.php
@@ -20,7 +20,7 @@ share/phpmyadmin/config.footer.inc.php
 share/phpmyadmin/config.header.inc.php
 share/phpmyadmin/config.inc.php
 share/phpmyadmin/css/phpmyadmin.css.php
-share/phpmyadmin/docs.css
+share/phpmyadmin/css/print.css
 share/phpmyadmin/db_create.php
 share/phpmyadmin/db_datadict.php
 share/phpmyadmin/db_details.php
@@ -34,6 +34,7 @@ share/phpmyadmin/db_details_structure.php
 share/phpmyadmin/db_operations.php
 share/phpmyadmin/db_printview.php
 share/phpmyadmin/db_search.php
+share/phpmyadmin/docs.css
 share/phpmyadmin/export.php
 share/phpmyadmin/footer.inc.php
 share/phpmyadmin/header.inc.php
@@ -71,19 +72,23 @@ share/phpmyadmin/lang/czech-windows-1250.inc.php
 share/phpmyadmin/lang/danish-iso-8859-1.inc.php
 share/phpmyadmin/lang/danish-utf-8.inc.php
 share/phpmyadmin/lang/dutch-iso-8859-1.inc.php
+share/phpmyadmin/lang/dutch-iso-8859-15.inc.php
 share/phpmyadmin/lang/dutch-utf-8.inc.php
 share/phpmyadmin/lang/english-iso-8859-1.inc.php
 share/phpmyadmin/lang/english-utf-8.inc.php
 share/phpmyadmin/lang/estonian-iso-8859-1.inc.php
 share/phpmyadmin/lang/estonian-utf-8.inc.php
 share/phpmyadmin/lang/finnish-iso-8859-1.inc.php
+share/phpmyadmin/lang/finnish-iso-8859-15.inc.php
 share/phpmyadmin/lang/finnish-utf-8.inc.php
 share/phpmyadmin/lang/french-iso-8859-1.inc.php
+share/phpmyadmin/lang/french-iso-8859-15.inc.php
 share/phpmyadmin/lang/french-utf-8.inc.php
 share/phpmyadmin/lang/galician-iso-8859-1.inc.php
 share/phpmyadmin/lang/galician-utf-8.inc.php
 share/phpmyadmin/lang/georgian-utf-8.inc.php
 share/phpmyadmin/lang/german-iso-8859-1.inc.php
+share/phpmyadmin/lang/german-iso-8859-15.inc.php
 share/phpmyadmin/lang/german-utf-8.inc.php
 share/phpmyadmin/lang/greek-iso-8859-7.inc.php
 share/phpmyadmin/lang/greek-utf-8.inc.php
@@ -95,6 +100,7 @@ share/phpmyadmin/lang/hungarian-utf-8.inc.php
 share/phpmyadmin/lang/indonesian-iso-8859-1.inc.php
 share/phpmyadmin/lang/indonesian-utf-8.inc.php
 share/phpmyadmin/lang/italian-iso-8859-1.inc.php
+share/phpmyadmin/lang/italian-iso-8859-15.inc.php
 share/phpmyadmin/lang/italian-utf-8.inc.php
 share/phpmyadmin/lang/japanese-euc.inc.php
 share/phpmyadmin/lang/japanese-sjis.inc.php
@@ -113,7 +119,9 @@ share/phpmyadmin/lang/persian-utf-8.inc.php
 share/phpmyadmin/lang/persian-windows-1256.inc.php
 share/phpmyadmin/lang/polish-iso-8859-2.inc.php
 share/phpmyadmin/lang/polish-utf-8.inc.php
+share/phpmyadmin/lang/polish-windows-1250.inc.php
 share/phpmyadmin/lang/portuguese-iso-8859-1.inc.php
+share/phpmyadmin/lang/portuguese-iso-8859-15.inc.php
 share/phpmyadmin/lang/portuguese-utf-8.inc.php
 share/phpmyadmin/lang/romanian-iso-8859-1.inc.php
 share/phpmyadmin/lang/romanian-utf-8.inc.php
@@ -132,6 +140,7 @@ share/phpmyadmin/lang/slovenian-iso-8859-2.inc.php
 share/phpmyadmin/lang/slovenian-utf-8.inc.php
 share/phpmyadmin/lang/slovenian-windows-1250.inc.php
 share/phpmyadmin/lang/spanish-iso-8859-1.inc.php
+share/phpmyadmin/lang/spanish-iso-8859-15.inc.php
 share/phpmyadmin/lang/spanish-utf-8.inc.php
 share/phpmyadmin/lang/swedish-iso-8859-1.inc.php
 share/phpmyadmin/lang/swedish-utf-8.inc.php
@@ -165,6 +174,8 @@ share/phpmyadmin/libraries/display_tbl.lib.php
 share/phpmyadmin/libraries/display_tbl_links.lib.php
 share/phpmyadmin/libraries/dom-drag.js
 share/phpmyadmin/libraries/export/csv.php
+share/phpmyadmin/libraries/export/htmlexcel.php
+share/phpmyadmin/libraries/export/htmlword.php
 share/phpmyadmin/libraries/export/latex.php
 share/phpmyadmin/libraries/export/sql.php
 share/phpmyadmin/libraries/export/xls.php
@@ -197,6 +208,7 @@ share/phpmyadmin/libraries/grab_globals.lib.php
 share/phpmyadmin/libraries/header_http.inc.php
 share/phpmyadmin/libraries/header_meta_style.inc.php
 share/phpmyadmin/libraries/indexes.js
+share/phpmyadmin/libraries/information_schema_relations.lib.php
 share/phpmyadmin/libraries/ip_allow_deny.lib.php
 share/phpmyadmin/libraries/kanji-encoding.lib.php
 share/phpmyadmin/libraries/keyhandler.js
@@ -215,10 +227,12 @@ share/phpmyadmin/libraries/sqlparser.data.php
 share/phpmyadmin/libraries/sqlparser.lib.php
 share/phpmyadmin/libraries/sqlvalidator.class.php
 share/phpmyadmin/libraries/sqlvalidator.lib.php
+share/phpmyadmin/libraries/storage_engines.lib.php
 share/phpmyadmin/libraries/string.lib.php
 share/phpmyadmin/libraries/tbl_change.js
 share/phpmyadmin/libraries/tbl_indexes.lib.php
 share/phpmyadmin/libraries/tbl_move_copy.php
+share/phpmyadmin/libraries/tooltip.js
 share/phpmyadmin/libraries/transformations.lib.php
 share/phpmyadmin/libraries/transformations/README
 share/phpmyadmin/libraries/transformations/TEMPLATE
@@ -254,6 +268,7 @@ share/phpmyadmin/server_binlog.php
 share/phpmyadmin/server_collations.php
 share/phpmyadmin/server_common.inc.php
 share/phpmyadmin/server_databases.php
+share/phpmyadmin/server_engines.php
 share/phpmyadmin/server_export.php
 share/phpmyadmin/server_links.inc.php
 share/phpmyadmin/server_privileges.php
@@ -281,7 +296,7 @@ share/phpmyadmin/tbl_relation.php
 share/phpmyadmin/tbl_rename.php
 share/phpmyadmin/tbl_replace.php
 share/phpmyadmin/tbl_replace_fields.php
-share/phpmyadmin/tbl_row_delete.php
+share/phpmyadmin/tbl_row_action.php
 share/phpmyadmin/tbl_select.php
 share/phpmyadmin/themes.php
 share/phpmyadmin/themes/darkblue_orange/css/theme_left.css.php
@@ -301,6 +316,7 @@ share/phpmyadmin/themes/darkblue_orange/img/b_docsql.png
 share/phpmyadmin/themes/darkblue_orange/img/b_drop.png
 share/phpmyadmin/themes/darkblue_orange/img/b_edit.png
 share/phpmyadmin/themes/darkblue_orange/img/b_empty.png
+share/phpmyadmin/themes/darkblue_orange/img/b_engine.png
 share/phpmyadmin/themes/darkblue_orange/img/b_export.png
 share/phpmyadmin/themes/darkblue_orange/img/b_firstpage.png
 share/phpmyadmin/themes/darkblue_orange/img/b_ftext.png
@@ -344,11 +360,15 @@ share/phpmyadmin/themes/darkblue_orange/img/b_usrdrop.png
 share/phpmyadmin/themes/darkblue_orange/img/b_usredit.png
 share/phpmyadmin/themes/darkblue_orange/img/b_usrlist.png
 share/phpmyadmin/themes/darkblue_orange/img/b_view.png
+share/phpmyadmin/themes/darkblue_orange/img/b_views.png
 share/phpmyadmin/themes/darkblue_orange/img/bd_browse.png
+share/phpmyadmin/themes/darkblue_orange/img/bd_deltbl.png
+share/phpmyadmin/themes/darkblue_orange/img/bd_drop.png
 share/phpmyadmin/themes/darkblue_orange/img/bd_empty.png
 share/phpmyadmin/themes/darkblue_orange/img/bd_firstpage.png
 share/phpmyadmin/themes/darkblue_orange/img/bd_ftext.png
 share/phpmyadmin/themes/darkblue_orange/img/bd_index.png
+share/phpmyadmin/themes/darkblue_orange/img/bd_insrow.png
 share/phpmyadmin/themes/darkblue_orange/img/bd_lastpage.png
 share/phpmyadmin/themes/darkblue_orange/img/bd_nextpage.png
 share/phpmyadmin/themes/darkblue_orange/img/bd_prevpage.png
@@ -396,6 +416,7 @@ share/phpmyadmin/themes/darkblue_orange/img/s_status.png
 share/phpmyadmin/themes/darkblue_orange/img/s_tbl.png
 share/phpmyadmin/themes/darkblue_orange/img/s_theme.png
 share/phpmyadmin/themes/darkblue_orange/img/s_vars.png
+share/phpmyadmin/themes/darkblue_orange/img/s_views.png
 share/phpmyadmin/themes/darkblue_orange/img/s_warn.png
 share/phpmyadmin/themes/darkblue_orange/img/spacer.png
 share/phpmyadmin/themes/darkblue_orange/img/tbl_error.png
@@ -422,6 +443,7 @@ share/phpmyadmin/themes/original/img/b_docsql.png
 share/phpmyadmin/themes/original/img/b_drop.png
 share/phpmyadmin/themes/original/img/b_edit.png
 share/phpmyadmin/themes/original/img/b_empty.png
+share/phpmyadmin/themes/original/img/b_engine.png
 share/phpmyadmin/themes/original/img/b_export.png
 share/phpmyadmin/themes/original/img/b_firstpage.png
 share/phpmyadmin/themes/original/img/b_ftext.png
@@ -465,11 +487,15 @@ share/phpmyadmin/themes/original/img/b_usrdrop.png
 share/phpmyadmin/themes/original/img/b_usredit.png
 share/phpmyadmin/themes/original/img/b_usrlist.png
 share/phpmyadmin/themes/original/img/b_view.png
+share/phpmyadmin/themes/original/img/b_views.png
 share/phpmyadmin/themes/original/img/bd_browse.png
+share/phpmyadmin/themes/original/img/bd_deltbl.png
+share/phpmyadmin/themes/original/img/bd_drop.png
 share/phpmyadmin/themes/original/img/bd_empty.png
 share/phpmyadmin/themes/original/img/bd_firstpage.png
 share/phpmyadmin/themes/original/img/bd_ftext.png
 share/phpmyadmin/themes/original/img/bd_index.png
+share/phpmyadmin/themes/original/img/bd_insrow.png
 share/phpmyadmin/themes/original/img/bd_lastpage.png
 share/phpmyadmin/themes/original/img/bd_nextpage.png
 share/phpmyadmin/themes/original/img/bd_prevpage.png
@@ -517,6 +543,7 @@ share/phpmyadmin/themes/original/img/s_status.png
 share/phpmyadmin/themes/original/img/s_tbl.png
 share/phpmyadmin/themes/original/img/s_theme.png
 share/phpmyadmin/themes/original/img/s_vars.png
+share/phpmyadmin/themes/original/img/s_views.png
 share/phpmyadmin/themes/original/img/s_warn.png
 share/phpmyadmin/themes/original/img/spacer.png
 share/phpmyadmin/themes/original/img/tbl_error.png
