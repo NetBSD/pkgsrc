@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2003/09/11 15:48:24 taca Exp $
+$NetBSD: distinfo,v 1.38 2003/09/12 03:22:31 taca Exp $
 
 SHA1 (squid-2.5.3/squid-2.5.STABLE3.tar.bz2) = 37ceb0a65e9ac644e52ba29cd8bd0c296dca64cb
 Size (squid-2.5.3/squid-2.5.STABLE3.tar.bz2) = 1028081 bytes
@@ -86,8 +86,8 @@ SHA1 (squid-2.5.3/squid-2.5.STABLE3-POST-error.patch) = 79a383c870810d1dc5bd48a4
 Size (squid-2.5.3/squid-2.5.STABLE3-POST-error.patch) = 9828 bytes
 SHA1 (squid-2.5.3/squid-2.5.STABLE3-auth_delay_pools.patch) = e991189cbc21a6945f079b2544560c096f166159
 Size (squid-2.5.3/squid-2.5.STABLE3-auth_delay_pools.patch) = 1275 bytes
-SHA1 (squid-2.5.3/squid-2.5.STABLE3-http_reply_access_denied.patch) = bf7e5e3eea7328514f1c1a8101ea88f3d8c2cea2
-Size (squid-2.5.3/squid-2.5.STABLE3-http_reply_access_denied.patch) = 1181 bytes
+SHA1 (squid-2.5.3/squid-2.5.STABLE3-http_reply_access_denied.patch) = c1bb758ce585daae249e0ac4eaa48ea37b02c26b
+Size (squid-2.5.3/squid-2.5.STABLE3-http_reply_access_denied.patch) = 3268 bytes
 SHA1 (squid-2.5.3/squid-2.5.STABLE3-delay_access_auth.patch) = ad29242a43f492871958e83c17367fa67fbf0597
 Size (squid-2.5.3/squid-2.5.STABLE3-delay_access_auth.patch) = 5527 bytes
 SHA1 (squid-2.5.3/squid-2.5.STABLE3-external_acl_children.patch) = 15bb8c2f808ae679490dadba5506b30bf0d089dd
