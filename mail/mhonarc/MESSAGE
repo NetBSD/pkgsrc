@@ -1,0 +1,7 @@
+If you are upgrading from mhonarc 2.4.9 or earlier, please note
+the following changes
+
+* The HEADER and FOOTER resources are no longer supported
+
+* Data filters registered via MIMEFILTERS use a new API which
+  is not backward compatible with the previous API.
