@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/22 04:47:32 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2005/01/15 12:49:31 jmmv Exp $
 
 DISTNAME=		startup-notification-0.7
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/startup-notification/0.7/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		benedikt.meurer@unix-ag.uni-siegen.de
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		X11 application startup notification library
 
