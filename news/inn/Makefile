@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/10/20 17:31:44 veego Exp $
+# $NetBSD: Makefile,v 1.32 2002/04/20 18:18:50 cjep Exp $
 
 DISTNAME=		inn-2.3.2
 CATEGORIES=		news
@@ -45,6 +45,10 @@ CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--with-sendmail=/usr/lib/sendmail
 .else
 CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
+.endif
+
+.if (${MACHINE_ARCH} == arm32)
+.include "../../lang/gcc/Makefile.gcc"
 .endif
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
