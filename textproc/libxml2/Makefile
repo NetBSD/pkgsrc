@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/01/31 22:13:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.45 2004/02/01 10:28:48 jlam Exp $
 
 DISTNAME=	libxml2-${LIBXML_VERSION}
 CATEGORIES=	textproc
@@ -9,7 +9,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/
 COMMENT=	XML parser library from the GNOME project
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -39,8 +39,8 @@ TEST_TARGET=	check
 CFLAGS+=	-DXML_SGML_DEFAULT_CATALOG=\"\\\"${SGML_DEFAULT_CATALOG}\\\"\"
 CFLAGS+=	-DXML_XML_DEFAULT_CATALOG=\"\\\"${XML_DEFAULT_CATALOG}\\\"\"
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 
 .include "../../mk/bsd.pkg.mk"
