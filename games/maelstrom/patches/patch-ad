@@ -1,7 +1,20 @@
---- mixer.cpp.orig	Thu Jul 30 03:59:50 1998
-+++ mixer.cpp	Thu Jul 30 04:02:23 1998
-@@ -287,3 +287,3 @@
+--- mixer.cpp.orig	Thu Dec  5 14:14:44 1996
++++ mixer.cpp	Sun Aug  2 20:07:14 1998
+@@ -285,7 +285,7 @@
+ 	/* This is necessary so that the sound server stays in sync */
+ 	long flags;
  	flags = fcntl(dsp_fd, F_GETFL, 0);
 -	flags |= O_SYNC;
 +/*	flags |= O_SYNC;*/
  	(void) fcntl(dsp_fd, F_SETFL, flags);
+ 
+ 	return(0);
+@@ -539,7 +539,7 @@
+ 			error("Mixer::Play: ALwritesamps (Play) failed!\n");
+ 		}
+ #else  /* Normal device write */
+-#ifdef sparc
++#if defined(sparc) && !defined(__NetBSD__)
+ 	drain_it:
+ 		if ( ioctl(dsp_fd, AUDIO_DRAIN, 0) < 0 ) {
+ 			if ( errno == EINTR )
