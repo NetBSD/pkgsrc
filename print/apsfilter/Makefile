@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:35 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/10 06:53:02 martti Exp $
 #
 
-DISTNAME=	apsfilter-6.1.1
+DISTNAME=	apsfilter-7.1.1
 CATEGORIES=	print
 MASTER_SITES=	http://www.apsfilter.org/download/
 
@@ -22,16 +22,20 @@ DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
 
 WRKSRC=		${WRKDIR}/apsfilter
 
+HAS_CONFIGURE=	YES
 USE_BZIP2=	YES
 
+CONFIGURE_ARGS+=--prefix=${LOCALBASE}
+CONFIGURE_ARGS+=--with-shell=${SH}
+
 post-patch:
-	for i in bin/apsfilter SETUP tools/prtmgmt; do				\
-		${SED} "s,/usr/local,${LOCALBASE},g" ${WRKSRC}/$$i		\
-			> ${WRKSRC}/$$i.done;					\
-		${MV} ${WRKSRC}/$$i.done ${WRKSRC}/$$i;				\
+	for i in bin/apsfilter.in SETUP.in tools/prtmgmt; do		\
+		${SED} "s,/usr/local,${LOCALBASE},g" ${WRKSRC}/$$i	\
+			> ${WRKSRC}/$$i.done;				\
+		${MV} ${WRKSRC}/$$i.done ${WRKSRC}/$$i;			\
 	done
 
-	${SED} "s,@LOCALBASE@,${LOCALBASE},g" ${PKGDIR}/DEINSTALL		\
+	${SED} "s,@LOCALBASE@,${LOCALBASE},g" ${PKGDIR}/DEINSTALL	\
 		> ${DEINSTALL_FILE}
 
 .include "../../mk/bsd.pkg.mk"
