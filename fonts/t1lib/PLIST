@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/12 12:46:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/03/03 11:28:11 adam Exp $
 bin/type1afm
 bin/xglyph
 include/t1lib.h
@@ -6,13 +6,13 @@ include/t1libx.h
 lib/libt1.a
 lib/libt1.la
 lib/libt1.so
-lib/libt1.so.4
-lib/libt1.so.4.1
+lib/libt1.so.5
+lib/libt1.so.5.1
 lib/libt1x.a
 lib/libt1x.la
 lib/libt1x.so
-lib/libt1x.so.4
-lib/libt1x.so.4.1
+lib/libt1x.so.5
+lib/libt1x.so.5.1
 share/doc/${PKGBASE}/Makefile
 share/doc/${PKGBASE}/Makefile.in
 share/doc/${PKGBASE}/Tee.eps
