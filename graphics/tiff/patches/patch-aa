@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1998/08/07 10:40:53 agc Exp $
+$NetBSD: patch-aa,v 1.6 1999/03/31 10:00:07 agc Exp $
 
 --- man/Makefile.in.orig	Tue Sep  2 19:54:41 1997
 +++ man/Makefile.in	Sun Jul  5 04:33:47 1998
@@ -125,7 +125,7 @@ $NetBSD: patch-aa,v 1.5 1998/08/07 10:40:53 agc Exp $
  
  #
  # System-specific manual page formatting commands should
-@@ -268,91 +268,84 @@
+@@ -268,91 +268,86 @@
  lib/TIFFswab.3t::	${SRCDIR}/TIFFswab.3t;			${MANCVT}
  lib/TIFFtile.3t::	${SRCDIR}/TIFFtile.3t;			${MANCVT}
  
@@ -281,7 +281,9 @@ $NetBSD: patch-aa,v 1.5 1998/08/07 10:40:53 agc Exp $
 +	   ${INSTALL_MAN} $$FILE ${PREFIX}/man/man3/`basename $$FILE .3t`.3; \
 +	 done; \
 +	 for FILE in *.3l; do \
-+	   ${LN} -s `cat $$FILE` ${PREFIX}/man/man3/`basename $$FILE .3l`.3; \
++	   linkname=${PREFIX}/man/man3/`basename $$FILE .3l`.3; \
++	   rm -f $$linkname; \
++	   ${LN} -s `cat $$FILE` $$linkname; \
 +	 done)
  
  clean:
