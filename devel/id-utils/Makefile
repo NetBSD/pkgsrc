@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/06/02 01:20:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.31 2003/06/23 11:14:40 seb Exp $
 # FreeBSD Id: Makefile,v 1.4 1996/11/18 10:22:47 asami Exp
 #
 
@@ -18,6 +18,7 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	id-utils.info
 GNU_CONFIGURE=	yes
 
@@ -54,5 +55,4 @@ PLIST_SUBST+=		LISPDIR=${LISPDIR}
 PLIST_SUBST+=		CLISPDIR=${CLISPDIR}
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
