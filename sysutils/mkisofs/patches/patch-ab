@@ -1,0 +1,38 @@
+*** eltorito.c.orig	Sat Mar 29 22:44:34 1997
+--- eltorito.c	Sat Mar 29 22:45:12 1997
+***************
+*** 28,34 ****
+  #include <sys/stat.h>
+  #include <unistd.h>
+  #include <fcntl.h>
+! #include <malloc.h>
+  
+  #include "mkisofs.h"
+  #include "iso9660.h"
+--- 28,34 ----
+  #include <sys/stat.h>
+  #include <unistd.h>
+  #include <fcntl.h>
+! #include <stdlib.h>
+  
+  #include "mkisofs.h"
+  #include "iso9660.h"
+--- ./mkisofs.h.org	Wed Dec 20 08:56:02 1995
++++ ./mkisofs.h	Thu Apr 24 15:25:31 1997
+@@ -34,6 +34,8 @@
+ #define NON_UNIXFS
+ #endif
+ 
++#include <sys/types.h>
++
+ #ifdef VMS
+ #include <sys/dir.h>
+ #define dirent direct
+@@ -42,7 +44,6 @@
+ #endif
+ 
+ #include <string.h>
+-#include <sys/types.h>
+ #include <sys/stat.h>
+ 
+ #ifdef linux
