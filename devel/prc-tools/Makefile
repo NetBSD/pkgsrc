@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/05/11 11:13:21 dillo Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/27 05:07:33 jlam Exp $
 #
+
+.include "Makefile.common"
 
 COMMENT=	GNU tool chain for Palm cross development
 
@@ -18,4 +20,4 @@ NO_BUILD=       yes
 
 do-install:     # empty
 
-.include "Makefile.common"
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/06/27 05:07:34 jlam Exp $
 #
 
 DISTNAME=	prc-tools-${PRC_TOOLS_VERS}
@@ -27,5 +27,3 @@ post-extract:
 	cd ${WRKDIR} && ${PATCH} --quiet -p0 < ${WRKSRC}/${DIFF_FILE}
 	${LN} -s ../${BASE_DIST}-${BASE_VERS} ${WRKSRC}/${BASE_DIST}
 .endif
-
-.include "../../mk/bsd.pkg.mk"

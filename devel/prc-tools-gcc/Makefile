@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2001/04/30 15:26:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/27 05:07:34 jlam Exp $
 #
 
+.include "../../devel/prc-tools/Makefile.common"
+
 PKGNAME=	prc-tools-gcc-${PRC_TOOLS_VERS}
+COMMENT=	gcc for GNU tool chain for Palm cross development
 
 BASE_DIST=	gcc
 BASE_VERS=	2.95.2
 
-DEPENDS+=	prc-tools-binutils>=2.0:../../devel/prc-tools-binutils
 BUILD_DEPENDS+=	autoconf-*:../../devel/autoconf
-
-COMMENT=	gcc for GNU tool chain for Palm cross development
+DEPENDS+=	prc-tools-binutils>=2.0:../../devel/prc-tools-binutils
 
 ALL_TARGET=	all-gcc
 INSTALL_TARGET=	install-gcc
@@ -17,4 +18,4 @@ INSTALL_TARGET=	install-gcc
 post-install:
 	@${RMDIR} ${PREFIX}/m68k-palmos/include
 
-.include "../../devel/prc-tools/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
