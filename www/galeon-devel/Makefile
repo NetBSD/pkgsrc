@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/30 23:40:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/31 11:36:24 jmmv Exp $
 #
 
 DISTNAME=	galeon-1.3.14a
@@ -47,6 +47,7 @@ SUBST_MESSAGE.glib2=	    "Fixing g_value_take_string."
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
