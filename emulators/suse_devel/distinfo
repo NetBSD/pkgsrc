@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/11/25 11:01:14 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2003/05/30 15:35:20 taca Exp $
 
 SHA1 (suse73/i386/bin86.rpm) = e2bd8a0fd6047d8117ad504f23b351543f60550c
 Size (suse73/i386/bin86.rpm) = 56414 bytes
@@ -10,8 +10,8 @@ SHA1 (suse73/i386/g77.rpm) = c5fbff79841885def0df62e6b9bd4f26dd487204
 Size (suse73/i386/g77.rpm) = 1414553 bytes
 SHA1 (suse73/i386/gcc.rpm) = 81dc3338215b73734e7f25ce415ded84854f717b
 Size (suse73/i386/gcc.rpm) = 1096718 bytes
-SHA1 (suse73/i386/glibc-devel-2.2.4-77.i386.rpm) = a157a5937924676fc51345364e77af8f2e0a9ece
-Size (suse73/i386/glibc-devel-2.2.4-77.i386.rpm) = 10943727 bytes
+SHA1 (suse73/i386/glibc-devel-2.2.4-78.i386.rpm) = ce940bdc4689378bafbc6da23aff349eebce6549
+Size (suse73/i386/glibc-devel-2.2.4-78.i386.rpm) = 10943226 bytes
 SHA1 (suse73/i386/gpp.rpm) = 3aedcc1f142ed2a7c8aba9eb2d3a52d2e055a139
 Size (suse73/i386/gpp.rpm) = 1075234 bytes
 SHA1 (suse73/i386/make.rpm) = d6ce792a7293996363bc55869f20029176ecb18a
@@ -28,5 +28,5 @@ SHA1 (suse73/ppc/gpp.rpm) = 0a1fd39cf403792c23d633ef7a5904c6cf677912
 Size (suse73/ppc/gpp.rpm) = 1299844 bytes
 SHA1 (suse73/ppc/make.rpm) = 1d103d5a704c8876004745b01f459df77495e541
 Size (suse73/ppc/make.rpm) = 203280 bytes
-SHA1 (suse73/ppc/glibc-devel-2.2.4-66.ppc.rpm) = 7b737a704efd6a5c6067cb82972986d15b0cca68
-Size (suse73/ppc/glibc-devel-2.2.4-66.ppc.rpm) = 11791070 bytes
+SHA1 (suse73/ppc/glibc-devel-2.2.4-69.ppc.rpm) = 39026e9509b99fcdab9fe2b53ebe1288248fc035
+Size (suse73/ppc/glibc-devel-2.2.4-69.ppc.rpm) = 11792713 bytes
