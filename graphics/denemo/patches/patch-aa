@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 17:45:41 rh Exp $
+
+--- easylyparser.c.orig	Fri Aug 11 03:59:45 2000
++++ easylyparser.c
+@@ -38,7 +38,9 @@
+ #line 8 "easylyparser.y"
+ 
+ #include <stdio.h>
++#define setkey des_setkey
+ #include <stdlib.h>
++#undef setkey
+ #include "calculatepositions.h"
+ #include "chordops.h"
+ #include "contexts.h"

@@ -1,0 +1,4 @@
+  Denemo is a GUI musical score editor written in C/gtk+.  It is intended
+primarily as a frontend to GNU Lilypond, but is adaptable to other
+computer-music-related purposes as well.  Though its behavior and features
+will no doubt continue to be refined, it is already perfectly usable. 

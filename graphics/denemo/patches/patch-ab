@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/10/15 17:45:41 rh Exp $
+
+--- playback.c.orig	Fri Jul 28 03:02:54 2000
++++ playback.c
+@@ -18,7 +18,7 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <sys/types.h>
+-#include <wait.h>
++#include <sys/wait.h>
+ #include <errno.h>
+ 
+ extern char **environ;		/* I don't know why this is here. Hiller 19 Apr 2000 */
