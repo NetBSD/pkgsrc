@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/10 21:37:05 veego Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/10 22:17:35 jtb Exp $
 
 DISTNAME=	tochnog-20010210
 CATEGORIES=	math
@@ -15,7 +15,7 @@ MAKEFILE=	makefile
 ALL_TARGET=	netbsd
 
 post-patch:
-	@${RM} -f ${WRKDIR}/test/*.orig ${WRKDIR}/tools/*.bat
+	@${RM} -f ${WRKDIR}/tochnog/test/*.orig ${WRKDIR}/tochnog/tools/*.bat
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tochnog ${PREFIX}/bin
