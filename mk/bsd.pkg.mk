@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.528 2000/08/01 01:00:16 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.529 2000/08/01 02:16:58 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -185,7 +185,7 @@ DEPENDS+=		gtexinfo-3.12:../../devel/gtexinfo
 LIBTOOL=		${LOCALBASE}/bin/libtool
 # XXX: actually, here we would need something like
 # BUILD_DEPENDS+=libtool>1.3.5nb3:../../devel/libtool
-.if make(misc-depends)
+.if make(run-depends)
 DEPENDS+=		libtool>1.3.5nb3:../../devel/libtool
 .endif
 .elif defined(USE_PKGLIBTOOL)
@@ -1031,12 +1031,10 @@ all: build
 .if !defined(DEPENDS_TARGET)
 .if make(package)
 DEPENDS_TARGET=	package
-.else
-.if make(update)
+.elif make(update)
 DEPENDS_TARGET=	install
 .else
 DEPENDS_TARGET=	reinstall
-.endif
 .endif
 .endif
 
@@ -1504,7 +1502,7 @@ PLIST_SRC=
 
 _PORT_USE: .USE
 .if make(real-extract)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} build-depends misc-depends DEPENDS_TARGET=${DEPENDS_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} build-depends run-depends DEPENDS_TARGET=${DEPENDS_TARGET}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKEFLAGS} ${.TARGET:S/^real-/pre-/}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${SCRIPTDIR}/${.TARGET:S/^real-/pre-/} ]; then		\
@@ -1564,7 +1562,6 @@ root-install:
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
 		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
 	fi
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} run-depends
 .if !defined(NO_MTREE)
 	${_PKG_SILENT}${_PKG_DEBUG}if [ `${ID} -u` = 0 ]; then		\
 		if [ ! -f ${MTREE_FILE} ]; then				\
@@ -2092,7 +2089,7 @@ pre-clean:
 
 .if !target(clean)
 clean: pre-clean
-.if (${CLEANDEPENDS} != "NO") && (defined(BUILD_DEPENDS) || defined(DEPENDS) || defined(RUN_DEPENDS))
+.if (${CLEANDEPENDS} != "NO") && (defined(BUILD_DEPENDS) || defined(DEPENDS))
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} clean-depends
 .endif
 	@${ECHO_MSG} "${_PKGSRC_IN}> Cleaning for ${PKGNAME}"
@@ -2120,7 +2117,7 @@ clean: pre-clean
 
 .if !target(clean-depends)
 clean-depends:
-.if defined(BUILD_DEPENDS) || defined(DEPENDS) || defined(RUN_DEPENDS)
+.if defined(BUILD_DEPENDS) || defined(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in `${MAKE} ${MAKEFLAGS} CLEAN_DEPENDS_LIST_TOP=YES clean-depends-list | ${SED} -e 's;\.\./[^ ]*; ;g' | ${TR} -s "[:space:]" "\n" | sort -u` ;\
 	do 								\
@@ -2132,7 +2129,7 @@ clean-depends:
 
 
 # The clean-depends-list target will produce a list of all 
-# BUILD_DEPENDS, RUN_DEPENDS, and DEPENDS packages.  
+# BUILD_DEPENDS and DEPENDS packages.  
 # As each *DEPENDS package is visited, it is added to the 
 # CLEAN_DEPENDS_LIST_SEEN variable.  Once a pkg is in the list
 # it will not be visited again.  This prevents traversing the same
@@ -2146,10 +2143,9 @@ clean-depends:
 
 .if !target(clean-depends-list)
 clean-depends-list:
-.if defined(BUILD_DEPENDS) || defined(DEPENDS) || defined(RUN_DEPENDS)
+.if defined(BUILD_DEPENDS) || defined(DEPENDS)
 	@for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//}	\
-			${DEPENDS:C/^[^:]*://:C/:.*//}			\
-			${RUN_DEPENDS:C/^[^:]*://:C/:.*//} |		\
+			${DEPENDS:C/^[^:]*://:C/:.*//} |		\
 			${TR} '\040' '\012' `; do			\
 		case "$$CLEAN_DEPENDS_LIST_SEEN" in			\
 		*" "$$dir" "*)  ;; 					\
@@ -2217,8 +2213,7 @@ fetch-list-recursive:
 .if ${RECURSIVE_FETCH_LIST} != "NO"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//}	\
-				  ${DEPENDS:C/^[^:]*://:C/:.*//}	\
-			      ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} |	\
+				  ${DEPENDS:C/^[^:]*://:C/:.*//} |	\
 		    ${TR} '\040' '\012' | sort -u` ; do			\
 		cd ${.CURDIR}/$$dir &&					\
 		${MAKE} ${MAKEFLAGS} fetch-list-recursive;		\
@@ -2445,22 +2440,6 @@ package-depends:
 		fi;							\
 	fi
 .endfor
-.for dep in ${RUN_DEPENDS}
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	file="${dep:C/:.*//}";						\
-	dir="${dep:C/[^:]*://}";					\
-	cd ${.CURDIR};							\
-	if cd $$dir 2>/dev/null; then					\
-		${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
-		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
-			${PKG_INFO} -qf "$$file" | ${AWK} '/^@pkgdep/ {print $$2}'; \
-		else 							\
-			${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
-		fi ; 							\
-	else								\
-		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
-	fi
-.endfor
 .endif # target(package-depends)
 
 # Build a package but don't check the package cookie
@@ -2485,28 +2464,18 @@ package-noinstall:
 ################################################################
 
 .if !target(depends)
-depends: misc-depends
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} build-depends
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} run-depends
+depends: run-depends build-depends
 
-.if make(build-depends)
-DEPENDS_TMP+=	${BUILD_DEPENDS}
-.endif
-
-.if make(run-depends)
-DEPENDS_TMP+=	${RUN_DEPENDS}
-.endif
-
-_DEPENDS_USE:
-.if defined(DEPENDS_TMP)
+build-depends:
+.if defined(BUILD_DEPENDS)
 .if !defined(NO_DEPENDS)
-.for dep in ${DEPENDS_TMP}
+.for dep in ${BUILD_DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	prog="${dep:C/:.*//}";						\
 	dir="${dep:C/^[^:]*://:C/:.*$//}";				\
-	if [ ${_DEPENDS_TARGET_OVERRIDE}X != X ]; then			\
+	if [ "${_DEPENDS_TARGET_OVERRIDE}" != "" ]; then		\
 		target=${DEPENDS_TARGET};				\
-	elif [ "${dep:M*\:*\:*}X" != X ]; then				\
+	elif [ "${dep:M*\:*\:*}" != "" ]; then				\
 		target="${dep:C/^[^:]*:[^:]*://}";			\
 	else								\
 		target=${DEPENDS_TARGET};				\
@@ -2528,7 +2497,7 @@ _DEPENDS_USE:
 		done;							\
 		${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} depends on executable: $$prog - $$found found"; \
 	fi;								\
-	if [ X"$$found" = Xnot ]; then					\
+	if [ "$$found" = "not" ]; then					\
 		${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$prog in $$dir"; \
 		if [ ! -d "$$dir" ]; then				\
 			${ECHO_MSG} "=> No directory for $$prog.  Skipping.."; \
@@ -2538,20 +2507,17 @@ _DEPENDS_USE:
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
-.endfor
-.endif
-.else
+.endfor	# BUILD_DEPENDS
+.endif	# !NO_DEPENDS
+.else	# !BUILD_DEPENDS
 	@${DO_NADA}
-.endif
-
-build-depends:	_DEPENDS_USE
-run-depends:	_DEPENDS_USE
+.endif	# BUILD_DEPENDS
 
 # Tells whether to halt execution if the object formats differ
 FATAL_OBJECT_FMT_SKEW?= yes
 WARN_NO_OBJECT_FMT?= yes
 
-misc-depends: uptodate-pkgtools
+run-depends: uptodate-pkgtools
 .if defined(DEPENDS)
 .if !defined(NO_DEPENDS)
 .for dep in ${DEPENDS}
@@ -2592,9 +2558,9 @@ misc-depends: uptodate-pkgtools
 			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
 		fi;							\
 	fi
-.endfor
+.endfor	# DEPENDS
 .endif	# !NO_DEPENDS
-.else
+.else	# !DEPENDS
 	@${DO_NADA}
 .endif	# DEPENDS
 
@@ -2603,10 +2569,10 @@ misc-depends: uptodate-pkgtools
 real-fetch: check-depends
 .if !target(check-depends)
 check-depends:
-.if (defined(DEPENDS) || defined(BUILD_DEPENDS) || defined(RUN_DEPENDS)) && \
+.if (defined(DEPENDS) || defined(BUILD_DEPENDS)) && \
     !defined(NO_DEPENDS) && !defined(NO_CHECK_DEPENDS) && !exists(${EXTRACT_COOKIE})
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}> Validating dependencies for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}\
+	${ECHO_MSG} "${_PKGSRC_IN}> Validating dependencies for ${PKGNAME}" ; \
 	${MAKE} ${MAKEFLAGS} DEPENDS_TARGET=check-depends ECHO_MSG=${TRUE:Q} IGNORE_FAIL=1 _DEPENDS_TARGET_OVERRIDE=1 depends || \
 		(${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} cannot build necessary dependencies."; ${FALSE})
 .endif
@@ -2708,10 +2674,9 @@ describe:
 		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} depends-list|sort -u`;; \
 	esac;								\
 	${ECHO} -n "|";							\
-	case "A${RUN_DEPENDS}B${DEPENDS}C" in				\
-		ABC) ;;							\
+	if [ "${DEPENDS}" != "" ]; then				\
 		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} ${MAKEFLAGS} package-depends|sort -u`;; \
-	esac;								\
+	fi;								\
 	${ECHO} -n "|";							\
 	if [ "${ONLY_FOR_ARCHS}" = "" ]; then				\
 		${ECHO} -n "any";					\
@@ -2815,7 +2780,7 @@ print-depends-list:
 
 .if !target(print-package-depends)
 print-package-depends:
-.if defined(RUN_DEPENDS) || defined(DEPENDS)
+.if defined(DEPENDS)
 	@${ECHO} -n 'This package requires package(s) "'
 	@${ECHO} -n "`${MAKE} ${MAKEFLAGS} package-depends | sort -u`"
 	@${ECHO} '" to run.'
@@ -2998,7 +2963,8 @@ fake-pkg: ${PLIST} ${DESCR}
 .ifdef USE_GMAKE
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
-	@${ECHO} "_PKGTOOLS_VER= ${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	${ECHO} "_PKGTOOLS_VER=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
 	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
@@ -3163,7 +3129,7 @@ ${DESCR}: ${DESCR_SRC}
 
 #
 # For bulk build targets (bulk-install, bulk-package), the
-# BATCH variabole must be set in /etc/mk.conf:
+# BATCH variable must be set in /etc/mk.conf:
 #
 .if defined(BATCH)
 .include "../../mk/bulk/bsd.bulk-pkg.mk"
