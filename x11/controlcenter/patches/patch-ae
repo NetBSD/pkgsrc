@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2002/03/23 04:54:14 fredb Exp $
+
+--- capplets/theme-switcher/main.c.orig	Wed Nov  8 23:11:22 2000
++++ capplets/theme-switcher/main.c
+@@ -4,6 +4,10 @@
+ #include <locale.h>
+ #include "da.h"
+ 
++#ifdef HAVE_SYS_WAIT_H
++#include <sys/wait.h>
++#endif
++
+ #define THEME_SWITCHER_VERSION "0.1"
+ 
+ int
