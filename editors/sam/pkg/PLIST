@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 1999/04/04 16:58:24 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/04/28 01:15:20 jtb Exp $
 bin/sam
 bin/samterm
 bin/samsave
 bin/B
+lib/X11/app-defaults/Sam
 man/man1/sam.1.gz
 man/man3/add.3.gz
 man/man3/balloc.3.gz
