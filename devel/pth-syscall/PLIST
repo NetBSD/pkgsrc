@@ -1,33 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1 2002/05/29 08:19:58 skrll Exp $
-bin/pth-config
-bin/pthread-config
-include/pth.h
-include/pthread.h
-lib/libpth.a
-lib/libpth.la
-lib/libpth.so
-lib/libpth.so.${PTH_MAJOR}
-lib/libpth.so.${PTH_MAJOR}.${PTH_MINOR}
-lib/libpthread.a
-lib/libpthread.la
-lib/libpthread.so
-lib/libpthread.so.${PTH_MAJOR}
-lib/libpthread.so.${PTH_MAJOR}.${PTH_MINOR}
-man/man1/pth-config.1
-man/man1/pthread-config.1
-man/man3/pth.3
-man/man3/pthread.3
-share/aclocal/pth.m4
-share/doc/pth/ANNOUNCE
-share/doc/pth/AUTHORS
-share/doc/pth/COPYING
-share/doc/pth/HACKING
-share/doc/pth/NEWS
-share/doc/pth/README
-share/doc/pth/SUPPORT
-share/doc/pth/TESTS
-share/doc/pth/THANKS
-share/doc/pth/USERS
-share/doc/pth/pthread.ps
-share/doc/pth/rse-pmt.ps
-@dirrm share/doc/pth
+@comment $NetBSD: PLIST,v 1.2 2002/07/18 11:22:01 agc Exp $
+pth-syscall/bin/pth-config
+pth-syscall/bin/pthread-config
+pth-syscall/include/pth.h
+pth-syscall/include/pthread.h
+pth-syscall/lib/libpth.a
+pth-syscall/lib/libpth.la
+pth-syscall/lib/libpth.so
+pth-syscall/lib/libpth.so.${PTH_MAJOR}
+pth-syscall/lib/libpth.so.${PTH_MAJOR}.${PTH_MINOR}
+pth-syscall/lib/libpthread.a
+pth-syscall/lib/libpthread.la
+pth-syscall/lib/libpthread.so
+pth-syscall/lib/libpthread.so.${PTH_MAJOR}
+pth-syscall/lib/libpthread.so.${PTH_MAJOR}.${PTH_MINOR}
+pth-syscall/man/man1/pth-config.1
+pth-syscall/man/man1/pthread-config.1
+pth-syscall/man/man3/pth.3
+pth-syscall/man/man3/pthread.3
+pth-syscall/share/aclocal/pth.m4
+@dirrm pth-syscall/share/aclocal
+@dirrm pth-syscall/share
+@dirrm pth-syscall/man/man3
+@dirrm pth-syscall/man/man1
+@dirrm pth-syscall/man
+@dirrm pth-syscall/lib
+@dirrm pth-syscall/include
+@dirrm pth-syscall/bin
+@dirrm pth-syscall
