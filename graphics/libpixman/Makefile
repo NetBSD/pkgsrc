@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/07/03 23:00:36 recht Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:14:55 tv Exp $
 #
 
 DISTNAME=	libpixman-0.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/05/07 01:14:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:10 tv Exp $
 #
 
 DISTNAME=		ubs-0.17
+PKGREVISION=	1
 CATEGORIES=		audio
 MASTER_SITES=		http://aboleo.net/software/ubs/downloads/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 15:23:46 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:18:25 tv Exp $
 
 DISTNAME=	cgicc-3.1.5
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=cgicc/}
 

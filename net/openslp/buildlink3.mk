@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/03/05 19:25:38 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:17:57 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSLP_BUILDLINK3_MK:=	${OPENSLP_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	openslp
 
 .if !empty(OPENSLP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.openslp+=	openslp>=1.0.1
+BUILDLINK_RECOMMENDED.openslp+=	openslp>=1.0.11nb1
 BUILDLINK_PKGSRCDIR.openslp?=	../../net/openslp
 .endif	# OPENSLP_BUILDLINK3_MK
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/09/30 09:38:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:12:56 tv Exp $
 #
 
 DISTNAME=		gtklife-4.1
+PKGREVISION=	1
 CATEGORIES=		math
 MASTER_SITES=		http://www.igs.net/~tril/gtklife/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/03 00:59:03 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:17:57 tv Exp $
 #
 
 DISTNAME=	Geo-IP-1.21
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Geo/}
 

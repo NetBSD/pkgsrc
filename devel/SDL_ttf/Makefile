@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2004/04/27 15:13:30 adam Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/03 00:13:24 tv Exp $
 #
 
 DISTNAME=	SDL_ttf-2.0.6
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_ttf/release/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/07/04 13:50:29 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:27 tv Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.4.
 # XXX After this file as been verified as correct, the comment lines
@@ -22,6 +22,7 @@ BUILDLINK_PACKAGES+=	gconfmm26
 
 .if !empty(GCONFMM26_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gconfmm26+=	gconfmm26>=2.6.1
+BUILDLINK_RECOMMENDED.gconfmm26+=	gconfmm26>=2.6.1nb1
 BUILDLINK_PKGSRCDIR.gconfmm26?=	../../devel/gconfmm26
 .endif	# GCONFMM26_BUILDLINK3_MK
 

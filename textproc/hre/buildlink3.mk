@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2004/08/12 03:38:11 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:19 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HRE_BUILDLINK3_MK:=	${HRE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	hre
 
 .if !empty(HRE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.hre+=		hre>=0.9.7
+BUILDLINK_RECOMMENDED.hre+=	hre>=0.9.8anb1
 BUILDLINK_PKGSRCDIR.hre?=	../../textproc/hre
 .endif	# HRE_BUILDLINK3_MK
 

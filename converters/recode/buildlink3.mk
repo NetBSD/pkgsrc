@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/12 01:50:32 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:17 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RECODE_BUILDLINK3_MK:=	${RECODE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	recode
 
 .if !empty(RECODE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.recode+=	recode>=3.6nb1
+BUILDLINK_RECOMMENDED.recode+=	recode>=3.6nb2
 BUILDLINK_PKGSRCDIR.recode?=	../../converters/recode
 .endif	# RECODE_BUILDLINK3_MK
 

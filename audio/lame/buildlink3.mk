@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:13:06 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LAME_BUILDLINK3_MK:=	${LAME_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	lame
 
 .if !empty(LAME_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.lame+=	lame>=3.93.1nb2
+BUILDLINK_RECOMMENDED.lame+=	lame>=3.96.1nb1
 BUILDLINK_PKGSRCDIR.lame?=	../../audio/lame
 .endif	# LAME_BUILDLINK3_MK
 

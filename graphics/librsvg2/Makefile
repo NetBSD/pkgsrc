@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2004/09/21 16:51:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/03 00:14:55 tv Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/2-/}
+PKGREVISION=	1
 
 USE_DIRS+=		xdg-1.1
 

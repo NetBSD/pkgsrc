@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/05/19 16:55:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:12:59 tv Exp $
 #
 
 DISTNAME=	coreutils-5.2.1
 PKGNAME=	${DISTNAME:S/coreutils/gnuls/}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2004/03/29 18:20:13 tron Exp $
+# $NetBSD: Makefile,v 1.46 2004/10/03 00:13:25 tv Exp $
 
 DISTNAME=		bonobo-1.0.18
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bonobo/1.0/}
 

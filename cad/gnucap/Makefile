@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2004/03/20 00:31:07 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.11 2004/10/03 00:13:13 tv Exp $
 #
 
 DISTNAME=	gnucap-0.34
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://www.gnucap.org/ \
 		http://www.geda.seul.org/dist/ \

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/08/28 06:05:32 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:15:02 tv Exp $
 #
 
 DISTNAME=	sablevm-1.1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sablevm/} \
 		http://devel.sablevm.org/download/1.1.3/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/05/15 15:07:58 heinz Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/03 00:12:55 tv Exp $
 #
 
 DISTNAME=	tnef-1.2.3.1
-PKGREVISION=	# empty
+PKGREVISION=	# empty1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tnef/}
 

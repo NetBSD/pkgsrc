@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/07/01 13:44:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/10/03 00:18:14 tv Exp $
 #
 
 DISTNAME=		xdm-krb4-3.3.6.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security x11
 MASTER_SITES=		ftp://gutemine.geo.Uni-Koeln.DE/pub/xdm-krb4/
 
