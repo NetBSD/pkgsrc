@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/04/30 03:46:34 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2001/05/03 16:53:57 wiz Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -24,8 +24,9 @@ PHP_VERSION=	3.0.18
 
 .if defined(BUILDING_EXTENSION_MODULE) || defined(BUILDING_SERVER_MODULE)
 DEPENDS+=	php-${PHP_VERSION}:../../www/php3
-FILESDIR?=	${PKGSRCDIR}/www/php3/files
-PATCHDIR?=	${PKGSRCDIR}/www/php3/patches
+DISTINFO_FILE=	../../www/php3/distinfo
+FILESDIR?=	../../www/php3/files
+PATCHDIR?=	../../www/php3/patches
 .endif
 
 # Here we configure only for what NetBSD ships.  We add the rest via modules.
