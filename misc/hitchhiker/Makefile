@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2003/11/30 22:58:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/03 18:49:46 reed Exp $
 #
 
 DISTNAME=	hh2000-0.6
 PKGNAME=	hitchhiker-0.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hitchhiker/}
 

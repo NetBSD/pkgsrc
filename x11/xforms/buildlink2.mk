@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/02/18 16:18:48 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:50:01 reed Exp $
 
 .if !defined(XFORMS_BUILDLINK2_MK)
 XFORMS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		xforms
-BUILDLINK_DEPENDS.xforms?=	xforms>=1.0
+BUILDLINK_DEPENDS.xforms?=	xforms>=1.0nb2
 BUILDLINK_PKGSRCDIR.xforms?=	../../x11/xforms
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.xforms=xforms

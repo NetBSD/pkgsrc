@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/10/09 11:55:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/03 18:49:52 reed Exp $
 
 MODNAME=		pdf
 CATEGORIES+=		print
-PKGREVISION=		2
+PKGREVISION=		3
 COMMENT=		PHP3 extension for PDFlib on-the-fly PDF generation
 
 USE_BUILDLINK2=		yes

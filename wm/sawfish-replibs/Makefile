@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/11/12 01:31:52 salo Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/03 18:49:54 reed Exp $
 #
 
 PKGNAME=	sawfish-replibs-${SF_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 
 COMMENT=	Librep Lisp libraries for sawfish
 
