@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2003/10/05 12:02:52 martti Exp $
+$NetBSD: patch-ad,v 1.6 2003/12/07 13:53:32 martti Exp $
 
---- bin/mrtg.orig	Fri Sep 12 00:15:22 2003
-+++ bin/mrtg	Sun Oct  5 13:02:06 2003
-@@ -666,8 +666,8 @@
+--- bin/mrtg.orig	Fri Dec  5 19:56:57 2003
++++ bin/mrtg	Sun Dec  7 15:36:59 2003
+@@ -685,8 +685,8 @@
      ########## rrdtool users have left here ###############
  
      ((($MRTG_lib::OS eq 'NT' || $MRTG_lib::OS eq 'OS2') && (-e "${FindBin::Bin}${MRTG_lib::SL}rateup.exe")) ||
@@ -12,17 +12,17 @@ $NetBSD: patch-ad,v 1.5 2003/10/05 12:02:52 martti Exp $
 +       die "ERROR: Can't Execute '__PREFIX__/libexec/rateup'\n";
  
      # rateup does not know about undef so we make inlast and outlast ready for rateup
-     warn "ERROR: inlast is undefined. Skipping $router\n" unless defined $inlast;
-@@ -675,7 +675,7 @@
-     return undef unless defined $inlast and defined $outlast;
- 
+     #warn "ERROR: inlast is undefined. Skipping $router\n" unless defined $inlast;
+@@ -698,7 +698,7 @@
+     $outlast = -1 unless defined $outlast;
+     
      if ($$rcfg{'options'}{'dorelpercent'}{$router}) {
 -        @exec = ("${FindBin::Bin}${MRTG_lib::SL}rateup", 
 +        @exec = ("__PREFIX__/libexec/rateup",
                   "$$cfg{'logdir'}$$rcfg{'directory'}{$router}","$router",
                   $time, $$rcfg{'options'}{'unknaszero'}{$router} ? '-z':'-Z',
                   "$up_abs"."p", $inlast, $outlast, $absmax,
-@@ -684,7 +684,7 @@
+@@ -707,7 +707,7 @@
                   $$rcfg{'rgb5'}{$router});
      } else { 
  
