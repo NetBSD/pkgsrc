@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1.1.1 2003/04/06 11:06:02 rh Exp $
+
+--- src/xine-engine/video_out.c.orig	2003-04-06 07:51:45.000000000 +1000
++++ src/xine-engine/video_out.c
+@@ -1437,7 +1437,9 @@ xine_video_port_t *vo_new_port (xine_t *
+     this->grab_only            = 0;
+     
+     pthread_attr_init(&pth_attrs);
++#ifdef PTHREAD_SCOPE_SYSTEM
+     pthread_attr_setscope(&pth_attrs, PTHREAD_SCOPE_SYSTEM);
++#endif
+     
+     if ((err = pthread_create (&this->video_thread,
+ 			       &pth_attrs, video_out_loop, this)) != 0) {

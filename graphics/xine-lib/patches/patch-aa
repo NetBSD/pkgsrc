@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/04/06 11:06:02 rh Exp $
+
+--- src/xine-engine/video_decoder.c.orig	2003-03-08 08:28:35.000000000 +1000
++++ src/xine-engine/video_decoder.c
+@@ -33,6 +33,10 @@
+ #include "xineutils.h"
+ #include <sched.h>
+ 
++#ifndef SCHED_OTHER
++#define SCHED_OTHER 0
++#endif
++
+ /*
+ #define LOG
+ */
+@@ -375,7 +379,9 @@ void *video_decoder_loop (void *stream_g
+ void video_decoder_init (xine_stream_t *stream) {
+   
+   pthread_attr_t       pth_attrs;
++#ifndef _PTH_PTHREAD_H_
+   struct sched_param   pth_params;
++#endif
+   int		       err, num_buffers;
+ 
+   /* The fifo size is based on dvd playback where buffers are filled
+@@ -398,10 +404,14 @@ void video_decoder_init (xine_stream_t *
+   stream->spu_track_map_entries = 0;
+ 
+   pthread_attr_init(&pth_attrs);
++#ifndef _PTH_PTHREAD_H_
+   pthread_attr_getschedparam(&pth_attrs, &pth_params);
+   pth_params.sched_priority = sched_get_priority_min(SCHED_OTHER);
+   pthread_attr_setschedparam(&pth_attrs, &pth_params);
++#endif
++#ifdef PTHREAD_SCOPE_SYSTEM
+   pthread_attr_setscope(&pth_attrs, PTHREAD_SCOPE_SYSTEM);
++#endif
+   
+   if ((err = pthread_create (&stream->video_thread,
+ 			     &pth_attrs, video_decoder_loop, stream)) != 0) {
