@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2004/02/04 14:25:58 markd Exp $
+$NetBSD: distinfo,v 1.42 2004/02/05 00:35:50 markd Exp $
 
 SHA1 (kdebase-3.2.0.tar.bz2) = 8632e98a9f34479c085c951330b2c7bcc01ad62e
 Size (kdebase-3.2.0.tar.bz2) = 17404034 bytes
@@ -8,6 +8,8 @@ SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 Size (Daemon.README) = 2191 bytes
 SHA1 (patch-aa) = fcb678ef0112e2d39f2d7ced126c88f2862b3351
 SHA1 (patch-ab) = 5ddff11c04fb004a8ddaedbec2655fdd3cf3d466
+SHA1 (patch-ac) = 8be0f15be839f4f01d3e079501b83e27f1fab2eb
+SHA1 (patch-ad) = 031e5622acb376ce1867d08b35c55bce101e8855
 SHA1 (patch-bb) = 37698647ac7f2e0ffcad2702d53b953759e89e45
 SHA1 (patch-bc) = 2d54d0700b30f5471eb60d104148ecf5ac835f58
 SHA1 (patch-bx) = d58d16fd484fc0a46c1ae93267af19e73af6f990
