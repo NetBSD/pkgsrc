@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/07/22 00:13:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/24 22:59:28 jonb Exp $
 #
 
-DISTNAME=	arch-1.0pre9
-PKGNAME=	arch-1.0.0.9
+DISTNAME=	arch-1.0pre16
+PKGNAME=	arch-1.0.0.16
 CATEGORIES=	devel
 MASTER_SITES=	ftp://regexps.com/pub/src/arch/ \
 		ftp://regexps.com/pub/src/arch/old/
@@ -10,8 +10,6 @@ MASTER_SITES=	ftp://regexps.com/pub/src/arch/ \
 MAINTAINER=	schmonz@netbsd.org
 HOMEPAGE=	http://www.regexps.com/
 COMMENT=	revision control system ideal for widely distributed development
-
-DEPENDS+=	patch>=2.5.4:../../devel/patch
 
 USE_GMAKE=	# defined
 
@@ -41,9 +39,5 @@ post-install:
 	${RM} -rf ${EXAMPLESDIR}/notifier/.arch-ids
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
 	${CHMOD} -R ugo-w ${EXAMPLESDIR}
-
-	# Install GNU patch where it can be found
-	${INSTALL_DATA_DIR} ${LOCALDIR}
-	${LN} -s ${LOCALBASE}/bin/gpatch ${LOCALDIR}/patch
 
 .include "../../mk/bsd.pkg.mk"
