@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/05/28 03:00:23 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/05/28 06:07:16 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gettext.
 #
@@ -37,6 +37,15 @@ GETTEXT_LIBS=		/usr/lib/libintl.*
 
 BUILDLINK_INCDIR?=	${WRKDIR}/include
 BUILDLINK_LIBDIR?=	${WRKDIR}/lib
+
+.if defined(GNU_CONFIGURE)
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=		LIBS="${LIBS}"
+CFLAGS+=		-I${BUILDLINK_INCDIR}
+CPPFLAGS+=		-I${BUILDLINK_INCDIR}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
+LIBS+=			-lintl
+.endif
 
 BUILDLINK_TARGETS+=	link-gettext-headers
 BUILDLINK_TARGETS+=	link-gettext-libs
