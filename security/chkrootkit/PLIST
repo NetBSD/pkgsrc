@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/17 15:33:52 minskim Exp $
+${WTMPX}bin/check_wtmpx
+bin/chkdirs
+bin/chklastlog
+bin/chkproc
+bin/chkwtmp
+bin/ifpromisc
+bin/strings-static
