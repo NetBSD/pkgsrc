@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/05/31 12:42:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.9 2004/06/05 13:57:54 minskim Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -12,7 +12,7 @@ COMMENT=	Printed circuit board layout system (development snapshot version)
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	m4>=1.4:../../devel/m4
-DEPENDS+=	tk>=8.3:../../x11/tk83
+DEPENDS+=	tk>=8.3:../../x11/tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
