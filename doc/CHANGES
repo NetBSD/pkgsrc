@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2986 2003/08/04 12:07:57 itojun Exp $
+$NetBSD: CHANGES,v 1.2987 2003/08/04 15:37:58 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3195,3 +3195,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated hiawatha to 0.1nb1 [jmmv 2003-08-04]
 	Updated mencoder to 0.90nb8 [jmmv 2003-08-04]
 	Updated cue to 20030714nb1 [itojun 2003-08-04]
+	Updated RScheme to 0.7.3.2 [jtb 2003-08-04]
