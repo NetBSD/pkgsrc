@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2002/12/16 16:14:06 drochner Exp $
+$NetBSD: patch-ah,v 1.2 2003/03/22 12:06:16 jmmv Exp $
 
 --- configure.orig	Mon Dec 16 17:06:11 2002
 +++ configure	Mon Dec 16 17:07:42 2002
@@ -11,3 +11,12 @@ $NetBSD: patch-ah,v 1.1 2002/12/16 16:14:06 drochner Exp $
  
              echo $ac_n "checking for dlopen in -ldl""... $ac_c" 1>&6
  echo "configure:7185: checking for dlopen in -ldl" >&5
+@@ -7283,7 +7283,7 @@
+             SSL_INCLUDES=
+     else
+             SSL_INCLUDES=-I$ssl_root/include
+-                  LDFLAGS="-L$ssl_root/lib -R$ssl_root/lib $wget_save_LDFLAGS"
++                  LDFLAGS="-L$ssl_root/lib ${RPATH_FLAG}$ssl_root/lib $wget_save_LDFLAGS"
+     fi
+ 
+     echo "$ac_t"""Looking for SSL libraries in $ssl_root"" 1>&6
