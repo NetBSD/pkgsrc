@@ -1,0 +1,12 @@
+$NetBSD: patch-ce,v 1.1 2004/04/24 21:04:43 tv Exp $
+
+--- lib/File/Temp.pm.orig	Fri Apr 23 12:42:30 2004
++++ lib/File/Temp.pm	Fri Apr 23 12:44:21 2004
+@@ -2012,6 +2012,7 @@
+ 
+ {
+   my $TopSystemUID = 10;
++  $TopSystemUID = 197108 if $^O eq 'interix'; # "Administrator"
+   sub top_system_uid {
+     my $self = shift;
+     if (@_) {
