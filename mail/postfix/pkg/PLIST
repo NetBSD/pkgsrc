@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1999/09/14 02:07:00 simonb Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/04/09 08:10:21 simonb Exp $
 etc/mailer.conf.postfix
 libexec/postfix/bounce
 libexec/postfix/cleanup
@@ -99,6 +99,7 @@ share/postfix/sample-local.cf
 share/postfix/sample-misc.cf
 share/postfix/sample-pcre.cf
 share/postfix/sample-rate.cf
+share/postfix/sample-regexp.cf
 share/postfix/sample-relocated.cf
 share/postfix/sample-resource.cf
 share/postfix/sample-rewrite.cf
