@@ -9,7 +9,3 @@ binary files as well as files with arbitrary ascii characters.  As an
 option, autosensing of binary files can be disabled (via the -k
 option), thereby allowing one to browse files encoded in a different
 language (Japanese, Korean, Chinese, etc).
-
-  web site: http://space.mit.edu/%7Edavis/most.html
-  ftp site: ftp://space.mit.edu/pub/davis/most
-maintainer: Richard Hwang <rhwang@bigpanda.com>

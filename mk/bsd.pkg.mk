@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.148 1998/08/25 16:26:09 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.149 1998/08/26 16:50:53 tsarna Exp $
 #
 # This file is in the public domain.
 #
@@ -326,7 +326,8 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .endif
 
 COMMENT?=	${PKGDIR}/COMMENT
-DESCR?=		${PKGDIR}/DESCR
+DESCR_SRC?=	${PKGDIR}/DESCR
+DESCR?=		${WRKDIR}/.DESCR
 PLIST=		${WRKDIR}/.PLIST
 
 PKG_CMD?=		/usr/sbin/pkg_create
@@ -934,7 +935,7 @@ do-install:
 # Package
 
 .if !target(do-package)
-do-package: ${PLIST}
+do-package: ${PLIST} ${DESCR}
 	@if [ -e ${PLIST} ]; then \
 		${ECHO_MSG} "===>  Building package for ${PKGNAME}"; \
 		if [ -d ${PACKAGES} ]; then \
@@ -1700,8 +1701,8 @@ describe:
 	else \
 		${ECHO} -n "** No Description"; \
 	fi; \
-	if [ -f ${DESCR} ]; then \
-		${ECHO} -n "|${DESCR}"; \
+	if [ -f ${DESCR_SRC} ]; then \
+		${ECHO} -n "|${DESCR_SRC}"; \
 	else \
 		${ECHO} -n "|/dev/null"; \
 	fi; \
@@ -1816,7 +1817,7 @@ print-package-depends:
 # accordance to the @pkgdep directive in the packing lists
 
 .if !target(fake-pkg)
-fake-pkg: ${PLIST}
+fake-pkg: ${PLIST} ${DESCR}
 	@if [ ! -f ${PLIST} -o ! -f ${COMMENT} -o ! -f ${DESCR} ]; then ${ECHO} "** Missing package files for ${PKGNAME} - installation not recorded."; exit 1; fi
 	@if [ ! -d ${PKG_DBDIR} ]; then ${RM} -f ${PKG_DBDIR}; ${MKDIR} ${PKG_DBDIR}; fi
 .if defined(FORCE_PKG_REGISTER)
@@ -1896,3 +1897,13 @@ ${PLIST}: ${PLIST_SRC}
 			>${PLIST} ; \
 	fi
 .endif  # MANZ
+
+# generate ${DESCR} from ${DESCR_SRC} by:
+# - Appending the homepage URL, if any
+
+${DESCR}: ${DESCR_SRC}
+	@${CAT} ${DESCR_SRC} > ${DESCR}
+.if defined(HOMEPAGE)
+	@(${ECHO} ; ${ECHO} "Homepage:" ; \
+	${ECHO} '${HOMEPAGE}') >> ${DESCR}	
+.endif

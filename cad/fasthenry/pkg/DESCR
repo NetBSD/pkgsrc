@@ -5,7 +5,3 @@ used in FastHenry is an acceleration of the mesh formulation approach.
 The linear system resulting from the mesh formulation is solved using
 a generalized minimal residual algorithm with a fast multipole
 algorithm to efficiently compute the iterates.
-
-
-FastHenry was written at MIT by the MIT RLE VLSI-CAD research
-group (http://rle-vlsi.mit.edu/).
