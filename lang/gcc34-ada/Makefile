@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/07/28 12:04:08 shannonjr Exp $
+# $NetBSD: Makefile,v 1.5 2004/07/28 21:40:21 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-ada-${GCC_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -86,8 +86,7 @@ GCC34_PKGMODIF=		${GCC34_INSTALLTO_SUBPREFIX}
 
 GCC_SUBPREFIX=		${GCC34_INSTALLTO_SUBPREFIX}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
-LOWER_OPSYS_VERSUFFIX!=	echo ${LOWER_OS_VERSION} | ${CUT} -d _ -f 1
-GCC_PLATFORM=		${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
+GCC_PLATFORM=		${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/_.*//}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
 GCC_ARCHSUBDIR=		${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=		${PREFIX}/${GCC_ARCHSUBDIR}
@@ -118,16 +117,17 @@ pre-configure:
 .include "../../lang/gcc34/preconfigure.mk"
 .elif defined(ALT_GCC)
 pre-configure:
+	(${TEST} -d ${WRKDIR}/.gcc/bin/ || ${MKDIR} ${WRKDIR}/.gcc/bin/)
 	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
 	cd ${RALT_GCC_RTS} && ${LN} -sf ${ALT_GCC_RTS}/libgnat.a .)
 	(cd ${ALT_GCC:H} && \
 	files=`${FIND} . -type f \( -perm -0100 \)` && \
 	cd ${GCC_DIR}/bin/ && \
 	for file in ${ALT_GCC:T} $${files} ; do \
-		$(ECHO) '#!/bin/sh' > $${file}; \
-		$(ECHO) -n "exec ${ALT_GCC:H}/$${file} " >>$${file}; \
-		$(ECHO) '"$$@"' >>$${file}; \
-		$(CHMOD) +x $${file}; \
+		${ECHO} '#!${TOOLS_SHELL}' > $${file}; \
+		${ECHO} -n "exec ${ALT_GCC:H}/$${file} " >>$${file}; \
+		${ECHO} '"$$@"' >>$${file}; \
+		${CHMOD} +x $${file}; \
 	done )
 .endif
 
