@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7093 2004/09/04 14:15:23 seb Exp $
+$NetBSD: CHANGES,v 1.7094 2004/09/04 14:30:25 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4189,3 +4189,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cvs2svn to 1.0.0 [seb 2004-09-04]
 	Updated jam to 2.5nb1 [schmonz 2004-09-04]
 	Added p5-Crypt-CipherSaber-0.60 [seb 2004-09-04]
+	Updated loudmouth to 0.17 [jmmv 2004-09-04]
+	Updated gossip to 0.7.8 [jmmv 2004-09-04]
