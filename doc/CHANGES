@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8413 2004/12/23 12:58:51 wiz Exp $
+$NetBSD: CHANGES,v 1.8414 2004/12/23 16:33:10 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6479,3 +6479,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added flac2mp3-20041223 [agc 2004-12-23]
 	Updated gnupg-devel to 1.9.14 [shannonjr 2004-12-23]
 	Updated libassuan to 0.6.9 [shannonjr 2004-12-23]
+	Updated bibparse to 1.06 [seb 2004-12-23]
