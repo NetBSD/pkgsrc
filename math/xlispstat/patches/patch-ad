@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/10/03 20:28:09 frueauf Exp $
+
+--- setup.shell.orig	Wed Sep  7 16:34:36 1994
++++ setup.shell	Sat Oct  3 16:50:37 1998
+@@ -2,11 +2,12 @@
+ cat > $1 <<+++
+ #!/bin/sh
+ XLISPLIB=$2 export XLISPLIB
++LIBEXEC=$3 export LIBEXEC
+ if test -f xlisp.wks; then WKS="xlisp.wks";
+-else WKS="\${XLISPLIB}/xlisp.wks";
++else WKS="\${LIBEXEC}/xlisp.wks";
+ fi
+ if test -f xlisp; then XLISP=xlisp;
+-else XLISP="\${XLISPLIB}/xlisp"
++else XLISP="\${LIBEXEC}/xlisp"
+ fi
+ exec \${XLISP} -w\${WKS} \$*
+ +++
