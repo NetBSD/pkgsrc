@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2004/10/03 22:37:16 heinz Exp $
+# $NetBSD: builtin.mk,v 1.10 2004/10/04 10:42:39 grant Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -66,12 +66,22 @@ USE_BUILTIN.gettext!=	\
 .  endif
 
 .  if ${PREFER.gettext} == "native"
-# XXX
-# XXX By default, assume that the native gettext implementation is good
-# XXX enough.
-# XXX
+#
+# By default, assume that the native gettext implementation is good
+# enough if it has a prototype for ngettext().
+#
 .    if exists(${_LIBINTL_H})
+_GETTEXT_NGETTEXT!=	\
+	if ${GREP} -q ngettext ${_LIBINTL_H}; then			\
+		echo yes;						\
+	else								\
+		echo no;						\
+	fi
+.      if !empty(_GETTEXT_NGETTEXT:Myes)
 USE_BUILTIN.gettext=	yes
+.      else
+USE_BUILTIN.gettext=	no
+.      endif
 #
 # The listed platforms have an implementation of gettext that isn't
 # GNUish enough.
