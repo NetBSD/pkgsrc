@@ -1,12 +1,14 @@
-$NetBSD: patch-an,v 1.1.1.1 2002/01/03 10:58:57 agc Exp $
+$NetBSD: patch-an,v 1.2 2005/01/22 15:59:58 ben Exp $
 
---- src/fstools/makedefs	2002/01/03 10:03:47	1.1
-+++ src/fstools/makedefs	2002/01/03 10:04:05
-@@ -2,6 +2,8 @@
+--- src/fstools/makedefs.orig	2001-10-04 12:44:26.000000000 -0700
++++ src/fstools/makedefs
+@@ -2,6 +2,10 @@ SYSTEM=`(uname -s) 2>/dev/null`
  RELEASE=`(uname -r) 2>/dev/null`
  
  case "$SYSTEM.$RELEASE" in
 +   NetBSD.1*)	DEFS="-DNETBSD1"
++		;;
++   NetBSD.2*)	DEFS="-DNETBSD2"
 +		;;
    FreeBSD.2*)   DEFS="-DFREEBSD2"
                  ;;
