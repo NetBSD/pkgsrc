@@ -1,0 +1,4 @@
+$NetBSD: PLIST,v 1.1.1.1 2004/10/28 17:00:27 wiz Exp $
+bin/btcompletedirgui.py
+bin/btdownloadgui.py
+bin/btmaketorrentgui.py
