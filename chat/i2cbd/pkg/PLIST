@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/14 00:59:31 hubertf Exp $
+etc/icbd/icbd.deny
+etc/icbd/icbd_help
+etc/icbd/motd
+etc/icbd/news.1
+etc/rc.d/icbd
+sbin/icbd
+sbin/icbdb
+man/man8/icbd.8
+man/man8/icbdb.8
+@dirrm etc/icbd
+@exec ${TOUCH} /var/log/icbd.log
+@exec ${CHOWN} ${ICBD_OWNER} /var/log/icbd.log
