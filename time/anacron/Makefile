@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/11 11:33:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/11 18:02:24 salo Exp $
 #
 
 DISTNAME=	anacron-2.3
@@ -6,7 +6,7 @@ CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anacron/}
 
 MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://anacron.sourceforge.net/}
+HOMEPAGE=	http://anacron.sourceforge.net/
 COMMENT=	Periodic command scheduler
 
 USE_BUILDLINK3=		yes
