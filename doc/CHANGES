@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6851 2004/08/12 09:26:05 schmonz Exp $
+$NetBSD: CHANGES,v 1.6852 2004/08/12 12:23:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3793,3 +3793,10 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated imhangul to 0.9.11 [minskim 2004-08-11]
 	Added hre-0.9.7 [minskim 2004-08-12]
 	Added checkpassword-pam-0.98 [schmonz 2004-08-12]
+	Updated imap-uw to 2004a [adam 2004-08-12]
+	Updated pico to 4.8 [adam 2004-08-12]
+	Updated pine to 4.61 [adam 2004-08-12]
+	Updated qt3-libs to 3.3.3 [adam 2004-08-12]
+	Updated qt3-tools to 3.3.3 [adam 2004-08-12]
+	Updated qt3-docs to 3.3.3 [adam 2004-08-12]
+	Updated qt3 to 3.3.3 [adam 2004-08-12]
