@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/12/06 16:10:48 tron Exp $
+
+--- wmbiff/Imap4Client.c.orig	Sun Nov  9 00:43:50 2003
++++ wmbiff/Imap4Client.c	Sat Dec  6 16:59:14 2003
+@@ -648,7 +648,7 @@
+ 	strcpy(buf, PCU.userName);
+ 	strcat(buf, " ");
+ 	ask_user_for_password(pc, 0);
+-	gmh = gcry_md_open(GCRY_MD_MD5, GCRY_MD_FLAG_HMAC);
++	(void) gcry_md_open(&gmh, GCRY_MD_MD5, GCRY_MD_FLAG_HMAC);
+ 	DEFROB(PCU.password);
+ 	gcry_md_setkey(gmh, PCU.password, strlen(PCU.password));
+ 	ENFROB(PCU.password);
