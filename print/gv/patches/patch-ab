@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 1998/12/23 23:09:59 frueauf Exp $
+$NetBSD: patch-ab,v 1.4 2000/12/08 16:23:16 jlam Exp $
 
 --- doc/Imakefile.orig	Fri Jun  6 18:00:00 1997
-+++ doc/Imakefile	Tue Dec 22 01:28:02 1998
++++ doc/Imakefile
 @@ -27,10 +27,6 @@
  GV_CONFIG_FILE = ../config.Unix
  #include "../config.Unix"
@@ -13,3 +13,9 @@ $NetBSD: patch-ab,v 1.3 1998/12/23 23:09:59 frueauf Exp $
  #ifndef InstallDocFiles
  #define InstallDocFiles(file,destdir)				@@\
  install.doc::							@@\
+@@ -52,4 +48,4 @@
+ InstallDocFile(key-bindings.txt-gz,key-bindings.txt.gz,$(GV_DOCDIR))
+ InstallDocFile(comments.doc-gz,comments.doc.gz,$(GV_DOCDIR))
+ InstallDocFile(gv.ps-gz,gv.ps.gz,$(GV_DOCDIR))
+-InstallDocFiles(gv*.html,$(GV_DOCDIR))
++InstallDocFiles(gv*.html,$(GV_HTMLDIR))
