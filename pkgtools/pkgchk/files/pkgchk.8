@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.8 2001/11/21 23:01:56 abs Exp $
+.\"	$NetBSD: pkgchk.8,v 1.9 2001/12/03 19:03:22 wiz Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -85,7 +85,6 @@ will be left with missing packaged.
 Verbose - list the tags set when checking pkgchk.conf, and all packages checked.
 .El
 .Sh FILE FORMAT
-.Pp
 Each non comment line in pkgsrc.conf should contain a package
 directory (such as sysutils/skill) followed by an optional list of
 tags. Tags are checked against the current machine's set:
@@ -118,7 +117,7 @@ match the current machine.
 .Pp
 The default set of tags used to determine which packages to match in
 pkgsrc.conf are equivalent to the output of the following with any spaces
-converted to hypens (-): hostname -s, hostname, uname -srm, uname -sr, uname -sm, uname -s, uname -r, uname -m. If 
+converted to hypens (-): hostname -s, hostname, uname -srm, uname -sr, uname -sm, uname -s, uname -r, uname -m. If
 .Pa /usr/X11R6/lib/libX11.so
 or
 .Pa /usr/X11R6/lib/libX11.a
@@ -144,7 +143,7 @@ Defaults to
 Location of binary packages. If not set in environment then read from
 .Pa /etc/mk.conf .
 Defaults to
-.Pa ${PKGSRCDIR}/packages.
+.Pa ${PKGSRCDIR}/packages .
 .Pp
 Unless in a completely homogeneous environment (every machine running
 exactly the same OS version and architecture) setting
@@ -154,14 +153,14 @@ in
 to a value such as
 .Bd -literal
 ${PKGSRCDIR}/packages/${LOWER_OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
-
 .Ed
-is strongly recommended. If 
+.Pp
+is strongly recommended. If
 .Em cpuflags
 (devel/cpuflags) is being used to optimally target individual CPU types,
 then
 .Ev ${CPU_DIR}
-should be appended to 
+should be appended to
 .Ev ${PACKAGES} .
 .It Ev PKGCHK_CONF
 Pathname to pkg_chk configuration file. If not set in environment
@@ -189,9 +188,9 @@ www/communicator                x11+sparc x11+sparc64
 www/navigator                	x11+i386
 x11/xlockmore                   x11 -wopr
 .Ed
-.Sh AUTHOR
+.Sh AUTHORS
 David Brownlee <abs@netbsd.org>, plus much from Stoned Elipot.
-.Sh CAVEATS
+.Sh BUGS
 Updating packages on which other packages depend can currently only be done
 via source (not binary packages).
 .Pp
@@ -206,7 +205,7 @@ depends on
 .Nm
 will correctly skip the update of
 .Em a .
-However, if 
+However, if
 .Em a
 depends on
 .Em b
