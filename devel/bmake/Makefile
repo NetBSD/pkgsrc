@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/12/22 23:26:43 sjg Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/19 00:57:10 sjg Exp $
 #
 
-DISTNAME=       bmake-20031222
+DISTNAME=       bmake-20040118
 WRKSRC=		${WRKDIR}/bmake
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.NetBSD.org/pub/incoming/sjg/
