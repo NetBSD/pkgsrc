@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/22 07:21:54 grant Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/17 02:49:25 dmcmahill Exp $
 #
 
 DISTNAME=	gerbv-0.15
@@ -9,12 +9,14 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://gerbv.sourceforge.net/
 COMMENT=	Gerber file viewer
 
+PKG_INSTALLATION_TYPES= overwrite pkgviews
+
 CONFIGURE_ARGS+=	--enable-exportpng
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
