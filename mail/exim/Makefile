@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/05/03 12:16:28 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.34 2003/06/16 21:40:21 jmc Exp $
 
 DISTNAME=	exim-4.10
 CATEGORIES=	mail net
@@ -13,8 +13,11 @@ COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
 USE_PERL5=	yes
 USE_BUILDLINK2=	yes
-# actually, needs "mail" user before configure step, see below
-INTERACTIVE_STAGE=	build
+USE_PKGINSTALL=	yes
+PKG_USERS=	mail:6:8:Electronic Mail:/var/mail:/sbin/nologin
+
+# To pickup USERADD
+.include "../../mk/bsd.prefs.mk"
 
 MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
 
@@ -29,14 +32,10 @@ pre-configure:
 
 pre-build:
 	@(if ! ${ID} mail 2>/dev/null >/dev/null; then\
-		${ECHO} "!! ";\
-		${ECHO} "!! Use vipw to add the following to master.passwd:";\
-		${ECHO} "!! ";\
-		${ECHO} "!!  mail:*:8:6::0:0:Electronic Mail:/var/mail:/sbin/nologin";\
-		${ECHO} "!! ";\
-		${FALSE};\
+		${ECHO} "Creating user: ${user}"; \
+		${USERADD} -c "Electronic Mail" -u 8 -g 6 -d /var/mail -s /sbin/nologin mail; \
 	fi)
-
+ 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/exim
 	${INSTALL_DATA_DIR} /var/log/exim
