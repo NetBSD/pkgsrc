@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3341 2005/03/31 11:10:01 adam Exp $
+$NetBSD: TODO,v 1.3342 2005/03/31 11:17:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -443,6 +443,7 @@ Suggested package updates
 	o findutils-4.2.20
 	o firefox-bin-1.0.2
 	o flac123-0.0.8
+	o flashplayer-0.4.13
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
@@ -590,6 +591,7 @@ Suggested package updates
 	o libcomprex-0.3.3
 	o libetpan-0.34b
 	o libextractor-0.4.2
+	o libflash-0.4.13
 	o libgda-1.2.1
 	o libgnomemm26-2.10.0
 	o libgnomeuimm26-2.10.0
@@ -650,6 +652,7 @@ Suggested package updates
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-5.1.3
+	o moz-flash-0.4.13
 	o mpage-2.5.4
 	o mpc-0.11.2
 	o mpfr-2.1.1
