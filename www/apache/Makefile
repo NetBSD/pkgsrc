@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2000/09/06 06:17:55 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2000/09/12 14:17:31 jlam Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -17,12 +17,12 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${SSL_DISTNAME}${EXTRACT_SUFX} \
 			sitedrivenby.gif
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.apache.org/
 
 CONFLICTS=		apache-*modssl-* apache6-*
 
-SSL_DISTNAME=		mod_ssl-2.6.3-1.3.12
+SSL_DISTNAME=		mod_ssl-2.6.6-1.3.12
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif}
 HAS_CONFIGURE=		# defined
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} --libexecdir=${PREFIX}/lib/httpd \
 CONFIGURE_ARGS+=	--enable-rule=EAPI --enable-module=most \
 			--disable-module=ssl --enable-module=auth_db \
 			--disable-module=auth_dbm
+CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ENV+=		OPTIM="${OPTIM}"
 
@@ -47,10 +48,13 @@ SUEXEC_PATH=		/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 CONFIGURE_ARGS+=	--enable-suexec --suexec-caller=www \
 			--suexec-safepath='${SUEXEC_PATH}'
 PLIST_SRC=		${PKGDIR}/PLIST.suexec
+.else
+CONFIGURE_ARGS+=	--disable-suexec
 .endif
 
 .if !defined(NOPIC)
-CONFIGURE_ARGS+=	--enable-module=so --enable-shared=proxy
+CONFIGURE_ARGS+=	--enable-module=so	# requires dlopen()
+CONFIGURE_ARGS+=	--enable-shared=proxy
 PLIST_SRC+=		${PKGDIR}/PLIST.shared
 .else
 CONFIGURE_ARGS+=	--disable-module=proxy
@@ -88,7 +92,7 @@ pre-patch:
 		${WRKDIR}/${SSL_DISTNAME}/pkg.sslmod/sslmod.patch \
 		${WRKDIR}/${SSL_DISTNAME}/pkg.sslsup/sslsup.patch \
 		| ${PATCH} ${PATCH_ARGS}
-	cd ${WRKSRC} && ${TAIL} +156 \
+	cd ${WRKSRC} && ${TAIL} +148 \
 		${WRKDIR}/${SSL_DISTNAME}/pkg.ssldoc/ssldoc.patch \
 		| ${PATCH} ${PATCH_ARGS}
 
