@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.1 2005/03/10 19:19:47 tv Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.2 2005/03/10 21:15:09 tv Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -98,7 +98,7 @@ static const char noarg[] = "option doesn't take an argument -- %.*s";
 static const char illoptchar[] = "illegal option -- %c";
 static const char illoptstring[] = "illegal option -- %s";
 
-static const char *__progname;
+static const char *progname;
 
 
 /* Replacement for warnx(3) for systems without it. */
@@ -106,8 +106,8 @@ static void xwarnx(const char *fmt, ...) {
 	va_list ap;
 
 	va_start(ap, fmt);
-	if (__progname)
-		(void) fprintf(stderr, "%s: ", __progname);
+	if (progname)
+		(void) fprintf(stderr, "%s: ", progname);
 	if (fmt)
 		(void) vfprintf(stderr, fmt, ap);
 	(void) fprintf(stderr, "\n");
@@ -333,7 +333,7 @@ getopt(nargc, nargv, options)
 {
 	int retval;
 
-	__progname = nargv[0];
+	progname = nargv[0];
 
 	if ((retval = getopt_internal(nargc, nargv, options)) == -2) {
 		++optind;
@@ -371,6 +371,8 @@ getopt_long(nargc, nargv, options, long_options, idx)
 	_DIAGASSERT(options != NULL);
 	_DIAGASSERT(long_options != NULL);
 	/* idx may be NULL */
+
+	progname = nargv[0];
 
 	if ((retval = getopt_internal(nargc, nargv, options)) == -2) {
 		char *current_argv, *has_equal;
