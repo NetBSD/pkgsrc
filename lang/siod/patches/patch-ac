@@ -1,0 +1,52 @@
+$NetBSD: patch-ac,v 1.1 1999/08/06 10:39:31 agc Exp $
+
+Generalise the location, and update the current version to reflect reality.
+
+--- siod.man	1999/08/06 10:15:23	1.1
++++ siod.man	1999/08/06 10:16:38
+@@ -16,7 +16,7 @@
+ .RE
+ .SH ARGUMENTS
+ The arguments are files which are loaded from the current or SIOD_LIB
+-directory, by usual default /usr/local/lib/siod. Or the symbol repl
++directory, by usual default @PREFIX@/lib/siod. Or the symbol repl
+ to cause entry into the read-eval-print-loop, or parenthetical
+ expressions to be evaluated.
+ 
+@@ -73,7 +73,7 @@
+ The
+ .I XXXXX
+ is a library directory to use for the require procedure. defaults
+-to the environment variable SIOD_LIB or /usr/local/lib/siod.
++to the environment variable SIOD_LIB or @PREFIX@/lib/siod.
+ .TP
+ .BI \-v "XXXXX"
+ The
+@@ -101,7 +101,7 @@
+ which can be convenient for debugging WWW cgi scripts. For example:
+ 
+ .EX
+-#!/usr/local/bin/siod -v0,-m2
++#!@PREFIX@/bin/siod -v0,-m2
+ (define (main)
+   (writes nil "Hello World\n"))
+ .EE
+@@ -144,9 +144,9 @@
+ include read, pratt, and fasl.
+ 
+ .SH FILES
+-/usr/local/lib/siod/*
+-/usr/local/lib/siod/siod.html
+-/usr/local/lib/libsiod.so
++@PREFIX@/lib/siod/*
++@PREFIX@/lib/siod/siod.html
++@PREFIX@/lib/libsiod.so
+ .PD
+ .SH SEE ALSO
+ command csiod http://people.delphi.com/gjc/siod.html
+@@ -161,4 +161,4 @@
+ It does GC during EVAL with -g0, but that code may not run without modification
+ on all architectures.
+ .SH VERSION
+-Current version is 3.2, 12-MAR-96, by George Carrette. GJC\@world.std.com 
++Current version is 3.4, 12-MAR-96, by George Carrette. GJC\@world.std.com 
