@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/21 17:22:40 agc Exp $
+include/XMC/xmc.h
+include/XMC/xmcp.h
+lib/libXmc.so.2.0
+lib/libXmc_d.a
+bin/xmx
+bin/xmtg
+bin/xmxinit
+man/man1/xmxinit.1x
+man/man1/xmx.1x
+@dirrm include/XMC
