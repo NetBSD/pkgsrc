@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2003/01/30 12:22:48 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2004/01/01 21:29:09 agc Exp $
 
 --- Lib/Makefile.orig	Sun Jun  4 02:49:23 2000
 +++ Lib/Makefile
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.4 2003/01/30 12:22:48 jlam Exp $
  
  INCLUDES= adpcm.h        cxform.h       graphic.h      script.h       sqrt.h\
  	bitmap.h       displaylist.h  matrix.h       shape.h        swf.h\
-@@ -34,7 +33,20 @@ SWFOBJS=\
+@@ -34,7 +33,20 @@
  #	bitstream.o
  #	dump.o
  
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.4 2003/01/30 12:22:48 jlam Exp $
 +	done
 +
 +libflash.la: $(SWFOBJS)
-+	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o $@ ${SWFOBJS:.o=.lo} -rpath ${PREFIX}/lib -ljpeg -lz ${LIBOSSAUDIO} -version-info 0:4
++	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} -o $@ ${SWFOBJS:.o=.lo} -rpath ${PREFIX}/lib -ljpeg -lz ${LIBSTDCPP} ${LIBOSSAUDIO} -version-info 0:4
  
  libflash.a: $(SWFOBJS) 
  	ar rcs $@ $(SWFOBJS)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 16:51:47 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/01 21:29:09 agc Exp $
 #
 
 .include "Makefile.common"
@@ -11,6 +11,7 @@ USE_BUILDLINK2=	yes
 USE_LIBTOOL=	yes
 BUILD_DIRS=	${WRKSRC}/Lib
 MAKE_ENV+=	LIBOSSAUDIO="${LIBOSSAUDIO}"
+MAKE_ENV+=	LIBSTDCPP=-lstdc++
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
