@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2002/10/17 12:17:14 lukem Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/29 19:02:49 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
-DISTNAME=		tightvnc-1.2.6
-PKGNAME=		tightvncviewer-1.2.6
+DISTNAME=		tightvnc-1.2.7
+PKGNAME=		tightvncviewer-1.2.7
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
-DISTFILES=		tightvnc-1.2.6_unixsrc.tar.bz2
+DISTFILES=		${DISTNAME}_unixsrc.tar.bz2
 
 MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www.tightvnc.com/
@@ -19,13 +19,17 @@ USE_BUILDLINK2=		yes
 USE_IMAKE=		yes
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
+CONFIGURE_DIRS=		${WRKSRC}/libvncauth
+CONFIGURE_DIRS+=	${WRKSRC}/vncviewer
+BUILD_DIRS=		${CONFIGURE_DIRS}
+INSTALL_DIRS=		${WRKSRC}/vncviewer
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${PREFIX}/bin/vncviewer
-	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man ${PREFIX}/man/man1/vncviewer.1
-	${INSTALL_DATA} ${WRKSRC}/vncviewer/Vncviewer ${PREFIX}/lib/X11/app-defaults
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/vncviewer/Vncviewer			\
+		${PREFIX}/lib/X11/app-defaults
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vncviewer
-	${INSTALL_DATA} ${WRKSRC}/vncviewer/README ${PREFIX}/share/doc/vncviewer/README
+	${INSTALL_DATA} ${WRKSRC}/vncviewer/README			\
+		${PREFIX}/share/doc/vncviewer/README
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
