@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2002/05/20 21:54:19 kleink Exp $
+$NetBSD: distinfo,v 1.11 2002/06/27 07:36:13 kleink Exp $
 
-SHA1 (scmxx-0.6.1.1.tar.bz2) = 5414fe51c0a70dc82515b03993831d0476d07f29
-Size (scmxx-0.6.1.1.tar.bz2) = 51331 bytes
+SHA1 (scmxx-0.6.1.3.tar.bz2) = 1a2f324623f7ac236822fdb039a53ec94ca9f5ec
+Size (scmxx-0.6.1.3.tar.bz2) = 51933 bytes
