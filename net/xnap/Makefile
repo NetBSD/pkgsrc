@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2004/08/05 13:38:00 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2004/11/27 17:41:16 wiz Exp $
 #
 
 DISTNAME=	xnap-2.0
 CATEGORIES=	net java
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnap/}
 
-MAINTAINER=	Benjamin.Wong@cc.gatech.edu
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xnap.sourceforge.net/
 COMMENT=	Java filesharing client with support for OpenNap
 
