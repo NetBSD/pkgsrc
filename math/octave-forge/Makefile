@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/14 04:08:42 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.8 2005/03/16 02:10:30 dmcmahill Exp $
 
 DISTNAME=	octave-forge-2004.11.16
 CATEGORIES=	cad
@@ -30,7 +30,6 @@ TEST_TARGET=	check
 
 GCC_REQD=	3.0
 USE_LANGUAGES=	c c++ fortran
-F77=	${FC}
 
 .include "../../math/octave-current/octave.mk"
 
