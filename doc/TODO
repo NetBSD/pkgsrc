@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.463 2003/04/12 14:19:47 jmmv Exp $
+$NetBSD: TODO,v 1.464 2003/04/15 01:03:52 grant Exp $
 
 Suggested new packages
 ======================
@@ -266,6 +266,19 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
 
+Infrastructure problems which need addressing
+========================================
+
+	o fix lang/gcc to not look in ${PREFIX}/include (and lib) for
+	  header files and libraries, as this defeats the purpose of
+	  buildlink2 and causes problems building pkgs (Solaris, where
+	  it is installed into ${PREFIX}, unlike gcc3).
+
+	o fix lang/gcc to be able to find static libgcc (e.g.
+	  devel/ncurses on Solaris).
+
+	o fix lang/gcc3 so pkgs can find shared libgcc, libstdc++,
+	  etc., or static library if built with --disable-shared.
 
 Suggested pkgsrc enhancements
 =============================
