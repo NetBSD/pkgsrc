@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.259 1999/04/22 15:50:42 sakamoto Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.260 1999/04/24 18:14:57 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -23,7 +23,7 @@ BSD_PKG_MK=1
 
 # Get the operating system type
 .ifndef OPSYS
-OPSYS!=	uname -s
+OPSYS!=	/usr/bin/uname -s
 .endif
 
 # Include any preferences, if not already included
