@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2004/11/02 11:26:28 markd Exp $
+$NetBSD: patch-ab,v 1.9 2005/01/04 12:57:03 markd Exp $
 
 --- distrib/initscripts/Makefile.in.orig	2004-08-27 23:24:05.000000000 +1200
 +++ distrib/initscripts/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.8 2004/11/02 11:26:28 markd Exp $
  # checking for NetBSD init scripts
  #
 -@USE_NETBSD_TRUE@sysvdir = /etc/rc.d
-+@USE_NETBSD_TRUE@sysvdir = ${prefix}/etc/rc.d# pkgsrc *only*!
++@USE_NETBSD_TRUE@sysvdir = ${prefix}/share/examples/rc.d# pkgsrc *only*!
  
  
  #
