@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7867 2004/11/15 11:35:30 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7868 2004/11/15 14:29:06 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5288,3 +5288,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ImageMagick to 6.1.4.1 [adam 2004-11-15]
 	Updated dspam to 3.2.2 [xtraeme 2004-11-15]
 	Updated qemu to 0.6.1 [xtraeme 2004-11-15]
+	Updated libstatgrab to 0.11 [reed 2004-11-15]
