@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2002/11/26 21:39:14 cjep Exp $
---- pngtest.c.orig	Thu Oct  3 13:32:30 2002
-+++ pngtest.c	Mon Nov  4 14:44:39 2002
-@@ -567,7 +567,7 @@
+$NetBSD: patch-ab,v 1.7 2004/08/09 07:37:35 recht Exp $
+
+--- pngtest.c.orig	2004-08-08 04:42:44.000000000 +0200
++++ pngtest.c	2004-08-08 12:27:49.000000000 +0200
+@@ -579,7 +579,7 @@
           }
           if (pinfo->next == NULL)
           {
@@ -10,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2002/11/26 21:39:14 cjep Exp $
              break;
           }
           ppinfo = &pinfo->next;
-@@ -1422,8 +1422,8 @@
+@@ -1438,8 +1438,8 @@
                 current_allocation);
              while (pinfo != NULL)
              {
@@ -21,7 +22,7 @@ $NetBSD: patch-ab,v 1.6 2002/11/26 21:39:14 cjep Exp $
                 pinfo = pinfo->next;
              }
           }
-@@ -1497,8 +1497,8 @@
+@@ -1513,8 +1513,8 @@
                  current_allocation);
               while (pinfo != NULL)
               {
