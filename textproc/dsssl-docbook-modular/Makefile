@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.24 2004/09/24 13:09:11 wiz Exp $
-# FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
+# $NetBSD: Makefile,v 1.25 2005/02/18 16:17:43 wiz Exp $
 
-DISTNAME=	docbook-dsssl-1.78
-PKGNAME=	dsssl-docbook-modular-1.78
+DISTNAME=	docbook-dsssl-1.79
+PKGNAME=	dsssl-docbook-modular-1.79
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
-DISTFILES=	${DISTNAME}.tar.gz  docbook-dsssl-doc-1.78.tar.gz
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} docbook-dsssl-doc-1.79${EXTRACT_SUFX}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	hubertf@NetBSD.org
-HOMEPAGE=	http://nwalsh.com/docbook/dsssl/
-COMMENT=	DSSSL stylesheets for the DocBook DTD by Norman Walsh
+HOMEPAGE=	http://docbook.sourceforge.net/
+COMMENT=	DSSSL stylesheets for the DocBook DTD
 
 DEPENDS+=	docbook>=4.0:../../textproc/docbook
 
