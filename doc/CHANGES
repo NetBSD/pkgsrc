@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3235 2003/09/04 10:22:39 wiz Exp $
+$NetBSD: CHANGES,v 1.3236 2003/09/04 11:48:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3523,3 +3523,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sylpheed to 0.9.5 [chris 2003-09-04]
 	Updated pan to 0.14.2 [chris 2003-09-04]
 	Updated crimsonfields to 0.3.6 [wiz 2003-09-04]
+	Updated easytag to 0.29 [wiz 2003-09-04]
