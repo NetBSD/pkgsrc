@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 1998/08/27 13:18:21 garbled Exp $
+--- Makefile.std.orig	Wed Feb 11 04:30:28 1998
++++ Makefile.std	Sun Aug  9 01:46:05 1998
+@@ -117,4 +117,4 @@
+ #
+-CFLAGS = -Wall -O1 -pipe -g -D"USE_X11" -D"USE_GCU"
+-LIBS = -lX11 -lcurses -ltermcap
++CFLAGS = -Wall -O -D"USE_GCU" -DDEFAULT_PATH=\"$(PREFIX)/share/angband/\"
++LIBS = -lcurses -ltermcap
+ 

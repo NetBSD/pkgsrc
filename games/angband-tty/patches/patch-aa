@@ -1,0 +1,8 @@
+$NetBSD: patch-aa,v 1.1 1998/08/27 13:18:21 garbled Exp $
+--- h-config.h.orig	Sun Aug  9 01:30:48 1998
++++ h-config.h	Sun Aug  9 01:32:20 1998
+@@ -179,3 +179,3 @@
+  */
+-#if defined(__alpha) && defined(__osf__)
++#if defined(__alpha) && (defined(__osf__) || defined(__NetBSD__))
+ # define L64
