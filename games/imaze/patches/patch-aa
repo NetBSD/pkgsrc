@@ -1,0 +1,35 @@
+--- source/Makefile.orig	Thu Feb 22 15:01:18 1996
++++ source/Makefile	Wed Jul 29 23:33:30 1998
+@@ -12,3 +12,3 @@
+ #DEFINES=
+-BINDIR=..
++BINDIR=$(PREFIX)/bin
+ COPT=-O
+@@ -121,2 +121,10 @@
+ 
++netbsd:
++	$(MAKE) \
++	  GRAF=MOTIF \
++	  GRAFLIBS='$$(MOTIFLIBS)' \
++	  GRAFINCLUDES='$$(MOTIFINCLUDES)' \
++	  SYSDEFS='-DDONT_DECLARE_ERRLIST -DSOUND -DJOYSTICK -DDEFAULT_SOUND_DIR="$$(PREFIX)/share/imaze/sound"' \
++	  all
++
+ irix:
+@@ -140,3 +148,3 @@
+ LD=$(CC)
+-INSTALL=install -s -m 755
++INSTALL=install -s -o bin -g bin -m 0755
+ 
+@@ -145,4 +153,4 @@
+ 
+-MOTIFLIBS=-lXm -lXt -lX11
+-MOTIFINCLUDES=
++MOTIFLIBS=-L$(PREFIX)/lib -lXm -lXt -lX11
++MOTIFINCLUDES=-I$(PREFIX)/include
+ 
+@@ -154,3 +162,3 @@
+ 
+-LDFLAGS=
++LDFLAGS=$(RPATH)
+ CFLAGS=$(GRAFINCLUDES) $(COPT) $(DEFINES) $(SYSDEFS)

@@ -1,0 +1,18 @@
+iMaze is a multi-player network action game for TCP/IP with 3D graphics
+under X11/XView and Motif.
+
+It has successfully broken down the local FORTRAN lessons.
+
+Other features include:
+- sophisticated, reliable network protocol, works even with SLIP connections
+  via modem
+- windows can be freely scaled to avoid speed drawbacks due to poor display
+  performance
+- modular, portable source code
+- scores
+- extensive documentation (german)
+
+After hours of testing, dueling and enjoying MidiMaze 2 on the Atari ST we
+decided that it wouldn't be such a bad idea to write something similar for
+Unix. "iMaze" means "Internet Maze" and by a strange coincidence it is also
+a substring of "MidiMaze".
