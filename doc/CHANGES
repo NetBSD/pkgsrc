@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8641 2005/01/06 21:02:16 adrianp Exp $
+$NetBSD: CHANGES,v 1.8642 2005/01/06 22:10:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -160,3 +160,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated vim-gtk2 to 6.3.045 [adrianp 2005-01-06]
 	Updated vim-motif to 6.3.045 [adrianp 2005-01-06]
 	Updated vim-xaw to 6.3.045 [adrianp 2005-01-06]
+	Updated ggv2 to 2.8.2 [jmmv 2005-01-06]
