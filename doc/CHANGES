@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1798 2003/03/29 08:21:15 taca Exp $
+$NetBSD: CHANGES,v 1.1799 2003/03/29 12:35:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1340,3 +1340,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_tarup to 1.3 [jschauma 2003-03-28]
 	Updated cvsync to 0.17.1 [gehenna 2003-03-29]
 	Updated ja-samba to 2.2.7.1.1.1 [taca 2003-03-29]
+	Updated pkglint to 3.49 [wiz 2003-03-29]
