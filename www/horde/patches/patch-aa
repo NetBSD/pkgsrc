@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/12 15:26:05 jlam Exp $
+
+--- phplib/local.inc.dist.orig	Thu Sep 21 09:48:43 2000
++++ phplib/local.inc.dist
+@@ -27,23 +27,23 @@
+  */
+ 
+ /* To use an SQL database, uncomment and edit the following: */
+-#class HordeDB extends DB_Sql {
+-#  var $Host = 'localhost';
+-#  var $Database = 'horde';
+-#  var $User = 'hordemgr';
+-#  var $Password = 'hordemgr';
+-#  var $Port = '';
+-#
+-#  function halt($msg) {
+-#    // Printing here causes race condition trouble, so don't.
+-#    //printf("<b>Database error (HordeDB):</b> %s<br>\n", $msg);
+-#  }
+-#}
+-#
+-#class HordeCT extends CT_Sql {
+-#  var $database_class = 'HordeDB';         // Which database class to use...
+-#  var $database_table = 'active_sessions'; // and find our data in this table.
+-#}
++class HordeDB extends DB_Sql {
++  var $Host = 'localhost';
++  var $Database = 'horde';
++  var $User = 'hordemgr';
++  var $Password = 'hordemgr';
++  var $Port = '';
++
++  function halt($msg) {
++    // Printing here causes race condition trouble, so don't.
++    //printf("<b>Database error (HordeDB):</b> %s<br>\n", $msg);
++  }
++}
++
++class HordeCT extends CT_Sql {
++  var $database_class = 'HordeDB';         // Which database class to use...
++  var $database_table = 'active_sessions'; // and find our data in this table.
++}
+ 
+ /* To use shared memory, uncomment and edit the following: */
+ /* NOTE: If you do this, you must edit prepend.php3 to include ct_shm.inc
