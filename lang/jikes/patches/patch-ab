@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.8 2004/04/16 17:49:59 tv Exp $
---- doc/Makefile.in.orig	Thu Nov 21 08:18:00 2002
-+++ doc/Makefile.in	Mon Jan  6 10:28:18 2003
-@@ -116,7 +116,7 @@
+$NetBSD: patch-ab,v 1.9 2004/04/27 23:23:03 recht Exp $
+
+--- doc/Makefile.in.orig	2004-03-25 14:32:26.000000000 +0100
++++ doc/Makefile.in	2004-04-28 01:11:43.000000000 +0200
+@@ -158,7 +158,7 @@
+ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  man_MANS = jikes.1
- 
--docdir = $(prefix)/doc/${PACKAGE}-${VERSION}
-+docdir = $(prefix)/share/doc/html/${PACKAGE}
- 
+-docdir = $(datadir)/doc/${PACKAGE}-${VERSION}
++docdir = $(datadir)/doc/html/${PACKAGE}
  doc_DATA = \
  license.htm
+ 
