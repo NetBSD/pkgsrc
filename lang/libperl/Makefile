@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/07/22 22:00:52 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2002/07/22 22:03:34 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -14,7 +14,7 @@ USE_BUILDLINK_ONLY=	YES
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/DynaLoader
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
 
-#BUILDLINK_DEPENDS.perl=	perl-${PERL5_DIST_VERS}*
+BUILDLINK_DEPENDS.perl=	perl-${PERL5_DIST_VERS}*
 
 .include "../../mk/bsd.prefs.mk"
 
