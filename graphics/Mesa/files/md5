@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.6 1998/08/07 13:21:35 agc Exp $
+$NetBSD: md5,v 1.7 1998/09/30 19:46:36 tron Exp $
 
-MD5 (MesaLib-2.6.tar.gz) = ee27bf2548dbc2031974c33ee6226c0c
-MD5 (MesaDemos-2.6.tar.gz) = 6eef61e387f71a76b855ab6b3d2c89e5
+MD5 (MesaLib-3.0.tar.gz) = 34af82a8ab6b8283ea77855f3fdf7ef5
+MD5 (MesaDemos-3.0.tar.gz) = 6ec326092bf8f634a23f7203dc66baad
