@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/03/16 12:31:45 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2000/03/21 22:40:51 tron Exp $
 #
 
 # According to the AbiSource license, compilations/distributions of AbiWord
@@ -17,7 +17,7 @@ HOMEPAGE=	http://www.abisource.com/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/unzip:../../archivers/unzip
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	png>=1.0.3:../../graphics/png
+DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 USE_X11=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/02/09 20:20:56 tron Exp $
+# $NetBSD: Makefile,v 1.15 2000/03/21 22:40:55 tron Exp $
 #
 
 DISTNAME=	xsane-0.51
@@ -16,7 +16,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.wolfsburg.de/~rauch/sane/sane-xsane.html
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.3:../../graphics/png
+DEPENDS+=	png>=1.0.6:../../graphics/png
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	sane-1.0.1:../../graphics/sane
