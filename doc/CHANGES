@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6870 2004/08/13 19:36:09 jschauma Exp $
+$NetBSD: CHANGES,v 1.6871 2004/08/14 00:28:07 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3825,3 +3825,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added cy2-otp-2.1.19 [jlam 2004-08-13]
 	Added cy2-plain-2.1.19 [jlam 2004-08-13]
 	Added tor-0.0.7 [jschauma 2004-08-13]
+	Updated xmame to 0.85 [kristerw 2004-08-14]
+	Updated xmess to 0.85 [kristerw 2004-08-14]
