@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/10/05 03:39:33 rh Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/05 03:54:46 rh Exp $
 #
 
 DISTNAME=		anjuta-0.1.9
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=anjuta/}
 
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=        --localstatedir=${LOCALSTATEDIR}
 
 LOCALSTATEDIR=          ${X11PREFIX}/var
 
+.include "../../devel/bonobo/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../sysutils/gnome-vfs/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"
