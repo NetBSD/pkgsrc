@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2987 2005/02/04 14:35:50 wiz Exp $
+$NetBSD: TODO,v 1.2988 2005/02/04 14:36:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -819,7 +819,6 @@ Suggested package updates
 	o p5-OOTools-1.76
 	o p5-PV-1.5
 	o p5-Params-Validate-0.76
-	o p5-Perl-Tidy-20031021
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.10
