@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:16 wiz Exp $
-
-SHA1 (gnubile-0.20.tar.gz) = ab4b299b6ab3047e76a6de98944094c535c7d562
-Size (gnubile-0.20.tar.gz) = 96464 bytes
-SHA1 (patch-aa) = 9f84185c0f3b34d8330d150042092d38fc4d6d2c
