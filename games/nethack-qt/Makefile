@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/03/01 21:12:51 pooka Exp $
+# $NetBSD: Makefile,v 1.36 2003/06/06 12:10:07 jmmv Exp $
 #
 
 .include		"../nethack-lib/Makefile.common"
@@ -16,6 +16,7 @@ USE_X11=		# defined
 ALL_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles
 MAKE_ENV+=		GTYPE=-qt
+CFLAGS+=		-DPREFIX=\"\\\"${PREFIX}\\\"\"
 
 ALLFILES=		${DISTFILES}	# don't checksum shared patches
 
