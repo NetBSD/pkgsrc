@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.5 2003/07/02 00:00:23 jtb Exp $
+
+--- Makefile.in.orig
++++ Makefile.in
+@@ -111,7 +111,7 @@
+ LIBGMP = @LIBGMP@
+ LIBICONV = @LIBICONV@
+ LIBLTDL = @LIBLTDL@
+-LIBREADLINE = @LIBREADLINE@
++LIBREADLINE = @LIBREADLINE@ -lreadline -ltermcap
+ LIBS = @LIBS@
+ LIBSNPRINTFV = @LIBSNPRINTFV@
+ LIBTCLTK = @LIBTCLTK@
+@@ -349,7 +349,7 @@
+ 	done
+ gst$(EXEEXT): $(gst_OBJECTS) $(gst_DEPENDENCIES) 
+ 	@rm -f gst$(EXEEXT)
+-	$(LINK) $(gst_LDFLAGS) $(gst_OBJECTS) $(gst_LDADD) $(LIBS)
++	$(LINK) $(gst_LDFLAGS) $(gst_OBJECTS) $(gst_LDADD) $(LIBS) $(LIBREADLINE)
+ binSCRIPT_INSTALL = $(INSTALL_SCRIPT)
+ install-binSCRIPTS: $(bin_SCRIPTS)
+ 	@$(NORMAL_INSTALL)

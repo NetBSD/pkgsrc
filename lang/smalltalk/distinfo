@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.5 2002/01/31 14:08:58 mjl Exp $
+$NetBSD: distinfo,v 1.6 2003/07/02 00:00:23 jtb Exp $
 
-SHA1 (smalltalk-1.95.10.tar.gz) = 7cfe11d39681f1114695f4b981ebcdd76e4dd553
-Size (smalltalk-1.95.10.tar.gz) = 2233844 bytes
+SHA1 (smalltalk-2.1.3.tar.gz) = c38735c51357f5535097234b19ab4401615992f5
+Size (smalltalk-2.1.3.tar.gz) = 3416268 bytes
+SHA1 (patch-aa) = 41e3ca795c13aef9ef5f837e5341e306bcfa9352
+SHA1 (patch-ab) = ad2fbdb3a63c2bcff9d080d563ba29294b7b8e03
