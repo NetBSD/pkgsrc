@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/20 16:00:42 martti Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/07 19:42:55 martti Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
@@ -34,6 +34,7 @@ post-configure:
 	cd ${WRKSRC} && ${CP} -f config.h include/my_config.h
 
 post-build:
+	cd ${WRKSRC}/man && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 	cd ${WRKSRC}/scripts && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}	\
 		${MAKE_FLAGS} mysqld_safe mysql_install_db
 
@@ -43,7 +44,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/support-files/mysql.server ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld_multi.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/man/mysqld_safe.1 ${PREFIX}/man/man1
+	#${INSTALL_MAN} ${WRKSRC}/man/mysqld_safe.1 ${PREFIX}/man/man1
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 	${CHOWN} -R ${MYSQL_USER}:${MYSQL_GROUP} ${MYSQL_DATADIR}
 
