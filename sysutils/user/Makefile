@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:53:57 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/15 16:27:56 jmmv Exp $
 #
 
 # Note to package maintainers:
@@ -27,6 +27,10 @@ PLIST_SRC=		${WRKDIR}/PLIST
 
 MAKE_ENV+=		BINDIR=${PREFIX}/sbin MANDIR=${PREFIX}/man \
 			FILESDIR=${PREFIX}/share/examples/usermgmt
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=	MANINSTALL
 
 pre-install:
 			${INSTALL_DATA_DIR} ${PREFIX}/share/examples/usermgmt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 18:19:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/15 16:27:55 jmmv Exp $
 
 DISTNAME=		spegla-1.1
 CATEGORIES=		net
@@ -10,6 +10,10 @@ COMMENT=		Mirror program for FTP sites (written in C)
 
 MANCOMPRESSED_IF_MANZ=	yes
 PLIST_SRC=		${WRKDIR}/PLIST
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=	MANINSTALL
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
