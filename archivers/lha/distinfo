@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:28 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:21:06 agc Exp $
 
-MD5 (lha-114f.tar.gz) = db86f414e08c39e190763f8b0c190ff6
+SHA1 (lha-114f.tar.gz) = 379168bc8c96b3a8b9401426e5360aa8978ba9fc
+Size (lha-114f.tar.gz) = 63668 bytes
 SHA1 (patch-ad) = 952365147b6e4b493ccbf230e8f2df476e15ffc3
 SHA1 (patch-ae) = b073e65ab6089bb4ad258e01973ec90756c7d3d8

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:10:28 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 11:21:06 agc Exp $
 
-MD5 (hpack79usrc.tar.gz) = 1ff1ee91bd3ac14dcabc22aec17aee7a
-MD5 (hpack79src.tar.gz) = 5353c034d6f3b611df6536ac2349ca89
+SHA1 (hpack79src.tar.gz) = 5fb85346724e5d972ae809311d6571a9034ee5d5
+Size (hpack79src.tar.gz) = 545648 bytes
