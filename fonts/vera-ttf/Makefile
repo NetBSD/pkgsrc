@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/01/25 20:35:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/28 14:38:03 wiz Exp $
 #
 
 DISTNAME=	ttf-bitstream-vera-1.10
 PKGNAME=	vera-ttf-1.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ttf-bitstream-vera/1.10/}
 EXTRACT_SUFX=	.tar.bz2
