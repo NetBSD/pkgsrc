@@ -1,4 +1,4 @@
-# $NetBSD: ghostscript.mk,v 1.7 2002/09/14 03:21:11 rh Exp $
+# $NetBSD: ghostscript.mk,v 1.8 2002/09/16 01:30:44 mycroft Exp $
 #
 # This Makefile fragment is included by packages that require a run-time
 # dependency on a ghostscript Postscript interpreter.
@@ -59,7 +59,7 @@ GHOSTSCRIPT_DEPENDS=	{${_GS_DEPENDS}}:${_GS_PKGSRCDIR}
 .  else
 GHOSTSCRIPT_DEPENDS=	${_GS_DEPENDS}:${_GS_PKGSRCDIR}
 .  endif
-MAKEFLAGS+=		GHOSTSCRIPT_DEPENDS="${GHOSTSCRIPT_DEPENDS}"
+#MAKEFLAGS+=		GHOSTSCRIPT_DEPENDS="${GHOSTSCRIPT_DEPENDS}"
 .endif
 
 .if (${USE_GHOSTSCRIPT} == "build")
