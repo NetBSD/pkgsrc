@@ -1,0 +1,42 @@
+$NetBSD: patch-ab,v 1.1 1999/04/07 23:01:27 mellon Exp $
+
+diff -rc2 gnupg-0.9.5/configure gnupg-0.9.5-hacked/configure
+*** gnupg-0.9.5/configure	Sat Mar 20 04:34:01 1999
+--- gnupg-0.9.5-hacked/configure	Wed Apr  7 17:38:32 1999
+***************
+*** 1597,1600 ****
+--- 1597,1607 ----
+  esac
+  
++ case "$target" in
++ i[3456]86*-*-netbsd* | pentium-*-netbsd* | pentiumpro-*-netbsd*)
++   ac_sympat='_\([_A-Za-z][_A-Za-z0-9]*\)'
++   ac_symxfrm='_\1 \1'
++   ;;
++ esac
++ 
+  # If we're using GNU nm, then use its standard symbol codes.
+  if $NM -V 2>&1 | egrep '(GNU|with BFD)' > /dev/null; then
+***************
+*** 1841,1845 ****
+              ;;
+  
+!           freebsd2* | osf4* )
+              CFLAGS_RDYNAMIC=""
+              ;;
+--- 1848,1852 ----
+              ;;
+  
+!           freebsd2* | osf4* | netbsd*)
+              CFLAGS_RDYNAMIC=""
+              ;;
+***************
+*** 1879,1882 ****
+--- 1886,1892 ----
+          NAME_OF_DEV_RANDOM="/dev/srandom"
+          NAME_OF_DEV_URANDOM="/dev/urandom"
++         DYNLINK_MOD_CFLAGS="-shared -rdynamic -fpic -Wl,-Bshareable -Wl,-x"
++         ;;
++     *-netbsd*)
+          DYNLINK_MOD_CFLAGS="-shared -rdynamic -fpic -Wl,-Bshareable -Wl,-x"
+          ;;
