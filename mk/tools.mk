@@ -1,15 +1,21 @@
-# $NetBSD: tools.mk,v 1.1 2003/08/02 03:46:34 grant Exp $
+# $NetBSD: tools.mk,v 1.2 2003/08/02 04:49:14 grant Exp $
 #
 # handle platforms with broken tools in the base system, such as sed
 # and awk.
 #
 # symlink the suitable versions of tools into .buildlink/bin (if they
-# exist in the base system) and allow packages or users to force the use
-# of pkgsrc GNU tools when they are not present in the base system by
-# defining e.g. USE_GNU_TOOLS="awk sed". version numbers are not
+# exist in the base system) and allow packages to force the use of
+# pkgsrc GNU tools when they are not present in the base system by
+# defining e.g. USE_GNU_TOOLS+="awk sed". version numbers are not
 # considered.
 #
 # this functionality is buildlink2 only.
+#
+# packages should always use eg.
+#
+#	USE_GNU_TOOLS+=	grep
+#
+# to be sure not to override the setting passed by the user.
 #
 
 .if !defined(TOOLS_MK)
