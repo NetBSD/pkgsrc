@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2001/01/29 04:33:01 jtb Exp $
+# $NetBSD: Makefile,v 1.112 2001/02/01 04:37:34 jtb Exp $
 #
 
     SUBDIR += CompuPic
@@ -75,6 +75,7 @@
     SUBDIR += p5-GDTextUtil
     SUBDIR += p5-Image-Size
     SUBDIR += p5-PerlMagick
+    SUBDIR += pgraf
     SUBDIR += photopc
     SUBDIR += pixmap
     SUBDIR += ploticus
