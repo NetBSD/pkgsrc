@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6912 2004/08/16 22:26:14 dillo Exp $
+$NetBSD: CHANGES,v 1.6913 2004/08/16 23:36:50 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3869,3 +3869,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added weewm-0.0.2 [minskim 2004-08-16]
 	Added wipe-2.2.0 [minskim 2004-08-16]
 	Updated stella to 1.4.1 [dillo 2004-08-16]
+	Updated clustal to 1.83 [ben 2004-08-16]

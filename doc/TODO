@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2051 2004/08/16 22:26:14 dillo Exp $
+$NetBSD: TODO,v 1.2052 2004/08/16 23:36:50 ben Exp $
 
 Suggested new packages
 ======================
@@ -192,7 +192,6 @@ Suggested package updates
 	o clanlib-0.7.8
 	o classpath-0.10
 	o clisp-2.33.2
-	o clustalw-1.8.3
 	o cocoon-2.1.5
 	o conserver-8.1.8
 	o cooledit-3.17.8
