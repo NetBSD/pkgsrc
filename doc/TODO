@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.294 2003/02/21 12:27:17 mycroft Exp $
+$NetBSD: TODO,v 1.295 2003/02/21 12:55:24 mycroft Exp $
 
 Suggested new packages
 ======================
@@ -175,7 +175,6 @@ Suggested package updates
 	o libggi-2.0.2
 	o libole2-2.2.8
 	o libmcrypt-2.5.5
-	o librep-0.16.1
 	o librsvg-2.2.2.1
 	o libslang-1.4.7
 	o libsndfile-1.0.4
