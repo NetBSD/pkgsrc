@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7378 2004/10/08 13:22:13 adam Exp $
+$NetBSD: CHANGES,v 1.7379 2004/10/08 19:19:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4585,3 +4585,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xfce4-clipman-plugin to 0.4.1 [martti 2004-10-08]
 	Updated dbh to 1.0.20 [martti 2004-10-08]
 	Updated psiconv to 0.9.6 [adam 2004-10-08]
+	Updated glib2 to 2.4.7 [jmmv 2004-10-08]
