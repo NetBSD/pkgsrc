@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/12/28 21:48:42 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.18 2005/02/26 17:25:03 jmmv Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/gnome-panel-screenshot
@@ -290,6 +290,7 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
+${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gnome-panel-2.0.mo
 share/omf/gnome-panel/clock-C.omf
 share/omf/gnome-panel/clock-de.omf
 share/omf/gnome-panel/clock-es.omf
