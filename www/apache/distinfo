@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.20 2002/06/20 17:12:37 taca Exp $
+$NetBSD: distinfo,v 1.21 2002/06/24 16:26:19 taca Exp $
 
 SHA1 (apache_1.3.26.tar.gz) = c8ab59541267c3e570592115b280e6cb2fb2b30f
 Size (apache_1.3.26.tar.gz) = 2303147 bytes
 SHA1 (sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
 Size (sitedrivenby.gif) = 8519 bytes
-SHA1 (mod_ssl-2.8.9-1.3.26.tar.gz) = 3075124cce758f06b292baa754d55eab639cdfc9
-Size (mod_ssl-2.8.9-1.3.26.tar.gz) = 752613 bytes
+SHA1 (mod_ssl-2.8.10-1.3.26.tar.gz) = 6af4bbd91f2323c95f8d3ca1c461edc17fc1d13e
+Size (mod_ssl-2.8.10-1.3.26.tar.gz) = 753241 bytes
 SHA1 (patch-aa) = d188ab15483eb9e099a9398083413267570b9f9b
 SHA1 (patch-ab) = 71ea1f3a59e0f7bc37175b0eefd462a1f7ca4fb6
 SHA1 (patch-ac) = 12347c7a306d3e898b032c2b4b3b01670b62d4fd
