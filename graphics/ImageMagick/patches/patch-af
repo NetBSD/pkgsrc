@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.4 2002/11/13 13:44:44 wiz Exp $
+
+--- magick/Makefile.in.orig	Thu Oct 17 04:37:54 2002
++++ magick/Makefile.in
+@@ -359,7 +359,7 @@ INCLUDES = -I$(top_srcdir) $(INCLTDL)
+ ALLMANPAGES = Magick-config.1
+ 
+ libMagick_la_LDFLAGS = -no-undefined \
+-	-release $(MAJOR_VERSION).$(MINOR_VERSION).$(MICRO_VERSION)
++	-version-info $(MAJOR_VERSION):$(MINOR_VERSION):$(MICRO_VERSION)
+ 
+ 
+ #AM_CFLAGS = @LIBRARY_EXTRA_CPPFLAGS@
