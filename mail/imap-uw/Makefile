@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2002/12/27 05:47:14 uebayasi Exp $
+# $NetBSD: Makefile,v 1.52 2003/01/23 01:28:36 dmcmahill Exp $
 
 DISTNAME=       imap-2002a.DEV.SNAP-0212051126
 PKGNAME=        imap-uw-2002.1rc1
@@ -68,6 +68,16 @@ ALL_TARGET+=	SSLTYPE="nopwd"
 .elif !defined(IMAP_UW_NO_SSL) || ${IMAP_UW_NO_SSL} != "YES"
 ALL_TARGET+=	SPECIALAUTHENTICATORS="ssl"
 ALL_TARGET+=	SSLTYPE="unix"
+.endif
+
+# reduce optimization level on alpha to avoid compiler bugs
+.if ${OPSYS} == "NetBSD"
+.  if (${MACHINE_ARCH} == "alpha")
+CPPFLAGS:=      ${CPPFLAGS:C/-O[0-9]*/-O/g}
+CFLAGS:=        ${CFLAGS:C/-O[0-9]*/-O/g}
+CONFIGURE_ENV+= CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+= CFLAGS="${CFLAGS}"
+.  endif
 .endif
 
 post-extract:
