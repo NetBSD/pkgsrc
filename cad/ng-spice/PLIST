@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:48:44 zuntum Exp $
-bin/help
-bin/makeidx
-bin/multidec
+@comment $NetBSD: PLIST,v 1.2 2002/01/26 02:38:30 dmcmahill Exp $
+bin/nghelp
+bin/ngmakeidx
+bin/ngmultidec
 bin/ngspice
-bin/nutmeg
-bin/proc2mod
-bin/sconvert
-bin/test_cx_j
-bin/test_cx_mag
-bin/test_cx_ph
+bin/ngnutmeg
+bin/ngproc2mod
+bin/ngsconvert
 @unexec install-info --delete --info-dir=%D/info %D/info/ngspice.info
 info/ngspice.info
 info/ngspice.info-1
@@ -18,6 +15,7 @@ info/ngspice.info-4
 info/ngspice.info-5
 info/ngspice.info-6
 info/ngspice.info-7
+info/ngspice.info-8
 @exec install-info --info-dir=%D/info %D/info/ngspice.info
 lib/libdev.a
 lib/ng-spice-rework/libasrc.a
@@ -45,6 +43,21 @@ lib/ng-spice-rework/libbsim3.la
 lib/ng-spice-rework/libbsim3.so
 lib/ng-spice-rework/libbsim3.so.0
 lib/ng-spice-rework/libbsim3.so.0.0
+lib/ng-spice-rework/libbsim3soidd.a
+lib/ng-spice-rework/libbsim3soidd.la
+lib/ng-spice-rework/libbsim3soidd.so
+lib/ng-spice-rework/libbsim3soidd.so.0
+lib/ng-spice-rework/libbsim3soidd.so.0.0
+lib/ng-spice-rework/libbsim3soifd.a
+lib/ng-spice-rework/libbsim3soifd.la
+lib/ng-spice-rework/libbsim3soifd.so
+lib/ng-spice-rework/libbsim3soifd.so.0
+lib/ng-spice-rework/libbsim3soifd.so.0.0
+lib/ng-spice-rework/libbsim3soipd.a
+lib/ng-spice-rework/libbsim3soipd.la
+lib/ng-spice-rework/libbsim3soipd.so
+lib/ng-spice-rework/libbsim3soipd.so.0
+lib/ng-spice-rework/libbsim3soipd.so.0.0
 lib/ng-spice-rework/libbsim3v1.a
 lib/ng-spice-rework/libbsim3v1.la
 lib/ng-spice-rework/libbsim3v1.so
@@ -85,6 +98,16 @@ lib/ng-spice-rework/libdio.la
 lib/ng-spice-rework/libdio.so
 lib/ng-spice-rework/libdio.so.0
 lib/ng-spice-rework/libdio.so.0.0
+lib/ng-spice-rework/libhfet.a
+lib/ng-spice-rework/libhfet.la
+lib/ng-spice-rework/libhfet.so
+lib/ng-spice-rework/libhfet.so.0
+lib/ng-spice-rework/libhfet.so.0.0
+lib/ng-spice-rework/libhfet2.a
+lib/ng-spice-rework/libhfet2.la
+lib/ng-spice-rework/libhfet2.so
+lib/ng-spice-rework/libhfet2.so.0
+lib/ng-spice-rework/libhfet2.so.0.0
 lib/ng-spice-rework/libind.a
 lib/ng-spice-rework/libind.la
 lib/ng-spice-rework/libind.so
@@ -115,6 +138,11 @@ lib/ng-spice-rework/libmes.la
 lib/ng-spice-rework/libmes.so
 lib/ng-spice-rework/libmes.so.0
 lib/ng-spice-rework/libmes.so.0.0
+lib/ng-spice-rework/libmesa.a
+lib/ng-spice-rework/libmesa.la
+lib/ng-spice-rework/libmesa.so
+lib/ng-spice-rework/libmesa.so.0
+lib/ng-spice-rework/libmesa.so.0.0
 lib/ng-spice-rework/libmos1.a
 lib/ng-spice-rework/libmos1.la
 lib/ng-spice-rework/libmos1.so
@@ -135,11 +163,21 @@ lib/ng-spice-rework/libmos6.la
 lib/ng-spice-rework/libmos6.so
 lib/ng-spice-rework/libmos6.so.0
 lib/ng-spice-rework/libmos6.so.0.0
+lib/ng-spice-rework/libmos9.a
+lib/ng-spice-rework/libmos9.la
+lib/ng-spice-rework/libmos9.so
+lib/ng-spice-rework/libmos9.so.0
+lib/ng-spice-rework/libmos9.so.0.0
 lib/ng-spice-rework/libres.a
 lib/ng-spice-rework/libres.la
 lib/ng-spice-rework/libres.so
 lib/ng-spice-rework/libres.so.0
 lib/ng-spice-rework/libres.so.0.0
+lib/ng-spice-rework/libsoi3.a
+lib/ng-spice-rework/libsoi3.la
+lib/ng-spice-rework/libsoi3.so
+lib/ng-spice-rework/libsoi3.so.0
+lib/ng-spice-rework/libsoi3.so.0.0
 lib/ng-spice-rework/libsw.a
 lib/ng-spice-rework/libsw.la
 lib/ng-spice-rework/libsw.so
@@ -170,11 +208,15 @@ lib/ng-spice-rework/libvsrc.la
 lib/ng-spice-rework/libvsrc.so
 lib/ng-spice-rework/libvsrc.so.0
 lib/ng-spice-rework/libvsrc.so.0.0
-man/man1/nutmeg.1
-man/man1/sconvert.1
-man/man1/spice.1
+man/man1/ngnutmeg.1
+man/man1/ngsconvert.1
+man/man1/ngspice.1
 share/ng-spice-rework/helpdir/ngspice.idx
 share/ng-spice-rework/helpdir/ngspice.txt
+share/ng-spice-rework/scripts/setplot
+share/ng-spice-rework/scripts/spectrum
+share/ng-spice-rework/scripts/spinit
+@dirrm share/ng-spice-rework/scripts
 @dirrm share/ng-spice-rework/helpdir
 @dirrm share/ng-spice-rework
 @dirrm lib/ng-spice-rework
