@@ -1,4 +1,4 @@
-# $NetBSD: sunpro-cc-post-logic,v 1.8 2004/06/13 08:50:15 grant Exp $
+# $NetBSD: sunpro-cc-post-logic,v 1.9 2004/07/03 20:39:26 salo Exp $
 #
 # Silently accept some GCC compiler arguments by silently converting
 # them to the SunPro compiler equivalents.  This makes the SunPro
@@ -67,4 +67,9 @@ case $arg in
 	arg=-G
 	addtoprivatecache=yes
 	;;
+-static)
+	# Solaris' linked uses -Bstatic to create static objects.
+	#
+	arg=-Bstatic
+	addtoprivatecacheýes
 esac
