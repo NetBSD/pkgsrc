@@ -24,106 +24,61 @@
 
 #include "xptcprivate.h"
 
-/* solaris defines __sparc for workshop compilers and 
-   linux defines __sparc__ */
-
-#if !defined(__sparc64__) && !defined(__sparc_v9__)
+#if !defined(__sparc64__) && !defined(_LP64)
 #error "This code is for Sparc64 only"
 #endif
-
-typedef unsigned nsXPCVariant;
-
-extern "C" PRUint32
-invoke_count_words(PRUint32 paramCount, nsXPTCVariant* s)
-{
-    PRUint32 result = 0;
-    for(PRUint32 i = 0; i < paramCount; i++, s++)
-    {
-        if(s->IsPtrData())
-        {
-            result++;
-            continue;
-        }
-        switch(s->type)
-        {
-        case nsXPTType::T_I8     :
-        case nsXPTType::T_I16    :
-        case nsXPTType::T_I32    :
-        case nsXPTType::T_I64    :
-            result++;
-            break;
-        case nsXPTType::T_U8     :
-        case nsXPTType::T_U16    :
-        case nsXPTType::T_U32    :
-        case nsXPTType::T_U64    :
-            result++;
-            break;
-        case nsXPTType::T_FLOAT  :
-        case nsXPTType::T_DOUBLE :
-            result++;
-            break;
-        case nsXPTType::T_BOOL   :
-        case nsXPTType::T_CHAR   :
-        case nsXPTType::T_WCHAR  :
-            result++;
-            break;
-        default:
-            // all the others are plain pointer types
-            result++;
-            break;
-        }
-    }
-    // nuts, I know there's a cooler way of doing this, but it's late
-    // now and it'll probably come to me in the morning.
-    if (result & 0x7) result += 8 - (result & 0x7);     // ensure 16-byte alignment
-    return result;
-}
 
 extern "C" PRUint32
 invoke_copy_to_stack(PRUint64* d, PRUint32 paramCount, nsXPTCVariant* s)
 {
-/*
+  /*
     We need to copy the parameters for this function to locals and use them
     from there since the parameters occupy the same stack space as the stack
     we're trying to populate.
-*/
-    uint64 *l_d = d;
-    nsXPTCVariant *l_s = s;
-    uint32 l_paramCount = paramCount;
-    uint32 regCount = 0;	// return the number of registers to load from the stack
+  */
+  PRUint64 *l_d = d;
+  nsXPTCVariant *l_s = s;
+  PRUint64 l_paramCount = paramCount;
+  PRUint64 regCount = 0;  // return the number of registers to load from the stack
 
-    for(uint32 i = 0; i < l_paramCount; i++, l_d++, l_s++)
+  for(PRUint64 i = 0; i < l_paramCount; i++, l_d++, l_s++)
+  {
+    if (regCount < 5) regCount++;
+
+    if (l_s->IsPtrData())
     {
-	if (regCount < 5) regCount++;
-        if(l_s->IsPtrData())
-        {
-            *((void**)l_d) = l_s->ptr;
-            continue;
-        }
-        switch(l_s->type)
-        {
-        case nsXPTType::T_I8     : *((int64*)  l_d) = l_s->val.i8;          break;
-        case nsXPTType::T_I16    : *((int64*)  l_d) = l_s->val.i16;         break;
-        case nsXPTType::T_I32    : *((int64*)  l_d) = l_s->val.i32;         break;
-        case nsXPTType::T_I64    : *((int64*)  l_d) = l_s->val.i64;         break;
-        case nsXPTType::T_U64    : *((uint64*) l_d) = l_s->val.u64;         break;
-        case nsXPTType::T_U8     : *((uint64*) l_d) = l_s->val.u8;          break;
-        case nsXPTType::T_U16    : *((uint64*) l_d) = l_s->val.u16;         break;
-        case nsXPTType::T_U32    : *((uint64*) l_d) = l_s->val.u32;         break;
-        case nsXPTType::T_FLOAT  : 
-            struct floats { float pad; float data; };
-            ((floats*) l_d)->pad = 0;
-            ((floats*) l_d)->data = l_s->val.f;           break;
-        case nsXPTType::T_DOUBLE : *((uint64*) l_d) = l_s->val.u64;         break;
-        case nsXPTType::T_BOOL   : *((uint64*) l_d) = l_s->val.b;           break;
-        case nsXPTType::T_CHAR   : *((uint64*) l_d) = l_s->val.c;           break;
-        case nsXPTType::T_WCHAR  : *((uint64*) l_d) = l_s->val.wc;          break;
-        default:
-            // all the others are plain pointer types
-            *((void**)l_d) = l_s->val.p;
-            break;
-        }
+      *l_d = (PRUint64)l_s->ptr;
+      continue;
     }
-    return regCount;
-}
+    switch (l_s->type)
+    {
+      case nsXPTType::T_I8    : *((PRInt64*)l_d)     = l_s->val.i8;    break;
+      case nsXPTType::T_I16   : *((PRInt64*)l_d)     = l_s->val.i16;   break;
+      case nsXPTType::T_I32   : *((PRInt64*)l_d)     = l_s->val.i32;   break;
+      case nsXPTType::T_I64   : *((PRInt64*)l_d)     = l_s->val.i64;   break;
+      
+      case nsXPTType::T_U8    : *((PRUint64*)l_d)    = l_s->val.u8;    break;
+      case nsXPTType::T_U16   : *((PRUint64*)l_d)    = l_s->val.u16;   break;
+      case nsXPTType::T_U32   : *((PRUint64*)l_d)    = l_s->val.u32;   break;
+      case nsXPTType::T_U64   : *((PRUint64*)l_d)    = l_s->val.u64;   break;
 
+      /* in the case of floats, we want to put the bits in to the
+         64bit space right justified... floats in the paramter array on
+         sparcv9 use odd numbered registers.. %f1, %f3, so we have to skip
+         the space that would be occupied by %f0, %f2, etc.
+      */
+      case nsXPTType::T_FLOAT : *(((float*)l_d) + 1) = l_s->val.f;     break;
+      case nsXPTType::T_DOUBLE: *((double*)l_d)      = l_s->val.d;     break;
+      case nsXPTType::T_BOOL  : *((PRBool*)l_d)      = l_s->val.b;     break;
+      case nsXPTType::T_CHAR  : *((PRUint64*)l_d)    = l_s->val.c;     break;
+      case nsXPTType::T_WCHAR : *((PRInt64*)l_d)     = l_s->val.wc;    break;
+
+      default:
+        // all the others are plain pointer types
+        *((void**)l_d) = l_s->val.p;
+        break;
+    }
+  }
+  
+  return regCount;
+}

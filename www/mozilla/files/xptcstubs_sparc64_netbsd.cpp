@@ -24,10 +24,10 @@
 
 #include "xptcprivate.h"
 
-#if defined(__sparc64__) || defined(__sparc_v9__)
+#if defined(sparc) || defined(__sparc__)
 
 extern "C" nsresult
-PrepareAndDispatch(nsXPTCStubBase* self, uint32 methodIndex, uint64* args)
+PrepareAndDispatch(nsXPTCStubBase* self, PRUint64 methodIndex, PRUint64* args)
 {
 
 #define PARAM_BUFFER_COUNT     16
@@ -72,19 +72,19 @@ PrepareAndDispatch(nsXPTCStubBase* self, uint32 methodIndex, uint64* args)
         // else
         switch(type)
         {
-        case nsXPTType::T_I8     : dp->val.i8  = *((PRInt64*) ap);       break;
-        case nsXPTType::T_I16    : dp->val.i16 = *((PRInt64*) ap);       break;
-        case nsXPTType::T_I32    : dp->val.i32 = *((PRInt64*) ap);       break;
+        case nsXPTType::T_I8     : dp->val.i8  = *((PRInt32*)  ap);      break;
+        case nsXPTType::T_I16    : dp->val.i16 = *((PRInt32*) ap);       break;
+        case nsXPTType::T_I32    : dp->val.i32 = *((PRInt32*) ap);       break;
+        case nsXPTType::T_DOUBLE : dp->val.d   = *((double*) ap);        break;
+        case nsXPTType::T_U64    : dp->val.u64 = *((PRUint64*) ap);      break;
         case nsXPTType::T_I64    : dp->val.i64 = *((PRInt64*) ap);       break;
-        case nsXPTType::T_U8     : dp->val.u8  = *((PRUint64*)ap);       break;
-        case nsXPTType::T_U16    : dp->val.u16 = *((PRUint64*)ap);       break;
-        case nsXPTType::T_U32    : dp->val.u32 = *((PRUint64*)ap);       break;
-        case nsXPTType::T_U64    : dp->val.u64 = *((PRUint64*)ap);      break;
-        case nsXPTType::T_DOUBLE : dp->val.u64 = *((PRUint64*)ap);      break;
-        case nsXPTType::T_FLOAT  : dp->val.f   = *((double*)  ap);       break;
-        case nsXPTType::T_BOOL   : dp->val.b   = *((PRUint64*)ap);       break;
-        case nsXPTType::T_CHAR   : dp->val.c   = *((PRUint64*)ap);       break;
-        case nsXPTType::T_WCHAR  : dp->val.wc  = *((PRInt64*) ap);       break;
+        case nsXPTType::T_U8     : dp->val.u8  = *((PRUint32*) ap);      break;
+        case nsXPTType::T_U16    : dp->val.u16 = *((PRUint32*)ap);       break;
+        case nsXPTType::T_U32    : dp->val.u32 = *((PRUint32*)ap);       break;
+        case nsXPTType::T_FLOAT  : dp->val.f   = *((float*)   ap);       break;
+        case nsXPTType::T_BOOL   : dp->val.b   = *((PRBool*)  ap);       break;
+        case nsXPTType::T_CHAR   : dp->val.c   = *((PRUint32*) ap);      break;
+        case nsXPTType::T_WCHAR  : dp->val.wc  = *((PRInt32*) ap);       break;
         default:
             NS_ASSERTION(0, "bad type");
             break;
