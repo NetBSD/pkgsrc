@@ -1,0 +1,15 @@
+*** popauth.c	Wed Nov 19 13:20:38 1997
+--- popauth.c	Thu Feb 12 18:24:55 1998
+***************
+*** 48,52 ****
+  #endif
+  
+! #ifdef BSDI
+  #define BSD44_DBM
+  #endif
+--- 48,52 ----
+  #endif
+  
+! #if defined (BSDI) || defined (__NetBSD__)
+  #define BSD44_DBM
+  #endif
