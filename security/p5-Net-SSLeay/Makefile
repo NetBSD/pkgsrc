@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/02/18 13:10:40 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2005/02/22 15:34:46 wiz Exp $
 
 DISTNAME=	Net_SSLeay.pm-1.26
 PKGNAME=	p5-${DISTNAME:S/Net_/Net-/:S/.pm//}
@@ -15,8 +15,11 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/SSLeay/.packlist
-MAKE_PARAMS+=		${SSLBASE}
 
 .include "../../lang/perl5/module.mk"
+
+# does not like "INSTALLDIRS=site", so override perl5/module.mk setting
+MAKE_PARAMS=		${SSLBASE}
+
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
