@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/12/10 20:58:55 veego Exp $
+
+--- src/Makefile.in-orig	Wed Dec  5 22:43:27 2001
++++ src/Makefile.in	Sun Dec  9 12:16:07 2001
+@@ -164,7 +164,7 @@
+ 	interpret_config.$(OBJEXT) my_glade.$(OBJEXT)
+ ogle_gui_OBJECTS = $(am_ogle_gui_OBJECTS)
+ ogle_gui_DEPENDENCIES =
+-ogle_gui_LDFLAGS =
++ogle_gui_LDFLAGS = -export-dynamic
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)

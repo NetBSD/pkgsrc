@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/12/10 20:58:55 veego Exp $
+
+SHA1 (ogle_gui-0.8.2.tar.gz) = 078c45d0b64ae909d67eaebe8216116e724e9fe8
+Size (ogle_gui-0.8.2.tar.gz) = 371428 bytes
+SHA1 (patch-aa) = d6b6b0210ff2b57d83ce2a574f9e0d228fcf5ecd
+SHA1 (patch-ab) = e5f2df6840f4913716569837ffbeab4b0a3ef929
