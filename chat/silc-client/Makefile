@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2002/02/17 23:12:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/03 23:27:48 hubertf Exp $
 
-DISTNAME=		silc-client-0.7.6.2
+DISTNAME=		silc-client-0.8
 CATEGORIES=		chat
-MASTER_SITES=		http://silcnet.org/download/client/sources/ \
+MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
 			ftp://ftp.silcnet.org/silc/client/sources/ \
-			http://www.planetmirror.com/pub/silcnet/client/sources/ \
+			http://www.fi.silcnet.org/download/client/sources/ \
 			ftp://ftp.au.silcnet.org/pub/silcnet/client/sources/ \
-			http://munitions.vipul.net/software/mirrors/silc/client/sources/ \
+			http://www.us.silcnet.org/download/client/sources/ \
 			ftp://ftp.no.silcnet.org/pub/silc/client/sources/ \
-			http://the.wiretapped.net/security/network-security/silc/client/sources/ \
-			ftp://ftp.wiretapped.net/pub/security/network-security/silc/client/sources/
+			http://www.at.silcnet.org/download/client/sources/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		salo@silcnet.org
@@ -30,6 +29,24 @@ CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/silc/help
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/silc
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_DIR}
+
+# Optional support for perl scripting.
+# If you want to disable it, set SILC_CLIENT_WITH_PERL to NO
+#
+SILC_CLIENT_WITH_PERL?=	YES
+
+.if defined(SILC_CLIENT_WITH_PERL) && ${SILC_CLIENT_WITH_PERL} == YES
+CONFIGURE_ARGS+=	--with-perl-lib=${PREFIX}/lib/silc/perl5
+CONFIGURE_ARGS+=	--with-simdir=
+PLIST_SRC=		${PKGDIR}/PLIST.perl
+.include "../../lang/perl5/buildlink.mk"
+.else
+CONFIGURE_ARGS+=	--with-perl=no
+.endif
+
+# If you want to help with testing silc-client, uncomment this
+#
+#CONFIGURE_ARGS+=	--enable-debug
 
 .if (${MACHINE_ARCH} != "i386")
 CONFIGURE_ARGS+=	--disable-asm
