@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2003/03/21 23:44:07 salo Exp $
+$NetBSD: patch-aa,v 1.5 2003/04/10 15:32:01 kent Exp $
 
---- Makefile.in.orig	2002-11-14 19:44:14.000000000 +0100
-+++ Makefile.in	2003-03-21 22:58:10.000000000 +0100
-@@ -132,7 +132,7 @@
+--- Makefile.in.orig	2002-11-15 03:44:14.000000000 +0900
++++ Makefile.in
+@@ -132,7 +132,7 @@ install-icu: $(INSTALLED_BUILT_FILES)
  	$(INSTALL_DATA) @platform_make_fragment@ $(DESTDIR)$(pkgdatadir)/config/@platform_make_fragment_name@
  	$(INSTALL_SCRIPT) $(top_srcdir)/mkinstalldirs $(DESTDIR)$(pkgdatadir)/mkinstalldirs
  	$(INSTALL_DATA) README $(DESTDIR)$(pkgdatadir)/README
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.4 2003/03/21 23:44:07 salo Exp $
  
  ifeq ($(DOXYGEN),)
  install-doc:
+@@ -180,7 +180,7 @@ $(top_builddir)/config/Makefile.inc: $(s
+ 
+ $(top_builddir)/config/icu-config: $(top_builddir)/Makefile $(top_srcdir)/config/icu-config-top $(top_srcdir)/config/icu-config-bottom $(top_builddir)/config/Makefile.inc @platform_make_fragment@ $(top_srcdir)/config/make2sh.sed
+ 	-$(RMV) $@
+-	$(INSTALL_DATA) $(top_srcdir)/config/icu-config-top $@
++	cp $(top_srcdir)/config/icu-config-top $@
+ 	@echo "# Following from @platform_make_fragment@" >> $@
+ 	sed -f $(top_srcdir)/config/make2sh.sed < $(top_builddir)/config/Makefile.inc | grep -v '#M#' | uniq >> $@
+ 	sed -f $(top_srcdir)/config/make2sh.sed < @platform_make_fragment@ | grep -v '#M#' | uniq >> $@

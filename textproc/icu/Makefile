@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/03/29 12:42:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/04/10 15:32:00 kent Exp $
 #
 
 DISTNAME=	icu-2.4
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${PKGBASE}/source
 CATEGORIES=	textproc
 MASTER_SITES=	http://oss.software.ibm.com/icu/download/${PKGVERSION}/
