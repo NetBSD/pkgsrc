@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/28 09:14:51 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/09/05 09:33:16 jlam Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -17,7 +17,7 @@ MASTER_SITES=	ftp://ftp.pgpi.com/pub/pgp/5.0/unix/ \
 MAINTAINER=	mjl@netbsd.org
 HOMEPAGE=       http://www.pgpi.com/
 
-BUILD_DEPENDS=	${PERL5}:../../lang/perl5
+BUILD_DEPENDS=	${PERL5}:../../lang/perl5-base
 
 RESTRICTED=	"Cryptographic software"
 NO_SRC_ON_FTP=	${RESTRICTED}
