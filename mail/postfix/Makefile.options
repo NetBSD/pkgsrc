@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.8 2004/07/31 05:07:19 jlam Exp $
+# $NetBSD: Makefile.options,v 1.9 2004/08/04 20:49:43 jlam Exp $
 
 # Global and legacy options
 #
@@ -58,7 +58,7 @@ PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql mysql4 pcre pgsql sasl tls
 ###
 .if !empty(PKG_OPTIONS:Minet6) || !empty(PKG_OPTIONS:Mtls)
 .  include "../../security/openssl/buildlink3.mk"
-PATCHFILES+=		tls+ipv6-1.25-pf-2.1.3.patch.gz
+PATCHFILES+=		tls+ipv6-1.25-pf-2.1.4.patch.gz
 PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
 PATCH_DIST_STRIP=	-p1
 
