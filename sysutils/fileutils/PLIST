@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:41 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/03/11 19:17:44 tron Exp $
 bin/gchgrp
 bin/gchown
 bin/gchmod
 bin/gcp
 bin/gdd
+bin/gdf
 bin/gdircolors
 bin/gdu
 bin/ginstall
@@ -17,12 +18,10 @@ bin/gmknod
 bin/gmv
 bin/grm
 bin/grmdir
+bin/gshred
 bin/gsync
 bin/gtouch
-bin/gdf
-@unexec ${INSTALL_INFO} --delete %D/info/fileutils.info %D/info/dir
-info/fileutils.info
-@exec ${INSTALL_INFO} %D/info/fileutils.info %D/info/dir
+info/coreutils.info
 man/man1/grmdir.1
 man/man1/gdircolors.1
 man/man1/gln.1
@@ -39,6 +38,7 @@ man/man1/gmv.1
 man/man1/gdf.1
 man/man1/grm.1
 man/man1/gdu.1
+man/man1/gshred.1
 man/man1/gtouch.1
 man/man1/ginstall.1
 man/man1/gdir.1
@@ -58,3 +58,13 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/fileutils.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/fileutils.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/fileutils.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/zh/LC_MESSAGES/fileutils.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/fileutils.mo
