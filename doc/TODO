@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2741 2004/12/24 02:07:29 wiz Exp $
+$NetBSD: TODO,v 1.2742 2004/12/24 03:21:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -324,14 +324,6 @@ Suggested package updates
 	o arpwatch-2.1a13
 	o artist-1.2.6
 	o asapm-2.13
-	o aspell-0.60.1.1 [wiz]
-	o aspell-czech-0.51 [wiz]
-	o aspell-english-0.51.1 [wiz]
-	o aspell-faroese-0.51.0 [wiz]
-	o aspell-italian-0.53.0 [wiz]
-	o aspell-polish-0.51.0 [wiz]
-	o aspell-svenska-0.51.0 [wiz]
-	o aspell-ukrainian-0.51.0 [wiz]
 	o ast-ksh-20040229
 	o astyle-1.15.3
 	o atk-1.9.0
@@ -570,6 +562,7 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o gtranslater-1.0.2
 	o gtranslator-1.0.1
+	o guile-1.6.7
 	o guile-oops-1.0.2
 	o guile-www-1.1.1
 	o gwenview-1.1.7
