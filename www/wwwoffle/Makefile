@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2001/03/12 19:08:37 fredb Exp $
+# $NetBSD: Makefile,v 1.29 2001/04/13 13:46:34 itojun Exp $
 
-DISTNAME=	wwwoffle-2.6a
+DISTNAME=	wwwoffle-2.6b
 CATEGORIES=	www
 MASTER_SITES=	http://www.gedanken.demon.co.uk/download-wwwoffle/ \
 		ftp://ftp.demon.co.uk/pub/unix/httpd/ \
 		${MASTER_SITE_SUNSITE:=apps/www/servers/}
 EXTRACT_SUFX=	.tgz
 
-PATCHFILES+=	wwwoffle-26a-v6-20010312.diff.gz
+PATCHFILES+=	wwwoffle-26b-v6-20010411.diff.gz
 PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
 PATCH_DIST_STRIP=	-p1
 
