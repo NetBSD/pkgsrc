@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/05 13:53:50 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/13 00:12:11 simonb Exp $
 bin/antiword
+bin/kantiword
 share/doc/antiword/COPYING
-share/doc/antiword/Changes
+share/doc/antiword/ChangeLog
+share/doc/antiword/FAQ
 share/doc/antiword/History
+share/doc/antiword/Netscape
 share/doc/antiword/QandA
 share/doc/antiword/ReadMe
+man/man1/antiword.1
 @dirrm share/doc/antiword
