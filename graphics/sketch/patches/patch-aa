@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.7 2001/11/22 13:08:41 hubertf Exp $
+$NetBSD: patch-aa,v 1.8 2003/07/28 09:18:58 drochner Exp $
 
---- setup.py.orig	Thu Jul  5 15:00:50 2001
-+++ setup.py
+--- setup.py.orig	2002-12-07 17:55:21.000000000 +0100
++++ setup.py	2003-07-27 14:35:32.000000000 +0200
 @@ -84,6 +84,8 @@
              config.macros.append(item)
          elif head == '-L':
@@ -11,16 +11,12 @@ $NetBSD: patch-aa,v 1.7 2001/11/22 13:08:41 hubertf Exp $
          elif head == '-l':
              config.libraries.append(item)
          else:
-@@ -348,6 +350,12 @@
-         print 'reading additional configuration from', setup_local, '...',
-         configs = extract_config(setup_local, configs)
-         print 'done'
-+                                              
-+    # NetBSD separately has 'Setup.tk' for tk-related configuration
-+    setup_tk = os.path.join(configdir, 'Setup.tk')
-+    print 'reading tk-related configuration from', setup_tk, '...',
-+    configs = extract_config(setup_tk, configs)
-+    print 'done'                        
- 
-     configure_tkinter(configs, flags)
-     #if not configs.has_key('_tkinter'):
+@@ -231,7 +233,7 @@
+     # For python < 2.1 just use the tkconfig from python's Setup, unless
+     # the user explicitly requests auto-configure
+     if (not flags['tk']['autoconf']
+-        and (atoi(split(sys.version, '.', 1)[0]) < 2 \
++        and (atoi(sys.version[0]) < 2 \
+              or sys.version_info[:2] < (2, 1))):
+         if not configs.has_key('_tkinter'):
+             print "Your Python installation doesn't seem to be configured" \
