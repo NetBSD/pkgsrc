@@ -1,16 +1,7 @@
-$NetBSD: patch-af,v 1.4 2001/02/08 16:23:07 tron Exp $
+$NetBSD: patch-af,v 1.5 2002/07/06 15:04:58 tron Exp $
 
 --- backends/sendbatch.in.orig	Thu Sep 17 08:15:02 1998
 +++ backends/sendbatch.in	Mon Jul 19 01:23:35 1999
-@@ -12,7 +12,7 @@
- COMP=
- COMPFLAGS=
- # Use the COMPRESS variable as it is in innshellvars
--# COMPRESS=/usr/ucb/compress
-+COMPRESS=/usr/bin/compress
- ECHO=
- ##  Not a config param since this is the remote rnews.
- RNEWS=rnews
 @@ -37,6 +37,10 @@
  	DEFBYTES=`expr "${SITE}" : '-s\(.*\)'`
  	continue

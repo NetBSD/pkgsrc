@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.5 2001/09/12 11:20:57 tron Exp $
+$NetBSD: patch-ag,v 1.6 2002/07/06 15:04:58 tron Exp $
 
---- backends/pgpverify.in.orig	Thu May  3 22:27:32 2001
-+++ backends/pgpverify.in	Wed Sep 12 13:18:32 2001
-@@ -69,7 +69,7 @@
- # GnuPG users should point this to the pgpgpg wrapper.
- # If you have INN and the script is able to successfully include you
+--- backends/pgpverify.in.orig	Mon May  6 08:02:07 2002
++++ backends/pgpverify.in	Sat Jul  6 16:58:05 2002
+@@ -90,7 +90,7 @@
+ # Path to pgp binary; for PGP 5.0, set the path to the pgpv binary.
+ # If you have INN and the script is able to successfully include your
  # innshellvars.pl file, the value of $inn::pgp will override this.
 -$pgp = '/usr/local/bin/pgp';
 +$pgp = '@_PATH_PGP@';
  
- # if you keep your keyring somewhere that is not the default used by pgp,
- # uncomment the next line and set appropriately.
+ # If you keep your keyring somewhere that is not the default used by pgp,
+ # uncomment the next line and set appropriately.  If you have INN and the
