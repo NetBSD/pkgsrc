@@ -1,4 +1,25 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.15 2003/08/25 19:37:48 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.16 2003/08/26 20:41:01 jlam Exp $
+#
+# An example package buildlink3.mk file:
+#
+# -------------8<-------------8<-------------8<-------------8<-------------
+# BUILDLINK_DEPENDS+=		foo
+# BUILDLINK_PACKAGES+=		foo
+# BUILDLINK_PKGBASE.foo=	foo-lib
+# BUILDLINK_DEPENDS.foo?=	foo-lib>=1.0
+# BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
+#
+# # We want "-lbar" to eventually resolve to "-lfoo".
+# BUILDLINK_TRANSFORM+=		l:bar:foo
+# -------------8<-------------8<-------------8<-------------8<-------------
+#
+# The different variables that may be set in a buildlink2.mk file are
+# described below.
+#
+# The variable name convention used in this Makefile are:
+#
+# BUILDLINK_*	public buildlink-related variables usable in other Makefiles
+# _BLNK_*	private buildlink-related variables to this Makefile
 
 ECHO_BUILDLINK_MSG=	${TRUE}
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
