@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.10 2004/05/30 10:40:02 grant Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.11 2004/07/10 03:05:46 grant Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  bdb.buildlink3.mk will:
@@ -55,6 +55,9 @@ MAKEFLAGS+=	_BDB_INSTALLED.${_bdb_}=${_BDB_INSTALLED.${_bdb_}}
 .  endfor
 
 USE_DB185?=		yes
+_BDB_CPPFLAGS?=		# empty
+_BDB_LIBS?=		# empty
+_BDB_LDFLAGS?=		# empty
 _BDB_OK.native?=	no
 _BDB_INSTALLED.native?=	no
 .  if exists(/usr/include/db.h)
@@ -68,6 +71,7 @@ _BDB_OK.native!=	\
 _BDB_INSTALLED.native=	yes
 _BDB_INCDIRS=		include
 _BDB_TRANSFORM=		# empty
+_BDB_LIBS+=		# empty
 .    endif
 .  endif
 .  if !empty(_BDB_OK.native:M[nN][oO]) && exists(/usr/include/db1/db.h)
@@ -75,12 +79,15 @@ _BDB_OK.native=		yes
 _BDB_INSTALLED.native=	yes
 _BDB_INCDIRS=		include/db1
 _BDB_TRANSFORM=		l:db:db1
+_BDB_LIBS+=		-ldb1
+_BDB_CPPFLAGS+=		-I/usr/${_BDB_INCDIRS}
 .  endif
 .  if !empty(USE_DB185:M[nN][oO])
 _BDB_OK.native=		no
 _BDB_INSTALLED.native=	no
 _BDB_INCDIRS=		# empty
 _BDB_TRANSFORM=		# empty
+_BDB_LIBS+=		# empty
 .  endif
 
 .  if !defined(_BDB_TYPE)
@@ -127,8 +134,14 @@ BUILDLINK_PACKAGES+=		db-native
 BUILDLINK_INCDIRS.db-native?=	${_BDB_INCDIRS}
 BUILDLINK_TRANSFORM?=		${_BDB_TRANSFORM}
 BDBBASE=	${BUILDLINK_PREFIX.db-native}
+BUILDLINK_CPPFLAGS.bdb+=	${_BDB_CPPFLAGS}
+BUILDLINK_LDFLAGS.bdb+=		${_BDB_LDFLAGS}
+BUILDLINK_LIBS.bdb+=		${_BDB_LIBS}
 .  else
 BDBBASE=	${BUILDLINK_PREFIX.${_BDB_PKGBASE.${BDB_TYPE}}}
 .    include "${_BDB_PKGSRCDIR.${BDB_TYPE}}/buildlink3.mk"
+BUILDLINK_CPPFLAGS.bdb+=	${BUILDLINK_CPPFLAGS.${BDB_TYPE}}
+BUILDLINK_LDFLAGS.bdb+=		${BUILDLINK_LDFLAGS.${BDB_TYPE}}
+BUILDLINK_LIBS.bdb+=		${BUILDLINK_LIBS.${BDB_TYPE}}
 .  endif
 .endif
