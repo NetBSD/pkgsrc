@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4133 2003/12/15 18:54:03 salo Exp $
+$NetBSD: CHANGES,v 1.4134 2003/12/15 18:56:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5182,3 +5182,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added dar-2.0.2 [agc 2003-12-15]
 	Updated gnocatan to 0.8.0.0nb1 [wiz 2003-12-15]
 	Updated pwm to 1.0.20030617 [salo 2003-12-15]
+	Updated fix-mime-charset to 0.5.1 [wiz 2003-12-15]
