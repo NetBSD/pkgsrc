@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/23 21:20:32 kim Exp $
+$NetBSD: distinfo,v 1.3 2001/04/24 13:25:29 kim Exp $
 
 SHA1 (cvsweb-1.93.tar.gz) = 89e53ca7585cd626973ee2935e62598f566f2d22
 Size (cvsweb-1.93.tar.gz) = 35906 bytes
-SHA1 (patch-aa) = 02f724547cc9d72755c4b03a6d8bd2d7ef2fa04b
+SHA1 (patch-aa) = 0fa750ba1b3bf25cdc72260d0ab8765483c76664

@@ -1,7 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2001/04/23 21:20:33 kim Exp $
+$NetBSD: patch-aa,v 1.2 2001/04/24 13:25:30 kim Exp $
 
 --- cvsweb.cgi.orig	Thu Jul 27 13:42:28 2000
-+++ cvsweb.cgi	Mon Apr 23 17:15:24 2001
++++ cvsweb.cgi	Tue Apr 24 09:21:42 2001
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -ws
++#!/usr/bin/perl -s
+ #
+ # cvsweb - a CGI interface to CVS trees.
+ #
 @@ -2051,7 +2051,7 @@
  	print "</SELECT>\n";
  	$diffrev = $revdisplayorder[0];
