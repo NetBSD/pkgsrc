@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:31:22 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/10/31 14:43:22 tv Exp $
 
-MD5 (unix_jb35foundation.tar.gz) = daa368399439c9a18c111230de94bae4
+SHA1 (unix_jb35foundation.tar.gz) = ebb343362f77973d53cc601ff62202ff5b2f827f
+Size (unix_jb35foundation.tar.gz) = 13893970 bytes
