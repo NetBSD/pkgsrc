@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/10/27 16:08:53 chris Exp $
+
+--- imap/mbpath.c.orig	Sat Aug 31 17:59:21 2002
++++ imap/mbpath.c	Sat Aug 31 17:59:35 2002
+@@ -97,7 +97,7 @@
+ {
+   char *path;
+   int rc, i, quiet = 0, stop_on_error=0;
+-  char opt;
++  int opt;
+   char *alt_config = NULL;
+ 
+   while ((opt = getopt(argc, argv, "C:qs")) != EOF) {
