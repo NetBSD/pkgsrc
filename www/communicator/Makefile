@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/05/25 01:34:24 jlam Exp $
+# $NetBSD: Makefile,v 1.9 1999/06/04 18:07:40 thorpej Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -8,14 +8,19 @@ NS_VERS=	4.6
 NS_VERS_SHORT=	46
 #
 .if (${MACHINE_ARCH} == "i386")
-UNAME=		x86-bsdi-bsd2
-UNAME_SHORT=	bsdi21
+.if !exists(/emul/linux/lib/ld-linux.so.2)
+IGNORE=You must have Linux libraries installed - see compat_linux(8)
+.endif
+UNAME=		x86-unknown-linuxglibc2.0
+UNAME_SHORT=	linux20_glibc2
+WRKNAME=	x86-unknown-linux2.0
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
 IGNORE=You must have SunOS libraries installed - see compat_sunos(8)
 .endif
 UNAME=		sparc-sun-sunos4.1.3_U1
 UNAME_SHORT=	sunos413
+WRKNAME=	${UNAME}
 .endif
 #
 DISTNAME=	${BINNAME}-v${NS_VERS_SHORT}-export.${UNAME}
@@ -33,7 +38,7 @@ HOMEPAGE=	http://home.netscape.com/browsers/index.html
 
 NO_BUILD=	yes
 
-WRKSRC=         ${WRKDIR}/${BINNAME}-v${NS_VERS_SHORT}.${UNAME}
+WRKSRC=         ${WRKDIR}/${BINNAME}-v${NS_VERS_SHORT}.${WRKNAME}
 MOZILLA_HOME=	${PREFIX}/lib/netscape/${PKGNAME}
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 NS_PLIST_SED=	"s,\$${NS_VERS},${NS_VERS},g"
@@ -64,8 +69,11 @@ do-install:
 	${LN} -sf ${PKGNAME}_nis ${PREFIX}/bin/netscape_nis
 	${MV} ${MOZILLA_HOME}/netscape ${MOZILLA_HOME}/netscape_nis
 	${MV} ${MOZILLA_HOME}/netscape_dns ${MOZILLA_HOME}/netscape
-	${SED} -e ${NS_PLIST_SED} ${PKGDIR}/PLIST.sparc >>${PLIST_SRC}
 .endif
+
+	${SED} -e ${NS_PLIST_SED} ${PKGDIR}/PLIST.${MACHINE_ARCH} \
+	    >>${PLIST_SRC}
+
 	${CHOWN} -R 0:0 ${MOZILLA_HOME}
 	${CHMOD} -R go-w ${MOZILLA_HOME}
 

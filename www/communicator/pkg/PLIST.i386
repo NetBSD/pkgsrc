@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.i386,v 1.1 1999/06/04 18:07:40 thorpej Exp $
+lib/netscape/communicator-${NS_VERS}/libjsd.so
+lib/netscape/communicator-${NS_VERS}/dynfonts/libTrueDoc.so
+lib/netscape/communicator-${NS_VERS}/plugins/libnullplugin.so
+lib/netscape/communicator-${NS_VERS}/netscape-dynMotif
+lib/netscape/communicator-${NS_VERS}/libnullplugin-dynMotif.so
