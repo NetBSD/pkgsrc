@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/17 09:01:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/11/03 15:54:31 adam Exp $
 bin/xpaint
 ${IMAKE_MAN_DIR}/xpaint.${IMAKE_MANNEWSUFFIX}.gz
 lib/X11/app-defaults/XPaint
+lib/X11/app-defaults/XPaint_es
 lib/X11/app-defaults/XPaint_fr
 share/xpaint/XPaintIcon.xpm
 share/xpaint/c_scripts/3d_curves/helicoid.c
@@ -24,6 +25,7 @@ share/xpaint/c_scripts/images/random.c
 share/xpaint/c_scripts/layers/combine.c
 share/xpaint/c_scripts/procedures/setmemory.c
 share/xpaint/help/Help
+share/xpaint/help/Help_es
 share/xpaint/help/Help_fr
 share/xpaint/include/Colormap.h
 share/xpaint/include/ColormapP.h
@@ -50,6 +52,7 @@ share/xpaint/include/region.h
 share/xpaint/include/text.h
 share/xpaint/include/xpaint.h
 share/xpaint/messages/Messages
+share/xpaint/messages/Messages_es
 share/xpaint/messages/Messages_fr
 @dirrm share/xpaint/messages
 @dirrm share/xpaint/include

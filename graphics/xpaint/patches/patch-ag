@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2004/03/20 22:30:36 bouyer Exp $
+$NetBSD: patch-ag,v 1.5 2004/11/03 15:54:31 adam Exp $
 
---- Imakefile.orig	Wed Jun 11 15:44:30 2003
-+++ Imakefile	Tue Oct 21 23:48:47 2003
-@@ -89,7 +89,7 @@
+--- Imakefile.orig	2004-09-03 07:19:00.000000000 +0000
++++ Imakefile
+@@ -97,7 +97,7 @@ SGI_LIB = -limage
  #endif
  
  DEPLIBS = always xpaint.man XPaint.ad
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.4 2004/03/20 22:30:36 bouyer Exp $
  
  SUBDIRS = rw
  
-@@ -124,10 +124,10 @@
+@@ -133,10 +133,10 @@ install::
  xaw::
  	-$(RM) $(XAW95DEPENDS)
  	echo "SYS_LIBRARIES = XawClientLibs -lm" > Local.xawdefs
@@ -24,7 +24,7 @@ $NetBSD: patch-ag,v 1.4 2004/03/20 22:30:36 bouyer Exp $
  	-$(RM) libXaw95.so libXaw95.a
  	-$(LN) xaw95-1.1.4/libXaw95.so libXaw95.so
  	-$(LN) xaw95-1.1.4/libXaw95.a libXaw95.a
-@@ -138,13 +138,13 @@
+@@ -147,13 +147,13 @@ xaw95:: libXaw95.so
  	-$(RM) $(XAW95DEPENDS)
  	echo "XAWLIB_DEFINES = -DXAW95" > Local.xawdefs
  	echo "SYS_LIBRARIES = -lXaw95 -L." >> Local.xawdefs
@@ -41,7 +41,7 @@ $NetBSD: patch-ag,v 1.4 2004/03/20 22:30:36 bouyer Exp $
  
  clean::
  	-$(RM) preproc substads XPaint.ad XPaint.ad.h DefaultRC.txt.h PGP.*
-@@ -153,7 +153,7 @@
+@@ -162,7 +162,7 @@ clean::
  	cd share/messages ; $(RM) *~
  	cd app-defaults ; $(RM) core *~ substads
  	cd app-defaults/out ; $(RM) -f Xpaint*
