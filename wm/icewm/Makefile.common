@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2003/06/04 08:56:46 tron Exp $
+# $NetBSD: Makefile.common,v 1.24 2003/06/14 12:48:06 jmmv Exp $
 
 DISTNAME=		icewm-1.2.7
 CATEGORIES=		x11 wm
@@ -23,6 +23,9 @@ PATCHDIR=		${.CURDIR}/../../wm/icewm/patches
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-cfgdir=${PKG_SYSCONFDIR}
+.if !exists(${X11BASE}/include/X11/extensions/Xinerama.h)
+CONFIGURE_ARGS+=	--disable-xinerama
+.endif
 
 PKG_SYSCONFSUBDIR=	icewm
 
