@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/05/25 07:56:01 veego Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/02/03 05:07:06 fredb Exp $
 bin/gmplayer
 man/man1/gmplayer.1
 share/mplayer/Skin/AlienMind/README
@@ -53,6 +53,7 @@ share/mplayer/Skin/BlueHeart/sub.png
 share/mplayer/Skin/BlueHeart/symbols.fnt
 share/mplayer/Skin/BlueHeart/symbols.png
 share/mplayer/Skin/CornerMP-aqua/README
+share/mplayer/Skin/CornerMP-aqua/VERSION
 share/mplayer/Skin/CornerMP-aqua/about.png
 share/mplayer/Skin/CornerMP-aqua/back.png
 share/mplayer/Skin/CornerMP-aqua/eqls.png
@@ -82,6 +83,7 @@ share/mplayer/Skin/CornerMP-aqua/symbols.fnt
 share/mplayer/Skin/CornerMP-aqua/symbols.png
 share/mplayer/Skin/CornerMP-aqua/vol.png
 share/mplayer/Skin/CornerMP/README
+share/mplayer/Skin/CornerMP/VERSION
 share/mplayer/Skin/CornerMP/about.png
 share/mplayer/Skin/CornerMP/back.png
 share/mplayer/Skin/CornerMP/eqls.png
@@ -110,20 +112,6 @@ share/mplayer/Skin/CornerMP/subt.png
 share/mplayer/Skin/CornerMP/symbols.fnt
 share/mplayer/Skin/CornerMP/symbols.png
 share/mplayer/Skin/CornerMP/vol.png
-share/mplayer/Skin/CubicPlayer/README
-share/mplayer/Skin/CubicPlayer/VERSION
-share/mplayer/Skin/CubicPlayer/balance.png
-share/mplayer/Skin/CubicPlayer/font.fnt
-share/mplayer/Skin/CubicPlayer/font.png
-share/mplayer/Skin/CubicPlayer/main.png
-share/mplayer/Skin/CubicPlayer/menu.png
-share/mplayer/Skin/CubicPlayer/menus.png
-share/mplayer/Skin/CubicPlayer/open.png
-share/mplayer/Skin/CubicPlayer/play.png
-share/mplayer/Skin/CubicPlayer/seekbar.png
-share/mplayer/Skin/CubicPlayer/skin
-share/mplayer/Skin/CubicPlayer/stop.png
-share/mplayer/Skin/CubicPlayer/sub.png
 share/mplayer/Skin/Cyrus/README
 share/mplayer/Skin/Cyrus/VERSION
 share/mplayer/Skin/Cyrus/eq.png
@@ -233,6 +221,7 @@ share/mplayer/Skin/default/menus.png
 share/mplayer/Skin/default/next.png
 share/mplayer/Skin/default/pause.png
 share/mplayer/Skin/default/play.png
+share/mplayer/Skin/default/playbar.png
 share/mplayer/Skin/default/plb.png
 share/mplayer/Skin/default/pos.png
 share/mplayer/Skin/default/prev.png
@@ -243,6 +232,54 @@ share/mplayer/Skin/default/subload.png
 share/mplayer/Skin/default/symbols.fnt
 share/mplayer/Skin/default/symbols.png
 share/mplayer/Skin/default/volume.png
+share/mplayer/Skin/gnome/README
+share/mplayer/Skin/gnome/VERSION
+share/mplayer/Skin/gnome/back.png
+share/mplayer/Skin/gnome/exit.png
+share/mplayer/Skin/gnome/font.fnt
+share/mplayer/Skin/gnome/font.png
+share/mplayer/Skin/gnome/forward.png
+share/mplayer/Skin/gnome/load.png
+share/mplayer/Skin/gnome/main.png
+share/mplayer/Skin/gnome/main_fixed.png
+share/mplayer/Skin/gnome/menu.png
+share/mplayer/Skin/gnome/menus.png
+share/mplayer/Skin/gnome/pause.png
+share/mplayer/Skin/gnome/play.png
+share/mplayer/Skin/gnome/pos.png
+share/mplayer/Skin/gnome/skin
+share/mplayer/Skin/gnome/stop.png
+share/mplayer/Skin/gnome/sub.png
+share/mplayer/Skin/gnome/symbols.fnt
+share/mplayer/Skin/gnome/symbols.png
+share/mplayer/Skin/gnome/volume.png
+share/mplayer/Skin/hayraphon/README
+share/mplayer/Skin/hayraphon/VERSION
+share/mplayer/Skin/hayraphon/bal.png
+share/mplayer/Skin/hayraphon/bal.png-old
+share/mplayer/Skin/hayraphon/eq.png
+share/mplayer/Skin/hayraphon/exit.png
+share/mplayer/Skin/hayraphon/font.fnt
+share/mplayer/Skin/hayraphon/font.png
+share/mplayer/Skin/hayraphon/forward.png
+share/mplayer/Skin/hayraphon/main.png
+share/mplayer/Skin/hayraphon/max.png
+share/mplayer/Skin/hayraphon/menu.png
+share/mplayer/Skin/hayraphon/menus.png
+share/mplayer/Skin/hayraphon/min.png
+share/mplayer/Skin/hayraphon/next.png
+share/mplayer/Skin/hayraphon/open.png
+share/mplayer/Skin/hayraphon/pause.png
+share/mplayer/Skin/hayraphon/play.png
+share/mplayer/Skin/hayraphon/pref.png
+share/mplayer/Skin/hayraphon/prev.png
+share/mplayer/Skin/hayraphon/rew.png
+share/mplayer/Skin/hayraphon/seek.png
+share/mplayer/Skin/hayraphon/skin
+share/mplayer/Skin/hayraphon/stop.png
+share/mplayer/Skin/hayraphon/sub.png
+share/mplayer/Skin/hayraphon/vol.png
+share/mplayer/Skin/hwswskin/VERSION
 share/mplayer/Skin/hwswskin/button-about.png
 share/mplayer/Skin/hwswskin/button-exit.png
 share/mplayer/Skin/hwswskin/button-forward.png
@@ -289,28 +326,6 @@ share/mplayer/Skin/mentalic/symbols.png
 share/mplayer/Skin/mentalic/symbolsV.fnt
 share/mplayer/Skin/mentalic/symbolsV.png
 share/mplayer/Skin/mentalic/volume.png
-share/mplayer/Skin/netscape4/README
-share/mplayer/Skin/netscape4/VERSION
-share/mplayer/Skin/netscape4/bookmark.png
-share/mplayer/Skin/netscape4/font.fnt
-share/mplayer/Skin/netscape4/font.png
-share/mplayer/Skin/netscape4/fwd.png
-share/mplayer/Skin/netscape4/home.png
-share/mplayer/Skin/netscape4/main.png
-share/mplayer/Skin/netscape4/menu.png
-share/mplayer/Skin/netscape4/menus.png
-share/mplayer/Skin/netscape4/mynet.png
-share/mplayer/Skin/netscape4/n.png
-share/mplayer/Skin/netscape4/on.png
-share/mplayer/Skin/netscape4/print.png
-share/mplayer/Skin/netscape4/reload.png
-share/mplayer/Skin/netscape4/rew.png
-share/mplayer/Skin/netscape4/search.png
-share/mplayer/Skin/netscape4/security.png
-share/mplayer/Skin/netscape4/shop.png
-share/mplayer/Skin/netscape4/skin
-share/mplayer/Skin/netscape4/stop.png
-share/mplayer/Skin/netscape4/sub.png
 share/mplayer/Skin/neutron/README
 share/mplayer/Skin/neutron/VERSION
 share/mplayer/Skin/neutron/about.png
@@ -425,6 +440,7 @@ share/mplayer/Skin/proton/stop.png
 share/mplayer/Skin/proton/sub.png
 share/mplayer/Skin/proton/symbols.fnt
 share/mplayer/Skin/proton/symbols.png
+share/mplayer/Skin/slim/VERSION
 share/mplayer/Skin/slim/about.png
 share/mplayer/Skin/slim/back.png
 share/mplayer/Skin/slim/double.png
@@ -453,6 +469,34 @@ share/mplayer/Skin/slim/subt.png
 share/mplayer/Skin/slim/symbols.fnt
 share/mplayer/Skin/slim/symbols.png
 share/mplayer/Skin/slim/volume.png
+share/mplayer/Skin/trium/README
+share/mplayer/Skin/trium/VERSION
+share/mplayer/Skin/trium/about.png
+share/mplayer/Skin/trium/back.png
+share/mplayer/Skin/trium/eqb.png
+share/mplayer/Skin/trium/exit.png
+share/mplayer/Skin/trium/font.fnt
+share/mplayer/Skin/trium/font.png
+share/mplayer/Skin/trium/forward.png
+share/mplayer/Skin/trium/fsb.png
+share/mplayer/Skin/trium/iconify.png
+share/mplayer/Skin/trium/load.png
+share/mplayer/Skin/trium/main.png
+share/mplayer/Skin/trium/menu.png
+share/mplayer/Skin/trium/menus.png
+share/mplayer/Skin/trium/next.png
+share/mplayer/Skin/trium/pause.png
+share/mplayer/Skin/trium/play.png
+share/mplayer/Skin/trium/plb.png
+share/mplayer/Skin/trium/pos.png
+share/mplayer/Skin/trium/prev.png
+share/mplayer/Skin/trium/skin
+share/mplayer/Skin/trium/stop.png
+share/mplayer/Skin/trium/sub.png
+share/mplayer/Skin/trium/subt.png
+share/mplayer/Skin/trium/symbols.fnt
+share/mplayer/Skin/trium/symbols.png
+share/mplayer/Skin/trium/volume.png
 share/mplayer/Skin/xanim/README
 share/mplayer/Skin/xanim/VERSION
 share/mplayer/Skin/xanim/back.png
@@ -508,20 +552,21 @@ share/mplayer/Skin/xine-lcd/sub.png
 share/mplayer/Skin/xine-lcd/volume.png
 @dirrm share/mplayer/Skin/xine-lcd
 @dirrm share/mplayer/Skin/xanim
+@dirrm share/mplayer/Skin/trium
 @dirrm share/mplayer/Skin/slim
 @dirrm share/mplayer/Skin/proton
 @dirrm share/mplayer/Skin/plastic
 @dirrm share/mplayer/Skin/phony
 @dirrm share/mplayer/Skin/neutron
-@dirrm share/mplayer/Skin/netscape4
 @dirrm share/mplayer/Skin/mentalic
 @dirrm share/mplayer/Skin/hwswskin
+@dirrm share/mplayer/Skin/hayraphon
+@dirrm share/mplayer/Skin/gnome
 @dirrm share/mplayer/Skin/default
 @dirrm share/mplayer/Skin/avifile
 @dirrm share/mplayer/Skin/WindowsMediaPlayer6
 @dirrm share/mplayer/Skin/MidnightLove
 @dirrm share/mplayer/Skin/Cyrus
-@dirrm share/mplayer/Skin/CubicPlayer
 @dirrm share/mplayer/Skin/CornerMP
 @dirrm share/mplayer/Skin/CornerMP-aqua
 @dirrm share/mplayer/Skin/BlueHeart
