@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.4 2003/08/13 15:22:14 jschauma Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.5 2004/02/28 00:44:34 lukem Exp $
 
 In order to be able to run the JVM, you will need to compile your kernel
 with the following options:
@@ -11,7 +11,7 @@ Then, you need to add the following line to your /etc/fstab:
 procfs /proc procfs rw,linux
 
 Furthermore, the data segment size set by your shell's 'ulimit' builtin
-must be at least 131204 -- please refer to your shell's manual page for
+must be at least 262144 -- please refer to your shell's manual page for
 details.
 
 You may want to read
