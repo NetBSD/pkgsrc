@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2001/12/25 14:48:38 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2002/10/03 02:06:32 seb Exp $
 
---- util/Makefile.in.orig	Tue Sep 28 21:40:56 1999
-+++ util/Makefile.in
-@@ -48,7 +48,7 @@
- INSTALL = @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
- INSTALL_DATA = @INSTALL_DATA@
--INSTALL_SCRIPT = @INSTALL_SCRIPT@
-+INSTALL_SCRIPT = ${BSD_INSTALL_SCRIPT}
- transform = @program_transform_name@
+--- info/Makefile.am.orig	Fri Mar 22 22:26:49 2002
++++ info/Makefile.am
+@@ -18,7 +18,7 @@
+ bin_PROGRAMS = ginfo infokey
+ transform = s/ginfo/info/; @program_transform_name@
  
- NORMAL_INSTALL = :
+-localedir = $(datadir)/locale
++localedir = $(PKGLOCALEDIR)
+ 
+ # -I. for funs.h.
+ # Automake puts -I.. and -I$(srcdir) into DEFS by default, but
