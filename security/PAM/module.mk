@@ -1,11 +1,9 @@
-# $NetBSD: module.mk,v 1.4 2005/01/14 05:15:39 jlam Exp $
+# $NetBSD: module.mk,v 1.5 2005/03/24 22:42:58 jlam Exp $
 
 .if !defined(PAM_MODULE_MK)
 PAM_MODULE_MK=	# defined
 
-.if empty(USE_BUILDLINK3:M[nN][oO])
-.  include "../../mk/pam.buildlink3.mk"
-.endif
+.include "../../mk/pam.buildlink3.mk"
 
 .if defined(DEFAULT_VIEW.${PAM_TYPE})
 DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.${PAM_TYPE}}
