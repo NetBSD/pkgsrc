@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/09/28 09:13:58 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2004/01/23 23:22:41 wiz Exp $
 #
 
 DISTNAME=	vfu-3.04
@@ -13,7 +13,9 @@ COMMENT=	Small, handy, easy-to-use file manager
 
 USE_BUILDLINK2=	# defined
 USE_PKGINSTALL=	YES
-USE_NCURSES=	# qiflush()
+
+INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-U]-*
 
 DOCDIR=		${PREFIX}/share/doc/vfu
 EGDIR=		${PREFIX}/share/examples/vfu
