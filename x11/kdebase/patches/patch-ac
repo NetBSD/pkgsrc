@@ -1,0 +1,51 @@
+--- kdm/resource.c.orig	Fri Mar 27 01:10:33 1998
++++ kdm/resource.c	Fri Jun 26 00:26:15 1998
+@@ -72,31 +72,31 @@
+  */
+ #ifndef __EMX__
+ #ifndef DEF_SERVER_LINE 
+-#define DEF_SERVER_LINE ":0 local /usr/bin/X11/X :0"
++#define DEF_SERVER_LINE ":0 local " PREFIX "/bin/X :0"
+ #endif
+ #ifndef XRDB_PROGRAM
+-#define XRDB_PROGRAM "/usr/bin/X11/xrdb"
++#define XRDB_PROGRAM PREFIX "/bin/xrdb"
+ #endif
+ #ifndef DEF_SESSION
+-#define DEF_SESSION "/usr/bin/X11/xterm -ls"
++#define DEF_SESSION PREFIX "/bin/xterm -ls"
+ #endif
+ #ifndef DEF_USER_PATH
+-#define DEF_USER_PATH ":/bin:/usr/bin:/usr/bin/X11:/usr/ucb"
++#define DEF_USER_PATH "/bin:/usr/bin:" PREFIX "/bin"
+ #endif
+ #ifndef DEF_SYSTEM_PATH
+-#define DEF_SYSTEM_PATH "/etc:/bin:/usr/bin:/usr/bin/X11:/usr/ucb"
++#define DEF_SYSTEM_PATH "/bin:/sbin:/usr/bin:/usr/sbin:" PREFIX "/bin"
+ #endif
+ #ifndef DEF_SYSTEM_SHELL
+ #define DEF_SYSTEM_SHELL "/bin/sh"
+ #endif
+ #ifndef DEF_FAILSAFE_CLIENT
+-#define DEF_FAILSAFE_CLIENT "/usr/bin/X11/xterm"
++#define DEF_FAILSAFE_CLIENT PREFIX "/bin/xterm"
+ #endif
+ #ifndef DEF_XDM_CONFIG
+-#define DEF_XDM_CONFIG "/usr/lib/X11/xdm/xdm-config"
++#define DEF_XDM_CONFIG PREFIX "/lib/X11/xdm/xdm-config"
+ #endif
+ #ifndef DEF_CHOOSER
+-#define DEF_CHOOSER "/usr/lib/X11/xdm/chooser"
++#define DEF_CHOOSER PREFIX "/lib/X11/xdm/chooser"
+ #endif
+ #ifndef DEF_AUTH_NAME
+ #ifdef HASXDMAUTH
+@@ -106,7 +106,7 @@
+ #endif
+ #endif
+ #ifndef DEF_AUTH_DIR
+-#define DEF_AUTH_DIR "/usr/lib/X11/xdm"
++#define DEF_AUTH_DIR PREFIX "/lib/X11/xdm"
+ #endif
+ #ifndef DEF_USER_AUTH_DIR
+ #define DEF_USER_AUTH_DIR	"/tmp"
