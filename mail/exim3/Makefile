@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/07 17:47:32 abs Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/06 22:38:00 wiz Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	2
@@ -11,7 +11,7 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PERL5=	YES
 USE_PKGINSTALL=	YES
 
@@ -48,18 +48,21 @@ USE_DB185=		YES
 
 .if defined(EXIM_DB.mysql) && ${EXIM_DB.mysql} == "YES"
 LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
-LOOKUP_LIBS+=		${BUILDLINK_LDFLAGS.mysql-client} -lmysqlclient
+LOOKUP_LIBS+=		-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql
+LOOKUP_LIBS+=		-Wl,-R${BUILDLINK_PREFIX.mysql-client}/lib/mysql
+LOOKUP_LIBS+=		-lmysqlclient
 MAKE_ENV+=		LOOKUP_MYSQL=YES
-.  include "../../databases/mysql-client/buildlink2.mk"
+.  include "../../databases/mysql-client/buildlink3.mk"
 .endif
 .if defined(EXIM_DB.pgsql) && ${EXIM_DB.pgsql} == "YES"
 LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
-LOOKUP_LIBS+=		-lpq
+LOOKUP_LIBS+=		-L${BUILDLINK_PREFIX.postgresql-lib}/lib
+LOOKUP_LIBS+=		-Wl,-R${BUILDLINK_PREFIX.postgresql-lib}/lib -lpq
 MAKE_ENV+=		LOOKUP_PGSQL=YES
-.  include "../../databases/postgresql-lib/buildlink2.mk"
+.  include "../../databases/postgresql-lib/buildlink3.mk"
 .endif
 
-# buildlink2 decides which libdb to use on this platform.
+# buildlink3 decides which libdb to use on this platform.
 MAKE_ENV+=		DBMLIB="${BUILDLINK_LDFLAGS.db} ${BUILDLINK_LIBS.db}"
 MAKE_ENV+=		LOOKUP_INCLUDE="${LOOKUP_INCLUDE}"
 MAKE_ENV+=		LOOKUP_LIBS="${LOOKUP_LIBS}"
@@ -91,5 +94,5 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
 	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
 
-.include "../../databases/db/buildlink2.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
