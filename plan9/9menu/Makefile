@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/09 14:35:17 agc Exp $
 # New ports collection makefile for:    9menu
 # Version required:     1.5
 # Date created:         Sun Aug 13 12:36:14 CDT 1995
