@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/04/08 13:02:28 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/04/08 13:17:10 grant Exp $
 
 .if !defined(NETPBM_BUILDLINK2_MK)
 NETPBM_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		netpbm
-BUILDLINK_DEPENDS.netpbm?=	netpbm>=9.24
+BUILDLINK_DEPENDS.netpbm?=	netpbm>=10.11.6
 BUILDLINK_PKGSRCDIR.netpbm?=	../../graphics/netpbm
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.netpbm=netpbm
@@ -24,7 +24,7 @@ BUILDLINK_FILES.netpbm+=	include/ppm.h
 BUILDLINK_FILES.netpbm+=	include/ppmcmap.h
 BUILDLINK_FILES.netpbm+=	include/ppmfloyd.h
 BUILDLINK_FILES.netpbm+=	include/shhopt.h
-BUILDLINK_FILES.netpbm+=	lib/libpbm.*
+BUILDLINK_FILES.netpbm+=	lib/libnetpbm.*
 
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
@@ -37,8 +37,8 @@ netpbm-buildlink-lib:
 	${_PKG_SILENT}${_PKG_DEBUG}				\
 	cd ${BUILDLINK_DIR}/lib;				\
 	for _NETPBM_LIB in pbm pgm pnm ppm; do			\
-	  ${LN} -fs libpbm.a lib$${_NETPBM_LIB}.a;		\
-	  ${LN} -fs libpbm.so.*.* lib$${_NETPBM_LIB}.so;	\
+	  ${LN} -fs libnetpbm.a lib$${_NETPBM_LIB}.a;		\
+	  ${LN} -fs libnetpbm.so.*.* lib$${_NETPBM_LIB}.so;	\
 	done
 
 .endif	# NETPBM_BUILDLINK2_MK
