@@ -3,7 +3,8 @@
 # Date created:                         June 21th 1997
 # Whom:                                 ache@freebsd.org
 #
-#   $Id: Makefile,v 1.1.1.1 1997/11/22 05:00:20 hubertf Exp $
+#   $NetBSD: Makefile,v 1.2 1997/11/22 05:04:02 hubertf Exp $
+#   FreeBSD Id: Makefile,v 1.3 1997/08/04 22:47:16 ache Exp
 #
 
 DISTNAME=       MIME-Base64-2.03
