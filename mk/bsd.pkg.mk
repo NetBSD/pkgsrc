@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.615 2000/11/22 10:40:21 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.616 2000/11/24 23:28:30 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -776,21 +776,17 @@ DEPENDS+=		${LESSTIF_DEPENDS}
 
 # Check if we got Xpm distributed with XFree86 4.0 or newer or if we
 # need to use the package.
-.if defined(USE_XPM) || (${DISTNAME:Mxpm-*} != "")
+.if defined(USE_XPM)
 .if exists(${X11BASE}/include/X11/xpm.h)
 .if !defined(IS_BUILTIN_XPM)
 IS_BUILTIN_XPM!=	${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 MAKEFLAGS+=		IS_BUILTIN_XPM=${IS_BUILTIN_XPM}
 .endif
-.if defined(USE_XPM)
 .if (${IS_BUILTIN_XPM} == "0")
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 XPMDIR_DEFAULT=		${X11PREFIX}
 .else
 XPMDIR_DEFAULT=		${X11BASE}
-.endif
-.elif (${IS_BUILTIN_XPM} != "0")
-IGNORE=			"The Xpm library is included in your X11 distribution."
 .endif
 .else
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
