@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5549 2004/04/12 02:04:59 minskim Exp $
+$NetBSD: CHANGES,v 1.5550 2004/04/12 04:44:58 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1921,3 +1921,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ishell-0.2 [minskim 2004-04-12]
 	Updated pkglint to 3.69 [salo 2004-04-12]
 	Updated tuxracer to 0.61nb6 [minskim 2004-04-12]
+	Updated racoon to 20040408a [itojun 2004-04-12]
