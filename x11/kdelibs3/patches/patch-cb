@@ -1,4 +1,4 @@
-$NetBSD: patch-cb,v 1.1 2002/09/18 06:34:49 skrll Exp $
+$NetBSD: patch-cb,v 1.2 2002/10/14 09:45:54 skrll Exp $
 
 --- khtml/java/kjava.policy.in.orig	Wed Nov 15 19:57:40 2000
 +++ khtml/java/kjava.policy.in
@@ -8,5 +8,4 @@ $NetBSD: patch-cb,v 1.1 2002/09/18 06:34:49 skrll Exp $
  {
      permission java.security.AllPermission;
 -};
-\ No newline at end of file
 +};
