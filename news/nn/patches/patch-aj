@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1 1999/07/26 21:19:28 tron Exp $
+$NetBSD: patch-aj,v 1.2 1999/08/22 22:55:46 kim Exp $
 
---- data.h.orig	Sun Aug 15 08:59:43 1993
-+++ data.h	Mon Jul 26 23:11:38 1999
+--- data.h.orig	Tue Jun 23 10:57:44 1998
++++ data.h	Sun Aug 22 18:22:16 1999
 @@ -29,7 +29,7 @@
      char		db_lock[DB_LOCK_MESSAGE];
      time_t		db_created; /* when database was last built */
@@ -9,7 +9,7 @@ $NetBSD: patch-aj,v 1.1 1999/07/26 21:19:28 tron Exp $
 -    off_t		last_size; /* size of active file at last scan */
 +    long                last_size; /* size of active file at last scan */
      group_number	number_of_groups;
-     int			free_groups;
+     int32		free_groups;
  } master_header;
 @@ -68,8 +68,8 @@
      article_number	first_a_article; /* min article in active */

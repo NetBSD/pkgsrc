@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1 1999/07/26 21:19:27 tron Exp $
+$NetBSD: patch-ah,v 1.2 1999/08/22 22:55:46 kim Exp $
 
---- collect.c.orig	Tue Aug 31 23:05:31 1993
-+++ collect.c	Mon Jul 26 23:11:38 1999
+--- collect.c.orig	Wed Aug 14 23:08:39 1996
++++ collect.c	Sun Aug 22 18:21:47 1999
 @@ -45,7 +45,7 @@
      article_number last;
      register FILE *arc;
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.1 1999/07/26 21:19:27 tron Exp $
      static char *arc_header = "Archived-Last: ";
      /* Header format: Archived-Last: 88888888 group.name */
      /* Fixed constants length == 15 and offset == 24 are used below */
-@@ -84,9 +84,9 @@
+@@ -83,9 +83,9 @@
  
      fseek(arc, start, 0);
      fprintf(arc, "%s%8ld %s\n", arc_header, (long)num, gh->group_name);
@@ -23,7 +23,7 @@ $NetBSD: patch-ah,v 1.1 1999/07/26 21:19:27 tron Exp $
      while ((c = getc(f)) != EOF) putc(c, arc);
      putc(NL, arc);
      fclose(arc);
-@@ -178,8 +178,8 @@
+@@ -177,8 +177,8 @@
      /* get article header */
  
      art_hdr.a_number = art_num;
@@ -34,7 +34,7 @@ $NetBSD: patch-ah,v 1.1 1999/07/26 21:19:27 tron Exp $
      art_hdr.flag = 0;
  
      mode = FILL_NEWS_HEADER | FILL_OFFSETS | SKIP_HEADER;
-@@ -392,7 +392,7 @@
+@@ -391,7 +391,7 @@
  	}
  #endif
  #ifndef RENUMBER_DANGER

@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.7 1999/08/18 09:08:10 agc Exp $
-# $FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
+# $NetBSD: Makefile,v 1.8 1999/08/22 22:55:45 kim Exp $
+# FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
-DISTNAME=	nn-6.5.0.b3
-PKGNAME=	nn-6.5.0
+DISTNAME=	nn-6.5.4
 CATEGORIES=	news
-MASTER_SITES=	ftp://uniwa.uwa.edu.au/pub/nn/old/beta/ \
-		ftp://ftp.cs.tu-berlin.de/pub/net/news/nn.old/beta/
+MASTER_SITES=	ftp://ftp.gw.com/pub/unix/news/nn/
 
 MAINTAINER=     tron@netbsd.org
 

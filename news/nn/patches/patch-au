@@ -1,7 +1,7 @@
-$NetBSD: patch-au,v 1.1 1999/07/26 21:19:32 tron Exp $
+$NetBSD: patch-au,v 1.2 1999/08/22 22:55:46 kim Exp $
 
---- news.c.orig	Tue Aug 31 23:06:06 1993
-+++ news.c	Mon Jul 26 23:11:38 1999
+--- news.c.orig	Fri Jul  3 14:58:51 1998
++++ news.c	Sun Aug 22 18:13:43 1999
 @@ -23,7 +23,7 @@
  {
      register char *bp, *cp, **fptr;
@@ -11,16 +11,21 @@ $NetBSD: patch-au,v 1.1 1999/07/26 21:19:32 tron Exp $
  
      pos = ftell(f);
  
-@@ -239,7 +239,7 @@
+@@ -238,11 +238,11 @@
+     FILE *f;
      struct stat statb;
+ #ifndef DONT_COUNT_LINES
+-    off_t digest_artlen;
++    long digest_artlen;
+ #endif	/* DONT_COUNT_LINES */
  #ifdef NNTP
-     int lazy;
+     int lazy = 0;
 -    off_t fpos;
 +    long fpos;
      FILE *nntp_get_article();
  #endif /* NNTP */
  
-@@ -266,9 +266,9 @@
+@@ -275,9 +275,9 @@
  	/* necessary because empty files wreak havoc */
  	if (fstat(fileno(f), &statb) < 0 ||
  #ifdef NOV
@@ -32,7 +37,7 @@ $NetBSD: patch-au,v 1.1 1999/07/26 21:19:32 tron Exp $
  #endif /* NOV */
  	    fclose(f);
  	    return who_am_i == I_AM_MASTER ? (FILE *)1 : NULL;
-@@ -351,12 +351,12 @@
+@@ -363,12 +363,12 @@
  	}
  
  	if (modes & FILL_OFFSETS) {
@@ -47,7 +52,7 @@ $NetBSD: patch-au,v 1.1 1999/07/26 21:19:32 tron Exp $
  	    art->lpos = ftell(f);
  	}
  #endif
-@@ -378,7 +378,7 @@
+@@ -391,7 +391,7 @@
      }
  #ifdef NNTP
      else if (use_nntp && (art->flag & (A_DIGEST | A_FOLDER)) == 0) {
