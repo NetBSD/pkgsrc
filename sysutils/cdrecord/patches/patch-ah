@@ -1,26 +1,26 @@
-$NetBSD: patch-ah,v 1.2 2001/08/07 11:23:57 drochner Exp $
+$NetBSD: patch-ah,v 1.3 2003/01/03 16:27:10 lukem Exp $
 
---- cdda2wav/setuid.c.orig	Sat Apr 22 22:37:57 2000
-+++ cdda2wav/setuid.c	Mon Aug  6 10:36:07 2001
-@@ -93,7 +93,7 @@
-     }
+--- cdda2wav/setuid.c.orig	Thu Nov 21 16:12:35 2002
++++ cdda2wav/setuid.c	Sat Nov 30 18:17:51 2002
+@@ -92,7 +92,7 @@
+ 
      if (geteuid() == 0) return; /* nothing to do */
  
 -#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEUID)
 +#if defined (HAVE_SETEUID)
      if (seteuid(effective_uid)) {
  	perror("seteuid in needroot()");
- 	exit(1);
-@@ -127,7 +127,7 @@
-     }
+ 	exit(PERM_ERROR);
+@@ -126,7 +126,7 @@
+ 	return;
      if (geteuid() != 0) return; /* nothing to do */
  
 -#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEUID)
 +#if defined (HAVE_SETEUID)
      if (seteuid(real_uid)) {
  	perror("seteuid in dontneedroot()");
- 	exit(1);
-@@ -185,7 +185,7 @@
+ 	exit(PERM_ERROR);
+@@ -186,7 +186,7 @@
  
      if (getegid() == effective_gid) return; /* nothing to do */
  
@@ -28,13 +28,13 @@ $NetBSD: patch-ah,v 1.2 2001/08/07 11:23:57 drochner Exp $
 +#if defined (HAVE_SETEGID)
      if (setegid(effective_gid)) {
  	perror("setegid in needgroup()");
- 	exit(1);
-@@ -216,7 +216,7 @@
- 	exit(1);
+ 	exit(PERM_ERROR);
+@@ -217,7 +217,7 @@
+ 	exit(INTERNAL_ERROR);
      }
      if (getegid() != effective_gid) return; /* nothing to do */
 -#if defined _POSIX_SAVED_IDS && defined (HAVE_SETEGID)
 +#if defined (HAVE_SETEGID)
      if (setegid(real_gid)) {
  	perror("setegid in dontneedgroup()");
- 	exit(1);
+ 	exit(PERM_ERROR);
