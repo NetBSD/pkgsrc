@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2003/09/25 04:39:11 grant Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2004/03/02 05:03:47 xtraeme Exp $
 bin/esd
 bin/esd-config
 bin/esdcat
@@ -14,7 +14,7 @@ lib/libesd.a
 lib/libesd.la
 lib/libesd.so
 lib/libesd.so.2
-lib/libesd.so.2.32
+lib/libesd.so.2.33
 lib/pkgconfig/esound.pc
 man/man1/esd-config.1
 man/man1/esd.1

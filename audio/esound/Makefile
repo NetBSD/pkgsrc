@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2004/02/14 18:26:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.49 2004/03/02 05:03:47 xtraeme Exp $
 
-DISTNAME=		esound-0.2.32
+DISTNAME=		esound-0.2.33
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/esound/0.2/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.tux.org/~ricdude/EsounD.html
@@ -29,6 +30,12 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
+
+SUBST_CLASSES=		oss
+SUBST_STAGE.oss=	post-patch
+SUBST_FILES.oss=	configure
+SUBST_SED.oss=		-e 's,-lossaudio,${LIBOSSAUDIO},g'
+SUBST_MESSAGE.oss=	"Fixing oss."
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/esound
