@@ -1,11 +1,11 @@
 --- config.h.orig	Fri Feb 18 03:15:47 1994
-+++ config.h	Wed May 20 00:04:10 1998
++++ config.h	Fri May 22 01:06:45 1998
 @@ -32,7 +32,7 @@
  #define NOV
  
  /* Optional */
 -#define NOV_DIRECTORY "/usr/spool/news"
-+#define NOV_DIRECTORY "/var/spool/news/over.view"
++#define NOV_DIRECTORY "/var/news/spool/over.view"
  
  /*********************** NETWORK DEPENDENT DEFINITIONS **********************
   *
@@ -76,7 +76,7 @@
   */
  
 -#define DB_DIRECTORY	"/usr/spool/nn"
-+#define DB_DIRECTORY    "/var/spool/news/nn"
++#define DB_DIRECTORY    "/var/news/spool/nn"
  
  
  /*************************** NEWS TRANSPORT **************************
@@ -86,11 +86,11 @@
  
 -#define NEWS_DIRECTORY		"/usr/spool/news"
 -#define NEWS_LIB_DIRECTORY	"/usr/lib/news"
-+#define NEWS_DIRECTORY		"/var/spool/news"
-+#define NEWS_LIB_DIRECTORY	PREFIX "/lib/nn"
++#define NEWS_DIRECTORY		"/var/news/spool"
++#define NEWS_LIB_DIRECTORY	"/var/news/etc"
  
 -/* #define INEWS_PATH		"/usr/lib/news/inews"	*/
-+#define INEWS_PATH		NEWS_LIB_DIRECTORY "/inews"
++#define INEWS_PATH		LIB_DIRECTORY "/inews"
  
  
  /*
