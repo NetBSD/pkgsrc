@@ -1,17 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/24 01:30:05 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/05/10 23:35:27 jtb Exp $
 
---- /dev/null	Fri Feb 23 22:20:01 2001
+--- /dev/null	Thu May 10 23:00:48 2001
 +++ Config.tmpl_netbsd
-@@ -0,0 +1,43 @@
-+# Configuration file for NetBSD 1.5 and GNU compilers.
+@@ -0,0 +1,41 @@
++# Configuration file for NetBSD and LessTif.
 +
 +SYSFLAGS        = -DBSD -DLESSTIF
 +
 +SRC_DIR         = $(TCM_HOME)/src
 +BIN_DIR         = $(TCM_HOME)/bin
 +LIB_DIR         = $(TCM_HOME)/lib
-+
-+SHAREDFLAGS	= -shared
 +
 +MOTIF_INCLUDE	= $(MOTIF_HOME)/include
 +MOTIF_LIB	= $(MOTIF_HOME)/lib
