@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9162 2005/02/17 11:36:48 adam Exp $
+$NetBSD: CHANGES,v 1.9163 2005/02/17 13:35:21 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -903,3 +903,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mkvtoolnix to 1.0.2 [salo 2005-02-17]
 	Updated mmg to 1.0.2 [salo 2005-02-17]
 	Updated netpbm to 10.26.3 [adam 2005-02-17]
+	Updated cairo to 0.3.0 [xtraeme 2005-02-17]
