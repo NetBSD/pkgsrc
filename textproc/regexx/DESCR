@@ -1,0 +1,13 @@
+  Regexx is a complete regular expressions C++ solution.  It implements
+easy expression execution, global searching, replace with atom
+substitution, customized replaces, easy match and atom strings retrieving.
+Also included in the library are functions to split strings using strings
+or regular expressions.
+
+  Since 0.97, Regexx is using Perl Compatible Regular Expressions.  It
+means that you can use regular expressions very similar to the ones you
+use with Perl.
+
+  It's very easy to use Regexx.  Just include the "regexx" namespace and
+the "regexx.hh" header in your project, create a Regexx instance and use
+its methods as you like.

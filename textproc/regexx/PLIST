@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/15 08:53:08 rh Exp $
+include/regexx.hh
+include/split.hh
+lib/libregexx.a
+lib/libregexx.la
+lib/libregexx.so
+lib/libregexx.so.2
+lib/libregexx.so.2.0

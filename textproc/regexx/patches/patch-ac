@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/03/15 08:53:09 rh Exp $
+
+--- src/Makefile.in.orig	2003-03-15 17:40:03.000000000 +1000
++++ src/Makefile.in
+@@ -74,7 +74,7 @@ VERSION = @VERSION@
+ 
+ lib_LTLIBRARIES = libregexx.la
+ libregexx_la_SOURCES = regexx.cc regexx.hh split.cc split.hh
+-libregexx_la_LDFLAGS = -version-info 2:0:1 ../pcre/maketables.lo ../pcre/get.lo ../pcre/study.lo ../pcre/pcre.lo
++libregexx_la_LDFLAGS = -version-info 2:0:1 -lpcre
+ include_HEADERS = regexx.hh split.hh
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
