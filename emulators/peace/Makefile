@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/08/21 15:17:46 kent Exp $
-# $PEACE: Makefile,v 1.9 2002/08/21 14:29:13 kent Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/01 15:13:52 kent Exp $
 #
-PEACE_VERSION=	20020821
+PEACE_VERSION=	20020901
 DISTNAME=	peace-0.0.${PEACE_VERSION}
-SITES_peace-20020821.tar.gz=http://cvs.kshosen.ac.jp/src/
+SITES_peace-20020901.tar.gz=http://cvs.kshosen.ac.jp/src/
 CATEGORIES=	emulators
 
 MAINTAINER=	peace-sacrifice@hauN.org
@@ -61,8 +60,5 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/etc/icudll/convrtrs.txt ${PECOFFDIR}/usr/pkg/etc/icudll
 	${INSTALL_DATA} ${WRKDIR}/share/icudll/${ICU_VER}/icudt${ICU_SHORT_VER}l.dat \
 		${PECOFFDIR}/usr/pkg/share/icudll/${ICU_VER}
-post-install:
-	PKG_PREFIX=${LOCALBASE} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
-
 
 .include "../../mk/bsd.pkg.mk"
