@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/01/05 14:25:18 tron Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/12 14:04:57 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-php
 PKGNAME=	phpmyadmin-2.3.3.1
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,16 +14,30 @@ COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 DEPENDS+=	php-mysql>=4.0.5:../../databases/php4-mysql
 DEPENDS+=	php-pcre>=4.0.5:../../devel/php4-pcre
 
-PLIST_SUBST+=	DIST_VERSION=${DIST_VERSION}
-NO_BUILD=	YES
+PLIST_SUBST+=	CP="${CP}" DIST_VERSION=${DIST_VERSION} \
+		PMCONFFILE=${PMCONFFILE} TEST="${TEST}"
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} PMCONFFILE=${PMCONFFILE} \
+		PMDIR=${PMDIR} EXDIR=${EXDIR}
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-php//}
 
+CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
 DIST_VERSION=	2.3.3pl1
-DOC_FILES=	ANNOUNCE.txt CREDITS ChangeLog Documentation.html \
+DOC_FILES=	ANNOUNCE.txt CREDITS ChangeLog \
 		Documentation.txt INSTALL LICENSE README \
 		RELEASE-DATE-${DIST_VERSION} TODO
+EXDIR=		${PREFIX}/share/examples/phpmyadmin
+PMCONFDIR=	${PKG_SYSCONFDIR}/phpmyadmin
+PMCONFFILE=	${PMCONFDIR}/config.inc.php
+PMDIR=		${PREFIX}/share/phpmyadmin
+
+do-build:
+	@${SED} -e 's#@PMDIR@#${PMDIR}#g' ${FILESDIR}/phpmyadmin.conf \
+	  >${WRKDIR}/phpmyadmin.conf
 
 do-install:
+	${INSTALL_DATA_DIR} ${PMCONFDIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/phpmyadmin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/phpmyadmin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/images
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/lang
@@ -32,7 +47,12 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/libraries/fpdf/font
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/libraries/xpath
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/scripts
+	${RM} -f ${CONF_INC_PHP}
 	${INSTALL_SCRIPT} ${WRKSRC}/*.php ${PREFIX}/share/phpmyadmin
+	${TEST} -f ${PMCONFFILE} || ${CP} -p ${CONF_INC_PHP} ${PMCONFFILE}
+	${MV} ${CONF_INC_PHP} ${EXDIR}
+	${LN} -s ${PMCONFFILE} ${CONF_INC_PHP}
+	${INSTALL_DATA} ${WRKSRC}/Documentation.html ${PREFIX}/share/phpmyadmin
 	${INSTALL_DATA} ${WRKSRC}/badwords.txt ${PREFIX}/share/phpmyadmin
 	${INSTALL_DATA} ${WRKSRC}/images/*.* ${PREFIX}/share/phpmyadmin/images
 	${INSTALL_SCRIPT} ${WRKSRC}/lang/*.php ${PREFIX}/share/phpmyadmin/lang
@@ -42,9 +62,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/libraries/fpdf/font/*.php ${PREFIX}/share/phpmyadmin/libraries/fpdf/font
 	${INSTALL_SCRIPT} ${WRKSRC}/libraries/xpath/*.php ${PREFIX}/share/phpmyadmin/libraries/xpath
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/*.* ${PREFIX}/share/phpmyadmin/scripts
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/phpmyadmin
-	for FILE in ${DOC_FILES}; do \
-	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${PREFIX}/share/doc/phpmyadmin; \
-	done
+	cd ${WRKSRC}; \
+	${INSTALL_DATA} ${DOC_FILES} ${PREFIX}/share/doc/phpmyadmin
+	${INSTALL_DATA} ${WRKDIR}/phpmyadmin.conf ${EXDIR}
 
 .include "../../mk/bsd.pkg.mk"
