@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/05 22:37:41 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/27 18:55:36 jlam Exp $
 #
 
 DISTNAME=	lpairs-1.0
@@ -9,9 +9,9 @@ MAINTAINER=	xs@nitric.net
 HOMEPAGE=	http://lgames.sourceforge.net/
 COMMENT=	memory game matching pairs of cards
 
-USE_BUILDLINK_ONLY=	YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK2=	YES
+USE_X11=	YES
+GNU_CONFIGURE=	YES
 
-.include "../../devel/SDL/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/SDL/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
