@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2004/08/22 01:01:52 markd Exp $
+$NetBSD: patch-ae,v 1.2 2004/10/12 11:21:54 markd Exp $
 
---- protocols/Makefile.in.orig	2004-07-16 09:41:24.000000000 +1200
+--- protocols/Makefile.in.orig	2004-09-18 23:57:11.000000000 +1200
 +++ protocols/Makefile.in
-@@ -288,7 +288,7 @@ xdg_appsdir = @xdg_appsdir@
+@@ -262,7 +262,7 @@ xdg_appsdir = @xdg_appsdir@
  xdg_directorydir = @xdg_directorydir@
  xdg_menudir = @xdg_menudir@
  protocoldir = $(kde_servicesdir)
 -protocol_DATA = mms.protocol rtsp.protocol pnm.protocol
 +protocol_DATA = pnm.protocol
- #>- all: all-am
- #>+ 1
- all: docs-am  all-am
+ subdir = protocols
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
