@@ -1,2 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/11 01:45:36 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/09/28 23:54:37 hubertf Exp $
 bin/unison
+share/doc/unison/BUGS.txt
+share/doc/unison/CONTRIB
+share/doc/unison/COPYING
+share/doc/unison/DEPENDENCIES.ps
+share/doc/unison/INSTALL
+share/doc/unison/NEWS
+share/doc/unison/README
+share/doc/unison/ROADMAP.txt
+share/doc/unison/TODO.txt
+@dirrm share/doc/unison

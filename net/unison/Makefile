@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2001/03/27 03:20:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/28 23:54:36 hubertf Exp $
 #
 
 DISTNAME=	src
-PKGNAME=	unison-2.6.11
+PKGNAME=	unison-2.7.7
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/stable/latest/
 
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	file-synchronization tool
 
-BUILD_DEPENDS=	ocaml-3.00:../../lang/ocaml
+BUILD_DEPENDS=	ocaml>=3.00:../../lang/ocaml
 
 DIST_SUBDIR=	unison
 
@@ -25,5 +25,17 @@ MAKE_FLAGS+=	CFLAGS="" UISTYLE=text
 # we don't have ocamlopt on non-i386 so don't try and use it
 MAKE_FLAGS+=	NATIVE=false
 .endif
+
+post-install:
+		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/unison
+		${INSTALL_MAN} ${WRKSRC}/BUGS.txt ${PREFIX}/share/doc/unison
+		${INSTALL_MAN} ${WRKSRC}/CONTRIB ${PREFIX}/share/doc/unison
+		${INSTALL_MAN} ${WRKSRC}/COPYING ${PREFIX}/share/doc/unison
+		${INSTALL_MAN} ${WRKSRC}/DEPENDENCIES.ps ${PREFIX}/share/doc/unison
+		${INSTALL_MAN} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/unison
+		${INSTALL_MAN} ${WRKSRC}/NEWS ${PREFIX}/share/doc/unison
+		${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/unison
+		${INSTALL_MAN} ${WRKSRC}/ROADMAP.txt ${PREFIX}/share/doc/unison
+		${INSTALL_MAN} ${WRKSRC}/TODO.txt ${PREFIX}/share/doc/unison
 
 .include "../../mk/bsd.pkg.mk"
