@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/15 21:22:15 agc Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/10 15:30:46 cjep Exp $
 #
 
 DISTNAME=	ispell-3.1.20
@@ -20,6 +20,13 @@ DICT_LANG=	british
 
 MAKE_FLAGS+=	TMPDIR="${WRKDIR}"
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "SunOS"
+WORDS=		/usr/dict/words
+.else
+WORDS=		/usr/share/dict/words
+.endif
+
 do-configure:
 	cd ${WRKSRC};							\
 	${SED} -e 's|/usr/local|${PREFIX}|g' <local.h.samp >local.h;	\
@@ -27,7 +34,7 @@ do-configure:
 	${ECHO} "#define LANGUAGES \"{${DICT_LANG},MASTERDICTS=${DICT_LANG}.xlg,HASHFILES=${DICT_LANG}xlg.hash,EXTRADICT=}\""  >>local.h; \
 	${ECHO} '#define MASTERHASH "${DICT_LANG}xlg.hash"'  >> local.h ;	\
 	${ECHO} "#undef WORDS"  >> local.h ;				\
-	${ECHO} '#define WORDS   "/usr/share/dict/words"'  >> local.h ;	\
+	${ECHO} '#define WORDS   "${WORDS}"'  >> local.h ;	\
 	${ECHO} '#undef ELISPDIR'  >> local.h;				\
 	${ECHO} "#define ELISPDIR \"${PREFIX}/share/emacs/site-lisp\"" >> local.h
 
