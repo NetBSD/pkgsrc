@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.12 2001/10/03 20:56:44 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.13 2001/12/31 22:25:19 jlam Exp $
 #
 # This Makefile fragment is included by packages that use glib.
 #
@@ -29,10 +29,10 @@ BUILDLINK_FILES.glib+=	lib/libglib.*
 BUILDLINK_FILES.glib+=	lib/libgmodule.*
 BUILDLINK_FILES.glib+=	lib/libgthread.*
 
+USE_PTHREAD=	native pth
+
 .include "../../mk/bsd.prefs.mk"
-.if (${OPSYS} != SunOS)
-.include "../../devel/pth/buildlink.mk"
-.endif
+.include "../../mk/pthread.buildlink.mk"
 
 BUILDLINK_TARGETS.glib=		glib-buildlink
 BUILDLINK_TARGETS.glib+=	glib-buildlink-config-wrapper
