@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/11/29 20:51:51 bouyer Exp $
+
+Index: cli/parse.yy
+===================================================================
+RCS file: /cvsroot/gpsim/cli/parse.yy,v
+retrieving revision 1.38
+diff -u -r1.38 parse.yy
+--- cli/parse.yy	24 Aug 2004 22:27:26 -0000	1.38
++++ cli/parse.yy	4 Nov 2004 18:21:06 -0000
+@@ -584,13 +584,21 @@
+ 	}
+         ;
+ 
+-string_option: STRING_OPTION STRING
++string_option
++	: STRING_OPTION STRING
+         { 
+ 	  $$ = new cmd_options_str($2);
+ 	  $$->co  = $1;
+           if(verbose&2)
+ 	    cout << " name " << $$->co->name << " value " << $$->str << " got a string option \n"; 
+ 	}
++	| STRING_OPTION SYMBOL_T
++        { 
++	  $$ = new cmd_options_str($2->name().c_str());
++	  $$->co  = $1;
++          if(verbose&2)
++	    cout << " name " << $$->co->name << " value " << $$->str << " got a string option \n"; 
++	}
+         ;
+ 
+ string_list
