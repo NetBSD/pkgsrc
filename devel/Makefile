@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 1999/07/01 09:24:09 agc Exp $
+# $NetBSD: Makefile,v 1.63 1999/07/01 15:27:06 agc Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -29,7 +29,7 @@
 #    SUBDIR += f77flow
 #    SUBDIR += fpp
 #    SUBDIR += gcc11
-#    SUBDIR += gdb
+    SUBDIR += gdb
 #    SUBDIR += gdbtk
     SUBDIR += gettext
     SUBDIR += gindent
