@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2002/09/24 14:07:58 martti Exp $
+$NetBSD: patch-ab,v 1.6 2002/10/03 14:06:17 martti Exp $
 
---- doc/Makefile.in.orig	Fri Aug 23 14:37:53 2002
-+++ doc/Makefile.in	Tue Sep 24 15:37:36 2002
-@@ -123,7 +123,7 @@
+--- doc/Makefile.in.orig	Thu Sep 26 20:59:32 2002
++++ doc/Makefile.in	Thu Oct  3 12:44:13 2002
+@@ -124,7 +124,7 @@
  
  
  # The name of the module.
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.5 2002/09/24 14:07:58 martti Exp $
  
  # The top-level SGML file.
  DOC_MAIN_SGML_FILE = libxslt.sgml
-@@ -133,7 +133,7 @@
+@@ -134,7 +134,7 @@
  
  HTML_DIR = @HTML_DIR@
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.5 2002/09/24 14:07:58 martti Exp $
  PAGES = API.html bugs.html contribs.html docs.html downloads.html \
         help.html index.html intro.html news.html xsltproc2.html FAQ.html
  
-@@ -350,7 +350,6 @@
+@@ -351,7 +351,6 @@
  	-@INSTALL@ -m 0644 $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR)
  	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)/tutorial
  	-@INSTALL@ -m 0644 $(srcdir)/tutorial/* $(DESTDIR)$(TARGET_DIR)/tutorial
