@@ -1,0 +1,19 @@
+$NetBSD: patch-am,v 1.1 2004/01/24 16:36:03 mrauch Exp $
+
+--- stage2/builtins.c.orig	2002-12-04 05:41:57.000000000 +0100
++++ stage2/builtins.c
+@@ -4202,12 +4202,12 @@ terminfo_func (char *arg, int flags)
+ 	  return errnum;
+ 	}
+ 
+-      ti_set_term (term);
++      ti_set_term (&term);
+     }
+   else
+     {
+       /* No option specifies printing out current settings.  */
+-      term = ti_get_term ();
++      ti_get_term (&term);
+ 
+       grub_printf ("name=%s\n", term.name);
+       grub_printf ("cursor_address=%s\n", term.cursor_address);
