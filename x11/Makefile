@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2001/03/14 12:15:13 wiz Exp $
+# $NetBSD: Makefile,v 1.208 2001/03/14 16:24:27 skrll Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -37,9 +37,12 @@ SUBDIR+=	gtkglarea
 SUBDIR+=	gtkstep
 SUBDIR+=	hanterm
 SUBDIR+=	kde
+SUBDIR+=	kde2
 SUBDIR+=	kdebase
+SUBDIR+=	kdebase2
 SUBDIR+=	kdelibdocs
 SUBDIR+=	kdelibs
+SUBDIR+=	kdelibs2
 SUBDIR+=	khostchooser
 SUBDIR+=	kterm
 SUBDIR+=	lesstif
