@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/14 12:46:28 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/16 11:50:47 wiz Exp $
 #
 
 DISTNAME=	SDL_ttf-1.2.2
@@ -13,6 +13,8 @@ DEPENDS+=	freetype-lib-*:../../graphics/freetype-lib
 DEPENDS+=	SDL>=1.0.1:../../devel/SDL
 
 GNU_CONFIGURE=	YES
+USE_LIBTOOL=	YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CONFIGURE_ENV+=	CFLAGS="-DFREETYPE_HDR_DIRECTORY"
 
