@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2002/10/15 03:37:01 markd Exp $
+$NetBSD: patch-aa,v 1.6 2003/03/11 13:30:41 markd Exp $
 
---- configure.orig	Mon Oct  7 09:19:05 2002
-+++ configure	Tue Oct 15 14:06:56 2002
-@@ -11014,7 +11014,7 @@
- 
- 
- 
--
-+LIBQTMT="-lqt-mt"
- LIBQT=${LIBQTMT:-"-lqt"}
- if test $kde_qtver = 2; then
- 
-@@ -11112,7 +11112,7 @@
+--- configure.orig	Sun Feb  2 03:50:30 2003
++++ configure
+@@ -11112,7 +11112,7 @@ ac_ldflags_safe="$LDFLAGS"
  ac_libs_safe="$LIBS"
  
  CXXFLAGS="$CXXFLAGS -I$qt_incdir $all_includes"
@@ -20,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2002/10/15 03:37:01 markd Exp $
  LIBS="$LIBS $LIBQT"
  
  
-@@ -11233,7 +11233,7 @@
+@@ -11233,7 +11233,7 @@ ac_libs_safe="$LIBS"
  
  CXXFLAGS="$CXXFLAGS -I$qt_includes"
  LDFLAGS="$X_LDFLAGS"

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2003/01/02 09:12:24 skrll Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/11 13:30:41 markd Exp $
 
-DISTNAME=	kdesdk-3.0.5a
+DISTNAME=	kdesdk-3.1
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -11,7 +11,7 @@ CONFLICTS=	cervisia-[0-9]*
 USE_BUILDLINK2=		YES
 LTCONFIG_OVERRIDE+=	${WRKSRC}/kapptemplate/admin/ltconfig
 
-BUILD_DEPENDS+= qt3-tools>=3.0.4nb1:../../x11/qt3-tools
+BUILD_DEPENDS+= qt3-tools>=3.1.1:../../x11/qt3-tools
 
 .include "../../mk/bsd.prefs.mk"
 

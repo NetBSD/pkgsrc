@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2002/12/24 06:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2003/03/11 13:30:43 markd Exp $
 
-DISTNAME=	kdevelop-2.1.3_for_KDE_3.0
-PKGNAME=	kdevelop-base-2.1.3
-PKGREVISION=	1
+DISTNAME=	kdevelop-2.1.5_for_KDE_3.1
+PKGNAME=	kdevelop-base-2.1.5
 CATEGORIES=	devel kde
 
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/kdevelop-2.1.5/src/ \
+                ftp://ftp.us.kde.org/pub/kde/stable/kdevelop-2.1.5/src/ \
+                ftp://ftp.de.kde.org/pub/kde/stable/kdevelop-2.1.5/src/
 HOMEPAGE=       http://www.kdevelop.org/
 COMMENT=	Base modules for IDE for Unix/X11/KDE
 
@@ -17,9 +19,9 @@ DEPENDS+=		automake>=1.7:../../devel/automake
 DEPENDS+=		kdoc>=3.0:../../textproc/kdoc
 DEPENDS+=		htdig>=3.1.6:../../www/htdig
 DEPENDS+=		a2ps>=4.12:../../print/a2ps
-DEPENDS+=		kdelibdocs>=3.0.1:../../x11/kdelibdocs3
-DEPENDS+=		qt3-tools>=3.0.4:../../x11/qt3-tools
-DEPENDS+=		kdesdk>=3.0.1:../../devel/kdesdk3
+DEPENDS+=		kdelibdocs>=3.1:../../x11/kdelibdocs3
+DEPENDS+=		qt3-tools>=3.1.1:../../x11/qt3-tools
+DEPENDS+=		kdesdk>=3.1:../../devel/kdesdk3
 
 CONFLICTS+=	kdevelop<=1.3
 
