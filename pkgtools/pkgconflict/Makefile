@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/04/03 18:03:03 wennmach Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/10 14:21:56 wennmach Exp $
 #
 
-DISTNAME=	pkgconflict-0.2
+DISTNAME=	pkgconflict-0.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
