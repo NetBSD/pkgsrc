@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2002/12/31 15:13:45 uebayasi Exp $
+$NetBSD: distinfo,v 1.10 2003/06/29 07:59:15 uebayasi Exp $
 
-SHA1 (mlterm-2.6.2.tar.gz) = aee9f237c4cf59e986b6663ced6a497aa824d5df
-Size (mlterm-2.6.2.tar.gz) = 1659672 bytes
+SHA1 (mlterm-2.7.0.tar.gz) = 0f54473b4b791fdf1b29eb63d5540306bd73d547
+Size (mlterm-2.7.0.tar.gz) = 1743950 bytes
