@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/10/02 22:09:46 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/03/26 17:28:29 adrianp Exp $
 lib/services/convert-db
 lib/services/helpfiles/help
 lib/services/languages/de
@@ -11,6 +11,7 @@ lib/services/languages/ja_euc
 lib/services/languages/ja_sjis
 lib/services/languages/nl
 lib/services/languages/pt
+lib/services/languages/ru
 lib/services/languages/tr
 lib/services/modules/chanserv/access-levels.so
 lib/services/modules/chanserv/access-xop.so
