@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/11/19 15:40:48 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/01/29 19:24:13 tron Exp $
 
 DISTNAME=	tkirc1.202
 PKGNAME=	tkirc-1.202
