@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.235 2001/07/25 12:12:54 abs Exp $
+# $NetBSD: mk.conf.example,v 1.236 2001/07/29 19:25:27 tron Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -891,18 +891,6 @@ PAPERSIZE=	A4
 #          --enable-icmp
 #          --enable-ipf-transparent
 #          --enable-snmp
-
-#SQUID_HTTP_PORT=
-# Used in squid package to define the default port number for HTTP
-# connections.
-# Possible: 1-65535
-# Default: 3128
-
-#SQUID_ICTP_PORT=
-# Used in squid package to define the default port number for ICP
-# queries.
-# Possible: 1-65535
-# Default: 3130
 
 #SSH_CONF_DIR=
 # Used in ssh and openssh to set the configuration directory.
