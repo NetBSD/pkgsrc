@@ -1,23 +1,9 @@
-$NetBSD: patch-ab,v 1.3 1998/08/10 15:29:40 tv Exp $
+$NetBSD: patch-ab,v 1.4 2000/06/13 01:46:53 fredb Exp $
 
---- Makefile.in.orig	Mon Aug 10 11:13:23 1998
-+++ Makefile.in	Mon Aug 10 11:22:25 1998
-@@ -3,7 +3,7 @@
- srcdir = @srcdir@
- VPATH = @srcdir@
- 
--CC = @CC@
-+CC = $(LIBTOOL) @CC@
- 
- INSTALL = @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
-@@ -19,11 +19,10 @@
- LIBS = @LIBS@ -lc
- 
- # SunOS users might wish to add '-fpcc-struct-return' to CFLAGS. see INSTALL.
--CFLAGS = -O
--LDFLAGS =
-+CPPFLAGS = $(DEFS) -I. -I$(srcdir)
+--- Makefile.in.orig	Tue May 18 22:16:06 1999
++++ Makefile.in	Tue May  9 00:33:33 2000
+@@ -31,7 +31,7 @@
+ LDFLAGS =
  
  # Common prefix for installation directories
 -prefix = /usr/local
@@ -25,42 +11,3 @@ $NetBSD: patch-ab,v 1.3 1998/08/10 15:29:40 tv Exp $
  exec_prefix = $(prefix)
  binprefix = $(exec_prefix)
  manprefix = $(prefix)
-@@ -39,9 +38,6 @@
- 
- #### End of system configuration section. ####
- 
--.c.o:
--	$(CC) -c $(CPPFLAGS) $(DEFS) -I. -I$(srcdir) $(CFLAGS) $<
--
- SHELL = /bin/sh
- 
- PROGS = libgdbm.a testgdbm testdbm testndbm tndbm tdbm conv2gdbm
-@@ -88,12 +84,12 @@
- 
- DISTFILES = $(SRCS) $(HDRS) $(MSCFILES)
- 
--all: libgdbm.a
-+all: libgdbm.la
- 
- progs: $(PROGS)
- 
--install: libgdbm.a gdbm.h gdbm.info
--	$(INSTALL_DATA) libgdbm.a $(libdir)/libgdbm.a
-+install: libgdbm.la gdbm.h gdbm.info
-+	@$(LIBTOOL) $(INSTALL_DATA) libgdbm.la $(libdir)/
- 	$(INSTALL_DATA) gdbm.h $(includedir)/gdbm.h
- 	$(INSTALL_DATA) $(srcdir)/gdbm.3 $(man3dir)/gdbm.3
- 	$(INSTALL_DATA) $(srcdir)/gdbm.info $(infodir)/gdbm.info
-@@ -102,10 +98,8 @@
- 	$(INSTALL_DATA) $(srcdir)/dbm.h $(includedir)/dbm.h
- 	$(INSTALL_DATA) $(srcdir/ndbm.h $(includedir)/ndbm.h
- 
--libgdbm.a: $(OBJS) gdbm.h
--	rm -f libgdbm.a
--	ar q libgdbm.a $(OBJS)
--	$(RANLIB) libgdbm.a
-+libgdbm.la: $(OBJS) gdbm.h
-+	$(CC) -o $@ $(OBJS:.o=.lo) -rpath $(PREFIX)/lib -version-info 1:73
- 
- gdbm.h:	gdbm.proto gdbmerrno.h gdbm.proto2
- 	rm -f gdbm.h
