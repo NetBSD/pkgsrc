@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.117 2004/08/11 11:53:25 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.118 2004/08/24 15:18:29 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -37,10 +37,9 @@ BEGIN {
 	@EXPORT_OK = qw(false true);
 }
 
-use constant {
-	false		=> 0,
-	true		=> 1,
-};
+use constant false	=> 0;
+use constant true	=> 1;
+
 #== End of PkgLint::Utils =================================================
 
 package PkgLint::Logging;
@@ -72,10 +71,8 @@ BEGIN {
 	import PkgLint::Utils qw(false true);
 }
 
-use constant {
-	NO_FILE		=> "",
-	NO_LINE_NUMBER	=> 0,
-};
+use constant NO_FILE		=> "";
+use constant NO_LINE_NUMBER	=> 0;
 
 my $errors		= 0;
 my $warnings		= 0;
@@ -224,13 +221,12 @@ BEGIN {
 	);
 }
 
-# Start of configuration area
+# Buildtime configuration
 my $conf_rcsidstr	= 'NetBSD';
 my $conf_portsdir	= '@PORTSDIR@';
 my $conf_localbase	= '@PREFIX@';
 my $conf_distver	= '@DISTVER@';
 my $conf_make		= '@MAKE@';
-# End of configuration area
 
 # Command Line Options
 my $opt_extrafile	= true; # check all files we can find for simple errors
@@ -253,8 +249,6 @@ my $filesdir		= "files";
 my $patchdir		= "patches";
 my $distinfo		= "distinfo";
 my $scriptdir		= "scripts";
-my $seen_PKG_REGISTER	= undef;
-my $category		= undef;
 my %cmdnames		= ();
 my $seen_PLIST_SRC	= false;
 my $seen_NO_PKG_REGISTER= false;
@@ -264,6 +258,8 @@ my $seen_USE_BUILDLINK3 = false;
 my %predefined;
 my $pkgname		= "";
 
+# these subroutines return C<true> if the checking succeeded (that includes
+# errors in the file) and C<false> if the file could not be checked.
 sub checkfile_DESCR($);
 sub checkfile_distinfo($);
 sub checkfile_Makefile($);
@@ -322,11 +318,6 @@ sub main() {
 		log_info(NO_FILE, NO_LINE_NUMBER, "checking category Makefile.");
 		category_check();
 	} elsif (-f "$opt_packagedir/../../Packages.txt") {
-		if ($opt_packagedir eq ".") {
-			$category = basename(dirname(cwd()));
-		} else {
-			$category = basename(dirname($opt_packagedir));
-		}
 		check_package();
 	} else {
 		log_error(NO_FILE, NO_LINE_NUMBER, "cannot check \"$opt_packagedir\".");
@@ -563,7 +554,7 @@ sub checkfile_distinfo($) {
 
 	if (scalar(@$distinfo) == 0) {
 		log_error($fname, NO_LINE_NUMBER, "May not be empty.");
-		return false;
+		return true;
 	}
 
 	if ($distinfo->[0]->text !~ /^$regex_rcsidstr$/) {
@@ -614,7 +605,7 @@ sub checkfile_MESSAGE($) {
 
 	if (scalar(@$message) < 3) {
 		log_warning($fname, NO_LINE_NUMBER, "file too short.");
-		return false;
+		return true;
 	}
 	if ($message->[0]->text ne "=" x 75) {
 		log_warning($message->[0]->file, $message->[0]->lineno, "expected a line of exactly 75 \"=\" characters.");
@@ -666,7 +657,7 @@ sub checkfile_PLIST($) {
 				}
 			} elsif ($cmd eq "comment") {
 				if ($arg =~ /^$regex_rcsidstr$/) {
-					$rcsid_seen = 1;
+					$rcsid_seen = true;
 				}
 			} elsif ($cmd eq "dirrm" || $cmd eq "option") {
 				# no check made
@@ -762,8 +753,7 @@ sub checkpathname($) {
 	open(IN, "< $opt_packagedir/$file") || return false;
 	{ local $/; $whole = <IN>; }
 	close(IN);
-	abspathname($whole, $file);
-	return true;
+	return abspathname($whole, $file);
 }
 
 sub checklastline($) {
@@ -851,7 +841,7 @@ sub checkfile_patches_patch($) {
 	# The first line should contain the RCS Id string
 	if (scalar(@$lines) == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Empty patch file.");
-		return false;
+		return true;
 	} elsif ($lines->[0]->text !~ /^$regex_rcsidstr$/) {
 		log_error($lines->[0]->file, $lines->[0]->lineno, "Expected RCS tag \"\$$conf_rcsidstr\$\" (and nothing more) here.");
 	}
@@ -955,6 +945,13 @@ sub checkfile_Makefile($) {
 	my ($bogusdistfiles) = (0);
 	my ($realwrksrc, $wrksrc, $nowrksubdir) = ('', '', '');
 	my ($includefile);
+	my ($category);
+
+	if ($opt_packagedir eq ".") {
+		$category = basename(dirname(cwd()));
+	} else {
+		$category = basename(dirname($opt_packagedir));
+	}
 
 	checkperms($fname);
 
@@ -1823,22 +1820,22 @@ sub abspathname($$) {
 	}
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking direct use of pathnames, phase 1.");
-%cmdnames = split(/\n|\t+/, <<EOF);
+	my %abspathnames = split(/\n|\t+/, <<EOF);
 /usr/opt	\${PORTSDIR} instead
 $conf_portsdir	\${PORTSDIR} instead
 $conf_localbase	\${PREFIX} or \${LOCALBASE}, as appropriate
 /usr/X11	\${PREFIX} or \${X11BASE}, as appropriate
 /usr/X11R6	\${PREFIX} or \${X11BASE}, as appropriate
 EOF
-	foreach my $i (keys %cmdnames) {
+	foreach my $i (keys %abspathnames) {
 		if ($str =~ /$i/) {
 			log_warning(NO_FILE, NO_LINE_NUMBER, "possible direct use of \"$&\" ".
-				"found in $file. if so, use $cmdnames{$i}.");
+				"found in $file. if so, use $abspathnames{$i}.");
 		}
 	}
 
 	log_info(NO_FILE, NO_LINE_NUMBER, "checking direct use of pathnames, phase 2.");
-%cmdnames = split(/\n|\t+/, <<EOF);
+	my %relpathnames = split(/\n|\t+/, <<EOF);
 distfiles	\${DISTDIR} instead
 pkg		\${PKGDIR} instead
 files		\${FILESDIR} instead
@@ -1846,10 +1843,10 @@ scripts		\${SCRIPTDIR} instead
 patches		\${PATCHDIR} instead
 work		\${WRKDIR} instead
 EOF
-	foreach my $i (keys %cmdnames) {
+	foreach my $i (keys %relpathnames) {
 		if ($str =~ /(\.\/|\$[\{\(]\.CURDIR[\}\)]\/|[ \t])(\b$i)\//) {
 			log_warning(NO_FILE, NO_LINE_NUMBER, "possible direct use of \"$i\" ".
-				"found in $file. if so, use $cmdnames{$i}.");
+				"found in $file. if so, use $relpathnames{$i}.");
 		}
 	}
 	return true;
@@ -1883,7 +1880,7 @@ sub category_check() {
 	}
 	if (scalar(@$lines) == 0) {
 		log_error($file, NO_LINE_NUMBER, "may not be empty.");
-		return false;
+		return true;
 	}
 	if ($lines->[0]->text =~ qr"^# $regex_rcsidstr$") {
 		log_info($lines->[0]->file, $lines->[0]->lineno, "RCS Id tag found.");
