@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/04 12:45:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/14 20:55:50 jmmv Exp $
 #
 
-DISTNAME=	file-roller-2.0.4
+DISTNAME=	file-roller-2.2.1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fileroller/}
 
@@ -10,6 +10,7 @@ HOMEPAGE=	http://fileroller.sourceforge.net/
 COMMENT=	Front-end to archiving programs like tar and zip
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
@@ -17,6 +18,9 @@ USE_GMAKE=		yes
 USE_PERL5=		build
 USE_PKGLOCALEDIR=	yes
 
+GCONF2_SCHEMAS=		file-roller.schemas
+
+.include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/libgnome/buildlink2.mk"
 .include "../../devel/bonobo-activation/buildlink2.mk"
