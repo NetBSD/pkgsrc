@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.8 2003/02/18 01:13:23 fredb Exp $
+
+--- configure.orig	Mon Feb 17 17:33:00 2003
++++ configure
+@@ -13620,6 +13620,11 @@ echo "${ECHO_T}no" >&6
+ 
+ 
+ 
++# On NetBSD, be sure to use crypt() in libcrypt, rather than libcrypto,
++# to support non-DES passwords.
++if test x"$this_os" = "xnetbsd"; then
++  LIBS="-lcrypt $LIBS"
++fi
+ 
+ 
+ # Check whether --enable-pgp-uam or --disable-pgp-uam was given.
