@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.779 2001/07/05 04:47:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.780 2001/07/05 04:58:12 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -90,6 +90,8 @@ SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH} JAVA_HOME=${JAVA_HOME}
 .endif
 
 # Set X11PREFIX to reflect the install directory of X11 packages.
+# Set XMKMF_CMD properly for all combinations of whether xpkgwedge and
+# buildlink-x11 are installed.
 #
 # The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
 # is to catch users of xpkgwedge<1.0.
