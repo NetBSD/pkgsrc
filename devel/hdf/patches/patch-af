@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
+$NetBSD: patch-af,v 1.2 2001/03/08 21:15:45 jtb Exp $
 
---- /dev/null	Wed Feb 28 22:06:47 2001
+--- /dev/null	Thu Mar  8 21:08:50 2001
 +++ mfhdf/libsrc/Makefile
-@@ -0,0 +1,33 @@
+@@ -0,0 +1,35 @@
 +.PATH: ${.CURDIR} ${.CURDIR}/../fortran ${.CURDIR}/../fortran/config
 +
 +LIB= mfhdf
@@ -26,6 +26,8 @@ $NetBSD: patch-af,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
 +CPPFLAGS+= -Dunix -DHDF -DNDEBUG @SWAP@ ${HDFINC} ${F2CINC} -I${.CURDIR}
 +
 +NOLINT= 1
++MKPICINSTALL= no
++MKPROFILE= no
 +
 +NOGCCERROR= 1
 +
