@@ -1,33 +1,17 @@
-$NetBSD: patch-ab,v 1.4 1998/11/12 15:48:34 agc Exp $
+$NetBSD: patch-ab,v 1.5 2000/02/13 19:17:24 fredb Exp $
 
---- cda_d/Imakefile.orig	Wed Oct 28 03:03:25 1998
-+++ cda_d/Imakefile	Wed Nov  4 22:37:14 1998
-@@ -42,11 +42,11 @@
-  *	One of these should be defined for tty mode control
-  */
- #if defined(FreeBSDArchitecture) || defined(OpenBSDArchitecture) || \
--    defined(OsfArchitecture) || \
-+    defined(OsfArchitecture) || defined(NetBSDArchitecture) || \
-     (defined(SunArchitecture) && OSMajorVersion == 4)
+--- cda_d/Imakefile.orig	Sat Feb  5 01:26:38 2000
++++ cda_d/Imakefile	Sun Feb 13 08:20:52 2000
+@@ -50,7 +50,7 @@
  DEFINES= -DBSDCOMPAT -DUSE_TERMIOS
  #else
--#if defined(NetBSDArchitecture) || defined(__bsdi__)
-+#if defined(__bsdi__)
- DEFINES= -DBSDCOMPAT -DNOVISUAL -DUSE_TERMIOS
+ #if defined(NetBSDArchitecture)
+-DEFINES= -DBSDCOMPAT -DNOVISUAL -DUSE_TERMIOS
++DEFINES= -DBSDCOMPAT -DUSE_TERMIOS
  #else
- #if defined(sony_news)
-@@ -62,8 +62,8 @@
- #endif	/* XmacIIServer */
- #endif	/* BSD */
- #endif	/* sony_news */
--#endif	/* NetBSDArchitecture __bsdi__ */
--#endif	/* FreeBSD OpenBSD OsfArchitecture SunArchitecture */
-+#endif	/* __bsdi__ */
-+#endif	/* FreeBSD OpenBSD OsfArchitecture NetBSD SunArchitecture */
- 
- 
- /*
-@@ -79,7 +79,7 @@
+ #if defined(__bsdi__)
+ .if exists(/usr/include/ncurses.h)
+@@ -90,7 +90,7 @@
  #endif	/* LinuxArchitecture */
  #endif	/* SunArchitecture */
  
@@ -36,28 +20,12 @@ $NetBSD: patch-ab,v 1.4 1998/11/12 15:48:34 agc Exp $
  
  
  /*
-@@ -97,7 +97,10 @@
- LOCAL_LIBRARIES+= -lcam
+@@ -109,7 +109,7 @@
  .endif
  #else
--#if defined(NetBSDArchitecture) || defined(__bsdi__)
-+#if defined(NetBSDArchitecture)
+ #if defined(NetBSDArchitecture)
+-LOCAL_LIBRARIES=
 +LOCAL_LIBRARIES=-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lncurses
-+#else
-+#if defined(__bsdi__)
- LOCAL_LIBRARIES=
  #else
- #if defined(OpenBSDArchitecture)
-@@ -117,9 +120,10 @@
- #endif	/* SINIX */
- #endif	/* ultrix */
- #endif	/* OpenBSDArchitecture */
--#endif	/* NetBSDArchitecture __bsdi__ */
-+#endif	/* __bsdi__ */
-+#endif	/* NetBSDArchitecture */
- #endif	/* FreeBSDArchitecture */
--#endif	/* LinuxArchitecture OpenBSDArchitecture */
-+#endif	/* LinuxArchitecture */
- #endif	/* SunArchitecture */
- 
- 
+ #if defined(__bsdi__)
+ .if exists(/usr/include/ncurses.h)
