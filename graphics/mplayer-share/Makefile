@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/12/06 14:21:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/12/21 19:52:08 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	mplayer-share-${MPLAYER_PKG_VERSION}
 COMMENT=	Documentation and fonts used by mplayer and gmplayer
-# XXX: Remove following line during next update!
-PKGREVISION=	1
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
