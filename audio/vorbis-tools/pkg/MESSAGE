@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/03/15 21:42:44 wiz Exp $
+
+By default, ogg123 will decode to a testing null device.
+
+If you want to hear the audio and if you have a sound card with a
+working /dev/audio device, you can use libao's "oss" (Open Sound
+System) device.  To setup your personal ogg123 configuration so it
+uses "oss" do:
+
+  echo "default_device=oss" > ~/.ogg123rc
+
+Read the ogg123 manual page for further information.
+
+===========================================================================
