@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2001/05/05 19:51:18 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/03 02:45:51 jschauma Exp $
 # $FreeBSD: ports/net/tcpillust/Makefile,v 1.1.1.1 2000/07/29 06:26:00 sada Exp $
 #
 
 DISTNAME=	tcpillust-1.0a
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.csl.sony.co.jp/CSL/nishida/
 
