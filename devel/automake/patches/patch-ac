@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2002/01/10 16:22:38 skrll Exp $
+
+--- lisp.am.orig	Sun Jul 15 17:22:09 2001
++++ lisp.am
+@@ -21,7 +21,7 @@
+ 	  $(mkinstalldirs) $(DESTDIR)$(@DIR@dir); \
+ ## Funny invocation because Makefile variable can be empty, leading to
+ ## a syntax error in sh.
+-	  @list='$(@DIR@_LISP)'; for p in $$list; do \
++	  list='$(@DIR@_LISP)'; for p in $$list; do \
+ ## A header file can be in the source directory or the build directory.
+ 	    if test -f "$$p"; then d= ; else d="$(srcdir)/"; fi; \
+ 	    echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(@DIR@dir)/$$p"; \
