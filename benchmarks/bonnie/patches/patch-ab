@@ -1,4 +1,4 @@
-# $NetBSD: patch-ab,v 1.7 2005/03/03 08:58:27 garbled Exp $
+$NetBSD: patch-ab,v 1.8 2005/03/03 11:53:25 garbled Exp $
 
 --- bonnie.1.orig	Wed Aug 28 21:42:42 1996
 +++ bonnie.1	Thu May  1 17:26:39 2003
