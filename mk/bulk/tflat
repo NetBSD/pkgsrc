@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: tflat,v 1.6 2001/02/20 17:08:53 wiz Exp $
+# $NetBSD: tflat,v 1.7 2002/10/06 20:15:05 dmcmahill Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -70,7 +70,7 @@ BEGIN {
 
 			# Note that it is possible for a package "foo/bar" to never
 			# appear in $1.  In fact if foo/bar is not depended upon by
-			# anything and it has depends the it will not show up in $1
+			# anything and it has depends then it will not show up in $1
 			# however, we need to make sure we get a topdepends[foo/bar]
 			# entry so add it here if its not already there.
 			if (!($2 in topdepends))
@@ -186,7 +186,7 @@ function usage(){
 	printf("Input file format is in the form\n");
 	printf("foo	bar\n");
 	printf("foo	baz\n");
-	printf("bar	libbar\n");
+	printf("libbar	bar\n");
 	printf("\n");
 	printf("meaning \"foo is depended upon by bar,\n");
 	printf("         foo is depended upon by baz,\n");
