@@ -5,7 +5,7 @@
 # Date created:         8 Jul 1995 (ache@FreeBSD.ORG)
 # Whom:                 tv@NetBSD.ORG
 #
-# $NetBSD: Makefile,v 1.1.1.1 1998/03/18 01:51:14 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/18 02:58:52 tv Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -54,13 +54,13 @@ ASMFLAG=	-DPORTABLE -DMPORTABLE
 
 .if !defined(USE_RSAREF2) || ${USE_RSAREF2} != YES && ${USE_RSAREF2} != NO
 pre-fetch:
-	@echo
-	@echo The variable USE_RSAREF2 must be set to either YES or NO
-	@echo in order to build this package.  USA residents not at the
-	@echo Massachusetts Institute of Technology MUST set this
-	@echo variable to YES.  Users outside the USA MUST set this
-	@echo variable to NO.  People at MIT may choose -- NO is faster.
-	@false
+	@${ECHO}
+	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
+	@${ECHO} in order to build this package.  USA residents not at the
+	@${ECHO} Massachusetts Institute of Technology MUST set this
+	@${ECHO} variable to YES.  Users outside the USA MUST set this
+	@${ECHO} variable to NO.  People at MIT may choose -- NO is faster.
+	@${FALSE}
 .endif
 
 post-extract:
