@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2002/06/14 17:04:13 taca Exp $
+# $NetBSD: Makefile,v 1.84 2002/06/22 21:31:29 jlam Exp $
 
-DISTNAME=		samba-2.2.4
-PKGREVISION=		1
+DISTNAME=		samba-2.2.5
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
@@ -13,6 +12,7 @@ COUNTRY_MIRRORS=	au1 ca fi fr de it pl ru sg se us1 us6
 .for COUNTRY in ${COUNTRY_MIRRORS}
 MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/
 .endfor
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
@@ -37,15 +37,13 @@ SAMBA_LOGDIR?=		${VARDIR}/log
 SAMBA_PIDDIR?=		${VARDIR}/run
 SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
 
-MAKE_ENV+=		ETCDIR=${SAMBA_ETCDIR}
-MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
-
 CONFIGURE_ARGS+=	--localstatedir=${VARDIR}
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
 CONFIGURE_ARGS+=	--with-codepagedir=${SAMBA_DATADIR}/samba/codepages
 CONFIGURE_ARGS+=	--with-datadir=${SAMBA_DATADIR}
 CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
+CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
 CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR}
 CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
 CONFIGURE_ARGS+=	--with-swatdir=${SAMBA_DATADIR}/samba/swat
@@ -60,6 +58,9 @@ CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
 .include "../../print/cups/buildlink.mk"
 BUILD_DEFS+=		USE_CUPS
+CONFIGURE_ARGS+=	--enable-cups
+.else
+CONFIGURE_ARGS+=	--disable-cups
 .endif
 
 .if defined(USE_PAM)
@@ -77,12 +78,15 @@ PLIST_SUBST+=		SAMBA_LDAP=""
 PLIST_SUBST+=		SAMBA_LDAP="@comment "
 MESSAGE_SRC=		${.CURDIR}/MESSAGE.smbpasswd
 SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
-			${ROOT_USER} ${ROOT_GROUP} 0700
+			${ROOT_USER} ${ROOT_GROUP} 0600
 .endif
 
 # The following are Linux-only options.
 CONFIGURE_ARGS+=	--without-smbwrapper
 CONFIGURE_ARGS+=	--without-smbmount
+
+# Explicitly disable winbind until it may be properly handled by pkgsrc.
+CONFIGURE_ARGS+=	--without-winbind
 
 DOCDIR=			${PREFIX}/share/doc/samba
 HTMLDIR=		${PREFIX}/share/doc/html/samba
@@ -92,11 +96,11 @@ FILES_SUBST=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
 FILES_SUBST+=		SAMBA_LOGDIR=${SAMBA_LOGDIR}
 FILES_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
-MESSAGE_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
+MESSAGE_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
 MESSAGE_SUBST+=		ROOT_USER=${ROOT_USER}
 
-CONF_FILES=		${EXAMPLESDIR}/smb.conf.sample ${SAMBA_ETCDIR}/smb.conf
+CONF_FILES=		${EXAMPLESDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 SUPPORT_FILES_PERMS=	${SMBPASSWD_FILE}
 RCD_SCRIPTS=		samba nmbd smbd
 OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
@@ -104,10 +108,17 @@ OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0500
 
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 
+# Remove irrelevant files for this package.
 post-extract:
 	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -print |	\
 		${XARGS} ${RM} -f
 	${RM} -r ${WRKDIR}/${DISTNAME}/docs/textdocs/outdated
+	${RM} -r ${WRKDIR}/${DISTNAME}/examples/VFS
+	${RM} -r ${WRKDIR}/${DISTNAME}/examples/appliance
+	${RM} -r ${WRKDIR}/${DISTNAME}/examples/autofs
+	${RM} -r ${WRKDIR}/${DISTNAME}/examples/dce-dfs
+	${RM} -r ${WRKDIR}/${DISTNAME}/examples/libsmbclient
+	${RM} -r ${WRKDIR}/${DISTNAME}/examples/svr4-startup
 
 pre-install:
 	@for script in ${RCD_SCRIPTS}; do				\
@@ -133,15 +144,13 @@ post-install:
 		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
 			${PREFIX}/etc/rc.d/$${script};			\
 	done
-	${INSTALL_SCRIPT} ${WRKSRC}/script/convert_smbpasswd ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/script/convert_smbpasswd		\
+		${EXAMPLESDIR}/misc
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
 
-	@${SED} ${FILES_SUBST_SED}					\
-		${FILESDIR}/smb.conf.sample > ${WRKDIR}/smb.conf.sample
-	${INSTALL_DATA} ${WRKDIR}/smb.conf.sample ${EXAMPLESDIR}
-
 .include "../../devel/readline/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
+
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
