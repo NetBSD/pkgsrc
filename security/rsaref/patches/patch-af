@@ -1,0 +1,15 @@
+--- ../source/rsaref.h.orig	Fri Mar 25 14:01:49 1994
++++ ../source/rsaref.h	Tue Jul 14 13:20:12 1998
+@@ -8,9 +8,9 @@
+ #ifndef _RSAREF_H_
+ #define _RSAREF_H_ 1
+ 
+-#include "md2.h"
+-#include "md5.h"
+-#include "des.h"
++#include <rsaref/md2.h>
++#include <rsaref/md5.h>
++#include <rsaref/des.h>
+ 
+ #ifdef __cplusplus
+ extern "C" {

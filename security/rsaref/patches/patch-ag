@@ -1,0 +1,48 @@
+--- unix/makefile.orig	Fri Mar 25 14:01:31 1994
++++ unix/makefile	Tue Jul 14 13:52:28 1998
+@@ -1,11 +1,11 @@
+ # This is a makefile for UNIX
++LIBTOOL = ${PREFIX}/bin/libtool
+ 
+ # extension for object files
+ O = o
+ 
+ # commands
+-CC = cc
+-LIB = ar
++CC = ${LIBTOOL} --mode=compile cc
+ 
+ # name of temporary library script
+ TEMPFILE = $(TEMP)/temp.mak
+@@ -14,7 +14,7 @@
+ STDINCDIR=/usr/include
+ 
+ # The places to look for include files (in order).
+-INCL =  -I. -I$(RSAREFDIR) -I$(STDINCDIR)
++INCL =  -I. -I$(RSAREFDIR)
+ 
+ # name of main executable to build
+ PROG = all
+@@ -25,7 +25,7 @@
+ 
+ # The location of the common source directory.
+ RSAREFDIR = ../source/
+-RSAREFLIB = rsaref.a
++RSAREFLIB = librsaref.la
+ 
+ # The location of the demo source directory.
+ RDEMODIR = ../rdemo/
+@@ -38,11 +38,10 @@
+ dhdemo : dhdemo.$(O) $(RSAREFLIB)
+ 	cc -o $@ dhdemo.$(O) $(RSAREFLIB)
+ 
+-$(RSAREFLIB) : desc.$(O) digit.$(O) md2c.$(O) md5c.$(O) nn.$(O) prime.$(O)\
++$(RSAREFLIB) : desc.$(O) digit.$(O) md2c.$(O) nn.$(O) prime.$(O)\
+   rsa.$(O) r_encode.$(O) r_dh.$(O) r_enhanc.$(O) r_keygen.$(O) r_random.$(O)\
+   r_stdlib.$(O)
+-	$(LIB) r $@ $?
+-	ranlib $@
++	${LIBTOOL} --mode=link cc -o $@ ${?:.o=.lo} -rpath ${PREFIX}/lib -version-info 2:0
+ 
+ rdemo.$(O) : $(RDEMODIR)rdemo.c $(RSAREFDIR)global.h $(RSAREFDIR)rsaref.h
+ 	$(CC) $(CFLAGS) $(RDEMODIR)rdemo.c
