@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2003/07/22 04:14:17 martti Exp $
+# $NetBSD: Makefile,v 1.39 2003/08/13 03:05:48 simonb Exp $
 #
 
-DISTNAME=	adzap-20030525
+DISTNAME=	adzap-20030811
 WRKSRC=		${WRKDIR}/adzap
 CATEGORIES=	www perl5
 # XXX: should use the following one day:
