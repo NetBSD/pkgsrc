@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2002/03/05 17:45:03 skrll Exp $
+# $NetBSD: Makefile,v 1.18 2002/08/05 13:11:22 lukem Exp $
 
-DISTNAME=	libvorbis-1.0rc3
-PKGNAME=	libvorbis-1.0.0.7
+DISTNAME=	libvorbis-1.0
+PKGNAME=	libvorbis-1.0.0.8
 CATEGORIES=	devel audio
-MASTER_SITES=	http://www.vorbis.com/files/rc3/unix/
+MASTER_SITES=	http://www.vorbis.com/files/1.0/unix/
 
 MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.xiph.org/ogg/vorbis/
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_DIR}
 
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
