@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4872 2004/02/17 00:09:41 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4873 2004/02/17 01:25:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -882,3 +882,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated x11-links to 0.21 [jlam 2004-02-16]
 	Updated gcalctool to 4.3.44 [jmmv 2004-02-16]
 	Updated samba to 3.0.1nb2 [xtraeme 2004-02-16]
+	Updated lq-sp to 1.3.4.10 [minskim 2004-02-17]
