@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2000/07/25 22:32:25 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.53 2000/08/15 23:20:51 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -18,8 +18,7 @@ DEPENDS+=	tiff-*:../../graphics/tiff
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
-USE_PKGLIBTOOL=	yes
-LIBTOOL_FLAGS=	--cplusplus --install-la
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 EVAL_PREFIX+=	QT1DIR=qt1
