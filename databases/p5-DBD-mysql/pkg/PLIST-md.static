@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST-md.static,v 1.1.1.1 1999/06/10 18:32:36 bad Exp $
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBD/mysql/mysql.a
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBD/mysql/extralibs.ld
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DBD/mysql
