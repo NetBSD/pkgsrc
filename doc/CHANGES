@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2342 2003/05/28 02:34:18 jlam Exp $
+$NetBSD: CHANGES,v 1.2343 2003/05/28 03:28:46 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2180,3 +2180,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated openslp to 1.0.11 [jlam 2003-05-27]
 	Updated ast-ksh to 2003-04-22 [uebayasi 2003-05-28]
 	Updated cups to 1.1.19 [jlam 2003-05-28]
+	Updated ghostscript-esp to 7.05.6 [jlam 2003-05-28]
+	Updated ghostscript-esp-nox11 to 7.05.6 [jlam 2003-05-28]
