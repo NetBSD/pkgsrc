@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1191 2003/12/14 12:39:32 wiz Exp $
+$NetBSD: TODO,v 1.1192 2003/12/14 14:17:13 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -109,6 +109,7 @@ Suggested package updates
 	o GConf2-2.4.0.1 [pkg/23697|jmmv]
 	o GConf2-ui-2.4.0.1 [pkg/23698|jmmv]
 	o ImageViewer-0.6.3
+	o ORBit2-2.8.2 [jmmv]
 	o SDL_gfx-2.0.10
 	o TeXmacs-1.0.2.10
 	o Xaw3d-1.5E
@@ -215,6 +216,7 @@ Suggested package updates
 	o lavaps-2.4
 	o lcms-1.0.9
 	o leafnode-1.9.46
+	o libbonobo-2.4.2 [jmmv]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtiff-3.6.0
