@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2004/10/13 12:06:36 tv Exp $
+# $NetBSD: Makefile.common,v 1.37 2004/10/13 15:15:52 tv Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=	-platform interix-g++
 CFLAGS+=		-I/usr/local/include/bind
 LDFLAGS+=		-L/usr/local/lib/bind -lbind
 BUILDLINK_PASSTHRU_DIRS+=/usr/local/include/bind /usr/local/lib/bind
-SYS_LIBS=		-lbind -ldl
+SYS_LIBS=		-lbind -ldb -ldl
 .endif
 
 .if !exists(${X11BASE}/lib/libXinerama.so)
