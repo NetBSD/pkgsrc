@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2001/10/06 17:20:05 rh Exp $
+$NetBSD: distinfo,v 1.4 2002/03/23 06:43:54 uebayasi Exp $
 
-SHA1 (ggv-1.0.1.tar.gz) = 3da848d8b05defee414be45f37333fe0c70aba11
-Size (ggv-1.0.1.tar.gz) = 591948 bytes
+SHA1 (ggv-1.0.2.tar.gz) = 5c26425e7591e2ad24a31c17104f8f5018afe877
+Size (ggv-1.0.2.tar.gz) = 610873 bytes
