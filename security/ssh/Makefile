@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1998/07/10 20:07:17 tron Exp $
+# $NetBSD: Makefile,v 1.30 1998/07/13 13:09:36 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -48,7 +48,7 @@ CONFIGURE_ARGS+=	--with-secureid
 .endif
 
 # Don't use IDEA. IDEA can be freely used for non-commercial use. However,
-# commercial use may require a licence in a number of countries
+# commercial use may require a license in a number of countries
 # Warning: untested !
 .if defined(DONT_USE_IDEA) && ${DONT_USE_IDEA} == YES
 CONFIGURE_ARGS+=	--without-idea
@@ -86,7 +86,7 @@ fetch-depends:
 	@${ECHO}
 	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
 	@${ECHO} in order to build this package.  People with no RSA
-	@${ECHO} licence MUST set this variable to YES.  Users outside
+	@${ECHO} license MUST set this variable to YES.  Users outside
 	@${ECHO} the USA MUST set this variable to NO.  RSA licensees may
 	@${ECHO} choose -- NO is faster.
 	@${ECHO}
