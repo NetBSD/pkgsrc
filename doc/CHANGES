@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4147 2003/12/16 19:45:56 martti Exp $
+$NetBSD: CHANGES,v 1.4148 2003/12/16 19:59:41 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5198,3 +5198,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated kde3 to 3.1.4nb2 [tron 2003-12-16]
 	Updated radiusd-cistron to 1.6.7 [martti 2003-12-16]
 	Added p5-INET6-2.00 [martti 2003-12-16]
+	Updated mrtg to 2.10.11nb1 [martti 2003-12-16]
