@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/15 20:46:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/05/03 12:43:06 drochner Exp $
 bin/gimpprint-config
 include/gimp-print/gimp-print.h
 @unexec install-info --delete --info-dir=%D/info %D/info/gimpprint.info
@@ -13,7 +13,7 @@ lib/libgimpprint.a
 lib/libgimpprint.la
 lib/libgimpprint.so
 lib/libgimpprint.so.1
-lib/libgimpprint.so.1.0
+lib/libgimpprint.so.1.1
 man/man1/gimpprint-config.1
 man/man3/gimpprint.3
 share/aclocal/gimpprint.m4
@@ -21,6 +21,7 @@ share/gimp-print/doc/gimpprint.ps
 share/gimp-print/doc/html/book1.html
 share/gimp-print/doc/html/c29.html
 share/gimp-print/doc/html/c447.html
+share/gimp-print/doc/html/c570.html
 share/gimp-print/doc/html/ch-gimp-and-gimp-print.html
 share/gimp-print/doc/html/docbook.css
 share/gimp-print/doc/html/figures/cups_admin.png
@@ -56,17 +57,17 @@ share/gimp-print/doc/html/stylesheet-images/warning.gif
 share/gimp-print/doc/html/x456.html
 share/gimp-print/doc/html/x548.html
 share/gimp-print/doc/html/x562.html
-share/gimp-print/doc/html/x580.html
-share/gimp-print/doc/html/x590.html
-share/gimp-print/doc/html/x594.html
-share/gimp-print/doc/html/x600.html
-share/gimp-print/doc/html/x636.html
-share/gimp-print/doc/html/x641.html
-share/gimp-print/doc/html/x645.html
-share/gimp-print/doc/html/x649.html
+share/gimp-print/doc/html/x642.html
 share/gimp-print/doc/html/x652.html
-share/gimp-print/doc/html/x655.html
-share/gimp-print/doc/html/x660.html
+share/gimp-print/doc/html/x656.html
+share/gimp-print/doc/html/x662.html
+share/gimp-print/doc/html/x698.html
+share/gimp-print/doc/html/x703.html
+share/gimp-print/doc/html/x707.html
+share/gimp-print/doc/html/x711.html
+share/gimp-print/doc/html/x714.html
+share/gimp-print/doc/html/x717.html
+share/gimp-print/doc/html/x722.html
 share/gimp-print/doc/html/x85.html
 share/gimp-print/doc/manual-html/gimpprint_1.html
 share/gimp-print/doc/manual-html/gimpprint_10.html
@@ -122,10 +123,13 @@ share/gimp-print/doc/manual-html/print-main.png
 share/gimp-print/doc/manual-html/print-setup.png
 share/gimp-print/doc/users-guide.pdf
 share/locale/da/LC_MESSAGES/gimp-print.mo
+share/locale/el/LC_MESSAGES/gimp-print.mo
 share/locale/en_GB/LC_MESSAGES/gimp-print.mo
 share/locale/fr/LC_MESSAGES/gimp-print.mo
+share/locale/nl/LC_MESSAGES/gimp-print.mo
 share/locale/no/LC_MESSAGES/gimp-print.mo
 share/locale/pl/LC_MESSAGES/gimp-print.mo
+share/locale/sk/LC_MESSAGES/gimp-print.mo
 share/locale/sv/LC_MESSAGES/gimp-print.mo
 @exec ${MKDIR} %D/share/gimp-print/samples
 @dirrm share/gimp-print/samples
