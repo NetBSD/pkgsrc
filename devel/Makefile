@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 1999/12/03 08:49:57 rh Exp $
+# $NetBSD: Makefile,v 1.92 1999/12/06 08:35:56 rh Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -95,7 +95,7 @@
     SUBDIR += p5-Devel-DProf
     SUBDIR += p5-Devel-SmallProf
 #    SUBDIR += p5-Devel-Peek
-#    SUBDIR += p5-Devel-Symdump
+    SUBDIR += p5-Devel-Symdump
 #    SUBDIR += p5-Errno
 #    SUBDIR += p5-File-BasicFlock
 #    SUBDIR += p5-File-Lock
