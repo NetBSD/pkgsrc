@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2002/06/01 12:17:42 grant Exp $
+# $NetBSD: Makefile,v 1.12 2002/06/04 14:03:35 cjep Exp $
 
-DISTNAME=		sylpheed-0.7.5
+DISTNAME=		sylpheed-0.7.6
 CATEGORIES=		mail news x11
 MASTER_SITES=		http://sylpheed.good-day.net/sylpheed/
 EXTRACT_SUFX=		.tar.bz2
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-gpgme
+CONFIGURE_ARGS+=	--disable-compface
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6
