@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2569 2004/11/29 02:20:01 tv Exp $
+$NetBSD: TODO,v 1.2570 2004/11/29 02:28:11 tv Exp $
 
 Suggested new packages
 ======================
@@ -655,7 +655,6 @@ Suggested package updates
 	o libcomprex-0.3.3
 	o libdnet-1.8
 	o libetpan-0.34b
-	o libextractor-0.3.11
 	o libfwbuilder-2.0.3
 	o libgnomecanvasmm20-2.0.2
 	o libgnomecanvasmm26-2.8.0?
