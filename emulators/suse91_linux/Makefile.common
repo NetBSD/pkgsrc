@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/10/07 02:01:37 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/11/08 12:41:08 wiz Exp $
 
 SUSE_VERSION=		9.1
 
@@ -63,10 +63,10 @@ do-install:
 	  ${ECHO_MSG} "===> [Automatic Linux shared object handling]"; \
 	  ${EMULDIR}/sbin/ldconfig -r ${EMULDIR}; \
 	  ${MV} -f ${PLIST_SRC} ${PLIST_SRC}.old; \
-	  ${GREP} -v '^@dirrm' ${PLIST_SRC}.old >${PLIST_SRC}; \
+	  ${GREP} -v '^@dirrm' ${PLIST_SRC}.old >${PLIST_SRC} || ${TRUE}; \
 	  ${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" >>${PLIST_SRC}; \
 	  ${ECHO} "@unexec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR} 2>/dev/null" >>${PLIST_SRC}; \
-	  ${GREP} '^@dirrm' ${PLIST_SRC}.old >>${PLIST_SRC}; \
+	  ${GREP} '^@dirrm' ${PLIST_SRC}.old >>${PLIST_SRC} || ${TRUE}; \
 	  ${RM} -f ${PLIST_SRC}.old; \
 	fi
 .endif
