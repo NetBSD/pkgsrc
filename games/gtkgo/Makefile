@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/05/02 11:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/05 19:05:11 jmmv Exp $
 #
 
 DISTNAME=	gtkgo-0_0_10
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/_/./g}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	games gnome
 MASTER_SITES=	http://norbertdejonge.sourceforge.net/

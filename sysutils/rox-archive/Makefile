@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/05/03 22:08:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/05 19:05:19 jmmv Exp $
 #
 
 DISTNAME=	Archive-0.1.2
-PKGREVISION=	1
 PKGNAME=	rox-archive-0.1.2
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/Archive
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
