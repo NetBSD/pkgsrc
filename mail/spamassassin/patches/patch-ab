@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2005/01/15 21:44:55 schmonz Exp $
+$NetBSD: patch-ab,v 1.10 2005/02/13 21:20:25 heinz Exp $
 
---- Makefile.PL.orig	2004-10-22 11:21:08.000000000 -0400
+--- Makefile.PL.orig	Fri Oct 22 17:21:08 2004
 +++ Makefile.PL
 @@ -64,6 +64,8 @@ my @ATT_KEYS = (
    'ENABLE_SSL',       # Set to 'yes' to build spamc with SSL support.
@@ -11,12 +11,9 @@ $NetBSD: patch-ab,v 1.9 2005/01/15 21:44:55 schmonz Exp $
  );
  
  
-@@ -98,8 +100,10 @@ sub yesno {
- my %opt = (
-   'build_spamc'        => undef,
+@@ -100,6 +102,8 @@ my %opt = (
    'enable_ssl'      => undef,
--  'contact_address' => undef,
-+  'contact_address' => '@SA_CONTACT_ADDRESS@',
+   'contact_address' => undef,
    'run_net_tests'   => undef,
 +  'run_awl_sql_tests'   => undef,
 +  'run_bayes_sql_tests' => undef,
