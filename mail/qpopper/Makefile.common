@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2001/06/10 15:08:40 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/07/26 12:25:55 taca Exp $
 
 GNU_CONFIGURE=		yes
 USE_SSL=		yes
@@ -31,6 +31,4 @@ CONFIGURE_ARGS+=	--enable-servermode
 .endif
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
-.endif
-.if defined(QPOPPER_USER)
 .endif
