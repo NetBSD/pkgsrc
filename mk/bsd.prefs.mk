@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.182 2005/02/19 01:28:14 grant Exp $
+# $NetBSD: bsd.prefs.mk,v 1.183 2005/03/24 17:46:00 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -489,11 +489,6 @@ LINKFARM?=		${LINKFARM_CMD}
 # package name.
 #
 PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -S lsbest
-
-USE_BUILDLINK3?=	no	# default to not using buildlink3
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-USE_BUILDLINK3=		yes	# pkgviews requires buildlink3
-.endif
 
 .if exists(${LOCALBASE}/bsd/share/mk/zoularis.mk)
 PKG_FAIL_REASON+=	'You appear to have a deprecated Zoularis installation.'

@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.4 2005/01/24 18:20:57 tv Exp $
+# $NetBSD: f2c.mk,v 1.5 2005/03/24 17:46:01 tv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -96,11 +96,7 @@ PREPEND_PATH+=	${_F2C_DIR}/bin
 .  endif
 
 # Add the dependency on f2c.
-.  if !empty(USE_BUILDLINK3:M[yY][eE][sS])
-.    include "../../lang/f2c/buildlink3.mk"
-.  else
-DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
-.  endif
+.  include "../../lang/f2c/buildlink3.mk"
 
 .  if defined(F2C_DIR) && !empty(F2C_DIR)
 BUILD_ENV+=	F2C_DIR=${F2C_DIR:Q}

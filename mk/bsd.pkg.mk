@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1603 2005/03/22 22:49:15 xtraeme Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1604 2005/03/24 17:46:00 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -290,11 +290,6 @@ ${_var_}+=	${${_var_}.*}
 
 CPPFLAGS+=	${CPP_PRECOMP_FLAGS}
  
-.if !empty(USE_BUILDLINK3:M[nN][oO])
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
-LDFLAGS+=	-L${LOCALBASE}/lib
-.endif
-
 ALL_ENV+=	CC=${CC:Q}
 ALL_ENV+=	CFLAGS=${CFLAGS:Q}
 ALL_ENV+=	CPPFLAGS=${CPPFLAGS:Q}
@@ -933,7 +928,7 @@ USE_LANGUAGES?=		# empty
 
 .include "../../mk/tools.mk"
 
-.if !defined(NO_WRAPPER)
+.if !defined(NO_BUILD)
 .  include "../../mk/wrapper/bsd.wrapper.mk"
 .endif
 
@@ -1146,16 +1141,9 @@ checksum: fetch
 	@${DO_NADA}
 .endif
 
-# Disable tools
-.PHONY: tools
-.if defined(NO_TOOLS) && !target(tools)
-tools: patch
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${TOOLS_COOKIE}
-.endif
-
 # Disable wrapper
 .PHONY: wrapper
-.if defined(NO_WRAPPER) && !target(wrapper)
+.if defined(NO_BUILD) && !target(wrapper)
 wrapper: tools
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${WRAPPER_COOKIE}
 .endif
