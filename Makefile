@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2000/09/06 20:28:32 fredb Exp $
+# $NetBSD: Makefile,v 1.37 2000/09/07 02:29:40 fredb Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
@@ -18,7 +18,6 @@ SUBDIR += cad
 SUBDIR += comms
 SUBDIR += converters
 SUBDIR += cross
-SUBDIR += crypto
 SUBDIR += databases
 SUBDIR += devel
 SUBDIR += editors
