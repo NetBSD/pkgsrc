@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2003/05/05 14:41:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.83 2003/05/19 10:22:47 kei Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		4
@@ -23,7 +23,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gdk.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gtk+.pc.in
 
-GNU_CONFIGURE=		 yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-xinput=xfree \
 			--with-native-locale=yes \
 			--sysconfdir=${X11PREFIX}/share
