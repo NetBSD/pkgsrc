@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/05/13 00:01:58 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 1999/05/15 03:49:14 hubertf Exp $
 
---- Makefile.orig	Thu May  6 20:01:06 1999
-+++ Makefile	Thu May  6 20:24:58 1999
+--- Makefile.BAK	Sat May 15 05:28:13 1999
++++ Makefile	Sat May 15 05:28:41 1999
 @@ -1,11 +1,10 @@
  
 -PREFIX=/usr/local
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/05/13 00:01:58 hubertf Exp $
  IMLIB_INCLUDE = `imlib-config --cflags-gdk`
  IMLIB_LIB = `imlib-config --libs-gdk`
 -CFLAGS = $(GTK_INCLUDE) $(IMLIB_INCLUDE)
-+CFLAGS += $(GTK_INCLUDE) $(IMLIB_INCLUDE) -Dnetbsd
++CFLAGS += $(GTK_INCLUDE) $(IMLIB_INCLUDE)
  LDFLAGS = $(GTK_LIB) $(IMLIB_LIB)
  CC = gcc -Wall $(CFLAGS)
  
