@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/15 06:25:05 jlam Exp $
+
+--- configure.orig	Thu Jun 24 23:27:37 1999
++++ configure	Mon Jun 28 02:18:38 1999
+@@ -2188,6 +2188,8 @@
+ rm -f confcache
+ 
+ 
++# Use NetBSD's pkglibtool
++if false; then
+ # Actually configure libtool.  ac_aux_dir is where install-sh is found.
+ CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+ LD="$LD" NM="$NM" RANLIB="$RANLIB" LN_S="$LN_S" \
+@@ -2215,6 +2217,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
+ 
+ 
+ 
