@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/05/29 06:36:01 rh Exp $
+
+--- craft/simple/Makefile.in.orig	Sat May 27 05:48:46 2000
++++ craft/simple/Makefile.in	Sat May 27 05:49:11 2000
+@@ -153,8 +153,8 @@
+ X_PRE_LIBS = @X_PRE_LIBS@
+ libcraftsimple_la_LIBADD = 
+ libcraftsimple_la_OBJECTS =  control.lo craft.lo
+-COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
++COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(X_CFLAGS)
++LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(X_CFLAGS)
+ LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ DIST_COMMON =  Makefile.am Makefile.in
+ 

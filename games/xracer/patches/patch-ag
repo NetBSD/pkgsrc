@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/05/29 06:36:01 rh Exp $
+
+--- doc/Makefile.in.orig	Mon Mar 20 22:13:22 2000
++++ doc/Makefile.in	Mon May 29 08:17:43 2000
+@@ -119,7 +119,7 @@
+ man_MANS	= xracer.6
+ 
+ # Install documentation in the /usr/doc/xracer-n.n.n/ directory.
+-docdir		= $(prefix)/doc/@PACKAGE@-@VERSION@
++docdir		= $(prefix)/share/doc/@PACKAGE@-@VERSION@
+ doc_DATA	= README.txt README.html faq.txt faq.html index.html
+ 
+ EXTRA_DIST	= README.chtml README.html README.txt \
