@@ -1,12 +1,28 @@
-$NetBSD: patch-af,v 1.4 2000/04/01 00:05:29 wiz Exp $
+$NetBSD: patch-af,v 1.5 2001/08/23 00:07:19 abs Exp $
 
---- html/index.html.orig	Mon Mar 27 19:05:55 2000
-+++ html/index.html	Fri Mar 31 23:27:39 2000
-@@ -78,7 +78,6 @@
- <LI><A HREF="bugs.html">Bugs and the TIFF mailing list</A>
- <LI><A HREF="images.html">Test images</A>
- <LI><A HREF="misc.html">Acknowledgements and copyright issues</A>
--<LI><A HREF="man/index.html">Man Pages</A> 
- </UL>
- 
- <P>
+--- tools/Makefile.in.orig	Tue Aug 21 08:44:43 2001
++++ tools/Makefile.in
+@@ -47,10 +47,10 @@
+ IPATH	= -I. -I${SRCDIR} -I${LIBDIR}
+ CFLAGS	= @ENVOPTS@ ${COPTS} ${OPTIMIZER} ${IPATH}
+ #
+-TIFFLIB	= ${DEPTH}/libtiff/libtiff.@DSOSUF@
++TIFFLIB	= ${DEPTH}/libtiff/libtiff.la
+ LIBJPEG	= @LIBJPEG@
+ LIBGZ	= @LIBGZ@
+-LIBTIFF	= @TIFFLIBREF@
++LIBTIFF	= ${TIFFLIB}
+ LIBPORT	= @LIBPORT@
+ MACHLIBS= @MACHDEPLIBS@
+ LIBS	= ${LIBTIFF} ${LIBJPEG} ${LIBGZ} ${LIBPORT} ${MACHLIBS}
+@@ -108,8 +108,8 @@
+ 	    true; \
+ 	fi
+ install: all
+-	${INSTALL} -idb nostrip tiff.sw.tools -m 755 -dir @DIR_BIN@
+-	${INSTALL} -idb nostrip tiff.sw.tools -m 755 -F @DIR_BIN@ -O ${TARGETS}
++	${INSTALL} -idb tiff.sw.tools -m 755 -dir @DIR_BIN@
++	${LIBTOOL} ${BSD_INSTALL_PROGRAM} ${TARGETS} @DIR_BIN@
+ 	@if [ "@LIBIMAGE@" = yes ]; then \
+ 	    ${INSTALL} -idb tiff.sw.tools -m 755 -F @DIR_BIN@ -O sgi2tiff; \
+ 	else \
