@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.4 2000/05/26 05:55:12 rh Exp $
+$NetBSD: md5,v 1.5 2000/10/08 18:27:09 hubertf Exp $
 
-MD5 (plsrc13.tar.gz) = 4486b05a6cb17d66bf1043ade7ec9f49
-MD5 (plman13.tar.gz) = 617661b30e22f58b3d7f758d67af31e0
+MD5 (ploticus-1.39/plsrc13.tar.gz) = fccae99644eb6771dd778ae1776236b0
+MD5 (ploticus-1.39/plman13.tar.gz) = 92597a1bbaa1e468c9805c5997217076

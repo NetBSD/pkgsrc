@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2000/05/26 05:55:11 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/10/08 18:27:09 hubertf Exp $
 #
 
 DISTNAME=	plsrc13
-PKGNAME=	ploticus-1.37
+PKGNAME=	ploticus-1.39
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.sgpr.net/download/ \
 		http://gd.tuwien.ac.at/visual/ploticus/download/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANDIST}${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME:C/src/man/}${EXTRACT_SUFX}
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.sgpr.net/
@@ -15,9 +15,10 @@ DEPENDS+=	png>=1.0.6:../../graphics/png
 
 NO_CONFIGURE=	YES
 USE_X11=	YES
+DIST_SUBDIR=	ploticus-1.39
 
-MANDIST=	plman13
-MANSRC=		${WRKDIR}/${MANDIST}
+WRKSRC=		${WRKDIR}/ploticus/src
+MANSRC=		${WRKDIR}/ploticus/man
 DOCDST=		${PREFIX}/share/doc/ploticus
 NROFF?=		nroff -mandoc
 
@@ -26,19 +27,12 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${file} ${PREFIX}/bin/${file}
 .endfor
 .for file in pl ploticus plpng pltab
-	${INSTALL_MAN} ${MANSRC}/man1/${file}.1 ${PREFIX}/man/man1/${file}.1
+	${INSTALL_MAN} ${MANSRC}/../man/man1/${file}.1 \
+		${PREFIX}/man/man1/${file}.1
 .endfor
 	${INSTALL_DATA_DIR} ${DOCDST}
-.for file in Faq Problems Util Welcome annotate areadef attributetypes \
-	     axis bars bevelrect breakaxis catslide color condex config \
-	     controlling curvefit dataformat dates defineunits \
-	     drawcommands endproc functions getdata gifpatent import \
-	     interactive legend legendentry limits line linedetails \
-	     lineplot missingdata originaldata page paper pie posters \
-	     print rangebar rangesweep scaleunits scatterplot scripts \
-	     slides specialchars symboldetails tabulate textdetails times \
-	     trailer transform variables web
-	${NROFF} <${MANSRC}/manpl/${file} >${WRKDIR}/${file}
+.for file in Faq Problems Util annotate areadef attributetypes axis bars bevelrect breakaxis catslide color condex config controlling curvefit dataformat dates datesettings defineunits drawcommands endproc functions getdata gifpatent import interactive legend legendentry limits line linedetails lineplot missingdata originaldata page paper pie posters print processdata rangebar rangesweep scaleunits scatterplot scripts slides specialchars symboldetails tabulate textdetails times trailer transform variables web
+	${NROFF} <${MANSRC}/../man/manpl/${file} >${WRKDIR}/${file}
 	${INSTALL_DATA} ${WRKDIR}/${file} ${DOCDST}/${file}
 .endfor
 
