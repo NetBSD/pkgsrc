@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/02/21 21:08:50 veego Exp $
+# $NetBSD: Makefile,v 1.11 2005/03/23 10:56:47 wiz Exp $
 #
 
 DISTNAME=		compat14-${MACHINE32_ARCH}-${VERSION}
@@ -24,7 +24,7 @@ MACHINE32_ARCH=	${MACHINE_ARCH}
 .endif
 
 ONLY_FOR_PLATFORM=	NetBSD-*-sparc64
-ONLY_FOR_PLATFORM+=	NetBSD-2*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-x86_64
 
 NO_MTREE=		# defined
 NO_BUILD=		# defined
