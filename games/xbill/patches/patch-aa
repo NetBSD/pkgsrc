@@ -1,27 +1,41 @@
-$NetBSD: patch-aa,v 1.1 1998/08/15 14:19:53 frueauf Exp $
-
+$NetBSD: patch-aa,v 1.2 1998/09/14 20:47:35 garbled Exp $
 --- Imakefile.orig	Thu Jan 23 09:38:35 1997
-+++ Imakefile	Mon Aug 10 08:11:01 1998
-@@ -1,2 +1,2 @@
++++ Imakefile	Mon Sep 14 13:20:24 1998
+@@ -1,4 +1,4 @@
 -XBILL_DIR = /var/lib/games/xbill/
 +XBILL_DIR = $(PREFIX)/share/xbill/
  XCOMM XBILL_DIR = $(HOME)/.xbill/
-@@ -12,3 +12,3 @@
+ 
+ XCOMM Which widget set?  Motif looks slightly better; Athena is free.
+@@ -10,7 +10,7 @@
+ XCOMM the statement below and insert the correct path.
+ XCOMM Make sure xpm.h can be referenced as <X11/xpm.h>
  
 -XPMINC = -I$(HOME)/include
 +XCOMM XPMINC = -I$(HOME)/include
  XPMLIB = -lXpm
-@@ -21,3 +21,3 @@
+ 
+ XCOMM You shouldn't have to change anything below this line.
+@@ -19,7 +19,7 @@
+ 
+ INCLUDES = -I. $(XPMINC)
  CXXDEFINES = $(XBILL_DEF) $(DEFS) $(INCS)
 -CCFLAGS = $(ALLDEFINES) -Wall -g
 +CCFLAGS = $(ALLDEFINES) -O
  
-@@ -138,3 +138,7 @@
+ CXX = g++ $(CCFLAGS)
+ CCC = $(CXX)
+@@ -136,6 +136,12 @@
+ 
+ ComplexProgramTarget($(TARGET))
  
 -InstallProgramWithFlags(scores, $(XBILL_DIR), -m 777)
 +install::
 +	mkdir -p $(XBILL_DIR)
-+	/usr/bin/install -c -m 0664 -o bin -g games scores $(XBILL_DIR)
++	if [ ! -e /var/games/xbill.scores ]; then \
++		/usr/bin/install -c -m 0664 -o bin -g games scores /var/games/xbill.scores ; \
++	fi
 +	/usr/bin/install -c -s -m 2755 -o bin -g games xbill $(PREFIX)/bin
 +
  InstallMultiple ($(XPMS), $(XBILL_DIR)pixmaps)
+ InstallMultiple ($(XBMS), $(XBILL_DIR)bitmaps)
