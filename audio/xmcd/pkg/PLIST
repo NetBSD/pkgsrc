@@ -1,15 +1,27 @@
-@comment $NetBSD: PLIST,v 1.6 1998/02/15 19:05:16 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/06/02 21:50:06 tron Exp $
 bin/xmcd
 bin/cda
+bin/cddbcmd
 bin/wm2xmcd
 lib/X11/app-defaults/XMcd
-lib/X11/xmcd/README
+lib/X11/xmcd/help/DpWeb.btn
+lib/X11/xmcd/help/DtDir.btn
+lib/X11/xmcd/help/HpAbout.btn
+lib/X11/xmcd/help/HpCancel.btn
+lib/X11/xmcd/help/Mode.btn
+lib/X11/xmcd/help/Quit.btn
+lib/X11/xmcd/help/WwCancel.btn
+lib/X11/xmcd/help/WwGo.btn
+lib/X11/xmcd/help/DpTotTim.lbl
+lib/X11/xmcd/help/HpText.txw
+lib/X11/xmcd/help/WwSelect.rbx
+lib/X11/xmcd/help/HpTopic.opt
+lib/X11/xmcd/help/WwSearch.opt
 lib/X11/xmcd/help/Ab.btn
 lib/X11/xmcd/help/DbProg.btn
 lib/X11/xmcd/help/DdCancel.btn
 lib/X11/xmcd/help/DdClr.btn
 lib/X11/xmcd/help/DdOk.btn
-lib/X11/xmcd/help/DpAbout.btn
 lib/X11/xmcd/help/DpAddPgm.btn
 lib/X11/xmcd/help/DpCancel.btn
 lib/X11/xmcd/help/DpClrPgm.btn
@@ -45,7 +57,6 @@ lib/X11/xmcd/help/OpReset.btn
 lib/X11/xmcd/help/OpSave.btn
 lib/X11/xmcd/help/Options.btn
 lib/X11/xmcd/help/PlayPaus.btn
-lib/X11/xmcd/help/Power.btn
 lib/X11/xmcd/help/PrevDisc.btn
 lib/X11/xmcd/help/PrevIdx.btn
 lib/X11/xmcd/help/PrevTrk.btn
@@ -91,6 +102,21 @@ lib/X11/xmcd/pixmaps/xmcd.icon
 lib/X11/xmcd/pixmaps/xmcd_a.px
 lib/X11/xmcd/pixmaps/xmcd_b.px
 lib/X11/xmcd/pixmaps/xmcd.xpm
+lib/X11/xmcd/docs/ACKS
+lib/X11/xmcd/docs/CDDB
+lib/X11/xmcd/docs/CHANGES
+lib/X11/xmcd/docs/COPYING
+lib/X11/xmcd/docs/COPYING.LIB
+lib/X11/xmcd/docs/DRIVES
+lib/X11/xmcd/docs/FAQ
+lib/X11/xmcd/docs/FEATURES
+lib/X11/xmcd/docs/INSTALL
+lib/X11/xmcd/docs/INSTALL.VMS
+lib/X11/xmcd/docs/PLATFORM
+lib/X11/xmcd/docs/PORTING
+lib/X11/xmcd/docs/README
+lib/X11/xmcd/docs/RELNOTES
+lib/X11/xmcd/docs/WEB
 lib/X11/xmcd/config/common.cfg
 lib/X11/xmcd/config/device.cfg
 lib/X11/xmcd/config/.tbl/Acer
@@ -124,17 +150,23 @@ lib/X11/xmcd/config/.tbl/Sanyo
 lib/X11/xmcd/config/.tbl/Sony
 lib/X11/xmcd/config/.tbl/Stratus
 lib/X11/xmcd/config/.tbl/Sun
+lib/X11/xmcd/config/.tbl/Tatung
 lib/X11/xmcd/config/.tbl/Teac
 lib/X11/xmcd/config/.tbl/Toshiba
 lib/X11/xmcd/config/.tbl/Yamaha
 lib/X11/xmcd/config/config.sh
+lib/X11/xmcd/scripts/ncsarmt
+lib/X11/xmcd/scripts/ncsawrap
+lib/X11/xmcd/scripts/nswrap
 @comment remove the CD drive configuration file(s). Its name is unknown.
 @unexec rm -f %D/lib/X11/xmcd/config/*
 man/cat1/xmcd.0
 man/cat1/cda.0
+man/cat1/cddbcmd.0
 man/cat1/wm2xmcd.0
 man/man1/xmcd.1
 man/man1/cda.1
+man/man1/cddbcmd.1
 man/man1/wm2xmcd.1
 @exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/soundtrack
 @exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/rock
@@ -146,8 +178,10 @@ man/man1/wm2xmcd.1
 @exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/country
 @exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/classical
 @exec /bin/mkdir -p %D/lib/X11/xmcd/cddb/blues
+@dirrm lib/X11/xmcd/scripts
 @dirrm lib/X11/xmcd/pixmaps
 @dirrm lib/X11/xmcd/help
+@dirrm lib/X11/xmcd/docs
 @dirrm lib/X11/xmcd/config/.tbl
 @dirrm lib/X11/xmcd/config
 @comment in case users requested using internet cddb server
