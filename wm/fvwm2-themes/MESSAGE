@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2003/02/16 08:04:32 salo Exp $
+
+You may wish to add 'fvwm-themes-start' command into your .xinitrc,
+.xsession or .Xclients file to make themes take effect after each fvwm2
+startup.
+
+===========================================================================
