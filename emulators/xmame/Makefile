@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/09/05 12:27:39 mycroft Exp $
+# $NetBSD: Makefile,v 1.17 1998/09/05 12:37:58 mycroft Exp $
 #
 
 DISTNAME=		xmame-0.34b2.1
@@ -12,7 +12,7 @@ HOMEPAGE=		http://drake.dit.upm.es/~mame/
 RUN_DEPENDS=		unzip:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
-CONFLICTS=		xmame-0.30.1 xmame-0.33b6.1
+CONFLICTS=		xmame-0.30.1 xmame-0.33b6.1 xmame-0.34b1.1
 
 USE_X11=		yes
 USE_GMAKE=		yes
