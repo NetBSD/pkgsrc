@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.14 2001/04/14 17:20:07 dmcmahill Exp $
+# $NetBSD: pre-build,v 1.15 2001/05/05 14:01:09 dmcmahill Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -61,7 +61,7 @@ PACKAGES=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=PACKAGES )`;
 
 if [ $PRUNEDISTFILES = "YES" ]; then
 	echo "Removing old/broken distfiles"
-	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make bulk-install )
+	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make PRECLEAN=yes bulk-install )
 	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -o -m -r
 	echo done.
 else
@@ -70,7 +70,7 @@ fi
 
 if [ $PRUNEPACKAGES = "YES" ]; then
 	echo "Removing old (out of date) binary packages"
-	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make bulk-install )
+	( cd ${USR_PKGSRC}/pkgtools/pkglint ; make PRECLEAN=yes bulk-install )
 	lintpkgsrc -K $PACKAGES -P $USR_PKGSRC -M $DISTDIR -p -r
 	echo done.
 else
@@ -122,19 +122,20 @@ if [ -d /var/db/pkg ]; then
 	# about this!
 	rm -fr *
 fi
+
+LOCALBASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=LOCALBASE )`;
+X11BASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=X11BASE )`;
 	
 # General cleanout - easy!
-cd /usr/pkg
-rm -fr *
-rm -fr .??*
+cd $LOCALBASE && rm -fr * && rm -fr .??*
 
 # Stuff known to be broken
-rm -fr /usr/X11R6/share/gimp
-rm -fr /usr/X11R6/share/gnome
-rm -fr /usr/X11R6/share/kde
-rm -fr /usr/X11R6/share/netscape
+rm -fr $X11BASE/share/gimp
+rm -fr $X11BASE/share/gnome
+rm -fr $X11BASE/share/kde
+rm -fr $X11BASE/share/netscape
 rm -fr /var/tmp/inst*
-rm -fr /usr/X11R6/lib/libgimp*	# gimp doesn't build with old libs around
+rm -fr $X11BASE/lib/libgimp*	# gimp doesn't build with old libs around
 rm -fr /nonexistant		# broken useradd on pop3d
 rm -fr /home/majordom		# mail/majordomo pkg
 rm -fr /home/nut		# sysutils/ups-net
