@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2001/05/23 13:35:10 dillo Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/16 21:19:58 jlam Exp $
 #
 
 DISTNAME=	frotz-2.41
 CATEGORIES=	games
 MASTER_SITES=	http://www.cs.csubak.edu/~dgriffi/frotz/files/
+MASTER_SITES=	ftp://ftp.ifarchive.org/if-archive/infocom/interpreters/frotz/ \
+		ftp://ftp.nodomainname.net/pub/mirrors/if-archive/infocom/interpreters/frotz/ \
+		ftp://wuarchive.wustl.edu/doc/misc/if-archive/infocom/interpreters/frotz/ \
+		ftp://ftp.ifarchive.org/if-archive/unprocessed/
 # 2.41 isn't on if-archive yet.
-#MASTER_SITES=	ftp://ftp.gmd.de/if-archive/infocom/interpreters/frotz/
 
 MAINTAINER=	seebs@plethora.net
-HOMEPAGE=	ftp://ftp.gmd.de/if-archive/infocom/interpreters/frotz/
+HOMEPAGE=	http://www.cs.csubak.edu/~dgriffi/proj/frotz/
 COMMENT=	Curses-based interpreter for Infocom-compatible games
 
 # uses setscrreg, which is missing from our curses
