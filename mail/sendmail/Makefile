@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/07/30 17:49:00 itojun Exp $
+# $NetBSD: Makefile,v 1.20 2000/08/01 12:02:40 itojun Exp $
 
 DISTNAME=	sendmail.8.11.0
 PKGNAME=	sendmail-8.11.0
@@ -25,6 +25,7 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 WRKSRC=		${WRKDIR}/${PKGNAME}
+SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_INET6
 
@@ -46,22 +47,19 @@ DEPENDS+=	db-2.7.7:../../databases/db
 .endif
 
 post-patch:
-	${CP} ${FILESDIR}/site.config.m4 ${WRKSRC}/devtools/Site/site.config.m4
+	${CP} ${FILESDIR}/site.config.m4 ${SITECONFIG}
+	${CHMOD} +w ${SITECONFIG}
 .if defined(USE_INET6) && ${USE_INET6} == YES
-	${CAT} ${FILESDIR}/site.config.m4-v6 \
-	    >> ${WRKSRC}/devtools/Site/site.config.m4
+	${CAT} ${FILESDIR}/site.config.m4-v6 >> ${SITECONFIG}
 .endif
 .if ${OPSYS} == "NetBSD"
-	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers \
-	    >> ${WRKSRC}/devtools/Site/site.config.m4
+	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >> ${SITECONFIG}
 .endif
 .if defined(USE_LDAP) && ${USE_LDAP} == YES
-	${CAT} ${FILESDIR}/site.config.m4-ldap \
-	    >> ${WRKSRC}/devtools/Site/site.config.m4
+	${CAT} ${FILESDIR}/site.config.m4-ldap >> ${SITECONFIG}
 .endif
 .if ${USE_DB2} == YES
-	${CAT} ${FILESDIR}/site.config.m4-db2 \
-	    >> ${WRKSRC}/devtools/Site/site.config.m4
+	${CAT} ${FILESDIR}/site.config.m4-db2 >> ${SITECONFIG}
 .endif
 
 do-build:
