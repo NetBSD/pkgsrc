@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/02/02 13:02:49 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/14 17:39:29 mrauch Exp $
 
 DISTNAME=	STLport-4.6
 PKGNAME=	stlport-4.6
@@ -12,7 +12,7 @@ COMMENT=	Complete C++ standard library
 USE_BUILDLINK2=	# defined
 USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	# defined
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 NO_CONFIGURE=	# defined
 BUILD_DIRS=	${WRKSRC}/src
