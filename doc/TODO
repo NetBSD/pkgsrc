@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2690 2004/12/05 19:06:53 he Exp $
+$NetBSD: TODO,v 1.2691 2004/12/05 19:15:03 he Exp $
 
 Suggested new packages
 ======================
@@ -768,7 +768,6 @@ Suggested package updates
 	o p5-Device-Gsm-1.36
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.002
-	o p5-Exception-Class-1.19
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.05
 	o p5-ExtUtils-XSBuilder-0.27
