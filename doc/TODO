@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1697 2004/05/03 12:51:44 adam Exp $
+$NetBSD: TODO,v 1.1698 2004/05/03 17:55:54 minskim Exp $
 
 Suggested new packages
 ======================
@@ -166,6 +166,8 @@ Suggested package updates
 	o curl-7.11.2
 	o cxref-1.5e
 	o cyrus-imapd21-2.1.16
+	o dact-0.8.37
+	o dar-2.1.2
 	o dctc-0.85.9
 	o ddd-3.3.8
 	o delegate-8.9.1
@@ -361,6 +363,7 @@ Suggested package updates
 	o wdm-1.27
 	o wwwoffle-2.8a
 	o xalan-c-1.7 [requires xerces-c-2.4.0]
+	o xanalyser-1.23
 	o xanim-2.92.0 [pkg/19934]
 	o xboard-4.2.7
 	o xdaliclock-2.20
