@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2050 2004/08/16 16:20:26 seb Exp $
+$NetBSD: TODO,v 1.2051 2004/08/16 22:26:14 dillo Exp $
 
 Suggested new packages
 ======================
@@ -401,7 +401,6 @@ Suggested package updates
 	o squid-2.5.6 [taca]
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
-	o stella-1.4.1
 	o streamtuner-0.12.5
 	o sweep-0.8.3
 	o tcl-8.4.7
