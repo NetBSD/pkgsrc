@@ -3,7 +3,7 @@
 # Date created:         17-Feb-98
 # Whom:                 rh@trapdoor.vip.at
 #
-# $NetBSD: Makefile,v 1.1 1998/03/01 21:21:15 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/01 21:30:05 tron Exp $
 #
 
 DISTNAME=	xxgdb-1.12
@@ -13,7 +13,7 @@ MASTER_SITE_SUBDIR=	utilities
 
 MAINTAINER=	rh@trapdoor.vip.at
 
-WRKSRC=		$(WRKDIR)/$(DISTNAME)
+WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_IMAKE=	yes
 
 MAN1=		xxgdb.1
