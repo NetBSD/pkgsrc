@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2001/08/13 17:37:25 rh Exp $
-bin/GnomeScott
+@comment $NetBSD: PLIST,v 1.15 2001/10/07 15:25:39 rh Exp $
 bin/ctali
 bin/freecell
 bin/gataxx
@@ -13,7 +12,6 @@ bin/gnomine
 bin/gnotravex
 bin/gnotski
 bin/gtali
-bin/gturing
 bin/iagno
 bin/mahjongg
 bin/same-gnome
@@ -81,7 +79,6 @@ share/gnome/apps/Games/gnomine.desktop
 share/gnome/apps/Games/gnotravex.desktop
 share/gnome/apps/Games/gnotski.desktop
 share/gnome/apps/Games/gtali.desktop
-share/gnome/apps/Games/gturing.desktop
 share/gnome/apps/Games/iagno.desktop
 share/gnome/apps/Games/mahjongg.desktop
 share/gnome/apps/Games/same-gnome.desktop
@@ -147,6 +144,7 @@ share/gnome/help/aisleriot/C/spider.sgml
 share/gnome/help/aisleriot/C/spiderette.sgml
 share/gnome/help/aisleriot/C/straight_up.sgml
 share/gnome/help/aisleriot/C/streets_and_alleys.sgml
+share/gnome/help/aisleriot/C/ten_across.sgml
 share/gnome/help/aisleriot/C/thieves.sgml
 share/gnome/help/aisleriot/C/thirteen.sgml
 share/gnome/help/aisleriot/C/thumb_and_pouch.sgml
@@ -270,16 +268,9 @@ share/gnome/help/gnotravex/es/topic.dat
 share/gnome/help/gtali/C/figures/mainwindow.png
 share/gnome/help/gtali/C/figures/preferences.png
 share/gnome/help/gtali/C/gtali.sgml
-share/gnome/help/gtali/C/index.html
 share/gnome/help/gtali/C/topic.dat
 share/gnome/help/gtali/da/index.html
 share/gnome/help/gtali/da/topic.dat
-share/gnome/help/gturing/C/figures/mainwin.png
-share/gnome/help/gturing/C/gturing.sgml
-share/gnome/help/gturing/C/topic.dat
-share/gnome/help/gturing/it/figures/mainwin.png
-share/gnome/help/gturing/it/gturing.sgml
-share/gnome/help/gturing/it/topic.dat
 share/gnome/help/iagno/C/figures/ANIMATION.png
 share/gnome/help/iagno/C/figures/BLOCK.png
 share/gnome/help/iagno/C/figures/FIRST.png
@@ -320,16 +311,6 @@ share/gnome/help/same-gnome/es/same-gnome.sgml
 share/gnome/help/same-gnome/es/topic.dat
 share/gnome/help/same-gnome/ru/same-gnome.sgml
 share/gnome/help/same-gnome/ru/topic.dat
-share/gturing/examples/3ones2zeroes.tur
-share/gturing/examples/add.tur
-share/gturing/examples/addbin.tur
-share/gturing/examples/bb2.tur
-share/gturing/examples/bb3.tur
-share/gturing/examples/bb5.tur
-share/gturing/examples/bin2dec.tur
-share/gturing/examples/dashnumbers.tur
-share/gturing/examples/dec2bin.tur
-share/gturing/examples/subst.tur
 share/locale/cs/LC_MESSAGES/gnome-games.mo
 share/locale/da/LC_MESSAGES/gnome-games.mo
 share/locale/de/LC_MESSAGES/gnome-games.mo
@@ -376,8 +357,6 @@ share/omf/gnome-games/gnome-stones-it.omf
 share/omf/gnome-games/gnotravex-C.omf
 share/omf/gnome-games/gnotravex-es.omf
 share/omf/gnome-games/gtali-C.omf
-share/omf/gnome-games/gturing-C.omf
-share/omf/gnome-games/gturing-it.omf
 share/omf/gnome-games/iagno-C.omf
 share/omf/gnome-games/iagno-it.omf
 share/omf/gnome-games/mahjongg-C.omf
@@ -447,7 +426,6 @@ share/pixmaps/gnome-aisleriot.png
 share/pixmaps/gnome-gnobots2.png
 share/pixmaps/gnome-gtali.png
 share/pixmaps/gnome-gtetris.png
-share/pixmaps/gnome-gturing.png
 share/pixmaps/gnome-mahjongg.png
 share/pixmaps/gnome-nibbles.png
 share/pixmaps/gnome-stones-file.png
@@ -563,6 +541,7 @@ share/sol-games/spider.scm
 share/sol-games/spiderette.scm
 share/sol-games/straight_up.scm
 share/sol-games/streets_and_alleys.scm
+share/sol-games/ten_across.scm
 share/sol-games/thieves.scm
 share/sol-games/thirteen.scm
 share/sol-games/thumb_and_pouch.scm
@@ -697,8 +676,6 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/pixmaps/cards/backs
 @dirrm share/pixmaps/cards
 @dirrm share/omf/gnome-games
-@dirrm share/gturing/examples
-@dirrm share/gturing
 @exec /bin/mkdir -p /usr/X11R6/share/gnome/help/same-gnome/ru/stylesheet-images
 @dirrm share/gnome/help/same-gnome/ru/stylesheet-images
 @exec /bin/mkdir -p /usr/X11R6/share/gnome/help/same-gnome/ru/figures
@@ -733,15 +710,6 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/gnome/help/iagno/C/figures
 @dirrm share/gnome/help/iagno/C
 @dirrm share/gnome/help/iagno
-@exec /bin/mkdir -p /usr/X11R6/share/gnome/help/gturing/it/stylesheet-images
-@dirrm share/gnome/help/gturing/it/stylesheet-images
-@dirrm share/gnome/help/gturing/it/figures
-@dirrm share/gnome/help/gturing/it
-@exec /bin/mkdir -p /usr/X11R6/share/gnome/help/gturing/C/stylesheet-images
-@dirrm share/gnome/help/gturing/C/stylesheet-images
-@dirrm share/gnome/help/gturing/C/figures
-@dirrm share/gnome/help/gturing/C
-@dirrm share/gnome/help/gturing
 @dirrm share/gnome/help/gtali/da
 @exec /bin/mkdir -p /usr/X11R6/share/gnome/help/gtali/C/stylesheet-images
 @dirrm share/gnome/help/gtali/C/stylesheet-images
