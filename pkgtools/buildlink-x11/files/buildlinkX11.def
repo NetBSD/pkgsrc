@@ -1,0 +1,64 @@
+/*	$NetBSD: buildlinkX11.def,v 1.1.1.1 2001/07/02 21:00:44 jlam Exp $	*/
+
+#ifdef AfterVendorCF
+
+#ifdef UseInstalled
+# ifdef BuildLink
+#  ifndef ProjectRulesFile
+#   define ProjectRulesFile	<buildlinkX11.rules>
+#  endif
+
+/*
+ * Force the buildlink include and lib directories to the head of the
+ * compiler search paths.  The include directory is added through the
+ * C{,plusplus}DebugFlags, which are the first options given to the
+ * compiler.  It is _required_ that BUILDLINK_DIR be defined in the
+ * environment.
+ */
+
+#  ifndef BuildLinkCppFlags
+#   define BuildLinkCppFlags	-I$(BUILDLINK_DIR)/include $(PKGSRC_CPPFLAGS)
+#  endif
+#  ifndef BuildLinkLdFlags
+#   define BuildLinkLdFlags	-L$(BUILDLINK_DIR)/lib $(PKGSRC_LDFLAGS)
+#  endif
+#  ifndef BuildLinkImakeCmd
+#   ifdef X11ProjectRoot
+#    define ImakeConfigDir	-I$(PREFIX)/lib/X11/config
+#   else
+#    define ImakeConfigDir	/**/
+#   endif
+#   ifdef BuildLinkX11
+#    define BuildLinkImakeCmd	imake -DBuildLink -DBuildLinkX11 ImakeConfigDir
+#   else
+#    define BuildLinkImakeCmd	imake -DBuildLink ImakeConfigDir
+#   endif
+#  endif
+#  ifdef DependFlags
+#   undef DependFlags
+#  endif
+#  define DependFlags		BuildLinkCppFlags
+#  ifdef OptimizedCDebugFlags
+#   undef OptimizedCDebugFlags
+#  endif
+#  define OptimizedCDebugFlags	-O2 BuildLinkCppFlags $(PKGSRC_CFLAGS)
+#  ifdef OptimizedCplusplusDebugFlags
+#   undef OptimizedCplusplusDebugFlags
+#  endif
+#  define OptimizedCplusplusDebugFlags -O2 BuildLinkCppFlags $(PKGSRC_CXXFLAGS)
+#  ifdef LdPreLib
+#   undef LdPreLib
+#  endif
+#  define LdPreLib		BuildLinkLdFlags
+#  ifdef LdPostLib
+#   undef LdPostLib
+#  endif
+#  define LdPostLib		BuildLinkLdFlags
+#  ifdef ImakeCmd
+#   undef ImakeCmd
+#  endif
+#  define ImakeCmd		BuildLinkImakeCmd
+# endif /* BuildLink */
+#endif /* UseInstalled */
+
+#endif /* AfterVendorCF */

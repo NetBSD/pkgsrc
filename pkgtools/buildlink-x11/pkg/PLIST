@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/02 21:00:44 jlam Exp $
+lib/X11/config/buildlinkX11.def
+lib/X11/config/buildlinkX11.rules
