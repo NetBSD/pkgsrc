@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2004/06/23 15:54:08 minskim Exp $
+
+--- ./Lib/test/test_fcntl.py.orig	1999-02-22 22:13:37.000000000 -0600
++++ ./Lib/test/test_fcntl.py
+@@ -16,7 +16,7 @@ rv = fcntl.fcntl(f.fileno(), FCNTL.F_SET
+ if verbose:
+     print 'Status from fnctl with O_NONBLOCK: ', rv
+     
+-if sys.platform in ('netbsd1',
++if sys.platform in ('netbsd1', 'netbsd2',
+                     'freebsd2', 'freebsd3',
+                     'bsdos2', 'bsdos3', 'bsdos4'):
+     lockdata = struct.pack('lxxxxlxxxxlhh', 0, 0, 0, FCNTL.F_WRLCK, 0)
