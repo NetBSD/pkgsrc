@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2956 2005/01/22 21:54:49 adrianp Exp $
+$NetBSD: TODO,v 1.2957 2005/01/23 04:36:44 jlam Exp $
 
 Suggested new packages
 ======================
@@ -1115,7 +1115,6 @@ Suggested package updates
 	o w32api-3.1
 	o wap-utils-1.4.1
 	o wdm-1.27
-	o webmin-1.170
 	o weechat-0.0.8
 	o windowlab-1.25
 	o wmbiff-0.4.26
