@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/08/21 02:12:15 grant Exp $
+# $NetBSD: Makefile,v 1.26 2002/10/23 18:16:58 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -30,10 +30,19 @@ WRKSRC=			${WRKDIR}/vnc_unixsrc
 
 ALL_TARGET=		World
 
+MAKE_ENV+= CC=${CC}	#for make imake in Xvnc/config/imake
+
 # We have to frob a few things, and we want our own permissions, so it's easier
 # to do the install ourselves.
+
+.include "../../mk/bsd.prefs.mk"
+
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Xvnc/programs/Xserver/Xvnc ${PREFIX}/bin/Xvnc
+.if ${OPSYS} == "SunOS"
+	${CHOWN} root:root ${PREFIX}/bin/Xvnc
+	${CHMOD} 2555 ${PREFIX}/bin/Xvnc
+.endif
 	${INSTALL_PROGRAM} ${WRKSRC}/vncconnect/vncconnect ${PREFIX}/bin/vncconnect
 	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${PREFIX}/bin/vncpasswd
 	${SED} -e 's|/usr/local/vnc/classes|${X11PREFIX}/share/vnc/classes|g' \
