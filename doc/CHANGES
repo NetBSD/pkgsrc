@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.637 2002/11/29 08:22:45 tron Exp $
+$NetBSD: CHANGES,v 1.638 2002/11/29 09:03:42 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3763,3 +3763,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added sysbuild-1.0 [jmmv 2002-11-28]
 	Updated yafc to 0.7.10 [markd 2002-11-29]
 	Updated findutils to 4.1nb2 [tron 2002-11-29]
+	Updated xchat-gnome to 1.8.10nb2 [tron 2002-11-29]
