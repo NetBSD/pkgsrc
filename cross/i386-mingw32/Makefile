@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/12/12 07:28:23 reed Exp $
+# $NetBSD: Makefile,v 1.14 2003/12/30 17:39:21 cjep Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-1.2
 PKGREVISION=		3
@@ -58,7 +58,6 @@ TARGET_CONFIGURE_ENV=	CC="${CC_FOR_TARGET}" \
 			WINDRES="${BINUTILS_WRKSRC}/binutils/windres"
 
 DISTFILES+=	${CROSS_DISTFILES}
-
 
 do-configure: bu-configure gcc-configure
 bu-configure:
