@@ -18,4 +18,3 @@ Excerpts from the README:
   Haahr for letting me know what a shell should do and for contributing
   certain bits and pieces to rc (notably the limits code, print.c,
   most of which.c and the backquote redirection code).
-
