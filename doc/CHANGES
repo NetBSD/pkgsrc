@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7714 2004/11/05 16:46:13 agc Exp $
+$NetBSD: CHANGES,v 1.7715 2004/11/05 17:01:35 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5093,3 +5093,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pftop-0.4 [peter 2004-11-05]
 	Updated p5-Apache-Session to 1.60 [he 2004-11-05]
 	Updated gensolpkg to 1.10nb2 [agc 2004-11-05]
+	Updated libassuan to 0.6.7nb1 [jmmv 2004-11-05]
