@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6814 2004/08/06 16:57:05 jlam Exp $
+$NetBSD: CHANGES,v 1.6815 2004/08/07 08:18:37 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3750,3 +3750,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated getmail to 4.0.8 [schmonz 2004-08-06]
 	Updated libnbcompat to 20040805 [jlam 2004-08-06]
 	Updated pkg_install to 20040730 [jlam 2004-08-06]
+	Updated samba2 to 2.2.10 [jdolecek 2004-08-07]
+	Updated pam-smbpass to 2.2.10 [jdolecek 2004-08-07]
+	Updated winbind to 2.2.10 [jdolecek 2004-08-07]
