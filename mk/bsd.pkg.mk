@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.747 2001/05/24 13:28:36 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.748 2001/05/24 13:58:18 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -343,11 +343,6 @@ PATCH_ARGS+=		--batch
 PATCH_DIST_ARGS+=	--batch
 .endif
 PATCH_FUZZ_FACTOR?=	-F0			# Default to zero fuzz
-
-.if defined(PATCH_CHECK_ONLY)
-PATCH_ARGS+=		-C
-PATCH_DIST_ARGS+=	-C
-.endif
 
 # If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
 # pulling in the "bzip2" package if necessary. [Note: this is only for
@@ -1709,7 +1704,6 @@ _PORT_USE: .USE
 			${SCRIPTDIR}/${.TARGET:S/^real-/post-/};	\
 	fi
 .if !make(real-fetch)							\
-	&& (!make(real-patch) || !defined(PATCH_CHECK_ONLY))		\
 	&& (!make(real-package) || !defined(PACKAGE_NOINSTALL))
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TOUCH} ${TOUCH_FLAGS} ${WRKDIR}/.${.TARGET:S/^real-//}_done
@@ -2149,15 +2143,6 @@ post-${name}:
 .endif
 
 .endfor
-
-# Checkpatch
-#
-# Special target to verify patches
-
-.if !target(checkpatch)
-checkpatch:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} PATCH_CHECK_ONLY=yes ${MAKEFLAGS} patch
-.endif
 
 # Reinstall
 #
