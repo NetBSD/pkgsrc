@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/24 19:40:33 magick Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/28 19:09:23 magick Exp $
 bin/xemacs-b2m
 bin/xemacs-ctags
 bin/ellcc
@@ -1509,11 +1509,11 @@ man/man1/xemacs.1
 @dirrm lib/${EMACSVER}/lisp/w32
 @dirrm lib/${EMACSVER}/lisp/x11
 @dirrm lib/${EMACSVER}/lisp
-@dirrm lib/${EMACSVER}/i386--netbsdelf/modules
-@dirrm lib/${EMACSVER}/i386--netbsdelf/include/m
-@dirrm lib/${EMACSVER}/i386--netbsdelf/include/s
-@dirrm lib/${EMACSVER}/i386--netbsdelf/include
-@dirrm lib/${EMACSVER}/i386--netbsdelf
+@dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/modules
+@dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m
+@dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s
+@dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include
+@dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}
 @dirrm lib/${EMACSVER}/info
 @dirrm lib/${EMACSVER}
 @exec mkdir -p /var/tmp/xemacs.lock && chmod 1777 /var/tmp/xemacs.lock
