@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2004/06/15 02:27:10 minskim Exp $
+# $NetBSD: Makefile,v 1.52 2004/07/31 01:42:06 xtraeme Exp $
 
-DISTNAME=	xpkgwedge-1.11
+DISTNAME=	xpkgwedge-1.12
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -42,12 +42,30 @@ FILES_SUBST+=		VIEWBASE=${VIEWBASE}
 FILES_SUBST+=		FONT_PROGS=${FONT_PROGS:Q}
 FILES_SUBST+=		MAKE=${MAKE_PROGRAM:Q}
 
+post-extract:
+	@${CP} ${FILESDIR}/xpkgwedge.def ${WRKSRC}
+
 do-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/pkgxmkmf.in > ${WRKDIR}/pkgxmkmf
 
+.if defined(X11_TYPE) && !empty(X11_TYPE:Mxorg) || \
+    defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
+X11TYPEFLAGS?=		-L${X11BASE}/lib \
+	${_COMPILER_LD_FLAG}${RPATH_FLAG}${X11BASE}/lib
+SUBST_CLASSES=		fix
+SUBST_STAGE.fix=	post-patch
+SUBST_FILES.fix=	xpkgwedge.def
+SUBST_SED.fix=		-e "s|@X11TYPEFLAGS@|${X11TYPEFLAGS}|"
+.else # X11_TYPE == XFree86 || X11_TYPE == xorg.
+SUBST_CLASSES=		foo
+SUBST_STAGE.foo=	post-patch
+SUBST_FILES.foo=	xpkgwedge.def
+SUBST_SED.foo=		-e "s|\#define ExtraLoadFlags @X11TYPEFLAGS@||"
+.endif # X11_TYPE == native.
+
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/config
-	${INSTALL_DATA} ${FILESDIR}/xpkgwedge.def ${PREFIX}/lib/X11/config
+	${INSTALL_DATA} ${WRKSRC}/xpkgwedge.def ${PREFIX}/lib/X11/config
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgxmkmf ${PREFIX}/bin/pkgxmkmf
 
 .include "../../mk/bsd.pkg.mk"
