@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/13 20:14:26 ben Exp $
+# $NetBSD: Makefile,v 1.13 2003/12/14 03:03:32 ben Exp $
 #
 
 DISTNAME=		Csound4.23
@@ -8,7 +8,7 @@ CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.cs.bath.ac.uk/pub/dream/newest/
 
 MAINTAINER=		ben@netbsd.org
-HOMEPAGE=		http://www.csound.org/
+HOMEPAGE=		http://www.csounds.com/
 COMMENT=		Software synthesizer and sequencer
 
 LICENSE=		csound-license
@@ -17,7 +17,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 DIST_SUBDIR=		csound
-CONFLICTS=		csound-4*
+CONFLICTS=		csound-dev-4*
 USE_GMAKE=		yes
 
 pre-patch:
