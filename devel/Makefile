@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 1999/04/08 18:47:00 tron Exp $
+# $NetBSD: Makefile,v 1.56 1999/04/30 15:52:40 tv Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -43,7 +43,7 @@
 #    SUBDIR += ilu
 #    SUBDIR += lclint
 #    SUBDIR += libdlmalloc
-#    SUBDIR += libg++
+    SUBDIR += libg++
     SUBDIR += libgtop
     SUBDIR += libproplist
     SUBDIR += libscsi
@@ -53,7 +53,7 @@
 #    SUBDIR += linuxgdb
     SUBDIR += m4
 #    SUBDIR += makedepend
-#HF#    SUBDIR += mit-pthreads
+    SUBDIR += mit-pthreads
 #    SUBDIR += mkmf
 #    SUBDIR += mprof
     SUBDIR += ncurses
@@ -103,9 +103,9 @@
     SUBDIR += prcs
     SUBDIR += ptl2
     SUBDIR += py-curses
+    SUBDIR += rcs
     SUBDIR += rdp
     SUBDIR += readline
-    SUBDIR += rcs
 #    SUBDIR += sawt
 #    SUBDIR += scogdb
     SUBDIR += sfio
