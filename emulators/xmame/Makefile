@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 1998/09/05 12:37:58 mycroft Exp $
+# $NetBSD: Makefile,v 1.18 1998/09/07 22:54:50 mycroft Exp $
 #
 
-DISTNAME=		xmame-0.34b2.1
+DISTNAME=		xmame-0.34b2.2
 CATEGORIES=		emulators games x11
 MASTER_SITES=		ftp://drake.dit.upm.es/xmame/ftpsite/
 EXTRACT_SUFX=		.tgz
@@ -25,7 +25,8 @@ MAKEFILE=		makefile.unix
 DISPLAY_METHOD=		x11
 ALL_TARGET=		xmame.${DISPLAY_METHOD}
 
-MAMEDIR=		${PREFIX}/share/xmame
+ROMPATH=		${PREFIX}/share/xmame
+SPOOLDIR=		/var/games/xmame
 .if exists(/usr/include/machine/joystick.h)
 NETBSD_JOYSTICK=	yes
 .else
@@ -33,7 +34,7 @@ NETBSD_JOYSTICK=	no
 .endif
 
 post-patch:
-	(cd ${WRKSRC}/doc && ${SED} 's|@MAMEDIR@|${MAMEDIR}|' xmamerc.dist >xmamerc)
+	(cd ${WRKSRC}/doc && ${SED} 's|@ROMPATH@|${ROMPATH}|;s|@SPOOLDIR@|${SPOOLDIR}|' xmamerc.dist >xmamerc)
 	(cd ${WRKSRC}/src/unix && ${MV} netbsd_i386.c netbsd.c)
 
 do-install:
