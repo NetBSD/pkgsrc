@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6883 2004/08/15 04:14:03 minskim Exp $
+$NetBSD: CHANGES,v 1.6884 2004/08/15 11:27:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3839,3 +3839,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added syncdir-1.0 [schmonz 2004-08-15]
 	Updated filerunner to 2.5.1nb1 [minskim 2004-08-15]
 	Updated XaoS to 3.1nb1 [minskim 2004-08-15]
+	Updated doclifter to 1.13 [wiz 2004-08-15]
