@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2004/11/30 17:41:52 jlam Exp $
+# $NetBSD: Makefile,v 1.82.2.1 2005/01/11 17:13:43 salo Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -6,11 +6,11 @@
 
 DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${VERS}
-BASE_VERS=	1.1.22
+BASE_VERS=	1.1.23
 DIST_VERS=	${BASE_VERS}
 VERS=		${DIST_VERS:S/-/./g}
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
+MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp2.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp3.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp.ntua.gr/pub/gnu/cups/${BASE_VERS}/ \
@@ -39,8 +39,8 @@ INSTALL_TARGET=		installcups
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--localstatedir=/var
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/cups
 CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
 CONFIGURE_ARGS+=	--with-rcdir=${RCD_SCRIPTS_DIR}
 CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
