@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1978 2003/04/19 07:57:11 rh Exp $
+$NetBSD: CHANGES,v 1.1979 2003/04/19 08:10:43 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1659,3 +1659,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added moz-bin-flash-6.0.69 [rh 2003-04-19]
 	Added suse_libtiff-7.3 [rh 2003-04-19]
 	Added PanoTools-2.6b1 [rh 2003-04-19]
+	Added moz-mplayer-0.71 [salo 2003-04-19]
