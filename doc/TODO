@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1235 2003/12/22 22:58:09 wiz Exp $
+$NetBSD: TODO,v 1.1236 2003/12/23 11:04:11 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -217,7 +217,6 @@ Suggested package updates
 	o lynx-current-2.8.5dev9
 	o maildrop-1.5.3 [pkg/22369]
 	o maildrop-1.6.3
-	o mailman-2.1.2 [pkgsrc-wip]
 	o mailsync-5.1.0
 	o marbles-1.0.6
 	o matchbox-0.7
