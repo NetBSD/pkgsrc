@@ -1,0 +1,42 @@
+diff -ru ../mozilla-current.orig/mozilla/config/rules.mk ./config/rules.mk
+--- ../mozilla-current.orig/mozilla/config/rules.mk	Sat Jun  3 11:49:45 2000
++++ ./config/rules.mk	Sun Jun  4 14:06:22 2000
+@@ -148,6 +148,11 @@
+ endif
+ 
+ SHARED_LIBRARY		:= $(LIBRARY:.$(LIB_SUFFIX)=$(DLL_SUFFIX))
++ifeq ($(OS_ARCH),NetBSD)
++ifeq ($(OBJECT_FMT),ELF)
++SHARED_LIBRARY		:= $(LIBRARY:.$(LIB_SUFFIX)=$(DLL_SUFFIX)).$(SHLIB_MAJOR).$(SHLIB_MINOR)
++endif
++endif
+ 
+ endif # OS2
+ endif # MKSHLIB
+@@ -507,6 +512,14 @@
+ else
+ 	$(INSTALL) -m 555 $(SHARED_LIBRARY) $(DIST)/lib
+ 	$(INSTALL) -m 555 $(SHARED_LIBRARY) $(DIST)/bin
++ifeq ($(OS_ARCH),NetBSD)
++ifeq ($(OBJECT_FMT),ELF)
++	(cd $(DIST)/lib; ln -f -s $(SHARED_LIBRARY) lib$(LIBRARY_NAME)$(DLL_SUFFIX))
++	(cd $(DIST)/lib; ln -f -s $(SHARED_LIBRARY) lib$(LIBRARY_NAME)$(DLL_SUFFIX).$(SHLIB_MAJOR))
++	(cd $(DIST)/bin; ln -f -s $(SHARED_LIBRARY) lib$(LIBRARY_NAME)$(DLL_SUFFIX))
++	(cd $(DIST)/bin; ln -f -s $(SHARED_LIBRARY) lib$(LIBRARY_NAME)$(DLL_SUFFIX).$(SHLIB_MAJOR))
++endif # ELF
++endif # NetBSD
+ endif # OS2
+ ifeq ($(OS_ARCH),OpenVMS)
+ 	$(INSTALL) -m 555 $(SHARED_LIBRARY:$(DLL_SUFFIX)=.vms) $(DIST)/bin
+@@ -719,7 +732,11 @@
+ 	@for lib in $(SHARED_LIBRARY_LIBS); do $(AR_EXTRACT) $${lib}; $(CLEANUP2); done
+ endif # SHARED_LIBRARY_LIBS
+ endif # NO_LD_ARCHIVE_FLAGS
++ifeq ($(OS_ARCH),NetBSD)
++	$(MKSHLIB) $(SHLIB_LDSTARTFILE) $(OBJS) $(LOBJS) $(SUB_SHLOBJS) $(LDFLAGS) $(EXTRA_DSO_LDOPTS) $(OS_LIBS) $(EXTRA_LIBS) $(DEF_FILE) $(SHLIB_LDENDFILE)
++else
+ 	$(MKSHLIB) $(OBJS) $(LOBJS) $(SUB_SHLOBJS) $(LDFLAGS) $(EXTRA_DSO_LDOPTS) $(OS_LIBS) $(EXTRA_LIBS) $(DEF_FILE)
++endif
+ 	@rm -f foodummyfilefoo $(SUB_SHLOBJS)
+ else
+ 	@touch no-such-file.vms; rm -f no-such-file.vms $(SUB_LOBJS)
