@@ -1,0 +1,20 @@
+$NetBSD: patch-al,v 1.1 2000/10/13 20:43:35 skrll Exp $
+
+--- src/joystick/Makefile.am.orig	Fri Oct 13 18:51:25 2000
++++ src/joystick/Makefile.am
+@@ -12,15 +12,7 @@
+ 	SDL_sysjoystick.h
+ 
+ # Include the architecture-specific sources
+-if TARGET_BEOS
+-ARCH_SRCS = SDL_sysjoystick.cc
+-else
+-if TARGET_WIN32
+-ARCH_SRCS = SDL_mmjoystick.c
+-else
+ ARCH_SRCS = SDL_sysjoystick.c
+-endif
+-endif
+ 
+ libjoystick_la_SOURCES = $(COMMON_SRCS) $(ARCH_SRCS)
+ 
