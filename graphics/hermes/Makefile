@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2000/08/14 19:09:23 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/15 00:38:43 garbled Exp $
 
-DISTNAME=		Hermes-1.2.6-2
-PKGNAME=		Hermes-1.2.6.2
-WRKSRC=			${WRKDIR}/Hermes-1.2.6
+DISTNAME=		Hermes-1.3.2
+WRKSRC=			${WRKDIR}/Hermes-1.3.2
 CATEGORIES=		graphics
-MASTER_SITES=		http://hermes.terminal.at/files/
+MASTER_SITES=		http://dark.x.dtu.dk/~mbn/clanlib/download/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/hermes/
