@@ -1,0 +1,40 @@
+$NetBSD: patch-af,v 1.4 2004/12/17 22:29:06 wiz Exp $
+
+--- src/main.c.orig	2002-07-28 17:40:07.000000000 +0200
++++ src/main.c
+@@ -319,9 +319,32 @@ lastarg:
+ 	}
+ 
+ 	/* create the temporary file names */
+-	pid = getpid();
+-	(void) sprintf(temp1, "%s/cscope%d.1", tmpdir, pid);
+-	(void) sprintf(temp2, "%s/cscope%d.2", tmpdir, pid);
++	do {
++		char *tempfile = tempnam(tmpdir, "cscope1");
++		if (!tempfile) {
++			fprintf (stderr, "Can't create tempfile\n");
++			exit(1);
++		}
++		if (strlen(tempfile) >= sizeof(temp1)) {
++			fprintf (stderr, "TMPDIR path is too long\n");
++			exit(1);
++		}
++		strncpy (temp1, tempfile, sizeof (temp1));
++		free (tempfile);
++	} while (open (temp1, O_CREAT|O_EXCL|O_WRONLY, S_IREAD|S_IWRITE) < 0);
++	do {
++		char *tempfile = tempnam(tmpdir, "cscope2");
++		if (!tempfile) {
++			fprintf (stderr, "Can't create tempfile\n");
++			exit(1);
++		}
++		if (strlen(tempfile) >= sizeof(temp2)) {
++			fprintf (stderr, "TMPDIR path is too long\n");
++			exit(1);
++		}
++		strncpy (temp2, tempfile, sizeof (temp2));
++		free (tempfile);
++	} while (open (temp2, O_CREAT|O_EXCL|O_WRONLY, S_IREAD|S_IWRITE) < 0);
+ 
+ 	/* if running in the foreground */
+ 	if (signal(SIGINT, SIG_IGN) != SIG_IGN) {
