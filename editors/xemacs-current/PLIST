@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/11/25 18:09:06 magick Exp $
+@comment $NetBSD: PLIST,v 1.16 2005/03/02 22:05:19 magick Exp $
 bin/${EMACSVER}
 bin/ellcc
 bin/gnuattach
@@ -133,7 +133,6 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/dpx2.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/dual.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/elxsi.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ews4800r.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/gec63.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/gould-np1.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/gould.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/hp300bsd.h
@@ -217,7 +216,6 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/menubar.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/miscplay.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/mule-ccl.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ndir.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/nt.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-gtk-impl.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-gtk.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-impl.h
@@ -395,6 +393,7 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmotif.h
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/make-docfile
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/mmencode
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/modules/auto-autoloads.el
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/modules/auto-autoloads.el~
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/modules/auto-autoloads.elc
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/movemail
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/profile
@@ -403,38 +402,16 @@ lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/sorted-doc
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/vcdiff
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/wakeup
 lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/yow
-lib/${EMACSVER}/etc/BETA
-lib/${EMACSVER}/etc/CHARSETS
-lib/${EMACSVER}/etc/CODING-STANDARDS
-lib/${EMACSVER}/etc/CODINGS
 lib/${EMACSVER}/etc/COPYING
-lib/${EMACSVER}/etc/COPYING.LIB
 lib/${EMACSVER}/etc/ChangeLog
-lib/${EMACSVER}/etc/DEBUG
-lib/${EMACSVER}/etc/DISTRIB
-lib/${EMACSVER}/etc/FTP
 lib/${EMACSVER}/etc/ETAGS.EBNF
 lib/${EMACSVER}/etc/Emacs.ad
-lib/${EMACSVER}/etc/GNU
 lib/${EMACSVER}/etc/HELLO
 lib/${EMACSVER}/etc/InstallGuide
-lib/${EMACSVER}/etc/LPF
-lib/${EMACSVER}/etc/MACHINES
-lib/${EMACSVER}/etc/MAILINGLISTS
-lib/${EMACSVER}/etc/MORE.STUFF
-lib/${EMACSVER}/etc/MOTIVATION
 lib/${EMACSVER}/etc/NEWS
 lib/${EMACSVER}/etc/ONEWS
 lib/${EMACSVER}/etc/OONEWS
-lib/${EMACSVER}/etc/ORDERS
-lib/${EMACSVER}/etc/ORDERS.EUROPE
-lib/${EMACSVER}/etc/ORDERS.JAPAN
-lib/${EMACSVER}/etc/PACKAGES
 lib/${EMACSVER}/etc/README
-lib/${EMACSVER}/etc/README.HYPERBOLE
-lib/${EMACSVER}/etc/README.OO-BROWSER
-lib/${EMACSVER}/etc/SERVICE
-lib/${EMACSVER}/etc/TERMS
 lib/${EMACSVER}/etc/TUTORIAL
 lib/${EMACSVER}/etc/TUTORIAL.cs
 lib/${EMACSVER}/etc/TUTORIAL.de
@@ -454,11 +431,7 @@ lib/${EMACSVER}/etc/TUTORIAL.sl
 lib/${EMACSVER}/etc/TUTORIAL.th
 lib/${EMACSVER}/etc/VEGETABLES
 lib/${EMACSVER}/etc/XKeysymDB
-lib/${EMACSVER}/etc/aliases.ksh
 lib/${EMACSVER}/etc/cbx.png
-lib/${EMACSVER}/etc/check_cygwin_setup.sh
-lib/${EMACSVER}/etc/chr.png
-lib/${EMACSVER}/etc/chrm.png
 lib/${EMACSVER}/etc/ctags.1
 lib/${EMACSVER}/etc/custom/check0.xpm
 lib/${EMACSVER}/etc/custom/check1.xpm
@@ -517,8 +490,6 @@ lib/${EMACSVER}/etc/eos/eos-type.xbm
 lib/${EMACSVER}/etc/eos/eos-up.xbm
 lib/${EMACSVER}/etc/etags.1
 lib/${EMACSVER}/etc/gtkrc
-lib/${EMACSVER}/etc/gnu.xbm
-lib/${EMACSVER}/etc/gnu.xpm
 lib/${EMACSVER}/etc/gnuattach.1
 lib/${EMACSVER}/etc/gnuclient.1
 lib/${EMACSVER}/etc/gnudoit.1
@@ -527,8 +498,6 @@ lib/${EMACSVER}/etc/gnuserv.README
 lib/${EMACSVER}/etc/gray1.xbm
 lib/${EMACSVER}/etc/idd/drop
 lib/${EMACSVER}/etc/idd/dropmsk
-lib/${EMACSVER}/etc/ms-kermit
-lib/${EMACSVER}/etc/ms-kermit-7bit
 lib/${EMACSVER}/etc/package-index.LATEST.gpg
 lib/${EMACSVER}/etc/photos/adrian.png
 lib/${EMACSVER}/etc/photos/adrianm.png
@@ -540,6 +509,8 @@ lib/${EMACSVER}/etc/photos/ben.png
 lib/${EMACSVER}/etc/photos/benm.png
 lib/${EMACSVER}/etc/photos/bw.png
 lib/${EMACSVER}/etc/photos/bwm.png
+lib/${EMACSVER}/etc/photos/chr.png
+lib/${EMACSVER}/etc/photos/chrm.png
 lib/${EMACSVER}/etc/photos/cthomp.png
 lib/${EMACSVER}/etc/photos/cthompm.png
 lib/${EMACSVER}/etc/photos/dkindred.png
@@ -591,6 +562,8 @@ lib/${EMACSVER}/etc/photos/pez.png
 lib/${EMACSVER}/etc/photos/pezm.png
 lib/${EMACSVER}/etc/photos/piper.png
 lib/${EMACSVER}/etc/photos/piperm.png
+lib/${EMACSVER}/etc/photos/purvis.png
+lib/${EMACSVER}/etc/photos/purvism.png
 lib/${EMACSVER}/etc/photos/rickc.png
 lib/${EMACSVER}/etc/photos/rickcm.png
 lib/${EMACSVER}/etc/photos/slb.png
@@ -616,7 +589,6 @@ lib/${EMACSVER}/etc/refcard.tex
 lib/${EMACSVER}/etc/sample.Xdefaults
 lib/${EMACSVER}/etc/sample.Xresources
 lib/${EMACSVER}/etc/sample.init.el
-lib/${EMACSVER}/etc/sink.xbm
 lib/${EMACSVER}/etc/sparcworks/SW.Editor.xpm
 lib/${EMACSVER}/etc/sparcworks/sunpro-mailcap
 lib/${EMACSVER}/etc/tests/external-widget/Makefile
@@ -879,6 +851,7 @@ lib/${EMACSVER}/etc/xemacs-icon3.xpm
 lib/${EMACSVER}/etc/xemacs.1
 lib/${EMACSVER}/etc/xemacs.xbm
 lib/${EMACSVER}/etc/xemacs.xpm
+lib/${EMACSVER}/info/beta.info
 lib/${EMACSVER}/info/cl.info
 lib/${EMACSVER}/info/custom.info
 lib/${EMACSVER}/info/dir
@@ -888,6 +861,9 @@ lib/${EMACSVER}/info/info.info
 lib/${EMACSVER}/info/internals.info
 lib/${EMACSVER}/info/internals.info-1
 lib/${EMACSVER}/info/internals.info-2
+lib/${EMACSVER}/info/internals.info-3
+lib/${EMACSVER}/info/internals.info-4
+lib/${EMACSVER}/info/internals.info-5
 lib/${EMACSVER}/info/lispref.info
 lib/${EMACSVER}/info/lispref.info-1
 lib/${EMACSVER}/info/lispref.info-2
@@ -908,6 +884,8 @@ lib/${EMACSVER}/info/texinfo.info-1
 lib/${EMACSVER}/info/texinfo.info-2
 lib/${EMACSVER}/info/widget.info
 lib/${EMACSVER}/info/xemacs-faq.info
+lib/${EMACSVER}/info/xemacs-faq.info-1
+lib/${EMACSVER}/info/xemacs-faq.info-2
 lib/${EMACSVER}/info/xemacs.info
 lib/${EMACSVER}/info/xemacs.info-1
 lib/${EMACSVER}/info/xemacs.info-2
@@ -1021,6 +999,8 @@ lib/${EMACSVER}/lisp/dragdrop.elc
 lib/${EMACSVER}/lisp/dump-paths.el
 lib/${EMACSVER}/lisp/dump-paths.elc
 lib/${EMACSVER}/lisp/dumped-lisp.el
+lib/${EMACSVER}/lisp/easy-mmode.el
+lib/${EMACSVER}/lisp/easy-mmode.elc
 lib/${EMACSVER}/lisp/easymenu.el
 lib/${EMACSVER}/lisp/easymenu.elc
 lib/${EMACSVER}/lisp/etags.el
@@ -1312,6 +1292,8 @@ lib/${EMACSVER}/lisp/raw-process.el
 lib/${EMACSVER}/lisp/raw-process.elc
 lib/${EMACSVER}/lisp/rect.el
 lib/${EMACSVER}/lisp/rect.elc
+lib/${EMACSVER}/lisp/regexp-opt.el
+lib/${EMACSVER}/lisp/regexp-opt.elc
 lib/${EMACSVER}/lisp/register.el
 lib/${EMACSVER}/lisp/register.elc
 lib/${EMACSVER}/lisp/replace.el
