@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9719 2005/04/02 11:56:22 adrianp Exp $
+$NetBSD: CHANGES,v 1.9720 2005/04/02 12:43:47 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1862,3 +1862,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added qca-1.0 [jdolecek 2005-04-02]
 	Updated psi to 0.9.3 [jdolecek 2005-04-02]
 	Updated scanssh to 2.1 [adrianp 2005-04-02]
+	Updated p5-Time to 2003.1126 [adrianp 2005-04-02]
