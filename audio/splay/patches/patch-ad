@@ -1,0 +1,36 @@
+*** mpegsound/mpegsound.h.orig	Tue Jan  6 23:46:00 1998
+--- mpegsound/mpegsound.h	Tue Jan  6 23:45:01 1998
+***************
+*** 247,253 ****
+        a=(((unsigned char)buffer[offset])<<8) | ((unsigned char)buffer[offset+1]);
+      }
+  #else
+!     a=((unsigned short *)(buffer+((bixindex>>3))));
+  #endif
+  
+      a<<=(bitindex&7);
+--- 247,253 ----
+        a=(((unsigned char)buffer[offset])<<8) | ((unsigned char)buffer[offset+1]);
+      }
+  #else
+!     a=((unsigned short *)(buffer+((bitindex>>3))));
+  #endif
+  
+      a<<=(bitindex&7);
+***************
+*** 266,272 ****
+        a=(((unsigned char)buffer[offset])<<8) | ((unsigned char)buffer[offset+1]);
+      }
+  #else
+!     a=((unsigned short *)(buffer+((bixindex>>3))));
+  #endif
+  
+      a<<=(bitindex&7);
+--- 266,272 ----
+        a=(((unsigned char)buffer[offset])<<8) | ((unsigned char)buffer[offset+1]);
+      }
+  #else
+!     a=((unsigned short *)(buffer+((bitindex>>3))));
+  #endif
+  
+      a<<=(bitindex&7);
