@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2001/07/29 06:25:16 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2004/11/23 17:04:15 wiz Exp $
 
---- doc/Makefile.in.orig	Wed May 23 16:51:48 2001
+--- doc/Makefile.in.orig	2004-10-29 22:08:32.000000000 +0200
 +++ doc/Makefile.in
-@@ -110,7 +110,7 @@
+@@ -224,7 +224,7 @@ SUBDIRS = images
  # Lets put the informational stuff in a sub directory to avoid 
  # polluting /usr/local for default installs.
  #
--docdir = $(prefix)/Xbae
-+docdir = $(prefix)/share/doc/html/Xbae
- 
- doc_DATA =  	callbacks.html cellwidgets.html 	contents.html coverplus.html difffonts.html 	index.html main.html morelines.html 	psdriver.html rowheights.html scrolling.html 	spancells.html title.html
- 
+-docdir = $(datadir)/Xbae
++docdir = $(datadir)/doc/Xbae
+ doc_DATA = \
+       contents.html coverplus.html difffonts.html \
+       index.html main.html morelines.html \
