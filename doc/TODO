@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.56 2002/12/11 21:45:56 salo Exp $
+$NetBSD: TODO,v 1.57 2002/12/12 12:26:28 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -125,6 +125,7 @@ Suggested package updates
 	o gnome-file-manager-2.0.1
 	o gnome-python-1.4.4
 	o gnome-python-1.99.13
+	o gnome-vfs2-2.1.4 [jmmv]
 	o gnomeicu-0.99beta
 	o gnucash-1.7.5 [devel]
 	o gnumeric-1.1.11 [devel]
