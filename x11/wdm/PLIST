@@ -1,40 +1,31 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/07 21:18:33 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/23 17:33:31 salo Exp $
 bin/wdm
 bin/wdmLogin
-etc/wdm/GiveConsole
-etc/wdm/TakeConsole
-etc/wdm/Xaccess
-etc/wdm/Xclients
-etc/wdm/Xclients.in
-etc/wdm/Xresources
-etc/wdm/Xservers
-etc/wdm/Xservers.fs
-etc/wdm/Xservers.ws
-etc/wdm/Xsession
-etc/wdm/Xsession.XFree86
-etc/wdm/Xsession.in
-etc/wdm/Xsetup_0
-etc/wdm/pixmaps/Eagle.xpm
-etc/wdm/pixmaps/Earth.jpg
-etc/wdm/pixmaps/Earth200x130.xpm
-etc/wdm/pixmaps/GnuLinux-logo.jpg
-etc/wdm/pixmaps/README
-etc/wdm/pixmaps/Stars.jpg
-etc/wdm/pixmaps/StarsLogo.jpg
-etc/wdm/pixmaps/gnuLogo.xpm
-etc/wdm/wdm-config
-etc/wdm/wdm-config.in
-etc/wdm/wdmReconfig
+lib/X11/wdm/GiveConsole
+lib/X11/wdm/TakeConsole
+lib/X11/wdm/Xaccess
+lib/X11/wdm/Xclients
+lib/X11/wdm/Xclients.in
+lib/X11/wdm/Xresources
+lib/X11/wdm/Xservers
+lib/X11/wdm/Xservers.fs
+lib/X11/wdm/Xservers.ws
+lib/X11/wdm/Xsession
+lib/X11/wdm/Xsession.XFree86
+lib/X11/wdm/Xsession.orig
+lib/X11/wdm/Xsetup_0
+lib/X11/wdm/pixmaps/Eagle.xpm
+lib/X11/wdm/pixmaps/Earth.jpg
+lib/X11/wdm/pixmaps/Earth200x130.xpm
+lib/X11/wdm/pixmaps/GnuLinux-logo.jpg
+lib/X11/wdm/pixmaps/Stars.jpg
+lib/X11/wdm/pixmaps/StarsLogo.jpg
+lib/X11/wdm/pixmaps/gnuLogo.xpm
+lib/X11/wdm/wdm-config
+lib/X11/wdm/wdm-config.in
+lib/X11/wdm/wdmReconfig
 man/man1/wdm.1
 man/man1/wdmLogin.1
-@exec ${MKDIR} %D/etc/wdm/authdir
-@exec ${CHMOD} 700 %D/etc/wdm/authdir
-@exec ${MKDIR} %D/etc/wdm/authdir/authdir
-@exec ${CHMOD} 700 %D/etc/wdm/authdir/authdir
-@exec ${MKDIR} %D/etc/wdm/authdir/authdir/authfiles
-@exec ${CHMOD} 700 %D/etc/wdm/authdir/authdir/authfiles
-@dirrm etc/wdm/pixmaps
-@dirrm etc/wdm/authdir/authdir/authfiles
-@dirrm etc/wdm/authdir/authdir
-@dirrm etc/wdm/authdir
-@dirrm etc/wdm
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/wdm.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/wdm.mo
+@dirrm lib/X11/wdm/pixmaps

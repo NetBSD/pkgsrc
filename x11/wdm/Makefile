@@ -1,24 +1,38 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/07 21:18:33 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/02/23 17:33:31 salo Exp $
 
-DISTNAME=		wdm-1.20
+DISTNAME=		wdm-1.22.1
 CATEGORIES=		x11
-MASTER_SITES=		http://www.tcscs.com/wdm/wdm/
+MASTER_SITES=		http://voins.program.ru/wdm/
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.tcscs.com/wdm/
+HOMEPAGE=		http://voins.program.ru/wdm/
 COMMENT=		WINGs display manager
 
+BUILD_USES_MSGFMT=	YES
+
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-gfx-incs=${BUILDLINK_DIR}/include/WINGs \
-			--with-gfx-libs=${BUILDLINK_DIR}/lib
 
-INSTALL_TARGET=		install-strip
+CONFIGURE_ARGS+=	--with-wdmdir=${WDM_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
+CONFIGURE_ARGS+=	--with-gfx-incs=${BUILDLINK_DIR}/include/WINGs
+CONFIGURE_ARGS+=	--with-gfx-libs=${BUILDLINK_DIR}/lib
 
-WDM_AUTHDIR=		${PREFIX}/etc/wdm/authdir
-WDM_EXTRADIR1=		${WDM_AUTHDIR}/authdir
-WDM_EXTRADIR2=		${WDM_EXTRADIR1}/authfiles
+RCD_SCRIPTS=		wdm
+
+WDM_SYSCONFDIR=		${PREFIX}/lib/X11/wdm
+
+OWN_DIRS_PERMS+=	${WDM_SYSCONFDIR}/authdir/authfiles		\
+			${ROOT_USER} ${ROOT_GROUP} 700
+OWN_DIRS_PERMS+=	${WDM_SYSCONFDIR}/authdir/authdir		\
+			${ROOT_USER} ${ROOT_GROUP} 700
+OWN_DIRS_PERMS=		${WDM_SYSCONFDIR}/authdir			\
+			${ROOT_USER} ${ROOT_GROUP} 700
+OWN_DIRS=		${WDM_SYSCONFDIR}
+
+.include "../../mk/bsd.prefs.mk"
 
 # User may define WDM_MANAGERS option to specfy a window manager
 # different from WindowMaker. WDM_MANAGERS is a space-separated
@@ -27,15 +41,10 @@ WDM_EXTRADIR2=		${WDM_EXTRADIR1}/authfiles
 CONFIGURE_ARGS+=	--with-winmgr=${WMANAGER}
 .endfor
 
-post-install:
-	${MKDIR} ${WDM_EXTRADIR1}
-	${CHMOD} 700 ${WDM_EXTRADIR1}
-	${MKDIR} ${WDM_EXTRADIR2}
-	${CHMOD} 700 ${WDM_EXTRADIR2}
-
-.include "../../wm/windowmaker/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../wm/windowmaker/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
