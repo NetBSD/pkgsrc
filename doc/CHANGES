@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5354 2004/03/29 10:33:22 grant Exp $
+$NetBSD: CHANGES,v 1.5355 2004/03/29 11:06:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1582,3 +1582,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added sqsh-x11-2.1 [grant 2004-03-29]
 	Added p5-sybperl-2.16 [grant 2004-03-29]
 	Added vlc-0.7.1 [grant 2004-03-29]
+	Updated silc-client-icb to 0.14nb8 [wiz 2004-03-29]
