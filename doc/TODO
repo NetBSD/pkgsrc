@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1079 2003/11/29 01:29:02 xtraeme Exp $
+$NetBSD: TODO,v 1.1080 2003/11/29 12:11:30 sketch Exp $
 
 Suggested new packages
 ======================
@@ -195,7 +195,7 @@ Suggested package updates
 	o enlightenment-0.16.6
 	o epic4-1.1.15
 	o ettercap-0.6.b
-	o evilwm-0.99.17
+	o evilwm-0.99.17 [sketch]
 	o evolution-1.4.4
 	o exim-4.24
 	o fastdep-0.16 [jmmv]
