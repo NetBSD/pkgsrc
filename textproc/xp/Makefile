@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/31 14:41:05 jwise Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/22 14:28:53 jwise Exp $
 #
 
 DISTNAME=	xp
@@ -27,5 +27,6 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/xp.jar ${PREFIX}/lib/java
 	${MKDIR} ${PREFIX}/share/doc/java/xp
 	cd ${WRKDIR}/docs ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/xp ; ${GTAR} pvxf - )
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/xp
 
 .include "../../mk/bsd.pkg.mk"
