@@ -1,30 +1,50 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/09/30 10:26:10 seb Exp $
+$NetBSD: patch-aa,v 1.2 2001/11/13 15:23:25 seb Exp $
 
---- Makefile.in.orig	Wed Apr 11 07:14:18 2001
+--- Makefile.in.orig	Fri Nov  2 06:24:11 2001
 +++ Makefile.in
-@@ -6,7 +6,7 @@
+@@ -6,8 +6,8 @@
  # These are the names of the installed programs, in case you wish to change
  # them.
  #
 -CTAGS_PROG = ctags
+-ETAGS_PROG = etags
 +CTAGS_PROG = exctags
- ETAGS_PROG = etags
++ETAGS_PROG = exetags
  
  # Set this to the path to your shell (must run Bourne shell commands).
-@@ -58,9 +58,8 @@
+ #
+@@ -28,6 +28,7 @@
+ CC	= @CC@
+ DEFS	= @DEFS@
+ CFLAGS	= @CFLAGS@
++CPPFLAGS= @CPPFLAGS@
+ LDFLAGS	= @LDFLAGS@
+ LIBS	= @LIBS@
+ EXEEXT	= @EXEEXT@
+@@ -59,9 +60,9 @@
  
  VPATH	= $(srcdir)
  
 -INSTALL		= cp
 -INSTALL_PROG	= $(INSTALL)
 -INSTALL_DATA	= $(INSTALL)
-+INSTALL_PROGRAM		= $(BSD_INSTALL_PROGRAM)
-+INSTALL_MAN		= $(BSD_INSTALL_MAN)
++INSTALL_PROGRAM	= $(BSD_INSTALL_PROGRAM)
++INSTALL_MAN	= $(BSD_INSTALL_MAN)
++INSTALL_DATA	= $(BSD_INSTALL_DATA)
  
- MANPAGE	= ctags.1
+ READ_LIB = readtags.$(OBJEXT)
+ READ_INC = readtags.h
+@@ -103,7 +104,7 @@
+ 	$(CC) -I. -I$(srcdir) $(DEFS) -DDEBUG -g $(LDFLAGS) -o $@ debug.c $(SOURCES)
  
-@@ -121,8 +120,7 @@
- install-ebin: $(DEST_ETAGS)
+ readtags: readtags.c readtags.h
+-	$(CC) -I. -I$(srcdir) -DREADTAGS_MAIN $(DEFS) $(CFLAGS) $(LDFLAGS) -o $@ $<
++	$(CC) -I. -I$(srcdir) -DREADTAGS_MAIN $(DEFS) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -o $@ $<
+ 
+ $(OBJECTS): $(HEADERS) config.h
+ 
+@@ -131,8 +132,7 @@
+ install-lib: $(DEST_READ_LIB) $(DEST_READ_INC)
  
  $(DEST_CTAGS): $(CTAGS_EXEC) $(bindir) FORCE
 -	$(INSTALL_PROG) $(CTAGS_EXEC) $@  &&  chmod 755 $@
@@ -33,7 +53,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/09/30 10:26:10 seb Exp $
  
  $(DEST_ETAGS):
  	- if [ -x $(DEST_CTAGS) ]; then \
-@@ -137,7 +135,7 @@
+@@ -147,7 +147,7 @@
  install-eman: $(DEST_EMAN)
  
  $(DEST_CMAN): $(man1dir) $(MANPAGE) FORCE
@@ -42,3 +62,24 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/09/30 10:26:10 seb Exp $
  
  $(DEST_EMAN):
  	- if [ -f $(DEST_CMAN) ]; then \
+@@ -158,10 +158,10 @@
+ # install the library
+ #
+ $(DEST_READ_LIB): $(READ_LIB) $(libdir) FORCE
+-	$(INSTALL_PROG) $(READ_LIB) $@  &&  chmod 644 $@
++	$(INSTALL_DATA) $(READ_LIB) $@
+ 
+ $(DEST_READ_INC): $(READ_INC) $(incdir) FORCE
+-	$(INSTALL_PROG) $(READ_INC) $@  &&  chmod 644 $@
++	$(INSTALL_DATA) $(READ_INC) $@
+ 
+ 
+ #
+@@ -208,6 +208,6 @@
+ # implicit rules
+ #
+ .c.$(OBJEXT):
+-	$(CC) -I. -I$(srcdir) $(DEFS) $(CFLAGS) -c $<
++	$(CC) -I. -I$(srcdir) $(DEFS) $(CPPFLAGS) $(CFLAGS) -c $<
+ 
+ # vi:set tabstop=8:
