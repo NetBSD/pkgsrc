@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 20:57:39 wiz Exp $
+lib/libvisual/actor/actor_JESS.la
+lib/libvisual/actor/actor_bumpscope.la
+@comment disabled for now: lib/libvisual/actor/actor_gdkpixbuf.la
+lib/libvisual/actor/actor_infinite.la
+lib/libvisual/actor/actor_jakdaw.la
+lib/libvisual/actor/actor_lv_analyzer.la
+lib/libvisual/actor/actor_lv_dna.la
+lib/libvisual/actor/actor_lv_gltest.la
+lib/libvisual/actor/actor_lv_scope.la
+lib/libvisual/actor/actor_madspin.la
+lib/libvisual/actor/actor_oinksie.la
+lib/libvisual/actor/actor_plazma.la
+lib/libvisual/input/input_mplayer.la
+lib/libvisual/morph/morph_alphablend.la
+lib/libvisual/morph/morph_flash.la
+lib/libvisual/morph/morph_slide.la
+lib/libvisual/morph/morph_tentacle.la
+share/libvisual/actor/actor_madspin/star1.bmp
+share/libvisual/actor/actor_madspin/star2.bmp
+@dirrm share/libvisual/actor/actor_madspin
+@dirrm share/libvisual/actor
+@dirrm share/libvisual
+@dirrm lib/libvisual/morph
+@dirrm lib/libvisual/input
+@dirrm lib/libvisual/actor
+@dirrm lib/libvisual
