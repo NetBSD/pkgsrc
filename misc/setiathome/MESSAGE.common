@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/04/09 15:52:28 jmmv Exp $
+$NetBSD: MESSAGE.common,v 1.1 2003/08/16 06:56:17 reed Exp $
 
 Please note - you should really mkdir and cd into a new directory before
 running setiathome (to avoid cluttering up your homedir).
@@ -8,9 +8,6 @@ The other possibility is to use the provided "setiathome" rc.d script
 which will start SETI@home on system bootup as an unpriviledged user,
 using /var/db/setiathome as its home. The first time you use this script
 the configuration utility will appear to manually configure your account.
-
-Also, please consider joining the NetBSD team:
-http://setiathome.ssl.berkeley.edu/cgi-bin/cgi?cmd=team_lookup&name=NetBSD
 
 Good luck!
 
