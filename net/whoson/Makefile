@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/11 16:51:54 abs Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/28 02:47:48 reed Exp $
 #
 
 DISTNAME=		whoson-2.03
+PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=whoson/}
 
