@@ -1,0 +1,9 @@
+From the distribution README:
+
+Perl is a language that combines some of the features of C, sed, awk
+and shell.  See the manual page for more hype.  There are also two Nutshell
+Handbooks published by O'Reilly & Assoc.  See pod/perlbook.pod
+for more information.
+
+This package is a placeholder for packages to depend upon when requiring a
+shared libperl.so.
