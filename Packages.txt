@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.134 2001/01/24 09:53:52 garbled Exp $
+# $NetBSD: Packages.txt,v 1.135 2001/01/26 09:17:55 skrll Exp $
 ###########################################################################
 
 			==========================
@@ -916,9 +916,6 @@ package Makefile as the quick way to bypass the pkg's own libtool.
 The pkg's own libtool is made by ltconfig script at do-configure target.
 If USE_LIBTOOL and LTCONFIG_OVERRIDE are defined, the specified ltconfig is
 overridden, using the devel/libtool instead of the pkg's own libtool.
-If the pkg already has an original "libtool" which we can replace with
-devel/libtool you may have to specify LIBTOOL_OVERRIDE to the package
-Makefile.
 
 
  6.4 Gotchas of FreeBSD ports
