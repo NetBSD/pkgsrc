@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 1999/01/02 20:57:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.17 1999/03/03 18:45:09 tron Exp $
 bin/xtp
 bin/display
 bin/montage
@@ -22,9 +22,11 @@ include/magick/memory.h
 include/magick/delegates.h
 include/magick/version.h
 include/magick/quantize.h
+include/magick/classify.h
+include/magick/defines.h
 @dirrm include/magick
 lib/libMagick.a
-lib/libMagick.so.4.0.17
+lib/libMagick.so.4.0.21
 man/cat1/display.0
 man/cat1/montage.0
 man/cat1/import.0
