@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/07/07 07:48:15 simonb Exp $
+$NetBSD: patch-aa,v 1.6 2001/11/23 02:18:22 simonb Exp $
 
---- wrapzap.orig	Sat Jun 23 11:39:22 2001
-+++ wrapzap	Fri Jul  6 23:33:13 2001
-@@ -16,27 +16,9 @@
+--- wrapzap.orig	Fri Nov 23 12:30:44 2001
++++ wrapzap	Fri Nov 23 12:34:21 2001
+@@ -16,29 +16,9 @@
  #
  
  # modify this to match your install
@@ -10,6 +10,7 @@ $NetBSD: patch-aa,v 1.5 2001/07/07 07:48:15 simonb Exp $
 -
 -ZAP_MODE=				# or "CLEAR"
 -ZAP_BASE=http://adzap.cs.zip.com.au	# a local web server will be better
+-ZAP_BASE_SSL=https://adzap.cs.zip.com.au # this can probably be ignored
 -ZAP_PREMATCH=				# pathname of extra pattern file
 -					# for patterns to preempt the stock
 -					# zapper
@@ -18,6 +19,7 @@ $NetBSD: patch-aa,v 1.5 2001/07/07 07:48:15 simonb Exp $
 -					# stock zapper; this is the one to
 -					# which you should add new ads
 -STUBURL_AD=$ZAP_BASE/ad.gif
+-STUBURL_ADSSL=$ZAP_BASE_SSL/ad.gif
 -STUBURL_ADBG=$ZAP_BASE/adbg.gif
 -STUBURL_ADJS=$ZAP_BASE/no-op.js
 -STUBURL_ADHTML=$ZAP_BASE/no-op.html
@@ -28,8 +30,8 @@ $NetBSD: patch-aa,v 1.5 2001/07/07 07:48:15 simonb Exp $
 -STUBURL_WEBBUG=$ZAP_BASE/webbug.gif
 -STUBURL_WEBBUGJS=$ZAP_BASE/webbug.js
 +zapper=@@PREFIX@@/libexec/squid_redirect
-+  
++   
 +. /etc/adzap.conf
  
- export ZAP_MODE ZAP_BASE ZAP_PREMATCH ZAP_POSTMATCH
- export STUBURL_AD STUBURL_ADJS STUBURL_ADHTML STUDURL_ADMP3 STUBURL_ADPOPUP \
+ export ZAP_MODE ZAP_BASE ZAP_BASE_SSL ZAP_PREMATCH ZAP_POSTMATCH
+ export STUBURL_AD STUBURL_ADSSL STUBURL_ADJS STUBURL_ADHTML STUDURL_ADMP3 STUBURL_ADPOPUP \
