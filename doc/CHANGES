@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5766 2004/04/29 08:02:38 jmmv Exp $
+$NetBSD: CHANGES,v 1.5767 2004/04/29 08:04:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2279,3 +2279,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lsof to 4.71nb1 [atatat 2004-04-29]
 	Updated gossip to 0.7.5 [jmmv 2004-04-29]
 	Added gpass-0.4 [jmmv 2004-04-29]
+	Updated netpbm to 10.18.12 [adam 2004-04-29]
