@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/12/06 18:26:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/02/13 08:26:03 seb Exp $
 bin/autoconf
 bin/autoheader
 bin/autom4te
@@ -6,8 +6,6 @@ bin/autoreconf
 bin/autoscan
 bin/autoupdate
 bin/ifnames
-info/autoconf.info
-info/standards.info
 man/man1/autoconf.1
 man/man1/autoheader.1
 man/man1/autom4te.1

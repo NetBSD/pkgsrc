@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/06/24 14:39:16 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/02/13 08:26:04 seb Exp $
 bin/g-wrap-config
 guile/1.4/share/guile/g-wrap.scm
 guile/1.4/share/guile/g-wrap/enumeration.scm
@@ -19,9 +19,6 @@ guile/1.4/share/guile/g-wrap/sorting.scm
 include/g-wrap/g-wrap-compatibility.h
 include/g-wrap/g-wrap-glib.h
 include/g-wrap/g-wrap-wct.h
-info/g-wrap.info
-info/g-wrap.info-1
-info/g-wrap.info-2
 lib/libgw-glib.a
 lib/libgw-glib.la
 lib/libgw-glib.so

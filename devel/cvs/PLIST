@@ -1,21 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2003/06/19 21:55:26 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/02/13 08:26:03 seb Exp $
 bin/cvs
 bin/cvsbug
 bin/rcs2log
-info/cvs.info
-info/cvs.info-1
-info/cvs.info-2
-info/cvs.info-3
-info/cvs.info-4
-info/cvs.info-5
-info/cvs.info-6
-info/cvs.info-7
-info/cvs.info-8
-info/cvs.info-9
-info/cvsclient.info
-info/cvsclient.info-1
-info/cvsclient.info-2
-info/cvsclient.info-3
 man/man1/cvs.1
 man/man5/cvs.5
 man/man8/cvsbug.8
