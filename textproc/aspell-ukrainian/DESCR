@@ -1,0 +1,1 @@
+Ukrainian language support for aspell, e.g. `aspell -d ukrainian -c $myfile'.
