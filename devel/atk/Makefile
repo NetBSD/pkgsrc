@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/04/01 18:13:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2004/04/13 23:31:12 snj Exp $
 #
 
 DISTNAME=		atk-1.6.0
@@ -19,6 +19,9 @@ PKGCONFIG_OVERRIDE=	atk.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc/html"
+
+# Avoid an ICE in gcc2 on sparc64
+CONFIGURE_ENV+=		F77=${FALSE}
 
 # glib-mkenums overflows a 2048kb stack on atkobject.h
 UNLIMIT_RESOURCES=	stacksize
