@@ -1,0 +1,45 @@
+*** src/Makefile.in.orig	Fri Sep 27 05:32:45 1996
+--- src/Makefile.in	Mon Nov 17 01:49:22 1997
+***************
+*** 151,160 ****
+  
+  # Linking rules.
+  
+! $(PROGS): ../lib/libcvs.a ../zlib/libz.a
+  
+  cvs: $(OBJECTS)
+! 	$(CC) $(OBJECTS) ../lib/libcvs.a ../zlib/libz.a $(LIBS) $(LDFLAGS) -o $@ 
+  
+  xlint: $(SOURCES)
+  	files= ; \
+--- 151,162 ----
+  
+  # Linking rules.
+  
+! #$(PROGS): ../lib/libcvs.a ../zlib/libz.a
+! $(PROGS): ../lib/libcvs.a
+  
+  cvs: $(OBJECTS)
+! #	$(CC) $(OBJECTS) ../lib/libcvs.a ../zlib/libz.a $(LIBS) $(LDFLAGS) -o $@ 
+! 	$(CC) $(OBJECTS) ../lib/libcvs.a -lz $(LIBS) $(LDFLAGS) -o $@ 
+  
+  xlint: $(SOURCES)
+  	files= ; \
+***************
+*** 185,191 ****
+  $(OBJECTS): $(HEADERS) options.h
+  
+  zlib.o: zlib.c
+! 	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/zlib $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
+  
+  subdir = src
+  Makefile: ../config.status Makefile.in
+--- 187,194 ----
+  $(OBJECTS): $(HEADERS) options.h
+  
+  zlib.o: zlib.c
+! #	$(CC) $(CPPFLAGS) $(INCLUDES) -I$(top_srcdir)/zlib $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
+! 	$(CC) $(CPPFLAGS) $(INCLUDES) -I/usr/include $(DEFS) $(CFLAGS) -c $(srcdir)/zlib.c
+  
+  subdir = src
+  Makefile: ../config.status Makefile.in
