@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.3 1999/07/04 14:42:39 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1999/07/08 07:35:25 frueauf Exp $
 #
 
-DISTNAME=	xsidplay-1_3_5
-PKGNAME=	xsidplay-1.3.5
-WRKSRC=		${WRKDIR}/xsidplay-1.3.5
+DISTNAME=	xsidplay-1_3_8
+PKGNAME=	xsidplay-1.3.8
+WRKSRC=		${WRKDIR}/xsidplay-1.3.8
 CATEGORIES=	audio x11
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/
-EXTRACT_SUFX=	.tgz
+EXTRACT_SUFX=	_tar.gz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	pooka@iki.fi
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 
-DEPENDS+=	sidplay-1.36.35:../../audio/sidplay
-DEPENDS+=	qt-1.44:../../x11/qt
+DEPENDS=	sidplay-1.36.35:../../audio/sidplay \
+		qt-1.44:../../x11/qt
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
