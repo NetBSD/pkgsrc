@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/05 18:31:59 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:39 jlam Exp $
 bin/chicken
 bin/chicken-config
 bin/chicken-profile
@@ -10,36 +10,12 @@ bin/csi-static
 include/c_defaults.h
 include/chicken-config.h
 include/chicken.h
-lib/libchicken.a
 lib/libchicken.la
-lib/libchicken.so
-lib/libchicken.so.0
-lib/libchicken.so.0.0
-lib/libsrfi-chicken.a
 lib/libsrfi-chicken.la
-lib/libsrfi-chicken.so
-lib/libsrfi-chicken.so.0
-lib/libsrfi-chicken.so.0.0
-lib/libstuffed-chicken.a
 lib/libstuffed-chicken.la
-lib/libstuffed-chicken.so
-lib/libstuffed-chicken.so.0
-lib/libstuffed-chicken.so.0.0
-lib/libuchicken.a
 lib/libuchicken.la
-lib/libuchicken.so
-lib/libuchicken.so.0
-lib/libuchicken.so.0.0
-lib/libusrfi-chicken.a
 lib/libusrfi-chicken.la
-lib/libusrfi-chicken.so
-lib/libusrfi-chicken.so.0
-lib/libusrfi-chicken.so.0.0
-lib/libustuffed-chicken.a
 lib/libustuffed-chicken.la
-lib/libustuffed-chicken.so
-lib/libustuffed-chicken.so.0
-lib/libustuffed-chicken.so.0.0
 man/man1/chicken-config.1
 man/man1/chicken-profile.1
 man/man1/chicken-setup.1

@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST.common,v 1.4 2004/08/24 16:43:18 schmonz Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2004/09/22 08:09:53 jlam Exp $
 bin/sudo
 bin/sudoedit
 sbin/visudo
 libexec/sudo_noexec.la
-libexec/sudo_noexec.so
 share/doc/sudo/README
 share/doc/sudo/README.LDAP
 share/doc/sudo/UPGRADE

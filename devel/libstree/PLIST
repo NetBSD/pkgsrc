@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/04 04:52:46 gson Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:28 jlam Exp $
 include/libstree.h
 include/stree/lst_algorithms.h
 include/stree/lst_macros.h
@@ -6,11 +6,7 @@ include/stree/lst_stree.h
 include/stree/lst_string.h
 include/stree/lst_structs.h
 include/stree/lst_timestamp.h
-lib/libstree.a
 lib/libstree.la
-lib/libstree.so
-lib/libstree.so.0
-lib/libstree.so.0.0
 share/doc/html/libstree/a1501.html
 share/doc/html/libstree/a1502.html
 share/doc/html/libstree/a1503.html

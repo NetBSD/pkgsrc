@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:07:56 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:48 jlam Exp $
 bin/achfile
 bin/acleandir.rc
 bin/add_netatalk_printer
@@ -69,7 +69,6 @@ include/netatalk/ddp_usrreq.c
 include/netatalk/ddp_var.h
 include/netatalk/endian.h
 include/netatalk/phase2.h
-lib/libatalk.a
 lib/libatalk.la
 libexec/netatalk/afpd
 libexec/netatalk/atalkd
@@ -100,18 +99,10 @@ libexec/netatalk/tfwpaprev
 libexec/netatalk/timelord
 libexec/netatalk/uams/uams_clrtxt.so
 libexec/netatalk/uams/uams_dhx.so
-libexec/netatalk/uams/uams_dhx_passwd.a
 libexec/netatalk/uams/uams_dhx_passwd.la
-libexec/netatalk/uams/uams_dhx_passwd.so
-libexec/netatalk/uams/uams_guest.a
 libexec/netatalk/uams/uams_guest.la
-libexec/netatalk/uams/uams_guest.so
-libexec/netatalk/uams/uams_passwd.a
 libexec/netatalk/uams/uams_passwd.la
-libexec/netatalk/uams/uams_passwd.so
-libexec/netatalk/uams/uams_randnum.a
 libexec/netatalk/uams/uams_randnum.la
-libexec/netatalk/uams/uams_randnum.so
 man/man1/achfile.1
 man/man1/acleandir.1
 man/man1/aecho.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/21 17:13:35 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:44 jlam Exp $
 bin/cddb-slave2-properties
 bin/gnome-audio-profiles-properties
 bin/gnome-cd
@@ -13,19 +13,9 @@ include/gnome-media/profiles/audio-profile.h
 include/gnome-media/profiles/audio-profiles-edit.h
 include/gnome-media/profiles/gnome-media-profiles.h
 lib/bonobo/servers/GNOME_Media_CDDBSlave2.server
-lib/libcddb-slave2.a
 lib/libcddb-slave2.la
-lib/libcddb-slave2.so
-lib/libcddb-slave2.so.0
-lib/libcddb-slave2.so.0.0
-lib/libglade/2.0/libgnome-media-profiles.a
 lib/libglade/2.0/libgnome-media-profiles.la
-lib/libglade/2.0/libgnome-media-profiles.so
-lib/libgnome-media-profiles.a
 lib/libgnome-media-profiles.la
-lib/libgnome-media-profiles.so
-lib/libgnome-media-profiles.so.0
-lib/libgnome-media-profiles.so.0.0
 lib/pkgconfig/gnome-media-profiles.pc
 libexec/CDDBSlave2
 libexec/cddb-track-editor

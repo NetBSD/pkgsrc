@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/27 22:45:37 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:43 jlam Exp $
 bin/blccc
 lib/blccc/modules/libtest.la
-lib/blccc/modules/libtest.so
 share/blccc/playlist.dtd
 share/examples/blccc/config.xml
 share/examples/blccc/loveletters.xml

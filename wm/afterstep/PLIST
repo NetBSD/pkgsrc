@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:55 jlam Exp $
 bin/ASSound
 bin/Animate
 bin/Audio
@@ -23,26 +23,10 @@ bin/asetroot
 bin/importasmenu
 bin/installastheme.pl
 bin/makeastheme.pl
-lib/libafterstep.a
 lib/libafterstep.la
-lib/libafterstep.so
-lib/libafterstep.so.1
-lib/libafterstep.so.1.5
-lib/libasConfig.a
 lib/libasConfig.la
-lib/libasConfig.so
-lib/libasConfig.so.1
-lib/libasConfig.so.1.0
-lib/libasimage.a
 lib/libasimage.la
-lib/libasimage.so
-lib/libasimage.so.1
-lib/libasimage.so.1.9
-lib/libWidgets.a
 lib/libWidgets.la
-lib/libWidgets.so
-lib/libWidgets.so.1
-lib/libWidgets.so.1.5
 man/man1/Animate.1
 man/man1/Audio.1
 man/man1/Banner.1

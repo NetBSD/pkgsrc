@@ -1,13 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/27 09:30:01 skrll Exp $
-lib/b3style.a
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:43 jlam Exp $
 lib/b3style.la
-lib/b3style.so
-lib/ksgistyle.a
 lib/ksgistyle.la
-lib/ksgistyle.so
-lib/kstephighcolor.a
 lib/kstephighcolor.la
-lib/kstephighcolor.so
 share/kde/apps/kstyle/themes/b3.themerc
 share/kde/apps/kstyle/themes/ksgistyle.themerc
 share/kde/apps/kstyle/themes/kstep-highcolor.themerc

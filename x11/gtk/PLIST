@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/03/11 15:49:49 seb Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/09/22 08:09:58 jlam Exp $
 bin/gtk-config
 share/gtk/gtkrc.az
 share/gtk/gtkrc.be
@@ -171,15 +171,7 @@ include/gtk-1.2/gtk/gtklayout.h
 include/gtk-1.2/gtk/gtkplug.h
 include/gtk-1.2/gtk/gtksocket.h
 include/gtk-1.2/gtk/gtkthemes.h
-lib/libgdk.so
-lib/libgdk.so.12
-lib/libgdk.so.12.10
-lib/libgdk.a
 lib/libgdk.la
-lib/libgtk.so
-lib/libgtk.so.12
-lib/libgtk.so.12.10
-lib/libgtk.a
 lib/libgtk.la
 lib/pkgconfig/gdk.pc
 lib/pkgconfig/gtk+.pc

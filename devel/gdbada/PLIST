@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/03 11:16:42 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:25 jlam Exp $
 gdbada/bin/gdb
 gdbada/include/ansidecl.h
 gdbada/include/bfd.h
@@ -30,11 +30,9 @@ gdbada/info/stabs.info-1
 gdbada/info/stabs.info-2
 gdbada/info/stabs.info-3
 gdbada/info/stabs.info-4
-gdbada/lib/libbfd.a
 gdbada/lib/libbfd.la
 gdbada/lib/libiberty.a
 gdbada/lib/libmmalloc.a
-gdbada/lib/libopcodes.a
 gdbada/lib/libopcodes.la
 gdbada/man/man1/gdb.1
 @dirrm gdbada/man/man1

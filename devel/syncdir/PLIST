@@ -1,6 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/15 00:45:50 schmonz Exp $
-lib/libsyncdir.a
+@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:30 jlam Exp $
 lib/libsyncdir.la
-lib/libsyncdir.so
-lib/libsyncdir.so.1
-lib/libsyncdir.so.1.0
