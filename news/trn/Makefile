@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 22:52:11 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/08/08 12:41:25 wiz Exp $
 
-DISTNAME=		trn4-test74
-PKGNAME=		trn-4.74
-PKGREVISION=		1
+DISTNAME=		trn-4.0-test76
+PKGNAME=		trn-4.76
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=trn/} \
 			ftp://trn.sourceforge.net/pub/trn/
