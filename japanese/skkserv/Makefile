@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/09 03:52:51 itohy Exp $
 
 DISTNAME=	skk9.6
-PKGNAME=	skkserv-3.9.4
+PKGNAME=	skkserv-3.9.4nb1
 WRKSRC=		${WRKDIR}/skk-9.6
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://skk.kuis.kyoto-u.ac.jp/skk/9.6/
@@ -19,8 +19,19 @@ GNU_CONFIGURE=	YES
 INSTALL_FILE=	${WRKDIR}/INSTALL
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
-SKKSERV_UID?=	32767
-SKKSERV_GID?=	32766
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == "SunOS")
+.if exists(/usr/ccs)
+SKKSERV_UID?=	60002		# noaccess
+SKKSERV_GID?=	60002		# noaccess
+.else
+SKKSERV_UID?=	65534		# nobody
+SKKSERV_GID?=	65534		# nogroup
+.endif
+.endif
+SKKSERV_UID?=	32767		# nobody
+SKKSERV_GID?=	32766		# nogroup
 MAKE_ENV=	MAKE_FLAGS='SKKUID=${SKKSERV_UID} SKKGID=${SKKSERV_GID}'
 
 # tmp for building dictionary.  ~16MB required.  mfs would be much faster.

@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
+$NetBSD: patch-ag,v 1.2 2000/11/09 03:52:51 itohy Exp $
 
 --- jisyo-tools/skkdic-expr.c.orig	Tue Dec 17 14:51:28 1996
-+++ jisyo-tools/skkdic-expr.c	Tue Dec 21 20:37:29 1999
-@@ -78,41 +78,62 @@
++++ jisyo-tools/skkdic-expr.c	Mon Nov  6 01:34:22 2000
+@@ -78,59 +78,86 @@
  	}
  }
  
@@ -66,6 +66,10 @@ $NetBSD: patch-ag,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
      }
  }
  
++#ifndef O_EXCL
++#define O_EXCL	0
++#endif
++
  /* データベースファイルを作成 */
 -static void db_make_files()
 +static void db_make_files(tmpdir)
@@ -73,6 +77,7 @@ $NetBSD: patch-ag,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
  {
 -    sprintf(file_name, "/tmp/skkjisyo.%d", getpid());
 +    int pid = getpid();
++    int fd;
 +
 +    sprintf(file_name, "%s/skkjisyo.%d", tmpdir, pid);
      if (okurigana_flag) {
@@ -83,7 +88,30 @@ $NetBSD: patch-ag,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
      }
      
      db_remove_files();
-@@ -698,7 +719,7 @@
+-    if ((db = dbm_open(file_name, O_RDWR|O_CREAT, 0600)) == NULL){
++    if ((db = dbm_open(file_name, O_RDWR|O_CREAT|O_EXCL, 0600)) == NULL){
+ 	perror(file_name);
+ 	exit(1);
+     }
+-    if ((dbcontent = fopen(file_name, "w+")) == NULL){
++    if ((fd = open(file_name, O_RDWR|O_CREAT|O_EXCL, 0600)) < 0 ||
++	(dbcontent = fdopen(fd, "w+")) == NULL){
+ 	perror(file_name);
+ 	exit(1);
+     }
+     if (okurigana_flag) {
+-	if ((okuriheaddb = dbm_open(okuri_head_name, O_RDWR|O_CREAT, 0600)) 
++	if ((okuriheaddb = dbm_open(okuri_head_name, O_RDWR|O_CREAT|O_EXCL, 0600)) 
+ 	    == NULL){
+ 	    perror(okuri_head_name);
+ 	    exit(1);
+ 	}
+-	if ((okuritaildb = dbm_open(okuri_tail_name, O_RDWR|O_CREAT, 0600)) 
++	if ((okuritaildb = dbm_open(okuri_tail_name, O_RDWR|O_CREAT|O_EXCL, 0600)) 
+ 	    == NULL){
+ 	    perror(okuri_tail_name);
+ 	    exit(1);
+@@ -698,7 +725,7 @@
      for (key = dbm_firstkey(db); key.dptr !=  NULL;  key = dbm_nextkey(db)) {
  	content = dbm_fetch(db, key);
  	for(i = 0; i < key.dsize; ++ i)
@@ -92,7 +120,7 @@ $NetBSD: patch-ag,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
  	putc(' ', output);
  	fseek(dbcontent, getpos(content.dptr), 0);
  	db_gets(kanji, BLEN, dbcontent);
-@@ -716,7 +737,7 @@
+@@ -716,7 +743,7 @@
  	    if (entry.dptr != NULL) continue;
  
  	    for(i = 0; i < key.dsize; ++ i)
@@ -101,7 +129,7 @@ $NetBSD: patch-ag,v 1.1.1.1 1999/12/24 03:19:23 itohy Exp $
  	    putc(' ', output);
  	    putc('/', output);
  	    okuri_type_out(&key, output);
-@@ -775,9 +796,8 @@
+@@ -775,9 +802,8 @@
  	exit(1);
      }
  
