@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.21 2001/12/19 10:29:11 agc Exp $
+# $NetBSD: defs.Linux.mk,v 1.22 2002/01/19 21:29:41 agc Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -36,11 +36,13 @@ MV?=		/bin/mv
 PATCH?=		/usr/bin/patch
 PAX?=		${ZOULARISBASE}/bin/pax
 PKGLOCALEDIR?=	share
+PS?=		/bin/ps
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
 SED?=		/bin/sed
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
+SHLOCK=		${LOCALBASE}/bin/shlock
 .if exists(/bin/sort)
 SORT?=		/bin/sort
 .else

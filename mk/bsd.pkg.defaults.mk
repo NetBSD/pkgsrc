@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.32 2002/01/11 14:41:42 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.33 2002/01/19 21:29:41 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -30,6 +30,24 @@
 # use machine-specific object directories, e.g.  work.i386, work.sparc
 # Possible: defined, not defined
 # Default: not defined
+
+PKGSRC_LOCKTYPE?= none
+# The type of locking which will be done if competing processes attempt to
+# do work on one package directory simultaneously.
+# + Locking requires that OBJHOSTNAME is set.
+# + Locking may require the pkgsrc/pkgtools/shlock package to be installed
+#   on certain OS types.
+# + Sleep locking means that the process will sleep for ${PKGSRC_SLEEPSECS}
+#   seconds, then try to acquire the lock, and sleeping again if it's not
+#   available.
+# + Once locking will try once to acquire the lock, and then fail.
+# Possible: none, sleep, once
+# Default: none
+
+PKGSRC_SLEEPSECS?= 5
+# The number of seconds to wait when PKGSRC_LOCKTYPE is sleep
+# Possible: a positive integer
+# Default: 5
 
 #USETBL=
 # Run raw manual pages through tbl(1) before piping through troff(1)
