@@ -1,0 +1,53 @@
+$NetBSD: patch-ab,v 1.8 2000/10/20 11:03:38 abs Exp $
+
+--- ntop.c.orig	Wed Apr 28 18:49:00 1999
++++ ntop.c
+@@ -254,7 +254,7 @@
+   initIPServices();
+ 
+ #ifndef WIN32
+-  while ((op = getopt(argc, argv, "df:F:hr:i:p:l:nw:m:")) != EOF)
++  while ((op = getopt(argc, argv, "df:F:hr:i:p:l:nm:")) != EOF)
+     switch (op) {
+ 
+ #ifndef WIN32
+@@ -324,6 +324,7 @@
+       numericFlag++;
+       break;
+ 
++#if 0
+     case 'w':
+       if(!isdigit(optarg[0])) {
+ 	printf("FATAL ERROR: flag -w expects a numeric argument.\n");
+@@ -332,6 +333,7 @@
+       webMode++;
+       webPort = atoi(optarg);
+       break;
++#endif
+ 
+     default:
+       usage(0);
+@@ -392,7 +394,7 @@
+ #ifndef WIN32
+   /* Determine the device name if not specified */
+   if (device == NULL && (device = pcap_lookupdev(ebuf)) == NULL) {
+-    printf(ebuf);
++    printf("%s", ebuf);
+     return(-1);
+   }
+ 
+@@ -426,12 +428,12 @@
+   }
+ 
+   if (pcapPtr == NULL) {
+-    printf(ebuf);
++    printf("%s", ebuf);
+     return(-1);
+   }
+ 
+   if (pcap_lookupnet(device, &localnet, &netmask, ebuf) < 0) {
+-    printf(ebuf);
++    printf("%s", ebuf);
+     return(-1);
+   }
+ #else /* WIN32 */
