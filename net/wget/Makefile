@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/07/16 11:01:10 itojun Exp $
+# $NetBSD: Makefile,v 1.35 2001/07/17 10:56:57 jlam Exp $
 
 DISTNAME=	wget-1.7
 CATEGORIES=	net
@@ -17,8 +17,8 @@ USE_BUILDLINK_ONLY=	yes
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_LIBINTL=	yes
 MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
+MAKE_FLAGS+=	LDFLAGS="${LDFLAGS}"
 
 INFO_FILES=	wget.info
 
