@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.840 2002/12/19 14:05:06 grant Exp $
+$NetBSD: CHANGES,v 1.841 2002/12/19 14:41:23 grant Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4011,3 +4011,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added xaric-0.12.0 [grant 2002-12-19]
 	Added gpaint-0.2 [grant 2002-12-19]
 	Updated sysbuild to 1.6 [jmmv 2002-12-19]
+	Added gimageview-0.2.10 [grant 2002-12-19]
