@@ -1,0 +1,7 @@
+Information about Roundup can be found in the documentation directory:
+	${LOCALBASE}/share/doc/roundup
+
+To install a new Roundup tracker, refer to the instructions in:
+	${LOCALBASE}/share/doc/roundup/installation.txt
+(`Basic Installation Step 1.' has already been performed by
+installing this package; work from Step 2. onwards.)
