@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/14 05:13:04 kei Exp $
+
+--- htmllint.cgi.orig	Wed Jan 24 10:05:18 2001
++++ htmllint.cgi	Wed Jan 24 10:08:51 2001
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!@PREFIX@/bin/perl
+ 
+ # CGI script for Another HTML-lint gateway ###################
+ 
