@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.30 2004/07/14 13:37:09 wiz Exp $
+# $NetBSD: java-vm.mk,v 1.31 2004/07/28 21:15:38 tv Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -81,7 +81,7 @@ _PKG_JVM_DEFAULT?=	kaffe
 _ONLY_FOR_PLATFORMS.jdk= \
 	NetBSD-*-i386 Linux-*-i[3-6]86
 _ONLY_FOR_PLATFORMS.jdk12= \
-	NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386
+	NetBSD-1.[4-9]*-i386 NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.jdk13= \
 	NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.jdk14= \
@@ -221,7 +221,7 @@ _JDK_PKGSRCDIR=		../../lang/jdk
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.1.8
 .elif ${_PKG_JVM} == "jdk12"
-_JDK_PKGSRCDIR=		../../wip/jdk12
+_JDK_PKGSRCDIR=		../../lang/jdk12
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.2.2
 .elif ${_PKG_JVM} == "jdk13"
