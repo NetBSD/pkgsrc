@@ -1,0 +1,23 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/08/06 00:48:14 seb Exp $
+
+--- configure.in.orig	Thu May 16 10:32:33 2002
++++ configure.in
+@@ -781,9 +781,6 @@ dnl
+ #                    All rights reserved
+ #
+ 
+-# So many systems seem to need this that it is better do it here automatically.
+-LIBS="-L/usr/local/lib $LIBS"
+-
+ # Platform-specific stuff.
+ case "$target" in
+   alpha*-dec-osf*)
+@@ -1779,6 +1776,8 @@ fi
+ if test -z "$no_libbsd"; then
+   AC_CHECK_LIB(bsd, openpty)
+ fi
++AC_CHECK_LIB(util, openpty, LIBS="$LIBS -lutil"
++			    pty="openpty")
+ AC_CHECK_LIB(util, login, AC_DEFINE(HAVE_LIBUTIL_LOGIN)
+ 			  LIBS="$LIBS -lutil")
+ 

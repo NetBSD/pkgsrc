@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/08/06 00:48:10 seb Exp $
+
+SHA1 (ssh-3.2.0.tar.gz) = 13cefe3d4a890004a37b680b00bc119542247c16
+Size (ssh-3.2.0.tar.gz) = 2256240 bytes
+SHA1 (patch-aa) = eeec9d05b2360fe971a397cf53795caf3fd47bfb
+SHA1 (patch-ab) = 5e4d66e3f8f3f13c9f3926d181e2a1a568c20b4b
+SHA1 (patch-ac) = b87e967252b1eaafc6e6b7ee95d8e09550957bff
+SHA1 (patch-ad) = b6944222c0b84d5f906ad019b5260fb19ee299d9
+SHA1 (patch-ae) = 0132993883abca365175116c2e9769bcfa35cc1f
+SHA1 (patch-af) = 0b42b41e4300bcae167dadadf13e310d3f893433
+SHA1 (patch-ag) = 5990115dc53a9278f171158df1dcdd4754080e90
+SHA1 (patch-ah) = 5a4314cf70463638d18599dcb3fddbbc19d52b2a
