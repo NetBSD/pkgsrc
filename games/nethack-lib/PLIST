@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:54:20 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/22 17:26:24 pooka Exp $
 bin/nethack
 bin/recover
 man/man6/nethack.6
@@ -29,6 +29,12 @@ share/nethackdir/tower1.lev
 share/nethackdir/sanctum.lev
 share/nethackdir/orcus.lev
 share/nethackdir/oracle.lev
+share/nethackdir/minetn-7.lev
+share/nethackdir/minetn-6.lev
+share/nethackdir/minetn-5.lev
+share/nethackdir/minetn-4.lev
+share/nethackdir/minetn-3.lev
+share/nethackdir/minend-3.lev
 share/nethackdir/minetn-2.lev
 share/nethackdir/minetn-1.lev
 share/nethackdir/minefill.lev

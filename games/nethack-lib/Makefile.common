@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.5 2001/04/21 13:09:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2002/03/22 17:26:24 pooka Exp $
 #
 
-NETHACK_VERSION=	3.3.1
-NETHACK_DISTVER=	331
+NETHACK_VERSION=	3.4.0
+NETHACK_DISTVER=	340
 
 DISTNAME=		nethack-${NETHACK_DISTVER}
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.nethack.org/pub/nethack/nh331/src/
+MASTER_SITES=		ftp://ftp.nethack.org/pub/nethack/nh340/src/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pooka@netbsd.org
@@ -25,6 +25,7 @@ pre-configure:
 post-patch:
 	@${MV} ${WRKSRC}/include/config.h ${WRKSRC}/config.h-pre
 	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@g'				\
-		-e 's|@GZIP_PROGRAM@|'`${ECHO} ${GZIP_CMD} | ${AWK} '{ print $$1 }'`'|g' \
+		-e 's|@GZIP_PROGRAM@|'`${ECHO} ${GZIP_CMD}		\
+		| ${AWK} '{ print $$1 }'`'|g'				\
 		< ${WRKSRC}/config.h-pre > ${WRKSRC}/include/config.h
 	@${RM} -f ${WRKSRC}/config.h-pre
