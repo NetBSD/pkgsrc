@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3696 2003/10/16 12:08:37 grant Exp $
+$NetBSD: CHANGES,v 1.3697 2003/10/16 12:41:03 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4205,3 +4205,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated createbuildlink to 2.8 [salo 2003-10-15]
 	Updated sylpheed to 0.9.7 [chris 2003-10-16]
 	Updated nbsed to 20031016 [grant 2003-10-16]
+	Updated silc-client to 0.9.13 [salo 2003-10-16]
+	Updated silc-server to 0.9.14 [salo 2003-10-16]
+	Updated silc-client-icb to 0.14nb2 [salo 2003-10-16]
