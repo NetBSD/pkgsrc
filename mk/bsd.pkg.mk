@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.390 2000/01/11 13:59:28 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.391 2000/01/13 17:40:42 jwise Exp $
 #
 # This file is in the public domain.
 #
@@ -75,6 +75,24 @@ PATCHDIR?=		${.CURDIR}/patches
 SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}/pkg
+
+.if defined(USE_JAVA)
+BUILD_DEFS+=		PKG_JVM JAVA_HOME
+.if !defined(PKG_JVM)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386} != ""
+PKG_JVM?=		jdk
+.else
+PKG_JVM?=		kaffe
+.endif
+.endif
+.if ${PKG_JVM} == "jdk"
+DEPENDS+=		jdk-1.1.*:${PKGSRCDIR}/lang/jdk
+JAVA_HOME?=		${LOCALBASE}/java
+.elif ${PKG_JVM} == "kaffe"
+DEPENDS+=		kaffe-[0-9]*:${PKGSRCDIR}/lang/kaffe
+JAVA_HOME?=		${LOCALBASE}/kaffe
+.endif
+.endif
 
 .if defined(USE_MOTIF)
 .if defined(USE_LOCALBASE_FOR_X11)
