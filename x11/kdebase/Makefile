@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.55 1999/11/14 22:54:30 tron Exp $
+# $NetBSD: Makefile,v 1.56 1999/11/15 00:34:53 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
 CATEGORIES=	x11 kde
 MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/
+		ftp://ftp.de.kde.org/pub/kde/stable/1.1.2/distribution/tar/generic/source/bz2/ \
+		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png 
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://www.kde.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
@@ -31,6 +33,7 @@ CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
 		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib"
 
+EXTRACT_ONLY=	${DISTNAME}.tar.bz2
 PLIST_SRC=	${WRKDIR}/PLIST
 PLIST_DIRS=	share/kde/applnk share/kde/apps/kappfinder \
 		share/kde/apps/kdisknav share/kde/icons share/kde/mimelnk
@@ -65,6 +68,6 @@ post-install:
 		<kdmrc.new >kdmrc ; \
 	${ECHO} 'LogoPixmap=${PREFIX}/share/kde/icons/Daemon.png' >>kdmrc ; \
 	${RM} kdmrc.new
-	${INSTALL_DATA} ${FILESDIR}/Daemon.png ${PREFIX}/share/kde/icons/Daemon.png
+	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/kde/icons
 
 .include "../../mk/bsd.pkg.mk"
