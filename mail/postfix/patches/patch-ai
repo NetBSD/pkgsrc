@@ -1,0 +1,27 @@
+$NetBSD: patch-ai,v 1.8 2004/01/23 12:03:44 martti Exp $
+
+--- makedefs.orig	2003-11-05 21:50:15.000000000 +0200
++++ makedefs	2004-01-23 13:56:57.000000000 +0200
+@@ -175,22 +175,6 @@
+ 		SYSLIBS="-ldb"
+ 		;;
+     Linux.2*)	SYSTYPE=LINUX2
+-		# Postfix no longer needs DB 1.85 compatibility
+-		if [ -f /usr/include/db.h ]
+-		then
+-		    : we are all set
+-		elif [ -f /usr/include/db/db.h ]
+-		then
+-		    CCARGS="$CCARGS -I/usr/include/db"
+-		else
+-		    # No, we're not going to try db1 db2 db3 etc.
+-		    # On a properly installed system, Postfix builds
+-		    # by including <db.h> and by linking with -ldb
+-		    echo "No <db.h> include file found." 1>&2
+-		    echo "Install the appropriate db*-devel package first." 1>&2
+-		    echo "See the RELEASE_NOTES file for more information." 1>&2
+-		    exit 1
+-		fi
+ 		# GDBM locks the DBM .pag file after open. This breaks postmap.
+ 		# if [ -f /usr/include/gdbm-ndbm.h ]
+ 		# then
