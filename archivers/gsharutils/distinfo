@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:10:23 agc Exp $
+MD5 (sharutils-4.2.1.tar.gz) = b8ba1d409f07edcb335ff72a27bd9828
+SHA1 (patch-aa) = 654641dee00efc19771546cf1753d1025c18d9be
+SHA1 (patch-ab) = 581d5bfb85c15cc85aaa4974e616990fcb6fc449
+SHA1 (patch-ac) = 76bf1dedc34a462dd05a55511d9caf578cae78d0
+SHA1 (patch-ad) = fe6ba534c9830294c97dd37586aaa2c63d385a4c
+SHA1 (patch-ae) = 8b88d98af2d1f24ba2623e8d56b36061806f5e12
+SHA1 (patch-af) = 50aee8dc24a33892a0f17f7aeb5cfbae1adcb0c9
+SHA1 (patch-ag) = 3c996cc7fa9c40ca3fbe80980a31257238f4844f
