@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1 2001/07/24 01:08:11 taya Exp $
+
+diff -ru ../Orig/galeon-0.11.2/src/MyportalProtocolHandler.cpp ./src/MyportalProtocolHandler.cpp
+--- ../Orig/galeon-0.11.2/src/MyportalProtocolHandler.cpp	Sun Jul 22 17:55:44 2001
++++ ./src/MyportalProtocolHandler.cpp	Tue Jul 24 02:32:20 2001
+@@ -125,9 +125,9 @@
+ 	nsresult rv = NS_OK;
+ 	nsCOMPtr <nsIURI> newUri;
+ 
+-	rv = nsComponentManager::CreateInstance(kSimpleURICID, NULL,
+-						NS_GET_IID(nsIURI),
+-						getter_AddRefs(newUri));
++	rv = nsComponentManager::CreateInstance(kSimpleURICID, (nsISupports *)NULL,
++						(const nsIID &)NS_GET_IID(nsIURI),
++						(void **)getter_AddRefs(newUri));
+ 
+         if (NS_SUCCEEDED(rv)) 
+         {
