@@ -1,0 +1,17 @@
+In order to use afterstep.. create a directory called 
+~/GNUstep/Library/AfterStep and issue the command:
+
+cp -R /usr/X11R6/share/afterstep/* ~/GNUstep/Library/AfterStep
+
+Replacing /usr/X11R6 with the location of your X tree or installation
+base dir (if different).
+
+Then place afterstep in your .xinitrc or .xsession file, replacing your
+current window manager.
+
+More information about using afterstep is available at:
+
+http://www.afterstep.org/www.afterstep.org/afterstep.faq/
+afterstep.faq.1.4.5.html
+
+and http://www.afterstep.org

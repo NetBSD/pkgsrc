@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 1998/08/23 07:28:45 garbled Exp $
+--- configure.h.orig	Tue Aug 18 13:58:00 1998
++++ configure.h	Tue Aug 18 14:02:00 1998
+@@ -10,5 +10,5 @@
+ 
+-#define AFTER_BIN_DIR	BINDIR=/usr/X11R6/bin
+-#define AFTER_MOD_DIR	"/usr/X11R6/bin/"
+-#define AFTER_MAN_DIR	MANDIR=/usr/X11R6/man/man1
++#define AFTER_BIN_DIR	BINDIR=###x11###/bin
++#define AFTER_MOD_DIR	"###x11###/bin/"
++#define AFTER_MAN_DIR	MANDIR=###x11###/man/man1
+ 
+@@ -16,5 +16,5 @@
+ 
+-#define AFTER_BPMDIR	"/usr/X11R6/include/X11/bitmaps"
+-#define AFTER_XPMDIR	"/usr/X11R6/include/X11/pixmaps"
+-#define AFTER_SHAREDIR	"/usr/share/afterstep"
++#define AFTER_BPMDIR	"###x11###/share/bitmaps"
++#define AFTER_XPMDIR	"###x11###/share/pixmaps"
++#define AFTER_SHAREDIR	"###x11###/share/afterstep"
+ 
+@@ -54,3 +54,3 @@
+ 
+-#define XIMAGELOADER  "xli -onroot -quiet -colors 20"
++#define XIMAGELOADER  "xv -rmode 5 -root -quit"
+ 
+@@ -176,3 +176,3 @@
+ #define XPM
+-#define XPMLIBRARY -L/usr/X11R6/lib -lXpm
++#define XPMLIBRARY -L###x11###/lib -lXpm
+ 

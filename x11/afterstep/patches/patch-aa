@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 1998/08/23 07:28:45 garbled Exp $
+--- Imakefile.orig	Tue Apr  7 09:20:58 1998
++++ Imakefile	Tue Aug 18 16:40:59 1998
+@@ -18,3 +18,2 @@
+ 	apps/ascd \
+-	apps/asclock \
+ 	apps/asfsm \
+@@ -22,4 +21,2 @@
+ 	apps/asmail \
+-	apps/asmix \
+-	apps/asmixer \
+ 	apps/asprint \
+@@ -41,2 +38,5 @@
+ 	modules/Zharf
++# the following are broken WRT NetBSD
++#	apps/asmix \
++#	apps/asmixer \
+ 
+@@ -45,4 +45,3 @@
+ install::
+-	mv /usr/share/afterstep/ /usr/share/oldafterstep
+-	cp -R afterstep /usr/share/afterstep
++	cp -R afterstep $(PREFIX)/share/afterstep
+ 
