@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/08/25 21:51:21 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/19 10:54:59 rh Exp $
 
 DISTNAME=	xml-i18n-tools-0.9
 CATEGORIES=	textproc gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/xml-i18n-tools/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/xml-i18n-tools/0.9/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://news.gnome.org/gnome-news/979851911/

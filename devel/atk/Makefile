@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/09/11 11:42:11 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/19 10:54:43 rh Exp $
 #
 
 DISTNAME=		atk-1.0.3
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \
 			http://www.ameth.org/gimp/pub/gtk/v2.0/ \
-			${MASTER_SITE_GNOME:=stable/sources/atk/}
+			${MASTER_SITE_GNOME:=sources/atk/1.0/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://developer.gnome.org/projects/gap/

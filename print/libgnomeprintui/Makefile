@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/12 04:28:27 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/19 10:54:57 rh Exp $
 #
 
 DISTNAME=		libgnomeprintui-1.116.0
 CATEGORIES=		print gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=2.0.1/sources/libgnomeprintui/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprintui/1.116/}
 
 MAINTAINER=		jmmv@hispabsd.org
 HOMEPAGE=		http://www.levien.com/gnome/print-arch.html

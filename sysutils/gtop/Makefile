@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2002/03/13 17:37:43 fredb Exp $
+# $NetBSD: Makefile,v 1.20 2002/10/19 10:54:57 rh Exp $
 
 DISTNAME=		gtop-1.0.13
 PKGREVISION=		1
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gtop/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtop/1.0/}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/

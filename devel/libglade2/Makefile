@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2002/09/10 16:06:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/19 10:54:50 rh Exp $
 #
 
 DISTNAME=		libglade-2.0.1
 PKGNAME=		libglade2-2.0.1
 PKGREVISION=		1
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=2.0.1/sources/libglade/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.0/}
 
 MAINTAINER=		jmmv@hispabsd.org
 HOMEPAGE=		http://www.daa.com.au/~james/gnome/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2002/08/25 18:40:33 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2002/10/19 10:55:02 rh Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		3
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.2/ \
 			http://www.ameth.org/gimp/pub/gtk/v1.2/ \
-			${MASTER_SITE_GNOME:=stable/sources/gtk/}
+			${MASTER_SITE_GNOME:=sources/gtk/1.2/}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gtk.org/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2002/10/08 18:50:18 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/19 10:54:52 rh Exp $
 
 DISTNAME=		dia-0.90
 # PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/dia/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/dia/0.90/}
 
 MAINTAINER=		jmcneill@invisible.yi.org
 HOMEPAGE=		http://www.lysator.liu.se/~alla/dia/

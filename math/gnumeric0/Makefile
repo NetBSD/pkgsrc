@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2002/09/23 20:51:51 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/19 10:54:55 rh Exp $
 #
 
 DISTNAME=		gnumeric-0.75
 PKGREVISION=		4
 CATEGORIES=		math gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/0.75/}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/gnumeric/
