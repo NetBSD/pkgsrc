@@ -3,7 +3,7 @@
 # Date created:         29 January 1998
 # Whom:                 Bernd Sieker <bsieker@techfak.uni-bielefeld.de>
 #
-# $NetBSD: Makefile,v 1.6 1998/02/24 15:08:26 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/03/11 10:10:31 frueauf Exp $
 
 DISTNAME=	gimp-0.99.18
 CATEGORIES=	graphics
@@ -70,7 +70,7 @@ pre-install:
 	@if [ ! -f ${PREFIX}/info/dir ]; then \
 	  ${SED} -ne '1,/Menu:/p' ${LOCALBASE}/info/dir > ${PREFIX}/info/dir; \
 	 fi
-	@${SED} -e 's|\$${LOCALBASE}|'${LOCALBASE}'|g' < pkg/PLIST > ${PLIST_SRC}
+	@${SED} -e 's|\$${LOCALBASE}|'${LOCALBASE}'|g' < ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 post-install:
 	install-info ${PREFIX}/info/pdb.info   ${PREFIX}/info/dir
