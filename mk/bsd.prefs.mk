@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.158 2004/04/04 07:09:38 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.159 2004/04/25 22:42:51 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -235,6 +235,7 @@ APPEND_ELF=		elf
 .  endif
 .endif
 
+PKGDIRMODE?=		755
 SHAREOWN?=		${DOCOWN}
 SHAREGRP?=		${DOCGRP}
 SHAREMODE?=		${DOCMODE}
