@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.428 2003/09/27 08:15:16 grant Exp $
+# $NetBSD: Makefile,v 1.429 2003/10/05 09:30:49 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -375,6 +375,7 @@ SUBDIR+=	ruby-rd-mode
 SUBDIR+=	ruby-readline
 SUBDIR+=	ruby-ri
 SUBDIR+=	ruby-strscan
+SUBDIR+=	ruby-testunit
 SUBDIR+=	ruby-textbuf
 SUBDIR+=	ruby-unit
 SUBDIR+=	ruby-zlib
