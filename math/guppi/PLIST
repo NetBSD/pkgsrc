@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2002/09/24 19:36:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2002/10/04 23:40:56 wiz Exp $
 ${GNUMERIC}bin/guppi-gnumeric
 include/gnome-1.0/libguppi/gnan.h
 include/gnome-1.0/libguppi/guppi-2d.h
@@ -159,6 +159,7 @@ lib/guppi/plug-ins/${PKGVERSION}/plot/image/guppi_image.la
 lib/guppi/plug-ins/${PKGVERSION}/plot/image/guppi_image.so
 lib/guppi/plug-ins/${PKGVERSION}/plot/image/image.plugin
 lib/guppi/plug-ins/${PKGVERSION}/plot/legend/guppi_legend.a
+lib/guppi/plug-ins/${PKGVERSION}/plot/legend/guppi_legend.la
 lib/guppi/plug-ins/${PKGVERSION}/plot/legend/guppi_legend.so
 lib/guppi/plug-ins/${PKGVERSION}/plot/legend/legend.plugin
 lib/guppi/plug-ins/${PKGVERSION}/plot/linechart/guppi_linechart.a
