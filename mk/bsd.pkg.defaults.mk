@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.57 2002/05/05 17:52:24 kei Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.58 2002/05/07 17:50:38 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -48,6 +48,23 @@ PKGSRC_SLEEPSECS?= 5
 # The number of seconds to wait when PKGSRC_LOCKTYPE is sleep
 # Possible: a positive integer
 # Default: 5
+
+PKGSRC_USE_REPLACE?= no
+# When building and installing pre-requisite packages, determine if the
+# experimental "replace" target should be used.
+# Possible: yes, no
+# Default: no
+
+PKG_VIEWS?= no
+# Use package views - i.e. a layer of indirection, and a number of symlinks
+# to point to the real location of the package
+# Possible: yes, no
+# Default: no
+
+INSTALLATION_TYPE?= overwrite
+# Use overwrite installations, or stage them in a working area
+# Possible: overwrite, staged
+# Default: overwrite
 
 #USETBL=
 # Run raw manual pages through tbl(1) before piping through troff(1)
