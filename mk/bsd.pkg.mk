@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1478 2004/07/27 09:57:57 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1479 2004/07/27 10:34:53 xtraeme Exp $
 #
 # This file is in the public domain.
 #
@@ -1414,12 +1414,8 @@ package:
 
 # Resume a previous transfer not finished totally.
 _RESUME_TRANSFER=							\
-	dsize=`${LS} -l ${_DISTDIR}/$$bfile | ${AWK} '{print $$5}'`;	\
-	case "${DIST_SUBDIR}" in					\
-	"")	f=$$bfile ;;						\
-	*)	f="${DIST_SUBDIR}/$$bfile" ;;				\
-	esac;								\
-	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$f)\""' { print $$4 }' ${DISTINFO_FILE}` || ${TRUE}; \
+	dsize=`${WC} -c ${DISTDIR}/${DIST_SUBDIR}/$$bfile | ${AWK} '{print $$1}'`;	\
+	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$file)\""' { print $$4 }' ${DISTINFO_FILE}` || ${TRUE}; \
 	case "$$tsize" in						\
 	"")	${ECHO_MSG} "No size in distinfo file (${DISTINFO_FILE})"; \
 		break ;;						\
@@ -1428,15 +1424,24 @@ _RESUME_TRANSFER=							\
 		${ECHO_MSG} "===> Resume is not supported by ftp(1) using http/ftp proxies.";	\
 		break;							\
 	else								\
-		if ${TEST} "$$dsize" -ne "$$dsize"; then		\
-			for res_site in $$sites; do			\
-				${ECHO_MSG} "===> $$bfile not completed, resuming...";	\
-				cd ${_DISTDIR};				\
-				${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} $${res_site}$${bfile}; \
-				if [ $$? -eq 0 ]; then			\
-					break;				\
-				fi;					\
-			done;						\
+		if ${TEST} "$$dsize" -lt "$$tsize"; then		\
+			if ${TEST} "${FETCH_CMD:T}" != "ftp" -a 	\
+				-z "${FETCH_RESUME_ARGS}"; then		\
+				${ECHO_MSG} "=> Resume transfers are not supported, FETCH_RESUME_ARGS is empty."; \
+				break;					\
+			else						\
+				for res_site in $$sites; do			\
+					${ECHO_MSG} "===> $$bfile not completed, resuming...";	\
+					cd ${_DISTDIR};				\
+					${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} $${res_site}$${bfile}; \
+					if ${TEST} $$? -eq 0; then	\
+						break;			\
+					fi;				\
+				done;					\
+			fi;						\
+		elif ${TEST} "$$dsize" -gt "$$tsize"; then		\
+			${ECHO_MSG} "==> Downloaded file larger than the recorded size.";	\
+			break;						\
 		fi; 							\
 	fi
 
