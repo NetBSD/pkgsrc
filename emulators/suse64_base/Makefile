@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/12/09 21:34:58 tron Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/22 01:22:29 dillo Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.suse.com/pub/suse/discontinued/i386/update/${SUSE_VERSION}/a1/ \
 			${MASTER_SITE_SUSE:=a1/}
@@ -31,6 +31,8 @@ do-build:
 	         -e 's#@@EMULSUBDIR@@#${EMULSUBDIR}#g' \
 	    <$$FILE >${WRKDIR}/`basename $$FILE`; \
 	done
+	${SED} -e 's#@@VERSION@@#${SUSE_VERSION}#g' \
+	    <${FILESDIR}/SuSE-release >${WRKDIR}/SuSE-release
 
 do-install:
 	for FILE in ${WRKDIR}/*.sh; do \
@@ -42,6 +44,7 @@ do-install:
 	@${CP} ${WRKDIR}/PLIST ${PLIST_SRC}
 	${RPM2PKG} ${RPM2PKGARGS}
 	${ECHO} "@dirrm ${EMULSUBDIR}" >>${PLIST_SRC}
+	${INSTALL_DATA} ${WRKDIR}/SuSE-release ${EMULDIR}/etc
 	${INSTALL_DATA} ${FILESDIR}/ld.so.conf ${EMULDIR}/etc
 	${EMULDIR}/sbin/ldconfig -r ${EMULDIR}
 	${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" \
