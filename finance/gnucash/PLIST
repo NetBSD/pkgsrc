@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2003/07/13 22:32:11 mjl Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/12/11 22:57:37 jschauma Exp $
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnucash.mo
@@ -17,6 +18,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnucash.mo
@@ -83,6 +85,7 @@ include/gnucash/gnc-component-manager.h
 include/gnucash/gnc-currency-edit.h
 include/gnucash/gnc-date-delta.h
 include/gnucash/gnc-date-edit.h
+include/gnucash/gnc-date-format.h
 include/gnucash/gnc-dense-cal.h
 include/gnucash/gnc-engine-util.h
 include/gnucash/gnc-engine.h
@@ -111,6 +114,7 @@ include/gnucash/gnc-module-api.h
 include/gnucash/gnc-module.h
 include/gnucash/gnc-numeric.h
 include/gnucash/gnc-pricedb.h
+include/gnucash/gnc-query-list.h
 include/gnucash/gnc-report.h
 include/gnucash/gnc-session-scm.h
 include/gnucash/gnc-session.h
@@ -230,6 +234,11 @@ lib/gnucash/libgncmod-locale-reports-us.la
 lib/gnucash/libgncmod-locale-reports-us.so
 lib/gnucash/libgncmod-locale-reports-us.so.0
 lib/gnucash/libgncmod-locale-reports-us.so.0.0
+lib/gnucash/libgncmod-log-replay.a
+lib/gnucash/libgncmod-log-replay.la
+lib/gnucash/libgncmod-log-replay.so
+lib/gnucash/libgncmod-log-replay.so.0
+lib/gnucash/libgncmod-log-replay.so.0.0
 lib/gnucash/libgncmod-network-utils.a
 lib/gnucash/libgncmod-network-utils.la
 lib/gnucash/libgncmod-network-utils.so
@@ -386,6 +395,7 @@ share/aclocal/gnucash.m4
 share/doc/html/gnucash/Account_8h.html
 share/doc/html/gnucash/SchedXaction_8h.html
 share/doc/html/gnucash/Transaction_8h.html
+share/doc/html/gnucash/TransLog_8h.html
 share/doc/html/gnucash/annotated.html
 share/doc/html/gnucash/classes.html
 share/doc/html/gnucash/date_8h.html
@@ -394,6 +404,8 @@ share/doc/html/gnucash/doxygen.gif
 share/doc/html/gnucash/files.html
 share/doc/html/gnucash/functions.html
 share/doc/html/gnucash/globals.html
+share/doc/html/gnucash/gnc-hbci-trans-templ_8h.html
+share/doc/html/gnucash/gnc-log-replay_8h.html
 share/doc/html/gnucash/gnc-ofx-import_8h.html
 share/doc/html/gnucash/gnc-pricedb_8h.html
 share/doc/html/gnucash/gnc-ui-util_8h.html
@@ -468,6 +480,12 @@ share/gnucash/accounts/da/acctchrt_car.gnucash-xea
 share/gnucash/accounts/da/acctchrt_common.gnucash-xea
 share/gnucash/accounts/da/acctchrt_homeloan.gnucash-xea
 share/gnucash/accounts/da/acctchrt_homeown.gnucash-xea
+share/gnucash/accounts/de_CH/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/de_CH/acctchrt_chkmu.gnucash-xea
+share/gnucash/accounts/de_CH/acctchrt_common.gnucash-xea
+share/gnucash/accounts/de_CH/acctchrt_kids.gnucash-xea
+share/gnucash/accounts/de_CH/acctchrt_otherasset.gnucash-xea
+share/gnucash/accounts/de_CH/acctchrt_otherloan.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_auto.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_autoloan.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_brokerage.gnucash-xea
@@ -477,7 +495,9 @@ share/gnucash/accounts/de_DE/acctchrt_investment.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_kids.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_otherasset.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_otherloan.gnucash-xea
+share/gnucash/accounts/de_DE/acctchrt_skr04.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_studium.gnucash-xea
+share/gnucash/accounts/el_GR/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/el_GR/acctchrt_carloan.gnucash-xea
 share/gnucash/accounts/el_GR/acctchrt_common.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_brokerage.gnucash-xea
@@ -510,6 +530,19 @@ share/gnucash/accounts/fr_FR/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/it/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/it/acctchrt_carloan.gnucash-xea
+share/gnucash/accounts/it/acctchrt_checkbook.gnucash-xea
+share/gnucash/accounts/it/acctchrt_childcare.gnucash-xea
+share/gnucash/accounts/it/acctchrt_common.gnucash-xea
+share/gnucash/accounts/it/acctchrt_fixedassets.gnucash-xea
+share/gnucash/accounts/it/acctchrt_homeloan.gnucash-xea
+share/gnucash/accounts/it/acctchrt_homeown.gnucash-xea
+share/gnucash/accounts/it/acctchrt_otherloan.gnucash-xea
+share/gnucash/accounts/it/acctchrt_renter.gnucash-xea
+share/gnucash/accounts/it/acctchrt_retiremt.gnucash-xea
+share/gnucash/accounts/it/acctchrt_spouseinc.gnucash-xea
+share/gnucash/accounts/it/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/pt_BR/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/pt_BR/acctchrt_carloan.gnucash-xea
 share/gnucash/accounts/pt_BR/acctchrt_cdmoneymkt.gnucash-xea
@@ -554,6 +587,14 @@ share/gnucash/accounts/sk/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/tr_TR/acctchrt_TEKDUZ.gnucash-xea
+share/gnucash/accounts/tr_TR/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/tr_TR/acctchrt_carloan.gnucash-xea
+share/gnucash/accounts/tr_TR/acctchrt_cdmoneymkt.gnucash-xea
+share/gnucash/accounts/tr_TR/acctchrt_checkbook.gnucash-xea
+share/gnucash/accounts/tr_TR/acctchrt_common.gnucash-xea
+share/gnucash/accounts/tr_TR/acctchrt_fixedassets.gnucash-xea
+share/gnucash/accounts/tr_TR/acctchrt_homeloan.gnucash-xea
 share/gnucash/doc/AUTHORS
 share/gnucash/doc/COPYING
 share/gnucash/doc/ChangeLog
@@ -580,6 +621,7 @@ share/gnucash/glade/employee.glade
 share/gnucash/glade/exchange-dialog.glade
 share/gnucash/glade/fincalc.glade
 share/gnucash/glade/generic-import.glade
+share/gnucash/glade/gnc-date-format.glade
 share/gnucash/glade/help.glade
 share/gnucash/glade/invoice.glade
 share/gnucash/glade/job.glade
@@ -656,6 +698,7 @@ share/gnucash/guile-modules/gnucash/report/business-reports.scm
 share/gnucash/guile-modules/gnucash/report/cash-flow.scm
 share/gnucash/guile-modules/gnucash/report/category-barchart.scm
 share/gnucash/guile-modules/gnucash/report/daily-reports.scm
+share/gnucash/guile-modules/gnucash/report/fancy-invoice.scm
 share/gnucash/guile-modules/gnucash/report/hello-world.scm
 share/gnucash/guile-modules/gnucash/report/iframe-url.scm
 share/gnucash/guile-modules/gnucash/report/invoice.scm
@@ -721,6 +764,7 @@ share/gnucash/scm/html-table.scm
 share/gnucash/scm/html-text.scm
 share/gnucash/scm/html-utilities.scm
 share/gnucash/scm/kvp-option-registry.scm
+share/gnucash/scm/log-replay/log-replay.scm
 share/gnucash/scm/main-window.scm
 share/gnucash/scm/options-utilities.scm
 share/gnucash/scm/options.scm
@@ -755,6 +799,7 @@ share/pixmaps/gnucash/stock_split_watermark.png
 @comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnucash/scm/qif-import
 @dirrm share/gnucash/scm/printing
+@dirrm share/gnucash/scm/log-replay
 @dirrm share/gnucash/scm/gnumeric
 @dirrm share/gnucash/scm/generic-import
 @dirrm share/gnucash/scm
@@ -770,13 +815,16 @@ share/pixmaps/gnucash/stock_split_watermark.png
 @dirrm share/gnucash/guile-modules
 @dirrm share/gnucash/glade
 @dirrm share/gnucash/doc
+@dirrm share/gnucash/accounts/tr_TR
 @dirrm share/gnucash/accounts/sk
 @dirrm share/gnucash/accounts/pt_PT
 @dirrm share/gnucash/accounts/pt_BR
+@dirrm share/gnucash/accounts/it
 @dirrm share/gnucash/accounts/fr_FR
 @dirrm share/gnucash/accounts/es_ES
 @dirrm share/gnucash/accounts/el_GR
 @dirrm share/gnucash/accounts/de_DE
+@dirrm share/gnucash/accounts/de_CH
 @dirrm share/gnucash/accounts/da
 @dirrm share/gnucash/accounts/C
 @dirrm share/gnucash/accounts
