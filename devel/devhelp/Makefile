@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/12/19 19:14:58 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2004/12/19 19:58:39 minskim Exp $
 
 DISTNAME=		devhelp-0.7
 PKGREVISION=		10
@@ -24,10 +24,13 @@ CONFIGURE_ARGS+=	--with-html-widget=gtkhtml2
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
