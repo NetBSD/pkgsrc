@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.28 2005/03/22 15:40:06 tv Exp $
+# $NetBSD: Interix.mk,v 1.29 2005/03/24 16:21:48 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -33,6 +33,7 @@
 #   (main lib)	0x48000000
 # zsh		*
 
+BULK_PREREQ+=	converters/libiconv devel/gettext-lib pkgtools/pkg_install-info
 BULK_PREREQ+=	lang/gawk sysutils/coreutils
 
 # "catinstall" not yet supported as there's no shipped [gn]roff
