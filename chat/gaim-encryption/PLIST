@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/02 20:49:18 jschauma Exp $
+lib/gaim/encrypt.la
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gaim-encryption.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gaim-encryption.mo
